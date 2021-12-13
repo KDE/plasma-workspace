@@ -3,11 +3,31 @@
         "Authors": [
             {
                 "Email": "viranch.mehta@gmail.com",
-                "Name": "Viranch Mehta"
+                "Name": "Viranch Mehta",
+                "Name[ca]": "Viranch Mehta",
+                "Name[es]": "Viranch Mehta",
+                "Name[ia]": "Viranch Mehta",
+                "Name[it]": "Viranch Mehta",
+                "Name[lt]": "Viranch Mehta",
+                "Name[nl]": "Viranch Mehta",
+                "Name[pl]": "Viranch Mehta",
+                "Name[sv]": "Viranch Mehta",
+                "Name[uk]": "Viranch Mehta",
+                "Name[x-test]": "xxViranch Mehtaxx"
             }
         ],
         "Category": "System Information",
         "Description": "Lock the screen or log out",
+        "Description[ca]": "Bloqueja la pantalla o desconnecta",
+        "Description[es]": "Bloquear el escritorio o salir",
+        "Description[ia]": "Bloca le schermo o  claude session",
+        "Description[it]": "Blocca lo schermo o esci",
+        "Description[lt]": "Užrakinti ekraną arba atsijungti",
+        "Description[nl]": "Vergrendel het scherm of meldt u af",
+        "Description[pl]": "Blokuje ekran lub wylogowuje",
+        "Description[sv]": "Lås skärmen eller logga ut",
+        "Description[uk]": "Заблокуйте екран або вийдіть",
+        "Description[x-test]": "xxLock the screen or log outxx",
         "EnabledByDefault": true,
         "FormFactors": [
             "desktop"

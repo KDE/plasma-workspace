@@ -3,11 +3,31 @@
         "Authors": [
             {
                 "Email": "aseigo@kde.org",
-                "Name": "Aaron Seigo"
+                "Name": "Aaron Seigo",
+                "Name[ca]": "Aaron Seigo",
+                "Name[es]": "Aaron Seigo",
+                "Name[ia]": "Aaron Seigo",
+                "Name[it]": "Aaron Seigo",
+                "Name[lt]": "Aaron Seigo",
+                "Name[nl]": "Aaron Seigo",
+                "Name[pl]": "Aaron Seigo",
+                "Name[sv]": "Aaron Seigo",
+                "Name[uk]": "Aaron Seigo",
+                "Name[x-test]": "xxAaron Seigoxx"
             }
         ],
         "Category": "Date and Time",
         "Description": "Date and time by timezone",
+        "Description[ca]": "Data i hora per zona horària",
+        "Description[es]": "Fecha y hora por zona horaria",
+        "Description[ia]": "Data e tempore per fuso horari",
+        "Description[it]": "Data e ora per fuso orario",
+        "Description[lt]": "Data ir laikas pagal laiko juostą",
+        "Description[nl]": "Datum en tijd per tijdzone",
+        "Description[pl]": "Ustawienia daty i czasu na podstawie strefy czasowej",
+        "Description[sv]": "Datum och tid enligt tidszon",
+        "Description[uk]": "Дата і час за часовими поясами",
+        "Description[x-test]": "xxDate and time by timezonexx",
         "EnabledByDefault": true,
         "Icon": "preferences-system-time",
         "Id": "time",

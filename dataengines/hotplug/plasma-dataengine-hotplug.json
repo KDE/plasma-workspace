@@ -3,11 +3,31 @@
         "Authors": [
             {
                 "Email": "wilderkde@gmail.com",
-                "Name": "The Plasma Team"
+                "Name": "The Plasma Team",
+                "Name[ca]": "L'equip del Plasma",
+                "Name[es]": "El equipo de Plasma",
+                "Name[ia]": "Le equipa de Plasma",
+                "Name[it]": "La squadra di Plasma",
+                "Name[lt]": "Plasma komanda",
+                "Name[nl]": "Het team van Plasma",
+                "Name[pl]": "Zespół Plazmy",
+                "Name[sv]": "Plasma-gruppen",
+                "Name[uk]": "Команда розробників Плазми",
+                "Name[x-test]": "xxThe Plasma Teamxx"
             }
         ],
         "Category": "",
         "Description": "Tracks hot-pluggable devices as they appear and disappear.",
+        "Description[ca]": "Segueix els dispositius de connexió en calent quan apareixen i desapareixen.",
+        "Description[es]": "Registra los dispositivos extraíbles cuando aparecen y desaparecen.",
+        "Description[ia]": "Il tracia dispositivos hot-pluggable (insertabile a calide) assi como illos appare e disappare",
+        "Description[it]": "Sorveglia i dispositivi rimuovibili a caldo quando appaiono o scompaiono.",
+        "Description[lt]": "Seka greitai prijungiamų įrenginių atsiradimą ir išnykimą.",
+        "Description[nl]": "Volgt inplugbare apparaten als deze verschijnen en verdwijnen.",
+        "Description[pl]": "Śledzi pojawianie i znikanie  urządzeń podłączanych \"na gorąco\".",
+        "Description[sv]": "Följer enheter som kan kopplas in under spänning när de dyker upp och försvinner.",
+        "Description[uk]": "Стежить за з’єднанням і від’єднанням портативних пристроїв.",
+        "Description[x-test]": "xxTracks hot-pluggable devices as they appear and disappear.xx",
         "Icon": "drive-removable-media-usb",
         "Id": "hotplug",
         "License": "",

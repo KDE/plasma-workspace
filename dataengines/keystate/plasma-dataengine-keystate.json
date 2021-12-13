@@ -3,11 +3,31 @@
         "Authors": [
             {
                 "Email": "aseigo@kde.org",
-                "Name": "Aaron Seigo"
+                "Name": "Aaron Seigo",
+                "Name[ca]": "Aaron Seigo",
+                "Name[es]": "Aaron Seigo",
+                "Name[ia]": "Aaron Seigo",
+                "Name[it]": "Aaron Seigo",
+                "Name[lt]": "Aaron Seigo",
+                "Name[nl]": "Aaron Seigo",
+                "Name[pl]": "Aaron Seigo",
+                "Name[sv]": "Aaron Seigo",
+                "Name[uk]": "Aaron Seigo",
+                "Name[x-test]": "xxAaron Seigoxx"
             }
         ],
         "Category": "Accessibility",
         "Description": "Keyboard modifier and mouse buttons states",
+        "Description[ca]": "Modificador de l'estat del teclat i dels botons del ratolí",
+        "Description[es]": "Estado del modificador de teclado y botones del ratón",
+        "Description[ia]": "Modificator de claviero e statos de buttones del mus",
+        "Description[it]": "Stati dei modificatori della tastiera e dei pulsanti del mouse",
+        "Description[lt]": "Klaviatūros modifikatorių ir pelės mygtukų būsenos",
+        "Description[nl]": "Wijzigt toetsenbord en muisknoptoestanden",
+        "Description[pl]": "Wyświetla stany modyfikatorów klawiatury i przycisków myszy",
+        "Description[sv]": "Tillstånd för väljartangenter och musknappar",
+        "Description[uk]": "Стан модифікаторів клавіатури і кнопок миші",
+        "Description[x-test]": "xxKeyboard modifier and mouse buttons statesxx",
         "EnabledByDefault": true,
         "Icon": "input-keyboard",
         "Id": "keystate",

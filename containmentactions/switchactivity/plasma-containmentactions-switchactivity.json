@@ -3,10 +3,30 @@
         "Authors": [
             {
                 "Email": "chani@kde.org",
-                "Name": "Chani"
+                "Name": "Chani",
+                "Name[ca]": "Chani",
+                "Name[es]": "Chani",
+                "Name[ia]": "Chani",
+                "Name[it]": "Chani",
+                "Name[lt]": "Chani",
+                "Name[nl]": "Chani",
+                "Name[pl]": "Chani",
+                "Name[sv]": "Chani",
+                "Name[uk]": "Chani",
+                "Name[x-test]": "xxChanixx"
             }
         ],
         "Description": "Switch to another activity",
+        "Description[ca]": "Canvia a una altra activitat",
+        "Description[es]": "Cambiar a otra actividad",
+        "Description[ia]": "Commuta  a altere activitate",
+        "Description[it]": "Passa ad un'altra attività",
+        "Description[lt]": "Perjungti į kitą veiklą",
+        "Description[nl]": "Schakel naar een andere activiteit",
+        "Description[pl]": "Przełącza między aktywnościami",
+        "Description[sv]": "Byt till en annan aktivitet",
+        "Description[uk]": "Перемкнутися на інший простір дій",
+        "Description[x-test]": "xxSwitch to another activityxx",
         "EnabledByDefault": true,
         "Icon": "dashboard-show",
         "Id": "switchactivity",

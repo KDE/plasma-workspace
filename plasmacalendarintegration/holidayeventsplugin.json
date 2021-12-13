@@ -3,12 +3,42 @@
         "Authors": [
             {
                 "Email": "mklapetek@kde.org",
-                "Name": "Martin Klapetek"
+                "Name": "Martin Klapetek",
+                "Name[ca]": "Martin Klapetek",
+                "Name[es]": "Martin Klapetek",
+                "Name[ia]": "Martin Klapetek",
+                "Name[it]": "Martin Klapetek",
+                "Name[lt]": "Martin Klapetek",
+                "Name[nl]": "Martin Klapetek",
+                "Name[pl]": "Martin Klapetek",
+                "Name[sv]": "Martin Klapetek",
+                "Name[uk]": "Martin Klapetek",
+                "Name[x-test]": "xxMartin Klapetekxx"
             }
         ],
         "Description": "Calendar plugin for displaying public holidays",
+        "Description[ca]": "Connector de calendari per a mostrar els festius oficials",
+        "Description[es]": "Complemento del calendario para mostrar días festivos nacionales",
+        "Description[ia]": "Plugin de calendario per mostrar dies feriate public",
+        "Description[it]": "Estensione calendario per visualizzare le festività pubbliche",
+        "Description[lt]": "Kalendoriaus priedas, skirtas valstybinių šventinių dienų rodymui",
+        "Description[nl]": "Plug-in voor agenda voor tonen van publieke vrije dagen",
+        "Description[pl]": "Wtyczka kalendarza do wyświetlania publicznych świąt",
+        "Description[sv]": "Kalenderinsticksprogram för att visa allmänna helgdagar",
+        "Description[uk]": "Додаток календаря для показу офіційних свят",
+        "Description[x-test]": "xxCalendar plugin for displaying public holidaysxx",
         "Icon": "view-calendar-holiday",
-        "Name": "Holidays"
+        "Name": "Holidays",
+        "Name[ca]": "Dies festius",
+        "Name[es]": "Días festivos",
+        "Name[ia]": "Dies feriate",
+        "Name[it]": "Festività",
+        "Name[lt]": "Šventinės dienos",
+        "Name[nl]": "Vakantiedagen",
+        "Name[pl]": "Święta",
+        "Name[sv]": "Helgdagar",
+        "Name[uk]": "Свята",
+        "Name[x-test]": "xxHolidaysxx"
     },
     "X-KDE-PlasmaCalendar-ConfigUi": "holidays/HolidaysConfig.qml"
 }

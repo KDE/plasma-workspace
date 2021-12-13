@@ -3,10 +3,30 @@
         "Authors": [
             {
                 "Email": "plasma-devel@kde.org",
-                "Name": "Plasma Team"
+                "Name": "Plasma Team",
+                "Name[ca]": "L'equip del Plasma",
+                "Name[es]": "Equipo de Plasma",
+                "Name[ia]": "Equipa de Plasma",
+                "Name[it]": "La squadra di Plasma",
+                "Name[lt]": "Plasma komanda",
+                "Name[nl]": "Team van Plasma",
+                "Name[pl]": "Zespół Plazmy",
+                "Name[sv]": "Plasma-gruppen",
+                "Name[uk]": "Команда розробників Плазми",
+                "Name[x-test]": "xxPlasma Teamxx"
             }
         ],
         "Description": "Calculate expressions",
+        "Description[ca]": "Calcula expressions",
+        "Description[es]": "Calcular expresiones",
+        "Description[ia]": "Calcula expressiones",
+        "Description[it]": "Calcola le espressioni",
+        "Description[lt]": "Skaičiuoti reiškinius",
+        "Description[nl]": "Expressies berekenen",
+        "Description[pl]": "Oblicza wyrażenia matematyczne",
+        "Description[sv]": "Beräkna uttryck",
+        "Description[uk]": "Обчислення виразів",
+        "Description[x-test]": "xxCalculate expressionsxx",
         "EnabledByDefault": true,
         "Icon": "accessories-calculator",
         "Id": "calculator",

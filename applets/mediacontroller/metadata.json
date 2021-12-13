@@ -3,11 +3,31 @@
         "Authors": [
             {
                 "Email": "sebas@kde.org",
-                "Name": "Sebastian Kügler"
+                "Name": "Sebastian Kügler",
+                "Name[ca]": "Sebastian Kügler",
+                "Name[es]": "Sebastian Kügler",
+                "Name[ia]": "Sebastian Kügler",
+                "Name[it]": "Sebastian Kügler",
+                "Name[lt]": "Sebastian Kügler",
+                "Name[nl]": "Sebastian Kügler",
+                "Name[pl]": "Sebastian Kügler",
+                "Name[sv]": "Sebastian Kügler",
+                "Name[uk]": "Sebastian Kügler",
+                "Name[x-test]": "xxSebastian Küglerxx"
             }
         ],
         "Category": "Multimedia",
         "Description": "Media Player Controls",
+        "Description[ca]": "Controls del reproductor multimèdia",
+        "Description[es]": "Controles del reproductor multimedia",
+        "Description[ia]": "Controlos de Reproductor de Multimedia",
+        "Description[it]": "Controlli del lettore multimediale",
+        "Description[lt]": "Medijos leistuvės valdikliai",
+        "Description[nl]": "Besturing van mediaspeler",
+        "Description[pl]": "Obsługa odtwarzacza multimedialnego",
+        "Description[sv]": "Kontroller för mediaspelare",
+        "Description[uk]": "Керування мультимедійним програвачем",
+        "Description[x-test]": "xxMedia Player Controlsxx",
         "EnabledByDefault": true,
         "FormFactors": [
             "tablet",

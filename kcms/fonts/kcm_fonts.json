@@ -2,6 +2,16 @@
     "Categories": "Qt;KDE;X-KDE-settings-looknfeel;",
     "KPlugin": {
         "Description": "Configure user interface fonts",
+        "Description[ca]": "Configura els tipus de lletra de la interfície d'usuari",
+        "Description[es]": "Configurar los tipos de letra de la interfaz de usuario",
+        "Description[ia]": "Configura Fontes de interfacie de usator",
+        "Description[it]": "Configura i caratteri dell'interfaccia utente",
+        "Description[lt]": "Konfigūruoti naudotojo sąsajos šriftus",
+        "Description[nl]": "Lettertypen van gebruikersinterface configureren",
+        "Description[pl]": "Ustawienia czcionek interfejsu użytkownika",
+        "Description[sv]": "Anpassa teckensnitt för användargränssnitt",
+        "Description[uk]": "Налаштовування шрифтів у інтерфейсі користувача",
+        "Description[x-test]": "xxConfigure user interface fontsxx",
         "FormFactors": [
             "tablet",
             "handset",

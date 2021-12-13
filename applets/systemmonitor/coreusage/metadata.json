@@ -3,11 +3,31 @@
         "Authors": [
             {
                 "Email": "kde@privat.broulik.de",
-                "Name": "Kai Uwe Broulik"
+                "Name": "Kai Uwe Broulik",
+                "Name[ca]": "Kai Uwe Broulik",
+                "Name[es]": "Kai Uwe Broulik",
+                "Name[ia]": "Kai Uwe Broulik",
+                "Name[it]": "Kai Uwe Broulik",
+                "Name[lt]": "Kai Uwe Broulik",
+                "Name[nl]": "Kai Uwe Broulik",
+                "Name[pl]": "Kai Uwe Broulik",
+                "Name[sv]": "Kai Uwe Broulik",
+                "Name[uk]": "Kai Uwe Broulik",
+                "Name[x-test]": "xxKai Uwe Broulikxx"
             }
         ],
         "Category": "System Information",
         "Description": "System monitor Widget that shows usage of individual CPU cores",
+        "Description[ca]": "Giny del monitor del sistema que mostra l'ús individual dels nuclis de la CPU",
+        "Description[es]": "Elemento gráfico del monitor del sistema que muestra el uso de los núcleos individuales de la CPU",
+        "Description[ia]": "Widget de supervision de systema que monstra le uso del nucleos individual",
+        "Description[it]": "Oggetto di monitoraggio del sistema che mostra l'utilizzo dei singoli core del processore",
+        "Description[lt]": "Sistemos prižiūryklės valdiklis, kuris rodo atskirų procesoriaus branduolių naudojimą",
+        "Description[nl]": "Systeemmonitorwidget die gebruik toont van individuele CPU-kernen",
+        "Description[pl]": "Element interfejsu, który pokazuje wykorzystanie poszczególnych rdzeni procesora",
+        "Description[sv]": "Grafisk systemövervakningskomponent som visar användning av individuella processorkärnor",
+        "Description[uk]": "Віджет нагляду за системою, який показує використання окремих ядер процесора",
+        "Description[x-test]": "xxSystem monitor Widget that shows usage of individual CPU coresxx",
         "EnabledByDefault": true,
         "FormFactors": [
             "desktop"

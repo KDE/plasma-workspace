@@ -3,10 +3,30 @@
         "Authors": [
             {
                 "Email": "jangerrit@weiler-marker.com",
-                "Name": "Jan Gerrit Marker"
+                "Name": "Jan Gerrit Marker",
+                "Name[ca]": "Jan Gerrit Marker",
+                "Name[es]": "Jan Gerrit Marker",
+                "Name[ia]": "Jan Gerrit Marker",
+                "Name[it]": "Jan Gerrit Marker",
+                "Name[lt]": "Jan Gerrit Marker",
+                "Name[nl]": "Jan Gerrit Marker",
+                "Name[pl]": "Jan Gerrit Marker",
+                "Name[sv]": "Jan Gerrit Marker",
+                "Name[uk]": "Jan Gerrit Marker",
+                "Name[x-test]": "xxJan Gerrit Markerxx"
             }
         ],
         "Description": "Stop applications that are currently running",
+        "Description[ca]": "Atura les aplicacions que estan en execució",
+        "Description[es]": "Detener aplicaciones que se están ejecutando",
+        "Description[ia]": "Stoppa applicationes que il es currentemente executante",
+        "Description[it]": "Ferma le applicazioni attualmente in esecuzione",
+        "Description[lt]": "Stabdyti šiuo metu veikiančias programas",
+        "Description[nl]": "Beëindig toepassingen die momenteel draaien",
+        "Description[pl]": "Zamyka obecnie uruchomione programy",
+        "Description[sv]": "Stoppa program som för närvarande kör",
+        "Description[uk]": "Завершує роботу запущених програм",
+        "Description[x-test]": "xxStop applications that are currently runningxx",
         "EnabledByDefault": true,
         "Icon": "application-exit",
         "Id": "Kill Runner",

@@ -3,11 +3,31 @@
         "Authors": [
             {
                 "Email": "mart@kde.org",
-                "Name": "Marco Martin"
+                "Name": "Marco Martin",
+                "Name[ca]": "Marco Martin",
+                "Name[es]": "Marco Martin",
+                "Name[ia]": "Marco Martin",
+                "Name[it]": "Marco Martin",
+                "Name[lt]": "Marco Martin",
+                "Name[nl]": "Marco Martin",
+                "Name[pl]": "Marco Martin",
+                "Name[sv]": "Marco Martin",
+                "Name[uk]": "Marco Martin",
+                "Name[x-test]": "xxMarco Martinxx"
             }
         ],
         "Category": "System Information",
         "Description": "System monitor Widget that shows the usage of the root partition",
+        "Description[ca]": "Giny del monitor del sistema que mostra l'ús de la partició arrel",
+        "Description[es]": "Elemento gráfico del monitor del sistema que muestra el uso de la partición raíz",
+        "Description[ia]": "Widget de supervision de systema que monstra le uso del partition de root (radice)",
+        "Description[it]": "Oggetto di monitoraggio del sistema che mostra l'utilizzo della partizione radice",
+        "Description[lt]": "Sistemos prižiūryklės valdiklis, kuris rodo šaknies skaidinio naudojimą",
+        "Description[nl]": "Systeemmonitorwidget die het totale gebruik toont van de root-partitie",
+        "Description[pl]": "Element interfejsu, który pokazuje wykorzystanie głównej partycji",
+        "Description[sv]": "Grafisk systemövervakningskomponent som visar användning av rotpartitionen",
+        "Description[uk]": "Віджет нагляду за системою, який показує використання кореневого розділу",
+        "Description[x-test]": "xxSystem monitor Widget that shows the usage of the root partitionxx",
         "EnabledByDefault": true,
         "FormFactors": [
             "desktop"

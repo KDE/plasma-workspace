@@ -1,6 +1,16 @@
 {
     "KPlugin": {
         "Description": "Transfers application's menu to the desktop",
+        "Description[ca]": "Transfereix els menús d'aplicació a l'escriptori",
+        "Description[es]": "Transfiere el menú de aplicaciones al escritorio",
+        "Description[ia]": "Il transfere menu de applicationes al scriptorio",
+        "Description[it]": "Trasferisce al desktop i menu delle applicazioni",
+        "Description[lt]": "Perkelia programos meniu į darbalaukį",
+        "Description[nl]": "Brengt het menu van de toepassing over naar het bureaublad",
+        "Description[pl]": "Przenosi menu aplikacji na pulpit",
+        "Description[sv]": "Överför programmets meny till skrivbordet",
+        "Description[uk]": "Передає меню програм на стільницю",
+        "Description[x-test]": "xxTransfers application's menu to the desktopxx",
         "Name": "Application menus daemon",
         "Name[ar]": "عفريت قوائم التطبيقات",
         "Name[az]": "Tətbiqlər menyusu fon xidməti",

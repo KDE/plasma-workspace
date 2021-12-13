@@ -3,11 +3,31 @@
         "Authors": [
             {
                 "Email": "plasma-devel@kde.org",
-                "Name": "The Plasma Team"
+                "Name": "The Plasma Team",
+                "Name[ca]": "L'equip del Plasma",
+                "Name[es]": "El equipo de Plasma",
+                "Name[ia]": "Le equipa de Plasma",
+                "Name[it]": "La squadra di Plasma",
+                "Name[lt]": "Plasma komanda",
+                "Name[nl]": "Het team van Plasma",
+                "Name[pl]": "Zespół Plazmy",
+                "Name[sv]": "Plasma-gruppen",
+                "Name[uk]": "Команда розробників Плазми",
+                "Name[x-test]": "xxThe Plasma Teamxx"
             }
         ],
         "Category": "System Information",
         "Description": "Reserve empty spaces within the panel.",
+        "Description[ca]": "Reserva espais buits en el plafó.",
+        "Description[es]": "Reservar espacios vacíos en el panel.",
+        "Description[ia]": "Reserva spatios vacue intra le pannello.",
+        "Description[it]": "Lascia spazi vuoti nel pannello.",
+        "Description[lt]": "Rezervuoti skydelyje tuščią vietą.",
+        "Description[nl]": "Reserveer lege ruimte in het paneel.",
+        "Description[pl]": "Rezerwuje wolną przestrzeń na panelu.",
+        "Description[sv]": "Reservera tomt utrymme inne i panelen.",
+        "Description[uk]": "Створює прогалини на панелі.",
+        "Description[x-test]": "xxReserve empty spaces within the panel.xx",
         "EnabledByDefault": true,
         "Id": "org.kde.plasma.panelspacer",
         "License": "GPL-2.0+",

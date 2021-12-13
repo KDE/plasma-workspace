@@ -3,11 +3,31 @@
         "Authors": [
             {
                 "Email": "sebas@kde.org",
-                "Name": "Sebastian Kügler"
+                "Name": "Sebastian Kügler",
+                "Name[ca]": "Sebastian Kügler",
+                "Name[es]": "Sebastian Kügler",
+                "Name[ia]": "Sebastian Kügler",
+                "Name[it]": "Sebastian Kügler",
+                "Name[lt]": "Sebastian Kügler",
+                "Name[nl]": "Sebastian Kügler",
+                "Name[pl]": "Sebastian Kügler",
+                "Name[sv]": "Sebastian Kügler",
+                "Name[uk]": "Sebastian Kügler",
+                "Name[x-test]": "xxSebastian Küglerxx"
             }
         ],
         "Category": "Date and Time",
         "Description": "Month display with your appointments and events",
+        "Description[ca]": "Mostra el mes amb les cites i els esdeveniments",
+        "Description[es]": "Calendario mensual con sus citas y eventos",
+        "Description[ia]": "Monstratore de mense con tu appunctamentos e eventos",
+        "Description[it]": "Visualizzazione del mese con i tuoi appuntamenti ed eventi",
+        "Description[lt]": "Jūsų užduotys ir įvykiai mėnesiui",
+        "Description[nl]": "Maandweergave met uw afspraken en gebeurtenissen",
+        "Description[pl]": "Wyświetlanie miesiąca z twoimi spotkaniami i wydarzeniami",
+        "Description[sv]": "Månatlig visning av möten och händelser",
+        "Description[uk]": "Показ розкладу місяця із вашими записами зустрічей і подій",
+        "Description[x-test]": "xxMonth display with your appointments and eventsxx",
         "FormFactors": [
             "tablet",
             "handset",

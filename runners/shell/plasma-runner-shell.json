@@ -3,10 +3,30 @@
         "Authors": [
             {
                 "Email": "plasma-devel@kde.org",
-                "Name": "Plasma Team"
+                "Name": "Plasma Team",
+                "Name[ca]": "L'equip del Plasma",
+                "Name[es]": "Equipo de Plasma",
+                "Name[ia]": "Equipa de Plasma",
+                "Name[it]": "La squadra di Plasma",
+                "Name[lt]": "Plasma komanda",
+                "Name[nl]": "Team van Plasma",
+                "Name[pl]": "Zespół Plazmy",
+                "Name[sv]": "Plasma-gruppen",
+                "Name[uk]": "Команда розробників Плазми",
+                "Name[x-test]": "xxPlasma Teamxx"
             }
         ],
         "Description": "Executes shell commands",
+        "Description[ca]": "Executa ordres de l'intèrpret d'ordres",
+        "Description[es]": "Ejecuta órdenes de la consola",
+        "Description[ia]": "Il exeque commandos de shell",
+        "Description[it]": "Esegue dei comandi della shell",
+        "Description[lt]": "Vykdo apvalkalo komandas",
+        "Description[nl]": "Voert shellcommando's uit",
+        "Description[pl]": "Wykonuje polecenia powłoki",
+        "Description[sv]": "Kör skalkommandon",
+        "Description[uk]": "Виконує команди оболонки",
+        "Description[x-test]": "xxExecutes shell commandsxx",
         "EnabledByDefault": true,
         "Icon": "system-run",
         "Id": "shell",

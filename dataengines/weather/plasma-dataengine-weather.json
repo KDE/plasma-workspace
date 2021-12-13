@@ -3,11 +3,31 @@
         "Authors": [
             {
                 "Email": "shawn.starr@rogers.com",
-                "Name": "Shawn Starr"
+                "Name": "Shawn Starr",
+                "Name[ca]": "Shawn Starr",
+                "Name[es]": "Shawn Starr",
+                "Name[ia]": "Shawn Starr",
+                "Name[it]": "Shawn Starr",
+                "Name[lt]": "Shawn Starr",
+                "Name[nl]": "Shawn Starr",
+                "Name[pl]": "Shawn Starr",
+                "Name[sv]": "Shawn Starr",
+                "Name[uk]": "Shawn Starr",
+                "Name[x-test]": "xxShawn Starrxx"
             }
         ],
         "Category": "",
         "Description": "Weather data from multiple online sources",
+        "Description[ca]": "Dades meteorològiques de múltiples fonts en línia",
+        "Description[es]": "Datos meteorológicos desde múltiples fuentes.",
+        "Description[ia]": "Datos meteorologic ex multiple fontes in linea",
+        "Description[it]": "Dati meteorologici da varie fonti in rete",
+        "Description[lt]": "Orų duomenys iš įvairių internetinių šaltinių",
+        "Description[nl]": "Weergegevens voor meervoudige online bronnen",
+        "Description[pl]": "Dane pogodowe z wielu internetowych źródeł",
+        "Description[sv]": "Väderdata från flera olika nättjänster",
+        "Description[uk]": "Дані щодо погоди з декількох мережевих джерел",
+        "Description[x-test]": "xxWeather data from multiple online sourcesxx",
         "Icon": "weather-clear",
         "Id": "weather",
         "License": "GPLv2+",

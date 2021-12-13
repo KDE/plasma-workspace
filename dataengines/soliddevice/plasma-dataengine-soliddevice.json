@@ -3,11 +3,31 @@
         "Authors": [
             {
                 "Email": "wilderkde@gmail.com",
-                "Name": "The Plasma Team"
+                "Name": "The Plasma Team",
+                "Name[ca]": "L'equip del Plasma",
+                "Name[es]": "El equipo de Plasma",
+                "Name[ia]": "Le equipa de Plasma",
+                "Name[it]": "La squadra di Plasma",
+                "Name[lt]": "Plasma komanda",
+                "Name[nl]": "Het team van Plasma",
+                "Name[pl]": "Zespół Plazmy",
+                "Name[sv]": "Plasma-gruppen",
+                "Name[uk]": "Команда розробників Плазми",
+                "Name[x-test]": "xxThe Plasma Teamxx"
             }
         ],
         "Category": "",
         "Description": "Device data via Solid",
+        "Description[ca]": "Dades dels dispositius via Solid",
+        "Description[es]": "Datos de dispositivo vía Solid",
+        "Description[ia]": "Datos de dispositivos via Solid",
+        "Description[it]": "Dati sul dispositivo con Solid",
+        "Description[lt]": "Įrenginių duomenys per Solid",
+        "Description[nl]": "Apparaatgegevens via Solid",
+        "Description[pl]": "Dane urządzenia przez Solid",
+        "Description[sv]": "Enhetsdata via Solid",
+        "Description[uk]": "Дані щодо пристроїв з Solid",
+        "Description[x-test]": "xxDevice data via Solidxx",
         "Icon": "drive-harddisk",
         "Id": "soliddevice",
         "Name": "Device Information",

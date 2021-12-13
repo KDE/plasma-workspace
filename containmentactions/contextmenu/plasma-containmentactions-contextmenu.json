@@ -3,10 +3,30 @@
         "Authors": [
             {
                 "Email": "chani@kde.org",
-                "Name": "Chani"
+                "Name": "Chani",
+                "Name[ca]": "Chani",
+                "Name[es]": "Chani",
+                "Name[ia]": "Chani",
+                "Name[it]": "Chani",
+                "Name[lt]": "Chani",
+                "Name[nl]": "Chani",
+                "Name[pl]": "Chani",
+                "Name[sv]": "Chani",
+                "Name[uk]": "Chani",
+                "Name[x-test]": "xxChanixx"
             }
         ],
         "Description": "The menu that normally shows on right-click",
+        "Description[ca]": "Menú que es mostra normalment amb un clic del botó dret",
+        "Description[es]": "El menú que se suele mostrar al hacer clic derecho",
+        "Description[ia]": "Le menu que normalmente monstra se sur le pression dextere",
+        "Description[it]": "Il menu che normalmente appare al clic destro",
+        "Description[lt]": "Meniu, kuris įprastai rodomas spustelėjus dešiniuoju pelės mygtuku",
+        "Description[nl]": "Het menu dat normaal verschijnt bij rechtsklikken",
+        "Description[pl]": "Wyświetla menu normalnie wyświetlane po naciśnięciu prawym przyciskiem myszy",
+        "Description[sv]": "Meny som normalt visas med högerklick",
+        "Description[uk]": "Меню, яке буде показано у відповідь на клацання правою кнопкою миші",
+        "Description[x-test]": "xxThe menu that normally shows on right-clickxx",
         "EnabledByDefault": true,
         "Icon": "help-contextual",
         "Id": "org.kde.contextmenu",

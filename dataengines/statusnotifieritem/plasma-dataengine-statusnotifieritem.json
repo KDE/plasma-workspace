@@ -3,10 +3,30 @@
         "Authors": [
             {
                 "Email": "matthieu_gallien@yahoo.fr",
-                "Name": "Matthieu Gallien"
+                "Name": "Matthieu Gallien",
+                "Name[ca]": "Matthieu Gallien",
+                "Name[es]": "Matthieu Gallien",
+                "Name[ia]": "Matthieu Gallien",
+                "Name[it]": "Matthieu Gallien",
+                "Name[lt]": "Matthieu Gallien",
+                "Name[nl]": "Matthieu Gallien",
+                "Name[pl]": "Matthieu Gallien",
+                "Name[sv]": "Matthieu Gallien",
+                "Name[uk]": "Matthieu Gallien",
+                "Name[x-test]": "xxMatthieu Gallienxx"
             }
         ],
         "Description": "Engine for applications' status information, based on the Status Notifier protocol.",
+        "Description[ca]": "Motor d'informació d'estat de les aplicacions, basat en el protocol notificador d'estat.",
+        "Description[es]": "Motor para informar del estado de aplicaciones, basado en el protocolo Status Notifier.",
+        "Description[ia]": "Motor pro information de stato de applicationes basate sur le protocollo de Notificator de Stato",
+        "Description[it]": "Motore per le informazioni di stato delle applicazioni, basato sul protocollo del notificatore di stato.",
+        "Description[lt]": "Informacijos apie programų būseną variklis, pagrįstas būsenos pranešėjo protokolu.",
+        "Description[nl]": "Engine voor statusinformatie van toepassingen gebaseerde op het statusnotificatieprotocol.",
+        "Description[pl]": "Silnik do przekazywania informacji o stanie programów, oparty o protokół powiadomień o stanie.",
+        "Description[sv]": "Gränssnitt för statusinformation om program baserat på protokollet för statusunderrättelser.",
+        "Description[uk]": "Рушій даних щодо стану програм, заснований на протоколі сповіщення про стан.",
+        "Description[x-test]": "xxEngine for applications' status information, based on the Status Notifier protocol.xx",
         "EnabledByDefault": true,
         "Icon": "preferences-desktop-notification",
         "Id": "statusnotifieritem",

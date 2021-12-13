@@ -3,10 +3,30 @@
         "Authors": [
             {
                 "Email": "plasma-devel@kde.org",
-                "Name": "Plasma Team"
+                "Name": "Plasma Team",
+                "Name[ca]": "L'equip del Plasma",
+                "Name[es]": "Equipo de Plasma",
+                "Name[ia]": "Equipa de Plasma",
+                "Name[it]": "La squadra di Plasma",
+                "Name[lt]": "Plasma komanda",
+                "Name[nl]": "Team van Plasma",
+                "Name[pl]": "Zespół Plazmy",
+                "Name[sv]": "Plasma-gruppen",
+                "Name[uk]": "Команда розробників Плазми",
+                "Name[x-test]": "xxPlasma Teamxx"
             }
         ],
         "Description": "Find Plasma widgets that can be run as standalone windows",
+        "Description[ca]": "Cerca ginys del Plasma que es poden executar en finestres autònomes",
+        "Description[es]": "Busca componentes Plasma que se pueden ejecutar como ventanas independientes",
+        "Description[ia]": "Trova  widgets (elementos graphic) de plasma que on pote executar como fenestras sole",
+        "Description[it]": "Trova i plasmoidi che possono essere eseguiti come finestre autonoma",
+        "Description[lt]": "Rasti Plasma valdiklius, kurie gali veikti kaip atskiri langai",
+        "Description[nl]": "Zoek Plasma widgets die als zelfstandige vensters kunnen draaien",
+        "Description[pl]": "Znajduje elementy interfejsu, które mogą działać jako oddzielne okna",
+        "Description[sv]": "Hitta grafiska Plasma-komponenter som kan köras som fristående fönster",
+        "Description[uk]": "Пошук віджетів Плазми, які можна запускати у окремих вікнах",
+        "Description[x-test]": "xxFind Plasma widgets that can be run as standalone windowsxx",
         "EnabledByDefault": true,
         "Icon": "plasma",
         "Id": "org.kde.windowedwidgets",

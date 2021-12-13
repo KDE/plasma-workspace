@@ -3,11 +3,31 @@
         "Authors": [
             {
                 "Email": "kde@privat.broulik.de",
-                "Name": "Kai Uwe Broulik"
+                "Name": "Kai Uwe Broulik",
+                "Name[ca]": "Kai Uwe Broulik",
+                "Name[es]": "Kai Uwe Broulik",
+                "Name[ia]": "Kai Uwe Broulik",
+                "Name[it]": "Kai Uwe Broulik",
+                "Name[lt]": "Kai Uwe Broulik",
+                "Name[nl]": "Kai Uwe Broulik",
+                "Name[pl]": "Kai Uwe Broulik",
+                "Name[sv]": "Kai Uwe Broulik",
+                "Name[uk]": "Kai Uwe Broulik",
+                "Name[x-test]": "xxKai Uwe Broulikxx"
             }
         ],
         "Category": "Windows and Tasks",
         "Description": "Global menubar in your Plasma Desktop",
+        "Description[ca]": "Barra de menús global a l'escriptori Plasma",
+        "Description[es]": "Barra de menú global para el escritorio Plasma",
+        "Description[ia]": "Barra de menu global in tu Scriptorio de Plasma",
+        "Description[it]": "Barra dei menu globale nel tuo desktop Plasma",
+        "Description[lt]": "Visuotinė meniu juosta jūsų Plasma darbalaukyje",
+        "Description[nl]": "Globale menubalk in uw Plasma-bureaublad",
+        "Description[pl]": "Globalny pasek menu na pulpicie Plazmy",
+        "Description[sv]": "Global menyrad på Plasmaskrivbordet",
+        "Description[uk]": "Загальна панель меню у вашій стільниці Плазми",
+        "Description[x-test]": "xxGlobal menubar in your Plasma Desktopxx",
         "FormFactors": [
             "desktop"
         ],

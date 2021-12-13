@@ -3,11 +3,31 @@
         "Authors": [
             {
                 "Email": "mart@kde.org",
-                "Name": "Marco Martin"
+                "Name": "Marco Martin",
+                "Name[ca]": "Marco Martin",
+                "Name[es]": "Marco Martin",
+                "Name[ia]": "Marco Martin",
+                "Name[it]": "Marco Martin",
+                "Name[lt]": "Marco Martin",
+                "Name[nl]": "Marco Martin",
+                "Name[pl]": "Marco Martin",
+                "Name[sv]": "Marco Martin",
+                "Name[uk]": "Marco Martin",
+                "Name[x-test]": "xxMarco Martinxx"
             }
         ],
         "Category": "Windows and Tasks",
         "Description": "Access hidden applications minimized in the system tray",
+        "Description[ca]": "Accés a les aplicacions minimitzades ocultes a la safata del sistema",
+        "Description[es]": "Acceder a aplicaciones ocultas minimizadas en la bandeja del sistema",
+        "Description[ia]": "Accede a applicationes celate minimisate in le tabuliero de systema",
+        "Description[it]": "Accedi alle applicazioni minimizzate nel vassoio di sistema",
+        "Description[lt]": "Gauti prieigą prie į sistemos dėklą suskleistų paslėptų programų",
+        "Description[nl]": "Biedt toegang tot programma's die in het systeemvak draaien",
+        "Description[pl]": "Zapewnia dostęp do programów zminimalizowanych na tacce systemowej",
+        "Description[sv]": "Kom åt dolda program minimerade i systembrickan",
+        "Description[uk]": "Доступ до прихованих програм, мінімізованих до системного лотка",
+        "Description[x-test]": "xxAccess hidden applications minimized in the system trayxx",
         "EnabledByDefault": true,
         "FormFactors": [
             "desktop"

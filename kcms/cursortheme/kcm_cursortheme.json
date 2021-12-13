@@ -1,6 +1,16 @@
 {
     "KPlugin": {
         "Description": "Choose mouse cursor theme",
+        "Description[ca]": "Trieu el tema del cursor del ratolí",
+        "Description[es]": "Escoger un tema de cursores para el ratón",
+        "Description[ia]": "Selige le thema de cursor de mus",
+        "Description[it]": "Scegli tema dei puntatori del mouse",
+        "Description[lt]": "Pasirinkti pelės žymeklio apipavidalinimą",
+        "Description[nl]": "Muiscursorthema kiezen",
+        "Description[pl]": "Wybierz zestaw wskaźników myszy",
+        "Description[sv]": "Välj muspekartema",
+        "Description[uk]": "Вибір теми вказівника миші",
+        "Description[x-test]": "xxChoose mouse cursor themexx",
         "Icon": "preferences-desktop-cursors",
         "Name": "Cursors",
         "Name[ar]": "المؤشرات",

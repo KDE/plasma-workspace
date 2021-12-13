@@ -3,10 +3,30 @@
         "Authors": [
             {
                 "Email": "aleixpol@blue-systems.com",
-                "Name": "Aleix Pol Gonzalez"
+                "Name": "Aleix Pol Gonzalez",
+                "Name[ca]": "Aleix Pol Gonzalez",
+                "Name[es]": "Aleix Pol Gonzalez",
+                "Name[ia]": "Aleix Pol Gonzalez",
+                "Name[it]": "Aleix Pol Gonzalez",
+                "Name[lt]": "Aleix Pol Gonzalez",
+                "Name[nl]": "Aleix Pol Gonzalez",
+                "Name[pl]": "Aleix Pol Gonzalez",
+                "Name[sv]": "Aleix Pol Gonzalez",
+                "Name[uk]": "Aleix Pol Gonzalez",
+                "Name[x-test]": "xxAleix Pol Gonzalezxx"
             }
         ],
         "Description": "Lets you find software",
+        "Description[ca]": "Permet cercar programari",
+        "Description[es]": "Le permite encontrar software",
+        "Description[ia]": "Te permitte trovar software",
+        "Description[it]": "Ti consente di trovare i programmi",
+        "Description[lt]": "Leidžia rasti programinę įrangą",
+        "Description[nl]": "Laat u software vinden",
+        "Description[pl]": "Umożliwia wyszukiwanie programów",
+        "Description[sv]": "Låter dig söka efter programvara",
+        "Description[uk]": "Допомагає вам шукати програми",
+        "Description[x-test]": "xxLets you find softwarexx",
         "EnabledByDefault": true,
         "Icon": "applications-other",
         "Id": "appstream",

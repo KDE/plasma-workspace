@@ -3,11 +3,31 @@
         "Authors": [
             {
                 "Email": "chani@kde.org",
-                "Name": "Chani Armitage"
+                "Name": "Chani Armitage",
+                "Name[ca]": "Chani Armitage",
+                "Name[es]": "Chani Armitage",
+                "Name[ia]": "Chani Armitage",
+                "Name[it]": "Chani Armitage",
+                "Name[lt]": "Chani Armitage",
+                "Name[nl]": "Chani Armitage",
+                "Name[pl]": "Chani Armitage",
+                "Name[sv]": "Chani Armitage",
+                "Name[uk]": "Chani Armitage",
+                "Name[x-test]": "xxChani Armitagexx"
             }
         ],
         "Category": "",
         "Description": "Information on Plasma Activities",
+        "Description[ca]": "Informació quant a activitats del Plasma",
+        "Description[es]": "Información sobre las actividades de Plasma",
+        "Description[ia]": "Information re activitates de Plasma",
+        "Description[it]": "Informazioni sulle attività di Plasma",
+        "Description[lt]": "Informacija apie Plasma veiklas",
+        "Description[nl]": "Informatie over Plasma activiteiten",
+        "Description[pl]": "Wyświetla informacje o aktywnościach Plazmy",
+        "Description[sv]": "Information om aktiviteter i Plasma",
+        "Description[uk]": "Інформація про простори дій Плазми",
+        "Description[x-test]": "xxInformation on Plasma Activitiesxx",
         "EnabledByDefault": true,
         "Icon": "preferences-desktop-activities",
         "Id": "org.kde.activities",

@@ -3,11 +3,31 @@
         "Authors": [
             {
                 "Email": "wilderkde@gmail.com",
-                "Name": "Viranch Mehta, Jacopo De Simoi"
+                "Name": "Viranch Mehta, Jacopo De Simoi",
+                "Name[ca]": "Viranch Mehta, Jacopo De Simoi",
+                "Name[es]": "Viranch Mehta, Jacopo De Simoi",
+                "Name[ia]": "Viranch Mehta, Jacopo De Simoi",
+                "Name[it]": "Viranch Mehta, Jacopo De Simoi",
+                "Name[lt]": "Viranch Mehta, Jacopo De Simoi",
+                "Name[nl]": "Viranch Mehta, Jacopo De Simoi",
+                "Name[pl]": "Viranch Mehta, Jacopo De Simoi",
+                "Name[sv]": "Viranch Mehta",
+                "Name[uk]": "Viranch Mehta, Jacopo De Simoi",
+                "Name[x-test]": "xxViranch Mehta, Jacopo De Simoixx"
             }
         ],
         "Category": "System Information",
         "Description": "Notifications and access for devices",
+        "Description[ca]": "Notificacions i accés als dispositius",
+        "Description[es]": "Notificaciones y accesos de dispositivos",
+        "Description[ia]": "Notificationes e accesso pro dispositivos",
+        "Description[it]": "Notifiche e accesso per dispositivi",
+        "Description[lt]": "Pranešimai apie įrenginius ir prieiga prie jų",
+        "Description[nl]": "Meldingen en toegang voor apparaten",
+        "Description[pl]": "Powiadomienia i dostęp do urządzeń",
+        "Description[sv]": "Underrättelser och åtkomst av enheter",
+        "Description[uk]": "Сповіщення і доступ до пристроїв",
+        "Description[x-test]": "xxNotifications and access for devicesxx",
         "EnabledByDefault": true,
         "FormFactors": [
             "tablet",

@@ -3,10 +3,30 @@
         "Authors": [
             {
                 "Email": "kde@davidedmundson.co.uk",
-                "Name": "David Edmundson"
+                "Name": "David Edmundson",
+                "Name[ca]": "David Edmundson",
+                "Name[es]": "David Edmundson",
+                "Name[ia]": "David Edmundson",
+                "Name[it]": "David Edmundson",
+                "Name[lt]": "David Edmundson",
+                "Name[nl]": "David Edmundson",
+                "Name[pl]": "David Edmundson",
+                "Name[sv]": "David Edmundson",
+                "Name[uk]": "David Edmundson",
+                "Name[x-test]": "xxDavid Edmundsonxx"
             }
         ],
         "Description": "Open devices and folder bookmarks",
+        "Description[ca]": "Obre els punts dels dispositius i dels preferits",
+        "Description[es]": "Abrir marcadores de dispositivos y carpetas",
+        "Description[ia]": "Aperi dispositivos e marcatores de libros de dossieres",
+        "Description[it]": "Apri i segnalibri dei dispositivi e delle cartelle",
+        "Description[lt]": "Atverti įrenginių ir aplankų žymeles",
+        "Description[nl]": "Apparaten- en mappenbladwijzers openen",
+        "Description[pl]": "Otwiera urządzenia i katalogi ze skrótów",
+        "Description[sv]": "Öppna enhets- och katalogbokmärken",
+        "Description[uk]": "Відкриття пристроїв та закладок на теки",
+        "Description[x-test]": "xxOpen devices and folder bookmarksxx",
         "EnabledByDefault": true,
         "Icon": "user-home",
         "Id": "places",

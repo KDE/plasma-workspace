@@ -3,11 +3,31 @@
         "Authors": [
             {
                 "Email": "bhush94@gmail.com",
-                "Name": "Bhushan Shah"
+                "Name": "Bhushan Shah",
+                "Name[ca]": "Bhushan Shah",
+                "Name[es]": "Bhushan Shah",
+                "Name[ia]": "Bhushan Shah",
+                "Name[it]": "Bhushan Shah",
+                "Name[lt]": "Bhushan Shah",
+                "Name[nl]": "Bhushan Shah",
+                "Name[pl]": "Bhushan Shah",
+                "Name[sv]": "Bhushan Shah",
+                "Name[uk]": "Bhushan Shah",
+                "Name[x-test]": "xxBhushan Shahxx"
             }
         ],
         "Category": "Windows and Tasks",
         "Description": "Tab bar to switch activities",
+        "Description[ca]": "Barra de pestanyes per a canviar d'activitat",
+        "Description[es]": "Barra de pestañas para cambiar actividades",
+        "Description[ia]": "Barra de scheda pro commutar activitates",
+        "Description[it]": "Barra a schede per cambiare attività",
+        "Description[lt]": "Kortelių juosta, skirta perjungti veiklas",
+        "Description[nl]": "Tabbladbalk om van activiteit te wisselen",
+        "Description[pl]": "Pasek kart do przełączania aktywności",
+        "Description[sv]": "Flikrad för att byta aktiviteter",
+        "Description[uk]": "Панель з вкладками для перемикання дій",
+        "Description[x-test]": "xxTab bar to switch activitiesxx",
         "EnabledByDefault": true,
         "FormFactors": [
             "desktop"

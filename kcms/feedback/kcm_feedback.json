@@ -2,6 +2,16 @@
     "Categories": "Qt;KDE;",
     "KPlugin": {
         "Description": "Configure user feedback settings",
+        "Description[ca]": "Configura les opcions dels comentaris de l'usuari",
+        "Description[es]": "Configurar las preferencias de los comentarios del usuario",
+        "Description[ia]": "Configura preferentias de retorno de usator",
+        "Description[it]": "Configura le impostazioni di segnalazione dell'utente",
+        "Description[lt]": "Konfigūruoti naudotojo grįžtamojo ryšio nuostatas",
+        "Description[nl]": "Instellingen voor terugkoppeling van gebruikers configureren",
+        "Description[pl]": "Ustawienia informacji zwrotnej",
+        "Description[sv]": "Anpassa inställningar av användaråterkoppling",
+        "Description[uk]": "Налаштовування системи відгуків користувача",
+        "Description[x-test]": "xxConfigure user feedback settingsxx",
         "FormFactors": [
             "tablet",
             "handset",

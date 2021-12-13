@@ -3,10 +3,30 @@
         "Authors": [
             {
                 "Email": "plasma-devel@kde.org",
-                "Name": "Plasma Team"
+                "Name": "Plasma Team",
+                "Name[ca]": "L'equip del Plasma",
+                "Name[es]": "Equipo de Plasma",
+                "Name[ia]": "Equipa de Plasma",
+                "Name[it]": "La squadra di Plasma",
+                "Name[lt]": "Plasma komanda",
+                "Name[nl]": "Team van Plasma",
+                "Name[pl]": "Zespół Plazmy",
+                "Name[sv]": "Plasma-gruppen",
+                "Name[uk]": "Команда розробників Плазми",
+                "Name[x-test]": "xxPlasma Teamxx"
             }
         ],
         "Description": "Fast user switching",
+        "Description[ca]": "Commutador ràpid d'usuari",
+        "Description[es]": "Cambio rápido de usuario",
+        "Description[ia]": "Commutation rapide de usator",
+        "Description[it]": "Cambio rapido dell'utente",
+        "Description[lt]": "Greitas naudotojų perjungimas",
+        "Description[nl]": "Snel van gebruiker wisselen",
+        "Description[pl]": "Przełącza między użytkownikami",
+        "Description[sv]": "Snabbt användarbyte",
+        "Description[uk]": "Швидке перемикання користувачів",
+        "Description[x-test]": "xxFast user switchingxx",
         "EnabledByDefault": true,
         "Icon": "system-shutdown",
         "Id": "desktopsessions",

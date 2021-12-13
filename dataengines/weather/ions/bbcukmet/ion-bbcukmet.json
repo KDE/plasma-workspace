@@ -1,6 +1,16 @@
 {
     "KPlugin": {
         "Description": "XML Data from the British Broadcasting Corporation",
+        "Description[ca]": "Dades XML de la British Broadcasting Corporation",
+        "Description[es]": "Datos XML de la British Broadcasting Corporation",
+        "Description[ia]": "Datos XML ex le British Broadcasting Corporation",
+        "Description[it]": "Dati XML dalla British Broadcasting Corporation",
+        "Description[lt]": "XML duomenys iš BBC (British Broadcasting Corporation)",
+        "Description[nl]": "XML-gegevens van de British Broadcasting Corporation",
+        "Description[pl]": "Dane XML z British Broadcasting Corporation",
+        "Description[sv]": "XML-data från British Broadcasting Corporation",
+        "Description[uk]": "Дані XML від BBC",
+        "Description[x-test]": "xxXML Data from the British Broadcasting Corporationxx",
         "Icon": "noneyet",
         "Id": "bbcukmet",
         "Name": "BBC Weather",

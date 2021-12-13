@@ -3,11 +3,31 @@
         "Authors": [
             {
                 "Email": "mart@kde.org",
-                "Name": "Marco Martin"
+                "Name": "Marco Martin",
+                "Name[ca]": "Marco Martin",
+                "Name[es]": "Marco Martin",
+                "Name[ia]": "Marco Martin",
+                "Name[it]": "Marco Martin",
+                "Name[lt]": "Marco Martin",
+                "Name[nl]": "Marco Martin",
+                "Name[pl]": "Marco Martin",
+                "Name[sv]": "Marco Martin",
+                "Name[uk]": "Marco Martin",
+                "Name[x-test]": "xxMarco Martinxx"
             }
         ],
         "Category": "Date and Time",
         "Description": "A clock with hands",
+        "Description[ca]": "Un rellotge amb manetes",
+        "Description[es]": "Un reloj con manecillas",
+        "Description[ia]": "Un horologio con manos",
+        "Description[it]": "Un orologio con lancette",
+        "Description[lt]": "Laikrodis su rodyklėmis",
+        "Description[nl]": "Een klok met wijzers",
+        "Description[pl]": "Zegar ze wskazówkami",
+        "Description[sv]": "En klocka med visare",
+        "Description[uk]": "Годинник зі стрілками",
+        "Description[x-test]": "xxA clock with handsxx",
         "EnabledByDefault": true,
         "FormFactors": [
             "tablet",

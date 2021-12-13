@@ -3,11 +3,31 @@
         "Authors": [
             {
                 "Email": "mart@kde.org",
-                "Name": "Marco Martin"
+                "Name": "Marco Martin",
+                "Name[ca]": "Marco Martin",
+                "Name[es]": "Marco Martin",
+                "Name[ia]": "Marco Martin",
+                "Name[it]": "Marco Martin",
+                "Name[lt]": "Marco Martin",
+                "Name[nl]": "Marco Martin",
+                "Name[pl]": "Marco Martin",
+                "Name[sv]": "Marco Martin",
+                "Name[uk]": "Marco Martin",
+                "Name[x-test]": "xxMarco Martinxx"
             }
         ],
         "Category": "System Information",
         "Description": "An applet that monitors hard disk throughput and input/output",
+        "Description[ca]": "Una miniaplicació que controla la velocitat de transferència, així com l'entrada/sortida de les dades al disc dur",
+        "Description[es]": "Una miniaplicación que monitoriza el rendimiento y la entrada/salida del disco duro",
+        "Description[ia]": "Un applet que que monitora le prestation (throughput) e ingresso/egresso de disco dur",
+        "Description[it]": "Un'applet che controlla le prestazioni e l'uso del disco fisso",
+        "Description[lt]": "Programėlė, kuri stebi disko apkrovą ir įvedimą/išvedimą",
+        "Description[nl]": "Een applet die de activiteit van de harde schijf volgt",
+        "Description[pl]": "Monitoruje przepustowość WE/WY dysku twardego",
+        "Description[sv]": "Ett miniprogram som övervakar hårddiskprestanda samt in- och utmatning",
+        "Description[uk]": "Аплет, який стежить за даними, які записуються на жорсткий диск та читаються з жорсткого диска",
+        "Description[x-test]": "xxAn applet that monitors hard disk throughput and input/outputxx",
         "EnabledByDefault": true,
         "FormFactors": [
             "desktop"

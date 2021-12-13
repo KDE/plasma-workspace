@@ -3,10 +3,30 @@
         "Authors": [
             {
                 "Email": "plasma-devel@kde.org",
-                "Name": "Plasma Team"
+                "Name": "Plasma Team",
+                "Name[ca]": "L'equip del Plasma",
+                "Name[es]": "Equipo de Plasma",
+                "Name[ia]": "Equipa de Plasma",
+                "Name[it]": "La squadra di Plasma",
+                "Name[lt]": "Plasma komanda",
+                "Name[nl]": "Team van Plasma",
+                "Name[pl]": "Zespół Plazmy",
+                "Name[sv]": "Plasma-gruppen",
+                "Name[uk]": "Команда розробників Плазми",
+                "Name[x-test]": "xxPlasma Teamxx"
             }
         ],
         "Description": "Find applications, control panels and services",
+        "Description[ca]": "Cerca aplicacions, plafons de control i serveis",
+        "Description[es]": "Encontrar aplicaciones, paneles de control y servicios",
+        "Description[ia]": "Trova applicationes, pannellos de controlo e servicios",
+        "Description[it]": "Trova applicazioni, pannelli di controllo e servizi",
+        "Description[lt]": "Rasti programas, valdyti skydelius ir tarnybas",
+        "Description[nl]": "Zoek naar programma's, configuratiemodules en diensten",
+        "Description[pl]": "Wyszukuje programy, panele sterowania i usługi",
+        "Description[sv]": "Sök efter program, kontrollpaneler och tjänster",
+        "Description[uk]": "Знайти програми, панелі керування та служби",
+        "Description[x-test]": "xxFind applications, control panels and servicesxx",
         "EnabledByDefault": true,
         "Icon": "applications-other",
         "Id": "services",

@@ -1,6 +1,16 @@
 {
     "KPlugin": {
         "Description": "Numeric, Currency and Time Formats",
+        "Description[ca]": "Format numèric, monetari i horari",
+        "Description[es]": "Formatos numérico, de moneda y de hora",
+        "Description[ia]": "Formatos numeric, de numerario e de tempore",
+        "Description[it]": "Formati numerici, delle valute e dell'orario",
+        "Description[lt]": "Skaitmenų, valiutos ir laiko formatai",
+        "Description[nl]": "Indeling voor numerieke getallen, valuta en tijd",
+        "Description[pl]": "Formaty liczb, waluty i czasu",
+        "Description[sv]": "Numeriska format, valutaformat och tidsformat",
+        "Description[uk]": "Формати запису чисел, грошових сум та часу",
+        "Description[x-test]": "xxNumeric, Currency and Time Formatsxx",
         "FormFactors": [
             "tablet",
             "handset",

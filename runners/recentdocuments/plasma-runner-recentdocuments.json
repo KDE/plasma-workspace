@@ -3,7 +3,17 @@
         "Authors": [
             {
                 "Email": "sebas@kde.org",
-                "Name": "Sebastian Kügler"
+                "Name": "Sebastian Kügler",
+                "Name[ca]": "Sebastian Kügler",
+                "Name[es]": "Sebastian Kügler",
+                "Name[ia]": "Sebastian Kügler",
+                "Name[it]": "Sebastian Kügler",
+                "Name[lt]": "Sebastian Kügler",
+                "Name[nl]": "Sebastian Kügler",
+                "Name[pl]": "Sebastian Kügler",
+                "Name[sv]": "Sebastian Kügler",
+                "Name[uk]": "Sebastian Kügler",
+                "Name[x-test]": "xxSebastian Küglerxx"
             }
         ],
         "EnabledByDefault": true,

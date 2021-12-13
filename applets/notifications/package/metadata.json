@@ -3,11 +3,31 @@
         "Authors": [
             {
                 "Email": "kde@privat.broulik.de",
-                "Name": "Kai Uwe Broulik"
+                "Name": "Kai Uwe Broulik",
+                "Name[ca]": "Kai Uwe Broulik",
+                "Name[es]": "Kai Uwe Broulik",
+                "Name[ia]": "Kai Uwe Broulik",
+                "Name[it]": "Kai Uwe Broulik",
+                "Name[lt]": "Kai Uwe Broulik",
+                "Name[nl]": "Kai Uwe Broulik",
+                "Name[pl]": "Kai Uwe Broulik",
+                "Name[sv]": "Kai Uwe Broulik",
+                "Name[uk]": "Kai Uwe Broulik",
+                "Name[x-test]": "xxKai Uwe Broulikxx"
             }
         ],
         "Category": "Tasks",
         "Description": "Display notifications and jobs",
+        "Description[ca]": "Mostra les notificacions i els treballs",
+        "Description[es]": "Mostrar notificaciones y tareas",
+        "Description[ia]": "Monstra notificationes e labores",
+        "Description[it]": "Visualizza le notifiche ed i processi",
+        "Description[lt]": "Rodyti pranešimus ir darbus",
+        "Description[nl]": "Meldingen en taken tonen",
+        "Description[pl]": "Wyświetla powiadomienia i zadania",
+        "Description[sv]": "Visa underrättelser och jobb",
+        "Description[uk]": "Показ сповіщень і завдань",
+        "Description[x-test]": "xxDisplay notifications and jobsxx",
         "EnabledByDefault": true,
         "FormFactors": [
             "desktop"

@@ -3,10 +3,30 @@
         "Authors": [
             {
                 "Email": "chani@kde.org",
-                "Name": "Chani"
+                "Name": "Chani",
+                "Name[ca]": "Chani",
+                "Name[es]": "Chani",
+                "Name[ia]": "Chani",
+                "Name[it]": "Chani",
+                "Name[lt]": "Chani",
+                "Name[nl]": "Chani",
+                "Name[pl]": "Chani",
+                "Name[sv]": "Chani",
+                "Name[uk]": "Chani",
+                "Name[x-test]": "xxChanixx"
             }
         ],
         "Description": "Creates a widget from the contents of the clipboard",
+        "Description[ca]": "Crea un giny a partir del contingut del porta-retalls",
+        "Description[es]": "Crea un elemento gráfico con los contenidos del portapapeles",
+        "Description[ia]": "Il crea elemento graphic (Widget) ex le contentos del area de transferentia (clipboard)",
+        "Description[it]": "Crea un oggetto dai contenuti degli appunti",
+        "Description[lt]": "Sukuria valdiklį iš iškarpinės turinio",
+        "Description[nl]": "Maakt een widget aan uit de inhoud van het klembord",
+        "Description[pl]": "Wyświetla zawartość schowka",
+        "Description[sv]": "Skapa komponent från klippbordets innehåll",
+        "Description[uk]": "Створює віджет з вмістом буфера обміну даними",
+        "Description[x-test]": "xxCreates a widget from the contents of the clipboardxx",
         "EnabledByDefault": true,
         "Icon": "edit-paste",
         "Id": "org.kde.paste",

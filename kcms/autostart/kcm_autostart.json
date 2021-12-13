@@ -1,6 +1,16 @@
 {
     "KPlugin": {
         "Description": "Automatically Started Applications",
+        "Description[ca]": "Aplicacions iniciades automàticament",
+        "Description[es]": "Aplicaciones que se inician automáticamente",
+        "Description[ia]": "Applicationes initiate automaticamente",
+        "Description[it]": "Applicazioni avviate automaticamente",
+        "Description[lt]": "Automatiškai paleidžiamos programos",
+        "Description[nl]": "Automatisch gestarte toepassingen",
+        "Description[pl]": "Samoczynnie uruchamiane programy",
+        "Description[sv]": "Program som startas automatiskt",
+        "Description[uk]": "Програми, що запускаються автоматично",
+        "Description[x-test]": "xxAutomatically Started Applicationsxx",
         "FormFactors": [
             "tablet",
             "handset",

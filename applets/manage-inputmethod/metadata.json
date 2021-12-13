@@ -3,11 +3,31 @@
         "Authors": [
             {
                 "Email": "aleixpol@kde.org",
-                "Name": "Aleix Pol Gonzalez"
+                "Name": "Aleix Pol Gonzalez",
+                "Name[ca]": "Aleix Pol Gonzalez",
+                "Name[es]": "Aleix Pol Gonzalez",
+                "Name[ia]": "Aleix Pol Gonzalez",
+                "Name[it]": "Aleix Pol Gonzalez",
+                "Name[lt]": "Aleix Pol Gonzalez",
+                "Name[nl]": "Aleix Pol Gonzalez",
+                "Name[pl]": "Aleix Pol Gonzalez",
+                "Name[sv]": "Aleix Pol Gonzalez",
+                "Name[uk]": "Aleix Pol Gonzalez",
+                "Name[x-test]": "xxAleix Pol Gonzalezxx"
             }
         ],
         "Category": "Accessibility",
         "Description": "Manage your Input Methods",
+        "Description[ca]": "Gestioneu els mètodes d'entrada",
+        "Description[es]": "Gestión de métodos de entrada",
+        "Description[ia]": "Gere tu methodos de insertar",
+        "Description[it]": "Gestire i metodi di inserimento",
+        "Description[lt]": "Tvarkyti įvesties metodus",
+        "Description[nl]": "Uw invoermethoden beheren",
+        "Description[pl]": "Zarządzaj swoimi metodami wprowadzania",
+        "Description[sv]": "Hantera dina inmatningsmetoder",
+        "Description[uk]": "Керування вашими способами введення",
+        "Description[x-test]": "xxManage your Input Methodsxx",
         "EnabledByDefault": true,
         "FormFactors": [
             "tablet",

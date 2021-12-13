@@ -3,19 +3,49 @@
         "Authors": [
             {
                 "Email": "tpr@iki.fi",
-                "Name": "Teemu Rytilahti"
+                "Name": "Teemu Rytilahti",
+                "Name[ca]": "Teemu Rytilahti",
+                "Name[es]": "Teemu Rytilahti",
+                "Name[ia]": "Teemu Rytilahti",
+                "Name[it]": "Teemu Rytilahti",
+                "Name[lt]": "Teemu Rytilahti",
+                "Name[nl]": "Teemu Rytilahti",
+                "Name[pl]": "Teemu Rytilahti",
+                "Name[sv]": "Teemu Rytilahti",
+                "Name[uk]": "Teemu Rytilahti",
+                "Name[x-test]": "xxTeemu Rytilahtixx"
             }
         ],
         "Description": "Search the web using keywords",
+        "Description[ca]": "Cerca a la web usant paraules clau",
+        "Description[es]": "Buscar la web usando palabras clave",
+        "Description[ia]": "Cerca in le web usante parolas clave",
+        "Description[it]": "Cerca nel web utilizzando parole chiave",
+        "Description[lt]": "Ieškoti saityne naudojant raktažodžius",
+        "Description[nl]": "Op het web zoeken met trefwoorden",
+        "Description[pl]": "Wyszukaj w sieci przy użyciu słów kluczowych",
+        "Description[sv]": "Sök på webben med nyckelord",
+        "Description[uk]": "Пошук в інтернеті за допомогою ключових слів",
+        "Description[x-test]": "xxSearch the web using keywordsxx",
         "EnabledByDefault": true,
         "Icon": "internet-web-browser",
         "Id": "webshortcuts",
         "License": "LGPL",
         "Name": "Web Search Keywords",
+        "Name[ca]": "Paraules clau de cerca a la web",
+        "Name[es]": "Palabras clave de búsqueda web",
+        "Name[ia]": "Parolas clave de cerca de web",
+        "Name[it]": "Parole chiave delle ricerche web",
+        "Name[lt]": "Paieškos saityne raktažodžiai",
+        "Name[nl]": "Webzoektrefwoorden",
+        "Name[pl]": "Słowa kluczowe do wyszukiwania w sieci",
+        "Name[sv]": "Webbsökningsnyckelord",
+        "Name[uk]": "Ключові слова пошуку в інтернеті",
+        "Name[x-test]": "xxWeb Search Keywordsxx",
         "ServiceTypes": [
             "Plasma/Runner"
         ],
         "Version": "1.0"
     },
-    "X-KDE-ConfigModule" : "kcm_webshortcuts"
+    "X-KDE-ConfigModule": "kcm_webshortcuts"
 }

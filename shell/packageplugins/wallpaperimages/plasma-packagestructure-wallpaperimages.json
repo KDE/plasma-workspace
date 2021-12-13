@@ -4,7 +4,17 @@
         "Authors": [
             {
                 "Email": "aseigo@kde.org",
-                "Name": "Aaron Seigo"
+                "Name": "Aaron Seigo",
+                "Name[ca]": "Aaron Seigo",
+                "Name[es]": "Aaron Seigo",
+                "Name[ia]": "Aaron Seigo",
+                "Name[it]": "Aaron Seigo",
+                "Name[lt]": "Aaron Seigo",
+                "Name[nl]": "Aaron Seigo",
+                "Name[pl]": "Aaron Seigo",
+                "Name[sv]": "Aaron Seigo",
+                "Name[uk]": "Aaron Seigo",
+                "Name[x-test]": "xxAaron Seigoxx"
             }
         ],
         "Name": "Wallpaper Images",

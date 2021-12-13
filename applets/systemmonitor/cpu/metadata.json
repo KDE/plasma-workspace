@@ -3,11 +3,31 @@
         "Authors": [
             {
                 "Email": "kde@privat.broulik.de",
-                "Name": "Kai Uwe Broulik"
+                "Name": "Kai Uwe Broulik",
+                "Name[ca]": "Kai Uwe Broulik",
+                "Name[es]": "Kai Uwe Broulik",
+                "Name[ia]": "Kai Uwe Broulik",
+                "Name[it]": "Kai Uwe Broulik",
+                "Name[lt]": "Kai Uwe Broulik",
+                "Name[nl]": "Kai Uwe Broulik",
+                "Name[pl]": "Kai Uwe Broulik",
+                "Name[sv]": "Kai Uwe Broulik",
+                "Name[uk]": "Kai Uwe Broulik",
+                "Name[x-test]": "xxKai Uwe Broulikxx"
             }
         ],
         "Category": "System Information",
         "Description": "System monitor Widget that shows the total CPU usage",
+        "Description[ca]": "Giny del monitor del sistema que mostra l'ús total de la CPU",
+        "Description[es]": "Elemento gráfico del monitor del sistema que muestra el uso total de CPU",
+        "Description[ia]": "Widget de supervision de systema que monstra le uso total de CPU",
+        "Description[it]": "Oggetto di monitoraggio del sistema che mostra l'utilizzo totale del processore",
+        "Description[lt]": "Sistemos prižiūryklės valdiklis, kuris rodo bendrą procesoriaus naudojimą",
+        "Description[nl]": "Systeemmonitorwidget die het totale gebruik toont de CPU toont",
+        "Description[pl]": "Element interfejsu, który pokazuje całkowite wykorzystanie procesora",
+        "Description[sv]": "Grafisk systemövervakningskomponent som visar total processoranvändning",
+        "Description[uk]": "Віджет нагляду за системою, який показує загальне використання процесора",
+        "Description[x-test]": "xxSystem monitor Widget that shows the total CPU usagexx",
         "EnabledByDefault": true,
         "FormFactors": [
             "desktop"

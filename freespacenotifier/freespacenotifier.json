@@ -1,6 +1,16 @@
 {
     "KPlugin": {
         "Description": "Warns when running out of space on your home folder",
+        "Description[ca]": "Avisa quan s'exhaureix l'espai de la carpeta personal",
+        "Description[es]": "Le avisa cuando se está quedando sin espacio en su carpeta personal",
+        "Description[ia]": "Il avisa quando il termina le spatio sur tu dossier domo",
+        "Description[it]": "Avvisa quando lo spazio nella tua cartella Home si sta esaurendo",
+        "Description[lt]": "Įspėja, kai namų aplanke baigiasi laisva vieta",
+        "Description[nl]": "Geeft een waarschuwing bij een lage stand van de vrije ruimte voor uw persoonlijke map",
+        "Description[pl]": "Ostrzega, kiedy zaczyna brakować miejsca w katalogu domowym",
+        "Description[sv]": "Varnar när utrymmet i hemkatalogen håller på att ta slut",
+        "Description[uk]": "Попереджає, якщо у домашній теці залишається мало місця",
+        "Description[x-test]": "xxWarns when running out of space on your home folderxx",
         "Name": "Free Space Notifier",
         "Name[ar]": "مُخطِر المساحة الحرّة",
         "Name[ast]": "Avisador d'espaciu llibre",

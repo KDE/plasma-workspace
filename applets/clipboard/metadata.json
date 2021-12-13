@@ -3,11 +3,31 @@
         "Authors": [
             {
                 "Email": "mgraesslin@kde.org",
-                "Name": "Martin Gräßlin"
+                "Name": "Martin Gräßlin",
+                "Name[ca]": "Martin Gräßlin",
+                "Name[es]": "Martin Gräßlin",
+                "Name[ia]": "Martin Gräßlin",
+                "Name[it]": "Martin Gräßlin",
+                "Name[lt]": "Martin Gräßlin",
+                "Name[nl]": "Martin Gräßlin",
+                "Name[pl]": "Martin Gräßlin",
+                "Name[sv]": "Martin Gräßlin",
+                "Name[uk]": "Martin Gräßlin",
+                "Name[x-test]": "xxMartin Gräßlinxx"
             }
         ],
         "Category": "Clipboard",
         "Description": "Provides access to the clipboard history",
+        "Description[ca]": "Proporciona accés a l'historial del porta-retalls",
+        "Description[es]": "Proporciona acceso al historial del portapapeles",
+        "Description[ia]": "Forni accesso al chronologia del area de transferentia",
+        "Description[it]": "Fornisce l'accesso alla cronologia degli appunti",
+        "Description[lt]": "Suteikia prieigą prie iškarpinės istorijos",
+        "Description[nl]": "Biedt toegang tot de geschiedenis van klembord",
+        "Description[pl]": "Zapewnia dostęp do historii schowka",
+        "Description[sv]": "Ger tillgång till klippbordshistoriken",
+        "Description[uk]": "Надає доступ до журналу буфера обміну даними",
+        "Description[x-test]": "xxProvides access to the clipboard historyxx",
         "EnabledByDefault": true,
         "FormFactors": [
             "desktop"

@@ -3,11 +3,31 @@
         "Authors": [
             {
                 "Email": "wilderkde@gmail.com",
-                "Name": "Jacopo De Simoi"
+                "Name": "Jacopo De Simoi",
+                "Name[ca]": "Jacopo De Simoi",
+                "Name[es]": "Jacopo De Simoi",
+                "Name[ia]": "Jacopo De Simoi",
+                "Name[it]": "Jacopo De Simoi",
+                "Name[lt]": "Jacopo De Simoi",
+                "Name[nl]": "Jacopo De Simoi",
+                "Name[pl]": "Jacopo De Simoi",
+                "Name[sv]": "Jacopo De Simoi",
+                "Name[uk]": "Jacopo De Simoi",
+                "Name[x-test]": "xxJacopo De Simoixx"
             }
         ],
         "Category": "",
         "Description": "Passive device notifications for the user.",
+        "Description[ca]": "Notificacions passives de dispositius per a l'usuari.",
+        "Description[es]": "Notificaciones pasivas de dispositivos para el usuario.",
+        "Description[ia]": "Notificationes de dispositivo passive pro le usator.",
+        "Description[it]": "Notifiche dei dispositivi passive per l'utente.",
+        "Description[lt]": "Pasyvūs pranešimai naudotojui apie įrenginius.",
+        "Description[nl]": "Passieve meldingen van apparaten voor de gebruiker.",
+        "Description[pl]": "Powiadamia biernie użytkownika o urządzeniach.",
+        "Description[sv]": "Passiva enhetsunderrättelser för användaren.",
+        "Description[uk]": "Пасивні сповіщення користувача щодо пристроїв.",
+        "Description[x-test]": "xxPassive device notifications for the user.xx",
         "Icon": "device-notifier",
         "Id": "devicenotifications",
         "Name": "Device Notifications",

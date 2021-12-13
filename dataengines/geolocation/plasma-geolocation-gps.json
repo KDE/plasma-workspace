@@ -1,6 +1,16 @@
 {
     "KPlugin": {
         "Description": "Geolocation from GPS address.",
+        "Description[ca]": "Geolocalització des d'una adreça GPS.",
+        "Description[es]": "Geolocalización desde una dirección GPS.",
+        "Description[ia]": "Geolocation ex adresse GPS.",
+        "Description[it]": "Geolocalizzazione dalla posizione GPS.",
+        "Description[lt]": "Geografinės vietos nustatymas pagal GPS adresą.",
+        "Description[nl]": "Geolocatie uit GPS-adres.",
+        "Description[pl]": "Geolokalizuje z adresu GPS.",
+        "Description[sv]": "Geografisk lokalisering från GPS-adress.",
+        "Description[uk]": "Геопозиціювання за GPS-адресою",
+        "Description[x-test]": "xxGeolocation from GPS address.xx",
         "Icon": "applications-internet",
         "Id": "gps",
         "Name": "Geolocation GPS",

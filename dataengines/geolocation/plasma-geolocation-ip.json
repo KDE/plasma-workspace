@@ -1,6 +1,16 @@
 {
     "KPlugin": {
         "Description": "Geolocation from IP address.",
+        "Description[ca]": "Geolocalització des d'una adreça IP.",
+        "Description[es]": "Geolocalización desde una dirección IP.",
+        "Description[ia]": "Geolocation ex adresse IP",
+        "Description[it]": "Geolocalizzazione dall'indirizzo IP.",
+        "Description[lt]": "Geografinės vietos nustatymas pagal IP adresą.",
+        "Description[nl]": "Geolocatie uit IP-adres.",
+        "Description[pl]": "Geolokalizuje za pomocą adresu IP.",
+        "Description[sv]": "Geografisk lokalisering från IP-adress.",
+        "Description[uk]": "Геопозиціювання за IP-адресою",
+        "Description[x-test]": "xxGeolocation from IP address.xx",
         "Icon": "applications-internet",
         "Id": "ip",
         "Name": "Geolocation IP",

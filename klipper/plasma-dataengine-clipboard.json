@@ -3,11 +3,31 @@
         "Authors": [
             {
                 "Email": "mgraesslin@kde.org",
-                "Name": "Martin Gräßlin"
+                "Name": "Martin Gräßlin",
+                "Name[ca]": "Martin Gräßlin",
+                "Name[es]": "Martin Gräßlin",
+                "Name[ia]": "Martin Gräßlin",
+                "Name[it]": "Martin Gräßlin",
+                "Name[lt]": "Martin Gräßlin",
+                "Name[nl]": "Martin Gräßlin",
+                "Name[pl]": "Martin Gräßlin",
+                "Name[sv]": "Martin Gräßlin",
+                "Name[uk]": "Martin Gräßlin",
+                "Name[x-test]": "xxMartin Gräßlinxx"
             }
         ],
         "Category": "Clipboard",
         "Description": "Clipboard Tool.",
+        "Description[ca]": "Eina de porta-retalls.",
+        "Description[es]": "Herramienta del portapapeles.",
+        "Description[ia]": "Instrumento de  Area de transferentia",
+        "Description[it]": "Strumento per gli appunti.",
+        "Description[lt]": "Iškarpinės įrankis.",
+        "Description[nl]": "Klembordbeheer.",
+        "Description[pl]": "Narzędzie schowka.",
+        "Description[sv]": "Klippbordsverktyg.",
+        "Description[uk]": "Утиліта буфера даних.",
+        "Description[x-test]": "xxClipboard Tool.xx",
         "EnabledByDefault": true,
         "Icon": "klipper",
         "Id": "org.kde.plasma.clipboard",

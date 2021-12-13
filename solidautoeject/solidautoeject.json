@@ -1,6 +1,16 @@
 {
     "KPlugin": {
         "Description": "Automatically releases drives when their eject button is pushed",
+        "Description[ca]": "Allibera unitats automàticament quan es prem el seu botó d'expulsió",
+        "Description[es]": "Libera automáticamente las unidades cuando se pulsa el botón de expulsión",
+        "Description[ia]": "Il lassa fora automaticamente le drives quando lor button de expeller es pressate.",
+        "Description[it]": "Rilascia automaticamente le unità quando viene premuto il loro pulsante di espulsione",
+        "Description[lt]": "Automatiškai atjungia diskus, kai paspaudžiamas jų išstūmimo mygtukas",
+        "Description[nl]": "Geeft automatisch apparaten vrij als hun uitwerpknop wordt ingedrukt",
+        "Description[pl]": "Samoczynnie wysuwa napędy po naciśnięciu właściwego przycisku",
+        "Description[sv]": "Frisläpper automatiskt enheter vid tryck på deras utmatningsknapp",
+        "Description[uk]": "Автоматичне вилучення файли пристроїв, після натискання на них кнопки виштовхування",
+        "Description[x-test]": "xxAutomatically releases drives when their eject button is pushedxx",
         "Name": "Drive Ejector",
         "Name[ar]": "مُخرِج الأجهزة",
         "Name[az]": "Daşıyıcıların Çıxarılması",

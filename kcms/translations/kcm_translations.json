@@ -2,6 +2,16 @@
     "Categories": "Qt;KDE;X-KDE-settings-translations;",
     "KPlugin": {
         "Description": "Change workspace and application languages",
+        "Description[ca]": "Canvi dels idiomes de l'espai de treball i les aplicacions",
+        "Description[es]": "Cambiar los idiomas del espacio de trabajo y de las aplicaciones",
+        "Description[ia]": "Cambia spatio de labor e linguages de application",
+        "Description[it]": "Cambia la lingua dello spazio di lavoro e delle applicazioni",
+        "Description[lt]": "Keisti darbo srities ir programų kalbas",
+        "Description[nl]": "Werkruimte en talen van toepassingen wijzigen",
+        "Description[pl]": "Zmień język przestrzeni pracy i aplikacji",
+        "Description[sv]": "Ändra arbetsområde och programspråk",
+        "Description[uk]": "Зміна мови перекладу робочого простору і програм",
+        "Description[x-test]": "xxChange workspace and application languagesxx",
         "FormFactors": [
             "tablet",
             "handset",

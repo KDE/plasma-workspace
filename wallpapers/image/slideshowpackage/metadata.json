@@ -3,11 +3,31 @@
         "Authors": [
             {
                 "Email": "mart@kde.org",
-                "Name": "Marco Martin"
+                "Name": "Marco Martin",
+                "Name[ca]": "Marco Martin",
+                "Name[es]": "Marco Martin",
+                "Name[ia]": "Marco Martin",
+                "Name[it]": "Marco Martin",
+                "Name[lt]": "Marco Martin",
+                "Name[nl]": "Marco Martin",
+                "Name[pl]": "Marco Martin",
+                "Name[sv]": "Marco Martin",
+                "Name[uk]": "Marco Martin",
+                "Name[x-test]": "xxMarco Martinxx"
             }
         ],
         "Category": "",
         "Description": "Slideshow wallpaper",
+        "Description[ca]": "Passi de diapositives al fons de pantalla",
+        "Description[es]": "Fondo de escritorio de presentación",
+        "Description[ia]": "Tapete de papiro de Slideshow (Sequentia de diapositivas)",
+        "Description[it]": "Sfondo con presentazione",
+        "Description[lt]": "Skaidrių rodymo darbalaukio fonas",
+        "Description[nl]": "Achtergrond met diavoorstelling",
+        "Description[pl]": "Tapeta pokazu slajdów",
+        "Description[sv]": "Skrivbordsunderlägg med bildspel",
+        "Description[uk]": "Тло у форматі показу слайдів",
+        "Description[x-test]": "xxSlideshow wallpaperxx",
         "Icon": "folder-image",
         "Id": "org.kde.slideshow",
         "License": "GPLv2+",

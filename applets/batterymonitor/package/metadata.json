@@ -3,11 +3,31 @@
         "Authors": [
             {
                 "Email": "sebas@kde.org, kde@privat.broulik.de",
-                "Name": "Sebastian Kügler, Kai Uwe Broulik"
+                "Name": "Sebastian Kügler, Kai Uwe Broulik",
+                "Name[ca]": "Sebastian Kügler, Kai Uwe Broulik",
+                "Name[es]": "Sebastian Kügler, Kai Uwe Broulik",
+                "Name[ia]": "Sebastian Kügler, Kai Uwe Broulik",
+                "Name[it]": "Sebastian Kügler, Kai Uwe Broulik",
+                "Name[lt]": "Sebastian Kügler, Kai Uwe Broulik",
+                "Name[nl]": "Sebastian Kügler, Kai Uwe Broulik",
+                "Name[pl]": "Sebastian Kügler, Kai Uwe Broulik",
+                "Name[sv]": "Sebastian Kügler",
+                "Name[uk]": "Sebastian Kügler, Kai Uwe Broulik",
+                "Name[x-test]": "xxSebastian Kügler, Kai Uwe Broulikxx"
             }
         ],
         "Category": "System Information",
         "Description": "See the power status of your battery",
+        "Description[ca]": "Vegeu l'estat d'energia de la bateria",
+        "Description[es]": "Ver el estado de energía de su batería",
+        "Description[ia]": "Vide le stato de energia de tu batteria",
+        "Description[it]": "Indica lo stato di carica della batteria",
+        "Description[lt]": "Rodyti akumuliatoriaus įkrovą",
+        "Description[nl]": "Zie de capaciteitsstatus van uw accu",
+        "Description[pl]": "Monitoruje stan naładowania baterii",
+        "Description[sv]": "Se batteriets laddningsstatus",
+        "Description[uk]": "Перегляньте стан заряду акумулятора",
+        "Description[x-test]": "xxSee the power status of your batteryxx",
         "EnabledByDefault": true,
         "FormFactors": [
             "desktop"

@@ -3,11 +3,31 @@
         "Authors": [
             {
                 "Email": "plasma-devel@kde.org",
-                "Name": "Gregor Taetzner"
+                "Name": "Gregor Taetzner",
+                "Name[ca]": "Gregor Taetzner",
+                "Name[es]": "Gregor Taetzner",
+                "Name[ia]": "Gregor Taetzner",
+                "Name[it]": "Gregor Taetzner",
+                "Name[lt]": "Gregor Taetzner",
+                "Name[nl]": "Gregor Taetzner",
+                "Name[pl]": "Gregor Taetzner",
+                "Name[sv]": "Gregor Taetzner",
+                "Name[uk]": "Gregor Taetzner",
+                "Name[x-test]": "xxGregor Taetznerxx"
             }
         ],
         "Category": "",
         "Description": "PackageKit Data Engine",
+        "Description[ca]": "Motor de dades del PackageKit",
+        "Description[es]": "Motor de datos de PackageKit",
+        "Description[ia]": "Motor de Datos (Data Engine) de PackageKit",
+        "Description[it]": "Motore di dati PackageKit",
+        "Description[lt]": "PackageKit duomenų variklis",
+        "Description[nl]": "Pakketkit Gegevensengine",
+        "Description[pl]": "Silnik danych PackageKit",
+        "Description[sv]": "PackageKit-datagränssnitt",
+        "Description[uk]": "Рушій даних PackageKit",
+        "Description[x-test]": "xxPackageKit Data Enginexx",
         "Icon": "package-x-generic",
         "Id": "packagekit",
         "License": "GPL",

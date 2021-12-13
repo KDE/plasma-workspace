@@ -3,10 +3,30 @@
         "Authors": [
             {
                 "Email": "chani@kde.org",
-                "Name": "Chani"
+                "Name": "Chani",
+                "Name[ca]": "Chani",
+                "Name[es]": "Chani",
+                "Name[ia]": "Chani",
+                "Name[it]": "Chani",
+                "Name[lt]": "Chani",
+                "Name[nl]": "Chani",
+                "Name[pl]": "Chani",
+                "Name[sv]": "Chani",
+                "Name[uk]": "Chani",
+                "Name[x-test]": "xxChanixx"
             }
         ],
         "Description": "Simple application launcher",
+        "Description[ca]": "Llançador d'aplicacions senzill",
+        "Description[es]": "Lanzador de aplicaciones sencillo",
+        "Description[ia]": "Simple lanceator de application",
+        "Description[it]": "Semplice avviatore di applicazioni",
+        "Description[lt]": "Paprasta programų paleidyklė",
+        "Description[nl]": "Eenvoudige programmastarter",
+        "Description[pl]": "Proste uruchamianie programów",
+        "Description[sv]": "Enkel programstart",
+        "Description[uk]": "Простий інструмент запуску програм",
+        "Description[x-test]": "xxSimple application launcherxx",
         "EnabledByDefault": true,
         "Icon": "preferences-desktop-launch-feedback",
         "Id": "org.kde.applauncher",

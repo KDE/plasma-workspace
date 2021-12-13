@@ -4,10 +4,30 @@
         "Authors": [
             {
                 "Email": "kde@privat.broulik.de",
-                "Name": "Kai Uwe Broulik"
+                "Name": "Kai Uwe Broulik",
+                "Name[ca]": "Kai Uwe Broulik",
+                "Name[es]": "Kai Uwe Broulik",
+                "Name[ia]": "Kai Uwe Broulik",
+                "Name[it]": "Kai Uwe Broulik",
+                "Name[lt]": "Kai Uwe Broulik",
+                "Name[nl]": "Kai Uwe Broulik",
+                "Name[pl]": "Kai Uwe Broulik",
+                "Name[sv]": "Kai Uwe Broulik",
+                "Name[uk]": "Kai Uwe Broulik",
+                "Name[x-test]": "xxKai Uwe Broulikxx"
             }
         ],
         "Description": "Choose color scheme",
+        "Description[ca]": "Trieu l'esquema de color",
+        "Description[es]": "Escoger un esquema de color",
+        "Description[ia]": "Selige le schema de color ",
+        "Description[it]": "Scegli lo schema di colori",
+        "Description[lt]": "Pasirinkti spalvų rinkinį",
+        "Description[nl]": "Kleurenschema kiezen",
+        "Description[pl]": "Wybierz zestaw kolorów",
+        "Description[sv]": "Välj färgschema",
+        "Description[uk]": "Вибір схеми кольорів",
+        "Description[x-test]": "xxChoose color schemexx",
         "FormFactors": [
             "tablet",
             "handset",

@@ -3,10 +3,30 @@
         "Authors": [
             {
                 "Email": "plasma-devel@kde.org",
-                "Name": "Plasma Team"
+                "Name": "Plasma Team",
+                "Name[ca]": "L'equip del Plasma",
+                "Name[es]": "Equipo de Plasma",
+                "Name[ia]": "Equipa de Plasma",
+                "Name[it]": "La squadra di Plasma",
+                "Name[lt]": "Plasma komanda",
+                "Name[nl]": "Team van Plasma",
+                "Name[pl]": "Zespół Plazmy",
+                "Name[sv]": "Plasma-gruppen",
+                "Name[uk]": "Команда розробників Плазми",
+                "Name[x-test]": "xxPlasma Teamxx"
             }
         ],
         "Description": "File and URL opener",
+        "Description[ca]": "Obre fitxers i URL",
+        "Description[es]": "Visor de archivos y URL",
+        "Description[ia]": "Aperitor de file e de URL",
+        "Description[it]": "Apertura di file e di URL",
+        "Description[lt]": "Failų ir URL atvėrimo įrankis",
+        "Description[nl]": "Openen van bestanden en URL-adressen",
+        "Description[pl]": "Otwiera pliki i adresy URL",
+        "Description[sv]": "Öppna filer och webbadresser",
+        "Description[uk]": "Відкривання файлів і адрес URL",
+        "Description[x-test]": "xxFile and URL openerxx",
         "EnabledByDefault": true,
         "Icon": "system-file-manager",
         "Id": "locations",
