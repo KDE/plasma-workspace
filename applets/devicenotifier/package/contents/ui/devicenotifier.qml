@@ -36,11 +36,6 @@ Item {
     property var connectedRemovables: []
     property int mountedRemovables: 0
 
-    // QTBUG-50380: As soon as the item gets removed from the model, all of ListView's
-    // properties (count, contentHeight) pretend the delegate doesn't exist anymore
-    // causing our "No devices" heading to overlap with the remaining device
-    property int pendingDelegateRemoval: 0
-
     Plasmoid.switchWidth: PlasmaCore.Units.gridUnit * 10
     Plasmoid.switchHeight: PlasmaCore.Units.gridUnit * 10
 
@@ -64,7 +59,7 @@ Item {
         return "device-notifier"
     }
 
-    Plasmoid.status: (filterModel.count > 0 || pendingDelegateRemoval > 0) ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
+    Plasmoid.status: (filterModel.count > 0) ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
 
     PlasmaCore.DataSource {
         id: hpSource
@@ -189,6 +184,8 @@ Item {
         engine: "devicenotifications"
         property string last
         property string lastUdi
+        property string lastIcon
+        property string lastSummary
         onSourceAdded: {
             last = source;
             disconnectSource(source);
@@ -198,6 +195,8 @@ Item {
         onDataChanged: {
             if (last) {
                 lastUdi = data[last].udi
+                lastIcon = sdSource.data[lastUdi] ? sdSource.data[lastUdi].Icon : "device-notifier"
+                lastSummary = sdSource.data[lastUdi] ? sdSource.data[lastUdi].Vendor + " " + sdSource.data[lastUdi].Product : ""
 
                 if (sdSource.isViableDevice(lastUdi)) {
                     plasmoid.expanded = true
@@ -209,7 +208,14 @@ Item {
         function clearMessage() {
             last = ""
             lastUdi = ""
+            lastIcon = ""
+            lastSummary = ""
         }
+    }
+
+    PlasmaCore.DataSource {
+        id: notificationSource
+        engine: "notifications"
     }
 
     property var showRemovableDevicesAction

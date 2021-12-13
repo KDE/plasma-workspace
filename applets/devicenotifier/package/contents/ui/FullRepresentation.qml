@@ -153,7 +153,7 @@ PlasmaComponents3.Page {
                 anchors.centerIn: parent
                 width: parent.width - (PlasmaCore.Units.largeSpacing * 4)
                 text: plasmoid.configuration.removableDevices ? i18n("No removable devices attached") : i18n("No disks available")
-                visible: notifierDialog.count === 0 && !devicenotifier.pendingDelegateRemoval
+                visible: notifierDialog.count === 0
             }
         }
     }

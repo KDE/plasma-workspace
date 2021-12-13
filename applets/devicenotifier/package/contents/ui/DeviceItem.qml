@@ -70,31 +70,26 @@ PlasmaExtras.ExpandableListItem {
          }
      }
 
-    // this keeps the delegate around for 5 seconds after the device has been
-    // removed in case there was a message, such as "you can now safely remove this"
+    /**
+     * BUG 427945: It's very dangerous and racey to access and set properties in ListView.onRemove,
+     * so just show a notification.
+     */
     ListView.onRemove: {
-        deviceItem.isEnabled = false
-
-        if (deviceItem.hasMessage) {
-            ListView.delayRemove = true
-            keepDelegateTimer.restart()
-
-            ++devicenotifier.pendingDelegateRemoval // QTBUG-50380
+        if (!(statusSource.lastUdi === udi && statusSource.data[statusSource.last])) {
+            return;
         }
+
+        let notifications = notificationSource.serviceForSource("notification");
+        let operation = notifications.operationDescription("createNotification");
+        operation.appName = i18nc("@title notification title", "Disks & Devices");
+        operation.appIcon = statusSource.lastIcon;
+        operation.summary = statusSource.lastSummary;
+        operation.body = statusSource.data[statusSource.last].error;
+        notifications.startOperationCall(operation);
+        statusSource.clearMessage();
+
         // Otherwise there are briefly multiple highlight effects
         devicenotifier.currentIndex = -1
-    }
-
-    Timer {
-        id: keepDelegateTimer
-        interval: 5000 // same interval as the auto hide / passive timer
-        onTriggered: {
-            deviceItem.ListView.delayRemove = false
-            // otherwise the last message will show again when this device reappears
-            statusSource.clearMessage()
-
-            --devicenotifier.pendingDelegateRemoval // QTBUG-50380
-        }
     }
 
     Timer {
