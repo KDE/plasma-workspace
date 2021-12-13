@@ -72,29 +72,20 @@ PlasmaExtras.ExpandableListItem {
 
     // this keeps the delegate around for 5 seconds after the device has been
     // removed in case there was a message, such as "you can now safely remove this"
-    ListView.onRemove: {
-        deviceItem.isEnabled = false
-
-        if (deviceItem.hasMessage) {
-            ListView.delayRemove = true
-            keepDelegateTimer.restart()
-
-            ++devicenotifier.pendingDelegateRemoval // QTBUG-50380
-        }
+    ListView.onRemove: SequentialAnimation {
+        PropertyAction { target: deviceItem; property: "ListView.delayRemove"; value: deviceItem.hasMessage }
+        PropertyAction { target: deviceItem; property: "isEnabled"; value: false }
+        // Reset action model to hide the arrow
+        PropertyAction { target: deviceItem; property: "contextualActionsModel"; value: [] }
+        PropertyAction { target: deviceItem; property: "icon"; value: statusSource.lastIcon }
+        PropertyAction { target: deviceItem; property: "title"; value: statusSource.lastDescription }
+        PropertyAction { target: deviceItem; property: "subtitle"; value: statusSource.lastMessage }
+        PauseAnimation { duration: messageHighlightAnimator.duration }
+        // Otherwise the last message will show again when this device reappears
+        ScriptAction { script: statusSource.clearMessage(); }
         // Otherwise there are briefly multiple highlight effects
-        devicenotifier.currentIndex = -1
-    }
-
-    Timer {
-        id: keepDelegateTimer
-        interval: 5000 // same interval as the auto hide / passive timer
-        onTriggered: {
-            deviceItem.ListView.delayRemove = false
-            // otherwise the last message will show again when this device reappears
-            statusSource.clearMessage()
-
-            --devicenotifier.pendingDelegateRemoval // QTBUG-50380
-        }
+        PropertyAction { target: devicenotifier; property: "currentIndex"; value: -1 }
+        PropertyAction { target: deviceItem; property: "ListView.delayRemove"; value: false }
     }
 
     Timer {
