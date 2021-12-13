@@ -34,7 +34,7 @@ RowLayout {
     //  State:              "Discharging"|"Charging"|"FullyCharged"|etc.,
     //  Type:               string,
     //  Vendor:             string,
-    // }
+    // }?
     property var battery
 
     // NOTE: According to the UPower spec this property is only valid for primary batteries, however
@@ -150,7 +150,8 @@ RowLayout {
                 wrapMode: Text.WordWrap
             }
 
-            readonly property bool remainingTimeRowVisible: batterymonitor.remainingTime > 0
+            readonly property bool remainingTimeRowVisible: root.battery !== null
+                && batterymonitor.remainingTime > 0
                 && root.battery["Is Power Supply"]
                 && ["Discharging", "Charging"].includes(root.battery.State)
 
@@ -166,7 +167,8 @@ RowLayout {
                 visible: details.remainingTimeRowVisible
             }
 
-            readonly property bool healthRowVisible: root.battery["Is Power Supply"]
+            readonly property bool healthRowVisible: root.battery !== null
+                && root.battery["Is Power Supply"]
                 && root.battery.Capacity !== ""
                 && typeof root.battery.Capacity === "number"
 
