@@ -101,7 +101,7 @@
     "X-KDE-Keywords[x-test]": "xxfontxx,xxfontsxx,xxinstallerxx,xxtruetypexx,xxtype1xx,xxbitmapxx",
     "X-KDE-Keywords[zh_CN]": "font,fonts,installer,truetype,type1,bitmap,字体,字体族,安装器,安装程序,点阵",
     "X-KDE-OnlyShowOnQtPlatforms": [
-        "xcb;"
+        "xcb"
     ],
     "X-KDE-ParentApp": "kcontrol",
     "X-KDE-System-Settings-Parent-Category": "appearance"
