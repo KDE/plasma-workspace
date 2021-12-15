@@ -58,7 +58,7 @@ PlasmaComponents3.Page {
             id: settingsColumn
             anchors.horizontalCenter: parent.horizontalCenter
             width: parent.width - PlasmaCore.Units.smallSpacing * 2
-            spacing: Math.round(PlasmaCore.Units.gridUnit / 2)
+            spacing: PlasmaCore.Units.smallSpacing * 2
 
             BrightnessItem {
                 id: brightnessSlider
@@ -135,7 +135,7 @@ PlasmaComponents3.Page {
                 id: batteryList
 
                 boundsBehavior: Flickable.StopAtBounds
-                spacing: Math.round(PlasmaCore.Units.gridUnit / 2)
+                spacing: PlasmaCore.Units.smallSpacing * 2
 
                 KeyNavigation.tab: brightnessSlider
                 KeyNavigation.backtab: pmSwitch
