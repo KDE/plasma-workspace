@@ -54,7 +54,7 @@ PlasmaComponents3.Page {
 
         focus: true
 
-        Column {
+        ColumnLayout {
             id: settingsColumn
             anchors {
                 left: parent.left
@@ -67,7 +67,8 @@ PlasmaComponents3.Page {
 
             BrightnessItem {
                 id: brightnessSlider
-                width: parent.width
+
+                Layout.fillWidth: true
 
                 icon: "video-display-brightness"
                 label: i18n("Display Brightness")
@@ -91,7 +92,8 @@ PlasmaComponents3.Page {
 
             BrightnessItem {
                 id: keyboardBrightnessSlider
-                width: parent.width
+
+                Layout.fillWidth: true
 
                 icon: "input-keyboard-brightness"
                 label: i18n("Keyboard Brightness")
@@ -114,7 +116,8 @@ PlasmaComponents3.Page {
             }
 
             PowerProfileItem {
-                width: parent.width
+                Layout.fillWidth: true
+
                 activeProfile: dialog.activeProfile
                 inhibitionReason: dialog.inhibitionReason
                 visible: dialog.profiles.length > 0
