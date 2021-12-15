@@ -163,7 +163,8 @@ Item {
         }
         plasmoid.setAction("showPercentage", i18n("Show Battery Percentage on Icon"), "format-number-percent");
         plasmoid.action("showPercentage").checkable = true;
-        plasmoid.action("showPercentage").checked = Qt.binding(() => plasmoid.configuration.showPercentage);
+        plasmoid.action("showPercentage").checked = Qt.binding(() =>
+            plasmoid !== null && plasmoid.configuration.showPercentage);
 
         if (batterymonitor.kcmAuthorized) {
             plasmoid.removeAction("configure");
