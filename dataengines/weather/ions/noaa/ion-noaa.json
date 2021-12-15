@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "XML Data from NOAA's National Weather Service",
+        "Description[ar]": "بيانات XML من خدمة الطقس الوطنية التابعة لـ NOAA",
         "Description[ca]": "Dades XML del servei meteorològic nacional de NOAA",
         "Description[es]": "Datos XML del servicio nacional meteorológico norteamericano NOAA",
         "Description[fr]": "Données « XML » du service météorologique national du NOAA",
@@ -13,6 +14,7 @@
         "Description[sl]": "Podatki XML od NOAA's National Weather Service",
         "Description[sv]": "XML-data från NOAA:s nationella vädertjänst",
         "Description[uk]": "Дані XML з національної служби погоди NOAA",
+        "Description[vi]": "Dữ liệu XML từ Dịch vụ Thời tiết Quốc gia của NOAA",
         "Description[x-test]": "xxXML Data from NOAA's National Weather Servicexx",
         "Icon": "noneyet",
         "Id": "noaa",
@@ -78,7 +80,6 @@
         "Name[sr@latin]": "NOAA‑ova nacionalna meteorološka služba",
         "Name[sr]": "НОАА‑ова национална метеоролошка служба",
         "Name[sv]": "NOAA:s nationella vädertjänst",
-        "Name[ta]": "NOAA's National Weather Service",
         "Name[te]": "NOAA యొక్క జాతీయ వాతావరణ సేవ",
         "Name[th]": "บริการพยากรณ์อากาศสากล NOAA",
         "Name[tr]": "NOAA Ulusal Hava Durumu Servisi",

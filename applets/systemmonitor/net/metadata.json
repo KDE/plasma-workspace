@@ -4,6 +4,7 @@
             {
                 "Email": "mart@kde.org",
                 "Name": "Marco Martin",
+                "Name[ar]": "Marco Martin",
                 "Name[ca]": "Marco Martin",
                 "Name[es]": "Marco Martin",
                 "Name[fr]": "Marco Martin",
@@ -16,11 +17,13 @@
                 "Name[sl]": "Marco Martin",
                 "Name[sv]": "Marco Martin",
                 "Name[uk]": "Marco Martin",
+                "Name[vi]": "Marco Martin",
                 "Name[x-test]": "xxMarco Martinxx"
             }
         ],
         "Category": "System Information",
         "Description": "System monitor Widget that shows the download and upload data rate",
+        "Description[ar]": "أداة مراقبة النظام التي تعرض سرعة تنزيل ورفع البيانات",
         "Description[ca]": "Giny del monitor del sistema que mostra la velocitat de baixada i pujada de les dades",
         "Description[es]": "Elemento gráfico del monitor del sistema que muestra las velocidades de subida y bajada de datos",
         "Description[fr]": "Composant graphique de surveillance du système, affichant le débit pour les échanges montant /descendant de données.",
@@ -32,7 +35,9 @@
         "Description[pl]": "Element interfejsu, który pokazuje szybkość wysyłania i pobierania danych",
         "Description[sl]": "Gradnik sistemskega monitorja, ki prikazuje podatke prenosa podatkov navznoter in navzven",
         "Description[sv]": "Grafisk systemövervakningskomponent som visar nerladdnings- och uppladdningshastighet för data",
+        "Description[ta]": "பதிவிறக்க மற்றும் பதிவேற்ற வீதத்தைக் காட்டும் பிளாஸ்மாய்ட்",
         "Description[uk]": "Віджет нагляду за системою, який показує швидкість отримання та вивантаження даних",
+        "Description[vi]": "Phụ kiện giám sát hệ thống cho biết tốc độ tải dữ liệu về và lên",
         "Description[x-test]": "xxSystem monitor Widget that shows the download and upload data ratexx",
         "EnabledByDefault": true,
         "FormFactors": [

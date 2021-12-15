@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "Monitors directories for changes",
+        "Description[ar]": "يراقب تغييرات الأدلة",
         "Description[ca]": "Controla els canvis en els directoris",
         "Description[es]": "Monitoriza cambios en directorios",
         "Description[fr]": "Surveille les changements de dossiers",
@@ -12,7 +13,9 @@
         "Description[pl]": "Monitoruje katalogi w poszukiwaniu zmian",
         "Description[sl]": "Nadzira spremembe v mapah",
         "Description[sv]": "Övervakar om kataloger ändras",
+        "Description[ta]": "அடைவுகளில் மாற்றங்கள் உள்ளனவா என்று கண்காணிக்கும்",
         "Description[uk]": "Веде спостереження за змінами у каталогах",
+        "Description[vi]": "Giám sát thay đổi ở các thư mục",
         "Description[x-test]": "xxMonitors directories for changesxx",
         "Name": "Directory Watcher",
         "Name[ar]": "مراقب الأدلة",

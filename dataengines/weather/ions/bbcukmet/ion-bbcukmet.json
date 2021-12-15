@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "XML Data from the British Broadcasting Corporation",
+        "Description[ar]": "بيانات XML من هيئة الإذاعة البريطانية ",
         "Description[ca]": "Dades XML de la British Broadcasting Corporation",
         "Description[es]": "Datos XML de la British Broadcasting Corporation",
         "Description[fr]": "Données « XML » de la British Broadcasting Corporation",
@@ -13,6 +14,7 @@
         "Description[sl]": "XML podatki od British Broadcasting Corporation",
         "Description[sv]": "XML-data från British Broadcasting Corporation",
         "Description[uk]": "Дані XML від BBC",
+        "Description[vi]": "Dữ liệu XML từ Hiệp hội Phát thanh truyền hình Anh quốc (BBC)",
         "Description[x-test]": "xxXML Data from the British Broadcasting Corporationxx",
         "Icon": "noneyet",
         "Id": "bbcukmet",

@@ -4,6 +4,7 @@
             {
                 "Email": "shawn.starr@rogers.com",
                 "Name": "Shawn Starr",
+                "Name[ar]": "Shawn Starr",
                 "Name[ca]": "Shawn Starr",
                 "Name[es]": "Shawn Starr",
                 "Name[fr]": "Shawn Starr",
@@ -16,11 +17,13 @@
                 "Name[sl]": "Shawn Starr",
                 "Name[sv]": "Shawn Starr",
                 "Name[uk]": "Shawn Starr",
+                "Name[vi]": "Shawn Starr",
                 "Name[x-test]": "xxShawn Starrxx"
             }
         ],
         "Category": "",
         "Description": "Weather data from multiple online sources",
+        "Description[ar]": "بيانات الطقس من عدّة مصادر على الإنترنت",
         "Description[ca]": "Dades meteorològiques de múltiples fonts en línia",
         "Description[es]": "Datos meteorológicos desde múltiples fuentes.",
         "Description[fr]": "Données météorologiques provenant de sources multiples en ligne",
@@ -33,6 +36,7 @@
         "Description[sl]": "Podatki o vremenu iz več spletnih virov",
         "Description[sv]": "Väderdata från flera olika nättjänster",
         "Description[uk]": "Дані щодо погоди з декількох мережевих джерел",
+        "Description[vi]": "Dữ liệu thời tiết từ nhiều nguồn trực tuyến",
         "Description[x-test]": "xxWeather data from multiple online sourcesxx",
         "Icon": "weather-clear",
         "Id": "weather",
@@ -103,7 +107,7 @@
         "Name[sr@latin]": "vreme",
         "Name[sr]": "време",
         "Name[sv]": "Väder",
-        "Name[ta]": " ",
+        "Name[ta]": "வானிலை ",
         "Name[te]": "వాతావరణము",
         "Name[tg]": "Обу Ҳаво",
         "Name[th]": "พยากรณ์อากาศ",

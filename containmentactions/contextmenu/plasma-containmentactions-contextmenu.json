@@ -4,6 +4,7 @@
             {
                 "Email": "chani@kde.org",
                 "Name": "Chani",
+                "Name[ar]": "Chani",
                 "Name[ca]": "Chani",
                 "Name[es]": "Chani",
                 "Name[fr]": "Chani",
@@ -16,10 +17,12 @@
                 "Name[sl]": "Chani",
                 "Name[sv]": "Chani",
                 "Name[uk]": "Chani",
+                "Name[vi]": "Chani",
                 "Name[x-test]": "xxChanixx"
             }
         ],
         "Description": "The menu that normally shows on right-click",
+        "Description[ar]": "القائمة التي تظهر عادةً عند الضغط باليمين",
         "Description[ca]": "Menú que es mostra normalment amb un clic del botó dret",
         "Description[es]": "El menú que se suele mostrar al hacer clic derecho",
         "Description[fr]": "Le menu s'affichant normalement lors d'un clic droit.",
@@ -31,7 +34,9 @@
         "Description[pl]": "Wyświetla menu normalnie wyświetlane po naciśnięciu prawym przyciskiem myszy",
         "Description[sl]": "Meni, ki se običajno prikaže ob desnem kliku miške",
         "Description[sv]": "Meny som normalt visas med högerklick",
+        "Description[ta]": "வலது-க்ளிக் செய்யும்போது காட்டப்படும் பட்டி",
         "Description[uk]": "Меню, яке буде показано у відповідь на клацання правою кнопкою миші",
+        "Description[vi]": "Trình đơn thường thấy khi bấm phải",
         "Description[x-test]": "xxThe menu that normally shows on right-clickxx",
         "EnabledByDefault": true,
         "Icon": "help-contextual",

@@ -4,6 +4,7 @@
             {
                 "Email": "plasma-devel@kde.org",
                 "Name": "Plasma Team",
+                "Name[ar]": "فريق بلازما",
                 "Name[ca]": "L'equip del Plasma",
                 "Name[es]": "Equipo de Plasma",
                 "Name[fr]": "Équipe de Plasma",
@@ -15,11 +16,14 @@
                 "Name[pl]": "Zespół Plazmy",
                 "Name[sl]": "Ekipa Plasme",
                 "Name[sv]": "Plasma-gruppen",
+                "Name[ta]": "பிளாஸ்மா குழு",
                 "Name[uk]": "Команда розробників Плазми",
+                "Name[vi]": "Đội Plasma",
                 "Name[x-test]": "xxPlasma Teamxx"
             }
         ],
         "Description": "Fast user switching",
+        "Description[ar]": "تبديل سريع للمستخدِم",
         "Description[ca]": "Commutador ràpid d'usuari",
         "Description[es]": "Cambio rápido de usuario",
         "Description[fr]": "Basculement rapide d'utilisateurs",
@@ -31,7 +35,9 @@
         "Description[pl]": "Przełącza między użytkownikami",
         "Description[sl]": "Hitro preklapljanje uporabnikov",
         "Description[sv]": "Snabbt användarbyte",
+        "Description[ta]": "அமர்வுகளுக்கிடையே வேகமாக தாவ உதவும்",
         "Description[uk]": "Швидке перемикання користувачів",
+        "Description[vi]": "Chuyển người dùng nhanh",
         "Description[x-test]": "xxFast user switchingxx",
         "EnabledByDefault": true,
         "Icon": "system-shutdown",

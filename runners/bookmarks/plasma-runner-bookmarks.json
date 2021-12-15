@@ -4,6 +4,7 @@
             {
                 "Email": "glenn.ergeerts@telenet.be, marco.gulino@gmail.com",
                 "Name": "Glenn Ergeerts, Marco Gulino",
+                "Name[ar]": "Glenn Ergeerts, Marco Gulino",
                 "Name[ca]": "Glenn Ergeerts, Marco Gulino",
                 "Name[es]": "Glenn Ergeerts, Marco Gulino",
                 "Name[fr]": "Glenn Ergeerts, Marco Gulino",
@@ -16,10 +17,12 @@
                 "Name[sl]": "Glenn Ergeerts, Marco Gulino",
                 "Name[sv]": "Glenn Ergeerts, Marco Gulino",
                 "Name[uk]": "Glenn Ergeerts, Marco Gulino",
+                "Name[vi]": "Glenn Ergeerts, Marco Gulino",
                 "Name[x-test]": "xxGlenn Ergeerts, Marco Gulinoxx"
             }
         ],
         "Description": "Find and open bookmarks",
+        "Description[ar]": "اعثر على العلامات وافتحها",
         "Description[ca]": "Cerca i obre adreces d'interès",
         "Description[es]": "Buscar y abrir marcadores",
         "Description[fr]": "Trouver et ouvrir des signets",
@@ -31,13 +34,16 @@
         "Description[pl]": "Wyszukuje i otwiera zakładki",
         "Description[sl]": "Najdi in odpri zaznamke",
         "Description[sv]": "Sök efter och öppna bokmärken",
+        "Description[ta]": "நினைவுக்குறிகளை கண்டுபிடித்து திறக்கும்",
         "Description[uk]": "Знайти і відкрити закладки",
+        "Description[vi]": "Tìm và mở dấu nhớ",
         "Description[x-test]": "xxFind and open bookmarksxx",
         "EnabledByDefault": true,
         "Icon": "bookmarks",
         "Id": "bookmarks",
         "License": "LGPL",
         "Name": "Bookmarks",
+        "Name[ar]": "العلامات",
         "Name[ca]": "Adreces d'interès",
         "Name[es]": "Marcadores",
         "Name[fr]": "Signets",
@@ -49,7 +55,9 @@
         "Name[pl]": "Zakładki",
         "Name[sl]": "Zaznamki",
         "Name[sv]": "Bokmärken",
+        "Name[ta]": "நினைவுக்குறிகள்",
         "Name[uk]": "Закладки",
+        "Name[vi]": "Dấu nhớ",
         "Name[x-test]": "xxBookmarksxx",
         "ServiceTypes": [
             "Plasma/Runner"

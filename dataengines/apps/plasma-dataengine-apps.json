@@ -4,6 +4,7 @@
             {
                 "Email": "chani@kde.org",
                 "Name": "Chani",
+                "Name[ar]": "Chani",
                 "Name[ca]": "Chani",
                 "Name[es]": "Chani",
                 "Name[fr]": "Chani",
@@ -16,10 +17,12 @@
                 "Name[sl]": "Chani",
                 "Name[sv]": "Chani",
                 "Name[uk]": "Chani",
+                "Name[vi]": "Chani",
                 "Name[x-test]": "xxChanixx"
             }
         ],
         "Description": "Information and launching of all applications in the app menu.",
+        "Description[ar]": "معلومات وبدء تشغيل جميع التطبيقات في قائمة التطبيق.",
         "Description[ca]": "Informació i llançament de totes les aplicacions en el menú d'aplicacions.",
         "Description[es]": "Información y ejecución de todas las aplicaciones en el menú de aplicaciones.",
         "Description[fr]": "Informations et démarrage de toutes les applications du menu des applications.",
@@ -31,7 +34,9 @@
         "Description[pl]": "Uruchamia dowolne programy z menu i wraz z informacjami o nich.",
         "Description[sl]": "Informacije in zagon vseh programov v programskem meniju.",
         "Description[sv]": "Information om och start av alla program i programmenyn.",
+        "Description[ta]": "செயலி பட்டியில் உள்ள செயலிகளை பற்றிய விவரங்களை வழங்கி அவற்றை இயக்கும்.",
         "Description[uk]": "Відомості і запуск всіх програма з меню програм.",
+        "Description[vi]": "Thông tin và việc khởi chạy của tất cả các ứng dụng trong trình đơn ứng dụng.",
         "Description[x-test]": "xxInformation and launching of all applications in the app menu.xx",
         "EnabledByDefault": true,
         "Icon": "user-desktop",

@@ -4,6 +4,7 @@
             {
                 "Email": "kde@privat.broulik.de",
                 "Name": "Kai Uwe Broulik",
+                "Name[ar]": "Kai Uwe Broulik",
                 "Name[ca]": "Kai Uwe Broulik",
                 "Name[es]": "Kai Uwe Broulik",
                 "Name[fr]": "Kai Uwe Broulik",
@@ -16,11 +17,13 @@
                 "Name[sl]": "Kai Uwe Broulik",
                 "Name[sv]": "Kai Uwe Broulik",
                 "Name[uk]": "Kai Uwe Broulik",
+                "Name[vi]": "Kai Uwe Broulik",
                 "Name[x-test]": "xxKai Uwe Broulikxx"
             }
         ],
         "Category": "Tasks",
         "Description": "Display notifications and jobs",
+        "Description[ar]": "اعرض الإخطارات والمهام",
         "Description[ca]": "Mostra les notificacions i els treballs",
         "Description[es]": "Mostrar notificaciones y tareas",
         "Description[fr]": "Afficher les notifications et les tâches",
@@ -32,7 +35,9 @@
         "Description[pl]": "Wyświetla powiadomienia i zadania",
         "Description[sl]": "Prikaz obvestil in poslov",
         "Description[sv]": "Visa underrättelser och jobb",
+        "Description[ta]": "அறிவிப்புகள் மற்றும் பணிகளை காட்டும்",
         "Description[uk]": "Показ сповіщень і завдань",
+        "Description[vi]": "Hiển thị thông báo và công việc",
         "Description[x-test]": "xxDisplay notifications and jobsxx",
         "EnabledByDefault": true,
         "FormFactors": [

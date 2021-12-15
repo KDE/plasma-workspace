@@ -4,6 +4,7 @@
             {
                 "Email": "viranch.mehta@gmail.com",
                 "Name": "Viranch Mehta",
+                "Name[ar]": "Viranch Mehta",
                 "Name[ca]": "Viranch Mehta",
                 "Name[es]": "Viranch Mehta",
                 "Name[fr]": "Viranch Mehta",
@@ -16,11 +17,13 @@
                 "Name[sl]": "Viranch Mehta",
                 "Name[sv]": "Viranch Mehta",
                 "Name[uk]": "Viranch Mehta",
+                "Name[vi]": "Viranch Mehta",
                 "Name[x-test]": "xxViranch Mehtaxx"
             }
         ],
         "Category": "System Information",
         "Description": "Lock the screen or log out",
+        "Description[ar]": "اقفل الشاشة أو اخرج",
         "Description[ca]": "Bloqueja la pantalla o desconnecta",
         "Description[es]": "Bloquear el escritorio o salir",
         "Description[fr]": "Verrouiller l'écran ou se déconnecter",
@@ -32,7 +35,9 @@
         "Description[pl]": "Blokuje ekran lub wylogowuje",
         "Description[sl]": "Zaklenite zaslon ali pa se odjavite",
         "Description[sv]": "Lås skärmen eller logga ut",
+        "Description[ta]": "திரையைப் பூட்டு அல்லது வெளியேறு",
         "Description[uk]": "Заблокуйте екран або вийдіть",
+        "Description[vi]": "Khoá màn hình hoặc đăng xuất",
         "Description[x-test]": "xxLock the screen or log outxx",
         "EnabledByDefault": true,
         "FormFactors": [

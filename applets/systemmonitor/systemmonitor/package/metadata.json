@@ -4,6 +4,7 @@
             {
                 "Email": "mart@kde.org",
                 "Name": "Marco Martin",
+                "Name[ar]": "Marco Martin",
                 "Name[ca]": "Marco Martin",
                 "Name[es]": "Marco Martin",
                 "Name[fr]": "Marco Martin",
@@ -16,11 +17,13 @@
                 "Name[sl]": "Marco Martin",
                 "Name[sv]": "Marco Martin",
                 "Name[uk]": "Marco Martin",
+                "Name[vi]": "Marco Martin",
                 "Name[x-test]": "xxMarco Martinxx"
             }
         ],
         "Category": "System Information",
         "Description": "Displays a configurable chart of a system monitor sensor",
+        "Description[ar]": "يعرض مخططًا قابلًا للتكوين لمتحسسات مراقبة النظام",
         "Description[ca]": "Mostra un diagrama configurable d'un sensor del monitor del sistema",
         "Description[es]": "Muestra un gráfico configurable de un sensor del monitor del sistema",
         "Description[fr]": "Affiche un graphique configurable du senseur de surveillance du système.",
@@ -32,7 +35,9 @@
         "Description[pl]": "Wyświetla wykres miernika monitora systemowego",
         "Description[sl]": "Prikaže nastavljiv grafikon sistemskega monitorja senzorja",
         "Description[sv]": "Visar ett anpassningsbart diagram av en systemövervakningssensor",
+        "Description[ta]": "ஏதாவதொரு கணினி கண்காணிப்பு உணரியைக் காட்டும்",
         "Description[uk]": "Показує придатну до налаштовування діаграму на основі даних датчика нагляду за системою",
+        "Description[vi]": "Hiển thị một biểu đồ cấu hình được của một cảm biến giám sát hệ thống",
         "Description[x-test]": "xxDisplays a configurable chart of a system monitor sensorxx",
         "FormFactors": [
             "desktop"

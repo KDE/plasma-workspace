@@ -4,6 +4,7 @@
             {
                 "Email": "mart@kde.org",
                 "Name": "Marco Martin",
+                "Name[ar]": "Marco Martin",
                 "Name[ca]": "Marco Martin",
                 "Name[es]": "Marco Martin",
                 "Name[fr]": "Marco Martin",
@@ -16,6 +17,7 @@
                 "Name[sl]": "Marco Martin",
                 "Name[sv]": "Marco Martin",
                 "Name[uk]": "Marco Martin",
+                "Name[vi]": "Marco Martin",
                 "Name[x-test]": "xxMarco Martinxx"
             }
         ],

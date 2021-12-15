@@ -4,6 +4,7 @@
             {
                 "Email": "plasma-devel@kde.org",
                 "Name": "Plasma Team",
+                "Name[ar]": "فريق بلازما",
                 "Name[ca]": "L'equip del Plasma",
                 "Name[es]": "Equipo de Plasma",
                 "Name[fr]": "Équipe de Plasma",
@@ -15,11 +16,14 @@
                 "Name[pl]": "Zespół Plazmy",
                 "Name[sl]": "Ekipa Plasme",
                 "Name[sv]": "Plasma-gruppen",
+                "Name[ta]": "பிளாஸ்மா குழு",
                 "Name[uk]": "Команда розробників Плазми",
+                "Name[vi]": "Đội Plasma",
                 "Name[x-test]": "xxPlasma Teamxx"
             }
         ],
         "Description": "Find applications, control panels and services",
+        "Description[ar]": "اعثر على التطبيقات، لوحات التحكّم والخدمات",
         "Description[ca]": "Cerca aplicacions, plafons de control i serveis",
         "Description[es]": "Encontrar aplicaciones, paneles de control y servicios",
         "Description[fr]": "Trouver des applications, des tableaux de bord et des services",
@@ -31,7 +35,9 @@
         "Description[pl]": "Wyszukuje programy, panele sterowania i usługi",
         "Description[sl]": "Najdite programe, nadzorne plošče in storitve",
         "Description[sv]": "Sök efter program, kontrollpaneler och tjänster",
+        "Description[ta]": "செயலிகள், கட்டுப்பாடு பலகைகள், மற்றும் சேவைகளை கண்டுபிடிக்கும்",
         "Description[uk]": "Знайти програми, панелі керування та служби",
+        "Description[vi]": "Tìm ứng dụng, bảng điều khiển và dịch vụ",
         "Description[x-test]": "xxFind applications, control panels and servicesxx",
         "EnabledByDefault": true,
         "Icon": "applications-other",

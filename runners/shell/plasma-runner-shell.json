@@ -4,6 +4,7 @@
             {
                 "Email": "plasma-devel@kde.org",
                 "Name": "Plasma Team",
+                "Name[ar]": "فريق بلازما",
                 "Name[ca]": "L'equip del Plasma",
                 "Name[es]": "Equipo de Plasma",
                 "Name[fr]": "Équipe de Plasma",
@@ -15,11 +16,14 @@
                 "Name[pl]": "Zespół Plazmy",
                 "Name[sl]": "Ekipa Plasme",
                 "Name[sv]": "Plasma-gruppen",
+                "Name[ta]": "பிளாஸ்மா குழு",
                 "Name[uk]": "Команда розробників Плазми",
+                "Name[vi]": "Đội Plasma",
                 "Name[x-test]": "xxPlasma Teamxx"
             }
         ],
         "Description": "Executes shell commands",
+        "Description[ar]": "نفّذ أوامر الصَدفة",
         "Description[ca]": "Executa ordres de l'intèrpret d'ordres",
         "Description[es]": "Ejecuta órdenes de la consola",
         "Description[fr]": "Exécute des commandes du shell",
@@ -31,7 +35,9 @@
         "Description[pl]": "Wykonuje polecenia powłoki",
         "Description[sl]": "Izvede lupinske ukaze",
         "Description[sv]": "Kör skalkommandon",
+        "Description[ta]": "முனைய கட்டளைகளை இயக்கும்",
         "Description[uk]": "Виконує команди оболонки",
+        "Description[vi]": "Thực hiện các lệnh vỏ",
         "Description[x-test]": "xxExecutes shell commandsxx",
         "EnabledByDefault": true,
         "Icon": "system-run",

@@ -5,6 +5,7 @@
             {
                 "Email": "kde@privat.broulik.de",
                 "Name": "Kai Uwe Broulik",
+                "Name[ar]": "Kai Uwe Broulik",
                 "Name[ca]": "Kai Uwe Broulik",
                 "Name[es]": "Kai Uwe Broulik",
                 "Name[fr]": "Kai Uwe Broulik",
@@ -17,10 +18,12 @@
                 "Name[sl]": "Kai Uwe Broulik",
                 "Name[sv]": "Kai Uwe Broulik",
                 "Name[uk]": "Kai Uwe Broulik",
+                "Name[vi]": "Kai Uwe Broulik",
                 "Name[x-test]": "xxKai Uwe Broulikxx"
             }
         ],
         "Description": "Choose color scheme",
+        "Description[ar]": "اختر مخطط الألوان",
         "Description[ca]": "Trieu l'esquema de color",
         "Description[es]": "Escoger un esquema de color",
         "Description[fr]": "Sélectionnez un thème de couleurs",
@@ -32,7 +35,9 @@
         "Description[pl]": "Wybierz zestaw kolorów",
         "Description[sl]": "Izberite barvno shemo",
         "Description[sv]": "Välj färgschema",
+        "Description[ta]": "நிறத்திட்டத்தை தேர்ந்தெடுங்கள்",
         "Description[uk]": "Вибір схеми кольорів",
+        "Description[vi]": "Chọn quy hoạch màu",
         "Description[x-test]": "xxChoose color schemexx",
         "FormFactors": [
             "tablet",

@@ -4,6 +4,7 @@
             {
                 "Email": "tpr@iki.fi",
                 "Name": "Teemu Rytilahti",
+                "Name[ar]": "Teemu Rytilahti",
                 "Name[ca]": "Teemu Rytilahti",
                 "Name[es]": "Teemu Rytilahti",
                 "Name[fr]": "Teemu Rytilahti",
@@ -16,10 +17,12 @@
                 "Name[sl]": "Teemu Rytilahti",
                 "Name[sv]": "Teemu Rytilahti",
                 "Name[uk]": "Teemu Rytilahti",
+                "Name[vi]": "Teemu Rytilahti",
                 "Name[x-test]": "xxTeemu Rytilahtixx"
             }
         ],
         "Description": "Search the web using keywords",
+        "Description[ar]": "يبحث في الويب باستخدام كلمات مفتاحية",
         "Description[ca]": "Cerca a la web usant paraules clau",
         "Description[es]": "Buscar la web usando palabras clave",
         "Description[fr]": "Rechercher sur Internet en utilisant des mots clé",
@@ -31,13 +34,16 @@
         "Description[pl]": "Wyszukaj w sieci przy użyciu słów kluczowych",
         "Description[sl]": "Preišči splet z uporabo ključnih besed",
         "Description[sv]": "Sök på webben med nyckelord",
+        "Description[ta]": "முதன்மைச்சொற்களை பொறுத்து இணையத்தில் தேடும்",
         "Description[uk]": "Пошук в інтернеті за допомогою ключових слів",
+        "Description[vi]": "Tìm kiếm web dùng các từ khoá",
         "Description[x-test]": "xxSearch the web using keywordsxx",
         "EnabledByDefault": true,
         "Icon": "internet-web-browser",
         "Id": "webshortcuts",
         "License": "LGPL",
         "Name": "Web Search Keywords",
+        "Name[ar]": "كلمات بحث الويب",
         "Name[ca]": "Paraules clau de cerca a la web",
         "Name[es]": "Palabras clave de búsqueda web",
         "Name[fr]": "Mots clé de recherche sur Internet",
@@ -49,7 +55,9 @@
         "Name[pl]": "Słowa kluczowe do wyszukiwania w sieci",
         "Name[sl]": "Ključne besede iskanja po spletu",
         "Name[sv]": "Webbsökningsnyckelord",
+        "Name[ta]": "இணைய தேடல் முதன்மைச்சொற்கள்",
         "Name[uk]": "Ключові слова пошуку в інтернеті",
+        "Name[vi]": "Từ khoá tìm kiếm web",
         "Name[x-test]": "xxWeb Search Keywordsxx",
         "ServiceTypes": [
             "Plasma/Runner"

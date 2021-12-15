@@ -4,6 +4,7 @@
             {
                 "Email": "kde@privat.broulik.de",
                 "Name": "Kai Uwe Broulik",
+                "Name[ar]": "Kai Uwe Broulik",
                 "Name[ca]": "Kai Uwe Broulik",
                 "Name[es]": "Kai Uwe Broulik",
                 "Name[fr]": "Kai Uwe Broulik",
@@ -16,11 +17,13 @@
                 "Name[sl]": "Kai Uwe Broulik",
                 "Name[sv]": "Kai Uwe Broulik",
                 "Name[uk]": "Kai Uwe Broulik",
+                "Name[vi]": "Kai Uwe Broulik",
                 "Name[x-test]": "xxKai Uwe Broulikxx"
             }
         ],
         "Category": "System Information",
         "Description": "System monitor Widget that shows the total CPU usage",
+        "Description[ar]": "أداة مراقبة النظام التي تعرض مجموع استخدام المعالج",
         "Description[ca]": "Giny del monitor del sistema que mostra l'ús total de la CPU",
         "Description[es]": "Elemento gráfico del monitor del sistema que muestra el uso total de CPU",
         "Description[fr]": "Composant graphique de surveillance du système, affichant l'utilisation globale du processeur.",
@@ -32,7 +35,9 @@
         "Description[pl]": "Element interfejsu, który pokazuje całkowite wykorzystanie procesora",
         "Description[sl]": "Gradnik sistemskega monitorja, ki prikazuje celotno rabo CPE",
         "Description[sv]": "Grafisk systemövervakningskomponent som visar total processoranvändning",
+        "Description[ta]": "மொத்த CPU பயன்பாட்டைக் காட்டும் பிளாஸ்மாய்ட்",
         "Description[uk]": "Віджет нагляду за системою, який показує загальне використання процесора",
+        "Description[vi]": "Phụ kiện giám sát hệ thống cho biết tổng lượng dùng CPU",
         "Description[x-test]": "xxSystem monitor Widget that shows the total CPU usagexx",
         "EnabledByDefault": true,
         "FormFactors": [

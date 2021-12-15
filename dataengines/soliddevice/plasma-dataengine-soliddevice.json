@@ -4,6 +4,7 @@
             {
                 "Email": "wilderkde@gmail.com",
                 "Name": "The Plasma Team",
+                "Name[ar]": "فريق بلازما",
                 "Name[ca]": "L'equip del Plasma",
                 "Name[es]": "El equipo de Plasma",
                 "Name[fr]": "L'équipe de Plasma",
@@ -15,12 +16,15 @@
                 "Name[pl]": "Zespół Plazmy",
                 "Name[sl]": "Ekipa Plasme",
                 "Name[sv]": "Plasma-gruppen",
+                "Name[ta]": "பிளாஸ்மா குழு",
                 "Name[uk]": "Команда розробників Плазми",
+                "Name[vi]": "Đội Plasma",
                 "Name[x-test]": "xxThe Plasma Teamxx"
             }
         ],
         "Category": "",
         "Description": "Device data via Solid",
+        "Description[ar]": "بيانات الأجهزة عبر Solid",
         "Description[ca]": "Dades dels dispositius via Solid",
         "Description[es]": "Datos de dispositivo vía Solid",
         "Description[fr]": "Données de périphériques utilisant « Solid »",
@@ -32,7 +36,9 @@
         "Description[pl]": "Dane urządzenia przez Solid",
         "Description[sl]": "Podatki o napravah s pomočjo programa Solid",
         "Description[sv]": "Enhetsdata via Solid",
+        "Description[ta]": "Solid மூலம் சாதன விவரங்கள்",
         "Description[uk]": "Дані щодо пристроїв з Solid",
+        "Description[vi]": "Dữ liệu về thiết bị thông qua Solid",
         "Description[x-test]": "xxDevice data via Solidxx",
         "Icon": "drive-harddisk",
         "Id": "soliddevice",

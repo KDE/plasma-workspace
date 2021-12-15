@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "Transfers application's menu to the desktop",
+        "Description[ar]": "ينقل قائمة التطبيقات إلى سطح المكتب",
         "Description[ca]": "Transfereix els menús d'aplicació a l'escriptori",
         "Description[es]": "Transfiere el menú de aplicaciones al escritorio",
         "Description[fr]": "Transfère le menu des applications sur le bureau.",
@@ -12,7 +13,9 @@
         "Description[pl]": "Przenosi menu aplikacji na pulpit",
         "Description[sl]": "Prenese programski meni na namizje",
         "Description[sv]": "Överför programmets meny till skrivbordet",
+        "Description[ta]": "செயலியின் பட்டியை பணிமேடையில் காட்டும்",
         "Description[uk]": "Передає меню програм на стільницю",
+        "Description[vi]": "Chuyển trình đơn của ứng dụng ra bàn làm việc",
         "Description[x-test]": "xxTransfers application's menu to the desktopxx",
         "Name": "Application menus daemon",
         "Name[ar]": "عفريت قوائم التطبيقات",

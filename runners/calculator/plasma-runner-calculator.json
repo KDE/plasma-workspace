@@ -4,6 +4,7 @@
             {
                 "Email": "plasma-devel@kde.org",
                 "Name": "Plasma Team",
+                "Name[ar]": "فريق بلازما",
                 "Name[ca]": "L'equip del Plasma",
                 "Name[es]": "Equipo de Plasma",
                 "Name[fr]": "Équipe de Plasma",
@@ -15,11 +16,14 @@
                 "Name[pl]": "Zespół Plazmy",
                 "Name[sl]": "Ekipa Plasme",
                 "Name[sv]": "Plasma-gruppen",
+                "Name[ta]": "பிளாஸ்மா குழு",
                 "Name[uk]": "Команда розробників Плазми",
+                "Name[vi]": "Đội Plasma",
                 "Name[x-test]": "xxPlasma Teamxx"
             }
         ],
         "Description": "Calculate expressions",
+        "Description[ar]": "احسب التعابير",
         "Description[ca]": "Calcula expressions",
         "Description[es]": "Calcular expresiones",
         "Description[fr]": "Calculer des expressions",
@@ -31,7 +35,9 @@
         "Description[pl]": "Oblicza wyrażenia matematyczne",
         "Description[sl]": "Izračunaj izraze",
         "Description[sv]": "Beräkna uttryck",
+        "Description[ta]": "கணக்கு போடும்",
         "Description[uk]": "Обчислення виразів",
+        "Description[vi]": "Tính biểu thức",
         "Description[x-test]": "xxCalculate expressionsxx",
         "EnabledByDefault": true,
         "Icon": "accessories-calculator",

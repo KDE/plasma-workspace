@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "Weather forecast by German Weather Service",
+        "Description[ar]": "نشرة الطقس الجوية من الأرصاد الجوية الألمانية",
         "Description[ca]": "Previsió meteorològica del Servei meteorològic alemany",
         "Description[es]": "Previsión meteorológica del servicio meteorológico alemán",
         "Description[fr]": "Prévisions météorologiques du service de météorologie d'Allemagne",
@@ -13,10 +14,12 @@
         "Description[sl]": "Vremenska napoved Nemške vremenske službe",
         "Description[sv]": "Väderprognos av Tyska vädertjänsten",
         "Description[uk]": "Прогноз погоди від Німецької служби погоди",
+        "Description[vi]": "Dự báo thời tiết của Dịch vụ Thời tiết Đức",
         "Description[x-test]": "xxWeather forecast by German Weather Servicexx",
         "Icon": "noneyet",
         "Id": "dwd",
         "Name": "German Weather Service",
+        "Name[ar]": "خدمة الأرصاد الجوية الألمانية",
         "Name[az]": "Almaniya Hava Xidməti",
         "Name[ca]": "Servei meteorològic alemany",
         "Name[es]": "Servicio meteorológico alemán",
@@ -31,6 +34,7 @@
         "Name[pt_BR]": "Serviço Meteorológico Alemão",
         "Name[sl]": "Nemška vremenska služba",
         "Name[sv]": "Tyska vädertjänsten",
+        "Name[ta]": "ஜெர்மன் வானிலை சேவை",
         "Name[uk]": "Німецька служба погоди",
         "Name[vi]": "Dịch vụ Thời tiết Đức",
         "Name[x-test]": "xxGerman Weather Servicexx",

@@ -2,6 +2,7 @@
     "Categories": "Qt;KDE;X-KDE-settings-looknfeel;",
     "KPlugin": {
         "Description": "Choose global look and feel",
+        "Description[ar]": "اختر مظهر وإحساس شامل",
         "Description[ca]": "Trieu l'aspecte i comportament global",
         "Description[es]": "Escoger el aspecto visual global",
         "Description[fr]": "Sélectionnez l'apparence et le comportement globaux",
@@ -13,7 +14,9 @@
         "Description[pl]": "Nadaj wygląd globalnie",
         "Description[sl]": "Izberi globalni videz in občutek",
         "Description[sv]": "Välj global utseende och känsla",
+        "Description[ta]": "பொதுவான தோற்றத்திட்டத்தை தேர்ந்தெடுங்கள்",
         "Description[uk]": "Вибір загального вигляду і поведінки",
+        "Description[vi]": "Chọn cách nhìn và cảm toàn cục",
         "Description[x-test]": "xxChoose global look and feelxx",
         "Icon": "preferences-desktop-theme-global",
         "Name": "Global Theme",

@@ -4,6 +4,7 @@
             {
                 "Email": "kde@privat.broulik.de",
                 "Name": "Kai Uwe Broulik",
+                "Name[ar]": "Kai Uwe Broulik",
                 "Name[ca]": "Kai Uwe Broulik",
                 "Name[es]": "Kai Uwe Broulik",
                 "Name[fr]": "Kai Uwe Broulik",
@@ -16,11 +17,13 @@
                 "Name[sl]": "Kai Uwe Broulik",
                 "Name[sv]": "Kai Uwe Broulik",
                 "Name[uk]": "Kai Uwe Broulik",
+                "Name[vi]": "Kai Uwe Broulik",
                 "Name[x-test]": "xxKai Uwe Broulikxx"
             }
         ],
         "Category": "Windows and Tasks",
         "Description": "Global menubar in your Plasma Desktop",
+        "Description[ar]": "شريط القائمة الشاملة في سطح مكتب بلازما",
         "Description[ca]": "Barra de menús global a l'escriptori Plasma",
         "Description[es]": "Barra de menú global para el escritorio Plasma",
         "Description[fr]": "Barre globale de menus de votre bureau Plasma",
@@ -32,7 +35,9 @@
         "Description[pl]": "Globalny pasek menu na pulpicie Plazmy",
         "Description[sl]": "Splošna menijska vrstica na vašem namizju Plasma",
         "Description[sv]": "Global menyrad på Plasmaskrivbordet",
+        "Description[ta]": "பணிமேடையிலேயே செயலிகளின் பட்டிகளை காட்டும்",
         "Description[uk]": "Загальна панель меню у вашій стільниці Плазми",
+        "Description[vi]": "Thanh trình đơn toàn cục ở bàn làm việc Plasma của bạn",
         "Description[x-test]": "xxGlobal menubar in your Plasma Desktopxx",
         "FormFactors": [
             "desktop"

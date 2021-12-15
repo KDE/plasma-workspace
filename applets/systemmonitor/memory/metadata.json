@@ -4,6 +4,7 @@
             {
                 "Email": "kde@privat.broulik.de",
                 "Name": "Kai Uwe Broulik",
+                "Name[ar]": "Kai Uwe Broulik",
                 "Name[ca]": "Kai Uwe Broulik",
                 "Name[es]": "Kai Uwe Broulik",
                 "Name[fr]": "Kai Uwe Broulik",
@@ -16,11 +17,13 @@
                 "Name[sl]": "Kai Uwe Broulik",
                 "Name[sv]": "Kai Uwe Broulik",
                 "Name[uk]": "Kai Uwe Broulik",
+                "Name[vi]": "Kai Uwe Broulik",
                 "Name[x-test]": "xxKai Uwe Broulikxx"
             }
         ],
         "Category": "System Information",
         "Description": "System monitor Widget that shows physical memory usage",
+        "Description[ar]": "أداة مراقبة النظام التي تعرض استخدام الذاكرة الفعلية",
         "Description[ca]": "Giny del monitor del sistema que mostra l'ús de la memòria física",
         "Description[es]": "Elemento gráfico del monitor del sistema que muestra el uso de la memoria física",
         "Description[fr]": "Composant graphique de surveillance du système, affichant l'utilisation de la mémoire physique.",
@@ -32,7 +35,9 @@
         "Description[pl]": "Element interfejsu, który pokazuje wykorzystanie pamięci fizycznej",
         "Description[sl]": "Gradnik sistemskega monitorja, ki prikazuje rabo fizičnega pomnilnika",
         "Description[sv]": "Grafisk systemövervakningskomponent som fysisk minnesanvändning",
+        "Description[ta]": "நினைவின் பயன்பாட்டைக் காட்டும் பிளாஸ்மாய்ட்",
         "Description[uk]": "Віджет нагляду за системою, який показує використання фізичної пам'яті",
+        "Description[vi]": "Phụ kiện giám sát hệ thống cho biết lượng dùng bộ nhớ vật lí",
         "Description[x-test]": "xxSystem monitor Widget that shows physical memory usagexx",
         "EnabledByDefault": true,
         "FormFactors": [

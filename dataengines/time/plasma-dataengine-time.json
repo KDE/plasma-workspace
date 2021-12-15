@@ -4,6 +4,7 @@
             {
                 "Email": "aseigo@kde.org",
                 "Name": "Aaron Seigo",
+                "Name[ar]": "Aaron Seigo",
                 "Name[ca]": "Aaron Seigo",
                 "Name[es]": "Aaron Seigo",
                 "Name[fr]": "Aaron Seigo",
@@ -16,11 +17,13 @@
                 "Name[sl]": "Aaron Seigo",
                 "Name[sv]": "Aaron Seigo",
                 "Name[uk]": "Aaron Seigo",
+                "Name[vi]": "Aaron Seigo",
                 "Name[x-test]": "xxAaron Seigoxx"
             }
         ],
         "Category": "Date and Time",
         "Description": "Date and time by timezone",
+        "Description[ar]": "التاريخ والوقت بالمنطقة الزمنية",
         "Description[ca]": "Data i hora per zona horària",
         "Description[es]": "Fecha y hora por zona horaria",
         "Description[fr]": "Date et heure par fuseau horaire",
@@ -32,7 +35,9 @@
         "Description[pl]": "Ustawienia daty i czasu na podstawie strefy czasowej",
         "Description[sl]": "Datum in čas po časovnih pasovih",
         "Description[sv]": "Datum och tid enligt tidszon",
+        "Description[ta]": "கால மண்டலத்தை பொறுத்த தேதி மற்றும் நேரம்",
         "Description[uk]": "Дата і час за часовими поясами",
+        "Description[vi]": "Ngày giờ theo múi giờ",
         "Description[x-test]": "xxDate and time by timezonexx",
         "EnabledByDefault": true,
         "Icon": "preferences-system-time",

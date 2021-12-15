@@ -4,6 +4,7 @@
             {
                 "Email": "chani@kde.org",
                 "Name": "Chani Armitage",
+                "Name[ar]": "Chani Armitage",
                 "Name[ca]": "Chani Armitage",
                 "Name[es]": "Chani Armitage",
                 "Name[fr]": "Chani Armitage",
@@ -16,11 +17,13 @@
                 "Name[sl]": "Chani Armitage",
                 "Name[sv]": "Chani Armitage",
                 "Name[uk]": "Chani Armitage",
+                "Name[vi]": "Chani Armitage",
                 "Name[x-test]": "xxChani Armitagexx"
             }
         ],
         "Category": "",
         "Description": "Information on Plasma Activities",
+        "Description[ar]": "معلومات أنشطة بلازما",
         "Description[ca]": "Informació quant a activitats del Plasma",
         "Description[es]": "Información sobre las actividades de Plasma",
         "Description[fr]": "Informations sur les activités de Plasma",
@@ -32,7 +35,9 @@
         "Description[pl]": "Wyświetla informacje o aktywnościach Plazmy",
         "Description[sl]": "Informacije o dejavnostih za Plasmo",
         "Description[sv]": "Information om aktiviteter i Plasma",
+        "Description[ta]": "பிளாஸ்மா செயல்பாடுகளை பற்றிய விவரங்கள்",
         "Description[uk]": "Інформація про простори дій Плазми",
+        "Description[vi]": "Thông tin về chức năng Hoạt động của Plasma",
         "Description[x-test]": "xxInformation on Plasma Activitiesxx",
         "EnabledByDefault": true,
         "Icon": "preferences-desktop-activities",

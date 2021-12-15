@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "Geolocation from IP address.",
+        "Description[ar]": "تحديد الموقع الجغرافي من عنوان الإنترنت",
         "Description[ca]": "Geolocalització des d'una adreça IP.",
         "Description[es]": "Geolocalización desde una dirección IP.",
         "Description[fr]": "Géo-localisation depuis une adresse IP.",
@@ -12,7 +13,9 @@
         "Description[pl]": "Geolokalizuje za pomocą adresu IP.",
         "Description[sl]": "Geolokacija iz naslova IP.",
         "Description[sv]": "Geografisk lokalisering från IP-adress.",
+        "Description[ta]": "IP முகவரியிலிருந்து இருப்பிடத்தைக் கண்டுபிடிக்கும்",
         "Description[uk]": "Геопозиціювання за IP-адресою",
+        "Description[vi]": "Định vị địa lí từ địa chỉ IP.",
         "Description[x-test]": "xxGeolocation from IP address.xx",
         "Icon": "applications-internet",
         "Id": "ip",

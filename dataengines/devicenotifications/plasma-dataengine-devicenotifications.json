@@ -4,6 +4,7 @@
             {
                 "Email": "wilderkde@gmail.com",
                 "Name": "Jacopo De Simoi",
+                "Name[ar]": "Jacopo De Simoi",
                 "Name[ca]": "Jacopo De Simoi",
                 "Name[es]": "Jacopo De Simoi",
                 "Name[fr]": "Jacopo De Simoi",
@@ -16,11 +17,13 @@
                 "Name[sl]": "Jacopo De Simoi",
                 "Name[sv]": "Jacopo De Simoi",
                 "Name[uk]": "Jacopo De Simoi",
+                "Name[vi]": "Jacopo De Simoi",
                 "Name[x-test]": "xxJacopo De Simoixx"
             }
         ],
         "Category": "",
         "Description": "Passive device notifications for the user.",
+        "Description[ar]": "إخطارات الجهاز السلبية للمستخدم.",
         "Description[ca]": "Notificacions passives de dispositius per a l'usuari.",
         "Description[es]": "Notificaciones pasivas de dispositivos para el usuario.",
         "Description[fr]": "Notifications passives de périphériques pour l'utilisateur.",
@@ -32,7 +35,9 @@
         "Description[pl]": "Powiadamia biernie użytkownika o urządzeniach.",
         "Description[sl]": "Pasivno obvestilo naprave za uporabnika.",
         "Description[sv]": "Passiva enhetsunderrättelser för användaren.",
+        "Description[ta]": "பயனருக்கான சாதன அறிவிப்புகள்.",
         "Description[uk]": "Пасивні сповіщення користувача щодо пристроїв.",
+        "Description[vi]": "Thông báo thiết bị thụ động dành cho người dùng.",
         "Description[x-test]": "xxPassive device notifications for the user.xx",
         "Icon": "device-notifier",
         "Id": "devicenotifications",

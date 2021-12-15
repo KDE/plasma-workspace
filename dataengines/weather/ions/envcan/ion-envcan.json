@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "XML Data from Environment Canada",
+        "Description[ar]": "بيانات XML من وزارة البيئة الكندية",
         "Description[ca]": "Dades XML des de Medi ambient del Canadà",
         "Description[es]": "Datos XML de medio ambiente de Canada",
         "Description[fr]": "Données au format « XML » du service de météorologie du Canada",
@@ -13,6 +14,7 @@
         "Description[sl]": "Podatki XML od Environment Canada",
         "Description[sv]": "XML-data från Environment Canada",
         "Description[uk]": "Дані XML з метеорологічного відділу Канади",
+        "Description[vi]": "Dữ liệu XML từ Bộ Môi trường Canada",
         "Description[x-test]": "xxXML Data from Environment Canadaxx",
         "Icon": "noneyet",
         "Id": "envcan",
@@ -78,7 +80,6 @@
         "Name[sr@latin]": "Prirodna sredina Kanada",
         "Name[sr]": "Природна средина Канада",
         "Name[sv]": "Environment Canada",
-        "Name[ta]": "Environment Canada",
         "Name[te]": "కెనడా వాతావరణం",
         "Name[th]": "Environment Canada",
         "Name[tr]": "Environment Canada",

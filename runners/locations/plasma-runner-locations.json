@@ -4,6 +4,7 @@
             {
                 "Email": "plasma-devel@kde.org",
                 "Name": "Plasma Team",
+                "Name[ar]": "فريق بلازما",
                 "Name[ca]": "L'equip del Plasma",
                 "Name[es]": "Equipo de Plasma",
                 "Name[fr]": "Équipe de Plasma",
@@ -15,11 +16,14 @@
                 "Name[pl]": "Zespół Plazmy",
                 "Name[sl]": "Ekipa Plasme",
                 "Name[sv]": "Plasma-gruppen",
+                "Name[ta]": "பிளாஸ்மா குழு",
                 "Name[uk]": "Команда розробників Плазми",
+                "Name[vi]": "Đội Plasma",
                 "Name[x-test]": "xxPlasma Teamxx"
             }
         ],
         "Description": "File and URL opener",
+        "Description[ar]": "فاتح ملفات ووصلات",
         "Description[ca]": "Obre fitxers i URL",
         "Description[es]": "Visor de archivos y URL",
         "Description[fr]": "Ouverture de fichiers et d'URL",
@@ -31,7 +35,9 @@
         "Description[pl]": "Otwiera pliki i adresy URL",
         "Description[sl]": "Odpri datoteke in naslove URL",
         "Description[sv]": "Öppna filer och webbadresser",
+        "Description[ta]": "கோப்புகள் மற்றும் முகவரிகளை திறக்கும் சேவை",
         "Description[uk]": "Відкривання файлів і адрес URL",
+        "Description[vi]": "Trình mở tệp và URL",
         "Description[x-test]": "xxFile and URL openerxx",
         "EnabledByDefault": true,
         "Icon": "system-file-manager",

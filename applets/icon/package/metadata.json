@@ -4,6 +4,7 @@
             {
                 "Email": "plasma-devel@kde.org",
                 "Name": "The Plasma Team",
+                "Name[ar]": "فريق بلازما",
                 "Name[ca]": "L'equip del Plasma",
                 "Name[es]": "El equipo de Plasma",
                 "Name[fr]": "L'équipe de Plasma",
@@ -15,12 +16,15 @@
                 "Name[pl]": "Zespół Plazmy",
                 "Name[sl]": "Ekipa Plasme",
                 "Name[sv]": "Plasma-gruppen",
+                "Name[ta]": "பிளாஸ்மா குழு",
                 "Name[uk]": "Команда розробників Плазми",
+                "Name[vi]": "Đội Plasma",
                 "Name[x-test]": "xxThe Plasma Teamxx"
             }
         ],
         "Category": "File System",
         "Description": "A generic icon",
+        "Description[ar]": "أيقونة عامّة",
         "Description[ca]": "Una icona genèrica",
         "Description[es]": "Un icono genérico",
         "Description[fr]": "Une icône générique",
@@ -32,7 +36,9 @@
         "Description[pl]": "Zwykła ikona",
         "Description[sl]": "Generična ikona",
         "Description[sv]": "En generell ikon",
+        "Description[ta]": "பொதுவான சின்னம்",
         "Description[uk]": "Загальна піктограма",
+        "Description[vi]": "Một biểu tượng chung",
         "Description[x-test]": "xxA generic iconxx",
         "EnabledByDefault": true,
         "Id": "org.kde.plasma.icon",

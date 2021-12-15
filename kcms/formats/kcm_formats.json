@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "Numeric, Currency and Time Formats",
+        "Description[ar]": "تنسيقات الأرقام والعملات والوقت ",
         "Description[ca]": "Format numèric, monetari i horari",
         "Description[es]": "Formatos numérico, de moneda y de hora",
         "Description[fr]": "Format numérique, de monnaie et d'heure",
@@ -12,7 +13,9 @@
         "Description[pl]": "Formaty liczb, waluty i czasu",
         "Description[sl]": "Oblika števil, valute in časa",
         "Description[sv]": "Numeriska format, valutaformat och tidsformat",
+        "Description[ta]": "எண்களும், பண மதிப்புகளும், நேரங்களும் எழுதப்படும் விதம்",
         "Description[uk]": "Формати запису чисел, грошових сум та часу",
+        "Description[vi]": "Dạng thức số, tiền tệ và thời gian",
         "Description[x-test]": "xxNumeric, Currency and Time Formatsxx",
         "FormFactors": [
             "tablet",

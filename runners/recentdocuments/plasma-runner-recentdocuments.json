@@ -4,6 +4,7 @@
             {
                 "Email": "sebas@kde.org",
                 "Name": "Sebastian Kügler",
+                "Name[ar]": "Sebastian Kügler",
                 "Name[ca]": "Sebastian Kügler",
                 "Name[es]": "Sebastian Kügler",
                 "Name[fr]": "Sebastian Kügler",
@@ -16,6 +17,7 @@
                 "Name[sl]": "Sebastian Kügler",
                 "Name[sv]": "Sebastian Kügler",
                 "Name[uk]": "Sebastian Kügler",
+                "Name[vi]": "Sebastian Kügler",
                 "Name[x-test]": "xxSebastian Küglerxx"
             }
         ],

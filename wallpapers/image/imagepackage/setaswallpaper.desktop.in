@@ -7,5 +7,13 @@ X-KDE-Priority=TopLevel
 
 [Desktop Action setAsWallpaper]
 Name=Set as Wallpaper
+Name[ar]=عين كخلفية
+Name[ca]=Estableix com a fons de pantalla
+Name[hu]=Beállítás háttérképként
+Name[nl]=Als achtergrondafbeelding instellen
+Name[sv]=Använd som skrivbordsunderlägg
+Name[uk]=Встановити зображенням тла
+Name[vi]=Đặt làm phông nền
+Name[x-test]=xxSet as Wallpaperxx
 Icon=viewimage
 Exec=@QtBinariesDir@/qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript 'const allDesktops = desktops(); for (i=0; i<allDesktops.length; i++) {d = allDesktops[i]; d.wallpaperPlugin = "org.kde.image"; d.currentConfigGroup = Array("Wallpaper", "org.kde.image", "General"); d.writeConfig("Image", "%u")}'

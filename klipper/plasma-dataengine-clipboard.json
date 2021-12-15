@@ -4,6 +4,7 @@
             {
                 "Email": "mgraesslin@kde.org",
                 "Name": "Martin Gräßlin",
+                "Name[ar]": "Martin Gräßlin",
                 "Name[ca]": "Martin Gräßlin",
                 "Name[es]": "Martin Gräßlin",
                 "Name[fr]": "Martin Gräßlin",
@@ -15,12 +16,15 @@
                 "Name[pl]": "Martin Gräßlin",
                 "Name[sl]": "Martin Gräßlin",
                 "Name[sv]": "Martin Gräßlin",
+                "Name[ta]": "மார்ட்டின் கிராஸ்லின்",
                 "Name[uk]": "Martin Gräßlin",
+                "Name[vi]": "Martin Gräßlin",
                 "Name[x-test]": "xxMartin Gräßlinxx"
             }
         ],
         "Category": "Clipboard",
         "Description": "Clipboard Tool.",
+        "Description[ar]": "أداة الحافظة",
         "Description[ca]": "Eina de porta-retalls.",
         "Description[es]": "Herramienta del portapapeles.",
         "Description[fr]": "Outil de presse-papier.",
@@ -32,7 +36,9 @@
         "Description[pl]": "Narzędzie schowka.",
         "Description[sl]": "Orodje za odložišče.",
         "Description[sv]": "Klippbordsverktyg.",
+        "Description[ta]": "பிடிப்புப்பலகை நிரல்.",
         "Description[uk]": "Утиліта буфера даних.",
+        "Description[vi]": "Công cụ bảng nháp.",
         "Description[x-test]": "xxClipboard Tool.xx",
         "EnabledByDefault": true,
         "Icon": "klipper",

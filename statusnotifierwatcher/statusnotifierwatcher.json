@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "Manages services that provide status notifier user interfaces",
+        "Description[ar]": "أدِر الخدمات التي توفّر واجهات مستخدِم لمُخطِر الحالة",
         "Description[ca]": "Gestiona serveis que proporcionen notificacions d'estat a les interfícies d'usuari",
         "Description[es]": "Gestiona servicios que proporcionan interfaces de usuario para el notificador de estado",
         "Description[fr]": "Gère les services fournissant des interfaces utilisateurs pour la notification d'état",
@@ -12,7 +13,9 @@
         "Description[pl]": "Zarządzanie usługami, które dostarczają powiadomień o stanie poprzez interfejs użytkownika",
         "Description[sl]": "Upravlja s storitvami, ki ponujajo uporabniške vmesnike obvestilnika o stanju",
         "Description[sv]": "Hanterar tjänster som tillhandahåller användargränssnitt för statusunderrättelser",
+        "Description[ta]": "நிலையை அறிவிக்கும் (SNI) சேவைகளை நிர்வகிக்கும்",
         "Description[uk]": "Керує службами інтерфейсів користувача для сповіщення про стан",
+        "Description[vi]": "Quản lí các dịch vụ cung cấp giao diện thông báo trạng thái",
         "Description[x-test]": "xxManages services that provide status notifier user interfacesxx",
         "Name": "Status Notifier Manager",
         "Name[ar]": "مدير مُخطِر الحالة",

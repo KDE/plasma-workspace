@@ -4,6 +4,7 @@
             {
                 "Email": "mklapetek@kde.org",
                 "Name": "Martin Klapetek",
+                "Name[ar]": "Martin Klapetek",
                 "Name[ca]": "Martin Klapetek",
                 "Name[es]": "Martin Klapetek",
                 "Name[fr]": "Martin Klapetek",
@@ -16,11 +17,13 @@
                 "Name[sl]": "Martin Klapetek",
                 "Name[sv]": "Martin Klapetek",
                 "Name[uk]": "Martin Klapetek",
+                "Name[vi]": "Martin Klapetek",
                 "Name[x-test]": "xxMartin Klapetekxx"
             }
         ],
         "Category": "Date and Time",
         "Description": "Time displayed in a digital format",
+        "Description[ar]": "الوقت بتنسيق رقميّ",
         "Description[ca]": "Mostra l'hora en un format digital",
         "Description[es]": "La hora mostrada en formato digital",
         "Description[fr]": "Affichage de l'heure au format numérique",
@@ -32,7 +35,9 @@
         "Description[pl]": "Wyświetla czas w formacie cyfrowym",
         "Description[sl]": "Prikaz časa v digitalni obliki",
         "Description[sv]": "Tid visad med digitalformat",
+        "Description[ta]": "எண் வடிவில் நேரத்தைக் காட்டும்",
         "Description[uk]": "Час, показаний у цифровому форматі",
+        "Description[vi]": "Thời gian hiển thị ở dạng số",
         "Description[x-test]": "xxTime displayed in a digital formatxx",
         "FormFactors": [
             "tablet",

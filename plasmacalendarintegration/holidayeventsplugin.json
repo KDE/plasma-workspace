@@ -4,6 +4,7 @@
             {
                 "Email": "mklapetek@kde.org",
                 "Name": "Martin Klapetek",
+                "Name[ar]": "Martin Klapetek",
                 "Name[ca]": "Martin Klapetek",
                 "Name[es]": "Martin Klapetek",
                 "Name[fr]": "Martin Klapetek",
@@ -16,10 +17,12 @@
                 "Name[sl]": "Martin Klapetek",
                 "Name[sv]": "Martin Klapetek",
                 "Name[uk]": "Martin Klapetek",
+                "Name[vi]": "Martin Klapetek",
                 "Name[x-test]": "xxMartin Klapetekxx"
             }
         ],
         "Description": "Calendar plugin for displaying public holidays",
+        "Description[ar]": "ملحق للتقويم يعرض العطل العامة",
         "Description[ca]": "Connector de calendari per a mostrar els festius oficials",
         "Description[es]": "Complemento del calendario para mostrar días festivos nacionales",
         "Description[fr]": "Module externe d'agenda pour l'affichage des jours fériés.",
@@ -31,10 +34,13 @@
         "Description[pl]": "Wtyczka kalendarza do wyświetlania publicznych świąt",
         "Description[sl]": "Koledarski vtičnik za prikaz javnih praznikov",
         "Description[sv]": "Kalenderinsticksprogram för att visa allmänna helgdagar",
+        "Description[ta]": "பொது விடுமுறைகளை காட்டும் நாள்காட்டி செருகுநிரல்",
         "Description[uk]": "Додаток календаря для показу офіційних свят",
+        "Description[vi]": "Phần cài cắm lịch để hiển thị các ngày lễ quốc gia",
         "Description[x-test]": "xxCalendar plugin for displaying public holidaysxx",
         "Icon": "view-calendar-holiday",
         "Name": "Holidays",
+        "Name[ar]": "العُطل",
         "Name[ca]": "Dies festius",
         "Name[es]": "Días festivos",
         "Name[fr]": "Vacances",
@@ -46,7 +52,9 @@
         "Name[pl]": "Święta",
         "Name[sl]": "Prazniki",
         "Name[sv]": "Helgdagar",
+        "Name[ta]": "விடுமுறைகள்",
         "Name[uk]": "Свята",
+        "Name[vi]": "Ngày lễ",
         "Name[x-test]": "xxHolidaysxx"
     },
     "X-KDE-PlasmaCalendar-ConfigUi": "holidays/HolidaysConfig.qml"

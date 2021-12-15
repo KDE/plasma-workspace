@@ -4,6 +4,7 @@
             {
                 "Email": "mart@kde.org",
                 "Name": "Marco Martin",
+                "Name[ar]": "Marco Martin",
                 "Name[ca]": "Marco Martin",
                 "Name[es]": "Marco Martin",
                 "Name[fr]": "Marco Martin",
@@ -16,11 +17,13 @@
                 "Name[sl]": "Marco Martin",
                 "Name[sv]": "Marco Martin",
                 "Name[uk]": "Marco Martin",
+                "Name[vi]": "Marco Martin",
                 "Name[x-test]": "xxMarco Martinxx"
             }
         ],
         "Category": "Windows and Tasks",
         "Description": "Access hidden applications minimized in the system tray",
+        "Description[ar]": "الوصول إلى التطبيقات المصغّرة في صينية النظام",
         "Description[ca]": "Accés a les aplicacions minimitzades ocultes a la safata del sistema",
         "Description[es]": "Acceder a aplicaciones ocultas minimizadas en la bandeja del sistema",
         "Description[fr]": "Accéder aux applications cachées et réduites dans la boîte à miniatures.",
@@ -32,7 +35,9 @@
         "Description[pl]": "Zapewnia dostęp do programów zminimalizowanych na tacce systemowej",
         "Description[sl]": "Dostop do skritih programov, skrčenih v sistemski pladenj",
         "Description[sv]": "Kom åt dolda program minimerade i systembrickan",
+        "Description[ta]": "கணினித்தட்டுக்கு ஒதுக்கப்பட்ட மறைந்துள்ள செயலிகளை அணுகுங்கள்",
         "Description[uk]": "Доступ до прихованих програм, мінімізованих до системного лотка",
+        "Description[vi]": "Truy cập các ứng dụng ẩn được thu nhỏ trong khay hệ thống",
         "Description[x-test]": "xxAccess hidden applications minimized in the system trayxx",
         "EnabledByDefault": true,
         "FormFactors": [

@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "Manage user accounts",
+        "Description[ar]": "أدِر حسابات المستخدمين",
         "Description[ca]": "Gestiona els comptes dels usuaris",
         "Description[es]": "Gestión de las cuentas de usuario",
         "Description[fr]": "Gérer les comptes d'utilisateurs",
@@ -12,7 +13,9 @@
         "Description[pl]": "Zarządzanie kontami użytkowników",
         "Description[sl]": "Upravljaj uporabniške račune",
         "Description[sv]": "Hantera användarkonton",
+        "Description[ta]": "பயனர் கணக்குகளை நிர்வகியுங்கள்",
         "Description[uk]": "Керування обліковими записами",
+        "Description[vi]": "Quản lí các danh khoản người dùng",
         "Description[x-test]": "xxManage user accountsxx",
         "Icon": "preferences-system-users",
         "Name": "Users",

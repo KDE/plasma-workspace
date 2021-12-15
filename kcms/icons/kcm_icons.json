@@ -2,6 +2,7 @@
     "Categories": "Qt;KDE;X-KDE-settings-looknfeel;",
     "KPlugin": {
         "Description": "Choose icon theme",
+        "Description[ar]": "اختر سمة الأيقونة",
         "Description[ca]": "Trieu el tema d'icones",
         "Description[es]": "Escoger un tema de iconos",
         "Description[fr]": "Sélectionner un thème d'icônes",
@@ -13,7 +14,9 @@
         "Description[pl]": "Wybierz zestaw ikon",
         "Description[sl]": "Izberite temo ikon",
         "Description[sv]": "Välj ikontema",
+        "Description[ta]": "சின்னங்களுக்கான திட்டத்தை தேர்ந்தெடுங்கள்",
         "Description[uk]": "Вибір теми піктограм",
+        "Description[vi]": "Chọn chủ đề của biểu tượng",
         "Description[x-test]": "xxChoose icon themexx",
         "FormFactors": [
             "tablet",

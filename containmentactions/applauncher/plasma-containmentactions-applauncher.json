@@ -4,6 +4,7 @@
             {
                 "Email": "chani@kde.org",
                 "Name": "Chani",
+                "Name[ar]": "Chani",
                 "Name[ca]": "Chani",
                 "Name[es]": "Chani",
                 "Name[fr]": "Chani",
@@ -16,10 +17,12 @@
                 "Name[sl]": "Chani",
                 "Name[sv]": "Chani",
                 "Name[uk]": "Chani",
+                "Name[vi]": "Chani",
                 "Name[x-test]": "xxChanixx"
             }
         ],
         "Description": "Simple application launcher",
+        "Description[ar]": "مُطلِق تطبيقات بسيط",
         "Description[ca]": "Llançador d'aplicacions senzill",
         "Description[es]": "Lanzador de aplicaciones sencillo",
         "Description[fr]": "Lanceur simple d'applications",
@@ -31,7 +34,9 @@
         "Description[pl]": "Proste uruchamianie programów",
         "Description[sl]": "Preprost zaganjalnik programov",
         "Description[sv]": "Enkel programstart",
+        "Description[ta]": "எளிய செயலி ஏவி",
         "Description[uk]": "Простий інструмент запуску програм",
+        "Description[vi]": "Trình khởi chạy ứng dụng đơn giản",
         "Description[x-test]": "xxSimple application launcherxx",
         "EnabledByDefault": true,
         "Icon": "preferences-desktop-launch-feedback",

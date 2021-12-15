@@ -2,6 +2,7 @@
     "Categories": "Qt;KDE;X-KDE-settings-looknfeel;",
     "KPlugin": {
         "Description": "Configure application style and behavior",
+        "Description[ar]": "اضبط سلوك ونمط التطبيق",
         "Description[ca]": "Configura l'estil i el comportament de les aplicacions",
         "Description[es]": "Configurar el estilo y el comportamiento de las aplicaciones",
         "Description[fr]": "Configurer le style et le comportement des applications",
@@ -13,7 +14,9 @@
         "Description[pl]": "Ustawienia wyglądu i zachowania aplikacji",
         "Description[sl]": "Nastavi slog aplikacije in obnašanje",
         "Description[sv]": "Anpassa programstil och beteende",
+        "Description[ta]": "செயலிகளின் தோற்றம் மற்றும் நடத்தையை அமையுங்கள்",
         "Description[uk]": "Налаштовування стилю і поведінки вікон програм",
+        "Description[vi]": "Cấu hình kiểu cách và ứng xử của ứng dụng",
         "Description[x-test]": "xxConfigure application style and behaviorxx",
         "Icon": "preferences-desktop-theme-applications",
         "Name": "Application Style",

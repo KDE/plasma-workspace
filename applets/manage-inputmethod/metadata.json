@@ -4,6 +4,7 @@
             {
                 "Email": "aleixpol@kde.org",
                 "Name": "Aleix Pol Gonzalez",
+                "Name[ar]": "Aleix Pol Gonzalez",
                 "Name[ca]": "Aleix Pol Gonzalez",
                 "Name[es]": "Aleix Pol Gonzalez",
                 "Name[fr]": "Aleix Pol Gonzalez",
@@ -16,11 +17,13 @@
                 "Name[sl]": "Aleix Pol Gonzalez",
                 "Name[sv]": "Aleix Pol Gonzalez",
                 "Name[uk]": "Aleix Pol Gonzalez",
+                "Name[vi]": "Aleix Pol Gonzalez",
                 "Name[x-test]": "xxAleix Pol Gonzalezxx"
             }
         ],
         "Category": "Accessibility",
         "Description": "Manage your Input Methods",
+        "Description[ar]": "أدر طريقة إدخالك للنص",
         "Description[ca]": "Gestioneu els mètodes d'entrada",
         "Description[es]": "Gestión de métodos de entrada",
         "Description[fr]": "Gérer vos méthodes de saisie",
@@ -32,7 +35,9 @@
         "Description[pl]": "Zarządzaj swoimi metodami wprowadzania",
         "Description[sl]": "Upravlja z vašimi vhodnimi metodami",
         "Description[sv]": "Hantera dina inmatningsmetoder",
+        "Description[ta]": "உள்ளீடு முறைகளை நிர்வகியுங்கள்",
         "Description[uk]": "Керування вашими способами введення",
+        "Description[vi]": "Quản lí các phương thức nhập",
         "Description[x-test]": "xxManage your Input Methodsxx",
         "EnabledByDefault": true,
         "FormFactors": [

@@ -4,6 +4,7 @@
             {
                 "Email": "plasma-devel@kde.org",
                 "Name": "Gregor Taetzner",
+                "Name[ar]": "Gregor Taetzner",
                 "Name[ca]": "Gregor Taetzner",
                 "Name[es]": "Gregor Taetzner",
                 "Name[fr]": "Gregor Taetzner",
@@ -16,11 +17,13 @@
                 "Name[sl]": "Gregor Taetzner",
                 "Name[sv]": "Gregor Taetzner",
                 "Name[uk]": "Gregor Taetzner",
+                "Name[vi]": "Gregor Taetzner",
                 "Name[x-test]": "xxGregor Taetznerxx"
             }
         ],
         "Category": "",
         "Description": "PackageKit Data Engine",
+        "Description[ar]": "محرّك بيانات عُدّة الحزم",
         "Description[ca]": "Motor de dades del PackageKit",
         "Description[es]": "Motor de datos de PackageKit",
         "Description[fr]": "Moteur de données de « PackageKit ».",
@@ -32,7 +35,9 @@
         "Description[pl]": "Silnik danych PackageKit",
         "Description[sl]": "Podatkovni pogon PackageKit",
         "Description[sv]": "PackageKit-datagränssnitt",
+        "Description[ta]": "PackageKit தரவு நிரல்",
         "Description[uk]": "Рушій даних PackageKit",
+        "Description[vi]": "Dụng cụ dữ liệu PackageKit",
         "Description[x-test]": "xxPackageKit Data Enginexx",
         "Icon": "package-x-generic",
         "Id": "packagekit",

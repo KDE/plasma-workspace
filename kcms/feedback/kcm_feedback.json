@@ -2,6 +2,7 @@
     "Categories": "Qt;KDE;",
     "KPlugin": {
         "Description": "Configure user feedback settings",
+        "Description[ar]": "اضبط إعدادات مشاركة بياناتك",
         "Description[ca]": "Configura les opcions dels comentaris de l'usuari",
         "Description[es]": "Configurar las preferencias de los comentarios del usuario",
         "Description[fr]": "Configurer les paramètres de retours des utilisateurs",
@@ -13,7 +14,9 @@
         "Description[pl]": "Ustawienia informacji zwrotnej",
         "Description[sl]": "Nastavi uporabnikov odziv",
         "Description[sv]": "Anpassa inställningar av användaråterkoppling",
+        "Description[ta]": "பயனர் பின்னூட்டத்தை அமையுங்கள்",
         "Description[uk]": "Налаштовування системи відгуків користувача",
+        "Description[vi]": "Cấu hình các thiết lập phản hồi của người dùng",
         "Description[x-test]": "xxConfigure user feedback settingsxx",
         "FormFactors": [
             "tablet",

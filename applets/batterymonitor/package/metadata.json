@@ -4,6 +4,7 @@
             {
                 "Email": "sebas@kde.org, kde@privat.broulik.de",
                 "Name": "Sebastian Kügler, Kai Uwe Broulik",
+                "Name[ar]": "Sebastian Kügler, Kai Uwe Broulik",
                 "Name[ca]": "Sebastian Kügler, Kai Uwe Broulik",
                 "Name[es]": "Sebastian Kügler, Kai Uwe Broulik",
                 "Name[fr]": "Sebastian Kügler, Kai Uwe Broulik",
@@ -16,11 +17,13 @@
                 "Name[sl]": "Sebastian Kügler, Kai Uwe Broulik",
                 "Name[sv]": "Sebastian Kügler",
                 "Name[uk]": "Sebastian Kügler, Kai Uwe Broulik",
+                "Name[vi]": "Sebastian Kügler, Kai Uwe Broulik",
                 "Name[x-test]": "xxSebastian Kügler, Kai Uwe Broulikxx"
             }
         ],
         "Category": "System Information",
         "Description": "See the power status of your battery",
+        "Description[ar]": "طالع حالة طاقة البطارية",
         "Description[ca]": "Vegeu l'estat d'energia de la bateria",
         "Description[es]": "Ver el estado de energía de su batería",
         "Description[fr]": "Consulter le niveau d'énergie de votre batterie",
@@ -32,7 +35,9 @@
         "Description[pl]": "Monitoruje stan naładowania baterii",
         "Description[sl]": "Oglejte si stanje napolnjenosti baterije",
         "Description[sv]": "Se batteriets laddningsstatus",
+        "Description[ta]": "உங்கள் மின்கலத்தின் ஆற்றல் நிலையைப் பாருங்கள்",
         "Description[uk]": "Перегляньте стан заряду акумулятора",
+        "Description[vi]": "Xem tình trạng nguồn điện của pin",
         "Description[x-test]": "xxSee the power status of your batteryxx",
         "EnabledByDefault": true,
         "FormFactors": [

@@ -2,6 +2,7 @@
     "Categories": "Qt;KDE;X-KDE-settings-system;",
     "KPlugin": {
         "Description": "Install, manage and preview fonts",
+        "Description[ar]": "ثبت وأدر واستعرض الخطوط",
         "Description[ca]": "Instal·la, gestiona i previsualitza els tipus de lletra",
         "Description[es]": "Instalación, gestión y vista previa de tipos de letra",
         "Description[fr]": "Installer, gérer et afficher un aperçu des polices de caractères",
@@ -13,7 +14,9 @@
         "Description[pl]": "Wgrywanie, zarządzanie i podgląd czcionek",
         "Description[sl]": "Nameščanje, upravljanje in predogled pisav",
         "Description[sv]": "Installera, hantera och förhandsgranska teckensnitt",
+        "Description[ta]": "எழுத்துருக்களை நிறுவுங்கள், கையாளுங்கள்,  மற்றும் முன்னோட்டம் காணுங்கள்",
         "Description[uk]": "Встановлення, керування та попередній перегляд шрифтів",
+        "Description[vi]": "Cài đặt, quản lí và xem thử phông chữ",
         "Description[x-test]": "xxInstall, manage and preview fontsxx",
         "Icon": "preferences-desktop-font-installer",
         "Name": "Font Management",

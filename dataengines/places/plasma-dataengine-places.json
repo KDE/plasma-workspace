@@ -4,6 +4,7 @@
             {
                 "Email": "alex.merry@kdemail.net",
                 "Name": "Alex Merry",
+                "Name[ar]": "Alex Merry",
                 "Name[ca]": "Alex Merry",
                 "Name[es]": "Alex Merry",
                 "Name[fr]": "Alex Merry",
@@ -16,11 +17,13 @@
                 "Name[sl]": "Alex Merry",
                 "Name[sv]": "Alex Merry",
                 "Name[uk]": "Alex Merry",
+                "Name[vi]": "Alex Merry",
                 "Name[x-test]": "xxAlex Merryxx"
             }
         ],
         "Category": "System",
         "Description": "Places, as seen in the file manager and in file dialogs.",
+        "Description[ar]": "الأماكن، كما في مدير الملفات وحواريات الملفات.",
         "Description[ca]": "Llocs, com es veuen en el gestor de fitxers i en els diàlegs de fitxer.",
         "Description[es]": "Lugares, como se ven en el gestor de archivos y en los diálogos de archivos.",
         "Description[fr]": "Emplacements, tel que vus par le gestionnaire de fichiers et les boîtes de dialogue de fichiers.",
@@ -32,7 +35,9 @@
         "Description[pl]": "Wyświetla miejsca, tak jak w przeglądarce plików i oknach dialogowych plików.",
         "Description[sl]": "Mesta, kot jih je mogoče videti v upravljalniku datotek in pogovornih oknih za datoteke.",
         "Description[sv]": "Platser som visas i filhanterare och fildialogrutor.",
+        "Description[ta]": "கோப்பு உலாவியிலும் கோப்பு சாளரங்களிலும் காட்டப்படும் இடங்கள்",
         "Description[uk]": "Місця, так, як їх показано у менеджері файлів і діалогових вікнах.",
+        "Description[vi]": "Địa điểm, như trong trình quản lí tệp và các hộp thoại tệp.",
         "Description[x-test]": "xxPlaces, as seen in the file manager and in file dialogs.xx",
         "EnabledByDefault": true,
         "Icon": "folder-favorites",

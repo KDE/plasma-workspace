@@ -5,6 +5,7 @@
             {
                 "Email": "aseigo@kde.org",
                 "Name": "Aaron Seigo",
+                "Name[ar]": "Aaron Seigo",
                 "Name[ca]": "Aaron Seigo",
                 "Name[es]": "Aaron Seigo",
                 "Name[fr]": "Aaron Seigo",
@@ -17,6 +18,7 @@
                 "Name[sl]": "Aaron Seigo",
                 "Name[sv]": "Aaron Seigo",
                 "Name[uk]": "Aaron Seigo",
+                "Name[vi]": "Aaron Seigo",
                 "Name[x-test]": "xxAaron Seigoxx"
             }
         ],

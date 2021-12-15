@@ -4,6 +4,7 @@
             {
                 "Email": "kde@privat.broulik.de",
                 "Name": "Kai Uwe Broulik",
+                "Name[ar]": "Kai Uwe Broulik",
                 "Name[ca]": "Kai Uwe Broulik",
                 "Name[es]": "Kai Uwe Broulik",
                 "Name[fr]": "Kai Uwe Broulik",
@@ -16,11 +17,13 @@
                 "Name[sl]": "Kai Uwe Broulik",
                 "Name[sv]": "Kai Uwe Broulik",
                 "Name[uk]": "Kai Uwe Broulik",
+                "Name[vi]": "Kai Uwe Broulik",
                 "Name[x-test]": "xxKai Uwe Broulikxx"
             }
         ],
         "Category": "System Information",
         "Description": "System monitor Widget that shows usage of individual CPU cores",
+        "Description[ar]": "أداة مراقبة النظام التي تعرض استخدام كل نواة من المعالج",
         "Description[ca]": "Giny del monitor del sistema que mostra l'ús individual dels nuclis de la CPU",
         "Description[es]": "Elemento gráfico del monitor del sistema que muestra el uso de los núcleos individuales de la CPU",
         "Description[fr]": "Composant graphique de surveillance du système, affichant l'utilisation de chaque cœur du processeur.",
@@ -32,7 +35,9 @@
         "Description[pl]": "Element interfejsu, który pokazuje wykorzystanie poszczególnych rdzeni procesora",
         "Description[sl]": "Gradnik sistemskega monitorja, ki prikazuje rabo posameznega jedra CPE",
         "Description[sv]": "Grafisk systemövervakningskomponent som visar användning av individuella processorkärnor",
+        "Description[ta]": "தனிப்பட்ட CPU core-களின் பயன்பாட்டைக் காட்டும் பிளாஸ்மாய்ட்",
         "Description[uk]": "Віджет нагляду за системою, який показує використання окремих ядер процесора",
+        "Description[vi]": "Phụ kiện giám sát hệ thống cho biết lượng dùng các lõi CPU riêng lẻ",
         "Description[x-test]": "xxSystem monitor Widget that shows usage of individual CPU coresxx",
         "EnabledByDefault": true,
         "FormFactors": [

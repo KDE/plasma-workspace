@@ -2,6 +2,7 @@
     "Categories": "Qt;KDE;X-KDE-settings-sound;",
     "KPlugin": {
         "Description": "Event Notifications and Actions",
+        "Description[ar]": "إخطارات وإجراءات الحدث",
         "Description[ca]": "Notificacions d'esdeveniments i accions",
         "Description[es]": "Notificaciones y acciones de eventos",
         "Description[fr]": "Notifications d'évènements et d'actions",
@@ -13,7 +14,9 @@
         "Description[pl]": "Powiadomienia i działania zdarzeń",
         "Description[sl]": "Obvestila o dogodkih in dejavnosti",
         "Description[sv]": "Underrättelser om händelser och åtgärder",
+        "Description[ta]": "அறிவிப்புகளும் அவற்றிற்கான செயல்களும்",
         "Description[uk]": "Сповіщення щодо подій та дії",
+        "Description[vi]": "Thông báo và hành động cho sự kiện",
         "Description[x-test]": "xxEvent Notifications and Actionsxx",
         "FormFactors": [
             "tablet",

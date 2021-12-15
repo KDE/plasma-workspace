@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "Sends updated location data to the compositor",
+        "Description[ar]": "يرسل بيانات الموقع المحدثة إلى المؤلف",
         "Description[ca]": "Envia les dades actualitzades de la ubicació al compositor",
         "Description[es]": "Envía datos de posicionamiento actualizados al compositor",
         "Description[fr]": "Envoie des données de localisation actualisées au compositeur",
@@ -13,6 +14,7 @@
         "Description[sl]": "Pošilja posodobljene podatke o legi v upravljalnik skladnje",
         "Description[sv]": "Skickar uppdaterad platsinformation till sammansättare",
         "Description[uk]": "Надсилає оновлені дані щодо розташування на комп'ютер",
+        "Description[vi]": "Gửi dữ liệu vị trí đã cập nhật đến trình kết hợp",
         "Description[x-test]": "xxSends updated location data to the compositorxx",
         "Name": "ColorCorrect Geolocation Updater",
         "Name[ar]": "محدث الموقع لتصحيح الألوان",

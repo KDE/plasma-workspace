@@ -4,6 +4,7 @@
             {
                 "Email": "sebas@kde.org",
                 "Name": "Sebastian Kügler",
+                "Name[ar]": "Sebastian Kügler",
                 "Name[ca]": "Sebastian Kügler",
                 "Name[es]": "Sebastian Kügler",
                 "Name[fr]": "Sebastian Kügler",
@@ -16,11 +17,13 @@
                 "Name[sl]": "Sebastian Kügler",
                 "Name[sv]": "Sebastian Kügler",
                 "Name[uk]": "Sebastian Kügler",
+                "Name[vi]": "Sebastian Kügler",
                 "Name[x-test]": "xxSebastian Küglerxx"
             }
         ],
         "Category": "Multimedia",
         "Description": "Media Player Controls",
+        "Description[ar]": "تحكّمات مشغّل الوسائط",
         "Description[ca]": "Controls del reproductor multimèdia",
         "Description[es]": "Controles del reproductor multimedia",
         "Description[fr]": "Contrôles du lecteur multimédia",
@@ -32,7 +35,9 @@
         "Description[pl]": "Obsługa odtwarzacza multimedialnego",
         "Description[sl]": "Nadzor predstavnostnega predvajalnika",
         "Description[sv]": "Kontroller för mediaspelare",
+        "Description[ta]": "ஊடக இயக்கி கட்டுப்பாடு",
         "Description[uk]": "Керування мультимедійним програвачем",
+        "Description[vi]": "Các điều khiển của trình phát phương tiện",
         "Description[x-test]": "xxMedia Player Controlsxx",
         "EnabledByDefault": true,
         "FormFactors": [

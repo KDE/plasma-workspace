@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "Weather forecast by wetter.com",
+        "Description[ar]": "نشرة الطقس الجوية من wetter.com",
         "Description[ca]": "Previsió meteorològica per wetter.com",
         "Description[es]": "Previsión meteorológica de wetter.com",
         "Description[fr]": "Prévisions météorologiques par le site « wetter.com »",
@@ -13,6 +14,7 @@
         "Description[sl]": "Vremenska napoved iz wetter.com",
         "Description[sv]": "Väderprognos av wetter.com",
         "Description[uk]": "Прогноз погоди з wetter.com",
+        "Description[vi]": "Dự báo thời tiết của wetter.com",
         "Description[x-test]": "xxWeather forecast by wetter.comxx",
         "Icon": "noneyet",
         "Id": "wettercom",

@@ -4,6 +4,7 @@
             {
                 "Email": "sebas@kde.org",
                 "Name": "Sebastian Kügler",
+                "Name[ar]": "Sebastian Kügler",
                 "Name[ca]": "Sebastian Kügler",
                 "Name[es]": "Sebastian Kügler",
                 "Name[fr]": "Sebastian Kügler",
@@ -16,11 +17,13 @@
                 "Name[sl]": "Sebastian Kügler",
                 "Name[sv]": "Sebastian Kügler",
                 "Name[uk]": "Sebastian Kügler",
+                "Name[vi]": "Sebastian Kügler",
                 "Name[x-test]": "xxSebastian Küglerxx"
             }
         ],
         "Category": "Date and Time",
         "Description": "Month display with your appointments and events",
+        "Description[ar]": "عرض للشّهر فيه المواعيد والأحداث",
         "Description[ca]": "Mostra el mes amb les cites i els esdeveniments",
         "Description[es]": "Calendario mensual con sus citas y eventos",
         "Description[fr]": "Affichage par mois de vos rendez-vous et évènements",
@@ -32,7 +35,9 @@
         "Description[pl]": "Wyświetlanie miesiąca z twoimi spotkaniami i wydarzeniami",
         "Description[sl]": "Mesečni prikaz z vašimi sestanki in dogodki",
         "Description[sv]": "Månatlig visning av möten och händelser",
+        "Description[ta]": "நிகழ்வுகள் மற்றும் சந்திப்புகளைக் காட்டும் மாத நாள்காட்டி",
         "Description[uk]": "Показ розкладу місяця із вашими записами зустрічей і подій",
+        "Description[vi]": "Hiển thị tháng với các buổi hẹn và sự kiện của bạn",
         "Description[x-test]": "xxMonth display with your appointments and eventsxx",
         "FormFactors": [
             "tablet",

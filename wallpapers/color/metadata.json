@@ -4,6 +4,7 @@
             {
                 "Email": "mart@kde.org",
                 "Name": "Marco Martin",
+                "Name[ar]": "Marco Martin",
                 "Name[ca]": "Marco Martin",
                 "Name[es]": "Marco Martin",
                 "Name[fr]": "Marco Martin",
@@ -16,11 +17,13 @@
                 "Name[sl]": "Marco Martin",
                 "Name[sv]": "Marco Martin",
                 "Name[uk]": "Marco Martin",
+                "Name[vi]": "Marco Martin",
                 "Name[x-test]": "xxMarco Martinxx"
             }
         ],
         "Category": "",
         "Description": "Plain color wallpaper",
+        "Description[ar]": "خلفية لون صِرف",
         "Description[ca]": "Fons de pantalla en color llis",
         "Description[es]": "Fondo del escritorio de color liso",
         "Description[fr]": "Fond d'écran de couleur unie",
@@ -32,7 +35,9 @@
         "Description[pl]": "Tapeta zwykłego koloru",
         "Description[sl]": "Ozadje s preprosto barvo",
         "Description[sv]": "Skrivbordsunderlägg med enkel färg",
+        "Description[ta]": "ஒரே ஒரு நிறத்தை கொண்ட பின்புலம்",
         "Description[uk]": "Звичайне одноколірне тло",
+        "Description[vi]": "Phông nền dạng màu trơn",
         "Description[x-test]": "xxPlain color wallpaperxx",
         "Icon": "preferences-desktop-color",
         "Id": "org.kde.color",

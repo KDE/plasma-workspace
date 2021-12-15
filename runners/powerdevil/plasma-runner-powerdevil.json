@@ -4,6 +4,7 @@
             {
                 "Email": "drf@kdemod.ath.cx",
                 "Name": "Dario Freddi",
+                "Name[ar]": "Dario Freddi",
                 "Name[ca]": "Dario Freddi",
                 "Name[es]": "Dario Freddi",
                 "Name[fr]": "Dario Freddi",
@@ -16,10 +17,12 @@
                 "Name[sl]": "Dario Freddi",
                 "Name[sv]": "Dario Freddi",
                 "Name[uk]": "Dario Freddi",
+                "Name[vi]": "Dario Freddi",
                 "Name[x-test]": "xxDario Freddixx"
             }
         ],
         "Description": "Basic Power Management Operations",
+        "Description[ar]": "عمليات إدارة الطاقة الأساسية",
         "Description[ca]": "Operacions bàsiques en la gestió d'energia",
         "Description[es]": "Operaciones básicas de gestión de energía",
         "Description[fr]": "Opérations basiques de gestion de l'énergie",
@@ -31,7 +34,9 @@
         "Description[pl]": "Umożliwia zarządzanie energią",
         "Description[sl]": "Osnovna dejanja upravljanja z energijo",
         "Description[sv]": "Grundläggande strömsparfunktioner",
+        "Description[ta]": "அடிப்படை ஆற்றல் மேலாண்மை செயல்கள்",
         "Description[uk]": "Керування базовими операціями з керування живленням",
+        "Description[vi]": "Các thao tác cơ bản để quản lí nguồn điện",
         "Description[x-test]": "xxBasic Power Management Operationsxx",
         "EnabledByDefault": true,
         "Icon": "preferences-system-power-management",

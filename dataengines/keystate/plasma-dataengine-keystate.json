@@ -4,6 +4,7 @@
             {
                 "Email": "aseigo@kde.org",
                 "Name": "Aaron Seigo",
+                "Name[ar]": "Aaron Seigo",
                 "Name[ca]": "Aaron Seigo",
                 "Name[es]": "Aaron Seigo",
                 "Name[fr]": "Aaron Seigo",
@@ -16,11 +17,13 @@
                 "Name[sl]": "Aaron Seigo",
                 "Name[sv]": "Aaron Seigo",
                 "Name[uk]": "Aaron Seigo",
+                "Name[vi]": "Aaron Seigo",
                 "Name[x-test]": "xxAaron Seigoxx"
             }
         ],
         "Category": "Accessibility",
         "Description": "Keyboard modifier and mouse buttons states",
+        "Description[ar]": "حالات مُعدِّل لوحة المفاتيح وأزرار الفأرة",
         "Description[ca]": "Modificador de l'estat del teclat i dels botons del ratolí",
         "Description[es]": "Estado del modificador de teclado y botones del ratón",
         "Description[fr]": "Modificateur du clavier et des états des boutons de souris.",
@@ -32,7 +35,9 @@
         "Description[pl]": "Wyświetla stany modyfikatorów klawiatury i przycisków myszy",
         "Description[sl]": "Stanje spremenilnih tipk tipkovnice in tipk miške",
         "Description[sv]": "Tillstånd för väljartangenter och musknappar",
+        "Description[ta]": "விசைப்பலகை மாற்றி விசைகளின் மற்றும் சுட்டி பட்டன்களின் நிலை",
         "Description[uk]": "Стан модифікаторів клавіатури і кнопок миші",
+        "Description[vi]": "Trạng thái phím bổ trợ và nút chuột",
         "Description[x-test]": "xxKeyboard modifier and mouse buttons statesxx",
         "EnabledByDefault": true,
         "Icon": "input-keyboard",

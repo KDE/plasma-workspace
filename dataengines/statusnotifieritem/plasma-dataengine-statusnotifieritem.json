@@ -4,6 +4,7 @@
             {
                 "Email": "matthieu_gallien@yahoo.fr",
                 "Name": "Matthieu Gallien",
+                "Name[ar]": "Matthieu Gallien",
                 "Name[ca]": "Matthieu Gallien",
                 "Name[es]": "Matthieu Gallien",
                 "Name[fr]": "Matthieu Gallien",
@@ -16,10 +17,12 @@
                 "Name[sl]": "Matthieu Gallien",
                 "Name[sv]": "Matthieu Gallien",
                 "Name[uk]": "Matthieu Gallien",
+                "Name[vi]": "Matthieu Gallien",
                 "Name[x-test]": "xxMatthieu Gallienxx"
             }
         ],
         "Description": "Engine for applications' status information, based on the Status Notifier protocol.",
+        "Description[ar]": "محرّك لمعلومات حالة التطبيقات، بناءً على ميفاق مُخطِر الحالة.",
         "Description[ca]": "Motor d'informació d'estat de les aplicacions, basat en el protocol notificador d'estat.",
         "Description[es]": "Motor para informar del estado de aplicaciones, basado en el protocolo Status Notifier.",
         "Description[fr]": "Moteur d'informations sur l'état des applications utilisant le protocole de notification d'état.",
@@ -31,7 +34,9 @@
         "Description[pl]": "Silnik do przekazywania informacji o stanie programów, oparty o protokół powiadomień o stanie.",
         "Description[sl]": "Pogon za podatke o stanju programov, ki temelji na protokolu obvestilnika o stanju.",
         "Description[sv]": "Gränssnitt för statusinformation om program baserat på protokollet för statusunderrättelser.",
+        "Description[ta]": "செயலிகளின் நிலை குறித்த விவரங்களை Status Notifier (SNI) நெறிமுறை மூலம் வழங்கும்.",
         "Description[uk]": "Рушій даних щодо стану програм, заснований на протоколі сповіщення про стан.",
+        "Description[vi]": "Dụng cụ cấp thông tin về trạng thái ứng dụng, dựa trên giao thức \"Trình thông báo trạng thái\".",
         "Description[x-test]": "xxEngine for applications' status information, based on the Status Notifier protocol.xx",
         "EnabledByDefault": true,
         "Icon": "preferences-desktop-notification",

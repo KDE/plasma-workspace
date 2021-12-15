@@ -4,6 +4,7 @@
             {
                 "Email": "wilderkde@gmail.com",
                 "Name": "The Plasma Team",
+                "Name[ar]": "فريق بلازما",
                 "Name[ca]": "L'equip del Plasma",
                 "Name[es]": "El equipo de Plasma",
                 "Name[fr]": "L'équipe de Plasma",
@@ -15,12 +16,15 @@
                 "Name[pl]": "Zespół Plazmy",
                 "Name[sl]": "Ekipa Plasme",
                 "Name[sv]": "Plasma-gruppen",
+                "Name[ta]": "பிளாஸ்மா குழு",
                 "Name[uk]": "Команда розробників Плазми",
+                "Name[vi]": "Đội Plasma",
                 "Name[x-test]": "xxThe Plasma Teamxx"
             }
         ],
         "Category": "",
         "Description": "Tracks hot-pluggable devices as they appear and disappear.",
+        "Description[ar]": "يتتبع الأجهزة القابلة للتوصيل أثناء ظهورها واختفائها.",
         "Description[ca]": "Segueix els dispositius de connexió en calent quan apareixen i desapareixen.",
         "Description[es]": "Registra los dispositivos extraíbles cuando aparecen y desaparecen.",
         "Description[fr]": "Surveille l'apparition ou la disparition de périphériques pouvant être connectés à chaud.",
@@ -32,7 +36,9 @@
         "Description[pl]": "Śledzi pojawianie i znikanie  urządzeń podłączanych \"na gorąco\".",
         "Description[sl]": "Sledi hitro priključljivim napravam, ki se pojavljajo in izginjajo.",
         "Description[sv]": "Följer enheter som kan kopplas in under spänning när de dyker upp och försvinner.",
+        "Description[ta]": "எப்போதேனும் செருகி கழற்றக்கூடிய சாதனங்களை கவனிக்கும்.",
         "Description[uk]": "Стежить за з’єднанням і від’єднанням портативних пристроїв.",
+        "Description[vi]": "Theo dõi các thiết bị cắm nóng được khi chúng xuất hiện và biến mất.",
         "Description[x-test]": "xxTracks hot-pluggable devices as they appear and disappear.xx",
         "Icon": "drive-removable-media-usb",
         "Id": "hotplug",
