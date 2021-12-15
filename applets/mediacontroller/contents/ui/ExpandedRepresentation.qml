@@ -124,10 +124,10 @@ PlasmaExtras.Representation {
 
         ShaderEffect {
             id: backgroundImage
-            property Image source: albumArt
+            readonly property Image source: albumArtContainer.imageVisible === 1 ? albumArt1 : albumArt2
 
             anchors.centerIn: parent
-            visible: !!root.track && source.status === Image.Ready && !softwareRendering
+            visible: albumArtContainer.visible && !softwareRendering
 
             layer.enabled: !softwareRendering
             layer.effect: HueSaturation {
@@ -148,13 +148,14 @@ PlasmaExtras.Representation {
                 }
             }
             // use State to avoid unnecessary reevaluation of width and height
+            readonly property double scaleFactor: Math.max(expandedRepresentation.width / source.paintedWidth, expandedRepresentation.height / source.paintedHeight)
             states: State {
                 name: "albumArtReady"
-                when: plasmoid.expanded && backgroundImage.visible && albumArt.paintedWidth > 0
+                when: plasmoid.expanded && backgroundImage.visible && backgroundImage.source.paintedWidth > 0
                 PropertyChanges {
                     target: backgroundImage
-                    width: parent.width * Math.max(1, source.paintedWidth / source.paintedHeight)
-                    height: parent.width * Math.max(1, source.paintedHeight / source.paintedWidth)
+                    width: Math.round((backgroundImage.source.paintedWidth + 2 * PlasmaCore.Units.largeSpacing) * backgroundImage.scaleFactor)
+                    height: Math.round((backgroundImage.source.paintedHeight + 2 * PlasmaCore.Units.largeSpacing) * backgroundImage.scaleFactor)
                 }
             }
         }
@@ -174,26 +175,81 @@ PlasmaExtras.Representation {
                 Layout.fillHeight: true
                 Layout.preferredWidth: 50
 
-                Image { // Album Art
-                    id: albumArt
+                Item {
+                    id: albumArtContainer
+                    property int imageVisible: 1
 
                     anchors.fill: parent
+                    visible: root.track && root.albumArt !== "" && albumArtContainer.imageVisible !== 0
 
-                    visible: !!root.track && status === Image.Ready
+                    Image { // Album Art
+                        id: albumArt1
 
-                    asynchronous: true
+                        anchors.fill: parent
 
-                    horizontalAlignment: Image.AlignRight
-                    verticalAlignment: Image.AlignVCenter
-                    fillMode: Image.PreserveAspectFit
+                        visible: albumArtContainer.imageVisible === 1
 
-                    source: root.albumArt
+                        asynchronous: true
+
+                        horizontalAlignment: Image.AlignRight
+                        verticalAlignment: Image.AlignVCenter
+                        fillMode: Image.PreserveAspectFit
+
+                        source: root.albumArt
+                    }
+
+                    Image { // Album Art
+                        id: albumArt2
+
+                        anchors.fill: parent
+
+                        visible: albumArtContainer.imageVisible === 2
+
+                        asynchronous: true
+
+                        horizontalAlignment: Image.AlignRight
+                        verticalAlignment: Image.AlignVCenter
+                        fillMode: Image.PreserveAspectFit
+
+                        source: root.albumArt
+                    }
+
+                    Connections {
+                        target: root
+
+                        function onAlbumArtChanged() {
+                            let imageNew = albumArtContainer.imageVisible === 1 ? albumArt2 : albumArt1;
+
+                            imageNew.source = root.albumArt;
+
+                            function finishImage(){
+                                if(imageNew.status === Image.Loading) {
+                                    return;
+                                }
+                                imageNew.statusChanged.disconnect(finishImage);
+                                if (imageNew.status === Image.Ready) {
+                                    albumArtContainer.imageVisible = albumArtContainer.imageVisible === 1 ? 2 : 1;
+                                } else {
+                                    albumArt1.source = albumArt2.source = "";
+                                    albumArtContainer.imageVisible = 0;
+                                }
+                            }
+
+                            if (imageNew.status === Image.Loading){
+                                imageNew.statusChanged.connect(finishImage);
+                            }
+                            else {
+                                finishImage();
+                            }
+                        }
+                    }
                 }
+
 
                 Loader {
                     // When albumArt is shown, the icon is unloaded to reduce memory usage.
                     readonly property string icon: (mpris2Source.currentData && mpris2Source.currentData["Desktop Icon Name"]) || "media-album-cover"
-                    active: !albumArt.visible
+                    active: !albumArtContainer.visible
                     anchors.fill: parent
 
                     sourceComponent: root.track ? fallbackIconItem : placeholderMessage
@@ -241,7 +297,7 @@ PlasmaExtras.Representation {
                     id: songTitle
                     level: 1
 
-                    color: (softwareRendering || !albumArt.visible) ? PlasmaCore.ColorScope.textColor : "white"
+                    color: (softwareRendering || !albumArtContainer.visible) ? PlasmaCore.ColorScope.textColor : "white"
 
                     textFormat: Text.PlainText
                     wrapMode: Text.Wrap
@@ -258,7 +314,7 @@ PlasmaExtras.Representation {
                     visible: root.artist
                     level: 2
 
-                    color: (softwareRendering || !albumArt.visible) ? PlasmaCore.ColorScope.textColor : "white"
+                    color: (softwareRendering || !albumArtContainer.visible) ? PlasmaCore.ColorScope.textColor : "white"
 
                     textFormat: Text.PlainText
                     wrapMode: Text.Wrap
@@ -270,7 +326,7 @@ PlasmaExtras.Representation {
                     Layout.maximumHeight: PlasmaCore.Units.gridUnit*2
                 }
                 Kirigami.Heading { // Song Album
-                    color: (softwareRendering || !albumArt.visible) ? PlasmaCore.ColorScope.textColor : "white"
+                    color: (softwareRendering || !albumArtContainer.visible) ? PlasmaCore.ColorScope.textColor : "white"
 
                     level: 3
                     opacity: 0.6
