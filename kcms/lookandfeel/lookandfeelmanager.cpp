@@ -13,6 +13,7 @@
 #include "config-kcm.h"
 #include "lookandfeeldata.h"
 #include "lookandfeelsettings.h"
+#include <KIO/CommandLauncherJob>
 #include <KService>
 #include <KSharedConfig>
 #include <QDBusConnection>
@@ -27,6 +28,7 @@ LookAndFeelManager::LookAndFeelManager(QObject *parent)
     : QObject(parent)
     , m_data(new LookAndFeelData(this))
 {
+    m_applyLatteLayout = (KService::serviceByDesktopName("org.kde.latte-dock") != nullptr);
 }
 
 LookAndFeelSettings *LookAndFeelManager::settings() const
@@ -155,6 +157,28 @@ void LookAndFeelManager::setIcons(const QString &theme)
     Q_EMIT iconsChanged();
 }
 
+void LookAndFeelManager::setLatteLayout(const QString &filepath, const QString &name)
+{
+    if (filepath.isEmpty()) {
+        // there is no latte layout
+        KIO::CommandLauncherJob latteapp(QStringLiteral("latte-dock"), {QStringLiteral("--disable-autostart")});
+        latteapp.setDesktopName("org.kde.latte-dock");
+        latteapp.start();
+
+        QDBusMessage quitmessage = QDBusMessage::createMethodCall(QStringLiteral("org.kde.lattedock"),
+                                                                  QStringLiteral("/MainApplication"),
+                                                                  QStringLiteral("org.qtproject.Qt.QCoreApplication"),
+                                                                  QStringLiteral("quit"));
+        QDBusConnection::sessionBus().call(quitmessage, QDBus::NoBlock);
+    } else {
+        KIO::CommandLauncherJob latteapp(
+            QStringLiteral("latte-dock"),
+            {QStringLiteral("--enable-autostart"), QStringLiteral("--import-layout"), filepath, QStringLiteral("--suggested-layout-name"), name});
+        latteapp.setDesktopName("org.kde.latte-dock");
+        latteapp.start();
+    }
+}
+
 void LookAndFeelManager::setPlasmaTheme(const QString &theme)
 {
     if (theme.isEmpty()) {
@@ -268,6 +292,11 @@ void LookAndFeelManager::save(const KPackage::Package &package, const KPackage::
         message.setArguments(args);
 
         QDBusConnection::sessionBus().call(message, QDBus::NoBlock);
+
+        if (m_applyLatteLayout) {
+            //! latte exists in system and user has chosen to update desktop layout
+            setLatteLayout(package.filePath("layouts", "looknfeel.layout.latte"), package.metadata().name());
+        }
     }
 
     if (!package.filePath("defaults").isEmpty()) {

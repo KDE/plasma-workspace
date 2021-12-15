@@ -50,6 +50,7 @@ public:
     void setPlasmaTheme(const QString &theme);
     void setCursorTheme(const QString theme);
     void setSplashScreen(const QString &theme);
+    void setLatteLayout(const QString &filepath, const QString &name);
     void setLockScreen(const QString &theme);
     void setWindowSwitcher(const QString &theme);
     void setDesktopSwitcher(const QString &theme);
@@ -102,6 +103,7 @@ private:
     bool m_applyWindowPlacement : 1 = true;
     bool m_applyShellPackage : 1 = true;
     bool m_resetDefaultLayout : 1 = false;
+    bool m_applyLatteLayout : 1 = false;
     bool m_applyWindowDecoration : 1 = true;
 
     bool m_plasmashellChanged = false;

@@ -41,6 +41,7 @@ target_link_libraries(lookandfeelmanager
     KF5::ConfigCore
     KF5::GuiAddons
     KF5::I18n
+    KF5::KIOGui
     KF5::KCMUtils
     KF5::NewStuff
     KF5::Package
