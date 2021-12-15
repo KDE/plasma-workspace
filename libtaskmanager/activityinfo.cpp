@@ -52,6 +52,7 @@ ActivityInfo::ActivityInfo(QObject *parent)
     }
 
     connect(d->activityConsumer, &KActivities::Consumer::currentActivityChanged, this, &ActivityInfo::currentActivityChanged);
+    connect(d->activityConsumer, &KActivities::Consumer::activitiesChanged, this, &ActivityInfo::numberOfActivitiesChanged);
     connect(d->activityConsumer, &KActivities::Consumer::runningActivitiesChanged, this, &ActivityInfo::numberOfRunningActivitiesChanged);
     connect(d->activityConsumer, &KActivities::Consumer::runningActivitiesChanged, this, &ActivityInfo::namesOfRunningActivitiesChanged);
 
@@ -82,6 +83,16 @@ ActivityInfo::~ActivityInfo()
 QString ActivityInfo::currentActivity() const
 {
     return d->activityConsumer->currentActivity();
+}
+
+int ActivityInfo::numberOfActivities() const
+{
+    return d->activityConsumer->activities().count();
+}
+
+QStringList ActivityInfo::activities() const
+{
+    return d->activityConsumer->activities();
 }
 
 int ActivityInfo::numberOfRunningActivities() const

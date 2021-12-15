@@ -31,6 +31,7 @@ class TASKMANAGER_EXPORT ActivityInfo : public QObject
     Q_OBJECT
 
     Q_PROPERTY(QString currentActivity READ currentActivity NOTIFY currentActivityChanged)
+    Q_PROPERTY(int numberOfActivities READ numberOfActivities NOTIFY numberOfActivitiesChanged)
     Q_PROPERTY(int numberOfRunningActivities READ numberOfRunningActivities NOTIFY numberOfRunningActivitiesChanged)
 
 public:
@@ -43,6 +44,22 @@ public:
      * @returns the number of the currently active virtual desktop.
      **/
     QString currentActivity() const;
+
+    /**
+     * The number of all activities defined in the session.
+     *
+     * @returns the number of activities defined in the session.
+     * @since 5.24
+     **/
+    int numberOfActivities() const;
+
+    /**
+     * The list of all activities defined in the session.
+     *
+     * @returns the list of all activities defined in the session.
+     * @since 5.24
+     **/
+    Q_INVOKABLE QStringList activities() const;
 
     /**
      * The number of currently-running activities defined in the session.
@@ -69,6 +86,7 @@ public:
 Q_SIGNALS:
     void currentActivityChanged() const;
     void numberOfRunningActivitiesChanged() const;
+    void numberOfActivitiesChanged() const;
 
     /**
      * The names of the running activities have changed.
