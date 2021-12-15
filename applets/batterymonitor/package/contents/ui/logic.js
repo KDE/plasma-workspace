@@ -41,17 +41,17 @@ function updateBrightness(rootItem, source) {
 }
 
 function updateInhibitions(rootItem, source) {
-    var inhibitions = [];
+    const inhibitions = [];
 
     if (source.data["Inhibitions"]) {
-        for(var key in pmSource.data["Inhibitions"]) {
+        for (let key in pmSource.data["Inhibitions"]) {
             if (key === "plasmashell" || key === "plasmoidviewer") { // ignore our own inhibition
-                continue
+                continue;
             }
 
-            inhibitions.push(pmSource.data["Inhibitions"][key])
+            inhibitions.push(pmSource.data["Inhibitions"][key]);
         }
     }
 
-    rootItem.inhibitions = inhibitions
+    rootItem.inhibitions = inhibitions;
 }

@@ -26,15 +26,15 @@ Item {
 
     Plasmoid.status: {
         if (powermanagementDisabled) {
-            return PlasmaCore.Types.ActiveStatus
+            return PlasmaCore.Types.ActiveStatus;
         }
 
         if (pmSource.data.Battery["Has Cumulative"]
             && !(pmSource.data["Battery"]["State"] === "FullyCharged" && pmSource.data["AC Adapter"]["Plugged in"])) {
-            return PlasmaCore.Types.ActiveStatus
+            return PlasmaCore.Types.ActiveStatus;
         }
 
-        return PlasmaCore.Types.PassiveStatus
+        return PlasmaCore.Types.PassiveStatus;
     }
 
     Plasmoid.toolTipMainText: {
@@ -63,7 +63,7 @@ Item {
 
         // Add special text for the "plugged in but still discharging" case
         if (pmSource.data["AC Adapter"] && pmSource.data["AC Adapter"]["Plugged in"] && pmSource.data.Battery.State === "Discharging") {
-            parts.push(i18n("The power supply is not powerful enough to charge the battery"))
+            parts.push(i18n("The power supply is not powerful enough to charge the battery"));
         }
 
         if (batteries.count === 0) {
@@ -78,7 +78,7 @@ Item {
                 parts.push(i18nc("remaining time left of battery usage - HH:MM","%1 remaining", remainingTimeString));
             }
         } else if (pmSource.data.Battery.State === "NoCharge") {
-            parts.push(i18n("Not charging"))
+            parts.push(i18n("Not charging"));
         } // otherwise, don't add anything
 
         if (powermanagementDisabled) {
@@ -112,13 +112,13 @@ Item {
         if (disableBrightnessUpdate) {
             return;
         }
-        var service = pmSource.serviceForSource("PowerDevil");
-        var operation = service.operationDescription("setBrightness");
+        const service = pmSource.serviceForSource("PowerDevil");
+        const operation = service.operationDescription("setBrightness");
         operation.brightness = screenBrightness;
         // show OSD only when the plasmoid isn't expanded since the moving slider is feedback enough
-        operation.silent = plasmoid.expanded
+        operation.silent = plasmoid.expanded;
         updateScreenBrightnessJob = service.startOperationCall(operation);
-        updateScreenBrightnessJob.finished.connect(function(job) {
+        updateScreenBrightnessJob.finished.connect(job => {
             Logic.updateBrightness(batterymonitor, pmSource);
         });
     }
@@ -131,9 +131,9 @@ Item {
         var service = pmSource.serviceForSource("PowerDevil");
         var operation = service.operationDescription("setKeyboardBrightness");
         operation.brightness = keyboardBrightness;
-        operation.silent = plasmoid.expanded
+        operation.silent = plasmoid.expanded;
         updateKeyboardBrightnessJob = service.startOperationCall(operation);
-        updateKeyboardBrightnessJob.finished.connect(function(job) {
+        updateKeyboardBrightnessJob.finished.connect(job => {
             Logic.updateBrightness(batterymonitor, pmSource);
         });
     }
@@ -184,8 +184,8 @@ Item {
             disconnectSource(source);
         }
         onDataChanged: {
-            Logic.updateBrightness(batterymonitor, pmSource)
-            Logic.updateInhibitions(batterymonitor, pmSource)
+            Logic.updateBrightness(batterymonitor, pmSource);
+            Logic.updateInhibitions(batterymonitor, pmSource);
         }
     }
 
@@ -225,40 +225,40 @@ Item {
         profiles: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Profiles"] || []) : []
         inhibitionReason: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Performance Inhibited Reason"] || "") : ""
         degradationReason: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Performance Degraded Reason"] || "") : ""
-        profileHolds:  pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Profile Holds"] || []) : []
+        profileHolds: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Profile Holds"] || []) : []
 
         property int cookie1: -1
         property int cookie2: -1
         onPowermanagementChanged: disabled => {
-            var service = pmSource.serviceForSource("PowerDevil");
+            const service = pmSource.serviceForSource("PowerDevil");
             if (disabled) {
-                var reason = i18n("The battery applet has enabled system-wide inhibition");
-                var op1 = service.operationDescription("beginSuppressingSleep");
+                const reason = i18n("The battery applet has enabled system-wide inhibition");
+                const op1 = service.operationDescription("beginSuppressingSleep");
                 op1.reason = reason;
-                var op2 = service.operationDescription("beginSuppressingScreenPowerManagement");
+                const op2 = service.operationDescription("beginSuppressingScreenPowerManagement");
                 op2.reason = reason;
 
-                var job1 = service.startOperationCall(op1);
+                const job1 = service.startOperationCall(op1);
                 job1.finished.connect(job => {
                     cookie1 = job.result;
                 });
 
-                var job2 = service.startOperationCall(op2);
+                const job2 = service.startOperationCall(op2);
                 job2.finished.connect(job => {
                     cookie2 = job.result;
                 });
             } else {
-                var op1 = service.operationDescription("stopSuppressingSleep");
+                const op1 = service.operationDescription("stopSuppressingSleep");
                 op1.cookie = cookie1;
-                var op2 = service.operationDescription("stopSuppressingScreenPowerManagement");
+                const op2 = service.operationDescription("stopSuppressingScreenPowerManagement");
                 op2.cookie = cookie2;
 
-                var job1 = service.startOperationCall(op1);
+                const job1 = service.startOperationCall(op1);
                 job1.finished.connect(job => {
                     cookie1 = -1;
                 });
 
-                var job2 = service.startOperationCall(op2);
+                const job2 = service.startOperationCall(op2);
                 job2.finished.connect(job => {
                     cookie2 = -1;
                 });
@@ -272,21 +272,21 @@ Item {
         }
 
         onActivateProfileRequested: {
-            dialogItem.activeProfile = profile
+            dialogItem.activeProfile = profile;
             const service = pmSource.serviceForSource("PowerDevil");
-            let op = service.operationDescription("setPowerProfile");
+            const op = service.operationDescription("setPowerProfile");
             op.profile = profile;
 
-            let job = service.startOperationCall(op);
+            const job = service.startOperationCall(op);
             job.finished.connect(job => {
-                dialogItem.activeProfile = Qt.binding(() => actuallyActiveProfile)
+                dialogItem.activeProfile = Qt.binding(() => actuallyActiveProfile);
                 if (!job.result) {
-                    var notifications = notificationSource.serviceForSource("notification")
-                    var operation = notifications.operationDescription("createNotification");
-                    operation.appName = i18n("Battery and Brightness")
+                    const notifications = notificationSource.serviceForSource("notification")
+                    const operation = notifications.operationDescription("createNotification");
+                    operation.appName = i18n("Battery and Brightness");
                     operation.appIcon = "dialog-error";
-                    operation.icon = "dialog-error"
-                    operation.body = i18n("Failed to activate %1 mode", profile)
+                    operation.icon = "dialog-error";
+                    operation.body = i18n("Failed to activate %1 mode", profile);
                     notifications.startOperationCall(operation);
                 }
             });
