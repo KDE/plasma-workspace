@@ -168,8 +168,7 @@ void URLGrabber::actionMenu(HistoryItemConstPtr item, bool automatically_invoked
         connect(m_myMenu, &QMenu::triggered, this, &URLGrabber::slotItemSelected);
 
         foreach (ClipAction *clipAct, matchingActionsList) {
-            m_myMenu->addSection(QIcon::fromTheme(QStringLiteral("klipper")),
-                                 i18n("%1 - Actions For: %2", clipAct->description(), KStringHandler::csqueeze(text, 45)));
+            m_myMenu->addSection(QIcon::fromTheme(QStringLiteral("klipper")), clipAct->description());
             QList<ClipCommand> cmdList = clipAct->commands();
             int listSize = cmdList.count();
             for (int i = 0; i < listSize; ++i) {
