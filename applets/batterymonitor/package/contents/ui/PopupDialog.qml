@@ -125,6 +125,8 @@ PlasmaComponents3.Page {
             }
 
             PlasmaComponents3.ScrollView {
+                id: batteryScrollView
+
                 // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-83890
                 PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
 
@@ -144,7 +146,17 @@ PlasmaComponents3.Page {
                     KeyNavigation.backtab: pmSwitch
 
                     delegate: BatteryItem {
-                        width: ListView.view.width
+                        // Add a padding between an item and the scroll bar.
+                        // Anchors are well-behaved in RTL environments too.
+                        anchors {
+                            left: parent ? parent.left : undefined
+                            right: parent ? parent.right : undefined
+                            rightMargin: {
+                                const scrollBar = batteryScrollView.PlasmaComponents3.ScrollBar.vertical;
+                                const hasScrollBar = scrollBar !== null && scrollBar.visible;
+                                return hasScrollBar ? (PlasmaCore.Units.smallSpacing * 2) : 0;
+                            }
+                        }
                         battery: model
                         matchHeightOfSlider: brightnessSlider.slider
                     }
