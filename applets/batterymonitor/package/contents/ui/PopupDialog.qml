@@ -55,13 +55,11 @@ PlasmaComponents3.Page {
         focus: true
 
         ColumnLayout {
-            id: settingsColumn
             anchors {
-                left: parent.left
-                right: parent.right
-                top: parent.top
-                margins: PlasmaCore.Units.smallSpacing
+                fill: parent
                 topMargin: PlasmaCore.Units.smallSpacing * 2
+                leftMargin: PlasmaCore.Units.smallSpacing
+                rightMargin: PlasmaCore.Units.smallSpacing
             }
             spacing: PlasmaCore.Units.smallSpacing * 2
 
@@ -125,34 +123,31 @@ PlasmaComponents3.Page {
                 profileHolds: dialog.profileHolds
                 onActivateProfileRequested: dialog.activateProfileRequested(profile)
             }
-        }
 
-        PlasmaComponents3.ScrollView {
-            // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-83890
-            PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
-            anchors {
-                top: settingsColumn.bottom
-                left: parent.left
-                right: parent.right
-                bottom: parent.bottom
-                topMargin: PlasmaCore.Units.gridUnit
-                leftMargin: PlasmaCore.Units.smallSpacing
-                rightMargin: PlasmaCore.Units.smallSpacing
-            }
+            PlasmaComponents3.ScrollView {
+                // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-83890
+                PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
 
-            ListView {
-                id: batteryList
+                // additional margin, because the bottom of PowerProfileItem
+                // and the top of BatteryItem are more dense.
+                Layout.topMargin: PlasmaCore.Units.smallSpacing * 2
+                Layout.fillWidth: true
+                Layout.fillHeight: true
 
-                boundsBehavior: Flickable.StopAtBounds
-                spacing: PlasmaCore.Units.smallSpacing * 2
+                ListView {
+                    id: batteryList
 
-                KeyNavigation.tab: brightnessSlider
-                KeyNavigation.backtab: pmSwitch
+                    boundsBehavior: Flickable.StopAtBounds
+                    spacing: PlasmaCore.Units.smallSpacing * 2
 
-                delegate: BatteryItem {
-                    width: ListView.view.width
-                    battery: model
-                    matchHeightOfSlider: brightnessSlider.slider
+                    KeyNavigation.tab: brightnessSlider
+                    KeyNavigation.backtab: pmSwitch
+
+                    delegate: BatteryItem {
+                        width: ListView.view.width
+                        battery: model
+                        matchHeightOfSlider: brightnessSlider.slider
+                    }
                 }
             }
         }
