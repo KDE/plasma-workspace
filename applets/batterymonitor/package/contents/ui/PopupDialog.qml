@@ -6,6 +6,7 @@
 */
 
 import QtQuick 2.15
+import QtQuick.Layouts 1.15
 
 import org.kde.kquickcontrolsaddons 2.1
 import org.kde.plasma.components 3.0 as PlasmaComponents3
@@ -50,14 +51,18 @@ PlasmaComponents3.Page {
 
     FocusScope {
         anchors.fill: parent
-        anchors.topMargin: PlasmaCore.Units.smallSpacing * 2
 
         focus: true
 
         Column {
             id: settingsColumn
-            anchors.horizontalCenter: parent.horizontalCenter
-            width: parent.width - PlasmaCore.Units.smallSpacing * 2
+            anchors {
+                left: parent.left
+                right: parent.right
+                top: parent.top
+                margins: PlasmaCore.Units.smallSpacing
+                topMargin: PlasmaCore.Units.smallSpacing * 2
+            }
             spacing: PlasmaCore.Units.smallSpacing * 2
 
             BrightnessItem {
@@ -123,13 +128,14 @@ PlasmaComponents3.Page {
             // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-83890
             PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
             anchors {
-                horizontalCenter: parent.horizontalCenter
                 top: settingsColumn.bottom
+                left: parent.left
+                right: parent.right
+                bottom: parent.bottom
                 topMargin: PlasmaCore.Units.gridUnit
                 leftMargin: PlasmaCore.Units.smallSpacing
-                bottom: parent.bottom
+                rightMargin: PlasmaCore.Units.smallSpacing
             }
-            width: parent.width - PlasmaCore.Units.smallSpacing * 2
 
             ListView {
                 id: batteryList
