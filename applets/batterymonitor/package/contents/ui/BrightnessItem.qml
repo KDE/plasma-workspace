@@ -12,7 +12,8 @@ import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.core 2.1 as PlasmaCore
 
 RowLayout {
-    id: item
+    id: root
+
     property alias icon: brightnessIcon.source
     property alias label: brightnessLabel.text
     property alias slider: brightnessSlider
@@ -65,7 +66,7 @@ RowLayout {
             // Please see https://git.reviewboard.kde.org/r/122505/ for more information
             from: to > 100 ? 1 : 0
             stepSize: 1
-            onMoved: item.moved()
+            onMoved: root.moved()
         }
     }
 }
