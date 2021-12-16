@@ -104,8 +104,8 @@ RowLayout {
 
         RowLayout {
             Layout.fillWidth: true
+            spacing: PlasmaCore.Units.smallSpacing
 
-            spacing: 0
             Repeater {
                 id: repeater
                 model: root.profileData
@@ -121,6 +121,7 @@ RowLayout {
                         default:
                             return Text.AlignHCenter; // middle
                     }
+                    elide: Text.ElideMiddle
 
                     // Disable label for inhibited items to reinforce unavailability
                     enabled: !(root.profileData[index].canBeInhibited && root.inhibited)
