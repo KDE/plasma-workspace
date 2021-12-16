@@ -74,10 +74,7 @@
         "Name[vi]": "KSysguard",
         "Name[x-test]": "xxKSysguardxx",
         "Name[zh_CN]": "KDE 系统守护程序",
-        "Name[zh_TW]": "KSysguard",
-        "ServiceTypes": [
-            "KDEDModule"
-        ]
+        "Name[zh_TW]": "KSysguard"
     },
     "X-KDE-Kded-autoload": true,
     "X-KDE-Kded-load-on-demand": false,

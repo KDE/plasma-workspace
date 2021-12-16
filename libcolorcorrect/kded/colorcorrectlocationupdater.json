@@ -62,10 +62,7 @@
         "Name[vi]": "Trình cập nhật định vị địa lí ColorCorrect",
         "Name[x-test]": "xxColorCorrect Geolocation Updaterxx",
         "Name[zh_CN]": "ColorCorrect 地理位置更新器",
-        "Name[zh_TW]": "ColorCorrect 位置更新器",
-        "ServiceTypes": [
-            "KDEDModule"
-        ]
+        "Name[zh_TW]": "ColorCorrect 位置更新器"
     },
     "X-KDE-FactoryName": "colorcorrectlocationupdater",
     "X-KDE-Kded-autoload": true

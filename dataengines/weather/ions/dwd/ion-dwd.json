@@ -43,10 +43,7 @@
         "Name[uk]": "Німецька служба погоди",
         "Name[vi]": "Dịch vụ Thời tiết Đức",
         "Name[x-test]": "xxGerman Weather Servicexx",
-        "Name[zh_CN]": "德国天气服务",
-        "ServiceTypes": [
-            "Plasma/DataEngine"
-        ]
+        "Name[zh_CN]": "德国天气服务"
     },
     "X-KDE-ParentApp": "weatherengine"
 }

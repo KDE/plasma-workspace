@@ -93,10 +93,7 @@
         "Name[wa]": "Gjeyoplaeçmint di l' IP",
         "Name[x-test]": "xxGeolocation IPxx",
         "Name[zh_CN]": "IP 地理位置",
-        "Name[zh_TW]": "Geolocation IP",
-        "ServiceTypes": [
-            "Plasma/GeolocationProvider"
-        ]
+        "Name[zh_TW]": "Geolocation IP"
     },
     "X-KDE-ParentApp": "geolocation"
 }

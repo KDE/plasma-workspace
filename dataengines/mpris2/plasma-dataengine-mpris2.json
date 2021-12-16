@@ -88,9 +88,6 @@
         "Name[x-test]": "xxMPRIS2xx",
         "Name[zh_CN]": "MPRIS2",
         "Name[zh_TW]": "MPRIS2",
-        "ServiceTypes": [
-            "Plasma/DataEngine"
-        ],
         "Version": "",
         "Website": "https://kde.org/plasma-desktop"
     }

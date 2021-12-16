@@ -92,10 +92,7 @@
         "Name[wa]": "Coisse ås eures",
         "Name[x-test]": "xxTime Zonexx",
         "Name[zh_CN]": "时区",
-        "Name[zh_TW]": "時區",
-        "ServiceTypes": [
-            "KDEDModule"
-        ]
+        "Name[zh_TW]": "時區"
     },
     "X-KDE-Kded-autoload": true,
     "X-KDE-Kded-load-on-demand": true

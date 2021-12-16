@@ -64,10 +64,7 @@
         "Name[vi]": "Ban Thời tiết BBC",
         "Name[x-test]": "xxBBC Weatherxx",
         "Name[zh_CN]": "BBC 天气",
-        "Name[zh_TW]": "BBC 天氣",
-        "ServiceTypes": [
-            "Plasma/DataEngine"
-        ]
+        "Name[zh_TW]": "BBC 天氣"
     },
     "X-KDE-ParentApp": "weatherengine"
 }

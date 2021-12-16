@@ -104,9 +104,6 @@
         "Name[x-test]": "xxPackageKitxx",
         "Name[zh_CN]": "PackageKit",
         "Name[zh_TW]": "PackageKit",
-        "ServiceTypes": [
-            "Plasma/DataEngine"
-        ],
         "Version": "0.1",
         "Website": "https://www.kde.org/plasma-desktop"
     }

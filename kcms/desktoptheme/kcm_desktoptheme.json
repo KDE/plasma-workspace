@@ -67,10 +67,7 @@
         "Name[uk]": "Стиль Плазми",
         "Name[vi]": "Kiểu cách Plasma",
         "Name[x-test]": "xxPlasma Stylexx",
-        "Name[zh_CN]": "Plasma 视觉风格",
-        "ServiceTypes": [
-            "KCModule"
-        ]
+        "Name[zh_CN]": "Plasma 视觉风格"
     },
     "X-DocPath": "kcontrol/desktopthemedetails/index.html",
     "X-KDE-Keywords": "Desktop Theme,Plasma Theme,plasma style,desktop style,plasma skin,desktop skin,theme",

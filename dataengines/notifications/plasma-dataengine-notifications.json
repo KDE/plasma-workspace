@@ -107,9 +107,6 @@
         "Name[x-test]": "xxApplication Notificationsxx",
         "Name[zh_CN]": "应用程序通知",
         "Name[zh_TW]": "應用程式通知",
-        "ServiceTypes": [
-            "Plasma/DataEngine"
-        ],
         "Version": "",
         "Website": "https://kde.org/plasma-desktop"
     }

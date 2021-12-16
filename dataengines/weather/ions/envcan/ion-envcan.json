@@ -93,10 +93,7 @@
         "Name[wa]": "Evironmint Canada",
         "Name[x-test]": "xxEnvironment Canadaxx",
         "Name[zh_CN]": "加拿大环境部",
-        "Name[zh_TW]": "Environment Canada",
-        "ServiceTypes": [
-            "Plasma/DataEngine"
-        ]
+        "Name[zh_TW]": "Environment Canada"
     },
     "X-KDE-ParentApp": "weatherengine"
 }

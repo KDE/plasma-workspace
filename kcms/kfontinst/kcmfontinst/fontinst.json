@@ -62,10 +62,7 @@
         "Name[uk]": "Керування шрифтами",
         "Name[vi]": "Quản lí phông chữ",
         "Name[x-test]": "xxFont Managementxx",
-        "Name[zh_CN]": "字体管理",
-        "ServiceTypes": [
-            "KCModule"
-        ]
+        "Name[zh_CN]": "字体管理"
     },
     "X-DocPath": "kcontrol/fontinst/index.html",
     "X-KDE-Keywords": "font,fonts,installer,truetype,type1,bitmap",

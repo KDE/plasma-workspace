@@ -51,9 +51,6 @@
         "Name[vi]": "Quản lí nguồn điện",
         "Name[x-test]": "xxPower Managementxx",
         "Name[zh_CN]": "电源管理",
-        "ServiceTypes": [
-            "Plasma/DataEngine"
-        ],
         "Version": "",
         "Website": "https://kde.org/plasma-desktop"
     }

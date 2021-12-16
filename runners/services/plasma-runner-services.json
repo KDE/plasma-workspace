@@ -144,9 +144,6 @@
         "Name[x-test]": "xxApplicationsxx",
         "Name[zh_CN]": "应用程序",
         "Name[zh_TW]": "應用程式",
-        "ServiceTypes": [
-            "Plasma/Runner"
-        ],
         "Version": "1.0"
     },
     "X-Plasma-Runner-Unique-Results": true

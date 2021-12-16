@@ -96,9 +96,6 @@
         "Name[vi]": "Màu",
         "Name[x-test]": "xxColorsxx",
         "Name[zh_CN]": "颜色",
-        "ServiceTypes": [
-            "KCModule"
-        ],
         "Version": "",
         "Website": "https://www.kde.org/plasma-desktop"
     },

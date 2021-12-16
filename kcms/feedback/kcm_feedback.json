@@ -69,10 +69,7 @@
         "Name[vi]": "Phản hồi của người dùng",
         "Name[x-test]": "xxUser Feedbackxx",
         "Name[zh_CN]": "用户反馈",
-        "Name[zh_TW]": "使用者意見回應",
-        "ServiceTypes": [
-            "KCModule"
-        ]
+        "Name[zh_TW]": "使用者意見回應"
     },
     "X-DocPath": "kcontrol/feedback/index.html",
     "X-KDE-Keywords": "feedback,report,contact,data collection,statistics,usage,log,logging,telemetry",

@@ -83,9 +83,6 @@
         "Name[x-test]": "xxLook and Feelxx",
         "Name[zh_CN]": "界面外观",
         "Name[zh_TW]": "外觀與感覺",
-        "ServiceTypes": [
-            "KPackage/PackageStructure"
-        ],
         "Version": "1"
     },
     "X-KDE-ParentApp": "org.kde.plasmashell"

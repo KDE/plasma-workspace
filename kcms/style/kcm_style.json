@@ -60,10 +60,7 @@
         "Name[uk]": "Стиль вікон програм",
         "Name[vi]": "Kiểu cách ứng dụng",
         "Name[x-test]": "xxApplication Stylexx",
-        "Name[zh_CN]": "应用程序风格",
-        "ServiceTypes": [
-            "KCModule"
-        ]
+        "Name[zh_CN]": "应用程序风格"
     },
     "X-DocPath": "kcontrol/kcmstyle/index.html",
     "X-KDE-Init-Phase": "0",

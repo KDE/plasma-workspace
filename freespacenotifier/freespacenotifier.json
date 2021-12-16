@@ -86,10 +86,7 @@
         "Name[wa]": "Notifieu del plaece di libe",
         "Name[x-test]": "xxFree Space Notifierxx",
         "Name[zh_CN]": "空闲空间通知器",
-        "Name[zh_TW]": "剩餘空間通知",
-        "ServiceTypes": [
-            "KDEDModule"
-        ]
+        "Name[zh_TW]": "剩餘空間通知"
     },
     "X-KDE-Kded-autoload": true
 }

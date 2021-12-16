@@ -113,9 +113,6 @@
         "Name[x-test]": "xxStatus Notifier Informationxx",
         "Name[zh_CN]": "状态通知信息",
         "Name[zh_TW]": "狀態通知器資訊",
-        "ServiceTypes": [
-            "Plasma/DataEngine"
-        ],
         "Version": "0.1"
     }
 }

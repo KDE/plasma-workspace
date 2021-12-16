@@ -81,9 +81,6 @@
         "Name[x-test]": "xxWallpaperxx",
         "Name[zh_CN]": "壁纸",
         "Name[zh_TW]": "桌布",
-        "ServiceTypes": [
-            "KPackage/PackageStructure"
-        ],
         "Version": "1"
     },
     "X-KDE-ParentApp": "org.kde.plasmashell"

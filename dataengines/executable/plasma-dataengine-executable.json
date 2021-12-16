@@ -107,9 +107,6 @@
         "Name[x-test]": "xxRun Commandsxx",
         "Name[zh_CN]": "运行命令",
         "Name[zh_TW]": "執行指令",
-        "ServiceTypes": [
-            "Plasma/DataEngine"
-        ],
         "Version": "",
         "Website": "https://kde.org/plasma-desktop"
     }

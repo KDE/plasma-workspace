@@ -87,10 +87,7 @@
         "Name[wa]": "Rexheu d' plake",
         "Name[x-test]": "xxDrive Ejectorxx",
         "Name[zh_CN]": "驱动器弹出程序",
-        "Name[zh_TW]": "碟片跳出管理",
-        "ServiceTypes": [
-            "KDEDModule"
-        ]
+        "Name[zh_TW]": "碟片跳出管理"
     },
     "X-KDE-Kded-autoload": true
 }

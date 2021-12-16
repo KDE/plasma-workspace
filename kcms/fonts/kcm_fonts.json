@@ -67,10 +67,7 @@
         "Name[uk]": "Шрифти",
         "Name[vi]": "Phông chữ",
         "Name[x-test]": "xxFontsxx",
-        "Name[zh_CN]": "字体",
-        "ServiceTypes": [
-            "KCModule"
-        ]
+        "Name[zh_CN]": "字体"
     },
     "X-DocPath": "kcontrol/fonts/index.html",
     "X-KDE-Init-Phase": "0",

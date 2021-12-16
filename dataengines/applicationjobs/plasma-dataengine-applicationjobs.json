@@ -101,9 +101,6 @@
         "Name[x-test]": "xxApplication Job Informationxx",
         "Name[zh_CN]": "程序任务信息",
         "Name[zh_TW]": "應用程式工作資訊",
-        "ServiceTypes": [
-            "Plasma/DataEngine"
-        ],
         "Version": "",
         "Website": "https://kde.org/plasma-desktop"
     }

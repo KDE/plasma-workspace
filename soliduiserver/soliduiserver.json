@@ -74,10 +74,7 @@
         "Name[vi]": "Phát hiện phần cứng",
         "Name[x-test]": "xxHardware Detectionxx",
         "Name[zh_CN]": "硬件检测",
-        "Name[zh_TW]": "硬體偵測",
-        "ServiceTypes": [
-            "KDEDModule"
-        ]
+        "Name[zh_TW]": "硬體偵測"
     },
     "X-KDE-Kded-autoload": false,
     "X-KDE-Kded-load-on-demand": true

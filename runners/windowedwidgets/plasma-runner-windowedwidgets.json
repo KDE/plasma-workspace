@@ -117,9 +117,6 @@
         "Name[x-test]": "xxWindowed widgetsxx",
         "Name[zh_CN]": "窗口化小部件",
         "Name[zh_TW]": "視窗元件",
-        "ServiceTypes": [
-            "Plasma/Runner"
-        ],
         "Version": "1.0"
     }
 }

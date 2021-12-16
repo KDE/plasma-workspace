@@ -79,9 +79,6 @@
         "Name[x-test]": "xxWallpaper Imagesxx",
         "Name[zh_CN]": "壁纸图像",
         "Name[zh_TW]": "桌布影像",
-        "ServiceTypes": [
-            "KPackage/PackageStructure"
-        ],
         "Version": "1"
     },
     "X-KDE-ParentApp": "org.kde.plasmashell"

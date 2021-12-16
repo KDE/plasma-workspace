@@ -112,9 +112,6 @@
         "Name[x-test]": "xxDictionaryxx",
         "Name[zh_CN]": "词典",
         "Name[zh_TW]": "字典",
-        "ServiceTypes": [
-            "Plasma/DataEngine"
-        ],
         "Version": "",
         "Website": "https://kde.org/plasma-desktop"
     }

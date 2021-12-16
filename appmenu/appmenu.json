@@ -76,10 +76,7 @@
         "Name[vi]": "Trình nền các trình đơn ứng dụng",
         "Name[x-test]": "xxApplication menus daemonxx",
         "Name[zh_CN]": "应用程序菜单守护程序",
-        "Name[zh_TW]": "應用程式選單伺服程式",
-        "ServiceTypes": [
-            "KDEDModule"
-        ]
+        "Name[zh_TW]": "應用程式選單伺服程式"
     },
     "X-KDE-Kded-autoload": true,
     "X-KDE-Kded-load-on-demand": false,

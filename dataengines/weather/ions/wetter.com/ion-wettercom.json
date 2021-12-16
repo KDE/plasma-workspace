@@ -92,10 +92,7 @@
         "Name[wa]": "wetter.com",
         "Name[x-test]": "xxwetter.comxx",
         "Name[zh_CN]": "wetter.com",
-        "Name[zh_TW]": "wetter.com",
-        "ServiceTypes": [
-            "Plasma/DataEngine"
-        ]
+        "Name[zh_TW]": "wetter.com"
     },
     "X-KDE-ParentApp": "weatherengine"
 }

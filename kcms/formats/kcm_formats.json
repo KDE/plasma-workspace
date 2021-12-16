@@ -65,10 +65,7 @@
         "Name[uk]": "Формати",
         "Name[vi]": "Dạng thức",
         "Name[x-test]": "xxFormatsxx",
-        "Name[zh_CN]": "格式",
-        "ServiceTypes": [
-            "KCModule"
-        ]
+        "Name[zh_CN]": "格式"
     },
     "X-DocPath": "kcontrol/formats/index.html",
     "X-KDE-Keywords": "language,translation,number format,locale,Country,charsets,character sets,Decimal symbol,Thousands separator,symbol,separator,sign,positive,negative,currency,money,fractional digits,calendar,time,date,formats,week,week start,first,paper,size,letter,A4,measure,metric,English,Imperial,region,measurement units,collation,sorting,date format",

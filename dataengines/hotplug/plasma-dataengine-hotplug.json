@@ -122,9 +122,6 @@
         "Name[x-test]": "xxHotplug Eventsxx",
         "Name[zh_CN]": "热插拔事件",
         "Name[zh_TW]": "熱插拔事件",
-        "ServiceTypes": [
-            "Plasma/DataEngine"
-        ],
         "Version": "",
         "Website": "https://kde.org/plasma-desktop"
     }

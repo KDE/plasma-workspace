@@ -63,10 +63,7 @@
         "Name[uk]": "Вказівники",
         "Name[vi]": "Con trỏ",
         "Name[x-test]": "xxCursorsxx",
-        "Name[zh_CN]": "光标",
-        "ServiceTypes": [
-            "KCModule"
-        ]
+        "Name[zh_CN]": "光标"
     },
     "X-DocPath": "kcontrol/cursortheme/index.html",
     "X-KDE-Keywords": "Mouse,Cursor,Theme,Cursor Appearance,Cursor Color,Cursor Theme,Mouse Theme,Mouse Appearance,Mouse Skin,Pointer Colors,Pointer Appearance,cursor skin,cursor style,cursor size,mouse style,pointer,",

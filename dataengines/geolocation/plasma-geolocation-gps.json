@@ -93,10 +93,7 @@
         "Name[wa]": "GPS di djeyoplaeçmint",
         "Name[x-test]": "xxGeolocation GPSxx",
         "Name[zh_CN]": "GPS 地理位置",
-        "Name[zh_TW]": "Geolocation GPS",
-        "ServiceTypes": [
-            "Plasma/GeolocationProvider"
-        ]
+        "Name[zh_TW]": "Geolocation GPS"
     },
     "X-KDE-ParentApp": "geolocation"
 }

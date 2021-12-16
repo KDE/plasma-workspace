@@ -130,9 +130,6 @@
         "Name[x-test]": "xxLocationsxx",
         "Name[zh_CN]": "位置",
         "Name[zh_TW]": "位置",
-        "ServiceTypes": [
-            "Plasma/Runner"
-        ],
         "Version": "1.0"
     },
     "X-Plasma-Runner-Unique-Results": true,

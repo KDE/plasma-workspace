@@ -127,9 +127,6 @@
         "Name[x-test]": "xxWeatherxx",
         "Name[zh_CN]": "天气",
         "Name[zh_TW]": "天氣",
-        "ServiceTypes": [
-            "Plasma/DataEngine"
-        ],
         "Version": "1.0",
         "Website": "https://www.kde.org"
     }

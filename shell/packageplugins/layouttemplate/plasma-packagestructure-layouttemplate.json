@@ -78,9 +78,6 @@
         "Name[x-test]": "xxLayout Templatexx",
         "Name[zh_CN]": "布局模板",
         "Name[zh_TW]": "佈局樣本",
-        "ServiceTypes": [
-            "KPackage/PackageStructure"
-        ],
         "Version": "1"
     },
     "X-KDE-ParentApp": "org.kde.plasmashell"

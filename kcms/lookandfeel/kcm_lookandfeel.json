@@ -62,10 +62,7 @@
         "Name[uk]": "Загальна тема",
         "Name[vi]": "Chủ đề toàn cục",
         "Name[x-test]": "xxGlobal Themexx",
-        "Name[zh_CN]": "全局主题",
-        "ServiceTypes": [
-            "KCModule"
-        ]
+        "Name[zh_CN]": "全局主题"
     },
     "X-KDE-Keywords": "theme,look,feel,global theme,desktop,appearance,skin, global,presentation,themes,design,UI",
     "X-KDE-Keywords[ar]": "المظهر,السمة,الإحساس,السمة العامة,سطح المكتب,المظهر,الجلد,العرض ,السمات,التصميم,واجهة المستخدم",

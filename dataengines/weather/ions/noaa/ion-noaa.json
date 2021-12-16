@@ -93,10 +93,7 @@
         "Name[wa]": "NOAA's National Weather Service",
         "Name[x-test]": "xxNOAA's National Weather Servicexx",
         "Name[zh_CN]": "NOAA 美国天气服务",
-        "Name[zh_TW]": "NOAA 的國家天氣服務",
-        "ServiceTypes": [
-            "Plasma/DataEngine"
-        ]
+        "Name[zh_TW]": "NOAA 的國家天氣服務"
     },
     "X-KDE-ParentApp": "weatherengine"
 }
