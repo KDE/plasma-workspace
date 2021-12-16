@@ -4,8 +4,6 @@ Type=Application
 Exec=systemsettings kcm_fontinst
 NoDisplay=true
 
-Categories=Qt;KDE;X-KDE-settings-system;
-
 Name=Font Management
 Name[ar]=إدارة الخطوط
 Name[ast]=Xestión de fontes

@@ -1,5 +1,4 @@
 {
-    "Categories": "Qt;KDE;X-KDE-settings-translations;",
     "KPlugin": {
         "Description": "Change workspace and application languages",
         "Description[ar]": "يغير لغات التطبيقات ومساحة العمل",

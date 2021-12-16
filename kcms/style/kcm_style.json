@@ -1,5 +1,4 @@
 {
-    "Categories": "Qt;KDE;X-KDE-settings-looknfeel;",
     "KPlugin": {
         "Description": "Configure application style and behavior",
         "Description[ar]": "اضبط سلوك ونمط التطبيق",

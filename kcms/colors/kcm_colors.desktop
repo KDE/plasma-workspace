@@ -46,4 +46,3 @@ Icon=preferences-desktop-color
 Type=Application
 Exec=systemsettings kcm_colors
 NoDisplay=true
-Categories=Qt;KDE;X-KDE-settings-looknfeel;

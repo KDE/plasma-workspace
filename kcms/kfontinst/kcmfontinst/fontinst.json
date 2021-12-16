@@ -1,5 +1,4 @@
 {
-    "Categories": "Qt;KDE;X-KDE-settings-system;",
     "KPlugin": {
         "Description": "Install, manage and preview fonts",
         "Description[ar]": "ثبت وأدر واستعرض الخطوط",

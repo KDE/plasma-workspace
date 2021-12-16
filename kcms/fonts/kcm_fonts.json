@@ -1,5 +1,4 @@
 {
-    "Categories": "Qt;KDE;X-KDE-settings-looknfeel;",
     "KPlugin": {
         "Description": "Configure user interface fonts",
         "Description[ar]": "اضبط خطوط واجهة المستخدم",

@@ -1,5 +1,4 @@
 {
-    "Categories": "Qt;KDE;X-KDE-settings-nightcolor",
     "KPlugin": {
         "Description": "Adjust color temperature at night to reduce eye strain",
         "Description[ar]": "يضبط درجة حرارة اللون ليلاً لتقليل إجهاد العين",
