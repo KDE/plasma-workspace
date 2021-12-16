@@ -159,6 +159,8 @@ RowLayout {
         }
 
         InhibitionHint {
+            Layout.fillWidth: true
+
             visible: root.activeHolds.length > 0 && root.activeProfileData !== undefined
             text: root.activeProfileData !== undefined
                 ? i18np("One application has requested activating %2:",
@@ -171,6 +173,8 @@ RowLayout {
         Repeater {
             model: root.activeHolds
             InhibitionHint {
+                Layout.fillWidth: true
+
                 x: PlasmaCore.Units.smallSpacing
                 iconSource: modelData.Icon
                 text: i18nc("%1 is the name of the application, %2 is the reason provided by it for activating performance mode",
