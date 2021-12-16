@@ -61,8 +61,6 @@ RowLayout {
     }
 
     Column {
-        id: profileColumn
-
         Layout.fillWidth: true
         Layout.alignment: Qt.AlignTop
         spacing: 0
@@ -72,8 +70,6 @@ RowLayout {
         }
 
         PlasmaComponents3.Slider {
-            id: profileSlider
-
             width: parent.width
 
             from: 0
