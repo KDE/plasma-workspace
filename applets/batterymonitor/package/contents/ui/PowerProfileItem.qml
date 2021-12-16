@@ -12,7 +12,7 @@ import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.core 2.1 as PlasmaCore
 
 RowLayout {
-    id: profileItem
+    id: root
 
     property string activeProfile
 
@@ -25,7 +25,7 @@ RowLayout {
     required property var profileHolds
 
     // The canBeInhibited property mean that this profile's availability
-    // depends on profileItem.inhibited value (and thus on the
+    // depends on root.inhibited value (and thus on the
     // inhibitionReason string).
     readonly property var profileData: [
         {
@@ -76,20 +76,20 @@ RowLayout {
             from: 0
             to: 2
             stepSize: 1
-            value: profileItem.activeProfileIndex
+            value: root.activeProfileIndex
             snapMode: PlasmaComponents3.Slider.SnapAlways
             onMoved: {
-                const { canBeInhibited, profile } = profileItem.profileData[value];
-                if (!(canBeInhibited && profileItem.inhibited)) {
+                const { canBeInhibited, profile } = root.profileData[value];
+                if (!(canBeInhibited && root.inhibited)) {
                     activateProfileRequested(profile);
                 } else {
-                    value = Qt.binding(() => profileItem.activeProfileIndex);
+                    value = Qt.binding(() => root.activeProfileIndex);
                 }
             }
             // fake having a disabled second half
             Rectangle {
                 z: -1
-                visible: profileItem.inhibited
+                visible: root.inhibited
                 color: PlasmaCore.Theme.backgroundColor
                 anchors.left: parent.horizontalCenter
                 anchors.leftMargin: 1
@@ -103,17 +103,17 @@ RowLayout {
             width: parent.width
             spacing: 0
             Repeater {
-                model: profileItem.profileData
+                model: root.profileData
                 PlasmaComponents3.Label {
                     // At the time of writing, QtQuick/Positioner QML Type does not support Layouts
                     readonly property bool isFirstItem: index === 0
-                    readonly property bool isLastItem: index === profileItem.profileData.length - 1
+                    readonly property bool isLastItem: index === root.profileData.length - 1
 
                     horizontalAlignment: isFirstItem ? Text.AlignLeft : (isLastItem ? Text.AlignRight : Text.AlignHCenter)
                     Layout.fillWidth: true
                     Layout.preferredWidth: 50 // Common width for better alignment
                     // Disable label for inhibited items to reinforce unavailability
-                    enabled: !(profileItem.profileData[index].canBeInhibited && profileItem.inhibited)
+                    enabled: !(root.profileData[index].canBeInhibited && root.inhibited)
 
                     text: modelData.label
                 }
@@ -123,10 +123,10 @@ RowLayout {
         // NOTE Only one of these will be visible at a time since the daemon will only set one depending
         // on its version
         InhibitionHint {
-            visible: profileItem.inhibited
+            visible: root.inhibited
             width: parent.width
             iconSource: "dialog-information"
-            text: switch(profileItem.inhibitionReason) {
+            text: switch(root.inhibitionReason) {
                 case "lap-detected":
                     return i18n("Performance mode has been disabled to reduce heat generation because the computer has detected that it may be sitting on your lap.")
                 case "high-operating-temperature":
@@ -136,10 +136,10 @@ RowLayout {
             }
         }
         InhibitionHint {
-            visible: profileItem.activeProfile === "performance" && profileItem.degradationReason !== ""
+            visible: root.activeProfile === "performance" && root.degradationReason !== ""
             width: parent.width
             iconSource: "dialog-information"
-            text: switch(profileItem.degradationReason) {
+            text: switch(root.degradationReason) {
                 case "lap-detected":
                     return i18n("Performance may be lowered to reduce heat generation because the computer has detected that it may be sitting on your lap.")
                 case "high-operating-temperature":
@@ -150,16 +150,16 @@ RowLayout {
         }
 
         InhibitionHint {
-            visible: profileItem.activeHolds.length > 0 && profileItem.activeProfileData !== undefined
-            text: profileItem.activeProfileData !== undefined
+            visible: root.activeHolds.length > 0 && root.activeProfileData !== undefined
+            text: root.activeProfileData !== undefined
                 ? i18np("One application has requested activating %2:",
                         "%1 applications have requested activating %2:",
-                        profileItem.activeHolds.length,
-                        i18n(profileItem.activeProfileData.label))
+                        root.activeHolds.length,
+                        i18n(root.activeProfileData.label))
                 : ""
         }
         Repeater {
-            model: profileItem.activeHolds
+            model: root.activeHolds
             InhibitionHint {
                 x: PlasmaCore.Units.smallSpacing
                 iconSource: modelData.Icon
