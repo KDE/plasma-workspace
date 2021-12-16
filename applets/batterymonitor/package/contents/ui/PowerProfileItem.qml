@@ -107,16 +107,20 @@ RowLayout {
 
             spacing: 0
             Repeater {
+                id: repeater
                 model: root.profileData
                 PlasmaComponents3.Label {
-                    // At the time of writing, QtQuick/Positioner QML Type does not support Layouts
-                    readonly property bool isFirstItem: index === 0
-                    readonly property bool isLastItem: index === root.profileData.length - 1
-
                     // Same preferredWidth combined with fillWidth results in equal sizes for all
                     Layout.fillWidth: true
                     Layout.preferredWidth: 1
-                    horizontalAlignment: isFirstItem ? Text.AlignLeft : (isLastItem ? Text.AlignRight : Text.AlignHCenter)
+                    horizontalAlignment: switch (index) {
+                        case 0:
+                            return Text.AlignLeft; // first
+                        case repeater.count - 1:
+                            return Text.AlignRight; // last
+                        default:
+                            return Text.AlignHCenter; // middle
+                    }
 
                     // Disable label for inhibited items to reinforce unavailability
                     enabled: !(root.profileData[index].canBeInhibited && root.inhibited)
