@@ -59,7 +59,7 @@ RowLayout {
 
         Layout.alignment: Qt.AlignTop
         Layout.preferredWidth: PlasmaCore.Units.iconSizes.medium
-        Layout.preferredHeight: Layout.preferredWidth
+        Layout.preferredHeight: PlasmaCore.Units.iconSizes.medium
 
         batteryType: root.battery.Type
         percent: root.battery.Percent

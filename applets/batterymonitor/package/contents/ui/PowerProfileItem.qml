@@ -57,7 +57,7 @@ RowLayout {
         source: "speedometer"
         Layout.alignment: Qt.AlignTop
         Layout.preferredWidth: PlasmaCore.Units.iconSizes.medium
-        Layout.preferredHeight: width
+        Layout.preferredHeight: PlasmaCore.Units.iconSizes.medium
     }
 
     ColumnLayout {
