@@ -36,13 +36,11 @@ RowLayout {
     }
 
     Column {
-        id: brightnessColumn
         Layout.fillWidth: true
         Layout.alignment: Qt.AlignTop
         spacing: 0
 
         RowLayout {
-            id: infoRow
             width: parent.width
             spacing: PlasmaCore.Units.smallSpacing
 
