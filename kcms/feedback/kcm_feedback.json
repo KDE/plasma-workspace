@@ -23,7 +23,7 @@
             "handset",
             "desktop"
         ],
-        "Icon": "preferences-desktop-locale",
+        "Icon": "preferences-desktop-feedback",
         "Name": "User Feedback",
         "Name[ar]": "مشاركة بياناتك",
         "Name[ast]": "Comentarios d'usuariu",

@@ -1,5 +1,5 @@
 [Desktop Entry]
-Icon=preferences-desktop-locale
+Icon=preferences-desktop-feedback
 Type=Application
 Exec=systemsettings kcm_feedback
 NoDisplay=true
