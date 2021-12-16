@@ -59,8 +59,10 @@ RowLayout {
         Layout.preferredWidth: PlasmaCore.Units.iconSizes.medium
         Layout.preferredHeight: width
     }
+
     Column {
         id: profileColumn
+
         Layout.fillWidth: true
         Layout.alignment: Qt.AlignTop
         spacing: 0
@@ -71,6 +73,7 @@ RowLayout {
 
         PlasmaComponents3.Slider {
             id: profileSlider
+
             width: parent.width
 
             from: 0
@@ -86,6 +89,7 @@ RowLayout {
                     value = Qt.binding(() => root.activeProfileIndex);
                 }
             }
+
             // fake having a disabled second half
             Rectangle {
                 z: -1
@@ -99,6 +103,7 @@ RowLayout {
                 opacity: 0.4
             }
         }
+
         RowLayout {
             width: parent.width
             spacing: 0
@@ -135,6 +140,7 @@ RowLayout {
                     return i18n("Performance mode is unavailable.")
             }
         }
+
         InhibitionHint {
             visible: root.activeProfile === "performance" && root.degradationReason !== ""
             width: parent.width
@@ -158,6 +164,7 @@ RowLayout {
                         i18n(root.activeProfileData.label))
                 : ""
         }
+
         Repeater {
             model: root.activeHolds
             InhibitionHint {
