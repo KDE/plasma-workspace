@@ -95,11 +95,13 @@ RowLayout {
                 z: -1
                 visible: root.inhibited
                 color: PlasmaCore.Theme.backgroundColor
-                anchors.left: parent.horizontalCenter
-                anchors.leftMargin: 1
-                anchors.right: parent.right
-                anchors.top: parent.background.top
-                height: parent.background.height
+                anchors {
+                    top: parent.background.top
+                    left: parent.horizontalCenter
+                    leftMargin: 1
+                    right: parent.right
+                    bottom: parent.background.bottom
+                }
                 opacity: 0.4
             }
         }
