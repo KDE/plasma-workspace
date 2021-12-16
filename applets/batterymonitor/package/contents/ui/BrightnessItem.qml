@@ -21,6 +21,9 @@ RowLayout {
     property alias maximumValue: brightnessSlider.to
     property alias stepSize: brightnessSlider.stepSize
     property alias showPercentage: brightnessPercent.visible
+
+    readonly property real percentage: Math.round(100 * value / maximumValue)
+
     signal moved()
 
     spacing: PlasmaCore.Units.gridUnit
@@ -43,10 +46,6 @@ RowLayout {
             width: parent.width
             spacing: PlasmaCore.Units.smallSpacing
 
-            function percentage(from, to, value) {
-                return Math.round(100 * (value - from) / (to - from));
-            }
-
             PlasmaComponents3.Label {
                 id: brightnessLabel
                 Layout.fillWidth: true
@@ -55,7 +54,7 @@ RowLayout {
             PlasmaComponents3.Label {
                 id: brightnessPercent
                 horizontalAlignment: Text.AlignRight
-                text: i18nc("Placeholder is brightness percentage", "%1%", infoRow.percentage(0, brightnessSlider.to, brightnessSlider.value))
+                text: i18nc("Placeholder is brightness percentage", "%1%", root.percentage)
             }
         }
 
