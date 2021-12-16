@@ -158,6 +158,7 @@ PlasmaComponents3.Page {
                             }
                         }
                         battery: model
+                        remainingTime: dialog.remainingTime
                         matchHeightOfSlider: brightnessSlider.slider
                     }
                 }

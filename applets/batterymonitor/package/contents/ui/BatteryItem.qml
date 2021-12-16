@@ -43,6 +43,8 @@ RowLayout {
 
     readonly property bool isBroken: root.battery.Capacity > 0 && root.battery.Capacity < 50
 
+    property int remainingTime: 0
+
     // Existing instance of a slider to use as a reference to calculate extra
     // margins for a progress bar, so that the row of labels on top of it
     // could visually look as if it were on the same distance from the bar as
@@ -151,7 +153,7 @@ RowLayout {
             }
 
             readonly property bool remainingTimeRowVisible: root.battery !== null
-                && batterymonitor.remainingTime > 0
+                && root.remainingTime > 0
                 && root.battery["Is Power Supply"]
                 && ["Discharging", "Charging"].includes(root.battery.State)
 
@@ -163,7 +165,7 @@ RowLayout {
             }
 
             RightLabel {
-                text: KCoreAddons.Format.formatDuration(batterymonitor.remainingTime, KCoreAddons.FormatTypes.HideSeconds)
+                text: KCoreAddons.Format.formatDuration(root.remainingTime, KCoreAddons.FormatTypes.HideSeconds)
                 visible: details.remainingTimeRowVisible
             }
 
