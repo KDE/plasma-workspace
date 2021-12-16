@@ -60,7 +60,7 @@ RowLayout {
         Layout.preferredHeight: width
     }
 
-    Column {
+    ColumnLayout {
         Layout.fillWidth: true
         Layout.alignment: Qt.AlignTop
         spacing: 0
@@ -70,7 +70,7 @@ RowLayout {
         }
 
         PlasmaComponents3.Slider {
-            width: parent.width
+            Layout.fillWidth: true
 
             from: 0
             to: 2
@@ -103,7 +103,8 @@ RowLayout {
         }
 
         RowLayout {
-            width: parent.width
+            Layout.fillWidth: true
+
             spacing: 0
             Repeater {
                 model: root.profileData
@@ -112,9 +113,11 @@ RowLayout {
                     readonly property bool isFirstItem: index === 0
                     readonly property bool isLastItem: index === root.profileData.length - 1
 
-                    horizontalAlignment: isFirstItem ? Text.AlignLeft : (isLastItem ? Text.AlignRight : Text.AlignHCenter)
+                    // Same preferredWidth combined with fillWidth results in equal sizes for all
                     Layout.fillWidth: true
-                    Layout.preferredWidth: 50 // Common width for better alignment
+                    Layout.preferredWidth: 1
+                    horizontalAlignment: isFirstItem ? Text.AlignLeft : (isLastItem ? Text.AlignRight : Text.AlignHCenter)
+
                     // Disable label for inhibited items to reinforce unavailability
                     enabled: !(root.profileData[index].canBeInhibited && root.inhibited)
 
@@ -126,8 +129,9 @@ RowLayout {
         // NOTE Only one of these will be visible at a time since the daemon will only set one depending
         // on its version
         InhibitionHint {
+            Layout.fillWidth: true
+
             visible: root.inhibited
-            width: parent.width
             iconSource: "dialog-information"
             text: switch(root.inhibitionReason) {
                 case "lap-detected":
@@ -140,8 +144,9 @@ RowLayout {
         }
 
         InhibitionHint {
+            Layout.fillWidth: true
+
             visible: root.activeProfile === "performance" && root.degradationReason !== ""
-            width: parent.width
             iconSource: "dialog-information"
             text: switch(root.degradationReason) {
                 case "lap-detected":
