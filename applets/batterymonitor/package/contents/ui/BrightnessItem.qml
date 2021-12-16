@@ -35,13 +35,13 @@ RowLayout {
         Layout.preferredHeight: width
     }
 
-    Column {
+    ColumnLayout {
         Layout.fillWidth: true
         Layout.alignment: Qt.AlignTop
         spacing: 0
 
         RowLayout {
-            width: parent.width
+            Layout.fillWidth: true
             spacing: PlasmaCore.Units.smallSpacing
 
             PlasmaComponents3.Label {
@@ -51,14 +51,14 @@ RowLayout {
 
             PlasmaComponents3.Label {
                 id: percent
-                horizontalAlignment: Text.AlignRight
+                Layout.alignment: Qt.AlignRight
                 text: i18nc("Placeholder is brightness percentage", "%1%", root.percentage)
             }
         }
 
         PlasmaComponents3.Slider {
             id: control
-            width: parent.width
+            Layout.fillWidth: true
             // Don't allow the slider to turn off the screen
             // Please see https://git.reviewboard.kde.org/r/122505/ for more information
             from: to > 100 ? 1 : 0
