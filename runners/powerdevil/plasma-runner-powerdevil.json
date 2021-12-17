@@ -102,7 +102,6 @@
         "Name[vi]": "Nguồn điện",
         "Name[x-test]": "xxPowerxx",
         "Name[zh_CN]": "电源",
-        "Name[zh_TW]": "電源",
-        "Version": "1.0"
+        "Name[zh_TW]": "電源"
     }
 }

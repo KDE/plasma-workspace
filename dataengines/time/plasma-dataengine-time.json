@@ -132,7 +132,6 @@
         "Name[x-test]": "xxDate and Timexx",
         "Name[zh_CN]": "日期和时间",
         "Name[zh_TW]": "日期與時間",
-        "Version": "1.0",
         "Website": "https://www.kde.org/plasma-desktop"
     }
 }

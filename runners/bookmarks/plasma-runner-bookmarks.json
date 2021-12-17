@@ -70,8 +70,7 @@
         "Name[uk]": "Закладки",
         "Name[vi]": "Dấu nhớ",
         "Name[x-test]": "xxBookmarksxx",
-        "Name[zh_CN]": "书签",
-        "Version": "1.1"
+        "Name[zh_CN]": "书签"
     },
     "X-Plasma-Runner-Unique-Results": true,
     "X-Plasma-Runner-Weak-Results": true

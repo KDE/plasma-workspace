@@ -119,7 +119,6 @@
         "Name[x-test]": "xxGeolocationxx",
         "Name[zh_CN]": "地理位置",
         "Name[zh_TW]": "Geolocation",
-        "Version": "0.1",
         "Website": "https://kde.org/plasma-desktop"
     }
 }

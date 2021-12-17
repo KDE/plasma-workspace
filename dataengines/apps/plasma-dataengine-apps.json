@@ -121,7 +121,6 @@
         "Name[x-test]": "xxApplication Informationxx",
         "Name[zh_CN]": "应用程序信息",
         "Name[zh_TW]": "應用程式資訊",
-        "Version": "0.1",
         "Website": "https://www.kde.org/plasma-desktop"
     }
 }

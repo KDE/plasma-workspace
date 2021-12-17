@@ -133,7 +133,6 @@
         "Name[wa]": "Carculete",
         "Name[x-test]": "xxCalculatorxx",
         "Name[zh_CN]": "计算器",
-        "Name[zh_TW]": "計算機",
-        "Version": "1.0"
+        "Name[zh_TW]": "計算機"
     }
 }

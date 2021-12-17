@@ -70,8 +70,7 @@
         "Name[uk]": "Ключові слова пошуку в інтернеті",
         "Name[vi]": "Từ khoá tìm kiếm web",
         "Name[x-test]": "xxWeb Search Keywordsxx",
-        "Name[zh_CN]": "网络搜索关键词",
-        "Version": "1.0"
+        "Name[zh_CN]": "网络搜索关键词"
     },
     "X-KDE-ConfigModule": "kcm_webshortcuts"
 }

@@ -104,7 +104,6 @@
         "Name[x-test]": "xxPackageKitxx",
         "Name[zh_CN]": "PackageKit",
         "Name[zh_TW]": "PackageKit",
-        "Version": "0.1",
         "Website": "https://www.kde.org/plasma-desktop"
     }
 }

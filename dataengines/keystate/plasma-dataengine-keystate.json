@@ -124,7 +124,6 @@
         "Name[x-test]": "xxKeyboard and Mouse Statexx",
         "Name[zh_CN]": "键盘和鼠标状态",
         "Name[zh_TW]": "鍵盤與滑鼠狀態",
-        "Version": "1.0",
         "Website": "https://www.kde.org/plasma-desktop"
     }
 }

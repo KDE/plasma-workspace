@@ -116,7 +116,6 @@
         "Name[x-test]": "xxActivities Enginexx",
         "Name[zh_CN]": "活动引擎",
         "Name[zh_TW]": "活動引擎",
-        "Version": "0.1",
         "Website": "https://www.kde.org/plasma-desktop"
     },
     "X-Plasma-EngineName": "activities"
