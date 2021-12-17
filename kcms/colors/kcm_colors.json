@@ -96,7 +96,6 @@
         "Name[vi]": "Màu",
         "Name[x-test]": "xxColorsxx",
         "Name[zh_CN]": "颜色",
-        "Version": "",
         "Website": "https://www.kde.org/plasma-desktop"
     },
     "X-DocPath": "kcontrol/colors/index.html",

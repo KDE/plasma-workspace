@@ -116,7 +116,6 @@
         "Name[x-test]": "xxDevice Notificationsxx",
         "Name[zh_CN]": "设备通知",
         "Name[zh_TW]": "裝置通知",
-        "Version": "",
         "Website": "https://kde.org/plasma-desktop"
     }
 }
