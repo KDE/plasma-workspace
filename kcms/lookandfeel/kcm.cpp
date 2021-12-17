@@ -112,6 +112,10 @@ KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data, con
         }
     });
     connect(m_lnf, &LookAndFeelManager::cursorsChanged, this, &KCMLookandFeel::cursorsChanged);
+    connect(m_lnf, &LookAndFeelManager::fontsChanged, this, [] {
+        QDBusMessage message = QDBusMessage::createSignal("/KDEPlatformTheme", "org.kde.KDEPlatformTheme", "refreshFonts");
+        QDBusConnection::sessionBus().send(message);
+    });
 }
 
 KCMLookandFeel::~KCMLookandFeel()

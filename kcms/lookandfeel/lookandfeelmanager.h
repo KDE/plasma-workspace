@@ -58,6 +58,14 @@ public:
     void setWindowPlacement(const QString &value);
     void setShellPackage(const QString &name);
 
+    void setGeneralFont(const QString &font);
+    void setFixedFont(const QString &font);
+    void setSmallFont(const QString &font);
+    void setSmallestReadableFont(const QString &font);
+    void setToolbarFont(const QString &font);
+    void setMenuFont(const QString &font);
+    void setWindowTitleFont(const QString &font);
+
     LookAndFeelSettings *settings() const;
 
     void setApplyWidgetStyle(bool apply)
@@ -72,6 +80,7 @@ Q_SIGNALS:
     void colorsChanged();
     void styleChanged(const QString &newStyle);
     void cursorsChanged(const QString &newStyle);
+    void fontsChanged();
     void refreshServices(const QStringList &toStop, const KService::List &toStart);
 
 private:
@@ -107,6 +116,7 @@ private:
     bool m_applyWindowDecoration : 1;
 
     bool m_plasmashellChanged : 1;
+    bool m_fontsChanged : 1;
 };
 
 #endif // LOOKANDFEELMANAGER_H

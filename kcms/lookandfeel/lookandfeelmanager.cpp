@@ -40,6 +40,7 @@ LookAndFeelManager::LookAndFeelManager(QObject *parent)
     , m_applyLatteLayout(false)
     , m_applyWindowDecoration(true)
     , m_plasmashellChanged(false)
+    , m_fontsChanged(false)
 {
     m_applyLatteLayout = (KService::serviceByDesktopName("org.kde.latte-dock") != nullptr);
 }
@@ -199,6 +200,66 @@ void LookAndFeelManager::setPlasmaTheme(const QString &theme)
     }
 
     writeNewDefaults(QStringLiteral("plasmarc"), QStringLiteral("Theme"), QStringLiteral("name"), theme);
+}
+
+void LookAndFeelManager::setGeneralFont(const QString &font)
+{
+    if (font.isEmpty()) {
+        return;
+    }
+
+    writeNewDefaults(QStringLiteral("kdeglobals"), QStringLiteral("General"), QStringLiteral("font"), font, KConfig::Notify);
+    m_fontsChanged = true;
+}
+
+void LookAndFeelManager::setFixedFont(const QString &font)
+{
+    if (font.isEmpty()) {
+        return;
+    }
+
+    writeNewDefaults(QStringLiteral("kdeglobals"), QStringLiteral("General"), QStringLiteral("fixed"), font, KConfig::Notify);
+    m_fontsChanged = true;
+}
+
+void LookAndFeelManager::setSmallestReadableFont(const QString &font)
+{
+    if (font.isEmpty()) {
+        return;
+    }
+
+    writeNewDefaults(QStringLiteral("kdeglobals"), QStringLiteral("General"), QStringLiteral("smallestReadableFont"), font, KConfig::Notify);
+    m_fontsChanged = true;
+}
+
+void LookAndFeelManager::setToolbarFont(const QString &font)
+{
+    if (font.isEmpty()) {
+        return;
+    }
+
+    writeNewDefaults(QStringLiteral("kdeglobals"), QStringLiteral("General"), QStringLiteral("toolBarFont"), font, KConfig::Notify);
+    m_fontsChanged = true;
+}
+
+void LookAndFeelManager::setMenuFont(const QString &font)
+{
+    if (font.isEmpty()) {
+        return;
+    }
+
+    writeNewDefaults(QStringLiteral("kdeglobals"), QStringLiteral("General"), QStringLiteral("menuFont"), font, KConfig::Notify);
+    m_fontsChanged = true;
+}
+
+void LookAndFeelManager::setWindowTitleFont(const QString &font)
+{
+    if (font.isEmpty()) {
+        return;
+    }
+
+    writeNewDefaults(QStringLiteral("kdeglobals"), QStringLiteral("WM"), QStringLiteral("activeFont"), font, KConfig::Notify);
+    m_fontsChanged = true;
 }
 
 void LookAndFeelManager::setResetDefaultLayout(bool reset)
@@ -397,6 +458,21 @@ void LookAndFeelManager::save(const KPackage::Package &package, const KPackage::
             setWindowDecoration(group.readEntry("library", QStringLiteral("org.kde.kwin.aurorae")),
                                 group.readEntry("theme", QStringLiteral("kwin4_decoration_qml_plastik")));
 #endif
+        }
+
+        group = KConfigGroup(conf, "kdeglobals");
+        group = KConfigGroup(&group, "General");
+        setGeneralFont(group.readEntry("font", QString()));
+        setFixedFont(group.readEntry("fixed", QString()));
+        setSmallestReadableFont(group.readEntry("smallestReadableFont", QString()));
+        setToolbarFont(group.readEntry("toolBarFont", QString()));
+        setMenuFont(group.readEntry("menuFont", QString()));
+        group = KConfigGroup(conf, "kdeglobals");
+        group = KConfigGroup(&group, "WM");
+        setWindowTitleFont(group.readEntry("activeFont"));
+        if (m_fontsChanged) {
+            Q_EMIT fontsChanged();
+            m_fontsChanged = false;
         }
 
         setSplashScreen(m_data->settings()->lookAndFeelPackage());
