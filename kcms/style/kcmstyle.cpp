@@ -225,9 +225,6 @@ void KCMStyle::configure(const QString &title, const QString &styleName, QQuickI
 
         // When user edited a style, assume they want to use it, too
         styleSettings()->setWidgetStyle(styleName);
-
-        // We call setNeedsSave(true) here to make sure we force style re-creation
-        setNeedsSave(true);
     });
 
     m_styleConfigDialog->show();
