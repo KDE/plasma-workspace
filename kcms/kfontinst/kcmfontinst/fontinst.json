@@ -106,6 +106,5 @@
     "X-KDE-OnlyShowOnQtPlatforms": [
         "xcb"
     ],
-    "X-KDE-ParentApp": "kcontrol",
     "X-KDE-System-Settings-Parent-Category": "appearance"
 }

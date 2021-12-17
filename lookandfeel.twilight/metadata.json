@@ -85,6 +85,5 @@
         "Version": "2.0",
         "Website": "https://www.kde.org"
     },
-    "X-KDE-ParentApp": "",
     "X-Plasma-MainScript": "defaults"
 }

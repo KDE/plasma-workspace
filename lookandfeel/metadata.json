@@ -154,6 +154,5 @@
     "Keywords[x-test]": "xxDesktopxx;xxWorkspacexx;xxAppearancexx;xxLook and Feelxx;xxLogoutxx;xxLockxx;xxSuspendxx;xxShutdownxx;xxHibernatexx;",
     "Keywords[zh_CN]": "桌面;工作空间;外观;观感;注销;锁定;待机;关机;休眠;",
     "Keywords[zh_TW]": "Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;",
-    "X-KDE-ParentApp": "",
     "X-Plasma-MainScript": "defaults"
 }

@@ -103,7 +103,6 @@
     "X-KDE-Keywords[vi]": "language,writing,text,idioms,dialect,words,region,regional,country,internationalization,locale,ngôn ngữ,viết,chữ,thành ngữ,phương ngôn,từ,vùng,theo vùng,nước,quốc tế hoá",
     "X-KDE-Keywords[x-test]": "xxlanguagexx,xxwritingxx,xxtextxx,xxidiomsxx,xxdialectxx,xxwordsxx,xxregionxx,xxregionalxx,xxcountryxx,xxinternationalizationxx,xxlocalexx",
     "X-KDE-Keywords[zh_CN]": "language,writing,text,idioms,dialect,words,region,regional,country,internationalization,locale,语言,书写,文字,文本,成语,惯用语,俗语,习语,方言,语言风格,字,词,单词,区域,区域设置,国家,地区,国际化,本地化,当地",
-    "X-KDE-ParentApp": "kcontrol",
     "X-KDE-System-Settings-Parent-Category": "regionalsettings",
     "X-KDE-Weight": 40
 }
