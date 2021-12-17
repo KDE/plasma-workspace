@@ -67,6 +67,7 @@ void DesktopView::showEvent(QShowEvent *e)
 
 void DesktopView::setScreenToFollow(QScreen *screen)
 {
+    Q_ASSERT(screen);
     if (screen == m_screenToFollow) {
         return;
     }

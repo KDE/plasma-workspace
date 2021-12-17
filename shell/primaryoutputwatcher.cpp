@@ -66,8 +66,9 @@ PrimaryOutputWatcher::PrimaryOutputWatcher(QObject *parent)
 void PrimaryOutputWatcher::setPrimaryOutputName(const QString &newOutputName)
 {
     if (newOutputName != m_primaryOutputName) {
+        const QString oldOutputName = m_primaryOutputName;
         m_primaryOutputName = newOutputName;
-        Q_EMIT primaryOutputNameChanged(newOutputName);
+        Q_EMIT primaryOutputNameChanged(oldOutputName, newOutputName);
     }
 }
 

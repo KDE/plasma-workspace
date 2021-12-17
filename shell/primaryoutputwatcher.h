@@ -27,9 +27,10 @@ class PrimaryOutputWatcher : public QObject, public QAbstractNativeEventFilter
 public:
     PrimaryOutputWatcher(QObject *parent);
     QScreen *primaryScreen() const;
+    QScreen *screenForName(const QString &outputName) const;
 
 Q_SIGNALS:
-    void primaryOutputNameChanged(const QString &outputName);
+    void primaryOutputNameChanged(const QString &oldOutputName, const QString &newOutputName);
 
 protected:
     friend class WaylandOutputDevice;
@@ -38,7 +39,6 @@ protected:
 private:
     void setupRegistry();
     bool nativeEventFilter(const QByteArray &eventType, void *message, long *result) override;
-    QScreen *screenForName(const QString &outputName) const;
 
     // All
     QString m_primaryOutputName;

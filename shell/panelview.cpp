@@ -549,6 +549,13 @@ void PanelView::resizePanel()
         return;
     }
 
+    // On Wayland when a screen is disconnected and the panel is migrating to a newscreen
+    // it can happen a moment where the qscreen gets destroyed before it gets reassigned
+    // to the new screen
+    if (!m_screenToFollow) {
+        return;
+    }
+
     QSize targetSize;
     QSize targetMinSize;
     QSize targetMaxSize;
@@ -849,6 +856,7 @@ void PanelView::setScreenToFollow(QScreen *screen)
     });*/
 
     m_screenToFollow = screen;
+
     setScreen(screen);
     adaptToScreen();
 }

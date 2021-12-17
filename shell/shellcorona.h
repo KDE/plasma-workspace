@@ -202,7 +202,7 @@ private Q_SLOTS:
     void populateAddPanelsMenu();
 
     void addOutput(QScreen *screen);
-    void primaryOutputNameChanged();
+    void primaryOutputNameChanged(const QString &oldOutputName, const QString &newOutputName);
 
     void panelContainmentDestroyed(QObject *cont);
     void handleScreenRemoved(QScreen *screen);
@@ -212,6 +212,8 @@ private Q_SLOTS:
 private:
     void updateStruts();
     void configurationChanged(const QString &path);
+    bool noRealOutputsConnected() const;
+    bool isOutputFake(QScreen *screen) const;
     bool isOutputRedundant(QScreen *screen) const;
     void reconsiderOutputs();
     QList<PanelView *> panelsForScreen(QScreen *screen) const;
