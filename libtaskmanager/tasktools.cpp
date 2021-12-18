@@ -770,6 +770,21 @@ bool canLauchNewInstance(const AppData &appData)
         return false;
     }
 
+    QString desktopEntry = appData.id;
+
+    // Remove suffix if necessary
+    if (desktopEntry.endsWith(QLatin1String(".desktop"))) {
+        desktopEntry.chop(8);
+    }
+
+    const KService::Ptr service = KService::serviceByDesktopName(desktopEntry);
+
+    if (service) {
+        if (service->noDisplay()) {
+            return false;
+        }
+    }
+
     return true;
 }
 }
