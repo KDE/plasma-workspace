@@ -249,6 +249,8 @@ QVariant XStartupTasksModel::data(const QModelIndex &index, int role) const
         return QVariantList() << QVariant(data.desktop());
     } else if (role == IsOnAllVirtualDesktops) {
         return (data.desktop() == 0);
+    } else if (role == CanLaunchNewInstance) {
+        return false;
     }
 
     return QVariant();

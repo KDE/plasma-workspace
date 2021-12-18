@@ -111,6 +111,7 @@ void XWindowTasksModel::Private::init()
                                            AbstractTasksModel::GenericName,
                                            AbstractTasksModel::LauncherUrl,
                                            AbstractTasksModel::LauncherUrlWithoutIcon,
+                                           AbstractTasksModel::CanLaunchNewInstance,
                                            AbstractTasksModel::SkipTaskbar});
     };
 
@@ -316,7 +317,7 @@ void XWindowTasksModel::Private::windowChanged(WId window, NET::Properties prope
     if (properties & (NET::WMPid) || properties2 & (NET::WM2DesktopFileName | NET::WM2WindowClass)) {
         wipeInfoCache = true;
         wipeAppDataCache = true;
-        changedRoles << Qt::DecorationRole << AppId << AppName << GenericName << LauncherUrl << AppPid << SkipTaskbar;
+        changedRoles << Qt::DecorationRole << AppId << AppName << GenericName << LauncherUrl << AppPid << SkipTaskbar << CanLaunchNewInstance;
     }
 
     if (properties & (NET::WMName | NET::WMVisibleName)) {
@@ -681,6 +682,8 @@ QVariant XWindowTasksModel::data(const QModelIndex &index, int role) const
         return d->appMenuObjectPath(window);
     } else if (role == ApplicationMenuServiceName) {
         return d->appMenuServiceName(window);
+    } else if (role == CanLaunchNewInstance) {
+        return canLauchNewInstance(d->appData(window));
     }
 
     return QVariant();

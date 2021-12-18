@@ -84,6 +84,7 @@ public:
                                         May be empty. @since 5.19 */
         IsHidden, /**< Task (i.e window) is hidden on screen. A minimzed
                        window is not necessarily hidden. */
+        CanLaunchNewInstance, /**< A new instance of the task can be launched. @since 5.24 */
     };
     Q_ENUM(AdditionalRoles)
 

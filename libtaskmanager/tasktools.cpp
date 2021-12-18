@@ -764,4 +764,12 @@ void runApp(const AppData &appData, const QList<QUrl> &urls)
     }
 }
 
+bool canLauchNewInstance(const AppData &appData)
+{
+    if (appData.url.isEmpty()) {
+        return false;
+    }
+
+    return true;
+}
 }

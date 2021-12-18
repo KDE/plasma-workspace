@@ -172,4 +172,6 @@ TASKMANAGER_EXPORT QRect screenGeometry(const QPoint &pos);
  * @param urls A list of URLs for the application to open.
  */
 TASKMANAGER_EXPORT void runApp(const AppData &appData, const QList<QUrl> &urls = QList<QUrl>());
+
+bool canLauchNewInstance(const AppData &appData);
 }

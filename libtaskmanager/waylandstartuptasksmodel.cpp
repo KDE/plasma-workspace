@@ -194,6 +194,8 @@ QVariant WaylandStartupTasksModel::data(const QModelIndex &index, int role) cons
         return data.launcherUrl;
     } else if (role == IsStartup) {
         return true;
+    } else if (role == CanLaunchNewInstance) {
+        return false;
     }
 
     return QVariant();
