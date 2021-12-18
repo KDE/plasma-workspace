@@ -128,7 +128,7 @@ void Multiplexer::removePlayer(const QString &name)
     }
 
     // When there is no player opened
-    if (m_proxies.empty()) {
+    if (m_paused.empty() && m_stopped.empty() && m_playing.empty()) {
         Q_EMIT playerListEmptied();
     }
 }
