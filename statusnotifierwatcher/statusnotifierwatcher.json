@@ -10,6 +10,7 @@
         "Description[it]": "Gestisce i servizi che forniscono le interfacce utente al notificatore di stato",
         "Description[lt]": "Valdo tarnybas, teikiančias būsenos pranešėjo naudotojo sąsajas",
         "Description[nl]": "Beheert services die statusmeldingen leveren aan gebruikersinterfaces",
+        "Description[nn]": "Handterer tenester som tilbyr brukargrensesnitt for statusvarslingar",
         "Description[pl]": "Zarządzanie usługami, które dostarczają powiadomień o stanie poprzez interfejs użytkownika",
         "Description[sl]": "Upravlja s storitvami, ki ponujajo uporabniške vmesnike obvestilnika o stanju",
         "Description[sv]": "Hanterar tjänster som tillhandahåller användargränssnitt för statusunderrättelser",

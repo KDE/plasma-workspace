@@ -10,6 +10,7 @@
         "Description[it]": "Fornisce il fuso orario di sistema alle applicazioni",
         "Description[lt]": "Pateikia programoms sistemos laiko juostą",
         "Description[nl]": "Levert de tijdzone van het systeem aan applicaties",
+        "Description[nn]": "Gjev programma tilgang til systemtidssone",
         "Description[pl]": "Udostępnia systemową strefę czasową programom",
         "Description[sl]": "Programom nudi dostop do sistemskega časovnega pasu",
         "Description[sv]": "Tillhandahåller systemets tidszon till program",
