@@ -30,6 +30,8 @@ private Q_SLOTS:
     void shouldFindApp_data();
     void shouldFindDefaultApp();
     void shouldCompareLauncherUrls();
+    void testWindowUrlFromMetadata();
+    void testWindowUrlFromMetadata_data();
 
 private:
     void createIcon();
@@ -46,10 +48,20 @@ void TaskToolsTest::initTestCase()
     // Make sure we start with a clean dir
     QVERIFY(QDir(dataDir).removeRecursively());
     QVERIFY(QDir(dataDir).mkpath(QLatin1String("applications")));
+    QVERIFY(QDir(dataDir).mkpath(QLatin1String("kservices5")));
 
     // Add our applications
     QFile::copy(QFINDTESTDATA("data/applications/org.kde.dolphin.desktop"), dataDir + QLatin1String("/applications/org.kde.dolphin.desktop"));
     QFile::copy(QFINDTESTDATA("data/applications/org.kde.konversation.desktop"), dataDir + QLatin1String("/applications/org.kde.konversation.desktop"));
+    QFile::copy(QFINDTESTDATA("data/applications/im.riot.Riot.desktop"), dataDir + QLatin1String("/applications/im.riot.Riot.desktop"));
+    QFile::copy(QFINDTESTDATA("data/applications/org.telegram.desktop.desktop"), dataDir + QLatin1String("/applications/org.telegram.desktop.desktop"));
+    QFile::copy(QFINDTESTDATA("data/applications/com.spotify.Client.desktop"), dataDir + QLatin1String("/applications/com.spotify.Client.desktop"));
+    QFile::copy(QFINDTESTDATA("data/applications/GammaRay.desktop"), dataDir + QLatin1String("/applications/GammaRay.desktop"));
+    QFile::copy(QFINDTESTDATA("data/applications/org.kde.gwenview_importer.desktop"),
+                dataDir + QLatin1String("/applications/org.kde.gwenview_importer.desktop"));
+    QFile::copy(QFINDTESTDATA("data/applications/kcm_autostart.desktop"), dataDir + QLatin1String("/applications/kcm_autostart.desktop"));
+
+    QFile::copy(QFINDTESTDATA("data/applications/kcm_kdeconnect.desktop"), dataDir + QLatin1String("/kservices5/kcm_kdeconnect.desktop"));
 
     QFile::remove(KSycoca::absoluteFilePath());
     KSycoca::self()->ensureCacheValid();
@@ -128,6 +140,41 @@ void TaskToolsTest::shouldCompareLauncherUrls()
 
     QVERIFY(launcherUrlsMatch(QUrl(a), QUrl(c), IgnoreQueryItems));
     QVERIFY(!launcherUrlsMatch(QUrl(c), QUrl(d), IgnoreQueryItems));
+}
+
+void TaskToolsTest::testWindowUrlFromMetadata()
+{
+    QFETCH(QString, appId);
+    QFETCH(QString, xWindowsWMClassName);
+    QFETCH(QUrl, resultUrl);
+
+    const QUrl actualResult = windowUrlFromMetadata(appId, 0, KSharedConfig::openConfig(QStringLiteral("taskmanagerrulestestrc")), xWindowsWMClassName);
+
+    QCOMPARE(actualResult, resultUrl);
+}
+
+void TaskToolsTest::testWindowUrlFromMetadata_data()
+{
+    QTest::addColumn<QString>("appId");
+    QTest::addColumn<QString>("xWindowsWMClassName");
+    QTest::addColumn<QUrl>("resultUrl");
+
+    QTest::addRow("Dolphin") << QStringLiteral("org.kde.dolphin") << QString() << QUrl(QStringLiteral("applications:org.kde.dolphin.desktop"));
+    QTest::addRow("Element (Flatpak)") << QStringLiteral("Element") << QStringLiteral("element") << QUrl(QStringLiteral("applications:im.riot.Riot.desktop"));
+    QTest::addRow("Telegram (Flatpak)") << QStringLiteral("TelegramDesktop") << QStringLiteral("telegram-desktop")
+                                        << QUrl(QStringLiteral("applications:org.telegram.desktop.desktop"));
+    QTest::addRow("Spotify (Flatpak)") << QStringLiteral("Spotify") << QStringLiteral("spotify")
+                                       << QUrl(QStringLiteral("applications:com.spotify.Client.desktop"));
+    QTest::addRow("GammaRay") << QStringLiteral("GammaRay") << QStringLiteral("gammary-client") << QUrl(QStringLiteral("applications:GammaRay.desktop"));
+    QTest::addRow("Gwenview Importer") << QStringLiteral("org.kde.gwenview_importer") << QStringLiteral("gwenview_importer")
+                                       << QUrl(QStringLiteral("applications:org.kde.gwenview_importer.desktop"));
+    QTest::addRow("kcm_autostart") << QStringLiteral("kcm_autostart") << QString() << QUrl(QStringLiteral("applications:kcm_autostart.desktop"));
+
+    const QString dataDir = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
+    QTest::addRow("kcm_kdeconnect") << dataDir + QLatin1String("/kservices5/kcm_kdeconnect") << QString()
+                                    << QUrl::fromLocalFile(dataDir + QLatin1String("/kservices5/kcm_kdeconnect.desktop"));
+
+    // TODO test mapping rules
 }
 
 QTEST_MAIN(TaskToolsTest)
