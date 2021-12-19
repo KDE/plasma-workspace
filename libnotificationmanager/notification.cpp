@@ -458,7 +458,7 @@ Notification::Notification(Notification &&other)
 
 Notification &Notification::operator=(const Notification &other)
 {
-    d = new Private(*other.d);
+    *d = *other.d;
     return *this;
 }
 
