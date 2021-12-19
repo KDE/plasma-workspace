@@ -123,8 +123,15 @@ void PlasmaAppletItem::setRunning(int count)
 
 bool PlasmaAppletItem::matches(const QString &pattern) const
 {
-    const QString keywordsList = KJsonUtils::readTranslatedString(m_info.rawData(), QStringLiteral("Keywords"));
-    const auto keywords = keywordsList.splitRef(QLatin1Char(';'), Qt::SkipEmptyParts);
+    const QJsonObject rawData = m_info.rawData();
+    const QString keywordsList = KJsonUtils::readTranslatedString(rawData, QStringLiteral("Keywords"));
+    auto keywords = keywordsList.splitRef(QLatin1Char(';'), Qt::SkipEmptyParts);
+
+    // Add English name and keywords so users in other languages won't have to switch IME when searching.
+    if (!QLocale().name().startsWith(QLatin1String("en_"))) {
+        const QString name(rawData[QStringLiteral("KPlugin")][QStringLiteral("Name")].toString());
+        keywords << &name << m_info.value(QStringLiteral("Keywords"), QString()).splitRef(QLatin1Char(';'), Qt::SkipEmptyParts);
+    }
 
     for (const auto &keyword : keywords) {
         if (keyword.startsWith(pattern, Qt::CaseInsensitive)) {
