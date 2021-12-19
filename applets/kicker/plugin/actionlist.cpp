@@ -345,6 +345,9 @@ bool handleRecentDocumentAction(KService::Ptr service, const QString &actionId, 
     }
 
     const QStringList argument = _argument.toStringList();
+    if (argument.isEmpty()) {
+        return false;
+    }
     const auto resource = argument.at(0);
     const auto mimeType = argument.at(1);
 
@@ -360,10 +363,6 @@ bool handleRecentDocumentAction(KService::Ptr service, const QString &actionId, 
                 return false;
             }
         }
-    }
-
-    if (argument.isEmpty()) {
-        return false;
     }
 
     auto *job = new KIO::ApplicationLauncherJob(service);
