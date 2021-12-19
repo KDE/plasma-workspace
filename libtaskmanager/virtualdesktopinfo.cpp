@@ -280,8 +280,6 @@ void VirtualDesktopInfo::WaylandPrivate::init()
     QObject::connect(registry, &KWayland::Client::Registry::plasmaVirtualDesktopManagementAnnounced, [this, registry](quint32 name, quint32 version) {
         virtualDesktopManagement = registry->createPlasmaVirtualDesktopManagement(name, version, this);
 
-        const QList<KWayland::Client::PlasmaVirtualDesktop *> &desktops = virtualDesktopManagement->desktops();
-
         QObject::connect(virtualDesktopManagement,
                          &KWayland::Client::PlasmaVirtualDesktopManagement::desktopCreated,
                          this,
