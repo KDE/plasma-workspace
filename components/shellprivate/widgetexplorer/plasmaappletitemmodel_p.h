@@ -47,6 +47,14 @@ private:
     QString m_icon;
     int m_runningCount;
     bool m_local;
+
+    /**
+     * The bool is set to true when matching by keywords fails for the first time,
+     * and is reset to false when the pattern length is smaller than the counter or
+     * there is only one characther, so redundant match is avoided.
+     */
+    mutable bool m_lastMatchFailed = false;
+    mutable int m_lastMatchFailedPatternLength = 0;
 };
 
 class PlasmaAppletItemModel : public QStandardItemModel

@@ -123,6 +123,14 @@ void PlasmaAppletItem::setRunning(int count)
 
 bool PlasmaAppletItem::matches(const QString &pattern) const
 {
+    // Skip any previous failed keyword match
+    const int patternLength = pattern.length();
+    if (patternLength == 1 || patternLength < m_lastMatchFailedPatternLength) {
+        m_lastMatchFailed = false;
+    } else if (m_lastMatchFailed) {
+        return AbstractItem::matches(pattern);
+    }
+
     const QJsonObject rawData = m_info.rawData();
     const QString keywordsList = KJsonUtils::readTranslatedString(rawData, QStringLiteral("Keywords"));
     auto keywords = keywordsList.splitRef(QLatin1Char(';'), Qt::SkipEmptyParts);
@@ -138,6 +146,10 @@ bool PlasmaAppletItem::matches(const QString &pattern) const
             return true;
         }
     }
+
+    // Keyword match fails
+    m_lastMatchFailed = true;
+    m_lastMatchFailedPatternLength = patternLength;
 
     return AbstractItem::matches(pattern);
 }
