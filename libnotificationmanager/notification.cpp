@@ -449,7 +449,7 @@ Notification::Notification(Notification &&other) noexcept
 
 Notification &Notification::operator=(const Notification &other)
 {
-    d = new Private(*other.d);
+    *d = *other.d;
     return *this;
 }
 
