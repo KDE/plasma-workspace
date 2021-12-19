@@ -15,7 +15,7 @@ public:
     QString region;
     QString city;
     QString comment;
-    bool checked;
-    bool isLocalTimeZone;
-    int offsetFromUtc;
+    bool checked = false;
+    bool isLocalTimeZone = false;
+    int offsetFromUtc = 0;
 };
