@@ -691,11 +691,6 @@ void Image::newStuffFinished()
 void Image::showFileDialog()
 {
     if (!m_dialog) {
-        QUrl baseUrl;
-        if (m_wallpaper.indexOf(QDir::homePath()) > -1) {
-            baseUrl = QUrl(m_wallpaper);
-        }
-
         QString path;
         const QStringList &locations = QStandardPaths::standardLocations(QStandardPaths::PicturesLocation);
 
