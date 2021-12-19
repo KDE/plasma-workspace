@@ -7,23 +7,15 @@
 #include <QObject>
 
 #include <KConfigGroup>
-#include <KDesktopFile>
-#include <KIconTheme>
 #include <KSharedConfig>
 #include <KSycoca>
 
 #include <QDir>
 #include <QIcon>
 #include <QStandardPaths>
-#include <QTemporaryDir>
 #include <QTest>
 
 #include "tasktools.h"
-
-// Taken from tst_qstandardpaths.
-#if defined(Q_OS_UNIX) && !defined(Q_OS_MAC) && !defined(Q_OS_BLACKBERRY) && !defined(Q_OS_ANDROID)
-#define Q_XDG_PLATFORM
-#endif
 
 using namespace TaskManager;
 
@@ -33,63 +25,76 @@ class TaskToolsTest : public QObject
 
 private Q_SLOTS:
     void initTestCase();
-    void cleanupTestCase();
 
     void shouldFindApp();
+    void shouldFindApp_data();
     void shouldFindDefaultApp();
     void shouldCompareLauncherUrls();
 
 private:
-    QString appLinkPath();
-    void fillReferenceAppData();
-    void createAppLink();
     void createIcon();
-
-    AppData m_referenceAppData;
-    QTemporaryDir m_tempDir;
 };
 
 void TaskToolsTest::initTestCase()
 {
     QStandardPaths::setTestModeEnabled(true);
 
-    QVERIFY(m_tempDir.isValid());
-    QVERIFY(QDir().mkpath(m_tempDir.path() + QLatin1String("/config")));
-    QVERIFY(QDir().mkpath(m_tempDir.path() + QLatin1String("/cache")));
-    QVERIFY(QDir().mkpath(m_tempDir.path() + QLatin1String("/data/applications")));
+    const QString dataDir = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
 
-#ifdef Q_XDG_PLATFORM
-    qputenv("XDG_CONFIG_HOME", QFile::encodeName(m_tempDir.path() + QLatin1String("/config")));
-    qputenv("XDG_CACHE_HOME", QFile::encodeName(m_tempDir.path() + QLatin1String("/cache")));
-    qputenv("XDG_DATA_DIRS", QFile::encodeName(m_tempDir.path() + QLatin1String("/data")));
-#else
-    QSKIP("This test requires XDG.");
-#endif
+    qputenv("XDG_DATA_DIRS", dataDir.toUtf8());
 
-    createIcon();
-    fillReferenceAppData();
-    createAppLink();
+    // Make sure we start with a clean dir
+    QVERIFY(QDir(dataDir).removeRecursively());
+    QVERIFY(QDir(dataDir).mkpath(QLatin1String("applications")));
+
+    // Add our applications
+    QFile::copy(QFINDTESTDATA("data/applications/org.kde.dolphin.desktop"), dataDir + QLatin1String("/applications/org.kde.dolphin.desktop"));
+    QFile::copy(QFINDTESTDATA("data/applications/org.kde.konversation.desktop"), dataDir + QLatin1String("/applications/org.kde.konversation.desktop"));
 
     QFile::remove(KSycoca::absoluteFilePath());
     KSycoca::self()->ensureCacheValid();
     QVERIFY(QFile::exists(KSycoca::absoluteFilePath()));
+
+    // Verify that our enviromnent is as expected and no outside apps leak in
+    QVERIFY(!KService::serviceByDesktopName(QStringLiteral("org.kde.ktrip")));
+    QVERIFY(KService::serviceByDesktopName(QStringLiteral("org.kde.dolphin")));
+    QVERIFY(KService::serviceByDesktopName(QStringLiteral("org.kde.konversation")));
 }
 
-void TaskToolsTest::cleanupTestCase()
+void TaskToolsTest::shouldFindApp_data()
 {
-    QFile::remove(KSycoca::absoluteFilePath());
+    QTest::addColumn<QString>("inputFileName");
+    QTest::addColumn<QString>("id");
+    QTest::addColumn<QString>("name");
+    QTest::addColumn<QString>("genericName");
+    QTest::addColumn<QUrl>("url");
+
+    QTest::newRow("Konversation") << QStringLiteral("org.kde.konversation.desktop") << QStringLiteral("org.kde.konversation") << QStringLiteral("Konversation")
+                                  << QStringLiteral("IRC Client") << QUrl(QStringLiteral("applications:org.kde.konversation.desktop"));
+
+    QTest::newRow("Dolphin") << QStringLiteral("org.kde.dolphin.desktop") << QStringLiteral("org.kde.dolphin") << QStringLiteral("Dolphin")
+                             << QStringLiteral("File Manager") << QUrl(QStringLiteral("applications:org.kde.dolphin.desktop"));
 }
 
 void TaskToolsTest::shouldFindApp()
 {
     // FIXME Test icon.
 
-    const AppData &data = appDataFromUrl(QUrl::fromLocalFile(appLinkPath()));
+    QFETCH(QString, inputFileName);
 
-    QCOMPARE(data.id, m_referenceAppData.id);
-    QCOMPARE(data.name, m_referenceAppData.name);
-    QCOMPARE(data.genericName, m_referenceAppData.genericName);
-    QCOMPARE(data.url, m_referenceAppData.url);
+    const QUrl inputUrl = QUrl::fromLocalFile(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("applications/") + inputFileName));
+
+    const AppData &data = appDataFromUrl(inputUrl);
+
+    QFETCH(QString, id);
+    QFETCH(QString, name);
+    QFETCH(QString, genericName);
+    QFETCH(QUrl, url);
+
+    QCOMPARE(data.id, id);
+    QCOMPARE(data.name, name);
+    QCOMPARE(data.genericName, genericName);
+    QCOMPARE(data.url, url);
 }
 
 void TaskToolsTest::shouldFindDefaultApp()
@@ -123,75 +128,6 @@ void TaskToolsTest::shouldCompareLauncherUrls()
 
     QVERIFY(launcherUrlsMatch(QUrl(a), QUrl(c), IgnoreQueryItems));
     QVERIFY(!launcherUrlsMatch(QUrl(c), QUrl(d), IgnoreQueryItems));
-}
-
-QString TaskToolsTest::appLinkPath()
-{
-    return QString(m_tempDir.path() + QLatin1String("/data/applications/org.kde.konversation.desktop"));
-}
-
-void TaskToolsTest::fillReferenceAppData()
-{
-    // FIXME Add icon.
-
-    m_referenceAppData.id = QLatin1String("org.kde.konversation");
-    m_referenceAppData.name = QLatin1String("Konversation");
-    m_referenceAppData.genericName = QLatin1String("IRC Client");
-    m_referenceAppData.url = QUrl("applications:org.kde.konversation.desktop");
-}
-
-void TaskToolsTest::createAppLink()
-{
-    KDesktopFile file(appLinkPath());
-    KConfigGroup group = file.desktopGroup();
-    group.writeEntry(QLatin1String("Type"), QStringLiteral("Application"));
-    group.writeEntry(QLatin1String("Name"), m_referenceAppData.name);
-    group.writeEntry(QLatin1String("GenericName"), m_referenceAppData.genericName);
-    group.writeEntry(QLatin1String("Icon"), QStringLiteral("konversation"));
-    group.writeEntry(QLatin1String("Exec"), QStringLiteral("konversation"));
-    file.sync();
-
-    QVERIFY(file.hasApplicationType());
-
-    QVERIFY(QFile::exists(appLinkPath()));
-    QVERIFY(KDesktopFile::isDesktopFile(appLinkPath()));
-}
-
-void TaskToolsTest::createIcon()
-{
-    // FIXME KIconLoaderPrivate::initIconThemes: Error: standard icon theme "oxygen" not found!
-
-    QString iconDir = m_tempDir.path() + QLatin1String("/data/icons/");
-
-    QVERIFY(QDir().mkpath(iconDir));
-
-    QIcon::setThemeSearchPaths(QStringList() << m_tempDir.path() + QLatin1String("/data/icons/"));
-    QCOMPARE(QIcon::themeSearchPaths(), QStringList() << iconDir);
-
-    iconDir = iconDir + QLatin1String("/") + KIconTheme::defaultThemeName();
-
-    QVERIFY(QDir().mkpath(iconDir));
-
-    const QString &themeFile = iconDir + QLatin1String("/index.theme");
-
-    KConfig config(themeFile);
-    KConfigGroup group(config.group(QLatin1String("Icon Theme")));
-    group.writeEntry(QLatin1String("Name"), KIconTheme::defaultThemeName());
-    group.writeEntry(QLatin1String("Inherits"), QStringLiteral("hicolor"));
-    config.sync();
-
-    QVERIFY(QFile::exists(themeFile));
-
-    iconDir = iconDir + QLatin1String("/64x64/apps");
-
-    QVERIFY(QDir().mkpath(iconDir));
-
-    const QString &iconPath = iconDir + QLatin1String("/konversation.png");
-
-    QImage image(64, 64, QImage::Format_Mono);
-    image.save(iconPath);
-
-    QVERIFY(QFile::exists(iconPath));
 }
 
 QTEST_MAIN(TaskToolsTest)
