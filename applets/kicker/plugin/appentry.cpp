@@ -341,16 +341,7 @@ QString AppEntry::nameFromService(const KService::Ptr &service, NameFormat nameF
 KService::Ptr AppEntry::defaultAppByName(const QString &name)
 {
     if (name == QLatin1String("browser")) {
-        KConfigGroup config(KSharedConfig::openConfig(), "General");
-        QString browser = config.readPathEntry("BrowserApplication", QString());
-
-        if (browser.isEmpty()) {
-            return KApplicationTrader::preferredService(QStringLiteral("text/html"));
-        } else if (browser.startsWith(QLatin1Char('!'))) {
-            browser.remove(0, 1);
-        }
-
-        return KService::serviceByStorageId(browser);
+        return KApplicationTrader::preferredService(QStringLiteral("x-scheme-handler/http"));
     }
 
     return KService::Ptr();

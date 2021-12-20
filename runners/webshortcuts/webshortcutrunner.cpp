@@ -74,14 +74,9 @@ void WebshortcutRunner::configurePrivateBrowsingActions()
 {
     qDeleteAll(m_match.actions());
     m_match.setActions({});
-    const QString browserFile = KSharedConfig::openConfig(QStringLiteral("kdeglobals"))->group("General").readEntry("BrowserApplication");
-    KService::Ptr service;
-    if (!browserFile.isEmpty()) {
-        service = KService::serviceByStorageId(browserFile);
-    }
-    if (!service) {
-        service = KApplicationTrader::preferredService(QStringLiteral("text/html"));
-    }
+
+    const auto service = KApplicationTrader::preferredService(QStringLiteral("x-scheme-handler/http"));
+
     if (!service) {
         return;
     }

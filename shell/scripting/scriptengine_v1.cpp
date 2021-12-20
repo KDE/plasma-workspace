@@ -641,19 +641,11 @@ QJSValue ScriptEngine::V1::defaultApplication(const QString &application, bool s
         }
 
     } else if (matches(application, QLatin1String("browser"))) {
-        KConfigGroup config(KSharedConfig::openConfig(), "General");
-        QString browserApp = config.readPathEntry("BrowserApplication", QString());
-        if (browserApp.isEmpty()) {
-            const KService::Ptr htmlApp = KApplicationTrader::preferredService(QStringLiteral("text/html"));
-            if (htmlApp) {
-                browserApp = storageId ? htmlApp->storageId() : htmlApp->exec();
-            }
-        } else if (browserApp.startsWith('!')) {
-            browserApp.remove(0, 1);
+        const auto browserApp = KApplicationTrader::preferredService(QStringLiteral("x-scheme-handler/http"));
+
+        if (browserApp) {
+            return onlyExec(browserApp->exec());
         }
-
-        return onlyExec(browserApp);
-
     } else if (matches(application, QLatin1String("terminal"))) {
         KConfigGroup confGroup(KSharedConfig::openConfig(), "General");
         return onlyExec(confGroup.readPathEntry("TerminalApplication", QStringLiteral("konsole")));

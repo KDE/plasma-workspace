@@ -608,20 +608,11 @@ QString defaultApplication(const QUrl &url)
             return command;
         }
     } else if (application.compare(QLatin1String("browser"), Qt::CaseInsensitive) == 0) {
-        KConfigGroup config(KSharedConfig::openConfig(), "General");
-        QString browserApp = config.readPathEntry("BrowserApplication", QString());
+        const auto browserApp = KApplicationTrader::preferredService(QStringLiteral("x-scheme-handler/http"));
 
-        if (browserApp.isEmpty()) {
-            const KService::Ptr htmlApp = KApplicationTrader::preferredService(QStringLiteral("text/html"));
-
-            if (htmlApp) {
-                browserApp = htmlApp->storageId();
-            }
-        } else if (browserApp.startsWith('!')) {
-            browserApp.remove(0, 1);
+        if (browserApp) {
+            return browserApp->storageId();
         }
-
-        return browserApp;
     } else if (application.compare(QLatin1String("terminal"), Qt::CaseInsensitive) == 0) {
         KConfigGroup confGroup(KSharedConfig::openConfig(), "General");
 

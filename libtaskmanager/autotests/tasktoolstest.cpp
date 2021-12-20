@@ -36,7 +36,6 @@ private Q_SLOTS:
     void cleanupTestCase();
 
     void shouldFindApp();
-    void shouldFindDefaultApp();
     void shouldCompareLauncherUrls();
 
 private:
@@ -90,17 +89,6 @@ void TaskToolsTest::shouldFindApp()
     QCOMPARE(data.name, m_referenceAppData.name);
     QCOMPARE(data.genericName, m_referenceAppData.genericName);
     QCOMPARE(data.url, m_referenceAppData.url);
-}
-
-void TaskToolsTest::shouldFindDefaultApp()
-{
-    // FIXME Test other recognized default app types.
-
-    KConfigGroup config(KSharedConfig::openConfig(), "General");
-    config.writePathEntry("BrowserApplication", QLatin1String("konqueror"));
-
-    QVERIFY(defaultApplication(QUrl("wrong://url")).isEmpty());
-    QCOMPARE(defaultApplication(QUrl("preferred://browser")), QLatin1String("konqueror"));
 }
 
 void TaskToolsTest::shouldCompareLauncherUrls()

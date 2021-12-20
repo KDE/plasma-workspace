@@ -68,19 +68,13 @@ void BookmarksRunner::match(Plasma::RunnerContext &context)
 
 QString BookmarksRunner::findBrowserName()
 {
-    // HACK find the default browser
-    KConfigGroup config(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), QStringLiteral("General"));
-    QString exec = config.readPathEntry(QStringLiteral("BrowserApplication"), QString());
-    // qDebug() << "Found exec string: " << exec;
-    if (exec.isEmpty()) {
-        KService::Ptr service = KApplicationTrader::preferredService(QStringLiteral("text/html"));
-        if (service) {
-            exec = service->exec();
-        }
+    const auto browser = KApplicationTrader::preferredService(QStringLiteral("x-scheme-handler/http"));
+
+    if (browser) {
+        return browser->exec();
     }
 
-    // qDebug() << "KRunner::Bookmarks: found executable " << exec << " as default browser";
-    return exec;
+    return QString();
 }
 
 void BookmarksRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action)
