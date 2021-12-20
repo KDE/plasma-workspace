@@ -146,53 +146,6 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
     return data;
 }
 
-AppData appDataFromAppId(const QString &appId)
-{
-    AppData data;
-
-    KService::Ptr service = KService::serviceByStorageId(appId);
-
-    if (service) {
-        data.id = service->storageId();
-        data.name = service->name();
-        data.genericName = service->genericName();
-
-        const QString &menuId = service->menuId();
-
-        // applications: URLs are used to refer to applications by their KService::menuId
-        // (i.e. .desktop file name) rather than the absolute path to a .desktop file.
-        if (!menuId.isEmpty()) {
-            data.url = QUrl(QLatin1String("applications:") + menuId);
-        } else {
-            data.url = QUrl::fromLocalFile(service->entryPath());
-        }
-
-        return data;
-    }
-
-    QString desktopFile = appId;
-
-    if (!desktopFile.endsWith(QLatin1String(".desktop"))) {
-        desktopFile.append(QLatin1String(".desktop"));
-    }
-
-    if (KDesktopFile::isDesktopFile(desktopFile) && QFile::exists(desktopFile)) {
-        KDesktopFile f(desktopFile);
-
-        data.id = QUrl::fromLocalFile(f.fileName()).fileName();
-
-        if (data.id.endsWith(QLatin1String(".desktop"))) {
-            data.id = data.id.left(data.id.length() - 8);
-        }
-
-        data.name = f.readName();
-        data.genericName = f.readGenericName();
-        data.url = QUrl::fromLocalFile(desktopFile);
-    }
-
-    return data;
-}
-
 QUrl windowUrlFromMetadata(const QString &appId, quint32 pid, KSharedConfig::Ptr rulesConfig, const QString &xWindowsWMClassName)
 {
     if (!rulesConfig) {
