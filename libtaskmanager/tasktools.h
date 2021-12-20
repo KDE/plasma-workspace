@@ -126,7 +126,7 @@ servicesFromCmdLine(const QString &cmdLine, const QString &processName, KSharedC
  * - "browser"
  * - "mailer"
  * - "terminal"
- * - "windowmanager"
+ * - "filemanager"
  *
  * If the host component matches none of the above, an attempt is made
  * to match to application links stored in kcm_componentchooser/.
