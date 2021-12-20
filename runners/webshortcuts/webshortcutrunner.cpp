@@ -154,7 +154,19 @@ void WebshortcutRunner::run(const Plasma::RunnerContext &context, const Plasma::
 
     if (!location.isEmpty()) {
         if (match.selectedAction()) {
-            const auto command = m_privateAction.exec() + QLatin1Char(' ') + KShell::quoteArg(location.toString());
+            QString command;
+
+            // Chrome's exec line does not have a URL placeholder
+            // Firefox's does, but only sometimes, depending on the distro
+            // Replace placeholders if found, otherwise append at the end
+            if (m_privateAction.exec().contains("%u")) {
+                command = m_privateAction.exec().replace("%u", KShell::quoteArg(location.toString()));
+            } else if (m_privateAction.exec().contains("%U")) {
+                command = m_privateAction.exec().replace("%U", KShell::quoteArg(location.toString()));
+            } else {
+                command = m_privateAction.exec() + QLatin1Char(' ') + KShell::quoteArg(location.toString());
+            }
+
             auto *job = new KIO::CommandLauncherJob(command);
             job->start();
         } else {
