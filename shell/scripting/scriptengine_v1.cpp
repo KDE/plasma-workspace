@@ -676,30 +676,6 @@ QJSValue ScriptEngine::V1::defaultApplication(const QString &application, bool s
     } else if (KService::Ptr service = KApplicationTrader::preferredService(application)) {
         return storageId ? service->storageId() : onlyExec(service->exec());
 
-    } else {
-        // try the files in share/apps/kcm_componentchooser/
-        const QStringList services = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("kcm_componentchooser/"));
-        qDebug() << "ok, trying in" << services;
-        foreach (const QString &service, services) {
-            if (!service.endsWith(QLatin1String(".desktop"))) {
-                continue;
-            }
-            KConfig config(service, KConfig::SimpleConfig);
-            KConfigGroup cg = config.group(QByteArray());
-            const QString type = cg.readEntry("valueName", QString());
-            // qDebug() << "    checking" << service << type << application;
-            if (matches(type, application)) {
-                KConfig store(cg.readPathEntry("storeInFile", QStringLiteral("null")));
-                KConfigGroup storeCg(&store, cg.readEntry("valueSection", QString()));
-                const QString exec =
-                    storeCg.readPathEntry(cg.readEntry("valueName", "kcm_componenchooser_null"), cg.readEntry("defaultImplementation", QString()));
-                if (!exec.isEmpty()) {
-                    return exec;
-                }
-
-                break;
-            }
-        }
     }
 
     return false;

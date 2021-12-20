@@ -128,9 +128,6 @@ servicesFromCmdLine(const QString &cmdLine, const QString &processName, KSharedC
  * - "terminal"
  * - "filemanager"
  *
- * If the host component matches none of the above, an attempt is made
- * to match to application links stored in kcm_componentchooser/.
- *
  * @param url A URL using the preferred:// scheme.
  * @returns an application id for the given URL.
  **/

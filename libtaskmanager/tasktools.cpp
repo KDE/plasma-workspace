@@ -621,37 +621,6 @@ QString defaultApplication(const QUrl &url)
         }
     } else if (KService::Ptr service = KApplicationTrader::preferredService(application)) {
         return service->storageId();
-    } else {
-        // Try the files in share/apps/kcm_componentchooser/*.desktop.
-        const QStringList directories =
-            QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("kcm_componentchooser"), QStandardPaths::LocateDirectory);
-        QStringList services;
-
-        for (const QString &directory : directories) {
-            QDir dir(directory);
-            const QStringList desktopFiles = dir.entryList(QStringList("*.desktop"));
-            for (const QString &f : desktopFiles)
-                services += dir.absoluteFilePath(f);
-        }
-
-        for (const QString &service : qAsConst(services)) {
-            KConfig config(service, KConfig::SimpleConfig);
-            KConfigGroup cg = config.group(QByteArray());
-            const QString type = cg.readEntry("valueName", QString());
-
-            if (type.compare(application, Qt::CaseInsensitive) == 0) {
-                KConfig store(cg.readPathEntry("storeInFile", QStringLiteral("null")));
-                KConfigGroup storeCg(&store, cg.readEntry("valueSection", QString()));
-                const QString exec =
-                    storeCg.readPathEntry(cg.readEntry("valueName", "kcm_componenchooser_null"), cg.readEntry("defaultImplementation", QString()));
-
-                if (!exec.isEmpty()) {
-                    return exec;
-                }
-
-                break;
-            }
-        }
     }
 
     return QLatin1String("");
