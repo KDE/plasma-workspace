@@ -70,6 +70,9 @@ void LookAndFeelPackage::initPackage(KPackage::Package *package)
     package->addDirectoryDefinition("windowswitcher", QStringLiteral("windowswitcher"), i18n("Window Switcher"));
     package->addFileDefinition("windowswitchermainscript", QStringLiteral("windowswitcher/WindowSwitcher.qml"), i18n("Main Script for Window Switcher"));
 
+    package->addDirectoryDefinition("systemdialog", QStringLiteral("systemdialog"), i18n("System Dialog"));
+    package->addFileDefinition("systemdialogscript", QStringLiteral("systemdialog/SystemDialog.qml"), i18n("The system dialog"));
+
     package->addDirectoryDefinition("layouts", QStringLiteral("layouts"), i18n("Default layout scripts"));
 
     package->setPath(DEFAULT_LOOKANDFEEL);

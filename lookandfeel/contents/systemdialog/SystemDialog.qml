@@ -10,7 +10,6 @@ import QtQuick.Layouts 1.15
 import QtQuick.Window 2.15
 import QtGraphicalEffects 1.12
 import org.kde.kirigami 2.18 as Kirigami
-import "private" as Private
 
 /**
  * Dialog used on desktop. Uses SSDs (as opposed to CSDs).

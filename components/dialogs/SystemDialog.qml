@@ -10,6 +10,7 @@ import QtQuick.Layouts 1.15
 import QtQuick.Window 2.15
 import QtGraphicalEffects 1.12
 import org.kde.kirigami 2.18 as Kirigami
+import org.kde.plasma.lookandfeel 1.0
 
 /**
  * Component to create CSD dialogs that come from the system.
@@ -110,7 +111,7 @@ Kirigami.AbstractApplicationWindow {
         id: contentDialog
         anchors.fill: parent
         Component.onCompleted: {
-            var component = !Kirigami.Settings.tabletMode ? "MobileSystemDialog.qml" : "DesktopSystemDialog.qml"
+            var component = LookAndFeel.fileUrl("systemdialogscript")
             setSource(component, {
                 window: root,
                 mainText: root.mainText,
