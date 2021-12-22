@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "Automatically releases drives when their eject button is pushed",
         "Description[ar]": "أطلِق الأجهزة آليًا عندما يُضغَط زر الإخراج",
+        "Description[az]": "Çıxart düyməsinə vurduqda daşıyıcıları avtomatik ayırır",
         "Description[ca]": "Allibera unitats automàticament quan es prem el seu botó d'expulsió",
         "Description[es]": "Libera automáticamente las unidades cuando se pulsa el botón de expulsión",
         "Description[fr]": "Libère automatiquement les disques lors d'un appui sur leur bouton d'éjection",
@@ -12,6 +13,7 @@
         "Description[nl]": "Geeft automatisch apparaten vrij als hun uitwerpknop wordt ingedrukt",
         "Description[nn]": "Løyser automatisk ut stasjonar når det vert trykt på utløysingsknappen deira",
         "Description[pl]": "Samoczynnie wysuwa napędy po naciśnięciu właściwego przycisku",
+        "Description[pt_BR]": "Libera as unidades automaticamente quando o botão de ejeção for pressionado",
         "Description[sl]": "Samodejno odklopi pogon, ko pritisnjen gumb za izmet",
         "Description[sv]": "Frisläpper automatiskt enheter vid tryck på deras utmatningsknapp",
         "Description[ta]": "வட்டுகளின் வெளியேற்ற பட்டன் அழுத்தப்படும்போது அவற்றை வெளியேற்றும் நிரல்",

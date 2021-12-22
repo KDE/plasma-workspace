@@ -3,6 +3,7 @@
     "KPlugin": {
         "Description": "Change workspace and application languages",
         "Description[ar]": "يغير لغات التطبيقات ومساحة العمل",
+        "Description[az]": "İş mühitinin və tətbiqlərin dillərini dəyişmək",
         "Description[ca]": "Canvi dels idiomes de l'espai de treball i les aplicacions",
         "Description[es]": "Cambiar los idiomas del espacio de trabajo y de las aplicaciones",
         "Description[fr]": "Modifier la langue de l'espace de travail et des applications",
@@ -13,6 +14,7 @@
         "Description[nl]": "Werkruimte en talen van toepassingen wijzigen",
         "Description[nn]": "Endra språk for arbeidsflate og program",
         "Description[pl]": "Zmień język przestrzeni pracy i aplikacji",
+        "Description[pt_BR]": "Altera os idiomas do espaço de trabalho e aplicativos",
         "Description[sl]": "Spremeni jezik delovnega prostora in programov",
         "Description[sv]": "Ändra arbetsområde och programspråk",
         "Description[ta]": "பணிமேடை மற்றும் செயலிகளின் மொழிகளை மாற்றுங்கள்",

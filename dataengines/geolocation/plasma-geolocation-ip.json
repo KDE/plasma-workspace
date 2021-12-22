@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "Geolocation from IP address.",
         "Description[ar]": "تحديد الموقع الجغرافي من عنوان الإنترنت",
+        "Description[az]": "İP ünvanına görə coğrafi məkan",
         "Description[ca]": "Geolocalització des d'una adreça IP.",
         "Description[es]": "Geolocalización desde una dirección IP.",
         "Description[fr]": "Géo-localisation depuis une adresse IP.",
@@ -12,6 +13,7 @@
         "Description[nl]": "Geolocatie uit IP-adres.",
         "Description[nn]": "Geolocation med IP-adresse.",
         "Description[pl]": "Geolokalizuje za pomocą adresu IP.",
+        "Description[pt_BR]": "Localização geográfica de endereços IP.",
         "Description[sl]": "Geolokacija iz naslova IP.",
         "Description[sv]": "Geografisk lokalisering från IP-adress.",
         "Description[ta]": "IP முகவரியிலிருந்து இருப்பிடத்தைக் கண்டுபிடிக்கும்",

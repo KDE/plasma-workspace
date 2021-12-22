@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "Automatically Started Applications",
         "Description[ar]": "التطبيقات التي تبدأ آليا",
+        "Description[az]": "Avtomatik işə düşən tətbiqlər",
         "Description[ca]": "Aplicacions iniciades automàticament",
         "Description[es]": "Aplicaciones que se inician automáticamente",
         "Description[fr]": "Applications automatiquement démarrées",
@@ -12,6 +13,7 @@
         "Description[nl]": "Automatisch gestarte toepassingen",
         "Description[nn]": "Automatisk starta program",
         "Description[pl]": "Samoczynnie uruchamiane programy",
+        "Description[pt_BR]": "Aplicativos iniciados automaticamente",
         "Description[sl]": "Samodejno zagnani programi",
         "Description[sv]": "Program som startas automatiskt",
         "Description[ta]": "தானாக துவக்கப்படும் செயலிகள்",

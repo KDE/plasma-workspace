@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "Provides the system's time zone to applications",
         "Description[ar]": "يوفّر منطقة النظام الزمنية للتطبيقات",
+        "Description[az]": "Tətbiqlərə sistemin saat qurşağını tətbiq edir",
         "Description[ca]": "Proporciona la zona horària del sistema a les aplicacions",
         "Description[es]": "Proporciona la zona horaria del sistema a las aplicaciones",
         "Description[fr]": "Fournit le fuseau horaire du système aux applications.",
@@ -12,6 +13,7 @@
         "Description[nl]": "Levert de tijdzone van het systeem aan applicaties",
         "Description[nn]": "Gjev programma tilgang til systemtidssone",
         "Description[pl]": "Udostępnia systemową strefę czasową programom",
+        "Description[pt_BR]": "Fornece o fuso horário do sistema para os aplicativos",
         "Description[sl]": "Programom nudi dostop do sistemskega časovnega pasu",
         "Description[sv]": "Tillhandahåller systemets tidszon till program",
         "Description[ta]": "கணினியின் கால மண்டலத்தை செயலிகளுக்கு தெரியப்படுத்தும்",

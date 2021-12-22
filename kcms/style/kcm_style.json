@@ -3,6 +3,7 @@
     "KPlugin": {
         "Description": "Configure application style and behavior",
         "Description[ar]": "اضبط سلوك ونمط التطبيق",
+        "Description[az]": "Tətbiq üslubu və davranışlarını tənzimləmək",
         "Description[ca]": "Configura l'estil i el comportament de les aplicacions",
         "Description[es]": "Configurar el estilo y el comportamiento de las aplicaciones",
         "Description[fr]": "Configurer le style et le comportement des applications",
@@ -13,6 +14,7 @@
         "Description[nl]": "Toepassingstijl en gedrag configureren",
         "Description[nn]": "Set opp utsjånad og åtferd for program",
         "Description[pl]": "Ustawienia wyglądu i zachowania aplikacji",
+        "Description[pt_BR]": "Configurar o estilo e comportamento do aplicativo",
         "Description[sl]": "Nastavi slog aplikacije in obnašanje",
         "Description[sv]": "Anpassa programstil och beteende",
         "Description[ta]": "செயலிகளின் தோற்றம் மற்றும் நடத்தையை அமையுங்கள்",

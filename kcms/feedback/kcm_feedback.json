@@ -3,6 +3,7 @@
     "KPlugin": {
         "Description": "Configure user feedback settings",
         "Description[ar]": "اضبط إعدادات مشاركة بياناتك",
+        "Description[az]": "İstifadəçi rəyi ayarlarını tənzimləmək",
         "Description[ca]": "Configura les opcions dels comentaris de l'usuari",
         "Description[es]": "Configurar las preferencias de los comentarios del usuario",
         "Description[fr]": "Configurer les paramètres de retours des utilisateurs",
@@ -13,6 +14,7 @@
         "Description[nl]": "Instellingen voor terugkoppeling van gebruikers configureren",
         "Description[nn]": "Set opp tilbakemeldingar frå brukarar",
         "Description[pl]": "Ustawienia informacji zwrotnej",
+        "Description[pt_BR]": "Configure as definições dos comentários dos usuários",
         "Description[sl]": "Nastavi uporabnikov odziv",
         "Description[sv]": "Anpassa inställningar av användaråterkoppling",
         "Description[ta]": "பயனர் பின்னூட்டத்தை அமையுங்கள்",

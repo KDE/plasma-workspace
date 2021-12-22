@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "Provides a user interface for hardware events",
         "Description[ar]": "يوفّر واجهة مستخدِم لأحداث العتاد",
+        "Description[az]": "Avadanlıqlarla iş üçün istifadəçi interfeysini təqdim edir",
         "Description[ca]": "Proporciona una interfície d'usuari per als esdeveniments del maquinari",
         "Description[es]": "Proporciona una interfaz de usuario para eventos del hardware",
         "Description[fr]": "Fournit une interface utilisateur pour les évènements matériels",
@@ -12,6 +13,7 @@
         "Description[nl]": "Levert een gebruikersinterface voor hardware gebeurtenissen",
         "Description[nn]": "Eit brukargrensesnitt for maskinvarehendingar",
         "Description[pl]": "Zapewnia interfejs dla zdarzeń związanych ze sprzętem",
+        "Description[pt_BR]": "Fornece uma interface de usuário para os eventos do hardware",
         "Description[sl]": "Ponuja uporabniški vmesnik za dogodke strojne opreme",
         "Description[sv]": "Tillhandahåller ett användargränssnitt för händelser i hårdvaran",
         "Description[ta]": "வன்பொருள் சார்ந்த நடப்புகளுக்கு பயனர் இடைமுகப்பை வழங்கும்",

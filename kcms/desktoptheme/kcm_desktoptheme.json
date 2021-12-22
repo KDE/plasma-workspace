@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "Choose Plasma style",
         "Description[ar]": "اختر نمط بلازما",
+        "Description[az]": "Plasma üslubunu seçin",
         "Description[ca]": "Trieu l'estil del Plasma",
         "Description[es]": "Escoger el estilo de Plasma",
         "Description[fr]": "Sélectionnez un style de Plasma",
@@ -12,6 +13,7 @@
         "Description[nl]": "Plasma-stijl kiezen",
         "Description[nn]": "Vel Plasma-stil",
         "Description[pl]": "Wybierz wygląd Plazmy",
+        "Description[pt_BR]": "Escolha o estilo do Plasma",
         "Description[sl]": "Izberite Plasmin slog",
         "Description[sv]": "Välj Plasmastil",
         "Description[ta]": "பிளாஸ்மா தோற்றத்திட்டத்தை தேர்ந்தெடுங்கள்",

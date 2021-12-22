@@ -3,6 +3,7 @@
     "KPlugin": {
         "Description": "Event Notifications and Actions",
         "Description[ar]": "إخطارات وإجراءات الحدث",
+        "Description[az]": "Tədbir Bildirişləri və Əməllər",
         "Description[ca]": "Notificacions d'esdeveniments i accions",
         "Description[es]": "Notificaciones y acciones de eventos",
         "Description[fr]": "Notifications d'évènements et d'actions",
@@ -13,6 +14,7 @@
         "Description[nl]": "Meldingen en acties van gebeurtenissen",
         "Description[nn]": "Varslingar og handlingar for hendingar",
         "Description[pl]": "Powiadomienia i działania zdarzeń",
+        "Description[pt_BR]": "Notificações e ações dos eventos",
         "Description[sl]": "Obvestila o dogodkih in dejavnosti",
         "Description[sv]": "Underrättelser om händelser och åtgärder",
         "Description[ta]": "அறிவிப்புகளும் அவற்றிற்கான செயல்களும்",

@@ -8,6 +8,7 @@ X-KDE-Priority=TopLevel
 [Desktop Action setAsWallpaper]
 Name=Set as Wallpaper
 Name[ar]=عين كخلفية
+Name[az]=Divar Kağızı təyin edin
 Name[ca]=Estableix com a fons de pantalla
 Name[es]=Definir como fondo del escritorio
 Name[fr]=Définir comme fond d'écran
@@ -16,6 +17,7 @@ Name[ia]=Fixa como Tapete de papiro
 Name[it]=Imposta come sfondo
 Name[nl]=Als achtergrondafbeelding instellen
 Name[nn]=Bruk som bakgrunns­bilete
+Name[pt_BR]=Definir como papel de parede
 Name[sl]=Postavi kot sliko ozadja
 Name[sv]=Använd som skrivbordsunderlägg
 Name[ta]=பின்புல படமாக அமை

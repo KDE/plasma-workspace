@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "XML Data from Environment Canada",
         "Description[ar]": "بيانات XML من وزارة البيئة الكندية",
+        "Description[az]": "Environment Canada-dan XML formatında məlumatlar",
         "Description[ca]": "Dades XML des de Medi ambient del Canadà",
         "Description[es]": "Datos XML de medio ambiente de Canada",
         "Description[fr]": "Données au format « XML » du service de météorologie du Canada",
@@ -12,6 +13,7 @@
         "Description[nl]": "XML-gegevens van Environment Canada",
         "Description[nn]": "XML-data frå Environment Canada",
         "Description[pl]": "Dane XML z Environment Canada",
+        "Description[pt_BR]": "Dados em XML do Environment Canada",
         "Description[sl]": "Podatki XML od Environment Canada",
         "Description[sv]": "XML-data från Environment Canada",
         "Description[uk]": "Дані XML з метеорологічного відділу Канади",

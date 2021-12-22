@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "Monitors directories for changes",
         "Description[ar]": "يراقب تغييرات الأدلة",
+        "Description[az]": "Qovluqdakı dəyişiklikləri izləyir",
         "Description[ca]": "Controla els canvis en els directoris",
         "Description[es]": "Monitoriza cambios en directorios",
         "Description[fr]": "Surveille les changements de dossiers",
@@ -12,6 +13,7 @@
         "Description[nl]": "Mappen monitoren op wijzigingen",
         "Description[nn]": "Overvaker mapper for endringar",
         "Description[pl]": "Monitoruje katalogi w poszukiwaniu zmian",
+        "Description[pt_BR]": "Monitora as alterações nas pastas",
         "Description[sl]": "Nadzira spremembe v mapah",
         "Description[sv]": "Övervakar om kataloger ändras",
         "Description[ta]": "அடைவுகளில் மாற்றங்கள் உள்ளனவா என்று கண்காணிக்கும்",
