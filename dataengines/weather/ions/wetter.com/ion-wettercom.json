@@ -19,6 +19,7 @@
         "Description[uk]": "Прогноз погоди з wetter.com",
         "Description[vi]": "Dự báo thời tiết của wetter.com",
         "Description[x-test]": "xxWeather forecast by wetter.comxx",
+        "Description[zh_CN]": "wetter.com 网站提供的天气预报",
         "Icon": "noneyet",
         "Id": "wettercom",
         "Name": "wetter.com",

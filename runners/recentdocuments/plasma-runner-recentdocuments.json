@@ -21,7 +21,8 @@
                 "Name[sv]": "Sebastian Kügler",
                 "Name[uk]": "Sebastian Kügler",
                 "Name[vi]": "Sebastian Kügler",
-                "Name[x-test]": "xxSebastian Küglerxx"
+                "Name[x-test]": "xxSebastian Küglerxx",
+                "Name[zh_CN]": "Sebastian Kügler"
             }
         ],
         "EnabledByDefault": true,
@@ -68,7 +69,7 @@
         "Name[uk]": "Нещодавні файли",
         "Name[vi]": "Tệp gần đây",
         "Name[x-test]": "xxRecent Filesxx",
-        "Name[zh_CN]": "最近的文件",
+        "Name[zh_CN]": "最近文件",
         "ServiceTypes": [
             "Plasma/Runner"
         ],

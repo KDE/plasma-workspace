@@ -22,7 +22,8 @@
                 "Name[ta]": "புஷன் ஷா",
                 "Name[uk]": "Bhushan Shah",
                 "Name[vi]": "Bhushan Shah",
-                "Name[x-test]": "xxBhushan Shahxx"
+                "Name[x-test]": "xxBhushan Shahxx",
+                "Name[zh_CN]": "Bhushan Shah"
             }
         ],
         "Category": "Windows and Tasks",
@@ -46,6 +47,7 @@
         "Description[uk]": "Панель з вкладками для перемикання дій",
         "Description[vi]": "Thanh thẻ để chuyển Hoạt động",
         "Description[x-test]": "xxTab bar to switch activitiesxx",
+        "Description[zh_CN]": "切换活动的标签栏",
         "EnabledByDefault": true,
         "FormFactors": [
             "desktop"

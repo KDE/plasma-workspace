@@ -21,7 +21,8 @@
                 "Name[sv]": "Chani",
                 "Name[uk]": "Chani",
                 "Name[vi]": "Chani",
-                "Name[x-test]": "xxChanixx"
+                "Name[x-test]": "xxChanixx",
+                "Name[zh_CN]": "Chani"
             }
         ],
         "Description": "Information and launching of all applications in the app menu.",
@@ -44,6 +45,7 @@
         "Description[uk]": "Відомості і запуск всіх програма з меню програм.",
         "Description[vi]": "Thông tin và việc khởi chạy của tất cả các ứng dụng trong trình đơn ứng dụng.",
         "Description[x-test]": "xxInformation and launching of all applications in the app menu.xx",
+        "Description[zh_CN]": "显示信息或启动菜单中的所有应用程序。",
         "EnabledByDefault": true,
         "Icon": "user-desktop",
         "Id": "apps",

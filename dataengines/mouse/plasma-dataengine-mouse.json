@@ -27,6 +27,7 @@
         "Description[uk]": "Позиція вказівника миші і курсора",
         "Description[vi]": "Vị trí và con trỏ chuột",
         "Description[x-test]": "xxMouse position and cursorxx",
+        "Description[zh_CN]": "鼠标位置和光标",
         "Icon": "input-mouse",
         "Id": "mouse",
         "Name": "Pointer Position",

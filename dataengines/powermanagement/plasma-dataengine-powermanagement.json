@@ -27,6 +27,7 @@
         "Description[uk]": "Акумулятор, мережеве живлення, відомості щодо присипляння і PowerDevil.",
         "Description[vi]": "Thông tin pin, củ sạc, chế độ ngủ và PowerDevil.",
         "Description[x-test]": "xxBattery, AC, sleep and PowerDevil information.xx",
+        "Description[zh_CN]": "提供电池、交流适配器、系统睡眠及 PowerDevil 信息。",
         "Icon": "preferences-system-power-management",
         "Id": "powermanagement",
         "Name": "Power Management",
@@ -49,6 +50,7 @@
         "Name[uk]": "Керування живленням",
         "Name[vi]": "Quản lí nguồn điện",
         "Name[x-test]": "xxPower Managementxx",
+        "Name[zh_CN]": "电源管理",
         "ServiceTypes": [
             "Plasma/DataEngine"
         ],

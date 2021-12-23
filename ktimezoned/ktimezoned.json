@@ -20,6 +20,7 @@
         "Description[uk]": "Надає дані щодо часового поясу системи програмам",
         "Description[vi]": "Cung cấp múi giờ hệ thống cho các ứng dụng",
         "Description[x-test]": "xxProvides the system's time zone to applicationsxx",
+        "Description[zh_CN]": "为应用程序提供系统时区信息",
         "Name": "Time Zone",
         "Name[ar]": "المنطقة الزمنية",
         "Name[ast]": "Fusu horariu",

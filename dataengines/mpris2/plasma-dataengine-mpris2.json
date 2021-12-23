@@ -27,6 +27,7 @@
         "Description[uk]": "Надає дані з мультимедійних програвачів та керує ними за допомогою MPRIS2",
         "Description[vi]": "Cung cấp thông tin của và cách điều khiển với các trình phát phương tiện thông qua MPRIS2",
         "Description[x-test]": "xxProvides information from and control over media players via MPRIS2xx",
+        "Description[zh_CN]": "通过 MPRIS2 对媒体播放器进行信息获取和控制",
         "Icon": "applications-multimedia",
         "Id": "mpris2",
         "License": "",

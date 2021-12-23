@@ -22,7 +22,8 @@
                 "Name[ta]": "பிளாஸ்மா குழு",
                 "Name[uk]": "Команда розробників Плазми",
                 "Name[vi]": "Đội Plasma",
-                "Name[x-test]": "xxThe Plasma Teamxx"
+                "Name[x-test]": "xxThe Plasma Teamxx",
+                "Name[zh_CN]": "Plasma 开发团队"
             }
         ],
         "Category": "System Information",
@@ -46,6 +47,7 @@
         "Description[uk]": "Створює прогалини на панелі.",
         "Description[vi]": "Giữ các khoảng trống trong bảng.",
         "Description[x-test]": "xxReserve empty spaces within the panel.xx",
+        "Description[zh_CN]": "在面板中预留空白。",
         "EnabledByDefault": true,
         "Id": "org.kde.plasma.panelspacer",
         "License": "GPL-2.0+",
@@ -116,7 +118,7 @@
         "Name[vi]": "Khoảng trống bảng",
         "Name[wa]": "Separateu e scriftôr",
         "Name[x-test]": "xxPanel Spacerxx",
-        "Name[zh_CN]": "面板间距",
+        "Name[zh_CN]": "面板间隙",
         "Name[zh_TW]": "面板間隔器",
         "ServiceTypes": [
             "Plasma/Applet"

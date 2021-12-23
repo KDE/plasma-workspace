@@ -21,7 +21,8 @@
                 "Name[sv]": "Jacopo De Simoi",
                 "Name[uk]": "Jacopo De Simoi",
                 "Name[vi]": "Jacopo De Simoi",
-                "Name[x-test]": "xxJacopo De Simoixx"
+                "Name[x-test]": "xxJacopo De Simoixx",
+                "Name[zh_CN]": "Jacopo De Simoi"
             }
         ],
         "Category": "",
@@ -45,6 +46,7 @@
         "Description[uk]": "Пасивні сповіщення користувача щодо пристроїв.",
         "Description[vi]": "Thông báo thiết bị thụ động dành cho người dùng.",
         "Description[x-test]": "xxPassive device notifications for the user.xx",
+        "Description[zh_CN]": "为用户提供被动出现的设备通知。",
         "Icon": "device-notifier",
         "Id": "devicenotifications",
         "Name": "Device Notifications",

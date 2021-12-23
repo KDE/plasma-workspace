@@ -22,7 +22,8 @@
                 "Name[ta]": "பிளாஸ்மா குழு",
                 "Name[uk]": "Команда розробників Плазми",
                 "Name[vi]": "Đội Plasma",
-                "Name[x-test]": "xxThe Plasma Teamxx"
+                "Name[x-test]": "xxThe Plasma Teamxx",
+                "Name[zh_CN]": "Plasma 开发团队"
             }
         ],
         "Category": "",
@@ -46,6 +47,7 @@
         "Description[uk]": "Дані щодо пристроїв з Solid",
         "Description[vi]": "Dữ liệu về thiết bị thông qua Solid",
         "Description[x-test]": "xxDevice data via Solidxx",
+        "Description[zh_CN]": "通过 Solid 获得设备数据",
         "Icon": "drive-harddisk",
         "Id": "soliddevice",
         "Name": "Device Information",

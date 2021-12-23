@@ -21,7 +21,8 @@
                 "Name[sv]": "Marco Martin",
                 "Name[uk]": "Marco Martin",
                 "Name[vi]": "Marco Martin",
-                "Name[x-test]": "xxMarco Martinxx"
+                "Name[x-test]": "xxMarco Martinxx",
+                "Name[zh_CN]": "Marco Martin"
             }
         ],
         "Category": "",
@@ -45,6 +46,7 @@
         "Description[uk]": "Звичайне одноколірне тло",
         "Description[vi]": "Phông nền dạng màu trơn",
         "Description[x-test]": "xxPlain color wallpaperxx",
+        "Description[zh_CN]": "纯色壁纸",
         "Icon": "preferences-desktop-color",
         "Id": "org.kde.color",
         "License": "GPLv2+",

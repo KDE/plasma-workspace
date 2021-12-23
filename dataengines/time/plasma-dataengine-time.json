@@ -21,7 +21,8 @@
                 "Name[sv]": "Aaron Seigo",
                 "Name[uk]": "Aaron Seigo",
                 "Name[vi]": "Aaron Seigo",
-                "Name[x-test]": "xxAaron Seigoxx"
+                "Name[x-test]": "xxAaron Seigoxx",
+                "Name[zh_CN]": "Aaron Seigo"
             }
         ],
         "Category": "Date and Time",
@@ -45,6 +46,7 @@
         "Description[uk]": "Дата і час за часовими поясами",
         "Description[vi]": "Ngày giờ theo múi giờ",
         "Description[x-test]": "xxDate and time by timezonexx",
+        "Description[zh_CN]": "根据时区提供日期和时间",
         "EnabledByDefault": true,
         "Icon": "preferences-system-time",
         "Id": "time",

@@ -22,7 +22,8 @@
                 "Name[ta]": "பிளாஸ்மா குழு",
                 "Name[uk]": "Команда розробників Плазми",
                 "Name[vi]": "Đội Plasma",
-                "Name[x-test]": "xxThe Plasma Teamxx"
+                "Name[x-test]": "xxThe Plasma Teamxx",
+                "Name[zh_CN]": "Plasma 开发团队"
             }
         ],
         "Category": "",
@@ -46,6 +47,7 @@
         "Description[uk]": "Стежить за з’єднанням і від’єднанням портативних пристроїв.",
         "Description[vi]": "Theo dõi các thiết bị cắm nóng được khi chúng xuất hiện và biến mất.",
         "Description[x-test]": "xxTracks hot-pluggable devices as they appear and disappear.xx",
+        "Description[zh_CN]": "跟踪热插拔设备的出现与消失。",
         "Icon": "drive-removable-media-usb",
         "Id": "hotplug",
         "License": "",

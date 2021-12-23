@@ -21,7 +21,8 @@
                 "Name[sv]": "Marco Martin",
                 "Name[uk]": "Marco Martin",
                 "Name[vi]": "Marco Martin",
-                "Name[x-test]": "xxMarco Martinxx"
+                "Name[x-test]": "xxMarco Martinxx",
+                "Name[zh_CN]": "Marco Martin"
             }
         ],
         "Category": "System Information",
@@ -45,6 +46,7 @@
         "Description[uk]": "Віджет нагляду за системою, який показує використання кореневого розділу",
         "Description[vi]": "Phụ kiện giám sát hệ thống cho biết lượng dùng của phân vùng gốc",
         "Description[x-test]": "xxSystem monitor Widget that shows the usage of the root partitionxx",
+        "Description[zh_CN]": "显示根分区使用情况的系统监视部件",
         "EnabledByDefault": true,
         "FormFactors": [
             "desktop"

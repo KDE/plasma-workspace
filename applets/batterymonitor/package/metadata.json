@@ -21,7 +21,8 @@
                 "Name[sv]": "Sebastian Kügler",
                 "Name[uk]": "Sebastian Kügler, Kai Uwe Broulik",
                 "Name[vi]": "Sebastian Kügler, Kai Uwe Broulik",
-                "Name[x-test]": "xxSebastian Kügler, Kai Uwe Broulikxx"
+                "Name[x-test]": "xxSebastian Kügler, Kai Uwe Broulikxx",
+                "Name[zh_CN]": "Sebastian Kügler, Kai Uwe Broulik"
             }
         ],
         "Category": "System Information",
@@ -45,6 +46,7 @@
         "Description[uk]": "Перегляньте стан заряду акумулятора",
         "Description[vi]": "Xem tình trạng nguồn điện của pin",
         "Description[x-test]": "xxSee the power status of your batteryxx",
+        "Description[zh_CN]": "查看电池的电量状态",
         "EnabledByDefault": true,
         "FormFactors": [
             "desktop"

@@ -20,6 +20,7 @@
         "Description[uk]": "Попереджає, якщо у домашній теці залишається мало місця",
         "Description[vi]": "Cảnh báo khi sắp hết không gian cho thư mục nhà của bạn",
         "Description[x-test]": "xxWarns when running out of space on your home folderxx",
+        "Description[zh_CN]": "在主目录磁盘空间不足时发出警告",
         "Name": "Free Space Notifier",
         "Name[ar]": "مُخطِر المساحة الحرّة",
         "Name[ast]": "Avisador d'espaciu llibre",

@@ -21,6 +21,7 @@
         "Description[uk]": "Налаштовування системи відгуків користувача",
         "Description[vi]": "Cấu hình các thiết lập phản hồi của người dùng",
         "Description[x-test]": "xxConfigure user feedback settingsxx",
+        "Description[zh_CN]": "配置用户反馈设置",
         "FormFactors": [
             "tablet",
             "handset",

@@ -21,6 +21,7 @@
         "Description[uk]": "Вибір загального вигляду і поведінки",
         "Description[vi]": "Chọn cách nhìn và cảm toàn cục",
         "Description[x-test]": "xxChoose global look and feelxx",
+        "Description[zh_CN]": "选择全局界面外观风格",
         "Icon": "preferences-desktop-theme-global",
         "Name": "Global Theme",
         "Name[ar]": "سمة شاملة",

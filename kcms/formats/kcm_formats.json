@@ -20,6 +20,7 @@
         "Description[uk]": "Формати запису чисел, грошових сум та часу",
         "Description[vi]": "Dạng thức số, tiền tệ và thời gian",
         "Description[x-test]": "xxNumeric, Currency and Time Formatsxx",
+        "Description[zh_CN]": "数字、货币和时间格式",
         "FormFactors": [
             "tablet",
             "handset",

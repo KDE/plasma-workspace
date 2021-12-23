@@ -21,7 +21,8 @@
                 "Name[sv]": "Teemu Rytilahti",
                 "Name[uk]": "Teemu Rytilahti",
                 "Name[vi]": "Teemu Rytilahti",
-                "Name[x-test]": "xxTeemu Rytilahtixx"
+                "Name[x-test]": "xxTeemu Rytilahtixx",
+                "Name[zh_CN]": "Teemu Rytilahti"
             }
         ],
         "Description": "Search the web using keywords",
@@ -44,6 +45,7 @@
         "Description[uk]": "Пошук в інтернеті за допомогою ключових слів",
         "Description[vi]": "Tìm kiếm web dùng các từ khoá",
         "Description[x-test]": "xxSearch the web using keywordsxx",
+        "Description[zh_CN]": "使用关键字搜索网络内容",
         "EnabledByDefault": true,
         "Icon": "internet-web-browser",
         "Id": "webshortcuts",
@@ -68,6 +70,7 @@
         "Name[uk]": "Ключові слова пошуку в інтернеті",
         "Name[vi]": "Từ khoá tìm kiếm web",
         "Name[x-test]": "xxWeb Search Keywordsxx",
+        "Name[zh_CN]": "网络搜索关键词",
         "ServiceTypes": [
             "Plasma/Runner"
         ],

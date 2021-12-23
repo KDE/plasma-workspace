@@ -22,7 +22,8 @@
                 "Name[ta]": "பிளாஸ்மா குழு",
                 "Name[uk]": "Команда розробників Плазми",
                 "Name[vi]": "Đội Plasma",
-                "Name[x-test]": "xxThe Plasma Teamxx"
+                "Name[x-test]": "xxThe Plasma Teamxx",
+                "Name[zh_CN]": "Plasma 开发团队"
             }
         ],
         "Category": "File System",
@@ -46,6 +47,7 @@
         "Description[uk]": "Загальна піктограма",
         "Description[vi]": "Một biểu tượng chung",
         "Description[x-test]": "xxA generic iconxx",
+        "Description[zh_CN]": "通用图标",
         "EnabledByDefault": true,
         "Id": "org.kde.plasma.icon",
         "License": "GPL",

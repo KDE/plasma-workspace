@@ -21,7 +21,8 @@
                 "Name[sv]": "Shawn Starr",
                 "Name[uk]": "Shawn Starr",
                 "Name[vi]": "Shawn Starr",
-                "Name[x-test]": "xxShawn Starrxx"
+                "Name[x-test]": "xxShawn Starrxx",
+                "Name[zh_CN]": "Shawn Starr"
             }
         ],
         "Category": "",
@@ -44,6 +45,7 @@
         "Description[uk]": "Дані щодо погоди з декількох мережевих джерел",
         "Description[vi]": "Dữ liệu thời tiết từ nhiều nguồn trực tuyến",
         "Description[x-test]": "xxWeather data from multiple online sourcesxx",
+        "Description[zh_CN]": "多个在线信息源提供的天气数据",
         "Icon": "weather-clear",
         "Id": "weather",
         "License": "GPLv2+",

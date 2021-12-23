@@ -21,7 +21,8 @@
                 "Name[sv]": "Chani",
                 "Name[uk]": "Chani",
                 "Name[vi]": "Chani",
-                "Name[x-test]": "xxChanixx"
+                "Name[x-test]": "xxChanixx",
+                "Name[zh_CN]": "Chani"
             }
         ],
         "Description": "Switch to another virtual desktop",
@@ -44,6 +45,7 @@
         "Description[uk]": "Перемкнутися на іншу віртуальну стільницю",
         "Description[vi]": "Chuyển sang một bàn làm việc ảo khác",
         "Description[x-test]": "xxSwitch to another virtual desktopxx",
+        "Description[zh_CN]": "切换到另一个虚拟桌面",
         "EnabledByDefault": true,
         "Icon": "user-desktop",
         "Id": "org.kde.switchdesktop",

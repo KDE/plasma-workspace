@@ -21,7 +21,8 @@
                 "Name[sv]": "Jan Gerrit Marker",
                 "Name[uk]": "Jan Gerrit Marker",
                 "Name[vi]": "Jan Gerrit Marker",
-                "Name[x-test]": "xxJan Gerrit Markerxx"
+                "Name[x-test]": "xxJan Gerrit Markerxx",
+                "Name[zh_CN]": "Jan Gerrit Marker"
             }
         ],
         "Description": "Stop applications that are currently running",
@@ -44,6 +45,7 @@
         "Description[uk]": "Завершує роботу запущених програм",
         "Description[vi]": "Dừng các ứng dụng đang chạy",
         "Description[x-test]": "xxStop applications that are currently runningxx",
+        "Description[zh_CN]": "停止正在运行的应用程序",
         "EnabledByDefault": true,
         "Icon": "application-exit",
         "Id": "Kill Runner",

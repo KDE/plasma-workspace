@@ -21,6 +21,7 @@
         "Description[uk]": "Встановлення, керування та попередній перегляд шрифтів",
         "Description[vi]": "Cài đặt, quản lí và xem thử phông chữ",
         "Description[x-test]": "xxInstall, manage and preview fontsxx",
+        "Description[zh_CN]": "安装、管理和预览字体",
         "Icon": "preferences-desktop-font-installer",
         "Name": "Font Management",
         "Name[ar]": "إدارة الخطوط",

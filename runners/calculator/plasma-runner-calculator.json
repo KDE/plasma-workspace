@@ -22,7 +22,8 @@
                 "Name[ta]": "பிளாஸ்மா குழு",
                 "Name[uk]": "Команда розробників Плазми",
                 "Name[vi]": "Đội Plasma",
-                "Name[x-test]": "xxPlasma Teamxx"
+                "Name[x-test]": "xxPlasma Teamxx",
+                "Name[zh_CN]": "Plasma 开发团队"
             }
         ],
         "Description": "Calculate expressions",
@@ -45,6 +46,7 @@
         "Description[uk]": "Обчислення виразів",
         "Description[vi]": "Tính biểu thức",
         "Description[x-test]": "xxCalculate expressionsxx",
+        "Description[zh_CN]": "计算表达式",
         "EnabledByDefault": true,
         "Icon": "accessories-calculator",
         "Id": "calculator",

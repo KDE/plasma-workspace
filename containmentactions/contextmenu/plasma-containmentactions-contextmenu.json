@@ -21,7 +21,8 @@
                 "Name[sv]": "Chani",
                 "Name[uk]": "Chani",
                 "Name[vi]": "Chani",
-                "Name[x-test]": "xxChanixx"
+                "Name[x-test]": "xxChanixx",
+                "Name[zh_CN]": "Chani"
             }
         ],
         "Description": "The menu that normally shows on right-click",
@@ -44,6 +45,7 @@
         "Description[uk]": "Меню, яке буде показано у відповідь на клацання правою кнопкою миші",
         "Description[vi]": "Trình đơn thường thấy khi bấm phải",
         "Description[x-test]": "xxThe menu that normally shows on right-clickxx",
+        "Description[zh_CN]": "通常在点击右键时显示的菜单",
         "EnabledByDefault": true,
         "Icon": "help-contextual",
         "Id": "org.kde.contextmenu",

@@ -27,6 +27,7 @@
         "Description[uk]": "Виконати програму рушія даних",
         "Description[vi]": "Chạy dụng cụ \"Dữ liệu\" thực thi được",
         "Description[x-test]": "xxRun Executable Data Enginexx",
+        "Description[zh_CN]": "运行程序数据引擎",
         "Icon": "application-x-executable-script",
         "Id": "executable",
         "Name": "Run Commands",

@@ -21,7 +21,8 @@
                 "Name[sv]": "Chani",
                 "Name[uk]": "Chani",
                 "Name[vi]": "Chani",
-                "Name[x-test]": "xxChanixx"
+                "Name[x-test]": "xxChanixx",
+                "Name[zh_CN]": "Chani"
             }
         ],
         "Description": "Show a list of windows to switch to",
@@ -44,6 +45,7 @@
         "Description[uk]": "Показує список вікон для перемикання",
         "Description[vi]": "Hiện một danh sách các cửa sổ để chuyển",
         "Description[x-test]": "xxShow a list of windows to switch toxx",
+        "Description[zh_CN]": "显示可供切换的窗口列表",
         "EnabledByDefault": true,
         "Icon": "preferences-system-windows",
         "Id": "switchwindow",

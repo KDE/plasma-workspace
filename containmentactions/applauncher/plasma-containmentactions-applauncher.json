@@ -21,7 +21,8 @@
                 "Name[sv]": "Chani",
                 "Name[uk]": "Chani",
                 "Name[vi]": "Chani",
-                "Name[x-test]": "xxChanixx"
+                "Name[x-test]": "xxChanixx",
+                "Name[zh_CN]": "Chani"
             }
         ],
         "Description": "Simple application launcher",
@@ -44,6 +45,7 @@
         "Description[uk]": "Простий інструмент запуску програм",
         "Description[vi]": "Trình khởi chạy ứng dụng đơn giản",
         "Description[x-test]": "xxSimple application launcherxx",
+        "Description[zh_CN]": "简易程序启动器",
         "EnabledByDefault": true,
         "Icon": "preferences-desktop-launch-feedback",
         "Id": "org.kde.applauncher",

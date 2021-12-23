@@ -21,7 +21,8 @@
                 "Name[sv]": "Martin Klapetek",
                 "Name[uk]": "Martin Klapetek",
                 "Name[vi]": "Martin Klapetek",
-                "Name[x-test]": "xxMartin Klapetekxx"
+                "Name[x-test]": "xxMartin Klapetekxx",
+                "Name[zh_CN]": "Martin Klapetek"
             }
         ],
         "Description": "Calendar plugin for displaying public holidays",
@@ -44,6 +45,7 @@
         "Description[uk]": "Додаток календаря для показу офіційних свят",
         "Description[vi]": "Phần cài cắm lịch để hiển thị các ngày lễ quốc gia",
         "Description[x-test]": "xxCalendar plugin for displaying public holidaysxx",
+        "Description[zh_CN]": "显示公共节假日的日历插件",
         "Icon": "view-calendar-holiday",
         "Name": "Holidays",
         "Name[ar]": "العُطل",
@@ -64,7 +66,8 @@
         "Name[ta]": "விடுமுறைகள்",
         "Name[uk]": "Свята",
         "Name[vi]": "Ngày lễ",
-        "Name[x-test]": "xxHolidaysxx"
+        "Name[x-test]": "xxHolidaysxx",
+        "Name[zh_CN]": "节假日"
     },
     "X-KDE-PlasmaCalendar-ConfigUi": "holidays/HolidaysConfig.qml"
 }

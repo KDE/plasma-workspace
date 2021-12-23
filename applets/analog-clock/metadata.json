@@ -21,7 +21,8 @@
                 "Name[sv]": "Marco Martin",
                 "Name[uk]": "Marco Martin",
                 "Name[vi]": "Marco Martin",
-                "Name[x-test]": "xxMarco Martinxx"
+                "Name[x-test]": "xxMarco Martinxx",
+                "Name[zh_CN]": "Marco Martin"
             }
         ],
         "Category": "Date and Time",
@@ -45,6 +46,7 @@
         "Description[uk]": "Годинник зі стрілками",
         "Description[vi]": "Một đồng hồ với các kim",
         "Description[x-test]": "xxA clock with handsxx",
+        "Description[zh_CN]": "带指针的时钟",
         "EnabledByDefault": true,
         "FormFactors": [
             "tablet",

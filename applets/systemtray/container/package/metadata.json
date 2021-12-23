@@ -21,7 +21,8 @@
                 "Name[sv]": "Marco Martin",
                 "Name[uk]": "Marco Martin",
                 "Name[vi]": "Marco Martin",
-                "Name[x-test]": "xxMarco Martinxx"
+                "Name[x-test]": "xxMarco Martinxx",
+                "Name[zh_CN]": "Marco Martin"
             }
         ],
         "Category": "Windows and Tasks",
@@ -45,6 +46,7 @@
         "Description[uk]": "Доступ до прихованих програм, мінімізованих до системного лотка",
         "Description[vi]": "Truy cập các ứng dụng ẩn được thu nhỏ trong khay hệ thống",
         "Description[x-test]": "xxAccess hidden applications minimized in the system trayxx",
+        "Description[zh_CN]": "访问在系统托盘中最小化隐藏的应用程序",
         "EnabledByDefault": true,
         "FormFactors": [
             "desktop"

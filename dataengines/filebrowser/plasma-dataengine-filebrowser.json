@@ -27,6 +27,7 @@
         "Description[uk]": "Інформація про файли і каталоги.",
         "Description[vi]": "Thông tin về các tệp và thư mục.",
         "Description[x-test]": "xxInformation about files and directories.xx",
+        "Description[zh_CN]": "关于文件和目录的信息。",
         "Icon": "system-file-manager",
         "Id": "filebrowser",
         "License": "",

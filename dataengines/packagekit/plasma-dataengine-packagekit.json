@@ -21,7 +21,8 @@
                 "Name[sv]": "Gregor Taetzner",
                 "Name[uk]": "Gregor Taetzner",
                 "Name[vi]": "Gregor Taetzner",
-                "Name[x-test]": "xxGregor Taetznerxx"
+                "Name[x-test]": "xxGregor Taetznerxx",
+                "Name[zh_CN]": "Gregor Taetzner"
             }
         ],
         "Category": "",
@@ -45,6 +46,7 @@
         "Description[uk]": "Рушій даних PackageKit",
         "Description[vi]": "Dụng cụ dữ liệu PackageKit",
         "Description[x-test]": "xxPackageKit Data Enginexx",
+        "Description[zh_CN]": "PackageKit 数据引擎",
         "Icon": "package-x-generic",
         "Id": "packagekit",
         "License": "GPL",

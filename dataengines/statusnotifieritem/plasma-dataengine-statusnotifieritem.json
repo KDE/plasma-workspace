@@ -21,7 +21,8 @@
                 "Name[sv]": "Matthieu Gallien",
                 "Name[uk]": "Matthieu Gallien",
                 "Name[vi]": "Matthieu Gallien",
-                "Name[x-test]": "xxMatthieu Gallienxx"
+                "Name[x-test]": "xxMatthieu Gallienxx",
+                "Name[zh_CN]": "Matthieu Gallien"
             }
         ],
         "Description": "Engine for applications' status information, based on the Status Notifier protocol.",
@@ -44,6 +45,7 @@
         "Description[uk]": "Рушій даних щодо стану програм, заснований на протоколі сповіщення про стан.",
         "Description[vi]": "Dụng cụ cấp thông tin về trạng thái ứng dụng, dựa trên giao thức \"Trình thông báo trạng thái\".",
         "Description[x-test]": "xxEngine for applications' status information, based on the Status Notifier protocol.xx",
+        "Description[zh_CN]": "用于提供应用程序状态信息的引擎，基于状态通知协议。",
         "EnabledByDefault": true,
         "Icon": "preferences-desktop-notification",
         "Id": "statusnotifieritem",

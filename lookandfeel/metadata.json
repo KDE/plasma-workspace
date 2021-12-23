@@ -21,7 +21,8 @@
                 "Name[ta]": "கே.டீ.யீ. வரைகலை வடிவமைப்புக் குழு",
                 "Name[uk]": "Група з візуального дизайну KDE",
                 "Name[vi]": "Đội Thiết kế Trực quan KDE",
-                "Name[x-test]": "xxKDE Visual Design Groupxx"
+                "Name[x-test]": "xxKDE Visual Design Groupxx",
+                "Name[zh_CN]": "KDE 视觉设计团队"
             }
         ],
         "Category": "",
@@ -44,6 +45,7 @@
         "Description[uk]": "Breeze, автори — KDE VDG",
         "Description[vi]": "Breeze, do KDE VDG",
         "Description[x-test]": "xxBreeze by the KDE VDGxx",
+        "Description[zh_CN]": "Breeze 微风主题，由 KDE VDG (视觉设计团队) 设计制作",
         "Id": "org.kde.breeze.desktop",
         "License": "GPLv2+",
         "Name": "Breeze",

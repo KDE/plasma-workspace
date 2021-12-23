@@ -21,6 +21,7 @@
         "Description[uk]": "Налаштовування шрифтів у інтерфейсі користувача",
         "Description[vi]": "Cấu hình phông chữ trong giao diện người dùng",
         "Description[x-test]": "xxConfigure user interface fontsxx",
+        "Description[zh_CN]": "配置用户界面字体",
         "FormFactors": [
             "tablet",
             "handset",

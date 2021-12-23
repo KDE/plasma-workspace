@@ -22,7 +22,8 @@
                 "Name[ta]": "பிளாஸ்மா குழு",
                 "Name[uk]": "Команда розробників Плазми",
                 "Name[vi]": "Đội Plasma",
-                "Name[x-test]": "xxPlasma Teamxx"
+                "Name[x-test]": "xxPlasma Teamxx",
+                "Name[zh_CN]": "Plasma 开发团队"
             }
         ],
         "Description": "Find applications, control panels and services",
@@ -45,6 +46,7 @@
         "Description[uk]": "Знайти програми, панелі керування та служби",
         "Description[vi]": "Tìm ứng dụng, bảng điều khiển và dịch vụ",
         "Description[x-test]": "xxFind applications, control panels and servicesxx",
+        "Description[zh_CN]": "查找应用程序、控制面板和服务",
         "EnabledByDefault": true,
         "Icon": "applications-other",
         "Id": "services",

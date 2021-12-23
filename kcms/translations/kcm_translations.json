@@ -21,6 +21,7 @@
         "Description[uk]": "Зміна мови перекладу робочого простору і програм",
         "Description[vi]": "Thay đổi ngôn ngữ không gian làm việc và ứng dụng",
         "Description[x-test]": "xxChange workspace and application languagesxx",
+        "Description[zh_CN]": "更改工作空间和应用程序语言",
         "FormFactors": [
             "tablet",
             "handset",

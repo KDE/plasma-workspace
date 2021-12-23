@@ -21,7 +21,8 @@
                 "Name[sv]": "Aaron Seigo",
                 "Name[uk]": "Aaron Seigo",
                 "Name[vi]": "Aaron Seigo",
-                "Name[x-test]": "xxAaron Seigoxx"
+                "Name[x-test]": "xxAaron Seigoxx",
+                "Name[zh_CN]": "Aaron Seigo"
             }
         ],
         "Category": "Accessibility",
@@ -45,6 +46,7 @@
         "Description[uk]": "Стан модифікаторів клавіатури і кнопок миші",
         "Description[vi]": "Trạng thái phím bổ trợ và nút chuột",
         "Description[x-test]": "xxKeyboard modifier and mouse buttons statesxx",
+        "Description[zh_CN]": "显示键盘修饰健及鼠标按键状态",
         "EnabledByDefault": true,
         "Icon": "input-keyboard",
         "Id": "keystate",

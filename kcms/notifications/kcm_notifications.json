@@ -21,6 +21,7 @@
         "Description[uk]": "Сповіщення щодо подій та дії",
         "Description[vi]": "Thông báo và hành động cho sự kiện",
         "Description[x-test]": "xxEvent Notifications and Actionsxx",
+        "Description[zh_CN]": "事件通知和操作",
         "FormFactors": [
             "tablet",
             "handset",

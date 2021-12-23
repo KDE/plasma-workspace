@@ -22,7 +22,8 @@
                 "Name[sv]": "Kai Uwe Broulik",
                 "Name[uk]": "Kai Uwe Broulik",
                 "Name[vi]": "Kai Uwe Broulik",
-                "Name[x-test]": "xxKai Uwe Broulikxx"
+                "Name[x-test]": "xxKai Uwe Broulikxx",
+                "Name[zh_CN]": "Kai Uwe Broulik"
             }
         ],
         "Description": "Choose color scheme",
@@ -45,6 +46,7 @@
         "Description[uk]": "Вибір схеми кольорів",
         "Description[vi]": "Chọn quy hoạch màu",
         "Description[x-test]": "xxChoose color schemexx",
+        "Description[zh_CN]": "选择配色方案",
         "FormFactors": [
             "tablet",
             "handset",

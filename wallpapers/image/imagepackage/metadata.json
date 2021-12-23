@@ -21,7 +21,8 @@
                 "Name[sv]": "Marco Martin",
                 "Name[uk]": "Marco Martin",
                 "Name[vi]": "Marco Martin",
-                "Name[x-test]": "xxMarco Martinxx"
+                "Name[x-test]": "xxMarco Martinxx",
+                "Name[zh_CN]": "Marco Martin"
             }
         ],
         "Category": "",
@@ -45,6 +46,7 @@
         "Description[uk]": "Тло із зображень",
         "Description[vi]": "Khung xem phông nền cho các ảnh",
         "Description[x-test]": "xxWallpaper view for imagesxx",
+        "Description[zh_CN]": "图像壁纸视图",
         "Icon": "preferences-desktop-wallpaper",
         "Id": "org.kde.image",
         "License": "GPLv2+",

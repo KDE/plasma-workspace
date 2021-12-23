@@ -21,6 +21,7 @@
         "Description[uk]": "Вибір теми піктограм",
         "Description[vi]": "Chọn chủ đề của biểu tượng",
         "Description[x-test]": "xxChoose icon themexx",
+        "Description[zh_CN]": "选择图标主题",
         "FormFactors": [
             "tablet",
             "handset",

@@ -21,7 +21,8 @@
                 "Name[sv]": "Glenn Ergeerts, Marco Gulino",
                 "Name[uk]": "Glenn Ergeerts, Marco Gulino",
                 "Name[vi]": "Glenn Ergeerts, Marco Gulino",
-                "Name[x-test]": "xxGlenn Ergeerts, Marco Gulinoxx"
+                "Name[x-test]": "xxGlenn Ergeerts, Marco Gulinoxx",
+                "Name[zh_CN]": "Glenn Ergeerts, Marco Gulino"
             }
         ],
         "Description": "Find and open bookmarks",
@@ -44,6 +45,7 @@
         "Description[uk]": "Знайти і відкрити закладки",
         "Description[vi]": "Tìm và mở dấu nhớ",
         "Description[x-test]": "xxFind and open bookmarksxx",
+        "Description[zh_CN]": "查找并打开书签",
         "EnabledByDefault": true,
         "Icon": "bookmarks",
         "Id": "bookmarks",
@@ -68,6 +70,7 @@
         "Name[uk]": "Закладки",
         "Name[vi]": "Dấu nhớ",
         "Name[x-test]": "xxBookmarksxx",
+        "Name[zh_CN]": "书签",
         "ServiceTypes": [
             "Plasma/Runner"
         ],

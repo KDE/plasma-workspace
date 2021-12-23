@@ -22,7 +22,8 @@
                 "Name[ta]": "மார்ட்டின் கிராஸ்லின்",
                 "Name[uk]": "Martin Gräßlin",
                 "Name[vi]": "Martin Gräßlin",
-                "Name[x-test]": "xxMartin Gräßlinxx"
+                "Name[x-test]": "xxMartin Gräßlinxx",
+                "Name[zh_CN]": "Martin Gräßlin"
             }
         ],
         "Category": "Clipboard",
@@ -46,6 +47,7 @@
         "Description[uk]": "Надає доступ до журналу буфера обміну даними",
         "Description[vi]": "Cho phép truy cập lịch sử bảng nháp",
         "Description[x-test]": "xxProvides access to the clipboard historyxx",
+        "Description[zh_CN]": "访问剪贴板历史",
         "EnabledByDefault": true,
         "FormFactors": [
             "desktop"

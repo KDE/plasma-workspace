@@ -27,6 +27,7 @@
         "Description[uk]": "Рушій даних для отримання піктограм для вебсайтів",
         "Description[vi]": "Dụng cụ dữ liệu để lấy các biểu tượng địa điểm web",
         "Description[x-test]": "xxData Engine for getting favicons of web sitesxx",
+        "Description[zh_CN]": "用于获取网站图标的数据引擎",
         "Icon": "view-web-browser-dom-tree",
         "Id": "favicons",
         "Name": "Favicons",

@@ -21,7 +21,8 @@
                 "Name[sv]": "David Edmundson",
                 "Name[uk]": "David Edmundson",
                 "Name[vi]": "David Edmundson",
-                "Name[x-test]": "xxDavid Edmundsonxx"
+                "Name[x-test]": "xxDavid Edmundsonxx",
+                "Name[zh_CN]": "David Edmundson"
             }
         ],
         "Description": "Open devices and folder bookmarks",
@@ -44,6 +45,7 @@
         "Description[uk]": "Відкриття пристроїв та закладок на теки",
         "Description[vi]": "Mở thiết bị và dấu nhớ thư mục",
         "Description[x-test]": "xxOpen devices and folder bookmarksxx",
+        "Description[zh_CN]": "打开设备和文件夹书签",
         "EnabledByDefault": true,
         "Icon": "user-home",
         "Id": "places",

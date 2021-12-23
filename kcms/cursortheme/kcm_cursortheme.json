@@ -20,6 +20,7 @@
         "Description[uk]": "Вибір теми вказівника миші",
         "Description[vi]": "Chọn chủ đề của con trỏ chuột",
         "Description[x-test]": "xxChoose mouse cursor themexx",
+        "Description[zh_CN]": "选择鼠标光标主题",
         "Icon": "preferences-desktop-cursors",
         "Name": "Cursors",
         "Name[ar]": "المؤشرات",

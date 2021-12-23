@@ -21,7 +21,8 @@
                 "Name[sv]": "Sebastian Kügler",
                 "Name[uk]": "Sebastian Kügler",
                 "Name[vi]": "Sebastian Kügler",
-                "Name[x-test]": "xxSebastian Küglerxx"
+                "Name[x-test]": "xxSebastian Küglerxx",
+                "Name[zh_CN]": "Sebastian Kügler"
             }
         ],
         "Category": "Date and Time",
@@ -45,6 +46,7 @@
         "Description[uk]": "Показ розкладу місяця із вашими записами зустрічей і подій",
         "Description[vi]": "Hiển thị tháng với các buổi hẹn và sự kiện của bạn",
         "Description[x-test]": "xxMonth display with your appointments and eventsxx",
+        "Description[zh_CN]": "按月显示您的预约和事件",
         "FormFactors": [
             "tablet",
             "handset",

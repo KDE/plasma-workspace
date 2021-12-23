@@ -22,7 +22,8 @@
                 "Name[sv]": "Marco Martin",
                 "Name[uk]": "Marco Martin",
                 "Name[vi]": "Marco Martin",
-                "Name[x-test]": "xxMarco Martinxx"
+                "Name[x-test]": "xxMarco Martinxx",
+                "Name[zh_CN]": "Marco Martin"
             }
         ],
         "Name": "Look and Feel",
@@ -80,7 +81,7 @@
         "Name[uk]": "Вигляд і поведінка",
         "Name[vi]": "Nhìn và Cảm",
         "Name[x-test]": "xxLook and Feelxx",
-        "Name[zh_CN]": "观感",
+        "Name[zh_CN]": "界面外观",
         "Name[zh_TW]": "外觀與感覺",
         "ServiceTypes": [
             "KPackage/PackageStructure"

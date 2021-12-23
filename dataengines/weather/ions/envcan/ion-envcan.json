@@ -19,6 +19,7 @@
         "Description[uk]": "Дані XML з метеорологічного відділу Канади",
         "Description[vi]": "Dữ liệu XML từ Bộ Môi trường Canada",
         "Description[x-test]": "xxXML Data from Environment Canadaxx",
+        "Description[zh_CN]": "加拿大环境部提供的 XML 数据",
         "Icon": "noneyet",
         "Id": "envcan",
         "Name": "Environment Canada",

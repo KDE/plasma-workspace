@@ -21,7 +21,8 @@
                 "Name[sv]": "Viranch Mehta",
                 "Name[uk]": "Viranch Mehta, Jacopo De Simoi",
                 "Name[vi]": "Viranch Mehta, Jacopo De Simoi",
-                "Name[x-test]": "xxViranch Mehta, Jacopo De Simoixx"
+                "Name[x-test]": "xxViranch Mehta, Jacopo De Simoixx",
+                "Name[zh_CN]": "Viranch Mehta, Jacopo De Simoi"
             }
         ],
         "Category": "System Information",
@@ -45,6 +46,7 @@
         "Description[uk]": "Сповіщення і доступ до пристроїв",
         "Description[vi]": "Thông báo và cách truy cập cho các thiết bị",
         "Description[x-test]": "xxNotifications and access for devicesxx",
+        "Description[zh_CN]": "设备的通知和访问",
         "EnabledByDefault": true,
         "FormFactors": [
             "tablet",

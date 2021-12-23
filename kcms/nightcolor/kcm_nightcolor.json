@@ -21,6 +21,7 @@
         "Description[uk]": "Коригування температури кольорів для зменшення навантаження на очі вночі",
         "Description[vi]": "Điều chỉnh nhiệt độ màu vào buổi tối để giảm căng thẳng cho mắt",
         "Description[x-test]": "xxAdjust color temperature at night to reduce eye strainxx",
+        "Description[zh_CN]": "在夜间调整色温以减少视觉疲劳",
         "FormFactors": [
             "tablet",
             "handset",

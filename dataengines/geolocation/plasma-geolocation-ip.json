@@ -20,6 +20,7 @@
         "Description[uk]": "Геопозиціювання за IP-адресою",
         "Description[vi]": "Định vị địa lí từ địa chỉ IP.",
         "Description[x-test]": "xxGeolocation from IP address.xx",
+        "Description[zh_CN]": "通过 IP 地址确定的地理位置。",
         "Icon": "applications-internet",
         "Id": "ip",
         "Name": "Geolocation IP",

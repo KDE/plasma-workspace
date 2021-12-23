@@ -21,7 +21,8 @@
                 "Name[sv]": "Kai Uwe Broulik",
                 "Name[uk]": "Kai Uwe Broulik",
                 "Name[vi]": "Kai Uwe Broulik",
-                "Name[x-test]": "xxKai Uwe Broulikxx"
+                "Name[x-test]": "xxKai Uwe Broulikxx",
+                "Name[zh_CN]": "Kai Uwe Broulik"
             }
         ],
         "Category": "Tasks",
@@ -45,6 +46,7 @@
         "Description[uk]": "Показ сповіщень і завдань",
         "Description[vi]": "Hiển thị thông báo và công việc",
         "Description[x-test]": "xxDisplay notifications and jobsxx",
+        "Description[zh_CN]": "显示通知和任务",
         "EnabledByDefault": true,
         "FormFactors": [
             "desktop"

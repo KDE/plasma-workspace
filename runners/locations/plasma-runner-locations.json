@@ -22,7 +22,8 @@
                 "Name[ta]": "பிளாஸ்மா குழு",
                 "Name[uk]": "Команда розробників Плазми",
                 "Name[vi]": "Đội Plasma",
-                "Name[x-test]": "xxPlasma Teamxx"
+                "Name[x-test]": "xxPlasma Teamxx",
+                "Name[zh_CN]": "Plasma 开发团队"
             }
         ],
         "Description": "File and URL opener",
@@ -45,6 +46,7 @@
         "Description[uk]": "Відкривання файлів і адрес URL",
         "Description[vi]": "Trình mở tệp và URL",
         "Description[x-test]": "xxFile and URL openerxx",
+        "Description[zh_CN]": "文件和链接打开程序",
         "EnabledByDefault": true,
         "Icon": "system-file-manager",
         "Id": "locations",

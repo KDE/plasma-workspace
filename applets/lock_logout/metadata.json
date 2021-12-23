@@ -21,7 +21,8 @@
                 "Name[sv]": "Viranch Mehta",
                 "Name[uk]": "Viranch Mehta",
                 "Name[vi]": "Viranch Mehta",
-                "Name[x-test]": "xxViranch Mehtaxx"
+                "Name[x-test]": "xxViranch Mehtaxx",
+                "Name[zh_CN]": "Viranch Mehta"
             }
         ],
         "Category": "System Information",
@@ -45,6 +46,7 @@
         "Description[uk]": "Заблокуйте екран або вийдіть",
         "Description[vi]": "Khoá màn hình hoặc đăng xuất",
         "Description[x-test]": "xxLock the screen or log outxx",
+        "Description[zh_CN]": "锁屏或注销",
         "EnabledByDefault": true,
         "FormFactors": [
             "desktop"
@@ -133,7 +135,7 @@
         "Name[vi]": "Khoá/Đăng xuất",
         "Name[wa]": "Serer/Dislodjî",
         "Name[x-test]": "xxLock/Logoutxx",
-        "Name[zh_CN]": "锁定/注销",
+        "Name[zh_CN]": "锁屏/注销",
         "Name[zh_TW]": "鎖定/登出",
         "ServiceTypes": [
             "Plasma/Applet"

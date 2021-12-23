@@ -21,7 +21,8 @@
                 "Name[sv]": "Chani",
                 "Name[uk]": "Chani",
                 "Name[vi]": "Chani",
-                "Name[x-test]": "xxChanixx"
+                "Name[x-test]": "xxChanixx",
+                "Name[zh_CN]": "Chani"
             }
         ],
         "Description": "Switch to another activity",
@@ -44,6 +45,7 @@
         "Description[uk]": "Перемкнутися на інший простір дій",
         "Description[vi]": "Chuyển sang một Hoạt động khác",
         "Description[x-test]": "xxSwitch to another activityxx",
+        "Description[zh_CN]": "切换到另一个活动",
         "EnabledByDefault": true,
         "Icon": "dashboard-show",
         "Id": "switchactivity",

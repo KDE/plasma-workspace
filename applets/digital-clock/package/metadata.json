@@ -21,7 +21,8 @@
                 "Name[sv]": "Martin Klapetek",
                 "Name[uk]": "Martin Klapetek",
                 "Name[vi]": "Martin Klapetek",
-                "Name[x-test]": "xxMartin Klapetekxx"
+                "Name[x-test]": "xxMartin Klapetekxx",
+                "Name[zh_CN]": "Martin Klapetek"
             }
         ],
         "Category": "Date and Time",
@@ -45,6 +46,7 @@
         "Description[uk]": "Час, показаний у цифровому форматі",
         "Description[vi]": "Thời gian hiển thị ở dạng số",
         "Description[x-test]": "xxTime displayed in a digital formatxx",
+        "Description[zh_CN]": "以数字格式显示时间",
         "FormFactors": [
             "tablet",
             "handset",

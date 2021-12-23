@@ -21,7 +21,8 @@
                 "Name[sv]": "Chani",
                 "Name[uk]": "Chani",
                 "Name[vi]": "Chani",
-                "Name[x-test]": "xxChanixx"
+                "Name[x-test]": "xxChanixx",
+                "Name[zh_CN]": "Chani"
             }
         ],
         "Description": "Creates a widget from the contents of the clipboard",
@@ -44,6 +45,7 @@
         "Description[uk]": "Створює віджет з вмістом буфера обміну даними",
         "Description[vi]": "Tạo một phụ kiện từ nội dung của bảng nháp",
         "Description[x-test]": "xxCreates a widget from the contents of the clipboardxx",
+        "Description[zh_CN]": "用剪贴板内容创建小部件",
         "EnabledByDefault": true,
         "Icon": "edit-paste",
         "Id": "org.kde.paste",

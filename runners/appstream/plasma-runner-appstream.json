@@ -21,7 +21,8 @@
                 "Name[sv]": "Aleix Pol Gonzalez",
                 "Name[uk]": "Aleix Pol Gonzalez",
                 "Name[vi]": "Aleix Pol Gonzalez",
-                "Name[x-test]": "xxAleix Pol Gonzalezxx"
+                "Name[x-test]": "xxAleix Pol Gonzalezxx",
+                "Name[zh_CN]": "Aleix Pol Gonzalez"
             }
         ],
         "Description": "Lets you find software",
@@ -44,6 +45,7 @@
         "Description[uk]": "Допомагає вам шукати програми",
         "Description[vi]": "Cho phép bạn tìm phần mềm",
         "Description[x-test]": "xxLets you find softwarexx",
+        "Description[zh_CN]": "协助用户查找软件",
         "EnabledByDefault": true,
         "Icon": "applications-other",
         "Id": "appstream",

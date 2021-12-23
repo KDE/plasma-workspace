@@ -27,6 +27,7 @@
         "Description[uk]": "Оновлення завдань програми (через kuiserver)",
         "Description[vi]": "Các cập nhật về công việc của ứng dụng (thông qua kuiserver)",
         "Description[x-test]": "xxApplication job updates (via kuiserver)xx",
+        "Description[zh_CN]": "程序任务更新信息 (通过 kuiserver)",
         "Icon": "tool-animator",
         "Id": "applicationjobs",
         "Name": "Application Job Information",
