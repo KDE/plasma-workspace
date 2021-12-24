@@ -26,6 +26,9 @@ PlasmaExtras.Representation {
     property int _minimumWidth: (calendar.showAgenda || calendar.showClocks) ? PlasmaCore.Units.gridUnit * 45 : PlasmaCore.Units.gridUnit * 22
     property int _minimumHeight: PlasmaCore.Units.gridUnit * 25
 
+    PlasmaCore.ColorScope.inherit: false
+    PlasmaCore.ColorScope.colorGroup: PlasmaCore.Theme.NormalColorGroup
+
     Layout.minimumWidth: _minimumWidth
     Layout.minimumHeight: _minimumHeight
     Layout.preferredWidth: _minimumWidth
