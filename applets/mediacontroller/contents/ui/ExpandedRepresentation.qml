@@ -124,6 +124,7 @@ PlasmaExtras.Representation {
 
         ShaderEffect {
             id: backgroundImage
+            property real scaleFactor: 1.0
             property Image source: albumArt
 
             anchors.centerIn: parent
@@ -153,8 +154,9 @@ PlasmaExtras.Representation {
                 when: plasmoid.expanded && backgroundImage.visible && albumArt.paintedWidth > 0
                 PropertyChanges {
                     target: backgroundImage
-                    width: parent.width * Math.max(1, source.paintedWidth / source.paintedHeight)
-                    height: parent.width * Math.max(1, source.paintedHeight / source.paintedWidth)
+                    scaleFactor: Math.max(parent.width / source.paintedWidth, parent.height / source.paintedHeight)
+                    width: Math.round(source.paintedWidth * scaleFactor)
+                    height: Math.round(source.paintedHeight * scaleFactor)
                 }
             }
         }
