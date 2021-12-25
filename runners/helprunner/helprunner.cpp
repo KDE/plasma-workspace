@@ -48,9 +48,15 @@ void HelpRunner::match(RunnerContext &context)
             for (const RunnerSyntax &syntax : syntaxes) {
                 QueryMatch match(this);
                 QString matchText;
-                matchText.append(QLatin1String("<b>") + syntax.exampleQueries().join(QStringLiteral("<br>")) + QLatin1String("</b>"));
-                matchText.append(QLatin1String("<br>"));
-                matchText.append(syntax.description());
+                QString text = QLatin1String("<b>");
+                const auto exampleQueries = syntax.exampleQueries();
+                for (auto &query : exampleQueries) {
+                    text.append(query.toHtmlEscaped());
+                    text.append(QLatin1String("<br>"));
+                }
+                text.append(QLatin1String("</b>"));
+                matchText.append(text);
+                matchText.append(syntax.description().toHtmlEscaped());
                 match.setText(matchText);
                 match.setData(syntax.exampleQueries().constFirst());
                 match.setMultiLine(true);
