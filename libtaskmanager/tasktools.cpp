@@ -783,6 +783,10 @@ bool canLauchNewInstance(const AppData &appData)
         if (service->noDisplay()) {
             return false;
         }
+
+        if (service->property(QStringLiteral("X-GNOME-SingleWindow"), QVariant::Bool).toBool()) {
+            return false;
+        }
     }
 
     return true;
