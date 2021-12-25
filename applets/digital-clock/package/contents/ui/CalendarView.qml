@@ -518,10 +518,10 @@ PlasmaExtras.Representation {
                 }
 
                 PlasmaComponents3.ToolButton {
-                    visible: KCMShell.authorize("clock.desktop").length > 0
+                    visible: KCMShell.authorize("kcm_clock.desktop").length > 0
                     text: i18n("Switch…")
                     icon.name: "preferences-system-time"
-                    onClicked: KCMShell.openSystemSettings("clock")
+                    onClicked: KCMShell.openSystemSettings("kcm_clock")
 
                     PlasmaComponents3.ToolTip {
                         text: i18n("Switch to another timezone")

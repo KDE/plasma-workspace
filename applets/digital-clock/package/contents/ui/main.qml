@@ -110,11 +110,11 @@ Item {
     }
 
     function action_clockkcm() {
-        KCMShell.openSystemSettings("clock");
+        KCMShell.openSystemSettings("kcm_clock");
     }
 
     function action_formatskcm() {
-        KCMShell.openSystemSettings("formats");
+        KCMShell.openSystemSettings("kcm_formats");
     }
 
     Component.onCompleted: {
@@ -122,10 +122,10 @@ Item {
         ClipboardMenu.setupMenu(plasmoid.action("clipboard"));
 
         root.initTimezones();
-        if (KCMShell.authorize("clock.desktop").length > 0) {
+        if (KCMShell.authorize("kcm_clock.desktop").length > 0) {
             plasmoid.setAction("clockkcm", i18n("Adjust Date and Time…"), "preferences-system-time");
         }
-        if (KCMShell.authorize("formats.desktop").length > 0) {
+        if (KCMShell.authorize("kcm_formats.desktop").length > 0) {
             plasmoid.setAction("formatskcm", i18n("Set Time Format…"));
         }
 

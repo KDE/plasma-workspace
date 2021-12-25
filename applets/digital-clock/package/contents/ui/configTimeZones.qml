@@ -95,10 +95,10 @@ ColumnLayout {
 
                 trailing: RowLayout {
                     QQC2.Button {
-                        visible: model.isLocalTimeZone && KCMShell.authorize("clock.desktop").length > 0
+                        visible: model.isLocalTimeZone && KCMShell.authorize("kcm_clock.desktop").length > 0
                         text: i18n("Switch Local Time Zone…")
                         icon.name: "preferences-system-time"
-                        onClicked: KCMShell.openSystemSettings("clock")
+                        onClicked: KCMShell.openSystemSettings("kcm_clock")
                     }
                     QQC2.Button {
                         visible: !model.isLocalTimeZone && configuredTimezoneList.count > 1

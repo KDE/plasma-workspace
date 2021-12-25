@@ -63,7 +63,7 @@ QtLayouts.ColumnLayout {
 
     Kirigami.FormLayout {
         QtLayouts.Layout.fillWidth: true
-        
+
         QtLayouts.RowLayout {
             Kirigami.FormData.label: i18n("Information:")
 
@@ -71,7 +71,7 @@ QtLayouts.ColumnLayout {
                 id: showDate
                 text: i18n("Show date")
             }
-            
+
             QtControls.ComboBox {
                 id: dateDisplayFormat
                 enabled: showDate.checked
@@ -146,10 +146,10 @@ QtLayouts.ColumnLayout {
             }
 
             QtControls.Button {
-                visible: KCMShell.authorize("formats.desktop").length > 0
+                visible: KCMShell.authorize("kcm_formats.desktop").length > 0
                 text: i18n("Change Regional Settings…")
                 icon.name: "preferences-desktop-locale"
-                onClicked: KCMShell.openSystemSettings("formats")
+                onClicked: KCMShell.openSystemSettings("kcm_formats")
             }
         }
 
