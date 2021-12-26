@@ -13,6 +13,7 @@ TriangleMouseFilter::TriangleMouseFilter(QQuickItem *parent)
 {
     setFiltersChildMouseEvents(true);
 
+    m_resetTimer.setSingleShot(true);
     connect(&m_resetTimer, &QTimer::timeout, this, [this]() {
         m_interceptionPos.reset();
         if (!m_interceptedHoverItem) {
