@@ -23,6 +23,6 @@ target_link_libraries(kcm_formats
 
 
 ########### install files ###############
-install(TARGETS kcm_formats  DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms )
+install(TARGETS kcm_formats  DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings)
 install(FILES kcm_formats.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 kpackage_install_package(package kcm_formats kcms)
