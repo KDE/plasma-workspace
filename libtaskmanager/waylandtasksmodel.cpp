@@ -528,12 +528,7 @@ void WaylandTasksModel::requestMove(const QModelIndex &index)
 
     KWayland::Client::PlasmaWindow *window = d->windows.at(index.row());
 
-    const QString &currentDesktop = d->virtualDesktopInfo->currentDesktop().toString();
-
-    if (!currentDesktop.isEmpty()) {
-        window->requestEnterVirtualDesktop(currentDesktop);
-    }
-
+    window->requestActivate();
     window->requestMove();
 }
 
@@ -545,12 +540,7 @@ void WaylandTasksModel::requestResize(const QModelIndex &index)
 
     KWayland::Client::PlasmaWindow *window = d->windows.at(index.row());
 
-    const QString &currentDesktop = d->virtualDesktopInfo->currentDesktop().toString();
-
-    if (!currentDesktop.isEmpty()) {
-        window->requestEnterVirtualDesktop(currentDesktop);
-    }
-
+    window->requestActivate();
     window->requestResize();
 }
 
@@ -560,15 +550,7 @@ void WaylandTasksModel::requestToggleMinimized(const QModelIndex &index)
         return;
     }
 
-    KWayland::Client::PlasmaWindow *window = d->windows.at(index.row());
-
-    const QString &currentDesktop = d->virtualDesktopInfo->currentDesktop().toString();
-
-    if (!currentDesktop.isEmpty()) {
-        window->requestEnterVirtualDesktop(currentDesktop);
-    }
-
-    window->requestToggleMinimized();
+    d->windows.at(index.row())->requestToggleMinimized();
 }
 
 void WaylandTasksModel::requestToggleMaximized(const QModelIndex &index)
@@ -579,12 +561,7 @@ void WaylandTasksModel::requestToggleMaximized(const QModelIndex &index)
 
     KWayland::Client::PlasmaWindow *window = d->windows.at(index.row());
 
-    const QString &currentDesktop = d->virtualDesktopInfo->currentDesktop().toString();
-
-    if (!currentDesktop.isEmpty()) {
-        window->requestEnterVirtualDesktop(currentDesktop);
-    }
-
+    window->requestActivate();
     window->requestToggleMaximized();
 }
 
