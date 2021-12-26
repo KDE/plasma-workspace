@@ -20,7 +20,7 @@ TriangleMouseFilter::TriangleMouseFilter(QQuickItem *parent)
             return;
         }
         const auto targetPosition = mapToItem(m_interceptedHoverItem, m_lastCursorPosition);
-        QHoverEvent e(QEvent::HoverEnter, targetPosition, targetPosition);
+        QHoverEvent e(QEvent::HoverMove, targetPosition, targetPosition);
         qApp->sendEvent(m_interceptedHoverItem, &e);
     });
 };
@@ -44,7 +44,8 @@ bool TriangleMouseFilter::childMouseEventFilter(QQuickItem *item, QEvent *event)
         const QPointF position = item->mapToItem(this, he->posF());
 
         if (filterContains(position)) {
-            if (event->type() == QEvent::HoverEnter) {
+            const bool isHoverEnter = event->type() == QEvent::HoverEnter;
+            if (isHoverEnter) {
                 m_interceptedHoverItem = item;
             }
 
@@ -53,9 +54,9 @@ bool TriangleMouseFilter::childMouseEventFilter(QQuickItem *item, QEvent *event)
             }
 
             m_lastCursorPosition = position;
-            event->setAccepted(true);
+            event->setAccepted(!isHoverEnter);
 
-            return true;
+            return !isHoverEnter;
         } else {
             // this clause means that we block focus when first entering a given position
             // in the case of kickoff it's so that we can move the mouse from the bottom tabbar to the side view
