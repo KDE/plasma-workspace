@@ -6,19 +6,19 @@
 
 ApplicationIntegration::ApplicationIntegration(QObject *parent)
     : QObject(parent)
-    , m_korganizerService(KService::serviceByDesktopName(QStringLiteral("org.kde.korganizer")))
+    , m_calendarService(KService::serviceByDesktopName(QStringLiteral("org.kde.korganizer")))
 {
 }
 
-bool ApplicationIntegration::korganizerInstalled() const
+bool ApplicationIntegration::calendarInstalled() const
 {
-    return m_korganizerService != nullptr;
+    return m_calendarService != nullptr;
 }
 
-void ApplicationIntegration::launchKorganizer() const
+void ApplicationIntegration::launchCalendar() const
 {
-    Q_ASSERT(m_korganizerService);
+    Q_ASSERT(m_calendarService);
 
-    auto job = new KIO::ApplicationLauncherJob(m_korganizerService);
+    auto job = new KIO::ApplicationLauncherJob(m_calendarService);
     job->start();
 }

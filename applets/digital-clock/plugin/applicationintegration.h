@@ -8,15 +8,15 @@
 class ApplicationIntegration : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(bool korganizerInstalled READ korganizerInstalled CONSTANT)
+    Q_PROPERTY(bool calendarInstalled READ calendarInstalled CONSTANT)
 
 public:
     explicit ApplicationIntegration(QObject *parent = nullptr);
     ~ApplicationIntegration() = default;
 
-    bool korganizerInstalled() const;
-    Q_INVOKABLE void launchKorganizer() const;
+    bool calendarInstalled() const;
+    Q_INVOKABLE void launchCalendar() const;
 
 private:
-    KService::Ptr m_korganizerService;
+    KService::Ptr m_calendarService;
 };

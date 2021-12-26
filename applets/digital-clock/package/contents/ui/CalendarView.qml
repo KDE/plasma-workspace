@@ -91,11 +91,11 @@ PlasmaExtras.Representation {
                     elide: Text.ElideRight
                 }
                 PlasmaComponents3.ToolButton {
-                    visible: agenda.visible && ApplicationIntegration.korganizerInstalled
+                    visible: agenda.visible && ApplicationIntegration.calendarInstalled
                     text: i18nc("@action:button Add event", "Add…")
                     Layout.rightMargin: calendar.paddings
                     icon.name: "list-add"
-                    onClicked: ApplicationIntegration.launchKorganizer()
+                    onClicked: ApplicationIntegration.launchCalendar()
                 }
             }
         }
