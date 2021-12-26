@@ -787,6 +787,22 @@ bool canLauchNewInstance(const AppData &appData)
         if (service->property(QStringLiteral("X-GNOME-SingleWindow"), QVariant::Bool).toBool()) {
             return false;
         }
+
+        // Hide our own action if there's already a "New Window" action
+        const auto actions = service->actions();
+        for (const KServiceAction &action : actions) {
+            if (action.name() == QLatin1String("NewWindow")) {
+                return false;
+            }
+
+            if (action.name() == QLatin1String("new-window")) {
+                return false;
+            }
+
+            if (action.name() == QLatin1String("WindowNew")) {
+                return false;
+            }
+        }
     }
 
     return true;
