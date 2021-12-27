@@ -346,12 +346,9 @@ QUrl windowUrlFromMetadata(const QString &appId, quint32 pid, KSharedConfig::Ptr
 
             // Try matching appId against DesktopEntryName.
             if (services.isEmpty()) {
-                KService::Ptr maybeService = KService::serviceByDesktopName(appId);
-
-                if (maybeService) {
-                    services = {maybeService};
-                }
-
+                services = KServiceTypeTrader::self()->query(
+                    QStringLiteral("Application"),
+                    QStringLiteral("exist Exec and ('%1' =~ DesktopEntryName)").arg(appId));
                 sortServicesByMenuId(services, appId);
             }
 
