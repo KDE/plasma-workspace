@@ -32,8 +32,8 @@ namespace TaskManager
 {
 static const NET::Properties windowInfoFlags =
     NET::WMState | NET::XAWMState | NET::WMDesktop | NET::WMVisibleName | NET::WMGeometry | NET::WMFrameExtents | NET::WMWindowType | NET::WMPid;
-static const NET::Properties2 windowInfoFlags2 =
-    NET::WM2DesktopFileName | NET::WM2Activities | NET::WM2WindowClass | NET::WM2AllowedActions | NET::WM2AppMenuObjectPath | NET::WM2AppMenuServiceName;
+static const NET::Properties2 windowInfoFlags2 = NET::WM2DesktopFileName | NET::WM2Activities | NET::WM2WindowClass | NET::WM2AllowedActions
+    | NET::WM2AppMenuObjectPath | NET::WM2AppMenuServiceName | NET::WM2GTKApplicationId;
 
 class Q_DECL_HIDDEN XWindowTasksModel::Private
 {
@@ -493,6 +493,10 @@ QUrl XWindowTasksModel::Private::windowUrl(WId window)
     const KWindowInfo *info = windowInfo(window);
 
     QString desktopFile = QString::fromUtf8(info->desktopFileName());
+
+    if (desktopFile.isEmpty()) {
+        desktopFile = QString::fromUtf8(info->gtkApplicationId());
+    }
 
     if (!desktopFile.isEmpty()) {
         KService::Ptr service = KService::serviceByStorageId(desktopFile);
