@@ -123,7 +123,7 @@ Item {
 
         root.initTimezones();
         if (KCMShell.authorize("kcm_clock.desktop").length > 0) {
-            plasmoid.setAction("clockkcm", i18n("Adjust Date and Time…"), "preferences-system-time");
+            plasmoid.setAction("clockkcm", i18n("Adjust Date and Time…"), "clock");
         }
         if (KCMShell.authorize("kcm_formats.desktop").length > 0) {
             plasmoid.setAction("formatskcm", i18n("Set Time Format…"));
