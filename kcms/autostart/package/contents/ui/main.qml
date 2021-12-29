@@ -152,7 +152,7 @@ KCM.ScrollViewKCM {
 
             checkable: true
             checked: menu.opened
-            onClicked: menu.open()
+            onClicked: menu.opened? menu.close() : menu.open()
         }
 
         Menu {
