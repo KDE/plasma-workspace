@@ -21,14 +21,13 @@
 
 K_PLUGIN_CLASS_WITH_JSON(PlacesRunner, "plasma-runner-places.json")
 
-// Q_DECLARE_METATYPE(Plasma::RunnerContext)
 PlacesRunner::PlacesRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, metaData, args)
+    : AbstractRunner(parent, metaData, args)
 {
     setObjectName(QStringLiteral("Places"));
-    Plasma::RunnerSyntax defaultSyntax(i18n("places"), i18n("Lists all file manager locations"));
+    RunnerSyntax defaultSyntax(i18n("places"), i18n("Lists all file manager locations"));
     addSyntax(defaultSyntax);
-    addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds file manager locations that match :q:")));
+    addSyntax(RunnerSyntax(QStringLiteral(":q:"), i18n("Finds file manager locations that match :q:")));
 
     // ensure the bookmarkmanager, etc. in the places model gets creates created in the main thread
     // otherwise crashes ensue
@@ -40,7 +39,7 @@ PlacesRunner::~PlacesRunner()
 {
 }
 
-void PlacesRunner::match(Plasma::RunnerContext &context)
+void PlacesRunner::match(RunnerContext &context)
 {
     if (QThread::currentThread() == QCoreApplication::instance()->thread()) {
         // from the main thread
@@ -71,32 +70,32 @@ PlacesRunnerHelper::PlacesRunnerHelper(PlacesRunner *runner)
     });
 }
 
-void PlacesRunnerHelper::match(Plasma::RunnerContext *c)
+void PlacesRunnerHelper::match(RunnerContext *c)
 {
-    Plasma::RunnerContext &context = *c;
+    RunnerContext &context = *c;
     if (!context.isValid()) {
         return;
     }
 
     const QString term = context.query();
-    QList<Plasma::QueryMatch> matches;
+    QList<QueryMatch> matches;
     const bool all = term.compare(i18n("places"), Qt::CaseInsensitive) == 0;
     for (int i = 0; i <= m_places.rowCount(); i++) {
         QModelIndex current_index = m_places.index(i, 0);
-        Plasma::QueryMatch::Type type = Plasma::QueryMatch::NoMatch;
+        QueryMatch::Type type = QueryMatch::NoMatch;
         qreal relevance = 0;
 
         const QString text = m_places.text(current_index);
         if ((all && !text.isEmpty()) || text.compare(term, Qt::CaseInsensitive) == 0) {
-            type = Plasma::QueryMatch::ExactMatch;
+            type = QueryMatch::ExactMatch;
             relevance = all ? 0.9 : 1.0;
         } else if (text.contains(term, Qt::CaseInsensitive)) {
-            type = Plasma::QueryMatch::PossibleMatch;
+            type = QueryMatch::PossibleMatch;
             relevance = 0.7;
         }
 
-        if (type != Plasma::QueryMatch::NoMatch) {
-            Plasma::QueryMatch match(static_cast<PlacesRunner *>(parent()));
+        if (type != QueryMatch::NoMatch) {
+            QueryMatch match(static_cast<PlacesRunner *>(parent()));
             match.setType(type);
             match.setRelevance(relevance);
             match.setIcon(m_places.icon(current_index));
@@ -142,7 +141,7 @@ void PlacesRunnerHelper::openDevice(const QString &udi)
     }
 }
 
-void PlacesRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action)
+void PlacesRunner::run(const RunnerContext &context, const QueryMatch &action)
 {
     Q_UNUSED(context);
     // I don't just pass the model index because the list could change before the user clicks on it, which would make everything go wrong. Ideally we don't want

@@ -25,19 +25,18 @@
 K_PLUGIN_CLASS_WITH_JSON(LocationsRunner, "plasma-runner-locations.json")
 
 LocationsRunner::LocationsRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, metaData, args)
+    : AbstractRunner(parent, metaData, args)
 {
     // set the name shown after the result in krunner window
     setObjectName(QStringLiteral("Locations"));
-    addSyntax(
-        Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds local directories and files, network locations and Internet sites with paths matching :q:.")));
+    addSyntax(RunnerSyntax(QStringLiteral(":q:"), i18n("Finds local directories and files, network locations and Internet sites with paths matching :q:.")));
 }
 
 LocationsRunner::~LocationsRunner()
 {
 }
 
-void LocationsRunner::match(Plasma::RunnerContext &context)
+void LocationsRunner::match(RunnerContext &context)
 {
     QString term = context.query();
     // If we have a query with an executable and optionally arguments, BUG: 433053
@@ -55,19 +54,19 @@ void LocationsRunner::match(Plasma::RunnerContext &context)
     const QFileInfo fileInfo = QFileInfo(url.toLocalFile());
 
     if (fileInfo.exists()) {
-        Plasma::QueryMatch match(this);
-        match.setType(Plasma::QueryMatch::ExactMatch);
+        QueryMatch match(this);
+        match.setType(QueryMatch::ExactMatch);
         match.setText(i18n("Open %1", context.query()));
         match.setIconName(fileInfo.isFile() ? KIO::iconNameForUrl(url) : QStringLiteral("system-file-manager"));
 
         match.setRelevance(1);
         match.setData(url);
         match.setUrls({url});
-        match.setType(Plasma::QueryMatch::ExactMatch);
+        match.setType(QueryMatch::ExactMatch);
         context.addMatch(match);
     } else if (!url.isLocalFile() && !url.isEmpty() && !url.scheme().isEmpty()) {
         const QString protocol = url.scheme();
-        Plasma::QueryMatch match(this);
+        QueryMatch match(this);
         match.setData(url);
         match.setUrls({url});
 
@@ -99,7 +98,7 @@ void LocationsRunner::match(Plasma::RunnerContext &context)
     }
 }
 
-void LocationsRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
+void LocationsRunner::run(const RunnerContext &context, const QueryMatch &match)
 {
     Q_UNUSED(context)
 

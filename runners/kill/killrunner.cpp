@@ -21,7 +21,7 @@
 K_PLUGIN_CLASS_WITH_JSON(KillRunner, "plasma-runner-kill.json")
 
 KillRunner::KillRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, metaData, args)
+    : AbstractRunner(parent, metaData, args)
     , m_processes(nullptr)
 {
     setObjectName(QStringLiteral("Kill Runner"));
@@ -32,8 +32,8 @@ KillRunner::KillRunner(QObject *parent, const KPluginMetaData &metaData, const Q
     sigkill->setData(9);
     m_actionList = {sigterm, sigkill};
 
-    connect(this, &Plasma::AbstractRunner::prepare, this, &KillRunner::prep);
-    connect(this, &Plasma::AbstractRunner::teardown, this, &KillRunner::cleanup);
+    connect(this, &AbstractRunner::prepare, this, &KillRunner::prep);
+    connect(this, &AbstractRunner::teardown, this, &KillRunner::cleanup);
 
     m_delayedCleanupTimer.setInterval(50);
     m_delayedCleanupTimer.setSingleShot(true);
@@ -52,8 +52,8 @@ void KillRunner::reloadConfiguration()
     m_hasTrigger = !m_triggerWord.isEmpty();
 
     m_sorting = (Sort)grp.readEntry(CONFIG_SORTING, static_cast<int>(Sort::NONE));
-    QList<Plasma::RunnerSyntax> syntaxes;
-    syntaxes << Plasma::RunnerSyntax(m_triggerWord + QStringLiteral(":q:"), i18n("Terminate running applications whose names match the query."));
+    QList<RunnerSyntax> syntaxes;
+    syntaxes << RunnerSyntax(m_triggerWord + QStringLiteral(":q:"), i18n("Terminate running applications whose names match the query."));
     setSyntaxes(syntaxes);
     if (m_hasTrigger) {
         setTriggerWords({m_triggerWord});
@@ -85,7 +85,7 @@ void KillRunner::cleanup()
     }
 }
 
-void KillRunner::match(Plasma::RunnerContext &context)
+void KillRunner::match(RunnerContext &context)
 {
     QString term = context.query();
     m_prepLock.lockForRead();
@@ -103,7 +103,7 @@ void KillRunner::match(Plasma::RunnerContext &context)
 
     term = term.right(term.length() - m_triggerWord.length());
 
-    QList<Plasma::QueryMatch> matches;
+    QList<QueryMatch> matches;
     const QList<KSysGuard::Process *> processlist = m_processes->getAllProcesses();
     for (const KSysGuard::Process *process : processlist) {
         if (!context.isValid()) {
@@ -115,7 +115,7 @@ void KillRunner::match(Plasma::RunnerContext &context)
         }
 
         const quint64 pid = process->pid();
-        Plasma::QueryMatch match(this);
+        QueryMatch match(this);
         match.setText(i18n("Terminate %1", name));
         match.setSubtext(i18n("Process ID: %1", QString::number(pid)));
         match.setIconName(QStringLiteral("application-exit"));
@@ -142,7 +142,7 @@ void KillRunner::match(Plasma::RunnerContext &context)
     context.addMatches(matches);
 }
 
-void KillRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
+void KillRunner::run(const RunnerContext &context, const QueryMatch &match)
 {
     Q_UNUSED(context)
 

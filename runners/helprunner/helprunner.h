@@ -12,8 +12,6 @@
 #include <QAction>
 #include <QObject>
 
-using namespace Plasma;
-
 class HelpRunner : public AbstractRunner
 {
 public:

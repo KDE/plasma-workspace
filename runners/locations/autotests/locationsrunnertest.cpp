@@ -53,7 +53,7 @@ void LocationsRunnerTest::shouldProduceResult()
     QFETCH(QString, query);
     QFETCH(QVariant, data);
     launchQuery(query);
-    const QList<Plasma::QueryMatch> matches = manager->matches();
+    const QList<QueryMatch> matches = manager->matches();
     QCOMPARE(1, matches.size());
     QCOMPARE(matches.first().data(), data);
 }

@@ -18,12 +18,12 @@
 #include <QDesktopServices>
 
 WebshortcutRunner::WebshortcutRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, metaData, args)
+    : AbstractRunner(parent, metaData, args)
     , m_match(this)
     , m_filterBeforeRun(false)
 {
     setObjectName(QStringLiteral("Web Shortcut"));
-    m_match.setType(Plasma::QueryMatch::ExactMatch);
+    m_match.setType(QueryMatch::ExactMatch);
     m_match.setRelevance(0.9);
 
     // Listen for KUriFilter plugin config changes and update state...
@@ -47,18 +47,18 @@ void WebshortcutRunner::loadSyntaxes()
         m_delimiter = filterData.searchTermSeparator();
     }
 
-    QList<Plasma::RunnerSyntax> syns;
+    QList<RunnerSyntax> syns;
     const QStringList providers = filterData.preferredSearchProviders();
     const QRegularExpression replaceRegex(QStringLiteral(":q$"));
     const QString placeholder = QStringLiteral(":q:");
     for (const QString &provider : providers) {
-        Plasma::RunnerSyntax s(filterData.queryForPreferredSearchProvider(provider).replace(replaceRegex, placeholder),
-                               i18n("Opens \"%1\" in a web browser with the query :q:.", provider));
+        RunnerSyntax s(filterData.queryForPreferredSearchProvider(provider).replace(replaceRegex, placeholder),
+                       i18n("Opens \"%1\" in a web browser with the query :q:.", provider));
         syns << s;
     }
     if (!providers.isEmpty()) {
         QString defaultKey = filterData.queryForSearchProvider(providers.constFirst()).defaultKey();
-        Plasma::RunnerSyntax s(QStringLiteral("!%1 :q:").arg(defaultKey), i18n("Search using the DuckDuckGo bang syntax"));
+        RunnerSyntax s(QStringLiteral("!%1 :q:").arg(defaultKey), i18n("Search using the DuckDuckGo bang syntax"));
         syns << s;
     }
 
@@ -97,7 +97,7 @@ void WebshortcutRunner::configurePrivateBrowsingActions()
     }
 }
 
-void WebshortcutRunner::match(Plasma::RunnerContext &context)
+void WebshortcutRunner::match(RunnerContext &context)
 {
     const QString term = context.query();
     const static QRegularExpression bangRegex(QStringLiteral("!([^ ]+).*"));
@@ -147,7 +147,7 @@ void WebshortcutRunner::match(Plasma::RunnerContext &context)
     context.addMatch(m_match);
 }
 
-void WebshortcutRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
+void WebshortcutRunner::run(const RunnerContext &context, const QueryMatch &match)
 {
     QUrl location;
     if (m_filterBeforeRun) {

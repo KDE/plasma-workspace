@@ -14,7 +14,7 @@ class Browser;
 class BrowserFactory;
 
 /** This runner searchs for bookmarks in browsers like Konqueror, Firefox and Opera */
-class BookmarksRunner : public Plasma::AbstractRunner
+class BookmarksRunner : public AbstractRunner
 {
     Q_OBJECT
 
@@ -22,8 +22,8 @@ public:
     BookmarksRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
     ~BookmarksRunner() override;
 
-    void match(Plasma::RunnerContext &context) override;
-    void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) override;
+    void match(RunnerContext &context) override;
+    void run(const RunnerContext &context, const QueryMatch &action) override;
 
 private:
     /** @returns the browser to get the bookmarks from

@@ -13,7 +13,7 @@
  * This class runs programs using the literal name of the binary, much as one
  * would use at a shell prompt.
  */
-class ShellRunner : public Plasma::AbstractRunner
+class ShellRunner : public AbstractRunner
 {
     Q_OBJECT
 
@@ -21,8 +21,8 @@ public:
     ShellRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
     ~ShellRunner() override;
 
-    void match(Plasma::RunnerContext &context) override;
-    void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) override;
+    void match(RunnerContext &context) override;
+    void run(const RunnerContext &context, const QueryMatch &action) override;
 
 private:
     std::optional<QString> parseShellCommand(const QString &query, QStringList &envs);

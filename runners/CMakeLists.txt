@@ -1,3 +1,5 @@
+add_definitions(-DKRUNNER_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055b00)
+
 if(KF5Baloo_FOUND)
  add_subdirectory(baloo)
 endif()

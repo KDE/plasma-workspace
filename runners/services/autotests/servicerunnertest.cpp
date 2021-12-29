@@ -66,7 +66,7 @@ void ServiceRunnerTest::cleanupTestCase()
 void ServiceRunnerTest::testChromeAppsRelevance()
 {
     ServiceRunner runner(this, KPluginMetaData(), QVariantList());
-    Plasma::RunnerContext context;
+    RunnerContext context;
     context.setQuery(QStringLiteral("chrome"));
 
     runner.match(context);
@@ -97,7 +97,7 @@ void ServiceRunnerTest::testKonsoleVsYakuakeComment()
 {
     // Yakuake has konsole mentioned in comment, should be rated lower.
     ServiceRunner runner(this, KPluginMetaData(), QVariantList());
-    Plasma::RunnerContext context;
+    RunnerContext context;
     context.setQuery(QStringLiteral("kons"));
 
     runner.match(context);
@@ -132,7 +132,7 @@ void ServiceRunnerTest::testSystemSettings()
     // may then also disqualify the KDE version of system settings on account of having already
     // seen it. This test makes sure we find the right version.
     ServiceRunner runner(this, KPluginMetaData(), QVariantList());
-    Plasma::RunnerContext context;
+    RunnerContext context;
     context.setQuery(QStringLiteral("settings"));
 
     runner.match(context);
@@ -173,7 +173,7 @@ void ServiceRunnerTest::testINotifyUsage()
     bool inotifyCountCool = false;
     auto thread = QThread::create([&] {
         ServiceRunner runner(nullptr, KPluginMetaData(), QVariantList());
-        Plasma::RunnerContext context;
+        RunnerContext context;
         context.setQuery(QStringLiteral("settings"));
 
         runner.match(context);

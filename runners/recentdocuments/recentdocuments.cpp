@@ -27,11 +27,11 @@ using namespace KActivities::Stats::Terms;
 K_PLUGIN_CLASS_WITH_JSON(RecentDocuments, "plasma-runner-recentdocuments.json")
 
 RecentDocuments::RecentDocuments(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : Plasma::AbstractRunner(parent, metaData, args)
+    : AbstractRunner(parent, metaData, args)
 {
     setObjectName(QStringLiteral("Recent Documents"));
 
-    addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Looks for documents recently used with names matching :q:.")));
+    addSyntax(RunnerSyntax(QStringLiteral(":q:"), i18n("Looks for documents recently used with names matching :q:.")));
 
     m_actions = {new QAction(QIcon::fromTheme(QStringLiteral("document-open-folder")), i18n("Open Containing Folder"), this)};
     setMinLetterCount(3);
@@ -41,7 +41,7 @@ RecentDocuments::~RecentDocuments()
 {
 }
 
-void RecentDocuments::match(Plasma::RunnerContext &context)
+void RecentDocuments::match(RunnerContext &context)
 {
     if (!context.isValid()) {
         return;
@@ -69,16 +69,16 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
                                              QUrl::AssumeLocalFile);
         const auto name = result->data(index, ResultModel::TitleRole).toString();
 
-        Plasma::QueryMatch match(this);
+        QueryMatch match(this);
 
         auto relevance = 0.5;
-        match.setType(Plasma::QueryMatch::PossibleMatch);
+        match.setType(QueryMatch::PossibleMatch);
         if (url.fileName() == term) {
             relevance = 1.0;
-            match.setType(Plasma::QueryMatch::ExactMatch);
+            match.setType(QueryMatch::ExactMatch);
         } else if (url.fileName().startsWith(term)) {
             relevance = 0.9;
-            match.setType(Plasma::QueryMatch::PossibleMatch);
+            match.setType(QueryMatch::PossibleMatch);
         }
         match.setIconName(KIO::iconNameForUrl(url));
         match.setRelevance(relevance);
@@ -97,7 +97,7 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
     }
 }
 
-void RecentDocuments::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
+void RecentDocuments::run(const RunnerContext &context, const QueryMatch &match)
 {
     Q_UNUSED(context)
 

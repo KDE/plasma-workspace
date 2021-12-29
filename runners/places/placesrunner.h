@@ -19,7 +19,7 @@ public:
     explicit PlacesRunnerHelper(PlacesRunner *runner);
 
 public Q_SLOTS:
-    void match(Plasma::RunnerContext *context);
+    void match(RunnerContext *context);
     void openDevice(const QString &udi);
 
 private:
@@ -27,7 +27,7 @@ private:
     QString m_pendingUdi;
 };
 
-class PlacesRunner : public Plasma::AbstractRunner
+class PlacesRunner : public AbstractRunner
 {
     Q_OBJECT
 
@@ -35,11 +35,11 @@ public:
     PlacesRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
     ~PlacesRunner() override;
 
-    void match(Plasma::RunnerContext &context) override;
-    void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) override;
+    void match(RunnerContext &context) override;
+    void run(const RunnerContext &context, const QueryMatch &action) override;
 
 Q_SIGNALS:
-    void doMatch(Plasma::RunnerContext *context);
+    void doMatch(RunnerContext *context);
 
 private:
     PlacesRunnerHelper *m_helper;

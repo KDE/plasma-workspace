@@ -12,8 +12,6 @@
 #include "favicon.h"
 #include <QTest>
 
-using namespace Plasma;
-
 void TestChromeBookmarks::initTestCase()
 {
     m_configHome = QFINDTESTDATA("chrome-config-home");
