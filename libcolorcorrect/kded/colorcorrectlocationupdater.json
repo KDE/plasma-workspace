@@ -14,6 +14,7 @@
         "Description[nn]": "Sender oppdatert staddata til samansetjaren",
         "Description[pl]": "Wysyła uaktualnione dane położenia do kompozytora",
         "Description[pt_BR]": "Envia dados de localização atualizados para o computador.",
+        "Description[ru]": "Передаёт диспетчеру окон Plasma информацию об изменении местоположения",
         "Description[sl]": "Pošilja posodobljene podatke o legi v upravljalnik skladnje",
         "Description[sv]": "Skickar uppdaterad platsinformation till sammansättare",
         "Description[uk]": "Надсилає оновлені дані щодо розташування на комп'ютер",
