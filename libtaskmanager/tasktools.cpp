@@ -794,11 +794,7 @@ bool canLauchNewInstance(const AppData &appData)
         // Hide our own action if there's already a "New Window" action
         const auto actions = service->actions();
         for (const KServiceAction &action : actions) {
-            if (action.name() == QLatin1String("NewWindow")) {
-                return false;
-            }
-
-            if (action.name() == QLatin1String("new-window")) {
+            if (action.name().startsWith("new", Qt::CaseInsensitive) && action.name().endsWith("window", Qt::CaseInsensitive)) {
                 return false;
             }
 
