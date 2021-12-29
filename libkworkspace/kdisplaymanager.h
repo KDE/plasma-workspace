@@ -51,7 +51,7 @@ private:
 
     void GDMAuthenticate();
 
-#else // Q_WS_X11
+#else // HAVE_X11
 
 public:
     KDisplayManager()
