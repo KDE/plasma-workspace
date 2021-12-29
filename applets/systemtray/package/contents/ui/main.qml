@@ -210,6 +210,10 @@ MouseArea {
         location: plasmoid.location
         hideOnWindowDeactivate: !plasmoid.configuration.pin
         visible: systemTrayState.expanded
+        backgroundHints:
+            (plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentOpaque) ?
+                PlasmaCore.Dialog.SolidBackground :
+                PlasmaCore.Dialog.StandardBackground
 
         onVisibleChanged: {
             systemTrayState.expanded = visible
