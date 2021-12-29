@@ -71,7 +71,7 @@ MouseArea {
                     id: batteryIcon
 
                     anchors.centerIn: parent
-                    height: root.isConstrained ? batteryContainer.iconSize : batteryContainer.iconSize - batteryLabel.height
+                    height: batteryContainer.iconSize
                     width: height
 
                     hasBattery: batteryContainer.hasBattery
