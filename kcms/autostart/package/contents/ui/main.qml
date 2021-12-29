@@ -157,7 +157,7 @@ KCM.ScrollViewKCM {
 
         Menu {
             id: menu
-            y: -height - Kirigami.Units.smallSpacing
+            y: -height
 
             modal: true
             dim: false
