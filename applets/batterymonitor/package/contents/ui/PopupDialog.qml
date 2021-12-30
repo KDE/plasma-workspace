@@ -31,7 +31,7 @@ PlasmaComponents3.Page {
     // type: [{ Name: string, Icon: string, Profile: string, Reason: string }]
     required property var profileHolds
 
-    signal powermanagementChanged(bool disabled)
+    signal powerManagementChanged(bool disabled)
     signal activateProfileRequested(string profile)
 
     header: PlasmaExtras.PlasmoidHeading {
@@ -43,7 +43,7 @@ PlasmaComponents3.Page {
                 right: parent.right
             }
             pluggedIn: dialog.pluggedIn
-            onDisabledChanged: powermanagementChanged(disabled)
+            onDisabledChanged: powerManagementChanged(disabled)
             KeyNavigation.tab: batteryList
             KeyNavigation.backtab: keyboardBrightnessSlider
         }

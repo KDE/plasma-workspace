@@ -230,7 +230,7 @@ Item {
 
         property int cookie1: -1
         property int cookie2: -1
-        onPowermanagementChanged: disabled => {
+        onPowerManagementChanged: disabled => {
             const service = pmSource.serviceForSource("PowerDevil");
             if (disabled) {
                 const reason = i18n("The battery applet has enabled system-wide inhibition");
