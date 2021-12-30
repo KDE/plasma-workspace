@@ -37,13 +37,16 @@ PlasmaComponents3.Page {
     header: PlasmaExtras.PlasmoidHeading {
         PowerManagementItem {
             id: pmSwitch
+
             anchors {
                 left: parent.left
                 leftMargin: PlasmaCore.Units.smallSpacing
                 right: parent.right
             }
+
             pluggedIn: dialog.pluggedIn
             onDisabledChanged: powerManagementChanged(disabled)
+
             KeyNavigation.tab: batteryList
             KeyNavigation.backtab: keyboardBrightnessSlider
         }

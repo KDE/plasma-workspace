@@ -14,6 +14,7 @@ import org.kde.plasma.core 2.1 as PlasmaCore
 
 ColumnLayout {
     id: powerManagement
+
     property alias disabled: pmCheckBox.checked
     property bool pluggedIn
 
@@ -35,7 +36,6 @@ ColumnLayout {
         svg: PlasmaCore.Svg {
             imagePath: "widgets/line"
         }
-
     }
 
     // list of automatic inhibitions
