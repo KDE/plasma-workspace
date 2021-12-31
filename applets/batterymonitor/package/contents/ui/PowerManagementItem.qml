@@ -13,7 +13,7 @@ import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.core 2.1 as PlasmaCore
 
 ColumnLayout {
-    id: powerManagement
+    id: root
 
     property alias disabled: pmCheckBox.checked
     property bool pluggedIn
@@ -55,7 +55,7 @@ ColumnLayout {
         InhibitionHint {
             // Don't need to show the inhibitions when power management
             // isn't enabled anyway
-            visible: inhibitions.length === 1 && !powerManagement.disabled
+            visible: inhibitions.length === 1 && !root.disabled
             Layout.fillWidth: true
             iconSource: visible ? inhibitions[0].Icon : ""
             text: visible ?
@@ -73,7 +73,7 @@ ColumnLayout {
             Layout.fillWidth: true
             // Don't need to show the inhibitions when power management
             // isn't enabled anyway
-            visible: inhibitions.length > 1 && !powerManagement.disabled
+            visible: inhibitions.length > 1 && !root.disabled
             font: PlasmaCore.Theme.smallestFont
             wrapMode: Text.WordWrap
             elide: Text.ElideRight
