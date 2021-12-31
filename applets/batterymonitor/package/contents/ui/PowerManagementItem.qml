@@ -57,8 +57,8 @@ ColumnLayout {
             // isn't enabled anyway
             visible: inhibitions.length === 1 && !root.disabled
             Layout.fillWidth: true
-            iconSource: visible ? inhibitions[0].Icon : ""
-            text: visible ?
+            iconSource: (inhibitions.length === 1) ? inhibitions[0].Icon : ""
+            text: (inhibitions.length === 1) ?
                     inhibitions[0].Reason ?
                         i18n("%1 is currently blocking sleep and screen locking (%2)", inhibitions[0].Name, inhibitions[0].Reason)
                     :
