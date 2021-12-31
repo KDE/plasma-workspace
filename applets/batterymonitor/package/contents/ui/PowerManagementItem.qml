@@ -94,7 +94,7 @@ ColumnLayout {
         }
 
         Repeater {
-            visible: inhibitions.length > 1
+            visible: inhibitions.length > 1 && !root.disabled
 
             model: inhibitionExplanation.visible ? inhibitions.length : null
 
