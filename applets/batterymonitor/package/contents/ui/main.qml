@@ -101,6 +101,14 @@ Item {
 
     property bool powermanagementDisabled: false
 
+    // List of active power management inhibitions (applications that are
+    // blocking sleep and screen locking).
+    //
+    // type: [{
+    //  Icon: string,
+    //  Name: string,
+    //  Reason: string,
+    // }]
     property var inhibitions: []
 
     readonly property bool kcmAuthorized: KCMShell.authorize("powerdevilprofilesconfig.desktop").length > 0
@@ -223,6 +231,7 @@ Item {
 
         readonly property string actuallyActiveProfile: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Current Profile"] || "") : ""
         activeProfile: actuallyActiveProfile
+        inhibitions: batterymonitor.inhibitions
         profiles: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Profiles"] || []) : []
         inhibitionReason: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Performance Inhibited Reason"] || "") : ""
         degradationReason: pmSource.data["Power Profiles"] ? (pmSource.data["Power Profiles"]["Performance Degraded Reason"] || "") : ""

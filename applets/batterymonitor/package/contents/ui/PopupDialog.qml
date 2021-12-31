@@ -26,6 +26,17 @@ PlasmaComponents3.Page {
 
     property string activeProfile
     property var profiles
+
+    // List of active power management inhibitions (applications that are
+    // blocking sleep and screen locking).
+    //
+    // type: [{
+    //  Icon: string,
+    //  Name: string,
+    //  Reason: string,
+    // }]
+    property var inhibitions: []
+
     property string inhibitionReason
     property string degradationReason
     // type: [{ Name: string, Icon: string, Profile: string, Reason: string }]
@@ -44,6 +55,7 @@ PlasmaComponents3.Page {
                 right: parent.right
             }
 
+            inhibitions: dialog.inhibitions
             pluggedIn: dialog.pluggedIn
             onDisabledChanged: powerManagementChanged(disabled)
 

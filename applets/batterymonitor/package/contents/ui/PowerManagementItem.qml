@@ -18,6 +18,16 @@ ColumnLayout {
     property alias disabled: pmCheckBox.checked
     property bool pluggedIn
 
+    // List of active power management inhibitions (applications that are
+    // blocking sleep and screen locking).
+    //
+    // type: [{
+    //  Icon: string,
+    //  Name: string,
+    //  Reason: string,
+    // }]
+    property var inhibitions: []
+
     // UI to manually inhibit sleep and screen locking
     PlasmaComponents3.CheckBox {
         id: pmCheckBox
