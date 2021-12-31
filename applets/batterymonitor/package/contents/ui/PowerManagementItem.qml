@@ -54,6 +54,8 @@ ColumnLayout {
 
         Layout.fillWidth: true
 
+        visible: visibleChildren.length > 0
+
         InhibitionHint {
             Layout.fillWidth: true
             visible: pmSource.data["PowerDevil"] && pmSource.data["PowerDevil"]["Is Lid Present"] && !pmSource.data["PowerDevil"]["Triggers Lid Action"] ? true : false
