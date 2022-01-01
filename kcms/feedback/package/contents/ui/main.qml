@@ -5,7 +5,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.1
+import QtQuick 2.15
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.3 as QQC2
 import org.kde.kirigami 2.6 as Kirigami
@@ -34,7 +34,13 @@ SimpleKCM {
             text: i18n("User Feedback has been disabled centrally. Please contact your distributor.")
         }
 
-        QQC2.Label {
+        // The system settings window likes to take over
+        // the cursor with a plain label. The TextEdit
+        // 'takes priority' over the system settings
+        // window trying to eat the mouse, allowing
+        // us to use the HoverHandler boilerplate for
+        // proper link handling
+        TextEdit {
             Kirigami.FormData.label: i18n("Plasma:")
             Layout.fillWidth: true
             Layout.topMargin: Kirigami.Units.gridUnit
@@ -42,12 +48,20 @@ SimpleKCM {
             Layout.rightMargin: Kirigami.Units.gridUnit
             Layout.alignment: Qt.AlignHCenter
             wrapMode: Text.WordWrap
-            text: xi18nc("@info", "You can help KDE improve Plasma by contributing information on how you use it, so we can focus on things that matter to you.<nl/><nl/>Contributing this information is optional and entirely anonymous. We never collect your personal data, files you use, websites you visit, or information that could identify you.<nl/><nl/>You can read about our privacy policy in the following link:")
-        }
+            text: xi18nc("@info", "You can help KDE improve Plasma by contributing information on how you use it, so we can focus on things that matter to you.<nl/><nl/>Contributing this information is optional and entirely anonymous. We never collect your personal data, files you use, websites you visit, or information that could identify you.<nl/><nl/>You can read about <link url='https://kde.org/privacypolicy-apps.php'>our privacy policy here.</link>")
+            textFormat: TextEdit.RichText
+            readOnly: true
 
-        Kirigami.UrlButton {
-            Layout.alignment: Qt.AlignHCenter
-            url: "https://kde.org/privacypolicy-apps.php"
+            color: Kirigami.Theme.textColor
+            selectedTextColor: Kirigami.Theme.highlightedTextColor
+            selectionColor: Kirigami.Theme.highlightColor
+
+            onLinkActivated: (url) => Qt.openUrlExternally(url)
+
+            HoverHandler {
+                acceptedButtons: Qt.NoButton
+                cursorShape: parent.hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
+            }
         }
 
         Kirigami.Separator {
