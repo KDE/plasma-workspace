@@ -4,6 +4,7 @@
         "Description[ar]": "يرسل بيانات الموقع المحدثة إلى المؤلف",
         "Description[az]": "Yenilənmiş məlumatları Plasma pəncərə menecerinə göndərir",
         "Description[ca]": "Envia les dades actualitzades de la ubicació al compositor",
+        "Description[en_GB]": "Sends updated location data to the compositor",
         "Description[es]": "Envía datos de posicionamiento actualizados al compositor",
         "Description[fr]": "Envoie des données de localisation actualisées au compositeur",
         "Description[hu]": "Frissített lokációs adatok küldése a kompozitornak",

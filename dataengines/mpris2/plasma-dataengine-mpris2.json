@@ -11,6 +11,7 @@
         "Description[ar]": "يوفر معلومات من مشغلات الوسائط والتحكم فيها عبر MPRIS2",
         "Description[az]": "MPRIS2 ilə media pleyerin idarəsini və onun haqqında məlumatları təmin edir",
         "Description[ca]": "Proporciona informació i controla els reproductors de suports via el MPRIS2",
+        "Description[en_GB]": "Provides information from and control over media players via MPRIS2",
         "Description[es]": "Proporciona información y control sobre reproductores multimedia vía MPRIS2",
         "Description[fr]": "Fournit des informations sur les lecteurs de média et les contrôle avec « MPRIS2 ».",
         "Description[hu]": "Információkat szolgáltat és vezérli a médialejátszókat az MPRIS2-n keresztül",

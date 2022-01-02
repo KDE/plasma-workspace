@@ -4,6 +4,7 @@
         "Description[ar]": "تحديد الموقع الجغرافي من عنوان الإنترنت",
         "Description[az]": "İP ünvanına görə coğrafi məkan",
         "Description[ca]": "Geolocalització des d'una adreça IP.",
+        "Description[en_GB]": "Geolocation from IP address.",
         "Description[es]": "Geolocalización desde una dirección IP.",
         "Description[fr]": "Géo-localisation depuis une adresse IP.",
         "Description[hu]": "Meghatározza a földrajzi helyzetet az IP cím alapján.",

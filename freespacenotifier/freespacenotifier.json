@@ -4,6 +4,7 @@
         "Description[ar]": "يحذّرك عندما تنفذ مساحة مجلد المنزل",
         "Description[az]": "Ev qovluğunda boş disk sahəsi azaldıqda bu haqda xəbərdarlıq edir.",
         "Description[ca]": "Avisa quan s'exhaureix l'espai de la carpeta personal",
+        "Description[en_GB]": "Warns when running out of space on your home folder",
         "Description[es]": "Le avisa cuando se está quedando sin espacio en su carpeta personal",
         "Description[fr]": "Avertit lorsque l'espace vient à manquer dans votre dossier utilisateur.",
         "Description[hu]": "Figyelmeztet, ha kezd elfogyni a szabad lemezterület a saját könyvtárában",
