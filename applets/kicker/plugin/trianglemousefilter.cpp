@@ -20,7 +20,7 @@ TriangleMouseFilter::TriangleMouseFilter(QQuickItem *parent)
             return;
         }
         const auto targetPosition = mapToItem(m_interceptedHoverItem, m_lastCursorPosition);
-        QHoverEvent e(QEvent::HoverEnter, targetPosition, targetPosition);
+        QHoverEvent e(QEvent::HoverMove, targetPosition, targetPosition);
         qApp->sendEvent(m_interceptedHoverItem, &e);
     });
 };
@@ -78,7 +78,7 @@ bool TriangleMouseFilter::childMouseEventFilter(QQuickItem *item, QEvent *event)
             // we manually send the hover enter to that item
             if (event->type() == QEvent::HoverMove && m_interceptedHoverItem) {
                 const auto targetPosition = mapToItem(m_interceptedHoverItem, position);
-                QHoverEvent e(QEvent::HoverEnter, targetPosition, targetPosition);
+                QHoverEvent e(QEvent::HoverMove, targetPosition, targetPosition);
                 qApp->sendEvent(m_interceptedHoverItem, &e);
                 m_interceptedHoverItem.clear();
             }
