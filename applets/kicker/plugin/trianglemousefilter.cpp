@@ -19,8 +19,14 @@ TriangleMouseFilter::TriangleMouseFilter(QQuickItem *parent)
         if (!m_interceptedHoverItem) {
             return;
         }
+        if (m_interceptedHoverEnterPosition) {
+            const auto targetPosition = mapToItem(m_interceptedHoverItem, m_interceptedHoverEnterPosition.value());
+            QHoverEvent e(QEvent::HoverEnter, targetPosition, targetPosition);
+            qApp->sendEvent(m_interceptedHoverItem, &e);
+            m_interceptedHoverEnterPosition.reset();
+        }
         const auto targetPosition = mapToItem(m_interceptedHoverItem, m_lastCursorPosition);
-        QHoverEvent e(QEvent::HoverEnter, targetPosition, targetPosition);
+        QHoverEvent e(QEvent::HoverMove, targetPosition, targetPosition);
         qApp->sendEvent(m_interceptedHoverItem, &e);
     });
 };
@@ -45,6 +51,7 @@ bool TriangleMouseFilter::childMouseEventFilter(QQuickItem *item, QEvent *event)
 
         if (filterContains(position)) {
             if (event->type() == QEvent::HoverEnter) {
+                m_interceptedHoverEnterPosition = position;
                 m_interceptedHoverItem = item;
             }
 
@@ -62,6 +69,7 @@ bool TriangleMouseFilter::childMouseEventFilter(QQuickItem *item, QEvent *event)
             // if using this in a more general setting we might want to make this guarded by an option
             if (event->type() == QEvent::HoverEnter && !m_interceptionPos) {
                 m_interceptedHoverItem = item;
+                m_interceptedHoverEnterPosition = position;
                 if (m_filterTimeout > 0) {
                     m_resetTimer.start(m_filterTimeout);
                 }

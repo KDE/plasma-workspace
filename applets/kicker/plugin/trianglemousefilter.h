@@ -60,9 +60,10 @@ protected:
 private:
     bool filterContains(const QPointF &p) const;
     QTimer m_resetTimer;
-    std::optional<QPointF> m_interceptionPos;
+    std::optional<QPointF> m_interceptionPos; // point where we started intercepting
     QPointF m_lastCursorPosition;
-    QPointer<QQuickItem> m_interceptedHoverItem;
+    QPointer<QQuickItem> m_interceptedHoverItem; // item newly entered but the enter event was intercepted
+    std::optional<QPointF> m_interceptedHoverEnterPosition; // position of intercepted enter events
     Qt::Edge m_edge = Qt::RightEdge;
     int m_filterTimeout = 300;
 };
