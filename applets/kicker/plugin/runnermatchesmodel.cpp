@@ -66,6 +66,8 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
         }
     } else if (role == Kicker::HasActionListRole) {
         return match.runner()->id() == QLatin1String("services") || !match.runner()->findChildren<QAction *>().isEmpty();
+    } else if (role == Kicker::IsMultilineTextRole) {
+        return match.isMultiLine();
     } else if (role == Kicker::ActionListRole) {
         QVariantList actionList;
         const QList<QAction *> actions = m_runnerManager->actionsForMatch(match);
