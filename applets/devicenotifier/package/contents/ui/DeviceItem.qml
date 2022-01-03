@@ -55,18 +55,14 @@ PlasmaExtras.ExpandableListItem {
     Connections {
         target: unmountAll
         function onClicked() {
-            if (model["Removable"] && isMounted) {
-                actionTriggered();
-            }
+            removableActionTriggered();
         }
     }
 
     Connections {
          target: plasmoid.action("unmountAllDevices")
          function onTriggered() {
-             if (model["Removable"] && isMounted) {
-                 actionTriggered();
-             }
+             removableActionTriggered();
          }
      }
 
@@ -104,6 +100,12 @@ PlasmaExtras.ExpandableListItem {
     Component {
         id: deviceActionComponent
         QQC2.Action { }
+    }
+
+    function removableActionTriggered() {
+        if (model["Removable"] && isMounted) {
+            actionTriggered();
+        }
     }
 
     function actionTriggered() {
