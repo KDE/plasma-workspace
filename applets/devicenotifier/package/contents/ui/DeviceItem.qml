@@ -3,6 +3,7 @@
     SPDX-FileCopyrightText: 2012 Jacopo De Simoi <wilderkde@gmail.com>
     SPDX-FileCopyrightText: 2016 Kai Uwe Broulik <kde@privat.broulik.de>
     SPDX-FileCopyrightText: 2020 Nate Graham <nate@kde.org>
+    SPDX-FileCopyrightText: 2022 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -26,6 +27,10 @@ PlasmaExtras.ExpandableListItem {
     readonly property bool isMounted: devicenotifier.isMounted(udi)
     readonly property bool hasMessage: statusSource.lastUdi == udi && statusSource.data[statusSource.last] ? true : false
     readonly property var message: hasMessage ? statusSource.data[statusSource.last] || ({}) : ({})
+    readonly property var types: model["Device Types"]
+    readonly property bool hasStorageAccess: types && types.indexOf("Storage Access") !== -1
+    readonly property bool hasPortableMediaPlayer: types && types.indexOf("Portable Media Player") !== -1
+    readonly property var supportedProtocols: model["Supported Protocols"]
 
     readonly property double freeSpace: sdSource.data[udi] && sdSource.data[udi]["Free Space"] ? sdSource.data[udi]["Free Space"] : -1.0
     readonly property double totalSpace: sdSource.data[udi] && sdSource.data[udi]["Size"] ? sdSource.data[udi]["Size"] : -1.0
@@ -113,10 +118,15 @@ PlasmaExtras.ExpandableListItem {
         let operationName
         let operation
         const wasMounted = isMounted;
-        if (!isRemovable || !isMounted) {
+        if (!hasStorageAccess || !isRemovable || !isMounted) {
             service = hpSource.serviceForSource(udi);
             operation = service.operationDescription('invokeAction');
-            operation.predicate = "test-predicate-openinwindow.desktop";
+            const supportsMTP = supportedProtocols && supportedProtocols.indexOf("mtp") !== -1
+            if (!hasStorageAccess && hasPortableMediaPlayer && supportsMTP) {
+                operation.predicate = "solid_mtp.desktop" // this lives in kio-extras!
+            } else {
+                operation.predicate = "test-predicate-openinwindow.desktop";
+            }
         } else {
             service = sdSource.serviceForSource(udi);
             operation = service.operationDescription("unmount");
@@ -190,11 +200,14 @@ PlasmaExtras.ExpandableListItem {
             }
         }
         text: {
-            // It's possible for the root volume to be on a removable disk
-            if (!isRemovable || isRootVolume) {
+            // TODO: this entire logic and the semi-replication thereof in actionTriggered is really silly.
+            //  We have a fairly exhaustive predicate system, we should use it to assertain if a given udi is actionable
+            //  and then we simply pick the sensible default action of a suitable predicate.
+            // - It's possible for there to be no StorageAccess (e.g. MTP devices don't have one)
+            // - It's possible for the root volume to be on a removable disk
+            if (!hasStorageAccess || !isRemovable || isRootVolume) {
                 return i18n("Open in File Manager")
             } else {
-                const types = model["Device Types"];
                 if (!isMounted) {
                     return i18n("Mount and Open")
                 } else if (types && types.indexOf("OpticalDisc") !== -1) {
