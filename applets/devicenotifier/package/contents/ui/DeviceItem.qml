@@ -91,8 +91,8 @@ PlasmaExtras.ExpandableListItem {
         running: isMounted && plasmoid.expanded
         triggeredOnStart: true     // Update the storage space as soon as we open the plasmoid
         onTriggered: {
-            var service = sdSource.serviceForSource(udi);
-            var operation = service.operationDescription("updateFreespace");
+            const service = sdSource.serviceForSource(udi);
+            const operation = service.operationDescription("updateFreespace");
             service.startOperationCall(operation);
         }
     }
@@ -109,10 +109,10 @@ PlasmaExtras.ExpandableListItem {
     }
 
     function actionTriggered() {
-        var service
-        var operationName
-        var operation
-        var wasMounted = isMounted;
+        let service
+        let operationName
+        let operation
+        const wasMounted = isMounted;
         if (!isRemovable || !isMounted) {
             service = hpSource.serviceForSource(udi);
             operation = service.operationDescription('invokeAction');
@@ -157,8 +157,8 @@ PlasmaExtras.ExpandableListItem {
                 return ""
             }
             if (freeSpaceKnown) {
-                var freeSpaceText = sdSource.data[udi]["Free Space Text"]
-                var totalSpaceText = sdSource.data[udi]["Size Text"]
+                const freeSpaceText = sdSource.data[udi]["Free Space Text"]
+                const totalSpaceText = sdSource.data[udi]["Size Text"]
                 return i18nc("@info:status Free disk space", "%1 free of %2", freeSpaceText, totalSpaceText)
             }
             return ""
@@ -194,7 +194,7 @@ PlasmaExtras.ExpandableListItem {
             if (!isRemovable || isRootVolume) {
                 return i18n("Open in File Manager")
             } else {
-                var types = model["Device Types"];
+                const types = model["Device Types"];
                 if (!isMounted) {
                     return i18n("Mount and Open")
                 } else if (types && types.indexOf("OpticalDisc") !== -1) {
@@ -226,8 +226,8 @@ PlasmaExtras.ExpandableListItem {
                 return deviceItem.isRemovable && deviceItem.isMounted;
             }
             onTriggered: {
-                var service = hpSource.serviceForSource(udi);
-                var operation = service.operationDescription('invokeAction');
+                const service = hpSource.serviceForSource(udi);
+                const operation = service.operationDescription('invokeAction');
                 operation.predicate = modelData.predicate;
                 service.startOperationCall(operation);
                 devicenotifier.currentIndex = -1;
@@ -247,8 +247,8 @@ PlasmaExtras.ExpandableListItem {
         enabled: deviceItem.isRemovable && !deviceItem.isMounted
 
         onTriggered: {
-            var service = sdSource.serviceForSource(udi);
-            var operation = service.operationDescription("mount");
+            const service = sdSource.serviceForSource(udi);
+            const operation = service.operationDescription("mount");
             service.startOperationCall(operation);
         }
     }
