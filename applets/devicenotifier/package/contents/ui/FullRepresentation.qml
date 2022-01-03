@@ -148,6 +148,8 @@ PlasmaExtras.Representation {
             //acceptable since one doesn't have a billion of devices
             cacheBuffer: 1000
 
+            // FIXME: the model is sorted by timestamp, not type, this results in sections possibly getting listed
+            //   multiple times
             section {
                 property: "Type Description"
                 delegate: Item {
