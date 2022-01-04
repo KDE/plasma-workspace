@@ -178,7 +178,7 @@ KCM.SimpleKCM {
                 enabled: activator.checked
                 wrapMode: Text.Wrap
                 Layout.maximumWidth: modeSwitcher.width
-                text: i18n("The device's location will be periodically updated using GPS (if available), or by sending network information to <a href=\"https://location.services.mozilla.com\">Mozilla Location Service</a>.")
+                text: xi18nc("@info", "The device's location will be periodically updated using GPS (if available), or by sending network information to <link url='https://location.services.mozilla.com'>Mozilla Location Service</link>.")
                 onLinkActivated: { Qt.openUrlExternally("https://location.services.mozilla.com"); }
                 font: Kirigami.Theme.smallFont
             }
