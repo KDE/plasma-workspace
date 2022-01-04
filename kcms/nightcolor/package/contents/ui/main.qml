@@ -174,13 +174,17 @@ KCM.SimpleKCM {
 
             // Inform about geolocation access in auto mode
             QQC2.Label {
+                Layout.maximumWidth: modeSwitcher.width
+
                 visible: modeSwitcher.currentIndex === NightColorMode.Automatic
                 enabled: activator.checked
+
                 wrapMode: Text.Wrap
-                Layout.maximumWidth: modeSwitcher.width
+
                 text: xi18nc("@info", "The device's location will be periodically updated using GPS (if available), or by sending network information to <link url='https://location.services.mozilla.com'>Mozilla Location Service</link>.")
-                onLinkActivated: (url) => Qt.openUrlExternally(url)
                 font: Kirigami.Theme.smallFont
+
+                onLinkActivated: (url) => Qt.openUrlExternally(url)
             }
 
             // Workaround for Layout.margins not working in Kirigami FormLayout (bug 434625)
