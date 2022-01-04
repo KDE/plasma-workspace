@@ -4,7 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.12
+import QtQuick 2.15
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.5 as QQC2
 
@@ -173,18 +173,36 @@ KCM.SimpleKCM {
             }
 
             // Inform about geolocation access in auto mode
-            QQC2.Label {
+
+            // The system settings window likes to take over
+            // the cursor with a plain label. The TextEdit
+            // 'takes priority' over the system settings
+            // window trying to eat the mouse, allowing
+            // us to use the HoverHandler boilerplate for
+            // proper link handling
+            TextEdit {
                 Layout.maximumWidth: modeSwitcher.width
 
                 visible: modeSwitcher.currentIndex === NightColorMode.Automatic
                 enabled: activator.checked
 
+                textFormat: TextEdit.RichText
                 wrapMode: Text.Wrap
+                readOnly: true
+
+                color: Kirigami.Theme.textColor
+                selectedTextColor: Kirigami.Theme.highlightedTextColor
+                selectionColor: Kirigami.Theme.highlightColor
 
                 text: xi18nc("@info", "The device's location will be periodically updated using GPS (if available), or by sending network information to <link url='https://location.services.mozilla.com'>Mozilla Location Service</link>.")
                 font: Kirigami.Theme.smallFont
 
                 onLinkActivated: (url) => Qt.openUrlExternally(url)
+
+                HoverHandler {
+                    acceptedButtons: Qt.NoButton
+                    cursorShape: parent.hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
+                }
             }
 
             // Workaround for Layout.margins not working in Kirigami FormLayout (bug 434625)
