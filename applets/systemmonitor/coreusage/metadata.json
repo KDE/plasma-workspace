@@ -41,6 +41,7 @@
         "Description[lt]": "Sistemos prižiūryklės valdiklis, kuris rodo atskirų procesoriaus branduolių naudojimą",
         "Description[nl]": "Systeemmonitorwidget die gebruik toont van individuele CPU-kernen",
         "Description[nn]": "System­overvaking som viser bruk av einskilde prosessor­kjernar",
+        "Description[pa]": "ਵੱਖ-ਵੱਖ CPU ਕੋਰਾਂ ਦੀ ਵਰਤੋਂ ਵਿਖਾਉਣ ਵਾਲਾ ਸਿਸਟਮ ਮਾਨੀਟਰ ਵਿਜੈੱਟ",
         "Description[pl]": "Element interfejsu, który pokazuje wykorzystanie poszczególnych rdzeni procesora",
         "Description[pt_BR]": "Widget monitor do sistema que mostra o uso individual dos núcleos da CPU",
         "Description[ru]": "Мониторинг загрузки процессора, предоставляющий сведения об индивидуальном использовании ядер",
