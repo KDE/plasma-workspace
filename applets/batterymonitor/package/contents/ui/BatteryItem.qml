@@ -169,6 +169,7 @@ RowLayout {
                 && root.battery["Is Power Supply"]
                 && root.battery.Capacity !== ""
                 && typeof root.battery.Capacity === "number"
+                && !root.isBroken
 
             LeftLabel {
                 text: i18n("Battery Health:")
