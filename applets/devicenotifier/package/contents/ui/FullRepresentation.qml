@@ -17,12 +17,14 @@ import org.kde.plasma.components 2.0 as PlasmaComponents // For Highlight
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
-PlasmaComponents3.Page {
+PlasmaExtras.Representation {
     id: fullRep
     property bool spontaneousOpen: false
 
     Layout.minimumWidth: PlasmaCore.Units.gridUnit * 12
     Layout.minimumHeight: PlasmaCore.Units.gridUnit * 12
+
+    collapseMarginsHint: true
 
     header: PlasmaExtras.PlasmoidHeading {
         visible: !(plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentDrawsPlasmoidHeading) && devicenotifier.mountedRemovables > 1
@@ -39,7 +41,7 @@ PlasmaComponents3.Page {
             }
         }
     }
-    
+
     MouseArea {
         id: fullRepMouseArea
         hoverEnabled: true
@@ -112,24 +114,33 @@ PlasmaComponents3.Page {
     }
 
     PlasmaComponents3.ScrollView {
-        anchors.fill: parent
+        id: scrollView
+
         // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-83890
         PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
 
-        ListView {
+        anchors.fill: parent
+        leftPadding: PlasmaCore.Units.smallSpacing * 2
+        rightPadding: PlasmaCore.Units.smallSpacing * 2
+
+
+        contentItem: ListView {
             id: notifierDialog
             focus: true
-            boundsBehavior: Flickable.StopAtBounds
 
             model: filterModel
 
             delegate: DeviceItem {
-                width: notifierDialog.width
+                width: notifierDialog.width - (scrollView.PlasmaComponents3.ScrollBar.vertical.visible ? PlasmaCore.Units.smallSpacing * 4 : 0)
                 udi: DataEngineSource
             }
             highlight: PlasmaComponents.Highlight { }
             highlightMoveDuration: 0
             highlightResizeDuration: 0
+
+            topMargin: PlasmaCore.Units.smallSpacing * 2
+            bottomMargin: PlasmaCore.Units.smallSpacing * 2
+            spacing: PlasmaCore.Units.smallSpacing
 
             currentIndex: devicenotifier.currentIndex
 
@@ -141,7 +152,7 @@ PlasmaComponents3.Page {
                 property: "Type Description"
                 delegate: Item {
                     height: Math.floor(childrenRect.height)
-                    width: notifierDialog.width
+                    width: notifierDialog.width - (scrollView.PlasmaComponents3.ScrollBar.vertical.visible ? PlasmaCore.Units.smallSpacing * 4 : 0)
                     PlasmaExtras.Heading {
                         level: 3
                         opacity: 0.6
