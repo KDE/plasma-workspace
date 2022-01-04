@@ -20,6 +20,9 @@ Item {
     id: batterymonitor
     Plasmoid.switchWidth: PlasmaCore.Units.gridUnit * 10
     Plasmoid.switchHeight: PlasmaCore.Units.gridUnit * 10
+    Plasmoid.title: (hasBatteries === hasBrightness ? i18n("Battery and Brightness") :
+                                      hasBrightness ? i18n("Brightness") :
+                                      hasBatteries ? i18n("Battery") : "")
 
     LayoutMirroring.enabled: Qt.application.layoutDirection == Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
@@ -37,8 +40,11 @@ Item {
         return PlasmaCore.Types.PassiveStatus;
     }
 
+    readonly property bool hasBatteries: batteries.count > 0 && pmSource.data["Battery"]["Has Cumulative"]
+    readonly property bool hasBrightness: isBrightnessAvailable || isKeyboardBrightnessAvailable
+
     Plasmoid.toolTipMainText: {
-        if (batteries.count === 0 || !pmSource.data["Battery"]["Has Cumulative"]) {
+        if (!hasBatteries) {
             return plasmoid.title
         } else if (pmSource.data["Battery"]["State"] === "FullyCharged") {
             return i18n("Fully Charged");
@@ -87,7 +93,7 @@ Item {
         return parts.join("\n");
     }
 
-    Plasmoid.icon: "battery"
+    Plasmoid.icon: !hasBatteries && hasBrightness ? "high-brightness" : "battery"
 
     property bool disableBrightnessUpdate: true
 
@@ -212,8 +218,15 @@ Item {
         }
     }
 
-    Plasmoid.compactRepresentation: CompactRepresentation {}
+    Component {
+        id: batteryCompact
+        CompactRepresentation {}
+    }
+    Plasmoid.compactRepresentation: hasBatteries ? batteryCompact : null
 
+
+    readonly property bool isBrightnessAvailable: pmSource.data["PowerDevil"] && pmSource.data["PowerDevil"]["Screen Brightness Available"] ? true : false
+    readonly property bool isKeyboardBrightnessAvailable: pmSource.data["PowerDevil"] && pmSource.data["PowerDevil"]["Keyboard Brightness Available"] ? true : false
     Plasmoid.fullRepresentation: PopupDialog {
         id: dialogItem
         Layout.minimumWidth: PlasmaCore.Units.iconSizes.medium * 9
@@ -223,8 +236,8 @@ Item {
         model: plasmoid.expanded ? batteries : null
         focus: true
 
-        isBrightnessAvailable: pmSource.data["PowerDevil"] && pmSource.data["PowerDevil"]["Screen Brightness Available"] ? true : false
-        isKeyboardBrightnessAvailable: pmSource.data["PowerDevil"] && pmSource.data["PowerDevil"]["Keyboard Brightness Available"] ? true : false
+        isBrightnessAvailable: batterymonitor.isBrightnessAvailable
+        isKeyboardBrightnessAvailable: batterymonitor.isKeyboardBrightnessAvailable
 
         pluggedIn: pmSource.data["AC Adapter"] !== undefined && pmSource.data["AC Adapter"]["Plugged in"]
         remainingTime: batterymonitor.remainingTime
