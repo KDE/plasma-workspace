@@ -76,7 +76,6 @@ RowLayout {
             spacing: PlasmaCore.Units.smallSpacing
 
             PlasmaComponents3.Label {
-                id: batteryNameLabel
                 Layout.fillWidth: true
                 elide: Text.ElideRight
                 text: root.battery["Pretty Name"]
@@ -89,7 +88,6 @@ RowLayout {
             }
 
             PlasmaComponents3.Label {
-                id: batteryPercent
                 horizontalAlignment: Text.AlignRight
                 visible: root.isPresent
                 text: i18nc("Placeholder is battery percentage", "%1%", root.battery.Percent)
@@ -139,8 +137,6 @@ RowLayout {
             }
 
             PlasmaComponents3.Label {
-                id: brokenBatteryLabel
-
                 Layout.fillWidth: true
                 Layout.columnSpan: 2
 
