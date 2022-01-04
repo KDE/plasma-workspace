@@ -120,20 +120,20 @@ RowLayout {
             columnSpacing: PlasmaCore.Units.smallSpacing
             rowSpacing: 0
 
-            enabled: false // makes PC3.Labels semi-transparent through implicit inheritance
-
             component LeftLabel : PlasmaComponents3.Label {
                 // fillWidth is true, so using internal alignment
                 horizontalAlignment: Text.AlignLeft
                 Layout.fillWidth: true
                 font: PlasmaCore.Theme.smallestFont
                 wrapMode: Text.WordWrap
+                enabled: false
             }
             component RightLabel : PlasmaComponents3.Label {
                 // fillWidth is false, so using external (grid-cell-internal) alignment
                 Layout.alignment: Qt.AlignRight
                 Layout.fillWidth: false
                 font: PlasmaCore.Theme.smallestFont
+                enabled: false
             }
 
             PlasmaComponents3.Label {
@@ -144,6 +144,7 @@ RowLayout {
                     ? i18n("This battery's health is at only %1% and should be replaced. Please contact your hardware vendor for more details.", root.battery.Capacity)
                     : ""
                 font: PlasmaCore.Theme.smallestFont
+                color: PlasmaCore.Theme.neutralTextColor
                 visible: root.isBroken
                 wrapMode: Text.WordWrap
             }
