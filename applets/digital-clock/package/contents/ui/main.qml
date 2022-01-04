@@ -126,7 +126,7 @@ Item {
             plasmoid.setAction("clockkcm", i18n("Adjust Date and Time…"), "clock");
         }
         if (KCMShell.authorize("kcm_formats.desktop").length > 0) {
-            plasmoid.setAction("formatskcm", i18n("Set Time Format…"));
+            plasmoid.setAction("formatskcm", i18n("Set Time Format…"), "gnumeric-format-thousand-separator");
         }
 
         // Set the list of enabled plugins from config
