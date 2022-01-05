@@ -99,7 +99,7 @@ Kirigami.Page {
                 NewStuff.Action {
                     text: i18n("Get New GNOME/GTK Application Styles…")
                     configFile: "gtk_themes.knsrc"
-                    function onEntryEvent(entry, event) {
+                    onEntryEvent: function (entry, event) {
                         if (event == 1) { // StatusChangedEvent
                             kcm.load();
                         }

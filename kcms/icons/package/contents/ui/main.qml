@@ -250,7 +250,7 @@ KCM.GridViewKCM {
                     NewStuff.Action {
                         text: i18n("Get New Icons…")
                         configFile: "icons.knsrc"
-                        function onEntryEvent(entry, event) {
+                        onEntryEvent: function (entry, event) {
                             if (event == 1) { // StatusChangedEvent
                                 kcm.ghnsEntriesChanged();
                             } else if (event == 2) { // AdoptedEvent

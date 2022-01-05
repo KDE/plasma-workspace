@@ -139,7 +139,7 @@ KCM.GridViewKCM {
                     NewStuff.Action {
                         text: i18n("&Get New Cursors…")
                         configFile: "xcursor.knsrc"
-                        function onEntryEvent(entry, event) {
+                        onEntryEvent: function (entry, event) {
                             if (event == 1) { // StatusChangedEvent
                                 kcm.ghnsEntryChanged(entry);
                             }

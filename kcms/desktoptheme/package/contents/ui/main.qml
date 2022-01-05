@@ -178,7 +178,7 @@ KCM.GridViewKCM {
                 NewStuff.Action {
                     text: i18n("Get New Plasma Styles…")
                     configFile: "plasma-themes.knsrc"
-                    function onEntryEvent(entry, event) {
+                    onEntryEvent: function (entry, event) {
                         kcm.load();
                     }
                 }
