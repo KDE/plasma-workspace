@@ -13,6 +13,7 @@ import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.workspace.keyboardlayout 1.0 as Keyboards
 import org.kde.kquickcontrolsaddons 2.0
+import org.kde.kirigami 2.5 as Kirigami // For Settings.tabletMode
 
 Item {
     id: root
@@ -77,7 +78,8 @@ Item {
             PropertyChanges { target: plasmoid
                 icon: "arrow-down"
                 toolTipSubText: i18n("Virtual Keyboard: visible")
-                status: PlasmaCore.Types.ActiveStatus
+                // It's only relevant in tablet mode
+                status: Kirigami.Settings.tabletMode ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
             }
             PropertyChanges { target: root; overlays: [] }
         },
@@ -87,7 +89,8 @@ Item {
             PropertyChanges { target: plasmoid
                 icon: "input-keyboard-virtual-on"
                 toolTipSubText: i18n("Virtual Keyboard: enabled")
-                status: PlasmaCore.Types.ActiveStatus
+                // It's only relevant in tablet mode
+                status: Kirigami.Settings.tabletMode ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
             }
             PropertyChanges { target: root; overlays: [] }
         }
