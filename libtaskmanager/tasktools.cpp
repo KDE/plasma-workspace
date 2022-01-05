@@ -781,6 +781,12 @@ bool canLauchNewInstance(const AppData &appData)
             return false;
         }
 
+        if (service->property(QStringLiteral("SingleMainWindow"), QVariant::Bool).toBool()) {
+            return false;
+        }
+
+        // GNOME-specific key, for backwards compatibility with apps that haven't
+        // started using the XDG "SingleMainWindow" key yet
         if (service->property(QStringLiteral("X-GNOME-SingleWindow"), QVariant::Bool).toBool()) {
             return false;
         }
