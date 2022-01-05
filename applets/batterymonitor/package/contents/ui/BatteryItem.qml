@@ -141,7 +141,7 @@ RowLayout {
                 Layout.columnSpan: 2
 
                 text: root.isBroken && typeof root.battery.Capacity !== "undefined"
-                    ? i18n("This battery's health is at only %1% and should be replaced. Please contact your hardware vendor for more details.", root.battery.Capacity)
+                    ? i18n("This battery's health is at only %1% and it should be replaced. Contact the manufacturer.", root.battery.Capacity)
                     : ""
                 font: PlasmaCore.Theme.smallestFont
                 color: PlasmaCore.Theme.neutralTextColor
