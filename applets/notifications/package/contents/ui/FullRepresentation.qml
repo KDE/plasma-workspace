@@ -20,11 +20,13 @@ import org.kde.notificationmanager 1.0 as NotificationManager
 
 import "global"
 
-PlasmaComponents3.Page {
+PlasmaExtras.Representation {
     // TODO these should be configurable in the future
     readonly property int dndMorningHour: 6
     readonly property int dndEveningHour: 20
     Layout.fillHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical
+
+    collapseMarginsHint: true
 
     // HACK forward focus to the list
     onActiveFocusChanged: {
@@ -222,373 +224,363 @@ PlasmaComponents3.Page {
         }
     }
 
-    ColumnLayout{
-        // FIXME fix popup size when resizing panel smaller (so it collapses)
-        //Layout.preferredWidth: PlasmaCore.Units.gridUnit * 18
-        //Layout.preferredHeight: PlasmaCore.Units.gridUnit * 24
-        //Layout.minimumWidth: PlasmaCore.Units.gridUnit * 10
-        //Layout.minimumHeight: PlasmaCore.Units.gridUnit * 15
+    PlasmaComponents3.ScrollView {
+        id: scrollView
         anchors.fill: parent
+        background: null
+        leftPadding: PlasmaCore.Units.smallSpacing * 2
+        rightPadding: PlasmaCore.Units.smallSpacing * 2
 
-        spacing: PlasmaCore.Units.smallSpacing
 
-        // actual notifications
-        PlasmaComponents3.ScrollView {
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-            Layout.preferredWidth: PlasmaCore.Units.gridUnit * 18
-            Layout.preferredHeight: PlasmaCore.Units.gridUnit * 24
-            Layout.leftMargin: PlasmaCore.Units.smallSpacing
-            background: null
+        // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-83890
+        PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
 
-            // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-83890
-            PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
+        contentItem: ListView {
+            id: list
+            model: historyModel
+            currentIndex: -1
+            topMargin: PlasmaCore.Units.smallSpacing * 2
+            bottomMargin: PlasmaCore.Units.smallSpacing * 2
+            spacing: PlasmaCore.Units.smallSpacing
 
-            ListView {
-                id: list
-                model: historyModel
-                currentIndex: -1
-
-                Keys.onDeletePressed: {
-                    var idx = historyModel.index(currentIndex, 0);
-                    if (historyModel.data(idx, NotificationManager.Notifications.ClosableRole)) {
-                        historyModel.close(idx);
-                        // TODO would be nice to stay inside the current group when deleting an item
-                    }
+            Keys.onDeletePressed: {
+                var idx = historyModel.index(currentIndex, 0);
+                if (historyModel.data(idx, NotificationManager.Notifications.ClosableRole)) {
+                    historyModel.close(idx);
+                    // TODO would be nice to stay inside the current group when deleting an item
                 }
-                Keys.onEnterPressed: Keys.onReturnPressed(event)
-                Keys.onReturnPressed: {
-                    // Trigger default action, if any
-                    var idx = historyModel.index(currentIndex, 0);
-                    if (historyModel.data(idx, NotificationManager.Notifications.HasDefaultActionRole)) {
-                        historyModel.invokeDefaultAction(idx);
-                        return;
-                    }
-
-                    // Trigger thumbnail URL if there's one
-                    var urls = historyModel.data(idx, NotificationManager.Notifications.UrlsRole);
-                    if (urls && urls.length === 1) {
-                        Qt.openUrlExternally(urls[0]);
-                        return;
-                    }
-
-                    // TODO for finished jobs trigger "Open" or "Open Containing Folder" action
-                }
-                Keys.onLeftPressed: setGroupExpanded(currentIndex, LayoutMirroring.enabled)
-                Keys.onRightPressed: setGroupExpanded(currentIndex, !LayoutMirroring.enabled)
-
-                Keys.onPressed: {
-                    switch (event.key) {
-                    case Qt.Key_Home:
-                        currentIndex = 0;
-                        break;
-                    case Qt.Key_End:
-                        currentIndex = count - 1;
-                        break;
-                    }
+            }
+            Keys.onEnterPressed: Keys.onReturnPressed(event)
+            Keys.onReturnPressed: {
+                // Trigger default action, if any
+                var idx = historyModel.index(currentIndex, 0);
+                if (historyModel.data(idx, NotificationManager.Notifications.HasDefaultActionRole)) {
+                    historyModel.invokeDefaultAction(idx);
+                    return;
                 }
 
-                function isRowExpanded(row) {
-                    var idx = historyModel.index(row, 0);
-                    return historyModel.data(idx, NotificationManager.Notifications.IsGroupExpandedRole);
+                // Trigger thumbnail URL if there's one
+                var urls = historyModel.data(idx, NotificationManager.Notifications.UrlsRole);
+                if (urls && urls.length === 1) {
+                    Qt.openUrlExternally(urls[0]);
+                    return;
                 }
 
-                function setGroupExpanded(row, expanded) {
-                    var rowIdx = historyModel.index(row, 0);
-                    var persistentRowIdx = historyModel.makePersistentModelIndex(rowIdx);
-                    var persistentGroupIdx = historyModel.makePersistentModelIndex(historyModel.groupIndex(rowIdx));
+                // TODO for finished jobs trigger "Open" or "Open Containing Folder" action
+            }
+            Keys.onLeftPressed: setGroupExpanded(currentIndex, LayoutMirroring.enabled)
+            Keys.onRightPressed: setGroupExpanded(currentIndex, !LayoutMirroring.enabled)
 
-                    historyModel.setData(rowIdx, expanded, NotificationManager.Notifications.IsGroupExpandedRole);
+            Keys.onPressed: {
+                switch (event.key) {
+                case Qt.Key_Home:
+                    currentIndex = 0;
+                    break;
+                case Qt.Key_End:
+                    currentIndex = count - 1;
+                    break;
+                }
+            }
 
-                    // If the current item went away when the group collapsed, scroll to the group heading
-                    if (!persistentRowIdx || !persistentRowIdx.valid) {
-                        if (persistentGroupIdx && persistentGroupIdx.valid) {
-                            list.positionViewAtIndex(persistentGroupIdx.row, ListView.Contain);
-                            // When closed via keyboard, also set a sane current index
-                            if (list.currentIndex > -1) {
-                                list.currentIndex = persistentGroupIdx.row;
-                            }
+            function isRowExpanded(row) {
+                var idx = historyModel.index(row, 0);
+                return historyModel.data(idx, NotificationManager.Notifications.IsGroupExpandedRole);
+            }
+
+            function setGroupExpanded(row, expanded) {
+                var rowIdx = historyModel.index(row, 0);
+                var persistentRowIdx = historyModel.makePersistentModelIndex(rowIdx);
+                var persistentGroupIdx = historyModel.makePersistentModelIndex(historyModel.groupIndex(rowIdx));
+
+                historyModel.setData(rowIdx, expanded, NotificationManager.Notifications.IsGroupExpandedRole);
+
+                // If the current item went away when the group collapsed, scroll to the group heading
+                if (!persistentRowIdx || !persistentRowIdx.valid) {
+                    if (persistentGroupIdx && persistentGroupIdx.valid) {
+                        list.positionViewAtIndex(persistentGroupIdx.row, ListView.Contain);
+                        // When closed via keyboard, also set a sane current index
+                        if (list.currentIndex > -1) {
+                            list.currentIndex = persistentGroupIdx.row;
                         }
                     }
                 }
+            }
 
-                highlightMoveDuration: 0
-                highlightResizeDuration: 0
-                // Not using PlasmaComponents.Highlight as this is only for indicating keyboard focus
-                highlight: PlasmaCore.FrameSvgItem {
-                    imagePath: "widgets/listitem"
-                    prefix: "pressed"
-                }
+            highlightMoveDuration: 0
+            highlightResizeDuration: 0
+            // Not using PlasmaComponents.Highlight as this is only for indicating keyboard focus
+            highlight: PlasmaCore.FrameSvgItem {
+                imagePath: "widgets/listitem"
+                prefix: "pressed"
+            }
 
-                add: Transition {
-                    SequentialAnimation {
-                        PropertyAction { property: "opacity"; value: 0 }
-                        PauseAnimation { duration: PlasmaCore.Units.longDuration }
-                        ParallelAnimation {
-                            NumberAnimation { property: "opacity"; from: 0; to: 1; duration: PlasmaCore.Units.longDuration }
-                            NumberAnimation { property: "height"; from: 0; duration: PlasmaCore.Units.longDuration }
-                        }
+            add: Transition {
+                SequentialAnimation {
+                    PropertyAction { property: "opacity"; value: 0 }
+                    PauseAnimation { duration: PlasmaCore.Units.longDuration }
+                    ParallelAnimation {
+                        NumberAnimation { property: "opacity"; from: 0; to: 1; duration: PlasmaCore.Units.longDuration }
+                        NumberAnimation { property: "height"; from: 0; duration: PlasmaCore.Units.longDuration }
                     }
                 }
-                addDisplaced: Transition {
+            }
+            addDisplaced: Transition {
+                NumberAnimation { properties: "y"; duration:  PlasmaCore.Units.longDuration }
+            }
+
+            remove: Transition {
+                id: removeTransition
+                ParallelAnimation {
+                    NumberAnimation { property: "opacity"; to: 0; duration: PlasmaCore.Units.longDuration }
+                    NumberAnimation {
+                        id: removeXAnimation
+                        property: "x"
+                        to: list.width - (scrollView.PlasmaComponents3.ScrollBar.vertical.visible ? PlasmaCore.Units.smallSpacing * 4 : 0)
+                        duration: PlasmaCore.Units.longDuration
+                    }
+                }
+            }
+            removeDisplaced: Transition {
+                SequentialAnimation {
+                    PauseAnimation { duration: PlasmaCore.Units.longDuration }
                     NumberAnimation { properties: "y"; duration:  PlasmaCore.Units.longDuration }
                 }
+            }
 
-                remove: Transition {
-                    id: removeTransition
-                    ParallelAnimation {
-                        NumberAnimation { property: "opacity"; to: 0; duration: PlasmaCore.Units.longDuration }
-                        NumberAnimation {
-                            id: removeXAnimation
-                            property: "x"
-                            to: list.width
-                            duration: PlasmaCore.Units.longDuration
-                        }
-                    }
-                }
-                removeDisplaced: Transition {
-                    SequentialAnimation {
-                        PauseAnimation { duration: PlasmaCore.Units.longDuration }
-                        NumberAnimation { properties: "y"; duration:  PlasmaCore.Units.longDuration }
-                    }
-                }
+            // This is so the delegates can detect the change in "isInGroup" and show a separator
+            section {
+                property: "isInGroup"
+                criteria: ViewSection.FullString
+            }
 
-                // This is so the delegates can detect the change in "isInGroup" and show a separator
-                section {
-                    property: "isInGroup"
-                    criteria: ViewSection.FullString
-                }
+            delegate: DraggableDelegate {
+                id: delegate
+                width: ListView.view.width - (scrollView.PlasmaComponents3.ScrollBar.vertical.visible ? PlasmaCore.Units.smallSpacing * 4 : 0)
+                contentItem: delegateLoader
 
-                delegate: DraggableDelegate {
-                    id: delegate
-                    width: list.width
-                    contentItem: delegateLoader
+                draggable: !model.isGroup && model.type != NotificationManager.Notifications.JobType
 
-                    draggable: !model.isGroup && model.type != NotificationManager.Notifications.JobType
-
-                    onDismissRequested: {
-                        // Setting the animation target explicitly before removing the notification:
-                        // Using ViewTransition.item.x to get the x position in the animation
-                        // causes random crash in attached property access (cf. Bug 414066)
-                        if (x < 0) {
-                            removeXAnimation.to = -list.width;
-                        }
-
-                        historyModel.close(historyModel.index(index, 0));
+                onDismissRequested: {
+                    // Setting the animation target explicitly before removing the notification:
+                    // Using ViewTransition.item.x to get the x position in the animation
+                    // causes random crash in attached property access (cf. Bug 414066)
+                    if (x < 0) {
+                        removeXAnimation.to = -delegate.width;
                     }
 
-                    Loader {
-                        id: delegateLoader
-                        width: list.width
-                        sourceComponent: model.isGroup ? groupDelegate : notificationDelegate
+                    historyModel.close(historyModel.index(index, 0));
+                }
 
-                        Component {
-                            id: groupDelegate
-                            NotificationHeader {
-                                applicationName: model.applicationName
-                                applicationIconSource: model.applicationIconName
-                                originName: model.originName || ""
+                Loader {
+                    id: delegateLoader
+                    width: delegate.width
+                    sourceComponent: model.isGroup ? groupDelegate : notificationDelegate
 
-                                // don't show timestamp for group
+                    Component {
+                        id: groupDelegate
+                        NotificationHeader {
+                            applicationName: model.applicationName
+                            applicationIconSource: model.applicationIconName
+                            originName: model.originName || ""
 
-                                configurable: model.configurable
-                                closable: model.closable
-                                closeButtonTooltip: i18n("Close Group")
+                            // don't show timestamp for group
 
-                                onCloseClicked: historyModel.close(historyModel.index(index, 0))
-                                onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
-                            }
+                            configurable: model.configurable
+                            closable: model.closable
+                            closeButtonTooltip: i18n("Close Group")
+
+                            onCloseClicked: historyModel.close(historyModel.index(index, 0))
+                            onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
                         }
+                    }
 
-                        Component {
-                            id: notificationDelegate
-                            ColumnLayout {
-                                spacing: PlasmaCore.Units.smallSpacing
+                    Component {
+                        id: notificationDelegate
+                        ColumnLayout {
+                            spacing: PlasmaCore.Units.smallSpacing
 
-                                RowLayout {
-                                    Item {
-                                        id: groupLineContainer
-                                        Layout.fillHeight: true
-                                        Layout.topMargin: PlasmaCore.Units.smallSpacing
-                                        width: PlasmaCore.Units.iconSizes.small
-                                        visible: model.isInGroup
+                            RowLayout {
+                                Item {
+                                    id: groupLineContainer
+                                    Layout.fillHeight: true
+                                    Layout.topMargin: PlasmaCore.Units.smallSpacing
+                                    width: PlasmaCore.Units.iconSizes.small
+                                    visible: model.isInGroup
 
-                                        PlasmaCore.SvgItem {
-                                            elementId: "vertical-line"
-                                            svg: lineSvg
-                                            anchors.horizontalCenter: parent.horizontalCenter
-                                            // Want a thicker than default bar
-                                            width: Math.min(groupLineContainer.width, naturalSize.width * PlasmaCore.Units.devicePixelRatio * 3)
-                                            height: parent.height
-                                        }
-                                    }
-
-                                    NotificationItem {
-                                        Layout.fillWidth: true
-
-                                        notificationType: model.type
-
-                                        inGroup: model.isInGroup
-                                        inHistory: true
-                                        listViewParent: list
-
-                                        applicationName: model.applicationName
-                                        applicationIconSource: model.applicationIconName
-                                        originName: model.originName || ""
-
-                                        time: model.updated || model.created
-
-                                        // configure button on every single notifications is bit overwhelming
-                                        configurable: !inGroup && model.configurable
-
-                                        dismissable: model.type === NotificationManager.Notifications.JobType
-                                            && model.jobState !== NotificationManager.Notifications.JobStateStopped
-                                            && model.dismissed
-                                            // TODO would be nice to be able to undismiss jobs even when they autohide
-                                            && notificationSettings.permanentJobPopups
-                                        dismissed: model.dismissed || false
-                                        closable: model.closable
-
-                                        summary: model.summary
-                                        body: model.body || ""
-                                        icon: model.image || model.iconName
-
-                                        urls: model.urls || []
-
-                                        jobState: model.jobState || 0
-                                        percentage: model.percentage || 0
-                                        jobError: model.jobError || 0
-                                        suspendable: !!model.suspendable
-                                        killable: !!model.killable
-                                        jobDetails: model.jobDetails || null
-
-                                        configureActionLabel: model.configureActionLabel || ""
-                                        // In the popup the default action is triggered by clicking on the popup
-                                        // however in the list this is undesirable, so instead show a clickable button
-                                        // in case you have a non-expired notification in history (do not disturb mode)
-                                        // unless it has the same label as an action
-                                        readonly property bool addDefaultAction: (model.hasDefaultAction
-                                                                                && model.defaultActionLabel
-                                                                                && (model.actionLabels || []).indexOf(model.defaultActionLabel) === -1) ? true : false
-                                        actionNames: {
-                                            var actions = (model.actionNames || []);
-                                            if (addDefaultAction) {
-                                                actions.unshift("default"); // prepend
-                                            }
-                                            return actions;
-                                        }
-                                        actionLabels: {
-                                            var labels = (model.actionLabels || []);
-                                            if (addDefaultAction) {
-                                                labels.unshift(model.defaultActionLabel);
-                                            }
-                                            return labels;
-                                        }
-
-                                        onCloseClicked: close()
-
-                                        onDismissClicked: {
-                                            model.dismissed = false;
-                                            root.closePlasmoid();
-                                        }
-                                        onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
-
-                                        onActionInvoked: {
-                                            if (actionName === "default") {
-                                                historyModel.invokeDefaultAction(historyModel.index(index, 0));
-                                            } else {
-                                                historyModel.invokeAction(historyModel.index(index, 0), actionName);
-                                            }
-
-                                            expire();
-                                        }
-                                        onOpenUrl: {
-                                            Qt.openUrlExternally(url);
-                                            expire();
-                                        }
-                                        onFileActionInvoked: {
-                                            if (action.objectName === "movetotrash" || action.objectName === "deletefile") {
-                                                close();
-                                            } else {
-                                                expire();
-                                            }
-                                        }
-
-                                        onSuspendJobClicked: historyModel.suspendJob(historyModel.index(index, 0))
-                                        onResumeJobClicked: historyModel.resumeJob(historyModel.index(index, 0))
-                                        onKillJobClicked: historyModel.killJob(historyModel.index(index, 0))
-
-                                        function expire() {
-                                            if (model.resident) {
-                                                model.expired = true;
-                                            } else {
-                                                historyModel.expire(historyModel.index(index, 0));
-                                            }
-                                        }
-
-                                        function close() {
-                                            historyModel.close(historyModel.index(index, 0));
-                                        }
+                                    PlasmaCore.SvgItem {
+                                        elementId: "vertical-line"
+                                        svg: lineSvg
+                                        anchors.horizontalCenter: parent.horizontalCenter
+                                        // Want a thicker than default bar
+                                        width: Math.min(groupLineContainer.width, naturalSize.width * PlasmaCore.Units.devicePixelRatio * 3)
+                                        height: parent.height
                                     }
                                 }
 
-                                PlasmaComponents3.ToolButton {
-                                    icon.name: model.isGroupExpanded ? "arrow-up" : "arrow-down"
-                                    text: model.isGroupExpanded ? i18n("Show Fewer")
-                                                                : i18nc("Expand to show n more notifications",
-                                                                        "Show %1 More", (model.groupChildrenCount - model.expandedGroupChildrenCount))
-                                    visible: (model.groupChildrenCount > model.expandedGroupChildrenCount || model.isGroupExpanded)
-                                        && delegate.ListView.nextSection !== delegate.ListView.section
-                                    onClicked: list.setGroupExpanded(model.index, !model.isGroupExpanded)
-                                }
-
-                                PlasmaCore.SvgItem {
+                                NotificationItem {
                                     Layout.fillWidth: true
-                                    Layout.bottomMargin: PlasmaCore.Units.smallSpacing
-                                    elementId: "horizontal-line"
-                                    svg: lineSvg
 
-                                    // property is only atached to the delegate itself (the Loader in our case)
-                                    visible: (!model.isInGroup || delegate.ListView.nextSection !== delegate.ListView.section)
-                                                    && delegate.ListView.nextSection !== "" // don't show after last item
+                                    notificationType: model.type
+
+                                    inGroup: model.isInGroup
+                                    inHistory: true
+                                    listViewParent: list
+
+                                    applicationName: model.applicationName
+                                    applicationIconSource: model.applicationIconName
+                                    originName: model.originName || ""
+
+                                    time: model.updated || model.created
+
+                                    // configure button on every single notifications is bit overwhelming
+                                    configurable: !inGroup && model.configurable
+
+                                    dismissable: model.type === NotificationManager.Notifications.JobType
+                                        && model.jobState !== NotificationManager.Notifications.JobStateStopped
+                                        && model.dismissed
+                                        // TODO would be nice to be able to undismiss jobs even when they autohide
+                                        && notificationSettings.permanentJobPopups
+                                    dismissed: model.dismissed || false
+                                    closable: model.closable
+
+                                    summary: model.summary
+                                    body: model.body || ""
+                                    icon: model.image || model.iconName
+
+                                    urls: model.urls || []
+
+                                    jobState: model.jobState || 0
+                                    percentage: model.percentage || 0
+                                    jobError: model.jobError || 0
+                                    suspendable: !!model.suspendable
+                                    killable: !!model.killable
+                                    jobDetails: model.jobDetails || null
+
+                                    configureActionLabel: model.configureActionLabel || ""
+                                    // In the popup the default action is triggered by clicking on the popup
+                                    // however in the list this is undesirable, so instead show a clickable button
+                                    // in case you have a non-expired notification in history (do not disturb mode)
+                                    // unless it has the same label as an action
+                                    readonly property bool addDefaultAction: (model.hasDefaultAction
+                                                                            && model.defaultActionLabel
+                                                                            && (model.actionLabels || []).indexOf(model.defaultActionLabel) === -1) ? true : false
+                                    actionNames: {
+                                        var actions = (model.actionNames || []);
+                                        if (addDefaultAction) {
+                                            actions.unshift("default"); // prepend
+                                        }
+                                        return actions;
+                                    }
+                                    actionLabels: {
+                                        var labels = (model.actionLabels || []);
+                                        if (addDefaultAction) {
+                                            labels.unshift(model.defaultActionLabel);
+                                        }
+                                        return labels;
+                                    }
+
+                                    onCloseClicked: close()
+
+                                    onDismissClicked: {
+                                        model.dismissed = false;
+                                        root.closePlasmoid();
+                                    }
+                                    onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
+
+                                    onActionInvoked: {
+                                        if (actionName === "default") {
+                                            historyModel.invokeDefaultAction(historyModel.index(index, 0));
+                                        } else {
+                                            historyModel.invokeAction(historyModel.index(index, 0), actionName);
+                                        }
+
+                                        expire();
+                                    }
+                                    onOpenUrl: {
+                                        Qt.openUrlExternally(url);
+                                        expire();
+                                    }
+                                    onFileActionInvoked: {
+                                        if (action.objectName === "movetotrash" || action.objectName === "deletefile") {
+                                            close();
+                                        } else {
+                                            expire();
+                                        }
+                                    }
+
+                                    onSuspendJobClicked: historyModel.suspendJob(historyModel.index(index, 0))
+                                    onResumeJobClicked: historyModel.resumeJob(historyModel.index(index, 0))
+                                    onKillJobClicked: historyModel.killJob(historyModel.index(index, 0))
+
+                                    function expire() {
+                                        if (model.resident) {
+                                            model.expired = true;
+                                        } else {
+                                            historyModel.expire(historyModel.index(index, 0));
+                                        }
+                                    }
+
+                                    function close() {
+                                        historyModel.close(historyModel.index(index, 0));
+                                    }
                                 }
+                            }
+
+                            PlasmaComponents3.ToolButton {
+                                icon.name: model.isGroupExpanded ? "arrow-up" : "arrow-down"
+                                text: model.isGroupExpanded ? i18n("Show Fewer")
+                                                            : i18nc("Expand to show n more notifications",
+                                                                    "Show %1 More", (model.groupChildrenCount - model.expandedGroupChildrenCount))
+                                visible: (model.groupChildrenCount > model.expandedGroupChildrenCount || model.isGroupExpanded)
+                                    && delegate.ListView.nextSection !== delegate.ListView.section
+                                onClicked: list.setGroupExpanded(model.index, !model.isGroupExpanded)
+                            }
+
+                            PlasmaCore.SvgItem {
+                                Layout.fillWidth: true
+                                Layout.bottomMargin: PlasmaCore.Units.smallSpacing
+                                elementId: "horizontal-line"
+                                svg: lineSvg
+
+                                // property is only atached to the delegate itself (the Loader in our case)
+                                visible: (!model.isInGroup || delegate.ListView.nextSection !== delegate.ListView.section)
+                                                && delegate.ListView.nextSection !== "" // don't show after last item
                             }
                         }
                     }
                 }
+            }
+            PlasmaExtras.PlaceholderMessage {
+                anchors.centerIn: parent
+                width: parent.width - (PlasmaCore.Units.largeSpacing * 4)
 
-                PlasmaExtras.PlaceholderMessage {
-                    anchors.centerIn: parent
-                    width: parent.width - (PlasmaCore.Units.largeSpacing * 4)
+                text: i18n("No unread notifications")
+                visible: list.count === 0 && NotificationManager.Server.valid
+            }
 
-                    text: i18n("No unread notifications")
-                    visible: list.count === 0 && NotificationManager.Server.valid
-                }
+            PlasmaExtras.PlaceholderMessage {
+                anchors.centerIn: parent
+                width: parent.width - (PlasmaCore.Units.largeSpacing * 4)
 
-                PlasmaExtras.PlaceholderMessage {
-                    anchors.centerIn: parent
-                    width: parent.width - (PlasmaCore.Units.largeSpacing * 4)
+                text: i18n("Notification service not available")
+                visible: list.count === 0 && !NotificationManager.Server.valid
 
-                    text: i18n("Notification service not available")
-                    visible: list.count === 0 && !NotificationManager.Server.valid
+                // TODO: port to using the subtitle property once it exists
+                PlasmaComponents3.Label {
+                    // Checking valid to avoid creating ServerInfo object if everything is alright
+                    readonly property NotificationManager.ServerInfo currentOwner: !NotificationManager.Server.valid ? NotificationManager.Server.currentOwner
+                                                                                                                    : null
 
-                    // TODO: port to using the subtitle property once it exists
-                    PlasmaComponents3.Label {
-                        // Checking valid to avoid creating ServerInfo object if everything is alright
-                        readonly property NotificationManager.ServerInfo currentOwner: !NotificationManager.Server.valid ? NotificationManager.Server.currentOwner
-                                                                                                                        : null
-
-                        // PlasmaExtras.PlaceholderMessage is internally a ColumnLayout,
-                        // so we can use Layout.whatever properties here
-                        Layout.fillWidth: true
-                        wrapMode: Text.WordWrap
-                        text: currentOwner ? i18nc("Vendor and product name",
-                                            "Notifications are currently provided by '%1 %2'",
-                                            currentOwner.vendor,
-                                            currentOwner.name)
-                                        : ""
-                        visible: currentOwner && currentOwner.vendor && currentOwner.name
-                    }
+                    // PlasmaExtras.PlaceholderMessage is internally a ColumnLayout,
+                    // so we can use Layout.whatever properties here
+                    Layout.fillWidth: true
+                    wrapMode: Text.WordWrap
+                    text: currentOwner ? i18nc("Vendor and product name",
+                                        "Notifications are currently provided by '%1 %2'",
+                                        currentOwner.vendor,
+                                        currentOwner.name)
+                                    : ""
+                    visible: currentOwner && currentOwner.vendor && currentOwner.name
                 }
             }
         }
