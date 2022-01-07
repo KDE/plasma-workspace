@@ -129,10 +129,6 @@ MouseArea {
                 visible: compactRoot.jobsPercentage == 0
             }
             PropertyChanges {
-                target: jobProgressItem
-                visible: true
-            }
-            PropertyChanges {
                 target: chart
                 visible: true
             }
