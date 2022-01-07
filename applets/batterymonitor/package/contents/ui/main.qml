@@ -145,6 +145,7 @@ Item {
         var service = pmSource.serviceForSource("PowerDevil");
         var operation = service.operationDescription("setKeyboardBrightness");
         operation.brightness = keyboardBrightness;
+        // show OSD only when the plasmoid isn't expanded since the moving slider is feedback enough
         operation.silent = plasmoid.expanded;
         updateKeyboardBrightnessJob = service.startOperationCall(operation);
         updateKeyboardBrightnessJob.finished.connect(job => {
