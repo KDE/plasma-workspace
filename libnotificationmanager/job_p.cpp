@@ -211,10 +211,11 @@ QString JobPrivate::text() const
     }
 
     qCInfo(NOTIFICATIONMANAGER) << "Failed to generate job text for job with following properties:";
-    qCInfo(NOTIFICATIONMANAGER) << "  processedFiles =" << m_processedFiles << ", totalFiles =" << m_totalFiles
-                                << ", current file name =" << descriptionUrl().fileName() << ", destination url string =" << this->destUrl();
-    qCInfo(NOTIFICATIONMANAGER) << "label1 =" << m_descriptionLabel1 << ", value1 =" << m_descriptionValue1 << ", label2 =" << m_descriptionLabel2
-                                << ", value2 =" << m_descriptionValue2;
+    qCInfo(NOTIFICATIONMANAGER).nospace() << "  processedFiles = " << m_processedFiles << ", totalFiles = " << m_totalFiles;
+    qCInfo(NOTIFICATIONMANAGER).nospace() << "  current file name = " << descriptionUrl().fileName();
+    qCInfo(NOTIFICATIONMANAGER).nospace() << "  destination url = " << destUrl;
+    qCInfo(NOTIFICATIONMANAGER).nospace() << "  label1 = " << m_descriptionLabel1 << ", value1 = " << m_descriptionValue1;
+    qCInfo(NOTIFICATIONMANAGER).nospace() << "  label2 = " << m_descriptionLabel2 << ", value2 = " << m_descriptionValue2;
 
     return QString();
 }
