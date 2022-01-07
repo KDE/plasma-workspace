@@ -93,7 +93,7 @@ Item {
         return parts.join("\n");
     }
 
-    Plasmoid.icon: !hasBatteries && hasBrightness ? "high-brightness" : "battery"
+    Plasmoid.icon: !hasBatteries && hasBrightness ? "video-display-brightness" : "battery"
 
     property bool disableBrightnessUpdate: true
 
