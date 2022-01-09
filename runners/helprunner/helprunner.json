@@ -22,7 +22,8 @@
                 "Name[sl]": "Alexander Lohnau",
                 "Name[sv]": "Alexander Lohnau",
                 "Name[uk]": "Alexander Lohnau",
-                "Name[x-test]": "xxAlexander Lohnauxx"
+                "Name[x-test]": "xxAlexander Lohnauxx",
+                "Name[zh_CN]": "Alexander Lohnau"
             }
         ],
         "Description": "Shows help information about runners when typing \"?\" or \"help\"",
@@ -38,11 +39,13 @@
         "Description[nl]": "Toont help-informatie over runners bij typen van \"?\" of \"help\"",
         "Description[pl]": "Pokazuje pomoc o uruchamiaczach po wpisaniu \"?\" lub \"help\"",
         "Description[pt_BR]": "Mostra informação de ajuda sobre os executores ao digitar \"?\" ou \"ajuda\"",
+        "Description[ru]": "Просмотр справочной информации о средствах поиска при вводе «?» или «help»",
         "Description[sk]": "Zobrazuje pomocné informácie o runneroch pri písaní \"?\" alebo \"pomoc\"",
         "Description[sl]": "Prikaži informacije za pomoč o zagonih kadar vtipkate \"?\" ali \"help\"",
         "Description[sv]": "Visar hjälpinformation om körprogram när \"?\" eller \"hjälp\" skrivs in",
         "Description[uk]": "Показує довідкові відомості щодо засобів запуску при введенні «?» або «help»",
         "Description[x-test]": "xxShows help information about runners when typing \"?\" or \"help\"xx",
+        "Description[zh_CN]": "输入“?”或“help”时显示关于运行程序的帮助信息",
         "EnabledByDefault": true,
         "Icon": "help-contextual",
         "Name": "Help Runner",
@@ -59,11 +62,13 @@
         "Name[pa]": "ਮਦਦ ਕੇਰਨਰ",
         "Name[pl]": "Uruchamiacz pomocy",
         "Name[pt_BR]": "Ajuda do executor",
+        "Name[ru]": "Средство поиска справки",
         "Name[sk]": "Help Runner",
         "Name[sl]": "Pomoč za Runner",
         "Name[sv]": "Hjälp om Kör program",
         "Name[uk]": "Засіб надання довідки",
         "Name[x-test]": "xxHelp Runnerxx",
+        "Name[zh_CN]": "帮助运行程序",
         "ServiceTypes": [
             "Plasma/Runner"
         ]
