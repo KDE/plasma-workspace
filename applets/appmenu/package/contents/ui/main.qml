@@ -8,6 +8,8 @@
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.15
+// Deliberately imported after QtQuick to avoid missing restoreMode property in Binding. Fix in Qt 6.
+import QtQml 2.15
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.kquickcontrolsaddons 2.0 // For KCMShell
@@ -69,24 +71,31 @@ Item {
         rowSpacing: 0
         columnSpacing: 0
 
-        Component.onCompleted: {
-            Plasmoid.nativeInterface.buttonGrid = buttonGrid;
+        Binding {
+            target: plasmoid.nativeInterface
+            property: "buttonGrid"
+            value: buttonGrid
+            restoreMode: Binding.RestoreNone
+        }
 
-            // using a Connections {} doesn't work for some reason in Qt >= 5.8
-            Plasmoid.nativeInterface.requestActivateIndex.connect(index => {
-                const idx = Math.max(0, Math.min(buttonRepeater.count - 1, index));
+        Connections {
+            target: Plasmoid.nativeInterface
+            function onRequestActivateIndex(index: int) {
                 const button = buttonRepeater.itemAt(index);
                 if (button) {
                     button.activated();
                 }
-            });
+            }
+        }
 
-            Plasmoid.activated.connect(() => {
+        Connections {
+            target: Plasmoid.self
+            function onActivated() {
                 const button = buttonRepeater.itemAt(0);
                 if (button) {
                     button.activated();
                 }
-            });
+            }
         }
 
         // So we can show mnemonic underlines only while Alt is pressed
