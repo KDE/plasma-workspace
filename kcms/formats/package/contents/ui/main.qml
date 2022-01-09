@@ -56,7 +56,7 @@ KCM.ScrollViewKCM {
                 case "lang":
                     return i18n("Region");
                 case "numeric":
-                    return i18n("Number");
+                    return i18n("Numbers");
                 case "time":
                     return i18n("Time");
                 case "currency":
