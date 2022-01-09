@@ -69,7 +69,13 @@ QVariant LocaleListModel::data(const QModelIndex &index, int role) const
         }
     }
     case LocaleName: {
-        return name;
+        QString cvalue = name;
+        if (!cvalue.contains(QLatin1Char('.')) && cvalue != QLatin1Char('C')) {
+            // explicitly add the encoding,
+            // otherwise Qt doesn't accept dead keys and garbles the output as well
+            cvalue.append(QLatin1Char('.') + QTextCodec::codecForLocale()->name());
+        }
+        return cvalue;
     }
     case Example: {
         switch (m_configType) {
