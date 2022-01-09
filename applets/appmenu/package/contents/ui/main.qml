@@ -109,13 +109,8 @@ Item {
                 Layout.fillWidth: root.vertical
                 Layout.fillHeight: !root.vertical
                 text: activeMenu
-                Kirigami.MnemonicData.active: {
-                    try {
-                        return keystateSource.data.Alt && keystateSource.data.Alt.Pressed
-                    } catch (error) {
-                        return false
-                    }
-                }
+                // TODO: Alt and other modifiers might be unavailable on Wayland
+                Kirigami.MnemonicData.active: keystateSource.data.Alt !== undefined && keystateSource.data.Alt.Pressed
 
                 down: pressed || plasmoid.nativeInterface.currentIndex === index
 
