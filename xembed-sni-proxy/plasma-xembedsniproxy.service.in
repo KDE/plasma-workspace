@@ -6,6 +6,7 @@ After=plasma-core.target
 [Service]
 ExecStart=@CMAKE_INSTALL_FULL_BINDIR@/xembedsniproxy
 Restart=on-failure
-Type=simple
+Type=dbus
+BusName=org.kde.xembedsniproxy
 Slice=background.slice
 TimeoutSec=5sec

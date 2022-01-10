@@ -6,6 +6,7 @@
 */
 
 #include <QGuiApplication>
+#include <QDBusConnection>
 #include <QSessionManager>
 
 #include "fdoselectionmanager.h"
@@ -52,6 +53,9 @@ int main(int argc, char **argv)
     Xcb::atoms = new Xcb::Atoms();
 
     FdoSelectionManager manager;
+    QObject::connect(&manager, &FdoSelectionManager::ready, []() {
+        QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.xembedsniproxy"));
+    });
 
     auto rc = app.exec();
 

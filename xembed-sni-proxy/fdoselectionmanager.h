@@ -24,6 +24,9 @@ public:
     FdoSelectionManager();
     ~FdoSelectionManager() override;
 
+Q_SIGNALS:
+    void ready();
+
 protected:
     bool nativeEventFilter(const QByteArray &eventType, void *message, long *result) override;
 

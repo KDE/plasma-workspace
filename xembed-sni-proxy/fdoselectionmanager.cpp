@@ -188,6 +188,7 @@ void FdoSelectionManager::onClaimedOwnership()
 {
     qCDebug(SNIPROXY) << "Manager selection claimed";
 
+    Q_EMIT ready();
     setSystemTrayVisual();
 }
 
