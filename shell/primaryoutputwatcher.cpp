@@ -18,6 +18,7 @@
 
 #include <config-plasma.h>
 #if HAVE_X11
+#include <QTimer> //Used only in x11 case
 #include <QX11Info>
 #include <xcb/randr.h>
 #include <xcb/xcb.h>
@@ -122,7 +123,9 @@ bool PrimaryOutputWatcher::nativeEventFilter(const QByteArray &eventType, void *
     const auto responseType = XCB_EVENT_RESPONSE_TYPE(ev);
 
     if (responseType == m_xrandrExtensionOffset + XCB_RANDR_SCREEN_CHANGE_NOTIFY) {
-        setPrimaryOutputName(qGuiApp->primaryScreen()->name());
+        QTimer::singleShot(0, this, [this]() {
+            setPrimaryOutputName(qGuiApp->primaryScreen()->name());
+        });
     }
 #endif
     return false;
