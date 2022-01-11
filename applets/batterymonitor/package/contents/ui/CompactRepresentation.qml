@@ -63,17 +63,13 @@ MouseArea {
         Repeater {
             id: view
 
-            property bool hasBattery: batterymonitor.pmSource.data["Battery"]["Has Cumulative"]
-            property bool singleBattery: root.isConstrained || !view.hasBattery
-
-            model: singleBattery ? 1 : batterymonitor.batteries
+            model: root.isConstrained ? 1 : batterymonitor.batteries
 
             Item {
                 id: batteryContainer
 
-                property bool hasBattery: view.singleBattery ? view.hasBattery : model["Plugged in"]
-                property int percent: view.singleBattery ? pmSource.data["Battery"]["Percent"] : model["Percent"]
-                property bool pluggedIn: pmSource.data["AC Adapter"] && pmSource.data["AC Adapter"]["Plugged in"] && (view.singleBattery || model["Is Power Supply"])
+                property int percent: root.isConstrained ? pmSource.data["Battery"]["Percent"] : model["Percent"]
+                property bool pluggedIn: pmSource.data["AC Adapter"] && pmSource.data["AC Adapter"]["Plugged in"] && (root.isConstrained || model["Is Power Supply"])
 
                 height: root.itemSize
                 width: root.width/view.count
@@ -87,7 +83,7 @@ MouseArea {
                     height: batteryContainer.iconSize
                     width: height
 
-                    hasBattery: batteryContainer.hasBattery
+                    hasBattery: root.hasBatteries
                     percent: batteryContainer.percent
                     pluggedIn: batteryContainer.pluggedIn
                 }
@@ -96,7 +92,7 @@ MouseArea {
                     anchors.bottom: parent.bottom
                     anchors.right: parent.right
 
-                    visible: plasmoid.configuration.showPercentage && batteryContainer.hasBattery
+                    visible: plasmoid.configuration.showPercentage
 
                     text: i18nc("battery percentage below battery icon", "%1%", percent)
                     icon: batteryIcon
