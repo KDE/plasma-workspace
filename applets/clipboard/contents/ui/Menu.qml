@@ -30,9 +30,6 @@ PlasmaComponents3.ScrollView {
     // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-83890
     PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
 
-    leftPadding: PlasmaCore.Units.smallSpacing * 2
-    rightPadding: PlasmaCore.Units.smallSpacing * 2
-
     contentItem: ListView {
         id: menuListView
         focus: true
@@ -44,10 +41,12 @@ PlasmaComponents3.ScrollView {
 
         topMargin: PlasmaCore.Units.smallSpacing * 2
         bottomMargin: PlasmaCore.Units.smallSpacing * 2
+        leftMargin: PlasmaCore.Units.smallSpacing * 2
+        rightMargin: PlasmaCore.Units.smallSpacing * 2
         spacing: PlasmaCore.Units.smallSpacing
 
         delegate: ClipboardItemDelegate {
-            width: menuListView.width - (menu.PlasmaComponents3.ScrollBar.vertical.visible ? PlasmaCore.Units.smallSpacing * 4 : 0)
+            width: ListView.view.width - PlasmaCore.Units.smallSpacing * 4
             supportsBarcodes: menu.supportsBarcodes
 
             onItemSelected: menu.itemSelected(uuid)
