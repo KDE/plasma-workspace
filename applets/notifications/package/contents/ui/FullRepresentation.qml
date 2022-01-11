@@ -228,10 +228,6 @@ PlasmaExtras.Representation {
         id: scrollView
         anchors.fill: parent
         background: null
-        leftPadding: PlasmaCore.Units.smallSpacing * 2
-        rightPadding: PlasmaCore.Units.smallSpacing * 2
-
-
         // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-83890
         PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
 
@@ -239,8 +235,11 @@ PlasmaExtras.Representation {
             id: list
             model: historyModel
             currentIndex: -1
+
             topMargin: PlasmaCore.Units.smallSpacing * 2
             bottomMargin: PlasmaCore.Units.smallSpacing * 2
+            leftMargin: PlasmaCore.Units.smallSpacing * 2
+            rightMargin: PlasmaCore.Units.smallSpacing * 2
             spacing: PlasmaCore.Units.smallSpacing
 
             Keys.onDeletePressed: {
@@ -355,7 +354,7 @@ PlasmaExtras.Representation {
 
             delegate: DraggableDelegate {
                 id: delegate
-                width: ListView.view.width - (scrollView.PlasmaComponents3.ScrollBar.vertical.visible ? PlasmaCore.Units.smallSpacing * 4 : 0)
+                width: ListView.view.width - PlasmaCore.Units.smallSpacing * 4
                 contentItem: delegateLoader
 
                 draggable: !model.isGroup && model.type != NotificationManager.Notifications.JobType

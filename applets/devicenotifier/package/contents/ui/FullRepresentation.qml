@@ -120,9 +120,6 @@ PlasmaExtras.Representation {
         PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
 
         anchors.fill: parent
-        leftPadding: PlasmaCore.Units.smallSpacing * 2
-        rightPadding: PlasmaCore.Units.smallSpacing * 2
-
 
         contentItem: ListView {
             id: notifierDialog
@@ -131,7 +128,7 @@ PlasmaExtras.Representation {
             model: filterModel
 
             delegate: DeviceItem {
-                width: notifierDialog.width - (scrollView.PlasmaComponents3.ScrollBar.vertical.visible ? PlasmaCore.Units.smallSpacing * 4 : 0)
+                width: ListView.view.width - PlasmaCore.Units.smallSpacing * 4
                 udi: DataEngineSource
             }
             highlight: PlasmaComponents.Highlight { }
@@ -140,6 +137,8 @@ PlasmaExtras.Representation {
 
             topMargin: PlasmaCore.Units.smallSpacing * 2
             bottomMargin: PlasmaCore.Units.smallSpacing * 2
+            leftMargin: PlasmaCore.Units.smallSpacing * 2
+            rightMargin: PlasmaCore.Units.smallSpacing * 2
             spacing: PlasmaCore.Units.smallSpacing
 
             currentIndex: devicenotifier.currentIndex

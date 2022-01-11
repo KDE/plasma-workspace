@@ -161,17 +161,7 @@ PlasmaComponents3.Page {
                     KeyNavigation.backtab: pmSwitch
 
                     delegate: BatteryItem {
-                        // Add a padding between an item and the scroll bar.
-                        // Anchors are well-behaved in RTL environments too.
-                        anchors {
-                            left: parent ? parent.left : undefined
-                            right: parent ? parent.right : undefined
-                            rightMargin: {
-                                const scrollBar = batteryScrollView.PlasmaComponents3.ScrollBar.vertical;
-                                const hasScrollBar = scrollBar !== null && scrollBar.visible;
-                                return hasScrollBar ? (PlasmaCore.Units.smallSpacing * 2) : 0;
-                            }
-                        }
+                        width: ListView.view.width
                         battery: model
                         remainingTime: dialog.remainingTime
                         matchHeightOfSlider: brightnessSlider.slider
