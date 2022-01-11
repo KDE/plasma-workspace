@@ -27,6 +27,10 @@ PlasmaCore.ToolTipArea {
     readonly property bool inHiddenLayout: effectiveStatus === PlasmaCore.Types.PassiveStatus
     readonly property bool inVisibleLayout: effectiveStatus === PlasmaCore.Types.ActiveStatus
 
+    // input agnostic way to trigger the main action
+    signal activated(var args)
+
+    // proxy signals for MouseArea
     signal clicked(var mouse)
     signal pressed(var mouse)
     signal wheel(var wheel)
@@ -66,7 +70,7 @@ PlasmaCore.ToolTipArea {
             PlasmaCore.Units.longDuration > 0
     }
 
-    function activated() {
+    function startActivatedAnimation() {
         activatedAnimation.start()
     }
 

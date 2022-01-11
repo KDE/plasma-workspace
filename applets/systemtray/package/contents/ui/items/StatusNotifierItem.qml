@@ -35,41 +35,45 @@ AbstractItem {
         active: taskIcon.containsMouse
     }
 
+    onActivated: {
+        let service = model.Service;
+        let operation = service.operationDescription("Activate")
+        operation.x = args.x //mouseX
+        operation.y = args.y //mouseY
+        let job = service.startOperationCall(operation)
+        job.finished.connect(() => {
+            if (!job.result) {
+                // On error try to invoke the context menu.
+                // Workaround primarily for apps using libappindicator.
+                openContextMenu(args)
+            }
+        })
+        taskIcon.startActivatedAnimation()
+    }
+
     onContextMenu: {
         openContextMenu(plasmoid.nativeInterface.popupPosition(taskIcon, mouse.x, mouse.y))
     }
 
     onClicked: {
         var pos = plasmoid.nativeInterface.popupPosition(taskIcon, mouse.x, mouse.y);
-        var service = model.Service;
-
         switch (mouse.button) {
         case Qt.LeftButton:
-            var operation = service.operationDescription("Activate");
-            operation.x = pos.x;
-            operation.y = pos.y;
-            var job = service.startOperationCall(operation);
-            job.finished.connect(function () {
-                if (!job.result) {
-                    // On error try to invoke the context menu.
-                    // Workaround primarily for apps using libappindicator.
-                    openContextMenu(pos);
-                }
-            });
-            taskIcon.activated()
+            taskIcon.activated(pos)
             break;
         case Qt.MiddleButton:
             var operation = service.operationDescription("SecondaryActivate");
+            let service = model.Service;
             operation.x = pos.x;
 
             operation.y = pos.y;
             service.startOperationCall(operation);
-            taskIcon.activated()
+            taskIcon.startActivatedAnimation()
             break;
         }
     }
 
-    function openContextMenu(pos) {
+    function openContextMenu(pos = Qt.point(width/2, height/2)) {
         var service = model.Service;
         var operation = service.operationDescription("ContextMenu");
         operation.x = pos.x;

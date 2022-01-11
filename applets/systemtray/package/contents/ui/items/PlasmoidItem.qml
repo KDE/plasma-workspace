@@ -22,6 +22,38 @@ AbstractItem {
     textFormat: applet ? applet.toolTipTextFormat : ""
     active: systemTrayState.activeApplet !== applet
 
+    // FIXME: Use an input type agnostic way to activate whatever the primary
+    // action of a plasmoid is supposed to be, even if it's just expanding the
+    // plasmoid. Not all plasmoids are supposed to expand and not all plasmoids
+    // do anything with onActivated.
+    onActivated: if (applet) {
+        let fullRep = applet.fullRepresentationItem
+        /* HACK: Plasmoids can have an empty but not null fullRepresentationItem,
+         * even if fullRepresentation is not explicitly defined or is explicitly null.
+         *
+         * If fullRep is a plain Item and there are no children, assume it is empty.
+         * There will be uncommon situations where this assumption is wrong.
+         *
+         * `typeof fullRep` only returns "object", which is useless.
+         * We aren't using `fullRep instanceof Item` because it would always
+         * return true if fullRep is not null.
+         * If fullRep.toString() starts with "QQuickItem_QML",
+         * then it really is just a plain Item.
+         *
+         * We really need to refactor system tray someday.
+         */
+        if (fullRep && (!fullRep.toString().startsWith("QQuickItem_QML")
+                        || fullRep.children.length > 0)
+        ) {
+            // Assume that an applet with a fullRepresentationItem that
+            // fits the criteria will want to expand the applet when activated.
+            applet.expanded = !applet.expanded
+        }
+        // If there is no fullRepresentationItem, hopefully the applet is using
+        // the onActivated signal handler for something useful.
+        applet.activated()
+    }
+
     onClicked: {
         if (!applet) {
             return
@@ -31,7 +63,7 @@ AbstractItem {
         if (mouseArea) {
             mouseArea.clicked(mouse)
         } else if (mouse.button === Qt.LeftButton) {//falback
-            applet.expanded = true
+            plasmoidContainer.activated()
         }
     }
     onContextMenu: if (applet) {
@@ -95,13 +127,13 @@ AbstractItem {
 
         //activation using global keyboard shortcut
         function onActivated() {
-            plasmoidContainer.activated()
+            plasmoidContainer.startActivatedAnimation()
         }
 
         function onExpandedChanged(expanded) {
             if (expanded) {
                 systemTrayState.setActiveApplet(applet, model.row)
-                plasmoidContainer.activated()
+                plasmoidContainer.startActivatedAnimation()
             }
         }
 
