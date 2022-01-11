@@ -20,6 +20,8 @@ MouseArea {
     property real brightnessError: 0
     property bool hasBatteries: true
 
+    hoverEnabled: true
+
     onClicked: plasmoid.expanded = !plasmoid.expanded
 
     onWheel: {
@@ -50,6 +52,7 @@ MouseArea {
         anchors.fill: parent
         visible: !root.hasBatteries
         source: plasmoid.icon
+        active: parent.containsMouse
     }
 
     // We have any batteries; show their status
