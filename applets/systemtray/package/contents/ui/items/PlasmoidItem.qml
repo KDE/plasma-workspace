@@ -36,15 +36,9 @@ AbstractItem {
             }
         }
     }
-    onPressed: {
-        if (mouse.button === Qt.RightButton) {
-            plasmoidContainer.contextMenu(mouse);
-        }
-    }
-    onContextMenu: {
-        if (applet) {
-            plasmoid.nativeInterface.showPlasmoidMenu(applet, 0, plasmoidContainer.inHiddenLayout ? applet.height : 0);
-        }
+    onContextMenu: if (applet) {
+        plasmoid.nativeInterface.showPlasmoidMenu(applet, 0,
+                                                  plasmoidContainer.inHiddenLayout ? applet.height : 0);
     }
     onWheel: {
         if (!applet) {
