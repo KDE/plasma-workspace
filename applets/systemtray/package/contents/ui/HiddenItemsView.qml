@@ -54,5 +54,12 @@ PlasmaComponents3.ScrollView {
             }
         }
         delegate: ItemLoader {}
+
+        activeFocusOnTab: true
+        onActiveFocusChanged: if (activeFocus && currentIndex === -1) {
+            currentIndex = 0
+        } else if (!activeFocus && currentIndex >= 0) {
+            currentIndex = -1
+        }
     }
 }
