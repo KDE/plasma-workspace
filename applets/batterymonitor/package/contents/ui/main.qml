@@ -219,11 +219,9 @@ Item {
         }
     }
 
-    Component {
-        id: batteryCompact
-        CompactRepresentation {}
+    Plasmoid.compactRepresentation: CompactRepresentation {
+        hasBatteries: batterymonitor.hasBatteries
     }
-    Plasmoid.compactRepresentation: hasBatteries ? batteryCompact : null
 
 
     readonly property bool isBrightnessAvailable: pmSource.data["PowerDevil"] && pmSource.data["PowerDevil"]["Screen Brightness Available"] ? true : false

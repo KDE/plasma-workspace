@@ -18,6 +18,7 @@ MouseArea {
     property real itemSize: Math.min(root.height, root.width/view.count)
     readonly property bool isConstrained: plasmoid.formFactor === PlasmaCore.Types.Vertical || plasmoid.formFactor === PlasmaCore.Types.Horizontal
     property real brightnessError: 0
+    property bool hasBatteries: true
 
     onClicked: plasmoid.expanded = !plasmoid.expanded
 
@@ -44,8 +45,17 @@ MouseArea {
         batterymonitor.screenBrightness = Math.max(minimumBrightness, Math.min(maximumBrightness, newBrightness));
     }
 
+    // "No Batteries" case
+    PlasmaCore.IconItem {
+        anchors.fill: parent
+        visible: !root.hasBatteries
+        source: plasmoid.icon
+    }
+
+    // We have any batteries; show their status
     //Should we consider turning this into a Flow item?
     Row {
+        visible: root.hasBatteries
         anchors.centerIn: parent
         Repeater {
             id: view
