@@ -61,5 +61,19 @@ PlasmaComponents3.ScrollView {
         } else if (!activeFocus && currentIndex >= 0) {
             currentIndex = -1
         }
+
+        Keys.priority: Keys.AfterItem
+        Keys.onPressed: if (currentItem && currentItem.item) {
+            switch (event.key) {
+            case Qt.Key_Return:
+            case Qt.Key_Enter:
+            case Qt.Key_Space:
+            case Qt.Key_Select:
+                currentItem.item.activated(Qt.point(width/2, height/2))
+                event.accepted = true
+                break
+            default: break
+            }
+        }
     }
 }
