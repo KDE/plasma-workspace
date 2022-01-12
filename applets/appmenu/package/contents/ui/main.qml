@@ -130,10 +130,7 @@ Item {
                 visible: text !== "" && model.activeActions.visible
 
                 menuIsOpen: Plasmoid.nativeInterface.currentIndex !== -1
-                onActivated: {
-                    Plasmoid.nativeInterface.trigger(this, index);
-                    checked = Qt.binding(() => Plasmoid.nativeInterface.currentIndex === index);
-                }
+                onActivated: Plasmoid.nativeInterface.trigger(this, index)
             }
         }
     }
