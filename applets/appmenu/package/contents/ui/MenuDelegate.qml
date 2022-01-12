@@ -46,23 +46,12 @@ AbstractButton {
         PlasmaCore.FrameSvgItem {
             id: rest
             anchors.fill: parent
-            visible: background.state === MenuDelegate.State.Rest
             imagePath: "widgets/menubaritem"
-            prefix: "normal"
-        }
-        PlasmaCore.FrameSvgItem {
-            id: hover
-            anchors.fill: parent
-            visible: background.state === MenuDelegate.State.Hover
-            imagePath: "widgets/menubaritem"
-            prefix: "hover"
-        }
-        PlasmaCore.FrameSvgItem {
-            id: down
-            anchors.fill: parent
-            visible: background.state === MenuDelegate.State.Down
-            imagePath: "widgets/menubaritem"
-            prefix: "pressed"
+            prefix: switch (background.state) {
+                case MenuDelegate.State.Down: return "pressed";
+                case MenuDelegate.State.Hover: return "hover";
+                case MenuDelegate.State.Rest: return "normal";
+            }
         }
     }
 
