@@ -77,14 +77,14 @@ Item {
                 const idx = Math.max(0, Math.min(buttonRepeater.count - 1, index));
                 const button = buttonRepeater.itemAt(index);
                 if (button) {
-                    button.clicked();
+                    button.activated();
                 }
             });
 
             Plasmoid.activated.connect(() => {
                 const button = buttonRepeater.itemAt(0);
                 if (button) {
-                    button.clicked();
+                    button.activated();
                 }
             });
         }
@@ -118,20 +118,12 @@ Item {
                 Kirigami.MnemonicData.active: keystateSource.data.Alt !== undefined && keystateSource.data.Alt.Pressed
 
                 down: pressed || Plasmoid.nativeInterface.currentIndex === index
-
                 visible: text !== "" && model.activeActions.visible
-                onClicked: {
+
+                menuIsOpen: Plasmoid.nativeInterface.currentIndex !== -1
+                onActivated: {
                     Plasmoid.nativeInterface.trigger(this, index);
-
-                    checked = Qt.binding(() => plasmoid.nativeInterface.currentIndex === index);
-                }
-
-                // QMenu opens on press, so we'll replicate that here
-                MouseArea {
-                    anchors.fill: parent
-                    hoverEnabled: Plasmoid.nativeInterface.currentIndex !== -1
-                    onPressed: parent.clicked()
-                    onEntered: parent.clicked()
+                    checked = Qt.binding(() => Plasmoid.nativeInterface.currentIndex === index);
                 }
             }
         }

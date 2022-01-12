@@ -13,7 +13,26 @@ import org.kde.kirigami 2.12 as Kirigami
 AbstractButton {
     id: controlRoot
 
+    property bool menuIsOpen: false
+
+    signal activated()
+
+    // QMenu opens on press, so we'll replicate that here
     hoverEnabled: true
+
+    // This will trigger even if hoverEnabled has just became true and the
+    // mouse cursor is already hovering.
+    //
+    // In practice, this never works, at least on X11: when menuIsOpen the
+    // hover event would not be delivered. Instead we rely on
+    // plasmoid.nativeInterface.requestActivateIndex signal to filter
+    // QEvent::MouseMove events and tell us when to change the index.
+    onHoveredChanged: if (hovered && menuIsOpen) { activated(); }
+
+    // You don't actually have to "close" the menu via click/pressed handlers.
+    // Instead, the menu will be closed automatically, as by any
+    // other "outside of the menu" click event.
+    onPressed: activated()
 
     enum State {
         Rest,
