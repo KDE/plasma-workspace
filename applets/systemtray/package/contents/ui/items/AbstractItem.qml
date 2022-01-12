@@ -95,7 +95,8 @@ PlasmaCore.ToolTipArea {
         anchors.fill: abstractItem
         hoverEnabled: true
         drag.filterChildren: true
-        acceptedButtons: Qt.LeftButton | Qt.MiddleButton | Qt.RightButton
+        // Necessary to make the whole delegate area forward all mouse events
+        acceptedButtons: Qt.AllButtons
         onClicked: abstractItem.clicked(mouse)
         onPressed: {
             abstractItem.hideImmediately()

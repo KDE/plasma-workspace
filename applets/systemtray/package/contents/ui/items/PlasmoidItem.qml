@@ -27,13 +27,11 @@ AbstractItem {
             return
         }
         //forward click event to the applet
-        if (mouse.button === Qt.LeftButton || mouse.button === Qt.MidButton) {
-            const mouseArea = findMouseArea(applet.compactRepresentationItem)
-            if (mouseArea) {
-                mouseArea.clicked(mouse)
-            } else if (mouse.button === Qt.LeftButton) {//falback
-                applet.expanded = true
-            }
+        const mouseArea = findMouseArea(applet.compactRepresentationItem)
+        if (mouseArea) {
+            mouseArea.clicked(mouse)
+        } else if (mouse.button === Qt.LeftButton) {//falback
+            applet.expanded = true
         }
     }
     onContextMenu: if (applet) {
