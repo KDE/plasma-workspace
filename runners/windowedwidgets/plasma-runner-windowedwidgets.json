@@ -35,6 +35,7 @@
         "Description[ar]": "اعثر على ودجات بلازما التي يمكن أن تعمل كنوافذ مستقلّة",
         "Description[az]": "Müstəqil pəncərə şəklində açıla bilən Plasma vidjetlərini tapmaq",
         "Description[ca]": "Cerca ginys del Plasma que es poden executar en finestres autònomes",
+        "Description[cs]": "Najít Plasma widgety, které mohou být spuštěny ve vlastních oknech",
         "Description[en_GB]": "Find Plasma widgets that can be run as standalone windows",
         "Description[es]": "Busca componentes Plasma que se pueden ejecutar como ventanas independientes",
         "Description[fr]": "Trouver des composants graphiques de Plasma pouvant être lancés comme des fenêtres autonomes.",

@@ -35,6 +35,7 @@
         "Description[ar]": "نفّذ أوامر الصَدفة",
         "Description[az]": "İcra proqramının başladılması",
         "Description[ca]": "Executa ordres de l'intèrpret d'ordres",
+        "Description[cs]": "Spouští shellové příkazy",
         "Description[en_GB]": "Executes shell commands",
         "Description[es]": "Ejecuta órdenes de la consola",
         "Description[fr]": "Exécute des commandes du shell",

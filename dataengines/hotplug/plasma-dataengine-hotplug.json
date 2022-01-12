@@ -36,6 +36,7 @@
         "Description[ar]": "يتتبع الأجهزة القابلة للتوصيل أثناء ظهورها واختفائها.",
         "Description[az]": "Qoşulduğunda və ayrıldığında qoşulabilən cihazların izlənməsi",
         "Description[ca]": "Segueix els dispositius de connexió en calent quan apareixen i desapareixen.",
+        "Description[cs]": "Oznamovat připojení a odpojení za běhu připojitelných zařízení",
         "Description[en_GB]": "Tracks hot-pluggable devices as they appear and disappear.",
         "Description[es]": "Registra los dispositivos extraíbles cuando aparecen y desaparecen.",
         "Description[fr]": "Surveille l'apparition ou la disparition de périphériques pouvant être connectés à chaud.",
