@@ -56,6 +56,9 @@ bool handleEditApplicationAction(const QString &actionId, const KService::Ptr &s
 QVariantList appstreamActions(const KService::Ptr &service);
 bool handleAppstreamActions(const QString &actionId, const QVariant &argument);
 
+QVariantList additionalAppActions(const KService::Ptr &service);
+bool handleAdditionalAppActions(const QString &actionId, const KService::Ptr &service, const QVariant &argument);
+
 QString resolvedServiceEntryPath(const KService::Ptr &service);
 
 }

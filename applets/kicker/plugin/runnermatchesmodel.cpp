@@ -131,6 +131,11 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
                 actionList << recentDocuments << Kicker::createSeparatorActionItem();
             }
 
+            const QVariantList &additionalActions = Kicker::additionalAppActions(service);
+            if (!additionalActions.isEmpty()) {
+                actionList << additionalActions << Kicker::createSeparatorActionItem();
+            }
+
             // Don't allow adding launchers, editing, hiding, or uninstalling applications
             // when system is immutable.
             if (systemImmutable) {
@@ -209,6 +214,8 @@ bool RunnerMatchesModel::trigger(int row, const QString &actionId, const QVarian
         return job->exec();
     } else if (actionId == QLatin1String("_kicker_recentDocument") || actionId == QLatin1String("_kicker_forgetRecentDocuments")) {
         return Kicker::handleRecentDocumentAction(service, actionId, argument);
+    } else if (Kicker::handleAdditionalAppActions(actionId, service, argument)) {
+        return true;
     }
 
     return false;

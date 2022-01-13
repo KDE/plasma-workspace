@@ -16,6 +16,8 @@
 #include <QStandardPaths>
 
 #include <KApplicationTrader>
+#include <KDesktopFileActions>
+#include <KFileUtils>
 #include <KIO/ApplicationLauncherJob>
 #include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
@@ -454,6 +456,53 @@ bool handleAppstreamActions(const QString &actionId, const QVariant &argument)
     }
 
     return false;
+}
+
+static QList<KServiceAction> additionalActions(const KService::Ptr &service)
+{
+    QList<KServiceAction> actions;
+    const static auto locations =
+        QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("plasma/kickeractions"), QStandardPaths::LocateDirectory);
+    const auto files = KFileUtils::findAllUniqueFiles(locations);
+    for (const auto &file : files) {
+        KService actionsService(file);
+        const auto filter = actionsService.property(QStringLiteral("X-KDE-OnlyForAppIds"), QVariant::StringList).toStringList();
+        if (filter.empty() || filter.contains(storageIdFromService(service))) {
+            actions.append(KDesktopFileActions::userDefinedServices(actionsService, true));
+        }
+    }
+    return actions;
+}
+
+QVariantList additionalAppActions(const KService::Ptr &service)
+{
+    QVariantList list;
+    const auto actions = additionalActions(service);
+    list.reserve(actions.size());
+    for (const auto &action : actions) {
+        list << createActionItem(action.text(), action.icon(), action.name(), action.service()->entryPath());
+    }
+    return list;
+}
+
+bool handleAdditionalAppActions(const QString &actionId, const KService::Ptr &service, const QVariant &argument)
+{
+    const KService actionProvider(argument.toString());
+    if (!actionProvider.isValid()) {
+        return false;
+    }
+    const auto actions = actionProvider.actions();
+    auto action = std::find_if(actions.begin(), actions.end(), [&actionId](const KServiceAction &action) {
+        return action.name() == actionId;
+    });
+    if (action == actions.end()) {
+        return false;
+    }
+    auto *job = new KIO::ApplicationLauncherJob(*action);
+    job->setUrls({QUrl::fromLocalFile(resolvedServiceEntryPath(service))});
+    job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
+    job->start();
+    return true;
 }
 
 QString resolvedServiceEntryPath(const KService::Ptr &service)

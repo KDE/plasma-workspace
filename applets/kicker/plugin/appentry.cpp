@@ -168,6 +168,11 @@ QVariantList AppEntry::actions() const
         actionList << recentDocuments << Kicker::createSeparatorActionItem();
     }
 
+    const QVariantList &additionalActions = Kicker::additionalAppActions(m_service);
+    if (!additionalActions.isEmpty()) {
+        actionList << additionalActions << Kicker::createSeparatorActionItem();
+    }
+
     // Don't allow adding launchers, editing, hiding, or uninstalling applications
     // when system is immutable.
     if (systemImmutable) {
@@ -237,6 +242,8 @@ bool AppEntry::run(const QString &actionId, const QVariant &argument)
         job->setDesktopName(m_service->entryPath());
         job->setIcon(m_service->icon());
         return job->exec();
+    } else if (Kicker::handleAdditionalAppActions(actionId, m_service, argument)) {
+        return true;
     }
 
     return Kicker::handleRecentDocumentAction(m_service, actionId, argument);
