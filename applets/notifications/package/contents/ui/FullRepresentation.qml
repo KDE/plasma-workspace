@@ -24,6 +24,10 @@ PlasmaExtras.Representation {
     // TODO these should be configurable in the future
     readonly property int dndMorningHour: 6
     readonly property int dndEveningHour: 20
+
+    implicitWidth: PlasmaCore.Units.gridUnit * 16
+    implicitHeight: PlasmaCore.Units.gridUnit * 16
+
     Layout.fillHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical
 
     collapseMarginsHint: true
