@@ -8,7 +8,7 @@
 #include "actionlist.h"
 
 #include <KFileItem>
-#include <KRun>
+#include <KIO/OpenUrlJob>
 
 FileEntry::FileEntry(AbstractModel *owner, const QUrl &url)
     : AbstractEntry(owner)
@@ -96,7 +96,8 @@ bool FileEntry::run(const QString &actionId, const QVariant &argument)
     }
 
     if (actionId.isEmpty()) {
-        new KRun(m_fileItem->url(), nullptr);
+        auto job = new KIO::OpenUrlJob(m_fileItem->url());
+        job->start();
 
         return true;
     } else {

@@ -93,18 +93,6 @@ void StatusNotifierItemHost::registerWatcher(const QString &service)
                                                                   m_statusNotifierWatcher->path(),
                                                                   m_statusNotifierWatcher->connection());
 
-            QDBusPendingReply<QDBusVariant> pendingItems = propetriesIface.Get(m_statusNotifierWatcher->interface(), "RegisteredStatusNotifierItems");
-
-            QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(pendingItems, this);
-            connect(watcher, &QDBusPendingCallWatcher::finished, this, [=]() {
-                watcher->deleteLater();
-                QDBusReply<QDBusVariant> reply = *watcher;
-                QStringList registeredItems = reply.value().variant().toStringList();
-                foreach (const QString &service, registeredItems) {
-                    addSNIService(service);
-                }
-            });
-
             connect(m_statusNotifierWatcher,
                     &OrgKdeStatusNotifierWatcherInterface::StatusNotifierItemRegistered,
                     this,
@@ -114,6 +102,19 @@ void StatusNotifierItemHost::registerWatcher(const QString &service)
                     this,
                     &StatusNotifierItemHost::serviceUnregistered);
 
+            QDBusPendingReply<QDBusVariant> pendingItems = propetriesIface.Get(m_statusNotifierWatcher->interface(), "RegisteredStatusNotifierItems");
+
+            QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(pendingItems, this);
+            connect(watcher, &QDBusPendingCallWatcher::finished, this, [=]() {
+                watcher->deleteLater();
+                QDBusReply<QDBusVariant> reply = *watcher;
+                QStringList registeredItems = reply.value().variant().toStringList();
+                foreach (const QString &service, registeredItems) {
+                    if (!m_sniServices.contains(service)) { // due to async nature of this call, service may be already there
+                        addSNIService(service);
+                    }
+                }
+            });
         } else {
             delete m_statusNotifierWatcher;
             m_statusNotifierWatcher = nullptr;

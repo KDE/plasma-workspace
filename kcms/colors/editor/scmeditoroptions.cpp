@@ -46,7 +46,7 @@ void SchemeEditorOptions::on_contrastSlider_valueChanged(int value)
     KConfigGroup group(m_config, "KDE");
     group.writeEntry("contrast", value);
 
-    emit changed(true);
+    Q_EMIT changed(true);
 }
 
 void SchemeEditorOptions::on_shadeSortedColumn_stateChanged(int state)
@@ -56,7 +56,7 @@ void SchemeEditorOptions::on_shadeSortedColumn_stateChanged(int state)
     KConfigGroup group(m_config, "General");
     group.writeEntry("shadeSortColumn", bool(state != Qt::Unchecked));
 
-    emit changed(true);
+    Q_EMIT changed(true);
 }
 
 void SchemeEditorOptions::on_useInactiveEffects_stateChanged(int state)
@@ -68,7 +68,7 @@ void SchemeEditorOptions::on_useInactiveEffects_stateChanged(int state)
     inactiveSelectionEffect->setChecked(group.readEntry("ChangeSelectionColor", bool(state != Qt::Unchecked)));
     m_disableUpdates = false;
 
-    emit changed(true);
+    Q_EMIT changed(true);
 }
 
 void SchemeEditorOptions::on_inactiveSelectionEffect_stateChanged(int state)
@@ -81,5 +81,5 @@ void SchemeEditorOptions::on_inactiveSelectionEffect_stateChanged(int state)
     KConfigGroup group(m_config, "ColorEffects:Inactive");
     group.writeEntry("ChangeSelectionColor", bool(state != Qt::Unchecked));
 
-    emit changed(true);
+    Q_EMIT changed(true);
 }

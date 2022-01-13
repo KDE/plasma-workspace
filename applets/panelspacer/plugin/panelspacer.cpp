@@ -79,8 +79,8 @@ void SpacersTracker::removeSpacer(Plasma::Containment *containment, PanelSpacer 
 
 /////////////////////////////////////////////////////////////////////
 
-PanelSpacer::PanelSpacer(QObject *parent, const QVariantList &args)
-    : Plasma::Applet(parent, args)
+PanelSpacer::PanelSpacer(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : Plasma::Applet(parent, data, args)
 {
 }
 
@@ -113,7 +113,7 @@ void PanelSpacer::setTwinSpacer(PlasmaQuick::AppletQuickItem *spacer)
     }
 
     m_twinSpacer = spacer;
-    emit twinSpacerChanged();
+    Q_EMIT twinSpacerChanged();
 }
 
 PlasmaQuick::AppletQuickItem *PanelSpacer::twinSpacer() const
@@ -126,6 +126,6 @@ PlasmaQuick::AppletQuickItem *PanelSpacer::containmentGraphicObject() const
     return containment()->property("_plasma_graphicObject").value<PlasmaQuick::AppletQuickItem *>();
 }
 
-K_PLUGIN_CLASS_WITH_JSON(PanelSpacer, "metadata.json")
+K_PLUGIN_CLASS_WITH_JSON(PanelSpacer, "../package/metadata.json")
 
 #include "panelspacer.moc"

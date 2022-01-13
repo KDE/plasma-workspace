@@ -25,8 +25,8 @@
 #include <KAcceleratorManager>
 #include <KActionCollection>
 
-SystemTray::SystemTray(QObject *parent, const QVariantList &args)
-    : Plasma::Containment(parent, args)
+SystemTray::SystemTray(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : Plasma::Containment(parent, data, args)
     , m_plasmoidModel(nullptr)
     , m_statusNotifierModel(nullptr)
     , m_systemTrayModel(nullptr)
@@ -123,7 +123,7 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface, int x, int y)
     QTimer::singleShot(0, appletInterface, ungrabMouseHack);
     // end workaround
 
-    emit applet->contextualActionsAboutToShow();
+    Q_EMIT applet->contextualActionsAboutToShow();
     const auto contextActions = applet->contextualActions();
     for (QAction *action : contextActions) {
         if (action) {
@@ -361,11 +361,11 @@ void SystemTray::stopApplet(const QString &pluginId)
             // HACK: we need to remove the applet from Containment::applets() as soon as possible
             // otherwise we may have disappearing applets for restarting dbus services
             // this may be removed when we depend from a frameworks version in which appletDeleted is emitted as soon as deleteLater() is called
-            emit appletDeleted(applet);
+            Q_EMIT appletDeleted(applet);
         }
     }
 }
 
-K_PLUGIN_CLASS_WITH_JSON(SystemTray, "metadata.json")
+K_PLUGIN_CLASS_WITH_JSON(SystemTray, "package/metadata.json")
 
 #include "systemtray.moc"

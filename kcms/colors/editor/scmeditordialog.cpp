@@ -20,8 +20,6 @@
 #include <KStandardGuiItem>
 #include <KWindowSystem>
 
-#include <KNS3/UploadDialog>
-
 SchemeEditorDialog::SchemeEditorDialog(KSharedConfigPtr config, QWidget *parent)
     : QDialog(parent)
 {
@@ -56,8 +54,6 @@ void SchemeEditorDialog::init()
 {
     setupUi(this);
 
-    schemeKnsUploadButton->setIcon(QIcon::fromTheme(QStringLiteral("get-hot-new-stuff")));
-
     m_optionTab = new SchemeEditorOptions(m_config);
     m_colorTab = new SchemeEditorColors(m_config);
     m_disabledTab = new SchemeEditorEffects(m_config, QPalette::Disabled);
@@ -80,22 +76,6 @@ void SchemeEditorDialog::init()
     KGuiItem::assign(buttonBox->button(QDialogButtonBox::Save), KStandardGuiItem::saveAs());
     buttonBox->button(QDialogButtonBox::Reset)->setEnabled(false);
     updateTabs();
-}
-
-void SchemeEditorDialog::on_schemeKnsUploadButton_clicked()
-{
-    if (m_unsavedChanges) {
-        KMessageBox::ButtonCode reallyUpload =
-            KMessageBox::questionYesNo(this, i18n("This colour scheme was not saved. Continue?"), i18n("Do you really want to upload?"));
-        if (reallyUpload == KMessageBox::No) {
-            return;
-        }
-    }
-
-    // upload
-    KNS3::UploadDialog dialog(QStringLiteral("colorschemes.knsrc"), this);
-    dialog.setUploadFile(QUrl::fromLocalFile(m_config->name()));
-    dialog.exec();
 }
 
 void SchemeEditorDialog::on_buttonBox_clicked(QAbstractButton *button)

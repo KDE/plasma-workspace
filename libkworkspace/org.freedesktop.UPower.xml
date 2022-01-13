@@ -199,7 +199,7 @@ method return sender=:1.386 -> dest=:1.451 reply_serial=2
           <doc:para>
             This method tells UPower that the Suspend() or Hibernate() method
             is about to be called.
-            This allows UPower to emit the Suspending signal whilst
+            This allows UPower to Q_EMIT the Suspending signal whilst
             session activities are happening that have to be done before the
             suspend process is started.
           </doc:para>

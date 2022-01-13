@@ -176,7 +176,7 @@ void PlasmaWindowedView::mouseReleaseEvent(QMouseEvent *ev)
         return;
     }
 
-    emit m_applet->contextualActionsAboutToShow();
+    Q_EMIT m_applet->contextualActionsAboutToShow();
 
     QMenu menu;
 

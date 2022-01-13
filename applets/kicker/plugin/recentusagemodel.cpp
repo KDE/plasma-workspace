@@ -27,9 +27,9 @@
 #include <KFileItem>
 #include <KIO/ApplicationLauncherJob>
 #include <KIO/OpenFileManagerWindowJob>
+#include <KIO/OpenUrlJob>
 #include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
-#include <KRun>
 #include <KService/KApplicationTrader>
 #include <KService>
 #include <KStartupInfo>
@@ -138,7 +138,7 @@ void RecentUsageModel::setShownItems(IncludeUsage usage)
 
     m_usage = usage;
 
-    emit shownItemsChanged();
+    Q_EMIT shownItemsChanged();
     refresh();
 }
 
@@ -351,8 +351,9 @@ bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant 
         if (!resource.startsWith(QLatin1String("applications:"))) {
             const QUrl resourceUrl = docData(resource, Kicker::UrlRole).toUrl();
 
-            KRun *run = new KRun(resourceUrl, nullptr);
-            run->setRunExecutables(false);
+            auto job = new KIO::OpenUrlJob(resourceUrl);
+            job->setRunExecutables(false);
+            job->start();
 
             return true;
         }
@@ -489,7 +490,7 @@ void RecentUsageModel::setOrdering(int ordering)
     m_ordering = (Ordering)ordering;
     refresh();
 
-    emit orderingChanged(ordering);
+    Q_EMIT orderingChanged(ordering);
 }
 
 int RecentUsageModel::ordering() const

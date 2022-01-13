@@ -22,6 +22,7 @@ Name[gl]=Espazo de traballo do escritorio Plasma
 Name[he]=תחנת עבודה של שולחן העבודה Plasma
 Name[hi]=प्लाज़्मा डेस्कटॉप कार्यक्षेत्र
 Name[hr]=Plasma radno okruženje
+Name[hsb]=Plasma-dźěłowy rum z dźěłowym powjerchom
 Name[hu]=Plazma asztali munkaterület
 Name[ia]=Spatio de labor de scriptorio de Plasma
 Name[id]=Ruangkerja Desktop Plasma

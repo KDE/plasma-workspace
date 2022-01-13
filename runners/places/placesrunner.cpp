@@ -49,7 +49,7 @@ void PlacesRunner::match(Plasma::RunnerContext &context)
     } else {
         // from the non-gui thread
         // qDebug() << "emitting";
-        emit doMatch(&context);
+        Q_EMIT doMatch(&context);
     }
     // m_helper->match(c);
 }

@@ -3,27 +3,27 @@
     SPDX-FileCopyrightText: 2021 Alexander Lohnau <alexander.lonau@gmx.de>
 */
 
+// See https://phabricator.kde.org/T14499, this plugin's id should be renamed
+#undef KRUNNER_TEST_RUNNER_PLUGIN_NAME
+#define KRUNNER_TEST_RUNNER_PLUGIN_NAME "shell"
+
 #include <QStandardPaths>
 #include <QTemporaryFile>
 #include <QTest>
 
 #include <KPluginMetaData>
-#include <KRunner/RunnerManager>
+#include <KRunner/AbstractRunnerTest>
 #include <KShell>
 #include <QSignalSpy>
 #include <QStandardPaths>
 
 #include <clocale>
 
-using namespace Plasma;
-
-class ShellRunnerTest : public QObject
+class ShellRunnerTest : public AbstractRunnerTest
 {
     Q_OBJECT
 
 private:
-    RunnerManager *manager = nullptr;
-
     QFileInfo createExecutableFile(const QString &fileName);
 
 private Q_SLOTS:
@@ -34,16 +34,7 @@ private Q_SLOTS:
 
 void ShellRunnerTest::initTestCase()
 {
-    QStandardPaths::setTestModeEnabled(true);
-    setlocale(LC_ALL, "C.utf8");
-
-    const KPluginMetaData runnerMetadata = KPluginMetaData::findPluginById(QStringLiteral(PLUGIN_BUILD_DIR), QStringLiteral(RUNNER_NAME));
-    QVERIFY(runnerMetadata.isValid());
-    delete manager;
-    manager = new RunnerManager();
-    manager->setAllowedRunners({QStringLiteral(RUNNER_NAME)});
-    manager->loadRunner(runnerMetadata);
-    QCOMPARE(manager->runners().count(), 1);
+    initProperties();
 }
 
 void ShellRunnerTest::testShellrunnerQueries()
@@ -53,9 +44,7 @@ void ShellRunnerTest::testShellrunnerQueries()
     QFETCH(QString, expectedCommand);
     QFETCH(QStringList, expectedENVs);
 
-    QSignalSpy spy(manager, &RunnerManager::queryFinished);
-    manager->launchQuery(query);
-    QVERIFY(spy.wait());
+    launchQuery(query);
     QCOMPARE(manager->matches().count(), matchCount);
     if (matchCount == 1) {
         const QVariantList matchData = manager->matches().constFirst().data().toList();

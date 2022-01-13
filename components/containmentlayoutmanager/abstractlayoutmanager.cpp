@@ -95,7 +95,9 @@ void AbstractLayoutManager::positionItem(ItemContainer *item)
     }
 
     QRectF candidate = candidateGeometry(item);
-    item->setPosition(candidate.topLeft());
+    // Use setProperty to allow Behavior on to take effect
+    item->setProperty("x", candidate.topLeft().x());
+    item->setProperty("y", candidate.topLeft().y());
     item->setSize(candidate.size());
 }
 
@@ -109,7 +111,7 @@ void AbstractLayoutManager::positionItemAndAssign(ItemContainer *item)
 bool AbstractLayoutManager::assignSpace(ItemContainer *item)
 {
     if (assignSpaceImpl(item)) {
-        emit layoutNeedsSaving();
+        Q_EMIT layoutNeedsSaving();
         return true;
     } else {
         return false;
@@ -119,7 +121,7 @@ bool AbstractLayoutManager::assignSpace(ItemContainer *item)
 void AbstractLayoutManager::releaseSpace(ItemContainer *item)
 {
     releaseSpaceImpl(item);
-    emit layoutNeedsSaving();
+    Q_EMIT layoutNeedsSaving();
 }
 
 void AbstractLayoutManager::layoutGeometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry)

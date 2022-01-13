@@ -87,7 +87,7 @@ private:
     {
         if (target != newValue) {
             target = newValue;
-            emit((static_cast<Job *>(parent()))->*changeSignal)();
+            Q_EMIT((static_cast<Job *>(parent()))->*changeSignal)();
             return true;
         }
         return false;
@@ -141,6 +141,7 @@ private:
     QString m_errorText;
     bool m_suspendable = false;
     bool m_killable = false;
+    bool m_transient = false;
 
     QUrl m_destUrl;
 

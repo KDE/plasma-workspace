@@ -41,7 +41,7 @@ class KCMStyle : public KQuickAddons::ManagedConfigModule
     Q_PROPERTY(bool gtkConfigKdedModuleLoaded READ gtkConfigKdedModuleLoaded NOTIFY gtkConfigKdedModuleLoadedChanged)
 
 public:
-    KCMStyle(QObject *parent, const QVariantList &args);
+    KCMStyle(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
     ~KCMStyle() override;
 
     enum ToolBarStyle {

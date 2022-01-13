@@ -132,7 +132,7 @@ void SystemEntry::refresh()
         m_valid = valid;
 
         if (m_initialized) {
-            emit isValidChanged();
+            Q_EMIT isValidChanged();
         }
     }
 }

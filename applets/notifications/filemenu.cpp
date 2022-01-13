@@ -47,7 +47,7 @@ void FileMenu::setUrl(const QUrl &url)
 {
     if (m_url != url) {
         m_url = url;
-        emit urlChanged();
+        Q_EMIT urlChanged();
     }
 }
 
@@ -69,7 +69,7 @@ void FileMenu::setVisualParent(QQuickItem *visualParent)
     if (m_visualParent) {
         connect(m_visualParent.data(), &QObject::destroyed, this, &FileMenu::visualParentChanged);
     }
-    emit visualParentChanged();
+    Q_EMIT visualParentChanged();
 }
 
 bool FileMenu::visible() const
@@ -108,7 +108,7 @@ void FileMenu::open(int x, int y)
 
     connect(menu, &QMenu::aboutToHide, this, [this] {
         m_visible = false;
-        emit visibleChanged();
+        Q_EMIT visibleChanged();
     });
 
     if (KProtocolManager::supportsListing(m_url)) {
@@ -134,7 +134,7 @@ void FileMenu::open(int x, int y)
         QApplication::clipboard()->setMimeData(data);
     });
 
-    QAction *copyPathAction = menu->addAction(QIcon::fromTheme(QStringLiteral("edit-copy")), i18nc("@action:incontextmenu", "Copy Location"));
+    QAction *copyPathAction = menu->addAction(QIcon::fromTheme(QStringLiteral("edit-copy-path")), i18nc("@action:incontextmenu", "Copy Location"));
     connect(copyPathAction, &QAction::triggered, this, [fileItem] {
         QString path = fileItem.localPath();
         if (path.isEmpty()) {
@@ -229,5 +229,5 @@ void FileMenu::open(int x, int y)
     menu->popup(pos);
 
     m_visible = true;
-    emit visibleChanged();
+    Q_EMIT visibleChanged();
 }

@@ -157,14 +157,14 @@ void SystemTrayModelTest::testPlasmoidModel()
     QCOMPARE(model->data(model->index(0, 0), Qt::DisplayRole).toString(), "Powiadomienia o urz\u0105dzeniach");
 
     // when: applet added
-    model->addApplet(new Plasma::Applet(plasmoidRegistry->m_systemTrayApplets.value(MEDIACONROLLER_ID)));
+    model->addApplet(new Plasma::Applet(nullptr, plasmoidRegistry->m_systemTrayApplets.value(MEDIACONROLLER_ID), QVariantList{}));
     // then: applet can be rendered
     QVERIFY(model->data(idx, static_cast<int>(BaseModel::BaseRole::CanRender)).toBool());
     QVERIFY(model->data(idx, static_cast<int>(PlasmoidModel::Role::HasApplet)).toBool());
     QCOMPARE(model->data(idx, static_cast<int>(BaseModel::BaseRole::EffectiveStatus)), QVariant(Plasma::Types::ItemStatus::ActiveStatus));
 
     // and when: applet removed
-    model->removeApplet(new Plasma::Applet(plasmoidRegistry->m_systemTrayApplets.value(MEDIACONROLLER_ID)));
+    model->removeApplet(new Plasma::Applet(nullptr, plasmoidRegistry->m_systemTrayApplets.value(MEDIACONROLLER_ID), QVariantList{}));
     // then: applet cannot be rendered anymore
     QVERIFY(!model->data(idx, static_cast<int>(BaseModel::BaseRole::CanRender)).toBool());
     QVERIFY(!model->data(idx, static_cast<int>(PlasmoidModel::Role::HasApplet)).toBool());

@@ -34,7 +34,7 @@ public:
 void FaviconProvider::Private::imageRequestFinished(KIO::StoredTransferJob *job)
 {
     if (job->error()) {
-        emit q->error(q);
+        Q_EMIT q->error(q);
         return;
     }
 
@@ -42,7 +42,7 @@ void FaviconProvider::Private::imageRequestFinished(KIO::StoredTransferJob *job)
     if (!image.isNull()) {
         image.save(cachePath, "PNG");
     }
-    emit q->finished(q);
+    Q_EMIT q->finished(q);
 }
 
 FaviconProvider::FaviconProvider(QObject *parent, const QString &url)

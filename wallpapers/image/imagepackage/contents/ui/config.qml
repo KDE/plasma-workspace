@@ -423,6 +423,11 @@ ColumnLayout {
                     imageModel.usedInConfig = true;
                     resetCurrentIndex()
                 }
+
+                //set the size of the cell, depending on Screen resolution to respect the aspect ratio
+                view.implicitCellWidth: Screen.width / 10 + Kirigami.Units.smallSpacing * 2
+                view.implicitCellHeight: Screen.height / 10 + Kirigami.Units.smallSpacing * 2 + Kirigami.Units.gridUnit * 3
+
                 view.delegate: WallpaperDelegate {
                     color: cfg_Color
                 }

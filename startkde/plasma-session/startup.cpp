@@ -16,6 +16,8 @@
 
 #include "debug.h"
 
+#include <unistd.h>
+
 #include "kcminit_interface.h"
 #include "kded_interface.h"
 #include "ksmserver_interface.h"
@@ -36,9 +38,11 @@
 #include <QStandardPaths>
 #include <QTimer>
 
+#include "sessiontrack.h"
 #include "startupadaptor.h"
 
 #include "../config-startplasma.h"
+#include "startplasma.h"
 
 class Phase : public KCompositeJob
 {
@@ -136,16 +140,15 @@ void SleepJob::start()
 Startup::Startup(QObject *parent)
     : QObject(parent)
 {
+    Q_ASSERT(!s_self);
+    s_self = this;
     new StartupAdaptor(this);
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/Startup"), QStringLiteral("org.kde.Startup"), this);
     QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.Startup"));
 
     const AutoStart autostart;
 
-    // Keep for KF5; remove in KF6 (KInit will be gone then)
-    QProcess::execute(QStringLiteral(CMAKE_INSTALL_FULL_LIBEXECDIR_KF5 "/start_kdeinit_wrapper"), QStringList());
-
-    KJob *windowManagerJob = nullptr;
+    KJob *x11WindowManagerJob = nullptr;
     if (qEnvironmentVariable("XDG_SESSION_TYPE") != QLatin1String("wayland")) {
         QString windowManager;
         if (qEnvironmentVariableIsSet("KDEWM")) {
@@ -156,17 +159,35 @@ Startup::Startup(QObject *parent)
         }
 
         if (windowManager == QLatin1String(KWIN_BIN)) {
-            windowManagerJob = new StartServiceJob(windowManager, {}, QStringLiteral("org.kde.KWin"));
+            x11WindowManagerJob = new StartServiceJob(windowManager, {}, QStringLiteral("org.kde.KWin"));
         } else {
-            windowManagerJob = new StartServiceJob(windowManager, {}, {});
+            x11WindowManagerJob = new StartServiceJob(windowManager, {}, {});
+        }
+    } else {
+        // This must block until started as it sets the WAYLAND_DISPLAY/DISPLAY env variables needed for the rest of the boot
+        // fortunately it's very fast as it's just starting a wrapper
+        StartServiceJob kwinWaylandJob(QStringLiteral("kwin_wayland_wrapper"), {QStringLiteral("--xwayland")}, QStringLiteral("org.kde.KWinWrapper"));
+        kwinWaylandJob.exec();
+        // kslpash is only launched in plasma-session from the wayland mode, for X it's in startplasma-x11
+
+        const KConfig cfg(QStringLiteral("ksplashrc"));
+        // the splashscreen and progress indicator
+        KConfigGroup ksplashCfg = cfg.group("KSplash");
+        if (ksplashCfg.readEntry("Engine", QStringLiteral("KSplashQML")) == QLatin1String("KSplashQML")) {
+            QProcess::startDetached(QStringLiteral("ksplashqml"), {});
         }
     }
 
+    // Keep for KF5; remove in KF6 (KInit will be gone then)
+    QProcess::execute(QStringLiteral(CMAKE_INSTALL_FULL_LIBEXECDIR_KF5 "/start_kdeinit_wrapper"), QStringList());
+
     KJob *phase1 = nullptr;
+    m_lock.reset(new QEventLoopLocker);
+
     const QVector<KJob *> sequence = {
         new StartProcessJob(QStringLiteral("kcminit_startup"), {}),
         new StartServiceJob(QStringLiteral("kded5"), {}, QStringLiteral("org.kde.kded5"), {}),
-        windowManagerJob,
+        x11WindowManagerJob,
         new StartServiceJob(QStringLiteral("ksmserver"), QCoreApplication::instance()->arguments().mid(1), QStringLiteral("org.kde.ksmserver")),
         new StartupPhase0(autostart, this),
         phase1 = new StartupPhase1(autostart, this),
@@ -204,12 +225,36 @@ void Startup::finishStartup()
 {
     qCDebug(PLASMA_SESSION) << "Finished";
     upAndRunning(QStringLiteral("ready"));
+
+    playStartupSound(this);
+    new SessionTrack(m_processes);
+    deleteLater();
 }
 
 void Startup::updateLaunchEnv(const QString &key, const QString &value)
 {
     qputenv(key.toLatin1(), value.toLatin1());
 }
+
+bool Startup::startDetached(const QString &program, const QStringList &args)
+{
+    QProcess *p = new QProcess();
+    p->setProgram(program);
+    p->setArguments(args);
+    return startDetached(p);
+}
+
+bool Startup::startDetached(QProcess *process)
+{
+    process->start();
+    const bool ret = process->waitForStarted();
+    if (ret) {
+        m_processes << process;
+    }
+    return ret;
+}
+
+Startup *Startup::s_self = nullptr;
 
 KCMInitJob::KCMInitJob()
     : KJob()
@@ -336,7 +381,7 @@ void AutoStartAppsJob::start()
             }
             qCInfo(PLASMA_SESSION) << "Starting autostart service " << serviceName << arguments;
             auto program = arguments.takeFirst();
-            if (!QProcess::startDetached(program, arguments))
+            if (!Startup::self()->startDetached(program, arguments))
                 qCWarning(PLASMA_SESSION) << "could not start" << serviceName << ":" << program << arguments;
         } while (true);
     });
@@ -344,7 +389,7 @@ void AutoStartAppsJob::start()
 
 StartServiceJob::StartServiceJob(const QString &process, const QStringList &args, const QString &serviceId, const QProcessEnvironment &additionalEnv)
     : KJob()
-    , m_process(new QProcess(this))
+    , m_process(new QProcess)
     , m_serviceId(serviceId)
     , m_additionalEnv(additionalEnv)
 {
@@ -367,7 +412,7 @@ void StartServiceJob::start()
         return;
     }
     qCDebug(PLASMA_SESSION) << "Starting " << m_process->program() << m_process->arguments();
-    if (!m_process->startDetached()) {
+    if (!Startup::self()->startDetached(m_process)) {
         qCWarning(PLASMA_SESSION) << "error starting process" << m_process->program() << m_process->arguments();
         emitResult();
     }
@@ -387,7 +432,7 @@ StartProcessJob::StartProcessJob(const QString &process, const QStringList &args
     env.insert(additionalEnv);
     m_process->setProcessEnvironment(env);
 
-    connect(m_process, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), [this](int exitCode) {
+    connect(m_process, &QProcess::finished, [this](int exitCode) {
         qCInfo(PLASMA_SESSION) << "process job " << m_process->program() << "finished with exit code " << exitCode;
         emitResult();
     });

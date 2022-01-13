@@ -135,12 +135,12 @@ void WatchedNotificationsModel::expire(uint notificationId)
     onNotificationRemoved(notificationId, Server::CloseReason::Expired);
 }
 
-void WatchedNotificationsModel::invokeDefaultAction(uint notificationId)
+void WatchedNotificationsModel::invokeDefaultAction(uint notificationId, Notifications::InvokeBehavior behavior)
 {
-    this->invokeAction(notificationId, QStringLiteral("default"));
+    this->invokeAction(notificationId, QStringLiteral("default"), behavior);
 }
 
-void WatchedNotificationsModel::invokeAction(uint notificationId, const QString &actionName)
+void WatchedNotificationsModel::invokeAction(uint notificationId, const QString &actionName, Notifications::InvokeBehavior /*behavior*/)
 {
     QDBusConnection dbus = QDBusConnection::sessionBus();
     dbus.registerObject("/NotificationWatcher", this, QDBusConnection::ExportScriptableSlots);
@@ -152,11 +152,12 @@ void WatchedNotificationsModel::invokeAction(uint notificationId, const QString 
     QDBusConnection::sessionBus().call(msg, QDBus::NoBlock);
 }
 
-void WatchedNotificationsModel::reply(uint notificationId, const QString &text)
+void WatchedNotificationsModel::reply(uint notificationId, const QString &text, Notifications::InvokeBehavior behavior)
 {
     // todo
     Q_UNUSED(notificationId)
     Q_UNUSED(text)
+    Q_UNUSED(behavior)
 }
 
 bool WatchedNotificationsModel::valid()

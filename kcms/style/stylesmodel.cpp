@@ -82,9 +82,9 @@ void StylesModel::setSelectedStyle(const QString &style)
     m_selectedStyle = style;
 
     if (!firstTime) {
-        emit selectedStyleChanged(style);
+        Q_EMIT selectedStyleChanged(style);
     }
-    emit selectedStyleIndexChanged();
+    Q_EMIT selectedStyleIndexChanged();
 }
 
 int StylesModel::indexOfStyle(const QString &style) const
@@ -199,6 +199,6 @@ void StylesModel::load()
 
     // an item might have been added before the currently selected one
     if (oldCount != m_data.count()) {
-        emit selectedStyleIndexChanged();
+        Q_EMIT selectedStyleIndexChanged();
     }
 }

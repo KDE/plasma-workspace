@@ -38,9 +38,9 @@ public:
     // Currently configure actions are not exposed in AbstractNotificationsModel to keep it very minimal
     // if usecase for this comes up in future, we can revisit it.
 
-    virtual void invokeDefaultAction(uint notificationId) = 0;
-    virtual void invokeAction(uint notificationId, const QString &actionName) = 0;
-    virtual void reply(uint notificationId, const QString &text) = 0;
+    virtual void invokeDefaultAction(uint notificationId, Notifications::InvokeBehavior behavior) = 0;
+    virtual void invokeAction(uint notificationId, const QString &actionName, Notifications::InvokeBehavior behavior) = 0;
+    virtual void reply(uint notificationId, const QString &text, Notifications::InvokeBehavior behavior) = 0;
 
     void startTimeout(uint notificationId);
     void stopTimeout(uint notificationId);

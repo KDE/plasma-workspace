@@ -83,6 +83,7 @@ void WaylandTasksModel::Private::init()
                                            AbstractTasksModel::GenericName,
                                            AbstractTasksModel::LauncherUrl,
                                            AbstractTasksModel::LauncherUrlWithoutIcon,
+                                           AbstractTasksModel::CanLaunchNewInstance,
                                            AbstractTasksModel::SkipTaskbar});
     };
 
@@ -200,7 +201,7 @@ void WaylandTasksModel::Private::addWindow(KWayland::Client::PlasmaWindow *windo
         appDataCache.remove(window);
 
         // Refresh roles satisfied from the app data cache.
-        this->dataChanged(window, QVector<int>{AppId, AppName, GenericName, LauncherUrl, LauncherUrlWithoutIcon, SkipTaskbar});
+        this->dataChanged(window, QVector<int>{AppId, AppName, GenericName, LauncherUrl, LauncherUrlWithoutIcon, SkipTaskbar, CanLaunchNewInstance});
     });
 
     QObject::connect(window, &KWayland::Client::PlasmaWindow::activeChanged, q, [window, this] {
@@ -353,13 +354,13 @@ QString WaylandTasksModel::Private::groupMimeType()
 void WaylandTasksModel::Private::dataChanged(KWayland::Client::PlasmaWindow *window, int role)
 {
     QModelIndex idx = q->index(windows.indexOf(window));
-    emit q->dataChanged(idx, idx, QVector<int>{role});
+    Q_EMIT q->dataChanged(idx, idx, QVector<int>{role});
 }
 
 void WaylandTasksModel::Private::dataChanged(KWayland::Client::PlasmaWindow *window, const QVector<int> &roles)
 {
     QModelIndex idx = q->index(windows.indexOf(window));
-    emit q->dataChanged(idx, idx, roles);
+    Q_EMIT q->dataChanged(idx, idx, roles);
 }
 
 WaylandTasksModel::WaylandTasksModel(QObject *parent)
@@ -464,6 +465,8 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
         return window->applicationMenuObjectPath();
     } else if (role == ApplicationMenuServiceName) {
         return window->applicationMenuServiceName();
+    } else if (role == CanLaunchNewInstance) {
+        return canLauchNewInstance(d->appData(window));
     }
 
     return QVariant();
@@ -525,12 +528,7 @@ void WaylandTasksModel::requestMove(const QModelIndex &index)
 
     KWayland::Client::PlasmaWindow *window = d->windows.at(index.row());
 
-    const QString &currentDesktop = d->virtualDesktopInfo->currentDesktop().toString();
-
-    if (!currentDesktop.isEmpty()) {
-        window->requestEnterVirtualDesktop(currentDesktop);
-    }
-
+    window->requestActivate();
     window->requestMove();
 }
 
@@ -542,12 +540,7 @@ void WaylandTasksModel::requestResize(const QModelIndex &index)
 
     KWayland::Client::PlasmaWindow *window = d->windows.at(index.row());
 
-    const QString &currentDesktop = d->virtualDesktopInfo->currentDesktop().toString();
-
-    if (!currentDesktop.isEmpty()) {
-        window->requestEnterVirtualDesktop(currentDesktop);
-    }
-
+    window->requestActivate();
     window->requestResize();
 }
 
@@ -557,15 +550,7 @@ void WaylandTasksModel::requestToggleMinimized(const QModelIndex &index)
         return;
     }
 
-    KWayland::Client::PlasmaWindow *window = d->windows.at(index.row());
-
-    const QString &currentDesktop = d->virtualDesktopInfo->currentDesktop().toString();
-
-    if (!currentDesktop.isEmpty()) {
-        window->requestEnterVirtualDesktop(currentDesktop);
-    }
-
-    window->requestToggleMinimized();
+    d->windows.at(index.row())->requestToggleMinimized();
 }
 
 void WaylandTasksModel::requestToggleMaximized(const QModelIndex &index)
@@ -576,12 +561,7 @@ void WaylandTasksModel::requestToggleMaximized(const QModelIndex &index)
 
     KWayland::Client::PlasmaWindow *window = d->windows.at(index.row());
 
-    const QString &currentDesktop = d->virtualDesktopInfo->currentDesktop().toString();
-
-    if (!currentDesktop.isEmpty()) {
-        window->requestEnterVirtualDesktop(currentDesktop);
-    }
-
+    window->requestActivate();
     window->requestToggleMaximized();
 }
 

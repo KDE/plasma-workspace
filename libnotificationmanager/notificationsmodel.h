@@ -19,9 +19,9 @@ public:
     void expire(uint notificationId) override;
     void close(uint notificationId) override;
 
-    void invokeDefaultAction(uint notificationId) override;
-    void invokeAction(uint notificationId, const QString &actionName) override;
-    void reply(uint notificationId, const QString &text) override;
+    void invokeDefaultAction(uint notificationId, Notifications::InvokeBehavior behavior) override;
+    void invokeAction(uint notificationId, const QString &actionName, Notifications::InvokeBehavior behavior) override;
+    void reply(uint notificationId, const QString &text, Notifications::InvokeBehavior behavior) override;
 
     void configure(uint notificationId);
     void configure(const QString &desktopEntry, const QString &notifyRcName, const QString &eventId);

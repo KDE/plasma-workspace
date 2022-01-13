@@ -73,7 +73,7 @@ void Settings::Private::setDirty(bool dirty)
 {
     if (this->dirty != dirty) {
         this->dirty = dirty;
-        emit q->dirtyChanged();
+        Q_EMIT q->dirtyChanged();
     }
 }
 
@@ -218,7 +218,7 @@ void Settings::registerKnownApplication(const QString &desktopEntry)
 
     d->applicationsGroup().group(desktopEntry).writeEntry("Seen", true);
 
-    emit knownApplicationsChanged();
+    Q_EMIT knownApplicationsChanged();
 }
 
 void Settings::forgetKnownApplication(const QString &desktopEntry)
@@ -235,7 +235,7 @@ void Settings::forgetKnownApplication(const QString &desktopEntry)
 
     d->applicationsGroup().deleteGroup(desktopEntry);
 
-    emit knownApplicationsChanged();
+    Q_EMIT knownApplicationsChanged();
 }
 
 void Settings::load()
@@ -246,7 +246,7 @@ void Settings::load()
     d->notificationSettings.load();
     d->jobSettings.load();
     d->badgeSettings.load();
-    emit settingsChanged();
+    Q_EMIT settingsChanged();
     d->setDirty(false);
 }
 
@@ -267,7 +267,7 @@ void Settings::defaults()
     d->notificationSettings.setDefaults();
     d->jobSettings.setDefaults();
     d->badgeSettings.setDefaults();
-    emit settingsChanged();
+    Q_EMIT settingsChanged();
     d->setDirty(false);
 }
 
@@ -305,7 +305,7 @@ void Settings::setLive(bool live)
                 }
 
                 if (emitScreensMirroredChanged) {
-                    emit screensMirroredChanged();
+                    Q_EMIT screensMirroredChanged();
                 }
             } else if (group.name() == QLatin1String("Notifications")) {
                 d->notificationSettings.load();
@@ -315,7 +315,7 @@ void Settings::setLive(bool live)
                 d->badgeSettings.load();
             }
 
-            emit settingsChanged();
+            Q_EMIT settingsChanged();
         });
     } else {
         disconnect(d->watcherConnection);
@@ -323,7 +323,7 @@ void Settings::setLive(bool live)
         d->watcher.reset();
     }
 
-    emit liveChanged();
+    Q_EMIT liveChanged();
 }
 
 bool Settings::dirty() const

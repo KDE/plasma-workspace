@@ -125,7 +125,7 @@ Item {
                         let actions = [];
                         for (let i in actionsButton.applet.contextualActions) {
                             const action = actionsButton.applet.contextualActions[i];
-                            if (action.visible && action !== actionsButton.applet.action("configure")) {
+                            if (action.visible && action.priority > 0 && action !== actionsButton.applet.action("configure")) {
                                 actions.push(action);
                             }
                         }

@@ -117,7 +117,7 @@ KWin.Switcher {
 
             /*
             * Key navigation on outer item for two reasons:
-            * @li we have to emit the change signal
+            * @li we have to Q_EMIT the change signal
             * @li on multiple invocation it does not work on the list view. Focus seems to be lost.
             **/
             Keys.onPressed: {

@@ -61,7 +61,7 @@ void StatusNotifierWatcher::RegisterStatusNotifierItem(const QString &serviceOrP
         if (trayclient.isValid()) {
             qDebug() << "Registering" << notifierItemId << "to system tray";
             m_registeredServices.append(notifierItemId);
-            emit StatusNotifierItemRegistered(notifierItemId);
+            Q_EMIT StatusNotifierItemRegistered(notifierItemId);
         } else {
             m_serviceWatcher->removeWatchedService(service);
         }
@@ -86,7 +86,7 @@ void StatusNotifierWatcher::serviceUnregistered(const QString &name)
         if (it->startsWith(match)) {
             QString name = *it;
             it = m_registeredServices.erase(it);
-            emit StatusNotifierItemUnregistered(name);
+            Q_EMIT StatusNotifierItemUnregistered(name);
         } else {
             ++it;
         }
@@ -94,7 +94,7 @@ void StatusNotifierWatcher::serviceUnregistered(const QString &name)
 
     if (m_statusNotifierHostServices.contains(name)) {
         m_statusNotifierHostServices.remove(name);
-        emit StatusNotifierHostUnregistered();
+        Q_EMIT StatusNotifierHostUnregistered();
     }
 }
 
@@ -106,7 +106,7 @@ void StatusNotifierWatcher::RegisterStatusNotifierHost(const QString &service)
 
         m_statusNotifierHostServices.insert(service);
         m_serviceWatcher->addWatchedService(service);
-        emit StatusNotifierHostRegistered();
+        Q_EMIT StatusNotifierHostRegistered();
     }
 }
 

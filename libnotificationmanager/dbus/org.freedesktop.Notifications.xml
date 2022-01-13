@@ -14,6 +14,10 @@
       <arg name="id" type="u" direction="out"/>
       <arg name="text" type="s" direction="out"/>
     </signal>
+    <signal name="ActivationToken">
+      <arg name="id" type="u" direction="out"/>
+      <arg name="activation_token" type="s" direction="out"/>
+    </signal>
     <method name="Notify">
       <annotation name="org.qtproject.QtDBus.QtTypeName.In6" value="QVariantMap"/>
       <arg type="u" direction="out"/>

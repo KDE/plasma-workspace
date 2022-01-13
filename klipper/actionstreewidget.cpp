@@ -18,6 +18,7 @@ ActionsTreeWidget::ActionsTreeWidget(QWidget *parent)
         connect(treeModel, &QAbstractItemModel::rowsInserted, this, &ActionsTreeWidget::onItemChanged);
         connect(treeModel, &QAbstractItemModel::rowsRemoved, this, &ActionsTreeWidget::onItemChanged);
     }
+    setProperty("kcfg_propertyNotify", true);
 }
 
 void ActionsTreeWidget::onItemChanged()
@@ -38,7 +39,7 @@ void ActionsTreeWidget::setActionsChanged(int isChanged)
     if (!m_modified) {
         m_actionsChanged = m_actionsChanged ? 1 : 0;
         m_modified = true;
-        emit changed();
+        Q_EMIT changed();
     }
 }
 

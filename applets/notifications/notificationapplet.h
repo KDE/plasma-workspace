@@ -25,7 +25,7 @@ class NotificationApplet : public Plasma::Applet
     Q_PROPERTY(QQuickItem *systemTrayRepresentation READ systemTrayRepresentation CONSTANT)
 
 public:
-    explicit NotificationApplet(QObject *parent, const QVariantList &data);
+    explicit NotificationApplet(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
     ~NotificationApplet() override;
 
     void init() override;
@@ -54,7 +54,7 @@ Q_SIGNALS:
     void dragPixmapSizeChanged();
     void focussedPlasmaDialogChanged();
 
-private slots:
+private Q_SLOTS:
     void doDrag(QQuickItem *item, const QUrl &url, const QPixmap &pixmap);
 
 private:

@@ -17,7 +17,7 @@ kcmutils_generate_module_data(
 
 kconfig_add_kcfg_files(kcm_nightcolor_SRCS nightcolorsettings.kcfgc GENERATE_MOC)
 
-kcoreaddons_add_plugin(kcm_nightcolor SOURCES ${kcm_nightcolor_SRCS} INSTALL_NAMESPACE "kcms")
+kcoreaddons_add_plugin(kcm_nightcolor SOURCES ${kcm_nightcolor_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
 
 target_link_libraries(kcm_nightcolor
     KF5::QuickAddons
@@ -26,9 +26,7 @@ target_link_libraries(kcm_nightcolor
     PW::LibColorCorrect
 )
 
-kcoreaddons_desktop_to_json(kcm_nightcolor "kcm_nightcolor.desktop" SERVICE_TYPES kcmodule.desktop)
-
 #this desktop file is installed only for retrocompatibility with sycoca
-install(FILES kcm_nightcolor.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(FILES kcm_nightcolor.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
 kpackage_install_package(package kcm_nightcolor kcms)

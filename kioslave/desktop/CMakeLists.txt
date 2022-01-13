@@ -19,7 +19,6 @@ set_target_properties(kio_desktop PROPERTIES OUTPUT_NAME "desktop")
 ########### next target ###############
 
 kcoreaddons_add_plugin(desktopnotifier SOURCES desktopnotifier.cpp INSTALL_NAMESPACE "kf5/kded")
-kcoreaddons_desktop_to_json(desktopnotifier desktopnotifier.desktop)
 target_link_libraries(desktopnotifier KF5::ConfigCore KF5::KIOCore KF5::DBusAddons)
 
 ########### install files ###############

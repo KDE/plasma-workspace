@@ -31,10 +31,6 @@ static const QString s_openParentDirId = QStringLiteral("openParentDir");
 
 int main(int argc, char **argv)
 {
-    Baloo::IndexerConfig config;
-    if (!config.fileIndexingEnabled()) {
-        return -1;
-    }
     QCoreApplication::setAttribute(Qt::AA_DisableSessionManager);
     QApplication::setQuitOnLastWindowClosed(false);
     QApplication app(argc, argv); // KRun needs widgets for error message boxes
@@ -60,11 +56,21 @@ SearchRunner::~SearchRunner()
 
 RemoteActions SearchRunner::Actions()
 {
+    Baloo::IndexerConfig config;
+    if (!config.fileIndexingEnabled()) {
+        sendErrorReply(QDBusError::ErrorType::NotSupported);
+    }
     return RemoteActions({RemoteAction{s_openParentDirId, i18n("Open Containing Folder"), QStringLiteral("document-open-folder")}});
 }
 
 RemoteMatches SearchRunner::Match(const QString &searchTerm)
 {
+    Baloo::IndexerConfig config;
+    if (!config.fileIndexingEnabled()) {
+        sendErrorReply(QDBusError::ErrorType::NotSupported);
+        return {};
+    }
+
     // Do not try to show results for queries starting with =
     // this should trigger the calculator, but the AdvancedQueryParser::parse method
     // in baloo interpreted it as an operator, BUG 345134

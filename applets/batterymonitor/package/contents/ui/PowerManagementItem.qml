@@ -5,35 +5,56 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.0
-import QtQuick.Layouts 1.1
-import org.kde.plasma.core 2.0 as PlasmaCore
+import QtQuick 2.15
+import QtQuick.Layouts 1.15
+
+import org.kde.kquickcontrolsaddons 2.1
 import org.kde.plasma.components 3.0 as PlasmaComponents3
-import org.kde.kquickcontrolsaddons 2.0
+import org.kde.plasma.core 2.1 as PlasmaCore
 
 ColumnLayout {
-    id: powerManagement
+    id: root
+
     property alias disabled: pmCheckBox.checked
     property bool pluggedIn
 
-    spacing: 0
+    // List of active power management inhibitions (applications that are
+    // blocking sleep and screen locking).
+    //
+    // type: [{
+    //  Icon: string,
+    //  Name: string,
+    //  Reason: string,
+    // }]
+    property var inhibitions: []
 
-    RowLayout {
+    // UI to manually inhibit sleep and screen locking
+    PlasmaComponents3.CheckBox {
+        id: pmCheckBox
         Layout.fillWidth: true
-        Layout.leftMargin: PlasmaCore.Units.smallSpacing
+        text: i18nc("Minimize the length of this string as much as possible", "Manually block sleep and screen locking")
+        checked: false
+    }
 
-        PlasmaComponents3.CheckBox {
-            id: pmCheckBox
-            Layout.fillWidth: true
-            text: i18nc("Minimize the length of this string as much as possible", "Inhibit automatic sleep and screen locking")
-            checked: false
+    // Separator line
+    PlasmaCore.SvgItem {
+        Layout.fillWidth: true
+
+        visible: inhibitionReasonsLayout.visibleChildren.length > 0
+
+        elementId: "horizontal-line"
+        svg: PlasmaCore.Svg {
+            imagePath: "widgets/line"
         }
     }
 
+    // list of automatic inhibitions
     ColumnLayout {
+        id: inhibitionReasonsLayout
+
         Layout.fillWidth: true
-        Layout.leftMargin: PlasmaCore.Units.gridUnit + PlasmaCore.Units.smallSpacing // width of checkbox and spacer
-        spacing: PlasmaCore.Units.smallSpacing
+
+        visible: visibleChildren.length > 0
 
         InhibitionHint {
             Layout.fillWidth: true
@@ -42,23 +63,21 @@ ColumnLayout {
             text: i18nc("Minimize the length of this string as much as possible", "Your notebook is configured not to sleep when closing the lid while an external monitor is connected.")
         }
 
-
         // UI to display when there is only one inhibition
         InhibitionHint {
             // Don't need to show the inhibitions when power management
             // isn't enabled anyway
-            visible: inhibitions.length === 1 && !powerManagement.disabled
+            visible: inhibitions.length === 1 && !root.disabled
             Layout.fillWidth: true
-            iconSource: visible ? inhibitions[0].Icon : ""
-            text: visible ?
+            iconSource: (inhibitions.length === 1) ? inhibitions[0].Icon : ""
+            text: (inhibitions.length === 1) ?
                     inhibitions[0].Reason ?
-                        i18n("%1 is inhibiting sleep and screen locking (%2)", inhibitions[0].Name, inhibitions[0].Reason)
+                        i18n("%1 is currently blocking sleep and screen locking (%2)", inhibitions[0].Name, inhibitions[0].Reason)
                     :
-                        i18n("%1 is inhibiting sleep and screen locking (unknown reason)", inhibitions[0].Name)
+                        i18n("%1 is currently blocking sleep and screen locking (unknown reason)", inhibitions[0].Name)
                 :
                     ""
         }
-
 
         // UI to display when there is more than one inhibition
         PlasmaComponents3.Label {
@@ -66,19 +85,20 @@ ColumnLayout {
             Layout.fillWidth: true
             // Don't need to show the inhibitions when power management
             // isn't enabled anyway
-            visible: inhibitions.length > 1 && !powerManagement.disabled
+            visible: inhibitions.length > 1 && !root.disabled
             font: PlasmaCore.Theme.smallestFont
             wrapMode: Text.WordWrap
             elide: Text.ElideRight
             maximumLineCount: 3
-            text: i18np("%1 application is inhibiting sleep and screen locking:",
-                        "%1 applications are inhibiting sleep and screen locking:",
+            text: i18np("%1 application is currently blocking sleep and screen locking:",
+                        "%1 applications are currently blocking sleep and screen locking:",
                         inhibitions.length)
         }
-        Repeater {
-            visible: inhibitions.length > 1
 
-            model: inhibitionExplanation.visible ? inhibitions.length : null
+        Repeater {
+            visible: inhibitions.length > 1 && !root.disabled
+
+            model: visible ? inhibitions.length : null
 
             InhibitionHint {
                 Layout.fillWidth: true

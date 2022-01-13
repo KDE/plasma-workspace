@@ -28,7 +28,7 @@ WeatherEngine::WeatherEngine(QObject *parent, const QVariantList &args)
     connect(&m_networkConfigurationManager, &QNetworkConfigurationManager::onlineStateChanged, this, &WeatherEngine::onOnlineStateChanged);
 
     // Get the list of available plugins but don't load them
-    connect(KSycoca::self(), static_cast<void (KSycoca::*)(const QStringList &)>(&KSycoca::databaseChanged), this, &WeatherEngine::updateIonList);
+    connect(KSycoca::self(), &KSycoca::databaseChanged, this, &WeatherEngine::updateIonList);
 
     updateIonList();
 }
@@ -40,15 +40,13 @@ WeatherEngine::~WeatherEngine()
 
 /* FIXME: Q_PROPERTY functions to update the list of available plugins */
 
-void WeatherEngine::updateIonList(const QStringList &changedResources)
+void WeatherEngine::updateIonList()
 {
-    if (changedResources.isEmpty() || changedResources.contains(QLatin1String("services"))) {
-        removeAllData(QStringLiteral("ions"));
-        const auto infos = Plasma::PluginLoader::self()->listDataEngineMetaData(QStringLiteral("weatherengine"));
-        for (const KPluginMetaData &info : infos) {
-            const QString data = info.name() + QLatin1Char('|') + info.pluginId();
-            setData(QStringLiteral("ions"), info.pluginId(), data);
-        }
+    removeAllData(QStringLiteral("ions"));
+    const auto infos = Plasma::PluginLoader::self()->listDataEngineMetaData(QStringLiteral("weatherengine"));
+    for (const KPluginMetaData &info : infos) {
+        const QString data = info.name() + QLatin1Char('|') + info.pluginId();
+        setData(QStringLiteral("ions"), info.pluginId(), data);
     }
 }
 

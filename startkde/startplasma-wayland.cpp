@@ -9,6 +9,7 @@
 #include <KConfigGroup>
 #include <QDBusConnection>
 #include <QDBusInterface>
+#include <signal.h>
 
 int main(int argc, char **argv)
 {
@@ -16,6 +17,7 @@ int main(int argc, char **argv)
 
     createConfigDirectory();
     setupCursor(true);
+    signal(SIGTERM, sigtermHandler);
 
     {
         KConfig fonts(QStringLiteral("kcmfonts"));
@@ -80,16 +82,16 @@ int main(int argc, char **argv)
     // variables (e.g. LANG and LC_*)
     importSystemdEnvrionment();
 
-    QStringList args;
-    if (argc > 1) {
-        args.reserve(argc);
-        for (int i = 1; i < argc; ++i) {
-            args << QString::fromLocal8Bit(argv[i]);
-        }
-    } else {
-        args = QStringList{QStringLiteral("--xwayland"), QStringLiteral(CMAKE_INSTALL_FULL_LIBEXECDIR "/startplasma-waylandsession")};
-    }
-    runSync(QStringLiteral("kwin_wayland_wrapper"), args);
+    if (!startPlasmaSession(true))
+        return 4;
+
+    // Anything after here is logout
+    // It is not called after shutdown/restart
+    waitForKonqi();
+    out << "startplasma-wayland: Shutting down...\n";
+
+    // Keep for KF5; remove in KF6 (KInit will be gone then)
+    runSync(QStringLiteral("kdeinit5_shutdown"), {});
 
     out << "startplasmacompositor: Shutting down...\n";
     cleanupPlasmaEnvironment(oldSystemdEnvironment);

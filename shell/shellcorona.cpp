@@ -58,6 +58,7 @@
 #include "debug.h"
 #include "futureutil.h"
 #include "plasmashelladaptor.h"
+#include "primaryoutputwatcher.h"
 
 #ifndef NDEBUG
 #define CHECK_SCREEN_INVARIANTS screenInvariants();
@@ -83,6 +84,7 @@ ShellCorona::ShellCorona(QObject *parent)
     , m_waylandPlasmaShell(nullptr)
     , m_closingDown(false)
     , m_strutManager(new StrutManager(this))
+    , m_primaryWatcher(new PrimaryOutputWatcher(this))
 {
     setupWaylandIntegration();
     qmlRegisterUncreatableType<DesktopView>("org.kde.plasma.shell", 2, 0, "Desktop", QStringLiteral("It is not possible to create objects of type Desktop"));
@@ -151,7 +153,7 @@ void ShellCorona::init()
     KGlobalAccel::self()->setGlobalShortcut(dashboardAction, Qt::CTRL | Qt::Key_F12);
 
     checkAddPanelAction();
-    connect(KSycoca::self(), QOverload<>::of(&KSycoca::databaseChanged), this, &ShellCorona::checkAddPanelAction);
+    connect(KSycoca::self(), &KSycoca::databaseChanged, this, &ShellCorona::checkAddPanelAction);
 
     // Activity stuff
     QAction *activityAction = actions()->addAction(QStringLiteral("manage activities"));
@@ -263,11 +265,7 @@ void ShellCorona::setShell(const QString &shell)
 
     if (themeName.isEmpty()) {
         KConfigGroup shellCfg = KConfigGroup(KSharedConfig::openConfig(package.filePath("defaults")), "Theme");
-
-        themeName = shellCfg.readEntry("name", "default");
-        KConfigGroup lnfCfg = KConfigGroup(KSharedConfig::openConfig(m_lookAndFeelPackage.filePath("defaults")), "plasmarc");
-        lnfCfg = KConfigGroup(&lnfCfg, themeGroupKey);
-        themeName = lnfCfg.readEntry(themeNameKey, themeName);
+        themeName = shellCfg.readEntry(themeNameKey, "default");
     }
 
     if (!themeName.isEmpty()) {
@@ -631,7 +629,7 @@ void ShellCorona::load()
 
     disconnect(m_activityController, &KActivities::Controller::serviceStatusChanged, this, &ShellCorona::load);
 
-    m_screenPool->load();
+    m_screenPool->load(m_primaryWatcher->primaryScreen());
 
     // TODO: a kconf_update script is needed
     QString configFileName(QStringLiteral("plasma-") + m_shell + QStringLiteral("-appletsrc"));
@@ -685,8 +683,8 @@ void ShellCorona::load()
         }
     }
     connect(qGuiApp, &QGuiApplication::screenAdded, this, &ShellCorona::addOutput, Qt::UniqueConnection);
-    connect(qGuiApp, &QGuiApplication::primaryScreenChanged, this, &ShellCorona::primaryOutputChanged, Qt::UniqueConnection);
     connect(qGuiApp, &QGuiApplication::screenRemoved, this, &ShellCorona::handleScreenRemoved, Qt::UniqueConnection);
+    connect(m_primaryWatcher, &PrimaryOutputWatcher::primaryOutputNameChanged, this, &ShellCorona::primaryOutputNameChanged, Qt::UniqueConnection);
 
     if (!m_waitingPanels.isEmpty()) {
         m_waitingPanelsTimer.start();
@@ -700,34 +698,51 @@ void ShellCorona::load()
     }
 }
 
-void ShellCorona::primaryOutputChanged()
+void ShellCorona::primaryOutputNameChanged(const QString &oldOutputName, const QString &newOutputName)
 {
-    if (!m_desktopViewforId.contains(0)) {
-        return;
-    }
-
     // when the appearance of a new primary screen *moves*
     // the position of the now secondary, the two screens will appear overlapped for an instant, and a spurious output redundant would happen here if checked
     // immediately
     m_reconsiderOutputsTimer.start();
 
-    QScreen *oldPrimary = m_desktopViewforId.value(0)->screen();
-    QScreen *newPrimary = qGuiApp->primaryScreen();
-    if (!newPrimary || newPrimary == oldPrimary) {
+    QScreen *oldPrimary = m_primaryWatcher->screenForName(oldOutputName);
+    QScreen *newPrimary = m_primaryWatcher->primaryScreen();
+
+    if (!newPrimary || newPrimary == oldPrimary || newPrimary->geometry().isNull()) {
         return;
     }
 
-    qWarning() << "Old primary output:" << oldPrimary << "New primary output:" << newPrimary;
     const int oldIdOfPrimary = m_screenPool->id(newPrimary->name());
+
+    if (KWindowSystem::isPlatformWayland()) {
+        // This happens on Wayland, where primaryOutputchange gets emitted before screenadded
+        if (!m_desktopViewforId.contains(oldIdOfPrimary) && !m_redundantOutputs.contains(newPrimary)) {
+            m_screenPool->setPrimaryConnector(newPrimary->name());
+            addOutput(newPrimary);
+        }
+    // On X11 we get fake screens as primary
+    } else {
+        // Special case: we are in "no connectors" mode, there is only a (recycled) QScreen instance which is not attached to any output. Treat this as a screen removed This happens only on X, wayland doesn't seem to be getting fake screens
+        if (noRealOutputsConnected()) {
+            handleScreenRemoved(newPrimary);
+            return;
+        // On X11, the output named :0.0 is fake
+        } else if (!oldPrimary || oldOutputName == ":0.0" || oldOutputName.isEmpty()) {
+            m_screenPool->setPrimaryConnector(newPrimary->name());
+            addOutput(newPrimary);
+            return;
+        }
+    }
+
     m_screenPool->setPrimaryConnector(newPrimary->name());
+
     // swap order in m_desktopViewforId
     if (m_desktopViewforId.contains(0) && m_desktopViewforId.contains(oldIdOfPrimary)) {
         DesktopView *primaryDesktop = m_desktopViewforId.value(0);
         DesktopView *oldDesktopOfPrimary = m_desktopViewforId.value(oldIdOfPrimary);
-
         primaryDesktop->setScreenToFollow(newPrimary);
-        oldDesktopOfPrimary->setScreenToFollow(oldPrimary);
         primaryDesktop->show();
+        oldDesktopOfPrimary->setScreenToFollow(oldPrimary);
         oldDesktopOfPrimary->show();
         // corner case: the new primary screen was added into redundant outputs when appeared, *and* !m_desktopViewforId.contains(oldIdOfPrimary)
         // meaning that we had only one screen, connected a new oone that
@@ -755,6 +770,11 @@ void ShellCorona::primaryOutputChanged()
 #ifndef NDEBUG
 void ShellCorona::screenInvariants() const
 {
+    if (noRealOutputsConnected()) {
+        Q_ASSERT(m_desktopViewforId.isEmpty());
+        Q_ASSERT(m_panelViews.isEmpty());
+        return;
+    }
     const QList<int> keys = m_desktopViewforId.keys();
     Q_ASSERT(keys.count() <= QGuiApplication::screens().count());
 
@@ -971,7 +991,7 @@ QRect ShellCorona::screenGeometry(int id) const
     DesktopView *view = m_desktopViewforId.value(id);
     if (!view) {
         qWarning() << "requesting unexisting screen" << id;
-        QScreen *s = qGuiApp->primaryScreen();
+        QScreen *s = m_primaryWatcher->primaryScreen();
         return s ? s->geometry() : QRect();
     }
     return view->geometry();
@@ -988,7 +1008,7 @@ QRegion ShellCorona::_availableScreenRegion(int id) const
     if (!view) {
         // each screen should have a view
         qWarning() << "requesting unexisting screen" << id;
-        QScreen *s = qGuiApp->primaryScreen();
+        QScreen *s = m_primaryWatcher->primaryScreen();
         return s ? s->availableGeometry() : QRegion();
     }
 
@@ -1013,7 +1033,7 @@ QRect ShellCorona::_availableScreenRect(int id) const
     if (!view) {
         // each screen should have a view
         qWarning() << "requesting unexisting screen" << id;
-        QScreen *s = qGuiApp->primaryScreen();
+        QScreen *s = m_primaryWatcher->primaryScreen();
         return s ? s->availableGeometry() : QRect();
     }
 
@@ -1049,11 +1069,18 @@ void ShellCorona::removeDesktop(DesktopView *desktopView)
 {
     const int idx = m_screenPool->id(desktopView->screenToFollow()->name());
 
-    auto itDesktop = m_desktopViewforId.find(idx);
-    if (itDesktop == m_desktopViewforId.end()) {
-        return;
+    // Iterate instead of going by index: QScreen can be recyced to be the "fake" output
+    // so searching by id won't work anymore
+    auto deskIt = m_desktopViewforId.begin();
+    while (deskIt != m_desktopViewforId.end()) {
+        DesktopView *view = deskIt.value();
+
+        if (view == desktopView) {
+            break;
+        }
+        ++deskIt;
     }
-    Q_ASSERT(m_desktopViewforId.value(idx) == desktopView);
+    Q_ASSERT(deskIt != m_desktopViewforId.end());
 
     QMutableHashIterator<const Plasma::Containment *, PanelView *> it(m_panelViews);
     while (it.hasNext()) {
@@ -1063,14 +1090,14 @@ void ShellCorona::removeDesktop(DesktopView *desktopView)
         if (panelView->containment()->screen() == idx) {
             m_waitingPanels << panelView->containment();
             it.remove();
-            delete panelView;
+            panelView->destroy();
         }
     }
 
-    m_desktopViewforId.erase(itDesktop);
-    delete desktopView;
+    m_desktopViewforId.erase(deskIt);
+    desktopView->destroy();
 
-    emit screenRemoved(idx);
+    Q_EMIT screenRemoved(idx);
 }
 
 PanelView *ShellCorona::panelView(Plasma::Containment *containment) const
@@ -1093,7 +1120,18 @@ QList<PanelView *> ShellCorona::panelsForScreen(QScreen *screen) const
 
 DesktopView *ShellCorona::desktopForScreen(QScreen *screen) const
 {
-    return m_desktopViewforId.value(m_screenPool->id(screen->name()));
+    DesktopView * view = m_desktopViewforId.value(m_screenPool->id(screen->name()));
+    //An output may have been renamed, fall back to a linear check
+    if (view) {
+        return view;
+    } else {
+        for (DesktopView *v : m_desktopViewforId) {
+            if (v->screenToFollow() == screen) {
+                return v;
+            }
+        }
+    }
+    return nullptr;
 }
 
 void ShellCorona::handleScreenRemoved(QScreen *screen)
@@ -1104,6 +1142,22 @@ void ShellCorona::handleScreenRemoved(QScreen *screen)
 
     m_reconsiderOutputsTimer.start();
     m_redundantOutputs.remove(screen);
+}
+
+bool ShellCorona::noRealOutputsConnected() const
+{
+    if (qApp->screens().count() > 1) {
+        return false;
+    }
+
+    return isOutputFake(m_primaryWatcher->primaryScreen());
+}
+
+bool ShellCorona::isOutputFake(QScreen *screen) const
+{
+    // On X11 the output named :0.0 is fake (the geometry is usually valid and whatever the geometry
+    // of the last connected screen was), on wayland the fake output has no name and no geometry
+    return screen->name() == QStringLiteral(":0.0") || screen->geometry().isEmpty() || screen->name().isEmpty();
 }
 
 bool ShellCorona::isOutputRedundant(QScreen *screen) const
@@ -1161,7 +1215,7 @@ void ShellCorona::reconsiderOutputs()
                 addOutput(screen);
             }
         } else if (isOutputRedundant(screen)) {
-            qDebug() << "new redundant screen" << screen << "with primary screen" << qGuiApp->primaryScreen();
+            qDebug() << "new redundant screen" << screen << "with primary screen" << m_primaryWatcher->primaryScreen();
 
             if (DesktopView *v = desktopForScreen(screen))
                 removeDesktop(v);
@@ -1180,6 +1234,19 @@ void ShellCorona::reconsiderOutputs()
 void ShellCorona::addOutput(QScreen *screen)
 {
     Q_ASSERT(screen);
+
+    if (isOutputFake(screen)) {
+        return;
+    }
+    for (auto desk : m_desktopViewforId.values()) {
+        if (desk->screenToFollow() == screen) {
+            return;
+        }
+    }
+    if (screen->geometry().isNull()) {
+        return;
+    }
+
     connect(screen, &QScreen::geometryChanged, &m_reconsiderOutputsTimer, static_cast<void (QTimer::*)()>(&QTimer::start), Qt::UniqueConnection);
 
     if (isOutputRedundant(screen)) {
@@ -1202,9 +1269,9 @@ void ShellCorona::addOutput(QScreen *screen)
     connect(view, &DesktopView::geometryChanged, this, [=]() {
         const int id = m_screenPool->id(view->screen()->name());
         if (id >= 0) {
-            emit screenGeometryChanged(id);
-            emit availableScreenRegionChanged();
-            emit availableScreenRectChanged();
+            Q_EMIT screenGeometryChanged(id);
+            Q_EMIT availableScreenRegionChanged();
+            Q_EMIT availableScreenRectChanged();
         }
     });
 
@@ -1233,8 +1300,8 @@ void ShellCorona::addOutput(QScreen *screen)
         m_waitingPanelsTimer.start();
     }
 
-    emit availableScreenRectChanged();
-    emit screenAdded(m_screenPool->id(screen->name()));
+    Q_EMIT availableScreenRectChanged();
+    Q_EMIT screenAdded(m_screenPool->id(screen->name()));
 
     CHECK_SCREEN_INVARIANTS
 }
@@ -1324,7 +1391,7 @@ void ShellCorona::createWaitingPanels()
         connect(cont, &QObject::destroyed, this, &ShellCorona::panelContainmentDestroyed);
     }
     m_waitingPanels = stillWaitingPanels;
-    emit availableScreenRectChanged();
+    Q_EMIT availableScreenRectChanged();
 }
 
 void ShellCorona::panelContainmentDestroyed(QObject *cont)
@@ -1334,7 +1401,7 @@ void ShellCorona::panelContainmentDestroyed(QObject *cont)
     // don't make things relayout when the application is quitting
     // NOTE: qApp->closingDown() is still false here
     if (!m_closingDown) {
-        emit availableScreenRectChanged();
+        Q_EMIT availableScreenRectChanged();
     }
 }
 
@@ -1623,7 +1690,7 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const 
     newContainment->restore(newCg);
     newContainment->updateConstraints(Plasma::Types::StartupCompletedConstraint);
     newContainment->flushPendingConstraintsEvents();
-    emit containmentAdded(newContainment);
+    Q_EMIT containmentAdded(newContainment);
 
     // Move the applets
     const auto applets = oldContainment->applets();
@@ -1649,7 +1716,7 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const 
     // Save now as we now have a screen, so lastScreen will not be -1
     newContainment->save(newCg);
     requestConfigSync();
-    emit availableScreenRectChanged();
+    Q_EMIT availableScreenRectChanged();
 
     return newContainment;
 }
@@ -1773,7 +1840,7 @@ Plasma::Containment *ShellCorona::addPanel(const QString &plugin)
     }
 
     // find out what screen this panel should go on
-    QScreen *wantedScreen = qGuiApp->focusWindow() ? qGuiApp->focusWindow()->screen() : qGuiApp->primaryScreen();
+    QScreen *wantedScreen = qGuiApp->focusWindow() ? qGuiApp->focusWindow()->screen() : m_primaryWatcher->primaryScreen();
 
     QList<Plasma::Types::Location> availableLocations;
     availableLocations << Plasma::Types::LeftEdge << Plasma::Types::TopEdge << Plasma::Types::RightEdge << Plasma::Types::BottomEdge;
@@ -2060,7 +2127,7 @@ void ShellCorona::activateLauncherMenu()
         const auto provides = applet->pluginMetaData().value(QStringLiteral("X-Plasma-Provides"), QStringList());
         if (provides.contains(QLatin1String("org.kde.plasma.launchermenu"))) {
             if (!applet->globalShortcut().isEmpty()) {
-                emit applet->activated();
+                Q_EMIT applet->activated();
                 return true;
             }
         }
@@ -2126,7 +2193,7 @@ void ShellCorona::activateTaskManagerEntry(int index)
     // which is activating a task on the task manager on a panel on the primary screen.
 
     for (auto it = m_panelViews.constBegin(), end = m_panelViews.constEnd(); it != end; ++it) {
-        if (it.value()->screen() != qGuiApp->primaryScreen()) {
+        if (it.value()->screen() != m_primaryWatcher->primaryScreen()) {
             continue;
         }
         if (activateTaskManagerEntryOnContainment(it.key(), index)) {

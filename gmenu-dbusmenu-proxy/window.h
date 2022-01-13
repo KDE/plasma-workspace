@@ -7,6 +7,7 @@
 #pragma once
 
 #include <QDBusContext>
+#include <QMultiHash>
 #include <QObject>
 #include <QString>
 #include <QVector>
@@ -111,7 +112,7 @@ private:
 
     QString m_proxyObjectPath; // our object path on this proxy app
 
-    QHash<int, QDBusMessage> m_pendingGetLayouts;
+    QMultiHash<int, QDBusMessage> m_pendingGetLayouts;
 
     Menu *m_applicationMenu = nullptr;
     Menu *m_menuBar = nullptr;

@@ -91,7 +91,7 @@ private Q_SLOTS:
     /**
      * updates the list of ions whenever KSycoca changes (as well as on init
      */
-    void updateIonList(const QStringList &changedResources = QStringList());
+    void updateIonList();
 
 private:
     /**

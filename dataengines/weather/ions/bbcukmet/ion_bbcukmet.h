@@ -92,7 +92,7 @@ protected: // IonInterface API
 
 private Q_SLOTS:
     void setup_slotDataArrived(KIO::Job *, const QByteArray &);
-    void setup_slotJobFinished(KJob *);
+    void setup_slotJobFinished(KJob *, const QString &);
     // void setup_slotRedirected(KIO::Job *, const KUrl &url);
 
     void observation_slotDataArrived(KIO::Job *, const QByteArray &);
@@ -120,7 +120,7 @@ private:
     void validate(const QString &source); // Sync data source with Applet
     void getFiveDayForecast(const QString &source);
     void getXMLData(const QString &source);
-    void readSearchHTMLData(const QString &source, const QByteArray &html);
+    void readSearchHTMLData(const QString &source, const QList<QByteArray *> htmls);
     bool readFiveDayForecastXMLData(const QString &source, QXmlStreamReader &xml);
     void parseSearchLocations(const QString &source, QXmlStreamReader &xml);
 
@@ -156,6 +156,9 @@ private:
     // Store KIO jobs - Search list
     QHash<KJob *, QByteArray *> m_jobHtml;
     QHash<KJob *, QString> m_jobList;
+
+    bool m_normalSearchArrived = false;
+    bool m_autoSearchArrived = false;
 
     QHash<KJob *, QXmlStreamReader *> m_obsJobXml;
     QHash<KJob *, QString> m_obsJobList;

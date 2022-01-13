@@ -96,7 +96,7 @@ void Multiplexer::evaluatePlayer(PlayerContainer *container)
         }
         replaceData(container->data());
         checkForUpdate();
-        emit activePlayerChanged(container);
+        Q_EMIT activePlayerChanged(container);
     }
 }
 
@@ -125,6 +125,11 @@ void Multiplexer::removePlayer(const QString &name)
 
     if (name == m_activeName) {
         setBestActive();
+    }
+
+    // When there is no player opened
+    if (m_paused.empty() && m_stopped.empty() && m_playing.empty()) {
+        Q_EMIT playerListEmptied();
     }
 }
 
@@ -213,7 +218,7 @@ void Multiplexer::setBestActive()
         checkForUpdate();
     }
 
-    emit activePlayerChanged(container);
+    Q_EMIT activePlayerChanged(container);
 }
 
 void Multiplexer::replaceData(const Plasma::DataEngine::Data &data)

@@ -28,7 +28,7 @@ private:
     FingerprintModel* m_fingerprintModel;
 
 public:
-    KCMUser(QObject *parent = nullptr, const QVariantList &args = QVariantList());
+    KCMUser(QObject *parent, const KPluginMetaData &data, const QVariantList &args = QVariantList());
     ~KCMUser() override;
 
     Q_SCRIPTABLE bool createUser(const QString &name, const QString &realName, const QString &password, bool admin);

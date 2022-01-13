@@ -396,7 +396,7 @@ KCM.SimpleKCM {
                     }
                 }
                 KCM.ContextualHelpButton {
-                    toolTipText: xi18nc("@info:tooltip Force fonts DPI", "<para>This option forces a specific DPI value for fonts. It may be useful when the real DPI of the hardware is not detected properly and it is also often misused when poor quality fonts are used that do not look well with DPI values other than 96 or 120 DPI.</para><para>The use of this option is generally discouraged.</para><para>If you are using the <emphasis>X Window System</emphasis>, for selecting the proper DPI value a better option is explicitly configuring it for the whole X server if possible (e.g. DisplaySize in xorg.conf). When fonts do not render properly with the real DPI value better fonts should be used or configuration of font hinting should be checked.</para>")
+                    toolTipText: xi18nc("@info:tooltip Force fonts DPI", "<para>Enter your screen's DPI here to make on-screen fonts match their physical sizes when printed. Changing this option from its default value will conflict with many apps; some icons and images may not scale as expected.</para><para>To increase text size, change the size of the fonts above. To scale everything, use the scaling slider on the <interface>Display & Monitor</interface> page.</para>")
                 }
             }
 

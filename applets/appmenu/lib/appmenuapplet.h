@@ -31,7 +31,7 @@ public:
         CompactView,
     };
 
-    explicit AppMenuApplet(QObject *parent, const QVariantList &data);
+    explicit AppMenuApplet(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
     ~AppMenuApplet() override;
 
     void init() override;
@@ -54,7 +54,7 @@ Q_SIGNALS:
     void buttonGridChanged();
     void requestActivateIndex(int index);
 
-public slots:
+public Q_SLOTS:
     void trigger(QQuickItem *ctx, int idx);
 
 protected:

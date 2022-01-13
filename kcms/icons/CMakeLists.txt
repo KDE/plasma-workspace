@@ -1,4 +1,4 @@
-add_definitions(-DTRANSLATION_DOMAIN=\"kcm5_icons\")
+add_definitions(-DTRANSLATION_DOMAIN=\"kcm_icons\")
 
 ########### next target ###############
 
@@ -13,7 +13,7 @@ kcmutils_generate_module_data(
 )
 
 kconfig_add_kcfg_files(kcm_icons_PART_SRCS iconssettingsbase.kcfgc GENERATE_MOC)
-kcoreaddons_add_plugin(kcm_icons SOURCES ${kcm_icons_PART_SRCS} INSTALL_NAMESPACE "kcms")
+kcoreaddons_add_plugin(kcm_icons SOURCES ${kcm_icons_PART_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
 
 target_link_libraries(kcm_icons
     Qt::Widgets
@@ -35,15 +35,13 @@ kconfig_add_kcfg_files(changeicons_SRCS iconssettingsbase.kcfgc GENERATE_MOC)
 add_executable(plasma-changeicons ${changeicons_SRCS})
 target_link_libraries(plasma-changeicons PRIVATE Qt::Core KF5::KIOWidgets KF5::KCMUtils KF5::IconThemes KF5::I18n)
 
-kcoreaddons_desktop_to_json(kcm_icons "kcm_icons.desktop")
-
 install(FILES iconssettingsbase.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 install(FILES icons_remove_effects.upd DESTINATION ${KDE_INSTALL_DATADIR}/kconf_update)
-install(FILES kcm_icons.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(FILES kcm_icons.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/icons.knsrc ${CMAKE_BINARY_DIR}/icons.knsrc)
 install( FILES ${CMAKE_BINARY_DIR}/icons.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR} )
 
 install(TARGETS plasma-changeicons DESTINATION ${KDE_INSTALL_LIBEXECDIR} )
 
-kpackage_install_package(package kcm5_icons kcms)
+kpackage_install_package(package kcm_icons kcms)

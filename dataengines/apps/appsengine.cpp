@@ -23,7 +23,7 @@ AppsEngine::~AppsEngine()
 void AppsEngine::init()
 {
     addGroup(KServiceGroup::root());
-    connect(KSycoca::self(), QOverload<>::of(&KSycoca::databaseChanged), this, [this]() {
+    connect(KSycoca::self(), &KSycoca::databaseChanged, this, [this]() {
         removeAllSources();
         addGroup(KServiceGroup::root());
     });

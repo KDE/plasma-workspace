@@ -21,6 +21,4 @@ target_link_libraries(plasma_engine_soliddevice
   KF5::Notifications
 )
 
-kcoreaddons_desktop_to_json(plasma_engine_soliddevice plasma-dataengine-soliddevice.desktop)
-
 install(FILES soliddevice.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services )

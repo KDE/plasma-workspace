@@ -23,7 +23,7 @@ bool WindowSystem::eventFilter(QObject *watched, QEvent *event)
 {
     if (event->type() == QEvent::FocusIn) {
         removeEventFilter(watched);
-        emit focusIn(qobject_cast<QQuickWindow *>(watched));
+        Q_EMIT focusIn(qobject_cast<QQuickWindow *>(watched));
     }
 
     return false;
@@ -72,6 +72,6 @@ void WindowSystem::monitoredWindowVisibilityChanged(QWindow::Visibility visibili
     QQuickWindow *w = static_cast<QQuickWindow *>(QObject::sender());
 
     if (!visible) {
-        emit hidden(w);
+        Q_EMIT hidden(w);
     }
 }

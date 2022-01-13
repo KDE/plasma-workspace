@@ -27,7 +27,7 @@ void WheelInterceptor::setDestination(QQuickItem *destination)
     if (m_destination != destination) {
         m_destination = destination;
 
-        emit destinationChanged();
+        Q_EMIT destinationChanged();
     }
 }
 
@@ -37,7 +37,7 @@ void WheelInterceptor::wheelEvent(QWheelEvent *event)
         QCoreApplication::sendEvent(m_destination, event);
     }
 
-    emit wheelMoved(event->angleDelta());
+    Q_EMIT wheelMoved(event->angleDelta());
 }
 
 QQuickItem *WheelInterceptor::findWheelArea(QQuickItem *parent) const
@@ -46,7 +46,8 @@ QQuickItem *WheelInterceptor::findWheelArea(QQuickItem *parent) const
         return nullptr;
     }
 
-    foreach (QQuickItem *child, parent->childItems()) {
+    const QList<QQuickItem *> childItems = parent->childItems();
+    for (QQuickItem *child : childItems) {
         // HACK: ScrollView adds the WheelArea below its flickableItem with
         // z==-1. This is reasonable non-risky considering we know about
         // everything else in there, and worst case we break the mouse wheel.

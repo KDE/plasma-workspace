@@ -5,20 +5,49 @@
  *   SPDX-License-Identifier: LGPL-2.0-or-later
  */
 
-import QtQuick 2.0
-import QtQuick.Layouts 1.1
+import QtQuick 2.15
+import QtQuick.Layouts 1.15
 
-import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
+import org.kde.plasma.core 2.1 as PlasmaCore
 
 RowLayout {
-    id: profileItem
+    id: root
 
     property string activeProfile
-    property var profiles: []
+
     property string inhibitionReason
+    readonly property bool inhibited: inhibitionReason !== ""
+
     property string degradationReason
-    property var profileHolds: []
+
+    // type: [{ Name: string, Icon: string, Profile: string, Reason: string }]
+    required property var profileHolds
+
+    // The canBeInhibited property mean that this profile's availability
+    // depends on root.inhibited value (and thus on the
+    // inhibitionReason string).
+    readonly property var profileData: [
+        {
+            label: i18n("Power Save"),
+            profile: "power-saver",
+            canBeInhibited: false,
+        }, {
+            label: i18n("Balanced"),
+            profile: "balanced",
+            canBeInhibited: false,
+        }, {
+            label: i18n("Performance"),
+            profile: "performance",
+            canBeInhibited: true,
+        }
+    ]
+
+    readonly property int activeProfileIndex: profileData.findIndex(data => data.profile === activeProfile)
+    // type: typeof(profileData[])?
+    readonly property var activeProfileData: activeProfileIndex !== -1 ? profileData[activeProfileIndex] : undefined
+    // type: typeof(profileHolds)
+    readonly property var activeHolds: profileHolds.filter(hold => hold.Profile === activeProfile)
 
     signal activateProfileRequested(string profile)
 
@@ -28,10 +57,10 @@ RowLayout {
         source: "speedometer"
         Layout.alignment: Qt.AlignTop
         Layout.preferredWidth: PlasmaCore.Units.iconSizes.medium
-        Layout.preferredHeight: width
+        Layout.preferredHeight: PlasmaCore.Units.iconSizes.medium
     }
-    Column {
-        id: profileColumn
+
+    ColumnLayout {
         Layout.fillWidth: true
         Layout.alignment: Qt.AlignTop
         spacing: 0
@@ -41,63 +70,61 @@ RowLayout {
         }
 
         PlasmaComponents3.Slider {
-            id: profileSlider
-            width: parent.width
-
-            readonly property var profileData: [{
-                label: i18n("Power Save"),
-                profile: "power-saver",
-                inhibited: false
-            }, {
-                label: i18n("Balanced"),
-                profile: "balanced",
-                inhibited: false
-            }, {
-                label: i18n("Performance"),
-                profile: "performance",
-                inhibited: profileItem.inhibitionReason !== ""
-            }]
+            Layout.fillWidth: true
 
             from: 0
             to: 2
             stepSize: 1
-            value: profileData.findIndex((profile => profile.profile === profileItem.activeProfile))
+            value: root.activeProfileIndex
             snapMode: PlasmaComponents3.Slider.SnapAlways
             onMoved: {
-                if (!profileData[value].inhibited) {
-                    activateProfileRequested(profileData[value].profile)
+                const { canBeInhibited, profile } = root.profileData[value];
+                if (!(canBeInhibited && root.inhibited)) {
+                    activateProfileRequested(profile);
                 } else {
-                    value = Qt.binding(() => profileData.findIndex(profile => profile.profile === profileItem.activeProfile))
+                    value = Qt.binding(() => root.activeProfileIndex);
                 }
             }
+
             // fake having a disabled second half
             Rectangle {
                 z: -1
-                visible: profileItem.inhibitionReason !== ""
+                visible: root.inhibited
                 color: PlasmaCore.Theme.backgroundColor
-                anchors.left: parent.horizontalCenter
-                anchors.leftMargin: 1
-                anchors.right: parent.right
-                anchors.top: parent.background.top
-                height: parent.background.height
+                anchors {
+                    top: parent.background.top
+                    left: parent.horizontalCenter
+                    leftMargin: 1
+                    right: parent.right
+                    bottom: parent.background.bottom
+                }
                 opacity: 0.4
             }
         }
-        RowLayout {
-            width: parent.width
-            spacing: 0
-            Repeater {
-                model: profileSlider.profileData
-                PlasmaComponents3.Label {
-                    // At the time of writing, QtQuick/Positioner QML Type does not support Layouts
-                    readonly property bool isFirstItem: index === 0
-                    readonly property bool isLastItem: index === profileSlider.profileData.length - 1
 
-                    horizontalAlignment: isFirstItem ? Text.AlignLeft : (isLastItem ? Text.AlignRight : Text.AlignHCenter)
+        RowLayout {
+            Layout.fillWidth: true
+            spacing: PlasmaCore.Units.smallSpacing
+
+            Repeater {
+                id: repeater
+                model: root.profileData
+                PlasmaComponents3.Label {
+                    // Same preferredWidth combined with fillWidth results in equal sizes for all
                     Layout.fillWidth: true
-                    Layout.preferredWidth: 50 // Common width for better alignment
+                    Layout.preferredWidth: 1
+                    horizontalAlignment: switch (index) {
+                        case 0:
+                            return Text.AlignLeft; // first
+                        case repeater.count - 1:
+                            return Text.AlignRight; // last
+                        default:
+                            return Text.AlignHCenter; // middle
+                    }
+                    elide: Text.ElideMiddle
+
                     // Disable label for inhibited items to reinforce unavailability
-                    enabled: !profileSlider.profileData[index].inhibited
+                    enabled: !(root.profileData[index].canBeInhibited && root.inhibited)
 
                     text: modelData.label
                 }
@@ -107,10 +134,11 @@ RowLayout {
         // NOTE Only one of these will be visible at a time since the daemon will only set one depending
         // on its version
         InhibitionHint {
-            visible: inhibitionReason
-            width: parent.width
+            Layout.fillWidth: true
+
+            visible: root.inhibited
             iconSource: "dialog-information"
-            text: switch(inhibitionReason) {
+            text: switch(root.inhibitionReason) {
                 case "lap-detected":
                     return i18n("Performance mode has been disabled to reduce heat generation because the computer has detected that it may be sitting on your lap.")
                 case "high-operating-temperature":
@@ -119,11 +147,13 @@ RowLayout {
                     return i18n("Performance mode is unavailable.")
             }
         }
+
         InhibitionHint {
-            visible: activeProfile === "performance" && degradationReason
-            width: parent.width
+            Layout.fillWidth: true
+
+            visible: root.activeProfile === "performance" && root.degradationReason !== ""
             iconSource: "dialog-information"
-            text: switch(degradationReason) {
+            text: switch(root.degradationReason) {
                 case "lap-detected":
                     return i18n("Performance may be lowered to reduce heat generation because the computer has detected that it may be sitting on your lap.")
                 case "high-operating-temperature":
@@ -134,19 +164,26 @@ RowLayout {
         }
 
         InhibitionHint {
-            visible: holdRepeater.count > 0
-            text: i18np("One application has requested activating %2:",
+            Layout.fillWidth: true
+
+            visible: root.activeHolds.length > 0 && root.activeProfileData !== undefined
+            text: root.activeProfileData !== undefined
+                ? i18np("One application has requested activating %2:",
                         "%1 applications have requested activating %2:",
-                        holdRepeater.count,
-                        profileSlider.profileData.find(profile => profile.profile === profileItem.activeProfile).label)
+                        root.activeHolds.length,
+                        i18n(root.activeProfileData.label))
+                : ""
         }
+
         Repeater {
-            id: holdRepeater
-            model: profileItem.profileHolds.filter(hold => hold.Profile === profileItem.activeProfile)
+            model: root.activeHolds
             InhibitionHint {
+                Layout.fillWidth: true
+
                 x: PlasmaCore.Units.smallSpacing
                 iconSource: modelData.Icon
-                text: i18nc("%1 is the name of the application, %2 is the reason provided by it for activating performance mode", "%1: %2", modelData.Name, modelData.Reason)
+                text: i18nc("%1 is the name of the application, %2 is the reason provided by it for activating performance mode",
+                            "%1: %2", modelData.Name, modelData.Reason)
             }
         }
     }

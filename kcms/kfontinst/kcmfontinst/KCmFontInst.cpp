@@ -54,7 +54,7 @@
 #define CFG_GROUP_SPLITTER_SIZES "GroupSplitterSizes"
 #define CFG_FONT_SIZE "FontSize"
 
-K_PLUGIN_FACTORY(FontInstallFactory, registerPlugin<KFI::CKCmFontInst>();)
+K_PLUGIN_CLASS_WITH_JSON(KFI::CKCmFontInst, "fontinst.json")
 
 namespace KFI
 {
@@ -249,7 +249,8 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList &)
     m_scanDuplicateFontsControl = new CPushButton(KGuiItem(i18n("Find Duplicates…"), "edit-duplicate", i18n("Scan for Duplicate Fonts…")), fontControlWidget);
 
     m_addFontControl = new CPushButton(KGuiItem(i18n("Install from File…"), "document-import", i18n("Install fonts from a local file")), fontControlWidget);
-    m_getNewFontsControl = new CPushButton(KGuiItem(i18n("Get New Fonts…"), "get-hot-new-stuff", i18n("Download new fonts")), fontControlWidget);
+    m_getNewFontsControl = new KNS3::Button(i18n("Get New Fonts…"), QStringLiteral("kfontinst.knsrc"), this);
+    m_getNewFontsControl->setToolTip(i18n("Download new fonts"));
 
     m_deleteFontControl = new CPushButton(KGuiItem(QString(), "edit-delete", i18n("Delete Selected Fonts…")), fontControlWidget);
 
@@ -346,7 +347,7 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList &)
     connect(m_enableGroupControl, &QAbstractButton::clicked, this, &CKCmFontInst::enableGroup);
     connect(m_disableGroupControl, &QAbstractButton::clicked, this, &CKCmFontInst::disableGroup);
     connect(m_addFontControl, SIGNAL(clicked()), SLOT(addFonts()));
-    connect(m_getNewFontsControl, &QAbstractButton::clicked, this, &CKCmFontInst::downloadFonts);
+    connect(m_getNewFontsControl, &KNS3::Button::dialogFinished, this, &CKCmFontInst::downloadFonts);
     connect(m_deleteFontControl, &QAbstractButton::clicked, this, &CKCmFontInst::deleteFonts);
     connect(m_scanDuplicateFontsControl, &QAbstractButton::clicked, this, &CKCmFontInst::duplicateFonts);
     // connect(validateFontsAct, SIGNAL(triggered(bool)), SLOT(validateFonts()));
@@ -792,24 +793,24 @@ void CKCmFontInst::duplicateFonts()
 //{
 //}
 
-void CKCmFontInst::downloadFonts()
+void CKCmFontInst::downloadFonts(const QList<KNS3::Entry> &changedEntries)
 {
-    KNS3::QtQuickDialogWrapper newStuff(QStringLiteral("kfontinst.knsrc"));
-    if (!newStuff.exec().isEmpty()) // We have new fonts, so need to reconfigure fontconfig...
-    {
-        // Ask dbus helper for the current fonts folder name...
-        // We then sym-link our knewstuff3 download folder into the fonts folder...
-        QString destFolder = CJobRunner::folderName(false);
-        if (!destFolder.isEmpty()) {
-            destFolder += "kfontinst";
-            if (!QFile::exists(destFolder)) {
-                QFile _file(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') + "kfontinst");
-                _file.link(destFolder);
-            }
-        }
-
-        doCmd(CJobRunner::CMD_UPDATE, CJobRunner::ItemList());
+    if (changedEntries.isEmpty()) {
+        return;
     }
+
+    // Ask dbus helper for the current fonts folder name...
+    // We then sym-link our knewstuff3 download folder into the fonts folder...
+    QString destFolder = CJobRunner::folderName(false);
+    if (!destFolder.isEmpty()) {
+        destFolder += "kfontinst";
+        if (!QFile::exists(destFolder)) {
+            QFile _file(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') + "kfontinst");
+            _file.link(destFolder);
+        }
+    }
+
+    doCmd(CJobRunner::CMD_UPDATE, CJobRunner::ItemList());
 }
 
 void CKCmFontInst::print()

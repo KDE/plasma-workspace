@@ -21,7 +21,7 @@ class SlideFilterModel : public QSortFilterProxyModel
     Q_PROPERTY(bool usedInConfig MEMBER m_usedInConfig NOTIFY usedInConfigChanged);
 
 public:
-    SlideFilterModel(QObject *parent);
+    explicit SlideFilterModel(QObject *parent);
     bool lessThan(const QModelIndex &source_left, const QModelIndex &source_right) const override;
     bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
     void setSourceModel(QAbstractItemModel *sourceModel) override;

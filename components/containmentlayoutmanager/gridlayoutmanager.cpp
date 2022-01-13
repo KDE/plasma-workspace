@@ -100,7 +100,7 @@ void GridLayoutManager::layoutGeometryChanged(const QRectF &newGeometry, const Q
         auto *itemCont = qobject_cast<ItemContainer *>(item);
         if (itemCont && itemCont != layout()->placeHolder()) {
             maintainItemEdgeAlignment(itemCont, newGeometry, oldGeometry);
-            // NOTE: do not use positionItemAndAssign here, because we do not want to emit layoutNeedsSaving, to not save after resize
+            // NOTE: do not use positionItemAndAssign here, because we do not want to Q_EMIT layoutNeedsSaving, to not save after resize
             positionItem(itemCont);
             assignSpaceImpl(itemCont);
         }
@@ -114,7 +114,7 @@ void GridLayoutManager::resetLayout()
     for (auto *item : layout()->childItems()) {
         ItemContainer *itemCont = qobject_cast<ItemContainer *>(item);
         if (itemCont && itemCont != layout()->placeHolder()) {
-            // NOTE: do not use positionItemAndAssign here, because we do not want to emit layoutNeedsSaving, to not save after resize
+            // NOTE: do not use positionItemAndAssign here, because we do not want to Q_EMIT layoutNeedsSaving, to not save after resize
             positionItem(itemCont);
             assignSpaceImpl(itemCont);
         }
@@ -137,7 +137,7 @@ void GridLayoutManager::resetLayoutFromConfig()
     }
 
     for (auto *item : qAsConst(missingItems)) {
-        // NOTE: do not use positionItemAndAssign here, because we do not want to emit layoutNeedsSaving, to not save after resize
+        // NOTE: do not use positionItemAndAssign here, because we do not want to Q_EMIT layoutNeedsSaving, to not save after resize
         positionItem(item);
         assignSpaceImpl(item);
     }
@@ -153,7 +153,7 @@ bool GridLayoutManager::restoreItem(ItemContainer *item)
         item->setSize(QSizeF(it.value().width, it.value().height));
         item->setRotation(it.value().rotation);
 
-        // NOTE: do not use positionItemAndAssign here, because we do not want to emit layoutNeedsSaving, to not save after resize
+        // NOTE: do not use positionItemAndAssign here, because we do not want to Q_EMIT layoutNeedsSaving, to not save after resize
         // If size is empty the layout is not in a valid state and probably startup is not completed yet
         if (!layout()->size().isEmpty()) {
             releaseSpaceImpl(item);
@@ -188,7 +188,7 @@ bool GridLayoutManager::isRectAvailable(const QRectF &rect)
 
 bool GridLayoutManager::assignSpaceImpl(ItemContainer *item)
 {
-    // Don't emit extra layoutneedssaving signals
+    // Don't Q_EMIT extra layoutneedssaving signals
     releaseSpaceImpl(item);
     if (!isRectAvailable(itemGeometry(item))) {
         qWarning() << "Trying to take space not available" << item;

@@ -236,7 +236,7 @@ void Window::menuItemsChanged(const QVector<uint> &itemIds)
         items.append(dBusItem);
     }
 
-    emit ItemsPropertiesUpdated(items, {});
+    Q_EMIT ItemsPropertiesUpdated(items, {});
 }
 
 void Window::menuChanged(const QVector<uint> &menuIds)
@@ -246,7 +246,7 @@ void Window::menuChanged(const QVector<uint> &menuIds)
     }
 
     for (uint menu : menuIds) {
-        emit LayoutUpdated(3 /*revision*/, menu);
+        Q_EMIT LayoutUpdated(3 /*revision*/, menu);
     }
 }
 
@@ -269,7 +269,7 @@ void Window::onMenuSubscribed(uint id)
         }
         m_pendingGetLayouts.remove(id);
     } else {
-        emit LayoutUpdated(2 /*revision*/, id);
+        Q_EMIT LayoutUpdated(2 /*revision*/, id);
     }
 }
 
@@ -349,7 +349,7 @@ void Window::updateWindowProperties()
     const bool hasMenu = ((m_applicationMenu && m_applicationMenu->hasMenu()) || (m_menuBar && m_menuBar->hasMenu()));
 
     if (!hasMenu) {
-        emit requestRemoveWindowProperties();
+        Q_EMIT requestRemoveWindowProperties();
         return;
     }
 
@@ -367,10 +367,10 @@ void Window::updateWindowProperties()
 
     if (m_currentMenu != oldMenu) {
         // update entire menu now
-        emit LayoutUpdated(4 /*revision*/, 0);
+        Q_EMIT LayoutUpdated(4 /*revision*/, 0);
     }
 
-    emit requestWriteWindowProperties();
+    Q_EMIT requestWriteWindowProperties();
 }
 
 // DBus
@@ -426,7 +426,7 @@ uint Window::GetLayout(int parentId, int recursionDepth, const QStringList &prop
 
     if (!m_currentMenu->hasSubscription(subscription)) {
         // let's serve multiple similar requests in one go once we've processed them
-        m_pendingGetLayouts.insertMulti(subscription, message());
+        m_pendingGetLayouts.insert(subscription, message());
         setDelayedReply(true);
 
         m_currentMenu->start(subscription);

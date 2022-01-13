@@ -12,8 +12,9 @@
 #include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
 #include <KShell>
-#include <KToolInvocation>
+#include <KTerminalLauncherJob>
 #include <QAction>
+#include <QProcessEnvironment>
 #include <QRegularExpression>
 #include <QStandardPaths>
 
@@ -62,7 +63,17 @@ void ShellRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryM
 {
     if (match.selectedAction()) {
         const QVariantList data = match.data().toList();
-        KToolInvocation::invokeTerminal(data.at(0).toString(), data.at(1).toStringList());
+        const QStringList list = data.at(1).toStringList();
+        QProcessEnvironment env = QProcessEnvironment::systemEnvironment();
+        for (const auto& str : list)
+        {
+            const int pos = str.indexOf('=');
+            env.insert(str.left(pos), str.mid(pos+1));
+        }
+        auto job = new KTerminalLauncherJob(data.at(0).toString());
+        job->setProcessEnvironment(env);
+        job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
+        job->start();
         return;
     }
 

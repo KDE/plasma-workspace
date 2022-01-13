@@ -13,6 +13,7 @@
 
 extern QTextStream out;
 
+void sigtermHandler(int signalNumber);
 QStringList allServices(const QLatin1String &prefix);
 int runSync(const QString &program, const QStringList &args, const QStringList &env = {});
 void sourceFiles(const QStringList &files);
@@ -39,13 +40,16 @@ static void resetSystemdFailedUnits();
 static bool hasSystemdService(const QString &serviceName);
 static bool useSystemdBoot();
 static void migrateUserScriptsAutostart();
-static void playStartupSound(QObject &parent);
+void playStartupSound(QObject *parent);
+
+void gentleTermination(QProcess *process);
 
 struct KillBeforeDeleter {
     static inline void cleanup(QProcess *pointer)
     {
-        if (pointer)
-            pointer->kill();
+        if (pointer) {
+            gentleTermination(pointer);
+        }
         delete pointer;
     }
 };

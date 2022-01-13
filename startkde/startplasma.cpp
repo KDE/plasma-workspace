@@ -18,6 +18,8 @@
 #include <KConfig>
 #include <KConfigGroup>
 #include <KNotifyConfig>
+#include <KPackage/Package>
+#include <KPackage/PackageLoader>
 #include <KSharedConfig>
 
 #include <phonon/audiooutput.h>
@@ -32,9 +34,18 @@
 #include "startplasma.h"
 
 #include "../config-workspace.h"
+#include "../kcms/lookandfeel/lookandfeelmanager.h"
 #include "debug.h"
 
 QTextStream out(stderr);
+
+void sigtermHandler(int signalNumber)
+{
+    Q_UNUSED(signalNumber)
+    if (QCoreApplication::instance()) {
+        QCoreApplication::instance()->exit(-1);
+    }
+}
 
 void messageBox(const QString &text)
 {
@@ -66,6 +77,24 @@ QStringList allServices(const QLatin1String &prefix)
     return names;
 }
 
+void gentleTermination(QProcess *p)
+{
+    if (p->state() != QProcess::Running) {
+        return;
+    }
+
+    p->close();
+    p->terminate();
+
+    // Wait longer for a session than a greeter
+    if (!p->waitForFinished(5000)) {
+        p->kill();
+        if (!p->waitForFinished(5000)) {
+            qWarning() << "Could not fully finish the process" << p->program();
+        }
+    }
+}
+
 int runSync(const QString &program, const QStringList &args, const QStringList &env)
 {
     QProcess p;
@@ -73,6 +102,10 @@ int runSync(const QString &program, const QStringList &args, const QStringList &
         p.setEnvironment(QProcess::systemEnvironment() << env);
     p.setProcessChannelMode(QProcess::ForwardedChannels);
     p.start(program, args);
+
+    QObject::connect(QCoreApplication::instance(), &QCoreApplication::aboutToQuit, &p, [&p] {
+        gentleTermination(&p);
+    });
     //     qCDebug(PLASMA_STARTUP) << "started..." << program << args;
     p.waitForFinished(-1);
     if (p.exitCode()) {
@@ -327,7 +360,45 @@ void setupPlasmaEnvironment()
         currentConfigDirs = "/etc/xdg";
     }
     const auto extraConfigDir = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation).toUtf8() + "/kdedefaults";
+    QDir().mkpath(QString::fromUtf8(extraConfigDir));
     qputenv("XDG_CONFIG_DIRS", extraConfigDir + ":" + currentConfigDirs);
+
+    const KConfig globals;
+    const QString currentLnf = KConfigGroup(&globals, QStringLiteral("KDE")).readEntry("LookAndFeelPackage", QStringLiteral("org.kde.breeze.desktop"));
+    QFile activeLnf(QString::fromUtf8(extraConfigDir + "/package"));
+    activeLnf.open(QIODevice::ReadOnly);
+    if (activeLnf.readLine() != currentLnf.toUtf8()) {
+        KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"), currentLnf);
+        LookAndFeelManager lnfManager;
+        lnfManager.setMode(LookAndFeelManager::Mode::Defaults);
+        lnfManager.save(package, KPackage::Package());
+    }
+    // check if colors changed, if so apply them and discard palsma cache
+    {
+        LookAndFeelManager lnfManager;
+        lnfManager.setMode(LookAndFeelManager::Mode::Apply);
+        KConfig globals(QStringLiteral("kdeglobals")); // Reload the config
+        KConfigGroup generalGroup(&globals, QStringLiteral("General"));
+        const QString colorScheme = generalGroup.readEntry("ColorScheme", QStringLiteral("BreezeLight"));
+        QString path = lnfManager.colorSchemeFile(colorScheme);
+
+        if (!path.isEmpty()) {
+            QFile f(path);
+            QCryptographicHash hash(QCryptographicHash::Sha1);
+            if (f.open(QFile::ReadOnly) && hash.addData(&f)) {
+                const QString fileHash = QString::fromUtf8(hash.result().toHex());
+                if (fileHash != generalGroup.readEntry("ColorSchemeHash", QString())) {
+                    lnfManager.setColors(colorScheme, path);
+                    generalGroup.writeEntry("ColorSchemeHash", fileHash);
+                    generalGroup.sync();
+                    const QString svgCache = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + QLatin1Char('/') + QStringLiteral("plasma-svgelements");
+                    if (!svgCache.isEmpty()) {
+                        QFile::remove(svgCache);
+                    }
+                }
+            }
+        }
+    }
 }
 
 void setupX11()
@@ -431,7 +502,11 @@ bool hasSystemdService(const QString &serviceName)
                                               QStringLiteral("/org/freedesktop/systemd1"),
                                               QStringLiteral("org.freedesktop.systemd1.Manager"),
                                               QStringLiteral("ListUnitFilesByPatterns"));
-    msg << QStringList({QStringLiteral("enabled"), QStringLiteral("static")}) << QStringList({serviceName});
+    msg << QStringList({QStringLiteral("enabled"),
+                        QStringLiteral("static"),
+                        QStringLiteral("linked"),
+                        QStringLiteral("linked-runtime")});
+    msg << QStringList({serviceName});
     QDBusReply<QList<QPair<QString, QString>>> reply = QDBusConnection::sessionBus().call(msg);
     if (!reply.isValid()) {
         return false;
@@ -465,6 +540,21 @@ bool useSystemdBoot()
     return hasSystemdService(QStringLiteral("xdg-desktop-autostart.target"));
 }
 
+void startKSplashViaSystemd()
+{
+    const KConfig cfg(QStringLiteral("ksplashrc"));
+    // the splashscreen and progress indicator
+    KConfigGroup ksplashCfg = cfg.group("KSplash");
+    if (ksplashCfg.readEntry("Engine", QStringLiteral("KSplashQML")) == QLatin1String("KSplashQML")) {
+        auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.systemd1"),
+                                                  QStringLiteral("/org/freedesktop/systemd1"),
+                                                  QStringLiteral("org.freedesktop.systemd1.Manager"),
+                                                  QStringLiteral("StartUnit"));
+        msg << QStringLiteral("plasma-ksplash.service") << QStringLiteral("fail");
+        QDBusReply<QDBusObjectPath> reply = QDBusConnection::sessionBus().call(msg);
+    }
+}
+
 bool startPlasmaSession(bool wayland)
 {
     resetSystemdFailedUnits();
@@ -491,7 +581,11 @@ bool startPlasmaSession(bool wayland)
 
     // We want to exit when both ksmserver and plasma-session-shutdown have finished
     // This also closes if ksmserver crashes unexpectedly, as in those cases plasma-shutdown is not running
-    serviceWatcher.addWatchedService(QStringLiteral("org.kde.ksmserver"));
+    if (wayland) {
+        serviceWatcher.addWatchedService(QStringLiteral("org.kde.KWinWrapper"));
+    } else {
+        serviceWatcher.addWatchedService(QStringLiteral("org.kde.ksmserver"));
+    }
     serviceWatcher.addWatchedService(QStringLiteral("org.kde.Shutdown"));
     serviceWatcher.setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
 
@@ -508,9 +602,10 @@ bool startPlasmaSession(bool wayland)
     // Create .desktop files for the scripts in .config/autostart-scripts
     migrateUserScriptsAutostart();
 
+    QScopedPointer<QProcess, KillBeforeDeleter> startPlasmaSession;
     if (!useSystemdBoot()) {
+        startPlasmaSession.reset(new QProcess);
         qCDebug(PLASMA_STARTUP) << "Using classic boot";
-        QProcess startPlasmaSession;
 
         QStringList plasmaSessionOptions;
         if (wayland) {
@@ -521,19 +616,16 @@ bool startPlasmaSession(bool wayland)
             }
         }
 
-        startPlasmaSession.setProcessChannelMode(QProcess::ForwardedChannels);
-        QObject::connect(&startPlasmaSession, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), [&rc, &e](int exitCode, QProcess::ExitStatus) {
+        startPlasmaSession->setProcessChannelMode(QProcess::ForwardedChannels);
+        QObject::connect(startPlasmaSession.data(), &QProcess::finished, &e, [&rc](int exitCode, QProcess::ExitStatus) {
             if (exitCode == 255) {
                 // Startup error
-                messageBox(QStringLiteral("startkde: Could not start ksmserver. Check your installation.\n"));
+                messageBox(QStringLiteral("startkde: Could not start plasma_session. Check your installation.\n"));
                 rc = false;
-                e.quit();
             }
         });
 
-        startPlasmaSession.start(QStringLiteral(CMAKE_INSTALL_FULL_BINDIR "/plasma_session"), plasmaSessionOptions);
-        // plasma-session starts everything else up then quits
-        rc = startPlasmaSession.waitForFinished(120 * 1000);
+        startPlasmaSession->start(QStringLiteral(CMAKE_INSTALL_FULL_BINDIR "/plasma_session"), plasmaSessionOptions);
     } else {
         qCDebug(PLASMA_STARTUP) << "Using systemd boot";
         const QString platform = wayland ? QStringLiteral("wayland") : QStringLiteral("x11");
@@ -548,10 +640,15 @@ bool startPlasmaSession(bool wayland)
             qWarning() << "Could not start systemd managed Plasma session:" << reply.error().name() << reply.error().message();
             messageBox(QStringLiteral("startkde: Could not start Plasma session.\n"));
             rc = false;
+        } else {
+            playStartupSound(&e);
+        }
+        if (wayland) {
+            startKSplashViaSystemd();
         }
     }
     if (rc) {
-        playStartupSound(e);
+        QObject::connect(QCoreApplication::instance(), &QCoreApplication::aboutToQuit, &e, &QEventLoop::quit);
         e.exec();
     }
     return rc;
@@ -627,7 +724,7 @@ static void migrateUserScriptsAutostart()
     QDBusConnection::sessionBus().call(message);
 }
 
-static void playStartupSound(QObject &parent)
+void playStartupSound(QObject *parent)
 {
     KNotifyConfig notifyConfig(QStringLiteral("plasma_workspace"), QList<QPair<QString, QString>>(), QStringLiteral("startkde"));
     const QString action = notifyConfig.readEntry(QStringLiteral("Action"));
@@ -635,7 +732,7 @@ static void playStartupSound(QObject &parent)
         // no startup sound configured
         return;
     }
-    Phonon::AudioOutput *audioOutput = new Phonon::AudioOutput(Phonon::NotificationCategory, &parent);
+    Phonon::AudioOutput *audioOutput = new Phonon::AudioOutput(Phonon::NotificationCategory, parent);
 
     QString soundFilename = notifyConfig.readEntry(QStringLiteral("Sound"));
     if (soundFilename.isEmpty()) {
@@ -661,8 +758,10 @@ static void playStartupSound(QObject &parent)
         return;
     }
 
-    Phonon::MediaObject *mediaObject = new Phonon::MediaObject(&parent);
+    Phonon::MediaObject *mediaObject = new Phonon::MediaObject(parent);
     Phonon::createPath(mediaObject, audioOutput);
+    QObject::connect(mediaObject, &Phonon::MediaObject::finished, audioOutput, &QObject::deleteLater);
+    QObject::connect(mediaObject, &Phonon::MediaObject::finished, mediaObject, &QObject::deleteLater);
 
     mediaObject->setCurrentSource(soundURL);
     mediaObject->play();

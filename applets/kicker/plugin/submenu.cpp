@@ -35,7 +35,7 @@ void SubMenu::setOffset(int offset)
     if (m_offset != offset) {
         m_offset = offset;
 
-        emit offsetChanged();
+        Q_EMIT offsetChanged();
     }
 }
 
@@ -56,7 +56,7 @@ QPoint SubMenu::popupPosition(QQuickItem *item, const QSize &size)
         pos.setX(pos.x() - m_offset - item->width() - size.width());
 
         m_facingLeft = true;
-        emit facingLeftChanged();
+        Q_EMIT facingLeftChanged();
     }
 
     pos.setY(pos.y() - margins()->property("top").toInt());
@@ -76,7 +76,8 @@ QRect SubMenu::availableScreenRectForItem(QQuickItem *item) const
 
     const QPoint globalPosition = item->window()->mapToGlobal(item->position().toPoint());
 
-    foreach (QScreen *s, QGuiApplication::screens()) {
+    const QList<QScreen *> screens = QGuiApplication::screens();
+    for (QScreen *s : screens) {
         if (s->geometry().contains(globalPosition)) {
             screen = s;
         }

@@ -111,6 +111,7 @@ void XWindowTasksModel::Private::init()
                                            AbstractTasksModel::GenericName,
                                            AbstractTasksModel::LauncherUrl,
                                            AbstractTasksModel::LauncherUrlWithoutIcon,
+                                           AbstractTasksModel::CanLaunchNewInstance,
                                            AbstractTasksModel::SkipTaskbar});
     };
 
@@ -121,12 +122,8 @@ void XWindowTasksModel::Private::init()
 
     QObject::connect(&sycocaChangeTimer, &QTimer::timeout, q, clearCacheAndRefresh);
 
-    void (KSycoca::*myDatabaseChangeSignal)(const QStringList &) = &KSycoca::databaseChanged;
-    QObject::connect(KSycoca::self(), myDatabaseChangeSignal, q, [this](const QStringList &changedResources) {
-        if (changedResources.contains(QLatin1String("services")) || changedResources.contains(QLatin1String("apps"))
-            || changedResources.contains(QLatin1String("xdgdata-apps"))) {
-            sycocaChangeTimer.start();
-        }
+    QObject::connect(KSycoca::self(), &KSycoca::databaseChanged, q, [this]() {
+        sycocaChangeTimer.start();
     });
 
     rulesConfig = KSharedConfig::openConfig(QStringLiteral("taskmanagerrulesrc"));
@@ -217,7 +214,7 @@ void XWindowTasksModel::Private::addWindow(WId window)
 
         // Update demands attention state for leader.
         if (info.hasState(NET::DemandsAttention) && windows.contains(leader)) {
-            transientsDemandingAttention.insertMulti(leader, window);
+            transientsDemandingAttention.insert(leader, window);
             dataChanged(leader, QVector<int>{IsDemandingAttention});
         }
 
@@ -279,7 +276,7 @@ void XWindowTasksModel::Private::transientChanged(WId window, NET::Properties pr
 
         if (info.hasState(NET::DemandsAttention)) {
             if (!transientsDemandingAttention.values(leader).contains(window)) {
-                transientsDemandingAttention.insertMulti(leader, window);
+                transientsDemandingAttention.insert(leader, window);
                 dataChanged(leader, QVector<int>{IsDemandingAttention});
             }
         } else if (transientsDemandingAttention.remove(window)) {
@@ -297,7 +294,7 @@ void XWindowTasksModel::Private::transientChanged(WId window, NET::Properties pr
 
                 if (leader != oldLeader) {
                     transientsDemandingAttention.remove(oldLeader, window);
-                    transientsDemandingAttention.insertMulti(leader, window);
+                    transientsDemandingAttention.insert(leader, window);
                     dataChanged(oldLeader, QVector<int>{IsDemandingAttention});
                     dataChanged(leader, QVector<int>{IsDemandingAttention});
                 }
@@ -320,7 +317,7 @@ void XWindowTasksModel::Private::windowChanged(WId window, NET::Properties prope
     if (properties & (NET::WMPid) || properties2 & (NET::WM2DesktopFileName | NET::WM2WindowClass)) {
         wipeInfoCache = true;
         wipeAppDataCache = true;
-        changedRoles << Qt::DecorationRole << AppId << AppName << GenericName << LauncherUrl << AppPid << SkipTaskbar;
+        changedRoles << Qt::DecorationRole << AppId << AppName << GenericName << LauncherUrl << AppPid << SkipTaskbar << CanLaunchNewInstance;
     }
 
     if (properties & (NET::WMName | NET::WMVisibleName)) {
@@ -402,7 +399,7 @@ void XWindowTasksModel::Private::dataChanged(WId window, const QVector<int> &rol
     }
 
     QModelIndex idx = q->index(i);
-    emit q->dataChanged(idx, idx, roles);
+    Q_EMIT q->dataChanged(idx, idx, roles);
 }
 
 KWindowInfo *XWindowTasksModel::Private::windowInfo(WId window)
@@ -685,6 +682,8 @@ QVariant XWindowTasksModel::data(const QModelIndex &index, int role) const
         return d->appMenuObjectPath(window);
     } else if (role == ApplicationMenuServiceName) {
         return d->appMenuServiceName(window);
+    } else if (role == CanLaunchNewInstance) {
+        return canLauchNewInstance(d->appData(window));
     }
 
     return QVariant();

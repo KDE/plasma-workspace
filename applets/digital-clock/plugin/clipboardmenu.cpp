@@ -28,7 +28,7 @@ void ClipboardMenu::setCurrentDate(const QDateTime &currentDate)
 {
     if (m_currentDate != currentDate) {
         m_currentDate = currentDate;
-        emit currentDateChanged();
+        Q_EMIT currentDateChanged();
     }
 }
 
@@ -41,7 +41,7 @@ void ClipboardMenu::setSecondsIncluded(const bool &secondsIncluded)
 {
     if (m_secondsIncluded != secondsIncluded) {
         m_secondsIncluded = secondsIncluded;
-        emit secondsIncludedChanged();
+        Q_EMIT secondsIncludedChanged();
     }
 }
 
@@ -66,56 +66,56 @@ void ClipboardMenu::setupMenu(QAction *action)
         QString s;
         QAction *a;
 
-        s = date.toString(Qt::SystemLocaleShortDate);
+        s = QLocale().toString(date, QLocale::ShortFormat);
         a = menu->addAction(s);
         a->setData(s);
         s = date.toString(Qt::ISODate);
         a = menu->addAction(s);
         a->setData(s);
-        s = date.toString(Qt::SystemLocaleLongDate);
+        s = QLocale().toString(date, QLocale::LongFormat);
         a = menu->addAction(s);
         a->setData(s);
 
         menu->addSeparator();
 
-        s = time.toString(Qt::SystemLocaleShortDate);
+        s = QLocale().toString(time, QLocale::ShortFormat);
         a = menu->addAction(s);
         a->setData(s);
         if (m_secondsIncluded) {
-            s = time.toString(Qt::SystemLocaleLongDate);
+            s = QLocale().toString(time, QLocale::LongFormat);
             s.remove(rx);
             a = menu->addAction(s);
             a->setData(s);
-            s = time.toString(Qt::SystemLocaleLongDate);
+            s = QLocale().toString(time, QLocale::LongFormat);
             a = menu->addAction(s);
             a->setData(s);
         }
 
         menu->addSeparator();
 
-        s = date.toString(Qt::SystemLocaleShortDate) + ws + time.toString(Qt::SystemLocaleShortDate);
+        s = QLocale().toString(time, QLocale::ShortFormat) + ws + QLocale().toString(time, QLocale::ShortFormat);
         a = menu->addAction(s);
         a->setData(s);
         if (m_secondsIncluded) {
-            s = date.toString(Qt::SystemLocaleShortDate) + ws + time.toString(Qt::SystemLocaleLongDate).remove(rx);
+            s = QLocale().toString(time, QLocale::ShortFormat) + ws + QLocale().toString(time, QLocale::LongFormat).remove(rx);
             a = menu->addAction(s);
             a->setData(s);
-            s = date.toString(Qt::SystemLocaleShortDate) + ws + time.toString(Qt::SystemLocaleLongDate);
+            s = QLocale().toString(time, QLocale::ShortFormat) + ws + QLocale().toString(time, QLocale::LongFormat);
             a = menu->addAction(s);
             a->setData(s);
         }
-        s = date.toString(Qt::ISODate) + ws + time.toString(Qt::SystemLocaleShortDate);
+        s = date.toString(Qt::ISODate) + ws + QLocale().toString(time, QLocale::ShortFormat);
         a = menu->addAction(s);
         a->setData(s);
         if (m_secondsIncluded) {
-            s = date.toString(Qt::ISODate) + ws + time.toString(Qt::SystemLocaleLongDate).remove(rx);
+            s = date.toString(Qt::ISODate) + ws + QLocale().toString(time, QLocale::LongFormat).remove(rx);
             a = menu->addAction(s);
             a->setData(s);
-            s = date.toString(Qt::ISODate) + ws + time.toString(Qt::SystemLocaleLongDate);
+            s = date.toString(Qt::ISODate) + ws + QLocale().toString(time, QLocale::LongFormat);
             a = menu->addAction(s);
             a->setData(s);
         }
-        s = date.toString(Qt::SystemLocaleLongDate) + ws + time.toString(Qt::SystemLocaleShortDate);
+        s = QLocale().toString(date, QLocale::LongFormat) + ws + QLocale().toString(time, QLocale::ShortFormat);
         a = menu->addAction(s);
         a->setData(s);
 

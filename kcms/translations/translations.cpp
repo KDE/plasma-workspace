@@ -11,22 +11,18 @@
 #include "translationsmodel.h"
 #include "translationssettings.h"
 
-#include <KAboutData>
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <KSharedConfig>
 
 K_PLUGIN_FACTORY_WITH_JSON(TranslationsFactory, "kcm_translations.json", registerPlugin<Translations>(); registerPlugin<TranslationsData>();)
 
-Translations::Translations(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, args)
+Translations::Translations(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : KQuickAddons::ManagedConfigModule(parent, data, args)
     , m_data(new TranslationsData(this))
     , m_translationsModel(new TranslationsModel(this))
     , m_everSaved(false)
 {
-    auto *about = new KAboutData(QStringLiteral("kcm_translations"), i18n("Language"), QStringLiteral("2.0"), QString(), KAboutLicense::LGPL);
-    setAboutData(about);
-
     setButtons(Apply | Default);
 
     connect(m_translationsModel, &TranslationsModel::selectedLanguagesChanged, this, &Translations::selectedLanguagesChanged);
@@ -55,7 +51,7 @@ void Translations::load()
 void Translations::save()
 {
     m_everSaved = true;
-    emit everSavedChanged();
+    Q_EMIT everSavedChanged();
     KQuickAddons::ManagedConfigModule::save();
 }
 

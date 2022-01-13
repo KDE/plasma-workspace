@@ -28,6 +28,7 @@ Rectangle {
     Item {
         id: content
         anchors.fill: parent
+        opacity: 0
 
         Image {
             id: logo
@@ -77,7 +78,7 @@ Rectangle {
                 // https://bugreports.qt.io/browse/QTBUG-67007
                 renderType: Screen.devicePixelRatio % 1 !== 0 ? Text.QtRendering : Text.NativeRendering
                 anchors.verticalCenter: parent.verticalCenter
-                text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "This is the first text the user sees while starting in the splash screen, should be translated as something short, is a form that can be seen on a product. Plasma is the project name so shouldn't be translated.", "Plasma 25th Anniversary Edition by KDE")
+                text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "This is the first text the user sees while starting in the splash screen, should be translated as something short, is a form that can be seen on a product. Plasma is the project name so shouldn't be translated.", "Plasma made by KDE")
             }
             Image {
                 source: "images/kde.svgz"

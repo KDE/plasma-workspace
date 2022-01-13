@@ -105,7 +105,7 @@ void VirtualDesktopInfo::Private::navigationWrappingAroundChanged(bool newVal)
         return;
     }
     navigationWrappingAround = newVal;
-    emit navigationWrappingAroundChanged();
+    Q_EMIT navigationWrappingAroundChanged();
 }
 
 #if HAVE_X11
@@ -280,8 +280,6 @@ void VirtualDesktopInfo::WaylandPrivate::init()
     QObject::connect(registry, &KWayland::Client::Registry::plasmaVirtualDesktopManagementAnnounced, [this, registry](quint32 name, quint32 version) {
         virtualDesktopManagement = registry->createPlasmaVirtualDesktopManagement(name, version, this);
 
-        const QList<KWayland::Client::PlasmaVirtualDesktop *> &desktops = virtualDesktopManagement->desktops();
-
         QObject::connect(virtualDesktopManagement,
                          &KWayland::Client::PlasmaVirtualDesktopManagement::desktopCreated,
                          this,
@@ -292,13 +290,13 @@ void VirtualDesktopInfo::WaylandPrivate::init()
         QObject::connect(virtualDesktopManagement, &KWayland::Client::PlasmaVirtualDesktopManagement::desktopRemoved, this, [this](const QString &id) {
             virtualDesktops.removeOne(id);
 
-            emit numberOfDesktopsChanged();
-            emit desktopIdsChanged();
-            emit desktopNamesChanged();
+            Q_EMIT numberOfDesktopsChanged();
+            Q_EMIT desktopIdsChanged();
+            Q_EMIT desktopNamesChanged();
 
             if (currentVirtualDesktop == id) {
                 currentVirtualDesktop.clear();
-                emit currentDesktopChanged();
+                Q_EMIT currentDesktopChanged();
             }
         });
 
@@ -319,24 +317,24 @@ void VirtualDesktopInfo::WaylandPrivate::addDesktop(const QString &id, quint32 p
 
     virtualDesktops.insert(position, id);
 
-    emit numberOfDesktopsChanged();
-    emit desktopIdsChanged();
-    emit desktopNamesChanged();
+    Q_EMIT numberOfDesktopsChanged();
+    Q_EMIT desktopIdsChanged();
+    Q_EMIT desktopNamesChanged();
 
     const KWayland::Client::PlasmaVirtualDesktop *desktop = virtualDesktopManagement->getVirtualDesktop(id);
 
     QObject::connect(desktop, &KWayland::Client::PlasmaVirtualDesktop::activated, this, [desktop, this]() {
         currentVirtualDesktop = desktop->id();
-        emit currentDesktopChanged();
+        Q_EMIT currentDesktopChanged();
     });
 
     QObject::connect(desktop, &KWayland::Client::PlasmaVirtualDesktop::done, this, [this]() {
-        emit desktopNamesChanged();
+        Q_EMIT desktopNamesChanged();
     });
 
     if (desktop->isActive()) {
         currentVirtualDesktop = id;
-        emit currentDesktopChanged();
+        Q_EMIT currentDesktopChanged();
     }
 }
 

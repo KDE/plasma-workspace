@@ -37,7 +37,7 @@ void ScreenPoolTest::initTestCase()
     cg.deleteGroup();
     cg.sync();
     m_screenPool = new ScreenPool(KSharedConfig::openConfig(), this);
-    m_screenPool->load();
+    m_screenPool->load(qGuiApp->primaryScreen());
 }
 
 void ScreenPoolTest::cleanupTestCase()

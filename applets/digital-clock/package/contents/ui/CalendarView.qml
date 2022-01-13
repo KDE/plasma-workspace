@@ -26,6 +26,9 @@ PlasmaExtras.Representation {
     property int _minimumWidth: (calendar.showAgenda || calendar.showClocks) ? PlasmaCore.Units.gridUnit * 45 : PlasmaCore.Units.gridUnit * 22
     property int _minimumHeight: PlasmaCore.Units.gridUnit * 25
 
+    PlasmaCore.ColorScope.inherit: false
+    PlasmaCore.ColorScope.colorGroup: PlasmaCore.Theme.NormalColorGroup
+
     Layout.minimumWidth: _minimumWidth
     Layout.minimumHeight: _minimumHeight
     Layout.preferredWidth: _minimumWidth
@@ -88,11 +91,11 @@ PlasmaExtras.Representation {
                     elide: Text.ElideRight
                 }
                 PlasmaComponents3.ToolButton {
-                    visible: agenda.visible && ApplicationIntegration.korganizerInstalled
+                    visible: agenda.visible && ApplicationIntegration.calendarInstalled
                     text: i18nc("@action:button Add event", "Add…")
                     Layout.rightMargin: calendar.paddings
                     icon.name: "list-add"
-                    onClicked: ApplicationIntegration.launchKorganizer()
+                    onClicked: ApplicationIntegration.launchCalendar()
                 }
             }
         }
@@ -515,10 +518,10 @@ PlasmaExtras.Representation {
                 }
 
                 PlasmaComponents3.ToolButton {
-                    visible: KCMShell.authorize("clock.desktop").length > 0
+                    visible: KCMShell.authorize("kcm_clock.desktop").length > 0
                     text: i18n("Switch…")
                     icon.name: "preferences-system-time"
-                    onClicked: KCMShell.openSystemSettings("clock")
+                    onClicked: KCMShell.openSystemSettings("kcm_clock")
 
                     PlasmaComponents3.ToolTip {
                         text: i18n("Switch to another timezone")

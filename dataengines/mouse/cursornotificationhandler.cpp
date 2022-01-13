@@ -84,7 +84,7 @@ bool CursorNotificationHandler::x11Event(XEvent *event)
     XFixesCursorNotifyEvent *xfe = reinterpret_cast<XFixesCursorNotifyEvent *>(event);
     currentName = xfe->cursor_name;
 
-    emit cursorNameChanged(cursorName(currentName));
+    Q_EMIT cursorNameChanged(cursorName(currentName));
 
     return false;
 }

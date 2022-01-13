@@ -15,7 +15,7 @@ OptionsModel::OptionsModel(QObject *parent)
     , m_settings(new FormatsSettings(this))
 {
     m_staticNames = {{{i18n("Region"), QStringLiteral("lang")},
-                      {i18n("Number"), QStringLiteral("numeric")},
+                      {i18n("Numbers"), QStringLiteral("numeric")},
                       {i18n("Time"), QStringLiteral("time")},
                       {i18n("Currency"), QStringLiteral("currency")},
                       {i18n("Measurement"), QStringLiteral("measurement")}}};

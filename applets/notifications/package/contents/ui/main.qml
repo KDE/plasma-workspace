@@ -174,7 +174,7 @@ Item {
         // "Configure" button open the KCM instead, like we do in the Bluetooth
         // and Networks applets
         plasmoid.removeAction("configure");
-        plasmoid.setAction("configure", i18n("&Configure Event Notifications and Actions…"), "notifications");
+        plasmoid.setAction("configure", i18n("&Configure Event Notifications and Actions…"), "configure");
         plasmoid.action("configure").visible = (KQCAddons.KCMShell.authorize("kcm_notifications.desktop").length > 0);
     }
 }

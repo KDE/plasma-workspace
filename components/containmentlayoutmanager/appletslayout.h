@@ -226,7 +226,6 @@ private:
     QPointF m_mouseDownPosition = QPoint(-1, -1);
     bool m_mouseDownWasEditMode = false;
     bool m_editMode = false;
-    bool m_sizeSpecificLayouts = false;
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(AppletsLayout::LayoutChanges)

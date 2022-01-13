@@ -29,11 +29,11 @@ Item {
     implicitHeight: iconSize + PlasmaCore.Units.smallSpacing + label.implicitHeight
 
     opacity: activeFocus || containsMouse ? 1 : 0.85
-        Behavior on opacity {
-            PropertyAnimation { // OpacityAnimator makes it turn black at random intervals
-                duration: PlasmaCore.Units.longDuration
-                easing.type: Easing.InOutQuad
-            }
+    Behavior on opacity {
+        PropertyAnimation { // OpacityAnimator makes it turn black at random intervals
+            duration: PlasmaCore.Units.longDuration
+            easing.type: Easing.InOutQuad
+        }
     }
 
     Rectangle {
@@ -45,10 +45,10 @@ Item {
         color: softwareRendering ?  PlasmaCore.ColorScope.backgroundColor : PlasmaCore.ColorScope.textColor
         opacity: root.activeFocus || containsMouse ? (softwareRendering ? 0.8 : 0.15) : (softwareRendering ? 0.6 : 0)
         Behavior on opacity {
-                PropertyAnimation { // OpacityAnimator makes it turn black at random intervals
-                    duration: PlasmaCore.Units.longDuration
-                    easing.type: Easing.InOutQuad
-                }
+            PropertyAnimation { // OpacityAnimator makes it turn black at random intervals
+                duration: PlasmaCore.Units.longDuration
+                easing.type: Easing.InOutQuad
+            }
         }
     }
 
@@ -61,10 +61,10 @@ Item {
         color: PlasmaCore.ColorScope.textColor
         opacity: 0.15
         Behavior on scale {
-                PropertyAnimation {
-                    duration: PlasmaCore.Units.shortDuration
-                    easing.type: Easing.InOutQuart
-                }
+            PropertyAnimation {
+                duration: PlasmaCore.Units.shortDuration
+                easing.type: Easing.InOutQuart
+            }
         }
     }
 

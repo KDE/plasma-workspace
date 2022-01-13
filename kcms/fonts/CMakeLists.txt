@@ -23,7 +23,7 @@ kcmutils_generate_module_data(
 )
 
 kconfig_add_kcfg_files(kcm_fonts_PART_SRCS fontssettings.kcfgc fontsaasettingsbase.kcfgc GENERATE_MOC)
-kcoreaddons_add_plugin(kcm_fonts SOURCES ${kcm_fonts_PART_SRCS} INSTALL_NAMESPACE "kcms")
+kcoreaddons_add_plugin(kcm_fonts SOURCES ${kcm_fonts_PART_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
 
 target_link_libraries(kcm_fonts KF5::I18n KF5::WindowSystem KF5::KCMUtils KF5::QuickAddons KF5::Declarative kfontinst krdb)
 
@@ -31,9 +31,12 @@ if(X11_FOUND)
     target_link_libraries(kcm_fonts Qt::X11Extras X11::X11 X11::Xft XCB::IMAGE)
 endif()
 
-kcoreaddons_desktop_to_json(kcm_fonts "kcm_fonts.desktop")
-
 ########### install files ###############
 install(FILES fontssettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
-install(FILES kcm_fonts.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(FILES kcm_fonts.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 kpackage_install_package(package kcm_fonts kcms)
+
+add_custom_command(TARGET kcm_fonts POST_BUILD
+                   COMMAND ${CMAKE_COMMAND} -E create_symlink ../kcms/systemsettings/kcm_fonts.so kcm_fonts_init.so)
+
+install( FILES ${CMAKE_CURRENT_BINARY_DIR}/kcm_fonts_init.so DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcminit)

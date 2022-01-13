@@ -35,8 +35,6 @@ Q_SIGNALS:
 
 private Q_SLOTS:
 
-    /** slot called when the upload scheme button is clicked */
-    void on_schemeKnsUploadButton_clicked();
 
     void on_buttonBox_clicked(QAbstractButton *button);
 

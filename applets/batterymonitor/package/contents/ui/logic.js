@@ -20,22 +20,6 @@ function stringForBatteryState(batteryData) {
     }
 }
 
-function batteryDetails(batteryData, remainingTime) {
-    var data = []
-
-    if (remainingTime > 0 && batteryData["Is Power Supply"] && (batteryData["State"] == "Discharging" || batteryData["State"] == "Charging")) {
-        data.push({label: (batteryData["State"] == "Charging" ? i18n("Time To Full:") : i18n("Remaining Time:")) })
-        data.push({value: KCoreAddons.Format.formatDuration(remainingTime, KCoreAddons.FormatTypes.HideSeconds) })
-    }
-
-    if (batteryData["Is Power Supply"] && batteryData["Capacity"] != "" && typeof batteryData["Capacity"] == "number") {
-        data.push({label: i18n("Battery Health:") })
-        data.push({value: i18nc("Placeholder is battery health percentage", "%1%", batteryData["Capacity"]) })
-    }
-
-    return data
-}
-
 function updateBrightness(rootItem, source) {
     if (rootItem.updateScreenBrightnessJob || rootItem.updateKeyboardBrightnessJob)
         return;
@@ -57,17 +41,17 @@ function updateBrightness(rootItem, source) {
 }
 
 function updateInhibitions(rootItem, source) {
-    var inhibitions = [];
+    const inhibitions = [];
 
     if (source.data["Inhibitions"]) {
-        for(var key in pmSource.data["Inhibitions"]) {
+        for (let key in pmSource.data["Inhibitions"]) {
             if (key === "plasmashell" || key === "plasmoidviewer") { // ignore our own inhibition
-                continue
+                continue;
             }
 
-            inhibitions.push(pmSource.data["Inhibitions"][key])
+            inhibitions.push(pmSource.data["Inhibitions"][key]);
         }
     }
 
-    rootItem.inhibitions = inhibitions
+    rootItem.inhibitions = inhibitions;
 }

@@ -15,13 +15,15 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 
-class ScreenPool : public QObject, public QAbstractNativeEventFilter
+class QScreen;
+
+class ScreenPool : public QObject
 {
     Q_OBJECT
 
 public:
     explicit ScreenPool(const KSharedConfig::Ptr &config, QObject *parent = nullptr);
-    void load();
+    void load(QScreen *primary);
     ~ScreenPool() override;
 
     QString primaryConnector() const;
@@ -38,9 +40,6 @@ public:
     // all ids that are known, included screens not enabled at the moment
     QList<int> knownIds() const;
 
-protected:
-    bool nativeEventFilter(const QByteArray &eventType, void *message, long *result) override;
-
 private:
     void save();
 
@@ -51,5 +50,4 @@ private:
     QHash<QString, int> m_idForConnector;
 
     QTimer m_configSaveTimer;
-    int m_xrandrExtensionOffset;
 };

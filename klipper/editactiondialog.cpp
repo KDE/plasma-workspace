@@ -145,7 +145,7 @@ bool ActionDetailModel::setData(const QModelIndex &index, const QVariant &value,
             break;
         }
         m_commands.replace(index.row(), cmd);
-        emit dataChanged(index, index);
+        Q_EMIT dataChanged(index, index);
         return true;
     }
     return false;

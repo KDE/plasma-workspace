@@ -4,7 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.12
+import QtQuick 2.15
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.5 as QQC2
 
@@ -43,7 +43,7 @@ KCM.SimpleKCM {
     }
 
     Component.onCompleted: {
-        if (kcm.nightColorSettings.mode == CC.CompositorAdaptor.ModeAutomatic && kcm.nightColorSettings.active) {
+        if (kcm.nightColorSettings.mode == NightColorMode.Automatic && kcm.nightColorSettings.active) {
             startLocator();
         }
     }
@@ -157,13 +157,13 @@ KCM.SimpleKCM {
                 ]
                 currentIndex: kcm.nightColorSettings.mode
                 onCurrentIndexChanged: {
-		    kcm.nightColorSettings.mode = currentIndex;
-		    if (currentIndex == CC.CompositorAdaptor.ModeAutomatic) {
+                    kcm.nightColorSettings.mode = currentIndex;
+                    if (currentIndex == NightColorMode.Automatic) {
                         startLocator();
                     } else {
                         endLocator();
                     }
-		}
+                }
 
                 KCM.SettingStateBinding {
                     configObject: kcm.nightColorSettings
@@ -173,14 +173,36 @@ KCM.SimpleKCM {
             }
 
             // Inform about geolocation access in auto mode
-            QQC2.Label {
-                visible: modeSwitcher.currentIndex === CC.CompositorAdaptor.ModeAutomatic
-                enabled: activator.checked
-                wrapMode: Text.Wrap
+
+            // The system settings window likes to take over
+            // the cursor with a plain label. The TextEdit
+            // 'takes priority' over the system settings
+            // window trying to eat the mouse, allowing
+            // us to use the HoverHandler boilerplate for
+            // proper link handling
+            TextEdit {
                 Layout.maximumWidth: modeSwitcher.width
-                text: i18n("The device's location will be periodically updated using GPS (if available), or by sending network information to <a href=\"https://location.services.mozilla.com\">Mozilla Location Service</a>.")
-                onLinkActivated: { Qt.openUrlExternally("https://location.services.mozilla.com"); }
+
+                visible: modeSwitcher.currentIndex === NightColorMode.Automatic
+                enabled: activator.checked
+
+                textFormat: TextEdit.RichText
+                wrapMode: Text.Wrap
+                readOnly: true
+
+                color: Kirigami.Theme.textColor
+                selectedTextColor: Kirigami.Theme.highlightedTextColor
+                selectionColor: Kirigami.Theme.highlightColor
+
+                text: xi18nc("@info", "The device's location will be periodically updated using GPS (if available), or by sending network information to <link url='https://location.services.mozilla.com'>Mozilla Location Service</link>.")
                 font: Kirigami.Theme.smallFont
+
+                onLinkActivated: (url) => Qt.openUrlExternally(url)
+
+                HoverHandler {
+                    acceptedButtons: Qt.NoButton
+                    cursorShape: parent.hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
+                }
             }
 
             // Workaround for Layout.margins not working in Kirigami FormLayout (bug 434625)
@@ -199,6 +221,7 @@ KCM.SimpleKCM {
                 id: evenBeginManField
                 // Match combobox width
                 Layout.minimumWidth: modeSwitcher.width
+                Layout.maximumWidth: modeSwitcher.width
                 visible: kcm.nightColorSettings.mode === NightColorMode.Timings
                 Kirigami.FormData.label: i18n("Turn on at:")
                 backend: kcm.nightColorSettings.eveningBeginFixed
@@ -221,6 +244,7 @@ KCM.SimpleKCM {
                 id: mornBeginManField
                 // Match combobox width
                 Layout.minimumWidth: modeSwitcher.width
+                Layout.maximumWidth: modeSwitcher.width
                 visible: kcm.nightColorSettings.mode === NightColorMode.Timings
                 Kirigami.FormData.label: i18n("Turn off at:")
                 backend: kcm.nightColorSettings.morningBeginFixed

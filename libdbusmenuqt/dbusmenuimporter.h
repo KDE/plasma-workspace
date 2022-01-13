@@ -42,7 +42,7 @@ public Q_SLOTS:
     /**
      * Load the menu
      *
-     * Will emit menuUpdated() when complete.
+     * Will Q_EMIT menuUpdated() when complete.
      * This should be done before showing a menu
      */
     void updateMenu();

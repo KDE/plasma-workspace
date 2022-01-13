@@ -46,7 +46,7 @@ JobsModel::JobsModel()
     connect(d, &JobsModelPrivate::jobViewChanged, this, [this](int row, Job *job, const QVector<int> &roles) {
         Q_UNUSED(job);
         const QModelIndex idx = index(row, 0);
-        emit dataChanged(idx, idx, roles);
+        Q_EMIT dataChanged(idx, idx, roles);
     });
 
     connect(d, &JobsModelPrivate::serviceOwnershipLost, this, &JobsModel::serviceOwnershipLost);

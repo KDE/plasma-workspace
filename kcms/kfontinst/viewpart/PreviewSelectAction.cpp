@@ -74,7 +74,7 @@ void CPreviewSelectAction::selected(int index)
         }
     }
 
-    emit range(list);
+    Q_EMIT range(list);
 }
 
 }

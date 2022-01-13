@@ -13,8 +13,8 @@
 #include <QIcon>
 #include <QUrlQuery>
 
+#include <KIO/CommandLauncherJob>
 #include <KLocalizedString>
-#include <KRun>
 #include <KRunner/RunnerManager>
 
 #include <Plasma/Plasma>
@@ -66,6 +66,8 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
         }
     } else if (role == Kicker::HasActionListRole) {
         return match.runner()->id() == QLatin1String("services") || !match.runner()->findChildren<QAction *>().isEmpty();
+    } else if (role == Kicker::IsMultilineTextRole) {
+        return match.isMultiLine();
     } else if (role == Kicker::ActionListRole) {
         QVariantList actionList;
         const QList<QAction *> actions = m_runnerManager->actionsForMatch(match);
@@ -179,7 +181,10 @@ bool RunnerMatchesModel::trigger(int row, const QString &actionId, const QVarian
     } else if (Kicker::handleAppstreamActions(actionId, argument)) {
         return true;
     } else if (actionId == QLatin1String("_kicker_jumpListAction")) {
-        return KRun::run(argument.toString(), {}, nullptr, service ? service->name() : QString(), service ? service->icon() : QString());
+        auto job = new KIO::CommandLauncherJob(argument.toString());
+        job->setDesktopName(service->entryPath());
+        job->setIcon(service->icon());
+        return job->exec();
     } else if (actionId == QLatin1String("_kicker_recentDocument") || actionId == QLatin1String("_kicker_forgetRecentDocuments")) {
         return Kicker::handleRecentDocumentAction(service, actionId, argument);
     }
@@ -223,7 +228,7 @@ void RunnerMatchesModel::setMatches(const QList<Plasma::QueryMatch> &matches)
     }
 
     if (emitDataChange) {
-        emit dataChanged(index(0, 0), index(ceiling - 1, 0));
+        Q_EMIT dataChanged(index(0, 0), index(ceiling - 1, 0));
     }
 
     if (newCount > oldCount) {
@@ -241,7 +246,7 @@ void RunnerMatchesModel::setMatches(const QList<Plasma::QueryMatch> &matches)
     }
 
     if (emitCountChange) {
-        emit countChanged();
+        Q_EMIT countChanged();
     }
 }
 

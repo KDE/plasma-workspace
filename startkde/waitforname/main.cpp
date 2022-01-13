@@ -5,10 +5,19 @@
 */
 
 #include "waiter.h"
+#include <signal.h>
 
+void sigtermHandler(int signalNumber)
+{
+    Q_UNUSED(signalNumber)
+    if (QCoreApplication::instance()) {
+        QCoreApplication::instance()->exit(-1);
+    }
+}
 int main(int argc, char **argv)
 {
     Waiter app(argc, argv);
+    signal(SIGTERM, sigtermHandler);
 
     if (!app.waitForService()) {
         return 0;

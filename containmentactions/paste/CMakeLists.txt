@@ -5,5 +5,3 @@ target_link_libraries(plasma_containmentactions_paste
     KF5::Plasma
     KF5::KIOCore
 )
-
-kcoreaddons_desktop_to_json(plasma_containmentactions_paste plasma-containmentactions-paste.desktop)

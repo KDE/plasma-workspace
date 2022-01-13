@@ -5,7 +5,6 @@ set(krunner_locations_SRCS
 )
 
 kcoreaddons_add_plugin(locations SOURCES ${krunner_locations_SRCS} INSTALL_NAMESPACE "kf5/krunner")
-kcoreaddons_desktop_to_json(locations plasma-runner-locations.desktop)
 target_link_libraries(locations
     KF5::KIOCore
     KF5::KIOWidgets

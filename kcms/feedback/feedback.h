@@ -24,7 +24,7 @@ class Feedback : public KQuickAddons::ManagedConfigModule
     Q_PROPERTY(FeedbackSettings *feedbackSettings READ feedbackSettings CONSTANT)
 
 public:
-    explicit Feedback(QObject *parent = nullptr, const QVariantList &list = QVariantList());
+    explicit Feedback(QObject *parent, const KPluginMetaData &data, const QVariantList &list = QVariantList());
     ~Feedback() override;
 
     bool feedbackEnabled() const;

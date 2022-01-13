@@ -17,8 +17,6 @@ target_link_libraries(plasma_engine_places
     KF5::Solid
 )
 
-kcoreaddons_desktop_to_json(plasma_engine_places plasma-dataengine-places.desktop)
-
 install(FILES org.kde.places.operations
         DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services )
 

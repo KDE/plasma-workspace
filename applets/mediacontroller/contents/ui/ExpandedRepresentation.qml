@@ -28,10 +28,10 @@ PlasmaExtras.Representation {
 
     readonly property int controlSize: PlasmaCore.Units.iconSizes.medium
 
-    property double position: mpris2Source.currentData.Position || 0
-    readonly property real rate: mpris2Source.currentData.Rate || 1
+    property double position: (mpris2Source.currentData && mpris2Source.currentData.Position) || 0
+    readonly property real rate: (mpris2Source.currentData && mpris2Source.currentData.Rate) || 1
     readonly property double length: currentMetadata ? currentMetadata["mpris:length"] || 0 : 0
-    readonly property bool canSeek: mpris2Source.currentData.CanSeek || false
+    readonly property bool canSeek: (mpris2Source.currentData && mpris2Source.currentData.CanSeek) || false
     readonly property bool softwareRendering: GraphicsInfo.api === GraphicsInfo.Software
 
     // only show hours (the default for KFormat) when track is actually longer than an hour
@@ -82,6 +82,26 @@ PlasmaExtras.Representation {
     Keys.onReleased: {
         keyPressed = false
 
+        if ((event.key == Qt.Key_Tab || event.key == Qt.Key_Backtab) && event.modifiers & Qt.ControlModifier) {
+            event.accepted = true;
+            if (root.mprisSourcesModel.length > 2) {
+                var nextIndex = playerSelector.currentIndex + 1;
+                if (event.key == Qt.Key_Backtab || event.modifiers & Qt.ShiftModifier) {
+                    nextIndex -= 2;
+                }
+                if (nextIndex == root.mprisSourcesModel.length) {
+                    nextIndex = 0;
+                }
+                if (nextIndex < 0) {
+                    nextIndex = root.mprisSourcesModel.length - 1;
+                }
+                playerSelector.currentIndex = nextIndex;
+                disablePositionUpdate = true;
+                mpris2Source.current = root.mprisSourcesModel[nextIndex]["source"];
+                disablePositionUpdate = false;
+            }
+        }
+
         if (!event.modifiers) {
             event.accepted = true
 
@@ -124,6 +144,7 @@ PlasmaExtras.Representation {
 
         ShaderEffect {
             id: backgroundImage
+            property real scaleFactor: 1.0
             property Image source: albumArt
 
             anchors.centerIn: parent
@@ -153,8 +174,9 @@ PlasmaExtras.Representation {
                 when: plasmoid.expanded && backgroundImage.visible && albumArt.paintedWidth > 0
                 PropertyChanges {
                     target: backgroundImage
-                    width: parent.width * Math.max(1, source.paintedWidth / source.paintedHeight)
-                    height: parent.width * Math.max(1, source.paintedHeight / source.paintedWidth)
+                    scaleFactor: Math.max(parent.width / source.paintedWidth, parent.height / source.paintedHeight)
+                    width: Math.round(source.paintedWidth * scaleFactor)
+                    height: Math.round(source.paintedHeight * scaleFactor)
                 }
             }
         }
@@ -190,26 +212,47 @@ PlasmaExtras.Representation {
                     source: root.albumArt
                 }
 
-                PlasmaCore.IconItem { // Fallback
-                    visible: !albumArt.visible
-                    source: {
-                        if (mpris2Source.currentData["Desktop Icon Name"])
-                            return mpris2Source.currentData["Desktop Icon Name"]
-                        return "media-album-cover"
+                Loader {
+                    // When albumArt is shown, the icon is unloaded to reduce memory usage.
+                    readonly property string icon: (mpris2Source.currentData && mpris2Source.currentData["Desktop Icon Name"]) || "media-album-cover"
+                    active: !albumArt.visible
+                    anchors.fill: parent
+
+                    sourceComponent: root.track ? fallbackIconItem : placeholderMessage
+
+                    Component {
+                        id: fallbackIconItem
+
+                        PlasmaCore.IconItem { // Fallback
+                            source: icon
+                            anchors {
+                                fill: parent
+                                margins: PlasmaCore.Units.largeSpacing * 2
+                            }
+                        }
                     }
 
-                    anchors {
-                        fill: parent
-                        margins: PlasmaCore.Units.largeSpacing*2
+                    Component {
+                        id: placeholderMessage
+                        Item { // Put PlaceholderMessage in Item so PlaceholderMessage will not fill its parent.
+                            anchors.fill: parent
+
+                            PlasmaExtras.PlaceholderMessage { // "No media playing" placeholder message
+                                width: parent.width // For text wrap
+                                anchors.centerIn: parent
+                                iconName: icon
+                                text: i18n("No media playing")
+                            }
+                        }
                     }
                 }
             }
 
             ColumnLayout { // Details Column
+                visible: root.track
                 Layout.fillWidth: true
                 Layout.fillHeight: true
                 Layout.preferredWidth: 50
-                Layout.alignment: !(albumArt.visible || !!mpris2Source.currentData["Desktop Icon Name"]) ? Qt.AlignHCenter : 0
 
                 /*
                     * We use Kirigami.Heading instead of PlasmaExtras.Heading
@@ -218,7 +261,6 @@ PlasmaExtras.Representation {
                     */
                 Kirigami.Heading { // Song Title
                     id: songTitle
-                    visible: root.track
                     level: 1
 
                     color: (softwareRendering || !albumArt.visible) ? PlasmaCore.ColorScope.textColor : "white"
@@ -235,7 +277,7 @@ PlasmaExtras.Representation {
                 }
                 Kirigami.Heading { // Song Artist
                     id: songArtist
-                    visible: root.track && root.artist
+                    visible: root.artist
                     level: 2
 
                     color: (softwareRendering || !albumArt.visible) ? PlasmaCore.ColorScope.textColor : "white"
@@ -297,13 +339,6 @@ PlasmaExtras.Representation {
                     Layout.maximumHeight: PlasmaCore.Units.gridUnit*2
                 }
             }
-        }
-
-        PlasmaExtras.PlaceholderMessage { // "No media playing" placeholder message
-            anchors.centerIn: parent
-            width: parent.width - (PlasmaCore.Units.largeSpacing * 8)
-            visible: !root.track
-            text: i18n("No media playing")
         }
     }
 

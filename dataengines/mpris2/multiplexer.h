@@ -28,6 +28,13 @@ public:
 Q_SIGNALS:
     void activePlayerChanged(PlayerContainer *container);
 
+    /**
+     * There is no player opened.
+     *
+     * @since 5.24
+     */
+    void playerListEmptied();
+
 private Q_SLOTS:
     void playerUpdated(const QString &name, const Plasma::DataEngine::Data &data);
 

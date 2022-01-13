@@ -312,7 +312,7 @@ void SchemeEditorColors::changeColor(int row, const QColor &newColor)
 
     updateColorSchemes();
 
-    emit changed(true);
+    Q_EMIT changed(true);
 }
 
 QString SchemeEditorColors::colorSetGroupKey(int colorSet)

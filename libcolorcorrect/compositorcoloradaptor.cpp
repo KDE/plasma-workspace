@@ -70,8 +70,8 @@ void CompositorAdaptor::setError(ErrorCode error)
     default:
         m_errorText = "";
     }
-    emit errorChanged();
-    emit errorTextChanged();
+    Q_EMIT errorChanged();
+    Q_EMIT errorTextChanged();
 }
 
 void CompositorAdaptor::updateProperties(const QVariantMap &properties)
@@ -90,7 +90,7 @@ void CompositorAdaptor::updateProperties(const QVariantMap &properties)
     if (running.isValid()) {
         if (m_running != running.toBool()) {
             m_running = running.toBool();
-            emit runningChanged();
+            Q_EMIT runningChanged();
         }
     }
 }

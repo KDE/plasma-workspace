@@ -10,7 +10,7 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.2 as QtControls
 import QtQuick.Dialogs 1.1 as QtDialogs
 import org.kde.kirigami 2.5 as Kirigami
-import org.kde.newstuff 1.62 as NewStuff
+import org.kde.newstuff 1.81 as NewStuff
 import org.kde.kcm 1.3 as KCM
 
 import org.kde.private.kcm_cursortheme 1.0
@@ -136,49 +136,16 @@ KCM.GridViewKCM {
                         onTriggered: fileDialogLoader.active = true
                         enabled: kcm.canInstall
                     },
-                    Kirigami.Action {
+                    NewStuff.Action {
                         text: i18n("&Get New Cursors…")
-                        icon.name: "get-hot-new-stuff"
-                        onTriggered: { newStuffPage.open(); }
-                        enabled: kcm.canInstall
+                        configFile: "xcursor.knsrc"
+                        onEntryEvent: function (entry, event) {
+                            if (event == 1) { // StatusChangedEvent
+                                kcm.ghnsEntryChanged(entry);
+                            }
+                        }
                     }
                 ]
-            }
-        }
-    }
-
-    Loader {
-        id: newStuffPage
-
-        // Use this function to open the dialog. It seems roundabout, but this ensures
-        // that the dialog is not constructed until we want it to be shown the first time,
-        // since it will initialise itself on the first load (which causes it to phone
-        // home) and we don't want that until the user explicitly asks for it.
-        function open() {
-            if (item) {
-                item.open();
-            } else {
-                active = true;
-            }
-        }
-        onLoaded: {
-            item.open();
-        }
-
-        active: false
-        asynchronous: true
-
-        sourceComponent: NewStuff.Dialog {
-            id: newStuffDialog
-            configFile: "xcursor.knsrc"
-            viewMode: NewStuff.Page.ViewMode.Tiles
-            Connections {
-                target: newStuffDialog.engine
-                function onEntryEvent(entry, event) {
-                    if (event == 1) { // StatusChangedEvent
-                        kcm.ghnsEntryChanged(entry);
-                    }
-                }
             }
         }
     }

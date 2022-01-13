@@ -1,0 +1,2 @@
+module org.kde.plasma.lookandfeel
+plugin lookandfeelqmlplugin

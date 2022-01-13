@@ -39,7 +39,7 @@ class KFonts : public KQuickAddons::ManagedConfigModule
     Q_PROPERTY(int hintingCurrentIndex READ hintingCurrentIndex WRITE setHintingCurrentIndex NOTIFY hintingCurrentIndexChanged)
 
 public:
-    KFonts(QObject *parent, const QVariantList &);
+    KFonts(QObject *parent, const KPluginMetaData &metaData, const QVariantList &);
     ~KFonts() override;
 
     FontsSettings *fontsSettings() const;

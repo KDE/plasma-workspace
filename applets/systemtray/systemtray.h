@@ -32,7 +32,7 @@ class SystemTray : public Plasma::Containment
     Q_PROPERTY(QAbstractItemModel *configSystemTrayModel READ configSystemTrayModel CONSTANT)
 
 public:
-    SystemTray(QObject *parent, const QVariantList &args);
+    SystemTray(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
     ~SystemTray() override;
 
     void init() override;

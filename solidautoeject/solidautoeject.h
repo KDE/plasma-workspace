@@ -21,7 +21,7 @@ public:
     SolidAutoEject(QObject *parent, const QList<QVariant> &);
     ~SolidAutoEject() override;
 
-private slots:
+private Q_SLOTS:
     void onDeviceAdded(const QString &udi);
     void onEjectPressed(const QString &udi);
 

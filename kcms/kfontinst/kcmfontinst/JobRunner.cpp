@@ -374,7 +374,7 @@ void CJobRunner::doNext()
             m_cmd = CMD_UPDATE;
             m_statusLabel->setText(i18n("Updating font configuration. Please wait…"));
             m_progress->setValue(m_progress->maximum());
-            emit configuring();
+            Q_EMIT configuring();
         } else {
             m_actionLabel->stopAnimation();
             if (PAGE_ERROR != m_stack->currentIndex()) {

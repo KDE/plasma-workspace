@@ -28,7 +28,6 @@ PowerDevilRunner::PowerDevilRunner(QObject *parent, const KPluginMetaData &metaD
     , m_session(new SessionManagement(this))
 {
     setObjectName(QStringLiteral("PowerDevil"));
-    updateStatus();
     setMinLetterCount(3);
     const KLocalizedString suspend = ki18nc("Note this is a KRunner keyword", "suspend");
     m_suspend = RunnerKeyword{suspend.untranslatedText(), suspend.toString()};
@@ -44,6 +43,7 @@ PowerDevilRunner::PowerDevilRunner(QObject *parent, const KPluginMetaData &metaD
     m_dimScreen = RunnerKeyword{dimScreen.untranslatedText(), dimScreen.toString()};
     const KLocalizedString screenBrightness = ki18nc("Note this is a KRunner keyword", "dim screen");
     m_screenBrightness = RunnerKeyword{screenBrightness.untranslatedText(), screenBrightness.toString()};
+    updateStatus();
 }
 
 void PowerDevilRunner::updateSyntaxes()
@@ -61,10 +61,11 @@ void PowerDevilRunner::updateSyntaxes()
         addSyntaxForKeyword({m_hibernate, m_toDisk}, i18n("Suspends the system to disk"));
     }
 
-    Plasma::RunnerSyntax brightnessSyntax(i18nc("Note this is a KRunner keyword", "screen brightness"),
-                                          // xgettext:no-c-format
-                                          i18n("Lists screen brightness options or sets it to the brightness defined by :q:; "
-                                               "e.g. screen brightness 50 would dim the screen to 50% maximum brightness"));
+    Plasma::RunnerSyntax brightnessSyntax(
+        i18nc("Note this is a KRunner keyword, <> is a placeholder and should be at the end", "screen brightness <percent value>"),
+        // xgettext:no-c-format
+        i18n("Lists screen brightness options or sets it to the brightness defined by the search term; "
+             "e.g. screen brightness 50 would dim the screen to 50% maximum brightness"));
     brightnessSyntax.addExampleQuery(i18nc("Note this is a KRunner keyword", "dim screen"));
     addSyntax(brightnessSyntax);
 }

@@ -23,6 +23,7 @@ PlasmaComponents3.ScrollView {
     property int cursorShape
 
     property QtObject contextMenu: null
+    property ListView listViewParent: null
 
     signal clicked(var mouse)
     signal linkActivated(string link)
@@ -86,6 +87,18 @@ PlasmaComponents3.ScrollView {
                     contextMenu = null;
                 });
                 contextMenu.open(mouse.x, mouse.y);
+            }
+
+            // Pass wheel events to ListView to make scrolling work in FullRepresentation.
+            onWheel: {
+                if (bodyTextContainer.listViewParent
+                    && ((wheel.angleDelta.y > 0 && !bodyTextContainer.listViewParent.atYBeginning)
+                        || (wheel.angleDelta.y < 0 && !bodyTextContainer.listViewParent.atYEnd))) {
+                    bodyTextContainer.listViewParent.contentY -= wheel.angleDelta.y;
+                    wheel.accepted = true;
+                } else {
+                    wheel.accepted = false;
+                }
             }
         }
     }

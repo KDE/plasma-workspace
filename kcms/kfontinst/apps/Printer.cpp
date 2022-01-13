@@ -137,7 +137,7 @@ void CPrintThread::run()
 
     for (int i = 0; it != end && !m_cancelled; ++it, ++i) {
         QString name(FC::createName((*it).family, (*it).styleInfo));
-        emit progress(i, name);
+        Q_EMIT progress(i, name);
 
         unsigned int s = 0;
         QFont font;
@@ -222,7 +222,7 @@ void CPrintThread::run()
         y += (s < 1 || sizes[s - 1] < 25 ? 14 : 28);
         firstFont = false;
     }
-    emit progress(m_items.count(), QString());
+    Q_EMIT progress(m_items.count(), QString());
     painter.end();
 
     //
@@ -306,7 +306,7 @@ void CPrinter::progress(int p, const QString &label)
 void CPrinter::slotCancelClicked()
 {
     m_statusLabel->setText(i18n("Canceling…"));
-    emit cancelled();
+    Q_EMIT cancelled();
 }
 
 void CPrinter::closeEvent(QCloseEvent *e)

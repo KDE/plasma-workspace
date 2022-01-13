@@ -28,6 +28,10 @@ KCM.ScrollViewKCM {
     implicitWidth: Kirigami.Units.gridUnit * 30
     implicitHeight: Kirigami.Units.gridUnit * 20
 
+    // Override default false value here as it doesn't really work with the
+    // layout we have here with two pages adjacent to one another
+    framedView: true
+
     // QML cannot update avatar image when override. By increasing this number and
     // appending it to image source with '?', we force avatar to reload
     property int avatarVersion: 0

@@ -494,7 +494,7 @@ void WetterComIon::forecast_slotJobFinished(KJob *job)
         forceImmediateUpdateOfAllVisualizations();
 
         // update the clients of our engine
-        emit forceUpdate(this, weatherSource);
+        Q_EMIT forceUpdate(this, weatherSource);
     }
 }
 

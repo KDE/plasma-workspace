@@ -68,7 +68,7 @@ QtObject {
     // so we then remove it so we have a working "plasmoid" again
     onPlasmoidChanged: {
         if (!plasmoid) {
-            // this doesn't emit a change, only in ratePlasmoids() it will detect the change
+            // this doesn't Q_EMIT a change, only in ratePlasmoids() it will detect the change
             plasmoids.splice(0, 1); // remove first
             ratePlasmoids();
         }
@@ -180,7 +180,7 @@ QtObject {
     Component.onCompleted: checkInhibition()
 
     function adopt(plasmoid) {
-        // this doesn't emit a change, only in ratePlasmoids() it will detect the change
+        // this doesn't Q_EMIT a change, only in ratePlasmoids() it will detect the change
         globals.plasmoids.push(plasmoid);
         ratePlasmoids();
     }
@@ -551,22 +551,16 @@ QtObject {
                     return;
                 }
 
-                popupNotificationsModel.invokeDefaultAction(popupNotificationsModel.index(index, 0))
-                if (!model.resident) {
-                    popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
-                }
+                const behavior = model.resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
+                popupNotificationsModel.invokeDefaultAction(popupNotificationsModel.index(index, 0), behavior)
             }
             onActionInvoked: {
-                popupNotificationsModel.invokeAction(popupNotificationsModel.index(index, 0), actionName)
-                if (!model.resident) {
-                    popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
-                }
+                const behavior = model.resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
+                popupNotificationsModel.invokeAction(popupNotificationsModel.index(index, 0), actionName, behavior)
             }
             onReplied: {
-                popupNotificationsModel.reply(popupNotificationsModel.index(index, 0), text);
-                if (!model.resident) {
-                    popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
-                }
+                const behavior = model.resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
+                popupNotificationsModel.reply(popupNotificationsModel.index(index, 0), text, behavior);
             }
             onOpenUrl: {
                 Qt.openUrlExternally(url);

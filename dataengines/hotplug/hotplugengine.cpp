@@ -170,7 +170,7 @@ QVariantList HotplugEngine::actionsForPredicates(const QStringList &predicates) 
 
     for (const QString &desktop : predicates) {
         const QString actionUrl = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "solid/actions/" + desktop);
-        QList<KServiceAction> services = KDesktopFileActions::userDefinedServices(actionUrl, true);
+        QList<KServiceAction> services = KDesktopFileActions::userDefinedServices(KService(actionUrl), true);
         if (!services.isEmpty()) {
             Plasma::DataEngine::Data action;
             action.insert(QStringLiteral("predicate"), desktop);

@@ -127,7 +127,7 @@ void PreviewWidget::setThemeModel(SortProxyModel *themeModel)
     }
 
     m_themeModel = themeModel;
-    emit themeModelChanged();
+    Q_EMIT themeModelChanged();
 }
 
 SortProxyModel *PreviewWidget::themeModel()
@@ -142,7 +142,7 @@ void PreviewWidget::setCurrentIndex(int idx)
     }
 
     m_currentIndex = idx;
-    emit currentIndexChanged();
+    Q_EMIT currentIndexChanged();
 
     if (!m_themeModel) {
         return;
@@ -163,7 +163,7 @@ void PreviewWidget::setCurrentSize(int size)
     }
 
     m_currentSize = size;
-    emit currentSizeChanged();
+    Q_EMIT currentSizeChanged();
 
     if (!m_themeModel) {
         return;

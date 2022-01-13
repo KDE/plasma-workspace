@@ -67,6 +67,7 @@ void DesktopView::showEvent(QShowEvent *e)
 
 void DesktopView::setScreenToFollow(QScreen *screen)
 {
+    Q_ASSERT(screen);
     if (screen == m_screenToFollow) {
         return;
     }
@@ -122,7 +123,7 @@ void DesktopView::setWindowType(DesktopView::WindowType type)
 
     adaptToScreen();
 
-    emit windowTypeChanged();
+    Q_EMIT windowTypeChanged();
 }
 
 void DesktopView::ensureWindowType()
@@ -321,7 +322,7 @@ void DesktopView::screenGeometryChanged()
     if (m_shellSurface) {
         m_shellSurface->setPosition(geo.topLeft());
     }
-    emit geometryChanged();
+    Q_EMIT geometryChanged();
 }
 
 void DesktopView::coronaPackageChanged(const KPackage::Package &package)

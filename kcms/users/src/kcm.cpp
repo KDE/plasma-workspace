@@ -9,7 +9,6 @@
 #include "kcm.h"
 
 // KDE
-#include <KAboutData>
 #include <KLocalizedString>
 #include <KPluginFactory>
 // Qt
@@ -29,8 +28,8 @@ Q_LOGGING_CATEGORY(kcm_users, "kcm_users")
 
 K_PLUGIN_CLASS_WITH_JSON(KCMUser, "kcm_users.json")
 
-KCMUser::KCMUser(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ConfigModule(parent, args)
+KCMUser::KCMUser(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : KQuickAddons::ConfigModule(parent, data, args)
     , m_dbusInterface(new OrgFreedesktopAccountsInterface(QStringLiteral("org.freedesktop.Accounts"),
                                                           QStringLiteral("/org/freedesktop/Accounts"),
                                                           QDBusConnection::systemBus(),
@@ -40,11 +39,6 @@ KCMUser::KCMUser(QObject *parent, const QVariantList &args)
 {
     qmlRegisterUncreatableType<User>("org.kde.plasma.kcm.users", 1, 0, "User", QString());
     qmlRegisterType<Finger>("FingerprintModel", 1, 0, "Finger");
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_users"), i18n("Manage user accounts"), QStringLiteral("0.1"), QString(), KAboutLicense::GPL);
-    about->addAuthor(i18n("Nicolas Fella"), QString(), QStringLiteral("nicolas.fella@gmx.de"));
-    about->addAuthor(i18n("Carson Black"), QString(), QStringLiteral("uhhadd@gmail.com"));
-    about->addAuthor(i18n("Devin Lin"), QString(), QStringLiteral("espidev@gmail.com"));
-    setAboutData(about);
     setButtons(Apply);
     auto font = QApplication::font("QLabel");
     auto fm = QFontMetrics(font);

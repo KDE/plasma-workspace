@@ -146,53 +146,6 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
     return data;
 }
 
-AppData appDataFromAppId(const QString &appId)
-{
-    AppData data;
-
-    KService::Ptr service = KService::serviceByStorageId(appId);
-
-    if (service) {
-        data.id = service->storageId();
-        data.name = service->name();
-        data.genericName = service->genericName();
-
-        const QString &menuId = service->menuId();
-
-        // applications: URLs are used to refer to applications by their KService::menuId
-        // (i.e. .desktop file name) rather than the absolute path to a .desktop file.
-        if (!menuId.isEmpty()) {
-            data.url = QUrl(QLatin1String("applications:") + menuId);
-        } else {
-            data.url = QUrl::fromLocalFile(service->entryPath());
-        }
-
-        return data;
-    }
-
-    QString desktopFile = appId;
-
-    if (!desktopFile.endsWith(QLatin1String(".desktop"))) {
-        desktopFile.append(QLatin1String(".desktop"));
-    }
-
-    if (KDesktopFile::isDesktopFile(desktopFile) && QFile::exists(desktopFile)) {
-        KDesktopFile f(desktopFile);
-
-        data.id = QUrl::fromLocalFile(f.fileName()).fileName();
-
-        if (data.id.endsWith(QLatin1String(".desktop"))) {
-            data.id = data.id.left(data.id.length() - 8);
-        }
-
-        data.name = f.readName();
-        data.genericName = f.readGenericName();
-        data.url = QUrl::fromLocalFile(desktopFile);
-    }
-
-    return data;
-}
-
 QUrl windowUrlFromMetadata(const QString &appId, quint32 pid, KSharedConfig::Ptr rulesConfig, const QString &xWindowsWMClassName)
 {
     if (!rulesConfig) {
@@ -395,7 +348,7 @@ QUrl windowUrlFromMetadata(const QString &appId, quint32 pid, KSharedConfig::Ptr
             if (services.isEmpty()) {
                 services = KServiceTypeTrader::self()->query(
                     QStringLiteral("Application"),
-                    QStringLiteral("exist Exec and ('%1' =~ DesktopEntryName) and (not exist NoDisplay or not NoDisplay)").arg(appId));
+                    QStringLiteral("exist Exec and ('%1' =~ DesktopEntryName)").arg(appId));
                 sortServicesByMenuId(services, appId);
             }
 
@@ -665,37 +618,6 @@ QString defaultApplication(const QUrl &url)
         }
     } else if (KService::Ptr service = KApplicationTrader::preferredService(application)) {
         return service->storageId();
-    } else {
-        // Try the files in share/apps/kcm_componentchooser/*.desktop.
-        const QStringList directories =
-            QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("kcm_componentchooser"), QStandardPaths::LocateDirectory);
-        QStringList services;
-
-        for (const QString &directory : directories) {
-            QDir dir(directory);
-            const QStringList desktopFiles = dir.entryList(QStringList("*.desktop"));
-            for (const QString &f : desktopFiles)
-                services += dir.absoluteFilePath(f);
-        }
-
-        for (const QString &service : qAsConst(services)) {
-            KConfig config(service, KConfig::SimpleConfig);
-            KConfigGroup cg = config.group(QByteArray());
-            const QString type = cg.readEntry("valueName", QString());
-
-            if (type.compare(application, Qt::CaseInsensitive) == 0) {
-                KConfig store(cg.readPathEntry("storeInFile", QStringLiteral("null")));
-                KConfigGroup storeCg(&store, cg.readEntry("valueSection", QString()));
-                const QString exec =
-                    storeCg.readPathEntry(cg.readEntry("valueName", "kcm_componenchooser_null"), cg.readEntry("defaultImplementation", QString()));
-
-                if (!exec.isEmpty()) {
-                    return exec;
-                }
-
-                break;
-            }
-        }
     }
 
     return QLatin1String("");
@@ -839,4 +761,49 @@ void runApp(const AppData &appData, const QList<QUrl> &urls)
     }
 }
 
+bool canLauchNewInstance(const AppData &appData)
+{
+    if (appData.url.isEmpty()) {
+        return false;
+    }
+
+    QString desktopEntry = appData.id;
+
+    // Remove suffix if necessary
+    if (desktopEntry.endsWith(QLatin1String(".desktop"))) {
+        desktopEntry.chop(8);
+    }
+
+    const KService::Ptr service = KService::serviceByDesktopName(desktopEntry);
+
+    if (service) {
+        if (service->noDisplay()) {
+            return false;
+        }
+
+        if (service->property(QStringLiteral("SingleMainWindow"), QVariant::Bool).toBool()) {
+            return false;
+        }
+
+        // GNOME-specific key, for backwards compatibility with apps that haven't
+        // started using the XDG "SingleMainWindow" key yet
+        if (service->property(QStringLiteral("X-GNOME-SingleWindow"), QVariant::Bool).toBool()) {
+            return false;
+        }
+
+        // Hide our own action if there's already a "New Window" action
+        const auto actions = service->actions();
+        for (const KServiceAction &action : actions) {
+            if (action.name().startsWith("new", Qt::CaseInsensitive) && action.name().endsWith("window", Qt::CaseInsensitive)) {
+                return false;
+            }
+
+            if (action.name() == QLatin1String("WindowNew")) {
+                return false;
+            }
+        }
+    }
+
+    return true;
+}
 }

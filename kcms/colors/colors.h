@@ -44,7 +44,7 @@ class KCMColors : public KQuickAddons::ManagedConfigModule
     Q_PROPERTY(QColor accentColor READ accentColor WRITE setAccentColor NOTIFY accentColorChanged)
 
 public:
-    KCMColors(QObject *parent, const QVariantList &args);
+    KCMColors(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
     ~KCMColors() override;
 
     enum SchemeFilter {

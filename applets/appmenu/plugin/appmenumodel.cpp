@@ -75,7 +75,7 @@ AppMenuModel::AppMenuModel(QObject *parent)
     connect(m_serviceWatcher, &QDBusServiceWatcher::serviceUnregistered, this, [this](const QString &serviceName) {
         if (serviceName == m_serviceName) {
             setMenuAvailable(false);
-            emit modelNeedsUpdate();
+            Q_EMIT modelNeedsUpdate();
         }
     });
 
@@ -125,7 +125,7 @@ void AppMenuModel::setMenuAvailable(bool set)
     if (m_menuAvailable != set) {
         m_menuAvailable = set;
         setVisible(true);
-        emit menuAvailableChanged();
+        Q_EMIT menuAvailableChanged();
     }
 }
 
@@ -138,7 +138,7 @@ void AppMenuModel::setVisible(bool visible)
 {
     if (m_visible != visible) {
         m_visible = visible;
-        emit visibleChanged();
+        Q_EMIT visibleChanged();
     }
 }
 
@@ -202,7 +202,7 @@ void AppMenuModel::onActiveWindowChanged()
         setMenuAvailable(true);
         updateApplicationMenu(serviceName, objectPath);
         setVisible(true);
-        emit modelNeedsUpdate();
+        Q_EMIT modelNeedsUpdate();
     } else {
         setMenuAvailable(false);
         setVisible(false);
@@ -296,7 +296,7 @@ void AppMenuModel::updateApplicationMenu(const QString &serviceName, const QStri
                     const int actionIdx = m_menu->actions().indexOf(a);
                     if (actionIdx > -1) {
                         const QModelIndex modelIdx = index(actionIdx, 0);
-                        emit dataChanged(modelIdx, modelIdx);
+                        Q_EMIT dataChanged(modelIdx, modelIdx);
                     }
                 }
             });
@@ -309,7 +309,7 @@ void AppMenuModel::updateApplicationMenu(const QString &serviceName, const QStri
         }
 
         setMenuAvailable(true);
-        emit modelNeedsUpdate();
+        Q_EMIT modelNeedsUpdate();
     });
 
     connect(m_importer.data(), &DBusMenuImporter::actionActivationRequested, this, [this](QAction *action) {

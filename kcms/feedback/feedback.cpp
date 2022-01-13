@@ -7,10 +7,11 @@
 
 #include "feedback.h"
 
-#include <KAboutData>
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KPluginFactory>
+
+#include <QFileInfo>
 #include <QVector>
 
 #include <KUserFeedback/FeedbackConfigUiController>
@@ -37,20 +38,12 @@ inline void swap(QJsonValueRef v1, QJsonValueRef v2)
     v2 = temp;
 }
 
-Feedback::Feedback(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent)
+Feedback::Feedback(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : KQuickAddons::ManagedConfigModule(parent, data, args)
     // UserFeedback.conf is used by KUserFeedback which uses QSettings and won't go through globals
     , m_data(new FeedbackData(this))
 {
-    Q_UNUSED(args)
-
     qmlRegisterAnonymousType<FeedbackSettings>("org.kde.userfeedback.kcm", 1);
-
-    setAboutData(new KAboutData(QStringLiteral("kcm_feedback"),
-                                i18n("User Feedback"),
-                                QStringLiteral("1.0"),
-                                i18n("Configure user feedback settings"),
-                                KAboutLicense::LGPL));
 
     QVector<QProcess *> processes;
     for (const auto &exec : s_programs.keys()) {
@@ -58,7 +51,7 @@ Feedback::Feedback(QObject *parent, const QVariantList &args)
         p->setProgram(exec);
         p->setArguments({QStringLiteral("--feedback")});
         p->start();
-        connect(p, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, &Feedback::programFinished);
+        connect(p, &QProcess::finished, this, &Feedback::programFinished);
         processes << p;
     }
 }
@@ -129,10 +122,15 @@ QJsonArray Feedback::audits() const
 {
     QJsonArray ret;
     for (auto it = s_programs.constBegin(); it != s_programs.constEnd(); ++it) {
-        ret += QJsonObject {
-            { "program", it.key() },
-            { "audits", QUrl::fromLocalFile(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + '/' + it->kuserfeedbackComponent + QStringLiteral("/kuserfeedback/audit")).toString() },
-        };
+        QString feedbackLocation =
+            QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + '/' + it->kuserfeedbackComponent + QStringLiteral("/kuserfeedback/audit");
+
+        if (QFileInfo::exists(feedbackLocation)) {
+            ret += QJsonObject{
+                {"program", it.key()},
+                {"audits", feedbackLocation},
+            };
+        }
     }
     return ret;
 }

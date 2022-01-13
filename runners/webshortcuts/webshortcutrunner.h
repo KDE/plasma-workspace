@@ -7,6 +7,7 @@
 #pragma once
 
 #include <KRunner/AbstractRunner>
+#include <KServiceAction>
 
 class WebshortcutRunner : public Plasma::AbstractRunner
 {

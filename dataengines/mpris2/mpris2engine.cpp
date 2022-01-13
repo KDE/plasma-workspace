@@ -177,6 +177,8 @@ void Mpris2Engine::createMultiplexer()
         ++i;
     }
     addSource(m_multiplexer.data());
+    // Don't delete sourceName because currentData refers to it
+    connect(m_multiplexer, &Multiplexer::playerListEmptied, m_multiplexer, &Multiplexer::deleteLater, Qt::UniqueConnection);
 }
 
 K_PLUGIN_CLASS_WITH_JSON(Mpris2Engine, "plasma-dataengine-mpris2.json")

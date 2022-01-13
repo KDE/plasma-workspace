@@ -5,202 +5,190 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.0
-import QtQuick.Layouts 1.1
+import QtQuick 2.15
+import QtQuick.Layouts 1.15
 
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kcoreaddons 1.0 as KCoreAddons
 import org.kde.plasma.components 3.0 as PlasmaComponents3
+import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.workspace.components 2.0
-import org.kde.kcoreaddons 1.0 as KCoreAddons
+
 import "logic.js" as Logic
 
-Item {
-    id: batteryItem
-    height: childrenRect.height
+RowLayout {
+    id: root
 
+    // We'd love to use `required` properties, especially since the model provides role names for them;
+    // but unfortunately some of those roles have whitespaces in their name, which QML doesn't have any
+    // workaround for (raw identifiers like r#try in Rust would've helped here).
+    //
+    // type: {
+    //  Capacity:           int,
+    //  Energy:             real,
+    //  "Is Power Supply":  bool,
+    //  Percent:            int,
+    //  "Plugged In":       bool,
+    //  "Pretty Name":      string,
+    //  Product:            string,
+    //  State:              "Discharging"|"Charging"|"FullyCharged"|etc.,
+    //  Type:               string,
+    //  Vendor:             string,
+    // }?
     property var battery
 
     // NOTE: According to the UPower spec this property is only valid for primary batteries, however
     // UPower seems to set the Present property false when a device is added but not probed yet
-    readonly property bool isPresent: model["Plugged in"]
+    readonly property bool isPresent: root.battery["Plugged in"]
 
-    readonly property bool isBroken: model.Capacity > 0 && model.Capacity < 50
+    readonly property bool isBroken: root.battery.Capacity > 0 && root.battery.Capacity < 50
 
-    property Component batteryDetails: Flow { // GridLayout crashes with a Repeater in it somehow
-        id: detailsLayout
+    property int remainingTime: 0
 
-        property int leftColumnWidth: 0
-        width: PlasmaCore.Units.gridUnit * 11
+    // Existing instance of a slider to use as a reference to calculate extra
+    // margins for a progress bar, so that the row of labels on top of it
+    // could visually look as if it were on the same distance from the bar as
+    // they are from the slider.
+    property PlasmaComponents3.Slider matchHeightOfSlider: PlasmaComponents3.Slider {}
+    readonly property real extraMargin: Math.max(0, Math.floor((matchHeightOfSlider.height - chargeBar.height) / 2))
 
-        PlasmaComponents3.Label {
-            id: brokenBatteryLabel
-            width: parent ? parent.width : implicitWidth
-            wrapMode: Text.WordWrap
-            text: batteryItem.isBroken && typeof model.Capacity !== "undefined" ? i18n("This battery's health is at only %1% and should be replaced. Please contact your hardware vendor for more details.", model.Capacity) : ""
-            font: !!detailsLayout.parent.inListView ? PlasmaCore.Theme.smallestFont : PlasmaCore.Theme.defaultFont
-            visible: batteryItem.isBroken
-        }
+    spacing: PlasmaCore.Units.gridUnit
 
-        Repeater {
-            model: Logic.batteryDetails(batteryItem.battery, batterymonitor.remainingTime)
+    BatteryIcon {
+        id: batteryIcon
 
-            PlasmaComponents3.Label {
-                id: detailsLabel
-                width: modelData.value && parent ? parent.width - detailsLayout.leftColumnWidth - PlasmaCore.Units.smallSpacing : detailsLayout.leftColumnWidth + PlasmaCore.Units.smallSpacing
-                wrapMode: Text.NoWrap
-                onPaintedWidthChanged: { // horrible HACK to get a column layout
-                    if (paintedWidth > detailsLayout.leftColumnWidth) {
-                        detailsLayout.leftColumnWidth = paintedWidth
-                    }
-                }
-                height: implicitHeight
-                text: modelData.value ? modelData.value : modelData.label
+        Layout.alignment: Qt.AlignTop
+        Layout.preferredWidth: PlasmaCore.Units.iconSizes.medium
+        Layout.preferredHeight: PlasmaCore.Units.iconSizes.medium
 
-                states: [
-                    State {
-                        when: !!detailsLayout.parent.inListView // HACK
-                        PropertyChanges {
-                            target: detailsLabel
-                            horizontalAlignment: modelData.value ? Text.AlignRight : Text.AlignLeft
-                            font: PlasmaCore.Theme.smallestFont
-                            width: parent ? parent.width / 2 : 0
-                            elide: Text.ElideNone // eliding and height: implicitHeight causes loops
-                        }
-                    }
-                ]
-            }
-        }
+        batteryType: root.battery.Type
+        percent: root.battery.Percent
+        hasBattery: root.isPresent
+        pluggedIn: root.battery.State === "Charging" && root.battery["Is Power Supply"]
     }
 
-    Column {
-        width: parent.width
-        spacing: PlasmaCore.Units.smallSpacing
+    ColumnLayout {
+        Layout.fillWidth: true
+        Layout.alignment: root.isPresent ? Qt.AlignTop : Qt.AlignVCenter
+        spacing: 0
 
-        PlasmaCore.ToolTipArea {
-            width: parent.width
-            height: infoRow.height
-            active: !detailsLoader.active
-            z: 2
+        RowLayout {
+            spacing: PlasmaCore.Units.smallSpacing
 
-            mainItem: Row {
-                id: batteryItemToolTip
-
-                property int _s: PlasmaCore.Units.largeSpacing / 2
-
-                Layout.minimumWidth: implicitWidth + batteryItemToolTip._s
-                Layout.minimumHeight: implicitHeight + batteryItemToolTip._s * 2
-                Layout.maximumWidth: implicitWidth + batteryItemToolTip._s
-                Layout.maximumHeight: implicitHeight + batteryItemToolTip._s * 2
-                width: implicitWidth + batteryItemToolTip._s
-                height: implicitHeight + batteryItemToolTip._s * 2
-
-                spacing: batteryItemToolTip._s*2
-
-                BatteryIcon {
-                    x: batteryItemToolTip._s * 2
-                    y: batteryItemToolTip._s
-                    width: PlasmaCore.Units.iconSizes.desktop // looks weird and small but that's what DefaultTooltip uses
-                    height: width
-                    batteryType: batteryIcon.batteryType
-                    percent: batteryIcon.percent
-                    hasBattery: batteryIcon.hasBattery
-                    pluggedIn: batteryIcon.pluggedIn
-                    visible: !batteryItem.isBroken
-                }
-
-                Column {
-                    id: mainColumn
-                    x: batteryItemToolTip._s
-                    y: batteryItemToolTip._s
-
-                    PlasmaExtras.Heading {
-                        level: 3
-                        text: batteryNameLabel.text
-                    }
-                    Loader {
-                        sourceComponent: batteryItem.batteryDetails
-                        opacity: 0.5
-                    }
-                }
+            PlasmaComponents3.Label {
+                Layout.fillWidth: true
+                elide: Text.ElideRight
+                text: root.battery["Pretty Name"]
             }
 
-            RowLayout {
-                id: infoRow
-                width: parent.width
-                spacing: PlasmaCore.Units.gridUnit
+            PlasmaComponents3.Label {
+                text: Logic.stringForBatteryState(root.battery)
+                visible: root.battery["Is Power Supply"]
+                enabled: false
+            }
 
-                BatteryIcon {
-                    id: batteryIcon
-                    Layout.alignment: Qt.AlignTop
-                    width: PlasmaCore.Units.iconSizes.medium
-                    height: width
-                    batteryType: model.Type
-                    percent: model.Percent
-                    hasBattery: batteryItem.isPresent
-                    pluggedIn: model.State === "Charging" && model["Is Power Supply"]
-                }
-
-                Column {
-                    Layout.fillWidth: true
-                    Layout.alignment: batteryItem.isPresent ? Qt.AlignTop : Qt.AlignVCenter
-                    spacing: PlasmaCore.Units.smallSpacing
-
-                    RowLayout {
-                        width: parent.width
-                        spacing: PlasmaCore.Units.smallSpacing
-
-                        PlasmaComponents3.Label {
-                            id: batteryNameLabel
-                            Layout.fillWidth: true
-                            elide: Text.ElideRight
-                            text: model["Pretty Name"]
-                        }
-
-                        PlasmaComponents3.Label {
-                            text: Logic.stringForBatteryState(model)
-                            visible: model["Is Power Supply"]
-                            opacity: 0.6
-                        }
-
-                        PlasmaComponents3.Label {
-                            id: batteryPercent
-                            horizontalAlignment: Text.AlignRight
-                            visible: batteryItem.isPresent
-                            text: i18nc("Placeholder is battery percentage", "%1%", model.Percent)
-                        }
-                    }
-
-                    PlasmaComponents3.ProgressBar {
-                        width: parent.width
-                        from: 0
-                        to: 100
-                        visible: batteryItem.isPresent
-                        value: Number(model.Percent)
-                    }
-                }
+            PlasmaComponents3.Label {
+                horizontalAlignment: Text.AlignRight
+                visible: root.isPresent
+                text: i18nc("Placeholder is battery percentage", "%1%", root.battery.Percent)
             }
         }
 
-        Loader {
-            id: detailsLoader
-            property bool inListView: true
-            anchors {
-                left: parent.left
-                leftMargin: batteryIcon.width + PlasmaCore.Units.gridUnit
-                right: parent.right
+        PlasmaComponents3.ProgressBar {
+            id: chargeBar
+
+            Layout.fillWidth: true
+            Layout.topMargin: root.extraMargin
+            Layout.bottomMargin: root.extraMargin
+
+            from: 0
+            to: 100
+            visible: root.isPresent
+            value: Number(root.battery.Percent)
+        }
+
+        // This gridLayout basically emulates an at-most-two-rows table with a
+        // single wide fillWidth/columnSpan header. Not really worth it trying
+        // to refactor it into some more clever fancy model-delegate stuff.
+        GridLayout {
+            id: details
+
+            Layout.fillWidth: true
+            Layout.topMargin: PlasmaCore.Units.smallSpacing
+
+            columns: 2
+            columnSpacing: PlasmaCore.Units.smallSpacing
+            rowSpacing: 0
+
+            component LeftLabel : PlasmaComponents3.Label {
+                // fillWidth is true, so using internal alignment
+                horizontalAlignment: Text.AlignLeft
+                Layout.fillWidth: true
+                font: PlasmaCore.Theme.smallestFont
+                wrapMode: Text.WordWrap
+                enabled: false
             }
-            visible: !!item
-            opacity: 0.5
-            sourceComponent: batteryDetails
+            component RightLabel : PlasmaComponents3.Label {
+                // fillWidth is false, so using external (grid-cell-internal) alignment
+                Layout.alignment: Qt.AlignRight
+                Layout.fillWidth: false
+                font: PlasmaCore.Theme.smallestFont
+                enabled: false
+            }
+
+            PlasmaComponents3.Label {
+                Layout.fillWidth: true
+                Layout.columnSpan: 2
+
+                text: root.isBroken && typeof root.battery.Capacity !== "undefined"
+                    ? i18n("This battery's health is at only %1% and it should be replaced. Contact the manufacturer.", root.battery.Capacity)
+                    : ""
+                font: PlasmaCore.Theme.smallestFont
+                color: PlasmaCore.Theme.neutralTextColor
+                visible: root.isBroken
+                wrapMode: Text.WordWrap
+            }
+
+            readonly property bool remainingTimeRowVisible: root.battery !== null
+                && root.remainingTime > 0
+                && root.battery["Is Power Supply"]
+                && ["Discharging", "Charging"].includes(root.battery.State)
+
+            LeftLabel {
+                text: root.battery.State === "Charging"
+                    ? i18n("Time To Full:")
+                    : i18n("Remaining Time:")
+                visible: details.remainingTimeRowVisible
+            }
+
+            RightLabel {
+                text: KCoreAddons.Format.formatDuration(root.remainingTime, KCoreAddons.FormatTypes.HideSeconds)
+                visible: details.remainingTimeRowVisible
+            }
+
+            readonly property bool healthRowVisible: root.battery !== null
+                && root.battery["Is Power Supply"]
+                && root.battery.Capacity !== ""
+                && typeof root.battery.Capacity === "number"
+                && !root.isBroken
+
+            LeftLabel {
+                text: i18n("Battery Health:")
+                visible: details.healthRowVisible
+            }
+
+            RightLabel {
+                text: details.healthRowVisible
+                    ? i18nc("Placeholder is battery health percentage", "%1%", root.battery.Capacity)
+                    : ""
+                visible: details.healthRowVisible
+            }
         }
 
         InhibitionHint {
-            anchors {
-                left: parent.left
-                leftMargin: batteryIcon.width + PlasmaCore.Units.gridUnit
-                right: parent.right
-            }
+            Layout.fillWidth: true
+            Layout.topMargin: PlasmaCore.Units.smallSpacing
+
             readonly property var chargeStopThreshold: pmSource.data["Battery"] ? pmSource.data["Battery"]["Charge Stop Threshold"] : undefined
             readonly property bool pluggedIn: pmSource.data["AC Adapter"] !== undefined && pmSource.data["AC Adapter"]["Plugged in"]
             visible: pluggedIn && typeof chargeStopThreshold === "number" && chargeStopThreshold > 0 && chargeStopThreshold < 100

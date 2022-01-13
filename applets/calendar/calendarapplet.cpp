@@ -8,8 +8,8 @@
 
 #include <QDateTime>
 
-CalendarApplet::CalendarApplet(QObject *parent, const QVariantList &data)
-    : Plasma::Applet(parent, data)
+CalendarApplet::CalendarApplet(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : Plasma::Applet(parent, data, args)
 {
 }
 
@@ -22,6 +22,6 @@ int CalendarApplet::weekNumber(const QDateTime &dateTime) const
     return dateTime.date().weekNumber();
 }
 
-K_PLUGIN_CLASS_WITH_JSON(CalendarApplet, "metadata.json")
+K_PLUGIN_CLASS_WITH_JSON(CalendarApplet, "package/metadata.json")
 
 #include "calendarapplet.moc"

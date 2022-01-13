@@ -6,8 +6,7 @@
 
 #pragma once
 
-#include <KService>
-
+#include <KPluginMetaData>
 #include <QCommandLineParser>
 
 class KCMInit : public QObject
@@ -22,8 +21,8 @@ public:
     ~KCMInit() override;
 
 private:
-    bool runModule(const QString &libName, KService::Ptr service);
+    bool runModule(const KPluginMetaData &data);
     void runModules(int phase);
-    KService::List m_list;
+    QVector<KPluginMetaData> m_list;
     QStringList m_alreadyInitialized;
 };

@@ -105,7 +105,7 @@ void ContainmentConfigView::setContainmentPlugin(const QString &plugin)
     }
 
     m_containment = static_cast<ShellCorona *>(m_containment->corona())->setContainmentTypeForScreen(m_containment->screen(), plugin);
-    emit containmentPluginChanged();
+    Q_EMIT containmentPluginChanged();
 }
 
 PlasmaQuick::ConfigModel *ContainmentConfigView::wallpaperConfigModel()
@@ -181,8 +181,8 @@ void ContainmentConfigView::setCurrentWallpaper(const QString &wallpaper)
     }
 
     m_currentWallpaper = wallpaper;
-    emit currentWallpaperChanged();
-    emit wallpaperConfigurationChanged();
+    Q_EMIT currentWallpaperChanged();
+    Q_EMIT wallpaperConfigurationChanged();
 }
 
 void ContainmentConfigView::applyWallpaper()
@@ -202,7 +202,7 @@ void ContainmentConfigView::applyWallpaper()
     delete m_ownWallpaperConfig;
     m_ownWallpaperConfig = nullptr;
 
-    emit wallpaperConfigurationChanged();
+    Q_EMIT wallpaperConfigurationChanged();
 }
 
 void ContainmentConfigView::syncWallpaperObjects()

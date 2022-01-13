@@ -1,0 +1,10 @@
+[Unit]
+Description=Splash screen shown during boot
+PartOf=graphical-session.target
+After=plasma-kwin_wayland.service
+
+[Service]
+ExecStart=@CMAKE_INSTALL_FULL_BINDIR@/ksplashqml
+Type=oneshot
+Slice=background.slice
+TimeoutSec=40sec

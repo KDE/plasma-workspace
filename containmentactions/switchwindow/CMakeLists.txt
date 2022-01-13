@@ -6,7 +6,6 @@ set(switchwindow_SRCS
 ki18n_wrap_ui(switchwindow_SRCS config.ui)
 
 kcoreaddons_add_plugin(plasma_containmentactions_switchwindow SOURCES ${switchwindow_SRCS} INSTALL_NAMESPACE "plasma/containmentactions")
-kcoreaddons_desktop_to_json(plasma_containmentactions_switchwindow plasma-containmentactions-switchwindow.desktop)
 
 target_link_libraries(plasma_containmentactions_switchwindow
                       Qt::Widgets

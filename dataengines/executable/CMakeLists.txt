@@ -9,5 +9,3 @@ target_link_libraries(plasma_engine_executable
     KF5::Service
     KF5::CoreAddons
 )
-
-kcoreaddons_desktop_to_json(plasma_engine_executable plasma-dataengine-executable.desktop)

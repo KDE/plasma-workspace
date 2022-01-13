@@ -31,7 +31,7 @@ WebshortcutRunner::WebshortcutRunner(QObject *parent, const KPluginMetaData &met
     sessionDbus.connect(QString(), QStringLiteral("/"), QStringLiteral("org.kde.KUriFilterPlugin"), QStringLiteral("configure"), this, SLOT(loadSyntaxes()));
     loadSyntaxes();
     configurePrivateBrowsingActions();
-    connect(KSycoca::self(), QOverload<>::of(&KSycoca::databaseChanged), this, &WebshortcutRunner::configurePrivateBrowsingActions);
+    connect(KSycoca::self(), &KSycoca::databaseChanged, this, &WebshortcutRunner::configurePrivateBrowsingActions);
     setMinLetterCount(3);
 }
 
@@ -49,9 +49,16 @@ void WebshortcutRunner::loadSyntaxes()
 
     QList<Plasma::RunnerSyntax> syns;
     const QStringList providers = filterData.preferredSearchProviders();
+    const QRegularExpression replaceRegex(QStringLiteral(":q$"));
+    const QString placeholder = QStringLiteral(":q:");
     for (const QString &provider : providers) {
-        Plasma::RunnerSyntax s(filterData.queryForPreferredSearchProvider(provider), /*":q:",*/
+        Plasma::RunnerSyntax s(filterData.queryForPreferredSearchProvider(provider).replace(replaceRegex, placeholder),
                                i18n("Opens \"%1\" in a web browser with the query :q:.", provider));
+        syns << s;
+    }
+    if (!providers.isEmpty()) {
+        QString defaultKey = filterData.queryForSearchProvider(providers.constFirst()).defaultKey();
+        Plasma::RunnerSyntax s(QStringLiteral("!%1 :q:").arg(defaultKey), i18n("Search using the DuckDuckGo bang syntax"));
         syns << s;
     }
 
@@ -154,7 +161,19 @@ void WebshortcutRunner::run(const Plasma::RunnerContext &context, const Plasma::
 
     if (!location.isEmpty()) {
         if (match.selectedAction()) {
-            const auto command = m_privateAction.exec() + QLatin1Char(' ') + KShell::quoteArg(location.toString());
+            QString command;
+
+            // Chrome's exec line does not have a URL placeholder
+            // Firefox's does, but only sometimes, depending on the distro
+            // Replace placeholders if found, otherwise append at the end
+            if (m_privateAction.exec().contains("%u")) {
+                command = m_privateAction.exec().replace("%u", KShell::quoteArg(location.toString()));
+            } else if (m_privateAction.exec().contains("%U")) {
+                command = m_privateAction.exec().replace("%U", KShell::quoteArg(location.toString()));
+            } else {
+                command = m_privateAction.exec() + QLatin1Char(' ') + KShell::quoteArg(location.toString());
+            }
+
             auto *job = new KIO::CommandLauncherJob(command);
             job->start();
         } else {

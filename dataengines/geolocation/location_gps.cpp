@@ -66,7 +66,7 @@ void Gpsd::run()
             }
         }
 
-        emit dataReady(d);
+        Q_EMIT dataReady(d);
 
         m_condition.wait(&m_mutex);
     }

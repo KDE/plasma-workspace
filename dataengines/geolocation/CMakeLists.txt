@@ -1,3 +1,6 @@
+remove_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f00)
+add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050e00) # needed for QNetworkConfigurationManager
+
 set(plasma_geolocation_interface_SRCS geolocationprovider.cpp)
 add_library(plasma-geolocation-interface SHARED ${plasma_geolocation_interface_SRCS})
 target_link_libraries(plasma-geolocation-interface
@@ -29,11 +32,9 @@ target_link_libraries(plasma_engine_geolocation
     KF5::NetworkManagerQt
     KF5::Service
     KF5::Solid)
-kcoreaddons_desktop_to_json(plasma_engine_geolocation plasma-dataengine-geolocation.desktop)
 
 kcoreaddons_add_plugin(plasma-geolocation-ip SOURCES location_ip.cpp INSTALL_NAMESPACE plasma/geolocationprovider)
 ecm_qt_declare_logging_category(plasma-geolocation-ip HEADER geolocdebug.h IDENTIFIER DATAENGINE_GEOLOCATION CATEGORY_NAME org.kde.plasma.dataengine.geolocation)
-kcoreaddons_desktop_to_json(plasma-geolocation-ip plasma-geolocation-ip.desktop)
 target_compile_definitions(plasma-geolocation-ip PRIVATE -DQT_NO_KEYWORDS)
 target_link_libraries(plasma-geolocation-ip plasma-geolocation-interface KF5::KIOCore KF5::NetworkManagerQt)
 
@@ -42,6 +43,5 @@ pkg_check_modules(LIBGPS libgps IMPORTED_TARGET)
 if(TARGET PkgConfig::LIBGPS)
     kcoreaddons_add_plugin(plasma-geolocation-gps SOURCES location_gps.cpp INSTALL_NAMESPACE plasma/geolocationprovider)
     ecm_qt_declare_logging_category(plasma-geolocation-gps HEADER geolocdebug.h IDENTIFIER DATAENGINE_GEOLOCATION CATEGORY_NAME org.kde.plasma.dataengine.geolocation)
-    kcoreaddons_desktop_to_json(plasma-geolocation-gps plasma-geolocation-gps.desktop)
     target_link_libraries(plasma-geolocation-gps plasma-geolocation-interface PkgConfig::LIBGPS)
 endif()

@@ -13,9 +13,8 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
-ColumnLayout {
-    id: clipboardPage
-    property alias view: clipboardMenu.view
+Menu {
+    id: clipboardMenu
     Keys.onPressed: {
         function goToCurrent() {
             clipboardMenu.view.positionViewAtIndex(clipboardMenu.view.currentIndex, ListView.Contain);
@@ -40,7 +39,7 @@ ColumnLayout {
                 event.accepted = true;
             }
         }
-        if (stack.currentPage !== clipboardPage) {
+        if (stack.currentItem !== clipboardMenu) {
             event.accepted = false;
             return;
         }
@@ -104,7 +103,7 @@ ColumnLayout {
         }
     }
 
-    Keys.forwardTo: [stack.currentPage]
+    Keys.forwardTo: [stack.currentItem]
 
     property var header: PlasmaExtras.PlasmoidHeading {
         RowLayout {
@@ -155,42 +154,39 @@ ColumnLayout {
         }
     }
 
-    Menu {
-        id: clipboardMenu
-        model: PlasmaCore.SortFilterModel {
-            sourceModel: clipboardSource.models.clipboard
-            filterRole: "DisplayRole"
-            filterRegExp: filter.text
+    model: PlasmaCore.SortFilterModel {
+        sourceModel: clipboardSource.models.clipboard
+        filterRole: "DisplayRole"
+        filterRegExp: filter.text
+    }
+    supportsBarcodes: {
+        try {
+            let prisonTest = Qt.createQmlObject("import QtQml 2.0; import org.kde.prison 1.0; QtObject {}", this);
+            prisonTest.destroy();
+        } catch (e) {
+            console.log("Barcodes not supported:", e);
+            return false;
         }
-        supportsBarcodes: {
-            try {
-                let prisonTest = Qt.createQmlObject("import QtQml 2.0; import org.kde.prison 1.0; QtObject {}", this);
-                prisonTest.destroy();
-            } catch (e) {
-                console.log("Barcodes not supported:", e);
-                return false;
-            }
-            return true;
-        }
-        Layout.fillWidth: true
-        Layout.fillHeight: true
-        Layout.topMargin: PlasmaCore.Units.smallSpacing
-        onItemSelected: clipboardSource.service(uuid, "select")
-        onRemove: clipboardSource.service(uuid, "remove")
-        onEdit: {
-            stack.push(Qt.resolvedUrl("EditPage.qml"), {
-                text: clipboardMenu.model.get(clipboardMenu.view.currentIndex).DisplayRole,
-                uuid: uuid
-            });
-        }
-        onBarcode: {
-            stack.push(Qt.resolvedUrl("BarcodePage.qml"), {
-                text: text
-            });
-        }
-        onAction: {
-            clipboardSource.service(uuid, "action")
-            clipboardMenu.view.currentIndex = 0
-        }
+        return true;
+    }
+    Layout.fillWidth: true
+    Layout.fillHeight: true
+    Layout.topMargin: PlasmaCore.Units.smallSpacing
+    onItemSelected: clipboardSource.service(uuid, "select")
+    onRemove: clipboardSource.service(uuid, "remove")
+    onEdit: {
+        stack.push(Qt.resolvedUrl("EditPage.qml"), {
+            text: clipboardMenu.model.get(clipboardMenu.view.currentIndex).DisplayRole,
+            uuid: uuid
+        });
+    }
+    onBarcode: {
+        stack.push(Qt.resolvedUrl("BarcodePage.qml"), {
+            text: text
+        });
+    }
+    onAction: {
+        clipboardSource.service(uuid, "action")
+        clipboardMenu.view.currentIndex = 0
     }
 }

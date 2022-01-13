@@ -785,7 +785,7 @@ void TaskGroupingProxyModel::setGroupMode(TasksModel::GroupMode mode)
 
         d->checkGrouping();
 
-        emit groupModeChanged();
+        Q_EMIT groupModeChanged();
     }
 }
 
@@ -801,7 +801,7 @@ void TaskGroupingProxyModel::setGroupDemandingAttention(bool group)
 
         d->checkGrouping();
 
-        emit groupDemandingAttentionChanged();
+        Q_EMIT groupDemandingAttentionChanged();
     }
 }
 
@@ -817,7 +817,7 @@ void TaskGroupingProxyModel::setWindowTasksThreshold(int threshold)
 
         d->checkGrouping();
 
-        emit windowTasksThresholdChanged();
+        Q_EMIT windowTasksThresholdChanged();
     }
 }
 
@@ -848,7 +848,7 @@ void TaskGroupingProxyModel::setBlacklistedAppIds(const QStringList &list)
             }
         }
 
-        emit blacklistedAppIdsChanged();
+        Q_EMIT blacklistedAppIdsChanged();
     }
 }
 
@@ -881,7 +881,7 @@ void TaskGroupingProxyModel::setBlacklistedLauncherUrls(const QStringList &list)
             }
         }
 
-        emit blacklistedLauncherUrlsChanged();
+        Q_EMIT blacklistedLauncherUrlsChanged();
     }
 }
 
@@ -1218,8 +1218,8 @@ void TaskGroupingProxyModel::requestToggleGrouping(const QModelIndex &index)
         }
     }
 
-    emit blacklistedAppIdsChanged();
-    emit blacklistedLauncherUrlsChanged();
+    Q_EMIT blacklistedAppIdsChanged();
+    Q_EMIT blacklistedLauncherUrlsChanged();
 }
 
 }

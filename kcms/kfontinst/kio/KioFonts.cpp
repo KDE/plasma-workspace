@@ -273,7 +273,7 @@ void CKioFonts::get(const QUrl &url)
             QByteArray array;
             QTextStream stream(&array, QIODevice::WriteOnly);
 
-            emit mimeType("text/plain");
+            Q_EMIT mimeType("text/plain");
 
             bool hidden(true);
 
@@ -379,12 +379,12 @@ void CKioFonts::get(const QUrl &url)
             if (fd < 0) {
                 error(KIO::ERR_CANNOT_OPEN_FOR_READING, url.toDisplayString());
             } else {
-                // Determine the mimetype of the file to be retrieved, and emit it.
+                // Determine the mimetype of the file to be retrieved, and Q_EMIT it.
                 // This is mandatory in all slaves (for KRun/BrowserRun to work).
                 // This code can be optimized by using QFileInfo instead of buff above
                 // and passing it to mimeTypeForFile() instead of realPath.
                 QMimeDatabase db;
-                emit mimeType(db.mimeTypeForFile(realPath).name());
+                Q_EMIT mimeType(db.mimeTypeForFile(realPath).name());
 
                 totalSize(buff.st_size);
 

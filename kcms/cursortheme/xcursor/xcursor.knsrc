@@ -14,6 +14,7 @@ Name[eu]=Kurtsoreak
 Name[fi]=Osoittimet
 Name[fr]=Pointeurs
 Name[hi]=कर्सर
+Name[hsb]=Cursory
 Name[hu]=Kurzorok
 Name[ia]=Cursores
 Name[id]=Kursor
@@ -43,7 +44,7 @@ Name[zh_CN]=光标
 
 ProvidersUrl=https://autoconfig.kde.org/ocs/providers.xml
 Categories=X11 Mouse Theme
-InstallPath=.icons
+TargetDir=icons
 Uncompress=always
 RemoveDeadEntries=true
 AdoptionCommand=plasma-apply-cursortheme %f

@@ -23,8 +23,8 @@
 #include <KNotifications/KNotificationJobUiDelegate>
 #include <KService>
 
-SystemMonitor::SystemMonitor(QObject *parent, const QVariantList &args)
-    : Plasma::Applet(parent, args)
+SystemMonitor::SystemMonitor(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : Plasma::Applet(parent, data, args)
 {
     setHasConfigurationInterface(true);
 
@@ -87,6 +87,6 @@ void SystemMonitor::openSystemMonitor()
     job->start();
 }
 
-K_PLUGIN_CLASS_WITH_JSON(SystemMonitor, "metadata.json")
+K_PLUGIN_CLASS_WITH_JSON(SystemMonitor, "package/metadata.json")
 
 #include "systemmonitor.moc"

@@ -373,7 +373,7 @@ void DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher *watcher)
     if (!reply.isValid()) {
         qDebug(DBUSMENUQT) << reply.error().message();
         if (menu) {
-            emit menuUpdated(menu);
+            Q_EMIT menuUpdated(menu);
         }
         return;
     }
@@ -444,7 +444,7 @@ void DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher *watcher)
         }
     }
 
-    emit menuUpdated(menu);
+    Q_EMIT menuUpdated(menu);
 }
 
 void DBusMenuImporter::sendClickedEvent(int id)

@@ -25,6 +25,7 @@ class QMenu;
 class QScreen;
 class ScreenPool;
 class StrutManager;
+class PrimaryOutputWatcher;
 
 namespace KActivities
 {
@@ -201,7 +202,7 @@ private Q_SLOTS:
     void populateAddPanelsMenu();
 
     void addOutput(QScreen *screen);
-    void primaryOutputChanged();
+    void primaryOutputNameChanged(const QString &oldOutputName, const QString &newOutputName);
 
     void panelContainmentDestroyed(QObject *cont);
     void handleScreenRemoved(QScreen *screen);
@@ -211,6 +212,8 @@ private Q_SLOTS:
 private:
     void updateStruts();
     void configurationChanged(const QString &path);
+    bool noRealOutputsConnected() const;
+    bool isOutputFake(QScreen *screen) const;
     bool isOutputRedundant(QScreen *screen) const;
     void reconsiderOutputs();
     QList<PanelView *> panelsForScreen(QScreen *screen) const;
@@ -252,4 +255,5 @@ private:
     QString m_testModeLayout;
 
     StrutManager *m_strutManager;
+    PrimaryOutputWatcher *const m_primaryWatcher;
 };

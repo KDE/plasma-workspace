@@ -100,12 +100,12 @@ void FreeSpaceNotifier::checkFreeDiskSpace()
 
             m_notification->setActions(actions);
 
-            connect(m_notification, QOverload<uint>::of(&KNotification::activated), this, [this](uint actionId) {
+            connect(m_notification, &KNotification::activated, this, [this](uint actionId) {
                 if (actionId == 1) {
                     exploreDrive();
                     // TODO once we have "configure" action support in KNotification, wire it up instead of a button
                 } else if (actionId == 2) {
-                    emit configureRequested();
+                    Q_EMIT configureRequested();
                 }
             });
 

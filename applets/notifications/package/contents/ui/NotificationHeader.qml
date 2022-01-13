@@ -158,7 +158,7 @@ RowLayout {
                               "%1 min remaining", "%1 min remaining",
                               Math.round(eta / 60));
             }
-            if (eta < 60 * 60 * 5) { // 5 hours max, if it takes even longer there's no real point in shoing that
+            if (eta < 60 * 60 * 5) { // 5 hours max, if it takes even longer there's no real point in showing that
                 return i18ndcp("plasma_applet_org.kde.plasma.notifications", "hours remaining, keep short",
                               "%1 h remaining", "%1 h remaining",
                               Math.round(eta / 60 / 60));

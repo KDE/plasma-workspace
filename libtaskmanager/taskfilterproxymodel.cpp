@@ -69,7 +69,7 @@ void TaskFilterProxyModel::setVirtualDesktop(const QVariant &desktop)
             invalidateFilter();
         }
 
-        emit virtualDesktopChanged();
+        Q_EMIT virtualDesktopChanged();
     }
 }
 
@@ -87,7 +87,7 @@ void TaskFilterProxyModel::setScreenGeometry(const QRect &geometry)
             invalidateFilter();
         }
 
-        emit screenGeometryChanged();
+        Q_EMIT screenGeometryChanged();
     }
 }
 
@@ -105,7 +105,7 @@ void TaskFilterProxyModel::setActivity(const QString &activity)
             invalidateFilter();
         }
 
-        emit activityChanged();
+        Q_EMIT activityChanged();
     }
 }
 
@@ -121,7 +121,7 @@ void TaskFilterProxyModel::setFilterByVirtualDesktop(bool filter)
 
         invalidateFilter();
 
-        emit filterByVirtualDesktopChanged();
+        Q_EMIT filterByVirtualDesktopChanged();
     }
 }
 
@@ -137,7 +137,7 @@ void TaskFilterProxyModel::setFilterByScreen(bool filter)
 
         invalidateFilter();
 
-        emit filterByScreenChanged();
+        Q_EMIT filterByScreenChanged();
     }
 }
 
@@ -153,7 +153,7 @@ void TaskFilterProxyModel::setFilterByActivity(bool filter)
 
         invalidateFilter();
 
-        emit filterByActivityChanged();
+        Q_EMIT filterByActivityChanged();
     }
 }
 
@@ -169,7 +169,7 @@ void TaskFilterProxyModel::setFilterNotMinimized(bool filter)
 
         invalidateFilter();
 
-        emit filterNotMinimizedChanged();
+        Q_EMIT filterNotMinimizedChanged();
     }
 }
 
@@ -185,7 +185,7 @@ void TaskFilterProxyModel::setFilterNotMaximized(bool filter)
 
         invalidateFilter();
 
-        emit filterNotMaximizedChanged();
+        Q_EMIT filterNotMaximizedChanged();
     }
 }
 
@@ -201,7 +201,7 @@ void TaskFilterProxyModel::setFilterHidden(bool filter)
 
         invalidateFilter();
 
-        emit filterHiddenChanged();
+        Q_EMIT filterHiddenChanged();
     }
 }
 
@@ -217,7 +217,7 @@ void TaskFilterProxyModel::setFilterSkipTaskbar(bool filter)
 
         invalidateFilter();
 
-        emit filterSkipTaskbarChanged();
+        Q_EMIT filterSkipTaskbarChanged();
     }
 }
 
@@ -233,7 +233,7 @@ void TaskFilterProxyModel::setFilterSkipPager(bool filter)
 
         invalidateFilter();
 
-        emit filterSkipPagerChanged();
+        Q_EMIT filterSkipPagerChanged();
     }
 }
 
@@ -249,7 +249,7 @@ void TaskFilterProxyModel::setDemandingAttentionSkipsFilters(bool skip)
 
         invalidateFilter();
 
-        emit demandingAttentionSkipsFiltersChanged();
+        Q_EMIT demandingAttentionSkipsFiltersChanged();
     }
 }
 

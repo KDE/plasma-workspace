@@ -344,7 +344,7 @@ void KSMServer::cancelShutdown(KSMClient *c)
     if (state == ClosingSubSession) {
         clientsToKill.clear();
         clientsToSave.clear();
-        emit subSessionCloseCanceled();
+        Q_EMIT subSessionCloseCanceled();
     } else {
         qCDebug(KSMSERVER) << "Client " << c->program() << " (" << c->clientId() << ") canceled shutdown.";
         KNotification::event(QStringLiteral("cancellogout"), i18n("Logout canceled by '%1'", c->program()), QPixmap(), nullptr, KNotification::DefaultEvent);
@@ -362,7 +362,7 @@ void KSMServer::cancelShutdown(KSMClient *c)
 
     m_kwinInterface->setState(KWinSessionState::Normal);
 
-    emit logoutFinished(false);
+    Q_EMIT logoutFinished(false);
 }
 
 void KSMServer::startProtection()
@@ -496,7 +496,7 @@ void KSMServer::completeKilling()
 // shutdown is fully complete
 void KSMServer::killingCompleted()
 {
-    emit logoutFinished(true);
+    Q_EMIT logoutFinished(true);
     qApp->quit();
 }
 
@@ -576,5 +576,5 @@ void KSMServer::signalSubSessionClosed()
     // so that plasma can close its stuff
     state = Idle;
     qCDebug(KSMSERVER) << state;
-    emit subSessionClosed();
+    Q_EMIT subSessionClosed();
 }

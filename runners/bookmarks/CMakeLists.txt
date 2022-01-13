@@ -35,7 +35,6 @@ target_link_libraries(krunner_bookmarks_common
 )
 
 kcoreaddons_add_plugin(krunner_bookmarksrunner SOURCES bookmarksrunner.cpp browserfactory.cpp INSTALL_NAMESPACE "kf5/krunner")
-kcoreaddons_desktop_to_json(krunner_bookmarksrunner plasma-runner-bookmarks.desktop )
 target_link_libraries(krunner_bookmarksrunner krunner_bookmarks_common)
 
 # Currently tests include only chrome, so no need to get include them if json is not found

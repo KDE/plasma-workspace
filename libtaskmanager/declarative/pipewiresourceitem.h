@@ -49,7 +49,6 @@ private:
     void itemChange(ItemChange change, const ItemChangeData &data) override;
     void updateTextureDmaBuf(const QVector<DmaBufPlane> &plane, uint32_t format);
     void updateTextureImage(const QImage &image);
-    void setSize(const QSize &size);
 
     uint m_nodeId = 0;
     std::function<QSGTexture *()> m_createNextTexture;

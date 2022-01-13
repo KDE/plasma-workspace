@@ -12,8 +12,11 @@ import org.kde.kquickcontrolsaddons 2.0
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 ColumnLayout {
+    spacing: 0
     property alias text: textArea.text
-    required property string uuid
+    property string uuid
+
+    property var header: Item {}
 
     Keys.onPressed: {
         if (event.key === Qt.Key_Escape) {
@@ -32,36 +35,34 @@ ColumnLayout {
     Component.onCompleted: {
         textArea.forceActiveFocus();
         textArea.cursorPosition = textArea.text.length;
-        header.enabled = false;
     }
 
     function done() {
-        stack.initialPage.view.currentIndex = 0;
-        stack.initialPage.view.currentItem.forceActiveFocus();
-        header.enabled = true;
+        stack.initialItem.view.currentIndex = 0;
+        stack.initialItem.view.currentItem.forceActiveFocus();
     }
 
-    Item {
+    PlasmaComponents3.TextArea {
+        id: textArea
         Layout.fillWidth: true
         Layout.fillHeight: true
-        Layout.topMargin: PlasmaCore.Units.smallSpacing
+        Layout.leftMargin: PlasmaCore.Units.smallSpacing * 2
+        Layout.rightMargin: PlasmaCore.Units.smallSpacing * 2
+        Layout.topMargin: PlasmaCore.Units.smallSpacing * 2
 
-        PlasmaComponents3.TextArea {
-            id: textArea
-            anchors.fill: parent
-            Keys.onPressed: {
-                if ((event.key === Qt.Key_Return || event.key === Qt.Key_Enter) && !(event.modifiers & Qt.ShiftModifier)) {
-                    saveAndExit();
-                    event.accepted = true;
-                } else {
-                    event.accepted = false;
-                }
+        Keys.onPressed: {
+            if ((event.key === Qt.Key_Return || event.key === Qt.Key_Enter) && !(event.modifiers & Qt.ShiftModifier)) {
+                saveAndExit();
+                event.accepted = true;
+            } else {
+                event.accepted = false;
             }
         }
     }
 
     RowLayout {
         Layout.alignment: Qt.AlignRight
+        Layout.margins: PlasmaCore.Units.smallSpacing * 2
         PlasmaComponents3.Button {
             text: i18nc("@action:button", "Save")
             icon.name: "document-save"

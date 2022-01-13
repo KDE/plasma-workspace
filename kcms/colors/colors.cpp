@@ -22,7 +22,6 @@
 #include <QStandardItemModel>
 #include <QStandardPaths>
 
-#include <KAboutData>
 #include <KColorScheme>
 #include <KColorUtils>
 #include <KConfigGroup>
@@ -48,24 +47,20 @@
 
 #include "../kcms-common_p.h"
 
-K_PLUGIN_FACTORY_WITH_JSON(KCMColorsFactory, "metadata.json", registerPlugin<KCMColors>(); registerPlugin<ColorsData>();)
+K_PLUGIN_FACTORY_WITH_JSON(KCMColorsFactory, "kcm_colors.json", registerPlugin<KCMColors>(); registerPlugin<ColorsData>();)
 
-KCMColors::KCMColors(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ManagedConfigModule(parent, args)
+KCMColors::KCMColors(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : KQuickAddons::ManagedConfigModule(parent, data, args)
     , m_model(new ColorsModel(this))
     , m_filteredModel(new FilterProxyModel(this))
     , m_data(new ColorsData(this))
     , m_config(KSharedConfig::openConfig(QStringLiteral("kdeglobals")))
 {
-    qmlRegisterUncreatableType<KCMColors>("org.kde.private.kcms.colors", 1, 0, "KCM", QStringLiteral("Cannot create instances of KCM"));
-    qmlRegisterType<ColorsModel>();
-    qmlRegisterType<FilterProxyModel>();
-    qmlRegisterType<ColorsSettings>();
-
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_colors"), i18n("Colors"), QStringLiteral("2.0"), QString(), KAboutLicense::GPL);
-
-    about->addAuthor(i18n("Kai Uwe Broulik"), QString(), QStringLiteral("kde@privat.broulik.de"));
-    setAboutData(about);
+    auto uri = "org.kde.private.kcms.colors";
+    qmlRegisterUncreatableType<KCMColors>(uri, 1, 0, "KCM", QStringLiteral("Cannot create instances of KCM"));
+    qmlRegisterAnonymousType<ColorsModel>(uri, 1);
+    qmlRegisterAnonymousType<FilterProxyModel>(uri, 1);
+    qmlRegisterAnonymousType<ColorsSettings>(uri, 1);
 
     connect(m_model, &ColorsModel::pendingDeletionsChanged, this, &KCMColors::settingsChanged);
 
@@ -165,10 +160,10 @@ void KCMColors::loadSelectedColorScheme()
     // If the scheme named in kdeglobals doesn't exist, show a warning and use default scheme
     if (m_model->indexOfScheme(schemeName) == -1) {
         m_model->setSelectedScheme(colorsSettings()->defaultColorSchemeValue());
-        // These are normally synced but initially the model doesn't emit a change to avoid the
+        // These are normally synced but initially the model doesn't Q_EMIT a change to avoid the
         // Apply button from being enabled without any user interaction. Sync manually here.
         m_filteredModel->setSelectedScheme(colorsSettings()->defaultColorSchemeValue());
-        emit showSchemeNotInstalledWarning(schemeName);
+        Q_EMIT showSchemeNotInstalledWarning(schemeName);
     } else {
         m_model->setSelectedScheme(schemeName);
         m_filteredModel->setSelectedScheme(schemeName);
@@ -189,7 +184,7 @@ void KCMColors::installSchemeFromFile(const QUrl &url)
 
     m_tempInstallFile.reset(new QTemporaryFile());
     if (!m_tempInstallFile->open()) {
-        emit showErrorMessage(i18n("Unable to create a temporary file."));
+        Q_EMIT showErrorMessage(i18n("Unable to create a temporary file."));
         m_tempInstallFile.reset();
         return;
     }
@@ -198,11 +193,11 @@ void KCMColors::installSchemeFromFile(const QUrl &url)
     // (for some reason) we determine the file name from the "Name" inside the file
     m_tempCopyJob = KIO::file_copy(url, QUrl::fromLocalFile(m_tempInstallFile->fileName()), -1, KIO::Overwrite);
     m_tempCopyJob->uiDelegate()->setAutoErrorHandlingEnabled(true);
-    emit downloadingFileChanged();
+    Q_EMIT downloadingFileChanged();
 
     connect(m_tempCopyJob, &KIO::FileCopyJob::result, this, [this, url](KJob *job) {
         if (job->error() != KJob::NoError) {
-            emit showErrorMessage(i18n("Unable to download the color scheme: %1", job->errorText()));
+            Q_EMIT showErrorMessage(i18n("Unable to download the color scheme: %1", job->errorText()));
             return;
         }
 
@@ -220,7 +215,7 @@ void KCMColors::installSchemeFile(const QString &path)
     const QString name = group.readEntry("Name");
 
     if (name.isEmpty()) {
-        emit showErrorMessage(i18n("This file is not a color scheme file."));
+        Q_EMIT showErrorMessage(i18n("This file is not a color scheme file."));
         return;
     }
 
@@ -239,14 +234,14 @@ void KCMColors::installSchemeFile(const QString &path)
     QString newPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/color-schemes/");
 
     if (!QDir().mkpath(newPath)) {
-        emit showErrorMessage(i18n("Failed to create 'color-scheme' data folder."));
+        Q_EMIT showErrorMessage(i18n("Failed to create 'color-scheme' data folder."));
         return;
     }
 
     newPath += newName + QLatin1String(".colors");
 
     if (!QFile::copy(path, newPath)) {
-        emit showErrorMessage(i18n("Failed to copy color scheme into 'color-scheme' data folder."));
+        Q_EMIT showErrorMessage(i18n("Failed to copy color scheme into 'color-scheme' data folder."));
         return;
     }
 
@@ -263,7 +258,7 @@ void KCMColors::installSchemeFile(const QString &path)
         m_model->setSelectedScheme(newName);
     }
 
-    emit showSuccessMessage(i18n("Color scheme installed successfully."));
+    Q_EMIT showSuccessMessage(i18n("Color scheme installed successfully."));
 }
 
 void KCMColors::editScheme(const QString &schemeName, QQuickItem *ctx)
@@ -275,7 +270,7 @@ void KCMColors::editScheme(const QString &schemeName, QQuickItem *ctx)
     QModelIndex idx = m_model->index(m_model->indexOfScheme(schemeName), 0);
 
     m_editDialogProcess = new QProcess(this);
-    connect(m_editDialogProcess, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [this](int exitCode, QProcess::ExitStatus exitStatus) {
+    connect(m_editDialogProcess, &QProcess::finished, this, [this](int exitCode, QProcess::ExitStatus exitStatus) {
         Q_UNUSED(exitCode);
         Q_UNUSED(exitStatus);
 

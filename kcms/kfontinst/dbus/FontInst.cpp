@@ -132,7 +132,7 @@ void FontInst::list(int folders, int pid)
 
     m_connectionsTimer->start(constConnectionsTimeout);
     m_fontListTimer->start(constFontListTimeout);
-    emit fontList(pid, fonts);
+    Q_EMIT fontList(pid, fonts);
 }
 
 void FontInst::statFont(const QString &name, int folders, int pid)
@@ -147,11 +147,11 @@ void FontInst::statFont(const QString &name, int folders, int pid)
     if ((checkSystem && findFont(name, FOLDER_SYS, fam, st)) || (checkUser && findFont(name, FOLDER_USER, fam, st, !checkSystem))) {
         Family rv((*fam).name());
         rv.add(*st);
-        // qDebug() << "Found font, emit details...";
-        emit fontStat(pid, rv);
+        // qDebug() << "Found font, Q_EMIT details...";
+        Q_EMIT fontStat(pid, rv);
     } else {
-        // qDebug() << "Font not found, emit empty details...";
-        emit fontStat(pid, Family(name));
+        // qDebug() << "Font not found, Q_EMIT empty details...";
+        Q_EMIT fontStat(pid, Family(name));
     }
 }
 
@@ -221,13 +221,13 @@ void FontInst::install(const QString &file, bool createAfm, bool toSystem, int p
                     (*st).add(df);
                     theFolders[folder].add(font);
                     theFolders[folder].addModifiedDir(destFolder);
-                    emit fontsAdded(Families(font, FOLDER_SYS == folder));
+                    Q_EMIT fontsAdded(Families(font, FOLDER_SYS == folder));
                 }
             }
         }
     }
 
-    emit status(pid, result);
+    Q_EMIT status(pid, result);
     m_connectionsTimer->start(constConnectionsTimeout);
     m_fontListTimer->start(constFontListTimeout);
 }
@@ -309,10 +309,10 @@ void FontInst::uninstall(const QString &family, quint32 style, bool fromSystem, 
             }
             del.add(s);
         }
-        emit fontsRemoved(Families(del, FOLDER_SYS == folder));
+        Q_EMIT fontsRemoved(Families(del, FOLDER_SYS == folder));
     }
     // qDebug() << "status" << result;
-    emit status(pid, result);
+    Q_EMIT status(pid, result);
 
     m_connectionsTimer->start(constConnectionsTimeout);
     m_fontListTimer->start(constFontListTimeout);
@@ -327,7 +327,7 @@ void FontInst::uninstall(const QString &name, bool fromSystem, int pid, bool che
     if (findFont(name, fromSystem || isSystem ? FOLDER_SYS : FOLDER_USER, fam, st)) {
         uninstall((*fam).name(), (*st).value(), fromSystem, pid, checkConfig);
     } else {
-        emit status(pid, KIO::ERR_DOES_NOT_EXIST);
+        Q_EMIT status(pid, KIO::ERR_DOES_NOT_EXIST);
     }
 }
 
@@ -341,7 +341,7 @@ void FontInst::move(const QString &family, quint32 style, bool toSystem, int pid
     }
 
     if (isSystem) {
-        emit status(pid, KIO::ERR_UNSUPPORTED_ACTION);
+        Q_EMIT status(pid, KIO::ERR_UNSUPPORTED_ACTION);
     } else {
         FamilyCont::ConstIterator fam;
         StyleCont::ConstIterator st;
@@ -371,10 +371,10 @@ void FontInst::move(const QString &family, quint32 style, bool toSystem, int pid
             if (STATUS_OK == result) {
                 updateFontList();
             }
-            emit status(pid, result);
+            Q_EMIT status(pid, result);
         } else {
             // qDebug() << "does not exist";
-            emit status(pid, KIO::ERR_DOES_NOT_EXIST);
+            Q_EMIT status(pid, KIO::ERR_DOES_NOT_EXIST);
         }
     }
 
@@ -455,7 +455,7 @@ void FontInst::removeFile(const QString &family, quint32 style, const QString &f
         }
     }
 
-    emit status(pid, result);
+    Q_EMIT status(pid, result);
 }
 
 void FontInst::reconfigure(int pid, bool force)
@@ -485,7 +485,7 @@ void FontInst::reconfigure(int pid, bool force)
     m_fontListTimer->start(constFontListTimeout);
 
     updateFontList();
-    emit status(pid, isSystem ? constSystemReconfigured : STATUS_OK);
+    Q_EMIT status(pid, isSystem ? constSystemReconfigured : STATUS_OK);
 }
 
 QString FontInst::folderName(bool sys)
@@ -648,12 +648,12 @@ void FontInst::updateFontList(bool emitChanges)
                 Families families = onlyNew.build(isSystem || i == FOLDER_SYS);
 
                 if (!families.items.isEmpty()) {
-                    emit fontsAdded(families);
+                    Q_EMIT fontsAdded(families);
                 }
 
                 families = old[i].build(isSystem || i == FOLDER_SYS);
                 if (!families.items.isEmpty()) {
-                    emit fontsRemoved(families);
+                    Q_EMIT fontsRemoved(families);
                 }
             }
         }
@@ -740,8 +740,8 @@ void FontInst::toggle(bool enable, const QString &family, quint32 style, bool in
             (*st).setFiles(toggledFiles);
 
             theFolders[folder].addModifiedDirs(modifiedDirs);
-            emit fontsAdded(Families(addFam, FOLDER_SYS == folder));
-            emit fontsRemoved(Families(delFam, FOLDER_SYS == folder));
+            Q_EMIT fontsAdded(Families(addFam, FOLDER_SYS == folder));
+            Q_EMIT fontsRemoved(Families(delFam, FOLDER_SYS == folder));
 
             theFolders[folder].setDisabledDirty();
         } else // un-move fonts!
@@ -757,7 +757,7 @@ void FontInst::toggle(bool enable, const QString &family, quint32 style, bool in
             }
         }
     }
-    emit status(pid, result);
+    Q_EMIT status(pid, result);
 
     m_connectionsTimer->start(constConnectionsTimeout);
     m_fontListTimer->start(constFontListTimeout);

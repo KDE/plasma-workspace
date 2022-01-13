@@ -1,4 +1,7 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_engine_weather\")
+remove_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f00)
+add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050e00) # needed for QNetworkConfigurationManager
+
 
 add_definitions(
     -DQT_USE_QSTRINGBUILDER
@@ -18,6 +21,7 @@ ecm_qt_declare_logging_category(weather_SRCS
 )
 
 kcoreaddons_add_plugin(plasma_engine_weather SOURCES ${weather_SRCS} INSTALL_NAMESPACE plasma/dataengine)
+target_compile_definitions(plasma_engine_weather PRIVATE -DQT_DISABLE_DEPRECATED_BEFORE=0x050e00) # needed for QNetworkConfigurationManager
 
 target_link_libraries (plasma_engine_weather
             KF5::KIOCore
@@ -25,5 +29,3 @@ target_link_libraries (plasma_engine_weather
             KF5::Plasma
             Qt::Network
             weather_ion)
-
-kcoreaddons_desktop_to_json(plasma_engine_weather plasma-dataengine-weather.desktop SERVICE_TYPES plasma-dataengine.desktop)

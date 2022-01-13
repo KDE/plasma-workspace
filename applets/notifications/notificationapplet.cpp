@@ -30,8 +30,8 @@
 #include "texteditclickhandler.h"
 #include "thumbnailer.h"
 
-NotificationApplet::NotificationApplet(QObject *parent, const QVariantList &data)
-    : Plasma::Applet(parent, data)
+NotificationApplet::NotificationApplet(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
+    : Plasma::Applet(parent, data, args)
 {
     static bool s_typesRegistered = false;
     if (!s_typesRegistered) {
@@ -72,7 +72,7 @@ void NotificationApplet::setDragPixmapSize(int dragPixmapSize)
 {
     if (m_dragPixmapSize != dragPixmapSize) {
         m_dragPixmapSize = dragPixmapSize;
-        emit dragPixmapSizeChanged();
+        Q_EMIT dragPixmapSizeChanged();
     }
 }
 
@@ -115,12 +115,12 @@ void NotificationApplet::doDrag(QQuickItem *item, const QUrl &url, const QPixmap
     }
 
     m_dragActive = true;
-    emit dragActiveChanged();
+    Q_EMIT dragActiveChanged();
 
     drag->exec();
 
     m_dragActive = false;
-    emit dragActiveChanged();
+    Q_EMIT dragActiveChanged();
 }
 
 QWindow *NotificationApplet::focussedPlasmaDialog() const
@@ -176,6 +176,6 @@ void NotificationApplet::forceActivateWindow(QWindow *window)
     }
 }
 
-K_PLUGIN_CLASS_WITH_JSON(NotificationApplet, "metadata.json")
+K_PLUGIN_CLASS_WITH_JSON(NotificationApplet, "package/metadata.json")
 
 #include "notificationapplet.moc"

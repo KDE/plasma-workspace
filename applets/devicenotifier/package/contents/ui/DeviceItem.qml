@@ -3,6 +3,7 @@
     SPDX-FileCopyrightText: 2012 Jacopo De Simoi <wilderkde@gmail.com>
     SPDX-FileCopyrightText: 2016 Kai Uwe Broulik <kde@privat.broulik.de>
     SPDX-FileCopyrightText: 2020 Nate Graham <nate@kde.org>
+    SPDX-FileCopyrightText: 2022 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -26,6 +27,10 @@ PlasmaExtras.ExpandableListItem {
     readonly property bool isMounted: devicenotifier.isMounted(udi)
     readonly property bool hasMessage: statusSource.lastUdi == udi && statusSource.data[statusSource.last] ? true : false
     readonly property var message: hasMessage ? statusSource.data[statusSource.last] || ({}) : ({})
+    readonly property var types: model["Device Types"]
+    readonly property bool hasStorageAccess: types && types.indexOf("Storage Access") !== -1
+    readonly property bool hasPortableMediaPlayer: types && types.indexOf("Portable Media Player") !== -1
+    readonly property var supportedProtocols: model["Supported Protocols"]
 
     readonly property double freeSpace: sdSource.data[udi] && sdSource.data[udi]["Free Space"] ? sdSource.data[udi]["Free Space"] : -1.0
     readonly property double totalSpace: sdSource.data[udi] && sdSource.data[udi]["Size"] ? sdSource.data[udi]["Size"] : -1.0
@@ -55,46 +60,33 @@ PlasmaExtras.ExpandableListItem {
     Connections {
         target: unmountAll
         function onClicked() {
-            if (model["Removable"] && isMounted) {
-                actionTriggered();
-            }
+            removableActionTriggered();
         }
     }
 
     Connections {
          target: plasmoid.action("unmountAllDevices")
          function onTriggered() {
-             if (model["Removable"] && isMounted) {
-                 actionTriggered();
-             }
+             removableActionTriggered();
          }
      }
 
     // this keeps the delegate around for 5 seconds after the device has been
     // removed in case there was a message, such as "you can now safely remove this"
-    ListView.onRemove: {
-        deviceItem.isEnabled = false
-
-        if (deviceItem.hasMessage) {
-            ListView.delayRemove = true
-            keepDelegateTimer.restart()
-
-            ++devicenotifier.pendingDelegateRemoval // QTBUG-50380
-        }
+    ListView.onRemove: SequentialAnimation {
+        PropertyAction { target: deviceItem; property: "ListView.delayRemove"; value: deviceItem.hasMessage }
+        PropertyAction { target: deviceItem; property: "isEnabled"; value: false }
+        // Reset action model to hide the arrow
+        PropertyAction { target: deviceItem; property: "contextualActionsModel"; value: [] }
+        PropertyAction { target: deviceItem; property: "icon"; value: statusSource.lastIcon }
+        PropertyAction { target: deviceItem; property: "title"; value: statusSource.lastDescription }
+        PropertyAction { target: deviceItem; property: "subtitle"; value: statusSource.lastMessage }
+        PauseAnimation { duration: messageHighlightAnimator.duration }
+        // Otherwise the last message will show again when this device reappears
+        ScriptAction { script: statusSource.clearMessage(); }
         // Otherwise there are briefly multiple highlight effects
-        devicenotifier.currentIndex = -1
-    }
-
-    Timer {
-        id: keepDelegateTimer
-        interval: 5000 // same interval as the auto hide / passive timer
-        onTriggered: {
-            deviceItem.ListView.delayRemove = false
-            // otherwise the last message will show again when this device reappears
-            statusSource.clearMessage()
-
-            --devicenotifier.pendingDelegateRemoval // QTBUG-50380
-        }
+        PropertyAction { target: devicenotifier; property: "currentIndex"; value: -1 }
+        PropertyAction { target: deviceItem; property: "ListView.delayRemove"; value: false }
     }
 
     Timer {
@@ -104,8 +96,8 @@ PlasmaExtras.ExpandableListItem {
         running: isMounted && plasmoid.expanded
         triggeredOnStart: true     // Update the storage space as soon as we open the plasmoid
         onTriggered: {
-            var service = sdSource.serviceForSource(udi);
-            var operation = service.operationDescription("updateFreespace");
+            const service = sdSource.serviceForSource(udi);
+            const operation = service.operationDescription("updateFreespace");
             service.startOperationCall(operation);
         }
     }
@@ -115,15 +107,26 @@ PlasmaExtras.ExpandableListItem {
         QQC2.Action { }
     }
 
+    function removableActionTriggered() {
+        if (model["Removable"] && isMounted) {
+            actionTriggered();
+        }
+    }
+
     function actionTriggered() {
-        var service
-        var operationName
-        var operation
-        var wasMounted = isMounted;
-        if (!isRemovable || !isMounted) {
+        let service
+        let operationName
+        let operation
+        const wasMounted = isMounted;
+        if (!hasStorageAccess || !isRemovable || !isMounted) {
             service = hpSource.serviceForSource(udi);
             operation = service.operationDescription('invokeAction');
-            operation.predicate = "test-predicate-openinwindow.desktop";
+            const supportsMTP = supportedProtocols && supportedProtocols.indexOf("mtp") !== -1
+            if (!hasStorageAccess && hasPortableMediaPlayer && supportsMTP) {
+                operation.predicate = "solid_mtp.desktop" // this lives in kio-extras!
+            } else {
+                operation.predicate = "test-predicate-openinwindow.desktop";
+            }
         } else {
             service = sdSource.serviceForSource(udi);
             operation = service.operationDescription("unmount");
@@ -164,8 +167,8 @@ PlasmaExtras.ExpandableListItem {
                 return ""
             }
             if (freeSpaceKnown) {
-                var freeSpaceText = sdSource.data[udi]["Free Space Text"]
-                var totalSpaceText = sdSource.data[udi]["Size Text"]
+                const freeSpaceText = sdSource.data[udi]["Free Space Text"]
+                const totalSpaceText = sdSource.data[udi]["Size Text"]
                 return i18nc("@info:status Free disk space", "%1 free of %2", freeSpaceText, totalSpaceText)
             }
             return ""
@@ -197,11 +200,14 @@ PlasmaExtras.ExpandableListItem {
             }
         }
         text: {
-            // It's possible for the root volume to be on a removable disk
-            if (!isRemovable || isRootVolume) {
+            // TODO: this entire logic and the semi-replication thereof in actionTriggered is really silly.
+            //  We have a fairly exhaustive predicate system, we should use it to assertain if a given udi is actionable
+            //  and then we simply pick the sensible default action of a suitable predicate.
+            // - It's possible for there to be no StorageAccess (e.g. MTP devices don't have one)
+            // - It's possible for the root volume to be on a removable disk
+            if (!hasStorageAccess || !isRemovable || isRootVolume) {
                 return i18n("Open in File Manager")
             } else {
-                var types = model["Device Types"];
                 if (!isMounted) {
                     return i18n("Mount and Open")
                 } else if (types && types.indexOf("OpticalDisc") !== -1) {
@@ -233,8 +239,8 @@ PlasmaExtras.ExpandableListItem {
                 return deviceItem.isRemovable && deviceItem.isMounted;
             }
             onTriggered: {
-                var service = hpSource.serviceForSource(udi);
-                var operation = service.operationDescription('invokeAction');
+                const service = hpSource.serviceForSource(udi);
+                const operation = service.operationDescription('invokeAction');
                 operation.predicate = modelData.predicate;
                 service.startOperationCall(operation);
                 devicenotifier.currentIndex = -1;
@@ -254,8 +260,8 @@ PlasmaExtras.ExpandableListItem {
         enabled: deviceItem.isRemovable && !deviceItem.isMounted
 
         onTriggered: {
-            var service = sdSource.serviceForSource(udi);
-            var operation = service.operationDescription("mount");
+            const service = sdSource.serviceForSource(udi);
+            const operation = service.operationDescription("mount");
             service.startOperationCall(operation);
         }
     }

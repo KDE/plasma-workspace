@@ -126,10 +126,7 @@ servicesFromCmdLine(const QString &cmdLine, const QString &processName, KSharedC
  * - "browser"
  * - "mailer"
  * - "terminal"
- * - "windowmanager"
- *
- * If the host component matches none of the above, an attempt is made
- * to match to application links stored in kcm_componentchooser/.
+ * - "filemanager"
  *
  * @param url A URL using the preferred:// scheme.
  * @returns an application id for the given URL.
@@ -175,4 +172,6 @@ TASKMANAGER_EXPORT QRect screenGeometry(const QPoint &pos);
  * @param urls A list of URLs for the application to open.
  */
 TASKMANAGER_EXPORT void runApp(const AppData &appData, const QList<QUrl> &urls = QList<QUrl>());
+
+bool canLauchNewInstance(const AppData &appData);
 }

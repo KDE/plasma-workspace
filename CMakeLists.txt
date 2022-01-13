@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.16)
 
 project(plasma-workspace)
-set(PROJECT_VERSION "5.23.80")
+set(PROJECT_VERSION "5.24.80")
 set(PROJECT_VERSION_MAJOR 5)
 
 set(QT_MIN_VERSION "5.15.0")
-set(KF5_MIN_VERSION "5.86")
+set(KF5_MIN_VERSION "5.89")
 set(KDE_COMPILERSETTINGS_LEVEL "5.82")
 set(INSTALL_SDDM_THEME TRUE)
 option(INSTALL_SDDM_WAYLAND_SESSION OFF)
@@ -70,6 +70,11 @@ set_package_properties(KF5Baloo PROPERTIES DESCRIPTION "File Searching"
                        TYPE RECOMMENDED
                        PURPOSE "Needed for the File Search runner."
                       )
+find_package(Qalculate REQUIRED)
+set_package_properties(Qalculate PROPERTIES DESCRIPTION "Qalculate Library"
+                       URL "https://qalculate.github.io/"
+                       PURPOSE "Needed for precise computation in the calculator runner."
+                      )
 
 find_package(KWinDBusInterface CONFIG REQUIRED)
 
@@ -124,7 +129,7 @@ endif()
 find_package(QtWaylandScanner REQUIRED)
 find_package(Qt5WaylandClient)
 find_package(Qt5XkbCommonSupport)
-find_package(PlasmaWaylandProtocols REQUIRED)
+find_package(PlasmaWaylandProtocols 1.5 REQUIRED)
 find_package(Wayland REQUIRED COMPONENTS Client)
 
 if(FONTCONFIG_FOUND)
@@ -183,6 +188,10 @@ ecm_find_qmlmodule(org.kde.prison 1.0)
 include(ConfigureChecks.cmake)
 
 include_directories("${CMAKE_CURRENT_BINARY_DIR}")
+
+add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f00)
+add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055800)
+add_definitions(-DKITEMMODELS_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054F00)
 
 configure_file(config-workspace.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-workspace.h)
 configure_file(config-unix.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-unix.h )

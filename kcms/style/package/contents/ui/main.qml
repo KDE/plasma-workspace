@@ -30,7 +30,7 @@ KCM.GridViewKCM {
 
     Component.onCompleted: {
         // The widget thumbnails are a bit more elaborate and need more room, especially when translated
-        view.implicitCellWidth = Kirigami.Units.gridUnit * 20;
+        view.implicitCellWidth = Kirigami.Units.gridUnit * 21;
         view.implicitCellHeight = Kirigami.Units.gridUnit * 15;
     }
 

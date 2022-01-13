@@ -26,7 +26,7 @@ void FilterProxyModel::setQuery(const QString &query)
     if (m_query != query) {
         m_query = query;
         invalidateFilter();
-        emit queryChanged();
+        Q_EMIT queryChanged();
     }
 }
 

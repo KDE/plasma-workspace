@@ -11,7 +11,7 @@ kcmutils_generate_module_data(
 )
 
 kconfig_add_kcfg_files(kcm_feedback_PART_SRCS feedbacksettings.kcfgc GENERATE_MOC)
-kcoreaddons_add_plugin(kcm_feedback SOURCES ${kcm_feedback_PART_SRCS} INSTALL_NAMESPACE "kcms")
+kcoreaddons_add_plugin(kcm_feedback SOURCES ${kcm_feedback_PART_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
 
 target_link_libraries(kcm_feedback
     KF5::I18n
@@ -20,8 +20,6 @@ target_link_libraries(kcm_feedback
     KUserFeedbackCore
 )
 
-kcoreaddons_desktop_to_json(kcm_feedback "kcm_feedback.desktop")
-
 install(FILES feedbacksettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
-install(FILES kcm_feedback.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR})
+install(FILES kcm_feedback.desktop  DESTINATION  ${KDE_INSTALL_APPDIR})
 kpackage_install_package(package kcm_feedback kcms)

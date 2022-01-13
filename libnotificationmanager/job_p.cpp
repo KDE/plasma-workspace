@@ -146,7 +146,7 @@ void JobPrivate::updateHasDetails()
 
     if (m_hasDetails != hasDetails) {
         m_hasDetails = hasDetails;
-        emit static_cast<Job *>(parent())->hasDetailsChanged();
+        Q_EMIT static_cast<Job *>(parent())->hasDetailsChanged();
     }
 }
 
@@ -211,10 +211,11 @@ QString JobPrivate::text() const
     }
 
     qCInfo(NOTIFICATIONMANAGER) << "Failed to generate job text for job with following properties:";
-    qCInfo(NOTIFICATIONMANAGER) << "  processedFiles =" << m_processedFiles << ", totalFiles =" << m_totalFiles
-                                << ", current file name =" << descriptionUrl().fileName() << ", destination url string =" << this->destUrl();
-    qCInfo(NOTIFICATIONMANAGER) << "label1 =" << m_descriptionLabel1 << ", value1 =" << m_descriptionValue1 << ", label2 =" << m_descriptionLabel2
-                                << ", value2 =" << m_descriptionValue2;
+    qCInfo(NOTIFICATIONMANAGER).nospace() << "  processedFiles = " << m_processedFiles << ", totalFiles = " << m_totalFiles;
+    qCInfo(NOTIFICATIONMANAGER).nospace() << "  current file name = " << descriptionUrl().fileName();
+    qCInfo(NOTIFICATIONMANAGER).nospace() << "  destination url = " << destUrl;
+    qCInfo(NOTIFICATIONMANAGER).nospace() << "  label1 = " << m_descriptionLabel1 << ", value1 = " << m_descriptionValue1;
+    qCInfo(NOTIFICATIONMANAGER).nospace() << "  label2 = " << m_descriptionLabel2 << ", value2 = " << m_descriptionValue2;
 
     return QString();
 }
@@ -230,7 +231,7 @@ void JobPrivate::delayedShow(std::chrono::milliseconds delay, ShowConditions sho
 
 void JobPrivate::kill()
 {
-    emit cancelRequested();
+    Q_EMIT cancelRequested();
 
     // In case the application doesn't respond, remove the job
     if (!m_killTimer) {
@@ -264,9 +265,9 @@ void JobPrivate::finish()
     // Unregister the dbus service since the client is done with it
     QDBusConnection::sessionBus().unregisterObject(m_objectPath.path());
 
-    // When user canceled transfer, remove it without notice
-    if (m_error == KIO::ERR_USER_CANCELED) {
-        emit closed();
+    // When user canceled job or a transient job finished successfully, remove it without notice
+    if (m_error == KIO::ERR_USER_CANCELED || (!m_error && m_transient)) {
+        Q_EMIT closed();
         return;
     }
 
@@ -333,7 +334,7 @@ void JobPrivate::setPercent(uint percent)
     const int percentage = static_cast<int>(percent);
     if (m_percentage != percentage) {
         m_percentage = percentage;
-        emit static_cast<Job *>(parent())->percentageChanged(percentage);
+        Q_EMIT static_cast<Job *>(parent())->percentageChanged(percentage);
     }
 }
 
@@ -361,7 +362,7 @@ bool JobPrivate::setDescriptionField(uint number, const QString &name, const QSt
         dirty |= updateField(value, m_descriptionValue2, &Job::descriptionValue2Changed);
     }
     if (dirty) {
-        emit static_cast<Job *>(parent())->descriptionUrlChanged();
+        Q_EMIT static_cast<Job *>(parent())->descriptionUrlChanged();
         updateHasDetails();
     }
 
@@ -423,7 +424,7 @@ void JobPrivate::update(const QVariantMap &properties)
         const QString infoMessage = it->toString();
         if (m_infoMessage != infoMessage) {
             m_infoMessage = it->toString();
-            emit infoMessageChanged();
+            Q_EMIT infoMessageChanged();
         }
     }
 

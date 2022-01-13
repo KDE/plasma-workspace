@@ -13,8 +13,6 @@ kconfig_add_kcfg_files(kcm_formats_PART_SRCS formatssettings.kcfgc GENERATE_MOC)
 
 add_library(kcm_formats MODULE ${kcm_formats_PART_SRCS})
 
-kcoreaddons_desktop_to_json(kcm_formats "package/metadata.desktop")
-
 target_link_libraries(kcm_formats
     Qt5::Core
     KF5::ConfigCore
@@ -25,6 +23,6 @@ target_link_libraries(kcm_formats
 
 
 ########### install files ###############
-install(TARGETS kcm_formats  DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms )
-install(FILES package/metadata.desktop RENAME kcm_formats.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(TARGETS kcm_formats  DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings)
+install(FILES kcm_formats.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 kpackage_install_package(package kcm_formats kcms)

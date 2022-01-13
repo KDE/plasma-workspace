@@ -5,66 +5,65 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.0
-import QtQuick.Layouts 1.1
+import QtQuick 2.15
+import QtQuick.Layouts 1.15
 
-import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
+import org.kde.plasma.core 2.1 as PlasmaCore
 
 RowLayout {
-    id: item
-    property alias icon: brightnessIcon.source
-    property alias label: brightnessLabel.text
-    property alias value: brightnessSlider.value
-    property alias maximumValue: brightnessSlider.to
-    property alias stepSize: brightnessSlider.stepSize
-    property alias showPercentage: brightnessPercent.visible
+    id: root
+
+    property alias icon: image.source
+    property alias label: title.text
+    property alias slider: control
+    property alias value: control.value
+    property alias maximumValue: control.to
+    property alias stepSize: control.stepSize
+    property alias showPercentage: percent.visible
+
+    readonly property real percentage: Math.round(100 * value / maximumValue)
+
     signal moved()
 
     spacing: PlasmaCore.Units.gridUnit
 
     PlasmaCore.IconItem {
-        id: brightnessIcon
+        id: image
         Layout.alignment: Qt.AlignTop
         Layout.preferredWidth: PlasmaCore.Units.iconSizes.medium
-        Layout.preferredHeight: width
+        Layout.preferredHeight: PlasmaCore.Units.iconSizes.medium
     }
 
-    Column {
-        id: brightnessColumn
+    ColumnLayout {
         Layout.fillWidth: true
         Layout.alignment: Qt.AlignTop
         spacing: 0
 
         RowLayout {
-            id: infoRow
-            width: parent.width
+            Layout.fillWidth: true
             spacing: PlasmaCore.Units.smallSpacing
 
-            function percentage(from, to, value) {
-                return Math.round(100 * (value - from) / (to - from));
-            }
-
             PlasmaComponents3.Label {
-                id: brightnessLabel
+                id: title
                 Layout.fillWidth: true
             }
 
             PlasmaComponents3.Label {
-                id: brightnessPercent
-                horizontalAlignment: Text.AlignRight
-                text: i18nc("Placeholder is brightness percentage", "%1%", infoRow.percentage(0, brightnessSlider.to, brightnessSlider.value))
+                id: percent
+                Layout.alignment: Qt.AlignRight
+                text: i18nc("Placeholder is brightness percentage", "%1%", root.percentage)
             }
         }
 
         PlasmaComponents3.Slider {
-            id: brightnessSlider
-            width: parent.width
+            id: control
+            Layout.fillWidth: true
             // Don't allow the slider to turn off the screen
             // Please see https://git.reviewboard.kde.org/r/122505/ for more information
             from: to > 100 ? 1 : 0
             stepSize: 1
-            onMoved: item.moved()
+            onMoved: root.moved()
         }
     }
 }

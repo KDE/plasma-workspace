@@ -32,6 +32,7 @@ set (plasma_shell_SRCS
     panelview.cpp
     panelconfigview.cpp
     panelshadows.cpp
+    primaryoutputwatcher.cpp
     shellcorona.cpp
     standaloneappcorona.cpp
     osd.cpp
@@ -49,6 +50,11 @@ if (TARGET KUserFeedbackCore)
         userfeedback.cpp
     )
 endif()
+
+ecm_add_qtwayland_client_protocol(plasma_shell_SRCS
+    PROTOCOL ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-primary-output-v1.xml
+    BASENAME kde-primary-output-v1
+)
 
 set(krunner_xml ${plasma-workspace_SOURCE_DIR}/krunner/dbus/org.kde.krunner.App.xml)
 qt_add_dbus_interface(plasma_shell_SRCS ${krunner_xml} krunner_interface)
@@ -79,6 +85,7 @@ target_link_libraries(plasmashell
  KF5::WaylandClient
  KF5::Notifications
  PW::KWorkspace
+ Wayland::Client
 )
 if (TARGET KUserFeedbackCore)
     target_link_libraries(plasmashell KUserFeedbackCore)

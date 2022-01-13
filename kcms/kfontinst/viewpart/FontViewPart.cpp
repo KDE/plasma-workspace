@@ -155,11 +155,11 @@ bool CFontViewPart::openUrl(const QUrl &url)
     m_fontDetails = FC::decode(url);
     if (!m_fontDetails.family.isEmpty() || KFI_KIO_FONTS_PROTOCOL == url.scheme() || mostLocalUrl(url, m_frame).isLocalFile()) {
         setUrl(url);
-        emit started(nullptr);
+        Q_EMIT started(nullptr);
         setLocalFilePath(this->url().path());
         bool ret = openFile();
         if (ret) {
-            emit completed();
+            Q_EMIT completed();
         }
         return ret;
     } else {
@@ -203,7 +203,7 @@ void CFontViewPart::timeout()
     m_opening = true;
 
     if (!m_fontDetails.family.isEmpty()) {
-        emit setWindowCaption(FC::createName(m_fontDetails.family, m_fontDetails.styleInfo));
+        Q_EMIT setWindowCaption(FC::createName(m_fontDetails.family, m_fontDetails.styleInfo));
         fontFile = FC::getFile(url());
         fileIndex = FC::getIndex(url());
     } else if (isFonts) {
@@ -229,7 +229,7 @@ void CFontViewPart::timeout()
             }
             m_fontDetails.family = getFamily(udsEntry.stringValue(KIO::UDSEntry::UDS_NAME));
             m_fontDetails.styleInfo = udsEntry.numberValue(UDS_EXTRA_FC_STYLE);
-            emit setWindowCaption(udsEntry.stringValue(KIO::UDSEntry::UDS_NAME));
+            Q_EMIT setWindowCaption(udsEntry.stringValue(KIO::UDSEntry::UDS_NAME));
         } else {
             previewStatus(false);
             return;
@@ -281,7 +281,7 @@ void CFontViewPart::timeout()
     m_installButton->setEnabled(false);
 
     if (m_fontDetails.family.isEmpty()) {
-        emit setWindowCaption(url().toDisplayString());
+        Q_EMIT setWindowCaption(url().toDisplayString());
     } else {
         FcInitReinitialize();
     }
@@ -453,7 +453,7 @@ BrowserExtension::BrowserExtension(CFontViewPart *parent)
 void BrowserExtension::enablePrint(bool enable)
 {
     if (enable != isActionEnabled("print") && (!enable || !Misc::app(KFI_PRINTER).isEmpty())) {
-        emit enableAction("print", enable);
+        Q_EMIT enableAction("print", enable);
     }
 }
 

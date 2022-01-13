@@ -443,9 +443,9 @@ void CFontList::fontList(int pid, const QList<KFI::Families> &families)
 
         for (int i = 0; it != end; ++it, ++i) {
             fontsAdded(*it);
-            emit listingPercent(i * 100 / count);
+            Q_EMIT listingPercent(i * 100 / count);
         }
-        emit listingPercent(100);
+        Q_EMIT listingPercent(100);
     }
 }
 
@@ -464,13 +464,13 @@ void CFontList::load()
 
     setSlowUpdates(false);
 
-    emit layoutAboutToBeChanged();
+    Q_EMIT layoutAboutToBeChanged();
     //     beginRemoveRows(QModelIndex(), 0, m_families.count());
     m_families.clear();
     m_familyHash.clear();
     //     endRemoveRows();
-    emit layoutChanged();
-    emit listingPercent(0);
+    Q_EMIT layoutChanged();
+    Q_EMIT listingPercent(0);
 
     CJobRunner::startDbusService();
     CJobRunner::dbus()->list(FontInst::SYS_MASK | FontInst::USR_MASK, getpid());
@@ -767,7 +767,7 @@ void CFontList::addFonts(const FamilyCont &families, bool sys)
     //     bool emitLayout=!m_slowUpdates || m_families.isEmpty();
     //
     //     if(emitLayout)
-    //         emit layoutAboutToBeChanged();
+    //         Q_EMIT layoutAboutToBeChanged();
 
     FamilyCont::ConstIterator family(families.begin()), end(families.end());
     int famRowFrom = m_families.count();
@@ -813,13 +813,13 @@ void CFontList::addFonts(const FamilyCont &families, bool sys)
     }
 
     //     if(emitLayout)
-    //         emit layoutChanged();
+    //         Q_EMIT layoutChanged();
 }
 
 void CFontList::removeFonts(const FamilyCont &families, bool sys)
 {
     //     if(!m_slowUpdates)
-    //         emit layoutAboutToBeChanged();
+    //         Q_EMIT layoutAboutToBeChanged();
 
     FamilyCont::ConstIterator family(families.begin()), end(families.end());
     QSet<CFamilyItem *> modifiedFamilies;
@@ -879,7 +879,7 @@ void CFontList::removeFonts(const FamilyCont &families, bool sys)
     }
 
     //     if(!m_slowUpdates)
-    //         emit layoutChanged();
+    //         Q_EMIT layoutChanged();
 }
 
 CFamilyItem *CFontList::findFamily(const QString &familyName)
@@ -1259,7 +1259,7 @@ void CFontListSortFilterProxy::timeout()
         m_fcQuery->run(query);
     } else {
         invalidate();
-        emit refresh();
+        Q_EMIT refresh();
     }
 }
 
@@ -1267,7 +1267,7 @@ void CFontListSortFilterProxy::fcResults()
 {
     if (CFontFilter::CRIT_FONTCONFIG == m_filterCriteria) {
         invalidate();
-        emit refresh();
+        Q_EMIT refresh();
     }
 }
 
@@ -1589,7 +1589,7 @@ void CFontListView::selectionChanged(const QItemSelection &selected, const QItem
     if (m_model->slowUpdates()) {
         return;
     }
-    emit itemsSelected(getSelectedItems());
+    Q_EMIT itemsSelected(getSelectedItems());
 }
 
 QModelIndexList CFontListView::getSelectedItems()
@@ -1836,7 +1836,7 @@ void CFontListView::dropEvent(QDropEvent *event)
         }
 
         if (!kurls.isEmpty()) {
-            emit fontsDropped(kurls);
+            Q_EMIT fontsDropped(kurls);
         }
     }
 }

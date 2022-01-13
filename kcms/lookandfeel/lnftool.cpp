@@ -92,7 +92,7 @@ int main(int argc, char **argv)
             }
         }
 
-        KCMLookandFeel *kcm = new KCMLookandFeel(nullptr, QVariantList());
+        KCMLookandFeel *kcm = new KCMLookandFeel(nullptr, KPluginMetaData(), QVariantList());
         kcm->load();
         kcm->setResetDefaultLayout(parser.isSet(_resetLayout));
         kcm->lookAndFeelSettings()->setLookAndFeelPackage(requestedTheme);

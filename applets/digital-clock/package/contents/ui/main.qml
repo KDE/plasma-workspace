@@ -75,10 +75,10 @@ Item {
     Plasmoid.toolTipItem: Loader {
         id: tooltipLoader
 
-        Layout.minimumWidth: item ? item.width : 0
-        Layout.maximumWidth: item ? item.width : 0
-        Layout.minimumHeight: item ? item.height : 0
-        Layout.maximumHeight: item ? item.height : 0
+        Layout.minimumWidth: item ? item.implicitWidth : 0
+        Layout.maximumWidth: item ? item.implicitWidth : 0
+        Layout.minimumHeight: item ? item.implicitHeight : 0
+        Layout.maximumHeight: item ? item.implicitHeight : 0
 
         source: "Tooltip.qml"
     }
@@ -110,11 +110,11 @@ Item {
     }
 
     function action_clockkcm() {
-        KCMShell.openSystemSettings("clock");
+        KCMShell.openSystemSettings("kcm_clock");
     }
 
     function action_formatskcm() {
-        KCMShell.openSystemSettings("formats");
+        KCMShell.openSystemSettings("kcm_formats");
     }
 
     Component.onCompleted: {
@@ -122,11 +122,11 @@ Item {
         ClipboardMenu.setupMenu(plasmoid.action("clipboard"));
 
         root.initTimezones();
-        if (KCMShell.authorize("clock.desktop").length > 0) {
-            plasmoid.setAction("clockkcm", i18n("Adjust Date and Time…"), "preferences-system-time");
+        if (KCMShell.authorize("kcm_clock.desktop").length > 0) {
+            plasmoid.setAction("clockkcm", i18n("Adjust Date and Time…"), "clock");
         }
-        if (KCMShell.authorize("formats.desktop").length > 0) {
-            plasmoid.setAction("formatskcm", i18n("Set Time Format…"));
+        if (KCMShell.authorize("kcm_formats.desktop").length > 0) {
+            plasmoid.setAction("formatskcm", i18n("Set Time Format…"), "gnumeric-format-thousand-separator");
         }
 
         // Set the list of enabled plugins from config

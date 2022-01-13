@@ -13,6 +13,4 @@ target_link_libraries (plasma_engine_dict
   Qt::Network
 )
 
-kcoreaddons_desktop_to_json(plasma_engine_dict plasma-dataengine-dict.desktop)
-
 install(TARGETS plasma_engine_dict DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)

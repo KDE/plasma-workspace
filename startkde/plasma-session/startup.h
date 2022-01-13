@@ -9,6 +9,7 @@
 #pragma once
 
 #include <KJob>
+#include <QEventLoopLocker>
 #include <QObject>
 #include <QProcessEnvironment>
 
@@ -21,6 +22,16 @@ public:
     Startup(QObject *parent);
     void upAndRunning(const QString &msg);
     void finishStartup();
+
+    static Startup *self()
+    {
+        Q_ASSERT(s_self);
+        return s_self;
+    }
+
+    bool startDetached(const QString &program, const QStringList &args);
+    bool startDetached(QProcess *process);
+
 public Q_SLOTS:
     // alternatively we could drop this and have a rule that we /always/ launch everything through klauncher
     // need resolution from frameworks discussion on kdeinit
@@ -28,6 +39,10 @@ public Q_SLOTS:
 
 private:
     void autoStart(int phase);
+
+    QVector<QProcess *> m_processes;
+    QScopedPointer<QEventLoopLocker> m_lock;
+    static Startup *s_self;
 };
 
 class SleepJob : public KJob

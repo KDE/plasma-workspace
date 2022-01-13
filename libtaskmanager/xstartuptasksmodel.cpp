@@ -127,7 +127,7 @@ void XStartupTasksModel::Private::loadConfig()
                 startupData.insert(id.id(), data);
                 launcherUrls.insert(id.id(), launcherUrl(data));
                 QModelIndex idx = q->index(row);
-                emit q->dataChanged(idx, idx);
+                Q_EMIT q->dataChanged(idx, idx);
             }
         });
     }
@@ -249,6 +249,8 @@ QVariant XStartupTasksModel::data(const QModelIndex &index, int role) const
         return QVariantList() << QVariant(data.desktop());
     } else if (role == IsOnAllVirtualDesktops) {
         return (data.desktop() == 0);
+    } else if (role == CanLaunchNewInstance) {
+        return false;
     }
 
     return QVariant();
