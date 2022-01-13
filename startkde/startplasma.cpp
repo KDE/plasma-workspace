@@ -518,20 +518,19 @@ bool hasSystemdService(const QString &serviceName)
 bool useSystemdBoot()
 {
     auto config = KSharedConfig::openConfig(QStringLiteral("startkderc"), KConfig::NoGlobals);
-    const QString configValue = config->group(QStringLiteral("General")).readEntry("systemdBoot", QStringLiteral("false")).toLower();
+    const QString configValue = config->group(QStringLiteral("General")).readEntry("systemdBoot", QStringLiteral("true")).toLower();
 
     if (configValue == QLatin1String("false")) {
-        return false;
-    }
-
-    if (!hasSystemdService(QStringLiteral("plasma-workspace@.target"))) {
-        qWarning() << "Systemd boot requested, but plasma services were not found";
         return false;
     }
 
     if (configValue == QLatin1String("force")) {
         qInfo() << "Systemd boot forced";
         return true;
+    }
+
+    if (!hasSystemdService(QStringLiteral("plasma-workspace@.target"))) {
+        return false;
     }
 
     // xdg-desktop-autostart.target is shipped with an systemd 246 and provides a generator
