@@ -129,7 +129,7 @@ endif()
 find_package(QtWaylandScanner REQUIRED)
 find_package(Qt5WaylandClient)
 find_package(Qt5XkbCommonSupport)
-find_package(PlasmaWaylandProtocols 1.5 REQUIRED)
+find_package(PlasmaWaylandProtocols 1.6 REQUIRED)
 find_package(Wayland REQUIRED COMPONENTS Client)
 
 if(FONTCONFIG_FOUND)
