@@ -42,4 +42,5 @@ private:
     void createMultiplexer();
 
     QPointer<Multiplexer> m_multiplexer;
+    QSet<QString> m_pendingPlayers;
 };

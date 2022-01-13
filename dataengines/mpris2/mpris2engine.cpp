@@ -118,6 +118,11 @@ void Mpris2Engine::initialFetchFinished(PlayerContainer *container)
     }
 
     addSource(container);
+    /**
+     * Now containerForSource will return a valid container for the container name, so the container name
+     * can be safely removed from the pending list.
+     */
+    m_pendingPlayers.remove(container->objectName());
     if (m_multiplexer) {
         m_multiplexer.data()->addPlayer(container);
     }
@@ -126,6 +131,7 @@ void Mpris2Engine::initialFetchFinished(PlayerContainer *container)
 void Mpris2Engine::initialFetchFailed(PlayerContainer *container)
 {
     qCWarning(MPRIS2) << "Failed to find working MPRIS2 interface for" << container->dbusAddress();
+    m_pendingPlayers.remove(container->objectName());
     container->deleteLater();
 }
 
@@ -158,6 +164,17 @@ void Mpris2Engine::serviceNameFetchFinished(QDBusPendingCallWatcher *watcher)
 
 void Mpris2Engine::addMediaPlayer(const QString &serviceName, const QString &sourceName)
 {
+    /**
+     * It's possible that a container createdin `Mpris2Engine::serviceNameFetchFinished`
+     * has not emitted `PlayerContainer::initialFetchFinished` yet, but
+     * Mpris2Engine::serviceOwnerChanged has already created a container with the
+     * same name.
+     */
+    if (m_pendingPlayers.contains(sourceName)) {
+        return;
+    }
+
+    m_pendingPlayers.insert(sourceName);
     PlayerContainer *container = new PlayerContainer(serviceName, this);
     container->setObjectName(sourceName);
     connect(container, &PlayerContainer::initialFetchFinished, this, &Mpris2Engine::initialFetchFinished);
