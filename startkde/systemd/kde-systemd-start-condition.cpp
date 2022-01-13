@@ -12,6 +12,14 @@
 int main(int argc, char **argv)
 {
     QCoreApplication app(argc, argv);
+
+    // If invoked on gnome we should always return success
+    // this is because a desktop file that has X-KDE-AutostartCondition
+    // probably has an X-Gnome- equivalent and we only want one to run
+    // this would match non systemd behaviour
+    if (!qEnvironmentVariable("XDG_CURRENT_DESKTOP").split(QLatin1Char(':')).contains("kde", Qt::CaseInsensitive)) {
+        return 0;
+    }
     QCommandLineParser parser;
     parser.setApplicationDescription(QStringLiteral("Checks start condition for a KDE systemd service"));
     parser.addHelpOption();
