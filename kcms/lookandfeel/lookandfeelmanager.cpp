@@ -27,6 +27,19 @@
 LookAndFeelManager::LookAndFeelManager(QObject *parent)
     : QObject(parent)
     , m_data(new LookAndFeelData(this))
+    , m_applyColors(true)
+    , m_applyWidgetStyle(true)
+    , m_applyIcons(true)
+    , m_applyPlasmaTheme(true)
+    , m_applyCursors(true)
+    , m_applyWindowSwitcher(true)
+    , m_applyDesktopSwitcher(true)
+    , m_applyWindowPlacement(true)
+    , m_applyShellPackage(true)
+    , m_resetDefaultLayout(false)
+    , m_applyLatteLayout(false)
+    , m_applyWindowDecoration(true)
+    , m_plasmashellChanged(false)
 {
     m_applyLatteLayout = (KService::serviceByDesktopName("org.kde.latte-dock") != nullptr);
 }

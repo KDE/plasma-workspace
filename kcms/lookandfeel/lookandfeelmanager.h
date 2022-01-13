@@ -93,20 +93,20 @@ private:
     QStringList m_cursorSearchPaths;
     LookAndFeelData *const m_data;
     Mode m_mode = Mode::Apply;
-    bool m_applyColors : 1 = true;
-    bool m_applyWidgetStyle : 1 = true;
-    bool m_applyIcons : 1 = true;
-    bool m_applyPlasmaTheme : 1 = true;
-    bool m_applyCursors : 1 = true;
-    bool m_applyWindowSwitcher : 1 = true;
-    bool m_applyDesktopSwitcher : 1 = true;
-    bool m_applyWindowPlacement : 1 = true;
-    bool m_applyShellPackage : 1 = true;
-    bool m_resetDefaultLayout : 1 = false;
-    bool m_applyLatteLayout : 1 = false;
-    bool m_applyWindowDecoration : 1 = true;
+    bool m_applyColors : 1;
+    bool m_applyWidgetStyle : 1;
+    bool m_applyIcons : 1;
+    bool m_applyPlasmaTheme : 1;
+    bool m_applyCursors : 1;
+    bool m_applyWindowSwitcher : 1;
+    bool m_applyDesktopSwitcher : 1;
+    bool m_applyWindowPlacement : 1;
+    bool m_applyShellPackage : 1;
+    bool m_resetDefaultLayout : 1;
+    bool m_applyLatteLayout : 1;
+    bool m_applyWindowDecoration : 1;
 
-    bool m_plasmashellChanged = false;
+    bool m_plasmashellChanged : 1;
 };
 
 #endif // LOOKANDFEELMANAGER_H
