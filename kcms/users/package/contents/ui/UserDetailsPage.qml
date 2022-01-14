@@ -299,8 +299,12 @@ SimpleKCM {
                         Layout.preferredWidth: Layout.preferredHeight
 
                         Kirigami.Heading {
-                            anchors.centerIn: parent
+                            anchors.fill: parent
+                            anchors.margins: Kirigami.Units.smallSpacing
                             font.pixelSize: Kirigami.Units.gridUnit * 4
+                            fontSizeMode: Text.Fit
+                            horizontalAlignment: Text.AlignHCenter
+                            verticalAlignment: Text.AlignVCenter
                             text: kcm.initializeString(user.realName)
                         }
 
