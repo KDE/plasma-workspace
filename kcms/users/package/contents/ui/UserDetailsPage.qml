@@ -273,8 +273,8 @@ SimpleKCM {
                             anchors.centerIn: parent
 
                             Kirigami.Icon {
-                                width: Kirigami.Units.gridUnit * 4
-                                height: Kirigami.Units.gridUnit * 4
+                                implicitWidth: Kirigami.Units.gridUnit * 4
+                                implicitHeight: Kirigami.Units.gridUnit * 4
                                 source: "document-open"
 
                                 Layout.alignment: Qt.AlignHCenter
