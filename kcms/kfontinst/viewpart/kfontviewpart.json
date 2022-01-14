@@ -14,7 +14,6 @@
         "Name[ar]": "عارض الخط",
         "Name[az]": "Şriftə baxış vasitəsi",
         "Name[ca]": "Visor de tipus de lletra",
-        "Name[cs]": "Prohlížeč písem",
         "Name[da]": "Skrifttypevisning",
         "Name[de]": "Schriftartenbetrachter",
         "Name[en_GB]": "Font Viewer",
@@ -33,7 +32,6 @@
         "Name[lt]": "Šriftų žiūryklė",
         "Name[ml]": "അക്ഷരസഞ്ചയ ദര്‍ശിനി",
         "Name[nl]": "Lettertypeweergave",
-        "Name[nn]": "Skriftvisar",
         "Name[pa]": "ਫੋਂਟ ਦਰਸ਼ਕ",
         "Name[pl]": "Przeglądarka czcionek",
         "Name[pt]": "Visualizador de Tipos de Letra",
@@ -46,7 +44,6 @@
         "Name[ta]": "எழுத்துரு காட்டி",
         "Name[tr]": "Yazı Tipi Görüntüleyici",
         "Name[uk]": "Переглядач шрифтів",
-        "Name[vi]": "Trình xem phông chữ",
         "Name[x-test]": "xxFont Viewerxx",
         "Name[zh_CN]": "字体查看器"
     },

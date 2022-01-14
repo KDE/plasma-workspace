@@ -7,9 +7,9 @@
                 "Name[ar]": "Alexander Lohnau",
                 "Name[az]": "Alexander Lohnau",
                 "Name[ca]": "Alexander Lohnau",
-                "Name[cs]": "Alexander Lohnau",
                 "Name[en_GB]": "Alexander Lohnau",
                 "Name[es]": "Alexander Lohnau",
+                "Name[fi]": "Alexander Lohnau",
                 "Name[fr]": "Alexander Lohnau",
                 "Name[hu]": "Alexander Lohnau",
                 "Name[ia]": "Alexander Lohnau",
@@ -22,7 +22,6 @@
                 "Name[sl]": "Alexander Lohnau",
                 "Name[sv]": "Alexander Lohnau",
                 "Name[uk]": "Alexander Lohnau",
-                "Name[vi]": "Alexander Lohnau",
                 "Name[x-test]": "xxAlexander Lohnauxx",
                 "Name[zh_CN]": "Alexander Lohnau"
             }
@@ -33,6 +32,7 @@
         "Description[ca]": "Mostra informació d'ajuda quan als executors en teclejar «?» o «ajuda»",
         "Description[en_GB]": "Shows help information about runners when typing \"?\" or \"help\"",
         "Description[es]": "Muestra información de ayuda sobre los lanzadores cuando se escribe «?» o «ayuda»",
+        "Description[fi]": "Näyttää suorittimen ohjeen kirjoitettaessa ”?” tai ”help”",
         "Description[fr]": "Affiche des informations d'aide sur les lanceurs en saisissant « ? » ou « aide ».",
         "Description[hu]": "Súgóinformációk megjelenítése az indítókról „?” vagy „súgó” gépelésekor",
         "Description[ia]": "Monstra information de adjuta re executores quando on typa \"?\" o \"help\"",
@@ -45,7 +45,6 @@
         "Description[sl]": "Prikaži informacije za pomoč o zagonih kadar vtipkate \"?\" ali \"help\"",
         "Description[sv]": "Visar hjälpinformation om körprogram när \"?\" eller \"hjälp\" skrivs in",
         "Description[uk]": "Показує довідкові відомості щодо засобів запуску при введенні «?» або «help»",
-        "Description[vi]": "Hiện thông tin trợ giúp về các trình chạy khi gõ \"?\" hoặc \"help\"",
         "Description[x-test]": "xxShows help information about runners when typing \"?\" or \"help\"xx",
         "Description[zh_CN]": "输入“?”或“help”时显示关于运行程序的帮助信息",
         "EnabledByDefault": true,
@@ -69,7 +68,6 @@
         "Name[sl]": "Pomoč za Runner",
         "Name[sv]": "Hjälp om Kör program",
         "Name[uk]": "Засіб надання довідки",
-        "Name[vi]": "Trình chạy \"Trợ giúp\"",
         "Name[x-test]": "xxHelp Runnerxx",
         "Name[zh_CN]": "帮助运行程序",
         "ServiceTypes": [
