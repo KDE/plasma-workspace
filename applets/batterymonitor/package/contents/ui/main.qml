@@ -220,7 +220,30 @@ Item {
     }
 
     Plasmoid.compactRepresentation: CompactRepresentation {
-        hasBatteries: batterymonitor.hasBatteries
+        batteries: batterymonitor.batteries
+
+        onWheel: {
+            const delta = wheel.angleDelta.y || wheel.angleDelta.x
+
+            const maximumBrightness = batterymonitor.maximumScreenBrightness
+            // Don't allow the UI to turn off the screen
+            // Please see https://git.reviewboard.kde.org/r/122505/ for more information
+            const minimumBrightness = (maximumBrightness > 100 ? 1 : 0)
+            const stepSize = Math.max(1, maximumBrightness / 20)
+
+            let newBrightness;
+            if (Math.abs(delta) < 120) {
+                // Touchpad scrolling
+                brightnessError += delta * stepSize / 120;
+                const change = Math.round(brightnessError);
+                brightnessError -= change;
+                newBrightness = batterymonitor.screenBrightness + change;
+            } else {
+                // Discrete/wheel scrolling
+                newBrightness = Math.round(batterymonitor.screenBrightness/stepSize + delta/120) * stepSize;
+            }
+            batterymonitor.screenBrightness = Math.max(minimumBrightness, Math.min(maximumBrightness, newBrightness));
+        }
     }
 
 

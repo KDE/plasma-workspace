@@ -18,34 +18,12 @@ MouseArea {
     property real itemSize: Math.min(root.height, root.width/view.count)
     readonly property bool isConstrained: plasmoid.formFactor === PlasmaCore.Types.Vertical || plasmoid.formFactor === PlasmaCore.Types.Horizontal
     property real brightnessError: 0
-    property bool hasBatteries: true
+    property QtObject batteries
+    property bool hasBatteries: batteries.count > 0
 
     hoverEnabled: true
 
     onClicked: plasmoid.expanded = !plasmoid.expanded
-
-    onWheel: {
-        const delta = wheel.angleDelta.y || wheel.angleDelta.x
-
-        const maximumBrightness = batterymonitor.maximumScreenBrightness
-        // Don't allow the UI to turn off the screen
-        // Please see https://git.reviewboard.kde.org/r/122505/ for more information
-        const minimumBrightness = (maximumBrightness > 100 ? 1 : 0)
-        const stepSize = Math.max(1, maximumBrightness / 20)
-
-        let newBrightness;
-        if (Math.abs(delta) < 120) {
-            // Touchpad scrolling
-            brightnessError += delta * stepSize / 120;
-            const change = Math.round(brightnessError);
-            brightnessError -= change;
-            newBrightness = batterymonitor.screenBrightness + change;
-        } else {
-            // Discrete/wheel scrolling
-            newBrightness = Math.round(batterymonitor.screenBrightness/stepSize + delta/120) * stepSize;
-        }
-        batterymonitor.screenBrightness = Math.max(minimumBrightness, Math.min(maximumBrightness, newBrightness));
-    }
 
     // "No Batteries" case
     PlasmaCore.IconItem {
@@ -63,7 +41,7 @@ MouseArea {
         Repeater {
             id: view
 
-            model: root.isConstrained ? 1 : batterymonitor.batteries
+            model: root.isConstrained ? 1 : root.batteries
 
             Item {
                 id: batteryContainer
