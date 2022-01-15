@@ -237,9 +237,9 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
         updateBatteryNames();
         updateOverallBattery();
 
+        setData(QStringLiteral("Battery"), QStringLiteral("Sources"), batterySources);
         setData(QStringLiteral("Battery"), QStringLiteral("Has Battery"), !batterySources.isEmpty());
         if (!batterySources.isEmpty()) {
-            setData(QStringLiteral("Battery"), QStringLiteral("Sources"), batterySources);
             QDBusMessage msg = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
                                                               QStringLiteral("/org/kde/Solid/PowerManagement"),
                                                               SOLID_POWERMANAGEMENT_SERVICE,
