@@ -208,7 +208,7 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
         uint index = 0;
         QStringList batterySources;
 
-        foreach (const Solid::Device &deviceBattery, listBattery) {
+        for (const Solid::Device &deviceBattery : listBattery) {
             const Solid::Battery *battery = deviceBattery.as<Solid::Battery>();
 
             const QString source = QStringLiteral("Battery%1").arg(index++);
@@ -580,7 +580,7 @@ void PowermanagementEngine::updateBatteryPowerSupplyState(bool newState, const Q
 void PowermanagementEngine::updateBatteryNames()
 {
     uint unnamedBatteries = 0;
-    foreach (QString source, m_batterySources) {
+    for (const QString &source : std::as_const(m_batterySources)) {
         DataContainer *batteryDataContainer = containerForSource(source);
         if (batteryDataContainer) {
             const QString batteryVendor = batteryDataContainer->data()[QStringLiteral("Vendor")].toString();
@@ -621,7 +621,7 @@ void PowermanagementEngine::updateOverallBattery()
     double totalPercentage = 0;
     int count = 0;
 
-    foreach (const Solid::Device &deviceBattery, listBattery) {
+    for (const Solid::Device &deviceBattery : listBattery) {
         const Solid::Battery *battery = deviceBattery.as<Solid::Battery>();
 
         if (battery && battery->isPowerSupply()) {
