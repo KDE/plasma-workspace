@@ -68,7 +68,7 @@ private Q_SLOTS:
 
 private:
     void populateApplicationData(const QString &name, QString *prettyName, QString *icon);
-    QString batteryType(const Solid::Battery *battery) const;
+    QString batteryTypeToString(const Solid::Battery *battery) const;
     QStringList basicSourceNames() const;
     QString batteryStateToString(int newState) const;
 

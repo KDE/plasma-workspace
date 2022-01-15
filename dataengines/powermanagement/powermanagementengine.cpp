@@ -231,7 +231,7 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
             setData(source, QStringLiteral("Vendor"), deviceBattery.vendor());
             setData(source, QStringLiteral("Product"), deviceBattery.product());
             setData(source, QStringLiteral("Capacity"), battery->capacity());
-            setData(source, QStringLiteral("Type"), batteryType(battery));
+            setData(source, QStringLiteral("Type"), batteryTypeToString(battery));
         }
 
         updateBatteryNames();
@@ -474,7 +474,7 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
     return true;
 }
 
-QString PowermanagementEngine::batteryType(const Solid::Battery *battery) const
+QString PowermanagementEngine::batteryTypeToString(const Solid::Battery *battery) const
 {
     switch (battery->type()) {
     case Solid::Battery::PrimaryBattery:
@@ -752,7 +752,7 @@ void PowermanagementEngine::deviceAdded(const QString &udi)
             setData(source, QStringLiteral("Vendor"), device.vendor());
             setData(source, QStringLiteral("Product"), device.product());
             setData(source, QStringLiteral("Capacity"), battery->capacity());
-            setData(source, QStringLiteral("Type"), batteryType(battery));
+            setData(source, QStringLiteral("Type"), batteryTypeToString(battery));
 
             setData(QStringLiteral("Battery"), QStringLiteral("Sources"), sourceNames);
             setData(QStringLiteral("Battery"), QStringLiteral("Has Battery"), !sourceNames.isEmpty());
