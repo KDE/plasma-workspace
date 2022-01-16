@@ -479,36 +479,25 @@ QString PowermanagementEngine::batteryType(const Solid::Battery *battery) const
     switch (battery->type()) {
     case Solid::Battery::PrimaryBattery:
         return QStringLiteral("Battery");
-        break;
     case Solid::Battery::UpsBattery:
         return QStringLiteral("Ups");
-        break;
     case Solid::Battery::MonitorBattery:
         return QStringLiteral("Monitor");
-        break;
     case Solid::Battery::MouseBattery:
         return QStringLiteral("Mouse");
-        break;
     case Solid::Battery::KeyboardBattery:
         return QStringLiteral("Keyboard");
-        break;
     case Solid::Battery::PdaBattery:
         return QStringLiteral("Pda");
-        break;
     case Solid::Battery::PhoneBattery:
         return QStringLiteral("Phone");
-        break;
     case Solid::Battery::GamingInputBattery:
         return QStringLiteral("GamingInput");
-        break;
     case Solid::Battery::BluetoothBattery:
         return QStringLiteral("Bluetooth");
-        break;
     default:
         return QStringLiteral("Unknown");
     }
-
-    return QStringLiteral("Unknown");
 }
 
 bool PowermanagementEngine::updateSourceEvent(const QString &source)
