@@ -126,15 +126,4 @@ Kirigami.AbstractApplicationWindow {
         Keys.onEscapePressed: root.reject()
         focus: true
     }
-
-    Component {
-        id: mobileDialog
-        MobileSystemDialog {
-        }
-    }
-    Component {
-        id: desktopDialog
-        DesktopSystemDialog {
-        }
-    }
 }
