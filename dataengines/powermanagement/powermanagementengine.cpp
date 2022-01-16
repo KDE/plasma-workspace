@@ -630,13 +630,13 @@ void PowermanagementEngine::updateOverallBattery()
         // Energy is sometimes way off causing us to show rubbish; this is a UPower issue
         // but anyway having just one battery and the tooltip showing strange readings
         // compared to the popup doesn't look polished.
-        setData(QStringLiteral("Battery"), QStringLiteral("Percent"), totalPercentage);
+        setData(QStringLiteral("Battery"), QStringLiteral("Percent"), qRound(totalPercentage));
     } else if (totalEnergy > 0) {
         setData(QStringLiteral("Battery"), QStringLiteral("Percent"), qRound(energy / totalEnergy * 100));
     } else if (count > 0) { // UPS don't have energy, see Bug 348588
         setData(QStringLiteral("Battery"), QStringLiteral("Percent"), qRound(totalPercentage / static_cast<qreal>(count)));
     } else {
-        setData(QStringLiteral("Battery"), QStringLiteral("Percent"), 0);
+        setData(QStringLiteral("Battery"), QStringLiteral("Percent"), int(0));
     }
 
     if (hasCumulative) {
