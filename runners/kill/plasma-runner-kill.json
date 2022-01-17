@@ -57,7 +57,6 @@
         "Description[zh_CN]": "停止正在运行的应用程序",
         "EnabledByDefault": true,
         "Icon": "application-exit",
-        "Id": "Kill Runner",
         "License": "LGPL",
         "Name": "Terminate Applications",
         "Name[ar]": "أنهِ التطبيقات",
