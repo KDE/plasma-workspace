@@ -4,6 +4,8 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+#define PLASMA_DISABLE_DEPRECATED_BEFORE_AND_AT 0
+
 #include "containmentinterface.h"
 
 #include <Plasma/Applet>
@@ -53,7 +55,7 @@ bool ContainmentInterface::mayAddLauncher(QObject *appletInterface, ContainmentI
 
     switch (target) {
     case Desktop: {
-        containment = corona->containmentForScreen(containment->screen(), QString(), QString());
+        containment = corona->containmentForScreen(containment->screen());
 
         if (containment) {
             return (containment->immutability() == Plasma::Types::Mutable);
@@ -115,7 +117,7 @@ void ContainmentInterface::addLauncher(QObject *appletInterface, ContainmentInte
 
     switch (target) {
     case Desktop: {
-        containment = corona->containmentForScreen(containment->screen(), QString(), QString());
+        containment = corona->containmentForScreen(containment->screen());
 
         if (!containment) {
             return;
@@ -187,7 +189,7 @@ QObject *ContainmentInterface::screenContainment(QObject *appletInterface)
         return nullptr;
     }
 
-    return corona->containmentForScreen(containment->screen(), QString(), QString());
+    return corona->containmentForScreen(containment->screen());
 }
 
 bool ContainmentInterface::screenContainmentMutable(QObject *appletInterface)
