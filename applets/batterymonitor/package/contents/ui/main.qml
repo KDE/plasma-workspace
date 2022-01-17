@@ -18,6 +18,81 @@ import "logic.js" as Logic
 
 Item {
     id: batterymonitor
+
+    property QtObject pmSource: PlasmaCore.DataSource {
+        id: pmSource
+        engine: "powermanagement"
+        connectedSources: sources
+        onSourceAdded: {
+            disconnectSource(source);
+            connectSource(source);
+        }
+        onSourceRemoved: {
+            disconnectSource(source);
+        }
+        onDataChanged: {
+            Logic.updateBrightness(batterymonitor, pmSource);
+            Logic.updateInhibitions(batterymonitor, pmSource);
+        }
+    }
+    property QtObject batteries: PlasmaCore.SortFilterModel {
+        id: batteries
+        filterRole: "Is Power Supply"
+        sortOrder: Qt.DescendingOrder
+        sourceModel: PlasmaCore.SortFilterModel {
+            sortRole: "Pretty Name"
+            sortOrder: Qt.AscendingOrder
+            sortCaseSensitivity: Qt.CaseInsensitive
+            sourceModel: PlasmaCore.DataModel {
+                dataSource: pmSource
+                sourceFilter: "Battery[0-9]+"
+            }
+        }
+    }
+    property QtObject updateScreenBrightnessJob
+    property QtObject updateKeyboardBrightnessJob
+
+    readonly property bool isBrightnessAvailable: pmSource.data["PowerDevil"] && pmSource.data["PowerDevil"]["Screen Brightness Available"] ? true : false
+    readonly property bool isKeyboardBrightnessAvailable: pmSource.data["PowerDevil"] && pmSource.data["PowerDevil"]["Keyboard Brightness Available"] ? true : false
+    readonly property bool hasBatteries: batteries.count > 0 && pmSource.data["Battery"]["Has Cumulative"]
+    readonly property bool hasBrightness: isBrightnessAvailable || isKeyboardBrightnessAvailable
+    readonly property bool kcmAuthorized: KCMShell.authorize("powerdevilprofilesconfig.desktop").length > 0
+    readonly property bool kcmEnergyInformationAuthorized: KCMShell.authorize("kcm_energyinfo.desktop").length > 0
+    readonly property int maximumScreenBrightness: pmSource.data["PowerDevil"] ? pmSource.data["PowerDevil"]["Maximum Screen Brightness"] || 0 : 0
+    readonly property int maximumKeyboardBrightness: pmSource.data["PowerDevil"] ? pmSource.data["PowerDevil"]["Maximum Keyboard Brightness"] || 0 : 0
+    readonly property int remainingTime: Number(pmSource.data["Battery"]["Remaining msec"])
+
+    property bool powermanagementDisabled: false
+    property bool disableBrightnessUpdate: true
+    property int screenBrightness
+    property int keyboardBrightness
+
+    // List of active power management inhibitions (applications that are
+    // blocking sleep and screen locking).
+    //
+    // type: [{
+    //  Icon: string,
+    //  Name: string,
+    //  Reason: string,
+    // }]
+    property var inhibitions: []
+
+    function action_configure() {
+        KCMShell.openSystemSettings("kcm_powerdevilprofilesconfig");
+    }
+
+    function action_energyinformationkcm() {
+        KCMShell.openInfoCenter("kcm_energyinfo");
+    }
+
+    function action_showPercentage() {
+        if (!plasmoid.configuration.showPercentage) {
+            plasmoid.configuration.showPercentage = true;
+        } else {
+            plasmoid.configuration.showPercentage = false;
+        }
+    }
+
     Plasmoid.switchWidth: PlasmaCore.Units.gridUnit * 10
     Plasmoid.switchHeight: PlasmaCore.Units.gridUnit * 10
     Plasmoid.title: (hasBatteries && hasBrightness ? i18n("Battery and Brightness") :
@@ -39,9 +114,6 @@ Item {
 
         return PlasmaCore.Types.PassiveStatus;
     }
-
-    readonly property bool hasBatteries: batteries.count > 0 && pmSource.data["Battery"]["Has Cumulative"]
-    readonly property bool hasBrightness: isBrightnessAvailable || isKeyboardBrightnessAvailable
 
     Plasmoid.toolTipMainText: {
         if (!hasBatteries) {
@@ -95,33 +167,6 @@ Item {
 
     Plasmoid.icon: !hasBatteries ? "video-display-brightness" : "battery"
 
-    property bool disableBrightnessUpdate: true
-
-    property int screenBrightness
-    readonly property int maximumScreenBrightness: pmSource.data["PowerDevil"] ? pmSource.data["PowerDevil"]["Maximum Screen Brightness"] || 0 : 0
-
-    property int keyboardBrightness
-    readonly property int maximumKeyboardBrightness: pmSource.data["PowerDevil"] ? pmSource.data["PowerDevil"]["Maximum Keyboard Brightness"] || 0 : 0
-
-    readonly property int remainingTime: Number(pmSource.data["Battery"]["Remaining msec"])
-
-    property bool powermanagementDisabled: false
-
-    // List of active power management inhibitions (applications that are
-    // blocking sleep and screen locking).
-    //
-    // type: [{
-    //  Icon: string,
-    //  Name: string,
-    //  Reason: string,
-    // }]
-    property var inhibitions: []
-
-    readonly property bool kcmAuthorized: KCMShell.authorize("powerdevilprofilesconfig.desktop").length > 0
-
-    readonly property bool kcmEnergyInformationAuthorized: KCMShell.authorize("kcm_energyinfo.desktop").length > 0
-
-    property QtObject updateScreenBrightnessJob
     onScreenBrightnessChanged: {
         if (disableBrightnessUpdate) {
             return;
@@ -137,7 +182,6 @@ Item {
         });
     }
 
-    property QtObject updateKeyboardBrightnessJob
     onKeyboardBrightnessChanged: {
         if (disableBrightnessUpdate) {
             return;
@@ -151,72 +195,6 @@ Item {
         updateKeyboardBrightnessJob.finished.connect(job => {
             Logic.updateBrightness(batterymonitor, pmSource);
         });
-    }
-
-    function action_configure() {
-        KCMShell.openSystemSettings("kcm_powerdevilprofilesconfig");
-    }
-
-    function action_energyinformationkcm() {
-        KCMShell.openInfoCenter("kcm_energyinfo");
-    }
-
-    function action_showPercentage() {
-        if (!plasmoid.configuration.showPercentage) {
-            plasmoid.configuration.showPercentage = true;
-        } else {
-            plasmoid.configuration.showPercentage = false;
-        }
-    }
-
-    Component.onCompleted: {
-        Logic.updateBrightness(batterymonitor, pmSource);
-        Logic.updateInhibitions(batterymonitor, pmSource)
-
-        if (batterymonitor.kcmEnergyInformationAuthorized) {
-            plasmoid.setAction("energyinformationkcm", i18n("&Show Energy Information…"), "documentinfo");
-        }
-        plasmoid.setAction("showPercentage", i18n("Show Battery Percentage on Icon"), "format-number-percent");
-        plasmoid.action("showPercentage").checkable = true;
-        plasmoid.action("showPercentage").checked = Qt.binding(() =>
-            plasmoid !== null && plasmoid.configuration.showPercentage);
-
-        if (batterymonitor.kcmAuthorized) {
-            plasmoid.removeAction("configure");
-            plasmoid.setAction("configure", i18n("&Configure Energy Saving…"), "configure", "alt+d, s");
-        }
-    }
-
-    property QtObject pmSource: PlasmaCore.DataSource {
-        id: pmSource
-        engine: "powermanagement"
-        connectedSources: sources
-        onSourceAdded: {
-            disconnectSource(source);
-            connectSource(source);
-        }
-        onSourceRemoved: {
-            disconnectSource(source);
-        }
-        onDataChanged: {
-            Logic.updateBrightness(batterymonitor, pmSource);
-            Logic.updateInhibitions(batterymonitor, pmSource);
-        }
-    }
-
-    property QtObject batteries: PlasmaCore.SortFilterModel {
-        id: batteries
-        filterRole: "Is Power Supply"
-        sortOrder: Qt.DescendingOrder
-        sourceModel: PlasmaCore.SortFilterModel {
-            sortRole: "Pretty Name"
-            sortOrder: Qt.AscendingOrder
-            sortCaseSensitivity: Qt.CaseInsensitive
-            sourceModel: PlasmaCore.DataModel {
-                dataSource: pmSource
-                sourceFilter: "Battery[0-9]+"
-            }
-        }
     }
 
     Plasmoid.compactRepresentation: CompactRepresentation {
@@ -246,9 +224,6 @@ Item {
         }
     }
 
-
-    readonly property bool isBrightnessAvailable: pmSource.data["PowerDevil"] && pmSource.data["PowerDevil"]["Screen Brightness Available"] ? true : false
-    readonly property bool isKeyboardBrightnessAvailable: pmSource.data["PowerDevil"] && pmSource.data["PowerDevil"]["Keyboard Brightness Available"] ? true : false
     Plasmoid.fullRepresentation: PopupDialog {
         id: dialogItem
         Layout.minimumWidth: PlasmaCore.Units.iconSizes.medium * 9
@@ -335,6 +310,24 @@ Item {
                     notifications.startOperationCall(operation);
                 }
             });
+        }
+    }
+
+    Component.onCompleted: {
+        Logic.updateBrightness(batterymonitor, pmSource);
+        Logic.updateInhibitions(batterymonitor, pmSource)
+
+        if (batterymonitor.kcmEnergyInformationAuthorized) {
+            plasmoid.setAction("energyinformationkcm", i18n("&Show Energy Information…"), "documentinfo");
+        }
+        plasmoid.setAction("showPercentage", i18n("Show Battery Percentage on Icon"), "format-number-percent");
+        plasmoid.action("showPercentage").checkable = true;
+        plasmoid.action("showPercentage").checked = Qt.binding(() =>
+        plasmoid !== null && plasmoid.configuration.showPercentage);
+
+        if (batterymonitor.kcmAuthorized) {
+            plasmoid.removeAction("configure");
+            plasmoid.setAction("configure", i18n("&Configure Energy Saving…"), "configure", "alt+d, s");
         }
     }
 }
