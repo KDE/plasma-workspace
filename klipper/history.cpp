@@ -154,8 +154,8 @@ void History::cycleNext()
     }
 
     if (m_cycleStartUuid.isEmpty()) {
-        m_cycleStartUuid = m_model->index(0).data(Qt::UserRole + 1).toByteArray();
-    } else if (m_cycleStartUuid == m_model->index(1).data(Qt::UserRole + 1).toByteArray()) {
+        m_cycleStartUuid = m_model->index(0).data(HistoryModel::UuidRole).toByteArray();
+    } else if (m_cycleStartUuid == m_model->index(1).data(HistoryModel::UuidRole).toByteArray()) {
         // end of cycle
         return;
     }
@@ -170,7 +170,7 @@ void History::cyclePrev()
     }
     CycleBlocker blocker;
     m_model->moveBackToTop();
-    if (m_cycleStartUuid == m_model->index(0).data(Qt::UserRole + 1).toByteArray()) {
+    if (m_cycleStartUuid == m_model->index(0).data(HistoryModel::UuidRole).toByteArray()) {
         m_cycleStartUuid = QByteArray();
     }
 }
@@ -180,11 +180,11 @@ HistoryItemConstPtr History::nextInCycle() const
     if (m_model->hasIndex(1, 0)) {
         if (!m_cycleStartUuid.isEmpty()) {
             // check whether we are not at the end
-            if (m_cycleStartUuid == m_model->index(1).data(Qt::UserRole + 1).toByteArray()) {
+            if (m_cycleStartUuid == m_model->index(1).data(HistoryModel::UuidRole).toByteArray()) {
                 return HistoryItemConstPtr();
             }
         }
-        return m_model->index(1).data(Qt::UserRole).value<HistoryItemConstPtr>();
+        return m_model->index(1).data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>();
     }
     return HistoryItemConstPtr();
 }
@@ -194,7 +194,7 @@ HistoryItemConstPtr History::prevInCycle() const
     if (m_cycleStartUuid.isEmpty()) {
         return HistoryItemConstPtr();
     }
-    return m_model->index(m_model->rowCount() - 1).data(Qt::UserRole).value<HistoryItemConstPtr>();
+    return m_model->index(m_model->rowCount() - 1).data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>();
 }
 
 HistoryItemConstPtr History::find(const QByteArray &uuid) const
@@ -203,7 +203,7 @@ HistoryItemConstPtr History::find(const QByteArray &uuid) const
     if (!index.isValid()) {
         return HistoryItemConstPtr();
     }
-    return index.data(Qt::UserRole).value<HistoryItemConstPtr>();
+    return index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>();
 }
 
 bool History::empty() const
@@ -222,5 +222,5 @@ HistoryItemConstPtr History::first() const
     if (!index.isValid()) {
         return HistoryItemConstPtr();
     }
-    return index.data(Qt::UserRole).value<HistoryItemConstPtr>();
+    return index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>();
 }

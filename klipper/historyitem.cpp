@@ -97,7 +97,7 @@ QByteArray HistoryItem::next_uuid() const
         return m_uuid;
     }
     const int nextRow = (ownIndex.row() + 1) % m_model->rowCount();
-    return m_model->index(nextRow, 0).data(Qt::UserRole + 1).toByteArray();
+    return m_model->index(nextRow, 0).data(HistoryModel::UuidRole).toByteArray();
 }
 
 QByteArray HistoryItem::previous_uuid() const
@@ -112,7 +112,7 @@ QByteArray HistoryItem::previous_uuid() const
         return m_uuid;
     }
     const int nextRow = ((ownIndex.row() == 0) ? m_model->rowCount() : ownIndex.row()) - 1;
-    return m_model->index(nextRow, 0).data(Qt::UserRole + 1).toByteArray();
+    return m_model->index(nextRow, 0).data(HistoryModel::UuidRole).toByteArray();
 }
 
 void HistoryItem::setModel(HistoryModel *model)
