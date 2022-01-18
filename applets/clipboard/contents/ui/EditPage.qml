@@ -42,20 +42,27 @@ ColumnLayout {
         stack.initialItem.view.currentItem.forceActiveFocus();
     }
 
-    PlasmaComponents3.TextArea {
-        id: textArea
+    PlasmaComponents3.ScrollView {
         Layout.fillWidth: true
         Layout.fillHeight: true
         Layout.leftMargin: PlasmaCore.Units.smallSpacing * 2
-        Layout.rightMargin: PlasmaCore.Units.smallSpacing * 2
+        Layout.rightMargin: PlasmaComponents3.ScrollBar.vertical.visible ? 0 : PlasmaCore.Units.smallSpacing * 2
         Layout.topMargin: PlasmaCore.Units.smallSpacing * 2
 
-        Keys.onPressed: {
-            if ((event.key === Qt.Key_Return || event.key === Qt.Key_Enter) && !(event.modifiers & Qt.ShiftModifier)) {
-                saveAndExit();
-                event.accepted = true;
-            } else {
-                event.accepted = false;
+        // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-83890
+        PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
+
+        PlasmaComponents3.TextArea {
+            id: textArea
+            wrapMode: Text.Wrap
+
+            Keys.onPressed: {
+                if ((event.key === Qt.Key_Return || event.key === Qt.Key_Enter) && !(event.modifiers & Qt.ShiftModifier)) {
+                    saveAndExit();
+                    event.accepted = true;
+                } else {
+                    event.accepted = false;
+                }
             }
         }
     }
