@@ -26,6 +26,7 @@ public:
         TypeRole,
         Base64UuidRole,
         TypeIntRole,
+        FullTextRole,
     };
     Q_ENUM(RoleType)
 
