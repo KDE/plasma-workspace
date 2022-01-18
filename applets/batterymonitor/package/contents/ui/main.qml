@@ -20,9 +20,9 @@ Item {
     id: batterymonitor
     Plasmoid.switchWidth: PlasmaCore.Units.gridUnit * 10
     Plasmoid.switchHeight: PlasmaCore.Units.gridUnit * 10
-    Plasmoid.title: (hasBatteries === hasBrightness ? i18n("Battery and Brightness") :
-                                      hasBrightness ? i18n("Brightness") :
-                                      hasBatteries ? i18n("Battery") : "")
+    Plasmoid.title: (hasBatteries && hasBrightness ? i18n("Battery and Brightness") :
+                                     hasBrightness ? i18n("Brightness") :
+                                     hasBatteries ? i18n("Battery") : i18n("Power Management"))
 
     LayoutMirroring.enabled: Qt.application.layoutDirection == Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
