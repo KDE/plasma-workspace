@@ -17,7 +17,7 @@ set(kcminit_startup_SRCS main.cpp)
 add_executable(kcminit_startup ${kcminit_startup_SRCS})
 
 ecm_install_configured_files(INPUT plasma-kcminit-phase1.service.in  plasma-kcminit.service.in
-                                                   DESTINATION ${SYSTEMD_USER_UNIT_INSTALL_DIR})
+                                                   DESTINATION ${KDE_INSTALL_SYSTEMDUSERUNITDIR})
 
 target_link_libraries(kcminit_startup Qt::Core Qt::Gui Qt::DBus KF5::CoreAddons KF5::Service KF5::I18n PW::KWorkspace)
 
