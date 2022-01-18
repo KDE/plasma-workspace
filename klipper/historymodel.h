@@ -20,6 +20,15 @@ class HistoryModel : public QAbstractListModel
 {
     Q_OBJECT
 public:
+    enum RoleType {
+        HistoryItemConstPtrRole = Qt::UserRole,
+        UuidRole,
+        TypeRole,
+        Base64UuidRole,
+        TypeIntRole,
+    };
+    Q_ENUM(RoleType)
+
     explicit HistoryModel(QObject *parent = nullptr);
     ~HistoryModel() override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;

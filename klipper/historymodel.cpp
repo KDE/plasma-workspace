@@ -70,15 +70,15 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
         return item->text();
     case Qt::DecorationRole:
         return item->image();
-    case Qt::UserRole:
+    case HistoryItemConstPtrRole:
         return QVariant::fromValue<HistoryItemConstPtr>(qSharedPointerConstCast<const HistoryItem>(item));
-    case Qt::UserRole + 1:
+    case UuidRole:
         return item->uuid();
-    case Qt::UserRole + 2:
+    case TypeRole:
         return QVariant::fromValue<HistoryItemType>(type);
-    case Qt::UserRole + 3:
+    case Base64UuidRole:
         return item->uuid().toBase64();
-    case Qt::UserRole + 4:
+    case TypeIntRole:
         return int(type);
     }
     return QVariant();
@@ -200,7 +200,7 @@ QHash<int, QByteArray> HistoryModel::roleNames() const
     QHash<int, QByteArray> hash;
     hash.insert(Qt::DisplayRole, QByteArrayLiteral("DisplayRole"));
     hash.insert(Qt::DecorationRole, QByteArrayLiteral("DecorationRole"));
-    hash.insert(Qt::UserRole + 3, QByteArrayLiteral("UuidRole"));
-    hash.insert(Qt::UserRole + 4, QByteArrayLiteral("TypeRole"));
+    hash.insert(Base64UuidRole, QByteArrayLiteral("UuidRole"));
+    hash.insert(TypeIntRole, QByteArrayLiteral("TypeRole"));
     return hash;
 }
