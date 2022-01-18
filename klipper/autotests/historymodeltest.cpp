@@ -22,6 +22,11 @@ private Q_SLOTS:
     void testIndexOf();
     void testType_data();
     void testType();
+
+    /**
+     * Test if the text is correctly trimmed, and can still provide the full text.
+     */
+    void testTrimmedText();
 };
 
 void HistoryModelTest::testSetMaxSize()
@@ -230,6 +235,27 @@ void HistoryModelTest::testType()
     QFETCH(HistoryItemType, expectedType);
     history->insert(QSharedPointer<HistoryItem>(item));
     QCOMPARE(history->index(0).data(HistoryModel::TypeRole).value<HistoryItemType>(), expectedType);
+}
+
+void HistoryModelTest::testTrimmedText()
+{
+    QScopedPointer<HistoryModel> history(new HistoryModel(nullptr));
+    QScopedPointer<QAbstractItemModelTester> modelTest(new QAbstractItemModelTester(history.data()));
+    history->setMaxSize(10);
+    QCOMPARE(history->rowCount(), 0);
+
+    // insert one item with a very long text
+    QString veryLongText;
+    for (int i = 0; i < 500; i++) {
+        veryLongText.append(QStringLiteral("a")); // Text length is 500
+    }
+
+    history->insert(QSharedPointer<HistoryItem>(new HistoryStringItem(veryLongText)));
+    const QModelIndex index = history->index(0, 0);
+    // Test full text
+    QCOMPARE(index.data(HistoryModel::FullTextRole).value<QString>(), veryLongText);
+    // Test trimmed text, 200 is from HistoryStringItem::text()
+    QCOMPARE(index.data(Qt::DisplayRole).value<QString>(), veryLongText.left(200 - 1) + QStringLiteral("…"));
 }
 
 QTEST_MAIN(HistoryModelTest)
