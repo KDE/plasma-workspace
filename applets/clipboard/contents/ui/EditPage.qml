@@ -55,6 +55,7 @@ ColumnLayout {
         PlasmaComponents3.TextArea {
             id: textArea
             wrapMode: Text.Wrap
+            textFormat: TextEdit.PlainText
 
             Keys.onPressed: {
                 if ((event.key === Qt.Key_Return || event.key === Qt.Key_Enter) && !(event.modifiers & Qt.ShiftModifier)) {
