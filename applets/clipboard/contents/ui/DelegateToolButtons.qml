@@ -29,7 +29,7 @@ RowLayout {
         id: barcodeToolButton
         icon.name: "view-barcode-qr"
         visible: supportsBarcodes
-        onClicked: menuItem.barcode(DisplayRole)
+        onClicked: menuItem.barcode(FullTextRole)
 
         PlasmaComponents3.ToolTip {
             text: i18n("Show QR code")
