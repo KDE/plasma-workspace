@@ -837,7 +837,7 @@ QString Klipper::getClipboardHistoryItem(int i)
     if (item) {
         do {
             if (i-- == 0) {
-                return item->mimeData()->text();
+                return item->text();
             }
             item = history()->find(item->next_uuid());
         } while (item != history()->first());
