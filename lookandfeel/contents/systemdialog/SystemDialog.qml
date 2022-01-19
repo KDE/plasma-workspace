@@ -27,10 +27,9 @@ Item {
     property Window window
     implicitHeight: column.implicitHeight
     implicitWidth: column.implicitWidth
-    readonly property real minimumHeight: column.Layout.minimumHeight
-    readonly property real minimumWidth: column.Layout.minimumWidth
     readonly property int flags: Qt.Dialog
     property alias standardButtons: footerButtonBox.standardButtons
+    readonly property int spacing: Kirigami.Units.largeSpacing // standard KDE dialog margins
 
     function present() {
         window.show()
@@ -38,28 +37,27 @@ Item {
 
     ColumnLayout {
         id: column
-        spacing: 0
         anchors.fill: parent
-        
+        anchors.margins: root.spacing
+
+        spacing: root.spacing
+
+        // Header area
         RowLayout {
-            Layout.topMargin: Kirigami.Units.gridUnit
-            Layout.bottomMargin: Kirigami.Units.gridUnit
-            Layout.leftMargin: Kirigami.Units.gridUnit
-            Layout.rightMargin: Kirigami.Units.largeSpacing
-            
-            spacing: Kirigami.Units.gridUnit
-            
+            spacing: root.spacing
+
             Kirigami.Icon {
                 id: icon
                 visible: source
-                Layout.alignment: Qt.AlignTop | Qt.AlignLeft
                 implicitWidth: Kirigami.Units.iconSizes.large
                 implicitHeight: Kirigami.Units.iconSizes.large
             }
-            
+
             ColumnLayout {
                 Layout.fillWidth: true
-                spacing: Kirigami.Units.largeSpacing
+
+                spacing: Kirigami.Units.smallSpacing
+
                 Kirigami.Heading {
                     id: titleHeading
                     text: root.title
@@ -68,6 +66,7 @@ Item {
                     wrapMode: Text.Wrap
                     elide: Text.ElideRight
                 }
+
                 Label {
                     id: subtitleLabel
                     Layout.fillWidth: true
@@ -75,36 +74,39 @@ Item {
                     elide: Text.ElideRight
                     visible: text.length > 0
                 }
-                Control {
-                    id: contentsControl
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-                    leftPadding: 0
-                    rightPadding: 0
-                    bottomPadding: 0
-                    topPadding: 0
-                }
             }
         }
 
-        RowLayout {
+        // Main content area, to be provided by the implementation
+        Control {
+            id: contentsControl
+
             Layout.fillWidth: true
-            Item {
-                Layout.fillWidth: true
-            }
-            DialogButtonBox {
-                id: footerButtonBox
-                Layout.fillWidth: true
-                spacing: Kirigami.Units.smallSpacing
-                onAccepted: root.window.accept()
-                onRejected: root.window.reject()
+            Layout.fillHeight: true
+            leftPadding: 0
+            rightPadding: 0
+            bottomPadding: 0
+            topPadding: 0
+        }
 
-                Repeater {
-                    model: root.actions
+        // Footer area with buttons
+        DialogButtonBox {
+            id: footerButtonBox
 
-                    delegate: Button {
-                        action: modelData
-                    }
+            Layout.fillWidth: true
+            leftPadding: 0
+            rightPadding: 0
+            bottomPadding: 0
+            topPadding: 0
+
+            onAccepted: root.window.accept()
+            onRejected: root.window.reject()
+
+            Repeater {
+                model: root.actions
+
+                delegate: Button {
+                    action: modelData
                 }
             }
         }
