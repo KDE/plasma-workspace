@@ -68,27 +68,27 @@ ColumnLayout {
             Layout.fillWidth: true
             // Don't need to show the inhibitions when power management
             // isn't enabled anyway
-            visible: inhibitions.length > 1 && !root.disabled
+            visible: root.inhibitions.length > 1 && !root.disabled
             font: PlasmaCore.Theme.smallestFont
             wrapMode: Text.WordWrap
             elide: Text.ElideRight
             maximumLineCount: 3
             text: i18np("%1 application is currently blocking sleep and screen locking:",
                         "%1 applications are currently blocking sleep and screen locking:",
-                        inhibitions.length)
+                        root.inhibitions.length)
         }
 
         Repeater {
-            visible: inhibitions.length > 1 && !root.disabled
+            visible: root.inhibitions.length > 1 && !root.disabled
 
-            model: visible ? inhibitions.length : null
+            model: visible ? root.inhibitions.length : null
 
             InhibitionHint {
                 Layout.fillWidth: true
-                iconSource: inhibitions[index].Icon || ""
-                text: inhibitions[index].Reason
-                    ? i18nc("Application name: reason for preventing sleep and screen locking", "%1: %2", inhibitions[index].Name, inhibitions[index].Reason)
-                    : i18nc("Application name: reason for preventing sleep and screen locking", "%1: unknown reason", inhibitions[index].Name)
+                iconSource: root.inhibitions[index].Icon || ""
+                text: root.inhibitions[index].Reason
+                    ? i18nc("Application name: reason for preventing sleep and screen locking", "%1: %2", root.inhibitions[index].Name, root.inhibitions[index].Reason)
+                    : i18nc("Application name: reason for preventing sleep and screen locking", "%1: unknown reason", root.inhibitions[index].Name)
             }
         }
 
@@ -97,13 +97,13 @@ ColumnLayout {
             Layout.fillWidth: true
             // Don't need to show the inhibitions when power management
             // is manually disabled anyway
-            visible: inhibitions.length === 1 && !root.disabled
-            iconSource: (inhibitions.length === 1) ? inhibitions[0].Icon : ""
-            text: (inhibitions.length === 1) ?
-                    inhibitions[0].Reason ?
-                        i18n("%1 is currently blocking sleep and screen locking (%2)", inhibitions[0].Name, inhibitions[0].Reason)
+            visible: root.inhibitions.length === 1 && !root.disabled
+            iconSource: (root.inhibitions.length === 1) ? root.inhibitions[0].Icon : ""
+            text: (root.inhibitions.length === 1) ?
+                    root.inhibitions[0].Reason ?
+                        i18n("%1 is currently blocking sleep and screen locking (%2)", root.inhibitions[0].Name, root.inhibitions[0].Reason)
                     :
-                        i18n("%1 is currently blocking sleep and screen locking (unknown reason)", inhibitions[0].Name)
+                        i18n("%1 is currently blocking sleep and screen locking (unknown reason)", root.inhibitions[0].Name)
                 :
                     ""
         }
