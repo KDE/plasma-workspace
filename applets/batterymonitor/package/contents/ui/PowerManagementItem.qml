@@ -41,7 +41,7 @@ ColumnLayout {
     PlasmaCore.SvgItem {
         Layout.fillWidth: true
 
-        visible: inhibitionReasonsLayout.visibleChildren.length > 0
+        visible: inhibitionReasonsLayout.visible
 
         elementId: "horizontal-line"
         svg: PlasmaCore.Svg {
@@ -54,6 +54,7 @@ ColumnLayout {
         id: inhibitionReasonsLayout
 
         Layout.fillWidth: true
+        visible: root.inhibitsLidAction || (root.inhibitions.length > 0 && !root.disabled)
 
         InhibitionHint {
             Layout.fillWidth: true
