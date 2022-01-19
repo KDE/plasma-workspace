@@ -27,6 +27,7 @@ ColumnLayout {
     //  Reason: string,
     // }]
     property var inhibitions: []
+    property bool inhibitsLidAction
 
     // UI to manually inhibit sleep and screen locking
     PlasmaComponents3.CheckBox {
@@ -56,7 +57,7 @@ ColumnLayout {
 
         InhibitionHint {
             Layout.fillWidth: true
-            visible: pmSource.data["PowerDevil"] && pmSource.data["PowerDevil"]["Is Lid Present"] && !pmSource.data["PowerDevil"]["Triggers Lid Action"] ? true : false
+            visible: root.inhibitsLidAction
             iconSource: "computer-laptop"
             text: i18nc("Minimize the length of this string as much as possible", "Your notebook is configured not to sleep when closing the lid while an external monitor is connected.")
         }

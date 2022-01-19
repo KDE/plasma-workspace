@@ -36,6 +36,7 @@ PlasmaComponents3.Page {
     //  Reason: string,
     // }]
     property var inhibitions: []
+    property bool inhibitsLidAction
 
     property string inhibitionReason
     property string degradationReason
@@ -51,6 +52,7 @@ PlasmaComponents3.Page {
             id: pmSwitch
 
             inhibitions: dialog.inhibitions
+            inhibitsLidAction: dialog.inhibitsLidAction
             pluggedIn: dialog.pluggedIn
             onDisabledChanged: powerManagementChanged(disabled)
 
