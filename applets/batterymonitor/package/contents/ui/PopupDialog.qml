@@ -46,14 +46,9 @@ PlasmaComponents3.Page {
     signal activateProfileRequested(string profile)
 
     header: PlasmaExtras.PlasmoidHeading {
-        PowerManagementItem {
+        leftPadding: PlasmaCore.Units.smallSpacing
+        contentItem: PowerManagementItem {
             id: pmSwitch
-
-            anchors {
-                left: parent.left
-                leftMargin: PlasmaCore.Units.smallSpacing
-                right: parent.right
-            }
 
             inhibitions: dialog.inhibitions
             pluggedIn: dialog.pluggedIn
