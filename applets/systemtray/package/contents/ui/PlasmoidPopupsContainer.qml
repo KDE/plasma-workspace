@@ -42,7 +42,8 @@ StackView {
             activeApplet.fullRepresentationItem.anchors.centerIn = undefined;
             activeApplet.fullRepresentationItem.anchors.fill = undefined;
 
-            if (activeApplet.fullRepresentationItem instanceof PlasmaComponents3.Page) {
+            if (activeApplet.fullRepresentationItem instanceof PlasmaComponents3.Page ||
+                activeApplet.fullRepresentationItem instanceof PlasmaExtras.Representation) {
                 if (activeApplet.fullRepresentationItem.header && activeApplet.fullRepresentationItem.header instanceof PlasmaExtras.PlasmoidHeading) {
                     mainStack.appletHasHeading = true
                     activeApplet.fullRepresentationItem.header.background.visible = false
