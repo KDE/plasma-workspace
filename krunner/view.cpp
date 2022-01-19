@@ -214,61 +214,73 @@ void View::positionOnScreen()
 
     QScreen *shownOnScreen = QGuiApplication::primaryScreen();
 
-    const auto screens = QGuiApplication::screens();
-    for (QScreen *screen : screens) {
-        if (screen->geometry().contains(QCursor::pos(screen))) {
-            shownOnScreen = screen;
-            break;
-        }
-    }
-
-    // in wayland, QScreen::availableGeometry() returns QScreen::geometry()
-    // we could get a better value from plasmashell
-    // BUG: 386114
-    auto message = QDBusMessage::createMethodCall("org.kde.plasmashell", "/StrutManager", "org.kde.PlasmaShell.StrutManager", "availableScreenRect");
-    message.setArguments({shownOnScreen->name()});
-    QDBusPendingCall call = QDBusConnection::sessionBus().asyncCall(message);
+    auto externalMessasge = QDBusMessage::createMethodCall("org.kde.KWin", "/KWin", "org.kde.KWin", "activeScreen");
+    QDBusPendingCall call = QDBusConnection::sessionBus().asyncCall(externalMessasge);
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(call, this);
 
-    QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, watcher, shownOnScreen]() {
+    QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, watcher, shownOnScreen]() mutable {
         watcher->deleteLater();
-        QDBusPendingReply<QRect> reply = *watcher;
+        QDBusPendingReply<QString> reply = *watcher;
 
-        const QRect r = reply.isValid() ? reply.value() : shownOnScreen->availableGeometry();
+        if (reply.isValid()) {
+            QString name = reply.value();
+            const auto screens = QGuiApplication::screens();
+            for (QScreen *screen : screens) {
+                if (screen->name() == name) {
+                    shownOnScreen = screen;
+                    break;
+                }
+            }
+        }
 
-        if (m_floating && !m_customPos.isNull()) {
-            int x = qBound(r.left(), m_customPos.x(), r.right() - width());
-            int y = qBound(r.top(), m_customPos.y(), r.bottom() - height());
+        // in wayland, QScreen::availableGeometry() returns QScreen::geometry()
+        // we could get a better value from plasmashell
+        // BUG: 386114
+        auto message = QDBusMessage::createMethodCall("org.kde.plasmashell", "/StrutManager", "org.kde.PlasmaShell.StrutManager", "availableScreenRect");
+        message.setArguments({shownOnScreen->name()});
+        QDBusPendingCall call = QDBusConnection::sessionBus().asyncCall(message);
+        QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(call, this);
+
+        QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, watcher, shownOnScreen]() {
+            watcher->deleteLater();
+            QDBusPendingReply<QRect> reply = *watcher;
+
+            const QRect r = reply.isValid() ? reply.value() : shownOnScreen->availableGeometry();
+
+            if (m_floating && !m_customPos.isNull()) {
+                int x = qBound(r.left(), m_customPos.x(), r.right() - width());
+                int y = qBound(r.top(), m_customPos.y(), r.bottom() - height());
+                setPosition(x, y);
+                PlasmaQuick::Dialog::setVisible(true);
+                return;
+            }
+
+            const int w = width();
+            int x = r.left() + (r.width() * m_offset) - (w / 2);
+
+            int y = r.top();
+            if (m_floating) {
+                y += r.height() / 3;
+            }
+
+            x = qBound(r.left(), x, r.right() - width());
+            y = qBound(r.top(), y, r.bottom() - height());
+
             setPosition(x, y);
             PlasmaQuick::Dialog::setVisible(true);
-            return;
-        }
 
-        const int w = width();
-        int x = r.left() + (r.width() * m_offset) - (w / 2);
+            if (m_floating) {
+                KWindowSystem::setOnDesktop(winId(), KWindowSystem::currentDesktop());
+                KWindowSystem::setType(winId(), NET::Normal);
+                // Turn the sliding effect off
+                setLocation(Plasma::Types::Floating);
+            } else {
+                KWindowSystem::setOnAllDesktops(winId(), true);
+                setLocation(Plasma::Types::TopEdge);
+            }
 
-        int y = r.top();
-        if (m_floating) {
-            y += r.height() / 3;
-        }
-
-        x = qBound(r.left(), x, r.right() - width());
-        y = qBound(r.top(), y, r.bottom() - height());
-
-        setPosition(x, y);
-        PlasmaQuick::Dialog::setVisible(true);
-
-        if (m_floating) {
-            KWindowSystem::setOnDesktop(winId(), KWindowSystem::currentDesktop());
-            KWindowSystem::setType(winId(), NET::Normal);
-            // Turn the sliding effect off
-            setLocation(Plasma::Types::Floating);
-        } else {
-            KWindowSystem::setOnAllDesktops(winId(), true);
-            setLocation(Plasma::Types::TopEdge);
-        }
-
-        KWindowSystem::forceActiveWindow(winId());
+            KWindowSystem::forceActiveWindow(winId());
+        });
     });
 }
 
