@@ -887,7 +887,7 @@ void Klipper::editData(const QSharedPointer<const HistoryItem> &item)
     ClipboardContentTextEdit *edit = new ClipboardContentTextEdit(dlg);
     edit->setAcceptRichText(false);
     if (item) {
-        edit->setPlainText(item->mimeData()->text());
+        edit->setPlainText(item->text());
     }
     edit->setFocus();
     edit->setMinimumSize(300, 40);

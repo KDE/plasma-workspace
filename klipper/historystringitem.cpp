@@ -25,9 +25,3 @@ QMimeData *HistoryStringItem::mimeData() const
     data->setText(m_data);
     return data;
 }
-
-QString HistoryStringItem::text() const
-{
-    const int TEXT_LENGTH_LIMIT = 200;
-    return m_data.left(TEXT_LENGTH_LIMIT - 1) + (m_data.length() <= TEXT_LENGTH_LIMIT ? QStringLiteral("") : QStringLiteral("…"));
-}
