@@ -80,8 +80,6 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
         return item->uuid().toBase64();
     case TypeIntRole:
         return int(type);
-    case FullTextRole:
-        return item->mimeData()->text();
     }
     return QVariant();
 }
@@ -204,6 +202,5 @@ QHash<int, QByteArray> HistoryModel::roleNames() const
     hash.insert(Qt::DecorationRole, QByteArrayLiteral("DecorationRole"));
     hash.insert(Base64UuidRole, QByteArrayLiteral("UuidRole"));
     hash.insert(TypeIntRole, QByteArrayLiteral("TypeRole"));
-    hash.insert(FullTextRole, QByteArrayLiteral("FullTextRole"));
     return hash;
 }
