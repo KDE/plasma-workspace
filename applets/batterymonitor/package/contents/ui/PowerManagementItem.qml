@@ -61,22 +61,6 @@ ColumnLayout {
             text: i18nc("Minimize the length of this string as much as possible", "Your notebook is configured not to sleep when closing the lid while an external monitor is connected.")
         }
 
-        // UI to display when there is only one inhibition
-        InhibitionHint {
-            // Don't need to show the inhibitions when power management
-            // isn't enabled anyway
-            visible: inhibitions.length === 1 && !root.disabled
-            Layout.fillWidth: true
-            iconSource: (inhibitions.length === 1) ? inhibitions[0].Icon : ""
-            text: (inhibitions.length === 1) ?
-                    inhibitions[0].Reason ?
-                        i18n("%1 is currently blocking sleep and screen locking (%2)", inhibitions[0].Name, inhibitions[0].Reason)
-                    :
-                        i18n("%1 is currently blocking sleep and screen locking (unknown reason)", inhibitions[0].Name)
-                :
-                    ""
-        }
-
         // UI to display when there is more than one inhibition
         PlasmaComponents3.Label {
             id: inhibitionExplanation
@@ -105,6 +89,22 @@ ColumnLayout {
                     ? i18nc("Application name: reason for preventing sleep and screen locking", "%1: %2", inhibitions[index].Name, inhibitions[index].Reason)
                     : i18nc("Application name: reason for preventing sleep and screen locking", "%1: unknown reason", inhibitions[index].Name)
             }
+        }
+
+        // UI to display when there is only one inhibition
+        InhibitionHint {
+            Layout.fillWidth: true
+            // Don't need to show the inhibitions when power management
+            // is manually disabled anyway
+            visible: inhibitions.length === 1 && !root.disabled
+            iconSource: (inhibitions.length === 1) ? inhibitions[0].Icon : ""
+            text: (inhibitions.length === 1) ?
+                    inhibitions[0].Reason ?
+                        i18n("%1 is currently blocking sleep and screen locking (%2)", inhibitions[0].Name, inhibitions[0].Reason)
+                    :
+                        i18n("%1 is currently blocking sleep and screen locking (unknown reason)", inhibitions[0].Name)
+                :
+                    ""
         }
     }
 }
