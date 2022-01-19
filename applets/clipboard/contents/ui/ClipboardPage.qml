@@ -127,7 +127,7 @@ Menu {
 
     model: PlasmaCore.SortFilterModel {
         sourceModel: clipboardSource.models.clipboard
-        filterRole: "FullTextRole"
+        filterRole: "DisplayRole"
         filterRegExp: filter.text
     }
     supportsBarcodes: {
