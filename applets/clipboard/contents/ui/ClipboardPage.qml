@@ -144,7 +144,7 @@ Menu {
     onRemove: clipboardSource.service(uuid, "remove")
     onEdit: {
         stack.push(Qt.resolvedUrl("EditPage.qml"), {
-            text: clipboardMenu.model.get(clipboardMenu.view.currentIndex).FullTextRole,
+            text: clipboardMenu.model.get(clipboardMenu.view.currentIndex).DisplayRole,
             uuid: uuid
         });
     }
