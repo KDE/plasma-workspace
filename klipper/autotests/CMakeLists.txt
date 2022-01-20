@@ -17,3 +17,12 @@ target_link_libraries(testHistoryModel
 )
 add_test(NAME klipper-testHistoryModel COMMAND testHistoryModel)
 ecm_mark_as_test(testHistoryModel)
+
+# Test Utils
+add_executable(testKlipperUtils utilstest.cpp)
+target_link_libraries(testKlipperUtils
+    Qt::Test
+    libklipper_common_static
+)
+add_test(NAME klipper-testUtils COMMAND testKlipperUtils)
+ecm_mark_as_test(testKlipperUtils)
