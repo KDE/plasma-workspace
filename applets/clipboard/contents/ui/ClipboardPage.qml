@@ -23,10 +23,6 @@ Menu {
             }
         }
         function forwardToFilter() {
-            // filter.text += event.text wil break if the key is backspace
-            if (event.key === Qt.Key_Backspace && filter.text == "") {
-                return;
-            }
             if (event.text !== "" && !filter.activeFocus) {
                 clipboardMenu.view.currentIndex = -1
                 if (event.matches(StandardKey.Paste)) {
@@ -95,6 +91,13 @@ Menu {
             case Qt.Key_Tab:
             case Qt.Key_Backtab: {
                 // prevent search filter from getting Tab key events
+                break;
+            }
+            case Qt.Key_Backspace: {
+                // filter.text += event.text wil break if the key is backspace
+                filter.forceActiveFocus();
+                filter.text = filter.text.slice(0, -1);
+                event.accepted = true;
                 break;
             }
             default: {
