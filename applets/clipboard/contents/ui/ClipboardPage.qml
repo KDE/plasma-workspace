@@ -163,6 +163,9 @@ Menu {
         // Intercept up/down key to prevent ListView from accepting the key event.
         clipboardMenu.view.Keys.upPressed.connect(clipboardMenu.arrowKeyPressed);
         clipboardMenu.view.Keys.downPressed.connect(clipboardMenu.arrowKeyPressed);
+
+        // Focus on the search field when the applet is opened for the first time
+        filter.forceActiveFocus();
     }
 
     function goToCurrent() {
