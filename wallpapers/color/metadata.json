@@ -116,6 +116,9 @@
         "Name[x-test]": "xxPlain Colorxx",
         "Name[zh_CN]": "纯色",
         "Name[zh_TW]": "普通顏色",
+        "ServiceTypes": [
+            "Plasma/Wallpaper"
+        ],
         "Website": "https://kde.org/plasma-desktop"
     },
     "Keywords": "",
