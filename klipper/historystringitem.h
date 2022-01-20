@@ -19,6 +19,12 @@ public:
     ~HistoryStringItem() override
     {
     }
+
+    HistoryItemType type() const override
+    {
+        return HistoryItemType::Text;
+    }
+
     QString text() const override;
     bool operator==(const HistoryItem &rhs) const override
     {

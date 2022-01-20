@@ -16,6 +16,12 @@ class HistoryURLItem : public HistoryItem
 {
 public:
     HistoryURLItem(const QList<QUrl> &urls, const KUrlMimeData::MetaDataMap &metaData, bool cut);
+
+    HistoryItemType type() const override
+    {
+        return HistoryItemType::Url;
+    }
+
     QString text() const override;
     bool operator==(const HistoryItem &rhs) const override;
     QMimeData *mimeData() const override;

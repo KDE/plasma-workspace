@@ -18,6 +18,12 @@ public:
     ~HistoryImageItem() override
     {
     }
+
+    HistoryItemType type() const override
+    {
+        return HistoryItemType::Image;
+    }
+
     QString text() const override;
     bool operator==(const HistoryItem &rhs) const override
     {
