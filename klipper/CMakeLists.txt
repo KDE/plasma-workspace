@@ -18,6 +18,7 @@ set(libklipper_common_SRCS
     actionstreewidget.cpp
     editactiondialog.cpp
     clipcommandprocess.cpp
+    utils.cpp
 )
 
 ecm_qt_declare_logging_category(libklipper_common_SRCS HEADER klipper_debug.h IDENTIFIER KLIPPER_LOG CATEGORY_NAME org.kde.klipper DESCRIPTION "klipper" EXPORT KLIPPER)

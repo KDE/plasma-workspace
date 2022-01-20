@@ -13,6 +13,7 @@
 
 #include "historyitem.h"
 #include "klipperpopup.h"
+#include "utils.h"
 
 PopupProxy::PopupProxy(KlipperPopup *parent, int menu_height, int menu_width)
     : QObject(parent)
@@ -77,7 +78,7 @@ void PopupProxy::tryInsertItem(HistoryItem const *const item, int &remainingHeig
     QPixmap image(item->image());
     if (image.isNull()) {
         // Squeeze text strings so that do not take up the entire screen (or more)
-        QString text = m_proxy_for_menu->fontMetrics().elidedText(item->text().simplified(), Qt::ElideMiddle, m_menu_width);
+        QString text = m_proxy_for_menu->fontMetrics().elidedText(Utils::simplifiedText(item->text(), 1000), Qt::ElideRight, m_menu_width);
         text.replace(QLatin1Char('&'), QLatin1String("&&"));
         action->setText(text);
     } else {
