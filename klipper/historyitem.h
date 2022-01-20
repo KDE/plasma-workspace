@@ -15,6 +15,13 @@ class QDataStream;
 class HistoryItem;
 typedef QSharedPointer<HistoryItem> HistoryItemPtr;
 typedef QSharedPointer<const HistoryItem> HistoryItemConstPtr;
+
+enum class HistoryItemType {
+    Text,
+    Image,
+    Url,
+};
+
 /**
  * An entry in the clipboard history.
  */
@@ -23,6 +30,11 @@ class HistoryItem
 public:
     explicit HistoryItem(const QByteArray &uuid);
     virtual ~HistoryItem();
+
+    /**
+     * Returns the item type.
+     */
+    virtual HistoryItemType type() const = 0;
 
     /**
      * Return the current item as text
@@ -112,3 +124,4 @@ inline QDataStream &operator<<(QDataStream &lhs, HistoryItem const *const rhs)
 Q_DECLARE_METATYPE(HistoryItem *)
 Q_DECLARE_METATYPE(HistoryItemPtr)
 Q_DECLARE_METATYPE(HistoryItemConstPtr)
+Q_DECLARE_METATYPE(HistoryItemType)

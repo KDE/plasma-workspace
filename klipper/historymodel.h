@@ -10,12 +10,6 @@
 
 class HistoryItem;
 
-enum class HistoryItemType {
-    Text,
-    Image,
-    Url,
-};
-
 class HistoryModel : public QAbstractListModel
 {
     Q_OBJECT
@@ -80,5 +74,3 @@ inline void HistoryModel::setDisplayImages(bool show)
 {
     m_displayImages = show;
 }
-
-Q_DECLARE_METATYPE(HistoryItemType)

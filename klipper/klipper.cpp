@@ -605,7 +605,7 @@ HistoryItemPtr Klipper::applyClipChanges(const QMimeData *clipData)
     Ignore lock(m_locklevel);
 
     if (!(history()->empty())) {
-        if (m_bIgnoreImages && history()->first()->mimeData()->hasImage()) {
+        if (m_bIgnoreImages && history()->first()->type() == HistoryItemType::Image) {
             history()->remove(history()->first());
         }
     }

@@ -56,14 +56,6 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
     }
 
     QSharedPointer<HistoryItem> item = m_items.at(index.row());
-    HistoryItemType type = HistoryItemType::Text;
-    if (dynamic_cast<HistoryStringItem *>(item.data())) {
-        type = HistoryItemType::Text;
-    } else if (dynamic_cast<HistoryImageItem *>(item.data())) {
-        type = HistoryItemType::Image;
-    } else if (dynamic_cast<HistoryURLItem *>(item.data())) {
-        type = HistoryItemType::Url;
-    }
 
     switch (role) {
     case Qt::DisplayRole:
@@ -75,11 +67,11 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
     case UuidRole:
         return item->uuid();
     case TypeRole:
-        return QVariant::fromValue<HistoryItemType>(type);
+        return QVariant::fromValue<HistoryItemType>(item->type());
     case Base64UuidRole:
         return item->uuid().toBase64();
     case TypeIntRole:
-        return int(type);
+        return int(item->type());
     }
     return QVariant();
 }
