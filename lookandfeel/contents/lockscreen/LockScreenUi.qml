@@ -29,7 +29,10 @@ PlasmaCore.ColorScope {
     Connections {
         target: authenticator
         function onFailed() {
-            root.notification = i18nd("plasma_lookandfeel_org.kde.lookandfeel","Unlocking failed");
+            if (root.notification) {
+                root.notification += "\n"
+            }
+            root.notification += i18nd("plasma_lookandfeel_org.kde.lookandfeel","Unlocking failed");
         }
         function onGraceLockedChanged() {
             if (!authenticator.graceLocked) {
@@ -38,10 +41,10 @@ PlasmaCore.ColorScope {
             }
         }
         function onMessage(msg) {
-            root.notification = msg;
+            root.notification += msg;
         }
         function onError(err) {
-            root.notification = err;
+            root.notification += err;
         }
     }
 
