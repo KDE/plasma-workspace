@@ -12,6 +12,7 @@
 #include <QVBoxLayout>
 
 #include <KActionCollection>
+#include <KActivities/Consumer>
 #include <KAuthorized>
 #include <KGlobalAccel>
 #include <KIO/CommandLauncherJob>
@@ -202,6 +203,12 @@ QAction *ContextMenu::action(const QString &name)
         }
     } else if (name == QLatin1String("manage activities")) {
         if (c->corona()) {
+            // Don't show the action if there's only one activity since in this
+            // case it's clear that the user doesn't use activities
+            if (KActivities::Consumer().activities().length() == 1) {
+                return nullptr;
+            }
+
             return c->corona()->actions()->action(QStringLiteral("manage activities"));
         }
     } else {

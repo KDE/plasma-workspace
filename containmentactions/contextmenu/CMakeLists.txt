@@ -15,6 +15,7 @@ kcoreaddons_add_plugin(plasma_containmentactions_contextmenu SOURCES ${contextme
 
 target_link_libraries(plasma_containmentactions_contextmenu
                       Qt::DBus
+                      KF5::Activities
                       KF5::I18n
                       KF5::GlobalAccel
                       KF5::Plasma
