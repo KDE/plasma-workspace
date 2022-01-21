@@ -236,7 +236,7 @@ private:
             }
 
             const QString id = service->storageId();
-            const QString name = service->desktopEntryName();
+            const QString name = service->name();
             const QString exec = service->exec();
 
             QueryMatch match(m_runner);
