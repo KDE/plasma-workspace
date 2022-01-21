@@ -60,7 +60,7 @@ ColumnLayout {
             Layout.fillWidth: true
             visible: root.inhibitsLidAction
             iconSource: "computer-laptop"
-            text: i18nc("Minimize the length of this string as much as possible", "Your notebook is configured not to sleep when closing the lid while an external monitor is connected.")
+            text: i18nc("Minimize the length of this string as much as possible", "Your laptop is configured not to sleep when closing the lid while an external monitor is connected.")
         }
 
         PlasmaComponents3.Label {
