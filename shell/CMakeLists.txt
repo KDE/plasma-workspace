@@ -41,6 +41,7 @@ set (plasma_shell_SRCS
     debug.cpp
     screenpool.cpp
     softwarerendernotifier.cpp
+    shellcontainmentconfig.cpp
     ${scripting_SRC}
 )
 

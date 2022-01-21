@@ -17,6 +17,7 @@
 #include <QDebug>
 #include <QMenu>
 #include <QQmlContext>
+#include <QQuickItemGrabResult>
 #include <QScreen>
 #include <QUrl>
 
@@ -54,6 +55,7 @@
 #include "panelview.h"
 #include "screenpool.h"
 #include "scripting/scriptengine.h"
+#include "shellcontainmentconfig.h"
 
 #include "debug.h"
 #include "futureutil.h"
@@ -85,6 +87,7 @@ ShellCorona::ShellCorona(QObject *parent)
     , m_closingDown(false)
     , m_strutManager(new StrutManager(this))
     , m_primaryWatcher(new PrimaryOutputWatcher(this))
+    , m_shellContainmentConfig(nullptr)
 {
     setupWaylandIntegration();
     qmlRegisterUncreatableType<DesktopView>("org.kde.plasma.shell", 2, 0, "Desktop", QStringLiteral("It is not possible to create objects of type Desktop"));
@@ -224,6 +227,35 @@ void ShellCorona::init()
     connect(this, &ShellCorona::editModeChanged, this, [this](bool edit) {
         setDashboardShown(edit);
     });
+
+    QAction *manageContainmentsAction = actions()->addAction(QStringLiteral("manage-containments"));
+    manageContainmentsAction->setIcon(QIcon::fromTheme(QStringLiteral("preferences-system-windows-effect-fadedesktop")));
+    manageContainmentsAction->setText(i18n("Manage Desktops And Panels..."));
+    connect(manageContainmentsAction, &QAction::triggered, this, [this]() {
+        if (m_shellContainmentConfig == nullptr) {
+            m_shellContainmentConfig = new ShellContainmentConfig(this);
+            m_shellContainmentConfig->init();
+        }
+        // Swapping desktop views around causes problems with the show desktop effect
+        setEditMode(false);
+    });
+    auto updateManageContainmentsVisiblility = [this, manageContainmentsAction]() {
+        const auto screenIds = m_screenPool->knownIds();
+        if (screenIds.count() < 2) {
+            manageContainmentsAction->setVisible(false);
+            return;
+        }
+        int populatedScreens = 0;
+        for (auto id : screenIds) {
+            if (containmentForScreen(id, m_activityController->currentActivity(), QString())) {
+                populatedScreens++;
+            }
+        }
+        manageContainmentsAction->setVisible(populatedScreens > 1);
+    };
+    connect(this, &ShellCorona::containmentAdded, this, updateManageContainmentsVisiblility);
+    connect(this, &ShellCorona::screenRemoved, this, updateManageContainmentsVisiblility);
+    updateManageContainmentsVisiblility();
 }
 
 ShellCorona::~ShellCorona()
@@ -714,6 +746,7 @@ void ShellCorona::primaryOutputNameChanged(const QString &oldOutputName, const Q
 
     const int oldIdOfPrimary = m_screenPool->id(newPrimary->name());
 
+    // TODO: logic here may be simplified with setScreenForContainment()
     if (KWindowSystem::isPlatformWayland()) {
         // This happens on Wayland, where primaryOutputchange gets emitted before screenadded
         if (!m_desktopViewforId.contains(oldIdOfPrimary) && !m_redundantOutputs.contains(newPrimary)) {
@@ -1412,6 +1445,18 @@ void ShellCorona::handleContainmentAdded(Plasma::Containment *c)
     connect(c, &Plasma::Containment::appletCreated, this, [this, c](Plasma::Applet *applet) {
         executeSetupPlasmoidScript(c, applet);
     });
+
+    // When a containment is removed, remove the thumbnail as well
+    connect(c, &Plasma::Containment::destroyedChanged, this, [this, c](bool destroyed) {
+        if (!destroyed) {
+            return;
+        }
+        const QString snapshotPath = containmentPreviewPath(c);
+        if (!snapshotPath.isEmpty()) {
+            QFile f(snapshotPath);
+            f.remove();
+        }
+    });
 }
 
 void ShellCorona::executeSetupPlasmoidScript(Plasma::Containment *containment, Plasma::Applet *applet)
@@ -1881,8 +1926,124 @@ Plasma::Containment *ShellCorona::addPanel(const QString &plugin)
     return panel;
 }
 
+void ShellCorona::swapDesktopScreens(int oldScreen, int newScreen)
+{
+    for (auto *containment : containmentsForScreen(oldScreen)) {
+        if (containment->containmentType() != Plasma::Types::PanelContainment
+            && containment->containmentType() != Plasma::Types::CustomPanelContainment) {
+            setScreenForContainment(containment, newScreen);
+        }
+    }
+}
+
+void ShellCorona::setScreenForContainment(Plasma::Containment *containment, int newScreenId)
+{
+    if (newScreenId < 0 || !m_screenPool->knownIds().contains(newScreenId)) {
+        qWarning() << "Invalid screen id requested:" << newScreenId << "for containment" << containment;
+        return;
+    }
+    const int oldScreenId = containment->screen() >= 0 ? containment->screen() : containment->lastScreen();
+
+    if (oldScreenId == newScreenId) {
+        return;
+    }
+
+    m_pendingScreenChanges[containment] = newScreenId;
+
+    if (containment->containmentType() == Plasma::Types::PanelContainment || containment->containmentType() == Plasma::Types::CustomPanelContainment) {
+        // Panel Case
+        containment->reactToScreenChange();
+        auto *panelView = m_panelViews.value(containment);
+        QScreen *newScreen = nullptr;
+        for (QScreen *screen : qGuiApp->screens()) {
+            if (m_screenPool->id(screen->name()) == newScreenId) {
+                newScreen = screen;
+                break;
+            }
+        }
+        if (panelView) {
+            // There was an existing panel view
+            if (newScreen && !isOutputRedundant(newScreen)) {
+                panelView->setScreenToFollow(newScreen);
+            } else {
+                // Not on a connected screen: destroy the panel
+                if (!m_waitingPanels.contains(containment)) {
+                    m_waitingPanels << containment;
+                }
+                m_panelViews.remove(containment);
+                panelView->destroy();
+            }
+        } else {
+            // Didn't have a view, createWaitingPanels() will create it if needed
+            createWaitingPanels();
+        }
+
+    } else {
+        // Desktop case: a bit more complicate because we may have to swap
+        Plasma::Containment *contSwap = containmentForScreen(newScreenId, containment->activity(), "org.kde.plasma.folder");
+        Q_ASSERT(contSwap);
+
+        // Perform the lastScreen changes
+        containment->reactToScreenChange();
+        if (contSwap) {
+            m_pendingScreenChanges[contSwap] = oldScreenId;
+            contSwap->reactToScreenChange();
+        }
+
+        // Actually perform a view swap when we are dealing with containments of current activity
+        if (contSwap && containment->activity() == m_activityController->currentActivity()) {
+            auto *containmentView = m_desktopViewforId.value(oldScreenId);
+            auto *contSwapView = m_desktopViewforId.value(newScreenId);
+            m_desktopViewforId.remove(newScreenId);
+            m_desktopViewforId.remove(oldScreenId);
+
+            const QString containmentConnector = m_screenPool->knownIds().contains(oldScreenId) ? m_screenPool->connector(oldScreenId) : "";
+            const QString contSwapConnector = m_screenPool->knownIds().contains(newScreenId) ? m_screenPool->connector(newScreenId) : "";
+            QScreen *containmentQScreen = nullptr;
+            QScreen *contSwapQScreen = nullptr;
+            for (auto *screen : qGuiApp->screens()) {
+                if (screen->name() == containmentConnector) {
+                    containmentQScreen = screen;
+                } else if (screen->name() == contSwapConnector) {
+                    contSwapQScreen = screen;
+                }
+            }
+
+            if (containmentView) {
+                if (contSwapQScreen && !isOutputRedundant(contSwapQScreen)) {
+                    containmentView->setScreenToFollow(contSwapQScreen);
+                    m_desktopViewforId[newScreenId] = containmentView;
+                } else {
+                    containmentView->destroy();
+                }
+            } else if (contSwapQScreen) {
+                addOutput(contSwapQScreen);
+            }
+
+            if (contSwapView) {
+                if (containmentQScreen && !isOutputRedundant(containmentQScreen)) {
+                    contSwapView->setScreenToFollow(containmentQScreen);
+                    m_desktopViewforId[oldScreenId] = contSwapView;
+                } else {
+                    contSwapView->destroy();
+                }
+            } else if (containmentQScreen) {
+                addOutput(containmentQScreen);
+            }
+        }
+    }
+
+    m_pendingScreenChanges.clear();
+}
+
 int ShellCorona::screenForContainment(const Plasma::Containment *containment) const
 {
+    // TODO: when we can depend on a new framework, use a p-f method to actuall set lastScreen instead of this?
+    // m_pendingScreenChanges controls an explicit user-determined screen change
+    if (!m_pendingScreenChanges.isEmpty() && m_pendingScreenChanges.contains(containment)) {
+        return m_pendingScreenChanges.value(containment);
+    }
+
     // case in which this containment is child of an applet, hello systray :)
     if (Plasma::Applet *parentApplet = qobject_cast<Plasma::Applet *>(containment->parent())) {
         if (Plasma::Containment *cont = parentApplet->containment()) {
@@ -1923,6 +2084,54 @@ int ShellCorona::screenForContainment(const Plasma::Containment *containment) co
     }
 
     return -1;
+}
+
+void ShellCorona::grabContainmentPreview(Plasma::Containment *containment)
+{
+    QQuickWindow *viewToGrab = nullptr;
+    if (containment->containmentType() == Plasma::Types::PanelContainment || containment->containmentType() == Plasma::Types::CustomPanelContainment) {
+        // Panel Containment
+        auto it = m_panelViews.constBegin();
+        while (it != m_panelViews.constEnd()) {
+            if (it.key() == containment) {
+                viewToGrab = it.value();
+                break;
+            }
+            it++;
+        }
+    } else if (m_desktopViewforId.contains(containment->screen())) {
+        // Desktop Containment
+        viewToGrab = m_desktopViewforId[containment->screen()];
+    }
+    if (viewToGrab) {
+        QSize size(512, 512);
+        size = viewToGrab->size().scaled(size, Qt::KeepAspectRatio);
+        auto result = viewToGrab->contentItem()->grabToImage(size);
+
+        if (result) {
+            connect(result.data(), &QQuickItemGrabResult::ready, this, [this, result, containment]() {
+                // DataLocation is plasmashell, we need just "plasma"
+                QString path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/plasma/");
+                QDir dir(path);
+                dir.mkdir(QStringLiteral("containmentpreviews"));
+                path +=
+                    QStringLiteral("containmentpreviews/") + QString::number(containment->id()) + QChar('-') + containment->activity() + QStringLiteral(".png");
+                result->saveToFile(path);
+                emit containmentPreviewReady(containment, path);
+            });
+        }
+    }
+}
+
+QString ShellCorona::containmentPreviewPath(Plasma::Containment *containment) const
+{
+    const QString path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/plasma/containmentpreviews/")
+        + QString::number(containment->id()) + QChar('-') + containment->activity() + QStringLiteral(".png");
+    if (QFile::exists(path)) {
+        return path;
+    } else {
+        return QString();
+    }
 }
 
 void ShellCorona::nextActivity()

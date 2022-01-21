@@ -58,6 +58,9 @@ void ShellPackage::initPackage(KPackage::Package *package)
     package->addFileDefinition("appletalternativesui",
                                QStringLiteral("explorer/AppletAlternatives.qml"),
                                i18n("QML component for choosing an alternate applet"));
+    package->addFileDefinition("containmentmanagementui",
+                               QStringLiteral("configuration/ShellContainmentConfiguration.qml"),
+                               i18n("QML component for the configuration dialog of containments"));
 
     // Widget explorer
     package->addFileDefinition("widgetexplorer", QStringLiteral("explorer/WidgetExplorer.qml"), i18n("Widgets explorer UI"));

@@ -26,6 +26,7 @@ class QScreen;
 class ScreenPool;
 class StrutManager;
 class PrimaryOutputWatcher;
+class ShellContainmentConfig;
 
 namespace KActivities
 {
@@ -109,8 +110,26 @@ public:
 
     static QString defaultShell();
 
+    // Set all Desktop containments (for all activities) associated to a given screen to this new screen.
+    // swapping ones that had newScreen to oldScreen if existing. Panels are ignored
+    void swapDesktopScreens(int oldScreen, int newScreen);
+
+    // Set a single containment to a new screen.
+    // If it is a Desktop contaiment, swap it with the other containment that was associated with same screen and activity if existent
+    void setScreenForContainment(Plasma::Containment *containment, int screen);
+
+    // Grab a screenshot of the contaiment if it has a view in an async fashion
+    // containmentPreviewReady will be emitted when done
+    // If there is no view, this will have no effect
+    void grabContainmentPreview(Plasma::Containment *containment);
+
+    // If a containment preview has been grabbed, for this containment, return its path
+    QString containmentPreviewPath(Plasma::Containment *containment) const;
+
 Q_SIGNALS:
     void glInitializationFailed();
+    // A preview for this containment has been rendered and saved to disk
+    void containmentPreviewReady(Plasma::Containment *containment, const QString &path);
 
 public Q_SLOTS:
     /**
@@ -237,6 +256,7 @@ private:
     // map from screen number to desktop view, qmap as order is important
     QMap<int, DesktopView *> m_desktopViewforId;
     QHash<const Plasma::Containment *, PanelView *> m_panelViews;
+    QHash<const Plasma::Containment *, int> m_pendingScreenChanges;
     KConfigGroup m_desktopDefaultsConfig;
     KConfigGroup m_lnfDefaultsConfig;
     QList<Plasma::Containment *> m_waitingPanels;
@@ -256,4 +276,5 @@ private:
 
     StrutManager *m_strutManager;
     PrimaryOutputWatcher *const m_primaryWatcher;
+    QPointer<ShellContainmentConfig> m_shellContainmentConfig;
 };
