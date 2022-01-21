@@ -340,6 +340,8 @@ KCM.SimpleKCM {
             id: timings
             visible: (kcm.nightColorSettings.mode === NightColorMode.Automatic ||
                 kcm.nightColorSettings.mode === NightColorMode.Location) && kcm.nightColorSettings.active
+            Layout.topMargin: Kirigami.Units.largeSpacing * 4
+            Layout.alignment: Qt.AlignHCenter
             enabled: kcm.nightColorSettings.active
             latitude: kcm.nightColorSettings.mode === NightColorMode.Automatic ? locator.latitude : kcm.nightColorSettings.latitudeFixed
             longitude: kcm.nightColorSettings.mode === NightColorMode.Automatic ? locator.longitude : kcm.nightColorSettings.longitudeFixed

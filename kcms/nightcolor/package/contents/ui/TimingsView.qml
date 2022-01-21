@@ -5,11 +5,10 @@
 */
 
 import QtQuick 2.1
-import org.kde.kirigami 2.5 as Kirigami
+import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.5 as QQC2
 
-Kirigami.FormLayout {
-    twinFormLayouts: parentLayout
+ColumnLayout {
 
     property double latitude
     property double longitude
@@ -26,29 +25,17 @@ Kirigami.FormLayout {
         return date.toLocaleString(Qt.locale(), "h:mm");
     }
 
-    Kirigami.Separator {
-        Kirigami.FormData.isSection: true
+    QQC2.Label {
+        wrapMode: Text.Wrap
+        Layout.fillWidth: true
+        horizontalAlignment: Qt.AlignHCenter
+        text: i18n("Night Color begins changing at %1 and is fully changed by %2", prettyTime(eveningTimings.begin), prettyTime(eveningTimings.end))
     }
 
     QQC2.Label {
         wrapMode: Text.Wrap
-        text: i18n("Night Color begins at %1", prettyTime(eveningTimings.begin))
-    }
-    QQC2.Label {
-        wrapMode: Text.Wrap
-        text: i18n("Color fully changed at %1", prettyTime(eveningTimings.end))
-    }
-
-    Item {
-        Kirigami.FormData.isSection: true
-    }
-
-    QQC2.Label {
-        wrapMode: Text.Wrap
-        text: i18n("Night Color begins changing back at %1", prettyTime(morningTimings.begin))
-    }
-    QQC2.Label {
-        wrapMode: Text.Wrap
-        text: i18n("Normal coloration restored by %1", prettyTime(morningTimings.end))
+        Layout.fillWidth: true
+        horizontalAlignment: Qt.AlignHCenter
+        text: i18n("Night Color begins changing back at %1 and ends at %2", prettyTime(morningTimings.begin), prettyTime(morningTimings.end))
     }
 }
