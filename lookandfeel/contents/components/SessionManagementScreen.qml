@@ -12,7 +12,7 @@ import QtQuick.Controls 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 
-Item {
+FocusScope {
     id: root
 
     /*
