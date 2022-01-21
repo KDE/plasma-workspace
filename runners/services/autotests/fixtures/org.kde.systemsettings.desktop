@@ -1,5 +1,6 @@
 [Desktop Entry]
-Exec=systemsettings5
+# just to make sure the exec does not start with the same characters as the name
+Exec=someprefix_systemsettings5
 Icon=preferences-system
 Type=Application
 X-DocPath=systemsettings/index.html

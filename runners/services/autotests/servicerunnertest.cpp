@@ -31,6 +31,7 @@ private Q_SLOTS:
     void testChromeAppsRelevance();
     void testKonsoleVsYakuakeComment();
     void testSystemSettings();
+    void testSystemSettings2();
     void testINotifyUsage();
 };
 
@@ -134,6 +135,30 @@ void ServiceRunnerTest::testSystemSettings()
     ServiceRunner runner(this, KPluginMetaData(), QVariantList());
     Plasma::RunnerContext context;
     context.setQuery(QStringLiteral("settings"));
+
+    runner.match(context);
+
+    bool systemSettingsFound = false;
+    bool foreignSystemSettingsFound = false;
+    const auto matches = context.matches();
+    for (const auto &match : matches) {
+        qDebug() << "matched" << match.text();
+        if (match.text() == QLatin1String("System Settings ServiceRunnerTest")) {
+            systemSettingsFound = true;
+        }
+        if (match.text() == QLatin1String("KDE System Settings ServiceRunnerTest")) {
+            foreignSystemSettingsFound = true;
+        }
+    }
+    QVERIFY(systemSettingsFound);
+    QVERIFY(!foreignSystemSettingsFound);
+}
+
+void ServiceRunnerTest::testSystemSettings2()
+{
+    ServiceRunner runner(this, KPluginMetaData(), QVariantList());
+    RunnerContext context;
+    context.setQuery(QStringLiteral("sy"));
 
     runner.match(context);
 
