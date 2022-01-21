@@ -214,7 +214,7 @@ void View::positionOnScreen()
 
     QScreen *shownOnScreen = QGuiApplication::primaryScreen();
 
-    auto externalMessasge = QDBusMessage::createMethodCall("org.kde.KWin", "/KWin", "org.kde.KWin", "activeScreen");
+    auto externalMessasge = QDBusMessage::createMethodCall("org.kde.KWin", "/KWin", "org.kde.KWin", "activeOutputName");
     QDBusPendingCall call = QDBusConnection::sessionBus().asyncCall(externalMessasge);
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(call, this);
 
