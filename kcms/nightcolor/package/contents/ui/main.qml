@@ -42,6 +42,17 @@ KCM.SimpleKCM {
         root.locator.destroy();
     }
 
+    Connections {
+        target: kcm.nightColorSettings
+        function onActiveChanged() {
+            if (kcm.nightColorSettings.active && kcm.nightColorSettings.mode == NightColorMode.Automatic) {
+                startLocator();
+            } else {
+                endLocator();
+            }
+        }
+    }
+
     Component.onCompleted: {
         if (kcm.nightColorSettings.mode == NightColorMode.Automatic && kcm.nightColorSettings.active) {
             startLocator();
@@ -158,7 +169,7 @@ KCM.SimpleKCM {
                 currentIndex: kcm.nightColorSettings.mode
                 onCurrentIndexChanged: {
                     kcm.nightColorSettings.mode = currentIndex;
-                    if (currentIndex == NightColorMode.Automatic) {
+                    if (currentIndex == NightColorMode.Automatic && kcm.nightColorSettings.active) {
                         startLocator();
                     } else {
                         endLocator();
@@ -183,7 +194,7 @@ KCM.SimpleKCM {
             TextEdit {
                 Layout.maximumWidth: modeSwitcher.width
 
-                visible: modeSwitcher.currentIndex === NightColorMode.Automatic
+                visible: modeSwitcher.currentIndex === NightColorMode.Automatic && kcm.nightColorSettings.active
                 enabled: activator.checked
 
                 textFormat: TextEdit.RichText
@@ -210,7 +221,7 @@ KCM.SimpleKCM {
 
             // Show current location in auto mode
             QQC2.Label {
-                visible: kcm.nightColorSettings.mode === NightColorMode.Automatic
+                visible: kcm.nightColorSettings.mode === NightColorMode.Automatic && kcm.nightColorSettings.active
                 enabled: activator.checked
                 wrapMode: Text.Wrap
                 text: i18n("Latitude: %1°   Longitude: %2°", Math.round(locator.latitude * 100)/100, Math.round(locator.longitude * 100)/100)
@@ -327,8 +338,8 @@ KCM.SimpleKCM {
         // Show start/end times in automatic and manual location modes
         TimingsView {
             id: timings
-            visible: kcm.nightColorSettings.mode === NightColorMode.Automatic ||
-            kcm.nightColorSettings.mode === NightColorMode.Location
+            visible: (kcm.nightColorSettings.mode === NightColorMode.Automatic ||
+                kcm.nightColorSettings.mode === NightColorMode.Location) && kcm.nightColorSettings.active
             enabled: kcm.nightColorSettings.active
             latitude: kcm.nightColorSettings.mode === NightColorMode.Automatic ? locator.latitude : kcm.nightColorSettings.latitudeFixed
             longitude: kcm.nightColorSettings.mode === NightColorMode.Automatic ? locator.longitude : kcm.nightColorSettings.longitudeFixed
