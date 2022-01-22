@@ -29,6 +29,10 @@
       <label>Whether to automatically scale System Tray icons to fix the available thickness of the panel. If false, tray icons will be capped at the smallMedium size (22px) and become a two-row/column layout when the panel is thick.</label>
       <default>false</default>
     </entry>
+    <entry name="iconSpacing" type="int">
+      <label>spacing between icons, determined by this number multiplied by PlasmaCore.Units.smallSpacing</label>
+      <default>2</default>
+    </entry>
     <entry name="pin" type="Bool">
       <label>Whether the popup should remain open when another window is activated</label>
       <default>false</default>

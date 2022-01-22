@@ -13,6 +13,7 @@ import org.kde.kirigami 2.13 as Kirigami
 
 ColumnLayout {
     property bool cfg_scaleIconsToFit
+    property int cfg_iconSpacing
 
     Kirigami.FormLayout {
         Layout.fillHeight: true
@@ -35,6 +36,49 @@ ColumnLayout {
         QQC2.Label {
             visible: Kirigami.Settings.tabletMode
             text: i18n("Automatically enabled when in tablet mode")
+            font: PlasmaCore.Theme.smallestFont
+        }
+
+        Item {
+            Kirigami.FormData.isSection: true
+        }
+
+        QQC2.ComboBox {
+            Kirigami.FormData.label: i18nc("The spacing between system tray icons in the Panel", "Panel icon spacing:")
+            model: [
+                {
+                    "label": i18n("Small"),
+                    "spacing": 1
+                },
+                {
+                    "label": i18n("Normal"),
+                    "spacing": 2
+                },
+                {
+                    "label": i18n("Large"),
+                    "spacing": 4
+                }
+            ]
+            textRole: "label"
+            enabled: !Kirigami.Settings.tabletMode
+
+            currentIndex: {
+                if (Kirigami.Settings.tabletMode) {
+                    return 2 // Normal
+                }
+
+                switch (cfg_iconSpacing) {
+                    case 1: return 0; // Small
+                    case 2: return 1; // Normal
+                    case 4: return 2; // Large
+                }
+            }
+
+            onActivated: cfg_iconSpacing = model[currentIndex]["spacing"];
+        }
+        QQC2.Label {
+            visible: Kirigami.Settings.tabletMode
+            text: i18n("Automatically set to Large when in tablet mode")
             font: PlasmaCore.Theme.smallestFont
         }
     }

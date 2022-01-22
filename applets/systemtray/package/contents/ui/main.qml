@@ -121,8 +121,9 @@ MouseArea {
             readonly property int rowsOrColumns: autoSize ? 1 : Math.max(1, Math.min(count, Math.floor(gridThickness / (smallIconSize + PlasmaCore.Units.smallSpacing))))
 
             // Add margins only if the panel is larger than a small icon (to avoid large gaps between tiny icons)
-            readonly property int cellSpacing: PlasmaCore.Units.smallSpacing * 2
+            readonly property int cellSpacing: PlasmaCore.Units.smallSpacing * (Kirigami.Settings.tabletMode ? 4 : plasmoid.configuration.iconSpacing)
             readonly property int smallSizeCellLength: gridThickness < smallIconSize ? smallIconSize : smallIconSize + cellSpacing
+
             cellHeight: {
                 if (root.vertical) {
                     return autoSize ? itemSize + (gridThickness < itemSize ? 0 : cellSpacing) : smallSizeCellLength
