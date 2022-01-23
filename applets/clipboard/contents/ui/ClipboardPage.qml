@@ -140,9 +140,6 @@ Menu {
         }
         return true;
     }
-    Layout.fillWidth: true
-    Layout.fillHeight: true
-    Layout.topMargin: PlasmaCore.Units.smallSpacing
     onItemSelected: clipboardSource.service(uuid, "select")
     onRemove: clipboardSource.service(uuid, "remove")
     onEdit: {
