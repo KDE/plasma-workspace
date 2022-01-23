@@ -38,8 +38,11 @@ PlasmaComponents2.ListItem {
 
     onClicked: {
         menuItem.itemSelected(UuidRole);
-        if (plasmoid.hideOnWindowDeactivate)
+        if (plasmoid.hideOnWindowDeactivate) {
             plasmoid.expanded = false;
+        } else {
+            forceActiveFocus(); // Or activeFocus will always be false after clicking buttons in the heading
+        }
     }
 
     Keys.onDeletePressed: {
