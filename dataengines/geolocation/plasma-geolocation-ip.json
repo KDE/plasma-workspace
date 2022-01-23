@@ -5,6 +5,7 @@
         "Description[az]": "İP ünvanına görə coğrafi məkan",
         "Description[ca]": "Geolocalització des d'una adreça IP.",
         "Description[cs]": "Geolokace z IP adresy.",
+        "Description[de]": "Geolokalisierung mittels IP-Adresse.",
         "Description[en_GB]": "Geolocation from IP address.",
         "Description[es]": "Geolocalización desde una dirección IP.",
         "Description[fr]": "Géo-localisation depuis une adresse IP.",
