@@ -469,7 +469,7 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
             updatePowerProfileHolds(reply.value());
         });
     } else {
-        qDebug() << "Data for '" << name << "' not found";
+        qDebug() << "Data for" << name << "not found";
         return false;
     }
     return true;
