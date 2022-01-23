@@ -317,7 +317,7 @@ AppData WaylandTasksModel::Private::appData(KWayland::Client::PlasmaWindow *wind
         return *it;
     }
 
-    const AppData &data = appDataFromUrl(windowUrlFromMetadata(window->appId(), window->pid(), rulesConfig));
+    const AppData &data = appDataFromUrl(windowUrlFromMetadata(window->appId(), window->pid(), rulesConfig, window->resourceName()));
 
     appDataCache.insert(window, data);
 
