@@ -46,7 +46,6 @@ PlasmaComponents3.ScrollView {
         spacing: PlasmaCore.Units.smallSpacing
 
         delegate: ClipboardItemDelegate {
-            width: ListView.view.width - PlasmaCore.Units.smallSpacing * 4
             supportsBarcodes: menu.supportsBarcodes
 
             onItemSelected: menu.itemSelected(uuid)

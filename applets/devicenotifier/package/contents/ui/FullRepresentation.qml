@@ -128,7 +128,6 @@ PlasmaExtras.Representation {
             model: filterModel
 
             delegate: DeviceItem {
-                width: ListView.view.width - PlasmaCore.Units.smallSpacing * 4
                 udi: DataEngineSource
             }
             highlight: PlasmaComponents.Highlight { }
