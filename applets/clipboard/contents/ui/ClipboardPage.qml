@@ -13,6 +13,8 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
+import org.kde.kirigami 2.19 as Kirigami // for InputMethod.willShowOnActive
+
 Menu {
     id: clipboardMenu
     Keys.onPressed: {
@@ -165,7 +167,11 @@ Menu {
         clipboardMenu.view.Keys.downPressed.connect(clipboardMenu.arrowKeyPressed);
 
         // Focus on the search field when the applet is opened for the first time
-        filter.forceActiveFocus();
+        // but only when doing so wouldn't make the virtual keyboar appear, since
+        // that's annoying!
+        if (!Kirigami.InputMethod.willShowOnActive) {
+            filter.forceActiveFocus();
+        }
     }
 
     function goToCurrent() {
