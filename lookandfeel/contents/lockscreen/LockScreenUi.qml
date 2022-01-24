@@ -230,6 +230,9 @@ PlasmaCore.ColorScope {
                 id: mainBlock
                 lockScreenUiVisible: lockScreenRoot.uiVisible
 
+                // This is a focus scope and QQC1 StackView (unlike QQC2) does not set focus to the current item
+                focus: true
+
                 showUserList: userList.y + mainStack.y > 0
 
                 Stack.onStatusChanged: {
