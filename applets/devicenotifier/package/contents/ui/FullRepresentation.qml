@@ -120,6 +120,7 @@ PlasmaExtras.Representation {
         PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
 
         anchors.fill: parent
+        contentWidth: availableWidth - contentItem.leftMargin - contentItem.rightMargin
 
         contentItem: ListView {
             id: notifierDialog
