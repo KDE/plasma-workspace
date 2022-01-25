@@ -4,3 +4,4 @@ Wants=plasma-plasmashell.service plasma-kcminit.service plasma-kded.service plas
 Requires=plasma-ksmserver.service
 After=graphical-session-pre.target plasma-kwin_wayland.service
 RefuseManualStart=yes
+StopWhenUnneeded=true
