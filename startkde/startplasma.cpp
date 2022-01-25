@@ -524,7 +524,7 @@ bool useSystemdBoot()
         return false;
     }
 
-    if (!hasSystemdService(QStringLiteral("plasma-workspace@.target"))) {
+    if (!hasSystemdService(QStringLiteral("plasma-workspace.target"))) {
         qWarning() << "Systemd boot requested, but plasma services were not found";
         return false;
     }
@@ -634,7 +634,7 @@ bool startPlasmaSession(bool wayland)
                                                   QStringLiteral("/org/freedesktop/systemd1"),
                                                   QStringLiteral("org.freedesktop.systemd1.Manager"),
                                                   QStringLiteral("StartUnit"));
-        msg << QStringLiteral("plasma-workspace@%1.target").arg(platform) << QStringLiteral("fail");
+        msg << QStringLiteral("plasma-workspace-%1.target").arg(platform) << QStringLiteral("fail");
         QDBusReply<QDBusObjectPath> reply = QDBusConnection::sessionBus().call(msg);
         if (!reply.isValid()) {
             qWarning() << "Could not start systemd managed Plasma session:" << reply.error().name() << reply.error().message();
