@@ -157,7 +157,7 @@ void ServiceRunnerTest::testSystemSettings()
 void ServiceRunnerTest::testSystemSettings2()
 {
     ServiceRunner runner(this, KPluginMetaData(), QVariantList());
-    RunnerContext context;
+    Plasma::RunnerContext context;
     context.setQuery(QStringLiteral("sy"));
 
     runner.match(context);
