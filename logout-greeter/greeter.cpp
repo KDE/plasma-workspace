@@ -60,7 +60,7 @@ void Greeter::adoptScreen(QScreen *screen)
         return;
     }
     // TODO: last argument is the theme, maybe add command line option for it?
-    KSMShutdownDlg *w = new KSMShutdownDlg(nullptr, m_shutdownType);
+    KSMShutdownDlg *w = new KSMShutdownDlg(nullptr, m_shutdownType, screen);
     w->installEventFilter(this);
     m_dialogs << w;
 
@@ -72,7 +72,6 @@ void Greeter::adoptScreen(QScreen *screen)
     connect(w, &KSMShutdownDlg::accepted, this, []() {
         QApplication::exit(1);
     });
-    w->setScreen(screen);
     w->setGeometry(screen->geometry());
     w->init();
 }

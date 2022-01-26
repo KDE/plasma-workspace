@@ -6,6 +6,8 @@
 
 #pragma once
 
+#include <QScreen>
+
 #include <KQuickAddons/QuickViewSharedEngine>
 
 class QMouseEvent;
@@ -14,7 +16,7 @@ class QKeyEvent;
 class SplashWindow : public KQuickAddons::QuickViewSharedEngine
 {
 public:
-    SplashWindow(bool testing, bool window, const QString &theme);
+    SplashWindow(bool testing, bool window, const QString &theme, QScreen *screen);
 
     void setStage(int stage);
     virtual void setGeometry(const QRect &rect);

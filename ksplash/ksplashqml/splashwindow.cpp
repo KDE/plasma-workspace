@@ -24,7 +24,7 @@
 
 #include <KWindowSystem>
 
-SplashWindow::SplashWindow(bool testing, bool window, const QString &theme)
+SplashWindow::SplashWindow(bool testing, bool window, const QString &theme, QScreen *screen)
     : KQuickAddons::QuickViewSharedEngine()
     , m_stage(0)
     , m_testing(testing)
@@ -36,9 +36,11 @@ SplashWindow::SplashWindow(bool testing, bool window, const QString &theme)
             layerShellWindow->setScope(QStringLiteral("ksplashqml"));
             layerShellWindow->setLayer(LayerShellQt::Window::LayerOverlay);
             layerShellWindow->setExclusiveZone(-1);
+            layerShellWindow->setDesiredOutput(screen);
         }
     }
 
+    setScreen(screen);
     setColor(Qt::transparent);
     setDefaultAlphaBuffer(true);
     setClearBeforeRendering(true);

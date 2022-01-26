@@ -131,9 +131,8 @@ void SplashApp::adoptScreen(QScreen *screen)
     if (screen->geometry().isNull()) {
         return;
     }
-    SplashWindow *w = new SplashWindow(m_testing, m_window, m_theme);
+    SplashWindow *w = new SplashWindow(m_testing, m_window, m_theme, screen);
     w->setGeometry(screen->geometry());
-    w->setScreen(screen);
     w->setStage(m_stage);
     w->setVisible(true);
     m_windows << w;

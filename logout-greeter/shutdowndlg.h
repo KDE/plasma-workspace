@@ -8,6 +8,8 @@
 
 #pragma once
 
+#include <QScreen>
+
 #include <kquickaddons/quickviewsharedengine.h>
 #include <kworkspace.h>
 #include <sessionmanagement.h>
@@ -18,7 +20,7 @@ class KSMShutdownDlg : public KQuickAddons::QuickViewSharedEngine
     Q_OBJECT
 
 public:
-    KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype);
+    KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype, QScreen *screen);
 
     void init();
     bool result() const;

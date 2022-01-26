@@ -54,7 +54,7 @@ static const QString s_dbusPropertiesInterface = QStringLiteral("org.freedesktop
 static const QString s_login1ManagerInterface = QStringLiteral("org.freedesktop.login1.Manager");
 static const QString s_login1RebootToFirmwareSetup = QStringLiteral("RebootToFirmwareSetup");
 
-KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype)
+KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype, QScreen *screen)
     : QuickViewSharedEngine(parent)
     , m_result(false)
 // this is a WType_Popup on purpose. Do not change that! Not
@@ -63,6 +63,16 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype)
     // window stuff
     setClearBeforeRendering(true);
     setColor(QColor(Qt::transparent));
+    setScreen(screen);
+
+    if (KWindowSystem::isPlatformWayland()) {
+        if (auto w = LayerShellQt::Window::get(this)) {
+            w->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityExclusive);
+            w->setExclusiveZone(-1);
+            w->setLayer(LayerShellQt::Window::LayerOverlay);
+            w->setDesiredOutput(screen);
+        }
+    }
 
     setResizeMode(KQuickAddons::QuickViewSharedEngine::SizeRootObjectToView);
 
@@ -189,13 +199,6 @@ void KSMShutdownDlg::init()
 
     setKeyboardGrabEnabled(true);
     KWindowEffects::enableBlurBehind(this, true);
-    if (KWindowSystem::isPlatformWayland()) {
-        if (auto w = LayerShellQt::Window::get(this)) {
-            w->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityExclusive);
-            w->setExclusiveZone(-1);
-            w->setLayer(LayerShellQt::Window::LayerOverlay);
-        }
-    }
 }
 
 void KSMShutdownDlg::resizeEvent(QResizeEvent *e)
