@@ -51,6 +51,9 @@ PlasmaComponents3.ScrollView {
         reuseItems: true
 
         delegate: ClipboardItemDelegate {
+            // FIXME: removing this causes a binding loop
+            width: menuListView.width - menuListView.leftMargin - menuListView.rightMargin
+
             supportsBarcodes: menu.supportsBarcodes
 
             onItemSelected: menu.itemSelected(uuid)
