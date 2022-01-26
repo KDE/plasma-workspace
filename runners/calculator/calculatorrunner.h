@@ -18,7 +18,7 @@ class QalculateEngine;
 /**
  * This class evaluates the basic expressions given in the interface.
  */
-class CalculatorRunner : public AbstractRunner
+class CalculatorRunner : public Plasma::AbstractRunner
 {
     Q_OBJECT
 
@@ -26,11 +26,11 @@ public:
     CalculatorRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
     ~CalculatorRunner() override;
 
-    void match(RunnerContext &context) override;
+    void match(Plasma::RunnerContext &context) override;
 
 protected Q_SLOTS:
-    void run(const RunnerContext &context, const QueryMatch &match) override;
-    QMimeData *mimeDataForMatch(const QueryMatch &match) override;
+    void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match) override;
+    QMimeData *mimeDataForMatch(const Plasma::QueryMatch &match) override;
 
 private:
     QString calculate(const QString &term, bool *isApproximate);

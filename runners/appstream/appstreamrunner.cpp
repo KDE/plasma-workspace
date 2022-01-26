@@ -23,13 +23,13 @@
 K_PLUGIN_CLASS_WITH_JSON(InstallerRunner, "plasma-runner-appstream.json")
 
 InstallerRunner::InstallerRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : AbstractRunner(parent, metaData, args)
+    : Plasma::AbstractRunner(parent, metaData, args)
 {
     setObjectName(QStringLiteral("Installation Suggestions"));
     // We want to give the other runners time to check if there are matching applications already installed
     setPriority(AbstractRunner::LowestPriority);
 
-    addSyntax(RunnerSyntax(":q:", i18n("Looks for non-installed components according to :q:")));
+    addSyntax(Plasma::RunnerSyntax(":q:", i18n("Looks for non-installed components according to :q:")));
     setMinLetterCount(3);
 }
 
@@ -66,7 +66,7 @@ static QIcon componentIcon(const AppStream::Component &comp)
     return ret;
 }
 
-void InstallerRunner::match(RunnerContext &context)
+void InstallerRunner::match(Plasma::RunnerContext &context)
 {
     // Give the other runners a bit of time to produce results
     QEventLoop loop;
@@ -80,7 +80,7 @@ void InstallerRunner::match(RunnerContext &context)
 
     // Check if other plugins have already found an executable, if that is the case we do
     // not want to ask the user to install anything else
-    const QList<QueryMatch> matches = context.matches();
+    const QList<Plasma::QueryMatch> matches = context.matches();
     for (const auto &match : matches) {
         if (match.id().startsWith(QLatin1String("exec://"))) {
             return;
@@ -119,8 +119,8 @@ void InstallerRunner::match(RunnerContext &context)
         if (!servicesFound.isEmpty())
             continue;
 
-        QueryMatch match(this);
-        match.setType(QueryMatch::PossibleMatch);
+        Plasma::QueryMatch match(this);
+        match.setType(Plasma::QueryMatch::PossibleMatch);
         match.setId(componentId);
         match.setIcon(componentIcon(component));
         match.setText(i18n("Get %1…", component.name()));
@@ -131,7 +131,7 @@ void InstallerRunner::match(RunnerContext &context)
     }
 }
 
-void InstallerRunner::run(const RunnerContext & /*context*/, const QueryMatch &match)
+void InstallerRunner::run(const Plasma::RunnerContext & /*context*/, const Plasma::QueryMatch &match)
 {
     const QUrl appstreamUrl = match.data().toUrl();
     if (!QDesktopServices::openUrl(appstreamUrl))

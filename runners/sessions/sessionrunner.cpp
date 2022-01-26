@@ -18,36 +18,36 @@
 K_PLUGIN_CLASS_WITH_JSON(SessionRunner, "plasma-runner-sessions.json")
 
 SessionRunner::SessionRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : AbstractRunner(parent, metaData, args)
+    : Plasma::AbstractRunner(parent, metaData, args)
 {
     setObjectName(QStringLiteral("Sessions"));
     setPriority(LowPriority);
 
     m_canLogout = KAuthorized::authorizeAction(QStringLiteral("logout")) && KAuthorized::authorize(QStringLiteral("logout"));
     if (m_canLogout) {
-        addSyntax(RunnerSyntax(i18nc("log out command", "logout"), i18n("Logs out, exiting the current desktop session")));
-        addSyntax(RunnerSyntax(i18nc("shut down computer command", "shut down"), i18n("Turns off the computer")));
+        addSyntax(Plasma::RunnerSyntax(i18nc("log out command", "logout"), i18n("Logs out, exiting the current desktop session")));
+        addSyntax(Plasma::RunnerSyntax(i18nc("shut down computer command", "shut down"), i18n("Turns off the computer")));
     }
 
     if (KAuthorized::authorizeAction(QStringLiteral("lock_screen")) && m_canLogout) {
-        addSyntax(RunnerSyntax(i18nc("lock screen command", "lock"), i18n("Locks the current sessions and starts the screen saver")));
+        addSyntax(Plasma::RunnerSyntax(i18nc("lock screen command", "lock"), i18n("Locks the current sessions and starts the screen saver")));
     }
 
-    RunnerSyntax rebootSyntax(i18nc("restart computer command", "restart"), i18n("Reboots the computer"));
+    Plasma::RunnerSyntax rebootSyntax(i18nc("restart computer command", "restart"), i18n("Reboots the computer"));
     rebootSyntax.addExampleQuery(i18nc("restart computer command", "reboot"));
     addSyntax(rebootSyntax);
 
     m_triggerWord = i18nc("switch user command", "switch");
-    addSyntax(RunnerSyntax(i18nc("switch user command", "switch :q:"),
-                           i18n("Switches to the active session for the user :q:, "
-                                "or lists all active sessions if :q: is not provided")));
+    addSyntax(Plasma::RunnerSyntax(i18nc("switch user command", "switch :q:"),
+                                   i18n("Switches to the active session for the user :q:, "
+                                        "or lists all active sessions if :q: is not provided")));
 
-    RunnerSyntax fastUserSwitchSyntax(i18n("switch user"), i18n("Starts a new session as a different user"));
+    Plasma::RunnerSyntax fastUserSwitchSyntax(i18n("switch user"), i18n("Starts a new session as a different user"));
     fastUserSwitchSyntax.addExampleQuery(i18n("new session"));
     addSyntax(fastUserSwitchSyntax);
 
     //"SESSIONS" should not be translated; it's used programmaticaly
-    addSyntax(RunnerSyntax(QStringLiteral("SESSIONS"), i18n("Lists all sessions")));
+    addSyntax(Plasma::RunnerSyntax(QStringLiteral("SESSIONS"), i18n("Lists all sessions")));
     setMinLetterCount(3);
 }
 
@@ -55,58 +55,58 @@ SessionRunner::~SessionRunner()
 {
 }
 
-void SessionRunner::matchCommands(QList<QueryMatch> &matches, const QString &term)
+void SessionRunner::matchCommands(QList<Plasma::QueryMatch> &matches, const QString &term)
 {
     if (!m_canLogout) {
         return;
     }
 
     if (term.compare(i18nc("log out command", "logout"), Qt::CaseInsensitive) == 0 || term.compare(i18n("log out"), Qt::CaseInsensitive) == 0) {
-        QueryMatch match(this);
+        Plasma::QueryMatch match(this);
         match.setText(i18nc("log out command", "Logout"));
         match.setIconName(QStringLiteral("system-log-out"));
         match.setData(LogoutAction);
-        match.setType(QueryMatch::ExactMatch);
+        match.setType(Plasma::QueryMatch::ExactMatch);
         match.setRelevance(0.9);
         matches << match;
     } else if (term.compare(i18nc("restart computer command", "restart"), Qt::CaseInsensitive) == 0
                || term.compare(i18nc("restart computer command", "reboot"), Qt::CaseInsensitive) == 0) {
-        QueryMatch match(this);
+        Plasma::QueryMatch match(this);
         match.setText(i18n("Restart the computer"));
         match.setIconName(QStringLiteral("system-reboot"));
         match.setData(RestartAction);
-        match.setType(QueryMatch::ExactMatch);
+        match.setType(Plasma::QueryMatch::ExactMatch);
         match.setRelevance(0.9);
         matches << match;
     } else if (term.compare(i18nc("shut down computer command", "shut down"), Qt::CaseInsensitive) == 0
                || term.compare(i18nc("shut down computer command", "shutdown"), Qt::CaseInsensitive) == 0) {
-        QueryMatch match(this);
+        Plasma::QueryMatch match(this);
         match.setText(i18n("Shut down the computer"));
         match.setIconName(QStringLiteral("system-shutdown"));
         match.setData(ShutdownAction);
-        match.setType(QueryMatch::ExactMatch);
+        match.setType(Plasma::QueryMatch::ExactMatch);
         match.setRelevance(0.9);
         matches << match;
     } else if (term.compare(i18nc("lock screen command", "lock"), Qt::CaseInsensitive) == 0) {
         if (KAuthorized::authorizeAction(QStringLiteral("lock_screen"))) {
-            QueryMatch match(this);
+            Plasma::QueryMatch match(this);
             match.setText(i18n("Lock the screen"));
             match.setIconName(QStringLiteral("system-lock-screen"));
             match.setData(LockAction);
-            match.setType(QueryMatch::ExactMatch);
+            match.setType(Plasma::QueryMatch::ExactMatch);
             match.setRelevance(0.9);
             matches << match;
         }
     }
 }
 
-void SessionRunner::match(RunnerContext &context)
+void SessionRunner::match(Plasma::RunnerContext &context)
 {
     const QString term = context.query();
     QString user;
     bool matchUser = false;
 
-    QList<QueryMatch> matches;
+    QList<Plasma::QueryMatch> matches;
 
     // first compare with SESSIONS. this must *NOT* be translated (i18n)
     // as it is used as an internal command trigger (e.g. via d-bus),
@@ -130,8 +130,8 @@ void SessionRunner::match(RunnerContext &context)
     bool switchUser = listAll || term.compare(i18n("switch user"), Qt::CaseInsensitive) == 0 || term.compare(i18n("new session"), Qt::CaseInsensitive) == 0;
 
     if (switchUser && KAuthorized::authorizeAction(QStringLiteral("start_new_session")) && dm.isSwitchable() && dm.numReserve() >= 0) {
-        QueryMatch match(this);
-        match.setType(QueryMatch::ExactMatch);
+        Plasma::QueryMatch match(this);
+        match.setType(Plasma::QueryMatch::ExactMatch);
         match.setIconName(QStringLiteral("system-switch-user"));
         match.setText(i18n("New Session"));
         matches << match;
@@ -148,25 +148,25 @@ void SessionRunner::match(RunnerContext &context)
             }
 
             QString name = KDisplayManager::sess2Str(session);
-            QueryMatch::Type type = QueryMatch::NoMatch;
+            Plasma::QueryMatch::Type type = Plasma::QueryMatch::NoMatch;
             qreal relevance = 0.7;
 
             if (listAll) {
-                type = QueryMatch::ExactMatch;
+                type = Plasma::QueryMatch::ExactMatch;
                 relevance = 1;
             } else if (matchUser) {
                 if (name.compare(user, Qt::CaseInsensitive) == 0) {
                     // we need an elif branch here because we don't
                     // want the last conditional to be checked if !listAll
-                    type = QueryMatch::ExactMatch;
+                    type = Plasma::QueryMatch::ExactMatch;
                     relevance = 1;
                 } else if (name.contains(user, Qt::CaseInsensitive)) {
-                    type = QueryMatch::PossibleMatch;
+                    type = Plasma::QueryMatch::PossibleMatch;
                 }
             }
 
-            if (type != QueryMatch::NoMatch) {
-                QueryMatch match(this);
+            if (type != Plasma::QueryMatch::NoMatch) {
+                Plasma::QueryMatch match(this);
                 match.setType(type);
                 match.setRelevance(relevance);
                 match.setIconName(QStringLiteral("user-identity"));
@@ -180,7 +180,7 @@ void SessionRunner::match(RunnerContext &context)
     context.addMatches(matches);
 }
 
-void SessionRunner::run(const RunnerContext &context, const QueryMatch &match)
+void SessionRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
 {
     Q_UNUSED(context);
     if (match.data().type() == QVariant::Int) {

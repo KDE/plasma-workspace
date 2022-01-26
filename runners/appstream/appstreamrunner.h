@@ -10,7 +10,7 @@
 #include <KRunner/AbstractRunner>
 #include <QMutex>
 
-class InstallerRunner : public AbstractRunner
+class InstallerRunner : public Plasma::AbstractRunner
 {
     Q_OBJECT
 
@@ -18,8 +18,8 @@ public:
     InstallerRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
     ~InstallerRunner() override;
 
-    void match(RunnerContext &context) override;
-    void run(const RunnerContext &context, const QueryMatch &action) override;
+    void match(Plasma::RunnerContext &context) override;
+    void run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &action) override;
 
 private:
     QList<AppStream::Component> findComponentsByString(const QString &query);

@@ -31,7 +31,7 @@ void CalculatorRunnerTest::testQuery()
     QFETCH(QString, result);
 
     launchQuery(query);
-    const QList<QueryMatch> matches = manager->matches();
+    const QList<Plasma::QueryMatch> matches = manager->matches();
     QCOMPARE(matches.size(), 1);
     QCOMPARE(matches.first().text(), result);
 }

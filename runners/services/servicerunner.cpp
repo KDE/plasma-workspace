@@ -52,7 +52,7 @@ public:
     {
     }
 
-    void match(RunnerContext &context)
+    void match(Plasma::RunnerContext &context)
     {
         if (!context.isValid()) {
             return;
@@ -157,7 +157,7 @@ private:
         return finalQuery;
     }
 
-    void setupMatch(const KService::Ptr &service, QueryMatch &match)
+    void setupMatch(const KService::Ptr &service, Plasma::QueryMatch &match)
     {
         const QString name = service->name();
 
@@ -206,8 +206,8 @@ private:
             if (disqualify(service)) {
                 continue;
             }
-            QueryMatch match(m_runner);
-            match.setType(QueryMatch::ExactMatch);
+            Plasma::QueryMatch match(m_runner);
+            match.setType(Plasma::QueryMatch::ExactMatch);
             setupMatch(service, match);
             match.setRelevance(1);
             matches << match;
@@ -239,8 +239,8 @@ private:
             const QString name = service->name();
             const QString exec = service->exec();
 
-            QueryMatch match(m_runner);
-            match.setType(QueryMatch::PossibleMatch);
+            Plasma::QueryMatch match(m_runner);
+            match.setType(Plasma::QueryMatch::PossibleMatch);
             setupMatch(service, match);
             qreal relevance(0.6);
 
@@ -306,8 +306,8 @@ private:
                 continue;
             }
 
-            QueryMatch match(m_runner);
-            match.setType(QueryMatch::PossibleMatch);
+            Plasma::QueryMatch match(m_runner);
+            match.setType(Plasma::QueryMatch::PossibleMatch);
             setupMatch(service, match);
 
             qreal relevance = 0.6;
@@ -355,8 +355,8 @@ private:
                     continue;
                 }
 
-                QueryMatch match(m_runner);
-                match.setType(QueryMatch::PossibleMatch);
+                Plasma::QueryMatch match(m_runner);
+                match.setType(Plasma::QueryMatch::PossibleMatch);
                 if (!action.icon().isEmpty()) {
                     match.setIconName(action.icon());
                 } else {
@@ -391,24 +391,24 @@ private:
     ServiceRunner *m_runner;
     QSet<QString> m_seen;
 
-    QList<QueryMatch> matches;
+    QList<Plasma::QueryMatch> matches;
     QString query;
     QString term;
     int weightedTermLength = -1;
 };
 
 ServiceRunner::ServiceRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
-    : AbstractRunner(parent, metaData, args)
+    : Plasma::AbstractRunner(parent, metaData, args)
 {
     setObjectName(QStringLiteral("Application"));
     setPriority(AbstractRunner::HighestPriority);
 
-    addSyntax(RunnerSyntax(QStringLiteral(":q:"), i18n("Finds applications whose name or description match :q:")));
+    addSyntax(Plasma::RunnerSyntax(QStringLiteral(":q:"), i18n("Finds applications whose name or description match :q:")));
 }
 
 ServiceRunner::~ServiceRunner() = default;
 
-void ServiceRunner::match(RunnerContext &context)
+void ServiceRunner::match(Plasma::RunnerContext &context)
 {
     // This helper class aids in keeping state across numerous
     // different queries that together form the matches set.
@@ -416,7 +416,7 @@ void ServiceRunner::match(RunnerContext &context)
     finder.match(context);
 }
 
-void ServiceRunner::run(const RunnerContext &context, const QueryMatch &match)
+void ServiceRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryMatch &match)
 {
     Q_UNUSED(context)
 
@@ -450,7 +450,7 @@ void ServiceRunner::run(const RunnerContext &context, const QueryMatch &match)
     job->start();
 }
 
-QMimeData *ServiceRunner::mimeDataForMatch(const QueryMatch &match)
+QMimeData *ServiceRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
 {
     const QUrl dataUrl = match.data().toUrl();
 

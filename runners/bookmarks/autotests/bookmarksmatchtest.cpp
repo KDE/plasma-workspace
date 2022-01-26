@@ -9,6 +9,7 @@
 
 #include "browsers/firefox.h"
 
+using namespace Plasma;
 class TestBookmarksMatch : public QObject
 {
     Q_OBJECT
