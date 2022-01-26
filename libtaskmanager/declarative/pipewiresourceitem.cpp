@@ -59,6 +59,7 @@ PipeWireSourceItem::PipeWireSourceItem(QQuickItem *parent)
     setFlag(ItemHasContents, true);
 
     connect(this, &QQuickItem::visibleChanged, this, [this]() {
+        setEnabled(isVisible());
         if (m_stream)
             m_stream->setActive(isVisible());
     });
@@ -72,6 +73,7 @@ void PipeWireSourceItem::itemChange(QQuickItem::ItemChange change, const QQuickI
 {
     switch (change) {
     case ItemVisibleHasChanged:
+        setEnabled(isVisible());
         if (m_stream)
             m_stream->setActive(isVisible() && data.boolValue && isComponentComplete());
         break;
@@ -98,6 +100,7 @@ void PipeWireSourceItem::setNodeId(uint nodeId)
         return;
 
     m_nodeId = nodeId;
+    setEnabled(false);
 
     if (m_nodeId == 0) {
         m_stream.reset(nullptr);
@@ -262,6 +265,7 @@ void PipeWireSourceItem::updateTextureDmaBuf(const QVector<DmaBufPlane> &planes,
 
         int textureId = m_texture->textureId();
         QQuickWindow::CreateTextureOption textureOption = format == DRM_FORMAT_ARGB8888 ? QQuickWindow::TextureHasAlphaChannel : QQuickWindow::TextureIsOpaque;
+        setEnabled(true);
         return window()->createTextureFromNativeObject(QQuickWindow::NativeObjectTexture, &textureId, 0 /*a vulkan thing?*/, size, textureOption);
     };
     if (window()->isVisible()) {
@@ -277,6 +281,7 @@ void PipeWireSourceItem::updateTextureImage(const QImage &image)
     }
 
     m_createNextTexture = [this, image] {
+        setEnabled(true);
         return window()->createTextureFromImage(image, QQuickWindow::TextureIsOpaque);
     };
     if (window()->isVisible())
