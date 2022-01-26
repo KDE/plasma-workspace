@@ -48,6 +48,8 @@ PlasmaComponents3.ScrollView {
         rightMargin: PlasmaCore.Units.smallSpacing * 2
         spacing: PlasmaCore.Units.smallSpacing
 
+        reuseItems: true
+
         delegate: ClipboardItemDelegate {
             supportsBarcodes: menu.supportsBarcodes
 
