@@ -5,15 +5,20 @@
 */
 
 #include "screenpool.h"
+#include "primaryoutputwatcher.h"
 
 #include <KWindowSystem>
+#include <QDebug>
 #include <QGuiApplication>
 #include <QScreen>
 
 ScreenPool::ScreenPool(const KSharedConfig::Ptr &config, QObject *parent)
     : QObject(parent)
     , m_configGroup(KConfigGroup(config, QStringLiteral("ScreenConnectors")))
+    , m_primaryWatcher(new PrimaryOutputWatcher(this))
 {
+    connect(m_primaryWatcher, &PrimaryOutputWatcher::primaryOutputNameChanged, this, &ScreenPool::primaryOutputNameChanged, Qt::UniqueConnection);
+
     m_configSaveTimer.setSingleShot(true);
     connect(&m_configSaveTimer, &QTimer::timeout, this, [this]() {
         m_configGroup.sync();
@@ -170,6 +175,56 @@ int ScreenPool::firstAvailableId() const
 QList<int> ScreenPool::knownIds() const
 {
     return m_connectorForId.keys();
+}
+
+bool ScreenPool::noRealOutputsConnected() const
+{
+    if (qApp->screens().count() > 1) {
+        return false;
+    }
+
+    return isOutputFake(m_primaryWatcher->primaryScreen());
+}
+
+bool ScreenPool::isOutputFake(QScreen *screen) const
+{
+    // On X11 the output named :0.0 is fake (the geometry is usually valid and whatever the geometry
+    // of the last connected screen was), on wayland the fake output has no name and no geometry
+    return screen->name() == QStringLiteral(":0.0") || screen->geometry().isEmpty() || screen->name().isEmpty();
+}
+
+void ScreenPool::primaryOutputNameChanged(const QString &oldOutputName, const QString &newOutputName)
+{
+    // when the appearance of a new primary screen *moves*
+    // the position of the now secondary, the two screens will appear overlapped for an instant, and a spurious output redundant would happen here if checked
+    // immediately
+    // m_reconsiderOutputsTimer.start();
+
+    QScreen *oldPrimary = m_primaryWatcher->screenForName(oldOutputName);
+    QScreen *newPrimary = m_primaryWatcher->primaryScreen();
+
+    if (!newPrimary || newPrimary == oldPrimary || newPrimary->geometry().isNull()) {
+        return;
+    }
+
+    const int oldIdOfPrimary = id(newPrimary->name());
+
+    // On X11 we get fake screens as primary
+    {
+        // Special case: we are in "no connectors" mode, there is only a (recycled) QScreen instance which is not attached to any output. Treat this as a screen
+        // removed This happens only on X, wayland doesn't seem to be getting fake screens
+        if (noRealOutputsConnected()) {
+            qWarning() << "EMITTING SCREEN REMOVED" << newPrimary;
+            return;
+            // On X11, the output named :0.0 is fake
+        } else if (!oldPrimary || oldOutputName == ":0.0" || oldOutputName.isEmpty()) {
+            // setPrimaryConnector(newPrimary->name());
+            qWarning() << "EMITTING SCREEN ADDED" << newPrimary;
+            return;
+        } else {
+            qWarning() << "PRIMARY CHANGED" << oldPrimary << "-->" << newPrimary;
+        }
+    }
 }
 
 #include "moc_screenpool.cpp"

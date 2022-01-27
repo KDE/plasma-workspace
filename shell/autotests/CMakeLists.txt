@@ -4,12 +4,21 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR}/.. ${CMAKE_CURRENT_SOURCE_DIR}/.
 
 MACRO(PLASMASHELL_UNIT_TESTS)
        FOREACH(_testname ${ARGN})
-               add_executable(${_testname} ${_testname}.cpp ../screenpool.cpp )
+               set(test_SRCS
+                   ${_testname}.cpp ../screenpool.cpp ../primaryoutputwatcher.cpp
+                    )
+               ecm_add_qtwayland_client_protocol(test_SRCS
+                        PROTOCOL ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-primary-output-v1.xml
+                        BASENAME kde-primary-output-v1
+                    )
+               add_executable(${_testname} ${test_SRCS})
                target_link_libraries(${_testname}
                             Qt::Test
                             Qt::Gui
                             KF5::Service
                             KF5::WindowSystem
+                            KF5::WaylandClient
+                            Wayland::Client
                                      )
                if(HAVE_X11)
                   target_link_libraries(${_testname} XCB::XCB XCB::RANDR)

@@ -16,6 +16,7 @@
 #include <KSharedConfig>
 
 class QScreen;
+class PrimaryOutputWatcher;
 
 class ScreenPool : public QObject
 {
@@ -45,6 +46,9 @@ public:
 
 private:
     void save();
+    bool noRealOutputsConnected() const;
+    bool isOutputFake(QScreen *screen) const;
+    void primaryOutputNameChanged(const QString &oldOutputName, const QString &newOutputName);
 
     KConfigGroup m_configGroup;
     QString m_primaryConnector;
@@ -53,4 +57,5 @@ private:
     QHash<QString, int> m_idForConnector;
 
     QTimer m_configSaveTimer;
+    PrimaryOutputWatcher *const m_primaryWatcher;
 };

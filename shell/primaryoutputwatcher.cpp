@@ -146,7 +146,9 @@ QScreen *PrimaryOutputWatcher::primaryScreen() const
 {
     auto screen = screenForName(m_primaryOutputName);
     if (!screen) {
+#ifdef PLASMASHELL
         qCWarning(PLASMASHELL) << "could not find primary screen" << m_primaryOutputName;
+#endif
         return qGuiApp->primaryScreen();
     }
     return screen;
