@@ -200,8 +200,9 @@ PlasmaExtras.Representation {
 
                     // Show until time if valid but not if too far int he future
                     if (!isNaN(inhibitedUntil.getTime()) && inhibitedUntil.getTime() - Date.now() < 100 * 24 * 60 * 60 * 1000 /* 1 year*/) {
-                        sections.push(i18nc("Do not disturb until date", "Until %1",
-                                            KCoreAddons.Format.formatRelativeDateTime(inhibitedUntil, Locale.ShortFormat)));
+                        const endTime = KCoreAddons.Format.formatRelativeDateTime(inhibitedUntil, Locale.ShortFormat);
+                        const lowercaseEndTime =  endTime[0] + endTime.slice(1);
+                        sections.push(i18nc("Do not disturb until date", "Automatically ends: %1", lowercaseEndTime));
                     }
 
                     if (inhibitedByApp) {
