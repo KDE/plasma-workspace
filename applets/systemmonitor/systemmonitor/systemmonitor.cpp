@@ -45,7 +45,7 @@ void SystemMonitor::init()
 
     // NOTE: taking the pluginId this way, we take it from the child applet (cpu monitor, memory, whatever) rather than the parent fallback applet
     // (systemmonitor)
-    const QString pluginId = KPluginMetaData(kPackage().path() + QStringLiteral("metadata.desktop")).pluginId();
+    const QString pluginId = kPackage().metadata().pluginId();
 
     // FIXME HACK: better way to get the engine At least AppletQuickItem should have an engine() getter
     KDeclarative::QmlObjectSharedEngine *qmlObject = new KDeclarative::QmlObjectSharedEngine();
