@@ -285,7 +285,9 @@ ColumnLayout {
             }
 
             onActivated: {
-                runnerWindow.visible = false
+                if (!runnerWindow.pinned) {
+                    runnerWindow.visible = false
+                }
             }
 
             onUpdateQueryString: {
