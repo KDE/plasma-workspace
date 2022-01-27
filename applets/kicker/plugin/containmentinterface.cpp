@@ -134,7 +134,7 @@ void ContainmentInterface::addLauncher(QObject *appletInterface, ContainmentInte
                 return;
             }
 
-            QMetaObject::invokeMethod(rootItem, "addLauncher", Q_ARG(QUrl, QUrl::fromLocalFile(entryPath)));
+            QMetaObject::invokeMethod(rootItem, "addLauncher", Q_ARG(QVariant, QUrl::fromLocalFile(entryPath)));
         } else {
             containment->createApplet(QStringLiteral("org.kde.plasma.icon"), QVariantList() << entryPath);
         }
