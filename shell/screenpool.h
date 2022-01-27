@@ -35,6 +35,9 @@ public:
 
     QString connector(int id) const;
 
+    QScreen *screenForId(int id) const;
+    QScreen *screenForConnector(const QString &connector);
+
     int firstAvailableId() const;
 
     // all ids that are known, included screens not enabled at the moment

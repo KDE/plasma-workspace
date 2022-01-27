@@ -253,9 +253,9 @@ private:
     ScreenPool *m_screenPool;
     QString m_shell;
     KActivities::Controller *m_activityController;
-    // map from screen number to desktop view, qmap as order is important
-    QMap<int, DesktopView *> m_desktopViewforId;
     QHash<const Plasma::Containment *, PanelView *> m_panelViews;
+    // map from QScreen to desktop view
+    QHash<const QScreen *, DesktopView *> m_desktopViewForScreen;
     QHash<const Plasma::Containment *, int> m_pendingScreenChanges;
     KConfigGroup m_desktopDefaultsConfig;
     KConfigGroup m_lnfDefaultsConfig;

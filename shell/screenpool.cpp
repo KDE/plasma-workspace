@@ -126,6 +126,32 @@ QString ScreenPool::connector(int id) const
     return m_connectorForId.value(id);
 }
 
+QScreen *ScreenPool::screenForId(int id) const
+{
+    if (!m_connectorForId.contains(id)) {
+        return nullptr;
+    }
+
+    // TODO: do QScreen bookeeping completely in screenpool, cache also available QScreens
+    const QString name = m_connectorForId.value(id);
+    for (QScreen *screen : qGuiApp->screens()) {
+        if (screen->name() == name) {
+            return screen;
+        }
+    }
+    return nullptr;
+}
+
+QScreen *ScreenPool::screenForConnector(const QString &connector)
+{
+    for (QScreen *screen : qGuiApp->screens()) {
+        if (screen->name() == connector) {
+            return screen;
+        }
+    }
+    return nullptr;
+}
+
 int ScreenPool::firstAvailableId() const
 {
     int i = 0;
