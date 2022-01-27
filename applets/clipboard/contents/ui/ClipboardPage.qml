@@ -153,10 +153,7 @@ Menu {
             text: text
         });
     }
-    onAction: {
-        clipboardSource.service(uuid, "action")
-        clipboardMenu.view.currentIndex = 0
-    }
+    onAction: clipboardSource.service(uuid, "action")
 
     Component.onCompleted: {
         // Intercept up/down key to prevent ListView from accepting the key event.
