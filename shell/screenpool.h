@@ -29,21 +29,23 @@ public:
     ~ScreenPool() override;
 
     QString primaryConnector() const;
-    void setPrimaryConnector(const QString &primary);
+    void setPrimaryConnector(const QString &primary); // TODO: private?
 
-    void insertScreenMapping(int id, const QString &connector);
+    void insertScreenMapping(int id, const QString &connector); // TODO: private?
 
     int id(const QString &connector) const;
 
     QString connector(int id) const;
 
-    QScreen *screenForId(int id) const;
-    QScreen *screenForConnector(const QString &connector);
-
-    int firstAvailableId() const;
+    int firstAvailableId() const; // TODO: private?
 
     // all ids that are known, included screens not enabled at the moment
     QList<int> knownIds() const;
+
+    // QScreen API
+    QList<QScreen *> screens() const;
+    QScreen *screenForId(int id) const;
+    QScreen *screenForConnector(const QString &connector);
 
 Q_SIGNALS:
     void screenAdded(QScreen *screen);
@@ -58,7 +60,7 @@ private:
 
     void handleScreenAdded(QScreen *screen);
     void handleScreenRemoved(QScreen *screen);
-    void primaryOutputNameChanged(const QString &oldOutputName, const QString &newOutputName);
+    void handlePrimaryOutputNameChanged(const QString &oldOutputName, const QString &newOutputName);
 
     KConfigGroup m_configGroup;
     QString m_primaryConnector;
@@ -66,7 +68,10 @@ private:
     QMap<int, QString> m_connectorForId;
     QHash<QString, int> m_idForConnector;
 
+    // m_availableScreens + m_redundantOutputs + m_fakeOutputs == qGuiApp->screens()
+    QList<QScreen *> m_availableScreens;
     QSet<QScreen *> m_redundantOutputs;
+    QSet<QScreen *> m_fakeOutputs;
 
     QTimer m_reconsiderOutputsTimer;
     QTimer m_configSaveTimer;
