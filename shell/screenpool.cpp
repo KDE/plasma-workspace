@@ -76,6 +76,7 @@ void ScreenPool::load()
         }
         handleScreenAdded(screen);
     }
+    CHECK_SCREEN_INVARIANTS
 }
 
 ScreenPool::~ScreenPool()
@@ -168,6 +169,12 @@ QList<int> ScreenPool::knownIds() const
 QList<QScreen *> ScreenPool::screens() const
 {
     return m_availableScreens;
+}
+
+QScreen *ScreenPool::primaryScreen() const
+{
+    // TODO: handle the case when primary is redundant?
+    return m_primaryWatcher->primaryScreen();
 }
 
 QScreen *ScreenPool::screenForId(int id) const
@@ -328,6 +335,9 @@ void ScreenPool::handleScreenAdded(QScreen *screen)
     }
     Q_ASSERT(!m_availableScreens.contains(screen));
     m_availableScreens.append(screen);
+    if (!m_idForConnector.contains(screen->name())) {
+        insertScreenMapping(firstAvailableId(), screen->name());
+    }
     m_reconsiderOutputsTimer.start();
     Q_EMIT screenAdded(screen);
 }
@@ -351,6 +361,7 @@ void ScreenPool::handleScreenRemoved(QScreen *screen)
         reconsiderOutputs();
         Q_EMIT screenRemoved(screen);
     }
+    CHECK_SCREEN_INVARIANTS
 }
 
 void ScreenPool::handlePrimaryOutputNameChanged(const QString &oldOutputName, const QString &newOutputName)
@@ -385,19 +396,26 @@ void ScreenPool::handlePrimaryOutputNameChanged(const QString &oldOutputName, co
         // In the latter case m_availableScreens will aready contain newPrimary
         if (!m_availableScreens.contains(newPrimary)) {
             // qWarning() << "EMITTING SCREEN ADDED" << newPrimary;
+            setPrimaryConnector(newOutputName);
             handleScreenAdded(newPrimary);
         }
         return;
     } else {
         Q_ASSERT(oldPrimary && newPrimary);
         // qWarning() << "PRIMARY CHANGED" << oldPrimary << "-->" << newPrimary;
+        setPrimaryConnector(newOutputName);
         Q_EMIT primaryScreenChanged(oldPrimary, newPrimary);
     }
 }
 
 void ScreenPool::screenInvariants()
 {
-    qWarning() << "Checking invariants";
+    // Is the primary connector in sync with the actual primaryScreen?
+    Q_ASSERT(primaryScreen()->name() == primaryConnector());
+    // Is the primary screen available? TODO: it can be redundant
+    // Q_ASSERT(m_availableScreens.contains(primaryScreen()));
+
+    // QScreen bookeeping integrity
     auto allScreens = qGuiApp->screens();
     // Do we actually track every screen?
     Q_ASSERT((m_availableScreens.count() + m_redundantOutputs.count() + m_fakeOutputs.count()) == allScreens.count());
@@ -420,6 +438,10 @@ void ScreenPool::screenInvariants()
                 // We can't have a screen unaccounted for
                 Q_ASSERT(false);
             }
+            // Is every screen mapped to an id?
+            Q_ASSERT(m_idForConnector.contains(screen->name()));
+            // Are the two maps symmetrical?
+            Q_ASSERT(connector(id(screen->name())) == screen->name());
         }
     }
 }

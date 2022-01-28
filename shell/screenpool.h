@@ -44,6 +44,7 @@ public:
 
     // QScreen API
     QList<QScreen *> screens() const;
+    QScreen *primaryScreen() const;
     QScreen *screenForId(int id) const;
     QScreen *screenForConnector(const QString &connector);
 
