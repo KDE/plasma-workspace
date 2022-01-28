@@ -25,7 +25,7 @@ class ScreenPool : public QObject
 
 public:
     explicit ScreenPool(const KSharedConfig::Ptr &config, QObject *parent = nullptr);
-    void load(QScreen *primary);
+    void load();
     ~ScreenPool() override;
 
     QString primaryConnector() const;

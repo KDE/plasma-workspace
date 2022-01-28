@@ -683,7 +683,7 @@ void ShellCorona::load()
 
     disconnect(m_activityController, &KActivities::Controller::serviceStatusChanged, this, &ShellCorona::load);
 
-    m_screenPool->load(m_primaryWatcher->primaryScreen());
+    m_screenPool->load();
 
     // TODO: a kconf_update script is needed
     QString configFileName(QStringLiteral("plasma-") + m_shell + QStringLiteral("-appletsrc"));

@@ -7,8 +7,49 @@
 #include <QObject>
 
 #include <QApplication>
+#include <QDebug>
+#include <QScreen>
 
 #include "../screenpool.h"
+
+class ScreenPoolTester : public QObject
+{
+    Q_OBJECT
+public:
+    ScreenPoolTester(QObject *parent = nullptr);
+
+private:
+    void handleScreenAdded(QScreen *screen);
+    void handleScreenRemoved(QScreen *screen);
+    void handlePrimaryScreenChanged(QScreen *oldPrimary, QScreen *newPrimary);
+
+    ScreenPool *m_screenPool = nullptr;
+};
+
+ScreenPoolTester::ScreenPoolTester(QObject *parent)
+    : QObject(parent)
+    , m_screenPool(new ScreenPool(KSharedConfig::openConfig("plasmashellrc")))
+{
+    connect(m_screenPool, &ScreenPool::screenAdded, this, &ScreenPoolTester::handleScreenAdded);
+    connect(m_screenPool, &ScreenPool::screenRemoved, this, &ScreenPoolTester::handleScreenRemoved);
+    connect(m_screenPool, &ScreenPool::primaryScreenChanged, this, &ScreenPoolTester::handlePrimaryScreenChanged);
+    m_screenPool->load();
+}
+
+void ScreenPoolTester::handleScreenAdded(QScreen *screen)
+{
+    qWarning() << "SCREEN ADDED" << screen;
+}
+
+void ScreenPoolTester::handleScreenRemoved(QScreen *screen)
+{
+    qWarning() << "SCREEN REMOVED" << screen;
+}
+
+void ScreenPoolTester::handlePrimaryScreenChanged(QScreen *oldPrimary, QScreen *newPrimary)
+{
+    qWarning() << "PRIMARY SCREEN CHANGED:" << oldPrimary << "-->" << newPrimary;
+}
 
 Q_DECL_EXPORT int main(int argc, char *argv[])
 {
@@ -24,7 +65,9 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
     QApplication app(argc, argv);
 
-    ScreenPool *screenPool = new ScreenPool(KSharedConfig::openConfig("plasmashellrc"));
+    ScreenPoolTester *screenPoolTester = new ScreenPoolTester();
 
     return app.exec();
 }
+
+#include "screenpooltest.moc"

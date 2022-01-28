@@ -29,12 +29,11 @@ ScreenPool::ScreenPool(const KSharedConfig::Ptr &config, QObject *parent)
     connect(&m_configSaveTimer, &QTimer::timeout, this, [this]() {
         m_configGroup.sync();
     });
-
-    load(m_primaryWatcher->primaryScreen());
 }
 
-void ScreenPool::load(QScreen *primary)
+void ScreenPool::load()
 {
+    QScreen *primary = m_primaryWatcher->primaryScreen();
     m_primaryConnector = QString();
     m_connectorForId.clear();
     m_idForConnector.clear();
@@ -205,7 +204,10 @@ bool ScreenPool::isOutputFake(QScreen *screen) const
     Q_ASSERT(screen);
     // On X11 the output named :0.0 is fake (the geometry is usually valid and whatever the geometry
     // of the last connected screen was), on wayland the fake output has no name and no geometry
-    return screen->name() == QStringLiteral(":0.0") || screen->geometry().isEmpty() || screen->name().isEmpty();
+    const bool fake = screen->name() == QStringLiteral(":0.0") || screen->geometry().isEmpty() || screen->name().isEmpty();
+    // If there is a fake output we can only have one screen left (the fake one)
+    Q_ASSERT(!fake || fake == (qGuiApp->screens().count() == 1));
+    return fake;
 }
 
 bool ScreenPool::isOutputRedundant(QScreen *screen) const
@@ -264,26 +266,35 @@ void ScreenPool::reconsiderOutputs()
     for (QScreen *screen : screens) {
         if (m_redundantOutputs.contains(screen)) {
             if (!isOutputRedundant(screen)) {
-                qDebug() << "not redundant anymore" << screen << (isOutputFake(screen) ? "but is a fake screen" : "");
+                // qDebug() << "not redundant anymore" << screen << (isOutputFake(screen) ? "but is a fake screen" : "");
+                Q_ASSERT(!m_availableScreens.contains(screen));
                 m_redundantOutputs.remove(screen);
-                // This will also manage the isOutputFake case
-                handleScreenAdded(screen);
+                if (isOutputFake(screen)) {
+                    m_fakeOutputs.insert(screen);
+                } else {
+                    m_availableScreens.append(screen);
+                    Q_EMIT screenAdded(screen);
+                }
             }
         } else if (isOutputRedundant(screen)) {
-            qDebug() << "new redundant screen" << screen << "with primary screen" << m_primaryWatcher->primaryScreen();
+            // qDebug() << "new redundant screen" << screen << "with primary screen" << m_primaryWatcher->primaryScreen();
 
-            handleScreenRemoved(screen);
+            if (m_availableScreens.contains(screen)) {
+                m_availableScreens.removeAll(screen);
+                Q_EMIT screenRemoved(screen);
+            }
             m_redundantOutputs.insert(screen);
         } else if (isOutputFake(screen)) {
             // NOTE: order of operations is important
-            qDebug() << "new fake screen" << screen;
+            // qDebug() << "new fake screen" << screen;
             m_redundantOutputs.remove(screen);
-            if (m_availableScreens.contains(screen)) {
-                handleScreenRemoved(screen);
-            }
             m_fakeOutputs.insert(screen);
+            if (m_availableScreens.contains(screen)) {
+                m_availableScreens.removeAll(screen);
+                Q_EMIT screenRemoved(screen);
+            }
         } else {
-            qDebug() << "fine screen" << screen;
+            // qDebug() << "fine screen" << screen;
         }
     }
 
@@ -294,8 +305,7 @@ void ScreenPool::reconsiderOutputs()
 
 void ScreenPool::handleScreenAdded(QScreen *screen)
 {
-    qWarning() << "ADDED" << screen << "redundant" << isOutputRedundant(screen) << "fake" << isOutputFake(screen);
-
+    // qWarning()<<"handleScreenAdded"<<screen;
     connect(screen, &QScreen::geometryChanged, &m_reconsiderOutputsTimer, static_cast<void (QTimer::*)()>(&QTimer::start), Qt::UniqueConnection);
 
     if (isOutputRedundant(screen)) {
@@ -306,14 +316,19 @@ void ScreenPool::handleScreenAdded(QScreen *screen)
         return;
     }
 
+    if (m_fakeOutputs.contains(screen)) {
+        // qDebug() << "not fake anymore" << screen;
+        m_fakeOutputs.remove(screen);
+    }
     Q_ASSERT(!m_availableScreens.contains(screen));
     m_availableScreens.append(screen);
-    emit screenAdded(screen);
+    m_reconsiderOutputsTimer.start();
+    Q_EMIT screenAdded(screen);
 }
 
 void ScreenPool::handleScreenRemoved(QScreen *screen)
 {
-    qWarning() << "REMOVED" << screen;
+    // qWarning()<<"handleScreenRemoved"<<screen;
     if (m_redundantOutputs.contains(screen)) {
         Q_ASSERT(!m_fakeOutputs.contains(screen));
         Q_ASSERT(!m_availableScreens.contains(screen));
@@ -324,8 +339,11 @@ void ScreenPool::handleScreenRemoved(QScreen *screen)
         m_fakeOutputs.remove(screen);
     } else {
         Q_ASSERT(m_availableScreens.contains(screen));
+        Q_ASSERT(!m_redundantOutputs.contains(screen));
+        Q_ASSERT(!m_fakeOutputs.contains(screen));
         m_availableScreens.removeAll(screen);
-        emit screenRemoved(screen);
+        reconsiderOutputs();
+        Q_EMIT screenRemoved(screen);
     }
 }
 
@@ -349,18 +367,24 @@ void ScreenPool::handlePrimaryOutputNameChanged(const QString &oldOutputName, co
     // Special case: we are in "no connectors" mode, there is only a (recycled) QScreen instance which is not attached to any output. Treat this as a screen
     // removed This happens only on X, wayland doesn't seem to be getting fake screens
     if (noRealOutputsConnected()) {
-        qWarning() << "EMITTING SCREEN REMOVED" << newPrimary;
+        // qWarning() << "EMITTING SCREEN REMOVED" << newPrimary;
         handleScreenRemoved(newPrimary);
         return;
         // On X11, the output named :0.0 is fake
     } else if (!oldPrimary || oldOutputName == ":0.0" || oldOutputName.isEmpty()) {
         // setPrimaryConnector(newPrimary->name());
-        qWarning() << "EMITTING SCREEN ADDED" << newPrimary;
-        handleScreenAdded(newPrimary);
+        // NOTE: when we go from 0 to 1 screen connected, screens can be renamed in those two followinf cases
+        // * last output connected/disconnected -> we go between the fake screen and the single output, renamed
+        // * external screen connected to a closed lid laptop, disconnecting the qscreen instance will be recycled from external output to internal
+        // In the latter case m_availableScreens will aready contain newPrimary
+        if (!m_availableScreens.contains(newPrimary)) {
+            // qWarning() << "EMITTING SCREEN ADDED" << newPrimary;
+            handleScreenAdded(newPrimary);
+        }
         return;
     } else {
         Q_ASSERT(oldPrimary && newPrimary);
-        qWarning() << "PRIMARY CHANGED" << oldPrimary << "-->" << newPrimary;
+        // qWarning() << "PRIMARY CHANGED" << oldPrimary << "-->" << newPrimary;
         Q_EMIT primaryScreenChanged(oldPrimary, newPrimary);
     }
 }
