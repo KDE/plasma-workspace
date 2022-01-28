@@ -107,6 +107,7 @@ PlasmaExtras.Representation {
                     Layout.rightMargin: calendar.paddings
                     icon.name: "list-add"
                     onClicked: ApplicationIntegration.launchCalendar()
+                    KeyNavigation.tab: calendar.showAgenda ? holidaysList : clocksList
                 }
             }
         }
@@ -144,6 +145,7 @@ PlasmaExtras.Representation {
             }
 
             PlasmaComponents3.ToolButton {
+                id: configureButton
                 Layout.row: 0
                 Layout.column: 4
                 Layout.alignment: Qt.AlignRight
@@ -241,6 +243,7 @@ PlasmaExtras.Representation {
                 icon.name: Qt.application.layoutDirection === Qt.RightToLeft ? "go-previous" : "go-next"
                 onClicked: monthView.nextView()
                 Accessible.name: tooltip
+                KeyNavigation.tab: monthViewWrapper
                 PlasmaComponents3.ToolTip {
                     text: {
                         switch(monthView.calendarViewDisplayed) {
@@ -369,7 +372,20 @@ PlasmaExtras.Representation {
 
                 ListView {
                     id: holidaysList
-                    highlight: Item {}
+
+                    focus: false
+                    activeFocusOnTab: true
+                    highlight: null
+                    currentIndex: -1
+                    onCurrentIndexChanged: if (!activeFocus) {
+                        currentIndex = -1;
+                    }
+ 
+                    onActiveFocusChanged: if (activeFocus) {
+                        currentIndex = 0;
+                    } else {
+                        currentIndex = -1;
+                    }
 
                     delegate: PlasmaComponents3.ItemDelegate {
                         id: eventItem
@@ -378,6 +394,8 @@ PlasmaExtras.Representation {
                         leftPadding: calendar.paddings + PlasmaCore.Units.smallSpacing * 2
                         text: eventTitle.text
                         hoverEnabled: true
+                        highlighted: ListView.isCurrentItem
+                        Accessible.description: modelData.description
                         property bool hasTime: {
                             // Explicitly all-day event
                             if (modelData.isAllDay) {
@@ -529,6 +547,7 @@ PlasmaExtras.Representation {
                 PlasmaComponents3.ToolButton {
                     visible: KCMShell.authorize("kcm_clock.desktop").length > 0
                     text: i18n("Switch…")
+                    Accessible.name: i18n("Switch to another timezone")
                     icon.name: "preferences-system-time"
                     onClicked: KCMShell.openSystemSettings("kcm_clock")
 
@@ -554,11 +573,16 @@ PlasmaExtras.Representation {
 
             ListView {
                 id: clocksList
-                anchors.left: parent.left
-                anchors.right: parent.right
-                anchors.rightMargin: PlasmaCore.Units.smallSpacing * 2
+                activeFocusOnTab: true
 
-                highlight: Item {}
+                highlight: null
+                currentIndex: -1
+                onActiveFocusChanged: if (activeFocus) {
+                    currentIndex = 0;
+                } else {
+                    currentIndex = -1;
+                }
+                KeyNavigation.tab: configureButton
 
                 model: {
                     let timezones = [];
@@ -575,6 +599,11 @@ PlasmaExtras.Representation {
                     width: clocksList.width
                     padding: calendar.paddings
                     leftPadding: calendar.paddings + PlasmaCore.Units.smallSpacing * 2
+                    rightPadding: calendar.paddings + PlasmaCore.Units.smallSpacing * 2
+                    highlighted: ListView.isCurrentItem
+                    Accessible.name: root.nameForZone(modelData)
+                    Accessible.description: root.timeForZone(modelData)
+                    hoverEnabled: false
 
                     contentItem: RowLayout {
                         PlasmaComponents3.Label {
@@ -624,6 +653,9 @@ PlasmaExtras.Representation {
         anchors.right: parent.right
         anchors.top: parent.top
         anchors.bottom: parent.bottom
+        onActiveFocusChanged: if (activeFocus) {
+            monthViewWrapper.nextItemInFocusChain().forceActiveFocus();
+        }
         PlasmaCalendar.MonthView {
             id: monthView
             anchors.margins: PlasmaCore.Units.smallSpacing
