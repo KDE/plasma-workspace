@@ -45,6 +45,14 @@ Control {
 
     contentItem: plasmoid.nativeInterface.faceController.fullRepresentation
 
+    // This empty mousearea serves for the sole purpose of refusing touch events
+    // which otherwise are eaten by Control stealing the event from any of its parents
+    // TODO KF6: Check if this is still needed as Qt6 doesn't accept touch by default on Control
+    MouseArea {
+        parent: chartFace
+        anchors.fill:parent
+    }
+
     Binding {
         target: plasmoid.nativeInterface.faceController.fullRepresentation
         property: "formFactor"
