@@ -336,6 +336,8 @@ PinchArea { // TODO KF6 switch to Item
             right: parent.right
             bottom: parent.bottom
         }
+
+        activeFocusOnTab: false
         clip: true
 
         onCurrentIndexChanged: if (currentIndex > 1) {

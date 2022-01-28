@@ -122,6 +122,31 @@ Item {
                 height: daysCalendar.cellHeight
                 dayModel: repeater.model
 
+                activeFocusOnTab: selected && daysCalendar.PlasmaComponents3.SwipeView.isCurrentItem
+
+                Keys.onPressed: {
+                    switch (event.key) {
+                    case Qt.Key_Space:
+                    case Qt.Key_Enter:
+                    case Qt.Key_Return:
+                    case Qt.Key_Select:
+                        daysCalendar.activated(index, model, delegate);
+                        break;
+                    }
+                }
+
+                KeyNavigation.left: if (index !== 0) {
+                    return repeater.itemAt(index - 1);
+                } else {
+                    return root.nextItemInFocusChain(false);
+                }
+
+                KeyNavigation.up: if (index >= daysCalendar.columns) {
+                    return repeater.itemAt(index - daysCalendar.columns);
+                } else {
+                    return root.nextItemInFocusChain(false);
+                }
+
                 Connections {
                     target: daysCalendar
                     function onActivateHighlightedItem(delegate) {

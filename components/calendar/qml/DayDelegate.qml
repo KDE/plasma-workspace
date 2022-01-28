@@ -26,6 +26,10 @@ PlasmaComponents3.AbstractButton {
     signal activated
 
     readonly property date thisDate: new Date(yearNumber, typeof monthNumber !== "undefined" ? monthNumber - 1 : 0, typeof dayNumber !== "undefined" ? dayNumber : 1)
+
+    Accessible.name: thisDate.toLocaleDateString(Qt.locale(), Locale.LongFormat)
+    Accessible.description: (model.eventCount !== undefined && model.eventCount > 0) ? i18ndp("plasmashellprivateplugin", "%1 event", "%1 events") : i18nd("plasmashellprivateplugin", "No events")
+
     readonly property bool today: {
         const today = root.today;
         let result = true;
@@ -55,6 +59,20 @@ PlasmaComponents3.AbstractButton {
         return result
     }
 
+    PlasmaCore.FrameSvgItem {
+        id: focusEffect
+        anchors {
+            fill: parent
+            leftMargin: -margins.left
+            topMargin: -margins.top
+            rightMargin: -margins.right
+            bottomMargin: -margins.bottom
+        }
+        opacity: dayStyle.activeFocus ? 1 : 0
+        imagePath: "widgets/button"
+        prefix: ["toolbutton-focus", "focus"]
+    }
+
     PlasmaExtras.Highlight {
         id: todayRect
         anchors.fill: parent
@@ -66,6 +84,8 @@ PlasmaComponents3.AbstractButton {
                 return 0.6;
             } else if (dayStyle.hovered) {
                 return 0.3;
+            } else if (dayStyle.activeFocus) {
+                return 0.1;
             }
             return 0;
         }
