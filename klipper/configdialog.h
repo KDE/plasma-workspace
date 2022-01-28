@@ -11,24 +11,46 @@
 #include "urlgrabber.h"
 
 #include "ui_actionsconfig.h"
-#include "ui_generalconfig.h"
 
 class KConfigSkeleton;
 class KShortcutsEditor;
 class Klipper;
 class KEditListWidget;
 class KActionCollection;
+class KPluralHandlingSpinBox;
 class EditActionDialog;
+class QCheckBox;
+class QRadioButton;
 
 class GeneralWidget : public QWidget
 {
     Q_OBJECT
 public:
     explicit GeneralWidget(QWidget *parent);
+
     void updateWidgets();
+    void save();
+
+signals:
+    void settingChanged();
 
 private:
-    Ui::GeneralWidget m_ui;
+    QCheckBox *m_enableHistoryCb;
+    QCheckBox *m_syncClipboardsCb;
+
+    QRadioButton *m_alwaysTextRb;
+    QRadioButton *m_copiedTextRb;
+
+    QRadioButton *m_alwaysImageRb;
+    QRadioButton *m_copiedImageRb;
+    QRadioButton *m_neverImageRb;
+
+    KPluralHandlingSpinBox *m_actionTimeoutSb;
+    KPluralHandlingSpinBox *m_historySizeSb;
+
+    bool m_settingsSaved;
+    bool m_prevAlwaysImage;
+    bool m_prevAlwaysText;
 };
 
 class ActionsWidget : public QWidget
@@ -91,7 +113,7 @@ public:
     ConfigDialog(QWidget *parent, KConfigSkeleton *config, const Klipper *klipper, KActionCollection *collection);
     ~ConfigDialog() override;
 
-private:
+protected slots:
     // reimp
     void updateWidgets() override;
     // reimp

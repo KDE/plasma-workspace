@@ -7,32 +7,221 @@
 
 #include "configdialog.h"
 
+#include <qbuttongroup.h>
+#include <qfontdatabase.h>
+#include <qformlayout.h>
+#include <qgroupbox.h>
+#include <qradiobutton.h>
+#include <qtooltip.h>
+#include <qwindow.h>
+
 #include <KConfigSkeleton>
 #include <KEditListWidget>
 #include <KShortcutsEditor>
 #include <kwindowconfig.h>
+#include <kconfigskeleton.h>
+#include <kpluralhandlingspinbox.h>
 
 #include "klipper_debug.h"
 
 #include "editactiondialog.h"
 #include "klipper.h"
+#include "klippersettings.h"
+
+static QLabel *createHintLabel(const QString &text, QWidget *parent)
+{
+    QLabel *hintLabel = new QLabel(text, parent);
+    hintLabel->setFont(QFontDatabase::systemFont(QFontDatabase::SmallestReadableFont));
+    hintLabel->setWordWrap(true);
+    hintLabel->setAlignment(Qt::AlignLeft|Qt::AlignTop);
+
+    // The minimum width needs to be set so that QLabel will wrap the text
+    // to fill that width.  Otherwise, it will try to adjust the text wrapping
+    // width so that the text is laid out in a pleasing looking rectangle,
+    // which unfortunately leaves a lot of white space below the actual text.
+    // See the "tryWidth" block in QLabelPrivate::sizeForWidth().
+    hintLabel->setMinimumWidth(400);
+
+    return (hintLabel);
+}
+
+static QLabel *createHintLabel(const KConfigSkeletonItem *item, QWidget *parent)
+{
+    return (createHintLabel(item->whatsThis(), parent));
+}
 
 GeneralWidget::GeneralWidget(QWidget *parent)
     : QWidget(parent)
 {
-    m_ui.setupUi(this);
-    m_ui.kcfg_TimeoutForActionPopups->setSuffix(ki18np(" second", " seconds"));
-    m_ui.kcfg_MaxClipItems->setSuffix(ki18np(" entry", " entries"));
+    QFormLayout *layout = new QFormLayout(this);
+
+    // Retain clipboard history
+    const KConfigSkeletonItem *item = KlipperSettings::self()->keepClipboardContentsItem();
+    m_enableHistoryCb = new QCheckBox(item->label(), this);
+    m_enableHistoryCb->setChecked(KlipperSettings::keepClipboardContents());
+    m_enableHistoryCb->setToolTip(item->toolTip());
+    layout->addRow(QString(), m_enableHistoryCb);
+
+    layout->addRow(QString(), new QLabel(this));
+
+    // Synchronise selection and clipboard
+    item = KlipperSettings::self()->syncClipboardsItem();
+    m_syncClipboardsCb = new QCheckBox(item->label(), this);
+    m_syncClipboardsCb->setChecked(KlipperSettings::syncClipboards());
+    layout->addRow(i18n("Selection and Clipboard:"), m_syncClipboardsCb);
+
+    QLabel *hint = createHintLabel(item, this);
+    layout->addRow(QString(), hint);
+    connect(hint, &QLabel::linkActivated, this, [this, hint]() {
+        QToolTip::showText(QCursor::pos(),
+                           xi18nc("@info:tooltip",
+                                  "When text or an area of the screen is highlighted with the mouse or keyboard, \
+this is the <emphasis>selection</emphasis>. It can be pasted using the middle mouse button.\
+<nl/>\
+<nl/>\
+If the selection is explicitly copied using a <interface>Copy</interface> or <interface>Cut</interface> action, \
+it is saved to the <emphasis>clipboard</emphasis>. It can be pasted using a <interface>Paste</interface> action. \
+<nl/>\
+<nl/>\
+When turned on this option keeps the selection and the clipboard the same, so that any selection is immediately available to paste by any means. \
+If it is turned off, the selection may still be saved in the clipboard history (subject to the options below), but it can only be pasted using the middle mouse button."),
+                           hint);
+    });
+
+    layout->addRow(QString(), new QLabel(this));
+
+    // Radio button group: Storing text selections in history
+    //
+    // These two options correspond to the 'ignoreSelection' internal
+    // Klipper setting.
+    //
+    // The 'Always' option is not available if selection/clipboard synchronisation
+    // is turned off - in this case the selection is never automatically saved
+    // in the clipboard history.
+
+    QButtonGroup *bg = new QButtonGroup(this);
+
+    m_alwaysTextRb = new QRadioButton(i18n("Always save in history"), this);
+    m_alwaysTextRb->setChecked(!KlipperSettings::ignoreSelection());
+    bg->addButton(m_alwaysTextRb);
+    layout->addRow(i18n("Text selection:"), m_alwaysTextRb);
+
+    m_copiedTextRb = new QRadioButton(i18n("Only when explicitly copied"), this);
+    m_copiedTextRb->setChecked(KlipperSettings::ignoreSelection());
+    bg->addButton(m_copiedTextRb);
+    layout->addRow(QString(), m_copiedTextRb);
+
+    layout->addRow(QString(), createHintLabel(i18n("Whether text selections are saved in the clipboard history."), this));
+
+    // Radio button group: Storing non-text selections in history
+    //
+    // The truth table for the 4 possible combinations of internal Klipper
+    // settings (of which two are equivalent, making 3 user-visible options)
+    // controlling what is stored in the clipboard history is:
+    //
+    // selectionTextOnly  ignoreImages   Selected   Selected    Copied    Copied      Option
+    //                                     text    image/other   text   image/other
+    //
+    //        false          false          yes       yes         yes       yes         1
+    //        true           false          yes       no          yes       yes         2
+    //        false          true           yes       no          yes       no          3
+    //        true           true           yes       no          yes       no          3
+    //
+    // Option 1:  Always store images in history
+    //        2:  Only when explicitly copied
+    //        3:  Never store images in history
+    //
+    // The 'Always' option is not available if selection/clipboard synchronisation
+    // is turned off.
+
+    bg = new QButtonGroup(this);
+
+    m_alwaysImageRb = new QRadioButton(i18n("Always save in history"), this);
+    m_alwaysImageRb->setChecked(!KlipperSettings::ignoreImages() && !KlipperSettings::selectionTextOnly());
+    bg->addButton(m_alwaysImageRb);
+    layout->addRow(i18n("Non-text selection:"), m_alwaysImageRb);
+
+    m_copiedImageRb = new QRadioButton(i18n("Only when explicitly copied"), this);
+    m_copiedImageRb->setChecked(!KlipperSettings::ignoreImages() && KlipperSettings::selectionTextOnly());
+    bg->addButton(m_copiedImageRb);
+    layout->addRow(QString(), m_copiedImageRb);
+
+    m_neverImageRb = new QRadioButton(i18n("Never save in history"), this);
+    m_neverImageRb->setChecked(KlipperSettings::ignoreImages());
+    bg->addButton(m_neverImageRb);
+    layout->addRow(QString(), m_neverImageRb);
+
+    layout->addRow(QString(), createHintLabel(i18n("Whether non-text selections (such as images) are saved in the clipboard history."), this));
+
+    layout->addRow(QString(), new QLabel(this));
+
+    // Action popup time
+    item = KlipperSettings::self()->timeoutForActionPopupsItem();
+    m_actionTimeoutSb = new KPluralHandlingSpinBox(this);
+    m_actionTimeoutSb->setRange(item->minValue().toInt(), item->maxValue().toInt());
+    m_actionTimeoutSb->setValue(KlipperSettings::timeoutForActionPopups());
+    m_actionTimeoutSb->setSuffix(ki18ncp("Unit of time", " second", " seconds"));
+    m_actionTimeoutSb->setSpecialValueText(i18nc("No timeout", "None"));
+    m_actionTimeoutSb->setToolTip(item->toolTip());
+    layout->addRow(item->label(), m_actionTimeoutSb);
+
+    // Clipboard history size
+    item = KlipperSettings::self()->maxClipItemsItem();
+    m_historySizeSb = new KPluralHandlingSpinBox(this);
+    m_historySizeSb->setRange(item->minValue().toInt(), item->maxValue().toInt());
+    m_historySizeSb->setValue(KlipperSettings::maxClipItems());
+    m_historySizeSb->setSuffix(ki18ncp("NUmber of entries", " entry", " entries"));
+    m_historySizeSb->setToolTip(item->toolTip());
+    layout->addRow(item->label(), m_historySizeSb);
+
+    m_settingsSaved = false;
+    connect(m_syncClipboardsCb, &QAbstractButton::clicked, this, &GeneralWidget::updateWidgets);
+
+    layout->addItem(new QSpacerItem(QSizePolicy::Fixed, QSizePolicy::Expanding));
 }
+
 
 void GeneralWidget::updateWidgets()
 {
-    if (m_ui.kcfg_IgnoreSelection->isChecked()) {
-        m_ui.kcfg_SyncClipboards->setEnabled(false);
-        m_ui.kcfg_SelectionTextOnly->setEnabled(false);
-    } else if (m_ui.kcfg_SyncClipboards->isChecked()) {
-        m_ui.kcfg_IgnoreSelection->setEnabled(false);
+    if (m_syncClipboardsCb->isChecked()) {
+        m_alwaysImageRb->setEnabled(true);
+        m_alwaysTextRb->setEnabled(true);
+
+        if (m_settingsSaved) {
+            m_alwaysTextRb->setChecked(m_prevAlwaysText);
+            m_alwaysImageRb->setChecked(m_prevAlwaysImage);
+            m_settingsSaved = false;
+        }
+    } else {
+        m_prevAlwaysText = m_alwaysTextRb->isChecked();
+        m_prevAlwaysImage = m_alwaysImageRb->isChecked();
+        m_settingsSaved = true;
+
+        if (m_alwaysImageRb->isChecked()) {
+            m_copiedImageRb->setChecked(true);
+        }
+
+        if (m_alwaysTextRb->isChecked()) {
+            m_copiedTextRb->setChecked(true);
+        }
+
+        m_alwaysImageRb->setEnabled(false);
+        m_alwaysTextRb->setEnabled(false);
     }
+}
+
+void GeneralWidget::save()
+{
+    KlipperSettings::setKeepClipboardContents(m_enableHistoryCb->isChecked());
+    KlipperSettings::setSyncClipboards(m_syncClipboardsCb->isChecked());
+
+    KlipperSettings::setIgnoreSelection(m_copiedTextRb->isChecked());
+
+    KlipperSettings::setIgnoreImages(m_neverImageRb->isChecked());
+    KlipperSettings::setSelectionTextOnly(m_copiedImageRb->isChecked());
+
+    KlipperSettings::setTimeoutForActionPopups(m_actionTimeoutSb->value());
+    KlipperSettings::setMaxClipItems(m_historySizeSb->value());
 }
 
 ActionsWidget::ActionsWidget(QWidget *parent)
@@ -262,8 +451,13 @@ ConfigDialog::ConfigDialog(QWidget *parent, KConfigSkeleton *skeleton, const Kli
     m_shortcutsWidget = new KShortcutsEditor(collection, this, KShortcutsEditor::GlobalAction);
     addPage(m_shortcutsWidget, i18nc("Shortcuts Config", "Shortcuts"), QStringLiteral("preferences-desktop-keyboard"), i18n("Shortcuts Configuration"));
 
+    connect(m_generalPage, &GeneralWidget::settingChanged, this, &ConfigDialog::settingsChangedSlot);
+
+    // from KWindowConfig::restoreWindowSize() API documentation
+    (void) winId();
     const KConfigGroup grp = KSharedConfig::openConfig()->group("ConfigDialog");
     KWindowConfig::restoreWindowSize(windowHandle(), grp);
+    resize(windowHandle()->size());
 }
 
 ConfigDialog::~ConfigDialog()
@@ -280,12 +474,15 @@ void ConfigDialog::updateSettings()
     }
 
     m_shortcutsWidget->save();
+    m_generalPage->save();
 
     m_actionsPage->resetModifiedState();
 
     m_klipper->urlGrabber()->setActionList(m_actionsPage->actionList());
     m_klipper->urlGrabber()->setExcludedWMClasses(m_actionsPage->excludedWMClasses());
     m_klipper->saveSettings();
+
+    KlipperSettings::self()->save();
 
     KConfigGroup grp = KSharedConfig::openConfig()->group("ConfigDialog");
     KWindowConfig::saveWindowSize(windowHandle(), grp);

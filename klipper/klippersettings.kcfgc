@@ -4,5 +4,6 @@ ClassName=KlipperSettings
 Singleton=true
 CustomAdditions=false
 SetUserTexts=true
-Mutators=URLGrabberEnabled,NoActionsForWM_CLASS,Version
+Mutators=true
 TranslationSystem=kde
+ItemAccessors=true

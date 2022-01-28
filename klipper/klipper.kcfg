@@ -9,36 +9,38 @@
       <label>Klipper version</label>
     </entry>
     <entry name="KeepClipboardContents" type="Bool">
-      <label>Keep clipboard contents</label>
+      <label>Save the clipboard history across desktop sessions</label>
       <default>true</default>
+      <tooltip>Retain the clipboard history, so it will be available the next time you log in.</tooltip>
     </entry>
-    <entry name="PreventEmptyClipboard" type="Bool">
-      <label>Prevent empty clipboard</label>
+    <entry name="PreventEmptyClipboard" key="NoEmptyClipboard" type="Bool">
+      <label>Prevent the clipboard from being cleared</label>
       <default>true</default>
-      <whatsthis>Selecting this option has the effect, that the clipboard can never be emptied. E.g. when an application exits, the clipboard would usually be emptied.</whatsthis>
-    </entry>
-    <entry name="IgnoreImages" type="Bool">
-      <label>Ignore images</label>
-      <default>true</default>
-    </entry>
-    <entry name="IgnoreSelection" type="Bool">
-      <label>Ignore Selection</label>
-      <default>true</default>
-      <whatsthis>When an area of the screen is selected with mouse or keyboard, this is called "the selection".&lt;br/&gt;If this option is set, the selection is not entered into the clipboard history, though it is still available for pasting using the middle mouse button.</whatsthis>
+      <whatsthis>Do not allow the clipboard to be cleared, for example when an application exits.</whatsthis>
     </entry>
     <entry name="Synchronize" type="Int">
       <label comment="KDE::DoNotExtract">Backwards compatibility, don't touch.</label>
       <default>3</default>
     </entry>
     <entry name="SyncClipboards" type="Bool">
-      <label>Synchronize clipboard and selection</label>
+      <label>Keep the selection and clipboard the same</label>
       <default>false</default>
-      <whatsthis>When an area of the screen is selected with mouse or keyboard, this is called "the selection".&lt;br/&gt;If this option is selected, the selection and the clipboard is kept the same, so that anything in the selection is immediately available for pasting elsewhere using any method, including the traditional middle mouse button. Otherwise, the selection is recorded in the clipboard history, but the selection can only be pasted using the middle mouse button. Also see the 'Ignore Selection' option.</whatsthis>
+      <whatsthis>Content selected with the cursor is automatically copied to the clipboard so that it can be pasted with either a Paste action or a middle-click.&lt;br/&gt;&lt;a href="1"&gt;More about the selection and clipboard&lt;/a&gt;.</whatsthis>
+    </entry>
+    <entry name="IgnoreSelection" type="Bool">
+      <label>Ignore the selection</label>
+      <default>true</default>
+      <whatsthis>Content selected with the cursor but not explicitly copied to the clipboard is not automatically stored in the clipboard history, and can only be pasted using a middle-click.</whatsthis>
     </entry>
     <entry name="SelectionTextOnly" type="Bool">
-      <label>Selection text only</label>
+      <label>Text selection only</label>
       <default>true</default>
-      <whatsthis>When an area of the screen is selected with mouse or keyboard, this is called "the selection".&lt;br/&gt;If this option is selected, only text selections are stored in the history, while images and other selections are not.</whatsthis>
+      <whatsthis>Only store text selections in the clipboard history, not images or any other type of data.</whatsthis>
+    </entry>
+    <entry name="IgnoreImages" type="Bool">
+      <label>Always ignore images</label>
+      <default>true</default>
+      <whatsthis>Do not store images in the clipboard history, even if explicitly copied.</whatsthis>
     </entry>
     <entry name="UseGUIRegExpEditor" type="Bool">
       <label>Use graphical regexp editor</label>
@@ -53,17 +55,18 @@
         <label>No actions for WM_CLASS</label>
     </entry>
     <entry name="TimeoutForActionPopups" type="Int">
-        <label>Timeout for action popups (seconds)</label>
+        <label>Automatic action popup time:</label>
         <default>8</default>
         <min>0</min>
         <max>200</max>
-        <tooltip>A value of 0 disables the timeout</tooltip>
+        <tooltip>Display the automatic action popup for this time.</tooltip>
     </entry>
     <entry name="MaxClipItems" type="Int">
-        <label>Clipboard history size</label>
+        <label>Clipboard history size:</label>
         <default>20</default>
         <min>1</min>
         <max>2048</max>
+	<tooltip>The clipboard history will store up to this many items.</tooltip>
     </entry>
     <entry key="ActionListChanged" name="ActionList" type="Int">
         <label>Dummy entry for indicating changes in an action's tree widget</label>
@@ -74,15 +77,17 @@
     <entry name="StripWhiteSpace" type="Bool">
       <label>Strip whitespace when executing an action</label>
       <default>true</default>
-      <whatsthis>Sometimes, the selected text has some whitespace at the end, which, if loaded as URL in a browser would cause an error. Enabling this option removes any whitespace at the beginning or end of the selected string (the original clipboard contents will not be modified).</whatsthis>
+      <tooltip>Remove white space from the start and end of clipboard text before performing an action. For example, this ensures that the URL pasted in a browser is interpreted as expected.&lt;br/&gt;&lt;br/&gt;The text saved on the clipboard is not affected.</tooltip>
     </entry>
     <entry name="ReplayActionInHistory" type="Bool">
       <label>Replay action in history</label>
       <default>false</default>
+      <tooltip>When a clipboard item is selected from the history popup, automatically perform the configured actions on it.</tooltip>
     </entry>
     <entry name="EnableMagicMimeActions" type="Bool">
       <label>Enable MIME-based actions</label>
       <default>true</default>
+      <tooltip>If this option is set, and a file name or URL is selected, include applications that can handle its MIME type in the actions popup.</tooltip>
     </entry>
   </group>
 </kcfg>
