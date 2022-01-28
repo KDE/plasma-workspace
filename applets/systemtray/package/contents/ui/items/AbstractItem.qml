@@ -53,16 +53,6 @@ PlasmaCore.ToolTipArea {
         return plasmoid.location;
     }
 
-//BEGIN CONNECTIONS
-
-    onContainsMouseChanged: {
-        if (inHiddenLayout && containsMouse) {
-            root.hiddenLayout.currentIndex = index
-        }
-    }
-
-//END CONNECTIONS
-
     PulseAnimation {
         targetItem: iconContainer
         running: (abstractItem.status === PlasmaCore.Types.NeedsAttentionStatus ||
@@ -96,11 +86,16 @@ PlasmaCore.ToolTipArea {
     }
 
     MouseArea {
+        propagateComposedEvents: true
+        z: 1
         anchors.fill: abstractItem
         hoverEnabled: true
         drag.filterChildren: true
         // Necessary to make the whole delegate area forward all mouse events
         acceptedButtons: Qt.AllButtons
+        onEntered: if (inHiddenLayout) {
+            root.hiddenLayout.currentIndex = index
+        }
         onClicked: abstractItem.clicked(mouse)
         onPressed: {
             abstractItem.hideImmediately()

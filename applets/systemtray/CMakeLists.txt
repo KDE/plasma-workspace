@@ -6,6 +6,7 @@ include_directories(${plasma-workspace_SOURCE_DIR}/statusnotifierwatcher)
 
 set(systemtray_SRCS
     dbusserviceobserver.cpp
+    pointerforwarderattached.cpp
     plasmoidregistry.cpp
     sortedsystemtraymodel.cpp
     statusnotifieritemjob.cpp

@@ -7,6 +7,7 @@
 #include "systemtray.h"
 #include "debug.h"
 
+#include "pointerforwarderattached.h"
 #include "plasmoidregistry.h"
 #include "sortedsystemtraymodel.h"
 #include "systemtraymodel.h"
@@ -33,6 +34,14 @@ SystemTray::SystemTray(QObject *parent, const KPluginMetaData &data, const QVari
     , m_sortedSystemTrayModel(nullptr)
     , m_configSystemTrayModel(nullptr)
 {
+    static bool s_typesRegistered = false;
+    if (!s_typesRegistered) {
+        auto uri = "org.kde.plasma.private.systemtray";
+        qmlRegisterUncreatableType<PointerForwarderAttached>(uri, 1, 0, "PointerForwarder",
+                                                           QStringLiteral("PointerForwarder is only available via attached properties"));
+        qmlProtectModule(uri, 1);
+        s_typesRegistered = true;
+    }
     setHasConfigurationInterface(true);
     setContainmentType(Plasma::Types::CustomEmbeddedContainment);
     setContainmentDisplayHints(Plasma::Types::ContainmentDrawsPlasmoidHeading | Plasma::Types::ContainmentForcesSquarePlasmoids);
