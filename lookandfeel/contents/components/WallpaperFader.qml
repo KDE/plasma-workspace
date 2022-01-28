@@ -74,7 +74,7 @@ Item {
                     0,         0,         0,         1
                 ));
 
-        fragmentShader: "
+        fragmentShader: `
             uniform mediump mat4 colorMatrix;
             uniform mediump sampler2D source;
             varying mediump vec2 qt_TexCoord0;
@@ -84,7 +84,8 @@ Item {
             {
                 mediump vec4 tex = texture2D(source, qt_TexCoord0);
                 gl_FragColor = tex * colorMatrix * qt_Opacity;
-            }"
+            }
+        `
     }
 
     states: [
