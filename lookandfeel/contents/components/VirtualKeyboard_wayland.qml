@@ -5,6 +5,7 @@
 */
 
 import QtQuick 2.15
+
 import org.kde.plasma.workspace.keyboardlayout 1.0 as Keyboards
 
 Item {

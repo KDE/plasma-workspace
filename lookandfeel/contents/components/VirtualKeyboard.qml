@@ -4,8 +4,9 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.5
-import QtQuick.VirtualKeyboard 2.1
+import QtQuick 2.15
+import QtQuick.VirtualKeyboard 2.4
+
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 InputPanel {

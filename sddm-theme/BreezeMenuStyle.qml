@@ -1,9 +1,9 @@
-import QtQuick 2.2
+import QtQuick 2.15
+// Don't bump them any further, these are the latest.
+import QtQuick.Controls 1.6 as QQC
+import QtQuick.Controls.Styles 1.4 as QQCS
 
 import org.kde.plasma.core 2.0 as PlasmaCore
-
-import QtQuick.Controls.Styles 1.4 as QQCS
-import QtQuick.Controls 1.3 as QQC
 
 QQCS.MenuStyle {
     frame: Rectangle {
