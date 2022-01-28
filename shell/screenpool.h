@@ -50,6 +50,7 @@ public:
 Q_SIGNALS:
     void screenAdded(QScreen *screen);
     void screenRemoved(QScreen *screen);
+    void primaryScreenChanged(QScreen *oldPrimary, QScreen *newPrimary);
 
 private:
     void save();

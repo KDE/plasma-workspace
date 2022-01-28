@@ -264,7 +264,7 @@ void ScreenPool::reconsiderOutputs()
     for (QScreen *screen : screens) {
         if (m_redundantOutputs.contains(screen)) {
             if (!isOutputRedundant(screen)) {
-                qDebug() << "not redundant anymore" << screen;
+                qDebug() << "not redundant anymore" << screen << (isOutputFake(screen) ? "but is a fake screen" : "");
                 m_redundantOutputs.remove(screen);
                 // This will also manage the isOutputFake case
                 handleScreenAdded(screen);
@@ -274,6 +274,14 @@ void ScreenPool::reconsiderOutputs()
 
             handleScreenRemoved(screen);
             m_redundantOutputs.insert(screen);
+        } else if (isOutputFake(screen)) {
+            // NOTE: order of operations is important
+            qDebug() << "new fake screen" << screen;
+            m_redundantOutputs.remove(screen);
+            if (m_availableScreens.contains(screen)) {
+                handleScreenRemoved(screen);
+            }
+            m_fakeOutputs.insert(screen);
         } else {
             qDebug() << "fine screen" << screen;
         }
@@ -330,12 +338,11 @@ void ScreenPool::handlePrimaryOutputNameChanged(const QString &oldOutputName, co
 
     QScreen *oldPrimary = screenForConnector(oldOutputName);
     QScreen *newPrimary = m_primaryWatcher->primaryScreen();
+    Q_ASSERT(newPrimary && newPrimary->name() == newOutputName);
 
     if (!newPrimary || newPrimary == oldPrimary || newPrimary->geometry().isNull()) {
         return;
     }
-
-    const int oldIdOfPrimary = id(newPrimary->name());
 
     // On X11 we get fake screens as primary
 
@@ -352,7 +359,9 @@ void ScreenPool::handlePrimaryOutputNameChanged(const QString &oldOutputName, co
         handleScreenAdded(newPrimary);
         return;
     } else {
+        Q_ASSERT(oldPrimary && newPrimary);
         qWarning() << "PRIMARY CHANGED" << oldPrimary << "-->" << newPrimary;
+        Q_EMIT primaryScreenChanged(oldPrimary, newPrimary);
     }
 }
 
