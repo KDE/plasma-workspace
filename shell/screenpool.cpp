@@ -292,11 +292,11 @@ void ScreenPool::reconsiderOutputs()
         } else if (isOutputRedundant(screen)) {
             // qDebug() << "new redundant screen" << screen << "with primary screen" << m_primaryWatcher->primaryScreen();
 
+            m_redundantOutputs.insert(screen);
             if (m_availableScreens.contains(screen)) {
                 m_availableScreens.removeAll(screen);
                 Q_EMIT screenRemoved(screen);
             }
-            m_redundantOutputs.insert(screen);
         } else if (isOutputFake(screen)) {
             // NOTE: order of operations is important
             // qDebug() << "new fake screen" << screen;
@@ -444,6 +444,23 @@ void ScreenPool::screenInvariants()
             Q_ASSERT(connector(id(screen->name())) == screen->name());
         }
     }
+}
+
+QDebug operator<<(QDebug debug, const ScreenPool *pool)
+{
+    debug << pool->metaObject()->className() << '(' << static_cast<const void *>(pool) << ") Internal state:\n";
+    debug << "Connector Mapping:\n";
+    auto it = pool->m_idForConnector.constBegin();
+    while (it != pool->m_idForConnector.constEnd()) {
+        debug << it.key() << "\t-->\t" << it.value() << '\n';
+        it++;
+    }
+    debug << "Primary screen:\t" << pool->primaryScreen() << '\n';
+    debug << "Available screens:\t" << pool->m_availableScreens << '\n';
+    debug << "\"Fake\" screens:\t" << pool->m_fakeOutputs << '\n';
+    debug << "Redundant screens:\t" << pool->m_redundantOutputs << '\n';
+    debug << "All screens:\t" << qGuiApp->screens() << '\n';
+    return debug;
 }
 
 #include "moc_screenpool.cpp"

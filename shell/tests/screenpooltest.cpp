@@ -34,21 +34,26 @@ ScreenPoolTester::ScreenPoolTester(QObject *parent)
     connect(m_screenPool, &ScreenPool::screenRemoved, this, &ScreenPoolTester::handleScreenRemoved);
     connect(m_screenPool, &ScreenPool::primaryScreenChanged, this, &ScreenPoolTester::handlePrimaryScreenChanged);
     m_screenPool->load();
+    qWarning() << "Load completed";
+    qWarning() << m_screenPool;
 }
 
 void ScreenPoolTester::handleScreenAdded(QScreen *screen)
 {
     qWarning() << "SCREEN ADDED" << screen;
+    qWarning() << m_screenPool;
 }
 
 void ScreenPoolTester::handleScreenRemoved(QScreen *screen)
 {
     qWarning() << "SCREEN REMOVED" << screen;
+    qWarning() << m_screenPool;
 }
 
 void ScreenPoolTester::handlePrimaryScreenChanged(QScreen *oldPrimary, QScreen *newPrimary)
 {
     qWarning() << "PRIMARY SCREEN CHANGED:" << oldPrimary << "-->" << newPrimary;
+    qWarning() << m_screenPool;
 }
 
 Q_DECL_EXPORT int main(int argc, char *argv[])
