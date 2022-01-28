@@ -63,6 +63,8 @@ private:
     void handleScreenRemoved(QScreen *screen);
     void handlePrimaryOutputNameChanged(const QString &oldOutputName, const QString &newOutputName);
 
+    void screenInvariants();
+
     KConfigGroup m_configGroup;
     QString m_primaryConnector;
     // order is important

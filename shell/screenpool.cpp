@@ -12,6 +12,12 @@
 #include <QGuiApplication>
 #include <QScreen>
 
+#ifndef NDEBUG
+#define CHECK_SCREEN_INVARIANTS screenInvariants();
+#else
+#define CHECK_SCREEN_INVARIANTS
+#endif
+
 ScreenPool::ScreenPool(const KSharedConfig::Ptr &config, QObject *parent)
     : QObject(parent)
     , m_configGroup(KConfigGroup(config, QStringLiteral("ScreenConnectors")))
@@ -300,7 +306,7 @@ void ScreenPool::reconsiderOutputs()
 
     // updateStruts();
 
-    // CHECK_SCREEN_INVARIANTS
+    CHECK_SCREEN_INVARIANTS
 }
 
 void ScreenPool::handleScreenAdded(QScreen *screen)
@@ -386,6 +392,35 @@ void ScreenPool::handlePrimaryOutputNameChanged(const QString &oldOutputName, co
         Q_ASSERT(oldPrimary && newPrimary);
         // qWarning() << "PRIMARY CHANGED" << oldPrimary << "-->" << newPrimary;
         Q_EMIT primaryScreenChanged(oldPrimary, newPrimary);
+    }
+}
+
+void ScreenPool::screenInvariants()
+{
+    qWarning() << "Checking invariants";
+    auto allScreens = qGuiApp->screens();
+    // Do we actually track every screen?
+    Q_ASSERT((m_availableScreens.count() + m_redundantOutputs.count() + m_fakeOutputs.count()) == allScreens.count());
+
+    // At most one fake output
+    Q_ASSERT(m_fakeOutputs.count() <= 1);
+    if (m_fakeOutputs.count() == 1) {
+        // If we have a fake output we can't have anything else
+        Q_ASSERT(m_availableScreens.count() == 0);
+        Q_ASSERT(m_redundantOutputs.count() == 0);
+    } else {
+        for (QScreen *screen : allScreens) {
+            if (m_availableScreens.contains(screen)) {
+                // If available can't be redundant
+                Q_ASSERT(!m_redundantOutputs.contains(screen));
+            } else if (m_redundantOutputs.contains(screen)) {
+                // If redundant can't be available
+                Q_ASSERT(!m_availableScreens.contains(screen));
+            } else {
+                // We can't have a screen unaccounted for
+                Q_ASSERT(false);
+            }
+        }
     }
 }
 
