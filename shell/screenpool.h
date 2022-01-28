@@ -9,6 +9,7 @@
 #include <QAbstractNativeEventFilter>
 #include <QHash>
 #include <QObject>
+#include <QSet>
 #include <QString>
 #include <QTimer>
 
@@ -44,10 +45,19 @@ public:
     // all ids that are known, included screens not enabled at the moment
     QList<int> knownIds() const;
 
+Q_SIGNALS:
+    void screenAdded(QScreen *screen);
+    void screenRemoved(QScreen *screen);
+
 private:
     void save();
+    bool isOutputRedundant(QScreen *screen) const;
+    void reconsiderOutputs();
     bool noRealOutputsConnected() const;
     bool isOutputFake(QScreen *screen) const;
+
+    void handleScreenAdded(QScreen *screen);
+    void handleScreenRemoved(QScreen *screen);
     void primaryOutputNameChanged(const QString &oldOutputName, const QString &newOutputName);
 
     KConfigGroup m_configGroup;
@@ -56,6 +66,9 @@ private:
     QMap<int, QString> m_connectorForId;
     QHash<QString, int> m_idForConnector;
 
+    QSet<QScreen *> m_redundantOutputs;
+
+    QTimer m_reconsiderOutputsTimer;
     QTimer m_configSaveTimer;
     PrimaryOutputWatcher *const m_primaryWatcher;
 };

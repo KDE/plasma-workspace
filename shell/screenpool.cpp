@@ -17,12 +17,20 @@ ScreenPool::ScreenPool(const KSharedConfig::Ptr &config, QObject *parent)
     , m_configGroup(KConfigGroup(config, QStringLiteral("ScreenConnectors")))
     , m_primaryWatcher(new PrimaryOutputWatcher(this))
 {
+    connect(qGuiApp, &QGuiApplication::screenAdded, this, &ScreenPool::handleScreenAdded, Qt::UniqueConnection);
+    connect(qGuiApp, &QGuiApplication::screenRemoved, this, &ScreenPool::handleScreenRemoved, Qt::UniqueConnection);
     connect(m_primaryWatcher, &PrimaryOutputWatcher::primaryOutputNameChanged, this, &ScreenPool::primaryOutputNameChanged, Qt::UniqueConnection);
+
+    m_reconsiderOutputsTimer.setSingleShot(true);
+    m_reconsiderOutputsTimer.setInterval(250);
+    connect(&m_reconsiderOutputsTimer, &QTimer::timeout, this, &ScreenPool::reconsiderOutputs);
 
     m_configSaveTimer.setSingleShot(true);
     connect(&m_configSaveTimer, &QTimer::timeout, this, [this]() {
         m_configGroup.sync();
     });
+
+    load(m_primaryWatcher->primaryScreen());
 }
 
 void ScreenPool::load(QScreen *primary)
@@ -61,6 +69,7 @@ void ScreenPool::load(QScreen *primary)
         if (!m_idForConnector.contains(screen->name())) {
             insertScreenMapping(firstAvailableId(), screen->name());
         }
+        handleScreenAdded(screen);
     }
 }
 
@@ -193,12 +202,105 @@ bool ScreenPool::isOutputFake(QScreen *screen) const
     return screen->name() == QStringLiteral(":0.0") || screen->geometry().isEmpty() || screen->name().isEmpty();
 }
 
+bool ScreenPool::isOutputRedundant(QScreen *screen) const
+{
+    Q_ASSERT(screen);
+    const QRect thisGeometry = screen->geometry();
+
+    const int thisId = id(screen->name());
+
+    // FIXME: QScreen doesn't have any idea of "this qscreen is clone of this other one
+    // so this ultra inefficient heuristic has to stay until we have a slightly better api
+    // logic is:
+    // a screen is redundant if:
+    //* its geometry is contained in another one
+    //* if their resolutions are different, the "biggest" one wins
+    //* if they have the same geometry, the one with the lowest id wins (arbitrary, but gives reproducible behavior and makes the primary screen win)
+    const auto screens = qGuiApp->screens();
+    for (QScreen *s : screens) {
+        // don't compare with itself
+        if (screen == s) {
+            continue;
+        }
+        if (s->geometry().isNull()) {
+            continue;
+        }
+
+        const QRect otherGeometry = s->geometry();
+
+        const int otherId = id(s->name());
+
+        if (otherGeometry.contains(thisGeometry, false)
+            && ( // since at this point contains is true, if either
+                 // measure of othergeometry is bigger, has a bigger area
+                otherGeometry.width() > thisGeometry.width() || otherGeometry.height() > thisGeometry.height() ||
+                // ids not -1 are considered in descending order of importance
+                //-1 means that is a screen not known yet, just arrived and
+                // not yet in screenpool: this happens for screens that
+                // are hotplugged and weren't known. it does NOT happen
+                // at first startup, as screenpool populates on load with all screens connected at the moment before the rest of the shell starts up
+                (thisId == -1 && otherId != -1) || (thisId > otherId && otherId != -1))) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+void ScreenPool::reconsiderOutputs()
+{
+    const auto screens = qGuiApp->screens();
+    for (QScreen *screen : screens) {
+        if (m_redundantOutputs.contains(screen)) {
+            if (!isOutputRedundant(screen)) {
+                qDebug() << "not redundant anymore" << screen;
+                m_redundantOutputs.remove(screen);
+                Q_EMIT screenAdded(screen);
+            }
+        } else if (isOutputRedundant(screen)) {
+            qDebug() << "new redundant screen" << screen << "with primary screen" << m_primaryWatcher->primaryScreen();
+
+            m_redundantOutputs.insert(screen);
+            Q_EMIT screenRemoved(screen);
+        } else {
+            qDebug() << "fine screen" << screen;
+        }
+    }
+
+    // updateStruts();
+
+    // CHECK_SCREEN_INVARIANTS
+}
+
+void ScreenPool::handleScreenAdded(QScreen *screen)
+{
+    qWarning() << "ADDED" << screen << "redundant" << isOutputRedundant(screen) << "fake" << isOutputFake(screen);
+
+    connect(screen, &QScreen::geometryChanged, &m_reconsiderOutputsTimer, static_cast<void (QTimer::*)()>(&QTimer::start), Qt::UniqueConnection);
+
+    if (isOutputRedundant(screen) || isOutputFake(screen)) {
+        return;
+    }
+
+    emit screenAdded(screen);
+}
+
+void ScreenPool::handleScreenRemoved(QScreen *screen)
+{
+    qWarning() << "REMOVED" << screen;
+    if (m_redundantOutputs.contains(screen)) {
+        m_redundantOutputs.remove(screen);
+    } else {
+        emit screenRemoved(screen);
+    }
+}
+
 void ScreenPool::primaryOutputNameChanged(const QString &oldOutputName, const QString &newOutputName)
 {
     // when the appearance of a new primary screen *moves*
     // the position of the now secondary, the two screens will appear overlapped for an instant, and a spurious output redundant would happen here if checked
     // immediately
-    // m_reconsiderOutputsTimer.start();
+    m_reconsiderOutputsTimer.start();
 
     QScreen *oldPrimary = m_primaryWatcher->screenForName(oldOutputName);
     QScreen *newPrimary = m_primaryWatcher->primaryScreen();
@@ -215,11 +317,13 @@ void ScreenPool::primaryOutputNameChanged(const QString &oldOutputName, const QS
         // removed This happens only on X, wayland doesn't seem to be getting fake screens
         if (noRealOutputsConnected()) {
             qWarning() << "EMITTING SCREEN REMOVED" << newPrimary;
+            handleScreenRemoved(newPrimary);
             return;
             // On X11, the output named :0.0 is fake
         } else if (!oldPrimary || oldOutputName == ":0.0" || oldOutputName.isEmpty()) {
             // setPrimaryConnector(newPrimary->name());
             qWarning() << "EMITTING SCREEN ADDED" << newPrimary;
+            handleScreenAdded(newPrimary);
             return;
         } else {
             qWarning() << "PRIMARY CHANGED" << oldPrimary << "-->" << newPrimary;

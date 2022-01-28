@@ -12,8 +12,14 @@
 
 Q_DECL_EXPORT int main(int argc, char *argv[])
 {
-    QGuiApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
-    QGuiApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
+    if (!qEnvironmentVariableIsSet("PLASMA_USE_QT_SCALING")) {
+        qunsetenv("QT_DEVICE_PIXEL_RATIO");
+        QCoreApplication::setAttribute(Qt::AA_DisableHighDpiScaling);
+    } else {
+        QGuiApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+        QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
+    }
+
     QGuiApplication::setApplicationDisplayName(QStringLiteral("ScreenPool test"));
 
     QApplication app(argc, argv);
