@@ -21,7 +21,6 @@ ColumnLayout {
     Keys.onPressed: {
         if (event.key === Qt.Key_Escape) {
             stack.pop()
-            done();
             event.accepted = true;
         }
     }
@@ -38,8 +37,8 @@ ColumnLayout {
     }
 
     function done() {
-        stack.initialItem.view.currentIndex = 0;
-        stack.initialItem.view.currentItem.forceActiveFocus();
+        // The modified item will be pushed to the top, and we would like to highlight the real first item
+        Qt.callLater(() => {stack.initialItem.view.currentIndex = 0;});
     }
 
     PlasmaComponents3.ScrollView {
@@ -79,7 +78,7 @@ ColumnLayout {
         PlasmaComponents3.Button {
             text: i18nc("@action:button", "Cancel")
             icon.name: "dialog-cancel"
-            onClicked: { stack.pop(); done() }
+            onClicked: stack.pop()
         }
     }
 }
