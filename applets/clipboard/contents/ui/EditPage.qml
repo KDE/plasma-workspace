@@ -5,6 +5,7 @@
 */
 
 import QtQuick 2.0
+import QtQuick.Controls 2.15 as QQC2 // For StackView
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
@@ -31,14 +32,16 @@ ColumnLayout {
         done();
     }
 
-    Component.onCompleted: {
-        textArea.forceActiveFocus();
-        textArea.cursorPosition = textArea.text.length;
-    }
-
     function done() {
         // The modified item will be pushed to the top, and we would like to highlight the real first item
         Qt.callLater(() => {stack.initialItem.view.currentIndex = 0;});
+    }
+
+    QQC2.StackView.onStatusChanged: {
+        if (QQC2.StackView.status === QQC2.StackView.Active) {
+            textArea.forceActiveFocus();
+            textArea.cursorPosition = textArea.text.length;
+        }
     }
 
     PlasmaComponents3.ScrollView {
