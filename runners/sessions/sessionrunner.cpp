@@ -133,7 +133,7 @@ void SessionRunner::match(Plasma::RunnerContext &context)
         Plasma::QueryMatch match(this);
         match.setType(Plasma::QueryMatch::ExactMatch);
         match.setIconName(QStringLiteral("system-switch-user"));
-        match.setText(i18n("New Session"));
+        match.setText(i18n("Switch User"));
         matches << match;
     }
 
