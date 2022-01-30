@@ -4,19 +4,31 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.2
+import QtQuick 2.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.workspace.components 2.0 as PW
 
 Row {
-    id: row
+    id: root
 
     property int fontSize: PlasmaCore.Theme.defaultFont.pointSize
 
+    function getOrDefault(source /*object?*/, prop /*string*/, fallback /*T*/) /*-> T*/ {
+        return (source !== null && source !== undefined && source.hasOwnProperty(prop))
+            ? source[prop] : fallback;
+    }
+
+    readonly property var acAdapter: pmSource.data["AC Adapter"]
+    readonly property var battery: pmSource.data["Battery"]
+
+    readonly property bool pluggedIn: getOrDefault(acAdapter, "Plugged in", false)
+    readonly property bool hasBattery: getOrDefault(battery, "Has Battery", false)
+    readonly property int percent: getOrDefault(battery, "Percent", 0)
+
     spacing: PlasmaCore.Units.smallSpacing
-    visible: pmSource.data["Battery"]["Has Cumulative"]
+    visible: getOrDefault(battery, "Has Cumulative", false)
 
     PlasmaCore.DataSource {
         id: pmSource
@@ -25,10 +37,9 @@ Row {
     }
 
     PW.BatteryIcon {
-        id: battery
-        hasBattery: pmSource.data["Battery"]["Has Battery"] || false
-        percent: pmSource.data["Battery"]["Percent"] || 0
-        pluggedIn: pmSource.data["AC Adapter"] ? pmSource.data["AC Adapter"]["Plugged in"] : false
+        pluggedIn: root.pluggedIn
+        hasBattery: root.hasBattery
+        percent: root.percent
 
         height: batteryLabel.height
         width: height
@@ -36,8 +47,8 @@ Row {
 
     PlasmaComponents3.Label {
         id: batteryLabel
-        font.pointSize: row.fontSize
-        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","%1%", battery.percent)
-        Accessible.name: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Battery at %1%", battery.percent)
+        font.pointSize: root.fontSize
+        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "%1%", root.percent)
+        Accessible.name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Battery at %1%", root.percent)
     }
 }
