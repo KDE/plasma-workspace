@@ -10,10 +10,21 @@ import QtQuick 2.0
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 import org.kde.plasma.core 2.0 as PlasmaCore
 
-KQuickControlsAddons.QPixmapItem {
-    id: previewPixmap
-    width: Math.min(nativeWidth, width)
-    height: Math.min(nativeHeight, Math.round(width * (nativeHeight/nativeWidth) + PlasmaCore.Units.smallSpacing * 2))
-    pixmap: DecorationRole
-    fillMode: KQuickControlsAddons.QPixmapItem.PreserveAspectFit
+Item {
+    height: childrenRect.height
+
+    KQuickControlsAddons.QPixmapItem {
+        id: previewPixmap
+
+        width: Math.min(Math.round(height * nativeWidth/nativeHeight), parent.width)
+        height: Math.min(nativeHeight, PlasmaCore.Units.gridUnit * 4 + PlasmaCore.Units.smallSpacing * 2)
+
+        // align left
+        // right in RTL
+        anchors.left: parent.left
+
+        pixmap: DecorationRole
+        smooth: true
+        fillMode: KQuickControlsAddons.QPixmapItem.PreserveAspectFit
+    }
 }
