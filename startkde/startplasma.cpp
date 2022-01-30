@@ -444,10 +444,42 @@ void cleanupPlasmaEnvironment(const std::optional<QProcessEnvironment> &oldSyste
     reply.waitForFinished();
 }
 
+// Drop session-specific variables from the systemd environment.
+// Those can be leftovers from previous sessions, which can interfere with the session
+// we want to start now, e.g. $DISPLAY might break kwin_wayland.
+static void dropSessionVarsFromSystemdEnvironment()
+{
+    const auto environment = getSystemdEnvironment();
+    if (!environment) {
+        return;
+    }
+
+    QStringList varsToDrop;
+    for (auto &nameStr : environment.value().keys()) {
+        // If it's set in this process, it'll be overwritten by the following UpdateLaunchEnvJob
+        const auto name = nameStr.toLocal8Bit();
+        if (!qEnvironmentVariableIsSet(name) && isSessionVariable(name)) {
+            varsToDrop.append(nameStr);
+        }
+    }
+
+    auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.systemd1"),
+                                              QStringLiteral("/org/freedesktop/systemd1"),
+                                              QStringLiteral("org.freedesktop.systemd1.Manager"),
+                                              QStringLiteral("UnsetEnvironment"));
+    msg << varsToDrop;
+    auto reply = QDBusConnection::sessionBus().call(msg);
+    if (reply.type() == QDBusMessage::ErrorMessage) {
+        qWarning() << "Failed to unset systemd environment variables:" << reply.errorName() << reply.errorMessage();
+    }
+}
+
 // kwin_wayland can possibly also start dbus-activated services which need env variables.
 // In that case, the update in startplasma might be too late.
 bool syncDBusEnvironment()
 {
+    dropSessionVarsFromSystemdEnvironment();
+
     // At this point all environment variables are set, let's send it to the DBus session server to update the activation environment
     auto job = new UpdateLaunchEnvJob(QProcessEnvironment::systemEnvironment());
     return job->exec();
