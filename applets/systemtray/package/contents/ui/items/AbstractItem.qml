@@ -53,16 +53,6 @@ PlasmaCore.ToolTipArea {
         return plasmoid.location;
     }
 
-//BEGIN CONNECTIONS
-
-    onContainsMouseChanged: {
-        if (inHiddenLayout && containsMouse) {
-            root.hiddenLayout.currentIndex = index
-        }
-    }
-
-//END CONNECTIONS
-
     PulseAnimation {
         targetItem: iconContainer
         running: (abstractItem.status === PlasmaCore.Types.NeedsAttentionStatus ||
@@ -96,13 +86,27 @@ PlasmaCore.ToolTipArea {
     }
 
     MouseArea {
+        propagateComposedEvents: true
+        // This needs to be above applets so that it can receive
+        // hover events while the mouse is over an applet.
+        z: 1
         anchors.fill: abstractItem
         hoverEnabled: true
         drag.filterChildren: true
         // Necessary to make the whole delegate area forward all mouse events
         acceptedButtons: Qt.AllButtons
+        // Using onPositionChanged instead of onEntered because changing the
+        // index in a scrollable view also changes the view position.
+        // onEntered will change the index while the items are scrolling,
+        // making it harder to scroll.
+        onPositionChanged: if (inHiddenLayout) {
+            root.hiddenLayout.currentIndex = index
+        }
         onClicked: abstractItem.clicked(mouse)
         onPressed: {
+            if (inHiddenLayout) {
+                root.hiddenLayout.currentIndex = index
+            }
             abstractItem.hideImmediately()
             abstractItem.pressed(mouse)
             if (mouse.button === Qt.RightButton) {
