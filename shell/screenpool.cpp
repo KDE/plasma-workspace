@@ -277,13 +277,13 @@ void ScreenPool::reconsiderOutputs()
 {
     const auto screens = qGuiApp->screens();
     for (QScreen *screen : screens) {
-        if (m_redundantOutputs.contains(screen)) {
+        if (m_redundantScreens.contains(screen)) {
             if (!isOutputRedundant(screen)) {
                 // qDebug() << "not redundant anymore" << screen << (isOutputFake(screen) ? "but is a fake screen" : "");
                 Q_ASSERT(!m_availableScreens.contains(screen));
-                m_redundantOutputs.remove(screen);
+                m_redundantScreens.remove(screen);
                 if (isOutputFake(screen)) {
-                    m_fakeOutputs.insert(screen);
+                    m_fakeScreens.insert(screen);
                 } else {
                     m_availableScreens.append(screen);
                     Q_EMIT screenAdded(screen);
@@ -292,7 +292,7 @@ void ScreenPool::reconsiderOutputs()
         } else if (isOutputRedundant(screen)) {
             // qDebug() << "new redundant screen" << screen << "with primary screen" << m_primaryWatcher->primaryScreen();
 
-            m_redundantOutputs.insert(screen);
+            m_redundantScreens.insert(screen);
             if (m_availableScreens.contains(screen)) {
                 m_availableScreens.removeAll(screen);
                 Q_EMIT screenRemoved(screen);
@@ -300,8 +300,8 @@ void ScreenPool::reconsiderOutputs()
         } else if (isOutputFake(screen)) {
             // NOTE: order of operations is important
             // qDebug() << "new fake screen" << screen;
-            m_redundantOutputs.remove(screen);
-            m_fakeOutputs.insert(screen);
+            m_redundantScreens.remove(screen);
+            m_fakeScreens.insert(screen);
             if (m_availableScreens.contains(screen)) {
                 m_availableScreens.removeAll(screen);
                 Q_EMIT screenRemoved(screen);
@@ -322,16 +322,16 @@ void ScreenPool::handleScreenAdded(QScreen *screen)
     connect(screen, &QScreen::geometryChanged, &m_reconsiderOutputsTimer, static_cast<void (QTimer::*)()>(&QTimer::start), Qt::UniqueConnection);
 
     if (isOutputRedundant(screen)) {
-        m_redundantOutputs.insert(screen);
+        m_redundantScreens.insert(screen);
         return;
     } else if (isOutputFake(screen)) {
-        m_fakeOutputs.insert(screen);
+        m_fakeScreens.insert(screen);
         return;
     }
 
-    if (m_fakeOutputs.contains(screen)) {
+    if (m_fakeScreens.contains(screen)) {
         // qDebug() << "not fake anymore" << screen;
-        m_fakeOutputs.remove(screen);
+        m_fakeScreens.remove(screen);
     }
     //    Q_ASSERT(!m_availableScreens.contains(screen));
     m_availableScreens.append(screen);
@@ -345,18 +345,18 @@ void ScreenPool::handleScreenAdded(QScreen *screen)
 void ScreenPool::handleScreenRemoved(QScreen *screen)
 {
     // qWarning()<<"handleScreenRemoved"<<screen;
-    if (m_redundantOutputs.contains(screen)) {
-        Q_ASSERT(!m_fakeOutputs.contains(screen));
+    if (m_redundantScreens.contains(screen)) {
+        Q_ASSERT(!m_fakeScreens.contains(screen));
         Q_ASSERT(!m_availableScreens.contains(screen));
-        m_redundantOutputs.remove(screen);
-    } else if (m_fakeOutputs.contains(screen)) {
-        Q_ASSERT(!m_redundantOutputs.contains(screen));
+        m_redundantScreens.remove(screen);
+    } else if (m_fakeScreens.contains(screen)) {
+        Q_ASSERT(!m_redundantScreens.contains(screen));
         Q_ASSERT(!m_availableScreens.contains(screen));
-        m_fakeOutputs.remove(screen);
+        m_fakeScreens.remove(screen);
     } else {
         Q_ASSERT(m_availableScreens.contains(screen));
-        Q_ASSERT(!m_redundantOutputs.contains(screen));
-        Q_ASSERT(!m_fakeOutputs.contains(screen));
+        Q_ASSERT(!m_redundantScreens.contains(screen));
+        Q_ASSERT(!m_fakeScreens.contains(screen));
         m_availableScreens.removeAll(screen);
         reconsiderOutputs();
         Q_EMIT screenRemoved(screen);
@@ -419,20 +419,20 @@ void ScreenPool::screenInvariants()
     // QScreen bookeeping integrity
     auto allScreens = qGuiApp->screens();
     // Do we actually track every screen?
-    Q_ASSERT((m_availableScreens.count() + m_redundantOutputs.count() + m_fakeOutputs.count()) == allScreens.count());
+    Q_ASSERT((m_availableScreens.count() + m_redundantScreens.count() + m_fakeScreens.count()) == allScreens.count());
 
     // At most one fake output
-    Q_ASSERT(m_fakeOutputs.count() <= 1);
-    if (m_fakeOutputs.count() == 1) {
+    Q_ASSERT(m_fakeScreens.count() <= 1);
+    if (m_fakeScreens.count() == 1) {
         // If we have a fake output we can't have anything else
         Q_ASSERT(m_availableScreens.count() == 0);
-        Q_ASSERT(m_redundantOutputs.count() == 0);
+        Q_ASSERT(m_redundantScreens.count() == 0);
     } else {
         for (QScreen *screen : allScreens) {
             if (m_availableScreens.contains(screen)) {
                 // If available can't be redundant
-                Q_ASSERT(!m_redundantOutputs.contains(screen));
-            } else if (m_redundantOutputs.contains(screen)) {
+                Q_ASSERT(!m_redundantScreens.contains(screen));
+            } else if (m_redundantScreens.contains(screen)) {
                 // If redundant can't be available
                 Q_ASSERT(!m_availableScreens.contains(screen));
             } else {
@@ -458,8 +458,8 @@ QDebug operator<<(QDebug debug, const ScreenPool *pool)
     }
     debug << "Primary screen:\t" << pool->primaryScreen() << '\n';
     debug << "Available screens:\t" << pool->m_availableScreens << '\n';
-    debug << "\"Fake\" screens:\t" << pool->m_fakeOutputs << '\n';
-    debug << "Redundant screens:\t" << pool->m_redundantOutputs << '\n';
+    debug << "\"Fake\" screens:\t" << pool->m_fakeScreens << '\n';
+    debug << "Redundant screens:\t" << pool->m_redundantScreens << '\n';
     debug << "All screens:\t" << qGuiApp->screens() << '\n';
     return debug;
 }

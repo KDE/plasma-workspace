@@ -74,8 +74,8 @@ private:
 
     // m_availableScreens + m_redundantOutputs + m_fakeOutputs == qGuiApp->screens()
     QList<QScreen *> m_availableScreens;
-    QSet<QScreen *> m_redundantOutputs;
-    QSet<QScreen *> m_fakeOutputs;
+    QSet<QScreen *> m_redundantScreens;
+    QSet<QScreen *> m_fakeScreens;
 
     QTimer m_reconsiderOutputsTimer;
     QTimer m_configSaveTimer;
