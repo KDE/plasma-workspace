@@ -389,14 +389,14 @@ void ScreenPool::handlePrimaryOutputNameChanged(const QString &oldOutputName, co
         return;
         // On X11, the output named :0.0 is fake
     } else if (!oldPrimary || oldOutputName == ":0.0" || oldOutputName.isEmpty()) {
-        // setPrimaryConnector(newPrimary->name());
+        setPrimaryConnector(newOutputName);
         // NOTE: when we go from 0 to 1 screen connected, screens can be renamed in those two followinf cases
         // * last output connected/disconnected -> we go between the fake screen and the single output, renamed
         // * external screen connected to a closed lid laptop, disconnecting the qscreen instance will be recycled from external output to internal
         // In the latter case m_availableScreens will aready contain newPrimary
+        // We'll go here also once at startup, for which we don't need to do anything besides setting internally the primary conector name
         if (!m_availableScreens.contains(newPrimary)) {
             // qWarning() << "EMITTING SCREEN ADDED" << newPrimary;
-            setPrimaryConnector(newOutputName);
             handleScreenAdded(newPrimary);
         }
         return;
