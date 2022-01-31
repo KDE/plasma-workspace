@@ -130,7 +130,6 @@ bool isSessionVariable(const QByteArray &name)
 void setEnvironmentVariable(const QByteArray &name, const QByteArray &value)
 {
     if (qgetenv(name) != value) {
-        //        qCDebug(PLASMA_STARTUP) << "setting..." << env.left(idx) << env.mid(idx+1) << "was" << qgetenv(env.left(idx));
         qputenv(name, value);
     }
 }
@@ -228,7 +227,7 @@ void setupCursor(bool wayland)
     qputenv("XCURSOR_SIZE", QByteArray::number(kcminputrc_mouse_cursorsize));
 }
 
-std::optional<QStringList> getSystemdEnvironment()
+std::optional<QProcessEnvironment> getSystemdEnvironment()
 {
     QStringList list;
     auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.systemd1"),
@@ -251,7 +250,16 @@ std::optional<QStringList> getSystemdEnvironment()
         return std::nullopt;
     }
 
-    return variant.toStringList();
+    const auto assignmentList = variant.toStringList();
+    QProcessEnvironment ret;
+    for (auto &env : assignmentList) {
+        const int idx = env.indexOf(QLatin1Char('='));
+        if (Q_LIKELY(idx > 0)) {
+            ret.insert(env.left(idx), env.mid(idx + 1));
+        }
+    }
+
+    return ret;
 }
 
 // Import systemd user environment.
@@ -260,23 +268,16 @@ std::optional<QStringList> getSystemdEnvironment()
 // But it won't work if plasma is not started by systemd.
 void importSystemdEnvrionment()
 {
-    auto environment = getSystemdEnvironment();
+    const auto environment = getSystemdEnvironment();
     if (!environment) {
         return;
     }
 
-    for (auto &envString : environment.value()) {
-        const auto env = envString.toLocal8Bit();
-        const int idx = env.indexOf('=');
-        if (Q_UNLIKELY(idx <= 0)) {
-            continue;
+    for (auto &nameStr : environment.value().keys()) {
+        const auto name = nameStr.toLocal8Bit();
+        if (!isShellVariable(name) && !isSessionVariable(name)) {
+            setEnvironmentVariable(name, environment.value().value(nameStr).toLocal8Bit());
         }
-
-        const auto name = env.left(idx);
-        if (isShellVariable(name) || isSessionVariable(name)) {
-            continue;
-        }
-        setEnvironmentVariable(name, env.mid(idx + 1));
     }
 }
 
@@ -414,7 +415,7 @@ void setupX11()
     runSync(QStringLiteral("xsetroot"), {QStringLiteral("-cursor_name"), QStringLiteral("left_ptr")});
 }
 
-void cleanupPlasmaEnvironment(const std::optional<QStringList> &oldSystemdEnvironment)
+void cleanupPlasmaEnvironment(const std::optional<QProcessEnvironment> &oldSystemdEnvironment)
 {
     qunsetenv("KDE_FULL_SESSION");
     qunsetenv("KDE_SESSION_VERSION");
@@ -429,16 +430,6 @@ void cleanupPlasmaEnvironment(const std::optional<QStringList> &oldSystemdEnviro
         return;
     }
 
-    QStringList vars;
-    for (auto &env : currentEnv.value()) {
-        const int idx = env.indexOf(QLatin1Char('='));
-        if (Q_UNLIKELY(idx <= 0)) {
-            continue;
-        }
-
-        vars.append(env.left(idx));
-    }
-
     // According to systemd documentation:
     // If a variable is listed in both, the variable is set after this method returns, i.e. the set list overrides the unset list.
     // So this will effectively restore the state to the values in oldSystemdEnvironment.
@@ -446,7 +437,7 @@ void cleanupPlasmaEnvironment(const std::optional<QStringList> &oldSystemdEnviro
                                                           QStringLiteral("/org/freedesktop/systemd1"),
                                                           QStringLiteral("org.freedesktop.systemd1.Manager"),
                                                           QStringLiteral("UnsetAndSetEnvironment"));
-    message.setArguments({vars, oldSystemdEnvironment.value()});
+    message.setArguments({currentEnv.value().keys(), oldSystemdEnvironment.value().toStringList()});
 
     // The session program gonna quit soon, ensure the message is flushed.
     auto reply = QDBusConnection::sessionBus().asyncCall(message);
