@@ -198,6 +198,7 @@ Item {
     }
 
     Plasmoid.compactRepresentation: CompactRepresentation {
+        hasBatteries: batterymonitor.hasBatteries
         batteries: batterymonitor.batteries
 
         onWheel: {

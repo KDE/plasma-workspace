@@ -19,7 +19,7 @@ MouseArea {
     readonly property bool isConstrained: plasmoid.formFactor === PlasmaCore.Types.Vertical || plasmoid.formFactor === PlasmaCore.Types.Horizontal
     property real brightnessError: 0
     property QtObject batteries
-    property bool hasBatteries: batteries.count > 0
+    property bool hasBatteries: false
 
     hoverEnabled: true
 
