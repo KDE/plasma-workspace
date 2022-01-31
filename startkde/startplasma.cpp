@@ -359,13 +359,13 @@ void setupPlasmaEnvironment()
     if (currentConfigDirs.isEmpty()) {
         currentConfigDirs = "/etc/xdg";
     }
-    const auto extraConfigDir = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation).toUtf8() + "/kdedefaults";
-    QDir().mkpath(QString::fromUtf8(extraConfigDir));
-    qputenv("XDG_CONFIG_DIRS", extraConfigDir + ":" + currentConfigDirs);
+    const QString extraConfigDir = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1String("/kdedefaults");
+    QDir().mkpath(extraConfigDir);
+    qputenv("XDG_CONFIG_DIRS", QFile::encodeName(extraConfigDir) + ':' + currentConfigDirs);
 
     const KConfig globals;
     const QString currentLnf = KConfigGroup(&globals, QStringLiteral("KDE")).readEntry("LookAndFeelPackage", QStringLiteral("org.kde.breeze.desktop"));
-    QFile activeLnf(QString::fromUtf8(extraConfigDir + "/package"));
+    QFile activeLnf(extraConfigDir + QLatin1String("/package"));
     activeLnf.open(QIODevice::ReadOnly);
     if (activeLnf.readLine() != currentLnf.toUtf8()) {
         KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"), currentLnf);
