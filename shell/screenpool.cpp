@@ -173,8 +173,12 @@ QList<QScreen *> ScreenPool::screens() const
 
 QScreen *ScreenPool::primaryScreen() const
 {
-    // TODO: handle the case when primary is redundant?
-    return m_primaryWatcher->primaryScreen();
+    QScreen *primary = m_primaryWatcher->primaryScreen();
+    if (m_redundantScreens.contains(primary)) {
+        return m_redundantScreens[primary];
+    } else {
+        return primary;
+    }
 }
 
 QScreen *ScreenPool::screenForId(int id) const
@@ -223,12 +227,12 @@ bool ScreenPool::isOutputFake(QScreen *screen) const
     return fake;
 }
 
-bool ScreenPool::isOutputRedundant(QScreen *screen) const
+QScreen *ScreenPool::outputRedundantTo(QScreen *screen) const
 {
     Q_ASSERT(screen);
     // Manage separatedly fake screens
     if (isOutputFake(screen)) {
-        return false;
+        return nullptr;
     }
     const QRect thisGeometry = screen->geometry();
 
@@ -241,8 +245,7 @@ bool ScreenPool::isOutputRedundant(QScreen *screen) const
     //* its geometry is contained in another one
     //* if their resolutions are different, the "biggest" one wins
     //* if they have the same geometry, the one with the lowest id wins (arbitrary, but gives reproducible behavior and makes the primary screen win)
-    const auto screens = qGuiApp->screens();
-    for (QScreen *s : screens) {
+    for (QScreen *s : m_allSortedScreens) {
         // don't compare with itself
         if (screen == s) {
             continue;
@@ -266,19 +269,22 @@ bool ScreenPool::isOutputRedundant(QScreen *screen) const
                 // are hotplugged and weren't known. it does NOT happen
                 // at first startup, as screenpool populates on load with all screens connected at the moment before the rest of the shell starts up
                 (thisId == -1 && otherId != -1) || (thisId > otherId && otherId != -1))) {
-            return true;
+            return s;
         }
     }
 
-    return false;
+    return nullptr;
 }
 
 void ScreenPool::reconsiderOutputs()
 {
-    const auto screens = qGuiApp->screens();
-    for (QScreen *screen : screens) {
+    QScreen *oldPrimaryScreen = primaryScreen();
+    for (QScreen *screen : m_allSortedScreens) {
         if (m_redundantScreens.contains(screen)) {
-            if (!isOutputRedundant(screen)) {
+            if (QScreen *toScreen = outputRedundantTo(screen)) {
+                // Insert again, redndantTo may have changed
+                m_redundantScreens.insert(screen, toScreen);
+            } else {
                 // qDebug() << "not redundant anymore" << screen << (isOutputFake(screen) ? "but is a fake screen" : "");
                 Q_ASSERT(!m_availableScreens.contains(screen));
                 m_redundantScreens.remove(screen);
@@ -287,13 +293,25 @@ void ScreenPool::reconsiderOutputs()
                 } else {
                     m_availableScreens.append(screen);
                     Q_EMIT screenAdded(screen);
+                    QScreen *newPrimaryScreen = primaryScreen();
+                    if (newPrimaryScreen != oldPrimaryScreen) {
+                        // Primary screen was redundant, not anymore
+                        setPrimaryConnector(newPrimaryScreen->name());
+                        Q_EMIT primaryScreenChanged(oldPrimaryScreen, newPrimaryScreen);
+                    }
                 }
             }
-        } else if (isOutputRedundant(screen)) {
+        } else if (QScreen *toScreen = outputRedundantTo(screen)) {
             // qDebug() << "new redundant screen" << screen << "with primary screen" << m_primaryWatcher->primaryScreen();
 
-            m_redundantScreens.insert(screen);
+            m_redundantScreens.insert(screen, toScreen);
             if (m_availableScreens.contains(screen)) {
+                QScreen *newPrimaryScreen = primaryScreen();
+                if (newPrimaryScreen != oldPrimaryScreen) {
+                    // Primary screen became redundant
+                    setPrimaryConnector(newPrimaryScreen->name());
+                    Q_EMIT primaryScreenChanged(oldPrimaryScreen, newPrimaryScreen);
+                }
                 m_availableScreens.removeAll(screen);
                 Q_EMIT screenRemoved(screen);
             }
@@ -303,6 +321,12 @@ void ScreenPool::reconsiderOutputs()
             m_redundantScreens.remove(screen);
             m_fakeScreens.insert(screen);
             if (m_availableScreens.contains(screen)) {
+                QScreen *newPrimaryScreen = primaryScreen();
+                if (newPrimaryScreen != oldPrimaryScreen) {
+                    // Primary screen became fake
+                    setPrimaryConnector(newPrimaryScreen->name());
+                    Q_EMIT primaryScreenChanged(oldPrimaryScreen, newPrimaryScreen);
+                }
                 m_availableScreens.removeAll(screen);
                 Q_EMIT screenRemoved(screen);
             }
@@ -316,13 +340,33 @@ void ScreenPool::reconsiderOutputs()
     CHECK_SCREEN_INVARIANTS
 }
 
+void ScreenPool::insertSortedScreen(QScreen *screen)
+{
+    auto before = std::find_if(m_allSortedScreens.begin(), m_allSortedScreens.end(), [this, screen](QScreen *otherScreen) {
+        return (screen->geometry().width() > otherScreen->geometry().width() && screen->geometry().height() > otherScreen->geometry().height())
+            || id(screen->name()) < id(otherScreen->name());
+    });
+    m_allSortedScreens.insert(before, screen);
+}
+
 void ScreenPool::handleScreenAdded(QScreen *screen)
 {
     // qWarning()<<"handleScreenAdded"<<screen;
-    connect(screen, &QScreen::geometryChanged, &m_reconsiderOutputsTimer, static_cast<void (QTimer::*)()>(&QTimer::start), Qt::UniqueConnection);
+    // connect(screen, &QScreen::geometryChanged, &m_reconsiderOutputsTimer, static_cast<void (QTimer::*)()>(&QTimer::start), Qt::UniqueConnection);
+    connect(
+        screen,
+        &QScreen::geometryChanged,
+        this,
+        [this, screen]() {
+            m_allSortedScreens.removeAll(screen);
+            insertSortedScreen(screen);
+            m_reconsiderOutputsTimer.start();
+        },
+        Qt::UniqueConnection);
+    insertSortedScreen(screen);
 
-    if (isOutputRedundant(screen)) {
-        m_redundantScreens.insert(screen);
+    if (QScreen *toScreen = outputRedundantTo(screen)) {
+        m_redundantScreens.insert(screen, toScreen);
         return;
     } else if (isOutputFake(screen)) {
         m_fakeScreens.insert(screen);
@@ -345,6 +389,7 @@ void ScreenPool::handleScreenAdded(QScreen *screen)
 void ScreenPool::handleScreenRemoved(QScreen *screen)
 {
     // qWarning()<<"handleScreenRemoved"<<screen;
+    m_allSortedScreens.removeAll(screen);
     if (m_redundantScreens.contains(screen)) {
         Q_ASSERT(!m_fakeScreens.contains(screen));
         Q_ASSERT(!m_availableScreens.contains(screen));
@@ -374,6 +419,9 @@ void ScreenPool::handlePrimaryOutputNameChanged(const QString &oldOutputName, co
     QScreen *oldPrimary = screenForConnector(oldOutputName);
     QScreen *newPrimary = m_primaryWatcher->primaryScreen();
     Q_ASSERT(newPrimary && newPrimary->name() == newOutputName);
+
+    newPrimary = primaryScreen();
+    // TODO: make sure we don't needlessy emit primaryOutputChanged
 
     if (!newPrimary || newPrimary == oldPrimary || newPrimary->geometry().isNull()) {
         return;
@@ -420,6 +468,7 @@ void ScreenPool::screenInvariants()
     auto allScreens = qGuiApp->screens();
     // Do we actually track every screen?
     Q_ASSERT((m_availableScreens.count() + m_redundantScreens.count() + m_fakeScreens.count()) == allScreens.count());
+    Q_ASSERT(allScreens.count() == m_allSortedScreens.count());
 
     // At most one fake output
     Q_ASSERT(m_fakeScreens.count() <= 1);
@@ -460,7 +509,8 @@ QDebug operator<<(QDebug debug, const ScreenPool *pool)
     debug << "Available screens:\t" << pool->m_availableScreens << '\n';
     debug << "\"Fake\" screens:\t" << pool->m_fakeScreens << '\n';
     debug << "Redundant screens:\t" << pool->m_redundantScreens << '\n';
-    debug << "All screens:\t" << qGuiApp->screens() << '\n';
+    debug << "All screens, ordered by size:\t" << pool->m_allSortedScreens << '\n';
+    debug << "All screen that QGuiApplication knows:\t" << qGuiApp->screens() << '\n';
     return debug;
 }
 

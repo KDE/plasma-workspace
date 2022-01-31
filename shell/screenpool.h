@@ -55,11 +55,12 @@ Q_SIGNALS:
 
 private:
     void save();
-    bool isOutputRedundant(QScreen *screen) const;
+    QScreen *outputRedundantTo(QScreen *screen) const;
     void reconsiderOutputs();
     bool noRealOutputsConnected() const;
     bool isOutputFake(QScreen *screen) const;
 
+    void insertSortedScreen(QScreen *screen);
     void handleScreenAdded(QScreen *screen);
     void handleScreenRemoved(QScreen *screen);
     void handlePrimaryOutputNameChanged(const QString &oldOutputName, const QString &newOutputName);
@@ -72,9 +73,12 @@ private:
     QMap<int, QString> m_connectorForId;
     QHash<QString, int> m_idForConnector;
 
+    // List correspondent to qGuiApp->screens(), but sorted first by size then by Id,
+    // determines the screen importance while figuring out the reduntant ones
+    QList<QScreen *> m_allSortedScreens;
     // m_availableScreens + m_redundantOutputs + m_fakeOutputs == qGuiApp->screens()
-    QList<QScreen *> m_availableScreens;
-    QSet<QScreen *> m_redundantScreens;
+    QList<QScreen *> m_availableScreens; // Those are all the screen that are available to Corona
+    QHash<QScreen *, QScreen *> m_redundantScreens;
     QSet<QScreen *> m_fakeScreens;
 
     QTimer m_reconsiderOutputsTimer;
