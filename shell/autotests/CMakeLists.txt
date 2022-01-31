@@ -19,6 +19,7 @@ MACRO(PLASMASHELL_UNIT_TESTS)
                             KF5::WindowSystem
                             KF5::WaylandClient
                             Wayland::Client
+                            Wayland::Server
                                      )
                if(HAVE_X11)
                   target_link_libraries(${_testname} XCB::XCB XCB::RANDR)

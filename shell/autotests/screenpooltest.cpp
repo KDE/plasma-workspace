@@ -8,9 +8,12 @@
 
 #include <QDir>
 #include <QScreen>
+#include <QSignalSpy>
 #include <QStandardPaths>
 #include <QTemporaryDir>
 #include <QTest>
+
+#include <wayland-server.h>
 
 #include "../screenpool.h"
 
@@ -24,14 +27,25 @@ private Q_SLOTS:
 
     void testScreenInsertion();
     void testPrimarySwap();
+    void testScreenRemoval();
 
 private:
     ScreenPool *m_screenPool;
+    struct wl_display *m_display;
 };
 
 void ScreenPoolTest::initTestCase()
 {
     QStandardPaths::setTestModeEnabled(true);
+
+    m_display = wl_display_create();
+    QVERIFY(m_display);
+
+    const char *socket = wl_display_add_socket_auto(m_display);
+    QVERIFY(socket);
+
+    qDebug() << "Running Wayland display on" << socket;
+    wl_display_run(m_display); // FIXME: thould this be in a thread?
 
     KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("ScreenConnectors"));
     cg.deleteGroup();
@@ -45,42 +59,36 @@ void ScreenPoolTest::cleanupTestCase()
     KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("ScreenConnectors"));
     cg.deleteGroup();
     cg.sync();
+
+    wl_display_destroy(m_display);
 }
 
 void ScreenPoolTest::testScreenInsertion()
 {
-    int firstScreen = 0;
-    if (QGuiApplication::primaryScreen()) {
-        ++firstScreen;
-    }
-    qWarning() << "Known ids" << m_screenPool->knownIds();
-    m_screenPool->insertScreenMapping(firstScreen, QStringLiteral("FAKE-0"));
-    QCOMPARE(m_screenPool->knownIds().count(), firstScreen + 1);
-    QCOMPARE(m_screenPool->connector(firstScreen), QStringLiteral("FAKE-0"));
-    QCOMPARE(m_screenPool->id(QStringLiteral("FAKE-0")), firstScreen);
+    QSignalSpy addedSpy(m_screenPool, SIGNAL(screenAdded(QScreen *)));
 
-    qWarning() << "Known ids" << m_screenPool->knownIds();
-    m_screenPool->insertScreenMapping(firstScreen + 1, QStringLiteral("FAKE-1"));
-    QCOMPARE(m_screenPool->knownIds().count(), firstScreen + 2);
-    QCOMPARE(m_screenPool->connector(firstScreen + 1), QStringLiteral("FAKE-1"));
-    QCOMPARE(m_screenPool->id(QStringLiteral("FAKE-1")), firstScreen + 1);
+    // Add a new output
+    addedSpy.wait();
+    QScreen *newScreen = addedSpy.takeFirst().at(0).value<QScreen *>();
+    QCOMPARE(newScreen->geometry(), QRect(1920, 0, 1920, 1080));
+    //...
 }
 
 void ScreenPoolTest::testPrimarySwap()
 {
-    const QString oldPrimary = QGuiApplication::primaryScreen()->name();
-    QCOMPARE(m_screenPool->primaryConnector(), oldPrimary);
-    const int oldScreenCount = m_screenPool->knownIds().count();
-    const int oldIdOfFake1 = m_screenPool->id(QStringLiteral("FAKE-1"));
-    m_screenPool->setPrimaryConnector(QStringLiteral("FAKE-1"));
+    QSignalSpy primaryChangeSpy(m_screenPool, SIGNAL(primaryScreenChanged(QScreen *, QScreen *)));
+    // Set a primary screen
 
-    QCOMPARE(m_screenPool->knownIds().count(), oldScreenCount);
+    primaryChangeSpy.wait();
+}
 
-    QCOMPARE(m_screenPool->connector(0), QStringLiteral("FAKE-1"));
-    QCOMPARE(m_screenPool->id(QStringLiteral("FAKE-1")), 0);
+void ScreenPoolTest::testScreenRemoval()
+{
+    QSignalSpy removedSpy(m_screenPool, SIGNAL(screenRemoved(QScreen *)));
 
-    QCOMPARE(m_screenPool->connector(oldIdOfFake1), oldPrimary);
-    QCOMPARE(m_screenPool->id(oldPrimary), oldIdOfFake1);
+    // Add a new output
+    removedSpy.wait();
+    QScreen *removedScreen = removedSpy.takeFirst().at(0).value<QScreen *>();
 }
 
 QTEST_MAIN(ScreenPoolTest)
