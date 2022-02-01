@@ -52,9 +52,9 @@ Q_SIGNALS:
 
 private:
     void save();
-    void setPrimaryConnector(const QString &primary); // TODO: private?
-    void insertScreenMapping(int id, const QString &connector); // TODO: private?
-    int firstAvailableId() const; // TODO: private?
+    void setPrimaryConnector(const QString &primary);
+    void insertScreenMapping(int id, const QString &connector);
+    int firstAvailableId() const;
 
     QScreen *outputRedundantTo(QScreen *screen) const;
     void reconsiderOutputs();

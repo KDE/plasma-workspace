@@ -23,9 +23,9 @@ ScreenPool::ScreenPool(const KSharedConfig::Ptr &config, QObject *parent)
     , m_configGroup(KConfigGroup(config, QStringLiteral("ScreenConnectors")))
     , m_primaryWatcher(new PrimaryOutputWatcher(this))
 {
-    connect(qGuiApp, &QGuiApplication::screenAdded, this, &ScreenPool::handleScreenAdded, Qt::UniqueConnection);
-    connect(qGuiApp, &QGuiApplication::screenRemoved, this, &ScreenPool::handleScreenRemoved, Qt::UniqueConnection);
-    connect(m_primaryWatcher, &PrimaryOutputWatcher::primaryOutputNameChanged, this, &ScreenPool::handlePrimaryOutputNameChanged, Qt::UniqueConnection);
+    connect(qGuiApp, &QGuiApplication::screenAdded, this, &ScreenPool::handleScreenAdded);
+    connect(qGuiApp, &QGuiApplication::screenRemoved, this, &ScreenPool::handleScreenRemoved);
+    connect(m_primaryWatcher, &PrimaryOutputWatcher::primaryOutputNameChanged, this, &ScreenPool::handlePrimaryOutputNameChanged);
 
     m_reconsiderOutputsTimer.setSingleShot(true);
     m_reconsiderOutputsTimer.setInterval(250);
