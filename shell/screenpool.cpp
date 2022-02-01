@@ -494,7 +494,7 @@ void ScreenPool::screenInvariants()
             Q_ASSERT(connector(id(screen->name())) == screen->name());
         }
     }
-    for (QScreen *screen : m_redundantScreens) {
+    for (QScreen *screen : m_redundantScreens.keys()) {
         Q_ASSERT(outputRedundantTo(screen) != nullptr);
     }
 }
