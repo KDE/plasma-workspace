@@ -795,7 +795,7 @@ void ShellCorona::screenInvariants() const
     }
     const QList<const QScreen *> screenKeys = m_desktopViewForScreen.keys();
 
-    Q_ASSERT(screenKeys.count() <= QGuiApplication::screens().count());
+    Q_ASSERT(screenKeys.count() <= m_screenPool->screens().count());
 
     QSet<QScreen *> screens;
     for (const QScreen *screenKey : screenKeys) {
@@ -1217,7 +1217,7 @@ void ShellCorona::addOutput(QScreen *screen)
     Q_EMIT availableScreenRectChanged();
     Q_EMIT screenAdded(m_screenPool->id(screen->name()));
 
-    CHECK_SCREEN_INVARIANTS
+    m_invariantsTimer.start();
 }
 
 void ShellCorona::checkAllDesktopsUiReady(bool ready)
