@@ -65,15 +65,8 @@ void ScreenPool::load()
         }
     }
 
-    // if there are already connected unknown screens, map those
-    // all needs to be populated as soon as possible, otherwise
-    // containment->screen() will return an incorrect -1
-    // at startup, if it' asked before corona::addOutput()
-    // is performed, driving to the creation of a new containment
+    // Populate allthe screen based on what's connected at startup
     for (QScreen *screen : qGuiApp->screens()) {
-        if (!m_idForConnector.contains(screen->name())) {
-            insertScreenMapping(firstAvailableId(), screen->name());
-        }
         handleScreenAdded(screen);
     }
     CHECK_SCREEN_INVARIANTS
@@ -189,7 +182,7 @@ QScreen *ScreenPool::screenForId(int id) const
 
     // TODO: do QScreen bookeeping completely in screenpool, cache also available QScreens
     const QString name = m_connectorForId.value(id);
-    for (QScreen *screen : qGuiApp->screens()) {
+    for (QScreen *screen : m_availableScreens) {
         if (screen->name() == name) {
             return screen;
         }
@@ -199,7 +192,7 @@ QScreen *ScreenPool::screenForId(int id) const
 
 QScreen *ScreenPool::screenForConnector(const QString &connector)
 {
-    for (QScreen *screen : qGuiApp->screens()) {
+    for (QScreen *screen : m_availableScreens) {
         if (screen->name() == connector) {
             return screen;
         }
@@ -365,11 +358,15 @@ void ScreenPool::handleScreenAdded(QScreen *screen)
         Qt::UniqueConnection);
     insertSortedScreen(screen);
 
+    if (isOutputFake(screen)) {
+        m_fakeScreens.insert(screen);
+        return;
+    } else if (!m_idForConnector.contains(screen->name())) {
+        insertScreenMapping(firstAvailableId(), screen->name());
+    }
+
     if (QScreen *toScreen = outputRedundantTo(screen)) {
         m_redundantScreens.insert(screen, toScreen);
-        return;
-    } else if (isOutputFake(screen)) {
-        m_fakeScreens.insert(screen);
         return;
     }
 
@@ -496,6 +493,9 @@ void ScreenPool::screenInvariants()
             // Are the two maps symmetrical?
             Q_ASSERT(connector(id(screen->name())) == screen->name());
         }
+    }
+    for (QScreen *screen : m_redundantScreens) {
+        Q_ASSERT(outputRedundantTo(screen) != nullptr);
     }
 }
 

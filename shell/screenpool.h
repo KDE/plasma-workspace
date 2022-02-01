@@ -29,15 +29,10 @@ public:
     ~ScreenPool() override;
 
     QString primaryConnector() const;
-    void setPrimaryConnector(const QString &primary); // TODO: private?
-
-    void insertScreenMapping(int id, const QString &connector); // TODO: private?
 
     int id(const QString &connector) const;
 
     QString connector(int id) const;
-
-    int firstAvailableId() const; // TODO: private?
 
     // all ids that are known, included screens not enabled at the moment
     QList<int> knownIds() const;
@@ -48,6 +43,8 @@ public:
     QScreen *screenForId(int id) const;
     QScreen *screenForConnector(const QString &connector);
 
+    bool noRealOutputsConnected() const;
+
 Q_SIGNALS:
     void screenAdded(QScreen *screen);
     void screenRemoved(QScreen *screen);
@@ -55,9 +52,12 @@ Q_SIGNALS:
 
 private:
     void save();
+    void setPrimaryConnector(const QString &primary); // TODO: private?
+    void insertScreenMapping(int id, const QString &connector); // TODO: private?
+    int firstAvailableId() const; // TODO: private?
+
     QScreen *outputRedundantTo(QScreen *screen) const;
     void reconsiderOutputs();
-    bool noRealOutputsConnected() const;
     bool isOutputFake(QScreen *screen) const;
 
     void insertSortedScreen(QScreen *screen);

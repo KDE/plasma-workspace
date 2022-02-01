@@ -221,7 +221,7 @@ private Q_SLOTS:
     void populateAddPanelsMenu();
 
     void addOutput(QScreen *screen);
-    void primaryOutputNameChanged(const QString &oldOutputName, const QString &newOutputName);
+    void primaryScreenChanged(QScreen *oldScreen, QScreen *newScreen);
 
     void panelContainmentDestroyed(QObject *cont);
     void handleScreenRemoved(QScreen *screen);
@@ -231,10 +231,6 @@ private Q_SLOTS:
 private:
     void updateStruts();
     void configurationChanged(const QString &path);
-    bool noRealOutputsConnected() const;
-    bool isOutputFake(QScreen *screen) const;
-    bool isOutputRedundant(QScreen *screen) const;
-    void reconsiderOutputs();
     QList<PanelView *> panelsForScreen(QScreen *screen) const;
     DesktopView *desktopForScreen(QScreen *screen) const;
     void setupWaylandIntegration();
@@ -264,11 +260,10 @@ private:
     QAction *m_addPanelAction;
     QScopedPointer<QMenu> m_addPanelsMenu;
     KPackage::Package m_lookAndFeelPackage;
-    QSet<QScreen *> m_redundantOutputs;
 
     QTimer m_waitingPanelsTimer;
     QTimer m_appConfigSyncTimer;
-    QTimer m_reconsiderOutputsTimer;
+    QTimer m_invariantsTimer;
 
     KWayland::Client::PlasmaShell *m_waylandPlasmaShell;
     bool m_closingDown : 1;
