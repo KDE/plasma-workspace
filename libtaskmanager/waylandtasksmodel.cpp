@@ -18,9 +18,11 @@
 
 #include <QGuiApplication>
 #include <QMimeData>
+#include <QQueue>
 #include <QQuickItem>
 #include <QQuickWindow>
 #include <QSet>
+#include <QTimer>
 #include <QUrl>
 #include <QUuid>
 #include <QWindow>
@@ -55,7 +57,24 @@ public:
     void dataChanged(KWayland::Client::PlasmaWindow *window, const QVector<int> &roles);
 
 private:
+    /**
+     * Emits all pending dataChanged() signals when the pending timer ends.
+     */
+    void slotDelayedDataChanged();
+
     WaylandTasksModel *q;
+    /**
+     * This timer is used to delay emitting dataChanged().
+     */
+    QTimer m_updateTimer;
+    /**
+     * This queue stores window interfaces related to the pending data changes.
+     */
+    QQueue<KWayland::Client::PlasmaWindow *> m_updateWIdQueue;
+    /**
+     * This map stores changed roles corresponding to each window interface.
+     */
+    QMap<KWayland::Client::PlasmaWindow *, QSet<int> /* roles */> m_updateRolesMap;
 };
 
 QUuid WaylandTasksModel::Private::uuid = QUuid::createUuid();
@@ -146,6 +165,13 @@ void WaylandTasksModel::Private::initWayland()
         for (auto it = windows.constBegin(); it != windows.constEnd(); ++it) {
             addWindow(*it);
         }
+    });
+
+    // Limit update frequency to 10Hz
+    m_updateTimer.setInterval(100);
+    m_updateTimer.setSingleShot(true);
+    m_updateTimer.callOnTimeout([this] {
+        slotDelayedDataChanged();
     });
 
     registry->setup();
@@ -353,14 +379,50 @@ QString WaylandTasksModel::Private::groupMimeType()
 
 void WaylandTasksModel::Private::dataChanged(KWayland::Client::PlasmaWindow *window, int role)
 {
-    QModelIndex idx = q->index(windows.indexOf(window));
-    Q_EMIT q->dataChanged(idx, idx, QVector<int>{role});
+    // If the window is already in the queue, do not add it again
+    if (m_updateRolesMap.count(window) == 0) {
+        m_updateWIdQueue.enqueue(window);
+        m_updateRolesMap[window] = QSet({role});
+    } else {
+        auto &set = m_updateRolesMap[window];
+        set.insert(role);
+    }
+
+    if (!m_updateTimer.isActive()) {
+        m_updateTimer.start();
+    }
 }
 
 void WaylandTasksModel::Private::dataChanged(KWayland::Client::PlasmaWindow *window, const QVector<int> &roles)
 {
-    QModelIndex idx = q->index(windows.indexOf(window));
-    Q_EMIT q->dataChanged(idx, idx, roles);
+    // If the window is already in the queue, do not add it again
+    if (m_updateRolesMap.count(window) == 0) {
+        m_updateWIdQueue.enqueue(window);
+        m_updateRolesMap[window] = QSet(roles.constBegin(), roles.constEnd());
+    } else {
+        auto &set = m_updateRolesMap[window];
+        for (const int role : roles) {
+            set.insert(role);
+        }
+    }
+
+    if (!m_updateTimer.isActive()) {
+        m_updateTimer.start();
+    }
+}
+
+void WaylandTasksModel::Private::slotDelayedDataChanged()
+{
+    while (!m_updateWIdQueue.empty()) {
+        KWayland::Client::PlasmaWindow *const window = m_updateWIdQueue.dequeue();
+        const QModelIndex idx = q->index(windows.indexOf(window));
+        const auto &set = m_updateRolesMap[window];
+
+        Q_EMIT q->dataChanged(idx, idx, QVector<int>(set.constBegin(), set.constEnd()));
+
+    }
+
+    m_updateRolesMap.clear();
 }
 
 WaylandTasksModel::WaylandTasksModel(QObject *parent)
