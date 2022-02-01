@@ -418,10 +418,14 @@ void ScreenPool::handlePrimaryOutputNameChanged(const QString &oldOutputName, co
 
     QScreen *oldPrimary = screenForConnector(oldOutputName);
     QScreen *newPrimary = m_primaryWatcher->primaryScreen();
+    // First check if the data arrived is correct, then set the new peimary considering redundants
     Q_ASSERT(newPrimary && newPrimary->name() == newOutputName);
-
     newPrimary = primaryScreen();
-    // TODO: make sure we don't needlessy emit primaryOutputChanged
+
+    // This happens when a screen that was primary because the real primary was redundant becomes the real primary
+    if (m_primaryConnector == newPrimary->name()) {
+        return;
+    }
 
     if (!newPrimary || newPrimary == oldPrimary || newPrimary->geometry().isNull()) {
         return;
@@ -458,7 +462,6 @@ void ScreenPool::handlePrimaryOutputNameChanged(const QString &oldOutputName, co
 
 void ScreenPool::screenInvariants()
 {
-    return;
     // Is the primary connector in sync with the actual primaryScreen?
     Q_ASSERT(primaryScreen()->name() == primaryConnector());
     // Is the primary screen available? TODO: it can be redundant
@@ -505,7 +508,8 @@ QDebug operator<<(QDebug debug, const ScreenPool *pool)
         debug << it.key() << "\t-->\t" << it.value() << '\n';
         it++;
     }
-    debug << "Primary screen:\t" << pool->primaryScreen() << '\n';
+    debug << "Platform primary screen:\t" << pool->m_primaryWatcher->primaryScreen() << '\n';
+    debug << "Actual primary screen:\t" << pool->primaryScreen() << '\n';
     debug << "Available screens:\t" << pool->m_availableScreens << '\n';
     debug << "\"Fake\" screens:\t" << pool->m_fakeScreens << '\n';
     debug << "Redundant screens:\t" << pool->m_redundantScreens << '\n';
