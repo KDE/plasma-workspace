@@ -60,7 +60,6 @@
 #include "debug.h"
 #include "futureutil.h"
 #include "plasmashelladaptor.h"
-#include "primaryoutputwatcher.h"
 
 #ifndef NDEBUG
 #define CHECK_SCREEN_INVARIANTS screenInvariants();
@@ -86,7 +85,6 @@ ShellCorona::ShellCorona(QObject *parent)
     , m_waylandPlasmaShell(nullptr)
     , m_closingDown(false)
     , m_strutManager(new StrutManager(this))
-    , m_primaryWatcher(new PrimaryOutputWatcher(this))
     , m_shellContainmentConfig(nullptr)
 {
     setupWaylandIntegration();

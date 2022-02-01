@@ -25,7 +25,6 @@ class QMenu;
 class QScreen;
 class ScreenPool;
 class StrutManager;
-class PrimaryOutputWatcher;
 class ShellContainmentConfig;
 
 namespace KActivities
@@ -270,6 +269,5 @@ private:
     QString m_testModeLayout;
 
     StrutManager *m_strutManager;
-    PrimaryOutputWatcher *const m_primaryWatcher;
     QPointer<ShellContainmentConfig> m_shellContainmentConfig;
 };
