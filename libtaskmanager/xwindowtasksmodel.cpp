@@ -23,6 +23,7 @@
 #include <QDir>
 #include <QFile>
 #include <QIcon>
+#include <QQueue>
 #include <QSet>
 #include <QTimer>
 #include <QUrlQuery>
@@ -79,7 +80,24 @@ public:
     bool demandsAttention(WId window);
 
 private:
+    /**
+     * Emits all pending dataChanged() signals when the pending timer ends.
+     */
+    void slotDelayedDataChanged();
+
     XWindowTasksModel *q;
+    /**
+     * This timer is used to delay emitting dataChanged().
+     */
+    QTimer m_updateTimer;
+    /**
+     * This queue stores window IDs related to the pending data changes.
+     */
+    QQueue<WId> m_updateWIdQueue;
+    /**
+     * This map stores changed roles corresponding to each window ID.
+     */
+    QMap<WId, QSet<int> /* roles */> m_updateRolesMap;
 };
 
 XWindowTasksModel::Private::Private(XWindowTasksModel *q)
@@ -192,6 +210,13 @@ void XWindowTasksModel::Private::init()
     foreach (const WId window, KWindowSystem::windows()) {
         addWindow(window);
     }
+
+    // Limit update frequency to 10Hz
+    m_updateTimer.setInterval(100);
+    m_updateTimer.setSingleShot(true);
+    m_updateTimer.callOnTimeout([this] {
+        slotDelayedDataChanged();
+    });
 }
 
 void XWindowTasksModel::Private::addWindow(WId window)
@@ -392,14 +417,39 @@ void XWindowTasksModel::Private::windowChanged(WId window, NET::Properties prope
 
 void XWindowTasksModel::Private::dataChanged(WId window, const QVector<int> &roles)
 {
-    const int i = windows.indexOf(window);
-
-    if (i == -1) {
-        return;
+    // If the window is already in the queue, do not add it again
+    if (m_updateRolesMap.count(window) == 0) {
+        m_updateWIdQueue.enqueue(window);
+        m_updateRolesMap[window] = QSet(roles.constBegin(), roles.constEnd());
+    } else {
+        auto &set = m_updateRolesMap[window];
+        for (const int role : roles) {
+            set.insert(role);
+        }
     }
 
-    QModelIndex idx = q->index(i);
-    Q_EMIT q->dataChanged(idx, idx, roles);
+    if (!m_updateTimer.isActive()) {
+        m_updateTimer.start();
+    }
+}
+
+void XWindowTasksModel::Private::slotDelayedDataChanged()
+{
+    while (!m_updateWIdQueue.empty()) {
+        const WId window = m_updateWIdQueue.dequeue();
+        const int i = windows.indexOf(window);
+
+        if (i == -1) {
+            continue;
+        }
+
+        QModelIndex idx = q->index(i);
+        const auto &set = m_updateRolesMap[window];
+
+        Q_EMIT q->dataChanged(idx, idx, QVector<int>(set.constBegin(), set.constEnd()));
+    }
+
+    m_updateRolesMap.clear();
 }
 
 KWindowInfo *XWindowTasksModel::Private::windowInfo(WId window)
