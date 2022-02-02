@@ -12,6 +12,7 @@ import QtGraphicalEffects 1.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents2
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
+import org.kde.kirigami 2.15 as Kirigami
 
 PlasmaComponents2.ListItem {
     id: menuItem
@@ -91,7 +92,7 @@ PlasmaComponents2.ListItem {
         anchors {
             left: parent.left
             leftMargin: PlasmaCore.Units.gridUnit / 2 - listMargins.left
-            right: parent.right
+            right: menuButton.left
             verticalCenter: parent.verticalCenter
         }
 
@@ -101,11 +102,26 @@ PlasmaComponents2.ListItem {
         }
     }
 
+    PlasmaComponents2.ToolButton {
+        id: menuButton
+
+        iconSource: "overflow-menu"
+        visible: Kirigami.Settings.hasTransientTouchInput && !menuItem.ListView.isCurrentItem
+        width: Kirigami.Settings.hasTransientTouchInput ? undefined : 0 // label need take the full width
+
+        anchors {
+            right: parent.right
+            verticalCenter: parent.verticalCenter
+        }
+
+        onClicked: menuItem.ListView.view.setCurrentIndex(index)
+    }
+
     Loader {
         id: toolButtonsLoader
 
         anchors {
-            right: label.right
+            right: parent.right
             verticalCenter: parent.verticalCenter
         }
         source: "DelegateToolButtons.qml"
@@ -119,6 +135,11 @@ PlasmaComponents2.ListItem {
 
                 AnchorChanges {
                     target: toolButtonsLoader
+                    anchors.top: parent.top
+                    anchors.verticalCenter: undefined
+                }
+                AnchorChanges {
+                    target: menuButton
                     anchors.top: parent.top
                     anchors.verticalCenter: undefined
                 }

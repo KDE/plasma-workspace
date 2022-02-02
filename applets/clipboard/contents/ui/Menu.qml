@@ -35,6 +35,11 @@ PlasmaComponents3.ScrollView {
 
     contentItem: ListView {
         id: menuListView
+
+        function setCurrentIndex(index) {
+            currentIndex = index
+        }
+
         focus: true
 
         highlight: PlasmaComponents.Highlight { }
