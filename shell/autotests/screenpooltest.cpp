@@ -13,11 +13,29 @@
 #include <QTemporaryDir>
 #include <QTest>
 
-#include <wayland-server.h>
-
 #include "../screenpool.h"
+#include "mockcompositor.h"
+#include "xdgoutputv1.h"
 
-class ScreenPoolTest : public QObject
+using namespace MockCompositor;
+
+class XdgOutputV1Compositor : public DefaultCompositor
+{
+public:
+    explicit XdgOutputV1Compositor()
+    {
+        exec([this] {
+            int version = 3; // version 3 of of unstable-v1
+            add<XdgOutputManagerV1>(version);
+        });
+    }
+    XdgOutputV1 *xdgOutput(int i = 0)
+    {
+        return get<XdgOutputManagerV1>()->getXdgOutput(output(i));
+    }
+};
+
+class ScreenPoolTest : public QObject, XdgOutputV1Compositor
 {
     Q_OBJECT
 
@@ -31,21 +49,12 @@ private Q_SLOTS:
 
 private:
     ScreenPool *m_screenPool;
-    struct wl_display *m_display;
 };
 
 void ScreenPoolTest::initTestCase()
 {
     QStandardPaths::setTestModeEnabled(true);
-
-    m_display = wl_display_create();
-    QVERIFY(m_display);
-
-    const char *socket = wl_display_add_socket_auto(m_display);
-    QVERIFY(socket);
-
-    qDebug() << "Running Wayland display on" << socket;
-    wl_display_run(m_display); // FIXME: thould this be in a thread?
+    qRegisterMetaType<QScreen *>();
 
     KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("ScreenConnectors"));
     cg.deleteGroup();
@@ -59,8 +68,6 @@ void ScreenPoolTest::cleanupTestCase()
     KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("ScreenConnectors"));
     cg.deleteGroup();
     cg.sync();
-
-    wl_display_destroy(m_display);
 }
 
 void ScreenPoolTest::testScreenInsertion()
@@ -68,7 +75,22 @@ void ScreenPoolTest::testScreenInsertion()
     QSignalSpy addedSpy(m_screenPool, SIGNAL(screenAdded(QScreen *)));
 
     // Add a new output
+    exec([=] {
+        auto *oldOutput = output(0);
+        auto *newOutput = add<Output>();
+        newOutput->m_data.mode.resolution = {1920, 1080};
+        newOutput->m_data.position = {1920, 0};
+        // Move the primary output to the right
+        /* QPoint newPosition(newOutput->m_data.mode.resolution.width(), 0);
+         Q_ASSERT(newPosition != initialPosition);
+         oldOutput->m_data.position = newPosition;
+         oldOutput->sendGeometry();
+         oldOutput->sendDone();*/
+    });
+
+    QTRY_COMPARE(QGuiApplication::screens().size(), 2);
     addedSpy.wait();
+    qWarning() << addedSpy << QGuiApplication::screens();
     QScreen *newScreen = addedSpy.takeFirst().at(0).value<QScreen *>();
     QCOMPARE(newScreen->geometry(), QRect(1920, 0, 1920, 1080));
     //...
@@ -91,6 +113,6 @@ void ScreenPoolTest::testScreenRemoval()
     QScreen *removedScreen = removedSpy.takeFirst().at(0).value<QScreen *>();
 }
 
-QTEST_MAIN(ScreenPoolTest)
+QCOMPOSITOR_TEST_MAIN(ScreenPoolTest)
 
 #include "screenpooltest.moc"

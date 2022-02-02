@@ -1,3 +1,5 @@
+add_subdirectory(mockserver)
+
 include(ECMAddTests)
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR}/.. ${CMAKE_CURRENT_SOURCE_DIR}/..)
@@ -20,6 +22,7 @@ MACRO(PLASMASHELL_UNIT_TESTS)
                             KF5::WaylandClient
                             Wayland::Client
                             Wayland::Server
+                            SharedClientTest
                                      )
                if(HAVE_X11)
                   target_link_libraries(${_testname} XCB::XCB XCB::RANDR)

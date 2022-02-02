@@ -344,7 +344,7 @@ void ScreenPool::insertSortedScreen(QScreen *screen)
 
 void ScreenPool::handleScreenAdded(QScreen *screen)
 {
-    // qWarning()<<"handleScreenAdded"<<screen;
+    qWarning() << "handleScreenAdded" << screen << screen->geometry();
     // connect(screen, &QScreen::geometryChanged, &m_reconsiderOutputsTimer, static_cast<void (QTimer::*)()>(&QTimer::start), Qt::UniqueConnection);
     connect(
         screen,
