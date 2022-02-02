@@ -32,6 +32,7 @@ Item {
     Layout.maximumHeight: defaultHeight
 
     property alias hiddenLayout: hiddenItemsView.layout
+    property alias plasmoidContainer: container
 
     // Header
     PlasmaExtras.PlasmoidHeading {
@@ -168,6 +169,11 @@ Item {
             Layout.fillHeight: true
             Layout.topMargin: PlasmaCore.Units.smallSpacing
             visible: !systemTrayState.activeApplet
+            onVisibleChanged: {
+                if (visible) {
+                    layout.forceActiveFocus();
+                }
+            }
         }
 
         // Container for currently visible item
@@ -179,6 +185,11 @@ Item {
 
             // We need to add margin on the top so it matches the dialog's own margin
             Layout.topMargin: mergeHeadings ? 0 : dialog.margins.top
+            onVisibleChanged: {
+                if (visible) {
+                    forceActiveFocus();
+                }
+            }
         }
     }
 

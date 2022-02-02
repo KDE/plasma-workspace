@@ -180,6 +180,7 @@ protected:
     void resizeEvent(QResizeEvent *ev) override;
     void showEvent(QShowEvent *event) override;
     void moveEvent(QMoveEvent *ev) override;
+    void keyPressEvent(QKeyEvent *event) override;
     bool event(QEvent *e) override;
 
 Q_SIGNALS:

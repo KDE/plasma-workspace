@@ -4,7 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.0
+import QtQuick 2.15
 import QtQuick.Layouts 1.0
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -91,6 +91,20 @@ Flow {
                     anchors.fill: parent
                     hoverEnabled: true
                     onReleased: clickHandler(modelData.operation, this)
+                    activeFocusOnTab: true
+                    Keys.onPressed: {
+                        switch (event.key) {
+                        case Qt.Key_Space:
+                        case Qt.Key_Enter:
+                        case Qt.Key_Return:
+                        case Qt.Key_Select:
+                            clickHandler(modelData.operation, this)
+                            break;
+                        }
+                    }
+                    Accessible.name: modelData.tooltip_mainText
+                    Accessible.description: modelData.tooltip_subText
+                    Accessible.role: Accessible.Button
 
                     PlasmaCore.ToolTipArea {
                         anchors.fill: parent

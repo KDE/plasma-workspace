@@ -16,13 +16,31 @@ PlasmaCore.ToolTipArea {
     property int iconSize: PlasmaCore.Units.iconSizes.smallMedium
     implicitWidth: iconSize
     implicitHeight: iconSize
+    activeFocusOnTab: true
+
+    Accessible.name: i18n("Expand System Tray")
+    Accessible.description: i18n("Show all the items in the system tray in a popup")
+    Accessible.role: Accessible.Button
+
+    Keys.onPressed: {
+        switch (event.key) {
+        case Qt.Key_Space:
+        case Qt.Key_Enter:
+        case Qt.Key_Return:
+        case Qt.Key_Select:
+            systemTrayState.expanded = !systemTrayState.expanded;
+        }
+    }
 
     subText: systemTrayState.expanded ? i18n("Close popup") : i18n("Show hidden icons")
 
     MouseArea {
         id: arrowMouseArea
         anchors.fill: parent
-        onClicked: systemTrayState.expanded = !systemTrayState.expanded
+        onClicked: {
+            systemTrayState.expanded = !systemTrayState.expanded;
+            expandedRepresentation.hiddenLayout.currentIndex = -1;
+        }
 
         readonly property int arrowAnimationDuration: PlasmaCore.Units.shortDuration
 

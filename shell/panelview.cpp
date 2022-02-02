@@ -806,6 +806,29 @@ void PanelView::moveEvent(QMoveEvent *ev)
     PlasmaQuick::ContainmentView::moveEvent(ev);
 }
 
+void PanelView::keyPressEvent(QKeyEvent *event)
+{
+    PlasmaQuick::ContainmentView::keyPressEvent(event);
+    if (event->isAccepted()) {
+        return;
+    }
+
+    // Catch arrows keyPress to have same behavior as tab/backtab
+    if ((event->key() == Qt::Key_Right && qApp->layoutDirection() == Qt::LeftToRight)
+        || (event->key() == Qt::Key_Left && qApp->layoutDirection() != Qt::LeftToRight) || event->key() == Qt::Key_Down) {
+        event->accept();
+        QKeyEvent tabEvent(QEvent::KeyPress, Qt::Key_Tab, Qt::NoModifier);
+        qApp->sendEvent((QObject *)this, (QEvent *)&tabEvent);
+        return;
+    } else if ((event->key() == Qt::Key_Right && qApp->layoutDirection() != Qt::LeftToRight)
+               || (event->key() == Qt::Key_Left && qApp->layoutDirection() == Qt::LeftToRight) || event->key() == Qt::Key_Up) {
+        event->accept();
+        QKeyEvent backtabEvent(QEvent::KeyPress, Qt::Key_Backtab, Qt::NoModifier);
+        qApp->sendEvent((QObject *)this, (QEvent *)&backtabEvent);
+        return;
+    }
+}
+
 void PanelView::integrateScreen()
 {
     updateMask();
@@ -1295,12 +1318,21 @@ void PanelView::refreshStatus(Plasma::Types::ItemStatus status)
     if (status == Plasma::Types::NeedsAttentionStatus) {
         showTemporarily();
         setFlags(flags() | Qt::WindowDoesNotAcceptFocus);
+        if (m_shellSurface) {
+            m_shellSurface->setPanelTakesFocus(false);
+        }
     } else if (status == Plasma::Types::AcceptingInputStatus) {
         setFlags(flags() & ~Qt::WindowDoesNotAcceptFocus);
         KWindowSystem::forceActiveWindow(winId());
+        if (m_shellSurface) {
+            m_shellSurface->setPanelTakesFocus(true);
+        }
     } else {
         restoreAutoHide();
         setFlags(flags() | Qt::WindowDoesNotAcceptFocus);
+        if (m_shellSurface) {
+            m_shellSurface->setPanelTakesFocus(false);
+        }
     }
 }
 

@@ -10,6 +10,11 @@ Loader {
     id: itemLoader
 
     property var itemModel: model
+    onActiveFocusChanged: {
+        if (activeFocus && item) {
+            item.forceActiveFocus();
+        }
+    }
 
     source: {
         if (model.itemType === "Plasmoid" && model.hasApplet) {

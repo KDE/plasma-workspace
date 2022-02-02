@@ -26,32 +26,10 @@ AbstractItem {
     // action of a plasmoid is supposed to be, even if it's just expanding the
     // plasmoid. Not all plasmoids are supposed to expand and not all plasmoids
     // do anything with onActivated.
-    onActivated: if (applet) {
-        let fullRep = applet.fullRepresentationItem
-        /* HACK: Plasmoids can have an empty but not null fullRepresentationItem,
-         * even if fullRepresentation is not explicitly defined or is explicitly null.
-         *
-         * If fullRep is a plain Item and there are no children, assume it is empty.
-         * There will be uncommon situations where this assumption is wrong.
-         *
-         * `typeof fullRep` only returns "object", which is useless.
-         * We aren't using `fullRep instanceof Item` because it would always
-         * return true if fullRep is not null.
-         * If fullRep.toString() starts with "QQuickItem_QML",
-         * then it really is just a plain Item.
-         *
-         * We really need to refactor system tray someday.
-         */
-        if (fullRep && (!fullRep.toString().startsWith("QQuickItem_QML")
-                        || fullRep.children.length > 0)
-        ) {
-            // Assume that an applet with a fullRepresentationItem that
-            // fits the criteria will want to expand the applet when activated.
-            applet.expanded = !applet.expanded
+    onActivated: {
+        if (applet) {
+            applet.nativeInterface.activated()
         }
-        // If there is no fullRepresentationItem, hopefully the applet is using
-        // the onActivated signal handler for something useful.
-        applet.activated()
     }
 
     onClicked: {

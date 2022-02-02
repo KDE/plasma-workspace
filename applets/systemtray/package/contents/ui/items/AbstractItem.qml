@@ -28,13 +28,20 @@ PlasmaCore.ToolTipArea {
     readonly property bool inVisibleLayout: effectiveStatus === PlasmaCore.Types.ActiveStatus
 
     // input agnostic way to trigger the main action
-    signal activated(var args)
+    signal activated(var pos)
 
     // proxy signals for MouseArea
     signal clicked(var mouse)
     signal pressed(var mouse)
     signal wheel(var wheel)
     signal contextMenu(var mouse)
+
+    // Make sure the proper item manages the keyboard
+    onActiveFocusChanged: {
+        if (activeFocus) {
+            iconContainer.forceActiveFocus();
+        }
+    }
 
     /* subclasses need to assign to this tooltip properties
     mainText:
@@ -128,8 +135,28 @@ PlasmaCore.ToolTipArea {
         anchors.fill: abstractItem
         spacing: 0
 
-        Item {
+        FocusScope {
             id: iconContainer
+            activeFocusOnTab: true
+            Accessible.name: abstractItem.text
+            Accessible.description: abstractItem.subText
+            Accessible.role: Accessible.Button
+            Accessible.onPressAction: abstractItem.activated(Qt.point(iconContainer.width/2, iconContainer.height/2));
+
+            Keys.onPressed: {
+                switch (event.key) {
+                    case Qt.Key_Space:
+                    case Qt.Key_Enter:
+                    case Qt.Key_Return:
+                    case Qt.Key_Select:
+                        abstractItem.activated(Qt.point(width/2, height/2));
+                        break;
+                    case Qt.Key_Menu:
+                        abstractItem.contextMenu(null);
+                        event.accepted = true;
+                        break;
+                }
+            }
 
             property alias container: abstractItem
             property alias inVisibleLayout: abstractItem.inVisibleLayout

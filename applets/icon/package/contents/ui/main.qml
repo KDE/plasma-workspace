@@ -5,7 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.0
+import QtQuick 2.15
 import QtQuick.Layouts 1.1
 import QtGraphicalEffects 1.0
 
@@ -27,6 +27,21 @@ MouseArea {
 
     height: Math.round(PlasmaCore.Units.iconSizes.desktop + 2 * PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height)
     width: Math.round(PlasmaCore.Units.iconSizes.desktop * 1.5)
+
+    activeFocusOnTab: true
+    Keys.onPressed: {
+        switch (event.key) {
+        case Qt.Key_Space:
+        case Qt.Key_Enter:
+        case Qt.Key_Return:
+        case Qt.Key_Select:
+            plasmoid.nativeInterface.run()
+            break;
+        }
+    }
+    Accessible.name: plasmoid.title
+    Accessible.description: plasmoid.nativeInterface.genericName !== mainText ? plasmoid.nativeInterface.genericName :""
+    Accessible.role: Accessible.Button
 
     Layout.minimumWidth: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : PlasmaCore.Units.iconSizes.small
     Layout.minimumHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (PlasmaCore.Units.iconSizes.small + 2 * PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height)

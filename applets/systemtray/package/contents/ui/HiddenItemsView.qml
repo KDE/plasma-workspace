@@ -6,7 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.1
+import QtQuick 2.15
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents // For Highlight
@@ -55,24 +55,13 @@ PlasmaComponents3.ScrollView {
         }
         delegate: ItemLoader {}
 
+        keyNavigationEnabled: true
         activeFocusOnTab: true
-        onActiveFocusChanged: if (activeFocus && currentIndex === -1) {
-            currentIndex = 0
-        } else if (!activeFocus && currentIndex >= 0) {
-            currentIndex = -1
-        }
-
-        Keys.priority: Keys.AfterItem
-        Keys.onPressed: if (currentItem && currentItem.item) {
-            switch (event.key) {
-            case Qt.Key_Return:
-            case Qt.Key_Enter:
-            case Qt.Key_Space:
-            case Qt.Key_Select:
-                currentItem.item.activated(Qt.point(width/2, height/2))
-                event.accepted = true
-                break
-            default: break
+        onActiveFocusChanged: {
+            if (activeFocus && currentIndex === -1) {
+                currentIndex = 0
+            } else if (!activeFocus && currentIndex >= 0) {
+                currentIndex = -1
             }
         }
     }

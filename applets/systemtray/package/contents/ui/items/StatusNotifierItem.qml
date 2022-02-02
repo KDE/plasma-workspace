@@ -37,18 +37,18 @@ AbstractItem {
 
     onActivated: {
         let service = model.Service;
-        let operation = service.operationDescription("Activate")
-        operation.x = args.x //mouseX
-        operation.y = args.y //mouseY
-        let job = service.startOperationCall(operation)
+        let operation = service.operationDescription("Activate");
+        operation.x = pos.x; //mouseX
+        operation.y = pos.y; //mouseY
+        let job = service.startOperationCall(operation);
         job.finished.connect(() => {
             if (!job.result) {
                 // On error try to invoke the context menu.
                 // Workaround primarily for apps using libappindicator.
-                openContextMenu(args)
+                openContextMenu(pos);
             }
         })
-        taskIcon.startActivatedAnimation()
+        taskIcon.startActivatedAnimation();
     }
 
     onContextMenu: {

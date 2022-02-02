@@ -256,6 +256,28 @@ void ShellCorona::init()
     connect(this, &ShellCorona::containmentAdded, this, updateManageContainmentsVisiblility);
     connect(this, &ShellCorona::screenRemoved, this, updateManageContainmentsVisiblility);
     updateManageContainmentsVisiblility();
+
+    QAction *cyclePanelFocusAction = actions()->addAction(QStringLiteral("cycle-panels"));
+    cyclePanelFocusAction->setText(i18n("Move keyboard focus between panels"));
+    KGlobalAccel::self()->setGlobalShortcut(cyclePanelFocusAction, Qt::META | Qt::ALT | Qt::Key_P);
+    connect(cyclePanelFocusAction, &QAction::triggered, this, [this]() {
+        if (m_panelViews.isEmpty()) {
+            return;
+        }
+        PanelView *activePanel = qobject_cast<PanelView *>(qGuiApp->focusWindow());
+        Plasma::Containment *containmentToActivate = nullptr;
+        if (activePanel) {
+            auto it = m_panelViews.constFind(activePanel->containment());
+            it++;
+            if (it != m_panelViews.constEnd()) {
+                containmentToActivate = it.value()->containment();
+            }
+        }
+        if (!containmentToActivate) {
+            containmentToActivate = m_panelViews.values().first()->containment();
+        }
+        emit containmentToActivate->activated();
+    });
 }
 
 ShellCorona::~ShellCorona()

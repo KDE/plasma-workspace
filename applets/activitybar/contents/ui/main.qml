@@ -42,6 +42,21 @@ Item {
                 id: tab
                 checked: model.current
                 text: model.name
+                activeFocusOnTab: true
+                Keys.onPressed: {
+                    switch (event.key) {
+                    case Qt.Key_Space:
+                    case Qt.Key_Enter:
+                    case Qt.Key_Return:
+                    case Qt.Key_Select:
+                        activityModel.setCurrentActivity(model.id, function() {});
+                        break;
+                    }
+                }
+                Accessible.checked: model.current
+                Accessible.name: model.name
+                Accessible.description: i18n("Switch to activity %1", model.name)
+                Accessible.role: Accessible.Button
                 onClicked: {
                     activityModel.setCurrentActivity(model.id, function() {});
                 }

@@ -214,7 +214,16 @@ MouseArea {
         backgroundHints: (plasmoid.containmentDisplayHints & PlasmaCore.Types.DesktopFullyCovered) ? PlasmaCore.Dialog.SolidBackground : PlasmaCore.Dialog.StandardBackground
 
         onVisibleChanged: {
-            systemTrayState.expanded = visible
+            systemTrayState.expanded = visible;
+            if (!systemTrayState.expanded) {
+                return;
+            }
+
+            if (expandedRepresentation.plasmoidContainer.visible) {
+                expandedRepresentation.plasmoidContainer.forceActiveFocus();
+            } else if (expandedRepresentation.hiddenLayout.visible) {
+                expandedRepresentation.hiddenLayout.forceActiveFocus();
+            }
         }
         mainItem: ExpandedRepresentation {
             id: expandedRepresentation
