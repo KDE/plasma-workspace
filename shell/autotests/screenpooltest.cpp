@@ -66,20 +66,11 @@ void ScreenPoolTest::testScreenInsertion()
 
     // Add a new output
     exec([=] {
-        auto *oldOutput = output(0);
         OutputData data;
         data.mode.resolution = {1920, 1080};
         data.position = {1920, 0};
         // NOTE: assumes that when a screen is added it will already have the final geometry
-        auto *newOutput = add<Output>();
-        newOutput->m_data.mode.resolution = {1920, 1080};
-        newOutput->m_data.position = {1920, 0};
-        // Move the primary output to the right
-        /* QPoint newPosition(newOutput->m_data.mode.resolution.width(), 0);
-         Q_ASSERT(newPosition != initialPosition);
-         oldOutput->m_data.position = newPosition;
-         oldOutput->sendGeometry();
-         oldOutput->sendDone();*/
+        auto *newOutput = add<Output>(data);
     });
 
     addedSpy.wait();
