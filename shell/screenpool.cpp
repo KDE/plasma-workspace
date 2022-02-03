@@ -304,6 +304,9 @@ void ScreenPool::reconsiderOutputs()
 
             m_fakeScreens.remove(screen);
             m_redundantScreens.insert(screen, toScreen);
+            if (!m_idForConnector.contains(screen->name())) {
+                insertScreenMapping(firstAvailableId(), screen->name());
+            }
             if (m_availableScreens.contains(screen)) {
                 QScreen *newPrimaryScreen = primaryScreen();
                 if (newPrimaryScreen != oldPrimaryScreen) {

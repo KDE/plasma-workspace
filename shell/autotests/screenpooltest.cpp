@@ -28,8 +28,12 @@ private Q_SLOTS:
     void cleanupTestCase();
 
     void testScreenInsertion();
+    void testRedundantScreenInsertion();
+    void testMoveOutOfRedundant();
+    void testMoveInRedundant();
     void testPrimarySwap();
-    void testScreenRemoval();
+    void testSecondScreenRemoval();
+    void testThirdScreenRemoval();
 
 private:
     ScreenPool *m_screenPool;
@@ -85,7 +89,76 @@ void ScreenPoolTest::testScreenInsertion()
     QCOMPARE(addedSpy.size(), 1);
 
     QScreen *newScreen = addedSpy.takeFirst().at(0).value<QScreen *>();
+    QCOMPARE(newScreen->name(), QStringLiteral("WL-2"));
     QCOMPARE(newScreen->geometry(), QRect(1920, 0, 1920, 1080));
+}
+
+void ScreenPoolTest::testRedundantScreenInsertion()
+{
+    QSignalSpy addedSpy(m_screenPool, SIGNAL(screenAdded(QScreen *)));
+    QSignalSpy addedFromAppSpy(qGuiApp, SIGNAL(screenAdded(QScreen *)));
+
+    // Add a new output
+    exec([=] {
+        OutputData data;
+        data.mode.resolution = {1280, 720};
+        data.position = {1920, 0};
+        data.physicalSize = data.mode.physicalSizeForDpi(96);
+        // NOTE: assumes that when a screen is added it will already have the final geometry
+        add<Output>(data);
+    });
+
+    addedFromAppSpy.wait();
+    addedSpy.wait(250);
+    // only addedFromAppSpy will have registered something, nothing in addedSpy,
+    // on ScreenPool API POV is like this new screen doesn't exist, because is redundant to WL-2
+    QCOMPARE(QGuiApplication::screens().size(), 3);
+    QCOMPARE(m_screenPool->screens().size(), 2);
+    QCOMPARE(addedFromAppSpy.size(), 1);
+    QCOMPARE(addedSpy.size(), 0);
+
+    QScreen *newScreen = addedFromAppSpy.takeFirst().at(0).value<QScreen *>();
+    QCOMPARE(newScreen->name(), QStringLiteral("WL-3"));
+    QCOMPARE(newScreen->geometry(), QRect(1920, 0, 1280, 720));
+    QVERIFY(!m_screenPool->screens().contains(newScreen));
+}
+
+void ScreenPoolTest::testMoveOutOfRedundant()
+{
+    QSignalSpy addedSpy(m_screenPool, SIGNAL(screenAdded(QScreen *)));
+
+    exec([=] {
+        auto *out = output(2);
+        out->m_data.mode.resolution = {1280, 2048};
+        out->m_data.position = {1920, 0};
+        out->sendDone();
+    });
+
+    addedSpy.wait();
+    QCOMPARE(addedSpy.size(), 1);
+    QScreen *newScreen = addedSpy.takeFirst().at(0).value<QScreen *>();
+    QCOMPARE(newScreen->name(), QStringLiteral("WL-3"));
+    QCOMPARE(newScreen->geometry(), QRect(1920, 0, 1280, 2048));
+    QVERIFY(!m_screenPool->screens().contains(newScreen));
+}
+
+void ScreenPoolTest::testMoveInRedundant()
+{
+    QSignalSpy removedSpy(m_screenPool, SIGNAL(screenRemoved(QScreen *)));
+
+    exec([=] {
+        auto *out = output(2);
+        out->m_data.mode.resolution = {1280, 720};
+        out->m_data.position = {1920, 0};
+        out->sendDone();
+    });
+
+    removedSpy.wait();
+    QCOMPARE(removedSpy.size(), 1);
+    QScreen *oldScreen = removedSpy.takeFirst().at(0).value<QScreen *>();
+    QCOMPARE(oldScreen->name(), QStringLiteral("WL-3"));
+    QCOMPARE(oldScreen->geometry(), QRect(1920, 0, 1280, 720));
+    QVERIFY(!m_screenPool->screens().contains(oldScreen));
 }
 
 void ScreenPoolTest::testPrimarySwap()
@@ -106,8 +179,9 @@ void ScreenPoolTest::testPrimarySwap()
     QCOMPARE(newPrimary->geometry(), QRect(1920, 0, 1920, 1080));
 }
 
-void ScreenPoolTest::testScreenRemoval()
+void ScreenPoolTest::testSecondScreenRemoval()
 {
+    QSignalSpy addedSpy(m_screenPool, SIGNAL(screenAdded(QScreen *)));
     QSignalSpy primaryChangeSpy(m_screenPool, SIGNAL(primaryScreenChanged(QScreen *, QScreen *)));
     QSignalSpy removedSpy(m_screenPool, SIGNAL(screenRemoved(QScreen *)));
 
@@ -118,6 +192,7 @@ void ScreenPoolTest::testScreenRemoval()
         wl_display_flush_clients(m_display);
         remove(output(1));
     });
+    // Removing the primary screen, will change a primaryChange signal beforehand
     primaryChangeSpy.wait();
     QCOMPARE(primaryChangeSpy.size(), 1);
     QScreen *oldPrimary = primaryChangeSpy[0].at(0).value<QScreen *>();
@@ -129,10 +204,34 @@ void ScreenPoolTest::testScreenRemoval()
 
     // NOTE: we can neither access the data of removedSpy nor oldPrimary because at this point will be dangling
     removedSpy.wait();
+    addedSpy.wait();
+    QCOMPARE(QGuiApplication::screens().size(), 2);
+    QCOMPARE(m_screenPool->screens().size(), 2);
+    QScreen *firstScreen = m_screenPool->screens().first();
+    QCOMPARE(firstScreen, newPrimary);
+
+    // We'll get an added signal for the screen WL-3 that was previously redundant to WL-2
+    QCOMPARE(addedSpy.size(), 1);
+    QScreen *newScreen = addedSpy[0].at(0).value<QScreen *>();
+    QCOMPARE(newScreen->name(), QStringLiteral("WL-3"));
+    QCOMPARE(newScreen->geometry(), QRect(1920, 0, 1280, 720));
+    QCOMPARE(m_screenPool->screens().at(1), newScreen);
+}
+
+void ScreenPoolTest::testThirdScreenRemoval()
+{
+    QSignalSpy removedSpy(m_screenPool, SIGNAL(screenRemoved(QScreen *)));
+
+    // Remove an output
+    exec([=] {
+        remove(output(1));
+    });
+
+    // NOTE: we can neither access the data of removedSpy nor oldPrimary because at this point will be dangling
+    removedSpy.wait();
     QCOMPARE(QGuiApplication::screens().size(), 1);
     QCOMPARE(m_screenPool->screens().size(), 1);
     QScreen *lastScreen = m_screenPool->screens().first();
-    QCOMPARE(lastScreen, newPrimary);
 }
 
 QCOMPOSITOR_TEST_MAIN(ScreenPoolTest)
