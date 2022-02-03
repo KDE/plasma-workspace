@@ -275,6 +275,15 @@ UserApplyJob::UserApplyJob(QPointer<OrgFreedesktopAccountsUserInterface> dbusIfa
 {
 }
 
+// Work around QTBUG-100458
+inline auto asyncCall(OrgFreedesktopAccountsUserInterface* ptr, const QString& method, const QVariantList& arguments)
+{
+    auto mc = QDBusMessage::createMethodCall(ptr->service(), ptr->path(), ptr->interface(), method);
+    mc.setArguments(arguments);
+    mc.setInteractiveAuthorizationAllowed(true);
+    return QDBusConnection::systemBus().asyncCall(mc);
+}
+
 void UserApplyJob::start()
 {
     // With our UI the user expects the as a single transaction, but the accountsservice API does not provide that
@@ -283,7 +292,8 @@ void UserApplyJob::start()
     // Therefore make a blocking call to SetAccountType first to trigger the auth dialog. If the user declines don't attempt to write anything else
     // This avoids settings any data when the user thinks they aborted the transaction, see https://bugs.kde.org/show_bug.cgi?id=425036
     // Subsequent calls do not trigger the auth dialog again
-    auto setAccount = m_dbusIface->SetAccountType(m_type);
+
+    auto setAccount = asyncCall(m_dbusIface, "SetAccountType", {m_type});
     setAccount.waitForFinished();
     if (setAccount.isError()) {
         setError(setAccount.error());
@@ -292,13 +302,14 @@ void UserApplyJob::start()
         return;
     }
 
-    const std::multimap<QString, QDBusPendingReply<> (OrgFreedesktopAccountsUserInterface::*)(const QString &)> set = {
-        {m_name, &OrgFreedesktopAccountsUserInterface::SetUserName},
-        {m_email, &OrgFreedesktopAccountsUserInterface::SetEmail},
-        {m_realname, &OrgFreedesktopAccountsUserInterface::SetRealName},
+
+    const std::multimap<QString, QString> set = {
+        {m_name, "SetUserName"},
+        {m_email, "SetEmail"},
+        {m_realname, "SetRealName"},
     };
     for (auto const &x : set) {
-        auto resp = (m_dbusIface->*(x.second))(x.first);
+        auto resp = asyncCall(m_dbusIface, x.second, {x.first});
         resp.waitForFinished();
         if (resp.isError()) {
             setError(resp.error());
@@ -333,7 +344,7 @@ void UserApplyJob::start()
 
         file.close();
 
-        auto resp = m_dbusIface->SetIconFile(file.fileName());
+        auto resp = asyncCall(m_dbusIface, "SetIconFile", {file.fileName()});
 
         resp.waitForFinished();
         if (resp.isError()) {
