@@ -29,7 +29,6 @@
         "Description[zh_CN]": "配置用户反馈设置",
         "FormFactors": [
             "tablet",
-            "handset",
             "desktop"
         ],
         "Icon": "preferences-desktop-feedback",
