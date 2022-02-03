@@ -94,9 +94,10 @@ PlasmaCore.ToolTipArea {
 
     MouseArea {
         propagateComposedEvents: true
-        // This needs to be above applets so that it can receive
-        // hover events while the mouse is over an applet.
-        z: 1
+        // This needs to be above applets when it's in the grid hidden area
+        // so that it can receive hover events while the mouse is over an applet,
+        // but below them on regular systray, so collapsing works
+        z: inHiddenLayout ? 1 : 0
         anchors.fill: abstractItem
         hoverEnabled: true
         drag.filterChildren: true
