@@ -17,9 +17,10 @@ function(ecm_add_qtwayland_server_protocol_kde out_var)
 
 
     find_package(WaylandScanner REQUIRED QUIET)
-    ecm_add_wayland_server_protocol(${out_var}
-                                    PROTOCOL ${ARGS_PROTOCOL}
-                                    BASENAME ${ARGS_BASENAME})
+    #Don't generate/compile client files or it will cause linker errors
+    #ecm_add_wayland_server_protocol(${out_var}
+                                    #PROTOCOL ${ARGS_PROTOCOL}
+                                    #BASENAME ${ARGS_BASENAME})
 
     get_filename_component(_infile ${ARGS_PROTOCOL} ABSOLUTE)
     set(_header "${CMAKE_CURRENT_BINARY_DIR}/qwayland-server-${ARGS_BASENAME}.h")
@@ -41,29 +42,15 @@ function(ecm_add_qtwayland_server_protocol_kde out_var)
     set(${out_var} ${${out_var}} PARENT_SCOPE)
 endfunction()
 
-#qt_manual_moc(moc_files
-    #mockcompositor.h
-    #coreprotocol.h
-    #corecompositor.h
-    #datadevice.h
-    #fullscreenshellv1.h
-    #iviapplication.h
-    #textinput.h
-    #qttextinput.h
-    #xdgoutputv1.h
-    #xdgshell.h
-#)
-
 set(SharedClientTest_LIB_SRCS
     corecompositor.cpp corecompositor.h
     coreprotocol.cpp coreprotocol.h
     datadevice.cpp datadevice.h
-    # fullscreenshellv1.cpp fullscreenshellv1.h
     mockcompositor.cpp mockcompositor.h
     textinput.cpp textinput.h
-    #  qttextinput.cpp qttextinput.h
     xdgoutputv1.cpp xdgoutputv1.h
     xdgshell.cpp xdgshell.h
+    primaryoutput.cpp primaryoutput.h
 )
 
 ecm_add_qtwayland_server_protocol_kde(SharedClientTest_LIB_SRCS
@@ -86,27 +73,16 @@ ecm_add_qtwayland_server_protocol_kde(SharedClientTest_LIB_SRCS
     BASENAME xdg-shell
 )
 
-add_library(SharedClientTest OBJECT ${SharedClientTest_LIB_SRCS})
+ecm_add_qtwayland_server_protocol_kde(SharedClientTest_LIB_SRCS
+    PROTOCOL ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-primary-output-v1.xml
+    BASENAME kde-primary-output-v1
+)
 
-#[[
-qt6_generate_wayland_protocol_server_sources(SharedClientTest
-    FILES
-        ${PROJECT_SOURCE_DIR}/src/3rdparty/protocol/fullscreen-shell-unstable-v1.xml
-        ${PROJECT_SOURCE_DIR}/src/3rdparty/protocol/ivi-application.xml
-        ${PROJECT_SOURCE_DIR}/src/3rdparty/protocol/wp-primary-selection-unstable-v1.xml
-        ${PROJECT_SOURCE_DIR}/src/3rdparty/protocol/tablet-unstable-v2.xml
-        ${PROJECT_SOURCE_DIR}/src/3rdparty/protocol/text-input-unstable-v2.xml
-        ${PROJECT_SOURCE_DIR}/src/extensions/qt-text-input-method-unstable-v1.xml
-        ${PROJECT_SOURCE_DIR}/src/3rdparty/protocol/wayland.xml
-        ${PROJECT_SOURCE_DIR}/src/3rdparty/protocol/xdg-decoration-unstable-v1.xml
-        ${PROJECT_SOURCE_DIR}/src/3rdparty/protocol/xdg-output-unstable-v1.xml
-        ${PROJECT_SOURCE_DIR}/src/3rdparty/protocol/xdg-shell.xml
-)]]
+add_library(SharedClientTest OBJECT ${SharedClientTest_LIB_SRCS})
 
 target_link_libraries(SharedClientTest
     PUBLIC
         Qt::Gui
-      #  Qt::OpenGL
         Qt::WaylandClientPrivate
         Wayland::Server
         Threads::Threads # special case

@@ -47,6 +47,11 @@ void ScreenPoolTest::initTestCase()
     cg.sync();
     m_screenPool = new ScreenPool(KSharedConfig::openConfig(), this);
     m_screenPool->load();
+
+    QTRY_COMPARE(QGuiApplication::screens().size(), 1);
+    QCOMPARE(m_screenPool->screens().size(), 1);
+    QCOMPARE(QGuiApplication::screens().first()->name(), QStringLiteral("WL-1"));
+    QCOMPARE(QGuiApplication::primaryScreen(), QGuiApplication::screens().first());
 }
 
 void ScreenPoolTest::cleanupTestCase()
@@ -69,34 +74,65 @@ void ScreenPoolTest::testScreenInsertion()
         OutputData data;
         data.mode.resolution = {1920, 1080};
         data.position = {1920, 0};
+        data.physicalSize = data.mode.physicalSizeForDpi(96);
         // NOTE: assumes that when a screen is added it will already have the final geometry
-        auto *newOutput = add<Output>(data);
+        add<Output>(data);
     });
 
     addedSpy.wait();
     QCOMPARE(QGuiApplication::screens().size(), 2);
+    QCOMPARE(m_screenPool->screens().size(), 2);
     QCOMPARE(addedSpy.size(), 1);
 
     QScreen *newScreen = addedSpy.takeFirst().at(0).value<QScreen *>();
     QCOMPARE(newScreen->geometry(), QRect(1920, 0, 1920, 1080));
-    //...
 }
 
 void ScreenPoolTest::testPrimarySwap()
 {
     QSignalSpy primaryChangeSpy(m_screenPool, SIGNAL(primaryScreenChanged(QScreen *, QScreen *)));
     // Set a primary screen
+    exec([=] {
+        primaryOutput()->setPrimaryOutputName("WL-2");
+    });
 
     primaryChangeSpy.wait();
+    QCOMPARE(primaryChangeSpy.size(), 1);
+    QScreen *oldPrimary = primaryChangeSpy[0].at(0).value<QScreen *>();
+    QScreen *newPrimary = primaryChangeSpy[0].at(1).value<QScreen *>();
+    QCOMPARE(oldPrimary->name(), QStringLiteral("WL-1"));
+    QCOMPARE(oldPrimary->geometry(), QRect(0, 0, 1920, 1080));
+    QCOMPARE(newPrimary->name(), QStringLiteral("WL-2"));
+    QCOMPARE(newPrimary->geometry(), QRect(1920, 0, 1920, 1080));
 }
 
 void ScreenPoolTest::testScreenRemoval()
 {
+    QSignalSpy primaryChangeSpy(m_screenPool, SIGNAL(primaryScreenChanged(QScreen *, QScreen *)));
     QSignalSpy removedSpy(m_screenPool, SIGNAL(screenRemoved(QScreen *)));
 
-    // Add a new output
+    // Remove an output
+    exec([=] {
+        // NOTE: Assume the server will always do the right thing to change the primary screen before deleting one
+        primaryOutput()->setPrimaryOutputName("WL-1");
+        wl_display_flush_clients(m_display);
+        remove(output(1));
+    });
+    primaryChangeSpy.wait();
+    QCOMPARE(primaryChangeSpy.size(), 1);
+    QScreen *oldPrimary = primaryChangeSpy[0].at(0).value<QScreen *>();
+    QScreen *newPrimary = primaryChangeSpy[0].at(1).value<QScreen *>();
+    QCOMPARE(newPrimary->name(), QStringLiteral("WL-1"));
+    QCOMPARE(newPrimary->geometry(), QRect(0, 0, 1920, 1080));
+    QCOMPARE(oldPrimary->name(), QStringLiteral("WL-2"));
+    QCOMPARE(oldPrimary->geometry(), QRect(1920, 0, 1920, 1080));
+
+    // NOTE: we can neither access the data of removedSpy nor oldPrimary because at this point will be dangling
     removedSpy.wait();
-    QScreen *removedScreen = removedSpy.takeFirst().at(0).value<QScreen *>();
+    QCOMPARE(QGuiApplication::screens().size(), 1);
+    QCOMPARE(m_screenPool->screens().size(), 1);
+    QScreen *lastScreen = m_screenPool->screens().first();
+    QCOMPARE(lastScreen, newPrimary);
 }
 
 QCOMPOSITOR_TEST_MAIN(ScreenPoolTest)

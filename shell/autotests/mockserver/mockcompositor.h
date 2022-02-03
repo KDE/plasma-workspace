@@ -32,6 +32,8 @@
 #include "corecompositor.h"
 #include "coreprotocol.h"
 #include "datadevice.h"
+#include "primaryoutput.h"
+#include "xdgoutputv1.h"
 #include "xdgshell.h"
 
 #include <QtGui/QGuiApplication>
@@ -101,6 +103,17 @@ public:
         Q_ASSERT(seat);
         return seat->m_keyboard;
     }
+    XdgOutputV1 *xdgOutput(Output *out)
+    {
+        return get<XdgOutputManagerV1>()->getXdgOutput(out);
+    }
+    PrimaryOutputV1 *primaryOutput()
+    {
+        auto *primary = get<PrimaryOutputV1>();
+        Q_ASSERT(primary);
+        return primary;
+    }
+
     uint sendXdgShellPing();
     void xdgPingAndWaitForPong();
     // Things that can be changed run-time without confusing the client (i.e. don't require separate tests)

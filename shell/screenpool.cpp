@@ -216,7 +216,7 @@ bool ScreenPool::isOutputFake(QScreen *screen) const
     // of the last connected screen was), on wayland the fake output has no name and no geometry
     const bool fake = screen->name() == QStringLiteral(":0.0") || screen->geometry().isEmpty() || screen->name().isEmpty();
     // If there is a fake output we can only have one screen left (the fake one)
-    Q_ASSERT(!fake || fake == (qGuiApp->screens().count() == 1));
+    //    Q_ASSERT(!fake || fake == (qGuiApp->screens().count() == 1));
     return fake;
 }
 
@@ -276,6 +276,7 @@ void ScreenPool::reconsiderOutputs()
         if (m_redundantScreens.contains(screen)) {
             if (QScreen *toScreen = outputRedundantTo(screen)) {
                 // Insert again, redndantTo may have changed
+                m_fakeScreens.remove(screen);
                 m_redundantScreens.insert(screen, toScreen);
             } else {
                 // qDebug() << "not redundant anymore" << screen << (isOutputFake(screen) ? "but is a fake screen" : "");
@@ -284,7 +285,11 @@ void ScreenPool::reconsiderOutputs()
                 if (isOutputFake(screen)) {
                     m_fakeScreens.insert(screen);
                 } else {
+                    m_fakeScreens.remove(screen);
                     m_availableScreens.append(screen);
+                    if (!m_idForConnector.contains(screen->name())) {
+                        insertScreenMapping(firstAvailableId(), screen->name());
+                    }
                     Q_EMIT screenAdded(screen);
                     QScreen *newPrimaryScreen = primaryScreen();
                     if (newPrimaryScreen != oldPrimaryScreen) {
@@ -297,6 +302,7 @@ void ScreenPool::reconsiderOutputs()
         } else if (QScreen *toScreen = outputRedundantTo(screen)) {
             // qDebug() << "new redundant screen" << screen << "with primary screen" << m_primaryWatcher->primaryScreen();
 
+            m_fakeScreens.remove(screen);
             m_redundantScreens.insert(screen, toScreen);
             if (m_availableScreens.contains(screen)) {
                 QScreen *newPrimaryScreen = primaryScreen();
@@ -323,6 +329,19 @@ void ScreenPool::reconsiderOutputs()
                 m_availableScreens.removeAll(screen);
                 Q_EMIT screenRemoved(screen);
             }
+        } else if (m_fakeScreens.contains(screen)) {
+            m_fakeScreens.remove(screen);
+            m_availableScreens.append(screen);
+            if (!m_idForConnector.contains(screen->name())) {
+                insertScreenMapping(firstAvailableId(), screen->name());
+            }
+            Q_EMIT screenAdded(screen);
+            QScreen *newPrimaryScreen = primaryScreen();
+            if (newPrimaryScreen != oldPrimaryScreen) {
+                // Primary screen was redundant, not anymore
+                setPrimaryConnector(newPrimaryScreen->name());
+                Q_EMIT primaryScreenChanged(oldPrimaryScreen, newPrimaryScreen);
+            }
         } else {
             // qDebug() << "fine screen" << screen;
         }
@@ -344,7 +363,7 @@ void ScreenPool::insertSortedScreen(QScreen *screen)
 
 void ScreenPool::handleScreenAdded(QScreen *screen)
 {
-    qWarning() << "handleScreenAdded" << screen << screen->geometry();
+    // qWarning() << "handleScreenAdded" << screen << screen->geometry();
     // connect(screen, &QScreen::geometryChanged, &m_reconsiderOutputsTimer, static_cast<void (QTimer::*)()>(&QTimer::start), Qt::UniqueConnection);
     connect(
         screen,

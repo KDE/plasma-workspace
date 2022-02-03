@@ -37,6 +37,7 @@ namespace MockCompositor
 {
 class XdgOutputV1 : public QObject, public QtWaylandServer::zxdg_output_v1
 {
+    Q_OBJECT
 public:
     explicit XdgOutputV1(Output *output)
         : m_output(output)

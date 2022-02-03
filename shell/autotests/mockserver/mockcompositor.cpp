@@ -39,11 +39,14 @@ DefaultCompositor::DefaultCompositor()
         // Legacy versions can override in separate tests by removing and adding.
         add<WlCompositor>();
         add<SubCompositor>();
+        add<XdgOutputManagerV1>();
         auto *output = add<Output>();
+        auto *primaryOutput = add<PrimaryOutputV1>();
         output->m_data.physicalSize = output->m_data.mode.physicalSizeForDpi(96);
         add<Seat>(Seat::capability_pointer | Seat::capability_keyboard | Seat::capability_touch);
         add<XdgWmBase>();
         add<Shm>();
+        primaryOutput->setPrimaryOutputName("WL-1");
         // TODO: other shells, viewporter, xdgoutput etc
 
         QObject::connect(get<WlCompositor>(), &WlCompositor::surfaceCreated, [&](Surface *surface) {
