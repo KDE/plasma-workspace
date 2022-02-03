@@ -19,23 +19,7 @@
 
 using namespace MockCompositor;
 
-class XdgOutputV1Compositor : public DefaultCompositor
-{
-public:
-    explicit XdgOutputV1Compositor()
-    {
-        exec([this] {
-            int version = 3; // version 3 of of unstable-v1
-            add<XdgOutputManagerV1>(version);
-        });
-    }
-    XdgOutputV1 *xdgOutput(int i = 0)
-    {
-        return get<XdgOutputManagerV1>()->getXdgOutput(output(i));
-    }
-};
-
-class ScreenPoolTest : public QObject, XdgOutputV1Compositor
+class ScreenPoolTest : public QObject, DefaultCompositor
 {
     Q_OBJECT
 
@@ -55,6 +39,8 @@ void ScreenPoolTest::initTestCase()
 {
     QStandardPaths::setTestModeEnabled(true);
     qRegisterMetaType<QScreen *>();
+    m_config.autoConfigure = true;
+    m_config.autoEnter = false;
 
     KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("ScreenConnectors"));
     cg.deleteGroup();
@@ -65,6 +51,10 @@ void ScreenPoolTest::initTestCase()
 
 void ScreenPoolTest::cleanupTestCase()
 {
+    QCOMPOSITOR_COMPARE(getAll<Output>().size(), 1); // Only the default output should be left
+    QTRY_COMPARE(QGuiApplication::screens().size(), 1);
+    QTRY_VERIFY2(isClean(), qPrintable(dirtyMessage()));
+
     KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("ScreenConnectors"));
     cg.deleteGroup();
     cg.sync();
@@ -77,6 +67,10 @@ void ScreenPoolTest::testScreenInsertion()
     // Add a new output
     exec([=] {
         auto *oldOutput = output(0);
+        OutputData data;
+        data.mode.resolution = {1920, 1080};
+        data.position = {1920, 0};
+        // NOTE: assumes that when a screen is added it will already have the final geometry
         auto *newOutput = add<Output>();
         newOutput->m_data.mode.resolution = {1920, 1080};
         newOutput->m_data.position = {1920, 0};
@@ -88,9 +82,10 @@ void ScreenPoolTest::testScreenInsertion()
          oldOutput->sendDone();*/
     });
 
-    QTRY_COMPARE(QGuiApplication::screens().size(), 2);
     addedSpy.wait();
-    qWarning() << addedSpy << QGuiApplication::screens();
+    QCOMPARE(QGuiApplication::screens().size(), 2);
+    QCOMPARE(addedSpy.size(), 1);
+
     QScreen *newScreen = addedSpy.takeFirst().at(0).value<QScreen *>();
     QCOMPARE(newScreen->geometry(), QRect(1920, 0, 1920, 1080));
     //...

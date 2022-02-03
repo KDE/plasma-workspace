@@ -100,7 +100,6 @@ public:
     }
     bool m_done = false;
     bool m_destroyed = false;
-
 protected:
     void callback_destroy_resource(Resource *resource) override
     {

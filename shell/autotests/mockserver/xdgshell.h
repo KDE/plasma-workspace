@@ -165,7 +165,6 @@ public:
     uint m_grabSerial = 0;
 signals:
     void destroyRequested();
-
 protected:
     void xdg_popup_grab(Resource *resource, ::wl_resource *seat, uint32_t serial) override;
     void xdg_popup_destroy(Resource *resource) override;
