@@ -30,6 +30,8 @@ kconfig_add_kcfg_files(libklipper_common_SRCS klippersettings.kcfgc)
 add_library(libklipper_common_static STATIC ${libklipper_common_SRCS})
 target_link_libraries(libklipper_common_static
     Qt::Concurrent
+    Qt::Widgets
+    Qt::DBus
     KF5::ConfigGui
     KF5::CoreAddons
     KF5::DBusAddons
@@ -59,30 +61,13 @@ install(FILES org.kde.klipper.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 install(FILES klipper.desktop DESTINATION ${KDE_INSTALL_AUTOSTARTDIR})
 
 # Plasma Data Engine
-set(plasma_engine_clipboard_SRCS ${libklipper_common_SRCS} clipboardengine.cpp clipboardservice.cpp clipboardjob.cpp)
+set(plasma_engine_clipboard_SRCS clipboardengine.cpp clipboardservice.cpp clipboardjob.cpp)
 kcoreaddons_add_plugin(plasma_engine_clipboard SOURCES ${plasma_engine_clipboard_SRCS} INSTALL_NAMESPACE "plasma/dataengine")
 target_link_libraries(plasma_engine_clipboard
-    Qt::Concurrent
-    Qt::DBus
-    Qt::Widgets       # QAction
-    KF5::ConfigGui
-    KF5::CoreAddons    # KUrlMimeData
-    KF5::GlobalAccel
-    KF5::KIOWidgets    # PreviewJob
+    libklipper_common_static
     KF5::Plasma
-    KF5::Notifications
-    KF5::Service
-    KF5::Prison
-    KF5::TextWidgets   # KTextEdit
-    KF5::WidgetsAddons # KMessageBox
-    KF5::WindowSystem
-    KF5::XmlGui        # KActionCollection
-    KF5::GuiAddons
-    ${ZLIB_LIBRARY}
 )
-if (X11_FOUND)
-  target_link_libraries(plasma_engine_clipboard XCB::XCB Qt::X11Extras)
-endif()
+
 install(FILES org.kde.plasma.clipboard.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services)
 if(BUILD_TESTING)
    add_subdirectory(autotests)
