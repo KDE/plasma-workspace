@@ -430,7 +430,6 @@ PlasmaCore.ColorScope {
             ]
         }
 
-
         Component {
             id: userPromptComponent
             Login {

@@ -30,9 +30,9 @@ SessionManagementScreen {
     }
 
     /*
-    * Login has been requested with the following username and password
-    * If username field is visible, it will be taken from that, otherwise from the "name" property of the currentIndex
-    */
+     * Login has been requested with the following username and password
+     * If username field is visible, it will be taken from that, otherwise from the "name" property of the currentIndex
+     */
     function startLogin() {
         var username = showUsernamePrompt ? userNameInput.text : userList.selectedUser
         var password = passwordBox.text
@@ -41,9 +41,11 @@ SessionManagementScreen {
         mainStack.enabled = false
         userListComponent.userList.opacity = 0.5
 
-        //this is partly because it looks nicer
-        //but more importantly it works round a Qt bug that can trigger if the app is closed with a TextField focused
-        //DAVE REPORT THE FRICKING THING AND PUT A LINK
+        // This is partly because it looks nicer, but more importantly it
+        // works round a Qt bug that can trigger if the app is closed with a
+        // TextField focused.
+        //
+        // See https://bugreports.qt.io/browse/QTBUG-55460
         loginButton.forceActiveFocus();
         loginRequest(username, password);
     }

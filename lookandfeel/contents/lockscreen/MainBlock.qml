@@ -31,9 +31,11 @@ SessionManagementScreen {
     function startLogin() {
         var password = passwordBox.text
 
-        //this is partly because it looks nicer
-        //but more importantly it works round a Qt bug that can trigger if the app is closed with a TextField focused
-        //See https://bugreports.qt.io/browse/QTBUG-55460
+        // This is partly because it looks nicer, but more importantly it
+        // works round a Qt bug that can trigger if the app is closed with a
+        // TextField focused.
+        //
+        // See https://bugreports.qt.io/browse/QTBUG-55460
         loginButton.forceActiveFocus();
         loginRequest(password);
     }
