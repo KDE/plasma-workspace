@@ -367,7 +367,6 @@ void ScreenPool::insertSortedScreen(QScreen *screen)
 void ScreenPool::handleScreenAdded(QScreen *screen)
 {
     // qWarning() << "handleScreenAdded" << screen << screen->geometry();
-    // connect(screen, &QScreen::geometryChanged, &m_reconsiderOutputsTimer, static_cast<void (QTimer::*)()>(&QTimer::start), Qt::UniqueConnection);
     connect(
         screen,
         &QScreen::geometryChanged,
@@ -481,8 +480,9 @@ void ScreenPool::handlePrimaryOutputNameChanged(const QString &oldOutputName, co
 
 void ScreenPool::screenInvariants()
 {
-    // Is the primary connector in sync with the actual primaryScreen?
-    Q_ASSERT(primaryScreen()->name() == primaryConnector());
+    // Is the primary connector in sync with the actual primaryScreen? The only way it can get out of sync with primaryConnector() is the single fake screen/no
+    // real outputs scenario
+    Q_ASSERT(noRealOutputsConnected() || primaryScreen()->name() == primaryConnector());
     // Is the primary screen available? TODO: it can be redundant
     // Q_ASSERT(m_availableScreens.contains(primaryScreen()));
 
