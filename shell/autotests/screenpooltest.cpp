@@ -129,8 +129,9 @@ void ScreenPoolTest::testMoveOutOfRedundant()
 
     exec([=] {
         auto *out = output(2);
+        auto xdgOut = xdgOutput(out);
         out->m_data.mode.resolution = {1280, 2048};
-        out->m_data.position = {1920, 0};
+        xdgOut->sendLogicalSize(QSize(1280, 2048));
         out->sendDone();
     });
 
@@ -139,7 +140,7 @@ void ScreenPoolTest::testMoveOutOfRedundant()
     QScreen *newScreen = addedSpy.takeFirst().at(0).value<QScreen *>();
     QCOMPARE(newScreen->name(), QStringLiteral("WL-3"));
     QCOMPARE(newScreen->geometry(), QRect(1920, 0, 1280, 2048));
-    QVERIFY(!m_screenPool->screens().contains(newScreen));
+    QVERIFY(m_screenPool->screens().contains(newScreen));
 }
 
 void ScreenPoolTest::testMoveInRedundant()
@@ -148,8 +149,9 @@ void ScreenPoolTest::testMoveInRedundant()
 
     exec([=] {
         auto *out = output(2);
+        auto xdgOut = xdgOutput(out);
         out->m_data.mode.resolution = {1280, 720};
-        out->m_data.position = {1920, 0};
+        xdgOut->sendLogicalSize(QSize(1280, 720));
         out->sendDone();
     });
 
@@ -192,6 +194,7 @@ void ScreenPoolTest::testSecondScreenRemoval()
         wl_display_flush_clients(m_display);
         remove(output(1));
     });
+
     // Removing the primary screen, will change a primaryChange signal beforehand
     primaryChangeSpy.wait();
     QCOMPARE(primaryChangeSpy.size(), 1);
@@ -203,15 +206,15 @@ void ScreenPoolTest::testSecondScreenRemoval()
     QCOMPARE(oldPrimary->geometry(), QRect(1920, 0, 1920, 1080));
 
     // NOTE: we can neither access the data of removedSpy nor oldPrimary because at this point will be dangling
-    removedSpy.wait();
-    addedSpy.wait();
+    QTRY_COMPARE(removedSpy.size(), 1);
+    QTRY_COMPARE(addedSpy.size(), 1);
+
     QCOMPARE(QGuiApplication::screens().size(), 2);
     QCOMPARE(m_screenPool->screens().size(), 2);
     QScreen *firstScreen = m_screenPool->screens().first();
     QCOMPARE(firstScreen, newPrimary);
 
     // We'll get an added signal for the screen WL-3 that was previously redundant to WL-2
-    QCOMPARE(addedSpy.size(), 1);
     QScreen *newScreen = addedSpy[0].at(0).value<QScreen *>();
     QCOMPARE(newScreen->name(), QStringLiteral("WL-3"));
     QCOMPARE(newScreen->geometry(), QRect(1920, 0, 1280, 720));
