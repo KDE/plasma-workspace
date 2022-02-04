@@ -534,7 +534,7 @@ QDebug operator<<(QDebug debug, const ScreenPool *pool)
     debug << "Actual primary screen:\t" << pool->primaryScreen() << '\n';
     debug << "Available screens:\t" << pool->m_availableScreens << '\n';
     debug << "\"Fake\" screens:\t" << pool->m_fakeScreens << '\n';
-    debug << "Redundant screens:\t" << pool->m_redundantScreens << '\n';
+    debug << "Redundant screens covered by other ones:\t" << pool->m_redundantScreens << '\n';
     debug << "All screens, ordered by size:\t" << pool->m_allSortedScreens << '\n';
     debug << "All screen that QGuiApplication knows:\t" << qGuiApp->screens() << '\n';
     return debug;
