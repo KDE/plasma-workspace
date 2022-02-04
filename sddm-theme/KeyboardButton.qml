@@ -14,7 +14,9 @@ PlasmaComponents.ToolButton {
 
     visible: menu.items.length > 1
 
-    Component.onCompleted: currentIndex = Qt.binding(function() {return keyboard.currentLayout});
+    Component.onCompleted: {
+        currentIndex = Qt.binding(() => keyboard.currentLayout);
+    }
 
     menu: QQC.Menu {
         id: keyboardMenu
@@ -23,7 +25,7 @@ PlasmaComponents.ToolButton {
             id: instantiator
             model: keyboard.layouts
             onObjectAdded: keyboardMenu.insertItem(index, object)
-            onObjectRemoved: keyboardMenu.removeItem( object )
+            onObjectRemoved: keyboardMenu.removeItem(object)
             delegate: QQC.MenuItem {
                 text: modelData.longName
                 property string shortName: modelData.shortName

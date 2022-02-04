@@ -34,8 +34,8 @@ SessionManagementScreen {
      * If username field is visible, it will be taken from that, otherwise from the "name" property of the currentIndex
      */
     function startLogin() {
-        var username = showUsernamePrompt ? userNameInput.text : userList.selectedUser
-        var password = passwordBox.text
+        const username = showUsernamePrompt ? userNameInput.text : userList.selectedUser
+        const password = passwordBox.text
 
         footer.enabled = false
         mainStack.enabled = false
@@ -60,10 +60,11 @@ SessionManagementScreen {
         focus: showUsernamePrompt && !lastUserName //if there's a username prompt it gets focus first, otherwise password does
         placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Username")
 
-        onAccepted:
+        onAccepted: {
             if (root.loginScreenUiVisible) {
                 passwordBox.forceActiveFocus()
             }
+        }
     }
 
     RowLayout {
@@ -117,12 +118,12 @@ SessionManagementScreen {
             id: loginButton
             Accessible.name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Log In")
             Layout.preferredHeight: passwordBox.implicitHeight
-            Layout.preferredWidth: text.length == 0 ? loginButton.Layout.preferredHeight : -1
+            Layout.preferredWidth: text.length === 0 ? loginButton.Layout.preferredHeight : -1
 
-            icon.name: text.length == 0 ? (root.LayoutMirroring.enabled ? "go-previous" : "go-next") : ""
+            icon.name: text.length === 0 ? (root.LayoutMirroring.enabled ? "go-previous" : "go-next") : ""
 
             text: root.showUsernamePrompt || userList.currentItem.needsPassword ? "" : i18n("Log In")
-            onClicked: startLogin();
+            onClicked: startLogin()
         }
     }
 }

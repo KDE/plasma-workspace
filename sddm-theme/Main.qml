@@ -181,21 +181,26 @@ PlasmaCore.ColorScope {
                 userListCurrentIndex: userModel.lastIndex >= 0 ? userModel.lastIndex : 0
                 lastUserName: userModel.lastUser
                 showUserList: {
-                    if ( !userListModel.hasOwnProperty("count")
-                    || !userListModel.hasOwnProperty("disableAvatarsThreshold"))
+                    if (!userListModel.hasOwnProperty("count")
+                        || !userListModel.hasOwnProperty("disableAvatarsThreshold")) {
                         return (userList.y + mainStack.y) > 0
+                    }
 
-                    if ( userListModel.count === 0 ) return false
+                    if (userListModel.count === 0 ) {
+                        return false
+                    }
 
-                    if ( userListModel.hasOwnProperty("containsAllUsers") && !userListModel.containsAllUsers ) return false
+                    if (userListModel.hasOwnProperty("containsAllUsers") && !userListModel.containsAllUsers) {
+                        return false
+                    }
 
                     return userListModel.count <= userListModel.disableAvatarsThreshold && (userList.y + mainStack.y) > 0
                 }
 
                 notificationMessage: {
-                    var text = ""
+                    let text = ""
                     if (keystateSource.data["Caps Lock"]["Locked"]) {
-                        text += i18nd("plasma_lookandfeel_org.kde.lookandfeel","Caps Lock is on")
+                        text += i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Caps Lock is on")
                         if (root.notificationMessage) {
                             text += " • "
                         }
@@ -207,7 +212,7 @@ PlasmaCore.ColorScope {
                 actionItems: [
                     ActionButton {
                         iconSource: "system-suspend"
-                        text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel","Suspend to RAM","Sleep")
+                        text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Suspend to RAM", "Sleep")
                         fontSize: parseInt(config.fontSize) + 1
                         onClicked: sddm.suspend()
                         enabled: sddm.canSuspend
@@ -215,7 +220,7 @@ PlasmaCore.ColorScope {
                     },
                     ActionButton {
                         iconSource: "system-reboot"
-                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Restart")
+                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Restart")
                         fontSize: parseInt(config.fontSize) + 1
                         onClicked: sddm.reboot()
                         enabled: sddm.canReboot
@@ -223,7 +228,7 @@ PlasmaCore.ColorScope {
                     },
                     ActionButton {
                         iconSource: "system-shutdown"
-                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Shut Down")
+                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Shut Down")
                         fontSize: parseInt(config.fontSize) + 1
                         onClicked: sddm.powerOff()
                         enabled: sddm.canPowerOff
@@ -335,7 +340,7 @@ PlasmaCore.ColorScope {
             }
 
             function showHide() {
-                state = state == "hidden" ? "visible" : "hidden";
+                state = state === "hidden" ? "visible" : "hidden";
             }
 
             states: [
@@ -458,7 +463,7 @@ PlasmaCore.ColorScope {
                 actionItems: [
                     ActionButton {
                         iconSource: "system-suspend"
-                        text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel","Suspend to RAM","Sleep")
+                        text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Suspend to RAM", "Sleep")
                         fontSize: parseInt(config.fontSize) + 1
                         onClicked: sddm.suspend()
                         enabled: sddm.canSuspend
@@ -466,7 +471,7 @@ PlasmaCore.ColorScope {
                     },
                     ActionButton {
                         iconSource: "system-reboot"
-                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Restart")
+                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Restart")
                         fontSize: parseInt(config.fontSize) + 1
                         onClicked: sddm.reboot()
                         enabled: sddm.canReboot
@@ -474,7 +479,7 @@ PlasmaCore.ColorScope {
                     },
                     ActionButton {
                         iconSource: "system-shutdown"
-                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","Shut Down")
+                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Shut Down")
                         fontSize: parseInt(config.fontSize) + 1
                         onClicked: sddm.powerOff()
                         enabled: sddm.canPowerOff
@@ -482,7 +487,7 @@ PlasmaCore.ColorScope {
                     },
                     ActionButton {
                         iconSource: "system-user-list"
-                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel","List Users")
+                        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "List Users")
                         fontSize: parseInt(config.fontSize) + 1
                         onClicked: mainStack.pop()
                         visible: !inputPanel.keyboardActive
@@ -495,7 +500,7 @@ PlasmaCore.ColorScope {
             id: logoShadow
             anchors.fill: logo
             source: logo
-            visible: !softwareRendering && config.showlogo == "shown"
+            visible: !softwareRendering && config.showlogo === "shown"
             horizontalOffset: 1
             verticalOffset: 1
             radius: 6
@@ -519,7 +524,7 @@ PlasmaCore.ColorScope {
 
         Image {
             id: logo
-            visible: config.showlogo == "shown"
+            visible: config.showlogo === "shown"
             source: config.logo
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.bottom: footer.top
@@ -559,7 +564,7 @@ PlasmaCore.ColorScope {
                 font.pointSize: config.fontSize
                 icon.name: inputPanel.keyboardActive ? "input-keyboard-virtual-on" : "input-keyboard-virtual-off"
                 onClicked: inputPanel.showHide()
-                visible: inputPanel.status == Loader.Ready
+                visible: inputPanel.status === Loader.Ready
             }
 
             KeyboardButton {
