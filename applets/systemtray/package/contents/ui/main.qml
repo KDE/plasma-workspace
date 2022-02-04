@@ -224,6 +224,9 @@ MouseArea {
 
             // Draws a line between the applet dialog and the panel
             PlasmaCore.SvgItem {
+                // Only draw for popups of panel applets, not desktop applets
+                visible: [PlasmaCore.Types.TopEdge, PlasmaCore.Types.LeftEdge, PlasmaCore.Types.RightEdge, PlasmaCore.Types.BottomEdge]
+                    .includes(plasmoid.location)
                 anchors {
                     top: plasmoid.location == PlasmaCore.Types.BottomEdge ? undefined : parent.top
                     left: plasmoid.location == PlasmaCore.Types.RightEdge ? undefined : parent.left
