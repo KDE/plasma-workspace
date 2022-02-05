@@ -18,6 +18,7 @@
         "Description[pa]": "ਸਰਵਿਸਾਂ ਦਾ ਇੰਤਜ਼ਾਮ ਕਰਦਾ ਹੈ, ਜੋ ਕਿ ਹਾਲਤ ਨੋਟੀਫਾਇਰ ਵਰਤੋਂਕਾਰ ਇੰਟਰਫੇਸ ਦਿੰਦਾ ਹੈ",
         "Description[pl]": "Zarządzanie usługami, które dostarczają powiadomień o stanie poprzez interfejs użytkownika",
         "Description[pt_BR]": "Gerencia os serviços que fornecem interfaces de notificação do status",
+        "Description[ro]": "Administrează serviciile care furnizează interfețe utilizator pentru notificări de stare",
         "Description[ru]": "Управление службами интерфейсов уведомлений о состоянии",
         "Description[sk]": "Spravuje služby, ktoré poskytujú užívateľské rozhrania pre oznámenie stavu",
         "Description[sl]": "Upravlja s storitvami, ki ponujajo uporabniške vmesnike obvestilnika o stanju",
