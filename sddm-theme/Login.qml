@@ -29,6 +29,19 @@ SessionManagementScreen {
         }
     }
 
+    onUserSelected: {
+        const nextControl = (userNameInput.visible
+            ? userNameInput
+            : (passwordBox.visible
+                ? passwordBox
+                : loginButton));
+        // Don't startLogin() here, because the signal is connected to the
+        // Escape key as well, for which it wouldn't make sense to trigger
+        // login. Using TabFocusReason, so that the loginButton gets the
+        // visual highlight.
+        nextControl.forceActiveFocus(Qt.TabFocusReason);
+    }
+
     /*
      * Login has been requested with the following username and password
      * If username field is visible, it will be taken from that, otherwise from the "name" property of the currentIndex

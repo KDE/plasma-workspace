@@ -57,6 +57,8 @@ FocusScope {
 
     default property alias _children: innerLayout.children
 
+    signal userSelected()
+
     // FIXME: move this component into a layout, rather than abusing
     // anchors and implicitly relying on other components' built-in
     // whitespace to avoid items being overlapped.
@@ -73,6 +75,8 @@ FocusScope {
             right: parent.right
         }
         fontSize: root.fontSize
+        // bubble up the signal
+        onUserSelected: root.userSelected()
     }
 
     //goal is to show the prompts, in ~16 grid units high, then the action buttons
