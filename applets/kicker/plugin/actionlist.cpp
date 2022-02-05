@@ -413,15 +413,13 @@ Q_GLOBAL_STATIC(AppStream::Pool, appstreamPool)
 
 QVariantList appstreamActions(const KService::Ptr &service)
 {
-    QVariantList ret;
-
 #ifdef HAVE_APPSTREAMQT
     const KService::Ptr appStreamHandler = KApplicationTrader::preferredService(QStringLiteral("x-scheme-handler/appstream"));
 
     // Don't show action if we can't find any app to handle appstream:// URLs.
     if (!appStreamHandler) {
         if (!KProtocolInfo::isHelperProtocol(QStringLiteral("appstream")) || KProtocolInfo::exec(QStringLiteral("appstream")).isEmpty()) {
-            return ret;
+            return {};
         }
     }
 
@@ -437,13 +435,14 @@ QVariantList appstreamActions(const KService::Ptr &service)
                                                                appStreamHandler->icon(),
                                                                "manageApplication",
                                                                QVariant(QLatin1String("appstream://") + componentId));
-        ret << appstreamAction;
+        // Only process the first element. In case we have system provided and flatpack sources we would end up with duplicated entries
+        return {appstreamAction};
     }
 #else
     Q_UNUSED(service)
 #endif
 
-    return ret;
+    return {};
 }
 
 bool handleAppstreamActions(const QString &actionId, const QVariant &argument)
