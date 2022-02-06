@@ -41,6 +41,7 @@
         "Description[de]": "Erzeugt ein Miniprogramm aus dem Inhalt der Zwischenablage",
         "Description[en_GB]": "Creates a widget from the contents of the clipboard",
         "Description[es]": "Crea un elemento gráfico con los contenidos del portapapeles",
+        "Description[fi]": "Luo leikepöydän sisällöstä sovelman",
         "Description[fr]": "Crée un composant graphique à partir du contenu du presse-papier.",
         "Description[hu]": "Készít egy widgetet a vágólap tartalmából",
         "Description[ia]": "Il crea elemento graphic (Widget) ex le contentos del area de transferentia (clipboard)",

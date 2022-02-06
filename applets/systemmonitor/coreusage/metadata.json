@@ -40,6 +40,7 @@
         "Description[ca]": "Giny del monitor del sistema que mostra l'ús individual dels nuclis de la CPU",
         "Description[en_GB]": "System monitor Widget that shows usage of individual CPU cores",
         "Description[es]": "Elemento gráfico del monitor del sistema que muestra el uso de los núcleos individuales de la CPU",
+        "Description[fi]": "Yksittäisten järjestelmäydinten käytön näyttävä järjestelmänvalvontasovelma",
         "Description[fr]": "Composant graphique de surveillance du système, affichant l'utilisation de chaque cœur du processeur.",
         "Description[hu]": "Rendszermonitor elem, amely az egyes logikai processzorok használatát mutatja",
         "Description[ia]": "Widget de supervision de systema que monstra le uso del nucleos individual",

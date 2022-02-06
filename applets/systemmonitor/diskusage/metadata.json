@@ -41,6 +41,7 @@
         "Description[ca]": "Giny del monitor del sistema que mostra l'ús de la partició arrel",
         "Description[en_GB]": "System monitor Widget that shows the usage of the root partition",
         "Description[es]": "Elemento gráfico del monitor del sistema que muestra el uso de la partición raíz",
+        "Description[fi]": "Juuriosion käyttöasteen näyttävä järjestelmänvalvontasovelma",
         "Description[fr]": "Composant graphique de surveillance du système, affichant l'utilisation de la partition « Système ».",
         "Description[hu]": "Rendszermonitor elem, amely a root partíció használatát mutatja",
         "Description[ia]": "Widget de supervision de systema que monstra le uso del partition de root (radice)",

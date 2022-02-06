@@ -43,6 +43,7 @@
         "Description[de]": "Ein Miniprogramm, das den Festplattendurchsatz und die Festplattenein- und -ausgabe überwacht",
         "Description[en_GB]": "An applet that monitors hard disk throughput and input/output",
         "Description[es]": "Una miniaplicación que monitoriza el rendimiento y la entrada/salida del disco duro",
+        "Description[fi]": "Tarkkailee levyjen suoritustehoa ja siirtomäärää",
         "Description[fr]": "Une applet surveillant le débit des disques durs et leurs entrées / sorties.",
         "Description[hu]": "Egy kisalkalmazás, amely figyeli a merevlemez átvitelét és a bemenetet/kimenetet",
         "Description[ia]": "Un applet que que monitora le prestation (throughput) e ingresso/egresso de disco dur",

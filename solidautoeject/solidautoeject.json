@@ -9,6 +9,7 @@
         "Description[de]": "Löst die Laufwerkseinbindung automatisch bei Betätigung des Auswurfknopfes",
         "Description[en_GB]": "Automatically releases drives when their eject button is pushed",
         "Description[es]": "Libera automáticamente las unidades cuando se pulsa el botón de expulsión",
+        "Description[fi]": "Irrottaa asemat automaattisesti niiden poistopainiketta painettaessa",
         "Description[fr]": "Libère automatiquement les disques lors d'un appui sur leur bouton d'éjection",
         "Description[hu]": "Automatikusan kiadja a meghajtókat a kiadógomb megnyomásakor",
         "Description[ia]": "Il lassa fora automaticamente le drives quando lor button de expeller es pressate.",

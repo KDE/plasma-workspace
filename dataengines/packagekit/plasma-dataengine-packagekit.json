@@ -42,6 +42,7 @@
         "Description[de]": "Daten-Treiber für PackageKit",
         "Description[en_GB]": "PackageKit Data Engine",
         "Description[es]": "Motor de datos de PackageKit",
+        "Description[fi]": "PackageKit-tietomoottori",
         "Description[fr]": "Moteur de données de « PackageKit ».",
         "Description[hu]": "PackageKit adatmotor",
         "Description[ia]": "Motor de Datos (Data Engine) de PackageKit",
