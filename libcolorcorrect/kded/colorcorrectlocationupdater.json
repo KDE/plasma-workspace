@@ -8,6 +8,7 @@
         "Description[de]": "Sendet aktualisierte Standort-Daten an den Compositor",
         "Description[en_GB]": "Sends updated location data to the compositor",
         "Description[es]": "Envía datos de posicionamiento actualizados al compositor",
+        "Description[fi]": "Lähettää päivitetyn sijaintitiedon koostajalle",
         "Description[fr]": "Envoie des données de localisation actualisées au compositeur",
         "Description[hu]": "Frissített lokációs adatok küldése a kompozitornak",
         "Description[ia]": "Invia datos de location actualisate al compositor",

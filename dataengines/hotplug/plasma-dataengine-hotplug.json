@@ -43,6 +43,7 @@
         "Description[de]": "Überwacht Hotplug-Geräte auf Aktivierung und Deaktivierung.",
         "Description[en_GB]": "Tracks hot-pluggable devices as they appear and disappear.",
         "Description[es]": "Registra los dispositivos extraíbles cuando aparecen y desaparecen.",
+        "Description[fi]": "Tarkkailee ajonaikaisesti kytkettäviä laitteita.",
         "Description[fr]": "Surveille l'apparition ou la disparition de périphériques pouvant être connectés à chaud.",
         "Description[hu]": "Követi a menet közben csatolható (hot-pluggable) eszközöket.",
         "Description[ia]": "Il tracia dispositivos hot-pluggable (insertabile a calide) assi como illos appare e disappare",

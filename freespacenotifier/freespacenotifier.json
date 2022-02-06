@@ -8,6 +8,7 @@
         "Description[de]": "Gibt eine Warnung aus, wenn der freie Speicherplatz in Ihrem Persönlichen Ordner knapp wird",
         "Description[en_GB]": "Warns when running out of space on your home folder",
         "Description[es]": "Le avisa cuando se está quedando sin espacio en su carpeta personal",
+        "Description[fi]": "Varoittaa, kun kotikansiosta on tila loppumassa",
         "Description[fr]": "Avertit lorsque l'espace vient à manquer dans votre dossier utilisateur.",
         "Description[hu]": "Figyelmeztet, ha kezd elfogyni a szabad lemezterület a saját könyvtárában",
         "Description[ia]": "Il avisa quando il termina le spatio sur tu dossier domo (initio)",

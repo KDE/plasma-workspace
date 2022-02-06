@@ -39,6 +39,7 @@
         "Description[ca]": "Giny del monitor del sistema que mostra l'ús total de la CPU",
         "Description[en_GB]": "System monitor Widget that shows the total CPU usage",
         "Description[es]": "Elemento gráfico del monitor del sistema que muestra el uso total de CPU",
+        "Description[fi]": "Suorittimen kokonaiskäytön näyttävä järjestelmänvalvontasovelma",
         "Description[fr]": "Composant graphique de surveillance du système, affichant l'utilisation globale du processeur.",
         "Description[hu]": "Rendszermonitor elem, amely a teljes processzorhasználatot mutatja",
         "Description[ia]": "Widget de supervision de systema que monstra le uso total de CPU",

@@ -40,6 +40,7 @@
         "Description[ca]": "Giny del monitor del sistema que mostra la velocitat de baixada i pujada de les dades",
         "Description[en_GB]": "System monitor Widget that shows the download and upload data rate",
         "Description[es]": "Elemento gráfico del monitor del sistema que muestra las velocidades de subida y bajada de datos",
+        "Description[fi]": "Lataus- ja lähetysnopeuden näyttävä järjestelmänvalvontasovelma",
         "Description[fr]": "Composant graphique de surveillance du système, affichant le débit pour les échanges montant /descendant de données.",
         "Description[hu]": "A le- és feltöltési sebességet megjelenítő elem",
         "Description[ia]": "Widget de supervision de systema que monstra le  velocitate de discargar e incargar datos",
