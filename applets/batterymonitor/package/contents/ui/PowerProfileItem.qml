@@ -78,12 +78,19 @@ RowLayout {
             value: root.activeProfileIndex
             snapMode: PlasmaComponents3.Slider.SnapAlways
             onMoved: {
-                const { canBeInhibited, profile } = root.profileData[value];
-                if (!(canBeInhibited && root.inhibited)) {
-                    activateProfileRequested(profile);
-                } else {
-                    value = Qt.binding(() => root.activeProfileIndex);
+                const data = root.profileData[value];
+                // Workaround for https://bugreports.qt.io/browse/QTBUG-93081
+                // Despite SnapAlways mode, touchpad input may set value to
+                // fractional numbers.
+                if (data !== undefined) {
+                    const { canBeInhibited, profile } = data;
+                    if (!(canBeInhibited && root.inhibited)) {
+                        activateProfileRequested(profile);
+                        return;
+                    }
                 }
+                // both `else` branches
+                value = Qt.binding(() => root.activeProfileIndex);
             }
 
             // fake having a disabled second half

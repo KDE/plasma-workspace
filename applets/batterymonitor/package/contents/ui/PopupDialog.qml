@@ -114,7 +114,16 @@ PlasmaComponents3.Page {
                 KeyNavigation.tab: pmSwitch
                 KeyNavigation.backtab: brightnessSlider
 
-                onMoved: batterymonitor.keyboardBrightness = value
+                onMoved: {
+                    // Workaround for https://bugreports.qt.io/browse/QTBUG-93081
+                    // Despite SnapAlways mode, touchpad input may set value to
+                    // fractional numbers.
+                    if (value === Math.round(value)) {
+                        batterymonitor.keyboardBrightness = value;
+                    } else {
+                        value = batterymonitor.keyboardBrightness;
+                    }
+                }
 
                 // Manually dragging the slider around breaks the binding
                 Connections {
