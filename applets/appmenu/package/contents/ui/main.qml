@@ -26,7 +26,7 @@ Item {
     readonly property bool kcmAuthorized: KCMShell.authorize(["style.desktop"]).length > 0
 
     onViewChanged: {
-        Plasmoid.nativeInterface.view = view
+        Plasmoid.nativeInterface.view = view;
     }
 
     Plasmoid.constraintHints: PlasmaCore.Types.CanFillArea
@@ -70,19 +70,19 @@ Item {
         columnSpacing: 0
 
         Component.onCompleted: {
-            Plasmoid.nativeInterface.buttonGrid = buttonGrid
+            Plasmoid.nativeInterface.buttonGrid = buttonGrid;
 
             // using a Connections {} doesn't work for some reason in Qt >= 5.8
-            Plasmoid.nativeInterface.requestActivateIndex.connect(function (index) {
-                var idx = Math.max(0, Math.min(buttonRepeater.count - 1, index))
-                var button = buttonRepeater.itemAt(index)
+            Plasmoid.nativeInterface.requestActivateIndex.connect(index => {
+                const idx = Math.max(0, Math.min(buttonRepeater.count - 1, index));
+                const button = buttonRepeater.itemAt(index);
                 if (button) {
-                    button.clicked()
+                    button.clicked();
                 }
             });
 
-            Plasmoid.activated.connect(function () {
-                var button = buttonRepeater.itemAt(0);
+            Plasmoid.activated.connect(() => {
+                const button = buttonRepeater.itemAt(0);
                 if (button) {
                     button.clicked();
                 }
@@ -98,7 +98,7 @@ Item {
 
         PlasmaComponents3.ToolButton {
             id: noMenuPlaceholder
-            visible: buttonRepeater.count == 0
+            visible: buttonRepeater.count === 0
             text: Plasmoid.title
             Layout.fillWidth: root.vertical
             Layout.fillHeight: !root.vertical
@@ -121,11 +121,9 @@ Item {
 
                 visible: text !== "" && model.activeActions.visible
                 onClicked: {
-                    Plasmoid.nativeInterface.trigger(this, index)
+                    Plasmoid.nativeInterface.trigger(this, index);
 
-                    checked = Qt.binding(function() {
-                        return Plasmoid.nativeInterface.currentIndex === index;
-                    });
+                    checked = Qt.binding(() => plasmoid.nativeInterface.currentIndex === index);
                 }
 
                 // QMenu opens on press, so we'll replicate that here
@@ -145,7 +143,7 @@ Item {
         screenGeometry: Plasmoid.screenGeometry
         onRequestActivateIndex: Plasmoid.nativeInterface.requestActivateIndex(index)
         Component.onCompleted: {
-            Plasmoid.nativeInterface.model = appMenuModel
+            Plasmoid.nativeInterface.model = appMenuModel;
         }
     }
 }
