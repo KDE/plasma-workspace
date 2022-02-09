@@ -244,7 +244,7 @@ void FingerprintModel::clearFingerprints()
 QStringList FingerprintModel::enrolledFingerprintsRaw()
 {
     if (deviceFound()) {
-        QDBusPendingReply reply = m_device->listEnrolledFingers(m_username);
+        QDBusPendingReply<QStringList> reply = m_device->listEnrolledFingers(m_username);
         reply.waitForFinished();
         if (reply.isError()) {
             // ignore net.reactivated.Fprint.Error.NoEnrolledPrints, as it shows up when there are no fingerprints
