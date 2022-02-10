@@ -48,6 +48,10 @@ int main(int argc, char **argv)
         if (strcmp("--test", argv[i]) == 0 || strcmp("--help", argv[i]) == 0)
             test = true;
     }
+
+    // read ksplashrc as config file, not ksplashqmlrc
+    QCoreApplication::setApplicationName(QStringLiteral("ksplash"));
+
     // enable to send log output to /tmp/ksplash
     // which is useful for debugging
     //     qInstallMsgHandler(myMessageHandler);
