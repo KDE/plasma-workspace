@@ -18,6 +18,8 @@
 #include <KLocalizedString>
 #include <KSycoca>
 
+#include <set>
+
 #include "debug.h"
 
 K_PLUGIN_CLASS_WITH_JSON(InstallerRunner, "plasma-runner-appstream.json")
@@ -87,6 +89,7 @@ void InstallerRunner::match(Plasma::RunnerContext &context)
         }
     }
 
+    std::set<QString> uniqueIds;
     const auto components = findComponentsByString(context.query()).mid(0, 3);
 
     for (const AppStream::Component &component : components) {
@@ -118,6 +121,10 @@ void InstallerRunner::match(Plasma::RunnerContext &context)
 
         if (!servicesFound.isEmpty())
             continue;
+        const auto [_, inserted] = uniqueIds.insert(componentId);
+        if (!inserted) {
+            continue;
+        }
 
         Plasma::QueryMatch match(this);
         match.setType(Plasma::QueryMatch::PossibleMatch);
