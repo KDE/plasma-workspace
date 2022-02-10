@@ -161,7 +161,7 @@ void DesktopProtocol::prepareUDSEntry(KIO::UDSEntry &entry, bool listing) const
         if (!name.isEmpty())
             entry.replace(KIO::UDSEntry::UDS_DISPLAY_NAME, name);
 
-        if (file.noDisplay() || !file.tryExec())
+        if (!file.tryExec())
             entry.replace(KIO::UDSEntry::UDS_HIDDEN, 1);
     }
 
