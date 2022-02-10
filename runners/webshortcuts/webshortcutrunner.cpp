@@ -8,6 +8,7 @@
 
 #include <KApplicationTrader>
 #include <KIO/CommandLauncherJob>
+#include <KIO/OpenUrlJob>
 #include <KLocalizedString>
 #include <KSharedConfig>
 #include <KShell>
@@ -15,7 +16,6 @@
 #include <KUriFilter>
 #include <QAction>
 #include <QDBusConnection>
-#include <QDesktopServices>
 
 WebshortcutRunner::WebshortcutRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
     : Plasma::AbstractRunner(parent, metaData, args)
@@ -177,7 +177,8 @@ void WebshortcutRunner::run(const Plasma::RunnerContext &context, const Plasma::
             auto *job = new KIO::CommandLauncherJob(command);
             job->start();
         } else {
-            QDesktopServices::openUrl(location);
+            auto job = new KIO::OpenUrlJob(location);
+            job->start();
         }
     }
 }

@@ -9,13 +9,13 @@
 #include "browsers/browser.h"
 
 #include <QDebug>
-#include <QDesktopServices>
 #include <QDir>
 #include <QList>
 #include <QStack>
 #include <QUrl>
 
 #include <KApplicationTrader>
+#include <KIO/OpenUrlJob>
 #include <KLocalizedString>
 #include <KSharedConfig>
 
@@ -108,7 +108,8 @@ void BookmarksRunner::run(const Plasma::RunnerContext &context, const Plasma::Qu
         url.setScheme(QStringLiteral("http"));
     }
 
-    QDesktopServices::openUrl(url);
+    auto job = new KIO::OpenUrlJob(url);
+    job->start();
 }
 
 #include "bookmarksrunner.moc"

@@ -29,6 +29,7 @@ add_library(krunner_bookmarks_common STATIC ${krunner_bookmarks_common_SRCS})
 target_link_libraries(krunner_bookmarks_common
     Qt::Sql
     KF5::KIOCore
+    KF5::KIOGui
     KF5::I18n
     KF5::Runner
     KF5::Bookmarks
