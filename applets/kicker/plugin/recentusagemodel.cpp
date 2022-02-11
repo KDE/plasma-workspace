@@ -375,7 +375,7 @@ bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant 
 
         // prevents using a service file that does not support opening a mime type for a file it created
         // for instance a screenshot tool
-        if (!mimeType.isEmpty()) {
+        if (!mimeType.simplified().isEmpty()) {
             if (!service->hasMimeType(mimeType)) {
                 // needs to find the application that supports this mimetype
                 service = KApplicationTrader::preferredService(mimeType);
