@@ -86,8 +86,13 @@ void ScreenPoolModel::load()
     qDeleteAll(m_containments);
     m_containments.clear();
 
+    QSet<int> unknownScreenIds;
+    for (auto *cont : m_corona->containments()) {
+        unknownScreenIds.insert(cont->lastScreen());
+    }
     for (auto &knownId : m_corona->screenPool()->knownIds()) {
         Data d;
+        unknownScreenIds.remove(knownId);
         d.id = knownId;
         d.name = m_corona->screenPool()->connector(knownId);
         d.primary = knownId == 0;
@@ -111,6 +116,23 @@ void ScreenPoolModel::load()
         } else {
             delete conts;
         }
+    }
+
+    QList sortedIds = unknownScreenIds.values();
+    std::sort(sortedIds.begin(), sortedIds.end());
+    int i = 1;
+    for (int id : sortedIds) {
+        Data d;
+        d.id = id;
+        d.name = i18n("Unknown %1", i);
+        d.primary = id == 0;
+        d.enabled = false;
+
+        auto *conts = new ShellContainmentModel(m_corona, id, this);
+        conts->load();
+        m_containments.push_back(conts);
+        m_screens.push_back(d);
+        i++;
     }
     endResetModel();
 }

@@ -240,18 +240,11 @@ void ShellCorona::init()
         setEditMode(false);
     });
     auto updateManageContainmentsVisiblility = [this, manageContainmentsAction]() {
-        const auto screenIds = m_screenPool->knownIds();
-        if (screenIds.count() < 2) {
-            manageContainmentsAction->setVisible(false);
-            return;
+        QSet<int> allScreenIds;
+        for (auto *cont : containments()) {
+            allScreenIds.insert(cont->lastScreen());
         }
-        int populatedScreens = 0;
-        for (auto id : screenIds) {
-            if (containmentForScreen(id, m_activityController->currentActivity(), QString())) {
-                populatedScreens++;
-            }
-        }
-        manageContainmentsAction->setVisible(populatedScreens > 1);
+        manageContainmentsAction->setVisible(allScreenIds.count() > 1);
     };
     connect(this, &ShellCorona::containmentAdded, this, updateManageContainmentsVisiblility);
     connect(this, &ShellCorona::screenRemoved, this, updateManageContainmentsVisiblility);
