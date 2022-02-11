@@ -8,7 +8,7 @@
 
 #include <QDebug>
 
-#include <KIO/OpenUrlJob>
+#include <KIO/ApplicationLauncherJob>
 #include <Plasma/PluginLoader>
 
 AppLauncher::AppLauncher(QObject *parent, const QVariantList &args)
@@ -49,7 +49,7 @@ void AppLauncher::makeMenu(QMenu *menu, const KServiceGroup::Ptr group)
             QAction *action = new QAction(QIcon::fromTheme(service->icon()), text, this);
             connect(action, &QAction::triggered, [action]() {
                 KService::Ptr service = KService::serviceByStorageId(action->data().toString());
-                auto job = new KIO::OpenUrlJob(QUrl("file://" + service->entryPath()));
+                auto job = new KIO::ApplicationLauncherJob(service);
                 job->start();
             });
             action->setData(service->storageId());
