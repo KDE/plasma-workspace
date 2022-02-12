@@ -32,10 +32,6 @@ public Q_SLOTS:
 protected Q_SLOTS:
     void updateResult(KJob *);
 
-Q_SIGNALS:
-    void resultReady(const QString &);
-    void formattedResultReady(const QString &);
-
 private:
     QString m_lastResult;
     static QAtomicInt s_counter;

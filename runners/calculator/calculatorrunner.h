@@ -37,6 +37,6 @@ private:
     void userFriendlyMultiplication(QString &cmd);
     void userFriendlySubstitutions(QString &cmd);
 
-    QalculateEngine *m_engine;
+    std::unique_ptr<QalculateEngine> m_engine;
     QList<QAction *> m_actions;
 };

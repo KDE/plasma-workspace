@@ -14,6 +14,7 @@
 
 #include <QDebug>
 #include <QIcon>
+#include <QMutex>
 #include <QRegularExpression>
 
 #include <KLocalizedString>
@@ -21,11 +22,11 @@
 
 K_PLUGIN_CLASS_WITH_JSON(CalculatorRunner, "plasma-runner-calculator.json")
 
+static QMutex s_initMutex;
+
 CalculatorRunner::CalculatorRunner(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
     : Plasma::AbstractRunner(parent, metaData, args)
 {
-    m_engine = new QalculateEngine;
-
     setObjectName(QStringLiteral("Calculator"));
 
     QString description = i18n(
@@ -41,7 +42,6 @@ CalculatorRunner::CalculatorRunner(QObject *parent, const KPluginMetaData &metaD
 
 CalculatorRunner::~CalculatorRunner()
 {
-    delete m_engine;
 }
 
 void CalculatorRunner::userFriendlySubstitutions(QString &cmd)
@@ -137,8 +137,14 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
 
 QString CalculatorRunner::calculate(const QString &term, bool *isApproximate)
 {
-    QString result;
+    {
+        QMutexLocker lock(&s_initMutex);
+        if (!m_engine) {
+            m_engine = std::make_unique<QalculateEngine>();
+        }
+    }
 
+    QString result;
     try {
         result = m_engine->evaluate(term, isApproximate);
     } catch (std::exception &e) {
