@@ -239,6 +239,7 @@ KCM.GridViewKCM {
                     title: i18n("Choose custom accent color")
                     // User must either choose a colour or cancel the operation before doing something else
                     modality: Qt.ApplicationModal
+                    color: kcm.accentColor
                     onAccepted: {
                         kcm.accentColor = colorDialog.color
                     }
