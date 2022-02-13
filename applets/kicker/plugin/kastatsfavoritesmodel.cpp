@@ -79,7 +79,7 @@ public:
             }
 
             if (!entry || !entry->isValid()) {
-                qWarning() << "Entry is not valid" << id << entry;
+                qCWarning(KICKER_DEBUG) << "Entry is not valid" << id << entry;
                 m_id = id;
                 return;
             }
@@ -498,14 +498,14 @@ void KAStatsFavoritesModel::setEnabled(bool enable)
 
 QStringList KAStatsFavoritesModel::favorites() const
 {
-    qWarning() << "KAStatsFavoritesModel::favorites returns nothing, it is here just to keep the API backwards-compatible";
+    qCWarning(KICKER_DEBUG) << "KAStatsFavoritesModel::favorites returns nothing, it is here just to keep the API backwards-compatible";
     return QStringList();
 }
 
 void KAStatsFavoritesModel::setFavorites(const QStringList &favorites)
 {
     Q_UNUSED(favorites);
-    qWarning() << "KAStatsFavoritesModel::setFavorites is ignored";
+    qCWarning(KICKER_DEBUG) << "KAStatsFavoritesModel::setFavorites is ignored";
 }
 
 bool KAStatsFavoritesModel::isFavorite(const QString &id) const

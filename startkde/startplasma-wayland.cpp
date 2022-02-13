@@ -4,6 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+#include "debug.h"
 #include "startplasma.h"
 #include <KConfig>
 #include <KConfigGroup>
@@ -54,7 +55,7 @@ int main(int argc, char **argv)
             queryAndSet("XKB_DEFAULT_VARIANT", QStringLiteral("X11Variant"));
             queryAndSet("XKB_DEFAULT_OPTIONS", QStringLiteral("X11Options"));
         } else {
-            qWarning() << "not a reply org.freedesktop.locale1" << resultMessage;
+            qCWarning(PLASMA_STARTUP) << "not a reply org.freedesktop.locale1" << resultMessage;
         }
     }
     runEnvironmentScripts();

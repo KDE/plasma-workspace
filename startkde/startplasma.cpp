@@ -90,7 +90,7 @@ void gentleTermination(QProcess *p)
     if (!p->waitForFinished(5000)) {
         p->kill();
         if (!p->waitForFinished(5000)) {
-            qWarning() << "Could not fully finish the process" << p->program();
+            qCWarning(PLASMA_STARTUP) << "Could not fully finish the process" << p->program();
         }
     }
 }
@@ -109,7 +109,7 @@ int runSync(const QString &program, const QStringList &args, const QStringList &
     //     qCDebug(PLASMA_STARTUP) << "started..." << program << args;
     p.waitForFinished(-1);
     if (p.exitCode()) {
-        qWarning() << program << args << "exited with code" << p.exitCode();
+        qCWarning(PLASMA_STARTUP) << program << args << "exited with code" << p.exitCode();
     }
     return p.exitCode();
 }
@@ -470,7 +470,7 @@ static void dropSessionVarsFromSystemdEnvironment()
     msg << varsToDrop;
     auto reply = QDBusConnection::sessionBus().call(msg);
     if (reply.type() == QDBusMessage::ErrorMessage) {
-        qWarning() << "Failed to unset systemd environment variables:" << reply.errorName() << reply.errorMessage();
+        qCWarning(PLASMA_STARTUP) << "Failed to unset systemd environment variables:" << reply.errorName() << reply.errorMessage();
     }
 }
 
@@ -703,7 +703,7 @@ bool startPlasmaSession(bool wayland)
         msg << QStringLiteral("plasma-workspace-%1.target").arg(platform) << QStringLiteral("fail");
         QDBusReply<QDBusObjectPath> reply = QDBusConnection::sessionBus().call(msg);
         if (!reply.isValid()) {
-            qWarning() << "Could not start systemd managed Plasma session:" << reply.error().name() << reply.error().message();
+            qCWarning(PLASMA_STARTUP) << "Could not start systemd managed Plasma session:" << reply.error().name() << reply.error().message();
             messageBox(QStringLiteral("startkde: Could not start Plasma session.\n"));
             rc = false;
         } else {

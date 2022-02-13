@@ -248,7 +248,7 @@ void PlaceholderModel::connectSignals()
 
     connect(sourceModelPtr, &QAbstractItemModel::rowsAboutToBeInserted, this, [this](const QModelIndex &parent, int from, int to) {
         if (parent.isValid()) {
-            qWarning() << "We do not support tree models";
+            qCWarning(KICKER_DEBUG) << "We do not support tree models";
 
         } else {
             beginInsertRows(QModelIndex(), sourceRowToRow(from), sourceRowToRow(to));
@@ -265,7 +265,7 @@ void PlaceholderModel::connectSignals()
             this,
             [this](const QModelIndex &source, int from, int to, const QModelIndex &dest, int destRow) {
                 if (source.isValid() || dest.isValid()) {
-                    qWarning() << "We do not support tree models";
+                    qCWarning(KICKER_DEBUG) << "We do not support tree models";
 
                 } else {
                     beginMoveRows(QModelIndex(), sourceRowToRow(from), sourceRowToRow(to), QModelIndex(), sourceRowToRow(destRow));
@@ -278,7 +278,7 @@ void PlaceholderModel::connectSignals()
 
     connect(sourceModelPtr, &QAbstractItemModel::rowsAboutToBeRemoved, this, [this](const QModelIndex &parent, int from, int to) {
         if (parent.isValid()) {
-            qWarning() << "We do not support tree models";
+            qCWarning(KICKER_DEBUG) << "We do not support tree models";
 
         } else {
             beginRemoveRows(QModelIndex(), sourceRowToRow(from), sourceRowToRow(to));

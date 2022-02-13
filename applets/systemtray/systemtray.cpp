@@ -335,7 +335,7 @@ void SystemTray::startApplet(const QString &pluginId)
         // this should never happen unless explicitly wrong config is hand-written or
         //(more likely) a previously added applet is uninstalled
         if (!applet) {
-            qWarning() << "Unable to find applet" << pluginId;
+            qCWarning(SYSTEM_TRAY) << "Unable to find applet" << pluginId;
             return;
         }
         applet->setProperty("org.kde.plasma:force-create", true);

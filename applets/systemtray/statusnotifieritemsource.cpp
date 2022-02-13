@@ -10,6 +10,8 @@
 #include "statusnotifieritemservice.h"
 #include "systemtraytypes.h"
 
+#include "debug.h"
+
 #include <KIconEngine>
 #include <KIconLoader>
 #include <QApplication>
@@ -63,7 +65,7 @@ StatusNotifierItemSource::StatusNotifierItemSource(const QString &notifierItemId
 
     int slash = notifierItemId.indexOf('/');
     if (slash == -1) {
-        qWarning() << "Invalid notifierItemId:" << notifierItemId;
+        qCWarning(SYSTEM_TRAY) << "Invalid notifierItemId:" << notifierItemId;
         m_valid = false;
         m_statusNotifierItemInterface = nullptr;
         return;
@@ -382,7 +384,7 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
                     // This is a hack to make it possible to disable DBusMenu in an
                     // application. The string "/NO_DBUSMENU" must be the same as in
                     // KStatusNotifierItem::setContextMenu().
-                    qWarning() << "DBusMenu disabled for this application";
+                    qCWarning(SYSTEM_TRAY) << "DBusMenu disabled for this application";
                 } else {
                     m_menuImporter = new PlasmaDBusMenuImporter(m_statusNotifierItemInterface->service(), menuObjectPath, iconLoader(), this);
                     connect(m_menuImporter, &PlasmaDBusMenuImporter::menuUpdated, this, [this](QMenu *menu) {
@@ -535,7 +537,7 @@ void StatusNotifierItemSource::contextMenu(int x, int y)
     if (m_menuImporter) {
         m_menuImporter->updateMenu();
     } else {
-        qWarning() << "Could not find DBusMenu interface, falling back to calling ContextMenu()";
+        qCWarning(SYSTEM_TRAY) << "Could not find DBusMenu interface, falling back to calling ContextMenu()";
         if (m_statusNotifierItemInterface && m_statusNotifierItemInterface->isValid()) {
             m_statusNotifierItemInterface->call(QDBus::NoBlock, QStringLiteral("ContextMenu"), x, y);
         }
