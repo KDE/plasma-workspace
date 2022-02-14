@@ -12,6 +12,7 @@
 #include <QObject>
 #include <QSharedPointer>
 #include <QSize>
+#include <optional>
 
 #include <pipewire/pipewire.h>
 #include <spa/param/format-utils.h>
@@ -36,6 +37,11 @@ struct DmaBufPlane {
     uint64_t modifier = 0; /// The layout modifier
 };
 
+struct Fraction {
+    const quint32 numerator;
+    const quint32 denominator;
+};
+
 class PipeWireSourceStream : public QObject
 {
     Q_OBJECT
@@ -46,7 +52,7 @@ public:
     static void onStreamParamChanged(void *data, uint32_t id, const struct spa_pod *format);
     static void onStreamStateChanged(void *data, pw_stream_state old, pw_stream_state state, const char *error_message);
 
-    uint framerate();
+    Fraction framerate() const;
     uint nodeId();
     QString error() const
     {
@@ -58,18 +64,22 @@ public:
         return QSize(videoFormat.size.width, videoFormat.size.height);
     }
     bool createStream(uint nodeid);
-    void stop();
     void setActive(bool active);
 
     void handleFrame(struct pw_buffer *buffer);
     void process();
 
     bool setAllowDmaBuf(bool allowed);
+    std::optional<std::chrono::nanoseconds> currentPresentationTimestamp() const
+    {
+        return m_currentPresentationTimestamp;
+    }
 
 Q_SIGNALS:
     void streamReady();
     void startStreaming();
     void stopStreaming();
+    void streamParametersChanged();
     void dmabufTextureReceived(const QVector<DmaBufPlane> &planes, uint32_t format);
     void imageTextureReceived(const QImage &image);
 
@@ -82,10 +92,13 @@ private:
     pw_stream_events pwStreamEvents = {};
 
     uint32_t pwNodeId = 0;
+    std::optional<std::chrono::nanoseconds> m_currentPresentationTimestamp;
 
-    bool m_stopped = false;
+    QAtomicInt m_stopped = false;
 
     spa_video_info_raw videoFormat;
     QString m_error;
     bool m_allowDmaBuf = true;
 };
+
+Q_DECLARE_METATYPE(QVector<DmaBufPlane>);

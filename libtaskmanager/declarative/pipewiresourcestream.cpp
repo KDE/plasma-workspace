@@ -191,22 +191,33 @@ void PipeWireSourceStream::onStreamParamChanged(void *data, uint32_t id, const s
         ? (1 << SPA_DATA_DmaBuf) | (1 << SPA_DATA_MemFd) | (1 << SPA_DATA_MemPtr)
         : (1 << SPA_DATA_MemFd) | (1 << SPA_DATA_MemPtr);
 
-    const spa_pod *param = (spa_pod *)spa_pod_builder_add_object(&pod_builder,
-                                                                 SPA_TYPE_OBJECT_ParamBuffers,
-                                                                 SPA_PARAM_Buffers,
-                                                                 SPA_PARAM_BUFFERS_buffers,
-                                                                 SPA_POD_CHOICE_RANGE_Int(16, 2, 16),
-                                                                 SPA_PARAM_BUFFERS_blocks,
-                                                                 SPA_POD_Int(1),
-                                                                 SPA_PARAM_BUFFERS_size,
-                                                                 SPA_POD_Int(size),
-                                                                 SPA_PARAM_BUFFERS_stride,
-                                                                 SPA_POD_CHOICE_RANGE_Int(stride, stride, INT32_MAX),
-                                                                 SPA_PARAM_BUFFERS_align,
-                                                                 SPA_POD_Int(16),
-                                                                 SPA_PARAM_BUFFERS_dataType,
-                                                                 SPA_POD_CHOICE_FLAGS_Int(bufferTypes));
-    pw_stream_update_params(pw->pwStream, &param, 1);
+    QVarLengthArray<const spa_pod *> params = {
+        (spa_pod *)spa_pod_builder_add_object(&pod_builder,
+                                              SPA_TYPE_OBJECT_ParamBuffers,
+                                              SPA_PARAM_Buffers,
+                                              SPA_PARAM_BUFFERS_buffers,
+                                              SPA_POD_CHOICE_RANGE_Int(16, 2, 16),
+                                              SPA_PARAM_BUFFERS_blocks,
+                                              SPA_POD_Int(1),
+                                              SPA_PARAM_BUFFERS_size,
+                                              SPA_POD_Int(size),
+                                              SPA_PARAM_BUFFERS_stride,
+                                              SPA_POD_CHOICE_RANGE_Int(stride, stride, INT32_MAX),
+                                              SPA_PARAM_BUFFERS_align,
+                                              SPA_POD_Int(16),
+                                              SPA_PARAM_BUFFERS_dataType,
+                                              SPA_POD_CHOICE_FLAGS_Int(bufferTypes)),
+        (spa_pod *)spa_pod_builder_add_object(&pod_builder,
+                                              SPA_TYPE_OBJECT_ParamMeta,
+                                              SPA_PARAM_Meta,
+                                              SPA_PARAM_META_type,
+                                              SPA_POD_Id(SPA_META_Header),
+                                              SPA_PARAM_META_size,
+                                              SPA_POD_Int(sizeof(struct spa_meta_header))),
+
+    };
+    pw_stream_update_params(pw->pwStream, params.data(), params.count());
+    Q_EMIT pw->streamParametersChanged();
 }
 
 static void onProcess(void *data)
@@ -218,6 +229,8 @@ static void onProcess(void *data)
 PipeWireSourceStream::PipeWireSourceStream(QObject *parent)
     : QObject(parent)
 {
+    qRegisterMetaType<QVector<DmaBufPlane>>();
+
     pwStreamEvents.version = PW_VERSION_STREAM_EVENTS;
     pwStreamEvents.process = &onProcess;
     pwStreamEvents.state_changed = &PipeWireSourceStream::onStreamStateChanged;
@@ -232,13 +245,13 @@ PipeWireSourceStream::~PipeWireSourceStream()
     }
 }
 
-uint PipeWireSourceStream::framerate()
+Fraction PipeWireSourceStream::framerate() const
 {
     if (pwStream) {
-        return videoFormat.max_framerate.num / videoFormat.max_framerate.denom;
+        return {videoFormat.max_framerate.num, videoFormat.max_framerate.denom};
     }
 
-    return 0;
+    return {0, 1};
 }
 
 uint PipeWireSourceStream::nodeId()
@@ -293,6 +306,13 @@ void PipeWireSourceStream::handleFrame(struct pw_buffer *buffer)
 
     if (spaBuffer->datas->chunk->size == 0) {
         return;
+    }
+
+    struct spa_meta_header *h = (struct spa_meta_header *)spa_buffer_find_meta_data(spaBuffer, SPA_META_Header, sizeof(*h));
+    if (h && h->pts) {
+        m_currentPresentationTimestamp = std::chrono::nanoseconds(h->pts);
+    } else {
+        m_currentPresentationTimestamp = {};
     }
 
     if (spaBuffer->datas->type == SPA_DATA_MemFd) {
@@ -354,14 +374,6 @@ void PipeWireSourceStream::process()
     handleFrame(buf);
 
     pw_stream_queue_buffer(pwStream, buf);
-}
-
-void PipeWireSourceStream::stop()
-{
-    if (!m_stopped)
-        pw_stream_set_active(pwStream, false);
-    m_stopped = true;
-    delete this;
 }
 
 void PipeWireSourceStream::setActive(bool active)

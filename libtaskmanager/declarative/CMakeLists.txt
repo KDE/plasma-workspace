@@ -8,6 +8,13 @@ install(TARGETS taskmanagerplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/task
 install(FILES qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/taskmanager)
 
 if(TARGET PkgConfig::PipeWire)
+    pkg_check_modules(AVCodec IMPORTED_TARGET libavcodec)
+    pkg_check_modules(AVUtil IMPORTED_TARGET libavutil)
+    pkg_check_modules(AVFormat IMPORTED_TARGET libavformat)
+    pkg_check_modules(GBM IMPORTED_TARGET gbm)
+    pkg_check_modules(SWScale IMPORTED_TARGET libswscale)
+    find_package(epoxy 1.3 REQUIRED)
+
     ecm_qt_declare_logging_category(SRCS
                                 HEADER logging.h
                                 IDENTIFIER PIPEWIRE_LOGGING
@@ -27,9 +34,11 @@ if(TARGET PkgConfig::PipeWire)
     target_include_directories(taskmanagerplugin PRIVATE ${Libdrm_INCLUDE_DIR})
 
     target_compile_definitions(taskmanagerplugin PRIVATE -DWITH_PIPEWIRE)
-    target_sources(taskmanagerplugin PUBLIC pipewirecore.cpp pipewiresourceitem.cpp pipewiresourcestream.cpp screencasting.cpp screencastingrequest.cpp ${SRCS})
+    target_sources(taskmanagerplugin PUBLIC pipewirecore.cpp pipewiresourceitem.cpp pipewiresourcestream.cpp pipewirerecord.cpp screencasting.cpp screencastingrequest.cpp ${SRCS})
     target_link_libraries(taskmanagerplugin PkgConfig::PipeWire
+                                            PkgConfig::AVCodec PkgConfig::AVUtil PkgConfig::AVFormat PkgConfig::GBM PkgConfig::SWScale epoxy::epoxy # PipeWireRecord
                                             Qt::Qml Qt5::Gui_EGL Qt::GuiPrivate
+
                                             KF5::I18n
                                             KF5::WaylandClient
                                             Wayland::Client)

@@ -12,6 +12,7 @@
 #include "virtualdesktopinfo.h"
 
 #ifdef WITH_PIPEWIRE
+#include "pipewirerecord.h"
 #include "pipewiresourceitem.h"
 #include "screencasting.h"
 #include "screencastingrequest.h"
@@ -35,6 +36,7 @@ void TaskManagerPlugin::registerTypes(const char *uri)
     qmlRegisterType<VirtualDesktopInfo>(uri, 0, 1, "VirtualDesktopInfo");
 #ifdef WITH_PIPEWIRE
     qmlRegisterType<PipeWireSourceItem>(uri, 0, 1, "PipeWireSourceItem");
+    qmlRegisterType<PipeWireRecord>(uri, 0, 1, "PipeWireRecord");
     qmlRegisterType<ScreencastingRequest>(uri, 0, 1, "ScreencastingRequest");
     qmlRegisterUncreatableType<Screencasting>(uri, 0, 1, "Screencasting", "Use ScreencastingItem");
 #endif

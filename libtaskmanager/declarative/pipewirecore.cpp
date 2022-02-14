@@ -9,6 +9,7 @@
 #include "logging.h"
 #include <KLocalizedString>
 #include <QSocketNotifier>
+#include <QThreadStorage>
 #include <spa/utils/result.h>
 
 PipeWireCore::PipeWireCore()
@@ -86,14 +87,14 @@ bool PipeWireCore::init()
 
 QSharedPointer<PipeWireCore> PipeWireCore::self()
 {
-    static QWeakPointer<PipeWireCore> global;
+    static QThreadStorage<QWeakPointer<PipeWireCore>> global;
     QSharedPointer<PipeWireCore> ret;
-    if (global) {
-        ret = global.toStrongRef();
+    if (global.localData()) {
+        ret = global.localData().toStrongRef();
     } else {
         ret.reset(new PipeWireCore);
         if (ret->init()) {
-            global = ret;
+            global.setLocalData(ret);
         }
     }
     return ret;
