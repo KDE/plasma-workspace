@@ -25,8 +25,8 @@ PlasmaExtras.Representation {
     readonly property int dndMorningHour: 6
     readonly property int dndEveningHour: 20
 
-    implicitWidth: PlasmaCore.Units.gridUnit * 16
-    implicitHeight: PlasmaCore.Units.gridUnit * 16
+    implicitWidth: PlasmaCore.Units.gridUnit * 18
+    implicitHeight: PlasmaCore.Units.gridUnit * 24
 
     Layout.fillHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical
 
