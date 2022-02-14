@@ -1,0 +1,6 @@
+@PACKAGE_INIT@
+
+include(CMakeFindDependencyMacro)
+find_dependency(Qt5Core "@QT_MIN_VERSION@")
+
+include("${CMAKE_CURRENT_LIST_DIR}/LibJumpListLibraryTargets.cmake")
