@@ -58,6 +58,9 @@ AbstractItem {
             });
             taskIcon.activated()
             break;
+        case Qt.RightButton:
+            openContextMenu(pos);
+            break;
         case Qt.MiddleButton:
             var operation = service.operationDescription("SecondaryActivate");
             operation.x = pos.x;
