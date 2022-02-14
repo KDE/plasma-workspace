@@ -61,6 +61,9 @@ AbstractItem {
         case Qt.LeftButton:
             taskIcon.activated(pos)
             break;
+        case Qt.RightButton:
+            openContextMenu(pos);
+            break;
         case Qt.MiddleButton:
             var operation = service.operationDescription("SecondaryActivate");
             let service = model.Service;
