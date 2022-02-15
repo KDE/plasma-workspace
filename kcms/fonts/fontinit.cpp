@@ -19,11 +19,12 @@ Q_DECL_EXPORT void kcminit()
 
     QString fontDpiKey = KWindowSystem::isPlatformWayland() ? QStringLiteral("forceFontDPIWayland") : QStringLiteral("forceFontDPI");
 
-    if (!fontsCfg.hasKey(fontDpiKey)) {
+    const int dpi = fontsCfg.readEntry(fontDpiKey, 0);
+    if (dpi <= 0) {
         return;
     }
 
-    const QByteArray input = "Xft.dpi: " + QByteArray::number(fontsCfg.readEntry(fontDpiKey, 0));
+    const QByteArray input = "Xft.dpi: " + QByteArray::number(dpi);
     QProcess p;
     p.start(QStringLiteral("xrdb"), {QStringLiteral("-quiet"), QStringLiteral("-merge"), QStringLiteral("-nocpp")});
     p.setProcessChannelMode(QProcess::ForwardedChannels);
