@@ -41,7 +41,7 @@ AbstractItem {
         if (mouseArea) {
             mouseArea.clicked(mouse)
         } else if (mouse.button === Qt.LeftButton) {//falback
-            plasmoidContainer.activated()
+            plasmoidContainer.activated(null)
         }
     }
     onContextMenu: if (applet) {
