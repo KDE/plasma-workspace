@@ -310,8 +310,7 @@ KCM.GridViewKCM {
                 id: windowTitleBar
                 width: parent.width
                 height: Math.round(Kirigami.Units.gridUnit * 1.5)
-
-                color: model.activeTitleBarBackground
+                color: (model.accentActiveTitlebar && root.accentColor) ? kcm.accentBackground(root.accentColor, model.palette.window) : model.activeTitleBarBackground
 
                 QtControls.Label {
                     anchors {
@@ -321,7 +320,7 @@ KCM.GridViewKCM {
                     }
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
-                    color: model.activeTitleBarForeground
+                    color: (model.accentActiveTitlebar && root.accentColor) ? kcm.accentForeground(kcm.accentBackground(root.accentColor, model.palette.window), true) : model.activeTitleBarForeground
                     text: i18n("Window Title")
                     elide: Text.ElideRight
                 }
@@ -377,8 +376,8 @@ KCM.GridViewKCM {
                     // alternative base color we set here.
                     Kirigami.Theme.inherit: false
                     Kirigami.Theme.backgroundColor: model.palette.base
-                    Kirigami.Theme.highlightColor: root.accentColor != undefined ? kcm.accentBackground(root.accentColor, model.palette.base) : model.palette.highlight
-                    Kirigami.Theme.highlightedTextColor: model.palette.highlightedText
+                    Kirigami.Theme.highlightColor: root.accentColor ? kcm.accentBackground(root.accentColor, model.palette.base) : model.palette.highlight
+                    Kirigami.Theme.highlightedTextColor: root.accentColor ? kcm.accentForeground(kcm.accentBackground(root.accentColor, model.palette.base), true) : model.palette.highlightedText
                     Kirigami.Theme.linkColor: root.accentColor || model.palette.link
                     Kirigami.Theme.textColor: model.palette.text
                     Column {

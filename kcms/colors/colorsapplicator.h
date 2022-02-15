@@ -57,6 +57,25 @@ inline QColor accentBackground(const QColor& accent, const QColor& background)
     return alphaBlend(c, background);
 }
 
+inline QColor accentForeground(const QColor& accent, const bool& isActive)
+{
+    auto c = QColor(Qt::white);
+    // light bg
+    if (KColorUtils::luma(accent) > 0.5) {
+        c = QColor(Qt::black);
+    } else {
+    // dark bg
+        c = QColor(Qt::white);
+    }
+
+    if (isActive) {
+        c.setAlphaF(1.0);
+    } else {
+        c.setAlphaF(0.6);
+    }
+    return alphaBlend(c, accent);
+}
+
 /**
  * Performs the task of actually applying a color scheme to the current session, based on
  * color scheme file path and configuration file.

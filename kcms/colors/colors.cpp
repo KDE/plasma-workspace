@@ -386,6 +386,11 @@ QColor KCMColors::accentBackground(const QColor& accent, const QColor& backgroun
     return ::accentBackground(accent, background);
 }
 
+QColor KCMColors::accentForeground(const QColor& accent, const bool& isActive)
+{
+    return ::accentForeground(accent, isActive);
+}
+
 void KCMColors::processPendingDeletions()
 {
     const QStringList pendingDeletions = m_model->pendingDeletions();

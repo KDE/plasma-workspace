@@ -72,6 +72,7 @@ public:
     Q_INVOKABLE void editScheme(const QString &schemeName, QQuickItem *ctx);
 
     Q_INVOKABLE QColor accentBackground(const QColor& accent, const QColor& background);
+    Q_INVOKABLE QColor accentForeground(const QColor& accent, const bool& isActive);
 
 public Q_SLOTS:
     void load() override;
