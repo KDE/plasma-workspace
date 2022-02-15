@@ -6,6 +6,8 @@
 #include "Viewer.h"
 #include "KfiConstants.h"
 #include "config-workspace.h"
+#include "kfontview_debug.h"
+
 #include <KAboutData>
 #include <KActionCollection>
 #include <KConfigGroup>
@@ -29,7 +31,7 @@ CViewer::CViewer()
     const auto result = KPluginFactory::instantiatePlugin<KParts::ReadOnlyPart>(KPluginMetaData(QStringLiteral("kf5/parts/kfontviewpart")), this);
 
     if (!result) {
-        qWarning() << "Error loading kfontviewpart:" << result.errorString;
+        qCWarning(KFONTVIEW_DEBUG) << "Error loading kfontviewpart:" << result.errorString;
         exit(1);
     }
 

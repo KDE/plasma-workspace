@@ -6,6 +6,7 @@
 
 #include <config-plasma.h>
 
+#include "debug.h"
 #include "panelconfigview.h"
 #include "panelshadows_p.h"
 #include "panelview.h"
@@ -88,7 +89,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     connect(this, &PanelView::containmentChanged, this, &PanelView::refreshContainment);
 
     if (!m_corona->kPackage().isValid()) {
-        qWarning() << "Invalid home screen package";
+        qCWarning(PLASMASHELL) << "Invalid home screen package";
     }
 
     m_strutsTimer.setSingleShot(true);

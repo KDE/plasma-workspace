@@ -144,7 +144,7 @@ void URLGrabber::checkNewData(HistoryItemConstPtr item)
 void URLGrabber::actionMenu(HistoryItemConstPtr item, bool automatically_invoked)
 {
     if (!item) {
-        qWarning("Attempt to invoke URLGrabber without an item");
+        qCWarning(KLIPPER_LOG, "Attempt to invoke URLGrabber without an item");
         return;
     }
     QString text(item->text());

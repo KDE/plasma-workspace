@@ -68,6 +68,13 @@ endif()
 write_basic_config_version_file(${CMAKE_CURRENT_BINARY_DIR}/LibKWorkspaceConfigVersion.cmake VERSION
                                      "${PROJECT_VERSION}" COMPATIBILITY AnyNewerVersion)
 
+
+ecm_qt_declare_logging_category(kworkspace
+    HEADER libkworkspace_debug.h
+    IDENTIFIER LIBKWORKSPACE_DEBUG
+    CATEGORY_NAME org.kde.plasma.libkworkspace
+)
+
 install(TARGETS kworkspace EXPORT libkworkspaceLibraryTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 
 install( FILES kdisplaymanager.h

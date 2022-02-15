@@ -24,4 +24,9 @@ target_link_libraries(plasma_applet_notifications
                       KF5::Notifications # for KNotificationJobUiDelegate
                       )
 
+ecm_qt_declare_logging_category(plasma_applet_notifications
+    HEADER notifications_debug.h
+    IDENTIFIER PLASMA_APPLET_NOTIFICATIONS_DEBUG
+    CATEGORY_NAME org.kde.plasma.notifications)
+
 plasma_install_package(package org.kde.plasma.notifications)

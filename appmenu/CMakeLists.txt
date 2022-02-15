@@ -34,6 +34,11 @@ if (HAVE_X11)
     target_link_libraries(appmenu Qt::X11Extras XCB::XCB)
 endif()
 
+ecm_qt_declare_logging_category(appmenu
+    HEADER appmenu_debug.h
+    IDENTIFIER APPMENU_DEBUG
+    CATEGORY_NAME org.kde.plasma.appmenu)
+
 ########### install files ###############
 
 install( FILES com.canonical.AppMenu.Registrar.xml DESTINATION ${KDE_INSTALL_DBUSINTERFACEDIR} )

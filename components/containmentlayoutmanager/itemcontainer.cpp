@@ -6,6 +6,7 @@
 
 #include "itemcontainer.h"
 #include "configoverlay.h"
+#include "containmentlayoutmanager_debug.h"
 
 #include <QGuiApplication>
 #include <QQmlContext>
@@ -294,7 +295,7 @@ void ItemContainer::setConfigOverlayVisible(bool visible)
         m_configOverlay = qobject_cast<ConfigOverlay *>(instance);
 
         if (!m_configOverlay) {
-            qWarning() << "Error: Applet configOverlay not of ConfigOverlay type";
+            qCWarning(CONTAINMENTLAYOUTMANAGER_DEBUG) << "Error: Applet configOverlay not of ConfigOverlay type";
             if (instance) {
                 instance->deleteLater();
             }

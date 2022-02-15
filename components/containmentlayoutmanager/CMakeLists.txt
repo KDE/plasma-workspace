@@ -21,6 +21,12 @@ target_link_libraries(containmentlayoutmanagerplugin
             KF5::Plasma KF5::PlasmaQuick
     )
 
+ecm_qt_declare_logging_category(containmentlayoutmanagerplugin
+    HEADER containmentlayoutmanager_debug.h
+    IDENTIFIER CONTAINMENTLAYOUTMANAGER_DEBUG
+    CATEGORY_NAME org.kde.plasma.containmentlayoutmanager
+)
+
 install(TARGETS containmentlayoutmanagerplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/containmentlayoutmanager)
 
 install(DIRECTORY qml/ DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/containmentlayoutmanager)

@@ -5,6 +5,7 @@
 */
 
 #include "fileinfo.h"
+#include "notifications_debug.h"
 
 #include <QAction>
 #include <QMimeDatabase>
@@ -116,7 +117,7 @@ void FileInfo::reload()
     connect(m_job, &KIO::MimeTypeFinderJob::result, this, [this, url] {
         setError(m_job->error());
         if (m_job->error()) {
-            qWarning() << "Failed to determine mime type for" << url << m_job->errorString();
+            qCWarning(PLASMA_APPLET_NOTIFICATIONS_DEBUG) << "Failed to determine mime type for" << url << m_job->errorString();
         } else {
             mimeTypeFound(m_job->mimeType());
         }

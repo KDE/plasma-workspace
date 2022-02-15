@@ -5,6 +5,7 @@
 */
 
 #include "osd.h"
+#include "debug.h"
 #include "shellcorona.h"
 
 #include <QDBusConnection>
@@ -171,7 +172,7 @@ bool Osd::init()
     m_osdObject->setSource(m_osdUrl);
 
     if (m_osdObject->status() != QQmlComponent::Ready) {
-        qWarning() << "Failed to load OSD QML file" << m_osdUrl;
+        qCWarning(PLASMASHELL) << "Failed to load OSD QML file" << m_osdUrl;
         return false;
     }
 

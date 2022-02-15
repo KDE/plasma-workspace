@@ -11,3 +11,10 @@ target_link_libraries(soliduiserver
     KF5::I18n
     KF5::WidgetsAddons
 )
+
+
+ecm_qt_declare_logging_category(soliduiserver
+    HEADER soliduiserver_debug.h
+    IDENTIFIER SOLIDUISERVER_DEBUG
+    CATEGORY_NAME org.kde.plasma.soliduiserver
+)

@@ -9,6 +9,8 @@
 #include "Utils.h"
 #include "WritingSystems.h"
 #include "fontinstadaptor.h"
+#include "kfontinst_debug.h"
+
 #include <KAuth>
 #include <QDebug>
 #include <QTimer>
@@ -866,7 +868,7 @@ int FontInst::performAction(const QVariantMap &args)
     KAuth::ExecuteJob *j = action.execute();
     j->exec();
     if (j->error()) {
-        qWarning() << "kauth action failed" << j->errorString() << j->errorText();
+        qCWarning(KFONTINST_DEBUG) << "kauth action failed" << j->errorString() << j->errorText();
         // error is a KAuth::ActionReply::Error rest of this code expects KIO error codes which are extended by EStatus
         switch (j->error()) {
         case KAuth::ActionReply::Error::UserCancelledError:

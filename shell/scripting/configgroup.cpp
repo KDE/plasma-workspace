@@ -6,6 +6,8 @@
 */
 
 #include "configgroup.h"
+#include "debug.h"
+
 #include <QDebug>
 #include <QTimer>
 #include <kconfig.h>
@@ -154,7 +156,7 @@ bool ConfigGroup::readConfigFile()
     } else {
         if (!d->config) {
             if (d->file.isEmpty()) {
-                qWarning() << "Could not find KConfig Parent: specify a file or parent to another ConfigGroup";
+                qCWarning(PLASMASHELL) << "Could not find KConfig Parent: specify a file or parent to another ConfigGroup";
                 return false;
             }
 

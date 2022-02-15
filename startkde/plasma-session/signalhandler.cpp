@@ -5,6 +5,8 @@
 */
 
 #include "signalhandler.h"
+#include "debug.h"
+
 #include <QDebug>
 #include <signal.h>
 #include <sys/socket.h>
@@ -15,7 +17,7 @@ int SignalHandler::signalFd[2];
 SignalHandler::SignalHandler()
 {
     if (::socketpair(AF_UNIX, SOCK_STREAM, 0, signalFd)) {
-        qWarning() << "Couldn't create a socketpair";
+        qCWarning(PLASMA_SESSION) << "Couldn't create a socketpair";
         return;
     }
 

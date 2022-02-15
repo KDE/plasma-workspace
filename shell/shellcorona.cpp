@@ -8,6 +8,7 @@
 */
 
 #include "shellcorona.h"
+#include "debug.h"
 #include "strutmanager.h"
 
 #include <config-plasma.h>
@@ -711,7 +712,7 @@ void ShellCorona::load()
                 int screen = containment->lastScreen();
                 if (screen < 0) {
                     screen = 0;
-                    qWarning() << "last screen is < 0 so putting containment on screen " << screen;
+                    qCWarning(PLASMASHELL) << "last screen is < 0 so putting containment on screen " << screen;
                 }
                 insertContainment(containment->activity(), screen, containment);
             }
@@ -859,7 +860,7 @@ void ShellCorona::screenInvariants() const
     }
 
     if (m_desktopViewforId.isEmpty()) {
-        qWarning() << "no screens!!";
+        qCWarning(PLASMASHELL) << "no screens!!";
     }
 }
 #endif
@@ -882,7 +883,7 @@ void ShellCorona::showAlternativesForApplet(Plasma::Applet *applet)
 
     auto dialog = qobject_cast<PlasmaQuick::Dialog *>(qmlObj->rootObject());
     if (!dialog) {
-        qWarning() << "Alternatives UI does not inherit from Dialog";
+        qCWarning(PLASMASHELL) << "Alternatives UI does not inherit from Dialog";
         delete qmlObj;
         return;
     }
@@ -945,13 +946,13 @@ void ShellCorona::loadDefaultLayout()
             WorkspaceScripting::ScriptEngine scriptEngine(this);
 
             connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::printError, this, [](const QString &msg) {
-                qWarning() << msg;
+                qCWarning(PLASMASHELL) << msg;
             });
             connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::print, this, [](const QString &msg) {
                 qDebug() << msg;
             });
             if (!scriptEngine.evaluateScript(code, script)) {
-                qWarning() << "failed to initialize layout properly:" << script;
+                qCWarning(PLASMASHELL) << "failed to initialize layout properly:" << script;
             }
         }
     }
@@ -989,13 +990,13 @@ void ShellCorona::loadDefaultLayout()
         WorkspaceScripting::ScriptEngine scriptEngine(this);
 
         connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::printError, this, [](const QString &msg) {
-            qWarning() << msg;
+            qCWarning(PLASMASHELL) << msg;
         });
         connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::print, this, [](const QString &msg) {
             qDebug() << msg;
         });
         if (!scriptEngine.evaluateScript(code, script)) {
-            qWarning() << "failed to initialize layout properly:" << script;
+            qCWarning(PLASMASHELL) << "failed to initialize layout properly:" << script;
         }
     }
 
@@ -1012,7 +1013,7 @@ void ShellCorona::processUpdateScripts()
     WorkspaceScripting::ScriptEngine scriptEngine(this);
 
     connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::printError, this, [](const QString &msg) {
-        qWarning() << msg;
+        qCWarning(PLASMASHELL) << msg;
     });
     connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::print, this, [](const QString &msg) {
         qDebug() << msg;
@@ -1024,7 +1025,7 @@ void ShellCorona::processUpdateScripts()
             QString code = file.readAll();
             scriptEngine.evaluateScript(code);
         } else {
-            qWarning() << "Unable to open the script file" << script << "for reading";
+            qCWarning(PLASMASHELL) << "Unable to open the script file" << script << "for reading";
         }
     }
 }
@@ -1038,7 +1039,7 @@ QRect ShellCorona::screenGeometry(int id) const
 {
     DesktopView *view = m_desktopViewforId.value(id);
     if (!view) {
-        qWarning() << "requesting unexisting screen" << id;
+        qCWarning(PLASMASHELL) << "requesting unexisting screen" << id;
         QScreen *s = m_primaryWatcher->primaryScreen();
         return s ? s->geometry() : QRect();
     }
@@ -1055,7 +1056,7 @@ QRegion ShellCorona::_availableScreenRegion(int id) const
     DesktopView *view = m_desktopViewforId.value(id);
     if (!view) {
         // each screen should have a view
-        qWarning() << "requesting unexisting screen" << id;
+        qCWarning(PLASMASHELL) << "requesting unexisting screen" << id;
         QScreen *s = m_primaryWatcher->primaryScreen();
         return s ? s->availableGeometry() : QRegion();
     }
@@ -1080,7 +1081,7 @@ QRect ShellCorona::_availableScreenRect(int id) const
     DesktopView *view = m_desktopViewforId.value(id);
     if (!view) {
         // each screen should have a view
-        qWarning() << "requesting unexisting screen" << id;
+        qCWarning(PLASMASHELL) << "requesting unexisting screen" << id;
         QScreen *s = m_primaryWatcher->primaryScreen();
         return s ? s->availableGeometry() : QRect();
     }
@@ -1489,7 +1490,7 @@ void ShellCorona::executeSetupPlasmoidScript(Plasma::Containment *containment, P
     WorkspaceScripting::ScriptEngine scriptEngine(this);
 
     connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::printError, this, [](const QString &msg) {
-        qWarning() << msg;
+        qCWarning(PLASMASHELL) << msg;
     });
     connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::print, this, [](const QString &msg) {
         qDebug() << msg;
@@ -1497,7 +1498,7 @@ void ShellCorona::executeSetupPlasmoidScript(Plasma::Containment *containment, P
 
     QFile file(scriptFile);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        qWarning() << i18n("Unable to load script file: %1", scriptFile);
+        qCWarning(PLASMASHELL) << i18n("Unable to load script file: %1", scriptFile);
         return;
     }
 
@@ -1568,7 +1569,7 @@ QString ShellCorona::evaluateScript(const QString &script)
     QTextStream bufferStream(&buffer, QIODevice::WriteOnly | QIODevice::Text);
 
     connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::printError, this, [&bufferStream](const QString &msg) {
-        qWarning() << msg;
+        qCWarning(PLASMASHELL) << msg;
         bufferStream << msg;
     });
     connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::print, this, [&bufferStream](const QString &msg) {
@@ -1636,7 +1637,7 @@ void ShellCorona::activityAdded(const QString &id)
 {
     // TODO more sanity checks
     if (m_activityContainmentPlugins.contains(id)) {
-        qWarning() << "Activity added twice" << id;
+        qCWarning(PLASMASHELL) << "Activity added twice" << id;
         return;
     }
 
@@ -1879,7 +1880,7 @@ void ShellCorona::addPanel(QAction *action)
         WorkspaceScripting::ScriptEngine scriptEngine(this);
 
         connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::printError, this, [](const QString &msg) {
-            qWarning() << msg;
+            qCWarning(PLASMASHELL) << msg;
         });
         connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::print, this, [](const QString &msg) {
             qDebug() << msg;
@@ -1954,7 +1955,7 @@ void ShellCorona::swapDesktopScreens(int oldScreen, int newScreen)
 void ShellCorona::setScreenForContainment(Plasma::Containment *containment, int newScreenId)
 {
     if (newScreenId < 0 || !m_screenPool->knownIds().contains(newScreenId)) {
-        qWarning() << "Invalid screen id requested:" << newScreenId << "for containment" << containment;
+        qCWarning(PLASMASHELL) << "Invalid screen id requested:" << newScreenId << "for containment" << containment;
         return;
     }
     const int oldScreenId = containment->screen() >= 0 ? containment->screen() : containment->lastScreen();

@@ -16,6 +16,12 @@ set_target_properties(fontinst_helper PROPERTIES OUTPUT_NAME fontinst_helper)
 target_link_libraries(fontinst_helper 
                       Qt::DBus Qt::Xml KF5::AuthCore KF5::KIOCore kfontinst)
 
+ecm_qt_declare_logging_category(fontinst_bin
+    HEADER kfontinst_debug.h
+    IDENTIFIER KFONTINST_DEBUG
+    CATEGORY_NAME org.kde.plasma.kfontinst
+)
+
 install(TARGETS fontinst_bin DESTINATION ${KAUTH_HELPER_INSTALL_DIR} )
 install(TARGETS fontinst_helper DESTINATION ${KAUTH_HELPER_INSTALL_DIR} )
 install(PROGRAMS fontinst_x11 DESTINATION ${KAUTH_HELPER_INSTALL_DIR})

@@ -6,6 +6,8 @@
 
 #include "gridlayoutmanager.h"
 #include "appletslayout.h"
+#include "containmentlayoutmanager_debug.h"
+
 #include <cmath>
 
 GridLayoutManager::GridLayoutManager(AppletsLayout *layout)
@@ -191,7 +193,7 @@ bool GridLayoutManager::assignSpaceImpl(ItemContainer *item)
     // Don't Q_EMIT extra layoutneedssaving signals
     releaseSpaceImpl(item);
     if (!isRectAvailable(itemGeometry(item))) {
-        qWarning() << "Trying to take space not available" << item;
+        qCWarning(CONTAINMENTLAYOUTMANAGER_DEBUG) << "Trying to take space not available" << item;
         return false;
     }
 

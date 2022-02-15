@@ -5,6 +5,7 @@
 */
 
 #include "autostartmodel.h"
+#include "kcm_autostart_debug.h"
 
 #include <KConfigGroup>
 #include <KDesktopFile>
@@ -325,7 +326,7 @@ void AutostartModel::addScript(const QUrl &url, AutostartModel::AutostartEntrySo
 
         connect(job, &KJob::finished, this, [this, url, kind](KJob *theJob) {
             if (theJob->error()) {
-                qWarning() << "Could not add script entry" << theJob->errorString();
+                qCWarning(KCM_AUTOSTART_DEBUG) << "Could not add script entry" << theJob->errorString();
                 return;
             }
             const QUrl dest = theJob->property("finalUrl").toUrl();
@@ -357,7 +358,7 @@ void AutostartModel::removeEntry(int row)
 
     connect(job, &KJob::finished, this, [this, row, entry](KJob *theJob) {
         if (theJob->error()) {
-            qWarning() << "Could not remove entry" << theJob->errorString();
+            qCWarning(KCM_AUTOSTART_DEBUG) << "Could not remove entry" << theJob->errorString();
             return;
         }
 

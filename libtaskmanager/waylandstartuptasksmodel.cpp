@@ -5,6 +5,7 @@
 */
 
 #include "waylandstartuptasksmodel.h"
+#include "libtaskmanager_debug.h"
 #include "tasktools.h"
 
 #include <KConfigGroup>
@@ -116,7 +117,7 @@ void WaylandStartupTasksModel::Private::addActivation(KWayland::Client::PlasmaAc
         const QString desktopFileName = appId + QLatin1String(".desktop");
         const QString desktopFilePath = QStandardPaths::locate(QStandardPaths::ApplicationsLocation, desktopFileName);
         if (desktopFilePath.isEmpty()) {
-            qWarning() << "Got invalid activation app_id:" << appId;
+            qCWarning(TASKMANAGER_DEBUG) << "Got invalid activation app_id:" << appId;
             return;
         }
 

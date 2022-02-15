@@ -29,6 +29,7 @@
 #include <fixx11h.h>
 #endif
 
+#include "debug.h"
 #include "scriptengine.h"
 
 namespace WorkspaceScripting
@@ -152,7 +153,7 @@ void AppInterface::sleep(int ms)
     // event processing from QML and offer a wide array of sources for
     // segfaulting. There isn't really a need to sleep from the scripting API,
     // so it was turned no-op.
-    qWarning() << "Plasma scripting sleep() is deprecated and does nothing!";
+    qCWarning(PLASMASHELL) << "Plasma scripting sleep() is deprecated and does nothing!";
 }
 
 bool AppInterface::hasBattery() const

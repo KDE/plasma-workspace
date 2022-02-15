@@ -6,6 +6,7 @@
 */
 
 #include "previewitem.h"
+#include "kcm_style_debug.h"
 
 #include <QHoverEvent>
 #include <QMouseEvent>
@@ -104,7 +105,7 @@ void PreviewItem::reload()
 
     m_style.reset(QStyleFactory::create(m_styleName));
     if (!m_style) {
-        qWarning() << "Failed to load style" << m_styleName;
+        qCWarning(KCM_STYLE_DEBUG) << "Failed to load style" << m_styleName;
         if (oldValid != isValid()) {
             Q_EMIT validChanged();
         }

@@ -42,6 +42,12 @@ target_link_libraries(kcm_style
     krdb
 )
 
+ecm_qt_declare_logging_category(kcm_style
+    HEADER kcm_style_debug.h
+    IDENTIFIER KCM_STYLE_DEBUG
+    CATEGORY_NAME org.kde.plasma.kcm_style
+)
+
 install(FILES stylesettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 install(FILES style_widgetstyle_default_breeze.upd style_widgetstyle_default_breeze.pl DESTINATION ${KDE_INSTALL_DATADIR}/kconf_update)
 install(FILES gtk_themes.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})

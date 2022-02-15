@@ -5,6 +5,7 @@
 */
 
 #include "scriptengine.h"
+#include "debug.h"
 #include "scriptengine_v1.h"
 
 #include <QDir>
@@ -264,7 +265,7 @@ void ScriptEngine::exception(const QJSValue &value)
 QStringList ScriptEngine::pendingUpdateScripts(Plasma::Corona *corona)
 {
     if (!corona->kPackage().isValid()) {
-        qWarning() << "Warning: corona package invalid";
+        qCWarning(PLASMASHELL) << "Warning: corona package invalid";
         return QStringList();
     }
 

@@ -5,6 +5,7 @@
 */
 
 #include "appletcontainer.h"
+#include "containmentlayoutmanager_debug.h"
 
 #include <QQmlContext>
 #include <QQmlEngine>
@@ -80,7 +81,7 @@ void AppletContainer::connectBusyIndicator()
             m_busyIndicatorItem = qobject_cast<QQuickItem *>(instance);
 
             if (!m_busyIndicatorItem) {
-                qWarning() << "Error: busyIndicatorComponent not of Item type";
+                qCWarning(CONTAINMENTLAYOUTMANAGER_DEBUG) << "Error: busyIndicatorComponent not of Item type";
                 if (instance) {
                     instance->deleteLater();
                 }
@@ -131,7 +132,7 @@ void AppletContainer::connectConfigurationRequired()
             m_configurationRequiredItem = qobject_cast<QQuickItem *>(instance);
 
             if (!m_configurationRequiredItem) {
-                qWarning() << "Error: configurationRequiredComponent not of Item type";
+                qCWarning(CONTAINMENTLAYOUTMANAGER_DEBUG) << "Error: configurationRequiredComponent not of Item type";
                 if (instance) {
                     instance->deleteLater();
                 }

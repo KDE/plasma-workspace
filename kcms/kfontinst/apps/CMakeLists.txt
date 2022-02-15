@@ -30,6 +30,13 @@ target_link_libraries(kfontprint_bin
 )
 target_link_libraries(kfontview_bin KF5::Parts KF5::XmlGui KF5::DBusAddons kfontinstui kfontinst )
 
+
+ecm_qt_declare_logging_category(kfontview_bin
+    HEADER kfontview_debug.h
+    IDENTIFIER KFONTVIEW_DEBUG
+    CATEGORY_NAME org.kde.plasma.kfontview
+)
+
 install(TARGETS kfontinst_bin ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 install(TARGETS kfontprint_bin DESTINATION ${KDE_INSTALL_LIBEXECDIR} )
 install(TARGETS kfontview_bin ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )

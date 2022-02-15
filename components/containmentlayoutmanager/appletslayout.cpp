@@ -6,6 +6,7 @@
 
 #include "appletslayout.h"
 #include "appletcontainer.h"
+#include "containmentlayoutmanager_debug.h"
 #include "gridlayoutmanager.h"
 
 #include <QQmlContext>
@@ -107,7 +108,7 @@ void AppletsLayout::setContainment(PlasmaQuick::AppletQuickItem *containmentItem
 {
     // Forbid changing containmentItem at runtime
     if (m_containmentItem || containmentItem == m_containmentItem || !containmentItem->applet() || !containmentItem->applet()->isContainment()) {
-        qWarning() << "Error: cannot change the containment to AppletsLayout";
+        qCWarning(CONTAINMENTLAYOUTMANAGER_DEBUG) << "Error: cannot change the containment to AppletsLayout";
         return;
     }
 
@@ -698,7 +699,7 @@ AppletContainer *AppletsLayout::createContainerForApplet(PlasmaQuick::AppletQuic
         if (container) {
             container->setParentItem(this);
         } else {
-            qWarning() << "Error: provided component not an AppletContainer instance";
+            qCWarning(CONTAINMENTLAYOUTMANAGER_DEBUG) << "Error: provided component not an AppletContainer instance";
             if (instance) {
                 instance->deleteLater();
             }

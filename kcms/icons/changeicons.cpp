@@ -5,6 +5,8 @@
 */
 
 #include "iconssettings.h"
+#include "plasma_changeicons_debug.h"
+
 #include <KLocalizedString>
 #include <QApplication>
 
@@ -27,7 +29,7 @@ int main(int argc, char **argv)
     IconsSettings settings;
     if (settings.theme() == themeName) {
         // In KNS this will be displayed as a warning in the UI
-        qWarning().noquote() << i18n("Icon theme is already used");
+        qCWarning(PLASMA_CHANGEICONS_DEBUG).noquote() << i18n("Icon theme is already used");
     } else {
         settings.setTheme(themeName);
         settings.save();

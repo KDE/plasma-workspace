@@ -16,6 +16,7 @@
 */
 
 #include "kcmstyle.h"
+#include "kcm_style_debug.h"
 
 #include "../kcms-common_p.h"
 #include "styleconfdialog.h"
@@ -160,14 +161,14 @@ void KCMStyle::configure(const QString &title, const QString &styleName, QQuickI
 
     QLibrary library(QPluginLoader(configPage).fileName());
     if (!library.load()) {
-        qWarning() << "Failed to load style config page" << configPage << library.errorString();
+        qCWarning(KCM_STYLE_DEBUG) << "Failed to load style config page" << configPage << library.errorString();
         Q_EMIT showErrorMessage(i18n("There was an error loading the configuration dialog for this style."));
         return;
     }
 
     auto allocPtr = library.resolve("allocate_kstyle_config");
     if (!allocPtr) {
-        qWarning() << "Failed to resolve allocate_kstyle_config in" << configPage;
+        qCWarning(KCM_STYLE_DEBUG) << "Failed to resolve allocate_kstyle_config in" << configPage;
         Q_EMIT showErrorMessage(i18n("There was an error loading the configuration dialog for this style."));
         return;
     }
@@ -233,7 +234,7 @@ void KCMStyle::checkGtkConfigKdedModuleLoaded()
         watcher->deleteLater();
 
         if (reply.isError()) {
-            qWarning() << "Failed to check whether GTK Config KDED module is loaded" << reply.error().message();
+            qCWarning(KCM_STYLE_DEBUG) << "Failed to check whether GTK Config KDED module is loaded" << reply.error().message();
             return;
         }
 

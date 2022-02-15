@@ -5,6 +5,7 @@
 */
 
 #include "paste.h"
+#include "containmentactions_paste_debug.h"
 
 #include <QClipboard>
 #include <QGuiApplication>
@@ -32,7 +33,7 @@ QList<QAction *> Paste::contextualActions()
 
 void Paste::doPaste()
 {
-    qWarning() << "Paste at" << m_action->data();
+    qCWarning(CONTAINMENTACTIONS_PASTE_DEBUG) << "Paste at" << m_action->data();
 
     if (!m_action->data().canConvert<QPoint>()) {
         return;

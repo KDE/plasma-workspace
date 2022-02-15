@@ -31,6 +31,7 @@
 #include <kworkspace.h>
 
 #include "coronatesthelper.h"
+#include "debug.h"
 #include "shellcorona.h"
 #include "softwarerendernotifier.h"
 #include "standaloneappcorona.h"
@@ -173,7 +174,7 @@ int main(int argc, char *argv[])
         if (cliOptions.isSet(testOption)) {
             const QUrl layoutUrl = QUrl::fromUserInput(cliOptions.value(testOption), {}, QUrl::AssumeLocalFile);
             if (!layoutUrl.isLocalFile()) {
-                qWarning() << "ensure the layout file is local" << layoutUrl;
+                qCWarning(PLASMASHELL) << "ensure the layout file is local" << layoutUrl;
                 cliOptions.showHelp(1);
             }
 

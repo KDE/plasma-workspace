@@ -5,6 +5,7 @@
 */
 
 #include "scriptengine_v1.h"
+#include "debug.h"
 
 #include <QDir>
 #include <QDirIterator>
@@ -556,7 +557,7 @@ bool ScriptEngine::V1::loadTemplate(const QString &layout)
 
     QFile file(scriptFile);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        qWarning() << i18n("Unable to load script file: %1", path);
+        qCWarning(PLASMASHELL) << i18n("Unable to load script file: %1", path);
         return false;
     }
 

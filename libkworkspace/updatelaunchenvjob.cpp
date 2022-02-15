@@ -5,6 +5,7 @@
 */
 
 #include "updatelaunchenvjob.h"
+#include "libkworkspace_debug.h"
 
 #include <klauncher_interface.h>
 #include <startup_interface.h>
@@ -70,7 +71,7 @@ void UpdateLaunchEnvJob::start()
 
     for (const auto &varName : d->environment.keys()) {
         if (!Private::isPosixName(varName)) {
-            qWarning() << "Skipping syncing of environment variable " << varName << "as name contains unsupported characters";
+            qCWarning(LIBKWORKSPACE_DEBUG) << "Skipping syncing of environment variable " << varName << "as name contains unsupported characters";
             continue;
         }
         const QString value = d->environment.value(varName);
@@ -93,7 +94,7 @@ void UpdateLaunchEnvJob::start()
         // https://github.com/systemd/systemd/issues/16704
         // validate here
         if (!Private::isSystemdApprovedValue(value)) {
-            qWarning() << "Skipping syncing of environment variable " << varName << "as value contains unsupported characters";
+            qCWarning(LIBKWORKSPACE_DEBUG) << "Skipping syncing of environment variable " << varName << "as value contains unsupported characters";
             continue;
         }
         const QString updateString = varName + QStringLiteral("=") + value;

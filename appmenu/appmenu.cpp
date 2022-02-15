@@ -10,6 +10,7 @@
 
 #include "appmenu.h"
 #include "appmenu_dbus.h"
+#include "appmenu_debug.h"
 #include "appmenuadaptor.h"
 #include "kdbusimporter.h"
 #include "menuimporteradaptor.h"
@@ -145,7 +146,7 @@ void AppMenuModule::slotWindowRegistered(WId id, const QString &serviceName, con
             auto cookie = xcb_change_property_checked(c, XCB_PROP_MODE_REPLACE, id, atom, XCB_ATOM_STRING, 8, value.length(), value.constData());
             xcb_generic_error_t *error;
             if ((error = xcb_request_check(c, cookie))) {
-                qWarning() << "Got an error";
+                qCWarning(APPMENU_DEBUG) << "Got an error";
                 free(error);
                 return;
             }

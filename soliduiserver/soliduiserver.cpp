@@ -9,6 +9,7 @@
 
 #include "soliduiserver.h"
 #include "config-X11.h"
+#include "soliduiserver_debug.h"
 
 #include <QDBusInterface>
 #include <QDBusReply>
@@ -110,8 +111,8 @@ void SolidUiServer::onPassphraseDialogCompleted(const QString &pass, bool keep)
         m_idToPassphraseDialog.remove(returnService + ':' + udi);
 
         if (!reply.isValid()) {
-            qWarning() << "Impossible to send the passphrase to the application, D-Bus said: " << reply.error().name() << ", " << reply.error().message()
-                       << Qt::endl;
+            qCWarning(SOLIDUISERVER_DEBUG) << "Impossible to send the passphrase to the application, D-Bus said: " << reply.error().name() << ", "
+                                           << reply.error().message() << Qt::endl;
             return; // don't save into wallet if an error occurs
         }
 

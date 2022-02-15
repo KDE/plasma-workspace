@@ -6,7 +6,9 @@
 */
 
 #include "pipewiresourceitem.h"
+#include "logging.h"
 #include "pipewiresourcestream.h"
+
 #include <QGuiApplication>
 #include <QOpenGLContext>
 #include <QOpenGLTexture>
@@ -214,7 +216,7 @@ static EGLImage createImage(EGLDisplay display, const QVector<DmaBufPlane> &plan
 
     EGLImage ret = eglCreateImageKHR(display, EGL_NO_CONTEXT, EGL_LINUX_DMA_BUF_EXT, (EGLClientBuffer) nullptr, attribs.data());
     if (ret == EGL_NO_IMAGE_KHR) {
-        qWarning() << "invalid image" << glGetError();
+        qCWarning(PIPEWIRE_LOGGING) << "invalid image" << glGetError();
     }
     //     Q_ASSERT(ret);
     return ret;
@@ -224,11 +226,11 @@ void PipeWireSourceItem::updateTextureDmaBuf(const QVector<DmaBufPlane> &planes,
 {
     static auto s_glEGLImageTargetTexture2DOES = (PFNGLEGLIMAGETARGETTEXTURE2DOESPROC)eglGetProcAddress("glEGLImageTargetTexture2DOES");
     if (!s_glEGLImageTargetTexture2DOES) {
-        qWarning() << "glEGLImageTargetTexture2DOES is not available" << window();
+        qCWarning(PIPEWIRE_LOGGING) << "glEGLImageTargetTexture2DOES is not available" << window();
         return;
     }
     if (!window() || !window()->openglContext() || !m_stream) {
-        qWarning() << "need a window and a context" << window();
+        qCWarning(PIPEWIRE_LOGGING) << "need a window and a context" << window();
         return;
     }
 
@@ -276,7 +278,7 @@ void PipeWireSourceItem::updateTextureDmaBuf(const QVector<DmaBufPlane> &planes,
 void PipeWireSourceItem::updateTextureImage(const QImage &image)
 {
     if (!window()) {
-        qWarning() << "pass";
+        qCWarning(PIPEWIRE_LOGGING) << "pass";
         return;
     }
 

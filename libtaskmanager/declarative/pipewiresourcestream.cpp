@@ -331,7 +331,7 @@ void PipeWireSourceStream::handleFrame(struct pw_buffer *buffer)
                    QImage::Format_ARGB32);
         Q_EMIT imageTextureReceived(img);
     } else {
-        qWarning() << "unsupported buffer type" << spaBuffer->datas->type;
+        qCWarning(PIPEWIRE_LOGGING) << "unsupported buffer type" << spaBuffer->datas->type;
         QImage errorImage(200, 200, QImage::Format_ARGB32_Premultiplied);
         errorImage.fill(Qt::red);
         Q_EMIT imageTextureReceived(errorImage);

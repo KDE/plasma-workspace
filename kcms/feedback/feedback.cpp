@@ -6,6 +6,7 @@
 */
 
 #include "feedback.h"
+#include "kcm_feedback_debug.h"
 
 #include <KConfigGroup>
 #include <KLocalizedString>
@@ -69,7 +70,7 @@ void Feedback::programFinished(int exitCode)
     const QString program = p->program();
 
     if (exitCode) {
-        qWarning() << "Could not check" << program;
+        qCWarning(KCM_FEEDBACK_DEBUG) << "Could not check" << program;
         return;
     }
 
@@ -84,7 +85,7 @@ void Feedback::programFinished(int exitCode)
         bool ok;
         const int modeValue = modeEnum.keyToValue(qPrintable(mode), &ok);
         if (!ok) {
-            qWarning() << "error:" << mode << "is not a valid mode";
+            qCWarning(KCM_FEEDBACK_DEBUG) << "error:" << mode << "is not a valid mode";
             continue;
         }
 

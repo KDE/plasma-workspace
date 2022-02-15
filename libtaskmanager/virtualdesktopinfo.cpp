@@ -5,6 +5,7 @@
 */
 
 #include "virtualdesktopinfo.h"
+#include "libtaskmanager_debug.h"
 
 #include <KLocalizedString>
 #include <KWayland/Client/connection_thread.h>
@@ -76,7 +77,7 @@ VirtualDesktopInfo::Private::Private()
                                                                   this,
                                                                   SLOT(navigationWrappingAroundChanged(bool)));
     if (!connection) {
-        qWarning() << "Could not connect to org.kde.KWin.VirtualDesktopManager.navigationWrappingAroundChanged signal";
+        qCWarning(TASKMANAGER_DEBUG) << "Could not connect to org.kde.KWin.VirtualDesktopManager.navigationWrappingAroundChanged signal";
     }
 
     // ...Then get the property's current value
@@ -91,7 +92,7 @@ VirtualDesktopInfo::Private::Private()
         watcher->deleteLater();
 
         if (reply.isError()) {
-            qWarning() << "Failed to determine whether virtual desktop navigation wrapping is enabled: " << reply.error().message();
+            qCWarning(TASKMANAGER_DEBUG) << "Failed to determine whether virtual desktop navigation wrapping is enabled: " << reply.error().message();
             return;
         }
 

@@ -5,6 +5,8 @@
 */
 
 #include "screencastingrequest.h"
+#include "logging.h"
+
 #include <KWayland/Client/connection_thread.h>
 #include <KWayland/Client/registry.h>
 #include <QCoreApplication>
@@ -115,7 +117,7 @@ void ScreencastingRequest::create(Screencasting *screencasting)
         }
     });
     connect(stream, &ScreencastingStream::failed, this, [](const QString &error) {
-        qWarning() << "error creating screencast" << error;
+        qCWarning(PIPEWIRE_LOGGING) << "error creating screencast" << error;
     });
     connect(stream, &ScreencastingStream::closed, this, [this, stream] {
         if (stream->nodeId() == m_nodeId) {
