@@ -1408,17 +1408,19 @@ void PanelView::updateEnabledBorders()
             break;
         }
 
-        if (x() <= m_screenToFollow->geometry().x()) {
-            borders &= ~Plasma::FrameSvg::LeftBorder;
-        }
-        if (x() + width() >= m_screenToFollow->geometry().x() + m_screenToFollow->geometry().width()) {
-            borders &= ~Plasma::FrameSvg::RightBorder;
-        }
-        if (y() <= m_screenToFollow->geometry().y()) {
-            borders &= ~Plasma::FrameSvg::TopBorder;
-        }
-        if (y() + height() >= m_screenToFollow->geometry().y() + m_screenToFollow->geometry().height()) {
-            borders &= ~Plasma::FrameSvg::BottomBorder;
+        if (m_screenToFollow) {
+            if (x() <= m_screenToFollow->geometry().x()) {
+                borders &= ~Plasma::FrameSvg::LeftBorder;
+            }
+            if (x() + width() >= m_screenToFollow->geometry().x() + m_screenToFollow->geometry().width()) {
+                borders &= ~Plasma::FrameSvg::RightBorder;
+            }
+            if (y() <= m_screenToFollow->geometry().y()) {
+                borders &= ~Plasma::FrameSvg::TopBorder;
+            }
+            if (y() + height() >= m_screenToFollow->geometry().y() + m_screenToFollow->geometry().height()) {
+                borders &= ~Plasma::FrameSvg::BottomBorder;
+            }
         }
     }
 
