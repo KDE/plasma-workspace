@@ -328,7 +328,7 @@ void UserApplyJob::start()
         QTemporaryFile file;
         if (!file.open()) {
             setErrorText(i18n("Failed to resize image: opening temp file failed"));
-            qCWarning(KCMUSERS) << i18n("Failed to resize image: opening temp file failed");
+            qCWarning(KCMUSERS) << "Failed to resize image: opening temp file failed";
             KJob::setError(static_cast<int>(Error::UserFacing));
             emitResult();
             return;
@@ -336,7 +336,7 @@ void UserApplyJob::start()
 
         if (!scaled.save(&file, "png")) {
             setErrorText(i18n("Failed to resize image: writing to temp file failed"));
-            qCWarning(KCMUSERS) << i18n("Failed to resize image: writing to temp file failed");
+            qCWarning(KCMUSERS) << "Failed to resize image: writing to temp file failed";
             KJob::setError(static_cast<int>(Error::UserFacing));
             emitResult();
             return;

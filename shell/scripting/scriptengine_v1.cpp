@@ -557,7 +557,7 @@ bool ScriptEngine::V1::loadTemplate(const QString &layout)
 
     QFile file(scriptFile);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        qCWarning(PLASMASHELL) << i18n("Unable to load script file: %1", path);
+        qCWarning(PLASMASHELL) << "Unable to load script file:" << path;
         return false;
     }
 
