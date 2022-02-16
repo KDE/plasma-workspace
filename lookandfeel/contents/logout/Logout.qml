@@ -156,7 +156,7 @@ PlasmaCore.ColorScope {
 
         RowLayout {
             spacing: PlasmaCore.Units.largeSpacing * 2
-            Layout.alignment: Qt.AlignHCenter
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
             LogoutButton {
                 id: suspendButton
                 iconSource: "system-suspend"
