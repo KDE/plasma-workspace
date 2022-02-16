@@ -32,7 +32,7 @@ public:
     ~KCMUser() override;
 
     Q_SCRIPTABLE bool createUser(const QString &name, const QString &realName, const QString &password, bool admin);
-    Q_SCRIPTABLE bool deleteUser(int index, bool deleteHome);
+    Q_SCRIPTABLE bool deleteUser(qint64 index, bool deleteHome);
     // Grab the initials of a string
     Q_SCRIPTABLE QString initializeString(const QString &stringToGrabInitialsOf);
     Q_SCRIPTABLE QString plonkImageInTempfile(const QImage &image);

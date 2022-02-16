@@ -28,6 +28,15 @@ Q_LOGGING_CATEGORY(kcm_users, "kcm_users")
 
 K_PLUGIN_CLASS_WITH_JSON(KCMUser, "kcm_users.json")
 
+// Work around QTBUG-100458
+inline auto asyncCall(OrgFreedesktopAccountsInterface *ptr, const QString &method, const QVariantList &arguments)
+{
+    auto mc = QDBusMessage::createMethodCall(ptr->service(), ptr->path(), ptr->interface(), method);
+    mc.setArguments(arguments);
+    mc.setInteractiveAuthorizationAllowed(true);
+    return QDBusConnection::systemBus().asyncCall(mc);
+}
+
 KCMUser::KCMUser(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
     : KQuickAddons::ConfigModule(parent, data, args)
     , m_dbusInterface(new OrgFreedesktopAccountsInterface(QStringLiteral("org.freedesktop.Accounts"),
@@ -56,7 +65,7 @@ KCMUser::KCMUser(QObject *parent, const KPluginMetaData &data, const QVariantLis
 
 bool KCMUser::createUser(const QString &name, const QString &realName, const QString &password, bool isAdmin)
 {
-    QDBusPendingReply<QDBusObjectPath> reply = m_dbusInterface->CreateUser(name, realName, isAdmin);
+    QDBusPendingReply<QDBusObjectPath> reply = asyncCall(m_dbusInterface, "CreateUser", {name, realName, static_cast<qint32>(isAdmin)});
     reply.waitForFinished();
     if (reply.isValid()) {
         User *createdUser = new User(this);
@@ -68,9 +77,9 @@ bool KCMUser::createUser(const QString &name, const QString &realName, const QSt
     return false;
 }
 
-bool KCMUser::deleteUser(int id, bool deleteHome)
+bool KCMUser::deleteUser(qint64 id, bool deleteHome)
 {
-    QDBusPendingReply<> reply = m_dbusInterface->DeleteUser(id, deleteHome);
+    QDBusPendingReply<> reply = asyncCall(m_dbusInterface, "DeleteUser", {id, deleteHome});
     reply.waitForFinished();
     if (reply.isError()) {
         return false;
