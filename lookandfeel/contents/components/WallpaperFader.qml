@@ -22,7 +22,7 @@ Item {
     property alias source: wallpaperBlur.source
     state: lockScreenRoot.uiVisible ? "on" : "off"
     property real factor: 0
-    readonly property bool lightBackground: Math.max(PlasmaCore.ColorScope.backgroundColor.r, PlasmaCore.ColorScope.backgroundColor.g, PlasmaCore.ColorScope.backgroundColor.b) > 0.5
+    readonly property bool lightColorScheme: Math.max(PlasmaCore.ColorScope.backgroundColor.r, PlasmaCore.ColorScope.backgroundColor.g, PlasmaCore.ColorScope.backgroundColor.b) > 0.5
 
     property bool alwaysShowClock: typeof config === "undefined" || typeof config.alwaysShowClock === "undefined" || config.alwaysShowClock === true
 
@@ -52,7 +52,7 @@ Item {
 
         readonly property real contrast: 0.65 * wallpaperFader.factor + (1 - wallpaperFader.factor)
         readonly property real saturation: 1.6 * wallpaperFader.factor + (1 - wallpaperFader.factor)
-        readonly property real intensity: (wallpaperFader.lightBackground ? 1.7 : 0.6) * wallpaperFader.factor + (1 - wallpaperFader.factor)
+        readonly property real intensity: (wallpaperFader.lightColorScheme ? 1.7 : 0.6) * wallpaperFader.factor + (1 - wallpaperFader.factor)
 
         readonly property real transl: (1.0 - contrast) / 2.0;
         readonly property real rval: (1.0 - saturation) * 0.2126;
