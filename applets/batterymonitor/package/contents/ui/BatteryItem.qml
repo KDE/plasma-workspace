@@ -193,7 +193,7 @@ RowLayout {
             readonly property bool pluggedIn: pmSource.data["AC Adapter"] !== undefined && pmSource.data["AC Adapter"]["Plugged in"]
             visible: pluggedIn && typeof chargeStopThreshold === "number" && chargeStopThreshold > 0 && chargeStopThreshold < 100
             iconSource: "kt-speed-limits" // FIXME good icon
-            text: i18n("Your battery is configured to only charge up to %1%.", chargeStopThreshold || 0)
+            text: i18n("Battery is configured to charge up to approximately %1%.", chargeStopThreshold || 0)
         }
     }
 }
