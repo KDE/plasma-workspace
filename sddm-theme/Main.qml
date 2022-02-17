@@ -30,7 +30,6 @@ PlasmaCore.ColorScope {
     readonly property bool softwareRendering: GraphicsInfo.api === GraphicsInfo.Software
 
     colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
-    readonly property bool lightBackground: Math.max(PlasmaCore.ColorScope.backgroundColor.r, PlasmaCore.ColorScope.backgroundColor.g, PlasmaCore.ColorScope.backgroundColor.b) > 0.5
 
     width: 1600
     height: 900
@@ -124,12 +123,7 @@ PlasmaCore.ColorScope {
             radius: 6
             samples: 14
             spread: 0.3
-                                          // Soften the color a bit so it doesn't look so stark against light backgrounds
-            color: root.lightBackground ? Qt.rgba(PlasmaCore.ColorScope.backgroundColor.r,
-                                                  PlasmaCore.ColorScope.backgroundColor.g,
-                                                  PlasmaCore.ColorScope.backgroundColor.b,
-                                                  0.6)
-                                        : "black" // black matches Breeze window decoration and desktopcontainment
+            color : "black" // shadows should always be black
             Behavior on opacity {
                 OpacityAnimator {
                     duration: PlasmaCore.Units.veryLongDuration * 2
@@ -503,12 +497,7 @@ PlasmaCore.ColorScope {
             radius: 6
             samples: 14
             spread: 0.3
-                                          // Soften the color a bit so it doesn't look so stark against light backgrounds
-            color: root.lightBackground ? Qt.rgba(PlasmaCore.ColorScope.backgroundColor.r,
-                                                  PlasmaCore.ColorScope.backgroundColor.g,
-                                                  PlasmaCore.ColorScope.backgroundColor.b,
-                                                  0.6)
-                                        : "black" // black matches Breeze window decoration and desktopcontainment
+            color : "black" // shadows should always be black
             opacity: loginScreenRoot.uiVisible ? 0 : 1
             Behavior on opacity {
                 //OpacityAnimator when starting from 0 is buggy (it shows one frame with opacity 1)"
