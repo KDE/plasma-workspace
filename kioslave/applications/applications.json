@@ -4,7 +4,6 @@
             "Class": ":local",
             "Icon": "start-here-kde",
             "deleting": false,
-            "exec": "kf5/kio/applications",
             "input": "none",
             "linking": false,
             "listing": [
@@ -29,7 +28,6 @@
             "Class": ":local",
             "Icon": "start-here-kde",
             "deleting": false,
-            "exec": "kf5/kio/applications",
             "input": "none",
             "linking": false,
             "listing": [

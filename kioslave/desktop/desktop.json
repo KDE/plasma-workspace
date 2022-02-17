@@ -4,7 +4,6 @@
             "Class": ":local",
             "Icon": "user-desktop",
             "deleting": true,
-            "exec": "kf5/kio/desktop",
             "input": "none",
             "linking": true,
             "listing": [
