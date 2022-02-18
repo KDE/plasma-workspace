@@ -18,7 +18,6 @@ target_link_libraries(kcm_fontinst
     X11::X11
 )
 
-install(TARGETS kcm_fontinst  DESTINATION ${KDE_INSTALL_PLUGINDIR})
 install( FILES kcm_fontinst.desktop  DESTINATION  ${KDE_INSTALL_APPDIR} )
 install( FILES kfontinst.knsrc DESTINATION  ${KDE_INSTALL_KNSRCDIR} )
 
