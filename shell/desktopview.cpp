@@ -34,6 +34,11 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
     , m_shellSurface(nullptr)
 {
     QObject::setParent(corona);
+    // Some people reported that setColor(Qt::black) breaks panel translucency on X11. Needs more investigation.
+    if (KWindowSystem::isPlatformWayland()) {
+        setColor(Qt::black);
+    }
+
     if (targetScreen) {
         setScreenToFollow(targetScreen);
         setScreen(targetScreen);
