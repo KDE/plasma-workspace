@@ -309,12 +309,14 @@ void Image::useSingleImageDefaults()
             m_wallpaper = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("wallpapers/") + image);
         }
     }
+    qDebug() << "AAAAAAAAAAAAAAAAAFUFUFUFU" << image;
 
     // Try to get a default from the plasma theme
     if (m_wallpaper.isEmpty()) {
         Plasma::Theme theme;
         m_wallpaper = theme.wallpaperPath();
         int index = m_wallpaper.indexOf(QString::fromLatin1("/contents/images/"));
+        qDebug() << "AAAAAAAAAAAAAAAAAFUFUFUFU" << m_wallpaper;
         if (index > -1) { // We have file from package -> get path to package
             m_wallpaper = m_wallpaper.left(index);
         }
@@ -520,6 +522,7 @@ void Image::setSingleImage()
     }
 
     const QString oldPath = m_wallpaperPath;
+    qDebug() << "WWWWWWWWWWWWWWWWWixixixixix" << m_wallpaper;
     if (m_wallpaper.isEmpty()) {
         useSingleImageDefaults();
     }
