@@ -25,7 +25,7 @@ KCM.SimpleKCM {
         visible: KCMShell.authorize("kcm_kscreen.desktop").length > 0
         text: i18n("Change Display Scaling…")
         iconName: "preferences-desktop-display"
-        onTriggered: KCMShell.open("kcm_kscreen.desktop")
+        onTriggered: KCMShell.open("kcm_kscreen")
     }
 
     ColumnLayout {
