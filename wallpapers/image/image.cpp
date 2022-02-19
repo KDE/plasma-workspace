@@ -95,6 +95,7 @@ void Image::componentComplete()
     } else if (m_mode == SlideShow) {
         // show the last image shown the last time
         m_wallpaperPath = m_wallpaper;
+        qDebug() << "WWWWWWWWWWWWWWWWW3" << m_wallpaperPath;
         Q_EMIT wallpaperPathChanged();
         startSlideshow();
     }
@@ -504,6 +505,7 @@ void Image::syncWallpaperPackage()
     m_wallpaperPackage.setPath(m_wallpaper);
     findPreferedImageInPackage(m_wallpaperPackage);
     m_wallpaperPath = m_wallpaperPackage.filePath("preferred");
+    qDebug() << "WWWWWWWWWWWWWWWWW1" << m_wallpaperPath << m_wallpaperPackage.path();
 }
 
 void Image::setSingleImage()
@@ -797,6 +799,7 @@ void Image::nextSlide()
     } else {
         m_wallpaperPath = next.toLocalFile();
     }
+    qDebug() << "WWWWWWWWWWWWWWWWW2" << m_wallpaperPath;
     Q_EMIT wallpaperPathChanged();
 }
 

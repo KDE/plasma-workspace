@@ -97,6 +97,8 @@ QQC2.StackView {
                 wallpaper.loading = false;
             }
         }
+                            console.log("AAAAAAA", pendingImage.source);
+                            console.trace()
         pendingImage.statusChanged.connect(replaceWhenLoaded);
         replaceWhenLoaded();
     }
