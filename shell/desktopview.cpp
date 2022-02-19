@@ -34,6 +34,8 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
     , m_shellSurface(nullptr)
 {
     QObject::setParent(corona);
+    setColor(Qt::black);
+
     if (targetScreen) {
         setScreenToFollow(targetScreen);
         setScreen(targetScreen);
