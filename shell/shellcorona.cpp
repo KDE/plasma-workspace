@@ -1498,7 +1498,7 @@ void ShellCorona::executeSetupPlasmoidScript(Plasma::Containment *containment, P
 
     QFile file(scriptFile);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        qCWarning(PLASMASHELL) << "Unable to load script file: %1" << scriptFile;
+        qCWarning(PLASMASHELL) << "Unable to load script file:" << scriptFile;
         return;
     }
 
