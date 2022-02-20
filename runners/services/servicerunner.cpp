@@ -301,9 +301,11 @@ private:
 
     void matchCategories()
     {
+        const auto categoriesFilter = [this](const KService::Ptr &service) {
+            return contains(service->categories(), queryList);
+        };
         // search for applications whose categories contains the query
-        query = QStringLiteral("exist Exec and (exist Categories and '%1' ~subin Categories)").arg(term);
-        const auto services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), query);
+        const auto services = KApplicationTrader::query(categoriesFilter);
 
         for (const KService::Ptr &service : services) {
             qCDebug(RUNNER_SERVICES) << service->name() << "is an exact match!" << service->storageId() << service->exec();
