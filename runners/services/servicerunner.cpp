@@ -24,7 +24,6 @@
 #include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
 #include <KServiceAction>
-#include <KServiceTypeTrader>
 #include <KStringHandler>
 #include <KSycoca>
 
