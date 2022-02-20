@@ -20,6 +20,7 @@
 #include <QUrlQuery>
 
 #include <KActivities/ResourceInstance>
+#include <KApplicationTrader>
 #include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
 #include <KServiceAction>
@@ -37,6 +38,22 @@ namespace
 int weightedLength(const QString &query)
 {
     return KStringHandler::logicalLength(query);
+}
+
+inline bool contains(const QString &result, const QStringList &queryList)
+{
+    return std::all_of(queryList.cbegin(), queryList.cend(), [&result](const QString &query) {
+        return result.contains(query, Qt::CaseInsensitive);
+    });
+}
+
+inline bool contains(const QStringList &results, const QStringList &queryList)
+{
+    return std::all_of(queryList.cbegin(), queryList.cend(), [&results](const QString &query) {
+        return std::any_of(results.cbegin(), results.cend(), [&query](const QString &result) {
+            return result.contains(query, Qt::CaseInsensitive);
+        });
+    });
 }
 
 } // namespace
@@ -61,6 +78,8 @@ public:
         KSycoca::disableAutoRebuild();
 
         term = context.query();
+        // Splitting the query term to match using subsequences
+        queryList = term.split(QLatin1Char(' '));
         weightedTermLength = weightedLength(term);
 
         matchExectuables();
@@ -101,7 +120,7 @@ private:
         return ret;
     }
 
-    qreal increaseMatchRelavance(const KService::Ptr &service, const QVector<QStringRef> &strList, const QString &category)
+    qreal increaseMatchRelavance(const KService::Ptr &service, const QStringList &strList, const QString &category)
     {
         // Increment the relevance based on all the words (other than the first) of the query list
         qreal relevanceIncrement = 0;
@@ -128,33 +147,6 @@ private:
         }
 
         return relevanceIncrement;
-    }
-
-    QString generateQuery(const QVector<QStringRef> &strList)
-    {
-        QString keywordTemplate = QStringLiteral("exist Keywords");
-        QString genericNameTemplate = QStringLiteral("exist GenericName");
-        QString nameTemplate = QStringLiteral("exist Name");
-        QString commentTemplate = QStringLiteral("exist Comment");
-
-        // Search for applications which are executable and the term case-insensitive matches any of
-        // * a substring of one of the keywords
-        // * a substring of the GenericName field
-        // * a substring of the Name field
-        // Note that before asking for the content of e.g. Keywords and GenericName we need to ask if
-        // they exist to prevent a tree evaluation error if they are not defined.
-        for (const QStringRef &str : strList) {
-            keywordTemplate += QStringLiteral(" and '%1' ~subin Keywords").arg(str.toString());
-            genericNameTemplate += QStringLiteral(" and '%1' ~~ GenericName").arg(str.toString());
-            nameTemplate += QStringLiteral(" and '%1' ~~ Name").arg(str.toString());
-            commentTemplate += QStringLiteral(" and '%1' ~~ Comment").arg(str.toString());
-        }
-
-        QString finalQuery = QStringLiteral("exist Exec and ( (%1) or (%2) or (%3) or ('%4' ~~ Exec) or (%5) )")
-                                 .arg(keywordTemplate, genericNameTemplate, nameTemplate, strList[0].toString(), commentTemplate);
-
-        qCDebug(RUNNER_SERVICES) << "Final query : " << finalQuery;
-        return finalQuery;
     }
 
     void setupMatch(const KService::Ptr &service, Plasma::QueryMatch &match)
@@ -216,18 +208,32 @@ private:
 
     void matchNameKeywordAndGenericName()
     {
-        // Splitting the query term to match using subsequences
-        QVector<QStringRef> queryList = term.splitRef(QLatin1Char(' '));
+        const auto nameKeywordAndGenericNameFilter = [this](const KService::Ptr &service) {
+            // Name
+            if (contains(service->name(), queryList) || contains(service->exec(), queryList)) {
+                return true;
+            }
+            // If the term length is < 3, no real point searching the Keywords and GenericName
+            if (weightedTermLength < 3) {
+                return false;
+            }
+            // Keywords
+            if (contains(service->keywords(), queryList)) {
+                return true;
+            }
+            // GenericName
+            if (contains(service->genericName(), queryList) || contains(service->untranslatedGenericName(), queryList)) {
+                return true;
+            }
+            // Comment
+            if (contains(service->comment(), queryList)) {
+                return true;
+            }
 
-        // If the term length is < 3, no real point searching the Keywords and GenericName
-        if (weightedTermLength < 3) {
-            query = QStringLiteral("exist Exec and ( (exist Name and '%1' ~~ Name) or ('%1' ~~ Exec) )").arg(term);
-        } else {
-            // Match using subsequences (Bug: 262837)
-            query = generateQuery(queryList);
-        }
+            return false;
+        };
 
-        const KService::List services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), query);
+        const KService::List services = KApplicationTrader::query(nameKeywordAndGenericNameFilter);
 
         qCDebug(RUNNER_SERVICES) << "got " << services.count() << " services from " << query;
         for (const KService::Ptr &service : services) {
@@ -394,6 +400,7 @@ private:
     QList<Plasma::QueryMatch> matches;
     QString query;
     QString term;
+    QStringList queryList;
     int weightedTermLength = -1;
 };
 
