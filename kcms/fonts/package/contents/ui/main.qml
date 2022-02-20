@@ -300,16 +300,21 @@ KCM.SimpleKCM {
                                 text: model.display
                                 level: 5
                             }
-                            Image {
-                                id: subPixelComboImage
-                                source: "image://preview/" + model.index + "_" + kcm.hintingCurrentIndex + ".png"
-                                // Setting sourceSize here is necessary as a workaround for QTBUG-38127
-                                //
-                                // With this bug, images requested from a QQuickImageProvider have an incorrect scale with devicePixelRatio != 1 when sourceSize is not set.
-                                //
-                                // TODO: Check if QTBUG-38127 is fixed and remove the next two lines.
-                                sourceSize.width: 1
-                                sourceSize.height: 1
+                            Loader {
+                                active: kcm.isPlatformX11
+                                visible: active
+                                asynchronous: true
+                                sourceComponent: Image {
+                                    id: subPixelComboImage
+                                    source: "image://preview/" + model.index + "_" + kcm.hintingCurrentIndex + ".png"
+                                    // Setting sourceSize here is necessary as a workaround for QTBUG-38127
+                                    //
+                                    // With this bug, images requested from a QQuickImageProvider have an incorrect scale with devicePixelRatio != 1 when sourceSize is not set.
+                                    //
+                                    // TODO: Check if QTBUG-38127 is fixed and remove the next two lines.
+                                    sourceSize.width: 1
+                                    sourceSize.height: 1
+                                }
                             }
                         }
                     }
@@ -347,16 +352,21 @@ KCM.SimpleKCM {
                                 text: model.display
                                 level: 5
                             }
-                            Image {
-                                id: hintingComboImage
-                                source: "image://preview/" + kcm.subPixelCurrentIndex + "_" + model.index + ".png"
-                                // Setting sourceSize here is necessary as a workaround for QTBUG-38127
-                                //
-                                // With this bug, images requested from a QQuickImageProvider have an incorrect scale with devicePixelRatio != 1 when sourceSize is not set.
-                                //
-                                // TODO: Check if QTBUG-38127 is fixed and remove the next two lines.
-                                sourceSize.width: 1
-                                sourceSize.height: 1
+                            Loader {
+                                active: kcm.isPlatformX11
+                                visible: active
+                                asynchronous: true
+                                sourceComponent: Image {
+                                    id: hintingComboImage
+                                    source: "image://preview/" + kcm.subPixelCurrentIndex + "_" + model.index + ".png"
+                                    // Setting sourceSize here is necessary as a workaround for QTBUG-38127
+                                    //
+                                    // With this bug, images requested from a QQuickImageProvider have an incorrect scale with devicePixelRatio != 1 when sourceSize is not set.
+                                    //
+                                    // TODO: Check if QTBUG-38127 is fixed and remove the next two lines.
+                                    sourceSize.width: 1
+                                    sourceSize.height: 1
+                                }
                             }
                         }
                     }

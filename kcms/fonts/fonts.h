@@ -37,6 +37,7 @@ class KFonts : public KQuickAddons::ManagedConfigModule
     Q_PROPERTY(int subPixelCurrentIndex READ subPixelCurrentIndex WRITE setSubPixelCurrentIndex NOTIFY subPixelCurrentIndexChanged)
     Q_PROPERTY(QAbstractItemModel *hintingOptionsModel READ hintingOptionsModel CONSTANT)
     Q_PROPERTY(int hintingCurrentIndex READ hintingCurrentIndex WRITE setHintingCurrentIndex NOTIFY hintingCurrentIndexChanged)
+    Q_PROPERTY(bool isPlatformX11 READ isPlatformX11 CONSTANT)
 
 public:
     KFonts(QObject *parent, const KPluginMetaData &metaData, const QVariantList &);
@@ -44,6 +45,10 @@ public:
 
     FontsSettings *fontsSettings() const;
     FontsAASettings *fontsAASettings() const;
+    /**
+     * @return @c true if the platform is X11, @c false otherwise
+     */
+    bool isPlatformX11() const;
 
     int subPixelCurrentIndex() const;
     void setHintingCurrentIndex(int idx);
