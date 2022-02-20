@@ -183,11 +183,10 @@ private:
             return;
         }
 
-        // Search for applications which are executable and case-insensitively match the search term
-        // See https://techbase.kde.org/Development/Tutorials/Services/Traders#The_KTrader_Query_Language
-        // if the following is unclear to you.
-        query = QStringLiteral("exist Exec and ('%1' =~ Name)").arg(term);
-        const KService::List services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), query);
+        const auto executablesFilter = [this](const KService::Ptr &service) {
+            return QString::compare(service->name(), term, Qt::CaseInsensitive) == 0;
+        };
+        const KService::List services = KApplicationTrader::query(executablesFilter);
 
         if (services.isEmpty()) {
             return;
