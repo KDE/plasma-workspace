@@ -337,8 +337,10 @@ private:
             return;
         }
 
-        query = QStringLiteral("exist Actions"); // doesn't work
-        const auto services = KServiceTypeTrader::self()->query(QStringLiteral("Application")); //, query);
+        const auto hasActionsFilter = [](const KService::Ptr &service) {
+            return !service->actions().isEmpty();
+        };
+        const auto services = KApplicationTrader::query(hasActionsFilter);
 
         for (const KService::Ptr &service : services) {
             if (service->noDisplay()) {
