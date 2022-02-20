@@ -6,7 +6,7 @@
     SPDX-License-Identifier: LGPL-2.0-only
 */
 
-import QtQuick 2.1
+import QtQuick 2.15
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.0 as QtControls
 import QtQuick.Dialogs 1.2 as QtDialogs
@@ -288,10 +288,21 @@ KCM.SimpleKCM {
                     model: kcm.subPixelOptionsModel
                     textRole: "display"
                     popup.height: popup.implicitHeight
+                    property var itemWidth: []
+                    property bool doesUseParentWidth: false
                     delegate: QtControls.ItemDelegate {
                         id: subPixelDelegate
-                        onWidthChanged: {
-                            subPixelCombo.popup.width = Math.max(subPixelCombo.popup.width, width)
+                        // Extend the highlight for short items
+                        Binding on width {
+                            when: subPixelCombo.doesUseParentWidth
+                            value: subPixelCombo.popup.width
+                        }
+                        Connections {
+                            enabled: !subPixelCombo.doesUseParentWidth
+                            function onWidthChanged() {
+                                subPixelCombo.itemWidth[model.index] = width;
+                                Qt.callLater(subPixelCombo.updateMaxWidth);
+                            }
                         }
                         contentItem: ColumnLayout {
                             id: subPixelLayout
@@ -324,6 +335,16 @@ KCM.SimpleKCM {
                         settingName: "subPixel"
                         extraEnabledConditions: antiAliasingCheckBox.checked && !kcm.fontsAASettings.isAaImmutable
                     }
+
+                    function updateMaxWidth() {
+                        if (itemWidth.length != model.rowCount()) {
+                            return;
+                        }
+                        let maxWidth = popup.width;
+                        itemWidth.forEach(w => maxWidth = Math.max(w, maxWidth));
+                        popup.width = maxWidth;
+                        doesUseParentWidth = true;
+                    }
                 }
                 KCM.ContextualHelpButton {
                     toolTipText: xi18nc("@info:tooltip Sub-pixel rendering", "<para>On TFT or LCD screens every single pixel is actually composed of three or four smaller monochrome lights. These <emphasis>sub-pixels</emphasis> can be changed independently to further improve the quality of displayed fonts.</para> <para>The rendering quality is only improved if the selection matches the manner in which the sub-pixels of your display are aligned. Most displays have a linear ordering of <emphasis>RGB</emphasis> sub-pixels, some have <emphasis>BGR</emphasis> and some exotic orderings are not supported by this feature.</para>This does not work with CRT monitors.")
@@ -340,10 +361,20 @@ KCM.SimpleKCM {
                     model: kcm.hintingOptionsModel
                     textRole: "display"
                     popup.height: popup.implicitHeight
+                    property var itemWidth: []
+                    property bool doesUseParentWidth: false
                     delegate: QtControls.ItemDelegate {
                         id: hintingDelegate
-                        onWidthChanged: {
-                            hintingCombo.popup.width = Math.max(hintingCombo.popup.width, width)
+                        Binding on width {
+                            when: hintingCombo.doesUseParentWidth
+                            value: hintingCombo.popup.width
+                        }
+                        Connections {
+                            enabled: !hintingCombo.doesUseParentWidth
+                            function onWidthChanged() {
+                                hintingCombo.itemWidth[model.index] = width;
+                                Qt.callLater(hintingCombo.updateMaxWidth);
+                            }
                         }
                         contentItem: ColumnLayout {
                             id: hintingLayout
@@ -374,6 +405,14 @@ KCM.SimpleKCM {
                         configObject: kcm.fontsAASettings
                         settingName: "hinting"
                         extraEnabledConditions: antiAliasingCheckBox.checked && !kcm.fontsAASettings.isAaImmutable
+                    }
+
+                    function updateMaxWidth() {
+                        if (itemWidth.length != model.rowCount()) {
+                            return;
+                        }
+                        itemWidth.forEach(w => popup.width = Math.max(w, popup.width));
+                        doesUseParentWidth = true;
                     }
                 }
                 KCM.ContextualHelpButton {
