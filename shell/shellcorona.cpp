@@ -1287,7 +1287,7 @@ void ShellCorona::addOutput(QScreen *screen)
     if (isOutputFake(screen)) {
         return;
     }
-    for (auto desk : m_desktopViewforId.values()) {
+    for (const auto desk : std::as_const(m_desktopViewforId)) {
         if (desk->screenToFollow() == screen) {
             return;
         }
