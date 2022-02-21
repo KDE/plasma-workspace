@@ -748,6 +748,7 @@ void ShellCorona::load()
 
 void ShellCorona::primaryOutputNameChanged(const QString &oldOutputName, const QString &newOutputName)
 {
+    Q_UNUSED(newOutputName)
     // when the appearance of a new primary screen *moves*
     // the position of the now secondary, the two screens will appear overlapped for an instant, and a spurious output redundant would happen here if checked
     // immediately
