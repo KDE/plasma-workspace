@@ -13,6 +13,7 @@
         "Description[hu]": "Meghatározza a földrajzi helyzetet az IP cím alapján.",
         "Description[ia]": "Geolocation ex adresse IP",
         "Description[it]": "Geolocalizzazione dall'indirizzo IP.",
+        "Description[ko]": "IP에서 얻어낸 주소입니다.",
         "Description[lt]": "Geografinės vietos nustatymas pagal IP adresą.",
         "Description[nl]": "Geolocatie uit IP-adres.",
         "Description[nn]": "Geolocation med IP-adresse.",
