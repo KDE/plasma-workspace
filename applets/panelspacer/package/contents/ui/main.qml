@@ -55,12 +55,9 @@ Item {
         plasmoid.removeAction("configure");
     }
 
-    property real leftItemsSizeHint: 0
-    property real rightItemsSizeHint: 0
     property real middleItemsSizeHint: {
-        // Every time this binding gets reevaluated we want to queue a recomputation of the size hints
-        Qt.callLater(root.updateHints)
         if (!twinSpacer || !panelLayout || !leftTwin || !rightTwin) {
+            optimalSize = horizontal ? plasmoid.nativeInterface.containment.width : plasmoid.nativeInterface.containment.height;
             return 0;
         }
 
@@ -105,8 +102,13 @@ Item {
             }
         }
 
-        rightItemsSizeHint = rightItemsHint;
-        leftItemsSizeHint = leftItemsHint;
+        var halfContainment = root.horizontal ?plasmoid.nativeInterface.containment.width/2 : plasmoid.nativeInterface.containment.height/2;
+
+        if (leftTwin == plasmoid) {
+            optimalSize = Math.max(PlasmaCore.Units.smallSpacing, halfContainment - middleItemsHint/2 - leftItemsHint)
+        } else {
+            optimalSize = Math.max(PlasmaCore.Units.smallSpacing, halfContainment - middleItemsHint/2 - rightItemsHint)
+        }
         return middleItemsHint;
     }
 
@@ -133,22 +135,6 @@ Item {
             return root.Kirigami.ScenePosition.y >= twinSpacer.Kirigami.ScenePosition.y ? plasmoid : twinSpacer;
         }
     }
-
-    function updateHints() {
-        if (!twinSpacer || !panelLayout || !leftTwin || !rightTwin) {
-            root.optimalSize = root.horizontal ? plasmoid.nativeInterface.containment.width : plasmoid.nativeInterface.containment.height;
-            return;
-        }
-
-        var halfContainment = root.horizontal ?plasmoid.nativeInterface.containment.width/2 : plasmoid.nativeInterface.containment.height/2;
-
-        if (leftTwin == plasmoid) {
-            root.optimalSize = Math.max(PlasmaCore.Units.smallSpacing, halfContainment - middleItemsSizeHint/2 - leftItemsSizeHint)
-        } else {
-            root.optimalSize = Math.max(PlasmaCore.Units.smallSpacing, halfContainment - middleItemsSizeHint/2 - rightItemsSizeHint)
-        }
-    }
-    
 
     Rectangle {
         anchors.fill: parent
