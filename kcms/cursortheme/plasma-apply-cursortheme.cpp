@@ -20,6 +20,32 @@
 #include <QFile>
 #include <QTimer>
 
+namespace {
+/** Apply a theme, log warnings
+ * 
+ * Applies @p theme; if @p sizeSpecifier is an integer that is an available
+ * size for the theme, use it rather than the theme's default size.
+ * If @p sizeSpecifier is non-empty but doesn't name an integer that
+ * is an available size, prints an error message to @p ts and uses the
+ * theme's default size instead.
+ */
+bool applyThemeAndSize(const CursorTheme* theme, const QString& sizeSpecifier, QTextStream& ts)
+{
+    auto chosenSize = theme->defaultCursorSize();
+    if (!sizeSpecifier.isEmpty()) {
+        bool ok = false;
+        int specificSize = sizeSpecifier.toInt(&ok);
+        if (ok && theme->availableSizes().contains(specificSize)) {
+            chosenSize = specificSize;
+        } else {
+            ts << i18n("The requested size '%1' is not available, using %2 instead.").arg(sizeSpecifier).arg(chosenSize) << Qt::endl;
+            // Not an error condition
+        }
+    }
+    return applyTheme(theme, chosenSize);
+}
+}
+
 int main(int argc, char **argv)
 {
     // This is a CLI application, but we require at least a QGuiApplication for things
@@ -39,6 +65,7 @@ int main(int argc, char **argv)
         QStringLiteral("cursortheme"),
         i18n("The name of the cursor theme you wish to set for your current Plasma session (passing a full path will only use the last part of the path)"));
     parser->addOption(QCommandLineOption(QStringLiteral("list-themes"), i18n("Show all the themes available on the system (and which is the current theme)")));
+    parser->addOption(QCommandLineOption(QStringLiteral("size"), i18n("Use a specific size, rather than the theme default size"), QStringLiteral("size")));
     parser->process(app);
 
     int errorCode{0};
@@ -68,7 +95,7 @@ int main(int argc, char **argv)
 
             if (theme) {
                 settings->setCursorTheme(theme->name());
-                if (settings->save() && applyTheme(theme, theme->defaultCursorSize())) {
+                if (settings->save() && applyThemeAndSize(theme, parser->value("size"), ts)) {
                     notifyKcmChange(GlobalChangeType::CursorChanged);
                     ts << i18n("Successfully applied the mouse cursor theme %1 to your current Plasma session", theme->title()) << Qt::endl;
                 } else {
