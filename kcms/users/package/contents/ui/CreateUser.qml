@@ -70,9 +70,7 @@ KCM.SimpleKCM {
             text: i18n("Create")
             enabled: !passwordWarning.visible && verifyField.text && passwordField.text && realNameField.text && userNameField.text
             onClicked: {
-                if (kcm.createUser(userNameField.text, realNameField.text, passwordField.text, (usertypeBox.model[usertypeBox.currentIndex]["type"] == "administrator"))) {
-                    kcm.pop()
-                }
+                kcm.mainUi.createUser(userNameField.text, realNameField.text, passwordField.text, (usertypeBox.model[usertypeBox.currentIndex]["type"] == "administrator"))
             }
         }
     }

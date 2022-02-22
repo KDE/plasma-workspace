@@ -36,6 +36,17 @@ KCM.ScrollViewKCM {
     // appending it to image source with '?', we force avatar to reload
     property int avatarVersion: 0
 
+    function createUser(userName, realName, password, isAdministrator) {
+        if (kcm.createUser(userName, realName, password, isAdministrator)) {
+            userList.indexToActivate = userList.count
+        }
+    }
+    function deleteUser(uid, deleteData) {
+        if (kcm.deleteUser(uid, deleteData)) {
+            userList.indexToActivate = userList.count-1
+        }
+    }
+
     Connections {
         target: kcm
         onApply: {
@@ -51,7 +62,16 @@ KCM.ScrollViewKCM {
     view: ListView {
         id: userList
         model: kcm.userModel
+        property int indexToActivate: -1
 
+        onCountChanged: {
+            if (indexToActivate >= 0) {
+                kcm.pop();
+                currentIndex = Math.min(Math.max(0, indexToActivate), count - 1);
+                kcm.push("UserDetailsPage.qml", {user: currentItem.userObject});
+                indexToActivate = -1;
+            }
+        }
         section {
             property: "sectionHeader"
             delegate: Kirigami.ListSectionHeader {
@@ -63,6 +83,7 @@ KCM.ScrollViewKCM {
             text: model.display ? model.display : model.name
             subtitle: model.display ? model.name : ""
             reserveSpaceForSubtitle: true
+            property var userObject: model.userObject
 
             highlighted: index == userList.currentIndex
 
