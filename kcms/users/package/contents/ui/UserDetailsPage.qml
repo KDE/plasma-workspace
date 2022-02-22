@@ -235,6 +235,26 @@ SimpleKCM {
 
         title: i18n("Change Avatar")
 
+        readonly property var colorPalette: [
+            {"name": i18n("It's Nothing"),     "color": "transparent", "dark": false},
+            {"name": i18n("Feisty Flamingo"),  "color": "#E93A9A", "dark": true},
+            {"name": i18n("Dragon's Fruit"),   "color": "#E93D58", "dark": true},
+            {"name": i18n("Sweet Potato"),     "color": "#E9643A", "dark": true},
+            {"name": i18n("Ambient Amber"),    "color": "#EF973C", "dark": false},
+            {"name": i18n("Sparkle Sunbeam"),  "color": "#E8CB2D", "dark": false},
+            {"name": i18n("Lemon-Lime"),       "color": "#B6E521", "dark": false},
+            {"name": i18n("Verdant Charm"),    "color": "#3DD425", "dark": false},
+            {"name": i18n("Mellow Meadow"),    "color": "#00D485", "dark": false},
+            {"name": i18n("Tepid Teal"),       "color": "#00D3B8", "dark": false},
+            {"name": i18n("Plasma Blue"),      "color": "#3DAEE9", "dark": true},
+            {"name": i18n("Pon Purple"),       "color": "#B875DC", "dark": true},
+            {"name": i18n("Bajo Purple"),      "color": "#926EE4", "dark": true},
+            {"name": i18n("Burnt Charcoal"),   "color": "#232629", "dark": true},
+            {"name": i18n("Paper Perfection"), "color": "#EEF1F5", "dark": false},
+            {"name": i18n("Cafétera Brown"),   "color": "#CB775A", "dark": false},
+            {"name": i18n("Rich Hardwood"),    "color": "#6A250E", "dark": true}
+        ]
+
         QQC2.SwipeView {
             id: stackSwitcher
             interactive: false
@@ -253,7 +273,7 @@ SimpleKCM {
                     columnSpacing: Kirigami.Units.smallSpacing
                     columns: {
                         // subtract gridunit from stackswticher width to roughly compensate for slight overlap on tightly fit grids
-                        return Math.floor((stackSwitcher.width - Kirigami.Units.gridUnit) / ((Kirigami.Units.gridUnit * 6) + picturesColumn.columnSpacing))
+                        return Math.floor((stackSwitcher.width - (Kirigami.Units.gridUnit+(Kirigami.Units.largeSpacing*2))) / ((Kirigami.Units.gridUnit * 6) + picturesColumn.columnSpacing))
                     }
 
                     Layout.fillWidth: true
@@ -307,6 +327,21 @@ SimpleKCM {
                         onClicked: stackSwitcher.currentIndex = 1
                     }
 
+                    QQC2.Button {
+                        Layout.preferredHeight: Kirigami.Units.gridUnit * 6
+                        Layout.preferredWidth: Layout.preferredHeight
+
+                        Kirigami.Icon {
+                            source: "user-identity"
+                            color: modelData.dark ? "white" : "black"
+                            width: Kirigami.Units.gridUnit * 4
+                            height: Kirigami.Units.gridUnit * 4
+                            anchors.centerIn: parent
+                        }
+
+                        onClicked: stackSwitcher.currentIndex = 2
+                    }
+
                     Repeater {
                         model: kcm.avatarFiles
                         QQC2.Button {
@@ -356,7 +391,7 @@ SimpleKCM {
                     rowSpacing: Kirigami.Units.smallSpacing
                     columnSpacing: Kirigami.Units.smallSpacing
                     columns: {
-                        return Math.floor((stackSwitcher.width) / (Kirigami.Units.gridUnit * 6))
+                        return Math.floor((stackSwitcher.width - (Kirigami.Units.gridUnit+(Kirigami.Units.largeSpacing*2))) / (Kirigami.Units.gridUnit * 6))
                     }
 
                     Layout.fillWidth: true
@@ -384,24 +419,7 @@ SimpleKCM {
                     }
 
                     Repeater {
-                        model: [
-                            {"name": i18n("Feisty Flamingo"),  "color": "#E93A9A", "dark": true},
-                            {"name": i18n("Dragon's Fruit"),   "color": "#E93D58", "dark": true},
-                            {"name": i18n("Sweet Potato"),     "color": "#E9643A", "dark": true},
-                            {"name": i18n("Ambient Amber"),    "color": "#EF973C", "dark": false},
-                            {"name": i18n("Sparkle Sunbeam"),  "color": "#E8CB2D", "dark": false},
-                            {"name": i18n("Lemon-Lime"),       "color": "#B6E521", "dark": false},
-                            {"name": i18n("Verdant Charm"),    "color": "#3DD425", "dark": false},
-                            {"name": i18n("Mellow Meadow"),    "color": "#00D485", "dark": false},
-                            {"name": i18n("Tepid Teal"),       "color": "#00D3B8", "dark": false},
-                            {"name": i18n("Plasma Blue"),      "color": "#3DAEE9", "dark": true},
-                            {"name": i18n("Pon Purple"),       "color": "#B875DC", "dark": true},
-                            {"name": i18n("Bajo Purple"),      "color": "#926EE4", "dark": true},
-                            {"name": i18n("Burnt Charcoal"),   "color": "#232629", "dark": true},
-                            {"name": i18n("Paper Perfection"), "color": "#EEF1F5", "dark": false},
-                            {"name": i18n("Cafétera Brown"),   "color": "#CB775A", "dark": false},
-                            {"name": i18n("Rich Hardwood"),    "color": "#6A250E", "dark": true}
-                        ]
+                        model: picturesSheet.colorPalette
                         delegate: QQC2.Button {
                             Layout.preferredHeight: Kirigami.Units.gridUnit * 6
                             Layout.preferredWidth: Layout.preferredHeight
@@ -426,6 +444,87 @@ SimpleKCM {
                                     color: modelData.dark ? "white" : "black"
                                     font.pixelSize: Kirigami.Units.gridUnit * 4
                                     text: kcm.initializeString(user.realName)
+                                }
+                            }
+
+                            onClicked: {
+                                colourRectangle.grabToImage(function(result) {
+                                    picturesSheet.close()
+                                    let uri = kcm.plonkImageInTempfile(result.image)
+                                    if (uri != "") {
+                                        usersDetailPage.oldImage = usersDetailPage.user.face
+                                        usersDetailPage.user.face = uri
+                                        usersDetailPage.overrideImage = true
+                                    }
+                                })
+                            }
+                        }
+                    }
+                }
+            }
+            ColumnLayout {
+                id: iconPictures
+                GridLayout {
+                    id: iconColumn
+
+                    rowSpacing: Kirigami.Units.smallSpacing
+                    columnSpacing: Kirigami.Units.smallSpacing
+                    columns: {
+                        return Math.floor((stackSwitcher.width - (Kirigami.Units.gridUnit+(Kirigami.Units.largeSpacing*2))) / (Kirigami.Units.gridUnit * 6))
+                    }
+
+                    Layout.fillWidth: true
+                    Layout.alignment: Qt.AlignHCenter
+                    Layout.leftMargin: Kirigami.Units.largeSpacing
+                    Layout.rightMargin: Kirigami.Units.largeSpacing
+
+                    QQC2.Button {
+                        Layout.preferredHeight: Kirigami.Units.gridUnit * 6
+                        Layout.preferredWidth: Layout.preferredHeight
+
+                        ColumnLayout {
+                            anchors.centerIn: parent
+
+                            Kirigami.Icon {
+                                width: Kirigami.Units.gridUnit * 4
+                                height: Kirigami.Units.gridUnit * 4
+                                source: "go-previous"
+
+                                Layout.alignment: Qt.AlignHCenter
+                            }
+                        }
+
+                        onClicked: stackSwitcher.currentIndex = 0
+                    }
+
+                    Repeater {
+                        model: picturesSheet.colorPalette
+                        delegate: QQC2.Button {
+                            Layout.preferredHeight: Kirigami.Units.gridUnit * 6
+                            Layout.preferredWidth: Layout.preferredHeight
+
+                            Rectangle {
+                                id: colourRectangle
+
+                                anchors.fill: parent
+                                anchors.margins: Kirigami.Units.smallSpacing
+                                color: modelData.color
+
+                                Rectangle {
+                                    anchors.fill: parent
+                                    visible: !Qt.colorEqual(modelData.color, "transparent")
+                                    gradient: Gradient {
+                                        GradientStop { position: 0.0; color: "transparent" }
+                                        GradientStop { position: 1.0; color: Qt.rgba(0, 0, 0, 0.3) }
+                                    }
+                                }
+
+                                Kirigami.Icon {
+                                    source: "user-identity"
+                                    color: modelData.dark ? "white" : "black"
+                                    width: Kirigami.Units.gridUnit * 4
+                                    height: Kirigami.Units.gridUnit * 4
+                                    anchors.centerIn: parent
                                 }
                             }
 
