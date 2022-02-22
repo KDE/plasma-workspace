@@ -23,6 +23,10 @@ ecm_qt_declare_logging_category(plasmashell HEADER debug.h
                                                CATEGORY_NAME kde.plasmashell
                                                DEFAULT_SEVERITY Info)
 
+ecm_qt_declare_logging_category(plasmashell HEADER screenpool-debug.h
+                                               IDENTIFIER SCREENPOOL
+                                               CATEGORY_NAME kde.plasmashell.screenpool
+                                               DEFAULT_SEVERITY Info)
 set (plasma_shell_SRCS
     alternativeshelper.cpp
     main.cpp
@@ -39,6 +43,7 @@ set (plasma_shell_SRCS
     coronatesthelper.cpp
     strutmanager.cpp
     debug.cpp
+    screenpool-debug.cpp
     screenpool.cpp
     softwarerendernotifier.cpp
     ${scripting_SRC}
@@ -116,4 +121,5 @@ install(FILES
 add_subdirectory(packageplugins)
 if(BUILD_TESTING)
    add_subdirectory(autotests)
+   add_subdirectory(tests)
 endif()

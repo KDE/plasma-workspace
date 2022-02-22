@@ -80,13 +80,15 @@ void PrimaryOutputWatcher::setupRegistry()
         return;
     }
 
+    // Asking for primaryOutputName() before this happened, will return qGuiApp->primaryScreen()->name() anyways, so set it so the primaryOutputNameChange will
+    // have parameters that are coherent
+    m_primaryOutputName = qGuiApp->primaryScreen()->name();
     m_registry = new KWayland::Client::Registry(this);
     connect(m_registry, &KWayland::Client::Registry::interfaceAnnounced, this, [this](const QByteArray &interface, quint32 name, quint32 version) {
         if (interface == WaylandPrimaryOutput::interface()->name) {
             auto m_outputManagement = new WaylandPrimaryOutput(m_registry->registry(), name, version, this);
             connect(m_outputManagement, &WaylandPrimaryOutput::primaryOutputChanged, this, [this](const QString &outputName) {
                 m_primaryOutputWayland = outputName;
-
                 // Only set the outputName when there's a QScreen attached to it
                 if (screenForName(outputName)) {
                     setPrimaryOutputName(outputName);
@@ -146,7 +148,9 @@ QScreen *PrimaryOutputWatcher::primaryScreen() const
 {
     auto screen = screenForName(m_primaryOutputName);
     if (!screen) {
+#ifdef PLASMASHELL
         qCWarning(PLASMASHELL) << "could not find primary screen" << m_primaryOutputName;
+#endif
         return qGuiApp->primaryScreen();
     }
     return screen;
