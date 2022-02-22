@@ -159,7 +159,23 @@ MouseArea {
                 }
             }
 
-            delegate: ItemLoader {}
+            delegate: ItemLoader {
+                id: delegate
+                // We need to recalculate the stacking order of the z values due to how keyboard navigation works
+                // the tab order depends exclusively from this, so we redo it as the position in the list
+                // ensuring tab navigation focuses the expected items
+                Component.onCompleted: {
+                    let item = tasksGrid.itemAtIndex(index - 1);
+                    if (item) {
+                        plasmoid.nativeInterface.stackItemBefore(delegate, item)
+                    } else {
+                        item = tasksGrid.itemAtIndex(index + 1);
+                    }
+                    if (item) {
+                        plasmoid.nativeInterface.stackItemAfter(delegate, item)
+                    }
+                }
+            }
 
             add: Transition {
                 enabled: itemSize > 0

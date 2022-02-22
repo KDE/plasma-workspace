@@ -366,6 +366,22 @@ void SystemTray::stopApplet(const QString &pluginId)
     }
 }
 
+void SystemTray::stackItemBefore(QQuickItem *newItem, QQuickItem *beforeItem)
+{
+    if (!newItem || !beforeItem) {
+        return;
+    }
+    newItem->stackBefore(beforeItem);
+}
+
+void SystemTray::stackItemAfter(QQuickItem *newItem, QQuickItem *afterItem)
+{
+    if (!newItem || !afterItem) {
+        return;
+    }
+    newItem->stackAfter(afterItem);
+}
+
 K_PLUGIN_CLASS_WITH_JSON(SystemTray, "package/metadata.json")
 
 #include "systemtray.moc"

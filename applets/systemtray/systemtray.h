@@ -67,6 +67,13 @@ public:
      */
     Q_INVOKABLE bool isSystemTrayApplet(const QString &appletId);
 
+    /**
+     * Needed to preserve keyboard navigation
+     */
+    Q_INVOKABLE void stackItemBefore(QQuickItem *newItem, QQuickItem *beforeItem);
+
+    Q_INVOKABLE void stackItemAfter(QQuickItem *newItem, QQuickItem *afterItem);
+
 private Q_SLOTS:
     // synchronizes with configuration and deletes not allowed applets
     void onEnabledAppletsChanged();

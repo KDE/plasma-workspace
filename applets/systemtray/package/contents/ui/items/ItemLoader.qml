@@ -9,6 +9,7 @@ import QtQuick 2.0
 Loader {
     id: itemLoader
 
+    z: x
     property var itemModel: model
     onActiveFocusChanged: {
         if (activeFocus && item) {
