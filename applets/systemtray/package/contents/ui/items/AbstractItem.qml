@@ -117,9 +117,6 @@ PlasmaCore.ToolTipArea {
             }
             abstractItem.hideImmediately()
             abstractItem.pressed(mouse)
-            if (mouse.button === Qt.RightButton) {
-                abstractItem.contextMenu(mouse);
-            }
         }
         onPressAndHold: if (mouse.button === Qt.LeftButton) {
             abstractItem.contextMenu(mouse)
