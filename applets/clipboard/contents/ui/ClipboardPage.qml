@@ -16,12 +16,6 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 Menu {
     id: clipboardMenu
     Keys.onPressed: {
-        function goToCurrent() {
-            clipboardMenu.view.positionViewAtIndex(clipboardMenu.view.currentIndex, ListView.Contain);
-            if (clipboardMenu.view.currentIndex != -1) {
-                clipboardMenu.view.currentItem.forceActiveFocus();
-            }
-        }
         function forwardToFilter() {
             if (event.text !== "" && !filter.activeFocus) {
                 clipboardMenu.view.currentIndex = -1
@@ -40,24 +34,6 @@ Menu {
             return;
         }
         switch(event.key) {
-            case Qt.Key_Up: {
-                if (clipboardMenu.view.currentIndex == 0) {
-                    clipboardMenu.view.currentIndex = -1;
-                    filter.forceActiveFocus();
-                    filter.selectAll();
-                } else {
-                    clipboardMenu.view.decrementCurrentIndex();
-                    goToCurrent();
-                }
-                event.accepted = true;
-                break;
-            }
-            case Qt.Key_Down: {
-                clipboardMenu.view.incrementCurrentIndex();
-                goToCurrent();
-                event.accepted = true;
-                break;
-            }
             case Qt.Key_Enter:
             case Qt.Key_Return: {
                 if (clipboardMenu.view.currentIndex >= 0) {
@@ -121,6 +97,8 @@ Menu {
 
                 inputMethodHints: Qt.ImhNoPredictiveText
 
+                Keys.onUpPressed: clipboardMenu.arrowKeyPressed(event)
+                Keys.onDownPressed: clipboardMenu.arrowKeyPressed(event)
 
                 Connections {
                     target: main
@@ -179,5 +157,43 @@ Menu {
     onAction: {
         clipboardSource.service(uuid, "action")
         clipboardMenu.view.currentIndex = 0
+    }
+
+    Component.onCompleted: {
+        // Intercept up/down key to prevent ListView from accepting the key event.
+        clipboardMenu.view.Keys.upPressed.connect(clipboardMenu.arrowKeyPressed);
+        clipboardMenu.view.Keys.downPressed.connect(clipboardMenu.arrowKeyPressed);
+    }
+
+    function goToCurrent() {
+        clipboardMenu.view.positionViewAtIndex(clipboardMenu.view.currentIndex, ListView.Contain);
+        if (clipboardMenu.view.currentIndex !== -1) {
+            clipboardMenu.view.currentItem.forceActiveFocus();
+        }
+    }
+
+    function arrowKeyPressed(event) {
+        switch (event.key) {
+        case Qt.Key_Up: {
+            if (clipboardMenu.view.currentIndex === 0) {
+                clipboardMenu.view.currentIndex = -1;
+                filter.forceActiveFocus();
+                filter.selectAll();
+            } else {
+                clipboardMenu.view.decrementCurrentIndex();
+                goToCurrent();
+            }
+            event.accepted = true;
+            break;
+        }
+        case Qt.Key_Down: {
+            clipboardMenu.view.incrementCurrentIndex();
+            goToCurrent();
+            event.accepted = true;
+            break;
+        }
+        default:
+            break;
+        }
     }
 }
