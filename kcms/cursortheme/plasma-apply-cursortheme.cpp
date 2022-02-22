@@ -78,8 +78,8 @@ int main(int argc, char **argv)
         if (requestedTheme.contains(dirSplit)) {
             QStringList splitTheme = requestedTheme.split(dirSplit, Qt::SkipEmptyParts);
             // Cursor themes installed through KNewStuff will commonly be given an installed files entry
-            // which has the main directory name and an asterix to say the cursors are all in that directory,
-            // and since one of the main purposes of this tool is to allow adopting things from a kns dialog,
+            // which has the main directory name and an asterisk to say the cursors are all in that directory,
+            // and since one of the main purposes of this tool is to allow adopting things from a KNS dialog,
             // we handle that little weirdness here.
             splitTheme.removeAll(QStringLiteral("*"));
             requestedTheme = splitTheme.last();
