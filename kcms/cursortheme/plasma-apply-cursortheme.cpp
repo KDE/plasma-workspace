@@ -93,11 +93,11 @@ int main(int argc, char **argv)
         ts << i18n("You have the following mouse cursor themes on your system:") << Qt::endl;
         for (int i = 0; i < model->rowCount(); ++i) {
             const CursorTheme *theme = model->theme(model->index(i, 0));
+            ts << QString(" * %1 [%2]").arg(theme->title()).arg(theme->name());
             if (settings->cursorTheme() == theme->name()) {
-                ts << QString(" * %1 (%2 - current theme for this Plasma session)").arg(theme->title()).arg(theme->name()) << Qt::endl;
-            } else {
-                ts << QString(" * %1 (%2)").arg(theme->title()).arg(theme->name()) << Qt::endl;
-            }
+                ts << QChar(' ') << i18n("(Current theme for this Plasma session)");
+            } 
+            ts << Qt::endl;
         }
     } else {
         parser->showHelp();
