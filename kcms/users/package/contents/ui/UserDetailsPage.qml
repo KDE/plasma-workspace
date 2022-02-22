@@ -187,18 +187,14 @@ SimpleKCM {
                         text: i18n("Delete files")
                         icon.name: "edit-delete-shred"
                         onClicked: {
-                            if (kcm.deleteUser(usersDetailPage.user.uid, true)) {
-                                kcm.pop()
-                            }
+                            kcm.mainUi.deleteUser(usersDetailPage.user.uid, true)
                         }
                     }
                     QQC2.MenuItem {
                         text: i18n("Keep files")
                         icon.name: "document-multiple"
                         onClicked: {
-                            if (kcm.deleteUser(usersDetailPage.user.uid, false)) {
-                                kcm.pop()
-                            }
+                            kcm.mainUi.deleteUser(usersDetailPage.user.uid, false)
                         }
                     }
                 }
