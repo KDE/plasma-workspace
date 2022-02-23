@@ -703,8 +703,9 @@ void ShellCorona::primaryScreenChanged(QScreen *oldPrimary, QScreen *newPrimary)
     // when the appearance of a new primary screen *moves*
     // the position of the now secondary, the two screens will appear overlapped for an instant, and a spurious output redundant would happen here if checked
     // immediately
+#ifndef NDEBUG
     m_invariantsTimer.start();
-
+#endif
     // swap order in m_desktopViewForScreen
     if (m_desktopViewForScreen.contains(oldPrimary) && m_desktopViewForScreen.contains(newPrimary)) {
         DesktopView *primaryDesktop = m_desktopViewForScreen.value(oldPrimary);
@@ -1102,8 +1103,9 @@ void ShellCorona::handleScreenRemoved(QScreen *screen)
     if (DesktopView *v = desktopForScreen(screen)) {
         removeDesktop(v);
     }
-
+#ifndef NDEBUG
     m_invariantsTimer.start();
+#endif
 }
 
 void ShellCorona::addOutput(QScreen *screen)
@@ -1114,9 +1116,9 @@ void ShellCorona::addOutput(QScreen *screen)
         return;
     }
     Q_ASSERT(!screen->geometry().isNull());
-
+#ifndef NDEBUG
     connect(screen, &QScreen::geometryChanged, &m_invariantsTimer, static_cast<void (QTimer::*)()>(&QTimer::start), Qt::UniqueConnection);
-
+#endif
     int insertPosition = m_screenPool->id(screen->name());
     Q_ASSERT(insertPosition >= 0);
 
@@ -1160,8 +1162,9 @@ void ShellCorona::addOutput(QScreen *screen)
 
     Q_EMIT availableScreenRectChanged();
     Q_EMIT screenAdded(m_screenPool->id(screen->name()));
-
+#ifndef NDEBUG
     m_invariantsTimer.start();
+#endif
 }
 
 void ShellCorona::checkAllDesktopsUiReady(bool ready)

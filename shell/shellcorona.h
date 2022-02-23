@@ -243,8 +243,9 @@ private:
 
     QTimer m_waitingPanelsTimer;
     QTimer m_appConfigSyncTimer;
+#ifndef NDEBUG
     QTimer m_invariantsTimer;
-
+#endif
     KWayland::Client::PlasmaShell *m_waylandPlasmaShell;
     bool m_closingDown : 1;
     QString m_testModeLayout;
