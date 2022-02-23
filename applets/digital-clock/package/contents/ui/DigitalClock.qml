@@ -391,6 +391,7 @@ Item {
 
                 fontSizeMode: Text.Fit
                 minimumPixelSize: 1
+                wrapMode: Text.WordWrap
             }
 
             AnchorChanges {
