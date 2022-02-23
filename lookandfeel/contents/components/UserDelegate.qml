@@ -54,11 +54,9 @@ Item {
 
     Item {
         id: imageSource
-        anchors {
-            bottom: usernameDelegate.top
-            bottomMargin: PlasmaCore.Units.largeSpacing
-            horizontalCenter: parent.horizontalCenter
-        }
+        anchors.top: parent.top
+        anchors.horizontalCenter: parent.horizontalCenter
+
         Behavior on width {
             PropertyAnimation {
                 from: faceSize
@@ -88,11 +86,8 @@ Item {
     }
 
     ShaderEffect {
-        anchors {
-            bottom: usernameDelegate.top
-            bottomMargin: PlasmaCore.Units.largeSpacing
-            horizontalCenter: parent.horizontalCenter
-        }
+        anchors.top: parent.top
+        anchors.horizontalCenter: parent.horizontalCenter
 
         width: imageSource.width
         height: imageSource.height
@@ -152,16 +147,18 @@ Item {
     PlasmaComponents3.Label {
         id: usernameDelegate
 
+        anchors.top: imageSource.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+
         // Make it bigger than other fonts to match the scale of the avatar better
         font.pointSize: wrapper.fontSize + 4
-        anchors {
-            bottom: parent.bottom
-            horizontalCenter: parent.horizontalCenter
-        }
+
         width: constrainText ? parent.width : implicitWidth
         text: wrapper.name
         style: softwareRendering ? Text.Outline : Text.Normal
         styleColor: softwareRendering ? PlasmaCore.ColorScope.backgroundColor : "transparent" //no outline, doesn't matter
+        wrapMode: Text.WordWrap
+        maximumLineCount: wrapper.constrainText ? 3 : 1
         elide: Text.ElideRight
         horizontalAlignment: Text.AlignHCenter
         //make an indication that this has active focus, this only happens when reached with keyboard navigation
