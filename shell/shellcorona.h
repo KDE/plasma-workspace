@@ -201,7 +201,7 @@ private Q_SLOTS:
     void populateAddPanelsMenu();
 
     void addOutput(QScreen *screen);
-    void primaryOutputChanged();
+    void primaryScreenChanged(QScreen *oldScreen, QScreen *newScreen);
 
     void panelContainmentDestroyed(QObject *cont);
     void handleScreenRemoved(QScreen *screen);
@@ -211,8 +211,6 @@ private Q_SLOTS:
 private:
     void updateStruts();
     void configurationChanged(const QString &path);
-    bool isOutputRedundant(QScreen *screen) const;
-    void reconsiderOutputs();
     QList<PanelView *> panelsForScreen(QScreen *screen) const;
     DesktopView *desktopForScreen(QScreen *screen) const;
     void setupWaylandIntegration();
@@ -231,9 +229,10 @@ private:
     ScreenPool *m_screenPool;
     QString m_shell;
     KActivities::Controller *m_activityController;
-    // map from screen number to desktop view, qmap as order is important
-    QMap<int, DesktopView *> m_desktopViewforId;
     QHash<const Plasma::Containment *, PanelView *> m_panelViews;
+    // map from QScreen to desktop view
+    QHash<const QScreen *, DesktopView *> m_desktopViewForScreen;
+    QHash<const Plasma::Containment *, int> m_pendingScreenChanges;
     KConfigGroup m_desktopDefaultsConfig;
     KConfigGroup m_lnfDefaultsConfig;
     QList<Plasma::Containment *> m_waitingPanels;
@@ -241,12 +240,12 @@ private:
     QAction *m_addPanelAction;
     QScopedPointer<QMenu> m_addPanelsMenu;
     KPackage::Package m_lookAndFeelPackage;
-    QSet<QScreen *> m_redundantOutputs;
 
     QTimer m_waitingPanelsTimer;
     QTimer m_appConfigSyncTimer;
-    QTimer m_reconsiderOutputsTimer;
-
+#ifndef NDEBUG
+    QTimer m_invariantsTimer;
+#endif
     KWayland::Client::PlasmaShell *m_waylandPlasmaShell;
     bool m_closingDown : 1;
     QString m_testModeLayout;

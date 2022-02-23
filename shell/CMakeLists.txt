@@ -23,6 +23,11 @@ ecm_qt_declare_logging_category(plasmashell HEADER debug.h
                                                CATEGORY_NAME kde.plasmashell
                                                DEFAULT_SEVERITY Info)
 
+ecm_qt_declare_logging_category(plasmashell HEADER screenpool-debug.h
+                                               IDENTIFIER SCREENPOOL
+                                               CATEGORY_NAME kde.plasmashell.screenpool
+                                               DEFAULT_SEVERITY Info)
+
 set (plasma_shell_SRCS
     alternativeshelper.cpp
     main.cpp
@@ -31,6 +36,7 @@ set (plasma_shell_SRCS
     desktopview.cpp
     panelview.cpp
     panelconfigview.cpp
+    primaryoutputwatcher.cpp
     panelshadows.cpp
     shellcorona.cpp
     standaloneappcorona.cpp
@@ -38,6 +44,7 @@ set (plasma_shell_SRCS
     coronatesthelper.cpp
     strutmanager.cpp
     debug.cpp
+    screenpool-debug.cpp
     screenpool.cpp
     softwarerendernotifier.cpp
     ${scripting_SRC}
@@ -49,6 +56,10 @@ if (TARGET KUserFeedbackCore)
         userfeedback.cpp
     )
 endif()
+
+ecm_add_qtwayland_client_protocol(plasma_shell_SRCS
+    PROTOCOL ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-primary-output-v1.xml
+    BASENAME kde-primary-output-v1 )
 
 set(krunner_xml ${plasma-workspace_SOURCE_DIR}/krunner/dbus/org.kde.krunner.App.xml)
 qt_add_dbus_interface(plasma_shell_SRCS ${krunner_xml} krunner_interface)
@@ -79,6 +90,7 @@ target_link_libraries(plasmashell
  KF5::WaylandClient
  KF5::Notifications
  PW::KWorkspace
+ Wayland::Client
 )
 if (TARGET KUserFeedbackCore)
     target_link_libraries(plasmashell KUserFeedbackCore)
