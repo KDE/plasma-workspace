@@ -52,11 +52,18 @@ FocusScope {
 
     default property alias _children: innerLayout.children
 
+    // FIXME: move this component into a layout, rather than abusing
+    // anchors and implicitly relying on other components' built-in
+    // whitespace to avoid items being overlapped.
     UserList {
         id: userListView
         visible: showUserList && y > 0
         anchors {
             bottom: parent.verticalCenter
+            // We only need an extra bottom margin when text is constrained,
+            // since only in this case can the username label be a multi-line
+            // string that would otherwise overflow.
+            bottomMargin: constrainText ? PlasmaCore.Units.gridUnit * 3 : 0
             left: parent.left
             right: parent.right
         }

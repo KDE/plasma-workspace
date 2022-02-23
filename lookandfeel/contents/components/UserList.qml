@@ -12,6 +12,7 @@ ListView {
     readonly property string selectedUser: currentItem ? currentItem.userName : ""
     readonly property int userItemWidth: PlasmaCore.Units.gridUnit * 8
     readonly property int userItemHeight: PlasmaCore.Units.gridUnit * 8
+    readonly property bool constrainText: count > 1
     property int fontSize: PlasmaCore.Theme.defaultFont.pointSize + 2
 
     implicitHeight: userItemHeight
@@ -72,7 +73,7 @@ ListView {
         height: userItemHeight
 
         //if we only have one delegate, we don't need to clip the text as it won't be overlapping with anything
-        constrainText: ListView.view.count > 1
+        constrainText: view.constrainText
 
         isCurrent: ListView.isCurrentItem
 
