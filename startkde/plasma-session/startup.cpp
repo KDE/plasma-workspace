@@ -246,6 +246,7 @@ bool Startup::startDetached(const QString &program, const QStringList &args)
 
 bool Startup::startDetached(QProcess *process)
 {
+    process->setProcessChannelMode(QProcess::ForwardedChannels);
     process->start();
     const bool ret = process->waitForStarted();
     if (ret) {
@@ -428,6 +429,7 @@ StartProcessJob::StartProcessJob(const QString &process, const QStringList &args
 {
     m_process->setProgram(process);
     m_process->setArguments(args);
+    m_process->setProcessChannelMode(QProcess::ForwardedChannels);
     auto env = QProcessEnvironment::systemEnvironment();
     env.insert(additionalEnv);
     m_process->setProcessEnvironment(env);
