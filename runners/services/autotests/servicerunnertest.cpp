@@ -28,6 +28,7 @@ private Q_SLOTS:
     void initTestCase();
     void cleanupTestCase();
 
+    void testExcutableExactMatch();
     void testChromeAppsRelevance();
     void testKonsoleVsYakuakeComment();
     void testSystemSettings();
@@ -62,6 +63,19 @@ void ServiceRunnerTest::initTestCase()
 
 void ServiceRunnerTest::cleanupTestCase()
 {
+}
+
+void ServiceRunnerTest::testExcutableExactMatch()
+{
+    ServiceRunner runner(this, KPluginMetaData(), QVariantList());
+    Plasma::RunnerContext context;
+    context.setQuery(QStringLiteral("Virtual Machine Manager ServiceRunnerTest")); // virt-manager.desktop
+
+    runner.match(context);
+    auto matches = context.matches();
+    QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const Plasma::QueryMatch &match) {
+        return match.text() == QLatin1String("Virtual Machine Manager ServiceRunnerTest") && match.relevance() == 1;
+    }));
 }
 
 void ServiceRunnerTest::testChromeAppsRelevance()

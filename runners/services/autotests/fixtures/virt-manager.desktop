@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Virtual Machine Manager
+Name=Virtual Machine Manager ServiceRunnerTest
 Comment=Manage virtual machines
 Icon=virt-manager
 Exec=virt-manager
