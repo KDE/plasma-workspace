@@ -43,8 +43,6 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
 
     if (targetScreen) {
         setScreenToFollow(targetScreen);
-        setScreen(targetScreen);
-        setGeometry(targetScreen->geometry());
     }
 
     setFlags(Qt::Window | Qt::FramelessWindowHint);
@@ -98,10 +96,6 @@ void DesktopView::adaptToScreen()
         return;
     }
 
-    if (m_oldScreen) {
-        disconnect(m_oldScreen.data(), &QScreen::geometryChanged, this, &DesktopView::screenGeometryChanged);
-    }
-    //     qDebug() << "adapting to screen" << m_screenToFollow->name() << this;
     if (m_oldScreen) {
         disconnect(m_oldScreen.data(), &QScreen::geometryChanged, this, &DesktopView::screenGeometryChanged);
     }
