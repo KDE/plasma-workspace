@@ -33,6 +33,7 @@ private Q_SLOTS:
     void testKonsoleVsYakuakeComment();
     void testSystemSettings();
     void testSystemSettings2();
+    void testJumpListActions();
     void testINotifyUsage();
 };
 
@@ -190,6 +191,33 @@ void ServiceRunnerTest::testSystemSettings2()
     }
     QVERIFY(systemSettingsFound);
     QVERIFY(!foreignSystemSettingsFound);
+}
+
+void ServiceRunnerTest::testJumpListActions()
+{
+    ServiceRunner runner(this, KPluginMetaData(), QVariantList());
+    Plasma::RunnerContext context;
+
+    context.setQuery(QStringLiteral("open a new window")); // org.kde.konsole.desktop
+    runner.match(context);
+    auto matches = context.matches();
+    QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const Plasma::QueryMatch &match) {
+        return match.text() == QLatin1String("Open a New Window - Konsole ServiceRunnerTest") && match.relevance() == 0.55;
+    }));
+
+    context.setQuery(QStringLiteral("new window"));
+    runner.match(context);
+    matches = context.matches();
+    QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const Plasma::QueryMatch &match) {
+        return match.text() == QLatin1String("Open a New Window - Konsole ServiceRunnerTest") && match.relevance() == 0.5;
+    }));
+
+    context.setQuery(QStringLiteral("new windows"));
+    runner.match(context);
+    matches = context.matches();
+    QVERIFY(std::none_of(matches.cbegin(), matches.cend(), [](const Plasma::QueryMatch &match) {
+        return match.text() == QLatin1String("Open a New Window - Konsole ServiceRunnerTest");
+    }));
 }
 
 void ServiceRunnerTest::testINotifyUsage()
