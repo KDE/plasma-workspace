@@ -33,6 +33,7 @@ private Q_SLOTS:
     void testKonsoleVsYakuakeComment();
     void testSystemSettings();
     void testSystemSettings2();
+    void testCategories();
     void testJumpListActions();
     void testINotifyUsage();
 };
@@ -191,6 +192,35 @@ void ServiceRunnerTest::testSystemSettings2()
     }
     QVERIFY(systemSettingsFound);
     QVERIFY(!foreignSystemSettingsFound);
+}
+
+void ServiceRunnerTest::testCategories()
+{
+    ServiceRunner runner(this, KPluginMetaData(), QVariantList());
+    Plasma::RunnerContext context;
+
+    context.setQuery(QStringLiteral("System"));
+    runner.match(context);
+    auto matches = context.matches();
+    QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const Plasma::QueryMatch &match) {
+        return match.text() == QLatin1String("Konsole ServiceRunnerTest") && match.relevance() == 0.64;
+    }));
+
+    // Multiple categories
+    context.setQuery(QStringLiteral("System KDE TerminalEmulator"));
+    runner.match(context);
+    matches = context.matches();
+    QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const Plasma::QueryMatch &match) {
+        return match.text() == QLatin1String("Konsole ServiceRunnerTest") && match.relevance() == 0.64;
+    }));
+
+    // Multiple categories but at least one doesn't match
+    context.setQuery(QStringLiteral("System KDE Office"));
+    runner.match(context);
+    matches = context.matches();
+    QVERIFY(std::none_of(matches.cbegin(), matches.cend(), [](const Plasma::QueryMatch &match) {
+        return match.text() == QLatin1String("Konsole ServiceRunnerTest");
+    }));
 }
 
 void ServiceRunnerTest::testJumpListActions()
