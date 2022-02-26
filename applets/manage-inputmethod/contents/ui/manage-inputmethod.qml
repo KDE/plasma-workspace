@@ -113,8 +113,9 @@ Item {
                 target: Plasmoid.self
                 icon: "arrow-down"
                 toolTipSubText: i18n("Virtual Keyboard: visible")
-                // It's only relevant in tablet mode
-                status: Kirigami.Settings.tabletMode ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
+                // Because the keyboard can become visible with a touch input when
+                // while not explicitly in Touch Mode
+                status: Kirigami.Settings.hasTransientTouchInput ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
             }
             PropertyChanges { target: root; overlays: [] }
         },
