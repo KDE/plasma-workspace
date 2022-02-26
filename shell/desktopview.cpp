@@ -58,6 +58,16 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
 
     QObject::connect(m_activityController, &KActivities::Controller::activityAdded, this, &DesktopView::candidateContainmentsChanged);
     QObject::connect(m_activityController, &KActivities::Controller::activityRemoved, this, &DesktopView::candidateContainmentsChanged);
+    /**
+     * HACK for BUG 450443: x is not aligned with the screen geometry on login
+     * when the primary screen is not on the leftmost place.
+     */
+    connect(this, &QWindow::xChanged, this, [this](int argX) {
+        if (!m_screenToFollow || m_screenToFollow->geometry().x() == argX) {
+            return;
+        }
+        screenGeometryChanged();
+    });
 }
 
 DesktopView::~DesktopView()
