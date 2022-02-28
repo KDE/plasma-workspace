@@ -29,6 +29,8 @@
                 "Name[sk]": "Marco Martin",
                 "Name[sl]": "Marco Martin",
                 "Name[sv]": "Marco Martin",
+                "Name[ta]": "மார்க்கோ மார்ட்டின்",
+                "Name[tr]": "Marco Martin",
                 "Name[uk]": "Marco Martin",
                 "Name[x-test]": "xxMarco Martinxx",
                 "Name[zh_CN]": "Marco Martin"
@@ -62,6 +64,7 @@
         "Description[sl]": "Programček, ki nadzoruje prepustnost in vhod/izhod trdega diska",
         "Description[sv]": "Ett miniprogram som övervakar hårddiskprestanda samt in- och utmatning",
         "Description[ta]": "வட்டின் உள்ளீடு/வெளியீடு மற்றும் செயல் வீதம் ஆகியவற்றை கண்காணிக்கும் பிளாஸ்மாய்ட்",
+        "Description[tr]": "Sabit disk girdisini/çıktısını izleyen bir uygulamacık",
         "Description[uk]": "Аплет, який стежить за даними, які записуються на жорсткий диск та читаються з жорсткого диска",
         "Description[x-test]": "xxAn applet that monitors hard disk throughput and input/outputxx",
         "Description[zh_CN]": "监视硬盘吞吐量和输入输出情况的小程序",

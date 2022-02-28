@@ -28,6 +28,7 @@
                 "Name[sk]": "Chani",
                 "Name[sl]": "Chani",
                 "Name[sv]": "Chani",
+                "Name[tr]": "Chani",
                 "Name[uk]": "Chani",
                 "Name[x-test]": "xxChanixx",
                 "Name[zh_CN]": "Chani"
@@ -60,6 +61,7 @@
         "Description[sl]": "Informacije in zagon vseh programov v programskem meniju.",
         "Description[sv]": "Information om och start av alla program i programmenyn.",
         "Description[ta]": "செயலி பட்டியில் உள்ள செயலிகளை பற்றிய விவரங்களை வழங்கி அவற்றை இயக்கும்.",
+        "Description[tr]": "Uygulama menüsündeki uygulamalar bilgisi ve çalıştırma.",
         "Description[uk]": "Відомості і запуск всіх програма з меню програм.",
         "Description[x-test]": "xxInformation and launching of all applications in the app menu.xx",
         "Description[zh_CN]": "显示信息或启动菜单中的所有应用程序。",

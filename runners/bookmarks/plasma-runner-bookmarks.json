@@ -28,6 +28,7 @@
                 "Name[sk]": "Glenn Ergeerts, Marco Gulino",
                 "Name[sl]": "Glenn Ergeerts, Marco Gulino",
                 "Name[sv]": "Glenn Ergeerts, Marco Gulino",
+                "Name[tr]": "Glenn Ergeerts, Marco Gulino",
                 "Name[uk]": "Glenn Ergeerts, Marco Gulino",
                 "Name[x-test]": "xxGlenn Ergeerts, Marco Gulinoxx",
                 "Name[zh_CN]": "Glenn Ergeerts, Marco Gulino"
@@ -60,6 +61,7 @@
         "Description[sl]": "Najdi in odpri zaznamke",
         "Description[sv]": "Sök efter och öppna bokmärken",
         "Description[ta]": "நினைவுக்குறிகளை கண்டுபிடித்து திறக்கும்",
+        "Description[tr]": "Yer imlerini bul ve aç",
         "Description[uk]": "Знайти і відкрити закладки",
         "Description[x-test]": "xxFind and open bookmarksxx",
         "Description[zh_CN]": "查找并打开书签",
@@ -94,6 +96,7 @@
         "Name[sl]": "Zaznamki",
         "Name[sv]": "Bokmärken",
         "Name[ta]": "நினைவுக்குறிகள்",
+        "Name[tr]": "Yer İmleri",
         "Name[uk]": "Закладки",
         "Name[x-test]": "xxBookmarksxx",
         "Name[zh_CN]": "书签"

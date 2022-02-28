@@ -29,6 +29,8 @@
                 "Name[sk]": "Sebastian Kügler",
                 "Name[sl]": "Sebastian Kügler",
                 "Name[sv]": "Sebastian Kügler",
+                "Name[ta]": "ஸெபாஸ்டியன் கூக்லர்",
+                "Name[tr]": "Sebastian Kügler",
                 "Name[uk]": "Sebastian Kügler",
                 "Name[x-test]": "xxSebastian Küglerxx",
                 "Name[zh_CN]": "Sebastian Kügler"
@@ -61,6 +63,7 @@
         "Description[sl]": "Mesečni prikaz z vašimi sestanki in dogodki",
         "Description[sv]": "Månatlig visning av möten och händelser",
         "Description[ta]": "நிகழ்வுகள் மற்றும் சந்திப்புகளைக் காட்டும் மாத நாள்காட்டி",
+        "Description[tr]": "Randevularınız ve etkinliklerinizle birlikte ay görünümü",
         "Description[uk]": "Показ розкладу місяця із вашими записами зустрічей і подій",
         "Description[x-test]": "xxMonth display with your appointments and eventsxx",
         "Description[zh_CN]": "按月显示您的预约和事件",

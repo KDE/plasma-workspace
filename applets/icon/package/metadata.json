@@ -30,6 +30,7 @@
                 "Name[sl]": "Ekipa Plasme",
                 "Name[sv]": "Plasma-gruppen",
                 "Name[ta]": "பிளாஸ்மா குழு",
+                "Name[tr]": "Plazma Takımı",
                 "Name[uk]": "Команда розробників Плазми",
                 "Name[x-test]": "xxThe Plasma Teamxx",
                 "Name[zh_CN]": "Plasma 开发团队"
@@ -63,6 +64,7 @@
         "Description[sl]": "Generična ikona",
         "Description[sv]": "En generell ikon",
         "Description[ta]": "பொதுவான சின்னம்",
+        "Description[tr]": "Genel bir simge",
         "Description[uk]": "Загальна піктограма",
         "Description[x-test]": "xxA generic iconxx",
         "Description[zh_CN]": "通用图标",

@@ -30,6 +30,7 @@
                 "Name[sl]": "Ekipa Plasme",
                 "Name[sv]": "Plasma-gruppen",
                 "Name[ta]": "பிளாஸ்மா குழு",
+                "Name[tr]": "Plazma Takımı",
                 "Name[uk]": "Команда розробників Плазми",
                 "Name[x-test]": "xxPlasma Teamxx",
                 "Name[zh_CN]": "Plasma 开发团队"
@@ -62,6 +63,7 @@
         "Description[sl]": "Izračunaj izraze",
         "Description[sv]": "Beräkna uttryck",
         "Description[ta]": "கணக்கு போடும்",
+        "Description[tr]": "İfadeleri hesapla",
         "Description[uk]": "Обчислення виразів",
         "Description[x-test]": "xxCalculate expressionsxx",
         "Description[zh_CN]": "计算表达式",

@@ -29,6 +29,8 @@
                 "Name[sk]": "Marco Martin",
                 "Name[sl]": "Marco Martin",
                 "Name[sv]": "Marco Martin",
+                "Name[ta]": "மார்க்கோ மார்ட்டின்",
+                "Name[tr]": "Marco Martin",
                 "Name[uk]": "Marco Martin",
                 "Name[x-test]": "xxMarco Martinxx",
                 "Name[zh_CN]": "Marco Martin"
@@ -59,6 +61,7 @@
         "Description[sl]": "Gradnik sistemskega monitorja, ki prikazuje podatke prenosa podatkov navznoter in navzven",
         "Description[sv]": "Grafisk systemövervakningskomponent som visar nerladdnings- och uppladdningshastighet för data",
         "Description[ta]": "பதிவிறக்க மற்றும் பதிவேற்ற வீதத்தைக் காட்டும் பிளாஸ்மாய்ட்",
+        "Description[tr]": "İndirme ve yükleme veri hızını gösteren sistem izleyicisi araç takımı",
         "Description[uk]": "Віджет нагляду за системою, який показує швидкість отримання та вивантаження даних",
         "Description[x-test]": "xxSystem monitor Widget that shows the download and upload data ratexx",
         "Description[zh_CN]": "显示下载和上传速率的系统监视部件",

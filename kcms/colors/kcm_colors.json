@@ -28,6 +28,8 @@
                 "Name[sk]": "Kai Uwe Broulik",
                 "Name[sl]": "Kai Uwe Broulik",
                 "Name[sv]": "Kai Uwe Broulik",
+                "Name[ta]": "காய் ஊவே புரோலிக்",
+                "Name[tr]": "Kai Uwe Broulik",
                 "Name[uk]": "Kai Uwe Broulik",
                 "Name[x-test]": "xxKai Uwe Broulikxx",
                 "Name[zh_CN]": "Kai Uwe Broulik"
@@ -60,6 +62,7 @@
         "Description[sl]": "Izberite barvno shemo",
         "Description[sv]": "Välj färgschema",
         "Description[ta]": "நிறத்திட்டத்தை தேர்ந்தெடுங்கள்",
+        "Description[tr]": "Renk şeması seçin",
         "Description[uk]": "Вибір схеми кольорів",
         "Description[x-test]": "xxChoose color schemexx",
         "Description[zh_CN]": "选择配色方案",

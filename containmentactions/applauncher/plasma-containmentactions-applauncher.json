@@ -28,6 +28,7 @@
                 "Name[sk]": "Chani",
                 "Name[sl]": "Chani",
                 "Name[sv]": "Chani",
+                "Name[tr]": "Chani",
                 "Name[uk]": "Chani",
                 "Name[x-test]": "xxChanixx",
                 "Name[zh_CN]": "Chani"
@@ -60,6 +61,7 @@
         "Description[sl]": "Preprost zaganjalnik programov",
         "Description[sv]": "Enkel programstart",
         "Description[ta]": "எளிய செயலி ஏவி",
+        "Description[tr]": "Basit uygulama başlatıcı",
         "Description[uk]": "Простий інструмент запуску програм",
         "Description[x-test]": "xxSimple application launcherxx",
         "Description[zh_CN]": "简易程序启动器",

@@ -28,6 +28,7 @@
                 "Name[sk]": "Alex Merry",
                 "Name[sl]": "Alex Merry",
                 "Name[sv]": "Alex Merry",
+                "Name[tr]": "Alex Merry",
                 "Name[uk]": "Alex Merry",
                 "Name[x-test]": "xxAlex Merryxx",
                 "Name[zh_CN]": "Alex Merry"
@@ -61,6 +62,7 @@
         "Description[sl]": "Mesta, kot jih je mogoče videti v upravljalniku datotek in pogovornih oknih za datoteke.",
         "Description[sv]": "Platser som visas i filhanterare och fildialogrutor.",
         "Description[ta]": "கோப்பு உலாவியிலும் கோப்பு சாளரங்களிலும் காட்டப்படும் இடங்கள்",
+        "Description[tr]": "Dosya yöneticisi ve dosya iletişim kutularında görüldüğü üzere Konumlar.",
         "Description[uk]": "Місця, так, як їх показано у менеджері файлів і діалогових вікнах.",
         "Description[x-test]": "xxPlaces, as seen in the file manager and in file dialogs.xx",
         "Description[zh_CN]": "提供文件管理器和文件对话框中显示的常用位置列表。",

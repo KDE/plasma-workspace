@@ -28,6 +28,7 @@
                 "Name[sk]": "Jan Gerrit Marker",
                 "Name[sl]": "Jan Gerrit Marker",
                 "Name[sv]": "Jan Gerrit Marker",
+                "Name[tr]": "Jan Gerrit Marker",
                 "Name[uk]": "Jan Gerrit Marker",
                 "Name[x-test]": "xxJan Gerrit Markerxx",
                 "Name[zh_CN]": "Jan Gerrit Marker"
@@ -59,6 +60,7 @@
         "Description[sl]": "Zaustavi trenutno zagnane programe",
         "Description[sv]": "Stoppa program som för närvarande kör",
         "Description[ta]": "ஓடிக்கொண்டிருக்கும் செயலிகளை நிறுத்தும்",
+        "Description[tr]": "Şu anda çalışan uygulamaları durdur",
         "Description[uk]": "Завершує роботу запущених програм",
         "Description[x-test]": "xxStop applications that are currently runningxx",
         "Description[zh_CN]": "停止正在运行的应用程序",

@@ -28,6 +28,7 @@
                 "Name[sk]": "Chani",
                 "Name[sl]": "Chani",
                 "Name[sv]": "Chani",
+                "Name[tr]": "Chani",
                 "Name[uk]": "Chani",
                 "Name[x-test]": "xxChanixx",
                 "Name[zh_CN]": "Chani"
@@ -60,6 +61,7 @@
         "Description[sl]": "Preklopi na drugo dejavnost",
         "Description[sv]": "Byt till en annan aktivitet",
         "Description[ta]": "வேறு செயல்பாட்டிற்கு தாவு",
+        "Description[tr]": "Başka bir etkinliğe geç",
         "Description[uk]": "Перемкнутися на інший простір дій",
         "Description[x-test]": "xxSwitch to another activityxx",
         "Description[zh_CN]": "切换到另一个活动",

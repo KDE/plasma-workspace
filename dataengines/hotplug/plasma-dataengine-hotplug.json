@@ -30,6 +30,7 @@
                 "Name[sl]": "Ekipa Plasme",
                 "Name[sv]": "Plasma-gruppen",
                 "Name[ta]": "பிளாஸ்மா குழு",
+                "Name[tr]": "Plazma Takımı",
                 "Name[uk]": "Команда розробників Плазми",
                 "Name[x-test]": "xxThe Plasma Teamxx",
                 "Name[zh_CN]": "Plasma 开发团队"
@@ -63,6 +64,7 @@
         "Description[sl]": "Sledi hitro priključljivim napravam, ki se pojavljajo in izginjajo.",
         "Description[sv]": "Följer enheter som kan kopplas in under spänning när de dyker upp och försvinner.",
         "Description[ta]": "எப்போதேனும் செருகி கழற்றக்கூடிய சாதனங்களை கவனிக்கும்.",
+        "Description[tr]": "Takıldıklarında ve çıkarıldıklarında tak çalıştır aygıtlarını izler.",
         "Description[uk]": "Стежить за з’єднанням і від’єднанням портативних пристроїв.",
         "Description[x-test]": "xxTracks hot-pluggable devices as they appear and disappear.xx",
         "Description[zh_CN]": "跟踪热插拔设备的出现与消失。",

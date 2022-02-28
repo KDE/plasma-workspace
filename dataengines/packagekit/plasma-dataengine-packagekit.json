@@ -28,6 +28,7 @@
                 "Name[sk]": "Gregor Taetzner",
                 "Name[sl]": "Gregor Taetzner",
                 "Name[sv]": "Gregor Taetzner",
+                "Name[tr]": "Gregor Taetzner",
                 "Name[uk]": "Gregor Taetzner",
                 "Name[x-test]": "xxGregor Taetznerxx",
                 "Name[zh_CN]": "Gregor Taetzner"
@@ -61,6 +62,7 @@
         "Description[sl]": "Podatkovni pogon PackageKit",
         "Description[sv]": "PackageKit-datagränssnitt",
         "Description[ta]": "PackageKit தரவு நிரல்",
+        "Description[tr]": "PackageKit Veri Motoru",
         "Description[uk]": "Рушій даних PackageKit",
         "Description[x-test]": "xxPackageKit Data Enginexx",
         "Description[zh_CN]": "PackageKit 数据引擎",

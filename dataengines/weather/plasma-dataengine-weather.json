@@ -28,6 +28,7 @@
                 "Name[sk]": "Shawn Starr",
                 "Name[sl]": "Shawn Starr",
                 "Name[sv]": "Shawn Starr",
+                "Name[tr]": "Shawn Starr",
                 "Name[uk]": "Shawn Starr",
                 "Name[x-test]": "xxShawn Starrxx",
                 "Name[zh_CN]": "Shawn Starr"
@@ -60,6 +61,7 @@
         "Description[sk]": "Dáta o počasí z rôznych online zdrojov",
         "Description[sl]": "Podatki o vremenu iz več spletnih virov",
         "Description[sv]": "Väderdata från flera olika nättjänster",
+        "Description[tr]": "Birden fazla çevrimiçi kaynaktan hava durumu verisi",
         "Description[uk]": "Дані щодо погоди з декількох мережевих джерел",
         "Description[x-test]": "xxWeather data from multiple online sourcesxx",
         "Description[zh_CN]": "多个在线信息源提供的天气数据",

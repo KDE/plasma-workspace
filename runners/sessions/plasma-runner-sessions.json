@@ -30,6 +30,7 @@
                 "Name[sl]": "Ekipa Plasme",
                 "Name[sv]": "Plasma-gruppen",
                 "Name[ta]": "பிளாஸ்மா குழு",
+                "Name[tr]": "Plazma Takımı",
                 "Name[uk]": "Команда розробників Плазми",
                 "Name[x-test]": "xxPlasma Teamxx",
                 "Name[zh_CN]": "Plasma 开发团队"
@@ -62,6 +63,7 @@
         "Description[sl]": "Hitro preklapljanje uporabnikov",
         "Description[sv]": "Snabbt användarbyte",
         "Description[ta]": "அமர்வுகளுக்கிடையே வேகமாக தாவ உதவும்",
+        "Description[tr]": "Hızlı kullanıcı değiştirme",
         "Description[uk]": "Швидке перемикання користувачів",
         "Description[x-test]": "xxFast user switchingxx",
         "Description[zh_CN]": "快速用户切换",

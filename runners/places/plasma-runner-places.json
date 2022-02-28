@@ -28,6 +28,8 @@
                 "Name[sk]": "David Edmundson",
                 "Name[sl]": "David Edmundson",
                 "Name[sv]": "David Edmundson",
+                "Name[ta]": "டேவிட் எட்மண்டுஸன்",
+                "Name[tr]": "David Edmundson",
                 "Name[uk]": "David Edmundson",
                 "Name[x-test]": "xxDavid Edmundsonxx",
                 "Name[zh_CN]": "David Edmundson"
@@ -60,6 +62,7 @@
         "Description[sl]": "Odpri naprave in zaznamke map",
         "Description[sv]": "Öppna enhets- och katalogbokmärken",
         "Description[ta]": "சாதன மற்றும் அடைவு நினைவுக்குறிகளை திறக்கும் சேவை",
+        "Description[tr]": "Aygıt ve klasör yer imlerini aç",
         "Description[uk]": "Відкриття пристроїв та закладок на теки",
         "Description[x-test]": "xxOpen devices and folder bookmarksxx",
         "Description[zh_CN]": "打开设备和文件夹书签",

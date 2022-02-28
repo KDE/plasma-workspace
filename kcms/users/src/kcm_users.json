@@ -27,6 +27,7 @@
         "Description[sl]": "Upravljaj uporabniške račune",
         "Description[sv]": "Hantera användarkonton",
         "Description[ta]": "பயனர் கணக்குகளை நிர்வகியுங்கள்",
+        "Description[tr]": "Kullanıcı hesaplarını yönetin",
         "Description[uk]": "Керування обліковими записами",
         "Description[x-test]": "xxManage user accountsxx",
         "Description[zh_CN]": "管理用户帐户",
@@ -60,6 +61,7 @@
         "Name[sl]": "Uporabniki",
         "Name[sv]": "Användare",
         "Name[ta]": "பயனர்கள்",
+        "Name[tr]": "Kullanıcılar",
         "Name[uk]": "Користувачі",
         "Name[x-test]": "xxUsersxx",
         "Name[zh_CN]": "用户"

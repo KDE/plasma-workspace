@@ -28,6 +28,7 @@
                 "Name[sk]": "Chani",
                 "Name[sl]": "Chani",
                 "Name[sv]": "Chani",
+                "Name[tr]": "Chani",
                 "Name[uk]": "Chani",
                 "Name[x-test]": "xxChanixx",
                 "Name[zh_CN]": "Chani"
@@ -59,6 +60,7 @@
         "Description[sl]": "Prikaži seznam oken kamor se je mogoče preklopiti",
         "Description[sv]": "Visa en lista med fönster att byta till",
         "Description[ta]": "தாவுவதற்காக சாளரங்களை பட்டியலிடு",
+        "Description[tr]": "Geçmek için pencereler listesini göster",
         "Description[uk]": "Показує список вікон для перемикання",
         "Description[x-test]": "xxShow a list of windows to switch toxx",
         "Description[zh_CN]": "显示可供切换的窗口列表",

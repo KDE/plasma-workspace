@@ -27,6 +27,7 @@
         "Description[sl]": "Programom nudi dostop do sistemskega časovnega pasu",
         "Description[sv]": "Tillhandahåller systemets tidszon till program",
         "Description[ta]": "கணினியின் கால மண்டலத்தை செயலிகளுக்கு தெரியப்படுத்தும்",
+        "Description[tr]": "Sistem zaman dilimini uygulamalara sunar",
         "Description[uk]": "Надає дані щодо часового поясу системи програмам",
         "Description[x-test]": "xxProvides the system's time zone to applicationsxx",
         "Description[zh_CN]": "为应用程序提供系统时区信息",

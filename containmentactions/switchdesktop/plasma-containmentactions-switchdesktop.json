@@ -28,6 +28,7 @@
                 "Name[sk]": "Chani",
                 "Name[sl]": "Chani",
                 "Name[sv]": "Chani",
+                "Name[tr]": "Chani",
                 "Name[uk]": "Chani",
                 "Name[x-test]": "xxChanixx",
                 "Name[zh_CN]": "Chani"
@@ -60,6 +61,7 @@
         "Description[sl]": "Preklopi na drugo navidezno namizje",
         "Description[sv]": "Byt till ett annat virtuellt skrivbord",
         "Description[ta]": "வேறு பணிமேடைக்குத் தாவு",
+        "Description[tr]": "Başka bir sanal masaüstüne geç",
         "Description[uk]": "Перемкнутися на іншу віртуальну стільницю",
         "Description[x-test]": "xxSwitch to another virtual desktopxx",
         "Description[zh_CN]": "切换到另一个虚拟桌面",

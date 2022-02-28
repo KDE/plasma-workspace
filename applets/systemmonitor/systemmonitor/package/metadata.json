@@ -29,6 +29,8 @@
                 "Name[sk]": "Marco Martin",
                 "Name[sl]": "Marco Martin",
                 "Name[sv]": "Marco Martin",
+                "Name[ta]": "மார்க்கோ மார்ட்டின்",
+                "Name[tr]": "Marco Martin",
                 "Name[uk]": "Marco Martin",
                 "Name[x-test]": "xxMarco Martinxx",
                 "Name[zh_CN]": "Marco Martin"
@@ -60,6 +62,7 @@
         "Description[sl]": "Prikaže nastavljiv grafikon sistemskega monitorja senzorja",
         "Description[sv]": "Visar ett anpassningsbart diagram av en systemövervakningssensor",
         "Description[ta]": "ஏதாவதொரு கணினி கண்காணிப்பு உணரியைக் காட்டும்",
+        "Description[tr]": "Sistem izleyicisi sensörünün yapılandırılabilir bir grafiğini görüntüler",
         "Description[uk]": "Показує придатну до налаштовування діаграму на основі даних датчика нагляду за системою",
         "Description[x-test]": "xxDisplays a configurable chart of a system monitor sensorxx",
         "Description[zh_CN]": "显示系统监视器的可配置图表",

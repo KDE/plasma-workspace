@@ -29,6 +29,8 @@
                 "Name[sk]": "Marco Martin",
                 "Name[sl]": "Marco Martin",
                 "Name[sv]": "Marco Martin",
+                "Name[ta]": "மார்க்கோ மார்ட்டின்",
+                "Name[tr]": "Marco Martin",
                 "Name[uk]": "Marco Martin",
                 "Name[x-test]": "xxMarco Martinxx",
                 "Name[zh_CN]": "Marco Martin"
@@ -62,6 +64,7 @@
         "Description[sl]": "Ozadje s preprosto barvo",
         "Description[sv]": "Skrivbordsunderlägg med enkel färg",
         "Description[ta]": "ஒரே ஒரு நிறத்தை கொண்ட பின்புலம்",
+        "Description[tr]": "Düz renk duvar kağıdı",
         "Description[uk]": "Звичайне одноколірне тло",
         "Description[x-test]": "xxPlain color wallpaperxx",
         "Description[zh_CN]": "纯色壁纸",

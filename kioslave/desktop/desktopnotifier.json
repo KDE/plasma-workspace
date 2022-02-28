@@ -27,6 +27,7 @@
         "Description[sl]": "Nadzira spremembe v mapah",
         "Description[sv]": "Övervakar om kataloger ändras",
         "Description[ta]": "அடைவுகளில் மாற்றங்கள் உள்ளனவா என்று கண்காணிக்கும்",
+        "Description[tr]": "Dizinleri değişiklikler için izler",
         "Description[uk]": "Веде спостереження за змінами у каталогах",
         "Description[x-test]": "xxMonitors directories for changesxx",
         "Description[zh_CN]": "监视目录的更改",

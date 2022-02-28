@@ -28,6 +28,7 @@
                 "Name[sk]": "Dario Freddi",
                 "Name[sl]": "Dario Freddi",
                 "Name[sv]": "Dario Freddi",
+                "Name[tr]": "Dario Freddi",
                 "Name[uk]": "Dario Freddi",
                 "Name[x-test]": "xxDario Freddixx",
                 "Name[zh_CN]": "Dario Freddi"
@@ -60,6 +61,7 @@
         "Description[sl]": "Osnovna dejanja upravljanja z energijo",
         "Description[sv]": "Grundläggande strömsparfunktioner",
         "Description[ta]": "அடிப்படை ஆற்றல் மேலாண்மை செயல்கள்",
+        "Description[tr]": "Temel Güç Yönetimi İşlemleri",
         "Description[uk]": "Керування базовими операціями з керування живленням",
         "Description[x-test]": "xxBasic Power Management Operationsxx",
         "Description[zh_CN]": "基本电源管理操作",

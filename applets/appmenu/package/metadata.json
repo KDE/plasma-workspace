@@ -28,6 +28,8 @@
                 "Name[sk]": "Kai Uwe Broulik",
                 "Name[sl]": "Kai Uwe Broulik",
                 "Name[sv]": "Kai Uwe Broulik",
+                "Name[ta]": "காய் ஊவே புரோலிக்",
+                "Name[tr]": "Kai Uwe Broulik",
                 "Name[uk]": "Kai Uwe Broulik",
                 "Name[x-test]": "xxKai Uwe Broulikxx",
                 "Name[zh_CN]": "Kai Uwe Broulik"
@@ -60,6 +62,7 @@
         "Description[sl]": "Splošna menijska vrstica na vašem namizju Plasma",
         "Description[sv]": "Global menyrad på Plasmaskrivbordet",
         "Description[ta]": "பணிமேடையிலேயே செயலிகளின் பட்டிகளை காட்டும்",
+        "Description[tr]": "Plazma Masaüstünüzde global menü çubuğu",
         "Description[uk]": "Загальна панель меню у вашій стільниці Плазми",
         "Description[x-test]": "xxGlobal menubar in your Plasma Desktopxx",
         "Description[zh_CN]": "Plasma 桌面上的全局菜单",

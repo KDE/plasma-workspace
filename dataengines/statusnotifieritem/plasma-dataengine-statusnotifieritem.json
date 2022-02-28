@@ -28,6 +28,7 @@
                 "Name[sk]": "Matthieu Gallien",
                 "Name[sl]": "Matthieu Gallien",
                 "Name[sv]": "Matthieu Gallien",
+                "Name[tr]": "Matthieu Gallien",
                 "Name[uk]": "Matthieu Gallien",
                 "Name[x-test]": "xxMatthieu Gallienxx",
                 "Name[zh_CN]": "Matthieu Gallien"
@@ -60,6 +61,7 @@
         "Description[sl]": "Pogon za podatke o stanju programov, ki temelji na protokolu obvestilnika o stanju.",
         "Description[sv]": "Gränssnitt för statusinformation om program baserat på protokollet för statusunderrättelser.",
         "Description[ta]": "செயலிகளின் நிலை குறித்த விவரங்களை Status Notifier (SNI) நெறிமுறை மூலம் வழங்கும்.",
+        "Description[tr]": "Uygulamaların durum bilgisi için motor, Durum Bildiricisi protokolü temelli.",
         "Description[uk]": "Рушій даних щодо стану програм, заснований на протоколі сповіщення про стан.",
         "Description[x-test]": "xxEngine for applications' status information, based on the Status Notifier protocol.xx",
         "Description[zh_CN]": "用于提供应用程序状态信息的引擎，基于状态通知协议。",

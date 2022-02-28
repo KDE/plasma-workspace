@@ -28,6 +28,7 @@
                 "Name[sk]": "Chani",
                 "Name[sl]": "Chani",
                 "Name[sv]": "Chani",
+                "Name[tr]": "Chani",
                 "Name[uk]": "Chani",
                 "Name[x-test]": "xxChanixx",
                 "Name[zh_CN]": "Chani"
@@ -60,6 +61,7 @@
         "Description[sl]": "Meni, ki se običajno prikaže ob desnem kliku miške",
         "Description[sv]": "Meny som normalt visas med högerklick",
         "Description[ta]": "வலது-க்ளிக் செய்யும்போது காட்டப்படும் பட்டி",
+        "Description[tr]": "Normalde sağ tıklama ile gösterilen menü",
         "Description[uk]": "Меню, яке буде показано у відповідь на клацання правою кнопкою миші",
         "Description[x-test]": "xxThe menu that normally shows on right-clickxx",
         "Description[zh_CN]": "通常在点击右键时显示的菜单",

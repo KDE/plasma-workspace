@@ -28,6 +28,7 @@
                 "Name[sk]": "Aaron Seigo",
                 "Name[sl]": "Aaron Seigo",
                 "Name[sv]": "Aaron Seigo",
+                "Name[tr]": "Aaron Seigo",
                 "Name[uk]": "Aaron Seigo",
                 "Name[x-test]": "xxAaron Seigoxx",
                 "Name[zh_CN]": "Aaron Seigo"
@@ -61,6 +62,7 @@
         "Description[sl]": "Datum in čas po časovnih pasovih",
         "Description[sv]": "Datum och tid enligt tidszon",
         "Description[ta]": "கால மண்டலத்தை பொறுத்த தேதி மற்றும் நேரம்",
+        "Description[tr]": "Zaman dilimine göre tarih ve saat",
         "Description[uk]": "Дата і час за часовими поясами",
         "Description[x-test]": "xxDate and time by timezonexx",
         "Description[zh_CN]": "根据时区提供日期和时间",

@@ -34,6 +34,7 @@
         "Description[sl]": "Osvežitve poslov (prek programa kuiserver)",
         "Description[sv]": "Uppdateringar av information om programjobb (via kuiserver)",
         "Description[ta]": "செயலி பணி தகவல்கள் (kuiserver மூலம்)",
+        "Description[tr]": "Uygulama görevi güncellemeleri (kuiserver ile)",
         "Description[uk]": "Оновлення завдань програми (через kuiserver)",
         "Description[x-test]": "xxApplication job updates (via kuiserver)xx",
         "Description[zh_CN]": "程序任务更新信息 (通过 kuiserver)",

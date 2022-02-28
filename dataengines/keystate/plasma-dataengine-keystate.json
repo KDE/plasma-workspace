@@ -28,6 +28,7 @@
                 "Name[sk]": "Aaron Seigo",
                 "Name[sl]": "Aaron Seigo",
                 "Name[sv]": "Aaron Seigo",
+                "Name[tr]": "Aaron Seigo",
                 "Name[uk]": "Aaron Seigo",
                 "Name[x-test]": "xxAaron Seigoxx",
                 "Name[zh_CN]": "Aaron Seigo"
@@ -61,6 +62,7 @@
         "Description[sl]": "Stanje spremenilnih tipk tipkovnice in tipk miške",
         "Description[sv]": "Tillstånd för väljartangenter och musknappar",
         "Description[ta]": "விசைப்பலகை மாற்றி விசைகளின் மற்றும் சுட்டி பட்டன்களின் நிலை",
+        "Description[tr]": "Fare ve klavye değiştiricileri durumu",
         "Description[uk]": "Стан модифікаторів клавіатури і кнопок миші",
         "Description[x-test]": "xxKeyboard modifier and mouse buttons statesxx",
         "Description[zh_CN]": "显示键盘修饰健及鼠标按键状态",

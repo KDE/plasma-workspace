@@ -30,6 +30,7 @@
                 "Name[sl]": "Ekipa Plasme",
                 "Name[sv]": "Plasma-gruppen",
                 "Name[ta]": "பிளாஸ்மா குழு",
+                "Name[tr]": "Plazma Takımı",
                 "Name[uk]": "Команда розробників Плазми",
                 "Name[x-test]": "xxPlasma Teamxx",
                 "Name[zh_CN]": "Plasma 开发团队"
@@ -62,6 +63,7 @@
         "Description[sl]": "Najdite programe, nadzorne plošče in storitve",
         "Description[sv]": "Sök efter program, kontrollpaneler och tjänster",
         "Description[ta]": "செயலிகள், கட்டுப்பாடு பலகைகள், மற்றும் சேவைகளை கண்டுபிடிக்கும்",
+        "Description[tr]": "Uygulamaları, denetim panellerini ve hizmetleri bul",
         "Description[uk]": "Знайти програми, панелі керування та служби",
         "Description[x-test]": "xxFind applications, control panels and servicesxx",
         "Description[zh_CN]": "查找应用程序、控制面板和服务",
