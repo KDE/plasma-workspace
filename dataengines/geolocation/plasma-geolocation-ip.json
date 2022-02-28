@@ -26,6 +26,7 @@
         "Description[sl]": "Geolokacija iz naslova IP.",
         "Description[sv]": "Geografisk lokalisering från IP-adress.",
         "Description[ta]": "IP முகவரியிலிருந்து இருப்பிடத்தைக் கண்டுபிடிக்கும்",
+        "Description[tr]": "IP adresinden coğrafi konum.",
         "Description[uk]": "Геопозиціювання за IP-адресою",
         "Description[vi]": "Định vị địa lí từ địa chỉ IP.",
         "Description[x-test]": "xxGeolocation from IP address.xx",

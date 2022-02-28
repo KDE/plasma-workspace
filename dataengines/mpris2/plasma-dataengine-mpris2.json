@@ -32,6 +32,7 @@
         "Description[sl]": "Prikazuje informacije in omogoča nadzor predstavnostnih predvajalnikov prek MPRIS2",
         "Description[sv]": "Tillhandahåller information från och styrning av mediaspelare via MPRIS2",
         "Description[ta]": "MPRIS2 மூலம் ஊடக இயக்கிகளிலிருந்து விவரங்களை பெற்று அவற்றை கட்டுப்படுத்தும்",
+        "Description[tr]": "MPRIS2 kullanarak çoklu ortam oynatıcılarından bilgi sağlar ve onları denetler",
         "Description[uk]": "Надає дані з мультимедійних програвачів та керує ними за допомогою MPRIS2",
         "Description[vi]": "Cung cấp thông tin của và cách điều khiển với các trình phát phương tiện thông qua MPRIS2",
         "Description[x-test]": "xxProvides information from and control over media players via MPRIS2xx",
