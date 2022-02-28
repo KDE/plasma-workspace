@@ -123,7 +123,16 @@ Kirigami.AbstractApplicationWindow {
             })
         }
 
-        Keys.onEscapePressed: root.reject()
         focus: true
+
+        function accept() {
+            const button = dialogButtonBox.standardButton(DialogButtonBox.Ok);
+            if (button && button.enabled) {
+                root.accept()
+            }
+        }
+        Keys.onEnterPressed: accept()
+        Keys.onReturnPressed: accept()
+        Keys.onEscapePressed: root.reject()
     }
 }
