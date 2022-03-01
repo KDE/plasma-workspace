@@ -166,6 +166,9 @@ void TasksModel::Private::initModels()
             updateActivityTaskCounts();
             forceResort();
         }
+        // the active task may have potentially changed, so signal that so that users
+        // will recompute it
+        Q_EMIT q->activeTaskChanged();
     });
 
     QObject::connect(windowTasksModel,
