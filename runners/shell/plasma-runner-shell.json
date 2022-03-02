@@ -45,6 +45,7 @@
         "Description[de]": "Führt Shell-Befehle aus",
         "Description[en_GB]": "Executes shell commands",
         "Description[es]": "Ejecuta órdenes de la consola",
+        "Description[eu]": "Oskoleko («shell») komandoak exekutatzen ditu",
         "Description[fi]": "Suorittaa komentorivikomentoja",
         "Description[fr]": "Exécute des commandes du shell",
         "Description[hu]": "Parancsokat hajt végre terminálban",
