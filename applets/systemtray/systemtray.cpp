@@ -377,6 +377,6 @@ void SystemTray::stackItemAfter(QQuickItem *newItem, QQuickItem *afterItem)
     newItem->stackAfter(afterItem);
 }
 
-K_PLUGIN_CLASS_WITH_JSON(SystemTray, "package/metadata.json")
+K_PLUGIN_CLASS(SystemTray)
 
 #include "systemtray.moc"

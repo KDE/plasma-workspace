@@ -87,6 +87,6 @@ void SystemMonitor::openSystemMonitor()
     job->start();
 }
 
-K_PLUGIN_CLASS_WITH_JSON(SystemMonitor, "package/metadata.json")
+K_PLUGIN_CLASS(SystemMonitor)
 
 #include "systemmonitor.moc"

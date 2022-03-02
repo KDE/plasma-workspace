@@ -1,8 +1,8 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_org.kde.plasma.icon\")
 
-kcoreaddons_add_plugin(plasma_applet_icon SOURCES iconapplet.cpp iconapplet.h INSTALL_NAMESPACE "plasma/applets")
+kcoreaddons_add_plugin(org.kde.plasma.icon SOURCES iconapplet.cpp iconapplet.h INSTALL_NAMESPACE "plasma/applets")
 
-target_link_libraries(plasma_applet_icon
+target_link_libraries(org.kde.plasma.icon
                       KF5::I18n
                       KF5::KIOCore # for OpenFileManagerWindowJob
                       KF5::KIOGui # for FavIconRequestJob
