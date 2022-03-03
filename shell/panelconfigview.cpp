@@ -186,7 +186,8 @@ void PanelConfigView::showEvent(QShowEvent *ev)
     QQuickWindow::showEvent(ev);
 
     KWindowSystem::setType(winId(), NET::Dock);
-    setFlags(Qt::WindowFlags((flags() | Qt::FramelessWindowHint) & (~Qt::WindowDoesNotAcceptFocus)));
+    setFlags(Qt::WindowFlags((flags() | Qt::FramelessWindowHint) & (~Qt::WindowDoesNotAcceptFocus))
+           | Qt::X11BypassWindowManagerHint | Qt::WindowStaysOnTopHint);
     KWindowSystem::setState(winId(), NET::KeepAbove);
     KWindowSystem::forceActiveWindow(winId());
     updateBlurBehindAndContrast();
