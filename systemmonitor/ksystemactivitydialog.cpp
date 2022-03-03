@@ -8,6 +8,8 @@
 
 #include "ksystemactivitydialog.h"
 
+#include "processui/ksysguardprocesslist.h"
+
 #include <QAction>
 #include <QCloseEvent>
 #include <QDBusConnection>
@@ -16,31 +18,36 @@
 #include <QString>
 #include <QVBoxLayout>
 
-#include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
 #include <KWindowSystem>
-#include <QDebug>
 
 KSystemActivityDialog::KSystemActivityDialog(QWidget *parent)
-    : QDialog(parent)
-    , m_processList(nullptr)
+    : KMainWindow(parent)
+    , m_configGroup(KSharedConfig::openConfig()->group("TaskDialog"))
 {
     setWindowTitle(i18n("System Activity"));
     setWindowIcon(QIcon::fromTheme(QStringLiteral("utilities-system-monitor")));
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    mainLayout->addWidget(&m_processList);
-    m_processList.setScriptingEnabled(true);
-    setSizeGripEnabled(true);
+    setAutoSaveSettings();
 
-    // Since we kinda act like an application more than just a Window, map the usual ctrl+Q shortcut to close as well
-    QAction *closeWindow = new QAction(this);
-    closeWindow->setShortcut(QKeySequence::Quit);
-    connect(closeWindow, &QAction::triggered, this, &KSystemActivityDialog::accept);
-    addAction(closeWindow);
+    m_processList = new KSysGuardProcessList;
+    m_processList->setScriptingEnabled(true);
 
-    KConfigGroup cg = KSharedConfig::openConfig()->group("TaskDialog");
-    m_processList.loadSettings(cg);
+    QVBoxLayout *mainLayout = new QVBoxLayout;
+    mainLayout->addWidget(m_processList);
+
+    QWidget *mainWidget = new QWidget;
+    mainWidget->setLayout(mainLayout);
+    setCentralWidget(mainWidget);
+
+    QAction *closeAction = new QAction;
+    closeAction->setShortcuts({ QKeySequence::Quit, Qt::Key_Escape });
+    connect(closeAction, &QAction::triggered, this, &KSystemActivityDialog::close);
+    addAction(closeAction);
+
+    if (m_configGroup.exists()) {
+        m_processList->loadSettings(m_configGroup);
+    }
 
     QDBusConnection con = QDBusConnection::sessionBus();
     con.registerObject(QStringLiteral("/"), this, QDBusConnection::ExportAllSlots);
@@ -56,33 +63,21 @@ void KSystemActivityDialog::run()
 
 void KSystemActivityDialog::setFilterText(const QString &filterText)
 {
-    m_processList.filterLineEdit()->setText(filterText);
-    m_processList.filterLineEdit()->setFocus();
+    m_processList->filterLineEdit()->setText(filterText);
+    m_processList->filterLineEdit()->setFocus();
 }
 
 QString KSystemActivityDialog::filterText() const
 {
-    return m_processList.filterLineEdit()->text();
+    return m_processList->filterLineEdit()->text();
 }
 
 void KSystemActivityDialog::closeEvent(QCloseEvent *event)
 {
-    saveDialogSettings();
-    event->accept();
-}
-
-void KSystemActivityDialog::reject()
-{
-    saveDialogSettings();
-    QDialog::reject();
-}
-
-void KSystemActivityDialog::saveDialogSettings()
-{
-    // When the user closes the dialog, save the process list setup
-    KConfigGroup cg = KSharedConfig::openConfig()->group("TaskDialog");
-    m_processList.saveSettings(cg);
+    m_processList->saveSettings(m_configGroup);
     KSharedConfig::openConfig()->sync();
+
+    KMainWindow::closeEvent(event);
 }
 
 QSize KSystemActivityDialog::sizeHint() const

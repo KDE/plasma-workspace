@@ -28,6 +28,8 @@ int main(int argc, char **argv)
         return 0;
     }
 
-    KSystemActivityDialog dialog;
-    return dialog.exec();
+    KSystemActivityDialog *dialog = new KSystemActivityDialog;
+    dialog->show();
+
+    return app.exec();
 }

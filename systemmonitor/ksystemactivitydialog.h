@@ -8,16 +8,17 @@
 
 #ifndef Q_WS_WIN
 
-#include <QDialog>
+#include <KConfigGroup>
+#include <KMainWindow>
 
-#include "processui/ksysguardprocesslist.h"
+class KSysGuardProcessList;
 
 /** This creates a simple dialog box with a KSysguardProcessList
  *
  *  It remembers the size and position of the dialog, and sets
  *  the dialog to always be over the other windows
  */
-class KSystemActivityDialog : public QDialog
+class KSystemActivityDialog : public KMainWindow
 {
     Q_OBJECT
 public:
@@ -36,16 +37,12 @@ public:
 
     QSize sizeHint() const override;
 
-    /** Save the settings if the user presses the ESC key */
-    void reject() override;
-
 protected:
     /** Save the settings if the user clicks (x) button on the window */
     void closeEvent(QCloseEvent *event) override;
 
 private:
-    void saveDialogSettings();
-
-    KSysGuardProcessList m_processList;
+    KSysGuardProcessList *m_processList = nullptr;
+    KConfigGroup m_configGroup;
 };
 #endif // not Q_WS_WIN
