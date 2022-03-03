@@ -61,6 +61,20 @@ Item {
         }
     }
 
+    property int maximumWidthNumber: {
+        // find widest character between 0 and 9
+        let num = 0;
+        let maximumAdvanceWidth = 0;
+        for (let i = 0; i <= 9; i++) {
+            let advanceWidth = timeMetrics.advanceWidth(i);
+            if (advanceWidth > maximumAdvanceWidth) {
+                maximumAdvanceWidth = advanceWidth;
+                num = i;
+            }
+        }
+        return num;
+    }
+
     onDateFormatChanged: {
         setupLabels();
     }
@@ -544,6 +558,8 @@ Item {
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
         }
+
+        onWidthChanged: Qt.callLater(main.setSizeHelperText)
     }
     /*
      * end: Visible Elements
@@ -567,6 +583,7 @@ Item {
         font.family: timeLabel.font.family
         font.weight: timeLabel.font.weight
         font.italic: timeLabel.font.italic
+        font.pixelSize: PlasmaCore.Theme.smallestFont.pixelSize
     }
 
     // Qt's QLocale does not offer any modular time creating like Klocale did
@@ -604,6 +621,35 @@ Item {
         setupLabels();
     }
 
+    function getMaximumAPLabel() {
+        // replace all placeholders with the widest number (two digits)
+        const format = main.timeFormat.replace(/(h+|m+|s+)/g, "" + maximumWidthNumber + maximumWidthNumber); // make sure maximumWidthNumber is formatted as string
+        // build the time string twice, once with an AM time and once with a PM time
+        let date = new Date(2000, 0, 1, 1, 0, 0);
+        const timeAm = Qt.formatTime(date, format);
+        const advanceWidthAm = timeMetrics.advanceWidth(timeAm);
+        date.setHours(13);
+        const timePm = Qt.formatTime(date, format);
+        const advanceWidthPm = timeMetrics.advanceWidth(timePm);
+
+        return {
+            text: advanceWidthAm > advanceWidthPm ? timeAm : timePm,
+            width: Math.max(advanceWidthAm, advanceWidthPm),
+        };
+    }
+
+    function setSizeHelperText() {
+        // set the sizehelper's text to the widest time string
+        main.timeFormat = main.timeFormat.replace("\nAP", " AP");
+        let timeAPLabel = main.getMaximumAPLabel();
+        if (plasmoid.formFactor === PlasmaCore.Types.Vertical && timeAPLabel.width > contentItem.width) {
+            // Move AP to a new line
+            main.timeFormat = main.timeFormat.replace(" AP", "\nAP");
+            timeAPLabel = main.getMaximumAPLabel();
+        }
+        sizehelper.text = timeAPLabel.text;
+    }
+
     function setupLabels() {
         var showTimezone = main.showLocalTimezone || (plasmoid.configuration.lastSelectedTimezone !== "Local"
                                                         && dataSource.data["Local"]["Timezone City"] !== dataSource.data[plasmoid.configuration.lastSelectedTimezone]["Timezone City"]);
@@ -639,31 +685,7 @@ Item {
             dateLabel.text = "";
         }
 
-        // find widest character between 0 and 9
-        var maximumWidthNumber = 0;
-        var maximumAdvanceWidth = 0;
-        for (var i = 0; i <= 9; i++) {
-            var advanceWidth = timeMetrics.advanceWidth(i);
-            if (advanceWidth > maximumAdvanceWidth) {
-                maximumAdvanceWidth = advanceWidth;
-                maximumWidthNumber = i;
-            }
-        }
-        // replace all placeholders with the widest number (two digits)
-        var format = main.timeFormat.replace(/(h+|m+|s+)/g, "" + maximumWidthNumber + maximumWidthNumber); // make sure maximumWidthNumber is formatted as string
-        // build the time string twice, once with an AM time and once with a PM time
-        var date = new Date(2000, 0, 1, 1, 0, 0);
-        var timeAm = Qt.formatTime(date, format);
-        var advanceWidthAm = timeMetrics.advanceWidth(timeAm);
-        date.setHours(13);
-        var timePm = Qt.formatTime(date, format);
-        var advanceWidthPm = timeMetrics.advanceWidth(timePm);
-        // set the sizehelper's text to the widest time string
-        if (advanceWidthAm > advanceWidthPm) {
-            sizehelper.text = timeAm;
-        } else {
-            sizehelper.text = timePm;
-        }
+        main.setSizeHelperText();
     }
 
     function dateTimeChanged()
