@@ -46,6 +46,27 @@ PlasmaComponents3.ScrollView {
 
         readonly property int itemCount: model.count
 
+        //! This is used in order to identify the minimum required label height in order for all
+        //! labels to be aligned properly at all items. At the same time this approach does not
+        //! enforce labels with 3 lines at all cases so translations that require only one or two
+        //! lines will always look consistent with no too much padding
+        readonly property int minLabelHeight: {
+            var minHeight = 0;
+
+            for(let i in contentItem.children){
+                var gridItem = contentItem.children[i];
+                if (!gridItem || !gridItem.hasOwnProperty("item") || !gridItem.item.hasOwnProperty("labelHeight")) {
+                    continue;
+                }
+
+                if (gridItem.item.labelHeight > minHeight) {
+                    minHeight = gridItem.item.labelHeight;
+                }
+            }
+
+            return minHeight;
+        }
+
         model: PlasmaCore.SortFilterModel {
             sourceModel: plasmoid.nativeInterface.systemTrayModel
             filterRole: "effectiveStatus"
