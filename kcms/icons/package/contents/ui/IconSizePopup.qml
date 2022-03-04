@@ -44,6 +44,8 @@ QtControls.Popup {
 
             QtControls.ItemDelegate { // purely for metrics...
                 id: measureDelegate
+                // without text it has no real height
+                text: "For metrics only"
                 visible: false
             }
 
