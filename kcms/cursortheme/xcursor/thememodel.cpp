@@ -28,7 +28,7 @@
 #endif
 
 CursorThemeModel::CursorThemeModel(QObject *parent)
-    : QAbstractTableModel(parent)
+    : QAbstractListModel(parent)
 {
     insertThemes();
 }
@@ -41,7 +41,7 @@ CursorThemeModel::~CursorThemeModel()
 
 QHash<int, QByteArray> CursorThemeModel::roleNames() const
 {
-    QHash<int, QByteArray> roleNames = QAbstractTableModel::roleNames();
+    QHash<int, QByteArray> roleNames = QAbstractListModel::roleNames();
     roleNames[CursorTheme::DisplayDetailRole] = "description";
     roleNames[CursorTheme::IsWritableRole] = "isWritable";
     roleNames[CursorTheme::PendingDeletionRole] = "pendingDeletion";
@@ -59,30 +59,6 @@ void CursorThemeModel::refreshList()
     insertThemes();
 }
 
-QVariant CursorThemeModel::headerData(int section, Qt::Orientation orientation, int role) const
-{
-    // Only provide text for the headers
-    if (role != Qt::DisplayRole)
-        return QVariant();
-
-    // Horizontal header labels
-    if (orientation == Qt::Horizontal) {
-        switch (section) {
-        case NameColumn:
-            return i18n("Name");
-
-        case DescColumn:
-            return i18n("Description");
-
-        default:
-            return QVariant();
-        }
-    }
-
-    // Numbered vertical header labels
-    return QString::number(section);
-}
-
 QVariant CursorThemeModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid() || index.row() < 0 || index.row() >= list.count())
@@ -92,24 +68,15 @@ QVariant CursorThemeModel::data(const QModelIndex &index, int role) const
 
     // Text label
     if (role == Qt::DisplayRole) {
-        switch (index.column()) {
-        case NameColumn:
-            return theme->title();
-
-        case DescColumn:
-            return theme->description();
-
-        default:
-            return QVariant();
-        }
+        return theme->title();
     }
 
     // Description for the first name column
-    if (role == CursorTheme::DisplayDetailRole && index.column() == NameColumn)
+    if (role == CursorTheme::DisplayDetailRole)
         return theme->description();
 
     // Icon for the name column
-    if (role == Qt::DecorationRole && index.column() == NameColumn)
+    if (role == Qt::DecorationRole)
         return theme->icon();
 
     if (role == CursorTheme::IsWritableRole) {

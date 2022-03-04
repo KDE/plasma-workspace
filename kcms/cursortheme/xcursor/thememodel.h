@@ -12,12 +12,6 @@
 class QDir;
 class CursorTheme;
 
-// The two TableView/TreeView columns provided by the model
-enum Columns {
-    NameColumn = 0,
-    DescColumn,
-};
-
 /**
  * The CursorThemeModel class provides a model for all locally installed
  * Xcursor themes, and the KDE/Qt legacy bitmap theme.
@@ -43,7 +37,7 @@ enum Columns {
  * Calling defaultIndex() will return the index of the theme Xcursor
  * will use if the user hasn't explicitly configured a cursor theme.
  */
-class CursorThemeModel : public QAbstractTableModel
+class CursorThemeModel : public QAbstractListModel
 {
     Q_OBJECT
 
@@ -51,9 +45,7 @@ public:
     explicit CursorThemeModel(QObject *parent = nullptr);
     ~CursorThemeModel() override;
     QHash<int, QByteArray> roleNames() const override;
-    inline int columnCount(const QModelIndex &parent = QModelIndex()) const override;
     inline int rowCount(const QModelIndex &parent = QModelIndex()) const override;
-    QVariant headerData(int section, Qt::Orientation orientation, int role) const override;
     QVariant data(const QModelIndex &index, int role) const override;
     bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override;
     void sort(int column, Qt::SortOrder order = Qt::AscendingOrder) override;
@@ -95,9 +87,4 @@ private:
 int CursorThemeModel::rowCount(const QModelIndex &) const
 {
     return list.count();
-}
-
-int CursorThemeModel::columnCount(const QModelIndex &) const
-{
-    return 2;
 }

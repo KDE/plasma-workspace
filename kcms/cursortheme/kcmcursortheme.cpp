@@ -67,7 +67,7 @@ CursorThemeConfig::CursorThemeConfig(QObject *parent, const KPluginMetaData &dat
     m_themeProxyModel->setSourceModel(m_themeModel);
     // sort ordering is already case-insensitive; match that for filtering too
     m_themeProxyModel->setFilterCaseSensitivity(Qt::CaseInsensitive);
-    m_themeProxyModel->sort(NameColumn, Qt::AscendingOrder);
+    m_themeProxyModel->sort(0, Qt::AscendingOrder);
 
     m_sizesModel = new QStandardItemModel(this);
 
