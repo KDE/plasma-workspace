@@ -21,6 +21,7 @@ PlasmaCore.ToolTipArea {
 
     property string itemId
     property alias text: label.text
+    property alias labelHeight: label.implicitHeight
     property alias iconContainer: iconContainer
     property int /*PlasmaCore.Types.ItemStatus*/ status: model.status || PlasmaCore.Types.UnknownStatus
     property int /*PlasmaCore.Types.ItemStatus*/ effectiveStatus: model.effectiveStatus || PlasmaCore.Types.UnknownStatus
@@ -140,6 +141,11 @@ PlasmaCore.ToolTipArea {
 
             Layout.fillWidth: true
             Layout.fillHeight: abstractItem.inHiddenLayout ? true : false
+            //! Minimum required height for all labels is used in order for all
+            //! labels to be aligned properly at all items. At the same time this approach does not
+            //! enforce labels with 3 lines at all cases so translations that require only one or two
+            //! lines will always look consistent with no too much padding
+            Layout.minimumHeight: abstractItem.inHiddenLayout ? hiddenTasks.minLabelHeight : 0
             Layout.leftMargin: abstractItem.inHiddenLayout ? PlasmaCore.Units.smallSpacing : 0
             Layout.rightMargin: abstractItem.inHiddenLayout ? PlasmaCore.Units.smallSpacing : 0
             Layout.bottomMargin: abstractItem.inHiddenLayout ? PlasmaCore.Units.smallSpacing : 0
