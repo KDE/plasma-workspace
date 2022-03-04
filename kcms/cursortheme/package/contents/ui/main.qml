@@ -24,6 +24,10 @@ KCM.GridViewKCM {
     view.currentIndex: kcm.cursorThemeIndex(kcm.cursorThemeSettings.cursorTheme);
 
     view.onCurrentIndexChanged: {
+        if (view.currentIndex >= view.count) {
+            return
+        }
+
         kcm.cursorThemeSettings.cursorTheme = kcm.cursorThemeFromIndex(view.currentIndex)
         view.positionViewAtIndex(view.currentIndex, view.GridView.Beginning);
     }
