@@ -62,6 +62,18 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
 
     QObject::connect(m_activityController, &KActivities::Controller::activityAdded, this, &DesktopView::candidateContainmentsChanged);
     QObject::connect(m_activityController, &KActivities::Controller::activityRemoved, this, &DesktopView::candidateContainmentsChanged);
+
+    // KRunner settings
+    KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("krunnerrc"));
+    KConfigGroup configGroup(config, "General");
+    m_activateKRunnerWhenTypingOnDesktop = configGroup.readEntry("ActivateWhenTypingOnDesktop", true);
+
+    m_configWatcher = KConfigWatcher::create(config);
+    connect(m_configWatcher.data(), &KConfigWatcher::configChanged, this, [this](const KConfigGroup &group, const QByteArrayList &names) {
+        if (names.contains(QByteArray("ActivateWhenTypingOnDesktop"))) {
+            m_activateKRunnerWhenTypingOnDesktop = group.readEntry("ActivateWhenTypingOnDesktop", true);
+        }
+    });
 }
 
 DesktopView::~DesktopView()
@@ -264,6 +276,10 @@ void DesktopView::keyPressEvent(QKeyEvent *e)
     if (e->key() == Qt::Key_Escape && KWindowSystem::showingDesktop()) {
         KWindowSystem::setShowingDesktop(false);
         e->accept();
+        return;
+    }
+
+    if (!m_activateKRunnerWhenTypingOnDesktop) {
         return;
     }
 

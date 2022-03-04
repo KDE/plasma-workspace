@@ -10,6 +10,8 @@
 #include <PlasmaQuick/ContainmentView>
 #include <QPointer>
 
+#include <KConfigWatcher>
+
 namespace KWayland
 {
 namespace Client
@@ -96,4 +98,8 @@ private:
     WindowType m_windowType;
     KWayland::Client::PlasmaShellSurface *m_shellSurface;
     QString m_krunnerText;
+
+    // KRunner config
+    KConfigWatcher::Ptr m_configWatcher;
+    bool m_activateKRunnerWhenTypingOnDesktop;
 };

@@ -80,6 +80,7 @@ target_link_libraries(plasmashell
  Qt::DBus
  KF5::KIOCore
  KF5::WindowSystem
+ KF5::ConfigCore # Activate KRunner on the desktop
  KF5::Crash
  KF5::Plasma
  KF5::PlasmaQuick
