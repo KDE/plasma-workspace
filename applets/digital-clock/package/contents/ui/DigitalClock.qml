@@ -61,6 +61,12 @@ Item {
         }
     }
 
+    readonly property int maximumWidthNumber: {
+        // find widest character between 0 and 9
+        const numWidthArray = [...Array(10).keys()].map(x => timeMetrics.advanceWidth(x));
+        return numWidthArray.indexOf(Math.max(...numWidthArray));
+    }
+
     onDateFormatChanged: {
         setupLabels();
     }
@@ -639,18 +645,8 @@ Item {
             dateLabel.text = "";
         }
 
-        // find widest character between 0 and 9
-        var maximumWidthNumber = 0;
-        var maximumAdvanceWidth = 0;
-        for (var i = 0; i <= 9; i++) {
-            var advanceWidth = timeMetrics.advanceWidth(i);
-            if (advanceWidth > maximumAdvanceWidth) {
-                maximumAdvanceWidth = advanceWidth;
-                maximumWidthNumber = i;
-            }
-        }
         // replace all placeholders with the widest number (two digits)
-        var format = main.timeFormat.replace(/(h+|m+|s+)/g, "" + maximumWidthNumber + maximumWidthNumber); // make sure maximumWidthNumber is formatted as string
+        var format = main.timeFormat.replace(/(h+|m+|s+)/g, "" + main.maximumWidthNumber + main.maximumWidthNumber); // make sure maximumWidthNumber is formatted as string
         // build the time string twice, once with an AM time and once with a PM time
         var date = new Date(2000, 0, 1, 1, 0, 0);
         var timeAm = Qt.formatTime(date, format);
