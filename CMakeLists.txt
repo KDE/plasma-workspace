@@ -33,7 +33,7 @@ include(KDEClangFormat)
 include(KDEGitCommitHooks)
 include(ECMConfiguredInstall)
 include(ECMGenerateDBusServiceFile)
-include(ECMQMLModules)
+include(ECMFindQmlModule)
 include(ECMGenerateExportHeader)
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
