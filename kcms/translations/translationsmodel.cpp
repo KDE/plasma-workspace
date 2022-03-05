@@ -191,5 +191,3 @@ LanguageVector TranslationsModel::makeLanguages(const QStringList &codes)
     }
     return ret;
 }
-
-#include "translationsmodel.moc"
