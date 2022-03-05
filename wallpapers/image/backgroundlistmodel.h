@@ -98,6 +98,7 @@ protected:
 
 private:
     QSize bestSize(const KPackage::Package &package) const;
+    QString displayStringForPackage(const KPackage::Package &package) const;
 
     QSet<QString> m_removableWallpapers;
     QHash<QString, QSize> m_sizeCache;

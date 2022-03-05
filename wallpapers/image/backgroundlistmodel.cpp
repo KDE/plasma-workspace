@@ -10,6 +10,7 @@
 #include "backgroundlistmodel.h"
 #include "debug.h"
 
+#include <QCollator>
 #include <QDir>
 #include <QElapsedTimer>
 #include <QFile>
@@ -32,6 +33,8 @@
 #include <KPackage/PackageLoader>
 
 #include <KIO/OpenFileManagerWindowJob>
+
+#include <algorithm>
 
 QStringList BackgroundFinder::s_suffixes;
 QMutex BackgroundFinder::s_suffixMutex;
@@ -177,6 +180,18 @@ void BackgroundListModel::processPaths(const QStringList &paths)
 
     if (!newPackages.isEmpty()) {
         m_packages.append(newPackages);
+        QCollator collator;
+        // Make sure 2 comes before 10
+        collator.setNumericMode(true);
+        // Behave like Dolphin with natural sorting enabled
+        collator.setCaseSensitivity(Qt::CaseInsensitive);
+        const auto compare = [this, &collator](const KPackage::Package &a, const KPackage::Package &b){
+            const QString aDisplay = displayStringForPackage(a);
+            const QString bDisplay = displayStringForPackage(b);
+            // Checking if less than zero makes ascending order (A-Z)
+            return collator.compare(aDisplay, bDisplay) < 0;
+        };
+        std::stable_sort(m_packages.begin(), m_packages.end(), compare);
     }
     endResetModel();
     Q_EMIT countChanged();
@@ -283,6 +298,15 @@ void BackgroundListModel::sizeFound(const QString &path, const QSize &s)
     }
 }
 
+QString BackgroundListModel::displayStringForPackage(const KPackage::Package &package) const
+{
+    QString title = package.metadata().isValid() ? package.metadata().name() : QString();
+    if (title.isEmpty()) {
+        return QFileInfo(package.filePath("preferred")).completeBaseName();
+    }
+    return title;
+}
+
 QVariant BackgroundListModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
@@ -300,13 +324,7 @@ QVariant BackgroundListModel::data(const QModelIndex &index, int role) const
 
     switch (role) {
     case Qt::DisplayRole: {
-        QString title = b.metadata().isValid() ? b.metadata().name() : QString();
-
-        if (title.isEmpty()) {
-            return QFileInfo(b.filePath("preferred")).completeBaseName();
-        }
-
-        return title;
+        return displayStringForPackage(b);
     }
 
     case ScreenshotRole: {
