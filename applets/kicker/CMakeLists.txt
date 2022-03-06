@@ -59,7 +59,6 @@ target_link_libraries(kickerplugin
                       Qt::Core
                       Qt::Qml
                       Qt::Quick
-                      Qt::X11Extras
                       KF5::Activities
                       KF5::ActivitiesStats
                       KF5::ConfigCore
@@ -78,6 +77,11 @@ target_link_libraries(kickerplugin
                       KF5::Service
                       KF5::WindowSystem
                       PW::KWorkspace)
+if (QT_MAJOR_VERSION EQUAL "5")
+    target_link_libraries(kickerplugin Qt::X11Extras)
+else()
+    target_link_libraries(kickerplugin Qt::GuiPrivate)
+endif()
 
 if (${HAVE_APPSTREAMQT})
 target_link_libraries(kickerplugin AppStreamQt)

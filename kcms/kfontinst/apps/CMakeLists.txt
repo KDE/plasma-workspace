@@ -13,7 +13,6 @@ set_target_properties(kfontprint_bin PROPERTIES OUTPUT_NAME kfontprint)
 set_target_properties(kfontview_bin PROPERTIES OUTPUT_NAME kfontview)
 
 target_link_libraries(kfontinst_bin
-    Qt::X11Extras
     KF5::Archive
     KF5::IconThemes
     KF5::KIOCore
@@ -22,6 +21,11 @@ target_link_libraries(kfontinst_bin
     X11::X11
     kfontinst
 )
+if (QT_MAJOR_VERSION EQUAL "5")
+    target_link_libraries(kfontinst_bin Qt::X11Extras)
+else()
+    target_link_libraries(kfontinst_bin Qt::GuiPrivate)
+endif()
 target_link_libraries(kfontprint_bin
     Qt::PrintSupport
     KF5::IconThemes

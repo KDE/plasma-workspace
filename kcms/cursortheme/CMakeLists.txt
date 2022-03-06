@@ -32,7 +32,6 @@ kcoreaddons_add_plugin(kcm_cursortheme SOURCES ${kcm_cursortheme_PART_SRCS} INST
 
 target_link_libraries(kcm_cursortheme
     Qt::DBus
-    Qt::X11Extras
     Qt::Quick
     KF5::Archive
     KF5::KCMUtils
@@ -46,6 +45,11 @@ target_link_libraries(kcm_cursortheme
     PW::KWorkspace
     krdb
 )
+if (QT_MAJOR_VERSION EQUAL "5")
+    target_link_libraries(kcm_cursortheme Qt::X11Extras)
+else()
+    target_link_libraries(kcm_cursortheme Qt::GuiPrivate)
+endif()
 
 if (X11_Xcursor_FOUND)
    target_link_libraries(kcm_cursortheme X11::Xcursor)
@@ -72,7 +76,6 @@ add_executable(plasma-apply-cursortheme ${plasma-apply-cursortheme_SRCS})
 
 target_link_libraries(plasma-apply-cursortheme
     Qt::DBus
-    Qt::X11Extras
     KF5::GuiAddons
     KF5::I18n
     KF5::KCMUtils
@@ -81,6 +84,11 @@ target_link_libraries(plasma-apply-cursortheme
     XCB::XCB
     PW::KWorkspace
 )
+if (QT_MAJOR_VERSION EQUAL "5")
+    target_link_libraries(plasma-apply-cursortheme Qt::X11Extras)
+else()
+    target_link_libraries(plasma-apply-cursortheme Qt::GuiPrivate)
+endif()
 if (X11_Xcursor_FOUND)
    target_link_libraries(plasma-apply-cursortheme X11::Xcursor)
 endif ()

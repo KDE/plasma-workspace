@@ -28,7 +28,12 @@ kcoreaddons_add_plugin(kcm_fonts SOURCES ${kcm_fonts_PART_SRCS} INSTALL_NAMESPAC
 target_link_libraries(kcm_fonts KF5::I18n KF5::WindowSystem KF5::KCMUtils KF5::QuickAddons KF5::Declarative kfontinst krdb)
 
 if(X11_FOUND)
-    target_link_libraries(kcm_fonts Qt::X11Extras X11::X11 X11::Xft XCB::IMAGE)
+    target_link_libraries(kcm_fonts X11::X11 X11::Xft XCB::IMAGE)
+    if (QT_MAJOR_VERSION EQUAL "5")
+        target_link_libraries(kcm_fonts Qt::X11Extras)
+    else()
+        target_link_libraries(kcm_fonts Qt::GuiPrivate)
+    endif()
 endif()
 
 ########### install files ###############

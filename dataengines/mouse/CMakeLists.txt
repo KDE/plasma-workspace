@@ -12,11 +12,15 @@ endif ()
 kcoreaddons_add_plugin(plasma_engine_mouse SOURCES ${mouse_engine_SRCS} INSTALL_NAMESPACE plasma/dataengine)
 target_link_libraries(plasma_engine_mouse
     Qt::Widgets
-    Qt::X11Extras
     KF5::Plasma
     KF5::WindowSystem
     X11::X11
 )
+if (QT_MAJOR_VERSION EQUAL "5")
+    target_link_libraries(plasma_engine_mouse Qt::X11Extras)
+else()
+    target_link_libraries(plasma_engine_mouse Qt::GuiPrivate)
+endif()
 
 if (X11_Xfixes_FOUND)
 	target_link_libraries(plasma_engine_mouse X11::Xfixes)

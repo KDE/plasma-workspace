@@ -108,7 +108,11 @@ target_compile_definitions(plasmashell PRIVATE -DPROJECT_VERSION="${PROJECT_VERS
 
 if(HAVE_X11)
   target_link_libraries(plasmashell XCB::XCB XCB::RANDR)
-  target_link_libraries(plasmashell Qt::X11Extras)
+  if (QT_MAJOR_VERSION EQUAL "5")
+    target_link_libraries(plasmashell Qt::X11Extras)
+  else()
+    target_link_libraries(plasmashell Qt::GuiPrivate)
+  endif()
 endif()
 
 configure_file(org.kde.plasmashell.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/org.kde.plasmashell.desktop @ONLY)

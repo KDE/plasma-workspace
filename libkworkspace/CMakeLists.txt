@@ -62,7 +62,12 @@ if(X11_FOUND)
     if(NOT X11_Xau_FOUND)
         message(FATAL_ERROR "Found X11, but not libXau which is required for building kworkspace")
     endif()
-    target_link_libraries(kworkspace PRIVATE Qt::X11Extras X11::Xau)
+    target_link_libraries(kworkspace PRIVATE X11::Xau)
+    if (QT_MAJOR_VERSION EQUAL "5")
+        target_link_libraries(kworkspace PRIVATE Qt::X11Extras)
+    else()
+        target_link_libraries(kworkspace PRIVATE Qt::GuiPrivate)
+    endif()
 endif()
 
 write_basic_config_version_file(${CMAKE_CURRENT_BINARY_DIR}/LibKWorkspaceConfigVersion.cmake VERSION

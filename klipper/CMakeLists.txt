@@ -48,7 +48,12 @@ target_link_libraries(libklipper_common_static
     KF5::XmlGui
     ${ZLIB_LIBRARY})
 if (X11_FOUND)
-    target_link_libraries(libklipper_common_static XCB::XCB Qt::X11Extras)
+    target_link_libraries(libklipper_common_static XCB::XCB)
+    if (QT_MAJOR_VERSION EQUAL "5")
+        target_link_libraries(libklipper_common_static Qt::X11Extras)
+    else()
+        target_link_libraries(libklipper_common_static Qt::GuiPrivate)
+    endif()
 endif()
 
 add_executable(klipper main.cpp tray.cpp)

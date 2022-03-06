@@ -37,7 +37,12 @@ target_link_libraries(kcm_colors
 )
 
 if(X11_FOUND)
-    target_link_libraries(kcm_colors X11::X11 Qt::X11Extras)
+    target_link_libraries(kcm_colors X11::X11)
+    if (QT_MAJOR_VERSION EQUAL "5")
+        target_link_libraries(kcm_colors Qt::X11Extras)
+    else()
+        target_link_libraries(kcm_colors Qt::GuiPrivate)
+    endif()
 endif()
 
 set(plasma-apply-colorscheme_SRCS
@@ -56,7 +61,6 @@ target_link_libraries(plasma-apply-colorscheme
     Qt::Core
     Qt::DBus
     Qt::Gui
-    Qt::X11Extras
     KF5::GuiAddons
     KF5::KCMUtils
     KF5::I18n
@@ -64,6 +68,11 @@ target_link_libraries(plasma-apply-colorscheme
     PW::KWorkspace
     X11::X11
 )
+if (QT_MAJOR_VERSION EQUAL "5")
+    target_link_libraries(plasma-apply-colorscheme Qt::X11Extras)
+else()
+    target_link_libraries(plasma-apply-colorscheme Qt::GuiPrivate)
+endif()
 
 install(FILES colorssettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 install(FILES kcm_colors.desktop DESTINATION ${KDE_INSTALL_APPDIR})

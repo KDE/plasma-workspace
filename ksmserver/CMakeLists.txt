@@ -44,7 +44,6 @@ target_link_libraries(ksmserver
     KF5::I18n
     KF5::KIOCore
     KF5::KIOGui
-    Qt::X11Extras
     KF5::Solid
     Qt::Quick
     KF5::Declarative
@@ -58,6 +57,11 @@ target_link_libraries(ksmserver
     X11::ICE
     X11::Xrender
 )
+if (QT_MAJOR_VERSION EQUAL "5")
+    target_link_libraries(ksmserver Qt::X11Extras)
+else()
+    target_link_libraries(ksmserver Qt::GuiPrivate)
+endif()
 
 install(TARGETS ksmserver ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 

@@ -33,7 +33,12 @@ if (QT_MAJOR_VERSION EQUAL "5")
 endif()
 
 if (HAVE_X11)
-    target_link_libraries(appmenu Qt::X11Extras XCB::XCB)
+    target_link_libraries(appmenu XCB::XCB)
+    if (QT_MAJOR_VERSION EQUAL "5")
+        target_link_libraries(appmenu Qt::X11Extras)
+    else()
+        target_link_libraries(appmenu Qt::GuiPrivate)
+    endif()
 endif()
 
 ecm_qt_declare_logging_category(appmenu
