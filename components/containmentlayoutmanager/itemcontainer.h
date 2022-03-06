@@ -196,8 +196,13 @@ private:
 
     // internal accessorts for the contentData QProperty
     static void contentData_append(QQmlListProperty<QObject> *prop, QObject *object);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     static int contentData_count(QQmlListProperty<QObject> *prop);
     static QObject *contentData_at(QQmlListProperty<QObject> *prop, int index);
+#else
+    static qsizetype contentData_count(QQmlListProperty<QObject> *prop);
+    static QObject *contentData_at(QQmlListProperty<QObject> *prop, qsizetype index);
+#endif
     static void contentData_clear(QQmlListProperty<QObject> *prop);
 
     QPointer<QQuickItem> m_contentItem;

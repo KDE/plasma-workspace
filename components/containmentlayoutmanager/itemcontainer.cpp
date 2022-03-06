@@ -335,7 +335,11 @@ void ItemContainer::contentData_append(QQmlListProperty<QObject> *prop, QObject 
     container->m_contentData.append(object);
 }
 
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 int ItemContainer::contentData_count(QQmlListProperty<QObject> *prop)
+#else
+qsizetype ItemContainer::contentData_count(QQmlListProperty<QObject> *prop)
+#endif
 {
     ItemContainer *container = static_cast<ItemContainer *>(prop->object);
     if (!container) {
@@ -345,7 +349,11 @@ int ItemContainer::contentData_count(QQmlListProperty<QObject> *prop)
     return container->m_contentData.count();
 }
 
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 QObject *ItemContainer::contentData_at(QQmlListProperty<QObject> *prop, int index)
+#else
+QObject *ItemContainer::contentData_at(QQmlListProperty<QObject> *prop, qsizetype index)
+#endif
 {
     ItemContainer *container = static_cast<ItemContainer *>(prop->object);
     if (!container) {
