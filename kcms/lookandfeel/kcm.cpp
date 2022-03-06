@@ -303,7 +303,7 @@ void KCMLookandFeel::save()
         KSharedConfigPtr conf = KSharedConfig::openConfig(package.filePath("defaults"));
         KConfigGroup cg(conf, "kdeglobals");
         QScopedPointer<QStyle> newStyle(QStyleFactory::create(cg.readEntry("widgetStyle", QString())));
-        m_lnf->setApplyWidgetStyle(newStyle);
+        m_lnf->setApplyWidgetStyle(!newStyle.isNull());
     }
 
     ManagedConfigModule::save();
