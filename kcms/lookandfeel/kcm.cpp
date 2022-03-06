@@ -408,7 +408,7 @@ QStringList KCMLookandFeel::cursorSearchPaths()
     }
 
     // Expand all occurrences of ~/ to the home dir
-    m_cursorSearchPaths.replaceInStrings(QRegExp(QStringLiteral("^~\\/")), QDir::home().path() + QLatin1Char('/'));
+    m_cursorSearchPaths.replaceInStrings(QRegularExpression(QStringLiteral("^~\\/")), QDir::home().path() + QLatin1Char('/'));
 #endif
     return m_cursorSearchPaths;
 }

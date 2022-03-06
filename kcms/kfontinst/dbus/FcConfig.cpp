@@ -13,7 +13,7 @@
 #include <QDomNode>
 #include <QDomText>
 #include <QFile>
-#include <QRegExp>
+#include <QRegularExpression>
 #include <fontconfig/fontconfig.h>
 #include <stdio.h>
 
@@ -60,7 +60,7 @@ QString getConfigFile(bool system)
             }
         }
 #if (FC_VERSION >= 20300)
-        if (system && Misc::dExists(f) && (f.contains(QRegExp("/conf\\.d/?$")) || f.contains(QRegExp("/conf\\.d?$")))) {
+        if (system && Misc::dExists(f) && (f.contains(QRegularExpression("/conf\\.d/?$")) || f.contains(QRegularExpression("/conf\\.d?$")))) {
             return Misc::dirSyntax(f) + constKdeRootFcFile; // This ones good enough for me!
         }
 #endif
@@ -72,7 +72,7 @@ QString getConfigFile(bool system)
         QStringList::const_iterator it(files.begin()), end(files.end());
 
         for (; it != end; ++it) {
-            if (-1 != (*it).indexOf(QRegExp(system ? "/local\\.conf$" : "/\\.?fonts\\.conf$"))) {
+            if (-1 != (*it).indexOf(QRegularExpression(system ? "/local\\.conf$" : "/\\.?fonts\\.conf$"))) {
                 return *it;
             }
         }

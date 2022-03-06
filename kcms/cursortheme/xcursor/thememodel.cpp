@@ -8,6 +8,7 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <QDir>
+#include <QRegularExpression>
 #include <QX11Info>
 
 #include "thememodel.h"
@@ -206,7 +207,7 @@ const QStringList CursorThemeModel::searchPaths()
     }
 
     // Expand all occurrences of ~/ to the home dir
-    baseDirs.replaceInStrings(QRegExp("^~\\/"), QDir::home().path() + '/');
+    baseDirs.replaceInStrings(QRegularExpression("^~\\/"), QDir::home().path() + '/');
     return baseDirs;
 }
 

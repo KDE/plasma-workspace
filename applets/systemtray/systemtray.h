@@ -7,7 +7,6 @@
 #pragma once
 
 #include <QAbstractItemModel>
-#include <QRegExp>
 
 #include <Plasma/Containment>
 

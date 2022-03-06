@@ -26,7 +26,6 @@
 #include <QMimeDatabase>
 #include <QProcess>
 #include <QPushButton>
-#include <QRegExp>
 #include <QSpinBox>
 #include <QTimer>
 //#include <KFileMetaInfo>

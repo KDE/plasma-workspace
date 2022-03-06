@@ -118,10 +118,10 @@ void SchemeEditorDialog::saveScheme(bool overwrite)
 
     QString filename = name;
     filename.remove(QLatin1Char('\'')); // So Foo's does not become FooS
-    QRegExp fixer(QStringLiteral("[\\W,.-]+(.?)"));
-    int offset;
-    while ((offset = fixer.indexIn(filename)) >= 0)
-        filename.replace(offset, fixer.matchedLength(), fixer.cap(1).toUpper());
+    QRegularExpression fixer(QStringLiteral("[\\W,.-]+(.?)"));
+    for (auto match = fixer.match(filename); match.hasMatch(); match = fixer.match(filename)) {
+        filename.replace(match.capturedStart(), match.capturedLength(), match.captured(1).toUpper());
+    }
     filename.replace(0, 1, filename.at(0).toUpper());
 
     // check if that name is already in the list

@@ -328,10 +328,9 @@ QString LookAndFeelManager::colorSchemeFile(const QString &schemeName) const
 {
     QString colorScheme(schemeName);
     colorScheme.remove(QLatin1Char('\'')); // So Foo's does not become FooS
-    QRegExp fixer(QStringLiteral("[\\W,.-]+(.?)"));
-    int offset;
-    while ((offset = fixer.indexIn(colorScheme)) >= 0) {
-        colorScheme.replace(offset, fixer.matchedLength(), fixer.cap(1).toUpper());
+    QRegularExpression fixer(QStringLiteral("[\\W,.-]+(.?)"));
+    for (auto match = fixer.match(colorScheme); match.hasMatch(); match = fixer.match(colorScheme)) {
+        colorScheme.replace(match.capturedStart(), match.capturedLength(), match.captured(1).toUpper());
     }
     colorScheme.replace(0, 1, colorScheme.at(0).toUpper());
 
