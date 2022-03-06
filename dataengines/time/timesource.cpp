@@ -15,6 +15,7 @@
 
 #include <QDateTime>
 
+#include <KLazyLocalizedString>
 #include <KLocalizedString>
 
 #include "solarsystem.h"
@@ -42,7 +43,7 @@ TimeSource::TimeSource(const QString &name, QObject *parent)
 void TimeSource::setTimeZone(const QString &tz)
 {
     m_tzName = tz;
-    m_local = m_tzName == I18N_NOOP("Local");
+    m_local = m_tzName == kli18n("Local").untranslatedText();
     if (m_local) {
         m_tzName = QString::fromUtf8(QTimeZone::systemTimeZoneId());
     }
@@ -57,19 +58,19 @@ void TimeSource::setTimeZone(const QString &tz)
     }
 
     const QString trTimezone = i18n(m_tzName.toUtf8());
-    setData(I18N_NOOP("Timezone"), trTimezone);
+    setData(kli18n("Timezone").untranslatedText(), trTimezone);
 
     const QStringList tzParts = trTimezone.split('/', Qt::SkipEmptyParts);
     if (tzParts.count() == 1) {
         // no '/' so just set it as the city
-        setData(I18N_NOOP("Timezone City"), trTimezone);
+        setData(kli18n("Timezone City").untranslatedText(), trTimezone);
     } else if (tzParts.count() == 2) {
-        setData(I18N_NOOP("Timezone Continent"), tzParts.value(0));
-        setData(I18N_NOOP("Timezone City"), tzParts.value(1));
+        setData(kli18n("Timezone Continent").untranslatedText(), tzParts.value(0));
+        setData(kli18n("Timezone City").untranslatedText(), tzParts.value(1));
     } else { // for zones like America/Argentina/Buenos_Aires
-        setData(I18N_NOOP("Timezone Continent"), tzParts.value(0));
-        setData(I18N_NOOP("Timezone Country"), tzParts.value(1));
-        setData(I18N_NOOP("Timezone City"), tzParts.value(2));
+        setData(kli18n("Timezone Continent").untranslatedText(), tzParts.value(0));
+        setData(kli18n("Timezone Country").untranslatedText(), tzParts.value(1));
+        setData(kli18n("Timezone City").untranslatedText(), tzParts.value(2));
     }
 
     updateTime();
@@ -93,10 +94,10 @@ void TimeSource::updateTime()
         m_offset = offset;
     }
 
-    setData(I18N_NOOP("Offset"), m_offset);
+    setData(kli18n("Offset").untranslatedText(), m_offset);
 
     QString abbreviation = m_tz.abbreviation(timeZoneDateTime);
-    setData(I18N_NOOP("Timezone Abbreviation"), abbreviation);
+    setData(kli18n("Timezone Abbreviation").untranslatedText(), abbreviation);
 
     QDateTime dt;
     if (m_userDateTime) {
@@ -127,7 +128,7 @@ void TimeSource::updateTime()
     }
 
     if (!m_userDateTime) {
-        setData(I18N_NOOP("DateTime"), dt);
+        setData(kli18n("DateTime").untranslatedText(), dt);
 
         forceImmediateUpdate();
     }
@@ -142,11 +143,11 @@ QString TimeSource::parseName(const QString &name)
     }
 
     // the various keys we recognize
-    static const QString latitude = I18N_NOOP("Latitude");
-    static const QString longitude = I18N_NOOP("Longitude");
-    static const QString solar = I18N_NOOP("Solar");
-    static const QString moon = I18N_NOOP("Moon");
-    static const QString datetime = I18N_NOOP("DateTime");
+    constexpr const auto latitude = kli18n("Latitude");
+    constexpr const auto longitude = kli18n("Longitude");
+    constexpr const auto solar = kli18n("Solar");
+    constexpr const auto moon = kli18n("Moon");
+    constexpr const auto datetime = kli18n("DateTime");
 
     // now parse out what we got handed in
     const QStringList list = name.split('|', Qt::SkipEmptyParts);
@@ -160,20 +161,20 @@ QString TimeSource::parseName(const QString &name)
             const QString key = arg.mid(0, n);
             const QString value = arg.mid(n + 1);
 
-            if (key == latitude) {
+            if (key == latitude.untranslatedText()) {
                 m_latitude = value.toDouble();
-            } else if (key == longitude) {
+            } else if (key == longitude.untranslatedText()) {
                 m_longitude = value.toDouble();
-            } else if (key == datetime) {
+            } else if (key == datetime.untranslatedText()) {
                 QDateTime dt = QDateTime::fromString(value, Qt::ISODate);
                 if (dt.isValid()) {
-                    setData(I18N_NOOP("DateTime"), dt);
+                    setData(kli18n("DateTime").untranslatedText(), dt);
                     m_userDateTime = true;
                 }
             }
-        } else if (arg == solar) {
+        } else if (arg == solar.untranslatedText()) {
             m_solarPosition = true;
-        } else if (arg == moon) {
+        } else if (arg == moon.untranslatedText()) {
             m_moonPosition = true;
         }
     }

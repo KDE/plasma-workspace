@@ -7,6 +7,7 @@
 #include "soliddeviceengine.h"
 #include "soliddeviceservice.h"
 
+#include <KLazyLocalizedString>
 #include <QDateTime>
 #include <QMetaEnum>
 #include <Solid/GenericInterface>
@@ -110,15 +111,15 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
     }
 
     QStringList devicetypes;
-    setData(name, I18N_NOOP("Parent UDI"), device.parentUdi());
-    setData(name, I18N_NOOP("Vendor"), device.vendor());
-    setData(name, I18N_NOOP("Product"), device.product());
-    setData(name, I18N_NOOP("Description"), device.description());
-    setData(name, I18N_NOOP("Icon"), device.icon());
-    setData(name, I18N_NOOP("Emblems"), device.emblems());
-    setData(name, I18N_NOOP("State"), Idle);
-    setData(name, I18N_NOOP("Operation result"), Working);
-    setData(name, I18N_NOOP("Timestamp"), QDateTime::currentDateTimeUtc());
+    setData(name, kli18n("Parent UDI").untranslatedText(), device.parentUdi());
+    setData(name, kli18n("Vendor").untranslatedText(), device.vendor());
+    setData(name, kli18n("Product").untranslatedText(), device.product());
+    setData(name, kli18n("Description").untranslatedText(), device.description());
+    setData(name, kli18n("Icon").untranslatedText(), device.icon());
+    setData(name, kli18n("Emblems").untranslatedText(), device.emblems());
+    setData(name, kli18n("State").untranslatedText(), Idle);
+    setData(name, kli18n("Operation result").untranslatedText(), Working);
+    setData(name, kli18n("Timestamp").untranslatedText(), QDateTime::currentDateTimeUtc());
 
     if (device.is<Solid::Processor>()) {
         Solid::Processor *processor = device.as<Solid::Processor>();
@@ -126,10 +127,10 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
             return false;
         }
 
-        devicetypes << I18N_NOOP("Processor");
-        setData(name, I18N_NOOP("Number"), processor->number());
-        setData(name, I18N_NOOP("Max Speed"), processor->maxSpeed());
-        setData(name, I18N_NOOP("Can Change Frequency"), processor->canChangeFrequency());
+        devicetypes << kli18n("Processor").untranslatedText();
+        setData(name, kli18n("Number").untranslatedText(), processor->number());
+        setData(name, kli18n("Max Speed").untranslatedText(), processor->maxSpeed());
+        setData(name, kli18n("Can Change Frequency").untranslatedText(), processor->canChangeFrequency());
     }
     if (device.is<Solid::Block>()) {
         Solid::Block *block = device.as<Solid::Block>();
@@ -137,10 +138,10 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
             return false;
         }
 
-        devicetypes << I18N_NOOP("Block");
-        setData(name, I18N_NOOP("Major"), block->deviceMajor());
-        setData(name, I18N_NOOP("Minor"), block->deviceMinor());
-        setData(name, I18N_NOOP("Device"), block->device());
+        devicetypes << kli18n("Block").untranslatedText();
+        setData(name, kli18n("Major").untranslatedText(), block->deviceMajor());
+        setData(name, kli18n("Minor").untranslatedText(), block->deviceMinor());
+        setData(name, kli18n("Device").untranslatedText(), block->device());
     }
     if (device.is<Solid::StorageAccess>()) {
         Solid::StorageAccess *storageaccess = device.as<Solid::StorageAccess>();
@@ -148,9 +149,9 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
             return false;
         }
 
-        devicetypes << I18N_NOOP("Storage Access");
-        setData(name, I18N_NOOP("Accessible"), storageaccess->isAccessible());
-        setData(name, I18N_NOOP("File Path"), storageaccess->filePath());
+        devicetypes << kli18n("Storage Access").untranslatedText();
+        setData(name, kli18n("Accessible").untranslatedText(), storageaccess->isAccessible());
+        setData(name, kli18n("File Path").untranslatedText(), storageaccess->filePath());
 
         if (storageaccess->isAccessible()) {
             updateStorageSpace(name);
@@ -165,18 +166,20 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
             return false;
         }
 
-        devicetypes << I18N_NOOP("Storage Drive");
+        devicetypes << kli18n("Storage Drive").untranslatedText();
 
         QStringList bus;
-        bus << I18N_NOOP("Ide") << I18N_NOOP("Usb") << I18N_NOOP("Ieee1394") << I18N_NOOP("Scsi") << I18N_NOOP("Sata") << I18N_NOOP("Platform");
+        bus << kli18n("Ide").untranslatedText() << kli18n("Usb").untranslatedText() << kli18n("Ieee1394").untranslatedText()
+            << kli18n("Scsi").untranslatedText() << kli18n("Sata").untranslatedText() << kli18n("Platform").untranslatedText();
         QStringList drivetype;
-        drivetype << I18N_NOOP("Hard Disk") << I18N_NOOP("Cdrom Drive") << I18N_NOOP("Floppy") << I18N_NOOP("Tape") << I18N_NOOP("Compact Flash")
-                  << I18N_NOOP("Memory Stick") << I18N_NOOP("Smart Media") << I18N_NOOP("SdMmc") << I18N_NOOP("Xd");
+        drivetype << kli18n("Hard Disk").untranslatedText() << kli18n("Cdrom Drive").untranslatedText() << kli18n("Floppy").untranslatedText()
+                  << kli18n("Tape").untranslatedText() << kli18n("Compact Flash").untranslatedText() << kli18n("Memory Stick").untranslatedText()
+                  << kli18n("Smart Media").untranslatedText() << kli18n("SdMmc").untranslatedText() << kli18n("Xd").untranslatedText();
 
-        setData(name, I18N_NOOP("Bus"), bus.at((int)storagedrive->bus()));
-        setData(name, I18N_NOOP("Drive Type"), drivetype.at((int)storagedrive->driveType()));
-        setData(name, I18N_NOOP("Removable"), storagedrive->isRemovable());
-        setData(name, I18N_NOOP("Hotpluggable"), storagedrive->isHotpluggable());
+        setData(name, kli18n("Bus").untranslatedText(), bus.at((int)storagedrive->bus()));
+        setData(name, kli18n("Drive Type").untranslatedText(), drivetype.at((int)storagedrive->driveType()));
+        setData(name, kli18n("Removable").untranslatedText(), storagedrive->isRemovable());
+        setData(name, kli18n("Hotpluggable").untranslatedText(), storagedrive->isHotpluggable());
 
         updateHardDiskTemperature(name);
     } else {
@@ -188,8 +191,8 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
             isRemovable = (drive->isRemovable() || drive->isHotpluggable());
             isHotpluggable = drive->isHotpluggable();
         }
-        setData(name, I18N_NOOP("Removable"), isRemovable);
-        setData(name, I18N_NOOP("Hotpluggable"), isHotpluggable);
+        setData(name, kli18n("Removable").untranslatedText(), isRemovable);
+        setData(name, kli18n("Hotpluggable").untranslatedText(), isHotpluggable);
     }
 
     if (device.is<Solid::OpticalDrive>()) {
@@ -198,62 +201,62 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
             return false;
         }
 
-        devicetypes << I18N_NOOP("Optical Drive");
+        devicetypes << kli18n("Optical Drive").untranslatedText();
 
         QStringList supportedtypes;
         Solid::OpticalDrive::MediumTypes mediatypes = opticaldrive->supportedMedia();
         if (mediatypes & Solid::OpticalDrive::Cdr) {
-            supportedtypes << I18N_NOOP("CD-R");
+            supportedtypes << kli18n("CD-R").untranslatedText();
         }
         if (mediatypes & Solid::OpticalDrive::Cdrw) {
-            supportedtypes << I18N_NOOP("CD-RW");
+            supportedtypes << kli18n("CD-RW").untranslatedText();
         }
         if (mediatypes & Solid::OpticalDrive::Dvd) {
-            supportedtypes << I18N_NOOP("DVD");
+            supportedtypes << kli18n("DVD").untranslatedText();
         }
         if (mediatypes & Solid::OpticalDrive::Dvdr) {
-            supportedtypes << I18N_NOOP("DVD-R");
+            supportedtypes << kli18n("DVD-R").untranslatedText();
         }
         if (mediatypes & Solid::OpticalDrive::Dvdrw) {
-            supportedtypes << I18N_NOOP("DVD-RW");
+            supportedtypes << kli18n("DVD-RW").untranslatedText();
         }
         if (mediatypes & Solid::OpticalDrive::Dvdram) {
-            supportedtypes << I18N_NOOP("DVD-RAM");
+            supportedtypes << kli18n("DVD-RAM").untranslatedText();
         }
         if (mediatypes & Solid::OpticalDrive::Dvdplusr) {
-            supportedtypes << I18N_NOOP("DVD+R");
+            supportedtypes << kli18n("DVD+R").untranslatedText();
         }
         if (mediatypes & Solid::OpticalDrive::Dvdplusrw) {
-            supportedtypes << I18N_NOOP("DVD+RW");
+            supportedtypes << kli18n("DVD+RW").untranslatedText();
         }
         if (mediatypes & Solid::OpticalDrive::Dvdplusdl) {
-            supportedtypes << I18N_NOOP("DVD+DL");
+            supportedtypes << kli18n("DVD+DL").untranslatedText();
         }
         if (mediatypes & Solid::OpticalDrive::Dvdplusdlrw) {
-            supportedtypes << I18N_NOOP("DVD+DLRW");
+            supportedtypes << kli18n("DVD+DLRW").untranslatedText();
         }
         if (mediatypes & Solid::OpticalDrive::Bd) {
-            supportedtypes << I18N_NOOP("BD");
+            supportedtypes << kli18n("BD").untranslatedText();
         }
         if (mediatypes & Solid::OpticalDrive::Bdr) {
-            supportedtypes << I18N_NOOP("BD-R");
+            supportedtypes << kli18n("BD-R").untranslatedText();
         }
         if (mediatypes & Solid::OpticalDrive::Bdre) {
-            supportedtypes << I18N_NOOP("BD-RE");
+            supportedtypes << kli18n("BD-RE").untranslatedText();
         }
         if (mediatypes & Solid::OpticalDrive::HdDvd) {
-            supportedtypes << I18N_NOOP("HDDVD");
+            supportedtypes << kli18n("HDDVD").untranslatedText();
         }
         if (mediatypes & Solid::OpticalDrive::HdDvdr) {
-            supportedtypes << I18N_NOOP("HDDVD-R");
+            supportedtypes << kli18n("HDDVD-R").untranslatedText();
         }
         if (mediatypes & Solid::OpticalDrive::HdDvdrw) {
-            supportedtypes << I18N_NOOP("HDDVD-RW");
+            supportedtypes << kli18n("HDDVD-RW").untranslatedText();
         }
-        setData(name, I18N_NOOP("Supported Media"), supportedtypes);
+        setData(name, kli18n("Supported Media").untranslatedText(), supportedtypes);
 
-        setData(name, I18N_NOOP("Read Speed"), opticaldrive->readSpeed());
-        setData(name, I18N_NOOP("Write Speed"), opticaldrive->writeSpeed());
+        setData(name, kli18n("Read Speed").untranslatedText(), opticaldrive->readSpeed());
+        setData(name, kli18n("Write Speed").untranslatedText(), opticaldrive->writeSpeed());
 
         // the following method return QList<int> so we need to convert it to QList<QVariant>
         const QList<int> writespeeds = opticaldrive->writeSpeeds();
@@ -261,7 +264,7 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
         foreach (int num, writespeeds) {
             variantlist << num;
         }
-        setData(name, I18N_NOOP("Write Speeds"), variantlist);
+        setData(name, kli18n("Write Speeds").untranslatedText(), variantlist);
     }
     if (device.is<Solid::StorageVolume>()) {
         Solid::StorageVolume *storagevolume = device.as<Solid::StorageVolume>();
@@ -269,21 +272,21 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
             return false;
         }
 
-        devicetypes << I18N_NOOP("Storage Volume");
+        devicetypes << kli18n("Storage Volume").untranslatedText();
 
         QStringList usagetypes;
         usagetypes << i18n("Other") << i18n("Unused") << i18n("File System") << i18n("Partition Table") << i18n("Raid") << i18n("Encrypted");
 
         if (usagetypes.count() > storagevolume->usage()) {
-            setData(name, I18N_NOOP("Usage"), usagetypes.at((int)storagevolume->usage()));
+            setData(name, kli18n("Usage").untranslatedText(), usagetypes.at((int)storagevolume->usage()));
         } else {
-            setData(name, I18N_NOOP("Usage"), i18n("Unknown"));
+            setData(name, kli18n("Usage").untranslatedText(), i18n("Unknown"));
         }
 
-        setData(name, I18N_NOOP("Ignored"), storagevolume->isIgnored());
-        setData(name, I18N_NOOP("File System Type"), storagevolume->fsType());
-        setData(name, I18N_NOOP("Label"), storagevolume->label());
-        setData(name, I18N_NOOP("UUID"), storagevolume->uuid());
+        setData(name, kli18n("Ignored").untranslatedText(), storagevolume->isIgnored());
+        setData(name, kli18n("File System Type").untranslatedText(), storagevolume->fsType());
+        setData(name, kli18n("Label").untranslatedText(), storagevolume->label());
+        setData(name, kli18n("UUID").untranslatedText(), storagevolume->uuid());
         updateInUse(name);
 
         // Check if the volume is part of an encrypted container
@@ -292,7 +295,7 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
         Solid::Device encryptedContainer = storagevolume->encryptedContainer();
         if (encryptedContainer.isValid()) {
             const QString containerUdi = encryptedContainer.udi();
-            setData(name, I18N_NOOP("Encrypted Container"), containerUdi);
+            setData(name, kli18n("Encrypted Container").untranslatedText(), containerUdi);
             m_encryptedContainerMap[name] = containerUdi;
             // TODO: compress the calls?
             forceUpdateAccessibility(containerUdi);
@@ -304,43 +307,46 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
             return false;
         }
 
-        devicetypes << I18N_NOOP("OpticalDisc");
+        devicetypes << kli18n("OpticalDisc").untranslatedText();
 
         // get the content types
         QStringList contenttypelist;
         const Solid::OpticalDisc::ContentTypes contenttypes = opticaldisc->availableContent();
         if (contenttypes.testFlag(Solid::OpticalDisc::Audio)) {
-            contenttypelist << I18N_NOOP("Audio");
+            contenttypelist << kli18n("Audio").untranslatedText();
         }
         if (contenttypes.testFlag(Solid::OpticalDisc::Data)) {
-            contenttypelist << I18N_NOOP("Data");
+            contenttypelist << kli18n("Data").untranslatedText();
         }
         if (contenttypes.testFlag(Solid::OpticalDisc::VideoCd)) {
-            contenttypelist << I18N_NOOP("Video CD");
+            contenttypelist << kli18n("Video CD").untranslatedText();
         }
         if (contenttypes.testFlag(Solid::OpticalDisc::SuperVideoCd)) {
-            contenttypelist << I18N_NOOP("Super Video CD");
+            contenttypelist << kli18n("Super Video CD").untranslatedText();
         }
         if (contenttypes.testFlag(Solid::OpticalDisc::VideoDvd)) {
-            contenttypelist << I18N_NOOP("Video DVD");
+            contenttypelist << kli18n("Video DVD").untranslatedText();
         }
         if (contenttypes.testFlag(Solid::OpticalDisc::VideoBluRay)) {
-            contenttypelist << I18N_NOOP("Video Blu Ray");
+            contenttypelist << kli18n("Video Blu Ray").untranslatedText();
         }
-        setData(name, I18N_NOOP("Available Content"), contenttypelist);
+        setData(name, kli18n("Available Content").untranslatedText(), contenttypelist);
 
         QStringList disctypes;
-        disctypes << I18N_NOOP("Unknown Disc Type") << I18N_NOOP("CD Rom") << I18N_NOOP("CD Recordable") << I18N_NOOP("CD Rewritable") << I18N_NOOP("DVD Rom")
-                  << I18N_NOOP("DVD Ram") << I18N_NOOP("DVD Recordable") << I18N_NOOP("DVD Rewritable") << I18N_NOOP("DVD Plus Recordable")
-                  << I18N_NOOP("DVD Plus Rewritable") << I18N_NOOP("DVD Plus Recordable Duallayer") << I18N_NOOP("DVD Plus Rewritable Duallayer")
-                  << I18N_NOOP("Blu Ray Rom") << I18N_NOOP("Blu Ray Recordable") << I18N_NOOP("Blu Ray Rewritable") << I18N_NOOP("HD DVD Rom")
-                  << I18N_NOOP("HD DVD Recordable") << I18N_NOOP("HD DVD Rewritable");
+        disctypes << kli18n("Unknown Disc Type").untranslatedText() << kli18n("CD Rom").untranslatedText() << kli18n("CD Recordable").untranslatedText()
+                  << kli18n("CD Rewritable").untranslatedText() << kli18n("DVD Rom").untranslatedText() << kli18n("DVD Ram").untranslatedText()
+                  << kli18n("DVD Recordable").untranslatedText() << kli18n("DVD Rewritable").untranslatedText()
+                  << kli18n("DVD Plus Recordable").untranslatedText() << kli18n("DVD Plus Rewritable").untranslatedText()
+                  << kli18n("DVD Plus Recordable Duallayer").untranslatedText() << kli18n("DVD Plus Rewritable Duallayer").untranslatedText()
+                  << kli18n("Blu Ray Rom").untranslatedText() << kli18n("Blu Ray Recordable").untranslatedText()
+                  << kli18n("Blu Ray Rewritable").untranslatedText() << kli18n("HD DVD Rom").untranslatedText()
+                  << kli18n("HD DVD Recordable").untranslatedText() << kli18n("HD DVD Rewritable").untranslatedText();
         //+1 because the enum starts at -1
-        setData(name, I18N_NOOP("Disc Type"), disctypes.at((int)opticaldisc->discType() + 1));
-        setData(name, I18N_NOOP("Appendable"), opticaldisc->isAppendable());
-        setData(name, I18N_NOOP("Blank"), opticaldisc->isBlank());
-        setData(name, I18N_NOOP("Rewritable"), opticaldisc->isRewritable());
-        setData(name, I18N_NOOP("Capacity"), opticaldisc->capacity());
+        setData(name, kli18n("Disc Type").untranslatedText(), disctypes.at((int)opticaldisc->discType() + 1));
+        setData(name, kli18n("Appendable").untranslatedText(), opticaldisc->isAppendable());
+        setData(name, kli18n("Blank").untranslatedText(), opticaldisc->isBlank());
+        setData(name, kli18n("Rewritable").untranslatedText(), opticaldisc->isRewritable());
+        setData(name, kli18n("Capacity").untranslatedText(), opticaldisc->capacity());
     }
     if (device.is<Solid::Camera>()) {
         Solid::Camera *camera = device.as<Solid::Camera>();
@@ -348,13 +354,13 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
             return false;
         }
 
-        devicetypes << I18N_NOOP("Camera");
+        devicetypes << kli18n("Camera").untranslatedText();
 
-        setData(name, I18N_NOOP("Supported Protocols"), camera->supportedProtocols());
-        setData(name, I18N_NOOP("Supported Drivers"), camera->supportedDrivers());
+        setData(name, kli18n("Supported Protocols").untranslatedText(), camera->supportedProtocols());
+        setData(name, kli18n("Supported Drivers").untranslatedText(), camera->supportedDrivers());
         // Cameras are necessarily Removable and Hotpluggable
-        setData(name, I18N_NOOP("Removable"), true);
-        setData(name, I18N_NOOP("Hotpluggable"), true);
+        setData(name, kli18n("Removable").untranslatedText(), true);
+        setData(name, kli18n("Hotpluggable").untranslatedText(), true);
     }
     if (device.is<Solid::PortableMediaPlayer>()) {
         Solid::PortableMediaPlayer *mediaplayer = device.as<Solid::PortableMediaPlayer>();
@@ -362,13 +368,13 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
             return false;
         }
 
-        devicetypes << I18N_NOOP("Portable Media Player");
+        devicetypes << kli18n("Portable Media Player").untranslatedText();
 
-        setData(name, I18N_NOOP("Supported Protocols"), mediaplayer->supportedProtocols());
-        setData(name, I18N_NOOP("Supported Drivers"), mediaplayer->supportedDrivers());
+        setData(name, kli18n("Supported Protocols").untranslatedText(), mediaplayer->supportedProtocols());
+        setData(name, kli18n("Supported Drivers").untranslatedText(), mediaplayer->supportedDrivers());
         // Portable Media Players are necessarily Removable and Hotpluggable
-        setData(name, I18N_NOOP("Removable"), true);
-        setData(name, I18N_NOOP("Hotpluggable"), true);
+        setData(name, kli18n("Removable").untranslatedText(), true);
+        setData(name, kli18n("Hotpluggable").untranslatedText(), true);
     }
     if (device.is<Solid::Battery>()) {
         Solid::Battery *battery = device.as<Solid::Battery>();
@@ -376,21 +382,24 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
             return false;
         }
 
-        devicetypes << I18N_NOOP("Battery");
+        devicetypes << kli18n("Battery").untranslatedText();
 
         QStringList batterytype;
-        batterytype << I18N_NOOP("Unknown Battery") << I18N_NOOP("PDA Battery") << I18N_NOOP("UPS Battery") << I18N_NOOP("Primary Battery")
-                    << I18N_NOOP("Mouse Battery") << I18N_NOOP("Keyboard Battery") << I18N_NOOP("Keyboard Mouse Battery") << I18N_NOOP("Camera Battery")
-                    << I18N_NOOP("Phone Battery") << I18N_NOOP("Monitor Battery") << I18N_NOOP("Gaming Input Battery") << I18N_NOOP("Bluetooth Battery");
+        batterytype << kli18n("Unknown Battery").untranslatedText() << kli18n("PDA Battery").untranslatedText() << kli18n("UPS Battery").untranslatedText()
+                    << kli18n("Primary Battery").untranslatedText() << kli18n("Mouse Battery").untranslatedText()
+                    << kli18n("Keyboard Battery").untranslatedText() << kli18n("Keyboard Mouse Battery").untranslatedText()
+                    << kli18n("Camera Battery").untranslatedText() << kli18n("Phone Battery").untranslatedText() << kli18n("Monitor Battery").untranslatedText()
+                    << kli18n("Gaming Input Battery").untranslatedText() << kli18n("Bluetooth Battery").untranslatedText();
 
         QStringList chargestate;
-        chargestate << I18N_NOOP("Not Charging") << I18N_NOOP("Charging") << I18N_NOOP("Discharging") << I18N_NOOP("Fully Charged");
+        chargestate << kli18n("Not Charging").untranslatedText() << kli18n("Charging").untranslatedText() << kli18n("Discharging").untranslatedText()
+                    << kli18n("Fully Charged").untranslatedText();
 
-        setData(name, I18N_NOOP("Plugged In"), battery->isPresent()); // FIXME Rename when interested parties are adjusted
-        setData(name, I18N_NOOP("Type"), batterytype.value((int)battery->type()));
-        setData(name, I18N_NOOP("Charge Percent"), battery->chargePercent());
-        setData(name, I18N_NOOP("Rechargeable"), battery->isRechargeable());
-        setData(name, I18N_NOOP("Charge State"), chargestate.at((int)battery->chargeState()));
+        setData(name, kli18n("Plugged In").untranslatedText(), battery->isPresent()); // FIXME Rename when interested parties are adjusted
+        setData(name, kli18n("Type").untranslatedText(), batterytype.value((int)battery->type()));
+        setData(name, kli18n("Charge Percent").untranslatedText(), battery->chargePercent());
+        setData(name, kli18n("Rechargeable").untranslatedText(), battery->isRechargeable());
+        setData(name, kli18n("Charge State").untranslatedText(), chargestate.at((int)battery->chargeState()));
 
         m_signalmanager->mapDevice(battery, device.udi());
     }
@@ -415,12 +424,12 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
     for (int i = 0; i < 11; ++i) {
         const Solid::DeviceInterface *interface = device.asDeviceInterface(typeOrder[i]);
         if (interface) {
-            setData(name, I18N_NOOP("Type Description"), Solid::DeviceInterface::typeDescription(typeOrder[i]));
+            setData(name, kli18n("Type Description").untranslatedText(), Solid::DeviceInterface::typeDescription(typeOrder[i]));
             break;
         }
     }
 
-    setData(name, I18N_NOOP("Device Types"), devicetypes);
+    setData(name, kli18n("Device Types").untranslatedText(), devicetypes);
     return true;
 }
 
@@ -444,7 +453,7 @@ void SolidDeviceEngine::deviceAdded(const QString &udi)
         }
     } else if (device.is<Solid::StorageVolume>()) {
         // update the volume in case of 2-stage devices
-        if (m_devicemap.contains(udi) && containerForSource(udi)->data().value(I18N_NOOP("Size")).toULongLong() == 0) {
+        if (m_devicemap.contains(udi) && containerForSource(udi)->data().value(kli18n("Size").untranslatedText()).toULongLong() == 0) {
             Solid::GenericInterface *iface = device.as<Solid::GenericInterface>();
             if (iface) {
                 iface->setProperty("udi", udi);
@@ -464,14 +473,14 @@ void SolidDeviceEngine::deviceAdded(const QString &udi)
 
 void SolidDeviceEngine::setMountingState(const QString &udi)
 {
-    setData(udi, I18N_NOOP("State"), Mounting);
-    setData(udi, I18N_NOOP("Operation result"), Working);
+    setData(udi, kli18n("State").untranslatedText(), Mounting);
+    setData(udi, kli18n("Operation result").untranslatedText(), Working);
 }
 
 void SolidDeviceEngine::setUnmountingState(const QString &udi)
 {
-    setData(udi, I18N_NOOP("State"), Unmounting);
-    setData(udi, I18N_NOOP("Operation result"), Working);
+    setData(udi, kli18n("State").untranslatedText(), Unmounting);
+    setData(udi, kli18n("Operation result").untranslatedText(), Working);
 }
 
 void SolidDeviceEngine::setIdleState(Solid::ErrorType error, QVariant errorData, const QString &udi)
@@ -479,11 +488,11 @@ void SolidDeviceEngine::setIdleState(Solid::ErrorType error, QVariant errorData,
     Q_UNUSED(errorData)
 
     if (error == Solid::NoError) {
-        setData(udi, I18N_NOOP("Operation result"), Successful);
+        setData(udi, kli18n("Operation result").untranslatedText(), Successful);
     } else {
-        setData(udi, I18N_NOOP("Operation result"), Unsuccessful);
+        setData(udi, kli18n("Operation result").untranslatedText(), Unsuccessful);
     }
-    setData(udi, I18N_NOOP("State"), Idle);
+    setData(udi, kli18n("State").untranslatedText(), Idle);
 
     Solid::Device device = m_devicemap.value(udi);
     if (!device.isValid()) {
@@ -495,8 +504,8 @@ void SolidDeviceEngine::setIdleState(Solid::ErrorType error, QVariant errorData,
         return;
     }
 
-    setData(udi, I18N_NOOP("Accessible"), storageaccess->isAccessible());
-    setData(udi, I18N_NOOP("File Path"), storageaccess->filePath());
+    setData(udi, kli18n("Accessible").untranslatedText(), storageaccess->isAccessible());
+    setData(udi, kli18n("File Path").untranslatedText(), storageaccess->filePath());
 }
 
 void SolidDeviceEngine::deviceChanged(const QMap<QString, int> &props)
@@ -539,10 +548,10 @@ bool SolidDeviceEngine::updateStorageSpace(const QString &udi)
             timer->stop();
 
             if (!job->error()) {
-                setData(udi, I18N_NOOP("Free Space"), QVariant(available).toDouble());
-                setData(udi, I18N_NOOP("Free Space Text"), KFormat().formatByteSize(available));
-                setData(udi, I18N_NOOP("Size"), QVariant(size).toDouble());
-                setData(udi, I18N_NOOP("Size Text"), KFormat().formatByteSize(size));
+                setData(udi, kli18n("Free Space").untranslatedText(), QVariant(available).toDouble());
+                setData(udi, kli18n("Free Space Text").untranslatedText(), KFormat().formatByteSize(available));
+                setData(udi, kli18n("Size").untranslatedText(), QVariant(size).toDouble());
+                setData(udi, kli18n("Size Text").untranslatedText(), KFormat().formatByteSize(size));
             }
 
             m_paths.remove(path);
@@ -568,8 +577,8 @@ bool SolidDeviceEngine::updateHardDiskTemperature(const QString &udi)
     }
 
     if (m_temperature->sources().contains(block->device())) {
-        setData(udi, I18N_NOOP("Temperature"), m_temperature->data(block->device(), HddTemp::Temperature));
-        setData(udi, I18N_NOOP("Temperature Unit"), m_temperature->data(block->device(), HddTemp::Unit));
+        setData(udi, kli18n("Temperature").untranslatedText(), m_temperature->data(block->device(), HddTemp::Temperature));
+        setData(udi, kli18n("Temperature Unit").untranslatedText(), m_temperature->data(block->device(), HddTemp::Unit));
         return true;
     }
 
@@ -580,7 +589,7 @@ bool SolidDeviceEngine::updateEmblems(const QString &udi)
 {
     Solid::Device device = m_devicemap.value(udi);
 
-    setData(udi, I18N_NOOP("Emblems"), device.emblems());
+    setData(udi, kli18n("Emblems").untranslatedText(), device.emblems());
     return true;
 }
 
@@ -594,7 +603,7 @@ bool SolidDeviceEngine::forceUpdateAccessibility(const QString &udi)
     updateEmblems(udi);
     Solid::StorageAccess *storageaccess = device.as<Solid::StorageAccess>();
     if (storageaccess) {
-        setData(udi, I18N_NOOP("Accessible"), storageaccess->isAccessible());
+        setData(udi, kli18n("Accessible").untranslatedText(), storageaccess->isAccessible());
     }
 
     return true;
@@ -613,11 +622,11 @@ bool SolidDeviceEngine::updateInUse(const QString &udi)
     }
 
     if (storageaccess->isAccessible()) {
-        setData(udi, I18N_NOOP("In Use"), true);
+        setData(udi, kli18n("In Use").untranslatedText(), true);
     } else {
         Solid::StorageDrive *drive = getAncestorAs<Solid::StorageDrive>(Solid::Device(udi));
         if (drive) {
-            setData(udi, I18N_NOOP("In Use"), drive->isInUse());
+            setData(udi, kli18n("In Use").untranslatedText(), drive->isInUse());
         }
     }
 
