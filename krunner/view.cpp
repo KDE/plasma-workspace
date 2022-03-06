@@ -40,7 +40,6 @@ View::View(QWindow *)
     , m_offset(.5)
     , m_floating(false)
 {
-    setClearBeforeRendering(true);
     setColor(QColor(Qt::transparent));
     setFlags(Qt::FramelessWindowHint | Qt::WindowStaysOnTopHint);
 

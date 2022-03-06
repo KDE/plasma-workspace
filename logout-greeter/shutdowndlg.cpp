@@ -61,7 +61,6 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype,
 // having a popup here has severe side effects.
 {
     // window stuff
-    setClearBeforeRendering(true);
     setColor(QColor(Qt::transparent));
     setScreen(screen);
 

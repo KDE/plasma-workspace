@@ -19,7 +19,6 @@ DashboardWindow::DashboardWindow(QQuickItem *parent)
     , m_visualParentItem(nullptr)
     , m_visualParentWindow(nullptr)
 {
-    setClearBeforeRendering(true);
     setFlags(Qt::FramelessWindowHint);
 
     setIcon(QIcon::fromTheme(QStringLiteral("plasma")));

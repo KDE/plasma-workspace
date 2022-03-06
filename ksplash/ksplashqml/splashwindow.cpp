@@ -43,7 +43,6 @@ SplashWindow::SplashWindow(bool testing, bool window, const QString &theme, QScr
     setScreen(screen);
     setColor(Qt::transparent);
     setDefaultAlphaBuffer(true);
-    setClearBeforeRendering(true);
     setResizeMode(KQuickAddons::QuickViewSharedEngine::SizeRootObjectToView);
 
     if (!m_window) {
