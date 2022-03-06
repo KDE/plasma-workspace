@@ -137,3 +137,4 @@ QJsonArray Feedback::audits() const
 }
 
 #include "feedback.moc"
+#include "moc_feedback.cpp"

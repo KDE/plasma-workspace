@@ -6,6 +6,7 @@
 
 #include "server.h"
 #include "server_p.h"
+#include "serverinfo.h"
 
 #include "notification.h"
 #include "notification_p.h"
@@ -141,3 +142,5 @@ void Server::clearInhibitions()
 {
     d->clearExternalInhibitions();
 }
+
+#include "moc_server.cpp"

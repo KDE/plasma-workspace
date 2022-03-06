@@ -409,3 +409,4 @@ void KCMColors::processPendingDeletions()
 }
 
 #include "colors.moc"
+#include "moc_colors.cpp"

@@ -185,3 +185,5 @@ void FileInfo::mimeTypeFound(const QString &mimeType)
         Q_EMIT openActionIconNameChanged();
     }
 }
+
+#include "moc_fileinfo.cpp"

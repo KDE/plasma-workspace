@@ -77,3 +77,4 @@ void KCMFormats::unset(const QString &setting)
     settings()->config()->group(QStringLiteral("Formats")).deleteEntry(entry);
 }
 #include "kcmformats.moc"
+#include "moc_kcmformats.cpp"

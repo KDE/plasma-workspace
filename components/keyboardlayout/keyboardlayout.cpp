@@ -86,3 +86,5 @@ void KeyboardLayout::requestDBusData(QDBusPendingReply<T> pendingReply, T &out, 
         watcher->deleteLater();
     });
 }
+
+#include "moc_keyboardlayout.cpp"
