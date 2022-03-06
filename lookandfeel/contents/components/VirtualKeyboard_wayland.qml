@@ -9,9 +9,9 @@ import org.kde.plasma.workspace.keyboardlayout 1.0 as Keyboards
 
 Item {
     id: inputPanel
-    readonly property bool active: Qt.inputMethod.visible
+    readonly property bool active: Keyboards.KWinVirtualKeyboard.visible
     property bool activated: false
-    visible: Qt.inputMethod.visible
+    visible: Keyboards.KWinVirtualKeyboard.visible
 
     x: Qt.inputMethod.keyboardRectangle.x
     y: Qt.inputMethod.keyboardRectangle.y
