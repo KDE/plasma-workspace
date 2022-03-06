@@ -901,7 +901,7 @@ void ShellCorona::loadDefaultLayout()
         QFile file(script);
         if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
             QString code = file.readAll();
-            qDebug() << "evaluating pre-startup script:" << script;
+            qCDebug(PLASMASHELL) << "evaluating pre-startup script:" << script;
 
             WorkspaceScripting::ScriptEngine scriptEngine(this);
 
@@ -909,7 +909,7 @@ void ShellCorona::loadDefaultLayout()
                 qCWarning(PLASMASHELL) << msg;
             });
             connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::print, this, [](const QString &msg) {
-                qDebug() << msg;
+                qCDebug(PLASMASHELL) << msg;
             });
             if (!scriptEngine.evaluateScript(code, script)) {
                 qCWarning(PLASMASHELL) << "failed to initialize layout properly:" << script;
@@ -937,7 +937,7 @@ void ShellCorona::loadDefaultLayout()
     QFile file(script);
     if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
         QString code = file.readAll();
-        qDebug() << "evaluating startup script:" << script;
+        qCDebug(PLASMASHELL) << "evaluating startup script:" << script;
 
         // We need to know which activities are here in order for
         // the scripting engine to work. activityAdded does not mind
@@ -953,7 +953,7 @@ void ShellCorona::loadDefaultLayout()
             qCWarning(PLASMASHELL) << msg;
         });
         connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::print, this, [](const QString &msg) {
-            qDebug() << msg;
+            qCDebug(PLASMASHELL) << msg;
         });
         if (!scriptEngine.evaluateScript(code, script)) {
             qCWarning(PLASMASHELL) << "failed to initialize layout properly:" << script;
@@ -976,7 +976,7 @@ void ShellCorona::processUpdateScripts()
         qCWarning(PLASMASHELL) << msg;
     });
     connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::print, this, [](const QString &msg) {
-        qDebug() << msg;
+        qCDebug(PLASMASHELL) << msg;
     });
 
     for (const QString &script : scripts) {
@@ -1223,7 +1223,7 @@ void ShellCorona::checkAllDesktopsUiReady(bool ready)
         if (!v->containment()->isUiReady())
             return;
 
-        qDebug() << "Plasma Shell startup completed";
+        qCDebug(PLASMASHELL) << "Plasma Shell startup completed";
         QDBusMessage ksplashProgressMessage = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KSplash"),
                                                                              QStringLiteral("/KSplash"),
                                                                              QStringLiteral("org.kde.KSplash"),
@@ -1353,7 +1353,7 @@ void ShellCorona::executeSetupPlasmoidScript(Plasma::Containment *containment, P
         qCWarning(PLASMASHELL) << msg;
     });
     connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::print, this, [](const QString &msg) {
-        qDebug() << msg;
+        qCDebug(PLASMASHELL) << msg;
     });
 
     QFile file(scriptFile);
@@ -1364,7 +1364,7 @@ void ShellCorona::executeSetupPlasmoidScript(Plasma::Containment *containment, P
 
     QString script = file.readAll();
     if (script.isEmpty()) {
-        // qDebug() << "script is empty";
+        // qCDebug(PLASMASHELL) << "script is empty";
         return;
     }
 
@@ -1434,7 +1434,7 @@ QString ShellCorona::evaluateScript(const QString &script)
         bufferStream << msg;
     });
     connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::print, this, [&bufferStream](const QString &msg) {
-        qDebug() << msg;
+        qCDebug(PLASMASHELL) << msg;
         bufferStream << msg;
     });
 
@@ -1453,10 +1453,10 @@ QString ShellCorona::evaluateScript(const QString &script)
 void ShellCorona::checkActivities()
 {
     KActivities::Controller::ServiceStatus status = m_activityController->serviceStatus();
-    // qDebug() << "$%$%$#%$%$%Status:" << status;
+    // qCDebug(PLASMASHELL) << "$%$%$#%$%$%Status:" << status;
     if (status != KActivities::Controller::Running) {
         // panic and give up - better than causing a mess
-        qDebug() << "ShellCorona::checkActivities is called whilst activity daemon is still connecting";
+        qCDebug(PLASMASHELL) << "ShellCorona::checkActivities is called whilst activity daemon is still connecting";
         return;
     }
 
@@ -1481,7 +1481,7 @@ void ShellCorona::checkActivities()
 
 void ShellCorona::currentActivityChanged(const QString &newActivity)
 {
-    //     qDebug() << "Activity changed:" << newActivity;
+    //     qCDebug(PLASMASHELL) << "Activity changed:" << newActivity;
 
     for (auto it = m_desktopViewForScreen.constBegin(); it != m_desktopViewForScreen.constEnd(); ++it) {
         Plasma::Containment *c = createContainmentForActivity(newActivity, m_screenPool->id(it.key()->name()));
@@ -1526,7 +1526,7 @@ void ShellCorona::insertActivity(const QString &id, const QString &plugin)
     awaitFuture(currentActivity);
 
     if (!currentActivity.result()) {
-        qDebug() << "Failed to create and switch to the activity";
+        qCDebug(PLASMASHELL) << "Failed to create and switch to the activity";
         return;
     }
 
@@ -1744,7 +1744,7 @@ void ShellCorona::addPanel(QAction *action)
             qCWarning(PLASMASHELL) << msg;
         });
         connect(&scriptEngine, &WorkspaceScripting::ScriptEngine::print, this, [](const QString &msg) {
-            qDebug() << msg;
+            qCDebug(PLASMASHELL) << msg;
         });
         const QString templateName = plugin.right(plugin.length() - qstrlen("plasma-desktop-template:"));
 
@@ -1941,7 +1941,7 @@ int ShellCorona::screenForContainment(const Plasma::Containment *containment) co
     // It is also correct for desktops *that have the correct activity()*
     // a containment with lastScreen() == 0 but another activity,
     // won't be associated to a screen
-    //     qDebug() << "ShellCorona screenForContainment: " << containment << " Last screen is " << containment->lastScreen();
+    //     qCDebug(PLASMASHELL) << "ShellCorona screenForContainment: " << containment << " Last screen is " << containment->lastScreen();
 
     const auto screens = m_screenPool->screens();
     for (auto screen : screens) {
