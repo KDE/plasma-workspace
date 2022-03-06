@@ -249,7 +249,7 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList &)
     m_scanDuplicateFontsControl = new CPushButton(KGuiItem(i18n("Find Duplicates…"), "edit-duplicate", i18n("Scan for Duplicate Fonts…")), fontControlWidget);
 
     m_addFontControl = new CPushButton(KGuiItem(i18n("Install from File…"), "document-import", i18n("Install fonts from a local file")), fontControlWidget);
-    m_getNewFontsControl = new KNS3::Button(i18n("Get New Fonts…"), QStringLiteral("kfontinst.knsrc"), this);
+    m_getNewFontsControl = new KNSWidgets::Button(i18n("Get New Fonts…"), QStringLiteral("kfontinst.knsrc"), this);
     m_getNewFontsControl->setToolTip(i18n("Download new fonts"));
 
     m_deleteFontControl = new CPushButton(KGuiItem(QString(), "edit-delete", i18n("Delete Selected Fonts…")), fontControlWidget);
@@ -347,7 +347,7 @@ CKCmFontInst::CKCmFontInst(QWidget *parent, const QVariantList &)
     connect(m_enableGroupControl, &QAbstractButton::clicked, this, &CKCmFontInst::enableGroup);
     connect(m_disableGroupControl, &QAbstractButton::clicked, this, &CKCmFontInst::disableGroup);
     connect(m_addFontControl, SIGNAL(clicked()), SLOT(addFonts()));
-    connect(m_getNewFontsControl, &KNS3::Button::dialogFinished, this, &CKCmFontInst::downloadFonts);
+    connect(m_getNewFontsControl, &KNSWidgets::Button::dialogFinished, this, &CKCmFontInst::downloadFonts);
     connect(m_deleteFontControl, &QAbstractButton::clicked, this, &CKCmFontInst::deleteFonts);
     connect(m_scanDuplicateFontsControl, &QAbstractButton::clicked, this, &CKCmFontInst::duplicateFonts);
     // connect(validateFontsAct, SIGNAL(triggered(bool)), SLOT(validateFonts()));
@@ -793,7 +793,7 @@ void CKCmFontInst::duplicateFonts()
 //{
 //}
 
-void CKCmFontInst::downloadFonts(const QList<KNS3::Entry> &changedEntries)
+void CKCmFontInst::downloadFonts(const QList<KNSCore::Entry> &changedEntries)
 {
     if (changedEntries.isEmpty()) {
         return;

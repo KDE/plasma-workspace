@@ -12,7 +12,7 @@ target_link_libraries(kcm_fontinst
     KF5::KIOCore
     KF5::KIOWidgets
     KF5::XmlGui
-    KF5::NewStuff
+    KF5::NewStuffWidgets
     kfontinstui
     kfontinst
     X11::X11
