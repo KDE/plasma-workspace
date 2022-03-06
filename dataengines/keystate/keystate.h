@@ -8,6 +8,7 @@
 
 #include <Plasma/DataEngine>
 
+#include <KLazyLocalizedString>
 #include <kmodifierkeyinfo.h>
 
 /**
@@ -39,6 +40,6 @@ protected Q_SLOTS:
 
 private:
     KModifierKeyInfo m_keyInfo;
-    QMap<Qt::Key, QString> m_mods;
-    QMap<Qt::MouseButton, QString> m_buttons;
+    QMap<Qt::Key, KLazyLocalizedString> m_mods;
+    QMap<Qt::MouseButton, KLazyLocalizedString> m_buttons;
 };
