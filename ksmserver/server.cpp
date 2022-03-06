@@ -870,7 +870,7 @@ void KSMServer::setupShortcuts()
         QAction *a;
         a = actionCollection->addAction(QStringLiteral("Log Out"));
         a->setText(i18n("Log Out"));
-        KGlobalAccel::self()->setGlobalShortcut(a, QList<QKeySequence>() << Qt::ALT + Qt::CTRL + Qt::Key_Delete);
+        KGlobalAccel::self()->setGlobalShortcut(a, QList<QKeySequence>() << (Qt::ALT | Qt::CTRL | Qt::Key_Delete));
         connect(a, &QAction::triggered, this, &KSMServer::defaultLogout);
 
         a = actionCollection->addAction(QStringLiteral("Log Out Without Confirmation"));
