@@ -6,7 +6,7 @@ if(NOT Qt5QuickTest_FOUND)
 endif()
 
 add_executable(qmltest qmltest.cpp)
-target_link_libraries(qmltest Qt5::QuickTest)
+target_link_libraries(qmltest Qt::QuickTest)
 
 macro(qtquick_add_tests)
     if (WIN32)

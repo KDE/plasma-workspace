@@ -12,4 +12,4 @@ target_link_libraries(kfontviewpart KF5::Archive KF5::Parts KF5::XmlGui kfontins
 
 install(TARGETS kfontviewpart  DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf5/parts )
 
-install( FILES kfontviewpart.rc DESTINATION  ${KDE_INSTALL_KXMLGUI5DIR}/kfontview )
+install( FILES kfontviewpart.rc DESTINATION  ${KDE_INSTALL_KXMLGUIDIR}/kfontview )

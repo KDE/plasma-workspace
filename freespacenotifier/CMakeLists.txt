@@ -22,5 +22,5 @@ target_link_libraries(freespacenotifier
 
 ########### install files ###############
 
-install( FILES freespacenotifier.notifyrc  DESTINATION  ${KDE_INSTALL_KNOTIFY5RCDIR} )
+install( FILES freespacenotifier.notifyrc  DESTINATION  ${KDE_INSTALL_KNOTIFYRCDIR} )
 install( FILES freespacenotifier.kcfg  DESTINATION  ${KDE_INSTALL_KCFGDIR} )

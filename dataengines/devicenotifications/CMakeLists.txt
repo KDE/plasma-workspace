@@ -17,4 +17,4 @@ target_link_libraries(plasma_engine_devicenotifications
 ) # todo: add kworkspace once ported
 
 install(TARGETS plasma_engine_devicenotifications DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/dataengine)
-install(FILES devicenotifications.notifyrc DESTINATION ${KDE_INSTALL_KNOTIFY5RCDIR})
+install(FILES devicenotifications.notifyrc DESTINATION ${KDE_INSTALL_KNOTIFYRCDIR})

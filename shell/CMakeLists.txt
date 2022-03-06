@@ -117,7 +117,7 @@ ecm_install_configured_files(INPUT plasma-plasmashell.service.in @ONLY DESTINATI
 
 install(FILES
    scripting/plasma-layouttemplate.desktop
-   DESTINATION ${KDE_INSTALL_KSERVICETYPES5DIR})
+   DESTINATION ${KDE_INSTALL_KSERVICETYPESDIR})
 
 add_subdirectory(packageplugins)
 if(BUILD_TESTING)

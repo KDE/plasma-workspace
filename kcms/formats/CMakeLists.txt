@@ -14,7 +14,7 @@ kconfig_add_kcfg_files(kcm_formats_PART_SRCS formatssettings.kcfgc GENERATE_MOC)
 add_library(kcm_formats MODULE ${kcm_formats_PART_SRCS})
 
 target_link_libraries(kcm_formats
-    Qt5::Core
+    Qt::Core
     KF5::ConfigCore
     KF5::ConfigGui
     KF5::CoreAddons

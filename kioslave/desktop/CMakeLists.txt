@@ -7,7 +7,7 @@ endif()
 set(kio_desktop_SRCS kio_desktop.cpp)
 qt_add_dbus_interface( kio_desktop_SRCS ${KDED_DBUS_INTERFACE} kded_interface )
 
-qt5_generate_dbus_interface( desktopnotifier.h ${CMAKE_CURRENT_BINARY_DIR}/desktopnotifier.xml )
+qt_generate_dbus_interface( desktopnotifier.h ${CMAKE_CURRENT_BINARY_DIR}/desktopnotifier.xml )
 qt_add_dbus_interface( kio_desktop_SRCS ${CMAKE_CURRENT_BINARY_DIR}/desktopnotifier.xml desktopnotifier_interface )
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR})

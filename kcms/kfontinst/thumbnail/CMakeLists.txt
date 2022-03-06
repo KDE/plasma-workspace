@@ -10,5 +10,5 @@ add_library(fontthumbnail MODULE ${fontthumbnail_PART_SRCS})
 target_link_libraries(fontthumbnail KF5::Archive KF5::KIOCore KF5::KIOWidgets kfontinstui kfontinst )
 
 install(TARGETS fontthumbnail  DESTINATION ${KDE_INSTALL_PLUGINDIR} )
-install( FILES fontthumbnail.desktop  DESTINATION  ${KDE_INSTALL_KSERVICES5DIR} )
+install( FILES fontthumbnail.desktop  DESTINATION  ${KDE_INSTALL_KSERVICESDIR} )
 
