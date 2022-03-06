@@ -7,6 +7,7 @@
 #include "splashapp.h"
 #include <QQuickWindow>
 
+#include <QFile>
 #include <QTextStream>
 
 #include <kworkspace.h>

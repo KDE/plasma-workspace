@@ -30,6 +30,7 @@
 
 #include <QApplication>
 #include <QCommandLineParser>
+#include <QFile>
 #include <QQuickWindow>
 #include <X11/extensions/Xrender.h>
 

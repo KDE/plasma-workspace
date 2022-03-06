@@ -6,6 +6,7 @@
 #include "historyurlitem.h"
 
 #include <QCryptographicHash>
+#include <QIODevice>
 #include <QMimeData>
 
 namespace

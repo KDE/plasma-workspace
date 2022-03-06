@@ -9,7 +9,6 @@
 
 #include "klipper_debug.h"
 #include <QApplication>
-#include <QDesktopWidget>
 #include <QKeyEvent>
 #include <QScreen>
 #include <QWidgetAction>

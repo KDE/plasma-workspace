@@ -8,8 +8,8 @@
 
 #include <QAbstractListModel>
 #include <QMap>
+#include <QStringList>
 
-class QStringList;
 class QString;
 
 class GtkThemesModel : public QAbstractListModel

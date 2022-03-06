@@ -11,6 +11,7 @@
 
 #include <QAction>
 #include <QDebug>
+#include <QFile>
 #include <QQuickItem>
 
 #include <KActionCollection>

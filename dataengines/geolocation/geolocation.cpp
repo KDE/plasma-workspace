@@ -11,7 +11,6 @@
 #include <KPluginMetaData>
 #include <NetworkManagerQt/Manager>
 #include <QDebug>
-#include <QNetworkConfigurationManager>
 
 static const char SOURCE[] = "location";
 

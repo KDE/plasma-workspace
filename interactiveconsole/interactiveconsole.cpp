@@ -8,6 +8,7 @@
 #include "interactiveconsole.h"
 
 #include <QAction>
+#include <QActionGroup>
 #include <QApplication>
 #include <QDBusConnection>
 #include <QDBusMessage>

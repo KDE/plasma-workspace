@@ -9,6 +9,7 @@
 #include "historymodel.h"
 
 #include <QCryptographicHash>
+#include <QIODevice>
 #include <QIcon>
 #include <QMimeData>
 
