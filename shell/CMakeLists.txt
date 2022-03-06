@@ -98,6 +98,9 @@ target_link_libraries(plasmashell
  PW::KWorkspace
  Wayland::Client
 )
+if (QT_MAJOR_VERSION STREQUAL "6")
+    target_link_libraries(plasmashell KF5::ConfigQml)
+endif()
 if (TARGET KUserFeedbackCore)
     target_link_libraries(plasmashell KUserFeedbackCore)
     target_compile_definitions(plasmashell PRIVATE -DWITH_KUSERFEEDBACKCORE)

@@ -6,9 +6,9 @@
 
 #pragma once
 
-#include <KDeclarative/ConfigPropertyMap>
 #include <PlasmaQuick/ConfigModel>
 #include <PlasmaQuick/ConfigView>
+#include <QQmlPropertyMap>
 
 namespace Plasma
 {
@@ -26,7 +26,7 @@ class ContainmentConfigView : public PlasmaQuick::ConfigView
     Q_PROPERTY(QAbstractItemModel *currentContainmentActionsModel READ currentContainmentActionsModel CONSTANT)
     Q_PROPERTY(PlasmaQuick::ConfigModel *wallpaperConfigModel READ wallpaperConfigModel CONSTANT)
     Q_PROPERTY(PlasmaQuick::ConfigModel *containmentPluginsConfigModel READ containmentPluginsConfigModel CONSTANT)
-    Q_PROPERTY(KDeclarative::ConfigPropertyMap *wallpaperConfiguration READ wallpaperConfiguration NOTIFY wallpaperConfigurationChanged)
+    Q_PROPERTY(QQmlPropertyMap *wallpaperConfiguration READ wallpaperConfiguration NOTIFY wallpaperConfigurationChanged)
     Q_PROPERTY(QString currentWallpaper READ currentWallpaper WRITE setCurrentWallpaper NOTIFY currentWallpaperChanged)
     Q_PROPERTY(QString containmentPlugin READ containmentPlugin WRITE setContainmentPlugin NOTIFY containmentPluginChanged)
 
@@ -42,7 +42,7 @@ public:
     PlasmaQuick::ConfigModel *containmentPluginsConfigModel();
     QString currentWallpaper() const;
     void setCurrentWallpaper(const QString &wallpaper);
-    KDeclarative::ConfigPropertyMap *wallpaperConfiguration() const;
+    QQmlPropertyMap *wallpaperConfiguration() const;
     QString containmentPlugin() const;
     void setContainmentPlugin(const QString &plugin);
 
@@ -63,6 +63,6 @@ private:
     PlasmaQuick::ConfigModel *m_containmentPluginsConfigModel = nullptr;
     CurrentContainmentActionsModel *m_currentContainmentActionsModel = nullptr;
     QString m_currentWallpaper;
-    KDeclarative::ConfigPropertyMap *m_currentWallpaperConfig = nullptr;
-    KDeclarative::ConfigPropertyMap *m_ownWallpaperConfig = nullptr;
+    QQmlPropertyMap *m_currentWallpaperConfig = nullptr;
+    QQmlPropertyMap *m_ownWallpaperConfig = nullptr;
 };
