@@ -15,6 +15,9 @@ target_link_libraries(fontinst_bin
 set_target_properties(fontinst_helper PROPERTIES OUTPUT_NAME fontinst_helper)
 target_link_libraries(fontinst_helper 
                       Qt::DBus Qt::Xml KF5::AuthCore KF5::KIOCore kfontinst)
+if (QT_MAJOR_VERSION EQUAL "6")
+    target_link_libraries(fontinst_helper Qt::Core5Compat) # for QTextCodec
+endif()
 
 ecm_qt_declare_logging_category(fontinst_bin
     HEADER kfontinst_debug.h

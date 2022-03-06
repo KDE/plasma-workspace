@@ -20,7 +20,9 @@ target_link_libraries(kcm_formats
     KF5::CoreAddons
     KF5::I18n
     KF5::QuickAddons)
-
+if (QT_MAJOR_VERSION EQUAL "6")
+    target_link_libraries(kcm_formats Qt::Core5Compat) # for QTextCodec
+endif()
 
 ########### install files ###############
 install(TARGETS kcm_formats  DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma/kcms/systemsettings)

@@ -3,7 +3,7 @@
 
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_runner_bookmarksrunner\")
 
-find_package(Qt5 CONFIG REQUIRED COMPONENTS Sql)
+find_package(Qt${QT_MAJOR_VERSION} CONFIG REQUIRED COMPONENTS Sql)
 
 set(krunner_bookmarks_common_SRCS
     bookmarkmatch.cpp

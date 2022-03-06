@@ -78,7 +78,7 @@ install(FILES kcm_lookandfeel.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 install(FILES lookandfeel.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
 
 if(BUILD_TESTING)
-   find_package(Qt5Test ${QT_MIN_VERSION} CONFIG REQUIRED)
+   find_package(Qt${QT_MAJOR_VERSION}Test ${QT_MIN_VERSION} CONFIG REQUIRED)
    add_subdirectory(autotests)
 endif()
 

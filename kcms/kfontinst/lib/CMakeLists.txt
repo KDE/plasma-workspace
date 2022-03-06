@@ -14,6 +14,9 @@ target_link_libraries(kfontinst
     Qt::Gui
     XCB::IMAGE
 )
+if (QT_MAJOR_VERSION EQUAL "6")
+    target_link_libraries(kfontinst PRIVATE Qt::Core5Compat) # for QTextCodec
+endif()
 
 set_target_properties(kfontinst PROPERTIES VERSION ${PROJECT_VERSION} SOVERSION ${PROJECT_VERSION_MAJOR} )
 

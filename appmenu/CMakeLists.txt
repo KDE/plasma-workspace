@@ -20,7 +20,6 @@ pkg_check_modules(XKBCommon REQUIRED IMPORTED_TARGET xkbcommon)
 target_link_libraries(appmenu
     Qt::DBus
     Qt::WaylandClientPrivate
-    Qt::XkbCommonSupportPrivate
     KF5::DBusAddons
     KF5::KIOCore
     KF5::WaylandClient
@@ -29,6 +28,9 @@ target_link_libraries(appmenu
     PkgConfig::XKBCommon
     dbusmenuqt
 )
+if (QT_MAJOR_VERSION EQUAL "5")
+    target_link_libraries(appmenu Qt::XkbCommonSupportPrivate)
+endif()
 
 if (HAVE_X11)
     target_link_libraries(appmenu Qt::X11Extras XCB::XCB)

@@ -7,11 +7,17 @@ set(screenpoolmanualtest_SRCS
     ${CMAKE_CURRENT_BINARY_DIR}/../screenpool-debug.cpp
     ../primaryoutputwatcher.cpp
     )
-ecm_add_qtwayland_client_protocol(screenpoolmanualtest_SRCS
+add_executable(screenpoolmanualtest)
+if (QT_MAJOR_VERSION EQUAL "5")
+    ecm_add_qtwayland_client_protocol(screenpoolmanualtest_SRCS
         PROTOCOL ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-primary-output-v1.xml
         BASENAME kde-primary-output-v1
     )
-add_executable(screenpoolmanualtest ${screenpoolmanualtest_SRCS})
+else()
+    qt6_generate_wayland_protocol_client_sources(screenpoolmanualtest FILES
+        ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-primary-output-v1.xml)
+endif()
+target_sources(screenpoolmanualtest PRIVATE ${screenpoolmanualtest_SRCS})
 target_link_libraries(screenpoolmanualtest
             Qt::Test
             Qt::Gui

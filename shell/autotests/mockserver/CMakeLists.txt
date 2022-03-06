@@ -14,26 +14,38 @@ set(SharedClientTest_LIB_SRCS
     primaryoutput.cpp primaryoutput.h
 )
 
-ecm_add_qtwayland_server_protocol(SharedClientTest_LIB_SRCS
-    PROTOCOL ${Wayland_DATADIR}/wayland.xml
-    BASENAME wayland
-)
+add_library(SharedClientTest OBJECT)
+if (QT_MAJOR_VERSION EQUAL "5")
+    ecm_add_qtwayland_server_protocol(SharedClientTest_LIB_SRCS
+        PROTOCOL ${Wayland_DATADIR}/wayland.xml
+        BASENAME wayland
+    )
 
-ecm_add_qtwayland_server_protocol(SharedClientTest_LIB_SRCS
-    PROTOCOL ${WaylandProtocols_DATADIR}/unstable/xdg-output/xdg-output-unstable-v1.xml
-    BASENAME xdg-output-unstable-v1
-)
+    ecm_add_qtwayland_server_protocol(SharedClientTest_LIB_SRCS
+        PROTOCOL ${WaylandProtocols_DATADIR}/unstable/xdg-output/xdg-output-unstable-v1.xml
+        BASENAME xdg-output-unstable-v1
+    )
 
-ecm_add_qtwayland_client_protocol(SharedClientTest_LIB_SRCS
-    PROTOCOL ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-primary-output-v1.xml
-    BASENAME kde-primary-output-v1
-)
-ecm_add_qtwayland_server_protocol(SharedClientTest_LIB_SRCS
-    PROTOCOL ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-primary-output-v1.xml
-    BASENAME kde-primary-output-v1
-)
+    ecm_add_qtwayland_client_protocol(SharedClientTest_LIB_SRCS
+        PROTOCOL ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-primary-output-v1.xml
+        BASENAME kde-primary-output-v1
+    )
+    ecm_add_qtwayland_server_protocol(SharedClientTest_LIB_SRCS
+        PROTOCOL ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-primary-output-v1.xml
+        BASENAME kde-primary-output-v1
+    )
+else()
+    qt6_generate_wayland_protocol_client_sources(SharedClientTest FILES
+        ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-primary-output-v1.xml
+    )
+    qt6_generate_wayland_protocol_server_sources(SharedClientTest FILES
+        ${Wayland_DATADIR}/wayland.xml
+        ${WaylandProtocols_DATADIR}/unstable/xdg-output/xdg-output-unstable-v1.xml
+        ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-primary-output-v1.xml
+    )
+endif()
 
-add_library(SharedClientTest OBJECT ${SharedClientTest_LIB_SRCS})
+target_sources(SharedClientTest PRIVATE ${SharedClientTest_LIB_SRCS})
 
 target_link_libraries(SharedClientTest
     PUBLIC

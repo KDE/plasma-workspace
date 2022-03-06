@@ -57,18 +57,23 @@ if (TARGET KUserFeedbackCore)
     )
 endif()
 
-ecm_add_qtwayland_client_protocol(plasma_shell_SRCS
-    PROTOCOL ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-primary-output-v1.xml
-    BASENAME kde-primary-output-v1
-)
+add_executable(plasmashell)
+if (QT_MAJOR_VERSION EQUAL "5")
+    ecm_add_qtwayland_client_protocol(plasma_shell_SRCS
+        PROTOCOL ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-primary-output-v1.xml
+        BASENAME kde-primary-output-v1
+    )
+else()
+    qt6_generate_wayland_protocol_client_sources(plasmashell FILES
+        ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-primary-output-v1.xml
+    )
+endif()
 
 set(krunner_xml ${plasma-workspace_SOURCE_DIR}/krunner/dbus/org.kde.krunner.App.xml)
 qt_add_dbus_interface(plasma_shell_SRCS ${krunner_xml} krunner_interface)
 
 
-add_executable(plasmashell
-    ${plasma_shell_SRCS}
-)
+target_sources(plasmashell PRIVATE ${plasma_shell_SRCS})
 
 target_link_libraries(plasmashell
  Qt::Quick

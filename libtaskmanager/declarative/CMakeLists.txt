@@ -20,10 +20,15 @@ if(TARGET PkgConfig::PipeWire)
         DESTINATION "${KDE_INSTALL_LOGGINGCATEGORIESDIR}"
     )
 
-    ecm_add_qtwayland_client_protocol(SRCS
-        PROTOCOL ${PLASMA_WAYLAND_PROTOCOLS_DIR}/screencast.xml
-        BASENAME zkde-screencast-unstable-v1
-    )
+    if (QT_MAJOR_VERSION EQUAL "5")
+        ecm_add_qtwayland_client_protocol(SRCS
+            PROTOCOL ${PLASMA_WAYLAND_PROTOCOLS_DIR}/screencast.xml
+            BASENAME zkde-screencast-unstable-v1
+        )
+    else()
+        qt6_generate_wayland_protocol_client_sources(taskmanagerplugin FILES
+            ${PLASMA_WAYLAND_PROTOCOLS_DIR}/screencast.xml)
+    endif()
     target_include_directories(taskmanagerplugin PRIVATE ${Libdrm_INCLUDE_DIR})
 
     target_compile_definitions(taskmanagerplugin PRIVATE -DWITH_PIPEWIRE)

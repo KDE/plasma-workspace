@@ -13,7 +13,6 @@ option(INSTALL_SDDM_WAYLAND_SESSION OFF)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Svg Widgets Quick QuickWidgets Concurrent Test Network)
 find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 
@@ -36,6 +35,7 @@ include(ECMGenerateDBusServiceFile)
 include(ECMFindQmlModule)
 include(ECMGenerateExportHeader)
 
+find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Svg Widgets Quick QuickWidgets Concurrent Test Network)
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
                     Plasma Runner Notifications NotifyConfig NewStuff Wallet IdleTime
                     Declarative I18n KCMUtils TextWidgets Crash GlobalAccel DBusAddons Wayland
@@ -89,8 +89,8 @@ set_package_properties(KF5Holidays PROPERTIES DESCRIPTION "Holidays provider for
                        PURPOSE "Needed to for holidays plugin for Plasma Calendar."
                       )
 
-find_package(Phonon4Qt5 4.6.60 REQUIRED NO_MODULE)
-set_package_properties(Phonon4Qt5 PROPERTIES
+find_package(Phonon4Qt${QT_MAJOR_VERSION} 4.6.60 REQUIRED NO_MODULE)
+set_package_properties(Phonon4Qt${QT_MAJOR_VERSION} PROPERTIES
    DESCRIPTION "Qt-based audio library"
    TYPE REQUIRED)
 
@@ -127,15 +127,19 @@ if(PipeWire_FOUND)
   find_package(Libdrm REQUIRED)
 endif()
 
-find_package(QtWaylandScanner REQUIRED)
-find_package(Qt5WaylandClient)
-find_package(Qt5XkbCommonSupport)
+if(QT_MAJOR_VERSION EQUAL "5")
+  find_package(QtWaylandScanner REQUIRED)
+  find_package(Qt5XkbCommonSupport)
+else()
+  find_package(Qt6 REQUIRED CONFIG COMPONENTS WaylandCompositor)
+endif()
+find_package(Qt${QT_MAJOR_VERSION}WaylandClient)
 find_package(PlasmaWaylandProtocols 1.6 REQUIRED)
 find_package(Wayland REQUIRED COMPONENTS Client Server) # Server is used in autotests
 
 if(FONTCONFIG_FOUND)
   # kfontinst
-  find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS PrintSupport)
+  find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS PrintSupport)
 endif()
 
 if(X11_FOUND)
@@ -145,7 +149,9 @@ if(X11_FOUND)
     message(FATAL_ERROR "\nThe X11 Session Management (SM) development package could not be found.\nPlease install libSM.\n")
   endif(NOT X11_SM_FOUND)
 
-  find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS X11Extras)
+  if (QT_MAJOR_VERSION EQUAL "5")
+    find_package(Qt5 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS X11Extras)
+  endif()
 endif()
 
 if(X11_FOUND AND XCB_XCB_FOUND)
@@ -161,13 +167,13 @@ if(${AppStreamQt_FOUND})
     set(HAVE_APPSTREAMQT true)
 endif()
 
-find_package(PackageKitQt5)
-set_package_properties(PackageKitQt5
+find_package(PackageKitQt${QT_MAJOR_VERSION})
+set_package_properties(PackageKitQt${QT_MAJOR_VERSION}
         PROPERTIES DESCRIPTION "Software Manager integration"
         TYPE OPTIONAL
         PURPOSE "Used to install additional language packages on demand"
         )
-if(PackageKitQt5_FOUND)
+if(PackageKitQt${QT_MAJOR_VERSION}_FOUND)
     set(HAVE_PACKAGEKIT TRUE)
 endif()
 
