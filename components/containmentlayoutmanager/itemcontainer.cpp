@@ -373,10 +373,18 @@ QQmlListProperty<QObject> ItemContainer::contentData()
     return QQmlListProperty<QObject>(this, nullptr, contentData_append, contentData_count, contentData_at, contentData_clear);
 }
 
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 void ItemContainer::geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry)
+#else
+void ItemContainer::geometryChange(const QRectF &newGeometry, const QRectF &oldGeometry)
+#endif
 {
     syncChildItemsGeometry(newGeometry.size());
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     QQuickItem::geometryChanged(newGeometry, oldGeometry);
+#else
+    QQuickItem::geometryChange(newGeometry, oldGeometry);
+#endif
     Q_EMIT contentWidthChanged();
     Q_EMIT contentHeightChanged();
 }

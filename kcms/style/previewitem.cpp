@@ -284,11 +284,19 @@ void PreviewItem::dispatchEnterLeave(QWidget *enter, QWidget *leave, const QPoin
     }
 }
 
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 void PreviewItem::geometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry)
+#else
+void PreviewItem::geometryChange(const QRectF &newGeometry, const QRectF &oldGeometry)
+#endif
 {
     if (m_widget && newGeometry != oldGeometry) {
         m_widget->resize(qRound(newGeometry.width()), qRound(newGeometry.height()));
     }
 
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     QQuickPaintedItem::geometryChanged(newGeometry, oldGeometry);
+#else
+    QQuickPaintedItem::geometryChange(newGeometry, oldGeometry);
+#endif
 }
