@@ -87,13 +87,9 @@ void NotificationGroupingProxyModel::adjustMap(int anchor, int delta)
 {
     for (int i = 0; i < rowMap.count(); ++i) {
         QVector<int> *sourceRows = rowMap.at(i);
-        QMutableVectorIterator<int> it(*sourceRows);
-
-        while (it.hasNext()) {
-            it.next();
-
-            if (it.value() >= anchor) {
-                it.setValue(it.value() + delta);
+        for (auto it = sourceRows->begin(); it != sourceRows->end(); ++it) {
+            if ((*it) >= anchor) {
+                *it += delta;
             }
         }
     }

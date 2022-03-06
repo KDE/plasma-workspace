@@ -22,6 +22,7 @@
 #include <QGuiApplication>
 #include <QTimer>
 #include <QUrl>
+#include <QVector>
 
 #include <numeric>
 
@@ -218,13 +219,9 @@ void TasksModel::Private::initModels()
         }
 
         const int delta = (end - start) + 1;
-        QMutableListIterator<int> it(sortedPreFilterRows);
-
-        while (it.hasNext()) {
-            it.next();
-
-            if (it.value() >= start) {
-                it.setValue(it.value() + delta);
+        for (auto it = sortedPreFilterRows.begin(); it != sortedPreFilterRows.end(); ++it) {
+            if ((*it) >= start) {
+                *it += delta;
             }
         }
 
@@ -271,13 +268,9 @@ void TasksModel::Private::initModels()
         }
 
         const int delta = (last - first) + 1;
-        QMutableListIterator<int> it(sortedPreFilterRows);
-
-        while (it.hasNext()) {
-            it.next();
-
-            if (it.value() > last) {
-                it.setValue(it.value() - delta);
+        for (auto it = sortedPreFilterRows.begin(); it != sortedPreFilterRows.end(); ++it) {
+            if ((*it) > last) {
+                *it -= delta;
             }
         }
     });
