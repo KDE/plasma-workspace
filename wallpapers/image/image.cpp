@@ -203,7 +203,7 @@ QSize resSize(const QString &str)
 {
     int index = str.indexOf('x');
     if (index != -1) {
-        return QSize(str.leftRef(index).toInt(), str.midRef(index + 1).toInt());
+        return QSize(QStringView(str).left(index).toInt(), QStringView(str).mid(index + 1).toInt());
     }
 
     return QSize();

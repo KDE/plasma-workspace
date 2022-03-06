@@ -36,7 +36,7 @@ QString KuiserverEngine::sourceName(Job *job)
 
 uint KuiserverEngine::jobId(const QString &sourceName)
 {
-    return sourceName.midRef(4 /*length of Job + space*/).toUInt();
+    return QStringView(sourceName).mid(4 /*length of Job + space*/).toUInt();
 }
 
 Plasma::Service *KuiserverEngine::serviceForSource(const QString &source)

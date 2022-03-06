@@ -339,7 +339,7 @@ void CursorThemeConfig::ghnsEntryChanged(KNSCore::EntryWrapper *entry)
 {
     if (entry->entry().status() == KNS3::Entry::Deleted) {
         for (const QString &deleted : entry->entry().uninstalledFiles()) {
-            QVector<QStringRef> list = deleted.splitRef(QLatin1Char('/'));
+            auto list = QStringView(deleted).split(QLatin1Char('/'));
             if (list.last() == QLatin1Char('*')) {
                 list.takeLast();
             }

@@ -242,7 +242,7 @@ public:
             se.display = tty;
             se.tty = true;
         }
-        se.vt = tty.midRef(strlen("/dev/tty")).toInt();
+        se.vt = QStringView(tty).mid(strlen("/dev/tty")).toInt();
     }
 };
 
@@ -756,7 +756,7 @@ bool KDisplayManager::localSessions(SessList &list)
             QStringList ts = (*it).split(QChar(','));
             SessEnt se;
             se.display = ts[0];
-            se.vt = ts[1].midRef(2).toInt();
+            se.vt = QStringView(ts[1]).mid(2).toInt();
             se.user = ts[2];
             se.session = ts[3];
             se.self = (ts[4].indexOf('*') >= 0);
