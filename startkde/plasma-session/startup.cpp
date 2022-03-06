@@ -28,7 +28,6 @@
 #include <KIO/DesktopExecParser>
 #include <KProcess>
 #include <KService>
-#include <Kdelibs4Migration>
 
 #include <QDBusConnection>
 #include <QDBusMessage>
@@ -113,12 +112,10 @@ public:
         : Phase(autostart, parent)
     {
     }
-    void migrateKDE4Autostart();
 
     void start() override
     {
         qCDebug(PLASMA_SESSION) << "Phase 2";
-        migrateKDE4Autostart();
         addSubjob(new AutoStartAppsJob(m_autostart, 2));
         addSubjob(new KDEDInitJob());
     }
@@ -307,50 +304,6 @@ void RestoreSessionJob::start()
         emitResult();
     });
     connect(watcher, &QDBusPendingCallWatcher::finished, watcher, &QObject::deleteLater);
-}
-
-void StartupPhase2::migrateKDE4Autostart()
-{
-    // Migrate user autostart from kde4
-    Kdelibs4Migration migration;
-    if (!migration.kdeHomeFound()) {
-        return;
-    }
-
-    const QString autostartFolder =
-        QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QDir::separator() + QStringLiteral("autostart-scripts");
-    QDir dir(autostartFolder);
-    if (!dir.exists()) {
-        dir.mkpath(QStringLiteral("."));
-    }
-
-    // KDEHOME/Autostart was the default value for KGlobalSettings::autostart()
-    QString oldAutostart = migration.kdeHome() + QStringLiteral("/Autostart");
-    // That path could be customized in kdeglobals
-    const QString oldKdeGlobals = migration.locateLocal("config", QStringLiteral("kdeglobals"));
-    if (!oldKdeGlobals.isEmpty()) {
-        oldAutostart = KConfig(oldKdeGlobals).group("Paths").readEntry("Autostart", oldAutostart);
-    }
-
-    const QDir oldFolder(oldAutostart);
-    qCDebug(PLASMA_SESSION) << "Copying autostart files from" << oldFolder.path();
-    const QStringList entries = oldFolder.entryList(QDir::Files);
-    for (const QString &file : entries) {
-        const QString src = oldFolder.absolutePath() + QLatin1Char('/') + file;
-        const QString dest = autostartFolder + QLatin1Char('/') + file;
-        QFileInfo info(src);
-        bool success;
-        if (info.isSymLink()) {
-            // This will only work with absolute symlink targets
-            success = QFile::link(info.symLinkTarget(), dest);
-        } else {
-            success = QFile::copy(src, dest);
-        }
-        if (!success) {
-            qCWarning(PLASMA_SESSION) << "Error copying" << src << "to" << dest;
-        }
-    }
-    return;
 }
 
 AutoStartAppsJob::AutoStartAppsJob(const AutoStart &autostart, int phase)

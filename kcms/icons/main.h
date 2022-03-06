@@ -95,8 +95,6 @@ private:
     bool installThemes(const QStringList &themes, const QString &archiveName);
     void installThemeFile(const QString &path);
 
-    void exportToKDE4();
-
     static QPixmap getBestIcon(KIconTheme &theme, const QStringList &iconNames, int size, qreal dpr);
 
     IconsData *m_data;

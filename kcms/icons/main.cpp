@@ -35,7 +35,6 @@
 #include <KPluginFactory>
 #include <KSharedConfig>
 #include <KTar>
-#include <Kdelibs4Migration>
 
 #include <KIO/DeleteJob>
 #include <KIO/FileCopyJob>
@@ -117,8 +116,6 @@ void IconModule::load()
 
 void IconModule::save()
 {
-    bool needToExportToKDE4 = iconsSettings()->isSaveNeeded();
-
     // keep track of Group of icons size that has changed
     QList<int> notifyList;
     for (int i = 0; i < m_iconSizeCategoryModel->rowCount(); ++i) {
@@ -130,11 +127,6 @@ void IconModule::save()
     }
 
     ManagedConfigModule::save();
-
-    if (needToExportToKDE4) {
-        // Is this still needed?
-        exportToKDE4();
-    }
 
     processPendingDeletions();
 
@@ -225,62 +217,6 @@ void IconModule::installThemeFile(const QString &path)
 
     KIconLoader::global()->newIconLoader();
     m_model->load();
-}
-
-void IconModule::exportToKDE4()
-{
-    // TODO: killing the kde4 icon cache: possible? (kde4migration doesn't let access the cache folder)
-    Kdelibs4Migration migration;
-    QString configFilePath = migration.saveLocation("config");
-    if (configFilePath.isEmpty()) {
-        return;
-    }
-
-    configFilePath += QLatin1String("kdeglobals");
-
-    KSharedConfigPtr kglobalcfg = KSharedConfig::openConfig(QStringLiteral("kdeglobals"));
-    KConfig kde4config(configFilePath, KConfig::SimpleConfig);
-
-    KConfigGroup kde4IconGroup(&kde4config, "Icons");
-    kde4IconGroup.writeEntry("Theme", iconsSettings()->theme());
-
-    // Synchronize icon effects
-    for (int row = 0; row < m_iconSizeCategoryModel->rowCount(); row++) {
-        QModelIndex idx(m_iconSizeCategoryModel->index(row, 0));
-        QString group = m_iconSizeCategoryModel->data(idx, IconSizeCategoryModel::ConfigSectionRole).toString();
-        const QString groupName = group + QLatin1String("Icons");
-        KConfigGroup cg(kglobalcfg, groupName);
-        KConfigGroup kde4Cg(&kde4config, groupName);
-
-        // HACK copyTo only copies keys, it doesn't replace the entire group
-        // which means if we removed the effects in our config it won't remove
-        // them from the kde4 config, hence revert all of them prior to copying
-        const QStringList keys = cg.keyList() + kde4Cg.keyList();
-        for (const QString &key : keys) {
-            kde4Cg.revertToDefault(key);
-        }
-        // now copy over the new values
-        cg.copyTo(&kde4Cg);
-    }
-
-    kde4config.sync();
-
-    QProcess *cachePathProcess = new QProcess(this);
-    connect(cachePathProcess, &QProcess::finished, this, [cachePathProcess](int exitCode, QProcess::ExitStatus status) {
-        if (status == QProcess::NormalExit && exitCode == 0) {
-            QString path = cachePathProcess->readAllStandardOutput().trimmed();
-            path.append(QLatin1String("icon-cache.kcache"));
-            QFile::remove(path);
-        }
-
-        // message kde4 apps that icon theme has changed
-        for (int i = 0; i < KIconLoader::LastGroup; ++i) {
-            notifyKcmChange(GlobalChangeType::IconChanged, KIconLoader::Group(i));
-        }
-
-        cachePathProcess->deleteLater();
-    });
-    cachePathProcess->start(QStringLiteral("kde4-config"), {QStringLiteral("--path"), QStringLiteral("cache")});
 }
 
 QStringList IconModule::findThemeDirs(const QString &archiveName)
