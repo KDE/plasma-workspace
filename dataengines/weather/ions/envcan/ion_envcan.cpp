@@ -615,7 +615,7 @@ bool EnvCanadaIon::readXMLSetup()
     while (!m_xmlSetup.atEnd()) {
         m_xmlSetup.readNext();
 
-        const QStringRef elementName = m_xmlSetup.name();
+        const auto elementName = m_xmlSetup.name();
 
         if (m_xmlSetup.isStartElement()) {
             // XML ID code to match filename
@@ -655,7 +655,7 @@ void EnvCanadaIon::parseWeatherSite(WeatherData &data, QXmlStreamReader &xml)
     while (!xml.atEnd()) {
         xml.readNext();
 
-        const QStringRef elementName = xml.name();
+        const auto elementName = xml.name();
 
         if (xml.isStartElement()) {
             if (elementName == QLatin1String("license")) {
@@ -780,7 +780,7 @@ void EnvCanadaIon::parseDateTime(WeatherData &data, QXmlStreamReader &xml, Weath
             break;
         }
 
-        const QStringRef elementName = xml.name();
+        const auto elementName = xml.name();
 
         if (xml.isStartElement()) {
             if (dateType == QLatin1String("xmlCreation")) {
@@ -846,7 +846,7 @@ void EnvCanadaIon::parseLocations(WeatherData &data, QXmlStreamReader &xml)
             break;
         }
 
-        const QStringRef elementName = xml.name();
+        const auto elementName = xml.name();
 
         if (xml.isStartElement()) {
             if (elementName == QLatin1String("country")) {
@@ -875,7 +875,7 @@ void EnvCanadaIon::parseWindInfo(WeatherData &data, QXmlStreamReader &xml)
             break;
         }
 
-        const QStringRef elementName = xml.name();
+        const auto elementName = xml.name();
 
         if (xml.isStartElement()) {
             if (elementName == QLatin1String("speed")) {
@@ -910,7 +910,7 @@ void EnvCanadaIon::parseConditions(WeatherData &data, QXmlStreamReader &xml)
     while (!xml.atEnd()) {
         xml.readNext();
 
-        const QStringRef elementName = xml.name();
+        const auto elementName = xml.name();
 
         if (xml.isEndElement() && elementName == QLatin1String("currentConditions"))
             break;
@@ -968,7 +968,7 @@ void EnvCanadaIon::parseWarnings(WeatherData &data, QXmlStreamReader &xml)
     while (!xml.atEnd()) {
         xml.readNext();
 
-        const QStringRef elementName = xml.name();
+        const auto elementName = xml.name();
 
         if (xml.isEndElement() && elementName == QLatin1String("warnings")) {
             break;
@@ -1029,7 +1029,7 @@ void EnvCanadaIon::parseWeatherForecast(WeatherData &data, QXmlStreamReader &xml
     while (!xml.atEnd()) {
         xml.readNext();
 
-        const QStringRef elementName = xml.name();
+        const auto elementName = xml.name();
 
         if (xml.isEndElement() && elementName == QLatin1String("forecastGroup")) {
             break;
@@ -1062,7 +1062,7 @@ void EnvCanadaIon::parseRegionalNormals(WeatherData &data, QXmlStreamReader &xml
             break;
         }
 
-        const QStringRef elementName = xml.name();
+        const auto elementName = xml.name();
 
         if (xml.isStartElement()) {
             if (elementName == QLatin1String("textSummary")) {
@@ -1085,7 +1085,7 @@ void EnvCanadaIon::parseForecast(WeatherData &data, QXmlStreamReader &xml, Weath
     while (!xml.atEnd()) {
         xml.readNext();
 
-        const QStringRef elementName = xml.name();
+        const auto elementName = xml.name();
 
         if (xml.isEndElement() && elementName == QLatin1String("forecast")) {
             data.forecasts.append(forecast);
@@ -1128,7 +1128,7 @@ void EnvCanadaIon::parseShortForecast(WeatherData::ForecastInfo *forecast, QXmlS
     while (!xml.atEnd()) {
         xml.readNext();
 
-        const QStringRef elementName = xml.name();
+        const auto elementName = xml.name();
 
         if (xml.isEndElement() && elementName == QLatin1String("abbreviatedForecast")) {
             break;
@@ -1180,7 +1180,7 @@ void EnvCanadaIon::parseUVIndex(WeatherData &data, QXmlStreamReader &xml)
     while (!xml.atEnd()) {
         xml.readNext();
 
-        const QStringRef elementName = xml.name();
+        const auto elementName = xml.name();
 
         if (xml.isEndElement() && elementName == QLatin1String("uv")) {
             break;
@@ -1204,7 +1204,7 @@ void EnvCanadaIon::parseForecastTemperatures(WeatherData::ForecastInfo *forecast
     while (!xml.atEnd()) {
         xml.readNext();
 
-        const QStringRef elementName = xml.name();
+        const auto elementName = xml.name();
 
         if (xml.isEndElement() && elementName == QLatin1String("temperatures")) {
             break;
@@ -1229,7 +1229,7 @@ void EnvCanadaIon::parsePrecipitationForecast(WeatherData::ForecastInfo *forecas
     while (!xml.atEnd()) {
         xml.readNext();
 
-        const QStringRef elementName = xml.name();
+        const auto elementName = xml.name();
 
         if (xml.isEndElement() && elementName == QLatin1String("precipitation")) {
             break;
@@ -1254,7 +1254,7 @@ void EnvCanadaIon::parsePrecipTotals(WeatherData::ForecastInfo *forecast, QXmlSt
     while (!xml.atEnd()) {
         xml.readNext();
 
-        const QStringRef elementName = xml.name();
+        const auto elementName = xml.name();
 
         if (xml.isEndElement() && elementName == QLatin1String("accumulation")) {
             break;
@@ -1275,7 +1275,7 @@ void EnvCanadaIon::parseWindForecast(WeatherData::ForecastInfo *forecast, QXmlSt
     while (!xml.atEnd()) {
         xml.readNext();
 
-        const QStringRef elementName = xml.name();
+        const auto elementName = xml.name();
 
         if (xml.isEndElement() && elementName == QLatin1String("winds")) {
             break;
@@ -1304,7 +1304,7 @@ void EnvCanadaIon::parseYesterdayWeather(WeatherData &data, QXmlStreamReader &xm
             break;
         }
 
-        const QStringRef elementName = xml.name();
+        const auto elementName = xml.name();
 
         if (xml.isStartElement()) {
             if (elementName == QLatin1String("temperature") && xml.attributes().value(QStringLiteral("class")) == QLatin1String("high")) {
@@ -1329,7 +1329,7 @@ void EnvCanadaIon::parseWeatherRecords(WeatherData &data, QXmlStreamReader &xml)
     while (!xml.atEnd()) {
         xml.readNext();
 
-        const QStringRef elementName = xml.name();
+        const auto elementName = xml.name();
 
         if (xml.isEndElement() && elementName == QLatin1String("almanac")) {
             break;
@@ -1356,7 +1356,7 @@ void EnvCanadaIon::parseAstronomicals(WeatherData &data, QXmlStreamReader &xml)
     while (!xml.atEnd()) {
         xml.readNext();
 
-        const QStringRef elementName = xml.name();
+        const auto elementName = xml.name();
 
         if (xml.isEndElement() && elementName == QLatin1String("riseSet")) {
             break;

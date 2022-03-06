@@ -287,7 +287,7 @@ void NOAAIon::parseStationID()
     while (!m_xmlSetup.atEnd()) {
         m_xmlSetup.readNext();
 
-        const QStringRef elementName = m_xmlSetup.name();
+        const auto elementName = m_xmlSetup.name();
 
         if (m_xmlSetup.isEndElement() && elementName == QLatin1String("station")) {
             if (!xmlurl.isEmpty()) {
@@ -376,7 +376,7 @@ void NOAAIon::parseWeatherSite(WeatherData &data, QXmlStreamReader &xml)
     while (!xml.atEnd()) {
         xml.readNext();
 
-        const QStringRef elementName = xml.name();
+        const auto elementName = xml.name();
 
         if (xml.isStartElement()) {
             if (elementName == QLatin1String("location")) {

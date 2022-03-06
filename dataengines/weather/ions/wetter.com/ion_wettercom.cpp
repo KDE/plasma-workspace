@@ -348,7 +348,7 @@ void WetterComIon::parseSearchResults(const QString &source, QXmlStreamReader &x
     while (!xml.atEnd()) {
         xml.readNext();
 
-        const QStringRef elementName = xml.name();
+        const auto elementName = xml.name();
 
         if (xml.isEndElement()) {
             if (elementName == QLatin1String("search")) {
@@ -521,7 +521,7 @@ void WetterComIon::parseWeatherForecast(const QString &source, QXmlStreamReader 
 
         qCDebug(IONENGINE_WETTERCOM) << "parsing xml elem: " << xml.name();
 
-        const QStringRef elementName = xml.name();
+        const auto elementName = xml.name();
 
         if (xml.isEndElement()) {
             if (elementName == QLatin1String("city")) {

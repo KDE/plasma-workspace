@@ -519,7 +519,7 @@ void UKMETIon::parsePlaceObservation(const QString &source, WeatherData &data, Q
     while (!xml.atEnd()) {
         xml.readNext();
 
-        const QStringRef elementName = xml.name();
+        const auto elementName = xml.name();
 
         if (xml.isEndElement() && elementName == QLatin1String("rss")) {
             break;
@@ -551,7 +551,7 @@ void UKMETIon::parseWeatherChannel(const QString &source, WeatherData &data, QXm
     while (!xml.atEnd()) {
         xml.readNext();
 
-        const QStringRef elementName = xml.name();
+        const auto elementName = xml.name();
 
         if (xml.isEndElement() && elementName == QLatin1String("channel")) {
             break;
@@ -579,7 +579,7 @@ void UKMETIon::parseWeatherForecast(const QString &source, QXmlStreamReader &xml
     while (!xml.atEnd()) {
         xml.readNext();
 
-        const QStringRef elementName = xml.name();
+        const auto elementName = xml.name();
 
         if (xml.isEndElement() && elementName == QLatin1String("channel")) {
             break;
@@ -606,7 +606,7 @@ void UKMETIon::parseWeatherObservation(const QString &source, WeatherData &data,
     while (!xml.atEnd()) {
         xml.readNext();
 
-        const QStringRef elementName = xml.name();
+        const auto elementName = xml.name();
 
         if (xml.isEndElement() && elementName == QLatin1String("item")) {
             break;
