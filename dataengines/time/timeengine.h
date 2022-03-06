@@ -23,7 +23,6 @@ class TimeEngine : public Plasma::DataEngine
     Q_OBJECT
 
 public:
-    explicit TimeEngine(const KPluginInfo &plugin, QObject *parent = nullptr);
     TimeEngine(QObject *parent, const QVariantList &args);
     ~TimeEngine() override;
 
