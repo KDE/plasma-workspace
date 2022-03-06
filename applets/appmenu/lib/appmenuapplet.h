@@ -7,17 +7,18 @@
 #pragma once
 
 #include <Plasma/Applet>
+
+#include <QAbstractItemModel>
 #include <QPointer>
 
 class QQuickItem;
 class QMenu;
-class AppMenuModel;
 
 class AppMenuApplet : public Plasma::Applet
 {
     Q_OBJECT
 
-    Q_PROPERTY(AppMenuModel *model READ model WRITE setModel NOTIFY modelChanged)
+    Q_PROPERTY(QAbstractItemModel *model READ model WRITE setModel NOTIFY modelChanged)
 
     Q_PROPERTY(int view READ view WRITE setView NOTIFY viewChanged)
 
@@ -41,8 +42,8 @@ public:
     QQuickItem *buttonGrid() const;
     void setButtonGrid(QQuickItem *buttonGrid);
 
-    AppMenuModel *model() const;
-    void setModel(AppMenuModel *model);
+    QAbstractItemModel *model() const;
+    void setModel(QAbstractItemModel *model);
 
     int view() const;
     void setView(int type);
@@ -69,6 +70,6 @@ private:
     int m_viewType = FullView;
     QPointer<QMenu> m_currentMenu;
     QPointer<QQuickItem> m_buttonGrid;
-    QPointer<AppMenuModel> m_model;
+    QPointer<QAbstractItemModel> m_model;
     static int s_refs;
 };

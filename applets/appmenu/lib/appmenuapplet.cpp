@@ -67,12 +67,12 @@ void AppMenuApplet::init()
 {
 }
 
-AppMenuModel *AppMenuApplet::model() const
+QAbstractItemModel *AppMenuApplet::model() const
 {
     return m_model;
 }
 
-void AppMenuApplet::setModel(AppMenuModel *model)
+void AppMenuApplet::setModel(QAbstractItemModel *model)
 {
     if (m_model != model) {
         m_model = model;
@@ -290,3 +290,4 @@ bool AppMenuApplet::eventFilter(QObject *watched, QEvent *event)
 K_PLUGIN_CLASS_WITH_JSON(AppMenuApplet, "../package/metadata.json")
 
 #include "appmenuapplet.moc"
+#include "moc_appmenuapplet.cpp"
