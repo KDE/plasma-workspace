@@ -62,7 +62,7 @@ QtObject {
 
     // Some parts of the code rely on plasmoid.nativeInterface and since we're in a singleton here
     // this is named "plasmoid"
-    property QtObject plasmoid: plasmoids[0]
+    property var plasmoid: null
 
     // HACK When a plasmoid is destroyed, QML sets its value to "null" in the Array
     // so we then remove it so we have a working "plasmoid" again
@@ -153,13 +153,13 @@ QtObject {
         if (!plasmoid) {
             return null;
         }
-        return plasmoid.nativeInterface.systemTrayRepresentation
+        return (plasmoid.nativeInterface && plasmoid.nativeInterface.systemTrayRepresentation)
             || plasmoid.compactRepresentationItem
             || plasmoid.fullRepresentationItem;
     }
     onVisualParentChanged: positionPopups()
 
-    readonly property QtObject focusDialog: plasmoid.nativeInterface.focussedPlasmaDialog
+    readonly property QtObject focusDialog: plasmoid.nativeInterface ? plasmoid.nativeInterface.focussedPlasmaDialog : null
     onFocusDialogChanged: positionPopups()
 
     // The raw width of the popup's content item, the Dialog itself adds some margins
@@ -230,6 +230,7 @@ QtObject {
             }
         });
         globals.plasmoids = newPlasmoids;
+        globals.plasmoid = newPlasmoids[0];
     }
 
     function checkInhibition() {

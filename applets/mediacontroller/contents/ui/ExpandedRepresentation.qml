@@ -9,6 +9,7 @@
 
 import QtQuick 2.8
 import QtQuick.Layouts 1.1
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
@@ -49,7 +50,7 @@ PlasmaExtras.Representation {
     Connections {
         target: plasmoid
         function onExpandedChanged() {
-            if (plasmoid.expanded) {
+            if (Plasmoid.expanded) {
                 retrievePosition();
             }
         }
@@ -171,7 +172,7 @@ PlasmaExtras.Representation {
             // use State to avoid unnecessary reevaluation of width and height
             states: State {
                 name: "albumArtReady"
-                when: plasmoid.expanded && backgroundImage.visible && albumArt.paintedWidth > 0
+                when: Plasmoid.expanded && backgroundImage.visible && albumArt.paintedWidth > 0
                 PropertyChanges {
                     target: backgroundImage
                     scaleFactor: Math.max(parent.width / source.paintedWidth, parent.height / source.paintedHeight)
@@ -397,7 +398,7 @@ PlasmaExtras.Representation {
                         id: seekTimer
                         interval: 1000 / expandedRepresentation.rate
                         repeat: true
-                        running: root.state === "playing" && plasmoid.expanded && !keyPressed && interval > 0 && seekSlider.to >= 1000000
+                        running: root.state === "playing" && Plasmoid.expanded && !keyPressed && interval > 0 && seekSlider.to >= 1000000
                         onTriggered: {
                             // some players don't continuously update the seek slider position via mpris
                             // add one second; value in microseconds

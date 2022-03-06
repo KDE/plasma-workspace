@@ -12,6 +12,7 @@ import QtQuick.Controls 2.2 as QQC2
 
 import org.kde.kirigami 2.5 as Kirigami
 import org.kde.kquickcontrols 2.0
+import org.kde.plasma.plasmoid 2.0
 
 
 QQC2.Control {
@@ -23,7 +24,7 @@ QQC2.Control {
         contentItem.saveConfig();
     }
     
-    contentItem: plasmoid.nativeInterface.faceController.faceConfigUi
+    contentItem: Plasmoid.nativeInterface.faceController.faceConfigUi
     
     Connections {
         target: contentItem

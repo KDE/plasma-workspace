@@ -22,7 +22,7 @@ Item {
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
     Plasmoid.fullRepresentation: Plasmoid.compactRepresentation
     Plasmoid.compactRepresentation: PlasmaCore.IconItem {
-        source: plasmoid.icon
+        source: Plasmoid.icon
         active: compactMouse.containsMouse
         overlays: root.overlays
 
@@ -41,7 +41,7 @@ Item {
     }
 
     Component.onCompleted: {
-        plasmoid.setAction("settings", i18nc("Opens the system settings module", "Configure Virtual Keyboards..."),
+        Plasmoid.setAction("settings", i18nc("Opens the system settings module", "Configure Virtual Keyboards..."),
                                "settings-configure")
     }
 
@@ -75,7 +75,8 @@ Item {
         State {
             name: "visible"
             when: Keyboards.KWinVirtualKeyboard.available && Keyboards.KWinVirtualKeyboard.visible
-            PropertyChanges { target: plasmoid
+            PropertyChanges {
+                target: plasmoid
                 icon: "arrow-down"
                 toolTipSubText: i18n("Virtual Keyboard: visible")
                 // It's only relevant in tablet mode
@@ -86,7 +87,8 @@ Item {
         State {
             name: "idle"
             when: Keyboards.KWinVirtualKeyboard.available && Keyboards.KWinVirtualKeyboard.enabled && !Keyboards.KWinVirtualKeyboard.visible
-            PropertyChanges { target: plasmoid
+            PropertyChanges {
+                target: plasmoid
                 icon: "input-keyboard-virtual-on"
                 toolTipSubText: i18n("Virtual Keyboard: enabled")
                 // It's only relevant in tablet mode

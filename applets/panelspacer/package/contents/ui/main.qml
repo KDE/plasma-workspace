@@ -13,26 +13,26 @@ import org.kde.kirigami 2.10 as Kirigami
 Item {
     id: root
 
-    property bool horizontal: plasmoid.formFactor !== PlasmaCore.Types.Vertical
+    property bool horizontal: Plasmoid.formFactor !== PlasmaCore.Types.Vertical
 
-    Layout.fillWidth: plasmoid.configuration.expanding
-    Layout.fillHeight: plasmoid.configuration.expanding
+    Layout.fillWidth: Plasmoid.configuration.expanding
+    Layout.fillHeight: Plasmoid.configuration.expanding
 
-    Layout.minimumWidth: plasmoid.nativeInterface.containment.editMode ? PlasmaCore.Units.gridUnit * 2 : 1
-    Layout.minimumHeight: plasmoid.nativeInterface.containment.editMode ? PlasmaCore.Units.gridUnit * 2 : 1
+    Layout.minimumWidth: Plasmoid.nativeInterface.containment.editMode ? PlasmaCore.Units.gridUnit * 2 : 1
+    Layout.minimumHeight: Plasmoid.nativeInterface.containment.editMode ? PlasmaCore.Units.gridUnit * 2 : 1
     Layout.preferredWidth: horizontal
-        ? (plasmoid.configuration.expanding ? optimalSize : plasmoid.configuration.length)
+        ? (Plasmoid.configuration.expanding ? optimalSize : Plasmoid.configuration.length)
         : 0
     Layout.preferredHeight: horizontal
         ? 0
-        : (plasmoid.configuration.expanding ? optimalSize : plasmoid.configuration.length)
+        : (Plasmoid.configuration.expanding ? optimalSize : Plasmoid.configuration.length)
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
 
     property int optimalSize: PlasmaCore.Units.largeSpacing
 
     function action_expanding() {
-        plasmoid.configuration.expanding = plasmoid.action("expanding").checked;
+        Plasmoid.configuration.expanding = Plasmoid.action("expanding").checked;
     }
 
     // Search the actual gridLayout of the panel
@@ -47,17 +47,17 @@ Item {
     }
 
     Component.onCompleted: {
-        plasmoid.setAction("expanding", i18n("Set flexible size"));
-        var action = plasmoid.action("expanding");
+        Plasmoid.setAction("expanding", i18n("Set flexible size"));
+        var action = Plasmoid.action("expanding");
         action.checkable = true;
-        action.checked = Qt.binding(function() {return plasmoid.configuration.expanding});
+        action.checked = Qt.binding(function() {return Plasmoid.configuration.expanding});
 
-        plasmoid.removeAction("configure");
+        Plasmoid.removeAction("configure");
     }
 
     property real middleItemsSizeHint: {
         if (!twinSpacer || !panelLayout || !leftTwin || !rightTwin) {
-            optimalSize = horizontal ? plasmoid.nativeInterface.containment.width : plasmoid.nativeInterface.containment.height;
+            optimalSize = horizontal ? Plasmoid.nativeInterface.containment.width : Plasmoid.nativeInterface.containment.height;
             return 0;
         }
 
@@ -102,7 +102,7 @@ Item {
             }
         }
 
-        var halfContainment = root.horizontal ?plasmoid.nativeInterface.containment.width/2 : plasmoid.nativeInterface.containment.height/2;
+        var halfContainment = root.horizontal ?Plasmoid.nativeInterface.containment.width/2 : Plasmoid.nativeInterface.containment.height/2;
 
         if (leftTwin == plasmoid) {
             optimalSize = Math.max(PlasmaCore.Units.smallSpacing, halfContainment - middleItemsHint/2 - leftItemsHint)
@@ -112,7 +112,7 @@ Item {
         return middleItemsHint;
     }
 
-    readonly property Item twinSpacer: plasmoid.configuration.expanding && plasmoid.nativeInterface.twinSpacer && plasmoid.nativeInterface.twinSpacer.configuration.expanding ? plasmoid.nativeInterface.twinSpacer : null
+    readonly property Item twinSpacer: Plasmoid.configuration.expanding && Plasmoid.nativeInterface.twinSpacer && Plasmoid.nativeInterface.twinSpacer.configuration.expanding ? Plasmoid.nativeInterface.twinSpacer : null
     readonly property Item leftTwin: {
         if (!twinSpacer) {
             return null;
@@ -139,6 +139,6 @@ Item {
     Rectangle {
         anchors.fill: parent
         color: PlasmaCore.Theme.highlightColor
-        visible: plasmoid.nativeInterface.containment.editMode
+        visible: Plasmoid.nativeInterface.containment.editMode
     }
 }

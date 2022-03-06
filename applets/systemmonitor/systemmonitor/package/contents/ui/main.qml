@@ -30,7 +30,7 @@ Item {
 
     Plasmoid.preferredRepresentation: Plasmoid.formFactor === PlasmaCore.Types.Planar ? Plasmoid.fullRepresentation : null
 
-    Plasmoid.title: plasmoid.nativeInterface.faceController.title || i18n("System Monitor")
+    Plasmoid.title: Plasmoid.nativeInterface.faceController.title || i18n("System Monitor")
     Plasmoid.toolTipSubText: ""
 
     Plasmoid.compactRepresentation: CompactRepresentation {
@@ -38,7 +38,7 @@ Item {
     Plasmoid.fullRepresentation: FullRepresentation {
     }
 
-    Plasmoid.configurationRequired: plasmoid.nativeInterface.faceController.highPrioritySensorIds.length == 0 && plasmoid.nativeInterface.faceController.lowPrioritySensorIds.length == 0 && plasmoid.nativeInterface.faceController.totalSensor.length == 0
+    Plasmoid.configurationRequired: Plasmoid.nativeInterface.faceController.highPrioritySensorIds.length == 0 && Plasmoid.nativeInterface.faceController.lowPrioritySensorIds.length == 0 && Plasmoid.nativeInterface.faceController.totalSensor.length == 0
 
     MouseArea {
         parent: plasmoid

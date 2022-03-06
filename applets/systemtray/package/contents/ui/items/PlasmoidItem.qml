@@ -7,6 +7,7 @@
 import QtQuick 2.1
 import QtQml 2.15
 
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 AbstractItem {
@@ -24,7 +25,7 @@ AbstractItem {
 
     // FIXME: Use an input type agnostic way to activate whatever the primary
     // action of a plasmoid is supposed to be, even if it's just expanding the
-    // plasmoid. Not all plasmoids are supposed to expand and not all plasmoids
+    // Plasmoid. Not all plasmoids are supposed to expand and not all plasmoids
     // do anything with onActivated.
     onActivated: {
         if (applet) {
@@ -52,7 +53,7 @@ AbstractItem {
         }
     }
     onContextMenu: if (applet) {
-        plasmoid.nativeInterface.showPlasmoidMenu(applet, 0,
+        Plasmoid.nativeInterface.showPlasmoidMenu(applet, 0,
                                                   plasmoidContainer.inHiddenLayout ? applet.height : 0);
     }
     onWheel: {
@@ -129,7 +130,7 @@ AbstractItem {
 
     Binding {
         property: "hideOnWindowDeactivate"
-        value: !plasmoid.configuration.pin
+        value: !Plasmoid.configuration.pin
         target: plasmoidContainer.applet
         when: null !== plasmoidContainer.applet
         restoreMode: Binding.RestoreBinding

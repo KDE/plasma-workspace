@@ -13,6 +13,7 @@ import QtQuick.Controls 2.2 as QQC2
 import org.kde.kirigami 2.5 as Kirigami
 import org.kde.kquickcontrols 2.0
 import org.kde.kconfig 1.0 // for KAuthorized
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.newstuff 1.62 as NewStuff
 
@@ -26,11 +27,11 @@ QQC2.Control {
 
     function saveConfig() {
         contentItem.saveConfig();
-        plasmoid.nativeInterface.faceController.reloadConfig()
+        Plasmoid.nativeInterface.faceController.reloadConfig()
     }
 
     // Workaround for Bug 424458, when reusing the controller/item things break
-    contentItem: plasmoid.nativeInterface.workaroundController(root).appearanceConfigUi
+    contentItem: Plasmoid.nativeInterface.workaroundController(root).appearanceConfigUi
 
     Connections {
         target: contentItem

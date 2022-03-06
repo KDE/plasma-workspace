@@ -10,6 +10,7 @@ import QtQuick 2.5
 import QtQuick.Controls 2.5 as QtControls2
 import QtQuick.Layouts 1.0
 import QtQuick.Window 2.0 // for Screen
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
 import org.kde.kquickcontrols 2.0 as KQuickControls
 import org.kde.kquickcontrolsaddons 2.0
@@ -50,7 +51,7 @@ ColumnLayout {
         id: imageWallpaper
         targetSize: {
             if (typeof plasmoid !== "undefined") {
-                return Qt.size(plasmoid.width, plasmoid.height)
+                return Qt.size(Plasmoid.width, Plasmoid.height)
             }
             // Lock screen configuration case
             return Qt.size(Screen.width, Screen.height)

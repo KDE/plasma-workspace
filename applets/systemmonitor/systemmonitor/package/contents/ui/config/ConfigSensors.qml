@@ -19,6 +19,7 @@ import org.kde.kitemmodels 1.0 as KItemModels
 import org.kde.ksysguard.sensors 1.0 as Sensors
 import org.kde.ksysguard.faces 1.0 as Faces
 
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.1 as PlasmaCore
 
 QQC2.Control {
@@ -30,7 +31,7 @@ QQC2.Control {
         contentItem.saveConfig();
     }
     
-    contentItem: plasmoid.nativeInterface.faceController.sensorsConfigUi
+    contentItem: Plasmoid.nativeInterface.faceController.sensorsConfigUi
     
     Connections {
         target: contentItem

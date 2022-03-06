@@ -7,6 +7,7 @@ import QtQuick 2.14
 import QtQuick.Controls 2.14 as QQC2
 import QtQuick.Layouts 1.13
 
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.1 as PlasmaCore
 
 import org.kde.kirigami 2.13 as Kirigami
@@ -28,7 +29,7 @@ ColumnLayout {
         QQC2.RadioButton {
             id: automaticRadioButton
             enabled: !Kirigami.Settings.tabletMode
-            text: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? i18n("Scale with Panel height")
+            text: Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? i18n("Scale with Panel height")
                                                                       : i18n("Scale with Panel width")
             checked: cfg_scaleIconsToFit == true || Kirigami.Settings.tabletMode
             onToggled: cfg_scaleIconsToFit = checked

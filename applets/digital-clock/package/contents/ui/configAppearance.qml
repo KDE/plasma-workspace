@@ -9,6 +9,7 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.3 as QtControls
 import QtQuick.Layouts 1.0 as QtLayouts
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.calendar 2.0 as PlasmaCalendar
 import org.kde.kquickcontrolsaddons 2.0 // For KCMShell
@@ -75,7 +76,7 @@ QtLayouts.ColumnLayout {
             QtControls.ComboBox {
                 id: dateDisplayFormat
                 enabled: showDate.checked
-                visible: plasmoid.formFactor !== PlasmaCore.Types.Vertical
+                visible: Plasmoid.formFactor !== PlasmaCore.Types.Vertical
                 model: [
                     i18n("Adaptive location"),
                     i18n("Always beside time"),
@@ -189,7 +190,7 @@ QtLayouts.ColumnLayout {
 
                 Component.onCompleted: {
                     for (var i = 0; i < model.length; i++) {
-                        if (model[i]["name"] === plasmoid.configuration.dateFormat) {
+                        if (model[i]["name"] === Plasmoid.configuration.dateFormat) {
                             dateFormat.currentIndex = i;
                         }
                     }
@@ -281,7 +282,7 @@ QtLayouts.ColumnLayout {
     }
 
     Component.onCompleted: {
-        if (!plasmoid.configuration.showLocalTimezone) {
+        if (!Plasmoid.configuration.showLocalTimezone) {
             showLocalTimeZoneWhenDifferent.checked = true;
         }
     }

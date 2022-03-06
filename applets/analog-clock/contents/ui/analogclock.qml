@@ -22,8 +22,8 @@ Item {
     property int hours
     property int minutes
     property int seconds
-    property bool showSecondsHand: plasmoid.configuration.showSecondHand
-    property bool showTimezone: plasmoid.configuration.showTimezoneString
+    property bool showSecondsHand: Plasmoid.configuration.showSecondHand
+    property bool showTimezone: Plasmoid.configuration.showTimezoneString
     property int tzOffset
 
     Plasmoid.backgroundHints: "NoBackground";
@@ -69,12 +69,12 @@ Item {
 
     Plasmoid.compactRepresentation: Item {
         id: representation
-        Layout.minimumWidth: plasmoid.formFactor !== PlasmaCore.Types.Vertical ? representation.height : PlasmaCore.Units.gridUnit
-        Layout.minimumHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical ? representation.width : PlasmaCore.Units.gridUnit
+        Layout.minimumWidth: Plasmoid.formFactor !== PlasmaCore.Types.Vertical ? representation.height : PlasmaCore.Units.gridUnit
+        Layout.minimumHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? representation.width : PlasmaCore.Units.gridUnit
 
         MouseArea {
             anchors.fill: parent
-            onClicked: plasmoid.expanded = !plasmoid.expanded
+            onClicked: Plasmoid.expanded = !Plasmoid.expanded
         }
 
 

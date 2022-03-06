@@ -83,10 +83,10 @@ Item {
     // This is to let the plasmoid expand in a vertical panel for a "sidebar" notification panel
     // The CompactRepresentation size is limited to not have the notification icon grow gigantic
     // but it should still switch over to full rep once there's enough width (disregarding the limited height)
-    Plasmoid.switchHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical ? 1 : PlasmaCore.Units.gridUnit * 10
+    Plasmoid.switchHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? 1 : PlasmaCore.Units.gridUnit * 10
 
     Plasmoid.onExpandedChanged: {
-        if (!plasmoid.expanded) {
+        if (!Plasmoid.expanded) {
             historyModel.lastRead = undefined; // reset to now
             historyModel.collapseAllGroups();
         }
@@ -145,8 +145,8 @@ Item {
     }
 
     function closePlasmoid() {
-        if (plasmoid.hideOnWindowDeactivate) {
-            plasmoid.expanded = false;
+        if (Plasmoid.hideOnWindowDeactivate) {
+            Plasmoid.expanded = false;
         }
     }
 
@@ -162,10 +162,10 @@ Item {
     }
 
     Component.onCompleted: {
-        Globals.adopt(plasmoid);
+        Globals.adopt(Plasmoid);
 
-        plasmoid.setAction("clearHistory", i18n("Clear All Notifications"), "edit-clear-history");
-        var clearAction = plasmoid.action("clearHistory");
+        Plasmoid.setAction("clearHistory", i18n("Clear All Notifications"), "edit-clear-history");
+        var clearAction = Plasmoid.action("clearHistory");
         clearAction.visible = Qt.binding(function() {
             return historyModel.expiredNotificationsCount > 0;
         });
@@ -173,8 +173,8 @@ Item {
         // The applet's config window has nothing in it, so let's make the header's
         // "Configure" button open the KCM instead, like we do in the Bluetooth
         // and Networks applets
-        plasmoid.removeAction("configure");
-        plasmoid.setAction("configure", i18n("&Configure Event Notifications and Actions…"), "configure");
-        plasmoid.action("configure").visible = (KQCAddons.KCMShell.authorize("kcm_notifications.desktop").length > 0);
+        Plasmoid.removeAction("configure");
+        Plasmoid.setAction("configure", i18n("&Configure Event Notifications and Actions…"), "configure");
+        Plasmoid.action("configure").visible = (KQCAddons.KCMShell.authorize("kcm_notifications.desktop").length > 0);
     }
 }

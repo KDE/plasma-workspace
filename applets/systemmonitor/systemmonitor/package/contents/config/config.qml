@@ -2,6 +2,7 @@ import QtQuick 2.0
 import org.kde.ksysguard.sensors 1.0 as Sensors
 import org.kde.ksysguard.faces 1.0 as Faces
 
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.configuration 2.0
 
 ConfigModel {
@@ -11,9 +12,9 @@ ConfigModel {
          source: "config/ConfigAppearance.qml"
     }
     ConfigCategory {
-         name: i18n("%1 Details", plasmoid.nativeInterface.faceController.name)
-         icon: plasmoid.nativeInterface.faceController.icon
-         visible: plasmoid.nativeInterface.faceController.faceConfigUi !== null
+         name: i18n("%1 Details", Plasmoid.nativeInterface.faceController.name)
+         icon: Plasmoid.nativeInterface.faceController.icon
+         visible: Plasmoid.nativeInterface.faceController.faceConfigUi !== null
          source: "config/FaceDetails.qml"
     }
     ConfigCategory {

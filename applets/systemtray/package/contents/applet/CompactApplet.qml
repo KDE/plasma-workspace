@@ -15,16 +15,16 @@ PlasmaCore.ToolTipArea {
     objectName: "org.kde.desktop-CompactApplet"
     anchors.fill: parent
 
-    mainText: plasmoid.toolTipMainText
-    subText: plasmoid.toolTipSubText
-    location: if (plasmoid.parent && plasmoid.parent.inHiddenLayout && plasmoid.location !== PlasmaCore.Types.LeftEdge) {
+    mainText: Plasmoid.toolTipMainText
+    subText: Plasmoid.toolTipSubText
+    location: if (Plasmoid.parent && Plasmoid.parent.inHiddenLayout && Plasmoid.location !== PlasmaCore.Types.LeftEdge) {
                 return PlasmaCore.Types.RightEdge;
               } else {
-                return plasmoid.location;
+                return Plasmoid.location;
               }
-    active: !plasmoid.expanded
-    textFormat: plasmoid.toolTipTextFormat
-    mainItem: plasmoid.toolTipItem ? plasmoid.toolTipItem : null
+    active: !Plasmoid.expanded
+    textFormat: Plasmoid.toolTipTextFormat
+    mainItem: Plasmoid.toolTipItem ? Plasmoid.toolTipItem : null
 
     property Item fullRepresentation
     property Item compactRepresentation
@@ -37,7 +37,7 @@ PlasmaCore.ToolTipArea {
     }
 
     Layout.minimumWidth: {
-        switch (plasmoid.formFactor) {
+        switch (Plasmoid.formFactor) {
         case PlasmaCore.Types.Vertical:
             return 0;
         case PlasmaCore.Types.Horizontal:
@@ -48,7 +48,7 @@ PlasmaCore.ToolTipArea {
     }
 
     Layout.minimumHeight: {
-        switch (plasmoid.formFactor) {
+        switch (Plasmoid.formFactor) {
         case PlasmaCore.Types.Vertical:
             return width;
         case PlasmaCore.Types.Horizontal:

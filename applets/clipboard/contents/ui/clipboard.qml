@@ -41,8 +41,8 @@ Item {
         if (isClipboardEmpty) {
             // We need to hide the applet before changing its status to passive
             // because only the active applet can hide itself
-            if (plasmoid.hideOnWindowDeactivate)
-                plasmoid.expanded = false;
+            if (Plasmoid.hideOnWindowDeactivate)
+                Plasmoid.expanded = false;
             Plasmoid.status = PlasmaCore.Types.PassiveStatus;
         } else {
             Plasmoid.status = PlasmaCore.Types.ActiveStatus
@@ -51,11 +51,11 @@ Item {
 
 
     Component.onCompleted: {
-        plasmoid.removeAction("configure");
-        plasmoid.setAction("configure", i18n("Configure Clipboard…"), "configure", "alt+d, s");
+        Plasmoid.removeAction("configure");
+        Plasmoid.setAction("configure", i18n("Configure Clipboard…"), "configure", "alt+d, s");
 
-        plasmoid.setAction("clearHistory", i18n("Clear History"), "edit-clear-history");
-        plasmoid.action("clearHistory").visible = Qt.binding(() => {
+        Plasmoid.setAction("clearHistory", i18n("Clear History"), "edit-clear-history");
+        Plasmoid.action("clearHistory").visible = Qt.binding(() => {
             return !main.isClipboardEmpty;
         });
     }

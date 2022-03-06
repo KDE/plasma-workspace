@@ -11,6 +11,7 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.2
 import QtQml 2.15
 
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.quickcharts 1.0 as Charts
 
@@ -42,13 +43,13 @@ Control {
     bottomPadding: 0
 
     anchors.fill: parent
-    contentItem: plasmoid.nativeInterface.faceController.compactRepresentation
+    contentItem: Plasmoid.nativeInterface.faceController.compactRepresentation
 
     Binding {
         target: plasmoid.nativeInterface.faceController.compactRepresentation
         property: "formFactor"
         value: {
-            switch (plasmoid.formFactor) {
+            switch (Plasmoid.formFactor) {
             case PlasmaCore.Types.Horizontal:
                 return Faces.SensorFace.Horizontal;
             case PlasmaCore.Types.Vertical:
@@ -63,6 +64,6 @@ Control {
     MouseArea {
         parent: chartFace
         anchors.fill: parent
-        onClicked: plasmoid.expanded = !plasmoid.expanded
+        onClicked: Plasmoid.expanded = !Plasmoid.expanded
     }
 }

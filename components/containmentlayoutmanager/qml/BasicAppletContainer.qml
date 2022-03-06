@@ -16,7 +16,7 @@ import org.kde.kirigami 2.11 as Kirigami
 
 ContainmentLayoutManager.AppletContainer {
     id: appletContainer
-    editModeCondition: plasmoid.immutable
+    editModeCondition: Plasmoid.immutable
         ? ContainmentLayoutManager.ItemContainer.Manual
         : ContainmentLayoutManager.ItemContainer.AfterPressAndHold
 
@@ -102,7 +102,7 @@ ContainmentLayoutManager.AppletContainer {
 
         property bool blurEnabled: false
         function syncBlurEnabled() {
-            blurEnabled = appletContainer.rotation === 0 && plasmoid.GraphicsInfo.api !== GraphicsInfo.Software && hasElementPrefix("blurred");
+            blurEnabled = appletContainer.rotation === 0 && Plasmoid.GraphicsInfo.api !== GraphicsInfo.Software && hasElementPrefix("blurred");
         }
         prefix: blurEnabled ? "blurred" : ""
         Component.onCompleted: syncBlurEnabled()
@@ -175,7 +175,7 @@ ContainmentLayoutManager.AppletContainer {
                                         Math.max(0, appletContainer.y),
                                         appletContainer.width - Math.max(0, - (appletContainer.parent.width - appletContainer.x - appletContainer.width)),
                                         appletContainer.height - Math.max(0, - (appletContainer.parent.height - appletContainer.y - appletContainer.height)));
-                    sourceItem: plasmoid.wallpaper
+                    sourceItem: Plasmoid.wallpaper
                 }
             }
         }

@@ -21,9 +21,9 @@ Item {
     readonly property bool openAutomounterKcmAuthorized: KCMShell.authorize("device_automounter_kcm.desktop").length > 0
 
     property string devicesType: {
-        if (plasmoid.configuration.allDevices) {
+        if (Plasmoid.configuration.allDevices) {
             return "all"
-        } else if (plasmoid.configuration.removableDevices) {
+        } else if (Plasmoid.configuration.removableDevices) {
             return "removable"
         } else {
             return "nonRemovable"
@@ -91,7 +91,7 @@ Item {
             id: compactMouse
             anchors.fill: parent
             hoverEnabled: true
-            onClicked: plasmoid.expanded = !plasmoid.expanded
+            onClicked: Plasmoid.expanded = !Plasmoid.expanded
         }
     }
     Plasmoid.fullRepresentation: FullRepresentation {}
@@ -206,8 +206,8 @@ Item {
                 lastIcon = sdSource.data[lastUdi] ? sdSource.data[lastUdi].Icon : "device-notifier"
 
                 if (sdSource.isViableDevice(lastUdi)) {
-                    plasmoid.expanded = true
-                    plasmoid.fullRepresentationItem.spontaneousOpen = true;
+                    Plasmoid.expanded = true
+                    Plasmoid.fullRepresentationItem.spontaneousOpen = true;
                 }
             }
         }
@@ -231,43 +231,43 @@ Item {
             Plasmoid.status = PlasmaCore.Types.PassiveStatus;
         }
 
-        plasmoid.setAction("unmountAllDevices", i18n("Remove All"), "media-eject");
-        plasmoid.action("unmountAllDevices").visible = Qt.binding(() => {
+        Plasmoid.setAction("unmountAllDevices", i18n("Remove All"), "media-eject");
+        Plasmoid.action("unmountAllDevices").visible = Qt.binding(() => {
             return devicenotifier.mountedRemovables > 1;
         });
  
-        plasmoid.setActionSeparator("sep0");
+        Plasmoid.setActionSeparator("sep0");
 
-        plasmoid.setAction("showRemovableDevices", i18n("Removable Devices"), "drive-removable-media");
-        devicenotifier.showRemovableDevicesAction = plasmoid.action("showRemovableDevices");
+        Plasmoid.setAction("showRemovableDevices", i18n("Removable Devices"), "drive-removable-media");
+        devicenotifier.showRemovableDevicesAction = Plasmoid.action("showRemovableDevices");
         devicenotifier.showRemovableDevicesAction.checkable = true;
-        devicenotifier.showRemovableDevicesAction.checked = Qt.binding(() => {return plasmoid.configuration.removableDevices;});
-        plasmoid.setActionGroup("showRemovableDevices", "devicesShown");
+        devicenotifier.showRemovableDevicesAction.checked = Qt.binding(() => {return Plasmoid.configuration.removableDevices;});
+        Plasmoid.setActionGroup("showRemovableDevices", "devicesShown");
 
-        plasmoid.setAction("showNonRemovableDevices", i18n("Non Removable Devices"), "drive-harddisk");
-        devicenotifier.showNonRemovableDevicesAction = plasmoid.action("showNonRemovableDevices");
+        Plasmoid.setAction("showNonRemovableDevices", i18n("Non Removable Devices"), "drive-harddisk");
+        devicenotifier.showNonRemovableDevicesAction = Plasmoid.action("showNonRemovableDevices");
         devicenotifier.showNonRemovableDevicesAction.checkable = true;
-        devicenotifier.showNonRemovableDevicesAction.checked = Qt.binding(() => {return plasmoid.configuration.nonRemovableDevices;});
-        plasmoid.setActionGroup("showNonRemovableDevices", "devicesShown");
+        devicenotifier.showNonRemovableDevicesAction.checked = Qt.binding(() => {return Plasmoid.configuration.nonRemovableDevices;});
+        Plasmoid.setActionGroup("showNonRemovableDevices", "devicesShown");
 
-        plasmoid.setAction("showAllDevices", i18n("All Devices"));
-        devicenotifier.showAllDevicesAction = plasmoid.action("showAllDevices");
+        Plasmoid.setAction("showAllDevices", i18n("All Devices"));
+        devicenotifier.showAllDevicesAction = Plasmoid.action("showAllDevices");
         devicenotifier.showAllDevicesAction.checkable = true;
-        devicenotifier.showAllDevicesAction.checked = Qt.binding(() => {return plasmoid.configuration.allDevices;});
-        plasmoid.setActionGroup("showAllDevices", "devicesShown");
+        devicenotifier.showAllDevicesAction.checked = Qt.binding(() => {return Plasmoid.configuration.allDevices;});
+        Plasmoid.setActionGroup("showAllDevices", "devicesShown");
 
-        plasmoid.setActionSeparator("sep");
+        Plasmoid.setActionSeparator("sep");
 
-        plasmoid.setAction("openAutomatically", i18n("Show popup when new device is plugged in"));
-        devicenotifier.openAutomaticallyAction = plasmoid.action("openAutomatically");
+        Plasmoid.setAction("openAutomatically", i18n("Show popup when new device is plugged in"));
+        devicenotifier.openAutomaticallyAction = Plasmoid.action("openAutomatically");
         devicenotifier.openAutomaticallyAction.checkable = true;
-        devicenotifier.openAutomaticallyAction.checked = Qt.binding(() => {return plasmoid.configuration.popupOnNewDevice;});
+        devicenotifier.openAutomaticallyAction.checked = Qt.binding(() => {return Plasmoid.configuration.popupOnNewDevice;});
 
-        plasmoid.setActionSeparator("sep2");
+        Plasmoid.setActionSeparator("sep2");
 
         if (devicenotifier.openAutomounterKcmAuthorized) {
-            plasmoid.removeAction("configure");
-            plasmoid.setAction("configure", i18nc("Open auto mounter kcm", "Configure Removable Devices…"), "configure")
+            Plasmoid.removeAction("configure");
+            Plasmoid.setAction("configure", i18nc("Open auto mounter kcm", "Configure Removable Devices…"), "configure")
         }
     }
 
@@ -276,29 +276,29 @@ Item {
     }
 
     function action_showRemovableDevices() {
-        plasmoid.configuration.removableDevices = true;
-        plasmoid.configuration.nonRemovableDevices = false;
-        plasmoid.configuration.allDevices = false;
+        Plasmoid.configuration.removableDevices = true;
+        Plasmoid.configuration.nonRemovableDevices = false;
+        Plasmoid.configuration.allDevices = false;
     }
 
     function action_showNonRemovableDevices() {
-        plasmoid.configuration.removableDevices = false;
-        plasmoid.configuration.nonRemovableDevices = true;
-        plasmoid.configuration.allDevices = false;
+        Plasmoid.configuration.removableDevices = false;
+        Plasmoid.configuration.nonRemovableDevices = true;
+        Plasmoid.configuration.allDevices = false;
     }
 
     function action_showAllDevices() {
-        plasmoid.configuration.removableDevices = false;
-        plasmoid.configuration.nonRemovableDevices = false;
-        plasmoid.configuration.allDevices = true;
+        Plasmoid.configuration.removableDevices = false;
+        Plasmoid.configuration.nonRemovableDevices = false;
+        Plasmoid.configuration.allDevices = true;
     }
 
     function action_openAutomatically() {
-        plasmoid.configuration.popupOnNewDevice = !plasmoid.configuration.popupOnNewDevice;
+        Plasmoid.configuration.popupOnNewDevice = !Plasmoid.configuration.popupOnNewDevice;
     }
 
     Plasmoid.onExpandedChanged: {
-        popupEventSlot(plasmoid.expanded);
+        popupEventSlot(Plasmoid.expanded);
     }
 
     function popupEventSlot(popped) {
@@ -337,9 +337,9 @@ Item {
             // show the popup on new device attachment if the user has added
             // the text "popupOnNewDevice=false" to their
             // plasma-org.kde.plasma.desktop-appletsrc file.
-            if (plasmoid.configuration.popupOnNewDevice) { // Bug 351592
-                plasmoid.expanded = true;
-                plasmoid.fullRepresentationItem.spontaneousOpen = true;
+            if (Plasmoid.configuration.popupOnNewDevice) { // Bug 351592
+                Plasmoid.expanded = true;
+                Plasmoid.fullRepresentationItem.spontaneousOpen = true;
             }
         }
     }

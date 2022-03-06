@@ -18,11 +18,11 @@ import org.kde.draganddrop 2.0 as DragDrop
 MouseArea {
     id: root
 
-    readonly property bool inPanel: (plasmoid.location === PlasmaCore.Types.TopEdge
-        || plasmoid.location === PlasmaCore.Types.RightEdge
-        || plasmoid.location === PlasmaCore.Types.BottomEdge
-        || plasmoid.location === PlasmaCore.Types.LeftEdge)
-    readonly property bool constrained: plasmoid.formFactor === PlasmaCore.Types.Vertical || plasmoid.formFactor === PlasmaCore.Types.Horizontal
+    readonly property bool inPanel: (Plasmoid.location === PlasmaCore.Types.TopEdge
+        || Plasmoid.location === PlasmaCore.Types.RightEdge
+        || Plasmoid.location === PlasmaCore.Types.BottomEdge
+        || Plasmoid.location === PlasmaCore.Types.LeftEdge)
+    readonly property bool constrained: Plasmoid.formFactor === PlasmaCore.Types.Vertical || Plasmoid.formFactor === PlasmaCore.Types.Horizontal
     property bool containsAcceptableDrag: false
 
     height: Math.round(PlasmaCore.Units.iconSizes.desktop + 2 * PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height)
@@ -35,53 +35,53 @@ MouseArea {
         case Qt.Key_Enter:
         case Qt.Key_Return:
         case Qt.Key_Select:
-            plasmoid.nativeInterface.run()
+            Plasmoid.nativeInterface.run()
             break;
         }
     }
-    Accessible.name: plasmoid.title
-    Accessible.description: plasmoid.nativeInterface.genericName !== mainText ? plasmoid.nativeInterface.genericName :""
+    Accessible.name: Plasmoid.title
+    Accessible.description: Plasmoid.nativeInterface.genericName !== mainText ? Plasmoid.nativeInterface.genericName :""
     Accessible.role: Accessible.Button
 
-    Layout.minimumWidth: plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : PlasmaCore.Units.iconSizes.small
-    Layout.minimumHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (PlasmaCore.Units.iconSizes.small + 2 * PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height)
+    Layout.minimumWidth: Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : PlasmaCore.Units.iconSizes.small
+    Layout.minimumHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? width : (PlasmaCore.Units.iconSizes.small + 2 * PlasmaCore.Theme.mSize(PlasmaCore.Theme.defaultFont).height)
 
     Layout.maximumWidth: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1
     Layout.maximumHeight: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1
 
     hoverEnabled: true
 
-    onClicked: plasmoid.nativeInterface.run()
+    onClicked: Plasmoid.nativeInterface.run()
 
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
-    Plasmoid.icon: plasmoid.nativeInterface.iconName
-    Plasmoid.title: plasmoid.nativeInterface.name
+    Plasmoid.icon: Plasmoid.nativeInterface.iconName
+    Plasmoid.title: Plasmoid.nativeInterface.name
     Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
 
-    Plasmoid.onActivated: plasmoid.nativeInterface.run()
+    Plasmoid.onActivated: Plasmoid.nativeInterface.run()
 
     Plasmoid.onContextualActionsAboutToShow: updateActions()
 
     Component.onCompleted: updateActions()
 
     function updateActions() {
-        plasmoid.clearActions()
+        Plasmoid.clearActions()
 
-        plasmoid.removeAction("configure");
+        Plasmoid.removeAction("configure");
 
-        if (plasmoid.immutability !== PlasmaCore.Types.SystemImmutable) {
-            plasmoid.setAction("configure", i18n("Properties"), "document-properties");
+        if (Plasmoid.immutability !== PlasmaCore.Types.SystemImmutable) {
+            Plasmoid.setAction("configure", i18n("Properties"), "document-properties");
         }
     }
 
     function action_configure() {
-        plasmoid.nativeInterface.configure()
+        Plasmoid.nativeInterface.configure()
     }
 
     Connections {
         target: plasmoid
         function onExternalData(mimetype, data) {
-            plasmoid.nativeInterface.url = data
+            Plasmoid.nativeInterface.url = data
         }
     }
 
@@ -90,7 +90,7 @@ MouseArea {
         anchors.fill: parent
         preventStealing: true
         onDragEnter: {
-            var acceptable = plasmoid.nativeInterface.isAcceptableDrag(event);
+            var acceptable = Plasmoid.nativeInterface.isAcceptableDrag(event);
             root.containsAcceptableDrag = acceptable;
 
             if (!acceptable) {
@@ -100,7 +100,7 @@ MouseArea {
         onDragLeave: root.containsAcceptableDrag = false
         onDrop: {
             if (root.containsAcceptableDrag) {
-                plasmoid.nativeInterface.processDrop(event)
+                Plasmoid.nativeInterface.processDrop(event)
             } else {
                 event.ignore();
             }
@@ -117,11 +117,11 @@ MouseArea {
             top: parent.top
             bottom: constrained ? parent.bottom : text.top
         }
-        source: plasmoid.icon
+        source: Plasmoid.icon
         enabled: root.enabled
         active: root.containsMouse || root.containsAcceptableDrag
         usesPlasmaTheme: false
-        opacity: plasmoid.busy ? 0.6 : 1
+        opacity: Plasmoid.busy ? 0.6 : 1
     }
 
     DropShadow {
@@ -145,7 +145,7 @@ MouseArea {
 
     PlasmaComponents3.Label {
         id : text
-        text : plasmoid.title
+        text : Plasmoid.title
         anchors {
             left : parent.left
             bottom : parent.bottom
@@ -162,8 +162,8 @@ MouseArea {
 
     PlasmaCore.ToolTipArea {
         anchors.fill: parent
-        mainText: plasmoid.title
-        subText: plasmoid.nativeInterface.genericName !== mainText ? plasmoid.nativeInterface.genericName :""
+        mainText: Plasmoid.title
+        subText: Plasmoid.nativeInterface.genericName !== mainText ? Plasmoid.nativeInterface.genericName :""
         textFormat: Text.PlainText
     }
 }

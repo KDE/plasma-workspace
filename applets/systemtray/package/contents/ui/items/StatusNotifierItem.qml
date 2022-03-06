@@ -5,6 +5,7 @@
 */
 
 import QtQuick 2.1
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 AbstractItem {
@@ -52,11 +53,11 @@ AbstractItem {
     }
 
     onContextMenu: {
-        openContextMenu(plasmoid.nativeInterface.popupPosition(taskIcon, mouse.x, mouse.y))
+        openContextMenu(Plasmoid.nativeInterface.popupPosition(taskIcon, mouse.x, mouse.y))
     }
 
     onClicked: {
-        var pos = plasmoid.nativeInterface.popupPosition(taskIcon, mouse.x, mouse.y);
+        var pos = Plasmoid.nativeInterface.popupPosition(taskIcon, mouse.x, mouse.y);
         switch (mouse.button) {
         case Qt.LeftButton:
             taskIcon.activated(pos)
@@ -84,7 +85,7 @@ AbstractItem {
 
         var job = service.startOperationCall(operation);
         job.finished.connect(function () {
-            plasmoid.nativeInterface.showStatusNotifierContextMenu(job, taskIcon);
+            Plasmoid.nativeInterface.showStatusNotifierContextMenu(job, taskIcon);
         });
     }
 

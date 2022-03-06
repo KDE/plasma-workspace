@@ -9,6 +9,7 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.1
 import QtGraphicalEffects 1.0
 
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents2
 import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
@@ -38,8 +39,8 @@ PlasmaComponents2.ListItem {
 
     onClicked: {
         menuItem.itemSelected(UuidRole);
-        if (plasmoid.hideOnWindowDeactivate) {
-            plasmoid.expanded = false;
+        if (Plasmoid.hideOnWindowDeactivate) {
+            Plasmoid.expanded = false;
         } else {
             forceActiveFocus(); // Or activeFocus will always be false after clicking buttons in the heading
         }

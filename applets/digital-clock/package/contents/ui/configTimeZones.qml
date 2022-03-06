@@ -10,6 +10,7 @@ import QtQuick.Layouts 1.0
 import QtQuick.Dialogs 1.1
 
 import org.kde.kquickcontrolsaddons 2.0 // For kcmshell
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.private.digitalclock 1.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kirigami 2.14 as Kirigami
@@ -61,7 +62,7 @@ ColumnLayout {
 
             delegate: Kirigami.BasicListItem {
                 id: timeZoneListItem
-                property bool isCurrent: plasmoid.configuration.lastSelectedTimezone === model.timeZoneId
+                property bool isCurrent: Plasmoid.configuration.lastSelectedTimezone === model.timeZoneId
 
                 bold: isCurrent
 
@@ -90,7 +91,7 @@ ColumnLayout {
 
                 action: Kirigami.Action {
                     id: clickAction
-                    onTriggered: plasmoid.configuration.lastSelectedTimezone = model.timeZoneId
+                    onTriggered: Plasmoid.configuration.lastSelectedTimezone = model.timeZoneId
                 }
 
                 trailing: RowLayout {

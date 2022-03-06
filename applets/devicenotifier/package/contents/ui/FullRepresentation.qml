@@ -12,6 +12,7 @@ import QtQuick 2.2
 import QtQuick.Window 2.2
 import QtQuick.Layouts 1.1
 
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
@@ -26,7 +27,7 @@ PlasmaExtras.Representation {
     collapseMarginsHint: true
 
     header: PlasmaExtras.PlasmoidHeading {
-        visible: !(plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentDrawsPlasmoidHeading) && devicenotifier.mountedRemovables > 1
+        visible: !(Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentDrawsPlasmoidHeading) && devicenotifier.mountedRemovables > 1
         PlasmaComponents3.ToolButton {
             id: unmountAll
             anchors.right: parent.right
@@ -52,7 +53,7 @@ PlasmaExtras.Representation {
         connectedSources: "UserActivity"
         property int polls: 0
         //poll only on plasmoid expanded
-        interval: !fullRepMouseArea.containsMouse && !fullRep.Window.active && spontaneousOpen && plasmoid.expanded ? 3000 : 0
+        interval: !fullRepMouseArea.containsMouse && !fullRep.Window.active && spontaneousOpen && Plasmoid.expanded ? 3000 : 0
         onIntervalChanged: polls = 0;
         onDataChanged: {
             //only do when polling
@@ -61,7 +62,7 @@ PlasmaExtras.Representation {
             }
 
             if (userActivitySource.data["UserActivity"]["IdleTime"] < interval) {
-                plasmoid.expanded = false;
+                Plasmoid.expanded = false;
                 spontaneousOpen = false;
             }
         }
@@ -106,7 +107,7 @@ PlasmaExtras.Representation {
     Connections {
         target: plasmoid
         function onExpandedChanged() {
-            if (!plasmoid.expanded) {
+            if (!Plasmoid.expanded) {
                 statusSource.clearMessage();
             }
         }
@@ -164,7 +165,7 @@ PlasmaExtras.Representation {
             PlasmaExtras.PlaceholderMessage {
                 anchors.centerIn: parent
                 width: parent.width - (PlasmaCore.Units.largeSpacing * 4)
-                text: plasmoid.configuration.removableDevices ? i18n("No removable devices attached") : i18n("No disks available")
+                text: Plasmoid.configuration.removableDevices ? i18n("No removable devices attached") : i18n("No disks available")
                 visible: notifierDialog.count === 0 && !messageHighlightAnimator.running
             }
         }

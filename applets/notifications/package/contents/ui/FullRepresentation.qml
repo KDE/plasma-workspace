@@ -28,7 +28,7 @@ PlasmaExtras.Representation {
     implicitWidth: PlasmaCore.Units.gridUnit * 18
     implicitHeight: PlasmaCore.Units.gridUnit * 24
 
-    Layout.fillHeight: plasmoid.formFactor === PlasmaCore.Types.Vertical
+    Layout.fillHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical
 
     collapseMarginsHint: true
 
@@ -42,7 +42,7 @@ PlasmaExtras.Representation {
     Connections {
         target: plasmoid
         function onExpandedChanged() {
-            if (plasmoid.expanded) {
+            if (Plasmoid.expanded) {
                 list.positionViewAtBeginning();
                 list.currentIndex = -1;
             }
@@ -164,11 +164,11 @@ PlasmaExtras.Representation {
                 }
 
                 PlasmaComponents3.ToolButton {
-                    visible: !(plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentDrawsPlasmoidHeading)
+                    visible: !(Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentDrawsPlasmoidHeading)
 
-                    Accessible.name: plasmoid.action("clearHistory").text
+                    Accessible.name: Plasmoid.action("clearHistory").text
                     icon.name: "edit-clear-history"
-                    enabled: plasmoid.action("clearHistory").visible
+                    enabled: Plasmoid.action("clearHistory").visible
                     onClicked: action_clearHistory()
 
                     PlasmaComponents3.ToolTip {

@@ -8,6 +8,7 @@
 
 import QtQuick 2.2
 import QtQuick.Layouts 1.1
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 
@@ -51,14 +52,14 @@ PlasmaCore.ToolTipArea {
 
     location: {
         if (inHiddenLayout) {
-            if (LayoutMirroring.enabled && plasmoid.location !== PlasmaCore.Types.RightEdge) {
+            if (LayoutMirroring.enabled && Plasmoid.location !== PlasmaCore.Types.RightEdge) {
                 return PlasmaCore.Types.LeftEdge;
-            } else if (plasmoid.location !== PlasmaCore.Types.LeftEdge) {
+            } else if (Plasmoid.location !== PlasmaCore.Types.LeftEdge) {
                 return PlasmaCore.Types.RightEdge;
             }
         }
 
-        return plasmoid.location;
+        return Plasmoid.location;
     }
 
     PulseAnimation {

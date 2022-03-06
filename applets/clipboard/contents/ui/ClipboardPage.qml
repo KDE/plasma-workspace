@@ -42,8 +42,8 @@ Menu {
                     var uuid = clipboardMenu.model.get(clipboardMenu.view.currentIndex).UuidRole
                     if (uuid) {
                         clipboardSource.service(uuid, "select")
-                        if (plasmoid.hideOnWindowDeactivate) {
-                            plasmoid.expanded = false;
+                        if (Plasmoid.hideOnWindowDeactivate) {
+                            Plasmoid.expanded = false;
                         }
                     }
                 }
@@ -106,7 +106,7 @@ Menu {
                 }
             }
             PlasmaComponents3.ToolButton {
-                visible: !(plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentDrawsPlasmoidHeading) && plasmoid.action("clearHistory").visible
+                visible: !(Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentDrawsPlasmoidHeading) && Plasmoid.action("clearHistory").visible
 
                 icon.name: "edit-clear-history"
                 onClicked: {

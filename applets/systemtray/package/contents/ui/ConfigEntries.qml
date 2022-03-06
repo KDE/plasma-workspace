@@ -10,6 +10,7 @@ import QtQuick 2.5
 import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Layouts 1.3
 
+import org.kde.plasma.plasmoid 2.0
 import org.kde.kquickcontrols 2.0 as KQC
 import org.kde.kirigami 2.10 as Kirigami
 
@@ -64,7 +65,7 @@ ColumnLayout {
 
             clip: true
 
-            model: plasmoid.nativeInterface.configSystemTrayModel
+            model: Plasmoid.nativeInterface.configSystemTrayModel
 
             header: Kirigami.AbstractListItem {
 

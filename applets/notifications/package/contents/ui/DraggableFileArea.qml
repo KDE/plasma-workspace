@@ -5,6 +5,7 @@
 */
 
 import QtQuick 2.8
+import org.kde.plasma.plasmoid 2.0
 
 MouseArea {
     id: area
@@ -16,7 +17,7 @@ MouseArea {
     property url dragUrl
     property var dragPixmap
 
-    readonly property bool dragging: plasmoid.nativeInterface.dragActive
+    readonly property bool dragging: Plasmoid.nativeInterface.dragActive
 
     property int _pressX: -1
     property int _pressY: -1
@@ -39,8 +40,8 @@ MouseArea {
         }
     }
     onPositionChanged: {
-        if (_pressX !== -1 && _pressY !== -1 && plasmoid.nativeInterface.isDrag(_pressX, _pressY, mouse.x, mouse.y)) {
-            plasmoid.nativeInterface.startDrag(area.dragParent, area.dragUrl, area.dragPixmap);
+        if (_pressX !== -1 && _pressY !== -1 && Plasmoid.nativeInterface.isDrag(_pressX, _pressY, mouse.x, mouse.y)) {
+            Plasmoid.nativeInterface.startDrag(area.dragParent, area.dragUrl, area.dragPixmap);
             _pressX = -1;
             _pressY = -1;
         }

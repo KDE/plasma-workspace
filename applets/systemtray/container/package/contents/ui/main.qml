@@ -24,20 +24,20 @@ Item {
     //synchronize state between SystemTray and wrapping Applet
     Plasmoid.onExpandedChanged: {
         if (internalSystray) {
-            internalSystray.expanded = plasmoid.expanded
+            internalSystray.expanded = Plasmoid.expanded
         }
     }
     Connections {
         target: internalSystray
         function onExpandedChanged() {
-            plasmoid.expanded = internalSystray.expanded
+            Plasmoid.expanded = internalSystray.expanded
         }
     }
 
     property Item internalSystray
 
     Component.onCompleted: {
-        root.internalSystray = plasmoid.nativeInterface.internalSystray;
+        root.internalSystray = Plasmoid.nativeInterface.internalSystray;
 
         if (root.internalSystray == null) {
             return;
@@ -49,7 +49,7 @@ Item {
     Connections {
         target: plasmoid.nativeInterface
         function onInternalSystrayChanged() {
-            root.internalSystray = plasmoid.nativeInterface.internalSystray;
+            root.internalSystray = Plasmoid.nativeInterface.internalSystray;
             root.internalSystray.parent = root;
             root.internalSystray.anchors.fill = root;
         }

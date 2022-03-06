@@ -15,18 +15,18 @@ import org.kde.plasma.private.sessions 2.0
 Flow {
     id: lockout
     Layout.minimumWidth: {
-        if (plasmoid.formFactor === PlasmaCore.Types.Vertical) {
+        if (Plasmoid.formFactor === PlasmaCore.Types.Vertical) {
             return 0
-        } else if (plasmoid.formFactor === PlasmaCore.Types.Horizontal) {
+        } else if (Plasmoid.formFactor === PlasmaCore.Types.Horizontal) {
             return height < minButtonSize * visibleButtons ? height * visibleButtons : height / visibleButtons - 1;
         } else {
             return width > height ? minButtonSize * visibleButtons : minButtonSize
         }
     }
     Layout.minimumHeight: {
-        if (plasmoid.formFactor === PlasmaCore.Types.Vertical) {
+        if (Plasmoid.formFactor === PlasmaCore.Types.Vertical) {
             return width >= minButtonSize * visibleButtons ? width / visibleButtons - 1 : width * visibleButtons
-        } else if (plasmoid.formFactor === PlasmaCore.Types.Horizontal) {
+        } else if (Plasmoid.formFactor === PlasmaCore.Types.Horizontal) {
             return 0
         } else {
             return width > height ? minButtonSize : minButtonSize * visibleButtons
@@ -50,8 +50,8 @@ Flow {
     }
 
     flow: {
-        if ((plasmoid.formFactor === PlasmaCore.Types.Vertical && width >= minButtonSize * visibleButtons) ||
-            (plasmoid.formFactor === PlasmaCore.Types.Horizontal && height < minButtonSize * visibleButtons) ||
+        if ((Plasmoid.formFactor === PlasmaCore.Types.Vertical && width >= minButtonSize * visibleButtons) ||
+            (Plasmoid.formFactor === PlasmaCore.Types.Horizontal && height < minButtonSize * visibleButtons) ||
             (width > height)) {
             return Flow.LeftToRight // horizontal
         } else {
@@ -73,7 +73,7 @@ Flow {
 
         delegate: Item {
             id: iconDelegate
-            visible: plasmoid.configuration["show_" + modelData.configKey] && (!modelData.hasOwnProperty("requires") || session["can" + modelData.requires])
+            visible: Plasmoid.configuration["show_" + modelData.configKey] && (!modelData.hasOwnProperty("requires") || session["can" + modelData.requires])
             width: items.itemWidth
             height: items.itemHeight
 

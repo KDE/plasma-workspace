@@ -21,7 +21,7 @@ Item {
         id: tabBar
         anchors.fill: parent
         tabPosition: {
-            switch (plasmoid.location) {
+            switch (Plasmoid.location) {
             case PlasmaCore.Types.LeftEdge:
                 return Qt.LeftEdge;
             case PlasmaCore.Types.RightEdge:
@@ -75,6 +75,6 @@ Item {
     }
 
     Component.onCompleted: {
-        plasmoid.removeAction("configure");
+        Plasmoid.removeAction("configure");
     }
 }

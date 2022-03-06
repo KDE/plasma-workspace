@@ -10,6 +10,7 @@ import QtQuick.Layouts 1.1
 import QtQml 2.15
 
 import org.kde.kquickcontrolsaddons 2.0 // For kcmshell
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.calendar 2.0 as PlasmaCalendar
 import org.kde.plasma.components 3.0 as PlasmaComponents3
@@ -40,14 +41,14 @@ PlasmaExtras.Representation {
 
     readonly property int paddings: PlasmaCore.Units.smallSpacing
     readonly property bool showAgenda: PlasmaCalendar.EventPluginsManager.enabledPlugins.length > 0
-    readonly property bool showClocks: plasmoid.configuration.selectedTimeZones.length > 1
+    readonly property bool showClocks: Plasmoid.configuration.selectedTimeZones.length > 1
 
     property alias borderWidth: monthView.borderWidth
     property alias monthView: monthView
 
     property bool debug: false
 
-    property bool isExpanded: plasmoid.expanded
+    property bool isExpanded: Plasmoid.expanded
 
     onIsExpandedChanged: {
         // clear all the selections when the plasmoid is showing/hiding
@@ -136,11 +137,11 @@ PlasmaExtras.Representation {
                 Layout.row: 0
                 Layout.column: 4
                 Layout.alignment: Qt.AlignRight
-                visible: plasmoid.action("configure").enabled
+                visible: Plasmoid.action("configure").enabled
                 icon.name: "configure"
-                onClicked: plasmoid.action("configure").trigger()
+                onClicked: Plasmoid.action("configure").trigger()
                 PlasmaComponents3.ToolTip {
-                    text: plasmoid.action("configure").text
+                    text: Plasmoid.action("configure").text
                 }
             }
 
@@ -149,8 +150,8 @@ PlasmaExtras.Representation {
                 Layout.row: 0
                 Layout.column: 5
                 checkable: true
-                checked: plasmoid.configuration.pin
-                onToggled: plasmoid.configuration.pin = checked
+                checked: Plasmoid.configuration.pin
+                onToggled: Plasmoid.configuration.pin = checked
                 icon.name: "window-pin"
                 PlasmaComponents3.ToolTip {
                     text: i18n("Keep Open")
@@ -330,14 +331,14 @@ PlasmaExtras.Representation {
                 target: plasmoid.configuration
 
                 onEnabledCalendarPluginsChanged: {
-                    PlasmaCalendar.EventPluginsManager.enabledPlugins = plasmoid.configuration.enabledCalendarPlugins;
+                    PlasmaCalendar.EventPluginsManager.enabledPlugins = Plasmoid.configuration.enabledCalendarPlugins;
                 }
             }
 
             Binding {
                 target: plasmoid
                 property: "hideOnWindowDeactivate"
-                value: !plasmoid.configuration.pin
+                value: !Plasmoid.configuration.pin
                 restoreMode: Binding.RestoreBinding
             }
 
@@ -556,8 +557,8 @@ PlasmaExtras.Representation {
 
                 model: {
                     let timezones = [];
-                    for (let i = 0; i < plasmoid.configuration.selectedTimeZones.length; i++) {
-                        timezones.push(plasmoid.configuration.selectedTimeZones[i]);
+                    for (let i = 0; i < Plasmoid.configuration.selectedTimeZones.length; i++) {
+                        timezones.push(Plasmoid.configuration.selectedTimeZones[i]);
                     }
 
                     return timezones;
@@ -565,7 +566,7 @@ PlasmaExtras.Representation {
 
                 delegate: PlasmaComponents3.ItemDelegate {
                     id: listItem
-                    readonly property bool isCurrentTimeZone: modelData === plasmoid.configuration.lastSelectedTimezone
+                    readonly property bool isCurrentTimeZone: modelData === Plasmoid.configuration.lastSelectedTimezone
                     width: clocksList.width
                     padding: calendar.paddings
                     leftPadding: calendar.paddings + PlasmaCore.Units.smallSpacing * 2
@@ -623,10 +624,10 @@ PlasmaExtras.Representation {
             anchors.margins: PlasmaCore.Units.smallSpacing
             borderOpacity: 0.25
             today: root.tzDate
-            firstDayOfWeek: plasmoid.configuration.firstDayOfWeek > -1
-                ? plasmoid.configuration.firstDayOfWeek
+            firstDayOfWeek: Plasmoid.configuration.firstDayOfWeek > -1
+                ? Plasmoid.configuration.firstDayOfWeek
                 : Qt.locale().firstDayOfWeek
-            showWeekNumbers: plasmoid.configuration.showWeekNumbers
+            showWeekNumbers: Plasmoid.configuration.showWeekNumbers
             showCustomHeader: true
         }
     }

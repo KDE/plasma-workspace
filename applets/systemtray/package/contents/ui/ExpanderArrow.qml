@@ -7,12 +7,13 @@
 
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 PlasmaCore.ToolTipArea {
     id: tooltip
 
-    property bool vertical: plasmoid.formFactor === PlasmaCore.Types.Vertical
+    property bool vertical: Plasmoid.formFactor === PlasmaCore.Types.Vertical
     property int iconSize: PlasmaCore.Units.iconSizes.smallMedium
     implicitWidth: iconSize
     implicitHeight: iconSize
@@ -71,11 +72,11 @@ PlasmaCore.ToolTipArea {
 
             svg: arrowSvg
             elementId: {
-                if (plasmoid.location === PlasmaCore.Types.TopEdge) {
+                if (Plasmoid.location === PlasmaCore.Types.TopEdge) {
                     return "down-arrow";
-                } else if (plasmoid.location === PlasmaCore.Types.LeftEdge) {
+                } else if (Plasmoid.location === PlasmaCore.Types.LeftEdge) {
                     return "right-arrow";
-                } else if (plasmoid.location === PlasmaCore.Types.RightEdge) {
+                } else if (Plasmoid.location === PlasmaCore.Types.RightEdge) {
                     return "left-arrow";
                 } else {
                     return "up-arrow";
@@ -103,11 +104,11 @@ PlasmaCore.ToolTipArea {
 
             svg: arrowSvg
             elementId: {
-                if (plasmoid.location === PlasmaCore.Types.TopEdge) {
+                if (Plasmoid.location === PlasmaCore.Types.TopEdge) {
                     return "up-arrow";
-                } else if (plasmoid.location === PlasmaCore.Types.LeftEdge) {
+                } else if (Plasmoid.location === PlasmaCore.Types.LeftEdge) {
                     return "left-arrow";
-                } else if (plasmoid.location === PlasmaCore.Types.RightEdge) {
+                } else if (Plasmoid.location === PlasmaCore.Types.RightEdge) {
                     return "right-arrow";
                 } else {
                     return "down-arrow";

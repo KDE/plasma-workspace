@@ -23,23 +23,23 @@ Item {
     Plasmoid.backgroundHints: PlasmaCore.Types.ShadowBackground | PlasmaCore.Types.ConfigurableBackground
     property date tzDate: {
         // get the time for the given timezone from the dataengine
-        var now = dataSource.data[plasmoid.configuration.lastSelectedTimezone]["DateTime"];
+        var now = dataSource.data[Plasmoid.configuration.lastSelectedTimezone]["DateTime"];
         // get current UTC time
         var msUTC = now.getTime() + (now.getTimezoneOffset() * 60000);
         // add the dataengine TZ offset to it
-        return new Date(msUTC + (dataSource.data[plasmoid.configuration.lastSelectedTimezone]["Offset"] * 1000));
+        return new Date(msUTC + (dataSource.data[Plasmoid.configuration.lastSelectedTimezone]["Offset"] * 1000));
     }
 
     function initTimezones() {
         var tz  = Array()
-        if (plasmoid.configuration.selectedTimeZones.indexOf("Local") === -1) {
+        if (Plasmoid.configuration.selectedTimeZones.indexOf("Local") === -1) {
             tz.push("Local");
         }
-        root.allTimezones = tz.concat(plasmoid.configuration.selectedTimeZones);
+        root.allTimezones = tz.concat(Plasmoid.configuration.selectedTimeZones);
     }
 
     function timeForZone(zone) {
-        var compactRepresentationItem = plasmoid.compactRepresentationItem;
+        var compactRepresentationItem = Plasmoid.compactRepresentationItem;
         if (!compactRepresentationItem) {
             return "";
         }
@@ -62,7 +62,7 @@ Item {
 
     function nameForZone(zone) {
         // add the timezone string to the clock
-        var timezoneString = plasmoid.configuration.displayTimezoneAsCode ? dataSource.data[zone]["Timezone Abbreviation"]
+        var timezoneString = Plasmoid.configuration.displayTimezoneAsCode ? dataSource.data[zone]["Timezone Abbreviation"]
                                                                           : TimezonesI18n.i18nCity(dataSource.data[zone]["Timezone City"]);
 
         return timezoneString;
@@ -95,8 +95,8 @@ Item {
         id: dataSource
         engine: "time"
         connectedSources: allTimezones
-        interval: plasmoid.configuration.showSeconds ? 1000 : 60000
-        intervalAlignment: plasmoid.configuration.showSeconds ? PlasmaCore.Types.NoAlignment : PlasmaCore.Types.AlignToMinute
+        interval: Plasmoid.configuration.showSeconds ? 1000 : 60000
+        intervalAlignment: Plasmoid.configuration.showSeconds ? PlasmaCore.Types.NoAlignment : PlasmaCore.Types.AlignToMinute
     }
 
     function setDateFormatString() {
@@ -118,19 +118,19 @@ Item {
     }
 
     Component.onCompleted: {
-        plasmoid.setAction("clipboard", i18n("Copy to Clipboard"), "edit-copy");
-        ClipboardMenu.setupMenu(plasmoid.action("clipboard"));
+        Plasmoid.setAction("clipboard", i18n("Copy to Clipboard"), "edit-copy");
+        ClipboardMenu.setupMenu(Plasmoid.action("clipboard"));
 
         root.initTimezones();
         if (KCMShell.authorize("kcm_clock.desktop").length > 0) {
-            plasmoid.setAction("clockkcm", i18n("Adjust Date and Time…"), "clock");
+            Plasmoid.setAction("clockkcm", i18n("Adjust Date and Time…"), "clock");
         }
         if (KCMShell.authorize("kcm_formats.desktop").length > 0) {
-            plasmoid.setAction("formatskcm", i18n("Set Time Format…"), "gnumeric-format-thousand-separator");
+            Plasmoid.setAction("formatskcm", i18n("Set Time Format…"), "gnumeric-format-thousand-separator");
         }
 
         // Set the list of enabled plugins from config
         // to the manager
-        PlasmaCalendar.EventPluginsManager.enabledPlugins = plasmoid.configuration.enabledCalendarPlugins;
+        PlasmaCalendar.EventPluginsManager.enabledPlugins = Plasmoid.configuration.enabledCalendarPlugins;
     }
 }

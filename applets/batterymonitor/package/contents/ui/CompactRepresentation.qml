@@ -9,6 +9,7 @@
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
 
+import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.workspace.components 2.0 as WorkspaceComponents
 
@@ -16,20 +17,20 @@ MouseArea {
     id: root
 
     property real itemSize: Math.min(root.height, root.width/view.count)
-    readonly property bool isConstrained: plasmoid.formFactor === PlasmaCore.Types.Vertical || plasmoid.formFactor === PlasmaCore.Types.Horizontal
+    readonly property bool isConstrained: Plasmoid.formFactor === PlasmaCore.Types.Vertical || Plasmoid.formFactor === PlasmaCore.Types.Horizontal
     property real brightnessError: 0
     property QtObject batteries
     property bool hasBatteries: false
 
     hoverEnabled: true
 
-    onClicked: plasmoid.expanded = !plasmoid.expanded
+    onClicked: Plasmoid.expanded = !Plasmoid.expanded
 
     // "No Batteries" case
     PlasmaCore.IconItem {
         anchors.fill: parent
         visible: !root.hasBatteries
-        source: plasmoid.icon
+        source: Plasmoid.icon
         active: parent.containsMouse
     }
 
@@ -70,7 +71,7 @@ MouseArea {
                     anchors.bottom: parent.bottom
                     anchors.right: parent.right
 
-                    visible: plasmoid.configuration.showPercentage
+                    visible: Plasmoid.configuration.showPercentage
 
                     text: i18nc("battery percentage below battery icon", "%1%", percent)
                     icon: batteryIcon

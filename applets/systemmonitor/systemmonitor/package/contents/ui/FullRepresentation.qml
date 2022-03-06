@@ -43,7 +43,7 @@ Control {
     Kirigami.Theme.disabledTextColor: PlasmaCore.ColorScope.disabledTextColor
 
 
-    contentItem: plasmoid.nativeInterface.faceController.fullRepresentation
+    contentItem: Plasmoid.nativeInterface.faceController.fullRepresentation
 
     // This empty mousearea serves for the sole purpose of refusing touch events
     // which otherwise are eaten by Control stealing the event from any of its parents
@@ -57,7 +57,7 @@ Control {
         target: plasmoid.nativeInterface.faceController.fullRepresentation
         property: "formFactor"
         value: {
-            switch (plasmoid.formFactor) {
+            switch (Plasmoid.formFactor) {
             case PlasmaCore.Types.Horizontal:
                 return Faces.SensorFace.Horizontal;
             case PlasmaCore.Types.Vertical:

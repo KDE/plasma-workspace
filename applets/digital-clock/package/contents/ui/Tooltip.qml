@@ -9,6 +9,7 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.plasma.plasmoid 2.0
 
 Item {
     id: tooltipContentItem
@@ -57,7 +58,7 @@ Item {
             Layout.maximumWidth: preferredTextWidth
             Layout.maximumHeight: childrenRect.height
             columns: 2
-            visible: plasmoid.configuration.selectedTimeZones.length > 1
+            visible: Plasmoid.configuration.selectedTimeZones.length > 1
             rowSpacing: 0
 
             Repeater {
@@ -68,9 +69,9 @@ Item {
                     // be one Item with two Labels because that wouldn't work
                     // in a grid then
                     var timezones = [];
-                    for (var i = 0; i < plasmoid.configuration.selectedTimeZones.length; i++) {
-                        timezones.push(plasmoid.configuration.selectedTimeZones[i]);
-                        timezones.push(plasmoid.configuration.selectedTimeZones[i]);
+                    for (var i = 0; i < Plasmoid.configuration.selectedTimeZones.length; i++) {
+                        timezones.push(Plasmoid.configuration.selectedTimeZones[i]);
+                        timezones.push(Plasmoid.configuration.selectedTimeZones[i]);
                     }
 
                     return timezones;
@@ -83,7 +84,7 @@ Item {
 
                     wrapMode: Text.NoWrap
                     text: index % 2 == 0 ? nameForZone(modelData) : timeForZone(modelData)
-                    font.weight: modelData === plasmoid.configuration.lastSelectedTimezone ? Font.Bold : Font.Normal
+                    font.weight: modelData === Plasmoid.configuration.lastSelectedTimezone ? Font.Bold : Font.Normal
                     elide: Text.ElideNone
                     opacity: 0.6
                 }

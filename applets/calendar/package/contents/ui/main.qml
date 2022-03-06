@@ -42,7 +42,7 @@ Item {
     }
 
     Plasmoid.compactRepresentation: MouseArea {
-        onClicked: plasmoid.expanded = !plasmoid.expanded
+        onClicked: Plasmoid.expanded = !Plasmoid.expanded
 
         PlasmaCore.IconItem {
             anchors.fill: parent
@@ -87,10 +87,10 @@ Item {
                 color: "black"
                 text: {
                     var d = new Date(dataSource.data.Local.DateTime)
-                    var format = plasmoid.configuration.compactDisplay
+                    var format = Plasmoid.configuration.compactDisplay
 
                     if (format === "w") {
-                        return plasmoid.nativeInterface.weekNumber(d)
+                        return Plasmoid.nativeInterface.weekNumber(d)
                     }
 
                     return Qt.formatDate(d, format)
@@ -111,7 +111,7 @@ Item {
         MonthView {
             id: calendar
             today: dataSource.data["Local"]["DateTime"]
-            showWeekNumbers: plasmoid.configuration.showWeekNumbers
+            showWeekNumbers: Plasmoid.configuration.showWeekNumbers
 
             anchors.fill: parent
         }

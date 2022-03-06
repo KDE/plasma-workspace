@@ -80,7 +80,7 @@ Item {
     Plasmoid.status: PlasmaCore.Types.PassiveStatus
 
     Plasmoid.onContextualActionsAboutToShow: {
-        plasmoid.clearActions()
+        Plasmoid.clearActions()
 
         if (root.noPlayer) {
             return
@@ -88,44 +88,44 @@ Item {
 
         if (mpris2Source.currentData.CanRaise) {
             var icon = mpris2Source.currentData["Desktop Icon Name"] || ""
-            plasmoid.setAction("open", i18nc("Open player window or bring it to the front if already open", "Open"), icon)
+            Plasmoid.setAction("open", i18nc("Open player window or bring it to the front if already open", "Open"), icon)
         }
 
         if (canControl) {
-            plasmoid.setAction("previous", i18nc("Play previous track", "Previous Track"),
+            Plasmoid.setAction("previous", i18nc("Play previous track", "Previous Track"),
                                Qt.application.layoutDirection === Qt.RightToLeft ? "media-skip-forward" : "media-skip-backward");
-            plasmoid.action("previous").enabled = Qt.binding(function() {
+            Plasmoid.action("previous").enabled = Qt.binding(function() {
                 return root.canGoPrevious
             })
 
             // if CanPause, toggle the menu entry between Play & Pause, otherwise always use Play
             if (root.state == "playing" && root.canPause) {
-                plasmoid.setAction("pause", i18nc("Pause playback", "Pause"), "media-playback-pause")
-                plasmoid.action("pause").enabled = Qt.binding(function() {
+                Plasmoid.setAction("pause", i18nc("Pause playback", "Pause"), "media-playback-pause")
+                Plasmoid.action("pause").enabled = Qt.binding(function() {
                     return root.state === "playing" && root.canPause;
                 });
             } else {
-                plasmoid.setAction("play", i18nc("Start playback", "Play"), "media-playback-start")
-                plasmoid.action("play").enabled = Qt.binding(function() {
+                Plasmoid.setAction("play", i18nc("Start playback", "Play"), "media-playback-start")
+                Plasmoid.action("play").enabled = Qt.binding(function() {
                     return root.state !== "playing" && root.canPlay;
                 });
             }
 
-            plasmoid.setAction("next", i18nc("Play next track", "Next Track"),
+            Plasmoid.setAction("next", i18nc("Play next track", "Next Track"),
                                Qt.application.layoutDirection === Qt.RightToLeft ? "media-skip-backward" : "media-skip-forward")
-            plasmoid.action("next").enabled = Qt.binding(function() {
+            Plasmoid.action("next").enabled = Qt.binding(function() {
                 return root.canGoNext
             })
 
-            plasmoid.setAction("stop", i18nc("Stop playback", "Stop"), "media-playback-stop")
-            plasmoid.action("stop").enabled = Qt.binding(function() {
+            Plasmoid.setAction("stop", i18nc("Stop playback", "Stop"), "media-playback-stop")
+            Plasmoid.action("stop").enabled = Qt.binding(function() {
                 return root.state === "playing" || root.state === "paused";
             })
         }
 
         if (mpris2Source.currentData.CanQuit) {
-            plasmoid.setActionSeparator("quitseparator");
-            plasmoid.setAction("quit", i18nc("Quit player", "Quit"), "application-exit")
+            Plasmoid.setActionSeparator("quitseparator");
+            Plasmoid.setAction("quit", i18nc("Quit player", "Quit"), "application-exit")
         }
     }
 
@@ -133,7 +133,7 @@ Item {
     // this avoids having the plasmoid jump between popup and panel
     onStateChanged: {
         if (state != "") {
-            plasmoid.status = PlasmaCore.Types.ActiveStatus
+            Plasmoid.status = PlasmaCore.Types.ActiveStatus
         } else {
             updatePlasmoidStatusTimer.restart()
         }
@@ -144,9 +144,9 @@ Item {
         interval: 3000
         onTriggered: {
             if (state != "") {
-                plasmoid.status = PlasmaCore.Types.ActiveStatus
+                Plasmoid.status = PlasmaCore.Types.ActiveStatus
             } else {
-                plasmoid.status = PlasmaCore.Types.PassiveStatus
+                Plasmoid.status = PlasmaCore.Types.PassiveStatus
             }
         }
     }
@@ -191,7 +191,7 @@ Item {
                     root.action_next()
                     break
                 default:
-                    plasmoid.expanded = !plasmoid.expanded
+                    Plasmoid.expanded = !Plasmoid.expanded
                 }
             }
         }
