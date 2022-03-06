@@ -723,7 +723,7 @@ QUuid WaylandTasksModel::winIdFromMimeData(const QMimeData *mimeData, bool *ok)
     }
 
     if (!mimeData->hasFormat(Private::mimeType())) {
-        return 0;
+        return {};
     }
 
     QUuid id(mimeData->data(Private::mimeType()));
