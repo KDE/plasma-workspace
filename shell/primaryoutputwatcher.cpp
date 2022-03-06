@@ -108,7 +108,11 @@ void PrimaryOutputWatcher::setupRegistry()
     m_registry->setup();
 }
 
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 bool PrimaryOutputWatcher::nativeEventFilter(const QByteArray &eventType, void *message, long int *result)
+#else
+bool PrimaryOutputWatcher::nativeEventFilter(const QByteArray &eventType, void *message, qintptr *result)
+#endif
 {
     Q_UNUSED(result);
 #if HAVE_X11
