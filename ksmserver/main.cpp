@@ -35,7 +35,6 @@
 #include <X11/extensions/Xrender.h>
 
 static const char version[] = "0.4";
-static const char description[] = I18N_NOOP("The reliable Plasma session manager that talks the standard X11R6 \nsession management protocol (XSMP).");
 
 Display *dpy = nullptr;
 Colormap colormap = 0;
@@ -230,7 +229,7 @@ int main(int argc, char *argv[])
     a->setQuitOnLastWindowClosed(false); // #169486
 
     QCommandLineParser parser;
-    parser.setApplicationDescription(i18n(description));
+    parser.setApplicationDescription(i18n("The reliable Plasma session manager that talks the standard X11R6 \nsession management protocol (XSMP)."));
     parser.addHelpOption();
     parser.addVersionOption();
 
