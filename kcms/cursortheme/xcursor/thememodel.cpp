@@ -75,7 +75,7 @@ QVariant CursorThemeModel::headerData(int section, Qt::Orientation orientation, 
     }
 
     // Numbered vertical header labels
-    return QString(section);
+    return QString::number(section);
 }
 
 QVariant CursorThemeModel::data(const QModelIndex &index, int role) const
