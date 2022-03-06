@@ -33,7 +33,7 @@ void ActivityJob::start()
         if (name.isEmpty()) {
             name = i18n("unnamed");
         }
-        const QString activityId = m_activityController->addActivity(name);
+        const QString activityId = m_activityController->addActivity(name).result();
         setResult(activityId);
         return;
     }

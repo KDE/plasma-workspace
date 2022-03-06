@@ -119,7 +119,11 @@ void ClipboardJob::start()
                 watcher->deleteLater();
                 delete code;
             });
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
             auto future = QtConcurrent::run(code, &Prison::AbstractBarcode::toImage, QSizeF(pixelWidth, pixelHeight));
+#else
+            auto future = QtConcurrent::run(&Prison::AbstractBarcode::toImage, code, QSizeF(pixelWidth, pixelHeight));
+#endif
             watcher->setFuture(future);
             return;
         } else {

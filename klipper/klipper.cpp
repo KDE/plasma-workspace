@@ -349,7 +349,11 @@ void Klipper::loadSettings()
         m_saveFileTimer->setSingleShot(true);
         m_saveFileTimer->setInterval(5000);
         connect(m_saveFileTimer, &QTimer::timeout, this, [this] {
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
             QtConcurrent::run(this, &Klipper::saveHistory, false);
+#else
+            QtConcurrent::run(&Klipper::saveHistory, this, false);
+#endif
         });
         connect(m_history, &History::changed, m_saveFileTimer, static_cast<void (QTimer::*)()>(&QTimer::start));
     } else {
