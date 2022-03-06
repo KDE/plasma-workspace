@@ -738,7 +738,7 @@ sub process_blocks_txt ($)
     while (my $line = <$blocks>)
     {
         $line =~ /^([0-9A-F]+)\.\.([0-9A-F]+); (.+)$/ or next;
-        print $out qq/    { 0x$1, 0x$2, I18N_NOOP("$3") },\n/;
+        print $out qq/    { 0x$1, 0x$2, kli18n("$3") },\n/;
     }
     print $out "    { 0x0, 0x0, NULL }\n";
     print $out "};\n\n";
@@ -814,7 +814,7 @@ sub process_scripts_txt ($)
     for my $script (sort keys %scripts)
     {
         $scripts{$script} = $i;
-        print $out qq/    I18N_NOOP("$script"),\n/;
+        print $out qq/    kli18n("$script"),\n/;
         $i++;
     }
     print $out "    NULL\n";

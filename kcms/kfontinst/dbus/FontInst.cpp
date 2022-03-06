@@ -27,7 +27,7 @@ static void decompose(const QString &name, QString &family, QString &style)
     int commaPos = name.lastIndexOf(',');
 
     family = -1 == commaPos ? name : name.left(commaPos);
-    style = -1 == commaPos ? KFI_WEIGHT_REGULAR : name.mid(commaPos + 2);
+    style = -1 == commaPos ? KFI_WEIGHT_REGULAR.untranslatedText() : name.mid(commaPos + 2);
 }
 
 static bool isSystem = false;

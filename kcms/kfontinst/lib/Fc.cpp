@@ -185,12 +185,12 @@ int spacing(int s)
 
 int strToWeight(const QString &str, QString &newStr)
 {
-    if (0 == str.indexOf(i18n(KFI_WEIGHT_THIN), 0, Qt::CaseInsensitive)) {
-        newStr = str.mid(i18n(KFI_WEIGHT_THIN).length());
+    if (0 == str.indexOf(KFI_WEIGHT_THIN.toString(), 0, Qt::CaseInsensitive)) {
+        newStr = str.mid(KFI_WEIGHT_THIN.toString().length());
         return FC_WEIGHT_THIN;
     }
-    if (0 == str.indexOf(i18n(KFI_WEIGHT_EXTRALIGHT), 0, Qt::CaseInsensitive)) {
-        newStr = str.mid(i18n(KFI_WEIGHT_EXTRALIGHT).length());
+    if (0 == str.indexOf(KFI_WEIGHT_EXTRALIGHT.toString(), 0, Qt::CaseInsensitive)) {
+        newStr = str.mid(KFI_WEIGHT_EXTRALIGHT.toString().length());
         return FC_WEIGHT_EXTRALIGHT;
     }
     // if(0==str.indexOf(i18n(KFI_WEIGHT_ULTRALIGHT), 0, Qt::CaseInsensitive))
@@ -198,12 +198,12 @@ int strToWeight(const QString &str, QString &newStr)
     //    newStr=str.mid(i18n(KFI_WEIGHT_ULTRALIGHT).length());
     //    return FC_WEIGHT_ULTRALIGHT;
     //}
-    if (0 == str.indexOf(i18n(KFI_WEIGHT_LIGHT), 0, Qt::CaseInsensitive)) {
-        newStr = str.mid(i18n(KFI_WEIGHT_LIGHT).length());
+    if (0 == str.indexOf(KFI_WEIGHT_LIGHT.toString(), 0, Qt::CaseInsensitive)) {
+        newStr = str.mid(KFI_WEIGHT_LIGHT.toString().length());
         return FC_WEIGHT_LIGHT;
     }
-    if (0 == str.indexOf(i18n(KFI_WEIGHT_REGULAR), 0, Qt::CaseInsensitive)) {
-        newStr = str.mid(i18n(KFI_WEIGHT_REGULAR).length());
+    if (0 == str.indexOf(KFI_WEIGHT_REGULAR.toString(), 0, Qt::CaseInsensitive)) {
+        newStr = str.mid(KFI_WEIGHT_REGULAR.toString().length());
         return FC_WEIGHT_REGULAR;
     }
     // if(0==str.indexOf(i18n(KFI_WEIGHT_NORMAL), 0, Qt::CaseInsensitive))
@@ -211,12 +211,12 @@ int strToWeight(const QString &str, QString &newStr)
     //    newStr=str.mid(i18n(KFI_WEIGHT_NORMAL).length());
     //    return FC_WEIGHT_NORMAL;
     //}
-    if (0 == str.indexOf(i18n(KFI_WEIGHT_MEDIUM), 0, Qt::CaseInsensitive)) {
-        newStr = str.mid(i18n(KFI_WEIGHT_MEDIUM).length());
+    if (0 == str.indexOf(KFI_WEIGHT_MEDIUM.toString(), 0, Qt::CaseInsensitive)) {
+        newStr = str.mid(KFI_WEIGHT_MEDIUM.toString().length());
         return FC_WEIGHT_MEDIUM;
     }
-    if (0 == str.indexOf(i18n(KFI_WEIGHT_DEMIBOLD), 0, Qt::CaseInsensitive)) {
-        newStr = str.mid(i18n(KFI_WEIGHT_DEMIBOLD).length());
+    if (0 == str.indexOf(KFI_WEIGHT_DEMIBOLD.toString(), 0, Qt::CaseInsensitive)) {
+        newStr = str.mid(KFI_WEIGHT_DEMIBOLD.toString().length());
         return FC_WEIGHT_DEMIBOLD;
     }
     // if(0==str.indexOf(i18n(KFI_WEIGHT_SEMIBOLD), 0, Qt::CaseInsensitive))
@@ -224,12 +224,12 @@ int strToWeight(const QString &str, QString &newStr)
     //    newStr=str.mid(i18n(KFI_WEIGHT_SEMIBOLD).length());
     //    return FC_WEIGHT_SEMIBOLD;
     //}
-    if (0 == str.indexOf(i18n(KFI_WEIGHT_BOLD), 0, Qt::CaseInsensitive)) {
-        newStr = str.mid(i18n(KFI_WEIGHT_BOLD).length());
+    if (0 == str.indexOf(KFI_WEIGHT_BOLD.toString(), 0, Qt::CaseInsensitive)) {
+        newStr = str.mid(KFI_WEIGHT_BOLD.toString().length());
         return FC_WEIGHT_BOLD;
     }
-    if (0 == str.indexOf(i18n(KFI_WEIGHT_EXTRABOLD), 0, Qt::CaseInsensitive)) {
-        newStr = str.mid(i18n(KFI_WEIGHT_EXTRABOLD).length());
+    if (0 == str.indexOf(KFI_WEIGHT_EXTRABOLD.toString(), 0, Qt::CaseInsensitive)) {
+        newStr = str.mid(KFI_WEIGHT_EXTRABOLD.toString().length());
         return FC_WEIGHT_EXTRABOLD;
     }
     // if(0==str.indexOf(i18n(KFI_WEIGHT_ULTRABOLD), 0, Qt::CaseInsensitive))
@@ -237,12 +237,12 @@ int strToWeight(const QString &str, QString &newStr)
     //    newStr=str.mid(i18n(KFI_WEIGHT_ULTRABOLD).length());
     //    return FC_WEIGHT_ULTRABOLD;
     //}
-    if (0 == str.indexOf(i18n(KFI_WEIGHT_BLACK), 0, Qt::CaseInsensitive)) {
-        newStr = str.mid(i18n(KFI_WEIGHT_BLACK).length());
+    if (0 == str.indexOf(KFI_WEIGHT_BLACK.toString(), 0, Qt::CaseInsensitive)) {
+        newStr = str.mid(KFI_WEIGHT_BLACK.toString().length());
         return FC_WEIGHT_BLACK;
     }
-    if (0 == str.indexOf(i18n(KFI_WEIGHT_BLACK), 0, Qt::CaseInsensitive)) {
-        newStr = str.mid(i18n(KFI_WEIGHT_BLACK).length());
+    if (0 == str.indexOf(KFI_WEIGHT_BLACK.toString(), 0, Qt::CaseInsensitive)) {
+        newStr = str.mid(KFI_WEIGHT_BLACK.toString().length());
         return FC_WEIGHT_BLACK;
     }
 
@@ -252,40 +252,40 @@ int strToWeight(const QString &str, QString &newStr)
 
 int strToWidth(const QString &str, QString &newStr)
 {
-    if (0 == str.indexOf(i18n(KFI_WIDTH_ULTRACONDENSED), 0, Qt::CaseInsensitive)) {
-        newStr = str.mid(i18n(KFI_WIDTH_ULTRACONDENSED).length());
+    if (0 == str.indexOf(KFI_WIDTH_ULTRACONDENSED.toString(), 0, Qt::CaseInsensitive)) {
+        newStr = str.mid(KFI_WIDTH_ULTRACONDENSED.toString().length());
         return KFI_FC_WIDTH_ULTRACONDENSED;
     }
-    if (0 == str.indexOf(i18n(KFI_WIDTH_EXTRACONDENSED), 0, Qt::CaseInsensitive)) {
-        newStr = str.mid(i18n(KFI_WIDTH_EXTRACONDENSED).length());
+    if (0 == str.indexOf(KFI_WIDTH_EXTRACONDENSED.toString(), 0, Qt::CaseInsensitive)) {
+        newStr = str.mid(KFI_WIDTH_EXTRACONDENSED.toString().length());
         return KFI_FC_WIDTH_EXTRACONDENSED;
     }
-    if (0 == str.indexOf(i18n(KFI_WIDTH_CONDENSED), 0, Qt::CaseInsensitive)) {
-        newStr = str.mid(i18n(KFI_WIDTH_CONDENSED).length());
+    if (0 == str.indexOf(KFI_WIDTH_CONDENSED.toString(), 0, Qt::CaseInsensitive)) {
+        newStr = str.mid(KFI_WIDTH_CONDENSED.toString().length());
         return KFI_FC_WIDTH_CONDENSED;
     }
-    if (0 == str.indexOf(i18n(KFI_WIDTH_SEMICONDENSED), 0, Qt::CaseInsensitive)) {
-        newStr = str.mid(i18n(KFI_WIDTH_SEMICONDENSED).length());
+    if (0 == str.indexOf(KFI_WIDTH_SEMICONDENSED.toString(), 0, Qt::CaseInsensitive)) {
+        newStr = str.mid(KFI_WIDTH_SEMICONDENSED.toString().length());
         return KFI_FC_WIDTH_SEMICONDENSED;
     }
-    if (0 == str.indexOf(i18n(KFI_WIDTH_NORMAL), 0, Qt::CaseInsensitive)) {
-        newStr = str.mid(i18n(KFI_WIDTH_NORMAL).length());
+    if (0 == str.indexOf(KFI_WIDTH_NORMAL.toString(), 0, Qt::CaseInsensitive)) {
+        newStr = str.mid(KFI_WIDTH_NORMAL.toString().length());
         return KFI_FC_WIDTH_NORMAL;
     }
-    if (0 == str.indexOf(i18n(KFI_WIDTH_SEMIEXPANDED), 0, Qt::CaseInsensitive)) {
-        newStr = str.mid(i18n(KFI_WIDTH_SEMIEXPANDED).length());
+    if (0 == str.indexOf(KFI_WIDTH_SEMIEXPANDED.toString(), 0, Qt::CaseInsensitive)) {
+        newStr = str.mid(KFI_WIDTH_SEMIEXPANDED.toString().length());
         return KFI_FC_WIDTH_SEMIEXPANDED;
     }
-    if (0 == str.indexOf(i18n(KFI_WIDTH_EXPANDED), 0, Qt::CaseInsensitive)) {
-        newStr = str.mid(i18n(KFI_WIDTH_EXPANDED).length());
+    if (0 == str.indexOf(KFI_WIDTH_EXPANDED.toString(), 0, Qt::CaseInsensitive)) {
+        newStr = str.mid(KFI_WIDTH_EXPANDED.toString().length());
         return KFI_FC_WIDTH_EXPANDED;
     }
-    if (0 == str.indexOf(i18n(KFI_WIDTH_EXTRAEXPANDED), 0, Qt::CaseInsensitive)) {
-        newStr = str.mid(i18n(KFI_WIDTH_EXTRAEXPANDED).length());
+    if (0 == str.indexOf(KFI_WIDTH_EXTRAEXPANDED.toString(), 0, Qt::CaseInsensitive)) {
+        newStr = str.mid(KFI_WIDTH_EXTRAEXPANDED.toString().length());
         return KFI_FC_WIDTH_EXTRAEXPANDED;
     }
-    if (0 == str.indexOf(i18n(KFI_WIDTH_ULTRAEXPANDED), 0, Qt::CaseInsensitive)) {
-        newStr = str.mid(i18n(KFI_WIDTH_ULTRAEXPANDED).length());
+    if (0 == str.indexOf(KFI_WIDTH_ULTRAEXPANDED.toString(), 0, Qt::CaseInsensitive)) {
+        newStr = str.mid(KFI_WIDTH_ULTRAEXPANDED.toString().length());
         return KFI_FC_WIDTH_ULTRAEXPANDED;
     }
 
@@ -295,10 +295,10 @@ int strToWidth(const QString &str, QString &newStr)
 
 int strToSlant(const QString &str)
 {
-    if (-1 != str.indexOf(i18n(KFI_SLANT_ITALIC))) {
+    if (-1 != str.indexOf(KFI_SLANT_ITALIC.toString())) {
         return FC_SLANT_ITALIC;
     }
-    if (-1 != str.indexOf(i18n(KFI_SLANT_OBLIQUE))) {
+    if (-1 != str.indexOf(KFI_SLANT_OBLIQUE.toString())) {
         return FC_SLANT_OBLIQUE;
     }
     return FC_SLANT_ROMAN;
@@ -520,25 +520,25 @@ QString weightStr(int w, bool emptyNormal)
 {
     switch (weight(w)) {
     case FC_WEIGHT_THIN:
-        return i18n(KFI_WEIGHT_THIN);
+        return KFI_WEIGHT_THIN.toString();
     case FC_WEIGHT_EXTRALIGHT:
-        return i18n(KFI_WEIGHT_EXTRALIGHT);
+        return KFI_WEIGHT_EXTRALIGHT.toString();
     case FC_WEIGHT_LIGHT:
-        return i18n(KFI_WEIGHT_LIGHT);
+        return KFI_WEIGHT_LIGHT.toString();
     case FC_WEIGHT_MEDIUM:
 #ifdef KFI_DISPLAY_MEDIUM
-        return i18n(KFI_WEIGHT_MEDIUM);
+        return KFI_WEIGHT_MEDIUM.toString();
 #endif
     case FC_WEIGHT_REGULAR:
-        return emptyNormal ? QString() : i18n(KFI_WEIGHT_REGULAR);
+        return emptyNormal ? QString() : KFI_WEIGHT_REGULAR.toString();
     case FC_WEIGHT_DEMIBOLD:
-        return i18n(KFI_WEIGHT_DEMIBOLD);
+        return KFI_WEIGHT_DEMIBOLD.toString();
     case FC_WEIGHT_BOLD:
-        return i18n(KFI_WEIGHT_BOLD);
+        return KFI_WEIGHT_BOLD.toString();
     case FC_WEIGHT_EXTRABOLD:
-        return i18n(KFI_WEIGHT_EXTRABOLD);
+        return KFI_WEIGHT_EXTRABOLD.toString();
     default:
-        return i18n(KFI_WEIGHT_BLACK);
+        return KFI_WEIGHT_BLACK.toString();
     }
 }
 
@@ -546,23 +546,23 @@ QString widthStr(int w, bool emptyNormal)
 {
     switch (width(w)) {
     case KFI_FC_WIDTH_ULTRACONDENSED:
-        return i18n(KFI_WIDTH_ULTRACONDENSED);
+        return KFI_WIDTH_ULTRACONDENSED.toString();
     case KFI_FC_WIDTH_EXTRACONDENSED:
-        return i18n(KFI_WIDTH_EXTRACONDENSED);
+        return KFI_WIDTH_EXTRACONDENSED.toString();
     case KFI_FC_WIDTH_CONDENSED:
-        return i18n(KFI_WIDTH_CONDENSED);
+        return KFI_WIDTH_CONDENSED.toString();
     case KFI_FC_WIDTH_SEMICONDENSED:
-        return i18n(KFI_WIDTH_SEMICONDENSED);
+        return KFI_WIDTH_SEMICONDENSED.toString();
     case KFI_FC_WIDTH_NORMAL:
-        return emptyNormal ? QString() : i18n(KFI_WIDTH_NORMAL);
+        return emptyNormal ? QString() : KFI_WIDTH_NORMAL.toString();
     case KFI_FC_WIDTH_SEMIEXPANDED:
-        return i18n(KFI_WIDTH_SEMIEXPANDED);
+        return KFI_WIDTH_SEMIEXPANDED.toString();
     case KFI_FC_WIDTH_EXPANDED:
-        return i18n(KFI_WIDTH_EXPANDED);
+        return KFI_WIDTH_EXPANDED.toString();
     case KFI_FC_WIDTH_EXTRAEXPANDED:
-        return i18n(KFI_WIDTH_EXTRAEXPANDED);
+        return KFI_WIDTH_EXTRAEXPANDED.toString();
     default:
-        return i18n(KFI_WIDTH_ULTRAEXPANDED);
+        return KFI_WIDTH_ULTRAEXPANDED.toString();
     }
 }
 
@@ -571,12 +571,12 @@ QString slantStr(int s, bool emptyNormal)
     switch (slant(s)) {
     case FC_SLANT_OBLIQUE:
 #ifdef KFI_DISPLAY_OBLIQUE
-        return i18n(KFI_SLANT_OBLIQUE);
+        return KFI_SLANT_OBLIQUE.toString();
 #endif
     case FC_SLANT_ITALIC:
-        return i18n(KFI_SLANT_ITALIC);
+        return KFI_SLANT_ITALIC.toString();
     default:
-        return emptyNormal ? QString() : i18n(KFI_SLANT_ROMAN);
+        return emptyNormal ? QString() : KFI_SLANT_ROMAN.toString();
     }
 }
 
@@ -584,11 +584,11 @@ QString spacingStr(int s)
 {
     switch (spacing(s)) {
     case FC_MONO:
-        return i18n(KFI_SPACING_MONO);
+        return KFI_SPACING_MONO.toString();
     case FC_CHARCELL:
-        return i18n(KFI_SPACING_CHARCELL);
+        return KFI_SPACING_CHARCELL.toString();
     default:
-        return i18n(KFI_SPACING_PROPORTIONAL);
+        return KFI_SPACING_PROPORTIONAL.toString();
     }
 }
 

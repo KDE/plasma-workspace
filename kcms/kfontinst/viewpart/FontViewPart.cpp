@@ -214,9 +214,9 @@ void CFontViewPart::timeout()
             QStringList pathList(url().adjusted(QUrl::StripTrailingSlash).path().split(QLatin1Char('/'), Qt::SkipEmptyParts));
 
             if (pathList.count() == 1) {
-                found = statUrl(QUrl(QString("fonts:/" + i18n(KFI_KIO_FONTS_SYS) + QLatin1Char('/') + pathList[0])), &udsEntry);
+                found = statUrl(QUrl(QString("fonts:/" + KFI_KIO_FONTS_SYS.toString() + QLatin1Char('/') + pathList[0])), &udsEntry);
                 if (!found) {
-                    found = statUrl(QUrl(QString("fonts:/" + i18n(KFI_KIO_FONTS_USER) + QLatin1Char('/') + pathList[0])), &udsEntry);
+                    found = statUrl(QUrl(QString("fonts:/" + KFI_KIO_FONTS_USER.toString() + QLatin1Char('/') + pathList[0])), &udsEntry);
                 }
             }
         }

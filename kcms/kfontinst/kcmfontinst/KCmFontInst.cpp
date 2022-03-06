@@ -387,8 +387,8 @@ QString CKCmFontInst::quickHelp() const
                             " font, simply copy it into the appropriate folder - "
                             " \"%1\" for fonts available to just yourself, or "
                             " \"%2\" for system-wide fonts (available to all).</p>",
-                            i18n(KFI_KIO_FONTS_USER),
-                            i18n(KFI_KIO_FONTS_SYS));
+                            KFI_KIO_FONTS_USER.toString(),
+                            KFI_KIO_FONTS_SYS.toString());
 }
 
 void CKCmFontInst::previewMenu(const QPoint &pos)
@@ -664,8 +664,8 @@ void CKCmFontInst::moveFonts()
                                                       i18n("<p>Do you really want to "
                                                            "move</p><p>\'<b>%1</b>\'</p><p>from <i>%2</i> to <i>%3</i>?</p>",
                                                            fontNames.first(),
-                                                           m_groupListView->isSystem() ? i18n(KFI_KIO_FONTS_SYS) : i18n(KFI_KIO_FONTS_USER),
-                                                           m_groupListView->isSystem() ? i18n(KFI_KIO_FONTS_USER) : i18n(KFI_KIO_FONTS_SYS)),
+                                                           m_groupListView->isSystem() ? KFI_KIO_FONTS_SYS.toString() : KFI_KIO_FONTS_USER.toString(),
+                                                           m_groupListView->isSystem() ? KFI_KIO_FONTS_USER.toString() : KFI_KIO_FONTS_SYS.toString()),
                                                       i18n("Move Font"),
                                                       KGuiItem(i18n("Move")));
             break;
@@ -675,8 +675,8 @@ void CKCmFontInst::moveFonts()
                                                           i18np("<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>",
                                                                 "<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?</p>",
                                                                 fontNames.count(),
-                                                                m_groupListView->isSystem() ? i18n(KFI_KIO_FONTS_SYS) : i18n(KFI_KIO_FONTS_USER),
-                                                                m_groupListView->isSystem() ? i18n(KFI_KIO_FONTS_USER) : i18n(KFI_KIO_FONTS_SYS)),
+                                                                m_groupListView->isSystem() ? KFI_KIO_FONTS_SYS.toString() : KFI_KIO_FONTS_USER.toString(),
+                                                                m_groupListView->isSystem() ? KFI_KIO_FONTS_USER.toString() : KFI_KIO_FONTS_SYS.toString()),
                                                           fontNames,
                                                           i18n("Move Fonts"),
                                                           KGuiItem(i18n("Move")));
@@ -957,8 +957,8 @@ void CKCmFontInst::addFonts(const QSet<QUrl> &src)
                                                               "(only available to you), or "
                                                               "system-wide (available to all users)?"),
                                                          i18n("Where to Install"),
-                                                         KGuiItem(i18n(KFI_KIO_FONTS_USER)),
-                                                         KGuiItem(i18n(KFI_KIO_FONTS_SYS)))) {
+                                                         KGuiItem(KFI_KIO_FONTS_USER.toString()),
+                                                         KGuiItem(KFI_KIO_FONTS_SYS.toString()))) {
                 case KMessageBox::Yes:
                     system = false;
                     break;

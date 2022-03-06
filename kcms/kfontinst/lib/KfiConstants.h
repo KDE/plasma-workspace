@@ -5,6 +5,7 @@
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
 
+#include <KLazyLocalizedString>
 #include <KLocalizedString>
 #include <QLatin1String>
 #include <kio/udsentry.h>
@@ -18,9 +19,9 @@
 
 #define KFI_PRINT_GROUP "Print"
 #define KFI_KIO_FONTS_PROTOCOL "fonts"
-#define KFI_KIO_FONTS_USER I18N_NOOP("Personal")
-#define KFI_KIO_FONTS_SYS I18N_NOOP("System")
-#define KFI_KIO_FONTS_ALL I18N_NOOP("All")
+constexpr const auto KFI_KIO_FONTS_USER = kli18n("Personal");
+constexpr const auto KFI_KIO_FONTS_SYS = kli18n("System");
+constexpr const auto KFI_KIO_FONTS_ALL = kli18n("All");
 #define KFI_KIO_NO_CLEAR "noclear"
 #define KFI_KIO_TIMEOUT "timeout"
 #define KFI_KIO_FACE "face"
@@ -34,7 +35,7 @@
 
 #define KFI_SYS_USER "root"
 
-#define KFI_AUTHINF_USER I18N_NOOP("Administrator")
+constexpr const auto KFI_AUTHINF_USER = kli18n("Administrator");
 #define KFI_UI_CFG_FILE KFI_NAME "uirc"
 #define KFI_ROOT_CFG_DIR "/etc/fonts/"
 #define KFI_DEFAULT_SYS_FONTS_FOLDER "/usr/local/share/fonts/"
@@ -70,37 +71,37 @@ enum EUdsExtraEntries {
 }
 
 // Font name...
-#define KFI_WEIGHT_THIN I18N_NOOP("Thin")
-#define KFI_WEIGHT_EXTRALIGHT I18N_NOOP("Extra Light")
-#define KFI_WEIGHT_ULTRALIGHT I18N_NOOP("Ultra Light")
-#define KFI_WEIGHT_LIGHT I18N_NOOP("Light")
-#define KFI_WEIGHT_REGULAR I18N_NOOP("Regular")
-#define KFI_WEIGHT_NORMAL I18N_NOOP("Normal")
-#define KFI_WEIGHT_MEDIUM I18N_NOOP("Medium")
-#define KFI_WEIGHT_DEMIBOLD I18N_NOOP("Demi Bold")
-#define KFI_WEIGHT_SEMIBOLD I18N_NOOP("Semi Bold")
-#define KFI_WEIGHT_BOLD I18N_NOOP("Bold")
-#define KFI_WEIGHT_EXTRABOLD I18N_NOOP("Extra Bold")
-#define KFI_WEIGHT_ULTRABOLD I18N_NOOP("Ultra Bold")
-#define KFI_WEIGHT_BLACK I18N_NOOP("Black")
-#define KFI_WEIGHT_HEAVY I18N_NOOP("Heavy")
+constexpr const auto KFI_WEIGHT_THIN = kli18n("Thin");
+constexpr const auto KFI_WEIGHT_EXTRALIGHT = kli18n("Extra Light");
+constexpr const auto KFI_WEIGHT_ULTRALIGHT = kli18n("Ultra Light");
+constexpr const auto KFI_WEIGHT_LIGHT = kli18n("Light");
+constexpr const auto KFI_WEIGHT_REGULAR = kli18n("Regular");
+constexpr const auto KFI_WEIGHT_NORMAL = kli18n("Normal");
+constexpr const auto KFI_WEIGHT_MEDIUM = kli18n("Medium");
+constexpr const auto KFI_WEIGHT_DEMIBOLD = kli18n("Demi Bold");
+constexpr const auto KFI_WEIGHT_SEMIBOLD = kli18n("Semi Bold");
+constexpr const auto KFI_WEIGHT_BOLD = kli18n("Bold");
+constexpr const auto KFI_WEIGHT_EXTRABOLD = kli18n("Extra Bold");
+constexpr const auto KFI_WEIGHT_ULTRABOLD = kli18n("Ultra Bold");
+constexpr const auto KFI_WEIGHT_BLACK = kli18n("Black");
+constexpr const auto KFI_WEIGHT_HEAVY = kli18n("Heavy");
 
-#define KFI_SLANT_ROMAN I18N_NOOP("Roman")
-#define KFI_SLANT_ITALIC I18N_NOOP("Italic")
-#define KFI_SLANT_OBLIQUE I18N_NOOP("Oblique")
+constexpr const auto KFI_SLANT_ROMAN = kli18n("Roman");
+constexpr const auto KFI_SLANT_ITALIC = kli18n("Italic");
+constexpr const auto KFI_SLANT_OBLIQUE = kli18n("Oblique");
 
-#define KFI_WIDTH_ULTRACONDENSED I18N_NOOP("Ultra Condensed")
-#define KFI_WIDTH_EXTRACONDENSED I18N_NOOP("Extra Condensed")
-#define KFI_WIDTH_CONDENSED I18N_NOOP("Condensed")
-#define KFI_WIDTH_SEMICONDENSED I18N_NOOP("Semi Condensed")
-#define KFI_WIDTH_NORMAL I18N_NOOP("Normal")
-#define KFI_WIDTH_SEMIEXPANDED I18N_NOOP("Semi Expanded")
-#define KFI_WIDTH_EXPANDED I18N_NOOP("Expanded")
-#define KFI_WIDTH_EXTRAEXPANDED I18N_NOOP("Extra Expanded")
-#define KFI_WIDTH_ULTRAEXPANDED I18N_NOOP("Ultra Expanded")
+constexpr const auto KFI_WIDTH_ULTRACONDENSED = kli18n("Ultra Condensed");
+constexpr const auto KFI_WIDTH_EXTRACONDENSED = kli18n("Extra Condensed");
+constexpr const auto KFI_WIDTH_CONDENSED = kli18n("Condensed");
+constexpr const auto KFI_WIDTH_SEMICONDENSED = kli18n("Semi Condensed");
+constexpr const auto KFI_WIDTH_NORMAL = kli18n("Normal");
+constexpr const auto KFI_WIDTH_SEMIEXPANDED = kli18n("Semi Expanded");
+constexpr const auto KFI_WIDTH_EXPANDED = kli18n("Expanded");
+constexpr const auto KFI_WIDTH_EXTRAEXPANDED = kli18n("Extra Expanded");
+constexpr const auto KFI_WIDTH_ULTRAEXPANDED = kli18n("Ultra Expanded");
 
-#define KFI_SPACING_MONO I18N_NOOP("Monospaced")
-#define KFI_SPACING_CHARCELL I18N_NOOP("Charcell")
-#define KFI_SPACING_PROPORTIONAL I18N_NOOP("Proportional")
+constexpr const auto KFI_SPACING_MONO = kli18n("Monospaced");
+constexpr const auto KFI_SPACING_CHARCELL = kli18n("Charcell");
+constexpr const auto KFI_SPACING_PROPORTIONAL = kli18n("Proportional");
 
-#define KFI_UNKNOWN_FOUNDRY I18N_NOOP("Unknown")
+constexpr const auto KFI_UNKNOWN_FOUNDRY = kli18n("Unknown");

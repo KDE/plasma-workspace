@@ -36,17 +36,17 @@ void CPreviewSelectAction::setMode(Mode mode)
     case Basic:
         break;
     case BlocksAndScripts:
-        for (m_numUnicodeBlocks = 0; constUnicodeBlocks[m_numUnicodeBlocks].blockName; ++m_numUnicodeBlocks) {
-            items.append(i18n("Unicode Block: %1", i18n(constUnicodeBlocks[m_numUnicodeBlocks].blockName)));
+        for (m_numUnicodeBlocks = 0; !constUnicodeBlocks[m_numUnicodeBlocks].blockName.isEmpty(); ++m_numUnicodeBlocks) {
+            items.append(i18n("Unicode Block: %1", constUnicodeBlocks[m_numUnicodeBlocks].blockName.toString()));
         }
 
-        for (int i = 0; constUnicodeScriptList[i]; ++i) {
-            items.append(i18n("Unicode Script: %1", i18n(constUnicodeScriptList[i])));
+        for (int i = 0; !constUnicodeScriptList[i].isEmpty(); ++i) {
+            items.append(i18n("Unicode Script: %1", constUnicodeScriptList[i].toString()));
         }
         break;
     case ScriptsOnly:
-        for (int i = 0; constUnicodeScriptList[i]; ++i) {
-            items.append(i18n(constUnicodeScriptList[i]));
+        for (int i = 0; !constUnicodeScriptList[i].isEmpty(); ++i) {
+            items.append(constUnicodeScriptList[i].toString());
         }
     }
 

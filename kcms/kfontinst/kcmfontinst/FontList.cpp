@@ -50,7 +50,7 @@ static void decompose(const QString &name, QString &family, QString &style)
     int commaPos = name.lastIndexOf(',');
 
     family = -1 == commaPos ? name : name.left(commaPos);
-    style = -1 == commaPos ? KFI_WEIGHT_REGULAR : name.mid(commaPos + 2);
+    style = -1 == commaPos ? KFI_WEIGHT_REGULAR.untranslatedText() : name.mid(commaPos + 2);
 }
 
 static void addFont(CFontItem *font,
@@ -184,7 +184,7 @@ QString capitaliseFoundry(const QString &foundry)
 
 inline bool isSysFolder(const QString &sect)
 {
-    return i18n(KFI_KIO_FONTS_SYS) == sect || KFI_KIO_FONTS_SYS == sect;
+    return KFI_KIO_FONTS_SYS.toString() == sect || KFI_KIO_FONTS_SYS.untranslatedText() == sect;
 }
 
 CFontItem::CFontItem(CFontModelItem *p, const Style &s, bool sys)

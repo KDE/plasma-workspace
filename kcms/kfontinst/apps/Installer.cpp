@@ -36,8 +36,8 @@ int CInstaller::install(const QSet<QUrl> &urls)
                                                       "(only available to you), or "
                                                       "system-wide (available to all users)?"),
                                                  i18n("Where to Install"),
-                                                 KGuiItem(i18n(KFI_KIO_FONTS_USER)),
-                                                 KGuiItem(i18n(KFI_KIO_FONTS_SYS)))) {
+                                                 KGuiItem(KFI_KIO_FONTS_USER.toString()),
+                                                 KGuiItem(KFI_KIO_FONTS_SYS.toString()))) {
         case KMessageBox::No:
             sysInstall = true;
             break;

@@ -62,12 +62,12 @@ namespace KFI
 {
 inline bool isSysFolder(const QString &folder)
 {
-    return i18n(KFI_KIO_FONTS_SYS) == folder || KFI_KIO_FONTS_SYS == folder;
+    return KFI_KIO_FONTS_SYS.toString() == folder || KFI_KIO_FONTS_SYS.untranslatedText() == folder;
 }
 
 inline bool isUserFolder(const QString &folder)
 {
-    return i18n(KFI_KIO_FONTS_USER) == folder || KFI_KIO_FONTS_USER == folder;
+    return KFI_KIO_FONTS_USER.toString() == folder || KFI_KIO_FONTS_USER.untranslatedText() == folder;
 }
 
 static CKioFonts::EFolder getFolder(const QStringList &list)
@@ -204,7 +204,7 @@ void CKioFonts::put(const QUrl &url, int /*permissions*/, KIO::JobFlags /*flags*
     EFolder folder(getFolder(pathList));
 
     if (!Misc::root() && FOLDER_ROOT == folder) {
-        error(KIO::ERR_SLAVE_DEFINED, i18n("Can only install fonts to either \"%1\" or \"%2\".", i18n(KFI_KIO_FONTS_USER), i18n(KFI_KIO_FONTS_SYS)));
+        error(KIO::ERR_SLAVE_DEFINED, i18n("Can only install fonts to either \"%1\" or \"%2\".", KFI_KIO_FONTS_USER.toString(), KFI_KIO_FONTS_SYS.toString()));
     } else if (Misc::isPackage(url.fileName())) {
         error(KIO::ERR_SLAVE_DEFINED,
               i18n("You cannot install a fonts package directly.\n"
@@ -453,7 +453,7 @@ void CKioFonts::del(const QUrl &url, bool isFile)
     if (!isFile) {
         error(KIO::ERR_SLAVE_DEFINED, i18n("Only fonts may be deleted."));
     } else if (!Misc::root() && FOLDER_ROOT == folder) {
-        error(KIO::ERR_SLAVE_DEFINED, i18n("Can only remove fonts from either \"%1\" or \"%2\".", i18n(KFI_KIO_FONTS_USER), i18n(KFI_KIO_FONTS_SYS)));
+        error(KIO::ERR_SLAVE_DEFINED, i18n("Can only remove fonts from either \"%1\" or \"%2\".", KFI_KIO_FONTS_USER.toString(), KFI_KIO_FONTS_SYS.toString()));
     } else if (!name.isEmpty()) {
         handleResp(m_interface->uninstall(name, Misc::root() || FOLDER_SYS == folder), name);
     } else {
@@ -480,7 +480,7 @@ void CKioFonts::stat(const QUrl &url)
         } else if (FOLDER_SYS == folder || FOLDER_USER == folder) {
             createUDSEntry(entry, folder);
         } else {
-            error(KIO::ERR_SLAVE_DEFINED, i18n("Please specify \"%1\" or \"%2\".", i18n(KFI_KIO_FONTS_USER), i18n(KFI_KIO_FONTS_SYS)));
+            error(KIO::ERR_SLAVE_DEFINED, i18n("Please specify \"%1\" or \"%2\".", KFI_KIO_FONTS_USER.toString(), KFI_KIO_FONTS_SYS.toString()));
             return;
         }
         break;
@@ -571,12 +571,12 @@ bool CKioFonts::createStatEntry(KIO::UDSEntry &entry, const QUrl &url, EFolder f
 
 void CKioFonts::createUDSEntry(KIO::UDSEntry &entry, EFolder folder)
 {
-    qCDebug(KCM_KFONTINST_KIO) << QString(FOLDER_SYS == folder ? i18n(KFI_KIO_FONTS_SYS) : i18n(KFI_KIO_FONTS_USER));
+    qCDebug(KCM_KFONTINST_KIO) << QString(FOLDER_SYS == folder ? KFI_KIO_FONTS_SYS.toString() : KFI_KIO_FONTS_USER.toString());
     entry.clear();
     entry.fastInsert(KIO::UDSEntry::UDS_NAME,
                      FOLDER_ROOT == folder || Misc::root() ? i18n("Fonts")
-                         : FOLDER_SYS == folder            ? i18n(KFI_KIO_FONTS_SYS)
-                                                           : i18n(KFI_KIO_FONTS_USER));
+                         : FOLDER_SYS == folder            ? KFI_KIO_FONTS_SYS.toString()
+                                                           : KFI_KIO_FONTS_USER.toString());
     entry.fastInsert(KIO::UDSEntry::UDS_ACCESS, !Misc::root() && FOLDER_SYS == folder ? 0444 : 0744);
     entry.fastInsert(KIO::UDSEntry::UDS_USER, Misc::root() || FOLDER_SYS == folder ? QString::fromLatin1("root") : getUserName(getuid()));
     entry.fastInsert(KIO::UDSEntry::UDS_GROUP, Misc::root() || FOLDER_SYS == folder ? QString::fromLatin1("root") : getGroupName(getgid()));
