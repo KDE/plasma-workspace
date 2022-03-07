@@ -137,6 +137,7 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mo
 
     m_history = new History(this);
     m_popup = new KlipperPopup(m_history);
+    m_popup->setWindowFlags(m_popup->windowFlags() | Qt::FramelessWindowHint);
     m_popup->setShowHelp(m_mode == KlipperMode::Standalone);
     connect(m_history, &History::changed, this, &Klipper::slotHistoryChanged);
     connect(m_history, &History::changed, m_popup, &KlipperPopup::slotHistoryChanged);
