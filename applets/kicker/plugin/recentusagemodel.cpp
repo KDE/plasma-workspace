@@ -304,12 +304,12 @@ QVariant RecentUsageModel::docData(const QString &resource, int role) const
                 // if the current item is a place
                 return QString();
             }
-            desc.truncate(desc.lastIndexOf(QChar('/')));
+            desc.truncate(desc.lastIndexOf(QLatin1Char('/')));
             const auto text = m_placesModel->text(index);
             desc.replace(0, parentUrl.path().length(), text);
         } else {
             // remove filename
-            desc.truncate(desc.lastIndexOf(QChar('/')));
+            desc.truncate(desc.lastIndexOf(QLatin1Char('/')));
         }
         return desc;
     } else if (role == Kicker::UrlRole) {

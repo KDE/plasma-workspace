@@ -433,7 +433,7 @@ QVariantList appstreamActions(const KService::Ptr &service)
 
         QVariantMap appstreamAction = Kicker::createActionItem(i18nc("@action opens a software center with the application", "Uninstall or Manage Add-Ons…"),
                                                                appStreamHandler->icon(),
-                                                               "manageApplication",
+                                                               QStringLiteral("manageApplication"),
                                                                QVariant(QLatin1String("appstream://") + componentId));
         // Only process the first element. In case we have system provided and flatpack sources we would end up with duplicated entries
         return {appstreamAction};
