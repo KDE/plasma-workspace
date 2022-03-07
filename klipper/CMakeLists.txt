@@ -47,6 +47,7 @@ target_link_libraries(libklipper_common_static
     KF5::WindowSystem
     KF5::WidgetsAddons
     KF5::XmlGui
+    KF5::WaylandClient
     ${ZLIB_LIBRARY})
 if (X11_FOUND)
     target_link_libraries(libklipper_common_static XCB::XCB)

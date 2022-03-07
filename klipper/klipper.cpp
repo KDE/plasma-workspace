@@ -27,6 +27,10 @@
 #include <KNotification>
 #include <KSystemClipboard>
 #include <KToggleAction>
+#include <KWayland/Client/connection_thread.h>
+#include <KWayland/Client/plasmashell.h>
+#include <KWayland/Client/registry.h>
+#include <KWayland/Client/surface.h>
 #include <KWindowSystem>
 
 #include "configdialog.h"
@@ -113,6 +117,7 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mo
     , m_config(config)
     , m_pendingContentsCheck(false)
     , m_mode(mode)
+    , m_plasmashell(nullptr)
 {
     if (m_mode == KlipperMode::Standalone) {
         setenv("KSNI_NO_DBUSMENU", "1", 1);
@@ -249,6 +254,18 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mo
             m_notification->setHint(QStringLiteral("desktop-entry"), QStringLiteral("org.kde.klipper"));
         }
     });
+
+    if (KWindowSystem::isPlatformWayland()) {
+        auto registry = new KWayland::Client::Registry(this);
+        auto connection = KWayland::Client::ConnectionThread::fromApplication(qGuiApp);
+        connect(registry, &KWayland::Client::Registry::plasmaShellAnnounced, this, [registry, this](quint32 name, quint32 version) {
+            if (!m_plasmashell) {
+                m_plasmashell = registry->createPlasmaShell(name, version);
+            }
+        });
+        registry->create(connection);
+        registry->setup();
+    }
 }
 
 Klipper::~Klipper()
@@ -384,8 +401,24 @@ void Klipper::saveSettings() const
 void Klipper::showPopupMenu(QMenu *menu)
 {
     Q_ASSERT(menu != nullptr);
-
+    if (m_plasmashell) {
+        menu->hide();
+        menu->windowHandle()->installEventFilter(this);
+    }
     menu->popup(QCursor::pos());
+}
+
+bool Klipper::eventFilter(QObject *filtered, QEvent *event)
+{
+    const bool ret = QObject::eventFilter(filtered, event);
+    auto menuWindow = qobject_cast<QWindow *>(filtered);
+    if (menuWindow && event->type() == QEvent::Expose && menuWindow->isVisible()) {
+        auto surface = KWayland::Client::Surface::fromWindow(menuWindow);
+        auto plasmaSurface = m_plasmashell->createSurface(surface, menuWindow);
+        plasmaSurface->openUnderCursor();
+        menuWindow->removeEventFilter(this);
+    }
+    return ret;
 }
 
 bool Klipper::loadHistory()

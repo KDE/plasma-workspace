@@ -31,6 +31,14 @@ class HistoryItem;
 class KNotification;
 class KSystemClipboard;
 
+namespace KWayland
+{
+namespace Client
+{
+class PlasmaShell;
+}
+}
+
 enum class KlipperMode {
     Standalone,
     DataEngine,
@@ -64,6 +72,8 @@ public Q_SLOTS:
 public:
     Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mode = KlipperMode::Standalone);
     ~Klipper() override;
+
+    bool eventFilter(QObject *object, QEvent *event) override;
 
     /**
      * Get clipboard history (the "document")
@@ -223,4 +233,5 @@ private:
     KlipperMode m_mode;
     QTimer *m_saveFileTimer = nullptr;
     QPointer<KNotification> m_notification;
+    KWayland::Client::PlasmaShell *m_plasmashell;
 };
