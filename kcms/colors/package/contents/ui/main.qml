@@ -151,12 +151,10 @@ KCM.GridViewKCM {
                 }
             }
             RowLayout {
-                id: accentColorButtonsLayout
-                spacing: Kirigami.Units.smallSpacing
+                spacing: 0
                 QtControls.RadioButton {
                     id: accentBox
                     checked: !Qt.colorEqual(kcm.accentColor, "transparent")
-                    rightPadding: -accentColorButtonsLayout.spacing
 
                     onToggled: {
                         if (enabled) {
@@ -164,124 +162,127 @@ KCM.GridViewKCM {
                         }
                     }
                 }
-                component ColorRadioButton : T.RadioButton {
-                    id: control
-                    opacity: accentBox.checked ? 1.0 : 0.5
-                    autoExclusive: false
+                RowLayout {
+                    spacing: accentBox.spacing
+                    component ColorRadioButton : T.RadioButton {
+                        id: control
+                        opacity: accentBox.checked ? 1.0 : 0.5
+                        autoExclusive: false
 
-                    property color color: "transparent"
+                        property color color: "transparent"
 
-                    implicitWidth: Math.round(Kirigami.Units.gridUnit * 1.25)
-                    implicitHeight: Math.round(Kirigami.Units.gridUnit * 1.25)
+                        implicitWidth: Math.round(Kirigami.Units.gridUnit * 1.25)
+                        implicitHeight: Math.round(Kirigami.Units.gridUnit * 1.25)
 
-                    background: Rectangle {
-                        color: control.color
-                        radius: height / 2
-                        border {
-                            color: Qt.rgba(0, 0, 0, 0.15)
-                            width: control.visualFocus ? 2 : 0
+                        background: Rectangle {
+                            color: control.color
+                            radius: height / 2
+                            border {
+                                color: Qt.rgba(0, 0, 0, 0.15)
+                                width: control.visualFocus ? 2 : 0
+                            }
+                        }
+                        indicator: Rectangle {
+                            radius: height / 2
+                            visible: control.checked
+                            anchors {
+                                fill: parent
+                                margins: Math.round(Kirigami.Units.smallSpacing * 1.25)
+                            }
+                            border {
+                                color: Qt.rgba(0, 0, 0, 0.15)
+                                width: 1
+                            }
+                        }
+
+                        MouseArea {
+                            enabled: false
+                            anchors.fill: parent
+                            cursorShape: Qt.PointingHandCursor
                         }
                     }
-                    indicator: Rectangle {
-                        radius: height / 2
-                        visible: control.checked
-                        anchors {
-                            fill: parent
-                            margins: Math.round(Kirigami.Units.smallSpacing * 1.25)
-                        }
-                        border {
-                            color: Qt.rgba(0, 0, 0, 0.15)
-                            width: 1
-                        }
-                    }
 
-                    MouseArea {
-                        enabled: false
-                        anchors.fill: parent
-                        cursorShape: Qt.PointingHandCursor
-                    }
-                }
+                    Repeater {
+                        id: colorRepeater
 
-                Repeater {
-                    id: colorRepeater
+                        model: [
+                            "#e93a9a",
+                            "#e93d58",
+                            "#e9643a",
+                            "#e8cb2d",
+                            "#3dd425",
+                            "#00d3b8",
+                            "#3daee9",
+                            "#b875dc",
+                            "#926ee4",
+                            "#686b6f",
+                        ]
 
-                    model: [
-                        "#e93a9a",
-                        "#e93d58",
-                        "#e9643a",
-                        "#e8cb2d",
-                        "#3dd425",
-                        "#00d3b8",
-                        "#3daee9",
-                        "#b875dc",
-                        "#926ee4",
-                        "#686b6f",
-                    ]
+                        delegate: ColorRadioButton {
+                            color: modelData
+                            checked: Qt.colorEqual(kcm.accentColor, modelData)
 
-                    delegate: ColorRadioButton {
-                        color: modelData
-                        checked: Qt.colorEqual(kcm.accentColor, modelData)
-
-                        onToggled: {
-                            kcm.accentColor = modelData
-                            checked = Qt.binding(() => Qt.colorEqual(kcm.accentColor, modelData));
+                            onToggled: {
+                                kcm.accentColor = modelData
+                                checked = Qt.binding(() => Qt.colorEqual(kcm.accentColor, modelData));
+                            }
                         }
                     }
-                }
 
-                QtControls.Label {
-                    id: customColorPickerLabel
-                    text: i18n("Custom:")
-                    opacity: customColorIndicator.opacity
-                    Layout.leftMargin: Kirigami.Units.smallSpacing
-                }
-
-                QtDialogs.ColorDialog {
-                    id: colorDialog
-                    title: i18n("Choose custom accent color")
-                    // User must either choose a colour or cancel the operation before doing something else
-                    modality: Qt.ApplicationModal
-                    color: kcm.accentColor
-                    onAccepted: {
-                        kcm.accentColor = colorDialog.color
-                    }
-                }
-
-                ColorRadioButton {
-                    id: customColorIndicator
-
-                    property bool isCustomColor: root.accentColor ?
-                                                    !colorRepeater.model.some(color => Qt.colorEqual(color, root.accentColor))
-                                                    : false
-
-                    /* The qt binding will keep the binding alive as well as uncheck the button
-                     * we can't just disable the button because then the icon will become grey
-                     * and also we have to provide a MouseArea for interaction. Both of these
-                     * can be done with the button being disabled but it will become very
-                     * complex and will result in lot of extra code */
-
-                    function openColorDialog(){
-                        checked = Qt.binding(() => customColorIndicator.isCustomColor)
-                        colorDialog.open()
+                    QtControls.Label {
+                        id: customColorPickerLabel
+                        text: i18n("Custom:")
+                        opacity: customColorIndicator.opacity
+                        Layout.leftMargin: Kirigami.Units.smallSpacing
                     }
 
-                    color:  isCustomColor ? kcm.accentColor : "transparent"
-                    checked: isCustomColor
+                    QtDialogs.ColorDialog {
+                        id: colorDialog
+                        title: i18n("Choose custom accent color")
+                        // User must either choose a colour or cancel the operation before doing something else
+                        modality: Qt.ApplicationModal
+                        color: kcm.accentColor
+                        onAccepted: {
+                            kcm.accentColor = colorDialog.color
+                        }
+                    }
 
-                    onClicked: openColorDialog()
+                    ColorRadioButton {
+                        id: customColorIndicator
 
-                    QtControls.RoundButton {
-                        id: customColorButtonPickerIconContainer
+                        property bool isCustomColor: root.accentColor ?
+                                                        !colorRepeater.model.some(color => Qt.colorEqual(color, root.accentColor))
+                                                        : false
 
-                        anchors.fill: parent
-                        padding: 0  // Round button adds some padding by default which we don't need. Setting this to 0 centers the icon
+                        /* The qt binding will keep the binding alive as well as uncheck the button
+                        * we can't just disable the button because then the icon will become grey
+                        * and also we have to provide a MouseArea for interaction. Both of these
+                        * can be done with the button being disabled but it will become very
+                        * complex and will result in lot of extra code */
 
-                        visible: !customColorIndicator.isCustomColor
+                        function openColorDialog(){
+                            checked = Qt.binding(() => customColorIndicator.isCustomColor)
+                            colorDialog.open()
+                        }
 
-                        onClicked: customColorIndicator.openColorDialog()
+                        color:  isCustomColor ? kcm.accentColor : "transparent"
+                        checked: isCustomColor
 
-                        icon.name: "color-picker"
-                        icon.width : Kirigami.Units.iconSizes.small // This provides a nice padding
+                        onClicked: openColorDialog()
+
+                        QtControls.RoundButton {
+                            id: customColorButtonPickerIconContainer
+
+                            anchors.fill: parent
+                            padding: 0  // Round button adds some padding by default which we don't need. Setting this to 0 centers the icon
+
+                            visible: !customColorIndicator.isCustomColor
+
+                            onClicked: customColorIndicator.openColorDialog()
+
+                            icon.name: "color-picker"
+                            icon.width : Kirigami.Units.iconSizes.small // This provides a nice padding
+                        }
                     }
                 }
             }
