@@ -115,8 +115,8 @@ void SystemTrayModelTest::testPlasmoidModel()
     // given: mocked PlasmoidRegistry with sample plugin meta data
     MockedSystemTraySettings *settings = new MockedSystemTraySettings();
     MockedPlasmoidRegistry *plasmoidRegistry = new MockedPlasmoidRegistry(settings);
-    plasmoidRegistry->m_systemTrayApplets.insert(DEVICENOTIFIER_ID, KPluginMetaData(QFINDTESTDATA("data/devicenotifier/metadata.desktop")));
-    plasmoidRegistry->m_systemTrayApplets.insert(MEDIACONROLLER_ID, KPluginMetaData(QFINDTESTDATA("data/mediacontroller/metadata.desktop")));
+    plasmoidRegistry->m_systemTrayApplets.insert(DEVICENOTIFIER_ID, KPluginMetaData(QFINDTESTDATA("data/devicenotifier/metadata.json")));
+    plasmoidRegistry->m_systemTrayApplets.insert(MEDIACONROLLER_ID, KPluginMetaData(QFINDTESTDATA("data/mediacontroller/metadata.json")));
 
     // when: model is initialized
     PlasmoidModel *model = new PlasmoidModel(settings, plasmoidRegistry);
