@@ -21,21 +21,21 @@ class SystemTraySettings : public QObject
 public:
     explicit SystemTraySettings(KConfigLoader *config, QObject *parent = nullptr);
 
-    virtual bool isKnownPlugin(const QString &pluginId);
-    virtual const QStringList knownPlugins() const;
-    virtual void addKnownPlugin(const QString &pluginId);
-    virtual void removeKnownPlugin(const QString &pluginId);
+    bool isKnownPlugin(const QString &pluginId);
+    const QStringList knownPlugins() const;
+    void addKnownPlugin(const QString &pluginId);
+    void removeKnownPlugin(const QString &pluginId);
 
-    virtual bool isEnabledPlugin(const QString &pluginId) const;
-    virtual const QStringList enabledPlugins() const;
-    virtual void addEnabledPlugin(const QString &pluginId);
-    virtual void removeEnabledPlugin(const QString &pluginId);
+    bool isEnabledPlugin(const QString &pluginId) const;
+    const QStringList enabledPlugins() const;
+    void addEnabledPlugin(const QString &pluginId);
+    void removeEnabledPlugin(const QString &pluginId);
 
-    virtual bool isShowAllItems() const;
-    virtual const QStringList shownItems() const;
-    virtual const QStringList hiddenItems() const;
+    bool isShowAllItems() const;
+    const QStringList shownItems() const;
+    const QStringList hiddenItems() const;
 
-    virtual void cleanupPlugin(const QString &pluginId);
+    void cleanupPlugin(const QString &pluginId);
 
 Q_SIGNALS:
     void configurationChanged();

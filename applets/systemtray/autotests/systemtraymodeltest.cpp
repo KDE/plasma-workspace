@@ -11,6 +11,8 @@
 #include <Plasma/DataEngine>
 #include <Plasma/PluginLoader>
 
+#include <KConfigLoader>
+
 #include "../plasmoidregistry.h"
 #include "../systemtraymodel.h"
 #include "../systemtraysettings.h"
@@ -50,70 +52,14 @@ public:
     QMap<QString, KPluginMetaData> m_systemTrayApplets;
 };
 
-class MockedSystemTraySettings : public SystemTraySettings
-{
-public:
-    MockedSystemTraySettings()
-        : SystemTraySettings(nullptr)
-    {
-    }
-
-    bool isKnownPlugin(const QString &pluginId) override
-    {
-        return m_knownPlugins.contains(pluginId);
-    }
-    const QStringList knownPlugins() const override
-    {
-        return m_knownPlugins;
-    }
-    void addKnownPlugin(const QString &pluginId) override
-    {
-        m_knownPlugins << pluginId;
-    }
-    void removeKnownPlugin(const QString &pluginId) override
-    {
-        m_knownPlugins.removeAll(pluginId);
-    }
-    bool isEnabledPlugin(const QString &pluginId) const override
-    {
-        return m_enabledPlugins.contains(pluginId);
-    }
-    const QStringList enabledPlugins() const override
-    {
-        return m_enabledPlugins;
-    }
-    void addEnabledPlugin(const QString &pluginId) override
-    {
-        m_enabledPlugins << pluginId;
-    }
-    void removeEnabledPlugin(const QString &pluginId) override
-    {
-        m_enabledPlugins.removeAll(pluginId);
-    }
-    bool isShowAllItems() const override
-    {
-        return m_showAllItems;
-    }
-    const QStringList shownItems() const override
-    {
-        return m_shownItems;
-    }
-    const QStringList hiddenItems() const override
-    {
-        return m_hiddenItems;
-    };
-
-    QStringList m_knownPlugins;
-    QStringList m_enabledPlugins;
-    QStringList m_shownItems;
-    QStringList m_hiddenItems;
-    bool m_showAllItems = false;
-};
-
 void SystemTrayModelTest::testPlasmoidModel()
 {
     // given: mocked PlasmoidRegistry with sample plugin meta data
-    MockedSystemTraySettings *settings = new MockedSystemTraySettings();
+    const QString configFileName = QFINDTESTDATA("data/systraysettingsrc");
+    const QString schemaFileName = QFINDTESTDATA("../package/contents/config/main.xml");
+    QFile schemaFile(schemaFileName);
+    KConfigLoader loader(configFileName, &schemaFile);
+    SystemTraySettings *settings = new SystemTraySettings(&loader);
     MockedPlasmoidRegistry *plasmoidRegistry = new MockedPlasmoidRegistry(settings);
     plasmoidRegistry->m_systemTrayApplets.insert(DEVICENOTIFIER_ID, KPluginMetaData(QFINDTESTDATA("data/devicenotifier/metadata.json")));
     plasmoidRegistry->m_systemTrayApplets.insert(MEDIACONROLLER_ID, KPluginMetaData(QFINDTESTDATA("data/mediacontroller/metadata.json")));
