@@ -14,6 +14,7 @@ import QtQuick.Dialogs 1.1
 import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.kholidays 1.0 as KHolidays
 import org.kde.holidayeventshelperplugin 1.0
+import org.kde.kirigami 2.15 as Kirigami
 
 ColumnLayout {
     id: holidaysConfig
@@ -37,11 +38,9 @@ ColumnLayout {
         id: configHelper
     }
 
-    QQC2.TextField {
+    Kirigami.SearchField {
         id: filter
         Layout.fillWidth: true
-        placeholderText: i18nd("kholidays_calendar_plugin", "Search…")
-        inputMethodHints: Qt.ImhNoPredictiveText
     }
 
     // Still QQC1 bevcause there's no QQC2 TableView

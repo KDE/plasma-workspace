@@ -10,6 +10,7 @@ import QtQuick.Window 2.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents // For Highlight
 import org.kde.plasma.components 3.0 as PlasmaComponents3
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.milou 0.1 as Milou
 
 ColumnLayout {
@@ -77,15 +78,12 @@ ColumnLayout {
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Configure KRunner…")
             }
         }
-        PlasmaComponents3.TextField {
+        PlasmaExtras.SearchField {
             id: queryField
             property bool allowCompletion: false
 
-            clearButtonShown: true
             Layout.minimumWidth: PlasmaCore.Units.gridUnit * 25
             Layout.maximumWidth: PlasmaCore.Units.gridUnit * 25
-
-            inputMethodHints: Qt.ImhNoPredictiveText
 
             activeFocusOnPress: true
             placeholderText: results.runnerName ? i18ndc("plasma_lookandfeel_org.kde.lookandfeel",
