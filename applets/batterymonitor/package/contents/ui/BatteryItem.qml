@@ -41,6 +41,8 @@ RowLayout {
     // UPower seems to set the Present property false when a device is added but not probed yet
     readonly property bool isPresent: root.battery["Plugged in"]
 
+    readonly property bool isPowerSupply: root.battery["Is Power Supply"]
+
     readonly property bool isBroken: root.battery.Capacity > 0 && root.battery.Capacity < 50
 
     property int remainingTime: 0
@@ -191,7 +193,7 @@ RowLayout {
 
             readonly property var chargeStopThreshold: pmSource.data["Battery"] ? pmSource.data["Battery"]["Charge Stop Threshold"] : undefined
             readonly property bool pluggedIn: pmSource.data["AC Adapter"] !== undefined && pmSource.data["AC Adapter"]["Plugged in"]
-            visible: pluggedIn && typeof chargeStopThreshold === "number" && chargeStopThreshold > 0 && chargeStopThreshold < 100
+            visible: pluggedIn && root.isPowerSupply && typeof chargeStopThreshold === "number" && chargeStopThreshold > 0 && chargeStopThreshold < 100
             iconSource: "kt-speed-limits" // FIXME good icon
             text: i18n("Battery is configured to charge up to approximately %1%.", chargeStopThreshold || 0)
         }
