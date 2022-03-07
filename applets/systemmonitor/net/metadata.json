@@ -42,6 +42,7 @@
         "Description[ar]": "أداة مراقبة النظام التي تعرض سرعة تنزيل ورفع البيانات",
         "Description[az]": "Sistem monitporu vidjeti verilənlərin endirilməsi və yüklənməsi tezliyini göstərir",
         "Description[ca]": "Giny del monitor del sistema que mostra la velocitat de baixada i pujada de les dades",
+        "Description[de]": "Systemmonitor-Miniprogramm, das die Download- und Upload-Datenrate anzeigt",
         "Description[en_GB]": "System monitor Widget that shows the download and upload data rate",
         "Description[es]": "Elemento gráfico del monitor del sistema que muestra las velocidades de subida y bajada de datos",
         "Description[eu]": "Zama-jaisteko eta -igotzeko datuen emaria erakusten duen sistema gainbegiratzeko trepeta",

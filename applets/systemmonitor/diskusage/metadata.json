@@ -42,6 +42,7 @@
         "Description[ar]": "أداة مراقبة النظام التي تعرض استخدام قسم الجذر",
         "Description[az]": "Sistem monitoru vidjeti kök bölməsinin istifadəsini göstərir",
         "Description[ca]": "Giny del monitor del sistema que mostra l'ús de la partició arrel",
+        "Description[de]": "Systemmonitor-Miniprogramm, das die Verwendung des Basisordners anzeigt",
         "Description[en_GB]": "System monitor Widget that shows the usage of the root partition",
         "Description[es]": "Elemento gráfico del monitor del sistema que muestra el uso de la partición raíz",
         "Description[eu]": "Erro partizioaren erabilera erakusten duen sistema gainbegiratzeko trepeta",

@@ -41,6 +41,7 @@
         "Description[ar]": "أداة مراقبة النظام التي تعرض استخدام كل نواة من المعالج",
         "Description[az]": "Sistem monitoru vidjeti hər CPU nüvəsinin istifadəsini göstərir",
         "Description[ca]": "Giny del monitor del sistema que mostra l'ús individual dels nuclis de la CPU",
+        "Description[de]": "Systemmonitor-Miniprogramm, das die Verwendung einzelner CPU-Kerne anzeigt",
         "Description[en_GB]": "System monitor Widget that shows usage of individual CPU cores",
         "Description[es]": "Elemento gráfico del monitor del sistema que muestra el uso de los núcleos individuales de la CPU",
         "Description[eu]": "PUZeko nukleoen banakako erabilera erakusten duen sistema gainbegiratzeko trepeta",
