@@ -311,7 +311,7 @@ PlasmaExtras.Representation {
 
             highlightMoveDuration: 0
             highlightResizeDuration: 0
-            // Not using PlasmaComponents.Highlight as this is only for indicating keyboard focus
+            // Not using PlasmaExtras.Highlight as this is only for indicating keyboard focus
             highlight: PlasmaCore.FrameSvgItem {
                 imagePath: "widgets/listitem"
                 prefix: "pressed"
