@@ -9,10 +9,10 @@
 import QtQuick 2.15
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.1 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents // For Highlight
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 
 import "items"
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 PlasmaComponents3.ScrollView {
     id: hiddenTasksView
@@ -39,7 +39,7 @@ PlasmaComponents3.ScrollView {
         cellHeight: Math.floor(hiddenTasks.height / hiddenTasks.rows)
 
         currentIndex: -1
-        highlight: PlasmaComponents.Highlight {}
+        highlight: PlasmaExtras.Highlight {}
         highlightMoveDuration: 0
 
         pixelAligned: true
