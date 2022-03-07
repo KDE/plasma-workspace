@@ -6,7 +6,6 @@
 
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
-import QtQuick.Controls 1.6 // Don't bump it any further, this is the latest.
 import QtQuick.Controls 2.15 as QQC2
 import QtGraphicalEffects 1.15
 
