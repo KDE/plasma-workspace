@@ -142,7 +142,6 @@ KCM.GridViewKCM {
 
                 Kirigami.FormData.label: i18n("Use accent color:")
                 text: i18n("From current color scheme")
-                leftPadding: Kirigami.Units.largeSpacing
                 checked: Qt.colorEqual(kcm.accentColor, "transparent")
 
                 onToggled: {
@@ -152,9 +151,12 @@ KCM.GridViewKCM {
                 }
             }
             RowLayout {
+                id: accentColorButtonsLayout
+                spacing: Kirigami.Units.smallSpacing
                 QtControls.RadioButton {
                     id: accentBox
                     checked: !Qt.colorEqual(kcm.accentColor, "transparent")
+                    rightPadding: -accentColorButtonsLayout.spacing
 
                     onToggled: {
                         if (enabled) {
