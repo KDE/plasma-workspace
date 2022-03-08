@@ -176,7 +176,7 @@ PlasmaCore.ColorScope {
                 showUserList: {
                     if (!userListModel.hasOwnProperty("count")
                         || !userListModel.hasOwnProperty("disableAvatarsThreshold")) {
-                        return (userList.y + mainStack.y) > 0
+                        return false
                     }
 
                     if (userListModel.count === 0 ) {
@@ -187,7 +187,7 @@ PlasmaCore.ColorScope {
                         return false
                     }
 
-                    return userListModel.count <= userListModel.disableAvatarsThreshold && (userList.y + mainStack.y) > 0
+                    return userListModel.count <= userListModel.disableAvatarsThreshold
                 }
 
                 notificationMessage: {
