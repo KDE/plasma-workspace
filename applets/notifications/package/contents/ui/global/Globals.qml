@@ -439,6 +439,7 @@ QtObject {
     property Instantiator popupInstantiator: Instantiator {
         model: popupNotificationsModel
         delegate: NotificationPopup {
+            id: popup
             // so Instantiator can access that after the model row is gone
             readonly property var notificationId: model.notificationId
 
@@ -579,6 +580,9 @@ QtObject {
                 } else {
                     model.expired = true;
                 }
+            }
+            onForceActiveFocusRequested: {
+                plasmoid.nativeInterface.forceActivateWindow(popup);
             }
 
             onSuspendJobClicked: popupNotificationsModel.suspendJob(popupNotificationsModel.index(index, 0))

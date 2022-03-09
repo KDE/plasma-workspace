@@ -95,6 +95,7 @@ ColumnLayout {
     signal replied(string text)
     signal openUrl(string url)
     signal fileActionInvoked(QtObject action)
+    signal forceActiveFocusRequested
 
     signal suspendJobClicked
     signal resumeJobClicked
@@ -389,7 +390,7 @@ ColumnLayout {
                 function beginReply() {
                     notificationItem.replying = true;
 
-                    Plasmoid.nativeInterface.forceActivateWindow(notificationItem.Window.window);
+                    notificationItem.forceActiveFocusRequested();
                     replyLoader.item.activate();
                 }
 
