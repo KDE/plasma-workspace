@@ -85,6 +85,7 @@ RowLayout {
         opacity: 0.9
         textFormat: Text.PlainText
         elide: Text.ElideLeft
+        maximumLineCount: 2
         text: notificationHeading.applicationName + (notificationHeading.originName ? " · " + notificationHeading.originName : "")
     }
 
@@ -102,6 +103,7 @@ RowLayout {
         visible: text !== ""
         level: 5
         opacity: 0.9
+        wrapMode: Text.NoWrap
         text: generateRemainingText() || agoText
         Layout.rightMargin: Math.round(-notificationHeading.spacing / 2)
 
