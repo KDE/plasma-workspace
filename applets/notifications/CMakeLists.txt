@@ -2,6 +2,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_org.kde.plasma.notification
 
 set(notificationapplet_SRCS
     notificationapplet.cpp
+    draghelper.cpp
     fileinfo.cpp
     filemenu.cpp
     globalshortcuts.cpp

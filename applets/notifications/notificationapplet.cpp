@@ -7,16 +7,10 @@
 #include "notificationapplet.h"
 
 #include <QClipboard>
-#include <QDrag>
 #include <QGuiApplication>
-#include <QMetaObject>
-#include <QMimeData>
-#include <QMimeDatabase>
-#include <QMimeType>
 #include <QQuickItem>
 #include <QQuickWindow>
 #include <QScreen>
-#include <QStyleHints>
 #include <QWindow>
 
 #include <KWindowSystem>
@@ -24,6 +18,7 @@
 #include <Plasma/Containment>
 #include <PlasmaQuick/Dialog>
 
+#include "draghelper.h"
 #include "fileinfo.h"
 #include "filemenu.h"
 #include "globalshortcuts.h"
@@ -36,6 +31,9 @@ NotificationApplet::NotificationApplet(QObject *parent, const KPluginMetaData &d
     static bool s_typesRegistered = false;
     if (!s_typesRegistered) {
         const char uri[] = "org.kde.plasma.private.notifications";
+        qmlRegisterSingletonType<DragHelper>(uri, 2, 0, "DragHelper", [](QQmlEngine *, QJSEngine *) -> QObject * {
+            return new DragHelper();
+        });
         qmlRegisterType<FileInfo>(uri, 2, 0, "FileInfo");
         qmlRegisterType<FileMenu>(uri, 2, 0, "FileMenu");
         qmlRegisterType<GlobalShortcuts>(uri, 2, 0, "GlobalShortcuts");
@@ -56,71 +54,6 @@ void NotificationApplet::init()
 
 void NotificationApplet::configChanged()
 {
-}
-
-bool NotificationApplet::dragActive() const
-{
-    return m_dragActive;
-}
-
-int NotificationApplet::dragPixmapSize() const
-{
-    return m_dragPixmapSize;
-}
-
-void NotificationApplet::setDragPixmapSize(int dragPixmapSize)
-{
-    if (m_dragPixmapSize != dragPixmapSize) {
-        m_dragPixmapSize = dragPixmapSize;
-        Q_EMIT dragPixmapSizeChanged();
-    }
-}
-
-bool NotificationApplet::isDrag(int oldX, int oldY, int newX, int newY) const
-{
-    return ((QPoint(oldX, oldY) - QPoint(newX, newY)).manhattanLength() >= qApp->styleHints()->startDragDistance());
-}
-
-void NotificationApplet::startDrag(QQuickItem *item, const QUrl &url, const QString &iconName)
-{
-    startDrag(item, url, QIcon::fromTheme(iconName).pixmap(m_dragPixmapSize, m_dragPixmapSize));
-}
-
-void NotificationApplet::startDrag(QQuickItem *item, const QUrl &url, const QPixmap &pixmap)
-{
-    // This allows the caller to return, making sure we don't crash if
-    // the caller is destroyed mid-drag
-
-    QMetaObject::invokeMethod(this, "doDrag", Qt::QueuedConnection, Q_ARG(QQuickItem *, item), Q_ARG(QUrl, url), Q_ARG(QPixmap, pixmap));
-}
-
-void NotificationApplet::doDrag(QQuickItem *item, const QUrl &url, const QPixmap &pixmap)
-{
-    if (item && item->window() && item->window()->mouseGrabberItem()) {
-        item->window()->mouseGrabberItem()->ungrabMouse();
-    }
-
-    QDrag *drag = new QDrag(item);
-
-    QMimeData *mimeData = new QMimeData();
-
-    if (!url.isEmpty()) {
-        mimeData->setUrls(QList<QUrl>() << url);
-    }
-
-    drag->setMimeData(mimeData);
-
-    if (!pixmap.isNull()) {
-        drag->setPixmap(pixmap);
-    }
-
-    m_dragActive = true;
-    Q_EMIT dragActiveChanged();
-
-    drag->exec();
-
-    m_dragActive = false;
-    Q_EMIT dragActiveChanged();
 }
 
 QWindow *NotificationApplet::focussedPlasmaDialog() const

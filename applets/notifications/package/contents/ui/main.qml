@@ -137,13 +137,6 @@ Item {
         }
     }
 
-    Binding {
-        target: plasmoid.nativeInterface
-        property: "dragPixmapSize"
-        value: PlasmaCore.Units.iconSizes.large
-        restoreMode: Binding.RestoreBinding
-    }
-
     function closePlasmoid() {
         if (Plasmoid.hideOnWindowDeactivate) {
             Plasmoid.expanded = false;
