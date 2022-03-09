@@ -20,7 +20,6 @@
 #include <QDebug>
 #include <klocalizedstring.h>
 #include <kmimetypetrader.h>
-#include <kservicetypetrader.h>
 #include <kshell.h>
 
 #include <KPackage/Package>

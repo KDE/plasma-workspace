@@ -18,7 +18,6 @@
 #include <KApplicationTrader>
 #include <QDebug>
 #include <klocalizedstring.h>
-#include <kservicetypetrader.h>
 #include <kshell.h>
 
 // KIO
@@ -598,16 +597,10 @@ bool ScriptEngine::V1::applicationExists(const QString &application) const
     }
 
     // next, consult ksycoca for an app by that name
-    if (!KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("Name =~ '%1'").arg(application)).isEmpty()) {
-        return true;
-    }
-
-    // next, consult ksycoca for an app by that generic name
-    if (!KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("GenericName =~ '%1'").arg(application)).isEmpty()) {
-        return true;
-    }
-
-    return false;
+    const auto servciesByName = KApplicationTrader::query([&application](const KService::Ptr &service) {
+        return service->name().compare(application, Qt::CaseInsensitive) == 0 || service->genericName().compare(application, Qt::CaseInsensitive) == 0;
+    });
+    return !servciesByName.isEmpty();
 }
 
 QJSValue ScriptEngine::V1::defaultApplication(const QString &application, bool storageId) const
@@ -704,11 +697,9 @@ QJSValue ScriptEngine::V1::applicationPath(const QString &application) const
     }
 
     // next, consult ksycoca for an app by that name
-    KService::List offers = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("Name =~ '%1'").arg(application));
-    if (offers.isEmpty()) {
-        // next, consult ksycoca for an app by that generic name
-        offers = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("GenericName =~ '%1'").arg(application));
-    }
+    const auto offers = KApplicationTrader::query([&application](const KService::Ptr &service) {
+        return service->name().compare(application, Qt::CaseInsensitive) == 0 || service->genericName().compare(application, Qt::CaseInsensitive) == 0;
+    });
 
     if (!offers.isEmpty()) {
         KService::Ptr offer = offers.first();
