@@ -91,6 +91,7 @@ QtObject {
             }
 
             var alignment = 0;
+            // NOTE this is our "plasmoid" property from above, don't port this to Plasmoid attached property!
             if (plasmoid.location === PlasmaCore.Types.LeftEdge) {
                 alignment |= Qt.AlignLeft;
             } else if (plasmoid.location === PlasmaCore.Types.RightEdge) {
@@ -128,6 +129,7 @@ QtObject {
             return Qt.rect(0, 0, -1, -1);
         }
 
+        // NOTE this is our "plasmoid" property from above, don't port this to Plasmoid attached property!
         let rect = Qt.rect(plasmoid.screenGeometry.x + plasmoid.availableScreenRect.x,
                            plasmoid.screenGeometry.y + plasmoid.availableScreenRect.y,
                            plasmoid.availableScreenRect.width,
@@ -153,6 +155,7 @@ QtObject {
         if (!plasmoid) {
             return null;
         }
+        // NOTE this is our "plasmoid" property from above, don't port this to Plasmoid attached property!
         return (plasmoid.nativeInterface && plasmoid.nativeInterface.systemTrayRepresentation)
             || plasmoid.compactRepresentationItem
             || plasmoid.fullRepresentationItem;
@@ -195,6 +198,7 @@ QtObject {
             var score = 0;
 
             // Prefer plasmoids in a panel, prefer horizontal panels over vertical ones
+            // NOTE this is our "plasmoid" property from above, don't port this to Plasmoid attached property!
             if (plasmoid.location === PlasmaCore.Types.LeftEdge
                     || plasmoid.location === PlasmaCore.Types.RightEdge) {
                 score += 1;
@@ -582,6 +586,7 @@ QtObject {
                 }
             }
             onForceActiveFocusRequested: {
+                // NOTE this is our "plasmoid" property from above, don't port this to Plasmoid attached property!
                 plasmoid.nativeInterface.forceActivateWindow(popup);
             }
 
