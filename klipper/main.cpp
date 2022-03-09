@@ -48,7 +48,9 @@ int main(int argc, char *argv[])
 
     KAboutData::setApplicationData(aboutData);
 
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     QGuiApplication::setFallbackSessionManagementEnabled(false);
+#endif
 
     auto disableSessionManagement = [](QSessionManager &sm) {
         sm.setRestartHint(QSessionManager::RestartNever);

@@ -144,7 +144,9 @@ int main(int argc, char *argv[])
         cliOptions.process(app);
         aboutData.processCommandLine(&cliOptions);
 
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
         QGuiApplication::setFallbackSessionManagementEnabled(false);
+#endif
 
         auto disableSessionManagement = [](QSessionManager &sm) {
             sm.setRestartHint(QSessionManager::RestartNever);
