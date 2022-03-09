@@ -9,6 +9,7 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents // For ContextMenu
 import org.kde.plasma.components 3.0 as PlasmaComponents3
+import org.kde.plasma.plasmoid 2.0
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
@@ -69,6 +70,7 @@ ColumnLayout {
                         });
                         menuItem.clicked.connect(() => {
                             barcodeItem.barcodeType = item.type;
+                            Plasmoid.configuration.barcodeType = item.type;
                         });
                         menu.addMenuItem(menuItem);
                     });
@@ -96,7 +98,7 @@ ColumnLayout {
             id: barcodeItem
             readonly property bool valid: implicitWidth > 0 && implicitHeight > 0 && implicitWidth <= width && implicitHeight <= height
             anchors.fill: parent
-            barcodeType: Prison.Barcode.QRCode
+            barcodeType: Plasmoid.configuration.barcodeType
             // Cannot set visible to false as we need it to re-render when changing its size
             opacity: valid ? 1 : 0
         }
