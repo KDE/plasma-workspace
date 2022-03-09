@@ -6,7 +6,6 @@
 
 #include "notificationapplet.h"
 
-#include <QClipboard>
 #include <QGuiApplication>
 #include <QQuickItem>
 #include <QQuickWindow>
@@ -82,13 +81,6 @@ QQuickItem *NotificationApplet::systemTrayRepresentation() const
     }
 
     return c->property("_plasma_graphicObject").value<QQuickItem *>();
-}
-
-void NotificationApplet::setSelectionClipboardText(const QString &text)
-{
-    // FIXME KDeclarative Clipboard item uses QClipboard::Mode for "mode"
-    // which is an enum inaccessible from QML
-    QGuiApplication::clipboard()->setText(text, QClipboard::Selection);
 }
 
 bool NotificationApplet::isPrimaryScreen(const QRect &rect) const
