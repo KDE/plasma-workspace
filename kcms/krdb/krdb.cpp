@@ -30,7 +30,6 @@
 #include <QDir>
 #include <QFontDatabase>
 #include <QSettings>
-#include <QTextCodec>
 
 #include <QByteArray>
 #include <QDBusConnection>
@@ -248,8 +247,6 @@ static void createGtkrc(const QPalette &cg, bool exportGtkTheme, const QString &
         return;
 
     QTextStream t(&saveFile);
-    t.setCodec(QTextCodec::codecForLocale());
-
     t << i18n(
         "# created by KDE Plasma, %1\n"
         "#\n",
