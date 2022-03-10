@@ -6,11 +6,11 @@
 
 #include "xstartuptasksmodel.h"
 
+#include <KApplicationTrader>
 #include <KConfig>
 #include <KConfigGroup>
 #include <KDirWatch>
 #include <KService>
-#include <KServiceTypeTrader>
 #include <KStartupInfo>
 
 #include <QIcon>
@@ -159,7 +159,9 @@ QUrl XStartupTasksModel::Private::launcherUrl(const KStartupInfoData &data)
             // turn into KService desktop entry name
             appId.chop(strlen(".desktop"));
 
-            services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ DesktopEntryName)").arg(appId));
+            services = KApplicationTrader::query([&appId](const KService::Ptr &service) {
+                return service->desktopEntryName().compare(appId, Qt::CaseInsensitive) == 0;
+            });
         }
     }
 
@@ -167,14 +169,18 @@ QUrl XStartupTasksModel::Private::launcherUrl(const KStartupInfoData &data)
 
     // Try StartupWMClass.
     if (services.empty() && !wmClass.isEmpty()) {
-        services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ StartupWMClass)").arg(wmClass));
+        services = KApplicationTrader::query([&wmClass](const KService::Ptr &service) {
+            return service->property(QStringLiteral("StartupWMClass")).toString().compare(wmClass, Qt::CaseInsensitive) == 0;
+        });
     }
 
     const QString name = data.findName();
 
     // Try via name ...
     if (services.empty() && !name.isEmpty()) {
-        services = KServiceTypeTrader::self()->query(QStringLiteral("Application"), QStringLiteral("exist Exec and ('%1' =~ Name)").arg(name));
+        services = KApplicationTrader::query([&name](const KService::Ptr &service) {
+            return service->name().compare(name, Qt::CaseInsensitive) == 0;
+        });
     }
 
     if (!services.empty()) {
