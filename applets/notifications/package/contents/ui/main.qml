@@ -16,6 +16,8 @@ import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
 
 import org.kde.notificationmanager 1.0 as NotificationManager
 
+import org.kde.plasma.private.notifications 2.0 as Notifications
+
 import "global"
 
 Item {
@@ -44,8 +46,20 @@ Item {
     Plasmoid.toolTipSubText: {
         var lines = [];
 
-        if (historyModel.activeJobsCount > 0) {
-            lines.push(i18np("%1 running job", "%1 running jobs", historyModel.activeJobsCount));
+        if (jobAggregator.count > 0) {
+            let description = i18np("%1 running job", "%1 running jobs", jobAggregator.count);
+
+            if (jobAggregator.summary) {
+                if (jobAggregator.percentage > 0) {
+                    description = i18nc("Job title (percentage)", "%1 (%2%)", jobAggregator.summary, jobAggregator.percentage);
+                } else {
+                    description = jobAggregator.summary;
+                }
+            } else if (jobAggregator.percentage > 0) {
+                description = i18np("%1 running job (%2%)", "%1 running jobs (%2%)", jobAggregator.count, jobAggregator.percentage);
+            }
+
+            lines.push(description);
         }
 
         if (!NotificationManager.Server.valid) {
@@ -134,6 +148,20 @@ Item {
             if (count === 0) {
                 closePlasmoid();
             }
+        }
+    }
+
+    Notifications.JobAggregator {
+        id: jobAggregator
+        sourceModel: NotificationManager.Notifications {
+            id: jobAggregatorModel
+            showExpired: historyModel.showExpired
+            showDismissed: historyModel.showDismissed
+            showJobs: historyModel.showJobs
+            showNotifications: false
+            blacklistedDesktopEntries: historyModel.blacklistedDesktopEntries
+            blacklistedNotifyRcNames: historyModel.blacklistedNotifyRcNames
+            urgencies: historyModel.urgencies
         }
     }
 

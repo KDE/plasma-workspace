@@ -21,6 +21,7 @@
 #include "fileinfo.h"
 #include "filemenu.h"
 #include "globalshortcuts.h"
+#include "jobaggregator.h"
 #include "texteditclickhandler.h"
 #include "thumbnailer.h"
 
@@ -36,6 +37,7 @@ NotificationApplet::NotificationApplet(QObject *parent, const KPluginMetaData &d
         qmlRegisterType<FileInfo>(uri, 2, 0, "FileInfo");
         qmlRegisterType<FileMenu>(uri, 2, 0, "FileMenu");
         qmlRegisterType<GlobalShortcuts>(uri, 2, 0, "GlobalShortcuts");
+        qmlRegisterType<JobAggregator>(uri, 2, 0, "JobAggregator");
         qmlRegisterType<TextEditClickHandler>(uri, 2, 0, "TextEditClickHandler");
         qmlRegisterType<Thumbnailer>(uri, 2, 0, "Thumbnailer");
         qmlProtectModule(uri, 2);

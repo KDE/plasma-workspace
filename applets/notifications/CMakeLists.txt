@@ -6,6 +6,7 @@ set(notificationapplet_SRCS
     fileinfo.cpp
     filemenu.cpp
     globalshortcuts.cpp
+    jobaggregator.cpp
     texteditclickhandler.cpp
     thumbnailer.cpp
 )
@@ -23,6 +24,7 @@ target_link_libraries(plasma_applet_notifications
                       KF5::KIOGui
                       KF5::KIOWidgets # for PreviewJob
                       KF5::Notifications # for KNotificationJobUiDelegate
+                      PW::LibNotificationManager
                       )
 
 ecm_qt_declare_logging_category(plasma_applet_notifications
