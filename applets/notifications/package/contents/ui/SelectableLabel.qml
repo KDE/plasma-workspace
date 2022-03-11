@@ -42,7 +42,7 @@ PlasmaComponents3.ScrollView {
         topPadding: 0
         bottomPadding: 0
 
-        background: Item {}
+        background: null
         // Work around Qt bug where NativeRendering breaks for non-integer scale factors
         // https://bugreports.qt.io/browse/QTBUG-67007
         renderType: Screen.devicePixelRatio % 1 !== 0 ? Text.QtRendering : Text.NativeRendering
