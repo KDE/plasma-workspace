@@ -558,7 +558,7 @@ PlasmaCore.ColorScope {
             KeyboardButton {
                 font.pointSize: config.fontSize
 
-                keyboardLayoutChanged: {
+                onKeyboardLayoutChanged: {
                     // Otherwise the password field loses focus and virtual keyboard
                     // keystrokes get eaten
                     userListComponent.mainPasswordBox.forceActiveFocus();
