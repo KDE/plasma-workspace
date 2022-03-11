@@ -262,7 +262,7 @@ void PreviewWidget::hoverMoveEvent(QHoverEvent *e)
     for (const PreviewCursor *c : qAsConst(list)) {
         if (c->rect().contains(e->pos())) {
             if (c != current) {
-                setCursor(c->pixmap());
+                setCursor(QCursor(c->pixmap()));
                 current = c;
             }
             return;
