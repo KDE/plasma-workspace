@@ -32,6 +32,8 @@ PlasmaComponents.ToolButton {
         }
     }
 
+    signal keyboardLayoutChanged
+
     PlasmaComponents.Menu {
         id: menu
         PlasmaCore.ColorScope.colorGroup: PlasmaCore.Theme.NormalColorGroup
@@ -47,6 +49,7 @@ PlasmaComponents.ToolButton {
                 property string shortName: modelData.shortName
                 onTriggered: {
                     keyboard.currentLayout = model.index
+                    keyboardLayoutChanged()
                 }
             }
         }

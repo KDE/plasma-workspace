@@ -29,6 +29,8 @@ PlasmaComponents.ToolButton {
         }
     }
 
+    signal sessionChanged
+
     PlasmaComponents.Menu {
         PlasmaCore.ColorScope.colorGroup: PlasmaCore.Theme.NormalColorGroup
         PlasmaCore.ColorScope.inherit: false
@@ -43,6 +45,7 @@ PlasmaComponents.ToolButton {
                 text: model.name
                 onTriggered: {
                     root.currentIndex = model.index
+                    sessionChanged()
                 }
             }
         }

@@ -557,11 +557,23 @@ PlasmaCore.ColorScope {
 
             KeyboardButton {
                 font.pointSize: config.fontSize
+
+                keyboardLayoutChanged: {
+                    // Otherwise the password field loses focus and virtual keyboard
+                    // keystrokes get eaten
+                    userListComponent.mainPasswordBox.forceActiveFocus();
+                }
             }
 
             SessionButton {
                 id: sessionButton
                 font.pointSize: config.fontSize
+
+                onSessionChanged: {
+                    // Otherwise the password field loses focus and virtual keyboard
+                    // keystrokes get eaten
+                    userListComponent.mainPasswordBox.forceActiveFocus();
+                }
             }
 
             Item {
