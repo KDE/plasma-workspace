@@ -284,7 +284,6 @@ void TasksModel::Private::initModels()
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::virtualDesktopChanged, q, &TasksModel::virtualDesktopChanged);
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::screenGeometryChanged, q, &TasksModel::screenGeometryChanged);
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::activityChanged, q, &TasksModel::activityChanged);
-    QObject::connect(filterProxyModel, &TaskFilterProxyModel::switchingFromActiveTaskChanged, q, &TasksModel::switchingFromActiveTaskChanged);
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::filterByVirtualDesktopChanged, q, &TasksModel::filterByVirtualDesktopChanged);
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::filterByScreenChanged, q, &TasksModel::filterByScreenChanged);
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::filterByActivityChanged, q, &TasksModel::filterByActivityChanged);
@@ -919,25 +918,6 @@ bool TasksModel::Private::lessThan(const QModelIndex &left, const QModelIndex &r
             return (leftScore > rightScore);
         }
     }
-    // fall through
-    case SortLastActivated: {
-        QTime leftSortTime = left.data(AbstractTasksModel::LastActivated).toTime();
-
-        if (!leftSortTime.isValid()) {
-            leftSortTime = left.data(Qt::DisplayRole).toTime();
-        }
-
-        QTime rightSortTime = right.data(AbstractTasksModel::LastActivated).toTime();
-
-        if (!rightSortTime.isValid()) {
-            rightSortTime = right.data(Qt::DisplayRole).toTime();
-        }
-
-        if (leftSortTime == rightSortTime)
-            return (left.row() < right.row());
-
-        return (leftSortTime < rightSortTime);
-    }
     // Fall through to source order if sorting is disabled or manual, or alphabetical by app name otherwise.
     // This marker comment makes gcc/clang happy:
     // fall through
@@ -990,8 +970,6 @@ TasksModel::TasksModel(QObject *parent)
     : QSortFilterProxyModel(parent)
     , d(new Private(this))
 {
-    reorderTimer = new QTimer();
-
     d->initModels();
 
     // Start sorting.
@@ -1234,34 +1212,6 @@ void TasksModel::setSortMode(SortMode mode)
 
             d->activityTaskCounts.clear();
             setSortRole(Qt::DisplayRole);
-        }
-        if (mode == SortLastActivated) {
-            setDynamicSortFilter(false);
-
-            QObject::connect(this, &TasksModel::activeTaskChanged, reorderTimer, [this] {
-                if (!d->filterProxyModel->switchingFromActiveTask()) {
-                    reorderTimer->stop();
-                    setDynamicSortFilter(true);
-                    setDynamicSortFilter(false);
-                } else {
-                    reorderTimer->start(5000);
-                }
-            });
-
-            QObject::connect(reorderTimer, &QTimer::timeout, reorderTimer, [this]() {
-                reorderTimer->stop();
-
-                if (d->filterProxyModel->switchingFromActiveTask()) {
-                    d->filterProxyModel->setSwitchingFromActiveTask(false);
-                    setDynamicSortFilter(true);
-                    setDynamicSortFilter(false);
-                }
-            });
-
-            QObject::connect(this, &TasksModel::switchingFromActiveTaskChanged, this, [this]() {
-                if (d->filterProxyModel->switchingFromActiveTask())
-                    reorderTimer->start(5000);
-            });
         }
 
         d->sortMode = mode;
@@ -1601,11 +1551,6 @@ void TasksModel::requestActivities(const QModelIndex &index, const QStringList &
     if (index.isValid() && index.model() == this) {
         d->groupingProxyModel->requestActivities(mapToSource(index), activities);
     }
-}
-
-void TasksModel::requestLastActivatedReorderDelay(const bool enableReorderDelay)
-{
-    d->filterProxyModel->setSwitchingFromActiveTask(enableReorderDelay);
 }
 
 void TasksModel::requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry, QObject *delegate)

@@ -32,7 +32,6 @@ class TASKMANAGER_EXPORT TaskFilterProxyModel : public QSortFilterProxyModel, pu
     Q_PROPERTY(QVariant virtualDesktop READ virtualDesktop WRITE setVirtualDesktop NOTIFY virtualDesktopChanged)
     Q_PROPERTY(QRect screenGeometry READ screenGeometry WRITE setScreenGeometry NOTIFY screenGeometryChanged)
     Q_PROPERTY(QString activity READ activity WRITE setActivity NOTIFY activityChanged)
-    Q_PROPERTY(bool switchingFromActiveTask READ switchingFromActiveTask WRITE setSwitchingFromActiveTask NOTIFY switchingFromActiveTaskChanged)
 
     Q_PROPERTY(bool filterByVirtualDesktop READ filterByVirtualDesktop WRITE setFilterByVirtualDesktop NOTIFY filterByVirtualDesktopChanged)
     Q_PROPERTY(bool filterByScreen READ filterByScreen WRITE setFilterByScreen NOTIFY filterByScreenChanged)
@@ -108,26 +107,6 @@ public:
      * @param activity An activity id.
      **/
     void setActivity(const QString &activity);
-
-    /**
-     * Whether the activation of the task was triggered while
-     * on an active task.
-     * Needed to activate delayed reordering in SortLastActivated sort mode.
-     *
-     * @see setSwitchingFromActiveTask
-     * @returns @c true if the activation of a task was triggered while on an active task
-     **/
-    bool switchingFromActiveTask() const;
-
-    /**
-     * Set whether the activation of the task is triggered while on
-     * an active task.
-     *
-     * @see switchingFromActiveTask
-     * @param switchingFromActiveTask whether the activation
-     * of the task is triggered while on an active task.
-     **/
-    void setSwitchingFromActiveTask(const bool switchingFromActiveTask);
 
     /**
      * Whether tasks should be filtered by virtual desktop. Defaults to
@@ -323,7 +302,6 @@ Q_SIGNALS:
     void virtualDesktopChanged() const;
     void screenGeometryChanged() const;
     void activityChanged() const;
-    void switchingFromActiveTaskChanged() const;
     void filterByVirtualDesktopChanged() const;
     void filterByScreenChanged() const;
     void filterByActivityChanged() const;
