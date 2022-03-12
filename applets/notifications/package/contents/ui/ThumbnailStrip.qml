@@ -16,6 +16,8 @@ import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
 
 import org.kde.plasma.private.notifications 2.0 as Notifications
 
+import "global"
+
 DraggableFileArea {
     id: thumbnailArea
 
@@ -71,7 +73,9 @@ DraggableFileArea {
 
         url: urls[0]
         // height is dynamic, so request a "square" size and then show it fitting to aspect ratio
-        size: Qt.size(thumbnailArea.width, thumbnailArea.width)
+        // Also use popupWidth instead of our width to ensure it is fixed and doesn't
+        // change temporarily during (re)layouting
+        size: Qt.size(Globals.popupWidth, Globals.popupWidth)
     }
 
     KQCAddons.QPixmapItem {
