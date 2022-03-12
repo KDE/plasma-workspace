@@ -47,7 +47,7 @@ CalculatorRunner::~CalculatorRunner()
 void CalculatorRunner::userFriendlySubstitutions(QString &cmd)
 {
     if (QLocale().decimalPoint() != QLatin1Char('.')) {
-        cmd.replace(QLocale().decimalPoint(), QLatin1Char('.'), Qt::CaseInsensitive);
+        cmd.replace(QLocale().decimalPoint(), QLatin1String("."), Qt::CaseInsensitive);
     } else if (!cmd.contains(QLatin1Char('[')) && !cmd.contains(QLatin1Char(']'))) {
         // If we are sure that the user does not want to use vectors we can replace this char
         // Especially when switching between locales that use a different decimal separator
