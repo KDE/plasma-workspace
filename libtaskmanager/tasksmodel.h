@@ -12,6 +12,7 @@
 #include "abstracttasksmodeliface.h"
 
 #include "taskmanager_export.h"
+#include <QTimer>
 
 namespace TaskManager
 {
@@ -81,6 +82,7 @@ public:
         SortAlpha, /**< Tasks are sorted alphabetically, by AbstractTasksModel::AppName and Qt::DisplayRole. */
         SortVirtualDesktop, /**< Tasks are sorted by the virtual desktop they are on. */
         SortActivity, /**< Tasks are sorted by the number of tasks on the activities they're on. */
+        SortLastActivated, /**< Tasks are sorted by the last time they were active. */
     };
     Q_ENUM(SortMode)
 
@@ -98,6 +100,8 @@ public:
     Q_INVOKABLE int rowCount(const QModelIndex &parent = QModelIndex()) const override; // Invokable.
 
     QVariant data(const QModelIndex &proxyIndex, int role) const override;
+
+    QTimer *reorderTimer;
 
     /**
      * The number of launcher tasks in the tast list.
@@ -771,6 +775,15 @@ public:
     Q_INVOKABLE void requestActivities(const QModelIndex &index, const QStringList &activities) override;
 
     /**
+     * Request whether to enable delay in the reorder phase of tasks model when the sort mode is SortLastActivated.
+     *
+     * This base implementation does nothing.
+     *
+     * @param enableReorderDelay @c true to enable the delay
+     **/
+    Q_INVOKABLE void requestLastActivatedReorderDelay(const bool enableReorderDelay);
+
+    /**
      * Request informing the window manager of new geometry for a visual
      * delegate for the task at the given index. The geometry should be in
      * screen coordinates.
@@ -865,6 +878,7 @@ Q_SIGNALS:
     void virtualDesktopChanged() const;
     void screenGeometryChanged() const;
     void activityChanged() const;
+    void switchingFromActiveTaskChanged() const;
     void filterByVirtualDesktopChanged() const;
     void filterByScreenChanged() const;
     void filterByActivityChanged() const;

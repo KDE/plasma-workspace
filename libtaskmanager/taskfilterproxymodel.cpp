@@ -21,6 +21,7 @@ public:
     QVariant virtualDesktop;
     QRect screenGeometry;
     QString activity;
+    bool switchingFromActiveTask = false;
 
     bool filterByVirtualDesktop = false;
     bool filterByScreen = false;
@@ -107,6 +108,18 @@ void TaskFilterProxyModel::setActivity(const QString &activity)
 
         Q_EMIT activityChanged();
     }
+}
+
+bool TaskFilterProxyModel::switchingFromActiveTask() const
+{
+    return d->switchingFromActiveTask;
+}
+
+void TaskFilterProxyModel::setSwitchingFromActiveTask(const bool switchingFromActiveTask)
+{
+    d->switchingFromActiveTask = switchingFromActiveTask;
+
+    Q_EMIT switchingFromActiveTaskChanged();
 }
 
 bool TaskFilterProxyModel::filterByVirtualDesktop() const
