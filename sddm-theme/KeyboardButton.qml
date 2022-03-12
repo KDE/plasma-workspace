@@ -17,7 +17,7 @@ PlasmaComponents.ToolButton {
     onCurrentIndexChanged: keyboard.currentLayout = currentIndex
 
     text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Keyboard Layout: %1", instantiator.objectAt(currentIndex).shortName)
-    visible: menu.count > 1
+    visible: menu.count > 1 && !Qt.platform.pluginName.includes("wayland") // This menu needs porting to wayland https://github.com/sddm/sddm/issues/1528
 
     Component.onCompleted: {
         currentIndex = Qt.binding(() => keyboard.currentLayout);
