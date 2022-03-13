@@ -313,7 +313,7 @@ void Image::useSingleImageDefaults()
     if (m_wallpaper.isEmpty()) {
         Plasma::Theme theme;
         m_wallpaper = theme.wallpaperPath();
-        int index = m_wallpaper.indexOf(QString::fromLatin1("/contents/images/"));
+        int index = m_wallpaper.indexOf(QLatin1String("/contents/images/"));
         if (index > -1) { // We have file from package -> get path to package
             m_wallpaper = m_wallpaper.left(index);
         }

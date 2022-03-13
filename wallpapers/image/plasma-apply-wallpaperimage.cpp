@@ -74,7 +74,10 @@ int main(int argc, char **argv)
                 << "d.currentConfigGroup = ['Wallpaper', 'org.kde.image', 'General'];"
                 << "d.writeConfig('Image', 'file://" + wallpaperFile + "');"
                 << "}";
-            auto message = QDBusMessage::createMethodCall("org.kde.plasmashell", "/PlasmaShell", "org.kde.PlasmaShell", "evaluateScript");
+            auto message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
+                                                          QStringLiteral("/PlasmaShell"),
+                                                          QStringLiteral("org.kde.PlasmaShell"),
+                                                          QStringLiteral("evaluateScript"));
             message.setArguments(QVariantList() << QVariant(script));
             auto reply = QDBusConnection::sessionBus().call(message);
 

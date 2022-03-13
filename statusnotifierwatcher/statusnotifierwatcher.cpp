@@ -80,7 +80,7 @@ void StatusNotifierWatcher::serviceUnregistered(const QString &name)
     qDebug() << "Service " << name << "unregistered";
     m_serviceWatcher->removeWatchedService(name);
 
-    QString match = name + QLatin1Char('/');
+    const QString match = name + QLatin1Char('/');
     QStringList::Iterator it = m_registeredServices.begin();
     while (it != m_registeredServices.end()) {
         if (it->startsWith(match)) {

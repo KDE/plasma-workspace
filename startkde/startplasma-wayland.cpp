@@ -34,7 +34,7 @@ int main(int argc, char **argv)
         const QString locale1Service = QStringLiteral("org.freedesktop.locale1");
         const QString locale1Path = QStringLiteral("/org/freedesktop/locale1");
         QDBusMessage message =
-            QDBusMessage::createMethodCall(locale1Service, locale1Path, QStringLiteral("org.freedesktop.DBus.Properties"), QLatin1String("GetAll"));
+            QDBusMessage::createMethodCall(locale1Service, locale1Path, QStringLiteral("org.freedesktop.DBus.Properties"), QStringLiteral("GetAll"));
         message << locale1Service;
         QDBusMessage resultMessage = QDBusConnection::systemBus().call(message);
         if (resultMessage.type() == QDBusMessage::ReplyMessage) {
