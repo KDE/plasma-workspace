@@ -34,7 +34,7 @@ QList<QAction *> AppLauncher::contextualActions()
     return m_actions;
 }
 
-void AppLauncher::makeMenu(QMenu *menu, const KServiceGroup::Ptr group)
+void AppLauncher::makeMenu(QMenu *menu, const KServiceGroup::Ptr &group)
 {
     const auto entries = group->entries(true, true, true);
     for (const KSycocaEntry::Ptr &p : entries) {

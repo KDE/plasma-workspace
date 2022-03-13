@@ -23,7 +23,7 @@ class SwitchWindow : public Plasma::ContainmentActions
 {
     Q_OBJECT
 public:
-    SwitchWindow(QObject *parent, const QVariantList &args);
+    explicit SwitchWindow(QObject *parent, const QVariantList &args);
     ~SwitchWindow() override;
 
     void restore(const KConfigGroup &config) override;
@@ -53,7 +53,7 @@ private:
     Ui::Config m_ui;
     MenuMode m_mode;
 
-    TaskManager::VirtualDesktopInfo *m_virtualDesktopInfo;
+    TaskManager::VirtualDesktopInfo *const m_virtualDesktopInfo;
 
     static TaskManager::ActivityInfo *s_activityInfo;
     static TaskManager::TasksModel *s_tasksModel;

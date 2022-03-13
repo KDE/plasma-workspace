@@ -40,12 +40,12 @@ SessionsModel::SessionsModel(QObject *parent)
 
 bool SessionsModel::canSwitchUser() const
 {
-    return const_cast<SessionsModel *>(this)->m_displayManager.isSwitchable() && KAuthorized::authorizeAction(QLatin1String("switch_user"));
+    return const_cast<SessionsModel *>(this)->m_displayManager.isSwitchable() && KAuthorized::authorizeAction(QStringLiteral("switch_user"));
 }
 
 bool SessionsModel::canStartNewSession() const
 {
-    return const_cast<SessionsModel *>(this)->m_displayManager.numReserve() > 0 && KAuthorized::authorizeAction(QLatin1String("start_new_session"));
+    return const_cast<SessionsModel *>(this)->m_displayManager.numReserve() > 0 && KAuthorized::authorizeAction(QStringLiteral("start_new_session"));
 }
 
 bool SessionsModel::shouldLock() const

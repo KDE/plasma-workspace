@@ -33,5 +33,5 @@ private Q_SLOTS:
 
 private:
     QHash<int, QAction *> m_actions;
-    TaskManager::VirtualDesktopInfo *m_virtualDesktopInfo;
+    TaskManager::VirtualDesktopInfo *const m_virtualDesktopInfo;
 };

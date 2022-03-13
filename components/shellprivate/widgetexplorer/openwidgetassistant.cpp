@@ -24,9 +24,8 @@ namespace Plasma
 OpenWidgetAssistant::OpenWidgetAssistant(QWidget *parent)
     : KAssistantDialog(parent)
     , m_fileWidget(nullptr)
-    , m_filePageWidget(nullptr)
+    , m_filePageWidget(new QWidget(this))
 {
-    m_filePageWidget = new QWidget(this);
 
     QVBoxLayout *layout = new QVBoxLayout(m_filePageWidget);
     m_fileWidget = new KFileWidget(QUrl(), m_filePageWidget);
@@ -37,8 +36,7 @@ OpenWidgetAssistant::OpenWidgetAssistant(QWidget *parent)
     layout->addWidget(m_fileWidget);
 
     m_fileWidget->setFilter(QString());
-    QStringList mimes;
-    mimes << QStringLiteral("application/x-plasma");
+    const QStringList mimes{QStringLiteral("application/x-plasma")};
     m_fileWidget->setMimeFilter(mimes);
 
     m_filePage = new KPageWidgetItem(m_filePageWidget, i18n("Select Plasmoid File"));
@@ -55,7 +53,7 @@ void OpenWidgetAssistant::slotHelpClicked()
 void OpenWidgetAssistant::finished()
 {
     m_fileWidget->accept(); // how interesting .. accept() must be called before the state is set
-    QString packageFilePath = m_fileWidget->selectedFile();
+    const QString packageFilePath = m_fileWidget->selectedFile();
     if (packageFilePath.isEmpty()) {
         // TODO: user visible error handling
         qDebug() << "hm. no file path?";

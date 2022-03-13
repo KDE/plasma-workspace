@@ -68,7 +68,7 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
                                  QStringLiteral("DecorationFocus"),
                                  QStringLiteral("DecorationHover")};
 
-    for (auto item : colorSetGroupList) {
+    for (const auto &item : colorSetGroupList) {
         configOutput->deleteGroup(item);
 
         // Not all color schemes have header colors; in this case we don't want

@@ -73,7 +73,7 @@ public:
         HasApplet,
     };
 
-    explicit PlasmoidModel(QPointer<SystemTraySettings> settings, QPointer<PlasmoidRegistry> plasmoidRegistry, QObject *parent = nullptr);
+    explicit PlasmoidModel(const QPointer<SystemTraySettings> &settings, const QPointer<PlasmoidRegistry> &plasmoidRegistry, QObject *parent = nullptr);
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;

@@ -200,7 +200,7 @@ void DefaultItemFilterProxyModel::setFilter(const Filter &filter)
     Q_EMIT filterChanged();
 }
 
-void DefaultItemFilterProxyModel::setFilterType(const QString type)
+void DefaultItemFilterProxyModel::setFilterType(const QString &type)
 {
     m_filter.first = type;
     invalidateFilter();
@@ -212,7 +212,7 @@ QString DefaultItemFilterProxyModel::filterType() const
     return m_filter.first;
 }
 
-void DefaultItemFilterProxyModel::setFilterQuery(const QVariant query)
+void DefaultItemFilterProxyModel::setFilterQuery(const QVariant &query)
 {
     m_filter.second = query;
     invalidateFilter();

@@ -22,5 +22,5 @@ private Q_SLOTS:
     void doPaste();
 
 private:
-    QAction *m_action;
+    QAction *const m_action;
 };

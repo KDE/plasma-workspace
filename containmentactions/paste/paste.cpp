@@ -18,8 +18,8 @@
 
 Paste::Paste(QObject *parent, const QVariantList &args)
     : Plasma::ContainmentActions(parent, args)
+    , m_action(new QAction(this))
 {
-    m_action = new QAction(this);
     QObject::connect(m_action, &QAction::triggered, this, &Paste::doPaste);
 }
 

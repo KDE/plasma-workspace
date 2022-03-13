@@ -70,7 +70,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
     QApplication app(argc, argv);
 
-    ScreenPoolTester screenPoolTester();
+    ScreenPoolTester screenPoolTester;
 
     return app.exec();
 }

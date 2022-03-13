@@ -184,7 +184,7 @@ void ThemesModel::load()
         });
         if (!hasPluginName) {
             // Plasma Theme creates a KColorScheme out of the "color" file and falls back to system colors if there is none
-            const QString colorsPath = themeRoot + QLatin1String("/colors");
+            const QString colorsPath = themeRoot + QStringLiteral("/colors");
             const bool followsSystemColors = !QFileInfo::exists(colorsPath);
             ColorType type = FollowsColorTheme;
             if (!followsSystemColors) {

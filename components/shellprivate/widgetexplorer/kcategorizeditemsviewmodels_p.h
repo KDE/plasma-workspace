@@ -130,10 +130,10 @@ public:
     void setSearchTerm(const QString &pattern);
     QString searchTerm() const;
 
-    void setFilterType(const QString type);
+    void setFilterType(const QString &type);
     QString filterType() const;
 
-    void setFilterQuery(const QVariant query);
+    void setFilterQuery(const QVariant &query);
     QVariant filterQuery() const;
 
     void setFilter(const Filter &filter);

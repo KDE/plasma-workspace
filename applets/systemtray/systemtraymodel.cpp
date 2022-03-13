@@ -88,7 +88,7 @@ static QString plasmoidCategoryForMetadata(const KPluginMetaData &metadata)
     return category;
 }
 
-PlasmoidModel::PlasmoidModel(QPointer<SystemTraySettings> settings, QPointer<PlasmoidRegistry> plasmoidRegistry, QObject *parent)
+PlasmoidModel::PlasmoidModel(const QPointer<SystemTraySettings> &settings, const QPointer<PlasmoidRegistry> &plasmoidRegistry, QObject *parent)
     : BaseModel(settings, parent)
     , m_plasmoidRegistry(plasmoidRegistry)
 {
@@ -97,7 +97,7 @@ PlasmoidModel::PlasmoidModel(QPointer<SystemTraySettings> settings, QPointer<Pla
 
     const auto appletMetaDataList = m_plasmoidRegistry->systemTrayApplets();
     for (const auto &info : appletMetaDataList) {
-        if (!info.isValid() || info.value(QStringLiteral("X-Plasma-NotificationArea")) != "true") {
+        if (!info.isValid() || info.value(QStringLiteral("X-Plasma-NotificationArea")) != QLatin1String("true")) {
             continue;
         }
         appendRow(info);

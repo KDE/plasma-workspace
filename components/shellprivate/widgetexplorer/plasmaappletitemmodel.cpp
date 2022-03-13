@@ -133,7 +133,7 @@ bool PlasmaAppletItem::matches(const QString &pattern) const
         keywords << &name << m_info.value(QStringLiteral("Keywords"), QString()).splitRef(QLatin1Char(';'), Qt::SkipEmptyParts);
     }
 
-    for (const auto &keyword : keywords) {
+    for (const auto &keyword : std::as_const(keywords)) {
         if (keyword.startsWith(pattern, Qt::CaseInsensitive)) {
             return true;
         }

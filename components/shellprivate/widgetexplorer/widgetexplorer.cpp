@@ -132,7 +132,7 @@ void WidgetExplorerPrivate::initFilters()
         if (!plugin.isValid()) {
             continue;
         }
-        if (plugin.rawData().value("NoDisplay").toBool() || plugin.category() == QLatin1String("Containments") || plugin.category().isEmpty()) {
+        if (plugin.rawData().value(QStringLiteral("NoDisplay")).toBool() || plugin.category() == QLatin1String("Containments") || plugin.category().isEmpty()) {
             // we don't want to show the hidden category
             continue;
         }
@@ -453,7 +453,7 @@ void WidgetExplorer::immutabilityChanged(Plasma::Types::ImmutabilityType type)
 void WidgetExplorer::downloadWidgets()
 {
     if (!d->newStuffDialog) {
-        d->newStuffDialog = new KNS3::QtQuickDialogWrapper(QLatin1String("plasmoids.knsrc"));
+        d->newStuffDialog = new KNS3::QtQuickDialogWrapper(QStringLiteral("plasmoids.knsrc"));
     }
     d->newStuffDialog->open();
 

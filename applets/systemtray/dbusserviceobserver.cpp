@@ -17,7 +17,7 @@
 #include <QDBusPendingReply>
 #include <QDBusServiceWatcher>
 
-DBusServiceObserver::DBusServiceObserver(QPointer<SystemTraySettings> settings, QObject *parent)
+DBusServiceObserver::DBusServiceObserver(const QPointer<SystemTraySettings> &settings, QObject *parent)
     : QObject(parent)
     , m_settings(settings)
     , m_sessionServiceWatcher(new QDBusServiceWatcher(this))
@@ -64,7 +64,7 @@ void DBusServiceObserver::registerPlugin(const KPluginMetaData &pluginMetaData)
         rx.setPatternSyntax(QRegExp::Wildcard);
         m_dbusActivatableTasks[pluginMetaData.pluginId()] = rx;
 
-        const QString watchedService = QString(dbusactivation).replace(".*", "*");
+        const QString watchedService = QString(dbusactivation).replace(QLatin1String(".*"), QLatin1String("*"));
         m_sessionServiceWatcher->addWatchedService(watchedService);
         m_systemServiceWatcher->addWatchedService(watchedService);
     }
@@ -74,7 +74,7 @@ void DBusServiceObserver::unregisterPlugin(const QString &pluginId)
 {
     if (m_dbusActivatableTasks.contains(pluginId)) {
         QRegExp rx = m_dbusActivatableTasks.take(pluginId);
-        const QString watchedService = rx.pattern().replace(".*", "*");
+        const QString watchedService = rx.pattern().replace(QLatin1String(".*"), QLatin1String("*"));
         m_sessionServiceWatcher->removeWatchedService(watchedService);
         m_systemServiceWatcher->removeWatchedService(watchedService);
     }

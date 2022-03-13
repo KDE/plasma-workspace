@@ -29,14 +29,6 @@
 
 ContextMenu::ContextMenu(QObject *parent, const QVariantList &args)
     : Plasma::ContainmentActions(parent, args)
-    , m_runCommandAction(nullptr)
-    , m_lockScreenAction(nullptr)
-    , m_logoutAction(nullptr)
-    , m_configureDisplaysAction(nullptr)
-    , m_separator1(nullptr)
-    , m_separator2(nullptr)
-    , m_separator3(nullptr)
-    , m_buttons(nullptr)
     , m_session(new SessionManagement(this))
 {
 }

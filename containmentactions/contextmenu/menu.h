@@ -33,17 +33,17 @@ public Q_SLOTS:
     void configureDisplays();
 
 private:
-    QAction *m_runCommandAction;
-    QAction *m_lockScreenAction;
-    QAction *m_logoutAction;
-    QAction *m_configureDisplaysAction;
-    QAction *m_separator1;
-    QAction *m_separator2;
-    QAction *m_separator3;
+    QAction *m_runCommandAction = nullptr;
+    QAction *m_lockScreenAction = nullptr;
+    QAction *m_logoutAction = nullptr;
+    QAction *m_configureDisplaysAction = nullptr;
+    QAction *m_separator1 = nullptr;
+    QAction *m_separator2 = nullptr;
+    QAction *m_separator3 = nullptr;
 
     // action name and whether it is enabled or not
     QHash<QString, bool> m_actions;
     QStringList m_actionOrder;
-    QButtonGroup *m_buttons;
-    SessionManagement *m_session;
+    QButtonGroup *m_buttons = nullptr;
+    SessionManagement *const m_session;
 };

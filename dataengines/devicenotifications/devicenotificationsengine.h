@@ -27,5 +27,5 @@ private Q_SLOTS:
     void clearNotification(const QString &udi);
 
 private:
-    KSolidNotify *m_solidNotify;
+    KSolidNotify *const m_solidNotify;
 };

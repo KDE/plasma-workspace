@@ -24,7 +24,7 @@ class DBusServiceObserver : public QObject
 {
     Q_OBJECT
 public:
-    explicit DBusServiceObserver(QPointer<SystemTraySettings> settings, QObject *parent = nullptr);
+    explicit DBusServiceObserver(const QPointer<SystemTraySettings> &settings, QObject *parent = nullptr);
 
     void registerPlugin(const KPluginMetaData &pluginMetaData);
     void unregisterPlugin(const QString &pluginId);

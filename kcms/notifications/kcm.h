@@ -100,10 +100,10 @@ private:
     bool isDefaults() const override;
     void createConnections(NotificationManager::BehaviorSettings *settings, const QModelIndex &index);
 
-    SourcesModel *m_sourcesModel;
-    FilterProxyModel *m_filteredModel;
+    SourcesModel *const m_sourcesModel;
+    FilterProxyModel *const m_filteredModel;
 
-    NotificationsData *m_data;
+    NotificationsData *const m_data;
 
     QAction *m_toggleDoNotDisturbAction;
     QKeySequence m_toggleDoNotDisturbShortcut;

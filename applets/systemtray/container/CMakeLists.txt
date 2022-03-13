@@ -3,6 +3,7 @@ plasma_install_package(package org.kde.plasma.systemtray)
 
 set(systemtraycontainer_SRCS
     systemtraycontainer.cpp
+    systemtraycontainer.h
 )
 
 ecm_qt_declare_logging_category(systemtraycontainer_SRCS HEADER debug.h

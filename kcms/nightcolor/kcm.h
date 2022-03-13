@@ -25,7 +25,7 @@ public:
     NightColorSettings *nightColorSettings() const;
 
 private:
-    NightColorData *m_data;
+    NightColorData *const m_data;
 };
 
 }
