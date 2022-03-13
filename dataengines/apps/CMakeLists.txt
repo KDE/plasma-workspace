@@ -3,6 +3,10 @@ set(apps_engine_SRCS
     appsource.cpp
     appservice.cpp
     appjob.cpp
+    appsengine.h
+    appsource.h
+    appservice.h
+    appjob.h
 )
 
 add_library(plasma_engine_apps MODULE ${apps_engine_SRCS})

@@ -12,6 +12,13 @@ set(kcm_style_PART_SRCS
     gtkpage.cpp
     previewitem.cpp
     styledata.cpp
+    styleconfdialog.h
+    kcmstyle.h
+    stylesmodel.h
+    gtkthemesmodel.h
+    gtkpage.h
+    previewitem.h
+    styledata.h
 )
 qt_add_dbus_interface(kcm_style_PART_SRCS ${KDED_DBUS_INTERFACE} kded_interface)
 qt_add_dbus_interface(kcm_style_PART_SRCS org.kde.GtkConfig.xml kdegtkconfig_interface)

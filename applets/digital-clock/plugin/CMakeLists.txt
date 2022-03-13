@@ -13,6 +13,11 @@ set(digitalclockplugin_SRCS
     digitalclockplugin.cpp
     clipboardmenu.cpp
     applicationintegration.cpp
+    timezonemodel.h
+    timezonesi18n.h
+    digitalclockplugin.h
+    clipboardmenu.h
+    applicationintegration.h
     )
 
 add_library(digitalclockplugin SHARED ${digitalclockplugin_SRCS})

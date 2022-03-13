@@ -5,6 +5,9 @@ set(kcm_desktoptheme_SRCS
   kcm.cpp
   themesmodel.cpp
   filterproxymodel.cpp
+  kcm.h
+  themesmodel.h
+  filterproxymodel.h
 )
 
 kcmutils_generate_module_data(

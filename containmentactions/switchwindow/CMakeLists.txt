@@ -2,6 +2,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"plasma_containmentactions_switchwindow\")
 
 set(switchwindow_SRCS
     switch.cpp
+    switch.h
 )
 ki18n_wrap_ui(switchwindow_SRCS config.ui)
 

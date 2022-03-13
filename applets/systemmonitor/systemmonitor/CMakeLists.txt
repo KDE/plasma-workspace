@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(plasma_applet_systemmonitor SOURCES systemmonitor.cpp INSTALL_NAMESPACE "plasma/applets")
+kcoreaddons_add_plugin(plasma_applet_systemmonitor SOURCES systemmonitor.cpp systemmonitor.h INSTALL_NAMESPACE "plasma/applets")
 
 target_link_libraries(plasma_applet_systemmonitor
                       Qt::Gui

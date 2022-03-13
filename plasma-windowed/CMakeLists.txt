@@ -4,6 +4,8 @@ add_definitions(-DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT)
 set(plasmawindowed-app_SRCS
     plasmawindowedcorona.cpp
     plasmawindowedview.cpp
+    plasmawindowedcorona.h
+    plasmawindowedview.h
     main.cpp
 )
 

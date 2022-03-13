@@ -4,6 +4,7 @@ include_directories(${plasma-workspace_SOURCE_DIR}/libkworkspace)
 
 set(contextmenu_SRCS
     menu.cpp
+    menu.h
 )
 
 set(krunner_xml ${plasma-workspace_SOURCE_DIR}/krunner/dbus/org.kde.krunner.App.xml)
