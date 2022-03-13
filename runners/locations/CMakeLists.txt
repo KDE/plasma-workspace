@@ -4,7 +4,7 @@ set(krunner_locations_SRCS
     locationrunner.cpp
 )
 
-kcoreaddons_add_plugin(locations SOURCES ${krunner_locations_SRCS} INSTALL_NAMESPACE "kf5/krunner")
+kcoreaddons_add_plugin(locations SOURCES ${krunner_locations_SRCS} INSTALL_NAMESPACE "kf${QT_MAJOR_VERSION}/krunner")
 target_link_libraries(locations
     KF5::KIOCore
     KF5::KIOWidgets

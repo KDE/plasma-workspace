@@ -35,7 +35,7 @@ target_link_libraries(krunner_bookmarks_common
     KF5::Bookmarks
 )
 
-kcoreaddons_add_plugin(krunner_bookmarksrunner SOURCES bookmarksrunner.cpp browserfactory.cpp INSTALL_NAMESPACE "kf5/krunner")
+kcoreaddons_add_plugin(krunner_bookmarksrunner SOURCES bookmarksrunner.cpp browserfactory.cpp INSTALL_NAMESPACE "kf${QT_MAJOR_VERSION}/krunner")
 target_link_libraries(krunner_bookmarksrunner krunner_bookmarks_common)
 
 # Currently tests include only chrome, so no need to get include them if json is not found

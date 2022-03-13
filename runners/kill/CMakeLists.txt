@@ -5,7 +5,7 @@ set(kcm_krunner_kill_SRCS
 )
 
 ki18n_wrap_ui(kcm_krunner_kill_SRCS killrunner_config.ui)
-kcoreaddons_add_plugin(kcm_krunner_kill SOURCES ${kcm_krunner_kill_SRCS} INSTALL_NAMESPACE "kf5/krunner/kcms")
+kcoreaddons_add_plugin(kcm_krunner_kill SOURCES ${kcm_krunner_kill_SRCS} INSTALL_NAMESPACE "kf${QT_MAJOR_VERSION}/krunner/kcms")
 target_link_libraries(kcm_krunner_kill
     Qt::Core
     Qt::Gui
@@ -17,7 +17,7 @@ target_link_libraries(kcm_krunner_kill
     KF5::Runner
     )
 
-kcoreaddons_add_plugin(krunner_kill SOURCES killrunner.cpp INSTALL_NAMESPACE "kf5/krunner")
+kcoreaddons_add_plugin(krunner_kill SOURCES killrunner.cpp INSTALL_NAMESPACE "kf${QT_MAJOR_VERSION}/krunner")
 target_link_libraries(krunner_kill
                       KF5::I18n
                       KF5::Completion

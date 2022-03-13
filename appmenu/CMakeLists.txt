@@ -13,7 +13,7 @@ qt_add_dbus_adaptor(kded_appmenu_SRCS com.canonical.AppMenu.Registrar.xml
 qt_add_dbus_adaptor(kded_appmenu_SRCS org.kde.kappmenu.xml
     appmenu_dbus.h AppmenuDBus appmenuadaptor AppmenuAdaptor)
 
-kcoreaddons_add_plugin(appmenu SOURCES ${kded_appmenu_SRCS} INSTALL_NAMESPACE "kf5/kded")
+kcoreaddons_add_plugin(appmenu SOURCES ${kded_appmenu_SRCS} INSTALL_NAMESPACE "kf${QT_MAJOR_VERSION}/kded")
 
 pkg_check_modules(XKBCommon REQUIRED IMPORTED_TARGET xkbcommon)
 
