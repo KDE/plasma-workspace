@@ -10,7 +10,7 @@
 
 #include <QDebug>
 
-AppSource::AppSource(KServiceGroup::Ptr group, QObject *parent)
+AppSource::AppSource(const KServiceGroup::Ptr &group, QObject *parent)
     : Plasma::DataContainer(parent)
     , m_group(group)
     , m_app()
@@ -21,7 +21,7 @@ AppSource::AppSource(KServiceGroup::Ptr group, QObject *parent)
     updateGroup();
 }
 
-AppSource::AppSource(KService::Ptr app, QObject *parent)
+AppSource::AppSource(const KService::Ptr &app, QObject *parent)
     : Plasma::DataContainer(parent)
     , m_group()
     , m_app(app)

@@ -21,7 +21,7 @@ class SpacersTracker : public QObject
     Q_OBJECT
 
 public:
-    SpacersTracker(QObject *parent = nullptr);
+    explicit SpacersTracker(QObject *parent = nullptr);
     ~SpacersTracker() override;
 
     static SpacersTracker *self();

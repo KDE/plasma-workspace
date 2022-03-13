@@ -40,8 +40,8 @@ protected:
 
 AppMenuModel::AppMenuModel(QObject *parent)
     : QAbstractListModel(parent)
-    , m_serviceWatcher(new QDBusServiceWatcher(this))
     , m_tasksModel(new TaskManager::TasksModel(this))
+    , m_serviceWatcher(new QDBusServiceWatcher(this))
 {
     m_tasksModel->setFilterByScreen(true);
     connect(m_tasksModel, &TaskManager::TasksModel::activeTaskChanged, this, &AppMenuModel::onActiveWindowChanged);

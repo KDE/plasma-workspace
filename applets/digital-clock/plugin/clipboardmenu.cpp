@@ -37,7 +37,7 @@ bool ClipboardMenu::secondsIncluded() const
     return m_secondsIncluded;
 }
 
-void ClipboardMenu::setSecondsIncluded(const bool &secondsIncluded)
+void ClipboardMenu::setSecondsIncluded(bool secondsIncluded)
 {
     if (m_secondsIncluded != secondsIncluded) {
         m_secondsIncluded = secondsIncluded;

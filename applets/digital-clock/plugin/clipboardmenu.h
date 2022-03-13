@@ -26,7 +26,7 @@ public:
     void setCurrentDate(const QDateTime &date);
 
     bool secondsIncluded() const;
-    void setSecondsIncluded(const bool &secondsIncluded);
+    void setSecondsIncluded(bool secondsIncluded);
 
     Q_INVOKABLE void setupMenu(QAction *action);
 
