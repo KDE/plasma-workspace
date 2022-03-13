@@ -6,6 +6,11 @@ set(hotplug_engine_SRCS
     hotplugengine.cpp
     hotplugservice.cpp
     hotplugjob.cpp
+    deviceaction.h
+    deviceserviceaction.h
+    hotplugengine.h
+    hotplugservice.h
+    hotplugjob.h
 )
 
 kcoreaddons_add_plugin(plasma_engine_hotplug SOURCES ${hotplug_engine_SRCS} INSTALL_NAMESPACE plasma/dataengine)

@@ -3,6 +3,8 @@ add_definitions(-DTRANSLATION_DOMAIN=\"plasma_engine_keystate\")
 set(keystate_engine_SRCS
     keystate.cpp
     keyservice.cpp
+    keystate.h
+    keyservice.h
 )
 
 kcoreaddons_add_plugin(plasma_engine_keystate SOURCES ${keystate_engine_SRCS} INSTALL_NAMESPACE plasma/dataengine)

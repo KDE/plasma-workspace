@@ -7,6 +7,11 @@ set(statusnotifieritem_engine_SRCS
     statusnotifieritemservice.cpp
     statusnotifieritemjob.cpp
     systemtraytypes.cpp
+    statusnotifieritem_engine.h
+    statusnotifieritemsource.h
+    statusnotifieritemservice.h
+    statusnotifieritemjob.h
+    systemtraytypes.h
 )
 
 set(statusnotifierwatcher_xml ${KNOTIFICATIONS_DBUS_INTERFACES_DIR}/kf5_org.kde.StatusNotifierWatcher.xml)

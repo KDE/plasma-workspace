@@ -3,7 +3,9 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_autostart\")
 
 set(kcm_autostart_PART_SRCS
    autostartmodel.cpp
-   autostart.cpp )
+   autostart.cpp
+   autostartmodel.h
+   autostart.h)
 
 kcoreaddons_add_plugin(kcm_autostart SOURCES ${kcm_autostart_PART_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
 

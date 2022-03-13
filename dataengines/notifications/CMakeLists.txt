@@ -4,6 +4,9 @@ set(notifications_engine_SRCS
     notificationsengine.cpp
     notificationservice.cpp
     notificationaction.cpp
+    notificationsengine.h
+    notificationservice.h
+    notificationaction.h
 )
 
 ecm_qt_declare_logging_category(notifications_engine_SRCS HEADER debug.h

@@ -6,6 +6,12 @@ set(scheme_editor_SRCS
     scmeditoreffects.cpp
     previewwidget.cpp
     setpreviewwidget.cpp
+    scmeditordialog.h
+    scmeditoroptions.h
+    scmeditorcolors.h
+    scmeditoreffects.h
+    previewwidget.h
+    setpreviewwidget.h
 )
 
 ki18n_wrap_ui(scheme_editor_SRCS

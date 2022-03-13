@@ -2,6 +2,7 @@ include_directories( ${CMAKE_CURRENT_BINARY_DIR}/../../)
 
 set(mouse_engine_SRCS
     mouseengine.cpp
+    mouseengine.h
 )
 
 if (X11_Xfixes_FOUND)

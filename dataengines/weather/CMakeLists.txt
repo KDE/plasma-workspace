@@ -12,7 +12,7 @@ add_definitions(
 
 add_subdirectory(ions)
 
-set(weather_SRCS weatherengine.cpp)
+set(weather_SRCS weatherengine.cpp weatherengine.h)
 ecm_qt_declare_logging_category(weather_SRCS
     HEADER weatherenginedebug.h
     IDENTIFIER WEATHER

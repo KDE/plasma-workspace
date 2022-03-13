@@ -1,5 +1,6 @@
 set(executable_engine_SRCS
     executable.cpp
+    executable.h
 )
 
 kcoreaddons_add_plugin(plasma_engine_executable SOURCES ${executable_engine_SRCS} INSTALL_NAMESPACE plasma/dataengine)

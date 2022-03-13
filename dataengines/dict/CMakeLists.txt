@@ -2,6 +2,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"plasma_engine_dict\")
 
 set(dict_engine_SRCS
     dictengine.cpp
+    dictengine.h
 )
 
 add_library(plasma_engine_dict MODULE ${dict_engine_SRCS})

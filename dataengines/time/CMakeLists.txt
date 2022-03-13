@@ -4,6 +4,9 @@ set(time_engine_SRCS
     timeengine.cpp
     timesource.cpp
     solarsystem.cpp
+    timeengine.h
+    timesource.h
+    solarsystem.h
 )
 
 ecm_qt_declare_logging_category(time_engine_SRCS HEADER debug.h

@@ -3,6 +3,8 @@ add_definitions(-DTRANSLATION_DOMAIN=\"plasma_engine_devicenotifications\")
 set(device_notifications_engine_SRCS
     devicenotificationsengine.cpp
     ksolidnotify.cpp
+    devicenotificationsengine.h
+    ksolidnotify.h
 )
 
 add_library(plasma_engine_devicenotifications MODULE ${device_notifications_engine_SRCS})

@@ -4,6 +4,9 @@ set(powermanagement_engine_SRCS
     powermanagementengine.cpp
     powermanagementjob.cpp
     powermanagementservice.cpp
+    powermanagementengine.h
+    powermanagementjob.h
+    powermanagementservice.h
 )
 
 set(krunner_xml ${plasma-workspace_SOURCE_DIR}/krunner/dbus/org.kde.krunner.App.xml)

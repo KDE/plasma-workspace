@@ -7,6 +7,12 @@ set(soliddevice_engine_SRCS
     hddtemp.cpp
     soliddeviceservice.cpp
     soliddevicejob.cpp
+    soliddeviceengine.h
+    devicesignalmapper.h
+    devicesignalmapmanager.h
+    hddtemp.h
+    soliddeviceservice.h
+    soliddevicejob.h
 )
 
 kcoreaddons_add_plugin(plasma_engine_soliddevice SOURCES ${soliddevice_engine_SRCS} INSTALL_NAMESPACE plasma/dataengine)

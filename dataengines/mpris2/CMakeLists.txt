@@ -8,6 +8,12 @@ set(mpris2_engine_SRCS
     playercontrol.cpp
     playeractionjob.cpp
     playercontainer.cpp
+    mpris2engine.h
+    multiplexer.h
+    multiplexedservice.h
+    playercontrol.h
+    playeractionjob.h
+    playercontainer.h
 )
 
 ecm_qt_declare_logging_category(mpris2_engine_SRCS HEADER debug.h

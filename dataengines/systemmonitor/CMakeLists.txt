@@ -1,6 +1,7 @@
 
 set(systemmonitor_engine_SRCS
    systemmonitor.cpp
+   systemmonitor.h
 )
 
 kcoreaddons_add_plugin(plasma_engine_systemmonitor SOURCES ${systemmonitor_engine_SRCS} INSTALL_NAMESPACE plasma/dataengine)
