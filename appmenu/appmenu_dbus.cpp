@@ -28,7 +28,7 @@ AppmenuDBus::~AppmenuDBus()
 bool AppmenuDBus::connectToBus(const QString &service, const QString &path)
 {
     m_service = service.isEmpty() ? DBUS_SERVICE : service;
-    QString newPath = path.isEmpty() ? DBUS_OBJECT_PATH : path;
+    const QString newPath = path.isEmpty() ? DBUS_OBJECT_PATH : path;
 
     if (!QDBusConnection::sessionBus().registerService(m_service)) {
         return false;

@@ -1,6 +1,8 @@
 set(appmenuapplet_SRCS
     appmenumodel.cpp
     appmenuplugin.cpp
+    appmenumodel.h
+    appmenuplugin.h
 )
 
 add_library(appmenuplugin SHARED ${appmenuapplet_SRCS})

@@ -16,6 +16,9 @@
 
 #include <KLocalizedString>
 #include <KSycoca>
+#include <chrono>
+
+using namespace std::chrono_literals;
 
 AppsModel::AppsModel(const QString &entryPath, bool paginate, int pageSize, bool flat, bool sorted, bool separators, QObject *parent)
     : AbstractModel(parent)
@@ -41,7 +44,7 @@ AppsModel::AppsModel(const QString &entryPath, bool paginate, int pageSize, bool
     }
 }
 
-AppsModel::AppsModel(const QList<AbstractEntry *> entryList, bool deleteEntriesOnDestruction, QObject *parent)
+AppsModel::AppsModel(const QList<AbstractEntry *> &entryList, bool deleteEntriesOnDestruction, QObject *parent)
     : AbstractModel(parent)
     , m_complete(false)
     , m_paginate(false)
@@ -190,15 +193,15 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
             appletConfig = qobject_cast<QQmlPropertyMap *>(appletInterface->property("configuration").value<QObject *>());
         }
 
-        if (appletConfig && appletConfig->contains(QLatin1String("hiddenApplications"))) {
-            QStringList hiddenApps = appletConfig->value(QLatin1String("hiddenApplications")).toStringList();
+        if (appletConfig && appletConfig->contains(QStringLiteral("hiddenApplications"))) {
+            QStringList hiddenApps = appletConfig->value(QStringLiteral("hiddenApplications")).toStringList();
 
             KService::Ptr service = static_cast<const AppEntry *>(entry)->service();
 
             if (!hiddenApps.contains(service->menuId())) {
                 hiddenApps << service->menuId();
 
-                appletConfig->insert(QLatin1String("hiddenApplications"), hiddenApps);
+                appletConfig->insert(QStringLiteral("hiddenApplications"), hiddenApps);
                 QMetaObject::invokeMethod(appletConfig,
                                           "valueChanged",
                                           Qt::DirectConnection,
@@ -219,8 +222,8 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
             appletConfig = qobject_cast<QQmlPropertyMap *>(appletInterface->property("configuration").value<QObject *>());
         }
 
-        if (appletConfig && appletConfig->contains(QLatin1String("hiddenApplications"))) {
-            QStringList hiddenApps = appletConfig->value(QLatin1String("hiddenApplications")).toStringList();
+        if (appletConfig && appletConfig->contains(QStringLiteral("hiddenApplications"))) {
+            QStringList hiddenApps = appletConfig->value(QStringLiteral("hiddenApplications")).toStringList();
 
             for (const QString &app : std::as_const(m_hiddenEntries)) {
                 hiddenApps.removeOne(app);
@@ -248,14 +251,14 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
             appletConfig = qobject_cast<QQmlPropertyMap *>(appletInterface->property("configuration").value<QObject *>());
         }
 
-        if (entry->type() == AbstractEntry::GroupType && appletConfig && appletConfig->contains(QLatin1String("hiddenApplications"))) {
+        if (entry->type() == AbstractEntry::GroupType && appletConfig && appletConfig->contains(QStringLiteral("hiddenApplications"))) {
             const AppsModel *appsModel = qobject_cast<const AppsModel *>(entry->childModel());
 
             if (!appsModel) {
                 return false;
             }
 
-            QStringList hiddenApps = appletConfig->value(QLatin1String("hiddenApplications")).toStringList();
+            QStringList hiddenApps = appletConfig->value(QStringLiteral("hiddenApplications")).toStringList();
 
             const QStringList hiddenEntries = appsModel->hiddenEntries();
             for (const QString &app : hiddenEntries) {
@@ -466,7 +469,7 @@ void AppsModel::refresh()
     Q_EMIT separatorCountChanged();
 }
 
-static bool containsSameStorageId(const QList<AbstractEntry *> &entryList, KService::Ptr service)
+static bool containsSameStorageId(const QList<AbstractEntry *> &entryList, const KService::Ptr &service)
 {
     return std::any_of(entryList.cbegin(), entryList.cend(), [=](const AbstractEntry *entry) {
         return entry->type() == AbstractEntry::RunnableType && static_cast<const AppEntry *>(entry)->service()->storageId() == service->storageId();
@@ -546,7 +549,7 @@ void AppsModel::refreshInternal()
 
         m_changeTimer = new QTimer(this);
         m_changeTimer->setSingleShot(true);
-        m_changeTimer->setInterval(100);
+        m_changeTimer->setInterval(100ms);
         connect(m_changeTimer, SIGNAL(timeout()), this, SLOT(refresh()));
 
         connect(KSycoca::self(), &KSycoca::databaseChanged, this, [this]() {
@@ -627,8 +630,8 @@ void AppsModel::processServiceGroup(KServiceGroup::Ptr group)
     if (appletInterface) {
         appletConfig = qobject_cast<QQmlPropertyMap *>(appletInterface->property("configuration").value<QObject *>());
     }
-    if (appletConfig && appletConfig->contains(QLatin1String("hiddenApplications"))) {
-        hiddenApps = appletConfig->value(QLatin1String("hiddenApplications")).toStringList();
+    if (appletConfig && appletConfig->contains(QStringLiteral("hiddenApplications"))) {
+        hiddenApps = appletConfig->value(QStringLiteral("hiddenApplications")).toStringList();
     }
 
     for (KServiceGroup::List::ConstIterator it = list.constBegin(); it != list.constEnd(); it++) {

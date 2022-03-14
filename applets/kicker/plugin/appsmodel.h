@@ -40,7 +40,7 @@ public:
                        bool sorted = true,
                        bool separators = true,
                        QObject *parent = nullptr);
-    explicit AppsModel(const QList<AbstractEntry *> entryList, bool deleteEntriesOnDestruction, QObject *parent = nullptr);
+    explicit AppsModel(const QList<AbstractEntry *> &entryList, bool deleteEntriesOnDestruction, QObject *parent = nullptr);
     ~AppsModel() override;
 
     QString description() const override;

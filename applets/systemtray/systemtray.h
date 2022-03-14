@@ -87,11 +87,11 @@ private:
     QPointer<SystemTraySettings> m_settings;
     QPointer<PlasmoidRegistry> m_plasmoidRegistry;
 
-    PlasmoidModel *m_plasmoidModel;
-    StatusNotifierModel *m_statusNotifierModel;
-    SystemTrayModel *m_systemTrayModel;
-    SortedSystemTrayModel *m_sortedSystemTrayModel;
-    SortedSystemTrayModel *m_configSystemTrayModel;
+    PlasmoidModel *m_plasmoidModel = nullptr;
+    StatusNotifierModel *m_statusNotifierModel = nullptr;
+    SystemTrayModel *m_systemTrayModel = nullptr;
+    SortedSystemTrayModel *m_sortedSystemTrayModel = nullptr;
+    SortedSystemTrayModel *m_configSystemTrayModel = nullptr;
 
     QHash<QString /*plugin id*/, int /*config group*/> m_configGroupIds;
 };

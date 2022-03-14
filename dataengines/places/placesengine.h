@@ -23,6 +23,6 @@ public:
     Plasma::Service *serviceForSource(const QString &source) override;
 
 private:
-    KFilePlacesModel *m_placesModel;
-    PlacesProxyModel *m_proxyModel;
+    KFilePlacesModel *m_placesModel = nullptr;
+    PlacesProxyModel *m_proxyModel = nullptr;
 };

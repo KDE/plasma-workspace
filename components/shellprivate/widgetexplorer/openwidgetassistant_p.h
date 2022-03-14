@@ -25,9 +25,9 @@ protected Q_SLOTS:
     void slotHelpClicked();
 
 private:
-    KPageWidgetItem *m_filePage;
-    KFileWidget *m_fileWidget;
-    QWidget *m_filePageWidget;
+    KPageWidgetItem *m_filePage = nullptr;
+    KFileWidget *m_fileWidget = nullptr;
+    QWidget *const m_filePageWidget;
 };
 
 } // Plasma namespace

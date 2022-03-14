@@ -82,9 +82,9 @@ QVariantList createActionListForFileItem(const KFileItem &fileItem)
     if (!services.isEmpty()) {
         list << createTitleActionItem(i18n("Open with:"));
 
-        for (const KService::Ptr service : services) {
+        for (const KService::Ptr &service : services) {
             const QString text = service->name().replace(QLatin1Char('&'), QStringLiteral("&&"));
-            QVariantMap item = createActionItem(text, service->icon(), QStringLiteral("_kicker_fileItem_openWith"), service->entryPath());
+            const QVariantMap item = createActionItem(text, service->icon(), QStringLiteral("_kicker_fileItem_openWith"), service->entryPath());
 
             list << item;
         }
@@ -255,7 +255,7 @@ QVariantList systemSettingsActions()
     return list;
 }
 
-QVariantList recentDocumentActions(KService::Ptr service)
+QVariantList recentDocumentActions(const KService::Ptr &service)
 {
     QVariantList list;
 

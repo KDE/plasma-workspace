@@ -15,8 +15,6 @@
 
 HddTemp::HddTemp(QObject *parent)
     : QObject(parent)
-    , m_failCount(0)
-    , m_cacheValid(false)
 {
     updateData();
 }

@@ -45,7 +45,7 @@ bool handleAddLauncherAction(const QString &actionId, QObject *appletInterface, 
 QVariantList jumpListActions(KService::Ptr service);
 QVariantList systemSettingsActions();
 
-QVariantList recentDocumentActions(KService::Ptr service);
+QVariantList recentDocumentActions(const KService::Ptr &service);
 bool handleRecentDocumentAction(KService::Ptr service, const QString &actionId, const QVariant &argument);
 
 bool canEditApplication(const QString &entryPath);

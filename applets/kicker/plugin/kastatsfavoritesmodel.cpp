@@ -167,7 +167,7 @@ public:
         }
     }
 
-    Private(KAStatsFavoritesModel *parent, QString clientId)
+    Private(KAStatsFavoritesModel *parent, const QString &clientId)
         : q(parent)
         , m_query(LinkedResources | Agent{AGENT_APPLICATIONS, AGENT_CONTACTS, AGENT_DOCUMENTS} | Type::any() | Activity::current() | Activity::global()
                   | Limit::all())

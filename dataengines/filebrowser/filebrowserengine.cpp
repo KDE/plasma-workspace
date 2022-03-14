@@ -19,11 +19,10 @@
 
 FileBrowserEngine::FileBrowserEngine(QObject *parent, const QVariantList &args)
     : Plasma::DataEngine(parent, args)
-    , m_dirWatch(nullptr)
+    , m_dirWatch(new KDirWatch(this))
 {
     Q_UNUSED(args)
 
-    m_dirWatch = new KDirWatch(this);
     connect(m_dirWatch, &KDirWatch::created, this, &FileBrowserEngine::dirCreated);
     connect(m_dirWatch, &KDirWatch::deleted, this, &FileBrowserEngine::dirDeleted);
     connect(m_dirWatch, &KDirWatch::dirty, this, &FileBrowserEngine::dirDirty);

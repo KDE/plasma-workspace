@@ -178,8 +178,8 @@ QVariantList AppEntry::actions() const
     if (appletInterface) {
         QQmlPropertyMap *appletConfig = qobject_cast<QQmlPropertyMap *>(appletInterface->property("configuration").value<QObject *>());
 
-        if (appletConfig && appletConfig->contains(QLatin1String("hiddenApplications")) && qobject_cast<AppsModel *>(m_owner)) {
-            const QStringList &hiddenApps = appletConfig->value(QLatin1String("hiddenApplications")).toStringList();
+        if (appletConfig && appletConfig->contains(QStringLiteral("hiddenApplications")) && qobject_cast<AppsModel *>(m_owner)) {
+            const QStringList &hiddenApps = appletConfig->value(QStringLiteral("hiddenApplications")).toStringList();
 
             if (!hiddenApps.contains(m_service->menuId())) {
                 QVariantMap hideAction = Kicker::createActionItem(i18n("Hide Application"), QStringLiteral("view-hidden"), QStringLiteral("hideApplication"));
@@ -235,7 +235,7 @@ bool AppEntry::run(const QString &actionId, const QVariant &argument)
     return Kicker::handleRecentDocumentAction(m_service, actionId, argument);
 }
 
-QString AppEntry::nameFromService(const KService::Ptr service, NameFormat nameFormat)
+QString AppEntry::nameFromService(const KService::Ptr &service, NameFormat nameFormat)
 {
     const QString &name = service->name();
     QString genericName = service->genericName();
@@ -262,7 +262,7 @@ KService::Ptr AppEntry::defaultAppByName(const QString &name)
         QString browser = config.readPathEntry("BrowserApplication", QString());
 
         if (browser.isEmpty()) {
-            return KApplicationTrader::preferredService(QLatin1String("text/html"));
+            return KApplicationTrader::preferredService(QStringLiteral("text/html"));
         } else if (browser.startsWith(QLatin1Char('!'))) {
             browser.remove(0, 1);
         }

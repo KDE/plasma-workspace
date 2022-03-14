@@ -8,6 +8,9 @@
 #include "placeholdermodel.h"
 #include "actionlist.h"
 #include "debug.h"
+#include <chrono>
+
+using namespace std::chrono_literals;
 
 PlaceholderModel::PlaceholderModel(QObject *parent)
     : AbstractModel(parent)
@@ -19,7 +22,7 @@ PlaceholderModel::PlaceholderModel(QObject *parent)
         m_isTriggerInhibited = false;
     });
 
-    m_triggerInhibitor.setInterval(500);
+    m_triggerInhibitor.setInterval(500ms);
     m_triggerInhibitor.setSingleShot(true);
 }
 

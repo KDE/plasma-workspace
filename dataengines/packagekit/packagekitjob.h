@@ -17,6 +17,4 @@ public:
 
 protected:
     void start() override;
-
-private:
 };

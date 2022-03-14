@@ -19,7 +19,6 @@
 
 ContactEntry::ContactEntry(AbstractModel *owner, const QString &id)
     : AbstractEntry(owner)
-    , m_personData(nullptr)
 {
     if (!id.isEmpty()) {
         m_personData = new KPeople::PersonData(id);

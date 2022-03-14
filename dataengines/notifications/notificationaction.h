@@ -28,5 +28,5 @@ public:
     void start() override;
 
 private:
-    NotificationsEngine *m_engine;
+    NotificationsEngine *const m_engine;
 };

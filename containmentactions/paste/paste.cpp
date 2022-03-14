@@ -25,8 +25,7 @@ Paste::Paste(QObject *parent, const QVariantList &args)
 
 QList<QAction *> Paste::contextualActions()
 {
-    QList<QAction *> actions;
-    actions << m_action;
+    const QList<QAction *> actions{m_action};
 
     return actions;
 }

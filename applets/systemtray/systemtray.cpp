@@ -27,11 +27,6 @@
 
 SystemTray::SystemTray(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
     : Plasma::Containment(parent, data, args)
-    , m_plasmoidModel(nullptr)
-    , m_statusNotifierModel(nullptr)
-    , m_systemTrayModel(nullptr)
-    , m_sortedSystemTrayModel(nullptr)
-    , m_configSystemTrayModel(nullptr)
 {
     setHasConfigurationInterface(true);
     setContainmentType(Plasma::Types::CustomEmbeddedContainment);

@@ -43,7 +43,7 @@ private:
         DIRECTORY,
     };
 
-    KDirWatch *m_dirWatch;
+    KDirWatch *const m_dirWatch;
     void updateData(const QString &path, EventType event);
     void clearData(const QString &path);
 

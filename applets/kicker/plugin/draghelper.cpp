@@ -15,8 +15,6 @@
 
 DragHelper::DragHelper(QObject *parent)
     : QObject(parent)
-    , m_dragIconSize(32)
-    , m_dragging(false)
 {
 }
 

@@ -33,8 +33,8 @@ protected:
     void timerEvent(QTimerEvent *event) override;
 
 private:
-    int m_failCount;
-    bool m_cacheValid;
+    int m_failCount = 0;
+    bool m_cacheValid = false;
     QMap<QString, QList<QVariant>> m_data;
     bool updateData();
 };

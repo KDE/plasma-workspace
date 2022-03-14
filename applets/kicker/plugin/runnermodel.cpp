@@ -13,6 +13,9 @@
 #include <KLocalizedString>
 #include <KRunner/AbstractRunner>
 #include <KRunner/RunnerManager>
+#include <chrono>
+
+using namespace std::chrono_literals;
 
 RunnerModel::RunnerModel(QObject *parent)
     : QAbstractListModel(parent)
@@ -23,7 +26,7 @@ RunnerModel::RunnerModel(QObject *parent)
     , m_deleteWhenEmpty(false)
 {
     m_queryTimer.setSingleShot(true);
-    m_queryTimer.setInterval(10);
+    m_queryTimer.setInterval(10ms);
     connect(&m_queryTimer, &QTimer::timeout, this, &RunnerModel::startQuery);
 }
 

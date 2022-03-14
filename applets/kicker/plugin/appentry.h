@@ -50,7 +50,7 @@ public:
 
     QString menuId() const;
 
-    static QString nameFromService(const KService::Ptr service, NameFormat nameFormat);
+    static QString nameFromService(const KService::Ptr &service, NameFormat nameFormat);
     static KService::Ptr defaultAppByName(const QString &name);
 
 private:

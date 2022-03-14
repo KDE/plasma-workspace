@@ -61,7 +61,7 @@ void ClipboardMenu::setupMenu(QAction *action)
 
         const QDate date = m_currentDate.date();
         const QTime time = m_currentDate.time();
-        const QRegularExpression rx("[^0-9:]");
+        const QRegularExpression rx(QStringLiteral("[^0-9:]"));
         const QChar ws = QLatin1Char(' ');
         QString s;
         QAction *a;

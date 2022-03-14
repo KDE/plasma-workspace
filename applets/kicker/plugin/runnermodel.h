@@ -81,9 +81,9 @@ private:
     void createManager();
     void clear();
 
-    AbstractModel *m_favoritesModel;
-    QObject *m_appletInterface;
-    Plasma::RunnerManager *m_runnerManager;
+    AbstractModel *m_favoritesModel = nullptr;
+    QObject *m_appletInterface = nullptr;
+    Plasma::RunnerManager *m_runnerManager = nullptr;
     QStringList m_runners;
     QList<RunnerMatchesModel *> m_models;
     QString m_query;

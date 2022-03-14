@@ -61,8 +61,8 @@ Q_SIGNALS:
     void favoritesModelChanged() const;
 
 protected:
-    AbstractModel *m_favoritesModel;
+    AbstractModel *m_favoritesModel = nullptr;
 
 private:
-    int m_iconSize;
+    int m_iconSize = 32;
 };

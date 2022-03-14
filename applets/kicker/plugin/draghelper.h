@@ -42,8 +42,8 @@ Q_SIGNALS:
     void draggingChanged() const;
 
 private:
-    int m_dragIconSize;
-    bool m_dragging;
+    int m_dragIconSize = 32;
+    bool m_dragging = false;
     Q_INVOKABLE void doDrag(QQuickItem *item,
                             const QUrl &url = QUrl(),
                             const QIcon &icon = QIcon(),
