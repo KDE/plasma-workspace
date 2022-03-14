@@ -50,6 +50,9 @@ NotificationsModel::NotificationsModel()
         }
     });
     Server::self().init();
+
+    setInhibited(Server::self().inhibited());
+    connect(&Server::self(), &Server::inhibitedChanged, this, std::bind(&NotificationsModel::setInhibited, this, std::placeholders::_1));
 }
 
 void NotificationsModel::expire(uint notificationId)

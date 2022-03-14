@@ -26,6 +26,7 @@ using namespace NotificationManager;
 
 AbstractNotificationsModel::Private::Private(AbstractNotificationsModel *q)
     : q(q)
+    , inhibited(false)
     , lastRead(QDateTime::currentDateTimeUtc())
 {
     pendingRemovalTimer.setSingleShot(true);
@@ -67,10 +68,10 @@ void AbstractNotificationsModel::Private::onNotificationAdded(const Notification
         q->endRemoveRows();
     }
 
-    setupNotificationTimeout(notification);
-
     q->beginInsertRows(QModelIndex(), notifications.count(), notifications.count());
     notifications.append(std::move(notification));
+    // Timeout must be set after the item appends to the vector
+    setupNotificationTimeout(notification);
     q->endInsertRows();
 }
 
@@ -156,6 +157,12 @@ void AbstractNotificationsModel::Private::setupNotificationTimeout(const Notific
     if (notification.timeout() == 0) {
         // In case it got replaced by a persistent notification
         q->stopTimeout(notification.id());
+        return;
+    }
+
+    // Don't show the notification popup after switching DND mode off.
+    if (inhibited) {
+        q->expire(notification.id());
         return;
     }
 
@@ -424,6 +431,11 @@ void AbstractNotificationsModel::startTimeout(uint notificationId)
 void AbstractNotificationsModel::stopTimeout(uint notificationId)
 {
     delete d->notificationTimeouts.take(notificationId);
+}
+
+void AbstractNotificationsModel::setInhibited(bool inhibited)
+{
+    d->inhibited = inhibited;
 }
 
 void AbstractNotificationsModel::clear(Notifications::ClearFlags flags)
