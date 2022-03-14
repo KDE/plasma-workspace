@@ -294,7 +294,7 @@ QVariantList recentDocumentActions(const KService::Ptr &service)
             continue;
         }
 
-        const KFileItem fileItem(url);
+        const KFileItem fileItem(url, mimeType);
 
         if (!fileItem.isFile()) {
             continue;

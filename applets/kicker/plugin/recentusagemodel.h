@@ -98,7 +98,7 @@ private Q_SLOTS:
 
 private:
     QVariant appData(const QString &resource, int role) const;
-    QVariant docData(const QString &resource, int role) const;
+    QVariant docData(const QString &resource, int role, const QString &mimeType) const;
 
     QString resourceAt(int row) const;
     QVariant rowValueAt(int row, KActivities::Stats::ResultModel::Roles role) const;

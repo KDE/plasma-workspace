@@ -187,7 +187,8 @@ QVariant RecentUsageModel::data(const QModelIndex &index, int role) const
     if (resource.startsWith(QLatin1String("applications:"))) {
         return appData(resource, role);
     } else {
-        return docData(resource, role);
+        const QString &mimeType = rowValueAt(index.row(), ResultModel::MimeType).toString();
+        return docData(resource, role, mimeType);
     }
 }
 
@@ -257,7 +258,7 @@ QModelIndex RecentUsageModel::findPlaceForKFileItem(const KFileItem &fileItem) c
     return QModelIndex();
 }
 
-QVariant RecentUsageModel::docData(const QString &resource, int role) const
+QVariant RecentUsageModel::docData(const QString &resource, int role, const QString &mimeType) const
 {
     QUrl url(resource);
 
@@ -267,7 +268,11 @@ QVariant RecentUsageModel::docData(const QString &resource, int role) const
 
     auto getFileItem = [=]() {
         // Avoid calling QT_LSTAT and accessing recent documents
-        return KFileItem(url, KFileItem::SkipMimeTypeFromContent);
+        if (mimeType.simplified().isEmpty()) {
+            return KFileItem(url, KFileItem::SkipMimeTypeFromContent);
+        } else {
+            return KFileItem(url, mimeType);
+        }
     };
 
     if (!url.isValid()) {
@@ -349,7 +354,7 @@ bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant 
         const QString &mimeType = rowValueAt(row, ResultModel::MimeType).toString();
 
         if (!resource.startsWith(QLatin1String("applications:"))) {
-            const QUrl resourceUrl = docData(resource, Kicker::UrlRole).toUrl();
+            const QUrl resourceUrl = docData(resource, Kicker::UrlRole, mimeType).toUrl();
 
             auto job = new KIO::OpenUrlJob(resourceUrl);
             job->setRunExecutables(false);
