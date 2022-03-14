@@ -102,7 +102,7 @@ ContainmentLayoutManager.AppletContainer {
 
         property bool blurEnabled: false
         function syncBlurEnabled() {
-            blurEnabled = appletContainer.rotation === 0 && Plasmoid.GraphicsInfo.api !== GraphicsInfo.Software && hasElementPrefix("blurred");
+            blurEnabled = appletContainer.rotation === 0 && GraphicsInfo.api !== GraphicsInfo.Software && hasElementPrefix("blurred");
         }
         prefix: blurEnabled ? "blurred" : ""
         Component.onCompleted: syncBlurEnabled()
