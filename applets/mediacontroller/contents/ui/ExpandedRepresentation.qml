@@ -7,7 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.8
+import QtQuick 2.15
 import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -392,6 +392,45 @@ PlasmaExtras.Representation {
                             // delay setting the position to avoid race conditions
                             queuedPositionUpdate.restart()
                         }
+                    }
+                    onPressedChanged: {
+                        // Property binding evaluation is non-deterministic
+                        // so binding visible to pressed and delay to 0 when pressed
+                        // will not make the tooltip show up immediately.
+                        if (pressed) {
+                            seekToolTip.delay = 0;
+                            seekToolTip.visible = true;
+                        } else {
+                            seekToolTip.delay = Qt.binding(() => Kirigami.Units.toolTipDelay);
+                            seekToolTip.visible = Qt.binding(() => seekToolTipHandler.hovered);
+                        }
+                    }
+
+                    HoverHandler {
+                        id: seekToolTipHandler
+                    }
+
+                    PlasmaComponents3.ToolTip {
+                        id: seekToolTip
+                        readonly property real position: {
+                            if (seekSlider.pressed) {
+                                return seekSlider.visualPosition;
+                            }
+                            // does not need mirroring since we work on raw mouse coordinates
+                            const mousePos = seekToolTipHandler.point.position.x - seekSlider.handle.width / 2;
+                            return Math.max(0, Math.min(1, mousePos / (seekSlider.width - seekSlider.handle.width)));
+                        }
+                        x: Math.round(seekSlider.handle.width / 2 + position * (seekSlider.width - seekSlider.handle.width) - width / 2)
+                        // Never hide (not on press, no timeout) as long as the mouse is hovered
+                        closePolicy: PlasmaComponents3.Popup.NoAutoClose
+                        timeout: -1
+                        text: {
+                            // Label text needs mirrored position again
+                            const effectivePosition = seekSlider.mirrored ? (1 - position) : position;
+                            return KCoreAddons.Format.formatDuration((seekSlider.to - seekSlider.from) * effectivePosition / 1000, expandedRepresentation.durationFormattingOptions)
+                        }
+                        // NOTE also controlled in onPressedChanged handler above
+                        visible: seekToolTipHandler.hovered
                     }
 
                     Timer {
