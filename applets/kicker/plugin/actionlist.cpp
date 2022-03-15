@@ -25,6 +25,7 @@
 #include <KActivities/Stats/Cleaning>
 #include <KActivities/Stats/ResultSet>
 #include <KActivities/Stats/Terms>
+#include <KIO/DesktopExecParser>
 
 #include "containmentinterface.h"
 
@@ -217,7 +218,8 @@ QVariantList jumpListActions(KService::Ptr service)
             continue;
         }
 
-        QVariantMap item = createActionItem(action.text(), action.icon(), QStringLiteral("_kicker_jumpListAction"), action.exec());
+        QString exec = KIO::DesktopExecParser(KService(action.name(), action.exec(), action.icon()), {}).resultingArguments().join(QLatin1Char(' '));
+        QVariantMap item = createActionItem(action.text(), action.icon(), QStringLiteral("_kicker_jumpListAction"), exec);
 
         list << item;
     }
