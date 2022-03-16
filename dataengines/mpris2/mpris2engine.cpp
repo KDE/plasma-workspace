@@ -22,10 +22,6 @@
 Mpris2Engine::Mpris2Engine(QObject *parent, const QVariantList &args)
     : Plasma::DataEngine(parent, args)
 {
-    auto watcher =
-        new QDBusServiceWatcher(QStringLiteral("org.mpris.MediaPlayer2*"), QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForOwnerChange, this);
-    connect(watcher, &QDBusServiceWatcher::serviceOwnerChanged, this, &Mpris2Engine::serviceOwnerChanged);
-
     QDBusPendingCall async = QDBusConnection::sessionBus().interface()->asyncCall(QStringLiteral("ListNames"));
     QDBusPendingCallWatcher *callWatcher = new QDBusPendingCallWatcher(async, this);
     connect(callWatcher, &QDBusPendingCallWatcher::finished, this, &Mpris2Engine::serviceNameFetchFinished);
@@ -146,20 +142,16 @@ void Mpris2Engine::serviceNameFetchFinished(QDBusPendingCallWatcher *watcher)
         foreach (const QString &serviceName, propsReply.value()) {
             if (serviceName.startsWith(QLatin1String("org.mpris.MediaPlayer2."))) {
                 qCDebug(MPRIS2) << "Found MPRIS2 service" << serviceName;
-                // watch out for race conditions; the media player could
-                // have appeared between starting the service watcher and
-                // this call being dealt with
-                // NB: _disappearing_ between sending this call and doing
-                // this processing is fine
                 QString sourceName = serviceName.mid(23);
-                PlayerContainer *container = qobject_cast<PlayerContainer *>(containerForSource(sourceName));
-                if (!container) {
-                    qCDebug(MPRIS2) << "Haven't already seen" << serviceName;
-                    addMediaPlayer(serviceName, sourceName);
-                }
+                addMediaPlayer(serviceName, sourceName);
             }
         }
     }
+
+    // Start watching serviceOwnerChanged
+    auto serviceOwnerWatcher =
+        new QDBusServiceWatcher(QStringLiteral("org.mpris.MediaPlayer2*"), QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForOwnerChange, this);
+    connect(serviceOwnerWatcher, &QDBusServiceWatcher::serviceOwnerChanged, this, &Mpris2Engine::serviceOwnerChanged);
 }
 
 void Mpris2Engine::addMediaPlayer(const QString &serviceName, const QString &sourceName)
