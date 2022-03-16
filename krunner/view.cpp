@@ -342,11 +342,6 @@ void View::displayConfiguration()
     settingsDialog->show();
 }
 
-bool View::canConfigure() const
-{
-    return KAuthorized::authorizeControlModule(QStringLiteral("kcm_plasmasearch.desktop"));
-}
-
 void View::setVisible(bool visible)
 {
     m_requestedVisible = visible;

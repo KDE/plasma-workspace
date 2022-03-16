@@ -7,6 +7,8 @@
 import QtQuick 2.6
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.1
+
+import org.kde.kquickcontrolsaddons 2.0  // For KCMShell
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
@@ -72,7 +74,7 @@ ColumnLayout {
             }
             Accessible.name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Configure")
             Accessible.description: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Configure KRunner Behavior")
-            visible: runnerWindow.canConfigure
+            visible: KCMShell.authorize("kcm_krunnersettings.desktop").length > 0
             PlasmaComponents3.ToolTip {
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Configure KRunner…")
             }

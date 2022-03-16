@@ -38,7 +38,6 @@ class View : public PlasmaQuick::Dialog
     Q_OBJECT
     Q_CLASSINFO("D-Bus Interface", "org.kde.krunner.App")
 
-    Q_PROPERTY(bool canConfigure READ canConfigure CONSTANT)
     Q_PROPERTY(bool pinned READ pinned WRITE setPinned NOTIFY pinnedChanged)
     Q_PROPERTY(QStringList history READ history NOTIFY historyChanged)
     // TODO KF6 This is kept for compatibility with third party themes which override the RunCommand.qml file
@@ -53,7 +52,6 @@ public:
     bool freeFloating() const;
     void setFreeFloating(bool floating);
 
-    bool canConfigure() const;
     QStringList history() const;
 
     bool pinned() const;
