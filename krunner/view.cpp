@@ -17,6 +17,7 @@
 #include <QScreen>
 
 #include <KAuthorized>
+#include <KCMultiDialog>
 #include <KCrash>
 #include <KIO/CommandLauncherJob>
 #include <KLocalizedString>
@@ -327,18 +328,18 @@ void View::switchUser()
 
 void View::displayConfiguration()
 {
-    const QString systemSettings = QStringLiteral("systemsettings");
-    const QStringList kcmToOpen = QStringList(QStringLiteral("kcm_plasmasearch"));
-    KIO::CommandLauncherJob *job = nullptr;
+    const KPluginMetaData krunnerModule(QPluginLoader("plasma/kcms/desktop/kcm_krunnersettings"));
+    KCMultiDialog *settingsDialog;
 
-    if (KService::serviceByDesktopName(systemSettings)) {
-        job = new KIO::CommandLauncherJob(QStringLiteral("systemsettings5"), kcmToOpen);
-        job->setDesktopName(systemSettings);
+    if (krunnerModule.isValid()) {
+        settingsDialog = new KCMultiDialog();
+        settingsDialog->addModule(krunnerModule);
     } else {
-        job = new KIO::CommandLauncherJob(QStringLiteral("kcmshell5"), kcmToOpen);
+        return;
     }
 
-    job->start();
+    connect(settingsDialog, &QDialog::finished, settingsDialog, &QObject::deleteLater);
+    settingsDialog->show();
 }
 
 bool View::canConfigure() const

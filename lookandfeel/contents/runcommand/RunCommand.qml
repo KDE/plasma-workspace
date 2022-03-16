@@ -71,7 +71,7 @@ ColumnLayout {
                 runnerWindow.displayConfiguration()
             }
             Accessible.name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Configure")
-            Accessible.description: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Configure Search Plugins")
+            Accessible.description: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Configure KRunner Behavior")
             visible: runnerWindow.canConfigure
             PlasmaComponents3.ToolTip {
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Configure KRunner…")
