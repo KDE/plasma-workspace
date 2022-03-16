@@ -294,7 +294,9 @@ uint qHash(const KFI::Misc::TFont &key)
 // Taken from qdom.cpp
 QString encodeText(const QString &str, QTextStream &s)
 {
-    const QTextCodec *const codec = s.codec();
+    // we never explicitly set the codec on the stream, so the locale
+    // default codec is fine here
+    const QTextCodec *const codec = QTextCodec::codecForLocale();
 
     Q_ASSERT(codec);
 
