@@ -2,6 +2,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"plasma_runner_kill\")
 
 set(kcm_krunner_kill_SRCS
     killrunner_config.cpp
+    killrunner_config.h
 )
 
 ki18n_wrap_ui(kcm_krunner_kill_SRCS killrunner_config.ui)

@@ -13,9 +13,11 @@ set(EXTERNAL_LIBS
 
 set(qalculate_engine_SRCS
     qalculate_engine.cpp
+    qalculate_engine.h
 )
 set(krunner_calculatorrunner_SRCS
     calculatorrunner.cpp
+    calculatorrunner.h
 )
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-deprecated")

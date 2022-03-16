@@ -1,6 +1,6 @@
 include_directories(${CMAKE_CURRENT_BINARY_DIR}/.. ${CMAKE_CURRENT_SOURCE_DIR}/..)
 
-add_library(colorcorrectplugin SHARED colorcorrectplugin.cpp)
+add_library(colorcorrectplugin SHARED colorcorrectplugin.cpp colorcorrectplugin.h)
 
 target_link_libraries(colorcorrectplugin
                       Qt::Qml
