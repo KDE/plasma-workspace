@@ -1,6 +1,7 @@
 
 set(plasma_waitforname_SRCS
     waiter.cpp
+    waiter.h
     main.cpp
    )
 
