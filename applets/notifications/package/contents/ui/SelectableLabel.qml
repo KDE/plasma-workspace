@@ -28,7 +28,8 @@ PlasmaComponents3.ScrollView {
     signal clicked(var mouse)
     signal linkActivated(string link)
 
-    implicitHeight: Math.min(bodyText.implicitHeight, PlasmaCore.Units.gridUnit * 5)
+    implicitWidth: bodyText.paintedWidth
+    implicitHeight: bodyText.paintedHeight
 
     // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-83890
     PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
