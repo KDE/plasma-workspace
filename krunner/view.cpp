@@ -328,15 +328,9 @@ void View::switchUser()
 
 void View::displayConfiguration()
 {
-    const KPluginMetaData krunnerModule(QPluginLoader("plasma/kcms/desktop/kcm_krunnersettings"));
-    KCMultiDialog *settingsDialog;
+    KCMultiDialog *settingsDialog = new KCMultiDialog();
 
-    if (krunnerModule.isValid()) {
-        settingsDialog = new KCMultiDialog();
-        settingsDialog->addModule(krunnerModule);
-    } else {
-        return;
-    }
+    settingsDialog->addModule(KPluginMetaData(QStringLiteral("plasma/kcms/desktop/kcm_krunnersettings")));
 
     connect(settingsDialog, &QDialog::finished, settingsDialog, &QObject::deleteLater);
     settingsDialog->show();
