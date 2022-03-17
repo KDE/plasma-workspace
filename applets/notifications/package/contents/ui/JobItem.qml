@@ -26,7 +26,6 @@ ColumnLayout {
     property alias suspendable: suspendButton.visible
     property alias killable: killButton.visible
 
-    property bool hovered
     property QtObject jobDetails
 
     readonly property int totalFiles: jobItem.jobDetails && jobItem.jobDetails.totalFiles || 0

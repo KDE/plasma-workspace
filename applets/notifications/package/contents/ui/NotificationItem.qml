@@ -20,7 +20,6 @@ import org.kde.notificationmanager 1.0 as NotificationManager
 ColumnLayout {
     id: notificationItem
 
-    property bool hovered: false
     property int maximumLineCount: 0
     property alias bodyCursorShape: bodyLabel.cursorShape
 
@@ -293,8 +292,6 @@ ColumnLayout {
 
                 onOpenUrl: notificationItem.openUrl(url)
                 onFileActionInvoked: notificationItem.fileActionInvoked(action)
-
-                hovered: notificationItem.hovered
             }
         }
 

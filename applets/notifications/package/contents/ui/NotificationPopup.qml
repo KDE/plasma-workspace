@@ -202,7 +202,6 @@ PlasmaCore.Dialog {
                 y: closable || dismissable || configurable ? -notificationPopup.margins.top : 0
                 headingRightPadding: -notificationPopup.margins.right
                 width: parent.width
-                hovered: area.containsMouse
                 maximumLineCount: 8
                 bodyCursorShape: notificationPopup.hasDefaultAction ? Qt.PointingHandCursor : 0
 
