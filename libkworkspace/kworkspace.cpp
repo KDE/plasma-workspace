@@ -85,9 +85,9 @@ void propagateSessionManager()
     // strip the screen number from the display
     display.remove(QRegularExpression(QStringLiteral("\\.\\d+$")));
     int i;
-    while ((i = display.indexOf(':')) >= 0)
+    while ((i = display.indexOf(QLatin1Char(':'))) >= 0)
         display[i] = '_';
-    while ((i = display.indexOf('/')) >= 0)
+    while ((i = display.indexOf(QLatin1Char('/'))) >= 0)
         display[i] = '_';
 
     fName += '_';

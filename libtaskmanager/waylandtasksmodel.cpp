@@ -90,7 +90,7 @@ void WaylandTasksModel::Private::init()
     rulesConfig = KSharedConfig::openConfig(QStringLiteral("taskmanagerrulesrc"));
     configWatcher = new KDirWatch(q);
 
-    foreach (const QString &location, QStandardPaths::standardLocations(QStandardPaths::ConfigLocation)) {
+    for (const QString &location : QStandardPaths::standardLocations(QStandardPaths::ConfigLocation)) {
         configWatcher->addFile(location + QLatin1String("/taskmanagerrulesrc"));
     }
 

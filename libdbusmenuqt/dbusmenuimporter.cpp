@@ -148,7 +148,7 @@ public:
      */
     void updateAction(QAction *action, const QVariantMap &map, const QStringList &requestedProperties)
     {
-        Q_FOREACH (const QString &key, requestedProperties) {
+        for (const QString &key : requestedProperties) {
             updateActionProperty(action, key, map.value(key));
         }
     }
@@ -308,9 +308,9 @@ void DBusMenuImporter::slotLayoutUpdated(uint revision, int parentId)
 
 void DBusMenuImporter::processPendingLayoutUpdates()
 {
-    QSet<int> ids = d->m_pendingLayoutUpdates;
+    const QSet<int> ids = d->m_pendingLayoutUpdates;
     d->m_pendingLayoutUpdates.clear();
-    Q_FOREACH (int id, ids) {
+    for (int id : ids) {
         d->refresh(id);
     }
 }
@@ -325,7 +325,7 @@ QMenu *DBusMenuImporter::menu() const
 
 void DBusMenuImporterPrivate::slotItemsPropertiesUpdated(const DBusMenuItemList &updatedList, const DBusMenuItemKeysList &removedList)
 {
-    Q_FOREACH (const DBusMenuItem &item, updatedList) {
+    for (const DBusMenuItem &item : updatedList) {
         QAction *action = m_actionForId.value(item.id);
         if (!action) {
             // We don't know this action. It probably is in a menu we haven't fetched yet.
@@ -338,14 +338,15 @@ void DBusMenuImporterPrivate::slotItemsPropertiesUpdated(const DBusMenuItemList 
         }
     }
 
-    Q_FOREACH (const DBusMenuItemKeys &item, removedList) {
+    for (const DBusMenuItemKeys &item : removedList) {
         QAction *action = m_actionForId.value(item.id);
         if (!action) {
             // We don't know this action. It probably is in a menu we haven't fetched yet.
             continue;
         }
 
-        Q_FOREACH (const QString &key, item.properties) {
+        const auto properties{item.properties};
+        for (const QString &key : properties) {
             updateActionProperty(action, key, QVariant());
         }
     }
@@ -435,9 +436,9 @@ void DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher *watcher)
         } else {
             action = *it;
             QStringList filteredKeys = dbusMenuItem.properties.keys();
-            filteredKeys.removeOne("type");
-            filteredKeys.removeOne("toggle-type");
-            filteredKeys.removeOne("children-display");
+            filteredKeys.removeOne(QStringLiteral("type"));
+            filteredKeys.removeOne(QStringLiteral("toggle-type"));
+            filteredKeys.removeOne(QStringLiteral("children-display"));
             d->updateAction(*it, dbusMenuItem.properties, filteredKeys);
             // Move the action to the tail so we can keep the order same as the dbus request.
             menu->removeAction(action);

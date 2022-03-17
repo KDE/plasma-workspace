@@ -130,11 +130,11 @@ bool UpdateLaunchEnvJob::Private::isPosixName(const QString &name)
     // Ensure systemd compat by only allowing alphanumerics and _ in names.
     bool first = true;
     for (const QChar c : name) {
-        if (first && !c.isLetter() && c != QChar('_')) {
+        if (first && !c.isLetter() && c != QLatin1Char('_')) {
             return false;
         } else if (first) {
             first = false;
-        } else if (!c.isLetterOrNumber() && c != QChar('_')) {
+        } else if (!c.isLetterOrNumber() && c != QLatin1Char('_')) {
             return false;
         }
     }
