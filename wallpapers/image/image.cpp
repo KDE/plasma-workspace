@@ -56,7 +56,6 @@ Image::Image(QObject *parent)
     , m_slideshowFoldersFirst(false)
     , m_currentSlide(-1)
     , m_model(nullptr)
-    , m_slideshowModel(new SlideModel(this, this))
     , m_slideFilterModel(new SlideFilterModel(this))
     , m_dialog(nullptr)
 {
@@ -68,9 +67,6 @@ Image::Image(QObject *parent)
     connect(m_dirWatch, &KDirWatch::dirty, this, &Image::pathDirty);
     connect(m_dirWatch, &KDirWatch::deleted, this, &Image::pathDeleted);
     m_dirWatch->startScan();
-
-    m_slideFilterModel->setSourceModel(m_slideshowModel);
-    connect(this, &Image::uncheckedSlidesChanged, m_slideFilterModel, &SlideFilterModel::invalidateFilter);
 
     useSingleImageDefaults();
 }
@@ -333,10 +329,26 @@ QAbstractItemModel *Image::wallpaperModel()
     return m_model;
 }
 
+SlideModel *Image::slideshowModel()
+{
+    if (!m_slideshowModel) {
+        m_slideshowModel = new SlideModel(this, this);
+        m_slideshowModel->reload(m_slidePaths);
+        m_slideFilterModel->setSourceModel(m_slideshowModel);
+        connect(this, &Image::uncheckedSlidesChanged, m_slideFilterModel, &SlideFilterModel::invalidateFilter);
+    }
+    return m_slideshowModel;
+}
+
 QAbstractItemModel *Image::slideFilterModel()
 {
+    if (!m_slideFilterModel->sourceModel()) {
+        // make sure it's created
+        connect(slideshowModel(), &SlideModel::done, this, &Image::backgroundsFound);
+    }
     return m_slideFilterModel;
 }
+
 int Image::slideTimer() const
 {
     return m_delay;
@@ -604,7 +616,7 @@ void Image::addUrl(const QUrl &url, bool setAsCurrent)
     } else {
         if (m_mode != SingleImage) {
             // it's a slide show, add it to the slide show
-            m_slideshowModel->addBackground(path);
+            slideshowModel()->addBackground(path);
         }
         // always add it to the user papers, though
         addUsersWallpaper(path);
@@ -634,7 +646,7 @@ void Image::setWallpaper(const QString &path)
         setSingleImage();
     } else {
         m_wallpaper = path;
-        m_slideshowModel->addBackground(path);
+        slideshowModel()->addBackground(path);
         m_currentSlide = m_slideFilterModel->indexOf(path) - 1;
         nextSlide();
     }
@@ -648,7 +660,7 @@ void Image::startSlideshow()
     }
     // populate background list
     m_timer.stop();
-    m_slideshowModel->reload(m_slidePaths);
+    slideshowModel()->reload(m_slidePaths);
     connect(m_slideshowModel, &SlideModel::done, this, &Image::backgroundsFound);
     // TODO: what would be cool: paint on the wallpaper itself a busy widget and perhaps some text
     // about loading wallpaper slideshow while the thread runs
@@ -802,7 +814,7 @@ void Image::nextSlide()
 
 void Image::pathCreated(const QString &path)
 {
-    if (m_slideshowModel->indexOf(path) == -1) {
+    if (slideshowModel()->indexOf(path) == -1) {
         QFileInfo fileInfo(path);
         if (fileInfo.isFile() && BackgroundFinder::isAcceptableSuffix(fileInfo.suffix())) {
             m_slideshowModel->addBackground(path);
@@ -815,8 +827,8 @@ void Image::pathCreated(const QString &path)
 
 void Image::pathDeleted(const QString &path)
 {
-    if (m_slideshowModel->indexOf(path) != -1) {
-        m_slideshowModel->removeBackground(path);
+    if (slideshowModel()->indexOf(path) != -1) {
+        slideshowModel()->removeBackground(path);
         if (path == m_img) {
             nextSlide();
         }

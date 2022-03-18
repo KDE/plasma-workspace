@@ -160,6 +160,9 @@ void SlideFilterModel::invalidateFilter()
 
 int SlideFilterModel::indexOf(const QString &path)
 {
+    if (!sourceModel())
+        return -1;
+
     auto sourceIndex = sourceModel()->index(static_cast<SlideModel *>(sourceModel())->indexOf(path), 0);
     return mapFromSource(sourceIndex).row();
 }

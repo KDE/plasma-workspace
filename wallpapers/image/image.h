@@ -163,6 +163,8 @@ protected:
     void useSingleImageDefaults();
 
 private:
+    SlideModel *slideshowModel();
+
     bool m_ready;
     int m_delay;
     QStringList m_dirs;
@@ -183,7 +185,7 @@ private:
     QTimer m_timer;
     int m_currentSlide;
     BackgroundListModel *m_model;
-    SlideModel *m_slideshowModel;
+    SlideModel *m_slideshowModel = nullptr;
     SlideFilterModel *m_slideFilterModel;
     QFileDialog *m_dialog;
     QString m_img;
