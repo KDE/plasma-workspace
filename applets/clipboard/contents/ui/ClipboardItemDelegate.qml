@@ -93,6 +93,7 @@ PlasmaComponents.ItemDelegate {
             left: parent.left
             leftMargin: PlasmaCore.Units.gridUnit / 2 - listMargins.left
             right: parent.right
+            rightMargin: PlasmaCore.Units.gridUnit / 2 - listMargins.right
             verticalCenter: parent.verticalCenter
         }
 
@@ -108,6 +109,8 @@ PlasmaComponents.ItemDelegate {
         anchors {
             right: label.right
             verticalCenter: parent.verticalCenter
+            // This is here because you can't assign to it in AnchorChanges below
+            topMargin: PlasmaCore.Units.gridUnit / 2 - listMargins.top
         }
         source: "DelegateToolButtons.qml"
         active: menuItem.ListView.isCurrentItem
