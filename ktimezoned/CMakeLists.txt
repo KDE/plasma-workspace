@@ -1,10 +1,10 @@
 if (WIN32)
-    set(kded_ktimezoned_SRCS ktimezoned_win.cpp)
+    set(kded_ktimezoned_SRCS ktimezoned_win.cpp ktimezoned_win.h)
 else ()
-    set(kded_ktimezoned_SRCS ktimezoned.cpp)
+    set(kded_ktimezoned_SRCS ktimezoned.cpp ktimezoned.h)
 endif ()
 
-kcoreaddons_add_plugin(ktimezoned SOURCES ${kded_ktimezoned_SRCS} INSTALL_NAMESPACE "kf${QT_MAJOR_VERSION}/kded")
+kcoreaddons_add_plugin(ktimezoned SOURCES ${kded_ktimezoned_SRCS}  INSTALL_NAMESPACE "kf${QT_MAJOR_VERSION}/kded")
 
 #qt_add_dbus_adaptor(kded_ktimezoned_SRCS org.kde.KTimeZoned ktimezonedbus.h DBusHandler)
 

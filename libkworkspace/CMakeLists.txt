@@ -1,10 +1,16 @@
 
 set(kworkspace_LIB_SRCS kdisplaymanager.cpp
-                        kworkspace.cpp
-                        sessionmanagement.cpp
-                        sessionmanagementbackend.cpp
-                        updatelaunchenvjob.cpp
-                        autostartscriptdesktopfile.cpp
+    kworkspace.cpp
+    sessionmanagement.cpp
+    sessionmanagementbackend.cpp
+    updatelaunchenvjob.cpp
+    autostartscriptdesktopfile.cpp
+    kdisplaymanager.h
+    kworkspace.h
+    sessionmanagement.h
+    sessionmanagementbackend.h
+    updatelaunchenvjob.h
+    autostartscriptdesktopfile.h
    )
 
 add_definitions(-DTRANSLATION_DOMAIN=\"libkworkspace\")
