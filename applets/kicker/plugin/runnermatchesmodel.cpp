@@ -166,6 +166,28 @@ bool RunnerMatchesModel::trigger(int row, const QString &actionId, const QVarian
         return false;
     }
 
+    // BUG 442970: Skip creating KService if there is no actionId, or the action is from a runner.
+    if (actionId.isEmpty() || actionId == QLatin1String("runnerAction")) {
+        if (!actionId.isEmpty()) {
+            QObject *obj = argument.value<QObject *>();
+
+            if (!obj) {
+                return false;
+            }
+
+            QAction *action = qobject_cast<QAction *>(obj);
+
+            if (!action) {
+                return false;
+            }
+            match.setSelectedAction(action);
+        }
+
+        m_runnerManager->run(match);
+
+        return true;
+    }
+
     QObject *appletInterface = static_cast<RunnerModel *>(parent())->appletInterface();
 
     KService::Ptr service = KService::serviceByStorageId(match.data().toUrl().toString(QUrl::RemoveScheme));
@@ -189,25 +211,7 @@ bool RunnerMatchesModel::trigger(int row, const QString &actionId, const QVarian
         return Kicker::handleRecentDocumentAction(service, actionId, argument);
     }
 
-    if (!actionId.isEmpty()) {
-        QObject *obj = argument.value<QObject *>();
-
-        if (!obj) {
-            return false;
-        }
-
-        QAction *action = qobject_cast<QAction *>(obj);
-
-        if (!action) {
-            return false;
-        }
-
-        match.setSelectedAction(action);
-    }
-
-    m_runnerManager->run(match);
-
-    return true;
+    return false;
 }
 
 void RunnerMatchesModel::setMatches(const QList<Plasma::QueryMatch> &matches)
