@@ -62,7 +62,7 @@ PlasmaComponents3.ScrollView {
             onAction: menu.action(uuid)
 
             Binding {
-                target: menuListView; when: containsMouse
+                target: menuListView; when: hovered
                 property: "currentIndex"; value: index
                 restoreMode: Binding.RestoreBinding
             }
