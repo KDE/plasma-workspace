@@ -15,8 +15,8 @@ K_PLUGIN_CLASS_WITH_JSON(LocationUpdater, "colorcorrectlocationupdater.json")
 
 LocationUpdater::LocationUpdater(QObject *parent, const QList<QVariant> &)
     : KDEDModule(parent)
+    , m_adaptor(new ColorCorrect::CompositorAdaptor(this))
 {
-    m_adaptor = new ColorCorrect::CompositorAdaptor(this);
     m_configWatcher = KConfigWatcher::create(KSharedConfig::openConfig(QStringLiteral("kwinrc")));
     connect(m_configWatcher.data(), &KConfigWatcher::configChanged, this, &LocationUpdater::resetLocator);
     connect(m_adaptor, &ColorCorrect::CompositorAdaptor::runningChanged, this, &LocationUpdater::resetLocator);

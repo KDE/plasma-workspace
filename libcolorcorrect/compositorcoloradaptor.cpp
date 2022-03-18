@@ -105,7 +105,7 @@ void CompositorAdaptor::handlePropertiesChanged(const QString &interfaceName, co
 
 void CompositorAdaptor::sendAutoLocationUpdate(double latitude, double longitude)
 {
-    m_iface->call("nightColorAutoLocationUpdate", latitude, longitude);
+    m_iface->call(QStringLiteral("nightColorAutoLocationUpdate"), latitude, longitude);
 }
 
 }

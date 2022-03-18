@@ -25,7 +25,7 @@ private:
     void resetLocator();
     void sendLocation(double latitude, double longitude);
 
-    ColorCorrect::CompositorAdaptor *m_adaptor = nullptr;
+    ColorCorrect::CompositorAdaptor *const m_adaptor;
     ColorCorrect::Geolocator *m_locator = nullptr;
     KConfigWatcher::Ptr m_configWatcher;
 };
