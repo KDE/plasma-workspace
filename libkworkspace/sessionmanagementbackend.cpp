@@ -216,7 +216,7 @@ ConsoleKitSessionBackend::ConsoleKitSessionBackend()
     m_canSuspend = m_upower->canSuspend();
     m_canHibernate = m_upower->canHibernate();
 
-    connect(m_upower, &OrgFreedesktopUPowerInterface::AboutToSleep, this, &SessionBackend::aboutToSuspend);
+    connect(m_upower, &OrgFreedesktopUPowerInterface::Sleeping, this, &SessionBackend::aboutToSuspend);
     connect(m_upower, &OrgFreedesktopUPowerInterface::Resuming, this, &SessionBackend::resumingFromSuspend);
 
     m_state = SessionManagement::State::Ready;
