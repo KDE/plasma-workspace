@@ -30,10 +30,10 @@
 #include <private/qtx11extras_p.h>
 #else
 #include <QX11Info>
+#endif
 #include <chrono>
 
 using namespace std::chrono_literals;
-#endif
 
 namespace TaskManager
 {
