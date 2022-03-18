@@ -18,7 +18,10 @@
 #include <KShell>
 
 #include <algorithm>
+#include <chrono>
 #include <functional>
+
+using namespace std::chrono_literals;
 
 static const int s_notificationsLimit = 1000;
 
@@ -29,7 +32,7 @@ AbstractNotificationsModel::Private::Private(AbstractNotificationsModel *q)
     , lastRead(QDateTime::currentDateTimeUtc())
 {
     pendingRemovalTimer.setSingleShot(true);
-    pendingRemovalTimer.setInterval(50);
+    pendingRemovalTimer.setInterval(50ms);
     connect(&pendingRemovalTimer, &QTimer::timeout, q, [this, q] {
         QVector<int> rowsToBeRemoved;
         rowsToBeRemoved.reserve(pendingRemovals.count());

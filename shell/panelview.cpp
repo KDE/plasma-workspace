@@ -43,7 +43,9 @@
 #endif
 #include <xcb/xcb.h>
 #endif
+#include <chrono>
 
+using namespace std::chrono_literals;
 static const int MINSIZE = 10;
 
 PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent)
@@ -85,7 +87,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     connect(&m_positionPaneltimer, &QTimer::timeout, this, &PanelView::restore);
 
     m_unhideTimer.setSingleShot(true);
-    m_unhideTimer.setInterval(500);
+    m_unhideTimer.setInterval(500ms);
     connect(&m_unhideTimer, &QTimer::timeout, this, &PanelView::restoreAutoHide);
 
     m_lastScreen = targetScreen;
@@ -1355,7 +1357,7 @@ void PanelView::showTemporarily()
 
     QTimer *t = new QTimer(this);
     t->setSingleShot(true);
-    t->setInterval(3000);
+    t->setInterval(3s);
     connect(t, &QTimer::timeout, this, &PanelView::restoreAutoHide);
     connect(t, &QTimer::timeout, t, &QObject::deleteLater);
     t->start();

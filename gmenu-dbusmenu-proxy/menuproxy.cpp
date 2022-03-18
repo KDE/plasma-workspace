@@ -32,6 +32,9 @@
 #include <xcb/xcb.h>
 
 #include "window.h"
+#include <chrono>
+
+using namespace std::chrono_literals;
 
 static const QString s_ourServiceName = QStringLiteral("org.kde.plasma.gmenu_dbusmenu_proxy");
 
@@ -87,7 +90,7 @@ MenuProxy::MenuProxy()
 
     // kde-gtk-config just deletes and re-creates the gtkrc-2.0, watch this and add our config to it again
     m_writeGtk2SettingsTimer->setSingleShot(true);
-    m_writeGtk2SettingsTimer->setInterval(1000);
+    m_writeGtk2SettingsTimer->setInterval(1s);
     connect(m_writeGtk2SettingsTimer, &QTimer::timeout, this, &MenuProxy::writeGtk2Settings);
 
     auto startGtk2SettingsTimer = [this] {

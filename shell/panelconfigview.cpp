@@ -27,6 +27,10 @@
 #include <KWayland/Client/plasmashell.h>
 #include <KWayland/Client/surface.h>
 
+#include <chrono>
+
+using namespace std::chrono_literals;
+
 //////////////////////////////PanelConfigView
 PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *panelView, QWindow *parent)
     : ConfigView(containment, parent)
@@ -39,7 +43,7 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
 
     connect(panelView, &QWindow::screenChanged, &m_screenSyncTimer, QOverload<>::of(&QTimer::start));
     m_screenSyncTimer.setSingleShot(true);
-    m_screenSyncTimer.setInterval(150);
+    m_screenSyncTimer.setInterval(150ms);
     connect(&m_screenSyncTimer, &QTimer::timeout, [=]() {
         setScreen(panelView->screen());
         KWindowSystem::setType(winId(), NET::Dock);

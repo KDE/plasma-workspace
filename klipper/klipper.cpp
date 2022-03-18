@@ -47,7 +47,10 @@
 #else
 #include <QX11Info>
 #endif
+#include <chrono>
 #include <xcb/xcb.h>
+
+using namespace std::chrono_literals;
 #endif
 
 namespace
@@ -351,7 +354,7 @@ void Klipper::loadSettings()
     if (m_bKeepContents && !m_saveFileTimer) {
         m_saveFileTimer = new QTimer(this);
         m_saveFileTimer->setSingleShot(true);
-        m_saveFileTimer->setInterval(5000);
+        m_saveFileTimer->setInterval(5s);
         connect(m_saveFileTimer, &QTimer::timeout, this, [this] {
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
             QtConcurrent::run(this, &Klipper::saveHistory, false);
@@ -682,12 +685,12 @@ bool Klipper::blockFetchingNewData()
     if (((queryPointer->mask & (XCB_KEY_BUT_MASK_SHIFT | XCB_KEY_BUT_MASK_BUTTON_1)) == XCB_KEY_BUT_MASK_SHIFT) // BUG: 85198
         || ((queryPointer->mask & XCB_KEY_BUT_MASK_BUTTON_1) == XCB_KEY_BUT_MASK_BUTTON_1)) { // BUG: 80302
         m_pendingContentsCheck = true;
-        m_pendingCheckTimer.start(100);
+        m_pendingCheckTimer.start(100ms);
         return true;
     }
     m_pendingContentsCheck = false;
     if (m_overflowCounter == 0)
-        m_overflowClearTimer.start(1000);
+        m_overflowClearTimer.start(1s);
     if (++m_overflowCounter > MAX_CLIPBOARD_CHANGES)
         return true;
 #endif

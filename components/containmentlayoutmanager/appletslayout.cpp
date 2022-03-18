@@ -18,6 +18,9 @@
 #include <Containment>
 #include <Corona>
 #include <PlasmaQuick/AppletQuickItem>
+#include <chrono>
+
+using namespace std::chrono_literals;
 
 AppletsLayout::AppletsLayout(QQuickItem *parent)
     : QQuickItem(parent)
@@ -29,7 +32,7 @@ AppletsLayout::AppletsLayout(QQuickItem *parent)
 
     m_saveLayoutTimer = new QTimer(this);
     m_saveLayoutTimer->setSingleShot(true);
-    m_saveLayoutTimer->setInterval(100);
+    m_saveLayoutTimer->setInterval(100ms);
     connect(m_layoutManager, &AbstractLayoutManager::layoutNeedsSaving, m_saveLayoutTimer, QOverload<>::of(&QTimer::start));
     connect(m_saveLayoutTimer, &QTimer::timeout, this, [this]() {
         // We can't assume m_containment to be valid: if we load in a plasmoid that can run also
@@ -53,7 +56,7 @@ AppletsLayout::AppletsLayout(QQuickItem *parent)
 
     m_layoutChangeTimer = new QTimer(this);
     m_layoutChangeTimer->setSingleShot(true);
-    m_layoutChangeTimer->setInterval(100);
+    m_layoutChangeTimer->setInterval(100ms);
     connect(m_layoutChangeTimer, &QTimer::timeout, this, [this]() {
         // We can't assume m_containment to be valid: if we load in a plasmoid that can run also
         // in "applet" mode, m_containment will never be valid

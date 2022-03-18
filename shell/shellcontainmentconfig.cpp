@@ -17,10 +17,12 @@
 #include <QQuickItem>
 #include <QScreen>
 
-#include "shellcorona.h"
-#include "screenpool.h"
 #include "panelview.h"
+#include "screenpool.h"
+#include "shellcorona.h"
+#include <chrono>
 
+using namespace std::chrono_literals;
 
 ScreenPoolModel::ScreenPoolModel(ShellCorona *corona, QObject *parent)
     : QAbstractListModel(parent)
@@ -28,7 +30,7 @@ ScreenPoolModel::ScreenPoolModel(ShellCorona *corona, QObject *parent)
 {
     m_reloadTimer = new QTimer(this);
     m_reloadTimer->setSingleShot(true);
-    m_reloadTimer->setInterval(200);
+    m_reloadTimer->setInterval(200ms);
 
     connect(m_reloadTimer, &QTimer::timeout, this, &ScreenPoolModel::load);
 
@@ -148,7 +150,7 @@ ShellContainmentModel::ShellContainmentModel(ShellCorona *corona, int screenId, 
 {
     m_reloadTimer = new QTimer(this);
     m_reloadTimer->setSingleShot(true);
-    m_reloadTimer->setInterval(200);
+    m_reloadTimer->setInterval(200ms);
 
     connect(m_reloadTimer, &QTimer::timeout, this, &ShellContainmentModel::load);
 

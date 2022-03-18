@@ -30,6 +30,9 @@
 #include <private/qtx11extras_p.h>
 #else
 #include <QX11Info>
+#include <chrono>
+
+using namespace std::chrono_literals;
 #endif
 
 namespace TaskManager
@@ -122,7 +125,7 @@ void XWindowTasksModel::Private::init()
     cachedStackingOrder = KWindowSystem::stackingOrder();
 
     sycocaChangeTimer.setSingleShot(true);
-    sycocaChangeTimer.setInterval(100);
+    sycocaChangeTimer.setInterval(100ms);
 
     QObject::connect(&sycocaChangeTimer, &QTimer::timeout, q, clearCacheAndRefresh);
 

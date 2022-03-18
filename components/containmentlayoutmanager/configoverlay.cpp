@@ -6,14 +6,17 @@
 
 #include "configoverlay.h"
 
+#include <chrono>
 #include <cmath>
+
+using namespace std::chrono_literals;
 
 ConfigOverlay::ConfigOverlay(QQuickItem *parent)
     : QQuickItem(parent)
 {
     m_hideTimer = new QTimer(this);
     m_hideTimer->setSingleShot(true);
-    m_hideTimer->setInterval(600);
+    m_hideTimer->setInterval(600ms);
     connect(m_hideTimer, &QTimer::timeout, this, [this]() {
         setVisible(false);
     });

@@ -77,7 +77,9 @@
 #endif
 #include <xcb/xcb.h>
 #endif
+#include <chrono>
 
+using namespace std::chrono_literals;
 static const int s_configSyncDelay = 10000; // 10 seconds
 
 ShellCorona::ShellCorona(QObject *parent)
@@ -117,12 +119,12 @@ void ShellCorona::init()
     connect(this, &Corona::configSynced, this, &ShellCorona::syncAppConfig);
 
     m_waitingPanelsTimer.setSingleShot(true);
-    m_waitingPanelsTimer.setInterval(250);
+    m_waitingPanelsTimer.setInterval(250ms);
     connect(&m_waitingPanelsTimer, &QTimer::timeout, this, &ShellCorona::createWaitingPanels);
 
 #ifndef NDEBUG
     m_invariantsTimer.setSingleShot(true);
-    m_invariantsTimer.setInterval(250);
+    m_invariantsTimer.setInterval(250ms);
     connect(&m_invariantsTimer, &QTimer::timeout, this, &ShellCorona::screenInvariants);
 #endif
 

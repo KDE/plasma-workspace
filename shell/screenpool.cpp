@@ -19,6 +19,10 @@
 #define CHECK_SCREEN_INVARIANTS
 #endif
 
+#include <chrono>
+
+using namespace std::chrono_literals;
+
 ScreenPool::ScreenPool(const KSharedConfig::Ptr &config, QObject *parent)
     : QObject(parent)
     , m_configGroup(KConfigGroup(config, QStringLiteral("ScreenConnectors")))
@@ -29,7 +33,7 @@ ScreenPool::ScreenPool(const KSharedConfig::Ptr &config, QObject *parent)
     connect(m_primaryWatcher, &PrimaryOutputWatcher::primaryOutputNameChanged, this, &ScreenPool::handlePrimaryOutputNameChanged);
 
     m_reconsiderOutputsTimer.setSingleShot(true);
-    m_reconsiderOutputsTimer.setInterval(250);
+    m_reconsiderOutputsTimer.setInterval(250ms);
     connect(&m_reconsiderOutputsTimer, &QTimer::timeout, this, &ScreenPool::reconsiderOutputs);
 
     m_configSaveTimer.setSingleShot(true);

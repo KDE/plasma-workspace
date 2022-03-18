@@ -17,6 +17,9 @@
 #include <cmath>
 
 #include <PlasmaQuick/AppletQuickItem>
+#include <chrono>
+
+using namespace std::chrono_literals;
 
 ItemContainer::ItemContainer(QQuickItem *parent)
     : QQuickItem(parent)
@@ -656,7 +659,7 @@ void ItemContainer::hoverLeaveEvent(QHoverEvent *event)
     if (!m_closeEditModeTimer) {
         m_closeEditModeTimer = new QTimer(this);
         m_closeEditModeTimer->setSingleShot(true);
-        m_closeEditModeTimer->setInterval(500);
+        m_closeEditModeTimer->setInterval(500ms);
         connect(m_closeEditModeTimer, &QTimer::timeout, this, [this]() {
             setEditMode(false);
         });

@@ -35,6 +35,9 @@
 #endif
 
 #include "launchertasksmodel_p.h"
+#include <chrono>
+
+using namespace std::chrono_literals;
 
 namespace TaskManager
 {
@@ -86,7 +89,7 @@ LauncherTasksModel::Private::Private(LauncherTasksModel *q)
 void LauncherTasksModel::Private::init()
 {
     sycocaChangeTimer.setSingleShot(true);
-    sycocaChangeTimer.setInterval(100);
+    sycocaChangeTimer.setInterval(100ms);
 
     QObject::connect(&sycocaChangeTimer, &QTimer::timeout, q, [this]() {
         if (!launchersOrder.count()) {

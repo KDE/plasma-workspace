@@ -10,9 +10,12 @@
 
 #include <QDebug>
 #include <QTimer>
+#include <chrono>
 #include <kconfig.h>
 #include <kconfiggroup.h>
 #include <ksharedconfig.h>
+
+using namespace std::chrono_literals;
 
 class ConfigGroupPrivate
 {
@@ -44,7 +47,7 @@ ConfigGroup::ConfigGroup(QObject *parent)
     // Delay and compress everything within 5 seconds into one sync
     d->synchTimer = new QTimer(this);
     d->synchTimer->setSingleShot(true);
-    d->synchTimer->setInterval(1500);
+    d->synchTimer->setInterval(1500ms);
     connect(d->synchTimer, &QTimer::timeout, this, &ConfigGroup::sync);
 }
 
