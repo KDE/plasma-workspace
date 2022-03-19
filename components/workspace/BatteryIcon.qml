@@ -19,7 +19,7 @@ Item {
         imagePath: "icons/battery"
         colorGroup: PlasmaCore.ColorScope.colorGroup
         onRepaintNeeded: { // needed to detect the hint item go away when theme changes
-            batterySvg.visible = Qt.binding(function() { return !otherBatteriesSvg.visible && (!svg.hasElement("hint-dont-superimpose-fill") || !hasBattery); })
+            batterySvg.visible = Qt.binding(() => !otherBatteriesSvg.visible && (!svg.hasElement("hint-dont-superimpose-fill") || !hasBattery))
         }
     }
 
