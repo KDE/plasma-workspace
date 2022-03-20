@@ -65,8 +65,20 @@ RowLayout {
         Layout.alignment: Qt.AlignTop
         spacing: 0
 
-        PlasmaComponents3.Label {
-            text: i18n("Power Profile")
+        RowLayout {
+            Layout.fillWidth: true
+            spacing: PlasmaCore.Units.smallSpacing
+
+            PlasmaComponents3.Label {
+                Layout.fillWidth: true
+                elide: Text.ElideRight
+                text: i18n("Power Profile")
+            }
+
+            PlasmaComponents3.Label {
+                Layout.alignment: Qt.AlignRight
+                text: activeProfileData ? activeProfileData.label : ""
+            }
         }
 
         PlasmaComponents3.Slider {
@@ -103,37 +115,40 @@ RowLayout {
         }
 
         RowLayout {
+            spacing: 0
+            Layout.topMargin: PlasmaCore.Units.smallSpacing
+            Layout.bottomMargin: PlasmaCore.Units.smallSpacing
             Layout.fillWidth: true
-            spacing: PlasmaCore.Units.smallSpacing
 
-            Repeater {
-                id: repeater
-                model: root.profileData
-                PlasmaComponents3.Label {
-                    // Same preferredWidth combined with fillWidth results in equal sizes for all
-                    Layout.fillWidth: true
-                    Layout.preferredWidth: 1
-                    horizontalAlignment: switch (index) {
-                        case 0:
-                            return Text.AlignLeft; // first
-                        case repeater.count - 1:
-                            return Text.AlignRight; // last
-                        default:
-                            return Text.AlignHCenter; // middle
-                    }
-                    elide: Text.ElideMiddle
+            PlasmaCore.Svg {
+                id: svg
+                imagePath: "icons/battery"
+            }
 
-                    // Disable label for inhibited items to reinforce unavailability
-                    enabled: !(root.profileData[index].canBeInhibited && root.inhibited)
+            PlasmaCore.SvgItem {
+                Layout.preferredHeight: PlasmaCore.Units.iconSizes.smallMedium
+                Layout.preferredWidth: PlasmaCore.Units.iconSizes.smallMedium
+                svg: svg
+                elementId: "profile-powersave"
+            }
 
-                    text: modelData.label
-                }
+            Item {
+                Layout.fillWidth: true
+            }
+
+            PlasmaCore.SvgItem {
+                Layout.preferredHeight: PlasmaCore.Units.iconSizes.smallMedium
+                Layout.preferredWidth: PlasmaCore.Units.iconSizes.smallMedium
+                svg: svg
+                elementId: "profile-performance"
             }
         }
 
         // NOTE Only one of these will be visible at a time since the daemon will only set one depending
         // on its version
         InhibitionHint {
+            id: inhibitionReasonHint
+
             Layout.fillWidth: true
 
             visible: root.inhibited
@@ -149,6 +164,8 @@ RowLayout {
         }
 
         InhibitionHint {
+            id: inhibitionPerformanceHint
+
             Layout.fillWidth: true
 
             visible: root.activeProfile === "performance" && root.degradationReason !== ""
@@ -164,6 +181,8 @@ RowLayout {
         }
 
         InhibitionHint {
+            id: inhibitionHoldersHint
+
             Layout.fillWidth: true
 
             visible: root.activeHolds.length > 0 && root.activeProfileData !== undefined
@@ -176,7 +195,10 @@ RowLayout {
         }
 
         Repeater {
+            id: repeater
+
             model: root.activeHolds
+
             InhibitionHint {
                 Layout.fillWidth: true
 
@@ -185,6 +207,16 @@ RowLayout {
                 text: i18nc("%1 is the name of the application, %2 is the reason provided by it for activating performance mode",
                             "%1: %2", modelData.Name, modelData.Reason)
             }
+        }
+
+        Item {
+            Layout.fillWidth: true
+            Layout.preferredHeight: PlasmaCore.Units.smallSpacing
+
+            visible: repeater.visibleChildren > 0
+                || inhibitionReasonHint.visible
+                || inhibitionPerformanceHint.visible
+                || inhibitionHoldersHint.visible
         }
     }
 }

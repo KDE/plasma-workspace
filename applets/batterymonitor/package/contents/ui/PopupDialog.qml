@@ -142,9 +142,6 @@ PlasmaComponents3.Page {
                 // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-83890
                 PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
 
-                // additional margin, because the bottom of PowerProfileItem
-                // and the top of BatteryItem are more dense.
-                Layout.topMargin: PlasmaCore.Units.smallSpacing * 2
                 Layout.fillWidth: true
                 Layout.fillHeight: true
 
