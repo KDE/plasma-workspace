@@ -28,7 +28,7 @@
         "Description[sl]": "Pošilja posodobljene podatke o legi v upravljalnik skladnje",
         "Description[sv]": "Skickar uppdaterad platsinformation till sammansättare",
         "Description[ta]": "இருப்பிடம் குறித்த விவரங்களை சாளர மேலாள்நிரலுக்கு அனுப்பும்",
-        "Description[tr]": "Güncellenen konum verilerini oluşturucuya gönderir",
+        "Description[tr]": "Güncellenen konum verilerini bileşikleştiriciye gönderir",
         "Description[uk]": "Надсилає оновлені дані щодо розташування на комп'ютер",
         "Description[x-test]": "xxSends updated location data to the compositorxx",
         "Description[zh_CN]": "发送已更新的位置数据到显示特效混合器",
