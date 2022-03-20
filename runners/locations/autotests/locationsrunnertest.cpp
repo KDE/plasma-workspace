@@ -5,7 +5,7 @@
 */
 
 #include <KApplicationTrader>
-#include <KIOCore/KProtocolInfo>
+#include <KProtocolInfo>
 #include <KRunner/AbstractRunnerTest>
 #include <KShell>
 #include <QMimeData>

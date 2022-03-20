@@ -23,7 +23,7 @@
 #include <KIconLoader>
 #include <KJobWidgets>
 #include <KMessageBox>
-#include <KNewStuff3/KNS3/QtQuickDialogWrapper>
+#include <KNS3/QtQuickDialogWrapper>
 #include <KPluginFactory>
 #include <KStandardAction>
 #include <KToolBar>

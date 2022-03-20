@@ -38,7 +38,11 @@
 #include "klipperpopup.h"
 #include "klippersettings.h"
 
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+#include <Prison/Prison>
+#else
 #include <prison/Prison>
+#endif
 
 #include <config-X11.h>
 #if HAVE_X11
