@@ -39,7 +39,6 @@ Name[vi]=Kiểu cách Plasma
 Name[x-test]=xxPlasma Stylesxx
 Name[zh_CN]=Plasma 视觉风格
 
-ProvidersUrl=https://autoconfig.kde.org/ocs/providers.xml
 Categories=Plasma Theme
 StandardResource=tmp
 Uncompress=kpackage

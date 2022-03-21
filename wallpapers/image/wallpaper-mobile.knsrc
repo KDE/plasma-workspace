@@ -45,7 +45,6 @@ Name[x-test]=xxWallpapersxx
 Name[zh_CN]=壁纸
 Name[zh_TW]=桌布
 
-ProvidersUrl=https://autoconfig.kde.org/ocs/providers.xml
 Categories=Plamo Wallpapers
 TargetDir=wallpapers
 Uncompress=subdir-archive

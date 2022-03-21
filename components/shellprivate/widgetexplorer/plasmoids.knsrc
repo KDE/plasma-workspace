@@ -50,7 +50,6 @@ Name[x-test]=xxPlasma Widgetsxx
 Name[zh_CN]=Plasma 小部件
 Name[zh_TW]=Plasma 元件
 
-ProvidersUrl=https://autoconfig.kde.org/ocs/providers.xml
 Categories=Plasma 5 Plasmoid
 StandardResource=tmp
 Uncompress=kpackage

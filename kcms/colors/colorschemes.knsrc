@@ -39,7 +39,6 @@ Name[vi]=Quy hoạch màu
 Name[x-test]=xxColor Schemesxx
 Name[zh_CN]=配色方案
 
-ProvidersUrl=https://autoconfig.kde.org/ocs/providers.xml
 TargetDir=color-schemes
 Uncompress=archive
 Categories=KDE Color Scheme KDE4

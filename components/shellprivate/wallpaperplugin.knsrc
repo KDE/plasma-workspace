@@ -42,7 +42,6 @@ Name[x-test]=xxWallpaper Pluginsxx
 Name[zh_CN]=壁纸插件
 Name[zh_TW]=桌布外掛程式
 
-ProvidersUrl=https://autoconfig.kde.org/ocs/providers.xml
 Categories=Plasma Wallpaper Plugin
 StandardResource=tmp
 Uncompress=kpackage

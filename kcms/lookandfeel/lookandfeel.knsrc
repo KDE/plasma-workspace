@@ -40,7 +40,6 @@ Name[vi]=Chủ đề toàn cục
 Name[x-test]=xxGlobal Themesxx
 Name[zh_CN]=全局主题
 
-ProvidersUrl=https://autoconfig.kde.org/ocs/providers.xml
 Categories=121
 StandardResource=tmp
 Uncompress=kpackage

@@ -42,7 +42,6 @@ Name[vi]=Biểu tượng
 Name[x-test]=xxIconsxx
 Name[zh_CN]=图标
 
-ProvidersUrl=https://autoconfig.kde.org/ocs/providers.xml
 Categories=KDE Icon Theme
 TargetDir=icons
 Uncompress=true
