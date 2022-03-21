@@ -61,6 +61,8 @@ PlasmaExtras.Representation {
         if (!seekSlider.pressed && !keyPressed) {
             // we also don't want passive position updates
             disablePositionUpdate = true
+            // Slider refuses to set value beyond its end, make sure "to" is up-to-date first
+            seekSlider.to = length;
             seekSlider.value = position
             disablePositionUpdate = false
         }
