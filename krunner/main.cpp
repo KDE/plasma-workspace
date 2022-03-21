@@ -50,7 +50,7 @@ int main(int argc, char **argv)
     //     TODO: Make it a QGuiApplication once we don't depend on KDELibs4Support
     //     QGuiApplication app(argc, argv);
 
-    KAboutData aboutData(QStringLiteral("krunner"), i18n("krunner"), QStringLiteral(PROJECT_VERSION), i18n("Run Command interface"), KAboutLicense::GPL);
+    KAboutData aboutData(QStringLiteral("krunner"), i18n("KRunner"), QStringLiteral(PROJECT_VERSION), i18n("Run Command interface"), KAboutLicense::GPL);
 
     KAboutData::setApplicationData(aboutData);
     app.setQuitOnLastWindowClosed(false);
