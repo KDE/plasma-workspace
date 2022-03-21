@@ -17,6 +17,7 @@
 #include <QSet>
 #include <QTimer>
 
+#include <KConfigWatcher>
 #include <KPackage/Package>
 
 class DesktopView;
@@ -227,6 +228,9 @@ private Q_SLOTS:
 
     void activateTaskManagerEntry(int index);
 
+    // KRunner settings: Activate when pressing any key on the desktop
+    void setActivateKRunnerWhenTypingOnDesktop(DesktopView *_view = nullptr, const KConfigGroup &_group = KConfigGroup(), const QByteArrayList &names = {});
+
 private:
     void updateStruts();
     void configurationChanged(const QString &path);
@@ -244,6 +248,8 @@ private:
 
     KSharedConfig::Ptr m_config;
     QString m_configPath;
+
+    KConfigWatcher::Ptr m_krunnerConfigWatcher;
 
     ScreenPool *m_screenPool;
     QString m_shell;

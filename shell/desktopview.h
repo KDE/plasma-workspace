@@ -10,8 +10,6 @@
 #include <PlasmaQuick/ContainmentView>
 #include <QPointer>
 
-#include <KConfigWatcher>
-
 namespace KWayland
 {
 namespace Client
@@ -63,6 +61,8 @@ public:
 
     SessionType sessionType() const;
 
+    void setActivateKRunnerWhenTypingOnDesktop(bool activated);
+
     QVariantMap candidateContainmentsGraphicItems() const;
 
     Q_INVOKABLE QString fileFromPackage(const QString &key, const QString &fileName);
@@ -100,6 +100,5 @@ private:
     QString m_krunnerText;
 
     // KRunner config
-    KConfigWatcher::Ptr m_configWatcher;
     bool m_activateKRunnerWhenTypingOnDesktop;
 };

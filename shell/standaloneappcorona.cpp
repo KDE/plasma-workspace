@@ -55,6 +55,11 @@ StandaloneAppCorona::StandaloneAppCorona(const QString &coronaPlugin, QObject *p
     connect(m_activityConsumer, &KActivities::Consumer::activityRemoved, this, &StandaloneAppCorona::activityRemoved);
 
     connect(m_activityConsumer, &KActivities::Consumer::serviceStatusChanged, this, &StandaloneAppCorona::load);
+
+    // KRunner settings
+    setActivateKRunnerWhenTypingOnDesktop();
+    m_krunnerConfigWatcher = KConfigWatcher::create(KSharedConfig::openConfig(QStringLiteral("krunnerrc")));
+    connect(m_krunnerConfigWatcher.data(), &KConfigWatcher::configChanged, this, &StandaloneAppCorona::setActivateKRunnerWhenTypingOnDesktop);
 }
 
 StandaloneAppCorona::~StandaloneAppCorona()
@@ -227,4 +232,18 @@ int StandaloneAppCorona::screenForContainment(const Plasma::Containment *contain
         }
     }
     return 0;
+}
+
+void StandaloneAppCorona::setActivateKRunnerWhenTypingOnDesktop(const KConfigGroup &_group, const QByteArrayList &names)
+{
+    KConfigGroup group = _group;
+    if (group.isValid()) {
+        if (!names.contains(QByteArrayLiteral("ActivateWhenTypingOnDesktop"))) {
+            return;
+        }
+    } else {
+        group = KConfigGroup(KSharedConfig::openConfig(QStringLiteral("krunnerrc")), "General");
+    }
+
+    m_view->setActivateKRunnerWhenTypingOnDesktop(group.readEntry("ActivateWhenTypingOnDesktop", true));
 }

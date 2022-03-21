@@ -278,6 +278,10 @@ void ShellCorona::init()
         }
         emit containmentToActivate->activated();
     });
+
+    // KRunner settings
+    m_krunnerConfigWatcher = KConfigWatcher::create(KSharedConfig::openConfig(QStringLiteral("krunnerrc")));
+    connect(m_krunnerConfigWatcher.data(), &KConfigWatcher::configChanged, this, std::bind(&ShellCorona::setActivateKRunnerWhenTypingOnDesktop, this, nullptr, std::placeholders::_1, std::placeholders::_2));
 }
 
 ShellCorona::~ShellCorona()
@@ -1219,6 +1223,8 @@ void ShellCorona::addOutput(QScreen *screen)
 #ifndef NDEBUG
     m_invariantsTimer.start();
 #endif
+
+    setActivateKRunnerWhenTypingOnDesktop(view);
 }
 
 void ShellCorona::checkAllDesktopsUiReady(bool ready)
@@ -2291,6 +2297,28 @@ void ShellCorona::activateTaskManagerEntry(int index)
     for (auto it = m_panelViews.constBegin(), end = m_panelViews.constEnd(); it != end; ++it) {
         if (activateTaskManagerEntryOnContainment(it.key(), index)) {
             return;
+        }
+    }
+}
+
+void ShellCorona::setActivateKRunnerWhenTypingOnDesktop(DesktopView *_view, const KConfigGroup &_group, const QByteArrayList &names)
+{
+    KConfigGroup group = _group;
+    if (group.isValid()) {
+        if (!names.contains(QByteArrayLiteral("ActivateWhenTypingOnDesktop"))) {
+            return;
+        }
+    } else {
+        group = KConfigGroup(KSharedConfig::openConfig(QStringLiteral("krunnerrc")), "General");
+    }
+
+    const bool activated = group.readEntry("ActivateWhenTypingOnDesktop", true);
+    if (_view) {
+        _view->setActivateKRunnerWhenTypingOnDesktop(activated);
+    } else {
+        // Apply to all views
+        for (DesktopView *view : std::as_const(m_desktopViewForScreen)) {
+            view->setActivateKRunnerWhenTypingOnDesktop(activated);
         }
     }
 }

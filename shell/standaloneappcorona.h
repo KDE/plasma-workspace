@@ -7,6 +7,8 @@
 
 #pragma once
 
+#include <KConfigWatcher>
+
 #include "desktopview.h"
 #include <plasma/corona.h>
 
@@ -45,10 +47,16 @@ public Q_SLOTS:
 protected Q_SLOTS:
     int screenForContainment(const Plasma::Containment *containment) const override;
 
+private Q_SLOTS:
+    // KRunner settings: Activate when pressing any key on the desktop
+    void setActivateKRunnerWhenTypingOnDesktop(const KConfigGroup &_group = KConfigGroup(), const QByteArrayList &names = {});
+
 private:
     QString m_coronaPlugin;
     KActivities::Consumer *m_activityConsumer;
     KConfigGroup m_desktopDefaultsConfig;
     DesktopView *m_view;
     QHash<QString, QString> m_activityContainmentPlugins;
+
+    KConfigWatcher::Ptr m_krunnerConfigWatcher;
 };
