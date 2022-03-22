@@ -253,7 +253,6 @@ private:
     VisibilityMode m_visibilityMode;
     OpacityMode m_opacityMode;
     Plasma::Theme m_theme;
-    QTimer m_positionPaneltimer;
     QTimer m_unhideTimer;
     Plasma::Types::BackgroundHints m_backgroundHints;
     Plasma::FrameSvg::EnabledBorders m_enabledBorders = Plasma::FrameSvg::AllBorders;

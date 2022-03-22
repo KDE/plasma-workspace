@@ -82,16 +82,12 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     // so we exactly know when rootobject is available
     connect(this, &QuickViewSharedEngine::statusChanged, this, &PanelView::handleQmlStatusChange);
 
-    m_positionPaneltimer.setSingleShot(true);
-    m_positionPaneltimer.setInterval(150);
-    connect(&m_positionPaneltimer, &QTimer::timeout, this, &PanelView::restore);
-
     m_unhideTimer.setSingleShot(true);
     m_unhideTimer.setInterval(500ms);
     connect(&m_unhideTimer, &QTimer::timeout, this, &PanelView::restoreAutoHide);
 
     m_lastScreen = targetScreen;
-    connect(this, &PanelView::locationChanged, &m_positionPaneltimer, qOverload<>(&QTimer::start));
+    connect(this, &PanelView::locationChanged, this, &PanelView::restore);
     connect(this, &PanelView::containmentChanged, this, &PanelView::refreshContainment);
 
     if (!m_corona->kPackage().isValid()) {
@@ -649,10 +645,6 @@ void PanelView::restore()
     Q_EMIT minimumLengthChanged();
     Q_EMIT offsetChanged();
     Q_EMIT alignmentChanged();
-
-    //::restore might have been called directly before the timer fires
-    // at which point we don't still need the timer
-    m_positionPaneltimer.stop();
 }
 
 void PanelView::showConfigurationInterface(Plasma::Applet *applet)
@@ -919,7 +911,7 @@ void PanelView::adaptToScreen()
 
     integrateScreen();
     showTemporarily();
-    m_positionPaneltimer.start();
+    restore();
 }
 
 bool PanelView::event(QEvent *e)
