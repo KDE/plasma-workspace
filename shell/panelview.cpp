@@ -628,6 +628,9 @@ void PanelView::restore()
     // FIXME: an invalid size doesn't work with QWindows
     setMaximumSize(screenSize);
 
+    m_initCompleted = true;
+    positionPanel();
+
     const int side = containment()->formFactor() == Plasma::Types::Vertical ? screenSize.height() : screenSize.width();
     const int maxSize = side - m_offset;
     m_maxLength = qBound<int>(MINSIZE, readConfigValueWithFallBack("maxLength", side), maxSize);
@@ -640,9 +643,7 @@ void PanelView::restore()
     setVisibilityMode((VisibilityMode)panelConfig.parent().readEntry<int>("panelVisibility", panelConfig.readEntry<int>("panelVisibility", (int)NormalPanel)));
     setOpacityMode((OpacityMode)config().parent().readEntry<int>("panelOpacity",
                                                                  configDefaults().parent().readEntry<int>("panelOpacity", PanelView::OpacityMode::Adaptive)));
-    m_initCompleted = true;
     resizePanel();
-    positionPanel();
 
     Q_EMIT maximumLengthChanged();
     Q_EMIT minimumLengthChanged();
