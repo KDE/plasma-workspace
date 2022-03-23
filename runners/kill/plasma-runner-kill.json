@@ -39,7 +39,7 @@
         "Description": "Stop applications that are currently running",
         "Description[ar]": "أوقف التطبيقات التي تعمل حاليًا",
         "Description[az]": "Hal-hazırda işləyən tətbiqləri dayandırmaq",
-        "Description[ca@valencia]": "Atura les aplicacions que estan en execució",
+        "Description[ca@valencia]": "Para les aplicacions que estan en execució",
         "Description[ca]": "Atura les aplicacions que estan en execució",
         "Description[cs]": "Ukončit aktuálně spuštěné aplikace",
         "Description[de]": "Gerade laufende Anwendungen beenden",
