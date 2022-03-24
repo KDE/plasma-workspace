@@ -211,7 +211,7 @@ void XWindowTasksModel::Private::addWindow(WId window)
     KWindowInfo info(window, NET::WMWindowType | NET::WMState | NET::WMName | NET::WMVisibleName, NET::WM2TransientFor);
 
     NET::WindowType wType = info.windowType(NET::NormalMask | NET::DesktopMask | NET::DockMask | NET::ToolbarMask | NET::MenuMask | NET::DialogMask
-                                            | NET::OverrideMask | NET::TopMenuMask | NET::UtilityMask | NET::SplashMask);
+                                            | NET::OverrideMask | NET::TopMenuMask | NET::UtilityMask | NET::SplashMask | NET::NotificationMask);
 
     const WId leader = info.transientFor();
 
