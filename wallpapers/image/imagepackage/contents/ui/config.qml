@@ -14,7 +14,7 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
 import org.kde.kquickcontrols 2.0 as KQuickControls
 import org.kde.kquickcontrolsaddons 2.0
-import org.kde.newstuff 1.62 as NewStuff
+import org.kde.newstuff 1.91 as NewStuff
 import org.kde.kcm 1.5 as KCM
 import org.kde.kirigami 2.12 as Kirigami
 
@@ -389,7 +389,7 @@ ColumnLayout {
                     text: i18nd("plasma_wallpaper_org.kde.image", "Get New Wallpapers…")
                     viewMode: NewStuff.Page.ViewMode.Preview
                     onEntryEvent: function(entry, event) {
-                        if (event == 1) { // StatusChangedEvent
+                        if (event == NewStuff.Entry.StatusChangedEvent) {
                             imageWallpaper.newStuffFinished()
                         }
                     }
@@ -488,7 +488,7 @@ ColumnLayout {
             text: i18nd("plasma_wallpaper_org.kde.image", "Get New Wallpapers…")
             viewMode: NewStuff.Page.ViewMode.Preview
             onEntryEvent: function(entry, event) {
-                if (event == 1) { // StatusChangedEvent
+                if (event == NewStuff.Entry.StatusChangedEvent) {
                     imageWallpaper.newStuffFinished()
                 }
             }

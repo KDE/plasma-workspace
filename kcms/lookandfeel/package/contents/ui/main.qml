@@ -9,7 +9,7 @@ import QtQuick.Layouts 1.1
 import QtQuick.Window 2.2
 import QtQuick.Controls 2.3 as QtControls
 import org.kde.kirigami 2.5 as Kirigami
-import org.kde.newstuff 1.81 as NewStuff
+import org.kde.newstuff 1.91 as NewStuff
 import org.kde.kconfig 1.0 // for KAuthorized
 import org.kde.kcm 1.3 as KCM
 
@@ -85,9 +85,9 @@ KCM.GridViewKCM {
                         configFile: "lookandfeel.knsrc"
                         text: i18n("Get New Global Themes…")
                         onEntryEvent: function (entry, event) {
-                            if (event == 1) { // StatusChangedEvent
+                            if (event == NewStuff.Entry.StatusChangedEvent) {
                                 kcm.knsEntryChanged(entry);
-                            } else if (event == 2) { // AdoptedEvent
+                            } else if (event == NewStuff.Entry.AdoptedEvent) {
                                 kcm.reloadConfig();
                             }
                         }

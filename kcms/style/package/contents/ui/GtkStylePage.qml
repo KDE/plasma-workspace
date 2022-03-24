@@ -10,7 +10,7 @@ import QtQuick.Dialogs 1.0 as QtDialogs
 import QtQuick.Controls 2.10 as QtControls
 import org.kde.kirigami 2.10 as Kirigami
 import org.kde.private.kcms.style 1.0 as Private
-import org.kde.newstuff 1.81 as NewStuff
+import org.kde.newstuff 1.91 as NewStuff
 import org.kde.kcm 1.2 as KCM
 
 Kirigami.Page {
@@ -100,7 +100,7 @@ Kirigami.Page {
                     text: i18n("Get New GNOME/GTK Application Styles…")
                     configFile: "gtk_themes.knsrc"
                     onEntryEvent: function (entry, event) {
-                        if (event == 1) { // StatusChangedEvent
+                        if (event == NewStuff.Entry.StatusChangedEvent) {
                             kcm.load();
                         }
                     }

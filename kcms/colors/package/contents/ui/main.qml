@@ -13,7 +13,7 @@ import QtQuick.Templates 2.3 as T
 import QtQml 2.15
 
 import org.kde.kirigami 2.8 as Kirigami
-import org.kde.newstuff 1.81 as NewStuff
+import org.kde.newstuff 1.91 as NewStuff
 import org.kde.kcm 1.5 as KCM
 import org.kde.kquickcontrols 2.0 as KQuickControls
 import org.kde.private.kcms.colors 1.0 as Private
@@ -494,9 +494,9 @@ KCM.GridViewKCM {
                     text: i18n("Get New Color Schemes…")
                     configFile: "colorschemes.knsrc"
                     onEntryEvent: function (entry, event) {
-                        if (event == 1) { // StatusChangedEvent
+                        if (event == NewStuff.Entry.StatusChangedEvent) {
                             kcm.knsEntryChanged(entry)
-                        } else if (event == 2) { // AdoptedEvent
+                        } else if (event == NewStuff.Entry.AdoptedEvent) {
                             kcm.loadSelectedColorScheme()
                         }
                     }
