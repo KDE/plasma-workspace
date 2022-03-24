@@ -41,11 +41,13 @@ QString Notification::Private::sanitize(const QString &text)
     // Finally, check if we don't have multiple <br/>s following,
     // can happen for example when "\n       \n" is sent, this replaces
     // all <br/>s in succession with just one
-    t.replace(QRegularExpression(QStringLiteral("<br/>\\s*<br/>(\\s|<br/>)*")), QLatin1String("<br/>"));
+    static const QRegularExpression brExpr(QStringLiteral("<br/>\\s*<br/>(\\s|<br/>)*"));
+    t.replace(brExpr, QLatin1String("<br/>"));
     // This fancy RegExp escapes every occurrence of & since QtQuick Text will blatantly cut off
     // text where it finds a stray ampersand.
     // Only &{apos, quot, gt, lt, amp}; as well as &#123 character references will be allowed
-    t.replace(QRegularExpression(QStringLiteral("&(?!(?:apos|quot|[gl]t|amp);|#)")), QLatin1String("&amp;"));
+    static const QRegularExpression escapeExpr(QStringLiteral("&(?!(?:apos|quot|[gl]t|amp);|#)"));
+    t.replace(escapeExpr, QLatin1String("&amp;"));
 
     // Don't bother adding some HTML structure if the body is now empty
     if (t.isEmpty()) {
