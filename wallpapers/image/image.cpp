@@ -670,12 +670,6 @@ void Image::backgroundsFound()
 {
     disconnect(m_slideshowModel, &SlideModel::done, this, 0);
 
-    if (m_scanDirty) {
-        m_scanDirty = false;
-        startSlideshow();
-        return;
-    }
-
     // start slideshow
     if (m_slideFilterModel->rowCount() == 0) {
         // no image has been found, which is quite weird... try again later (this is useful for events which

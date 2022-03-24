@@ -172,7 +172,6 @@ private:
     QString m_wallpaperPath;
     QStringList m_usersWallpapers;
     KDirWatch *m_dirWatch;
-    bool m_scanDirty;
     QSize m_targetSize;
 
     RenderingMode m_mode;
