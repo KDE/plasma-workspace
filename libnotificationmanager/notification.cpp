@@ -246,6 +246,10 @@ QSize Notification::Private::maximumImageSize()
 
 KService::Ptr Notification::Private::serviceForDesktopEntry(const QString &desktopEntry)
 {
+    if (desktopEntry.isEmpty()) {
+        return {};
+    }
+
     KService::Ptr service;
 
     if (desktopEntry.startsWith(QLatin1Char('/'))) {
