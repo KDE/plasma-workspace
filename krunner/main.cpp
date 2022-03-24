@@ -20,7 +20,6 @@
 #include <KAuthorized>
 #include <KDBusService>
 
-#include <KQuickAddons/QtQuickSettings>
 #include <kdeclarative/qmlobject.h>
 
 #include <kworkspace.h>
@@ -44,8 +43,6 @@ int main(int argc, char **argv)
         qunsetenv("QT_QPA_PLATFORM");
     }
     KLocalizedString::setApplicationDomain("krunner");
-
-    KQuickAddons::QtQuickSettings::init();
 
     //     TODO: Make it a QGuiApplication once we don't depend on KDELibs4Support
     //     QGuiApplication app(argc, argv);

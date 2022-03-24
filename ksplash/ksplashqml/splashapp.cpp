@@ -16,7 +16,6 @@
 #include <QPixmap>
 #include <qscreen.h>
 
-#include <KQuickAddons/QtQuickSettings>
 #include <KWindowSystem>
 
 #include <KConfigGroup>
@@ -43,8 +42,6 @@ SplashApp::SplashApp(int &argc, char **argv)
     , m_testing(false)
     , m_window(false)
 {
-    KQuickAddons::QtQuickSettings::init();
-
     QCommandLineParser parser;
     parser.addOption(QCommandLineOption(QStringLiteral("test"), QStringLiteral("Run in test mode")));
     parser.addOption(QCommandLineOption(QStringLiteral("window"), QStringLiteral("Run in windowed mode")));

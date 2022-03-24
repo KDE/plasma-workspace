@@ -23,7 +23,6 @@ target_link_libraries(krunner
     KF5::KCMUtils
     KF5::Crash
     KF5::WaylandClient
-    KF5::QuickAddons
     KF5::Runner
     PW::KWorkspace
 )

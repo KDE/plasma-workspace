@@ -15,7 +15,6 @@ target_link_libraries(ksplashqml
     KF5::Package
     KF5::QuickAddons
     KF5::WindowSystem
-    KF5::QuickAddons
     PW::KWorkspace
     LayerShellQt::Interface
    )

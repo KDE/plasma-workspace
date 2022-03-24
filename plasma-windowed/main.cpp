@@ -11,7 +11,6 @@
 
 #include <KDBusService>
 #include <KLocalizedString>
-#include <KQuickAddons/QtQuickSettings>
 
 #include "plasmawindowedcorona.h"
 #include "plasmawindowedview.h"
@@ -27,8 +26,6 @@ int main(int argc, char **argv)
     app.setOrganizationDomain(QStringLiteral("kde.org"));
 
     KDBusService service(KDBusService::Unique);
-
-    KQuickAddons::QtQuickSettings::init();
 
     QCommandLineParser parser;
     parser.setApplicationDescription(i18n("Plasma Windowed"));

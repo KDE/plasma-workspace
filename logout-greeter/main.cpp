@@ -10,8 +10,6 @@
 #include <QLibraryInfo>
 #include <QQuickWindow>
 
-#include <KQuickAddons/QtQuickSettings>
-
 #include "ksmserveriface.h"
 
 #include "greeter.h"
@@ -25,8 +23,6 @@ int main(int argc, char *argv[])
     KWorkSpace::detectPlatform(argc, argv);
     QQuickWindow::setDefaultAlphaBuffer(true);
     QGuiApplication app(argc, argv);
-
-    KQuickAddons::QtQuickSettings::init();
 
     OrgKdeKSMServerInterfaceInterface ksmserver(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
     QDBusPendingReply<bool> isShuttingDownPending = ksmserver.isShuttingDown();

@@ -19,7 +19,6 @@
 #include <QSessionManager>
 
 #include <KAboutData>
-#include <KQuickAddons/QtQuickSettings>
 
 #ifdef WITH_KUSERFEEDBACKCORE
 #include "userfeedback.h"
@@ -92,8 +91,6 @@ int main(int argc, char *argv[])
     // The executable's path is added to the library/plugin paths.
     // This does not make much sense for plasmashell.
     app.removeLibraryPath(QCoreApplication::applicationDirPath());
-
-    KQuickAddons::QtQuickSettings::init();
 
     KAboutData aboutData(QStringLiteral("plasmashell"), i18n("Plasma"), QStringLiteral(PROJECT_VERSION), i18n("Plasma Shell"), KAboutLicense::GPL);
 

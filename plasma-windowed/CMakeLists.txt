@@ -19,7 +19,6 @@ target_link_libraries(
     KF5::I18n
     KF5::IconThemes
     KF5::XmlGui
-    KF5::QuickAddons
     KF5::PlasmaQuick
     KF5::Plasma
     KF5::DBusAddons
