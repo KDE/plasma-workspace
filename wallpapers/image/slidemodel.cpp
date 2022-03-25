@@ -25,12 +25,12 @@ void SlideModel::addDirs(const QStringList &selected)
     finder->start();
 }
 
-void SlideModel::backgroundsFound(const QStringList &paths, const QString &token)
+void SlideModel::backgroundsFound(const ImagePackageList &packages, const QString &token)
 {
     if (token != m_findToken) {
         return;
     }
-    processPaths(paths);
+    processImagePackages(packages);
     Q_EMIT done();
 }
 
@@ -41,10 +41,11 @@ void SlideModel::removeDir(const QString &path)
     finder->start();
 }
 
-void SlideModel::removeBackgrounds(const QStringList &paths, const QString &token)
+void SlideModel::removeBackgrounds(const ImagePackageList &packages, const QString &token)
 {
-    for (const QString &file : paths) {
-        removeBackground(file);
+    Q_UNUSED(token)
+    for (const ImagePackage &p : packages) {
+        removeBackground(p.path);
     }
 }
 

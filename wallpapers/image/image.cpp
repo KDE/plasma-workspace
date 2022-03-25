@@ -513,9 +513,42 @@ void Image::addDirFromSelectionDialog()
 
 void Image::syncWallpaperPackage()
 {
-    m_wallpaperPackage.setPath(m_wallpaper);
-    findPreferedImageInPackage(m_wallpaperPackage);
-    m_wallpaperPath = m_wallpaperPackage.filePath("preferred");
+    // If it's a xml wallpaper, parse the xml file
+    if (m_wallpaper.endsWith(QStringLiteral(".xml"), Qt::CaseInsensitive)) {
+        const ImagePackageList list = BackgroundFinder::parseXmlWallpaper(m_wallpaper);
+        if (list.isEmpty()) {
+            m_wallpaperPath.clear();
+            return;
+        }
+
+        m_wallpaperPath = list.at(0).path;
+        m_lightWallpaperPath = m_wallpaperPath;
+        m_darkWallpaperPath = list.at(0).darkPath;
+
+        if (!QFile::exists(m_darkWallpaperPath)) {
+            m_darkWallpaperPath.clear();
+        }
+    } else {
+        m_wallpaperPackage.setPath(m_wallpaper);
+        findPreferedImageInPackage(m_wallpaperPackage);
+        m_wallpaperPath = m_wallpaperPackage.filePath("preferred");
+        m_lightWallpaperPath.clear();
+        m_darkWallpaperPath.clear();
+    }
+
+    // When both light wallpaper and dark wallpaper are available
+    if (!m_lightWallpaperPath.isEmpty() && !m_darkWallpaperPath.isEmpty()) {
+        // Get current color scheme
+        if (qGray(QApplication::palette().window().color().rgb()) < 192) {
+            m_wallpaperPath = m_darkWallpaperPath; // prefer dark
+        }
+
+        if (!m_colorSchemeConnection) {
+            m_colorSchemeConnection = connect(qGuiApp, &QGuiApplication::paletteChanged, this, &Image::slotUpdateColorScheme);
+        }
+    } else if (m_colorSchemeConnection) {
+        disconnect(m_colorSchemeConnection);
+    }
 }
 
 void Image::setSingleImage()
@@ -687,6 +720,17 @@ void Image::backgroundsFound()
     }
 }
 
+void Image::slotUpdateColorScheme(const QPalette &palette)
+{
+    // 192 is from kcm_colors
+    const QString newPath = qGray(palette.window().color().rgb()) < 192 ? m_darkWallpaperPath : m_lightWallpaperPath;
+
+    if (QFile::exists(newPath)) {
+        m_wallpaperPath = newPath;
+        Q_EMIT wallpaperPathChanged();
+    }
+}
+
 void Image::newStuffFinished()
 {
     if (m_model) {
@@ -780,7 +824,9 @@ void Image::nextSlide()
         return;
     }
     int previousSlide = m_currentSlide;
-    QUrl previousPath = m_slideFilterModel->index(m_currentSlide, 0).data(BackgroundListModel::PathRole).toUrl();
+    QString previousPath = m_slideFilterModel->index(m_currentSlide, 0).data(BackgroundListModel::PathRole).toString();
+    const QString previousPackagePath = m_slideFilterModel->index(previousSlide, 0).data(BackgroundListModel::PackageNameRole).toString();
+
     if (m_currentSlide == m_slideFilterModel->rowCount() - 1 || m_currentSlide < 0) {
         m_currentSlide = 0;
     } else {
@@ -790,18 +836,43 @@ void Image::nextSlide()
     if (m_slideshowMode == Random && m_currentSlide == 0) {
         m_slideFilterModel->invalidate();
     }
-    QUrl next = m_slideFilterModel->index(m_currentSlide, 0).data(BackgroundListModel::PathRole).toUrl();
+    QString next = m_slideFilterModel->index(m_currentSlide, 0).data(BackgroundListModel::PathRole).toString();
+    QString nextPackagePath = m_slideFilterModel->index(m_currentSlide, 0).data(BackgroundListModel::PackageNameRole).toString();
+
     // And  avoid showing the same picture twice
-    if (previousSlide == m_slideFilterModel->rowCount() - 1 && previousPath == next && m_slideFilterModel->rowCount() > 1) {
+    if (previousSlide == m_slideFilterModel->rowCount() - 1 && (previousPath == next || previousPackagePath == nextPackagePath)
+        && m_slideFilterModel->rowCount() > 1) {
         m_currentSlide += 1;
-        next = m_slideFilterModel->index(m_currentSlide, 0).data(BackgroundListModel::PathRole).toUrl();
+        next = m_slideFilterModel->index(m_currentSlide, 0).data(BackgroundListModel::PathRole).toString();
+        nextPackagePath = m_slideFilterModel->index(m_currentSlide, 0).data(BackgroundListModel::PackageNameRole).toString();
     }
+
+    // Update next wallpaper
+    {
+        if (nextPackagePath.endsWith(QStringLiteral(".xml"))) {
+            m_lightWallpaperPath = next;
+            m_darkWallpaperPath = m_slideFilterModel->index(m_currentSlide, 0).data(BackgroundListModel::DarkPathRole).toString();
+
+            if (!m_darkWallpaperPath.isEmpty()) {
+                next = qGray(QApplication::palette().window().color().rgb()) < 192 ? m_darkWallpaperPath : m_lightWallpaperPath;
+
+                if (!m_colorSchemeConnection) {
+                    m_colorSchemeConnection = connect(qGuiApp, &QGuiApplication::paletteChanged, this, &Image::slotUpdateColorScheme);
+                }
+            } else if (m_colorSchemeConnection) {
+                disconnect(m_colorSchemeConnection);
+            }
+        } else if (m_colorSchemeConnection) {
+            disconnect(m_colorSchemeConnection);
+        }
+    }
+
     m_timer.stop();
     m_timer.start(m_delay * 1000);
     if (next.isEmpty()) {
-        m_wallpaperPath = previousPath.toLocalFile();
+        m_wallpaperPath = previousPath;
     } else {
-        m_wallpaperPath = next.toLocalFile();
+        m_wallpaperPath = next;
     }
     Q_EMIT wallpaperPathChanged();
 }

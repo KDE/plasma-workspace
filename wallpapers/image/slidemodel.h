@@ -23,6 +23,6 @@ Q_SIGNALS:
     void done();
 
 private Q_SLOTS:
-    void removeBackgrounds(const QStringList &paths, const QString &token);
-    void backgroundsFound(const QStringList &paths, const QString &token);
+    void removeBackgrounds(const ImagePackageList &packages, const QString &token);
+    void backgroundsFound(const ImagePackageList &packages, const QString &token);
 };

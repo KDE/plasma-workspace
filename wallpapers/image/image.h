@@ -157,6 +157,13 @@ protected Q_SLOTS:
     void pathDirty(const QString &path);
     void backgroundsFound();
 
+    /**
+     * Handles color scheme changes
+     *
+     * @see xdg-desktop-portal-kde/src/settings.cpp
+     */
+    void slotUpdateColorScheme(const QPalette &palette);
+
 protected:
     void syncWallpaperPackage();
     void setSingleImage();
@@ -170,6 +177,10 @@ private:
     QStringList m_dirs;
     QString m_wallpaper;
     QString m_wallpaperPath;
+    QString m_lightWallpaperPath;
+    QString m_darkWallpaperPath;
+    QMetaObject::Connection m_colorSchemeConnection;
+
     QStringList m_usersWallpapers;
     KDirWatch *m_dirWatch;
     QSize m_targetSize;

@@ -23,6 +23,24 @@
 
 class Image;
 
+struct ImagePackage {
+    explicit ImagePackage() = default;
+    explicit ImagePackage(const QString &_path,
+                          const QString &_darkPath = QString(),
+                          const QString &_packagePath = QString(),
+                          const QString &_name = QString(),
+                          const QString &_author = QString());
+
+    QString path;
+    QString darkPath;
+    QString packagePath;
+    QString name;
+    QString author;
+};
+
+using ImagePackageList = QVector<ImagePackage>;
+Q_DECLARE_METATYPE(ImagePackageList)
+
 class ImageSizeFinder : public QObject, public QRunnable
 {
     Q_OBJECT
@@ -48,6 +66,7 @@ public:
         ScreenshotRole,
         ResolutionRole,
         PathRole,
+        DarkPathRole, /**< Dark-mode image path */
         PackageNameRole,
         RemovableRole,
         PendingDeletionRole,
@@ -64,7 +83,6 @@ public:
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override;
-    KPackage::Package package(int index) const;
 
     void reload();
     void reload(const QStringList &selected);
@@ -89,16 +107,15 @@ protected Q_SLOTS:
     void showPreview(const KFileItem &item, const QPixmap &preview);
     void previewFailed(const KFileItem &item);
     void sizeFound(const QString &path, const QSize &s);
-    void processPaths(const QStringList &paths);
+    void processImagePackages(const ImagePackageList &packages);
 
 protected:
     QPointer<Image> m_wallpaper;
     QString m_findToken;
-    QList<KPackage::Package> m_packages;
+    ImagePackageList m_packages;
 
 private:
-    QSize bestSize(const KPackage::Package &package) const;
-    QString displayStringForPackage(const KPackage::Package &package) const;
+    QSize bestSize(const QString &path) const;
 
     QSet<QString> m_removableWallpapers;
     QHash<QString, QSize> m_sizeCache;
@@ -123,8 +140,15 @@ public:
     static QStringList suffixes();
     static bool isAcceptableSuffix(const QString &suffix);
 
+    /**
+     * Reads the wallpaper paths from the wallpaper xml file.
+     *
+     * @see https://help.gnome.org/admin/system-admin-guide/stable/backgrounds-extra.html.en
+     */
+    static ImagePackageList parseXmlWallpaper(const QString &xmlPath);
+
 Q_SIGNALS:
-    void backgroundsFound(const QStringList &paths, const QString &token);
+    void backgroundsFound(const ImagePackageList &packages, const QString &token);
 
 protected:
     void run() override;
