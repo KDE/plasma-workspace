@@ -136,6 +136,7 @@ QHash<int, QByteArray> BackgroundListModel::BackgroundListModel::roleNames() con
         {Qt::DecorationRole, "decoration"},
         {AuthorRole, "author"},
         {ScreenshotRole, "screenshot"},
+        {DarkScreenshotRole, "darkScreenshot"},
         {ResolutionRole, "resolution"},
         {PathRole, "path"},
         {DarkPathRole, "darkPath"},
@@ -298,7 +299,7 @@ int BackgroundListModel::indexOf(const QString &path) const
         // E.X. filteredPath = /usr/share/wallpapers/Next/"
         // package.path = "/usr/share/wallpapers/Next/contents/images/1920x1080.png"
         // package.packagePath = "/usr/share/wallpapers/Next/"
-        if (filteredPath == package.path || (!packagePath.isEmpty() && filteredPath.contains(packagePath))) {
+        if (filteredPath == package.path || filteredPath == package.darkPath || (!packagePath.isEmpty() && filteredPath.contains(packagePath))) {
             return true;
         }
         return false;
@@ -370,17 +371,17 @@ QVariant BackgroundListModel::data(const QModelIndex &index, int role) const
         return p.name;
     }
 
-    case ScreenshotRole: {
-        const QString path = p.path;
+    case ScreenshotRole:
+    case DarkScreenshotRole: {
+        const QUrl url = QUrl::fromLocalFile(role == ScreenshotRole ? p.path : p.darkPath);
 
-        QPixmap *cachedPreview = m_imageCache.object(path);
+        QPixmap *cachedPreview = m_imageCache.object(url.toLocalFile());
         if (cachedPreview) {
             return *cachedPreview;
         }
 
-        const QUrl url = QUrl::fromLocalFile(path);
         const QPersistentModelIndex persistentIndex(index);
-        if (!m_previewJobsUrls.contains(persistentIndex) && url.isValid()) {
+        if (!m_previewJobsUrls.contains(url) && url.isValid()) {
             KFileItemList list;
             list.append(KFileItem(url, QString(), 0));
             QStringList availablePlugins = KIO::PreviewJob::availablePlugins();
@@ -388,7 +389,7 @@ QVariant BackgroundListModel::data(const QModelIndex &index, int role) const
             job->setIgnoreMaximumSize(true);
             connect(job, &KIO::PreviewJob::gotPreview, this, &BackgroundListModel::showPreview);
             connect(job, &KIO::PreviewJob::failed, this, &BackgroundListModel::previewFailed);
-            const_cast<BackgroundListModel *>(this)->m_previewJobsUrls.insert(persistentIndex, url);
+            const_cast<BackgroundListModel *>(this)->m_previewJobsUrls.insert(url, persistentIndex);
         }
 
         return QVariant();
@@ -458,15 +459,15 @@ void BackgroundListModel::showPreview(const KFileItem &item, const QPixmap &prev
         return;
     }
 
-    QPersistentModelIndex index = m_previewJobsUrls.key(item.url());
-    m_previewJobsUrls.remove(index);
+    QPersistentModelIndex index = m_previewJobsUrls.value(item.url());
+    m_previewJobsUrls.remove(item.url());
 
     if (!index.isValid()) {
         return;
     }
 
     const int cost = preview.width() * preview.height() * preview.depth() / 8;
-    m_imageCache.insert(p.path, new QPixmap(preview), cost);
+    m_imageCache.insert(item.url().toLocalFile(), new QPixmap(preview), cost);
 
     // qCDebug(IMAGEWALLPAPER) << "WP preview size:" << preview.size();
     Q_EMIT dataChanged(index, index);
@@ -474,7 +475,7 @@ void BackgroundListModel::showPreview(const KFileItem &item, const QPixmap &prev
 
 void BackgroundListModel::previewFailed(const KFileItem &item)
 {
-    m_previewJobsUrls.remove(m_previewJobsUrls.key(item.url()));
+    m_previewJobsUrls.remove(item.url());
 }
 
 void BackgroundListModel::openContainingFolder(int rowIndex)

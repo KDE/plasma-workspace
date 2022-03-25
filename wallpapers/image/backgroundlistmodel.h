@@ -64,6 +64,7 @@ public:
     enum {
         AuthorRole = Qt::UserRole,
         ScreenshotRole,
+        DarkScreenshotRole, /**< Dark-mode wallpaper preview */
         ResolutionRole,
         PathRole,
         DarkPathRole, /**< Dark-mode image path */
@@ -119,7 +120,7 @@ private:
 
     QSet<QString> m_removableWallpapers;
     QHash<QString, QSize> m_sizeCache;
-    QHash<QPersistentModelIndex, QUrl> m_previewJobsUrls;
+    QHash<QUrl, QPersistentModelIndex> m_previewJobsUrls;
     KDirWatch m_dirwatch;
     QCache<QString, QPixmap> m_imageCache;
 

@@ -105,6 +105,28 @@ KCM.GridDelegate {
                 return QPixmapItem.PreserveAspectFit;
             }
         }
+
+        Loader {
+            anchors {
+                top: parent.top
+                bottom: parent.bottom
+                right: parent.right
+                left: parent.horizontalCenter
+            }
+            active: walliePreview.visible && model.darkScreenshot !== null
+            visible: active
+            clip: true
+
+            sourceComponent: QPixmapItem {
+                anchors.right: parent.right
+                width: walliePreview.width
+                height: walliePreview.height
+                smooth: true
+                pixmap: model.darkScreenshot
+                fillMode: walliePreview.fillMode
+            }
+        }
+
         QtControls2.CheckBox {
             visible: configDialog.currentWallpaper == "org.kde.slideshow"
             anchors.right: parent.right
