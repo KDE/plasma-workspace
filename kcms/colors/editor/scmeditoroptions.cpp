@@ -33,7 +33,7 @@ void SchemeEditorOptions::loadOptions()
     accentInactiveTitlebar->setChecked(generalGroup.readEntry("accentInactiveTitlebar", false));
 
     KConfigGroup KDEgroup(m_config, "KDE");
-    contrastSlider->setValue(KDEgroup.readEntry("contrast", KColorScheme::contrast()));
+    contrastSlider->setValue(KDEgroup.readEntry("contrast", KColorScheme::contrastF() * 10));
 
     KConfigGroup group(m_config, "ColorEffects:Inactive");
     useInactiveEffects->setChecked(group.readEntry("Enable", false));
