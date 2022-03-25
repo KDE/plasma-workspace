@@ -20,6 +20,11 @@ private:
 
 private Q_SLOTS:
     void initTestCase();
+    void cleanupTestCase()
+    {
+        QFile::remove(normalHomeFile);
+        QFile::remove(executableHomeFile);
+    }
     void shouldNotProduceResult();
     void shouldNotProduceResult_data();
     void shouldProduceResult();
@@ -30,14 +35,13 @@ private Q_SLOTS:
 void LocationsRunnerTest::initTestCase()
 {
     initProperties();
-    const QFileInfoList entries = QDir::home().entryInfoList(QDir::NoDotAndDotDot | QDir::Files | QDir::Hidden);
-    for (const QFileInfo &entry : entries) {
-        if (entry.isExecutable()) {
-            executableHomeFile = entry.absoluteFilePath();
-        } else {
-            normalHomeFile = entry.absoluteFilePath();
-        }
-    }
+    normalHomeFile = KShell::tildeExpand(QStringLiteral("~/.krunner_locationsrunner_testfile"));
+    executableHomeFile = KShell::tildeExpand(QStringLiteral("~/.krunner_locationsrunner_testexecutablefile"));
+    QFile normalFile(normalHomeFile);
+    normalFile.open(QIODevice::WriteOnly);
+    QFile executableFile(executableHomeFile);
+    executableFile.open(QIODevice::WriteOnly);
+    executableFile.setPermissions(executableFile.permissions() | QFile::ExeOwner);
     QVERIFY(!normalHomeFile.isEmpty());
 }
 
@@ -54,7 +58,7 @@ void LocationsRunnerTest::shouldProduceResult()
     QFETCH(QVariant, data);
     launchQuery(query);
     const QList<Plasma::QueryMatch> matches = manager->matches();
-    QCOMPARE(1, matches.size());
+    QCOMPARE(matches.size(), 1);
     QCOMPARE(matches.first().data(), data);
 }
 
@@ -92,9 +96,7 @@ void LocationsRunnerTest::shouldProduceResult_data()
     QTest::newRow("file with $HOME as env variable") << KShell::tildeCollapse(normalHomeFile).replace("~", "$HOME")
                                                      << QVariant(QUrl::fromLocalFile(normalHomeFile));
     QTest::newRow("file URL") << QUrl::fromLocalFile(normalHomeFile).toString() << QVariant(QUrl::fromLocalFile(normalHomeFile));
-    if (!executableHomeFile.isEmpty()) {
-        QTest::newRow("file URL to executable") << QUrl::fromLocalFile(executableHomeFile).toString() << QVariant(QUrl::fromLocalFile(executableHomeFile));
-    }
+    QTest::newRow("file URL to executable") << QUrl::fromLocalFile(executableHomeFile).toString() << QVariant(QUrl::fromLocalFile(executableHomeFile));
     if (KProtocolInfo::isHelperProtocol("vnc")) {
         QTest::newRow("vnc URL") << "vnc:foo" << QVariant("vnc:foo");
     }
