@@ -10,6 +10,14 @@
       <label>Color of the wallpaper</label>
       <default>#1d99f3</default>
     </entry>
+    <entry name="UseRandomColors" type="Bool">
+      <label>Use random colors</label>
+      <default>false</default>
+    </entry>
+    <entry name="SlideInterval" type="int">
+      <label>Interval for switching random colors</label>
+      <default>900</default>
+    </entry>
   </group>
 
 </kcfg>
