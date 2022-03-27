@@ -28,6 +28,7 @@
         "Description[nn]": "Oppdateringar for programjobbar (gjennom kuiserver)",
         "Description[pa]": "ਐਪਲੀਕੇਸ਼ਨ ਜਾਬ ਅੱਪਡੇਟ (kuiserver ਰਾਹੀਂ)",
         "Description[pl]": "Wyświetla uaktualnienia zadania programu (przez kuiserver)",
+        "Description[pt]": "Actualizações das tarefas da aplicação (através do 'kuiserver')",
         "Description[pt_BR]": "Atualizações de tarefas de aplicativos (via kuiserver)",
         "Description[ro]": "Actualizări pentru sarcina aplicației (via kuiserver)",
         "Description[ru]": "Обновления о заданиях в приложениях (данные от kuiserver)",

@@ -61,6 +61,7 @@
         "Description[nn]": "Skjermelement som overvaker dataflyt til og frå harddisk",
         "Description[pa]": "ਹਾਰਡ ਡਿਸਕ ਥਰੂਪੁੱਟ ਅਤੇ ਇੰਪੁੱਟ/ਆਉਟਪੁੱਟ ਦੀ ਨਿਗਰਾਨੀ ਲਈ ਐਪਲਿਟ",
         "Description[pl]": "Monitoruje przepustowość WE/WY dysku twardego",
+        "Description[pt]": "Uma 'applet' que vigia o rendimento e o fluxo de entrada-saída do disco",
         "Description[pt_BR]": "Monitora a taxa de transferência e entrada/saída do disco rígido",
         "Description[ro]": "Miniaplicație ce monitorizează traficul de intrare și cel de ieșire pentru discul dur",
         "Description[ru]": "Мониторинг пропускной способности и процессов ввода/вывода жёстких дисков",

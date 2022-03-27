@@ -61,6 +61,7 @@
         "Description[nn]": "Sporar hotplug-einingar når dei dukkar opp og forsvinn.",
         "Description[pa]": "ਹਾਟ-ਪਲੱਗਯੋਗ ਡਿਵਾਈਸ ਜਾਣਕਾਰੀ, ਜਿਵੇਂ ਉਹ ਲਗਾਏ ਤੇ ਹਟਾਏ ਜਾਣਗੇ।",
         "Description[pl]": "Śledzi pojawianie i znikanie  urządzeń podłączanych \"na gorąco\".",
+        "Description[pt]": "Segue os dispositivos removíveis, à medida que aparecem e desaparecem.",
         "Description[pt_BR]": "Segue os dispositivos removíveis, à medida que aparecem e desaparecem.",
         "Description[ro]": "Urmărește dispozitivele detașabile după cum apar sau dispar.",
         "Description[ru]": "Следит за появлением и исчезновением подключаемых на лету устройств.",
