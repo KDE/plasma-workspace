@@ -17,7 +17,7 @@ Menu {
     id: clipboardMenu
     Keys.onPressed: {
         function forwardToFilter() {
-            if (event.text !== "" && !filter.activeFocus) {
+            if (filter.enabled && event.text !== "" && !filter.activeFocus) {
                 clipboardMenu.view.currentIndex = -1
                 if (event.matches(StandardKey.Paste)) {
                     filter.paste();
