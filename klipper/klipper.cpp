@@ -123,6 +123,12 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mo
 
     updateTimestamp(); // read initial X user time
     m_clip = KSystemClipboard::instance();
+    if (KWindowSystem::isPlatformWayland()) {
+        auto clipThread = new QThread(this);
+        clipThread->setObjectName(QStringLiteral("datacontrolthread"));
+        m_clip->moveToThread(clipThread);
+        clipThread->start();
+    }
 
     connect(m_clip, &KSystemClipboard::changed, this, &Klipper::newClipData);
 
@@ -255,6 +261,10 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mo
 Klipper::~Klipper()
 {
     delete m_myURLGrabber;
+    if (KWindowSystem::isPlatformWayland()) {
+        m_clip->thread()->quit();
+        m_clip->thread()->wait();
+    }
 }
 
 // DBUS
