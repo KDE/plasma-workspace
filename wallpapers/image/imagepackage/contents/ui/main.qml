@@ -66,6 +66,7 @@ QQC2.StackView {
         slideTimer: wallpaper.configuration.SlideInterval
         slideshowMode: wallpaper.configuration.SlideshowMode
         slideshowFoldersFirst: wallpaper.configuration.SlideshowFoldersFirst
+        slideshowOnBattery: wallpaper.configuration.SlideshowOnBattery
         uncheckedSlides: wallpaper.configuration.UncheckedSlides
     }
 

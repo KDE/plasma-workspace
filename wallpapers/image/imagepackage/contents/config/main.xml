@@ -46,5 +46,9 @@
         <label>Ordering mode for the slideshow</label>
         <default>0</default>
     </entry>
+    <entry name="SlideshowOnBattery" type="bool">
+        <label>Run slideshow when the computer is on battery</label>
+        <default>false</default>
+    </entry>
   </group>
 </kcfg>

@@ -38,6 +38,7 @@ class Image : public QObject, public QQmlParserStatus
     Q_PROPERTY(RenderingMode renderingMode READ renderingMode WRITE setRenderingMode NOTIFY renderingModeChanged)
     Q_PROPERTY(SlideshowMode slideshowMode READ slideshowMode WRITE setSlideshowMode NOTIFY slideshowModeChanged)
     Q_PROPERTY(bool slideshowFoldersFirst READ slideshowFoldersFirst WRITE setSlideshowFoldersFirst NOTIFY slideshowFoldersFirstChanged)
+    Q_PROPERTY(bool slideshowOnBattery READ slideshowOnBattery WRITE setSlideshowOnBattery NOTIFY slideshowOnBatteryChanged)
     Q_PROPERTY(QUrl wallpaperPath READ wallpaperPath NOTIFY wallpaperPathChanged)
     Q_PROPERTY(QAbstractItemModel *wallpaperModel READ wallpaperModel CONSTANT)
     Q_PROPERTY(QAbstractItemModel *slideFilterModel READ slideFilterModel CONSTANT)
@@ -93,6 +94,9 @@ public:
     bool slideshowFoldersFirst() const;
     void setSlideshowFoldersFirst(bool slideshowFoldersFirst);
 
+    bool slideshowOnBattery() const;
+    void setSlideshowOnBattery(bool mode);
+
     QSize targetSize() const;
     void setTargetSize(const QSize &size);
 
@@ -131,6 +135,7 @@ Q_SIGNALS:
     void renderingModeChanged();
     void slideshowModeChanged();
     void slideshowFoldersFirstChanged();
+    void slideshowOnBatteryChanged();
     void targetSizeChanged();
     void slideTimerChanged();
     void usersWallpapersChanged();
@@ -162,6 +167,9 @@ protected:
     void setSingleImage();
     void useSingleImageDefaults();
 
+private Q_SLOTS:
+    void slotHandleBatteryStatus(bool isPlugged);
+
 private:
     SlideModel *slideshowModel();
 
@@ -177,6 +185,8 @@ private:
     RenderingMode m_mode;
     SlideshowMode m_slideshowMode;
     bool m_slideshowFoldersFirst;
+
+    bool m_slideshowOnBattery;
 
     KPackage::Package m_wallpaperPackage;
     QStringList m_slidePaths;

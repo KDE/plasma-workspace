@@ -35,6 +35,8 @@
 #include <KRandom>
 #include <QDebug>
 #include <QFileDialog>
+#include <Solid/AcPluggedJob>
+#include <Solid/Power>
 #include <klocalizedstring.h>
 
 #include "backgroundlistmodel.h"
@@ -181,6 +183,50 @@ void Image::setSlideshowFoldersFirst(bool slideshowFoldersFirst)
         startSlideshow();
     }
     Q_EMIT slideshowFoldersFirstChanged();
+}
+
+bool Image::slideshowOnBattery() const
+{
+    return m_slideshowOnBattery;
+}
+
+void Image::setSlideshowOnBattery(bool mode)
+{
+    if (mode == m_slideshowOnBattery) {
+        return;
+    }
+
+    m_slideshowOnBattery = mode;
+
+    if (mode) {
+        if (!m_timer.isActive()) {
+            m_timer.start(m_delay * 1000);
+        }
+
+        disconnect(Solid::Power::self(), &Solid::Power::acPluggedChanged, this, 0);
+    } else {
+        // Check current battery status
+        auto *acPluggedJob = Solid::Power::self()->isAcPlugged(this);
+        connect(acPluggedJob, &Solid::Job::result, this, [this](Solid::Job *job) {
+            slotHandleBatteryStatus(static_cast<Solid::AcPluggedJob *>(job)->isPlugged());
+        });
+        acPluggedJob->start();
+
+        connect(Solid::Power::self(), &Solid::Power::acPluggedChanged, this, &Image::slotHandleBatteryStatus);
+    }
+
+    Q_EMIT slideshowOnBatteryChanged();
+}
+
+void Image::slotHandleBatteryStatus(bool isPlugged)
+{
+    if (isPlugged) {
+        if (!m_timer.isActive()) {
+            m_timer.start(m_delay * 1000);
+        }
+    } else {
+        m_timer.stop();
+    }
 }
 
 float distance(const QSize &size, const QSize &desired)
@@ -796,8 +842,13 @@ void Image::nextSlide()
         m_currentSlide += 1;
         next = m_slideFilterModel->index(m_currentSlide, 0).data(BackgroundListModel::PathRole).toUrl();
     }
-    m_timer.stop();
-    m_timer.start(m_delay * 1000);
+
+    // If slideshow is disabled on battery, don't start the timer.
+    if (m_timer.isActive()) {
+        m_timer.stop();
+        m_timer.start(m_delay * 1000);
+    }
+
     if (next.isEmpty()) {
         m_wallpaperPath = previousPath.toLocalFile();
     } else {

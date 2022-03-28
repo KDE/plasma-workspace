@@ -37,7 +37,7 @@ include(ECMGenerateExportHeader)
 
 find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Svg Widgets Quick QuickWidgets Concurrent Test Network)
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
-                    Plasma Runner Notifications NotifyConfig NewStuff Wallet IdleTime
+                    Plasma Runner Notifications NotifyConfig NewStuff Wallet IdleTime Solid
                     Declarative I18n KCMUtils TextWidgets Crash GlobalAccel DBusAddons Wayland
                     CoreAddons People ActivitiesStats Activities KIO Prison PlasmaQuick Package
                     GuiAddons Archive ItemModels IconThemes UnitConversion ItemModels Init TextEditor

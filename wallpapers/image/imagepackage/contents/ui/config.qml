@@ -30,6 +30,8 @@ ColumnLayout {
     property int cfg_SlideshowModeDefault
     property bool cfg_SlideshowFoldersFirst
     property bool cfg_SlideshowFoldersFirstDefault: false
+    property bool cfg_SlideshowOnBattery
+    property bool cfg_SlideshowOnBatteryDefault
     property alias cfg_Blur: blurRadioButton.checked
     property bool cfg_BlurDefault
     property var cfg_SlidePaths: []
@@ -300,6 +302,17 @@ ColumnLayout {
                         KCM.SettingHighlighter {
                             highlight: root.secondsIntervalValue != root.secondsIntervalValueDefault
                         }
+                    }
+                }
+
+                QtControls2.CheckBox {
+                    id: slideshowOnBatteryCheckBox
+                    text: i18nc("@option:check", "Play slideshow even on battery")
+                    checked: root.cfg_SlideshowOnBattery
+                    onToggled: root.cfg_SlideshowOnBattery = checked
+
+                    KCM.SettingHighlighter {
+                        highlight: root.cfg_SlideshowOnBattery !== cfg_SlideshowOnBatteryDefault
                     }
                 }
             }
