@@ -159,7 +159,6 @@ SimpleKCM {
                 id: emailTextField
                 focus: true
                 text: user.email
-                placeholderText: i18nc("Example email address", "john.doe@kde.org")
                 Kirigami.FormData.label: i18n("Email address:")
             }
 
