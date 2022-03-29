@@ -562,29 +562,18 @@ PlasmaExtras.Representation {
             }
 
             PlasmaExtras.PlaceholderMessage {
+                // Checking valid to avoid creating ServerInfo object if everything is alright
+                readonly property NotificationManager.ServerInfo currentOwner: !NotificationManager.Server.valid ? NotificationManager.Server.currentOwner
+                                                                                                                : null
+
                 anchors.centerIn: parent
                 width: parent.width - (PlasmaCore.Units.largeSpacing * 4)
 
                 text: i18n("Notification service not available")
+                explanation: currentOwner && currentOwner.vendor && currentOwner.name
+                             ? i18nc("Vendor and product name", "Notifications are currently provided by '%1 %2'", currentOwner.vendor, currentOwner.name)
+                             : ""
                 visible: list.count === 0 && !NotificationManager.Server.valid
-
-                // TODO: port to using the subtitle property once it exists
-                PlasmaComponents3.Label {
-                    // Checking valid to avoid creating ServerInfo object if everything is alright
-                    readonly property NotificationManager.ServerInfo currentOwner: !NotificationManager.Server.valid ? NotificationManager.Server.currentOwner
-                                                                                                                    : null
-
-                    // PlasmaExtras.PlaceholderMessage is internally a ColumnLayout,
-                    // so we can use Layout.whatever properties here
-                    Layout.fillWidth: true
-                    wrapMode: Text.WordWrap
-                    text: currentOwner ? i18nc("Vendor and product name",
-                                        "Notifications are currently provided by '%1 %2'",
-                                        currentOwner.vendor,
-                                        currentOwner.name)
-                                    : ""
-                    visible: currentOwner && currentOwner.vendor && currentOwner.name
-                }
             }
         }
     }
