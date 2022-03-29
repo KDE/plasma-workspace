@@ -40,7 +40,7 @@ PlasmaExtras.Representation {
     }
 
     Connections {
-        target: plasmoid
+        target: Plasmoid.self
         function onExpandedChanged() {
             if (Plasmoid.expanded) {
                 list.positionViewAtBeginning();

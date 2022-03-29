@@ -61,7 +61,7 @@ QtObject {
 
     //listen on SystemTray AppletInterface signals
     property Connections plasmoidConnections: Connections {
-        target: plasmoid
+        target: Plasmoid.self
         //emitted when activation is requested, for example by using a global keyboard shortcut
         function onActivated() {
             acceptExpandedChange = true

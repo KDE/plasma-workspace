@@ -79,7 +79,7 @@ MouseArea {
     }
 
     Connections {
-        target: plasmoid
+        target: Plasmoid.self
         function onExternalData(mimetype, data) {
             Plasmoid.nativeInterface.url = data
         }

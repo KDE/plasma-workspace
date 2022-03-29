@@ -54,7 +54,7 @@ Item {
             name: "available"
             when: !Keyboards.KWinVirtualKeyboard.available
             PropertyChanges {
-                target: plasmoid
+                target: Plasmoid.self
                 icon: "input-keyboard-virtual-off"
                 toolTipSubText: i18n("Virtual Keyboard: unavailable")
                 status: PlasmaCore.Types.HiddenStatus
@@ -65,7 +65,7 @@ Item {
             name: "disabled"
             when: Keyboards.KWinVirtualKeyboard.available && !Keyboards.KWinVirtualKeyboard.enabled
             PropertyChanges {
-                target: plasmoid
+                target: Plasmoid.self
                 icon: "input-keyboard-virtual-off"
                 toolTipSubText: i18n("Virtual Keyboard: disabled")
                 status: PlasmaCore.Types.ActiveStatus
@@ -76,7 +76,7 @@ Item {
             name: "visible"
             when: Keyboards.KWinVirtualKeyboard.available && Keyboards.KWinVirtualKeyboard.visible
             PropertyChanges {
-                target: plasmoid
+                target: Plasmoid.self
                 icon: "arrow-down"
                 toolTipSubText: i18n("Virtual Keyboard: visible")
                 // It's only relevant in tablet mode
@@ -88,7 +88,7 @@ Item {
             name: "idle"
             when: Keyboards.KWinVirtualKeyboard.available && Keyboards.KWinVirtualKeyboard.enabled && !Keyboards.KWinVirtualKeyboard.visible
             PropertyChanges {
-                target: plasmoid
+                target: Plasmoid.self
                 icon: "input-keyboard-virtual-on"
                 toolTipSubText: i18n("Virtual Keyboard: enabled")
                 // It's only relevant in tablet mode

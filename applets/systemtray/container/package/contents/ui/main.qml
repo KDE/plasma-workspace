@@ -47,7 +47,7 @@ Item {
     }
 
     Connections {
-        target: plasmoid.nativeInterface
+        target: Plasmoid.nativeInterface
         function onInternalSystrayChanged() {
             root.internalSystray = Plasmoid.nativeInterface.internalSystray;
             root.internalSystray.parent = root;

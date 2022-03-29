@@ -328,7 +328,7 @@ PlasmaExtras.Representation {
             }
 
             Connections {
-                target: plasmoid.configuration
+                target: Plasmoid.configuration
 
                 onEnabledCalendarPluginsChanged: {
                     PlasmaCalendar.EventPluginsManager.enabledPlugins = Plasmoid.configuration.enabledCalendarPlugins;
@@ -336,7 +336,7 @@ PlasmaExtras.Representation {
             }
 
             Binding {
-                target: plasmoid
+                target: Plasmoid.self
                 property: "hideOnWindowDeactivate"
                 value: !Plasmoid.configuration.pin
                 restoreMode: Binding.RestoreBinding

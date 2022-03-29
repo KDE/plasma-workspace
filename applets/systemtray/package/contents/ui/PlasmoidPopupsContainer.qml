@@ -68,7 +68,7 @@ StackView {
     }
 
     Connections {
-        target: plasmoid
+        target: Plasmoid.self
         function onAppletRemoved(applet) {
             if (applet === systemTrayState.activeApplet) {
                 mainStack.clear()

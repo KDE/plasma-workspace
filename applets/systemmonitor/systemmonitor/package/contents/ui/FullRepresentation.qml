@@ -54,7 +54,7 @@ Control {
     }
 
     Binding {
-        target: plasmoid.nativeInterface.faceController.fullRepresentation
+        target: Plasmoid.nativeInterface.faceController.fullRepresentation
         property: "formFactor"
         value: {
             switch (Plasmoid.formFactor) {

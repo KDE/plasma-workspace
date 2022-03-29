@@ -87,7 +87,7 @@ Item {
     //it's used for formatting in ToolTip.dateTimeChanged()
     property var allTimezones
     Connections {
-        target: plasmoid.configuration
+        target: Plasmoid.configuration
         function onSelectedTimeZonesChanged() { root.initTimezones(); }
     }
 

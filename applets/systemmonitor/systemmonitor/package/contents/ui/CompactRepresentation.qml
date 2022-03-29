@@ -46,7 +46,7 @@ Control {
     contentItem: Plasmoid.nativeInterface.faceController.compactRepresentation
 
     Binding {
-        target: plasmoid.nativeInterface.faceController.compactRepresentation
+        target: Plasmoid.nativeInterface.faceController.compactRepresentation
         property: "formFactor"
         value: {
             switch (Plasmoid.formFactor) {

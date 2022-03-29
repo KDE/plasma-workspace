@@ -30,7 +30,7 @@ PlasmaCore.ToolTipArea {
     property Item compactRepresentation
 
     Connections {
-        target: plasmoid
+        target: Plasmoid.self
         function onContextualActionsAboutToShow() {
             appletRoot.hideImmediately()
         }
