@@ -17,7 +17,6 @@
 #include <QScreen>
 
 #include <KAuthorized>
-#include <KCMultiDialog>
 #include <KCrash>
 #include <KIO/CommandLauncherJob>
 #include <KLocalizedString>
@@ -328,12 +327,8 @@ void View::switchUser()
 
 void View::displayConfiguration()
 {
-    KCMultiDialog *settingsDialog = new KCMultiDialog();
-
-    settingsDialog->addModule(KPluginMetaData(QStringLiteral("plasma/kcms/desktop/kcm_krunnersettings")));
-
-    connect(settingsDialog, &QDialog::finished, settingsDialog, &QObject::deleteLater);
-    settingsDialog->show();
+    auto job = new KIO::CommandLauncherJob(QStringLiteral("kcmshell5"), {QStringLiteral("plasma/kcms/desktop/kcm_krunnersettings")});
+    job->start();
 }
 
 void View::setVisible(bool visible)

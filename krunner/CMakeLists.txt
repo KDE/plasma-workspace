@@ -20,7 +20,6 @@ target_link_libraries(krunner
     KF5::I18n
     KF5::PlasmaQuick
     KF5::DBusAddons
-    KF5::KCMUtils
     KF5::Crash
     KF5::WaylandClient
     KF5::Runner
