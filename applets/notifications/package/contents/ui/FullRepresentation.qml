@@ -553,29 +553,46 @@ PlasmaExtras.Representation {
                     }
                 }
             }
-            PlasmaExtras.PlaceholderMessage {
+
+            Loader {
                 anchors.centerIn: parent
                 width: parent.width - (PlasmaCore.Units.largeSpacing * 4)
 
-                iconName: "checkmark"
-                text: i18n("No unread notifications")
-                visible: list.count === 0 && NotificationManager.Server.valid
+                active: list.count === 0
+                visible: active
+                asynchronous: true
+
+                sourceComponent: NotificationManager.Server.valid ? noUnreadMessage : notAvailableMessage
             }
 
-            PlasmaExtras.PlaceholderMessage {
-                // Checking valid to avoid creating ServerInfo object if everything is alright
-                readonly property NotificationManager.ServerInfo currentOwner: !NotificationManager.Server.valid ? NotificationManager.Server.currentOwner
-                                                                                                                : null
+            Component {
+                id: noUnreadMessage
 
-                anchors.centerIn: parent
-                width: parent.width - (PlasmaCore.Units.largeSpacing * 4)
+                PlasmaExtras.PlaceholderMessage {
+                    anchors.centerIn: parent
+                    width: parent.width
 
-                iconName: "notifications-disabled"
-                text: i18n("Notification service not available")
-                explanation: currentOwner && currentOwner.vendor && currentOwner.name
-                             ? i18nc("Vendor and product name", "Notifications are currently provided by '%1 %2'", currentOwner.vendor, currentOwner.name)
-                             : ""
-                visible: list.count === 0 && !NotificationManager.Server.valid
+                    iconName: "checkmark"
+                    text: i18n("No unread notifications")
+                }
+            }
+
+            Component {
+                id: notAvailableMessage
+
+                PlasmaExtras.PlaceholderMessage {
+                    // Checking valid to avoid creating ServerInfo object if everything is alright
+                    readonly property NotificationManager.ServerInfo currentOwner: NotificationManager.Server.currentOwner
+
+                    anchors.centerIn: parent
+                    width: parent.width
+
+                    iconName: "notifications-disabled"
+                    text: i18n("Notification service not available")
+                    explanation: currentOwner && currentOwner.vendor && currentOwner.name
+                                ? i18nc("Vendor and product name", "Notifications are currently provided by '%1 %2'", currentOwner.vendor, currentOwner.name)
+                                : ""
+                }
             }
         }
     }
