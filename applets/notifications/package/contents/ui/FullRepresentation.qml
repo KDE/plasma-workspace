@@ -557,6 +557,7 @@ PlasmaExtras.Representation {
                 anchors.centerIn: parent
                 width: parent.width - (PlasmaCore.Units.largeSpacing * 4)
 
+                iconName: "checkmark"
                 text: i18n("No unread notifications")
                 visible: list.count === 0 && NotificationManager.Server.valid
             }
@@ -569,6 +570,7 @@ PlasmaExtras.Representation {
                 anchors.centerIn: parent
                 width: parent.width - (PlasmaCore.Units.largeSpacing * 4)
 
+                iconName: "notifications-disabled"
                 text: i18n("Notification service not available")
                 explanation: currentOwner && currentOwner.vendor && currentOwner.name
                              ? i18nc("Vendor and product name", "Notifications are currently provided by '%1 %2'", currentOwner.vendor, currentOwner.name)
