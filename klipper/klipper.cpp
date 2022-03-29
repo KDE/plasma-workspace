@@ -423,20 +423,12 @@ bool Klipper::loadHistory()
     history_stream >> version;
     delete[] version;
 
-    // The list needs to be reversed, as it is saved
-    // youngest-first to keep the most important clipboard
-    // items at the top, but the history is created oldest
-    // first.
-    QVector<HistoryItemPtr> reverseList;
+    QVector<HistoryItemPtr> items;
     for (HistoryItemPtr item = HistoryItem::create(history_stream); !item.isNull(); item = HistoryItem::create(history_stream)) {
-        reverseList.prepend(item);
+        items.append(item);
     }
 
-    history()->slotClear();
-
-    for (auto it = reverseList.constBegin(); it != reverseList.constEnd(); ++it) {
-        history()->forceInsert(*it);
-    }
+    history()->clearAndBatchInsert(items);
 
     if (!history()->empty()) {
         setClipboard(*history()->first(), Clipboard | Selection);

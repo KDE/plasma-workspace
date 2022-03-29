@@ -95,12 +95,9 @@ void History::insert(HistoryItemPtr item)
     m_model->insert(item);
 }
 
-void History::forceInsert(HistoryItemPtr item)
+void History::clearAndBatchInsert(const QVector<HistoryItemPtr> &items)
 {
-    if (!item)
-        return;
-    // TODO: do we need a force insert in HistoryModel
-    m_model->insert(item);
+    m_model->clearAndBatchInsert(items);
 }
 
 void History::remove(const HistoryItemConstPtr &newItem)

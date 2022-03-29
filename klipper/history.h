@@ -30,12 +30,12 @@ public:
     void insert(QSharedPointer<HistoryItem> item);
 
     /**
-     * Inserts item into clipboard without any checks
+     * Inserts items into clipboard without any checks
      * Used when restoring a saved history and internally.
-     * Don't use this unless you're reasonable certain
-     * that no duplicates are introduced
+     * Don't use this unless you're reasonable the list
+     * should be reset.
      */
-    void forceInsert(QSharedPointer<HistoryItem> item);
+    void clearAndBatchInsert(const QVector<QSharedPointer<HistoryItem>> &items);
 
     /**
      * Remove (first) history item equal to item from history

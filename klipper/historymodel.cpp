@@ -150,6 +150,34 @@ void HistoryModel::insert(QSharedPointer<HistoryItem> item)
     endInsertRows();
 }
 
+void HistoryModel::clearAndBatchInsert(const QVector<HistoryItemPtr> &items)
+{
+    if (m_maxSize == 0 || items.empty()) {
+        // special case - cannot insert any items
+        return;
+    }
+
+    QMutexLocker lock(&m_mutex);
+
+    beginResetModel();
+    m_items.clear();
+
+    // The last row is either items.size() - 1 or m_maxSize - 1.
+    const int numOfItemsToBeInserted = std::min(static_cast<int>(items.size()), m_maxSize);
+    m_items.reserve(numOfItemsToBeInserted);
+
+    for (int i = 0; i < numOfItemsToBeInserted; i++) {
+        if (items[i].isNull()) {
+            continue;
+        }
+
+        items[i]->setModel(this);
+        m_items.append(items[i]);
+    }
+
+    endResetModel();
+}
+
 void HistoryModel::moveToTop(const QByteArray &uuid)
 {
     const QModelIndex existingItem = indexOf(uuid);
