@@ -5,6 +5,7 @@ add_definitions("-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII")
 kcoreaddons_add_plugin(ksysguard SOURCES kdedksysguard.cpp kdedksysguard.h INSTALL_NAMESPACE "kf${QT_MAJOR_VERSION}/kded")
 
 target_link_libraries(ksysguard
+    KF5::CoreAddons
     KF5::DBusAddons
     KF5::I18n
     KF5::XmlGui
