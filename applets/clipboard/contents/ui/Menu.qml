@@ -68,17 +68,22 @@ PlasmaComponents3.ScrollView {
             }
         }
 
-        PlasmaExtras.PlaceholderMessage {
+        Loader {
             id: emptyHint
-
-            readonly property bool hasText: model.filterRegExp.length > 0
 
             anchors.centerIn: parent
             width: parent.width - (PlasmaCore.Units.largeSpacing * 4)
 
-            visible: menuListView.count === 0
-            iconName: hasText ? "edit-none" : "edit-paste"
-            text: hasText ? i18n("No matches") : i18n("Clipboard is empty")
+            active: menuListView.count === 0
+            visible: active
+            asynchronous: true
+
+            sourceComponent: PlasmaExtras.PlaceholderMessage {
+                width: parent.width
+                readonly property bool hasText: model.filterRegExp.length > 0
+                iconName: hasText ? "edit-none" : "edit-paste"
+                text: hasText ? i18n("No matches") : i18n("Clipboard is empty")
+            }
         }
     }
 }
