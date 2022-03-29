@@ -8,7 +8,9 @@
 */
 
 import QtQuick 2.15
+import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Layouts 1.1
+
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
@@ -148,10 +150,13 @@ PlasmaExtras.Representation {
         ShaderEffect {
             id: backgroundImage
             property real scaleFactor: 1.0
-            property Image source: albumArt
+            property ShaderEffectSource source: ShaderEffectSource {
+                id: shaderEffectSource
+                sourceItem: albumArt
+            }
 
             anchors.centerIn: parent
-            visible: !!root.track && source.status === Image.Ready && !softwareRendering
+            visible: (exitTransition.running || albumArt.hasImage) && !softwareRendering
 
             layer.enabled: !softwareRendering
             layer.effect: HueSaturation {
@@ -174,12 +179,20 @@ PlasmaExtras.Representation {
             // use State to avoid unnecessary reevaluation of width and height
             states: State {
                 name: "albumArtReady"
-                when: Plasmoid.expanded && backgroundImage.visible && albumArt.paintedWidth > 0
+                when: Plasmoid.expanded && backgroundImage.visible && albumArt.currentItem.paintedWidth > 0
                 PropertyChanges {
                     target: backgroundImage
-                    scaleFactor: Math.max(parent.width / source.paintedWidth, parent.height / source.paintedHeight)
-                    width: Math.round(source.paintedWidth * scaleFactor)
-                    height: Math.round(source.paintedHeight * scaleFactor)
+                    scaleFactor: Math.max(parent.width / albumArt.currentItem.paintedWidth, parent.height / albumArt.currentItem.paintedHeight)
+                    width: Math.round(albumArt.currentItem.paintedWidth * scaleFactor)
+                    height: Math.round(albumArt.currentItem.paintedHeight * scaleFactor)
+                }
+                PropertyChanges {
+                    target: shaderEffectSource
+                    // HACK: Fix background ratio when DPI > 1
+                    sourceRect: Qt.rect(albumArt.width - albumArt.currentItem.paintedWidth,
+                                    Math.round((albumArt.height - albumArt.currentItem.paintedHeight) / 2),
+                                    albumArt.currentItem.paintedWidth,
+                                    albumArt.currentItem.paintedHeight)
                 }
             }
         }
@@ -199,26 +212,121 @@ PlasmaExtras.Representation {
                 Layout.fillHeight: true
                 Layout.preferredWidth: 50
 
-                Image { // Album Art
+                QQC2.StackView {
                     id: albumArt
-
                     anchors.fill: parent
 
-                    visible: !!root.track && status === Image.Ready
+                    readonly property bool hasImage: currentItem instanceof Image
+                        && (currentItem.status === Image.Ready || currentItem.status === Image.Loading)
 
-                    asynchronous: true
+                    replaceEnter: Transition {
+                        ParallelAnimation {
+                            OpacityAnimator {
+                                from: 0
+                                to: 1
+                                duration: PlasmaCore.Units.longDuration
+                            }
 
-                    horizontalAlignment: Image.AlignRight
-                    verticalAlignment: Image.AlignVCenter
-                    fillMode: Image.PreserveAspectFit
+                            PropertyAction {
+                                target: fallbackIconLoader
+                                property: "opacity"
+                                value: 0
+                            }
+                        }
+                    }
 
-                    source: root.albumArt
+                    replaceExit: Transition {
+                        id: exitTransition
+
+                        ParallelAnimation {
+                            OpacityAnimator {
+                                from: 1
+                                to: 0
+                                duration: PlasmaCore.Units.longDuration
+                            }
+
+                            OpacityAnimator {
+                                target: fallbackIconLoader
+                                to: 1
+                                duration: PlasmaCore.Units.longDuration
+                            }
+                        }
+                    }
+
+                    Connections {
+                        enabled: Plasmoid.expanded
+                        target: root
+
+                        function onAlbumArtChanged() {
+                            albumArt.loadAlbumArt();
+                        }
+                    }
+
+                    Connections {
+                        target: plasmoid
+
+                        function onExpandedChanged() {
+                            // NOTE: Don't use strict equality
+                            if (!Plasmoid.expanded || (albumArt.currentItem instanceof Image && albumArt.currentItem.source == root.albumArt)) {
+                                return;
+                            }
+
+                            albumArt.loadAlbumArt();
+                        }
+                    }
+
+                    function loadAlbumArt() {
+                        if (!root.albumArt) {
+                            albumArt.clear(QQC2.StackView.ReplaceTransition);
+                            return;
+                        }
+
+                        const pendingImage = albumArtComponent.createObject(albumArt, {
+                            "source": root.albumArt,
+                            "opacity": 0,
+                        });
+
+                        function replaceWhenLoaded() {
+                            if (pendingImage.status === Image.Loading) {
+                                return;
+                            }
+                            if (pendingImage.status === Image.Null || pendingImage.status === Image.Error) {
+                                pendingImage.destroy();
+                                return;
+                            }
+                            albumArt.replace(pendingImage, {}, QQC2.StackView.ReplaceTransition);
+                            pendingImage.statusChanged.disconnect(replaceWhenLoaded);
+                        }
+
+                        pendingImage.statusChanged.connect(replaceWhenLoaded);
+                        replaceWhenLoaded();
+                    }
+
+                    Component {
+                        id: albumArtComponent
+
+                        Image { // Album Art
+                            horizontalAlignment: Image.AlignRight
+                            verticalAlignment: Image.AlignVCenter
+                            fillMode: Image.PreserveAspectFit
+
+                            asynchronous: true
+                            cache: false
+
+                            QQC2.StackView.onRemoved: {
+                                source = ""; // HACK: Reduce memory usage
+                                destroy();
+                            }
+                        }
+                    }
                 }
 
+
                 Loader {
+                    id: fallbackIconLoader
                     // When albumArt is shown, the icon is unloaded to reduce memory usage.
                     readonly property string icon: (mpris2Source.currentData && mpris2Source.currentData["Desktop Icon Name"]) || "media-album-cover"
-                    active: !albumArt.visible
+                    active: Plasmoid.expanded && !albumArt.hasImage
                     anchors.fill: parent
 
                     sourceComponent: root.track ? fallbackIconItem : placeholderMessage
@@ -237,6 +345,7 @@ PlasmaExtras.Representation {
 
                     Component {
                         id: placeholderMessage
+
                         Item { // Put PlaceholderMessage in Item so PlaceholderMessage will not fill its parent.
                             anchors.fill: parent
 
@@ -266,7 +375,7 @@ PlasmaExtras.Representation {
                     id: songTitle
                     level: 1
 
-                    color: (softwareRendering || !albumArt.visible) ? PlasmaCore.ColorScope.textColor : "white"
+                    color: (softwareRendering || !albumArt.hasImage) ? PlasmaCore.ColorScope.textColor : "white"
 
                     textFormat: Text.PlainText
                     wrapMode: Text.Wrap
@@ -283,7 +392,7 @@ PlasmaExtras.Representation {
                     visible: root.artist
                     level: 2
 
-                    color: (softwareRendering || !albumArt.visible) ? PlasmaCore.ColorScope.textColor : "white"
+                    color: (softwareRendering || !albumArt.hasImage) ? PlasmaCore.ColorScope.textColor : "white"
 
                     textFormat: Text.PlainText
                     wrapMode: Text.Wrap
@@ -295,7 +404,7 @@ PlasmaExtras.Representation {
                     Layout.maximumHeight: PlasmaCore.Units.gridUnit*2
                 }
                 Kirigami.Heading { // Song Album
-                    color: (softwareRendering || !albumArt.visible) ? PlasmaCore.ColorScope.textColor : "white"
+                    color: (softwareRendering || !albumArt.hasImage) ? PlasmaCore.ColorScope.textColor : "white"
 
                     level: 3
                     opacity: 0.6
