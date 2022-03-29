@@ -71,11 +71,14 @@ PlasmaComponents3.ScrollView {
         PlasmaExtras.PlaceholderMessage {
             id: emptyHint
 
+            readonly property bool hasText: model.filterRegExp.length > 0
+
             anchors.centerIn: parent
             width: parent.width - (PlasmaCore.Units.largeSpacing * 4)
 
             visible: menuListView.count === 0
-            text: model.filterRegExp.length  > 0 ? i18n("No matches") : i18n("Clipboard is empty")
+            iconName: hasText ? "edit-none" : "edit-paste"
+            text: hasText ? i18n("No matches") : i18n("Clipboard is empty")
         }
     }
 }
