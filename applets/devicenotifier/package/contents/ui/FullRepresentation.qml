@@ -165,6 +165,7 @@ PlasmaExtras.Representation {
             PlasmaExtras.PlaceholderMessage {
                 anchors.centerIn: parent
                 width: parent.width - (PlasmaCore.Units.largeSpacing * 4)
+                iconName: "drive-removable-media-symbolic"
                 text: Plasmoid.configuration.removableDevices ? i18n("No removable devices attached") : i18n("No disks available")
                 visible: notifierDialog.count === 0 && !messageHighlightAnimator.running
             }
