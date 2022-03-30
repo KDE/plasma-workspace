@@ -13,6 +13,8 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
+import org.kde.kirigami 2.19 as Kirigami // for InputMethod.willShowOnActive
+
 Menu {
     id: clipboardMenu
     Keys.onPressed: {
@@ -85,6 +87,8 @@ Menu {
     Keys.forwardTo: [stack.currentItem]
 
     property var header: PlasmaExtras.PlasmoidHeading {
+        focus: true
+
         RowLayout {
             anchors.fill: parent
             enabled: clipboardMenu.model.count > 0 || filter.text.length > 0
@@ -96,6 +100,11 @@ Menu {
                 Layout.fillWidth: true
 
                 inputMethodHints: Qt.ImhNoPredictiveText
+
+                // This uses expanded to ensure the binding gets reevaluated
+                // when the plasmoid is shown again and that way ensure we are
+                // always in the correct state on show.
+                focus: plasmoid.expanded && !Kirigami.InputMethod.willShowOnActive
 
                 Keys.onUpPressed: clipboardMenu.arrowKeyPressed(event)
                 Keys.onDownPressed: clipboardMenu.arrowKeyPressed(event)
@@ -163,9 +172,6 @@ Menu {
         // Intercept up/down key to prevent ListView from accepting the key event.
         clipboardMenu.view.Keys.upPressed.connect(clipboardMenu.arrowKeyPressed);
         clipboardMenu.view.Keys.downPressed.connect(clipboardMenu.arrowKeyPressed);
-
-        // Focus on the search field when the applet is opened for the first time
-        filter.forceActiveFocus();
     }
 
     function goToCurrent() {
