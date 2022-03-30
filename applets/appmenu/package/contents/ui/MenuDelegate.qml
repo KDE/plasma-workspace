@@ -66,5 +66,9 @@ AbstractButton {
 
     contentItem: PC3.Label {
         text: controlRoot.Kirigami.MnemonicData.richTextLabel
+        // Kirigami.Theme.highlightedTextColor returns different colors
+        // depending on window focus, which does not apply to this applet
+        // instead, we use palette.highlightedText here, which returns consistent result
+        color: background.state == MenuDelegate.State.Rest ? palette.windowText : palette.highlightedText
     }
 }
