@@ -34,7 +34,6 @@ PlasmaComponents3.ScrollView {
 
     contentItem: ListView {
         id: menuListView
-        focus: true
 
         highlight: PlasmaExtras.Highlight { }
         highlightMoveDuration: 0
