@@ -344,12 +344,22 @@ void KCMColors::load()
 
 void KCMColors::save()
 {
+    auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KWin"),
+                                              QStringLiteral("/org/kde/KWin/BlendChanges"),
+                                              QStringLiteral("org.kde.KWin.BlendChanges"),
+                                              QStringLiteral("start"));
+    msg << 300;
+    // This is deliberately blocking so that we ensure Kwin has processed the
+    // animation start event before we potentially trigger client side changes
+    QDBusConnection::sessionBus().call(msg);
+
     // We need to save the colors change first, to avoid a situation,
     // when we announced that the color scheme has changed, but
     // the colors themselves in the color scheme have not yet
     if (m_selectedSchemeDirty || m_activeSchemeEdited || colorsSettings()->isSaveNeeded()) {
         saveColors();
     }
+
     ManagedConfigModule::save();
     notifyKcmChange(GlobalChangeType::PaletteChanged);
     m_activeSchemeEdited = false;
