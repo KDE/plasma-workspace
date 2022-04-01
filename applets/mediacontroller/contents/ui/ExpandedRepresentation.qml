@@ -220,36 +220,20 @@ PlasmaExtras.Representation {
                         && (currentItem.status === Image.Ready || currentItem.status === Image.Loading)
 
                     replaceEnter: Transition {
-                        ParallelAnimation {
-                            OpacityAnimator {
-                                from: 0
-                                to: 1
-                                duration: PlasmaCore.Units.longDuration
-                            }
-
-                            PropertyAction {
-                                target: fallbackIconLoader
-                                property: "opacity"
-                                value: 0
-                            }
+                        OpacityAnimator {
+                            from: 0
+                            to: 1
+                            duration: PlasmaCore.Units.longDuration
                         }
                     }
 
                     replaceExit: Transition {
                         id: exitTransition
 
-                        ParallelAnimation {
-                            OpacityAnimator {
-                                from: 1
-                                to: 0
-                                duration: PlasmaCore.Units.longDuration
-                            }
-
-                            OpacityAnimator {
-                                target: fallbackIconLoader
-                                to: 1
-                                duration: PlasmaCore.Units.longDuration
-                            }
+                        OpacityAnimator {
+                            from: 1
+                            to: 0
+                            duration: PlasmaCore.Units.longDuration
                         }
                     }
 
@@ -330,6 +314,13 @@ PlasmaExtras.Representation {
                     anchors.fill: parent
 
                     sourceComponent: root.track ? fallbackIconItem : placeholderMessage
+
+                    opacity: active ? 1 : 0
+                    Behavior on opacity {
+                        NumberAnimation {
+                            duration: PlasmaCore.Units.longDuration
+                        }
+                    }
 
                     Component {
                         id: fallbackIconItem
