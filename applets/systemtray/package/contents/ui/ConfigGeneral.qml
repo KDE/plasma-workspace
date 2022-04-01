@@ -37,7 +37,7 @@ ColumnLayout {
         QQC2.Label {
             visible: Kirigami.Settings.tabletMode
             text: i18n("Automatically enabled when in tablet mode")
-            font: PlasmaCore.Theme.smallestFont
+            font: Kirigami.Theme.smallFont
         }
 
         Item {
@@ -80,7 +80,7 @@ ColumnLayout {
         QQC2.Label {
             visible: Kirigami.Settings.tabletMode
             text: i18nc("@info:usagetip under a combobox when tablet mode is on", "Automatically set to Large when in tablet mode")
-            font: PlasmaCore.Theme.smallestFont
+            font: Kirigami.Theme.smallFont
         }
     }
 }
