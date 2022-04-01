@@ -74,3 +74,7 @@ inline QColor accentForeground(const QColor &accent, const bool &isActive)
  * @param configOut The config which holds the information on which scheme is currently selected, and what colors it contains
  */
 void applyScheme(const QString &colorSchemePath, KConfig *configOut, KConfig::WriteConfigFlags writeFlags = KConfig::Normal);
+
+const qreal DefaultTintFactor = 0.15;
+
+QColor tintColor(const QColor &base, const QColor &with, qreal factor = DefaultTintFactor);

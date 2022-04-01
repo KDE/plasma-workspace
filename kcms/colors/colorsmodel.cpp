@@ -19,6 +19,8 @@
 
 #include <algorithm>
 
+#include "colorsapplicator.h"
+
 ColorsModel::ColorsModel(QObject *parent)
     : QAbstractListModel(parent)
 {
@@ -60,6 +62,10 @@ QVariant ColorsModel::data(const QModelIndex &index, int role) const
         return item.removable;
     case AccentActiveTitlebarRole:
         return item.accentActiveTitlebar;
+    case Tints:
+        return item.tints;
+    case TintFactor:
+        return item.tintFactor;
     }
 
     return QVariant();
@@ -107,6 +113,8 @@ QHash<int, QByteArray> ColorsModel::roleNames() const
         {RemovableRole, QByteArrayLiteral("removable")},
         {AccentActiveTitlebarRole, QByteArrayLiteral("accentActiveTitlebar")},
         {PendingDeletionRole, QByteArrayLiteral("pendingDeletion")},
+        {Tints, QByteArrayLiteral("tints")},
+        {TintFactor, QByteArrayLiteral("tintFactor")},
     };
 }
 
@@ -204,6 +212,8 @@ void ColorsModel::load()
             fi.isWritable(),
             colorActiveTitleBar,
             false, // pending deletion
+            group.hasKey("TintFactor"),
+            group.readEntry<qreal>("TintFactor", DefaultTintFactor),
         };
 
         m_data.append(item);

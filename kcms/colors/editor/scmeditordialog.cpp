@@ -31,7 +31,7 @@ SchemeEditorDialog::SchemeEditorDialog(const QString &path, QWidget *parent)
     : QDialog(parent)
     , m_filePath(path)
 {
-    m_config = KSharedConfig::openConfig(path);
+    m_config = KSharedConfig::openConfig(path, KSharedConfig::SimpleConfig);
 
     m_schemeName = KConfigGroup(m_config, "General").readEntry("Name");
     this->setWindowTitle(m_schemeName);

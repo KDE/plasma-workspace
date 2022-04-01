@@ -303,17 +303,17 @@ KCM.GridViewKCM {
                 NumberAnimation { duration: Kirigami.Units.longDuration }
             }
 
-            color: model.palette.window
+            color: kcm.tinted(model.palette.window, kcm.accentColor, model.tints, model.tintFactor)
 
             Kirigami.Theme.inherit: false
             Kirigami.Theme.highlightColor: root.accentColor || model.palette.highlight
-            Kirigami.Theme.textColor: model.palette.text
+            Kirigami.Theme.textColor: kcm.tinted(model.palette.text, kcm.accentColor, model.tints, model.tintFactor) 
 
             Rectangle {
                 id: windowTitleBar
                 width: parent.width
                 height: Math.round(Kirigami.Units.gridUnit * 1.5)
-                color: (model.accentActiveTitlebar && root.accentColor) ? kcm.accentBackground(root.accentColor, model.palette.window) : model.activeTitleBarBackground
+                color: kcm.tinted((model.accentActiveTitlebar && root.accentColor) ? kcm.accentBackground(root.accentColor, model.palette.window) : model.activeTitleBarBackground, kcm.accentColor, model.tints, model.tintFactor)
 
                 QtControls.Label {
                     anchors {
@@ -354,8 +354,8 @@ KCM.GridViewKCM {
                     QtControls.Button {
                         Layout.alignment: Qt.AlignBottom
                         text: i18n("Button")
-                        Kirigami.Theme.backgroundColor: model.palette.button
-                        Kirigami.Theme.textColor: model.palette.buttonText
+                        Kirigami.Theme.backgroundColor: kcm.tinted(model.palette.button, kcm.accentColor, model.tints, model.tintFactor)
+                        Kirigami.Theme.textColor: kcm.tinted(model.palette.buttonText, kcm.accentColor, model.tints, model.tintFactor)
                         activeFocusOnTab: false
                     }
                 }
@@ -372,17 +372,17 @@ KCM.GridViewKCM {
                     background: Rectangle {
                         color: Kirigami.Theme.backgroundColor
                         border.width: 1
-                        border.color: Qt.rgba(model.palette.text.r, model.palette.text.g, model.palette.text.b, 0.3)
+                        border.color: kcm.tinted(Qt.rgba(model.palette.text.r, model.palette.text.g, model.palette.text.b, 0.3), kcm.accentColor, model.tints, model.tintFactor)
                     }
 
                     // We need to set inherit to false here otherwise the child ItemDelegates will not use the
                     // alternative base color we set here.
                     Kirigami.Theme.inherit: false
-                    Kirigami.Theme.backgroundColor: model.palette.base
-                    Kirigami.Theme.highlightColor: root.accentColor ? kcm.accentBackground(root.accentColor, model.palette.base) : model.palette.highlight
-                    Kirigami.Theme.highlightedTextColor: root.accentColor ? kcm.accentForeground(kcm.accentBackground(root.accentColor, model.palette.base), true) : model.palette.highlightedText
-                    Kirigami.Theme.linkColor: root.accentColor || model.palette.link
-                    Kirigami.Theme.textColor: model.palette.text
+                    Kirigami.Theme.backgroundColor: kcm.tinted(model.palette.base, kcm.accentColor, model.tints, model.tintFactor)
+                    Kirigami.Theme.highlightColor: kcm.tinted(root.accentColor ? kcm.accentBackground(root.accentColor, model.palette.base) : model.palette.highlight, kcm.accentColor, model.tints, model.tintFactor)
+                    Kirigami.Theme.highlightedTextColor: kcm.tinted(root.accentColor ? kcm.accentForeground(kcm.accentBackground(root.accentColor, model.palette.base), true) : model.palette.highlightedText, kcm.accentColor, model.tints, model.tintFactor)
+                    Kirigami.Theme.linkColor: kcm.tinted(root.accentColor || model.palette.link, kcm.accentColor, model.tints, model.tintFactor)
+                    Kirigami.Theme.textColor: kcm.tinted(model.palette.text, kcm.accentColor, model.tints, model.tintFactor)
                     Column {
                         id: listPreviewColumn
 

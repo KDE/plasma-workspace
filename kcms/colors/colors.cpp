@@ -108,6 +108,15 @@ QColor KCMColors::accentColor() const
     return color;
 }
 
+QColor KCMColors::tinted(const QColor& color, const QColor& accent, bool tints, qreal tintFactor)
+{
+    if (accent == QColor(Qt::transparent) || !tints)
+    {
+        return color;
+    }
+    return tintColor(color, accentColor(), tintFactor);
+}
+
 void KCMColors::setAccentColor(const QColor &accentColor)
 {
     colorsSettings()->setAccentColor(accentColor);

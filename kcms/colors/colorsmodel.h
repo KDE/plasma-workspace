@@ -23,6 +23,8 @@ struct ColorsModelData {
     bool removable;
     bool accentActiveTitlebar;
     bool pendingDeletion;
+    bool tints;
+    qreal tintFactor;
 };
 Q_DECLARE_TYPEINFO(ColorsModelData, Q_MOVABLE_TYPE);
 
@@ -46,6 +48,8 @@ public:
         RemovableRole,
         AccentActiveTitlebarRole,
         PendingDeletionRole,
+        Tints,
+        TintFactor,
     };
 
     int rowCount(const QModelIndex &parent) const override;

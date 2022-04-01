@@ -71,6 +71,9 @@ public:
 
     Q_INVOKABLE void editScheme(const QString &schemeName, QQuickItem *ctx);
 
+    // we take an extraneous reference to the accent colour here in order to have the bindings
+    // re-evaluate when it changes
+    Q_INVOKABLE QColor tinted(const QColor& color, const QColor& accent, bool tints, qreal tintFactor);
     Q_INVOKABLE QColor accentBackground(const QColor &accent, const QColor &background);
     Q_INVOKABLE QColor accentForeground(const QColor &accent, const bool &isActive);
 
