@@ -58,6 +58,8 @@ View::View(QWindow *)
         Q_UNUSED(names);
         if (group.name() == QLatin1String("General")) {
             loadConfig();
+        } else if (group.name() == QLatin1String("Plugins")) {
+            Q_EMIT helpEnabledChanged();
         }
     });
 

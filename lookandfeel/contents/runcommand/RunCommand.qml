@@ -221,6 +221,7 @@ ColumnLayout {
             }
         }
         PlasmaComponents3.ToolButton {
+            visible: runnerWindow.helpEnabled
             checkable: true
             checked: root.query.startsWith("?")
             // Reset if out quers starts with "?", otherwise set it to "?"

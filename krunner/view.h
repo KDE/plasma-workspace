@@ -8,6 +8,7 @@
 
 #include <KConfigGroup>
 #include <KConfigWatcher>
+#include <KPluginMetaData>
 #include <KSharedConfig>
 #include <QPointer>
 #include <QQuickView>
@@ -42,6 +43,7 @@ class View : public PlasmaQuick::Dialog
     Q_PROPERTY(QStringList history READ history NOTIFY historyChanged)
     // TODO KF6 This is kept for compatibility with third party themes which override the RunCommand.qml file
     Q_PROPERTY(Plasma::RunnerManager *runnerManager WRITE setRunnerManager)
+    Q_PROPERTY(bool helpEnabled READ helpEnabled NOTIFY helpEnabledChanged)
 
 public:
     explicit View(QWindow *parent = nullptr);
@@ -69,8 +71,16 @@ public:
         m_manager = manager;
     }
 
+    bool helpEnabled()
+    {
+        const static auto metaData = KPluginMetaData(QStringLiteral("kf5/krunner/helprunner"));
+        const KConfigGroup grp = KSharedConfig::openConfig()->group("Plugins");
+        return metaData.isEnabled(grp);
+    }
+
 Q_SIGNALS:
     void pinnedChanged();
+    void helpEnabledChanged();
 
 protected:
     bool event(QEvent *event) override;
