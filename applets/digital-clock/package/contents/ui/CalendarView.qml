@@ -480,6 +480,7 @@ PlasmaExtras.Representation {
 
                 visible: holidaysList.count == 0
 
+                iconName: "checkmark"
                 text: monthView.isToday(monthView.currentDate) ? i18n("No events for today")
                                                                : i18n("No events for this day");
             }
