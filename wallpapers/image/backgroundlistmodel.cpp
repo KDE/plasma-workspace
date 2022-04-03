@@ -294,7 +294,7 @@ void BackgroundListModel::sizeFound(const QString &path, const QSize &s)
     if (idx >= 0) {
         KPackage::Package package = m_packages.at(idx);
         m_sizeCache.insert(package.path(), s);
-        Q_EMIT dataChanged(index(idx, 0), index(idx, 0));
+        Q_EMIT dataChanged(index(idx, 0), index(idx, 0), {ResolutionRole});
     }
 }
 
@@ -407,7 +407,7 @@ bool BackgroundListModel::setData(const QModelIndex &index, const QVariant &valu
         const QUrl wallpaperUrl = QUrl::fromLocalFile(b.filePath("preferred"));
         m_pendingDeletion[wallpaperUrl.toLocalFile()] = value.toBool();
 
-        Q_EMIT dataChanged(index, index);
+        Q_EMIT dataChanged(index, index, {PendingDeletionRole});
         return true;
     }
 
@@ -436,7 +436,7 @@ void BackgroundListModel::showPreview(const KFileItem &item, const QPixmap &prev
     m_imageCache.insert(b.filePath("preferred"), new QPixmap(preview), cost);
 
     // qCDebug(IMAGEWALLPAPER) << "WP preview size:" << preview.size();
-    Q_EMIT dataChanged(index, index);
+    Q_EMIT dataChanged(index, index, {ScreenshotRole});
 }
 
 void BackgroundListModel::previewFailed(const KFileItem &item)
