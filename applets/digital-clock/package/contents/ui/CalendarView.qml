@@ -474,17 +474,14 @@ PlasmaExtras.Representation {
                 }
             }
 
-            PlasmaExtras.Heading {
-                anchors.fill: holidaysView
-                horizontalAlignment: Text.AlignHCenter
-                verticalAlignment: Text.AlignVCenter
-                anchors.leftMargin: PlasmaCore.Units.largeSpacing
-                anchors.rightMargin: PlasmaCore.Units.largeSpacing
-                text: monthView.isToday(monthView.currentDate) ? i18n("No events for today")
-                                                            : i18n("No events for this day");
-                level: 3
-                enabled: false
+            PlasmaExtras.PlaceholderMessage {
+                anchors.centerIn: holidaysView
+                width: holidaysView.width - (PlasmaCore.Units.largeSpacing * 8)
+
                 visible: holidaysList.count == 0
+
+                text: monthView.isToday(monthView.currentDate) ? i18n("No events for today")
+                                                               : i18n("No events for this day");
             }
         }
 
