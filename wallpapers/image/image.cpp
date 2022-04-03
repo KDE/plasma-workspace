@@ -13,7 +13,6 @@
 #include "image.h"
 #include "debug.h"
 
-#include <float.h> // FLT_MAX
 #include <math.h>
 
 #include <QAction>
@@ -187,7 +186,7 @@ float distance(const QSize &size, const QSize &desired)
 {
     // compute difference of areas
     float desiredAspectRatio = (desired.height() > 0) ? desired.width() / (float)desired.height() : 0;
-    float candidateAspectRatio = (size.height() > 0) ? size.width() / (float)size.height() : FLT_MAX;
+    float candidateAspectRatio = (size.height() > 0) ? size.width() / (float)size.height() : std::numeric_limits<float>::max();
 
     float delta = size.width() - desired.width();
     delta = (delta >= 0.0 ? delta : -delta * 2); // Penalize for scaling up
@@ -213,7 +212,7 @@ QString Image::findPreferedImage(const QStringList &images)
 
     // float targetAspectRatio = (m_targetSize.height() > 0 ) ? m_targetSize.width() / (float)m_targetSize.height() : 0;
     // qCDebug(IMAGEWALLPAPER) << "wanted" << m_targetSize << "options" << images << "aspect ratio" << targetAspectRatio;
-    float best = FLT_MAX;
+    float best = std::numeric_limits<float>::max();
 
     QString bestImage;
     for (const QString &entry : images) {
@@ -221,7 +220,6 @@ QString Image::findPreferedImage(const QStringList &images)
         if (candidate == QSize()) {
             continue;
         }
-        // float candidateAspectRatio = (candidate.height() > 0 ) ? candidate.width() / (float)candidate.height() : FLT_MAX;
 
         float dist = distance(candidate, m_targetSize);
         // qCDebug(IMAGEWALLPAPER) << "candidate" << candidate << "distance" << dist << "aspect ratio" << candidateAspectRatio;
