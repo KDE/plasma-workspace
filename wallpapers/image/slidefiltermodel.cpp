@@ -52,6 +52,8 @@ void SlideFilterModel::setSourceModel(QAbstractItemModel *sourceModel)
             m_randomOrder.resize(this->sourceModel()->rowCount());
             std::iota(m_randomOrder.begin() + old_count, m_randomOrder.end(), old_count);
             std::shuffle(m_randomOrder.begin() + old_count, m_randomOrder.end(), m_random);
+
+            QSortFilterProxyModel::invalidate();
         });
         connect(sourceModel, &QAbstractItemModel::rowsRemoved, this, [this] {
             if (m_SortingMode != Image::Random || m_usedInConfig) {
@@ -63,6 +65,8 @@ void SlideFilterModel::setSourceModel(QAbstractItemModel *sourceModel)
                                                    return v >= this->sourceModel()->rowCount();
                                                }),
                                 m_randomOrder.end());
+
+            QSortFilterProxyModel::invalidate();
         });
     }
 }
