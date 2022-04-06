@@ -128,8 +128,7 @@ ColumnLayout {
                 for (var i = 0; i < model.length; i++) {
                     if (model[i]["fillMode"] === root.cfg_FillMode) {
                         resizeComboBox.currentIndex = i;
-                        var tl = model[i]["label"].length;
-                        //resizeComboBox.textLength = Math.max(resizeComboBox.textLength, tl+5);
+                        break;
                     }
                 }
             }
@@ -220,6 +219,7 @@ ColumnLayout {
                             for (var i = 0; i < model.length; i++) {
                                 if (model[i]["slideshowMode"] === wallpaper.configuration.SlideshowMode) {
                                     slideshowModeComboBox.currentIndex = i;
+                                    break;
                                 }
                             }
                         }
