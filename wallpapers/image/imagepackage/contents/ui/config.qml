@@ -120,7 +120,7 @@ ColumnLayout {
             ]
 
             textRole: "label"
-            onCurrentIndexChanged: cfg_FillMode = model[currentIndex]["fillMode"]
+            onActivated: cfg_FillMode = model[currentIndex]["fillMode"]
             Component.onCompleted: setMethod();
 
             KCM.SettingHighlighter {
@@ -215,7 +215,7 @@ ColumnLayout {
                                    }
                                ]
                         textRole: "label"
-                        onCurrentIndexChanged: {
+                        onActivated: {
                             cfg_SlideshowMode = model[currentIndex]["slideshowMode"];
                         }
                         Component.onCompleted: setMethod();
