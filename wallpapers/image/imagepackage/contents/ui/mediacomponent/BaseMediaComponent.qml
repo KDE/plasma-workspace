@@ -7,6 +7,7 @@
 */
 
 import QtQuick 2.15
+import QtQuick.Controls 2.15
 import QtGraphicalEffects 1.15
 
 Rectangle {
@@ -26,6 +27,8 @@ Rectangle {
     property var blurSource
     readonly property bool blurEnabled: backgroundColor.blur
         && (backgroundColor.fillMode === Image.PreserveAspectFit || backgroundColor.fillMode === Image.Pad)
+
+    layer.enabled: StackView.status !== StackView.Active && StackView.status !== StackView.Deactivating
 
     Loader {
         anchors.fill: parent
