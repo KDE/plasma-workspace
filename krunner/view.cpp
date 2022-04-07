@@ -215,9 +215,20 @@ void View::positionOnScreen()
 
     QScreen *shownOnScreen = QGuiApplication::primaryScreen();
 
+    QDBusReply<QString> reply;
+    QDBusInterface kwin("org.kde.KWin", "/KWin");
+
+    if (kwin.isValid())
+        reply = kwin.call("activeOutputName");
+
     const auto screens = QGuiApplication::screens();
     for (QScreen *screen : screens) {
-        if (screen->geometry().contains(QCursor::pos(screen))) {
+        if (reply.isValid()) {
+            if (screen->name() == reply.value()) {
+                shownOnScreen = screen;
+                break;
+            }
+        } else if (screen->geometry().contains(QCursor::pos(screen))) {
             shownOnScreen = screen;
             break;
         }
