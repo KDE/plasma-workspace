@@ -5,13 +5,13 @@
 */
 
 #include "imageplugin.h"
-#include "image.h"
+#include "imagebackend.h"
 #include <QQmlContext>
 
 void ImagePlugin::registerTypes(const char *uri)
 {
     Q_ASSERT(uri == QLatin1String("org.kde.plasma.wallpapers.image"));
 
-    qmlRegisterType<Image>(uri, 2, 0, "Image");
+    qmlRegisterType<ImageBackend>(uri, 2, 0, "ImageBackend");
     qmlRegisterAnonymousType<QAbstractItemModel>("QAbstractItemModel",1);
 }

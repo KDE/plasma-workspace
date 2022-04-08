@@ -10,7 +10,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include "image.h"
+#include "imagebackend.h"
 #include "debug.h"
 
 #include <math.h>
@@ -45,7 +45,7 @@
 
 #include <KPackage/PackageLoader>
 
-Image::Image(QObject *parent)
+ImageBackend::ImageBackend(QObject *parent)
     : QObject(parent)
     , m_ready(false)
     , m_delay(10)
@@ -60,26 +60,26 @@ Image::Image(QObject *parent)
 {
     m_wallpaperPackage = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
 
-    connect(&m_timer, &QTimer::timeout, this, &Image::nextSlide);
+    connect(&m_timer, &QTimer::timeout, this, &ImageBackend::nextSlide);
 
-    connect(m_dirWatch, &KDirWatch::created, this, &Image::pathCreated);
-    connect(m_dirWatch, &KDirWatch::dirty, this, &Image::pathDirty);
-    connect(m_dirWatch, &KDirWatch::deleted, this, &Image::pathDeleted);
+    connect(m_dirWatch, &KDirWatch::created, this, &ImageBackend::pathCreated);
+    connect(m_dirWatch, &KDirWatch::dirty, this, &ImageBackend::pathDirty);
+    connect(m_dirWatch, &KDirWatch::deleted, this, &ImageBackend::pathDeleted);
     m_dirWatch->startScan();
 
     useSingleImageDefaults();
 }
 
-Image::~Image()
+ImageBackend::~ImageBackend()
 {
     delete m_dialog;
 }
 
-void Image::classBegin()
+void ImageBackend::classBegin()
 {
 }
 
-void Image::componentComplete()
+void ImageBackend::componentComplete()
 {
     // don't bother loading single image until all properties have settled
     // otherwise we would load a too small image (initial view size) just
@@ -95,22 +95,22 @@ void Image::componentComplete()
     }
 }
 
-QString Image::photosPath() const
+QString ImageBackend::photosPath() const
 {
     return QStandardPaths::writableLocation(QStandardPaths::PicturesLocation);
 }
 
-QUrl Image::wallpaperPath() const
+QUrl ImageBackend::wallpaperPath() const
 {
     return QUrl::fromLocalFile(m_wallpaperPath);
 }
 
-void Image::addUrl(const QString &url)
+void ImageBackend::addUrl(const QString &url)
 {
     addUrl(QUrl(url), true);
 }
 
-void Image::addUrls(const QStringList &urls)
+void ImageBackend::addUrls(const QStringList &urls)
 {
     bool first = true;
     for (const QString &url : urls) {
@@ -120,12 +120,12 @@ void Image::addUrls(const QStringList &urls)
     }
 }
 
-Image::RenderingMode Image::renderingMode() const
+ImageBackend::RenderingMode ImageBackend::renderingMode() const
 {
     return m_mode;
 }
 
-void Image::setRenderingMode(RenderingMode mode)
+void ImageBackend::setRenderingMode(RenderingMode mode)
 {
     if (mode == m_mode) {
         return;
@@ -144,12 +144,12 @@ void Image::setRenderingMode(RenderingMode mode)
     }
 }
 
-Image::SlideshowMode Image::slideshowMode() const
+ImageBackend::SlideshowMode ImageBackend::slideshowMode() const
 {
     return m_slideshowMode;
 }
 
-void Image::setSlideshowMode(Image::SlideshowMode slideshowMode)
+void ImageBackend::setSlideshowMode(ImageBackend::SlideshowMode slideshowMode)
 {
     if (slideshowMode == m_slideshowMode) {
         return;
@@ -163,12 +163,12 @@ void Image::setSlideshowMode(Image::SlideshowMode slideshowMode)
     Q_EMIT slideshowModeChanged();
 }
 
-bool Image::slideshowFoldersFirst() const
+bool ImageBackend::slideshowFoldersFirst() const
 {
     return m_slideshowFoldersFirst;
 }
 
-void Image::setSlideshowFoldersFirst(bool slideshowFoldersFirst)
+void ImageBackend::setSlideshowFoldersFirst(bool slideshowFoldersFirst)
 {
     if (slideshowFoldersFirst == m_slideshowFoldersFirst) {
         return;
@@ -204,7 +204,7 @@ QSize resSize(const QString &str)
     return QSize();
 }
 
-QString Image::findPreferedImage(const QStringList &images)
+QString ImageBackend::findPreferedImage(const QStringList &images)
 {
     if (images.empty()) {
         return QString();
@@ -235,7 +235,7 @@ QString Image::findPreferedImage(const QStringList &images)
     return bestImage;
 }
 
-void Image::findPreferedImageInPackage(KPackage::Package &package)
+void ImageBackend::findPreferedImageInPackage(KPackage::Package &package)
 {
     if (!package.isValid() || !package.filePath("preferred").isEmpty()) {
         return;
@@ -247,12 +247,12 @@ void Image::findPreferedImageInPackage(KPackage::Package &package)
     package.addFileDefinition("preferred", QStringLiteral("images/") + preferred, i18n("Recommended wallpaper file"));
 }
 
-QSize Image::targetSize() const
+QSize ImageBackend::targetSize() const
 {
     return m_targetSize;
 }
 
-void Image::setTargetSize(const QSize &size)
+void ImageBackend::setTargetSize(const QSize &size)
 {
     bool sizeChanged = m_targetSize != size;
     m_targetSize = size;
@@ -271,12 +271,12 @@ void Image::setTargetSize(const QSize &size)
     }
 }
 
-KPackage::Package *Image::package()
+KPackage::Package *ImageBackend::package()
 {
     return &m_wallpaperPackage;
 }
 
-void Image::useSingleImageDefaults()
+void ImageBackend::useSingleImageDefaults()
 {
     m_wallpaper = QString();
 
@@ -314,7 +314,7 @@ void Image::useSingleImageDefaults()
     }
 }
 
-QAbstractItemModel *Image::wallpaperModel()
+QAbstractItemModel *ImageBackend::wallpaperModel()
 {
     if (!m_model) {
         KConfigGroup cfg = KConfigGroup(KSharedConfig::openConfig(QStringLiteral("plasmarc")), QStringLiteral("Wallpapers"));
@@ -327,32 +327,32 @@ QAbstractItemModel *Image::wallpaperModel()
     return m_model;
 }
 
-SlideModel *Image::slideshowModel()
+SlideModel *ImageBackend::slideshowModel()
 {
     if (!m_slideshowModel) {
         m_slideshowModel = new SlideModel(this, this);
         m_slideshowModel->reload(m_slidePaths);
         m_slideFilterModel->setSourceModel(m_slideshowModel);
-        connect(this, &Image::uncheckedSlidesChanged, m_slideFilterModel, &SlideFilterModel::invalidateFilter);
+        connect(this, &ImageBackend::uncheckedSlidesChanged, m_slideFilterModel, &SlideFilterModel::invalidateFilter);
     }
     return m_slideshowModel;
 }
 
-QAbstractItemModel *Image::slideFilterModel()
+QAbstractItemModel *ImageBackend::slideFilterModel()
 {
     if (!m_slideFilterModel->sourceModel()) {
         // make sure it's created
-        connect(slideshowModel(), &SlideModel::done, this, &Image::backgroundsFound);
+        connect(slideshowModel(), &SlideModel::done, this, &ImageBackend::backgroundsFound);
     }
     return m_slideFilterModel;
 }
 
-int Image::slideTimer() const
+int ImageBackend::slideTimer() const
 {
     return m_delay;
 }
 
-void Image::setSlideTimer(int time)
+void ImageBackend::setSlideTimer(int time)
 {
     if (time == m_delay) {
         return;
@@ -368,12 +368,12 @@ void Image::setSlideTimer(int time)
     Q_EMIT slideTimerChanged();
 }
 
-QStringList Image::usersWallpapers() const
+QStringList ImageBackend::usersWallpapers() const
 {
     return m_usersWallpapers;
 }
 
-void Image::setUsersWallpapers(const QStringList &usersWallpapers)
+void ImageBackend::setUsersWallpapers(const QStringList &usersWallpapers)
 {
     if (usersWallpapers == m_usersWallpapers) {
         return;
@@ -384,12 +384,12 @@ void Image::setUsersWallpapers(const QStringList &usersWallpapers)
     Q_EMIT usersWallpapersChanged();
 }
 
-QStringList Image::slidePaths() const
+QStringList ImageBackend::slidePaths() const
 {
     return m_slidePaths;
 }
 
-void Image::setSlidePaths(const QStringList &slidePaths)
+void ImageBackend::setSlidePaths(const QStringList &slidePaths)
 {
     if (slidePaths == m_slidePaths) {
         return;
@@ -419,17 +419,17 @@ void Image::setSlidePaths(const QStringList &slidePaths)
     Q_EMIT slidePathsChanged();
 }
 
-void Image::showAddSlidePathsDialog()
+void ImageBackend::showAddSlidePathsDialog()
 {
     QFileDialog *dialog = new QFileDialog(nullptr, i18n("Directory with the wallpaper to show slides from"), QString());
     dialog->setAttribute(Qt::WA_DeleteOnClose, true);
     dialog->setOptions(QFileDialog::ShowDirsOnly);
     dialog->setAcceptMode(QFileDialog::AcceptOpen);
-    connect(dialog, &QDialog::accepted, this, &Image::addDirFromSelectionDialog);
+    connect(dialog, &QDialog::accepted, this, &ImageBackend::addDirFromSelectionDialog);
     dialog->show();
 }
 
-void Image::addSlidePath(const QString &path)
+void ImageBackend::addSlidePath(const QString &path)
 {
     if (!path.isEmpty() && !m_slidePaths.contains(path)) {
         m_slidePaths.append(path);
@@ -444,7 +444,7 @@ void Image::addSlidePath(const QString &path)
     }
 }
 
-void Image::removeSlidePath(const QString &path)
+void ImageBackend::removeSlidePath(const QString &path)
 {
     if (m_slidePaths.contains(path)) {
         m_slidePaths.removeAll(path);
@@ -479,12 +479,12 @@ void Image::removeSlidePath(const QString &path)
     }
 }
 
-void Image::pathDirty(const QString &path)
+void ImageBackend::pathDirty(const QString &path)
 {
     updateDirWatch(QStringList(path));
 }
 
-void Image::updateDirWatch(const QStringList &newDirs)
+void ImageBackend::updateDirWatch(const QStringList &newDirs)
 {
     Q_FOREACH (const QString &oldDir, m_dirs) {
         if (!newDirs.contains(oldDir)) {
@@ -501,7 +501,7 @@ void Image::updateDirWatch(const QStringList &newDirs)
     m_dirs = newDirs;
 }
 
-void Image::addDirFromSelectionDialog()
+void ImageBackend::addDirFromSelectionDialog()
 {
     QFileDialog *dialog = qobject_cast<QFileDialog *>(sender());
     if (dialog) {
@@ -509,14 +509,14 @@ void Image::addDirFromSelectionDialog()
     }
 }
 
-void Image::syncWallpaperPackage()
+void ImageBackend::syncWallpaperPackage()
 {
     m_wallpaperPackage.setPath(m_wallpaper);
     findPreferedImageInPackage(m_wallpaperPackage);
     m_wallpaperPath = m_wallpaperPackage.filePath("preferred");
 }
 
-void Image::setSingleImage()
+void ImageBackend::setSingleImage()
 {
     if (!m_ready) {
         return;
@@ -567,7 +567,7 @@ void Image::setSingleImage()
     }
 }
 
-void Image::addUrls(const QList<QUrl> &urls)
+void ImageBackend::addUrls(const QList<QUrl> &urls)
 {
     bool first = true;
     for (const QUrl &url : urls) {
@@ -577,7 +577,7 @@ void Image::addUrls(const QList<QUrl> &urls)
     }
 }
 
-void Image::addUrl(const QUrl &url, bool setAsCurrent)
+void ImageBackend::addUrl(const QUrl &url, bool setAsCurrent)
 {
     QString path;
     if (url.isLocalFile()) {
@@ -600,9 +600,9 @@ void Image::addUrl(const QUrl &url, bool setAsCurrent)
             KIO::CopyJob *job = KIO::copy(url, QUrl::fromLocalFile(wallpaperPath), KIO::HideProgressInfo);
 
             if (setAsCurrent) {
-                connect(job, &KJob::result, this, &Image::setWallpaperRetrieved);
+                connect(job, &KJob::result, this, &ImageBackend::setWallpaperRetrieved);
             } else {
-                connect(job, &KJob::result, this, &Image::addWallpaperRetrieved);
+                connect(job, &KJob::result, this, &ImageBackend::addWallpaperRetrieved);
             }
         }
 
@@ -621,7 +621,7 @@ void Image::addUrl(const QUrl &url, bool setAsCurrent)
     }
 }
 
-void Image::setWallpaperRetrieved(KJob *job)
+void ImageBackend::setWallpaperRetrieved(KJob *job)
 {
     KIO::CopyJob *copyJob = qobject_cast<KIO::CopyJob *>(job);
     if (copyJob && !copyJob->error()) {
@@ -629,7 +629,7 @@ void Image::setWallpaperRetrieved(KJob *job)
     }
 }
 
-void Image::addWallpaperRetrieved(KJob *job)
+void ImageBackend::addWallpaperRetrieved(KJob *job)
 {
     KIO::CopyJob *copyJob = qobject_cast<KIO::CopyJob *>(job);
     if (copyJob && !copyJob->error()) {
@@ -637,7 +637,7 @@ void Image::addWallpaperRetrieved(KJob *job)
     }
 }
 
-void Image::setWallpaper(const QString &path)
+void ImageBackend::setWallpaper(const QString &path)
 {
     if (m_mode == SingleImage) {
         m_wallpaper = path;
@@ -651,7 +651,7 @@ void Image::setWallpaper(const QString &path)
     // addUsersWallpaper(path);
 }
 
-void Image::startSlideshow()
+void ImageBackend::startSlideshow()
 {
     if (!m_ready || m_slideFilterModel->property("usedInConfig").toBool()) {
         return;
@@ -659,12 +659,12 @@ void Image::startSlideshow()
     // populate background list
     m_timer.stop();
     slideshowModel()->reload(m_slidePaths);
-    connect(m_slideshowModel, &SlideModel::done, this, &Image::backgroundsFound);
+    connect(m_slideshowModel, &SlideModel::done, this, &ImageBackend::backgroundsFound);
     // TODO: what would be cool: paint on the wallpaper itself a busy widget and perhaps some text
     // about loading wallpaper slideshow while the thread runs
 }
 
-void Image::backgroundsFound()
+void ImageBackend::backgroundsFound()
 {
     disconnect(m_slideshowModel, &SlideModel::done, this, 0);
 
@@ -672,7 +672,7 @@ void Image::backgroundsFound()
     if (m_slideFilterModel->rowCount() == 0) {
         // no image has been found, which is quite weird... try again later (this is useful for events which
         // are not detected by KDirWatch, like a NFS directory being mounted)
-        QTimer::singleShot(1000, this, &Image::startSlideshow);
+        QTimer::singleShot(1000, this, &ImageBackend::startSlideshow);
     } else {
         if (m_currentSlide == -1) {
             m_currentSlide = m_slideFilterModel->indexOf(m_wallpaper) - 1;
@@ -685,14 +685,14 @@ void Image::backgroundsFound()
     }
 }
 
-void Image::newStuffFinished()
+void ImageBackend::newStuffFinished()
 {
     if (m_model) {
         m_model->reload(m_usersWallpapers);
     }
 }
 
-void Image::showFileDialog()
+void ImageBackend::showFileDialog()
 {
     if (!m_dialog) {
         QString path;
@@ -716,7 +716,7 @@ void Image::showFileDialog()
         // i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
 
         m_dialog->setFileMode(QFileDialog::ExistingFiles);
-        connect(m_dialog, &QDialog::accepted, this, &Image::wallpaperBrowseCompleted);
+        connect(m_dialog, &QDialog::accepted, this, &ImageBackend::wallpaperBrowseCompleted);
     }
 
     m_dialog->show();
@@ -724,12 +724,12 @@ void Image::showFileDialog()
     m_dialog->activateWindow();
 }
 
-void Image::fileDialogFinished()
+void ImageBackend::fileDialogFinished()
 {
     m_dialog = nullptr;
 }
 
-void Image::wallpaperBrowseCompleted()
+void ImageBackend::wallpaperBrowseCompleted()
 {
     Q_ASSERT(m_model);
     if (m_dialog && m_dialog->selectedFiles().count() > 0) {
@@ -741,7 +741,7 @@ void Image::wallpaperBrowseCompleted()
     }
 }
 
-void Image::addUsersWallpaper(const QString &file)
+void ImageBackend::addUsersWallpaper(const QString &file)
 {
     QString f = file;
     f.remove(QLatin1String("file:/"));
@@ -772,7 +772,7 @@ void Image::addUsersWallpaper(const QString &file)
     }
 }
 
-void Image::nextSlide()
+void ImageBackend::nextSlide()
 {
     if (!m_ready || m_slideFilterModel->rowCount() == 0) {
         return;
@@ -804,7 +804,7 @@ void Image::nextSlide()
     Q_EMIT wallpaperPathChanged();
 }
 
-void Image::pathCreated(const QString &path)
+void ImageBackend::pathCreated(const QString &path)
 {
     if (slideshowModel()->indexOf(path) == -1) {
         QFileInfo fileInfo(path);
@@ -817,7 +817,7 @@ void Image::pathCreated(const QString &path)
     }
 }
 
-void Image::pathDeleted(const QString &path)
+void ImageBackend::pathDeleted(const QString &path)
 {
     if (slideshowModel()->indexOf(path) != -1) {
         slideshowModel()->removeBackground(path);
@@ -828,7 +828,7 @@ void Image::pathDeleted(const QString &path)
 }
 
 // FIXME: we have to save the configuration also when the dialog cancel button is clicked.
-void Image::removeWallpaper(QString name)
+void ImageBackend::removeWallpaper(QString name)
 {
     QString localWallpapers = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + "/wallpapers/";
     QUrl nameUrl(name);
@@ -870,7 +870,7 @@ void Image::removeWallpaper(QString name)
     }
 }
 
-void Image::commitDeletion()
+void ImageBackend::commitDeletion()
 {
     // This is invokable from qml, so at any moment
     // we can't be sure the model exists
@@ -883,7 +883,7 @@ void Image::commitDeletion()
     }
 }
 
-void Image::openFolder(const QString &path)
+void ImageBackend::openFolder(const QString &path)
 {
     auto *job = new KIO::OpenUrlJob(QUrl::fromLocalFile(path));
     auto *delegate = new KNotificationJobUiDelegate;
@@ -892,7 +892,7 @@ void Image::openFolder(const QString &path)
     job->start();
 }
 
-void Image::toggleSlide(const QString &path, bool checked)
+void ImageBackend::toggleSlide(const QString &path, bool checked)
 {
     if (checked && m_uncheckedSlides.contains(path)) {
         m_uncheckedSlides.removeAll(path);
@@ -905,12 +905,12 @@ void Image::toggleSlide(const QString &path, bool checked)
     }
 }
 
-QStringList Image::uncheckedSlides() const
+QStringList ImageBackend::uncheckedSlides() const
 {
     return m_uncheckedSlides;
 }
 
-void Image::setUncheckedSlides(const QStringList &uncheckedSlides)
+void ImageBackend::setUncheckedSlides(const QStringList &uncheckedSlides)
 {
     if (uncheckedSlides == m_uncheckedSlides) {
         return;

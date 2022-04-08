@@ -51,7 +51,7 @@ void ImageSizeFinder::run()
     Q_EMIT sizeFound(m_path, reader.size());
 }
 
-BackgroundListModel::BackgroundListModel(Image *wallpaper, QObject *parent)
+BackgroundListModel::BackgroundListModel(ImageBackend *wallpaper, QObject *parent)
     : QAbstractListModel(parent)
     , m_wallpaper(wallpaper)
 {
@@ -472,7 +472,7 @@ const QStringList BackgroundListModel::wallpapersAwaitingDeletion()
     return candidates;
 }
 
-BackgroundFinder::BackgroundFinder(Image *wallpaper, const QStringList &paths)
+BackgroundFinder::BackgroundFinder(ImageBackend *wallpaper, const QStringList &paths)
     : QThread(wallpaper)
     , m_paths(paths)
     , m_token(QUuid::createUuid().toString())

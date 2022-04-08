@@ -57,10 +57,10 @@ QQC2.StackView {
         }
     }
 
-    Wallpaper.Image {
+    Wallpaper.ImageBackend {
         id: imageWallpaper
         //the oneliner of difference between image and slideshow wallpapers
-        renderingMode: (wallpaper.pluginName === "org.kde.image") ? Wallpaper.Image.SingleImage : Wallpaper.Image.SlideShow
+        renderingMode: (wallpaper.pluginName === "org.kde.image") ? Wallpaper.ImageBackend.SingleImage : Wallpaper.ImageBackend.SlideShow
         targetSize: root.sourceSize
         slidePaths: wallpaper.configuration.SlidePaths
         slideTimer: wallpaper.configuration.SlideInterval

@@ -43,7 +43,7 @@ ColumnLayout {
         imageWallpaper.commitDeletion();
     }
 
-    Wallpaper.Image {
+    Wallpaper.ImageBackend {
         id: imageWallpaper
         targetSize: {
             if (typeof plasmoid !== "undefined") {
@@ -191,23 +191,23 @@ ColumnLayout {
                         model: [
                                    {
                                        'label': i18nd("plasma_wallpaper_org.kde.image", "Random"),
-                                       'slideshowMode':  Wallpaper.Image.Random
+                                       'slideshowMode':  Wallpaper.ImageBackend.Random
                                    },
                                    {
                                        'label': i18nd("plasma_wallpaper_org.kde.image", "A to Z"),
-                                       'slideshowMode':  Wallpaper.Image.Alphabetical
+                                       'slideshowMode':  Wallpaper.ImageBackend.Alphabetical
                                    },
                                    {
                                        'label': i18nd("plasma_wallpaper_org.kde.image", "Z to A"),
-                                       'slideshowMode':  Wallpaper.Image.AlphabeticalReversed
+                                       'slideshowMode':  Wallpaper.ImageBackend.AlphabeticalReversed
                                    },
                                    {
                                        'label': i18nd("plasma_wallpaper_org.kde.image", "Date modified (newest first)"),
-                                       'slideshowMode':  Wallpaper.Image.ModifiedReversed
+                                       'slideshowMode':  Wallpaper.ImageBackend.ModifiedReversed
                                    },
                                    {
                                        'label': i18nd("plasma_wallpaper_org.kde.image", "Date modified (oldest first)"),
-                                       'slideshowMode':  Wallpaper.Image.Modified
+                                       'slideshowMode':  Wallpaper.ImageBackend.Modified
                                    }
                                ]
                         textRole: "label"

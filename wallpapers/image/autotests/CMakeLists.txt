@@ -1,6 +1,6 @@
 set(testfindpreferredimage_SRCS
     testfindpreferredimage.cpp
-    ../image.cpp
+    ../imagebackend.cpp
     ../backgroundlistmodel.cpp
     )
 

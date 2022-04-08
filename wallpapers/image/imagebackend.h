@@ -30,7 +30,7 @@ class BackgroundListModel;
 class SlideModel;
 class SlideFilterModel;
 
-class Image : public QObject, public QQmlParserStatus
+class ImageBackend : public QObject, public QQmlParserStatus
 {
     Q_OBJECT
     Q_INTERFACES(QQmlParserStatus)
@@ -64,8 +64,8 @@ public:
     };
     Q_ENUM(SlideshowMode)
 
-    explicit Image(QObject* parent = nullptr);
-    ~Image() override;
+    explicit ImageBackend(QObject *parent = nullptr);
+    ~ImageBackend() override;
 
     QUrl wallpaperPath() const;
 

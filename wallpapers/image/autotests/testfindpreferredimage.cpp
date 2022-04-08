@@ -3,7 +3,7 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-#include "image.h"
+#include "imagebackend.h"
 #include <QDebug>
 #include <QtTest>
 

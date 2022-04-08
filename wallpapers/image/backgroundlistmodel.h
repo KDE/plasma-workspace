@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include "image.h"
+#include "imagebackend.h"
 
 #include <QAbstractListModel>
 #include <QCache>
@@ -20,8 +20,6 @@
 #include <KFileItem>
 
 #include <KPackage/PackageStructure>
-
-class Image;
 
 class ImageSizeFinder : public QObject, public QRunnable
 {
@@ -57,7 +55,7 @@ public:
     static const int BLUR_INCREMENT = 9;
     static const int MARGIN = 6;
 
-    BackgroundListModel(Image *listener, QObject *parent);
+    BackgroundListModel(ImageBackend *listener, QObject *parent);
     ~BackgroundListModel() override;
 
     QHash<int, QByteArray> roleNames() const override;
@@ -92,7 +90,7 @@ protected Q_SLOTS:
     void processPaths(const QStringList &paths);
 
 protected:
-    QPointer<Image> m_wallpaper;
+    QPointer<ImageBackend> m_wallpaper;
     QString m_findToken;
     QList<KPackage::Package> m_packages;
 
@@ -115,7 +113,7 @@ class BackgroundFinder : public QThread
     Q_OBJECT
 
 public:
-    BackgroundFinder(Image *wallpaper, const QStringList &p);
+    BackgroundFinder(ImageBackend *wallpaper, const QStringList &p);
     ~BackgroundFinder() override;
 
     QString token() const;
