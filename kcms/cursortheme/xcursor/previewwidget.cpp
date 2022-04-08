@@ -79,23 +79,25 @@ public:
     {
         return pixmap();
     }
-
+    const std::vector<CursorTheme::CursorImage> &images() const
+    {
+        return m_images;
+    }
 private:
     int m_boundingSize;
     QPixmap m_pixmap;
+    std::vector<CursorTheme::CursorImage> m_images;
     QPoint m_pos;
 };
 
 PreviewCursor::PreviewCursor(const CursorTheme *theme, const QString &name, int size)
     : m_boundingSize(size > 0 ? size : theme->defaultCursorSize())
+    , m_images(theme->loadImages(name, size))
 {
-    // Create the preview pixmap
-    QImage image = theme->loadImage(name, size);
-
-    if (image.isNull())
+    if (m_images.empty())
         return;
 
-    m_pixmap = QPixmap::fromImage(image);
+    m_pixmap = QPixmap::fromImage(m_images.front().image);
 }
 
 QRect PreviewCursor::rect() const
@@ -112,6 +114,11 @@ PreviewWidget::PreviewWidget(QQuickItem *parent)
 {
     setAcceptHoverEvents(true);
     current = nullptr;
+    connect(&m_animationTimer, &QTimer::timeout, this, [this] {
+        setCursor(QPixmap::fromImage(current->images().at(nextAnimationFrame).image));
+        m_animationTimer.setInterval(current->images().at(nextAnimationFrame).delay);
+        nextAnimationFrame = (nextAnimationFrame + 1) % current->images().size();
+    });
 }
 
 PreviewWidget::~PreviewWidget()
@@ -259,23 +266,35 @@ void PreviewWidget::hoverMoveEvent(QHoverEvent *e)
     if (needLayout)
         layoutItems();
 
-    for (const PreviewCursor *c : qAsConst(list)) {
-        if (c->rect().contains(e->pos())) {
-            if (c != current) {
-                setCursor(QCursor(c->pixmap()));
-                current = c;
-            }
-            return;
-        }
+    auto it = std::find_if(list.cbegin(), list.cend(), [e](const PreviewCursor *c) {
+        return c->rect().contains(e->pos());
+    });
+    const PreviewCursor *cursor = it != list.cend() ? *it : nullptr;
+
+    if (cursor == std::exchange(current, cursor)) {
+        return;
+    }
+    m_animationTimer.stop();
+
+    if (current == nullptr) {
+        setCursor(Qt::ArrowCursor);
+        return;
     }
 
-    setCursor(Qt::ArrowCursor);
-    current = nullptr;
+    if (current->images().size() <= 1) {
+        setCursor(current->pixmap());
+        return;
+    }
+
+    nextAnimationFrame = 0;
+    m_animationTimer.setInterval(0);
+    m_animationTimer.start();
 }
 
 void PreviewWidget::hoverLeaveEvent(QHoverEvent *e)
 {
     Q_UNUSED(e);
+    m_animationTimer.stop();
     unsetCursor();
 }
 

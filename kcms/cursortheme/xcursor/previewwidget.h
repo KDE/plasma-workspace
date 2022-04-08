@@ -9,6 +9,7 @@
 #include "sortproxymodel.h"
 #include <QPointer>
 #include <QQuickPaintedItem>
+#include <QTimer>
 
 class CursorTheme;
 class PreviewCursor;
@@ -63,4 +64,6 @@ private:
     QPointer<SortProxyModel> m_themeModel;
     int m_currentIndex;
     int m_currentSize;
+    QTimer m_animationTimer;
+    size_t nextAnimationFrame;
 };

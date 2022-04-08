@@ -9,6 +9,8 @@
 #include <QHash>
 #include <QPixmap>
 
+#include <chrono>
+
 /**
  * This is the abstract base class for all cursor themes stored in a
  * CursorThemeModel and previewed in a PreviewWidget.
@@ -39,6 +41,11 @@ public:
         DisplayDetailRole = 0x24A3DAF8,
         IsWritableRole,
         PendingDeletionRole,
+    };
+
+    struct CursorImage {
+        QImage image;
+        std::chrono::milliseconds delay;
     };
 
     CursorTheme()
@@ -97,6 +104,10 @@ public:
     /// If the theme doesn't have the cursor @p name, it should return a null image.
     virtual QImage loadImage(const QString &name, int size = 0) const = 0;
 
+    /// Loads the cursor images @p name, with the nominal size @p size.
+    /// The images should be autocropped to the smallest possible size.
+    /// If the theme doesn't have the cursor @p name, it should return an empty vector
+    virtual std::vector<CursorImage> loadImages(const QString &name, int size = 0) const = 0;
 
     /// Loads the cursor @p name, with the nominal size @p size.
     /// If the theme doesn't have the cursor @p name, it should return
