@@ -192,7 +192,7 @@ void PreviewWidget::updateImplicitSize()
     qreal totalWidth = 0;
     qreal maxHeight = 0;
 
-    foreach (const PreviewCursor *c, list) {
+    for (const auto *c : std::as_const(list)) {
         totalWidth += c->width();
         maxHeight = qMax(c->height(), (int)maxHeight);
     }
@@ -211,7 +211,7 @@ void PreviewWidget::layoutItems()
         int nextX = spacing;
         int nextY = spacing;
 
-        foreach (PreviewCursor *c, list) {
+        for (auto *c : std::as_const(list)) {
             c->setPosition(nextX, nextY);
             nextX += c->boundingSize() + spacing;
             if (nextX + c->boundingSize() > width()) {
@@ -246,7 +246,7 @@ void PreviewWidget::paint(QPainter *painter)
     if (needLayout)
         layoutItems();
 
-    foreach (const PreviewCursor *c, list) {
+    for (const auto *c : std::as_const(list)) {
         if (c->pixmap().isNull())
             continue;
 
