@@ -391,12 +391,12 @@ void KCMColors::saveColors()
     setGlobals();
 }
 
-QColor KCMColors::accentBackground(const QColor& accent, const QColor& background)
+QColor KCMColors::accentBackground(const QColor &accent, const QColor &background)
 {
     return ::accentBackground(accent, background);
 }
 
-QColor KCMColors::accentForeground(const QColor& accent, const bool& isActive)
+QColor KCMColors::accentForeground(const QColor &accent, const bool &isActive)
 {
     return ::accentForeground(accent, isActive);
 }

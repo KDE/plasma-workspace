@@ -63,7 +63,7 @@ public:
     Q_INVOKABLE void knsEntryChanged(KNSCore::EntryWrapper *entry);
 
     QColor accentColor() const;
-    void setAccentColor(const QColor& accentColor);
+    void setAccentColor(const QColor &accentColor);
     void resetAccentColor();
     Q_SIGNAL void accentColorChanged();
 
@@ -71,8 +71,8 @@ public:
 
     Q_INVOKABLE void editScheme(const QString &schemeName, QQuickItem *ctx);
 
-    Q_INVOKABLE QColor accentBackground(const QColor& accent, const QColor& background);
-    Q_INVOKABLE QColor accentForeground(const QColor& accent, const bool& isActive);
+    Q_INVOKABLE QColor accentBackground(const QColor &accent, const QColor &background);
+    Q_INVOKABLE QColor accentForeground(const QColor &accent, const bool &isActive);
 
 public Q_SLOTS:
     void load() override;

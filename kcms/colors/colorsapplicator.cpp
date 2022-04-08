@@ -92,10 +92,10 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
 
         if (item == QStringLiteral("Colors:Selection") && hasAccent()) {
             QColor accentbg = accentBackground(getAccent(), config->group("Colors:View").readEntry<QColor>("BackgroundNormal", QColor()));
-            for (const auto& entry : {QStringLiteral("BackgroundNormal"), QStringLiteral("BackgroundAlternate")}) {
+            for (const auto &entry : {QStringLiteral("BackgroundNormal"), QStringLiteral("BackgroundAlternate")}) {
                 targetGroup.writeEntry(entry, accentbg);
             }
-            for (const auto& entry : {QStringLiteral("ForegroundNormal"), QStringLiteral("ForegroundInactive")}) {
+            for (const auto &entry : {QStringLiteral("ForegroundNormal"), QStringLiteral("ForegroundInactive")}) {
                 targetGroup.writeEntry(entry, accentForeground(accentbg, true));
             }
         }
@@ -109,7 +109,7 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
             }
         }
 
-        //Header accent colouring
+        // Header accent colouring
         if (item == QStringLiteral("Colors:Header") && config->hasGroup(QStringLiteral("Colors:Header")) && hasAccent()) {
             QColor accentbg = accentBackground(getAccent(), config->group("Colors:Window").readEntry<QColor>("BackgroundNormal", QColor()));
             if (accentActiveTitlebar) {
@@ -120,7 +120,7 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
             if (accentInactiveTitlebar) {
                 targetGroup = targetGroup.group("Inactive");
                 targetGroup.writeEntry("BackgroundNormal", accentbg);
-                targetGroup.writeEntry("ForegroundNormal", accentForeground(accentbg, false)); //Dimmed foreground
+                targetGroup.writeEntry("ForegroundNormal", accentForeground(accentbg, false)); // Dimmed foreground
             }
         }
     }
@@ -149,7 +149,7 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
         ++i;
     }
 
-    if (hasAccent()) { //Titlebar accent colouring
+    if (hasAccent()) { // Titlebar accent colouring
         QColor accentbg = accentBackground(getAccent(), config->group("Colors:Window").readEntry<QColor>("BackgroundNormal", QColor()));
         if (accentActiveTitlebar) {
             groupWMOut.writeEntry("activeBackground", accentbg);
@@ -157,10 +157,9 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
         }
         if (accentInactiveTitlebar) {
             groupWMOut.writeEntry("inactiveBackground", accentbg);
-            groupWMOut.writeEntry("inactiveForeground", accentForeground(accentbg, false)); //Dimmed foreground
+            groupWMOut.writeEntry("inactiveForeground", accentForeground(accentbg, false)); // Dimmed foreground
         }
     }
-
 
     const QStringList groupNameList{QStringLiteral("ColorEffects:Inactive"), QStringLiteral("ColorEffects:Disabled")};
 

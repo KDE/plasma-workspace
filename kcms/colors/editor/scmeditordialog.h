@@ -35,7 +35,6 @@ Q_SIGNALS:
 
 private Q_SLOTS:
 
-
     void on_buttonBox_clicked(QAbstractButton *button);
 
     void updateTabs(bool byUser = false);
