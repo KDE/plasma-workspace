@@ -191,23 +191,23 @@ ColumnLayout {
                         model: [
                                    {
                                        'label': i18nd("plasma_wallpaper_org.kde.image", "Random"),
-                                       'slideshowMode':  Wallpaper.ImageBackend.Random
+                                       'slideshowMode':  Wallpaper.SortingMode.Random
                                    },
                                    {
                                        'label': i18nd("plasma_wallpaper_org.kde.image", "A to Z"),
-                                       'slideshowMode':  Wallpaper.ImageBackend.Alphabetical
+                                       'slideshowMode':  Wallpaper.SortingMode.Alphabetical
                                    },
                                    {
                                        'label': i18nd("plasma_wallpaper_org.kde.image", "Z to A"),
-                                       'slideshowMode':  Wallpaper.ImageBackend.AlphabeticalReversed
+                                       'slideshowMode':  Wallpaper.SortingMode.AlphabeticalReversed
                                    },
                                    {
                                        'label': i18nd("plasma_wallpaper_org.kde.image", "Date modified (newest first)"),
-                                       'slideshowMode':  Wallpaper.ImageBackend.ModifiedReversed
+                                       'slideshowMode':  Wallpaper.SortingMode.ModifiedReversed
                                    },
                                    {
                                        'label': i18nd("plasma_wallpaper_org.kde.image", "Date modified (oldest first)"),
-                                       'slideshowMode':  Wallpaper.ImageBackend.Modified
+                                       'slideshowMode':  Wallpaper.SortingMode.Modified
                                    }
                                ]
                         textRole: "label"

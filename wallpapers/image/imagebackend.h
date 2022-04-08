@@ -21,6 +21,8 @@
 
 #include <KPackage/Package>
 
+#include "sortingmode.h"
+
 class QFileDialog;
 class QQuickItem;
 
@@ -30,13 +32,13 @@ class BackgroundListModel;
 class SlideModel;
 class SlideFilterModel;
 
-class ImageBackend : public QObject, public QQmlParserStatus
+class ImageBackend : public QObject, public QQmlParserStatus, public SortingMode
 {
     Q_OBJECT
     Q_INTERFACES(QQmlParserStatus)
 
     Q_PROPERTY(RenderingMode renderingMode READ renderingMode WRITE setRenderingMode NOTIFY renderingModeChanged)
-    Q_PROPERTY(SlideshowMode slideshowMode READ slideshowMode WRITE setSlideshowMode NOTIFY slideshowModeChanged)
+    Q_PROPERTY(SortingMode::Mode slideshowMode READ slideshowMode WRITE setSlideshowMode NOTIFY slideshowModeChanged)
     Q_PROPERTY(bool slideshowFoldersFirst READ slideshowFoldersFirst WRITE setSlideshowFoldersFirst NOTIFY slideshowFoldersFirstChanged)
     Q_PROPERTY(QUrl wallpaperPath READ wallpaperPath NOTIFY wallpaperPathChanged)
     Q_PROPERTY(QAbstractItemModel *wallpaperModel READ wallpaperModel CONSTANT)
@@ -54,15 +56,6 @@ public:
         SlideShow,
     };
     Q_ENUM(RenderingMode)
-
-    enum SlideshowMode {
-        Random,
-        Alphabetical,
-        AlphabeticalReversed,
-        Modified,
-        ModifiedReversed,
-    };
-    Q_ENUM(SlideshowMode)
 
     explicit ImageBackend(QObject *parent = nullptr);
     ~ImageBackend() override;
@@ -87,8 +80,8 @@ public:
     RenderingMode renderingMode() const;
     void setRenderingMode(RenderingMode mode);
 
-    SlideshowMode slideshowMode() const;
-    void setSlideshowMode(SlideshowMode slideshowMode);
+    SortingMode::Mode slideshowMode() const;
+    void setSlideshowMode(SortingMode::Mode slideshowMode);
 
     bool slideshowFoldersFirst() const;
     void setSlideshowFoldersFirst(bool slideshowFoldersFirst);
@@ -175,7 +168,7 @@ private:
     QSize m_targetSize;
 
     RenderingMode m_mode;
-    SlideshowMode m_slideshowMode;
+    SortingMode::Mode m_slideshowMode;
     bool m_slideshowFoldersFirst;
 
     KPackage::Package m_wallpaperPackage;

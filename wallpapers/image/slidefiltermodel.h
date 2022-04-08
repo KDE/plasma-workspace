@@ -6,13 +6,13 @@
 
 #pragma once
 
-#include "imagebackend.h"
-
 #include <QSortFilterProxyModel>
 #include <QVector>
 #include <QFileInfo>
 
 #include <random>
+
+#include "sortingmode.h"
 
 class SlideFilterModel : public QSortFilterProxyModel
 {
@@ -25,7 +25,7 @@ public:
     bool lessThan(const QModelIndex &source_left, const QModelIndex &source_right) const override;
     bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
     void setSourceModel(QAbstractItemModel *sourceModel) override;
-    void setSortingMode(ImageBackend::SlideshowMode slideshowMode, bool slideshowFoldersFirst);
+    void setSortingMode(SortingMode::Mode slideshowMode, bool slideshowFoldersFirst);
     void invalidate();
     void invalidateFilter();
 
@@ -42,7 +42,7 @@ private:
     QString getFilePathWithDir(const QFileInfo& fileInfo) const;
 
     QVector<int> m_randomOrder;
-    ImageBackend::SlideshowMode m_SortingMode;
+    SortingMode::Mode m_SortingMode;
     bool m_SortingFoldersFirst;
     bool m_usedInConfig;
     std::random_device m_randomDevice;

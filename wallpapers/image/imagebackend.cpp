@@ -51,7 +51,7 @@ ImageBackend::ImageBackend(QObject *parent)
     , m_delay(10)
     , m_dirWatch(new KDirWatch(this))
     , m_mode(SingleImage)
-    , m_slideshowMode(Random)
+    , m_slideshowMode(SortingMode::Random)
     , m_slideshowFoldersFirst(false)
     , m_currentSlide(-1)
     , m_model(nullptr)
@@ -144,12 +144,12 @@ void ImageBackend::setRenderingMode(RenderingMode mode)
     }
 }
 
-ImageBackend::SlideshowMode ImageBackend::slideshowMode() const
+SortingMode::Mode ImageBackend::slideshowMode() const
 {
     return m_slideshowMode;
 }
 
-void ImageBackend::setSlideshowMode(ImageBackend::SlideshowMode slideshowMode)
+void ImageBackend::setSlideshowMode(SortingMode::Mode slideshowMode)
 {
     if (slideshowMode == m_slideshowMode) {
         return;
@@ -785,7 +785,7 @@ void ImageBackend::nextSlide()
         m_currentSlide += 1;
     }
     // We are starting again - avoid having the same random order when we restart the slideshow
-    if (m_slideshowMode == Random && m_currentSlide == 0) {
+    if (m_slideshowMode == SortingMode::Random && m_currentSlide == 0) {
         m_slideFilterModel->invalidate();
     }
     QUrl next = m_slideFilterModel->index(m_currentSlide, 0).data(BackgroundListModel::PathRole).toUrl();
