@@ -66,15 +66,6 @@ QImage CursorTheme::autoCropImage(const QImage &image) const
     return image.copy(r.normalized());
 }
 
-QPixmap CursorTheme::loadPixmap(const QString &name, int size) const
-{
-    QImage image = loadImage(name, size);
-    if (image.isNull())
-        return QPixmap();
-
-    return QPixmap::fromImage(image);
-}
-
 static int nominalCursorSize(int iconSize)
 {
     for (int i = 512; i > 8; i /= 2) {

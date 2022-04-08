@@ -97,9 +97,6 @@ public:
     /// If the theme doesn't have the cursor @p name, it should return a null image.
     virtual QImage loadImage(const QString &name, int size = 0) const = 0;
 
-    /// Convenience function. Default implementation calls
-    /// QPixmap::fromImage(loadImage());
-    virtual QPixmap loadPixmap(const QString &name, int size = 0) const;
 
     /// Loads the cursor @p name, with the nominal size @p size.
     /// If the theme doesn't have the cursor @p name, it should return
