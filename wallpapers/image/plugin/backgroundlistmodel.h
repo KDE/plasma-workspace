@@ -12,7 +12,6 @@
 #include <QCache>
 #include <QMutex>
 #include <QPixmap>
-#include <QRunnable>
 #include <QSet>
 #include <QThread>
 
@@ -20,20 +19,6 @@
 #include <KFileItem>
 
 #include <KPackage/PackageStructure>
-
-class ImageSizeFinder : public QObject, public QRunnable
-{
-    Q_OBJECT
-public:
-    explicit ImageSizeFinder(const QString &path, QObject *parent = nullptr);
-    void run() override;
-
-Q_SIGNALS:
-    void sizeFound(const QString &path, const QSize &size);
-
-private:
-    QString m_path;
-};
 
 class BackgroundListModel : public QAbstractListModel
 {
