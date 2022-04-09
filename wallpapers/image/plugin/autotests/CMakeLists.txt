@@ -16,3 +16,7 @@ target_link_libraries(testfindpreferredimage
 # ImageSizeFinder test
 ecm_add_test(test_imagesizefinder.cpp TEST_NAME testimagesizefinder
     LINK_LIBRARIES Qt::Test plasma_wallpaper_imageplugin_static)
+
+# ImageFinder test
+ecm_add_test(test_imagefinder.cpp TEST_NAME testimagefinder
+    LINK_LIBRARIES Qt::Test plasma_wallpaper_imageplugin_static)
