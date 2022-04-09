@@ -4,6 +4,7 @@ set(image_SRCS
     slidemodel.cpp
     slidefiltermodel.cpp
     sortingmode.h
+    finder/imagesizefinder.cpp
 )
 
 ecm_qt_declare_logging_category(image_SRCS HEADER debug.h

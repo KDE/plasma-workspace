@@ -36,20 +36,10 @@
 
 #include <algorithm>
 
+#include "finder/imagesizefinder.h"
+
 QStringList BackgroundFinder::s_suffixes;
 QMutex BackgroundFinder::s_suffixMutex;
-
-ImageSizeFinder::ImageSizeFinder(const QString &path, QObject *parent)
-    : QObject(parent)
-    , m_path(path)
-{
-}
-
-void ImageSizeFinder::run()
-{
-    QImageReader reader(m_path);
-    Q_EMIT sizeFound(m_path, reader.size());
-}
 
 BackgroundListModel::BackgroundListModel(ImageBackend *wallpaper, QObject *parent)
     : QAbstractListModel(parent)
