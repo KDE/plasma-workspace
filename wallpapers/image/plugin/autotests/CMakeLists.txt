@@ -12,3 +12,7 @@ ecm_add_test(test_imagefinder.cpp TEST_NAME testimagefinder
 # PackageFinder test
 ecm_add_test(test_packagefinder.cpp TEST_NAME testpackageimagefinder
     LINK_LIBRARIES Qt::Test plasma_wallpaper_imageplugin_static)
+
+# ImageListModel test
+ecm_add_test(test_imagelistmodel.cpp TEST_NAME testimagelistmodel
+    LINK_LIBRARIES Qt::Test plasma_wallpaper_imageplugin_static)
