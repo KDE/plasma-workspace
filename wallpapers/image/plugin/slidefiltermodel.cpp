@@ -9,9 +9,9 @@
 #include "backgroundlistmodel.h"
 #include "slidemodel.h"
 
-#include <QRandomGenerator>
-#include <QFileInfo>
 #include <QDir>
+#include <QFileInfo>
+#include <QRandomGenerator>
 
 #include <algorithm>
 
@@ -182,12 +182,12 @@ void SlideFilterModel::buildRandomOrder()
     }
 }
 
-QString SlideFilterModel::getLocalFilePath(const QModelIndex& modelIndex) const
+QString SlideFilterModel::getLocalFilePath(const QModelIndex &modelIndex) const
 {
     return modelIndex.data(BackgroundListModel::PathRole).toUrl().toLocalFile();
 }
 
-QString SlideFilterModel::getFilePathWithDir(const QFileInfo& fileInfo) const
+QString SlideFilterModel::getFilePathWithDir(const QFileInfo &fileInfo) const
 {
     return fileInfo.canonicalPath().append(QDir::separator());
 }

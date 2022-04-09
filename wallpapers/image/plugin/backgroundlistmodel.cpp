@@ -185,7 +185,7 @@ void BackgroundListModel::processPaths(const QStringList &paths)
         collator.setNumericMode(true);
         // Behave like Dolphin with natural sorting enabled
         collator.setCaseSensitivity(Qt::CaseInsensitive);
-        const auto compare = [this, &collator](const KPackage::Package &a, const KPackage::Package &b){
+        const auto compare = [this, &collator](const KPackage::Package &a, const KPackage::Package &b) {
             const QString aDisplay = displayStringForPackage(a);
             const QString bDisplay = displayStringForPackage(b);
             // Checking if less than zero makes ascending order (A-Z)

@@ -6,9 +6,9 @@
 
 #pragma once
 
+#include <QFileInfo>
 #include <QSortFilterProxyModel>
 #include <QVector>
-#include <QFileInfo>
 
 #include <random>
 
@@ -38,8 +38,8 @@ Q_SIGNALS:
 private:
     void buildRandomOrder();
 
-    QString getLocalFilePath(const QModelIndex& modelIndex) const;
-    QString getFilePathWithDir(const QFileInfo& fileInfo) const;
+    QString getLocalFilePath(const QModelIndex &modelIndex) const;
+    QString getFilePathWithDir(const QFileInfo &fileInfo) const;
 
     QVector<int> m_randomOrder;
     SortingMode::Mode m_SortingMode;
