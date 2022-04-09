@@ -215,11 +215,8 @@ void View::positionOnScreen()
 
     QScreen *shownOnScreen = QGuiApplication::primaryScreen();
 
-    QDBusReply<QString> reply;
-    QDBusInterface kwin("org.kde.KWin", "/KWin");
-
-    if (kwin.isValid())
-        reply = kwin.call("activeOutputName");
+    auto message = QDBusMessage::createMethodCall("org.kde.KWin", "/KWin", "org.kde.KWin", "activeOutputName");
+    QDBusReply<QString> reply = QDBusConnection::sessionBus().call(message);
 
     const auto screens = QGuiApplication::screens();
     for (QScreen *screen : screens) {
@@ -237,7 +234,7 @@ void View::positionOnScreen()
     // in wayland, QScreen::availableGeometry() returns QScreen::geometry()
     // we could get a better value from plasmashell
     // BUG: 386114
-    auto message = QDBusMessage::createMethodCall("org.kde.plasmashell", "/StrutManager", "org.kde.PlasmaShell.StrutManager", "availableScreenRect");
+    message = QDBusMessage::createMethodCall("org.kde.plasmashell", "/StrutManager", "org.kde.PlasmaShell.StrutManager", "availableScreenRect");
     message.setArguments({shownOnScreen->name()});
     QDBusPendingCall call = QDBusConnection::sessionBus().asyncCall(message);
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(call, this);
