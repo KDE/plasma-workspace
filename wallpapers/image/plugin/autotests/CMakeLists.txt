@@ -24,3 +24,7 @@ ecm_add_test(test_packagelistmodel.cpp TEST_NAME testpackageimagelistmodel
 # ImageProxyModel test
 ecm_add_test(test_imageproxymodel.cpp TEST_NAME testimageproxymodel
     LINK_LIBRARIES Qt::Test plasma_wallpaper_imageplugin_static)
+
+# SlideModel test
+ecm_add_test(test_slidemodel.cpp TEST_NAME testslidemodel
+    LINK_LIBRARIES Qt::Test plasma_wallpaper_imageplugin_static)
