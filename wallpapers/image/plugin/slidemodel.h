@@ -6,23 +6,50 @@
 
 #pragma once
 
-#include "backgroundlistmodel.h"
+#include <QConcatenateTablesProxyModel>
+#include <QSet>
+#include <QSize>
 
-class SlideModel : public BackgroundListModel
+#include "model/imageroles.h"
+
+class ImageProxyModel;
+
+class SlideModel : public QConcatenateTablesProxyModel, public ImageRoles
 {
     Q_OBJECT
+
 public:
-    using BackgroundListModel::BackgroundListModel;
-    void reload(const QStringList &selected);
-    void addDirs(const QStringList &selected);
-    void removeDir(const QString &selected);
-    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
+    explicit SlideModel(const QSize &targetSize, QObject *parent = nullptr);
+
     QHash<int, QByteArray> roleNames() const override;
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
+    bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override;
+
+    int indexOf(const QString &packagePath) const;
+
+    /**
+     * @return added directories
+     */
+    QStringList addDirs(const QStringList &dirs);
+    QString removeDir(const QString &selected);
+    void setSlidePaths(const QStringList &slidePaths);
+
+    void setUncheckedSlides(const QStringList &uncheckedSlides);
 
 Q_SIGNALS:
     void done();
+    void targetSizeChanged(const QSize &size);
 
 private Q_SLOTS:
-    void removeBackgrounds(const QStringList &paths, const QString &token);
-    void backgroundsFound(const QStringList &paths, const QString &token);
+    void slotSourceModelLoadingChanged();
+
+private:
+    QSize m_targetSize;
+
+    QHash<QString, ImageProxyModel *> m_models;
+    int m_loaded = 0;
+
+    QHash<QString, bool> m_checkedTable;
+
+    friend class SlideModelTest;
 };
