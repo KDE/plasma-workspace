@@ -400,12 +400,13 @@ void ImageBackend::setSlidePaths(const QStringList &slidePaths)
 
     if (!m_slidePaths.isEmpty()) {
         // Replace 'preferred://wallpaperlocations' with real paths
-        const QStringList preProcessedPaths = m_slidePaths;
-        for (const QString &path : preProcessedPaths) {
-            if (path == QLatin1String("preferred://wallpaperlocations")) {
-                m_slidePaths << QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("wallpapers"), QStandardPaths::LocateDirectory);
-                m_slidePaths.removeAll(path);
-            }
+        const auto it = std::remove_if(m_slidePaths.begin(), m_slidePaths.end(), [](const QString &path) {
+            return path == QLatin1String("preferred://wallpaperlocations");
+        });
+
+        if (it != m_slidePaths.end()) {
+            m_slidePaths.erase(it, m_slidePaths.end());
+            m_slidePaths << QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("wallpapers"), QStandardPaths::LocateDirectory);
         }
     }
 
