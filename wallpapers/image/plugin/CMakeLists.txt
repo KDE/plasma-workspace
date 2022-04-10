@@ -1,6 +1,5 @@
 set(image_SRCS
     imagebackend.cpp
-    backgroundlistmodel.cpp
     slidemodel.cpp
     slidefiltermodel.cpp
     sortingmode.h
