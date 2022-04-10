@@ -47,10 +47,10 @@ ColumnLayout {
         id: imageWallpaper
         targetSize: {
             if (typeof plasmoid !== "undefined") {
-                return Qt.size(Plasmoid.width, Plasmoid.height)
+                return Qt.size(Plasmoid.width * Screen.devicePixelRatio, Plasmoid.height * Screen.devicePixelRatio)
             }
             // Lock screen configuration case
-            return Qt.size(Screen.width, Screen.height)
+            return Qt.size(Screen.width * Screen.devicePixelRatio, Screen.height * Screen.devicePixelRatio)
         }
         onSlidePathsChanged: cfg_SlidePaths = slidePaths
         onUncheckedSlidesChanged: cfg_UncheckedSlides = uncheckedSlides
