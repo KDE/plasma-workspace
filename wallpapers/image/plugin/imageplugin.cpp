@@ -5,14 +5,24 @@
 */
 
 #include "imageplugin.h"
-#include "imagebackend.h"
 #include <QQmlContext>
 
+#include "imagebackend.h"
+#include "provider/packageimageprovider.h"
 #include "sortingmode.h"
+
+const auto pluginName = QByteArrayLiteral("org.kde.plasma.wallpapers.image");
+
+void ImagePlugin::initializeEngine(QQmlEngine *engine, const char *uri)
+{
+    Q_ASSERT(uri == pluginName);
+
+    engine->addImageProvider(QStringLiteral("package"), new PackageImageProvider);
+}
 
 void ImagePlugin::registerTypes(const char *uri)
 {
-    Q_ASSERT(uri == QLatin1String("org.kde.plasma.wallpapers.image"));
+    Q_ASSERT(uri == pluginName);
 
     qmlRegisterType<ImageBackend>(uri, 2, 0, "ImageBackend");
     qmlRegisterAnonymousType<QAbstractItemModel>("QAbstractItemModel", 1);
