@@ -1,6 +1,5 @@
 set(image_SRCS
     imagebackend.cpp
-    imageplugin.cpp
     backgroundlistmodel.cpp
     slidemodel.cpp
     slidefiltermodel.cpp
@@ -12,9 +11,9 @@ ecm_qt_declare_logging_category(image_SRCS HEADER debug.h
                                            CATEGORY_NAME kde.wallpapers.image
                                            DEFAULT_SEVERITY Info)
 
-add_library(plasma_wallpaper_imageplugin SHARED ${image_SRCS})
+add_library(plasma_wallpaper_imageplugin_static STATIC ${image_SRCS})
 
-target_link_libraries(plasma_wallpaper_imageplugin
+target_link_libraries(plasma_wallpaper_imageplugin_static
     Qt::Core
     Qt::Quick
     Qt::Qml
@@ -27,6 +26,11 @@ target_link_libraries(plasma_wallpaper_imageplugin
     KF5::NewStuff
     KF5::Notifications
     )
+
+add_library(plasma_wallpaper_imageplugin SHARED imageplugin.cpp)
+target_link_libraries(plasma_wallpaper_imageplugin
+    plasma_wallpaper_imageplugin_static
+)
 
 if(BUILD_TESTING)
    add_subdirectory(autotests)
