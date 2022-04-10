@@ -12,6 +12,8 @@
 #include <QDir>
 #include <QRandomGenerator>
 
+#include <KIO/OpenFileManagerWindowJob>
+
 #include <algorithm>
 
 SlideFilterModel::SlideFilterModel(QObject *parent)
@@ -168,8 +170,7 @@ int SlideFilterModel::indexOf(const QString &path)
 
 void SlideFilterModel::openContainingFolder(int rowIndex)
 {
-    auto sourceIndex = mapToSource(index(rowIndex, 0));
-    static_cast<SlideModel *>(sourceModel())->openContainingFolder(sourceIndex.row());
+    KIO::highlightInFileManager({index(rowIndex, 0).data(ImageRoles::PathRole).toUrl()});
 }
 
 void SlideFilterModel::buildRandomOrder()
