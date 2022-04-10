@@ -71,6 +71,8 @@ protected:
     QStringList m_removableWallpapers;
     QStringList m_customPaths;
 
+    friend class ImageProxyModel; // For m_removableWallpapers
+
 private Q_SLOTS:
     void slotHandleImageSizeFound(const QString &path, const QSize &size);
     void slotHandlePreview(const KFileItem &item, const QPixmap &preview);
