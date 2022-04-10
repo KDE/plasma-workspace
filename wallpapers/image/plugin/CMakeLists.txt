@@ -5,6 +5,17 @@ set(image_SRCS
     slidefiltermodel.cpp
     sortingmode.h
     finder/imagesizefinder.cpp
+    finder/distance.cpp
+    finder/findsymlinktarget.h
+    finder/imagefinder.cpp
+    finder/suffixcheck.cpp
+    finder/packagefinder.cpp
+    model/abstractimagelistmodel.cpp
+    model/imageroles.h
+    model/packagelistmodel.cpp
+    model/imagelistmodel.cpp
+    model/imageproxymodel.cpp
+    provider/packageimageprovider.cpp
 )
 
 ecm_qt_declare_logging_category(image_SRCS HEADER debug.h

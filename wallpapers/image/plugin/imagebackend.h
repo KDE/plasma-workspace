@@ -10,13 +10,9 @@
 
 #pragma once
 
-#include <QDateTime>
-#include <QObject>
-#include <QPersistentModelIndex>
-#include <QPixmap>
-#include <QPointer>
+#include <QAbstractItemModel>
 #include <QQmlParserStatus>
-#include <QStringList>
+#include <QSize>
 #include <QTimer>
 
 #include <KPackage/Package>
@@ -28,7 +24,7 @@ class QQuickItem;
 
 class KDirWatch;
 class KJob;
-class BackgroundListModel;
+class ImageProxyModel;
 class SlideModel;
 class SlideFilterModel;
 
@@ -37,17 +33,26 @@ class ImageBackend : public QObject, public QQmlParserStatus, public SortingMode
     Q_OBJECT
     Q_INTERFACES(QQmlParserStatus)
 
+    Q_PROPERTY(bool usedInConfig MEMBER m_usedInConfig)
     Q_PROPERTY(RenderingMode renderingMode READ renderingMode WRITE setRenderingMode NOTIFY renderingModeChanged)
     Q_PROPERTY(SortingMode::Mode slideshowMode READ slideshowMode WRITE setSlideshowMode NOTIFY slideshowModeChanged)
     Q_PROPERTY(bool slideshowFoldersFirst READ slideshowFoldersFirst WRITE setSlideshowFoldersFirst NOTIFY slideshowFoldersFirstChanged)
-    Q_PROPERTY(QUrl wallpaperPath READ wallpaperPath NOTIFY wallpaperPathChanged)
+    /**
+     * Package path from the saved configuration, can be an image file, a url with
+     * "image://" scheme or a folder (KPackage).
+     */
+    Q_PROPERTY(QUrl image READ image WRITE setImage NOTIFY imageChanged)
+    /**
+     * The real path of the image
+     * e.g. /home/kde/Pictures/image.png
+     *      image://package/get? (KPackage)
+     */
+    Q_PROPERTY(QUrl modelImage READ modelImage NOTIFY modelImageChanged)
     Q_PROPERTY(QAbstractItemModel *wallpaperModel READ wallpaperModel CONSTANT)
     Q_PROPERTY(QAbstractItemModel *slideFilterModel READ slideFilterModel CONSTANT)
     Q_PROPERTY(int slideTimer READ slideTimer WRITE setSlideTimer NOTIFY slideTimerChanged)
-    Q_PROPERTY(QStringList usersWallpapers READ usersWallpapers WRITE setUsersWallpapers NOTIFY usersWallpapersChanged)
     Q_PROPERTY(QStringList slidePaths READ slidePaths WRITE setSlidePaths NOTIFY slidePathsChanged)
     Q_PROPERTY(QSize targetSize READ targetSize WRITE setTargetSize NOTIFY targetSizeChanged)
-    Q_PROPERTY(QString photosPath READ photosPath CONSTANT)
     Q_PROPERTY(QStringList uncheckedSlides READ uncheckedSlides WRITE setUncheckedSlides NOTIFY uncheckedSlidesChanged)
 
 public:
@@ -57,25 +62,31 @@ public:
     };
     Q_ENUM(RenderingMode)
 
+    enum class Provider {
+        Image,
+        Package,
+    };
+    Q_ENUM(Provider)
+
     explicit ImageBackend(QObject *parent = nullptr);
     ~ImageBackend() override;
 
-    QUrl wallpaperPath() const;
+    QUrl image() const;
+    void setImage(const QUrl &url);
+
+    QUrl modelImage() const;
 
     // this is for QML use
-    Q_INVOKABLE void addUrl(const QString &url);
-    Q_INVOKABLE void addUrls(const QStringList &urls);
-
     Q_INVOKABLE void addSlidePath(const QString &path);
     Q_INVOKABLE void removeSlidePath(const QString &path);
     Q_INVOKABLE void openFolder(const QString &path);
+    Q_INVOKABLE void openModelImage() const;
 
     Q_INVOKABLE void showFileDialog();
 
-    Q_INVOKABLE void addUsersWallpaper(const QString &file);
-    Q_INVOKABLE void commitDeletion();
+    Q_INVOKABLE QString addUsersWallpaper(const QString &file);
 
-    Q_INVOKABLE void toggleSlide(const QString &path, bool checked);
+    Q_INVOKABLE void useSingleImageDefaults();
 
     RenderingMode renderingMode() const;
     void setRenderingMode(RenderingMode mode);
@@ -89,42 +100,33 @@ public:
     QSize targetSize() const;
     void setTargetSize(const QSize &size);
 
-    KPackage::Package *package();
-
     QAbstractItemModel *wallpaperModel();
     QAbstractItemModel *slideFilterModel();
 
     int slideTimer() const;
     void setSlideTimer(int time);
 
-    QStringList usersWallpapers() const;
-    void setUsersWallpapers(const QStringList &usersWallpapers);
-
     QStringList slidePaths() const;
     void setSlidePaths(const QStringList &slidePaths);
 
-    void findPreferedImageInPackage(KPackage::Package &package);
-    QString findPreferedImage(const QStringList &images);
-
     void classBegin() override;
     void componentComplete() override;
-
-    QString photosPath() const;
 
     QStringList uncheckedSlides() const;
     void setUncheckedSlides(const QStringList &uncheckedSlides);
 
 public Q_SLOTS:
     void nextSlide();
-    void removeWallpaper(QString name);
+    void slotSlideModelDataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles);
 
 Q_SIGNALS:
     void settingsChanged(bool);
-    void wallpaperPathChanged();
+    void imageChanged();
+    void modelImageChanged();
     void renderingModeChanged();
     void slideshowModeChanged();
     void slideshowFoldersFirstChanged();
-    void targetSizeChanged();
+    void targetSizeChanged(const QSize &size);
     void slideTimerChanged();
     void usersWallpapersChanged();
     void slidePathsChanged();
@@ -134,53 +136,37 @@ Q_SIGNALS:
 
 protected Q_SLOTS:
     void showAddSlidePathsDialog();
-    void wallpaperBrowseCompleted();
+    void slotWallpaperBrowseCompleted();
     void startSlideshow();
-    void fileDialogFinished();
-    void addUrl(const QUrl &url, bool setAsCurrent);
-    void addUrls(const QList<QUrl> &urls);
-    void setWallpaper(const QString &path);
-    void setWallpaperRetrieved(KJob *job);
-    void addWallpaperRetrieved(KJob *job);
-    void newStuffFinished();
-    void updateDirWatch(const QStringList &newDirs);
     void addDirFromSelectionDialog();
-    void pathCreated(const QString &path);
-    void pathDeleted(const QString &path);
-    void pathDirty(const QString &path);
     void backgroundsFound();
 
 protected:
-    void syncWallpaperPackage();
     void setSingleImage();
-    void useSingleImageDefaults();
 
 private:
     SlideModel *slideshowModel();
 
-    bool m_ready;
-    int m_delay;
-    QStringList m_dirs;
-    QString m_wallpaper;
-    QString m_wallpaperPath;
-    QStringList m_usersWallpapers;
-    KDirWatch *m_dirWatch;
+    bool m_ready = false;
+    int m_delay = 10;
+    QUrl m_image;
+    QUrl m_modelImage;
     QSize m_targetSize;
 
-    RenderingMode m_mode;
-    SortingMode::Mode m_slideshowMode;
-    bool m_slideshowFoldersFirst;
+    bool m_usedInConfig = true;
+
+    RenderingMode m_mode = SingleImage;
+    Provider m_providerType = Provider::Image;
+    SortingMode::Mode m_slideshowMode = SortingMode::Random;
+    bool m_slideshowFoldersFirst = false;
 
     KPackage::Package m_wallpaperPackage;
     QStringList m_slidePaths;
     QStringList m_uncheckedSlides;
     QTimer m_timer;
-    int m_currentSlide;
-    BackgroundListModel *m_model;
+    int m_currentSlide = -1;
+    ImageProxyModel *m_model = nullptr;
     SlideModel *m_slideshowModel = nullptr;
     SlideFilterModel *m_slideFilterModel;
-    QFileDialog *m_dialog;
-    QString m_img;
-    QDateTime m_previousModified;
-    QString m_findToken;
+    QFileDialog *m_dialog = nullptr;
 };

@@ -38,16 +38,18 @@ KCM.GridDelegate {
             icon.name: "edit-undo"
             visible: model.pendingDeletion
             tooltip: i18nd("plasma_wallpaper_org.kde.image", "Restore wallpaper")
-            onTriggered: imageModel.setPendingDeletion(index, !model.pendingDeletion)
+            onTriggered: model.pendingDeletion = false
         },
         Kirigami.Action {
             icon.name: "edit-delete"
             tooltip: i18nd("plasma_wallpaper_org.kde.image", "Remove Wallpaper")
             visible: model.removable && !model.pendingDeletion && configDialog.currentWallpaper == "org.kde.image"
             onTriggered: {
-                imageModel.setPendingDeletion(index, true);
-                if (wallpapersGrid.currentIndex === index) {
-                    wallpapersGrid.currentIndex = (index + 1) % wallpapersGrid.rowCount();
+                model.pendingDeletion = true;
+
+                if (wallpapersGrid.view.currentIndex === index) {
+                    const newIndex = (index + 1) % (imageModel.count - 1);
+                    wallpapersGrid.view.itemAtIndex(newIndex).clicked();
                 }
             }
         }
@@ -110,7 +112,7 @@ KCM.GridDelegate {
             anchors.right: parent.right
             anchors.top: parent.top
             checked: visible ? model.checked : false
-            onToggled: imageWallpaper.toggleSlide(model.path, checked)
+            onToggled: model.checked = checked
         }
     }
 

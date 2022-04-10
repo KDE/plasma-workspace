@@ -16,8 +16,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 QQC2.StackView {
     id: root
 
-    readonly property string modelImage: imageWallpaper.wallpaperPath
-    readonly property string configuredImage: wallpaper.configuration.Image
+    readonly property string modelImage: imageWallpaper.modelImage
     readonly property int fillMode: wallpaper.configuration.FillMode
     readonly property string configColor: wallpaper.configuration.Color
     readonly property bool blur: wallpaper.configuration.Blur
@@ -27,8 +26,16 @@ QQC2.StackView {
 
     // e.g. used by WallpaperInterface for drag and drop
     function setUrl(url) {
-        wallpaper.configuration.Image = url
-        imageWallpaper.addUsersWallpaper(url);
+        if (wallpaper.pluginName === "org.kde.image") {
+            const result = imageWallpaper.addUsersWallpaper(url);
+
+            if (result.length > 0) {
+                // Can be a file or a folder (KPackage)
+                wallpaper.configuration.Image = result;
+            }
+        } else {
+            imageWallpaper.addSlidePath(url);
+        }
     }
 
     // e.g. used by slideshow wallpaper plugin
@@ -38,16 +45,11 @@ QQC2.StackView {
 
     // e.g. used by slideshow wallpaper plugin
     function action_open() {
-        Qt.openUrlExternally(modelImage)
+        imageWallpaper.openModelImage();
     }
 
     //private
 
-    onConfiguredImageChanged: {
-        if (modelImage != configuredImage && configuredImage != "") {
-            imageWallpaper.addUrl(configuredImage);
-        }
-    }
     Component.onCompleted: {
         wallpaper.loading = true; // delays ksplash until the wallpaper has been loaded
 
@@ -59,25 +61,25 @@ QQC2.StackView {
 
     Wallpaper.ImageBackend {
         id: imageWallpaper
+        usedInConfig: false
         //the oneliner of difference between image and slideshow wallpapers
         renderingMode: (wallpaper.pluginName === "org.kde.image") ? Wallpaper.ImageBackend.SingleImage : Wallpaper.ImageBackend.SlideShow
+        image: wallpaper.pluginName === "org.kde.image" ? wallpaper.configuration.Image : ""
         targetSize: root.sourceSize
         slidePaths: wallpaper.configuration.SlidePaths
         slideTimer: wallpaper.configuration.SlideInterval
         slideshowMode: wallpaper.configuration.SlideshowMode
         slideshowFoldersFirst: wallpaper.configuration.SlideshowFoldersFirst
         uncheckedSlides: wallpaper.configuration.UncheckedSlides
+
+        // Save drag and drop result
+        onSlidePathsChanged: wallpaper.configuration.SlidePaths = slidePaths
     }
 
     onFillModeChanged: Qt.callLater(loadImage);
-    onModelImageChanged:{
-        Qt.callLater(loadImage);
-        wallpaper.configuration.Image = modelImage;
-    }
+    onModelImageChanged: Qt.callLater(loadImage);
     onConfigColorChanged: Qt.callLater(loadImage);
     onBlurChanged: Qt.callLater(loadImage);
-    onWidthChanged: Qt.callLater(loadImage);
-    onHeightChanged: Qt.callLater(loadImage);
 
     function loadImage() {
         var isFirst = (root.currentItem == undefined);
@@ -95,6 +97,10 @@ QQC2.StackView {
                 pendingImage.statusChanged.disconnect(replaceWhenLoaded);
 
                 wallpaper.loading = false;
+
+                if (pendingImage.status !== Image.Ready) {
+                    imageWallpaper.useSingleImageDefaults();
+                }
             }
         }
         pendingImage.statusChanged.connect(replaceWhenLoaded);
