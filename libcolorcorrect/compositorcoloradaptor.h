@@ -72,6 +72,22 @@ public:
      **/
     Q_INVOKABLE void sendAutoLocationUpdate(double latitude, double longitude);
 
+    /**
+     * @brief Preview a color temperature for 15s.
+     *
+     * @return void
+     * @since 5.25
+     **/
+    Q_INVOKABLE void preview(int temperature);
+
+    /**
+     * @brief Stop an ongoing preview.
+     *
+     * @return void
+     * @since 5.25
+     **/
+    Q_INVOKABLE void stopPreview();
+
 Q_SIGNALS:
     void errorChanged();
     void errorTextChanged();

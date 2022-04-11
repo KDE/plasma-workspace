@@ -118,10 +118,20 @@ KCM.SimpleKCM {
                     from: 1000 // TODO get min/max fron kcfg
                     to: 6500
                     stepSize: 100
+                    live: true
 
                     value: kcm.nightColorSettings.nightTemperature
 
-                    onMoved: kcm.nightColorSettings.nightTemperature = value
+                    onMoved: {
+                        kcm.nightColorSettings.nightTemperature = value
+                        previewMessage.state = "visible"
+                        cA.preview(value)
+                    }
+
+                    onPressedChanged: {
+                        previewMessage.state = "invisible"
+                        cA.stopPreview()
+                    }
 
                     Layout.columnSpan: 3
 
@@ -145,6 +155,35 @@ KCM.SimpleKCM {
                     text: i18nc("Night colour blue-ish", "Cool")
                 }
                 Item {}
+            }
+
+            QQC2.Label {
+                id: previewMessage
+                text: i18n("This is what Night Color will look like when active.")
+                opacity: 0
+                state: "invisible"
+                states: [
+                    State {
+                        name: "invisible"
+                        PropertyChanges { target: previewMessage; opacity: 0 }
+                    },
+                    State {
+                        name: "visible"
+                        PropertyChanges { target: previewMessage; opacity: 1 }
+                    }
+                ]
+                transitions: [
+                    Transition {
+                        from: "invisible"
+                        to: "visible"
+                        NumberAnimation { properties: "opacity"; easing.type: Easing.OutCubic; duration: Kirigami.Units.shortDuration }
+                    },
+                    Transition {
+                        from: "visible"
+                        to: "invisible"
+                        NumberAnimation { properties: "opacity"; easing.type: Easing.InCubic; duration: Kirigami.Units.shortDuration }
+                    }
+                ]
             }
 
             Item {

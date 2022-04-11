@@ -108,4 +108,13 @@ void CompositorAdaptor::sendAutoLocationUpdate(double latitude, double longitude
     m_iface->call(QStringLiteral("nightColorAutoLocationUpdate"), latitude, longitude);
 }
 
+void CompositorAdaptor::preview(int temperature)
+{
+    m_iface->call("preview", (uint)temperature);
+}
+
+void CompositorAdaptor::stopPreview()
+{
+    m_iface->call("stopPreview");
+}
 }
