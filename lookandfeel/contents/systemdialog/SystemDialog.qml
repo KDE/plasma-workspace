@@ -27,6 +27,8 @@ Item {
     property Window window
     implicitHeight: column.implicitHeight
     implicitWidth: column.implicitWidth
+    readonly property real minimumHeight: column.Layout.minimumHeight
+    readonly property real minimumWidth: column.Layout.minimumWidth
     readonly property int flags: Qt.Dialog
     property alias standardButtons: footerButtonBox.standardButtons
     readonly property int spacing: Kirigami.Units.largeSpacing // standard KDE dialog margins
