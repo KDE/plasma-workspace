@@ -107,7 +107,7 @@ FocusScope {
         Row { //deliberately not rowlayout as I'm not trying to resize child items
             id: actionItemsLayout
             spacing: PlasmaCore.Units.largeSpacing / 2
-            Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
+            Layout.alignment: Qt.AlignHCenter
         }
         Item {
             Layout.fillHeight: true
