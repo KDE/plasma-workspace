@@ -81,6 +81,7 @@ public:
         SortAlpha, /**< Tasks are sorted alphabetically, by AbstractTasksModel::AppName and Qt::DisplayRole. */
         SortVirtualDesktop, /**< Tasks are sorted by the virtual desktop they are on. */
         SortActivity, /**< Tasks are sorted by the number of tasks on the activities they're on. */
+        SortLastActivated, /**< Tasks are sorted by the last time they were active. */
     };
     Q_ENUM(SortMode)
 
@@ -769,6 +770,15 @@ public:
      * @param activities The new list of activities.
      **/
     Q_INVOKABLE void requestActivities(const QModelIndex &index, const QStringList &activities) override;
+
+    /**
+     * Request setting or disabling a delay before the reorder phase.
+     *
+     * If the current sort mode is not SortLastActivated this function does nothing.
+     *
+     * @param delay delay interval in ms, delay disabled if 0
+     **/
+    Q_INVOKABLE void requestLastActivatedReorderDelay(int delay);
 
     /**
      * Request informing the window manager of new geometry for a visual
