@@ -101,8 +101,6 @@ private:
     bool m_selectedSchemeDirty = false;
     bool m_activeSchemeEdited = false;
 
-    bool m_applyToAlien = true;
-
     QProcess *m_editDialogProcess = nullptr;
 
     KSharedConfigPtr m_config;
