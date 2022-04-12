@@ -260,14 +260,12 @@ PlasmaCore.ColorScope {
                         iconSource: "system-suspend"
                         onClicked: root.suspendToRam()
                         visible: root.suspendToRamSupported
-                        anchors.verticalCenter: parent.top
                     },
                     ActionButton {
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Hibernate")
                         iconSource: "system-suspend-hibernate"
                         onClicked: root.suspendToDisk()
                         visible: root.suspendToDiskSupported
-                        anchors.verticalCenter: parent.top
                     },
                     ActionButton {
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Switch User")
@@ -285,10 +283,6 @@ PlasmaCore.ColorScope {
                             }
                         }
                         visible: sessionsModel.canStartNewSession && sessionsModel.canSwitchUser
-                        //Button gets cut off on smaller displays without this.
-                        anchors{
-                            verticalCenter: parent.top
-                        }
                     }
                 ]
 
