@@ -104,8 +104,6 @@ PlasmaCore.ColorScope {
         onClicked: root.cancelRequested()
     }
     UserDelegate {
-        width: PlasmaCore.Units.gridUnit * 7
-        height: width
         anchors {
             horizontalCenter: parent.horizontalCenter
             bottom: parent.verticalCenter
