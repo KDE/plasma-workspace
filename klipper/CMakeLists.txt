@@ -29,6 +29,7 @@ ki18n_wrap_ui(libklipper_common_SRCS actionsconfig.ui editactiondialog.ui)
 kconfig_add_kcfg_files(libklipper_common_SRCS klippersettings.kcfgc)
 
 add_library(libklipper_common_static STATIC ${libklipper_common_SRCS})
+set_property(TARGET libklipper_common_static PROPERTY POSITION_INDEPENDENT_CODE ON)
 target_link_libraries(libklipper_common_static
     Qt::Concurrent
     Qt::Widgets
