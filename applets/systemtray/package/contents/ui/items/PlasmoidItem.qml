@@ -27,7 +27,8 @@ AbstractItem {
             return
         }
         //forward click event to the applet
-        const mouseArea = findMouseArea(applet.compactRepresentationItem)
+        var appletItem = applet.compactRepresentationItem ? applet.compactRepresentationItem : applet.fullRepresentationItem
+        const mouseArea = findMouseArea(appletItem)
         if (mouseArea) {
             mouseArea.clicked(mouse)
         } else if (mouse.button === Qt.LeftButton) {//falback
@@ -50,7 +51,8 @@ AbstractItem {
             return
         }
         //forward wheel event to the applet
-        const mouseArea = findMouseArea(applet.compactRepresentationItem)
+        var appletItem = applet.compactRepresentationItem ? applet.compactRepresentationItem : applet.fullRepresentationItem
+        const mouseArea = findMouseArea(appletItem)
         if (mouseArea) {
             mouseArea.wheel(wheel)
         }
