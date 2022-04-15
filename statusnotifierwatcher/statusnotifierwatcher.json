@@ -3,6 +3,7 @@
         "Description": "Manages services that provide status notifier user interfaces",
         "Description[ar]": "أدِر الخدمات التي توفّر واجهات مستخدِم لمُخطِر الحالة",
         "Description[az]": "İstifadəçi interfeysinin vəziyyəti haqqında bildirişləri təmin edən xidmətlər menecri",
+        "Description[ca@valencia]": "Gestiona serveis que proporcionen notificacions d'estat a les interfícies d'usuari",
         "Description[ca]": "Gestiona serveis que proporcionen notificacions d'estat a les interfícies d'usuari",
         "Description[cs]": "Nastavení služeb poskytujících rozhraní pro oznamování stavu",
         "Description[de]": "Verwaltet Dienste, die eine Schnittstelle für Status-Informationen bereitstellen",

@@ -3,6 +3,7 @@
         "Description": "Automatically releases drives when their eject button is pushed",
         "Description[ar]": "أطلِق الأجهزة آليًا عندما يُضغَط زر الإخراج",
         "Description[az]": "Çıxart düyməsinə vurduqda daşıyıcıları avtomatik ayırır",
+        "Description[ca@valencia]": "Allibera unitats automàticament quan es prem el seu botó d'expulsió",
         "Description[ca]": "Allibera unitats automàticament quan es prem el seu botó d'expulsió",
         "Description[cs]": "Umožňuje automaticky uvolnit mechaniku při stisknutí tlačítka vysunutí",
         "Description[de]": "Löst die Laufwerkseinbindung automatisch bei Betätigung des Auswurfknopfes",
