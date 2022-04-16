@@ -188,8 +188,10 @@ QJSValue ScriptEngine::V1::desktopForScreen(const QJSValue &param) const
     }
 
     const uint screen = param.toInt();
-    const auto containments = m_engine->m_corona->containmentsForScreen(screen);
-    return m_engine->wrap(containments.empty() ? nullptr : containments[0]);
+    // "null": don't create a containment if it doesn't exist,
+    //         return nullptr instead.
+    const auto containment = m_engine->m_corona->containmentForScreen(screen, currentActivity(), QStringLiteral("null"));
+    return m_engine->wrap(containment);
 }
 
 QJSValue ScriptEngine::V1::screenForConnector(const QJSValue &param) const
