@@ -28,7 +28,6 @@ class ThemesModel : public QAbstractListModel
 
 public:
     ThemesModel(QObject *parent);
-    ~ThemesModel() override;
 
     enum Roles {
         PluginNameRole = Qt::UserRole + 1,

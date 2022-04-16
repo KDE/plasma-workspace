@@ -29,8 +29,6 @@ GtkPage::GtkPage(QObject *parent)
     load();
 }
 
-GtkPage::~GtkPage() = default;
-
 QString GtkPage::gtkThemeFromConfig()
 {
     // FIXME make aysnc but that requires some refactoring on the UI side

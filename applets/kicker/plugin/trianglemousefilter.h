@@ -48,7 +48,6 @@ class TriangleMouseFilter : public QQuickItem
 
 public:
     TriangleMouseFilter(QQuickItem *parent = nullptr);
-    ~TriangleMouseFilter() = default;
 
 Q_SIGNALS:
     void filterTimoutChanged();

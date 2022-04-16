@@ -15,8 +15,6 @@ LimitedRowCountProxyModel::LimitedRowCountProxyModel(QObject *parent)
 {
 }
 
-LimitedRowCountProxyModel::~LimitedRowCountProxyModel() = default;
-
 void LimitedRowCountProxyModel::setSourceModel(QAbstractItemModel *sourceModel)
 {
     if (sourceModel == QAbstractProxyModel::sourceModel()) {

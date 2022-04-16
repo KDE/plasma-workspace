@@ -26,8 +26,6 @@ ColorsModel::ColorsModel(QObject *parent)
 {
 }
 
-ColorsModel::~ColorsModel() = default;
-
 int ColorsModel::rowCount(const QModelIndex &parent) const
 {
     if (parent.isValid()) {

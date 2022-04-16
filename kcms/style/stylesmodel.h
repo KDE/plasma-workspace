@@ -27,7 +27,6 @@ class StylesModel : public QAbstractListModel
 
 public:
     StylesModel(QObject *parent);
-    ~StylesModel() override;
 
     enum Roles {
         StyleNameRole = Qt::UserRole + 1,

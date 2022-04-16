@@ -32,7 +32,6 @@ class Thumbnailer : public QObject, public QQmlParserStatus
 
 public:
     explicit Thumbnailer(QObject *parent = nullptr);
-    ~Thumbnailer() override;
 
     QUrl url() const;
     void setUrl(const QUrl &url);

@@ -14,8 +14,6 @@ NotificationFilterProxyModel::NotificationFilterProxyModel(QObject *parent)
     setRecursiveFilteringEnabled(true);
 }
 
-NotificationFilterProxyModel::~NotificationFilterProxyModel() = default;
-
 Notifications::Urgencies NotificationFilterProxyModel::urgencies() const
 {
     return m_urgencies;

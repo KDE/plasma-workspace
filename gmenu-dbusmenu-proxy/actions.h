@@ -18,7 +18,6 @@ class Actions : public QObject
 
 public:
     Actions(const QString &serviceName, const QString &objectPath, QObject *parent = nullptr);
-    ~Actions() override;
 
     void load();
 

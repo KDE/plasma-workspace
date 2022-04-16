@@ -20,8 +20,6 @@ IconSizeCategoryModel::IconSizeCategoryModel(QObject *parent)
 {
 }
 
-IconSizeCategoryModel::~IconSizeCategoryModel() = default;
-
 int IconSizeCategoryModel::rowCount(const QModelIndex &parent) const
 {
     if (parent.isValid()) {

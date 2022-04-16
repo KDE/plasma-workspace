@@ -21,7 +21,6 @@ class GtkPage : public QObject
 
 public:
     GtkPage(QObject *parent = nullptr);
-    ~GtkPage() override;
 
     Q_INVOKABLE void load();
     void save();

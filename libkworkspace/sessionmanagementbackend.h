@@ -60,7 +60,6 @@ Q_SIGNALS:
 
 protected:
     SessionBackend();
-    ~SessionBackend() override = default;
 
 private:
     KConfigWatcher::Ptr m_kserverConfig;

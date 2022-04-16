@@ -37,8 +37,6 @@ SystemMonitor::SystemMonitor(QObject *parent, const KPluginMetaData &data, const
     }
 }
 
-SystemMonitor::~SystemMonitor() = default;
-
 void SystemMonitor::init()
 {
     configChanged();

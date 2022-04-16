@@ -27,8 +27,6 @@ ThemesModel::ThemesModel(QObject *parent)
 {
 }
 
-ThemesModel::~ThemesModel() = default;
-
 int ThemesModel::rowCount(const QModelIndex &parent) const
 {
     if (parent.isValid()) {

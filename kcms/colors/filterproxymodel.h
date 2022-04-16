@@ -22,7 +22,6 @@ class FilterProxyModel : public QSortFilterProxyModel
 
 public:
     FilterProxyModel(QObject *parent = nullptr);
-    ~FilterProxyModel() override;
 
     QString selectedScheme() const;
     void setSelectedScheme(const QString &scheme);

@@ -36,8 +36,6 @@ FileMenu::FileMenu(QObject *parent)
 {
 }
 
-FileMenu::~FileMenu() = default;
-
 QUrl FileMenu::url() const
 {
     return m_url;

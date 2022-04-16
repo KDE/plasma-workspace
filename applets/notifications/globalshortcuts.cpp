@@ -28,8 +28,6 @@ GlobalShortcuts::GlobalShortcuts(QObject *parent)
     KGlobalAccel::self()->setGlobalShortcut(m_toggleDoNotDisturbAction, QKeySequence());
 }
 
-GlobalShortcuts::~GlobalShortcuts() = default;
-
 void GlobalShortcuts::showDoNotDisturbOsd(bool doNotDisturb) const
 {
     QDBusMessage msg = QDBusMessage::createMethodCall( //

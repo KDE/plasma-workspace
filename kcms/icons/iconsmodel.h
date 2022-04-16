@@ -31,7 +31,6 @@ class IconsModel : public QAbstractListModel
 
 public:
     IconsModel(IconsSettings *iconsSettings, QObject *parent = nullptr);
-    ~IconsModel() override;
 
     enum Roles {
         ThemeNameRole = Qt::UserRole + 1,

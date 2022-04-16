@@ -47,8 +47,6 @@ NotificationApplet::NotificationApplet(QObject *parent, const KPluginMetaData &d
     connect(qApp, &QGuiApplication::focusWindowChanged, this, &NotificationApplet::focussedPlasmaDialogChanged);
 }
 
-NotificationApplet::~NotificationApplet() = default;
-
 void NotificationApplet::init()
 {
 }

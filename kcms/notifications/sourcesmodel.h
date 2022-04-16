@@ -43,7 +43,6 @@ class SourcesModel : public QAbstractItemModel
 
 public:
     SourcesModel(QObject *parent = nullptr);
-    ~SourcesModel() override;
 
     enum Roles {
         SourceTypeRole = Qt::UserRole + 1,

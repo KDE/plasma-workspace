@@ -24,8 +24,6 @@ FileInfo::FileInfo(QObject *parent)
 {
 }
 
-FileInfo::~FileInfo() = default;
-
 QUrl FileInfo::url() const
 {
     return m_url;

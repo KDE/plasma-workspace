@@ -17,7 +17,6 @@ class NotificationGroupCollapsingProxyModel : public QSortFilterProxyModel
 
 public:
     explicit NotificationGroupCollapsingProxyModel(QObject *parent = nullptr);
-    ~NotificationGroupCollapsingProxyModel() override;
 
     void setSourceModel(QAbstractItemModel *sourceModel) override;
 

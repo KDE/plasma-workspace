@@ -23,7 +23,6 @@ class NotificationApplet : public Plasma::Applet
 
 public:
     explicit NotificationApplet(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
-    ~NotificationApplet() override;
 
     void init() override;
     void configChanged() override;

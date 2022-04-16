@@ -34,8 +34,6 @@ PreviewItem::PreviewItem(QQuickItem *parent)
     });
 }
 
-PreviewItem::~PreviewItem() = default;
-
 void PreviewItem::componentComplete()
 {
     QQuickPaintedItem::componentComplete();

@@ -12,7 +12,6 @@ class ApplicationIntegration : public QObject
 
 public:
     explicit ApplicationIntegration(QObject *parent = nullptr);
-    ~ApplicationIntegration() = default;
 
     bool calendarInstalled() const;
     Q_INVOKABLE void launchCalendar() const;

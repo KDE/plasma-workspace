@@ -16,7 +16,6 @@ class GlobalShortcuts : public QObject
 
 public:
     explicit GlobalShortcuts(QObject *parent = nullptr);
-    ~GlobalShortcuts() override;
 
     Q_INVOKABLE void showDoNotDisturbOsd(bool doNotDisturb) const;
 

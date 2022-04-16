@@ -27,7 +27,6 @@ class TextEditClickHandler : public QObject
 
 public:
     explicit TextEditClickHandler(QObject *parent = nullptr);
-    ~TextEditClickHandler() override;
 
     QQuickItem *target() const;
     void setTarget(QQuickItem *target);

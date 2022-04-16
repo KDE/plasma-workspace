@@ -61,8 +61,6 @@ AppMenuApplet::AppMenuApplet(QObject *parent, const KPluginMetaData &data, const
     });
 }
 
-AppMenuApplet::~AppMenuApplet() = default;
-
 void AppMenuApplet::init()
 {
 }

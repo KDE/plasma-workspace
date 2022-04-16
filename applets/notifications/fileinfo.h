@@ -37,7 +37,6 @@ class FileInfo : public QObject
 
 public:
     explicit FileInfo(QObject *parent = nullptr);
-    ~FileInfo() override;
 
     QUrl url() const;
     void setUrl(const QUrl &url);

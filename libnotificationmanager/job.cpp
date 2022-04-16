@@ -27,8 +27,6 @@ Job::Job(uint id, QObject *parent)
     connect(this, &Job::errorTextChanged, this, &Job::textChanged);
 }
 
-Job::~Job() = default;
-
 uint Job::id() const
 {
     return d->m_id;

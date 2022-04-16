@@ -19,8 +19,6 @@ DragHelper::DragHelper(QObject *parent)
 {
 }
 
-DragHelper::~DragHelper() = default;
-
 bool DragHelper::dragActive() const
 {
     return m_dragActive;

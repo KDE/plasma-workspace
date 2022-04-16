@@ -33,7 +33,6 @@ class SystemMonitor : public Plasma::Applet
 
 public:
     SystemMonitor(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
-    ~SystemMonitor() override;
 
     void init() override;
     Q_INVOKABLE void openSystemMonitor();

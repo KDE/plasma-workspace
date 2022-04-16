@@ -31,8 +31,6 @@ MirroredScreensTracker::MirroredScreensTracker()
             });
 }
 
-MirroredScreensTracker::~MirroredScreensTracker() = default;
-
 MirroredScreensTracker::Ptr MirroredScreensTracker::createTracker()
 {
     static QWeakPointer<MirroredScreensTracker> s_instance;

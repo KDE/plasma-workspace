@@ -17,8 +17,6 @@ NotificationGroupCollapsingProxyModel::NotificationGroupCollapsingProxyModel(QOb
 {
 }
 
-NotificationGroupCollapsingProxyModel::~NotificationGroupCollapsingProxyModel() = default;
-
 void NotificationGroupCollapsingProxyModel::setSourceModel(QAbstractItemModel *source)
 {
     if (source == QAbstractProxyModel::sourceModel()) {

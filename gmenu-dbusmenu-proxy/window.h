@@ -33,7 +33,6 @@ class Window : public QObject, protected QDBusContext
 
 public:
     Window(const QString &serviceName);
-    ~Window() override;
 
     void init();
 

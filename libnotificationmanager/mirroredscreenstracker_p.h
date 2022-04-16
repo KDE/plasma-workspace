@@ -23,8 +23,6 @@ class MirroredScreensTracker : public QObject
     Q_OBJECT
 
 public:
-    ~MirroredScreensTracker();
-
     using Ptr = QSharedPointer<MirroredScreensTracker>;
     static Ptr createTracker();
 

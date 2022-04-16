@@ -33,7 +33,6 @@ public:
     };
 
     explicit AppMenuApplet(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
-    ~AppMenuApplet() override;
 
     void init() override;
 

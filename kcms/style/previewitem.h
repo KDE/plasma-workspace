@@ -26,7 +26,6 @@ class PreviewItem : public QQuickPaintedItem
 
 public:
     explicit PreviewItem(QQuickItem *parent = nullptr);
-    ~PreviewItem() override;
 
     QString styleName() const;
     void setStyleName(const QString &styleName);

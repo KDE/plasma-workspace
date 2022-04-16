@@ -13,8 +13,6 @@ FilterProxyModel::FilterProxyModel(QObject *parent)
 {
 }
 
-FilterProxyModel::~FilterProxyModel() = default;
-
 QString FilterProxyModel::selectedScheme() const
 {
     return m_selectedScheme;

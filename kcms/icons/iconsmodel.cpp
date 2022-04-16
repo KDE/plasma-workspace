@@ -25,8 +25,6 @@ IconsModel::IconsModel(IconsSettings *iconsSettings, QObject *parent)
 {
 }
 
-IconsModel::~IconsModel() = default;
-
 int IconsModel::rowCount(const QModelIndex &parent) const
 {
     if (parent.isValid()) {

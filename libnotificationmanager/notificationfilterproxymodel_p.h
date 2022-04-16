@@ -19,7 +19,6 @@ class NotificationFilterProxyModel : public QSortFilterProxyModel
 
 public:
     explicit NotificationFilterProxyModel(QObject *parent = nullptr);
-    ~NotificationFilterProxyModel() override;
 
     Notifications::Urgencies urgencies() const;
     void setUrgencies(Notifications::Urgencies urgencies);

@@ -90,8 +90,6 @@ KCMStyle::KCMStyle(QObject *parent, const KPluginMetaData &data, const QVariantL
     });
 }
 
-KCMStyle::~KCMStyle() = default;
-
 GtkPage *KCMStyle::gtkPage()
 {
     if (!m_gtkPage) {

@@ -25,7 +25,6 @@ class IconSizeCategoryModel : public QAbstractListModel
 
 public:
     IconSizeCategoryModel(QObject *parent);
-    ~IconSizeCategoryModel() override;
 
     enum Roles {
         ConfigKeyRole = Qt::UserRole + 1,

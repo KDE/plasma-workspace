@@ -52,8 +52,6 @@ JobsModel::JobsModel()
     connect(d, &JobsModelPrivate::serviceOwnershipLost, this, &JobsModel::serviceOwnershipLost);
 }
 
-JobsModel::~JobsModel() = default;
-
 JobsModel::Ptr JobsModel::createJobsModel()
 {
     static QWeakPointer<JobsModel> s_instance;

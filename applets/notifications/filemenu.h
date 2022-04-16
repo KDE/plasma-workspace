@@ -22,7 +22,6 @@ class FileMenu : public QObject
 
 public:
     explicit FileMenu(QObject *parent = nullptr);
-    ~FileMenu() override;
 
     QUrl url() const;
     void setUrl(const QUrl &url);

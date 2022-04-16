@@ -38,7 +38,6 @@ public:
     Q_ENUMS(ErrorCode)
 
     explicit CompositorAdaptor(QObject *parent = nullptr);
-    ~CompositorAdaptor() override = default;
 
     int error() const
     {

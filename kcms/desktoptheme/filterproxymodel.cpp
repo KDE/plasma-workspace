@@ -14,8 +14,6 @@ FilterProxyModel::FilterProxyModel(QObject *parent)
 {
 }
 
-FilterProxyModel::~FilterProxyModel() = default;
-
 QString FilterProxyModel::selectedTheme() const
 {
     return m_selectedTheme;

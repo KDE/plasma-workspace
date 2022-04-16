@@ -31,8 +31,6 @@ SourcesModel::SourcesModel(QObject *parent)
 {
 }
 
-SourcesModel::~SourcesModel() = default;
-
 QPersistentModelIndex SourcesModel::makePersistentModelIndex(const QModelIndex &idx) const
 {
     return QPersistentModelIndex(idx);

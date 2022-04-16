@@ -23,7 +23,6 @@ class JobAggregator : public QObject
 
 public:
     explicit JobAggregator(QObject *parent = nullptr);
-    ~JobAggregator() override;
 
     QAbstractItemModel *sourceModel() const;
     void setSourceModel(QAbstractItemModel *sourceModel);

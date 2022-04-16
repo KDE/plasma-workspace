@@ -16,7 +16,6 @@ class FilterProxyModel : public QSortFilterProxyModel
 
 public:
     FilterProxyModel(QObject *parent = nullptr);
-    ~FilterProxyModel() override;
 
     QString query() const;
     void setQuery(const QString &query);

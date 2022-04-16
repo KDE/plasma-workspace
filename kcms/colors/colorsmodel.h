@@ -37,7 +37,6 @@ class ColorsModel : public QAbstractListModel
 
 public:
     ColorsModel(QObject *parent);
-    ~ColorsModel() override;
 
     enum Roles {
         SchemeNameRole = Qt::UserRole + 1,

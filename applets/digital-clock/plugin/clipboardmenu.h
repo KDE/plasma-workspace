@@ -20,7 +20,6 @@ class ClipboardMenu : public QObject
 
 public:
     explicit ClipboardMenu(QObject *parent = nullptr);
-    virtual ~ClipboardMenu();
 
     QDateTime currentDate() const;
     void setCurrentDate(const QDateTime &date);

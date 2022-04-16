@@ -75,7 +75,6 @@ public:
 
     template<typename... Args>
     static CompletionCheck *create(Args &&..._args);
-    ~CompletionCheck() override = default;
 
     virtual void start() = 0;
 

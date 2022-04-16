@@ -42,7 +42,6 @@ class KCMStyle : public KQuickAddons::ManagedConfigModule
 
 public:
     KCMStyle(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
-    ~KCMStyle() override;
 
     enum ToolBarStyle {
         NoText,

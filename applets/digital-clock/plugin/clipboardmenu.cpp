@@ -17,8 +17,6 @@ ClipboardMenu::ClipboardMenu(QObject *parent)
 {
 }
 
-ClipboardMenu::~ClipboardMenu() = default;
-
 QDateTime ClipboardMenu::currentDate() const
 {
     return m_currentDate;

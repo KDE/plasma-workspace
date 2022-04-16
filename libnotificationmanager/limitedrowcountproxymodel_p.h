@@ -14,7 +14,6 @@ class LimitedRowCountProxyModel : public QSortFilterProxyModel
 
 public:
     explicit LimitedRowCountProxyModel(QObject *parent = nullptr);
-    ~LimitedRowCountProxyModel() override;
 
     void setSourceModel(QAbstractItemModel *sourceModel) override;
 

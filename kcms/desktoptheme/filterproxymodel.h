@@ -30,7 +30,6 @@ public:
     Q_PROPERTY(ThemeFilter filter READ filter WRITE setFilter NOTIFY filterChanged)
 
     FilterProxyModel(QObject *parent = nullptr);
-    ~FilterProxyModel() override;
 
     QString selectedTheme() const;
     void setSelectedTheme(const QString &pluginName);

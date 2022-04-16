@@ -31,7 +31,6 @@ class JobPrivate : public QObject, protected QDBusContext
 
 public:
     JobPrivate(uint id, QObject *parent);
-    ~JobPrivate() override;
 
     enum class ShowCondition {
         OnTimeout = 1 << 0,

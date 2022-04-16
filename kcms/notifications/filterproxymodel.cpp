@@ -14,8 +14,6 @@ FilterProxyModel::FilterProxyModel(QObject *parent)
     setRecursiveFilteringEnabled(true);
 }
 
-FilterProxyModel::~FilterProxyModel() = default;
-
 QString FilterProxyModel::query() const
 {
     return m_query;

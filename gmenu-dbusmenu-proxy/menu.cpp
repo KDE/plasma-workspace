@@ -35,8 +35,6 @@ Menu::Menu(const QString &serviceName, const QString &objectPath, QObject *paren
     }
 }
 
-Menu::~Menu() = default;
-
 void Menu::cleanup()
 {
     stop(m_subscriptions);

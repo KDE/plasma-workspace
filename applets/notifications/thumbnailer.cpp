@@ -32,8 +32,6 @@ Thumbnailer::Thumbnailer(QObject *parent)
 {
 }
 
-Thumbnailer::~Thumbnailer() = default;
-
 void Thumbnailer::classBegin()
 {
 }

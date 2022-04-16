@@ -47,7 +47,6 @@ class SessionsModel : public QAbstractListModel
 
 public:
     explicit SessionsModel(QObject *parent = nullptr);
-    ~SessionsModel() override = default;
 
     enum class Role {
         RealName = Qt::DisplayRole,

@@ -22,8 +22,6 @@ class Q_DECL_EXPORT AbstractNotificationsModel : public QAbstractListModel
     Q_OBJECT
 
 public:
-    ~AbstractNotificationsModel() override;
-
     QDateTime lastRead() const;
     void setLastRead(const QDateTime &lastRead);
 
@@ -53,6 +51,7 @@ Q_SIGNALS:
 
 protected:
     AbstractNotificationsModel();
+    ~AbstractNotificationsModel() override;
     void onNotificationAdded(const Notification &notification);
     void onNotificationReplaced(uint replacedId, const Notification &notification);
     void onNotificationRemoved(uint notificationId, Server::CloseReason reason);

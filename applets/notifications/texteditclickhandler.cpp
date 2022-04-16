@@ -16,8 +16,6 @@ TextEditClickHandler::TextEditClickHandler(QObject *parent)
 {
 }
 
-TextEditClickHandler::~TextEditClickHandler() = default;
-
 QQuickItem *TextEditClickHandler::target() const
 {
     return m_target.data();

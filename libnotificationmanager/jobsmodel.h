@@ -25,8 +25,6 @@ class NOTIFICATIONMANAGER_EXPORT JobsModel : public QAbstractListModel
     Q_OBJECT
 
 public:
-    ~JobsModel() override;
-
     using Ptr = QSharedPointer<JobsModel>;
     static Ptr createJobsModel();
 

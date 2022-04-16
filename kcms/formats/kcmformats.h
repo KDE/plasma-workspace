@@ -20,7 +20,6 @@ class KCMFormats : public KQuickAddons::ManagedConfigModule
     Q_PROPERTY(OptionsModel *optionsModel READ optionsModel CONSTANT)
 public:
     explicit KCMFormats(QObject *parent, const KPluginMetaData &data, const QVariantList &list = QVariantList());
-    virtual ~KCMFormats() override = default;
 
     FormatsSettings *settings() const;
     OptionsModel *optionsModel() const;

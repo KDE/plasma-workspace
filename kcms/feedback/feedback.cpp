@@ -57,8 +57,6 @@ Feedback::Feedback(QObject *parent, const KPluginMetaData &data, const QVariantL
     }
 }
 
-Feedback::~Feedback() = default;
-
 void Feedback::programFinished(int exitCode)
 {
     auto mo = KUserFeedback::Provider::staticMetaObject;

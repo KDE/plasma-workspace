@@ -20,7 +20,6 @@ class KCMNightColor : public KQuickAddons::ManagedConfigModule
     Q_PROPERTY(NightColorSettings *nightColorSettings READ nightColorSettings CONSTANT)
 public:
     KCMNightColor(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
-    ~KCMNightColor() override = default;
 
     NightColorSettings *nightColorSettings() const;
 

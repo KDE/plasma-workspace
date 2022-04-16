@@ -124,7 +124,6 @@ class NOTIFICATIONMANAGER_EXPORT Job : public QObject
 
 public:
     explicit Job(uint id, QObject *parent = nullptr);
-    ~Job() override;
 
     uint id() const;
 

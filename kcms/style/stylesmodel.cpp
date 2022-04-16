@@ -21,8 +21,6 @@ StylesModel::StylesModel(QObject *parent)
 {
 }
 
-StylesModel::~StylesModel() = default;
-
 int StylesModel::rowCount(const QModelIndex &parent) const
 {
     if (parent.isValid()) {

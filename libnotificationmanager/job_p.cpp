@@ -39,8 +39,6 @@ JobPrivate::JobPrivate(uint id, QObject *parent)
     QDBusConnection::sessionBus().registerObject(m_objectPath.path(), this);
 }
 
-JobPrivate::~JobPrivate() = default;
-
 void JobPrivate::requestShow()
 {
     if (!m_showRequested) {

@@ -13,8 +13,6 @@ JobAggregator::JobAggregator(QObject *parent)
 {
 }
 
-JobAggregator::~JobAggregator() = default;
-
 QAbstractItemModel *JobAggregator::sourceModel() const
 {
     return m_model.data();

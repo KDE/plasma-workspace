@@ -113,8 +113,6 @@ AppMenuModel::AppMenuModel(QObject *parent)
     }
 }
 
-AppMenuModel::~AppMenuModel() = default;
-
 bool AppMenuModel::menuAvailable() const
 {
     return m_menuAvailable;

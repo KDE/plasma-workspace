@@ -36,8 +36,6 @@ Actions::Actions(const QString &serviceName, const QString &objectPath, QObject 
     }
 }
 
-Actions::~Actions() = default;
-
 void Actions::load()
 {
     QDBusMessage msg = QDBusMessage::createMethodCall(m_serviceName, m_objectPath, s_orgGtkActions, QStringLiteral("DescribeAll"));
