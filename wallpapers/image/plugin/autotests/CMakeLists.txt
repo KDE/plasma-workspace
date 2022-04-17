@@ -1,6 +1,8 @@
 include(ECMMarkAsTest)
 include_directories(${CMAKE_CURRENT_BINARY_DIR}/.. ${CMAKE_CURRENT_SOURCE_DIR}/..)
 
+find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS QuickTest)
+
 # ImageSizeFinder test
 ecm_add_test(test_imagesizefinder.cpp TEST_NAME testimagesizefinder
     LINK_LIBRARIES Qt::Test plasma_wallpaper_imageplugin_static)
@@ -32,3 +34,17 @@ ecm_add_test(test_slidemodel.cpp TEST_NAME testslidemodel
 # SlideFilterModel test
 ecm_add_test(test_slidefiltermodel.cpp TEST_NAME testslidefiltermodel
     LINK_LIBRARIES Qt::Test plasma_wallpaper_imageplugin_static)
+
+# ImageBackend test
+add_executable(testimagebackend tst_imagebackend.cpp)
+target_link_libraries(testimagebackend
+    Qt::Qml
+    Qt::QuickTest
+    Qt::Test
+)
+add_test(NAME testimagebackend
+    COMMAND testimagebackend
+    -import ${CMAKE_BINARY_DIR}/bin
+    -input tst_imagebackend.qml
+    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+)
