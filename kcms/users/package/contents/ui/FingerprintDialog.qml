@@ -134,7 +134,7 @@ Kirigami.OverlaySheet {
             }
 
             QQC2.Label {
-                text: i18n("Please repeatedly " + fingerprintModel.scanType + " your " + fingerprintRoot.currentFinger.toLowerCase() + " on the fingerprint sensor.")
+                text: i18nc("%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger", "Please repeatedly %1 your %2 on the fingerprint sensor.", fingerprintModel.scanType, fingerprintRoot.currentFinger.toLowerCase())
                 Layout.alignment: Qt.AlignHCenter
                 wrapMode: Text.Wrap
                 horizontalAlignment: Text.AlignHCenter
