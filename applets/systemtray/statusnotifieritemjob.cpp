@@ -18,10 +18,6 @@ StatusNotifierItemJob::StatusNotifierItemJob(StatusNotifierItemSource *source, c
     connect(source, &StatusNotifierItemSource::activateResult, this, &StatusNotifierItemJob::activateCallback);
 }
 
-StatusNotifierItemJob::~StatusNotifierItemJob()
-{
-}
-
 void StatusNotifierItemJob::start()
 {
     if (operationName() == QLatin1String("Scroll")) {

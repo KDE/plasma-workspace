@@ -16,7 +16,6 @@ class CalendarApplet : public Plasma::Applet
 
 public:
     explicit CalendarApplet(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
-    ~CalendarApplet() override;
 
     Q_INVOKABLE int weekNumber(const QDateTime &dateTime) const;
 };

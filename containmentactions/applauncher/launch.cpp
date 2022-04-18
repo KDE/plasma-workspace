@@ -17,10 +17,6 @@ AppLauncher::AppLauncher(QObject *parent, const QVariantList &args)
 {
 }
 
-AppLauncher::~AppLauncher()
-{
-}
-
 void AppLauncher::init(const KConfigGroup &)
 {
 }

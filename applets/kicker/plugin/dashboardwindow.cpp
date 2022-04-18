@@ -26,10 +26,6 @@ DashboardWindow::DashboardWindow(QQuickItem *parent)
     connect(&m_theme, &Plasma::Theme::themeChanged, this, &DashboardWindow::updateTheme);
 }
 
-DashboardWindow::~DashboardWindow()
-{
-}
-
 QQuickItem *DashboardWindow::mainItem() const
 {
     return m_mainItem;

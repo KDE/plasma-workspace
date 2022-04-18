@@ -87,10 +87,6 @@ CursorThemeConfig::CursorThemeConfig(QObject *parent, const KPluginMetaData &dat
     });
 }
 
-CursorThemeConfig::~CursorThemeConfig()
-{
-}
-
 CursorThemeSettings *CursorThemeConfig::cursorThemeSettings() const
 {
     return m_data->settings();

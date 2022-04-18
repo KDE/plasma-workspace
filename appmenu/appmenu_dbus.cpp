@@ -21,10 +21,6 @@ AppmenuDBus::AppmenuDBus(QObject *parent)
 {
 }
 
-AppmenuDBus::~AppmenuDBus()
-{
-}
-
 bool AppmenuDBus::connectToBus(const QString &service, const QString &path)
 {
     m_service = service.isEmpty() ? DBUS_SERVICE : service;

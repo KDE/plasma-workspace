@@ -19,10 +19,6 @@ SwitchDesktop::SwitchDesktop(QObject *parent, const QVariantList &args)
 {
 }
 
-SwitchDesktop::~SwitchDesktop()
-{
-}
-
 QList<QAction *> SwitchDesktop::contextualActions()
 {
     const int numDesktops = m_virtualDesktopInfo->numberOfDesktops();

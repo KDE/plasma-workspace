@@ -14,10 +14,6 @@ AppJob::AppJob(AppSource *source, const QString &operation, QMap<QString, QVaria
 {
 }
 
-AppJob::~AppJob()
-{
-}
-
 void AppJob::start()
 {
     const QString operation = operationName();

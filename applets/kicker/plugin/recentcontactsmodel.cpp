@@ -31,10 +31,6 @@ RecentContactsModel::RecentContactsModel(QObject *parent)
     refresh();
 }
 
-RecentContactsModel::~RecentContactsModel()
-{
-}
-
 QString RecentContactsModel::description() const
 {
     return i18n("Contacts");

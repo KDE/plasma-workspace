@@ -20,7 +20,6 @@ class AppmenuDBus : public QObject, protected QDBusContext
 
 public:
     explicit AppmenuDBus(QObject *);
-    ~AppmenuDBus() override;
 
     bool connectToBus(const QString &service = QString(), const QString &path = QString());
 

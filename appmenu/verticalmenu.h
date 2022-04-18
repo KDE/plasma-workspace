@@ -15,7 +15,6 @@ class VerticalMenu : public QMenu
     Q_OBJECT
 public:
     explicit VerticalMenu(QWidget *parent = nullptr);
-    ~VerticalMenu() override;
 
     QString serviceName() const
     {

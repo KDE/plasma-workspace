@@ -22,7 +22,6 @@ class GroupSortProxy : public QSortFilterProxyModel
 
 public:
     explicit GroupSortProxy(AbstractModel *parentModel, QAbstractItemModel *sourceModel);
-    ~GroupSortProxy() override;
 
 protected:
     bool lessThan(const QModelIndex &left, const QModelIndex &right) const override;
@@ -34,7 +33,6 @@ class InvalidAppsFilterProxy : public QSortFilterProxyModel
 
 public:
     explicit InvalidAppsFilterProxy(AbstractModel *parentModel, QAbstractItemModel *sourceModel);
-    ~InvalidAppsFilterProxy() override;
 
 protected:
     bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
@@ -69,7 +67,6 @@ public:
     };
 
     explicit RecentUsageModel(QObject *parent = nullptr, IncludeUsage usage = AppsAndDocs, int ordering = Recent);
-    ~RecentUsageModel() override;
 
     QString description() const override;
 

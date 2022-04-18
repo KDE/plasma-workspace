@@ -30,7 +30,6 @@ class AppletContainer : public ItemContainer
 
 public:
     AppletContainer(QQuickItem *parent = nullptr);
-    ~AppletContainer();
 
     PlasmaQuick::AppletQuickItem *applet();
 

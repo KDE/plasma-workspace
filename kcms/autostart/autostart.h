@@ -18,7 +18,6 @@ class Autostart : public KQuickAddons::ConfigModule
 
 public:
     explicit Autostart(QObject *parent, const KPluginMetaData &data, const QVariantList &);
-    ~Autostart() override;
 
     void load() override;
     void save() override;

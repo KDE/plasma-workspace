@@ -17,7 +17,6 @@ class AbstractLayoutManager : public QObject
 
 public:
     AbstractLayoutManager(AppletsLayout *layout);
-    ~AbstractLayoutManager();
 
     AppletsLayout *layout() const;
 

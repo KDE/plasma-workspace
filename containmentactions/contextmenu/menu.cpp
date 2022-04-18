@@ -33,10 +33,6 @@ ContextMenu::ContextMenu(QObject *parent, const QVariantList &args)
 {
 }
 
-ContextMenu::~ContextMenu()
-{
-}
-
 void ContextMenu::restore(const KConfigGroup &config)
 {
     Plasma::Containment *c = containment();

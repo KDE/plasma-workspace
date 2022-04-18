@@ -23,10 +23,6 @@ SwitchActivity::SwitchActivity(QObject *parent, const QVariantList &args)
 {
 }
 
-SwitchActivity::~SwitchActivity()
-{
-}
-
 void SwitchActivity::makeMenu()
 {
     qDeleteAll(m_actions);

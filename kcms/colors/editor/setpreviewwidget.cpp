@@ -59,10 +59,6 @@ SetPreviewWidget::SetPreviewWidget(QWidget *parent)
     }
 }
 
-SetPreviewWidget::~SetPreviewWidget()
-{
-}
-
 bool SetPreviewWidget::eventFilter(QObject *, QEvent *ev)
 {
     switch (ev->type()) {

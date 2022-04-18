@@ -21,7 +21,6 @@ class PlaceholderModel : public AbstractModel
 
 public:
     explicit PlaceholderModel(QObject *parent = nullptr);
-    ~PlaceholderModel() override;
 
     QString description() const override;
 

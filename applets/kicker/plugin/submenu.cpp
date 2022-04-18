@@ -21,10 +21,6 @@ SubMenu::SubMenu(QQuickItem *parent)
     setType(PopupMenu);
 }
 
-SubMenu::~SubMenu()
-{
-}
-
 int SubMenu::offset() const
 {
     return m_offset;

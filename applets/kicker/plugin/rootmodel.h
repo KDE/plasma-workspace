@@ -48,7 +48,6 @@ class RootModel : public AppsModel
 
 public:
     explicit RootModel(QObject *parent = nullptr);
-    ~RootModel() override;
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 

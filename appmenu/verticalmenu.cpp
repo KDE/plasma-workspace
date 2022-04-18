@@ -16,7 +16,3 @@ VerticalMenu::VerticalMenu(QWidget *parent)
     : QMenu(parent)
 {
 }
-
-VerticalMenu::~VerticalMenu()
-{
-}

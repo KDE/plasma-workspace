@@ -26,7 +26,6 @@ class GridLayoutManager : public AbstractLayoutManager
 
 public:
     GridLayoutManager(AppletsLayout *layout);
-    ~GridLayoutManager();
 
     void layoutGeometryChanged(const QRectF &newGeometry, const QRectF &oldGeometry) override;
 

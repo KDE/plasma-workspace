@@ -13,10 +13,6 @@ WheelInterceptor::WheelInterceptor(QQuickItem *parent)
 {
 }
 
-WheelInterceptor::~WheelInterceptor()
-{
-}
-
 QQuickItem *WheelInterceptor::destination() const
 {
     return m_destination;

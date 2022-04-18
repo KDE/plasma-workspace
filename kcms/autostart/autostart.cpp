@@ -18,10 +18,6 @@ Autostart::Autostart(QObject *parent, const KPluginMetaData &data, const QVarian
     qmlRegisterUncreatableType<AutostartModel>("org.kde.plasma.kcm.autostart", 1, 0, "AutostartModel", QStringLiteral("Only for enums"));
 }
 
-Autostart::~Autostart()
-{
-}
-
 AutostartModel *Autostart::model() const
 {
     return m_model;

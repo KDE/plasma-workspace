@@ -43,10 +43,6 @@ PreviewWidget::PreviewWidget(QWidget *parent)
     }
 }
 
-PreviewWidget::~PreviewWidget()
-{
-}
-
 bool PreviewWidget::eventFilter(QObject *, QEvent *ev)
 {
     switch (ev->type()) {

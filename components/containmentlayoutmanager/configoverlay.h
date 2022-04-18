@@ -24,7 +24,6 @@ class ConfigOverlay : public QQuickItem
 
 public:
     ConfigOverlay(QQuickItem *parent = nullptr);
-    ~ConfigOverlay();
 
     ItemContainer *itemContainer() const;
     // NOTE: setter not accessible from QML by purpose

@@ -28,7 +28,6 @@ class FilteredPlacesModel : public QSortFilterProxyModel
 
 public:
     explicit FilteredPlacesModel(QObject *parent = nullptr);
-    ~FilteredPlacesModel() override;
 
     QUrl url(const QModelIndex &index) const;
     bool isDevice(const QModelIndex &index) const;
@@ -48,7 +47,6 @@ class RunCommandModel : public AbstractModel
 
 public:
     RunCommandModel(QObject *parent = nullptr);
-    ~RunCommandModel() override;
 
     QString description() const override;
 
@@ -69,7 +67,6 @@ class ComputerModel : public ForwardingModel
 
 public:
     explicit ComputerModel(QObject *parent = nullptr);
-    ~ComputerModel() override;
 
     QString description() const override;
 

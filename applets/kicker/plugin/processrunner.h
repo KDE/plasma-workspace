@@ -14,7 +14,6 @@ class ProcessRunner : public QObject
 
 public:
     explicit ProcessRunner(QObject *parent = nullptr);
-    ~ProcessRunner() override;
 
     Q_INVOKABLE void runMenuEditor();
 };

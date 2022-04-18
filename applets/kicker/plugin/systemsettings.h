@@ -14,7 +14,6 @@ class SystemSettings : public QObject
 
 public:
     explicit SystemSettings(QObject *parent = nullptr);
-    ~SystemSettings() override;
 
     Q_INVOKABLE QString picturesLocation() const;
 };

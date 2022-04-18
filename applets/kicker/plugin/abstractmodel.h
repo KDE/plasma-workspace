@@ -23,7 +23,6 @@ class AbstractModel : public QAbstractListModel
 
 public:
     explicit AbstractModel(QObject *parent = nullptr);
-    ~AbstractModel() override;
 
     QHash<int, QByteArray> roleNames() const override;
 

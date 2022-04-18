@@ -25,10 +25,6 @@ KuiserverEngine::KuiserverEngine(QObject *parent, const QVariantList &args)
     init();
 }
 
-KuiserverEngine::~KuiserverEngine()
-{
-}
-
 QString KuiserverEngine::sourceName(Job *job)
 {
     return QStringLiteral("Job %1").arg(job->id());

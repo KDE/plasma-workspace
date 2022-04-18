@@ -15,10 +15,6 @@ AbstractLayoutManager::AbstractLayoutManager(AppletsLayout *layout)
 {
 }
 
-AbstractLayoutManager::~AbstractLayoutManager()
-{
-}
-
 AppletsLayout *AbstractLayoutManager::layout() const
 {
     return m_layout;

@@ -22,10 +22,6 @@ ConfigOverlay::ConfigOverlay(QQuickItem *parent)
     });
 }
 
-ConfigOverlay::~ConfigOverlay()
-{
-}
-
 bool ConfigOverlay::open() const
 {
     return m_open;

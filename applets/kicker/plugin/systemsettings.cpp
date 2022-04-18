@@ -13,10 +13,6 @@ SystemSettings::SystemSettings(QObject *parent)
 {
 }
 
-SystemSettings::~SystemSettings()
-{
-}
-
 QString SystemSettings::picturesLocation() const
 {
     QString path;

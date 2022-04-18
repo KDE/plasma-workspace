@@ -33,10 +33,6 @@ void PlaceholderModel::inhibitTriggering()
     m_triggerInhibitor.start();
 }
 
-PlaceholderModel::~PlaceholderModel()
-{
-}
-
 QString PlaceholderModel::description() const
 {
     if (auto abstractModel = qobject_cast<AbstractModel *>(m_sourceModel)) {

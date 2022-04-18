@@ -15,10 +15,6 @@ WindowSystem::WindowSystem(QObject *parent)
 {
 }
 
-WindowSystem::~WindowSystem()
-{
-}
-
 bool WindowSystem::eventFilter(QObject *watched, QEvent *event)
 {
     if (event->type() == QEvent::FocusIn) {

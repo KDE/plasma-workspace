@@ -24,7 +24,6 @@ public:
                 const QString &operation,
                 QMap<QString, QVariant> &parameters,
                 QObject *parent = nullptr);
-    ~ActivityJob() override;
 
 protected:
     void start() override;

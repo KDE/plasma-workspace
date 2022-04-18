@@ -42,7 +42,6 @@ class CursorThemeConfig : public KQuickAddons::ManagedConfigModule
 
 public:
     CursorThemeConfig(QObject *parent, const KPluginMetaData &data, const QVariantList &);
-    ~CursorThemeConfig() override;
 
     void load() override;
     void save() override;

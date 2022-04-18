@@ -22,7 +22,6 @@ class AppLauncher : public Plasma::ContainmentActions
     Q_OBJECT
 public:
     AppLauncher(QObject *parent, const QVariantList &args);
-    ~AppLauncher() override;
 
     void init(const KConfigGroup &config);
 

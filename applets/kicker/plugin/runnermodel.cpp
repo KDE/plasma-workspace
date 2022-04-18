@@ -30,10 +30,6 @@ RunnerModel::RunnerModel(QObject *parent)
     connect(&m_queryTimer, &QTimer::timeout, this, &RunnerModel::startQuery);
 }
 
-RunnerModel::~RunnerModel()
-{
-}
-
 QHash<int, QByteArray> RunnerModel::roleNames() const
 {
     return {{Qt::DisplayRole, "display"}};

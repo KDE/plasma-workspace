@@ -33,9 +33,7 @@ SystemTray::SystemTray(QObject *parent, const KPluginMetaData &data, const QVari
     setContainmentDisplayHints(Plasma::Types::ContainmentDrawsPlasmoidHeading | Plasma::Types::ContainmentForcesSquarePlasmoids);
 }
 
-SystemTray::~SystemTray()
-{
-}
+SystemTray::~SystemTray() = default;
 
 void SystemTray::init()
 {

@@ -50,9 +50,7 @@ KeyboardLayout::KeyboardLayout(QObject *parent)
     Q_EMIT mIface->OrgKdeKeyboardLayoutsInterface::layoutListChanged();
 }
 
-KeyboardLayout::~KeyboardLayout()
-{
-}
+KeyboardLayout::~KeyboardLayout() = default;
 
 void KeyboardLayout::switchToNextLayout()
 {

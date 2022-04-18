@@ -20,7 +20,6 @@ class RecentContactsModel : public ForwardingModel
 
 public:
     explicit RecentContactsModel(QObject *parent = nullptr);
-    ~RecentContactsModel() override;
 
     QString description() const override;
 

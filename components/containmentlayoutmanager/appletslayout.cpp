@@ -98,10 +98,6 @@ AppletsLayout::AppletsLayout(QQuickItem *parent)
     });
 }
 
-AppletsLayout::~AppletsLayout()
-{
-}
-
 PlasmaQuick::AppletQuickItem *AppletsLayout::containment() const
 {
     return m_containmentItem;

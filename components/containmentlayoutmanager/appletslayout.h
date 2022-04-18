@@ -94,7 +94,6 @@ public:
     Q_DECLARE_FLAGS(LayoutChanges, LayoutChange)
 
     AppletsLayout(QQuickItem *parent = nullptr);
-    ~AppletsLayout();
 
     // QML setters and getters
     QString configKey() const;

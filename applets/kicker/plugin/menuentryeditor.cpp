@@ -17,10 +17,6 @@ MenuEntryEditor::MenuEntryEditor(QObject *parent)
 {
 }
 
-MenuEntryEditor::~MenuEntryEditor()
-{
-}
-
 bool MenuEntryEditor::canEdit(const QString &entryPath) const
 {
     KFileItemList itemList;

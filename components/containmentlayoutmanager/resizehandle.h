@@ -31,7 +31,6 @@ public:
     Q_ENUMS(Corner)
 
     ResizeHandle(QQuickItem *parent = nullptr);
-    ~ResizeHandle();
 
     bool resizeBlocked() const;
 

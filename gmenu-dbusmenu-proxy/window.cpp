@@ -46,6 +46,8 @@ Window::Window(const QString &serviceName)
     DBusMenuTypes_register();
 }
 
+Window::~Window() = default;
+
 void Window::init()
 {
     qCDebug(DBUSMENUPROXY) << "Inited window with menu for" << m_winId << "on" << m_serviceName << "at app" << m_applicationObjectPath << "win"

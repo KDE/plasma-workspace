@@ -13,10 +13,6 @@ CalendarApplet::CalendarApplet(QObject *parent, const KPluginMetaData &data, con
 {
 }
 
-CalendarApplet::~CalendarApplet()
-{
-}
-
 int CalendarApplet::weekNumber(const QDateTime &dateTime) const
 {
     return dateTime.date().weekNumber();

@@ -27,10 +27,6 @@ SpacersTracker::SpacersTracker(QObject *parent)
 {
 }
 
-SpacersTracker::~SpacersTracker()
-{
-}
-
 SpacersTracker *SpacersTracker::self()
 {
     return &privateSpacersTrackerSelf()->self;

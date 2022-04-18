@@ -12,10 +12,6 @@ AbstractModel::AbstractModel(QObject *parent)
 {
 }
 
-AbstractModel::~AbstractModel()
-{
-}
-
 QHash<int, QByteArray> AbstractModel::roleNames() const
 {
     QHash<int, QByteArray> roles;

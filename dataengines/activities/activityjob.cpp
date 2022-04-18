@@ -20,10 +20,6 @@ ActivityJob::ActivityJob(KActivities::Controller *controller, const QString &id,
 {
 }
 
-ActivityJob::~ActivityJob()
-{
-}
-
 void ActivityJob::start()
 {
     const QString operation = operationName();

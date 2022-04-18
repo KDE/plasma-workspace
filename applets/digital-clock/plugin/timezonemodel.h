@@ -46,7 +46,6 @@ class TimeZoneModel : public QAbstractListModel
 
 public:
     explicit TimeZoneModel(QObject *parent = nullptr);
-    ~TimeZoneModel() override;
 
     enum Roles {
         TimeZoneIdRole = Qt::UserRole + 1,

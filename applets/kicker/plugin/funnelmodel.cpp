@@ -11,10 +11,6 @@ FunnelModel::FunnelModel(QObject *parent)
 {
 }
 
-FunnelModel::~FunnelModel()
-{
-}
-
 void FunnelModel::setSourceModel(QAbstractItemModel *model)
 {
     if (model && m_sourceModel == model) {

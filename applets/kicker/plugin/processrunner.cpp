@@ -13,10 +13,6 @@ ProcessRunner::ProcessRunner(QObject *parent)
 {
 }
 
-ProcessRunner::~ProcessRunner()
-{
-}
-
 void ProcessRunner::runMenuEditor()
 {
     KProcess::startDetached(QStringLiteral("kmenuedit"));

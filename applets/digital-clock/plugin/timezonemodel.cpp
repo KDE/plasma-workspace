@@ -66,10 +66,6 @@ TimeZoneModel::TimeZoneModel(QObject *parent)
     update();
 }
 
-TimeZoneModel::~TimeZoneModel()
-{
-}
-
 int TimeZoneModel::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);

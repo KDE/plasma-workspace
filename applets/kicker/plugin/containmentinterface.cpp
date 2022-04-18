@@ -28,10 +28,6 @@ ContainmentInterface::ContainmentInterface(QObject *parent)
 {
 }
 
-ContainmentInterface::~ContainmentInterface()
-{
-}
-
 bool ContainmentInterface::mayAddLauncher(QObject *appletInterface, ContainmentInterface::Target target, const QString &entryPath)
 {
     if (!appletInterface) {

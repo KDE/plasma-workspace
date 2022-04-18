@@ -18,7 +18,6 @@ class AppJob : public Plasma::ServiceJob
 
 public:
     AppJob(AppSource *source, const QString &operation, QMap<QString, QVariant> &parameters, QObject *parent = nullptr);
-    ~AppJob() override;
 
 protected:
     void start() override;

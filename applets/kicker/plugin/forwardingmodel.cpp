@@ -11,10 +11,6 @@ ForwardingModel::ForwardingModel(QObject *parent)
 {
 }
 
-ForwardingModel::~ForwardingModel()
-{
-}
-
 QString ForwardingModel::description() const
 {
     if (!m_sourceModel) {

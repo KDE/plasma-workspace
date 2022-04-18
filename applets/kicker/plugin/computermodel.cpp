@@ -28,10 +28,6 @@ FilteredPlacesModel::FilteredPlacesModel(QObject *parent)
     sort(0);
 }
 
-FilteredPlacesModel::~FilteredPlacesModel()
-{
-}
-
 QUrl FilteredPlacesModel::url(const QModelIndex &index) const
 {
     return KFilePlacesModel::convertedUrl(m_placesModel->url(mapToSource(index)));
@@ -70,10 +66,6 @@ bool FilteredPlacesModel::lessThan(const QModelIndex &left, const QModelIndex &r
 
 RunCommandModel::RunCommandModel(QObject *parent)
     : AbstractModel(parent)
-{
-}
-
-RunCommandModel::~RunCommandModel()
 {
 }
 
@@ -138,10 +130,6 @@ ComputerModel::ComputerModel(QObject *parent)
     m_concatProxy->addSourceModel(m_filteredPlacesModel);
 
     setSourceModel(m_concatProxy);
-}
-
-ComputerModel::~ComputerModel()
-{
 }
 
 QString ComputerModel::description() const

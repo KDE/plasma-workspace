@@ -29,10 +29,6 @@ AppletContainer::AppletContainer(QQuickItem *parent)
     });
 }
 
-AppletContainer::~AppletContainer()
-{
-}
-
 void AppletContainer::componentComplete()
 {
     connectBusyIndicator();

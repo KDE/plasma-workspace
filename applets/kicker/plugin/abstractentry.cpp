@@ -13,9 +13,7 @@ AbstractEntry::AbstractEntry(AbstractModel *owner)
 {
 }
 
-AbstractEntry::~AbstractEntry()
-{
-}
+AbstractEntry::~AbstractEntry() = default;
 
 AbstractModel *AbstractEntry::owner() const
 {

@@ -16,10 +16,6 @@ AppsEngine::AppsEngine(QObject *parent, const QVariantList &args)
     init();
 }
 
-AppsEngine::~AppsEngine()
-{
-}
-
 void AppsEngine::init()
 {
     addGroup(KServiceGroup::root());

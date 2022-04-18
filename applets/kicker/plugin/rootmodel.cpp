@@ -68,10 +68,6 @@ RootModel::RootModel(QObject *parent)
 {
 }
 
-RootModel::~RootModel()
-{
-}
-
 QVariant RootModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid() || index.row() >= m_entryList.count()) {

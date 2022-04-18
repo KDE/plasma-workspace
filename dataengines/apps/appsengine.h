@@ -34,7 +34,6 @@ class AppsEngine : public Plasma::DataEngine
 
 public:
     AppsEngine(QObject *parent, const QVariantList &args);
-    ~AppsEngine() override;
     Plasma::Service *serviceForSource(const QString &name) override;
 
 protected:

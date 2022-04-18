@@ -23,7 +23,6 @@ class StatusNotifierItemService : public Plasma::Service
 
 public:
     explicit StatusNotifierItemService(StatusNotifierItemSource *source);
-    ~StatusNotifierItemService() override;
 
 protected:
     Plasma::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
