@@ -40,7 +40,7 @@ PlasmaCore.ColorScope {
     function hibernateRequested() {
         root.suspendRequested(4);
     }
- 
+
     property real timeout: 30
     property real remainingTime: root.timeout
     property var currentAction: {
@@ -104,6 +104,8 @@ PlasmaCore.ColorScope {
         onClicked: root.cancelRequested()
     }
     UserDelegate {
+        width: PlasmaCore.Units.gridUnit * 8
+        height: PlasmaCore.Units.gridUnit * 9
         anchors {
             horizontalCenter: parent.horizontalCenter
             bottom: parent.verticalCenter

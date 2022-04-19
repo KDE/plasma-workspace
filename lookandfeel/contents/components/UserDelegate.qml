@@ -33,8 +33,6 @@ Item {
 
     property real faceSize: PlasmaCore.Units.gridUnit * 7
 
-    implicitHeight: imageSource.height + usernameDelegate.height
-    implicitWidth: Math.max(imageSource.width, usernameDelegate.width)
     opacity: isCurrent ? 1.0 : 0.5
 
     Behavior on opacity {
@@ -150,12 +148,13 @@ Item {
         id: usernameDelegate
 
         anchors.top: imageSource.bottom
+        anchors.topMargin: PlasmaCore.Units.gridUnit
         anchors.horizontalCenter: parent.horizontalCenter
 
         // Make it bigger than other fonts to match the scale of the avatar better
         font.pointSize: wrapper.fontSize + 4
 
-        width: constrainText ? imageSource.width : implicitWidth
+        width: constrainText ? parent.width : implicitWidth
         text: wrapper.name
         style: softwareRendering ? Text.Outline : Text.Normal
         styleColor: softwareRendering ? PlasmaCore.ColorScope.backgroundColor : "transparent" //no outline, doesn't matter

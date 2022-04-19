@@ -12,7 +12,7 @@ ListView {
     id: view
     readonly property string selectedUser: currentItem ? currentItem.userName : ""
     readonly property int userItemWidth: PlasmaCore.Units.gridUnit * 8
-    readonly property int userItemHeight: PlasmaCore.Units.gridUnit * 8
+    readonly property int userItemHeight: PlasmaCore.Units.gridUnit * 9
     readonly property bool constrainText: count > 1
     property int fontSize: PlasmaCore.Theme.defaultFont.pointSize + 2
 
