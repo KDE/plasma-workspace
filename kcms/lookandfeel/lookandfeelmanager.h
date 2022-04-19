@@ -3,6 +3,7 @@
     SPDX-FileCopyrightText: 2014 Vishesh Handa <me@vhanda.in>
     SPDX-FileCopyrightText: 2019 Cyril Rossi <cyril.rossi@enioka.com>
     SPDX-FileCopyrightText: 2021 Benjamin Port <benjamin.port@enioka.com>
+    SPDX-FileCopyrightText: 2022 Dominic Hayes <ferenosdev@outlook.com>
 
     SPDX-License-Identifier: LGPL-2.0-only
 */
@@ -28,6 +29,35 @@ public:
         Apply, // Apply the look and feel theme, i.e. change the active settings and set them up as new defaults. This is the default.
         Defaults // Only set up the options of the look and feel theme as new defaults without changing any active setting
     };
+    //Flags for storing values
+    enum AppearanceToApplyFlags {
+        Colors = 1 << 0,
+        WidgetStyle = 1 << 1,
+        WindowDecoration = 1 << 2,
+        Icons = 1 << 3,
+        PlasmaTheme = 1 << 4,
+        Cursors = 1 << 5,
+        Fonts = 1 << 6,
+        WindowSwitcher = 1 << 7,
+        SplashScreen = 1 << 8,
+        LockScreen = 1 << 9,
+        AppearanceSettings = (1<< 10) -1, //Blanket switch - sets everything
+    };
+    Q_DECLARE_FLAGS(AppearanceToApply, AppearanceToApplyFlags)
+    Q_FLAG(AppearanceToApply)
+    Q_PROPERTY(AppearanceToApply appearanceToApply READ appearanceToApply WRITE setAppearanceToApply NOTIFY appearanceToApplyChanged)
+
+    enum LayoutToApplyFlags {
+        DesktopLayout = 1 << 0,
+        WindowPlacement = 1 << 1, //FIXME: Do we still want these three?
+        ShellPackage = 1 << 2,
+        DesktopSwitcher = 1 << 3,
+        LayoutSettings = (1<< 4) -1, //NOTE: This will be used once TitlebarLayout, etc. is added, it's just here for now
+        // to simplify lnftool and lookandfeelmanager
+    };
+    Q_DECLARE_FLAGS(LayoutToApply, LayoutToApplyFlags)
+    Q_FLAG(LayoutToApply)
+    Q_PROPERTY(LayoutToApply layoutToApply READ layoutToApply WRITE setLayoutToApply NOTIFY layoutToApplyChanged)
 
     LookAndFeelManager(QObject *parent = nullptr);
 
@@ -37,11 +67,12 @@ public:
      * Effects depend upon the Mode of this object. If Mode is Defaults, oldPackage is ignored.
      */
     void save(const KPackage::Package &package, const KPackage::Package &oldPackage);
+    AppearanceToApply appearanceToApply() const;
+    void setAppearanceToApply(AppearanceToApply value);
+    LayoutToApply layoutToApply() const;
+    void setLayoutToApply(LayoutToApply value);
 
     QString colorSchemeFile(const QString &schemeName) const;
-
-    bool resetDefaultLayout() const;
-    void setResetDefaultLayout(bool reset);
 
     // Setters of the various theme pieces
     void setWidgetStyle(const QString &style);
@@ -68,14 +99,10 @@ public:
 
     LookAndFeelSettings *settings() const;
 
-    void setApplyWidgetStyle(bool apply)
-    {
-        m_applyWidgetStyle = apply;
-    }
-
 Q_SIGNALS:
     void message();
-    void resetDefaultLayoutChanged();
+    void appearanceToApplyChanged();
+    void layoutToApplyChanged();
     void iconsChanged();
     void colorsChanged();
     void styleChanged(const QString &newStyle);
@@ -102,21 +129,14 @@ private:
     QStringList m_cursorSearchPaths;
     LookAndFeelData *const m_data;
     Mode m_mode = Mode::Apply;
-    bool m_applyColors : 1;
-    bool m_applyWidgetStyle : 1;
-    bool m_applyIcons : 1;
-    bool m_applyPlasmaTheme : 1;
-    bool m_applyCursors : 1;
-    bool m_applyWindowSwitcher : 1;
-    bool m_applyDesktopSwitcher : 1;
-    bool m_applyWindowPlacement : 1;
-    bool m_applyShellPackage : 1;
-    bool m_resetDefaultLayout : 1;
     bool m_applyLatteLayout : 1;
-    bool m_applyWindowDecoration : 1;
-
+    AppearanceToApply m_appearanceToApply;
+    LayoutToApply m_layoutToApply;
     bool m_plasmashellChanged : 1;
     bool m_fontsChanged : 1;
 };
+Q_DECLARE_OPERATORS_FOR_FLAGS(LookAndFeelManager::AppearanceToApply)
+Q_DECLARE_OPERATORS_FOR_FLAGS(LookAndFeelManager::LayoutToApply)
+
 
 #endif // LOOKANDFEELMANAGER_H

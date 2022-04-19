@@ -3,6 +3,7 @@
     SPDX-FileCopyrightText: 2014 Vishesh Handa <me@vhanda.in>
     SPDX-FileCopyrightText: 2019 Cyril Rossi <cyril.rossi@enioka.com>
     SPDX-FileCopyrightText: 2021 Benjamin Port <benjamin.port@enioka.com>
+    SPDX-FileCopyrightText: 2022 Dominic Hayes <ferenosdev@outlook.com>
 
     SPDX-License-Identifier: LGPL-2.0-only
 */
@@ -21,6 +22,7 @@
 #include <KQuickAddons/ManagedConfigModule>
 
 #include "lookandfeelsettings.h"
+#include "lookandfeelmanager.h"
 
 class QQuickItem;
 class LookAndFeelManager;
@@ -30,7 +32,8 @@ class KCMLookandFeel : public KQuickAddons::ManagedConfigModule
     Q_OBJECT
     Q_PROPERTY(LookAndFeelSettings *lookAndFeelSettings READ lookAndFeelSettings CONSTANT)
     Q_PROPERTY(QStandardItemModel *lookAndFeelModel READ lookAndFeelModel CONSTANT)
-    Q_PROPERTY(bool resetDefaultLayout READ resetDefaultLayout WRITE setResetDefaultLayout NOTIFY resetDefaultLayoutChanged)
+    Q_PROPERTY(LookAndFeelManager::AppearanceToApply appearanceToApply READ appearanceToApply WRITE setAppearanceToApply NOTIFY appearanceToApplyChanged RESET resetAppearanceToApply)
+    Q_PROPERTY(LookAndFeelManager::LayoutToApply layoutToApply READ layoutToApply WRITE setLayoutToApply NOTIFY layoutToApplyChanged RESET resetLayoutToApply)
 
 public:
     enum Roles {
@@ -42,6 +45,8 @@ public:
         HasLockScreenRole,
         HasRunCommandRole,
         HasLogoutRole,
+        HasGlobalThemeRole,
+        HasDesktopLayoutRole,
         HasColorsRole,
         HasWidgetStyleRole,
         HasIconsRole,
@@ -49,7 +54,10 @@ public:
         HasCursorsRole,
         HasWindowSwitcherRole,
         HasDesktopSwitcherRole,
+        HasWindowDecorationRole,
+        HasFontsRole,
     };
+    Q_ENUM(Roles)
 
     KCMLookandFeel(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
     ~KCMLookandFeel() override;
@@ -71,8 +79,13 @@ public:
     void addKPackageToModel(const KPackage::Package &pkg);
 
     bool isSaveNeeded() const override;
-    bool resetDefaultLayout() const;
-    void setResetDefaultLayout(bool reset);
+
+    LookAndFeelManager::AppearanceToApply appearanceToApply() const;
+    void setAppearanceToApply(LookAndFeelManager::AppearanceToApply items);
+    void resetAppearanceToApply();
+    LookAndFeelManager::LayoutToApply layoutToApply() const;
+    void setLayoutToApply(LookAndFeelManager::LayoutToApply items);
+    void resetLayoutToApply();
 
 public Q_SLOTS:
     void load() override;
@@ -80,7 +93,9 @@ public Q_SLOTS:
     void defaults() override;
 
 Q_SIGNALS:
-    void resetDefaultLayoutChanged();
+    void showConfirmation();
+    void appearanceToApplyChanged();
+    void layoutToApplyChanged();
 
 private:
     // List only packages which provide at least one of the components

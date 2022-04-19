@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2017 Marco MArtin <mart@kde.org>
+    SPDX-FileCopyrightText: 2022 Dominic Hayes <ferenosdev@outlook.com>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -94,7 +95,12 @@ int main(int argc, char **argv)
 
         KCMLookandFeel *kcm = new KCMLookandFeel(nullptr, KPluginMetaData(), QVariantList());
         kcm->load();
-        kcm->setResetDefaultLayout(parser.isSet(_resetLayout));
+        if (parser.isSet(_resetLayout)) {
+            kcm->setLayoutToApply(LookAndFeelManager::LayoutToApply(LookAndFeelManager::LayoutSettings));
+        } else {
+            kcm->setLayoutToApply({});
+        }
+        kcm->setAppearanceToApply(LookAndFeelManager::AppearanceToApply(LookAndFeelManager::AppearanceSettings));
         kcm->lookAndFeelSettings()->setLookAndFeelPackage(requestedTheme);
         // Save manually as we aren't in an event loop
         kcm->lookAndFeelSettings()->save();
