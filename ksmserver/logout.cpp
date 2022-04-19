@@ -41,7 +41,6 @@
 #endif
 
 #include <QApplication>
-#include <QDesktopWidget>
 #include <QFile>
 #include <QFutureWatcher>
 #include <QTimer>
@@ -188,11 +187,6 @@ void KSMServer::performLogout()
     if (saveSession)
         sessionGroup = QStringLiteral("Session: ") + QString::fromLocal8Bit(SESSION_PREVIOUS_LOGOUT);
 
-    // Set the real desktop background to black so that exit looks
-    // clean regardless of what was on "our" desktop.
-    QPalette palette;
-    palette.setColor(QApplication::desktop()->backgroundRole(), Qt::black);
-    QApplication::setPalette(palette);
     saveType = saveSession ? SmSaveBoth : SmSaveGlobal;
 #ifndef NO_LEGACY_SESSION_MANAGEMENT
     performLegacySessionSave();
