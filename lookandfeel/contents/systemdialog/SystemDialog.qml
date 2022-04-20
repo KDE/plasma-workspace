@@ -1,5 +1,6 @@
 /*
  *  SPDX-FileCopyrightText: 2021 Devin Lin <espidev@gmail.com>
+ *  SPDX-FileCopyrightText: 2022 Harald Sitter <sitter@kde.org>
  *
  *  SPDX-License-Identifier: LGPL-2.0-or-later
  */
@@ -27,8 +28,8 @@ Item {
     property Window window
     implicitHeight: column.implicitHeight
     implicitWidth: column.implicitWidth
-    readonly property real minimumHeight: column.Layout.minimumHeight + mainItem.implicitHeight
-    readonly property real minimumWidth: column.Layout.minimumWidth + mainItem.implicitWidth
+    readonly property real minimumHeight: column.Layout.minimumHeight + mainItem.implicitHeight + footerButtonBox.implicitHeight
+    readonly property real minimumWidth: column.Layout.minimumWidth + mainItem.implicitWidth + footerButtonBox.implicitWidth
     readonly property int flags: Qt.Dialog
     property alias standardButtons: footerButtonBox.standardButtons
     readonly property int spacing: Kirigami.Units.largeSpacing // standard KDE dialog margins
