@@ -11,10 +11,10 @@
 #include <QObject>
 #include <QPointer>
 #include <QRegExp>
+#include <QDBusError>
 
 class KPluginMetaData;
 class SystemTraySettings;
-class QDBusPendingCallWatcher;
 class QDBusServiceWatcher;
 
 /**
@@ -37,8 +37,13 @@ Q_SIGNALS:
 public Q_SLOTS:
     void initDBusActivatables();
 
+private Q_SLOTS:
+    void sessionBusNameFetchFinished(const QStringList &list);
+    void systemBusNameFetchFinished(const QStringList &list);
+    void sessionBusNameFetchError(const QDBusError &error);
+    void systemBusNameFetchError(const QDBusError &error);
+
 private:
-    void serviceNameFetchFinished(QDBusPendingCallWatcher *watcher);
     void serviceRegistered(const QString &service);
     void serviceUnregistered(const QString &service);
 
