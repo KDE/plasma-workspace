@@ -46,7 +46,7 @@ ColumnLayout {
     Wallpaper.ImageBackend {
         id: imageWallpaper
         targetSize: {
-            if (typeof plasmoid !== "undefined") {
+            if (typeof Plasmoid !== "undefined") {
                 return Qt.size(Plasmoid.width * Screen.devicePixelRatio, Plasmoid.height * Screen.devicePixelRatio)
             }
             // Lock screen configuration case
