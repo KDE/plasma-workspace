@@ -130,6 +130,15 @@ RowLayout {
                 Layout.preferredWidth: PlasmaCore.Units.iconSizes.smallMedium
                 svg: svg
                 elementId: "profile-powersave"
+
+                HoverHandler {
+                    id: powersaveIconHover
+                }
+
+                PlasmaComponents3.ToolTip {
+                    text: root.profileData.find(profile => profile.profile === "power-saver").label
+                    visible: powersaveIconHover.hovered
+                }
             }
 
             Item {
@@ -141,6 +150,15 @@ RowLayout {
                 Layout.preferredWidth: PlasmaCore.Units.iconSizes.smallMedium
                 svg: svg
                 elementId: "profile-performance"
+
+                HoverHandler {
+                    id: performanceIconHover
+                }
+
+                PlasmaComponents3.ToolTip {
+                    text: root.profileData.find(profile => profile.profile === "performance").label
+                    visible: performanceIconHover.hovered
+                }
             }
         }
 
