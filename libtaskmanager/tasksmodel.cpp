@@ -893,24 +893,15 @@ bool TasksModel::Private::lessThan(const QModelIndex &left, const QModelIndex &r
         // activity. This will sort tasks by comparing a cumulative score made
         // up of the task counts for each activity a task is assigned to, and
         // otherwise fall through to alphabetical sorting.
-        int leftScore = -1;
-        int rightScore = -1;
-
         const QStringList &leftActivities = left.data(AbstractTasksModel::Activities).toStringList();
-
-        if (!leftActivities.isEmpty()) {
-            foreach (const QString &activity, leftActivities) {
-                leftScore += activityTaskCounts[activity];
-            }
-        }
+        int leftScore = std::accumulate(leftActivities.cbegin(), leftActivities.cend(), -1, [this](int a, const QString &activity) {
+            return a + activityTaskCounts[activity];
+        });
 
         const QStringList &rightActivities = right.data(AbstractTasksModel::Activities).toStringList();
-
-        if (!rightActivities.isEmpty()) {
-            foreach (const QString &activity, rightActivities) {
-                rightScore += activityTaskCounts[activity];
-            }
-        }
+        int rightScore = std::accumulate(rightActivities.cbegin(), rightActivities.cend(), -1, [this](int a, const QString &activity) {
+            return a + activityTaskCounts[activity];
+        });
 
         if (leftScore == -1 || rightScore == -1) {
             const int sumScore = std::accumulate(activityTaskCounts.constBegin(), activityTaskCounts.constEnd(), 0);
