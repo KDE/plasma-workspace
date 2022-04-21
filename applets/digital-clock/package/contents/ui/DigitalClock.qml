@@ -18,7 +18,6 @@ Item {
     id: main
 
     property string timeFormat
-    property date currentTime
 
     property bool showSeconds: Plasmoid.configuration.showSeconds
     property bool showLocalTimezone: Plasmoid.configuration.showLocalTimezone
@@ -79,7 +78,7 @@ Item {
         target: Plasmoid.self
         function onContextualActionsAboutToShow() {
             ClipboardMenu.secondsIncluded = main.showSeconds;
-            ClipboardMenu.currentDate = main.currentTime;
+            ClipboardMenu.currentDate = main.getCurrentTime();
         }
     }
 
@@ -96,6 +95,16 @@ Item {
             setupLabels();
             setTimezoneIndex();
         }
+    }
+
+    function getCurrentTime() {
+        // get the time for the given timezone from the dataengine
+        var now = dataSource.data[Plasmoid.configuration.lastSelectedTimezone]["DateTime"];
+        // get current UTC time
+        var msUTC = now.getTime() + (now.getTimezoneOffset() * 60000);
+        // add the dataengine TZ offset to it
+        var currentTime = new Date(msUTC + (dataSource.data[Plasmoid.configuration.lastSelectedTimezone]["Offset"] * 1000));
+        return currentTime;
     }
 
     states: [
@@ -498,15 +507,7 @@ Item {
                 minimumPixelSize: 1
 
                 text: {
-                    // get the time for the given timezone from the dataengine
-                    var now = dataSource.data[Plasmoid.configuration.lastSelectedTimezone]["DateTime"];
-                    // get current UTC time
-                    var msUTC = now.getTime() + (now.getTimezoneOffset() * 60000);
-                    // add the dataengine TZ offset to it
-                    var currentTime = new Date(msUTC + (dataSource.data[Plasmoid.configuration.lastSelectedTimezone]["Offset"] * 1000));
-
-                    main.currentTime = currentTime;
-                    return Qt.formatTime(currentTime, main.timeFormat);
+                    return Qt.formatTime(main.getCurrentTime(), main.timeFormat);
                 }
 
                 verticalAlignment: Text.AlignVCenter
@@ -634,7 +635,7 @@ Item {
 
 
         if (main.showDate) {
-            dateLabel.text = Qt.formatDate(main.currentTime, main.dateFormat);
+            dateLabel.text = Qt.formatDate(main.getCurrentTime(), main.dateFormat);
         } else {
             // clear it so it doesn't take space in the layout
             dateLabel.text = "";
@@ -674,7 +675,7 @@ Item {
         if (main.showDate) {
             // If the date has changed, force size recalculation, because the day name
             // or the month name can now be longer/shorter, so we need to adjust applet size
-            const currentDate = Qt.formatDateTime(dataSource.data["Local"]["DateTime"], "yyyy-MM-dd");
+            const currentDate = Qt.formatDateTime(main.getCurrentTime(), "yyyy-MM-dd");
             if (main.lastDate !== currentDate) {
                 doCorrections = true;
                 main.lastDate = currentDate
