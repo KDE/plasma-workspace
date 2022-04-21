@@ -827,6 +827,38 @@ bool TasksModel::Private::lessThan(const QModelIndex &left, const QModelIndex &r
 
     // Sort other cases by sort mode.
     switch (sortMode) {
+    case SortLastActivated: {
+        QTime leftSortTime, rightSortTime;
+
+        // Check if the task is in a group
+        if (left.parent().isValid()) {
+            leftSortTime = left.parent().data(AbstractTasksModel::LastActivated).toTime();
+        } else {
+            leftSortTime = left.data(AbstractTasksModel::LastActivated).toTime();
+        }
+
+        if (!leftSortTime.isValid()) {
+            leftSortTime = left.data(Qt::DisplayRole).toTime();
+        }
+
+        if (right.parent().isValid()) {
+            rightSortTime = right.parent().data(AbstractTasksModel::LastActivated).toTime();
+        } else {
+            rightSortTime = right.data(AbstractTasksModel::LastActivated).toTime();
+        }
+
+        if (!rightSortTime.isValid()) {
+            rightSortTime = right.data(Qt::DisplayRole).toTime();
+        }
+
+        if (leftSortTime != rightSortTime) {
+            // Move latest to leftmost
+            return leftSortTime > rightSortTime;
+        }
+
+        Q_FALLTHROUGH();
+    }
+
     case SortVirtualDesktop: {
         const bool leftAll = left.data(AbstractTasksModel::IsOnAllVirtualDesktops).toBool();
         const bool rightAll = right.data(AbstractTasksModel::IsOnAllVirtualDesktops).toBool();
@@ -1199,6 +1231,10 @@ void TasksModel::setSortMode(SortMode mode)
 
             d->activityTaskCounts.clear();
             setSortRole(Qt::DisplayRole);
+        }
+
+        if (mode == SortLastActivated) {
+            setSortRole(AbstractTasksModel::LastActivated);
         }
 
         d->sortMode = mode;

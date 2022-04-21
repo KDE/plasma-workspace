@@ -723,6 +723,20 @@ QVariant TaskGroupingProxyModel::data(const QModelIndex &proxyIndex, int role) c
             return d->any(proxyIndex, AbstractTasksModel::IsDemandingAttention);
         } else if (role == AbstractTasksModel::SkipTaskbar) {
             return d->all(proxyIndex, AbstractTasksModel::SkipTaskbar);
+        } else if (role == AbstractTasksModel::LastActivated) {
+            // Find the last activated task in the single group
+            const int groupSize = d->rowMap.at(proxyIndex.row())->size();
+            QTime lastActivated = mapToSource(index(0, 0, proxyIndex)).data(AbstractTasksModel::LastActivated).toTime();
+
+            for (int i = 1; i < groupSize; i++) {
+                const QTime activated = mapToSource(index(i, 0, proxyIndex)).data(AbstractTasksModel::LastActivated).toTime();
+
+                if (lastActivated < activated) {
+                    lastActivated = activated;
+                }
+            }
+
+            return lastActivated;
         }
     }
 
