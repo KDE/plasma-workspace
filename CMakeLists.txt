@@ -5,7 +5,7 @@ set(PROJECT_VERSION "5.24.80")
 set(PROJECT_VERSION_MAJOR 5)
 
 set(QT_MIN_VERSION "5.15.0")
-set(KF5_MIN_VERSION "5.91")
+set(KF5_MIN_VERSION "5.93")
 set(KDE_COMPILERSETTINGS_LEVEL "5.82")
 set(INSTALL_SDDM_THEME TRUE)
 option(INSTALL_SDDM_WAYLAND_SESSION OFF)
@@ -26,7 +26,7 @@ include(CheckIncludeFiles)
 include(FeatureSummary)
 include(ECMOptionalAddSubdirectory)
 include(ECMQtDeclareLoggingCategory)
-include(ECMQueryQmake)
+include(ECMQueryQt)
 include(ECMInstallIcons)
 include(KDEClangFormat)
 include(KDEGitCommitHooks)
@@ -232,7 +232,7 @@ endif()
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 
 # locate qdbus in the Qt path because not every distro makes a symlink at /usr/bin/qdbus
-query_qmake(QtBinariesDir QT_INSTALL_BINS)
+ecm_query_qt(QtBinariesDir QT_INSTALL_BINS)
 
 option(PLASMA_WAYLAND_DEFAULT_SESSION "Use Wayland session by default for Plasma" FALSE)
 
