@@ -49,8 +49,6 @@ public:
 
     int launcherCount = 0;
 
-    bool switchingFromActiveTask = false;
-    QTimer *reorderTimer = nullptr;
     SortMode sortMode = SortAlpha;
     bool separateLaunchers = true;
     bool launchInPlace = false;
@@ -80,6 +78,7 @@ public:
     void updateGroupInline();
     QModelIndex preFilterIndex(const QModelIndex &sourceIndex) const;
     void updateActivityTaskCounts();
+    void forceResort();
     bool lessThan(const QModelIndex &left, const QModelIndex &right, bool sortOnlyLaunchers = false) const;
 
 private:
@@ -140,8 +139,6 @@ TasksModel::Private::~Private()
         virtualDesktopInfo = nullptr;
         delete activityInfo;
         activityInfo = nullptr;
-        delete reorderTimer;
-        reorderTimer = nullptr;
     }
 }
 
@@ -168,7 +165,7 @@ void TasksModel::Private::initModels()
     QObject::connect(windowTasksModel, &QAbstractItemModel::rowsRemoved, q, [this]() {
         if (sortMode == SortActivity) {
             updateActivityTaskCounts();
-            q->invalidate();
+            forceResort();
         }
         // the active task may have potentially changed, so signal that so that users
         // will recompute it
@@ -693,7 +690,7 @@ void TasksModel::Private::updateGroupInline()
         q->setSourceModel(flattenGroupsProxyModel);
 
         if (sortMode == SortManual) {
-            q->invalidate();
+            forceResort();
         }
     } else {
         if (hadSourceModel && !flattenGroupsProxyModel) {
@@ -710,7 +707,7 @@ void TasksModel::Private::updateGroupInline()
         flattenGroupsProxyModel = nullptr;
 
         if (hadSourceModel && sortMode == SortManual) {
-            q->invalidate();
+            forceResort();
         }
     }
 
@@ -770,6 +767,14 @@ void TasksModel::Private::updateActivityTaskCounts()
     }
 }
 
+void TasksModel::Private::forceResort()
+{
+    // HACK: This causes QSortFilterProxyModel to run all rows through
+    // our lessThan() implementation again.
+    q->setDynamicSortFilter(false);
+    q->setDynamicSortFilter(true);
+}
+
 bool TasksModel::Private::lessThan(const QModelIndex &left, const QModelIndex &right, bool sortOnlyLaunchers) const
 {
     // Launcher tasks go first.
@@ -822,25 +827,6 @@ bool TasksModel::Private::lessThan(const QModelIndex &left, const QModelIndex &r
 
     // Sort other cases by sort mode.
     switch (sortMode) {
-    case SortLastActivated: {
-        QTime leftSortTime = left.data(AbstractTasksModel::LastActivated).toTime();
-
-        if (!leftSortTime.isValid()) {
-            leftSortTime = left.data(Qt::DisplayRole).toTime();
-        }
-
-        QTime rightSortTime = right.data(AbstractTasksModel::LastActivated).toTime();
-
-        if (!rightSortTime.isValid()) {
-            rightSortTime = right.data(Qt::DisplayRole).toTime();
-        }
-
-        if (leftSortTime == rightSortTime) {
-            return left.row() < right.row();
-        }
-
-        return (leftSortTime < rightSortTime);
-    }
     case SortVirtualDesktop: {
         const bool leftAll = left.data(AbstractTasksModel::IsOnAllVirtualDesktops).toBool();
         const bool rightAll = right.data(AbstractTasksModel::IsOnAllVirtualDesktops).toBool();
@@ -886,8 +872,8 @@ bool TasksModel::Private::lessThan(const QModelIndex &left, const QModelIndex &r
                 return true;
             }
         }
-        Q_FALLTHROUGH();
     }
+    // fall through
     case SortActivity: {
         // updateActivityTaskCounts() counts the number of window tasks on each
         // activity. This will sort tasks by comparing a cumulative score made
@@ -918,12 +904,13 @@ bool TasksModel::Private::lessThan(const QModelIndex &left, const QModelIndex &r
         if (leftScore != rightScore) {
             return (leftScore > rightScore);
         }
-
-        Q_FALLTHROUGH();
     }
+    // Fall through to source order if sorting is disabled or manual, or alphabetical by app name otherwise.
+    // This marker comment makes gcc/clang happy:
+    // fall through
     default: {
         if (sortMode == SortDisabled) {
-            return left.row() < right.row();
+            return (left.row() < right.row());
         } else {
             // The overall goal of alphabetic sorting is to sort tasks belonging to the
             // same app together, while sorting the resulting sets alphabetically among
@@ -957,7 +944,7 @@ bool TasksModel::Private::lessThan(const QModelIndex &left, const QModelIndex &r
 
             // If the string are identical fall back to source model (creation/append) order.
             if (sortResult == 0) {
-                return left.row() < right.row();
+                return (left.row() < right.row());
             }
 
             return (sortResult < 0);
@@ -1213,38 +1200,10 @@ void TasksModel::setSortMode(SortMode mode)
             d->activityTaskCounts.clear();
             setSortRole(Qt::DisplayRole);
         }
-        if (mode == SortLastActivated) {
-            setDynamicSortFilter(false);
-
-            if (!d->reorderTimer) {
-                d->reorderTimer = new QTimer(this);
-            }
-
-            d->reorderTimer->setSingleShot(true);
-
-            QObject::connect(this, &TasksModel::activeTaskChanged, this, [this] {
-                if (activeTask().data(AbstractTasksModel::AppId).isValid()
-                    && activeTask().data(AbstractTasksModel::AppId).toString() != "org.kde.plasmashell.desktop") {
-                    if (!d->switchingFromActiveTask) {
-                        d->reorderTimer->stop();
-                        invalidate();
-                    } else {
-                        d->reorderTimer->start();
-                    }
-                }
-            });
-
-            QObject::connect(d->reorderTimer, &QTimer::timeout, this, [this] {
-                if (d->switchingFromActiveTask) {
-                    d->switchingFromActiveTask = false;
-                    invalidate();
-                }
-            });
-        }
 
         d->sortMode = mode;
 
-        invalidate();
+        d->forceResort();
 
         Q_EMIT sortModeChanged();
     }
@@ -1261,7 +1220,7 @@ void TasksModel::setSeparateLaunchers(bool separate)
         d->separateLaunchers = separate;
 
         d->updateManualSortMap();
-        invalidate();
+        d->forceResort();
 
         Q_EMIT separateLaunchersChanged();
     }
@@ -1277,7 +1236,7 @@ void TasksModel::setLaunchInPlace(bool launchInPlace)
     if (d->launchInPlace != launchInPlace) {
         d->launchInPlace = launchInPlace;
 
-        invalidate();
+        d->forceResort();
 
         Q_EMIT launchInPlaceChanged();
     }
@@ -1397,7 +1356,7 @@ bool TasksModel::requestAddLauncher(const QUrl &url)
     // their launcher position now.
     if (added && d->sortMode == SortManual && (d->launchInPlace || !d->separateLaunchers)) {
         d->updateManualSortMap();
-        invalidate();
+        d->forceResort();
     }
 
     return added;
@@ -1413,7 +1372,7 @@ bool TasksModel::requestRemoveLauncher(const QUrl &url)
         // longer backed by a launcher out of the launcher area.
         if (removed && d->sortMode == SortManual && (d->launchInPlace || !d->separateLaunchers)) {
             d->updateManualSortMap();
-            invalidate();
+            d->forceResort();
         }
 
         return removed;
@@ -1433,7 +1392,7 @@ bool TasksModel::requestAddLauncherToActivity(const QUrl &url, const QString &ac
     // their launcher position now.
     if (added && d->sortMode == SortManual && (d->launchInPlace || !d->separateLaunchers)) {
         d->updateManualSortMap();
-        invalidate();
+        d->forceResort();
     }
 
     return added;
@@ -1449,7 +1408,7 @@ bool TasksModel::requestRemoveLauncherFromActivity(const QUrl &url, const QStrin
         // longer backed by a launcher out of the launcher area.
         if (removed && d->sortMode == SortManual && (d->launchInPlace || !d->separateLaunchers)) {
             d->updateManualSortMap();
-            invalidate();
+            d->forceResort();
         }
 
         return removed;
@@ -1581,21 +1540,6 @@ void TasksModel::requestActivities(const QModelIndex &index, const QStringList &
     }
 }
 
-void TasksModel::requestLastActivatedReorderDelay(int delay)
-{
-    if (d->sortMode == SortMode::SortLastActivated) {
-        if (delay > 0) {
-            if (d->reorderTimer->interval() != delay) {
-                d->reorderTimer->setInterval(delay);
-            }
-
-            d->switchingFromActiveTask = true;
-        } else {
-            d->switchingFromActiveTask = false;
-        }
-    }
-}
-
 void TasksModel::requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry, QObject *delegate)
 {
     if (index.isValid() && index.model() == this) {
@@ -1719,7 +1663,7 @@ bool TasksModel::move(int row, int newPos, const QModelIndex &parent)
     }
 
     // Resort.
-    invalidate();
+    d->forceResort();
 
     if (!d->separateLaunchers && isLauncherMove) {
         const QModelIndex &idx = d->concatProxyModel->index(d->sortedPreFilterRows.at(newPos), 0);
