@@ -152,9 +152,13 @@ void TasksModel::Private::initModels()
     //     -> flattenGroupsProxyModel (optionally, if groupInline == true) flattens groups out.
     //      -> TasksModel collapses (top-level) items into task lifecycle abstraction; sorts.
 
+    concatProxyModel = new ConcatenateTasksProxyModel(q);
+
     if (!windowTasksModel) {
         windowTasksModel = new WindowTasksModel();
     }
+
+    concatProxyModel->addSourceModel(windowTasksModel);
 
     QObject::connect(windowTasksModel, &QAbstractItemModel::rowsInserted, q, [this]() {
         if (sortMode == SortActivity) {
@@ -204,9 +208,6 @@ void TasksModel::Private::initModels()
         startupTasksModel = new StartupTasksModel();
     }
 
-    concatProxyModel = new ConcatenateTasksProxyModel(q);
-
-    concatProxyModel->addSourceModel(windowTasksModel);
     concatProxyModel->addSourceModel(startupTasksModel);
 
     // If we're in manual sort mode, we need to seed the sort map on pending row
