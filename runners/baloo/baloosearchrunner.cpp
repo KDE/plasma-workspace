@@ -90,6 +90,7 @@ RemoteMatches SearchRunner::Match(const QString &searchTerm)
     matches << matchInternal(searchTerm, QStringLiteral("Folder"), i18n("Folder"), foundUrls);
     matches << matchInternal(searchTerm, QStringLiteral("Document"), i18n("Document"), foundUrls);
     matches << matchInternal(searchTerm, QStringLiteral("Archive"), i18n("Archive"), foundUrls);
+    matches << matchInternal(searchTerm, QStringLiteral("Text"), i18n("Text"), foundUrls);
 
     return matches;
 }
