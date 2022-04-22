@@ -26,6 +26,7 @@
 #include <QQuickItem>
 #include <QQuickWindow>
 
+#include <KConfigGroup>
 #include <KDirWatch>
 #include <KIO/CopyJob>
 #include <KIO/Job>

@@ -23,6 +23,7 @@ class SystemTraySettings;
 class StatusNotifierModel;
 class SystemTrayModel;
 class SortedSystemTrayModel;
+class KJob;
 
 class SystemTray : public Plasma::Containment
 {

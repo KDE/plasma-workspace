@@ -31,6 +31,7 @@
 #include <QDBusReply>
 
 #include "powermanagementservice.h"
+#include <KService>
 #include <Plasma/DataContainer>
 
 static const char SOLID_POWERMANAGEMENT_SERVICE[] = "org.kde.Solid.PowerManagement";

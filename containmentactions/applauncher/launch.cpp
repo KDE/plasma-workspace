@@ -8,6 +8,7 @@
 
 #include <QDebug>
 
+#include <KConfigGroup>
 #include <KIO/ApplicationLauncherJob>
 #include <Plasma/PluginLoader>
 

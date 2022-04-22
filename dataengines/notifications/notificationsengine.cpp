@@ -13,6 +13,7 @@
 #include <KConfig>
 #include <KConfigGroup>
 #include <KNotifyConfigWidget>
+#include <KService>
 #include <KSharedConfig>
 #include <QGuiApplication>
 #include <klocalizedstring.h>

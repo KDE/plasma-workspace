@@ -17,6 +17,7 @@
 #include <KGlobalAccel>
 #include <KIO/CommandLauncherJob>
 #include <KLocalizedString>
+#include <KService>
 #include <QDebug>
 #include <QIcon>
 

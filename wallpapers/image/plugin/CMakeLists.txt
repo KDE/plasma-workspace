@@ -26,6 +26,7 @@ target_link_libraries(plasma_wallpaper_imageplugin
     KF5::KIOGui
     KF5::NewStuff
     KF5::Notifications
+    KF5::Package
     )
 
 if(BUILD_TESTING)

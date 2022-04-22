@@ -15,6 +15,7 @@
 #include <KConfigGroup>
 #include <KDesktopFile>
 #include <KDirWatch>
+#include <KService>
 #include <Plasma/DataContainer>
 #include <QDebug>
 #include <kdesktopfileactions.h>
