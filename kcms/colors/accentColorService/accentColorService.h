@@ -1,3 +1,8 @@
+/*
+    SPDX-FileCopyrightText: 2022 Tanbir Jishan <tantalising007@gmail.com>
+
+    SPDX-License-Identifier: GPL-2.0-or-later
+*/
 
 #pragma once
 
