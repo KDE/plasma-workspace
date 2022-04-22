@@ -21,7 +21,7 @@ namespace TaskManager
 {
 void TaskManagerPlugin::registerTypes(const char *uri)
 {
-    Q_ASSERT(uri == QLatin1String("org.kde.taskmanager"));
+    Q_ASSERT(uri == QByteArrayLiteral("org.kde.taskmanager"));
 
     // Expose the AbstractTasksModel::AdditionalRoles enum to Qt Quick
     // for use with the TasksModel::data invokable. TasksModel inherits
