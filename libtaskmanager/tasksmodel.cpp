@@ -320,8 +320,8 @@ void TasksModel::Private::initModels()
             if (sourceIndex.data(AbstractTasksModel::IsWindow).toBool()) {
                 const QString &appName = sourceIndex.data(AbstractTasksModel::AppName).toString();
 
-                for (int i = 0; i < filterProxyModel->rowCount(); ++i) {
-                    QModelIndex filterIndex = filterProxyModel->index(i, 0);
+                for (int j = 0; j < filterProxyModel->rowCount(); ++j) {
+                    QModelIndex filterIndex = filterProxyModel->index(j, 0);
 
                     if (!filterIndex.data(AbstractTasksModel::IsStartup).toBool()) {
                         continue;
@@ -336,8 +336,8 @@ void TasksModel::Private::initModels()
 
             // When we get a window or startup we have a launcher for, cause the launcher to be re-filtered.
             if (sourceIndex.data(AbstractTasksModel::IsWindow).toBool() || sourceIndex.data(AbstractTasksModel::IsStartup).toBool()) {
-                for (int i = 0; i < filterProxyModel->rowCount(); ++i) {
-                    const QModelIndex &filterIndex = filterProxyModel->index(i, 0);
+                for (int j = 0; j < filterProxyModel->rowCount(); ++j) {
+                    const QModelIndex &filterIndex = filterProxyModel->index(j, 0);
 
                     if (!filterIndex.data(AbstractTasksModel::IsLauncher).toBool()) {
                         continue;
@@ -582,14 +582,14 @@ void TasksModel::Private::updateManualSortMap()
             // Try to move the task up to its right-most app sibling, unless this
             // is us sorting in a launcher list for the first time.
             if (launchersEverSet && !idx.data(AbstractTasksModel::IsLauncher).toBool()) {
-                for (int i = (row - 1); i >= 0; --i) {
-                    const QModelIndex &concatProxyIndex = concatProxyModel->index(sortedPreFilterRows.at(i), 0);
+                for (int j = (row - 1); j >= 0; --j) {
+                    const QModelIndex &concatProxyIndex = concatProxyModel->index(sortedPreFilterRows.at(j), 0);
 
                     // Once we got a match, check if the filter model accepts the potential
                     // sibling. We don't want to sort new tasks in next to tasks it will
                     // filter out once it sees it anyway.
                     if (appsMatch(concatProxyIndex, idx) && filterProxyModel->acceptsRow(concatProxyIndex.row())) {
-                        sortedPreFilterRows.move(row, i + 1);
+                        sortedPreFilterRows.move(row, j + 1);
                         moved = true;
 
                         break;
@@ -603,12 +603,12 @@ void TasksModel::Private::updateManualSortMap()
             // the rightmost launcher or launcher-backed task in the map, or failing
             // that at the start of the map.
             if (!moved && idx.data(AbstractTasksModel::IsLauncher).toBool()) {
-                for (int i = 0; i < row; ++i) {
-                    const QModelIndex &concatProxyIndex = concatProxyModel->index(sortedPreFilterRows.at(i), 0);
+                for (int j = 0; j < row; ++j) {
+                    const QModelIndex &concatProxyIndex = concatProxyModel->index(sortedPreFilterRows.at(j), 0);
 
                     if (concatProxyIndex.data(AbstractTasksModel::IsLauncher).toBool()
                         || launcherTasksModel->launcherPosition(concatProxyIndex.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl()) != -1) {
-                        insertPos = i + 1;
+                        insertPos = j + 1;
                     } else {
                         break;
                     }
@@ -621,14 +621,14 @@ void TasksModel::Private::updateManualSortMap()
             // If we sorted in a launcher and it's the first time we're sorting in a
             // launcher list, move existing windows to the launcher position now.
             if (moved && !launchersEverSet) {
-                for (int i = (sortedPreFilterRows.count() - 1); i >= 0; --i) {
-                    const QModelIndex &concatProxyIndex = concatProxyModel->index(sortedPreFilterRows.at(i), 0);
+                for (int j = (sortedPreFilterRows.count() - 1); j >= 0; --j) {
+                    const QModelIndex &concatProxyIndex = concatProxyModel->index(sortedPreFilterRows.at(j), 0);
 
                     if (!concatProxyIndex.data(AbstractTasksModel::IsLauncher).toBool()
                         && idx.data(AbstractTasksModel::LauncherUrlWithoutIcon) == concatProxyIndex.data(AbstractTasksModel::LauncherUrlWithoutIcon)) {
-                        sortedPreFilterRows.move(i, insertPos);
+                        sortedPreFilterRows.move(j, insertPos);
 
-                        if (insertPos > i) {
+                        if (insertPos > j) {
                             --insertPos;
                         }
                     }
@@ -756,11 +756,11 @@ void TasksModel::Private::updateActivityTaskCounts()
         const QStringList &activities = windowIndex.data(AbstractTasksModel::Activities).toStringList();
 
         if (activities.isEmpty()) {
-            QMutableHashIterator<QString, int> i(activityTaskCounts);
+            QMutableHashIterator<QString, int> it(activityTaskCounts);
 
-            while (i.hasNext()) {
-                i.next();
-                i.setValue(i.value() + 1);
+            while (it.hasNext()) {
+                it.next();
+                it.setValue(it.value() + 1);
             }
         } else {
             foreach (const QString &activity, activities) {
