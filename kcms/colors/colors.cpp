@@ -13,6 +13,8 @@
 #include <QColor>
 #include <QDBusConnection>
 #include <QDBusMessage>
+#include <QDBusPendingCall>
+#include <QDBusReply>
 #include <QFileInfo>
 #include <QGuiApplication>
 #include <QProcess>
@@ -55,6 +57,7 @@ KCMColors::KCMColors(QObject *parent, const KPluginMetaData &data, const QVarian
     , m_filteredModel(new FilterProxyModel(this))
     , m_data(new ColorsData(this))
     , m_config(KSharedConfig::openConfig(QStringLiteral("kdeglobals")))
+    , m_configWatcher(KConfigWatcher::create(m_config))
 {
     auto uri = "org.kde.private.kcms.colors";
     qmlRegisterUncreatableType<KCMColors>(uri, 1, 0, "KCM", QStringLiteral("Cannot create instances of KCM"));
@@ -77,6 +80,14 @@ KCMColors::KCMColors(QObject *parent, const KPluginMetaData &data, const QVarian
 
     connect(m_model, &ColorsModel::selectedSchemeChanged, m_filteredModel, &FilterProxyModel::setSelectedScheme);
     m_filteredModel->setSourceModel(m_model);
+
+    // Since the accent color can now change from somewhere else, we need to update the view accordingly.
+    connect(m_configWatcher.data(), &KConfigWatcher::configChanged, this, [this](const KConfigGroup &group, const QByteArrayList &names) {
+        if (group.name() == QLatin1String("General") && names.contains(QByteArrayLiteral("AccentColor"))) {
+            colorsSettings()->save(); // We need to first save the local changes, if any.
+            colorsSettings()->load();
+        }
+    });
 }
 
 KCMColors::~KCMColors()
@@ -120,6 +131,16 @@ QColor KCMColors::tinted(const QColor& color, const QColor& accent, bool tints, 
 void KCMColors::setAccentColor(const QColor &accentColor)
 {
     colorsSettings()->setAccentColor(accentColor);
+    Q_EMIT settingsChanged();
+}
+
+bool KCMColors::applyAccentColorFromWallpaper() const
+{
+    return colorsSettings()->accentColorFromWallpaper();
+}
+void KCMColors::setApplyAccentColorFromWallpaper(bool boolean)
+{
+    colorsSettings()->setAccentColorFromWallpaper(boolean);
     Q_EMIT settingsChanged();
 }
 
@@ -380,6 +401,7 @@ void KCMColors::saveColors()
 
     auto setGlobals = [=]() {
         globalConfig->group("General").writeEntry("AccentColor", QColor());
+        globalConfig->group("General").writeEntry("accentColorFromWallpaper", applyAccentColorFromWallpaper(), KConfig::Notify);
         if (accentColor() != QColor(Qt::transparent)) {
             globalConfig->group("General").writeEntry("AccentColor", accentColor(), KConfig::Notify);
         } else {
@@ -401,6 +423,25 @@ QColor KCMColors::accentBackground(const QColor &accent, const QColor &backgroun
 QColor KCMColors::accentForeground(const QColor &accent, const bool &isActive)
 {
     return ::accentForeground(accent, isActive);
+}
+
+void KCMColors::applyWallpaperAccentColor()
+{
+    QDBusMessage accentColor = QDBusMessage::createMethodCall("org.kde.plasmashell", "/PlasmaShell", "org.kde.PlasmaShell", "color");
+    auto const connection = QDBusConnection::connectToBus(QDBusConnection::SessionBus, "accentColorBus");
+    QDBusPendingCall async = connection.asyncCall(accentColor);
+    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(async, this);
+
+    QObject::connect(watcher, SIGNAL(finished(QDBusPendingCallWatcher *)), this, SLOT(wallpaperAccentColorArrivedSlot(QDBusPendingCallWatcher *)));
+}
+
+void KCMColors::wallpaperAccentColorArrivedSlot(QDBusPendingCallWatcher *call)
+{
+    QDBusPendingReply<QString> reply = *call;
+    if (!reply.isError()) {
+        setAccentColor(QColor(reply.value()));
+    }
+    call->deleteLater();
 }
 
 void KCMColors::processPendingDeletions()

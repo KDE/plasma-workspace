@@ -15,6 +15,12 @@
       <arg name="script" type="s" direction="in"/>
       <arg name="output" type="s" direction="out"/>
     </method>
+    <method name="color">
+      <arg name="output" type="s" direction="out"/>
+    </method>
+    <signal name="colorChanged">
+      <arg name="changedColor" type="s" direction="out"/>
+    </signal>
     <method name="dumpCurrentLayoutJS">
       <arg name="script" type="ay" direction="out"/>
     </method>

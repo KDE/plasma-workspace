@@ -9,6 +9,8 @@
 #include "krunner_interface.h"
 #include "shellcorona.h"
 
+#include <QDBusConnection>
+#include <QDBusMessage>
 #include <QQmlContext>
 #include <QQmlEngine>
 #include <QQuickItem>
@@ -34,6 +36,7 @@
 
 DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
     : PlasmaQuick::ContainmentView(corona, nullptr)
+    , m_accentColor("transparent")
     , m_windowType(Desktop)
     , m_shellSurface(nullptr)
 {
@@ -55,6 +58,7 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
     setSource(corona->kPackage().fileUrl("views", QStringLiteral("Desktop.qml")));
 
     connect(this, &QWindow::screenChanged, this, &DesktopView::adaptToScreen);
+    connect(this, &DesktopView::accentColorChanged, this, &DesktopView::setAccentColorFromWallpaper);
 
     QObject::connect(corona, &Plasma::Corona::kPackageChanged, this, &DesktopView::coronaPackageChanged);
 
@@ -123,6 +127,19 @@ void DesktopView::adaptToScreen()
     }
 
     m_oldScreen = m_screenToFollow;
+}
+
+QString DesktopView::accentColor() const
+{
+    return m_accentColor;
+}
+
+void DesktopView::setAccentColor(const QString &accentColor)
+{
+    if (accentColor != m_accentColor) {
+        m_accentColor = accentColor;
+        Q_EMIT accentColorChanged(m_accentColor);
+    }
 }
 
 DesktopView::WindowType DesktopView::windowType() const
@@ -371,4 +388,15 @@ void DesktopView::setupWaylandIntegration()
         m_shellSurface = interface->createSurface(s, this);
         m_shellSurface->setPosition(m_screenToFollow->geometry().topLeft());
     }
+}
+
+void DesktopView::setAccentColorFromWallpaper(const QString &accentColor)
+{
+    auto const notPrimaryDisplay = containment()->screen() != 0;
+    if (notPrimaryDisplay) {
+        return;
+    }
+    QDBusMessage applyAccentColor = QDBusMessage::createMethodCall("org.kde.plasmashell.accentColor", "/AccentColor", "", "setAccentColor");
+    applyAccentColor << accentColor;
+    QDBusConnection::sessionBus().send(applyAccentColor);
 }

@@ -1,0 +1,8 @@
+{
+    "KPlugin": {
+        "Description": "Applies extracted accent color from wallpaper on dbus request",
+        "Name": "accentColorService"
+    },
+    "X-KDE-FactoryName": "accentColorService",
+    "X-KDE-Kded-autoload": true
+}

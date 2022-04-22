@@ -30,6 +30,7 @@ class DesktopView : public PlasmaQuick::ContainmentView
     Q_PROPERTY(SessionType sessionType READ sessionType CONSTANT)
 
     Q_PROPERTY(QVariantMap candidateContainments READ candidateContainmentsGraphicItems NOTIFY candidateContainmentsChanged)
+    Q_PROPERTY(QString accentColor READ accentColor WRITE setAccentColor NOTIFY accentColorChanged)
 
 public:
     enum WindowType {
@@ -57,6 +58,8 @@ public:
 
     void adaptToScreen();
     void showEvent(QShowEvent *) override;
+    QString accentColor() const;
+    void setAccentColor(const QString &);
 
     WindowType windowType() const;
     void setWindowType(WindowType type);
@@ -85,13 +88,16 @@ Q_SIGNALS:
     void windowTypeChanged();
     void candidateContainmentsChanged();
     void geometryChanged();
+    void accentColorChanged(const QString &accentColor);
 
 private:
     void coronaPackageChanged(const KPackage::Package &package);
     void ensureWindowType();
     void setupWaylandIntegration();
+    void setAccentColorFromWallpaper(const QString &accentColor);
     bool handleKRunnerTextInput(QKeyEvent *e);
 
+    QString m_accentColor;
     QPointer<PlasmaQuick::ConfigView> m_configView;
     QPointer<QScreen> m_oldScreen;
     QPointer<QScreen> m_screenToFollow;

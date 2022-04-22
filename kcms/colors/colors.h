@@ -7,8 +7,10 @@
 
 #pragma once
 
+#include <KConfigWatcher>
 #include <KNSCore/EntryWrapper>
 #include <QColor>
+#include <QDBusPendingCallWatcher>
 #include <QPointer>
 #include <QScopedPointer>
 
@@ -40,8 +42,9 @@ class KCMColors : public KQuickAddons::ManagedConfigModule
     Q_PROPERTY(FilterProxyModel *filteredModel READ filteredModel CONSTANT)
     Q_PROPERTY(ColorsSettings *colorsSettings READ colorsSettings CONSTANT)
     Q_PROPERTY(bool downloadingFile READ downloadingFile NOTIFY downloadingFileChanged)
-
     Q_PROPERTY(QColor accentColor READ accentColor WRITE setAccentColor NOTIFY accentColorChanged)
+    Q_PROPERTY(bool applyAccentColorFromWallpaper READ applyAccentColorFromWallpaper WRITE setApplyAccentColorFromWallpaper NOTIFY
+                   applyAccentColorFromWallpaperChanged)
 
 public:
     KCMColors(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
@@ -66,6 +69,10 @@ public:
     void setAccentColor(const QColor &accentColor);
     void resetAccentColor();
     Q_SIGNAL void accentColorChanged();
+    Q_SIGNAL void applyAccentColorFromWallpaperChanged();
+
+    bool applyAccentColorFromWallpaper() const;
+    void setApplyAccentColorFromWallpaper(bool boolean);
 
     Q_INVOKABLE void installSchemeFromFile(const QUrl &url);
 
@@ -76,10 +83,14 @@ public:
     Q_INVOKABLE QColor tinted(const QColor& color, const QColor& accent, bool tints, qreal tintFactor);
     Q_INVOKABLE QColor accentBackground(const QColor &accent, const QColor &background);
     Q_INVOKABLE QColor accentForeground(const QColor &accent, const bool &isActive);
+    Q_INVOKABLE void applyWallpaperAccentColor();
 
 public Q_SLOTS:
     void load() override;
     void save() override;
+
+private Q_SLOTS:
+    void wallpaperAccentColorArrivedSlot(QDBusPendingCallWatcher *call);
 
 Q_SIGNALS:
     void downloadingFileChanged();
@@ -107,6 +118,7 @@ private:
     QProcess *m_editDialogProcess = nullptr;
 
     KSharedConfigPtr m_config;
+    KConfigWatcher::Ptr m_configWatcher;
 
     QScopedPointer<QTemporaryFile> m_tempInstallFile;
     QPointer<KIO::FileCopyJob> m_tempCopyJob;

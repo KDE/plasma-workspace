@@ -57,6 +57,8 @@ if (TARGET KUserFeedbackCore)
     )
 endif()
 
+kconfig_add_kcfg_files(plasma_shell_SRCS ../kcms/colors/colorssettings.kcfgc GENERATE_MOC)
+
 add_executable(plasmashell)
 if (QT_MAJOR_VERSION EQUAL "5")
     ecm_add_qtwayland_client_protocol(plasma_shell_SRCS
@@ -96,6 +98,7 @@ target_link_libraries(plasmashell
  KF5::Package
  KF5::WaylandClient
  KF5::Notifications
+ KF5::GuiAddons
  PW::KWorkspace
  Wayland::Client
 )

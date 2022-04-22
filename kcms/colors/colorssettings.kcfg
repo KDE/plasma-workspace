@@ -13,5 +13,9 @@
       <label>Accent color</label>
       <default>transparent</default>
     </entry>
+    <entry name="accentColorFromWallpaper" key="accentColorFromWallpaper" type="Bool">
+      <label>Whether accent color from wallpaper should be applied</label>
+      <default>false</default>
+    </entry>
   </group>
 </kcfg>

@@ -739,6 +739,7 @@ void ShellCorona::load()
     connect(m_screenPool, &ScreenPool::screenAdded, this, &ShellCorona::addOutput, Qt::UniqueConnection);
     connect(m_screenPool, &ScreenPool::screenRemoved, this, &ShellCorona::handleScreenRemoved, Qt::UniqueConnection);
     connect(m_screenPool, &ScreenPool::primaryScreenChanged, this, &ShellCorona::primaryScreenChanged, Qt::UniqueConnection);
+    connect(m_desktopViewForScreen[m_screenPool->primaryScreen()], &DesktopView::accentColorChanged, this, &ShellCorona::colorChanged);
 
     if (!m_waitingPanels.isEmpty()) {
         m_waitingPanelsTimer.start();
@@ -782,6 +783,9 @@ void ShellCorona::primaryScreenChanged(QScreen *oldPrimary, QScreen *newPrimary)
 
     // can't do the screen invariant here as reconsideroutputs wasn't executed yet
     // CHECK_SCREEN_INVARIANTS
+
+    // refresh the accent color signal binding
+    connect(m_desktopViewForScreen[m_screenPool->primaryScreen()], &DesktopView::accentColorChanged, this, &ShellCorona::colorChanged);
 }
 
 #ifndef NDEBUG
@@ -1417,6 +1421,15 @@ void ShellCorona::setDashboardShown(bool show)
 void ShellCorona::toggleDashboard()
 {
     setDashboardShown(!KWindowSystem::showingDesktop());
+}
+
+QString ShellCorona::color() const
+{
+    auto const primaryDesktopViewExists = m_desktopViewForScreen.contains(m_screenPool->primaryScreen());
+    if (primaryDesktopViewExists) {
+        return m_desktopViewForScreen[m_screenPool->primaryScreen()]->accentColor();
+    }
+    return QStringLiteral("#00FFFFFF");
 }
 
 QString ShellCorona::evaluateScript(const QString &script)
