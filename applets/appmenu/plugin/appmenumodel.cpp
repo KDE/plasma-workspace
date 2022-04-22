@@ -242,7 +242,7 @@ QVariant AppMenuModel::data(const QModelIndex &index, int role) const
         if (role == MenuRole) {
             return QString();
         } else if (role == ActionRole) {
-            return QVariant::fromValue((void *)(m_menu->menuAction()));
+            return QVariant::fromValue(m_menu->menuAction());
         }
     }
 
@@ -262,7 +262,7 @@ QVariant AppMenuModel::data(const QModelIndex &index, int role) const
     if (role == MenuRole) { // TODO this should be Qt::DisplayRole
         return actions.at(row)->text();
     } else if (role == ActionRole) {
-        return QVariant::fromValue((void *)actions.at(row));
+        return QVariant::fromValue(actions.at(row));
     }
 
     return QVariant();
