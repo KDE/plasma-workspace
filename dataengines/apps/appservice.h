@@ -22,7 +22,6 @@ class AppService : public Plasma::Service
 
 public:
     explicit AppService(AppSource *source);
-    ~AppService() override;
 
 protected:
     Plasma::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;

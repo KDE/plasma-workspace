@@ -30,7 +30,6 @@ class PowermanagementEngine : public Plasma::DataEngine
 
 public:
     PowermanagementEngine(QObject *parent, const QVariantList &args);
-    ~PowermanagementEngine() override;
     QStringList sources() const override;
     Plasma::Service *serviceForSource(const QString &source) override;
 

@@ -15,6 +15,7 @@
 #include <KConfigGroup>
 #include <KDesktopFile>
 #include <KDirWatch>
+#include <KService>
 #include <Plasma/DataContainer>
 #include <QDebug>
 #include <kdesktopfileactions.h>
@@ -45,9 +46,7 @@ HotplugEngine::HotplugEngine(QObject *parent, const QVariantList &args)
     init();
 }
 
-HotplugEngine::~HotplugEngine()
-{
-}
+HotplugEngine::~HotplugEngine() = default;
 
 void HotplugEngine::init()
 {

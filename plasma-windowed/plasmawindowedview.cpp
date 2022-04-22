@@ -20,8 +20,6 @@
 #include <KLocalizedString>
 #include <KStatusNotifierItem>
 
-#include <Plasma/Package>
-
 PlasmaWindowedView::PlasmaWindowedView(QWindow *parent)
     : QQuickView(parent)
     , m_applet(nullptr)

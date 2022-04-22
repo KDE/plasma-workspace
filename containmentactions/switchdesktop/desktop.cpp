@@ -9,6 +9,7 @@
 
 #include <virtualdesktopinfo.h>
 
+#include <KPluginFactory>
 #include <QAction>
 
 using namespace TaskManager;
@@ -111,7 +112,6 @@ void SwitchDesktop::performPreviousAction()
 
     m_virtualDesktopInfo->requestActivate(desktopIds.at(previousDesktopIndex));
 }
-
 K_PLUGIN_CLASS_WITH_JSON(SwitchDesktop, "plasma-containmentactions-switchdesktop.json")
 
 #include "desktop.moc"

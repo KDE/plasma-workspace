@@ -11,6 +11,8 @@
 #include "activityinfo.h"
 #include "tasksmodel.h"
 #include "virtualdesktopinfo.h"
+#include <KConfigGroup>
+#include <KPluginFactory>
 #include <QVariantMap>
 
 #include <QAction>

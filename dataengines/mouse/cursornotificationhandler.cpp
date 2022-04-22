@@ -40,10 +40,6 @@ CursorNotificationHandler::CursorNotificationHandler()
     }
 }
 
-CursorNotificationHandler::~CursorNotificationHandler()
-{
-}
-
 QString CursorNotificationHandler::cursorName()
 {
     if (!haveXfixes)

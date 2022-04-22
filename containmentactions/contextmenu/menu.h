@@ -7,6 +7,7 @@
 #pragma once
 
 #include <QButtonGroup>
+#include <QHash>
 #include <plasma/containmentactions.h>
 
 class SessionManagement;

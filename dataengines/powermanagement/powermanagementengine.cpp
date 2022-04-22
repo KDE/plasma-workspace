@@ -31,6 +31,7 @@
 #include <QDBusReply>
 
 #include "powermanagementservice.h"
+#include <KService>
 #include <Plasma/DataContainer>
 
 static const char SOLID_POWERMANAGEMENT_SERVICE[] = "org.kde.Solid.PowerManagement";
@@ -49,10 +50,6 @@ PowermanagementEngine::PowermanagementEngine(QObject *parent, const QVariantList
     qDBusRegisterMetaType<QList<QVariant>>();
     qDBusRegisterMetaType<QList<QVariantMap>>();
     init();
-}
-
-PowermanagementEngine::~PowermanagementEngine()
-{
 }
 
 void PowermanagementEngine::init()

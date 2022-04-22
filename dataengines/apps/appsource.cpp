@@ -32,10 +32,6 @@ AppSource::AppSource(const KService::Ptr &app, QObject *parent)
     updateApp();
 }
 
-AppSource::~AppSource()
-{
-}
-
 Plasma::Service *AppSource::createService()
 {
     return new AppService(this);

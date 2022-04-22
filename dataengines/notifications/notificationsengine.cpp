@@ -13,6 +13,7 @@
 #include <KConfig>
 #include <KConfigGroup>
 #include <KNotifyConfigWidget>
+#include <KService>
 #include <KSharedConfig>
 #include <QGuiApplication>
 #include <klocalizedstring.h>
@@ -30,10 +31,6 @@ NotificationsEngine::NotificationsEngine(QObject *parent, const QVariantList &ar
     : Plasma::DataEngine(parent, args)
 {
     init();
-}
-
-NotificationsEngine::~NotificationsEngine()
-{
 }
 
 void NotificationsEngine::init()

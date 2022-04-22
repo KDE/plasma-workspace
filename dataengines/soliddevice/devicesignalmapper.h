@@ -31,7 +31,6 @@ class DeviceSignalMapper : public QSignalMapper
 
 public:
     explicit DeviceSignalMapper(QObject *parent = nullptr);
-    ~DeviceSignalMapper() override;
 
     void setMapping(QObject *device, const QString &udi);
 
@@ -48,7 +47,6 @@ class BatterySignalMapper : public DeviceSignalMapper
 
 public:
     explicit BatterySignalMapper(QObject *parent = nullptr);
-    ~BatterySignalMapper() override;
 
 public Q_SLOTS:
     void chargePercentChanged(int value);
@@ -62,7 +60,6 @@ class StorageAccessSignalMapper : public DeviceSignalMapper
 
 public:
     explicit StorageAccessSignalMapper(QObject *parent = nullptr);
-    ~StorageAccessSignalMapper() override;
 
 public Q_SLOTS:
     void accessibilityChanged(bool accessible);

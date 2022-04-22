@@ -17,10 +17,6 @@ FaviconsEngine::FaviconsEngine(QObject *parent, const QVariantList &args)
 {
 }
 
-FaviconsEngine::~FaviconsEngine()
-{
-}
-
 bool FaviconsEngine::updateSourceEvent(const QString &identifier)
 {
     FaviconProvider *provider = new FaviconProvider(this, identifier);

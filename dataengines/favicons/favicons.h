@@ -23,7 +23,6 @@ class FaviconsEngine : public Plasma::DataEngine
 
 public:
     FaviconsEngine(QObject *parent, const QVariantList &args);
-    ~FaviconsEngine() override;
 
 protected:
     bool sourceRequestEvent(const QString &identifier) override;

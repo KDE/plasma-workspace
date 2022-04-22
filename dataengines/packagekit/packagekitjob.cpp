@@ -13,10 +13,6 @@ PackagekitJob::PackagekitJob(const QString &destination, const QString &operatio
 {
 }
 
-PackagekitJob::~PackagekitJob()
-{
-}
-
 void PackagekitJob::start()
 {
     const QString operation = operationName();

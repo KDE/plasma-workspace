@@ -11,10 +11,6 @@ DeviceSignalMapper::DeviceSignalMapper(QObject *parent)
 {
 }
 
-DeviceSignalMapper::~DeviceSignalMapper()
-{
-}
-
 void DeviceSignalMapper::setMapping(QObject *device, const QString &udi)
 {
     signalmap[device] = udi;
@@ -22,10 +18,6 @@ void DeviceSignalMapper::setMapping(QObject *device, const QString &udi)
 
 BatterySignalMapper::BatterySignalMapper(QObject *parent)
     : DeviceSignalMapper(parent)
-{
-}
-
-BatterySignalMapper::~BatterySignalMapper()
 {
 }
 
@@ -48,10 +40,6 @@ void BatterySignalMapper::presentStateChanged(bool newState)
 
 StorageAccessSignalMapper::StorageAccessSignalMapper(QObject *parent)
     : DeviceSignalMapper(parent)
-{
-}
-
-StorageAccessSignalMapper::~StorageAccessSignalMapper()
 {
 }
 

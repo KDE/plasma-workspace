@@ -31,10 +31,6 @@ KeyStatesEngine::KeyStatesEngine(QObject *parent, const QVariantList &args)
     init();
 }
 
-KeyStatesEngine::~KeyStatesEngine()
-{
-}
-
 void KeyStatesEngine::init()
 {
     const auto end = m_mods.constEnd();

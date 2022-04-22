@@ -11,9 +11,7 @@ DeviceAction::DeviceAction()
 {
 }
 
-DeviceAction::~DeviceAction()
-{
-}
+DeviceAction::~DeviceAction() = default;
 
 void DeviceAction::setIconName(const QString &iconName)
 {

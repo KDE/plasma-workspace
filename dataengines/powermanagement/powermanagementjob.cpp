@@ -24,10 +24,6 @@ PowerManagementJob::PowerManagementJob(const QString &operation, QMap<QString, Q
 {
 }
 
-PowerManagementJob::~PowerManagementJob()
-{
-}
-
 static void callWhenFinished(const QDBusPendingCall &pending, std::function<void(bool)> func, QObject *parent)
 {
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(pending, parent);

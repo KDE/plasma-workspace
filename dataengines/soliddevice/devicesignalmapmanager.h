@@ -16,7 +16,6 @@ class DeviceSignalMapManager : public QObject
 
 public:
     explicit DeviceSignalMapManager(QObject *parent = nullptr);
-    ~DeviceSignalMapManager() override;
 
     void mapDevice(Solid::Battery *battery, const QString &udi);
     void mapDevice(Solid::StorageAccess *storageaccess, const QString &udi);

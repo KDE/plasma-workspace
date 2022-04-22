@@ -16,10 +16,6 @@ AppService::AppService(AppSource *source)
     setName(QStringLiteral("apps"));
 }
 
-AppService::~AppService()
-{
-}
-
 Plasma::ServiceJob *AppService::createJob(const QString &operation, QMap<QString, QVariant> &parameters)
 {
     return new AppJob(m_source, operation, parameters, this);

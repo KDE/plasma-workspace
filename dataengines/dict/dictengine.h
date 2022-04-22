@@ -22,7 +22,6 @@ class DictEngine : public Plasma::DataEngine
 
 public:
     DictEngine(QObject *parent, const QVariantList &args);
-    ~DictEngine() override;
 
 protected:
     bool sourceRequestEvent(const QString &word) override;

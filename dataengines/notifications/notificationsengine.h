@@ -32,7 +32,6 @@ class NotificationsEngine : public Plasma::DataEngine
 
 public:
     NotificationsEngine(QObject *parent, const QVariantList &args);
-    ~NotificationsEngine() override;
 
     virtual void init();
 

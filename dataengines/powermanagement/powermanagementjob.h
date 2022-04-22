@@ -18,7 +18,6 @@ class PowerManagementJob : public Plasma::ServiceJob
 
 public:
     PowerManagementJob(const QString &operation, QMap<QString, QVariant> &parameters, QObject *parent = nullptr);
-    ~PowerManagementJob() override;
 
 protected:
     void start() override;

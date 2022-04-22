@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include <QDBusMessage>
 #include <QDBusSignature>
 #include <QList>
 #include <QMap>

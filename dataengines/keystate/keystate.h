@@ -21,7 +21,6 @@ class KeyStatesEngine : public Plasma::DataEngine
 
 public:
     KeyStatesEngine(QObject *parent, const QVariantList &args);
-    ~KeyStatesEngine() override;
 
     void init();
     Plasma::Service *serviceForSource(const QString &source) override;

@@ -25,10 +25,6 @@ DictEngine::DictEngine(QObject *parent, const QVariantList &args)
     m_dictName = QLatin1String("wn"); // Default, good dictionary
 }
 
-DictEngine::~DictEngine()
-{
-}
-
 void DictEngine::setDict(const QString &dict)
 {
     m_dictName = dict;

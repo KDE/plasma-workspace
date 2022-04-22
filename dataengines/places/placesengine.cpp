@@ -21,10 +21,6 @@ PlacesEngine::PlacesEngine(QObject *parent, const QVariantList &args)
     setModel(QStringLiteral("places"), m_proxyModel);
 }
 
-PlacesEngine::~PlacesEngine()
-{
-}
-
 Plasma::Service *PlacesEngine::serviceForSource(const QString &source)
 {
     if (source == QLatin1String("places")) {

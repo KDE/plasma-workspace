@@ -12,10 +12,6 @@ DeviceSignalMapManager::DeviceSignalMapManager(QObject *parent)
     user = parent;
 }
 
-DeviceSignalMapManager::~DeviceSignalMapManager()
-{
-}
-
 void DeviceSignalMapManager::mapDevice(Solid::Battery *battery, const QString &udi)
 {
     BatterySignalMapper *map = nullptr;

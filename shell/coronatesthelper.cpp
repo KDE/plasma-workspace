@@ -7,6 +7,7 @@
 #include "coronatesthelper.h"
 #include "debug.h"
 
+#include <KPackage/Package>
 #include <PlasmaQuick/AppletQuickItem>
 
 using namespace Plasma;
@@ -43,7 +44,7 @@ void CoronaTestHelper::processApplet(Plasma::Applet *applet)
 
     auto testObject = obj->testItem();
     if (!testObject) {
-        qCWarning(PLASMASHELL) << "no test for" << applet->title() << applet->kPackage().path();
+        qCWarning(PLASMASHELL) << "no test for" << applet->title() << applet->pluginMetaData().metaDataFileName();
         return;
     }
     integrateTest(testObject);

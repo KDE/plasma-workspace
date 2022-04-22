@@ -17,10 +17,6 @@ DeviceNotificationsEngine::DeviceNotificationsEngine(QObject *parent, const QVar
     connect(m_solidNotify, &KSolidNotify::clearNotification, this, &DeviceNotificationsEngine::clearNotification);
 }
 
-DeviceNotificationsEngine::~DeviceNotificationsEngine()
-{
-}
-
 void DeviceNotificationsEngine::notify(Solid::ErrorType solidError, const QString &error, const QString &errorDetails, const QString &udi)
 {
     const QString source = QStringLiteral("%1 notification").arg(udi);
