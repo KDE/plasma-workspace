@@ -115,7 +115,7 @@ PreviewWidget::PreviewWidget(QQuickItem *parent)
     setAcceptHoverEvents(true);
     current = nullptr;
     connect(&m_animationTimer, &QTimer::timeout, this, [this] {
-        setCursor(QPixmap::fromImage(current->images().at(nextAnimationFrame).image));
+        setCursor(QCursor(QPixmap::fromImage(current->images().at(nextAnimationFrame).image)));
         m_animationTimer.setInterval(current->images().at(nextAnimationFrame).delay);
         nextAnimationFrame = (nextAnimationFrame + 1) % current->images().size();
     });
@@ -282,7 +282,7 @@ void PreviewWidget::hoverMoveEvent(QHoverEvent *e)
     }
 
     if (current->images().size() <= 1) {
-        setCursor(current->pixmap());
+        setCursor(QCursor(current->pixmap()));
         return;
     }
 
