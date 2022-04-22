@@ -15,7 +15,6 @@
 #include <KPropertiesDialog>
 #include <QApplication>
 #include <QContextMenuEvent>
-#include <QDesktopWidget>
 #include <QDialogButtonBox>
 #include <QDir>
 #include <QFileInfo>
@@ -27,7 +26,9 @@
 #include <QMimeDatabase>
 #include <QProcess>
 #include <QPushButton>
+#include <QScreen>
 #include <QVBoxLayout>
+#include <QWindow>
 
 namespace KFI
 {
@@ -155,7 +156,7 @@ void CDuplicatesDialog::scanFinished()
                 width += m_view->header()->sectionSize(i);
             }
 
-            width = qMin(QApplication::desktop()->screenGeometry(this).width(), width);
+            width = qMin(windowHandle()->screen()->size().width(), width);
             resize(width, height());
             QSize sizeNow(size());
             if (sizeNow.width() > sizeB4.width()) {
