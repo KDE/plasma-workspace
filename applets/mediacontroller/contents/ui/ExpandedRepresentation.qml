@@ -230,8 +230,22 @@ PlasmaExtras.Representation {
                     replaceExit: Transition {
                         id: exitTransition
 
-                        PauseAnimation {
-                            duration: PlasmaCore.Units.longDuration
+                        SequentialAnimation {
+                            PauseAnimation {
+                                duration: PlasmaCore.Units.longDuration
+                            }
+
+                            /**
+                            * If the new ratio and the old ratio are different,
+                            * perform a fade-out animation for the old image
+                            * to prevent it from suddenly disappearing.
+                            */
+                            OpacityAnimator {
+                                id: exitTransitionOpacityAnimator
+                                from: 1
+                                to: 0
+                                duration: 0
+                            }
                         }
                     }
 
@@ -273,6 +287,7 @@ PlasmaExtras.Representation {
                             return;
                         }
 
+                        const oldImageRatio = albumArt.currentItem instanceof Image ? albumArt.currentItem.sourceSize.width / albumArt.currentItem.sourceSize.height : 1;
                         const pendingImage = albumArtComponent.createObject(albumArt, {
                             "source": root.albumArt,
                             "opacity": 0,
@@ -290,6 +305,10 @@ PlasmaExtras.Representation {
 
                                 return;
                             }
+
+                            const newImageRatio = pendingImage.sourceSize.width / pendingImage.sourceSize.height;
+                            exitTransitionOpacityAnimator.duration = oldImageRatio === newImageRatio ? 0 : PlasmaCore.Units.longDuration;
+
                             albumArt.replace(pendingImage, {}, QQC2.StackView.ReplaceTransition);
                             pendingImage.statusChanged.disconnect(replaceWhenLoaded);
                         }
