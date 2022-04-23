@@ -156,7 +156,7 @@ PlasmaExtras.Representation {
             }
 
             anchors.centerIn: parent
-            visible: (exitTransition.running || albumArt.hasImage) && !softwareRendering
+            visible: (exitTransition.running || popExitTransition.running || albumArt.hasImage) && !softwareRendering
 
             layer.enabled: !softwareRendering
             layer.effect: HueSaturation {
@@ -235,6 +235,16 @@ PlasmaExtras.Representation {
                         }
                     }
 
+                    popExit: Transition {
+                        id: popExitTransition
+
+                        OpacityAnimator {
+                            from: 1
+                            to: 0
+                            duration: PlasmaCore.Units.longDuration
+                        }
+                    }
+
                     Connections {
                         enabled: Plasmoid.expanded
                         target: root
@@ -259,7 +269,7 @@ PlasmaExtras.Representation {
 
                     function loadAlbumArt() {
                         if (!root.albumArt) {
-                            albumArt.clear(QQC2.StackView.ReplaceTransition);
+                            albumArt.clear(QQC2.StackView.PopTransition);
                             return;
                         }
 
@@ -274,6 +284,10 @@ PlasmaExtras.Representation {
                             }
                             if (pendingImage.status === Image.Null || pendingImage.status === Image.Error) {
                                 pendingImage.destroy();
+
+                                // Also clear the old image
+                                albumArt.clear(QQC2.StackView.PopTransition);
+
                                 return;
                             }
                             albumArt.replace(pendingImage, {}, QQC2.StackView.ReplaceTransition);
