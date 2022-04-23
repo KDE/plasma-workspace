@@ -230,9 +230,7 @@ PlasmaExtras.Representation {
                     replaceExit: Transition {
                         id: exitTransition
 
-                        OpacityAnimator {
-                            from: 1
-                            to: 0
+                        PauseAnimation {
                             duration: PlasmaCore.Units.longDuration
                         }
                     }
