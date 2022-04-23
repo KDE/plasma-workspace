@@ -81,7 +81,7 @@ kconfig_add_kcfg_files(plasma-apply-colorscheme_SRCS colorssettings.kcfgc GENERA
 kconfig_add_kcfg_files(plasma-accentcolor-service_SRCS colorssettings.kcfgc GENERATE_MOC)
 
 add_executable(plasma-apply-colorscheme ${plasma-apply-colorscheme_SRCS})
-kcoreaddons_add_plugin(plasma-accentcolor-service SOURCES ${plasma-accentcolor-service_SRCS} INSTALL_NAMESPACE "kf${QT_MAJOR_VERSION}/kded")
+kcoreaddons_add_plugin(plasma_accentcolor_service SOURCES ${plasma-accentcolor-service_SRCS} INSTALL_NAMESPACE "kf${QT_MAJOR_VERSION}/kded")
 
 target_link_libraries(plasma-apply-colorscheme
     Qt::Core
@@ -95,7 +95,7 @@ target_link_libraries(plasma-apply-colorscheme
     X11::X11
 )
 
-target_link_libraries(plasma-accentcolor-service
+target_link_libraries(plasma_accentcolor_service
     Qt::Core
     Qt::DBus
     KF5::GuiAddons
@@ -116,9 +116,9 @@ else()
 endif()
 
 if (QT_MAJOR_VERSION EQUAL "5")
-    target_link_libraries(plasma-accentcolor-service Qt::X11Extras)
+    target_link_libraries(plasma_accentcolor_service Qt::X11Extras)
 else()
-    target_link_libraries(plasma-accentcolor-service Qt::GuiPrivate)
+    target_link_libraries(plasma_accentcolor_service Qt::GuiPrivate)
 endif()
 
 install(FILES colorssettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
