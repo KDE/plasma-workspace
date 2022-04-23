@@ -286,9 +286,8 @@ KCM.GridViewKCM {
                     ColorRadioButton {
                         id: customColorIndicator
 
-                        property bool isCustomColor: root.accentColor ?
-                                                        !colorRepeater.model.some(color => Qt.colorEqual(color, root.accentColor))
-                                                        : false
+                        property bool isCustomColor: root.accentColor
+                            && !colorRepeater.model.some(color => Qt.colorEqual(color, root.accentColor))
 
                        /* The qt binding will keep the binding alive as well as uncheck the button
                         * we can't just disable the button because then the icon will become grey
