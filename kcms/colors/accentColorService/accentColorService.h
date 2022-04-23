@@ -6,7 +6,6 @@
 
 #pragma once
 
-#include "colorsmodel.h"
 #include "colorssettings.h"
 
 #include <kdedmodule.h>
@@ -23,5 +22,4 @@ public Q_SLOTS:
 
 private:
     ColorsSettings *m_settings;
-    ColorsModel *m_model;
 };

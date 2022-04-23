@@ -18,7 +18,6 @@ qt_generate_dbus_interface(
 set(plasma-accentcolor-service_SRCS
     accentColorService/accentColorService.cpp
     colorsapplicator.cpp
-    colorsmodel.cpp
     ../kcms-common.cpp
     ../krdb/krdb.cpp
 )

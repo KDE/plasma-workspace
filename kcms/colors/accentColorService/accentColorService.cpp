@@ -17,7 +17,6 @@ K_PLUGIN_CLASS_WITH_JSON(AccentColorService, "accentColorService.json")
 AccentColorService::AccentColorService(QObject *parent, const QList<QVariant> &)
     : KDEDModule(parent)
     , m_settings(new ColorsSettings(this))
-    , m_model(new ColorsModel(this))
 {
     new AccentColorServiceAdaptor(this);
     QDBusConnection dbus = QDBusConnection::sessionBus();
@@ -29,10 +28,8 @@ void AccentColorService::setAccentColor(const QString &accentColor)
 {
     m_settings->load();
     if (QColor::isValidColor(accentColor) && m_settings->accentColorFromWallpaper()) {
-        m_model->load();
-        m_model->setSelectedScheme(m_settings->colorScheme());
         const QString path =
-            QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("color-schemes/%1.colors").arg(m_model->selectedScheme()));
+            QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("color-schemes/%1.colors").arg(m_settings->colorScheme()));
 
         auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KWin"),
                                                   QStringLiteral("/org/kde/KWin/BlendChanges"),
