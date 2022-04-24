@@ -452,11 +452,11 @@ void WidgetExplorer::immutabilityChanged(Plasma::Types::ImmutabilityType type)
 
 void WidgetExplorer::downloadWidgets()
 {
-    if (WidgetExplorerPrivate::newStuffDialog.isNull()) {
-        WidgetExplorerPrivate::newStuffDialog = new KNS3::QtQuickDialogWrapper(QStringLiteral("plasmoids.knsrc"));
-        connect(WidgetExplorerPrivate::newStuffDialog, &KNS3::QtQuickDialogWrapper::closed, WidgetExplorerPrivate::newStuffDialog, &QObject::deleteLater);
+    if (d->newStuffDialog.isNull()) {
+        d->newStuffDialog = new KNS3::QtQuickDialogWrapper(QStringLiteral("plasmoids.knsrc"));
+        connect(d->newStuffDialog, &KNS3::QtQuickDialogWrapper::closed, d->newStuffDialog, &QObject::deleteLater);
 
-        WidgetExplorerPrivate::newStuffDialog->open();
+        d->newStuffDialog->open();
     }
 
     Q_EMIT shouldClose();
