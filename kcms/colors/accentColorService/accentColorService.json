@@ -1,7 +1,23 @@
 {
     "KPlugin": {
         "Description": "Applies extracted accent color from wallpaper on dbus request",
-        "Name": "accentColorService"
+        "Description[az]": "Divar kağızından alınmış vurğu rəngini DBus sorğusuna tətbiq edir",
+        "Description[ca]": "Aplicar el color d'accent extret a partir del fons de pantalla a petició del D-Bus",
+        "Description[en_GB]": "Applies extracted accent colour from wallpaper on dbus request",
+        "Description[es]": "Aplica el color de acentuación extraído del fondo de pantalla en una petición D-Bus",
+        "Description[nl]": "Past de uitgepakte accentkleur uit achtergrondafbeelding toe op dbus-verzoek",
+        "Description[tr]": "dbus isteğinde, duvar kağıdından çıkarılan vurgu rengini uygular",
+        "Description[uk]": "Застосовує видобутий з фонового зображення стільниці колір акценту у відповідь на запит DBus",
+        "Description[x-test]": "xxApplies extracted accent color from wallpaper on dbus requestxx",
+        "Name": "accentColorService",
+        "Name[az]": "vurğu_rəngi_xidməti",
+        "Name[ca]": "ServeiColorAccent",
+        "Name[en_GB]": "accentColorService",
+        "Name[es]": "Servicio de color de acentuación",
+        "Name[nl]": "accentColorService",
+        "Name[tr]": "accentColorService",
+        "Name[uk]": "accentColorService",
+        "Name[x-test]": "xxaccentColorServicexx"
     },
     "X-KDE-FactoryName": "accentColorService",
     "X-KDE-Kded-autoload": true
