@@ -9,7 +9,7 @@ set(kcm_colors_SRCS
     filterproxymodel.cpp
 )
 
-qt5_generate_dbus_interface(
+qt_generate_dbus_interface(
     accentColorService/accentColorService.h
     org.kde.plasmashell.accentColor.xml
     OPTIONS -M
@@ -29,7 +29,7 @@ set(plasma-accentcolor-service_SRCS
     ${CMAKE_CURRENT_BINARY_DIR}/org.kde.plasmashell.accentColor.xml
 )
 
-qt5_add_dbus_adaptor(plasma-accentcolor-service_SRCS ${CMAKE_CURRENT_BINARY_DIR}/org.kde.plasmashell.accentColor.xml
+qt_add_dbus_adaptor(plasma-accentcolor-service_SRCS ${CMAKE_CURRENT_BINARY_DIR}/org.kde.plasmashell.accentColor.xml
                      accentColorService/accentColorService.h AccentColorService
                      accentcolor_service_adaptor AccentColorServiceAdaptor)
 
