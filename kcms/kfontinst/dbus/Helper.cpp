@@ -10,6 +10,7 @@
 #include "FontInst.h"
 #include "Misc.h"
 #include "Utils.h"
+#include <KAuth/HelperSupport>
 #include <QCoreApplication>
 #include <QDebug>
 #include <QDomDocument>

@@ -11,7 +11,10 @@
 #include "fontinstadaptor.h"
 #include "kfontinst_debug.h"
 
-#include <KAuth>
+#include <KAuth/Action>
+#include <KAuth/ActionReply>
+#include <KAuth/ExecuteJob>
+#include <KAuth/HelperSupport>
 #include <QDebug>
 #include <QTimer>
 #include <fontconfig/fontconfig.h>

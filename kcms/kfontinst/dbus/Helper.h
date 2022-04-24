@@ -5,7 +5,7 @@
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-#include <KAuth>
+#include <KAuth/ActionReply>
 #include <QObject>
 #include <QSet>
 
