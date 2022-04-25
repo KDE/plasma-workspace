@@ -1,20 +1,33 @@
 #include "clock.h"
 
-// Note this class works against a single timezone, don't think about adding hours here!
+#include <QTimer>
+
+/**
+ * Singleton class that notifies every time a second or minute passes
+ * Signals are emitted as close as possible to the system clock
+ * Skews (e.g from suspend) are detected automatically
+ */
+// Note this class works against UTC, don't think about adding hoursChanged here
 class SystemTicker : public QObject
 {
 public:
-    static QSharedPointer<SystemTicker> createTickerForInterval(int intervalMs);
+    static SystemTicker *instance();
+
+Q_SIGNALS:
+    void secondChanged();
+    void minuteChanged();
+
+protected:
+    void connectNotify(const QMetaMethod &signal) override;
+    void disconnectNotify(const QMetaMethod &signal) override;
 
 private:
-    SystemTicker(int intervalMs);
-Q_SIGNALS:
-    /**
-     * This signal is fired every time either:
-     *  - the interval fires
-     *  - the underlying system clock changes
-     */
-    void tick();
+    void setupTimer();
+    SystemTicker();
+    QTimer m_timer;
+    QDateTime m_lastTime;
+    int secondsWatchingCount = 0;
+    int minutesWatchingCount = 0;
 };
 
 Clock::Clock(QObject *parent)
