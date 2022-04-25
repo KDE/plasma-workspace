@@ -16,12 +16,12 @@ qt_generate_dbus_interface(
 )
 
 set(plasma-accentcolor-service_SRCS
+    ../kcms-common.cpp
     accentColorService/accentColorService.cpp
     colorsapplicator.cpp
     ../kcms-common.cpp
-    ../krdb/krdb.cpp
+    colorsmodel.cpp
 )
-
 
 set(plasma-accentcolor-service_SRCS
     ${plasma-accentcolor-service_SRCS}
@@ -69,11 +69,10 @@ if(X11_FOUND)
 endif()
 
 set(plasma-apply-colorscheme_SRCS
+    ../kcms-common.cpp
     plasma-apply-colorscheme.cpp
     colorsapplicator.cpp
     colorsmodel.cpp
-    ../kcms-common.cpp
-    ../krdb/krdb.cpp
 )
 
 kconfig_add_kcfg_files(plasma-apply-colorscheme_SRCS colorssettings.kcfgc GENERATE_MOC)
@@ -85,28 +84,21 @@ kcoreaddons_add_plugin(plasma_accentcolor_service SOURCES ${plasma-accentcolor-s
 target_link_libraries(plasma-apply-colorscheme
     Qt::Core
     Qt::DBus
-    Qt::Gui
+    KF5::ConfigWidgets
     KF5::GuiAddons
-    KF5::KCMUtils
     KF5::I18n
-    KF5::WindowSystem
-    PW::KWorkspace
-    X11::X11
+    krdb
 )
 
 target_link_libraries(plasma_accentcolor_service
     Qt::Core
     Qt::DBus
-    KF5::GuiAddons
-    KF5::KCMUtils
-    KF5::I18n
-    KF5::WindowSystem
-    KF5::ConfigCore
+    KF5::ConfigWidgets
     KF5::DBusAddons
-    PW::KWorkspace
-    X11::X11
+    KF5::GuiAddons
+    KF5::I18n
+    krdb
 )
-
 
 if (QT_MAJOR_VERSION EQUAL "5")
     target_link_libraries(plasma-apply-colorscheme Qt::X11Extras)
