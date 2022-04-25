@@ -445,17 +445,37 @@ void LauncherTasksModel::setLauncherList(const QStringList &serializedLaunchers)
         }
     }
 
-    if (newLaunchersOrder != d->launchersOrder || newActivitiesForLauncher != d->activitiesForLauncher) {
-        beginResetModel();
+    if (newLaunchersOrder != d->launchersOrder) {
+        // Use Remove/Insert to update the manual sort map in TasksModel
+        if (!d->launchersOrder.empty()) {
+            beginRemoveRows(QModelIndex(), 0, d->launchersOrder.size() - 1);
 
-        std::swap(newLaunchersOrder, d->launchersOrder);
-        std::swap(newActivitiesForLauncher, d->activitiesForLauncher);
+            d->launchersOrder.clear();
+            d->activitiesForLauncher.clear();
 
-        d->appDataCache.clear();
+            endRemoveRows();
+        }
 
-        endResetModel();
+        if (!newLaunchersOrder.empty()) {
+            beginInsertRows(QModelIndex(), 0, newLaunchersOrder.size() - 1);
+
+            d->launchersOrder = newLaunchersOrder;
+            d->activitiesForLauncher = newActivitiesForLauncher;
+
+            endInsertRows();
+        }
 
         Q_EMIT launcherListChanged();
+
+    } else if (newActivitiesForLauncher != d->activitiesForLauncher) {
+        for (int i = 0; i < d->launchersOrder.size(); i++) {
+            const QUrl &url = d->launchersOrder.at(i);
+
+            if (d->activitiesForLauncher[url] != newActivitiesForLauncher[url]) {
+                d->activitiesForLauncher[url] = newActivitiesForLauncher[url];
+                Q_EMIT dataChanged(index(i, 0), index(i, 0), {Activities});
+            }
+        }
     }
 }
 
