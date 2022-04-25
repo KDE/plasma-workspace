@@ -18,6 +18,7 @@ set(digitalclockplugin_SRCS
     digitalclockplugin.h
     clipboardmenu.h
     applicationintegration.h
+    clock.cpp
     )
 
 add_library(digitalclockplugin SHARED ${digitalclockplugin_SRCS})
