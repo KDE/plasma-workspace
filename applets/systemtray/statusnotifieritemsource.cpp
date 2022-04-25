@@ -287,16 +287,17 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
         QIcon overlay;
         QStringList overlayNames;
 
-        // Icon
+        // Overlay icon
         {
-            QIcon icon;
-            QString iconName;
+            m_overlayIconName = QString();
 
-            // Prefer icon over pixmap. If the icon is unavailable fallback to pixmap.
-            m_overlayIconName = properties[QStringLiteral("OverlayIconName")].toString();
-            if (!m_overlayIconName.isEmpty()) {
-                overlayNames << m_overlayIconName;
-                overlay = QIcon(new KIconEngine(m_overlayIconName, iconLoader()));
+            const QString iconName = properties[QStringLiteral("OverlayIconName")].toString();
+            if (!iconName.isEmpty()) {
+                overlay = QIcon(new KIconEngine(iconName, iconLoader()));
+                if (!overlay.isNull()) {
+                    m_overlayIconName = iconName;
+                    overlayNames << iconName;
+                }
             }
             if (overlay.isNull()) {
                 KDbusImageVector image;
@@ -305,53 +306,60 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
                     overlay = imageVectorToPixmap(image);
                 }
             }
+        }
 
-            // Prefer icon over pixmap. If the icon is unavailable fallback to pixmap.
-            iconName = properties[QStringLiteral("IconName")].toString();
+        // Icon
+        {
+            m_icon = QIcon();
+            m_iconName = QString();
+
+            const QString iconName = properties[QStringLiteral("IconName")].toString();
             if (!iconName.isEmpty()) {
-                icon = QIcon(new KIconEngine(iconName, iconLoader(), overlayNames));
-                if (!icon.isNull() && !overlay.isNull() && overlayNames.isEmpty()) {
-                    overlayIcon(&icon, &overlay);
-                }
-            }
-            if (icon.isNull()) {
-                KDbusImageVector image;
-                properties[QStringLiteral("IconPixmap")].value<QDBusArgument>() >> image;
-                if (!image.isEmpty()) {
-                    icon = imageVectorToPixmap(image);
-                    if (!icon.isNull() && !overlay.isNull()) {
-                        overlayIcon(&icon, &overlay);
+                m_icon = QIcon(new KIconEngine(iconName, iconLoader(), overlayNames));
+                if (!m_icon.isNull()) {
+                    m_iconName = iconName;
+                    if (!overlay.isNull() && overlayNames.isEmpty()) {
+                        overlayIcon(&m_icon, &overlay);
                     }
                 }
             }
-
-            m_icon = icon;
-            m_iconName = iconName;
+            if (m_icon.isNull()) {
+                KDbusImageVector image;
+                properties[QStringLiteral("IconPixmap")].value<QDBusArgument>() >> image;
+                if (!image.isEmpty()) {
+                    m_icon = imageVectorToPixmap(image);
+                    if (!m_icon.isNull() && !overlay.isNull()) {
+                        overlayIcon(&m_icon, &overlay);
+                    }
+                }
+            }
         }
 
         // Attention icon
         {
-            QIcon attentionIcon;
+            m_attentionIcon = QIcon();
+            m_attentionIconName = QString();
 
-            m_attentionIconName = properties[QStringLiteral("AttentionIconName")].toString();
-            if (!m_attentionIconName.isEmpty()) {
-                attentionIcon = QIcon(new KIconEngine(m_attentionIconName, iconLoader(), overlayNames));
-                if (!attentionIcon.isNull() && !overlay.isNull() && overlayNames.isEmpty()) {
-                    overlayIcon(&attentionIcon, &overlay);
-                }
-            }
-            if (attentionIcon.isNull()) {
-                KDbusImageVector image;
-                properties[QStringLiteral("AttentionIconPixmap")].value<QDBusArgument>() >> image;
-                if (!image.isEmpty()) {
-                    attentionIcon = imageVectorToPixmap(image);
-                    if (!attentionIcon.isNull() && !overlay.isNull()) {
-                        overlayIcon(&attentionIcon, &overlay);
+            const QString iconName = properties[QStringLiteral("AttentionIconName")].toString();
+            if (!iconName.isEmpty()) {
+                m_attentionIcon = QIcon(new KIconEngine(iconName, iconLoader(), overlayNames));
+                if (!m_attentionIcon.isNull()) {
+                    m_attentionIconName = iconName;
+                    if (!overlay.isNull() && overlayNames.isEmpty()) {
+                        overlayIcon(&m_attentionIcon, &overlay);
                     }
                 }
             }
-
-            m_attentionIcon = attentionIcon;
+            if (m_attentionIcon.isNull()) {
+                KDbusImageVector image;
+                properties[QStringLiteral("AttentionIconPixmap")].value<QDBusArgument>() >> image;
+                if (!image.isEmpty()) {
+                    m_attentionIcon = imageVectorToPixmap(image);
+                    if (!m_attentionIcon.isNull() && !overlay.isNull()) {
+                        overlayIcon(&m_attentionIcon, &overlay);
+                    }
+                }
+            }
         }
 
         // ToolTip
