@@ -288,64 +288,68 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
 
         // Icon
         {
-            KDbusImageVector image;
             QIcon icon;
             QString iconName;
 
-            properties[QStringLiteral("OverlayIconPixmap")].value<QDBusArgument>() >> image;
-            if (image.isEmpty()) {
-                QString iconName = properties[QStringLiteral("OverlayIconName")].toString();
-                m_overlayIconName = iconName;
-                if (!iconName.isEmpty()) {
-                    overlayNames << iconName;
-                    overlay = QIcon(new KIconEngine(iconName, iconLoader()));
+            // Prefer icon over pixmap. If the icon is unavailable fallback to pixmap.
+            m_overlayIconName = properties[QStringLiteral("OverlayIconName")].toString();
+            if (!m_overlayIconName.isEmpty()) {
+                overlayNames << m_overlayIconName;
+                overlay = QIcon(new KIconEngine(m_overlayIconName, iconLoader()));
+            }
+            if (overlay.isNull()) {
+                KDbusImageVector image;
+                properties[QStringLiteral("OverlayIconPixmap")].value<QDBusArgument>() >> image;
+                if (!image.isEmpty()) {
+                    overlay = imageVectorToPixmap(image);
                 }
-            } else {
-                overlay = imageVectorToPixmap(image);
             }
 
-            properties[QStringLiteral("IconPixmap")].value<QDBusArgument>() >> image;
-            if (image.isEmpty()) {
-                iconName = properties[QStringLiteral("IconName")].toString();
-                if (!iconName.isEmpty()) {
-                    icon = QIcon(new KIconEngine(iconName, iconLoader(), overlayNames));
-
-                    if (overlayNames.isEmpty() && !overlay.isNull()) {
-                        overlayIcon(&icon, &overlay);
-                    }
-                }
-            } else {
-                icon = imageVectorToPixmap(image);
-                if (!icon.isNull() && !overlay.isNull()) {
+            // Prefer icon over pixmap. If the icon is unavailable fallback to pixmap.
+            iconName = properties[QStringLiteral("IconName")].toString();
+            if (!iconName.isEmpty()) {
+                icon = QIcon(new KIconEngine(iconName, iconLoader(), overlayNames));
+                if (!icon.isNull() && !overlay.isNull() && overlayNames.isEmpty()) {
                     overlayIcon(&icon, &overlay);
                 }
             }
+            if (icon.isNull()) {
+                KDbusImageVector image;
+                properties[QStringLiteral("IconPixmap")].value<QDBusArgument>() >> image;
+                if (!image.isEmpty()) {
+                    icon = imageVectorToPixmap(image);
+                    if (!icon.isNull() && !overlay.isNull()) {
+                        overlayIcon(&icon, &overlay);
+                    }
+                }
+            }
+
             m_icon = icon;
             m_iconName = iconName;
         }
 
         // Attention icon
         {
-            KDbusImageVector image;
             QIcon attentionIcon;
 
-            properties[QStringLiteral("AttentionIconPixmap")].value<QDBusArgument>() >> image;
-            if (image.isEmpty()) {
-                QString iconName = properties[QStringLiteral("AttentionIconName")].toString();
-                m_attentionIconName = iconName;
-                if (!iconName.isEmpty()) {
-                    attentionIcon = QIcon(new KIconEngine(iconName, iconLoader(), overlayNames));
-
-                    if (overlayNames.isEmpty() && !overlay.isNull()) {
-                        overlayIcon(&attentionIcon, &overlay);
-                    }
-                }
-            } else {
-                attentionIcon = imageVectorToPixmap(image);
-                if (!attentionIcon.isNull() && !overlay.isNull()) {
+            m_attentionIconName = properties[QStringLiteral("AttentionIconName")].toString();
+            if (!m_attentionIconName.isEmpty()) {
+                attentionIcon = QIcon(new KIconEngine(m_attentionIconName, iconLoader(), overlayNames));
+                if (!attentionIcon.isNull() && !overlay.isNull() && overlayNames.isEmpty()) {
                     overlayIcon(&attentionIcon, &overlay);
                 }
             }
+            if (attentionIcon.isNull()) {
+                KDbusImageVector image;
+                properties[QStringLiteral("AttentionIconPixmap")].value<QDBusArgument>() >> image;
+                if (!image.isEmpty()) {
+                    attentionIcon = imageVectorToPixmap(image);
+                    if (!attentionIcon.isNull() && !overlay.isNull()) {
+                        overlayIcon(&attentionIcon, &overlay);
+                    }
+                }
+            }
+
             m_attentionIcon = attentionIcon;
         }
 
