@@ -446,23 +446,42 @@ void LauncherTasksModel::setLauncherList(const QStringList &serializedLaunchers)
     }
 
     if (newLaunchersOrder != d->launchersOrder) {
-        // Use Remove/Insert to update the manual sort map in TasksModel
-        if (!d->launchersOrder.empty()) {
-            beginRemoveRows(QModelIndex(), 0, d->launchersOrder.size() - 1);
+        const bool isOrderChanged = std::all_of(newLaunchersOrder.cbegin(),
+                                                newLaunchersOrder.cend(),
+                                                [this](const QUrl &url) {
+                                                    return d->launchersOrder.contains(url);
+                                                })
+            && newLaunchersOrder.size() == d->launchersOrder.size();
 
-            d->launchersOrder.clear();
-            d->activitiesForLauncher.clear();
+        if (isOrderChanged) {
+            for (int i = 0; i < newLaunchersOrder.size(); i++) {
+                int oldRow = d->launchersOrder.indexOf(newLaunchersOrder.at(i));
 
-            endRemoveRows();
-        }
+                if (oldRow != i) {
+                    beginMoveRows(QModelIndex(), oldRow, oldRow, QModelIndex(), i);
+                    d->launchersOrder.move(oldRow, i);
+                    endMoveRows();
+                }
+            }
+        } else {
+            // Use Remove/Insert to update the manual sort map in TasksModel
+            if (!d->launchersOrder.empty()) {
+                beginRemoveRows(QModelIndex(), 0, d->launchersOrder.size() - 1);
 
-        if (!newLaunchersOrder.empty()) {
-            beginInsertRows(QModelIndex(), 0, newLaunchersOrder.size() - 1);
+                d->launchersOrder.clear();
+                d->activitiesForLauncher.clear();
 
-            d->launchersOrder = newLaunchersOrder;
-            d->activitiesForLauncher = newActivitiesForLauncher;
+                endRemoveRows();
+            }
 
-            endInsertRows();
+            if (!newLaunchersOrder.empty()) {
+                beginInsertRows(QModelIndex(), 0, newLaunchersOrder.size() - 1);
+
+                d->launchersOrder = newLaunchersOrder;
+                d->activitiesForLauncher = newActivitiesForLauncher;
+
+                endInsertRows();
+            }
         }
 
         Q_EMIT launcherListChanged();

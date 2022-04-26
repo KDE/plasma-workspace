@@ -1715,32 +1715,75 @@ bool TasksModel::move(int row, int newPos, const QModelIndex &parent)
     // Resort.
     d->forceResort();
 
-    if (!d->separateLaunchers && isLauncherMove) {
-        const QModelIndex &idx = d->concatProxyModel->index(d->sortedPreFilterRows.at(newPos), 0);
-        const QUrl &launcherUrl = idx.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl();
+    if (!d->separateLaunchers) {
+        if (isLauncherMove) {
+            const QModelIndex &idx = d->concatProxyModel->index(d->sortedPreFilterRows.at(newPos), 0);
+            const QUrl &launcherUrl = idx.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl();
 
-        // Move launcher for launcher-backed task along with task if launchers
-        // are not being kept separate.
-        // We don't need to resort again because the launcher is implicitly hidden
-        // at this time.
-        if (!idx.data(AbstractTasksModel::IsLauncher).toBool()) {
-            const int launcherPos = d->launcherTasksModel->launcherPosition(launcherUrl);
-            const QModelIndex &launcherIndex = d->launcherTasksModel->index(launcherPos, 0);
-            const int sortIndex = d->sortedPreFilterRows.indexOf(d->concatProxyModel->mapFromSource(launcherIndex).row());
-            d->sortedPreFilterRows.move(sortIndex, newPos);
-            // Otherwise move matching windows to after the launcher task (they are
-            // currently hidden but might be on another virtual desktop).
-        } else {
-            for (int i = (d->sortedPreFilterRows.count() - 1); i >= 0; --i) {
-                const QModelIndex &concatProxyIndex = d->concatProxyModel->index(d->sortedPreFilterRows.at(i), 0);
+            // Move launcher for launcher-backed task along with task if launchers
+            // are not being kept separate.
+            // We don't need to resort again because the launcher is implicitly hidden
+            // at this time.
+            if (!idx.data(AbstractTasksModel::IsLauncher).toBool()) {
+                const int launcherPos = d->launcherTasksModel->launcherPosition(launcherUrl);
+                const QModelIndex &launcherIndex = d->launcherTasksModel->index(launcherPos, 0);
+                const int sortIndex = d->sortedPreFilterRows.indexOf(d->concatProxyModel->mapFromSource(launcherIndex).row());
+                d->sortedPreFilterRows.move(sortIndex, newPos);
 
-                if (launcherUrl == concatProxyIndex.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl()) {
-                    d->sortedPreFilterRows.move(i, newPos);
+                /*
+                 * Before moving:
+                 * [pinned 2 (launcher)] [pinned 2 (window)] [pinned 1 (launcher)] [pinned 1 (window)]
+                 * After moving [pinned 1], sortedPreFilterRows may become:
+                 *  - row > newPos: [pinned 2 (launcher)] [pinned 1 (launcher)] [pinned 1 (window)] [pinned 2 (window)]
+                 *  - row < newPos: [pinned 2 (window)] [pinned 1 (window)] [pinned 1 (launcher)] [pinned 2 (launcher)]
+                 * We need to move [pinned 2 (launcher)] to the left of [pinned 2 (window)]
+                 */
+                if (row > newPos && newPos - 1 >= 0 && newPos + 2 < d->sortedPreFilterRows.size()) {
+                    const QModelIndex beforeIdx = d->concatProxyModel->index(d->sortedPreFilterRows.at(newPos - 1), 0); // [pinned 2 (launcher)]
+                    const QModelIndex afterIdx = d->concatProxyModel->index(d->sortedPreFilterRows.at(newPos + 2), 0); // [pinned 2 (window)]
 
-                    if (newPos > i) {
-                        --newPos;
+                    if (appsMatch(beforeIdx, afterIdx)) {
+                        // Move [pinned 2 (launcher)] before [pinned 2 (window)]
+                        d->sortedPreFilterRows.move(newPos - 1, newPos + 2);
+                    }
+                } else if (row < newPos && newPos - 2 >= 0 && newPos + 1 < d->sortedPreFilterRows.size()) {
+                    const QModelIndex beforeIdx = d->concatProxyModel->index(d->sortedPreFilterRows.at(newPos - 2), 0); // [pinned 2 (window)]
+                    const QModelIndex afterIdx = d->concatProxyModel->index(d->sortedPreFilterRows.at(newPos + 1), 0); // [pinned 2 (launcher)]
+
+                    if (appsMatch(beforeIdx, afterIdx)) {
+                        // Move [pinned 2 (launcher)] before [pinned 2 (window)]
+                        d->sortedPreFilterRows.move(newPos + 1, newPos - 2);
                     }
                 }
+                // Otherwise move matching windows to after the launcher task (they are
+                // currently hidden but might be on another virtual desktop).
+            } else {
+                for (int i = (d->sortedPreFilterRows.count() - 1); i >= 0; --i) {
+                    const QModelIndex &concatProxyIndex = d->concatProxyModel->index(d->sortedPreFilterRows.at(i), 0);
+
+                    if (launcherUrl == concatProxyIndex.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl()) {
+                        d->sortedPreFilterRows.move(i, newPos);
+
+                        if (newPos > i) {
+                            --newPos;
+                        }
+                    }
+                }
+            }
+        } else if (newPos > 0 && newPos < d->sortedPreFilterRows.size() - 1) {
+            /*
+             * When dragging an unpinned task, a pinned task can also be moved.
+             * In this case, sortedPreFilterRows is like:
+             *  - before moving: [pinned 1 (launcher item)] [pinned 1 (window)] [unpinned]
+             *  - after moving: [pinned 1 (launcher item)] [unpinned] [pinned 1 (window)]
+             * So also check the indexes before and after the unpinned task.
+             */
+            const QModelIndex beforeIdx = d->concatProxyModel->index(d->sortedPreFilterRows.at(newPos - 1), 0);
+            const QModelIndex afterIdx = d->concatProxyModel->index(d->sortedPreFilterRows.at(newPos + 1), 0);
+
+            if (appsMatch(beforeIdx, afterIdx)) {
+                // after adjusting: [unpinned] [pinned 1 (launcher item)] [pinned 1]
+                d->sortedPreFilterRows.move(newPos, newPos + (row < newPos ? 1 : -1));
             }
         }
     }
@@ -1818,6 +1861,11 @@ void TasksModel::syncLaunchers()
     }
 
     setLauncherList(sortedShownLaunchers.values() + sortedHiddenLaunchers);
+
+    // The accepted rows are outdated after the item order is changed
+    invalidateFilter();
+    d->forceResort();
+
     d->launcherSortingDirty = false;
 }
 
