@@ -29,6 +29,7 @@ Name[id]=Ruangkerja Desktop Plasma
 Name[is]=Vinnurýmd Plasma skjáborðs
 Name[it]=Spazio di lavoro del desktop di Plasma
 Name[ja]=Plasma デスクトップワークスペース
+Name[ka]=Plasma Desktop Workspace
 Name[ko]=Plasma 데스크톱 작업 공간
 Name[lt]=Plasma darbalaukio darbo sritis
 Name[ml]=പ്ലാസ്മ ഡെസ്ക്ടോപ്പ് പണിയിടം

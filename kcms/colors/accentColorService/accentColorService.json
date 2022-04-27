@@ -12,6 +12,7 @@
         "Description[tr]": "dbus isteğinde, duvar kağıdından çıkarılan vurgu rengini uygular",
         "Description[uk]": "Застосовує видобутий з фонового зображення стільниці колір акценту у відповідь на запит DBus",
         "Description[x-test]": "xxApplies extracted accent color from wallpaper on dbus requestxx",
+        "Description[zh_CN]": "按照 dbus 请求应用从壁纸中提取的重点色",
         "Name": "accentColorService",
         "Name[az]": "vurğu_rəngi_xidməti",
         "Name[ca@valencia]": "ServeiColorAccent",
@@ -19,11 +20,13 @@
         "Name[en_GB]": "accentColorService",
         "Name[es]": "Servicio de color de acentuación",
         "Name[fr]": "Service de couleurs accentuées",
+        "Name[ka]": "accentColorService",
         "Name[nl]": "accentColorService",
         "Name[sv]": "Accentfärgtjänst",
         "Name[tr]": "accentColorService",
         "Name[uk]": "accentColorService",
-        "Name[x-test]": "xxaccentColorServicexx"
+        "Name[x-test]": "xxaccentColorServicexx",
+        "Name[zh_CN]": "重点色服务"
     },
     "X-KDE-FactoryName": "accentColorService",
     "X-KDE-Kded-autoload": true
