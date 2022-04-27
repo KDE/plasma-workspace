@@ -10,6 +10,7 @@ set(image_SRCS
     finder/imagefinder.cpp
     finder/suffixcheck.cpp
     finder/packagefinder.cpp
+    finder/xmlfinder.cpp
     model/abstractimagelistmodel.cpp
     model/imageroles.h
     model/packagelistmodel.cpp
