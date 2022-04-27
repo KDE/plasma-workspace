@@ -11,6 +11,7 @@ set(image_SRCS
     finder/packagefinder.cpp
     finder/videofinder.cpp
     finder/videometadatafinder.cpp
+    finder/xmlfinder.cpp
     model/abstractimagelistmodel.cpp
     model/imageroles.h
     model/packagelistmodel.cpp

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
+<wallpapers>
+    <wallpaper deleted="false">
+        <name>Default Background (For test purpose, don't translate!)</name>
+        <filename>.light.png</filename>
+        <filename-dark>.dark.png</filename-dark>
+        <options>zoom</options>
+        <shade_type>solid</shade_type>
+        <pcolor>#51a2da</pcolor>
+        <scolor>#294172</scolor>
+        <author>KDE Contributor</author>
+    </wallpaper>
+
+    <wallpaper deleted="false">
+        <name>Time of Day (For test purpose, don't translate!)</name>
+        <filename>timeofday.xml</filename>
+        <options>zoom</options>
+    </wallpaper>
+</wallpapers>
