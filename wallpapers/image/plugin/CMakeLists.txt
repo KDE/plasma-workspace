@@ -27,6 +27,7 @@ set(image_SRCS
     utils/maximizedwindowmonitor.cpp
     utils/mediaproxy.cpp
     utils/wideimage.cpp
+    utils/xmlslideshowupdatetimer.cpp
 )
 
 ecm_qt_declare_logging_category(image_SRCS HEADER debug.h
