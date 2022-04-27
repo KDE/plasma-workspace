@@ -7,19 +7,23 @@
 #include "imageproxymodel.h"
 
 #include <QDir>
+#include <QUrlQuery>
 
 #include <KConfigGroup>
 #include <KIO/OpenFileManagerWindowJob>
 #include <KSharedConfig>
 
 #include "../finder/suffixcheck.h"
+#include "../finder/xmlfinder.h"
 #include "imagelistmodel.h"
 #include "packagelistmodel.h"
+#include "xmlimagelistmodel.h"
 
 ImageProxyModel::ImageProxyModel(const QStringList &_customPaths, const QSize &targetSize, QObject *parent)
     : QConcatenateTablesProxyModel(parent)
     , m_imageModel(new ImageListModel(targetSize, this))
     , m_packageModel(new PackageListModel(targetSize, this))
+    , m_xmlModel(new XmlImageListModel(targetSize, this))
 {
     connect(this, &ImageProxyModel::rowsInserted, this, &ImageProxyModel::countChanged);
     connect(this, &ImageProxyModel::rowsRemoved, this, &ImageProxyModel::countChanged);
@@ -32,8 +36,10 @@ ImageProxyModel::ImageProxyModel(const QStringList &_customPaths, const QSize &t
      */
     connect(m_imageModel, &QAbstractItemModel::modelAboutToBeReset, this, &ImageProxyModel::slotSourceModelAboutToBeReset);
     connect(m_packageModel, &QAbstractItemModel::modelAboutToBeReset, this, &ImageProxyModel::slotSourceModelAboutToBeReset);
+    connect(m_xmlModel, &QAbstractItemModel::modelAboutToBeReset, this, &ImageProxyModel::slotSourceModelAboutToBeReset);
     connect(m_imageModel, &QAbstractItemModel::modelReset, this, &ImageProxyModel::slotSourceModelReset);
     connect(m_packageModel, &QAbstractItemModel::modelReset, this, &ImageProxyModel::slotSourceModelReset);
+    connect(m_xmlModel, &QAbstractItemModel::modelReset, this, &ImageProxyModel::slotSourceModelReset);
 
     // Monitor file changes in the custom directories for the slideshow backend.
     QStringList customPaths = _customPaths;
@@ -43,6 +49,7 @@ ImageProxyModel::ImageProxyModel(const QStringList &_customPaths, const QSize &t
         customPaths = cfg.readEntry("usersWallpapers", QStringList{});
         m_imageModel->m_removableWallpapers = customPaths;
         m_packageModel->m_removableWallpapers = customPaths;
+        m_xmlModel->m_removableWallpapers = customPaths;
 
         customPaths += QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("wallpapers/"), QStandardPaths::LocateDirectory);
     }
@@ -58,12 +65,14 @@ ImageProxyModel::ImageProxyModel(const QStringList &_customPaths, const QSize &t
 
     connect(m_imageModel, &AbstractImageListModel::loaded, this, &ImageProxyModel::slotHandleLoaded);
     connect(m_packageModel, &AbstractImageListModel::loaded, this, &ImageProxyModel::slotHandleLoaded);
+    connect(m_xmlModel, &AbstractImageListModel::loaded, this, &ImageProxyModel::slotHandleLoaded);
 
     m_loaded = 0;
     Q_EMIT loadingChanged();
 
     m_imageModel->load(customPaths);
     m_packageModel->load(customPaths);
+    m_xmlModel->load(customPaths);
 }
 
 QHash<int, QByteArray> ImageProxyModel::roleNames() const
@@ -101,7 +110,7 @@ int ImageProxyModel::indexOf(const QString &packagePath) const
 
 bool ImageProxyModel::loading() const
 {
-    return m_loaded != 2;
+    return m_loaded != 3;
 }
 
 void ImageProxyModel::reload()
@@ -124,24 +133,46 @@ QStringList ImageProxyModel::addBackground(const QString &_path)
         path.remove(0, 7);
     }
 
-    const QFileInfo info(path);
-
     QStringList results;
 
-    if (info.isDir()) {
-        if (!path.endsWith(QDir::separator())) {
-            path += QDir::separator();
-        }
+    // XML wallpaper
+    if (QUrl url(path); url.scheme() == QStringLiteral("image") && url.host() == QStringLiteral("gnome-wp-list")) {
+        const QUrlQuery urlQuery(url);
+        results = m_xmlModel->addBackground(urlQuery.queryItemValue(QStringLiteral("_root")));
+    } else {
+        const QFileInfo info(path);
 
-        results = m_packageModel->addBackground(path);
-    } else if (info.isFile()) {
-        results = m_imageModel->addBackground(path);
+        if (info.isDir()) {
+            if (!path.endsWith(QDir::separator())) {
+                path += QDir::separator();
+            }
+
+            results = m_packageModel->addBackground(path);
+        } else if (info.isFile()) {
+            if (info.suffix().toLower() == QStringLiteral("xml")) {
+                results = m_xmlModel->addBackground(path);
+            } else {
+                results = m_imageModel->addBackground(path);
+            }
+        }
     }
 
     if (!results.empty()) {
         m_pendingAddition.append(results);
 
         std::for_each(results.cbegin(), results.cend(), [this](const QString &path) {
+            if (QUrl url(path); url.scheme() == QStringLiteral("image") && url.host() == QStringLiteral("gnome-wp-list")) {
+                const QStringList paths = XmlFinder::convertToPaths(url);
+
+                for (const QString &p : paths) {
+                    if (!m_dirWatch.contains(p)) {
+                        m_dirWatch.addFile(p);
+                    }
+                }
+
+                return;
+            }
+
             if (m_dirWatch.contains(path)) {
                 return;
             }
@@ -169,13 +200,32 @@ void ImageProxyModel::removeBackground(const QString &_packagePath)
 
     QStringList results;
 
+    // XML wallpaper
+    const auto removeXmlBackground = [this, &packagePath, &results] {
+        results = m_xmlModel->removeBackground(packagePath);
+
+        if (!results.empty()){
+            const QStringList paths = XmlFinder::convertToPaths(QUrl(results.at(0)));
+
+            for (const QString &p : paths) {
+                m_dirWatch.removeFile(p);
+            }
+        }
+    };
+
+    if (QUrl url(packagePath); url.scheme() == QStringLiteral("image") && url.host() == QStringLiteral("gnome-wp-list")) {
+        removeXmlBackground();
+    }
+
     // The file may be already deleted, so isFile/isDir won't work.
-    if (isAcceptableSuffix(QFileInfo(packagePath).suffix())) {
+    if (QFileInfo info(packagePath); isAcceptableSuffix(info.suffix())) {
         results = m_imageModel->removeBackground(packagePath);
 
         if (!results.empty()){
             m_dirWatch.removeFile(results.at(0));
         }
+    } else if (info.suffix().toLower() == QStringLiteral("xml")) {
+        removeXmlBackground();
     } else {
         results = m_packageModel->removeBackground(packagePath);
 
@@ -235,6 +285,16 @@ void ImageProxyModel::commitDeletion()
             p.remove(0, 7);
         }
 
+        // XML wallpaper
+        if (QUrl url(p); url.scheme() == QStringLiteral("image") && url.host() == QStringLiteral("gnome-wp-list")) {
+            const QStringList paths = XmlFinder::convertToPaths(url);
+            const bool doesExist = std::all_of(paths.cbegin(), paths.cend(), [](const QString &p) {
+                return QFile::exists(p);
+            });
+
+            return !pendingList.contains(p) && doesExist;
+        }
+
         return !pendingList.contains(p) && QFileInfo(p).exists();
     });
 
@@ -251,13 +311,15 @@ void ImageProxyModel::slotHandleLoaded(AbstractImageListModel *model)
 {
     disconnect(model, &AbstractImageListModel::loaded, this, 0);
 
-    if (++m_loaded == 2) {
+    if (++m_loaded == 3) {
         // All models are loaded, now add them.
         addSourceModel(m_imageModel);
         addSourceModel(m_packageModel);
+        addSourceModel(m_xmlModel);
 
         connect(this, &ImageProxyModel::targetSizeChanged, m_imageModel, &AbstractImageListModel::slotTargetSizeChanged);
         connect(this, &ImageProxyModel::targetSizeChanged, m_packageModel, &AbstractImageListModel::slotTargetSizeChanged);
+        connect(this, &ImageProxyModel::targetSizeChanged, m_xmlModel, &AbstractImageListModel::slotTargetSizeChanged);
 
         Q_EMIT loadingChanged();
     }
@@ -274,6 +336,18 @@ void ImageProxyModel::slotSourceModelAboutToBeReset()
     // Delete all items in KDirWatch
     for (int i = 0; i < model->rowCount(); i++) {
         const QString packageName = model->index(i, 0).data(ImageRoles::PackageNameRole).toString();
+
+        // XML wallpaper
+        if (QUrl url(packageName); url.scheme() == QStringLiteral("image") && url.host() == QStringLiteral("gnome-wp-list")) {
+            const QStringList paths = XmlFinder::convertToPaths(url);
+
+            for (const QString &p : paths) {
+                m_dirWatch.removeFile(p);
+            }
+
+            continue;
+        }
+
         const QFileInfo info(packageName);
 
         if (info.isFile()) {
@@ -295,6 +369,18 @@ void ImageProxyModel::slotSourceModelReset()
     // Add all items to KDirWatch
     for (int i = 0; i < model->rowCount(); i++) {
         const QString packageName = model->index(i, 0).data(ImageRoles::PackageNameRole).toString();
+
+        // XML wallpaper
+        if (QUrl url(packageName); url.scheme() == QStringLiteral("image") && url.host() == QStringLiteral("gnome-wp-list")) {
+            const QStringList paths = XmlFinder::convertToPaths(url);
+
+            for (const QString &p : paths) {
+                m_dirWatch.addFile(p);
+            }
+
+            continue;
+        }
+
         const QFileInfo info(packageName);
 
         if (info.isFile()) {
@@ -309,7 +395,7 @@ void ImageProxyModel::slotDirWatchCreated(const QString &_path)
 {
     QString path = _path;
 
-    if (int idx = path.indexOf(QLatin1String("contents/images/")); idx > 0) {
+    if (int idx = path.indexOf(QLatin1String("contents/images/")); idx > 0 && !path.startsWith(QStringLiteral("image://"))) {
         path = path.mid(0, idx);
     }
 

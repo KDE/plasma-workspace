@@ -15,8 +15,6 @@
 XmlImageListModel::XmlImageListModel(const QSize &targetSize, QObject *parent)
     : AbstractImageListModel(targetSize, parent)
 {
-    qRegisterMetaType<WallpaperItem>();
-    qRegisterMetaType<QList<WallpaperItem>>();
 }
 
 int XmlImageListModel::rowCount(const QModelIndex &parent) const

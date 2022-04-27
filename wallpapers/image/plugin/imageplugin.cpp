@@ -10,6 +10,7 @@
 #include <KFileItem>
 
 #include "imagebackend.h"
+#include "finder/xmlfinder.h"
 #include "provider/packageimageprovider.h"
 #include "provider/wideimageprovider.h"
 #include "sortingmode.h"
@@ -28,6 +29,8 @@ void ImagePlugin::registerTypes(const char *uri)
 {
     Q_ASSERT(uri == pluginName);
 
+    qRegisterMetaType<WallpaperItem>();
+    qRegisterMetaType<QList<WallpaperItem>>();
     qRegisterMetaType<KFileItem>(); // For image preview
 
     qmlRegisterType<ImageBackend>(uri, 2, 0, "ImageBackend");

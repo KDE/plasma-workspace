@@ -17,6 +17,7 @@
 class AbstractImageListModel;
 class ImageListModel;
 class PackageListModel;
+class XmlImageListModel;
 
 /**
  * A proxy model that aggregates data from ImageListModel and PackageListModel.
@@ -69,6 +70,7 @@ private Q_SLOTS:
 private:
     ImageListModel *m_imageModel;
     PackageListModel *m_packageModel;
+    XmlImageListModel *m_xmlModel;
 
     KDirWatch m_dirWatch;
 
