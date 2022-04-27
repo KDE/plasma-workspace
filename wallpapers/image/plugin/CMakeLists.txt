@@ -16,6 +16,7 @@ set(image_SRCS
     model/packagelistmodel.cpp
     model/imagelistmodel.cpp
     model/imageproxymodel.cpp
+    model/xmlimagelistmodel.cpp
     model/xmlpreviewgenerator.cpp
     provider/packageimageprovider.cpp
     provider/wideimageprovider.cpp
