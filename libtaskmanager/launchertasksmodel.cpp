@@ -573,7 +573,9 @@ void LauncherTasksModel::requestOpenUrls(const QModelIndex &index, const QList<Q
     auto *job = new KIO::ApplicationLauncherJob(service);
     job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled));
     job->setUrls(urls);
-    job->setStartupId(KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
+    if (KWindowSystem::isPlatformX11()) {
+        job->setStartupId(KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
+    }
     job->start();
 
     KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + service->storageId()), QStringLiteral("org.kde.libtaskmanager"));

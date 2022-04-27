@@ -36,6 +36,7 @@
 #include <KShell>
 #include <KStartupInfo>
 #include <KSycoca>
+#include <KWindowSystem>
 
 #include <Plasma/Plasma>
 
@@ -213,7 +214,9 @@ bool AppEntry::run(const QString &actionId, const QVariant &argument)
         auto *job = new KIO::ApplicationLauncherJob(m_service);
         job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
         job->setRunFlags(KIO::ApplicationLauncherJob::DeleteTemporaryFiles);
-        job->setStartupId(KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
+        if (KWindowSystem::isPlatformX11()) {
+            job->setStartupId(KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
+        }
         job->start();
 
         KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + m_service->storageId()), QStringLiteral("org.kde.plasma.kicker"));
