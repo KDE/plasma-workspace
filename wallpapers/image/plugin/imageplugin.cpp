@@ -13,6 +13,7 @@
 #include "imagebackend.h"
 #include "finder/xmlfinder.h"
 #include "provider/packageimageprovider.h"
+#include "provider/xmlimageprovider.h"
 #include "sortingmode.h"
 #include "utils/maximizedwindowmonitor.h"
 #include "utils/mediaproxy.h"
@@ -24,6 +25,7 @@ void ImagePlugin::initializeEngine(QQmlEngine *engine, const char *uri)
     Q_ASSERT(uri == pluginName);
 
     engine->addImageProvider(QStringLiteral("package"), new PackageImageProvider);
+    engine->addImageProvider(QStringLiteral("gnome-wp-list"), new XmlImageProvider);
 }
 
 void ImagePlugin::registerTypes(const char *uri)

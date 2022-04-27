@@ -21,6 +21,7 @@ set(image_SRCS
     model/videolistmodel.cpp
     model/xmlimagelistmodel.cpp
     provider/packageimageprovider.cpp
+    provider/xmlimageprovider.cpp
     provider/providertype.h
     utils/backgroundtype.h
     utils/desktoppool.cpp
