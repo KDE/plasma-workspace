@@ -49,6 +49,7 @@ target_link_libraries(testimagebackend
     Qt::Qml
     Qt::QuickTest
     Qt::Test
+    plasma_wallpaper_imageplugin_static
 )
 add_test(NAME testimagebackend
     COMMAND testimagebackend

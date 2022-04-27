@@ -106,6 +106,14 @@ TestCase {
         compare(modelImageChangedSignalSpy.count, 1);
     }
 
+    function test_setXmlWallpaper() {
+        imageWallpaper.renderingMode = Wallpaper.ImageBackend.SingleImage
+
+        verify(testXmlImage.toString().length > 0);
+        imageWallpaper.image = testXmlImage;
+        compare(imageWallpaper.modelImage.toString().indexOf("image://gnome-wp-list/get?"), 0);
+    }
+
     function test_startSlideShow() {
         verify(testDirs[0].length > 0);
 
