@@ -15,6 +15,7 @@
 
 #include "../provider/providertype.h"
 #include "backgroundtype.h"
+#include "xmlslideshowupdatetimer.h"
 
 class QQuickWindow;
 
@@ -114,6 +115,11 @@ Q_SIGNALS:
      */
     void colorSchemeChanged();
 
+    /**
+     * Emitted when the system clock is changed by the user.
+     */
+    void clockSkewed();
+
 private Q_SLOTS:
     /**
      * Switches to dark-colored wallpaper if available when system color
@@ -122,6 +128,16 @@ private Q_SLOTS:
      * @since 5.26
      */
     void slotSystemPaletteChanged(const QPalette &palette);
+
+    /**
+     * Updates image for XML slideshow.
+     */
+    void slotUpdateXmlModelImage();
+
+    /**
+     * Updates image after resume from sleep.
+     */
+    void slotPrepareForSleep(bool sleep);
 
     /**
      * Updates the geometry of the wallpaper on each screen when the geometry of any
@@ -136,8 +152,11 @@ private:
     void determineProviderType();
 
     QUrl findPreferredImageInPackage();
+    QUrl findPreferredImageInXml();
     void updateModelImage(bool doesBlockSignal = false);
     void updateModelImageWithoutSignal();
+
+    void toggleXmlSlideshow(bool enabled);
 
     void enableSpanScreen();
     void disableSpanScreen();
@@ -158,6 +177,10 @@ private:
     QQuickWindow *m_targetWindow = nullptr;
     bool m_spanScreens = false;
     QRect m_targetRect;
+
+    // Used by XmlImageProvider
+    XmlSlideshowUpdateTimer m_xmlTimer;
+    bool m_resumeConnection = false; // Is connected to the DBus signal
 };
 
 #endif // MEDIAPROXY_H

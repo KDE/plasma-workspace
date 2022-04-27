@@ -6,6 +6,7 @@
 
 #include "mediaproxy.h"
 
+#include <QDBusConnection>
 #include <QFileInfo>
 #include <QGuiApplication>
 #include <QMimeDatabase>
@@ -40,6 +41,9 @@ MediaProxy::MediaProxy(QObject *parent)
     , m_targetSize(qGuiApp->primaryScreen()->size() * qGuiApp->primaryScreen()->devicePixelRatio())
     , m_isDarkColorScheme(isDarkColorScheme())
 {
+    connect(&m_xmlTimer, &QTimer::timeout, this, &MediaProxy::slotUpdateXmlModelImage);
+    connect(this, &MediaProxy::modelImageChanged, &m_xmlTimer, &XmlSlideshowUpdateTimer::alignInterval);
+
     useSingleImageDefaults();
 }
 
@@ -184,6 +188,18 @@ void MediaProxy::openModelImage()
         break;
     }
 
+    case Provider::Type::Xml: {
+        const QUrlQuery urlQuery(m_modelImage);
+
+        const QString filename = urlQuery.queryItemValue(QStringLiteral("filename"));
+        const QString filename_dark = urlQuery.queryItemValue(QStringLiteral("filename_dark"));
+        const bool useDark = urlQuery.queryItemValue(QStringLiteral("darkmode")).toInt() == 1;
+
+        url = QUrl::fromLocalFile(useDark && !filename_dark.isEmpty() ? filename_dark : filename);
+
+        break;
+    }
+
     default:
         return;
     }
@@ -252,6 +268,10 @@ void MediaProxy::useSingleImageDefaults()
 
 QUrl MediaProxy::formatUrl(const QUrl &url)
 {
+    if (url.scheme() == QLatin1String("gnome-wp-list")) {
+        return url;
+    }
+
     if (url.isLocalFile()) {
         return url;
     }
@@ -260,9 +280,49 @@ QUrl MediaProxy::formatUrl(const QUrl &url)
     return QUrl::fromLocalFile(url.toString());
 }
 
+void MediaProxy::toggleXmlSlideshow(bool enabled)
+{
+    if (enabled == m_xmlTimer.isActive()) {
+        return;
+    }
+
+    m_xmlTimer.setActive(enabled);
+
+    if (enabled) {
+        // Will start/restart the timer
+        connect(&m_xmlTimer, &XmlSlideshowUpdateTimer::clockSkewed, this, &MediaProxy::clockSkewed);
+        connect(&m_xmlTimer, &XmlSlideshowUpdateTimer::clockSkewed, &m_xmlTimer, &XmlSlideshowUpdateTimer::alignInterval);
+
+        // Refresh slideshow after resume from sleep
+        if (!m_resumeConnection) {
+            m_resumeConnection = QDBusConnection::systemBus().connect( //
+                QStringLiteral("org.freedesktop.login1"), //
+                QStringLiteral("/org/freedesktop/login1"), //
+                QStringLiteral("org.freedesktop.login1.Manager"), //
+                QStringLiteral("PrepareForSleep"), //
+                this, //
+                SLOT(slotPrepareForSleep(bool)) //
+            );
+        }
+    } else {
+        disconnect(&m_xmlTimer, &XmlSlideshowUpdateTimer::clockSkewed, this, nullptr);
+
+        if (m_resumeConnection) {
+            m_resumeConnection = !QDBusConnection::systemBus().disconnect( //
+                QStringLiteral("org.freedesktop.login1"), //
+                QStringLiteral("/org/freedesktop/login1"), //
+                QStringLiteral("org.freedesktop.login1.Manager"), //
+                QStringLiteral("PrepareForSleep"), //
+                this, //
+                SLOT(slotPrepareForSleep(bool)) //
+            );
+        }
+    }
+}
+
 void MediaProxy::slotSystemPaletteChanged(const QPalette &palette)
 {
-    if (m_providerType != Provider::Type::Package) {
+    if (m_providerType != Provider::Type::Package && m_providerType != Provider::Type::Xml) {
         // Currently only KPackage supports adaptive wallpapers
         return;
     }
@@ -275,11 +335,57 @@ void MediaProxy::slotSystemPaletteChanged(const QPalette &palette)
 
     m_isDarkColorScheme = dark;
 
-    if (m_providerType == Provider::Type::Package) {
-        updateModelImageWithoutSignal();
-    }
+    updateModelImageWithoutSignal();
 
     Q_EMIT colorSchemeChanged();
+}
+
+void MediaProxy::slotUpdateXmlModelImage()
+{
+    if (m_providerType != Provider::Type::Xml || !m_ready) {
+        return;
+    }
+
+    // TODO
+
+    // Check dark mode
+    const bool useDark = isDarkColorScheme();
+
+    QUrl url(m_modelImage);
+    QUrlQuery urlQuery(url);
+
+    QString filename = useDark ? urlQuery.queryItemValue(QStringLiteral("filename_dark")) : urlQuery.queryItemValue(QStringLiteral("filename"));
+
+    if (filename.isEmpty()) {
+        // Dark variant is not available, fall back to light variant
+        filename = urlQuery.queryItemValue(QStringLiteral("filename"));
+    }
+
+    if (useDark) {
+        urlQuery.addQueryItem(QStringLiteral("darkmode"), QString::number(1));
+        url.setQuery(urlQuery);
+    }
+
+    // Check if the xml slideshow timer should be activated
+    if (filename.endsWith(QStringLiteral(".xml"), Qt::CaseInsensitive)) {
+        // is slideshow
+        m_xmlTimer.adjustInterval(filename);
+        toggleXmlSlideshow(true);
+    } else {
+        toggleXmlSlideshow(false);
+    }
+
+    m_modelImage = url;
+    Q_EMIT modelImageChanged();
+}
+
+void MediaProxy::slotPrepareForSleep(bool sleep)
+{
+    if (sleep) {
+        return;
+    }
+
+    slotUpdateXmlModelImage();
 }
 
 void MediaProxy::slotDesktopPoolChanged(QQuickWindow *sourceWindow)
@@ -309,6 +415,8 @@ void MediaProxy::determineBackgroundType()
     QString filePath;
     if (m_providerType == Provider::Type::Package) {
         filePath = findPreferredImageInPackage().toLocalFile();
+    } else if (m_providerType == Provider::Type::Xml) {
+        filePath = findPreferredImageInXml().toString();
     } else {
         filePath = m_formattedSource.toLocalFile();
     }
@@ -323,6 +431,8 @@ void MediaProxy::determineBackgroundType()
         m_backgroundType = BackgroundType::Type::Image;
     } else if (type.startsWith(QLatin1String("video/"))) {
         m_backgroundType = BackgroundType::Type::Video;
+    } else if (type == QLatin1String("application/xml")) {
+        m_backgroundType = BackgroundType::Type::XmlSlideshow;
     } else {
         m_backgroundType = BackgroundType::Type::Unknown;
     }
@@ -338,6 +448,8 @@ void MediaProxy::determineProviderType()
         m_providerType = Provider::Type::Image; // Including videos
     } else if (info.isDir()) {
         m_providerType = Provider::Type::Package;
+    } else if (m_formattedSource.scheme() == QLatin1String("gnome-wp-list")) {
+        m_providerType = Provider::Type::Xml;
     } else {
         m_providerType = Provider::Type::Unknown;
     }
@@ -366,6 +478,19 @@ QUrl MediaProxy::findPreferredImageInPackage()
     }
 
     return url;
+}
+
+QUrl MediaProxy::findPreferredImageInXml()
+{
+    const QUrlQuery urlQuery(m_formattedSource);
+    QString filePath = isDarkColorScheme() ? urlQuery.queryItemValue(QStringLiteral("filename_dark")) : urlQuery.queryItemValue(QStringLiteral("filename"));
+
+    if (filePath.isEmpty()) {
+        // Dark variant is not available, fall back to light variant
+        filePath = urlQuery.queryItemValue(QStringLiteral("filename"));
+    }
+
+    return QUrl(filePath);
 }
 
 void MediaProxy::updateModelImage(bool doesBlockSignal)
@@ -398,6 +523,23 @@ void MediaProxy::updateModelImage(bool doesBlockSignal)
         urlQuery.addQueryItem(QStringLiteral("targetWidth"), QString::number(m_targetSize.width()));
         urlQuery.addQueryItem(QStringLiteral("targetHeight"), QString::number(m_targetSize.height()));
 
+        composedUrl.setQuery(urlQuery);
+        newRealSource = composedUrl;
+
+        break;
+    }
+
+    case Provider::Type::Xml: {
+        if (m_backgroundType == BackgroundType::Type::AnimatedImage) {
+            // Is an animated image
+            newRealSource = findPreferredImageInXml();
+            break;
+        }
+
+        // Use a custom image provider
+        QUrl composedUrl(m_source);
+        QUrlQuery urlQuery(composedUrl);
+        // TODO
         composedUrl.setQuery(urlQuery);
         newRealSource = composedUrl;
 

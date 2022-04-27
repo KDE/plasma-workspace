@@ -16,6 +16,7 @@ public:
         Image,
         AnimatedImage, /**< AnimatedImage doesn't support \QQuickImageProvider , @see https://bugreports.qt.io/browse/QTBUG-30524 */
         Video,
+        XmlSlideshow,
     };
     Q_ENUM(Type)
 };

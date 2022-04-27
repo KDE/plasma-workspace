@@ -15,6 +15,7 @@ public:
         Unknown,
         Image,
         Package,
+        Xml,
     };
     Q_ENUM(Provider)
 };
