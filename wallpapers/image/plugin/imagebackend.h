@@ -19,8 +19,10 @@
 #include <KPackage/Package>
 
 #include "sortingmode.h"
+#include "xmlslideshowupdatetimer.h"
 
 class QFileDialog;
+class QPalette;
 class QQuickItem;
 class QQuickWindow;
 
@@ -50,6 +52,12 @@ class ImageBackend : public QObject, public QQmlParserStatus, public SortingMode
      *      image://package/get? (KPackage)
      */
     Q_PROPERTY(QUrl modelImage READ modelImage NOTIFY modelImageChanged)
+    /**
+     * When the current wallpaper is a transition type wallpaper, disable
+     * the corss-fade animation when changing wallpapers.
+     */
+    Q_PROPERTY(bool isTransition READ isTransition NOTIFY isTransitionChanged)
+
     Q_PROPERTY(QAbstractItemModel *wallpaperModel READ wallpaperModel CONSTANT)
     Q_PROPERTY(QAbstractItemModel *slideFilterModel READ slideFilterModel CONSTANT)
     Q_PROPERTY(int slideTimer READ slideTimer WRITE setSlideTimer NOTIFY slideTimerChanged)
@@ -78,6 +86,7 @@ public:
     enum class Provider {
         Image,
         Package,
+        Xml,
     };
     Q_ENUM(Provider)
 
@@ -88,6 +97,8 @@ public:
     void setImage(const QString &url);
 
     QUrl modelImage() const;
+
+    bool isTransition() const;
 
     // this is for QML use
     Q_INVOKABLE void addSlidePath(const QUrl &url);
@@ -154,9 +165,13 @@ Q_SIGNALS:
     void spanScreensChanged();
     void loadingChanged();
 
+    void isTransitionChanged();
+
 protected Q_SLOTS:
     void showAddSlidePathsDialog();
     void slotWallpaperBrowseCompleted();
+    void slotUpdateXmlModelImage(const QPalette &palette);
+    void slotPrepareForSleep(bool sleep);
     void startSlideshow();
     void addDirFromSelectionDialog();
     void backgroundsFound();
@@ -169,6 +184,8 @@ protected:
 
 private:
     SlideModel *slideshowModel();
+
+    void toggleXmlSlideshow(bool enabled);
 
     bool m_ready = false;
     int m_delay = 10;
@@ -191,9 +208,14 @@ private:
     QStringList m_slidePaths;
     QStringList m_uncheckedSlides;
     QTimer m_timer;
+    XmlSlideshowUpdateTimer m_xmlTimer;
     int m_currentSlide = -1;
     ImageProxyModel *m_model = nullptr;
     SlideModel *m_slideshowModel = nullptr;
     SlideFilterModel *m_slideFilterModel;
     QFileDialog *m_dialog = nullptr;
+
+    QMetaObject::Connection m_changeConnection;
+    QMetaObject::Connection m_clockSkewdConnection;
+    bool m_resumeConnection; // Is connected to the DBus signal
 };

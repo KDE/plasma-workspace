@@ -14,6 +14,7 @@
 
 #include <math.h>
 
+#include <QDBusConnection>
 #include <QFileDialog>
 #include <QGuiApplication>
 #include <QImageReader>
@@ -51,6 +52,7 @@ ImageBackend::ImageBackend(QObject *parent)
     , m_slideFilterModel(new SlideFilterModel(this))
 {
     connect(&m_timer, &QTimer::timeout, this, &ImageBackend::nextSlide);
+    connect(&m_xmlTimer, &QTimer::timeout, this, std::bind(&ImageBackend::slotUpdateXmlModelImage, this, qGuiApp->palette()));
 
     if (!s_desktopPool) {
         s_desktopPool = new DesktopPool;
@@ -128,6 +130,11 @@ QUrl ImageBackend::modelImage() const
     return m_modelImage;
 }
 
+bool ImageBackend::isTransition() const
+{
+    return m_xmlTimer.isTransition;
+}
+
 ImageBackend::RenderingMode ImageBackend::renderingMode() const
 {
     return m_mode;
@@ -200,7 +207,7 @@ void ImageBackend::setTargetSize(const QSize &size)
 
     m_targetSize = size;
 
-    if (m_ready && m_providerType == Provider::Package) {
+    if (m_ready && (m_providerType == Provider::Package || m_providerType == Provider::Xml)) {
         Q_EMIT modelImageChanged();
     }
 
@@ -410,13 +417,18 @@ void ImageBackend::addDirFromSelectionDialog()
 
 void ImageBackend::setSingleImage()
 {
-    if (!m_ready || m_image.isEmpty()) {
+    if (!m_ready || m_image.isEmpty() || m_usedInConfig) {
         return;
     }
 
     // supposedly QSize::isEmpty() is true if "either width or height are >= 0"
     if (!m_targetSize.width() || !m_targetSize.height()) {
         return;
+    }
+
+    if (m_providerType == Provider::Xml) {
+        toggleXmlSlideshow(false);
+        disconnect(qGuiApp, &QGuiApplication::paletteChanged, this, &ImageBackend::slotUpdateXmlModelImage);
     }
 
     if (m_image.isLocalFile()) {
@@ -430,6 +442,10 @@ void ImageBackend::setSingleImage()
             m_providerType = Provider::Image;
         } else {
             m_providerType = Provider::Package;
+        }
+    } else if (m_image.scheme() == QStringLiteral("image")) {
+        if (m_image.host() == QStringLiteral("gnome-wp-list")) {
+            m_providerType = Provider::Xml;
         }
     } else {
         // The url can be without file://, try again.
@@ -504,6 +520,15 @@ void ImageBackend::setSingleImage()
         url.setQuery(urlQuery);
         m_modelImage = url;
         break;
+    }
+
+    case Provider::Xml: {
+        slotUpdateXmlModelImage(qGuiApp->palette());
+
+        // Follow system color palette
+        connect(qGuiApp, &QGuiApplication::paletteChanged, this, &ImageBackend::slotUpdateXmlModelImage);
+
+        return;
     }
     }
 
@@ -628,6 +653,96 @@ void ImageBackend::slotWallpaperBrowseCompleted()
     Q_EMIT settingsChanged();
 }
 
+void ImageBackend::slotUpdateXmlModelImage(const QPalette &palette)
+{
+    if (m_providerType != Provider::Xml || !m_ready || m_image.isEmpty() || m_usedInConfig) {
+        return;
+    }
+
+    // Check dark mode
+    const bool useDark = qGray(palette.window().color().rgb()) < 192;
+
+    QUrl url(m_image);
+    QUrlQuery urlQuery(url);
+
+    urlQuery.addQueryItem(QStringLiteral("currentTime"), QDateTime::currentDateTime().toString());
+
+    QString filename = useDark ? urlQuery.queryItemValue(QStringLiteral("filename_dark")) : urlQuery.queryItemValue(QStringLiteral("filename"));
+
+    if (filename.isEmpty()) {
+        // Dark mode is not available, fall back to light mode
+        filename = urlQuery.queryItemValue(QStringLiteral("filename"));
+    }
+
+    if (useDark) {
+        urlQuery.addQueryItem(QStringLiteral("darkmode"), QString::number(1));
+        url.setQuery(urlQuery);
+    }
+
+    // CHeck if the xml slideshow timer should be activated
+    if (filename.endsWith(QStringLiteral(".xml"), Qt::CaseInsensitive)) {
+        // is slideshow
+        m_xmlTimer.adjustInterval(filename);
+        toggleXmlSlideshow(true);
+    } else {
+        toggleXmlSlideshow(false);
+    }
+
+    m_modelImage = url;
+    Q_EMIT modelImageChanged();
+}
+
+void ImageBackend::slotPrepareForSleep(bool sleep)
+{
+    if (!sleep) {
+        // Resume from sleep
+        slotUpdateXmlModelImage(qGuiApp->palette());
+    }
+}
+
+void ImageBackend::toggleXmlSlideshow(bool enabled)
+{
+    if (enabled == m_xmlTimer.isActive()) {
+        return;
+    }
+
+    m_xmlTimer.setActive(enabled);
+
+    if (enabled) {
+        // Will start/restart the timer
+        m_changeConnection = connect(this, &ImageBackend::modelImageChanged, &m_xmlTimer, &XmlSlideshowUpdateTimer::alignInterval);
+        m_clockSkewdConnection = connect(&m_xmlTimer, &XmlSlideshowUpdateTimer::clockSkewed, this, &ImageBackend::modelImageChanged);
+
+        // Refresh slideshow after resume from sleep
+        // clang-format off
+        if (!m_resumeConnection) {
+            m_resumeConnection = QDBusConnection::systemBus().connect(QStringLiteral("org.freedesktop.login1"),
+                QStringLiteral("/org/freedesktop/login1"),
+                QStringLiteral("org.freedesktop.login1.Manager"),
+                QStringLiteral("PrepareForSleep"),
+                this,
+                SLOT(slotPrepareForSleep(bool))
+            );
+        }
+        // clang-format om
+    } else {
+        disconnect(m_changeConnection);
+        disconnect(m_clockSkewdConnection);
+
+        // clang-format off
+        if (m_resumeConnection) {
+            m_resumeConnection = !QDBusConnection::systemBus().disconnect(QStringLiteral("org.freedesktop.login1"),
+                QStringLiteral("/org/freedesktop/login1"),
+                QStringLiteral("org.freedesktop.login1.Manager"),
+                QStringLiteral("PrepareForSleep"),
+                this,
+                SLOT(slotPrepareForSleep(bool))
+            );
+        }
+        // clang-format on
+    }
+}
+
 QString ImageBackend::addUsersWallpaper(const QUrl &url)
 {
     auto results = static_cast<ImageProxyModel *>(wallpaperModel())->addBackground(url.toLocalFile());
@@ -734,6 +849,18 @@ void ImageBackend::openModelImage() const
 
         PackageFinder::findPreferredImageInPackage(package, m_targetSize);
         url = QUrl::fromLocalFile(package.filePath("preferred"));
+        break;
+    }
+
+    case Provider::Xml: {
+        const QUrlQuery urlQuery(m_modelImage);
+
+        const QString filename = urlQuery.queryItemValue(QStringLiteral("filename"));
+        const QString filename_dark = urlQuery.queryItemValue(QStringLiteral("filename_dark"));
+        const bool useDark = urlQuery.queryItemValue(QStringLiteral("darkmode")).toInt() == 1;
+
+        url = QUrl::fromLocalFile(useDark && !filename_dark.isEmpty() ? filename_dark : filename);
+
         break;
     }
     }

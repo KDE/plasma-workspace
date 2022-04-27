@@ -100,20 +100,21 @@ QQC2.StackView {
     onBlurChanged: Qt.callLater(loadImage);
 
     function loadImage() {
-        var isFirst = (root.currentItem == undefined);
-        var pendingImage = baseImage.createObject(root, { "source": root.modelImage,
+        var doesSkipAnimation = root.empty || imageWallpaper.isTransition;
+        var pendingImage = baseImage.createObject(root, {
+                        "source": root.modelImage,
                         "fillMode": root.fillMode,
                         // Qt will multiply sourceSize by devicePixelRatio when
                         // passing the argument to a image provider
                         "sourceSize": Qt.size(root.width, root.height),
                         "color": root.configColor,
                         "blur": root.blur,
-                        "opacity": isFirst ? 1: 0});
+                        "opacity": doesSkipAnimation ? 1: 0});
 
         function replaceWhenLoaded() {
             if (pendingImage.status !== Image.Loading) {
                 root.replace(pendingImage, {},
-                    isFirst ? QQC2.StackView.Immediate : QQC2.StackView.Transition);//dont' animate first show
+                    doesSkipAnimation ? QQC2.StackView.Immediate : QQC2.StackView.Transition);//dont' animate first show
                 pendingImage.statusChanged.disconnect(replaceWhenLoaded);
 
                 wallpaper.loading = false;
