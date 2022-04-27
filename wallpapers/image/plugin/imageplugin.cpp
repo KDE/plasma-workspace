@@ -11,6 +11,7 @@
 
 #include "finder/xmlfinder.h"
 #include "imagebackend.h"
+#include "finder/xmlfinder.h"
 #include "provider/packageimageprovider.h"
 #include "sortingmode.h"
 #include "utils/maximizedwindowmonitor.h"
@@ -29,6 +30,8 @@ void ImagePlugin::registerTypes(const char *uri)
 {
     Q_ASSERT(uri == pluginName);
 
+    qRegisterMetaType<WallpaperItem>();
+    qRegisterMetaType<QList<WallpaperItem>>();
     qRegisterMetaType<KFileItem>(); // For image preview
     qRegisterMetaType<WallpaperItem>();
     qRegisterMetaType<QList<WallpaperItem>>();

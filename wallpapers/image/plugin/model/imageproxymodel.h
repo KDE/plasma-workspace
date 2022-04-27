@@ -17,6 +17,7 @@
 class AbstractImageListModel;
 class ImageListModel;
 class PackageListModel;
+class XmlImageListModel;
 class VideoListModel;
 
 static constexpr int s_modelNum = 3;
@@ -79,6 +80,7 @@ private Q_SLOTS:
 private:
     ImageListModel *m_imageModel;
     PackageListModel *m_packageModel;
+    XmlImageListModel *m_xmlModel = nullptr;
     VideoListModel *m_videoModel = nullptr;
 
     KDirWatch m_dirWatch;
