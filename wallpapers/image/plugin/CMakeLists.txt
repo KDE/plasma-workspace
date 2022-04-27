@@ -4,6 +4,7 @@ set(image_SRCS
     slidemodel.cpp
     slidefiltermodel.cpp
     sortingmode.h
+    xmlslideshowupdatetimer.cpp
     clockskewnotifier/clockskewnotifierengine.cpp
     finder/imagesizefinder.cpp
     finder/distance.cpp
