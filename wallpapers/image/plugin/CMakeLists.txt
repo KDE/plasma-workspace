@@ -22,6 +22,7 @@ set(image_SRCS
     model/xmlpreviewgenerator.cpp
     provider/packageimageprovider.cpp
     provider/wideimageprovider.cpp
+    provider/xmlimageprovider.cpp
 )
 
 ecm_qt_declare_logging_category(image_SRCS HEADER debug.h

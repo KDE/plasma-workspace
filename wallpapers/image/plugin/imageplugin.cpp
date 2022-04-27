@@ -13,6 +13,7 @@
 #include "finder/xmlfinder.h"
 #include "provider/packageimageprovider.h"
 #include "provider/wideimageprovider.h"
+#include "provider/xmlimageprovider.h"
 #include "sortingmode.h"
 
 const auto pluginName = QByteArrayLiteral("org.kde.plasma.wallpapers.image");
@@ -22,6 +23,7 @@ void ImagePlugin::initializeEngine(QQmlEngine *engine, const char *uri)
     Q_ASSERT(uri == pluginName);
 
     engine->addImageProvider(QStringLiteral("package"), new PackageImageProvider);
+    engine->addImageProvider(QStringLiteral("gnome-wp-list"), new XmlImageProvider);
     engine->addImageProvider(QStringLiteral("wideimage"), new WideImageProvider);
 }
 
