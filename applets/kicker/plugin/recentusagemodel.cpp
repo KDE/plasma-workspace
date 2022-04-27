@@ -37,6 +37,7 @@
 #include <KActivities/Stats/Cleaning>
 #include <KActivities/Stats/ResultModel>
 #include <KActivities/Stats/Terms>
+#include <KWindowSystem>
 
 namespace KAStats = KActivities::Stats;
 
@@ -391,7 +392,9 @@ bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant 
 
         auto *job = new KIO::ApplicationLauncherJob(service);
         job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
-        job->setStartupId(KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
+        if (KWindowSystem::isPlatformX11()) {
+            job->setStartupId(KStartupInfo::createNewStartupIdForTimestamp(timeStamp));
+        }
         job->start();
 
         KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + storageId), QStringLiteral("org.kde.plasma.kicker"));
