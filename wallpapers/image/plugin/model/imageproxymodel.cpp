@@ -60,7 +60,10 @@ ImageProxyModel::ImageProxyModel(const QStringList &_customPaths, const QSize &t
         m_xmlModel->m_removableWallpapers = customPaths;
         m_videoModel->m_removableWallpapers = customPaths;
 
-        customPaths += QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("wallpapers/"), QStandardPaths::LocateDirectory);
+        customPaths << QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("wallpapers/"), QStandardPaths::LocateDirectory)
+                    << QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
+                                                 QStringLiteral("gnome-background-properties/"),
+                                                 QStandardPaths::LocateDirectory);
     }
 
     for (const QString &path : std::as_const(customPaths)) {
