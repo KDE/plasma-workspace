@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
+<wallpapers>
+    <wallpaper deleted="false">
+        <name>Dummy Background (For test purpose, don't translate!)</name>
+        <filename>.dummy.png</filename>
+        <author>Dummy</author>
+    </wallpaper>
+</wallpapers>

@@ -27,6 +27,10 @@ ecm_add_test(test_imagelistmodel.cpp TEST_NAME testimagelistmodel
 ecm_add_test(test_packagelistmodel.cpp TEST_NAME testpackageimagelistmodel
     LINK_LIBRARIES Qt::Test plasma_wallpaper_imageplugin_static)
 
+# XmlImageListModel test
+ecm_add_test(test_xmlimagelistmodel.cpp TEST_NAME testxmlimagelistmodel
+    LINK_LIBRARIES Qt::Test plasma_wallpaper_imageplugin_static)
+
 # ImageProxyModel test
 ecm_add_test(test_imageproxymodel.cpp TEST_NAME testimageproxymodel
     LINK_LIBRARIES Qt::Test plasma_wallpaper_imageplugin_static)
