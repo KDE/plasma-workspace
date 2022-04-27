@@ -18,6 +18,7 @@ set(image_SRCS
     model/imagelistmodel.cpp
     model/imageproxymodel.cpp
     model/videolistmodel.cpp
+    model/xmlimagelistmodel.cpp
     provider/packageimageprovider.cpp
     provider/providertype.h
     utils/backgroundtype.h
