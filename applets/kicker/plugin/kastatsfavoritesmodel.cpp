@@ -303,13 +303,7 @@ public:
         m_items.removeAt(index);
 
         // Removing the entry from the cache
-        QMutableHashIterator<QString, QSharedPointer<AbstractEntry>> i(m_itemEntries);
-        while (i.hasNext()) {
-            i.next();
-            if (i.value() == entry) {
-                i.remove();
-            }
-        }
+        std::remove(m_itemEntries.begin(), m_itemEntries.end(), entry);
 
         endRemoveRows();
     }
