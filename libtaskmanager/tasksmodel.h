@@ -72,6 +72,7 @@ class TASKMANAGER_EXPORT TasksModel : public QSortFilterProxyModel, public Abstr
     Q_PROPERTY(QStringList groupingAppIdBlacklist READ groupingAppIdBlacklist WRITE setGroupingAppIdBlacklist NOTIFY groupingAppIdBlacklistChanged)
     Q_PROPERTY(QStringList groupingLauncherUrlBlacklist READ groupingLauncherUrlBlacklist WRITE setGroupingLauncherUrlBlacklist NOTIFY
                    groupingLauncherUrlBlacklistChanged)
+    Q_PROPERTY(bool taskReorderingEnabled READ taskReorderingEnabled WRITE setTaskReorderingEnabled NOTIFY taskReorderingEnabledChanged)
     Q_PROPERTY(QModelIndex activeTask READ activeTask NOTIFY activeTaskChanged)
 
 public:
@@ -535,6 +536,20 @@ public:
     void setGroupingLauncherUrlBlacklist(const QStringList &list);
 
     /**
+     * Enables or disables tasks reordering.
+     *
+     * @param enabled enables tasks reordering if @c true; disables it otherwise.
+     */
+    void setTaskReorderingEnabled(bool enabled);
+
+    /**
+     * Returns whether tasks reordering is enabled or not.
+     *
+     * @returns whether tasks reordering is enabled or not.
+     */
+    bool taskReorderingEnabled() const;
+
+    /**
      * Finds the first active (AbstractTasksModel::IsActive) task in the model
      * and returns its QModelIndex, or a null QModelIndex if no active task is
      * found.
@@ -880,6 +895,7 @@ Q_SIGNALS:
     void groupingWindowTasksThresholdChanged() const;
     void groupingAppIdBlacklistChanged() const;
     void groupingLauncherUrlBlacklistChanged() const;
+    void taskReorderingEnabledChanged() const;
     void activeTaskChanged() const;
 
 protected:

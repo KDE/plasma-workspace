@@ -1366,6 +1366,18 @@ void TasksModel::setGroupingLauncherUrlBlacklist(const QStringList &list)
     }
 }
 
+bool TasksModel::taskReorderingEnabled() const
+{
+    return dynamicSortFilter();
+}
+
+void TasksModel::setTaskReorderingEnabled(bool enabled)
+{
+    enabled ? setDynamicSortFilter(true) : setDynamicSortFilter(false);
+    
+    Q_EMIT taskReorderingEnabledChanged();
+}
+
 QStringList TasksModel::launcherList() const
 {
     if (d->launcherTasksModel) {
