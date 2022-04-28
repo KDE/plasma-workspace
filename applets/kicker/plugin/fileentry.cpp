@@ -9,14 +9,22 @@
 
 #include <KFileItem>
 #include <KIO/OpenUrlJob>
+#include <KIO/StatJob>
 
-FileEntry::FileEntry(AbstractModel *owner, const QUrl &url)
+FileEntry::FileEntry(AbstractModel *owner, const QUrl &url, const QString &mimeType)
     : AbstractEntry(owner)
     , m_fileItem(nullptr)
 {
     if (url.isValid()) {
-        m_fileItem = new KFileItem(url);
-        m_fileItem->determineMimeType();
+        if (url.isLocalFile()) {
+            m_fileItem = new KFileItem(url, mimeType);
+            m_fileItem->determineMimeType();
+        } else {
+            KIO::StatJob *job = KIO::statDetails(url, KIO::StatJob::SourceSide, KIO::StatBasic, KIO::JobFlag::HideProgressInfo);
+            if (job->exec()) {
+                m_fileItem = new KFileItem(job->statResult(), url);
+            }
+        }
     }
 }
 

@@ -13,7 +13,7 @@ class KFileItem;
 class FileEntry : public AbstractEntry
 {
 public:
-    explicit FileEntry(AbstractModel *owner, const QUrl &url);
+    explicit FileEntry(AbstractModel *owner, const QUrl &url, const QString &mimeType = QString());
     ~FileEntry() override;
 
     EntryType type() const override

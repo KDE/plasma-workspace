@@ -18,6 +18,7 @@
 
 #include <KConfigGroup>
 #include <KLocalizedString>
+#include <KProtocolInfo>
 #include <KSharedConfig>
 
 #include <KActivities/Consumer>
@@ -37,6 +38,7 @@ using namespace KAStats::Terms;
 
 QString agentForUrl(const QString &url)
 {
+    QUrl u(url);
     // clang-format off
     return url.startsWith(QLatin1String("ktp:"))
                 ? AGENT_CONTACTS
@@ -48,6 +50,8 @@ QString agentForUrl(const QString &url)
                 ? AGENT_DOCUMENTS
          : (url.startsWith(QLatin1String("file:/")) && !url.endsWith(QLatin1String(".desktop")))
                 ? AGENT_DOCUMENTS
+         : (u.scheme() != QLatin1String("file") && !u.scheme().isEmpty() && KProtocolInfo::isKnownProtocol(u.scheme()))
+                  ? AGENT_DOCUMENTS
          // use applications as the default
                 : AGENT_APPLICATIONS;
     // clang-format on
@@ -139,7 +143,7 @@ public:
         return NormalizedId(this, id);
     }
 
-    QSharedPointer<AbstractEntry> entryForResource(const QString &resource) const
+    QSharedPointer<AbstractEntry> entryForResource(const QString &resource, const QString &mimeType = QString()) const
     {
         using SP = QSharedPointer<AbstractEntry>;
 
@@ -150,9 +154,9 @@ public:
 
         } else if (agent == AGENT_DOCUMENTS) {
             if (resource.startsWith(QLatin1String("/"))) {
-                return SP(new FileEntry(q, QUrl::fromLocalFile(resource)));
+                return SP(new FileEntry(q, QUrl::fromLocalFile(resource), mimeType));
             } else {
-                return SP(new FileEntry(q, QUrl(resource)));
+                return SP(new FileEntry(q, QUrl(resource), mimeType));
             }
 
         } else if (agent == AGENT_APPLICATIONS) {
@@ -205,7 +209,7 @@ public:
 
         for (const auto &result : results) {
             qCDebug(KICKER_DEBUG) << "Got " << result.resource() << " -->";
-            addResult(result.resource(), -1, false);
+            addResult(result.resource(), -1, false, result.mimetype());
         }
 
         // Normalizing all the ids
@@ -240,7 +244,7 @@ public:
         qCDebug(KICKER_DEBUG) << "After ordering: " << itemStrings;
     }
 
-    void addResult(const QString &_resource, int index, bool notifyModel = true)
+    void addResult(const QString &_resource, int index, bool notifyModel = true, const QString &mimeType = QString())
     {
         // We want even files to have a proper URL
         const auto resource = _resource.startsWith(QLatin1Char('/')) ? QUrl::fromLocalFile(_resource).toString() : _resource;
@@ -250,7 +254,7 @@ public:
         if (m_itemEntries.contains(resource))
             return;
 
-        auto entry = entryForResource(resource);
+        auto entry = entryForResource(resource, mimeType);
 
         if (!entry || !entry->isValid()) {
             qCDebug(KICKER_DEBUG) << "Entry is not valid!" << resource;
@@ -279,7 +283,10 @@ public:
 
         auto url = entry->url();
 
-        m_itemEntries[resource] = m_itemEntries[entry->id()] = m_itemEntries[url.toString()] = m_itemEntries[url.toLocalFile()] = entry;
+        m_itemEntries[resource] = m_itemEntries[entry->id()] = m_itemEntries[url.toString()] = entry;
+        if (!url.toLocalFile().isEmpty()) {
+            m_itemEntries[url.toLocalFile()] = entry;
+        }
 
         auto normalized = normalizedId(resource);
         m_items.insert(index, normalized);
@@ -293,7 +300,7 @@ public:
 
     void removeResult(const QString &resource)
     {
-        auto normalized = normalizedId(resource);
+        const auto normalized = normalizedId(resource);
 
         // If we know this item will not really be removed,
         // but only that activities it is on have changed,
@@ -305,17 +312,23 @@ public:
 
         qCDebug(KICKER_DEBUG) << "Removing result" << resource;
 
-        auto index = m_items.indexOf(normalizedId(resource));
+        auto index = m_items.indexOf(normalized);
 
         if (index == -1)
             return;
 
         beginRemoveRows(QModelIndex(), index, index);
-        auto entry = m_itemEntries[resource];
+        const auto entry = m_itemEntries[resource];
         m_items.removeAt(index);
 
         // Removing the entry from the cache
-        std::remove(m_itemEntries.begin(), m_itemEntries.end(), entry);
+        QMutableHashIterator<QString, QSharedPointer<AbstractEntry>> i(m_itemEntries);
+        while (i.hasNext()) {
+            i.next();
+            if (i.value() == entry) {
+                i.remove();
+            }
+        }
 
         endRemoveRows();
 
