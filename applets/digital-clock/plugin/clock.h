@@ -14,7 +14,7 @@ class Clock : public QObject
 {
     Q_OBJECT
 
-    Q_PROPERTY(QString timeZone READ timeZone WRITE setTimeZone RESET resetTimeZone NOTIFY timeZoneChanged)
+    Q_PROPERTY(QByteArray timeZone READ timeZone WRITE setTimeZone RESET resetTimeZone NOTIFY timeZoneChanged)
     Q_PROPERTY(QString dateFormat READ dateFormat WRITE setDateFormat NOTIFY dateFormatChanged)
     Q_PROPERTY(QString timeFormat READ timeFormat WRITE setTimeFormat NOTIFY timeFormatChanged)
     Q_PROPERTY(QString formattedTime READ formattedTime NOTIFY timeChanged)
@@ -31,7 +31,7 @@ public:
     const QString timeFormat() const;
     void setTimeFormat(const QString &newTimeFormat);
 
-    const QString timeZone() const;
+    const QByteArray timeZone() const;
     /**
      * ianaId
      */

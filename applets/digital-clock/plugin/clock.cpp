@@ -40,6 +40,7 @@ private:
     int m_minutesWatchingCount = 0;
 
     QMetaObject::Connection m_aligningConnection;
+    static SystemTicker *s_instance;
 };
 
 Clock::Clock(QObject *parent)
@@ -79,7 +80,7 @@ void Clock::setTimeFormat(const QString &newTimeFormat)
     emit timeChanged();
 }
 
-const QString Clock::timeZone() const
+const QByteArray Clock::timeZone() const
 {
     return m_timeZone.id();
 }
@@ -111,9 +112,7 @@ const QString Clock::formattedDate() const
 
 const QDateTime Clock::now() const
 {
-    // Our timers might be coarse and could fire early
-    // If we add a small offset here we don't need to worry about any rounding when seconds etc. are floored
-    const QDateTime nowUtc = QDateTime::currentDateTimeUtc().addMSecs(200);
+    const QDateTime nowUtc = QDateTime::currentDateTimeUtc();
     return nowUtc.toTimeZone(m_timeZone);
 }
 
@@ -126,43 +125,58 @@ void Clock::onTick()
     emit timeChanged();
 }
 
+void Clock::updateTickConnections()
+{
+    disconnect(SystemTicker::instance(), nullptr, this, nullptr);
+
+    Q_ASSERT(!m_timeFormat.contains(QLatin1Char('m')));
+
+    if (m_timeFormat.contains(QLatin1Char('s'))) {
+        connect(SystemTicker::instance(), &SystemTicker::secondChanged, this, &Clock::onTick);
+    } else {
+        connect(SystemTicker::instance(), &SystemTicker::minuteChanged, this, &Clock::onTick);
+    }
+}
+
 SystemTicker::SystemTicker()
 {
-    connect(&m_timer, &QTimer::timeout, this, &SystemTicker::onTimeout);
+    //    connect(&m_timer, &QTimer::timeout, this, &SystemTicker::onTimeout);
 
-    //#ifdef Q_OS_LINUX
-    //    // monitor for the system clock being changed
-    //    auto timeChangedFd = timerfd_create(CLOCK_REALTIME, O_CLOEXEC | O_NONBLOCK);
-    //    itimerspec timespec;
-    //    memset(&timespec, 0, sizeof(timespec)); // set all timers to 0 seconds, which creates a timer that won't do anything
+    //    #ifdef Q_OS_LINUX
+    //        // monitor for the system clock being changed
+    //        auto timeChangedFd = timerfd_create(CLOCK_REALTIME, O_CLOEXEC | O_NONBLOCK);
+    //        itimerspec timespec;
+    //        memset(&timespec, 0, sizeof(timespec)); // set all timers to 0 seconds, which creates a timer that won't do anything
 
-    //    int err = c(timeChangedFd, 3, &timespec, nullptr); // monitor for the time changing
-    //    //(flags == TFD_TIMER_ABSTIME | TFD_TIMER_CANCEL_ON_SET). However these are not exposed in glibc so value is hardcoded
-    //    if (err) {
-    //        qCWarning(DATAENGINE_TIME) << "Could not create timer with TFD_TIMER_CANCEL_ON_SET. Clock skews will not be detected. Error:"
-    //                                   << qPrintable(strerror(err));
-    //    }
+    //        int err = timerfd_settime(timeChangedFd, 3, &timespec, nullptr); // monitor for the time changing
+    //        //(flags == TFD_TIMER_ABSTIME | TFD_TIMER_CANCEL_ON_SET). However these are not exposed in glibc so value is hardcoded
+    //        if (err) {
+    //            qCWarning(DATAENGINE_TIME) << "Could not create timer with TFD_TIMER_CANCEL_ON_SET. Clock skews will not be detected. Error:"
+    //                                       << qPrintable(strerror(err));
+    //        }
 
-    //    connect(this, &QObject::destroyed, [timeChangedFd]() {
-    //        close(timeChangedFd);
-    //    });
+    //        connect(this, &QObject::destroyed, [timeChangedFd]() {
+    //            close(timeChangedFd);
+    //        });
 
-    //    auto notifier = new QSocketNotifier(timeChangedFd, QSocketNotifier::Read, this);
-    //    connect(notifier, &QSocketNotifier::activated, this, [this](int fd) {
-    //        uint64_t c;
-    //        read(fd, &c, 8);
-    //        clockSkewed();
-    //    });
+    //        auto notifier = new QSocketNotifier(timeChangedFd, QSocketNotifier::Read, this);
+    //        connect(notifier, &QSocketNotifier::activated, this, [this](int fd) {
+    //            uint64_t c;
+    //            read(fd, &c, 8);
+    //            clockSkewed();
+    //        });
+    // DAVE - if it wasn't for BSD we would just use timerfd throughout! It can align automatically
+    //     something to consider
     //#else
-    //    QDBusConnection dbus = QDBusConnection::sessionBus();
-    //    dbus.connect(QString(), "/org/kde/kcmshell_clock", "org.kde.kcmshell_clock", "clockUpdated", this, SLOT(clockSkewed()));
-    //    dbus.connect(QStringLiteral("org.kde.Solid.PowerManagement"),
-    //                 QStringLiteral("/org/kde/Solid/PowerManagement/Actions/SuspendSession"),
-    //                 QStringLiteral("org.kde.Solid.PowerManagement.Actions.SuspendSession"),
-    //                 QStringLiteral("resumingFromSuspend"),
-    //                 this,
-    //                 SLOT(clockSkewed()));
-    //#endif
+    //        QDBusConnection dbus = QDBusConnection::sessionBus();
+    //        dbus.connect(QString(), "/org/kde/kcmshell_clock", "org.kde.kcmshell_clock", "clockUpdated", this, SLOT(clockSkewed()));
+    //        dbus.connect(QStringLiteral("org.kde.Solid.PowerManagement"),
+    //                     QStringLiteral("/org/kde/Solid/PowerManagement/Actions/SuspendSession"),
+    //                     QStringLiteral("org.kde.Solid.PowerManagement.Actions.SuspendSession"),
+    //                     QStringLiteral("resumingFromSuspend"),
+    //                     this,
+    //                     SLOT(clockSkewed()));
+    //    #endif
 }
 
 void SystemTicker::connectNotify(const QMetaMethod &signal)
@@ -248,4 +262,14 @@ int SystemTicker::targetInterval() const
     } else {
         return 1000;
     }
+}
+
+SystemTicker *SystemTicker::s_instance = nullptr;
+
+SystemTicker *SystemTicker::instance()
+{
+    if (!s_instance) {
+        s_instance = new SystemTicker();
+    }
+    return s_instance;
 }
