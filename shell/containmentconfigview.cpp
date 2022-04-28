@@ -182,9 +182,9 @@ void ContainmentConfigView::setCurrentWallpaper(const QString &wallpaper)
         cfg = KConfigGroup(&cfg, "Wallpaper");
         cfg = KConfigGroup(&cfg, wallpaper);
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-        m_currentWallpaperConfig = m_ownWallpaperConfig = new KDeclarative::ConfigPropertyMap(new KConfigLoader(cfg, &file), this);
+        m_currentWallpaperConfig = m_ownWallpaperConfig = new KDeclarative::ConfigPropertyMap(new KConfigLoader(cfg, &file, this), this);
 #else
-        m_currentWallpaperConfig = m_ownWallpaperConfig = new KConfigPropertyMap(new KConfigLoader(cfg, &file), this);
+        m_currentWallpaperConfig = m_ownWallpaperConfig = new KConfigPropertyMap(new KConfigLoader(cfg, &file, this), this);
 #endif
     }
 
