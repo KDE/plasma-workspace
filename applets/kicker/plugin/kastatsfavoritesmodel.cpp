@@ -253,7 +253,19 @@ public:
         auto entry = entryForResource(resource);
 
         if (!entry || !entry->isValid()) {
-            qCDebug(KICKER_DEBUG) << "Entry is not valid!";
+            qCDebug(KICKER_DEBUG) << "Entry is not valid!" << resource;
+            return;
+        }
+
+        // TODO Remove a few releases after Plasma 5.25 as this should become dead code, once users have run this code at least once
+        // Converts old-style applications favorites with path (/usrshare/applications/org.kde.dolphin.desktop) or storageId (org.kde.dolphin.desktop)
+        if ((_resource.startsWith(QLatin1String("/")) || QUrl(_resource).scheme().isEmpty()) && _resource.endsWith(QLatin1String(".desktop"))) {
+            m_watcher.unlinkFromActivity(QUrl(_resource), QStringLiteral(":any"), agentForUrl(resource));
+
+            const auto normalized = normalizedId(resource).value();
+            qCDebug(KICKER_DEBUG) << "Converting old-style application favorite entry" << _resource << "to" << normalized;
+
+            m_watcher.linkToActivity(QUrl(normalized), QStringLiteral(":any"), agentForUrl(resource));
             return;
         }
 
@@ -312,6 +324,8 @@ public:
         }
 
         endRemoveRows();
+
+        saveOrdering();
     }
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const override
@@ -593,7 +607,7 @@ void KAStatsFavoritesModel::removeFavoriteFrom(const QString &id, const Activity
 
     Q_ASSERT(!activity.values.isEmpty());
 
-    qCDebug(KICKER_DEBUG) << "addFavoriteTo" << id << activity << url << " (actual)";
+    qCDebug(KICKER_DEBUG) << "removeFavoriteFrom" << id << activity << url << " (actual)";
 
     if (url.isEmpty())
         return;
