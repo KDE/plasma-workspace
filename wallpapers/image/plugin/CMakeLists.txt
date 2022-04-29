@@ -18,6 +18,7 @@ set(image_SRCS
     provider/packageimageprovider.cpp
     provider/providertype.h
     utils/backgroundtype.h
+    utils/clockskewnotifier/clockskewnotifierengine.cpp
     utils/dynamictype.h
     utils/maximizedwindowmonitor.cpp
     utils/mediaproxy.cpp
@@ -28,7 +29,12 @@ ecm_qt_declare_logging_category(image_SRCS HEADER debug.h
                                            CATEGORY_NAME kde.wallpapers.image
                                            DEFAULT_SEVERITY Info)
 
-add_library(plasma_wallpaper_imageplugin_static STATIC ${image_SRCS})
+add_library(plasma_wallpaper_imageplugin_static STATIC)
+target_sources(plasma_wallpaper_imageplugin_static PRIVATE ${image_SRCS})
+
+if (CMAKE_SYSTEM_NAME MATCHES "Linux")
+    target_sources(plasma_wallpaper_imageplugin_static PRIVATE utils/clockskewnotifier/clockskewnotifierengine_linux.cpp)
+endif()
 
 target_link_libraries(plasma_wallpaper_imageplugin_static
     Qt::Core
