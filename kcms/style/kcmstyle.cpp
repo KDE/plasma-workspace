@@ -70,11 +70,12 @@ KCMStyle::KCMStyle(QObject *parent, const KPluginMetaData &data, const QVariantL
     , m_data(new StyleData(this))
     , m_model(new StylesModel(this))
 {
-    auto uri = "org.kde.private.kcms.style";
+    const char *uri{"org.kde.private.kcms.style"};
+
     qmlRegisterUncreatableType<KCMStyle>(uri, 1, 0, "KCM", QStringLiteral("Cannot create instances of KCM"));
     qmlRegisterAnonymousType<StyleSettings>(uri, 1);
     qmlRegisterAnonymousType<StylesModel>(uri, 1);
-    qmlRegisterType<PreviewItem>("org.kde.private.kcms.style", 1, 0, "PreviewItem");
+    qmlRegisterType<PreviewItem>(uri, 1, 0, "PreviewItem");
 
     connect(m_model, &StylesModel::selectedStyleChanged, this, [this](const QString &style) {
         styleSettings()->setWidgetStyle(style);
