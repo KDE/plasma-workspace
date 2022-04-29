@@ -38,6 +38,14 @@ Item {
         window.show()
     }
 
+    Kirigami.Separator {
+        anchors {
+            top: parent.top
+            left: parent.left
+            right: parent.right
+        }
+    }
+
     ColumnLayout {
         id: column
         anchors.fill: parent
