@@ -32,7 +32,7 @@ PlasmaComponents.ToolButton {
         }
     }
 
-    signal keyboardLayoutChanged
+    signal keyboardLayoutChanged()
 
     PlasmaComponents.Menu {
         id: menu
@@ -49,7 +49,7 @@ PlasmaComponents.ToolButton {
                 property string shortName: modelData.shortName
                 onTriggered: {
                     keyboard.currentLayout = model.index
-                    keyboardLayoutChanged()
+                    root.keyboardLayoutChanged()
                 }
             }
         }
