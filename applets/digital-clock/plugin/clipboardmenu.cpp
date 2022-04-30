@@ -71,6 +71,12 @@ void ClipboardMenu::setupMenu(QAction *action)
         a = menu->addAction(s);
         a->setData(s);
 
+        // the same as the option above but shows the opposite of the "show seconds" setting
+        // e.g if "show seconds" is enabled it will show the time without seconds and vice-versa
+        s = m_secondsIncluded ? QLocale().toString(time, QLocale::ShortFormat) : QLocale().toString(time, QLocale::LongFormat);
+        a = menu->addAction(s);
+        a->setData(s);
+
         // e.g 4/28/22
         s = QLocale().toString(date, QLocale::ShortFormat);
         a = menu->addAction(s);
