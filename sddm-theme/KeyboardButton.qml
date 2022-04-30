@@ -16,7 +16,7 @@ PlasmaComponents.ToolButton {
     property int currentIndex: keyboard.currentLayout
     onCurrentIndexChanged: keyboard.currentLayout = currentIndex
 
-    text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Keyboard Layout: %1", instantiator.objectAt(currentIndex).shortName)
+    text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Keyboard Layout: %1", keyboard.layouts[currentIndex].shortName)
     visible: menu.count > 1 && !Qt.platform.pluginName.includes("wayland") // This menu needs porting to wayland https://github.com/sddm/sddm/issues/1528
 
     Component.onCompleted: {
@@ -46,7 +46,6 @@ PlasmaComponents.ToolButton {
             onObjectRemoved: menu.removeItem(object)
             delegate: PlasmaComponents.MenuItem {
                 text: modelData.longName
-                property string shortName: modelData.shortName
                 onTriggered: {
                     keyboard.currentLayout = model.index
                     root.keyboardLayoutChanged()
