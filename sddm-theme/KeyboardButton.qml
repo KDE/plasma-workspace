@@ -10,7 +10,7 @@ PlasmaComponents.ToolButton {
 
     property int currentIndex: -1
 
-    text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Keyboard Layout: %1", instantiator.objectAt(currentIndex).shortName)
+    text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Keyboard Layout: %1", keyboard.layouts[currentIndex].shortName)
     implicitWidth: minimumWidth
 
     visible: menu.items.length > 1
@@ -27,7 +27,6 @@ PlasmaComponents.ToolButton {
             onObjectRemoved: keyboardMenu.removeItem( object )
             delegate: QQC.MenuItem {
                 text: modelData.longName
-                property string shortName: modelData.shortName
                 onTriggered: {
                     keyboard.currentLayout = model.index
                 }
