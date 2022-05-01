@@ -28,10 +28,12 @@ RowLayout {
 
     spacing: PlasmaCore.Units.smallSpacing
 
-    Layout.minimumWidth: Math.max(Math.min(Screen.desktopAvailableWidth / 2, implicitWidth), PlasmaCore.Units.gridUnit * 15)
-    Layout.minimumHeight: PlasmaCore.Units.iconSizes.medium
-    Layout.maximumWidth: Layout.minimumWidth
-    Layout.maximumHeight: Layout.minimumHeight
+    Layout.preferredWidth: Math.max(Math.min(Screen.desktopAvailableWidth / 2, implicitWidth), PlasmaCore.Units.gridUnit * 15)
+    Layout.preferredHeight: PlasmaCore.Units.iconSizes.medium
+    Layout.minimumWidth: Layout.preferredWidth
+    Layout.minimumHeight: Layout.preferredHeight
+    Layout.maximumWidth: Layout.preferredWidth
+    Layout.maximumHeight: Layout.preferredHeight
 
     PlasmaCore.IconItem {
         Layout.leftMargin: PlasmaCore.Units.smallSpacing
