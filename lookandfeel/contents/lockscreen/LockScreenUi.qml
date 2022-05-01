@@ -231,7 +231,7 @@ PlasmaCore.ColorScope {
 
                 Stack.onStatusChanged: {
                     // prepare for presenting again to the user
-                    if (Stack.status == Stack.Activating) {
+                    if (Stack.status === Stack.Activating) {
                         mainPasswordBox.remove(0, mainPasswordBox.length)
                         mainPasswordBox.focus = true
                     }
