@@ -237,16 +237,17 @@ PlasmaCore.ColorScope {
                     }
                 }
                 userListModel: users
+
+
                 notificationMessage: {
-                    var text = ""
+                    const parts = [];
                     if (keystateSource.data["Caps Lock"]["Locked"]) {
-                        text += i18nd("plasma_lookandfeel_org.kde.lookandfeel","Caps Lock is on")
-                        if (root.notification) {
-                            text += " • "
-                        }
+                        parts.push(i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Caps Lock is on"));
                     }
-                    text += root.notification
-                    return text
+                    if (root.notificationMessage) {
+                        parts.push(root.notificationMessage);
+                    }
+                    return parts.join(" • ");
                 }
 
                 onLoginRequest: {

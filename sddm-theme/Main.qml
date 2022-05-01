@@ -191,15 +191,14 @@ PlasmaCore.ColorScope {
                 }
 
                 notificationMessage: {
-                    let text = ""
+                    const parts = [];
                     if (keystateSource.data["Caps Lock"]["Locked"]) {
-                        text += i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Caps Lock is on")
-                        if (root.notificationMessage) {
-                            text += " • "
-                        }
+                        parts.push(i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Caps Lock is on"));
                     }
-                    text += root.notificationMessage
-                    return text
+                    if (root.notificationMessage) {
+                        parts.push(root.notificationMessage);
+                    }
+                    return parts.join(" • ");
                 }
 
                 actionItemsVisible: !inputPanel.keyboardActive
