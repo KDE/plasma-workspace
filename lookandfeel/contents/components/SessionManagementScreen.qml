@@ -26,6 +26,11 @@ FocusScope {
     property alias actionItems: actionItemsLayout.children
 
     /*
+     * Whether to show or hide the list of action items as a whole.
+     */
+    property alias actionItemsVisible: actionItemsLayout.visible
+
+    /*
      * A model with a list of users to show in the view
      * The following roles should exist:
      *  - name

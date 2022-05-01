@@ -202,6 +202,7 @@ PlasmaCore.ColorScope {
                     return text
                 }
 
+                actionItemsVisible: !inputPanel.keyboardActive
                 actionItems: [
                     ActionButton {
                         iconSource: "system-suspend"
@@ -209,7 +210,6 @@ PlasmaCore.ColorScope {
                         fontSize: parseInt(config.fontSize) + 1
                         onClicked: sddm.suspend()
                         enabled: sddm.canSuspend
-                        visible: !inputPanel.keyboardActive
                     },
                     ActionButton {
                         iconSource: "system-reboot"
@@ -217,7 +217,6 @@ PlasmaCore.ColorScope {
                         fontSize: parseInt(config.fontSize) + 1
                         onClicked: sddm.reboot()
                         enabled: sddm.canReboot
-                        visible: !inputPanel.keyboardActive
                     },
                     ActionButton {
                         iconSource: "system-shutdown"
@@ -225,7 +224,6 @@ PlasmaCore.ColorScope {
                         fontSize: parseInt(config.fontSize) + 1
                         onClicked: sddm.powerOff()
                         enabled: sddm.canPowerOff
-                        visible: !inputPanel.keyboardActive
                     },
                     ActionButton {
                         iconSource: "system-user-prompt"
@@ -233,7 +231,7 @@ PlasmaCore.ColorScope {
                         fontSize: parseInt(config.fontSize) + 1
                         onClicked: mainStack.push(userPromptComponent)
                         enabled: true
-                        visible: !userListComponent.showUsernamePrompt && !inputPanel.keyboardActive
+                        visible: !userListComponent.showUsernamePrompt
                     }]
 
                 onLoginRequest: {
@@ -453,6 +451,7 @@ PlasmaCore.ColorScope {
                     sddm.login(username, password, sessionButton.currentIndex)
                 }
 
+                actionItemsVisible: !inputPanel.keyboardActive
                 actionItems: [
                     ActionButton {
                         iconSource: "system-suspend"
@@ -460,7 +459,6 @@ PlasmaCore.ColorScope {
                         fontSize: parseInt(config.fontSize) + 1
                         onClicked: sddm.suspend()
                         enabled: sddm.canSuspend
-                        visible: !inputPanel.keyboardActive
                     },
                     ActionButton {
                         iconSource: "system-reboot"
@@ -468,7 +466,6 @@ PlasmaCore.ColorScope {
                         fontSize: parseInt(config.fontSize) + 1
                         onClicked: sddm.reboot()
                         enabled: sddm.canReboot
-                        visible: !inputPanel.keyboardActive
                     },
                     ActionButton {
                         iconSource: "system-shutdown"
@@ -476,14 +473,12 @@ PlasmaCore.ColorScope {
                         fontSize: parseInt(config.fontSize) + 1
                         onClicked: sddm.powerOff()
                         enabled: sddm.canPowerOff
-                        visible: !inputPanel.keyboardActive
                     },
                     ActionButton {
                         iconSource: "system-user-list"
                         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "List Users")
                         fontSize: parseInt(config.fontSize) + 1
                         onClicked: mainStack.pop()
-                        visible: !inputPanel.keyboardActive
                     }
                 ]
             }
