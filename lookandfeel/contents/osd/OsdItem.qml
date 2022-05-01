@@ -49,7 +49,7 @@ RowLayout {
         Layout.fillWidth: true
         Layout.alignment: Qt.AlignVCenter
         // So it never exceeds the minimum popup size
-        Layout.preferredWidth: 1
+        Layout.minimumWidth: 0
         Layout.rightMargin: PlasmaCore.Units.smallSpacing
         visible: showingProgress
         from: 0
