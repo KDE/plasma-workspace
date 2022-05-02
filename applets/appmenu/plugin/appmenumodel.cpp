@@ -251,7 +251,7 @@ QVariant AppMenuModel::data(const QModelIndex &index, int role) const
         if (role == MenuRole) {
             return m_searchAction->text();
         } else if (role == ActionRole) {
-            return QVariant::fromValue((void *)m_searchAction);
+            return QVariant::fromValue(m_searchAction.data());
         }
     }
     if (row >= actions.count()) {

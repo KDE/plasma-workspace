@@ -122,18 +122,14 @@ void AppMenuApplet::setButtonGrid(QQuickItem *buttonGrid)
 QMenu *AppMenuApplet::createMenu(int idx) const
 {
     QMenu *menu = nullptr;
-    QAction *action = nullptr;
 
     if (view() == CompactView) {
-        auto menuAction = static_cast<QAction*>(m_model->data(QModelIndex(), AppMenuModel::ActionRole).value<void *>());
-        if (menuAction) {
+        if (QAction *menuAction = m_model->data(QModelIndex(), AppMenuModel::ActionRole).value<QAction *>()) {
             menu = menuAction->menu();
         }
     } else if (view() == FullView) {
         const QModelIndex index = m_model->index(idx, 0);
-        const QVariant data = m_model->data(index, AppMenuModel::ActionRole);
-        action = (QAction *)data.value<void *>();
-        if (action) {
+        if (QAction *action = m_model->data(index, AppMenuModel::ActionRole).value<QAction *>()) {
             menu = action->menu();
         }
     }
@@ -221,9 +217,7 @@ void AppMenuApplet::trigger(QQuickItem *ctx, int idx)
         // FIXME TODO connect only once
         connect(actionMenu, &QMenu::aboutToHide, this, &AppMenuApplet::onMenuAboutToHide, Qt::UniqueConnection);
     } else { // is it just an action without a menu?
-        const QVariant data = m_model->index(idx, 0).data(AppMenuModel::ActionRole);
-        QAction *action = static_cast<QAction *>(data.value<void *>());
-        if (action) {
+        if (QAction *action = m_model->index(idx, 0).data(AppMenuModel::ActionRole).value<QAction *>()) {
             Q_ASSERT(!action->menu());
             action->trigger();
         }
