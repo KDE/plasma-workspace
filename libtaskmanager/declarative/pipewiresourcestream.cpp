@@ -29,7 +29,9 @@
 #include <EGL/egl.h>
 #include <EGL/eglext.h>
 
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include <QtPlatformHeaders/QEGLNativeContext>
+#endif
 #undef Status
 
 #if !PW_CHECK_VERSION(0, 3, 29)

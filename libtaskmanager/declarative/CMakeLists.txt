@@ -22,25 +22,28 @@ if(TARGET PkgConfig::PipeWire)
 
     if (QT_MAJOR_VERSION EQUAL "5")
         ecm_add_qtwayland_client_protocol(SRCS
-            PROTOCOL ${PLASMA_WAYLAND_PROTOCOLS_DIR}/screencast.xml
+            PROTOCOL ${PLASMA_WAYLAND_PROTOCOLS_DIR}/zkde-screencast-unstable-v1.xml
             BASENAME zkde-screencast-unstable-v1
         )
     else()
         qt6_generate_wayland_protocol_client_sources(taskmanagerplugin FILES
-            ${PLASMA_WAYLAND_PROTOCOLS_DIR}/screencast.xml)
+            ${PLASMA_WAYLAND_PROTOCOLS_DIR}/zkde-screencast-unstable-v1.xml)
     endif()
     target_include_directories(taskmanagerplugin PRIVATE ${Libdrm_INCLUDE_DIR})
 
     target_compile_definitions(taskmanagerplugin PRIVATE -DWITH_PIPEWIRE)
     target_sources(taskmanagerplugin PUBLIC pipewirecore.cpp pipewiresourceitem.cpp pipewiresourcestream.cpp screencasting.cpp screencastingrequest.cpp ${SRCS})
     target_link_libraries(taskmanagerplugin PkgConfig::PipeWire
-                                            Qt::Qml Qt5::Gui_EGL Qt::GuiPrivate
+                                            Qt::Qml Qt::GuiPrivate
                                             KF5::I18n
                                             KF5::WaylandClient
                                             Wayland::Client)
     if (${Qt5Gui_OPENGL_IMPLEMENTATION} STREQUAL "GLESv2")
         target_link_libraries(taskmanagerplugin Qt5::Gui_GLESv2)
-    else()
+    elseif(TARGET Qt5::Gui_GL)
         target_link_libraries(taskmanagerplugin Qt5::Gui_GL)
+    endif()
+    if (TARGET Qt5::Gui_EGL)
+        target_link_libraries(taskmanagerplugin Qt5::Gui_EGL)
     endif()
 endif()

@@ -23,7 +23,9 @@
 #include <EGL/eglext.h>
 #include <libdrm/drm_fourcc.h>
 
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include <QtPlatformHeaders/QEGLNativeContext>
+#endif
 
 static void pwInit()
 {
@@ -229,7 +231,12 @@ void PipeWireSourceItem::updateTextureDmaBuf(const QVector<DmaBufPlane> &planes,
         qCWarning(PIPEWIRE_LOGGING) << "glEGLImageTargetTexture2DOES is not available" << window();
         return;
     }
-    if (!window() || !window()->openglContext() || !m_stream) {
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+    const auto openglContext = window()->openglContext();
+#else
+    const auto openglContext = static_cast<QOpenGLContext *>(window()->rendererInterface()->getResource(window(), QSGRendererInterface::OpenGLContextResource));
+#endif
+    if (!window() || !openglContext || !m_stream) {
         qCWarning(PIPEWIRE_LOGGING) << "need a window and a context" << window();
         return;
     }
@@ -268,7 +275,12 @@ void PipeWireSourceItem::updateTextureDmaBuf(const QVector<DmaBufPlane> &planes,
         int textureId = m_texture->textureId();
         QQuickWindow::CreateTextureOption textureOption = format == DRM_FORMAT_ARGB8888 ? QQuickWindow::TextureHasAlphaChannel : QQuickWindow::TextureIsOpaque;
         setEnabled(true);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
         return window()->createTextureFromNativeObject(QQuickWindow::NativeObjectTexture, &textureId, 0 /*a vulkan thing?*/, size, textureOption);
+#else
+        return QNativeInterface::QSGOpenGLTexture::fromNative(textureId, window(), size, textureOption);
+#endif
+        ;
     };
     if (window()->isVisible()) {
         update();
