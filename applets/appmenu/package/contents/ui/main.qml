@@ -114,7 +114,7 @@ Item {
 
                 down: pressed || plasmoid.nativeInterface.currentIndex === index
 
-                visible: text !== "" && model.activeActions.visible
+                visible: text !== ""
                 onClicked: {
                     plasmoid.nativeInterface.trigger(this, index)
 
