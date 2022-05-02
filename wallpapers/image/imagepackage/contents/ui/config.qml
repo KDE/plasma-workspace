@@ -11,7 +11,7 @@ import QtQuick.Controls 2.5 as QtControls2
 import QtQuick.Layouts 1.0
 import QtQuick.Window 2.0 // for Screen
 import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
+import org.kde.plasma.wallpapers.image 2.0 as PlasmaWallpaper
 import org.kde.kquickcontrols 2.0 as KQuickControls
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.newstuff 1.91 as NewStuff
@@ -43,7 +43,7 @@ ColumnLayout {
         imageWallpaper.commitDeletion();
     }
 
-    Wallpaper.ImageBackend {
+    PlasmaWallpaper.ImageBackend {
         id: imageWallpaper
         targetSize: {
             if (typeof Plasmoid !== "undefined") {
@@ -190,23 +190,23 @@ ColumnLayout {
                         model: [
                                    {
                                        'label': i18nd("plasma_wallpaper_org.kde.image", "Random"),
-                                       'slideshowMode':  Wallpaper.SortingMode.Random
+                                       'slideshowMode':  PlasmaWallpaper.SortingMode.Random
                                    },
                                    {
                                        'label': i18nd("plasma_wallpaper_org.kde.image", "A to Z"),
-                                       'slideshowMode':  Wallpaper.SortingMode.Alphabetical
+                                       'slideshowMode':  PlasmaWallpaper.SortingMode.Alphabetical
                                    },
                                    {
                                        'label': i18nd("plasma_wallpaper_org.kde.image", "Z to A"),
-                                       'slideshowMode':  Wallpaper.SortingMode.AlphabeticalReversed
+                                       'slideshowMode':  PlasmaWallpaper.SortingMode.AlphabeticalReversed
                                    },
                                    {
                                        'label': i18nd("plasma_wallpaper_org.kde.image", "Date modified (newest first)"),
-                                       'slideshowMode':  Wallpaper.SortingMode.ModifiedReversed
+                                       'slideshowMode':  PlasmaWallpaper.SortingMode.ModifiedReversed
                                    },
                                    {
                                        'label': i18nd("plasma_wallpaper_org.kde.image", "Date modified (oldest first)"),
-                                       'slideshowMode':  Wallpaper.SortingMode.Modified
+                                       'slideshowMode':  PlasmaWallpaper.SortingMode.Modified
                                    }
                                ]
                         textRole: "label"
