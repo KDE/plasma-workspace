@@ -30,5 +30,5 @@ void ImagePlugin::registerTypes(const char *uri)
 
     qmlRegisterType<ImageBackend>(uri, 2, 0, "ImageBackend");
     qmlRegisterAnonymousType<QAbstractItemModel>("QAbstractItemModel", 1);
-    qmlRegisterUncreatableType<SortingMode>(uri, 2, 0, "SortingMode", "error: only enums");
+    qmlRegisterUncreatableType<SortingMode>(uri, 2, 0, "SortingMode", QStringLiteral("error: only enums"));
 }
