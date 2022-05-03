@@ -17,6 +17,7 @@
         "Description[sv]": "Använder extraherad accentfärg från skrivbordsunderlägg på begäran från D-bus",
         "Description[tr]": "dbus isteğinde, duvar kağıdından çıkarılan vurgu rengini uygular",
         "Description[uk]": "Застосовує видобутий з фонового зображення стільниці колір акценту у відповідь на запит DBus",
+        "Description[vi]": "Áp dung màu chủ đạo trích xuất từ phông nền khi có yêu cầu dbus",
         "Description[x-test]": "xxApplies extracted accent color from wallpaper on dbus requestxx",
         "Description[zh_CN]": "按照 dbus 请求应用从壁纸中提取的重点色",
         "Name": "accentColorService",
@@ -37,6 +38,7 @@
         "Name[sv]": "Accentfärgtjänst",
         "Name[tr]": "accentColorService",
         "Name[uk]": "accentColorService",
+        "Name[vi]": "accentColorService",
         "Name[x-test]": "xxaccentColorServicexx",
         "Name[zh_CN]": "重点色服务"
     },
