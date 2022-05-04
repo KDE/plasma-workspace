@@ -148,10 +148,11 @@ Q_SIGNALS:
 public Q_SLOTS:
     void slotPopupMenu();
     void slotAskClearHistory();
+    void setURLGrabberEnabled(bool);
+
 protected Q_SLOTS:
     void showPopupMenu(QMenu *);
     void slotRepeatAction();
-    void setURLGrabberEnabled(bool);
     void disableURLGrabber();
 
 private Q_SLOTS:

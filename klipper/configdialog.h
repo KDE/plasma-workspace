@@ -25,13 +25,15 @@ class QRadioButton;
 class GeneralWidget : public QWidget
 {
     Q_OBJECT
+
 public:
     explicit GeneralWidget(QWidget *parent);
+    ~GeneralWidget() override = default;
 
     void updateWidgets();
     void save();
 
-signals:
+Q_SIGNALS:
     void settingChanged();
 
 private:
@@ -45,7 +47,6 @@ private:
     QRadioButton *m_copiedImageRb;
     QRadioButton *m_neverImageRb;
 
-    KPluralHandlingSpinBox *m_actionTimeoutSb;
     KPluralHandlingSpinBox *m_historySizeSb;
 
     bool m_settingsSaved;
@@ -53,26 +54,56 @@ private:
     bool m_prevAlwaysText;
 };
 
+class PopupWidget : public QWidget
+{
+    Q_OBJECT
+
+public:
+    explicit PopupWidget(QWidget *parent);
+    ~PopupWidget() override = default;
+
+    void setExcludedWMClasses(const QStringList &);
+    QStringList excludedWMClasses() const;
+
+    void save();
+
+Q_SIGNALS:
+    void settingChanged();
+
+private Q_SLOTS:
+    void onAdvanced();
+
+private:
+    QCheckBox *m_enablePopupCb;
+    QCheckBox *m_historyPopupCb;
+    QCheckBox *m_stripWhitespaceCb;
+    QCheckBox *m_mimeActionsCb;
+
+    KPluralHandlingSpinBox *m_actionTimeoutSb;
+
+    QStringList m_exclWMClasses;
+};
+
 class ActionsWidget : public QWidget
 {
     Q_OBJECT
 public:
     explicit ActionsWidget(QWidget *parent);
+    ~ActionsWidget() override = default;
 
     void setActionList(const ActionList &);
-    void setExcludedWMClasses(const QStringList &);
-
     ActionList actionList() const;
-    QStringList excludedWMClasses() const;
 
     void resetModifiedState();
+
+Q_SIGNALS:
+    void settingChanged();
 
 private Q_SLOTS:
     void onSelectionChanged();
     void onAddAction();
     void onEditAction();
     void onDeleteAction();
-    void onAdvanced();
 
 private:
     void updateActionItem(QTreeWidgetItem *item, ClipAction *action);
@@ -85,24 +116,22 @@ private:
      * List of actions this page works with
      */
     ActionList m_actionList;
-
-    QStringList m_exclWMClasses;
 };
 
-// only for use inside ActionWidget
+// only for use inside PopupWidget
 class AdvancedWidget : public QWidget
 {
     Q_OBJECT
 
 public:
     explicit AdvancedWidget(QWidget *parent = nullptr);
-    ~AdvancedWidget() override;
+    ~AdvancedWidget() override = default;
 
     void setWMClasses(const QStringList &items);
     QStringList wmClasses() const;
 
 private:
-    KEditListWidget *editListBox;
+    KEditListWidget *m_editListBox;
 };
 
 class ConfigDialog : public KConfigDialog
@@ -110,8 +139,8 @@ class ConfigDialog : public KConfigDialog
     Q_OBJECT
 
 public:
-    ConfigDialog(QWidget *parent, KConfigSkeleton *config, const Klipper *klipper, KActionCollection *collection);
-    ~ConfigDialog() override;
+    ConfigDialog(QWidget *parent, KConfigSkeleton *config, Klipper *klipper, KActionCollection *collection);
+    ~ConfigDialog() override = default;
 
 protected slots:
     // reimp
@@ -123,8 +152,9 @@ protected slots:
 
 private:
     GeneralWidget *m_generalPage;
+    PopupWidget *m_popupPage;
     ActionsWidget *m_actionsPage;
     KShortcutsEditor *m_shortcutsWidget;
 
-    const Klipper *m_klipper;
+    Klipper *m_klipper;
 };

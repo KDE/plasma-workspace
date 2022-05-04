@@ -12,27 +12,6 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QCheckBox" name="kcfg_ReplayActionInHistory">
-     <property name="text">
-      <string>Replay actions on an item selected from history</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QCheckBox" name="kcfg_StripWhiteSpace">
-     <property name="text">
-      <string>Remove whitespace when executing actions</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QCheckBox" name="kcfg_EnableMagicMimeActions">
-     <property name="text">
-      <string>Enable MIME-based actions</string>
-     </property>
-    </widget>
-   </item>
-   <item>
     <widget class="QLabel" name="label">
      <property name="text">
       <string>Action list:</string>
@@ -76,13 +55,6 @@
       <widget class="QPushButton" name="pbDelAction">
        <property name="text">
         <string>Delete Action</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pbAdvanced">
-       <property name="text">
-        <string>Advanced...</string>
        </property>
       </widget>
      </item>

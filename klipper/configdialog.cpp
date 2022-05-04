@@ -8,9 +8,9 @@
 #include "configdialog.h"
 
 #include <qbuttongroup.h>
+#include <qcheckbox.h>
 #include <qfontdatabase.h>
 #include <qformlayout.h>
-#include <qgroupbox.h>
 #include <qradiobutton.h>
 #include <qtooltip.h>
 #include <qwindow.h>
@@ -18,9 +18,11 @@
 #include <KConfigSkeleton>
 #include <KEditListWidget>
 #include <KShortcutsEditor>
-#include <kwindowconfig.h>
 #include <kconfigskeleton.h>
+#include <kglobalaccel.h>
 #include <kpluralhandlingspinbox.h>
+#include <kwindowconfig.h>
+#include <kmessagewidget.h>
 
 #include "klipper_debug.h"
 
@@ -50,22 +52,17 @@ static QLabel *createHintLabel(const KConfigSkeletonItem *item, QWidget *parent)
     return (createHintLabel(item->whatsThis(), parent));
 }
 
+//////////////////////////
+//  GeneralWidget	//
+//////////////////////////
+
 GeneralWidget::GeneralWidget(QWidget *parent)
     : QWidget(parent)
 {
     QFormLayout *layout = new QFormLayout(this);
 
-    // Retain clipboard history
-    const KConfigSkeletonItem *item = KlipperSettings::self()->keepClipboardContentsItem();
-    m_enableHistoryCb = new QCheckBox(item->label(), this);
-    m_enableHistoryCb->setChecked(KlipperSettings::keepClipboardContents());
-    m_enableHistoryCb->setToolTip(item->toolTip());
-    layout->addRow(QString(), m_enableHistoryCb);
-
-    layout->addRow(QString(), new QLabel(this));
-
     // Synchronise selection and clipboard
-    item = KlipperSettings::self()->syncClipboardsItem();
+    const KConfigSkeletonItem *item = KlipperSettings::self()->syncClipboardsItem();
     m_syncClipboardsCb = new QCheckBox(item->label(), this);
     m_syncClipboardsCb->setChecked(KlipperSettings::syncClipboards());
     layout->addRow(i18n("Selection and Clipboard:"), m_syncClipboardsCb);
@@ -87,6 +84,24 @@ When turned on this option keeps the selection and the clipboard the same, so th
 If it is turned off, the selection may still be saved in the clipboard history (subject to the options below), but it can only be pasted using the middle mouse button."),
                            hint);
     });
+
+    layout->addRow(QString(), new QLabel(this));
+
+    // Retain clipboard history
+    item = KlipperSettings::self()->keepClipboardContentsItem();
+    m_enableHistoryCb = new QCheckBox(item->label(), this);
+    m_enableHistoryCb->setChecked(KlipperSettings::keepClipboardContents());
+    m_enableHistoryCb->setToolTip(item->toolTip());
+    layout->addRow(i18n("Clipboard history:"), m_enableHistoryCb);
+
+    // Clipboard history size
+    item = KlipperSettings::self()->maxClipItemsItem();
+    m_historySizeSb = new KPluralHandlingSpinBox(this);
+    m_historySizeSb->setRange(item->minValue().toInt(), item->maxValue().toInt());
+    m_historySizeSb->setValue(KlipperSettings::maxClipItems());
+    m_historySizeSb->setSuffix(ki18ncp("Number of entries", " entry", " entries"));
+    m_historySizeSb->setToolTip(item->toolTip());
+    layout->addRow(item->label(), m_historySizeSb);
 
     layout->addRow(QString(), new QLabel(this));
 
@@ -155,31 +170,11 @@ If it is turned off, the selection may still be saved in the clipboard history (
 
     layout->addRow(QString(), new QLabel(this));
 
-    // Action popup time
-    item = KlipperSettings::self()->timeoutForActionPopupsItem();
-    m_actionTimeoutSb = new KPluralHandlingSpinBox(this);
-    m_actionTimeoutSb->setRange(item->minValue().toInt(), item->maxValue().toInt());
-    m_actionTimeoutSb->setValue(KlipperSettings::timeoutForActionPopups());
-    m_actionTimeoutSb->setSuffix(ki18ncp("Unit of time", " second", " seconds"));
-    m_actionTimeoutSb->setSpecialValueText(i18nc("No timeout", "None"));
-    m_actionTimeoutSb->setToolTip(item->toolTip());
-    layout->addRow(item->label(), m_actionTimeoutSb);
-
-    // Clipboard history size
-    item = KlipperSettings::self()->maxClipItemsItem();
-    m_historySizeSb = new KPluralHandlingSpinBox(this);
-    m_historySizeSb->setRange(item->minValue().toInt(), item->maxValue().toInt());
-    m_historySizeSb->setValue(KlipperSettings::maxClipItems());
-    m_historySizeSb->setSuffix(ki18ncp("NUmber of entries", " entry", " entries"));
-    m_historySizeSb->setToolTip(item->toolTip());
-    layout->addRow(item->label(), m_historySizeSb);
-
     m_settingsSaved = false;
     connect(m_syncClipboardsCb, &QAbstractButton::clicked, this, &GeneralWidget::updateWidgets);
 
     layout->addItem(new QSpacerItem(QSizePolicy::Fixed, QSizePolicy::Expanding));
 }
-
 
 void GeneralWidget::updateWidgets()
 {
@@ -220,9 +215,143 @@ void GeneralWidget::save()
     KlipperSettings::setIgnoreImages(m_neverImageRb->isChecked());
     KlipperSettings::setSelectionTextOnly(m_copiedImageRb->isChecked());
 
-    KlipperSettings::setTimeoutForActionPopups(m_actionTimeoutSb->value());
     KlipperSettings::setMaxClipItems(m_historySizeSb->value());
 }
+
+//////////////////////////
+//  PopupWidget		//
+//////////////////////////
+
+PopupWidget::PopupWidget(QWidget *parent)
+    : QWidget(parent)
+{
+    QFormLayout *layout = new QFormLayout(this);
+
+    // Automatic popup
+    const KConfigSkeletonItem *item = KlipperSettings::self()->uRLGrabberEnabledItem();
+    m_enablePopupCb = new QCheckBox(item->label(), this);
+    m_enablePopupCb->setChecked(KlipperSettings::uRLGrabberEnabled());
+    m_enablePopupCb->setToolTip(item->toolTip());
+    layout->addRow(i18n("Show action popup menu:"), m_enablePopupCb);
+
+    // Replay from history popup
+    item = KlipperSettings::self()->replayActionInHistoryItem();
+    m_historyPopupCb = new QCheckBox(item->label(), this);
+    m_historyPopupCb->setChecked(KlipperSettings::replayActionInHistory());
+    m_historyPopupCb->setToolTip(item->toolTip());
+    layout->addRow(QString(), m_historyPopupCb);
+
+    const QList<QKeySequence> keys = KGlobalAccel::self()->globalShortcut(QCoreApplication::applicationName(), QStringLiteral("repeat_action"));
+    layout->addRow(QString(),
+                   createHintLabel(xi18nc("@info",
+                                          "When text that matches an action pattern is selected or is chosen from \
+the clipboard history, automatically show the popup menu with applicable actions. \
+If the automatic menu is turned off here, or it is not shown for an excluded window, \
+then it can be shown by using the <shortcut>%1</shortcut> key shortcut.",
+                                          keys.value(0).toString(QKeySequence::NativeText)),
+                                   this));
+    // Exclusions
+    QPushButton *exclusionsButton = new QPushButton(QIcon::fromTheme(QStringLiteral("configure")), i18n("Exclude Windows..."), this);
+    connect(exclusionsButton, &QPushButton::clicked, this, &PopupWidget::onAdvanced);
+
+    // Right align the push button, regardless of the QFormLayout style
+    QHBoxLayout *hb = new QHBoxLayout;
+    hb->setContentsMargins(0, 0, 0, 0);
+    hb->addStretch(1);
+    hb->addWidget(exclusionsButton);
+    layout->addRow(QString(), hb);
+
+    // Action popup time
+    item = KlipperSettings::self()->timeoutForActionPopupsItem();
+    m_actionTimeoutSb = new KPluralHandlingSpinBox(this);
+    m_actionTimeoutSb->setRange(item->minValue().toInt(), item->maxValue().toInt());
+    m_actionTimeoutSb->setValue(KlipperSettings::timeoutForActionPopups());
+    m_actionTimeoutSb->setSuffix(ki18ncp("Unit of time", " second", " seconds"));
+    m_actionTimeoutSb->setSpecialValueText(i18nc("No timeout", "None"));
+    m_actionTimeoutSb->setToolTip(item->toolTip());
+    layout->addRow(item->label(), m_actionTimeoutSb);
+
+    layout->addRow(QString(), new QLabel(this));
+
+    // Remove whitespace
+    item = KlipperSettings::self()->stripWhiteSpaceItem();
+    m_stripWhitespaceCb = new QCheckBox(item->label(), this);
+    m_stripWhitespaceCb->setChecked(KlipperSettings::stripWhiteSpace());
+    layout->addRow(i18n("Options:"), m_stripWhitespaceCb);
+    layout->addRow(QString(), createHintLabel(item, this));
+
+    // MIME actions
+    item = KlipperSettings::self()->enableMagicMimeActionsItem();
+    m_mimeActionsCb = new QCheckBox(item->label(), this);
+    m_mimeActionsCb->setChecked(KlipperSettings::enableMagicMimeActions());
+    layout->addRow(QString(), m_mimeActionsCb);
+    layout->addRow(QString(), createHintLabel(item, this));
+
+    layout->addRow(QString(), new QLabel(this));
+
+    // Where to configure the actions
+    if (!KlipperSettings::popupInfoMessageHidden())
+    {
+        KMessageWidget *msg = new KMessageWidget(xi18nc("@info", "The actions shown in the popup menu \
+can be configured on the <interface>Actions Configuration</interface> page."), this);
+        msg->setMessageType(KMessageWidget::Information);
+        msg->setIcon(QIcon::fromTheme(QStringLiteral("dialog-information")));
+        msg->setWordWrap(true);
+        msg->setCloseButtonVisible(true);
+
+        connect(msg, &KMessageWidget::hideAnimationFinished, this, []() {
+            KlipperSettings::setPopupInfoMessageHidden(true);
+        });
+        layout->addRow(msg);
+    }
+}
+
+void PopupWidget::setExcludedWMClasses(const QStringList &excludedWMClasses)
+{
+    m_exclWMClasses = excludedWMClasses;
+}
+
+QStringList PopupWidget::excludedWMClasses() const
+{
+    return m_exclWMClasses;
+}
+
+void PopupWidget::onAdvanced()
+{
+    QDialog dlg(this);
+    dlg.setModal(true);
+    dlg.setWindowTitle(i18n("Exclude Windows"));
+    QDialogButtonBox *buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, &dlg);
+    buttons->button(QDialogButtonBox::Ok)->setShortcut(Qt::CTRL | Qt::Key_Return);
+    connect(buttons, &QDialogButtonBox::accepted, &dlg, &QDialog::accept);
+    connect(buttons, &QDialogButtonBox::rejected, &dlg, &QDialog::reject);
+
+    AdvancedWidget *widget = new AdvancedWidget(&dlg);
+    widget->setWMClasses(m_exclWMClasses);
+
+    QVBoxLayout *layout = new QVBoxLayout(&dlg);
+    layout->addWidget(widget);
+    layout->addWidget(buttons);
+
+    if (dlg.exec() == QDialog::Accepted) {
+        m_exclWMClasses = widget->wmClasses();
+    }
+}
+
+void PopupWidget::save()
+{
+    KlipperSettings::setURLGrabberEnabled(m_enablePopupCb->isChecked());
+    KlipperSettings::setReplayActionInHistory(m_historyPopupCb->isChecked());
+
+    KlipperSettings::setStripWhiteSpace(m_stripWhitespaceCb->isChecked());
+    KlipperSettings::setEnableMagicMimeActions(m_mimeActionsCb->isChecked());
+
+    KlipperSettings::setTimeoutForActionPopups(m_actionTimeoutSb->value());
+}
+
+//////////////////////////
+//  ActionsWidget	//
+//////////////////////////
 
 ActionsWidget::ActionsWidget(QWidget *parent)
     : QWidget(parent)
@@ -233,7 +362,6 @@ ActionsWidget::ActionsWidget(QWidget *parent)
     m_ui.pbAddAction->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
     m_ui.pbDelAction->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
     m_ui.pbEditAction->setIcon(QIcon::fromTheme(QStringLiteral("document-edit")));
-    m_ui.pbAdvanced->setIcon(QIcon::fromTheme(QStringLiteral("configure")));
 
     const KConfigGroup grp = KSharedConfig::openConfig()->group("ActionsWidget");
     QByteArray hdrState = grp.readEntry("ColumnState", QByteArray());
@@ -250,7 +378,6 @@ ActionsWidget::ActionsWidget(QWidget *parent)
     connect(m_ui.pbAddAction, &QPushButton::clicked, this, &ActionsWidget::onAddAction);
     connect(m_ui.pbEditAction, &QPushButton::clicked, this, &ActionsWidget::onEditAction);
     connect(m_ui.pbDelAction, &QPushButton::clicked, this, &ActionsWidget::onDeleteAction);
-    connect(m_ui.pbAdvanced, &QPushButton::clicked, this, &ActionsWidget::onAdvanced);
 
     onSelectionChanged();
 }
@@ -313,16 +440,6 @@ void ActionsWidget::updateActionItem(QTreeWidgetItem *item, ClipAction *action)
         QTreeWidgetItem *child = new QTreeWidgetItem(item, cmdProps);
         child->setIcon(0, QIcon::fromTheme(command.icon.isEmpty() ? QStringLiteral("system-run") : command.icon));
     }
-}
-
-void ActionsWidget::setExcludedWMClasses(const QStringList &excludedWMClasses)
-{
-    m_exclWMClasses = excludedWMClasses;
-}
-
-QStringList ActionsWidget::excludedWMClasses() const
-{
-    return m_exclWMClasses;
 }
 
 ActionList ActionsWidget::actionList() const
@@ -417,51 +534,32 @@ void ActionsWidget::onDeleteAction()
     delete item;
 }
 
-void ActionsWidget::onAdvanced()
-{
-    QDialog dlg(this);
-    dlg.setModal(true);
-    dlg.setWindowTitle(i18n("Advanced Settings"));
-    QDialogButtonBox *buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, &dlg);
-    buttons->button(QDialogButtonBox::Ok)->setShortcut(Qt::CTRL | Qt::Key_Return);
-    connect(buttons, &QDialogButtonBox::accepted, &dlg, &QDialog::accept);
-    connect(buttons, &QDialogButtonBox::rejected, &dlg, &QDialog::reject);
+//////////////////////////
+//  ConfigDialog	//
+//////////////////////////
 
-    AdvancedWidget *widget = new AdvancedWidget(&dlg);
-    widget->setWMClasses(m_exclWMClasses);
-
-    QVBoxLayout *layout = new QVBoxLayout(&dlg);
-    layout->addWidget(widget);
-    layout->addWidget(buttons);
-
-    if (dlg.exec() == QDialog::Accepted) {
-        m_exclWMClasses = widget->wmClasses();
-    }
-}
-
-ConfigDialog::ConfigDialog(QWidget *parent, KConfigSkeleton *skeleton, const Klipper *klipper, KActionCollection *collection)
+ConfigDialog::ConfigDialog(QWidget *parent, KConfigSkeleton *skeleton, Klipper *klipper, KActionCollection *collection)
     : KConfigDialog(parent, QStringLiteral("preferences"), skeleton)
     , m_generalPage(new GeneralWidget(this))
+    , m_popupPage(new PopupWidget(this))
     , m_actionsPage(new ActionsWidget(this))
     , m_klipper(klipper)
 {
     addPage(m_generalPage, i18nc("General Config", "General"), QStringLiteral("klipper"), i18n("General Configuration"));
-    addPage(m_actionsPage, i18nc("Actions Config", "Actions"), QStringLiteral("system-run"), i18n("Actions Configuration"));
+    addPage(m_popupPage, i18nc("Popup Menu Config", "Action Menu"), QStringLiteral("open-menu-symbolic"), i18n("Action Menu"));
+    addPage(m_actionsPage, i18nc("Actions Config", "Actions Configuration"), QStringLiteral("system-run"), i18n("Actions Configuration"));
 
     m_shortcutsWidget = new KShortcutsEditor(collection, this, KShortcutsEditor::GlobalAction);
     addPage(m_shortcutsWidget, i18nc("Shortcuts Config", "Shortcuts"), QStringLiteral("preferences-desktop-keyboard"), i18n("Shortcuts Configuration"));
 
     connect(m_generalPage, &GeneralWidget::settingChanged, this, &ConfigDialog::settingsChangedSlot);
+    connect(m_popupPage, &PopupWidget::settingChanged, this, &ConfigDialog::settingsChangedSlot);
 
     // from KWindowConfig::restoreWindowSize() API documentation
     (void) winId();
-    const KConfigGroup grp = KSharedConfig::openConfig()->group("ConfigDialog");
+    const KConfigGroup grp = KSharedConfig::openConfig()->group(metaObject()->className());
     KWindowConfig::restoreWindowSize(windowHandle(), grp);
     resize(windowHandle()->size());
-}
-
-ConfigDialog::~ConfigDialog()
-{
 }
 
 void ConfigDialog::updateSettings()
@@ -475,11 +573,13 @@ void ConfigDialog::updateSettings()
 
     m_shortcutsWidget->save();
     m_generalPage->save();
+    m_popupPage->save();
 
     m_actionsPage->resetModifiedState();
 
+    m_klipper->setURLGrabberEnabled(KlipperSettings::uRLGrabberEnabled());
     m_klipper->urlGrabber()->setActionList(m_actionsPage->actionList());
-    m_klipper->urlGrabber()->setExcludedWMClasses(m_actionsPage->excludedWMClasses());
+    m_klipper->urlGrabber()->setExcludedWMClasses(m_popupPage->excludedWMClasses());
     m_klipper->saveSettings();
 
     KlipperSettings::self()->save();
@@ -494,7 +594,7 @@ void ConfigDialog::updateWidgets()
 
     if (m_klipper && m_klipper->urlGrabber()) {
         m_actionsPage->setActionList(m_klipper->urlGrabber()->actionList());
-        m_actionsPage->setExcludedWMClasses(m_klipper->urlGrabber()->excludedWMClasses());
+        m_popupPage->setExcludedWMClasses(m_klipper->urlGrabber()->excludedWMClasses());
     } else {
         qCDebug(KLIPPER_LOG) << "Klipper or grabber object is null";
         return;
@@ -509,45 +609,58 @@ void ConfigDialog::updateWidgetsDefault()
     m_shortcutsWidget->allDefault();
 }
 
+//////////////////////////
+//  AdvancedWidget	//
+//////////////////////////
+
 AdvancedWidget::AdvancedWidget(QWidget *parent)
     : QWidget(parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    mainLayout->setContentsMargins(0, 0, 0, 0);
 
-    QGroupBox *groupBox = new QGroupBox(i18n("D&isable Actions for Windows of Type WM_CLASS"), this);
-    groupBox->setLayout(new QVBoxLayout(groupBox));
+    QLabel *hint = createHintLabel(xi18nc("@info",
+                                          "The action popup menu will not be shown automatically for these windows, \
+even if it is enabled. This is because, for example, a web browser may highlight a URL \
+in the address bar while typing, so the menu would show for every keystroke.\
+<nl/>\
+<nl/>\
+If the action menu appears unexpectedly when using a particular application, then add it to this list. \
+<link>How to find the name to enter</link>."),
+                                   this);
 
-    editListBox = new KEditListWidget(groupBox);
+    mainLayout->addWidget(hint);
+    connect(hint, &QLabel::linkActivated, this, [this, hint]() {
+        QToolTip::showText(QCursor::pos(),
+                           xi18nc("@info:tooltip",
+                                  "The name that needs to be entered here is the WM_CLASS name of the window to be excluded. \
+To find the WM_CLASS name for a window, in another terminal window enter the command:\
+<nl/>\
+<nl/>\
+&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</icode>\
+<nl/>\
+<nl/>\
+and click on the window that you want to exclude. \
+The first name that it displays after the equal sign is the one that you need to enter."),
+                           hint);
+    });
 
-    editListBox->setButtons(KEditListWidget::Add | KEditListWidget::Remove);
-    editListBox->setCheckAtEntering(true);
+    mainLayout->addWidget(hint);
+    mainLayout->addWidget(new QLabel(this));
 
-    editListBox->setWhatsThis(
-        i18n("<qt>This lets you specify windows in which Klipper should "
-             "not invoke \"actions\". Use<br /><br />"
-             "<center><b>xprop | grep WM_CLASS</b></center><br />"
-             "in a terminal to find out the WM_CLASS of a window. "
-             "Next, click on the window you want to examine. The "
-             "first string it outputs after the equal sign is the one "
-             "you need to enter here.</qt>"));
-    groupBox->layout()->addWidget(editListBox);
+    m_editListBox = new KEditListWidget(this);
+    m_editListBox->setButtons(KEditListWidget::Add | KEditListWidget::Remove);
+    m_editListBox->setCheckAtEntering(true);
+    mainLayout->addWidget(m_editListBox);
 
-    mainLayout->addWidget(groupBox);
-
-    editListBox->setFocus();
-}
-
-AdvancedWidget::~AdvancedWidget()
-{
+    m_editListBox->setFocus();
 }
 
 void AdvancedWidget::setWMClasses(const QStringList &items)
 {
-    editListBox->setItems(items);
+    m_editListBox->setItems(items);
 }
 
 QStringList AdvancedWidget::wmClasses() const
 {
-    return editListBox->items();
+    return m_editListBox->items();
 }

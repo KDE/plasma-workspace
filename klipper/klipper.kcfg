@@ -4,12 +4,13 @@
       xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
       http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
   <kcfgfile name="klipperrc"/>
+
   <group name="General">
     <entry name="Version" type="String">
       <label>Klipper version</label>
     </entry>
     <entry name="KeepClipboardContents" type="Bool">
-      <label>Save the clipboard history across desktop sessions</label>
+      <label>Save history across desktop sessions</label>
       <default>true</default>
       <tooltip>Retain the clipboard history, so it will be available the next time you log in.</tooltip>
     </entry>
@@ -47,7 +48,8 @@
       <default>true</default>
     </entry>
     <entry name="URLGrabberEnabled" type="Bool">
-        <label>URL grabber enabled</label>
+        <label>Immediately on selection</label>
+	<tooltip>Show the popup menu of applicable actions as soon as a selection is made.</tooltip>
         <default>false</default>
     </entry>
     <entry name="NoActionsForWM_CLASS" type="StringList">
@@ -55,14 +57,14 @@
         <label>No actions for WM_CLASS</label>
     </entry>
     <entry name="TimeoutForActionPopups" type="Int">
-        <label>Automatic action popup time:</label>
+        <label>Automatic action menu time:</label>
         <default>8</default>
         <min>0</min>
         <max>200</max>
-        <tooltip>Display the automatic action popup for this time.</tooltip>
+        <tooltip>Display the automatic action popup menu for this time.</tooltip>
     </entry>
     <entry name="MaxClipItems" type="Int">
-        <label>Clipboard history size:</label>
+        <label>History size:</label>
         <default>20</default>
         <min>1</min>
         <max>2048</max>
@@ -72,22 +74,27 @@
         <label>Dummy entry for indicating changes in an action's tree widget</label>
         <default>-1</default>
     </entry>
+    <entry name="PopupInfoMessageHidden" type="Bool">
+        <default>false</default>
+    </entry>
   </group>
+
   <group name="Actions">
     <entry name="StripWhiteSpace" type="Bool">
-      <label>Strip whitespace when executing an action</label>
+      <label>Trim whitespace from selection</label>
       <default>true</default>
-      <tooltip>Remove white space from the start and end of clipboard text before performing an action. For example, this ensures that the URL pasted in a browser is interpreted as expected.&lt;br/&gt;&lt;br/&gt;The text saved on the clipboard is not affected.</tooltip>
+      <whatsthis>Remove any whitespace from the start and end of selected text, before performing an action. For example, this ensures that a URL pasted in a browser is interpreted as expected. The text saved on the clipboard is not affected.</whatsthis>
     </entry>
     <entry name="ReplayActionInHistory" type="Bool">
-      <label>Replay action in history</label>
+      <label>For an item chosen from history</label>
       <default>false</default>
-      <tooltip>When a clipboard item is selected from the history popup, automatically perform the configured actions on it.</tooltip>
+      <tooltip>Show the popup menu of applicable actions if an entry is chosen from the clipboard history.</tooltip>
     </entry>
     <entry name="EnableMagicMimeActions" type="Bool">
-      <label>Enable MIME-based actions</label>
+      <label>Include MIME actions</label>
       <default>true</default>
-      <tooltip>If this option is set, and a file name or URL is selected, include applications that can handle its MIME type in the actions popup.</tooltip>
+      <whatsthis>If a file name or URL is selected, include applications that can accept its MIME type in the popup menu.</whatsthis>
     </entry>
   </group>
+
 </kcfg>
