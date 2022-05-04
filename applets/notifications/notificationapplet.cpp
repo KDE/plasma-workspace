@@ -7,10 +7,8 @@
 #include "notificationapplet.h"
 
 #include <QGuiApplication>
-#include <QQuickItem>
 #include <QQuickWindow>
 #include <QScreen>
-#include <QWindow>
 
 #include <KWindowSystem>
 

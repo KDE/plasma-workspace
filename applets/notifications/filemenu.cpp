@@ -11,7 +11,6 @@
 #include <QIcon>
 #include <QMenu>
 #include <QMimeData>
-#include <QQuickItem>
 #include <QQuickWindow>
 #include <QTimer>
 

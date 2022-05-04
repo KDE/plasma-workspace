@@ -36,9 +36,6 @@
 #include "kxftconfig.h"
 #include "previewimageprovider.h"
 
-#include "fontsaasettings.h"
-#include "fontssettings.h"
-
 #include "fontsdata.h"
 
 /**** DLL Interface ****/

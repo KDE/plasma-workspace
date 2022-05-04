@@ -19,7 +19,6 @@
 #include <KIconLoader>
 #include <KMessageBox>
 #include <KService>
-#include <KSharedConfig>
 
 #include <QDBusConnection>
 #include <QDBusMessage>
@@ -46,8 +45,6 @@
 #include <QFileInfo>
 #include <updatelaunchenvjob.h>
 
-#include "lookandfeelmanager.h"
-#include "lookandfeelsettings.h"
 #ifdef HAVE_XCURSOR
 #include "../cursortheme/xcursor/xcursortheme.h"
 #include <X11/Xcursor/Xcursor.h>

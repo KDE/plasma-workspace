@@ -26,7 +26,6 @@
 #include <KMessageBox>
 #include <KNotification>
 #include <KSystemClipboard>
-#include <KTextEdit>
 #include <KToggleAction>
 #include <KWindowSystem>
 

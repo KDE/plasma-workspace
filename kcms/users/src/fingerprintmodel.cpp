@@ -18,12 +18,7 @@
     License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include <KLocalizedString>
-
 #include "fingerprintmodel.h"
-
-#include "fprint_device_interface.h"
-#include "fprint_manager_interface.h"
 
 FingerprintModel::FingerprintModel(QObject* parent)
     : QObject(parent)

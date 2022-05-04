@@ -26,9 +26,7 @@
 
 #include <algorithm>
 
-#include "filterproxymodel.h"
 #include "notificationsdata.h"
-#include "sourcesmodel.h"
 
 #include <libnotificationmanager/badgesettings.h>
 #include <libnotificationmanager/behaviorsettings.h>

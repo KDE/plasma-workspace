@@ -12,7 +12,6 @@
 
 #include <Plasma/Containment>
 #include <Plasma/Corona>
-#include <PlasmaQuick/AppletQuickItem>
 
 class SpacersTrackerSingleton
 {

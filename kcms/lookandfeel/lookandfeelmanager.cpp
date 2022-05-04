@@ -15,7 +15,6 @@
 #include "lookandfeeldata.h"
 #include "lookandfeelsettings.h"
 #include <KIO/CommandLauncherJob>
-#include <KService>
 #include <KSharedConfig>
 #include <QDBusConnection>
 #include <QDBusMessage>

@@ -13,7 +13,6 @@
 #include <QDBusPendingCallWatcher>
 #include <QDBusPendingReply>
 #include <QDebug>
-#include <QStringList>
 #include <QVariantList>
 
 static const QString s_orgGtkActions = QStringLiteral("org.gtk.Actions");

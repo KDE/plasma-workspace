@@ -22,7 +22,6 @@
 
 #include "accounts_interface.h"
 #include "user.h"
-#include "fingerprintmodel.h"
 
 Q_LOGGING_CATEGORY(kcm_users, "kcm_users")
 

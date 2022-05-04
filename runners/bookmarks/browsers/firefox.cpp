@@ -13,7 +13,6 @@
 #include "fetchsqlite.h"
 #include <KConfigGroup>
 #include <KSharedConfig>
-#include <QDir>
 #include <QFile>
 #include <QRegularExpression>
 

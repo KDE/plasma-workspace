@@ -39,7 +39,6 @@
 #include <KStartupInfo>
 
 #include <KActivities/Stats/Cleaning>
-#include <KActivities/Stats/ResultModel>
 #include <KActivities/Stats/Terms>
 #include <KWindowSystem>
 

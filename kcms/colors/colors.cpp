@@ -10,7 +10,6 @@
 
 #include "colors.h"
 
-#include <QColor>
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QDBusPendingCall>
@@ -35,16 +34,12 @@
 #include <KIO/FileCopyJob>
 #include <KIO/JobUiDelegate>
 
-#include <KNSCore/EntryWrapper>
-
 #include <algorithm>
 
 #include "krdb.h"
 
 #include "colorsapplicator.h"
 #include "colorsdata.h"
-#include "colorsmodel.h"
-#include "colorssettings.h"
 #include "filterproxymodel.h"
 
 #include "../kcms-common_p.h"

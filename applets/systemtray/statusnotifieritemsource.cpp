@@ -6,7 +6,6 @@
 */
 
 #include "statusnotifieritemsource.h"
-#include "statusnotifieritem_interface.h"
 #include "statusnotifieritemservice.h"
 #include "systemtraytypes.h"
 

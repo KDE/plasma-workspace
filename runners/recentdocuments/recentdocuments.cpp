@@ -6,7 +6,6 @@
 
 #include "recentdocuments.h"
 
-#include <QAction>
 #include <QDir>
 #include <QMimeData>
 

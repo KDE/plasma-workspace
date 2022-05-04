@@ -6,8 +6,6 @@
     SPDX-License-Identifier: MIT
 */
 
-#include <config-X11.h>
-
 #include "appmenu.h"
 #include "appmenu_dbus.h"
 #include "appmenu_debug.h"
@@ -35,7 +33,6 @@
 #else
 #include <QX11Info>
 #endif
-#include <xcb/xcb.h>
 #endif
 
 static const QByteArray s_x11AppMenuServiceNamePropertyName = QByteArrayLiteral("_KDE_NET_WM_APPMENU_SERVICE_NAME");

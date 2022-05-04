@@ -13,7 +13,6 @@
 #include <QWindow>
 #include <QtQml>
 
-#include <faces/SensorFaceController.h>
 #include <sensors/SensorQuery.h>
 
 #include <KConfigLoader>

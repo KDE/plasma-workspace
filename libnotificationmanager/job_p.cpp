@@ -10,7 +10,6 @@
 
 #include <QDBusConnection>
 #include <QDebug>
-#include <QTimer>
 
 #include <KFilePlacesModel>
 #include <KLocalizedString>

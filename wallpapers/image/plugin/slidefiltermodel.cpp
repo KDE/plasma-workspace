@@ -10,7 +10,6 @@
 #include "slidemodel.h"
 
 #include <QDir>
-#include <QFileInfo>
 #include <QRandomGenerator>
 
 #include <algorithm>

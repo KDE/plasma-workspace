@@ -44,8 +44,6 @@
 
 #include "previewitem.h"
 #include "styledata.h"
-#include "stylesettings.h"
-#include "stylesmodel.h"
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMStyleFactory, "kcm_style.json", registerPlugin<KCMStyle>(); registerPlugin<StyleData>();)
 

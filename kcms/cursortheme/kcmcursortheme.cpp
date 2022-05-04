@@ -40,8 +40,6 @@
 
 #include <updatelaunchenvjob.h>
 
-#include "cursorthemesettings.h"
-
 #ifdef HAVE_XFIXES
 #include <X11/extensions/Xfixes.h>
 #endif

@@ -28,9 +28,7 @@
 #include <QTemporaryFile>
 
 #include "desktopthemedata.h"
-#include "desktopthemesettings.h"
 #include "filterproxymodel.h"
-#include "themesmodel.h"
 
 Q_LOGGING_CATEGORY(KCM_DESKTOP_THEME, "kcm_desktoptheme")
 

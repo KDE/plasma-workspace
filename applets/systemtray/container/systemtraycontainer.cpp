@@ -7,8 +7,6 @@
 #include "systemtraycontainer.h"
 #include "debug.h"
 
-#include <QQuickItem>
-
 #include <Plasma/Corona>
 #include <QAction>
 #include <kactioncollection.h>

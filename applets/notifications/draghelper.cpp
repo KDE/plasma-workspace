@@ -10,7 +10,6 @@
 #include <QGuiApplication>
 #include <QMetaObject>
 #include <QMimeData>
-#include <QQuickItem>
 #include <QQuickWindow>
 #include <QStyleHints>
 

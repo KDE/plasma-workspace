@@ -7,7 +7,6 @@
 
 #include "appmenumodel.h"
 
-#include <QAction>
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
 #include <QDBusServiceWatcher>

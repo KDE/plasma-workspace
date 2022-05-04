@@ -11,7 +11,6 @@
 #include <KDesktopFile>
 #include <KShell>
 #include <QDebug>
-#include <QDir>
 #include <QQuickItem>
 #include <QQuickRenderControl>
 #include <QStandardPaths>

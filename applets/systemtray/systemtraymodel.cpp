@@ -15,7 +15,6 @@
 #include <KLocalizedString>
 #include <Plasma/Applet>
 #include <Plasma/DataContainer>
-#include <Plasma/Service>
 #include <PluginLoader>
 
 #include <QIcon>

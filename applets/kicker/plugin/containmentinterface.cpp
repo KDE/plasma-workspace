@@ -10,8 +10,6 @@
 #include <Plasma/Containment>
 #include <Plasma/Corona>
 
-#include <QQuickItem>
-
 #include <KActionCollection>
 
 // FIXME HACK TODO: Unfortunately we have no choice but to hard-code a list of
