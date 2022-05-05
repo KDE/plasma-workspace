@@ -30,8 +30,8 @@
 
 <legalnotice>&FDLNotice;</legalnotice>
 
-<date>2021-04-17</date>
-<releaseinfo>Plasma 5.20</releaseinfo>
+<date>2022-05-05</date>
+<releaseinfo>Plasma 5.25</releaseinfo>
 
 <abstract>
 <para>&klipper; is the &plasma; clipboard cut &amp; paste utility.</para>
@@ -136,10 +136,10 @@ contents, select <guimenuitem>Disable This Popup</guimenuitem> on the pop-up men
 to return to what you were doing before. If you leave the menu, it will
 disappear, leaving you to continue your work. You can change the time
 that the menu remains for in the settings 
-dialog, with the option <guilabel>Timeout for action popups</guilabel>
+dialog, with the option <guilabel>Show action popup menu</guilabel>
 under the <guilabel>General</guilabel> page. You can separately disable the 
-file path part using the option <guilabel>Enable MIME-based actions</guilabel> under
-the <guilabel>Actions</guilabel> page.</para>
+file path part using the option <guilabel>Include MIME actions</guilabel> under
+the <guilabel>Action Menu</guilabel> page.</para>
 
 <para>Actions can be disabled completely by pressing
 the shortcut <keycombo action="simul">&Ctrl;&Alt;<keycap>X</keycap></keycombo>.</para>
@@ -187,13 +187,12 @@ in a context menu.</para>
 In order to change clipboard/selection behavior, select
 <guimenuitem>Configure Clipboard...</guimenuitem> from the &klipper; context menu,
 and in the dialog box that appears, select the
-<guilabel>General</guilabel> page. Unchecking <guilabel>Synchronize contents of the clipboard and the
-selection</guilabel> makes the clipboard and selection function as completely
+<guilabel>General</guilabel> page. Unchecking <guilabel>Selection and Clipboard</guilabel> makes the clipboard and selection function as completely
 separate buffers as described above. With this option set, the option
-<guilabel>Ignore selection</guilabel> will prevent &klipper; from
+<guilabel>Ignore</guilabel> will prevent &klipper; from
 including the contents of the selection in its clipboard history and from
 performing actions on the contents of the selection. Selecting
-<guilabel>Synchronize contents of the clipboard and the selection</guilabel>
+<guilabel>Selection and Clipboard</guilabel>
 causes the clipboard and selection buffers to always be the same, meaning that
 text in the selection can be pasted with either the
 <mousebutton>middle</mousebutton> mouse button or the key combination <keycombo>&Ctrl;<keycap>V</keycap>
@@ -221,91 +220,98 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 
 <variablelist>
 
-<varlistentry>
-<term><guilabel>Save clipboard contents on
-exit</guilabel></term> <listitem><para>If this option is on, the clipboard
-history will be saved when &klipper; exits, allowing you to use it next time
-&klipper; starts.</para>
-</listitem>
+<varlistentry><term><guilabel>Selection and Clipboard</guilabel></term>
+<listitem><para>When text or an area of the screen is highlighted with the mouse or 
+keyboard, this is the <emphasis>selection</emphasis>. It can be pasted using 
+the middle mouse button.</para><para>If the selection is explicitly copied 
+using a <guimenuitem>Copy</guimenuitem> or <guimenuitem>Cut</guimenuitem> action, it 
+is saved to the <emphasis>clipboard</emphasis>. It can be pasted using a 
+<guimenuitem>Paste</guimenuitem> action.</para><para>When turned on this option 
+keeps the selection and the clipboard the same, so that any selection is 
+immediately available to paste by any means. If it is turned off, the 
+selection may still be saved in the clipboard history (subject to the 
+options below), but it can only be pasted using the middle mouse button.</para></listitem>
 </varlistentry>
 
-<varlistentry>
-<term><guilabel>Prevent empty clipboard</guilabel></term>
-<listitem><para>If selected, the clipboard will never be empty: &klipper; will
-insert the most recent item from the clipboard history into the clipboard
-instead of allowing it to be empty.</para></listitem>
+<varlistentry><term><guilabel>Clipboard history</guilabel></term>
+<listitem><para>Toggles clipboard history.</para></listitem>
 </varlistentry>
 
-<varlistentry>
-<term><guilabel>Ignore images</guilabel></term>
-<listitem><para>When an area of the screen is selected with mouse or keyboard, 
-this is called the <quote>selection</quote>. If this option is selected, only text 
-selections are stored in the history, while images and other selections are not.
-</para>
-</listitem>
-</varlistentry> 
-
-<varlistentry>
-<term><guilabel>Ignore selection</guilabel></term>
-<listitem><para>Sets the clipboard mode. This option will prevent &klipper; from
-including the contents of the selection in its clipboard history and from
-performing actions on the contents of the selection. See <xref linkend="clipboard-modes"/>.
-</para>
-</listitem>
-</varlistentry> 
-
-<varlistentry>
-<term><guilabel>Text selection only</guilabel></term>
-<listitem><para>When an area of the screen is selected with mouse or keyboard, this is 
-called the <quote>selection</quote>. If this option is selected, only text selections 
-are stored in the history, while images and other selections are not.
-See <xref linkend="clipboard-modes"/>.
-</para>
-</listitem>
-</varlistentry> 
-
-<varlistentry>
-<term><guilabel>Synchronize contents of the clipboard and the
-selection</guilabel></term>
-<listitem><para>Sets the clipboard mode. 
-When an area of the screen is selected with mouse or keyboard, this is 
-called the <quote>selection</quote>. If this option is selected, the selection and the 
-clipboard is kept the same, so that anything in the selection is immediately 
-available for pasting elsewhere using any method, including the traditional 
-middle mouse button. Otherwise, the selection is recorded in the clipboard 
-history, but the selection can only be pasted using the middle mouse button. 
-Also see the <guilabel>Ignore selection</guilabel> option. 
-See <xref linkend="clipboard-modes"/>.
-</para>
-</listitem>
-</varlistentry> 
-
-<varlistentry>
-<term><guilabel>Timeout for action popups</guilabel></term>
-<listitem><para>Set the time that a popup menu will remain for if you do
-nothing with it.</para></listitem>
-</varlistentry>
-
-<varlistentry><term><guilabel>Clipboard history
-size</guilabel></term>
+<varlistentry><term><guilabel>Number of entries</guilabel></term>
 <listitem><para>Sets the number of items that are stored
 in the clipboard history.</para></listitem>
 </varlistentry>
+
+<varlistentry>
+<term><guilabel>Text selection</guilabel></term>
+<listitem><para>When an area of the screen is selected with mouse or keyboard, this is 
+called the <quote>selection</quote>. This option determines wWhether text selections are
+saved in the clipboard history. It is possible to choose between <guilabel>Always save
+in history</guilabel> and <guilabel>Only when explicitly copied</guilabel>. The
+<guilabel>Always save in history</guilabel> option is not available if
+selection/clipboard synchronisation is turned off &dash; in this
+case the selection is never automatically saved in the clipboard history.
+See <xref linkend="clipboard-modes"/>.
+</para>
+</listitem>
+</varlistentry> 
+
+<varlistentry>
+<term><guilabel>Non-text selection</guilabel></term>
+<listitem><para>This option determines whether non-text selections (such as images) are
+saved in the clipboard history. It is possible to choose between <guilabel>Always save
+in history</guilabel>, <guilabel>Only when explicitly copied</guilabel>, and
+<guilabel>Never save in history</guilabel>. The <guilabel>Always save in
+history</guilabel> option is not available if selection/clipboard synchronisation
+is turned off &dash; in this case the selection is never automatically saved in the
+clipboard history. See <xref linkend="clipboard-modes"/>.
+</para>
+</listitem>
+</varlistentry> 
 
 </variablelist>
 
 </sect1>
 
-<sect1 id="actions-page">
-<title>Actions Options</title>
+<sect1 id="action-menu-page">
+<title>Action Menu</title>
 
 <variablelist>
+
+<varlistentry>
+<term><guilabel>Show action popup menu</guilabel></term>
+<listitem><para>Set the time that a popup menu will remain for if you do
+nothing with it.</para></listitem>
+</varlistentry>
+
 <varlistentry>
 <term><guilabel>Replay actions on an item selected from
 history</guilabel></term>
 <listitem><para>If this is switched on, selecting an item from the history
 causes &klipper; to display the actions pop-up on that item, if 
 appropriate.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry><term><guibutton>Exclude Windows</guibutton></term>
+<listitem><para>Brings up the <guilabel>Disable Actions for windows of type
+WM_CLASS</guilabel> dialog.</para>
+<para>Some programs, such as &konqueror;,
+use the clipboard internally. If you get unwanted &klipper; pop-ups all the time
+when using a certain application, do the following:</para>
+
+<orderedlist>
+<listitem><para>Open the application.</para></listitem>
+<listitem><para>From a terminal, run <userinput><command>xprop</command>
+| <command>grep</command> <parameter>WM_CLASS</parameter></userinput>
+and then click on the window of the application you are
+running.</para></listitem> 
+<listitem><para>The first string after the equals sign is the one to
+enter.</para></listitem>
+</orderedlist>
+
+<para>Once the WM_CLASS is added, no more actions will be generated for
+windows of that application.</para>
 </listitem>
 </varlistentry>
 
@@ -320,12 +326,18 @@ cause an error.</para>
 </varlistentry>
 
 <varlistentry>
-<term><guilabel>Enable MIME-based actions</guilabel></term>
-<listitem><para>If selected, in addition to the actions you defined 
-a list of applications for the detected MIME type will appear in the popup menu.</para>
+<term><guilabel>Include MIME actions</guilabel></term>
+<listitem><para>If selected, include applications that can accept its 
+&MIME; type of a file name or URL selected in the popup menu.</para>
 </listitem>
 </varlistentry>
+</variablelist>
+</sect1>
 
+<sect1 id="actions-configuration-page">
+<title>Actions Configuration</title>
+
+<variablelist>
 <varlistentry>
 <term>Editing Expressions/Actions</term>
 <listitem><para>On the <guilabel>Actions</guilabel> page, double-click
@@ -361,28 +373,6 @@ the command <userinput><command>kwrite</command>
 <filename>/home/phil/textfile</filename></userinput> will be run. To
 include <token>%s</token> in the command line, escape it with a
 backslash, as so: <userinput>\%s</userinput>.</para></listitem>
-</varlistentry>
-
-<varlistentry><term><guibutton>Advanced</guibutton></term>
-<listitem><para>Brings up the <guilabel>Disable Actions for windows of type
-WM_CLASS</guilabel> dialog.</para>
-<para>Some programs, such as &konqueror;,
-use the clipboard internally. If you get unwanted &klipper; pop-ups all the time
-when using a certain application, do the following:</para>
-
-<orderedlist>
-<listitem><para>Open the application.</para></listitem>
-<listitem><para>From a terminal, run <userinput><command>xprop</command>
-| <command>grep</command> <parameter>WM_CLASS</parameter></userinput>
-and then click on the window of the application you are
-running.</para></listitem> 
-<listitem><para>The first string after the equals sign is the one to
-enter.</para></listitem>
-</orderedlist>
-
-<para>Once the WM_CLASS is added, no more actions will be generated for
-windows of that application.</para>
-</listitem>
 </varlistentry>
 </variablelist>
 
