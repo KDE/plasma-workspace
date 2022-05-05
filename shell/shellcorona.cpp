@@ -478,7 +478,7 @@ QByteArray ShellCorona::dumpCurrentLayoutJS() const
 
         const qreal height =
             // If we do not have a panel, fallback to 4 units
-            !view ? 4 : (qreal)view->thickness() / gridUnit;
+            !view ? 4 : (qreal)view->totalThickness() / gridUnit;
 
         panelJson.insert("height", height);
         if (view) {
@@ -1064,16 +1064,16 @@ QRect ShellCorona::_availableScreenRect(int id) const
         if (v->isVisible() && v->screen() == view->screen() && v->visibilityMode() != PanelView::AutoHide) {
             switch (v->location()) {
             case Plasma::Types::LeftEdge:
-                r.setLeft(r.left() + v->thickness());
+                r.setLeft(r.left() + v->totalThickness());
                 break;
             case Plasma::Types::RightEdge:
-                r.setRight(r.right() - v->thickness());
+                r.setRight(r.right() - v->totalThickness());
                 break;
             case Plasma::Types::TopEdge:
-                r.setTop(r.top() + v->thickness());
+                r.setTop(r.top() + v->totalThickness());
                 break;
             case Plasma::Types::BottomEdge:
-                r.setBottom(r.bottom() - v->thickness());
+                r.setBottom(r.bottom() - v->totalThickness());
             default:
                 break;
             }

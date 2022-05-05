@@ -99,6 +99,12 @@ class PanelView : public PlasmaQuick::ContainmentView
      */
     Q_PROPERTY(bool adaptiveOpacityEnabled READ adaptiveOpacityEnabled NOTIFY adaptiveOpacityEnabledChanged)
 
+    /**
+     * Property that determines whether the panel is currently floating or not
+     * @since 5.25
+     */
+    Q_PROPERTY(int floating READ floating WRITE setFloating NOTIFY floatingChanged)
+
 public:
     enum VisibilityMode {
         NormalPanel = 0, /** default, always visible panel, the windowmanager reserves a places for it */
@@ -133,6 +139,7 @@ public:
 
     int thickness() const;
     void setThickness(int thickness);
+    int totalThickness() const;
 
     int length() const;
     void setLength(int value);
@@ -145,6 +152,9 @@ public:
 
     int distance() const;
     void setDistance(int dist);
+
+    bool floating() const;
+    void setFloating(bool floating);
 
     Plasma::Types::BackgroundHints backgroundHints() const;
     void setBackgroundHints(Plasma::Types::BackgroundHints hint);
@@ -194,6 +204,7 @@ Q_SIGNALS:
     void distanceChanged();
     void backgroundHintsChanged();
     void enabledBordersChanged();
+    void floatingChanged();
 
     // QWindow does not have a property for screen. Adding this property requires re-implementing the signal
     void screenToFollowChanged(QScreen *screen);
@@ -221,6 +232,8 @@ private Q_SLOTS:
     void updateMask();
     void updateEnabledBorders();
     void updatePadding();
+    void updateFloating();
+    void updateShadows();
 
 private:
     int readConfigValueWithFallBack(const QString &key, int defaultValue);
@@ -243,7 +256,12 @@ private:
     int m_topPadding;
     int m_leftPadding;
     int m_rightPadding;
+    int m_bottomFloatingPadding;
+    int m_topFloatingPadding;
+    int m_leftFloatingPadding;
+    int m_rightFloatingPadding;
     bool m_initCompleted;
+    bool m_floating;
     bool m_containsMouse = false;
     bool m_fakeEventPending = false;
     Qt::Alignment m_alignment;
