@@ -185,6 +185,7 @@ ColumnLayout {
                     // Don't need a highlight or hover effects
                     hoverEnabled: false
                     contentItem: Kirigami.BasicListItem {
+                        width: slidePathsView.width - overlayWidth
                         // Don't need a highlight or hover effects
                         hoverEnabled: false
                         separatorVisible: false
