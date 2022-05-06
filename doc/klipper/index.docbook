@@ -245,7 +245,7 @@ in the clipboard history.</para></listitem>
 <varlistentry>
 <term><guilabel>Text selection</guilabel></term>
 <listitem><para>When an area of the screen is selected with mouse or keyboard, this is 
-called the <quote>selection</quote>. This option determines wWhether text selections are
+called the <quote>selection</quote>. This option determines whether text selections are
 saved in the clipboard history. It is possible to choose between <guilabel>Always save
 in history</guilabel> and <guilabel>Only when explicitly copied</guilabel>. The
 <guilabel>Always save in history</guilabel> option is not available if
