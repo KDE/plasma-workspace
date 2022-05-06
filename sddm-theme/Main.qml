@@ -14,6 +14,7 @@ import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 import "components"
+import "components/animation"
 
 // TODO: Once SDDM 0.19 is released and we are setting the font size using the
 // SDDM KCM's syncing feature, remove the `config.fontSize` overrides here and
@@ -56,6 +57,11 @@ PlasmaCore.ColorScope {
                 sceneBackgroundImage: config.background
             }
         }
+    }
+
+    RejectPasswordAnimation {
+        id: rejectPasswordAnimation
+        target: mainStack
     }
 
     MouseArea {
@@ -587,6 +593,7 @@ PlasmaCore.ColorScope {
             footer.enabled = true
             mainStack.enabled = true
             userListComponent.userList.opacity = 1
+            rejectPasswordAnimation.start()
         }
         function onLoginSucceeded() {
             //note SDDM will kill the greeter at some random point after this
