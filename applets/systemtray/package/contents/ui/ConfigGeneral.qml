@@ -57,7 +57,7 @@ ColumnLayout {
                 },
                 {
                     "label": i18nc("@item:inlistbox Icon spacing", "Large"),
-                    "spacing": 4
+                    "spacing": 6
                 }
             ]
             textRole: "label"
@@ -71,7 +71,7 @@ ColumnLayout {
                 switch (cfg_iconSpacing) {
                     case 1: return 0; // Small
                     case 2: return 1; // Normal
-                    case 4: return 2; // Large
+                    case 6: return 2; // Large
                 }
             }
 
