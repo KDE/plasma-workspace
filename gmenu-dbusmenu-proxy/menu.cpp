@@ -215,7 +215,7 @@ void Menu::onMenuChanged(const GMenuChangeList &changes)
                     dirtyItems.append(Utils::treeStructureToInt(change.subscription, change.menu, change.changePosition + i + 1));
                 }
             } else {
-                for (int i = 0; i < change.itemsToRemoveCount; ++i) {
+                for (uint i = 0; i < change.itemsToRemoveCount; ++i) {
                     section.items.removeAt(change.changePosition); // TODO bounds check
                 }
 
