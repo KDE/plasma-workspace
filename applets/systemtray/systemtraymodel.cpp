@@ -12,6 +12,7 @@
 #include "statusnotifieritemsource.h"
 #include "systemtraysettings.h"
 
+#include <KIconLoader>
 #include <KLocalizedString>
 #include <Plasma/Applet>
 #include <Plasma/DataContainer>
@@ -305,7 +306,7 @@ QVariant StatusNotifierModel::data(const QModelIndex &index, int role) const
         case Qt::DisplayRole:
             return sniData->title();
         case Qt::DecorationRole:
-            return extractIcon(sniData->icon(), sniData->iconName());
+            return extractIcon(sniData->iconPixmap(), sniData->iconName());
         default:
             return QVariant();
         }
@@ -337,26 +338,28 @@ QVariant StatusNotifierModel::data(const QModelIndex &index, int role) const
         return item.source;
     case Role::Service:
         return QVariant::fromValue(item.service);
-    case Role::AttentionIcon:
-        return extractIcon(sniData->attentionIcon());
     case Role::AttentionIconName:
         return sniData->attentionIconName();
+    case Role::AttentionIconPixmap:
+        return sniData->attentionIconPixmap();
     case Role::AttentionMovieName:
         return sniData->attentionMovieName();
     case Role::Category:
         return sniData->category();
-    case Role::Icon:
-        return extractIcon(sniData->icon());
+    case Role::IconLoader:
+        return QVariant::fromValue(sniData->iconLoader());
     case Role::IconName:
         return sniData->iconName();
-    case Role::IconThemePath:
-        return sniData->iconThemePath();
+    case Role::IconPixmap:
+        return sniData->iconPixmap();
     case Role::Id:
         return itemId;
     case Role::ItemIsMenu:
         return sniData->itemIsMenu();
     case Role::OverlayIconName:
         return sniData->overlayIconName();
+    case Role::OverlayIconPixmap:
+        return sniData->overlayIconPixmap();
     case Role::Status:
         return extractStatus(sniData);
     case Role::Title:
@@ -383,16 +386,17 @@ QHash<int, QByteArray> StatusNotifierModel::roleNames() const
 
     roles.insert(static_cast<int>(Role::DataEngineSource), QByteArrayLiteral("DataEngineSource"));
     roles.insert(static_cast<int>(Role::Service), QByteArrayLiteral("Service"));
-    roles.insert(static_cast<int>(Role::AttentionIcon), QByteArrayLiteral("AttentionIcon"));
     roles.insert(static_cast<int>(Role::AttentionIconName), QByteArrayLiteral("AttentionIconName"));
+    roles.insert(static_cast<int>(Role::AttentionIconPixmap), QByteArrayLiteral("AttentionIconPixmap"));
     roles.insert(static_cast<int>(Role::AttentionMovieName), QByteArrayLiteral("AttentionMovieName"));
     roles.insert(static_cast<int>(Role::Category), QByteArrayLiteral("Category"));
-    roles.insert(static_cast<int>(Role::Icon), QByteArrayLiteral("Icon"));
+    roles.insert(static_cast<int>(Role::IconLoader), QByteArrayLiteral("IconLoader"));
     roles.insert(static_cast<int>(Role::IconName), QByteArrayLiteral("IconName"));
-    roles.insert(static_cast<int>(Role::IconThemePath), QByteArrayLiteral("IconThemePath"));
+    roles.insert(static_cast<int>(Role::IconPixmap), QByteArrayLiteral("IconPixmap"));
     roles.insert(static_cast<int>(Role::Id), QByteArrayLiteral("Id"));
     roles.insert(static_cast<int>(Role::ItemIsMenu), QByteArrayLiteral("ItemIsMenu"));
     roles.insert(static_cast<int>(Role::OverlayIconName), QByteArrayLiteral("OverlayIconName"));
+    roles.insert(static_cast<int>(Role::OverlayIconPixmap), QByteArrayLiteral("OverlayIconPixmap"));
     roles.insert(static_cast<int>(Role::Status), QByteArrayLiteral("Status"));
     roles.insert(static_cast<int>(Role::Title), QByteArrayLiteral("Title"));
     roles.insert(static_cast<int>(Role::ToolTipSubTitle), QByteArrayLiteral("ToolTipSubTitle"));

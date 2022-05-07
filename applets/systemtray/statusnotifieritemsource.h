@@ -32,19 +32,21 @@ public:
     void contextMenu(int x, int y);
     void provideXdgActivationToken(const QString &token);
 
-    QIcon attentionIcon() const;
+    KIconLoader *iconLoader() const;
     QString attentionIconName() const;
+    QIcon attentionIconPixmap() const;
     QString attentionMovieName() const;
     QString category() const;
-    QIcon icon() const;
     QString iconName() const;
-    QString iconThemePath() const;
+    QIcon iconPixmap() const;
     QString id() const;
     bool itemIsMenu() const;
     QString overlayIconName() const;
+    QIcon overlayIconPixmap() const;
     QString status() const;
     QString title() const;
-    QVariant toolTipIcon() const;
+    QString toolTipIconName() const;
+    QIcon toolTipIconPixmap() const;
     QString toolTipSubTitle() const;
     QString toolTipTitle() const;
     QString windowId() const;
@@ -66,8 +68,6 @@ private Q_SLOTS:
 private:
     QPixmap KDbusImageStructToPixmap(const KDbusImageStruct &image) const;
     QIcon imageVectorToPixmap(const KDbusImageVector &vector) const;
-    void overlayIcon(QIcon *icon, QIcon *overlay);
-    KIconLoader *iconLoader() const;
 
     bool m_valid;
     QString m_servicename;
@@ -78,19 +78,21 @@ private:
     bool m_refreshing : 1;
     bool m_needsReRefreshing : 1;
 
-    QIcon m_attentionIcon;
     QString m_attentionIconName;
+    QIcon m_attentionIconPixmap;
     QString m_attentionMovieName;
     QString m_category;
-    QIcon m_icon;
     QString m_iconName;
+    QIcon m_iconPixmap;
     QString m_iconThemePath;
     QString m_id;
     bool m_itemIsMenu;
     QString m_overlayIconName;
+    QIcon m_overlayIconPixmap;
     QString m_status;
     QString m_title;
-    QVariant m_toolTipIcon;
+    QString m_toolTipIconName;
+    QIcon m_toolTipIconPixmap;
     QString m_toolTipSubTitle;
     QString m_toolTipTitle;
     QString m_windowId;

@@ -101,9 +101,9 @@ KIconLoader *StatusNotifierItemSource::iconLoader() const
     return m_customIconLoader ? m_customIconLoader : KIconLoader::global();
 }
 
-QIcon StatusNotifierItemSource::attentionIcon() const
+QIcon StatusNotifierItemSource::attentionIconPixmap() const
 {
-    return m_attentionIcon;
+    return m_attentionIconPixmap;
 }
 
 QString StatusNotifierItemSource::attentionIconName() const
@@ -121,19 +121,14 @@ QString StatusNotifierItemSource::category() const
     return m_category;
 }
 
-QIcon StatusNotifierItemSource::icon() const
+QIcon StatusNotifierItemSource::iconPixmap() const
 {
-    return m_icon;
+    return m_iconPixmap;
 }
 
 QString StatusNotifierItemSource::iconName() const
 {
     return m_iconName;
-}
-
-QString StatusNotifierItemSource::iconThemePath() const
-{
-    return m_iconThemePath;
 }
 
 QString StatusNotifierItemSource::id() const
@@ -144,6 +139,11 @@ QString StatusNotifierItemSource::id() const
 bool StatusNotifierItemSource::itemIsMenu() const
 {
     return m_itemIsMenu;
+}
+
+QIcon StatusNotifierItemSource::overlayIconPixmap() const
+{
+    return m_overlayIconPixmap;
 }
 
 QString StatusNotifierItemSource::overlayIconName() const
@@ -161,9 +161,14 @@ QString StatusNotifierItemSource::title() const
     return m_title;
 }
 
-QVariant StatusNotifierItemSource::toolTipIcon() const
+QString StatusNotifierItemSource::toolTipIconName() const
 {
-    return m_toolTipIcon;
+    return m_toolTipIconName;
+}
+
+QIcon StatusNotifierItemSource::toolTipIconPixmap() const
+{
+    return m_toolTipIconPixmap;
 }
 
 QString StatusNotifierItemSource::toolTipSubTitle() const
@@ -272,6 +277,7 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
                 m_customIconLoader->addAppDir(appName.size() ? appName : QStringLiteral("unused"), path);
             });
         }
+
         m_iconThemePath = path;
 
         m_category = properties[QStringLiteral("Category")].toString();
@@ -284,55 +290,32 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
         // Attention Movie
         m_attentionMovieName = properties[QStringLiteral("AttentionMovieName")].toString();
 
-        QIcon overlay;
-        QStringList overlayNames;
-
         // Overlay icon
         {
-            m_overlayIconName = QString();
+            m_overlayIconName = properties[QStringLiteral("OverlayIconName")].toString();
 
-            const QString iconName = properties[QStringLiteral("OverlayIconName")].toString();
-            if (!iconName.isEmpty()) {
-                overlay = QIcon(new KIconEngine(iconName, iconLoader()));
-                if (!overlay.isNull()) {
-                    m_overlayIconName = iconName;
-                    overlayNames << iconName;
-                }
-            }
-            if (overlay.isNull()) {
-                KDbusImageVector image;
-                properties[QStringLiteral("OverlayIconPixmap")].value<QDBusArgument>() >> image;
-                if (!image.isEmpty()) {
-                    overlay = imageVectorToPixmap(image);
-                }
-            }
+            KDbusImageVector image;
+            properties[QStringLiteral("OverlayIconPixmap")].value<QDBusArgument>() >> image;
+            m_overlayIconPixmap = imageVectorToPixmap(image);
         }
 
-        auto loadIcon = [this, &properties, &overlay, &overlayNames](const QString &iconKey, const QString &pixmapKey) -> std::tuple<QIcon, QString> {
-            const QString iconName = properties[iconKey].toString();
-            if (!iconName.isEmpty()) {
-                QIcon icon = QIcon(new KIconEngine(iconName, iconLoader(), overlayNames));
-                if (!icon.isNull()) {
-                    if (!overlay.isNull() && overlayNames.isEmpty()) {
-                        overlayIcon(&icon, &overlay);
-                    }
-                    return {icon, iconName};
-                }
-            }
-            KDbusImageVector image;
-            properties[pixmapKey].value<QDBusArgument>() >> image;
-            if (!image.isEmpty()) {
-                QIcon icon = imageVectorToPixmap(image);
-                if (!icon.isNull() && !overlay.isNull()) {
-                    overlayIcon(&icon, &overlay);
-                }
-                return {icon, QString()};
-            }
-            return {};
-        };
+        // Icon
+        {
+            m_iconName = properties[QStringLiteral("IconName")].toString();
 
-        std::tie(m_icon, m_iconName) = loadIcon(QStringLiteral("IconName"), QStringLiteral("IconPixmap"));
-        std::tie(m_attentionIcon, m_attentionIconName) = loadIcon(QStringLiteral("AttentionIconName"), QStringLiteral("AttentionIconPixmap"));
+            KDbusImageVector image;
+            properties[QStringLiteral("IconPixmap")].value<QDBusArgument>() >> image;
+            m_iconPixmap = imageVectorToPixmap(image);
+        }
+
+        // Attention icon
+        {
+            m_attentionIconName = properties[QStringLiteral("AttentionIconName")].toString();
+
+            KDbusImageVector image;
+            properties[QStringLiteral("AttentionIconPixmap")].value<QDBusArgument>() >> image;
+            m_attentionIconPixmap = imageVectorToPixmap(image);
+        }
 
         // ToolTip
         {
@@ -341,21 +324,13 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
             if (toolTip.title.isEmpty()) {
                 m_toolTipTitle = QString();
                 m_toolTipSubTitle = QString();
-                m_toolTipIcon = QString();
+                m_toolTipIconName = QString();
+                m_toolTipIconPixmap = QIcon();
             } else {
-                QIcon toolTipIcon;
-                if (toolTip.image.size() == 0) {
-                    toolTipIcon = QIcon(new KIconEngine(toolTip.icon, iconLoader()));
-                } else {
-                    toolTipIcon = imageVectorToPixmap(toolTip.image);
-                }
+                m_toolTipIconName = toolTip.icon;
+                m_toolTipIconPixmap = imageVectorToPixmap(toolTip.image);
                 m_toolTipTitle = toolTip.title;
                 m_toolTipSubTitle = toolTip.subTitle;
-                if (toolTipIcon.isNull() || toolTipIcon.availableSizes().isEmpty()) {
-                    m_toolTipIcon = QString();
-                } else {
-                    m_toolTipIcon = toolTipIcon;
-                }
             }
         }
 
@@ -429,54 +404,6 @@ QIcon StatusNotifierItemSource::imageVectorToPixmap(const KDbusImageVector &vect
     }
 
     return icon;
-}
-
-void StatusNotifierItemSource::overlayIcon(QIcon *icon, QIcon *overlay)
-{
-    QIcon tmp;
-    QPixmap m_iconPixmap = icon->pixmap(KIconLoader::SizeSmall, KIconLoader::SizeSmall);
-
-    QPainter p(&m_iconPixmap);
-
-    const int size = KIconLoader::SizeSmall / 2;
-    p.drawPixmap(QRect(size, size, size, size), overlay->pixmap(size, size), QRect(0, 0, size, size));
-    p.end();
-    tmp.addPixmap(m_iconPixmap);
-
-    // if an m_icon exactly that size wasn't found don't add it to the vector
-    m_iconPixmap = icon->pixmap(KIconLoader::SizeSmallMedium, KIconLoader::SizeSmallMedium);
-    if (m_iconPixmap.width() == KIconLoader::SizeSmallMedium) {
-        const int size = KIconLoader::SizeSmall / 2;
-        QPainter p(&m_iconPixmap);
-        p.drawPixmap(QRect(m_iconPixmap.width() - size, m_iconPixmap.height() - size, size, size), overlay->pixmap(size, size), QRect(0, 0, size, size));
-        p.end();
-        tmp.addPixmap(m_iconPixmap);
-    }
-
-    m_iconPixmap = icon->pixmap(KIconLoader::SizeMedium, KIconLoader::SizeMedium);
-    if (m_iconPixmap.width() == KIconLoader::SizeMedium) {
-        const int size = KIconLoader::SizeSmall / 2;
-        QPainter p(&m_iconPixmap);
-        p.drawPixmap(QRect(m_iconPixmap.width() - size, m_iconPixmap.height() - size, size, size), overlay->pixmap(size, size), QRect(0, 0, size, size));
-        p.end();
-        tmp.addPixmap(m_iconPixmap);
-    }
-
-    m_iconPixmap = icon->pixmap(KIconLoader::SizeLarge, KIconLoader::SizeLarge);
-    if (m_iconPixmap.width() == KIconLoader::SizeLarge) {
-        const int size = KIconLoader::SizeSmall;
-        QPainter p(&m_iconPixmap);
-        p.drawPixmap(QRect(m_iconPixmap.width() - size, m_iconPixmap.height() - size, size, size), overlay->pixmap(size, size), QRect(0, 0, size, size));
-        p.end();
-        tmp.addPixmap(m_iconPixmap);
-    }
-
-    // We can't do 'm_icon->addPixmap()' because if 'm_icon' uses KIconEngine,
-    // it will ignore the added pixmaps. This is not a bug in KIconEngine,
-    // QIcon::addPixmap() doc says: "Custom m_icon engines are free to ignore
-    // additionally added pixmaps".
-    *icon = tmp;
-    // hopefully huge and enormous not necessary right now, since it's quite costly
 }
 
 void StatusNotifierItemSource::activate(int x, int y)

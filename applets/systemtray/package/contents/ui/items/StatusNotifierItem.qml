@@ -22,18 +22,59 @@ AbstractItem {
         parent: taskIcon.iconContainer
         anchors.fill: iconItem.parent
 
+        loader: model.IconLoader
         source: {
             if (model.status === PlasmaCore.Types.NeedsAttentionStatus) {
-                if (model.AttentionIcon) {
-                    return model.AttentionIcon
-                }
                 if (model.AttentionIconName) {
-                    return model.AttentionIconName
+                    return model.AttentionIconName;
+                } else if (model.AttentionIconPixmap) {
+                    return model.AttentionIconPixmap;
                 }
             }
-            return model.Icon ? model.Icon : model.IconName
+            return model.IconName ? model.IconName : model.IconPixmap
         }
         active: taskIcon.containsMouse
+    }
+
+    // IconItem.overlays only supports names so we need a second item for the overlay, using the same
+    // positioning that KIconLoader::drawOverlays uses that IconItem uses internally
+    PlasmaCore.IconItem {
+        id: overlayIconItem
+        parent: iconItem.parent
+
+        anchors {
+            right: iconItem.right
+            bottom: iconItem.bottom
+            bottomMargin: Math.floor(0.05 * iconItem.width)
+            rightMargin: anchors.bottomMargin
+        }
+        width: {
+            if (iconItem.width < units.iconSizes.medium) {
+                return units.iconSizes.small / 2;
+            }
+            if (iconItem.width <=  units.iconSizes.large) {
+                return  units.iconSizes.small
+            }
+            if (iconItem.width <= 96) {
+                return  units.iconSizes.smallMedium
+            }
+            if (iconItem.width < 256) {
+                return  units.iconSizes.medium
+            }
+            return  units.iconSizes.large;
+        }
+        height: width
+
+        loader: model.IconLoader
+        source: {
+            if (model.OverlayIconName) {
+                return model.OverlayIconName
+            }
+            if (model.OverlayIconPixmap) {
+                return model.OverlayIconPixmap
+            }
+            return "";
+        }
     }
 
     onActivated: {
