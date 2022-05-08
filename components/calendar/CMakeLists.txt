@@ -2,12 +2,8 @@ add_library(calendarplugin SHARED)
 
 target_sources(calendarplugin PRIVATE
     calendarplugin.cpp
-    #incidencemodifier.cpp
     calendar.cpp
     calendardata.cpp
-    #calendardayhelper.cpp
-    #calendarroleproxymodel.cpp
-    #datetimerangefiltermodel.cpp
     daysmodel.cpp
     eventdatadecorator.cpp
     eventpluginsmanager.cpp
