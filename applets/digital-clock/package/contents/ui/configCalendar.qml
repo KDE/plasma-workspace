@@ -8,7 +8,7 @@ import QtQuick 2.0
 import QtQuick.Controls 2.4 as QtControls
 import QtQuick.Layouts 1.0 as QtLayouts
 import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.calendar 2.0 as PlasmaCalendar
+import org.kde.plasma.workspace.calendar 2.0 as PlasmaCalendar
 import org.kde.kirigami 2.5 as Kirigami
 
 Item {

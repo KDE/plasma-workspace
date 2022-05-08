@@ -12,7 +12,7 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.plasma.private.digitalclock 1.0
 import org.kde.kquickcontrolsaddons 2.0
-import org.kde.plasma.calendar 2.0 as PlasmaCalendar
+import org.kde.plasma.workspace.calendar 2.0 as PlasmaCalendar
 
 Item {
     id: root
