@@ -15,6 +15,8 @@
 #include "eventpluginsmanager.h"
 #include <CalendarEvents/CalendarEventsPlugin>
 
+class DaysModelPrivate;
+
 class DaysModel : public QAbstractItemModel
 {
     Q_OBJECT
@@ -38,6 +40,7 @@ public:
 
     explicit DaysModel(QObject *parent = nullptr);
     ~DaysModel() override;
+
     void setSourceData(QList<DayData> *data);
     int rowCount(const QModelIndex &parent) const override;
     int columnCount(const QModelIndex &parent) const override;
@@ -64,18 +67,11 @@ private Q_SLOTS:
     void onEventRemoved(const QString &uid);
 
 private:
+    DaysModelPrivate *const d;
+
     QModelIndex indexForDate(const QDate &date);
     bool hasMajorEventAtDate(const QDate &date) const;
     bool hasMinorEventAtDate(const QDate &date) const;
-
-    QPointer<EventPluginsManager> m_pluginsManager;
-    QList<DayData> *m_data = nullptr;
-    QList<QObject *> m_qmlData;
-    QDate m_lastRequestedAgendaDate;
-    QList<CalendarEvents::CalendarEventsPlugin *> m_eventPlugins;
-    QMultiHash<QDate, CalendarEvents::EventData> m_eventsData;
-    QDate m_lastRequestedEventsStartDate; // this is always this+42 days
-    bool m_agendaNeedsUpdate;
 };
 
 #endif // DAYSMODEL_H

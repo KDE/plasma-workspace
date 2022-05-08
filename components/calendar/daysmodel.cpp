@@ -16,24 +16,41 @@
 
 constexpr int maxEventDisplayed = 5;
 
+class DaysModelPrivate
+{
+public:
+    explicit DaysModelPrivate();
+
+    QList<DayData> *m_data = nullptr;
+    QList<QObject *> m_qmlData;
+    QMultiHash<QDate, CalendarEvents::EventData> m_eventsData;
+
+    QDate m_lastRequestedAgendaDate;
+    bool m_agendaNeedsUpdate = false;
+
+    std::unique_ptr<EventPluginsManager> m_pluginsManager;
+};
+
+DaysModelPrivate::DaysModelPrivate()
+{
+}
+
 DaysModel::DaysModel(QObject *parent)
     : QAbstractItemModel(parent)
-    , m_pluginsManager(nullptr)
-    , m_lastRequestedEventsStartDate(QDate())
-    , m_agendaNeedsUpdate(false)
+    , d(new DaysModelPrivate)
 {
 }
 
 DaysModel::~DaysModel()
 {
-    qDeleteAll(m_eventPlugins);
+    delete d;
 }
 
 void DaysModel::setSourceData(QList<DayData> *data)
 {
-    if (m_data != data) {
+    if (d->m_data != data) {
         beginResetModel();
-        m_data = data;
+        d->m_data = data;
         endResetModel();
     }
 }
@@ -42,10 +59,10 @@ int DaysModel::rowCount(const QModelIndex &parent) const
 {
     if (!parent.isValid()) {
         // day count
-        if (m_data->size() <= 0) {
+        if (d->m_data->size() <= 0) {
             return 0;
         } else {
-            return m_data->size();
+            return d->m_data->size();
         }
     } else {
         // event count
@@ -71,18 +88,18 @@ QVariant DaysModel::data(const QModelIndex &index, int role) const
 
     if (!index.parent().isValid()) {
         // Fetch days in month
-        const DayData &currentData = m_data->at(row);
+        const DayData &currentData = d->m_data->at(row);
         const QDate currentDate(currentData.yearNumber, currentData.monthNumber, currentData.dayNumber);
 
         switch (role) {
         case isCurrent:
             return currentData.isCurrent;
         case containsEventItems:
-            return m_eventsData.contains(currentDate);
+            return d->m_eventsData.contains(currentDate);
         case Events:
-            return QVariant::fromValue(m_eventsData.values(currentDate));
+            return QVariant::fromValue(d->m_eventsData.values(currentDate));
         case EventCount:
-            return m_eventsData.values(currentDate).count();
+            return d->m_eventsData.values(currentDate).count();
         case containsMajorEventItems:
             return hasMajorEventAtDate(currentDate);
         case containsMinorEventItems:
@@ -112,7 +129,7 @@ QVariant DaysModel::data(const QModelIndex &index, int role) const
 
 void DaysModel::update()
 {
-    if (m_data->size() <= 0) {
+    if (d->m_data->size() <= 0) {
         return;
     }
 
@@ -120,31 +137,31 @@ void DaysModel::update()
     // and we can't remove the events manually with beginRemoveRows() since
     // we don't know where the old events were located.
     beginResetModel();
-    m_eventsData.clear();
+    d->m_eventsData.clear();
     endResetModel();
 
-    const QDate modelFirstDay(m_data->at(0).yearNumber, m_data->at(0).monthNumber, m_data->at(0).dayNumber);
+    const QDate modelFirstDay(d->m_data->at(0).yearNumber, d->m_data->at(0).monthNumber, d->m_data->at(0).dayNumber);
 
-    if (m_pluginsManager) {
-        const auto plugins = m_pluginsManager->plugins();
+    if (d->m_pluginsManager) {
+        const auto plugins = d->m_pluginsManager->plugins();
         for (CalendarEvents::CalendarEventsPlugin *eventsPlugin : plugins) {
             eventsPlugin->loadEventsForDateRange(modelFirstDay, modelFirstDay.addDays(42));
         }
     }
 
     // We always have 42 items (or weeks * num of days in week) so we only have to tell the view that the data changed.
-    Q_EMIT dataChanged(index(0, 0), index(m_data->count() - 1, 0));
+    Q_EMIT dataChanged(index(0, 0), index(d->m_data->count() - 1, 0));
 }
 
 void DaysModel::onDataReady(const QMultiHash<QDate, CalendarEvents::EventData> &data)
 {
-    m_eventsData.reserve(m_eventsData.size() + data.size());
-    for (int i = 0; i < m_data->count(); i++) {
-        const DayData &currentData = m_data->at(i);
+    d->m_eventsData.reserve(d->m_eventsData.size() + data.size());
+    for (int i = 0; i < d->m_data->count(); i++) {
+        const DayData &currentData = d->m_data->at(i);
         const QDate currentDate(currentData.yearNumber, currentData.monthNumber, currentData.dayNumber);
         if (!data.values(currentDate).isEmpty()) {
             // Make sure we don't display more than maxEventDisplayed events.
-            const int currentCount = m_eventsData.values(currentDate).count();
+            const int currentCount = d->m_eventsData.values(currentDate).count();
             if (currentCount >= maxEventDisplayed) {
                 break;
             }
@@ -159,14 +176,14 @@ void DaysModel::onDataReady(const QMultiHash<QDate, CalendarEvents::EventData> &
                     break;
                 }
                 stopCounter++;
-                m_eventsData.insert(currentDate, dataDay);
+                d->m_eventsData.insert(currentDate, dataDay);
             }
             endInsertRows();
         }
     }
 
     if (data.contains(QDate::currentDate())) {
-        m_agendaNeedsUpdate = true;
+        d->m_agendaNeedsUpdate = true;
     }
 
     // only the containsEventItems roles may have changed
@@ -180,8 +197,8 @@ void DaysModel::onDataReady(const QMultiHash<QDate, CalendarEvents::EventData> &
 void DaysModel::onEventModified(const CalendarEvents::EventData &data)
 {
     QList<QDate> updatesList;
-    auto i = m_eventsData.begin();
-    while (i != m_eventsData.end()) {
+    auto i = d->m_eventsData.begin();
+    while (i != d->m_eventsData.end()) {
         if (i->uid() == data.uid()) {
             *i = data;
             updatesList << i.key();
@@ -191,7 +208,7 @@ void DaysModel::onEventModified(const CalendarEvents::EventData &data)
     }
 
     if (!updatesList.isEmpty()) {
-        m_agendaNeedsUpdate = true;
+        d->m_agendaNeedsUpdate = true;
     }
 
     for (const QDate date : std::as_const(updatesList)) {
@@ -212,18 +229,18 @@ void DaysModel::onEventRemoved(const QString &uid)
     // and if not done correctly will introduce bugs.
     beginResetModel();
     QList<QDate> updatesList;
-    auto i = m_eventsData.begin();
-    while (i != m_eventsData.end()) {
+    auto i = d->m_eventsData.begin();
+    while (i != d->m_eventsData.end()) {
         if (i->uid() == uid) {
             updatesList << i.key();
-            i = m_eventsData.erase(i);
+            i = d->m_eventsData.erase(i);
         } else {
             ++i;
         }
     }
 
     if (!updatesList.isEmpty()) {
-        m_agendaNeedsUpdate = true;
+        d->m_agendaNeedsUpdate = true;
     }
 
     for (const QDate date : std::as_const(updatesList)) {
@@ -239,16 +256,16 @@ void DaysModel::onEventRemoved(const QString &uid)
 
 QList<QObject *> DaysModel::eventsForDate(const QDate &date)
 {
-    if (m_lastRequestedAgendaDate == date && !m_agendaNeedsUpdate) {
-        return m_qmlData;
+    if (d->m_lastRequestedAgendaDate == date && !d->m_agendaNeedsUpdate) {
+        return d->m_qmlData;
     }
 
-    m_lastRequestedAgendaDate = date;
-    qDeleteAll(m_qmlData);
-    m_qmlData.clear();
+    d->m_lastRequestedAgendaDate = date;
+    qDeleteAll(d->m_qmlData);
+    d->m_qmlData.clear();
 
-    QList<CalendarEvents::EventData> events = m_eventsData.values(date);
-    m_qmlData.reserve(events.size());
+    QList<CalendarEvents::EventData> events = d->m_eventsData.values(date);
+    d->m_qmlData.reserve(events.size());
 
     // sort events by their time and type
     std::sort(events.begin(), events.end(), [](const CalendarEvents::EventData &a, const CalendarEvents::EventData &b) {
@@ -256,20 +273,20 @@ QList<QObject *> DaysModel::eventsForDate(const QDate &date)
     });
 
     for (const CalendarEvents::EventData &event : std::as_const(events)) {
-        m_qmlData << new EventDataDecorator(event, this);
+        d->m_qmlData << new EventDataDecorator(event, this);
     }
 
-    m_agendaNeedsUpdate = false;
-    return m_qmlData;
+    d->m_agendaNeedsUpdate = false;
+    return d->m_qmlData;
 }
 
 QModelIndex DaysModel::indexForDate(const QDate &date)
 {
-    if (!m_data) {
+    if (!d->m_data) {
         return QModelIndex();
     }
 
-    const DayData &firstDay = m_data->at(0);
+    const DayData &firstDay = d->m_data->at(0);
     const QDate firstDate(firstDay.yearNumber, firstDay.monthNumber, firstDay.dayNumber);
 
     qint64 daysTo = firstDate.daysTo(date);
@@ -279,8 +296,8 @@ QModelIndex DaysModel::indexForDate(const QDate &date)
 
 bool DaysModel::hasMajorEventAtDate(const QDate &date) const
 {
-    auto it = m_eventsData.find(date);
-    while (it != m_eventsData.end() && it.key() == date) {
+    auto it = d->m_eventsData.find(date);
+    while (it != d->m_eventsData.end() && it.key() == date) {
         if (!it.value().isMinor()) {
             return true;
         }
@@ -291,8 +308,8 @@ bool DaysModel::hasMajorEventAtDate(const QDate &date) const
 
 bool DaysModel::hasMinorEventAtDate(const QDate &date) const
 {
-    auto it = m_eventsData.find(date);
-    while (it != m_eventsData.end() && it.key() == date) {
+    auto it = d->m_eventsData.find(date);
+    while (it != d->m_eventsData.end() && it.key() == date) {
         if (it.value().isMinor()) {
             return true;
         }
@@ -309,17 +326,12 @@ void DaysModel::setPluginsManager(QObject *manager)
         return;
     }
 
-    if (m_pluginsManager) {
-        m_pluginsManager->deleteLater();
-        m_pluginsManager = nullptr;
-    }
+    d->m_pluginsManager.reset(m);
 
-    m_pluginsManager = m;
-
-    connect(m_pluginsManager, &EventPluginsManager::dataReady, this, &DaysModel::onDataReady);
-    connect(m_pluginsManager, &EventPluginsManager::eventModified, this, &DaysModel::onEventModified);
-    connect(m_pluginsManager, &EventPluginsManager::eventRemoved, this, &DaysModel::onEventRemoved);
-    connect(m_pluginsManager, &EventPluginsManager::pluginsChanged, this, &DaysModel::update);
+    connect(d->m_pluginsManager.get(), &EventPluginsManager::dataReady, this, &DaysModel::onDataReady);
+    connect(d->m_pluginsManager.get(), &EventPluginsManager::eventModified, this, &DaysModel::onEventModified);
+    connect(d->m_pluginsManager.get(), &EventPluginsManager::eventRemoved, this, &DaysModel::onEventRemoved);
+    connect(d->m_pluginsManager.get(), &EventPluginsManager::pluginsChanged, this, &DaysModel::update);
 
     QMetaObject::invokeMethod(this, "update", Qt::QueuedConnection);
 }
