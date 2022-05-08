@@ -73,9 +73,9 @@ public:
         case Qt::UserRole: {
             // The currentPlugin path contains the full path including
             // the plugin filename, so it needs to be cut off from the last '/'
-            const QStringView prefix = QStringView(currentPlugin).left(currentPlugin.lastIndexOf(QLatin1Char('/')));
+            const QStringView prefix = QStringView(currentPlugin).left(currentPlugin.lastIndexOf(QDir::separator()));
             const QString qmlFilePath = metadata.configUi;
-            return QString(prefix % QLatin1Char('/') % qmlFilePath);
+            return QStringLiteral("%1%2%3").arg(prefix, QDir::separator(), qmlFilePath);
         }
         case Qt::UserRole + 1:
             return currentPlugin;
