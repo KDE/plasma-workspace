@@ -34,6 +34,7 @@ include(ECMConfiguredInstall)
 include(ECMGenerateDBusServiceFile)
 include(ECMFindQmlModule)
 include(ECMGenerateExportHeader)
+include(ECMGenerateQmlTypes)
 
 find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Svg Widgets Quick QuickWidgets Concurrent Test Network)
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
