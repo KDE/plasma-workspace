@@ -3,7 +3,6 @@ add_library(calendarplugin SHARED)
 target_sources(calendarplugin PRIVATE
     calendarplugin.cpp
     calendar.cpp
-    calendardata.cpp
     daysmodel.cpp
     eventdatadecorator.cpp
     eventpluginsmanager.cpp

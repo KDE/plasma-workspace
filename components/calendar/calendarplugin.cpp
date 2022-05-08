@@ -6,7 +6,6 @@
 
 #include "calendarplugin.h"
 #include "calendar.h"
-#include "calendardata.h"
 #include "eventdatadecorator.h"
 #include "eventpluginsmanager.h"
 
@@ -25,7 +24,6 @@ static QObject *event_plugins_manager_provider(QQmlEngine *engine, QJSEngine *sc
 void CalendarPlugin::registerTypes(const char *uri)
 {
     Q_ASSERT(uri == QByteArray("org.kde.plasma.workspace.calendar"));
-    qmlRegisterType<CalendarData>(uri, 2, 0, "CalendarData");
     qmlRegisterType<Calendar>(uri, 2, 0, "Calendar");
     qmlRegisterAnonymousType<QAbstractItemModel>(uri, 1);
     qmlRegisterAnonymousType<QAbstractListModel>(uri, 1);
