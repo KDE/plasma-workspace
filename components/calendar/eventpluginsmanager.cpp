@@ -43,8 +43,8 @@ class EventPluginsModel : public QAbstractListModel
 public:
     EventPluginsModel(EventPluginsManagerPrivate *d)
         : d(d)
+        , m_roles(QAbstractListModel::roleNames())
     {
-        m_roles = QAbstractListModel::roleNames();
         m_roles.insert(Qt::EditRole, QByteArrayLiteral("checked"));
         m_roles.insert(Qt::UserRole, QByteArrayLiteral("configUi"));
         m_roles.insert(Qt::UserRole + 1, QByteArrayLiteral("pluginPath"));
