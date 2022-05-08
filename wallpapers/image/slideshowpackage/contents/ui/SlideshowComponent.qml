@@ -175,6 +175,10 @@ ColumnLayout {
             Layout.preferredWidth: 0.35 * parent.width
             Layout.maximumWidth: Kirigami.Units.gridUnit * 16
             Component.onCompleted: foldersScroll.background.visible = true;
+
+            // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-83890
+            QQC2.ScrollBar.horizontal.policy: QQC2.ScrollBar.AlwaysOff
+
             ListView {
                 id: slidePathsView
                 model: imageWallpaper.slidePaths
