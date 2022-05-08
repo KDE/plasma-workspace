@@ -8,7 +8,7 @@
 
 import QtQuick 2.0
 import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.calendar 2.0 as PlasmaCalendar
+import org.kde.plasma.workspace.calendar 2.0 as PlasmaCalendar
 import QtQuick.Layouts 1.1
 
 import org.kde.plasma.core 2.0 as PlasmaCore
