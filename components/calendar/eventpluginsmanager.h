@@ -7,7 +7,6 @@
 #ifndef EVENTPLUGINSMANAGER_H
 #define EVENTPLUGINSMANAGER_H
 
-#include <QMap>
 #include <QObject>
 #include <QStringList>
 
@@ -18,6 +17,7 @@ class EventData;
 }
 class EventPluginsModel;
 class QAbstractListModel;
+class EventPluginsManagerPrivate;
 
 class EventPluginsManager : public QObject
 {
@@ -54,17 +54,7 @@ Q_SIGNALS:
 private:
     void loadPlugin(const QString &absolutePath);
 
-    friend class EventPluginsModel;
-    EventPluginsModel *m_model = nullptr;
-    QList<CalendarEvents::CalendarEventsPlugin *> m_plugins;
-    struct PluginData {
-        QString name;
-        QString desc;
-        QString icon;
-        QString configUi;
-    };
-    QMap<QString, PluginData> m_availablePlugins;
-    QStringList m_enabledPlugins;
+    EventPluginsManagerPrivate *const d;
 };
 
 #endif

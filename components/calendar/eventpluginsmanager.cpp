@@ -17,14 +17,33 @@
 
 #include <KPluginMetaData>
 
+class EventPluginsManagerPrivate
+{
+public:
+    explicit EventPluginsManagerPrivate();
+    ~EventPluginsManagerPrivate();
+
+    friend class EventPluginsModel;
+    struct PluginData {
+        QString name;
+        QString desc;
+        QString icon;
+        QString configUi;
+    };
+
+    std::unique_ptr<EventPluginsModel> m_model;
+    QList<CalendarEvents::CalendarEventsPlugin *> m_plugins;
+    QMap<QString, PluginData> m_availablePlugins;
+    QStringList m_enabledPlugins;
+};
+
 class EventPluginsModel : public QAbstractListModel
 {
     Q_OBJECT
 public:
-    EventPluginsModel(EventPluginsManager *manager)
-        : QAbstractListModel(manager)
+    EventPluginsModel(EventPluginsManagerPrivate *d)
+        : d(d)
     {
-        m_manager = manager;
         m_roles = QAbstractListModel::roleNames();
         m_roles.insert(Qt::EditRole, QByteArrayLiteral("checked"));
         m_roles.insert(Qt::UserRole, QByteArrayLiteral("configUi"));
@@ -50,18 +69,18 @@ public:
     Q_INVOKABLE int rowCount(const QModelIndex &parent = QModelIndex()) const override
     {
         Q_UNUSED(parent);
-        return m_manager->m_availablePlugins.size();
+        return d->m_availablePlugins.size();
     }
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override
     {
-        if (!index.isValid() && !m_manager) {
+        if (!index.isValid() || !d) {
             return QVariant();
         }
 
-        const auto it = m_manager->m_availablePlugins.cbegin() + index.row();
+        const auto it = d->m_availablePlugins.cbegin() + index.row();
         const QString currentPlugin = it.key();
-        const EventPluginsManager::PluginData metadata = it.value();
+        const EventPluginsManagerPrivate::PluginData metadata = it.value();
 
         switch (role) {
         case Qt::DisplayRole:
@@ -80,7 +99,7 @@ public:
         case Qt::UserRole + 1:
             return currentPlugin;
         case Qt::EditRole:
-            return m_manager->m_enabledPlugins.contains(currentPlugin);
+            return d->m_enabledPlugins.contains(currentPlugin);
         }
 
         return QVariant();
@@ -93,14 +112,14 @@ public:
         }
 
         bool enabled = value.toBool();
-        const QString pluginPath = m_manager->m_availablePlugins.keys().at(index.row());
+        const QString pluginPath = d->m_availablePlugins.keys().at(index.row());
 
         if (enabled) {
-            if (!m_manager->m_enabledPlugins.contains(pluginPath)) {
-                m_manager->m_enabledPlugins << pluginPath;
+            if (!d->m_enabledPlugins.contains(pluginPath)) {
+                d->m_enabledPlugins << pluginPath;
             }
         } else {
-            m_manager->m_enabledPlugins.removeOne(pluginPath);
+            d->m_enabledPlugins.removeOne(pluginPath);
         }
 
         Q_EMIT dataChanged(index, index);
@@ -114,12 +133,12 @@ public:
     }
 
 private:
-    EventPluginsManager *m_manager;
+    EventPluginsManagerPrivate *d;
     QHash<int, QByteArray> m_roles;
 };
 
-EventPluginsManager::EventPluginsManager(QObject *parent)
-    : QObject(parent)
+EventPluginsManagerPrivate::EventPluginsManagerPrivate()
+    : m_model(std::make_unique<EventPluginsModel>(this))
 {
     auto plugins = KPluginMetaData::findPlugins(QStringLiteral("plasmacalendarplugins"), [](const KPluginMetaData &md) {
         return md.rawData().contains(QStringLiteral("KPlugin"));
@@ -159,38 +178,47 @@ EventPluginsManager::EventPluginsManager(QObject *parent)
             }
         }
     }
-
-    m_model = new EventPluginsModel(this);
 }
 
-EventPluginsManager::~EventPluginsManager()
+EventPluginsManagerPrivate::~EventPluginsManagerPrivate()
 {
     qDeleteAll(m_plugins);
 }
 
+EventPluginsManager::EventPluginsManager(QObject *parent)
+    : QObject(parent)
+    , d(new EventPluginsManagerPrivate)
+{
+}
+
+EventPluginsManager::~EventPluginsManager()
+{
+    delete d;
+}
+
 void EventPluginsManager::populateEnabledPluginsList(const QStringList &pluginsList)
 {
-    m_model->beginResetModel();
-    m_enabledPlugins = pluginsList;
-    m_model->endResetModel();
+    d->m_model->beginResetModel();
+    d->m_enabledPlugins = pluginsList;
+    d->m_model->endResetModel();
 }
 
 void EventPluginsManager::setEnabledPlugins(QStringList &pluginsList)
 {
-    m_model->beginResetModel();
-    m_enabledPlugins = pluginsList;
+    d->m_model->beginResetModel();
+    d->m_enabledPlugins = pluginsList;
 
     // Remove all already loaded plugins from the pluginsList
     // and unload those plugins that are not in the pluginsList
-    auto i = m_plugins.begin();
-    while (i != m_plugins.end()) {
+    auto i = d->m_plugins.begin();
+    while (i != d->m_plugins.end()) {
         const QString pluginPath = (*i)->property("pluginPath").toString();
         if (pluginsList.contains(pluginPath)) {
             pluginsList.removeAll(pluginPath);
             ++i;
         } else {
             (*i)->deleteLater();
-            i = m_plugins.erase(i);
+            i = d->m_plugins.erase(i);
         }
     }
 
@@ -199,13 +227,13 @@ void EventPluginsManager::setEnabledPlugins(QStringList &pluginsList)
         loadPlugin(pluginPath);
     }
 
-    m_model->endResetModel();
+    d->m_model->endResetModel();
     Q_EMIT pluginsChanged();
 }
 
 QStringList EventPluginsManager::enabledPlugins() const
 {
-    return m_enabledPlugins;
+    return d->m_enabledPlugins;
 }
 
 void EventPluginsManager::loadPlugin(const QString &absolutePath)
@@ -224,7 +252,7 @@ void EventPluginsManager::loadPlugin(const QString &absolutePath)
         if (eventsPlugin) {
             qDebug() << "Loading Calendar plugin" << eventsPlugin;
             eventsPlugin->setProperty("pluginPath", absolutePath);
-            m_plugins << eventsPlugin;
+            d->m_plugins << eventsPlugin;
 
             // Connect the relay signals
             connect(eventsPlugin, &CalendarEvents::CalendarEventsPlugin::dataReady, this, &EventPluginsManager::dataReady);
@@ -241,12 +269,12 @@ void EventPluginsManager::loadPlugin(const QString &absolutePath)
 
 QList<CalendarEvents::CalendarEventsPlugin *> EventPluginsManager::plugins() const
 {
-    return m_plugins;
+    return d->m_plugins;
 }
 
 QAbstractListModel *EventPluginsManager::pluginsModel() const
 {
-    return m_model;
+    return d->m_model.get();
 }
 
 #include "eventpluginsmanager.moc"
