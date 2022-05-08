@@ -16,6 +16,7 @@
 #include "daysmodel.h"
 
 class QAbstractItemModel;
+class CalendarPrivate;
 
 class Calendar : public QObject
 {
@@ -131,6 +132,7 @@ public:
     Q_ENUM(DateMatchingPrecision)
 
     explicit Calendar(QObject *parent = nullptr);
+    ~Calendar() override;
 
     // Displayed date
     QDateTime displayedDate() const;
@@ -197,17 +199,7 @@ public Q_SLOTS:
     void updateData();
 
 private:
-    QDate m_displayedDate;
-    QDate m_today;
-    Types m_types;
-    QList<DayData> m_dayList;
-    DaysModel *m_daysModel;
-    QJsonArray m_weekList;
-
-    int m_days;
-    int m_weeks;
-    int m_firstDayOfWeek;
-    QString m_errorMessage;
+    CalendarPrivate *const d;
 };
 
 #endif // CALENDAR_H
