@@ -1,4 +1,9 @@
 #!/bin/sh
+# SPDX-FileCopyrightText: 2019 Aleix Pol Gonzalez <aleixpol@kde.org>
+# SPDX-FileCopyrightText: 2021 Nate Graham <nate@kde.org>
+#
+# SPDX-License-Identifier: GPL-2.0-or-later
+
 set -e
 
 # Make built-from-source sessions appear in login screen
