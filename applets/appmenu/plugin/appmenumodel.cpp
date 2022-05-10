@@ -158,7 +158,7 @@ int AppMenuModel::rowCount(const QModelIndex &parent) const
         return 0;
     }
 
-    return m_menu->actions().count() + (KWindowSystem::isPlatformWayland() ? 1 : 0);
+    return m_menu->actions().count() + (m_searchAction ? 1 : 0);
 }
 
 void AppMenuModel::removeSearchActionsFromMenu()
@@ -247,7 +247,7 @@ QVariant AppMenuModel::data(const QModelIndex &index, int role) const
 
     const auto actions = m_menu->actions();
     const int row = index.row();
-    if (row == actions.count() && KWindowSystem::isPlatformWayland()) {
+    if (row == actions.count() && m_searchAction) {
         if (role == MenuRole) {
             return m_searchAction->text();
         } else if (role == ActionRole) {
