@@ -55,25 +55,13 @@ void messageBox(const QString &text)
 
 QStringList allServices(const QLatin1String &prefix)
 {
-    QDBusConnectionInterface *bus = QDBusConnection::sessionBus().interface();
-    const QStringList services = bus->registeredServiceNames();
-    QMap<QString, QStringList> servicesWithAliases;
-
-    for (const QString &serviceName : services) {
-        QDBusReply<QString> reply = bus->serviceOwner(serviceName);
-        QString owner = reply;
-        if (owner.isEmpty())
-            owner = serviceName;
-        servicesWithAliases[owner].append(serviceName);
-    }
-
+    const QStringList services = QDBusConnection::sessionBus().interface()->registeredServiceNames();
     QStringList names;
-    for (auto it = servicesWithAliases.constBegin(); it != servicesWithAliases.constEnd(); ++it) {
-        if (it.value().startsWith(prefix))
-            names << it.value();
-    }
-    names.removeDuplicates();
-    names.sort();
+
+    std::copy_if(services.cbegin(), services.cend(), std::back_inserter(names), [&prefix](const QString &serviceName) {
+        return serviceName.startsWith(prefix);
+    });
+
     return names;
 }
 
