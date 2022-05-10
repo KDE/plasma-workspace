@@ -67,28 +67,28 @@ void ClipboardMenu::setupMenu(QAction *action)
         QAction *a;
 
         // e.g 12:30 PM or 12:30:01 PM
-        s = m_secondsIncluded ? QLocale().toString(time, QLocale::LongFormat) : QLocale().toString(time, QLocale::ShortFormat);
+        s = m_secondsIncluded ? QLocale::system().toString(time, QLocale::LongFormat) : QLocale::system().toString(time, QLocale::ShortFormat);
         a = menu->addAction(s);
         a->setData(s);
 
         // the same as the option above but shows the opposite of the "show seconds" setting
         // e.g if "show seconds" is enabled it will show the time without seconds and vice-versa
-        s = m_secondsIncluded ? QLocale().toString(time, QLocale::ShortFormat) : QLocale().toString(time, QLocale::LongFormat);
+        s = m_secondsIncluded ? QLocale::system().toString(time, QLocale::ShortFormat) : QLocale::system().toString(time, QLocale::LongFormat);
         a = menu->addAction(s);
         a->setData(s);
 
         // e.g 4/28/22
-        s = QLocale().toString(date, QLocale::ShortFormat);
+        s = QLocale::system().toString(date, QLocale::ShortFormat);
         a = menu->addAction(s);
         a->setData(s);
 
         // e.g Thursday, April 28, 2022
-        s = QLocale().toString(date, QLocale::LongFormat);
+        s = QLocale::system().toString(date, QLocale::LongFormat);
         a = menu->addAction(s);
         a->setData(s);
 
         // e.g Thursday, April 28, 2022 12:30 PM or Thursday, April 28, 2022 12:30:01 PM -03
-        s = m_secondsIncluded ? QLocale().toString(date, QLocale::LongFormat) + ws + QLocale().toString(time, QLocale::LongFormat) : QLocale().toString(date, QLocale::LongFormat) + ws + QLocale().toString(time, QLocale::ShortFormat);
+        s = m_secondsIncluded ? QLocale::system().toString(date, QLocale::LongFormat) + ws + QLocale::system().toString(time, QLocale::LongFormat) : QLocale::system().toString(date, QLocale::LongFormat) + ws + QLocale::system().toString(time, QLocale::ShortFormat);
         a = menu->addAction(s);
         a->setData(s);
 
@@ -98,7 +98,7 @@ void ClipboardMenu::setupMenu(QAction *action)
         a->setData(s);
 
         // e.g 2022-04-28 12:30 PM or 2022-04-28 12:30:01 PM -03
-        s = m_secondsIncluded ? date.toString(Qt::ISODate) + ws + QLocale().toString(time, QLocale::LongFormat) : date.toString(Qt::ISODate) + ws + QLocale().toString(time, QLocale::ShortFormat);
+        s = m_secondsIncluded ? date.toString(Qt::ISODate) + ws + QLocale::system().toString(time, QLocale::LongFormat) : date.toString(Qt::ISODate) + ws + QLocale::system().toString(time, QLocale::ShortFormat);
         a = menu->addAction(s);
         a->setData(s);
 
