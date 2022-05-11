@@ -67,17 +67,28 @@ PlasmaExtras.Representation {
 
             anchors.left: parent.left
             width: visible ? parent.width / 2 - 1 : 0
+            height: visible ? parent.height : 0
+            spacing: 0
 
             visible: calendar.showAgenda || calendar.showClocks
-            RowLayout {
-                PlasmaExtras.Heading {
-                    Layout.fillWidth: true
-                    Layout.leftMargin: calendar.paddings // Match calendar title
 
-                    text: monthView.currentDate.toLocaleDateString(Qt.locale(), Locale.LongFormat)
-                }
+            PlasmaExtras.Heading {
+                Layout.alignment: Qt.AlignTop
+                Layout.fillWidth: true
+                Layout.leftMargin: calendar.paddings // Match calendar title
+
+                text: monthView.currentDate.toLocaleDateString(Qt.locale(), Locale.LongFormat)
             }
+
+            PlasmaComponents3.Label {
+                visible: monthView.currentDateAuxilliaryText.length > 0
+                Layout.leftMargin: calendar.paddings
+                font.pixelSize: PlasmaCore.Theme.smallestFont.pixelSize
+                text: monthView.currentDateAuxilliaryText
+            }
+
             RowLayout {
+                Layout.alignment: Qt.AlignBottom
                 // Heading text
                 PlasmaExtras.Heading {
                     visible: agenda.visible
