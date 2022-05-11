@@ -10,9 +10,10 @@
 #include <QObject>
 #include <QStringList>
 
+#include <CalendarEvents/CalendarEventsPlugin>
+
 namespace CalendarEvents
 {
-class CalendarEventsPlugin;
 class EventData;
 }
 class EventPluginsModel;
@@ -44,12 +45,26 @@ public:
 Q_SIGNALS:
     void pluginsChanged();
 
-    // These three signals below are used for relaying the
+    // These 5 signals below are used for relaying the
     // plugin signals so that the EventPluginsManager don't
     // have to worry about connecting to newly loaded plugins
     void dataReady(const QMultiHash<QDate, CalendarEvents::EventData> &data);
     void eventModified(const CalendarEvents::EventData &modifiedEvent);
     void eventRemoved(const QString &uid);
+
+    /**
+     * Relays the plugin signal that contains alternate dates
+     *
+     * @param data a hash from CalendarEventsPlugin
+     */
+    void alternateDateReady(const QHash<QDate, QDate> &data);
+
+    /**
+     * Relays the plugin signal that contains sub-labels
+     *
+     * @param data a hash from CalendarEventsPlugin
+     */
+    void subLabelReady(const QHash<QDate, CalendarEvents::CalendarEventsPlugin::SubLabel> &data);
 
 private:
     void loadPlugin(const QString &absolutePath);

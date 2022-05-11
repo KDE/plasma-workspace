@@ -6,8 +6,6 @@
 
 #include "eventpluginsmanager.h"
 
-#include <CalendarEvents/CalendarEventsPlugin>
-
 #include <QAbstractListModel>
 #include <QCoreApplication>
 #include <QDebug>
@@ -258,6 +256,8 @@ void EventPluginsManager::loadPlugin(const QString &absolutePath)
             connect(eventsPlugin, &CalendarEvents::CalendarEventsPlugin::dataReady, this, &EventPluginsManager::dataReady);
             connect(eventsPlugin, &CalendarEvents::CalendarEventsPlugin::eventModified, this, &EventPluginsManager::eventModified);
             connect(eventsPlugin, &CalendarEvents::CalendarEventsPlugin::eventRemoved, this, &EventPluginsManager::eventRemoved);
+            connect(eventsPlugin, &CalendarEvents::CalendarEventsPlugin::alternateDateReady, this, &EventPluginsManager::alternateDateReady);
+            connect(eventsPlugin, &CalendarEvents::CalendarEventsPlugin::subLabelReady, this, &EventPluginsManager::subLabelReady);
         } else {
             // not our/valid plugin, so unload it
             loader.unload();
