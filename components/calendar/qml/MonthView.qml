@@ -40,6 +40,9 @@ PinchArea { // TODO KF6 switch to Item
 
     property QtObject date
     property date currentDate
+    property string todayAuxilliaryText: ""
+    // Bind to todayAuxilliaryText so sublabel can be visible on debut
+    property string currentDateAuxilliaryText: todayAuxilliaryText
 
     property date showDate: new Date()
 
@@ -79,6 +82,7 @@ PinchArea { // TODO KF6 switch to Item
     function resetToToday() {
         calendarBackend.resetToToday();
         root.currentDate = root.today;
+        root.currentDateAuxilliaryText = root.todayAuxilliaryText;
         swipeView.currentIndex = 0;
     }
 
@@ -352,6 +356,10 @@ PinchArea { // TODO KF6 switch to Item
                 const rowNumber = Math.floor(index / columns);
                 week = 1 + calendarBackend.weeksModel[rowNumber];
                 root.currentDate = new Date(date.yearNumber, date.monthNumber - 1, date.dayNumber)
+
+                if (date.subLabel) {
+                    root.currentDateAuxilliaryText = date.subLabel;
+                }
             }
 
             onScrollUp: root.nextView()
