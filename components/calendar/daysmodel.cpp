@@ -24,6 +24,8 @@ public:
     QList<DayData> *m_data = nullptr;
     QList<QObject *> m_qmlData;
     QMultiHash<QDate, CalendarEvents::EventData> m_eventsData;
+    QHash<QDate /* Gregorian */, QDate> m_alternateDatesData;
+    QHash<QDate, CalendarEvents::CalendarEventsPlugin::SubLabel> m_subLabelsData;
 
     QDate m_lastRequestedAgendaDate;
     bool m_agendaNeedsUpdate = false;
@@ -110,6 +112,36 @@ QVariant DaysModel::data(const QModelIndex &index, int role) const
             return currentData.monthNumber;
         case yearNumber:
             return currentData.yearNumber;
+        default:
+            break;
+        }
+
+        if (d->m_alternateDatesData.count(currentDate)) {
+            switch (role) {
+            case AlternateYearNumber:
+                return d->m_alternateDatesData.value(currentDate).year();
+            case AlternateMonthNumber:
+                return d->m_alternateDatesData.value(currentDate).month();
+            case AlternateDayNumber:
+                return d->m_alternateDatesData.value(currentDate).day();
+            default:
+                break;
+            }
+        }
+
+        if (d->m_subLabelsData.count(currentDate)) {
+            switch (role) {
+            case SubLabel:
+                return d->m_subLabelsData.value(currentDate).label;
+            case SubYearLabel:
+                return d->m_subLabelsData.value(currentDate).yearLabel;
+            case SubMonthLabel:
+                return d->m_subLabelsData.value(currentDate).monthLabel;
+            case SubDayLabel:
+                return d->m_subLabelsData.value(currentDate).dayLabel;
+            default:
+                break;
+            }
         }
     } else {
         // Fetch event in day
@@ -138,6 +170,8 @@ void DaysModel::update()
     // we don't know where the old events were located.
     beginResetModel();
     d->m_eventsData.clear();
+    d->m_alternateDatesData.clear();
+    d->m_subLabelsData.clear();
     endResetModel();
 
     const QDate modelFirstDay(d->m_data->at(0).yearNumber, d->m_data->at(0).monthNumber, d->m_data->at(0).dayNumber);
@@ -254,6 +288,41 @@ void DaysModel::onEventRemoved(const QString &uid)
     endResetModel();
 }
 
+void DaysModel::onAlternateDateReady(const QHash<QDate, QDate> &data)
+{
+    d->m_alternateDatesData.reserve(d->m_alternateDatesData.size() + data.size());
+    for (int i = 0; i < d->m_data->count(); i++) {
+        const DayData &currentData = d->m_data->at(i);
+        const QDate currentDate(currentData.yearNumber, currentData.monthNumber, currentData.dayNumber);
+        if (data.count(currentDate) == 0) {
+            continue;
+        }
+        // Add an alternate date
+        d->m_alternateDatesData.insert(currentDate, data.value(currentDate));
+    }
+
+    Q_EMIT dataChanged(index(0, 0), index(d->m_data->count() - 1, 0), {AlternateYearNumber, AlternateMonthNumber, AlternateDayNumber});
+}
+
+void DaysModel::onSubLabelReady(const QHash<QDate, CalendarEvents::CalendarEventsPlugin::SubLabel> &data)
+{
+    d->m_subLabelsData.reserve(d->m_subLabelsData.size() + data.size());
+    for (int i = 0; i < d->m_data->count(); i++) {
+        const DayData &currentData = d->m_data->at(i);
+        const QDate currentDate(currentData.yearNumber, currentData.monthNumber, currentData.dayNumber);
+        if (data.count(currentDate) == 0) {
+            continue;
+        }
+        // Add/Overwrite a sub-label based on priority
+        if (const auto &value = data.value(currentDate); !d->m_subLabelsData.count(currentDate)
+            || (d->m_subLabelsData.count(currentDate) && value.priority > d->m_subLabelsData.value(currentDate).priority)) {
+            d->m_subLabelsData.insert(currentDate, value);
+        }
+    }
+
+    Q_EMIT dataChanged(index(0, 0), index(d->m_data->count() - 1, 0), {SubLabel, SubYearLabel, SubMonthLabel, SubDayLabel});
+}
+
 QList<QObject *> DaysModel::eventsForDate(const QDate &date)
 {
     if (d->m_lastRequestedAgendaDate == date && !d->m_agendaNeedsUpdate) {
@@ -331,6 +400,8 @@ void DaysModel::setPluginsManager(QObject *manager)
     connect(d->m_pluginsManager.get(), &EventPluginsManager::dataReady, this, &DaysModel::onDataReady);
     connect(d->m_pluginsManager.get(), &EventPluginsManager::eventModified, this, &DaysModel::onEventModified);
     connect(d->m_pluginsManager.get(), &EventPluginsManager::eventRemoved, this, &DaysModel::onEventRemoved);
+    connect(d->m_pluginsManager.get(), &EventPluginsManager::alternateDateReady, this, &DaysModel::onAlternateDateReady);
+    connect(d->m_pluginsManager.get(), &EventPluginsManager::subLabelReady, this, &DaysModel::onSubLabelReady);
     connect(d->m_pluginsManager.get(), &EventPluginsManager::pluginsChanged, this, &DaysModel::update);
 
     QMetaObject::invokeMethod(this, "update", Qt::QueuedConnection);
@@ -338,16 +409,25 @@ void DaysModel::setPluginsManager(QObject *manager)
 
 QHash<int, QByteArray> DaysModel::roleNames() const
 {
-    return {{isCurrent, "isCurrent"},
-            {containsEventItems, "containsEventItems"},
-            {containsMajorEventItems, "containsMajorEventItems"},
-            {containsMinorEventItems, "containsMinorEventItems"},
-            {dayNumber, "dayNumber"},
-            {monthNumber, "monthNumber"},
-            {yearNumber, "yearNumber"},
-            {EventColor, "eventColor"},
-            {EventCount, "eventCount"},
-            {Events, "events"}};
+    return {
+        {isCurrent, "isCurrent"},
+        {containsEventItems, "containsEventItems"},
+        {containsMajorEventItems, "containsMajorEventItems"},
+        {containsMinorEventItems, "containsMinorEventItems"},
+        {dayNumber, "dayNumber"},
+        {monthNumber, "monthNumber"},
+        {yearNumber, "yearNumber"},
+        {EventColor, "eventColor"},
+        {EventCount, "eventCount"},
+        {Events, "events"},
+        {AlternateYearNumber, "alternateYearNumber"},
+        {AlternateMonthNumber, "alternateMonthNumber"},
+        {AlternateDayNumber, "alternateDayNumber"},
+        {SubLabel, "subLabel"},
+        {SubYearLabel, "subYearLabel"},
+        {SubMonthLabel, "subMonthLabel"},
+        {SubDayLabel, "subDayLabel"},
+    };
 }
 
 QModelIndex DaysModel::index(int row, int column, const QModelIndex &parent) const
