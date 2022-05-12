@@ -281,8 +281,8 @@ PlasmaCore.ColorScope {
                     if (keystateSource.data["Caps Lock"]["Locked"]) {
                         parts.push(i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Caps Lock is on"));
                     }
-                    if (root.notificationMessage) {
-                        parts.push(root.notificationMessage);
+                    if (root.notification) {
+                        parts.push(root.notification);
                     }
                     return parts.join(" • ");
                 }
