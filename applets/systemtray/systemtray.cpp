@@ -24,6 +24,7 @@
 
 #include <KAcceleratorManager>
 #include <KActionCollection>
+#include <KConfigLoader>
 
 SystemTray::SystemTray(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
     : Plasma::Containment(parent, data, args)
@@ -40,6 +41,8 @@ SystemTray::SystemTray(QObject *parent, const KPluginMetaData &data, const QVari
 
 SystemTray::~SystemTray()
 {
+    // When the applet is about to be deleted, delete now to avoid calling loadConfig()
+    delete m_settings;
 }
 
 void SystemTray::init()
