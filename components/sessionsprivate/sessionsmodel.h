@@ -51,14 +51,14 @@ public:
     ~SessionsModel() override = default;
 
     enum UserRoles {
-        RealNameRole = Qt::DisplayRole,
-        IconRole = Qt::DecorationRole, // path to a file
         NameRole = Qt::UserRole + 1,
+        RealNameRole,
+        IconRole, // path to a file
+        IconNameRole, // name of an icon
         DisplayNumberRole,
         VtNumberRole,
         SessionRole,
         IsTtyRole,
-        IconNameRole, // name of an icon
     };
     Q_ENUM(UserRoles)
 
