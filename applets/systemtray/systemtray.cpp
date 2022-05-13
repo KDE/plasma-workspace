@@ -24,7 +24,6 @@
 
 #include <KAcceleratorManager>
 #include <KActionCollection>
-#include <KConfigLoader>
 
 SystemTray::SystemTray(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
     : Plasma::Containment(parent, data, args)
