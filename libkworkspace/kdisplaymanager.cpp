@@ -469,9 +469,9 @@ static QList<QDBusObjectPath> getSessionsForSeat(const QDBusObjectPath &path)
     if (path.path().startsWith(SYSTEMD_BASE_PATH)) { // systemd path incoming
         SystemdSeat seat(path);
         if (seat.isValid()) {
-            QList<NamedDBusObjectPath> r = seat.getSessions();
+            const QList<NamedDBusObjectPath> r = seat.getSessions();
             QList<QDBusObjectPath> result;
-            foreach (const NamedDBusObjectPath &namedPath, r)
+            for (const NamedDBusObjectPath &namedPath : r)
                 result.append(namedPath.path);
             // This pretty much can't contain any other than local sessions as the seat is retrieved from the current session
             return result;
@@ -678,7 +678,8 @@ bool KDisplayManager::localSessions(SessList &list)
             // we'll divide the code in two branches to reduce the overhead of calls to non-existent services
             // systemd part // preferred
             if (QDBusConnection::systemBus().interface()->isServiceRegistered(SYSTEMD_SERVICE)) {
-                foreach (const QDBusObjectPath &sp, getSessionsForSeat(currentSeat)) {
+                const auto sessionsForSeat = getSessionsForSeat(currentSeat);
+                for (const QDBusObjectPath &sp : sessionsForSeat) {
                     SystemdSession lsess(sp);
                     if (lsess.isValid()) {
                         SessEnt se;
@@ -706,7 +707,8 @@ bool KDisplayManager::localSessions(SessList &list)
             }
             // ConsoleKit part
             else if (QDBusConnection::systemBus().interface()->isServiceRegistered(QStringLiteral("org.freedesktop.ConsoleKit"))) {
-                foreach (const QDBusObjectPath &sp, getSessionsForSeat(currentSeat)) {
+                const auto sessionsForSeat = getSessionsForSeat(currentSeat);
+                for (const QDBusObjectPath &sp : sessionsForSeat) {
                     CKSession lsess(sp);
                     if (lsess.isValid()) {
                         SessEnt se;
@@ -799,7 +801,8 @@ bool KDisplayManager::switchVT(int vt)
         if (getCurrentSeat(nullptr, &currentSeat)) {
             // systemd part // preferred
             if (QDBusConnection::systemBus().interface()->isServiceRegistered(SYSTEMD_SERVICE)) {
-                foreach (const QDBusObjectPath &sp, getSessionsForSeat(currentSeat)) {
+                const auto sessionsForSeat = getSessionsForSeat(currentSeat);
+                for (const QDBusObjectPath &sp : sessionsForSeat) {
                     SystemdSession lsess(sp);
                     if (lsess.isValid()) {
                         SessEnt se;
@@ -813,7 +816,8 @@ bool KDisplayManager::switchVT(int vt)
             }
             // ConsoleKit part
             else if (QDBusConnection::systemBus().interface()->isServiceRegistered(QStringLiteral("org.freedesktop.ConsoleKit"))) {
-                foreach (const QDBusObjectPath &sp, getSessionsForSeat(currentSeat)) {
+                const auto sessionsForSeat = getSessionsForSeat(currentSeat);
+                for (const QDBusObjectPath &sp : sessionsForSeat) {
                     CKSession lsess(sp);
                     if (lsess.isValid()) {
                         SessEnt se;

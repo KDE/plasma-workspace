@@ -6,6 +6,8 @@
 
 #include "sessionsmodel.h"
 
+#include <utility>
+
 #include <KAuthorized>
 #include <KLocalizedString>
 #include <KUser>
@@ -148,7 +150,7 @@ void SessionsModel::reload()
     m_data.clear();
     m_data.reserve(sessions.count());
 
-    foreach (const SessEnt &session, sessions) {
+    for (const SessEnt &session : std::as_const(sessions)) {
         if (!session.vt || session.self) {
             continue;
         }
