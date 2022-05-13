@@ -241,10 +241,10 @@ PlasmaCore.ColorScope {
             id: users
 
             Component.onCompleted: {
-                users.append({name: kscreenlocker_userName,
-                                realName: kscreenlocker_userName,
-                                icon: kscreenlocker_userImage,
-
+                users.append({
+                    name: kscreenlocker_userName,
+                    realName: kscreenlocker_userName,
+                    icon: kscreenlocker_userImage,
                 })
             }
         }
@@ -350,7 +350,8 @@ PlasmaCore.ColorScope {
                     } else {
                         mainStack.push({
                             item: switchSessionPage,
-                            immediate: true});
+                            immediate: true,
+                        });
                     }
                 }
             }

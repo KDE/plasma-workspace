@@ -27,11 +27,11 @@ Item {
 
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
-    
+
     implicitWidth: 800
     implicitHeight: 600
 
     LockScreenUi {
-            anchors.fill: parent
+        anchors.fill: parent
     }
 }
