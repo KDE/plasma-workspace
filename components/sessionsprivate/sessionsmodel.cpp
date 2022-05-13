@@ -230,20 +230,20 @@ QVariant SessionsModel::data(const QModelIndex &index, int role) const
     }
 
     if (index.row() == m_data.count()) {
-        switch (static_cast<Role>(role)) {
-        case Role::RealName:
+        switch (role) {
+        case RealNameRole:
             return i18n("New Session");
-        case Role::IconName:
+        case IconNameRole:
             return QStringLiteral("system-switch-user");
-        case Role::Name:
+        case NameRole:
             return i18n("New Session");
-        case Role::DisplayNumber:
+        case DisplayNumberRole:
             return 0; // NA
-        case Role::VtNumber:
+        case VtNumberRole:
             return -1; // an invalid VtNumber - which we'll use to indicate it's to start a new session
-        case Role::Session:
+        case SessionRole:
             return 0; // NA
-        case Role::IsTty:
+        case IsTtyRole:
             return false; // NA
         default:
             return QVariant();
@@ -252,20 +252,20 @@ QVariant SessionsModel::data(const QModelIndex &index, int role) const
 
     const SessionEntry &item = m_data.at(index.row());
 
-    switch (static_cast<Role>(role)) {
-    case Role::RealName:
+    switch (role) {
+    case RealNameRole:
         return item.realName;
-    case Role::Icon:
+    case IconRole:
         return item.icon;
-    case Role::Name:
+    case NameRole:
         return item.name;
-    case Role::DisplayNumber:
+    case DisplayNumberRole:
         return item.displayNumber;
-    case Role::VtNumber:
+    case VtNumberRole:
         return item.vtNumber;
-    case Role::Session:
+    case SessionRole:
         return item.session;
-    case Role::IsTty:
+    case IsTtyRole:
         return item.isTty;
     default:
         return QVariant();
@@ -280,14 +280,16 @@ int SessionsModel::rowCount(const QModelIndex &parent) const
 
 QHash<int, QByteArray> SessionsModel::roleNames() const
 {
-    return {
-        {static_cast<int>(Role::Name), QByteArrayLiteral("name")},
-        {static_cast<int>(Role::RealName), QByteArrayLiteral("realName")},
-        {static_cast<int>(Role::Icon), QByteArrayLiteral("icon")},
-        {static_cast<int>(Role::IconName), QByteArrayLiteral("iconName")},
-        {static_cast<int>(Role::DisplayNumber), QByteArrayLiteral("displayNumber")},
-        {static_cast<int>(Role::VtNumber), QByteArrayLiteral("vtNumber")},
-        {static_cast<int>(Role::Session), QByteArrayLiteral("session")},
-        {static_cast<int>(Role::IsTty), QByteArrayLiteral("isTty")},
-    };
+    QHash<int, QByteArray> roleNames;
+
+    roleNames[NameRole] = QByteArrayLiteral("name");
+    roleNames[RealNameRole] = QByteArrayLiteral("realName");
+    roleNames[IconRole] = QByteArrayLiteral("icon");
+    roleNames[IconNameRole] = QByteArrayLiteral("iconName");
+    roleNames[DisplayNumberRole] = QByteArrayLiteral("displayNumber");
+    roleNames[VtNumberRole] = QByteArrayLiteral("vtNumber");
+    roleNames[SessionRole] = QByteArrayLiteral("session");
+    roleNames[IsTtyRole] = QByteArrayLiteral("isTty");
+
+    return roleNames;
 }
