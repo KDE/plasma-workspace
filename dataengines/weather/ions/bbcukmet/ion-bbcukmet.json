@@ -28,6 +28,7 @@
         "Description[sv]": "XML-data från British Broadcasting Corporation",
         "Description[tr]": "British Broadcasting Corporation'dan XML verileri",
         "Description[uk]": "Дані XML від BBC",
+        "Description[vi]": "Dữ liệu XML từ Hiệp hội Phát thanh truyền hình Anh quốc (BBC)",
         "Description[x-test]": "xxXML Data from the British Broadcasting Corporationxx",
         "Description[zh_CN]": "BBC 提供的 XML 数据",
         "Icon": "noneyet",
@@ -71,6 +72,7 @@
         "Name[tg]": "Обу ҳавои BBC",
         "Name[tr]": "BBC Hava Durumu",
         "Name[uk]": "Погода BBC",
+        "Name[vi]": "Ban Thời tiết BBC",
         "Name[x-test]": "xxBBC Weatherxx",
         "Name[zh_CN]": "BBC 天气",
         "Name[zh_TW]": "BBC 天氣"

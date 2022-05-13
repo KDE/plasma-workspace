@@ -32,6 +32,7 @@
                 "Name[sv]": "Chani",
                 "Name[tr]": "Chani",
                 "Name[uk]": "Chani",
+                "Name[vi]": "Chani",
                 "Name[x-test]": "xxChanixx",
                 "Name[zh_CN]": "Chani"
             }
@@ -67,6 +68,7 @@
         "Description[ta]": "எளிய செயலி ஏவி",
         "Description[tr]": "Basit uygulama başlatıcı",
         "Description[uk]": "Простий інструмент запуску програм",
+        "Description[vi]": "Trình khởi chạy ứng dụng đơn giản",
         "Description[x-test]": "xxSimple application launcherxx",
         "Description[zh_CN]": "简易程序启动器",
         "EnabledByDefault": true,
@@ -154,6 +156,7 @@
         "Name[uk]": "Інструмент запуску програм",
         "Name[uz@cyrillic]": "Дастурларни ишга туширувчи",
         "Name[uz]": "Dasturlarni ishga tushiruvchi",
+        "Name[vi]": "Trình khởi chạy ứng dụng",
         "Name[wa]": "Enondeu di programe",
         "Name[x-test]": "xxApplication Launcherxx",
         "Name[zh_CN]": "程序启动器",

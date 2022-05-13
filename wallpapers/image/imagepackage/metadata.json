@@ -34,6 +34,7 @@
                 "Name[ta]": "மார்க்கோ மார்ட்டின்",
                 "Name[tr]": "Marco Martin",
                 "Name[uk]": "Marco Martin",
+                "Name[vi]": "Marco Martin",
                 "Name[x-test]": "xxMarco Martinxx",
                 "Name[zh_CN]": "Marco Martin"
             }
@@ -69,6 +70,7 @@
         "Description[ta]": "படங்களை பயன்படுத்தக் கூடிய ஒரு பின்புலம்",
         "Description[tr]": "Resimler için duvar kağıdı görünümü",
         "Description[uk]": "Тло із зображень",
+        "Description[vi]": "Khung xem phông nền cho các ảnh",
         "Description[x-test]": "xxWallpaper view for imagesxx",
         "Description[zh_CN]": "图像壁纸视图",
         "Icon": "preferences-desktop-wallpaper",
@@ -159,6 +161,7 @@
         "Name[tr]": "Resim",
         "Name[ug]": "سۈرەت",
         "Name[uk]": "Зображення",
+        "Name[vi]": "Ảnh",
         "Name[wa]": "Imådje",
         "Name[x-test]": "xxImagexx",
         "Name[zh_CN]": "图像",

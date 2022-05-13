@@ -33,6 +33,7 @@
                 "Name[ta]": "கே.டீ.யீ. வரைகலை வடிவமைப்புக் குழு",
                 "Name[tr]": "KDE Görsel Tasarım Grubu",
                 "Name[uk]": "Група з візуального дизайну KDE",
+                "Name[vi]": "Đội Thiết kế Trực quan KDE",
                 "Name[x-test]": "xxKDE Visual Design Groupxx",
                 "Name[zh_CN]": "KDE 视觉设计团队"
             }
@@ -68,6 +69,7 @@
         "Description[sv]": "Breeze av KDE:s visuella designgrupp",
         "Description[tr]": "KDE VDG'den Esinti",
         "Description[uk]": "Breeze, автори — KDE VDG",
+        "Description[vi]": "Breeze, do KDE VDG",
         "Description[x-test]": "xxBreeze by the KDE VDGxx",
         "Description[zh_CN]": "Breeze 微风主题，由 KDE VDG (视觉设计团队) 设计制作",
         "Id": "org.kde.breeze.desktop",
@@ -120,6 +122,7 @@
         "Name[tg]": "Насим",
         "Name[tr]": "Breeze",
         "Name[uk]": "Breeze",
+        "Name[vi]": "Breeze",
         "Name[x-test]": "xxBreezexx",
         "Name[zh_CN]": "Breeze 微风",
         "Name[zh_TW]": "微風",

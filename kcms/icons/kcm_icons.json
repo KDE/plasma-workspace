@@ -31,6 +31,7 @@
         "Description[ta]": "சின்னங்களுக்கான திட்டத்தை தேர்ந்தெடுங்கள்",
         "Description[tr]": "Simge teması seçin",
         "Description[uk]": "Вибір теми піктограм",
+        "Description[vi]": "Chọn chủ đề của biểu tượng",
         "Description[x-test]": "xxChoose icon themexx",
         "Description[zh_CN]": "选择图标主题",
         "FormFactors": [
@@ -79,6 +80,7 @@
         "Name[tg]": "Нишонаҳо",
         "Name[tr]": "Simgeler",
         "Name[uk]": "Піктограми",
+        "Name[vi]": "Biểu tượng",
         "Name[x-test]": "xxIconsxx",
         "Name[zh_CN]": "图标"
     },

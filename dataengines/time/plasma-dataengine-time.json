@@ -32,6 +32,7 @@
                 "Name[sv]": "Aaron Seigo",
                 "Name[tr]": "Aaron Seigo",
                 "Name[uk]": "Aaron Seigo",
+                "Name[vi]": "Aaron Seigo",
                 "Name[x-test]": "xxAaron Seigoxx",
                 "Name[zh_CN]": "Aaron Seigo"
             }
@@ -68,6 +69,7 @@
         "Description[ta]": "கால மண்டலத்தை பொறுத்த தேதி மற்றும் நேரம்",
         "Description[tr]": "Zaman dilimine göre tarih ve saat",
         "Description[uk]": "Дата і час за часовими поясами",
+        "Description[vi]": "Ngày giờ theo múi giờ",
         "Description[x-test]": "xxDate and time by timezonexx",
         "Description[zh_CN]": "根据时区提供日期和时间",
         "EnabledByDefault": true,
@@ -150,6 +152,7 @@
         "Name[tr]": "Tarih ve Saat",
         "Name[ug]": "چېسلا ۋە ۋاقىت",
         "Name[uk]": "Дата і час",
+        "Name[vi]": "Ngày giờ",
         "Name[wa]": "Date eyet eure",
         "Name[x-test]": "xxDate and Timexx",
         "Name[zh_CN]": "日期和时间",

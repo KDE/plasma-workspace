@@ -31,6 +31,7 @@
         "Description[ta]": "பிளாஸ்மா தோற்றத்திட்டத்தை தேர்ந்தெடுங்கள்",
         "Description[tr]": "Plazma biçemini seçin",
         "Description[uk]": "Вибір стилю Плазми",
+        "Description[vi]": "Chọn kiểu cách Plasma",
         "Description[x-test]": "xxChoose Plasma stylexx",
         "Description[zh_CN]": "选择 Plasma 视觉风格",
         "FormFactors": [
@@ -78,6 +79,7 @@
         "Name[tg]": "Услуби плазма",
         "Name[tr]": "Plazma Biçemi",
         "Name[uk]": "Стиль Плазми",
+        "Name[vi]": "Kiểu cách Plasma",
         "Name[x-test]": "xxPlasma Stylexx",
         "Name[zh_CN]": "Plasma 视觉风格"
     },

@@ -31,6 +31,7 @@
         "Description[ta]": "செயலியின் பட்டியை பணிமேடையில் காட்டும்",
         "Description[tr]": "Uygulamanın menüsünü masaüstüne aktarır",
         "Description[uk]": "Передає меню програм на стільницю",
+        "Description[vi]": "Chuyển trình đơn của ứng dụng ra bàn làm việc",
         "Description[x-test]": "xxTransfers application's menu to the desktopxx",
         "Description[zh_CN]": "将应用程序的菜单转移到桌面上",
         "Name": "Application menus daemon",
@@ -85,6 +86,7 @@
         "Name[tg]": "Раванди дохилии феҳристҳои барнома",
         "Name[tr]": "Uygulama menü araçları",
         "Name[uk]": "Фонова служба меню програм",
+        "Name[vi]": "Trình nền các trình đơn ứng dụng",
         "Name[x-test]": "xxApplication menus daemonxx",
         "Name[zh_CN]": "应用程序菜单守护程序",
         "Name[zh_TW]": "應用程式選單伺服程式"

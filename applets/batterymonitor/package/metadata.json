@@ -33,6 +33,7 @@
                 "Name[ta]": "ஸெபாஸ்டியன் கூக்லர், காய் ஊவே புரோலிக்",
                 "Name[tr]": "Sebastian Kügler, Kai Uwe Broulik",
                 "Name[uk]": "Sebastian Kügler, Kai Uwe Broulik",
+                "Name[vi]": "Sebastian Kügler, Kai Uwe Broulik",
                 "Name[x-test]": "xxSebastian Kügler, Kai Uwe Broulikxx",
                 "Name[zh_CN]": "Sebastian Kügler, Kai Uwe Broulik"
             }
@@ -69,6 +70,7 @@
         "Description[ta]": "உங்கள் மின்கலத்தின் ஆற்றல் நிலையைப் பாருங்கள்",
         "Description[tr]": "Pilinizin güç durumunu görün",
         "Description[uk]": "Перегляньте стан заряду акумулятора",
+        "Description[vi]": "Xem tình trạng nguồn điện của pin",
         "Description[x-test]": "xxSee the power status of your batteryxx",
         "Description[zh_CN]": "查看电池的电量状态",
         "EnabledByDefault": true,
@@ -127,6 +129,7 @@
         "Name[tg]": "Батарея ва дурахшонӣ",
         "Name[tr]": "Pil ve Ekran Parlaklığı",
         "Name[uk]": "Акумулятор і яскравість дисплея",
+        "Name[vi]": "Pin và độ sáng",
         "Name[x-test]": "xxBattery and Brightnessxx",
         "Name[zh_CN]": "电池和亮度",
         "Name[zh_TW]": "電池與亮度",

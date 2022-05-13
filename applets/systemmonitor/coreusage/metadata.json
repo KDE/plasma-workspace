@@ -33,6 +33,7 @@
                 "Name[ta]": "காய் ஊவே புரோலிக்",
                 "Name[tr]": "Kai Uwe Broulik",
                 "Name[uk]": "Kai Uwe Broulik",
+                "Name[vi]": "Kai Uwe Broulik",
                 "Name[x-test]": "xxKai Uwe Broulikxx",
                 "Name[zh_CN]": "Kai Uwe Broulik"
             }
@@ -68,6 +69,7 @@
         "Description[ta]": "தனிப்பட்ட CPU core-களின் பயன்பாட்டைக் காட்டும் பிளாஸ்மாய்ட்",
         "Description[tr]": "Bireysel CPU çekirdeklerini gösteren sistem izleyicisi araç takımı",
         "Description[uk]": "Віджет нагляду за системою, який показує використання окремих ядер процесора",
+        "Description[vi]": "Phụ kiện giám sát hệ thống cho biết lượng dùng các lõi CPU riêng lẻ",
         "Description[x-test]": "xxSystem monitor Widget that shows usage of individual CPU coresxx",
         "Description[zh_CN]": "显示单个 CPU 核心使用情况的系统监视部件",
         "EnabledByDefault": true,
@@ -112,6 +114,7 @@
         "Name[ta]": "தனிப்பட்ட கணிப்பி பயன்பாட்டு",
         "Name[tr]": "Bireysel Çekirdek Kullanımı",
         "Name[uk]": "Використання окремих ядер",
+        "Name[vi]": "Lượng dùng mỗi lõi riêng lẻ",
         "Name[x-test]": "xxIndividual Core Usagexx",
         "Name[zh_CN]": "单个核心使用率",
         "Name[zh_TW]": "獨立核心用量",

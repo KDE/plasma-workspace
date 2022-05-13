@@ -32,6 +32,7 @@
                 "Name[sv]": "Chani Armitage",
                 "Name[tr]": "Chani Armitage",
                 "Name[uk]": "Chani Armitage",
+                "Name[vi]": "Chani Armitage",
                 "Name[x-test]": "xxChani Armitagexx",
                 "Name[zh_CN]": "Chani Armitage"
             }
@@ -68,6 +69,7 @@
         "Description[ta]": "பிளாஸ்மா செயல்பாடுகளை பற்றிய விவரங்கள்",
         "Description[tr]": "Plasma Etkinlikleri Üzerine Bilgiler",
         "Description[uk]": "Інформація про простори дій Плазми",
+        "Description[vi]": "Thông tin về chức năng Hoạt động của Plasma",
         "Description[x-test]": "xxInformation on Plasma Activitiesxx",
         "Description[zh_CN]": "关于 Plasma 活动的信息",
         "EnabledByDefault": true,
@@ -134,6 +136,7 @@
         "Name[tr]": "Etkinlik Motoru",
         "Name[ug]": "پائالىيەت ماتورى",
         "Name[uk]": "Рушій просторів дій",
+        "Name[vi]": "Dụng cụ \"Hoạt động\"",
         "Name[wa]": "Moteur d' activités",
         "Name[x-test]": "xxActivities Enginexx",
         "Name[zh_CN]": "活动引擎",

@@ -33,6 +33,7 @@
                 "Name[ta]": "மார்ட்டின் கிராஸ்லின்",
                 "Name[tr]": "Martin Gräßlin",
                 "Name[uk]": "Martin Gräßlin",
+                "Name[vi]": "Martin Gräßlin",
                 "Name[x-test]": "xxMartin Gräßlinxx",
                 "Name[zh_CN]": "Martin Gräßlin"
             }
@@ -69,6 +70,7 @@
         "Description[ta]": "பிடிப்புப்பலகையின் வரலாற்றை அணுக உதவும்",
         "Description[tr]": "Pano geçmişine erişim sağlar",
         "Description[uk]": "Надає доступ до журналу буфера обміну даними",
+        "Description[vi]": "Cho phép truy cập lịch sử bảng nháp",
         "Description[x-test]": "xxProvides access to the clipboard historyxx",
         "Description[zh_CN]": "访问剪贴板历史",
         "EnabledByDefault": true,
@@ -130,6 +132,7 @@
         "Name[tg]": "Ҳофизаи муваққатӣ",
         "Name[tr]": "Pano",
         "Name[uk]": "Буфер обміну",
+        "Name[vi]": "Bảng nháp",
         "Name[x-test]": "xxClipboardxx",
         "Name[zh_CN]": "剪贴板",
         "Name[zh_TW]": "剪貼簿",

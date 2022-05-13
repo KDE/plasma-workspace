@@ -31,6 +31,7 @@
         "Description[ta]": "சுட்டிக்குறி திட்டத்தை தேர்ந்தெடுங்கள்",
         "Description[tr]": "Fare imleci teması seçin",
         "Description[uk]": "Вибір теми вказівника миші",
+        "Description[vi]": "Chọn chủ đề của con trỏ chuột",
         "Description[x-test]": "xxChoose mouse cursor themexx",
         "Description[zh_CN]": "选择鼠标光标主题",
         "Icon": "preferences-desktop-cursors",
@@ -74,6 +75,7 @@
         "Name[tg]": "Курсорҳои муш",
         "Name[tr]": "İmleçler",
         "Name[uk]": "Вказівники",
+        "Name[vi]": "Con trỏ",
         "Name[x-test]": "xxCursorsxx",
         "Name[zh_CN]": "光标"
     },

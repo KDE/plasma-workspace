@@ -34,6 +34,7 @@
                 "Name[ta]": "மார்க்கோ மார்ட்டின்",
                 "Name[tr]": "Marco Martin",
                 "Name[uk]": "Marco Martin",
+                "Name[vi]": "Marco Martin",
                 "Name[x-test]": "xxMarco Martinxx",
                 "Name[zh_CN]": "Marco Martin"
             }
@@ -69,6 +70,7 @@
         "Description[ta]": "ஏதாவதொரு கணினி கண்காணிப்பு உணரியைக் காட்டும்",
         "Description[tr]": "Sistem izleyicisi sensörünün yapılandırılabilir bir grafiğini görüntüler",
         "Description[uk]": "Показує придатну до налаштовування діаграму на основі даних датчика нагляду за системою",
+        "Description[vi]": "Hiển thị một biểu đồ cấu hình được của một cảm biến giám sát hệ thống",
         "Description[x-test]": "xxDisplays a configurable chart of a system monitor sensorxx",
         "Description[zh_CN]": "显示系统监视器的可配置图表",
         "FormFactors": [
@@ -115,6 +117,7 @@
         "Name[tg]": "Назорати низом - Эҳсосгар",
         "Name[tr]": "Sistem izleme Sensörü",
         "Name[uk]": "Датчик нагляду за системою",
+        "Name[vi]": "Cảm biến giám sát hệ thống",
         "Name[x-test]": "xxSystem monitor Sensorxx",
         "Name[zh_CN]": "系统监视传感器",
         "Name[zh_TW]": "系統監視器感測器",

@@ -33,6 +33,7 @@
                 "Name[sv]": "Viranch Mehta",
                 "Name[tr]": "Viranch Mehta",
                 "Name[uk]": "Viranch Mehta",
+                "Name[vi]": "Viranch Mehta",
                 "Name[x-test]": "xxViranch Mehtaxx",
                 "Name[zh_CN]": "Viranch Mehta"
             }
@@ -69,6 +70,7 @@
         "Description[ta]": "திரையைப் பூட்டு அல்லது வெளியேறு",
         "Description[tr]": "Ekranı kilitleyin veya çıkın",
         "Description[uk]": "Заблокуйте екран або вийдіть",
+        "Description[vi]": "Khoá màn hình hoặc đăng xuất",
         "Description[x-test]": "xxLock the screen or log outxx",
         "Description[zh_CN]": "锁屏或注销",
         "EnabledByDefault": true,
@@ -156,6 +158,7 @@
         "Name[uk]": "Блокування/Вихід",
         "Name[uz@cyrillic]": "Қулфлаш/Чиқиш",
         "Name[uz]": "Qulflash/Chiqish",
+        "Name[vi]": "Khoá/Đăng xuất",
         "Name[wa]": "Serer/Dislodjî",
         "Name[x-test]": "xxLock/Logoutxx",
         "Name[zh_CN]": "锁屏/注销",

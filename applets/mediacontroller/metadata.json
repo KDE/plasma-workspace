@@ -34,6 +34,7 @@
                 "Name[ta]": "ஸெபாஸ்டியன் கூக்லர்",
                 "Name[tr]": "Sebastian Kügler",
                 "Name[uk]": "Sebastian Kügler",
+                "Name[vi]": "Sebastian Kügler",
                 "Name[x-test]": "xxSebastian Küglerxx",
                 "Name[zh_CN]": "Sebastian Kügler"
             }
@@ -70,6 +71,7 @@
         "Description[ta]": "ஊடக இயக்கி கட்டுப்பாடு",
         "Description[tr]": "Ortam Yürütücüsü Denetimleri",
         "Description[uk]": "Керування мультимедійним програвачем",
+        "Description[vi]": "Các điều khiển của trình phát phương tiện",
         "Description[x-test]": "xxMedia Player Controlsxx",
         "Description[zh_CN]": "媒体播放器控件",
         "EnabledByDefault": true,
@@ -131,6 +133,7 @@
         "Name[tg]": "Плеери медиа",
         "Name[tr]": "Ortam Yürütücüsü",
         "Name[uk]": "Програвач",
+        "Name[vi]": "Trình phát phương tiện",
         "Name[x-test]": "xxMedia Playerxx",
         "Name[zh_CN]": "媒体播放器",
         "Name[zh_TW]": "媒體播放器",

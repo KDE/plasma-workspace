@@ -34,6 +34,7 @@
                 "Name[ta]": "மார்க்கோ மார்ட்டின்",
                 "Name[tr]": "Marco Martin",
                 "Name[uk]": "Marco Martin",
+                "Name[vi]": "Marco Martin",
                 "Name[x-test]": "xxMarco Martinxx",
                 "Name[zh_CN]": "Marco Martin"
             }
@@ -70,6 +71,7 @@
         "Description[ta]": "முட்களை கொண்ட கடிகாரம்",
         "Description[tr]": "İbreli bir saat",
         "Description[uk]": "Годинник зі стрілками",
+        "Description[vi]": "Một đồng hồ với các kim",
         "Description[x-test]": "xxA clock with handsxx",
         "Description[zh_CN]": "带指针的时钟",
         "EnabledByDefault": true,
@@ -162,6 +164,7 @@
         "Name[uk]": "Аналоговий годинник",
         "Name[uz@cyrillic]": "Аналог соат",
         "Name[uz]": "Analog soat",
+        "Name[vi]": "Đồng hồ kim",
         "Name[wa]": "Ôrlodje analodjike",
         "Name[x-test]": "xxAnalog Clockxx",
         "Name[zh_CN]": "模拟时钟",

@@ -32,6 +32,7 @@
                 "Name[sv]": "Petri Damstén",
                 "Name[tr]": "Petri Damstén",
                 "Name[uk]": "Petri Damstén",
+                "Name[vi]": "Petri Damstén",
                 "Name[x-test]": "xxPetri Damsténxx",
                 "Name[zh_CN]": "Petri Damstén"
             }
@@ -68,6 +69,7 @@
         "Description[ta]": "புவியிருப்பிடத்தை வழங்கும் நிரல்",
         "Description[tr]": "Coğrafi Konum Veri Motoru",
         "Description[uk]": "Рушій даних геопозиціювання",
+        "Description[vi]": "Dụng cụ dữ liệu định vị địa lí",
         "Description[x-test]": "xxGeolocation Data Enginexx",
         "Description[zh_CN]": "地理位置数据引擎",
         "Icon": "applications-internet",
@@ -137,6 +139,7 @@
         "Name[tr]": "Geolocation",
         "Name[ug]": "جۇغراپىيىلىك ئورۇن",
         "Name[uk]": "Геопозиціювання",
+        "Name[vi]": "Định vị địa lí",
         "Name[wa]": "Djeyoplaeçmint",
         "Name[x-test]": "xxGeolocationxx",
         "Name[zh_CN]": "地理位置",

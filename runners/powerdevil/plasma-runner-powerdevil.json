@@ -32,6 +32,7 @@
                 "Name[sv]": "Dario Freddi",
                 "Name[tr]": "Dario Freddi",
                 "Name[uk]": "Dario Freddi",
+                "Name[vi]": "Dario Freddi",
                 "Name[x-test]": "xxDario Freddixx",
                 "Name[zh_CN]": "Dario Freddi"
             }
@@ -67,6 +68,7 @@
         "Description[ta]": "அடிப்படை ஆற்றல் மேலாண்மை செயல்கள்",
         "Description[tr]": "Temel Güç Yönetimi İşlemleri",
         "Description[uk]": "Керування базовими операціями з керування живленням",
+        "Description[vi]": "Các thao tác cơ bản để quản lí nguồn điện",
         "Description[x-test]": "xxBasic Power Management Operationsxx",
         "Description[zh_CN]": "基本电源管理操作",
         "EnabledByDefault": true,
@@ -122,6 +124,7 @@
         "Name[tg]": "Барқ",
         "Name[tr]": "Güç",
         "Name[uk]": "Живлення",
+        "Name[vi]": "Nguồn điện",
         "Name[x-test]": "xxPowerxx",
         "Name[zh_CN]": "电源",
         "Name[zh_TW]": "電源"

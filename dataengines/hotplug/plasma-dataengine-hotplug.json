@@ -34,6 +34,7 @@
                 "Name[ta]": "பிளாஸ்மா குழு",
                 "Name[tr]": "Plazma Takımı",
                 "Name[uk]": "Команда розробників Плазми",
+                "Name[vi]": "Đội Plasma",
                 "Name[x-test]": "xxThe Plasma Teamxx",
                 "Name[zh_CN]": "Plasma 开发团队"
             }
@@ -70,6 +71,7 @@
         "Description[ta]": "எப்போதேனும் செருகி கழற்றக்கூடிய சாதனங்களை கவனிக்கும்.",
         "Description[tr]": "Takıldıklarında ve çıkarıldıklarında tak çalıştır aygıtlarını izler.",
         "Description[uk]": "Стежить за з’єднанням і від’єднанням портативних пристроїв.",
+        "Description[vi]": "Theo dõi các thiết bị cắm nóng được khi chúng xuất hiện và biến mất.",
         "Description[x-test]": "xxTracks hot-pluggable devices as they appear and disappear.xx",
         "Description[zh_CN]": "跟踪热插拔设备的出现与消失。",
         "Icon": "drive-removable-media-usb",
@@ -141,6 +143,7 @@
         "Name[tr]": "Tak Kullan Olayları",
         "Name[ug]": "قىزىق قىستۇرۇش ھادىسىسى",
         "Name[uk]": "Події гарячого підключення",
+        "Name[vi]": "Các sự kiện cắm nóng",
         "Name[wa]": "Evenmints tchôd-tchôkîs",
         "Name[x-test]": "xxHotplug Eventsxx",
         "Name[zh_CN]": "热插拔事件",

@@ -31,6 +31,7 @@
         "Description[ta]": "Ctrl + Escape அழுத்தப்படும்போது கேஸிஸ்கார்டை இயக்கும்",
         "Description[tr]": "Ctrl + Escape ile KSysguard'ı başlatır",
         "Description[uk]": "Запускає KSysguard у відповідь на натискання Ctrl + Esc",
+        "Description[vi]": "Khởi chạy KSysguard khi ấn Ctrl + Escape",
         "Description[x-test]": "xxLaunches KSysguard on Ctrl + Escapexx",
         "Description[zh_CN]": "Ctrl + Esc 启动系统守护程序",
         "Icon": "preferences-system-power-management",
@@ -83,6 +84,7 @@
         "Name[ta]": "கேஸிஸ்கார்ட்",
         "Name[tr]": "KSysGuard",
         "Name[uk]": "KSysguard",
+        "Name[vi]": "KSysguard",
         "Name[x-test]": "xxKSysguardxx",
         "Name[zh_CN]": "KDE 系统守护程序",
         "Name[zh_TW]": "KSysguard"

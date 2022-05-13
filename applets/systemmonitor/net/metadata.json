@@ -34,6 +34,7 @@
                 "Name[ta]": "மார்க்கோ மார்ட்டின்",
                 "Name[tr]": "Marco Martin",
                 "Name[uk]": "Marco Martin",
+                "Name[vi]": "Marco Martin",
                 "Name[x-test]": "xxMarco Martinxx",
                 "Name[zh_CN]": "Marco Martin"
             }
@@ -68,6 +69,7 @@
         "Description[ta]": "பதிவிறக்க மற்றும் பதிவேற்ற வீதத்தைக் காட்டும் பிளாஸ்மாய்ட்",
         "Description[tr]": "İndirme ve yükleme veri hızını gösteren sistem izleyicisi araç takımı",
         "Description[uk]": "Віджет нагляду за системою, який показує швидкість отримання та вивантаження даних",
+        "Description[vi]": "Phụ kiện giám sát hệ thống cho biết tốc độ tải dữ liệu về và lên",
         "Description[x-test]": "xxSystem monitor Widget that shows the download and upload data ratexx",
         "Description[zh_CN]": "显示下载和上传速率的系统监视部件",
         "EnabledByDefault": true,
@@ -115,6 +117,7 @@
         "Name[tg]": "Суръати шабака",
         "Name[tr]": "Ağ hızı",
         "Name[uk]": "Швидкість мережі",
+        "Name[vi]": "Tốc độ mạng",
         "Name[x-test]": "xxNetwork speedxx",
         "Name[zh_CN]": "网络速度",
         "Name[zh_TW]": "網路速度",

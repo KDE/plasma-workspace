@@ -32,6 +32,7 @@
                 "Name[sv]": "Chani",
                 "Name[tr]": "Chani",
                 "Name[uk]": "Chani",
+                "Name[vi]": "Chani",
                 "Name[x-test]": "xxChanixx",
                 "Name[zh_CN]": "Chani"
             }
@@ -67,6 +68,7 @@
         "Description[ta]": "செயலி பட்டியில் உள்ள செயலிகளை பற்றிய விவரங்களை வழங்கி அவற்றை இயக்கும்.",
         "Description[tr]": "Uygulama menüsündeki uygulamalar bilgisi ve çalıştırma.",
         "Description[uk]": "Відомості і запуск всіх програма з меню програм.",
+        "Description[vi]": "Thông tin và việc khởi chạy của tất cả các ứng dụng trong trình đơn ứng dụng.",
         "Description[x-test]": "xxInformation and launching of all applications in the app menu.xx",
         "Description[zh_CN]": "显示信息或启动菜单中的所有应用程序。",
         "EnabledByDefault": true,
@@ -139,6 +141,7 @@
         "Name[tr]": "Uygulama Bilgileri",
         "Name[ug]": "پروگرامما ئۇچۇرى",
         "Name[uk]": "Відомості щодо програм",
+        "Name[vi]": "Thông tin ứng dụng",
         "Name[wa]": "Pondants et djondants do programe",
         "Name[x-test]": "xxApplication Informationxx",
         "Name[zh_CN]": "应用程序信息",

@@ -31,6 +31,7 @@
         "Description[ta]": "கண் சிரமத்தை குறைக்க இரவில் நிறங்களை மாற்றும்",
         "Description[tr]": "Göz yorgunluğunu azaltmak için gece renk sıcaklığını ayarla",
         "Description[uk]": "Коригування температури кольорів для зменшення навантаження на очі вночі",
+        "Description[vi]": "Điều chỉnh nhiệt độ màu vào buổi tối để giảm căng thẳng cho mắt",
         "Description[x-test]": "xxAdjust color temperature at night to reduce eye strainxx",
         "Description[zh_CN]": "在夜间调整色温以减少视觉疲劳",
         "FormFactors": [
@@ -75,6 +76,7 @@
         "Name[ta]": "இரவு நிறமாற்றம்",
         "Name[tr]": "Gece Rengi",
         "Name[uk]": "Нічні кольори",
+        "Name[vi]": "Màu buổi tối",
         "Name[x-test]": "xxNight Colorxx",
         "Name[zh_CN]": "夜间颜色"
     },

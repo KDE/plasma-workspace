@@ -34,6 +34,7 @@
                 "Name[ta]": "ஸெபாஸ்டியன் கூக்லர்",
                 "Name[tr]": "Sebastian Kügler",
                 "Name[uk]": "Sebastian Kügler",
+                "Name[vi]": "Sebastian Kügler",
                 "Name[x-test]": "xxSebastian Küglerxx",
                 "Name[zh_CN]": "Sebastian Kügler"
             }
@@ -69,6 +70,7 @@
         "Description[ta]": "நிகழ்வுகள் மற்றும் சந்திப்புகளைக் காட்டும் மாத நாள்காட்டி",
         "Description[tr]": "Randevularınız ve etkinliklerinizle birlikte ay görünümü",
         "Description[uk]": "Показ розкладу місяця із вашими записами зустрічей і подій",
+        "Description[vi]": "Hiển thị tháng với các buổi hẹn và sự kiện của bạn",
         "Description[x-test]": "xxMonth display with your appointments and eventsxx",
         "Description[zh_CN]": "按月显示您的预约和事件",
         "FormFactors": [
@@ -153,6 +155,7 @@
         "Name[tr]": "Takvim",
         "Name[ug]": "يىلنامە",
         "Name[uk]": "Календар",
+        "Name[vi]": "Lịch",
         "Name[wa]": "Calindrî",
         "Name[x-test]": "xxCalendarxx",
         "Name[zh_CN]": "日历",

@@ -32,6 +32,7 @@
                 "Name[sv]": "Chani",
                 "Name[tr]": "Chani",
                 "Name[uk]": "Chani",
+                "Name[vi]": "Chani",
                 "Name[x-test]": "xxChanixx",
                 "Name[zh_CN]": "Chani"
             }
@@ -67,6 +68,7 @@
         "Description[ta]": "வேறு செயல்பாட்டிற்கு தாவு",
         "Description[tr]": "Başka bir etkinliğe geç",
         "Description[uk]": "Перемкнутися на інший простір дій",
+        "Description[vi]": "Chuyển sang một Hoạt động khác",
         "Description[x-test]": "xxSwitch to another activityxx",
         "Description[zh_CN]": "切换到另一个活动",
         "EnabledByDefault": true,
@@ -137,6 +139,7 @@
         "Name[tr]": "Etkinlik Değiştir",
         "Name[ug]": "پائالىيەت ئالماشتۇر",
         "Name[uk]": "Перемкнути простір дій",
+        "Name[vi]": "Chuyển Hoạt động",
         "Name[wa]": "Potchî a ene ôte activité",
         "Name[x-test]": "xxSwitch Activityxx",
         "Name[zh_CN]": "切换活动",

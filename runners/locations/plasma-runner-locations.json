@@ -34,6 +34,7 @@
                 "Name[ta]": "பிளாஸ்மா குழு",
                 "Name[tr]": "Plazma Takımı",
                 "Name[uk]": "Команда розробників Плазми",
+                "Name[vi]": "Đội Plasma",
                 "Name[x-test]": "xxPlasma Teamxx",
                 "Name[zh_CN]": "Plasma 开发团队"
             }
@@ -69,6 +70,7 @@
         "Description[ta]": "கோப்புகள் மற்றும் முகவரிகளை திறக்கும் சேவை",
         "Description[tr]": "Dosya ve URL açıcı",
         "Description[uk]": "Відкривання файлів і адрес URL",
+        "Description[vi]": "Trình mở tệp và URL",
         "Description[x-test]": "xxFile and URL openerxx",
         "Description[zh_CN]": "文件和链接打开程序",
         "EnabledByDefault": true,
@@ -149,6 +151,7 @@
         "Name[tr]": "Konumlar",
         "Name[ug]": "ئورنى",
         "Name[uk]": "Адреси",
+        "Name[vi]": "Địa điểm",
         "Name[wa]": "Eplaeçmints",
         "Name[x-test]": "xxLocationsxx",
         "Name[zh_CN]": "位置",

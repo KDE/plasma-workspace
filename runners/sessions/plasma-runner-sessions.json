@@ -34,6 +34,7 @@
                 "Name[ta]": "பிளாஸ்மா குழு",
                 "Name[tr]": "Plazma Takımı",
                 "Name[uk]": "Команда розробників Плазми",
+                "Name[vi]": "Đội Plasma",
                 "Name[x-test]": "xxPlasma Teamxx",
                 "Name[zh_CN]": "Plasma 开发团队"
             }
@@ -69,6 +70,7 @@
         "Description[ta]": "அமர்வுகளுக்கிடையே வேகமாக தாவ உதவும்",
         "Description[tr]": "Hızlı kullanıcı değiştirme",
         "Description[uk]": "Швидке перемикання користувачів",
+        "Description[vi]": "Chuyển người dùng nhanh",
         "Description[x-test]": "xxFast user switchingxx",
         "Description[zh_CN]": "快速用户切换",
         "EnabledByDefault": true,
@@ -148,6 +150,7 @@
         "Name[tr]": "Masaüstü Oturumları",
         "Name[ug]": "ئۈستەلئۈستى ئەڭگىمە",
         "Name[uk]": "Стільничні сеанси",
+        "Name[vi]": "Phiên bàn làm việc",
         "Name[wa]": "Sessions do scribanne",
         "Name[x-test]": "xxDesktop Sessionsxx",
         "Name[zh_CN]": "桌面会话",

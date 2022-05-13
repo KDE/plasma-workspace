@@ -34,6 +34,7 @@
                 "Name[ta]": "பிளாஸ்மா குழு",
                 "Name[tr]": "Plazma Takımı",
                 "Name[uk]": "Команда розробників Плазми",
+                "Name[vi]": "Đội Plasma",
                 "Name[x-test]": "xxThe Plasma Teamxx",
                 "Name[zh_CN]": "Plasma 开发团队"
             }
@@ -70,6 +71,7 @@
         "Description[ta]": "பலகையில் காலியான இடைவெளிகளை இடும்",
         "Description[tr]": "Panelde boş alanlar ayırın.",
         "Description[uk]": "Створює прогалини на панелі.",
+        "Description[vi]": "Giữ các khoảng trống trong bảng.",
         "Description[x-test]": "xxReserve empty spaces within the panel.xx",
         "Description[zh_CN]": "在面板中预留空白。",
         "EnabledByDefault": true,
@@ -139,6 +141,7 @@
         "Name[tr]": "Panel Ayırıcı",
         "Name[ug]": "تاختا ئارىلىقى",
         "Name[uk]": "Розпірка панелі",
+        "Name[vi]": "Khoảng trống bảng",
         "Name[wa]": "Separateu e scriftôr",
         "Name[x-test]": "xxPanel Spacerxx",
         "Name[zh_CN]": "面板间隙",

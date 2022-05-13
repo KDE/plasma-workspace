@@ -34,6 +34,7 @@
                 "Name[ta]": "ஸெபாஸ்டியன் கூக்லர்",
                 "Name[tr]": "Sebastian Kügler",
                 "Name[uk]": "Sebastian Kügler",
+                "Name[vi]": "Sebastian Kügler",
                 "Name[x-test]": "xxSebastian Küglerxx",
                 "Name[zh_CN]": "Sebastian Kügler"
             }
@@ -81,6 +82,7 @@
         "Name[tg]": "Файлҳои охирон",
         "Name[tr]": "Son Dosyalar",
         "Name[uk]": "Нещодавні файли",
+        "Name[vi]": "Tệp gần đây",
         "Name[x-test]": "xxRecent Filesxx",
         "Name[zh_CN]": "最近文件"
     },

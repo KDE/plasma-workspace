@@ -34,6 +34,7 @@
                 "Name[ta]": "பிளாஸ்மா குழு",
                 "Name[tr]": "Plazma Takımı",
                 "Name[uk]": "Команда розробників Плазми",
+                "Name[vi]": "Đội Plasma",
                 "Name[x-test]": "xxPlasma Teamxx",
                 "Name[zh_CN]": "Plasma 开发团队"
             }
@@ -68,6 +69,7 @@
         "Description[ta]": "தனி சாளரமாக இயங்கக் கூடிய பிளாஸ்மாய்டுகளைக் கண்டுபிடிக்கும்",
         "Description[tr]": "Tek başına pencere olarak da çalışabilen Plasma araç takımlarınını bul",
         "Description[uk]": "Пошук віджетів Плазми, які можна запускати у окремих вікнах",
+        "Description[vi]": "Tìm các phụ kiện Plasma có thể chạy được như các cửa sổ độc lập",
         "Description[x-test]": "xxFind Plasma widgets that can be run as standalone windowsxx",
         "Description[zh_CN]": "查找可作为独立窗口运行的 Plasma 部件",
         "EnabledByDefault": true,
@@ -135,6 +137,7 @@
         "Name[tr]": "Pencerelendirilmiş gereçler",
         "Name[ug]": "كۆزنەكلىك ۋىجېتلار",
         "Name[uk]": "Віджети-вікна",
+        "Name[vi]": "Phụ kiện được cửa sổ hoá",
         "Name[wa]": "Ahesses metous dins des fniesses",
         "Name[x-test]": "xxWindowed widgetsxx",
         "Name[zh_CN]": "窗口化小部件",

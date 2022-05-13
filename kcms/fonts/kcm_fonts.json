@@ -31,6 +31,7 @@
         "Description[ta]": "பயனர் இடைமுகப்பு எழுத்துருக்களை அமையுங்கள்",
         "Description[tr]": "Kullanıcı arayüzü yazıtiplerini yapılandırın",
         "Description[uk]": "Налаштовування шрифтів у інтерфейсі користувача",
+        "Description[vi]": "Cấu hình phông chữ trong giao diện người dùng",
         "Description[x-test]": "xxConfigure user interface fontsxx",
         "Description[zh_CN]": "配置用户界面字体",
         "FormFactors": [
@@ -78,6 +79,7 @@
         "Name[tg]": "Ҳуруф",
         "Name[tr]": "Yazı Tipleri",
         "Name[uk]": "Шрифти",
+        "Name[vi]": "Phông chữ",
         "Name[x-test]": "xxFontsxx",
         "Name[zh_CN]": "字体"
     },

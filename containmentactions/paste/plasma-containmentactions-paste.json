@@ -32,6 +32,7 @@
                 "Name[sv]": "Chani",
                 "Name[tr]": "Chani",
                 "Name[uk]": "Chani",
+                "Name[vi]": "Chani",
                 "Name[x-test]": "xxChanixx",
                 "Name[zh_CN]": "Chani"
             }
@@ -67,6 +68,7 @@
         "Description[ta]": "பிடிப்புப்பலகையின் உள்ளடக்கத்திலிருந்து ஒரு பிளாஸ்மாய்டை உருவாக்கும்",
         "Description[tr]": "Pano içeriğinden bir araç takımı oluşturur",
         "Description[uk]": "Створює віджет з вмістом буфера обміну даними",
+        "Description[vi]": "Tạo một phụ kiện từ nội dung của bảng nháp",
         "Description[x-test]": "xxCreates a widget from the contents of the clipboardxx",
         "Description[zh_CN]": "用剪贴板内容创建小部件",
         "EnabledByDefault": true,
@@ -140,6 +142,7 @@
         "Name[tr]": "Yapıştır",
         "Name[ug]": "چاپلا",
         "Name[uk]": "Вставка",
+        "Name[vi]": "Dán",
         "Name[wa]": "Aclaper",
         "Name[x-test]": "xxPastexx",
         "Name[zh_CN]": "粘贴",

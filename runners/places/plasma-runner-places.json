@@ -33,6 +33,7 @@
                 "Name[ta]": "டேவிட் எட்மண்டுஸன்",
                 "Name[tr]": "David Edmundson",
                 "Name[uk]": "David Edmundson",
+                "Name[vi]": "David Edmundson",
                 "Name[x-test]": "xxDavid Edmundsonxx",
                 "Name[zh_CN]": "David Edmundson"
             }
@@ -68,6 +69,7 @@
         "Description[ta]": "சாதன மற்றும் அடைவு நினைவுக்குறிகளை திறக்கும் சேவை",
         "Description[tr]": "Aygıt ve klasör yer imlerini aç",
         "Description[uk]": "Відкриття пристроїв та закладок на теки",
+        "Description[vi]": "Mở thiết bị và dấu nhớ thư mục",
         "Description[x-test]": "xxOpen devices and folder bookmarksxx",
         "Description[zh_CN]": "打开设备和文件夹书签",
         "EnabledByDefault": true,
@@ -148,6 +150,7 @@
         "Name[tr]": "Konumlar",
         "Name[ug]": "ئورۇنلار",
         "Name[uk]": "Місця",
+        "Name[vi]": "Địa điểm",
         "Name[wa]": "Plaeces",
         "Name[x-test]": "xxPlacesxx",
         "Name[zh_CN]": "常用位置",

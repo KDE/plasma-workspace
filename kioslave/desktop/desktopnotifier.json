@@ -31,6 +31,7 @@
         "Description[ta]": "அடைவுகளில் மாற்றங்கள் உள்ளனவா என்று கண்காணிக்கும்",
         "Description[tr]": "Dizinleri değişiklikler için izler",
         "Description[uk]": "Веде спостереження за змінами у каталогах",
+        "Description[vi]": "Giám sát thay đổi ở các thư mục",
         "Description[x-test]": "xxMonitors directories for changesxx",
         "Description[zh_CN]": "监视目录的更改",
         "Name": "Directory Watcher",
@@ -81,6 +82,7 @@
         "Name[ta]": "அடைவு கண்காணி",
         "Name[tr]": "Dizin İzleyici",
         "Name[uk]": "Спостереження за каталогами",
+        "Name[vi]": "Trình theo dõi thư mục",
         "Name[x-test]": "xxDirectory Watcherxx",
         "Name[zh_CN]": "目录监视器",
         "Name[zh_TW]": "目錄監控器"

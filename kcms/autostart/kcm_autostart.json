@@ -31,6 +31,7 @@
         "Description[ta]": "தானாக துவக்கப்படும் செயலிகள்",
         "Description[tr]": "Otomatik Başlatılan Uygulamalar",
         "Description[uk]": "Програми, що запускаються автоматично",
+        "Description[vi]": "Các ứng dụng được khởi động tự động",
         "Description[x-test]": "xxAutomatically Started Applicationsxx",
         "Description[zh_CN]": "自动启动的应用程序",
         "FormFactors": [
@@ -75,6 +76,7 @@
         "Name[ta]": "சுயதுவக்கம்",
         "Name[tr]": "Otomatik başlatma",
         "Name[uk]": "Автозапуск",
+        "Name[vi]": "Khởi động tự động",
         "Name[x-test]": "xxAutostartxx",
         "Name[zh_CN]": "自动启动"
     },
