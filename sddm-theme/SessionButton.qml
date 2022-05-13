@@ -12,13 +12,12 @@ import org.kde.plasma.components 3.0 as PlasmaComponents
 
 PlasmaComponents.ToolButton {
     id: root
-    property int currentIndex: -1
-    visible: menu.count > 1
-    text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Desktop Session: %1", instantiator.objectAt(currentIndex).text || "")
 
-    Component.onCompleted: {
-        currentIndex = sessionModel.lastIndex
-    }
+    property int currentIndex: sessionModel.lastIndex
+
+    text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Desktop Session: %1", instantiator.objectAt(currentIndex).text || "")
+    visible: menu.count > 1
+
     checkable: true
     checked: menu.opened
     onToggled: {
@@ -29,7 +28,7 @@ PlasmaComponents.ToolButton {
         }
     }
 
-    signal sessionChanged
+    signal sessionChanged()
 
     PlasmaComponents.Menu {
         PlasmaCore.ColorScope.colorGroup: PlasmaCore.Theme.NormalColorGroup
@@ -40,7 +39,7 @@ PlasmaComponents.ToolButton {
             id: instantiator
             model: sessionModel
             onObjectAdded: menu.insertItem(index, object)
-            onObjectRemoved: menu.removeItem( object )
+            onObjectRemoved: menu.removeItem(object)
             delegate: PlasmaComponents.MenuItem {
                 text: model.name
                 onTriggered: {

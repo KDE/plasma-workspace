@@ -19,9 +19,6 @@ PlasmaComponents.ToolButton {
     text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Keyboard Layout: %1", keyboard.layouts[currentIndex].shortName)
     visible: menu.count > 1 && !Qt.platform.pluginName.includes("wayland") // This menu needs porting to wayland https://github.com/sddm/sddm/issues/1528
 
-    Component.onCompleted: {
-        currentIndex = Qt.binding(() => keyboard.currentLayout);
-    }
     checkable: true
     checked: menu.opened
     onToggled: {
