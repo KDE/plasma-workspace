@@ -138,6 +138,11 @@ AbstractModel *AbstractModel::rootModel()
     return rootModel;
 }
 
+QVariantList AbstractModel::sections() const
+{
+    return {};
+}
+
 void AbstractModel::entryChanged(AbstractEntry *entry)
 {
     Q_UNUSED(entry)

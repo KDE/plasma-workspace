@@ -77,6 +77,7 @@ AppsModel::AppsModel(const QList<AbstractEntry *> &entryList, bool deleteEntries
     }
 
     sortEntries();
+    refreshSectionList();
 }
 
 AppsModel::~AppsModel()
@@ -443,6 +444,11 @@ QStringList AppsModel::hiddenEntries() const
     return m_hiddenEntries;
 }
 
+QVariantList AppsModel::sections() const
+{
+    return m_sectionList;
+}
+
 void AppsModel::refresh()
 {
     if (!m_complete) {
@@ -599,6 +605,38 @@ void AppsModel::refreshInternal()
             m_entryList = groups;
         }
     }
+
+    refreshSectionList();
+}
+
+void AppsModel::refreshSectionList()
+{
+    m_sectionList.clear();
+
+    if (m_entryList.empty()) {
+        Q_EMIT sectionsChanged();
+        return;
+    }
+
+    // Insert one item so no need to check empty in the loop
+    m_sectionList.append(QVariantMap{
+        {QStringLiteral("section"), m_entryList.at(0)->group().toUpper()},
+        {QStringLiteral("firstIndex"), 0},
+    });
+
+    for (int i = 1; i < m_entryList.size(); i++) {
+        const QString sectionName = m_entryList.at(i)->group().toUpper();
+        if (m_sectionList.constLast().toMap()[QStringLiteral("section")].toString() == sectionName) {
+            continue;
+        }
+
+        m_sectionList.append(QVariantMap{
+            {QStringLiteral("section"), sectionName},
+            {QStringLiteral("firstIndex"), i},
+        });
+    }
+
+    Q_EMIT sectionsChanged();
 }
 
 void AppsModel::processServiceGroup(KServiceGroup::Ptr group)

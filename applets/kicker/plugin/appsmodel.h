@@ -88,6 +88,8 @@ public:
 
     QStringList hiddenEntries() const;
 
+    QVariantList sections() const override;
+
     void entryChanged(AbstractEntry *entry) override;
 
     void classBegin() override;
@@ -128,8 +130,11 @@ protected:
 private:
     void processServiceGroup(KServiceGroup::Ptr group);
     void sortEntries();
+    void refreshSectionList();
 
     bool m_autoPopulate;
+
+    QVariantList m_sectionList;
 
     QString m_description;
     QString m_entryPath;
