@@ -73,6 +73,11 @@ QUrl JobPrivate::localFileOrUrl(const QString &urlString)
     return url;
 }
 
+QString JobPrivate::linkify(const QUrl &url, const QString &caption)
+{
+    return QStringLiteral("<a href=\"%1\">%2</a>").arg(url.toString(QUrl::PrettyDecoded), caption.toHtmlEscaped());
+}
+
 QUrl JobPrivate::destUrl() const
 {
     QUrl url = m_destUrl;
@@ -165,32 +170,10 @@ QString JobPrivate::text() const
     QString destUrlString;
     if (!prettyDestUrl.isEmpty()) {
         // Turn destination into a clickable hyperlink
-        destUrlString = QStringLiteral("<a href=\"%1\">%2</a>").arg(destUrl.toString(QUrl::PrettyDecoded), prettyDestUrl.toHtmlEscaped());
+        destUrlString = linkify(destUrl, prettyDestUrl);
     }
 
-    if (m_totalFiles == 0) {
-        if (!destUrlString.isEmpty()) {
-            if (m_processedFiles > 0) {
-                return i18ncp("Copying n files to location", "%1 file to %2", "%1 files to %2", m_processedFiles, destUrlString);
-            }
-            return i18nc("Copying unknown amount of files to location", "to %1", destUrlString);
-        } else if (m_processedFiles > 0) {
-            return i18ncp("Copying n files", "%1 file", "%1 files", m_processedFiles);
-        }
-    } else if (m_totalFiles == 1) {
-        const QString currentFileName = descriptionUrl().fileName().toHtmlEscaped();
-        if (!destUrlString.isEmpty()) {
-            if (!currentFileName.isEmpty()) {
-                return i18nc("Copying file to location", "%1 to %2", currentFileName, destUrlString);
-            } else {
-                return i18ncp("Copying n files to location", "%1 file to %2", "%1 files to %2", m_totalFiles, destUrlString);
-            }
-        } else if (!currentFileName.isEmpty()) {
-            return currentFileName;
-        } else {
-            return i18ncp("Copying n files", "%1 file", "%1 files", m_totalFiles);
-        }
-    } else if (m_totalFiles > 1) {
+    if (m_totalFiles > 1) {
         if (!destUrlString.isEmpty()) {
             if (m_processedFiles > 0 && m_processedFiles <= m_totalFiles) {
                 return i18ncp("Copying n of m files to locaton", "%2 of %1 file to %3", "%2 of %1 files to %3", m_totalFiles, m_processedFiles, destUrlString);
@@ -207,10 +190,52 @@ QString JobPrivate::text() const
         }
 
         return i18ncp("Copying n files", "%1 file", "%1 files", m_processedFiles > 0 ? m_processedFiles : m_totalFiles);
+    } else if (m_totalItems > 1) {
+        // TODO support destUrl text as well (once someone actually uses that)
+
+        if (m_totalItems > 0 && m_processedItems <= m_totalItems) {
+            return i18ncp("Copying n of m items", "%2 of %1 item", "%2 of %1 items", m_totalItems, m_processedItems);
+        }
+
+        return i18ncp("Copying n items", "%1 item", "%1 items", m_processedItems > 0 ? m_processedItems : m_totalItems);
+    } else if (m_totalFiles == 1 || m_totalItems == 1) {
+        const QUrl url = descriptionUrl();
+
+        if (!destUrlString.isEmpty()) {
+            const QString currentFileName = url.fileName().toHtmlEscaped();
+            if (!currentFileName.isEmpty()) {
+                return i18nc("Copying file to location", "%1 to %2", currentFileName, destUrlString);
+            } else {
+                if (m_totalItems) {
+                    return i18ncp("Copying n items to location", "%1 file to %2", "%1 items to %2", m_totalItems, destUrlString);
+                } else {
+                    return i18ncp("Copying n files to location", "%1 file to %2", "%1 files to %2", m_totalFiles, destUrlString);
+                }
+            }
+        } else if (url.isValid()) {
+            // If no destination, show full URL instead of just the file name
+            return linkify(url, prettyUrl(url));
+        } else {
+            if (m_totalItems) {
+                return i18ncp("Copying n items", "%1 item", "%1 items", m_totalItems);
+            } else {
+                return i18ncp("Copying n files", "%1 file", "%1 files", m_totalFiles);
+            }
+        }
+    } else if (m_totalFiles == 0) {
+        if (!destUrlString.isEmpty()) {
+            if (m_processedFiles > 0) {
+                return i18ncp("Copying n files to location", "%1 file to %2", "%1 files to %2", m_processedFiles, destUrlString);
+            }
+            return i18nc("Copying unknown amount of files to location", "to %1", destUrlString);
+        } else if (m_processedFiles > 0) {
+            return i18ncp("Copying n files", "%1 file", "%1 files", m_processedFiles);
+        }
     }
 
     qCInfo(NOTIFICATIONMANAGER) << "Failed to generate job text for job with following properties:";
     qCInfo(NOTIFICATIONMANAGER).nospace() << "  processedFiles = " << m_processedFiles << ", totalFiles = " << m_totalFiles;
+    qCInfo(NOTIFICATIONMANAGER).nospace() << "  processedItems = " << m_processedItems << ", totalItems = " << m_totalItems;
     qCInfo(NOTIFICATIONMANAGER).nospace() << "  current file name = " << descriptionUrl().fileName();
     qCInfo(NOTIFICATIONMANAGER).nospace() << "  destination url = " << destUrl;
     qCInfo(NOTIFICATIONMANAGER).nospace() << "  label1 = " << m_descriptionLabel1 << ", value1 = " << m_descriptionValue1;

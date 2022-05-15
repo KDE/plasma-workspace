@@ -107,6 +107,7 @@ private:
     static QSharedPointer<KFilePlacesModel> createPlacesModel();
 
     static QUrl localFileOrUrl(const QString &stringUrl);
+    static QString linkify(const QUrl &url, const QString &caption);
 
     void requestShow();
 
