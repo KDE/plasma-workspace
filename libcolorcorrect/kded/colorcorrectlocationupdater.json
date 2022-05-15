@@ -6,6 +6,7 @@
         "Description[ca@valencia]": "Envia les dades actualitzades de la ubicació al compositor",
         "Description[ca]": "Envia les dades actualitzades de la ubicació al compositor",
         "Description[cs]": "Odesílá aktualizované informace o místě kompozitoru",
+        "Description[da]": "Sender opdaterede lokaliseringsdata til compositoren",
         "Description[de]": "Sendet aktualisierte Standort-Daten an den Compositor",
         "Description[en_GB]": "Sends updated location data to the compositor",
         "Description[es]": "Envía datos de posicionamiento actualizados al compositor",
