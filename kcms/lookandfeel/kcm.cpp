@@ -39,6 +39,8 @@
 #include <KLocalizedString>
 #include <KPackage/PackageLoader>
 
+#include <array>
+
 #include <X11/Xlib.h>
 
 #include <KNSCore/EntryInternal>
