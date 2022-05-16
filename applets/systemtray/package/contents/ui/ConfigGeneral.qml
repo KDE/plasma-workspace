@@ -36,7 +36,7 @@ ColumnLayout {
         }
         QQC2.Label {
             visible: Kirigami.Settings.tabletMode
-            text: i18n("Automatically enabled when in tablet mode")
+            text: i18n("Automatically enabled when in Touch Mode")
             font: Kirigami.Theme.smallFont
         }
 
@@ -79,7 +79,7 @@ ColumnLayout {
         }
         QQC2.Label {
             visible: Kirigami.Settings.tabletMode
-            text: i18nc("@info:usagetip under a combobox when tablet mode is on", "Automatically set to Large when in tablet mode")
+            text: i18nc("@info:usagetip under a combobox when Touch Mode is on", "Automatically set to Large when in Touch Mode")
             font: Kirigami.Theme.smallFont
         }
     }
