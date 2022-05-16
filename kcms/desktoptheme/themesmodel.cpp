@@ -155,7 +155,15 @@ void ThemesModel::load()
         const QDir cd(ppath);
         const QStringList &entries = cd.entryList(QDir::Dirs | QDir::Hidden | QDir::NoDotAndDotDot);
         for (const QString &pack : entries) {
-            const QString _metadata = ppath + QLatin1Char('/') + pack + QStringLiteral("/metadata.desktop");
+            const QString prefix = QStringLiteral("%1%2%3%4metadata.").arg(ppath, QDir::separator(), pack, QDir::separator());
+
+            QString _metadata = QStringLiteral("%1json").arg(prefix);
+            if (QFile::exists(_metadata)) {
+                themes << _metadata;
+                continue;
+            }
+
+            _metadata = QStringLiteral("%1desktop").arg(prefix);
             if (QFile::exists(_metadata)) {
                 themes << _metadata;
             }
