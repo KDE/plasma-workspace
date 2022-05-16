@@ -4,6 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+import QtQml 2.15
 import QtQuick 2.8
 import QtQuick.Controls 1.1
 import QtQuick.Layouts 1.1
@@ -39,6 +40,7 @@ PlasmaCore.ColorScope {
         }
 
         function onSucceeded() {
+            Qt.quit();
         }
 
         function onInfoMessage(msg) {
