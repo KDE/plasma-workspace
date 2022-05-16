@@ -16,6 +16,7 @@
 
 #include <KColorScheme>
 #include <KDesktopFile>
+#include <KPluginMetaData>
 
 #include <KConfigGroup>
 #include <KSharedConfig>
@@ -176,15 +177,25 @@ void ThemesModel::load()
         int themeNameSepIndex = themeRoot.lastIndexOf(QLatin1Char('/'), -1);
         const QString packageName = themeRoot.right(themeRoot.length() - themeNameSepIndex - 1);
 
-        KDesktopFile df(theme);
+        QString name;
+        QString comment;
 
-        if (df.noDisplay()) {
-            continue;
-        }
+        if (theme.endsWith(QLatin1String(".json"))) {
+            KPluginMetaData data = KPluginMetaData::fromJsonFile(theme);
+            name = data.name();
+            comment = data.description();
+        } else {
+            KDesktopFile df(theme);
 
-        QString name = df.readName();
-        if (name.isEmpty()) {
-            name = packageName;
+            if (df.noDisplay()) {
+                continue;
+            }
+
+            name = df.readName();
+            if (name.isEmpty()) {
+                name = packageName;
+            }
+            comment = df.readComment();
         }
         const bool isLocal = QFileInfo(theme).isWritable();
         bool hasPluginName = std::any_of(m_data.begin(), m_data.end(), [&](const ThemesModelData &item) {
@@ -205,7 +216,7 @@ void ThemesModel::load()
                     type = LightTheme;
                 }
             }
-            ThemesModelData item{name, packageName, df.readComment(), type, isLocal, false};
+            ThemesModelData item{name, packageName, comment, type, isLocal, false};
             m_data.append(item);
         }
     }
