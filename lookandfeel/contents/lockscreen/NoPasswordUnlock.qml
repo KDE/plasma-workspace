@@ -15,7 +15,7 @@ SessionManagementScreen {
             id: loginButton
             focus: true
             text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Unlock")
-            icon.name: LayoutMirroring.enabled ? "go-previous" : "go-next"
+            icon.name: "unlock"
             onClicked: Qt.quit();
             Keys.onEnterPressed: clicked()
             Keys.onReturnPressed: clicked()
