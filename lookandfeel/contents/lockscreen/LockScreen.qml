@@ -14,7 +14,6 @@ Item {
     id: root
     property bool debug: false
     property string notification
-    property int interfaceVersion: org_kde_plasma_screenlocker_greeter_interfaceVersion ? org_kde_plasma_screenlocker_greeter_interfaceVersion : 0
     signal clearPassword()
 
     // These are magical properties that kscreenlocker looks for
@@ -32,32 +31,7 @@ Item {
     implicitWidth: 800
     implicitHeight: 600
 
-    Loader {
-        id: mainLoader
-        anchors.fill: parent
-        opacity: 0
-        onItemChanged: opacity = 1
-
-        focus: true
-
-        Behavior on opacity {
-            OpacityAnimator {
-                duration: PlasmaCore.Units.longDuration
-                easing.type: Easing.InCubic
-            }
-        }
-    }
-    Connections {
-        id:loaderConnection
-        target: org_kde_plasma_screenlocker_greeter_view
-        function onFrameSwapped() {
-            mainLoader.source = "LockScreenUi.qml";
-            loaderConnection.target = null;
-        }
-    }
-    Component.onCompleted: {
-        if (root.interfaceVersion < 2) {
-            mainLoader.source = "LockScreenUi.qml";
-        }
+    LockScreenUi {
+            anchors.fill: parent
     }
 }
