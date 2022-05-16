@@ -24,6 +24,7 @@ PlasmaCore.ColorScope {
     // If we're using software rendering, draw outlines instead of shadows
     // See https://bugs.kde.org/show_bug.cgi?id=398317
     readonly property bool softwareRendering: GraphicsInfo.api === GraphicsInfo.Software
+    property bool hadPrompt: false;
 
     colorGroup: PlasmaCore.Theme.ComplementaryColorGroup
 
@@ -40,7 +41,13 @@ PlasmaCore.ColorScope {
         }
 
         function onSucceeded() {
-            Qt.quit();
+            if (lockScreenUi.hadPrompt) {
+                Qt.quit();
+            } else {
+                mainStack.push(Qt.resolvedUrl("NoPasswordUnlock.qml"),
+                               {"userListModel": users});
+                mainStack.forceActiveFocus();
+            }
         }
 
         function onInfoMessage(msg) {
@@ -58,12 +65,14 @@ PlasmaCore.ColorScope {
         }
 
         function onPrompt(msg) {
+            lockScreenUi.hadPrompt = true;
             root.notification = msg;
             mainBlock.echoMode = TextInput.Normal
             mainBlock.mainPasswordBox.text = "";
             mainBlock.mainPasswordBox.forceActiveFocus();
         }
         function onPromptForSecret(msg) {
+            lockScreenUi.hadPrompt = true;
             mainBlock.echoMode = TextInput.Password
             mainBlock.mainPasswordBox.text = "";
             mainBlock.mainPasswordBox.forceActiveFocus();
