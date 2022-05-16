@@ -404,9 +404,11 @@ void Klipper::showPopupMenu(QMenu *menu)
     Q_ASSERT(menu != nullptr);
     if (m_plasmashell) {
         menu->hide();
-        menu->windowHandle()->installEventFilter(this);
     }
     menu->popup(QCursor::pos());
+    if (m_plasmashell) {
+        menu->windowHandle()->installEventFilter(this);
+    }
 }
 
 bool Klipper::eventFilter(QObject *filtered, QEvent *event)
