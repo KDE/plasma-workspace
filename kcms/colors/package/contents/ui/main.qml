@@ -154,11 +154,11 @@ KCM.GridViewKCM {
             QtControls.RadioButton {
                 id: wallpaperAccentBox
                 text: i18nc("@option:radio wallpaper accent color option", "From current wallpaper")
-                checked: kcm.applyAccentColorFromWallpaper
+                checked: kcm.accentColorFromWallpaper
 
                 onToggled: {
                     if (checked) {
-                        kcm.applyAccentColorFromWallpaper = true;
+                        kcm.accentColorFromWallpaper = true;
                     }
                 }
             }
@@ -167,7 +167,7 @@ KCM.GridViewKCM {
                 spacing: 0
                 QtControls.RadioButton {
                     id: accentBox
-                    checked: !Qt.colorEqual(kcm.accentColor, "transparent") && !kcm.applyAccentColorFromWallpaper
+                    checked: !Qt.colorEqual(kcm.accentColor, "transparent") && !kcm.accentColorFromWallpaper
 
                     onToggled: {
                         if (checked) {
@@ -264,7 +264,7 @@ KCM.GridViewKCM {
                     ColorRadioButton {
                         id: customColorIndicator
 
-                        readonly property bool isCustomColor: !kcm.applyAccentColorFromWallpaper
+                        readonly property bool isCustomColor: !kcm.accentColorFromWallpaper
                             && !Qt.colorEqual(kcm.accentColor, "transparent")
                             && !colorRepeater.model.some(color => Qt.colorEqual(color, root.accentColor))
 
@@ -321,7 +321,7 @@ KCM.GridViewKCM {
 
             Kirigami.Theme.inherit: false
             Kirigami.Theme.highlightColor: root.accentColor || model.palette.highlight
-            Kirigami.Theme.textColor: kcm.tinted(model.palette.text, kcm.accentColor, model.tints, model.tintFactor) 
+            Kirigami.Theme.textColor: kcm.tinted(model.palette.text, kcm.accentColor, model.tints, model.tintFactor)
 
             Rectangle {
                 id: windowTitleBar

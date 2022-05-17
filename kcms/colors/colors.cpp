@@ -114,10 +114,9 @@ QColor KCMColors::accentColor() const
     return color;
 }
 
-QColor KCMColors::tinted(const QColor& color, const QColor& accent, bool tints, qreal tintFactor)
+QColor KCMColors::tinted(const QColor &color, const QColor &accent, bool tints, qreal tintFactor)
 {
-    if (accent == QColor(Qt::transparent) || !tints)
-    {
+    if (accent == QColor(Qt::transparent) || !tints) {
         return color;
     }
     return tintColor(color, accentColor(), tintFactor);
@@ -129,11 +128,12 @@ void KCMColors::setAccentColor(const QColor &accentColor)
     Q_EMIT settingsChanged();
 }
 
-bool KCMColors::applyAccentColorFromWallpaper() const
+bool KCMColors::accentColorFromWallpaper() const
 {
     return colorsSettings()->accentColorFromWallpaper();
 }
-void KCMColors::setApplyAccentColorFromWallpaper(bool boolean)
+
+void KCMColors::setAccentColorFromWallpaper(bool boolean)
 {
     if (boolean == colorsSettings()->accentColorFromWallpaper()) {
         return;
@@ -142,7 +142,7 @@ void KCMColors::setApplyAccentColorFromWallpaper(bool boolean)
         applyWallpaperAccentColor();
     }
     colorsSettings()->setAccentColorFromWallpaper(boolean);
-    Q_EMIT applyAccentColorFromWallpaperChanged();
+    Q_EMIT accentColorFromWallpaperChanged();
     Q_EMIT settingsChanged();
 }
 
@@ -361,7 +361,7 @@ void KCMColors::load()
 
     loadSelectedColorScheme();
 
-    Q_EMIT applyAccentColorFromWallpaperChanged();
+    Q_EMIT accentColorFromWallpaperChanged();
     Q_EMIT accentColorChanged();
 
     // If need save is true at the end of load() function, it will stay disabled forever.
@@ -406,7 +406,7 @@ void KCMColors::saveColors()
 
     auto setGlobals = [=]() {
         globalConfig->group("General").writeEntry("AccentColor", QColor());
-        globalConfig->group("General").writeEntry("accentColorFromWallpaper", applyAccentColorFromWallpaper(), KConfig::Notify);
+        globalConfig->group("General").writeEntry("accentColorFromWallpaper", accentColorFromWallpaper(), KConfig::Notify);
         if (accentColor() != QColor(Qt::transparent)) {
             globalConfig->group("General").writeEntry("AccentColor", accentColor(), KConfig::Notify);
         } else {
@@ -437,7 +437,7 @@ void KCMColors::applyWallpaperAccentColor()
     QDBusPendingCall async = connection.asyncCall(accentColor);
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(async, this);
 
-    QObject::connect(watcher, SIGNAL(finished(QDBusPendingCallWatcher *)), this, SLOT(wallpaperAccentColorArrivedSlot(QDBusPendingCallWatcher *)));
+    connect(watcher, &QDBusPendingCallWatcher::finished, this, &KCMColors::wallpaperAccentColorArrivedSlot);
 }
 
 void KCMColors::wallpaperAccentColorArrivedSlot(QDBusPendingCallWatcher *call)
