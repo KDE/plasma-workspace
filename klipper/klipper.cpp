@@ -424,6 +424,8 @@ bool Klipper::eventFilter(QObject *filtered, QEvent *event)
         auto surface = KWayland::Client::Surface::fromWindow(menuWindow);
         auto plasmaSurface = m_plasmashell->createSurface(surface, menuWindow);
         plasmaSurface->openUnderCursor();
+        plasmaSurface->setSkipTaskbar(true);
+        plasmaSurface->setSkipSwitcher(true);
         menuWindow->removeEventFilter(this);
     }
     return ret;
