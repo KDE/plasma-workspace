@@ -448,6 +448,7 @@ void RootModel::refresh()
         ++m_separatorCount;
     }
 
+    delete m_systemModel;
     m_systemModel = new SystemModel(this);
     QObject::connect(m_systemModel, &SystemModel::sessionManagementStateChanged, this, &RootModel::refresh);
 
