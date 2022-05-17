@@ -354,6 +354,9 @@ void KCMColors::load()
 
     loadSelectedColorScheme();
 
+    Q_EMIT applyAccentColorFromWallpaperChanged();
+    Q_EMIT accentColorChanged();
+
     // If need save is true at the end of load() function, it will stay disabled forever.
     // setSelectedScheme() call due to unexisting scheme name in kdeglobals will trigger a need to save.
     // this following call ensure the apply button will work properly.
