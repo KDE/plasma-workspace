@@ -94,14 +94,14 @@ Item {
 
         supportsAtlasTextures: true
 
-        property var source: ShaderEffectSource {
+        readonly property Item source: ShaderEffectSource {
             sourceItem: imageSource
             // software rendering is just a fallback so we can accept not having a rounded avatar here
             hideSource: wrapper.GraphicsInfo.api !== GraphicsInfo.Software
             live: true // otherwise the user in focus will show a blurred avatar
         }
 
-        property var colorBorder: PlasmaCore.ColorScope.textColor
+        readonly property color colorBorder: PlasmaCore.ColorScope.textColor
 
         //draw a circle with an antialiased border
         //innerRadius = size of the inner circle with contents
@@ -115,12 +115,12 @@ Item {
             varying highp vec2 qt_TexCoord0;
             uniform highp float qt_Opacity;
             uniform lowp sampler2D source;
-
             uniform lowp vec4 colorBorder;
-            highp float blend = 0.01;
-            highp float innerRadius = 0.47;
-            highp float outerRadius = 0.49;
-            lowp vec4 colorEmpty = vec4(0.0, 0.0, 0.0, 0.0);
+
+            const highp float blend = 0.01;
+            const highp float innerRadius = 0.47;
+            const highp float outerRadius = 0.49;
+            const lowp vec4 colorEmpty = vec4(0.0, 0.0, 0.0, 0.0);
 
             void main() {
                 lowp vec4 colorSource = texture2D(source, qt_TexCoord0.st);
@@ -137,7 +137,7 @@ Item {
                 else if (dist < outerRadius + blend)
                     gl_FragColor = mix(colorBorder, colorEmpty, ((dist - outerRadius) / blend));
                 else
-                    gl_FragColor = colorEmpty ;
+                    gl_FragColor = colorEmpty;
 
                 gl_FragColor = gl_FragColor * qt_Opacity;
             }
