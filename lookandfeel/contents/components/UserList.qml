@@ -8,6 +8,24 @@ import QtQuick 2.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 
+/*
+ * A model with a list of users to show in the view.
+ * There are different implementations in sddm greeter (UserModel) and
+ * KScreenLocker (SessionsModel), so some roles will be missing.
+ *
+ * type: {
+ *  name: string,
+ *  realName: string,
+ *  homeDir: string,
+ *  icon: string,
+ *  iconName?: string,
+ *  needsPassword?: bool,
+ *  displayNumber?: string,
+ *  vtNumber?: int,
+ *  session?: string
+ *  isTty?: bool,
+ * }
+ */
 ListView {
     id: view
     readonly property string selectedUser: currentItem ? currentItem.userName : ""

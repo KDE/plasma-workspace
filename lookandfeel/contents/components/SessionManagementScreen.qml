@@ -30,16 +30,22 @@ FocusScope {
     property alias actionItemsVisible: actionItemsLayout.visible
 
     /*
-     * A model with a list of users to show in the view
-     * The following roles should exist:
-     *  - name
-     *  - iconSource
+     * A model with a list of users to show in the view.
+     * There are different implementations in sddm greeter (UserModel) and
+     * KScreenLocker (SessionsModel), so some roles will be missing.
      *
-     * The following are also handled:
-     *  - vtNumber
-     *  - displayNumber
-     *  - session
-     *  - isTty
+     * type: {
+     *  name: string,
+     *  realName: string,
+     *  homeDir: string,
+     *  icon: string,
+     *  iconName?: string,
+     *  needsPassword?: bool,
+     *  displayNumber?: string,
+     *  vtNumber?: int,
+     *  session?: string
+     *  isTty?: bool,
+     * }
      */
     property alias userListModel: userListView.model
 

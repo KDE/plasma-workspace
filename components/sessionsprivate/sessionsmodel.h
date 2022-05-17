@@ -33,6 +33,7 @@ struct SessionEntry {
 
 class KDisplayManager;
 
+// This model should be compatible with SDDM::SessionModel
 class SessionsModel : public QAbstractListModel
 {
     Q_OBJECT
