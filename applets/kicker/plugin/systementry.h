@@ -54,6 +54,7 @@ public:
 
 Q_SIGNALS:
     void isValidChanged() const;
+    void sessionManagementStateChanged();
 
 private Q_SLOTS:
     void refresh();

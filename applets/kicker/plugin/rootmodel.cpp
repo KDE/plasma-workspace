@@ -449,6 +449,7 @@ void RootModel::refresh()
     }
 
     m_systemModel = new SystemModel(this);
+    QObject::connect(m_systemModel, &SystemModel::sessionManagementStateChanged, this, &RootModel::refresh);
 
     if (m_showPowerSession) {
         m_entryList << new GroupEntry(this, i18n("Power / Session"), QStringLiteral("system-log-out"), m_systemModel);

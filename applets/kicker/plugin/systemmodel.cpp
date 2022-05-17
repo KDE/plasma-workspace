@@ -92,10 +92,12 @@ void SystemModel::populate()
 
     auto addIfValid = [=](const SystemEntry::Action action) {
         SystemEntry *entry = new SystemEntry(this, action);
+        QObject::connect(entry, &SystemEntry::sessionManagementStateChanged, this, &SystemModel::sessionManagementStateChanged);
 
         if (entry->isValid()) {
             m_entries << entry;
         }
+
         QObject::connect(entry, &SystemEntry::isValidChanged, this, &AbstractModel::refresh, Qt::UniqueConnection);
     };
 
