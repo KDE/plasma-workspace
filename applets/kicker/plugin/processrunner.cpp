@@ -6,7 +6,8 @@
 
 #include "processrunner.h"
 
-#include <KProcess>
+#include <KIO/ApplicationLauncherJob>
+#include <KNotificationJobUiDelegate>
 
 ProcessRunner::ProcessRunner(QObject *parent)
     : QObject(parent)
@@ -19,5 +20,16 @@ ProcessRunner::~ProcessRunner()
 
 void ProcessRunner::runMenuEditor()
 {
-    KProcess::startDetached(QStringLiteral("kmenuedit"));
+    const auto service = KService::serviceByDesktopName(QStringLiteral("org.kde.kmenuedit"));
+
+    if (!service) {
+        qWarning() << "Could not find kmenuedit";
+        return;
+    }
+
+    auto *job = new KIO::ApplicationLauncherJob(service);
+    auto *delegate = new KNotificationJobUiDelegate;
+    delegate->setAutoErrorHandlingEnabled(true);
+    job->setUiDelegate(delegate);
+    job->start();
 }
