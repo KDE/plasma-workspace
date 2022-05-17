@@ -25,6 +25,9 @@ public:
 
     Q_INVOKABLE bool trigger(int row, const QString &actionId, const QVariant &argument) override;
 
+Q_SIGNALS:
+    void sessionManagementStateChanged();
+
 protected Q_SLOTS:
     void refresh() override;
 

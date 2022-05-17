@@ -79,6 +79,7 @@ void SystemEntry::refresh()
 {
     if (!s_sessionManagement) {
         s_sessionManagement = new SessionManagement();
+        QObject::connect(s_sessionManagement, &SessionManagement::stateChanged, this, &SystemEntry::sessionManagementStateChanged);
     }
 
     bool valid = false;
