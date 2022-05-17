@@ -35,4 +35,5 @@ private:
     void populate();
 
     QVector<SystemEntry *> m_entries;
+    decltype(m_entries) m_invalidEntries;
 };
