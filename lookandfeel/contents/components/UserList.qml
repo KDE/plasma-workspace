@@ -57,8 +57,8 @@ ListView {
         avatarPath: model.icon || ""
         iconSource: model.iconName || "user-identity"
         fontSize: view.fontSize
+        needsPassword: model.needsPassword !== undefined ? model.needsPassword : true
         vtNumber: model.vtNumber
-        needsPassword: model.needsPassword
 
         name: {
             const displayName = model.realName || model.name
