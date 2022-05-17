@@ -39,13 +39,6 @@ KCM.GridViewKCM {
         restoreMode: Binding.RestoreBinding
     }
 
-    Binding {
-        target: kcm
-        property: "applyAccentColorFromWallpaper"
-        value: wallpaperAccentBox.checked
-        restoreMode: Binding.RestoreBinding
-    }
-
     KCM.SettingStateBinding {
         configObject: kcm.colorsSettings
         settingName: "colorScheme"
@@ -149,10 +142,10 @@ KCM.GridViewKCM {
 
                 Kirigami.FormData.label: i18n("Use accent color:")
                 text: i18n("From current color scheme")
-                checked: Qt.colorEqual(kcm.accentColor, "transparent") && !kcm.applyAccentColorFromWallpaper
+                checked: Qt.colorEqual(kcm.accentColor, "transparent")
 
                 onToggled: {
-                    if (enabled) {
+                    if (checked) {
                         kcm.accentColor = "transparent"
                     }
                 }
@@ -164,8 +157,8 @@ KCM.GridViewKCM {
                 checked: kcm.applyAccentColorFromWallpaper
 
                 onToggled: {
-                    if (enabled) {
-                        kcm.applyWallpaperAccentColor();
+                    if (checked) {
+                        kcm.applyAccentColorFromWallpaper = true;
                     }
                 }
             }
@@ -177,21 +170,8 @@ KCM.GridViewKCM {
                     checked: !Qt.colorEqual(kcm.accentColor, "transparent") && !kcm.applyAccentColorFromWallpaper
 
                     onToggled: {
-                        if (enabled) {
+                        if (checked) {
                             kcm.accentColor = colorRepeater.model[0]
-                        }
-                    }
-                    /* This required when someone directly clicks one of the accent color buttons or the color picker instead
-                     * of first checking this button. Failing to call this function in those situations will leave this button unchecked
-                     * which was the previous behaviour.
-                     * NOTE: Currently user is able to dicrectly toggle the accentColor buttons or the color picker. If in future the situation
-                     * becomes such that the user must toggle this button first then just remove all the occurrences of this function
-                     */
-
-                    function restartBindingWithCheckedAsTrue() {
-                        if(!accentBox.checked) {
-                            accentBox.checked = true
-                            accentBox.checked = Qt.binding(() => !Qt.colorEqual(kcm.accentColor, "transparent") && !kcm.applyAccentColorFromWallpaper)
                         }
                     }
                 }
@@ -257,7 +237,6 @@ KCM.GridViewKCM {
                             checked: Qt.colorEqual(kcm.accentColor, modelData)
 
                             onToggled: {
-                                accentBox.restartBindingWithCheckedAsTrue()
                                 kcm.accentColor = modelData
                                 checked = Qt.binding(() => Qt.colorEqual(kcm.accentColor, modelData));
                                 }
@@ -278,7 +257,6 @@ KCM.GridViewKCM {
                         modality: Qt.ApplicationModal
                         color: kcm.accentColor
                         onAccepted: {
-                            accentBox.restartBindingWithCheckedAsTrue()
                             kcm.accentColor = colorDialog.color
                         }
                     }
@@ -286,8 +264,8 @@ KCM.GridViewKCM {
                     ColorRadioButton {
                         id: customColorIndicator
 
-                        readonly property bool isCustomColor: !wallpaperAccentBox.checked
-                            && root.accentColor
+                        readonly property bool isCustomColor: !kcm.applyAccentColorFromWallpaper
+                            && !Qt.colorEqual(kcm.accentColor, "transparent")
                             && !colorRepeater.model.some(color => Qt.colorEqual(color, root.accentColor))
 
                        /* The qt binding will keep the binding alive as well as uncheck the button

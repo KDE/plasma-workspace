@@ -69,10 +69,10 @@ public:
     void setAccentColor(const QColor &accentColor);
     void resetAccentColor();
     Q_SIGNAL void accentColorChanged();
-    Q_SIGNAL void applyAccentColorFromWallpaperChanged();
 
     bool applyAccentColorFromWallpaper() const;
     void setApplyAccentColorFromWallpaper(bool boolean);
+    Q_SIGNAL void applyAccentColorFromWallpaperChanged();
 
     Q_INVOKABLE void installSchemeFromFile(const QUrl &url);
 
@@ -83,7 +83,6 @@ public:
     Q_INVOKABLE QColor tinted(const QColor& color, const QColor& accent, bool tints, qreal tintFactor);
     Q_INVOKABLE QColor accentBackground(const QColor &accent, const QColor &background);
     Q_INVOKABLE QColor accentForeground(const QColor &accent, const bool &isActive);
-    Q_INVOKABLE void applyWallpaperAccentColor();
 
 public Q_SLOTS:
     void load() override;
@@ -105,6 +104,8 @@ private:
 
     void saveColors();
     void processPendingDeletions();
+
+    void applyWallpaperAccentColor();
 
     void installSchemeFile(const QString &path);
 

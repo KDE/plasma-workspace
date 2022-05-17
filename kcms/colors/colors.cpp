@@ -135,7 +135,14 @@ bool KCMColors::applyAccentColorFromWallpaper() const
 }
 void KCMColors::setApplyAccentColorFromWallpaper(bool boolean)
 {
+    if (boolean == colorsSettings()->accentColorFromWallpaper()) {
+        return;
+    }
+    if (boolean) {
+        applyWallpaperAccentColor();
+    }
     colorsSettings()->setAccentColorFromWallpaper(boolean);
+    Q_EMIT applyAccentColorFromWallpaperChanged();
     Q_EMIT settingsChanged();
 }
 
