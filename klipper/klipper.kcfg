@@ -80,9 +80,6 @@
     <entry name="ActionsInfoMessageShown" type="Bool">
         <default>true</default>
     </entry>
-    <entry name="ActionsInfoMessageHidden" type="Bool">
-        <default>false</default>
-    </entry>
   </group>
 
   <group name="Actions">
