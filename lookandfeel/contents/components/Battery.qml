@@ -5,12 +5,13 @@
 */
 
 import QtQuick 2.15
+import QtQuick.Layouts 1.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.workspace.components 2.0 as PW
 
-Row {
+RowLayout {
     id: root
 
     property int fontSize: PlasmaCore.Theme.defaultFont.pointSize
@@ -41,8 +42,9 @@ Row {
         hasBattery: root.hasBattery
         percent: root.percent
 
-        height: batteryLabel.height
-        width: height
+        Layout.preferredHeight: Math.max(PlasmaCore.Units.iconSizes.medium, batteryLabel.implicitHeight)
+        Layout.preferredWidth: Layout.preferredHeight
+        Layout.alignment: Qt.AlignVCenter
     }
 
     PlasmaComponents3.Label {
@@ -50,5 +52,6 @@ Row {
         font.pointSize: root.fontSize
         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "%1%", root.percent)
         Accessible.name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Battery at %1%", root.percent)
+        Layout.alignment: Qt.AlignVCenter
     }
 }
