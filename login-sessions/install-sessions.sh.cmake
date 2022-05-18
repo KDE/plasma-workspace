@@ -23,14 +23,11 @@ fi
 
 if [ -x /usr/bin/systemd-sysext ]; then
   prefix=/var/lib/extensions/plasma-dev
-  install -d $prefix/usr/lib/extension-release.d/
-  cp /etc/os-release $prefix/usr/lib/extension-release.d/extension-release.plasma-dev
+  install --mode=644 -D /etc/os-release $prefix/usr/lib/extension-release.d/extension-release.plasma-dev
 
   # Make built-from-source sessions appear in login screen
-  install -d $prefix/usr/share/xsessions/
-  install @CMAKE_CURRENT_BINARY_DIR@/plasmax11-dev6.desktop $prefix/usr/share/xsessions/
-  install -d $prefix/usr/share/wayland-sessions/
-  install @CMAKE_CURRENT_BINARY_DIR@/plasmawayland-dev6.desktop $prefix/usr/share/wayland-sessions/
+  install --mode=644 -D @CMAKE_CURRENT_BINARY_DIR@/plasmax11-dev.desktop --target-directory=$prefix/usr/share/xsessions
+  install --mode=644 -D @CMAKE_CURRENT_BINARY_DIR@/plasmawayland-dev.desktop --target-directory=$prefix/usr/share/wayland-sessions
 
   # Copy dbus and polkit to /usr. Both hardcode the system prefix.
   # - polkit exclusively looks in the system prefix and has no facilities to change that
