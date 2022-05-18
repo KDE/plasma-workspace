@@ -1,3 +1,5 @@
+find_package(ICU COMPONENTS i18n uc)
+
 add_definitions(
   -DQT_USE_QSTRINGBUILDER
   -DQT_NO_CAST_TO_ASCII
@@ -85,6 +87,11 @@ endif()
 
 if (${HAVE_APPSTREAMQT})
 target_link_libraries(kickerplugin AppStreamQt)
+endif()
+
+if (ICU_FOUND)
+    target_link_libraries(kickerplugin ICU::i18n ICU::uc)
+    target_compile_definitions(kickerplugin PRIVATE "-DHAVE_ICU")
 endif()
 
 add_subdirectory(plugin/autotests)

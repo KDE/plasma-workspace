@@ -39,6 +39,7 @@ public:
     QString name() const override;
     QString description() const override;
     KService::Ptr service() const;
+    QString group() const override;
 
     QString id() const override;
     QUrl url() const override;
@@ -59,6 +60,8 @@ private:
     QString m_id;
     QString m_name;
     QString m_description;
+    // Not an actual group name, but the first character for transliterated name.
+    QString m_group;
     mutable QIcon m_icon;
     KService::Ptr m_service;
     static MenuEntryEditor *m_menuEntryEditor;

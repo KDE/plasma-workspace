@@ -163,6 +163,8 @@ QVariant AppsModel::data(const QModelIndex &index, int role) const
         }
 
         return actionList;
+    } else if (role == Kicker::GroupRole) {
+        return entry->group();
     }
 
     return QVariant();
@@ -691,7 +693,11 @@ void AppsModel::sortEntries()
         if (a->type() != b->type()) {
             return a->type() > b->type();
         } else {
-            return c.compare(a->name(), b->name()) < 0;
+            if (a->group() != b->group()) {
+                return c.compare(a->group(), b->group()) < 0;
+            } else {
+                return c.compare(a->name(), b->name()) < 0;
+            }
         }
     });
 }

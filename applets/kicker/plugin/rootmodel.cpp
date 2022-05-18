@@ -370,11 +370,17 @@ void RootModel::refresh()
                 for (int i = 0; i < model->count(); ++i) {
                     AbstractEntry *appEntry = static_cast<AbstractEntry *>(model->index(i, 0).internalPointer());
 
-                    if (appEntry->name().isEmpty()) {
+                    // App entry's group stores a transliterated first character of the name. Prefer to use that.
+                    QString name = appEntry->group();
+                    if (name.isEmpty()) {
+                        name = appEntry->name();
+                    }
+
+                    if (name.isEmpty()) {
                         continue;
                     }
 
-                    const QChar &first = appEntry->name().at(0).toUpper();
+                    const QChar &first = name.at(0).toUpper();
                     m_categoryHash[first.isDigit() ? QStringLiteral("0-9") : first].append(appEntry);
                 }
             }
