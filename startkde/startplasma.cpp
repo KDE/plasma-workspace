@@ -71,15 +71,12 @@ void gentleTermination(QProcess *p)
         return;
     }
 
-    p->close();
     p->terminate();
 
     // Wait longer for a session than a greeter
     if (!p->waitForFinished(5000)) {
+        qCWarning(PLASMA_STARTUP) << "Could not fully finish the process" << p->program();
         p->kill();
-        if (!p->waitForFinished(5000)) {
-            qCWarning(PLASMA_STARTUP) << "Could not fully finish the process" << p->program();
-        }
     }
 }
 
