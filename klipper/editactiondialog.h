@@ -8,10 +8,9 @@
 
 #include <QDialog>
 
-namespace Ui
-{
-class EditActionDialog;
-}
+class QLineEdit;
+class QCheckBox;
+class QTableView;
 
 class ClipAction;
 class ActionDetailModel;
@@ -19,9 +18,10 @@ class ActionDetailModel;
 class EditActionDialog : public QDialog
 {
     Q_OBJECT
+
 public:
     explicit EditActionDialog(QWidget *parent);
-    ~EditActionDialog() override;
+    ~EditActionDialog() override = default;
 
     /**
      * Sets the action this dialog will work with
@@ -30,10 +30,10 @@ public:
 
 private Q_SLOTS:
     void onAddCommand();
+    void onEditCommand();
     void onRemoveCommand();
     void onSelectionChanged();
     void slotAccepted();
-    //    void onItemChanged( QTreeWidgetItem*, int );
 
 private:
     /**
@@ -49,7 +49,14 @@ private:
     void saveAction();
 
 private:
-    Ui::EditActionDialog *m_ui;
+    QLineEdit *m_regExpEdit;
+    QLineEdit *m_descriptionEdit;
+    QCheckBox *m_automaticCheck;
+
+    QTableView *m_commandList;
+    QPushButton *m_addCommandPb;
+    QPushButton *m_editCommandPb;
+    QPushButton *m_removeCommandPb;
 
     ClipAction *m_action;
     ActionDetailModel *m_model;

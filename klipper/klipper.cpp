@@ -13,16 +13,21 @@
 #include <zlib.h>
 
 #include "klipper_debug.h"
+#include <QApplication>
+#include <QBoxLayout>
 #include <QDBusConnection>
 #include <QDialog>
 #include <QDir>
+#include <QLabel>
 #include <QMenu>
 #include <QMessageBox>
+#include <QPushButton>
 #include <QSaveFile>
 #include <QtConcurrent>
 
 #include <KActionCollection>
 #include <KGlobalAccel>
+#include <KLocalizedString>
 #include <KMessageBox>
 #include <KNotification>
 #include <KSystemClipboard>

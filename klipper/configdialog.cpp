@@ -11,6 +11,10 @@
 #include <qcheckbox.h>
 #include <qfontdatabase.h>
 #include <qformlayout.h>
+#include <qgridlayout.h>
+#include <qheaderview.h>
+#include <qlabel.h>
+#include <qpushbutton.h>
 #include <qradiobutton.h>
 #include <qtooltip.h>
 #include <qwindow.h>
@@ -20,17 +24,19 @@
 #include <KShortcutsEditor>
 #include <kconfigskeleton.h>
 #include <kglobalaccel.h>
+#include <kmessagebox.h>
+#include <kmessagewidget.h>
 #include <kpluralhandlingspinbox.h>
 #include <kwindowconfig.h>
-#include <kmessagewidget.h>
 
 #include "klipper_debug.h"
 
+#include "actionstreewidget.h"
 #include "editactiondialog.h"
 #include "klipper.h"
 #include "klippersettings.h"
 
-static QLabel *createHintLabel(const QString &text, QWidget *parent)
+/* static */ QLabel *ConfigDialog::createHintLabel(const QString &text, QWidget *parent)
 {
     QLabel *hintLabel = new QLabel(text, parent);
     hintLabel->setFont(QFontDatabase::systemFont(QFontDatabase::SmallestReadableFont));
@@ -47,9 +53,15 @@ static QLabel *createHintLabel(const QString &text, QWidget *parent)
     return (hintLabel);
 }
 
-static QLabel *createHintLabel(const KConfigSkeletonItem *item, QWidget *parent)
+/* static */ QLabel *ConfigDialog::createHintLabel(const KConfigSkeletonItem *item, QWidget *parent)
 {
     return (createHintLabel(item->whatsThis(), parent));
+}
+
+/* static */ QString ConfigDialog::manualShortcutString()
+{
+    const QList<QKeySequence> keys = KGlobalAccel::self()->globalShortcut(QCoreApplication::applicationName(), QStringLiteral("repeat_action"));
+    return (keys.value(0).toString(QKeySequence::NativeText));
 }
 
 //////////////////////////
@@ -67,7 +79,7 @@ GeneralWidget::GeneralWidget(QWidget *parent)
     m_syncClipboardsCb->setChecked(KlipperSettings::syncClipboards());
     layout->addRow(i18n("Selection and Clipboard:"), m_syncClipboardsCb);
 
-    QLabel *hint = createHintLabel(item, this);
+    QLabel *hint = ConfigDialog::createHintLabel(item, this);
     layout->addRow(QString(), hint);
     connect(hint, &QLabel::linkActivated, this, [this, hint]() {
         QToolTip::showText(QCursor::pos(),
@@ -114,19 +126,19 @@ If it is turned off, the selection may still be saved in the clipboard history (
     // is turned off - in this case the selection is never automatically saved
     // in the clipboard history.
 
-    QButtonGroup *bg = new QButtonGroup(this);
+    QButtonGroup *buttonGroup = new QButtonGroup(this);
 
     m_alwaysTextRb = new QRadioButton(i18n("Always save in history"), this);
     m_alwaysTextRb->setChecked(!KlipperSettings::ignoreSelection());
-    bg->addButton(m_alwaysTextRb);
+    buttonGroup->addButton(m_alwaysTextRb);
     layout->addRow(i18n("Text selection:"), m_alwaysTextRb);
 
     m_copiedTextRb = new QRadioButton(i18n("Only when explicitly copied"), this);
     m_copiedTextRb->setChecked(KlipperSettings::ignoreSelection());
-    bg->addButton(m_copiedTextRb);
+    buttonGroup->addButton(m_copiedTextRb);
     layout->addRow(QString(), m_copiedTextRb);
 
-    layout->addRow(QString(), createHintLabel(i18n("Whether text selections are saved in the clipboard history."), this));
+    layout->addRow(QString(), ConfigDialog::createHintLabel(i18n("Whether text selections are saved in the clipboard history."), this));
 
     // Radio button group: Storing non-text selections in history
     //
@@ -149,24 +161,24 @@ If it is turned off, the selection may still be saved in the clipboard history (
     // The 'Always' option is not available if selection/clipboard synchronisation
     // is turned off.
 
-    bg = new QButtonGroup(this);
+    buttonGroup = new QButtonGroup(this);
 
     m_alwaysImageRb = new QRadioButton(i18n("Always save in history"), this);
     m_alwaysImageRb->setChecked(!KlipperSettings::ignoreImages() && !KlipperSettings::selectionTextOnly());
-    bg->addButton(m_alwaysImageRb);
+    buttonGroup->addButton(m_alwaysImageRb);
     layout->addRow(i18n("Non-text selection:"), m_alwaysImageRb);
 
     m_copiedImageRb = new QRadioButton(i18n("Only when explicitly copied"), this);
     m_copiedImageRb->setChecked(!KlipperSettings::ignoreImages() && KlipperSettings::selectionTextOnly());
-    bg->addButton(m_copiedImageRb);
+    buttonGroup->addButton(m_copiedImageRb);
     layout->addRow(QString(), m_copiedImageRb);
 
     m_neverImageRb = new QRadioButton(i18n("Never save in history"), this);
     m_neverImageRb->setChecked(KlipperSettings::ignoreImages());
-    bg->addButton(m_neverImageRb);
+    buttonGroup->addButton(m_neverImageRb);
     layout->addRow(QString(), m_neverImageRb);
 
-    layout->addRow(QString(), createHintLabel(i18n("Whether non-text selections (such as images) are saved in the clipboard history."), this));
+    layout->addRow(QString(), ConfigDialog::createHintLabel(i18n("Whether non-text selections (such as images) are saved in the clipboard history."), this));
 
     layout->addRow(QString(), new QLabel(this));
 
@@ -242,14 +254,15 @@ PopupWidget::PopupWidget(QWidget *parent)
     layout->addRow(QString(), m_historyPopupCb);
 
     const QList<QKeySequence> keys = KGlobalAccel::self()->globalShortcut(QCoreApplication::applicationName(), QStringLiteral("repeat_action"));
-    layout->addRow(QString(),
-                   createHintLabel(xi18nc("@info",
-                                          "When text that matches an action pattern is selected or is chosen from \
+    QLabel *hint = ConfigDialog::createHintLabel(xi18nc("@info",
+                                                        "When text that matches an action pattern is selected or is chosen from \
 the clipboard history, automatically show the popup menu with applicable actions. \
 If the automatic menu is turned off here, or it is not shown for an excluded window, \
 then it can be shown by using the <shortcut>%1</shortcut> key shortcut.",
-                                          keys.value(0).toString(QKeySequence::NativeText)),
-                                   this));
+                                                        ConfigDialog::manualShortcutString()),
+                                                 this);
+    layout->addRow(QString(), hint);
+
     // Exclusions
     QPushButton *exclusionsButton = new QPushButton(QIcon::fromTheme(QStringLiteral("configure")), i18n("Exclude Windows..."), this);
     connect(exclusionsButton, &QPushButton::clicked, this, &PopupWidget::onAdvanced);
@@ -278,20 +291,19 @@ then it can be shown by using the <shortcut>%1</shortcut> key shortcut.",
     m_stripWhitespaceCb = new QCheckBox(item->label(), this);
     m_stripWhitespaceCb->setChecked(KlipperSettings::stripWhiteSpace());
     layout->addRow(i18n("Options:"), m_stripWhitespaceCb);
-    layout->addRow(QString(), createHintLabel(item, this));
+    layout->addRow(QString(), ConfigDialog::createHintLabel(item, this));
 
     // MIME actions
     item = KlipperSettings::self()->enableMagicMimeActionsItem();
     m_mimeActionsCb = new QCheckBox(item->label(), this);
     m_mimeActionsCb->setChecked(KlipperSettings::enableMagicMimeActions());
     layout->addRow(QString(), m_mimeActionsCb);
-    layout->addRow(QString(), createHintLabel(item, this));
+    layout->addRow(QString(), ConfigDialog::createHintLabel(item, this));
 
     layout->addRow(QString(), new QLabel(this));
 
     // Where to configure the actions
-    if (!KlipperSettings::popupInfoMessageHidden())
-    {
+    if (KlipperSettings::popupInfoMessageShown()) {
         KMessageWidget *msg = new KMessageWidget(xi18nc("@info", "The actions shown in the popup menu \
 can be configured on the <interface>Actions Configuration</interface> page."), this);
         msg->setMessageType(KMessageWidget::Information);
@@ -300,7 +312,7 @@ can be configured on the <interface>Actions Configuration</interface> page."), t
         msg->setCloseButtonVisible(true);
 
         connect(msg, &KMessageWidget::hideAnimationFinished, this, []() {
-            KlipperSettings::setPopupInfoMessageHidden(true);
+            KlipperSettings::setPopupInfoMessageShown(false);
         });
         layout->addRow(msg);
     }
@@ -355,29 +367,71 @@ void PopupWidget::save()
 
 ActionsWidget::ActionsWidget(QWidget *parent)
     : QWidget(parent)
-    , m_editActDlg(nullptr)
 {
-    m_ui.setupUi(this);
+    QGridLayout *layout = new QGridLayout(this);
+    layout->setContentsMargins(0, 0, 0, 0);
 
-    m_ui.pbAddAction->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
-    m_ui.pbDelAction->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
-    m_ui.pbEditAction->setIcon(QIcon::fromTheme(QStringLiteral("document-edit")));
+    // General information label
+    QLabel *hint = ConfigDialog::createHintLabel(xi18nc("@info",
+                                                        "Whan a <interface>match pattern</interface> \
+matches the clipboard contents, its <interface>commands</interface> \
+appear in the Klipper popup menu and can be executed."),
+                                                 this);
+    layout->addWidget(hint, 0, 0, 1, -1);
 
-    const KConfigGroup grp = KSharedConfig::openConfig()->group("ActionsWidget");
+    // Scrolling list
+    m_actionsTree = new ActionsTreeWidget(this);
+    m_actionsTree->setColumnCount(2);
+    m_actionsTree->setHeaderLabels({i18nc("@title:column", "Match pattern and commands"), i18nc("@title:column", "Description")});
+
+    layout->addWidget(m_actionsTree, 1, 0, 1, -1);
+    layout->setRowStretch(1, 1);
+
+    // Action buttons
+    m_addActionButton = new QPushButton(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add Action..."), this);
+    connect(m_addActionButton, &QPushButton::clicked, this, &ActionsWidget::onAddAction);
+    layout->addWidget(m_addActionButton, 2, 0);
+
+    m_editActionButton = new QPushButton(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Edit Action..."), this);
+    connect(m_editActionButton, &QPushButton::clicked, this, &ActionsWidget::onEditAction);
+    layout->addWidget(m_editActionButton, 2, 1);
+    layout->setColumnStretch(2, 1);
+
+    m_deleteActionButton = new QPushButton(QIcon::fromTheme(QStringLiteral("list-remove")), i18n("Delete Action"), this);
+    connect(m_deleteActionButton, &QPushButton::clicked, this, &ActionsWidget::onDeleteAction);
+    layout->addWidget(m_deleteActionButton, 2, 3);
+
+    // Where to configure the action options
+    if (KlipperSettings::actionsInfoMessageShown()) {
+        KMessageWidget *msg = new KMessageWidget(xi18nc("@info",
+                                                        "These actions appear in the popup menu \
+which can be configured on the <interface>Action Menu</interface> page."),
+                                                 this);
+        msg->setMessageType(KMessageWidget::Information);
+        msg->setIcon(QIcon::fromTheme(QStringLiteral("dialog-information")));
+        msg->setWordWrap(true);
+        msg->setCloseButtonVisible(true);
+
+        connect(msg, &KMessageWidget::hideAnimationFinished, this, []() {
+            KlipperSettings::setActionsInfoMessageShown(false);
+        });
+        layout->addWidget(msg, 3, 0, 1, -1);
+    }
+
+    // Add some vertical space between our buttons and the dialogue buttons
+    layout->setRowMinimumHeight(4, 16);
+
+    const KConfigGroup grp = KSharedConfig::openConfig()->group(metaObject()->className());
     QByteArray hdrState = grp.readEntry("ColumnState", QByteArray());
     if (!hdrState.isEmpty()) {
         qCDebug(KLIPPER_LOG) << "Restoring column state";
-        m_ui.kcfg_ActionList->header()->restoreState(QByteArray::fromBase64(hdrState));
+        m_actionsTree->header()->restoreState(QByteArray::fromBase64(hdrState));
     } else {
-        m_ui.kcfg_ActionList->header()->resizeSection(0, 250);
+        m_actionsTree->header()->resizeSection(0, 250);
     }
 
-    connect(m_ui.kcfg_ActionList, &ActionsTreeWidget::itemSelectionChanged, this, &ActionsWidget::onSelectionChanged);
-    connect(m_ui.kcfg_ActionList, &ActionsTreeWidget::itemDoubleClicked, this, &ActionsWidget::onEditAction);
-
-    connect(m_ui.pbAddAction, &QPushButton::clicked, this, &ActionsWidget::onAddAction);
-    connect(m_ui.pbEditAction, &QPushButton::clicked, this, &ActionsWidget::onEditAction);
-    connect(m_ui.pbDelAction, &QPushButton::clicked, this, &ActionsWidget::onDeleteAction);
+    connect(m_actionsTree, &QTreeWidget::itemSelectionChanged, this, &ActionsWidget::onSelectionChanged);
+    connect(m_actionsTree, &QTreeWidget::itemDoubleClicked, this, &ActionsWidget::onEditAction);
 
     onSelectionChanged();
 }
@@ -387,7 +441,7 @@ void ActionsWidget::setActionList(const ActionList &list)
     qDeleteAll(m_actionList);
     m_actionList.clear();
 
-    for (ClipAction *action : list) {
+    for (const ClipAction *action : list) {
         if (!action) {
             qCDebug(KLIPPER_LOG) << "action is null!";
             continue;
@@ -402,9 +456,9 @@ void ActionsWidget::setActionList(const ActionList &list)
 
 void ActionsWidget::updateActionListView()
 {
-    m_ui.kcfg_ActionList->clear();
+    m_actionsTree->clear();
 
-    foreach (ClipAction *action, m_actionList) {
+    for (const ClipAction *action : m_actionList) {
         if (!action) {
             qCDebug(KLIPPER_LOG) << "action is null!";
             continue;
@@ -413,16 +467,16 @@ void ActionsWidget::updateActionListView()
         QTreeWidgetItem *item = new QTreeWidgetItem;
         updateActionItem(item, action);
 
-        m_ui.kcfg_ActionList->addTopLevelItem(item);
+        m_actionsTree->addTopLevelItem(item);
     }
 
     // after all actions loaded, reset modified state of tree widget.
     // Needed because tree widget reacts on item changed events to tell if it is changed
     // this will ensure that apply button state will be correctly changed
-    m_ui.kcfg_ActionList->resetModifiedState();
+    m_actionsTree->resetModifiedState();
 }
 
-void ActionsWidget::updateActionItem(QTreeWidgetItem *item, ClipAction *action)
+void ActionsWidget::updateActionItem(QTreeWidgetItem *item, const ClipAction *action)
 {
     if (!item || !action) {
         qCDebug(KLIPPER_LOG) << "null pointer passed to function, nothing done";
@@ -434,7 +488,7 @@ void ActionsWidget::updateActionItem(QTreeWidgetItem *item, ClipAction *action)
     item->setText(0, action->actionRegexPattern());
     item->setText(1, action->description());
 
-    foreach (const ClipCommand &command, action->commands()) {
+    for (const ClipCommand &command : action->commands()) {
         QStringList cmdProps;
         cmdProps << command.command << command.description;
         QTreeWidgetItem *child = new QTreeWidgetItem(item, cmdProps);
@@ -446,11 +500,12 @@ ActionList ActionsWidget::actionList() const
 {
     // return a copy of our action list
     ActionList list;
-    foreach (ClipAction *action, m_actionList) {
+    for (const ClipAction *action : m_actionList) {
         if (!action) {
             qCDebug(KLIPPER_LOG) << "action is null";
             continue;
         }
+
         list.append(new ClipAction(*action));
     }
 
@@ -459,79 +514,89 @@ ActionList ActionsWidget::actionList() const
 
 void ActionsWidget::resetModifiedState()
 {
-    m_ui.kcfg_ActionList->resetModifiedState();
+    m_actionsTree->resetModifiedState();
 
     qCDebug(KLIPPER_LOG) << "Saving column state";
-    KConfigGroup grp = KSharedConfig::openConfig()->group("ActionsWidget");
-    grp.writeEntry("ColumnState", m_ui.kcfg_ActionList->header()->saveState().toBase64());
+    KConfigGroup grp = KSharedConfig::openConfig()->group(metaObject()->className());
+    grp.writeEntry("ColumnState", m_actionsTree->header()->saveState().toBase64());
 }
 
 void ActionsWidget::onSelectionChanged()
 {
-    bool itemIsSelected = !m_ui.kcfg_ActionList->selectedItems().isEmpty();
-    m_ui.pbEditAction->setEnabled(itemIsSelected);
-    m_ui.pbDelAction->setEnabled(itemIsSelected);
+    const bool itemIsSelected = !m_actionsTree->selectedItems().isEmpty();
+    m_editActionButton->setEnabled(itemIsSelected);
+    m_deleteActionButton->setEnabled(itemIsSelected);
 }
 
 void ActionsWidget::onAddAction()
 {
-    if (!m_editActDlg) {
-        m_editActDlg = new EditActionDialog(this);
-    }
-
+    EditActionDialog dlg(this);
     ClipAction *newAct = new ClipAction;
-    m_editActDlg->setAction(newAct);
-    if (m_editActDlg->exec() == QDialog::Accepted) {
+    dlg.setAction(newAct);
+
+    if (dlg.exec() == QDialog::Accepted) {
         m_actionList.append(newAct);
 
         QTreeWidgetItem *item = new QTreeWidgetItem;
         updateActionItem(item, newAct);
-        m_ui.kcfg_ActionList->addTopLevelItem(item);
+        m_actionsTree->addTopLevelItem(item);
     }
 }
 
 void ActionsWidget::onEditAction()
 {
-    if (!m_editActDlg) {
-        m_editActDlg = new EditActionDialog(this);
+    QTreeWidgetItem *item = m_actionsTree->currentItem();
+    if (!item) {
+        return;
     }
 
-    QTreeWidgetItem *item = m_ui.kcfg_ActionList->currentItem();
     int commandIdx = -1;
-    if (item) {
-        if (item->parent()) {
-            commandIdx = item->parent()->indexOfChild(item);
-            item = item->parent(); // interested in toplevel action
-        }
+    if (item->parent()) {
+        commandIdx = item->parent()->indexOfChild(item);
+        item = item->parent(); // interested in toplevel action
+    }
 
-        int idx = m_ui.kcfg_ActionList->indexOfTopLevelItem(item);
-        ClipAction *action = m_actionList.at(idx);
+    int idx = m_actionsTree->indexOfTopLevelItem(item);
+    ClipAction *action = m_actionList.at(idx);
 
-        if (!action) {
-            qCDebug(KLIPPER_LOG) << "action is null";
-            return;
-        }
+    if (!action) {
+        qCDebug(KLIPPER_LOG) << "action is null";
+        return;
+    }
 
-        m_editActDlg->setAction(action, commandIdx);
-        // dialog will save values into action if user hits OK
-        m_editActDlg->exec();
-
+    EditActionDialog dlg(this);
+    dlg.setAction(action, commandIdx);
+    // dialog will save values into action if user hits OK
+    if (dlg.exec() == QDialog::Accepted) {
         updateActionItem(item, action);
     }
 }
 
 void ActionsWidget::onDeleteAction()
 {
-    QTreeWidgetItem *item = m_ui.kcfg_ActionList->currentItem();
-    if (item && item->parent())
-        item = item->parent();
-
-    if (item) {
-        int idx = m_ui.kcfg_ActionList->indexOfTopLevelItem(item);
-        m_actionList.removeAt(idx);
+    QTreeWidgetItem *item = m_actionsTree->currentItem();
+    if (!item) {
+        return;
     }
 
-    delete item;
+    // If the item has a parent, then it is a command (the second level
+    // of the tree).  Find the complete action.
+    if (item->parent()) {
+        item = item->parent();
+    }
+
+    if (KMessageBox::warningContinueCancel(this,
+                                           xi18nc("@info", "Delete the selected action <resource>%1</resource><nl/>and all of its commands?", item->text(1)),
+                                           i18n("Confirm Delete Action"),
+                                           KStandardGuiItem::del(),
+                                           KStandardGuiItem::cancel(),
+                                           QStringLiteral("deleteAction"),
+                                           KMessageBox::Dangerous)
+        == KMessageBox::Continue) {
+        int idx = m_actionsTree->indexOfTopLevelItem(item);
+        m_actionList.removeAt(idx);
+        delete item;
+    }
 }
 
 //////////////////////////
@@ -618,15 +683,15 @@ AdvancedWidget::AdvancedWidget(QWidget *parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
 
-    QLabel *hint = createHintLabel(xi18nc("@info",
-                                          "The action popup menu will not be shown automatically for these windows, \
+    QLabel *hint = ConfigDialog::createHintLabel(xi18nc("@info",
+                                                        "The action popup will not be shown automatically for these windows, \
 even if it is enabled. This is because, for example, a web browser may highlight a URL \
 in the address bar while typing, so the menu would show for every keystroke.\
 <nl/>\
 <nl/>\
 If the action menu appears unexpectedly when using a particular application, then add it to this list. \
 <link>How to find the name to enter</link>."),
-                                   this);
+                                                 this);
 
     mainLayout->addWidget(hint);
     connect(hint, &QLabel::linkActivated, this, [this, hint]() {

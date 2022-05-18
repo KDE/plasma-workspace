@@ -17,6 +17,7 @@ set(libklipper_common_SRCS
     historyurlitem.cpp
     actionstreewidget.cpp
     editactiondialog.cpp
+    editcommanddialog.cpp
     clipcommandprocess.cpp
     utils.cpp
 )
@@ -25,7 +26,6 @@ ecm_qt_declare_logging_category(libklipper_common_SRCS HEADER klipper_debug.h ID
 
 configure_file(config-klipper.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-klipper.h )
 
-ki18n_wrap_ui(libklipper_common_SRCS actionsconfig.ui editactiondialog.ui)
 kconfig_add_kcfg_files(libklipper_common_SRCS klippersettings.kcfgc)
 
 add_library(libklipper_common_static STATIC ${libklipper_common_SRCS})
@@ -48,6 +48,7 @@ target_link_libraries(libklipper_common_static
     KF5::WidgetsAddons
     KF5::XmlGui
     KF5::WaylandClient
+    KF5::IconThemes
     ${ZLIB_LIBRARY})
 if (X11_FOUND)
     target_link_libraries(libklipper_common_static XCB::XCB)

@@ -10,9 +10,8 @@
 
 #include "urlgrabber.h"
 
-#include "ui_actionsconfig.h"
-
 class KConfigSkeleton;
+class KConfigSkeletonItem;
 class KShortcutsEditor;
 class Klipper;
 class KEditListWidget;
@@ -21,6 +20,9 @@ class KPluralHandlingSpinBox;
 class EditActionDialog;
 class QCheckBox;
 class QRadioButton;
+class QTreeWidgetItem;
+class QLabel;
+class ActionsTreeWidget;
 
 class GeneralWidget : public QWidget
 {
@@ -106,11 +108,14 @@ private Q_SLOTS:
     void onDeleteAction();
 
 private:
-    void updateActionItem(QTreeWidgetItem *item, ClipAction *action);
+    void updateActionItem(QTreeWidgetItem *item, const ClipAction *action);
     void updateActionListView();
 
-    Ui::ActionsWidget m_ui;
-    EditActionDialog *m_editActDlg;
+private:
+    ActionsTreeWidget *m_actionsTree;
+    QPushButton *m_addActionButton;
+    QPushButton *m_editActionButton;
+    QPushButton *m_deleteActionButton;
 
     /**
      * List of actions this page works with
@@ -141,6 +146,10 @@ class ConfigDialog : public KConfigDialog
 public:
     ConfigDialog(QWidget *parent, KConfigSkeleton *config, Klipper *klipper, KActionCollection *collection);
     ~ConfigDialog() override = default;
+
+    static QLabel *createHintLabel(const QString &text, QWidget *parent);
+    static QLabel *createHintLabel(const KConfigSkeletonItem *item, QWidget *parent);
+    static QString manualShortcutString();
 
 protected slots:
     // reimp

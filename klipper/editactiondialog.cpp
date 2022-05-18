@@ -6,20 +6,27 @@
 
 #include "editactiondialog.h"
 
-#include "klipper_debug.h"
-#include <QComboBox>
 #include <QDialogButtonBox>
-#include <QIcon>
-#include <QItemDelegate>
+#include <qcheckbox.h>
+#include <qcoreapplication.h>
+#include <qformlayout.h>
+#include <qgridlayout.h>
+#include <qheaderview.h>
+#include <qlabel.h>
+#include <qlineedit.h>
+#include <qpushbutton.h>
+#include <qtableview.h>
+#include <qwindow.h>
 
-#include <KWindowConfig>
+#include <klocalizedstring.h>
+#include <kmessagebox.h>
 #include <kwindowconfig.h>
 
-#include "ui_editactiondialog.h"
-#include "urlgrabber.h"
+#include "klipper_debug.h"
 
-namespace
-{
+#include "configdialog.h"
+#include "editcommanddialog.h"
+
 static QString output2text(ClipCommand::Output output)
 {
     switch (output) {
@@ -33,54 +40,15 @@ static QString output2text(ClipCommand::Output output)
     return QString();
 }
 
-}
-
-/**
- * Show dropdown of editing Output part of commands
- */
-class ActionOutputDelegate : public QItemDelegate
-{
-public:
-    ActionOutputDelegate(QObject *parent = nullptr)
-        : QItemDelegate(parent)
-    {
-    }
-
-    QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem & /*option*/, const QModelIndex & /*index*/) const override
-    {
-        QComboBox *editor = new QComboBox(parent);
-        editor->setInsertPolicy(QComboBox::NoInsert);
-        editor->addItem(output2text(ClipCommand::IGNORE), QVariant::fromValue<ClipCommand::Output>(ClipCommand::IGNORE));
-        editor->addItem(output2text(ClipCommand::REPLACE), QVariant::fromValue<ClipCommand::Output>(ClipCommand::REPLACE));
-        editor->addItem(output2text(ClipCommand::ADD), QVariant::fromValue<ClipCommand::Output>(ClipCommand::ADD));
-        return editor;
-    }
-
-    void setEditorData(QWidget *editor, const QModelIndex &index) const override
-    {
-        QComboBox *ed = static_cast<QComboBox *>(editor);
-        QVariant data(index.model()->data(index, Qt::EditRole));
-        ed->setCurrentIndex(static_cast<int>(data.value<ClipCommand::Output>()));
-    }
-
-    void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const override
-    {
-        QComboBox *ed = static_cast<QComboBox *>(editor);
-        model->setData(index, ed->itemData(ed->currentIndex()));
-    }
-
-    void updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex & /*index*/) const override
-    {
-        editor->setGeometry(option.rect);
-    }
-};
+//////////////////////////
+//  ActionDetailModel	//
+//////////////////////////
 
 class ActionDetailModel : public QAbstractTableModel
 {
 public:
-    ActionDetailModel(ClipAction *action, QObject *parent = nullptr);
+    explicit ActionDetailModel(ClipAction *action, QObject *parent = nullptr);
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
-    bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override;
     Qt::ItemFlags flags(const QModelIndex &index) const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     int columnCount(const QModelIndex &parent) const override;
@@ -90,15 +58,14 @@ public:
         return m_commands;
     }
     void addCommand(const ClipCommand &command);
-    void removeCommand(const QModelIndex &index);
+    void removeCommand(const QModelIndex &idx);
+    void replaceCommand(const ClipCommand &command, const QModelIndex &idx);
 
 private:
     enum column_t { COMMAND_COL = 0, OUTPUT_COL = 1, DESCRIPTION_COL = 2 };
     QList<ClipCommand> m_commands;
     QVariant displayData(ClipCommand *command, column_t column) const;
-    QVariant editData(ClipCommand *command, column_t column) const;
     QVariant decorationData(ClipCommand *command, column_t column) const;
-    void setIconForCommand(ClipCommand &cmd);
 };
 
 ActionDetailModel::ActionDetailModel(ClipAction *action, QObject *parent)
@@ -109,46 +76,7 @@ ActionDetailModel::ActionDetailModel(ClipAction *action, QObject *parent)
 
 Qt::ItemFlags ActionDetailModel::flags(const QModelIndex & /*index*/) const
 {
-    return Qt::ItemIsEditable | Qt::ItemIsEnabled | Qt::ItemIsSelectable;
-}
-
-void ActionDetailModel::setIconForCommand(ClipCommand &cmd)
-{
-    // let's try to update icon of the item according to command
-    QString command = cmd.command;
-    if (command.contains(QLatin1Char(' '))) {
-        // get first word
-        command = command.section(QLatin1Char(' '), 0, 0);
-    }
-
-    if (QIcon::hasThemeIcon(command)) {
-        cmd.icon = command;
-    } else {
-        cmd.icon.clear();
-    }
-}
-
-bool ActionDetailModel::setData(const QModelIndex &index, const QVariant &value, int role)
-{
-    if (role == Qt::EditRole) {
-        ClipCommand cmd = m_commands.at(index.row());
-        switch (static_cast<column_t>(index.column())) {
-        case COMMAND_COL:
-            cmd.command = value.toString();
-            setIconForCommand(cmd);
-            break;
-        case OUTPUT_COL:
-            cmd.output = value.value<ClipCommand::Output>();
-            break;
-        case DESCRIPTION_COL:
-            cmd.description = value.toString();
-            break;
-        }
-        m_commands.replace(index.row(), cmd);
-        Q_EMIT dataChanged(index, index);
-        return true;
-    }
-    return false;
+    return Qt::ItemIsEnabled | Qt::ItemIsSelectable;
 }
 
 int ActionDetailModel::columnCount(const QModelIndex & /*parent*/) const
@@ -186,19 +114,6 @@ QVariant ActionDetailModel::decorationData(ClipCommand *command, ActionDetailMod
     return QVariant();
 }
 
-QVariant ActionDetailModel::editData(ClipCommand *command, ActionDetailModel::column_t column) const
-{
-    switch (column) {
-    case COMMAND_COL:
-        return command->command;
-    case OUTPUT_COL:
-        return QVariant::fromValue<ClipCommand::Output>(command->output);
-    case DESCRIPTION_COL:
-        return command->description;
-    }
-    return QVariant();
-}
-
 QVariant ActionDetailModel::headerData(int section, Qt::Orientation orientation, int role) const
 {
     if (orientation == Qt::Horizontal && role == Qt::DisplayRole) {
@@ -206,7 +121,7 @@ QVariant ActionDetailModel::headerData(int section, Qt::Orientation orientation,
         case COMMAND_COL:
             return i18n("Command");
         case OUTPUT_COL:
-            return i18n("Output Handling");
+            return i18n("Output");
         case DESCRIPTION_COL:
             return i18n("Description");
         }
@@ -224,8 +139,6 @@ QVariant ActionDetailModel::data(const QModelIndex &index, int role) const
         return displayData(&cmd, static_cast<column_t>(column));
     case Qt::DecorationRole:
         return decorationData(&cmd, static_cast<column_t>(column));
-    case Qt::EditRole:
-        return editData(&cmd, static_cast<column_t>(column));
     }
     return QVariant();
 }
@@ -237,13 +150,28 @@ void ActionDetailModel::addCommand(const ClipCommand &command)
     endInsertRows();
 }
 
-void ActionDetailModel::removeCommand(const QModelIndex &index)
+void ActionDetailModel::replaceCommand(const ClipCommand &command, const QModelIndex &idx)
 {
-    int row = index.row();
+    if (!idx.isValid())
+        return;
+    const int row = idx.row();
+    m_commands[row] = command;
+    emit dataChanged(index(row, static_cast<int>(COMMAND_COL)), index(row, static_cast<int>(DESCRIPTION_COL)));
+}
+
+void ActionDetailModel::removeCommand(const QModelIndex &idx)
+{
+    if (!idx.isValid())
+        return;
+    const int row = idx.row();
     beginRemoveRows(QModelIndex(), row, row);
     m_commands.removeAt(row);
     endRemoveRows();
 }
+
+//////////////////////////
+//  EditActionDialog	//
+//////////////////////////
 
 EditActionDialog::EditActionDialog(QWidget *parent)
     : QDialog(parent)
@@ -254,52 +182,131 @@ EditActionDialog::EditActionDialog(QWidget *parent)
     connect(buttons, &QDialogButtonBox::accepted, this, &EditActionDialog::slotAccepted);
     connect(buttons, &QDialogButtonBox::rejected, this, &QDialog::reject);
 
-    QWidget *dlgWidget = new QWidget(this);
-    m_ui = new Ui::EditActionDialog;
-    m_ui->setupUi(dlgWidget);
+    // Upper widget: pattern, description and options
+    QWidget *optionsWidget = new QWidget(this);
+    QFormLayout *optionsLayout = new QFormLayout(optionsWidget);
 
-    m_ui->leRegExp->setClearButtonEnabled(true);
-    m_ui->leDescription->setClearButtonEnabled(true);
+    // General information label
+    QLabel *hint = ConfigDialog::createHintLabel(xi18nc("@info",
+                                                        "An action takes effect when its \
+<interface>match pattern</interface> matches the clipboard contents. \
+When this happens, the action's <interface>commands</interface> appear \
+in the Klipper popup menu; if one of them is chosen, \
+the command is executed."),
+                                                 this);
+    optionsLayout->addRow(hint);
+    optionsLayout->addRow(QString(), new QLabel(optionsWidget));
 
-    m_ui->pbAddCommand->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
-    m_ui->pbRemoveCommand->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
+    // Pattern (regular expression)
+    m_regExpEdit = new QLineEdit(optionsWidget);
+    m_regExpEdit->setClearButtonEnabled(true);
+    m_regExpEdit->setPlaceholderText(i18n("Enter a pattern to match against the clipboard"));
 
-    // For some reason, the default row height is 30 pixel. Set it to the minimum sectionSize instead,
+    optionsLayout->addRow(i18n("Match pattern:"), m_regExpEdit);
+
+    hint = ConfigDialog::createHintLabel(xi18nc("@info",
+                                                "The match pattern is a regular expression. \
+For more information see the \
+<link url=\"https://en.wikipedia.org/wiki/Regular_expression\">Wikipedia entry</link> \
+for this topic."),
+                                         this);
+    hint->setOpenExternalLinks(true);
+    optionsLayout->addRow(QString(), hint);
+
+    // Description
+    m_descriptionEdit = new QLineEdit(optionsWidget);
+    m_descriptionEdit->setClearButtonEnabled(true);
+    m_descriptionEdit->setPlaceholderText(i18n("Enter a description for the action"));
+    optionsLayout->addRow(i18n("Description:"), m_descriptionEdit);
+
+    // Include in automatic popup
+    m_automaticCheck = new QCheckBox(i18n("Include in automatic popup"), optionsWidget);
+    optionsLayout->addRow(QString(), m_automaticCheck);
+
+    hint = ConfigDialog::createHintLabel(xi18nc("@info",
+                                                "The commands \
+for this match will be included in the automatic action popup, if it is enabled in \
+the <interface>Action Menu</interface> page. If this option is turned off, the commands for \
+this match will not be included in the automatic popup but they will be included if the \
+popup is activated manually with the <shortcut>%1</shortcut> key shortcut.",
+                                                ConfigDialog::manualShortcutString()),
+                                         this);
+    optionsLayout->addRow(QString(), hint);
+
+    optionsLayout->addRow(QString(), new QLabel(optionsWidget));
+
+    // Lower widget: command list and action buttons
+    QWidget *listWidget = new QWidget(this);
+    QGridLayout *listLayout = new QGridLayout(listWidget);
+    listLayout->setContentsMargins(0, 0, 0, 0);
+
+    // Command list
+    m_commandList = new QTableView(listWidget);
+    m_commandList->setAlternatingRowColors(true);
+    m_commandList->setSelectionMode(QAbstractItemView::SingleSelection);
+    m_commandList->setSelectionBehavior(QAbstractItemView::SelectRows);
+    m_commandList->setShowGrid(false);
+    m_commandList->setWordWrap(false);
+    m_commandList->horizontalHeader()->setStretchLastSection(true);
+    m_commandList->horizontalHeader()->setDefaultAlignment(Qt::AlignLeft);
+    m_commandList->verticalHeader()->setVisible(false);
+    // For some reason, the default row height is 30 pixels.
+    // Set it to the minimumSectionSize instead,
     // which is the font height+struts.
-    m_ui->twCommandList->verticalHeader()->setDefaultSectionSize(m_ui->twCommandList->verticalHeader()->minimumSectionSize());
-    m_ui->twCommandList->horizontalHeader()->setDefaultAlignment(Qt::AlignLeft);
+    m_commandList->verticalHeader()->setDefaultSectionSize(m_commandList->verticalHeader()->minimumSectionSize());
 
-    QVBoxLayout *layout = new QVBoxLayout(this);
-    layout->addWidget(dlgWidget);
-    layout->addWidget(buttons);
+    listLayout->addWidget(m_commandList, 0, 0, 1, -1);
+    listLayout->setRowStretch(0, 1);
 
-    connect(m_ui->pbAddCommand, &QPushButton::clicked, this, &EditActionDialog::onAddCommand);
-    connect(m_ui->pbRemoveCommand, &QPushButton::clicked, this, &EditActionDialog::onRemoveCommand);
+    // "Add" button
+    m_addCommandPb = new QPushButton(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add Command..."), listWidget);
+    connect(m_addCommandPb, &QPushButton::clicked, this, &EditActionDialog::onAddCommand);
+    listLayout->addWidget(m_addCommandPb, 1, 0);
 
-    const KConfigGroup grp = KSharedConfig::openConfig()->group("EditActionDialog");
+    // "Edit" button
+    m_editCommandPb = new QPushButton(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Edit Command..."), this);
+    connect(m_editCommandPb, &QPushButton::clicked, this, &EditActionDialog::onEditCommand);
+    listLayout->addWidget(m_editCommandPb, 1, 1);
+    listLayout->setColumnStretch(2, 1);
+
+    // "Delete" button
+    m_removeCommandPb = new QPushButton(QIcon::fromTheme(QStringLiteral("list-remove")), i18n("Delete Command"), this);
+    connect(m_removeCommandPb, &QPushButton::clicked, this, &EditActionDialog::onRemoveCommand);
+    listLayout->addWidget(m_removeCommandPb, 1, 3);
+
+    // Add some vertical space between our buttons and the dialogue buttons
+    listLayout->setRowMinimumHeight(2, 16);
+
+    // Main dialogue layout
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    mainLayout->addWidget(optionsWidget);
+    mainLayout->addWidget(listWidget);
+    mainLayout->setStretch(1, 1);
+    mainLayout->addWidget(buttons);
+
+    (void)winId();
+    windowHandle()->resize(540, 560); // default, if there is no saved size
+    const KConfigGroup grp = KSharedConfig::openConfig()->group(metaObject()->className());
     KWindowConfig::restoreWindowSize(windowHandle(), grp);
+    resize(windowHandle()->size());
+
     QByteArray hdrState = grp.readEntry("ColumnState", QByteArray());
     if (!hdrState.isEmpty()) {
         qCDebug(KLIPPER_LOG) << "Restoring column state";
-        m_ui->twCommandList->horizontalHeader()->restoreState(QByteArray::fromBase64(hdrState));
+        m_commandList->horizontalHeader()->restoreState(QByteArray::fromBase64(hdrState));
     }
     // do this after restoreState()
-    m_ui->twCommandList->horizontalHeader()->setHighlightSections(false);
+    m_commandList->horizontalHeader()->setHighlightSections(false);
 }
 
-EditActionDialog::~EditActionDialog()
-{
-    delete m_ui;
-}
 
 void EditActionDialog::setAction(ClipAction *act, int commandIdxToSelect)
 {
     m_action = act;
     m_model = new ActionDetailModel(act, this);
-    m_ui->twCommandList->setModel(m_model);
-    m_ui->twCommandList->setItemDelegateForColumn(1, new ActionOutputDelegate);
-    connect(m_ui->twCommandList->selectionModel(), &QItemSelectionModel::selectionChanged, this, &EditActionDialog::onSelectionChanged);
-
+    m_commandList->setModel(m_model);
+    connect(m_commandList->selectionModel(), &QItemSelectionModel::selectionChanged, this, &EditActionDialog::onSelectionChanged);
+    connect(m_commandList, &QAbstractItemView::doubleClicked, this, &EditActionDialog::onEditCommand);
     updateWidgets(commandIdxToSelect);
 }
 
@@ -310,16 +317,15 @@ void EditActionDialog::updateWidgets(int commandIdxToSelect)
         return;
     }
 
-    m_ui->leRegExp->setText(m_action->actionRegexPattern());
-    m_ui->automatic->setChecked(m_action->automatic());
-    m_ui->leDescription->setText(m_action->description());
+    m_regExpEdit->setText(m_action->actionRegexPattern());
+    m_descriptionEdit->setText(m_action->description());
+    m_automaticCheck->setChecked(m_action->automatic());
 
     if (commandIdxToSelect != -1) {
-        m_ui->twCommandList->setCurrentIndex(m_model->index(commandIdxToSelect, 0));
+        m_commandList->setCurrentIndex(m_model->index(commandIdxToSelect, 0));
     }
 
-    // update Remove button
-    onSelectionChanged();
+    onSelectionChanged(); // update Remove/Edit buttons
 }
 
 void EditActionDialog::saveAction()
@@ -329,9 +335,9 @@ void EditActionDialog::saveAction()
         return;
     }
 
-    m_action->setActionRegexPattern(m_ui->leRegExp->text());
-    m_action->setDescription(m_ui->leDescription->text());
-    m_action->setAutomatic(m_ui->automatic->isChecked());
+    m_action->setActionRegexPattern(m_regExpEdit->text());
+    m_action->setDescription(m_descriptionEdit->text());
+    m_action->setAutomatic(m_automaticCheck->isChecked());
 
     m_action->clearCommands();
 
@@ -345,24 +351,55 @@ void EditActionDialog::slotAccepted()
     saveAction();
 
     qCDebug(KLIPPER_LOG) << "Saving dialogue state";
-    KConfigGroup grp = KSharedConfig::openConfig()->group("EditActionDialog");
+    KConfigGroup grp = KSharedConfig::openConfig()->group(metaObject()->className());
     KWindowConfig::saveWindowSize(windowHandle(), grp);
-    grp.writeEntry("ColumnState", m_ui->twCommandList->horizontalHeader()->saveState().toBase64());
+    grp.writeEntry("ColumnState", m_commandList->horizontalHeader()->saveState().toBase64());
     accept();
 }
 
 void EditActionDialog::onAddCommand()
 {
-    m_model->addCommand(ClipCommand(i18n("new command"), i18n("Command Description"), true, QLatin1String("")));
-    m_ui->twCommandList->edit(m_model->index(m_model->rowCount() - 1, 0));
+    ClipCommand command(QString(), QString(), true, QLatin1String(""));
+    EditCommandDialog dlg(command, this);
+    if (dlg.exec() != QDialog::Accepted)
+        return;
+    m_model->addCommand(dlg.command());
+}
+
+void EditActionDialog::onEditCommand()
+{
+    QPersistentModelIndex commandIndex(m_commandList->selectionModel()->currentIndex());
+    if (!commandIndex.isValid())
+        return;
+
+    EditCommandDialog dlg(m_model->commands().at(commandIndex.row()), this);
+    if (dlg.exec() != QDialog::Accepted)
+        return;
+    m_model->replaceCommand(dlg.command(), commandIndex);
 }
 
 void EditActionDialog::onRemoveCommand()
 {
-    m_model->removeCommand(m_ui->twCommandList->selectionModel()->currentIndex());
+    QPersistentModelIndex commandIndex(m_commandList->selectionModel()->currentIndex());
+    if (!commandIndex.isValid())
+        return;
+
+    if (KMessageBox::warningContinueCancel(
+            this,
+            xi18nc("@info", "Delete the selected command <resource>%1</resource>?", m_model->commands().at(commandIndex.row()).description),
+            i18n("Confirm Delete Command"),
+            KStandardGuiItem::del(),
+            KStandardGuiItem::cancel(),
+            QStringLiteral("deleteCommand"),
+            KMessageBox::Dangerous)
+        == KMessageBox::Continue) {
+        m_model->removeCommand(commandIndex);
+    }
 }
 
 void EditActionDialog::onSelectionChanged()
 {
-    m_ui->pbRemoveCommand->setEnabled(m_ui->twCommandList->selectionModel() && m_ui->twCommandList->selectionModel()->hasSelection());
+    const bool itemIsSelected = (m_commandList->selectionModel() && m_commandList->selectionModel()->hasSelection());
+    m_removeCommandPb->setEnabled(itemIsSelected);
+    m_editCommandPb->setEnabled(itemIsSelected);
 }
