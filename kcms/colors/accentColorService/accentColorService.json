@@ -17,6 +17,7 @@
         "Description[sk]": "Aplikuje extrahovanú farbu akcentu z tapety na požiadavku dbus",
         "Description[sl]": "Uveljavi izločeno barva poudarka iz ozadja na zahtevo dbusa",
         "Description[sv]": "Använder extraherad accentfärg från skrivbordsunderlägg på begäran från D-bus",
+        "Description[ta]": "dbus மூலம் வரும் கோரிக்கைக்கேற்ப, பின்புல படித்தின் பிரதான நிறத்தை நிறத்திட்டத்தின் சிறப்பு நிறமாக அமைக்கும்",
         "Description[tr]": "dbus isteğinde, duvar kağıdından çıkarılan vurgu rengini uygular",
         "Description[uk]": "Застосовує видобутий з фонового зображення стільниці колір акценту у відповідь на запит DBus",
         "Description[vi]": "Áp dung màu chủ đạo trích xuất từ phông nền khi có yêu cầu dbus",
