@@ -74,7 +74,6 @@ QQC2.StackView {
         Qt.callLater(loadImage);
         wallpaper.configuration.Image = modelImage;
     }
-    onConfigColorChanged: Qt.callLater(loadImage);
     onBlurChanged: Qt.callLater(loadImage);
     onWidthChanged: Qt.callLater(loadImage);
     onHeightChanged: Qt.callLater(loadImage);
@@ -84,7 +83,6 @@ QQC2.StackView {
         var pendingImage = baseImage.createObject(root, { "source": root.modelImage,
                         "fillMode": root.fillMode,
                         "sourceSize": root.sourceSize,
-                        "color": root.configColor,
                         "blur": root.blur,
                         "opacity": isFirst ? 1: 0});
 
@@ -107,7 +105,6 @@ QQC2.StackView {
         Image {
             id: mainImage
 
-            property alias color: backgroundColor.color
             property bool blur: false
 
             asynchronous: true
@@ -116,13 +113,6 @@ QQC2.StackView {
             z: -1
 
             QQC2.StackView.onRemoved: destroy()
-
-            Rectangle {
-                id: backgroundColor
-                anchors.fill: parent
-                visible: mainImage.status === Image.Ready && !blurLoader.active
-                z: -2
-            }
 
             Loader {
                 id: blurLoader
@@ -169,4 +159,16 @@ QQC2.StackView {
             duration: wallpaper.configuration.TransitionAnimationDuration
         }
     }
+    Rectangle {
+        id: backgroundColor
+        anchors.fill: parent
+        visible: true
+        color: root.configColor
+        z: -2
+        ColorAnimation on color {
+                duration: wallpaper.configuration.TransitionAnimationDuration
+        }
+    }
+
+
 }
