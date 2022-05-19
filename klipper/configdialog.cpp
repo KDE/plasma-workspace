@@ -373,7 +373,7 @@ ActionsWidget::ActionsWidget(QWidget *parent)
 
     // General information label
     QLabel *hint = ConfigDialog::createHintLabel(xi18nc("@info",
-                                                        "Whan a <interface>match pattern</interface> \
+                                                        "When a <interface>match pattern</interface> \
 matches the clipboard contents, its <interface>commands</interface> \
 appear in the Klipper popup menu and can be executed."),
                                                  this);
