@@ -77,10 +77,11 @@ void ScreenPool::load()
     // Populate all the screens based on what's connected at startup
     for (QScreen *screen : qGuiApp->screens()) {
         // On some devices QGuiApp::screenAdded is always emitted for some screens at startup so at this point that screen would already be managed
+        const QString name = screenName(screen);
         if (!m_allSortedScreens.contains(screen)) {
             handleScreenAdded(screen);
-        } else if (!m_idForConnector.contains(screen->name())) {
-            insertScreenMapping(firstAvailableId(), screen->name());
+        } else if (!m_idForConnector.contains(name)) {
+            insertScreenMapping(firstAvailableId(), name);
         }
     }
     CHECK_SCREEN_INVARIANTS
@@ -196,7 +197,7 @@ QScreen *ScreenPool::screenForId(int id) const
     // TODO: do QScreen bookeeping completely in screenpool, cache also available QScreens
     const QString name = m_connectorForId.value(id);
     for (QScreen *screen : m_availableScreens) {
-        if (screen->name() == name) {
+        if (screenName(screen) == name) {
             return screen;
         }
     }
@@ -206,7 +207,7 @@ QScreen *ScreenPool::screenForId(int id) const
 QScreen *ScreenPool::screenForConnector(const QString &connector)
 {
     for (QScreen *screen : m_availableScreens) {
-        if (screen->name() == connector) {
+        if (screenName(screen) == connector) {
             return screen;
         }
     }
@@ -242,7 +243,7 @@ QScreen *ScreenPool::outputRedundantTo(QScreen *screen) const
     }
     const QRect thisGeometry = screen->geometry();
 
-    const int thisId = id(screen->name());
+    const int thisId = id(screenName(screen));
 
     // FIXME: QScreen doesn't have any idea of "this qscreen is clone of this other one
     // so this ultra inefficient heuristic has to stay until we have a slightly better api
@@ -300,8 +301,9 @@ void ScreenPool::reconsiderOutputs()
                 } else {
                     m_fakeScreens.remove(screen);
                     m_availableScreens.append(screen);
-                    if (!m_idForConnector.contains(screen->name())) {
-                        insertScreenMapping(firstAvailableId(), screen->name());
+                    const QString name = screenName(screen);
+                    if (!m_idForConnector.contains(name)) {
+                        insertScreenMapping(firstAvailableId(), name);
                     }
                     Q_EMIT screenAdded(screen);
                     QScreen *newPrimaryScreen = primaryScreen();
@@ -317,8 +319,9 @@ void ScreenPool::reconsiderOutputs()
 
             m_fakeScreens.remove(screen);
             m_redundantScreens.insert(screen, toScreen);
-            if (!m_idForConnector.contains(screen->name())) {
-                insertScreenMapping(firstAvailableId(), screen->name());
+            const QString name = screenName(screen);
+            if (!m_idForConnector.contains(name)) {
+                insertScreenMapping(firstAvailableId(), name);
             }
             if (m_availableScreens.contains(screen)) {
                 QScreen *newPrimaryScreen = primaryScreen();
@@ -349,8 +352,9 @@ void ScreenPool::reconsiderOutputs()
             Q_ASSERT(!m_availableScreens.contains(screen));
             m_fakeScreens.remove(screen);
             m_availableScreens.append(screen);
-            if (!m_idForConnector.contains(screen->name())) {
-                insertScreenMapping(firstAvailableId(), screen->name());
+            const QString name = screenName(screen);
+            if (!m_idForConnector.contains(name)) {
+                insertScreenMapping(firstAvailableId(), name);
             }
             Q_EMIT screenAdded(screen);
             QScreen *newPrimaryScreen = primaryScreen();
@@ -377,7 +381,7 @@ void ScreenPool::insertSortedScreen(QScreen *screen)
     }
     auto before = std::find_if(m_allSortedScreens.begin(), m_allSortedScreens.end(), [this, screen](QScreen *otherScreen) {
         return (screen->geometry().width() > otherScreen->geometry().width() && screen->geometry().height() > otherScreen->geometry().height())
-            || id(screen->name()) < id(otherScreen->name());
+            || id(screenName(screen)) < id(screenName(otherScreen));
     });
     m_allSortedScreens.insert(before, screen);
 }
@@ -397,11 +401,12 @@ void ScreenPool::handleScreenAdded(QScreen *screen)
         Qt::UniqueConnection);
     insertSortedScreen(screen);
 
+    const QString name = screenName(screen);
     if (isOutputFake(screen)) {
         m_fakeScreens.insert(screen);
         return;
-    } else if (!m_idForConnector.contains(screen->name())) {
-        insertScreenMapping(firstAvailableId(), screen->name());
+    } else if (!m_idForConnector.contains(name)) {
+        insertScreenMapping(firstAvailableId(), name);
     }
 
     if (QScreen *toScreen = outputRedundantTo(screen)) {
@@ -500,6 +505,22 @@ void ScreenPool::handlePrimaryOutputNameChanged(const QString &oldOutputName, co
     }
 }
 
+QString ScreenPool::screenName(QScreen *screen) const
+{
+    QString ret = screen->name();
+    if (ret.startsWith(QStringLiteral("HDMI-A-"))) {
+        ret.replace(0, 7, "HDMI-");
+    } else if (ret.startsWith(QStringLiteral("DP-"))) {
+        auto parts = ret.split('-');
+        if (parts.size() != 2) {
+            return ret;
+        }
+        ret.replace(0, 3, "DisplayPort-");
+    }
+
+    return ret;
+}
+
 void ScreenPool::screenInvariants()
 {
     // Is the primary connector in sync with the actual primaryScreen? The only way it can get out of sync with primaryConnector() is the single fake screen/no
@@ -534,9 +555,10 @@ void ScreenPool::screenInvariants()
                 Q_ASSERT(false);
             }
             // Is every screen mapped to an id?
-            Q_ASSERT(m_idForConnector.contains(screen->name()));
+            const QString name = screenName(screen);
+            Q_ASSERT(m_idForConnector.contains(name));
             // Are the two maps symmetrical?
-            Q_ASSERT(connector(id(screen->name())) == screen->name());
+            Q_ASSERT(connector(id(name)) == name);
         }
     }
     for (QScreen *screen : m_redundantScreens.keys()) {
