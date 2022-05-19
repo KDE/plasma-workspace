@@ -117,7 +117,7 @@ void ScreencastingRequest::create(Screencasting *screencasting)
         }
     });
     connect(stream, &ScreencastingStream::failed, this, [](const QString &error) {
-        qCWarning(PIPEWIRE_LOGGING) << "error creating screencast" << error;
+        qCWarning(TMQML_LOGGING) << "error creating screencast" << error;
     });
     connect(stream, &ScreencastingStream::closed, this, [this, stream] {
         if (stream->nodeId() == m_nodeId) {
