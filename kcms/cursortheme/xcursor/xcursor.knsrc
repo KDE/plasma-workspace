@@ -45,7 +45,7 @@ Name[x-test]=xxCursorsxx
 Name[zh_CN]=光标
 
 Categories=X11 Mouse Theme
-TargetDir=icons
+InstallPath=.icons
 Uncompress=always
 RemoveDeadEntries=true
 AdoptionCommand=plasma-apply-cursortheme %f
