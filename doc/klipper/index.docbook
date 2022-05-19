@@ -372,7 +372,13 @@ your clipboard contents are <filename>/home/phil/textfile</filename>,
 the command <userinput><command>kwrite</command>
 <filename>/home/phil/textfile</filename></userinput> will be run. To
 include <token>%s</token> in the command line, escape it with a
-backslash, as so: <userinput>\%s</userinput>.</para></listitem>
+backslash, as so: <userinput>\%s</userinput>.</para>
+
+<para>Entries <userinput><token>%0</token></userinput> through
+<userinput><token>%9</token></userinput> will be replaced by the corresponding captured
+texts from the match pattern.
+</para>
+</listitem>
 </varlistentry>
 </variablelist>
 
