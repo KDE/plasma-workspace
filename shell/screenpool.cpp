@@ -53,7 +53,7 @@ void ScreenPool::load()
     m_idForConnector.clear();
 
     if (primary) {
-        m_primaryConnector = primary->name();
+        m_primaryConnector = screenName(primary);
         if (!m_primaryConnector.isEmpty()) {
             m_connectorForId[0] = m_primaryConnector;
             m_idForConnector[m_primaryConnector] = 0;
@@ -71,6 +71,16 @@ void ScreenPool::load()
             m_idForConnector[connector] = currentId;
         } else if (m_idForConnector.value(connector) != currentId) {
             m_configGroup.deleteEntry(key);
+        }
+    }
+
+    // Migrate the connector name change
+    for (auto it = m_connectorForId.begin(); it != m_connectorForId.end(); ++it) {
+        const auto actualConnector = screenNameHeuristics(it.value());
+        if (actualConnector != it.value() && !m_idForConnector.contains(actualConnector)) {
+            m_idForConnector[actualConnector] = it.key();
+            m_idForConnector.remove(it.value());
+            m_connectorForId.erase(it);
         }
     }
 
@@ -143,7 +153,7 @@ void ScreenPool::insertScreenMapping(int id, const QString &connector)
 
 int ScreenPool::id(const QString &connector) const
 {
-    return m_idForConnector.value(connector, -1);
+    return m_idForConnector.value(screenNameHeuristics(connector), -1);
 }
 
 QString ScreenPool::connector(int id) const
@@ -264,7 +274,7 @@ QScreen *ScreenPool::outputRedundantTo(QScreen *screen) const
             continue;
         }
 
-        const int otherId = id(s->name());
+        const int otherId = id(screenName(s));
 
         if (otherGeometry.contains(thisGeometry, false)
             && ( // since at this point contains is true, if either
@@ -309,7 +319,7 @@ void ScreenPool::reconsiderOutputs()
                     QScreen *newPrimaryScreen = primaryScreen();
                     if (newPrimaryScreen != oldPrimaryScreen) {
                         // Primary screen was redundant, not anymore
-                        setPrimaryConnector(newPrimaryScreen->name());
+                        setPrimaryConnector(screenName(newPrimaryScreen));
                         Q_EMIT primaryScreenChanged(oldPrimaryScreen, newPrimaryScreen);
                     }
                 }
@@ -327,7 +337,7 @@ void ScreenPool::reconsiderOutputs()
                 QScreen *newPrimaryScreen = primaryScreen();
                 if (newPrimaryScreen != oldPrimaryScreen) {
                     // Primary screen became redundant
-                    setPrimaryConnector(newPrimaryScreen->name());
+                    setPrimaryConnector(screenName(newPrimaryScreen));
                     Q_EMIT primaryScreenChanged(oldPrimaryScreen, newPrimaryScreen);
                 }
                 m_availableScreens.removeAll(screen);
@@ -342,7 +352,7 @@ void ScreenPool::reconsiderOutputs()
                 QScreen *newPrimaryScreen = primaryScreen();
                 if (newPrimaryScreen != oldPrimaryScreen) {
                     // Primary screen became fake
-                    setPrimaryConnector(newPrimaryScreen->name());
+                    setPrimaryConnector(screenName(newPrimaryScreen));
                     Q_EMIT primaryScreenChanged(oldPrimaryScreen, newPrimaryScreen);
                 }
                 m_availableScreens.removeAll(screen);
@@ -360,7 +370,7 @@ void ScreenPool::reconsiderOutputs()
             QScreen *newPrimaryScreen = primaryScreen();
             if (newPrimaryScreen != oldPrimaryScreen) {
                 // Primary screen was redundant, not anymore
-                setPrimaryConnector(newPrimaryScreen->name());
+                setPrimaryConnector(screenName(newPrimaryScreen));
                 Q_EMIT primaryScreenChanged(oldPrimaryScreen, newPrimaryScreen);
             }
         } else {
@@ -466,12 +476,13 @@ void ScreenPool::handlePrimaryOutputNameChanged(const QString &oldOutputName, co
 
     QScreen *oldPrimary = screenForConnector(oldOutputName);
     QScreen *newPrimary = m_primaryWatcher->primaryScreen();
-    // First check if the data arrived is correct, then set the new primary considering redundant ones
-    Q_ASSERT(newPrimary && newPrimary->name() == newOutputName);
+
+    // First check if the data arrived is correct, then set the new peimary considering redundants ones
+    Q_ASSERT(newPrimary && screenName(newPrimary) == newOutputName);
     newPrimary = primaryScreen();
 
     // This happens when a screen that was primary because the real primary was redundant becomes the real primary
-    if (m_primaryConnector == newPrimary->name()) {
+    if (m_primaryConnector == screenName(newPrimary)) {
         return;
     }
 
@@ -505,9 +516,9 @@ void ScreenPool::handlePrimaryOutputNameChanged(const QString &oldOutputName, co
     }
 }
 
-QString ScreenPool::screenName(QScreen *screen) const
+QString ScreenPool::screenNameHeuristics(const QString &name) const
 {
-    QString ret = screen->name();
+    QString ret = name;
     if (ret.startsWith(QStringLiteral("HDMI-A-"))) {
         ret.replace(0, 7, "HDMI-");
     } else if (ret.startsWith(QStringLiteral("DP-"))) {
@@ -521,11 +532,16 @@ QString ScreenPool::screenName(QScreen *screen) const
     return ret;
 }
 
+QString ScreenPool::screenName(QScreen *screen) const
+{
+    return screenNameHeuristics(screen->name());
+}
+
 void ScreenPool::screenInvariants()
 {
     // Is the primary connector in sync with the actual primaryScreen? The only way it can get out of sync with primaryConnector() is the single fake screen/no
     // real outputs scenario
-    Q_ASSERT(noRealOutputsConnected() || primaryScreen()->name() == primaryConnector());
+    Q_ASSERT(noRealOutputsConnected() || screenName(primaryScreen()) == primaryConnector());
     // Is the primary screen available? TODO: it can be redundant
     // Q_ASSERT(m_availableScreens.contains(primaryScreen()));
 
