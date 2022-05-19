@@ -474,11 +474,15 @@ void ScreenPool::handlePrimaryOutputNameChanged(const QString &oldOutputName, co
     // immediately
     m_reconsiderOutputsTimer.start();
 
-    QScreen *oldPrimary = screenForConnector(oldOutputName);
+    const QString actualOldOutputName = screenNameHeuristics(oldOutputName);
+    const QString actualNewOutputName = screenNameHeuristics(newOutputName);
+
+    QScreen *oldPrimary = screenForConnector(actualOldOutputName);
     QScreen *newPrimary = m_primaryWatcher->primaryScreen();
 
     // First check if the data arrived is correct, then set the new peimary considering redundants ones
-    Q_ASSERT(newPrimary && screenName(newPrimary) == newOutputName);
+    Q_ASSERT(newPrimary && screenName(newPrimary) == actualNewOutputName);
+
     newPrimary = primaryScreen();
 
     // This happens when a screen that was primary because the real primary was redundant becomes the real primary
@@ -499,8 +503,8 @@ void ScreenPool::handlePrimaryOutputNameChanged(const QString &oldOutputName, co
         handleScreenRemoved(newPrimary);
         return;
         // On X11, the output named :0.0 is fake
-    } else if (oldOutputName == ":0.0" || oldOutputName.isEmpty()) {
-        setPrimaryConnector(newOutputName);
+    } else if (actualOldOutputName == ":0.0" || actualOldOutputName.isEmpty()) {
+        setPrimaryConnector(actualNewOutputName);
         // NOTE: when we go from 0 to 1 screen connected, screens can be renamed in those two followinf cases
         // * last output connected/disconnected -> we go between the fake screen and the single output, renamed
         // * external screen connected to a closed lid laptop, disconnecting the qscreen instance will be recycled from external output to internal
@@ -511,7 +515,7 @@ void ScreenPool::handlePrimaryOutputNameChanged(const QString &oldOutputName, co
     } else {
         Q_ASSERT(newPrimary);
         qCDebug(SCREENPOOL) << "PRIMARY CHANGED" << oldPrimary << "-->" << newPrimary;
-        setPrimaryConnector(newOutputName);
+        setPrimaryConnector(actualNewOutputName);
         Q_EMIT primaryScreenChanged(oldPrimary, newPrimary);
     }
 }
