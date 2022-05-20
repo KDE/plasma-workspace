@@ -146,6 +146,7 @@ KCM.GridViewKCM {
 
                 onToggled: {
                     if (checked) {
+                        kcm.accentColorFromWallpaper = false;
                         kcm.accentColor = "transparent"
                     }
                 }
@@ -171,6 +172,7 @@ KCM.GridViewKCM {
 
                     onToggled: {
                         if (checked) {
+                            kcm.accentColorFromWallpaper = false;
                             kcm.accentColor = colorRepeater.model[0]
                         }
                     }
@@ -237,9 +239,10 @@ KCM.GridViewKCM {
                             checked: Qt.colorEqual(kcm.accentColor, modelData)
 
                             onToggled: {
+                                kcm.accentColorFromWallpaper = false;
                                 kcm.accentColor = modelData
                                 checked = Qt.binding(() => Qt.colorEqual(kcm.accentColor, modelData));
-                                }
+                            }
                         }
                     }
 

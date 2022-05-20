@@ -72,6 +72,7 @@ KCMColors::KCMColors(QObject *parent, const KPluginMetaData &data, const QVarian
     });
 
     connect(colorsSettings(), &ColorsSettings::accentColorChanged, this, &KCMColors::accentColorChanged);
+    connect(colorsSettings(), &ColorsSettings::accentColorFromWallpaperChanged, this, &KCMColors::accentColorFromWallpaperChanged);
 
     connect(m_model, &ColorsModel::selectedSchemeChanged, m_filteredModel, &FilterProxyModel::setSelectedScheme);
     m_filteredModel->setSourceModel(m_model);
