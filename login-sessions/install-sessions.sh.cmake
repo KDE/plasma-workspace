@@ -11,7 +11,7 @@ if [ "$(id -u)" != "0" ]; then
   kdialog --yesnocancel 'This will mangle your system dbus files! You also need to run this after each install to update your dbus data files and after distribution upgrades. Do not forget!'
   install @CMAKE_BINARY_DIR@/prefix.sh @CMAKE_INSTALL_FULL_LIBEXECDIR@/plasma-dev-prefix.sh
   install @CMAKE_CURRENT_BINARY_DIR@/startplasma-dev.sh @CMAKE_INSTALL_FULL_LIBEXECDIR@
-  pkexec ./$0
+  exec pkexec ./$0
 fi
 
 # Clean up legacy stuff. Previously this script would try to massage things into shape through configs
