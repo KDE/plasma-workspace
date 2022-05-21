@@ -245,7 +245,7 @@ PinchArea { // TODO KF6 switch to Item
             spacing: 0
             PlasmaExtras.Heading {
                 id: heading
-                text: swipeView.currentIndex > 0 || root.selectedYear !== today.getFullYear() ? i18ndc("libplasma5", "Format: month year", "%1 %2", root.selectedMonth, root.selectedYear.toString()) : root.selectedMonth
+                text: swipeView.currentIndex > 0 || root.selectedYear !== today.getFullYear() ? i18ndc("plasmashellprivateplugin", "Format: month year", "%1 %2", root.selectedMonth, root.selectedYear.toString()) : root.selectedMonth
                 level: 2
                 elide: Text.ElideRight
                 font.capitalization: Font.Capitalize
@@ -256,11 +256,11 @@ PinchArea { // TODO KF6 switch to Item
                 property string tooltip: {
                     switch(root.calendarViewDisplayed) {
                         case MonthView.CalendarView.DayView:
-                            return i18nd("libplasma5", "Previous Month")
+                            return i18nd("plasmashellprivateplugin", "Previous Month")
                         case MonthView.CalendarView.MonthView:
-                            return i18nd("libplasma5", "Previous Year")
+                            return i18nd("plasmashellprivateplugin", "Previous Year")
                         case MonthView.CalendarView.YearView:
-                            return i18nd("libplasma5", "Previous Decade")
+                            return i18nd("plasmashellprivateplugin", "Previous Decade")
                         default:
                             return "";
                     }
@@ -273,8 +273,8 @@ PinchArea { // TODO KF6 switch to Item
             }
 
             PlasmaComponents3.ToolButton {
-                text: i18ndc("libplasma5", "Reset calendar to today", "Today")
-                Accessible.description: i18nd("libplasma5", "Reset calendar to today")
+                text: i18ndc("plasmashellprivateplugin", "Reset calendar to today", "Today")
+                Accessible.description: i18nd("plasmashellprivateplugin", "Reset calendar to today")
                 onClicked: root.resetToToday()
             }
 
@@ -283,11 +283,11 @@ PinchArea { // TODO KF6 switch to Item
                 property string tooltip: {
                     switch(root.calendarViewDisplayed) {
                         case MonthView.CalendarView.DayView:
-                            return i18nd("libplasma5", "Next Month")
+                            return i18nd("plasmashellprivateplugin", "Next Month")
                         case MonthView.CalendarView.MonthView:
-                            return i18nd("libplasma5", "Next Year")
+                            return i18nd("plasmashellprivateplugin", "Next Year")
                         case MonthView.CalendarView.YearView:
-                            return i18nd("libplasma5", "Next Decade")
+                            return i18nd("plasmashellprivateplugin", "Next Decade")
                         default:
                             return "";
                     }
@@ -307,17 +307,17 @@ PinchArea { // TODO KF6 switch to Item
             Layout.bottomMargin: PlasmaCore.Units.smallSpacing
 
             PlasmaComponents3.TabButton {
-                text: i18nd("libplasma5", "Days");
+                text: i18nd("plasmashellprivateplugin", "Days");
                 onClicked: root.showMonthView();
                 display: PlasmaComponents3.AbstractButton.TextOnly
             }
             PlasmaComponents3.TabButton {
-                text: i18nd("libplasma5", "Months");
+                text: i18nd("plasmashellprivateplugin", "Months");
                 onClicked: root.showYearView();
                 display: PlasmaComponents3.AbstractButton.TextOnly
             }
             PlasmaComponents3.TabButton {
-                text: i18nd("libplasma5", "Years");
+                text: i18nd("plasmashellprivateplugin", "Years");
                 onClicked: root.showDecadeView();
                 display: PlasmaComponents3.AbstractButton.TextOnly
             }
