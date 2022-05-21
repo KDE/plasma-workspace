@@ -86,7 +86,7 @@ Item {
         }
 
         if (batteries.count === 0) {
-            parts.push("No Batteries Available");
+            parts.push(i18n("No Batteries Available"));
         } else if (remainingTime > 0) {
             const remainingTimeString = KCoreAddons.Format.formatDuration(remainingTime, KCoreAddons.FormatTypes.HideSeconds);
             if (pmSource.data["Battery"]["State"] === "FullyCharged") {
