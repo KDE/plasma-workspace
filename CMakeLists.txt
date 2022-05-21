@@ -179,6 +179,15 @@ if(PackageKitQt${QT_MAJOR_VERSION}_FOUND)
     set(HAVE_PACKAGEKIT TRUE)
 endif()
 
+find_package(ICU COMPONENTS i18n uc)
+set_package_properties(ICU
+        PROPERTIES DESCRIPTION "Unicode and Globalization support for software applications"
+        TYPE OPTIONAL
+        PURPOSE "Better application groups in Kicker"
+        )
+if(${ICU_FOUND})
+    set(HAVE_ICU TRUE)
+endif()
 
 find_package(KIOExtras)
 set_package_properties(KIOExtras PROPERTIES DESCRIPTION "Common KIO slaves for operations."
