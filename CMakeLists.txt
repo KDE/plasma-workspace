@@ -136,7 +136,7 @@ if(QT_MAJOR_VERSION EQUAL "5")
 else()
   find_package(Qt6 REQUIRED CONFIG COMPONENTS WaylandCompositor)
 endif()
-find_package(Qt${QT_MAJOR_VERSION}WaylandClient)
+find_package(Qt${QT_MAJOR_VERSION}WaylandClient COMPONENTS Private)
 find_package(PlasmaWaylandProtocols 1.6 REQUIRED)
 find_package(Wayland REQUIRED COMPONENTS Client Server) # Server is used in autotests
 
