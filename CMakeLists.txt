@@ -121,6 +121,20 @@ set_package_properties(X11 PROPERTIES DESCRIPTION "X11 libraries"
                         URL "https://www.x.org"
                         TYPE OPTIONAL
                         PURPOSE "Required for building the X11 based workspace")
+macro(check_X11_lib)
+    if (NOT TARGET X11::${ARGV0})
+        message(SEND_ERROR "Required component ${ARGV0} of X11 was not found")
+    endif()
+endmacro()
+check_X11_lib(ICE)
+check_X11_lib(SM)
+check_X11_lib(X11)
+check_X11_lib(Xau)
+check_X11_lib(Xcursor)
+check_X11_lib(Xfixes)
+check_X11_lib(Xft)
+check_X11_lib(Xrender)
+check_X11_lib(Xtst)
 
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(PipeWire IMPORTED_TARGET libpipewire-0.3)
