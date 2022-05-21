@@ -37,7 +37,7 @@ PlasmaExtras.Representation {
     collapseMarginsHint: true
 
     readonly property int paddings: PlasmaCore.Units.smallSpacing
-    readonly property bool showAgenda: PlasmaCalendar.EventPluginsManager.enabledPlugins.length > 0
+    readonly property bool showAgenda: eventPluginsManager.enabledPlugins.length > 0
     readonly property bool showClocks: Plasmoid.configuration.selectedTimeZones.length > 1
 
     property alias borderWidth: monthView.borderWidth
@@ -257,6 +257,11 @@ PlasmaExtras.Representation {
         }
     }
 
+    PlasmaCalendar.EventPluginsManager {
+        id: eventPluginsManager
+        enabledPlugins: Plasmoid.configuration.enabledCalendarPlugins
+    }
+
     // Left column containing agenda view and time zones
     // ==================================================
     ColumnLayout {
@@ -332,14 +337,6 @@ PlasmaExtras.Representation {
                         holidaysList.model = null;
                         holidaysList.model = monthView.daysModel.eventsForDate(monthView.currentDate);
                     }
-                }
-            }
-
-            Connections {
-                target: Plasmoid.configuration
-
-                onEnabledCalendarPluginsChanged: {
-                    PlasmaCalendar.EventPluginsManager.enabledPlugins = Plasmoid.configuration.enabledCalendarPlugins;
                 }
             }
 
@@ -629,6 +626,7 @@ PlasmaExtras.Representation {
             id: monthView
             anchors.margins: PlasmaCore.Units.smallSpacing
             borderOpacity: 0.25
+            eventPluginsManager: eventPluginsManager
             today: root.tzDate
             firstDayOfWeek: Plasmoid.configuration.firstDayOfWeek > -1
                 ? Plasmoid.configuration.firstDayOfWeek

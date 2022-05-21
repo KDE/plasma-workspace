@@ -31,8 +31,14 @@ ConfigModel {
         source: "configTimeZones.qml"
     }
 
+    property QtObject eventPluginsManager: PlasmaCalendar.EventPluginsManager {
+        Component.onCompleted: {
+            populateEnabledPluginsList(Plasmoid.configuration.enabledCalendarPlugins);
+        }
+    }
+
     property Instantiator __eventPlugins: Instantiator {
-        model: PlasmaCalendar.EventPluginsManager.model
+        model: eventPluginsManager.model
         delegate: ConfigCategory {
             name: model.display
             icon: model.decoration

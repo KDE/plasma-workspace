@@ -23,7 +23,14 @@ Item {
 
     function saveConfig()
     {
-        Plasmoid.configuration.enabledCalendarPlugins = PlasmaCalendar.EventPluginsManager.enabledPlugins;
+        Plasmoid.configuration.enabledCalendarPlugins = eventPluginsManager.enabledPlugins;
+    }
+
+    PlasmaCalendar.EventPluginsManager {
+        id: eventPluginsManager
+        Component.onCompleted: {
+            populateEnabledPluginsList(Plasmoid.configuration.enabledCalendarPlugins);
+        }
     }
 
     Kirigami.FormLayout {
@@ -68,7 +75,7 @@ Item {
 
             Repeater {
                 id: calendarPluginsRepeater
-                model: PlasmaCalendar.EventPluginsManager.model
+                model: eventPluginsManager.model
                 delegate: QtLayouts.RowLayout {
                     QtControls.CheckBox {
                         text: model.display
@@ -82,10 +89,6 @@ Item {
                 }
             }
         }
-    }
-
-    Component.onCompleted: {
-        PlasmaCalendar.EventPluginsManager.populateEnabledPluginsList(Plasmoid.configuration.enabledCalendarPlugins);
     }
 }
 

@@ -390,6 +390,10 @@ bool DaysModel::hasMinorEventAtDate(const QDate &date) const
 
 void DaysModel::setPluginsManager(QObject *manager)
 {
+    if (d->m_pluginsManager) {
+        disconnect(d->m_pluginsManager, nullptr, this, nullptr);
+    }
+
     EventPluginsManager *m = qobject_cast<EventPluginsManager *>(manager);
 
     if (!m) {

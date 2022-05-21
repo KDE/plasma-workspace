@@ -128,9 +128,5 @@ Item {
         if (KCMShell.authorize("kcm_formats.desktop").length > 0) {
             Plasmoid.setAction("formatskcm", i18n("Set Time Format…"), "gnumeric-format-thousand-separator");
         }
-
-        // Set the list of enabled plugins from config
-        // to the manager
-        PlasmaCalendar.EventPluginsManager.enabledPlugins = Plasmoid.configuration.enabledCalendarPlugins;
     }
 }

@@ -37,6 +37,10 @@ PinchArea { // TODO KF6 switch to Item
      * \sa Calendar::firstDayOfWeek
      */
     property alias firstDayOfWeek: calendarBackend.firstDayOfWeek
+    /**
+     * The event plugins manager used in the view
+     */
+    property QtObject eventPluginsManager
 
     property QtObject date
     property date currentDate
@@ -190,7 +194,7 @@ PinchArea { // TODO KF6 switch to Item
         today: root.today
 
         Component.onCompleted: {
-            daysModel.setPluginsManager(EventPluginsManager);
+            daysModel.setPluginsManager(root.eventPluginsManager);
         }
 
         onYearChanged: {
