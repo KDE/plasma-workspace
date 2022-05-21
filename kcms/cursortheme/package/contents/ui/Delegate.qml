@@ -19,16 +19,10 @@ import org.kde.private.kcm_cursortheme 1.0
 KCM.GridDelegate {
     id: delegate
 
-    required property string description
-    required property string display
-    required property bool pendingDeletion
-    required property bool isWritable
-    required property int index
+    text: model.display
+    toolTip: model.description
 
-    text: display
-    toolTip: description
-
-    opacity: pendingDeletion ? 0.3 : 1
+    opacity: model.pendingDeletion ? 0.3 : 1
 
     thumbnailAvailable: true
     thumbnail: PreviewWidget {
@@ -43,7 +37,7 @@ KCM.GridDelegate {
         transformOrigin: Item.TopLeft
         scale: 1 / Screen.devicePixelRatio
         themeModel: kcm.cursorsModel
-        currentIndex: delegate.index
+        currentIndex: index
         currentSize: kcm.cursorThemeSettings.cursorSize
     }
 
@@ -58,15 +52,15 @@ KCM.GridDelegate {
         Kirigami.Action {
             iconName: "edit-delete"
             tooltip: i18n("Remove Theme")
-            enabled: delegate.isWritable
-            visible: !delegate.pendingDeletion
-            onTriggered: delegate.pendingDeletion = true
+            enabled: model.isWritable
+            visible: !model.pendingDeletion
+            onTriggered: model.pendingDeletion = true
         },
         Kirigami.Action {
             iconName: "edit-undo"
             tooltip: i18n("Restore Cursor Theme")
-            visible: delegate.pendingDeletion
-            onTriggered: delegate.pendingDeletion = false
+            visible: model.pendingDeletion
+            onTriggered: model.pendingDeletion = false
         }
     ]
 
