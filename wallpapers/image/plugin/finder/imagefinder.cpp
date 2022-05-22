@@ -34,7 +34,7 @@ void ImageFinder::run()
 
     for (i = 0; i < m_paths.size(); ++i) {
         const QString &path = m_paths.at(i);
-        const QString target = findSymlinkTarget(path);
+        const QString target = findSymlinkTarget(QFileInfo(path));
         const QFileInfo info(target);
 
         if (!info.exists() || !filterCondition(info)) {
