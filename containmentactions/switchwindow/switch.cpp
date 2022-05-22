@@ -11,10 +11,13 @@
 #include "activityinfo.h"
 #include "tasksmodel.h"
 #include "virtualdesktopinfo.h"
-#include <QVariantMap>
+
+#include <KConfigGroup>
+#include <KPluginFactory>
 
 #include <QAction>
 #include <QMenu>
+#include <QVariantMap>
 
 using namespace TaskManager;
 

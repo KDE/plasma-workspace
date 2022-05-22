@@ -9,6 +9,8 @@
 
 #include <virtualdesktopinfo.h>
 
+#include <KPluginFactory>
+
 #include <QAction>
 
 using namespace TaskManager;

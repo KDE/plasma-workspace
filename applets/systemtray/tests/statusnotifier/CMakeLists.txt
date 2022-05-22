@@ -16,6 +16,7 @@ target_link_libraries(statusnotifiertest
     KF5::Service
     KF5::Notifications
     KF5::I18n
+    KF5::ConfigCore
     Qt::DBus
 )
 

@@ -20,6 +20,7 @@
 #include "launchertasksmodel_p.h"
 
 #include <QGuiApplication>
+#include <QTime>
 #include <QTimer>
 #include <QUrl>
 #include <QVector>

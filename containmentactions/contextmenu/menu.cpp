@@ -17,6 +17,7 @@
 #include <KGlobalAccel>
 #include <KIO/CommandLauncherJob>
 #include <KLocalizedString>
+#include <KService>
 #include <QDebug>
 #include <QIcon>
 
@@ -328,3 +329,4 @@ void ContextMenu::save(KConfigGroup &config)
 K_PLUGIN_CLASS_WITH_JSON(ContextMenu, "plasma-containmentactions-contextmenu.json")
 
 #include "menu.moc"
+#include "moc_menu.cpp"

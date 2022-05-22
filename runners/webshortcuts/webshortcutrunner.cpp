@@ -7,6 +7,7 @@
 #include "webshortcutrunner.h"
 
 #include <KApplicationTrader>
+#include <KConfigGroup>
 #include <KIO/CommandLauncherJob>
 #include <KIO/OpenUrlJob>
 #include <KLocalizedString>

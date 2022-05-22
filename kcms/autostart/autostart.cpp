@@ -7,6 +7,8 @@
 
 #include "autostart.h"
 
+#include <KPluginFactory>
+
 K_PLUGIN_CLASS_WITH_JSON(Autostart, "kcm_autostart.json")
 
 Autostart::Autostart(QObject *parent, const KPluginMetaData &data, const QVariantList &)

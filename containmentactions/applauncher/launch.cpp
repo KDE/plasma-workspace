@@ -8,7 +8,9 @@
 
 #include <QDebug>
 
+#include <KConfigGroup>
 #include <KIO/ApplicationLauncherJob>
+#include <KPluginFactory>
 #include <Plasma/PluginLoader>
 
 AppLauncher::AppLauncher(QObject *parent, const QVariantList &args)

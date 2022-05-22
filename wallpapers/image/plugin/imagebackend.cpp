@@ -21,6 +21,7 @@
 #include <QScreen>
 #include <QUrlQuery>
 
+#include <KConfigGroup>
 #include <KIO/CopyJob>
 #include <KIO/Job>
 #include <KIO/OpenUrlJob>

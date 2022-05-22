@@ -15,6 +15,7 @@
 #include <QUrl>
 
 #include <KApplicationTrader>
+#include <KConfigGroup>
 #include <KIO/OpenUrlJob>
 #include <KLocalizedString>
 #include <KSharedConfig>

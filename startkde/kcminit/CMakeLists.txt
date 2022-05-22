@@ -4,7 +4,7 @@ set(kcminit_SRCS main.cpp)
 
 add_executable(kcminit ${kcminit_SRCS})
 
-target_link_libraries(kcminit Qt::Core Qt::Gui Qt::DBus KF5::CoreAddons KF5::Service KF5::I18n PW::KWorkspace)
+target_link_libraries(kcminit Qt::Core Qt::Gui Qt::DBus KF5::CoreAddons KF5::Service KF5::I18n KF5::ConfigCore PW::KWorkspace)
 
 install(TARGETS kcminit         ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
 
@@ -19,6 +19,6 @@ add_executable(kcminit_startup ${kcminit_startup_SRCS})
 ecm_install_configured_files(INPUT plasma-kcminit-phase1.service.in  plasma-kcminit.service.in
                                                    DESTINATION ${KDE_INSTALL_SYSTEMDUSERUNITDIR})
 
-target_link_libraries(kcminit_startup Qt::Core Qt::Gui Qt::DBus KF5::CoreAddons KF5::Service KF5::I18n PW::KWorkspace)
+target_link_libraries(kcminit_startup Qt::Core Qt::Gui Qt::DBus KF5::CoreAddons KF5::Service KF5::I18n KF5::ConfigCore PW::KWorkspace)
 
 install(TARGETS kcminit_startup         ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )

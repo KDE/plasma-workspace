@@ -11,6 +11,8 @@
 #include <KService>
 #include <KServiceGroup>
 
+#include <QPointer>
+
 class AppsModel;
 class MenuEntryEditor;
 

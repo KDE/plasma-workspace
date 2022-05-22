@@ -14,4 +14,5 @@ target_link_libraries(ktimezoned
    KF5::Service    # plugin factory
    KF5::CoreAddons # KDirWatch
    KF5::DBusAddons # kdedmodule
+   KF5::ConfigCore # KConfig[Group]
 )

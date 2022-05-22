@@ -11,7 +11,6 @@
 #include <unistd.h>
 
 #include <KFileUtils>
-#include <KPluginInfo>
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QDBusPendingCall>
@@ -19,6 +18,7 @@
 #include <QFile>
 #include <QGuiApplication>
 #include <QLibrary>
+#include <QPluginLoader>
 #include <QTimer>
 
 #include <KAboutData>

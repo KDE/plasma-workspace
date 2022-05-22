@@ -7,7 +7,6 @@
 
 #pragma once
 
-#include <KService>
 #include <QMutex>
 
 #include <krunner/abstractrunner.h>

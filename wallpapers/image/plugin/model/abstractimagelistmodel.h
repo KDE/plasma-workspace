@@ -9,11 +9,11 @@
 
 #include <QAbstractListModel>
 #include <QCache>
+#include <QPixmap>
 #include <QSize>
 
 #include "imageroles.h"
 
-class QPixmap;
 class KFileItem;
 
 /**

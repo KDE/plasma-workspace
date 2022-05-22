@@ -19,6 +19,7 @@
 
 #include <KAuthorized>
 #include <KIdleTime>
+#include <KService>
 #include <klocalizedstring.h>
 
 #include <QDebug>

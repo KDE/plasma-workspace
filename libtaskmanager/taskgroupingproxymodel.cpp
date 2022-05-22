@@ -9,6 +9,7 @@
 #include "tasktools.h"
 
 #include <QSet>
+#include <QTime>
 
 namespace TaskManager
 {

@@ -14,6 +14,7 @@ MACRO(PLASMASHELL_UNIT_TESTS)
                target_link_libraries(${_testname}
                             Qt::Test
                             Qt::Gui
+                            KF5::ConfigCore
                             KF5::Service
                             KF5::WaylandClient
                             KF5::WindowSystem

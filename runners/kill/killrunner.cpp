@@ -12,6 +12,7 @@
 #include <QIcon>
 
 #include <KAuth/Action>
+#include <KConfigGroup>
 #include <KLocalizedString>
 #include <KProcess>
 

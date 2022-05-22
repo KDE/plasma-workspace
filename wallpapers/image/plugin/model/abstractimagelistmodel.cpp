@@ -6,7 +6,6 @@
 
 #include "abstractimagelistmodel.h"
 
-#include <QPixmap>
 #include <QThreadPool>
 
 #include <KFileItem>
