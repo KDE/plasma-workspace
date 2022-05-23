@@ -189,7 +189,13 @@ void XWindowTasksModel::Private::init()
     });
 
     QObject::connect(KWindowSystem::self(), &KWindowSystem::stackingOrderChanged, q, [this]() {
+        // No need to do anything if the model is empty. This avoids calling q->dataChanged with an invalid QModelIndex.
+        if (q->rowCount() == 0) {
+            return;
+        }
         cachedStackingOrder = KWindowSystem::stackingOrder();
+        Q_ASSERT(q->hasIndex(0, 0));
+        Q_ASSERT(q->hasIndex(q->rowCount() - 1, 0));
         Q_EMIT q->dataChanged(q->index(0, 0), q->index(q->rowCount() - 1, 0), QVector<int>{StackingOrder});
     });
 
