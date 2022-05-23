@@ -159,9 +159,7 @@ find_package(PkgConfig REQUIRED)
 pkg_check_modules(PipeWire IMPORTED_TARGET libpipewire-0.3)
 add_feature_info(PipeWire PipeWire_FOUND "Required for Wayland screencasting")
 
-if(PipeWire_FOUND)
-  find_package(Libdrm REQUIRED)
-endif()
+find_package(Libdrm REQUIRED)
 
 if(QT_MAJOR_VERSION EQUAL "5")
   find_package(QtWaylandScanner REQUIRED)

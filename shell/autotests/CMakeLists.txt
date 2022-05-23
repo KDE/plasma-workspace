@@ -9,7 +9,7 @@ MACRO(PLASMASHELL_UNIT_TESTS)
                 set(test_SRCS
                     ${_testname}.cpp ../screenpool.cpp ${CMAKE_CURRENT_BINARY_DIR}/../screenpool-debug.cpp ../primaryoutputwatcher.cpp
                         )
-               include_directories(${CMAKE_CURRENT_BINARY_DIR}/../mockserver)
+               include_directories(${CMAKE_CURRENT_BINARY_DIR}/../mockserver ${Libdrm_INCLUDE_DIR})
                add_executable(${_testname} ${test_SRCS})
                target_link_libraries(${_testname}
                             Qt::Test
@@ -20,6 +20,7 @@ MACRO(PLASMASHELL_UNIT_TESTS)
                             KF5::WindowSystem
                             Wayland::Client
                             Wayland::Server
+                            Libdrm::Libdrm
                             SharedClientTest
                                      )
                if(HAVE_X11)

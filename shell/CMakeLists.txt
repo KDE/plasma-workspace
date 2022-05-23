@@ -77,6 +77,8 @@ qt_add_dbus_interface(plasma_shell_SRCS ${krunner_xml} krunner_interface)
 
 target_sources(plasmashell PRIVATE ${plasma_shell_SRCS})
 
+target_include_directories(plasmashell PRIVATE ${Libdrm_INCLUDE_DIR})
+
 target_link_libraries(plasmashell
  Qt::Quick
  Qt::DBus
@@ -101,6 +103,7 @@ target_link_libraries(plasmashell
  KF5::GuiAddons
  PW::KWorkspace
  Wayland::Client
+ Libdrm::Libdrm
 )
 if (QT_MAJOR_VERSION STREQUAL "6")
     target_link_libraries(plasmashell KF5::ConfigQml)

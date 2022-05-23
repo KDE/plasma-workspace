@@ -21,7 +21,41 @@
 
 #include <chrono>
 
+#include <fcntl.h>
+#include <libdrm/drm_mode.h>
+#include <xf86drm.h>
+#include <xf86drmMode.h>
 using namespace std::chrono_literals;
+
+static QHash<int, QByteArray> s_connectorNames = {
+    {DRM_MODE_CONNECTOR_Unknown, QByteArrayLiteral("Unknown")},
+    {DRM_MODE_CONNECTOR_VGA, QByteArrayLiteral("VGA")},
+    {DRM_MODE_CONNECTOR_DVII, QByteArrayLiteral("DVI-I")},
+    {DRM_MODE_CONNECTOR_DVID, QByteArrayLiteral("DVI-D")},
+    {DRM_MODE_CONNECTOR_DVIA, QByteArrayLiteral("DVI-A")},
+    {DRM_MODE_CONNECTOR_Composite, QByteArrayLiteral("Composite")},
+    {DRM_MODE_CONNECTOR_SVIDEO, QByteArrayLiteral("SVIDEO")},
+    {DRM_MODE_CONNECTOR_LVDS, QByteArrayLiteral("LVDS")},
+    {DRM_MODE_CONNECTOR_Component, QByteArrayLiteral("Component")},
+    {DRM_MODE_CONNECTOR_9PinDIN, QByteArrayLiteral("DIN")},
+    {DRM_MODE_CONNECTOR_DisplayPort, QByteArrayLiteral("DP")},
+    {DRM_MODE_CONNECTOR_HDMIA, QByteArrayLiteral("HDMI-A")},
+    {DRM_MODE_CONNECTOR_HDMIB, QByteArrayLiteral("HDMI-B")},
+    {DRM_MODE_CONNECTOR_TV, QByteArrayLiteral("TV")},
+    {DRM_MODE_CONNECTOR_eDP, QByteArrayLiteral("eDP")},
+    {DRM_MODE_CONNECTOR_VIRTUAL, QByteArrayLiteral("Virtual")},
+    {DRM_MODE_CONNECTOR_DSI, QByteArrayLiteral("DSI")},
+    {DRM_MODE_CONNECTOR_DPI, QByteArrayLiteral("DPI")},
+#ifdef DRM_MODE_CONNECTOR_WRITEBACK
+    {DRM_MODE_CONNECTOR_WRITEBACK, QByteArrayLiteral("Writeback")},
+#endif
+#ifdef DRM_MODE_CONNECTOR_SPI
+    {DRM_MODE_CONNECTOR_SPI, QByteArrayLiteral("SPI")},
+#endif
+#ifdef DRM_MODE_CONNECTOR_USB
+    {DRM_MODE_CONNECTOR_USB, QByteArrayLiteral("USB")},
+#endif
+};
 
 ScreenPool::ScreenPool(const KSharedConfig::Ptr &config, QObject *parent)
     : QObject(parent)
@@ -43,6 +77,90 @@ ScreenPool::ScreenPool(const KSharedConfig::Ptr &config, QObject *parent)
     connect(&m_configSaveTimer, &QTimer::timeout, this, [this]() {
         m_configGroup.sync();
     });
+}
+
+static QByteArray parseSerialNumber(const uint8_t *data)
+{
+    for (int i = 72; i <= 108; i += 18) {
+        // Skip the block if it isn't used as monitor descriptor.
+        if (data[i]) {
+            continue;
+        }
+        if (data[i + 1]) {
+            continue;
+        }
+
+        // We have found the serial number, it's stored as ASCII.
+        if (data[i + 3] == 0xff) {
+            return QByteArray(reinterpret_cast<const char *>(&data[i + 5]), 12).trimmed();
+        }
+    }
+
+    // Maybe there isn't an ASCII serial number descriptor, so use this instead.
+    const uint32_t offset = 0xc;
+
+    uint32_t serialNumber = data[offset + 0];
+    serialNumber |= uint32_t(data[offset + 1]) << 8;
+    serialNumber |= uint32_t(data[offset + 2]) << 16;
+    serialNumber |= uint32_t(data[offset + 3]) << 24;
+    if (serialNumber) {
+        return QByteArray::number(serialNumber);
+    }
+
+    return QByteArray();
+}
+
+void ScreenPool::mapScreen(QScreen *screen)
+{
+    drmDevice *devices[64];
+    int n = drmGetDevices(devices, sizeof(devices) / sizeof(devices[0]));
+    if (n < 0) {
+        qWarning() << "drmGetDevices failed";
+    }
+    for (int i = 0; i < n; ++i) {
+        drmDevice *dev = devices[i];
+        if (!(dev->available_nodes & (1 << DRM_NODE_PRIMARY))) {
+            continue;
+        }
+
+        const char *path = dev->nodes[DRM_NODE_PRIMARY];
+        int fd = open(path, O_RDONLY);
+
+        drmModeRes *res = drmModeGetResources(fd);
+        if (res) {
+            for (int i = 0; i < res->count_connectors; ++i) {
+                drmModeConnector *conn = drmModeGetConnectorCurrent(fd, res->connectors[i]);
+                if (!conn) {
+                    perror("drmModeGetConnectorCurrent failed");
+                    continue;
+                }
+                qWarning() << conn->connector_id << s_connectorNames[conn->connector_type];
+                drmModeObjectProperties *props = drmModeObjectGetProperties(fd, conn->connector_id, DRM_MODE_OBJECT_CONNECTOR);
+                if (!props) {
+                    perror("drmModeObjectGetProperties");
+                    continue;
+                }
+                for (uint32_t i = 0; i < props->count_props; ++i) {
+                    drmModePropertyRes *prop = drmModeGetProperty(fd, props->props[i]);
+                    if (!prop) {
+                        perror("drmModeGetProperty");
+                        continue;
+                    }
+                    qWarning() << i << prop->name;
+                    if (!strcmp(prop->name, "EDID")) {
+                        if (const auto edidProp = drmModeGetPropertyBlob(fd, conn->prop_values[i])) {
+                            if (screen->serialNumber().remove("-") == QString(parseSerialNumber(static_cast<const uint8_t *>(edidProp->data))).remove("-")) {
+                                m_drmScreenNames[screen->name()] = s_connectorNames[conn->connector_type];
+                            }
+                        } else {
+                            qCDebug(SCREENPOOL) << "Could not find edid for connector";
+                        }
+                    }
+                    drmModeFreeProperty(prop);
+                }
+            }
+        }
+    }
 }
 
 void ScreenPool::load()
@@ -86,6 +204,8 @@ void ScreenPool::load()
 
     // Populate all the screens based on what's connected at startup
     for (QScreen *screen : qGuiApp->screens()) {
+        qWarning() << "ZXXX" << screen->serialNumber().remove("-");
+        mapScreen(screen);
         // On some devices QGuiApp::screenAdded is always emitted for some screens at startup so at this point that screen would already be managed
         const QString name = screenName(screen);
         if (!m_allSortedScreens.contains(screen)) {
