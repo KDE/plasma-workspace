@@ -40,7 +40,7 @@ AbstractItem {
         //forward click event to the applet
         var appletItem = applet.compactRepresentationItem ? applet.compactRepresentationItem : applet.fullRepresentationItem
         const mouseArea = findMouseArea(appletItem)
-        if (mouseArea) {
+        if (mouseArea && mouse.button !== Qt.RightButton) {
             mouseArea.clicked(mouse)
         } else if (mouse.button === Qt.LeftButton) {//falback
             plasmoidContainer.activated(null)
@@ -51,6 +51,13 @@ AbstractItem {
         // SNI has few problems, for example legacy applications that still use XEmbed require mouse to be released.
         if (mouse.button === Qt.RightButton) {
             plasmoidContainer.contextMenu(mouse);
+        } else {
+            const appletItem = applet.compactRepresentationItem ? applet.compactRepresentationItem : applet.fullRepresentationItem
+            const mouseArea = findMouseArea(appletItem)
+            if (mouseArea) {
+                // HACK QML only sees the "mouseArea.pressed" property, not the signal.
+                Plasmoid.nativeInterface.emitPressed(mouseArea, mouse);
+            }
         }
     }
     onContextMenu: if (applet) {
