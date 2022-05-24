@@ -26,7 +26,6 @@ class ImageProxyModel : public QConcatenateTablesProxyModel, public ImageRoles
     Q_OBJECT
 
     Q_PROPERTY(int count READ count NOTIFY countChanged)
-    Q_PROPERTY(bool loading READ loading NOTIFY loadingChanged)
 
 public:
     explicit ImageProxyModel(const QStringList &customPaths, const QSize &targetSize, QObject *parent);

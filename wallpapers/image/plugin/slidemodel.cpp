@@ -96,6 +96,11 @@ QStringList SlideModel::addDirs(const QStringList &dirs)
         }
     }
 
+    if (!added.empty()) {
+        m_loading = true;
+        Q_EMIT loadingChanged();
+    }
+
     return added;
 }
 
@@ -145,6 +150,11 @@ void SlideModel::setUncheckedSlides(const QStringList &uncheckedSlides)
     }
 }
 
+bool SlideModel::loading() const
+{
+    return m_loading;
+}
+
 void SlideModel::slotSourceModelLoadingChanged()
 {
     auto m = qobject_cast<ImageProxyModel *>(sender());
@@ -160,6 +170,8 @@ void SlideModel::slotSourceModelLoadingChanged()
     addSourceModel(m);
 
     if (++m_loaded == m_models.size()) {
+        m_loading = false;
+        Q_EMIT loadingChanged();
         Q_EMIT done();
     }
 }

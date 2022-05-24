@@ -36,15 +36,19 @@ public:
 
     void setUncheckedSlides(const QStringList &uncheckedSlides);
 
+    bool loading() const;
+
 Q_SIGNALS:
     void done();
     void targetSizeChanged(const QSize &size);
+    void loadingChanged();
 
 private Q_SLOTS:
     void slotSourceModelLoadingChanged();
 
 private:
     QSize m_targetSize;
+    bool m_loading = false;
 
     QHash<QString, ImageProxyModel *> m_models;
     int m_loaded = 0;

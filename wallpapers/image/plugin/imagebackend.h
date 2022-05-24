@@ -55,6 +55,11 @@ class ImageBackend : public QObject, public QQmlParserStatus, public SortingMode
     Q_PROPERTY(QSize targetSize READ targetSize WRITE setTargetSize NOTIFY targetSizeChanged)
     Q_PROPERTY(QStringList uncheckedSlides READ uncheckedSlides WRITE setUncheckedSlides NOTIFY uncheckedSlidesChanged)
 
+    /**
+     * @return @c true if the image list is loaded, @c false otherwise
+     */
+    Q_PROPERTY(bool loading READ loading NOTIFY loadingChanged)
+
 public:
     enum RenderingMode {
         SingleImage,
@@ -115,6 +120,8 @@ public:
     QStringList uncheckedSlides() const;
     void setUncheckedSlides(const QStringList &uncheckedSlides);
 
+    bool loading() const;
+
 public Q_SLOTS:
     void nextSlide();
     void slotSlideModelDataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles);
@@ -133,6 +140,7 @@ Q_SIGNALS:
     void resizeMethodChanged();
     void customWallpaperPicked(const QString &path);
     void uncheckedSlidesChanged();
+    void loadingChanged();
 
 protected Q_SLOTS:
     void showAddSlidePathsDialog();

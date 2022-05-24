@@ -231,6 +231,7 @@ QAbstractItemModel *ImageBackend::wallpaperModel()
     if (!m_model) {
         m_model = new ImageProxyModel({}, m_targetSize, this);
         connect(this, &ImageBackend::targetSizeChanged, m_model, &ImageProxyModel::targetSizeChanged);
+        connect(m_model, &ImageProxyModel::loadingChanged, this, &ImageBackend::loadingChanged);
     }
 
     return m_model;
@@ -244,6 +245,7 @@ SlideModel *ImageBackend::slideshowModel()
         connect(this, &ImageBackend::uncheckedSlidesChanged, m_slideFilterModel, &SlideFilterModel::invalidateFilter);
         connect(this, &ImageBackend::targetSizeChanged, m_slideshowModel, &SlideModel::targetSizeChanged);
         connect(m_slideshowModel, &SlideModel::dataChanged, this, &ImageBackend::slotSlideModelDataChanged);
+        connect(m_slideshowModel, &SlideModel::loadingChanged, this, &ImageBackend::loadingChanged);
     }
     return m_slideshowModel;
 }
@@ -649,4 +651,15 @@ void ImageBackend::setUncheckedSlides(const QStringList &uncheckedSlides)
 
     Q_EMIT uncheckedSlidesChanged();
     startSlideshow();
+}
+
+bool ImageBackend::loading() const
+{
+    if (renderingMode() == SingleImage && m_model) {
+        return m_model->loading();
+    } else if (renderingMode() == SlideShow && m_slideshowModel) {
+        return m_slideshowModel->loading();
+    }
+
+    return false;
 }

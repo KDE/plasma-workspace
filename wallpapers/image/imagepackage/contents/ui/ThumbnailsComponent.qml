@@ -19,6 +19,15 @@ Item {
 
     readonly property var imageModel: (configDialog.currentWallpaper === "org.kde.image") ? imageWallpaper.wallpaperModel : imageWallpaper.slideFilterModel
 
+    Connections {
+        target: imageWallpaper
+        function onLoadingChanged() {
+            if (!imageWallpaper.loading) {
+                wallpapersGrid.resetCurrentIndex();
+            }
+        }
+    }
+
     KCM.GridView {
         id: wallpapersGrid
         anchors.fill: parent
@@ -33,7 +42,6 @@ Item {
         view.model: thumbnailsComponent.imageModel
         Component.onCompleted: {
             thumbnailsComponent.imageModel.usedInConfig = true;
-            resetCurrentIndex()
         }
 
         //set the size of the cell, depending on Screen resolution to respect the aspect ratio

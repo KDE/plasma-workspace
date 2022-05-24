@@ -59,6 +59,9 @@ ImageProxyModel::ImageProxyModel(const QStringList &_customPaths, const QSize &t
     connect(m_imageModel, &AbstractImageListModel::loaded, this, &ImageProxyModel::slotHandleLoaded);
     connect(m_packageModel, &AbstractImageListModel::loaded, this, &ImageProxyModel::slotHandleLoaded);
 
+    m_loaded = 0;
+    Q_EMIT loadingChanged();
+
     m_imageModel->load(customPaths);
     m_packageModel->load(customPaths);
 }
@@ -108,6 +111,9 @@ void ImageProxyModel::reload()
     for (const auto &m : models) {
         static_cast<AbstractImageListModel *>(m)->reload();
     }
+
+    m_loaded = 0;
+    Q_EMIT loadingChanged();
 }
 
 QStringList ImageProxyModel::addBackground(const QString &_path)
