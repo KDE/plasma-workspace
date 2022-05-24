@@ -39,6 +39,8 @@ Item {
         view.implicitCellWidth: Screen.width / 10 + Kirigami.Units.smallSpacing * 2
         view.implicitCellHeight: Screen.height / 10 + Kirigami.Units.smallSpacing * 2 + Kirigami.Units.gridUnit * 3
 
+        view.reuseItems: true
+
         view.delegate: WallpaperDelegate {
             color: cfg_Color
         }
