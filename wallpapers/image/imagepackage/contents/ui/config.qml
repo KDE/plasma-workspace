@@ -421,6 +421,10 @@ ColumnLayout {
                 //kill the space for label under thumbnails
                 view.model: imageModel
                 Component.onCompleted: {
+                    if (view.hasOwnProperty("reuseItems")) {
+                        view.reuseItems = true;
+                    }
+
                     imageModel.usedInConfig = true;
                     resetCurrentIndex()
                 }
