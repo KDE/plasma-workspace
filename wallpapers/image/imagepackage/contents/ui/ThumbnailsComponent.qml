@@ -31,6 +31,10 @@ Item {
         //kill the space for label under thumbnails
         view.model: thumbnailsComponent.imageModel
         Component.onCompleted: {
+            if (view.hasOwnProperty("reuseItems")) {
+                view.reuseItems = true;
+            }
+
             thumbnailsComponent.imageModel.usedInConfig = true;
             resetCurrentIndex()
         }
