@@ -183,7 +183,6 @@ void ScreenPool::mapScreenDrmName(QScreen *screen)
                     if (!edidProp) {
                         qCDebug(SCREENPOOL) << "Could not find edid for connector";
                     }
-
                     if (screen->serialNumber().remove("-") == QString(parseSerialNumber(static_cast<const uint8_t *>(edidProp->data))).remove("-")
                         && screen->model().remove("-") == QString(parseMonitorName(static_cast<const uint8_t *>(edidProp->data))).remove("-")) {
                         m_drmScreenNames[screen->name()] = s_connectorNames[conn->connector_type] + "-" + QString::number(conn->connector_type_id);
@@ -559,11 +558,17 @@ void ScreenPool::handleScreenAdded(QScreen *screen)
 
     // Migrate the name in the config if needed (from relying on screen name to self calculated drm)
     const QString actualScreenName = screenName(screen);
-    if (screen->name() != actualScreenName && m_idForConnector.contains(screen->name())) {
-        const int i = m_idForConnector[screen->name()];
-        m_idForConnector[actualScreenName] = i;
-        m_idForConnector.remove(screen->name());
-        m_connectorForId[i] = actualScreenName;
+    if (screen->name() != actualScreenName) {
+        if (m_idForConnector.contains(screen->name())) {
+            const int i = m_idForConnector[screen->name()];
+            m_connectorForId.remove(m_idForConnector[actualScreenName]);
+            m_idForConnector[actualScreenName] = i;
+            m_idForConnector.remove(screen->name());
+            m_connectorForId[i] = actualScreenName;
+        }
+        // Get rid of any old mappings in the config
+        m_configGroup.deleteGroup();
+        save();
     }
 
     qCDebug(SCREENPOOL) << "handleScreenAdded" << screen << screen->geometry();
