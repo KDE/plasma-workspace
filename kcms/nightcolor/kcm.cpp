@@ -13,7 +13,7 @@
 
 namespace ColorCorrect
 {
-K_PLUGIN_FACTORY_WITH_JSON(KCMNightColorFactory, "kcm_nightcolor.json", registerPlugin<KCMNightColor>(); registerPlugin<NightColorData>();)
+K_PLUGIN_CLASSES_WITH_JSON(KCMNightColor, NightColorData, "kcm_nightcolor.json")
 
 KCMNightColor::KCMNightColor(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent, data, args)

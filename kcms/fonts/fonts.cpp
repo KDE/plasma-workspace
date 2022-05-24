@@ -39,7 +39,7 @@
 #include "fontsdata.h"
 
 /**** DLL Interface ****/
-K_PLUGIN_FACTORY_WITH_JSON(KFontsFactory, "kcm_fonts.json", registerPlugin<KFonts>(); registerPlugin<FontsData>();)
+K_PLUGIN_CLASSES_WITH_JSON(KFonts, FontsData, "kcm_fonts.json")
 
 /**** KFonts ****/
 

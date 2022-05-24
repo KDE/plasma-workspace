@@ -34,7 +34,7 @@
 #include <libnotificationmanager/jobsettings.h>
 #include <libnotificationmanager/notificationsettings.h>
 
-K_PLUGIN_FACTORY_WITH_JSON(KCMNotificationsFactory, "kcm_notifications.json", registerPlugin<KCMNotifications>(); registerPlugin<NotificationsData>();)
+K_PLUGIN_CLASSES_WITH_JSON(KCMNotifications, NotificationsData, "kcm_notifications.json")
 
 KCMNotifications::KCMNotifications(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent, data, args)

@@ -32,7 +32,7 @@
 
 Q_LOGGING_CATEGORY(KCM_DESKTOP_THEME, "kcm_desktoptheme")
 
-K_PLUGIN_FACTORY_WITH_JSON(KCMDesktopThemeFactory, "kcm_desktoptheme.json", registerPlugin<KCMDesktopTheme>(); registerPlugin<DesktopThemeData>();)
+K_PLUGIN_CLASSES_WITH_JSON(KCMDesktopTheme, DesktopThemeData, "kcm_desktoptheme.json")
 
 KCMDesktopTheme::KCMDesktopTheme(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent, data, args)

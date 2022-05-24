@@ -21,7 +21,7 @@
 #include "feedbackdata.h"
 #include "feedbacksettings.h"
 
-K_PLUGIN_FACTORY_WITH_JSON(FeedbackFactory, "kcm_feedback.json", registerPlugin<Feedback>(); registerPlugin<FeedbackData>();)
+K_PLUGIN_CLASSES_WITH_JSON(Feedback, FeedbackData, "kcm_feedback.json")
 
 struct Information {
     QString icon;

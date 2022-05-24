@@ -44,7 +44,7 @@
 
 #include "../kcms-common_p.h"
 
-K_PLUGIN_FACTORY_WITH_JSON(KCMColorsFactory, "kcm_colors.json", registerPlugin<KCMColors>(); registerPlugin<ColorsData>();)
+K_PLUGIN_CLASSES_WITH_JSON(KCMColors, ColorsData, "kcm_colors.json")
 
 KCMColors::KCMColors(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent, data, args)

@@ -44,7 +44,7 @@
 #include "previewitem.h"
 #include "styledata.h"
 
-K_PLUGIN_FACTORY_WITH_JSON(KCMStyleFactory, "kcm_style.json", registerPlugin<KCMStyle>(); registerPlugin<StyleData>();)
+K_PLUGIN_CLASSES_WITH_JSON(KCMStyle, StyleData, "kcm_style.json")
 
 extern "C" {
 Q_DECL_EXPORT void kcminit()

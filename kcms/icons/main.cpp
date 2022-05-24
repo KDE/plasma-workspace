@@ -49,7 +49,7 @@
 
 #include "config.h" // for CMAKE_INSTALL_FULL_LIBEXECDIR
 
-K_PLUGIN_FACTORY_WITH_JSON(IconsFactory, "kcm_icons.json", registerPlugin<IconModule>(); registerPlugin<IconsData>();)
+K_PLUGIN_CLASSES_WITH_JSON(IconModule, IconsData, "kcm_icons.json")
 
 IconModule::IconModule(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
     : KQuickAddons::ManagedConfigModule(parent, data, args)
