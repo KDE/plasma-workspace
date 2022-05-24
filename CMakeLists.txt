@@ -121,11 +121,11 @@ set_package_properties(X11 PROPERTIES DESCRIPTION "X11 libraries"
                         URL "https://www.x.org"
                         TYPE OPTIONAL
                         PURPOSE "Required for building the X11 based workspace")
-macro(check_X11_lib)
-    if (NOT TARGET X11::${ARGV0})
-        message(SEND_ERROR "Required component ${ARGV0} of X11 was not found")
+function(check_X11_lib _lib)
+    if (NOT TARGET X11::${_lib})
+        message(SEND_ERROR "Required component ${_lib} of X11 was not found")
     endif()
-endmacro()
+endfunction()
 check_X11_lib(ICE)
 check_X11_lib(SM)
 check_X11_lib(X11)
