@@ -38,6 +38,7 @@ PlasmaCore.ColorScope {
             graceLockTimer.restart();
             notificationRemoveTimer.restart();
             rejectPasswordAnimation.start();
+            lockScreenUi.hadPrompt = false;
         }
 
         function onSucceeded() {
@@ -65,17 +66,21 @@ PlasmaCore.ColorScope {
         }
 
         function onPrompt(msg) {
-            lockScreenUi.hadPrompt = true;
             root.notification = msg;
             mainBlock.echoMode = TextInput.Normal
-            mainBlock.mainPasswordBox.text = "";
+            if (lockScreenUi.hadPrompt) {
+                mainBlock.mainPasswordBox.text = "";
+            }
             mainBlock.mainPasswordBox.forceActiveFocus();
+            lockScreenUi.hadPrompt = true;
         }
         function onPromptForSecret(msg) {
-            lockScreenUi.hadPrompt = true;
             mainBlock.echoMode = TextInput.Password
-            mainBlock.mainPasswordBox.text = "";
+            if (lockScreenUi.hadPrompt) {
+                mainBlock.mainPasswordBox.text = "";
+            }
             mainBlock.mainPasswordBox.forceActiveFocus();
+            lockScreenUi.hadPrompt = true;
         }
     }
 
