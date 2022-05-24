@@ -314,6 +314,7 @@ int ScreenPool::id(const QString &connector) const
 
 QString ScreenPool::connector(int id) const
 {
+    qWarning() << "AAAAAA" << id << m_connectorForId;
     Q_ASSERT(m_connectorForId.contains(id));
 
     return m_connectorForId.value(id);
@@ -558,13 +559,15 @@ void ScreenPool::handleScreenAdded(QScreen *screen)
 
     // Migrate the name in the config if needed (from relying on screen name to self calculated drm)
     const QString actualScreenName = screenName(screen);
-    if (screen->name() != actualScreenName) {
-        if (m_idForConnector.contains(screen->name())) {
-            const int i = m_idForConnector[screen->name()];
-            m_connectorForId.remove(m_idForConnector[actualScreenName]);
-            m_idForConnector[actualScreenName] = i;
+    if (screen->name() != actualScreenName && m_idForConnector.contains(screen->name())) {
+        const int id = m_idForConnector[screen->name()];
+        if (m_idForConnector.contains(actualScreenName)) {
             m_idForConnector.remove(screen->name());
-            m_connectorForId[i] = actualScreenName;
+            m_connectorForId.remove(id);
+        } else {
+            m_idForConnector[actualScreenName] = id;
+            m_idForConnector.remove(screen->name());
+            m_connectorForId[id] = actualScreenName;
         }
         // Get rid of any old mappings in the config
         m_configGroup.deleteGroup();
