@@ -52,8 +52,7 @@ Q_SIGNALS:
 
 private:
     void save();
-    QString screenNameHeuristics(const QString &screen) const;
-    void mapScreen(QScreen *screen);
+    void mapScreenDrmName(QScreen *screen);
     QString screenName(QScreen *screen) const;
     void setPrimaryConnector(const QString &primary);
     void insertScreenMapping(int id, const QString &connector);

@@ -79,6 +79,26 @@ ScreenPool::ScreenPool(const KSharedConfig::Ptr &config, QObject *parent)
     });
 }
 
+static QByteArray parseMonitorName(const uint8_t *data)
+{
+    for (int i = 72; i <= 108; i += 18) {
+        // Skip the block if it isn't used as monitor descriptor.
+        if (data[i]) {
+            continue;
+        }
+        if (data[i + 1]) {
+            continue;
+        }
+
+        // We have found the monitor name, it's stored as ASCII.
+        if (data[i + 3] == 0xfc) {
+            return QByteArray(reinterpret_cast<const char *>(&data[i + 5]), 12).trimmed();
+        }
+    }
+
+    return QByteArray();
+}
+
 static QByteArray parseSerialNumber(const uint8_t *data)
 {
     for (int i = 72; i <= 108; i += 18) {
@@ -110,13 +130,16 @@ static QByteArray parseSerialNumber(const uint8_t *data)
     return QByteArray();
 }
 
-void ScreenPool::mapScreen(QScreen *screen)
+void ScreenPool::mapScreenDrmName(QScreen *screen)
 {
     drmDevice *devices[64];
     int n = drmGetDevices(devices, sizeof(devices) / sizeof(devices[0]));
+
     if (n < 0) {
-        qWarning() << "drmGetDevices failed";
+        qCWarning(SCREENPOOL) << "drmGetDevices failed";
+        return;
     }
+
     for (int i = 0; i < n; ++i) {
         drmDevice *dev = devices[i];
         if (!(dev->available_nodes & (1 << DRM_NODE_PRIMARY))) {
@@ -127,37 +150,46 @@ void ScreenPool::mapScreen(QScreen *screen)
         int fd = open(path, O_RDONLY);
 
         drmModeRes *res = drmModeGetResources(fd);
-        if (res) {
-            for (int i = 0; i < res->count_connectors; ++i) {
-                drmModeConnector *conn = drmModeGetConnectorCurrent(fd, res->connectors[i]);
-                if (!conn) {
-                    perror("drmModeGetConnectorCurrent failed");
+        if (!res) {
+            continue;
+        }
+
+        for (int i = 0; i < res->count_connectors; ++i) {
+            drmModeConnector *conn = drmModeGetConnectorCurrent(fd, res->connectors[i]);
+            if (!conn) {
+                qCWarning(SCREENPOOL) << "drmModeGetConnectorCurrent failed";
+                continue;
+            }
+
+            if (conn->connection != DRM_MODE_CONNECTED) {
+                continue;
+            }
+
+            drmModeObjectProperties *props = drmModeObjectGetProperties(fd, conn->connector_id, DRM_MODE_OBJECT_CONNECTOR);
+
+            if (!props) {
+                qCWarning(SCREENPOOL) << "drmModeObjectGetProperties failed";
+                continue;
+            }
+
+            for (uint32_t i = 0; i < props->count_props; ++i) {
+                drmModePropertyRes *prop = drmModeGetProperty(fd, props->props[i]);
+                if (!prop) {
+                    qCWarning(SCREENPOOL) << "drmModeGetProperty failed";
                     continue;
                 }
-                qWarning() << conn->connector_id << s_connectorNames[conn->connector_type];
-                drmModeObjectProperties *props = drmModeObjectGetProperties(fd, conn->connector_id, DRM_MODE_OBJECT_CONNECTOR);
-                if (!props) {
-                    perror("drmModeObjectGetProperties");
-                    continue;
-                }
-                for (uint32_t i = 0; i < props->count_props; ++i) {
-                    drmModePropertyRes *prop = drmModeGetProperty(fd, props->props[i]);
-                    if (!prop) {
-                        perror("drmModeGetProperty");
-                        continue;
+                if (!strcmp(prop->name, "EDID")) {
+                    const auto edidProp = drmModeGetPropertyBlob(fd, conn->prop_values[i]);
+                    if (!edidProp) {
+                        qCDebug(SCREENPOOL) << "Could not find edid for connector";
                     }
-                    qWarning() << i << prop->name;
-                    if (!strcmp(prop->name, "EDID")) {
-                        if (const auto edidProp = drmModeGetPropertyBlob(fd, conn->prop_values[i])) {
-                            if (screen->serialNumber().remove("-") == QString(parseSerialNumber(static_cast<const uint8_t *>(edidProp->data))).remove("-")) {
-                                m_drmScreenNames[screen->name()] = s_connectorNames[conn->connector_type];
-                            }
-                        } else {
-                            qCDebug(SCREENPOOL) << "Could not find edid for connector";
-                        }
+
+                    if (screen->serialNumber().remove("-") == QString(parseSerialNumber(static_cast<const uint8_t *>(edidProp->data))).remove("-")
+                        && screen->model().remove("-") == QString(parseMonitorName(static_cast<const uint8_t *>(edidProp->data))).remove("-")) {
+                        m_drmScreenNames[screen->name()] = s_connectorNames[conn->connector_type] + "-" + QString::number(conn->connector_type_id);
                     }
-                    drmModeFreeProperty(prop);
                 }
+                drmModeFreeProperty(prop);
             }
         }
     }
@@ -171,6 +203,8 @@ void ScreenPool::load()
     m_idForConnector.clear();
 
     if (primary) {
+        // Make sure we get the proper name
+        mapScreenDrmName(primary);
         m_primaryConnector = screenName(primary);
         if (!m_primaryConnector.isEmpty()) {
             m_connectorForId[0] = m_primaryConnector;
@@ -204,8 +238,6 @@ void ScreenPool::load()
 
     // Populate all the screens based on what's connected at startup
     for (QScreen *screen : qGuiApp->screens()) {
-        qWarning() << "ZXXX" << screen->serialNumber().remove("-");
-        mapScreen(screen);
         // On some devices QGuiApp::screenAdded is always emitted for some screens at startup so at this point that screen would already be managed
         const QString name = screenName(screen);
         if (!m_allSortedScreens.contains(screen)) {
@@ -214,6 +246,7 @@ void ScreenPool::load()
             insertScreenMapping(firstAvailableId(), name);
         }
     }
+
     CHECK_SCREEN_INVARIANTS
 }
 
@@ -229,21 +262,23 @@ QString ScreenPool::primaryConnector() const
 
 void ScreenPool::setPrimaryConnector(const QString &primary)
 {
-    if (m_primaryConnector == primary) {
+    const QString actualPrimary = m_drmScreenNames.value(primary, primary);
+
+    if (m_primaryConnector == actualPrimary) {
         return;
     }
 
-    int oldIdForPrimary = m_idForConnector.value(primary, -1);
+    int oldIdForPrimary = m_idForConnector.value(actualPrimary, -1);
     if (oldIdForPrimary == -1) {
         // move old primary to new free id
         oldIdForPrimary = firstAvailableId();
     }
 
-    m_idForConnector[primary] = 0;
-    m_connectorForId[0] = primary;
+    m_idForConnector[actualPrimary] = 0;
+    m_connectorForId[0] = actualPrimary;
     m_idForConnector[m_primaryConnector] = oldIdForPrimary;
     m_connectorForId[oldIdForPrimary] = m_primaryConnector;
-    m_primaryConnector = primary;
+    m_primaryConnector = actualPrimary;
     save();
 }
 
@@ -259,21 +294,23 @@ void ScreenPool::save()
 
 void ScreenPool::insertScreenMapping(int id, const QString &connector)
 {
-    Q_ASSERT(!m_connectorForId.contains(id) || m_connectorForId.value(id) == connector);
-    Q_ASSERT(!m_idForConnector.contains(connector) || m_idForConnector.value(connector) == id);
+    const QString actualConnector = m_drmScreenNames.value(connector, connector);
+
+    Q_ASSERT(!m_connectorForId.contains(id) || m_connectorForId.value(id) == actualConnector);
+    Q_ASSERT(!m_idForConnector.contains(actualConnector) || m_idForConnector.value(actualConnector) == id);
 
     if (id == 0) {
-        m_primaryConnector = connector;
+        m_primaryConnector = actualConnector;
     }
 
-    m_connectorForId[id] = connector;
-    m_idForConnector[connector] = id;
+    m_connectorForId[id] = actualConnector;
+    m_idForConnector[actualConnector] = id;
     save();
 }
 
 int ScreenPool::id(const QString &connector) const
 {
-    return m_idForConnector.value(screenNameHeuristics(connector), -1);
+    return m_idForConnector.value(m_drmScreenNames.value(connector, connector), -1);
 }
 
 QString ScreenPool::connector(int id) const
@@ -518,6 +555,17 @@ void ScreenPool::insertSortedScreen(QScreen *screen)
 
 void ScreenPool::handleScreenAdded(QScreen *screen)
 {
+    mapScreenDrmName(screen);
+
+    // Migrate the name in the config if needed (from relying on screen name to self calculated drm)
+    const QString actualScreenName = screenName(screen);
+    if (screen->name() != actualScreenName && m_idForConnector.contains(screen->name())) {
+        const int i = m_idForConnector[screen->name()];
+        m_idForConnector[actualScreenName] = i;
+        m_idForConnector.remove(screen->name());
+        m_connectorForId[i] = actualScreenName;
+    }
+
     qCDebug(SCREENPOOL) << "handleScreenAdded" << screen << screen->geometry();
     connect(
         screen,
@@ -594,8 +642,8 @@ void ScreenPool::handlePrimaryOutputNameChanged(const QString &oldOutputName, co
     // immediately
     m_reconsiderOutputsTimer.start();
 
-    const QString actualOldOutputName = screenNameHeuristics(oldOutputName);
-    const QString actualNewOutputName = screenNameHeuristics(newOutputName);
+    const QString actualOldOutputName = m_drmScreenNames.value(oldOutputName, oldOutputName);
+    const QString actualNewOutputName = m_drmScreenNames.value(newOutputName, newOutputName);
 
     QScreen *oldPrimary = screenForConnector(actualOldOutputName);
     QScreen *newPrimary = m_primaryWatcher->primaryScreen();
@@ -640,25 +688,9 @@ void ScreenPool::handlePrimaryOutputNameChanged(const QString &oldOutputName, co
     }
 }
 
-QString ScreenPool::screenNameHeuristics(const QString &name) const
-{
-    QString ret = name;
-    if (ret.startsWith(QStringLiteral("HDMI-A-"))) {
-        ret.replace(0, 7, "HDMI-");
-    } else if (ret.startsWith(QStringLiteral("DP-"))) {
-        auto parts = ret.split('-');
-        if (parts.size() != 2) {
-            return ret;
-        }
-        ret.replace(0, 3, "DisplayPort-");
-    }
-
-    return ret;
-}
-
 QString ScreenPool::screenName(QScreen *screen) const
 {
-    return screenNameHeuristics(screen->name());
+    return m_drmScreenNames.value(screen->name(), screen->name());
 }
 
 void ScreenPool::screenInvariants()
