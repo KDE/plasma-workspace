@@ -17,9 +17,18 @@ Q_DECL_EXPORT void kcminit()
     KConfig cfg(QStringLiteral("kcmfonts"));
     KConfigGroup fontsCfg(&cfg, "General");
 
-    QString fontDpiKey = KWindowSystem::isPlatformWayland() ? QStringLiteral("forceFontDPIWayland") : QStringLiteral("forceFontDPI");
+    int defaultDpi = 0;
+    const bool isWayland = KWindowSystem::isPlatformWayland();
 
-    const int dpi = fontsCfg.readEntry(fontDpiKey, 0);
+    if (isWayland) {
+        KConfig cfg(QStringLiteral("kwinrc"));
+        KConfigGroup xwaylandGroup = cfg.group("Xwayland");
+        qreal scale = xwaylandGroup.readEntry("Scale", 1.0);
+        defaultDpi = scale * 96;
+    }
+
+    QString fontDpiKey = isWayland ? QStringLiteral("forceFontDPIWayland") : QStringLiteral("forceFontDPI");
+    const int dpi = fontsCfg.readEntry(fontDpiKey, defaultDpi);
     if (dpi <= 0) {
         return;
     }
