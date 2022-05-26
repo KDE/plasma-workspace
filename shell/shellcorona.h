@@ -52,6 +52,7 @@ namespace KWayland
 namespace Client
 {
 class PlasmaShell;
+class PlasmaWindowManagement;
 }
 }
 
@@ -100,6 +101,7 @@ public:
     Plasma::Containment *createContainmentForActivity(const QString &activity, int screenNum);
 
     KWayland::Client::PlasmaShell *waylandPlasmaShellInterface() const;
+    KWayland::Client::PlasmaWindowManagement *waylandPlasmaWindowManagementInterface() const;
 
     ScreenPool *screenPool() const;
 
@@ -268,6 +270,8 @@ private:
     QTimer m_invariantsTimer;
 #endif
     KWayland::Client::PlasmaShell *m_waylandPlasmaShell;
+    // For getting the active window on Wayland
+    KWayland::Client::PlasmaWindowManagement *m_waylandWindowManagement = nullptr;
     bool m_closingDown : 1;
     QString m_testModeLayout;
 
