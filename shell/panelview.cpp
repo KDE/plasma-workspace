@@ -859,6 +859,14 @@ void PanelView::moveEvent(QMoveEvent *ev)
 
 void PanelView::keyPressEvent(QKeyEvent *event)
 {
+    // Press escape key to cancel focus on the panel
+    if (event->key() == Qt::Key_Escape) {
+        if (containment()->status() == Plasma::Types::AcceptingInputStatus) {
+            containment()->setStatus(Plasma::Types::PassiveStatus);
+        }
+        // No return for Wayland
+    }
+
     PlasmaQuick::ContainmentView::keyPressEvent(event);
     if (event->isAccepted()) {
         return;
