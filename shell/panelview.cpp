@@ -91,6 +91,13 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     connect(this, &PanelView::locationChanged, this, &PanelView::restore);
     connect(this, &PanelView::containmentChanged, this, &PanelView::refreshContainment);
 
+    // FEATURE 352476: cancel focus on the panel when clicking outside
+    connect(this, &PanelView::activeFocusItemChanged, this, [this] {
+        if (containment()->status() == Plasma::Types::AcceptingInputStatus && !activeFocusItem()) {
+            containment()->setStatus(Plasma::Types::PassiveStatus);
+        }
+    });
+
     if (!m_corona->kPackage().isValid()) {
         qCWarning(PLASMASHELL) << "Invalid home screen package";
     }
