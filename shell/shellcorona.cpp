@@ -276,6 +276,9 @@ void ShellCorona::init()
             if (nextItem) {
                 nextItem->forceActiveFocus();
             }
+        } else {
+            // Cancel focus
+            activePanel->containment()->setStatus(Plasma::Types::PassiveStatus);
         }
     });
 }
