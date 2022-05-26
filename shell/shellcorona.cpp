@@ -46,6 +46,7 @@
 
 #include <KWayland/Client/connection_thread.h>
 #include <KWayland/Client/plasmashell.h>
+#include <KWayland/Client/plasmawindowmanagement.h>
 #include <KWayland/Client/registry.h>
 
 #include "config-ktexteditor.h" // HAVE_KTEXTEDITOR
@@ -2174,6 +2175,9 @@ void ShellCorona::setupWaylandIntegration()
     connect(registry, &Registry::plasmaShellAnnounced, this, [this, registry](quint32 name, quint32 version) {
         m_waylandPlasmaShell = registry->createPlasmaShell(name, version, this);
     });
+    connect(registry, &KWayland::Client::Registry::plasmaWindowManagementAnnounced, this, [this, registry](quint32 name, quint32 version) {
+        m_waylandWindowManagement = registry->createPlasmaWindowManagement(name, version, this);
+    });
     registry->setup();
     connection->roundtrip();
     qApp->installEventFilter(new DismissPopupEventFilter(this));
@@ -2182,6 +2186,11 @@ void ShellCorona::setupWaylandIntegration()
 KWayland::Client::PlasmaShell *ShellCorona::waylandPlasmaShellInterface() const
 {
     return m_waylandPlasmaShell;
+}
+
+KWayland::Client::PlasmaWindowManagement *ShellCorona::waylandPlasmaWindowManagementInterface() const
+{
+    return m_waylandWindowManagement;
 }
 
 ScreenPool *ShellCorona::screenPool() const

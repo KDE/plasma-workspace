@@ -9,6 +9,9 @@
 #include <Plasma/Theme>
 #include <QPointer>
 #include <QTimer>
+#ifdef HAVE_X11
+#include <QWindow> // For WId
+#endif
 
 #include <PlasmaQuick/ConfigView>
 #include <PlasmaQuick/ContainmentView>
@@ -20,6 +23,7 @@ namespace KWayland
 namespace Client
 {
 class PlasmaShellSurface;
+class PlasmaWindow;
 }
 }
 
@@ -278,6 +282,12 @@ private:
     QPointer<QScreen> m_lastScreen;
     QPointer<QScreen> m_screenToFollow;
     QMetaObject::Connection m_transientWindowVisibleWatcher;
+
+    // Used to restore the previous activated window after the panel loses focus
+#ifdef HAVE_X11
+    WId m_previousWId = 0;
+#endif
+    KWayland::Client::PlasmaWindow *m_previousPlasmaWindow = nullptr;
 
     static const int STRUTSTIMERDELAY = 200;
 };
