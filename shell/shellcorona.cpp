@@ -265,18 +265,18 @@ void ShellCorona::init()
             return;
         }
         PanelView *activePanel = qobject_cast<PanelView *>(qGuiApp->focusWindow());
-        Plasma::Containment *containmentToActivate = nullptr;
-        if (activePanel) {
-            auto it = m_panelViews.constFind(activePanel->containment());
-            it++;
-            if (it != m_panelViews.constEnd()) {
-                containmentToActivate = it.value()->containment();
+        if (!activePanel) {
+            activePanel = m_panelViews.values().first();
+        }
+
+        if (activePanel->containment()->status() != Plasma::Types::AcceptingInputStatus) {
+            activePanel->containment()->setStatus(Plasma::Types::AcceptingInputStatus);
+
+            auto nextItem = activePanel->rootObject()->nextItemInFocusChain();
+            if (nextItem) {
+                nextItem->forceActiveFocus();
             }
         }
-        if (!containmentToActivate) {
-            containmentToActivate = m_panelViews.values().first()->containment();
-        }
-        emit containmentToActivate->activated();
     });
 }
 
