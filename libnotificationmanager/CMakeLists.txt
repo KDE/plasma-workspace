@@ -78,11 +78,11 @@ target_link_libraries(notificationmanager
         Qt::Gui
         Qt::Quick
         KF5::ConfigCore
-        KF5::ItemModels
     PRIVATE
         Qt::DBus
         KF5::ConfigGui
         KF5::I18n
+        KF5::ItemModels # KDescendantsProxyModel
         KF5::KIOFileWidgets
         KF5::Plasma
         KF5::Screen

@@ -6,11 +6,11 @@
 
 #include "notifications.h"
 
+#include <QConcatenateTablesProxyModel>
 #include <QDebug>
 #include <QMetaEnum>
 #include <QSharedPointer>
 
-#include <KConcatenateRowsProxyModel>
 #include <KDescendantsProxyModel>
 
 #include "limitedrowcountproxymodel_p.h"
@@ -67,7 +67,7 @@ public:
     JobsModel::Ptr jobsModel;
     QSharedPointer<Settings> settings() const;
 
-    KConcatenateRowsProxyModel *notificationsAndJobsModel = nullptr;
+    QConcatenateTablesProxyModel *notificationsAndJobsModel = nullptr;
 
     NotificationFilterProxyModel *filterModel = nullptr;
     NotificationSortProxyModel *sortModel = nullptr;
@@ -96,11 +96,11 @@ void Notifications::Private::initSourceModels()
 
     if (showNotifications && !notificationsModel) {
         notificationsModel = NotificationsModel::createNotificationsModel();
+        notificationsAndJobsModel->addSourceModel(notificationsModel.data());
         connect(notificationsModel.data(), &NotificationsModel::lastReadChanged, q, [this] {
             updateCount();
             Q_EMIT q->lastReadChanged();
         });
-        notificationsAndJobsModel->addSourceModel(notificationsModel.data());
     } else if (!showNotifications && notificationsModel) {
         notificationsAndJobsModel->removeSourceModel(notificationsModel.data());
         disconnect(notificationsModel.data(), nullptr, q, nullptr); // disconnect all
@@ -125,7 +125,7 @@ void Notifications::Private::initProxyModels()
      * NotificationsModel      JobsModel
      *        \\                 /
      *         \\               /
-     *     KConcatenateRowsProxyModel
+     *     QConcatenateTablesProxyModel
      *               |||
      *               |||
      *     NotificationFilterProxyModel
@@ -158,7 +158,7 @@ void Notifications::Private::initProxyModels()
      */
 
     if (!notificationsAndJobsModel) {
-        notificationsAndJobsModel = new KConcatenateRowsProxyModel(q);
+        notificationsAndJobsModel = new QConcatenateTablesProxyModel(q);
     }
 
     if (!filterModel) {
@@ -168,6 +168,8 @@ void Notifications::Private::initProxyModels()
         connect(filterModel, &NotificationFilterProxyModel::showDismissedChanged, q, &Notifications::showDismissedChanged);
         connect(filterModel, &NotificationFilterProxyModel::blacklistedDesktopEntriesChanged, q, &Notifications::blacklistedDesktopEntriesChanged);
         connect(filterModel, &NotificationFilterProxyModel::blacklistedNotifyRcNamesChanged, q, &Notifications::blacklistedNotifyRcNamesChanged);
+
+        filterModel->setSourceModel(notificationsAndJobsModel);
 
         connect(filterModel, &QAbstractItemModel::rowsInserted, q, [this] {
             updateCount();
@@ -187,8 +189,6 @@ void Notifications::Private::initProxyModels()
                         updateCount();
                     }
                 });
-
-        filterModel->setSourceModel(notificationsAndJobsModel);
     }
 
     if (!sortModel) {
@@ -344,8 +344,7 @@ QModelIndex Notifications::Private::mapFromModel(const QModelIndex &idx) const
                     found = true;
                     break;
                 }
-            } else if (auto *concatenateModel = qobject_cast<KConcatenateRowsProxyModel *>(model)) {
-                // There's no "sourceModels()" on KConcatenateRowsProxyModel
+            } else if (auto *concatenateModel = qobject_cast<QConcatenateTablesProxyModel *>(model)) {
                 if (idxModel == notificationsModel.data() || idxModel == jobsModel.data()) {
                     resolvedIdx = concatenateModel->mapFromSource(resolvedIdx);
                     found = true;
