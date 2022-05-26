@@ -33,10 +33,12 @@ public:
     ~GeneralWidget() override = default;
 
     void updateWidgets();
-    void save();
 
 Q_SIGNALS:
-    void settingChanged();
+    void widgetChanged();
+
+public Q_SLOTS:
+    void slotWidgetModified();
 
 private:
     QCheckBox *m_enableHistoryCb;
@@ -67,11 +69,6 @@ public:
     void setExcludedWMClasses(const QStringList &);
     QStringList excludedWMClasses() const;
 
-    void save();
-
-Q_SIGNALS:
-    void settingChanged();
-
 private Q_SLOTS:
     void onAdvanced();
 
@@ -97,9 +94,10 @@ public:
     ActionList actionList() const;
 
     void resetModifiedState();
+    bool hasChanged() const;
 
 Q_SIGNALS:
-    void settingChanged();
+    void widgetChanged();
 
 private Q_SLOTS:
     void onSelectionChanged();
@@ -150,6 +148,10 @@ public:
     static QLabel *createHintLabel(const QString &text, QWidget *parent);
     static QLabel *createHintLabel(const KConfigSkeletonItem *item, QWidget *parent);
     static QString manualShortcutString();
+
+protected:
+    // reimp
+    bool hasChanged() override;
 
 protected slots:
     // reimp

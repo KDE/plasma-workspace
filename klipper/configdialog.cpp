@@ -76,7 +76,7 @@ GeneralWidget::GeneralWidget(QWidget *parent)
     // Synchronise selection and clipboard
     const KConfigSkeletonItem *item = KlipperSettings::self()->syncClipboardsItem();
     m_syncClipboardsCb = new QCheckBox(item->label(), this);
-    m_syncClipboardsCb->setChecked(KlipperSettings::syncClipboards());
+    m_syncClipboardsCb->setObjectName(QLatin1String("kcfg_SyncClipboards"));
     layout->addRow(i18n("Selection and Clipboard:"), m_syncClipboardsCb);
 
     QLabel *hint = ConfigDialog::createHintLabel(item, this);
@@ -102,17 +102,14 @@ If it is turned off, the selection may still be saved in the clipboard history (
     // Retain clipboard history
     item = KlipperSettings::self()->keepClipboardContentsItem();
     m_enableHistoryCb = new QCheckBox(item->label(), this);
-    m_enableHistoryCb->setChecked(KlipperSettings::keepClipboardContents());
-    m_enableHistoryCb->setToolTip(item->toolTip());
+    m_enableHistoryCb->setObjectName(QLatin1String("kcfg_KeepClipboardContents"));
     layout->addRow(i18n("Clipboard history:"), m_enableHistoryCb);
 
     // Clipboard history size
     item = KlipperSettings::self()->maxClipItemsItem();
     m_historySizeSb = new KPluralHandlingSpinBox(this);
-    m_historySizeSb->setRange(item->minValue().toInt(), item->maxValue().toInt());
-    m_historySizeSb->setValue(KlipperSettings::maxClipItems());
+    m_historySizeSb->setObjectName(QLatin1String("kcfg_MaxClipItems"));
     m_historySizeSb->setSuffix(ki18ncp("Number of entries", " entry", " entries"));
-    m_historySizeSb->setToolTip(item->toolTip());
     layout->addRow(item->label(), m_historySizeSb);
 
     layout->addRow(QString(), new QLabel(this));
@@ -128,13 +125,17 @@ If it is turned off, the selection may still be saved in the clipboard history (
 
     QButtonGroup *buttonGroup = new QButtonGroup(this);
 
+    // This widget is not managed by KConfigDialogManager, but
+    // the other radio button is.  That is sufficient for the
+    // manager to handle widget changes, the Apply button etc.
     m_alwaysTextRb = new QRadioButton(i18n("Always save in history"), this);
-    m_alwaysTextRb->setChecked(!KlipperSettings::ignoreSelection());
+    m_alwaysTextRb->setChecked(true); // may be updated from settings later
+    connect(m_alwaysTextRb, &QAbstractButton::toggled, this, &GeneralWidget::widgetChanged);
     buttonGroup->addButton(m_alwaysTextRb);
     layout->addRow(i18n("Text selection:"), m_alwaysTextRb);
 
     m_copiedTextRb = new QRadioButton(i18n("Only when explicitly copied"), this);
-    m_copiedTextRb->setChecked(KlipperSettings::ignoreSelection());
+    m_copiedTextRb->setObjectName(QLatin1String("kcfg_IgnoreSelection"));
     buttonGroup->addButton(m_copiedTextRb);
     layout->addRow(QString(), m_copiedTextRb);
 
@@ -163,36 +164,51 @@ If it is turned off, the selection may still be saved in the clipboard history (
 
     buttonGroup = new QButtonGroup(this);
 
+    // This widget is not managed by KConfigDialogManager,
+    // but the other two radio buttons are.
     m_alwaysImageRb = new QRadioButton(i18n("Always save in history"), this);
-    m_alwaysImageRb->setChecked(!KlipperSettings::ignoreImages() && !KlipperSettings::selectionTextOnly());
+    m_alwaysImageRb->setChecked(true); // may be updated from settings later
+    connect(m_alwaysImageRb, &QAbstractButton::toggled, this, &GeneralWidget::widgetChanged);
     buttonGroup->addButton(m_alwaysImageRb);
     layout->addRow(i18n("Non-text selection:"), m_alwaysImageRb);
 
     m_copiedImageRb = new QRadioButton(i18n("Only when explicitly copied"), this);
-    m_copiedImageRb->setChecked(!KlipperSettings::ignoreImages() && KlipperSettings::selectionTextOnly());
+    m_copiedImageRb->setObjectName(QLatin1String("kcfg_SelectionTextOnly"));
     buttonGroup->addButton(m_copiedImageRb);
     layout->addRow(QString(), m_copiedImageRb);
 
     m_neverImageRb = new QRadioButton(i18n("Never save in history"), this);
-    m_neverImageRb->setChecked(KlipperSettings::ignoreImages());
+    m_neverImageRb->setObjectName(QLatin1String("kcfg_IgnoreImages"));
     buttonGroup->addButton(m_neverImageRb);
     layout->addRow(QString(), m_neverImageRb);
 
     layout->addRow(QString(), ConfigDialog::createHintLabel(i18n("Whether non-text selections (such as images) are saved in the clipboard history."), this));
 
-    layout->addRow(QString(), new QLabel(this));
-
     m_settingsSaved = false;
-    connect(m_syncClipboardsCb, &QAbstractButton::clicked, this, &GeneralWidget::updateWidgets);
-
-    layout->addItem(new QSpacerItem(QSizePolicy::Fixed, QSizePolicy::Expanding));
 }
 
 void GeneralWidget::updateWidgets()
 {
+    // Initialise widgets which are not managed by KConfigDialogManager
+    // from the application settings.
+
+    // SelectionTextOnly takes precedence over IgnoreImages,
+    // see Klipper::checkClipData().  Give that radio button
+    // priority too.
+    if (KlipperSettings::selectionTextOnly()) {
+        KlipperSettings::setIgnoreImages(false);
+    }
+}
+
+void GeneralWidget::slotWidgetModified()
+{
+    // A setting widget has been changed.  Update the state of
+    // any other widgets that depend on it.
+
     if (m_syncClipboardsCb->isChecked()) {
         m_alwaysImageRb->setEnabled(true);
         m_alwaysTextRb->setEnabled(true);
+        m_copiedTextRb->setEnabled(true);
 
         if (m_settingsSaved) {
             m_alwaysTextRb->setChecked(m_prevAlwaysText);
@@ -214,20 +230,8 @@ void GeneralWidget::updateWidgets()
 
         m_alwaysImageRb->setEnabled(false);
         m_alwaysTextRb->setEnabled(false);
+        m_copiedTextRb->setEnabled(false);
     }
-}
-
-void GeneralWidget::save()
-{
-    KlipperSettings::setKeepClipboardContents(m_enableHistoryCb->isChecked());
-    KlipperSettings::setSyncClipboards(m_syncClipboardsCb->isChecked());
-
-    KlipperSettings::setIgnoreSelection(m_copiedTextRb->isChecked());
-
-    KlipperSettings::setIgnoreImages(m_neverImageRb->isChecked());
-    KlipperSettings::setSelectionTextOnly(m_copiedImageRb->isChecked());
-
-    KlipperSettings::setMaxClipItems(m_historySizeSb->value());
 }
 
 //////////////////////////
@@ -242,15 +246,13 @@ PopupWidget::PopupWidget(QWidget *parent)
     // Automatic popup
     const KConfigSkeletonItem *item = KlipperSettings::self()->uRLGrabberEnabledItem();
     m_enablePopupCb = new QCheckBox(item->label(), this);
-    m_enablePopupCb->setChecked(KlipperSettings::uRLGrabberEnabled());
-    m_enablePopupCb->setToolTip(item->toolTip());
+    m_enablePopupCb->setObjectName(QLatin1String("kcfg_URLGrabberEnabled"));
     layout->addRow(i18n("Show action popup menu:"), m_enablePopupCb);
 
     // Replay from history popup
     item = KlipperSettings::self()->replayActionInHistoryItem();
     m_historyPopupCb = new QCheckBox(item->label(), this);
-    m_historyPopupCb->setChecked(KlipperSettings::replayActionInHistory());
-    m_historyPopupCb->setToolTip(item->toolTip());
+    m_historyPopupCb->setObjectName(QLatin1String("kcfg_ReplayActionInHistory"));
     layout->addRow(QString(), m_historyPopupCb);
 
     const QList<QKeySequence> keys = KGlobalAccel::self()->globalShortcut(QCoreApplication::applicationName(), QStringLiteral("repeat_action"));
@@ -277,11 +279,9 @@ then it can be shown by using the <shortcut>%1</shortcut> key shortcut.",
     // Action popup time
     item = KlipperSettings::self()->timeoutForActionPopupsItem();
     m_actionTimeoutSb = new KPluralHandlingSpinBox(this);
-    m_actionTimeoutSb->setRange(item->minValue().toInt(), item->maxValue().toInt());
-    m_actionTimeoutSb->setValue(KlipperSettings::timeoutForActionPopups());
+    m_actionTimeoutSb->setObjectName(QLatin1String("kcfg_TimeoutForActionPopups"));
     m_actionTimeoutSb->setSuffix(ki18ncp("Unit of time", " second", " seconds"));
     m_actionTimeoutSb->setSpecialValueText(i18nc("No timeout", "None"));
-    m_actionTimeoutSb->setToolTip(item->toolTip());
     layout->addRow(item->label(), m_actionTimeoutSb);
 
     layout->addRow(QString(), new QLabel(this));
@@ -289,14 +289,14 @@ then it can be shown by using the <shortcut>%1</shortcut> key shortcut.",
     // Remove whitespace
     item = KlipperSettings::self()->stripWhiteSpaceItem();
     m_stripWhitespaceCb = new QCheckBox(item->label(), this);
-    m_stripWhitespaceCb->setChecked(KlipperSettings::stripWhiteSpace());
+    m_stripWhitespaceCb->setObjectName(QLatin1String("kcfg_StripWhiteSpace"));
     layout->addRow(i18n("Options:"), m_stripWhitespaceCb);
     layout->addRow(QString(), ConfigDialog::createHintLabel(item, this));
 
     // MIME actions
     item = KlipperSettings::self()->enableMagicMimeActionsItem();
     m_mimeActionsCb = new QCheckBox(item->label(), this);
-    m_mimeActionsCb->setChecked(KlipperSettings::enableMagicMimeActions());
+    m_mimeActionsCb->setObjectName(QLatin1String("kcfg_EnableMagicMimeActions"));
     layout->addRow(QString(), m_mimeActionsCb);
     layout->addRow(QString(), ConfigDialog::createHintLabel(item, this));
 
@@ -348,17 +348,6 @@ void PopupWidget::onAdvanced()
     if (dlg.exec() == QDialog::Accepted) {
         m_exclWMClasses = widget->wmClasses();
     }
-}
-
-void PopupWidget::save()
-{
-    KlipperSettings::setURLGrabberEnabled(m_enablePopupCb->isChecked());
-    KlipperSettings::setReplayActionInHistory(m_historyPopupCb->isChecked());
-
-    KlipperSettings::setStripWhiteSpace(m_stripWhitespaceCb->isChecked());
-    KlipperSettings::setEnableMagicMimeActions(m_mimeActionsCb->isChecked());
-
-    KlipperSettings::setTimeoutForActionPopups(m_actionTimeoutSb->value());
 }
 
 //////////////////////////
@@ -540,6 +529,7 @@ void ActionsWidget::onAddAction()
         QTreeWidgetItem *item = new QTreeWidgetItem;
         updateActionItem(item, newAct);
         m_actionsTree->addTopLevelItem(item);
+        emit widgetChanged();
     }
 }
 
@@ -569,6 +559,7 @@ void ActionsWidget::onEditAction()
     // dialog will save values into action if user hits OK
     if (dlg.exec() == QDialog::Accepted) {
         updateActionItem(item, action);
+        emit widgetChanged();
     }
 }
 
@@ -596,7 +587,13 @@ void ActionsWidget::onDeleteAction()
         int idx = m_actionsTree->indexOfTopLevelItem(item);
         m_actionList.removeAt(idx);
         delete item;
+        emit widgetChanged();
     }
+}
+
+bool ActionsWidget::hasChanged() const
+{
+    return (m_actionsTree->actionsChanged() != -1);
 }
 
 //////////////////////////
@@ -617,8 +614,9 @@ ConfigDialog::ConfigDialog(QWidget *parent, KConfigSkeleton *skeleton, Klipper *
     m_shortcutsWidget = new KShortcutsEditor(collection, this, KShortcutsEditor::GlobalAction);
     addPage(m_shortcutsWidget, i18nc("Shortcuts Config", "Shortcuts"), QStringLiteral("preferences-desktop-keyboard"), i18n("Shortcuts Configuration"));
 
-    connect(m_generalPage, &GeneralWidget::settingChanged, this, &ConfigDialog::settingsChangedSlot);
-    connect(m_popupPage, &PopupWidget::settingChanged, this, &ConfigDialog::settingsChangedSlot);
+    connect(m_generalPage, &GeneralWidget::widgetChanged, this, &ConfigDialog::settingsChangedSlot);
+    connect(m_actionsPage, &ActionsWidget::widgetChanged, this, &ConfigDialog::settingsChangedSlot);
+    connect(this, &KConfigDialog::widgetModified, m_generalPage, &GeneralWidget::slotWidgetModified);
 
     // from KWindowConfig::restoreWindowSize() API documentation
     (void) winId();
@@ -629,7 +627,8 @@ ConfigDialog::ConfigDialog(QWidget *parent, KConfigSkeleton *skeleton, Klipper *
 
 void ConfigDialog::updateSettings()
 {
-    // user clicked Ok or Apply
+    // The user clicked "OK" or "Apply".  Save the settings from the widgets
+    // to the application settings.
 
     if (!m_klipper) {
         qCDebug(KLIPPER_LOG) << "Klipper object is null";
@@ -637,9 +636,6 @@ void ConfigDialog::updateSettings()
     }
 
     m_shortcutsWidget->save();
-    m_generalPage->save();
-    m_popupPage->save();
-
     m_actionsPage->resetModifiedState();
 
     m_klipper->setURLGrabberEnabled(KlipperSettings::uRLGrabberEnabled());
@@ -655,7 +651,8 @@ void ConfigDialog::updateSettings()
 
 void ConfigDialog::updateWidgets()
 {
-    // settings were updated, update widgets
+    // The dialogue is being shown.  Initialise widgets which are not
+    // managed by KConfigDialogManager from the application settings.
 
     if (m_klipper && m_klipper->urlGrabber()) {
         m_actionsPage->setActionList(m_klipper->urlGrabber()->actionList());
@@ -664,14 +661,23 @@ void ConfigDialog::updateWidgets()
         qCDebug(KLIPPER_LOG) << "Klipper or grabber object is null";
         return;
     }
+
     m_generalPage->updateWidgets();
 }
 
 void ConfigDialog::updateWidgetsDefault()
 {
-    // default widget values requested
+    // The user clicked "Defaults".  Restore the default values for
+    // widgets which are not managed by KConfigDialogManager.  The
+    // settings of "Actions Configuration" and "Excluded Windows"
+    // are not reset to the default.
 
     m_shortcutsWidget->allDefault();
+}
+
+bool ConfigDialog::hasChanged()
+{
+    return (m_actionsPage->hasChanged() || m_shortcutsWidget->isModified());
 }
 
 //////////////////////////
