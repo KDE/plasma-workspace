@@ -34,6 +34,18 @@ KlipperTray::KlipperTray()
     slotSetToolTipFromHistory();
 }
 
+KlipperTray::~KlipperTray()
+{
+    // Klipper abuses the KStatusNotifierItem slightly by setting both
+    // the associated widget and the context menu to the same widget,
+    // the KlipperPopup.  This is done so that either a left click or a
+    // right click on the icon brings up the combined menu.  Unfortunately
+    // this causes a crash in ~KStatusNotifierItem() when it first
+    // deletes the menu and then tries to disconnect the associated widget.
+    // Work around this by resetting the associated widget first.
+    setAssociatedWidget(nullptr);
+}
+
 void KlipperTray::slotSetToolTipFromHistory()
 {
     const int TOOLTIP_LENGTH_LIMIT = 200;

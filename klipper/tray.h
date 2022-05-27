@@ -16,6 +16,7 @@ class KlipperTray : public KStatusNotifierItem
 
 public:
     KlipperTray();
+    ~KlipperTray() override;
 
 public Q_SLOTS:
     void slotSetToolTipFromHistory();
