@@ -24,9 +24,14 @@ PlasmaExtras.Representation {
     // TODO these should be configurable in the future
     readonly property int dndMorningHour: 6
     readonly property int dndEveningHour: 20
+    readonly property var appletInterface: Plasmoid.self
 
-    implicitWidth: PlasmaCore.Units.gridUnit * 18
-    implicitHeight: PlasmaCore.Units.gridUnit * 24
+    Layout.minimumWidth: PlasmaCore.Units.gridUnit * 12
+    Layout.minimumHeight: PlasmaCore.Units.gridUnit * 12
+    Layout.preferredWidth: PlasmaCore.Units.gridUnit * 18
+    Layout.preferredHeight: PlasmaCore.Units.gridUnit * 24
+    Layout.maximumWidth: PlasmaCore.Units.gridUnit * 80
+    Layout.maximumHeight: PlasmaCore.Units.gridUnit * 40
 
     Layout.fillHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical
 

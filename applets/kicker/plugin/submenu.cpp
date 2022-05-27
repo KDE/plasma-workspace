@@ -18,7 +18,7 @@ SubMenu::SubMenu(QQuickItem *parent)
     , m_offset(0)
     , m_facingLeft(false)
 {
-    setType(PopupMenu);
+    setType(AppletPopup);
 }
 
 SubMenu::~SubMenu()

@@ -239,11 +239,15 @@ Item {
     }
 
     Plasmoid.fullRepresentation: PopupDialog {
-        id: dialogItem
-        Layout.minimumWidth: PlasmaCore.Units.iconSizes.medium * 9
-        Layout.minimumHeight: PlasmaCore.Units.gridUnit * 15
-        // TODO Probably needs a sensible preferredHeight too
+        readonly property var appletInterface: Plasmoid.self
 
+        Layout.minimumWidth: PlasmaCore.Units.iconSizes.medium * 9
+        Layout.maximumWidth: PlasmaCore.Units.gridUnit * 80
+
+        Layout.minimumHeight: PlasmaCore.Units.gridUnit * 15
+        Layout.maximumHeight: PlasmaCore.Units.gridUnit * 40
+
+        id: dialogItem
         model: Plasmoid.expanded ? batteries : null
         focus: true
 

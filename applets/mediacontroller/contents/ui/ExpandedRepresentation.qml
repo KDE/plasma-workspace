@@ -24,8 +24,10 @@ PlasmaExtras.Representation {
 
     Layout.minimumWidth: PlasmaCore.Units.gridUnit * 14
     Layout.minimumHeight: PlasmaCore.Units.gridUnit * 14
-    Layout.preferredWidth: Layout.minimumWidth * 1.5
-    Layout.preferredHeight: Layout.minimumHeight * 1.5
+    Layout.preferredWidth: PlasmaCore.Units.gridUnit * 20
+    Layout.preferredHeight: PlasmaCore.Units.gridUnit * 20
+    Layout.maximumWidth: PlasmaCore.Units.gridUnit * 40
+    Layout.maximumHeight: PlasmaCore.Units.gridUnit * 40
 
     collapseMarginsHint: true
 
@@ -36,6 +38,7 @@ PlasmaExtras.Representation {
     readonly property double length: currentMetadata ? currentMetadata["mpris:length"] || 0 : 0
     readonly property bool canSeek: (mpris2Source.currentData && mpris2Source.currentData.CanSeek) || false
     readonly property bool softwareRendering: GraphicsInfo.api === GraphicsInfo.Software
+    readonly property var appletInterface: Plasmoid.self
 
     // only show hours (the default for KFormat) when track is actually longer than an hour
     readonly property int durationFormattingOptions: length >= 60*60*1000*1000 ? 0 : KCoreAddons.FormatTypes.FoldHours

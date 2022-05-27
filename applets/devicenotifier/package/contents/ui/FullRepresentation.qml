@@ -19,10 +19,13 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 PlasmaExtras.Representation {
     id: fullRep
+    readonly property var appletInterface: Plasmoid.self
     property bool spontaneousOpen: false
 
     Layout.minimumWidth: PlasmaCore.Units.gridUnit * 12
     Layout.minimumHeight: PlasmaCore.Units.gridUnit * 12
+    Layout.maximumWidth: PlasmaCore.Units.gridUnit * 80
+    Layout.maximumHeight: PlasmaCore.Units.gridUnit * 40
 
     collapseMarginsHint: true
 

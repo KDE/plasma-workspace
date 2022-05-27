@@ -220,8 +220,12 @@ Item {
         }
     }
     Plasmoid.fullRepresentation: PlasmaCalendar.MonthView {
-        Layout.minimumWidth: PlasmaCore.Units.gridUnit * 20
-        Layout.minimumHeight: PlasmaCore.Units.gridUnit * 20
+        readonly property var appletInterface: Plasmoid.self
+
+        Layout.minimumWidth: PlasmaCore.Units.gridUnit * 22
+        Layout.maximumWidth: PlasmaCore.Units.gridUnit * 80
+        Layout.minimumHeight: PlasmaCore.Units.gridUnit * 22
+        Layout.maximumHeight: PlasmaCore.Units.gridUnit * 40
 
         today: dataSource.data["Local"]["DateTime"]
     }

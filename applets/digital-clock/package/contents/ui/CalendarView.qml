@@ -23,19 +23,16 @@ import org.kde.plasma.private.digitalclock 1.0
 PlasmaExtras.Representation {
     id: calendar
 
-    // The "sensible" values
-    property int _minimumWidth: (calendar.showAgenda || calendar.showClocks) ? PlasmaCore.Units.gridUnit * 45 : PlasmaCore.Units.gridUnit * 22
-    property int _minimumHeight: PlasmaCore.Units.gridUnit * 25
+    readonly property var appletInterface: Plasmoid.self
 
     PlasmaCore.ColorScope.inherit: false
     PlasmaCore.ColorScope.colorGroup: PlasmaCore.Theme.NormalColorGroup
 
-    Layout.minimumWidth: _minimumWidth
-    Layout.minimumHeight: _minimumHeight
-    Layout.preferredWidth: _minimumWidth
-    Layout.preferredHeight: _minimumHeight
-    Layout.maximumWidth: _minimumWidth
-    Layout.maximumHeight: _minimumHeight
+    Layout.minimumWidth: (calendar.showAgenda || calendar.showClocks) ? PlasmaCore.Units.gridUnit * 45 : PlasmaCore.Units.gridUnit * 22
+    Layout.maximumWidth: PlasmaCore.Units.gridUnit * 80
+
+    Layout.minimumHeight: PlasmaCore.Units.gridUnit * 25
+    Layout.maximumHeight: PlasmaCore.Units.gridUnit * 40
 
     collapseMarginsHint: true
 

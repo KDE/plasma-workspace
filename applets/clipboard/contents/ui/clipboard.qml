@@ -84,8 +84,10 @@ Item {
 
     Plasmoid.fullRepresentation: PlasmaExtras.Representation {
         id: dialogItem
-        Layout.minimumWidth: PlasmaCore.Units.gridUnit * 5
-        Layout.minimumHeight: PlasmaCore.Units.gridUnit * 5
+        Layout.minimumWidth: PlasmaCore.Units.gridUnit * 24
+        Layout.minimumHeight: PlasmaCore.Units.gridUnit * 24
+        Layout.maximumWidth: PlasmaCore.Units.gridUnit * 80
+        Layout.maximumHeight: PlasmaCore.Units.gridUnit * 40
         collapseMarginsHint: true
 
         focus: true
@@ -93,6 +95,7 @@ Item {
         header: stack.currentItem.header
 
         property alias listMargins: listItemSvg.margins
+        readonly property var appletInterface: Plasmoid.self
 
         PlasmaCore.FrameSvgItem {
             id : listItemSvg

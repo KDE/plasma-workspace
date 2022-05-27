@@ -7,6 +7,7 @@
 
 import QtQuick 2.12
 import QtQuick.Layouts 1.12
+import QtQuick.Window 2.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 // We still need PC2 here for that version of Menu, as PC2 Menu is still very problematic with QActions
@@ -18,19 +19,12 @@ import org.kde.plasma.plasmoid 2.0
 
 Item {
     id: popup
-    //set width/height to avoid useless Dialog resize
-    readonly property int defaultWidth: PlasmaCore.Units.gridUnit * 24
-    readonly property int defaultHeight: PlasmaCore.Units.gridUnit * 24
 
-    width: defaultWidth
-    Layout.minimumWidth: defaultWidth
-    Layout.preferredWidth: defaultWidth
-    Layout.maximumWidth: defaultWidth
+    Layout.minimumWidth: PlasmaCore.Units.gridUnit * 24
+    Layout.maximumWidth: PlasmaCore.Units.gridUnit * 80
 
-    height: defaultHeight
-    Layout.minimumHeight: defaultHeight
-    Layout.preferredHeight: defaultHeight
-    Layout.maximumHeight: defaultHeight
+    Layout.minimumHeight: PlasmaCore.Units.gridUnit * 24
+    Layout.maximumHeight: PlasmaCore.Units.gridUnit * 40
 
     property alias hiddenLayout: hiddenItemsView.layout
     property alias plasmoidContainer: container
