@@ -419,7 +419,6 @@ void WaylandTasksModel::Private::slotDelayedDataChanged()
         const auto &set = m_updateRolesMap[window];
 
         Q_EMIT q->dataChanged(idx, idx, QVector<int>(set.constBegin(), set.constEnd()));
-
     }
 
     m_updateRolesMap.clear();
