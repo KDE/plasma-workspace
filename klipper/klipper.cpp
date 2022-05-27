@@ -154,7 +154,7 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mo
     m_toggleURLGrabAction = new KToggleAction(this);
     m_collection->addAction(QStringLiteral("clipboard_action"), m_toggleURLGrabAction);
     m_toggleURLGrabAction->setText(i18nc("@action:inmenu Toggle automatic action", "Automatic Action Popup Menu"));
-    KGlobalAccel::setGlobalShortcut(m_toggleURLGrabAction, QKeySequence(Qt::ALT + Qt::CTRL + Qt::Key_X));
+    KGlobalAccel::setGlobalShortcut(m_toggleURLGrabAction, QKeySequence(Qt::META + Qt::CTRL + Qt::Key_X));
     connect(m_toggleURLGrabAction, &QAction::toggled, this, &Klipper::setURLGrabberEnabled);
 
     /*
@@ -195,7 +195,8 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mo
 
     m_repeatAction = m_collection->addAction(QStringLiteral("repeat_action"));
     m_repeatAction->setText(i18nc("@action:inmenu", "Manually Invoke Action on Current Clipboard"));
-    KGlobalAccel::setGlobalShortcut(m_repeatAction, QKeySequence(Qt::ALT | Qt::CTRL | Qt::Key_R));
+    KGlobalAccel::setGlobalShortcut(m_repeatAction, QKeySequence(Qt::META | Qt::CTRL | Qt::Key_R));
+
     connect(m_repeatAction, &QAction::triggered, this, &Klipper::slotRepeatAction);
 
     // add an edit-possibility
