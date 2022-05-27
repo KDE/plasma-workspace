@@ -399,7 +399,7 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
     } else if (role == LauncherUrl || role == LauncherUrlWithoutIcon) {
         return d->appData(window).url;
     } else if (role == WinIdList) {
-        return QVariantList() << window->uuid();
+        return QVariantList{window->uuid()};
     } else if (role == MimeType) {
         return d->mimeType();
     } else if (role == MimeData) {
@@ -469,7 +469,7 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
         return canLauchNewInstance(d->appData(window));
     }
 
-    return QVariant();
+    return {};
 }
 
 int WaylandTasksModel::rowCount(const QModelIndex &parent) const
@@ -486,7 +486,7 @@ void WaylandTasksModel::requestActivate(const QModelIndex &index)
 {
     // FIXME Lacks transient handling of the XWindows version.
 
-    if (!index.isValid() || index.model() != this || index.row() < 0 || index.row() >= d->windows.count()) {
+    if (!checkIndex(index, QAbstractItemModel::CheckIndexOption::IndexIsValid | QAbstractItemModel::CheckIndexOption::DoNotUseParent)) {
         return;
     }
 
@@ -495,7 +495,7 @@ void WaylandTasksModel::requestActivate(const QModelIndex &index)
 
 void WaylandTasksModel::requestNewInstance(const QModelIndex &index)
 {
-    if (!index.isValid() || index.model() != this || index.row() < 0 || index.row() >= d->windows.count()) {
+    if (!checkIndex(index, QAbstractItemModel::CheckIndexOption::IndexIsValid | QAbstractItemModel::CheckIndexOption::DoNotUseParent)) {
         return;
     }
 
@@ -504,7 +504,7 @@ void WaylandTasksModel::requestNewInstance(const QModelIndex &index)
 
 void WaylandTasksModel::requestOpenUrls(const QModelIndex &index, const QList<QUrl> &urls)
 {
-    if (!index.isValid() || index.model() != this || index.row() < 0 || index.row() >= d->windows.count() || urls.isEmpty()) {
+    if (!checkIndex(index, QAbstractItemModel::CheckIndexOption::IndexIsValid | QAbstractItemModel::CheckIndexOption::DoNotUseParent) || urls.isEmpty()) {
         return;
     }
 
@@ -513,7 +513,7 @@ void WaylandTasksModel::requestOpenUrls(const QModelIndex &index, const QList<QU
 
 void WaylandTasksModel::requestClose(const QModelIndex &index)
 {
-    if (!index.isValid() || index.model() != this || index.row() < 0 || index.row() >= d->windows.count()) {
+    if (!checkIndex(index, QAbstractItemModel::CheckIndexOption::IndexIsValid | QAbstractItemModel::CheckIndexOption::DoNotUseParent)) {
         return;
     }
 
@@ -522,7 +522,7 @@ void WaylandTasksModel::requestClose(const QModelIndex &index)
 
 void WaylandTasksModel::requestMove(const QModelIndex &index)
 {
-    if (!index.isValid() || index.model() != this || index.row() < 0 || index.row() >= d->windows.count()) {
+    if (!checkIndex(index, QAbstractItemModel::CheckIndexOption::IndexIsValid | QAbstractItemModel::CheckIndexOption::DoNotUseParent)) {
         return;
     }
 
@@ -534,7 +534,7 @@ void WaylandTasksModel::requestMove(const QModelIndex &index)
 
 void WaylandTasksModel::requestResize(const QModelIndex &index)
 {
-    if (!index.isValid() || index.model() != this || index.row() < 0 || index.row() >= d->windows.count()) {
+    if (!checkIndex(index, QAbstractItemModel::CheckIndexOption::IndexIsValid | QAbstractItemModel::CheckIndexOption::DoNotUseParent)) {
         return;
     }
 
@@ -546,7 +546,7 @@ void WaylandTasksModel::requestResize(const QModelIndex &index)
 
 void WaylandTasksModel::requestToggleMinimized(const QModelIndex &index)
 {
-    if (!index.isValid() || index.model() != this || index.row() < 0 || index.row() >= d->windows.count()) {
+    if (!checkIndex(index, QAbstractItemModel::CheckIndexOption::IndexIsValid | QAbstractItemModel::CheckIndexOption::DoNotUseParent)) {
         return;
     }
 
@@ -555,7 +555,7 @@ void WaylandTasksModel::requestToggleMinimized(const QModelIndex &index)
 
 void WaylandTasksModel::requestToggleMaximized(const QModelIndex &index)
 {
-    if (!index.isValid() || index.model() != this || index.row() < 0 || index.row() >= d->windows.count()) {
+    if (!checkIndex(index, QAbstractItemModel::CheckIndexOption::IndexIsValid | QAbstractItemModel::CheckIndexOption::DoNotUseParent)) {
         return;
     }
 
@@ -567,7 +567,7 @@ void WaylandTasksModel::requestToggleMaximized(const QModelIndex &index)
 
 void WaylandTasksModel::requestToggleKeepAbove(const QModelIndex &index)
 {
-    if (!index.isValid() || index.model() != this || index.row() < 0 || index.row() >= d->windows.count()) {
+    if (!checkIndex(index, QAbstractItemModel::CheckIndexOption::IndexIsValid | QAbstractItemModel::CheckIndexOption::DoNotUseParent)) {
         return;
     }
 
@@ -576,7 +576,7 @@ void WaylandTasksModel::requestToggleKeepAbove(const QModelIndex &index)
 
 void WaylandTasksModel::requestToggleKeepBelow(const QModelIndex &index)
 {
-    if (!index.isValid() || index.model() != this || index.row() < 0 || index.row() >= d->windows.count()) {
+    if (!checkIndex(index, QAbstractItemModel::CheckIndexOption::IndexIsValid | QAbstractItemModel::CheckIndexOption::DoNotUseParent)) {
         return;
     }
 
@@ -592,7 +592,7 @@ void WaylandTasksModel::requestToggleFullScreen(const QModelIndex &index)
 
 void WaylandTasksModel::requestToggleShaded(const QModelIndex &index)
 {
-    if (!index.isValid() || index.model() != this || index.row() < 0 || index.row() >= d->windows.count()) {
+    if (!checkIndex(index, QAbstractItemModel::CheckIndexOption::IndexIsValid | QAbstractItemModel::CheckIndexOption::DoNotUseParent)) {
         return;
     }
 
@@ -605,7 +605,7 @@ void WaylandTasksModel::requestVirtualDesktops(const QModelIndex &index, const Q
     // the window" logic from X11 version. This behavior should be in KWin rather than
     // libtm however.
 
-    if (!index.isValid() || index.model() != this || index.row() < 0 || index.row() >= d->windows.count()) {
+    if (!checkIndex(index, QAbstractItemModel::CheckIndexOption::IndexIsValid | QAbstractItemModel::CheckIndexOption::DoNotUseParent)) {
         return;
     }
 
@@ -642,7 +642,7 @@ void WaylandTasksModel::requestVirtualDesktops(const QModelIndex &index, const Q
 
 void WaylandTasksModel::requestNewVirtualDesktop(const QModelIndex &index)
 {
-    if (!index.isValid() || index.model() != this || index.row() < 0 || index.row() >= d->windows.count()) {
+    if (!checkIndex(index, QAbstractItemModel::CheckIndexOption::IndexIsValid | QAbstractItemModel::CheckIndexOption::DoNotUseParent)) {
         return;
     }
 
@@ -651,7 +651,7 @@ void WaylandTasksModel::requestNewVirtualDesktop(const QModelIndex &index)
 
 void WaylandTasksModel::requestActivities(const QModelIndex &index, const QStringList &activities)
 {
-    if (!index.isValid() || index.model() != this || index.row() < 0 || index.row() >= d->windows.count()) {
+    if (!checkIndex(index, QAbstractItemModel::CheckIndexOption::IndexIsValid | QAbstractItemModel::CheckIndexOption::DoNotUseParent)) {
         return;
     }
 
@@ -683,7 +683,7 @@ void WaylandTasksModel::requestPublishDelegateGeometry(const QModelIndex &index,
 
     Q_UNUSED(geometry)
 
-    if (!index.isValid() || index.model() != this || index.row() < 0 || index.row() >= d->windows.count()) {
+    if (!checkIndex(index, QAbstractItemModel::CheckIndexOption::IndexIsValid | QAbstractItemModel::CheckIndexOption::DoNotUseParent)) {
         return;
     }
 
