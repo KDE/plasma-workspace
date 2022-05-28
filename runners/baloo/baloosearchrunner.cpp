@@ -130,7 +130,7 @@ RemoteMatches SearchRunner::matchInternal(const QString &searchTerm, const QStri
         match.text = url.fileName();
         match.iconName = mimeDb.mimeTypeForFile(localUrl).iconName();
         match.relevance = relevance;
-        match.type = Plasma::QueryMatch::PossibleMatch;
+        match.type = url.fileName().contains(searchTerm, Qt::CaseInsensitive) ? Plasma::QueryMatch::PossibleMatch : Plasma::QueryMatch::CompletionMatch;
         QVariantMap properties;
 
         QString folderPath = url.adjusted(QUrl::RemoveFilename | QUrl::StripTrailingSlash).toLocalFile();
