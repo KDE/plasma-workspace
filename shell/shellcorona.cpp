@@ -1033,14 +1033,13 @@ QRegion ShellCorona::_availableScreenRegion(int id) const
         return s ? s->availableGeometry() : QRegion();
     }
 
-    QRegion r = view->geometry();
-    for (const PanelView *v : m_panelViews) {
+    return std::accumulate(m_panelViews.cbegin(), m_panelViews.cend(), QRegion(view->geometry()), [view](const QRegion &a, const PanelView *v) {
         if (v->isVisible() && view->screen() == v->screen() && v->visibilityMode() != PanelView::AutoHide) {
             // if the panel is being moved around, we still want to calculate it from the edge
-            r -= v->geometryByDistance(0);
+            return a - v->geometryByDistance(0);
         }
-    }
-    return r;
+        return a;
+    });
 }
 
 QRect ShellCorona::availableScreenRect(int id) const
