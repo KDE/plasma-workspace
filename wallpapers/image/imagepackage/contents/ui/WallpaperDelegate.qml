@@ -122,4 +122,11 @@ KCM.GridDelegate {
         }
         GridView.currentIndex = index;
     }
+
+    onDoubleClicked: {
+        // Apply image directly
+        if (configDialog.currentWallpaper == "org.kde.image") {
+            wallpaper.configuration.Image = cfg_Image;
+        }
+    }
 }
