@@ -223,6 +223,7 @@ private Q_SLOTS:
 
     void addOutput(QScreen *screen);
     void primaryScreenChanged(QScreen *oldScreen, QScreen *newScreen);
+    void refreshGeometry();
 
     void panelContainmentDestroyed(QObject *cont);
     void handleScreenRemoved(QScreen *screen);

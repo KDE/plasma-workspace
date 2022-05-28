@@ -70,6 +70,9 @@ public:
 
     Q_INVOKABLE QString fileFromPackage(const QString &key, const QString &fileName);
 
+public Q_SLOTS:
+    void screenGeometryChanged();
+
 protected:
     bool event(QEvent *e) override;
     void keyPressEvent(QKeyEvent *e) override;
@@ -79,9 +82,6 @@ protected Q_SLOTS:
      * It will be called when the configuration is requested
      */
     void showConfigurationInterface(Plasma::Applet *applet) override;
-
-private Q_SLOTS:
-    void screenGeometryChanged();
 
 Q_SIGNALS:
     void stayBehindChanged();

@@ -186,6 +186,9 @@ public:
     void setScreenToFollow(QScreen *screen);
     QScreen *screenToFollow() const;
 
+public Q_SLOTS:
+    void restore();
+
 protected:
     void resizeEvent(QResizeEvent *ev) override;
     void showEvent(QShowEvent *event) override;
@@ -220,7 +223,6 @@ protected Q_SLOTS:
 
 private Q_SLOTS:
     void positionPanel();
-    void restore();
     void setAutoHideEnabled(bool autoHideEnabled);
     void showTemporarily();
     void refreshContainment();

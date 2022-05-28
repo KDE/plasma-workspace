@@ -788,6 +788,17 @@ void ShellCorona::primaryScreenChanged(QScreen *oldPrimary, QScreen *newPrimary)
     connect(m_desktopViewForScreen[m_screenPool->primaryScreen()], &DesktopView::accentColorChanged, this, &ShellCorona::colorChanged);
 }
 
+void ShellCorona::refreshGeometry()
+{
+    for (DesktopView *v : std::as_const(m_desktopViewForScreen)) {
+        v->screenGeometryChanged();
+    }
+
+    for (PanelView *v : std::as_const(m_panelViews)) {
+        v->restore();
+    }
+}
+
 #ifndef NDEBUG
 void ShellCorona::screenInvariants() const
 {
@@ -1161,6 +1172,22 @@ void ShellCorona::handleScreenRemoved(QScreen *screen)
     if (DesktopView *v = desktopForScreen(screen)) {
         removeDesktop(v);
     }
+
+    /*
+     * HACK for BUG 450443: When there are two screens and the left screen is disabled,
+     * refresh the right screen's geometry because there is no geometryChanged signal.
+     *
+     * Before the left screen is disabled:
+     * [Screen 1 QRect(0,0 1920x1080)] [Screen 2 QRect(1920,0 1920x1080)]
+     *
+     * After the left screen is disabled:
+     * [Screen 2 QRect(1920,0 1920x1080)]
+     *
+     * But the true geometry of Screen 2 is QRect(0,0 1920x1080), so we need to
+     * manually update Screen 2's geometry.
+     */
+    QTimer::singleShot(0, this, &ShellCorona::refreshGeometry);
+
 #ifndef NDEBUG
     m_invariantsTimer.start();
 #endif
@@ -1223,6 +1250,12 @@ void ShellCorona::addOutput(QScreen *screen)
 #ifndef NDEBUG
     m_invariantsTimer.start();
 #endif
+
+    /*
+     * HACK for BUG 450443: restore the primary desktop's geometry because there is no
+     * geometryChanged signal after a new screen is added.
+     */
+    QTimer::singleShot(0, this, &ShellCorona::refreshGeometry);
 }
 
 void ShellCorona::checkAllDesktopsUiReady(bool ready)
