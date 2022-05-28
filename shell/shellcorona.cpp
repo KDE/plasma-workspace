@@ -785,7 +785,8 @@ void ShellCorona::primaryScreenChanged(QScreen *oldPrimary, QScreen *newPrimary)
     // CHECK_SCREEN_INVARIANTS
 
     // refresh the accent color signal binding
-    connect(m_desktopViewForScreen[m_screenPool->primaryScreen()], &DesktopView::accentColorChanged, this, &ShellCorona::colorChanged);
+    disconnect(m_desktopViewForScreen.value(oldPrimary), &DesktopView::accentColorChanged, this, &ShellCorona::colorChanged);
+    connect(m_desktopViewForScreen.value(newPrimary), &DesktopView::accentColorChanged, this, &ShellCorona::colorChanged);
 }
 
 #ifndef NDEBUG
