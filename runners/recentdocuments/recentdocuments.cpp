@@ -71,8 +71,8 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
         Plasma::QueryMatch match(this);
 
         auto relevance = 0.5;
-        match.setType(Plasma::QueryMatch::PossibleMatch);
-        if (url.fileName() == term) {
+        match.setType(Plasma::QueryMatch::CompletionMatch);
+        if (term.size() >= 5 && url.fileName() == term) {
             relevance = 1.0;
             match.setType(Plasma::QueryMatch::ExactMatch);
         } else if (url.fileName().startsWith(term)) {
