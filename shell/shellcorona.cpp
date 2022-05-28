@@ -1131,11 +1131,9 @@ PanelView *ShellCorona::panelView(Plasma::Containment *containment) const
 QList<PanelView *> ShellCorona::panelsForScreen(QScreen *screen) const
 {
     QList<PanelView *> ret;
-    for (PanelView *v : m_panelViews) {
-        if (v->screenToFollow() == screen) {
-            ret += v;
-        }
-    }
+    std::copy_if(m_panelViews.cbegin(), m_panelViews.cend(), std::back_inserter(ret), [screen](const PanelView *v) {
+        return v->screenToFollow() == screen;
+    });
     return ret;
 }
 
