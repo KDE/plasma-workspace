@@ -11,6 +11,7 @@ import QtQuick.Window 2.15 // for Screen
 
 import org.kde.kcm 1.5 as KCM
 import org.kde.kirigami 2.12 as Kirigami
+import org.kde.plasma.plasmoid 2.0
 
 Item {
     id: thumbnailsComponent
@@ -40,8 +41,26 @@ Item {
         }
 
         //set the size of the cell, depending on Screen resolution to respect the aspect ratio
-        view.implicitCellWidth: Screen.width / 10 + Kirigami.Units.smallSpacing * 2
-        view.implicitCellHeight: Screen.height / 10 + Kirigami.Units.smallSpacing * 2 + Kirigami.Units.gridUnit * 3
+        view.implicitCellWidth: {
+            let screenWidth = 0;
+            if (typeof Plasmoid !== "undefined") {
+                screenWidth = Plasmoid.width;
+            } else {
+                screenWidth = Screen.width;
+            }
+
+            return screenWidth / 10 + Kirigami.Units.smallSpacing * 2
+        }
+        view.implicitCellHeight: {
+            let screenHeight = 0;
+            if (typeof Plasmoid !== "undefined") {
+                screenHeight = Plasmoid.height;
+            } else {
+                screenHeight = Screen.height;
+            }
+
+            return screenHeight / 10 + Kirigami.Units.smallSpacing * 2 + Kirigami.Units.gridUnit * 3
+        }
 
         view.delegate: WallpaperDelegate {
             color: cfg_Color
