@@ -256,11 +256,11 @@ private:
                 } else {
                     continue;
                 }
-            } else if (service->name().contains(queryList[0], Qt::CaseInsensitive)) {
+            } else if (name.contains(queryList[0], Qt::CaseInsensitive)) {
                 relevance = 0.8;
                 relevance += increaseMatchRelavance(service, queryList, QStringLiteral("Name"));
 
-                if (service->name().startsWith(queryList[0], Qt::CaseInsensitive)) {
+                if (name.startsWith(queryList[0], Qt::CaseInsensitive)) {
                     relevance += 0.1;
                 }
             } else if (service->genericName().contains(queryList[0], Qt::CaseInsensitive)) {
@@ -270,11 +270,11 @@ private:
                 if (service->genericName().startsWith(queryList[0], Qt::CaseInsensitive)) {
                     relevance += 0.05;
                 }
-            } else if (service->exec().contains(queryList[0], Qt::CaseInsensitive)) {
+            } else if (exec.contains(queryList[0], Qt::CaseInsensitive)) {
                 relevance = 0.7;
                 relevance += increaseMatchRelavance(service, queryList, QStringLiteral("Exec"));
 
-                if (service->exec().startsWith(queryList[0], Qt::CaseInsensitive)) {
+                if (exec.startsWith(queryList[0], Qt::CaseInsensitive)) {
                     relevance += 0.05;
                 }
             } else if (service->comment().contains(queryList[0], Qt::CaseInsensitive)) {
@@ -291,7 +291,7 @@ private:
                 relevance += .09;
             }
 
-            qCDebug(RUNNER_SERVICES) << service->name() << "is this relevant:" << relevance;
+            qCDebug(RUNNER_SERVICES) << name << "is this relevant:" << relevance;
             match.setRelevance(relevance);
 
             matches << match;
