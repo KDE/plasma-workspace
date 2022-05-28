@@ -1573,16 +1573,12 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const 
         return oldContainment;
     }
 
-    DesktopView *view = nullptr;
-    for (DesktopView *v : qAsConst(m_desktopViewForScreen)) {
-        if (v->containment() == oldContainment) {
-            view = v;
-            break;
-        }
-    }
+    auto viewIt = std::find_if(m_desktopViewForScreen.cbegin(), m_desktopViewForScreen.cend(), [oldContainment](const DesktopView *v) {
+        return v->containment() == oldContainment;
+    });
 
     // no view? give up
-    if (!view) {
+    if (viewIt == m_desktopViewForScreen.cend()) {
         return oldContainment;
     }
 
@@ -1641,14 +1637,14 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const 
     if (removeAction) {
         removeAction->deleteLater();
     }
-    view->setContainment(newContainment);
+    (*viewIt)->setContainment(newContainment);
     newContainment->setActivity(oldContainment->activity());
     insertContainment(oldContainment->activity(), screen, newContainment);
 
     // removing the focus from the item that is going to be destroyed
     // fixes a crash
     // delayout the destruction of the old containment fixes another crash
-    view->rootObject()->setFocus(true, Qt::MouseFocusReason);
+    (*viewIt)->rootObject()->setFocus(true, Qt::MouseFocusReason);
     QTimer::singleShot(2500, oldContainment, &Plasma::Applet::destroy);
 
     // Save now as we now have a screen, so lastScreen will not be -1
