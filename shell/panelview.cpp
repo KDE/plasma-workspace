@@ -936,10 +936,18 @@ void PanelView::setScreenToFollow(QScreen *screen)
         // disconnect from old screen
         disconnect(m_screenToFollow, &QScreen::virtualGeometryChanged, this, &PanelView::updateStruts);
         disconnect(m_screenToFollow, &QScreen::geometryChanged, this, &PanelView::restore);
+        // Workaround for https://codereview.qt-project.org/c/qt/qtbase/+/413380
+        if (KWindowSystem::isPlatformX11()) {
+            disconnect(m_screenToFollow, &QScreen::logicalDotsPerInchChanged, this, &PanelView::restore);
+        }
     }
 
     connect(screen, &QScreen::virtualGeometryChanged, this, &PanelView::updateStruts, Qt::UniqueConnection);
     connect(screen, &QScreen::geometryChanged, this, &PanelView::restore, Qt::UniqueConnection);
+    // Workaround for https://codereview.qt-project.org/c/qt/qtbase/+/413380
+    if (KWindowSystem::isPlatformX11()) {
+        connect(screen, &QScreen::logicalDotsPerInchChanged, this, &PanelView::restore, Qt::UniqueConnection);
+    }
 
     /*connect(screen, &QObject::destroyed, this, [this]() {
         if (PanelView::screen()) {
