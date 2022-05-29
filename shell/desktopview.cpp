@@ -118,12 +118,20 @@ void DesktopView::adaptToScreen()
 
     if (m_oldScreen) {
         disconnect(m_oldScreen.data(), &QScreen::geometryChanged, this, &DesktopView::screenGeometryChanged);
+        // Workaround for https://codereview.qt-project.org/c/qt/qtbase/+/413380
+        if (KWindowSystem::isPlatformX11()) {
+            disconnect(m_oldScreen.data(), &QScreen::logicalDotsPerInchChanged, this, &DesktopView::screenGeometryChanged);
+        }
     }
 
     if (m_windowType == Desktop || m_windowType == WindowedDesktop) {
         screenGeometryChanged();
 
         connect(m_screenToFollow.data(), &QScreen::geometryChanged, this, &DesktopView::screenGeometryChanged, Qt::UniqueConnection);
+        // Workaround for https://codereview.qt-project.org/c/qt/qtbase/+/413380
+        if (KWindowSystem::isPlatformX11()) {
+            connect(m_screenToFollow.data(), &QScreen::logicalDotsPerInchChanged, this, &DesktopView::screenGeometryChanged, Qt::UniqueConnection);
+        }
     }
 
     m_oldScreen = m_screenToFollow;
