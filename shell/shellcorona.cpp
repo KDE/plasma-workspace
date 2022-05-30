@@ -1521,8 +1521,6 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const 
         return oldContainment;
     }
 
-    newContainment->setWallpaper(oldContainment->wallpaper());
-
     // At this point we have a valid new containment from plugin and a view
     // copy all configuration groups (excluded applets)
     KConfigGroup oldCg = oldContainment->config();
@@ -1549,6 +1547,7 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const 
 
     newContainment->init();
     newCg.writeEntry("activityId", oldContainment->activity());
+    newCg.writeEntry("wallpaperplugin", oldContainment->wallpaper());
     newContainment->restore(newCg);
     newContainment->updateConstraints(Plasma::Types::StartupCompletedConstraint);
     newContainment->flushPendingConstraintsEvents();
