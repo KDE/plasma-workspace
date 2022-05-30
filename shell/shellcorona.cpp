@@ -1650,6 +1650,7 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const 
 
     // Save now as we now have a screen, so lastScreen will not be -1
     newContainment->save(newCg);
+    newCg.sync();
     requestConfigSync();
     Q_EMIT availableScreenRectChanged();
 
