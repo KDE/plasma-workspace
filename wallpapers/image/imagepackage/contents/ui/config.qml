@@ -430,8 +430,26 @@ ColumnLayout {
                 }
 
                 //set the size of the cell, depending on Screen resolution to respect the aspect ratio
-                view.implicitCellWidth: Screen.width / 10 + Kirigami.Units.smallSpacing * 2
-                view.implicitCellHeight: Screen.height / 10 + Kirigami.Units.smallSpacing * 2 + Kirigami.Units.gridUnit * 3
+                view.implicitCellWidth: {
+                    let screenWidth = 0;
+                    if (typeof plasmoid !== "undefined") {
+                        screenWidth = plasmoid.width;
+                    } else {
+                        screenWidth = Screen.width;
+                    }
+
+                    return screenWidth / 10 + Kirigami.Units.smallSpacing * 2;
+                }
+                view.implicitCellHeight: {
+                    let screenHeight = 0;
+                    if (typeof plasmoid !== "undefined") {
+                        screenHeight = plasmoid.height;
+                    } else {
+                        screenHeight = Screen.height;
+                    }
+
+                    return screenHeight / 10 + Kirigami.Units.smallSpacing * 2 + Kirigami.Units.gridUnit * 3;
+                }
 
                 view.delegate: WallpaperDelegate {
                     color: cfg_Color
