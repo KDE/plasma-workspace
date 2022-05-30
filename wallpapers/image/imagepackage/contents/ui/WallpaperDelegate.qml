@@ -119,6 +119,7 @@ KCM.GridDelegate {
     onClicked: {
         if (configDialog.currentWallpaper == "org.kde.image") {
             cfg_Image = model.packageName || model.path;
+            wallpaper.configuration.PreviewImage = cfg_Image;
         }
         GridView.currentIndex = index;
     }

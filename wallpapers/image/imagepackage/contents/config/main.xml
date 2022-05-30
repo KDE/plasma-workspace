@@ -22,6 +22,10 @@
       <label>Wallpaper image path or wallpaper name</label>
       <default></default>
     </entry>
+    <entry name="PreviewImage" type="String">
+      <label>Wallpaper preview image path</label>
+      <default>null</default>
+    </entry>
     <entry name="FillMode" type="int">
       <label>Sizing, cropping and positioning of the wallpaper image</label>
       <default>2</default>

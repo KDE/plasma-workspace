@@ -208,4 +208,8 @@ ColumnLayout {
             viewMode: NewStuff.Page.ViewMode.Preview
         }
     }
+
+    Component.onDestruction: {
+        wallpaper.configuration.PreviewImage = "null";
+    }
 }

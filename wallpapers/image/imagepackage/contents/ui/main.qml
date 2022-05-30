@@ -53,6 +53,8 @@ QQC2.StackView {
     //private
 
     Component.onCompleted: {
+        // In case plasmashell crashes when the config dialog is opened
+        wallpaper.configuration.PreviewImage = "null";
         wallpaper.loading = true; // delays ksplash until the wallpaper has been loaded
 
         if (wallpaper.pluginName === "org.kde.slideshow") {
@@ -66,7 +68,15 @@ QQC2.StackView {
         usedInConfig: false
         //the oneliner of difference between image and slideshow wallpapers
         renderingMode: (wallpaper.pluginName === "org.kde.image") ? Wallpaper.ImageBackend.SingleImage : Wallpaper.ImageBackend.SlideShow
-        image: wallpaper.pluginName === "org.kde.image" ? wallpaper.configuration.Image : ""
+        image: {
+            if (wallpaper.pluginName !== "org.kde.image") {
+                return "";
+            }
+            if (wallpaper.configuration.PreviewImage !== "null") {
+                return wallpaper.configuration.PreviewImage;
+            }
+            return wallpaper.configuration.Image;
+        }
         targetSize: root.sourceSize
         slidePaths: wallpaper.configuration.SlidePaths
         slideTimer: wallpaper.configuration.SlideInterval
