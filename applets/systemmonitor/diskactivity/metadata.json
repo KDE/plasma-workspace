@@ -46,7 +46,7 @@
         "Description": "An applet that monitors hard disk throughput and input/output",
         "Description[ar]": "بُريْمج يراقب استخدام إنتاجيّة القرص الصلب ودَخْله/خَرْجه",
         "Description[az]": "Sərt Diskdə verilənlərin ötürmələsini və giriş/çıxışını izləyən tətbiq",
-        "Description[ca@valencia]": "Una miniaplicació que controla la velocitat de transferència, aixina com l'entrada/eixida de les dades al disc dur",
+        "Description[ca@valencia]": "Una miniaplicació que controla la velocitat de transferència, aixina com l'entrada/eixida de les dades en el disc dur",
         "Description[ca]": "Una miniaplicació que controla la velocitat de transferència, així com l'entrada/sortida de les dades al disc dur",
         "Description[cs]": "Aplet, jenž monitoruje propustnost disku a vstup/výstup",
         "Description[da]": "En applet som overvåger gennemgang og input/output for harddisken",
