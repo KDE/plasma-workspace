@@ -17,6 +17,9 @@ import "private"
 ContainmentLayoutManager.ConfigOverlay {
     id: overlay
 
+    LayoutMirroring.enabled: false
+    LayoutMirroring.childrenInherit: true
+
     opacity: open
     Behavior on opacity {
         OpacityAnimator {
