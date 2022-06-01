@@ -18,13 +18,13 @@ PlasmaCore.ToolTipArea {
     mainText: Plasmoid.toolTipMainText
     subText: Plasmoid.toolTipSubText
     location: if (Plasmoid.parent && Plasmoid.parent.inHiddenLayout && Plasmoid.location !== PlasmaCore.Types.LeftEdge) {
-                return PlasmaCore.Types.RightEdge;
-              } else {
-                return Plasmoid.location;
-              }
+        return PlasmaCore.Types.RightEdge;
+    } else {
+        return Plasmoid.location;
+    }
     active: !Plasmoid.expanded
     textFormat: Plasmoid.toolTipTextFormat
-    mainItem: Plasmoid.toolTipItem ? Plasmoid.toolTipItem : null
+    mainItem: Plasmoid.toolTipItem
 
     property Item fullRepresentation
     property Item compactRepresentation

@@ -37,11 +37,11 @@ AbstractItem {
     }
 
     onActivated: {
-        let service = model.Service;
-        let operation = service.operationDescription("Activate");
+        const service = model.Service;
+        const operation = service.operationDescription("Activate");
         operation.x = pos.x; //mouseX
         operation.y = pos.y; //mouseY
-        let job = service.startOperationCall(operation);
+        const job = service.startOperationCall(operation);
         job.finished.connect(() => {
             if (!job.result) {
                 // On error try to invoke the context menu.
@@ -66,10 +66,9 @@ AbstractItem {
             openContextMenu(pos);
             break;
         case Qt.MiddleButton:
-            var operation = service.operationDescription("SecondaryActivate");
-            let service = model.Service;
+            const operation = service.operationDescription("SecondaryActivate");
+            const service = model.Service;
             operation.x = pos.x;
-
             operation.y = pos.y;
             service.startOperationCall(operation);
             taskIcon.startActivatedAnimation()
@@ -78,13 +77,13 @@ AbstractItem {
     }
 
     function openContextMenu(pos = Qt.point(width/2, height/2)) {
-        var service = model.Service;
-        var operation = service.operationDescription("ContextMenu");
+        const service = model.Service;
+        const operation = service.operationDescription("ContextMenu");
         operation.x = pos.x;
         operation.y = pos.y;
 
-        var job = service.startOperationCall(operation);
-        job.finished.connect(function () {
+        const job = service.startOperationCall(operation);
+        job.finished.connect(() => {
             Plasmoid.nativeInterface.showStatusNotifierContextMenu(job, taskIcon);
         });
     }
@@ -92,16 +91,16 @@ AbstractItem {
     onWheel: {
         //don't send activateVertScroll with a delta of 0, some clients seem to break (kmix)
         if (wheel.angleDelta.y !== 0) {
-            var service = model.Service;
-            var operation = service.operationDescription("Scroll");
-            operation.delta =wheel.angleDelta.y;
+            const service = model.Service;
+            const operation = service.operationDescription("Scroll");
+            operation.delta = wheel.angleDelta.y;
             operation.direction = "Vertical";
             service.startOperationCall(operation);
         }
         if (wheel.angleDelta.x !== 0) {
-            var service = model.Service;
-            var operation = service.operationDescription("Scroll");
-            operation.delta =wheel.angleDelta.x;
+            const service = model.Service;
+            const operation = service.operationDescription("Scroll");
+            operation.delta = wheel.angleDelta.x;
             operation.direction = "Horizontal";
             service.startOperationCall(operation);
         }

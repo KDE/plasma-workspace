@@ -64,9 +64,9 @@ PlasmaCore.ToolTipArea {
 
     PulseAnimation {
         targetItem: iconContainer
-        running: (abstractItem.status === PlasmaCore.Types.NeedsAttentionStatus ||
-            abstractItem.status === PlasmaCore.Types.RequiresAttentionStatus ) &&
-            PlasmaCore.Units.longDuration > 0
+        running: (abstractItem.status === PlasmaCore.Types.NeedsAttentionStatus
+                || abstractItem.status === PlasmaCore.Types.RequiresAttentionStatus)
+            && PlasmaCore.Units.longDuration > 0
     }
 
     function startActivatedAnimation() {

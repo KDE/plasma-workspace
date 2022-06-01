@@ -30,7 +30,7 @@ MouseArea {
     readonly property alias itemSize: tasksGrid.itemSize
     readonly property alias visibleLayout: tasksGrid
     readonly property alias hiddenLayout: expandedRepresentation.hiddenLayout
-    readonly property bool oneRowOrColumn: tasksGrid.rowsOrColumns == 1
+    readonly property bool oneRowOrColumn: tasksGrid.rowsOrColumns === 1
 
     onWheel: {
         // Don't propagate unhandled wheel events
@@ -55,7 +55,7 @@ MouseArea {
     DnD.DropArea {
         anchors.fill: parent
 
-        preventStealing: true;
+        preventStealing: true
 
         /** Extracts the name of the system tray applet in the drag data if present
          * otherwise returns null*/
@@ -63,7 +63,7 @@ MouseArea {
             if (event.mimeData.formats.indexOf("text/x-plasmoidservicename") < 0) {
                 return null;
             }
-            var plasmoidId = event.mimeData.getDataAsByteArray("text/x-plasmoidservicename");
+            const plasmoidId = event.mimeData.getDataAsByteArray("text/x-plasmoidservicename");
 
             if (!Plasmoid.nativeInterface.isSystemTrayApplet(plasmoidId)) {
                 return null;
@@ -78,14 +78,14 @@ MouseArea {
         }
 
         onDrop: {
-            var plasmoidId = systemTrayAppletName(event);
+            const plasmoidId = systemTrayAppletName(event);
             if (!plasmoidId) {
                 event.ignore();
                 return;
             }
 
             if (Plasmoid.configuration.extraItems.indexOf(plasmoidId) < 0) {
-                var extraItems = Plasmoid.configuration.extraItems;
+                const extraItems = Plasmoid.configuration.extraItems;
                 extraItems.push(plasmoidId);
                 Plasmoid.configuration.extraItems = extraItems;
             }
@@ -155,9 +155,7 @@ MouseArea {
             model: PlasmaCore.SortFilterModel {
                 sourceModel: Plasmoid.nativeInterface.systemTrayModel
                 filterRole: "effectiveStatus"
-                filterCallback: function(source_row, value) {
-                    return value === PlasmaCore.Types.ActiveStatus
-                }
+                filterCallback: (source_row, value) => value === PlasmaCore.Types.ActiveStatus
             }
 
             delegate: ItemLoader {
@@ -257,19 +255,19 @@ MouseArea {
                 visible: [PlasmaCore.Types.TopEdge, PlasmaCore.Types.LeftEdge, PlasmaCore.Types.RightEdge, PlasmaCore.Types.BottomEdge]
                     .includes(Plasmoid.location)
                 anchors {
-                    top: Plasmoid.location == PlasmaCore.Types.BottomEdge ? undefined : parent.top
-                    left: Plasmoid.location == PlasmaCore.Types.RightEdge ? undefined : parent.left
-                    right: Plasmoid.location == PlasmaCore.Types.LeftEdge ? undefined : parent.right
-                    bottom: Plasmoid.location == PlasmaCore.Types.TopEdge ? undefined : parent.bottom
-                    topMargin: Plasmoid.location == PlasmaCore.Types.BottomEdge ? undefined : -dialog.margins.top
-                    leftMargin: Plasmoid.location == PlasmaCore.Types.RightEdge ? undefined : -dialog.margins.left
-                    rightMargin: Plasmoid.location == PlasmaCore.Types.LeftEdge ? undefined : -dialog.margins.right
-                    bottomMargin: Plasmoid.location == PlasmaCore.Types.TopEdge ? undefined : -dialog.margins.bottom
+                    top: Plasmoid.location === PlasmaCore.Types.BottomEdge ? undefined : parent.top
+                    left: Plasmoid.location === PlasmaCore.Types.RightEdge ? undefined : parent.left
+                    right: Plasmoid.location === PlasmaCore.Types.LeftEdge ? undefined : parent.right
+                    bottom: Plasmoid.location === PlasmaCore.Types.TopEdge ? undefined : parent.bottom
+                    topMargin: Plasmoid.location === PlasmaCore.Types.BottomEdge ? undefined : -dialog.margins.top
+                    leftMargin: Plasmoid.location === PlasmaCore.Types.RightEdge ? undefined : -dialog.margins.left
+                    rightMargin: Plasmoid.location === PlasmaCore.Types.LeftEdge ? undefined : -dialog.margins.right
+                    bottomMargin: Plasmoid.location === PlasmaCore.Types.TopEdge ? undefined : -dialog.margins.bottom
                 }
-                height: (Plasmoid.location == PlasmaCore.Types.TopEdge || Plasmoid.location == PlasmaCore.Types.BottomEdge) ? 1 : undefined
-                width: (Plasmoid.location == PlasmaCore.Types.LeftEdge || Plasmoid.location == PlasmaCore.Types.RightEdge) ? 1 : undefined
+                height: (Plasmoid.location === PlasmaCore.Types.TopEdge || Plasmoid.location === PlasmaCore.Types.BottomEdge) ? 1 : undefined
+                width: (Plasmoid.location === PlasmaCore.Types.LeftEdge || Plasmoid.location === PlasmaCore.Types.RightEdge) ? 1 : undefined
                 z: 999 /* Draw the line on top of the applet */
-                elementId: (Plasmoid.location == PlasmaCore.Types.TopEdge || Plasmoid.location == PlasmaCore.Types.BottomEdge) ? "horizontal-line" : "vertical-line"
+                elementId: (Plasmoid.location === PlasmaCore.Types.TopEdge || Plasmoid.location === PlasmaCore.Types.BottomEdge) ? "horizontal-line" : "vertical-line"
                 svg: PlasmaCore.Svg {
                     imagePath: "widgets/line"
                 }
