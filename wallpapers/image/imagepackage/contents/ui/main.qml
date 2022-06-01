@@ -16,7 +16,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 QQC2.StackView {
     id: root
 
-    readonly property string modelImage: imageWallpaper.modelImage
+    readonly property url modelImage: imageWallpaper.modelImage
     readonly property int fillMode: wallpaper.configuration.FillMode
     readonly property string configColor: wallpaper.configuration.Color
     readonly property bool blur: wallpaper.configuration.Blur

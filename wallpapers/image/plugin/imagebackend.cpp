@@ -69,18 +69,18 @@ void ImageBackend::componentComplete()
     }
 }
 
-QUrl ImageBackend::image() const
+QString ImageBackend::image() const
 {
-    return m_image;
+    return m_image.toString();
 }
 
-void ImageBackend::setImage(const QUrl &url)
+void ImageBackend::setImage(const QString &url)
 {
-    if (m_image == url || url.isEmpty()) {
+    if (m_image.toString() == url || url.isEmpty()) {
         return;
     }
 
-    m_image = url;
+    m_image = QUrl(url);
     Q_EMIT imageChanged();
 
     setSingleImage();

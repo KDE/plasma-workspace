@@ -41,7 +41,7 @@ class ImageBackend : public QObject, public QQmlParserStatus, public SortingMode
      * Package path from the saved configuration, can be an image file, a url with
      * "image://" scheme or a folder (KPackage).
      */
-    Q_PROPERTY(QUrl image READ image WRITE setImage NOTIFY imageChanged)
+    Q_PROPERTY(QString image READ image WRITE setImage NOTIFY imageChanged)
     /**
      * The real path of the image
      * e.g. /home/kde/Pictures/image.png
@@ -71,8 +71,8 @@ public:
     explicit ImageBackend(QObject *parent = nullptr);
     ~ImageBackend() override;
 
-    QUrl image() const;
-    void setImage(const QUrl &url);
+    QString image() const;
+    void setImage(const QString &url);
 
     QUrl modelImage() const;
 
