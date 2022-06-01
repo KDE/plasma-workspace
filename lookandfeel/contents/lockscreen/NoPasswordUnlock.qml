@@ -10,14 +10,14 @@ import org.kde.plasma.components 3.0 as PlasmaComponents3
 import "../components"
 
 SessionManagementScreen {
+    focus: true
+    PlasmaComponents3.Button {
+        id: loginButton
         focus: true
-        PlasmaComponents3.Button {
-            id: loginButton
-            focus: true
-            text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Unlock")
-            icon.name: "unlock"
-            onClicked: Qt.quit();
-            Keys.onEnterPressed: clicked()
-            Keys.onReturnPressed: clicked()
-        }
+        text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Unlock")
+        icon.name: "unlock"
+        onClicked: Qt.quit();
+        Keys.onEnterPressed: clicked()
+        Keys.onReturnPressed: clicked()
+    }
 }
