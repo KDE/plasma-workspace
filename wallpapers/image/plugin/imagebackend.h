@@ -84,7 +84,7 @@ public:
 
     Q_INVOKABLE void showFileDialog();
 
-    Q_INVOKABLE QString addUsersWallpaper(const QString &file);
+    Q_INVOKABLE QString addUsersWallpaper(const QUrl &url);
 
     Q_INVOKABLE void useSingleImageDefaults();
 
