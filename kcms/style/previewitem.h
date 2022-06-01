@@ -9,7 +9,6 @@
 
 #include <QPointer>
 #include <QQuickPaintedItem>
-#include <QScopedPointer>
 
 #include "ui_stylepreview.h"
 
@@ -61,8 +60,8 @@ private:
 
     Ui::StylePreview m_ui;
 
-    QScopedPointer<QWidget> m_widget;
+    std::unique_ptr<QWidget> m_widget;
     QPointer<QWidget> m_lastWidgetUnderMouse;
 
-    QScopedPointer<QStyle> m_style;
+    std::unique_ptr<QStyle> m_style;
 };

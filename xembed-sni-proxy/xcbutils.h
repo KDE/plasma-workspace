@@ -15,13 +15,14 @@
 #include <xcb/xcb_atom.h>
 #include <xcb/xcb_event.h>
 
-#include <QScopedPointer>
 #include <QVector>
 #if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
 #include <private/qtx11extras_p.h>
 #else
 #include <QX11Info>
 #endif
+
+#include "../c_ptr.h"
 
 /** XEMBED messages */
 #define XEMBED_EMBEDDED_NOTIFY 0
@@ -36,9 +37,6 @@
 namespace Xcb
 {
 typedef xcb_window_t WindowId;
-
-template<typename T>
-using ScopedCPointer = QScopedPointer<T, QScopedPointerPodDeleter>;
 
 class Atom
 {
@@ -88,8 +86,8 @@ private:
         if (m_retrieved || !m_cookie.sequence) {
             return;
         }
-        ScopedCPointer<xcb_intern_atom_reply_t> reply(xcb_intern_atom_reply(m_connection, m_cookie, nullptr));
-        if (!reply.isNull()) {
+        UniqueCPointer<xcb_intern_atom_reply_t> reply(xcb_intern_atom_reply(m_connection, m_cookie, nullptr));
+        if (reply) {
             m_atom = reply->atom;
         }
         m_retrieved = true;

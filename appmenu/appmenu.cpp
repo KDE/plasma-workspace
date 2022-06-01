@@ -7,6 +7,7 @@
 */
 
 #include "appmenu.h"
+#include "../c_ptr.h"
 #include "appmenu_dbus.h"
 #include "appmenu_debug.h"
 #include "appmenuadaptor.h"
@@ -134,8 +135,8 @@ void AppMenuModule::slotWindowRegistered(WId id, const QString &serviceName, con
         auto setWindowProperty = [c](WId id, xcb_atom_t &atom, const QByteArray &name, const QByteArray &value) {
             if (atom == XCB_ATOM_NONE) {
                 const xcb_intern_atom_cookie_t cookie = xcb_intern_atom(c, false, name.length(), name.constData());
-                QScopedPointer<xcb_intern_atom_reply_t, QScopedPointerPodDeleter> reply(xcb_intern_atom_reply(c, cookie, nullptr));
-                if (reply.isNull()) {
+                UniqueCPointer<xcb_intern_atom_reply_t> reply{xcb_intern_atom_reply(c, cookie, nullptr)};
+                if (!reply) {
                     return;
                 }
                 atom = reply->atom;

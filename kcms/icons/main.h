@@ -16,7 +16,6 @@
 #include <KQuickAddons/ManagedConfigModule>
 
 #include <QCache>
-#include <QScopedPointer>
 
 class KIconTheme;
 class IconsSettings;
@@ -103,6 +102,6 @@ private:
 
     mutable QCache<QString, KIconTheme> m_kiconThemeCache;
 
-    QScopedPointer<QTemporaryFile> m_tempInstallFile;
+    std::unique_ptr<QTemporaryFile> m_tempInstallFile;
     QPointer<KIO::FileCopyJob> m_tempCopyJob;
 };

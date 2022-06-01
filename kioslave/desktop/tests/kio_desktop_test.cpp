@@ -125,11 +125,11 @@ private Q_SLOTS:
         QFETCH(QUrl, srcUrl);
         QFETCH(QUrl, destUrl);
 
-        QScopedPointer<KDirLister> lister(nullptr);
+        std::unique_ptr<KDirLister> lister;
         if (withDirListerCache) {
             lister.reset(new KDirLister);
             lister->openUrl(QUrl(QStringLiteral("desktop:/")));
-            QSignalSpy spyCompleted(lister.data(), static_cast<void (KDirLister::*)()>(&KDirLister::completed));
+            QSignalSpy spyCompleted(lister.get(), static_cast<void (KDirLister::*)()>(&KDirLister::completed));
             spyCompleted.wait();
         }
 

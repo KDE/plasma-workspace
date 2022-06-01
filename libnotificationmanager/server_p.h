@@ -10,6 +10,7 @@
 #include <QObject>
 #include <QSet>
 #include <QStringList>
+#include <memory>
 
 #include "notification.h"
 
@@ -115,7 +116,7 @@ private:
 
     bool m_dbusObjectValid = false;
 
-    mutable QScopedPointer<ServerInfo> m_currentOwner;
+    mutable std::unique_ptr<ServerInfo> m_currentOwner;
 
     QDBusServiceWatcher *m_inhibitionWatcher = nullptr;
     QDBusServiceWatcher *m_notificationWatchers = nullptr;

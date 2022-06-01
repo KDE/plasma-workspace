@@ -38,6 +38,7 @@
 #include <KWayland/Client/surface.h>
 #include <KWindowSystem>
 
+#include "../c_ptr.h"
 #include "configdialog.h"
 #include "history.h"
 #include "historyitem.h"
@@ -721,8 +722,8 @@ bool Klipper::blockFetchingNewData()
     }
     xcb_connection_t *c = QX11Info::connection();
     const xcb_query_pointer_cookie_t cookie = xcb_query_pointer_unchecked(c, QX11Info::appRootWindow());
-    QScopedPointer<xcb_query_pointer_reply_t, QScopedPointerPodDeleter> queryPointer(xcb_query_pointer_reply(c, cookie, nullptr));
-    if (queryPointer.isNull()) {
+    UniqueCPointer<xcb_query_pointer_reply_t> queryPointer(xcb_query_pointer_reply(c, cookie, nullptr));
+    if (!queryPointer) {
         return false;
     }
     if (((queryPointer->mask & (XCB_KEY_BUT_MASK_SHIFT | XCB_KEY_BUT_MASK_BUTTON_1)) == XCB_KEY_BUT_MASK_SHIFT) // BUG: 85198
@@ -989,7 +990,7 @@ protected:
     }
 
 private:
-    QScopedPointer<Prison::AbstractBarcode> m_barcode;
+    std::unique_ptr<Prison::AbstractBarcode> m_barcode;
 };
 
 void Klipper::showBarcode(const QSharedPointer<const HistoryItem> &item)

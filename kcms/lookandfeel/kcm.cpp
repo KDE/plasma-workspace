@@ -358,9 +358,9 @@ void KCMLookandFeel::save()
         // Test if style can be installed before updating the config.
         KSharedConfigPtr conf = KSharedConfig::openConfig(package.filePath("defaults"));
         KConfigGroup cg(conf, "kdeglobals");
-        QScopedPointer<QStyle> newStyle(QStyleFactory::create(cg.readEntry("widgetStyle", QString())));
-        applyFlags.setFlag(LookAndFeelManager::WidgetStyle, (!newStyle.isNull() &&
-            m_model->data(m_model->index(index, 0), HasWidgetStyleRole).toBool())); //Widget Style isn't in
+        std::unique_ptr<QStyle> newStyle(QStyleFactory::create(cg.readEntry("widgetStyle", QString())));
+        applyFlags.setFlag(LookAndFeelManager::WidgetStyle,
+                           (newStyle != nullptr && m_model->data(m_model->index(index, 0), HasWidgetStyleRole).toBool())); // Widget Style isn't in
         // the loop above since it has all of this extra checking too for it
     }
     m_lnf->setAppearanceToApply(applyFlags);

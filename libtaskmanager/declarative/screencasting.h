@@ -42,7 +42,7 @@ Q_SIGNALS:
 
 private:
     friend class Screencasting;
-    QScopedPointer<ScreencastingStreamPrivate> d;
+    std::unique_ptr<ScreencastingStreamPrivate> d;
 };
 
 class Screencasting : public QObject
@@ -73,5 +73,5 @@ Q_SIGNALS:
     void sourcesChanged();
 
 private:
-    QScopedPointer<ScreencastingPrivate> d;
+    std::unique_ptr<ScreencastingPrivate> d;
 };

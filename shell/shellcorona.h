@@ -13,7 +13,6 @@
 
 #include <QDBusContext>
 #include <QDBusVariant>
-#include <QScopedPointer>
 #include <QSet>
 #include <QTimer>
 
@@ -261,7 +260,7 @@ private:
     QList<Plasma::Containment *> m_waitingPanels;
     QHash<QString, QString> m_activityContainmentPlugins;
     QAction *m_addPanelAction;
-    QScopedPointer<QMenu> m_addPanelsMenu;
+    std::unique_ptr<QMenu> m_addPanelsMenu;
     KPackage::Package m_lookAndFeelPackage;
 
     QTimer m_waitingPanelsTimer;

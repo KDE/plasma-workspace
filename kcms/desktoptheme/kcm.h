@@ -84,7 +84,7 @@ private:
     QHash<QString, Plasma::Theme *> m_themes;
     bool m_haveThemeExplorerInstalled;
 
-    QScopedPointer<QTemporaryFile> m_tempInstallFile;
+    std::unique_ptr<QTemporaryFile> m_tempInstallFile;
     QPointer<KIO::FileCopyJob> m_tempCopyJob;
 };
 

@@ -41,7 +41,7 @@ void TestChromeBookmarks::bookmarkFinderShouldReportNoProfilesOnErrors()
 
 void TestChromeBookmarks::itShouldFindNothingWhenPrepareIsNotCalled()
 {
-    Chrome *chrome = new Chrome(m_findBookmarksInCurrentDirectory.data(), this);
+    Chrome *chrome = new Chrome(m_findBookmarksInCurrentDirectory.get(), this);
     QCOMPARE(chrome->match("any", true).size(), 0);
 }
 
@@ -61,7 +61,7 @@ void verifyMatch(BookmarkMatch &match, const QString &title, const QString &url)
 
 void TestChromeBookmarks::itShouldFindAllBookmarks()
 {
-    Chrome *chrome = new Chrome(m_findBookmarksInCurrentDirectory.data(), this);
+    Chrome *chrome = new Chrome(m_findBookmarksInCurrentDirectory.get(), this);
     chrome->prepare();
     QList<BookmarkMatch> matches = chrome->match("any", true);
     QCOMPARE(matches.size(), 3);
@@ -72,7 +72,7 @@ void TestChromeBookmarks::itShouldFindAllBookmarks()
 
 void TestChromeBookmarks::itShouldFindOnlyMatches()
 {
-    Chrome *chrome = new Chrome(m_findBookmarksInCurrentDirectory.data(), this);
+    Chrome *chrome = new Chrome(m_findBookmarksInCurrentDirectory.get(), this);
     chrome->prepare();
     QList<BookmarkMatch> matches = chrome->match("other", false);
     QCOMPARE(matches.size(), 1);
@@ -81,7 +81,7 @@ void TestChromeBookmarks::itShouldFindOnlyMatches()
 
 void TestChromeBookmarks::itShouldClearResultAfterCallingTeardown()
 {
-    Chrome *chrome = new Chrome(m_findBookmarksInCurrentDirectory.data(), this);
+    Chrome *chrome = new Chrome(m_findBookmarksInCurrentDirectory.get(), this);
     chrome->prepare();
     QCOMPARE(chrome->match("any", true).size(), 3);
     chrome->teardown();

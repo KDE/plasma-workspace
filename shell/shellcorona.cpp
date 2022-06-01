@@ -1681,9 +1681,9 @@ void ShellCorona::checkAddPanelAction()
     } else if (!panelContainmentPlugins.isEmpty()) {
         m_addPanelAction = new QAction(this);
         m_addPanelsMenu.reset(new QMenu);
-        m_addPanelAction->setMenu(m_addPanelsMenu.data());
-        connect(m_addPanelsMenu.data(), &QMenu::aboutToShow, this, &ShellCorona::populateAddPanelsMenu);
-        connect(m_addPanelsMenu.data(), &QMenu::triggered, this, qOverload<QAction *>(&ShellCorona::addPanel));
+        m_addPanelAction->setMenu(m_addPanelsMenu.get());
+        connect(m_addPanelsMenu.get(), &QMenu::aboutToShow, this, &ShellCorona::populateAddPanelsMenu);
+        connect(m_addPanelsMenu.get(), &QMenu::triggered, this, qOverload<QAction *>(&ShellCorona::addPanel));
     }
 
     if (m_addPanelAction) {

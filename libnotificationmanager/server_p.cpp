@@ -67,7 +67,7 @@ ServerInfo *ServerPrivate::currentOwner() const
         m_currentOwner.reset(new ServerInfo());
     }
 
-    return m_currentOwner.data();
+    return m_currentOwner.get();
 }
 
 bool ServerPrivate::init()

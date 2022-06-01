@@ -41,7 +41,7 @@ void playStartupSound(QObject *parent);
 void gentleTermination(QProcess *process);
 
 struct KillBeforeDeleter {
-    static inline void cleanup(QProcess *pointer)
+    void operator()(QProcess *pointer)
     {
         if (pointer) {
             gentleTermination(pointer);

@@ -79,7 +79,7 @@ private:
     //! window that its menu initialization may be delayed
     WId m_delayedMenuWindowId = 0;
 
-    QScopedPointer<QMenu> m_searchMenu;
+    std::unique_ptr<QMenu> m_searchMenu;
     QPointer<QMenu> m_menu;
     QPointer<QAction> m_searchAction;
     QList<QAction *> m_currentSearchActions;

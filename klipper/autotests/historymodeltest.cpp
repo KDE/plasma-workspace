@@ -26,8 +26,8 @@ private Q_SLOTS:
 
 void HistoryModelTest::testSetMaxSize()
 {
-    QScopedPointer<HistoryModel> history(new HistoryModel(nullptr));
-    QScopedPointer<QAbstractItemModelTester> modelTest(new QAbstractItemModelTester(history.data()));
+    std::unique_ptr<HistoryModel> history(new HistoryModel(nullptr));
+    std::unique_ptr<QAbstractItemModelTester> modelTest(new QAbstractItemModelTester(history.get()));
 
     QCOMPARE(history->rowCount(), 0);
     QCOMPARE(history->maxSize(), 0);
@@ -64,8 +64,8 @@ void HistoryModelTest::testSetMaxSize()
 
 void HistoryModelTest::testInsertRemove()
 {
-    QScopedPointer<HistoryModel> history(new HistoryModel(nullptr));
-    QScopedPointer<QAbstractItemModelTester> modelTest(new QAbstractItemModelTester(history.data()));
+    std::unique_ptr<HistoryModel> history(new HistoryModel(nullptr));
+    std::unique_ptr<QAbstractItemModelTester> modelTest(new QAbstractItemModelTester(history.get()));
     history->setMaxSize(10);
     QCOMPARE(history->rowCount(), 0);
 
@@ -165,8 +165,8 @@ void HistoryModelTest::testInsertRemove()
 
 void HistoryModelTest::testClear()
 {
-    QScopedPointer<HistoryModel> history(new HistoryModel(nullptr));
-    QScopedPointer<QAbstractItemModelTester> modelTest(new QAbstractItemModelTester(history.data()));
+    std::unique_ptr<HistoryModel> history(new HistoryModel(nullptr));
+    std::unique_ptr<QAbstractItemModelTester> modelTest(new QAbstractItemModelTester(history.get()));
     history->setMaxSize(10);
     QCOMPARE(history->rowCount(), 0);
 
@@ -187,8 +187,8 @@ void HistoryModelTest::testClear()
 
 void HistoryModelTest::testIndexOf()
 {
-    QScopedPointer<HistoryModel> history(new HistoryModel(nullptr));
-    QScopedPointer<QAbstractItemModelTester> modelTest(new QAbstractItemModelTester(history.data()));
+    std::unique_ptr<HistoryModel> history(new HistoryModel(nullptr));
+    std::unique_ptr<QAbstractItemModelTester> modelTest(new QAbstractItemModelTester(history.get()));
     history->setMaxSize(10);
     QCOMPARE(history->rowCount(), 0);
     QVERIFY(!history->indexOf(QByteArrayLiteral("whatever")).isValid());
@@ -221,8 +221,8 @@ void HistoryModelTest::testType_data()
 
 void HistoryModelTest::testType()
 {
-    QScopedPointer<HistoryModel> history(new HistoryModel(nullptr));
-    QScopedPointer<QAbstractItemModelTester> modelTest(new QAbstractItemModelTester(history.data()));
+    std::unique_ptr<HistoryModel> history(new HistoryModel(nullptr));
+    std::unique_ptr<QAbstractItemModelTester> modelTest(new QAbstractItemModelTester(history.get()));
     history->setMaxSize(10);
     QCOMPARE(history->rowCount(), 0);
 

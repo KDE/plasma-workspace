@@ -93,7 +93,7 @@ void PipeWireSourceItem::itemChange(QQuickItem::ItemChange change, const QQuickI
 void PipeWireSourceItem::releaseResources()
 {
     if (window()) {
-        window()->scheduleRenderJob(new DiscardEglPixmapRunnable(m_image, m_texture.take()), QQuickWindow::NoStage);
+        window()->scheduleRenderJob(new DiscardEglPixmapRunnable(m_image, m_texture.release()), QQuickWindow::NoStage);
         m_image = EGL_NO_IMAGE_KHR;
     }
 }
@@ -121,8 +121,8 @@ void PipeWireSourceItem::setNodeId(uint nodeId)
         }
         m_stream->setActive(isVisible() && isComponentComplete());
 
-        connect(m_stream.data(), &PipeWireSourceStream::dmabufTextureReceived, this, &PipeWireSourceItem::updateTextureDmaBuf);
-        connect(m_stream.data(), &PipeWireSourceStream::imageTextureReceived, this, &PipeWireSourceItem::updateTextureImage);
+        connect(m_stream.get(), &PipeWireSourceStream::dmabufTextureReceived, this, &PipeWireSourceItem::updateTextureDmaBuf);
+        connect(m_stream.get(), &PipeWireSourceStream::imageTextureReceived, this, &PipeWireSourceItem::updateTextureImage);
     }
 
     Q_EMIT nodeIdChanged(nodeId);

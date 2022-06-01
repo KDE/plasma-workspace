@@ -10,6 +10,7 @@
 
 #include "browsers/findprofile.h"
 #include <QObject>
+#include <memory>
 
 class FakeFindProfile : public FindProfile
 {
@@ -47,6 +48,6 @@ private Q_SLOTS:
     void itShouldFindBookmarksFromAllProfiles();
 
 private:
-    QScopedPointer<FakeFindProfile> m_findBookmarksInCurrentDirectory;
+    std::unique_ptr<FakeFindProfile> m_findBookmarksInCurrentDirectory;
     QString m_configHome;
 };

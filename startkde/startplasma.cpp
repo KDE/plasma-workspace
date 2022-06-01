@@ -656,7 +656,7 @@ bool startPlasmaSession(bool wayland)
     // Create .desktop files for the scripts in .config/autostart-scripts
     migrateUserScriptsAutostart();
 
-    QScopedPointer<QProcess, KillBeforeDeleter> startPlasmaSession;
+    std::unique_ptr<QProcess, KillBeforeDeleter> startPlasmaSession;
     if (!useSystemdBoot()) {
         startPlasmaSession.reset(new QProcess);
         qCDebug(PLASMA_STARTUP) << "Using classic boot";
@@ -671,7 +671,7 @@ bool startPlasmaSession(bool wayland)
         }
 
         startPlasmaSession->setProcessChannelMode(QProcess::ForwardedChannels);
-        QObject::connect(startPlasmaSession.data(), &QProcess::finished, &e, [&rc](int exitCode, QProcess::ExitStatus) {
+        QObject::connect(startPlasmaSession.get(), &QProcess::finished, &e, [&rc](int exitCode, QProcess::ExitStatus) {
             if (exitCode == 255) {
                 // Startup error
                 messageBox(QStringLiteral("startkde: Could not start plasma_session. Check your installation.\n"));

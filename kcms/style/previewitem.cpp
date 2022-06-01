@@ -44,7 +44,7 @@ void PreviewItem::componentComplete()
 
 bool PreviewItem::eventFilter(QObject *watched, QEvent *event)
 {
-    if (watched == m_widget.data()) {
+    if (watched == m_widget.get()) {
         switch (event->type()) {
         case QEvent::Show:
         case QEvent::UpdateRequest:
@@ -118,7 +118,7 @@ void PreviewItem::reload()
     // Do not wait for this widget to close before the app closes
     m_widget->setAttribute(Qt::WA_QuitOnClose, false);
 
-    m_ui.setupUi(m_widget.data());
+    m_ui.setupUi(m_widget.get());
 
     // Prevent Qt from wrongly caching radio button images
     QPixmapCache::clear();
@@ -136,7 +136,7 @@ void PreviewItem::reload()
         palette.setColor(QPalette::Inactive, role, palette.color(QPalette::Active, role));
     }
 
-    setStyleRecursively(m_widget.data(), m_style.data(), palette);
+    setStyleRecursively(m_widget.get(), m_style.get(), palette);
 
     m_widget->ensurePolished();
 
@@ -183,13 +183,13 @@ void PreviewItem::sendHoverEvent(QHoverEvent *event)
     QPointF pos = event->pos();
 
     QWidget *child = m_widget->childAt(pos.toPoint());
-    QWidget *receiver = child ? child : m_widget.data();
+    QWidget *receiver = child ? child : m_widget.get();
 
     dispatchEnterLeave(receiver, m_lastWidgetUnderMouse, mapToGlobal(event->pos()));
 
     m_lastWidgetUnderMouse = receiver;
 
-    pos = receiver->mapFrom(m_widget.data(), pos.toPoint());
+    pos = receiver->mapFrom(m_widget.get(), pos.toPoint());
 
     QMouseEvent mouseEvent(QEvent::MouseMove,
                            pos,

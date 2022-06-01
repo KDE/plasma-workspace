@@ -41,7 +41,7 @@ private:
     void autoStart(int phase);
 
     QVector<QProcess *> m_processes;
-    QScopedPointer<QEventLoopLocker> m_lock;
+    std::unique_ptr<QEventLoopLocker> m_lock;
     static Startup *s_self;
 };
 

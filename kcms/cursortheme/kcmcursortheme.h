@@ -9,7 +9,6 @@
 
 #include <KNSCore/EntryWrapper>
 #include <KQuickAddons/ManagedConfigModule>
-#include <QScopedPointer>
 
 #include "cursorthemesettings.h"
 
@@ -121,6 +120,6 @@ private:
     bool m_canResize;
     bool m_canConfigure;
 
-    QScopedPointer<QTemporaryFile> m_tempInstallFile;
+    std::unique_ptr<QTemporaryFile> m_tempInstallFile;
     QPointer<KIO::FileCopyJob> m_tempCopyJob;
 };

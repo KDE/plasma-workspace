@@ -24,9 +24,9 @@ private Q_SLOTS:
 
 void HistoryTest::testSetMaxSize()
 {
-    QScopedPointer<History> history(new History(nullptr));
-    QSignalSpy changedSpy(history.data(), &History::changed);
-    QSignalSpy topSpy(history.data(), &History::topChanged);
+    std::unique_ptr<History> history(new History(nullptr));
+    QSignalSpy changedSpy(history.get(), &History::changed);
+    QSignalSpy topSpy(history.get(), &History::topChanged);
     QVERIFY(history->empty());
     QCOMPARE(history->maxSize(), 0u);
     QVERIFY(changedSpy.isEmpty());
@@ -73,9 +73,9 @@ void HistoryTest::testSetMaxSize()
 
 void HistoryTest::testInsertRemove()
 {
-    QScopedPointer<History> history(new History(nullptr));
-    QSignalSpy topSpy(history.data(), &History::topChanged);
-    QSignalSpy topUserSelectedSpy(history.data(), &History::topIsUserSelectedSet);
+    std::unique_ptr<History> history(new History(nullptr));
+    QSignalSpy topSpy(history.get(), &History::topChanged);
+    QSignalSpy topUserSelectedSpy(history.get(), &History::topIsUserSelectedSet);
 
     history->setMaxSize(10);
     QVERIFY(history->empty());
@@ -198,7 +198,7 @@ void HistoryTest::testInsertRemove()
 
 void HistoryTest::testClear()
 {
-    QScopedPointer<History> history(new History(nullptr));
+    std::unique_ptr<History> history(new History(nullptr));
     history->setMaxSize(10);
     QVERIFY(history->empty());
     QVERIFY(!history->topIsUserSelected());
@@ -216,7 +216,7 @@ void HistoryTest::testClear()
     QVERIFY(history->first());
 
     // and clear
-    QSignalSpy topSpy(history.data(), &History::topChanged);
+    QSignalSpy topSpy(history.get(), &History::topChanged);
     QVERIFY(topSpy.isEmpty());
     history->slotClear();
     QVERIFY(history->empty());
@@ -227,7 +227,7 @@ void HistoryTest::testClear()
 
 void HistoryTest::testFind()
 {
-    QScopedPointer<History> history(new History(nullptr));
+    std::unique_ptr<History> history(new History(nullptr));
     history->setMaxSize(10);
     QVERIFY(history->empty());
     QVERIFY(!history->find(QByteArrayLiteral("whatever")));
@@ -246,8 +246,8 @@ void HistoryTest::testFind()
 
 void HistoryTest::testCycle()
 {
-    QScopedPointer<History> history(new History(nullptr));
-    QSignalSpy topSpy(history.data(), &History::topChanged);
+    std::unique_ptr<History> history(new History(nullptr));
+    QSignalSpy topSpy(history.get(), &History::topChanged);
     history->setMaxSize(10);
     QVERIFY(!history->nextInCycle());
     QVERIFY(!history->prevInCycle());

@@ -52,8 +52,8 @@ private:
 
     uint m_nodeId = 0;
     std::function<QSGTexture *()> m_createNextTexture;
-    QScopedPointer<PipeWireSourceStream> m_stream;
-    QScopedPointer<QOpenGLTexture> m_texture;
+    std::unique_ptr<PipeWireSourceStream> m_stream;
+    std::unique_ptr<QOpenGLTexture> m_texture;
 
     EGLImage m_image = nullptr;
     bool m_needsRecreateTexture = false;

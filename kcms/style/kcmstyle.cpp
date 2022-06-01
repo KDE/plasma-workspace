@@ -33,7 +33,6 @@
 #include <QQuickItem>
 #include <QQuickRenderControl>
 #include <QQuickWindow>
-#include <QScopedPointer>
 #include <QStyleFactory>
 #include <QWidget>
 #include <QWindow>
@@ -272,7 +271,7 @@ void KCMStyle::save()
     // Otherwise apps will use the default style despite something else having been written to the config
     bool newStyleLoaded = false;
     if (styleSettings()->widgetStyle() != m_previousStyle) {
-        QScopedPointer<QStyle> newStyle(QStyleFactory::create(styleSettings()->widgetStyle()));
+        std::unique_ptr<QStyle> newStyle(QStyleFactory::create(styleSettings()->widgetStyle()));
         if (newStyle) {
             newStyleLoaded = true;
             m_previousStyle = styleSettings()->widgetStyle();

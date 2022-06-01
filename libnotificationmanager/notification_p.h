@@ -10,7 +10,6 @@
 #include <QDateTime>
 #include <QImage>
 #include <QList>
-#include <QScopedPointer>
 #include <QString>
 #include <QUrl>
 

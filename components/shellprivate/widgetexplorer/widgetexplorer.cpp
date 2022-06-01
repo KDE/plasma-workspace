@@ -58,7 +58,7 @@ public:
         , filterModel(w)
         , activitiesConsumer(new KActivities::Consumer())
     {
-        QObject::connect(activitiesConsumer.data(), &Consumer::currentActivityChanged, q, [this] {
+        QObject::connect(activitiesConsumer.get(), &Consumer::currentActivityChanged, q, [this] {
             initRunningApplets();
         });
     }
@@ -98,7 +98,7 @@ public:
     DefaultItemFilterProxyModel filterItemModel;
     static QPointer<KNS3::QtQuickDialogWrapper> newStuffDialog;
 
-    QScopedPointer<KActivities::Consumer> activitiesConsumer;
+    std::unique_ptr<KActivities::Consumer> activitiesConsumer;
 };
 
 QPointer<KNS3::QtQuickDialogWrapper> WidgetExplorerPrivate::newStuffDialog;

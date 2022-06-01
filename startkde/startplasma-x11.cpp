@@ -58,7 +58,7 @@ int main(int argc, char **argv)
     }
 
     setupCursor(false);
-    QScopedPointer<QProcess, KillBeforeDeleter> ksplash(setupKSplash());
+    std::unique_ptr<QProcess, KillBeforeDeleter> ksplash(setupKSplash());
 
     runEnvironmentScripts();
 

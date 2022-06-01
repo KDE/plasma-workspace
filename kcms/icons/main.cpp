@@ -313,7 +313,7 @@ QVariantList IconModule::previewIcons(const QString &themeName, int size, qreal 
         {QStringLiteral("folder-video"), QStringLiteral("folder-videos")}};
 
     // created on-demand as it is quite expensive to do and we don't want to do it every loop iteration either
-    QScopedPointer<KIconTheme> theme;
+    std::unique_ptr<KIconTheme> theme;
 
     QVariantList pixmaps;
 
@@ -327,7 +327,7 @@ QVariantList IconModule::previewIcons(const QString &themeName, int size, qreal 
                 theme.reset(new KIconTheme(themeName));
             }
 
-            pix = getBestIcon(*theme.data(), iconNames, size, dpr);
+            pix = getBestIcon(*theme.get(), iconNames, size, dpr);
 
             // Inserting a pixmap even if null so we know whether we searched for it already
             QPixmapCache::insert(cacheKey, pix);

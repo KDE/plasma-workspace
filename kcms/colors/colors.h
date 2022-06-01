@@ -12,7 +12,6 @@
 #include <QColor>
 #include <QDBusPendingCallWatcher>
 #include <QPointer>
-#include <QScopedPointer>
 
 #include <KSharedConfig>
 
@@ -120,6 +119,6 @@ private:
     KSharedConfigPtr m_config;
     KConfigWatcher::Ptr m_configWatcher;
 
-    QScopedPointer<QTemporaryFile> m_tempInstallFile;
+    std::unique_ptr<QTemporaryFile> m_tempInstallFile;
     QPointer<KIO::FileCopyJob> m_tempCopyJob;
 };
