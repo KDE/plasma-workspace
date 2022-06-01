@@ -7,6 +7,7 @@
 #include <QDir>
 #include <QtTest>
 
+#include "commontestdata.h"
 #include "finder/imagefinder.h"
 
 class ImageFinderTest : public QObject
@@ -41,17 +42,19 @@ void ImageFinderTest::testImageFinderCanFindImages()
      * Expected result:
      *
      * - wallpaper.jpg.jpg is found.
+     * - "# BUG454692 file name with hash char.png" is found.
      * - symlinkshouldnotbefoundbythefinder.jpg is ignored.
      * - screenshot.png is ignored.
      * - All images in package/contents/images/ are ignored.
      *
-     * So the total number of images found by ImageFinder is 1.
+     * So the total number of images found by ImageFinder is 2.
      */
     const auto paths = spy.takeFirst().at(0).toStringList();
 
     qInfo() << "Found images:" << paths;
-    QCOMPARE(paths.size(), 1);
-    QCOMPARE(paths.at(0), m_dataDir.absoluteFilePath(QStringLiteral("wallpaper.jpg.jpg")));
+    QCOMPARE(paths.size(), ImageBackendTestData::defaultImageCount);
+    QTRY_COMPARE(paths.count(m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName1)), 1);
+    QTRY_COMPARE(paths.count(m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName2)), 1);
 }
 
 QTEST_MAIN(ImageFinderTest)

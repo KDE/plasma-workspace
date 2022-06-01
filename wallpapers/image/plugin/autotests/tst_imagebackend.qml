@@ -117,12 +117,13 @@ TestCase {
         imageWallpaper.renderingMode = Wallpaper.ImageBackend.SlideShow;
         wait(1000); // &SlideModel::done
 
-        const image1 = imageWallpaper.modelImage;
+        let image = imageWallpaper.modelImage;
 
         imageWallpaper.nextSlide();
-        verify(image1 != imageWallpaper.modelImage);
+        verify(image != imageWallpaper.modelImage);
 
+        image = imageWallpaper.modelImage;
         imageWallpaper.nextSlide();
-        compare(image1, imageWallpaper.modelImage);
+        verify(image != imageWallpaper.modelImage);
     }
 }

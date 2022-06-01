@@ -10,6 +10,7 @@
 #include <KIO/PreviewJob>
 
 #include "../model/packagelistmodel.h"
+#include "commontestdata.h"
 
 class PackageListModelTest : public QObject
 {
@@ -47,8 +48,8 @@ void PackageListModelTest::initTestCase()
     QVERIFY(!m_dataDir.isEmpty());
     QVERIFY(!m_alternateDir.isEmpty());
 
-    m_packagePath = m_dataDir.absoluteFilePath(QStringLiteral("package"));
-    m_dummyPackagePath = m_alternateDir.absoluteFilePath(QStringLiteral("dummy"));
+    m_packagePath = m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName1);
+    m_dummyPackagePath = m_alternateDir.absoluteFilePath(ImageBackendTestData::alternatePackageFolderName1);
 
     m_targetSize = QSize(1920, 1080);
 
@@ -66,7 +67,7 @@ void PackageListModelTest::init()
     m_countSpy->wait(10 * 1000);
     QCOMPARE(m_countSpy->size(), 1);
     m_countSpy->clear();
-    QCOMPARE(m_model->rowCount(), 1);
+    QCOMPARE(m_model->rowCount(), ImageBackendTestData::defaultPackageCount);
 }
 
 void PackageListModelTest::cleanup()
@@ -140,7 +141,7 @@ void PackageListModelTest::testPackageListModelAddBackground()
     m_countSpy->clear();
     QCOMPARE(results.size(), 1);
     QCOMPARE(results.at(0), m_dummyPackagePath + QDir::separator());
-    QCOMPARE(m_model->rowCount(), 2);
+    QCOMPARE(m_model->rowCount(), ImageBackendTestData::defaultPackageCount + 1);
 
     QPersistentModelIndex idx = m_model->index(0, 0); // This is the newly added item.
     QVERIFY(idx.isValid());
@@ -154,7 +155,7 @@ void PackageListModelTest::testPackageListModelAddBackground()
     QCOMPARE(m_countSpy->size(), 0);
 
     // Case 3: add an image
-    results = m_model->addBackground(m_alternateDir.absoluteFilePath(QStringLiteral("dummy.jpg")));
+    results = m_model->addBackground(m_alternateDir.absoluteFilePath(ImageBackendTestData::alternateImageFileName1));
     QCOMPARE(results.size(), 0);
     QCOMPARE(m_countSpy->size(), 0);
 
@@ -200,7 +201,7 @@ void PackageListModelTest::testPackageListModelRemoveBackground()
     results = m_model->removeBackground(m_dummyPackagePath);
     QCOMPARE(m_countSpy->size(), 1);
     m_countSpy->clear();
-    QCOMPARE(m_model->rowCount(), 1);
+    QCOMPARE(m_model->rowCount(), ImageBackendTestData::defaultPackageCount);
     QCOMPARE(results.size(), 1);
     QCOMPARE(results.at(0), m_dummyPackagePath + QDir::separator());
     QCOMPARE(m_model->m_removableWallpapers.size(), 0);

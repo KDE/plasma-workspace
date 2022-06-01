@@ -9,6 +9,7 @@
 
 #include "../model/imageproxymodel.h"
 #include "../slidemodel.h"
+#include "commontestdata.h"
 
 class SlideModelTest : public QObject
 {
@@ -34,7 +35,7 @@ private:
 
     QDir m_dataDir;
     QDir m_alternateDir;
-    QString m_wallpaperPath;
+    QStringList m_wallpaperPaths;
     QString m_dummyWallpaperPath;
     QString m_packagePath;
     QString m_dummyPackagePath;
@@ -48,7 +49,8 @@ void SlideModelTest::initTestCase()
     QVERIFY(!m_dataDir.isEmpty());
     QVERIFY(!m_alternateDir.isEmpty());
 
-    m_wallpaperPath = m_dataDir.absoluteFilePath(QStringLiteral("wallpaper.jpg.jpg"));
+    m_wallpaperPaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName1);
+    m_wallpaperPaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName2);
     m_dummyWallpaperPath = m_alternateDir.absoluteFilePath(QStringLiteral("dummy.jpg"));
 
     m_packagePath = m_dataDir.absoluteFilePath(QStringLiteral("package"));
@@ -73,10 +75,10 @@ void SlideModelTest::init()
     m_doneSpy->clear();
     QCOMPARE(m_model->sourceModels().size(), 1);
     QCOMPARE(m_model->m_models.size(), 1);
-    QCOMPARE(m_model->rowCount(), 2); // wallpaper.jpg.jpg, package
+    QCOMPARE(m_model->rowCount(), ImageBackendTestData::defaultTotalCount);
 
     QVERIFY(m_model->m_models.contains(m_dataDir.absolutePath() + QDir::separator()));
-    QCOMPARE(m_model->m_models.value(m_dataDir.absolutePath() + QDir::separator())->count(), 2);
+    QCOMPARE(m_model->m_models.value(m_dataDir.absolutePath() + QDir::separator())->count(), ImageBackendTestData::defaultTotalCount);
 }
 
 void SlideModelTest::cleanup()
@@ -107,7 +109,8 @@ void SlideModelTest::testSlideModelData()
 
 void SlideModelTest::testSlideModelIndexOf()
 {
-    QVERIFY(m_model->indexOf(m_wallpaperPath) >= 0);
+    QVERIFY(m_model->indexOf(m_wallpaperPaths.at(0)) >= 0);
+    QVERIFY(m_model->indexOf(m_wallpaperPaths.at(1)) >= 0);
     QVERIFY(m_model->indexOf(m_packagePath) >= 0);
     QVERIFY(m_model->indexOf(m_packagePath + QDir::separator()) >= 0);
     QCOMPARE(m_model->indexOf(m_dummyWallpaperPath), -1);
@@ -119,7 +122,7 @@ void SlideModelTest::testSlideModelAddDirs()
     int count = m_model->rowCount();
 
     // Case 1: add an image file
-    auto results = m_model->addDirs({m_wallpaperPath});
+    auto results = m_model->addDirs({m_wallpaperPaths.at(0)});
     QCOMPARE(m_model->m_models.size(), 1);
     QCOMPARE(results.size(), 0);
 
@@ -135,7 +138,7 @@ void SlideModelTest::testSlideModelAddDirs()
     QVERIFY(m_doneSpy->wait());
     QCOMPARE(m_doneSpy->size(), 1);
     m_doneSpy->clear();
-    QCOMPARE(m_model->rowCount(), ++ ++count);
+    QCOMPARE(m_model->rowCount(), count + ImageBackendTestData::alternateTotalCount);
 }
 
 void SlideModelTest::testSlideModelRemoveDir()
@@ -144,7 +147,7 @@ void SlideModelTest::testSlideModelRemoveDir()
     m_model->removeDir(m_alternateDir.absolutePath());
     QCOMPARE(m_model->m_models.size(), 1);
     QCOMPARE(m_model->m_loaded, 1);
-    QCOMPARE(m_model->rowCount(), 2);
+    QCOMPARE(m_model->rowCount(), ImageBackendTestData::defaultTotalCount);
 
     // Case 2: remove an existing dir
     m_model->removeDir(m_dataDir.absolutePath());
@@ -173,7 +176,7 @@ void SlideModelTest::testSlideModelSetSlidePaths()
     m_doneSpy->clear();
     QCOMPARE(m_model->sourceModels().size(), 1);
     QCOMPARE(m_model->m_models.size(), 1);
-    QCOMPARE(m_model->rowCount(), 2);
+    QCOMPARE(m_model->rowCount(), ImageBackendTestData::alternateTotalCount);
 }
 
 void SlideModelTest::testSlideModelSetUncheckedSlides()

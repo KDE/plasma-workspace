@@ -10,6 +10,7 @@
 
 #include <KPackage/PackageLoader>
 
+#include "commontestdata.h"
 #include "finder/packagefinder.h"
 
 class PackageFinderTest : public QObject
@@ -72,7 +73,7 @@ void PackageFinderTest::testFindPreferredSizeInPackage()
     QFETCH(QString, expected);
 
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
-    package.setPath(m_dataDir.absoluteFilePath(QStringLiteral("package")));
+    package.setPath(m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName1));
 
     QVERIFY(package.isValid());
     QVERIFY(package.metadata().isValid());
@@ -84,7 +85,8 @@ void PackageFinderTest::testFindPreferredSizeInPackage()
 
 void PackageFinderTest::testPackageFinderCanFindPackages()
 {
-    PackageFinder *finder = new PackageFinder({m_dataDir.absolutePath(), m_dataDir.absoluteFilePath(QStringLiteral("package"))}, QSize(1920, 1080));
+    PackageFinder *finder =
+        new PackageFinder({m_dataDir.absolutePath(), m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName1)}, QSize(1920, 1080));
     QSignalSpy spy(finder, &PackageFinder::packageFound);
 
     QThreadPool::globalInstance()->start(finder);
@@ -95,7 +97,8 @@ void PackageFinderTest::testPackageFinderCanFindPackages()
     const auto items = spy.takeFirst().at(0).value<QList<KPackage::Package>>();
     // Total 2 packages in the directory, but one package is broken and should not be added to the list.
     QCOMPARE(items.size(), 1);
-    QCOMPARE(items.at(0).filePath("preferred"), m_dataDir.absoluteFilePath(QStringLiteral("package/contents/images/1920x1080.jpg")));
+    QCOMPARE(items.at(0).filePath("preferred"),
+             m_dataDir.absoluteFilePath(QStringLiteral("%1/contents/images/1920x1080.jpg").arg(ImageBackendTestData::defaultPackageFolderName1)));
 }
 
 QTEST_MAIN(PackageFinderTest)

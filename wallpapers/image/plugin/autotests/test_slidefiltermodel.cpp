@@ -8,6 +8,7 @@
 
 #include "../slidefiltermodel.h"
 #include "../slidemodel.h"
+#include "commontestdata.h"
 
 class SlideFilterModelTest : public QObject
 {
@@ -40,7 +41,7 @@ void SlideFilterModelTest::initTestCase()
     m_dataDir = QDir(QFINDTESTDATA("testdata/default"));
     QVERIFY(!m_dataDir.isEmpty());
 
-    m_wallpaperPath = m_dataDir.absoluteFilePath(QStringLiteral("wallpaper.jpg.jpg"));
+    m_wallpaperPath = m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName1);
 
     m_targetSize = QSize(1920, 1080);
 

@@ -7,6 +7,7 @@
 #include <QDir>
 #include <QtTest>
 
+#include "commontestdata.h"
 #include "finder/imagesizefinder.h"
 
 class ImageSizeFinderTest : public QObject
@@ -29,7 +30,7 @@ void ImageSizeFinderTest::initTestCase()
 
 void ImageSizeFinderTest::testImageSizeFinder()
 {
-    const QString path = m_dataDir.absoluteFilePath(QStringLiteral("wallpaper.jpg.jpg"));
+    const QString path = m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName1);
 
     ImageSizeFinder *finder = new ImageSizeFinder(path);
     QSignalSpy spy(finder, &ImageSizeFinder::sizeFound);

@@ -12,6 +12,7 @@
 #include "../model/imagelistmodel.h"
 #include "../model/imageproxymodel.h"
 #include "../model/packagelistmodel.h"
+#include "commontestdata.h"
 
 class ImageProxyModelTest : public QObject
 {
@@ -36,7 +37,7 @@ private:
 
     QDir m_dataDir;
     QDir m_alternateDir;
-    QString m_wallpaperPath;
+    QStringList m_wallpaperPaths;
     QString m_dummyWallpaperPath;
     QString m_packagePath;
     QString m_dummyPackagePath;
@@ -51,11 +52,12 @@ void ImageProxyModelTest::initTestCase()
     QVERIFY(!m_dataDir.isEmpty());
     QVERIFY(!m_alternateDir.isEmpty());
 
-    m_wallpaperPath = m_dataDir.absoluteFilePath(QStringLiteral("wallpaper.jpg.jpg"));
-    m_dummyWallpaperPath = m_alternateDir.absoluteFilePath(QStringLiteral("dummy.jpg"));
+    m_wallpaperPaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName1);
+    m_wallpaperPaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName2);
+    m_dummyWallpaperPath = m_alternateDir.absoluteFilePath(ImageBackendTestData::alternateImageFileName1);
 
-    m_packagePath = m_dataDir.absoluteFilePath(QStringLiteral("package"));
-    m_dummyPackagePath = m_alternateDir.absoluteFilePath(QStringLiteral("dummy"));
+    m_packagePath = m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName1);
+    m_dummyPackagePath = m_alternateDir.absoluteFilePath(ImageBackendTestData::alternatePackageFolderName1);
 
     m_modelNum = 2;
     m_targetSize = QSize(1920, 1080);
@@ -85,11 +87,11 @@ void ImageProxyModelTest::init()
 
     QVERIFY(!m_model->loading());
 
-    QCOMPARE(m_model->rowCount(), 2); // wallpaper.jpg.jpg, package
-    QCOMPARE(m_model->count(), 2);
+    QCOMPARE(m_model->rowCount(), ImageBackendTestData::defaultTotalCount);
+    QCOMPARE(m_model->count(), m_model->rowCount());
 
-    QCOMPARE(m_model->m_imageModel->count(), 1);
-    QCOMPARE(m_model->m_packageModel->count(), 1);
+    QCOMPARE(m_model->m_imageModel->count(), ImageBackendTestData::defaultImageCount);
+    QCOMPARE(m_model->m_packageModel->count(), ImageBackendTestData::defaultPackageCount);
 }
 
 void ImageProxyModelTest::cleanup()
@@ -108,7 +110,8 @@ void ImageProxyModelTest::cleanupTestCase()
 
 void ImageProxyModelTest::testImageProxyModelIndexOf()
 {
-    QVERIFY(m_model->indexOf(m_wallpaperPath) >= 0);
+    QVERIFY(m_model->indexOf(m_wallpaperPaths.at(0)) >= 0);
+    QVERIFY(m_model->indexOf(m_wallpaperPaths.at(1)) >= 0);
     QVERIFY(m_model->indexOf(m_packagePath) >= 0);
     QVERIFY(m_model->indexOf(m_packagePath + QDir::separator()) >= 0);
     QCOMPARE(m_model->indexOf(m_dataDir.absoluteFilePath(QStringLiteral("brokenpackage") + QDir::separator())), -1);
@@ -124,9 +127,9 @@ void ImageProxyModelTest::testImageProxyModelReload()
     QCOMPARE(m_countSpy->size(), m_modelNum);
     m_countSpy->clear();
 
-    QCOMPARE(m_model->rowCount(), 2);
-    QCOMPARE(m_model->m_imageModel->rowCount(), 1);
-    QCOMPARE(m_model->m_packageModel->rowCount(), 1);
+    QCOMPARE(m_model->rowCount(), ImageBackendTestData::defaultTotalCount);
+    QCOMPARE(m_model->m_imageModel->rowCount(), ImageBackendTestData::defaultImageCount);
+    QCOMPARE(m_model->m_packageModel->rowCount(), ImageBackendTestData::defaultPackageCount);
 }
 
 void ImageProxyModelTest::testImageProxyModelAddBackground()
@@ -134,7 +137,7 @@ void ImageProxyModelTest::testImageProxyModelAddBackground()
     int count = m_model->count();
 
     // Case 1: add an existing wallpaper
-    auto results = m_model->addBackground(m_wallpaperPath);
+    auto results = m_model->addBackground(m_wallpaperPaths.at(0));
     QCOMPARE(m_countSpy->size(), 0);
     QCOMPARE(results.size(), 0);
 
@@ -149,8 +152,8 @@ void ImageProxyModelTest::testImageProxyModelAddBackground()
     m_countSpy->clear();
     QCOMPARE(results.size(), 1);
     QCOMPARE(m_model->count(), ++count);
-    QCOMPARE(m_model->m_imageModel->count(), 2);
-    QCOMPARE(m_model->m_packageModel->count(), 1);
+    QCOMPARE(m_model->m_imageModel->count(), ImageBackendTestData::defaultImageCount + 1);
+    QCOMPARE(m_model->m_packageModel->count(), ImageBackendTestData::defaultPackageCount);
 
     // Case 4: add a new package
     results = m_model->addBackground(m_dummyPackagePath);
@@ -158,8 +161,8 @@ void ImageProxyModelTest::testImageProxyModelAddBackground()
     m_countSpy->clear();
     QCOMPARE(results.size(), 1);
     QCOMPARE(m_model->count(), ++count);
-    QCOMPARE(m_model->m_imageModel->count(), 2);
-    QCOMPARE(m_model->m_packageModel->count(), 2);
+    QCOMPARE(m_model->m_imageModel->count(), ImageBackendTestData::defaultImageCount + 1);
+    QCOMPARE(m_model->m_packageModel->count(), ImageBackendTestData::defaultPackageCount + 1);
 
     // Test KDirWatch
     QVERIFY(m_model->m_dirWatch.contains(m_dummyWallpaperPath));
@@ -184,16 +187,16 @@ void ImageProxyModelTest::testImageProxyModelRemoveBackground()
     m_model->removeBackground(QUrl::fromLocalFile(m_dummyWallpaperPath).toString());
     QCOMPARE(m_countSpy->size(), 1);
     m_countSpy->clear();
-    QCOMPARE(m_model->m_imageModel->count(), 1);
-    QCOMPARE(m_model->m_packageModel->count(), 2);
+    QCOMPARE(m_model->m_imageModel->count(), ImageBackendTestData::defaultImageCount);
+    QCOMPARE(m_model->m_packageModel->count(), ImageBackendTestData::defaultPackageCount + 1);
     QCOMPARE(m_model->count(), --count);
     QVERIFY(!m_model->m_dirWatch.contains(m_dummyWallpaperPath));
 
     m_model->removeBackground(m_dummyPackagePath);
     QCOMPARE(m_countSpy->size(), 1);
     m_countSpy->clear();
-    QCOMPARE(m_model->m_imageModel->count(), 1);
-    QCOMPARE(m_model->m_packageModel->count(), 1);
+    QCOMPARE(m_model->m_imageModel->count(), ImageBackendTestData::defaultImageCount);
+    QCOMPARE(m_model->m_packageModel->count(), ImageBackendTestData::defaultPackageCount);
     QCOMPARE(m_model->count(), --count);
     QVERIFY(!m_model->m_dirWatch.contains(m_dummyPackagePath));
 
@@ -208,7 +211,8 @@ void ImageProxyModelTest::testImageProxyModelRemoveBackground()
 void ImageProxyModelTest::testImageProxyModelDirWatch()
 {
     QVERIFY(m_model->m_dirWatch.contains(m_dataDir.absolutePath()));
-    QVERIFY(m_model->m_dirWatch.contains(m_wallpaperPath));
+    QVERIFY(m_model->m_dirWatch.contains(m_wallpaperPaths.at(0)));
+    QVERIFY(m_model->m_dirWatch.contains(m_wallpaperPaths.at(1)));
     QVERIFY(m_model->m_dirWatch.contains(m_packagePath));
 
     m_model->deleteLater();
@@ -230,7 +234,7 @@ void ImageProxyModelTest::testImageProxyModelDirWatch()
     QVERIFY(m_model->m_dirWatch.contains(standardPath));
 
     // Copy an image to the folder
-    QFile imageFile(m_wallpaperPath);
+    QFile imageFile(m_wallpaperPaths.at(0));
     QVERIFY(imageFile.copy(standardPath + QStringLiteral("image.jpg")));
     m_countSpy->wait();
     QCOMPARE(m_countSpy->size(), 1);
