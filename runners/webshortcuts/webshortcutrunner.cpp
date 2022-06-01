@@ -47,6 +47,7 @@ void WebshortcutRunner::loadSyntaxes()
     if (KUriFilter::self()->filterSearchUri(filterData, KUriFilter::NormalTextFilter)) {
         m_delimiter = filterData.searchTermSeparator();
     }
+    m_regex = QRegularExpression(QStringLiteral("^([^ ]+)%1").arg(QRegularExpression::escape(m_delimiter)));
 
     QList<Plasma::RunnerSyntax> syns;
     const QStringList providers = filterData.preferredSearchProviders();
@@ -102,7 +103,6 @@ void WebshortcutRunner::match(Plasma::RunnerContext &context)
 {
     const QString term = context.query();
     const static QRegularExpression bangRegex(QStringLiteral("!([^ ]+).*"));
-    const static QRegularExpression normalRegex(QStringLiteral("^([^ ]+)%1").arg(QRegularExpression::escape(m_delimiter)));
     const auto bangMatch = bangRegex.match(term);
     QString key;
     QString rawQuery = term;
@@ -111,7 +111,7 @@ void WebshortcutRunner::match(Plasma::RunnerContext &context)
         key = bangMatch.captured(1);
         rawQuery = rawQuery.remove(rawQuery.indexOf(key) - 1, key.size() + 1);
     } else {
-        const auto normalMatch = normalRegex.match(term);
+        const auto normalMatch = m_regex.match(term);
         if (normalMatch.hasMatch()) {
             key = normalMatch.captured(0);
             rawQuery = rawQuery.mid(key.length());
