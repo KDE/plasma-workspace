@@ -20,4 +20,8 @@ SessionManagementScreen {
         Keys.onEnterPressed: clicked()
         Keys.onReturnPressed: clicked()
     }
+
+    Component.onCompleted: {
+        forceActiveFocus();
+    }
 }
