@@ -218,6 +218,12 @@ MouseArea {
         }
     }
 
+    Timer {
+        id: expandedSync
+        interval: 100
+        onTriggered: systemTrayState.expanded = dialog.visible;
+    }
+
     //Main popup
     PlasmaCore.Dialog {
         id: dialog
@@ -231,15 +237,14 @@ MouseArea {
         appletInterface: Plasmoid.self
 
         onVisibleChanged: {
-            systemTrayState.expanded = visible;
-            if (!systemTrayState.expanded) {
-                return;
-            }
-
-            if (expandedRepresentation.plasmoidContainer.visible) {
-                expandedRepresentation.plasmoidContainer.forceActiveFocus();
-            } else if (expandedRepresentation.hiddenLayout.visible) {
-                expandedRepresentation.hiddenLayout.forceActiveFocus();
+            if (!visible) {
+                expandedSync.restart();
+            } else {
+                if (expandedRepresentation.plasmoidContainer.visible) {
+                    expandedRepresentation.plasmoidContainer.forceActiveFocus();
+                } else if (expandedRepresentation.hiddenLayout.visible) {
+                    expandedRepresentation.hiddenLayout.forceActiveFocus();
+                }
             }
         }
         mainItem: ExpandedRepresentation {

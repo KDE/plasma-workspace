@@ -38,8 +38,12 @@ PlasmaCore.ToolTipArea {
     MouseArea {
         id: arrowMouseArea
         anchors.fill: parent
+
+        property bool wasExpanded
+
+        onPressed: wasExpanded = systemTrayState.expanded
         onClicked: {
-            systemTrayState.expanded = !systemTrayState.expanded;
+            systemTrayState.expanded = !wasExpanded;
             expandedRepresentation.hiddenLayout.currentIndex = -1;
         }
 
