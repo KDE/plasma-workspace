@@ -35,6 +35,8 @@ QQC2.StackView {
             }
         } else {
             imageWallpaper.addSlidePath(url);
+            // Save drag and drop result
+            wallpaper.configuration.SlidePaths = imageWallpaper.slidePaths;
         }
     }
 
@@ -71,9 +73,6 @@ QQC2.StackView {
         slideshowMode: wallpaper.configuration.SlideshowMode
         slideshowFoldersFirst: wallpaper.configuration.SlideshowFoldersFirst
         uncheckedSlides: wallpaper.configuration.UncheckedSlides
-
-        // Save drag and drop result
-        onSlidePathsChanged: wallpaper.configuration.SlidePaths = slidePaths
     }
 
     onFillModeChanged: Qt.callLater(loadImage);
