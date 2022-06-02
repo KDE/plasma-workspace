@@ -95,7 +95,8 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     // FEATURE 352476: cancel focus on the panel when clicking outside
     connect(this, &PanelView::activeFocusItemChanged, this, [this] {
         if (containment()->status() == Plasma::Types::AcceptingInputStatus && !activeFocusItem()) {
-            containment()->setStatus(Plasma::Types::PassiveStatus);
+            // BUG 454729: avoid switching to PassiveStatus in keyboard navigation
+            containment()->setStatus(Plasma::Types::ActiveStatus);
         }
     });
 
