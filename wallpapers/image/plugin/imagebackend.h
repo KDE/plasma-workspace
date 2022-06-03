@@ -12,6 +12,7 @@
 
 #include <QAbstractItemModel>
 #include <QQmlParserStatus>
+#include <QRect>
 #include <QSize>
 #include <QTimer>
 
@@ -21,6 +22,7 @@
 
 class QFileDialog;
 class QQuickItem;
+class QQuickWindow;
 
 class KDirWatch;
 class KJob;
@@ -54,6 +56,12 @@ class ImageBackend : public QObject, public QQmlParserStatus, public SortingMode
     Q_PROPERTY(QStringList slidePaths READ slidePaths WRITE setSlidePaths NOTIFY slidePathsChanged)
     Q_PROPERTY(QSize targetSize READ targetSize WRITE setTargetSize NOTIFY targetSizeChanged)
     Q_PROPERTY(QStringList uncheckedSlides READ uncheckedSlides WRITE setUncheckedSlides NOTIFY uncheckedSlidesChanged)
+
+    /**
+     * @return @c true if the image should span multiple screens, @c false otherwise
+     * @see \WideImageProvider
+     */
+    Q_PROPERTY(bool spanScreens READ spanScreens WRITE setSpanScreens NOTIFY spanScreensChanged)
 
     /**
      * @return @c true if the image list is loaded, @c false otherwise
@@ -120,6 +128,9 @@ public:
     QStringList uncheckedSlides() const;
     void setUncheckedSlides(const QStringList &uncheckedSlides);
 
+    bool spanScreens() const;
+    void setSpanScreens(bool span);
+
     bool loading() const;
 
 public Q_SLOTS:
@@ -140,6 +151,7 @@ Q_SIGNALS:
     void resizeMethodChanged();
     void customWallpaperPicked(const QString &path);
     void uncheckedSlidesChanged();
+    void spanScreensChanged();
     void loadingChanged();
 
 protected Q_SLOTS:
@@ -148,6 +160,9 @@ protected Q_SLOTS:
     void startSlideshow();
     void addDirFromSelectionDialog();
     void backgroundsFound();
+
+    void slotParentWindowChanged(QQuickWindow *window);
+    void slotScreenPoolChanged();
 
 protected:
     void setSingleImage();
@@ -160,6 +175,10 @@ private:
     QUrl m_image;
     QUrl m_modelImage;
     QSize m_targetSize;
+
+    // Used by WideImageProvider
+    QQuickWindow *m_targetWindow = nullptr;
+    bool m_spanScreens = false;
 
     bool m_usedInConfig = true;
 

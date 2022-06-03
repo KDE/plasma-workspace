@@ -17,7 +17,13 @@ QQC2.StackView {
     id: root
 
     readonly property url modelImage: imageWallpaper.modelImage
-    readonly property int fillMode: wallpaper.configuration.FillMode
+    readonly property int fillMode: {
+        const mode = wallpaper.configuration.FillMode;
+        if (mode == Image.PreserveAspectCrop + 100) {
+            return Image.PreserveAspectCrop;
+        }
+        return mode;
+    }
     readonly property string configColor: wallpaper.configuration.Color
     readonly property bool blur: wallpaper.configuration.Blur
     readonly property size sourceSize: Qt.size(root.width * Screen.devicePixelRatio, root.height * Screen.devicePixelRatio)
@@ -78,6 +84,9 @@ QQC2.StackView {
             return wallpaper.configuration.Image;
         }
         targetSize: root.sourceSize
+
+        spanScreens: wallpaper.configuration.FillMode == Image.PreserveAspectCrop + 100
+
         slidePaths: wallpaper.configuration.SlidePaths
         slideTimer: wallpaper.configuration.SlideInterval
         slideshowMode: wallpaper.configuration.SlideshowMode
@@ -94,7 +103,9 @@ QQC2.StackView {
         var isFirst = (root.currentItem == undefined);
         var pendingImage = baseImage.createObject(root, { "source": root.modelImage,
                         "fillMode": root.fillMode,
-                        "sourceSize": root.sourceSize,
+                        // Qt will multiply sourceSize by devicePixelRatio when
+                        // passing the argument to a image provider
+                        "sourceSize": Qt.size(root.width, root.height),
                         "color": root.configColor,
                         "blur": root.blur,
                         "opacity": isFirst ? 1: 0});

@@ -1,4 +1,5 @@
 set(image_SRCS
+    desktoppool.cpp
     imagebackend.cpp
     slidemodel.cpp
     slidefiltermodel.cpp

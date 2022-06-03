@@ -18,6 +18,8 @@
 #include <QGuiApplication>
 #include <QImageReader>
 #include <QMimeDatabase>
+#include <QQuickItem>
+#include <QQuickWindow>
 #include <QScreen>
 #include <QUrlQuery>
 
@@ -31,10 +33,17 @@
 #include <Plasma/Theme>
 
 #include "debug.h"
+#include "desktoppool.h"
 #include "finder/packagefinder.h"
 #include "model/imageproxymodel.h"
 #include "slidefiltermodel.h"
 #include "slidemodel.h"
+
+namespace
+{
+static int s_instanceCount = 0;
+static DesktopPool *s_desktopPool = nullptr;
+}
 
 ImageBackend::ImageBackend(QObject *parent)
     : QObject(parent)
@@ -43,12 +52,26 @@ ImageBackend::ImageBackend(QObject *parent)
 {
     connect(&m_timer, &QTimer::timeout, this, &ImageBackend::nextSlide);
 
+    if (!s_desktopPool) {
+        s_desktopPool = new DesktopPool;
+    }
+    s_instanceCount++;
+
     useSingleImageDefaults();
 }
 
 ImageBackend::~ImageBackend()
 {
     delete m_dialog;
+
+    if (!m_usedInConfig) {
+        s_desktopPool->unsetDesktop(m_targetWindow);
+    }
+
+    if (!--s_instanceCount) {
+        delete s_desktopPool;
+        s_desktopPool = nullptr;
+    }
 }
 
 void ImageBackend::classBegin()
@@ -61,6 +84,15 @@ void ImageBackend::componentComplete()
     // otherwise we would load a too small image (initial view size) just
     // to load the proper one afterwards etc etc
     m_ready = true;
+
+    if (auto p = qobject_cast<QQuickItem *>(this->parent()); p && !m_usedInConfig) {
+        connect(p, &QQuickItem::windowChanged, this, &ImageBackend::slotParentWindowChanged, Qt::DirectConnection);
+
+        connect(s_desktopPool, &DesktopPool::desktopWindowChanged, this, &ImageBackend::slotScreenPoolChanged, Qt::QueuedConnection);
+        connect(s_desktopPool, &DesktopPool::geometryChanged, this, &ImageBackend::slotScreenPoolChanged, Qt::QueuedConnection);
+
+        slotParentWindowChanged(p->window());
+    }
 
     if (m_mode == SingleImage) {
         setSingleImage();
@@ -76,12 +108,17 @@ QString ImageBackend::image() const
 
 void ImageBackend::setImage(const QString &url)
 {
-    if (m_image.toString() == url || url.isEmpty()) {
+    // Force refresh the wallpapaer when "span multiple screens" is on
+    if ((!m_spanScreens && (m_image.toString() == url || m_image.toLocalFile() == url)) || url.isEmpty()) {
         return;
     }
 
     m_image = QUrl(url);
     Q_EMIT imageChanged();
+
+    if (m_mode != SingleImage) {
+        return;
+    }
 
     setSingleImage();
 }
@@ -412,9 +449,34 @@ void ImageBackend::setSingleImage()
     }
 
     switch (m_providerType) {
-    case Provider::Image:
-        m_modelImage = m_image;
+    case Provider::Image: {
+        if (m_mode == SingleImage && m_spanScreens && m_targetWindow) {
+            s_desktopPool->setGlobalImage(m_targetWindow, m_image);
+
+            QUrl url(QStringLiteral("image://wideimage/get"));
+
+            QUrlQuery urlQuery(url);
+            urlQuery.addQueryItem(QStringLiteral("path"), m_image.toLocalFile());
+            urlQuery.addQueryItem(QStringLiteral("desktopX"), QString::number(m_targetWindow->x()));
+            urlQuery.addQueryItem(QStringLiteral("desktopY"), QString::number(m_targetWindow->y()));
+            urlQuery.addQueryItem(QStringLiteral("desktopWidth"), QString::number(m_targetWindow->width()));
+            urlQuery.addQueryItem(QStringLiteral("desktopHeight"), QString::number(m_targetWindow->height()));
+
+            const QRect totalRect = s_desktopPool->totalRect(m_image);
+            urlQuery.addQueryItem(QStringLiteral("totalRectX"), QString::number(totalRect.x()));
+            urlQuery.addQueryItem(QStringLiteral("totalRectY"), QString::number(totalRect.y()));
+            urlQuery.addQueryItem(QStringLiteral("totalRectWidth"), QString::number(totalRect.width()));
+            urlQuery.addQueryItem(QStringLiteral("totalRectHeight"), QString::number(totalRect.height()));
+
+            url.setQuery(urlQuery);
+            m_modelImage = url;
+            qCDebug(IMAGEWALLPAPER) << "m_modelImage on desktop" << m_targetWindow << "is set to" << url;
+        } else {
+            m_modelImage = m_image;
+        }
+
         break;
+    }
 
     case Provider::Package: {
         // Use a custom image provider
@@ -467,6 +529,34 @@ void ImageBackend::backgroundsFound()
     }
     m_slideFilterModel->sort(0);
     nextSlide();
+}
+
+void ImageBackend::slotParentWindowChanged(QQuickWindow *window)
+{
+    if (m_targetWindow) {
+        disconnect(m_targetWindow, nullptr, this, nullptr);
+        s_desktopPool->unsetDesktop(m_targetWindow);
+    }
+
+    m_targetWindow = window;
+
+    if (!m_targetWindow) {
+        return;
+    }
+
+    if (!m_image.isEmpty()) {
+        s_desktopPool->setDesktop(m_targetWindow, m_image);
+    }
+}
+
+void ImageBackend::slotScreenPoolChanged()
+{
+    if (!m_spanScreens) {
+        return;
+    }
+
+    // Wait for other tasks to complete, like unsetDesktop
+    QTimer::singleShot(0, this, &ImageBackend::setSingleImage);
 }
 
 void ImageBackend::showFileDialog()
@@ -655,6 +745,32 @@ void ImageBackend::setUncheckedSlides(const QStringList &uncheckedSlides)
 
     Q_EMIT uncheckedSlidesChanged();
     startSlideshow();
+}
+
+bool ImageBackend::spanScreens() const
+{
+    return m_spanScreens;
+}
+
+void ImageBackend::setSpanScreens(bool span)
+{
+    if (m_spanScreens == span || m_mode != SingleImage) {
+        return;
+    }
+
+    m_spanScreens = span;
+    Q_EMIT spanScreensChanged();
+
+    if (m_ready && m_targetWindow) {
+        if (m_spanScreens) {
+            s_desktopPool->setDesktop(m_targetWindow, m_image);
+            // desktopWindowChanged will call setSingleImage()
+        } else {
+            s_desktopPool->unsetDesktop(m_targetWindow);
+            // The signal is disconnected, need to manually call setSingleImage()
+            setSingleImage();
+        }
+    }
 }
 
 bool ImageBackend::loading() const
