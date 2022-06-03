@@ -15,6 +15,7 @@ set(image_SRCS
     model/imagelistmodel.cpp
     model/imageproxymodel.cpp
     provider/packageimageprovider.cpp
+    provider/wideimageprovider.cpp
 )
 
 ecm_qt_declare_logging_category(image_SRCS HEADER debug.h
@@ -26,6 +27,7 @@ add_library(plasma_wallpaper_imageplugin_static STATIC ${image_SRCS})
 
 target_link_libraries(plasma_wallpaper_imageplugin_static
     Qt::Core
+    Qt::Gui # Wide wallpaper support
     Qt::Quick
     Qt::Qml
     KF5::Plasma

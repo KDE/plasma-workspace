@@ -11,6 +11,7 @@
 
 #include "imagebackend.h"
 #include "provider/packageimageprovider.h"
+#include "provider/wideimageprovider.h"
 #include "sortingmode.h"
 
 const auto pluginName = QByteArrayLiteral("org.kde.plasma.wallpapers.image");
@@ -20,6 +21,7 @@ void ImagePlugin::initializeEngine(QQmlEngine *engine, const char *uri)
     Q_ASSERT(uri == pluginName);
 
     engine->addImageProvider(QStringLiteral("package"), new PackageImageProvider);
+    engine->addImageProvider(QStringLiteral("wideimage"), new WideImageProvider);
 }
 
 void ImagePlugin::registerTypes(const char *uri)
