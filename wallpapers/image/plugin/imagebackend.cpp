@@ -484,6 +484,22 @@ void ImageBackend::setSingleImage()
 
         QUrlQuery urlQuery(url);
         urlQuery.addQueryItem(QStringLiteral("dir"), m_image.toLocalFile());
+        urlQuery.addQueryItem(QStringLiteral("spanScreens"), m_spanScreens ? "1" : "0");
+
+        if (m_mode == SingleImage && m_spanScreens && m_targetWindow) {
+            s_desktopPool->setGlobalImage(m_targetWindow, m_image);
+
+            urlQuery.addQueryItem(QStringLiteral("desktopX"), QString::number(m_targetWindow->x()));
+            urlQuery.addQueryItem(QStringLiteral("desktopY"), QString::number(m_targetWindow->y()));
+            urlQuery.addQueryItem(QStringLiteral("desktopWidth"), QString::number(m_targetWindow->width()));
+            urlQuery.addQueryItem(QStringLiteral("desktopHeight"), QString::number(m_targetWindow->height()));
+
+            const QRect totalRect = s_desktopPool->totalRect(m_image);
+            urlQuery.addQueryItem(QStringLiteral("totalRectX"), QString::number(totalRect.x()));
+            urlQuery.addQueryItem(QStringLiteral("totalRectY"), QString::number(totalRect.y()));
+            urlQuery.addQueryItem(QStringLiteral("totalRectWidth"), QString::number(totalRect.width()));
+            urlQuery.addQueryItem(QStringLiteral("totalRectHeight"), QString::number(totalRect.height()));
+        }
 
         url.setQuery(urlQuery);
         m_modelImage = url;
