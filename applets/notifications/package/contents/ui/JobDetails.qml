@@ -140,7 +140,7 @@ GridLayout {
 
     PlasmaExtras.DescriptiveLabel {
         Layout.column: 1
-        Layout.row: 2 + 3
+        Layout.row: 2 + 4
         Layout.fillWidth: true
         text: jobDetails.speed > 0 ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Bytes per second", "%1/s",
                                            KCoreAddons.Format.formatByteSize(jobDetails.speed)) : ""
