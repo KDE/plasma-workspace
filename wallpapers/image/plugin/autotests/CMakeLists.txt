@@ -48,3 +48,11 @@ add_test(NAME testimagebackend
     -input tst_imagebackend.qml
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 )
+
+# WideImageProvider test
+add_test(NAME testwideimageprovider
+    COMMAND testimagebackend
+    -import ${CMAKE_BINARY_DIR}/bin
+    -input tst_393781_wideimage.qml
+    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+)

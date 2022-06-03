@@ -9,6 +9,8 @@
 #include <QtQuickTest>
 #include <QtTest>
 
+#include "commontestdata.h"
+
 class TestSetup : public QObject
 {
     Q_OBJECT
@@ -22,6 +24,7 @@ public Q_SLOTS:
 private:
     QDir m_dataDir;
     QString m_wallpaperPath;
+    QString m_wideWallpaperPath;
     QString m_packagePath;
 };
 
@@ -33,6 +36,7 @@ TestSetup::TestSetup()
     m_dataDir = QDir(QFINDTESTDATA("testdata/default"));
 
     m_wallpaperPath = m_dataDir.absoluteFilePath(QStringLiteral("wallpaper.jpg.jpg"));
+    m_wideWallpaperPath = m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName3);
     m_packagePath = m_dataDir.absoluteFilePath(QStringLiteral("package/"));
 }
 
@@ -40,6 +44,7 @@ void TestSetup::qmlEngineAvailable(QQmlEngine *engine)
 {
     engine->rootContext()->setContextProperty(QStringLiteral("testDirs"), QStringList{m_dataDir.absolutePath()});
     engine->rootContext()->setContextProperty(QStringLiteral("testImage"), QUrl::fromLocalFile(m_wallpaperPath));
+    engine->rootContext()->setContextProperty(QStringLiteral("testWideImage"), QUrl::fromLocalFile(m_wideWallpaperPath));
     engine->rootContext()->setContextProperty(QStringLiteral("testPackage"), QUrl::fromLocalFile(m_packagePath));
 }
 

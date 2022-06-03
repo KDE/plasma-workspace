@@ -41,13 +41,11 @@ void ImageFinderTest::testImageFinderCanFindImages()
     /**
      * Expected result:
      *
-     * - wallpaper.jpg.jpg is found.
-     * - "# BUG454692 file name with hash char.png" is found.
      * - symlinkshouldnotbefoundbythefinder.jpg is ignored.
      * - screenshot.png is ignored.
      * - All images in package/contents/images/ are ignored.
      *
-     * So the total number of images found by ImageFinder is 2.
+     * So the total number of images found by ImageFinder is 3.
      */
     const auto paths = spy.takeFirst().at(0).toStringList();
 
