@@ -611,7 +611,7 @@ QModelIndex CFontList::parent(const QModelIndex &index) const
     } else {
         CFontItem *font = static_cast<CFontItem *>(index.internalPointer());
 
-        return createIndex(m_families.indexOf(((CFamilyItem *)font->parent())), 0, font->parent());
+        return createIndex(m_families.indexOf((static_cast<CFamilyItem *>(font->parent()))), 0, font->parent());
     }
 }
 
