@@ -45,9 +45,7 @@ KSystemActivityDialog::KSystemActivityDialog(QWidget *parent)
     connect(closeAction, &QAction::triggered, this, &KSystemActivityDialog::close);
     addAction(closeAction);
 
-    if (m_configGroup.exists()) {
-        m_processList->loadSettings(m_configGroup);
-    }
+    m_processList->loadSettings(m_configGroup);
 
     QDBusConnection con = QDBusConnection::sessionBus();
     con.registerObject(QStringLiteral("/"), this, QDBusConnection::ExportAllSlots);
