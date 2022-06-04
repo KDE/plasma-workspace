@@ -321,16 +321,16 @@ void ImageBackend::showAddSlidePathsDialog()
     dialog->show();
 }
 
-void ImageBackend::addSlidePath(const QString &_path)
+void ImageBackend::addSlidePath(const QUrl &url)
 {
-    if (_path.isEmpty()) {
+    if (url.isEmpty()) {
         return;
     }
 
-    QString path = _path;
+    QString path = url.toLocalFile();
 
     // If path is a file, use its parent folder.
-    const QFileInfo info(QUrl(path).toLocalFile());
+    const QFileInfo info(path);
 
     if (info.isFile()) {
         path = info.dir().absolutePath();
@@ -367,7 +367,7 @@ void ImageBackend::addDirFromSelectionDialog()
 {
     QFileDialog *dialog = qobject_cast<QFileDialog *>(sender());
     if (dialog) {
-        addSlidePath(dialog->directoryUrl().toLocalFile());
+        addSlidePath(dialog->directoryUrl());
     }
 }
 

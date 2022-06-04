@@ -169,18 +169,15 @@ ColumnLayout {
 
         onEntered: {
             if (drag.hasUrls) {
-                event.accept();
+                drag.accept();
             }
         }
         onDropped: {
             drop.urls.forEach(function (url) {
-                if (url.indexOf("file://") === 0) {
-                    var path = url.substr(7); // 7 is length of "file://"
-                    if (configDialog.currentWallpaper === "org.kde.image") {
-                        imageWallpaper.addUsersWallpaper(path);
-                    } else {
-                        imageWallpaper.addSlidePath(path);
-                    }
+                if (configDialog.currentWallpaper === "org.kde.image") {
+                    imageWallpaper.addUsersWallpaper(url);
+                } else {
+                    imageWallpaper.addSlidePath(url);
                 }
             });
         }
