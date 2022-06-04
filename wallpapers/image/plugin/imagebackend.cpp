@@ -518,6 +518,8 @@ void ImageBackend::slotWallpaperBrowseCompleted()
     for (const QString &p : selectedFiles) {
         m_model->addBackground(p);
     }
+
+    Q_EMIT settingsChanged();
 }
 
 QString ImageBackend::addUsersWallpaper(const QUrl &url)
@@ -533,6 +535,8 @@ QString ImageBackend::addUsersWallpaper(const QUrl &url)
     if (results.empty()) {
         return QString();
     }
+
+    Q_EMIT settingsChanged();
 
     return results.at(0);
 }

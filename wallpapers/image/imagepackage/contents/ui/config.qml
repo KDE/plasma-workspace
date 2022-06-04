@@ -39,6 +39,8 @@ ColumnLayout {
     property var cfg_UncheckedSlides: []
     property var cfg_UncheckedSlidesDefault: []
 
+    signal configurationChanged()
+
     function saveConfig() {
         if (configDialog.currentWallpaper === "org.kde.image") {
             imageWallpaper.wallpaperModel.commitAddition();
@@ -60,6 +62,8 @@ ColumnLayout {
         onUncheckedSlidesChanged: cfg_UncheckedSlides = uncheckedSlides
         onSlideshowModeChanged: cfg_SlideshowMode = slideshowMode
         onSlideshowFoldersFirstChanged: cfg_SlideshowFoldersFirst = slideshowFoldersFirst
+
+        onSettingsChanged: root.configurationChanged()
     }
 
     onCfg_FillModeChanged: {

@@ -127,7 +127,7 @@ public Q_SLOTS:
     void slotSlideModelDataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles);
 
 Q_SIGNALS:
-    void settingsChanged(bool);
+    void settingsChanged();
     void imageChanged();
     void modelImageChanged();
     void renderingModeChanged();
