@@ -208,6 +208,13 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
             }
         }
 
+        if (item == QStringLiteral("Colors:Button") && hasAccent()) {
+            QColor accentbg = accentBackground(getAccent(), config->group("Colors:Button").readEntry<QColor>("BackgroundNormal", QColor()));
+            for (const auto &entry : {QStringLiteral("BackgroundAlternate")}) {
+                targetGroup.writeEntry(entry, accentbg);
+            }
+        }
+
         if (sourceGroup.hasGroup("Inactive")) {
             sourceGroup = sourceGroup.group("Inactive");
             targetGroup = targetGroup.group("Inactive");
