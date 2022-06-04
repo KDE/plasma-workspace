@@ -53,7 +53,7 @@ public:
     QString globalShorcut() const;
 
     QString userBackgroundHints() const;
-    void setUserBackgroundHints(QString hint);
+    void setUserBackgroundHints(const QString &hint);
 
     Plasma::Applet *applet() const override;
 

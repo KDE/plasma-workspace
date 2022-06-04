@@ -177,7 +177,7 @@ QString Widget::userBackgroundHints() const
     return hintEnum.valueToKey(applet()->userBackgroundHints());
 }
 
-void Widget::setUserBackgroundHints(QString hint)
+void Widget::setUserBackgroundHints(const QString &hint)
 {
     QMetaEnum hintEnum = QMetaEnum::fromType<Plasma::Types::BackgroundHints>();
     bool ok;
