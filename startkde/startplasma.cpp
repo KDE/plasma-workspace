@@ -216,7 +216,6 @@ void setupCursor(bool wayland)
 
 std::optional<QProcessEnvironment> getSystemdEnvironment()
 {
-    QStringList list;
     auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.systemd1"),
                                               QStringLiteral("/org/freedesktop/systemd1"),
                                               QStringLiteral("org.freedesktop.DBus.Properties"),
