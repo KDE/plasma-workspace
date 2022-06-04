@@ -11,6 +11,7 @@
 #pragma once
 
 #include <QAbstractItemModel>
+#include <QPalette>
 #include <QQmlParserStatus>
 #include <QSize>
 #include <QTimer>
@@ -142,6 +143,12 @@ Q_SIGNALS:
     void uncheckedSlidesChanged();
     void loadingChanged();
 
+    /**
+     * Emitted when system color scheme changes. The frontend is required to
+     * reload the wallpaper even if the image path is not changed.
+     */
+    void colorSchemeChanged();
+
 protected Q_SLOTS:
     void showAddSlidePathsDialog();
     void slotWallpaperBrowseCompleted();
@@ -149,11 +156,21 @@ protected Q_SLOTS:
     void addDirFromSelectionDialog();
     void backgroundsFound();
 
+    /**
+     * Switches to dark-colored wallpaper if available when system color
+     * scheme is dark.
+     *
+     * @since 5.26
+     */
+    void slotSystemPaletteChanged(const QPalette &palette);
+
 protected:
     void setSingleImage();
 
 private:
     SlideModel *slideshowModel();
+
+    inline bool isDarkColorScheme(const QPalette &palette = {}) const noexcept;
 
     bool m_ready = false;
     int m_delay = 10;
@@ -177,4 +194,6 @@ private:
     SlideModel *m_slideshowModel = nullptr;
     SlideFilterModel *m_slideFilterModel;
     QFileDialog *m_dialog = nullptr;
+
+    bool m_isDarkColorScheme;
 };

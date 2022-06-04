@@ -117,12 +117,12 @@ void PackageFinder::findPreferredImageInPackage(KPackage::Package &package, cons
     }
 
     // find preferred size
-    QString preferred;
-    {
-        const QStringList images = package.entryList("images");
+    auto findBestMatch = [&package, &tSize](const QByteArray &folder) {
+        QString preferred;
+        const QStringList images = package.entryList(folder);
 
         if (images.empty()) {
-            return;
+            return preferred;
         }
 
         float best = std::numeric_limits<float>::max();
@@ -141,10 +141,24 @@ void PackageFinder::findPreferredImageInPackage(KPackage::Package &package, cons
                 best = dist;
             }
         }
-    }
+
+        return preferred;
+    };
+
+    package.addDirectoryDefinition(QByteArrayLiteral("images_dark"), QStringLiteral("images_dark"), QStringLiteral("Dark Images"));
+
+    const QString preferred = findBestMatch(QByteArrayLiteral("images"));
+    const QString preferredDark = findBestMatch(QByteArrayLiteral("images_dark"));
 
     package.removeDefinition("preferred");
     package.addFileDefinition("preferred", QStringLiteral("images/") + preferred, i18n("Recommended wallpaper file"));
+
+    if (!preferredDark.isEmpty()) {
+        package.removeDefinition("preferredDark");
+        package.addFileDefinition("preferredDark",
+                                  QStringLiteral("images_dark%1").arg(QDir::separator()) + preferredDark,
+                                  QStringLiteral("Recommended dark wallpaper file"));
+    }
 }
 
 QString PackageFinder::packageDisplayName(const KPackage::Package &b)

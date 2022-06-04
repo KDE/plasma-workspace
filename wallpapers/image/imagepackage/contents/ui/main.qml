@@ -83,6 +83,8 @@ QQC2.StackView {
         slideshowMode: wallpaper.configuration.SlideshowMode
         slideshowFoldersFirst: wallpaper.configuration.SlideshowFoldersFirst
         uncheckedSlides: wallpaper.configuration.UncheckedSlides
+
+        onColorSchemeChanged: Qt.callLater(loadImage);
     }
 
     onFillModeChanged: Qt.callLater(loadImage);

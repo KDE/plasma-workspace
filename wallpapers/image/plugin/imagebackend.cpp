@@ -40,6 +40,7 @@ ImageBackend::ImageBackend(QObject *parent)
     : QObject(parent)
     , m_targetSize(qGuiApp->primaryScreen()->size() * qGuiApp->primaryScreen()->devicePixelRatio())
     , m_slideFilterModel(new SlideFilterModel(this))
+    , m_isDarkColorScheme(isDarkColorScheme())
 {
     connect(&m_timer, &QTimer::timeout, this, &ImageBackend::nextSlide);
 
@@ -61,6 +62,9 @@ void ImageBackend::componentComplete()
     // otherwise we would load a too small image (initial view size) just
     // to load the proper one afterwards etc etc
     m_ready = true;
+
+    // Follow system color scheme
+    connect(qGuiApp, &QGuiApplication::paletteChanged, this, &ImageBackend::slotSystemPaletteChanged);
 
     if (m_mode == SingleImage) {
         setSingleImage();
@@ -248,6 +252,15 @@ SlideModel *ImageBackend::slideshowModel()
         connect(m_slideshowModel, &SlideModel::loadingChanged, this, &ImageBackend::loadingChanged);
     }
     return m_slideshowModel;
+}
+
+bool ImageBackend::isDarkColorScheme(const QPalette &palette) const noexcept
+{
+    // 192 is from kcm_colors
+    if (palette == QPalette()) {
+        return qGray(qGuiApp->palette().window().color().rgb()) < 192;
+    }
+    return qGray(palette.window().color().rgb()) < 192;
 }
 
 QAbstractItemModel *ImageBackend::slideFilterModel()
@@ -469,6 +482,24 @@ void ImageBackend::backgroundsFound()
     nextSlide();
 }
 
+void ImageBackend::slotSystemPaletteChanged(const QPalette &palette)
+{
+    if (m_providerType != Provider::Package || m_usedInConfig) {
+        // Currently only KPackage supports adaptive wallpapers
+        return;
+    }
+
+    const bool dark = isDarkColorScheme(palette);
+
+    if (dark == m_isDarkColorScheme) {
+        return;
+    }
+
+    m_isDarkColorScheme = dark;
+
+    Q_EMIT colorSchemeChanged();
+}
+
 void ImageBackend::showFileDialog()
 {
     if (!m_dialog) {
@@ -628,6 +659,14 @@ void ImageBackend::openModelImage() const
 
         PackageFinder::findPreferredImageInPackage(package, m_targetSize);
         url = QUrl::fromLocalFile(package.filePath("preferred"));
+
+        if (isDarkColorScheme()) {
+            const QUrl darkUrl = package.fileUrl("preferredDark");
+
+            if (!darkUrl.isEmpty()) {
+                url = darkUrl;
+            }
+        }
         break;
     }
     }

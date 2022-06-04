@@ -6,7 +6,9 @@
 
 #include "packageimageprovider.h"
 
+#include <QGuiApplication>
 #include <QImageReader>
+#include <QPalette>
 #include <QUrlQuery>
 
 #include <KPackage/PackageLoader>
@@ -75,7 +77,17 @@ void AsyncPackageImageResponseRunnable::run()
 
     PackageFinder::findPreferredImageInPackage(package, m_requestedSize);
 
-    QImage image(package.filePath("preferred"));
+    QString path = package.filePath("preferred");
+    // 192 is from kcm_colors
+    if (qGray(qGuiApp->palette().window().color().rgb()) < 192) {
+        QString darkPath = package.filePath("preferredDark");
+
+        if (!darkPath.isEmpty()) {
+            path = darkPath;
+        }
+    }
+
+    QImage image(path);
 
     if (!image.isNull() && m_requestedSize.isValid()) {
         image = image.scaled(m_requestedSize, Qt::KeepAspectRatio, Qt::SmoothTransformation);

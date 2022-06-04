@@ -28,7 +28,10 @@ void ImageFinder::run()
     dir.setNameFilters(suffixes());
 
     const auto filterCondition = [](const QFileInfo &info) {
-        return info.baseName() != QLatin1String("screenshot") && !info.absoluteFilePath().contains(QLatin1String("contents/images/"));
+        const QString path = info.absoluteFilePath();
+
+        return info.baseName() != QLatin1String("screenshot") && !path.contains(QLatin1String("contents/images/"))
+            && !path.contains(QLatin1String("contents/images_dark/"));
     };
     int i;
 
