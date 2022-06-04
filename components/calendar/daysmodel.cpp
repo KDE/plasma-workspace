@@ -30,7 +30,8 @@ public:
     QDate m_lastRequestedAgendaDate;
     bool m_agendaNeedsUpdate = false;
 
-    std::unique_ptr<EventPluginsManager> m_pluginsManager;
+    // QML Ownership
+    EventPluginsManager *m_pluginsManager = nullptr;
 };
 
 DaysModelPrivate::DaysModelPrivate()
@@ -395,14 +396,14 @@ void DaysModel::setPluginsManager(QObject *manager)
         return;
     }
 
-    d->m_pluginsManager.reset(m);
+    d->m_pluginsManager = m;
 
-    connect(d->m_pluginsManager.get(), &EventPluginsManager::dataReady, this, &DaysModel::onDataReady);
-    connect(d->m_pluginsManager.get(), &EventPluginsManager::eventModified, this, &DaysModel::onEventModified);
-    connect(d->m_pluginsManager.get(), &EventPluginsManager::eventRemoved, this, &DaysModel::onEventRemoved);
-    connect(d->m_pluginsManager.get(), &EventPluginsManager::alternateDateReady, this, &DaysModel::onAlternateDateReady);
-    connect(d->m_pluginsManager.get(), &EventPluginsManager::subLabelReady, this, &DaysModel::onSubLabelReady);
-    connect(d->m_pluginsManager.get(), &EventPluginsManager::pluginsChanged, this, &DaysModel::update);
+    connect(d->m_pluginsManager, &EventPluginsManager::dataReady, this, &DaysModel::onDataReady);
+    connect(d->m_pluginsManager, &EventPluginsManager::eventModified, this, &DaysModel::onEventModified);
+    connect(d->m_pluginsManager, &EventPluginsManager::eventRemoved, this, &DaysModel::onEventRemoved);
+    connect(d->m_pluginsManager, &EventPluginsManager::alternateDateReady, this, &DaysModel::onAlternateDateReady);
+    connect(d->m_pluginsManager, &EventPluginsManager::subLabelReady, this, &DaysModel::onSubLabelReady);
+    connect(d->m_pluginsManager, &EventPluginsManager::pluginsChanged, this, &DaysModel::update);
 
     QMetaObject::invokeMethod(this, "update", Qt::QueuedConnection);
 }
