@@ -396,9 +396,6 @@ Plasma::Containment *ScriptEngine::createContainment(const QString &type, const 
 
     if (c) {
         if (type == QLatin1String("Panel")) {
-            // some defaults
-            c->setFormFactor(Plasma::Types::Horizontal);
-            c->setLocation(Plasma::Types::TopEdge);
             // we have to force lastScreen of the newly created containment,
             // or it won't have a screen yet at that point, breaking JS code
             // that relies on it
