@@ -86,6 +86,15 @@ void Panel::setLocation(const QString &locationString)
 
     c->setLocation(loc);
     c->setFormFactor(ff);
+
+    /*
+     * After location is set, one layout script will usually start adding widgets.
+     * It's required to emit formFactorChanged() to update plasmoid.formFactor bindings
+     * in QML side to avoid Layout issues.
+     *
+     * @see isHorizontal in plasma-desktop/containments/panel/contents/ui/main.qml
+     */
+    c->flushPendingConstraintsEvents();
 }
 
 PanelView *Panel::panel() const
