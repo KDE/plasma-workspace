@@ -1782,7 +1782,7 @@ Plasma::Containment *ShellCorona::addPanel(const QString &plugin)
     QScreen *wantedScreen = qGuiApp->focusWindow() ? qGuiApp->focusWindow()->screen() : m_screenPool->primaryScreen();
 
     QList<Plasma::Types::Location> availableLocations;
-    availableLocations << Plasma::Types::LeftEdge << Plasma::Types::TopEdge << Plasma::Types::RightEdge << Plasma::Types::BottomEdge;
+    availableLocations << Plasma::Types::BottomEdge << Plasma::Types::TopEdge << Plasma::Types::LeftEdge << Plasma::Types::RightEdge;
 
     for (auto it = m_panelViews.constBegin(); it != m_panelViews.constEnd(); ++it) {
         if ((*it)->screenToFollow() == wantedScreen) {
