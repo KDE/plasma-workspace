@@ -19,7 +19,7 @@ install(FILES wallpaper.knsrc wallpaper-mobile.knsrc DESTINATION ${KDE_INSTALL_K
 plasma_install_package(imagepackage org.kde.image wallpapers wallpaper)
 plasma_install_package(slideshowpackage org.kde.slideshow wallpapers wallpaper)
 
-configure_file(imagepackage/setaswallpaper.desktop.in imagepackage/setaswallpaper.desktop)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/imagepackage/setaswallpaper.desktop DESTINATION ${KDE_INSTALL_KSERVICESDIR}/ServiceMenus)
+configure_file(setaswallpaper.desktop.in setaswallpaper.desktop)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/setaswallpaper.desktop DESTINATION ${KDE_INSTALL_KSERVICESDIR}/ServiceMenus)
 
 install(DIRECTORY imagepackage/contents/ui DESTINATION ${PLASMA_DATA_INSTALL_DIR}/wallpapers/org.kde.slideshow/contents PATTERN .svn EXCLUDE PATTERN CMakeLists.txt EXCLUDE PATTERN Messages.sh EXCLUDE)
