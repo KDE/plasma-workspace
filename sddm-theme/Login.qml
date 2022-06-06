@@ -5,6 +5,7 @@ import QtQuick.Layouts 1.15
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 SessionManagementScreen {
     id: root
@@ -83,15 +84,16 @@ SessionManagementScreen {
     RowLayout {
         Layout.fillWidth: true
 
-        PlasmaComponents3.TextField {
+        PlasmaExtras.PasswordField {
             id: passwordBox
             font.pointSize: fontSize + 1
             Layout.fillWidth: true
 
             placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Password")
             focus: !showUsernamePrompt || lastUserName
-            echoMode: TextInput.Password
-            revealPasswordButtonShown: false // Disabled whilst SDDM does not have the breeze icon set loaded
+
+            // Disable reveal password action because SDDM does not have the breeze icon set loaded
+            rightActions: []
 
             onAccepted: {
                 if (root.loginScreenUiVisible) {

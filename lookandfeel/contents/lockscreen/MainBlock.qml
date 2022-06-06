@@ -11,6 +11,7 @@ import QtQuick.Controls 1.1
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 import "../components"
 
@@ -18,7 +19,7 @@ SessionManagementScreen {
 
     property Item mainPasswordBox: passwordBox
     property bool lockScreenUiVisible: false
-    property alias echoMode: passwordBox.echoMode
+    property alias showPassword: passwordBox.showPassword
 
     //the y position that should be ensured visible when the on screen keyboard is visible
     property int visibleBoundary: mapFromItem(loginButton, 0, 0).y
@@ -53,17 +54,14 @@ SessionManagementScreen {
     RowLayout {
         Layout.fillWidth: true
 
-        PlasmaComponents3.TextField {
+        PlasmaExtras.PasswordField {
             id: passwordBox
             font.pointSize: PlasmaCore.Theme.defaultFont.pointSize + 1
             Layout.fillWidth: true
 
             placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Password")
             focus: true
-            echoMode: TextInput.Password
-            inputMethodHints: Qt.ImhHiddenText | Qt.ImhSensitiveData | Qt.ImhNoAutoUppercase | Qt.ImhNoPredictiveText
             enabled: !authenticator.graceLocked
-            revealPasswordButtonShown: true
 
             // In Qt this is implicitly active based on focus rather than visibility
             // in any other application having a focussed invisible object would be weird

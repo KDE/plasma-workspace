@@ -67,7 +67,7 @@ PlasmaCore.ColorScope {
 
         function onPrompt(msg) {
             root.notification = msg;
-            mainBlock.echoMode = TextInput.Normal
+            mainBlock.showPassword = true;
             if (lockScreenUi.hadPrompt) {
                 mainBlock.mainPasswordBox.text = "";
             }
@@ -75,7 +75,7 @@ PlasmaCore.ColorScope {
             lockScreenUi.hadPrompt = true;
         }
         function onPromptForSecret(msg) {
-            mainBlock.echoMode = TextInput.Password
+            mainBlock.showPassword = false;
             if (lockScreenUi.hadPrompt) {
                 mainBlock.mainPasswordBox.text = "";
             }
