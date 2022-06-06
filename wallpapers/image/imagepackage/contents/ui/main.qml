@@ -130,6 +130,10 @@ QQC2.StackView {
             autoTransform: true
             z: -1
 
+            QQC2.StackView.onActivated: {
+                // BUG 454908: Update accent color
+                wallpaper.repaintNeeded();
+            }
             QQC2.StackView.onRemoved: destroy()
 
             Rectangle {
