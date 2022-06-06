@@ -241,6 +241,7 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
         const static QStringList runnerIds = {
             QStringLiteral("desktopsessions"),
             QStringLiteral("services"),
+            QStringLiteral("krunner_systemsettings"),
             QStringLiteral("places"),
             QStringLiteral("PowerDevil"),
             QStringLiteral("calculator"),
