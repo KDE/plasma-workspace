@@ -286,7 +286,7 @@ int CursorThemeConfig::cursorThemeIndex(const QString &cursorTheme) const
 QString CursorThemeConfig::cursorThemeFromIndex(int index) const
 {
     QModelIndex idx = m_themeProxyModel->index(index, 0);
-    return m_themeProxyModel->theme(idx)->name();
+    return idx.isValid() ? m_themeProxyModel->theme(idx)->name() : QString();
 }
 
 void CursorThemeConfig::save()
