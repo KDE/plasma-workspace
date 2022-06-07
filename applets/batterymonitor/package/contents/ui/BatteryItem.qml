@@ -7,6 +7,7 @@
 
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
+import QtQml.Models 2.15
 
 import org.kde.kcoreaddons 1.0 as KCoreAddons
 import org.kde.plasma.components 3.0 as PlasmaComponents3
@@ -47,6 +48,27 @@ RowLayout {
     readonly property int percent:          battery !== null ? battery.Percent : 0
     readonly property string prettyName:    battery !== null ? battery["Pretty Name"] : ""
     readonly property string batteryType:   battery !== null ? battery.Type : ""
+
+    readonly property var details: {
+        const model = [];
+        if (isPowerSupply) {
+            if (remainingTime > 0 && ["Discharging", "Charging"].includes(batteryState)) {
+                model.push({
+                    key: batteryState === "Charging"
+                        ? i18n("Time To Full:")
+                        : i18n("Remaining Time:"),
+                    value: KCoreAddons.Format.formatDuration(remainingTime, KCoreAddons.FormatTypes.HideSeconds),
+                });
+            }
+            if (!isBroken) {
+                model.push({
+                    key: i18n("Battery Health:"),
+                    value: i18nc("Placeholder is battery health percentage", "%1%", capacity),
+                });
+            }
+        }
+        return model;
+    }
 
     property int remainingTime: 0
 
@@ -123,63 +145,45 @@ RowLayout {
             wrapMode: Text.WordWrap
         }
 
-        // This gridLayout basically emulates an at-most-two-rows table. Not
-        // really worth it trying to refactor it into some more clever fancy
-        // model-delegate stuff.
+        // This gridLayout basically emulates a table with two columns.
         GridLayout {
-            id: details
-
             Layout.fillWidth: true
             Layout.topMargin: PlasmaCore.Units.smallSpacing
 
             columns: 2
             columnSpacing: PlasmaCore.Units.smallSpacing
             rowSpacing: 0
-            visible: remainingTimeRowVisible || healthRowVisible
+            visible: root.details.length > 0
 
-            component LeftLabel : PlasmaComponents3.Label {
-                // fillWidth is true, so using internal alignment
-                horizontalAlignment: Text.AlignLeft
-                Layout.fillWidth: true
-                font: PlasmaCore.Theme.smallestFont
-                wrapMode: Text.WordWrap
-                enabled: false
-            }
-            component RightLabel : PlasmaComponents3.Label {
-                // fillWidth is false, so using external (grid-cell-internal) alignment
-                Layout.alignment: Qt.AlignRight
-                Layout.fillWidth: false
-                font: PlasmaCore.Theme.smallestFont
-                enabled: false
-            }
+            Repeater {
+                model: root.details
 
-            readonly property bool remainingTimeRowVisible:
-                   root.remainingTime > 0
-                && root.isPowerSupply
-                && ["Discharging", "Charging"].includes(root.batteryState)
+                Repeater {
+                    id: delegate
 
-            LeftLabel {
-                text: root.batteryState === "Charging"
-                    ? i18n("Time To Full:")
-                    : i18n("Remaining Time:")
-                visible: details.remainingTimeRowVisible
-            }
+                    readonly property string key: modelData.key
+                    readonly property string value: modelData.value
 
-            RightLabel {
-                text: KCoreAddons.Format.formatDuration(root.remainingTime, KCoreAddons.FormatTypes.HideSeconds)
-                visible: details.remainingTimeRowVisible
-            }
-
-            readonly property bool healthRowVisible: root.isPowerSupply && !root.isBroken
-
-            LeftLabel {
-                text: i18n("Battery Health:")
-                visible: details.healthRowVisible
-            }
-
-            RightLabel {
-                text: i18nc("Placeholder is battery health percentage", "%1%", root.capacity)
-                visible: details.healthRowVisible
+                    model: ObjectModel {
+                        PlasmaComponents3.Label {
+                            // fillWidth is true, so using internal alignment
+                            horizontalAlignment: Text.AlignLeft
+                            Layout.fillWidth: true
+                            font: PlasmaCore.Theme.smallestFont
+                            wrapMode: Text.WordWrap
+                            enabled: false
+                            text: delegate.key
+                        }
+                        PlasmaComponents3.Label {
+                            // fillWidth is false, so using external (grid-cell-internal) alignment
+                            Layout.alignment: Qt.AlignRight
+                            Layout.fillWidth: false
+                            font: PlasmaCore.Theme.smallestFont
+                            enabled: false
+                            text: delegate.value
+                        }
+                    }
+                }
             }
         }
 
