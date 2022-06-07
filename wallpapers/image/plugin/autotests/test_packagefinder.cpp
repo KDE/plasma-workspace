@@ -73,7 +73,7 @@ void PackageFinderTest::testFindPreferredSizeInPackage()
     QFETCH(QString, expected);
 
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
-    package.setPath(m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName1));
+    package.setPath(m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName2));
 
     QVERIFY(package.isValid());
     QVERIFY(package.metadata().isValid());
@@ -86,7 +86,7 @@ void PackageFinderTest::testFindPreferredSizeInPackage()
 void PackageFinderTest::testPackageFinderCanFindPackages()
 {
     PackageFinder *finder =
-        new PackageFinder({m_dataDir.absolutePath(), m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName1)}, QSize(1920, 1080));
+        new PackageFinder({m_dataDir.absolutePath(), m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName2)}, QSize(1920, 1080));
     QSignalSpy spy(finder, &PackageFinder::packageFound);
 
     QThreadPool::globalInstance()->start(finder);
@@ -95,10 +95,19 @@ void PackageFinderTest::testPackageFinderCanFindPackages()
     QCOMPARE(spy.size(), 1);
 
     const auto items = spy.takeFirst().at(0).value<QList<KPackage::Package>>();
-    // Total 2 packages in the directory, but one package is broken and should not be added to the list.
-    QCOMPARE(items.size(), 1);
+    // Total 3 packages in the directory, but one package is broken and should not be added to the list.
+    QCOMPARE(items.size(), ImageBackendTestData::defaultPackageCount);
+
+    // Folders are sorted by names
+    // FEATURE207976-dark-wallpaper
     QCOMPARE(items.at(0).filePath("preferred"),
-             m_dataDir.absoluteFilePath(QStringLiteral("%1/contents/images/1920x1080.jpg").arg(ImageBackendTestData::defaultPackageFolderName1)));
+             m_dataDir.absoluteFilePath(QStringLiteral("%1/contents/images/1024x768.png").arg(ImageBackendTestData::defaultPackageFolderName1)));
+    QCOMPARE(items.at(0).filePath("preferredDark"),
+             m_dataDir.absoluteFilePath(QStringLiteral("%1/contents/images_dark/1920x1080.jpg").arg(ImageBackendTestData::defaultPackageFolderName1)));
+    // package
+    QCOMPARE(items.at(1).filePath("preferred"),
+             m_dataDir.absoluteFilePath(QStringLiteral("%1/contents/images/1920x1080.jpg").arg(ImageBackendTestData::defaultPackageFolderName2)));
+    QCOMPARE(items.at(1).filePath("preferredDark"), QString());
 }
 
 QTEST_MAIN(PackageFinderTest)

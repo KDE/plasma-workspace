@@ -23,6 +23,7 @@ private Q_SLOTS:
     void cleanupTestCase();
 
     void testPackageListModelData();
+    void testPackageListModelDarkWallpaperPreview();
     void testPackageListModelIndexOf();
     void testPackageListModelLoad();
     void testPackageListModelAddBackground();
@@ -36,7 +37,7 @@ private:
 
     QDir m_dataDir;
     QDir m_alternateDir;
-    QString m_packagePath;
+    QStringList m_packagePaths;
     QString m_dummyPackagePath;
     QSize m_targetSize;
 };
@@ -48,7 +49,8 @@ void PackageListModelTest::initTestCase()
     QVERIFY(!m_dataDir.isEmpty());
     QVERIFY(!m_alternateDir.isEmpty());
 
-    m_packagePath = m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName1);
+    m_packagePaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName1);
+    m_packagePaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName2);
     m_dummyPackagePath = m_alternateDir.absoluteFilePath(ImageBackendTestData::alternatePackageFolderName1);
 
     m_targetSize = QSize(1920, 1080);
@@ -86,7 +88,7 @@ void PackageListModelTest::cleanupTestCase()
 
 void PackageListModelTest::testPackageListModelData()
 {
-    QPersistentModelIndex idx = m_model->index(0, 0);
+    QPersistentModelIndex idx = m_model->index(m_model->indexOf(m_packagePaths.at(1)), 0);
     QVERIFY(idx.isValid());
 
     QCOMPARE(idx.data(Qt::DisplayRole).toString(), QStringLiteral("Honeywave (For test purpose, don't translate!)"));
@@ -108,18 +110,42 @@ void PackageListModelTest::testPackageListModelData()
     QCOMPARE(idx.data(ImageRoles::ResolutionRole).toString(), QStringLiteral("1920x1080"));
 
     QCOMPARE(idx.data(ImageRoles::PathRole).toUrl().toLocalFile(),
-             m_packagePath + QDir::separator() + QStringLiteral("contents") + QDir::separator() + QStringLiteral("images") + QDir::separator()
+             m_packagePaths.at(1) + QDir::separator() + QStringLiteral("contents") + QDir::separator() + QStringLiteral("images") + QDir::separator()
                  + QStringLiteral("1920x1080.jpg"));
-    QCOMPARE(idx.data(ImageRoles::PackageNameRole).toString(), m_packagePath + QDir::separator());
+    QCOMPARE(idx.data(ImageRoles::PackageNameRole).toString(), m_packagePaths.at(1) + QDir::separator());
 
     QCOMPARE(idx.data(ImageRoles::RemovableRole).toBool(), false);
     QCOMPARE(idx.data(ImageRoles::PendingDeletionRole).toBool(), false);
 }
 
+void PackageListModelTest::testPackageListModelDarkWallpaperPreview()
+{
+    QModelIndex idx = m_model->index(m_model->indexOf(m_packagePaths.at(0)), 0);
+    QVERIFY(idx.isValid());
+
+    QCOMPARE(idx.data(Qt::DisplayRole).toString(), QStringLiteral("Dark Wallpaper (For test purpose, don't translate!)"));
+
+    QCOMPARE(idx.data(ImageRoles::ScreenshotRole), QVariant()); // Not cached yet
+    if (!KIO::PreviewJob::availablePlugins().empty()) {
+        m_dataSpy->wait();
+        QCOMPARE(m_dataSpy->size(), 1);
+        QCOMPARE(m_dataSpy->takeFirst().at(2).value<QVector<int>>().at(0), ImageRoles::ScreenshotRole);
+        m_dataSpy->clear();
+
+        const auto preview = idx.data(ImageRoles::ScreenshotRole).value<QPixmap>();
+        QVERIFY(!preview.isNull());
+        const auto previewImage = preview.toImage();
+        QCOMPARE(previewImage.pixelColor({0, 0}), Qt::red);
+        QCOMPARE(previewImage.pixelColor({previewImage.width() / 2, 0}), Qt::black);
+    }
+}
+
 void PackageListModelTest::testPackageListModelIndexOf()
 {
-    QCOMPARE(m_model->indexOf(m_packagePath), 0);
-    QCOMPARE(m_model->indexOf(QUrl::fromLocalFile(m_packagePath).toString()), 0);
+    QCOMPARE(m_model->indexOf(m_packagePaths.at(0)), 0);
+    QCOMPARE(m_model->indexOf(m_packagePaths.at(1)), 1);
+    QCOMPARE(m_model->indexOf(QUrl::fromLocalFile(m_packagePaths.at(0)).toString()), 0);
+    QCOMPARE(m_model->indexOf(QUrl::fromLocalFile(m_packagePaths.at(1)).toString()), 1);
     QCOMPARE(m_model->indexOf(m_dataDir.absoluteFilePath(QStringLiteral("brokenpackage"))), -1);
 }
 

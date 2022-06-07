@@ -37,7 +37,7 @@ private:
     QDir m_alternateDir;
     QStringList m_wallpaperPaths;
     QString m_dummyWallpaperPath;
-    QString m_packagePath;
+    QStringList m_packagePaths;
     QString m_dummyPackagePath;
     QSize m_targetSize;
 };
@@ -53,7 +53,8 @@ void SlideModelTest::initTestCase()
     m_wallpaperPaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName2);
     m_dummyWallpaperPath = m_alternateDir.absoluteFilePath(QStringLiteral("dummy.jpg"));
 
-    m_packagePath = m_dataDir.absoluteFilePath(QStringLiteral("package"));
+    m_packagePaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName1);
+    m_packagePaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName2);
     m_dummyPackagePath = m_alternateDir.absoluteFilePath(QStringLiteral("dummy"));
 
     m_targetSize = QSize(1920, 1080);
@@ -97,7 +98,7 @@ void SlideModelTest::cleanupTestCase()
 
 void SlideModelTest::testSlideModelData()
 {
-    const int row = m_model->indexOf(m_packagePath);
+    const int row = m_model->indexOf(m_packagePaths.at(1));
     QVERIFY(row >= 0);
     const QPersistentModelIndex idx = m_model->index(row, 0);
 
@@ -111,8 +112,10 @@ void SlideModelTest::testSlideModelIndexOf()
 {
     QVERIFY(m_model->indexOf(m_wallpaperPaths.at(0)) >= 0);
     QVERIFY(m_model->indexOf(m_wallpaperPaths.at(1)) >= 0);
-    QVERIFY(m_model->indexOf(m_packagePath) >= 0);
-    QVERIFY(m_model->indexOf(m_packagePath + QDir::separator()) >= 0);
+    QVERIFY(m_model->indexOf(m_packagePaths.at(0)) >= 0);
+    QVERIFY(m_model->indexOf(m_packagePaths.at(1)) >= 0);
+    QVERIFY(m_model->indexOf(m_packagePaths.at(0) + QDir::separator()) >= 0);
+    QVERIFY(m_model->indexOf(m_packagePaths.at(1) + QDir::separator()) >= 0);
     QCOMPARE(m_model->indexOf(m_dummyWallpaperPath), -1);
     QCOMPARE(m_model->indexOf(m_dummyPackagePath + QDir::separator()), -1);
 }
