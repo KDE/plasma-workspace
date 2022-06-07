@@ -262,9 +262,7 @@ PlasmaExtras.ExpandableListItem {
     }
 
     // "Mount" action that does not open it in the file manager
-    QQC2.Action {
-        id: mountWithoutOpeningAction
-
+    contextualActionsModel: QQC2.Action {
         text: i18n("Mount")
         icon.name: "media-mount"
 
@@ -276,9 +274,5 @@ PlasmaExtras.ExpandableListItem {
             const operation = service.operationDescription("mount");
             service.startOperationCall(operation);
         }
-    }
-
-    Component.onCompleted: {
-        contextualActionsModel.push(mountWithoutOpeningAction);
     }
 }
