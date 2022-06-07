@@ -7,6 +7,9 @@
 */
 
 function stringForBatteryState(batteryData) {
+    if (batteryData === null) {
+        return "";
+    }
     if (batteryData["Plugged in"]) {
         switch(batteryData["State"]) {
             case "Discharging": return i18n("Discharging");

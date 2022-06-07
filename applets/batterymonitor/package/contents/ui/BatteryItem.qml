@@ -39,11 +39,14 @@ RowLayout {
 
     // NOTE: According to the UPower spec this property is only valid for primary batteries, however
     // UPower seems to set the Present property false when a device is added but not probed yet
-    readonly property bool isPresent: root.battery["Plugged in"]
-
-    readonly property bool isPowerSupply: root.battery["Is Power Supply"]
-
-    readonly property bool isBroken: root.battery.Capacity > 0 && root.battery.Capacity < 50
+    readonly property bool isPresent:       battery !== null && battery["Plugged in"]
+    readonly property bool isPowerSupply:   battery !== null && battery["Is Power Supply"]
+    readonly property int capacity:         battery !== null ? battery.Capacity : 0
+    readonly property bool isBroken: capacity > 0 && capacity < 50
+    readonly property string batteryState:  battery !== null ? battery.State : ""
+    readonly property int percent:          battery !== null ? battery.Percent : 0
+    readonly property string prettyName:    battery !== null ? battery["Pretty Name"] : ""
+    readonly property string batteryType:   battery !== null ? battery.Type : ""
 
     property int remainingTime: 0
 
@@ -63,10 +66,10 @@ RowLayout {
         Layout.preferredWidth: PlasmaCore.Units.iconSizes.medium
         Layout.preferredHeight: PlasmaCore.Units.iconSizes.medium
 
-        batteryType: root.battery.Type
-        percent: root.battery.Percent
+        batteryType: root.batteryType
+        percent: root.percent
         hasBattery: root.isPresent
-        pluggedIn: root.battery.State === "Charging" && root.battery["Is Power Supply"]
+        pluggedIn: root.batteryState === "Charging" && root.isPowerSupply
     }
 
     ColumnLayout {
@@ -80,19 +83,19 @@ RowLayout {
             PlasmaComponents3.Label {
                 Layout.fillWidth: true
                 elide: Text.ElideRight
-                text: root.battery["Pretty Name"]
+                text: root.prettyName
             }
 
             PlasmaComponents3.Label {
                 text: Logic.stringForBatteryState(root.battery)
-                visible: root.battery["Is Power Supply"]
+                visible: root.isPowerSupply
                 enabled: false
             }
 
             PlasmaComponents3.Label {
                 horizontalAlignment: Text.AlignRight
                 visible: root.isPresent
-                text: i18nc("Placeholder is battery percentage", "%1%", root.battery.Percent)
+                text: i18nc("Placeholder is battery percentage", "%1%", root.percent)
             }
         }
 
@@ -106,7 +109,7 @@ RowLayout {
             from: 0
             to: 100
             visible: root.isPresent
-            value: Number(root.battery.Percent)
+            value: root.percent
         }
 
         // This gridLayout basically emulates an at-most-two-rows table with a
@@ -142,22 +145,20 @@ RowLayout {
                 Layout.fillWidth: true
                 Layout.columnSpan: 2
 
-                text: root.isBroken && typeof root.battery.Capacity !== "undefined"
-                    ? i18n("This battery's health is at only %1% and it should be replaced. Contact the manufacturer.", root.battery.Capacity)
-                    : ""
+                text: i18n("This battery's health is at only %1% and it should be replaced. Contact the manufacturer.", root.capacity)
                 font: PlasmaCore.Theme.smallestFont
                 color: PlasmaCore.Theme.neutralTextColor
                 visible: root.isBroken
                 wrapMode: Text.WordWrap
             }
 
-            readonly property bool remainingTimeRowVisible: root.battery !== null
-                && root.remainingTime > 0
-                && root.battery["Is Power Supply"]
-                && ["Discharging", "Charging"].includes(root.battery.State)
+            readonly property bool remainingTimeRowVisible:
+                   root.remainingTime > 0
+                && root.isPowerSupply
+                && ["Discharging", "Charging"].includes(root.batteryState)
 
             LeftLabel {
-                text: root.battery.State === "Charging"
+                text: root.batteryState === "Charging"
                     ? i18n("Time To Full:")
                     : i18n("Remaining Time:")
                 visible: details.remainingTimeRowVisible
@@ -168,11 +169,7 @@ RowLayout {
                 visible: details.remainingTimeRowVisible
             }
 
-            readonly property bool healthRowVisible: root.battery !== null
-                && root.battery["Is Power Supply"]
-                && root.battery.Capacity !== ""
-                && typeof root.battery.Capacity === "number"
-                && !root.isBroken
+            readonly property bool healthRowVisible: root.isPowerSupply && !root.isBroken
 
             LeftLabel {
                 text: i18n("Battery Health:")
@@ -180,9 +177,7 @@ RowLayout {
             }
 
             RightLabel {
-                text: details.healthRowVisible
-                    ? i18nc("Placeholder is battery health percentage", "%1%", root.battery.Capacity)
-                    : ""
+                text: i18nc("Placeholder is battery health percentage", "%1%", root.capacity)
                 visible: details.healthRowVisible
             }
         }
