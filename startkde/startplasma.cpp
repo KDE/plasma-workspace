@@ -505,6 +505,17 @@ void resetSystemdFailedUnits()
     QDBusConnection::sessionBus().call(message);
 }
 
+// Reload systemd to make sure the current configuration is active, which also reruns generators.
+// Needed for e.g. XDG autostart changes to become effective.
+void reloadSystemd()
+{
+    QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.systemd1"),
+                                                          QStringLiteral("/org/freedesktop/systemd1"),
+                                                          QStringLiteral("org.freedesktop.systemd1.Manager"),
+                                                          QStringLiteral("Reload"));
+    QDBusConnection::sessionBus().call(message);
+}
+
 bool hasSystemdService(const QString &serviceName)
 {
     qDBusRegisterMetaType<QPair<QString, QString>>();
@@ -612,6 +623,7 @@ static void migrateUserScriptsAutostart()
 bool startPlasmaSession(bool wayland)
 {
     resetSystemdFailedUnits();
+    reloadSystemd();
     OrgKdeKSplashInterface iface(QStringLiteral("org.kde.KSplash"), QStringLiteral("/KSplash"), QDBusConnection::sessionBus());
     iface.setStage(QStringLiteral("startPlasma"));
     // finally, give the session control to the session manager
