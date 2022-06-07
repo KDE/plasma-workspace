@@ -258,7 +258,11 @@ PlasmaExtras.ExpandableListItem {
                 devicenotifier.currentIndex = -1;
             }
         }
-        onObjectAdded: contextualActionsModel.push(object)
+        onObjectAdded: (index, object) => deviceItem.contextualActionsModel.push(object)
+        onObjectRemoved: (index, object) => {
+            deviceItem.contextualActionsModel = Array.prototype.slice.call(deviceItem.contextualActionsModel)
+                .filter(action => action !== object);
+        }
     }
 
     // "Mount" action that does not open it in the file manager
