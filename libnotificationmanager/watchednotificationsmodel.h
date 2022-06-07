@@ -24,9 +24,9 @@ public:
     Q_INVOKABLE void expire(uint notificationId) override;
     Q_INVOKABLE void close(uint notificationId) override;
 
-    Q_INVOKABLE void invokeDefaultAction(uint notificationId, Notifications::InvokeBehavior behavior) override;
-    Q_INVOKABLE void invokeAction(uint notificationId, const QString &actionName, Notifications::InvokeBehavior behavior) override;
-    Q_INVOKABLE void reply(uint notificationId, const QString &text, Notifications::InvokeBehavior behavior) override;
+    Q_INVOKABLE void invokeDefaultAction(uint notificationId, Notifications::InvokeBehavior behavior = Notifications::None) override;
+    Q_INVOKABLE void invokeAction(uint notificationId, const QString &actionName, Notifications::InvokeBehavior behavior = Notifications::None) override;
+    Q_INVOKABLE void reply(uint notificationId, const QString &text, Notifications::InvokeBehavior behavior = Notifications::None) override;
     bool valid();
 
 Q_SIGNALS:
