@@ -18,8 +18,8 @@ AbstractImageListModel::AbstractImageListModel(const QSize &targetSize, QObject 
     , m_screenshotSize(targetSize / 8)
     , m_targetSize(targetSize)
 {
-    m_imageCache.setMaxCost(m_screenshotSize.width() * m_screenshotSize.height() * 20);
-    m_imageSizeCache.setMaxCost(20);
+    m_imageCache.setMaxCost(30);
+    m_imageSizeCache.setMaxCost(30);
 
     connect(this, &QAbstractListModel::rowsInserted, this, &AbstractImageListModel::countChanged);
     connect(this, &QAbstractListModel::rowsRemoved, this, &AbstractImageListModel::countChanged);
