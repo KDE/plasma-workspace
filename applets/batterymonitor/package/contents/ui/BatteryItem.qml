@@ -112,9 +112,20 @@ RowLayout {
             value: root.percent
         }
 
-        // This gridLayout basically emulates an at-most-two-rows table with a
-        // single wide fillWidth/columnSpan header. Not really worth it trying
-        // to refactor it into some more clever fancy model-delegate stuff.
+        PlasmaComponents3.Label {
+            Layout.fillWidth: true
+            Layout.topMargin: PlasmaCore.Units.smallSpacing
+
+            text: i18n("This battery's health is at only %1% and it should be replaced. Contact the manufacturer.", root.capacity)
+            font: PlasmaCore.Theme.smallestFont
+            color: PlasmaCore.Theme.neutralTextColor
+            visible: root.isBroken
+            wrapMode: Text.WordWrap
+        }
+
+        // This gridLayout basically emulates an at-most-two-rows table. Not
+        // really worth it trying to refactor it into some more clever fancy
+        // model-delegate stuff.
         GridLayout {
             id: details
 
@@ -124,6 +135,7 @@ RowLayout {
             columns: 2
             columnSpacing: PlasmaCore.Units.smallSpacing
             rowSpacing: 0
+            visible: remainingTimeRowVisible || healthRowVisible
 
             component LeftLabel : PlasmaComponents3.Label {
                 // fillWidth is true, so using internal alignment
@@ -139,17 +151,6 @@ RowLayout {
                 Layout.fillWidth: false
                 font: PlasmaCore.Theme.smallestFont
                 enabled: false
-            }
-
-            PlasmaComponents3.Label {
-                Layout.fillWidth: true
-                Layout.columnSpan: 2
-
-                text: i18n("This battery's health is at only %1% and it should be replaced. Contact the manufacturer.", root.capacity)
-                font: PlasmaCore.Theme.smallestFont
-                color: PlasmaCore.Theme.neutralTextColor
-                visible: root.isBroken
-                wrapMode: Text.WordWrap
             }
 
             readonly property bool remainingTimeRowVisible:
