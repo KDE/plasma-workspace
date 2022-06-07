@@ -41,13 +41,13 @@ QVariant ImageListModel::data(const QModelIndex &index, int role) const
         return QFileInfo(m_data.at(row)).completeBaseName();
 
     case ScreenshotRole: {
-        QPixmap *cachedPreview = m_imageCache.object(m_data.at(row));
+        QPixmap *cachedPreview = m_imageCache.object({m_data.at(row)});
 
         if (cachedPreview) {
             return *cachedPreview;
         }
 
-        asyncGetPreview(m_data.at(row), QPersistentModelIndex(index));
+        asyncGetPreview({m_data.at(row)}, QPersistentModelIndex(index));
 
         return QVariant();
     }

@@ -53,7 +53,13 @@ Q_SIGNALS:
     void loaded(AbstractImageListModel *model);
 
 protected:
-    void asyncGetPreview(const QString &path, const QPersistentModelIndex &index) const;
+    /**
+     * Asynchronously generates a preview.
+     * Multiple images are displayed side by side following the order in @c paths
+     *
+     * @note @c paths should have no duplicate urls.
+     */
+    void asyncGetPreview(const QStringList &paths, const QPersistentModelIndex &index) const;
     void asyncGetImageSize(const QString &path, const QPersistentModelIndex &index) const;
 
     bool m_loading = false;
@@ -61,10 +67,10 @@ protected:
     QSize m_screenshotSize;
     QSize m_targetSize;
 
-    QCache<QString, QPixmap> m_imageCache;
+    QCache<QStringList, QPixmap> m_imageCache;
     QCache<QString, QSize> m_imageSizeCache;
 
-    mutable QHash<QString, QPersistentModelIndex> m_previewJobsUrls;
+    mutable QHash<QPersistentModelIndex, QStringList> m_previewJobsUrls;
     mutable QHash<QString, QPersistentModelIndex> m_sizeJobsUrls;
 
     QHash<QString, bool> m_pendingDeletion;

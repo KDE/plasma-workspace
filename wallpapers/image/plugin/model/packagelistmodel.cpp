@@ -46,15 +46,20 @@ QVariant PackageListModel::data(const QModelIndex &index, int role) const
         return PackageFinder::packageDisplayName(b);
 
     case ScreenshotRole: {
-        const QString path = b.filePath("preferred");
+        QStringList paths{b.filePath(QByteArrayLiteral("preferred"))};
+        const QString darkPath = b.filePath(QByteArrayLiteral("preferredDark"));
 
-        QPixmap *cachedPreview = m_imageCache.object(path);
+        if (!darkPath.isEmpty()) {
+            paths.append(darkPath);
+        }
+
+        QPixmap *cachedPreview = m_imageCache.object(paths);
 
         if (cachedPreview) {
             return *cachedPreview;
         }
 
-        asyncGetPreview(path, QPersistentModelIndex(index));
+        asyncGetPreview(paths, QPersistentModelIndex(index));
 
         return QVariant();
     }
