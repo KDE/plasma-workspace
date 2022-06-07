@@ -137,7 +137,7 @@
         "Website": "https://userbase.kde.org/Plasma/DeviceNotifier"
     },
     "X-Plasma-API": "declarativeappletscript",
-    "X-Plasma-MainScript": "ui/devicenotifier.qml",
+    "X-Plasma-MainScript": "ui/main.qml",
     "X-Plasma-NotificationArea": "true",
     "X-Plasma-NotificationAreaCategory": "Hardware",
     "X-Plasma-Provides": [
