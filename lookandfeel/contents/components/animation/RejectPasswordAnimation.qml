@@ -8,18 +8,13 @@ import QtQuick 2.15
 import QtQml.Models 2.15
 import QtQml 2.15
 
-QtObject {
-    id: root
+RejectPasswordPathAnimation {
+    id: animation
 
     property list<Item> targets
 
-    readonly property Animation __animation: RejectPasswordPathAnimation {
-        id: animation
-        target: Item { id: fakeTarget }
-    }
-
     readonly property Instantiator __instantiator: Instantiator {
-        model: root.targets
+        model: animation.targets
         delegate: Binding {
             target: modelData
             property: "enabled"
@@ -35,6 +30,7 @@ QtObject {
         id: translate
         x: fakeTarget.x
     }
+    target: Item { id: fakeTarget }
 
     // We can't bind `transform` list property due to a bunch of bugs and
     // omisions in QML engine, such as the property itself being a
@@ -61,9 +57,5 @@ QtObject {
                 target.transform.push(translate);
             }
         }
-    }
-
-    function start() {
-        animation.start();
     }
 }

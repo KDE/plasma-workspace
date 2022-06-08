@@ -68,12 +68,7 @@ FocusScope {
 
     signal credentialsRejected()
 
-    onCredentialsRejected: {
-        rejectPasswordAnimation.start();
-    }
-
-    RejectPasswordAnimation {
-        id: rejectPasswordAnimation
+    onCredentialsRejected: RejectPasswordAnimation {
         targets: root
     }
 
