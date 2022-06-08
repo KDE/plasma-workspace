@@ -74,7 +74,7 @@ FocusScope {
 
     RejectPasswordAnimation {
         id: rejectPasswordAnimation
-        target: root
+        targets: root
     }
 
     // FIXME: move this component into a layout, rather than abusing

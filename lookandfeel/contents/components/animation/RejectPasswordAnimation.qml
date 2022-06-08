@@ -5,28 +5,32 @@
 */
 
 import QtQuick 2.15
+import QtQml.Models 2.15
 import QtQml 2.15
 
 QtObject {
     id: root
 
-    property Item target
+    property list<Item> targets
 
     readonly property Animation __animation: RejectPasswordPathAnimation {
         id: animation
         target: Item { id: fakeTarget }
     }
 
-    property Binding __bindEnabled: Binding {
-        target: root.target
-        property: "enabled"
-        value: false
-        when: animation.running
-        restoreMode: Binding.RestoreBindingOrValue
+    readonly property Instantiator __instantiator: Instantiator {
+        model: root.targets
+        delegate: Binding {
+            target: modelData
+            property: "enabled"
+            value: false
+            when: animation.running
+            restoreMode: Binding.RestoreBindingOrValue
+        }
     }
 
-    // real target is getting a Translate object which pulls coordinates from
-    // a fake Item object
+    // Real target is getting a Translate object which pulls coordinates from
+    // a fake Item object. One such object can be reused to multiple targets.
     readonly property Translate __translate: Translate {
         id: translate
         x: fakeTarget.x
@@ -37,19 +41,25 @@ QtObject {
     // non-WRITEable list<> -- so that Binding can't even restore it as a
     // value, and also most Binding properties themselfves including `target`
     // do not have associated NOTIFY signal, so we can't hook into it.
-    property Item __oldTarget
-    onTargetChanged: {
-        if (__oldTarget !== null) {
-            const list = Array.prototype.slice.call(__oldTarget.transform);
-            const index = list.indexOf(translate);
-            if (index !== -1) {
-                list.splice(index, 1);
-                __oldTarget.transform = list;
+    property list<Item> __oldTargets
+    onTargetsChanged: {
+        for (let i = 0; i < __oldTargets.length; i++) {
+            const target = __oldTargets[i];
+            if (target) {
+                const list = Array.prototype.slice.call(target.transform);
+                const index = list.indexOf(translate);
+                if (index !== -1) {
+                    list.splice(index, 1);
+                    target.transform = list;
+                }
             }
         }
-        __oldTarget = target;
-        if (__oldTarget !== null) {
-            __oldTarget.transform.push(translate);
+        __oldTargets = targets;
+        for (let i = 0; i < __oldTargets.length; i++) {
+            const target = __oldTargets[i];
+            if (target) {
+                target.transform.push(translate);
+            }
         }
     }
 
