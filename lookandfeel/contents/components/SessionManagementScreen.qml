@@ -11,6 +11,8 @@ import QtQuick.Layouts 1.15
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 
+import "../components/animation"
+
 FocusScope {
     id: root
 
@@ -63,6 +65,17 @@ FocusScope {
     default property alias _children: innerLayout.children
 
     signal userSelected()
+
+    signal credentialsRejected()
+
+    onCredentialsRejected: {
+        rejectPasswordAnimation.start();
+    }
+
+    RejectPasswordAnimation {
+        id: rejectPasswordAnimation
+        target: root
+    }
 
     // FIXME: move this component into a layout, rather than abusing
     // anchors and implicitly relying on other components' built-in
