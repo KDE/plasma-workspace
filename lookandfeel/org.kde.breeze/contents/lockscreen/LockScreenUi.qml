@@ -285,9 +285,9 @@ PlasmaCore.ColorScope {
                 StackView.onStatusChanged: {
                     // prepare for presenting again to the user
                     if (StackView.status === StackView.Activating) {
-                        mainPasswordBox.remove(0, mainPasswordBox.length)
-                        mainPasswordBox.focus = true
-                        root.notification = ""
+                        mainPasswordBox.clear();
+                        mainPasswordBox.focus = true;
+                        root.notification = "";
                     }
                 }
                 userListModel: users
