@@ -12,6 +12,7 @@ import QtQuick.Window 2.2
 import QtGraphicalEffects 1.0
 import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.plasmoid 2.0
 
 QQC2.StackView {
     id: root
@@ -134,7 +135,9 @@ QQC2.StackView {
 
             QQC2.StackView.onActivated: {
                 // BUG 454908: Update accent color
-                wallpaper.repaintNeeded();
+                if (typeof Plasmoid !== "undefined") {
+                    wallpaper.repaintNeeded();
+                }
             }
             QQC2.StackView.onRemoved: destroy()
 
