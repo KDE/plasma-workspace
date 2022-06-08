@@ -13,17 +13,6 @@ RejectPasswordPathAnimation {
 
     property list<Item> targets
 
-    readonly property Instantiator __instantiator: Instantiator {
-        model: animation.targets
-        delegate: Binding {
-            target: modelData
-            property: "enabled"
-            value: false
-            when: animation.running
-            restoreMode: Binding.RestoreBindingOrValue
-        }
-    }
-
     // Real target is getting a Translate object which pulls coordinates from
     // a fake Item object. One such object can be reused to multiple targets.
     readonly property Translate __translate: Translate {
