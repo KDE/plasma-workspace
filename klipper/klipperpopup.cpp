@@ -138,7 +138,13 @@ void KlipperPopup::rebuild(const QString &filter)
     } else {
         for (int i = 0; i < m_nHistoryItems; i++) {
             Q_ASSERT(TOP_HISTORY_ITEM_INDEX < actions().count());
-            removeAction(actions().at(TOP_HISTORY_ITEM_INDEX));
+
+            // The old actions allocated by KlipperPopup::rebuild()
+            // and PopupProxy::tryInsertItem() are deleted here when
+            // the menu is rebuilt.
+            QAction *action = actions().at(TOP_HISTORY_ITEM_INDEX);
+            removeAction(action);
+            action->deleteLater();
         }
     }
 
