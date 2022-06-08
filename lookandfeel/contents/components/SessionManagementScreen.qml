@@ -69,7 +69,7 @@ FocusScope {
     signal credentialsRejected()
 
     onCredentialsRejected: RejectPasswordAnimation {
-        targets: root
+        targets: [userListView.currentItem, notificationsLabel, innerLayout]
     }
 
     // FIXME: move this component into a layout, rather than abusing
