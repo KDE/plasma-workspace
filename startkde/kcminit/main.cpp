@@ -101,9 +101,19 @@ KCMInit::KCMInit(const QCommandLineParser &args)
         return;
     }
 
-    if (!arg.isEmpty()) {
-        if (KPluginMetaData data(arg); data.isValid()) {
-            m_list << arg;
+    const auto positionalArguments = args.positionalArguments();
+    if (!positionalArguments.isEmpty()) {
+        for (const auto &arg : positionalArguments) {
+            KPluginMetaData data(arg);
+            if (!data.isValid()) {
+                data = KPluginMetaData::findPluginById(QStringLiteral("plasma/kcminit"), arg);
+            }
+
+            if (data.isValid()) {
+                m_list << data.fileName();
+            } else {
+                qWarning() << "Could not find" << arg;
+            }
         }
     } else {
         m_list = KPluginMetaData::findPlugins(QStringLiteral("plasma/kcminit"));
