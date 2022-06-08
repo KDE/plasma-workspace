@@ -71,6 +71,8 @@ Item {
     readonly property var loopStatus: !root.noPlayer && typeof mpris2Source.currentData.LoopStatus === "string"
                                       ? mpris2Source.currentData.LoopStatus : undefined
 
+    readonly property int volumePercentStep: Plasmoid.configuration.volumeStep
+
     Plasmoid.switchWidth: PlasmaCore.Units.gridUnit * 14
     Plasmoid.switchHeight: PlasmaCore.Units.gridUnit * 10
     Plasmoid.icon: "media-playback-playing"
@@ -174,7 +176,7 @@ Item {
             onWheel: {
                 var service = mpris2Source.serviceForSource(mpris2Source.current)
                 var operation = service.operationDescription("ChangeVolume")
-                operation.delta = (wheel.angleDelta.y / 120) * 0.03
+                operation.delta = (wheel.angleDelta.y / 120) * (volumePercentStep / 100)
                 operation.showOSD = true
                 service.startOperationCall(operation)
             }
