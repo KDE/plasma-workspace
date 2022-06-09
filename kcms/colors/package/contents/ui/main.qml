@@ -174,6 +174,7 @@ KCM.GridViewKCM {
                 spacing: 0
                 QtControls.RadioButton {
                     id: accentBox
+                    Layout.alignment: Qt.AlignVCenter
                     checked: !Qt.colorEqual(kcm.accentColor, "transparent") && !kcm.applyAccentColorFromWallpaper
 
                     onToggled: {
@@ -196,7 +197,9 @@ KCM.GridViewKCM {
                     }
                 }
 
-                RowLayout {
+                Flow {
+                    id: colourFlow
+                    width: root.width - accentBox.width
                     spacing: accentBox.spacing
                     component ColorRadioButton : T.RadioButton {
                         id: control
