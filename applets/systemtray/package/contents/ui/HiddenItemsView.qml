@@ -33,11 +33,11 @@ PlasmaComponents3.ScrollView {
     GridView {
         id: hiddenTasks
 
-        readonly property int rows: 4
-        readonly property int columns: 4
+        readonly property int minimumRows: 4
+        readonly property int minimumColumns: 4
 
-        cellWidth: Math.floor(hiddenTasks.width / hiddenTasks.columns)
-        cellHeight: Math.floor(hiddenTasks.height / hiddenTasks.rows)
+        cellWidth: Math.floor(popup.Layout.minimumWidth / minimumRows)
+        cellHeight: Math.floor(popup.Layout.minimumHeight / minimumColumns)
 
         currentIndex: -1
         highlight: PlasmaExtras.Highlight {}
