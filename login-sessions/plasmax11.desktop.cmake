@@ -44,6 +44,7 @@ Name[uk]=Плазма (X11)
 Name[vi]=Plasma (X11)
 Name[x-test]=xxPlasma (X11)xx
 Name[zh_CN]=Plasma (X11)
+Name[zh_TW]=Plasma (X11)
 Comment=Plasma by KDE
 Comment[ar]=بلازما كدي
 Comment[ast]=Plasma por KDE

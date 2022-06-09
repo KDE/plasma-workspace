@@ -39,6 +39,7 @@ Name[uk]=Автозапуск
 Name[vi]=Khởi động tự động
 Name[x-test]=xxAutostartxx
 Name[zh_CN]=自动启动
+Name[zh_TW]=自動啟動
 Encoding=UTF-8
 Type=Application
 Exec=systemsettings kcm_autostart
