@@ -223,7 +223,8 @@ PlasmaExtras.Representation {
                         && (currentItem.status === Image.Ready || currentItem.status === Image.Loading)
 
                     replaceEnter: Transition {
-                        OpacityAnimator {
+                        NumberAnimation {
+                            property: "opacity"
                             from: 0
                             to: 1
                             duration: PlasmaCore.Units.longDuration
@@ -243,8 +244,9 @@ PlasmaExtras.Representation {
                             * perform a fade-out animation for the old image
                             * to prevent it from suddenly disappearing.
                             */
-                            OpacityAnimator {
+                            NumberAnimation {
                                 id: exitTransitionOpacityAnimator
+                                property: "opacity"
                                 from: 1
                                 to: 0
                                 duration: 0
@@ -255,7 +257,8 @@ PlasmaExtras.Representation {
                     popExit: Transition {
                         id: popExitTransition
 
-                        OpacityAnimator {
+                        NumberAnimation {
+                            property: "opacity"
                             from: 1
                             to: 0
                             duration: PlasmaCore.Units.longDuration
