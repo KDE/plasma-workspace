@@ -178,16 +178,18 @@ QQC2.StackView {
 
     replaceEnter: Transition {
         OpacityAnimator {
+            id: replaceEnterOpacityAnimator
             from: 0
             to: 1
-            duration: wallpaper.configuration.TransitionAnimationDuration
+            // The value is to keep compatible with the old feeling defined by "TransitionAnimationDuration" (default: 1000)
+            duration: Math.round(PlasmaCore.Units.veryLongDuration * 2.5)
         }
     }
     // Keep the old image around till the new one is fully faded in
     // If we fade both at the same time you can see the background behind glimpse through
     replaceExit: Transition{
         PauseAnimation {
-            duration: wallpaper.configuration.TransitionAnimationDuration
+            duration: replaceEnterOpacityAnimator.duration
         }
     }
 }
