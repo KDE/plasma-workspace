@@ -19,6 +19,7 @@ QQC2.StackView {
     readonly property url modelImage: mediaProxy.modelImage
     readonly property int fillMode: wallpaper.configuration.FillMode
     readonly property string configColor: wallpaper.configuration.Color
+    readonly property bool automaticColor: wallpaper.configuration.AutomaticColor
     readonly property bool blur: wallpaper.configuration.Blur
     readonly property size sourceSize: Qt.size(root.width * Screen.devicePixelRatio, root.height * Screen.devicePixelRatio)
 
@@ -96,6 +97,7 @@ QQC2.StackView {
     onFillModeChanged: Qt.callLater(loadImage);
     onModelImageChanged: Qt.callLater(loadImage);
     onConfigColorChanged: Qt.callLater(loadImage);
+    onAutomaticColorChanged: Qt.callLater(loadImage);
     onBlurChanged: Qt.callLater(loadImage);
 
     function loadImageImmediately() {
@@ -107,25 +109,48 @@ QQC2.StackView {
         var pendingImage = baseImage.createObject(root, { "source": root.modelImage,
                         "fillMode": root.fillMode,
                         "sourceSize": root.sourceSize,
-                        "color": root.configColor,
                         "blur": root.blur,
                         "opacity": _skipAnimation ? 1: 0});
 
-        function replaceWhenLoaded() {
-            if (pendingImage.status !== Image.Loading) {
-                root.replace(pendingImage, {},
-                    _skipAnimation ? QQC2.StackView.Immediate : QQC2.StackView.Transition);
-                pendingImage.statusChanged.disconnect(replaceWhenLoaded);
+        function slotImageStatusChanged() {
+            if (pendingImage.status === Image.Loading) {
+                return;
+            }
 
-                wallpaper.loading = false;
+            pendingImage.statusChanged.disconnect(slotImageStatusChanged);
 
-                if (pendingImage.status !== Image.Ready) {
-                    mediaProxy.useSingleImageDefaults();
-                }
+            if (colorExtractor.item) {
+                colorExtractor.item.grabFailed.connect(replaceWhenLoaded);
+                colorExtractor.item.colorChanged.connect(replaceWhenLoaded);
+                colorExtractor.item.source = pendingImage.mainImage;
+            } else {
+                replaceWhenLoaded();
             }
         }
-        pendingImage.statusChanged.connect(replaceWhenLoaded);
-        replaceWhenLoaded();
+
+        function replaceWhenLoaded() {
+            root.replace(
+                pendingImage,
+                {
+                    "color": colorExtractor.item ? colorExtractor.item.color : root.configColor
+                },
+                _skipAnimation ? QQC2.StackView.Immediate : QQC2.StackView.Transition
+            );
+
+            if (colorExtractor.item) {
+                colorExtractor.item.grabFailed.disconnect(replaceWhenLoaded);
+                colorExtractor.item.colorChanged.disconnect(replaceWhenLoaded);
+            }
+
+            wallpaper.loading = false;
+
+            if (pendingImage.status !== Image.Ready) {
+                mediaProxy.useSingleImageDefaults();
+            }
+        }
+
+        pendingImage.statusChanged.connect(slotImageStatusChanged);
+        slotImageStatusChanged();
     }
 
     Component {
@@ -192,6 +217,14 @@ QQC2.StackView {
             }
             QQC2.StackView.onRemoved: destroy()
         }
+    }
+
+    Loader {
+        id: colorExtractor
+        active: root.automaticColor
+             && !root.blur
+             && (root.fillMode === Image.PreserveAspectFit || root.fillMode === Image.Pad)
+        sourceComponent: Wallpaper.EdgeColorSampler { }
     }
 
     replaceEnter: Transition {
