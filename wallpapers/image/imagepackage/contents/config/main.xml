@@ -18,6 +18,10 @@
       <label>Color of the wallpaper</label>
       <default>#000000</default>
     </entry>
+    <entry name="AutomaticColor" type="bool">
+      <label>Automatic background color detection</label>
+      <default>false</default>
+    </entry>
     <entry name="Image" type="String">
       <label>Wallpaper image path or wallpaper name</label>
       <default></default>
