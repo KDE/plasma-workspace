@@ -35,6 +35,7 @@ Item {
         function resetCurrentIndex() {
             //that min is needed as the module will be populated in an async way
             //and only on demand so we can't ensure it already exists
+            view.positionViewAtIndex(Math.min(imageModel.indexOf(cfg_Image), imageModel.count - 1), GridView.Beginning);
             view.currentIndex = Qt.binding(() =>  Math.min(imageModel.indexOf(cfg_Image), imageModel.count - 1));
         }
 
