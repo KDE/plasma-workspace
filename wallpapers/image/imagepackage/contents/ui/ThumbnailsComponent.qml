@@ -17,6 +17,8 @@ Item {
     id: thumbnailsComponent
     anchors.fill: parent
 
+    property alias view: wallpapersGrid.view
+
     readonly property var imageModel: (configDialog.currentWallpaper === "org.kde.image") ? imageWallpaper.wallpaperModel : imageWallpaper.slideFilterModel
 
     Connections {

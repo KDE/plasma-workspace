@@ -184,9 +184,14 @@ ColumnLayout {
                     imageWallpaper.addSlidePath(url);
                 }
             });
+            // Scroll to top to view added images
+            if (configDialog.currentWallpaper === "org.kde.image") {
+                thumbnailsLoader.item.view.positionViewAtIndex(0, GridView.Beginning);
+            }
         }
 
         Loader {
+            id: thumbnailsLoader
             anchors.fill: parent
             source: (configDialog.currentWallpaper == "org.kde.image") ? "ThumbnailsComponent.qml" :
                 ((configDialog.currentWallpaper == "org.kde.slideshow") ? "SlideshowComponent.qml" : "")
