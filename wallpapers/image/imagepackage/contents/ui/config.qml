@@ -22,6 +22,9 @@ ColumnLayout {
     id: root
     property alias cfg_Color: colorButton.color
     property color cfg_ColorDefault
+    property alias cfg_AutomaticColor: automaticColorCheckBox.checked
+    property bool cfg_AutomaticColorDefault
+
     property string cfg_Image
     property string cfg_ImageDefault
     property int cfg_FillMode
@@ -159,10 +162,17 @@ ColumnLayout {
             KQuickControls.ColorButton {
                 id: colorButton
                 dialogTitle: i18nd("plasma_wallpaper_org.kde.image", "Select Background Color")
+                enabled: !automaticColorCheckBox.checked
 
                 KCM.SettingHighlighter {
                     highlight: cfg_Color != cfg_ColorDefault
                 }
+            }
+
+            QtControls2.CheckBox {
+                id: automaticColorCheckBox
+                enabled: colorRadioButton.checked
+                text: i18nd("plasma_wallpaper_org.kde.image", "From wallpaper")
             }
         }
     }
