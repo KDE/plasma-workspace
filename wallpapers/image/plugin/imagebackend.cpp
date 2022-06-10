@@ -550,6 +550,7 @@ void ImageBackend::slotWallpaperBrowseCompleted()
         m_model->addBackground(p);
     }
 
+    Q_EMIT wallpaperBrowseCompleted();
     Q_EMIT settingsChanged();
 }
 

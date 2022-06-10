@@ -144,6 +144,11 @@ Q_SIGNALS:
     void loadingChanged();
 
     /**
+     * Emitted when the user finishes adding images using the file dialog.
+     */
+    void wallpaperBrowseCompleted();
+
+    /**
      * Emitted when system color scheme changes. The frontend is required to
      * reload the wallpaper even if the image path is not changed.
      */

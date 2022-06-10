@@ -28,6 +28,11 @@ Item {
                 wallpapersGrid.resetCurrentIndex();
             }
         }
+
+        function onWallpaperBrowseCompleted() {
+            // Scroll to top to view added images
+            wallpapersGrid.view.positionViewAtIndex(0, GridView.Beginning);
+        }
     }
 
     KCM.GridView {
