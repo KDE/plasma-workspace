@@ -12,6 +12,7 @@
 #include "imagebackend.h"
 #include "provider/packageimageprovider.h"
 #include "sortingmode.h"
+#include "utils/edgecolorsampler.h"
 #include "utils/mediaproxy.h"
 
 const auto pluginName = QByteArrayLiteral("org.kde.plasma.wallpapers.image");
@@ -31,6 +32,8 @@ void ImagePlugin::registerTypes(const char *uri)
 
     qmlRegisterType<ImageBackend>(uri, 2, 0, "ImageBackend");
     qmlRegisterType<MediaProxy>(uri, 2, 0, "MediaProxy");
+
+    qmlRegisterType<EdgeColorSampler>(uri, 2, 0, "EdgeColorSampler");
 
     qmlRegisterAnonymousType<QAbstractItemModel>("QAbstractItemModel", 1);
     qmlRegisterUncreatableType<SortingMode>(uri, 2, 0, "SortingMode", QStringLiteral("error: only enums"));
