@@ -56,9 +56,6 @@ ColumnLayout {
 
         Component.onCompleted: scrollView.background.visible = true
 
-        property bool scrollBarVisible: QQC2.ScrollBar.vertical && QQC2.ScrollBar.vertical.visible
-        property var scrollBarWidth: scrollBarVisible ? QQC2.ScrollBar.vertical.width : 0
-
         ListView {
             id: itemsList
 
