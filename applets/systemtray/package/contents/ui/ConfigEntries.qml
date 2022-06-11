@@ -24,6 +24,8 @@ ColumnLayout {
     property var cfg_extraItems: []
     property alias cfg_showAllItems: showAllCheckBox.checked
 
+    spacing: Kirigami.Units.smallSpacing
+
     QQC2.CheckBox {
         id: showAllCheckBox
         text: i18n("Always show all entries")
@@ -72,6 +74,8 @@ ColumnLayout {
                 hoverEnabled: false
 
                 RowLayout {
+                    spacing: Kirigami.Units.smallSpacing
+
                     Kirigami.Heading {
                         text: i18nc("Name of the system tray entry", "Entry")
                         level: 2
@@ -111,7 +115,10 @@ ColumnLayout {
                 property bool isPlasmoid: model.itemType === "Plasmoid"
 
                 contentItem: RowLayout {
+                    spacing: Kirigami.Units.smallSpacing
+
                     RowLayout {
+                        spacing: Kirigami.Units.smallSpacing
                         Layout.fillWidth: true
 
                         Kirigami.Icon {
