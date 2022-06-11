@@ -5,7 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.0
+import QtQuick 2.15
 import QtQuick.Controls.Private 1.0
 import QtQuick.Controls 2.3 as QtControls2
 import QtGraphicalEffects 1.0
@@ -121,6 +121,13 @@ KCM.GridDelegate {
                 duration: Kirigami.Units.longDuration
                 easing.type: Easing.InOutQuad
             }
+        }
+    }
+
+    Behavior on opacity {
+        OpacityAnimator {
+            duration: PlasmaCore.Units.longDuration
+            easing.type: Easing.InOutQuad
         }
     }
 
