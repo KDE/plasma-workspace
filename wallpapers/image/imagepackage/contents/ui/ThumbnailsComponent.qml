@@ -81,13 +81,6 @@ Item {
         }
     }
 
-    Kirigami.PlaceholderMessage {
-        anchors.centerIn: parent
-        width: parent.width - (Kirigami.Units.largeSpacing * 4)
-        visible: wallpapersGrid.view.count === 0 && !imageWallpaper.loading
-        text: i18nd("plasma_wallpaper_org.kde.image", "There are no wallpapers in this slideshow")
-    }
-
     KCM.SettingHighlighter {
         target: wallpapersGrid
         highlight: configDialog.currentWallpaper === "org.kde.image" && cfg_Image != cfg_ImageDefault
