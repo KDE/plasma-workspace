@@ -20,7 +20,6 @@ KCM.GridDelegate {
     id: wallpaperDelegate
 
     property alias color: backgroundRect.color
-    readonly property bool selected: (GridView.currentIndex === index)
     opacity: model.pendingDeletion ? 0.5 : 1
 
     text: model.display
