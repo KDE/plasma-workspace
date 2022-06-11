@@ -115,6 +115,13 @@ KCM.GridDelegate {
             checked: visible ? model.checked : false
             onToggled: model.checked = checked
         }
+
+        Behavior on color {
+            ColorAnimation {
+                duration: Kirigami.Units.longDuration
+                easing.type: Easing.InOutQuad
+            }
+        }
     }
 
     onClicked: {
