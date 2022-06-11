@@ -109,7 +109,7 @@ ColumnLayout {
                 highlighted: false
                 hoverEnabled: false
 
-                property bool isPlasmoid: model.itemType === "Plasmoid"
+                readonly property bool isPlasmoid: model.itemType === "Plasmoid"
 
                 contentItem: RowLayout {
                     spacing: Kirigami.Units.smallSpacing
@@ -144,7 +144,7 @@ ColumnLayout {
                         model: comboBoxModel()
 
                         currentIndex: {
-                            var value
+                            let value
 
                             if (cfg_shownItems.indexOf(itemId) !== -1) {
                                 value = "shown"
@@ -156,7 +156,7 @@ ColumnLayout {
                                 value = "auto"
                             }
 
-                            for (var i = 0; i < model.length; i++) {
+                            for (let i = 0; i < model.length; i++) {
                                 if (model[i].value === value) {
                                     return i
                                 }
@@ -168,9 +168,9 @@ ColumnLayout {
                         property var myCurrentValue: model[currentIndex].value
 
                         onActivated: {
-                            var shownIndex = cfg_shownItems.indexOf(itemId)
-                            var hiddenIndex = cfg_hiddenItems.indexOf(itemId)
-                            var extraIndex = cfg_extraItems.indexOf(itemId)
+                            const shownIndex = cfg_shownItems.indexOf(itemId)
+                            const hiddenIndex = cfg_hiddenItems.indexOf(itemId)
+                            const extraIndex = cfg_extraItems.indexOf(itemId)
 
                             switch (myCurrentValue) {
                             case "auto":
@@ -222,10 +222,10 @@ ColumnLayout {
                         }
 
                         function comboBoxModel() {
-                            var autoElement = {"value": "auto", "text": i18n("Shown when relevant")}
-                            var shownElement = {"value": "shown", "text": i18n("Always shown")}
-                            var hiddenElement = {"value": "hidden", "text": i18n("Always hidden")}
-                            var disabledElement = {"value": "disabled", "text": i18n("Disabled")}
+                            const autoElement = {"value": "auto", "text": i18n("Shown when relevant")}
+                            const shownElement = {"value": "shown", "text": i18n("Always shown")}
+                            const hiddenElement = {"value": "hidden", "text": i18n("Always hidden")}
+                            const disabledElement = {"value": "disabled", "text": i18n("Disabled")}
 
                             if (showAllCheckBox.checked) {
                                 if (isPlasmoid) {
