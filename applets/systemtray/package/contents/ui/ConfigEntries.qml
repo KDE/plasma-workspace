@@ -59,8 +59,8 @@ ColumnLayout {
         ListView {
             id: itemsList
 
-            property var visibilityColumnWidth: Kirigami.Units.gridUnit
-            property var keySequenceColumnWidth: Kirigami.Units.gridUnit
+            property real visibilityColumnWidth: Kirigami.Units.gridUnit
+            property real keySequenceColumnWidth: Kirigami.Units.gridUnit
 
             clip: true
 
@@ -134,8 +134,8 @@ ColumnLayout {
                     QQC2.ComboBox {
                         id: visibilityComboBox
 
-                        property var contentWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
-                                                            implicitContentWidth + leftPadding + rightPadding)
+                        property real contentWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
+                                                             implicitContentWidth + leftPadding + rightPadding)
                         implicitWidth: Math.max(contentWidth, itemsList.visibilityColumnWidth)
                         Component.onCompleted: itemsList.visibilityColumnWidth = Math.max(implicitWidth, itemsList.visibilityColumnWidth)
 
