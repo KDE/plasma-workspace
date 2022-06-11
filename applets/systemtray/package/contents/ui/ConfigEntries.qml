@@ -144,6 +144,7 @@ ColumnLayout {
 
                         enabled: (!showAllCheckBox.checked || isPlasmoid) && itemId
                         textRole: "text"
+                        valueRole: "value"
                         model: comboBoxModel()
 
                         currentIndex: {
@@ -168,14 +169,12 @@ ColumnLayout {
                             return 0
                         }
 
-                        property var myCurrentValue: model[currentIndex].value
-
                         onActivated: {
                             const shownIndex = cfg_shownItems.indexOf(itemId)
                             const hiddenIndex = cfg_hiddenItems.indexOf(itemId)
                             const extraIndex = cfg_extraItems.indexOf(itemId)
 
-                            switch (myCurrentValue) {
+                            switch (currentValue) {
                             case "auto":
                                 if (shownIndex > -1) {
                                     cfg_shownItems.splice(shownIndex, 1)
@@ -252,7 +251,7 @@ ColumnLayout {
                         Component.onCompleted: itemsList.keySequenceColumnWidth = Math.max(implicitWidth, itemsList.keySequenceColumnWidth)
 
                         visible: isPlasmoid
-                        enabled: visibilityComboBox.myCurrentValue !== "disabled"
+                        enabled: visibilityComboBox.currentValue !== "disabled"
                         keySequence: model.applet ? model.applet.globalShortcut : ""
                         onKeySequenceChanged: {
                             if (model.applet && keySequence !== model.applet.globalShortcut) {
