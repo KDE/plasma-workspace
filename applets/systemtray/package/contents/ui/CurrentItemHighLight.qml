@@ -4,9 +4,10 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.12
+import QtQuick 2.15
+
+import org.kde.plasma.core 2.1 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.core 2.0 as PlasmaCore
 
 PlasmaCore.FrameSvgItem {
     id: currentItemHighLight
@@ -32,24 +33,24 @@ PlasmaCore.FrameSvgItem {
 
     imagePath: "widgets/tabbar"
     prefix: {
-        var prefix = ""
+        let prefix;
         switch (location) {
-            case PlasmaCore.Types.LeftEdge:
-                prefix = "west-active-tab";
-                break;
-            case PlasmaCore.Types.TopEdge:
-                prefix = "north-active-tab";
-                break;
-            case PlasmaCore.Types.RightEdge:
-                prefix = "east-active-tab";
-                break;
-            default:
-                prefix = "south-active-tab";
-            }
-            if (!hasElementPrefix(prefix)) {
-                prefix = "active-tab";
-            }
-            return prefix;
+        case PlasmaCore.Types.LeftEdge:
+            prefix = "west-active-tab";
+            break;
+        case PlasmaCore.Types.TopEdge:
+            prefix = "north-active-tab";
+            break;
+        case PlasmaCore.Types.RightEdge:
+            prefix = "east-active-tab";
+            break;
+        default:
+            prefix = "south-active-tab";
+        }
+        if (!hasElementPrefix(prefix)) {
+            prefix = "active-tab";
+        }
+        return prefix;
     }
 
     // update when System Tray is expanded - applet activated or hidden icons shown
@@ -97,12 +98,11 @@ PlasmaCore.FrameSvgItem {
     }
 
     function updateHighlightedItem() {
-        var forceEdgeHighlight;
         if (systemTrayState.expanded) {
             if (systemTrayState.activeApplet && systemTrayState.activeApplet.parent && systemTrayState.activeApplet.parent.inVisibleLayout) {
-                changeHighlightedItem(systemTrayState.activeApplet.parent.container, forceEdgeHighlight=false);
+                changeHighlightedItem(systemTrayState.activeApplet.parent.container, /*forceEdgeHighlight*/false);
             } else { // 'Show hiden items' popup
-                changeHighlightedItem(parent, forceEdgeHighlight=true);
+                changeHighlightedItem(parent, /*forceEdgeHighlight*/true);
             }
         } else {
             highlightedItem = null;
@@ -115,14 +115,13 @@ PlasmaCore.FrameSvgItem {
         if (!highlightedItem || (highlightedItem === nextItem)) {
             animationEnabled = false;
         }
-        var returnAllMargins;
 
         const p = parent.mapFromItem(nextItem, 0, 0);
         if (containerMargins && (parent.oneRowOrColumn || forceEdgeHighlight)) {
-            x = p.x - containerMargins('left', returnAllMargins=true);
-            y = p.y - containerMargins('top', returnAllMargins=true);
-            width = nextItem.width + containerMargins('left', returnAllMargins=true) + containerMargins('right', true);
-            height = nextItem.height + containerMargins('bottom', returnAllMargins=true) + containerMargins('top', true);
+            x = p.x - containerMargins('left', /*returnAllMargins*/true);
+            y = p.y - containerMargins('top', /*returnAllMargins*/true);
+            width = nextItem.width + containerMargins('left', /*returnAllMargins*/true) + containerMargins('right', /*returnAllMargins*/true);
+            height = nextItem.height + containerMargins('bottom', /*returnAllMargins*/true) + containerMargins('top', /*returnAllMargins*/true);
         } else {
             x = p.x;
             y = p.y;

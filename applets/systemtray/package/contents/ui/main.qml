@@ -227,11 +227,13 @@ MouseArea {
     //Main popup
     PlasmaCore.Dialog {
         id: dialog
+        objectName: "popupWindow"
         visualParent: root
         flags: Qt.WindowStaysOnTopHint
         location: Plasmoid.location
         hideOnWindowDeactivate: !Plasmoid.configuration.pin
         visible: systemTrayState.expanded
+        // visualParent: implicitly set to parent
         backgroundHints: (Plasmoid.containmentDisplayHints & PlasmaCore.Types.DesktopFullyCovered) ? PlasmaCore.Dialog.SolidBackground : PlasmaCore.Dialog.StandardBackground
         type: PlasmaCore.Dialog.AppletPopup
         appletInterface: Plasmoid.self
