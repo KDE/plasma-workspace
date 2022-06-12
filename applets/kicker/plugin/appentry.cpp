@@ -52,10 +52,13 @@ QString groupName(const QString &name)
     if (name.isEmpty()) {
         return QString();
     }
+
+    const QChar firstChar = name[0];
+
     // Here we will apply a locale based strategy for the first character.
     // If first character is hangul, run decomposition and return the choseong (consonants).
-    if (name[0].script() == QChar::Script_Hangul) {
-        auto decomposed = name[0].decomposition();
+    if (firstChar.script() == QChar::Script_Hangul) {
+        auto decomposed = firstChar.decomposition();
         if (decomposed.isEmpty()) {
             return name.left(1);
         }
@@ -66,7 +69,7 @@ QString groupName(const QString &name)
         // 1. it does not make much sense to have every different Kanji to have a different group.
         // 2. ICU transliterator can't yet convert Kanji to Hiragana.
         //    https://unicode-org.atlassian.net/browse/ICU-5874
-        if (name[0].script() == QChar::Script_Han) {
+        if (firstChar.script() == QChar::Script_Han) {
             // Unicode Han
             return QString::fromUtf8("\xe6\xbc\xa2");
         }
