@@ -9,7 +9,6 @@
 import QtQuick 2.5
 import QtQuick.Controls 2.1 as QQC2
 import QtQuick.Window 2.2
-import QtGraphicalEffects 1.0
 import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
 import org.kde.plasma.core 2.0 as PlasmaCore
 
@@ -104,15 +103,22 @@ QQC2.StackView {
 
     function loadImage(skipAnimation) {
         const _skipAnimation = root.currentItem == undefined || !!skipAnimation;
+        const baseImage = Qt.createComponent("mediacomponent/ImageComponent.qml");
         var pendingImage = baseImage.createObject(root, { "source": root.modelImage,
                         "fillMode": root.fillMode,
                         "sourceSize": root.sourceSize,
                         "color": root.configColor,
                         "blur": root.blur,
-                        "opacity": _skipAnimation ? 1: 0});
+            "opacity": _skipAnimation ? 1: 0,
+            "width": root.width,
+            "height": root.height,
+        });
 
         function replaceWhenLoaded() {
             if (pendingImage.status !== Image.Loading) {
+                // BUG 454908: Update accent color
+                pendingImage.QQC2.StackView.onActivated.connect(wallpaper.repaintNeeded);
+                pendingImage.QQC2.StackView.onRemoved.connect(pendingImage.destroy);
                 root.replace(pendingImage, {},
                     _skipAnimation ? QQC2.StackView.Immediate : QQC2.StackView.Transition);
                 pendingImage.statusChanged.disconnect(replaceWhenLoaded);
@@ -126,64 +132,6 @@ QQC2.StackView {
         }
         pendingImage.statusChanged.connect(replaceWhenLoaded);
         replaceWhenLoaded();
-    }
-
-    Component {
-        id: baseImage
-
-        Image {
-            id: mainImage
-
-            property alias color: backgroundColor.color
-            property bool blur: false
-
-            asynchronous: true
-            cache: false
-            autoTransform: true
-            z: -1
-
-            QQC2.StackView.onActivated: {
-                // BUG 454908: Update accent color
-                wallpaper.repaintNeeded();
-            }
-            QQC2.StackView.onRemoved: destroy()
-
-            Rectangle {
-                id: backgroundColor
-                anchors.fill: parent
-                visible: mainImage.status === Image.Ready && !blurLoader.active
-                z: -2
-            }
-
-            Loader {
-                id: blurLoader
-                anchors.fill: parent
-                z: -3
-                active: mainImage.blur && (mainImage.fillMode === Image.PreserveAspectFit || mainImage.fillMode === Image.Pad)
-                sourceComponent: Item {
-                    Image {
-                        id: blurSource
-                        anchors.fill: parent
-                        asynchronous: true
-                        cache: false
-                        autoTransform: true
-                        fillMode: Image.PreserveAspectCrop
-                        source: mainImage.source
-                        sourceSize: mainImage.sourceSize
-                        visible: false // will be rendered by the blur
-                    }
-
-                    GaussianBlur {
-                        id: blurEffect
-                        anchors.fill: parent
-                        source: blurSource
-                        radius: 32
-                        samples: 65
-                        visible: blurSource.status === Image.Ready
-                    }
-                }
-            }
-        }
     }
 
     replaceEnter: Transition {
