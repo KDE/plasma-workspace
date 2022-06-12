@@ -60,6 +60,11 @@ QString groupName(const QString &name)
         return QStringLiteral("#");
     }
 
+    // Put all applications whose names begin with punctuations/symbols/spaces in group &
+    if (firstChar.isPunct() || firstChar.isSymbol() || firstChar.isSpace()) {
+        return QStringLiteral("&");
+    }
+
     // Here we will apply a locale based strategy for the first character.
     // If first character is hangul, run decomposition and return the choseong (consonants).
     if (firstChar.script() == QChar::Script_Hangul) {

@@ -739,6 +739,13 @@ void AppsModel::sortEntries()
                     return false;
                 }
 
+                // Symbol group
+                if (a->group() == QLatin1Char('&')) {
+                    return true;
+                } else if (b->group() == QLatin1Char('&')) {
+                    return false;
+                }
+
                 return c.compare(a->group(), b->group()) < 0;
             } else {
                 return c.compare(a->name(), b->name()) < 0;
