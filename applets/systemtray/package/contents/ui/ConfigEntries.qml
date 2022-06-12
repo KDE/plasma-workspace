@@ -2,6 +2,7 @@
     SPDX-FileCopyrightText: 2013 Sebastian Kügler <sebas@kde.org>
     SPDX-FileCopyrightText: 2014 Marco Martin <mart@kde.org>
     SPDX-FileCopyrightText: 2019 Konrad Materka <materka@gmail.com>
+    SPDX-FileCopyrightText: 2022 ivan (@ratijas) tkachenko <me@ratijas.tk>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -13,6 +14,7 @@ import QtQuick.Layouts 1.3
 import org.kde.plasma.plasmoid 2.0
 import org.kde.kquickcontrols 2.0 as KQC
 import org.kde.kirigami 2.10 as Kirigami
+import org.kde.kitemmodels 1.0
 
 ColumnLayout {
     id: iconsPage
@@ -25,11 +27,6 @@ ColumnLayout {
     property alias cfg_showAllItems: showAllCheckBox.checked
 
     spacing: Kirigami.Units.smallSpacing
-
-    QQC2.CheckBox {
-        id: showAllCheckBox
-        text: i18n("Always show all entries")
-    }
 
     function categoryName(category) {
         switch (category) {
@@ -47,6 +44,11 @@ ColumnLayout {
         }
     }
 
+    Kirigami.SearchField {
+        id: filterField
+        Layout.fillWidth: true
+    }
+
     QQC2.ScrollView {
         id: scrollView
 
@@ -58,6 +60,8 @@ ColumnLayout {
 
         // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-83890
         QQC2.ScrollBar.horizontal.policy: QQC2.ScrollBar.AlwaysOff
+        // avoid horizontal layout changes when the list is filtered to fit in viewport
+        QQC2.ScrollBar.vertical.policy: QQC2.ScrollBar.AlwaysOn
 
         ListView {
             id: itemsList
@@ -67,7 +71,11 @@ ColumnLayout {
 
             clip: true
 
-            model: Plasmoid.nativeInterface.configSystemTrayModel
+            model: KSortFilterProxyModel {
+                sourceModel: Plasmoid.nativeInterface.configSystemTrayModel
+                filterString: filterField.text
+                filterCaseSensitivity: Qt.CaseInsensitive
+            }
             reuseItems: true
 
             header: Kirigami.AbstractListItem {
@@ -299,5 +307,11 @@ ColumnLayout {
                 }
             }
         }
+    }
+
+    QQC2.CheckBox {
+        id: showAllCheckBox
+        text: i18n("Always show all entries")
+        Layout.alignment: Qt.AlignVCenter
     }
 }
