@@ -732,6 +732,13 @@ void AppsModel::sortEntries()
             return a->type() > b->type();
         } else {
             if (a->group() != b->group()) {
+                // Number group
+                if (a->group() == QLatin1Char('#')) {
+                    return true;
+                } else if (b->group() == QLatin1Char('#')) {
+                    return false;
+                }
+
                 return c.compare(a->group(), b->group()) < 0;
             } else {
                 return c.compare(a->name(), b->name()) < 0;

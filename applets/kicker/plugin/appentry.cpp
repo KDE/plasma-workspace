@@ -55,6 +55,11 @@ QString groupName(const QString &name)
 
     const QChar firstChar = name[0];
 
+    // Put all applications whose names begin with numbers in group #
+    if (firstChar.isDigit()) {
+        return QStringLiteral("#");
+    }
+
     // Here we will apply a locale based strategy for the first character.
     // If first character is hangul, run decomposition and return the choseong (consonants).
     if (firstChar.script() == QChar::Script_Hangul) {
