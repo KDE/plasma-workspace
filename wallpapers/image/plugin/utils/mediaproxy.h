@@ -14,6 +14,7 @@
 #include <QUrl>
 
 #include "../provider/providertype.h"
+#include "backgroundtype.h"
 
 /**
  * A proxy class that converts a provider url to a real resource url.
@@ -35,6 +36,11 @@ class MediaProxy : public QObject, public QQmlParserStatus, public Provider
      *      image://package/get? (KPackage)
      */
     Q_PROPERTY(QUrl modelImage READ modelImage NOTIFY modelImageChanged)
+
+    /**
+     * Type of the current wallpaper
+     */
+    Q_PROPERTY(BackgroundType::Type backgroundType MEMBER m_backgroundType NOTIFY backgroundTypeChanged)
 
     Q_PROPERTY(QSize targetSize READ targetSize WRITE setTargetSize NOTIFY targetSizeChanged)
 
@@ -63,6 +69,12 @@ public:
 Q_SIGNALS:
     void sourceChanged();
     void modelImageChanged();
+
+    /**
+     * Emitted when the type of the current wallpaper changes.
+     */
+    void backgroundTypeChanged();
+
     void targetSizeChanged(const QSize &size);
 
     /**
@@ -83,16 +95,19 @@ private Q_SLOTS:
 private:
     inline bool isDarkColorScheme(const QPalette &palette = {}) const noexcept;
 
+    void determineBackgroundType();
     void determineProviderType();
 
     QUrl findPreferredImageInPackage();
-    void updateModelImage();
+    void updateModelImage(bool doesBlockSignal = false);
+    void updateModelImageWithoutSignal();
 
     bool m_ready = false;
 
     QUrl m_source;
     QUrl m_formattedSource;
     QUrl m_modelImage;
+    BackgroundType::Type m_backgroundType = BackgroundType::Type::Unknown;
     Provider::Type m_providerType = Provider::Type::Unknown;
 
     QSize m_targetSize;

@@ -97,14 +97,36 @@ QQC2.StackView {
     onConfigColorChanged: Qt.callLater(loadImage);
     onBlurChanged: Qt.callLater(loadImage);
 
+    property Component staticImageComponent
+    property Component animatedImageComponent
+
+    function createBackgroundComponent() {
+        switch (mediaProxy.backgroundType) {
+        case Wallpaper.BackgroundType.Image: {
+            if (!staticImageComponent) {
+                staticImageComponent = Qt.createComponent("mediacomponent/StaticImageComponent.qml");
+            }
+            return staticImageComponent;
+        }
+        case Wallpaper.BackgroundType.AnimatedImage: {
+            if (!animatedImageComponent) {
+                animatedImageComponent = Qt.createComponent("mediacomponent/AnimatedImageComponent.qml");
+            }
+            return animatedImageComponent;
+        }
+        }
+    }
+
     function loadImageImmediately() {
         loadImage(true);
     }
 
     function loadImage(skipAnimation) {
         const _skipAnimation = root.currentItem == undefined || !!skipAnimation;
-        const baseImage = Qt.createComponent("mediacomponent/ImageComponent.qml");
-        var pendingImage = baseImage.createObject(root, { "source": root.modelImage,
+        const baseImage = createBackgroundComponent();
+        var pendingImage = baseImage.createObject(root, {
+            // Use mediaProxy instead of root because colorSchemeChanged needs immediately update the wallpaper
+            "source": mediaProxy.modelImage,
                         "fillMode": root.fillMode,
                         "sourceSize": root.sourceSize,
                         "color": root.configColor,

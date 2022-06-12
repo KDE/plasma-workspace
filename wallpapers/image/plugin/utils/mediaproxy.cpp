@@ -8,6 +8,8 @@
 
 #include <QFileInfo>
 #include <QGuiApplication>
+#include <QMimeDatabase>
+#include <QMovie>
 #include <QScreen>
 #include <QUrlQuery>
 
@@ -54,7 +56,8 @@ QString MediaProxy::source() const
 
 void MediaProxy::setSource(const QString &url)
 {
-    if (m_source.toString() == url) {
+    // New desktop has empty url
+    if (url.isEmpty() || m_source.toString() == url) {
         return;
     }
 
@@ -63,6 +66,8 @@ void MediaProxy::setSource(const QString &url)
     Q_EMIT sourceChanged();
 
     determineProviderType();
+    determineBackgroundType();
+
     updateModelImage();
 }
 
@@ -172,6 +177,7 @@ void MediaProxy::useSingleImageDefaults()
     Q_EMIT sourceChanged();
 
     determineProviderType();
+    determineBackgroundType();
     updateModelImage();
 }
 
@@ -199,6 +205,11 @@ void MediaProxy::slotSystemPaletteChanged(const QPalette &palette)
     }
 
     m_isDarkColorScheme = dark;
+
+    if (m_providerType == Provider::Type::Package) {
+        updateModelImageWithoutSignal();
+    }
+
     Q_EMIT colorSchemeChanged();
 }
 
@@ -209,6 +220,30 @@ bool MediaProxy::isDarkColorScheme(const QPalette &palette) const noexcept
         return qGray(qGuiApp->palette().window().color().rgb()) < 192;
     }
     return qGray(palette.window().color().rgb()) < 192;
+}
+
+void MediaProxy::determineBackgroundType()
+{
+    QString filePath;
+    if (m_providerType == Provider::Type::Package) {
+        filePath = findPreferredImageInPackage().toLocalFile();
+    } else {
+        filePath = m_formattedSource.toLocalFile();
+    }
+
+    QMimeDatabase db;
+    const QString type = db.mimeTypeForFile(filePath).name();
+
+    if (QMovie::supportedFormats().contains(QFileInfo(filePath).suffix().toLower().toLatin1())) {
+        // Derived from the suffix
+        m_backgroundType = BackgroundType::Type::AnimatedImage;
+    } else if (type.startsWith(QLatin1String("image/"))) {
+        m_backgroundType = BackgroundType::Type::Image;
+    } else {
+        m_backgroundType = BackgroundType::Type::Unknown;
+    }
+
+    Q_EMIT backgroundTypeChanged();
 }
 
 void MediaProxy::determineProviderType()
@@ -249,7 +284,7 @@ QUrl MediaProxy::findPreferredImageInPackage()
     return url;
 }
 
-void MediaProxy::updateModelImage()
+void MediaProxy::updateModelImage(bool doesBlockSignal)
 {
     if (!m_ready) {
         return;
@@ -264,6 +299,12 @@ void MediaProxy::updateModelImage()
     }
 
     case Provider::Type::Package: {
+        if (m_backgroundType == BackgroundType::Type::AnimatedImage) {
+            // Is an animated image
+            newRealSource = findPreferredImageInPackage();
+            break;
+        }
+
         // Use a custom image provider
         QUrl composedUrl(QStringLiteral("image://package/get"));
 
@@ -288,5 +329,12 @@ void MediaProxy::updateModelImage()
     }
 
     m_modelImage = newRealSource;
-    Q_EMIT modelImageChanged();
+    if (!doesBlockSignal) {
+        Q_EMIT modelImageChanged();
+    }
+}
+
+void MediaProxy::updateModelImageWithoutSignal()
+{
+    updateModelImage(true);
 }

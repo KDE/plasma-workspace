@@ -16,6 +16,7 @@ set(image_SRCS
     model/imageproxymodel.cpp
     provider/packageimageprovider.cpp
     provider/providertype.h
+    utils/backgroundtype.h
     utils/maximizedwindowmonitor.cpp
     utils/mediaproxy.cpp
 )
