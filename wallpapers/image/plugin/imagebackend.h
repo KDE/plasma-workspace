@@ -14,16 +14,12 @@
 #include <QQmlParserStatus>
 #include <QSize>
 #include <QTimer>
-
-#include <KPackage/Package>
+#include <QUrl>
 
 #include "sortingmode.h"
 
 class QFileDialog;
-class QQuickItem;
 
-class KDirWatch;
-class KJob;
 class ImageProxyModel;
 class SlideModel;
 class SlideFilterModel;
@@ -148,7 +144,6 @@ private:
     SortingMode::Mode m_slideshowMode = SortingMode::Random;
     bool m_slideshowFoldersFirst = false;
 
-    KPackage::Package m_wallpaperPackage;
     QStringList m_slidePaths;
     QStringList m_uncheckedSlides;
     QTimer m_timer;
