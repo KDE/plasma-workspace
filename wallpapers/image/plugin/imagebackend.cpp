@@ -19,16 +19,13 @@
 #include <QImageReader>
 #include <QMimeDatabase>
 #include <QScreen>
-#include <QUrlQuery>
+#include <QStandardPaths>
 
-#include <KConfigGroup>
 #include <KIO/CopyJob>
 #include <KIO/Job>
 #include <KIO/OpenUrlJob>
 #include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
-#include <KPackage/PackageLoader>
-#include <Plasma/Theme>
 
 #include "debug.h"
 #include "finder/packagefinder.h"
@@ -40,11 +37,8 @@ ImageBackend::ImageBackend(QObject *parent)
     : QObject(parent)
     , m_targetSize(qGuiApp->primaryScreen()->size() * qGuiApp->primaryScreen()->devicePixelRatio())
     , m_slideFilterModel(new SlideFilterModel(this))
-    , m_isDarkColorScheme(isDarkColorScheme())
 {
     connect(&m_timer, &QTimer::timeout, this, &ImageBackend::nextSlide);
-
-    useSingleImageDefaults();
 }
 
 ImageBackend::~ImageBackend()
@@ -58,17 +52,10 @@ void ImageBackend::classBegin()
 
 void ImageBackend::componentComplete()
 {
-    // don't bother loading single image until all properties have settled
-    // otherwise we would load a too small image (initial view size) just
-    // to load the proper one afterwards etc etc
     m_ready = true;
 
-    // Follow system color scheme
-    connect(qGuiApp, &QGuiApplication::paletteChanged, this, &ImageBackend::slotSystemPaletteChanged);
-
-    if (m_mode == SingleImage) {
-        setSingleImage();
-    } else if (m_mode == SlideShow) {
+    // MediaProxy will handle SingleImage case
+    if (m_mode == SlideShow) {
         startSlideshow();
     }
 }
@@ -80,19 +67,12 @@ QString ImageBackend::image() const
 
 void ImageBackend::setImage(const QString &url)
 {
-    if (m_image.toString() == url || url.isEmpty()) {
+    if (url.isEmpty() || m_image == QUrl(url)) {
         return;
     }
 
     m_image = QUrl(url);
     Q_EMIT imageChanged();
-
-    setSingleImage();
-}
-
-QUrl ImageBackend::modelImage() const
-{
-    return m_modelImage;
 }
 
 ImageBackend::RenderingMode ImageBackend::renderingMode() const
@@ -110,9 +90,6 @@ void ImageBackend::setRenderingMode(RenderingMode mode)
 
     if (m_mode == SlideShow) {
         startSlideshow();
-    } else {
-        // we need to reset the preferred image
-        setSingleImage();
     }
 }
 
@@ -167,67 +144,8 @@ void ImageBackend::setTargetSize(const QSize &size)
 
     m_targetSize = size;
 
-    if (m_ready && m_providerType == Provider::Package) {
-        Q_EMIT modelImageChanged();
-    }
-
     // Will relay to ImageProxyModel
     Q_EMIT targetSizeChanged(m_targetSize);
-}
-
-void ImageBackend::useSingleImageDefaults()
-{
-    m_image.clear();
-
-    // Try from the look and feel package first, then from the plasma theme
-    KPackage::Package lookAndFeelPackage = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
-    KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), "KDE");
-    const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
-    // If empty, it will be the default (currently Breeze)
-    if (!packageName.isEmpty()) {
-        lookAndFeelPackage.setPath(packageName);
-    }
-
-    KConfigGroup lnfDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(lookAndFeelPackage.filePath("defaults")), "Wallpaper");
-
-    const QString image = lnfDefaultsConfig.readEntry("Image", "");
-    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
-
-    if (!image.isEmpty()) {
-        package.setPath(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("wallpapers/") + image, QStandardPaths::LocateDirectory));
-
-        if (package.isValid()) {
-            m_image = QUrl::fromLocalFile(package.path());
-        }
-    }
-
-    // Try to get a default from the plasma theme
-    if (m_image.isEmpty()) {
-        Plasma::Theme theme;
-        QString path = theme.wallpaperPath();
-        int index = path.indexOf(QLatin1String("/contents/images/"));
-        if (index > -1) { // We have file from package -> get path to package
-            m_image = QUrl::fromLocalFile(path.left(index));
-        } else {
-            m_image = QUrl::fromLocalFile(path);
-        }
-
-        package.setPath(m_image.toLocalFile());
-
-        if (!package.isValid()) {
-            return;
-        }
-    }
-
-    PackageFinder::findPreferredImageInPackage(package, m_targetSize);
-
-    // Make sure the image can be read, or there will be dead loops.
-    if (m_image.isEmpty() || QImage(package.filePath("preferred")).isNull()) {
-        return;
-    }
-
-    Q_EMIT imageChanged();
-    setSingleImage();
 }
 
 QAbstractItemModel *ImageBackend::wallpaperModel()
@@ -252,15 +170,6 @@ SlideModel *ImageBackend::slideshowModel()
         connect(m_slideshowModel, &SlideModel::loadingChanged, this, &ImageBackend::loadingChanged);
     }
     return m_slideshowModel;
-}
-
-bool ImageBackend::isDarkColorScheme(const QPalette &palette) const noexcept
-{
-    // 192 is from kcm_colors
-    if (palette == QPalette()) {
-        return qGray(qGuiApp->palette().window().color().rgb()) < 192;
-    }
-    return qGray(palette.window().color().rgb()) < 192;
 }
 
 QAbstractItemModel *ImageBackend::slideFilterModel()
@@ -384,69 +293,6 @@ void ImageBackend::addDirFromSelectionDialog()
     }
 }
 
-void ImageBackend::setSingleImage()
-{
-    if (!m_ready || m_image.isEmpty()) {
-        return;
-    }
-
-    // supposedly QSize::isEmpty() is true if "either width or height are >= 0"
-    if (!m_targetSize.width() || !m_targetSize.height()) {
-        return;
-    }
-
-    if (m_image.isLocalFile()) {
-        const QFileInfo info(m_image.toLocalFile());
-
-        if (!info.exists()) {
-            return;
-        }
-
-        if (info.isFile()) {
-            m_providerType = Provider::Image;
-        } else {
-            m_providerType = Provider::Package;
-        }
-    } else {
-        // The url can be without file://, try again.
-        const QFileInfo info(m_image.toString());
-
-        if (!info.exists()) {
-            return;
-        }
-
-        if (info.isFile()) {
-            m_providerType = Provider::Image;
-        } else {
-            m_providerType = Provider::Package;
-        }
-
-        m_image = QUrl::fromLocalFile(info.filePath());
-    }
-
-    switch (m_providerType) {
-    case Provider::Image:
-        m_modelImage = m_image;
-        break;
-
-    case Provider::Package: {
-        // Use a custom image provider
-        QUrl url(QStringLiteral("image://package/get"));
-
-        QUrlQuery urlQuery(url);
-        urlQuery.addQueryItem(QStringLiteral("dir"), m_image.toLocalFile());
-
-        url.setQuery(urlQuery);
-        m_modelImage = url;
-        break;
-    }
-    }
-
-    if (!m_modelImage.isEmpty()) {
-        Q_EMIT modelImageChanged();
-    }
-}
-
 void ImageBackend::startSlideshow()
 {
     if (!m_ready || m_usedInConfig || m_mode != SlideShow) {
@@ -473,31 +319,9 @@ void ImageBackend::backgroundsFound()
     }
 
     // start slideshow
-    if (m_currentSlide == -1) {
-        m_currentSlide = m_slideFilterModel->indexOf(m_image.toString()) - 1;
-    } else {
-        m_currentSlide = -1;
-    }
+    m_currentSlide = -1;
     m_slideFilterModel->sort(0);
     nextSlide();
-}
-
-void ImageBackend::slotSystemPaletteChanged(const QPalette &palette)
-{
-    if (m_providerType != Provider::Package || m_usedInConfig) {
-        // Currently only KPackage supports adaptive wallpapers
-        return;
-    }
-
-    const bool dark = isDarkColorScheme(palette);
-
-    if (dark == m_isDarkColorScheme) {
-        return;
-    }
-
-    m_isDarkColorScheme = dark;
-
-    Q_EMIT colorSchemeChanged();
 }
 
 void ImageBackend::showFileDialog()
@@ -603,11 +427,10 @@ void ImageBackend::nextSlide()
     m_timer.stop();
     m_timer.start(m_delay * 1000);
     if (next.isEmpty()) {
-        m_image = QUrl(previousPath); // setSingleImage will add "file://"
+        m_image = QUrl(previousPath);
     } else {
         m_image = QUrl(next);
         Q_EMIT imageChanged();
-        setSingleImage();
     }
 }
 
@@ -637,43 +460,6 @@ void ImageBackend::openFolder(const QString &path)
     auto *delegate = new KNotificationJobUiDelegate;
     delegate->setAutoErrorHandlingEnabled(true);
     job->setUiDelegate(delegate);
-    job->start();
-}
-
-void ImageBackend::openModelImage() const
-{
-    QUrl url;
-
-    switch (m_providerType) {
-    case Provider::Image: {
-        url = m_image;
-        break;
-    }
-
-    case Provider::Package: {
-        KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
-        package.setPath(m_image.toLocalFile());
-
-        if (!package.isValid()) {
-            return;
-        }
-
-        PackageFinder::findPreferredImageInPackage(package, m_targetSize);
-        url = QUrl::fromLocalFile(package.filePath("preferred"));
-
-        if (isDarkColorScheme()) {
-            const QUrl darkUrl = package.fileUrl("preferredDark");
-
-            if (!darkUrl.isEmpty()) {
-                url = darkUrl;
-            }
-        }
-        break;
-    }
-    }
-
-    KIO::OpenUrlJob *job = new KIO::OpenUrlJob(url);
-    job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
     job->start();
 }
 

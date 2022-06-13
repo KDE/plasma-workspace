@@ -16,7 +16,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 QQC2.StackView {
     id: root
 
-    readonly property url modelImage: imageWallpaper.modelImage
+    readonly property url modelImage: mediaProxy.modelImage
     readonly property int fillMode: wallpaper.configuration.FillMode
     readonly property string configColor: wallpaper.configuration.Color
     readonly property bool blur: wallpaper.configuration.Blur
@@ -47,7 +47,7 @@ QQC2.StackView {
 
     // e.g. used by slideshow wallpaper plugin
     function action_open() {
-        imageWallpaper.openModelImage();
+        mediaProxy.openModelImage();
     }
 
     //private
@@ -68,9 +68,20 @@ QQC2.StackView {
         usedInConfig: false
         //the oneliner of difference between image and slideshow wallpapers
         renderingMode: (wallpaper.pluginName === "org.kde.image") ? Wallpaper.ImageBackend.SingleImage : Wallpaper.ImageBackend.SlideShow
-        image: {
-            if (wallpaper.pluginName !== "org.kde.image") {
-                return "";
+        targetSize: root.sourceSize
+        slidePaths: wallpaper.configuration.SlidePaths
+        slideTimer: wallpaper.configuration.SlideInterval
+        slideshowMode: wallpaper.configuration.SlideshowMode
+        slideshowFoldersFirst: wallpaper.configuration.SlideshowFoldersFirst
+        uncheckedSlides: wallpaper.configuration.UncheckedSlides
+    }
+
+    Wallpaper.MediaProxy {
+        id: mediaProxy
+
+        source: {
+            if (wallpaper.pluginName === "org.kde.slideshow") {
+                return imageWallpaper.image;
             }
             if (wallpaper.configuration.PreviewImage !== "null") {
                 return wallpaper.configuration.PreviewImage;
@@ -78,11 +89,6 @@ QQC2.StackView {
             return wallpaper.configuration.Image;
         }
         targetSize: root.sourceSize
-        slidePaths: wallpaper.configuration.SlidePaths
-        slideTimer: wallpaper.configuration.SlideInterval
-        slideshowMode: wallpaper.configuration.SlideshowMode
-        slideshowFoldersFirst: wallpaper.configuration.SlideshowFoldersFirst
-        uncheckedSlides: wallpaper.configuration.UncheckedSlides
 
         onColorSchemeChanged: Qt.callLater(loadImage);
     }
@@ -110,7 +116,7 @@ QQC2.StackView {
                 wallpaper.loading = false;
 
                 if (pendingImage.status !== Image.Ready) {
-                    imageWallpaper.useSingleImageDefaults();
+                    mediaProxy.useSingleImageDefaults();
                 }
             }
         }

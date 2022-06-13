@@ -15,6 +15,8 @@ set(image_SRCS
     model/imagelistmodel.cpp
     model/imageproxymodel.cpp
     provider/packageimageprovider.cpp
+    provider/providertype.h
+    utils/mediaproxy.cpp
 )
 
 ecm_qt_declare_logging_category(image_SRCS HEADER debug.h

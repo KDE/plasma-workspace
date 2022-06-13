@@ -27,9 +27,15 @@ TestCase {
         targetSize: Qt.size(root.width, root.height)
     }
 
+    Wallpaper.MediaProxy {
+        id: mediaProxy
+        source: imageWallpaper.image
+        targetSize: imageWallpaper.targetSize
+    }
+
     SignalSpy {
         id: modelImageChangedSignalSpy
-        target: imageWallpaper
+        target: mediaProxy
         signalName: "modelImageChanged"
     }
 
@@ -61,7 +67,7 @@ TestCase {
         width: root.width
         height: root.height
         visible: true
-        title: imageWallpaper.modelImage.toString()
+        title: mediaProxy.modelImage.toString()
     }
 
     function test_setSingleImage() {
@@ -69,9 +75,9 @@ TestCase {
 
         verify(testImage.toString().length > 0);
         imageWallpaper.image = testImage;
-        compare(imageWallpaper.modelImage, testImage);
+        compare(mediaProxy.modelImage, testImage);
 
-        const image = createTemporaryObject(mainImage, window, {source: imageWallpaper.modelImage});
+        const image = createTemporaryObject(mainImage, window, {source: mediaProxy.modelImage});
         compare(image.status, Image.Ready);
         const grabbed = grabImage(image);
         compare(grabbed.pixel(0, 0), Qt.rgba(0, 0, 0, 255));
@@ -82,9 +88,9 @@ TestCase {
 
         verify(testPackage.toString().length > 0);
         imageWallpaper.image = testPackage;
-        compare(imageWallpaper.modelImage.toString().indexOf("image://package/get?dir="), 0);
+        compare(mediaProxy.modelImage.toString().indexOf("image://package/get?dir="), 0);
 
-        const image = createTemporaryObject(mainImage, window, {source: imageWallpaper.modelImage});
+        const image = createTemporaryObject(mainImage, window, {source: mediaProxy.modelImage});
         compare(image.status, Image.Loading);
         image.wait();
         compare(image.status, Image.Ready);
@@ -117,13 +123,13 @@ TestCase {
         imageWallpaper.renderingMode = Wallpaper.ImageBackend.SlideShow;
         wait(1000); // &SlideModel::done
 
-        let image = imageWallpaper.modelImage;
+        let image = mediaProxy.modelImage;
 
         imageWallpaper.nextSlide();
-        verify(image != imageWallpaper.modelImage);
+        verify(image != mediaProxy.modelImage);
 
-        image = imageWallpaper.modelImage;
+        image = mediaProxy.modelImage;
         imageWallpaper.nextSlide();
-        verify(image != imageWallpaper.modelImage);
+        verify(image != mediaProxy.modelImage);
     }
 }

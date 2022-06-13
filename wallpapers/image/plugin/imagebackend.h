@@ -11,7 +11,6 @@
 #pragma once
 
 #include <QAbstractItemModel>
-#include <QPalette>
 #include <QQmlParserStatus>
 #include <QSize>
 #include <QTimer>
@@ -38,17 +37,12 @@ class ImageBackend : public QObject, public QQmlParserStatus, public SortingMode
     Q_PROPERTY(RenderingMode renderingMode READ renderingMode WRITE setRenderingMode NOTIFY renderingModeChanged)
     Q_PROPERTY(SortingMode::Mode slideshowMode READ slideshowMode WRITE setSlideshowMode NOTIFY slideshowModeChanged)
     Q_PROPERTY(bool slideshowFoldersFirst READ slideshowFoldersFirst WRITE setSlideshowFoldersFirst NOTIFY slideshowFoldersFirstChanged)
+
     /**
-     * Package path from the saved configuration, can be an image file, a url with
-     * "image://" scheme or a folder (KPackage).
+     * Provides source url for \MediaProxy
      */
     Q_PROPERTY(QString image READ image WRITE setImage NOTIFY imageChanged)
-    /**
-     * The real path of the image
-     * e.g. /home/kde/Pictures/image.png
-     *      image://package/get? (KPackage)
-     */
-    Q_PROPERTY(QUrl modelImage READ modelImage NOTIFY modelImageChanged)
+
     Q_PROPERTY(QAbstractItemModel *wallpaperModel READ wallpaperModel CONSTANT)
     Q_PROPERTY(QAbstractItemModel *slideFilterModel READ slideFilterModel CONSTANT)
     Q_PROPERTY(int slideTimer READ slideTimer WRITE setSlideTimer NOTIFY slideTimerChanged)
@@ -68,31 +62,20 @@ public:
     };
     Q_ENUM(RenderingMode)
 
-    enum class Provider {
-        Image,
-        Package,
-    };
-    Q_ENUM(Provider)
-
     explicit ImageBackend(QObject *parent = nullptr);
     ~ImageBackend() override;
 
     QString image() const;
     void setImage(const QString &url);
 
-    QUrl modelImage() const;
-
     // this is for QML use
     Q_INVOKABLE void addSlidePath(const QUrl &url);
     Q_INVOKABLE void removeSlidePath(const QString &path);
     Q_INVOKABLE void openFolder(const QString &path);
-    Q_INVOKABLE void openModelImage() const;
 
     Q_INVOKABLE void showFileDialog();
 
     Q_INVOKABLE QString addUsersWallpaper(const QUrl &url);
-
-    Q_INVOKABLE void useSingleImageDefaults();
 
     RenderingMode renderingMode() const;
     void setRenderingMode(RenderingMode mode);
@@ -130,16 +113,12 @@ public Q_SLOTS:
 Q_SIGNALS:
     void settingsChanged();
     void imageChanged();
-    void modelImageChanged();
     void renderingModeChanged();
     void slideshowModeChanged();
     void slideshowFoldersFirstChanged();
     void targetSizeChanged(const QSize &size);
     void slideTimerChanged();
-    void usersWallpapersChanged();
     void slidePathsChanged();
-    void resizeMethodChanged();
-    void customWallpaperPicked(const QString &path);
     void uncheckedSlidesChanged();
     void loadingChanged();
 
@@ -148,12 +127,6 @@ Q_SIGNALS:
      */
     void wallpaperBrowseCompleted();
 
-    /**
-     * Emitted when system color scheme changes. The frontend is required to
-     * reload the wallpaper even if the image path is not changed.
-     */
-    void colorSchemeChanged();
-
 protected Q_SLOTS:
     void showAddSlidePathsDialog();
     void slotWallpaperBrowseCompleted();
@@ -161,32 +134,17 @@ protected Q_SLOTS:
     void addDirFromSelectionDialog();
     void backgroundsFound();
 
-    /**
-     * Switches to dark-colored wallpaper if available when system color
-     * scheme is dark.
-     *
-     * @since 5.26
-     */
-    void slotSystemPaletteChanged(const QPalette &palette);
-
-protected:
-    void setSingleImage();
-
 private:
     SlideModel *slideshowModel();
-
-    inline bool isDarkColorScheme(const QPalette &palette = {}) const noexcept;
 
     bool m_ready = false;
     int m_delay = 10;
     QUrl m_image;
-    QUrl m_modelImage;
     QSize m_targetSize;
 
     bool m_usedInConfig = true;
 
     RenderingMode m_mode = SingleImage;
-    Provider m_providerType = Provider::Image;
     SortingMode::Mode m_slideshowMode = SortingMode::Random;
     bool m_slideshowFoldersFirst = false;
 
@@ -199,6 +157,4 @@ private:
     SlideModel *m_slideshowModel = nullptr;
     SlideFilterModel *m_slideFilterModel;
     QFileDialog *m_dialog = nullptr;
-
-    bool m_isDarkColorScheme;
 };
