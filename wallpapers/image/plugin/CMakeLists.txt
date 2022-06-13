@@ -16,6 +16,7 @@ set(image_SRCS
     model/imageproxymodel.cpp
     provider/packageimageprovider.cpp
     provider/providertype.h
+    utils/maximizedwindowmonitor.cpp
     utils/mediaproxy.cpp
 )
 
@@ -38,6 +39,7 @@ target_link_libraries(plasma_wallpaper_imageplugin_static
     KF5::KIOGui
     KF5::NewStuff
     KF5::Notifications
+    PW::LibTaskManager
     )
 
 add_library(plasma_wallpaper_imageplugin SHARED imageplugin.cpp)
