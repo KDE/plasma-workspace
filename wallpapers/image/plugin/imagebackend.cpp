@@ -21,11 +21,7 @@
 #include <QScreen>
 #include <QStandardPaths>
 
-#include <KIO/CopyJob>
-#include <KIO/Job>
-#include <KIO/OpenUrlJob>
 #include <KLocalizedString>
-#include <KNotificationJobUiDelegate>
 
 #include "debug.h"
 #include "finder/packagefinder.h"
@@ -451,16 +447,6 @@ void ImageBackend::slotSlideModelDataChanged(const QModelIndex &topLeft, const Q
 
         Q_EMIT uncheckedSlidesChanged();
     }
-}
-
-void ImageBackend::openFolder(const QString &path)
-{
-    // TODO: Move to SlideFilterModel
-    auto *job = new KIO::OpenUrlJob(QUrl::fromLocalFile(path));
-    auto *delegate = new KNotificationJobUiDelegate;
-    delegate->setAutoErrorHandlingEnabled(true);
-    job->setUiDelegate(delegate);
-    job->start();
 }
 
 QStringList ImageBackend::uncheckedSlides() const

@@ -67,7 +67,6 @@ public:
     // this is for QML use
     Q_INVOKABLE void addSlidePath(const QUrl &url);
     Q_INVOKABLE void removeSlidePath(const QString &path);
-    Q_INVOKABLE void openFolder(const QString &path);
 
     Q_INVOKABLE void showFileDialog();
 
