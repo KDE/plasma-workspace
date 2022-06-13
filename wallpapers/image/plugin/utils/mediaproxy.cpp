@@ -223,7 +223,7 @@ Provider::Type MediaProxy::determineType(const QUrl &url)
 QUrl MediaProxy::findPreferredImageInPackage()
 {
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
-    package.setPath(m_source.toLocalFile());
+    package.setPath(formatUrl(m_source).toLocalFile());
 
     QUrl url;
 
@@ -232,7 +232,7 @@ QUrl MediaProxy::findPreferredImageInPackage()
     }
 
     PackageFinder::findPreferredImageInPackage(package, m_targetSize);
-    url = QUrl::fromLocalFile(package.filePath("preferred"));
+    url = package.fileUrl("preferred");
 
     if (isDarkColorScheme()) {
         const QUrl darkUrl = package.fileUrl("preferredDark");
