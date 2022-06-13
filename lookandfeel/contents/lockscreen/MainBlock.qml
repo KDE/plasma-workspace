@@ -17,7 +17,7 @@ import "../components"
 
 SessionManagementScreen {
 
-    property Item mainPasswordBox: passwordBox
+    readonly property alias mainPasswordBox: passwordBox
     property bool lockScreenUiVisible: false
     property alias showPassword: passwordBox.showPassword
 
