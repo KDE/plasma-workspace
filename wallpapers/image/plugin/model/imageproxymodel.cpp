@@ -15,11 +15,13 @@
 #include "../finder/suffixcheck.h"
 #include "imagelistmodel.h"
 #include "packagelistmodel.h"
+#include "videolistmodel.h"
 
 ImageProxyModel::ImageProxyModel(const QStringList &_customPaths, const QSize &targetSize, QObject *parent)
     : QConcatenateTablesProxyModel(parent)
     , m_imageModel(new ImageListModel(targetSize, this))
     , m_packageModel(new PackageListModel(targetSize, this))
+    , m_videoModel(new VideoListModel(targetSize, this))
 {
     connect(this, &ImageProxyModel::rowsInserted, this, &ImageProxyModel::countChanged);
     connect(this, &ImageProxyModel::rowsRemoved, this, &ImageProxyModel::countChanged);
@@ -32,8 +34,10 @@ ImageProxyModel::ImageProxyModel(const QStringList &_customPaths, const QSize &t
      */
     connect(m_imageModel, &QAbstractItemModel::modelAboutToBeReset, this, &ImageProxyModel::slotSourceModelAboutToBeReset);
     connect(m_packageModel, &QAbstractItemModel::modelAboutToBeReset, this, &ImageProxyModel::slotSourceModelAboutToBeReset);
+    connect(m_videoModel, &QAbstractItemModel::modelAboutToBeReset, this, &ImageProxyModel::slotSourceModelAboutToBeReset);
     connect(m_imageModel, &QAbstractItemModel::modelReset, this, &ImageProxyModel::slotSourceModelReset);
     connect(m_packageModel, &QAbstractItemModel::modelReset, this, &ImageProxyModel::slotSourceModelReset);
+    connect(m_videoModel, &QAbstractItemModel::modelReset, this, &ImageProxyModel::slotSourceModelReset);
 
     // Monitor file changes in the custom directories for the slideshow backend.
     QStringList customPaths = _customPaths;
@@ -43,6 +47,7 @@ ImageProxyModel::ImageProxyModel(const QStringList &_customPaths, const QSize &t
         customPaths = cfg.readEntry("usersWallpapers", QStringList{});
         m_imageModel->m_removableWallpapers = customPaths;
         m_packageModel->m_removableWallpapers = customPaths;
+        m_videoModel->m_removableWallpapers = customPaths;
 
         customPaths += QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("wallpapers/"), QStandardPaths::LocateDirectory);
     }
@@ -58,12 +63,14 @@ ImageProxyModel::ImageProxyModel(const QStringList &_customPaths, const QSize &t
 
     connect(m_imageModel, &AbstractImageListModel::loaded, this, &ImageProxyModel::slotHandleLoaded);
     connect(m_packageModel, &AbstractImageListModel::loaded, this, &ImageProxyModel::slotHandleLoaded);
+    connect(m_videoModel, &AbstractImageListModel::loaded, this, &ImageProxyModel::slotHandleLoaded);
 
     m_loaded = 0;
     Q_EMIT loadingChanged();
 
     m_imageModel->load(customPaths);
     m_packageModel->load(customPaths);
+    m_videoModel->load(customPaths);
 }
 
 QHash<int, QByteArray> ImageProxyModel::roleNames() const
@@ -101,7 +108,7 @@ int ImageProxyModel::indexOf(const QString &packagePath) const
 
 bool ImageProxyModel::loading() const
 {
-    return m_loaded != 2;
+    return m_loaded != s_modelNum;
 }
 
 void ImageProxyModel::reload()
@@ -135,7 +142,11 @@ QStringList ImageProxyModel::addBackground(const QString &_path)
 
         results = m_packageModel->addBackground(path);
     } else if (info.isFile()) {
-        results = m_imageModel->addBackground(path);
+        if (isAcceptableVideoSuffix(info.suffix())) {
+            results = m_videoModel->addBackground(path);
+        } else {
+            results = m_imageModel->addBackground(path);
+        }
     }
 
     if (!results.empty()) {
@@ -168,10 +179,17 @@ void ImageProxyModel::removeBackground(const QString &_packagePath)
     }
 
     QStringList results;
+    QFileInfo info(packagePath);
 
     // The file may be already deleted, so isFile/isDir won't work.
-    if (isAcceptableSuffix(QFileInfo(packagePath).suffix())) {
+    if (isAcceptableSuffix(info.suffix())) {
         results = m_imageModel->removeBackground(packagePath);
+
+        if (!results.empty()) {
+            m_dirWatch.removeFile(results.at(0));
+        }
+    } else if (isAcceptableVideoSuffix(info.suffix())) {
+        results = m_videoModel->removeBackground(packagePath);
 
         if (!results.empty()){
             m_dirWatch.removeFile(results.at(0));
@@ -251,13 +269,15 @@ void ImageProxyModel::slotHandleLoaded(AbstractImageListModel *model)
 {
     disconnect(model, &AbstractImageListModel::loaded, this, 0);
 
-    if (++m_loaded == 2) {
+    if (++m_loaded == s_modelNum) {
         // All models are loaded, now add them.
         addSourceModel(m_imageModel);
         addSourceModel(m_packageModel);
+        addSourceModel(m_videoModel);
 
         connect(this, &ImageProxyModel::targetSizeChanged, m_imageModel, &AbstractImageListModel::slotTargetSizeChanged);
         connect(this, &ImageProxyModel::targetSizeChanged, m_packageModel, &AbstractImageListModel::slotTargetSizeChanged);
+        // No need for VideoListModel
 
         Q_EMIT loadingChanged();
     }
