@@ -99,6 +99,7 @@ QQC2.StackView {
 
     property Component staticImageComponent
     property Component animatedImageComponent
+    property Component videoComponent
 
     function createBackgroundComponent() {
         switch (mediaProxy.backgroundType) {
@@ -113,6 +114,12 @@ QQC2.StackView {
                 animatedImageComponent = Qt.createComponent("mediacomponent/AnimatedImageComponent.qml");
             }
             return animatedImageComponent;
+        }
+        case Wallpaper.BackgroundType.Video: {
+            if (!videoComponent) {
+                videoComponent = Qt.createComponent("mediacomponent/VideoComponent.qml");
+            }
+            return videoComponent;
         }
         }
     }
