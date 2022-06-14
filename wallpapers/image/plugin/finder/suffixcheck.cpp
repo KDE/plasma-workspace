@@ -13,6 +13,7 @@
 #include <QSet>
 
 static QStringList s_suffixes;
+static QStringList s_videoSuffixes;
 static std::mutex s_suffixMutex;
 
 QStringList suffixes()
@@ -40,6 +41,18 @@ QStringList suffixes()
     return s_suffixes;
 }
 
+QStringList &videoSuffixes()
+{
+    std::lock_guard lock(s_suffixMutex);
+
+    // No where to get a list of supported video formats
+    if (s_videoSuffixes.empty()) {
+        s_videoSuffixes << QStringLiteral("*.mp4") << QStringLiteral("*.ogv") << QStringLiteral("*.webm");
+    }
+
+    return s_videoSuffixes;
+}
+
 bool isAcceptableSuffix(const QString &suffix)
 {
     // Despite its name, suffixes() returns a list of glob patterns.
@@ -47,4 +60,11 @@ bool isAcceptableSuffix(const QString &suffix)
     const QStringList &globPatterns = suffixes();
 
     return globPatterns.contains(QLatin1String("*.") + suffix.toLower());
+}
+
+bool isAcceptableVideoSuffix(const QString &suffix)
+{
+    const QStringList &globPatterns = videoSuffixes();
+
+    return globPatterns.contains(QStringLiteral("*.") + suffix.toLower());
 }

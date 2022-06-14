@@ -9,6 +9,7 @@
 #include <QStringList>
 
 QStringList suffixes();
+QStringList &videoSuffixes();
 
 /**
  * Check if the image format is supported by QImageReader.
@@ -16,3 +17,10 @@ QStringList suffixes();
  * @return @p true if the format is supported, @p false otherwise.
  */
 bool isAcceptableSuffix(const QString &suffix);
+
+/**
+ * Checks if the video format is supported.
+ *
+ * @return @p true if the format is supported, @p false otherwise.
+ */
+bool isAcceptableVideoSuffix(const QString &suffix);
