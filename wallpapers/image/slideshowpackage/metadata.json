@@ -174,10 +174,12 @@
         "Website": "https://kde.org/plasma-desktop"
     },
     "Keywords": "",
-    "MimeType": "image/gif;image/jpeg;image/png;image/svg+xml;image/svg+xml-compressed;image/bmp;image/webp;image/tiff;",
+    "MimeType": "image/avif;image/gif;image/heif;image/jpeg;image/png;image/svg+xml;image/svg+xml-compressed;image/bmp;image/webp;image/tiff;",
     "X-KDE-ParentApp": "org.kde.plasmashell",
     "X-Plasma-DropMimeTypes": [
+        "image/avif",
         "image/gif",
+        "image/heif",
         "image/jpeg",
         "image/png",
         "image/svg+xml",
