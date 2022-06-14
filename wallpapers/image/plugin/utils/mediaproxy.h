@@ -16,6 +16,8 @@
 #include "../provider/providertype.h"
 #include "backgroundtype.h"
 
+class QQuickWindow;
+
 /**
  * A proxy class that converts a provider url to a real resource url.
  */
@@ -44,8 +46,24 @@ class MediaProxy : public QObject, public QQmlParserStatus, public Provider
 
     Q_PROPERTY(QSize targetSize READ targetSize WRITE setTargetSize NOTIFY targetSizeChanged)
 
+    /**
+     * @return @c true if the image should span multiple screens, @c false otherwise
+     */
+    Q_PROPERTY(bool spanScreens READ spanScreens WRITE setSpanScreens NOTIFY spanScreensChanged)
+
+    /**
+     * The desktop window where the wallpaper is located
+     */
+    Q_PROPERTY(QQuickWindow *targetWindow READ targetWindow WRITE setTargetWindow NOTIFY targetWindowChanged)
+
+    /**
+     * The actual display area of the wallpaper
+     */
+    Q_PROPERTY(QRect targetRect MEMBER m_targetRect NOTIFY targetRectChanged)
+
 public:
     explicit MediaProxy(QObject *parent = nullptr);
+    ~MediaProxy();
 
     void classBegin() override;
     void componentComplete() override;
@@ -57,6 +75,12 @@ public:
 
     QSize targetSize() const;
     void setTargetSize(const QSize &size);
+
+    bool spanScreens() const;
+    void setSpanScreens(bool span);
+
+    QQuickWindow *targetWindow() const;
+    void setTargetWindow(QQuickWindow *window);
 
     Provider::Type providerType() const;
 
@@ -76,6 +100,13 @@ Q_SIGNALS:
     void backgroundTypeChanged();
 
     void targetSizeChanged(const QSize &size);
+    void spanScreensChanged();
+    void targetWindowChanged();
+
+    /**
+     * Emitted when the actual display area in the wallpaper changes.
+     */
+    void targetRectChanged();
 
     /**
      * Emitted when system color scheme changes. The frontend is required to
@@ -92,6 +123,12 @@ private Q_SLOTS:
      */
     void slotSystemPaletteChanged(const QPalette &palette);
 
+    /**
+     * Updates the geometry of the wallpaper on each screen when the geometry of any
+     * desktop window changes, or when the wallpaper settings changes.
+     */
+    void slotDesktopPoolChanged(QQuickWindow *sourceWindow);
+
 private:
     inline bool isDarkColorScheme(const QPalette &palette = {}) const noexcept;
 
@@ -101,6 +138,9 @@ private:
     QUrl findPreferredImageInPackage();
     void updateModelImage(bool doesBlockSignal = false);
     void updateModelImageWithoutSignal();
+
+    void enableSpanScreen();
+    void disableSpanScreen();
 
     bool m_ready = false;
 
@@ -113,6 +153,11 @@ private:
     QSize m_targetSize;
 
     bool m_isDarkColorScheme;
+
+    // Used by WideImageProvider
+    QQuickWindow *m_targetWindow = nullptr;
+    bool m_spanScreens = false;
+    QRect m_targetRect;
 };
 
 #endif // MEDIAPROXY_H

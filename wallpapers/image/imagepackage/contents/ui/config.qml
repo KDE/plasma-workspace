@@ -58,6 +58,7 @@ ColumnLayout {
             // Lock screen configuration case
             return Qt.size(Screen.width * Screen.devicePixelRatio, Screen.height * Screen.devicePixelRatio)
         }
+
         onSlidePathsChanged: cfg_SlidePaths = slidePaths
         onUncheckedSlidesChanged: cfg_UncheckedSlides = uncheckedSlides
         onSlideshowModeChanged: cfg_SlideshowMode = slideshowMode
@@ -112,7 +113,11 @@ ColumnLayout {
                         {
                             'label': i18nd("plasma_wallpaper_org.kde.image", "Tiled"),
                             'fillMode': Image.Tile
-                        }
+                        },
+                        {
+                            'label': i18nd("plasma_wallpaper_org.kde.image", "Span Multiple Screens"),
+                            'fillMode': Image.PreserveAspectCrop + 100
+                        },
             ]
 
             textRole: "label"

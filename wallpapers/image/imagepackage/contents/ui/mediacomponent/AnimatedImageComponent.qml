@@ -18,6 +18,7 @@ BaseMediaComponent {
     readonly property alias status: mainImage.status
 
     blurSource: blurLoader.item
+    cropSource: mainImage
 
     KWindowSystem {
         id: kwindowsystem

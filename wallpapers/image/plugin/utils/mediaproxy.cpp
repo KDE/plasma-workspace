@@ -10,6 +10,8 @@
 #include <QGuiApplication>
 #include <QMimeDatabase>
 #include <QMovie>
+#include <QQuickItem>
+#include <QQuickWindow>
 #include <QScreen>
 #include <QUrlQuery>
 
@@ -22,8 +24,16 @@
 
 #include "../finder/packagefinder.h"
 #include "../finder/suffixcheck.h"
+#include "desktoppool.h"
+#include "wideimage.h"
 
 #include "debug.h"
+
+namespace
+{
+static int s_instanceCount = 0;
+static DesktopPool *s_desktopPool = nullptr;
+}
 
 MediaProxy::MediaProxy(QObject *parent)
     : QObject(parent)
@@ -31,6 +41,13 @@ MediaProxy::MediaProxy(QObject *parent)
     , m_isDarkColorScheme(isDarkColorScheme())
 {
     useSingleImageDefaults();
+}
+
+MediaProxy::~MediaProxy()
+{
+    if (m_spanScreens) {
+        disableSpanScreen();
+    }
 }
 
 void MediaProxy::classBegin()
@@ -46,6 +63,8 @@ void MediaProxy::componentComplete()
 
     // Follow system color scheme
     connect(qGuiApp, &QGuiApplication::paletteChanged, this, &MediaProxy::slotSystemPaletteChanged);
+
+    enableSpanScreen();
 
     updateModelImage();
 }
@@ -94,6 +113,55 @@ void MediaProxy::setTargetSize(const QSize &size)
     if (m_providerType == Provider::Type::Package) {
         updateModelImage();
     }
+}
+
+bool MediaProxy::spanScreens() const
+{
+    return m_spanScreens;
+}
+
+void MediaProxy::setSpanScreens(bool span)
+{
+    if (m_spanScreens == span) {
+        return;
+    }
+
+    m_spanScreens = span;
+    Q_EMIT spanScreensChanged();
+
+    if (m_ready && m_targetWindow) {
+        if (m_spanScreens) {
+            enableSpanScreen();
+        } else {
+            disableSpanScreen();
+        }
+
+        updateModelImage();
+    }
+}
+
+QQuickWindow *MediaProxy::targetWindow() const
+{
+    return m_targetWindow;
+}
+
+void MediaProxy::setTargetWindow(QQuickWindow *window)
+{
+    if (m_targetWindow && s_desktopPool) {
+        s_desktopPool->unsetDesktop(m_targetWindow);
+    }
+
+    if (m_ready && m_spanScreens && s_desktopPool && window && !m_formattedSource.isEmpty()) {
+        s_desktopPool->setDesktop(window, m_formattedSource);
+        updateModelImage();
+    }
+
+    if (m_targetWindow == window) {
+        return;
+    }
+
+    m_targetWindow = window;
+    Q_EMIT targetWindowChanged();
 }
 
 Provider::Type MediaProxy::providerType() const
@@ -214,6 +282,19 @@ void MediaProxy::slotSystemPaletteChanged(const QPalette &palette)
     Q_EMIT colorSchemeChanged();
 }
 
+void MediaProxy::slotDesktopPoolChanged(QQuickWindow *sourceWindow)
+{
+    // m_targetWindow is only set after the initialization is finished
+    if (!m_spanScreens || sourceWindow == m_targetWindow || !m_targetWindow) {
+        return;
+    }
+
+    qCDebug(IMAGEWALLPAPER) << "new geometry from" << sourceWindow;
+
+    // Wait for other tasks to complete, like unsetDesktop
+    QTimer::singleShot(0, this, std::bind(&MediaProxy::updateModelImage, this, false));
+}
+
 bool MediaProxy::isDarkColorScheme(const QPalette &palette) const noexcept
 {
     // 192 is from kcm_colors
@@ -319,12 +400,19 @@ void MediaProxy::updateModelImage(bool doesBlockSignal)
 
         composedUrl.setQuery(urlQuery);
         newRealSource = composedUrl;
+
         break;
     }
 
     case Provider::Type::Unknown:
     default:
         return;
+    }
+
+    if (m_spanScreens && m_targetWindow) {
+        s_desktopPool->setGlobalImage(m_targetWindow, m_formattedSource);
+        setProperty("targetRect", WideImage::cropRect(m_targetWindow, s_desktopPool->boundingRect(m_formattedSource)));
+        qCDebug(IMAGEWALLPAPER) << "new targetRect for" << m_targetWindow << property("targetRect").toRect();
     }
 
     if (m_modelImage == newRealSource) {
@@ -340,4 +428,42 @@ void MediaProxy::updateModelImage(bool doesBlockSignal)
 void MediaProxy::updateModelImageWithoutSignal()
 {
     updateModelImage(true);
+}
+
+void MediaProxy::enableSpanScreen()
+{
+    if (!m_spanScreens) {
+        return;
+    }
+
+    if (!s_desktopPool) {
+        s_desktopPool = new DesktopPool;
+    }
+    s_instanceCount++;
+
+    // After DesktopPool is created, call setTargetWindow again to register the target window.
+    setTargetWindow(m_targetWindow);
+
+    // Connect to signals after setDesktop to avoid calling updateModelImage twice
+    connect(s_desktopPool, &DesktopPool::desktopWindowChanged, this, &MediaProxy::slotDesktopPoolChanged);
+    connect(s_desktopPool, &DesktopPool::geometryChanged, this, std::bind(&MediaProxy::slotDesktopPoolChanged, this, nullptr));
+}
+
+void MediaProxy::disableSpanScreen()
+{
+    // Don't check m_spanScreens as it may be set to false in setSpanScreens
+    if (!s_desktopPool) {
+        return;
+    }
+
+    s_desktopPool->unsetDesktop(m_targetWindow);
+    disconnect(s_desktopPool, nullptr, this, nullptr);
+
+    // Will trigger targetRectChanged() and call loadImage in QML
+    setProperty("targetRect", QRect());
+
+    if (!--s_instanceCount) {
+        delete s_desktopPool;
+        s_desktopPool = nullptr;
+    }
 }

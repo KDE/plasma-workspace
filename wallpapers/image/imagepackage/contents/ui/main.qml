@@ -16,10 +16,18 @@ QQC2.StackView {
     id: root
 
     readonly property url modelImage: mediaProxy.modelImage
-    readonly property int fillMode: wallpaper.configuration.FillMode
+    readonly property int fillMode: {
+        const mode = wallpaper.configuration.FillMode;
+        if (mode == Image.PreserveAspectCrop + 100) {
+            return Image.PreserveAspectCrop;
+        }
+        return mode;
+    }
     readonly property string configColor: wallpaper.configuration.Color
     readonly property bool blur: wallpaper.configuration.Blur
     readonly property size sourceSize: Qt.size(root.width * Screen.devicePixelRatio, root.height * Screen.devicePixelRatio)
+
+    readonly property var desktopWindow: Window.window
 
     // Ppublic API functions accessible from C++:
 
@@ -89,7 +97,13 @@ QQC2.StackView {
         }
         targetSize: root.sourceSize
 
+        spanScreens: wallpaper.configuration.FillMode == Image.PreserveAspectCrop + 100
+        targetWindow: root.desktopWindow
+
         onColorSchemeChanged: loadImageImmediately();
+        onTargetRectChanged: {
+            Qt.callLater(loadImage);
+        }
     }
 
     onFillModeChanged: Qt.callLater(loadImage);
@@ -141,6 +155,8 @@ QQC2.StackView {
             "opacity": _skipAnimation ? 1: 0,
             "width": root.width,
             "height": root.height,
+            "spanScreens": mediaProxy.spanScreens,
+            "targetRect": mediaProxy.targetRect,
         });
 
         function replaceWhenLoaded() {
