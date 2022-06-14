@@ -16,6 +16,8 @@
 
 class KFileItem;
 
+struct VideoMetadata;
+
 /**
  * Base class for image list model.
  */
@@ -61,6 +63,12 @@ protected:
      */
     void asyncGetPreview(const QStringList &paths, const QPersistentModelIndex &index) const;
     void asyncGetImageSize(const QString &path, const QPersistentModelIndex &index) const;
+    void asyncGetVideoMetadata(const QString &path, const QPersistentModelIndex &index) const;
+
+    /**
+     * Clears all cached items.
+     */
+    void clearCache();
 
     bool m_loading = false;
 
@@ -69,6 +77,8 @@ protected:
 
     QCache<QStringList, QPixmap> m_imageCache;
     QCache<QString, QSize> m_imageSizeCache;
+    QCache<QString, QString /* title */> m_backgroundTitleCache;
+    QCache<QString, QString /* author */> m_backgroundAuthorCache;
 
     mutable QHash<QPersistentModelIndex, QStringList> m_previewJobsUrls;
     mutable QHash<QString, QPersistentModelIndex> m_sizeJobsUrls;
@@ -81,6 +91,7 @@ protected:
 
 private Q_SLOTS:
     void slotHandleImageSizeFound(const QString &path, const QSize &size);
+    void slotVideoMetadataFound(const QString &path, const VideoMetadata &metadata);
     void slotHandlePreview(const KFileItem &item, const QPixmap &preview);
     void slotHandlePreviewFailed(const KFileItem &item);
 };
