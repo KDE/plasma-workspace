@@ -17,6 +17,9 @@
 class AbstractImageListModel;
 class ImageListModel;
 class PackageListModel;
+class VideoListModel;
+
+static constexpr int s_modelNum = 3;
 
 /**
  * A proxy model that aggregates data from ImageListModel and PackageListModel.
@@ -69,6 +72,7 @@ private Q_SLOTS:
 private:
     ImageListModel *m_imageModel;
     PackageListModel *m_packageModel;
+    VideoListModel *m_videoModel = nullptr;
 
     KDirWatch m_dirWatch;
 
