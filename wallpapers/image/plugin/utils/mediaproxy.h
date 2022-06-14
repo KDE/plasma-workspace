@@ -91,6 +91,7 @@ private:
     bool m_ready = false;
 
     QUrl m_source;
+    QUrl m_formattedSource;
     QUrl m_modelImage;
     Provider::Type m_providerType = Provider::Type::Unknown;
 

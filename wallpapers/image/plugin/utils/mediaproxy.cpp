@@ -59,6 +59,7 @@ void MediaProxy::setSource(const QString &url)
     }
 
     m_source = QUrl(url);
+    m_formattedSource = formatUrl(m_source);
     Q_EMIT sourceChanged();
 
     m_providerType = determineType(m_source);
@@ -167,6 +168,9 @@ void MediaProxy::useSingleImageDefaults()
         return;
     }
 
+    m_formattedSource = formatUrl(m_source);
+    Q_EMIT sourceChanged();
+
     m_providerType = determineType(m_source);
     updateModelImage();
 }
@@ -223,7 +227,7 @@ Provider::Type MediaProxy::determineType(const QUrl &url)
 QUrl MediaProxy::findPreferredImageInPackage()
 {
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
-    package.setPath(formatUrl(m_source).toLocalFile());
+    package.setPath(m_formattedSource.toLocalFile());
 
     QUrl url;
 
@@ -255,7 +259,7 @@ void MediaProxy::updateModelImage()
 
     switch (m_providerType) {
     case Provider::Type::Image: {
-        newRealSource = formatUrl(m_source);
+        newRealSource = m_formattedSource;
         break;
     }
 
@@ -264,7 +268,7 @@ void MediaProxy::updateModelImage()
         QUrl composedUrl(QStringLiteral("image://package/get"));
 
         QUrlQuery urlQuery(composedUrl);
-        urlQuery.addQueryItem(QStringLiteral("dir"), formatUrl(m_source).toLocalFile());
+        urlQuery.addQueryItem(QStringLiteral("dir"), m_formattedSource.toLocalFile());
         // To make modelImageChaged work
         urlQuery.addQueryItem(QStringLiteral("targetWidth"), QString::number(m_targetSize.width()));
         urlQuery.addQueryItem(QStringLiteral("targetHeight"), QString::number(m_targetSize.height()));
