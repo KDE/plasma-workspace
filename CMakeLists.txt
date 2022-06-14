@@ -36,7 +36,7 @@ include(ECMFindQmlModule)
 include(ECMGenerateExportHeader)
 include(ECMGenerateQmlTypes)
 
-find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Svg Widgets Quick QuickWidgets Concurrent Test Network)
+find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Svg Widgets Quick QuickWidgets Concurrent Test Multimedia Network)
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
                     Auth Plasma Runner Notifications NotifyConfig NewStuff Wallet IdleTime
                     Declarative I18n KCMUtils TextWidgets Crash GlobalAccel DBusAddons Wayland

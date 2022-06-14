@@ -10,6 +10,7 @@ set(image_SRCS
     finder/suffixcheck.cpp
     finder/packagefinder.cpp
     finder/videofinder.cpp
+    finder/videometadatafinder.cpp
     model/abstractimagelistmodel.cpp
     model/imageroles.h
     model/packagelistmodel.cpp
@@ -31,6 +32,7 @@ add_library(plasma_wallpaper_imageplugin_static STATIC ${image_SRCS})
 
 target_link_libraries(plasma_wallpaper_imageplugin_static
     Qt::Core
+    Qt::Multimedia # Video background
     Qt::Quick
     Qt::Qml
     KF5::Plasma
