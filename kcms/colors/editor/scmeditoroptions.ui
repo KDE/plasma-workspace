@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>464</width>
-    <height>382</height>
+    <height>436</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
@@ -26,20 +26,6 @@
     </widget>
    </item>
    <item>
-    <widget class="QCheckBox" name="accentActiveTitlebar">
-     <property name="text">
-      <string>Apply a&amp;ccent color to active window titlebars</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QCheckBox" name="accentInactiveTitlebar">
-     <property name="text">
-      <string>Apply acce&amp;nt color to inactive window titlebars</string>
-     </property>
-    </widget>
-   </item>
-   <item>
     <widget class="QCheckBox" name="shadeSortedColumn">
      <property name="text">
       <string>Shade sorted column &amp;in lists</string>
@@ -50,6 +36,13 @@
     <widget class="QCheckBox" name="tintColors">
      <property name="text">
       <string>Tint all colors with accent color</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="accentTitlebar">
+     <property name="text">
+      <string>Make window titlebars a&amp;ccent-colored</string>
      </property>
     </widget>
    </item>

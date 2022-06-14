@@ -33,8 +33,7 @@ private Q_SLOTS:
     void on_shadeSortedColumn_stateChanged(int state);
     void on_inactiveSelectionEffect_stateChanged(int state);
     void on_useInactiveEffects_stateChanged(int state);
-    void on_accentActiveTitlebar_stateChanged(int state);
-    void on_accentInactiveTitlebar_stateChanged(int state);
+    void on_accentTitlebar_stateChanged(int state);
     void on_tintColors_stateChanged(int state);
     void on_tintStrengthSlider_valueChanged(int value);
 

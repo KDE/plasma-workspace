@@ -31,8 +31,7 @@ void SchemeEditorOptions::loadOptions()
     KConfigGroup generalGroup(m_config, "General");
     shadeSortedColumn->setChecked(generalGroup.readEntry("shadeSortColumn", true));
 
-    accentActiveTitlebar->setChecked(generalGroup.readEntry("accentActiveTitlebar", false));
-    accentInactiveTitlebar->setChecked(generalGroup.readEntry("accentInactiveTitlebar", false));
+    accentTitlebar->setChecked(generalGroup.readEntry("TitlebarIsAccentColored", generalGroup.readEntry("accentActiveTitlebar", false)));
 
     KConfigGroup KDEgroup(m_config, "KDE");
     contrastSlider->setValue(KDEgroup.readEntry("contrast", KColorScheme::contrastF() * 10));
@@ -120,24 +119,15 @@ void SchemeEditorOptions::on_inactiveSelectionEffect_stateChanged(int state)
     Q_EMIT changed(true);
 }
 
-void SchemeEditorOptions::on_accentActiveTitlebar_stateChanged(int state)
+void SchemeEditorOptions::on_accentTitlebar_stateChanged(int state)
 {
     if (m_disableUpdates)
         return;
 
     KConfigGroup group(m_config, "General");
-    group.writeEntry("accentActiveTitlebar", bool(state == Qt::Checked));
-
-    Q_EMIT changed(true);
-}
-
-void SchemeEditorOptions::on_accentInactiveTitlebar_stateChanged(int state)
-{
-    if (m_disableUpdates)
-        return;
-
-    KConfigGroup group(m_config, "General");
-    group.writeEntry("accentInactiveTitlebar", bool(state == Qt::Checked));
+    group.writeEntry("TitlebarIsAccentColored", bool(state == Qt::Checked));
+    group.deleteEntry("accentActiveTitlebar");
+    group.deleteEntry("accentInactiveTitlebar");
 
     Q_EMIT changed(true);
 }
