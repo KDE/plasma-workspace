@@ -117,21 +117,16 @@ ColumnLayout {
                 contentItem: RowLayout {
                     spacing: Kirigami.Units.smallSpacing
 
-                    RowLayout {
-                        spacing: Kirigami.Units.smallSpacing
-                        Layout.fillWidth: true
+                    Kirigami.Icon {
+                        implicitWidth: Kirigami.Units.iconSizes.smallMedium
+                        implicitHeight: Kirigami.Units.iconSizes.smallMedium
+                        source: model.decoration
+                    }
 
-                        Kirigami.Icon {
-                            implicitWidth: Kirigami.Units.iconSizes.smallMedium
-                            implicitHeight: Kirigami.Units.iconSizes.smallMedium
-                            source: model.decoration
-                        }
-                        QQC2.Label {
-                            Layout.fillWidth: true
-                            text: model.display
-                            elide: Text.ElideRight
-                            wrapMode: Text.NoWrap
-                        }
+                    QQC2.Label {
+                        Layout.fillWidth: true
+                        text: model.display
+                        elide: Text.ElideRight
                     }
 
                     QQC2.ComboBox {
