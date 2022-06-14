@@ -10,6 +10,9 @@ import QtMultimedia 5.15
 BaseMediaComponent {
     id: videoComponent
 
+    property bool spanScreens: false
+    property rect targetRect
+
     readonly property int status: {
         if (player.error !== MediaPlayer.NoError) {
             return Image.Error;
@@ -34,6 +37,7 @@ BaseMediaComponent {
     }
 
     blurSource: output
+    cropSource: output
 
     VideoOutput {
         id: output

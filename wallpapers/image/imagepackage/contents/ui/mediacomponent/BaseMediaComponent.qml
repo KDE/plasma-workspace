@@ -28,6 +28,16 @@ Rectangle {
     readonly property bool blurEnabled: backgroundColor.blur
         && (backgroundColor.fillMode === Image.PreserveAspectFit || backgroundColor.fillMode === Image.Pad)
 
+    /**
+     * This defines the background item that will be cropped when
+     * "Span Screens" is enabled.
+     *
+     * @since 5.26
+     */
+    property var cropSource
+    property bool spanScreens: false
+    property rect targetRect
+
     layer.enabled: StackView.status !== StackView.Active && StackView.status !== StackView.Deactivating
 
     Loader {
@@ -39,6 +49,20 @@ Rectangle {
             source: backgroundColor.blurSource
             radius: 32
             samples: 65
+        }
+    }
+
+    // Crop background when span screens is enabled
+    Loader {
+        active: backgroundColor.spanScreens
+        anchors.fill: parent
+        asynchronous: true
+        visible: active
+        z: 0
+        sourceComponent: ShaderEffectSource {
+            hideSource: true
+            sourceItem: backgroundColor.cropSource
+            sourceRect: backgroundColor.targetRect
         }
     }
 }

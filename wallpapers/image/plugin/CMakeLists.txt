@@ -20,8 +20,10 @@ set(image_SRCS
     provider/packageimageprovider.cpp
     provider/providertype.h
     utils/backgroundtype.h
+    utils/desktoppool.cpp
     utils/maximizedwindowmonitor.cpp
     utils/mediaproxy.cpp
+    utils/wideimage.cpp
 )
 
 ecm_qt_declare_logging_category(image_SRCS HEADER debug.h

@@ -14,6 +14,7 @@ BaseMediaComponent {
     readonly property alias status: mainImage.status
 
     blurSource: blurLoader.item
+    cropSource: mainImage
 
     Image {
         id: mainImage
