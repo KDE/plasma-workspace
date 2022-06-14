@@ -2,7 +2,7 @@
 ServiceTypes=KonqPopupMenu/Plugin
 Actions=setAsWallpaper;
 Type=Service
-MimeType=image/jpeg;image/png;image/svg+xml;image/svg+xml-compressed;image/bmp;image/webp;image/tiff;
+MimeType=image/gif;image/jpeg;image/png;image/svg+xml;image/svg+xml-compressed;image/bmp;image/webp;image/tiff;
 X-KDE-Priority=TopLevel
 
 [Desktop Action setAsWallpaper]
