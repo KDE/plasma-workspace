@@ -15,6 +15,7 @@ public:
         Unknown,
         Image,
         AnimatedImage, /**< AnimatedImage doesn't support \QQuickImageProvider , @see https://bugreports.qt.io/browse/QTBUG-30524 */
+        Video,
     };
     Q_ENUM(Type)
 };

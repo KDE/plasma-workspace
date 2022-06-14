@@ -21,6 +21,7 @@
 #include <Plasma/Theme>
 
 #include "../finder/packagefinder.h"
+#include "../finder/suffixcheck.h"
 
 #include "debug.h"
 
@@ -239,6 +240,8 @@ void MediaProxy::determineBackgroundType()
         m_backgroundType = BackgroundType::Type::AnimatedImage;
     } else if (type.startsWith(QLatin1String("image/"))) {
         m_backgroundType = BackgroundType::Type::Image;
+    } else if (type.startsWith(QLatin1String("video/"))) {
+        m_backgroundType = BackgroundType::Type::Video;
     } else {
         m_backgroundType = BackgroundType::Type::Unknown;
     }
@@ -251,7 +254,7 @@ void MediaProxy::determineProviderType()
     QFileInfo info(m_formattedSource.toLocalFile());
 
     if (info.isFile()) {
-        m_providerType = Provider::Type::Image;
+        m_providerType = Provider::Type::Image; // Including videos
     } else if (info.isDir()) {
         m_providerType = Provider::Type::Package;
     } else {
