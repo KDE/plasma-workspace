@@ -137,8 +137,8 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
     // rewritten when a new color scheme is loaded.
     KSharedConfigPtr config = KSharedConfig::openConfig(colorSchemePath, KConfig::SimpleConfig);
 
-    const auto accentActiveTitlebar = config->group("General").readEntry("accentActiveTitlebar", false);
-    const auto accentInactiveTitlebar = config->group("General").readEntry("accentInactiveTitlebar", false);
+    const auto applyAccentToTitlebar =
+        config->group("General").readEntry("TitlebarIsAccentColored", config->group("General").readEntry("accentActiveTitlebar", false));
     const auto tintAccent = config->group("General").hasKey("TintFactor");
     const auto tintFactor = config->group("General").readEntry<qreal>("TintFactor", DefaultTintFactor);
 
@@ -231,17 +231,19 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
         }
 
         // Header accent colouring
-        if (item == QStringLiteral("Colors:Header") && config->hasGroup(QStringLiteral("Colors:Header")) && hasAccent()) {
-            QColor accentbg = accentBackground(getAccent(), config->group("Colors:Window").readEntry<QColor>("BackgroundNormal", QColor()));
-            if (accentActiveTitlebar) {
+        if (item == QStringLiteral("Colors:Header") && hasAccent()) {
+            const auto windowBackground = config->group("Colors:Window").readEntry<QColor>("BackgroundNormal", QColor());
+            const auto accentedWindowBackground = accentBackground(getAccent(), windowBackground);
+            const auto inactiveWindowBackground = tintColor(windowBackground, getAccent(), tintFactor);
+
+            if (applyAccentToTitlebar) {
                 targetGroup = KConfigGroup(configOutput, item);
-                targetGroup.writeEntry("BackgroundNormal", accentbg);
-                targetGroup.writeEntry("ForegroundNormal", accentForeground(accentbg, true));
-            }
-            if (accentInactiveTitlebar) {
+                targetGroup.writeEntry("BackgroundNormal", accentedWindowBackground);
+                targetGroup.writeEntry("ForegroundNormal", accentForeground(accentedWindowBackground, true));
+
                 targetGroup = targetGroup.group("Inactive");
-                targetGroup.writeEntry("BackgroundNormal", accentbg);
-                targetGroup.writeEntry("ForegroundNormal", accentForeground(accentbg, false)); // Dimmed foreground
+                targetGroup.writeEntry("BackgroundNormal", inactiveWindowBackground);
+                targetGroup.writeEntry("ForegroundNormal", accentForeground(inactiveWindowBackground, false));
             }
         }
     }
@@ -271,14 +273,15 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
     }
 
     if (hasAccent()) { // Titlebar accent colouring
-        QColor accentbg = accentBackground(getAccent(), config->group("Colors:Window").readEntry<QColor>("BackgroundNormal", QColor()));
-        if (accentActiveTitlebar) {
-            groupWMOut.writeEntry("activeBackground", accentbg);
-            groupWMOut.writeEntry("activeForeground", accentForeground(accentbg, true));
-        }
-        if (accentInactiveTitlebar) {
-            groupWMOut.writeEntry("inactiveBackground", accentbg);
-            groupWMOut.writeEntry("inactiveForeground", accentForeground(accentbg, false)); // Dimmed foreground
+        const auto windowBackground = config->group("Colors:Window").readEntry<QColor>("BackgroundNormal", QColor());
+        const auto accentedWindowBackground = accentBackground(getAccent(), windowBackground);
+        const auto inactiveWindowBackground = tintColor(windowBackground, getAccent(), tintFactor);
+
+        if (applyAccentToTitlebar) {
+            groupWMOut.writeEntry("activeBackground", accentedWindowBackground);
+            groupWMOut.writeEntry("activeForeground", accentForeground(accentedWindowBackground, true));
+            groupWMOut.writeEntry("inactiveBackground", inactiveWindowBackground);
+            groupWMOut.writeEntry("inactiveForeground", accentForeground(inactiveWindowBackground, false));
         }
     }
 
