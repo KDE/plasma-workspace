@@ -25,6 +25,7 @@
 
 #include "debug.h"
 #include "finder/packagefinder.h"
+#include "finder/suffixcheck.h"
 #include "model/imageproxymodel.h"
 #include "slidefiltermodel.h"
 #include "slidemodel.h"
@@ -341,6 +342,8 @@ void ImageBackend::showFileDialog()
             QMimeType mime(db.mimeTypeForName(QString::fromLatin1(mimeType)));
             imageGlobPatterns << mime.globPatterns();
         }
+
+        imageGlobPatterns << videoSuffixes();
 
         m_dialog = new QFileDialog(nullptr, i18n("Open Image"), path, i18n("Image Files") + " (" + imageGlobPatterns.join(' ') + ')');
         // i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
