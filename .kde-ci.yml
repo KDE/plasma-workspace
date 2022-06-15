@@ -62,3 +62,5 @@ Dependencies:
 - 'on': ['Linux']
   'require':
     'frameworks/networkmanager-qt': '@latest'
+Options:
+  require-passing-tests-on: [ 'Linux', 'FreeBSD']
