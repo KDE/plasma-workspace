@@ -37,6 +37,8 @@ protected Q_SLOTS:
 
 private:
     QStringList m_data;
+
+    friend class VideoListModelTest;
 };
 
 #endif // VIDEOLISTMODEL_H
