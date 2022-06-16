@@ -83,7 +83,7 @@ private Q_SLOTS:
 private:
     inline bool isDarkColorScheme(const QPalette &palette = {}) const noexcept;
 
-    Provider::Type determineType(const QUrl &url);
+    void determineProviderType();
 
     QUrl findPreferredImageInPackage();
     void updateModelImage();

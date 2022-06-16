@@ -62,7 +62,7 @@ void MediaProxy::setSource(const QString &url)
     m_formattedSource = formatUrl(m_source);
     Q_EMIT sourceChanged();
 
-    m_providerType = determineType(m_source);
+    determineProviderType();
     updateModelImage();
 }
 
@@ -171,7 +171,7 @@ void MediaProxy::useSingleImageDefaults()
     m_formattedSource = formatUrl(m_source);
     Q_EMIT sourceChanged();
 
-    m_providerType = determineType(m_source);
+    determineProviderType();
     updateModelImage();
 }
 
@@ -211,17 +211,17 @@ bool MediaProxy::isDarkColorScheme(const QPalette &palette) const noexcept
     return qGray(palette.window().color().rgb()) < 192;
 }
 
-Provider::Type MediaProxy::determineType(const QUrl &url)
+void MediaProxy::determineProviderType()
 {
-    QFileInfo info(formatUrl(url).toLocalFile());
+    QFileInfo info(m_formattedSource.toLocalFile());
 
     if (info.isFile()) {
-        return Provider::Type::Image;
+        m_providerType = Provider::Type::Image;
     } else if (info.isDir()) {
-        return Provider::Type::Package;
+        m_providerType = Provider::Type::Package;
+    } else {
+        m_providerType = Provider::Type::Unknown;
     }
-
-    return Provider::Type::Unknown;
 }
 
 QUrl MediaProxy::findPreferredImageInPackage()
