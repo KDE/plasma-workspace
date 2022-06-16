@@ -80,6 +80,22 @@ Item {
         }
     }
 
+    Kirigami.InlineMessage {
+        anchors {
+            top: wallpapersGrid.top
+            topMargin: wallpapersGrid.topPadding
+            left: wallpapersGrid.left
+            leftMargin: wallpapersGrid.leftPadding
+            right: wallpapersGrid.right
+            rightMargin: wallpapersGrid.rightPadding
+        }
+        text: i18nc("@info:usagetip", "Your system may not have enough memory to use video backgrounds.")
+        type: Kirigami.MessageType.Warning
+        showCloseButton: true
+        visible: imageModel.videoCount > 0
+              && imageWallpaper.memTotal < 4194304 // Warn when total physical memory size < 4G
+    }
+
     KCM.SettingHighlighter {
         target: wallpapersGrid
         highlight: configDialog.currentWallpaper === "org.kde.image" && cfg_Image != cfg_ImageDefault

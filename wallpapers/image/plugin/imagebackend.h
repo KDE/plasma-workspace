@@ -51,6 +51,11 @@ class ImageBackend : public QObject, public QQmlParserStatus, public SortingMode
      */
     Q_PROPERTY(bool loading READ loading NOTIFY loadingChanged)
 
+    /**
+     * Total physical memory size on the system in kB
+     */
+    Q_PROPERTY(int memTotal READ memTotal CONSTANT)
+
 public:
     enum RenderingMode {
         SingleImage,
@@ -100,6 +105,8 @@ public:
     void setUncheckedSlides(const QStringList &uncheckedSlides);
 
     bool loading() const;
+
+    int memTotal() const;
 
 public Q_SLOTS:
     void nextSlide();

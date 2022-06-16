@@ -59,6 +59,15 @@ bool SlideModel::setData(const QModelIndex &index, const QVariant &value, int ro
     return QConcatenateTablesProxyModel::setData(index, value, role);
 }
 
+int SlideModel::videoCount() const
+{
+    const auto models = sourceModels();
+
+    return std::accumulate(models.cbegin(), models.cend(), 0, [](int sum, QAbstractItemModel *m) {
+        return sum + static_cast<const ImageProxyModel *>(m)->videoCount();
+    });
+}
+
 int SlideModel::indexOf(const QString &packagePath) const
 {
     int idx = -1;
@@ -166,6 +175,7 @@ void SlideModel::slotSourceModelLoadingChanged()
     disconnect(m, &ImageProxyModel::loadingChanged, this, nullptr);
 
     connect(this, &SlideModel::targetSizeChanged, m, &ImageProxyModel::targetSizeChanged);
+    connect(m, &ImageProxyModel::videoCountChanged, this, &SlideModel::videoCountChanged);
 
     addSourceModel(m);
 
@@ -173,5 +183,6 @@ void SlideModel::slotSourceModelLoadingChanged()
         m_loading = false;
         Q_EMIT loadingChanged();
         Q_EMIT done();
+        Q_EMIT videoCountChanged();
     }
 }

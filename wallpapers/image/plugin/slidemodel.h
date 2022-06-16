@@ -25,6 +25,7 @@ public:
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override;
 
+    int videoCount() const;
     int indexOf(const QString &packagePath) const;
 
     /**
@@ -42,6 +43,8 @@ Q_SIGNALS:
     void done();
     void targetSizeChanged(const QSize &size);
     void loadingChanged();
+
+    void videoCountChanged();
 
 private Q_SLOTS:
     void slotSourceModelLoadingChanged();
