@@ -20,6 +20,11 @@ class SlideFilterModel : public QSortFilterProxyModel
 
     Q_PROPERTY(bool usedInConfig MEMBER m_usedInConfig NOTIFY usedInConfigChanged);
 
+    /**
+     * The number of video backgrounds in the current selections
+     */
+    Q_PROPERTY(int videoCount READ videoCount NOTIFY videoCountChanged)
+
 public:
     explicit SlideFilterModel(QObject *parent);
 
@@ -32,11 +37,14 @@ public:
     void invalidate();
     void invalidateFilter();
 
+    int videoCount() const;
+
     Q_INVOKABLE int indexOf(const QString &path);
     Q_INVOKABLE void openContainingFolder(int rowIndex);
 
 Q_SIGNALS:
     void usedInConfigChanged();
+    void videoCountChanged();
 
 private:
     void buildRandomOrder();

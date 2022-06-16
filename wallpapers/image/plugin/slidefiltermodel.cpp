@@ -74,6 +74,7 @@ void SlideFilterModel::setSourceModel(QAbstractItemModel *sourceModel)
                                                }),
                                 m_randomOrder.end());
         });
+        connect(static_cast<SlideModel *>(sourceModel), &SlideModel::videoCountChanged, this, &SlideFilterModel::videoCountChanged);
     }
 }
 
@@ -166,6 +167,13 @@ void SlideFilterModel::invalidate()
 void SlideFilterModel::invalidateFilter()
 {
     QSortFilterProxyModel::invalidateFilter();
+}
+
+int SlideFilterModel::videoCount() const
+{
+    auto model = static_cast<SlideModel *>(sourceModel());
+
+    return model ? model->videoCount() : 0;
 }
 
 int SlideFilterModel::indexOf(const QString &path)

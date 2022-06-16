@@ -27,6 +27,10 @@ ImageProxyModel::ImageProxyModel(const QStringList &_customPaths, const QSize &t
     connect(this, &ImageProxyModel::rowsRemoved, this, &ImageProxyModel::countChanged);
     connect(this, &ImageProxyModel::modelReset, this, &ImageProxyModel::countChanged);
 
+    connect(m_videoModel, &QAbstractItemModel::rowsInserted, this, &ImageProxyModel::videoCountChanged);
+    connect(m_videoModel, &QAbstractItemModel::rowsRemoved, this, &ImageProxyModel::videoCountChanged);
+    connect(m_videoModel, &QAbstractItemModel::modelReset, this, &ImageProxyModel::videoCountChanged);
+
     /**
      * Add files to KDirWatch.
      * Files or dirs should be already added to KDirWatch when
@@ -87,6 +91,11 @@ QHash<int, QByteArray> ImageProxyModel::roleNames() const
 int ImageProxyModel::count() const
 {
     return rowCount();
+}
+
+int ImageProxyModel::videoCount() const
+{
+    return m_videoModel->rowCount();
 }
 
 int ImageProxyModel::indexOf(const QString &packagePath) const

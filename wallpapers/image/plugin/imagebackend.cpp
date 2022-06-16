@@ -12,6 +12,17 @@
 
 #include "imagebackend.h"
 
+// Read physical memory size
+#ifdef Q_OS_LINUX
+#include <fstream>
+#endif
+#ifdef Q_OS_FREEBSD
+// clang-format off
+#include <sys/types.h> // sysctl.h uses u_int defined in types.h
+#include <sys/sysctl.h>
+// clang-format on
+#endif
+
 #include <math.h>
 
 #include <QFileDialog>
@@ -481,4 +492,30 @@ bool ImageBackend::loading() const
     }
 
     return false;
+}
+
+int ImageBackend::memTotal() const
+{
+#ifdef Q_OS_LINUX
+    std::ifstream rfile("/proc/meminfo");
+    if (!rfile.is_open()) {
+        return 0;
+    }
+
+    std::string line;
+    while (std::getline(rfile, line)) {
+        if (line.find("MemTotal:") != std::string::npos) {
+            break;
+        }
+    }
+    rfile.close();
+
+    return std::stoi(line.substr(9));
+#endif
+#ifdef Q_OS_FREEBSD
+    size_t var, len = sizeof("hw.physmem");
+    sysctlbyname("hw.physmem", &var, &len, NULL, 0);
+    return var / 1024;
+#endif
+    return 0;
 }

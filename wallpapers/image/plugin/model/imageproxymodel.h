@@ -30,12 +30,18 @@ class ImageProxyModel : public QConcatenateTablesProxyModel, public ImageRoles
 
     Q_PROPERTY(int count READ count NOTIFY countChanged)
 
+    /**
+     * The number of video backgrounds
+     */
+    Q_PROPERTY(int videoCount READ videoCount NOTIFY videoCountChanged)
+
 public:
     explicit ImageProxyModel(const QStringList &customPaths, const QSize &targetSize, QObject *parent);
 
     QHash<int, QByteArray> roleNames() const override;
 
     int count() const;
+    int videoCount() const;
     Q_INVOKABLE int indexOf(const QString &packagePath) const;
 
     bool loading() const;
@@ -51,6 +57,7 @@ public:
 
 Q_SIGNALS:
     void countChanged();
+    void videoCountChanged();
     void loadingChanged();
     void targetSizeChanged(const QSize &size);
 
