@@ -120,7 +120,6 @@ QQC2.StackView {
                 wallpaper.loading = false;
 
                 if (pendingImage.status !== Image.Ready) {
-                    pendingImage.destroy();
                     mediaProxy.useSingleImageDefaults();
                 }
             }
