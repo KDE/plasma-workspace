@@ -6,7 +6,6 @@
 
 #include "imageplugin.h"
 #include <QQmlContext>
-#include <QScreen>
 
 #include <KFileItem>
 
