@@ -36,6 +36,7 @@
         "Description[vi]": "Cấu hình phông chữ trong giao diện người dùng",
         "Description[x-test]": "xxConfigure user interface fontsxx",
         "Description[zh_CN]": "配置用户界面字体",
+        "Description[zh_TW]": "設定使用者介面所使用字型",
         "FormFactors": [
             "tablet",
             "handset",
@@ -84,7 +85,8 @@
         "Name[uk]": "Шрифти",
         "Name[vi]": "Phông chữ",
         "Name[x-test]": "xxFontsxx",
-        "Name[zh_CN]": "字体"
+        "Name[zh_CN]": "字体",
+        "Name[zh_TW]": "字型"
     },
     "X-DocPath": "kcontrol/fonts/index.html",
     "X-KDE-Init-Phase": "0",

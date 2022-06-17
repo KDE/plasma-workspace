@@ -34,6 +34,7 @@
         "Description[vi]": "Dự báo thời tiết của Dịch vụ Thời tiết Đức",
         "Description[x-test]": "xxWeather forecast by German Weather Servicexx",
         "Description[zh_CN]": "德国天气服务提供的天气预报",
+        "Description[zh_TW]": "德國氣象局的氣象預報",
         "Icon": "noneyet",
         "Id": "dwd",
         "Name": "German Weather Service",
@@ -71,7 +72,8 @@
         "Name[uk]": "Німецька служба погоди",
         "Name[vi]": "Dịch vụ Thời tiết Đức",
         "Name[x-test]": "xxGerman Weather Servicexx",
-        "Name[zh_CN]": "德国天气服务"
+        "Name[zh_CN]": "德国天气服务",
+        "Name[zh_TW]": "德國氣象局"
     },
     "X-KDE-ParentApp": "weatherengine"
 }

@@ -113,7 +113,8 @@
         "Name[uk]": "Свята",
         "Name[vi]": "Ngày lễ",
         "Name[x-test]": "xxHolidaysxx",
-        "Name[zh_CN]": "节假日"
+        "Name[zh_CN]": "节假日",
+        "Name[zh_TW]": "假日"
     },
     "X-KDE-PlasmaCalendar-ConfigUi": "holidays/HolidaysConfig.qml"
 }

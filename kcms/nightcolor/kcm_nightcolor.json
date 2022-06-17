@@ -36,6 +36,7 @@
         "Description[vi]": "Điều chỉnh nhiệt độ màu vào buổi tối để giảm căng thẳng cho mắt",
         "Description[x-test]": "xxAdjust color temperature at night to reduce eye strainxx",
         "Description[zh_CN]": "在夜间调整色温以减少视觉疲劳",
+        "Description[zh_TW]": "調整色溫",
         "FormFactors": [
             "tablet",
             "handset",
@@ -81,7 +82,8 @@
         "Name[uk]": "Нічні кольори",
         "Name[vi]": "Màu buổi tối",
         "Name[x-test]": "xxNight Colorxx",
-        "Name[zh_CN]": "夜间颜色"
+        "Name[zh_CN]": "夜间颜色",
+        "Name[zh_TW]": "夜色模式"
     },
     "X-DocPath": "https://userbase.kde.org/TODOX",
     "X-KDE-Keywords": "kwin,window,manager,night,colors,redshift,eyes,night mode,colour,dark mode,dark,dim,sleep,eye strain,red,shift,orange,yellow,warm,screen tint,temperature",

@@ -35,6 +35,7 @@
         "Description[vi]": "Dữ liệu XML từ Bộ Môi trường Canada",
         "Description[x-test]": "xxXML Data from Environment Canadaxx",
         "Description[zh_CN]": "加拿大环境部提供的 XML 数据",
+        "Description[zh_TW]": "來自 Environment Canada 的 XML 資料",
         "Icon": "noneyet",
         "Id": "envcan",
         "Name": "Environment Canada",

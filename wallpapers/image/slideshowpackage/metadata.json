@@ -79,6 +79,7 @@
         "Description[vi]": "Phông nền dạng chuỗi trình chiếu",
         "Description[x-test]": "xxSlideshow wallpaperxx",
         "Description[zh_CN]": "幻灯片壁纸",
+        "Description[zh_TW]": "投影播放桌布",
         "Icon": "folder-image",
         "Id": "org.kde.slideshow",
         "License": "GPLv2+",

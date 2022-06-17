@@ -36,6 +36,7 @@
         "Description[vi]": "Cài đặt, quản lí và xem thử phông chữ",
         "Description[x-test]": "xxInstall, manage and preview fontsxx",
         "Description[zh_CN]": "安装、管理和预览字体",
+        "Description[zh_TW]": "字型安裝、管理及預覽",
         "Icon": "preferences-desktop-font-installer",
         "Name": "Font Management",
         "Name[ar]": "إدارة الخطوط",
@@ -79,7 +80,8 @@
         "Name[uk]": "Керування шрифтами",
         "Name[vi]": "Quản lí phông chữ",
         "Name[x-test]": "xxFont Managementxx",
-        "Name[zh_CN]": "字体管理"
+        "Name[zh_CN]": "字体管理",
+        "Name[zh_TW]": "字型管理"
     },
     "X-DocPath": "kcontrol/fontinst/index.html",
     "X-KDE-Keywords": "font,fonts,installer,truetype,type1,bitmap",

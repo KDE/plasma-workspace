@@ -77,6 +77,7 @@
         "Description[vi]": "Chọn quy hoạch màu",
         "Description[x-test]": "xxChoose color schemexx",
         "Description[zh_CN]": "选择配色方案",
+        "Description[zh_TW]": "選擇配色方案",
         "FormFactors": [
             "tablet",
             "handset",
@@ -129,6 +130,7 @@
         "Name[vi]": "Màu",
         "Name[x-test]": "xxColorsxx",
         "Name[zh_CN]": "颜色",
+        "Name[zh_TW]": "顏色",
         "Website": "https://www.kde.org/plasma-desktop"
     },
     "X-DocPath": "kcontrol/colors/index.html",

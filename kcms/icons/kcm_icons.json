@@ -36,6 +36,7 @@
         "Description[vi]": "Chọn chủ đề của biểu tượng",
         "Description[x-test]": "xxChoose icon themexx",
         "Description[zh_CN]": "选择图标主题",
+        "Description[zh_TW]": "選擇圖示主題",
         "FormFactors": [
             "tablet",
             "handset",

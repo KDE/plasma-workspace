@@ -79,6 +79,7 @@
         "Description[vi]": "Phông nền dạng màu trơn",
         "Description[x-test]": "xxPlain color wallpaperxx",
         "Description[zh_CN]": "纯色壁纸",
+        "Description[zh_TW]": "純色桌布",
         "Icon": "preferences-desktop-color",
         "Id": "org.kde.color",
         "License": "GPLv2+",
@@ -137,7 +138,7 @@
         "Name[vi]": "Màu trơn",
         "Name[x-test]": "xxPlain Colorxx",
         "Name[zh_CN]": "纯色",
-        "Name[zh_TW]": "普通顏色",
+        "Name[zh_TW]": "純色",
         "Website": "https://kde.org/plasma-desktop"
     },
     "Keywords": "",

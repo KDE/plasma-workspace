@@ -81,7 +81,8 @@
         "Name[uk]": "Автозапуск",
         "Name[vi]": "Khởi động tự động",
         "Name[x-test]": "xxAutostartxx",
-        "Name[zh_CN]": "自动启动"
+        "Name[zh_CN]": "自动启动",
+        "Name[zh_TW]": "自動啟動"
     },
     "X-DocPath": "kcontrol/autostart/index.html",
     "X-KDE-Keywords": "Autostart Manager,system startup,plasma start,cron,auto,start,start up,boot,load,session,startup,launch,login",

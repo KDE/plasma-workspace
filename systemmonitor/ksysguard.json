@@ -36,6 +36,7 @@
         "Description[vi]": "Khởi chạy KSysguard khi ấn Ctrl + Escape",
         "Description[x-test]": "xxLaunches KSysguard on Ctrl + Escapexx",
         "Description[zh_CN]": "Ctrl + Esc 启动系统守护程序",
+        "Description[zh_TW]": "使用 Ctrl + Escape 啟動 KSysguard",
         "Icon": "preferences-system-power-management",
         "Name": "KSysguard",
         "Name[ar]": "مرقاب نظام.ك",
