@@ -37,7 +37,10 @@ SessionTrack::~SessionTrack()
     for (auto process : std::as_const(m_processes)) {
         process->terminate();
     }
-    for (auto process : std::as_const(m_processes)) {
+
+    // copy before the loop as we remove finished processes from the vector
+    const QVector<QProcess *> processesCopy = m_processes;
+    for (auto process : processesCopy) {
         if (process->state() == QProcess::Running && !process->waitForFinished(500)) {
             process->kill();
         } else {
