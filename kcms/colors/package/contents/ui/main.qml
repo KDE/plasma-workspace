@@ -283,6 +283,7 @@ KCM.GridViewKCM {
                         onAccepted: {
                             accentBox.restartBindingWithCheckedAsTrue()
                             kcm.accentColor = colorDialog.color
+                            kcm.accentColorFromWallpaper = false
                         }
                     }
 
