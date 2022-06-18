@@ -264,6 +264,7 @@ KCM.GridViewKCM {
                         color: kcm.accentColor
                         onAccepted: {
                             kcm.accentColor = colorDialog.color
+                            kcm.accentColorFromWallpaper = false
                         }
                     }
 
