@@ -264,6 +264,16 @@ if(${ICU_FOUND})
     set(HAVE_ICU TRUE)
 endif()
 
+find_package(KF5KExiv2)
+set_package_properties(KF5KExiv2
+        PROPERTIES URL "https://www.exiv2.org" DESCRIPTION "Image metadata support"
+        TYPE OPTIONAL
+        PURPOSE "Provides metadata for image wallpaper plugin"
+        )
+if(${KF5KExiv2_FOUND})
+    set(HAVE_KF5KExiv2 TRUE)
+endif()
+
 find_package(KIOExtras)
 set_package_properties(KIOExtras PROPERTIES DESCRIPTION "Common KIO slaves for operations."
                                        PURPOSE "Show thumbnails in wallpaper selection."

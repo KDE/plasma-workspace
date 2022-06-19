@@ -12,15 +12,19 @@
 #include <KFileItem>
 #include <KIO/PreviewJob>
 
-#include "../finder/imagesizefinder.h"
+#include "../finder/mediametadatafinder.h"
+#include "config-KF5KExiv2.h"
 
 AbstractImageListModel::AbstractImageListModel(const QSize &targetSize, QObject *parent)
     : QAbstractListModel(parent)
     , m_screenshotSize(targetSize / 8)
     , m_targetSize(targetSize)
 {
-    m_imageCache.setMaxCost(30);
-    m_imageSizeCache.setMaxCost(30);
+    constexpr int maxCacheSize = 30;
+    m_imageCache.setMaxCost(maxCacheSize);
+    m_backgroundTitleCache.setMaxCost(maxCacheSize);
+    m_backgroundAuthorCache.setMaxCost(maxCacheSize);
+    m_imageSizeCache.setMaxCost(maxCacheSize);
 
     connect(this, &QAbstractListModel::rowsInserted, this, &AbstractImageListModel::countChanged);
     connect(this, &QAbstractListModel::rowsRemoved, this, &AbstractImageListModel::countChanged);
@@ -60,15 +64,6 @@ void AbstractImageListModel::slotTargetSizeChanged(const QSize &size)
 {
     m_targetSize = size;
     reload();
-}
-
-void AbstractImageListModel::slotHandleImageSizeFound(const QString &path, const QSize &size)
-{
-    const QPersistentModelIndex index = m_sizeJobsUrls.take(path);
-
-    if (m_imageSizeCache.insert(path, new QSize(size), 1)) {
-        Q_EMIT dataChanged(index, index, {ResolutionRole});
-    }
 }
 
 void AbstractImageListModel::slotHandlePreview(const KFileItem &item, const QPixmap &preview)
@@ -164,15 +159,55 @@ void AbstractImageListModel::asyncGetPreview(const QStringList &paths, const QPe
     m_previewJobsUrls.insert(index, paths);
 }
 
-void AbstractImageListModel::asyncGetImageSize(const QString &path, const QPersistentModelIndex &index) const
+void AbstractImageListModel::asyncGetMediaMetadata(const QString &path, const QPersistentModelIndex &index) const
 {
     if (m_sizeJobsUrls.contains(path) || path.isEmpty()) {
         return;
     }
 
-    ImageSizeFinder *finder = new ImageSizeFinder(path);
-    connect(finder, &ImageSizeFinder::sizeFound, this, &AbstractImageListModel::slotHandleImageSizeFound);
+    MediaMetadataFinder *finder = new MediaMetadataFinder(path);
+    connect(finder, &MediaMetadataFinder::metadataFound, this, &AbstractImageListModel::slotMediaMetadataFound);
     QThreadPool::globalInstance()->start(finder);
 
     m_sizeJobsUrls.insert(path, index);
+}
+
+void AbstractImageListModel::clearCache()
+{
+    m_imageCache.clear();
+    m_backgroundTitleCache.clear();
+    m_backgroundAuthorCache.clear();
+    m_imageSizeCache.clear();
+}
+
+void AbstractImageListModel::slotMediaMetadataFound(const QString &path, const MediaMetadata &metadata)
+{
+    const QPersistentModelIndex index = m_sizeJobsUrls.take(path);
+
+#if HAVE_KF5KExiv2
+    if (!metadata.title.isEmpty()) {
+        auto title = new QString(metadata.title);
+        if (m_backgroundTitleCache.insert(path, title, 1)) {
+            Q_EMIT dataChanged(index, index, {Qt::DisplayRole});
+        } else {
+            delete title;
+        }
+    }
+
+    if (!metadata.author.isEmpty()) {
+        auto author = new QString(metadata.author);
+        if (m_backgroundAuthorCache.insert(path, author, 1)) {
+            Q_EMIT dataChanged(index, index, {AuthorRole});
+        } else {
+            delete author;
+        }
+    }
+#endif
+
+    auto resolution = new QSize(metadata.resolution);
+    if (m_imageSizeCache.insert(path, resolution, 1)) {
+        Q_EMIT dataChanged(index, index, {ResolutionRole});
+    } else {
+        delete resolution;
+    }
 }

@@ -3,12 +3,12 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR}/.. ${CMAKE_CURRENT_SOURCE_DIR}/.
 
 find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS QuickTest)
 
-# ImageSizeFinder test
-ecm_add_test(test_imagesizefinder.cpp TEST_NAME testimagesizefinder
-    LINK_LIBRARIES Qt::Test plasma_wallpaper_imageplugin_static)
-
 # ImageFinder test
 ecm_add_test(test_imagefinder.cpp TEST_NAME testimagefinder
+    LINK_LIBRARIES Qt::Test plasma_wallpaper_imageplugin_static)
+
+# MediaMetadataFinder test
+ecm_add_test(test_mediametadatafinder.cpp TEST_NAME testmediametadatafinder
     LINK_LIBRARIES Qt::Test plasma_wallpaper_imageplugin_static)
 
 # PackageFinder test
