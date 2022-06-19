@@ -74,11 +74,10 @@ target_link_libraries(kcm_lookandfeel_objects
 )
 
 kcoreaddons_add_plugin(kcm_lookandfeel SOURCES kcmmain.cpp INSTALL_NAMESPACE "plasma/kcms/systemsettings")
+kcmutils_generate_desktop_file(kcm_lookandfeel)
 target_link_libraries(kcm_lookandfeel kcm_lookandfeel_objects)
 
-#this desktop file is installed only for retrocompatibility with sycoca
 install(FILES lookandfeelsettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
-install(FILES kcm_lookandfeel.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 install(FILES lookandfeel.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
 
 if(BUILD_TESTING)

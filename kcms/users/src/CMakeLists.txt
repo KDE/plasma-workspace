@@ -64,6 +64,7 @@ ecm_qt_install_logging_categories(
 )
 
 kcoreaddons_add_plugin(kcm_users SOURCES ${kcm_users_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
+kcmutils_generate_desktop_file(kcm_users)
 
 target_link_libraries(kcm_users
     Qt::Quick

@@ -48,7 +48,6 @@ target_link_libraries(plasma-apply-desktoptheme
 )
 
 #this desktop file is installed only for retrocompatibility with sycoca
-install(FILES kcm_desktoptheme.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 install(FILES plasma-themes.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
 install(TARGETS plasma-apply-desktoptheme DESTINATION ${KDE_INSTALL_BINDIR})
 

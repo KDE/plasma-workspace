@@ -36,6 +36,7 @@ ki18n_wrap_ui(kcm_style_PART_SRCS stylepreview.ui)
 kconfig_add_kcfg_files(kcm_style_PART_SRCS stylesettings.kcfgc GENERATE_MOC)
 
 kcoreaddons_add_plugin(kcm_style SOURCES ${kcm_style_PART_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
+kcmutils_generate_desktop_file(kcm_style)
 
 target_compile_definitions(kcm_style PUBLIC CMAKE_INSTALL_FULL_LIBEXECDIR="${CMAKE_INSTALL_FULL_LIBEXECDIR}")
 
@@ -58,7 +59,6 @@ ecm_qt_declare_logging_category(kcm_style
 install(FILES stylesettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 install(FILES style_widgetstyle_default_breeze.upd style_widgetstyle_default_breeze.pl DESTINATION ${KDE_INSTALL_DATADIR}/kconf_update)
 install(FILES gtk_themes.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
-install(FILES kcm_style.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
 kpackage_install_package(package kcm_style kcms)
 

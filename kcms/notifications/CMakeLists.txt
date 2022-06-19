@@ -9,6 +9,7 @@ set(kcm_notifications_SRCS
 )
 
 kcoreaddons_add_plugin(kcm_notifications SOURCES ${kcm_notifications_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
+kcmutils_generate_desktop_file(kcm_notifications)
 target_link_libraries(kcm_notifications
     KF5::KCMUtils
     KF5::CoreAddons
@@ -21,8 +22,6 @@ target_link_libraries(kcm_notifications
     KF5::Service
     PW::LibNotificationManager
 )
-
-install(FILES kcm_notifications.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
 kpackage_install_package(package kcm_notifications kcms)
 

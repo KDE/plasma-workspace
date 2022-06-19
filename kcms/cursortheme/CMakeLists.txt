@@ -28,6 +28,7 @@ kcmutils_generate_module_data(
 
 kconfig_add_kcfg_files(kcm_cursortheme_PART_SRCS cursorthemesettings.kcfgc GENERATE_MOC)
 kcoreaddons_add_plugin(kcm_cursortheme SOURCES ${kcm_cursortheme_PART_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
+kcmutils_generate_desktop_file (kcm_cursortheme)
 
 
 target_link_libraries(kcm_cursortheme
@@ -102,7 +103,6 @@ install(TARGETS plasma-apply-cursortheme  DESTINATION ${KDE_INSTALL_BINDIR})
 
 install(FILES cursorthemesettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 install(FILES delete_cursor_old_default_size.upd delete_cursor_old_default_size.pl DESTINATION ${KDE_INSTALL_DATADIR}/kconf_update)
-install( FILES kcm_cursortheme.desktop  DESTINATION  ${KDE_INSTALL_APPDIR} )
 install( FILES xcursor/xcursor.knsrc DESTINATION  ${KDE_INSTALL_KNSRCDIR} )
 
 kpackage_install_package(package kcm_cursortheme kcms)

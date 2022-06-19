@@ -54,7 +54,7 @@
 #define CFG_GROUP_SPLITTER_SIZES "GroupSplitterSizes"
 #define CFG_FONT_SIZE "FontSize"
 
-K_PLUGIN_CLASS_WITH_JSON(KFI::CKCmFontInst, "fontinst.json")
+K_PLUGIN_CLASS_WITH_JSON(KFI::CKCmFontInst, "kcm_fontinst.json")
 
 namespace KFI
 {

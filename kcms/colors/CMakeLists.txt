@@ -44,6 +44,7 @@ kcmutils_generate_module_data(
 kconfig_add_kcfg_files(kcm_colors_SRCS colorssettings.kcfgc GENERATE_MOC)
 
 kcoreaddons_add_plugin(kcm_colors SOURCES ${kcm_colors_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
+kcmutils_generate_desktop_file (kcm_colors)
 target_link_libraries(kcm_colors
     Qt::DBus
     KF5::KCMUtils
@@ -121,7 +122,6 @@ else()
 endif()
 
 install(FILES colorssettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
-install(FILES kcm_colors.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 install(TARGETS plasma-apply-colorscheme DESTINATION ${KDE_INSTALL_BINDIR})
 install(FILES colorschemes.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
 

@@ -4,6 +4,7 @@ set(kcm_fontinst_PART_SRCS ${libkfontinstview_SRCS} ${libkfontinstjobrunner_SRCS
 # qt_add_dbus_interface(kcm_fontinst_PART_SRCS ../dbus/org.kde.fontinst.xml FontinstIface)
 
 kcoreaddons_add_plugin(kcm_fontinst SOURCES ${kcm_fontinst_PART_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings_qwidgets")
+kcmutils_generate_desktop_file(kcm_fontinst)
 
 target_link_libraries(kcm_fontinst
     KF5::Archive
@@ -18,7 +19,6 @@ target_link_libraries(kcm_fontinst
     X11::X11
 )
 
-install( FILES kcm_fontinst.desktop  DESTINATION  ${KDE_INSTALL_APPDIR} )
 install( FILES kfontinst.knsrc DESTINATION  ${KDE_INSTALL_KNSRCDIR} )
 
 ecm_install_icons( ICONS

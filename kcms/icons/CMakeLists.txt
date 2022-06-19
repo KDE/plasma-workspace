@@ -14,6 +14,7 @@ kcmutils_generate_module_data(
 
 kconfig_add_kcfg_files(kcm_icons_PART_SRCS iconssettingsbase.kcfgc GENERATE_MOC)
 kcoreaddons_add_plugin(kcm_icons SOURCES ${kcm_icons_PART_SRCS} INSTALL_NAMESPACE "plasma/kcms/systemsettings")
+kcmutils_generate_desktop_file (kcm_icons    )
 
 target_link_libraries(kcm_icons
     Qt::Widgets
@@ -43,7 +44,6 @@ ecm_qt_declare_logging_category(plasma-changeicons
 
 install(FILES iconssettingsbase.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 install(FILES icons_remove_effects.upd DESTINATION ${KDE_INSTALL_DATADIR}/kconf_update)
-install(FILES kcm_icons.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/icons.knsrc ${CMAKE_BINARY_DIR}/icons.knsrc)
 install( FILES ${CMAKE_BINARY_DIR}/icons.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR} )
