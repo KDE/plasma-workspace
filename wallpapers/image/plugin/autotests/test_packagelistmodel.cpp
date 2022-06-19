@@ -9,6 +9,7 @@
 #include <KIO/CopyJob>
 #include <KIO/PreviewJob>
 
+#include "../finder/mediametadatafinder.h"
 #include "../model/packagelistmodel.h"
 #include "commontestdata.h"
 
@@ -44,6 +45,8 @@ private:
 
 void PackageListModelTest::initTestCase()
 {
+    qRegisterMetaType<MediaMetadata>();
+
     m_dataDir = QDir(QFINDTESTDATA("testdata/default"));
     m_alternateDir = QDir(QFINDTESTDATA("testdata/alternate"));
     QVERIFY(!m_dataDir.isEmpty());

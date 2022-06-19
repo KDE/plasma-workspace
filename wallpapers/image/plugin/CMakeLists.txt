@@ -3,10 +3,10 @@ set(image_SRCS
     slidemodel.cpp
     slidefiltermodel.cpp
     sortingmode.h
-    finder/imagesizefinder.cpp
     finder/distance.cpp
     finder/findsymlinktarget.h
     finder/imagefinder.cpp
+    finder/mediametadatafinder.cpp
     finder/suffixcheck.cpp
     finder/packagefinder.cpp
     model/abstractimagelistmodel.cpp
@@ -42,6 +42,11 @@ target_link_libraries(plasma_wallpaper_imageplugin_static
     KF5::Notifications
     PW::LibTaskManager
     )
+
+if(HAVE_KF5KExiv2)
+    target_link_libraries(plasma_wallpaper_imageplugin_static KF5::KExiv2)
+endif()
+configure_file(config-KF5KExiv2.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-KF5KExiv2.h)
 
 add_library(plasma_wallpaper_imageplugin SHARED imageplugin.cpp)
 target_link_libraries(plasma_wallpaper_imageplugin

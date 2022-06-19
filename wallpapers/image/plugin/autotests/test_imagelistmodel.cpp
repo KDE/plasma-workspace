@@ -8,8 +8,10 @@
 
 #include <KIO/PreviewJob>
 
+#include "../finder/mediametadatafinder.h"
 #include "../model/imagelistmodel.h"
 #include "commontestdata.h"
+#include "config-KF5KExiv2.h"
 
 class ImageListModelTest : public QObject
 {
@@ -42,6 +44,8 @@ private:
 
 void ImageListModelTest::initTestCase()
 {
+    qRegisterMetaType<MediaMetadata>();
+
     m_dataDir = QDir(QFINDTESTDATA("testdata/default"));
     m_alternateDir = QDir(QFINDTESTDATA("testdata/alternate"));
     QVERIFY(!m_dataDir.isEmpty());
@@ -92,6 +96,17 @@ void ImageListModelTest::testImageListModelData()
 
     // Should return the complete base name for wallpaper.jpg.jpg
     QCOMPARE(idx.data(Qt::DisplayRole).toString(), QStringLiteral("wallpaper.jpg"));
+    m_dataSpy->wait();
+#if HAVE_KF5KExiv2
+    m_dataSpy->wait();
+    m_dataSpy->wait();
+    QCOMPARE(m_dataSpy->size(), 3);
+    QCOMPARE(m_dataSpy->takeFirst().at(2).value<QVector<int>>().at(0), Qt::DisplayRole);
+    QCOMPARE(idx.data(Qt::DisplayRole).toString(), QStringLiteral("DocumentName"));
+    QCOMPARE(m_dataSpy->takeFirst().at(2).value<QVector<int>>().at(0), ImageRoles::AuthorRole);
+#endif
+    QCOMPARE(m_dataSpy->size(), 1);
+    QCOMPARE(m_dataSpy->takeFirst().at(2).value<QVector<int>>().at(0), ImageRoles::ResolutionRole);
 
     QCOMPARE(idx.data(ImageRoles::ScreenshotRole), QVariant()); // Not cached yet
     if (!KIO::PreviewJob::availablePlugins().empty()) {
@@ -101,12 +116,12 @@ void ImageListModelTest::testImageListModelData()
         QVERIFY(!idx.data(ImageRoles::ScreenshotRole).value<QPixmap>().isNull());
     }
 
+#if HAVE_KF5KExiv2
+    QCOMPARE(idx.data(ImageRoles::AuthorRole).toString(), QStringLiteral("KDE Community"));
+#else
     QCOMPARE(idx.data(ImageRoles::AuthorRole).toString(), QString());
+#endif
 
-    QCOMPARE(idx.data(ImageRoles::ResolutionRole).toString(), QString());
-    m_dataSpy->wait();
-    QCOMPARE(m_dataSpy->size(), 1);
-    QCOMPARE(m_dataSpy->takeFirst().at(2).value<QVector<int>>().at(0), ImageRoles::ResolutionRole);
     QCOMPARE(idx.data(ImageRoles::ResolutionRole).toString(), QStringLiteral("15x16"));
 
     QCOMPARE(idx.data(ImageRoles::PathRole).toUrl(), QUrl::fromLocalFile(m_wallpaperPaths.at(0)));
@@ -228,6 +243,12 @@ void ImageListModelTest::testImageListModelRemoveLocalBackground()
 
     QPersistentModelIndex idx = m_model->index(0, 0);
     QCOMPARE(idx.data(Qt::DisplayRole).toString(), QStringLiteral("wallpaper.jpg"));
+    m_dataSpy->wait();
+#if HAVE_KF5KExiv2
+    m_dataSpy->wait();
+    m_dataSpy->wait();
+#endif
+    m_dataSpy->clear();
     QCOMPARE(idx.data(ImageRoles::RemovableRole).toBool(), true);
 
     m_model->removeBackground(standardPath + QStringLiteral("wallpaper.jpg.jpg"));

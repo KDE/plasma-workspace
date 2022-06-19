@@ -81,7 +81,7 @@ QVariant PackageListModel::data(const QModelIndex &index, int role) const
             return QStringLiteral("%1x%2").arg(size->width()).arg(size->height());
         }
 
-        asyncGetImageSize(path, QPersistentModelIndex(index));
+        asyncGetMediaMetadata(path, QPersistentModelIndex(index));
 
         return QString();
     }
@@ -233,9 +233,7 @@ void PackageListModel::slotHandlePackageFound(const QList<KPackage::Package> &pa
     beginResetModel();
 
     m_packages = packages;
-
-    m_imageCache.clear();
-    m_imageSizeCache.clear();
+    clearCache();
 
     endResetModel();
 

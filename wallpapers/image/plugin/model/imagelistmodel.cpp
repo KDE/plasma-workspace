@@ -37,8 +37,17 @@ QVariant ImageListModel::data(const QModelIndex &index, int role) const
     const int row = index.row();
 
     switch (role) {
-    case Qt::DisplayRole:
+    case Qt::DisplayRole: {
+        const QString *const title = m_backgroundTitleCache.object(m_data.at(row));
+
+        if (title) {
+            return title->isEmpty() ? QFileInfo(m_data.at(row)).completeBaseName() : *title;
+        }
+
+        asyncGetMediaMetadata(m_data.at(row), QPersistentModelIndex(index));
+
         return QFileInfo(m_data.at(row)).completeBaseName();
+    }
 
     case ScreenshotRole: {
         QPixmap *cachedPreview = m_imageCache.object({m_data.at(row)});
@@ -52,9 +61,17 @@ QVariant ImageListModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    case AuthorRole:
-        // No author for an image file?
+    case AuthorRole: {
+        const QString *const author = m_backgroundAuthorCache.object(m_data.at(row));
+
+        if (author) {
+            return *author;
+        }
+
+        asyncGetMediaMetadata(m_data.at(row), QPersistentModelIndex(index));
+
         return QString();
+    }
 
     case ResolutionRole: {
         QSize *size = m_imageSizeCache.object(m_data.at(row));
@@ -63,7 +80,7 @@ QVariant ImageListModel::data(const QModelIndex &index, int role) const
             return QStringLiteral("%1x%2").arg(size->width()).arg(size->height());
         }
 
-        asyncGetImageSize(m_data.at(row), QPersistentModelIndex(index));
+        asyncGetMediaMetadata(m_data.at(row), QPersistentModelIndex(index));
 
         return QString();
     }
@@ -143,9 +160,7 @@ void ImageListModel::slotHandleImageFound(const QStringList &paths)
     beginResetModel();
 
     m_data = paths;
-
-    m_imageCache.clear();
-    m_imageSizeCache.clear();
+    clearCache();
 
     endResetModel();
 

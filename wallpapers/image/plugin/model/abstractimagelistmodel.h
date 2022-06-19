@@ -16,6 +16,8 @@
 
 class KFileItem;
 
+struct MediaMetadata;
+
 /**
  * Base class for image list model.
  */
@@ -60,7 +62,16 @@ protected:
      * @note @c paths should have no duplicate urls.
      */
     void asyncGetPreview(const QStringList &paths, const QPersistentModelIndex &index) const;
-    void asyncGetImageSize(const QString &path, const QPersistentModelIndex &index) const;
+
+    /**
+     * Asynchronously extracts metadata from an image or a video file.
+     */
+    void asyncGetMediaMetadata(const QString &path, const QPersistentModelIndex &index) const;
+
+    /**
+     * Clears all cached records.
+     */
+    void clearCache();
 
     bool m_loading = false;
 
@@ -68,6 +79,8 @@ protected:
     QSize m_targetSize;
 
     QCache<QStringList, QPixmap> m_imageCache;
+    QCache<QString, QString /* title */> m_backgroundTitleCache;
+    QCache<QString, QString /* author */> m_backgroundAuthorCache;
     QCache<QString, QSize> m_imageSizeCache;
 
     mutable QHash<QPersistentModelIndex, QStringList> m_previewJobsUrls;
@@ -80,7 +93,7 @@ protected:
     friend class ImageProxyModel; // For m_removableWallpapers
 
 private Q_SLOTS:
-    void slotHandleImageSizeFound(const QString &path, const QSize &size);
+    void slotMediaMetadataFound(const QString &path, const MediaMetadata &metadata);
     void slotHandlePreview(const KFileItem &item, const QPixmap &preview);
     void slotHandlePreviewFailed(const KFileItem &item);
 };

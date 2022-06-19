@@ -9,6 +9,7 @@
 
 #include <KFileItem>
 
+#include "finder/mediametadatafinder.h"
 #include "imagebackend.h"
 #include "provider/packageimageprovider.h"
 #include "sortingmode.h"
@@ -29,6 +30,7 @@ void ImagePlugin::registerTypes(const char *uri)
     Q_ASSERT(uri == pluginName);
 
     qRegisterMetaType<KFileItem>(); // For image preview
+    qRegisterMetaType<MediaMetadata>(); // For image preview
 
     qmlRegisterType<ImageBackend>(uri, 2, 0, "ImageBackend");
     qmlRegisterType<MediaProxy>(uri, 2, 0, "MediaProxy");
