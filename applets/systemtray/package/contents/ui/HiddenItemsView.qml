@@ -36,7 +36,7 @@ PlasmaComponents3.ScrollView {
         readonly property int minimumRows: 4
         readonly property int minimumColumns: 4
 
-        cellWidth: Math.floor(popup.Layout.minimumWidth / minimumRows)
+        cellWidth: Math.floor(Math.min(hiddenTasksView.availableWidth, popup.Layout.minimumWidth) / minimumRows)
         cellHeight: Math.floor(popup.Layout.minimumHeight / minimumColumns)
 
         currentIndex: -1
