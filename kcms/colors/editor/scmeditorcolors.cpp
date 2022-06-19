@@ -368,8 +368,7 @@ void SchemeEditorColors::updateColorTable()
         stackColors->setCurrentIndex(0);
         stackPreview->setCurrentIndex(0);
 
-        KColorButton *button;
-        foreach (button, m_commonColorButtons) {
+        for (KColorButton *button : std::as_const(m_commonColorButtons)) {
             button->blockSignals(true);
         }
 
@@ -404,7 +403,7 @@ void SchemeEditorColors::updateColorTable()
         m_commonColorButtons[24]->setColor(m_wmColors.color(WindecoColors::InactiveForeground));
         m_commonColorButtons[25]->setColor(m_wmColors.color(WindecoColors::InactiveBlend));
 
-        foreach (button, m_commonColorButtons) {
+        for (KColorButton *button : std::as_const(m_commonColorButtons)) {
             button->blockSignals(false);
         }
     } else {
