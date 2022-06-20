@@ -24,3 +24,4 @@ target_link_libraries(desktopnotifier KF5::ConfigCore KF5::KIOCore KF5::DBusAddo
 ########### install files ###############
 
 install(FILES directory.desktop directory.trash DESTINATION ${KDE_INSTALL_DATADIR}/kio_desktop)
+install(FILES Home.desktop DESTINATION ${KDE_INSTALL_DATADIR}/kio_desktop/DesktopLinks)

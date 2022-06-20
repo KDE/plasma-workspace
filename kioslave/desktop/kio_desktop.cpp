@@ -77,6 +77,10 @@ void DesktopProtocol::checkLocalInstall()
         // Copy the .directory file
         QFile::copy(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kio_desktop/directory.desktop")), desktopPath + "/.directory");
 
+        // Copy the trash link
+        QFile::copy(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kio_desktop/directory.trash")),
+                    desktopPath + "/trash.desktop");
+ 
         // Copy the desktop links
         QSet<QString> links;
         const auto dirs =
