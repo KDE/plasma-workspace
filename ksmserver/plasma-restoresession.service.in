@@ -1,5 +1,5 @@
 [Unit]
-Description=KDE Session Management Server
+Description=KDE Session Restoration
 After=graphical-session.target
 RefuseManualStart=yes
 
