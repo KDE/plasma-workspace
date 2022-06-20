@@ -903,7 +903,6 @@ void KSMServer::restoreSession(const QString &sessionName)
 #ifdef KSMSERVER_STARTUP_DEBUG1
     t.start();
 #endif
-    state = RestoringWMSession;
 
     qCDebug(KSMSERVER) << "KSMServer::restoreSession " << sessionName;
     KSharedConfig::Ptr config = KSharedConfig::openConfig();
@@ -913,15 +912,6 @@ void KSMServer::restoreSession(const QString &sessionName)
 
     int count = configSessionGroup.readEntry("count", 0);
     appsToStart = count;
-
-    auto reply = m_kwinInterface->loadSession(sessionName);
-    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, this);
-    connect(watcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
-        watcher->deleteLater();
-        if (state == RestoringWMSession) {
-            state = Idle;
-        }
-    });
 }
 
 /*!
@@ -931,7 +921,6 @@ void KSMServer::startDefaultSession()
 {
     if (state != Idle)
         return;
-    state = RestoringWMSession;
 #ifdef KSMSERVER_STARTUP_DEBUG1
     t.start();
 #endif
@@ -949,11 +938,20 @@ void KSMServer::restoreSession()
     setDelayedReply(true);
     m_restoreSessionCall = message();
 
-    restoreLegacySession(KSharedConfig::openConfig().data());
     lastAppStarted = 0;
     lastIdStarted.clear();
     state = KSMServer::Restoring;
-    tryRestoreNext();
+
+    auto reply = m_kwinInterface->loadSession(currentSession());
+    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, this);
+    connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, reply](QDBusPendingCallWatcher *watcher) {
+        watcher->deleteLater();
+        if (reply.isError()) {
+            qWarning() << "Failed to notify kwin of current session " << reply.error().message();
+        }
+        restoreLegacySession(KSharedConfig::openConfig().data());
+        tryRestoreNext();
+    });
 }
 
 void KSMServer::restoreSubSession(const QString &name)
