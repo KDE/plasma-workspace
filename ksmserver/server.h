@@ -189,7 +189,6 @@ private:
 
     enum State {
         Idle,
-        RestoringWMSession,
         Restoring,
         Shutdown,
         Checkpoint,
