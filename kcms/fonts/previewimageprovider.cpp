@@ -4,6 +4,8 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+#include <cmath>
+
 #include <QApplication>
 #include <QPainter>
 #include <QPalette>
@@ -14,36 +16,51 @@
 #include "previewimageprovider.h"
 #include "previewrenderengine.h"
 
-QImage combineImages(const QList<QImage> &images, const QColor &bgnd, int spacing = 0)
+/**
+ * @brief Combines a list of images vertically into one image
+ *
+ * Combines a list of images vertically with the given spacing
+ * between adjacent rows of images.
+ * The width of the combined image is the width of the longest
+ * image in the list, and the height is the sum of the heights
+ * of all images in the list.
+ * The device pixel ratio of the combined image is the same
+ * as that of the first image in the list.
+ *
+ * @param images the list of images to be combined
+ * @param bgnd the background color of the combined image
+ * @param _spacing the spacing between adjacent rows of images
+ * @return the combined image
+ */
+QImage combineImages(const QList<QImage> &images, const QColor &bgnd, int _spacing = 0)
 {
+    if (images.empty()) {
+        return QImage();
+    }
+
     int width = 0;
     int height = 0;
-    QImage::Format format = QImage::Format_Invalid;
-    int devicePixelRatio = 1;
+    const double devicePixelRatio = images.at(0).devicePixelRatio();
+    const int spacing = std::lround(_spacing * devicePixelRatio);
     for (const auto &image : images) {
         if (width < image.width()) {
             width = image.width();
         }
-        height += image.height() + spacing;
-        format = image.format();
-        devicePixelRatio = image.devicePixelRatio();
+        height += image.height();
     }
-    height -= spacing;
+    height += spacing * images.count();
 
     // To correctly align the image pixels on a high dpi display,
     // the image dimensions need to be a multiple of devicePixelRatio
-    width = (width + devicePixelRatio - 1) / devicePixelRatio * devicePixelRatio;
-    height = (height + devicePixelRatio - 1) / devicePixelRatio * devicePixelRatio;
-
-    QImage combinedImage(width, height, format);
+    QImage combinedImage(width * devicePixelRatio, height * devicePixelRatio, images.at(0).format());
     combinedImage.setDevicePixelRatio(devicePixelRatio);
     combinedImage.fill(bgnd);
 
-    int offset = 0;
+    int offset = spacing; // Top margin
     QPainter p(&combinedImage);
     for (const auto &image : images) {
         p.drawImage(0, offset, image);
-        offset += (image.height() + spacing) / devicePixelRatio;
+        offset += image.height() + spacing;
     }
 
     return combinedImage;
