@@ -21,7 +21,6 @@
 PackageListModel::PackageListModel(const QSize &targetSize, QObject *parent)
     : AbstractImageListModel(targetSize, parent)
 {
-    qRegisterMetaType<QList<KPackage::Package>>();
 }
 
 int PackageListModel::rowCount(const QModelIndex &parent) const
@@ -35,7 +34,7 @@ QVariant PackageListModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    const KPackage::Package &b = m_packages.at(index.row());
+    const KPackage::ImagePackage &b = m_packages.at(index.row());
 
     if (!b.isValid()) {
         Q_UNREACHABLE(); // Should be already filtered out by the finder
@@ -46,8 +45,8 @@ QVariant PackageListModel::data(const QModelIndex &index, int role) const
         return PackageFinder::packageDisplayName(b);
 
     case ScreenshotRole: {
-        QStringList paths{b.filePath(QByteArrayLiteral("preferred"))};
-        const QString darkPath = b.filePath(QByteArrayLiteral("preferredDark"));
+        QStringList paths{b.preferred().toLocalFile()};
+        const QString darkPath = b.preferredDark().toLocalFile();
 
         if (!darkPath.isEmpty()) {
             paths.append(darkPath);
@@ -73,7 +72,7 @@ QVariant PackageListModel::data(const QModelIndex &index, int role) const
     }
 
     case ResolutionRole: {
-        const QString path = b.filePath("preferred");
+        const QString path = b.preferred().toLocalFile();
 
         QSize *size = m_imageSizeCache.object(path);
 
@@ -112,7 +111,7 @@ bool PackageListModel::setData(const QModelIndex &index, const QVariant &value, 
     }
 
     if (role == PendingDeletionRole) {
-        const KPackage::Package &b = m_packages.at(index.row());
+        const KPackage::ImagePackage &b = m_packages.at(index.row());
         m_pendingDeletion[b.path()] = value.toBool();
 
         Q_EMIT dataChanged(index, index, {PendingDeletionRole});
@@ -130,7 +129,7 @@ int PackageListModel::indexOf(const QString &_path) const
         path.remove(0, 7);
     }
 
-    const auto it = std::find_if(m_packages.cbegin(), m_packages.cend(), [&path](const KPackage::Package &p) {
+    const auto it = std::find_if(m_packages.cbegin(), m_packages.cend(), [&path](const KPackage::ImagePackage &p) {
         return path == p.path();
     });
 
@@ -180,12 +179,12 @@ QStringList PackageListModel::addBackground(const QString &path)
         return {};
     }
 
-    PackageFinder::findPreferredImageInPackage(package, m_targetSize);
+    const KPackage::ImagePackage imagePackage(package, m_targetSize);
 
     beginInsertRows(QModelIndex(), 0, 0);
 
-    m_removableWallpapers.prepend(package.path());
-    m_packages.prepend(package);
+    m_removableWallpapers.prepend(imagePackage.path());
+    m_packages.prepend(imagePackage);
 
     endInsertRows();
 
@@ -228,7 +227,7 @@ QStringList PackageListModel::removeBackground(const QString &_path)
     return results;
 }
 
-void PackageListModel::slotHandlePackageFound(const QList<KPackage::Package> &packages)
+void PackageListModel::slotHandlePackageFound(const QList<KPackage::ImagePackage> &packages)
 {
     beginResetModel();
 

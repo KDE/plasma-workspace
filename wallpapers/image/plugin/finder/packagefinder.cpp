@@ -9,11 +9,10 @@
 
 #include <QDir>
 
-#include <KLocalizedString>
 #include <KPackage/PackageLoader>
 
-#include "distance.h"
 #include "findsymlinktarget.h"
+#include "imagepackage.h"
 #include "suffixcheck.h"
 
 PackageFinder::PackageFinder(const QStringList &paths, const QSize &targetSize, QObject *parent)
@@ -25,7 +24,7 @@ PackageFinder::PackageFinder(const QStringList &paths, const QSize &targetSize, 
 
 void PackageFinder::run()
 {
-    QList<KPackage::Package> packages;
+    QList<KPackage::ImagePackage> packages;
     QStringList folders;
 
     QDir dir;
@@ -46,21 +45,12 @@ void PackageFinder::run()
         }
 
         package.setPath(folderPath);
+        KPackage::ImagePackage imagePackage(package, m_targetSize);
 
-        if (package.isValid() && package.metadata().isValid()) {
-            // Check if there are any available images.
-            QDir imageDir(package.filePath("images"));
-            imageDir.setFilter(QDir::Files | QDir::Readable);
-            imageDir.setNameFilters(suffixes());
-
-            if (imageDir.entryInfoList().empty()) {
-                // This is an empty package. Skip it.
-                folders << folderPath;
-                return true;
+        if (package.isValid()) {
+            if (imagePackage.isValid()) {
+                packages << imagePackage;
             }
-
-            findPreferredImageInPackage(package, m_targetSize);
-            packages << package;
             folders << folderPath;
 
             return true;
@@ -102,61 +92,6 @@ void PackageFinder::run()
     }
 
     Q_EMIT packageFound(packages);
-}
-
-void PackageFinder::findPreferredImageInPackage(KPackage::Package &package, const QSize &targetSize)
-{
-    if (!package.isValid()) {
-        return;
-    }
-
-    QSize tSize = targetSize;
-
-    if (tSize.isEmpty()) {
-        tSize = QSize(1920, 1080);
-    }
-
-    // find preferred size
-    auto findBestMatch = [&package, &tSize](const QByteArray &folder) {
-        QString preferred;
-        const QStringList images = package.entryList(folder);
-
-        if (images.empty()) {
-            return preferred;
-        }
-
-        float best = std::numeric_limits<float>::max();
-
-        for (const QString &entry : images) {
-            QSize candidate = resSize(QFileInfo(entry).baseName());
-
-            if (candidate.isEmpty()) {
-                continue;
-            }
-
-            const float dist = distance(candidate, tSize);
-
-            if (preferred.isEmpty() || dist < best) {
-                preferred = entry;
-                best = dist;
-            }
-        }
-
-        return preferred;
-    };
-
-    const QString preferred = findBestMatch(QByteArrayLiteral("images"));
-    const QString preferredDark = findBestMatch(QByteArrayLiteral("images_dark"));
-
-    package.removeDefinition("preferred");
-    package.addFileDefinition("preferred", QStringLiteral("images/") + preferred, i18n("Recommended wallpaper file"));
-
-    if (!preferredDark.isEmpty()) {
-        package.removeDefinition("preferredDark");
-        package.addFileDefinition("preferredDark",
-                                  QStringLiteral("images_dark%1").arg(QDir::separator()) + preferredDark,
-                                  QStringLiteral("Recommended dark wallpaper file"));
-    }
 }
 
 QString PackageFinder::packageDisplayName(const KPackage::Package &b)

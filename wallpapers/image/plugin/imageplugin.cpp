@@ -31,6 +31,7 @@ void ImagePlugin::registerTypes(const char *uri)
 
     qRegisterMetaType<KFileItem>(); // For image preview
     qRegisterMetaType<MediaMetadata>(); // For image preview
+    qRegisterMetaType<QList<KPackage::ImagePackage>>();
 
     qmlRegisterType<ImageBackend>(uri, 2, 0, "ImageBackend");
     qmlRegisterType<MediaProxy>(uri, 2, 0, "MediaProxy");

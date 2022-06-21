@@ -6,6 +6,7 @@ set(image_SRCS
     finder/distance.cpp
     finder/findsymlinktarget.h
     finder/imagefinder.cpp
+    finder/imagepackage.cpp
     finder/mediametadatafinder.cpp
     finder/suffixcheck.cpp
     finder/packagefinder.cpp
@@ -17,6 +18,7 @@ set(image_SRCS
     provider/packageimageprovider.cpp
     provider/providertype.h
     utils/backgroundtype.h
+    utils/dynamictype.h
     utils/maximizedwindowmonitor.cpp
     utils/mediaproxy.cpp
 )

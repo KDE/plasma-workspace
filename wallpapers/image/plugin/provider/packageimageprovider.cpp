@@ -75,12 +75,12 @@ void AsyncPackageImageResponseRunnable::run()
         return;
     }
 
-    PackageFinder::findPreferredImageInPackage(package, m_requestedSize);
+    const KPackage::ImagePackage imagePackage(package, m_requestedSize);
 
-    QString path = package.filePath("preferred");
+    QString path = imagePackage.preferred().toLocalFile();
     // 192 is from kcm_colors
     if (qGray(qGuiApp->palette().window().color().rgb()) < 192) {
-        QString darkPath = package.filePath("preferredDark");
+        QString darkPath = imagePackage.preferredDark().toLocalFile();
 
         if (!darkPath.isEmpty()) {
             path = darkPath;

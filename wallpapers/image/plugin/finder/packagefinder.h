@@ -11,8 +11,18 @@
 #include <QObject>
 #include <QRunnable>
 #include <QSize>
+#include <QTime>
 
 #include <KPackage/Package>
+
+#include "utils/dynamictype.h"
+
+class QJsonValue;
+
+namespace KPackage
+{
+class ImagePackage;
+}
 
 /**
  * A runnable that finds KPackage wallpapers.
@@ -26,11 +36,10 @@ public:
 
     void run() override;
 
-    static void findPreferredImageInPackage(KPackage::Package &package, const QSize &targetSize);
     static QString packageDisplayName(const KPackage::Package &b);
 
 Q_SIGNALS:
-    void packageFound(const QList<KPackage::Package> &packages);
+    void packageFound(const QList<KPackage::ImagePackage> &packages);
 
 private:
     QStringList m_paths;

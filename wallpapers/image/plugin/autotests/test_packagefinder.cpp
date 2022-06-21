@@ -11,6 +11,7 @@
 #include <KPackage/PackageLoader>
 
 #include "commontestdata.h"
+#include "finder/imagepackage.h"
 #include "finder/packagefinder.h"
 
 class PackageFinderTest : public QObject
@@ -78,9 +79,10 @@ void PackageFinderTest::testFindPreferredSizeInPackage()
     QVERIFY(package.isValid());
     QVERIFY(package.metadata().isValid());
 
-    PackageFinder::findPreferredImageInPackage(package, resolution);
+    const KPackage::ImagePackage imagePackage(package, resolution);
 
-    QVERIFY(package.filePath("preferred").contains(expected));
+    QVERIFY(imagePackage.filePath("preferred").contains(expected));
+    QVERIFY(imagePackage.preferred().toLocalFile().contains(expected));
 }
 
 void PackageFinderTest::testPackageFinderCanFindPackages()
@@ -94,7 +96,7 @@ void PackageFinderTest::testPackageFinderCanFindPackages()
     spy.wait(10 * 1000);
     QCOMPARE(spy.size(), 1);
 
-    const auto items = spy.takeFirst().at(0).value<QList<KPackage::Package>>();
+    const auto items = spy.takeFirst().at(0).value<QList<KPackage::ImagePackage>>();
     // Total 3 packages in the directory, but one package is broken and should not be added to the list.
     QCOMPARE(items.size(), ImageBackendTestData::defaultPackageCount);
 

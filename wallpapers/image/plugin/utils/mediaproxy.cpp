@@ -166,10 +166,10 @@ void MediaProxy::useSingleImageDefaults()
         }
     }
 
-    PackageFinder::findPreferredImageInPackage(package, m_targetSize);
+    const KPackage::ImagePackage imagePackage(package, m_targetSize);
 
     // Make sure the image can be read, or there will be dead loops.
-    if (m_source.isEmpty() || QImage(package.filePath("preferred")).isNull()) {
+    if (m_source.isEmpty() || QImage(imagePackage.preferred().toLocalFile()).isNull()) {
         return;
     }
 
@@ -270,15 +270,18 @@ QUrl MediaProxy::findPreferredImageInPackage()
         return url;
     }
 
-    PackageFinder::findPreferredImageInPackage(package, m_targetSize);
-    url = package.fileUrl("preferred");
+    const KPackage::ImagePackage imagePackage(package, m_targetSize);
 
     if (isDarkColorScheme()) {
-        const QUrl darkUrl = package.fileUrl("preferredDark");
+        const QUrl darkUrl = imagePackage.preferredDark();
 
         if (!darkUrl.isEmpty()) {
             url = darkUrl;
+        } else {
+            url = imagePackage.preferred();
         }
+    } else {
+        url = imagePackage.preferred();
     }
 
     return url;

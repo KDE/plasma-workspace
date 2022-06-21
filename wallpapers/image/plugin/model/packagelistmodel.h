@@ -10,7 +10,10 @@
 
 #include "abstractimagelistmodel.h"
 
-#include <KPackage/Package>
+namespace KPackage
+{
+class ImagePackage;
+}
 
 /**
  * List KPackage wallpapers, usually in a folder.
@@ -38,10 +41,10 @@ public Q_SLOTS:
     QStringList removeBackground(const QString &path) override;
 
 private Q_SLOTS:
-    void slotHandlePackageFound(const QList<KPackage::Package> &packages);
+    void slotHandlePackageFound(const QList<KPackage::ImagePackage> &packages);
 
 private:
-    QList<KPackage::Package> m_packages;
+    QList<KPackage::ImagePackage> m_packages;
 
     friend class PackageListModelTest;
 };
