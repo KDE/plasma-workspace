@@ -76,7 +76,7 @@ AppsModel::AppsModel(const QList<AbstractEntry *> &entryList, bool deleteEntries
         }
     }
 
-    sortEntries();
+    sortEntries(m_entryList);
     refreshSectionList();
 }
 
@@ -552,7 +552,7 @@ void AppsModel::refreshInternal()
         }
 
         if (m_sorted) {
-            sortEntries();
+            sortEntries(m_entryList);
         }
 
         m_changeTimer = new QTimer(this);
@@ -575,7 +575,7 @@ void AppsModel::refreshInternal()
         }
 
         if (m_sorted) {
-            sortEntries();
+            sortEntries(m_entryList);
         }
 
         if (m_paginate) {
@@ -723,11 +723,11 @@ void AppsModel::processServiceGroup(KServiceGroup::Ptr group)
     }
 }
 
-void AppsModel::sortEntries()
+void AppsModel::sortEntries(QList<AbstractEntry *> &entryList)
 {
     QCollator c;
 
-    std::sort(m_entryList.begin(), m_entryList.end(), [&c](AbstractEntry *a, AbstractEntry *b) {
+    std::sort(entryList.begin(), entryList.end(), [&c](AbstractEntry *a, AbstractEntry *b) {
         if (a->type() != b->type()) {
             return a->type() > b->type();
         } else {

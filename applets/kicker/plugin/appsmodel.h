@@ -113,6 +113,7 @@ protected Q_SLOTS:
 
 protected:
     void refreshInternal();
+    void sortEntries(QList<AbstractEntry *> &entryList);
 
     bool m_complete;
 
@@ -129,7 +130,6 @@ protected:
 
 private:
     void processServiceGroup(KServiceGroup::Ptr group);
-    void sortEntries();
     void refreshSectionList();
 
     bool m_autoPopulate;

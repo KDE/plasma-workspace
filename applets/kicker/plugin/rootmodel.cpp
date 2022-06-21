@@ -314,15 +314,7 @@ void RootModel::refresh()
         }
 
         QList<AbstractEntry *> apps(appsHash.values());
-        QCollator c;
-
-        std::sort(apps.begin(), apps.end(), [&c](AbstractEntry *a, AbstractEntry *b) {
-            if (a->type() != b->type()) {
-                return a->type() > b->type();
-            } else {
-                return c.compare(a->name(), b->name()) < 0;
-            }
-        });
+        sortEntries(apps);
 
         if (!m_showAllAppsCategorized && !m_paginate) { // The app list built above goes into a model.
             allModel = new AppsModel(apps, false, this);
