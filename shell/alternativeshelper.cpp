@@ -9,6 +9,8 @@
 #include <QQmlContext>
 #include <QQmlEngine>
 
+#include <KConfigLoader>
+
 #include <Plasma/Containment>
 #include <Plasma/PluginLoader>
 
@@ -60,21 +62,23 @@ void AlternativesHelper::loadAlternative(const QString &plugin)
 
     const QPoint newPos = appletItem->mapToItem(contItem, QPointF(0, 0)).toPoint();
 
+    Plasma::Applet *newApplet = nullptr;
+    QMetaObject::invokeMethod(contItem,
+                              "createApplet",
+                              Q_RETURN_ARG(Plasma::Applet *, newApplet),
+                              Q_ARG(QString, plugin),
+                              Q_ARG(QVariantList, QVariantList()),
+                              Q_ARG(QPoint, newPos));
+
+    if (newApplet) {
+        newApplet->setGlobalShortcut(shortcut);
+        KConfigGroup newCg(newApplet->config());
+        m_applet->config().copyTo(&newCg);
+        // To let ConfigPropertyMap reload its config
+        Q_EMIT newApplet->configScheme()->configChanged();
+    }
+
     m_applet->destroy();
-
-    connect(m_applet, &QObject::destroyed, contItem, [=]() {
-        Plasma::Applet *newApplet = nullptr;
-        QMetaObject::invokeMethod(contItem,
-                                  "createApplet",
-                                  Q_RETURN_ARG(Plasma::Applet *, newApplet),
-                                  Q_ARG(QString, plugin),
-                                  Q_ARG(QVariantList, QVariantList()),
-                                  Q_ARG(QPoint, newPos));
-
-        if (newApplet) {
-            newApplet->setGlobalShortcut(shortcut);
-        }
-    });
 }
 
 #include "moc_alternativeshelper.cpp"
