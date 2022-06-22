@@ -77,7 +77,6 @@ SimpleKCM {
                 Kirigami.FormData.label: i18n("Plasma:")
                 readonly property var currentMode: modeOptions[value]
                 Layout.fillWidth: true
-                Layout.minimumWidth: Kirigami.Units.gridUnit * 21
                 Layout.maximumWidth: Kirigami.Units.gridUnit * 21
 
                 readonly property var modeOptions: [UserFeedback.Provider.NoTelemetry, UserFeedback.Provider.BasicSystemInformation, UserFeedback.Provider.BasicUsageStatistics,
@@ -114,6 +113,7 @@ SimpleKCM {
             }
 
             Kirigami.Heading {
+                Layout.fillWidth: true
                 Layout.alignment: Qt.AlignHCenter
                 Layout.maximumWidth: Kirigami.Units.gridUnit * 21
                 wrapMode: Text.WordWrap
@@ -124,6 +124,7 @@ SimpleKCM {
                 Kirigami.FormData.isSection: true
             }
             QQC2.Label {
+                Layout.fillWidth: true
                 Layout.alignment: Qt.AlignHCenter
                 Layout.maximumWidth: Kirigami.Units.gridUnit * 21
                 wrapMode: Text.WordWrap
@@ -138,6 +139,7 @@ SimpleKCM {
                     delegate: QQC2.Label {
                         visible: modelData.mode <= statisticsModeSlider.currentMode
                         text: "· " + modelData.description
+                        Layout.fillWidth: true
 
                         MouseArea {
                             anchors.fill: parent
