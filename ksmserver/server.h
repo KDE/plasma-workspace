@@ -98,7 +98,7 @@ public:
     // public API
     void performLogout();
     void restoreSession();
-    void restoreSession(const QString &sessionName);
+    void setRestoreSession(const QString &sessionName);
     void startDefaultSession();
     void shutdown(KWorkSpace::ShutdownConfirm confirm, KWorkSpace::ShutdownType sdtype, KWorkSpace::ShutdownMode sdmode);
 

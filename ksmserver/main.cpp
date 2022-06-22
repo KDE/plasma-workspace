@@ -294,11 +294,11 @@ int main(int argc, char *argv[])
     QString loginMode = config.readEntry("loginMode", "restorePreviousLogout");
 
     if (parser.isSet(restoreOption))
-        server->restoreSession(QStringLiteral(SESSION_BY_USER));
+        server->setRestoreSession(QStringLiteral(SESSION_BY_USER));
     else if (loginMode == QLatin1String("restorePreviousLogout"))
-        server->restoreSession(QStringLiteral(SESSION_PREVIOUS_LOGOUT));
+        server->setRestoreSession(QStringLiteral(SESSION_PREVIOUS_LOGOUT));
     else if (loginMode == QLatin1String("restoreSavedSession"))
-        server->restoreSession(QStringLiteral(SESSION_BY_USER));
+        server->setRestoreSession(QStringLiteral(SESSION_BY_USER));
     else
         server->startDefaultSession();
 

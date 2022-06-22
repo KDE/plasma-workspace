@@ -894,9 +894,7 @@ void KSMServer::setupShortcuts()
     }
 }
 
-/*!  Restores the previous session.
- */
-void KSMServer::restoreSession(const QString &sessionName)
+void KSMServer::setRestoreSession(const QString &sessionName)
 {
     if (state != Idle)
         return;
