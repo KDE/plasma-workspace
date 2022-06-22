@@ -277,12 +277,10 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
         const auto accentedWindowBackground = accentBackground(getAccent(), windowBackground);
         const auto inactiveWindowBackground = tintColor(windowBackground, getAccent(), tintFactor);
 
-        if (applyAccentToTitlebar) {
-            groupWMOut.writeEntry("activeBackground", accentedWindowBackground);
-            groupWMOut.writeEntry("activeForeground", accentForeground(accentedWindowBackground, true));
-            groupWMOut.writeEntry("inactiveBackground", inactiveWindowBackground);
-            groupWMOut.writeEntry("inactiveForeground", accentForeground(inactiveWindowBackground, false));
-        }
+        groupWMOut.writeEntry("activeBackground", applyAccentToTitlebar ? accentedWindowBackground : inactiveWindowBackground);
+        groupWMOut.writeEntry("activeForeground", accentForeground(accentedWindowBackground, true));
+        groupWMOut.writeEntry("inactiveBackground", inactiveWindowBackground);
+        groupWMOut.writeEntry("inactiveForeground", accentForeground(inactiveWindowBackground, false));
     }
 
     const QStringList groupNameList{QStringLiteral("ColorEffects:Inactive"), QStringLiteral("ColorEffects:Disabled")};
