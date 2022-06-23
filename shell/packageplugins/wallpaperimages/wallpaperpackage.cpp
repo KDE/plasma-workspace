@@ -25,7 +25,16 @@ void WallpaperPackage::initPackage(KPackage::Package *package)
                                     i18n("Images for dark color scheme"));
 
     QStringList mimetypes;
-    mimetypes << QStringLiteral("image/svg") << QStringLiteral("image/png") << QStringLiteral("image/jpeg") << QStringLiteral("image/jpg");
+    mimetypes << QStringLiteral("image/avif") //
+              << QStringLiteral("image/bmp") //
+              << QStringLiteral("image/gif") //
+              << QStringLiteral("image/heif") //
+              << QStringLiteral("image/jpeg") //
+              << QStringLiteral("image/jpg") //
+              << QStringLiteral("image/png") //
+              << QStringLiteral("image/svg") //
+              << QStringLiteral("image/tiff") //
+              << QStringLiteral("image/webp");
     package->setMimeTypes("images", mimetypes);
     package->setMimeTypes(QByteArrayLiteral("images_dark"), mimetypes);
 
