@@ -58,7 +58,7 @@ public:
         Embedded = 2,
         Metadata = 4,
     };
-    Q_ENUM(CursorMode);
+    Q_ENUM(CursorMode)
 
     ScreencastingStream *createOutputStream(KWayland::Client::Output *output, CursorMode mode);
     ScreencastingStream *createWindowStream(KWayland::Client::PlasmaWindow *window, CursorMode mode);

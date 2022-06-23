@@ -15,7 +15,7 @@ public:
         Incomplete, // the language is installed but lacks packages to be considered complete
         Installing, // the language is currently installing associated packages to complete itself
     };
-    Q_ENUM(State);
+    Q_ENUM(State)
 
     explicit Language(const QString &code_, QObject *parent = nullptr);
     explicit Language(const QString &code_, State state_, QObject *parent = nullptr);
