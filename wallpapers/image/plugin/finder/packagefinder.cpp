@@ -145,8 +145,6 @@ void PackageFinder::findPreferredImageInPackage(KPackage::Package &package, cons
         return preferred;
     };
 
-    package.addDirectoryDefinition(QByteArrayLiteral("images_dark"), QStringLiteral("images_dark"), QStringLiteral("Dark Images"));
-
     const QString preferred = findBestMatch(QByteArrayLiteral("images"));
     const QString preferredDark = findBestMatch(QByteArrayLiteral("images_dark"));
 
