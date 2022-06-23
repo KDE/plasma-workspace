@@ -8,7 +8,6 @@
 set -e
 
 if [ "$(id -u)" != "0" ]; then
-  echo 'This will mangle your system dbus files! You also need to run this after each install to update your dbus data files and after distribution upgrades. Do not forget!'
   install @CMAKE_BINARY_DIR@/prefix.sh @CMAKE_INSTALL_FULL_LIBEXECDIR@/plasma-dev-prefix.sh
   install @CMAKE_CURRENT_BINARY_DIR@/startplasma-dev.sh @CMAKE_INSTALL_FULL_LIBEXECDIR@
   exec pkexec ./$0
@@ -22,27 +21,20 @@ if [ -d /opt/kde-dbus-scripts/ ]; then
 fi
 
 if [ -x /usr/bin/systemd-sysext ]; then
-  prefix=/var/lib/extensions/plasma-dev
-  install --mode=644 -D /etc/os-release $prefix/usr/lib/extension-release.d/extension-release.plasma-dev
+  mkdir -p @CMAKE_INSTALL_PREFIX@/lib/extension-release.d/
+  install --mode=644 -D /usr/lib/os-release @CMAKE_INSTALL_PREFIX@/lib/extension-release.d/extension-release.plasma-dev
+
+  prefix=/var/lib/extensions/
+  mkdir -p $prefix
+  ln -sf @CMAKE_INSTALL_PREFIX@/../ $prefix/plasma-dev
 
   # Make built-from-source sessions appear in login screen
   install --mode=644 -D @CMAKE_CURRENT_BINARY_DIR@/plasmax11-dev.desktop --target-directory=$prefix/usr/share/xsessions
   install --mode=644 -D @CMAKE_CURRENT_BINARY_DIR@/plasmawayland-dev.desktop --target-directory=$prefix/usr/share/wayland-sessions
 
-  # Copy dbus and polkit to /usr. Both hardcode the system prefix.
-  # - polkit exclusively looks in the system prefix and has no facilities to change that
-  #   https://gitlab.freedesktop.org/polkit/polkit/-/blob/92b910ce2273daf6a76038f6bd764fa6958d4e8e/src/polkitbackend/polkitbackendinteractiveauthority.c#L302
-  # - dbus exclusively looks in the system prefix for **system** services and offers no facilities to change that
-  #   https://gitlab.freedesktop.org/dbus/dbus/-/blob/9722d621497b2e7324e696f4095f56e2a9307a7e/bus/activation-helper.c#L422
-  ln -sf @CMAKE_INSTALL_PREFIX@/@POLICY_FILES_INSTALL_DIR@/share/polkit-1/ $prefix/usr/share/polkit-1
-  ln -sf @KDE_INSTALL_FULL_DBUSDIR@/ $prefix/usr/share/dbus-1
-
   systemd-sysext refresh
   systemctl enable systemd-sysext.service
 else # legacy compat
-  install -D @CMAKE_CURRENT_BINARY_DIR@/plasmax11-dev6.desktop /usr/share/xsessions/
-  install -D @CMAKE_CURRENT_BINARY_DIR@/plasmawayland-dev6.desktop /usr/share/wayland-sessions/
-
-  cp -rv @CMAKE_INSTALL_PREFIX@/@POLICY_FILES_INSTALL_DIR@/share/polkit-1/* /usr/share/polkit-1/
-  cp -rv @KDE_INSTALL_FULL_DBUSDIR@/* /usr/share/dbus-1/
+  echo 'Only systemd based systems are supported. You need systemd-sysext on your system'
 fi
+
