@@ -27,7 +27,7 @@ PlasmaComponents3.Label {
         text = text.replace(/^\s+|\s+$/gm, function(match) {
             // then inside the trimmed characters ("match") we replace each one individually
             match = match.replace(/ /g, "␣") // space
-                         .replace(/\t/g, "↹") // tab
+                         .replace(/\t/g, "⇥") // tab
                          .replace(/\n/g, "↵") // return
             return highlightFontTag.arg(match)
         })
