@@ -20,9 +20,8 @@
 
 #include <Plasma/Theme>
 
-#include "../finder/packagefinder.h"
-
 #include "debug.h"
+#include "dynamicwallpaperupdatetimer.h"
 
 MediaProxy::MediaProxy(QObject *parent)
     : QObject(parent)
@@ -65,10 +64,7 @@ void MediaProxy::setSource(const QString &url)
     m_formattedSource = formatUrl(m_source);
     Q_EMIT sourceChanged();
 
-    determineProviderType();
-    determineBackgroundType();
-
-    updateModelImage();
+    updateWallpaper();
 }
 
 QUrl MediaProxy::modelImage() const
@@ -176,9 +172,7 @@ void MediaProxy::useSingleImageDefaults()
     m_formattedSource = formatUrl(m_source);
     Q_EMIT sourceChanged();
 
-    determineProviderType();
-    determineBackgroundType();
-    updateModelImage();
+    updateWallpaper();
 }
 
 QUrl MediaProxy::formatUrl(const QUrl &url)
@@ -211,6 +205,11 @@ void MediaProxy::slotSystemPaletteChanged(const QPalette &palette)
     }
 
     Q_EMIT colorSchemeChanged();
+}
+
+void MediaProxy::slotUpdateDynamicWallpaper()
+{
+    updateModelImage();
 }
 
 bool MediaProxy::isDarkColorScheme(const QPalette &palette) const noexcept
@@ -259,29 +258,87 @@ void MediaProxy::determineProviderType()
     }
 }
 
-QUrl MediaProxy::findPreferredImageInPackage()
+void MediaProxy::updateDynamicWallpaper()
 {
+    if (m_providerType != Provider::Type::Package) {
+        delete m_dynamicTimer;
+        m_dynamicTimer = nullptr;
+        m_imagePackage.reset(nullptr);
+        return;
+    }
+
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
     package.setPath(m_formattedSource.toLocalFile());
+    m_imagePackage.reset(new KPackage::ImagePackage(package, m_targetSize));
 
+    m_dynamicType = m_imagePackage->dynamicType();
+    if (m_dynamicType == DynamicType::None) {
+        delete m_dynamicTimer;
+        m_dynamicTimer = nullptr;
+        return;
+    }
+
+    if (!m_dynamicTimer) {
+        m_dynamicTimer = new DynamicWallpaperUpdateTimer(m_imagePackage.get(), this);
+        connect(m_dynamicTimer, &QTimer::timeout, this, &MediaProxy::slotUpdateDynamicWallpaper);
+        connect(m_dynamicTimer, &DynamicWallpaperUpdateTimer::clockSkewed, this, &MediaProxy::slotUpdateDynamicWallpaper);
+    }
+
+    m_dynamicTimer->setActive(true);
+}
+
+void MediaProxy::updateWallpaper()
+{
+    determineProviderType();
+    updateDynamicWallpaper();
+    determineBackgroundType();
+    updateModelImage();
+}
+
+QUrl MediaProxy::findPreferredImageInPackage()
+{
     QUrl url;
 
-    if (!package.isValid()) {
+    if (!m_imagePackage || !m_imagePackage->isValid()) {
         return url;
     }
 
-    const KPackage::ImagePackage imagePackage(package, m_targetSize);
+    switch (m_dynamicType) {
+    case DynamicType::None: {
+        if (isDarkColorScheme()) {
+            const QUrl darkUrl = m_imagePackage->preferredDark();
 
-    if (isDarkColorScheme()) {
-        const QUrl darkUrl = imagePackage.preferredDark();
-
-        if (!darkUrl.isEmpty()) {
-            url = darkUrl;
+            if (!darkUrl.isEmpty()) {
+                url = darkUrl;
+            } else {
+                url = m_imagePackage->preferred();
+            }
         } else {
-            url = imagePackage.preferred();
+            url = m_imagePackage->preferred();
         }
-    } else {
-        url = imagePackage.preferred();
+        break;
+    }
+
+    case DynamicType::Solar: {
+        // TODO: not implemented yet
+        if (m_imagePackage->dynamicMetadataSize() > 0) {
+            const auto &item = m_imagePackage->dynamicMetadataAtIndex(0);
+            url = QUrl::fromLocalFile(item.filename);
+        }
+        break;
+    }
+
+    case DynamicType::Timed: {
+        const int index = m_imagePackage->indexAndIntervalAtDateTime(QDateTime::currentDateTime()).first;
+        if (index < 0) {
+            break;
+        }
+
+        const auto &item = m_imagePackage->dynamicMetadataAtIndex(index);
+        url = QUrl::fromLocalFile(item.filename);
+
+        break;
+    }
     }
 
     return url;
@@ -302,7 +359,7 @@ void MediaProxy::updateModelImage(bool doesBlockSignal)
     }
 
     case Provider::Type::Package: {
-        if (m_backgroundType == BackgroundType::Type::AnimatedImage) {
+        if (m_backgroundType == BackgroundType::Type::AnimatedImage && m_dynamicType == DynamicType::None) {
             // Is an animated image
             newRealSource = findPreferredImageInPackage();
             break;
@@ -316,6 +373,12 @@ void MediaProxy::updateModelImage(bool doesBlockSignal)
         // To make modelImageChaged work
         urlQuery.addQueryItem(QStringLiteral("targetWidth"), QString::number(m_targetSize.width()));
         urlQuery.addQueryItem(QStringLiteral("targetHeight"), QString::number(m_targetSize.height()));
+        // To make dynamic wallpaper work
+        if (m_dynamicType != DynamicType::None) {
+            urlQuery.addQueryItem(QStringLiteral("dynamicCurrentIndex"),
+                                  QString::number(m_imagePackage->indexAndIntervalAtDateTime(QDateTime::currentDateTime()).first));
+            urlQuery.addQueryItem(QStringLiteral("dynamicCurrentTime"), QTime::currentTime().toString(QStringLiteral("hms")));
+        }
 
         composedUrl.setQuery(urlQuery);
         newRealSource = composedUrl;

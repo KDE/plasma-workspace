@@ -13,8 +13,11 @@
 #include <QSize>
 #include <QUrl>
 
+#include "../finder/imagepackage.h"
 #include "../provider/providertype.h"
 #include "backgroundtype.h"
+
+class DynamicWallpaperUpdateTimer;
 
 /**
  * A proxy class that converts a provider url to a real resource url.
@@ -92,11 +95,20 @@ private Q_SLOTS:
      */
     void slotSystemPaletteChanged(const QPalette &palette);
 
+    /**
+     * Updates model image for dynamic wallpaper.
+     *
+     * @since 5.26
+     */
+    void slotUpdateDynamicWallpaper();
+
 private:
     inline bool isDarkColorScheme(const QPalette &palette = {}) const noexcept;
 
     void determineBackgroundType();
     void determineProviderType();
+    void updateDynamicWallpaper();
+    void updateWallpaper();
 
     QUrl findPreferredImageInPackage();
     void updateModelImage(bool doesBlockSignal = false);
@@ -113,6 +125,11 @@ private:
     QSize m_targetSize;
 
     bool m_isDarkColorScheme;
+
+    // For dynamic wallpaper
+    std::unique_ptr<KPackage::ImagePackage> m_imagePackage = nullptr;
+    DynamicType::Type m_dynamicType = DynamicType::None;
+    DynamicWallpaperUpdateTimer *m_dynamicTimer = nullptr;
 };
 
 #endif // MEDIAPROXY_H
