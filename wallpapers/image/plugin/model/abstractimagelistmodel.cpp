@@ -42,6 +42,7 @@ QHash<int, QByteArray> AbstractImageListModel::roleNames() const
         {PackageNameRole, "packageName"},
         {RemovableRole, "removable"},
         {PendingDeletionRole, "pendingDeletion"},
+        {DynamicTypeRole, "dynamicType"},
         {ToggleRole, "checked"},
     };
 }

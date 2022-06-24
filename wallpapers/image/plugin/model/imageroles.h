@@ -20,6 +20,7 @@ public:
         PackageNameRole,
         RemovableRole,
         PendingDeletionRole,
+        DynamicTypeRole, /**< Used in dynamic wallpaper package */
         ToggleRole, /**< Used in slideshow model */
     };
     Q_ENUM(RoleType)

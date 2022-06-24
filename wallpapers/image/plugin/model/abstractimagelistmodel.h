@@ -13,6 +13,7 @@
 #include <QSize>
 
 #include "imageroles.h"
+#include "utils/dynamictype.h"
 
 class KFileItem;
 

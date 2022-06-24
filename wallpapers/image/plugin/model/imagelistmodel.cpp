@@ -100,6 +100,9 @@ QVariant ImageListModel::data(const QModelIndex &index, int role) const
 
     case PendingDeletionRole:
         return m_pendingDeletion.value(m_data.at(row), false);
+
+    case DynamicTypeRole:
+        return DynamicType::None;
     }
     Q_UNREACHABLE();
 }

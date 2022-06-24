@@ -16,6 +16,8 @@ import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.kcm 1.1 as KCM
 
+import org.kde.plasma.wallpapers.image 2.0 as PlasmaWallpaper
+
 KCM.GridDelegate {
     id: wallpaperDelegate
 
@@ -114,6 +116,30 @@ KCM.GridDelegate {
             anchors.top: parent.top
             checked: visible ? model.checked : false
             onToggled: model.checked = checked
+        }
+
+        Loader {
+            anchors {
+                left: parent.left
+                leftMargin: Math.round(parent.width * 0.05)
+                bottom: parent.bottom
+                bottomMargin: anchors.leftMargin
+            }
+            width: Kirigami.Units.iconSizes.small
+            height: width
+
+            active: model.dynamicType !== PlasmaWallpaper.DynamicType.None
+            visible: active
+
+            sourceComponent: Kirigami.Icon {
+                color: Kirigami.Theme.backgroundColor
+                source: {
+                    if (model.dynamicType === PlasmaWallpaper.DynamicType.Solar) {
+                        return "kstars_solarsystem";
+                    }
+                    return "clock";
+                }
+            }
         }
 
         Behavior on color {

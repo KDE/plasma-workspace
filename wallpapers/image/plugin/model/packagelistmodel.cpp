@@ -8,6 +8,8 @@
 #include "packagelistmodel.h"
 
 #include <QDir>
+#include <QGuiApplication>
+#include <QPalette>
 #include <QPixmap>
 #include <QStandardPaths>
 #include <QThreadPool>
@@ -17,6 +19,7 @@
 
 #include "../finder/packagefinder.h"
 #include "../finder/suffixcheck.h"
+#include "finder/imagepackage.h"
 
 PackageListModel::PackageListModel(const QSize &targetSize, QObject *parent)
     : AbstractImageListModel(targetSize, parent)
@@ -45,11 +48,27 @@ QVariant PackageListModel::data(const QModelIndex &index, int role) const
         return PackageFinder::packageDisplayName(b);
 
     case ScreenshotRole: {
-        QStringList paths{b.preferred().toLocalFile()};
-        const QString darkPath = b.preferredDark().toLocalFile();
+        QStringList paths;
 
-        if (!darkPath.isEmpty()) {
-            paths.append(darkPath);
+        switch (b.dynamicType()) {
+        case DynamicType::None: {
+            paths << b.preferred().toLocalFile();
+            const QString darkPath = b.preferredDark().toLocalFile();
+            if (!darkPath.isEmpty()) {
+                paths << darkPath;
+            }
+            break;
+        }
+        case DynamicType::Solar:
+        case DynamicType::Timed: {
+            for (std::size_t i = 0; i < b.dynamicMetadataSize(); i++) {
+                const auto &item = b.dynamicMetadataAtIndex(i);
+                if (item.type == DynamicMetadataItem::Static) {
+                    paths << item.filename;
+                }
+            }
+            break;
+        }
         }
 
         QPixmap *cachedPreview = m_imageCache.object(paths);
@@ -85,8 +104,23 @@ QVariant PackageListModel::data(const QModelIndex &index, int role) const
         return QString();
     }
 
-    case PathRole:
-        return QUrl::fromLocalFile(b.filePath("preferred"));
+    case PathRole: {
+        switch (b.dynamicType()) {
+        case DynamicType::None: {
+            if (!b.preferredDark().isEmpty() && qGray(qGuiApp->palette().window().color().rgb()) < 192) {
+                return b.preferredDark();
+            }
+            return b.preferred();
+        }
+        case DynamicType::Solar:
+        case DynamicType::Timed: {
+            const int metadataIndex = b.indexAndIntervalAtDateTime(QDateTime::currentDateTime()).first;
+            const auto &item = b.dynamicMetadataAtIndex(metadataIndex);
+            return QUrl::fromLocalFile(item.filename);
+        }
+        }
+        break;
+    }
 
     case PackageNameRole:
         return b.path();
@@ -100,6 +134,9 @@ QVariant PackageListModel::data(const QModelIndex &index, int role) const
 
     case PendingDeletionRole:
         return m_pendingDeletion.value(b.path(), false);
+
+    case DynamicTypeRole:
+        return b.dynamicType();
     }
     Q_UNREACHABLE();
 }
