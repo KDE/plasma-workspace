@@ -12,6 +12,14 @@ Rectangle {
     color: wallpaper.configuration.Color
 
     Behavior on color {
-        ColorAnimation { duration: PlasmaCore.Units.longDuration }
+        SequentialAnimation {
+            ColorAnimation {
+                duration: PlasmaCore.Units.longDuration
+            }
+
+            ScriptAction {
+                script: wallpaper.repaintNeeded()
+            }
+        }
     }
 }
