@@ -185,7 +185,6 @@ KCM.GridViewKCM {
                     spacing: accentBox.spacing
                     component ColorRadioButton : T.RadioButton {
                         id: control
-                        opacity: accentBox.checked ? 1.0 : 0.5
                         autoExclusive: false
 
                         property color color: "transparent"
@@ -212,12 +211,6 @@ KCM.GridViewKCM {
                                 color: Qt.rgba(0, 0, 0, 0.15)
                                 width: 1
                             }
-                        }
-
-                        MouseArea {
-                            enabled: false
-                            anchors.fill: parent
-                            cursorShape: accentBox.checked ? Qt.PointingHandCursor : Qt.ArrowCursor
                         }
                     }
 
