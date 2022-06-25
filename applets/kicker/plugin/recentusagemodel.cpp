@@ -230,12 +230,16 @@ QVariant RecentUsageModel::appData(const QString &resource, int role) const
 
         const QVariantList &jumpList = Kicker::jumpListActions(service);
         if (!jumpList.isEmpty()) {
-            actionList << jumpList << Kicker::createSeparatorActionItem();
+            actionList << jumpList;
         }
 
         const QVariantList &recentDocuments = Kicker::recentDocumentActions(service);
         if (!recentDocuments.isEmpty()) {
-            actionList << recentDocuments << Kicker::createSeparatorActionItem();
+            actionList << recentDocuments;
+        }
+
+        if (!actionList.isEmpty()) {
+            actionList << Kicker::createSeparatorActionItem();
         }
 
         const QVariantMap &forgetAction = Kicker::createActionItem(i18n("Forget Application"), QStringLiteral("edit-clear-history"), QStringLiteral("forget"));

@@ -122,13 +122,20 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
             }
 
             const QVariantList &addLauncherActions = Kicker::createAddLauncherActionList(appletInterface, service);
+            bool needsSeparator = false;
             if (!systemImmutable && !addLauncherActions.isEmpty()) {
-                actionList << addLauncherActions << Kicker::createSeparatorActionItem();
+                actionList << addLauncherActions;
+                needsSeparator = true;
             }
 
             const QVariantList &recentDocuments = Kicker::recentDocumentActions(service);
             if (!recentDocuments.isEmpty()) {
-                actionList << recentDocuments << Kicker::createSeparatorActionItem();
+                actionList << recentDocuments;
+                needsSeparator = false;
+            }
+
+            if (needsSeparator) {
+                actionList << Kicker::createSeparatorActionItem();
             }
 
             const QVariantList &additionalActions = Kicker::additionalAppActions(service);
