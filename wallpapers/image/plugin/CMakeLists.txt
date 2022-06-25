@@ -20,6 +20,7 @@ set(image_SRCS
     utils/backgroundtype.h
     utils/clockskewnotifier/clockskewnotifierengine.cpp
     utils/dynamictype.h
+    utils/dynamicwallpaperupdatetimer.cpp
     utils/maximizedwindowmonitor.cpp
     utils/mediaproxy.cpp
 )
@@ -38,6 +39,7 @@ endif()
 
 target_link_libraries(plasma_wallpaper_imageplugin_static
     Qt::Core
+    Qt::DBus
     Qt::Quick
     Qt::Qml
     KF5::Plasma
