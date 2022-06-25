@@ -9,6 +9,7 @@
 #include <KIO/CopyJob>
 #include <KIO/PreviewJob>
 
+#include "../finder/imagepackage.h"
 #include "../finder/mediametadatafinder.h"
 #include "../model/packagelistmodel.h"
 #include "commontestdata.h"
@@ -46,6 +47,7 @@ private:
 void PackageListModelTest::initTestCase()
 {
     qRegisterMetaType<MediaMetadata>();
+    qRegisterMetaType<QList<KPackage::ImagePackage>>();
 
     m_dataDir = QDir(QFINDTESTDATA("testdata/default"));
     m_alternateDir = QDir(QFINDTESTDATA("testdata/alternate"));
@@ -54,6 +56,7 @@ void PackageListModelTest::initTestCase()
 
     m_packagePaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName1);
     m_packagePaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName2);
+    m_packagePaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName3);
     m_dummyPackagePath = m_alternateDir.absoluteFilePath(ImageBackendTestData::alternatePackageFolderName1);
 
     m_targetSize = QSize(1920, 1080);
@@ -91,7 +94,7 @@ void PackageListModelTest::cleanupTestCase()
 
 void PackageListModelTest::testPackageListModelData()
 {
-    QPersistentModelIndex idx = m_model->index(m_model->indexOf(m_packagePaths.at(1)), 0);
+    QPersistentModelIndex idx = m_model->index(m_model->indexOf(m_packagePaths.at(2)), 0);
     QVERIFY(idx.isValid());
 
     QCOMPARE(idx.data(Qt::DisplayRole).toString(), QStringLiteral("Honeywave (For test purpose, don't translate!)"));
@@ -113,9 +116,9 @@ void PackageListModelTest::testPackageListModelData()
     QCOMPARE(idx.data(ImageRoles::ResolutionRole).toString(), QStringLiteral("1920x1080"));
 
     QCOMPARE(idx.data(ImageRoles::PathRole).toUrl().toLocalFile(),
-             m_packagePaths.at(1) + QDir::separator() + QStringLiteral("contents") + QDir::separator() + QStringLiteral("images") + QDir::separator()
+             m_packagePaths.at(2) + QDir::separator() + QStringLiteral("contents") + QDir::separator() + QStringLiteral("images") + QDir::separator()
                  + QStringLiteral("1920x1080.jpg"));
-    QCOMPARE(idx.data(ImageRoles::PackageNameRole).toString(), m_packagePaths.at(1) + QDir::separator());
+    QCOMPARE(idx.data(ImageRoles::PackageNameRole).toString(), m_packagePaths.at(2) + QDir::separator());
 
     QCOMPARE(idx.data(ImageRoles::RemovableRole).toBool(), false);
     QCOMPARE(idx.data(ImageRoles::PendingDeletionRole).toBool(), false);
@@ -123,7 +126,7 @@ void PackageListModelTest::testPackageListModelData()
 
 void PackageListModelTest::testPackageListModelDarkWallpaperPreview()
 {
-    QModelIndex idx = m_model->index(m_model->indexOf(m_packagePaths.at(0)), 0);
+    QModelIndex idx = m_model->index(m_model->indexOf(m_packagePaths.at(1)), 0);
     QVERIFY(idx.isValid());
 
     QCOMPARE(idx.data(Qt::DisplayRole).toString(), QStringLiteral("Dark Wallpaper (For test purpose, don't translate!)"));
@@ -147,8 +150,10 @@ void PackageListModelTest::testPackageListModelIndexOf()
 {
     QCOMPARE(m_model->indexOf(m_packagePaths.at(0)), 0);
     QCOMPARE(m_model->indexOf(m_packagePaths.at(1)), 1);
+    QCOMPARE(m_model->indexOf(m_packagePaths.at(2)), 2);
     QCOMPARE(m_model->indexOf(QUrl::fromLocalFile(m_packagePaths.at(0)).toString()), 0);
     QCOMPARE(m_model->indexOf(QUrl::fromLocalFile(m_packagePaths.at(1)).toString()), 1);
+    QCOMPARE(m_model->indexOf(QUrl::fromLocalFile(m_packagePaths.at(2)).toString()), 2);
     QCOMPARE(m_model->indexOf(m_dataDir.absoluteFilePath(QStringLiteral("brokenpackage"))), -1);
 }
 

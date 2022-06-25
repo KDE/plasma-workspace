@@ -1,0 +1,13 @@
+{
+    "X-KDE-PlasmaImageWallpaper-Dynamic": {
+        "Type": "timed",
+        "StartTime": {
+            "Year": 2099,
+            "Month": 1,
+            "Day": 1,
+            "Hour": "8",
+            "Minute": "0",
+            "Second": 0
+        }
+    }
+}

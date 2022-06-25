@@ -7,6 +7,7 @@
 #include <QDebug>
 #include <QtTest>
 
+#include "../finder/imagepackage.h"
 #include "../model/imageproxymodel.h"
 #include "../slidemodel.h"
 #include "commontestdata.h"
@@ -44,6 +45,8 @@ private:
 
 void SlideModelTest::initTestCase()
 {
+    qRegisterMetaType<QList<KPackage::ImagePackage>>();
+
     m_dataDir = QDir(QFINDTESTDATA("testdata/default"));
     m_alternateDir = QDir(QFINDTESTDATA("testdata/alternate"));
     QVERIFY(!m_dataDir.isEmpty());
@@ -55,6 +58,7 @@ void SlideModelTest::initTestCase()
 
     m_packagePaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName1);
     m_packagePaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName2);
+    m_packagePaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName3);
     m_dummyPackagePath = m_alternateDir.absoluteFilePath(QStringLiteral("dummy"));
 
     m_targetSize = QSize(1920, 1080);
@@ -98,7 +102,7 @@ void SlideModelTest::cleanupTestCase()
 
 void SlideModelTest::testSlideModelData()
 {
-    const int row = m_model->indexOf(m_packagePaths.at(1));
+    const int row = m_model->indexOf(m_packagePaths.at(2));
     QVERIFY(row >= 0);
     const QPersistentModelIndex idx = m_model->index(row, 0);
 
@@ -114,8 +118,10 @@ void SlideModelTest::testSlideModelIndexOf()
     QVERIFY(m_model->indexOf(m_wallpaperPaths.at(1)) >= 0);
     QVERIFY(m_model->indexOf(m_packagePaths.at(0)) >= 0);
     QVERIFY(m_model->indexOf(m_packagePaths.at(1)) >= 0);
+    QVERIFY(m_model->indexOf(m_packagePaths.at(2)) >= 0);
     QVERIFY(m_model->indexOf(m_packagePaths.at(0) + QDir::separator()) >= 0);
     QVERIFY(m_model->indexOf(m_packagePaths.at(1) + QDir::separator()) >= 0);
+    QVERIFY(m_model->indexOf(m_packagePaths.at(2) + QDir::separator()) >= 0);
     QCOMPARE(m_model->indexOf(m_dummyWallpaperPath), -1);
     QCOMPARE(m_model->indexOf(m_dummyPackagePath + QDir::separator()), -1);
 }

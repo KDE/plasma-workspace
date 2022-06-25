@@ -6,6 +6,7 @@
 
 #include <QtTest>
 
+#include "../finder/imagepackage.h"
 #include "../slidefiltermodel.h"
 #include "../slidemodel.h"
 #include "commontestdata.h"
@@ -38,6 +39,8 @@ private:
 
 void SlideFilterModelTest::initTestCase()
 {
+    qRegisterMetaType<QList<KPackage::ImagePackage>>();
+
     m_dataDir = QDir(QFINDTESTDATA("testdata/default"));
     QVERIFY(!m_dataDir.isEmpty());
 

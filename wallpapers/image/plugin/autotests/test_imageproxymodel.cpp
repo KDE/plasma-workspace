@@ -9,6 +9,7 @@
 
 #include <KIO/CopyJob>
 
+#include "../finder/imagepackage.h"
 #include "../model/imagelistmodel.h"
 #include "../model/imageproxymodel.h"
 #include "../model/packagelistmodel.h"
@@ -47,6 +48,8 @@ private:
 
 void ImageProxyModelTest::initTestCase()
 {
+    qRegisterMetaType<QList<KPackage::ImagePackage>>();
+
     m_dataDir = QDir(QFINDTESTDATA("testdata/default"));
     m_alternateDir = QDir(QFINDTESTDATA("testdata/alternate"));
     QVERIFY(!m_dataDir.isEmpty());
@@ -58,6 +61,7 @@ void ImageProxyModelTest::initTestCase()
 
     m_packagePaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName1);
     m_packagePaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName2);
+    m_packagePaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName3);
     m_dummyPackagePath = m_alternateDir.absoluteFilePath(ImageBackendTestData::alternatePackageFolderName1);
 
     m_modelNum = 2;
@@ -115,8 +119,10 @@ void ImageProxyModelTest::testImageProxyModelIndexOf()
     QVERIFY(m_model->indexOf(m_wallpaperPaths.at(1)) >= 0);
     QVERIFY(m_model->indexOf(m_packagePaths.at(0)) >= 0);
     QVERIFY(m_model->indexOf(m_packagePaths.at(1)) >= 0);
+    QVERIFY(m_model->indexOf(m_packagePaths.at(2)) >= 0);
     QVERIFY(m_model->indexOf(m_packagePaths.at(0) + QDir::separator()) >= 0);
     QVERIFY(m_model->indexOf(m_packagePaths.at(1) + QDir::separator()) >= 0);
+    QVERIFY(m_model->indexOf(m_packagePaths.at(2) + QDir::separator()) >= 0);
     QCOMPARE(m_model->indexOf(m_dataDir.absoluteFilePath(QStringLiteral("brokenpackage") + QDir::separator())), -1);
 }
 
@@ -148,6 +154,8 @@ void ImageProxyModelTest::testImageProxyModelAddBackground()
     results = m_model->addBackground(m_packagePaths.at(0));
     QCOMPARE(results.size(), 0);
     results = m_model->addBackground(m_packagePaths.at(1));
+    QCOMPARE(results.size(), 0);
+    results = m_model->addBackground(m_packagePaths.at(2));
     QCOMPARE(results.size(), 0);
     QCOMPARE(m_countSpy->size(), 0);
 
@@ -220,6 +228,7 @@ void ImageProxyModelTest::testImageProxyModelDirWatch()
     QVERIFY(m_model->m_dirWatch.contains(m_wallpaperPaths.at(1)));
     QVERIFY(m_model->m_dirWatch.contains(m_packagePaths.at(0)));
     QVERIFY(m_model->m_dirWatch.contains(m_packagePaths.at(1)));
+    QVERIFY(m_model->m_dirWatch.contains(m_packagePaths.at(2)));
 
     m_model->deleteLater();
     m_countSpy->deleteLater();

@@ -1,0 +1,50 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "vladzzag@gmail.com",
+                "Name": "Vlad Zahorodnii (For test purpose, don't translate!)"
+            },
+            {
+                "Email": "kde@lists.fedoraproject.org",
+                "Name": "Fedora KDE-SIG (For test purpose, don't translate!)"
+            }
+        ],
+        "Id": "default",
+        "License": "CC-BY-SA",
+        "Name": "Time of Day (For test purpose, don't translate!)"
+    },
+    "X-KDE-PlasmaImageWallpaper-Dynamic": {
+        "Type": "Idontknowthetypebutitshouldbefallbacktotimed",
+        "StartTime": {
+            "Year": 2022,
+            "Month": 5,
+            "Day": 24,
+            "Hour": 8,
+            "Minute": 0,
+            "Second": 0
+        },
+        "Metadata": [
+            {
+                "Duration": 36000,
+                "Filename": "contents/images/day-${resolution}.png",
+                "Type": "static"
+            },
+            {
+                "Duration": 7200,
+                "FileName": "contents/images_dark/night-${resolution}.png",
+                "Type": "transition"
+            },
+            {
+                "Duration": 36000,
+                "FileName": "contents/images_dark/night-${resolution}.png",
+                "Type": "static"
+            },
+            {
+                "Duration": 7200,
+                "Filename": "contents/images/day-${resolution}.png",
+                "Type": "transition"
+            }
+        ]
+    }
+}

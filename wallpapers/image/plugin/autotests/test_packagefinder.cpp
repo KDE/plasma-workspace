@@ -31,6 +31,8 @@ private:
 
 void PackageFinderTest::initTestCase()
 {
+    qRegisterMetaType<QList<KPackage::ImagePackage>>();
+
     m_dataDir = QDir(QFINDTESTDATA("testdata/default"));
     QVERIFY(!m_dataDir.isEmpty());
 }
@@ -74,7 +76,7 @@ void PackageFinderTest::testFindPreferredSizeInPackage()
     QFETCH(QString, expected);
 
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
-    package.setPath(m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName2));
+    package.setPath(m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName3));
 
     QVERIFY(package.isValid());
     QVERIFY(package.metadata().isValid());
@@ -102,14 +104,14 @@ void PackageFinderTest::testPackageFinderCanFindPackages()
 
     // Folders are sorted by names
     // FEATURE207976-dark-wallpaper
-    QCOMPARE(items.at(0).filePath("preferred"),
-             m_dataDir.absoluteFilePath(QStringLiteral("%1/contents/images/1024x768.png").arg(ImageBackendTestData::defaultPackageFolderName1)));
-    QCOMPARE(items.at(0).filePath("preferredDark"),
-             m_dataDir.absoluteFilePath(QStringLiteral("%1/contents/images_dark/1920x1080.jpg").arg(ImageBackendTestData::defaultPackageFolderName1)));
-    // package
     QCOMPARE(items.at(1).filePath("preferred"),
-             m_dataDir.absoluteFilePath(QStringLiteral("%1/contents/images/1920x1080.jpg").arg(ImageBackendTestData::defaultPackageFolderName2)));
-    QCOMPARE(items.at(1).filePath("preferredDark"), QString());
+             m_dataDir.absoluteFilePath(QStringLiteral("%1/contents/images/1024x768.png").arg(ImageBackendTestData::defaultPackageFolderName2)));
+    QCOMPARE(items.at(1).filePath("preferredDark"),
+             m_dataDir.absoluteFilePath(QStringLiteral("%1/contents/images_dark/1920x1080.jpg").arg(ImageBackendTestData::defaultPackageFolderName2)));
+    // package
+    QCOMPARE(items.at(2).filePath("preferred"),
+             m_dataDir.absoluteFilePath(QStringLiteral("%1/contents/images/1920x1080.jpg").arg(ImageBackendTestData::defaultPackageFolderName3)));
+    QCOMPARE(items.at(2).filePath("preferredDark"), QString());
 }
 
 QTEST_MAIN(PackageFinderTest)
