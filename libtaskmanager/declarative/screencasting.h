@@ -42,7 +42,7 @@ Q_SIGNALS:
 
 private:
     friend class Screencasting;
-    std::unique_ptr<ScreencastingStreamPrivate> d;
+    QScopedPointer<ScreencastingStreamPrivate> d;
 };
 
 class Screencasting : public QObject
@@ -50,7 +50,6 @@ class Screencasting : public QObject
     Q_OBJECT
 public:
     explicit Screencasting(QObject *parent = nullptr);
-    explicit Screencasting(KWayland::Client::Registry *registry, int id, int version, QObject *parent = nullptr);
     ~Screencasting() override;
 
     enum CursorMode {
@@ -60,11 +59,13 @@ public:
     };
     Q_ENUM(CursorMode)
 
+    ScreencastingStream *createOutputStream(const QString &outputName, CursorMode mode);
     ScreencastingStream *createOutputStream(KWayland::Client::Output *output, CursorMode mode);
+    ScreencastingStream *createRegionStream(const QRect &region, qreal scaling, CursorMode mode);
     ScreencastingStream *createWindowStream(KWayland::Client::PlasmaWindow *window, CursorMode mode);
     ScreencastingStream *createWindowStream(const QString &uuid, CursorMode mode);
+    ScreencastingStream *createVirtualMonitorStream(const QString &name, const QSize &size, qreal scale, CursorMode mode);
 
-    void setup(zkde_screencast_unstable_v1 *screencasting);
     void destroy();
 
 Q_SIGNALS:
@@ -73,5 +74,5 @@ Q_SIGNALS:
     void sourcesChanged();
 
 private:
-    std::unique_ptr<ScreencastingPrivate> d;
+    QScopedPointer<ScreencastingPrivate> d;
 };

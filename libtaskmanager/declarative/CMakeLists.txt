@@ -23,7 +23,7 @@ ecm_qt_install_logging_categories(
 )
 
 add_library(taskmanagerplugin SHARED taskmanagerplugin.cpp screencasting.cpp screencastingrequest.cpp ${SRCS})
-target_link_libraries(taskmanagerplugin taskmanager Wayland::Client KF5::WaylandClient)
+target_link_libraries(taskmanagerplugin taskmanager Wayland::Client KF5::WaylandClient Qt::WaylandClient Qt::GuiPrivate)
 
 install(TARGETS taskmanagerplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/taskmanager)
 install(FILES qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/taskmanager)
