@@ -16,6 +16,7 @@
 #include <QSet>
 #include <QTimer>
 
+#include <KConfigWatcher>
 #include <KPackage/Package>
 
 class DesktopView;
@@ -126,10 +127,16 @@ public:
     // If a containment preview has been grabbed, for this containment, return its path
     QString containmentPreviewPath(Plasma::Containment *containment) const;
 
+    /**
+     * Whether "accent color from wallpaper" option is enabled in global settings
+     */
+    bool accentColorFromWallpaperEnabled() const;
+
 Q_SIGNALS:
     void glInitializationFailed();
     // A preview for this containment has been rendered and saved to disk
     void containmentPreviewReady(Plasma::Containment *containment, const QString &path);
+    void accentColorFromWallpaperEnabledChanged();
     void colorChanged(const QString &color);
 
 public Q_SLOTS:
@@ -247,6 +254,10 @@ private:
 
     KSharedConfig::Ptr m_config;
     QString m_configPath;
+
+    // Accent color setting
+    KConfigWatcher::Ptr m_accentColorConfigWatcher;
+    bool m_accentColorFromWallpaperEnabled = false;
 
     ScreenPool *m_screenPool;
     QString m_shell;

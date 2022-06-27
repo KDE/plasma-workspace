@@ -56,9 +56,8 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
     setTitle(corona->kPackage().metadata().name());
     rootContext()->setContextProperty(QStringLiteral("desktop"), this);
     setSource(corona->kPackage().fileUrl("views", QStringLiteral("Desktop.qml")));
-
+    connect(this, &ContainmentView::containmentChanged, this, &DesktopView::slotContainmentChanged);
     connect(this, &QWindow::screenChanged, this, &DesktopView::adaptToScreen);
-    connect(this, &DesktopView::accentColorChanged, this, &DesktopView::setAccentColorFromWallpaper);
 
     QObject::connect(corona, &Plasma::Corona::kPackageChanged, this, &DesktopView::coronaPackageChanged);
 
@@ -78,6 +77,16 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
             m_activateKRunnerWhenTypingOnDesktop = group.readEntry("ActivateWhenTypingOnDesktop", true);
         }
     });
+
+    // Accent color setting
+    connect(static_cast<ShellCorona *>(corona), &ShellCorona::accentColorFromWallpaperEnabledChanged, this, &DesktopView::usedInAccentColorChanged);
+    connect(this, &DesktopView::usedInAccentColorChanged, this, [this] {
+        if (!usedInAccentColor()) {
+            m_accentColor = QStringLiteral("transparent");
+            Q_EMIT accentColorChanged(m_accentColor);
+        }
+    });
+    connect(this, &ContainmentView::containmentChanged, this, &DesktopView::slotContainmentChanged);
 }
 
 DesktopView::~DesktopView()
@@ -129,6 +138,20 @@ void DesktopView::adaptToScreen()
     m_oldScreen = m_screenToFollow;
 }
 
+bool DesktopView::usedInAccentColor() const
+{
+    if (!m_containment) {
+        return false;
+    }
+
+    const bool notPrimaryDisplay = m_containment->screen() != 0;
+    if (notPrimaryDisplay) {
+        return false;
+    }
+
+    return static_cast<ShellCorona *>(corona())->accentColorFromWallpaperEnabled();
+}
+
 QString DesktopView::accentColor() const
 {
     return m_accentColor;
@@ -136,10 +159,17 @@ QString DesktopView::accentColor() const
 
 void DesktopView::setAccentColor(const QString &accentColor)
 {
-    if (accentColor != m_accentColor) {
-        m_accentColor = accentColor;
-        Q_EMIT accentColorChanged(m_accentColor);
+    if (accentColor == m_accentColor) {
+        return;
     }
+
+    m_accentColor = accentColor;
+    Q_EMIT accentColorChanged(m_accentColor);
+    if (usedInAccentColor()) {
+        Q_EMIT static_cast<ShellCorona *>(corona())->colorChanged(m_accentColor);
+    }
+
+    setAccentColorFromWallpaper(m_accentColor);
 }
 
 DesktopView::WindowType DesktopView::windowType() const
@@ -352,6 +382,30 @@ void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
     m_configView->requestActivate();
 }
 
+void DesktopView::slotContainmentChanged()
+{
+    if (m_containment) {
+        disconnect(m_containment, &Plasma::Containment::screenChanged, this, &DesktopView::slotScreenChanged);
+    }
+
+    m_containment = containment();
+
+    if (m_containment) {
+        connect(m_containment, &Plasma::Containment::screenChanged, this, &DesktopView::slotScreenChanged);
+        slotScreenChanged(m_containment->screen());
+    }
+}
+
+void DesktopView::slotScreenChanged(int newId)
+{
+    if (m_containmentScreenId == newId) {
+        return;
+    }
+
+    m_containmentScreenId = newId;
+    Q_EMIT usedInAccentColorChanged();
+}
+
 void DesktopView::screenGeometryChanged()
 {
     const QRect geo = m_screenToFollow->geometry();
@@ -392,8 +446,7 @@ void DesktopView::setupWaylandIntegration()
 
 void DesktopView::setAccentColorFromWallpaper(const QString &accentColor)
 {
-    auto const notPrimaryDisplay = containment()->screen() != 0;
-    if (notPrimaryDisplay) {
+    if (!usedInAccentColor()) {
         return;
     }
     QDBusMessage applyAccentColor = QDBusMessage::createMethodCall("org.kde.plasmashell.accentColor", "/AccentColor", "", "setAccentColor");

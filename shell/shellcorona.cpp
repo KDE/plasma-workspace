@@ -102,6 +102,22 @@ ShellCorona::ShellCorona(QObject *parent)
     KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), "KDE");
     const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
     m_lookAndFeelPackage = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"), packageName);
+
+    // Accent color setting
+    KSharedConfigPtr globalConfig = KSharedConfig::openConfig();
+    KConfigGroup accentColorConfigGroup(globalConfig, "General");
+    m_accentColorFromWallpaperEnabled = accentColorConfigGroup.readEntry("accentColorFromWallpaper", false);
+
+    m_accentColorConfigWatcher = KConfigWatcher::create(globalConfig);
+    connect(m_accentColorConfigWatcher.data(), &KConfigWatcher::configChanged, this, [this](const KConfigGroup &group, const QByteArrayList &names) {
+        if (names.contains(QByteArrayLiteral("accentColorFromWallpaper"))) {
+            const bool result = group.readEntry("accentColorFromWallpaper", false);
+            if (m_accentColorFromWallpaperEnabled != result) {
+                m_accentColorFromWallpaperEnabled = result;
+                Q_EMIT accentColorFromWallpaperEnabledChanged();
+            }
+        }
+    });
 }
 
 void ShellCorona::init()
@@ -743,7 +759,6 @@ void ShellCorona::load()
     connect(m_screenPool, &ScreenPool::screenAdded, this, &ShellCorona::addOutput, Qt::UniqueConnection);
     connect(m_screenPool, &ScreenPool::screenRemoved, this, &ShellCorona::handleScreenRemoved, Qt::UniqueConnection);
     connect(m_screenPool, &ScreenPool::primaryScreenChanged, this, &ShellCorona::primaryScreenChanged, Qt::UniqueConnection);
-    connect(m_desktopViewForScreen[m_screenPool->primaryScreen()], &DesktopView::accentColorChanged, this, &ShellCorona::colorChanged);
 
     if (!m_waitingPanels.isEmpty()) {
         m_waitingPanelsTimer.start();
@@ -787,10 +802,6 @@ void ShellCorona::primaryScreenChanged(QScreen *oldPrimary, QScreen *newPrimary)
 
     // can't do the screen invariant here as reconsideroutputs wasn't executed yet
     // CHECK_SCREEN_INVARIANTS
-
-    // refresh the accent color signal binding
-    disconnect(m_desktopViewForScreen.value(oldPrimary), &DesktopView::accentColorChanged, this, &ShellCorona::colorChanged);
-    connect(m_desktopViewForScreen.value(newPrimary), &DesktopView::accentColorChanged, this, &ShellCorona::colorChanged);
 }
 
 #ifndef NDEBUG
@@ -2019,6 +2030,11 @@ QString ShellCorona::containmentPreviewPath(Plasma::Containment *containment) co
     } else {
         return QString();
     }
+}
+
+bool ShellCorona::accentColorFromWallpaperEnabled() const
+{
+    return m_accentColorFromWallpaperEnabled;
 }
 
 void ShellCorona::nextActivity()

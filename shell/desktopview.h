@@ -30,6 +30,16 @@ class DesktopView : public PlasmaQuick::ContainmentView
     Q_PROPERTY(SessionType sessionType READ sessionType CONSTANT)
 
     Q_PROPERTY(QVariantMap candidateContainments READ candidateContainmentsGraphicItems NOTIFY candidateContainmentsChanged)
+
+    /**
+     * Whether the desktop is used in accent color extraction
+     *
+     * @note When usedInAccentColor becomes @c true, \Kirigami.ImageColors
+     * will be loaded and update the accent color, and \setAccentColor will
+     * be called
+     */
+    Q_PROPERTY(bool usedInAccentColor READ usedInAccentColor NOTIFY usedInAccentColorChanged)
+
     Q_PROPERTY(QString accentColor READ accentColor WRITE setAccentColor NOTIFY accentColorChanged)
 
 public:
@@ -58,6 +68,9 @@ public:
 
     void adaptToScreen();
     void showEvent(QShowEvent *) override;
+
+    bool usedInAccentColor() const;
+
     QString accentColor() const;
     void setAccentColor(const QString &);
 
@@ -81,6 +94,8 @@ protected Q_SLOTS:
     void showConfigurationInterface(Plasma::Applet *applet) override;
 
 private Q_SLOTS:
+    void slotContainmentChanged();
+    void slotScreenChanged(int newId);
     void screenGeometryChanged();
 
 Q_SIGNALS:
@@ -88,6 +103,7 @@ Q_SIGNALS:
     void windowTypeChanged();
     void candidateContainmentsChanged();
     void geometryChanged();
+    void usedInAccentColorChanged();
     void accentColorChanged(const QString &accentColor);
 
 private:
@@ -108,4 +124,8 @@ private:
     // KRunner config
     KConfigWatcher::Ptr m_configWatcher;
     bool m_activateKRunnerWhenTypingOnDesktop;
+
+    // Accent color config
+    Plasma::Containment *m_containment = nullptr;
+    int m_containmentScreenId = -1;
 };
