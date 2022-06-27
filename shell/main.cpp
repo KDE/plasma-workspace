@@ -79,6 +79,7 @@ int main(int argc, char *argv[])
 
     oldCategoryFilter = QLoggingCategory::installFilter(filterConnectionSyntaxWarning);
 
+    qputenv("QT_WAYLAND_DISABLE_FIXED_POSITIONS", {});
     const bool qpaVariable = qEnvironmentVariableIsSet("QT_QPA_PLATFORM");
     KWorkSpace::detectPlatform(argc, argv);
     QApplication app(argc, argv);
@@ -86,6 +87,8 @@ int main(int argc, char *argv[])
         // don't leak the env variable to processes we start
         qunsetenv("QT_QPA_PLATFORM");
     }
+    qunsetenv("QT_WAYLAND_DISABLE_FIXED_POSITIONS");
+
     KLocalizedString::setApplicationDomain("plasmashell");
 
     // The executable's path is added to the library/plugin paths.

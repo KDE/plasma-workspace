@@ -34,6 +34,7 @@ int main(int argc, char **argv)
         QCoreApplication::setAttribute(Qt::AA_DisableHighDpiScaling);
     }
 
+    qputenv("QT_WAYLAND_DISABLE_FIXED_POSITIONS", {});
     const bool qpaVariable = qEnvironmentVariableIsSet("QT_QPA_PLATFORM");
     KWorkSpace::detectPlatform(argc, argv);
     QQuickWindow::setDefaultAlphaBuffer(true);
@@ -42,6 +43,7 @@ int main(int argc, char **argv)
         // don't leak the env variable to processes we start
         qunsetenv("QT_QPA_PLATFORM");
     }
+    qunsetenv("QT_WAYLAND_DISABLE_FIXED_POSITIONS");
     KLocalizedString::setApplicationDomain("krunner");
 
     //     TODO: Make it a QGuiApplication once we don't depend on KDELibs4Support
