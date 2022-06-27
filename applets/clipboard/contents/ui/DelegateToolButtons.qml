@@ -17,7 +17,7 @@ RowLayout {
     PlasmaComponents3.ToolButton {
         id: actionToolButton
         // TODO: only show for items supporting actions?
-        icon.name: "system-run"
+        icon.name: "system-run-symbolic"
         onClicked: menuItem.action(UuidRole)
 
         PlasmaComponents3.ToolTip {
