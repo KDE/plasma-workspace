@@ -14,6 +14,7 @@
 
 #include <config-X11.h>
 
+#include <QApplication>
 #include <QDir>
 #include <QIcon>
 #include <QMimeDatabase>
@@ -30,6 +31,7 @@
 #include <KActivities/ResourceInstance>
 #include <KFileItem>
 #include <KIO/ApplicationLauncherJob>
+#include <KIO/JobUiDelegate>
 #include <KIO/OpenFileManagerWindowJob>
 #include <KIO/OpenUrlJob>
 #include <KLocalizedString>
@@ -365,7 +367,8 @@ bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant 
             const QUrl resourceUrl = docData(resource, Kicker::UrlRole, mimeType).toUrl();
 
             auto job = new KIO::OpenUrlJob(resourceUrl);
-            job->setRunExecutables(false);
+            job->setUiDelegate(new KIO::JobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, QApplication::activeWindow()));
+            job->setShowOpenOrExecuteDialog(true);
             job->start();
 
             return true;

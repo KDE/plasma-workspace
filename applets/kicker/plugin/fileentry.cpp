@@ -7,7 +7,10 @@
 #include "fileentry.h"
 #include "actionlist.h"
 
+#include <QApplication>
+
 #include <KFileItem>
+#include <KIO/JobUiDelegate>
 #include <KIO/OpenUrlJob>
 #include <KIO/StatJob>
 
@@ -105,6 +108,8 @@ bool FileEntry::run(const QString &actionId, const QVariant &argument)
 
     if (actionId.isEmpty()) {
         auto job = new KIO::OpenUrlJob(m_fileItem->url());
+        job->setUiDelegate(new KIO::JobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, QApplication::activeWindow()));
+        job->setShowOpenOrExecuteDialog(true);
         job->start();
 
         return true;

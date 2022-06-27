@@ -6,10 +6,12 @@
 
 #include "recentdocuments.h"
 
+#include <QApplication>
 #include <QDir>
 #include <QMimeData>
 
 #include <KIO/Job>
+#include <KIO/JobUiDelegate>
 #include <KIO/OpenFileManagerWindowJob>
 #include <KIO/OpenUrlJob>
 #include <KLocalizedString>
@@ -108,8 +110,8 @@ void RecentDocuments::run(const Plasma::RunnerContext &context, const Plasma::Qu
     }
 
     auto *job = new KIO::OpenUrlJob(url);
-    job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled));
-    job->setRunExecutables(false);
+    job->setUiDelegate(new KIO::JobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, QApplication::activeWindow()));
+    job->setShowOpenOrExecuteDialog(true);
     job->start();
 }
 
