@@ -839,13 +839,16 @@ void PanelView::resizeEvent(QResizeEvent *ev)
 {
     updateEnabledBorders();
     // don't setGeometry() to make really sure we aren't doing a resize loop
-    const QPoint pos = geometryByDistance(m_distance).topLeft();
-    setPosition(pos);
-    if (m_shellSurface) {
-        m_shellSurface->setPosition(pos);
+    if (m_screenToFollow) {
+        const QPoint pos = geometryByDistance(m_distance).topLeft();
+        setPosition(pos);
+        if (m_shellSurface) {
+            m_shellSurface->setPosition(pos);
+        }
+
+        m_strutsTimer.start(STRUTSTIMERDELAY);
+        Q_EMIT m_corona->availableScreenRegionChanged();
     }
-    m_strutsTimer.start(STRUTSTIMERDELAY);
-    Q_EMIT m_corona->availableScreenRegionChanged();
 
     PlasmaQuick::ContainmentView::resizeEvent(ev);
 }
