@@ -256,6 +256,8 @@ MouseArea {
                 systemTrayState.expanded = false
             }
 
+            onRequestClosePopup: systemTrayState.expanded = false
+
             // Draws a line between the applet dialog and the panel
             PlasmaCore.SvgItem {
                 // Only draw for popups of panel applets, not desktop applets

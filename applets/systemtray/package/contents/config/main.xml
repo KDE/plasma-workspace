@@ -37,6 +37,10 @@
       <label>Whether the popup should remain open when another window is activated</label>
       <default>false</default>
     </entry>
+    <entry name="showCloseButton" type="Bool">
+      <label>Whether the close button in the heading should be visible to the user</label>
+      <default>false</default>
+    </entry>
   </group>
 
 </kcfg>

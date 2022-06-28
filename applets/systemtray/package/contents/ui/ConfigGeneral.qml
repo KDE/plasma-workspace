@@ -15,6 +15,7 @@ import org.kde.kirigami 2.13 as Kirigami
 ColumnLayout {
     property bool cfg_scaleIconsToFit
     property int cfg_iconSpacing
+    property alias cfg_showCloseButton: showCloseButtonCheckBox.checked
 
     Kirigami.FormLayout {
         Layout.fillHeight: true
@@ -81,6 +82,16 @@ ColumnLayout {
             visible: Kirigami.Settings.tabletMode
             text: i18nc("@info:usagetip under a combobox when Touch Mode is on", "Automatically set to Large when in Touch Mode")
             font: Kirigami.Theme.smallFont
+        }
+
+        Item {
+            Kirigami.FormData.isSection: true
+        }
+
+        QQC2.CheckBox {
+            id: showCloseButtonCheckBox
+            Kirigami.FormData.label: i18nc("@label", "Accessibility:")
+            text: i18nc("@option:check", "Show close button in the heading")
         }
     }
 }

@@ -5,7 +5,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.12
+import QtQuick 2.15
 import QtQuick.Layouts 1.12
 import QtQuick.Window 2.15
 
@@ -25,6 +25,8 @@ Item {
 
     Layout.minimumHeight: PlasmaCore.Units.gridUnit * 24
     Layout.maximumHeight: PlasmaCore.Units.gridUnit * 40
+
+    signal requestClosePopup()
 
     property alias hiddenLayout: hiddenItemsView.layout
     property alias plasmoidContainer: container
@@ -153,6 +155,16 @@ Item {
                 icon.name: "window-pin"
                 PlasmaComponents.ToolTip {
                     text: i18n("Keep Open")
+                }
+            }
+
+            PlasmaComponents.ToolButton {
+                id: closeButton
+                visible: Plasmoid.configuration.showCloseButton
+                onClicked: popup.requestClosePopup()
+                icon.name: "window-close"
+                PlasmaComponents.ToolTip {
+                    text: i18nc("@info:tooltip", "Close Popup")
                 }
             }
         }
