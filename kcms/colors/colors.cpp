@@ -147,6 +147,19 @@ void KCMColors::setAccentColorFromWallpaper(bool boolean)
     Q_EMIT settingsChanged();
 }
 
+QColor KCMColors::lastUsedCustomAccentColor() const
+{
+    return colorsSettings()->lastUsedCustomAccentColor();
+}
+void KCMColors::setLastUsedCustomAccentColor(const QColor &accentColor)
+{
+    if (accentColor == QColor(Qt::transparent)) {
+        return;
+    }
+    colorsSettings()->setLastUsedCustomAccentColor(accentColor);
+    Q_EMIT lastUsedCustomAccentColorChanged();
+    Q_EMIT settingsChanged();
+}
 bool KCMColors::downloadingFile() const
 {
     return m_tempCopyJob;

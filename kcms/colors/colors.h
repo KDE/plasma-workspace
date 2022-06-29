@@ -42,6 +42,7 @@ class KCMColors : public KQuickAddons::ManagedConfigModule
     Q_PROPERTY(ColorsSettings *colorsSettings READ colorsSettings CONSTANT)
     Q_PROPERTY(bool downloadingFile READ downloadingFile NOTIFY downloadingFileChanged)
     Q_PROPERTY(QColor accentColor READ accentColor WRITE setAccentColor NOTIFY accentColorChanged)
+    Q_PROPERTY(QColor lastUsedCustomAccentColor READ lastUsedCustomAccentColor WRITE setLastUsedCustomAccentColor NOTIFY lastUsedCustomAccentColorChanged)
     Q_PROPERTY(bool accentColorFromWallpaper READ accentColorFromWallpaper WRITE setAccentColorFromWallpaper NOTIFY accentColorFromWallpaperChanged)
 
 public:
@@ -67,6 +68,10 @@ public:
     void setAccentColor(const QColor &accentColor);
     void resetAccentColor();
     Q_SIGNAL void accentColorChanged();
+
+    QColor lastUsedCustomAccentColor() const;
+    void setLastUsedCustomAccentColor(const QColor &accentColor);
+    Q_SIGNAL void lastUsedCustomAccentColorChanged();
 
     bool accentColorFromWallpaper() const;
     void setAccentColorFromWallpaper(bool boolean);

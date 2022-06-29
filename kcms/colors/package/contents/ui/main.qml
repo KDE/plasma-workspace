@@ -174,7 +174,7 @@ KCM.GridViewKCM {
                     onToggled: {
                         if (checked) {
                             kcm.accentColorFromWallpaper = false;
-                            kcm.accentColor = colorRepeater.model[0]
+                            kcm.accentColor = Qt.colorEqual(kcm.lastUsedCustomAccentColor, "transparent") ? colorRepeater.model[0] : kcm.lastUsedCustomAccentColor
                         }
                     }
                 }
@@ -237,6 +237,7 @@ KCM.GridViewKCM {
                             onToggled: {
                                 kcm.accentColorFromWallpaper = false;
                                 kcm.accentColor = modelData
+                                kcm.lastUsedCustomAccentColor = modelData
                                 checked = Qt.binding(() => Qt.colorEqual(kcm.accentColor, modelData));
                             }
                         }
@@ -254,9 +255,10 @@ KCM.GridViewKCM {
                         title: i18n("Choose custom accent color")
                         // User must either choose a colour or cancel the operation before doing something else
                         modality: Qt.ApplicationModal
-                        color: kcm.accentColor
+                        color: Qt.colorEqual(kcm.lastUsedCustomAccentColor, "transparent") ? kcm.accentColor : kcm.lastUsedCustomAccentColor
                         onAccepted: {
                             kcm.accentColor = colorDialog.color
+                            kcm.lastUsedCustomAccentColor = colorDialog.color
                             kcm.accentColorFromWallpaper = false
                         }
                     }

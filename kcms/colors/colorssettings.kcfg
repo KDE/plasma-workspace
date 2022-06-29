@@ -13,6 +13,10 @@
       <label>Accent color</label>
       <default>transparent</default>
     </entry>
+    <entry name="lastUsedCustomAccentColor" key="LastUsedCustomAccentColor" type="Color">
+      <label>The last used custom accent color before user switched to wallpaper generated color or default color</label>
+      <default>transparent</default>
+    </entry>
     <entry name="accentColorFromWallpaper" key="accentColorFromWallpaper" type="Bool">
       <label>Whether accent color from wallpaper should be applied</label>
       <default>false</default>
