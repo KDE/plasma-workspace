@@ -67,23 +67,13 @@ public Q_SLOTS:
 private:
     void rebuild(const QString &filter = QString());
     void buildFromScratch();
+    void showStatus(const QString &errorText);
 
 protected:
     void keyPressEvent(QKeyEvent *e) override;
 
 private:
     bool m_dirty : 1; // true if menu contents needs to be rebuild.
-
-    /**
-     * Contains the string shown if the menu is empty.
-     */
-    QString m_textForEmptyHistory;
-
-    /**
-     * Contains the string shown if the search string has no
-     * matches and the menu is not empty.
-     */
-    QString m_textForNoMatch;
 
     /**
      * The "document" (clipboard history)

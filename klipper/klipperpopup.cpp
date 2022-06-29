@@ -8,11 +8,12 @@
 #include "klipperpopup.h"
 
 #include "klipper_debug.h"
-#include <QApplication>
+#include <QGuiApplication>
 #include <QKeyEvent>
 #include <QScreen>
 #include <QWidgetAction>
 
+#include <KColorScheme>
 #include <KHelpMenu>
 #include <KLineEdit>
 #include <KLocalizedString>
@@ -56,8 +57,6 @@ kdbgstream &operator<<(kdbgstream &stream, const QKeyEvent &e)
 
 KlipperPopup::KlipperPopup(History *history)
     : m_dirty(true)
-    , m_textForEmptyHistory(i18n("Clipboard is empty"))
-    , m_textForNoMatch(i18n("No matches"))
     , m_history(history)
     , m_helpMenu(nullptr)
     , m_popupProxy(nullptr)
@@ -131,6 +130,26 @@ void KlipperPopup::buildFromScratch()
     }
 }
 
+void KlipperPopup::showStatus(const QString &errorText)
+{
+    const KColorScheme colorScheme(QPalette::Normal, KColorScheme::View);
+    QPalette palette = m_filterWidget->palette();
+
+    if (errorText.isEmpty()) { // no error
+        palette.setColor(m_filterWidget->foregroundRole(), colorScheme.foreground(KColorScheme::NormalText).color());
+        palette.setColor(m_filterWidget->backgroundRole(), colorScheme.background(KColorScheme::NormalBackground).color());
+        // add no action, rebuild() will fill with history items
+    } else { // there is an error
+        palette.setColor(m_filterWidget->foregroundRole(), colorScheme.foreground(KColorScheme::NegativeText).color());
+        palette.setColor(m_filterWidget->backgroundRole(), colorScheme.background(KColorScheme::NegativeBackground).color());
+        insertAction(actions().at(TOP_HISTORY_ITEM_INDEX), new QAction(errorText, this));
+
+        ++m_nHistoryItems; // account for the added error item
+    }
+
+    m_filterWidget->setPalette(palette);
+}
+
 void KlipperPopup::rebuild(const QString &filter)
 {
     if (actions().isEmpty()) {
@@ -148,39 +167,52 @@ void KlipperPopup::rebuild(const QString &filter)
         }
     }
 
-    // We search case insensitive until one uppercased character appears in the search term
-    QRegularExpression filterexp(filter, filter.toLower() == filter ? QRegularExpression::CaseInsensitiveOption : QRegularExpression::NoPatternOption);
+    QRegularExpression filterexp(filter);
+    // The search is case insensitive unless at least one uppercase character
+    // appears in the search term.
+    //
+    // This is not really a rigourous check, since the test below for an
+    // uppercase character should really check for an uppercase character that
+    // is not part of a special regexp character class or escape sequence:
+    // for example, using "\S" to mean a non-whitespace character should not
+    // force the match to be case sensitive.  However, that is not possible
+    // without fully parsing the regexp.  The user is not likely to be searching
+    // for complex regular expressions here.
+    if (filter.toLower() == filter) {
+        filterexp.setPatternOptions(QRegularExpression::CaseInsensitiveOption);
+    }
 
-    QPalette palette = m_filterWidget->palette();
-    if (filterexp.isValid()) {
-        palette.setColor(m_filterWidget->foregroundRole(), palette.color(foregroundRole()));
+    QString errorText;
+    if (!filterexp.isValid()) {
+        errorText = i18n("Invalid regular expression, %1", filterexp.errorString());
+        m_nHistoryItems = 0;
     } else {
-        palette.setColor(m_filterWidget->foregroundRole(), Qt::red);
-    }
-    m_nHistoryItems = m_popupProxy->buildParent(TOP_HISTORY_ITEM_INDEX, filterexp);
-    if (m_nHistoryItems == 0) {
-        if (m_history->empty()) {
-            insertAction(actions().at(TOP_HISTORY_ITEM_INDEX), new QAction(m_textForEmptyHistory, this));
+        m_nHistoryItems = m_popupProxy->buildParent(TOP_HISTORY_ITEM_INDEX, filterexp);
+        if (m_nHistoryItems == 0) {
+            if (m_history->empty()) {
+                errorText = i18n("Clipboard is empty");
+            } else {
+                errorText = i18n("No matches");
+            }
         } else {
-            palette.setColor(m_filterWidget->foregroundRole(), Qt::red);
-            insertAction(actions().at(TOP_HISTORY_ITEM_INDEX), new QAction(m_textForNoMatch, this));
-        }
-        m_nHistoryItems++;
-    } else {
-        if (history()->topIsUserSelected()) {
-            actions().at(TOP_HISTORY_ITEM_INDEX)->setCheckable(true);
-            actions().at(TOP_HISTORY_ITEM_INDEX)->setChecked(true);
+            if (history()->topIsUserSelected()) {
+                QAction *topAction = actions().at(TOP_HISTORY_ITEM_INDEX);
+                topAction->setCheckable(true);
+                topAction->setChecked(true);
+            }
         }
     }
-    m_filterWidget->setPalette(palette);
+
+    showStatus(errorText);
     m_dirty = false;
 }
 
 void KlipperPopup::slotTopIsUserSelectedSet()
 {
     if (!m_dirty && m_nHistoryItems > 0 && history()->topIsUserSelected()) {
-        actions().at(TOP_HISTORY_ITEM_INDEX)->setCheckable(true);
-        actions().at(TOP_HISTORY_ITEM_INDEX)->setChecked(true);
+        QAction *topAction = actions().at(TOP_HISTORY_ITEM_INDEX);
+        topAction->setCheckable(true);
+        topAction->setChecked(true);
     }
 }
 
@@ -253,7 +285,7 @@ void KlipperPopup::keyPressEvent(QKeyEvent *e)
         setActiveAction(actions().at(actions().indexOf(m_filterWidgetAction)));
         QString lastString = m_filterWidget->text();
 
-        QApplication::sendEvent(m_filterWidget, e);
+        QCoreApplication::sendEvent(m_filterWidget, e);
         if (m_filterWidget->text() != lastString) {
             m_dirty = true;
             rebuild(m_filterWidget->text());
