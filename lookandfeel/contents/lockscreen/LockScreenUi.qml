@@ -68,17 +68,11 @@ PlasmaCore.ColorScope {
         function onPrompt(msg) {
             root.notification = msg;
             mainBlock.showPassword = true;
-            if (lockScreenUi.hadPrompt) {
-                mainBlock.mainPasswordBox.text = "";
-            }
             mainBlock.mainPasswordBox.forceActiveFocus();
             lockScreenUi.hadPrompt = true;
         }
         function onPromptForSecret(msg) {
             mainBlock.showPassword = false;
-            if (lockScreenUi.hadPrompt) {
-                mainBlock.mainPasswordBox.text = "";
-            }
             mainBlock.mainPasswordBox.forceActiveFocus();
             lockScreenUi.hadPrompt = true;
         }
@@ -182,7 +176,10 @@ PlasmaCore.ColorScope {
         Timer {
             id: graceLockTimer
             interval: 3000
-            onTriggered: authenticator.tryUnlock();
+            onTriggered: {
+                root.clearPassword();
+                authenticator.tryUnlock();
+            }
         }
 
         Component.onCompleted: PropertyAnimation { id: launchAnimation; target: lockScreenRoot; property: "opacity"; from: 0; to: 1; duration: PlasmaCore.Units.veryLongDuration * 2 }
