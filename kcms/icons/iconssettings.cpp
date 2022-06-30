@@ -4,6 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+#include <QApplication>
 #include <QDebug>
 #include <QObject>
 
@@ -41,6 +42,6 @@ void IconsSettings::updateIconTheme()
             KIconLoader::emitChange(KIconLoader::Group(i));
         }
 
-        KBuildSycocaProgressDialog::rebuildKSycoca(nullptr);
+        KBuildSycocaProgressDialog::rebuildKSycoca(QApplication::activeWindow());
     }
 }
