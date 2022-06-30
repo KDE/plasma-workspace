@@ -89,6 +89,7 @@ QQC2.StackView {
         }
         targetSize: root.sourceSize
 
+        onActualSizeChanged: Qt.callLater(loadImage);
         onColorSchemeChanged: loadImageImmediately();
     }
 

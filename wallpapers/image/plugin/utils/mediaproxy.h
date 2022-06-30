@@ -78,6 +78,13 @@ Q_SIGNALS:
     void targetSizeChanged(const QSize &size);
 
     /**
+     * Emitted when the target size changes while the provider type is single image
+     * or the current wallpaper is animated.
+     * The frontend is required to force update the wallpaper.
+     */
+    void actualSizeChanged();
+
+    /**
      * Emitted when system color scheme changes. The frontend is required to
      * reload the wallpaper even if the image path is not changed.
      */

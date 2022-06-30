@@ -91,7 +91,12 @@ void MediaProxy::setTargetSize(const QSize &size)
     Q_EMIT targetSizeChanged(size);
 
     if (m_providerType == Provider::Type::Package) {
+        determineBackgroundType(); // In case file format changes after size changes
         updateModelImage();
+    }
+    if (m_providerType == Provider::Type::Image || m_backgroundType == BackgroundType::Type::AnimatedImage) {
+        // When KPackage contains animated wallpapers, image provider is not used.
+        Q_EMIT actualSizeChanged();
     }
 }
 
