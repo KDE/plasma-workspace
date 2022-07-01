@@ -157,22 +157,24 @@ QQC2.StackView {
     }
 
     function replaceWhenLoaded() {
-        if (pendingImage.status !== Image.Loading) {
-            // BUG 454908: Update accent color
-            pendingImage.QQC2.StackView.onActivated.connect(wallpaper.repaintNeeded);
-            pendingImage.QQC2.StackView.onRemoved.connect(pendingImage.destroy);
-            root.replace(pendingImage, {},
-                doesSkipAnimation ? QQC2.StackView.Immediate : QQC2.StackView.Transition);
-            pendingImage.statusChanged.disconnect(replaceWhenLoaded);
-
-            wallpaper.loading = false;
-
-            if (pendingImage.status !== Image.Ready) {
-                mediaProxy.useSingleImageDefaults();
-            }
-
-            pendingImage = null;
+        if (pendingImage.status === Image.Loading) {
+            return;
         }
+
+        // BUG 454908: Update accent color
+        pendingImage.QQC2.StackView.onActivated.connect(wallpaper.repaintNeeded);
+        pendingImage.QQC2.StackView.onRemoved.connect(pendingImage.destroy);
+        root.replace(pendingImage, {},
+            doesSkipAnimation ? QQC2.StackView.Immediate : QQC2.StackView.Transition);
+        pendingImage.statusChanged.disconnect(replaceWhenLoaded);
+
+        wallpaper.loading = false;
+
+        if (pendingImage.status !== Image.Ready) {
+            mediaProxy.useSingleImageDefaults();
+        }
+
+        pendingImage = null;
     }
 
     replaceEnter: Transition {
