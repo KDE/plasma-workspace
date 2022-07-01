@@ -21,6 +21,15 @@ QQC2.StackView {
     readonly property bool blur: wallpaper.configuration.Blur
     readonly property size sourceSize: Qt.size(root.width * Screen.devicePixelRatio, root.height * Screen.devicePixelRatio)
 
+    /**
+     * Stores pending image here to avoid the default image overriding the true image.
+     *
+     * @see BUG 456189
+     */
+    property Item pendingImage
+
+    property bool doesSkipAnimation: true
+
     // Ppublic API functions accessible from C++:
 
     // e.g. used by WallpaperInterface for drag and drop
@@ -123,38 +132,47 @@ QQC2.StackView {
     }
 
     function loadImage(skipAnimation) {
-        const _skipAnimation = root.currentItem == undefined || !!skipAnimation;
+        if (pendingImage) {
+            pendingImage.statusChanged.disconnect(replaceWhenLoaded);
+            pendingImage.destroy();
+            pendingImage = null;
+        }
+
+        doesSkipAnimation = root.currentItem == undefined || !!skipAnimation;
         const baseImage = createBackgroundComponent();
-        var pendingImage = baseImage.createObject(root, {
+        pendingImage = baseImage.createObject(root, {
             // Use mediaProxy instead of root because colorSchemeChanged needs immediately update the wallpaper
             "source": mediaProxy.modelImage,
                         "fillMode": root.fillMode,
                         "sourceSize": root.sourceSize,
                         "color": root.configColor,
                         "blur": root.blur,
-            "opacity": _skipAnimation ? 1: 0,
+            "opacity": doesSkipAnimation ? 1: 0,
             "width": root.width,
             "height": root.height,
         });
 
-        function replaceWhenLoaded() {
-            if (pendingImage.status !== Image.Loading) {
-                // BUG 454908: Update accent color
-                pendingImage.QQC2.StackView.onActivated.connect(wallpaper.repaintNeeded);
-                pendingImage.QQC2.StackView.onRemoved.connect(pendingImage.destroy);
-                root.replace(pendingImage, {},
-                    _skipAnimation ? QQC2.StackView.Immediate : QQC2.StackView.Transition);
-                pendingImage.statusChanged.disconnect(replaceWhenLoaded);
-
-                wallpaper.loading = false;
-
-                if (pendingImage.status !== Image.Ready) {
-                    mediaProxy.useSingleImageDefaults();
-                }
-            }
-        }
         pendingImage.statusChanged.connect(replaceWhenLoaded);
         replaceWhenLoaded();
+    }
+
+    function replaceWhenLoaded() {
+        if (pendingImage.status !== Image.Loading) {
+            // BUG 454908: Update accent color
+            pendingImage.QQC2.StackView.onActivated.connect(wallpaper.repaintNeeded);
+            pendingImage.QQC2.StackView.onRemoved.connect(pendingImage.destroy);
+            root.replace(pendingImage, {},
+                doesSkipAnimation ? QQC2.StackView.Immediate : QQC2.StackView.Transition);
+            pendingImage.statusChanged.disconnect(replaceWhenLoaded);
+
+            wallpaper.loading = false;
+
+            if (pendingImage.status !== Image.Ready) {
+                mediaProxy.useSingleImageDefaults();
+            }
+
+            pendingImage = null;
+        }
     }
 
     replaceEnter: Transition {
