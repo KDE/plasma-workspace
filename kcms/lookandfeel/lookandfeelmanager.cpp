@@ -136,7 +136,7 @@ void LookAndFeelManager::setShellPackage(const QString &value)
     m_plasmashellChanged = true;
 }
 
-void LookAndFeelManager::setWindowDecoration(const QString &library, const QString &theme)
+void LookAndFeelManager::setWindowDecoration(const QString &library, const QString &theme, bool noPlugin)
 {
     if (library.isEmpty()) {
         return;
@@ -149,6 +149,7 @@ void LookAndFeelManager::setWindowDecoration(const QString &library, const QStri
     KConfigGroup defaultGroup(&configDefault, QStringLiteral("org.kde.kdecoration2"));
     writeNewDefaults(group, defaultGroup, QStringLiteral("library"), library);
     writeNewDefaults(group, defaultGroup, QStringLiteral("theme"), theme, KConfig::Notify);
+    writeNewDefaults(group, defaultGroup, QStringLiteral("NoPlugin"), noPlugin ? "true" : "false", KConfig::Notify);
 }
 
 void LookAndFeelManager::setWidgetStyle(const QString &style)
@@ -455,11 +456,15 @@ void LookAndFeelManager::save(const KPackage::Package &package, const KPackage::
         if (m_appearanceToApply.testFlag(LookAndFeelManager::WindowDecoration)) {
             group = KConfigGroup(conf, "kwinrc");
             group = KConfigGroup(&group, "org.kde.kdecoration2");
+
 #ifdef HAVE_BREEZE_DECO
-            setWindowDecoration(group.readEntry("library", QStringLiteral(BREEZE_KDECORATION_PLUGIN_ID)), group.readEntry("theme", QStringLiteral("Breeze")));
+            setWindowDecoration(group.readEntry("library", QStringLiteral(BREEZE_KDECORATION_PLUGIN_ID)),
+                                group.readEntry("theme", QStringLiteral("Breeze")),
+                                group.readEntry("NoPlugin", false));
 #else
             setWindowDecoration(group.readEntry("library", QStringLiteral("org.kde.kwin.aurorae")),
-                                group.readEntry("theme", QStringLiteral("kwin4_decoration_qml_plastik")));
+                                group.readEntry("theme", QStringLiteral("kwin4_decoration_qml_plastik")),
+                                group.readEntry("NoPlugin", false));
 #endif
         }
 

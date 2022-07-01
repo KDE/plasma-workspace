@@ -286,7 +286,7 @@ void KCMLookandFeel::addKPackageToModel(const KPackage::Package &pkg)
 
         cg = KConfigGroup(conf, "kwinrc");
         cg = KConfigGroup(&cg, "org.kde.kdecoration2");
-        row->setData(!cg.readEntry("library", QString()).isEmpty(), HasWindowDecorationRole);
+        row->setData(!cg.readEntry("library", QString()).isEmpty() || !cg.readEntry("NoPlugin", QString()).isEmpty(), HasWindowDecorationRole);
 
         cg = KConfigGroup(conf, "kdeglobals");
         KConfigGroup cg2(&cg, "WM"); //for checking activeFont
@@ -417,12 +417,12 @@ void KCMLookandFeel::resetLayoutToApply()
         return;
     }
 
-    constexpr std::array layoutPairs {
+    constexpr std::array layoutPairs{
         std::make_pair(LookAndFeelManager::DesktopLayout, HasDesktopLayoutRole),
         std::make_pair(LookAndFeelManager::WindowPlacement, HasDesktopLayoutRole),
         std::make_pair(LookAndFeelManager::ShellPackage, HasDesktopLayoutRole),
         std::make_pair(LookAndFeelManager::DesktopSwitcher, HasDesktopLayoutRole),
-    }; //NOTE: Items that have their own Has...Role instead will be added soon
+    }; // NOTE: Items that have their own Has...Role instead will be added soon
     for (const auto &pair : layoutPairs) {
         applyFlags.setFlag(pair.first, m_model->data(m_model->index(index, 0), pair.second).toBool());
     }

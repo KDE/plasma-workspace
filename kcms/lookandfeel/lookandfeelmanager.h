@@ -49,10 +49,10 @@ public:
 
     enum LayoutToApplyFlags {
         DesktopLayout = 1 << 0,
-        WindowPlacement = 1 << 1, //FIXME: Do we still want these three?
+        WindowPlacement = 1 << 1, // FIXME: Do we still want these three?
         ShellPackage = 1 << 2,
         DesktopSwitcher = 1 << 3,
-        LayoutSettings = (1<< 4) -1, //NOTE: This will be used once TitlebarLayout, etc. is added, it's just here for now
+        LayoutSettings = (1 << 4) - 1, // NOTE: This will be used once TitlebarLayout, etc. is added, it's just here for now
         // to simplify lnftool and lookandfeelmanager
     };
     Q_DECLARE_FLAGS(LayoutToApply, LayoutToApplyFlags)
@@ -85,7 +85,7 @@ public:
     void setLockScreen(const QString &theme);
     void setWindowSwitcher(const QString &theme);
     void setDesktopSwitcher(const QString &theme);
-    void setWindowDecoration(const QString &library, const QString &theme);
+    void setWindowDecoration(const QString &library, const QString &theme, bool noPlugin);
     void setWindowPlacement(const QString &value);
     void setShellPackage(const QString &name);
 
