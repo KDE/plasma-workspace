@@ -49,11 +49,13 @@ public:
     Q_INVOKABLE void editApplication(int row, QQuickItem *context);
     Q_INVOKABLE void addScript(const QUrl &url, AutostartEntrySource kind);
     Q_INVOKABLE void showApplicationDialog(QQuickItem *context);
+    Q_INVOKABLE void makeFileExecutable(const QString &fileName);
 
     void load();
 
 Q_SIGNALS:
     void error(const QString &message);
+    void nonExecutableScript(const QString &fileName, AutostartModel::AutostartEntrySource kind);
 
 private:
     void addApplication(const KService::Ptr &service);

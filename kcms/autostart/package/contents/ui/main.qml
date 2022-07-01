@@ -21,16 +21,43 @@ KCM.ScrollViewKCM {
 
     header: Kirigami.InlineMessage {
         id: errorMessage
-        type: Kirigami.MessageType.Error
         showCloseButton: true
+
 
         Connections {
             target: kcm.model
             function onError(message) {
+                errorMessage.type = Kirigami.MessageType.Error
                 errorMessage.visible = true
                 errorMessage.text = message
             }
         }
+
+        Connections {
+            target: kcm.model
+            property var fixItAction: Kirigami.Action {
+                property string fileName
+                text: i18n("Make Executable")
+                icon.name: "dialog-ok"
+                onTriggered: {
+                    kcm.model.makeFileExecutable(fileName)
+                    errorMessage.visible = false
+                }
+            }
+            function onNonExecutableScript(fileName, kind) {
+                fixItAction.fileName = fileName
+                errorMessage.type = Kirigami.MessageType.Warning
+                errorMessage.visible = true
+                errorMessage.actions = [fixItAction]
+
+                if (kind === AutostartModel.PlasmaShutdown) {
+                    errorMessage.text = i18nd("kcm_autostart", "The file '%1' must be executable to run at logout.", fileName)
+                } else {                                                 '  '
+                    errorMessage.text = i18nd("kcm_autostart", "The file '%1' must be executable to run at login.", fileName)
+                }
+            }
+        }
+
     }
 
     view: ListView {
