@@ -4,8 +4,8 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+#include <KIO/WorkerBase>
 #include <KLocalizedString>
-#include <KIO/SlaveBase>
 #include <KService>
 #include <KServiceGroup>
 #include <sys/stat.h>
@@ -19,10 +19,10 @@
 class KIOPluginForMetaData : public QObject
 {
     Q_OBJECT
-    Q_PLUGIN_METADATA(IID "org.kde.kio.slave.applications" FILE "applications.json")
+    Q_PLUGIN_METADATA(IID "org.kde.kio.worker.applications" FILE "applications.json")
 };
 
-class ApplicationsProtocol : public KIO::SlaveBase
+class ApplicationsProtocol : public KIO::WorkerBase
 {
 public:
     enum RunMode {
@@ -31,9 +31,9 @@ public:
     };
     ApplicationsProtocol(const QByteArray &protocol, const QByteArray &pool, const QByteArray &app);
     ~ApplicationsProtocol() override;
-    void get(const QUrl &url) override;
-    void stat(const QUrl &url) override;
-    void listDir(const QUrl &url) override;
+    KIO::WorkerResult get(const QUrl &url) override;
+    KIO::WorkerResult stat(const QUrl &url) override;
+    KIO::WorkerResult listDir(const QUrl &url) override;
 
 private:
     RunMode m_runMode;
@@ -45,8 +45,8 @@ Q_DECL_EXPORT int kdemain(int argc, char **argv)
     QCoreApplication app(argc, argv);
     app.setApplicationName("kio_applications");
 
-    ApplicationsProtocol slave(argv[1], argv[2], argv[3]);
-    slave.dispatchLoop();
+    ApplicationsProtocol worker(argv[1], argv[2], argv[3]);
+    worker.dispatchLoop();
     return 0;
 }
 }
@@ -80,7 +80,7 @@ static void createDirEntry(KIO::UDSEntry &entry, const QString &name, const QStr
 }
 
 ApplicationsProtocol::ApplicationsProtocol(const QByteArray &protocol, const QByteArray &pool, const QByteArray &app)
-    : SlaveBase(protocol, pool, app)
+    : WorkerBase(protocol, pool, app)
 {
     // Adjusts which part of the K Menu to virtualize.
     if (protocol == "programs")
@@ -93,20 +93,20 @@ ApplicationsProtocol::~ApplicationsProtocol()
 {
 }
 
-void ApplicationsProtocol::get(const QUrl &url)
+KIO::WorkerResult ApplicationsProtocol::get(const QUrl &url)
 {
     KService::Ptr service = KService::serviceByDesktopName(url.fileName());
     if (service && service->isValid()) {
         const QString localPath = QStandardPaths::locate(QStandardPaths::ApplicationsLocation, QStringLiteral("%1.desktop").arg(service->desktopEntryName()));
         QUrl redirUrl(QUrl::fromLocalFile(localPath));
         redirection(redirUrl);
-        finished();
+        return KIO::WorkerResult::pass();
     } else {
-        error(KIO::ERR_IS_DIRECTORY, url.toDisplayString());
+        return KIO::WorkerResult::fail(KIO::ERR_IS_DIRECTORY, url.toDisplayString());
     }
 }
 
-void ApplicationsProtocol::stat(const QUrl &url)
+KIO::WorkerResult ApplicationsProtocol::stat(const QUrl &url)
 {
     KIO::UDSEntry entry;
 
@@ -128,21 +128,15 @@ void ApplicationsProtocol::stat(const QUrl &url)
         if (service && service->isValid()) {
             createFileEntry(entry, service, url);
         } else {
-
-#if KIO_VERSION >= QT_VERSION_CHECK(5, 96, 0)
-            error(KIO::ERR_WORKER_DEFINED, i18n("Unknown application folder"));
-#else
-            error(KIO::ERR_SLAVE_DEFINED, i18n("Unknown application folder"));
-#endif
-            return;
+            return KIO::WorkerResult::fail(KIO::ERR_WORKER_DEFINED, i18n("Unknown application folder"));
         }
     }
 
     statEntry(entry);
-    finished();
+    return KIO::WorkerResult::pass();
 }
 
-void ApplicationsProtocol::listDir(const QUrl &url)
+KIO::WorkerResult ApplicationsProtocol::listDir(const QUrl &url)
 {
     QString groupPath = url.path();
     if (!groupPath.endsWith('/'))
@@ -152,8 +146,7 @@ void ApplicationsProtocol::listDir(const QUrl &url)
     KServiceGroup::Ptr grp = KServiceGroup::group(groupPath);
 
     if (!grp || !grp->isValid()) {
-        error(KIO::ERR_DOES_NOT_EXIST, groupPath);
-        return;
+        return KIO::WorkerResult::fail(KIO::ERR_DOES_NOT_EXIST, groupPath);
     }
 
     unsigned int count = 0;
@@ -196,7 +189,7 @@ void ApplicationsProtocol::listDir(const QUrl &url)
     }
 
     totalSize(count);
-    finished();
+    return KIO::WorkerResult::pass();
 }
 
 #include "kio_applications.moc"
