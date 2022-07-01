@@ -5,9 +5,9 @@
 */
 
 #include <KLocalizedString>
-#include <kio/slavebase.h>
-#include <kservice.h>
-#include <kservicegroup.h>
+#include <KIO/SlaveBase>
+#include <KService>
+#include <KServiceGroup>
 #include <sys/stat.h>
 #include <time.h>
 
