@@ -404,10 +404,16 @@ PlasmaExtras.Representation {
 
                     Component {
                         id: notificationDelegate
-                        ColumnLayout {
-                            spacing: PlasmaCore.Units.smallSpacing
+                        Item {
+                            height: rowLayout.implicitHeight
+                                + toolButton.height
+                                + separator.height
+                                + bottomSpacer.height
 
                             RowLayout {
+                                id: rowLayout
+                                width: parent.width
+
                                 Item {
                                     id: groupLineContainer
                                     Layout.fillHeight: true
@@ -535,6 +541,14 @@ PlasmaExtras.Representation {
                             }
 
                             PlasmaComponents3.ToolButton {
+                                id: toolButton
+                                anchors {
+                                    top: rowLayout.bottom
+                                    topMargin: PlasmaCore.Units.smallSpacing
+                                    left: parent.left
+                                }
+                                height: visible ? implicitHeight : 0
+
                                 icon.name: model.isGroupExpanded ? "arrow-up" : "arrow-down"
                                 text: model.isGroupExpanded ? i18n("Show Fewer")
                                                             : i18nc("Expand to show n more notifications",
@@ -545,14 +559,27 @@ PlasmaExtras.Representation {
                             }
 
                             PlasmaCore.SvgItem {
-                                Layout.fillWidth: true
-                                Layout.bottomMargin: PlasmaCore.Units.smallSpacing
+                                id: separator
+                                anchors {
+                                    top: toolButton.bottom
+                                    topMargin: PlasmaCore.Units.smallSpacing
+                                }
+                                width: parent.width
+                                height: visible ? implicitHeight : 0
+
                                 elementId: "horizontal-line"
                                 svg: lineSvg
 
                                 // property is only atached to the delegate itself (the Loader in our case)
                                 visible: (!model.isInGroup || delegate.ListView.nextSection !== delegate.ListView.section)
                                                 && delegate.ListView.nextSection !== "" // don't show after last item
+                            }
+
+                            Item {
+                                id: bottomSpacer
+                                anchors.top: separator.bottom
+                                width: parent.width
+                                height: separator.visible ? PlasmaCore.Units.smallSpacing : 0
                             }
                         }
                     }
