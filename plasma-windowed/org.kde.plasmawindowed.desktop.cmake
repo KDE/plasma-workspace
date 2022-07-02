@@ -2,6 +2,7 @@
 Name=Plasma Windowed
 Name[ar]=بلازما المؤطرة
 Name[az]=Pəncərədə Plasma
+Name[bg]=Plasma приспособления в самостоятелен прозорец
 Name[bs]=Plazma uprozorena
 Name[ca]=Plasma amb finestres
 Name[ca@valencia]=Plasma amb finestres
@@ -54,6 +55,7 @@ Name[zh_TW]=Plasma 視窗
 Comment=Run Plasmoids as simple applications
 Comment[ar]=شغل بلازمويد كتطبيق بسيط
 Comment[az]=Plasma əlavəsini adi tətbiq kimi başlatmaq
+Comment[bg]=Стартиране на приспособленията на Plasma като прости приложения
 Comment[bs]=Pokreni plazmoide kao običnu aplikaciju
 Comment[ca]=Executa els plasmoides com a simples aplicacions
 Comment[ca@valencia]=Executa els plasmoides com a simples aplicacions
