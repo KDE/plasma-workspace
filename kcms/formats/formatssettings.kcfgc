@@ -1,6 +1,0 @@
-File=formatssettings.kcfg
-ClassName=FormatsSettings
-Mutators=true
-DefaultValueGetters=true
-GenerateProperties=true
-ParentInConstructor=true

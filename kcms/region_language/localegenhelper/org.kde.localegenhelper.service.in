@@ -1,0 +1,8 @@
+#org.kde.localegenhelper.service.in
+#SPDX-FileCopyrightText: 2022 Han Young <hanyoung@protonmail.com>
+#SPDX-License-Identifier: GPL-2.0-or-later
+
+[D-BUS Service]
+Name=org.kde.localegenhelper
+Exec=@CMAKE_INSTALL_PREFIX@/bin/plasma-localegen-helper
+User=root

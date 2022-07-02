@@ -62,3 +62,4 @@ Dependencies:
 - 'on': ['Linux']
   'require':
     'frameworks/networkmanager-qt': '@latest'
+    'libraries/polkit-qt-1': '@latest'

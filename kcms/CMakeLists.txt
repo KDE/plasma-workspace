@@ -2,7 +2,6 @@ add_subdirectory(krdb)
 
 add_subdirectory(desktoptheme)
 add_subdirectory(icons)
-add_subdirectory(translations)
 
 if(KUserFeedback_FOUND)
     add_subdirectory(feedback)
@@ -21,7 +20,7 @@ if(FONTCONFIG_FOUND)
 endif()
 
 add_subdirectory(autostart)
-add_subdirectory(formats)
+add_subdirectory(region_language)
 add_subdirectory(notifications)
 add_subdirectory(nightcolor)
 add_subdirectory(users)

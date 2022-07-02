@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.22)
 
 project(plasma-workspace)
 set(PROJECT_VERSION "5.25.80")
@@ -169,14 +169,58 @@ if(${AppStreamQt_FOUND})
     set(HAVE_APPSTREAMQT true)
 endif()
 
-find_package(PackageKitQt${QT_MAJOR_VERSION})
-set_package_properties(PackageKitQt${QT_MAJOR_VERSION}
-        PROPERTIES DESCRIPTION "Software Manager integration"
-        TYPE OPTIONAL
-        PURPOSE "Used to install additional language packages on demand"
+if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+    # find out if the build system is Ubuntu based
+    cmake_host_system_information(RESULT DISTRO_NAME QUERY DISTRIB_ID)
+    cmake_host_system_information(RESULT DISTRO_ID_LIKE QUERY DISTRIB_ID_LIKE)
+    string(COMPARE EQUAL "ubuntu" "${DISTRO_NAME}" SYSTEM_UBUNTU_BASED)
+    string(FIND "${DISTRO_ID_LIKE}" "ubuntu" FINDINDEX)
+    if(NOT (FINDINDEX EQUAL -1))
+        set(SYSTEM_UBUNTU_BASED ON)
+    endif()
+
+    option(UBUNTU_PACKAGEKIT "Install required package for language on Ubuntu Based systems, PackageKitQt5 required" ${SYSTEM_UBUNTU_BASED})
+    if(UBUNTU_PACKAGEKIT)
+        set(OS_UBUNTU TRUE)
+    endif()
+
+    set(GLIBC_LOCALE_GEN_DEFAULT ON)
+    if(UBUNTU_PACKAGEKIT)
+        set(GLIBC_LOCALE_GEN_DEFAULT OFF)
+    endif()
+
+    option(GLIBC_LOCALE_GEN "Auto generate Glibc locale with locale-gen and /etc/locale.gen" ${GLIBC_LOCALE_GEN_DEFAULT})
+    if(GLIBC_LOCALE_GEN AND UBUNTU_PACKAGEKIT)
+        message(FATAL_ERROR "UBUNTU_PACKAGEKIT and GLIBC_LOCALE_GEN both enabled, only UBUNTU_PACKEGKIT will be used")
+    endif()
+    if(GLIBC_LOCALE_GEN)
+        set(GLIBC_LOCALE TRUE)
+    endif()
+    if(UBUNTU_PACKAGEKIT OR GLIBC_LOCALE_GEN)
+        set(REGION_LANG_GENERATE_LOCALE TRUE)
+    endif()
+
+    ################## Find libraries ###################
+    if(REGION_LANG_GENERATE_LOCALE)
+        find_package(PolkitQt5-1)
+        set_package_properties(PolkitQt5-1
+                PROPERTIES DESCRIPTION "DBus interface wrapper for Polkit"
+                PURPOSE "Communicate with localegen helper in region & lang kcm"
+                TYPE REQUIRED
         )
-if(PackageKitQt${QT_MAJOR_VERSION}_FOUND)
-    set(HAVE_PACKAGEKIT TRUE)
+    endif()
+
+    if(UBUNTU_PACKAGEKIT)
+        find_package(PackageKitQt${QT_MAJOR_VERSION})
+        set_package_properties(PackageKitQt${QT_MAJOR_VERSION}
+                PROPERTIES DESCRIPTION "Software Manager integration"
+                TYPE OPTIONAL
+                PURPOSE "Used to install additional language packages on demand"
+                )
+
+    endif()
+
+    find_package(KF5ItemModels)
 endif()
 
 find_package(ICU COMPONENTS i18n uc)

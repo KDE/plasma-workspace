@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+org.kde.localegenhelper.policy
+SPDX-FileCopyrightText: 2022 Han Young <hanyoung@protonmail.com>
+SPDX-License-Identifier: GPL-2.0-or-later
+-->
+<!DOCTYPE policyconfig PUBLIC
+ "-//freedesktop//DTD PolicyKit Policy Configuration 1.0//EN"
+ "http://www.freedesktop.org/software/polkit/policyconfig-1.dtd">
+<policyconfig>
+
+  <action id="org.kde.localegenhelper.enableLocales">
+    <message>Authentication is required to generate the system locale</message>
+    <defaults>
+      <allow_active>auth_self</allow_active>
+    </defaults>
+  </action>
+
+</policyconfig>
+
+

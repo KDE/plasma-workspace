@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <include>QtGlobal</include>
+  <include>KLocalizedString</include>
+  <include>QLocale</include>
+  <kcfgfile name="plasma-localerc" />
+  <group name="Formats">
+    <entry key="LANG" name="lang" type="String">
+        <code>
+            QString lang = QString::fromLocal8Bit(qgetenv("LANG"));
+        </code>
+        <default code="true">lang</default>
+    </entry>
+    <entry key="LC_NUMERIC" name="numeric" type="String">
+        <default code="true">i18n("Inherit Language")</default>
+    </entry>
+    <entry key="LC_TIME" name="time" type="String">
+        <default code="true">i18n("Inherit Language")</default>
+    </entry>
+    <entry key="LC_MONETARY" name="monetary" type="String">
+        <default code="true">i18n("Inherit Language")</default>
+    </entry>
+    <entry key="LC_MEASUREMENT" name="measurement" type="String">
+        <default code="true">i18n("Inherit Language")</default>
+    </entry>
+    <entry key="LC_CTYPE" name="ctype" type="String">
+        <default code="true">i18n("Inherit Language")</default>
+    </entry>
+   </group>
+   <group name="Translations">
+    <entry key="LANGUAGE" name="language" type="String">
+    </entry>
+  </group>
+</kcfg>
