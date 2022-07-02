@@ -158,11 +158,11 @@ PlasmaExtras.Representation {
             property real scaleFactor: 1.0
             property ShaderEffectSource source: ShaderEffectSource {
                 id: shaderEffectSource
-                sourceItem: albumArt
+                sourceItem: albumArt.albumArt
             }
 
             anchors.centerIn: parent
-            visible: (exitTransition.running || popExitTransition.running || albumArt.hasImage) && !softwareRendering
+            visible: (albumArt.animating || albumArt.hasImage) && !softwareRendering
 
             layer.enabled: !softwareRendering
             layer.effect: HueSaturation {
@@ -185,20 +185,20 @@ PlasmaExtras.Representation {
             // use State to avoid unnecessary reevaluation of width and height
             states: State {
                 name: "albumArtReady"
-                when: Plasmoid.expanded && backgroundImage.visible && albumArt.currentItem.paintedWidth > 0
+                when: Plasmoid.expanded && backgroundImage.visible && shaderEffectSource.sourceItem.currentItem.paintedWidth > 0
                 PropertyChanges {
                     target: backgroundImage
-                    scaleFactor: Math.max(parent.width / albumArt.currentItem.paintedWidth, parent.height / albumArt.currentItem.paintedHeight)
-                    width: Math.round(albumArt.currentItem.paintedWidth * scaleFactor)
-                    height: Math.round(albumArt.currentItem.paintedHeight * scaleFactor)
+                    scaleFactor: Math.max(parent.width / shaderEffectSource.sourceItem.currentItem.paintedWidth, parent.height / shaderEffectSource.sourceItem.currentItem.paintedHeight)
+                    width: Math.round(shaderEffectSource.sourceItem.currentItem.paintedWidth * scaleFactor)
+                    height: Math.round(shaderEffectSource.sourceItem.currentItem.paintedHeight * scaleFactor)
                 }
                 PropertyChanges {
                     target: shaderEffectSource
                     // HACK: Fix background ratio when DPI > 1
-                    sourceRect: Qt.rect(albumArt.width - albumArt.currentItem.paintedWidth,
-                                    Math.round((albumArt.height - albumArt.currentItem.paintedHeight) / 2),
-                                    albumArt.currentItem.paintedWidth,
-                                    albumArt.currentItem.paintedHeight)
+                    sourceRect: Qt.rect(shaderEffectSource.sourceItem.width - shaderEffectSource.sourceItem.currentItem.paintedWidth,
+                                    Math.round((shaderEffectSource.sourceItem.height - shaderEffectSource.sourceItem.currentItem.paintedHeight) / 2),
+                                    shaderEffectSource.sourceItem.currentItem.paintedWidth,
+                                    shaderEffectSource.sourceItem.currentItem.paintedHeight)
                 }
             }
         }
@@ -213,177 +213,33 @@ PlasmaExtras.Representation {
 
             spacing: PlasmaCore.Units.largeSpacing
 
-            Item {
+            AlbumArtStackView {
+                id: albumArt
+
                 Layout.fillWidth: true
                 Layout.fillHeight: true
                 Layout.preferredWidth: 50
 
-                QQC2.StackView {
-                    id: albumArt
-                    anchors.fill: parent
+                Connections {
+                    enabled: Plasmoid.expanded
+                    target: root
 
-                    readonly property bool hasImage: currentItem instanceof Image
-                        && (currentItem.status === Image.Ready || currentItem.status === Image.Loading)
-
-                    replaceEnter: Transition {
-                        OpacityAnimator {
-                            from: 0
-                            to: 1
-                            duration: PlasmaCore.Units.longDuration
-                        }
-                    }
-
-                    replaceExit: Transition {
-                        id: exitTransition
-
-                        SequentialAnimation {
-                            PauseAnimation {
-                                duration: PlasmaCore.Units.longDuration
-                            }
-
-                            /**
-                            * If the new ratio and the old ratio are different,
-                            * perform a fade-out animation for the old image
-                            * to prevent it from suddenly disappearing.
-                            */
-                            OpacityAnimator {
-                                id: exitTransitionOpacityAnimator
-                                from: 1
-                                to: 0
-                                duration: 0
-                            }
-                        }
-                    }
-
-                    popExit: Transition {
-                        id: popExitTransition
-
-                        OpacityAnimator {
-                            from: 1
-                            to: 0
-                            duration: PlasmaCore.Units.longDuration
-                        }
-                    }
-
-                    Connections {
-                        enabled: Plasmoid.expanded
-                        target: root
-
-                        function onAlbumArtChanged() {
-                            albumArt.loadAlbumArt();
-                        }
-                    }
-
-                    Connections {
-                        target: plasmoid
-
-                        function onExpandedChanged() {
-                            // NOTE: Don't use strict equality
-                            if (!Plasmoid.expanded || (albumArt.currentItem instanceof Image && albumArt.currentItem.source == root.albumArt)) {
-                                return;
-                            }
-
-                            albumArt.loadAlbumArt();
-                        }
-                    }
-
-                    function loadAlbumArt() {
-                        if (!root.albumArt) {
-                            albumArt.clear(QQC2.StackView.PopTransition);
-                            return;
-                        }
-
-                        const oldImageRatio = albumArt.currentItem instanceof Image ? albumArt.currentItem.sourceSize.width / albumArt.currentItem.sourceSize.height : 1;
-                        const pendingImage = albumArtComponent.createObject(albumArt, {
-                            "source": root.albumArt,
-                            "opacity": 0,
-                        });
-
-                        function replaceWhenLoaded() {
-                            if (pendingImage.status === Image.Loading) {
-                                return;
-                            }
-                            if (pendingImage.status === Image.Null || pendingImage.status === Image.Error) {
-                                pendingImage.destroy();
-
-                                // Also clear the old image
-                                albumArt.clear(QQC2.StackView.PopTransition);
-
-                                return;
-                            }
-
-                            const newImageRatio = pendingImage.sourceSize.width / pendingImage.sourceSize.height;
-                            exitTransitionOpacityAnimator.duration = oldImageRatio === newImageRatio ? 0 : PlasmaCore.Units.longDuration;
-
-                            albumArt.replace(pendingImage, {}, QQC2.StackView.ReplaceTransition);
-                            pendingImage.statusChanged.disconnect(replaceWhenLoaded);
-                        }
-
-                        pendingImage.statusChanged.connect(replaceWhenLoaded);
-                        replaceWhenLoaded();
-                    }
-
-                    Component {
-                        id: albumArtComponent
-
-                        Image { // Album Art
-                            horizontalAlignment: Image.AlignRight
-                            verticalAlignment: Image.AlignVCenter
-                            fillMode: Image.PreserveAspectFit
-
-                            asynchronous: true
-                            cache: false
-
-                            QQC2.StackView.onRemoved: {
-                                source = ""; // HACK: Reduce memory usage
-                                destroy();
-                            }
-                        }
+                    function onAlbumArtChanged() {
+                        albumArt.loadAlbumArt();
                     }
                 }
 
+                Connections {
+                    target: Plasmoid.self
 
-                Loader {
-                    id: fallbackIconLoader
-                    // When albumArt is shown, the icon is unloaded to reduce memory usage.
-                    readonly property string icon: (mpris2Source.currentData && mpris2Source.currentData["Desktop Icon Name"]) || "media-album-cover"
-                    active: Plasmoid.expanded && !albumArt.hasImage
-                    anchors.fill: parent
-
-                    sourceComponent: root.track ? fallbackIconItem : placeholderMessage
-
-                    opacity: active ? 1 : 0
-                    Behavior on opacity {
-                        NumberAnimation {
-                            duration: PlasmaCore.Units.longDuration
+                    function onExpandedChanged() {
+                        // NOTE: Don't use strict equality
+                        if (!Plasmoid.expanded
+                        || (albumArt.albumArt.currentItem instanceof Image && albumArt.albumArt.currentItem.source == root.albumArt)) {
+                            return;
                         }
-                    }
 
-                    Component {
-                        id: fallbackIconItem
-
-                        PlasmaCore.IconItem { // Fallback
-                            source: icon
-                            anchors {
-                                fill: parent
-                                margins: PlasmaCore.Units.largeSpacing * 2
-                            }
-                        }
-                    }
-
-                    Component {
-                        id: placeholderMessage
-
-                        Item { // Put PlaceholderMessage in Item so PlaceholderMessage will not fill its parent.
-                            anchors.fill: parent
-
-                            PlasmaExtras.PlaceholderMessage { // "No media playing" placeholder message
-                                width: parent.width // For text wrap
-                                anchors.centerIn: parent
-                                iconName: icon
-                                text: i18n("No media playing")
-                            }
-                        }
+                        albumArt.loadAlbumArt();
                     }
                 }
             }
