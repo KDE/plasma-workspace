@@ -13,6 +13,7 @@
 
 #include <QStandardPaths>
 #include <QUrl>
+#include <kio_version.h>
 
 // Pseudo plugin class to embed meta data
 class KIOPluginForMetaData : public QObject
@@ -127,7 +128,12 @@ void ApplicationsProtocol::stat(const QUrl &url)
         if (service && service->isValid()) {
             createFileEntry(entry, service, url);
         } else {
+
+#if KIO_VERSION >= QT_VERSION_CHECK(5, 96, 0)
+            error(KIO::ERR_WORKER_DEFINED, i18n("Unknown application folder"));
+#else
             error(KIO::ERR_SLAVE_DEFINED, i18n("Unknown application folder"));
+#endif
             return;
         }
     }
