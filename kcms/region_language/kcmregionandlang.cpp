@@ -38,6 +38,8 @@ KCMRegionAndLang::KCMRegionAndLang(QObject *parent, const KPluginMetaData &data,
     connect(m_generator, &LocaleGeneratorBase::success, this, &KCMRegionAndLang::generateFinished);
     connect(m_generator, &LocaleGeneratorBase::needsFont, this, &KCMRegionAndLang::requireInstallFont);
     connect(m_generator, &LocaleGeneratorBase::success, this, &KCMRegionAndLang::saveToConfigFile);
+    connect(m_generator, &LocaleGeneratorBase::userHasToGenerateManually, this, &KCMRegionAndLang::saveToConfigFile);
+    connect(m_generator, &LocaleGeneratorBase::needsFont, this, &KCMRegionAndLang::saveToConfigFile);
 
     // if we don't support auto locale generation for current system (BSD, musl etc.), userHasToGenerateManually regarded as success
     if (strcmp(m_generator->metaObject()->className(), "LocaleGeneratorBase") != 0) {
