@@ -111,6 +111,10 @@ void View::objectIncubated()
 
 void View::slotFocusWindowChanged()
 {
+    if (QGuiApplication::focusWindow() && m_requestedClipboardSelection) {
+        displayWithClipboardContents();
+    }
+
     if (!QGuiApplication::focusWindow() && !m_pinned) {
         setVisible(false);
     }
@@ -296,8 +300,14 @@ void View::displayWithClipboardContents()
 {
     setVisible(true);
 
-    m_qmlObj->rootObject()->setProperty("runner", QString());
-    m_qmlObj->rootObject()->setProperty("query", QGuiApplication::clipboard()->text(QClipboard::Selection));
+    // On Wayland we cannot retrieve the clipboard selection until we get the focus
+    if (QGuiApplication::focusWindow()) {
+        m_requestedClipboardSelection = false;
+        m_qmlObj->rootObject()->setProperty("runner", QString());
+        m_qmlObj->rootObject()->setProperty("query", QGuiApplication::clipboard()->text(QClipboard::Selection));
+    } else {
+        m_requestedClipboardSelection = true;
+    }
 }
 
 void View::query(const QString &term)
