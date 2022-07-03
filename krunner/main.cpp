@@ -24,15 +24,22 @@
 
 #include <kworkspace.h>
 
+#include "config-X11.h"
 #include "view.h"
 
 int main(int argc, char **argv)
 {
     QCommandLineParser parser;
-    if (!qEnvironmentVariableIsSet("PLASMA_USE_QT_SCALING")) {
+
+#if HAVE_X11
+    KSharedConfigPtr plasmaConfig = KSharedConfig::openConfig(QStringLiteral("plasmarc"), KConfig::SimpleConfig);
+    KConfigGroup plasmaConfigGeneralConfigGroup(plasmaConfig, "General");
+
+    if (!qEnvironmentVariableIsSet("PLASMA_USE_QT_SCALING") && !plasmaConfigGeneralConfigGroup.readEntry("x11UseQtScaling", false)) {
         qunsetenv("QT_DEVICE_PIXEL_RATIO");
         QCoreApplication::setAttribute(Qt::AA_DisableHighDpiScaling);
     }
+#endif
 
     qputenv("QT_WAYLAND_DISABLE_FIXED_POSITIONS", {});
     const bool qpaVariable = qEnvironmentVariableIsSet("QT_QPA_PLATFORM");

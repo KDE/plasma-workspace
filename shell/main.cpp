@@ -29,6 +29,7 @@
 #include <klocalizedstring.h>
 #include <kworkspace.h>
 
+#include "config-X11.h"
 #include "coronatesthelper.h"
 #include "debug.h"
 #include "shellcorona.h"
@@ -68,13 +69,23 @@ int main(int argc, char *argv[])
     // On wayland, it's different. Everything is simpler as all co-ordinates are in the same co-ordinate system
     // we don't have fractional scaling on the client so don't hit most the remaining bugs and
     // even if we don't use Qt scaling the compositor will try to scale us anyway so we have no choice
-    if (!qEnvironmentVariableIsSet("PLASMA_USE_QT_SCALING")) {
+#if HAVE_X11
+    KSharedConfigPtr plasmaConfig = KSharedConfig::openConfig(QStringLiteral("plasmarc"), KConfig::SimpleConfig);
+    KConfigGroup plasmaConfigGeneralConfigGroup(plasmaConfig, "General");
+
+    if (!qEnvironmentVariableIsSet("PLASMA_USE_QT_SCALING") && !plasmaConfigGeneralConfigGroup.readEntry("x11UseQtScaling", false)) {
         qunsetenv("QT_DEVICE_PIXEL_RATIO");
         QCoreApplication::setAttribute(Qt::AA_DisableHighDpiScaling);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     } else {
         QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
+#endif
     }
-
+#else
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+    QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
+#endif
+#endif // HAVE_X11
     QQuickWindow::setDefaultAlphaBuffer(true);
 
     oldCategoryFilter = QLoggingCategory::installFilter(filterConnectionSyntaxWarning);

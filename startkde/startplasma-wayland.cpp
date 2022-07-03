@@ -12,6 +12,8 @@
 #include <QDBusInterface>
 #include <signal.h>
 
+#include "config-X11.h"
+
 int main(int argc, char **argv)
 {
     QCoreApplication app(argc, argv);
@@ -66,7 +68,9 @@ int main(int argc, char **argv)
     }
     setupPlasmaEnvironment();
     runStartupConfig();
+#if HAVE_X11
     qputenv("PLASMA_USE_QT_SCALING", "1");
+#endif
     qputenv("GDK_SCALE", "1");
     qputenv("GDK_DPI_SCALE", "1");
 
