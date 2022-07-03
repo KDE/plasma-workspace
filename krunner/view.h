@@ -95,6 +95,7 @@ private:
     bool m_floating : 1;
     bool m_requestedVisible = false;
     bool m_pinned = false;
+    bool m_requestedClipboardSelection = false;
     QStringList m_history;
     KRunner::RunnerManager *m_manager = nullptr;
 };
