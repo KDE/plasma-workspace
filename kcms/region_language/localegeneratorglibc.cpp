@@ -1,6 +1,7 @@
 /*
     localegeneratorglibc.cpp
     SPDX-FileCopyrightText: 2022 Han Young <hanyoung@protonmail.com>
+    SPDX-FileCopyrightText: 2022 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -13,9 +14,7 @@ LocaleGeneratorGlibc::LocaleGeneratorGlibc(QObject *parent)
     , m_interface(new LocaleGenHelper(QStringLiteral("org.kde.localegenhelper"), QStringLiteral("/LocaleGenHelper"), QDBusConnection::systemBus(), this))
 {
     qCDebug(KCM_REGIONANDLANG) << "connect: " << m_interface->isValid();
-    connect(m_interface, &LocaleGenHelper::success, this, [this]() {
-        Q_EMIT this->needsFont();
-    });
+    connect(m_interface, &LocaleGenHelper::success, this, &LocaleGeneratorGlibc::needsFont);
     connect(m_interface, &LocaleGenHelper::error, this, &LocaleGeneratorGlibc::userHasToGenerateManually);
 }
 
