@@ -21,8 +21,9 @@ LocaleGeneratorGlibc::LocaleGeneratorGlibc(QObject *parent)
 void LocaleGeneratorGlibc::localesGenerate(const QStringList &list)
 {
     qCDebug(KCM_REGIONANDLANG) << "enable locales: " << list;
-    if (!QFile(QStringLiteral("/etc/locale.gen")).exists()) {
-        // fedora or centos
+    if (!QFile::exists(QStringLiteral("/etc/locale.gen"))) {
+        // When locale.gen is not present we assume that to mean that no generation is necessary, meaning we are done.
+        // e.g. fedora, centos and derivates
         Q_EMIT success();
         return;
     }
