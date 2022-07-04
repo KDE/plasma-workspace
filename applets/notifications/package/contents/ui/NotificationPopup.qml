@@ -114,6 +114,24 @@ PlasmaCore.Dialog {
         onPressed: wantsFocus = true
         onContainsMouseChanged: wantsFocus = wantsFocus && containsMouse
 
+        DropArea {
+            anchors.fill: parent
+            onEntered: {
+                if (notificationPopup.hasDefaultAction) {
+                    dragActivationTimer.start();
+                } else {
+                    drag.accepted = false;
+                }
+            }
+        }
+
+        Timer {
+            id: dragActivationTimer
+            interval: 250 // same as Task Manager
+            repeat: false
+            onTriggered: notificationPopup.defaultActionInvoked()
+        }
+
         // Visual flourish for critical notifications to make them stand out more
         Rectangle {
             id: criticalNotificationLine
