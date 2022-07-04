@@ -27,6 +27,6 @@ void LocaleGeneratorGlibc::localesGenerate(const QStringList &list)
         Q_EMIT success();
         return;
     }
-    qDebug() << "send polkit request";
+    qCDebug(KCM_REGIONANDLANG) << "send polkit request";
     m_interface->enableLocales(list);
 }
