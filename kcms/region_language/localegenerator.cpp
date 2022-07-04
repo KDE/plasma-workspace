@@ -11,6 +11,8 @@
 
 #include "localegeneratorbase.h"
 
+#include "localegeneratorgeneratedglibc.h"
+
 #ifdef OS_UBUNTU
 #include "localegeneratorubuntu.h"
 #elif GLIBC_LOCALE
@@ -23,6 +25,8 @@ LocaleGeneratorBase *LocaleGenerator::getGenerator()
     static LocaleGeneratorUbuntu singleton;
 #elif GLIBC_LOCALE
     static LocaleGeneratorGlibc singleton;
+#elif LOCALE_GENERATED
+    static LocaleGeneratorGeneratedGlibc singleton;
 #else
     static LocaleGeneratorBase singleton;
 #endif

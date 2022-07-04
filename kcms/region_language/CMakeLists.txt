@@ -14,6 +14,7 @@ set(kcm_regionandlang_PART_SRCS
     languagelistmodel.cpp
     localegenerator.cpp
     localegeneratorbase.cpp
+    localegeneratorgeneratedglibc.cpp
     regionandlangsettings.cpp
 )
 kconfig_add_kcfg_files(kcm_regionandlang_PART_SRCS regionandlangsettingsbase.kcfgc GENERATE_MOC)

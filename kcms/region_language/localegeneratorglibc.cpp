@@ -24,7 +24,7 @@ void LocaleGeneratorGlibc::localesGenerate(const QStringList &list)
     if (!QFile::exists(QStringLiteral("/etc/locale.gen"))) {
         // When locale.gen is not present we assume that to mean that no generation is necessary, meaning we are done.
         // e.g. fedora, centos and derivates
-        Q_EMIT success();
+        Q_EMIT needsFont();
         return;
     }
     qCDebug(KCM_REGIONANDLANG) << "send polkit request";

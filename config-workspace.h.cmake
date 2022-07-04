@@ -13,3 +13,4 @@
 
 #cmakedefine OS_UBUNTU 1
 #cmakedefine GLIBC_LOCALE 1
+#cmakedefine LOCALE_GENERATED 1

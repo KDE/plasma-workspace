@@ -170,7 +170,31 @@ if(${AppStreamQt_FOUND})
     set(HAVE_APPSTREAMQT true)
 endif()
 
+
+# Region & Language KCM
+find_package(KF5ItemModels)
 if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
+    # notes for packager:
+    # This is the macro definition part of Region & Language KCM
+    # Depending on your distributions, the KCM behaves differently
+    # For Ubuntu based systems, this KCM uses "check-language-support" and PackageKit
+    # to install relevant fonts and packages
+    # You should enable option UBUNTU_PACKAGEKIT (it's auto detected though)
+    #
+    # For Glibc systems that don't come with pre-generated locales, such as ArchLinux
+    # This KCM uses "/etc/locale.gen" and "locale-gen" to generate configured locales
+    # and display a note to let user install fonts themselves if required
+    # You shouldn't required to do anything in this case
+    #
+    # For Glibc systems that come with pre-generated locales, such as Fedora and openSUSE
+    # a note to let user install fonts themselves if required is displayed
+    # You should enable GLIBC_LOCALE_GENERATED option
+    #
+    # For non-glibc systems such as VoidLinux and *BSD
+    # A warning of configure locale manually is displayed (although the relevant ENVs are set by Plasma)
+    # You should disable GLIBC_LOCALE_GEN option
+
+
     # find out if the build system is Ubuntu based
     cmake_host_system_information(RESULT DISTRO_NAME QUERY DISTRIB_ID)
     cmake_host_system_information(RESULT DISTRO_ID_LIKE QUERY DISTRIB_ID_LIKE)
@@ -201,6 +225,14 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
         set(REGION_LANG_GENERATE_LOCALE TRUE)
     endif()
 
+    option(GLIBC_LOCALE_GENERATED "Systems that don't require locale generation. Such as openSUSE or Fedora" OFF)
+    if(GLIBC_LOCALE_GENERATED)
+        set(LOCALE_GENERATED TRUE)
+    endif()
+    if(REGION_LANG_GENERATE_LOCALE AND GLIBC_LOCALE_GENERATED)
+        message(FATAL_ERROR "(UBUNTU_PACKAGEKIT || GLIBC_LOCALE_GEN) and GLIBC_LOCALE_GENERATED both enabled")
+    endif()
+
     ################## Find libraries ###################
     if(REGION_LANG_GENERATE_LOCALE)
         find_package(PolkitQt5-1)
@@ -220,8 +252,6 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
                 )
 
     endif()
-
-    find_package(KF5ItemModels)
 endif()
 
 find_package(ICU COMPONENTS i18n uc)
