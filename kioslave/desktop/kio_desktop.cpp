@@ -214,7 +214,6 @@ void DesktopProtocol::rename(const QUrl &_src, const QUrl &_dest, KIO::JobFlags 
     }
 
     if (QFile(srcPath).rename(destPath)) {
-        org::kde::KDirNotify::emitFileRenamedWithLocalPath(_src, reported_dest, destPath);
         finished();
     } else {
         error(KIO::ERR_CANNOT_RENAME, srcPath);
