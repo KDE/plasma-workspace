@@ -228,26 +228,26 @@ void KcmTest::testKCMSave()
     cgd = KConfigGroup(&configDefault, "General");
     // save() capitalizes the ColorScheme
     QCOMPARE(cg.readEntry("ColorScheme", QString()), QString());
-    QCOMPARE(cgd.readEntry("ColorScheme", QString()), QStringLiteral("testValue"));
+    QCOMPARE(cgd.readEntry("ColorScheme", QString()), QStringLiteral("customTestValue"));
 
     cg = KConfigGroup(&config, "Icons");
     cgd = KConfigGroup(&configDefault, "Icons");
     QCOMPARE(cg.readEntry("Theme", QString()), QString());
-    QCOMPARE(cgd.readEntry("Theme", QString()), QStringLiteral("testValue"));
+    QCOMPARE(cgd.readEntry("Theme", QString()), QStringLiteral("customTestValue"));
 
     KConfig plasmaConfig(QStringLiteral("plasmarc"));
     KConfig plasmaConfigDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdedefaults/plasmarc", KConfig::SimpleConfig);
     cg = KConfigGroup(&plasmaConfig, "Theme");
     cgd = KConfigGroup(&plasmaConfigDefault, "Theme");
     QCOMPARE(cg.readEntry("name", QString()), QString());
-    QCOMPARE(cgd.readEntry("name", QString()), QStringLiteral("testValue"));
+    QCOMPARE(cgd.readEntry("name", QString()), QStringLiteral("customTestValue"));
 
     KConfig inputConfig(QStringLiteral("kcminputrc"));
     KConfig inputConfigDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdedefaults/kcminputrc", KConfig::SimpleConfig);
     cg = KConfigGroup(&inputConfig, "Mouse");
     cgd = KConfigGroup(&inputConfigDefault, "Mouse");
     QCOMPARE(cg.readEntry("cursorTheme", QString()), QString());
-    QCOMPARE(cgd.readEntry("cursorTheme", QString()), QStringLiteral("testValue"));
+    QCOMPARE(cgd.readEntry("cursorTheme", QString()), QStringLiteral("customTestValue"));
 
     KConfig splashConfig(QStringLiteral("ksplashrc"));
     KConfig splashConfigDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdedefaults/ksplashrc", KConfig::SimpleConfig);
@@ -273,7 +273,7 @@ void KcmTest::testKCMSave()
     QCOMPARE(cg.readEntry("LayoutName", QString()), QString());
     QCOMPARE(cg.readEntry("DesktopLayout", QString()), QString());
     QCOMPARE(cg.readEntry("DesktopListLayout", QString()), QString());
-    QCOMPARE(cgd.readEntry("LayoutName", QString()), QStringLiteral("testValue"));
+    QCOMPARE(cgd.readEntry("LayoutName", QString()), QStringLiteral("customTestValue"));
     QCOMPARE(cgd.readEntry("DesktopLayout", QString()), QStringLiteral("testDesktopValue"));
     QCOMPARE(cgd.readEntry("DesktopListLayout", QString()), QStringLiteral("testDesktopValue"));
 }
