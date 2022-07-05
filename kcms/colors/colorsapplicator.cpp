@@ -272,15 +272,24 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
         ++i;
     }
 
-    if (hasAccent()) { // Titlebar accent colouring
+    if (hasAccent() && (tintAccent || applyAccentToTitlebar)) { // Titlebar accent colouring
         const auto windowBackground = config->group("Colors:Window").readEntry<QColor>("BackgroundNormal", QColor());
-        const auto accentedWindowBackground = accentBackground(getAccent(), windowBackground);
-        const auto inactiveWindowBackground = tintColor(windowBackground, getAccent(), tintFactor);
 
-        groupWMOut.writeEntry("activeBackground", applyAccentToTitlebar ? accentedWindowBackground : inactiveWindowBackground);
-        groupWMOut.writeEntry("activeForeground", accentForeground(accentedWindowBackground, true));
-        groupWMOut.writeEntry("inactiveBackground", inactiveWindowBackground);
-        groupWMOut.writeEntry("inactiveForeground", accentForeground(inactiveWindowBackground, false));
+        if (tintAccent) {
+            const auto tintedWindowBackground = tintColor(windowBackground, getAccent(), tintFactor);
+            if (!applyAccentToTitlebar) {
+                groupWMOut.writeEntry("activeBackground", tintedWindowBackground);
+                groupWMOut.writeEntry("activeForeground", accentForeground(tintedWindowBackground, true));
+            }
+            groupWMOut.writeEntry("inactiveBackground", tintedWindowBackground);
+            groupWMOut.writeEntry("inactiveForeground", accentForeground(tintedWindowBackground, false));
+        }
+
+        if (applyAccentToTitlebar) {
+            const auto accentedWindowBackground = accentBackground(getAccent(), windowBackground);
+            groupWMOut.writeEntry("activeBackground", accentedWindowBackground);
+            groupWMOut.writeEntry("activeForeground", accentForeground(accentedWindowBackground, true));
+        }
     }
 
     const QStringList groupNameList{QStringLiteral("ColorEffects:Inactive"), QStringLiteral("ColorEffects:Disabled")};
