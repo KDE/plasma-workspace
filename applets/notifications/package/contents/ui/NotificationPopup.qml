@@ -117,7 +117,7 @@ PlasmaCore.Dialog {
         DropArea {
             anchors.fill: parent
             onEntered: {
-                if (notificationPopup.hasDefaultAction) {
+                if (notificationPopup.hasDefaultAction && !notificationItem.dragging) {
                     dragActivationTimer.start();
                 } else {
                     drag.accepted = false;
