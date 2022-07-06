@@ -10,6 +10,8 @@
 #include "../slidemodel.h"
 #include "commontestdata.h"
 
+#include <array>
+
 class SlideFilterModelTest : public QObject
 {
     Q_OBJECT
