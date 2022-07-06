@@ -9,6 +9,7 @@
         "Description[nl]": "Formaten voor taal, numerieke getallen, munteenheid en tijd",
         "Description[pt]": "Configuração da Língua, Formatos Numéricos, Monetários e de Datas",
         "Description[sl]": "Nastavitve jezika, oblike števil, valute in časa",
+        "Description[ta]": "எண்கள், பண மதிப்புகள், மற்றும் நேரங்கள் எழுதப்படும் விதமும், மொழிகுறித்த அமைப்புகளும்",
         "Description[tr]": "Dil Ayarı, Sayı, Para Birimi ve Zaman Biçimleri",
         "Description[uk]": "Параметри мови, формати запису чисел, грошових сум та часу",
         "Description[x-test]": "xxLanguage Setting, Numeric, Currency and Time Formatsxx",
@@ -28,6 +29,7 @@
         "Name[nl]": "Regio & taal",
         "Name[pt]": "Região & Língua",
         "Name[sl]": "Regija in Jezik",
+        "Name[ta]": "மொழியும் மண்டலமும்",
         "Name[tr]": "Bölge ve Dil",
         "Name[uk]": "Регіон та мова",
         "Name[x-test]": "xxRegion & Languagexx"
