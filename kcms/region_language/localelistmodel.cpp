@@ -21,6 +21,8 @@
 #include "exampleutility.h"
 #include "kcmregionandlang.h"
 
+#include <QTextCodec>
+
 using namespace KCM_RegionAndLang;
 
 LocaleListModel::LocaleListModel(QObject *parent)

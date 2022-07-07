@@ -16,5 +16,5 @@ public:
         Image,
         Package,
     };
-    Q_ENUM(Provider)
+    Q_ENUM(Type)
 };

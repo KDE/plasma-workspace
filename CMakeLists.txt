@@ -235,8 +235,8 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
 
     ################## Find libraries ###################
     if(REGION_LANG_GENERATE_LOCALE)
-        find_package(PolkitQt5-1)
-        set_package_properties(PolkitQt5-1
+        find_package(PolkitQt${QT_MAJOR_VERSION}-1)
+        set_package_properties(PolkitQt${QT_MAJOR_VERSION}-1
                 PROPERTIES DESCRIPTION "DBus interface wrapper for Polkit"
                 PURPOSE "Communicate with localegen helper in region & lang kcm"
                 TYPE REQUIRED

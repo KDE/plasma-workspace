@@ -27,28 +27,28 @@ OptionsModel::OptionsModel(KCMRegionAndLang *parent)
                       {i18nc("@info:title", "Measurements"), SettingType::Measurement}}};
     connect(m_settings, &RegionAndLangSettings::langChanged, this, &OptionsModel::handleLangChange);
     connect(m_settings, &RegionAndLangSettings::numericChanged, this, [this] {
-        QLocale locale = m_settings->LC_LocaleWithLang(SettingType::Numeric);
+        QLocale locale(m_settings->LC_LocaleWithLang(SettingType::Numeric));
         m_numberExample = Utility::numericExample(locale);
         Q_EMIT dataChanged(createIndex(1, 0), createIndex(1, 0), {Subtitle, Example});
     });
     connect(m_settings, &RegionAndLangSettings::timeChanged, this, [this] {
-        QLocale locale = m_settings->LC_LocaleWithLang(SettingType::Time);
+        QLocale locale(m_settings->LC_LocaleWithLang(SettingType::Time));
         m_timeExample = Utility::timeExample(locale);
         Q_EMIT dataChanged(createIndex(2, 0), createIndex(2, 0), {Subtitle, Example});
     });
     connect(m_settings, &RegionAndLangSettings::monetaryChanged, this, [this] {
-        QLocale locale = m_settings->LC_LocaleWithLang(SettingType::Currency);
+        QLocale locale(m_settings->LC_LocaleWithLang(SettingType::Currency));
         m_currencyExample = Utility::monetaryExample(locale);
         Q_EMIT dataChanged(createIndex(3, 0), createIndex(3, 0), {Subtitle, Example});
     });
     connect(m_settings, &RegionAndLangSettings::measurementChanged, this, [this] {
-        QLocale locale = m_settings->LC_LocaleWithLang(SettingType::Measurement);
+        QLocale locale(m_settings->LC_LocaleWithLang(SettingType::Measurement));
         m_measurementExample = Utility::measurementExample(locale);
         Q_EMIT dataChanged(createIndex(4, 0), createIndex(4, 0), {Subtitle, Example});
     });
 
     // initialize examples
-    m_numberExample = Utility::numericExample(m_settings->LC_LocaleWithLang(SettingType::Numeric));
+    m_numberExample = Utility::numericExample(QLocale(m_settings->LC_LocaleWithLang(SettingType::Numeric)));
     m_timeExample = Utility::timeExample(QLocale(m_settings->LC_LocaleWithLang(SettingType::Time)));
     m_measurementExample = Utility::measurementExample(QLocale(m_settings->LC_LocaleWithLang(SettingType::Measurement)));
     m_currencyExample = Utility::monetaryExample(QLocale(m_settings->LC_LocaleWithLang(SettingType::Currency)));

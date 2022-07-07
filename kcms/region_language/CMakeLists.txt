@@ -41,12 +41,12 @@ ecm_qt_declare_logging_category(
 ################ Build helper and add additional source files #############
 if(REGION_LANG_GENERATE_LOCALE)
     add_subdirectory("localegenhelper")
-    qt5_generate_dbus_interface(
+    qt_generate_dbus_interface(
         ${CMAKE_CURRENT_SOURCE_DIR}/localegenhelper/localegenhelper.h
         org.kde.localegenhelper.xml
         OPTIONS -s -m
     )
-    qt5_add_dbus_interface(kcm_regionandlang_PART_SRCS ${CMAKE_CURRENT_BINARY_DIR}/org.kde.localegenhelper.xml localegenhelperinterface)
+    qt_add_dbus_interface(kcm_regionandlang_PART_SRCS ${CMAKE_CURRENT_BINARY_DIR}/org.kde.localegenhelper.xml localegenhelperinterface)
 endif()
 
 #################### Declare target #######################
@@ -66,7 +66,7 @@ target_link_libraries(kcm_regionandlang
     KF5::QuickAddons
     KF5::ItemModels)
 if (QT_MAJOR_VERSION EQUAL "6")
-    target_link_libraries(kcm_formats Qt::Core5Compat) # for QTextCodec
+    target_link_libraries(kcm_regionandlang Qt::Core5Compat) # for QTextCodec
 endif()
 if(UBUNTU_PACKAGEKIT)
     target_link_libraries(kcm_regionandlang PK::packagekitqt${QT_MAJOR_VERSION})
