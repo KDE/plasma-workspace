@@ -142,7 +142,7 @@ KCM.GridViewKCM {
 
                 Kirigami.FormData.label: i18n("Use accent color:")
                 text: i18n("From current color scheme")
-                checked: Qt.colorEqual(kcm.accentColor, "transparent")
+                checked: Qt.colorEqual(kcm.accentColor, "transparent") && !kcm.accentColorFromWallpaper
 
                 onToggled: {
                     if (checked) {
