@@ -45,7 +45,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
                     OPTIONAL_COMPONENTS DocTools)
 
 find_package(KDED CONFIG REQUIRED)
-find_package(KPipeWire CONFIG REQUIRED)
+find_package(KPipeWire CONFIG)
 
 find_package(KF5NetworkManagerQt ${KF5_MIN_VERSION})
 set_package_properties(KF5NetworkManagerQt PROPERTIES DESCRIPTION "Qt wrapper for NetworkManager API"
