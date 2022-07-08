@@ -20,6 +20,11 @@ if [ -d /opt/kde-dbus-scripts/ ]; then
   rm -f /etc/dbus-1/session.d/00-plasma.conf
 fi
 
+
+# - polkit exclusively looks in the system prefix and has no facilities to change that
+#   https://gitlab.freedesktop.org/polkit/polkit/-/blob/92b910ce2273daf6a76038f6bd764fa6958d4e8e/src/polkitbackend/polkitbackendinteractiveauthority.c#L302
+# - dbus exclusively looks in the system prefix for **system** services and offers no facilities to change that
+#   https://gitlab.freedesktop.org/dbus/dbus/-/blob/9722d621497b2e7324e696f4095f56e2a9307a7e/bus/activation-helper.c#
 if [ -x /usr/bin/systemd-sysext ]; then
   mkdir -p @CMAKE_INSTALL_PREFIX@/lib/extension-release.d/
   install --mode=644 -D /usr/lib/os-release @CMAKE_INSTALL_PREFIX@/lib/extension-release.d/extension-release.plasma-dev
