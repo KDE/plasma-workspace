@@ -66,8 +66,8 @@ AbstractItem {
             openContextMenu(pos);
             break;
         case Qt.MiddleButton:
-            var operation = service.operationDescription("SecondaryActivate");
-            let service = model.Service;
+            const service = model.Service;
+            const operation = service.operationDescription("SecondaryActivate");
             operation.x = pos.x;
 
             operation.y = pos.y;
