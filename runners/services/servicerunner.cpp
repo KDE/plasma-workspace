@@ -81,7 +81,6 @@ public:
         queryList = term.split(QLatin1Char(' '));
         weightedTermLength = weightedLength(term);
 
-        matchExectuables();
         matchNameKeywordAndGenericName();
         matchCategories();
         matchJumpListActions();
@@ -184,39 +183,11 @@ private:
         }
     }
 
-    void matchExectuables()
-    {
-        if (weightedTermLength < 2) {
-            return;
-        }
-
-        const auto executablesFilter = [this](const KService::Ptr &service) {
-            return QString::compare(service->name(), term, Qt::CaseInsensitive) == 0;
-        };
-        const KService::List services = KApplicationTrader::query(executablesFilter);
-
-        if (services.isEmpty()) {
-            return;
-        }
-
-        for (const KService::Ptr &service : services) {
-            qCDebug(RUNNER_SERVICES) << service->name() << "is an exact match!" << service->storageId() << service->exec();
-            if (disqualify(service)) {
-                continue;
-            }
-            Plasma::QueryMatch match(m_runner);
-            match.setType(Plasma::QueryMatch::ExactMatch);
-            setupMatch(service, match);
-            match.setRelevance(1);
-            matches << match;
-        }
-    }
-
     void matchNameKeywordAndGenericName()
     {
         const auto nameKeywordAndGenericNameFilter = [this](const KService::Ptr &service) {
             // Name
-            if (contains(service->name(), queryList) || contains(service->exec(), queryList)) {
+            if (contains(service->name(), queryList) || (weightedTermLength >= 3 && contains(service->exec(), queryList))) {
                 return true;
             }
             // If the term length is < 3, no real point searching the Keywords and GenericName
@@ -264,6 +235,8 @@ private:
                 } else {
                     continue;
                 }
+            } else if (name.compare(term, Qt::CaseInsensitive) == 0) {
+                relevance = 1;
             } else if (name.contains(queryList[0], Qt::CaseInsensitive)) {
                 relevance = 0.8;
                 relevance += increaseMatchRelavance(service, queryList, QStringLiteral("Name"));
