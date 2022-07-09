@@ -114,7 +114,7 @@ Item {
     }
 
     function action_formatskcm() {
-        KCMShell.openSystemSettings("kcm_formats");
+        KCMShell.openSystemSettings("kcm_regionandlang");
     }
 
     Component.onCompleted: {
@@ -125,7 +125,7 @@ Item {
         if (KCMShell.authorize("kcm_clock.desktop").length > 0) {
             Plasmoid.setAction("clockkcm", i18n("Adjust Date and Time…"), "clock");
         }
-        if (KCMShell.authorize("kcm_formats.desktop").length > 0) {
+        if (KCMShell.authorize("kcm_regionandlang.desktop").length > 0) {
             Plasmoid.setAction("formatskcm", i18n("Set Time Format…"), "gnumeric-format-thousand-separator");
         }
     }
