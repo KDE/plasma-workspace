@@ -122,6 +122,7 @@ PlasmaQuick::AppletQuickItem *PanelSpacer::twinSpacer() const
 
 PlasmaQuick::AppletQuickItem *PanelSpacer::containmentGraphicObject() const
 {
+    if (!containment()) return nullptr; // Return nothing if there is no containment to prevent a Segmentation Fault
     return containment()->property("_plasma_graphicObject").value<PlasmaQuick::AppletQuickItem *>();
 }
 
