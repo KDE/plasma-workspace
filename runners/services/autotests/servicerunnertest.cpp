@@ -232,7 +232,7 @@ void ServiceRunnerTest::testJumpListActions()
     runner.match(context);
     auto matches = context.matches();
     QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const Plasma::QueryMatch &match) {
-        return match.text() == QLatin1String("Open a New Window - Konsole ServiceRunnerTest") && match.relevance() == 0.55;
+        return match.text() == QLatin1String("Open a New Window - Konsole ServiceRunnerTest") && match.relevance() == 0.65;
     }));
 
     context.setQuery(QStringLiteral("new window"));

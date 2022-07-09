@@ -390,7 +390,10 @@ private:
                 match.setData(url);
 
                 qreal relevance = 0.5;
-                if (matchIndex == 0) {
+                if (action.text().compare(term, Qt::CaseInsensitive) == 0) {
+                    relevance = 0.65;
+                    match.setType(Plasma::QueryMatch::HelperMatch); // Give it a higer match type to ensure it is shown, BUG: 455436
+                } else if (matchIndex == 0) {
                     relevance += 0.05;
                 }
 
