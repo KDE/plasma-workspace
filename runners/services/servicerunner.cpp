@@ -316,8 +316,13 @@ private:
             match.setType(Plasma::QueryMatch::PossibleMatch);
             setupMatch(service, match);
 
-            qreal relevance = 0.6;
-            if (service->categories().contains(QLatin1String("X-KDE-More")) || !service->showInCurrentDesktop()) {
+            qreal relevance = 0.4;
+            const QStringList categories = service->categories();
+            if (std::any_of(categories.begin(), categories.end(), [this](const QString &category) {
+                    return category.compare(term, Qt::CaseInsensitive) == 0;
+                })) {
+                relevance = 0.6;
+            } else if (service->categories().contains(QLatin1String("X-KDE-More")) || !service->showInCurrentDesktop()) {
                 relevance = 0.5;
             }
 

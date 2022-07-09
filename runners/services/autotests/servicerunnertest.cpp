@@ -206,12 +206,12 @@ void ServiceRunnerTest::testCategories()
         return match.text() == QLatin1String("Konsole ServiceRunnerTest") && match.relevance() == 0.64;
     }));
 
-    // Multiple categories
+    // Multiple categories, this should still match, but now as relevant
     context.setQuery(QStringLiteral("System KDE TerminalEmulator"));
     runner.match(context);
     matches = context.matches();
     QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const Plasma::QueryMatch &match) {
-        return match.text() == QLatin1String("Konsole ServiceRunnerTest") && match.relevance() == 0.64;
+        return match.text() == QLatin1String("Konsole ServiceRunnerTest") && match.relevance() == 0.44;
     }));
 
     // Multiple categories but at least one doesn't match
