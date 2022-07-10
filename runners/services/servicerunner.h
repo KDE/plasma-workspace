@@ -6,10 +6,8 @@
 
 #pragma once
 
+#include <KRunner/AbstractRunner>
 #include <KService>
-
-//#include <KRunner/AbstractRunner>
-#include <krunner/abstractrunner.h>
 
 /**
  * This class looks for matches in the set of .desktop files installed by
