@@ -122,7 +122,8 @@ KCM.ScrollViewKCM {
                 QQC2.Button {
                     id: changeButton
                     anchors.centerIn: parent
-                    text: i18nc("Button for change the locale used", "Change it…")
+                    text: i18nc("@action:button for change the locale used", "Modify…")
+                    icon.name: "edit-entry"
                     onClicked: {
                         if (model.page === SettingType.Lang) {
                             languageSelectPage.active = true;
