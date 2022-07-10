@@ -115,6 +115,7 @@ PreviewWidget::PreviewWidget(QQuickItem *parent)
     setAcceptHoverEvents(true);
     current = nullptr;
     connect(&m_animationTimer, &QTimer::timeout, this, [this] {
+        Q_ASSERT(current);
         setCursor(QCursor(QPixmap::fromImage(current->images().at(nextAnimationFrame).image)));
         m_animationTimer.setInterval(current->images().at(nextAnimationFrame).delay);
         nextAnimationFrame = (nextAnimationFrame + 1) % current->images().size();
@@ -245,6 +246,7 @@ void PreviewWidget::setTheme(const CursorTheme *theme, const int size)
     }
 
     current = nullptr;
+    m_animationTimer.stop();
     update();
 }
 
