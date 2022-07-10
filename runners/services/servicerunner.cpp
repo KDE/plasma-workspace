@@ -2,6 +2,7 @@
     SPDX-FileCopyrightText: 2006 Aaron Seigo <aseigo@kde.org>
     SPDX-FileCopyrightText: 2014 Vishesh Handa <vhanda@kde.org>
     SPDX-FileCopyrightText: 2016-2020 Harald Sitter <sitter@kde.org>
+    SPDX-FileCopyrightText: 2022 Alexander Lohnau <alexander.lohnau@gmx.de>
 
     SPDX-License-Identifier: LGPL-2.0-only
 */
@@ -63,19 +64,14 @@ inline bool contains(const QStringList &results, const QStringList &queryList)
 class ServiceFinder
 {
 public:
-    ServiceFinder(ServiceRunner *runner)
+    ServiceFinder(ServiceRunner *runner, const QList<KService::Ptr> &list)
         : m_runner(runner)
+        , m_services(list)
     {
     }
 
     void match(Plasma::RunnerContext &context)
     {
-        if (!context.isValid()) {
-            return;
-        }
-
-        KSycoca::disableAutoRebuild();
-
         term = context.query();
         // Splitting the query term to match using subsequences
         queryList = term.split(QLatin1Char(' '));
@@ -210,11 +206,8 @@ private:
             return false;
         };
 
-        const KService::List services = KApplicationTrader::query(nameKeywordAndGenericNameFilter);
-
-        qCDebug(RUNNER_SERVICES) << "got " << services.count() << " services from " << query;
-        for (const KService::Ptr &service : services) {
-            if (disqualify(service)) {
+        for (const KService::Ptr &service : m_services) {
+            if (!nameKeywordAndGenericNameFilter(service) || disqualify(service)) {
                 continue;
             }
 
@@ -284,14 +277,12 @@ private:
         const auto categoriesFilter = [this](const KService::Ptr &service) {
             return contains(service->categories(), queryList);
         };
-        // search for applications whose categories contains the query
-        const auto services = KApplicationTrader::query(categoriesFilter);
 
-        for (const KService::Ptr &service : services) {
-            qCDebug(RUNNER_SERVICES) << service->name() << "is an exact match!" << service->storageId() << service->exec();
-            if (disqualify(service)) {
+        for (const KService::Ptr &service : m_services) {
+            if (!categoriesFilter(service) || disqualify(service)) {
                 continue;
             }
+            qCDebug(RUNNER_SERVICES) << service->name() << "is an exact match!" << service->storageId() << service->exec();
 
             Plasma::QueryMatch match(m_runner);
             match.setType(Plasma::QueryMatch::PossibleMatch);
@@ -325,10 +316,8 @@ private:
         const auto hasActionsFilter = [](const KService::Ptr &service) {
             return !service->actions().isEmpty();
         };
-        const auto services = KApplicationTrader::query(hasActionsFilter);
-
-        for (const KService::Ptr &service : services) {
-            if (service->noDisplay()) {
+        for (const KService::Ptr &service : m_services) {
+            if (!hasActionsFilter(service) || service->noDisplay()) {
                 continue;
             }
 
@@ -387,6 +376,7 @@ private:
 
     ServiceRunner *m_runner;
     QSet<QString> m_seen;
+    const QList<KService::Ptr> m_services;
 
     QList<Plasma::QueryMatch> matches;
     QString query;
@@ -408,9 +398,10 @@ ServiceRunner::~ServiceRunner() = default;
 
 void ServiceRunner::match(Plasma::RunnerContext &context)
 {
-    // This helper class aids in keeping state across numerous
-    // different queries that together form the matches set.
-    ServiceFinder finder(this);
+    KSycoca::disableAutoRebuild();
+    ServiceFinder finder(this, KApplicationTrader::query([](const KService::Ptr &) {
+                             return true;
+                         }));
     finder.match(context);
 }
 
