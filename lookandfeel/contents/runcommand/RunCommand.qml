@@ -4,7 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.6
+import QtQuick 2.15
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.1
 
@@ -315,6 +315,7 @@ ColumnLayout {
             highlightMoveDuration: 0
             activeFocusOnTab: true
             model: []
+            reuseItems: true
             delegate: Milou.ResultDelegate {
                 id: resultDelegate
                 width: listView.width
