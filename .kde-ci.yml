@@ -50,7 +50,6 @@ Dependencies:
     'frameworks/kdesu': '@latest'
     'frameworks/kpeople': '@latest'
     'frameworks/prison': '@latest'
-    'frameworks/kinit': '@latest'
     'plasma/layer-shell-qt': '@same'
     'plasma/kscreenlocker': '@same'
     'plasma/libkscreen': '@same'

@@ -41,7 +41,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
                     Auth Plasma Runner Notifications NotifyConfig NewStuff Wallet IdleTime
                     Declarative I18n KCMUtils TextWidgets Crash GlobalAccel DBusAddons Wayland
                     CoreAddons People ActivitiesStats Activities KIO Prison PlasmaQuick Package
-                    GuiAddons Archive ItemModels IconThemes UnitConversion ItemModels Init TextEditor
+                    GuiAddons Archive ItemModels IconThemes UnitConversion ItemModels TextEditor
                     OPTIONAL_COMPONENTS DocTools)
 
 find_package(KDED CONFIG REQUIRED)

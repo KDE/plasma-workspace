@@ -15,7 +15,7 @@ set(kworkspace_LIB_SRCS kdisplaymanager.cpp
 
 add_definitions(-DTRANSLATION_DOMAIN=\"libkworkspace\")
 
-qt_add_dbus_interface(kworkspace_LIB_SRCS ${KINIT_DBUS_INTERFACES_DIR}/kf5_org.kde.KLauncher.xml klauncher_interface)
+qt_add_dbus_interface(kworkspace_LIB_SRCS kf5_org.kde.KLauncher.xml klauncher_interface)
 qt_add_dbus_interface(kworkspace_LIB_SRCS ${KSCREENLOCKER_DBUS_INTERFACES_DIR}/kf5_org.freedesktop.ScreenSaver.xml screenlocker_interface )
 qt_add_dbus_interface(kworkspace_LIB_SRCS ${KSCREENLOCKER_DBUS_INTERFACES_DIR}/org.kde.screensaver.xml kscreenlocker_interface )
 qt_add_dbus_interface(kworkspace_LIB_SRCS ${plasma-workspace_SOURCE_DIR}/ksmserver/org.kde.LogoutPrompt.xml logoutprompt_interface)
