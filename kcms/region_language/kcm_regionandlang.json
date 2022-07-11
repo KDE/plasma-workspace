@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "Language Setting, Numeric, Currency and Time Formats",
         "Description[az]": "Dil ayarları, say, valyuta və tarix formatları",
+        "Description[bg]": "Формат на езикови настройки, метрични единици, валута, дата и час",
         "Description[ca@valencia]": "Configuració de l'idioma i el format numèric, monetari i horari",
         "Description[ca]": "Configuració de l'idioma i el format numèric, monetari i horari",
         "Description[es]": "Preferencia de idiomas, formatos numérico, de moneda y de hora",
@@ -13,6 +14,7 @@
         "Description[tr]": "Dil Ayarı, Sayı, Para Birimi ve Zaman Biçimleri",
         "Description[uk]": "Параметри мови, формати запису чисел, грошових сум та часу",
         "Description[x-test]": "xxLanguage Setting, Numeric, Currency and Time Formatsxx",
+        "Description[zh_CN]": "语言设置、数字、货币和时间格式",
         "FormFactors": [
             "tablet",
             "handset",
@@ -22,6 +24,7 @@
         "Id": "kcm_regionandlang",
         "Name": "Region & Language",
         "Name[az]": "Bölgə və Dil",
+        "Name[bg]": "Език и регионални настройки",
         "Name[ca@valencia]": "Regió i idioma",
         "Name[ca]": "Regió i idioma",
         "Name[es]": "Región e idioma",
@@ -32,7 +35,8 @@
         "Name[ta]": "மொழியும் மண்டலமும்",
         "Name[tr]": "Bölge ve Dil",
         "Name[uk]": "Регіон та мова",
-        "Name[x-test]": "xxRegion & Languagexx"
+        "Name[x-test]": "xxRegion & Languagexx",
+        "Name[zh_CN]": "区域和语言"
     },
     "X-DocPath": "kcontrol/region_language/index.html",
     "X-KDE-Keywords": "language,translation,number format,locale,Country,charsets,character sets,Decimal symbol,Thousands separator,symbol,separator,sign,positive,negative,currency,money,fractional digits,calendar,time,date,formats,week,week start,first,paper,size,letter,A4,measure,metric,English,Imperial,region,measurement units,collation,sorting,date format",

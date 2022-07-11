@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Region & Language
 Name[az]=Bölgə və Dil
+Name[bg]=Език и регионални настройки
 Name[ca]=Regió i idioma
 Name[ca@valencia]=Regió i idioma
 Name[es]=Región e idioma
@@ -12,8 +13,10 @@ Name[ta]=மொழியும் மண்டலமும்
 Name[tr]=Bölge ve Dil
 Name[uk]=Регіон та мова
 Name[x-test]=xxRegion & Languagexx
+Name[zh_CN]=区域和语言
 Comment=Set Language, Numeric, Currency and Time Formats
 Comment[az]=Dil, say, valyuta və tarix formatlarının təyin edilməsi
+Comment[bg]=Задаване на езикови настройки, метрични единици, валута, дата и час
 Comment[ca]=Defineix l'idioma i el format numèric, monetari i horari
 Comment[ca@valencia]=Establix l'idioma i el format numèric, monetari i horari
 Comment[es]=Definir el idioma y los formatos numérico, de moneda y de hora
@@ -25,6 +28,7 @@ Comment[ta]=எண்களும் பண மதிப்புகளும்
 Comment[tr]=Dil, Sayı, Para Birimi ve Zaman Biçimlerini Ayarla
 Comment[uk]=Встановлення мови, форматів запису чисел, грошових сум та часу
 Comment[x-test]=xxSet Language, Numeric, Currency and Time Formatsxx
+Comment[zh_CN]=设置语言、数字、货币和时间格式
 
 Icon=preferences-desktop-locale
 Type=Application

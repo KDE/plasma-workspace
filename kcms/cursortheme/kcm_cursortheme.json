@@ -37,7 +37,7 @@
         "Description[vi]": "Chọn chủ đề của con trỏ chuột",
         "Description[x-test]": "xxChoose mouse cursor themexx",
         "Description[zh_CN]": "选择鼠标光标主题",
-        "Description[zh_TW]": "選擇滑鼠遊標主題",
+        "Description[zh_TW]": "選擇滑鼠游標主題",
         "Icon": "preferences-desktop-cursors",
         "Name": "Cursors",
         "Name[ar]": "المؤشرات",
@@ -84,7 +84,7 @@
         "Name[vi]": "Con trỏ",
         "Name[x-test]": "xxCursorsxx",
         "Name[zh_CN]": "光标",
-        "Name[zh_TW]": "遊標"
+        "Name[zh_TW]": "游標"
     },
     "X-DocPath": "kcontrol/cursortheme/index.html",
     "X-KDE-Keywords": "Mouse,Cursor,Theme,Cursor Appearance,Cursor Color,Cursor Theme,Mouse Theme,Mouse Appearance,Mouse Skin,Pointer Colors,Pointer Appearance,cursor skin,cursor style,cursor size,mouse style,pointer,",
