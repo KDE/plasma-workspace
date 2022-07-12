@@ -63,7 +63,7 @@ private:
     QString m_name;
     QString m_description;
     // Not an actual group name, but the first character for transliterated name.
-    QString m_group;
+    mutable QString m_group;
     mutable QIcon m_icon;
     KService::Ptr m_service;
     static MenuEntryEditor *m_menuEntryEditor;

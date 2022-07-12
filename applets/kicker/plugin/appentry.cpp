@@ -47,6 +47,33 @@
 namespace
 {
 
+#ifdef HAVE_ICU
+std::unique_ptr<icu::Transliterator> getICUTransliterator(const QLocale &locale)
+{
+    // Only use transliterator for certain locales.
+    // Because application name is a localized string, it would be really rare to
+    // have Chinese/Japanese character on other locales. Even if that happens, it
+    // is ok to use to the old 1 character strategy instead of using transliterator.
+    icu::UnicodeString id;
+    if (locale.language() == QLocale::Japanese) {
+        id = "Katakana-Hiragana";
+    } else if (locale.language() == QLocale::Chinese) {
+        id = "Han-Latin; Latin-ASCII";
+    }
+    if (id.isEmpty()) {
+        return nullptr;
+    }
+    auto ue = UErrorCode::U_ZERO_ERROR;
+    auto transliterator = std::unique_ptr<icu::Transliterator>(icu::Transliterator::createInstance(id, UTRANS_FORWARD, ue));
+
+    if (ue != UErrorCode::U_ZERO_ERROR) {
+        return nullptr;
+    }
+
+    return transliterator;
+}
+#endif
+
 QString groupName(const QString &name)
 {
     if (name.isEmpty()) {
@@ -74,7 +101,8 @@ QString groupName(const QString &name)
         }
         return decomposed.left(1);
     }
-    if (QLocale::system().language() == QLocale::Japanese) {
+    const auto locale = QLocale::system();
+    if (locale.language() == QLocale::Japanese) {
         // We do this here for Japanese locale because:
         // 1. it does not make much sense to have every different Kanji to have a different group.
         // 2. ICU transliterator can't yet convert Kanji to Hiragana.
@@ -85,18 +113,16 @@ QString groupName(const QString &name)
         }
     }
 #ifdef HAVE_ICU
-    static auto ue = UErrorCode::U_ZERO_ERROR;
-    static auto transliterator =
-        std::unique_ptr<icu::Transliterator>(icu::Transliterator::createInstance("Han-Latin; "
-                                                                                 "Katakana-Hiragana; "
-                                                                                 "Latin-ASCII",
-                                                                                 UTRANS_FORWARD,
-                                                                                 ue));
+    // Precondition to use transliterator.
+    if ((locale.language() == QLocale::Chinese && firstChar.script() == QChar::Script_Han)
+        || (locale.language() == QLocale::Japanese && firstChar.script() == QChar::Script_Katakana)) {
+        static auto transliterator = getICUTransliterator(locale);
 
-    if (ue == UErrorCode::U_ZERO_ERROR) {
-        icu::UnicodeString icuText(reinterpret_cast<const char16_t *>(name.data()), name.size());
-        transliterator->transliterate(icuText);
-        return QString::fromUtf16(icuText.getBuffer(), static_cast<int>(icuText.length())).left(1);
+        if (transliterator) {
+            icu::UnicodeString icuText(reinterpret_cast<const char16_t *>(name.data()), name.size());
+            transliterator->transliterate(icuText);
+            return QString::fromUtf16(icuText.getBuffer(), static_cast<int>(icuText.length())).left(1);
+        }
     }
 #endif
     return name.left(1);
@@ -141,7 +167,6 @@ AppEntry::AppEntry(AbstractModel *owner, const QString &id)
 void AppEntry::init(NameFormat nameFormat)
 {
     m_name = nameFromService(m_service, nameFormat);
-    m_group = groupName(m_name);
 
     if (nameFormat == GenericNameOnly) {
         m_description = nameFromService(m_service, NameOnly);
@@ -184,6 +209,13 @@ KService::Ptr AppEntry::service() const
 
 QString AppEntry::group() const
 {
+    if (m_group.isNull()) {
+        m_group = groupName(m_name);
+        if (m_group.isNull()) {
+            m_group = QLatin1String("");
+        }
+        Q_ASSERT(!m_group.isNull());
+    }
     return m_group;
 }
 
