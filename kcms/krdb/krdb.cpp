@@ -66,26 +66,26 @@ inline const char *gtkEnvVar(int version)
     return 2 == version ? "GTK2_RC_FILES" : "GTK_RC_FILES";
 }
 
-inline const char *sysGtkrc(int version)
+inline QLatin1String sysGtkrc(int version)
 {
     if (version == 2) {
         if (std::filesystem::exists("/etc/opt/gnome/gtk-2.0")) {
-            return "/etc/opt/gnome/gtk-2.0/gtkrc";
+            return QLatin1String("/etc/opt/gnome/gtk-2.0/gtkrc");
         } else {
-            return "/etc/gtk-2.0/gtkrc";
+            return QLatin1String("/etc/gtk-2.0/gtkrc");
         }
     } else {
         if (std::filesystem::exists("/etc/opt/gnome/gtk")) {
-            return "/etc/opt/gnome/gtk/gtkrc";
+            return QLatin1String("/etc/opt/gnome/gtk/gtkrc");
         } else {
-            return "/etc/gtk/gtkrc";
+            return QLatin1String("/etc/gtk/gtkrc");
         }
     }
 }
 
-inline const char *userGtkrc(int version)
+inline QLatin1String userGtkrc(int version)
 {
-    return 2 == version ? "/.gtkrc-2.0" : "/.gtkrc";
+    return version == 2 ? QLatin1String("/.gtkrc-2.0") : QLatin1String("/.gtkrc");
 }
 
 // -----------------------------------------------------------------------------
@@ -101,28 +101,33 @@ static QString writableGtkrc(int version)
 // -----------------------------------------------------------------------------
 static void applyGtkStyles(int version)
 {
-    const char *envVar = getenv(gtkEnvVar(version));
+    const char *varName = gtkEnvVar(version);
+    const char *envVar = getenv(varName);
     if (envVar) { // Already set by user, don't override it
         return;
     }
 
     const QByteArray gtkrc(envVar);
-    QString gtkkde = writableGtkrc(version);
+    const QString userHomeGtkrc = QDir::homePath() + userGtkrc(version);
     QStringList list = QFile::decodeName(gtkrc).split(QLatin1Char(':'));
-    QString userHomeGtkrc = QDir::homePath() + userGtkrc(version);
-    if (!list.contains(userHomeGtkrc))
+    if (!list.contains(userHomeGtkrc)) {
         list.prepend(userHomeGtkrc);
-    QLatin1String systemGtkrc = QLatin1String(sysGtkrc(version));
-    if (!list.contains(systemGtkrc))
+    }
+
+    const QLatin1String systemGtkrc = sysGtkrc(version);
+    if (!list.contains(systemGtkrc)) {
         list.prepend(systemGtkrc);
+    }
+
     list.removeAll(QLatin1String(""));
+
+    const QString gtkkde = writableGtkrc(version);
     list.removeAll(gtkkde);
     list.append(gtkkde);
 
     // Pass env. var to kdeinit.
-    QString name = gtkEnvVar(version);
-    QString value = list.join(QLatin1Char(':'));
-    UpdateLaunchEnvJob(name, value);
+    const QString value = list.join(QLatin1Char(':'));
+    UpdateLaunchEnvJob(varName, value);
 }
 
 // -----------------------------------------------------------------------------
@@ -222,15 +227,6 @@ static void applyQtSettings(KSharedConfigPtr kglobalcfg, QSettings &settings)
         guieffects << QStringLiteral("none");
 
     settings.setValue(QStringLiteral("/qt/GUIEffects"), guieffects);
-}
-
-// -----------------------------------------------------------------------------
-
-static void addColorDef(QString &s, const char *n, const QColor &col)
-{
-    s += QStringLiteral("#define %1 ").arg(QString::fromUtf8(n));
-    s += col.name().toLower();
-    s += QLatin1Char('\n');
 }
 
 // -----------------------------------------------------------------------------
