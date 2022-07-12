@@ -101,8 +101,13 @@ static QString writableGtkrc(int version)
 // -----------------------------------------------------------------------------
 static void applyGtkStyles(int version)
 {
+    const char *envVar = getenv(gtkEnvVar(version));
+    if (envVar) { // Already set by user, don't override it
+        return;
+    }
+
+    const QByteArray gtkrc(envVar);
     QString gtkkde = writableGtkrc(version);
-    QByteArray gtkrc = getenv(gtkEnvVar(version));
     QStringList list = QFile::decodeName(gtkrc).split(QLatin1Char(':'));
     QString userHomeGtkrc = QDir::homePath() + userGtkrc(version);
     if (!list.contains(userHomeGtkrc))
