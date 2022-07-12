@@ -58,6 +58,9 @@
 #endif
 #include <X11/Xlib.h>
 #endif
+
+#include <filesystem>
+
 inline const char *gtkEnvVar(int version)
 {
     return 2 == version ? "GTK2_RC_FILES" : "GTK_RC_FILES";
@@ -65,16 +68,18 @@ inline const char *gtkEnvVar(int version)
 
 inline const char *sysGtkrc(int version)
 {
-    if (2 == version) {
-        if (access("/etc/opt/gnome/gtk-2.0", F_OK) == 0)
+    if (version == 2) {
+        if (std::filesystem::exists("/etc/opt/gnome/gtk-2.0")) {
             return "/etc/opt/gnome/gtk-2.0/gtkrc";
-        else
+        } else {
             return "/etc/gtk-2.0/gtkrc";
+        }
     } else {
-        if (access("/etc/opt/gnome/gtk", F_OK) == 0)
+        if (std::filesystem::exists("/etc/opt/gnome/gtk")) {
             return "/etc/opt/gnome/gtk/gtkrc";
-        else
+        } else {
             return "/etc/gtk/gtkrc";
+        }
     }
 }
 
