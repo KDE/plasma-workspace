@@ -435,10 +435,11 @@ Item {
     MouseArea {
         anchors.fill: parent
 
+        property bool wasExpanded
         property int wheelDelta: 0
 
-        onClicked: plasmoid.expanded = !plasmoid.expanded
-
+        onPressed: wasExpanded = plasmoid.expanded
+        onClicked: plasmoid.expanded = !wasExpanded
         onWheel: {
             if (!plasmoid.configuration.wheelChangesTimezone) {
                 return;
