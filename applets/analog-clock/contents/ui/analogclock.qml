@@ -69,6 +69,7 @@ Item {
 
     Plasmoid.compactRepresentation: MouseArea {
         id: representation
+
         Layout.minimumWidth: Plasmoid.formFactor !== PlasmaCore.Types.Vertical ? representation.height : PlasmaCore.Units.gridUnit
         Layout.minimumHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? representation.width : PlasmaCore.Units.gridUnit
 
@@ -218,6 +219,7 @@ Item {
             }
         }
     }
+
     Plasmoid.fullRepresentation: PlasmaCalendar.MonthView {
         readonly property var appletInterface: Plasmoid.self
 
@@ -228,5 +230,4 @@ Item {
 
         today: dataSource.data["Local"]["DateTime"]
     }
-
 }
