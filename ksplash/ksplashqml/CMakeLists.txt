@@ -1,5 +1,3 @@
-add_subdirectory(themes)
-
 set(ksplashqml_SRCS
     main.cpp
     splashapp.cpp
