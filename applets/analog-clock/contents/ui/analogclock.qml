@@ -67,20 +67,15 @@ Item {
         dataSource.onDataChanged.connect(dateTimeChanged);
     }
 
-    Plasmoid.compactRepresentation: Item {
+    Plasmoid.compactRepresentation: MouseArea {
         id: representation
         Layout.minimumWidth: Plasmoid.formFactor !== PlasmaCore.Types.Vertical ? representation.height : PlasmaCore.Units.gridUnit
         Layout.minimumHeight: Plasmoid.formFactor === PlasmaCore.Types.Vertical ? representation.width : PlasmaCore.Units.gridUnit
 
-        MouseArea {
-            anchors.fill: parent
+        property bool wasExpanded
 
-            property bool wasExpanded
-
-            onPressed: wasExpanded = Plasmoid.expanded
-            onClicked: Plasmoid.expanded = !wasExpanded
-        }
-
+        onPressed: wasExpanded = Plasmoid.expanded
+        onClicked: Plasmoid.expanded = !wasExpanded
 
         PlasmaCore.Svg {
             id: clockSvg

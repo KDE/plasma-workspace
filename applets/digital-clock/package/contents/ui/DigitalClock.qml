@@ -14,7 +14,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as Components // Date label height breaks on vertical panel with PC3 version
 import org.kde.plasma.private.digitalclock 1.0
 
-Item {
+MouseArea {
     id: main
 
     property string timeFormat
@@ -60,6 +60,9 @@ Item {
                 (main.showDate || timezoneLabel.visible);
         }
     }
+
+    property bool wasExpanded
+    property int wheelDelta: 0
 
     onDateFormatChanged: {
         setupLabels();
@@ -433,46 +436,39 @@ Item {
         }
     ]
 
-    MouseArea {
-        anchors.fill: parent
+    onPressed: wasExpanded = Plasmoid.expanded
+    onClicked: Plasmoid.expanded = !wasExpanded
+    onWheel: {
+        if (!Plasmoid.configuration.wheelChangesTimezone) {
+            return;
+        }
 
-        property bool wasExpanded
-        property int wheelDelta: 0
+        var delta = wheel.angleDelta.y || wheel.angleDelta.x
+        var newIndex = main.tzIndex;
+        wheelDelta += delta;
+        // magic number 120 for common "one click"
+        // See: https://doc.qt.io/qt-5/qml-qtquick-wheelevent.html#angleDelta-prop
+        while (wheelDelta >= 120) {
+            wheelDelta -= 120;
+            newIndex--;
+        }
+        while (wheelDelta <= -120) {
+            wheelDelta += 120;
+            newIndex++;
+        }
 
-        onPressed: wasExpanded = Plasmoid.expanded
-        onClicked: Plasmoid.expanded = !wasExpanded
-        onWheel: {
-            if (!Plasmoid.configuration.wheelChangesTimezone) {
-                return;
-            }
+        if (newIndex >= Plasmoid.configuration.selectedTimeZones.length) {
+            newIndex = 0;
+        } else if (newIndex < 0) {
+            newIndex = Plasmoid.configuration.selectedTimeZones.length - 1;
+        }
 
-            var delta = wheel.angleDelta.y || wheel.angleDelta.x
-            var newIndex = main.tzIndex;
-            wheelDelta += delta;
-            // magic number 120 for common "one click"
-            // See: https://doc.qt.io/qt-5/qml-qtquick-wheelevent.html#angleDelta-prop
-            while (wheelDelta >= 120) {
-                wheelDelta -= 120;
-                newIndex--;
-            }
-            while (wheelDelta <= -120) {
-                wheelDelta += 120;
-                newIndex++;
-            }
+        if (newIndex !== main.tzIndex) {
+            Plasmoid.configuration.lastSelectedTimezone = Plasmoid.configuration.selectedTimeZones[newIndex];
+            main.tzIndex = newIndex;
 
-            if (newIndex >= Plasmoid.configuration.selectedTimeZones.length) {
-                newIndex = 0;
-            } else if (newIndex < 0) {
-                newIndex = Plasmoid.configuration.selectedTimeZones.length - 1;
-            }
-
-            if (newIndex !== main.tzIndex) {
-                Plasmoid.configuration.lastSelectedTimezone = Plasmoid.configuration.selectedTimeZones[newIndex];
-                main.tzIndex = newIndex;
-
-                dataSource.dataChanged();
-                setupLabels();
-            }
+            dataSource.dataChanged();
+            setupLabels();
         }
     }
 
