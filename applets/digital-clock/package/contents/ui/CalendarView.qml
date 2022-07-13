@@ -45,11 +45,13 @@ PlasmaExtras.Representation {
 
     property bool debug: false
 
-    property bool isExpanded: Plasmoid.expanded
+    Connections {
+        target: Plasmoid.self
 
-    onIsExpandedChanged: {
-        // clear all the selections when the plasmoid is showing/hiding
-        monthView.resetToToday();
+        function onExpandedChanged() {
+            // clear all the selections when the plasmoid is showing/hiding
+            monthView.resetToToday();
+        }
     }
 
     // Header containing date and pin button
