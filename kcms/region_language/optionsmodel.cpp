@@ -140,6 +140,7 @@ QVariant OptionsModel::data(const QModelIndex &index, int role) const
             return example;
         }
         }
+        return {};
     }
     case Page:
         return m_staticNames.at(row).second;

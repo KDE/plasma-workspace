@@ -102,6 +102,7 @@ QVariant LocaleListModel::data(const QModelIndex &index, int role) const
         case Measurement:
             return Utility::measurementExample(data.locale);
         }
+        return {};
     }
     case FilterRole: {
         return data.englishCountryName.toLower() + data.nativeCountryName.toLower() + data.nativeName.toLower() + data.englishName.toLower()
