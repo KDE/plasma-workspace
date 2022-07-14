@@ -43,7 +43,8 @@ void JobAggregator::setSourceModel(QAbstractItemModel *sourceModel)
                     Q_UNUSED(bottomRight);
 
                     if (roles.isEmpty() || roles.contains(NotificationManager::Notifications::SummaryRole)
-                        || roles.contains(NotificationManager::Notifications::PercentageRole)) {
+                        || roles.contains(NotificationManager::Notifications::PercentageRole)
+                        || roles.contains(NotificationManager::Notifications::JobStateRole)) {
                         update();
                     }
                 });
@@ -80,6 +81,11 @@ void JobAggregator::update()
 
     for (int i = 0; i < m_model->rowCount(); ++i) {
         const QModelIndex idx = m_model->index(i, 0);
+
+        if (idx.data(NotificationManager::Notifications::JobStateRole).toInt() == NotificationManager::Notifications::JobStateStopped
+            || idx.data(NotificationManager::Notifications::TypeRole).toInt() != NotificationManager::Notifications::JobType) {
+            continue;
+        }
 
         const QString summary = idx.data(NotificationManager::Notifications::SummaryRole).toString();
 
