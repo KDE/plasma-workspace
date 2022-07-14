@@ -55,6 +55,7 @@ KCMRegionAndLang::KCMRegionAndLang(QObject *parent, const KPluginMetaData &data,
     qmlRegisterAnonymousType<SelectedLanguageModel>("kcmregionandlang", 1);
     qmlRegisterType<LocaleListModel>("kcmregionandlang", 1, 0, "LocaleListModel");
     qmlRegisterType<LanguageListModel>("kcmregionandlang", 1, 0, "LanguageListModel");
+    qRegisterMetaType<KCM_RegionAndLang::SettingType>();
     qmlRegisterUncreatableMetaObject(KCM_RegionAndLang::staticMetaObject, "kcmregionandlang", 1, 0, "SettingType", "Error: SettingType is an enum");
 }
 
