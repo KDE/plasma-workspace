@@ -18,6 +18,7 @@ MouseArea {
     property Item dragParent
     property url dragUrl
     property var dragPixmap
+    property int dragPixmapSize: PlasmaCore.Units.iconSizes.large
 
     readonly property bool dragging: Notifications.DragHelper.dragActive
 
@@ -43,7 +44,7 @@ MouseArea {
     }
     onPositionChanged: {
         if (_pressX !== -1 && _pressY !== -1 && Notifications.DragHelper.isDrag(_pressX, _pressY, mouse.x, mouse.y)) {
-            Notifications.DragHelper.dragPixmapSize = PlasmaCore.Units.iconSizes.large;
+            Notifications.DragHelper.dragPixmapSize = area.dragPixmapSize;
             Notifications.DragHelper.startDrag(area.dragParent, area.dragUrl, area.dragPixmap);
             _pressX = -1;
             _pressY = -1;
