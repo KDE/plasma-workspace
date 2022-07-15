@@ -44,7 +44,8 @@ DraggableFileArea {
 
     dragParent: previewPixmap
     dragUrl: thumbnailer.url
-    dragPixmap: thumbnailer.pixmap
+    dragPixmap: thumbnailer.hasPreview ? thumbnailer.pixmap : thumbnailer.iconName
+    dragPixmapSize: previewIcon.height
 
     implicitHeight: Math.max(thumbnailActionRow.implicitHeight + 2 * thumbnailActionRow.anchors.topMargin,
                              Math.round(Math.min(width / 3, width / thumbnailer.ratio)))
@@ -110,6 +111,7 @@ DraggableFileArea {
         }
 
         PlasmaCore.IconItem {
+            id: previewIcon
             anchors.centerIn: parent
             width: height
             height: PlasmaCore.Units.roundToIconSize(parent.height)
