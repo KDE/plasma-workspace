@@ -193,11 +193,17 @@ KCM.GridViewKCM {
                         implicitHeight: Math.round(Kirigami.Units.gridUnit * 1.25)
 
                         background: Rectangle {
+                            readonly property bool showHighlight: parent.hovered && !control.checked && !Qt.colorEqual(control.color, "transparent")
                             color: control.color
-                            radius: height / 2
+                            radius:  showHighlight ? Math.round(height / 4) : Math.round(height / 2)
                             border {
-                                color: Qt.rgba(0, 0, 0, 0.15)
-                                width: control.visualFocus ? 2 : 0
+                                color: showHighlight ? Kirigami.Theme.highlightColor : Qt.rgba(0, 0, 0, 0.15)
+                            }
+                            Behavior on radius {
+                                PropertyAnimation {
+                                    duration: Kirigami.Units.veryShortDuration
+                                    from: Math.round(height / 2)
+                                }
                             }
                         }
                         indicator: Rectangle {
