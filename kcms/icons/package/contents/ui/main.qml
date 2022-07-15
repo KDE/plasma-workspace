@@ -206,12 +206,12 @@ KCM.GridViewKCM {
 
             Connections {
                 target: kcm
-                onShowProgress: {
+                function onShowProgress() {
                     progressLabel.text = message;
                     progressBusy.running = true;
                     progressRow.visible = true;
                 }
-                onHideProgress: {
+                function onHideProgress() {
                     progressBusy.running = false;
                     progressRow.visible = false;
                 }
