@@ -2245,32 +2245,52 @@ void ShellCorona::configurationChanged(const QString &path)
 
 void ShellCorona::activateLauncherMenu()
 {
+    auto message = QDBusMessage::createMethodCall("org.kde.KWin", "/KWin", "org.kde.KWin", "activeOutputName");
+    auto watcher = new QDBusPendingCallWatcher(QDBusConnection::sessionBus().asyncCall(message));
+    connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, watcher] {
+        watcher->deleteLater();
+        QDBusReply<QString> reply = *watcher;
+        if (reply.isValid()) {
+            activateLauncherMenu(reply.value());
+        }
+    });
+}
+
+void ShellCorona::activateLauncherMenu(const QString &screenName)
+{
     auto activateLauncher = [](Plasma::Applet *applet) -> bool {
         const auto provides = applet->pluginMetaData().value(QStringLiteral("X-Plasma-Provides"), QStringList());
         if (provides.contains(QLatin1String("org.kde.plasma.launchermenu"))) {
-            if (!applet->globalShortcut().isEmpty()) {
-                Q_EMIT applet->activated();
-                return true;
-            }
+            Q_EMIT applet->activated();
+            return true;
         }
         return false;
     };
 
-    for (auto it = m_panelViews.constBegin(), end = m_panelViews.constEnd(); it != end; ++it) {
-        const auto applets = it.key()->applets();
+    auto screen = m_screenPool->screenForConnector(screenName);
+
+    const auto panels = screen ? panelsForScreen(screen) : m_panelViews.values();
+    for (const auto panel : panels) {
+        const auto applets = panel->containment()->applets();
         for (auto applet : applets) {
             if (activateLauncher(applet)) {
                 return;
             }
         }
-        if (activateLauncher((*it)->containment())) {
+        if (activateLauncher(panel->containment())) {
             return;
         }
     }
-    for (auto it = m_desktopViewForScreen.constBegin(), itEnd = m_desktopViewForScreen.constEnd(); it != itEnd; ++it) {
-        if (activateLauncher((*it)->containment())) {
+
+    const auto desktops = screen ? QList{m_desktopViewForScreen.value(screen)} : m_desktopViewForScreen.values();
+    for (const auto desktop : desktops) {
+        if (activateLauncher(desktop->containment())) {
             return;
         }
+    }
+
+    if (screen) {
+        activateLauncherMenu(QString());
     }
 }
 

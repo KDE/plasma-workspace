@@ -245,6 +245,7 @@ private:
     void setupWaylandIntegration();
     void executeSetupPlasmoidScript(Plasma::Containment *containment, Plasma::Applet *applet);
     void checkAllDesktopsUiReady(bool ready);
+    void activateLauncherMenu(const QString &screenName);
 
 #ifndef NDEBUG
     void screenInvariants() const;
