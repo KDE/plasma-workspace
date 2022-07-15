@@ -164,6 +164,8 @@ KCM.ScrollViewKCM {
                     return i18n("Currency");
                 case SettingType.Measurement:
                     return i18n("Measurements");
+                case SettingType.PaperSize:
+                    return i18n("Paper Size");
                 }
                 console.warn("Invalid setting passed: ", setting);
                 return "Invalid"; // guard
@@ -224,6 +226,9 @@ KCM.ScrollViewKCM {
                                 break;
                             case SettingType.Measurement:
                                 kcm.settings.measurement = localeName;
+                                break;
+                            case SettingType.PaperSize:
+                                kcm.settings.paperSize = localeName;
                                 break;
                             }
                         } else {

@@ -24,7 +24,8 @@ OptionsModel::OptionsModel(KCMRegionAndLang *parent)
                       {i18nc("@info:title", "Numbers"), SettingType::Numeric},
                       {i18nc("@info:title", "Time"), SettingType::Time},
                       {i18nc("@info:title", "Currency"), SettingType::Currency},
-                      {i18nc("@info:title", "Measurements"), SettingType::Measurement}}};
+                      {i18nc("@info:title", "Measurements"), SettingType::Measurement},
+                      {i18nc("@info:title", "Paper Size"), SettingType::PaperSize}}};
     connect(m_settings, &RegionAndLangSettings::langChanged, this, &OptionsModel::handleLangChange);
     connect(m_settings, &RegionAndLangSettings::numericChanged, this, [this] {
         QLocale locale(m_settings->LC_LocaleWithLang(SettingType::Numeric));
@@ -46,12 +47,18 @@ OptionsModel::OptionsModel(KCMRegionAndLang *parent)
         m_measurementExample = Utility::measurementExample(locale);
         Q_EMIT dataChanged(createIndex(4, 0), createIndex(4, 0), {Subtitle, Example});
     });
+    connect(m_settings, &RegionAndLangSettings::paperSizeChanged, this, [this] {
+        QLocale locale(m_settings->LC_LocaleWithLang(SettingType::PaperSize));
+        m_measurementExample = Utility::measurementExample(locale);
+        Q_EMIT dataChanged(createIndex(5, 0), createIndex(5, 0), {Subtitle, Example});
+    });
 
     // initialize examples
     m_numberExample = Utility::numericExample(QLocale(m_settings->LC_LocaleWithLang(SettingType::Numeric)));
     m_timeExample = Utility::timeExample(QLocale(m_settings->LC_LocaleWithLang(SettingType::Time)));
     m_measurementExample = Utility::measurementExample(QLocale(m_settings->LC_LocaleWithLang(SettingType::Measurement)));
     m_currencyExample = Utility::monetaryExample(QLocale(m_settings->LC_LocaleWithLang(SettingType::Currency)));
+    m_paperSizeExample = Utility::paperSizeExample(QLocale(m_settings->LC_LocaleWithLang(SettingType::PaperSize)));
 }
 
 int OptionsModel::rowCount(const QModelIndex &parent) const
@@ -104,6 +111,11 @@ QVariant OptionsModel::data(const QModelIndex &index, int role) const
                 return getNativeName(m_settings->measurement());
             }
             break;
+        case PaperSize:
+            if (m_settings->isDefaultSetting(SettingType::PaperSize)) {
+                return getNativeName(m_settings->paperSize());
+            }
+            break;
         }
         return {}; // implicit locale
     }
@@ -135,6 +147,13 @@ QVariant OptionsModel::data(const QModelIndex &index, int role) const
         case Measurement: {
             QString example = m_measurementExample;
             if (m_settings->isDefaultSetting(SettingType::Measurement)) {
+                example += implicitFormatExampleMsg();
+            }
+            return example;
+        }
+        case PaperSize: {
+            QString example = m_paperSizeExample;
+            if (m_settings->isDefaultSetting(SettingType::PaperSize)) {
                 example += implicitFormatExampleMsg();
             }
             return example;
@@ -175,6 +194,10 @@ void OptionsModel::handleLangChange()
     if (m_settings->isDefaultSetting(SettingType::Measurement)) {
         m_measurementExample = Utility::measurementExample(lang);
         Q_EMIT dataChanged(createIndex(4, 0), createIndex(4, 0), {Subtitle, Example});
+    }
+    if (m_settings->isDefaultSetting(SettingType::PaperSize)) {
+        m_paperSizeExample = Utility::measurementExample(lang);
+        Q_EMIT dataChanged(createIndex(5, 0), createIndex(5, 0), {Subtitle, Example});
     }
 }
 

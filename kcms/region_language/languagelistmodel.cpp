@@ -128,6 +128,11 @@ QString LanguageListModel::timeExample() const
     return exampleHelper(Utility::timeExample);
 }
 
+QString LanguageListModel::paperSizeExample() const
+{
+    return exampleHelper(Utility::paperSizeExample);
+}
+
 QString LanguageListModel::metric() const
 {
     return exampleHelper(Utility::measurementExample);

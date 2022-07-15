@@ -101,6 +101,8 @@ QVariant LocaleListModel::data(const QModelIndex &index, int role) const
             return Utility::monetaryExample(data.locale);
         case Measurement:
             return Utility::measurementExample(data.locale);
+        case PaperSize:
+            return Utility::paperSizeExample(data.locale);
         }
         return {};
     }

@@ -78,6 +78,9 @@ void KCMRegionAndLang::save()
     if (settings()->isDefaultSetting(SettingType::Currency)) {
         locales.append(settings()->monetary());
     }
+    if (settings()->isDefaultSetting(SettingType::PaperSize)) {
+        locales.append(settings()->paperSize());
+    }
     if (!settings()->language().isEmpty()) {
         QStringList languages = settings()->language().split(QLatin1Char(':'));
         for (const QString &lang : languages) {
@@ -125,9 +128,12 @@ void KCMRegionAndLang::unset(SettingType setting)
     } else if (setting == SettingType::Measurement) {
         entry = "LC_MEASUREMENT";
         settings()->setMeasurement(settings()->defaultMeasurementValue());
-    } else {
+    } else if (setting == SettingType::Currency) {
         entry = "LC_MONETARY";
         settings()->setMonetary(settings()->defaultMonetaryValue());
+    } else {
+        entry = "LC_PAPER";
+        settings()->setPaperSize(settings()->defaultPaperSizeValue());
     }
     settings()->config()->group(QStringLiteral("Formats")).deleteEntry(entry);
 }

@@ -37,6 +37,7 @@ public:
     QString numberExample() const;
     QString currencyExample() const;
     QString timeExample() const;
+    QString paperSizeExample() const;
     QString metric() const;
 
     // currently unused, but we need it if we want preview examples in add langauge overlay

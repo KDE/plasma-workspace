@@ -24,6 +24,8 @@ bool RegionAndLangSettings::isDefaultSetting(SettingType setting) const
         return monetary() == defaultMonetaryValue();
     case SettingType::Measurement:
         return measurement() == defaultMeasurementValue();
+    case SettingType::PaperSize:
+        return paperSize() == defaultMeasurementValue();
     }
 
     return false;
@@ -56,6 +58,8 @@ QString RegionAndLangSettings::LC_LocaleWithLang(SettingType setting) const
         return monetary();
     case SettingType::Measurement:
         return measurement();
+    case SettingType::PaperSize:
+        return paperSize();
     case SettingType::Lang:
         Q_UNREACHABLE();
     }

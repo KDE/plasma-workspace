@@ -39,3 +39,14 @@ QString Utility::numericExample(const QLocale &locale)
 {
     return locale.toString(1000.01);
 }
+
+QString Utility::paperSizeExample(const QLocale &locale)
+{
+    QString paperSizeExample;
+    if (locale.measurementSystem() == QLocale::ImperialUSSystem || locale.measurementSystem() == QLocale::ImperialSystem) {
+        paperSizeExample = i18nc("PaperSize combobox", "Letter");
+    } else {
+        paperSizeExample = i18nc("PaperSize combobox", "A4");
+    }
+    return paperSizeExample;
+}

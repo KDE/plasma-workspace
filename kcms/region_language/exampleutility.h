@@ -19,4 +19,5 @@ public:
     static QString shortTimeExample(const QLocale &locale);
     static QString measurementExample(const QLocale &locale);
     static QString monetaryExample(const QLocale &locale);
+    static QString paperSizeExample(const QLocale &locale);
 };

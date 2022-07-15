@@ -37,8 +37,9 @@ private:
     QString m_timeExample;
     QString m_currencyExample;
     QString m_measurementExample;
+    QString m_paperSizeExample;
 
-    std::array<std::pair<QString, KCM_RegionAndLang::SettingType>, 5> m_staticNames; // title, page
+    std::array<std::pair<QString, KCM_RegionAndLang::SettingType>, 6> m_staticNames; // title, page
 
     RegionAndLangSettings *m_settings;
 };
