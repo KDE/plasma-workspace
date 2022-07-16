@@ -17,6 +17,9 @@ MouseArea {
 
     property int wheelDelta: 0
 
+    Accessible.description: i18nc("@info:tooltip", "Current keyboard layout is %1", layoutNames.longName)
+    Accessible.role: Accessible.Button
+
     onWheel: {
         // Magic number 120 for common "one click"
         // See: https://qt-project.org/doc/qt-5/qml-qtquick-wheelevent.html#angleDelta-prop
