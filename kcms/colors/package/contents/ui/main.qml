@@ -394,6 +394,8 @@ KCM.GridViewKCM {
                     QtControls.Button {
                         Layout.alignment: Qt.AlignBottom
                         text: i18n("Button")
+                        Kirigami.Theme.inherit: false
+                        Kirigami.Theme.highlightColor: kcm.tinted(root.accentColor ? kcm.accentBackground(root.accentColor, model.palette.base) : model.palette.highlight, kcm.accentColor, model.tints, model.tintFactor)
                         Kirigami.Theme.backgroundColor: kcm.tinted(model.palette.button, kcm.accentColor, model.tints, model.tintFactor)
                         Kirigami.Theme.textColor: kcm.tinted(model.palette.buttonText, kcm.accentColor, model.tints, model.tintFactor)
                         activeFocusOnTab: false
@@ -419,6 +421,7 @@ KCM.GridViewKCM {
                     // alternative base color we set here.
                     Kirigami.Theme.inherit: false
                     Kirigami.Theme.backgroundColor: kcm.tinted(model.palette.base, kcm.accentColor, model.tints, model.tintFactor)
+                    Kirigami.Theme.disabledTextColor: kcm.tinted(model.disabledText, kcm.accentColor, model.tints, model.tintFactor)
                     Kirigami.Theme.highlightColor: kcm.tinted(root.accentColor ? kcm.accentBackground(root.accentColor, model.palette.base) : model.palette.highlight, kcm.accentColor, model.tints, model.tintFactor)
                     Kirigami.Theme.highlightedTextColor: kcm.tinted(root.accentColor ? kcm.accentForeground(kcm.accentBackground(root.accentColor, model.palette.base), true) : model.palette.highlightedText, kcm.accentColor, model.tints, model.tintFactor)
                     Kirigami.Theme.linkColor: kcm.tinted(root.accentColor || model.palette.link, kcm.accentColor, model.tints, model.tintFactor)
