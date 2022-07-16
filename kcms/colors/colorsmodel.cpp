@@ -52,6 +52,8 @@ QVariant ColorsModel::data(const QModelIndex &index, int role) const
         return item.schemeName;
     case PaletteRole:
         return item.palette;
+    case DisabledText:
+        return item.palette.color(QPalette::Disabled, QPalette::Text);
     case ActiveTitleBarBackgroundRole:
         return item.activeTitleBarBackground;
     case ActiveTitleBarForegroundRole:
@@ -110,6 +112,7 @@ QHash<int, QByteArray> ColorsModel::roleNames() const
         {PaletteRole, QByteArrayLiteral("palette")},
         {ActiveTitleBarBackgroundRole, QByteArrayLiteral("activeTitleBarBackground")},
         {ActiveTitleBarForegroundRole, QByteArrayLiteral("activeTitleBarForeground")},
+        {DisabledText, QByteArrayLiteral("disabledText")},
         {RemovableRole, QByteArrayLiteral("removable")},
         {AccentActiveTitlebarRole, QByteArrayLiteral("accentActiveTitlebar")},
         {PendingDeletionRole, QByteArrayLiteral("pendingDeletion")},

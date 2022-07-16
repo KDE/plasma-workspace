@@ -45,6 +45,7 @@ public:
         // Colors which aren't in QPalette
         ActiveTitleBarBackgroundRole,
         ActiveTitleBarForegroundRole,
+        DisabledText,
         RemovableRole,
         AccentActiveTitlebarRole,
         PendingDeletionRole,
