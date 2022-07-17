@@ -19,24 +19,37 @@ Item {
     id: root
     property var overlays: []
 
+    Plasmoid.onActivated: if (!Keyboards.KWinVirtualKeyboard.available) {
+        root.action_settings()
+    } else if (Keyboards.KWinVirtualKeyboard.visible) {
+        Keyboards.KWinVirtualKeyboard.active = false
+    } else {
+        Keyboards.KWinVirtualKeyboard.enabled = !Keyboards.KWinVirtualKeyboard.enabled
+    }
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
     Plasmoid.fullRepresentation: Plasmoid.compactRepresentation
     Plasmoid.compactRepresentation: PlasmaCore.IconItem {
+        activeFocusOnTab: true
         source: Plasmoid.icon
         active: compactMouse.containsMouse
         overlays: root.overlays
+
+        Keys.onPressed: {
+            switch (event.key) {
+            case Qt.Key_Space:
+            case Qt.Key_Enter:
+            case Qt.Key_Return:
+            case Qt.Key_Select:
+                Plasmoid.activated();
+                break;
+            }
+        }
 
         MouseArea {
             id: compactMouse
             anchors.fill: parent
             hoverEnabled: true
-            onClicked: if (!Keyboards.KWinVirtualKeyboard.available) {
-                root.action_settings()
-            } else if (Keyboards.KWinVirtualKeyboard.visible) {
-                Keyboards.KWinVirtualKeyboard.active = false
-            } else {
-                Keyboards.KWinVirtualKeyboard.enabled = !Keyboards.KWinVirtualKeyboard.enabled
-            }
+            onClicked: Plasmoid.activated()
         }
     }
 
