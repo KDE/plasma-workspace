@@ -33,6 +33,10 @@ qt_add_dbus_interface(kworkspace_LIB_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/org.freed
 list(REMOVE_ITEM kworkspace_LIB_SRCS "${CMAKE_CURRENT_BINARY_DIR}/login1_manager_interface.cpp")
 list(APPEND kworkspace_LIB_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/login1_manager_interface.cpp")
 
+get_property(output SOURCE "${CMAKE_CURRENT_BINARY_DIR}/login1_manager_interface.cpp" PROPERTY OBJECT_DEPENDS)
+set_source_files_properties("${CMAKE_CURRENT_SOURCE_DIR}/login1_manager_interface.cpp" PROPERTIES OBJECT_DEPENDS ${output} SKIP_AUTOMOC TRUE
+        SKIP_AUTOUIC TRUE)
+
 qt_add_dbus_interface(kworkspace_LIB_SRCS "org.freedesktop.UPower.xml" upower_interface)
 qt_add_dbus_interface(kworkspace_LIB_SRCS "org.freedesktop.ConsoleKit.Manager.xml" consolekit_manager_interface)
 
