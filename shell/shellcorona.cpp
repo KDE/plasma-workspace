@@ -550,6 +550,8 @@ QByteArray ShellCorona::dumpCurrentLayoutJS() const
 
                 QJsonObject appletJson;
 
+                appletConfig = KConfigGroup(&appletConfig, QStringLiteral("Configuration"));
+
                 appletJson.insert("plugin", pluginName);
                 appletJson.insert("config", dumpconfigGroupJS(appletConfig));
 
