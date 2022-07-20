@@ -44,6 +44,8 @@ class View : public PlasmaQuick::Dialog
     // TODO KF6 This is kept for compatibility with third party themes which override the RunCommand.qml file
     Q_PROPERTY(Plasma::RunnerManager *runnerManager WRITE setRunnerManager)
     Q_PROPERTY(bool helpEnabled READ helpEnabled NOTIFY helpEnabledChanged)
+    Q_PROPERTY(int runnerWidth READ runnerWidth NOTIFY runnerWidthChanged)
+
 
 public:
     explicit View(QWindow *parent = nullptr);
@@ -78,9 +80,13 @@ public:
         return metaData.isEnabled(grp);
     }
 
+    int runnerWidth() const;
+
+
 Q_SIGNALS:
     void pinnedChanged();
     void helpEnabledChanged();
+    void runnerWidthChanged();
 
 protected:
     bool event(QEvent *event) override;
@@ -118,4 +124,5 @@ private:
     bool m_pinned = false;
     QStringList m_history;
     Plasma::RunnerManager *m_manager = nullptr;
+    int m_runnerWidth;
 };

@@ -54,6 +54,7 @@ View::View(QWindow *)
                                             QStandardPaths::GenericDataLocation)
                       ->group("General");
     m_configWatcher = KConfigWatcher::create(KSharedConfig::openConfig());
+
     connect(m_configWatcher.data(), &KConfigWatcher::configChanged, this, [this](const KConfigGroup &group, const QByteArrayList &names) {
         Q_UNUSED(names);
         if (group.name() == QLatin1String("General")) {
@@ -111,6 +112,11 @@ View::~View()
 {
 }
 
+int View::runnerWidth() const
+{
+    return m_runnerWidth;
+}
+
 void View::objectIncubated()
 {
     auto mainItem = qobject_cast<QQuickItem *>(m_qmlObj->rootObject());
@@ -150,6 +156,11 @@ void View::loadConfig()
 {
     setFreeFloating(m_config.readEntry("FreeFloating", false));
     setPinned(m_stateData.readEntry("Pinned", false));
+    const int _runnerWidth = m_config.readEntry("RunnerWidth", 30);
+    if (m_runnerWidth != _runnerWidth) {
+        m_runnerWidth = _runnerWidth;
+        Q_EMIT runnerWidthChanged();
+    }
 }
 
 bool View::event(QEvent *event)

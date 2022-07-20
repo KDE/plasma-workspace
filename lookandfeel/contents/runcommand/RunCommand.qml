@@ -83,8 +83,8 @@ ColumnLayout {
             id: queryField
             property bool allowCompletion: false
 
-            Layout.minimumWidth: PlasmaCore.Units.gridUnit * runnerManager.runnerWidth
-            Layout.maximumWidth: PlasmaCore.Units.gridUnit * runnerManager.runnerWidth
+            Layout.minimumWidth: PlasmaCore.Units.gridUnit * runnerWindow.runnerWidth
+            Layout.maximumWidth: PlasmaCore.Units.gridUnit * runnerWindow.runnerWidth
 
             activeFocusOnPress: true
             placeholderText: results.runnerName ? i18ndc("plasma_lookandfeel_org.kde.lookandfeel",
