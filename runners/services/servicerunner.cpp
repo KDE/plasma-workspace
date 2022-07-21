@@ -157,6 +157,14 @@ private:
         QUrl url(service->storageId());
         url.setScheme(QStringLiteral("applications"));
         match.setData(url);
+
+        QString path = service->entryPath();
+        if (!QDir::isAbsolutePath(path)) {
+            path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kservices5/") + path);
+        }
+
+        match.setUrls({QUrl::fromLocalFile(path)});
+
         QString exec = service->exec();
         // We have a snap, remove the ENV variable
         if (exec.contains(QLatin1String("BAMF_DESKTOP_FILE_HINT"))) {
@@ -465,32 +473,4 @@ void ServiceRunner::run(const Plasma::RunnerContext &context, const Plasma::Quer
     delegate->setAutoErrorHandlingEnabled(true);
     job->setUiDelegate(delegate);
     job->start();
-}
-
-QMimeData *ServiceRunner::mimeDataForMatch(const Plasma::QueryMatch &match)
-{
-    const QUrl dataUrl = match.data().toUrl();
-
-    const QString actionName = QUrlQuery(dataUrl).queryItemValue(QStringLiteral("action"));
-    if (!actionName.isEmpty()) {
-        return nullptr;
-    }
-
-    KService::Ptr service = KService::serviceByStorageId(dataUrl.path());
-    if (!service) {
-        return nullptr;
-    }
-
-    QString path = service->entryPath();
-    if (!QDir::isAbsolutePath(path)) {
-        path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kservices5/") + path);
-    }
-
-    if (path.isEmpty()) {
-        return nullptr;
-    }
-
-    auto *data = new QMimeData();
-    data->setUrls(QList<QUrl>{QUrl::fromLocalFile(path)});
-    return data;
 }
