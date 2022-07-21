@@ -55,14 +55,10 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
             return match.data().toString();
         }
     } else if (role == Kicker::UrlRole) {
-        const QString &runnerId = match.runner()->id();
-        if (runnerId == QLatin1String("baloosearch") || runnerId == QLatin1String("bookmarks")) {
-            return QUrl(match.data().toString());
-        } else if (runnerId == QLatin1String("recentdocuments") || runnerId == QLatin1String("services")) {
-            KService::Ptr service = KService::serviceByStorageId(match.data().toString());
-            if (service) {
-                return QUrl::fromLocalFile(Kicker::resolvedServiceEntryPath(service));
-            }
+        const QList<QUrl> urls = match.urls();
+
+        if (!urls.isEmpty()) {
+            return urls.first();
         }
     } else if (role == Kicker::HasActionListRole) {
         return match.runner()->id() == QLatin1String("services") || !match.runner()->findChildren<QAction *>().isEmpty();
