@@ -56,12 +56,16 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
         }
     } else if (role == Kicker::UrlRole) {
         const QString &runnerId = match.runner()->id();
-        if (runnerId == QLatin1String("baloosearch") || runnerId == QLatin1String("bookmarks")) {
+        if (runnerId == QLatin1String("baloosearch") || runnerId == QLatin1String("bookmarks") || runnerId == QLatin1String("recentdocuments")) {
             return QUrl(match.data().toString());
-        } else if (runnerId == QLatin1String("recentdocuments") || runnerId == QLatin1String("services")) {
-            KService::Ptr service = KService::serviceByStorageId(match.data().toString());
-            if (service) {
-                return QUrl::fromLocalFile(Kicker::resolvedServiceEntryPath(service));
+        } else if (runnerId == QLatin1String("services")) {
+            const QString result = match.data().toString();
+            if (result.startsWith(QLatin1String("applications:"))) {
+                KService::Ptr service = KService::serviceByStorageId(result.mid(13));
+
+                if (service) {
+                    return QUrl::fromLocalFile(Kicker::resolvedServiceEntryPath(service));
+                }
             }
         }
     } else if (role == Kicker::HasActionListRole) {
