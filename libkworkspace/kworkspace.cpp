@@ -25,12 +25,6 @@
 #include <fixx11h.h>
 #endif
 
-#if HAVE_X11
-#define DISPLAY "DISPLAY"
-#elif defined(Q_WS_QWS)
-#define DISPLAY "QWS_DISPLAY"
-#endif
-
 #include "config-workspace.h"
 
 #ifdef HAVE_UNISTD_H
@@ -81,7 +75,7 @@ void propagateSessionManager()
 {
 #if HAVE_X11
     QByteArray fName = QFile::encodeName(QStandardPaths::writableLocation(QStandardPaths::RuntimeLocation) + "/KSMserver");
-    QString display = QString::fromLocal8Bit(::getenv(DISPLAY));
+    QString display = QString::fromLocal8Bit(::getenv("DISPLAY"));
     // strip the screen number from the display
     display.remove(QRegularExpression(QStringLiteral("\\.\\d+$")));
     int i;
