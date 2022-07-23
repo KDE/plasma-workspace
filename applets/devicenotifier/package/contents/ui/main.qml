@@ -7,7 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.0
+import QtQuick 2.15
 import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -90,7 +90,11 @@ Item {
         MouseArea {
             id: compactMouse
             anchors.fill: parent
+            activeFocusOnTab: true
             hoverEnabled: true
+            Accessible.name: Plasmoid.title
+            Accessible.description: `${Plasmoid.toolTipMainText}: ${Plasmoid.toolTipSubText}`
+            Accessible.role: Accessible.Button
             onClicked: Plasmoid.expanded = !Plasmoid.expanded
         }
     }
