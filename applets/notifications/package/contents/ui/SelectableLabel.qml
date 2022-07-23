@@ -18,6 +18,8 @@ import org.kde.plasma.private.notifications 2.0 as Notifications
 PlasmaComponents3.ScrollView {
     id: bodyTextContainer
 
+    // For Keys.forwardTo
+    property alias textItem: bodyText
     property alias text: bodyText.text
 
     property int cursorShape
@@ -37,6 +39,7 @@ PlasmaComponents3.ScrollView {
 
     PlasmaComponents3.TextArea {
         id: bodyText
+        activeFocusOnTab: false
         enabled: !Kirigami.Settings.isMobile
         leftPadding: 0
         rightPadding: 0
