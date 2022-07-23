@@ -22,9 +22,14 @@ MouseArea {
     property QtObject batteries
     property bool hasBatteries: false
 
+    activeFocusOnTab: true
     hoverEnabled: true
 
     property bool wasExpanded
+
+    Accessible.name: Plasmoid.title
+    Accessible.description: `${Plasmoid.toolTipMainText}; ${Plasmoid.toolTipSubText}`
+    Accessible.role: Accessible.Button
 
     onPressed: wasExpanded = Plasmoid.expanded
     onClicked: Plasmoid.expanded = !wasExpanded
