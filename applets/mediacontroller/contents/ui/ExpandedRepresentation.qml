@@ -573,7 +573,7 @@ PlasmaExtras.Representation {
                         id: seekTimer
                         interval: 1000 / expandedRepresentation.rate
                         repeat: true
-                        running: root.state === "playing" && Plasmoid.expanded && !keyPressed && interval > 0 && seekSlider.to >= 1000000
+                        running: root.isPlaying && Plasmoid.expanded && !keyPressed && interval > 0 && seekSlider.to >= 1000000
                         onTriggered: {
                             // some players don't continuously update the seek slider position via mpris
                             // add one second; value in microseconds
@@ -666,8 +666,8 @@ PlasmaExtras.Representation {
                     icon.width: expandedRepresentation.controlSize
                     icon.height: expandedRepresentation.controlSize
                     Layout.alignment: Qt.AlignVCenter
-                    enabled: root.state == "playing" ? root.canPause : root.canPlay
-                    icon.name: root.state == "playing" ? "media-playback-pause" : "media-playback-start"
+                    enabled: root.isPlaying ? root.canPause : root.canPlay
+                    icon.name: root.isPlaying ? "media-playback-pause" : "media-playback-start"
                     onClicked: root.togglePlaying()
                 }
 

@@ -64,6 +64,7 @@ Item {
     readonly property bool canGoNext: (canControl && mpris2Source.currentData.CanGoNext) || false
     readonly property bool canPlay: (canControl && mpris2Source.currentData.CanPlay) || false
     readonly property bool canPause: (canControl && mpris2Source.currentData.CanPause) || false
+    readonly property bool isPlaying: root.state === "playing"
 
     // var instead of bool so we can use "undefined" for "shuffle not supported"
     readonly property var shuffle: !root.noPlayer && typeof mpris2Source.currentData.Shuffle === "boolean"
@@ -101,15 +102,15 @@ Item {
             })
 
             // if CanPause, toggle the menu entry between Play & Pause, otherwise always use Play
-            if (root.state == "playing" && root.canPause) {
+            if (root.isPlaying && root.canPause) {
                 Plasmoid.setAction("pause", i18nc("Pause playback", "Pause"), "media-playback-pause")
                 Plasmoid.action("pause").enabled = Qt.binding(function() {
-                    return root.state === "playing" && root.canPause;
+                    return root.isPlaying && root.canPause;
                 });
             } else {
                 Plasmoid.setAction("play", i18nc("Start playback", "Play"), "media-playback-start")
                 Plasmoid.action("play").enabled = Qt.binding(function() {
-                    return root.state !== "playing" && root.canPlay;
+                    return !root.isPlaying && root.canPlay;
                 });
             }
 
@@ -121,7 +122,7 @@ Item {
 
             Plasmoid.setAction("stop", i18nc("Stop playback", "Stop"), "media-playback-stop")
             Plasmoid.action("stop").enabled = Qt.binding(function() {
-                return root.state === "playing" || root.state === "paused";
+                return root.isPlaying || root.state === "paused";
             })
         }
 
@@ -157,7 +158,7 @@ Item {
 
     Plasmoid.compactRepresentation: PlasmaCore.IconItem {
         source: {
-            if (root.state === "playing") {
+            if (root.isPlaying) {
                 return "media-playback-playing";
             } else if (root.state === "paused") {
                 return "media-playback-paused";
@@ -229,7 +230,7 @@ Item {
     }
 
     function togglePlaying() {
-        if (root.state === "playing") {
+        if (root.isPlaying) {
             if (root.canPause) {
                 root.action_pause();
             }
