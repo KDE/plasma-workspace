@@ -154,51 +154,8 @@ Item {
         }
     }
 
+    Plasmoid.compactRepresentation: CompactRepresentation {}
     Plasmoid.fullRepresentation: ExpandedRepresentation {}
-
-    Plasmoid.compactRepresentation: PlasmaCore.IconItem {
-        source: {
-            if (root.isPlaying) {
-                return "media-playback-playing";
-            } else if (root.state === "paused") {
-                return "media-playback-paused";
-            } else {
-                return "media-playback-stopped";
-            }
-        }
-        active: compactMouse.containsMouse
-
-        MouseArea {
-            id: compactMouse
-            anchors.fill: parent
-            hoverEnabled: true
-            acceptedButtons: Qt.LeftButton | Qt.MiddleButton | Qt.BackButton | Qt.ForwardButton
-
-            onWheel: {
-                var service = mpris2Source.serviceForSource(mpris2Source.current)
-                var operation = service.operationDescription("ChangeVolume")
-                operation.delta = (wheel.angleDelta.y / 120) * (volumePercentStep / 100)
-                operation.showOSD = true
-                service.startOperationCall(operation)
-            }
-
-            onClicked: {
-                switch (mouse.button) {
-                case Qt.MiddleButton:
-                    root.togglePlaying()
-                    break
-                case Qt.BackButton:
-                    root.action_previous()
-                    break
-                case Qt.ForwardButton:
-                    root.action_next()
-                    break
-                default:
-                    Plasmoid.expanded = !Plasmoid.expanded
-                }
-            }
-        }
-    }
 
     PlasmaCore.DataSource {
         id: mpris2Source
