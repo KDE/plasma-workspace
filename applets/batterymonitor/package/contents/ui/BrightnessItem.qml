@@ -63,6 +63,10 @@ RowLayout {
             // Please see https://git.reviewboard.kde.org/r/122505/ for more information
             from: to > 100 ? 1 : 0
             stepSize: 1
+
+            Accessible.name: root.label
+            Accessible.description: percent.text
+
             onMoved: root.moved()
         }
     }
