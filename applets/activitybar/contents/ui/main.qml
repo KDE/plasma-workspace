@@ -6,20 +6,24 @@
 
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
+
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents // PC3 Tabbar only has top and bottom tab positions, not left and right
+
 import org.kde.activities 0.1 as Activities
 
 Item {
-
     Layout.minimumWidth: tabBar.implicitWidth
     Layout.minimumHeight: tabBar.implicitHeight
+
     Plasmoid.preferredRepresentation: Plasmoid.fullRepresentation
 
     PlasmaComponents.TabBar {
         id: tabBar
+
         anchors.fill: parent
+
         tabPosition: {
             switch (Plasmoid.location) {
             case PlasmaCore.Types.LeftEdge:
@@ -40,9 +44,11 @@ Item {
             }
             delegate: PlasmaComponents.TabButton {
                 id: tab
+
                 checked: model.current
                 text: model.name
                 activeFocusOnTab: true
+
                 Keys.onPressed: {
                     switch (event.key) {
                     case Qt.Key_Space:
@@ -57,15 +63,18 @@ Item {
                 Accessible.name: model.name
                 Accessible.description: i18n("Switch to activity %1", model.name)
                 Accessible.role: Accessible.Button
+
                 onClicked: {
                     activityModel.setCurrentActivity(model.id, function() {});
                 }
-                Component.onCompleted: {
+
+                onCheckedChanged: {
                     if(model.current) {
                         tabBar.currentTab = tab;
                     }
                 }
-                onCheckedChanged: {
+
+                Component.onCompleted: {
                     if(model.current) {
                         tabBar.currentTab = tab;
                     }
