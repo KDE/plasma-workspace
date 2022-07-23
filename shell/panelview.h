@@ -44,12 +44,16 @@ class PanelView : public PlasmaQuick::ContainmentView
     Q_PROPERTY(int offset READ offset WRITE setOffset NOTIFY offsetChanged)
 
     /**
-     * height of horizontal panels, width of vertical panels
+     * Height of horizontal panels or width of vertical panels, set by the user.
      */
     Q_PROPERTY(int thickness READ thickness WRITE setThickness NOTIFY thicknessChanged)
 
     /**
-     * width of horizontal panels, height of vertical panels
+     * Preferred (natural) width of horizontal panels or height of vertical
+     * panels, given its current thickness and content.  When the panel is
+     * constrained by other factors such as minimumLength, maximumLength or
+     * screen size, its reported length may differ from an actual width or
+     * height.
      */
     Q_PROPERTY(int length READ length WRITE setLength NOTIFY lengthChanged)
 
