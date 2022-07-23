@@ -40,7 +40,7 @@ MouseArea {
         }
     }
     Accessible.name: Plasmoid.title
-    Accessible.description: Plasmoid.nativeInterface.genericName !== mainText ? Plasmoid.nativeInterface.genericName :""
+    Accessible.description: toolTip.subText
     Accessible.role: Accessible.Button
 
     Layout.minimumWidth: Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? height : PlasmaCore.Units.iconSizes.small
@@ -161,6 +161,7 @@ MouseArea {
     }
 
     PlasmaCore.ToolTipArea {
+        id: toolTip
         anchors.fill: parent
         mainText: Plasmoid.title
         subText: Plasmoid.nativeInterface.genericName !== mainText ? Plasmoid.nativeInterface.genericName :""
