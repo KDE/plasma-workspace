@@ -637,7 +637,10 @@ PlasmaExtras.Representation {
                     icon.height: expandedRepresentation.controlSize
                     checked: root.shuffle === true
                     enabled: root.canControl && root.shuffle !== undefined
-                    Accessible.name: i18n("Shuffle")
+
+                    display: PlasmaComponents3.AbstractButton.IconOnly
+                    text: i18n("Shuffle")
+
                     onClicked: {
                         const service = mpris2Source.serviceForSource(mpris2Source.current);
                         let operation = service.operationDescription("SetShuffle");
@@ -646,7 +649,7 @@ PlasmaExtras.Representation {
                     }
 
                     PlasmaComponents3.ToolTip {
-                        text: parent.Accessible.name
+                        text: parent.text
                     }
                 }
 
@@ -656,6 +659,10 @@ PlasmaExtras.Representation {
                     Layout.alignment: Qt.AlignVCenter
                     enabled: playerControls.enabled && root.canGoPrevious
                     icon.name: LayoutMirroring.enabled ? "media-skip-forward" : "media-skip-backward"
+
+                    display: PlasmaComponents3.AbstractButton.IconOnly
+                    text: i18nc("Play previous track", "Previous Track")
+
                     onClicked: {
                         seekSlider.value = 0    // Let the media start from beginning. Bug 362473
                         root.action_previous()
@@ -665,9 +672,14 @@ PlasmaExtras.Representation {
                 PlasmaComponents3.ToolButton { // Pause/Play
                     icon.width: expandedRepresentation.controlSize
                     icon.height: expandedRepresentation.controlSize
+
                     Layout.alignment: Qt.AlignVCenter
                     enabled: root.isPlaying ? root.canPause : root.canPlay
                     icon.name: root.isPlaying ? "media-playback-pause" : "media-playback-start"
+
+                    display: PlasmaComponents3.AbstractButton.IconOnly
+                    text: root.isPlaying ? i18nc("Pause playback", "Pause") : i18nc("Start playback", "Play")
+
                     onClicked: root.togglePlaying()
                 }
 
@@ -677,6 +689,10 @@ PlasmaExtras.Representation {
                     Layout.alignment: Qt.AlignVCenter
                     enabled: playerControls.enabled && root.canGoNext
                     icon.name: LayoutMirroring.enabled ? "media-skip-backward" : "media-skip-forward"
+
+                    display: PlasmaComponents3.AbstractButton.IconOnly
+                    text: i18nc("Play next track", "Next Track")
+
                     onClicked: {
                         seekSlider.value = 0    // Let the media start from beginning. Bug 362473
                         root.action_next()
@@ -691,7 +707,10 @@ PlasmaExtras.Representation {
                     icon.height: expandedRepresentation.controlSize
                     checked: root.loopStatus !== undefined && root.loopStatus !== "None"
                     enabled: root.canControl && root.loopStatus !== undefined
-                    Accessible.name: root.loopStatus === "Track" ? i18n("Repeat Track") : i18n("Repeat")
+
+                    display: PlasmaComponents3.AbstractButton.IconOnly
+                    text: root.loopStatus === "Track" ? i18n("Repeat Track") : i18n("Repeat")
+
                     onClicked: {
                         const service = mpris2Source.serviceForSource(mpris2Source.current);
                         let operation = service.operationDescription("SetLoopStatus");
@@ -709,7 +728,7 @@ PlasmaExtras.Representation {
                     }
 
                     PlasmaComponents3.ToolTip {
-                        text: parent.Accessible.name
+                        text: parent.text
                     }
                 }
             }
