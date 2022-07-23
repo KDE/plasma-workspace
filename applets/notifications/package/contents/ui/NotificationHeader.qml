@@ -184,10 +184,15 @@ RowLayout {
             id: configureButton
             icon.name: "configure"
             visible: false
+
+            display: PlasmaComponents3.AbstractButton.IconOnly
+            text: notificationHeading.configureActionLabel || i18nd("plasma_applet_org.kde.plasma.notifications", "Configure")
+            Accessible.description: applicationNameLabel.text
+
             onClicked: notificationHeading.configureClicked()
 
             PlasmaComponents3.ToolTip {
-                text: notificationHeading.configureActionLabel || i18nd("plasma_applet_org.kde.plasma.notifications", "Configure")
+                text: parent.text
             }
         }
 
@@ -195,12 +200,17 @@ RowLayout {
             id: dismissButton
             icon.name: notificationHeading.dismissed ? "window-restore" : "window-minimize"
             visible: false
+
+            display: PlasmaComponents3.AbstractButton.IconOnly
+            text: notificationHeading.dismissed
+                ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Opposite of minimize", "Restore")
+                : i18nd("plasma_applet_org.kde.plasma.notifications", "Minimize")
+            Accessible.description: applicationNameLabel.text
+
             onClicked: notificationHeading.dismissClicked()
 
             PlasmaComponents3.ToolTip {
-                text: notificationHeading.dismissed
-                      ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Opposite of minimize", "Restore")
-                      : i18nd("plasma_applet_org.kde.plasma.notifications", "Minimize")
+                text: parent.text
             }
         }
 
@@ -208,6 +218,11 @@ RowLayout {
             id: closeButton
             visible: false
             icon.name: "window-close"
+
+            display: PlasmaComponents3.AbstractButton.IconOnly
+            text: closeButtonToolTip.text
+            Accessible.description: applicationNameLabel.text
+
             onClicked: notificationHeading.closeClicked()
 
             PlasmaComponents3.ToolTip {
