@@ -59,6 +59,10 @@ Item {
                 id: backButton
                 visible: systemTrayState.activeApplet && systemTrayState.activeApplet.expanded && (hiddenLayout.itemCount > 0)
                 icon.name: LayoutMirroring.enabled ? "go-previous-symbolic-rtl" : "go-previous-symbolic"
+
+                display: PlasmaComponents.AbstractButton.IconOnly
+                text: i18nc("@action:button", "Go Back")
+
                 onClicked: systemTrayState.setActiveApplet(null)
             }
 
@@ -81,6 +85,12 @@ Item {
                 icon.name: "application-menu"
                 checkable: visibleActions > 1 || (singleAction && singleAction.checkable)
                 contentItem.opacity: visibleActions > 1
+
+                display: PlasmaComponents.AbstractButton.IconOnly
+                text: actionsButton.singleAction ? actionsButton.singleAction.text : i18n("More actions")
+
+                Accessible.role: actionsButton.singleAction ? Accessible.Button : Accessible.ButtonMenu
+
                 // NOTE: it needs an IconItem because QtQuickControls2 buttons cannot load QIcons as their icon
                 PlasmaCore.IconItem {
                     parent: actionsButton
@@ -106,7 +116,7 @@ Item {
                     }
                 }
                 PlasmaComponents.ToolTip {
-                    text: actionsButton.singleAction ? actionsButton.singleAction.text : i18n("More actions")
+                    text: parent.text
                 }
                 PC2.Menu {
                     id: configMenu
@@ -139,8 +149,12 @@ Item {
             PlasmaComponents.ToolButton {
                 icon.name: "configure"
                 visible: actionsButton.applet && actionsButton.applet.action("configure")
+
+                display: PlasmaComponents.AbstractButton.IconOnly
+                text: actionsButton.applet.action("configure").text
+
                 PlasmaComponents.ToolTip {
-                    text: parent.visible ? actionsButton.applet.action("configure").text : ""
+                    text: parent.visible ? parent.text : ""
                 }
                 onClicked: actionsButton.applet.action("configure").trigger();
             }
@@ -151,8 +165,12 @@ Item {
                 checked: Plasmoid.configuration.pin
                 onToggled: Plasmoid.configuration.pin = checked
                 icon.name: "window-pin"
+
+                display: PlasmaComponents.AbstractButton.IconOnly
+                text: i18n("Keep Open")
+
                 PlasmaComponents.ToolTip {
-                    text: i18n("Keep Open")
+                    text: parent.text
                 }
             }
         }
