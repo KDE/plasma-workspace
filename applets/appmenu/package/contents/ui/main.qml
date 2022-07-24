@@ -141,6 +141,7 @@ Item {
 
     AppMenuPrivate.AppMenuModel {
         id: appMenuModel
+        containmentStatus: Plasmoid.nativeInterface.containment.status
         screenGeometry: Plasmoid.screenGeometry
         onRequestActivateIndex: Plasmoid.nativeInterface.requestActivateIndex(index)
         Component.onCompleted: {
