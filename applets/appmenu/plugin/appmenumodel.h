@@ -14,6 +14,8 @@
 #include <QStringList>
 #include <tasksmodel.h>
 
+#include <Plasma/Containment>
+
 class QMenu;
 class QModelIndex;
 class QDBusServiceWatcher;
@@ -26,6 +28,7 @@ class AppMenuModel : public QAbstractListModel
     Q_PROPERTY(bool menuAvailable READ menuAvailable WRITE setMenuAvailable NOTIFY menuAvailableChanged)
     Q_PROPERTY(bool visible READ visible NOTIFY visibleChanged)
 
+    Q_PROPERTY(Plasma::Types::ItemStatus containmentStatus MEMBER m_containmentStatus NOTIFY containmentStatusChanged)
     Q_PROPERTY(QRect screenGeometry READ screenGeometry WRITE setScreenGeometry NOTIFY screenGeometryChanged)
 
 public:
@@ -64,6 +67,7 @@ private Q_SLOTS:
 Q_SIGNALS:
     void menuAvailableChanged();
     void modelNeedsUpdate();
+    void containmentStatusChanged();
     void screenGeometryChanged();
     void visibleChanged();
 
@@ -72,6 +76,7 @@ private:
     bool m_updatePending = false;
     bool m_visible = true;
 
+    Plasma::Types::ItemStatus m_containmentStatus = Plasma::Types::PassiveStatus;
     TaskManager::TasksModel *m_tasksModel;
 
     //! current active window used

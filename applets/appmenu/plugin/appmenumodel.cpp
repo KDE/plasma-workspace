@@ -193,6 +193,12 @@ void AppMenuModel::update()
 
 void AppMenuModel::onActiveWindowChanged()
 {
+    // Do not change active window when panel gets focus
+    // See ShellCorona::init() in shell/shellcorona.cpp
+    if (m_containmentStatus == Plasma::Types::AcceptingInputStatus) {
+        return;
+    }
+
     const QModelIndex activeTaskIndex = m_tasksModel->activeTask();
     const QString objectPath = m_tasksModel->data(activeTaskIndex, TaskManager::AbstractTasksModel::ApplicationMenuObjectPath).toString();
     const QString serviceName = m_tasksModel->data(activeTaskIndex, TaskManager::AbstractTasksModel::ApplicationMenuServiceName).toString();

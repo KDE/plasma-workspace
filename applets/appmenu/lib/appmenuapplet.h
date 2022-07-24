@@ -18,6 +18,7 @@ class AppMenuApplet : public Plasma::Applet
 {
     Q_OBJECT
 
+    Q_PROPERTY(QObject *containment READ containment CONSTANT)
     Q_PROPERTY(QAbstractItemModel *model READ model WRITE setModel NOTIFY modelChanged)
 
     Q_PROPERTY(int view READ view WRITE setView NOTIFY viewChanged)
