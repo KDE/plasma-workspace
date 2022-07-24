@@ -42,6 +42,11 @@ Item {
         checkable: menuAvailable && Plasmoid.nativeInterface.currentIndex === fakeIndex
         checked: checkable
         icon.name: "application-menu"
+
+        display: PlasmaComponents3.AbstractButton.IconOnly
+        text: Plasmoid.title
+        Accessible.description: Plasmoid.toolTipSubText
+
         onClicked: Plasmoid.nativeInterface.trigger(this, 0);
     }
 
