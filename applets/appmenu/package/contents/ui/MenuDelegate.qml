@@ -29,6 +29,8 @@ AbstractButton {
     rightPadding: rest.margins.right
     bottomPadding: rest.margins.bottom
 
+    Accessible.description: i18nc("@info:usagetip", "Open a menu")
+
     background: Item {
         id: background
 
