@@ -107,6 +107,8 @@ void BackgroundListModel::reload(const QStringList &selected)
         return;
     }
 
+    m_removableWallpapers = QSet<QString>(selected.constBegin(), selected.constEnd());
+
     const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("wallpapers/"), QStandardPaths::LocateDirectory);
 
     BackgroundFinder *finder = new BackgroundFinder(m_wallpaper.data(), dirs);
@@ -117,7 +119,6 @@ void BackgroundListModel::reload(const QStringList &selected)
         }
 
         processPaths(selected + wallpapersFound);
-        m_removableWallpapers = QSet<QString>(selected.constBegin(), selected.constEnd());
     });
     m_findToken = token;
     finder->start();
