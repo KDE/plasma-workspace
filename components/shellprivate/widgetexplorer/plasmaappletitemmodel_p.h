@@ -34,6 +34,7 @@ public:
     int running() const override;
     bool isLocal() const;
     bool matches(const QString &pattern) const override;
+    QStringList keywords() const override;
 
     // set how many instances of this applet are running
     void setRunning(int count) override;

@@ -65,6 +65,11 @@ public:
      */
     virtual bool passesFiltering(const Filter &filter) const = 0;
 
+    virtual QStringList keywords() const
+    {
+        return {};
+    };
+
 private:
 };
 

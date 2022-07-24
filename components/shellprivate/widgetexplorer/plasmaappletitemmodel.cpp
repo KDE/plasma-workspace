@@ -151,6 +151,21 @@ bool PlasmaAppletItem::matches(const QString &pattern) const
     return AbstractItem::matches(pattern);
 }
 
+QStringList PlasmaAppletItem::keywords() const
+{
+    const static QString keywordsJsonKey = QStringLiteral("X-KDE-Keywords");
+    constexpr QLatin1Char separator(',');
+
+    const QJsonObject rawData = m_info.rawData();
+    if (rawData.contains(keywordsJsonKey)) {
+        QStringList keywords = m_info.value(keywordsJsonKey).split(separator);
+        keywords << KJsonUtils::readTranslatedString(rawData, keywordsJsonKey).split(separator);
+        keywords.removeDuplicates();
+        return keywords;
+    }
+    return {};
+}
+
 bool PlasmaAppletItem::isLocal() const
 {
     return m_local;

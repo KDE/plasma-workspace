@@ -47,7 +47,13 @@ int AbstractItem::running() const
 
 bool AbstractItem::matches(const QString &pattern) const
 {
-    return name().contains(pattern, Qt::CaseInsensitive) || description().contains(pattern, Qt::CaseInsensitive);
+    if (name().contains(pattern, Qt::CaseInsensitive) || description().contains(pattern, Qt::CaseInsensitive)) {
+        return true;
+    }
+    const QStringList itemKeywords = keywords();
+    return std::any_of(itemKeywords.begin(), itemKeywords.end(), [&pattern](const QString &keyword) {
+        return keyword.startsWith(pattern, Qt::CaseInsensitive);
+    });
 }
 
 // DefaultFilterModel
