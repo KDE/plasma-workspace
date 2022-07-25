@@ -90,7 +90,7 @@ KCMInit::KCMInit(const QCommandLineParser &args)
 {
     if (args.isSet(QStringLiteral("list"))) {
         m_list = KPluginMetaData::findPlugins(QStringLiteral("plasma/kcminit"));
-        for (const KPluginMetaData &data : qAsConst(m_list)) {
+        for (const KPluginMetaData &data : std::as_const(m_list)) {
             printf("%s\n", QFile::encodeName(data.fileName()).data());
         }
         return;
