@@ -18,10 +18,14 @@ RowLayout {
         id: actionToolButton
         // TODO: only show for items supporting actions?
         icon.name: "system-run"
+
+        display: PlasmaComponents3.AbstractButton.IconOnly
+        text: i18n("Invoke action")
+
         onClicked: menuItem.action(UuidRole)
 
         PlasmaComponents3.ToolTip {
-            text: i18n("Invoke action")
+            text: parent.text
         }
         KeyNavigation.right: barcodeToolButton
     }
@@ -29,10 +33,14 @@ RowLayout {
         id: barcodeToolButton
         icon.name: "view-barcode-qr"
         visible: supportsBarcodes
+
+        display: PlasmaComponents3.AbstractButton.IconOnly
+        text: i18n("Show QR code")
+
         onClicked: menuItem.barcode(DisplayRole)
 
         PlasmaComponents3.ToolTip {
-            text: i18n("Show QR code")
+            text: parent.text
         }
         KeyNavigation.right: editToolButton
     }
@@ -41,20 +49,28 @@ RowLayout {
         icon.name: "document-edit"
         enabled: !clipboardSource.editing
         visible: TypeRole === 0
+
+        display: PlasmaComponents3.AbstractButton.IconOnly
+        text: i18n("Edit contents")
+
         onClicked: menuItem.edit(UuidRole)
 
         PlasmaComponents3.ToolTip {
-            text: i18n("Edit contents")
+            text: parent.text
         }
         KeyNavigation.right: deleteToolButton
     }
     PlasmaComponents3.ToolButton {
         id: deleteToolButton
         icon.name: "edit-delete"
+
+        display: PlasmaComponents3.AbstractButton.IconOnly
+        text: i18n("Remove from history")
+
         onClicked: menuItem.remove(UuidRole)
 
         PlasmaComponents3.ToolTip {
-            text: i18n("Remove from history")
+            text: parent.text
         }
     }
 }

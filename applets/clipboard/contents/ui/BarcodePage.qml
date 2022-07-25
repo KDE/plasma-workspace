@@ -80,10 +80,14 @@ ColumnLayout {
                 id: configureButton
                 checkable: true
                 icon.name: "configure"
+
+                display: PlasmaComponents3.AbstractButton.IconOnly
+                text: i18n("Change the QR code type")
+
                 onClicked: menu.openRelative()
 
                 PlasmaComponents3.ToolTip {
-                    text: i18n("Change the QR code type")
+                    text: parent.text
                 }
             }
         }
