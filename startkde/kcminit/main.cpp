@@ -131,8 +131,9 @@ KCMInit::KCMInit(const QCommandLineParser &args)
         QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.kcminit"));
 
         qApp->exec(); // wait for runPhase1()
-    } else
+    } else {
         runModules(-1); // all phases
+    }
 }
 
 KCMInit::~KCMInit()
