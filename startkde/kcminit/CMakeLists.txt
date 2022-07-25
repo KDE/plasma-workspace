@@ -1,24 +1,24 @@
-########### next target ###############
+add_executable(kcminit main.cpp)
+target_link_libraries(kcminit
+    Qt::Core
+    Qt::Gui
+    Qt::DBus
+    KF5::CoreAddons
+    KF5::Service
+    KF5::I18n
+    KF5::ConfigCore
+    PW::KWorkspace
+)
+install(TARGETS kcminit ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
-set(kcminit_SRCS main.cpp)
+add_custom_command(TARGET kcminit POST_BUILD
+                   COMMAND ${CMAKE_COMMAND} -E create_symlink kcminit kcminit_startup)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/kcminit_startup DESTINATION ${KDE_INSTALL_BINDIR})
 
-add_executable(kcminit ${kcminit_SRCS})
-
-target_link_libraries(kcminit Qt::Core Qt::Gui Qt::DBus KF5::CoreAddons KF5::Service KF5::I18n KF5::ConfigCore PW::KWorkspace)
-
-install(TARGETS kcminit         ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
-
-########### next target ###############
-
-# TODO might be simpler to make <whatever>_startup to be a symlink to <whatever>
-
-set(kcminit_startup_SRCS main.cpp)
-
-add_executable(kcminit_startup ${kcminit_startup_SRCS})
-
-ecm_install_configured_files(INPUT plasma-kcminit-phase1.service.in  plasma-kcminit.service.in
-                                                   DESTINATION ${KDE_INSTALL_SYSTEMDUSERUNITDIR})
-
-target_link_libraries(kcminit_startup Qt::Core Qt::Gui Qt::DBus KF5::CoreAddons KF5::Service KF5::I18n KF5::ConfigCore PW::KWorkspace)
-
-install(TARGETS kcminit_startup         ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )
+ecm_install_configured_files(
+    INPUT
+        plasma-kcminit-phase1.service.in
+        plasma-kcminit.service.in
+    DESTINATION
+        ${KDE_INSTALL_SYSTEMDUSERUNITDIR}
+)
