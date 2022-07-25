@@ -88,15 +88,19 @@ void KCMInit::runModules(int phase)
 
 KCMInit::KCMInit(const QCommandLineParser &args)
 {
-    if (args.isSet(QStringLiteral("list"))) {
+    const auto positionalArguments = args.positionalArguments();
+
+    if (args.isSet(QStringLiteral("list")) || positionalArguments.isEmpty()) {
         m_list = KPluginMetaData::findPlugins(QStringLiteral("plasma/kcminit"));
+    }
+
+    if (args.isSet(QStringLiteral("list"))) {
         for (const KPluginMetaData &data : std::as_const(m_list)) {
             printf("%s\n", QFile::encodeName(data.fileName()).data());
         }
         return;
     }
 
-    const auto positionalArguments = args.positionalArguments();
     if (!positionalArguments.isEmpty()) {
         for (const auto &arg : positionalArguments) {
             KPluginMetaData data(arg);
@@ -110,8 +114,6 @@ KCMInit::KCMInit(const QCommandLineParser &args)
                 qWarning() << "Could not find" << arg;
             }
         }
-    } else {
-        m_list = KPluginMetaData::findPlugins(QStringLiteral("plasma/kcminit"));
     }
 
     if (startup) {
