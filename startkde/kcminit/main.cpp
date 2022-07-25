@@ -88,11 +88,6 @@ void KCMInit::runModules(int phase)
 
 KCMInit::KCMInit(const QCommandLineParser &args)
 {
-    QString arg;
-    if (args.positionalArguments().size() == 1) {
-        arg = args.positionalArguments().first();
-    }
-
     if (args.isSet(QStringLiteral("list"))) {
         m_list = KPluginMetaData::findPlugins(QStringLiteral("plasma/kcminit"));
         for (const KPluginMetaData &data : qAsConst(m_list)) {
