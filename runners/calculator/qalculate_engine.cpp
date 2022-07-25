@@ -65,6 +65,42 @@ void QalculateEngine::updateResult(KJob *job)
     }
 }
 
+bool has_error()
+{
+    while (CALCULATOR->message()) {
+        if (CALCULATOR->message()->type() == MESSAGE_ERROR) {
+            CALCULATOR->clearMessages();
+            return true;
+        }
+        CALCULATOR->nextMessage();
+    }
+    return false;
+}
+
+bool check_valid_before(const std::string &expression, const EvaluationOptions &search_eo)
+{
+    bool b_valid = false;
+    if (!b_valid)
+        b_valid = (expression.find_first_of(OPERATORS NUMBERS PARENTHESISS) != std::string::npos);
+    if (!b_valid)
+        b_valid = CALCULATOR->hasToExpression(expression, false, search_eo);
+    if (!b_valid) {
+        std::string str = expression;
+        CALCULATOR->parseSigns(str);
+        b_valid = (str.find_first_of(OPERATORS NUMBERS PARENTHESISS) != std::string::npos);
+        if (!b_valid) {
+            size_t i = str.find_first_of(SPACES);
+            MathStructure m;
+            if (!b_valid) {
+                CALCULATOR->parse(&m, str, search_eo.parse_options);
+                if (!has_error() && (m.isUnit() || m.isFunction() || (m.isVariable() && (i != std::string::npos || m.variable()->isKnown()))))
+                    b_valid = true;
+            }
+        }
+    }
+    return b_valid;
+}
+
 QString QalculateEngine::evaluate(const QString &expression, bool *isApproximate)
 {
     if (expression.isEmpty()) {
@@ -88,6 +124,10 @@ QString QalculateEngine::evaluate(const QString &expression, bool *isApproximate
     // suggested in https://github.com/Qalculate/libqalculate/issues/16
     // to avoid memory overflow for seemingly innocent calculations (Bug 277011)
     eo.approximation = APPROXIMATION_APPROXIMATE;
+
+    if (!check_valid_before(expression.toStdString(), eo)) {
+        return QString(); // See https://github.com/Qalculate/libqalculate/issues/442
+    }
 
     CALCULATOR->setPrecision(16);
     MathStructure result = CALCULATOR->calculate(ctext, eo);

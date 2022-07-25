@@ -18,6 +18,7 @@ private Q_SLOTS:
     void test42();
     void testApproximation();
     void testQuery_data();
+    void testErrorDetection();
 };
 
 void CalculatorRunnerTest::initTestCase()
@@ -81,6 +82,12 @@ void CalculatorRunnerTest::test42()
     launchQuery("universe");
     QCOMPARE(manager->matches().size(), 1);
     QCOMPARE(manager->matches().constFirst().text(), "42");
+}
+
+void CalculatorRunnerTest::testErrorDetection()
+{
+    launchQuery("SDL_VIDEODRIVER=");
+    QVERIFY(manager->matches().isEmpty());
 }
 
 QTEST_MAIN(CalculatorRunnerTest)
