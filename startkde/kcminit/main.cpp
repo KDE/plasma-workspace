@@ -121,7 +121,7 @@ KCMInit::KCMInit(const QCommandLineParser &args)
                                                                              QStringLiteral("/KSplash"),
                                                                              QStringLiteral("org.kde.KSplash"),
                                                                              QStringLiteral("setStage"));
-        ksplashProgressMessage.setArguments(QList<QVariant>() << QStringLiteral("kcminit"));
+        ksplashProgressMessage.setArguments({QStringLiteral("kcminit")});
         QDBusConnection::sessionBus().asyncCall(ksplashProgressMessage);
 
         sendReady();
@@ -176,7 +176,7 @@ int main(int argc, char *argv[])
 
     QCommandLineParser parser;
     about.setupCommandLine(&parser);
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("list"), i18n("List modules that are run at startup")));
+    parser.addOption({QStringLiteral("list"), i18n("List modules that are run at startup")});
     parser.addPositionalArgument(QStringLiteral("module"), i18n("Configuration module to run"));
 
     parser.process(app);
