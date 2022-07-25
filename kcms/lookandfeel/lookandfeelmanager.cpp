@@ -169,11 +169,12 @@ void LookAndFeelManager::setColors(const QString &scheme, const QString &colorFi
 
     KConfig configDefault(configDefaults(QStringLiteral("kdeglobals")));
     auto kdeGlobalsCfg = KSharedConfig::openConfig(QStringLiteral("kdeglobals"), KConfig::FullConfig);
-    writeNewDefaults(*kdeGlobalsCfg, configDefault, QStringLiteral("General"), QStringLiteral("ColorScheme"), scheme, KConfig::Notify);
 
     if (m_mode == Mode::Apply) {
         applyScheme(colorFile, kdeGlobalsCfg.data(), KConfig::Notify);
     }
+
+    writeNewDefaults(*kdeGlobalsCfg, configDefault, QStringLiteral("General"), QStringLiteral("ColorScheme"), scheme, KConfig::Notify);
 
     Q_EMIT colorsChanged();
 }
