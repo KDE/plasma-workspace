@@ -63,22 +63,22 @@ void KCMRegionAndLang::save()
 {
     // assemble full locales in use
     QStringList locales;
-    if (settings()->isDefaultSetting(SettingType::Lang)) {
+    if (!settings()->isDefaultSetting(SettingType::Lang)) {
         locales.append(settings()->lang());
     }
-    if (settings()->isDefaultSetting(SettingType::Numeric)) {
+    if (!settings()->isDefaultSetting(SettingType::Numeric)) {
         locales.append(settings()->numeric());
     }
-    if (settings()->isDefaultSetting(SettingType::Time)) {
+    if (!settings()->isDefaultSetting(SettingType::Time)) {
         locales.append(settings()->time());
     }
-    if (settings()->isDefaultSetting(SettingType::Measurement)) {
+    if (!settings()->isDefaultSetting(SettingType::Measurement)) {
         locales.append(settings()->measurement());
     }
-    if (settings()->isDefaultSetting(SettingType::Currency)) {
+    if (!settings()->isDefaultSetting(SettingType::Currency)) {
         locales.append(settings()->monetary());
     }
-    if (settings()->isDefaultSetting(SettingType::PaperSize)) {
+    if (!settings()->isDefaultSetting(SettingType::PaperSize)) {
         locales.append(settings()->paperSize());
     }
     if (!settings()->language().isEmpty()) {

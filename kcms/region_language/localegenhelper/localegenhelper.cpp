@@ -164,6 +164,7 @@ void LocaleGenHelper::handleLocaleGen(int statusCode, QProcess::ExitStatus statu
 
 void LocaleGenHelper::exitAfterTimeOut()
 {
+    m_isGenerating = false;
     m_timer.start(30s);
 }
 
