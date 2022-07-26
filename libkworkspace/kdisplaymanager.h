@@ -7,7 +7,6 @@
 
 #pragma once
 
-#include "config-libkworkspace.h"
 #include "kworkspace.h"
 #include "kworkspace_export.h"
 #include <QByteArray>
@@ -24,8 +23,6 @@ typedef QList<SessEnt> SessList;
 
 class KWORKSPACE_EXPORT KDisplayManager
 {
-#if HAVE_X11
-
 public:
     KDisplayManager();
     ~KDisplayManager();
@@ -51,52 +48,8 @@ private:
 
     void GDMAuthenticate();
 
-#else // HAVE_X11
-
-public:
-    KDisplayManager()
-    {
-    }
-
-    bool canShutdown()
-    {
-        return false;
-    }
-    void shutdown(KWorkSpace::ShutdownType shutdownType, KWorkSpace::ShutdownMode shutdownMode, const QString &bootOption = QString())
-    {
-    }
-
-    void setLock(bool)
-    {
-    }
-
-    bool isSwitchable()
-    {
-        return false;
-    }
-    int numReserve()
-    {
-        return -1;
-    }
-    void startReserve()
-    {
-    }
-    bool localSessions(SessList &list)
-    {
-        return false;
-    }
-    void switchVT(int vt)
-    {
-    }
-
-    bool bootOptions(QStringList &opts, int &dflt, int &curr);
-
-#endif // HAVE_X11
-
 private:
-#if HAVE_X11
     class Private;
     Private *const d;
-#endif // HAVE_X11
 
 }; // class KDisplayManager

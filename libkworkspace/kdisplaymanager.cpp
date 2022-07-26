@@ -6,8 +6,6 @@
 
 #include "kdisplaymanager.h"
 
-#if HAVE_X11
-
 #include <kuser.h>
 
 #include <KLocalizedString>
@@ -19,6 +17,9 @@
 #include <QDBusMetaType>
 #include <QDBusObjectPath>
 #include <QDBusReply>
+
+#include "config-X11.h"
+#if HAVE_X11
 #if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
 #include <private/qtx11extras_p.h>
 #else
@@ -27,6 +28,7 @@
 
 #include <X11/Xauth.h>
 #include <X11/Xlib.h>
+#endif // HAVE_X11
 
 #include <errno.h>
 #include <fcntl.h>
@@ -852,6 +854,7 @@ void KDisplayManager::lockSwitchVT(int vt)
 
 void KDisplayManager::GDMAuthenticate()
 {
+#if HAVE_X11
     FILE *fp;
     const char *dpy, *dnum, *dne;
     int dnl;
@@ -887,6 +890,5 @@ void KDisplayManager::GDMAuthenticate()
     }
 
     fclose(fp);
-}
-
 #endif // HAVE_X11
+}
