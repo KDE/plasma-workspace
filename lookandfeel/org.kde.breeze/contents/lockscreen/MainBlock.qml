@@ -61,7 +61,7 @@ SessionManagementScreen {
 
             placeholderText: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Password")
             focus: true
-            enabled: !authenticator.graceLocked
+            enabled: !authenticator.graceLocked && !authenticator.busy
 
             // In Qt this is implicitly active based on focus rather than visibility
             // in any other application having a focussed invisible object would be weird
@@ -104,10 +104,18 @@ SessionManagementScreen {
             Layout.preferredWidth: loginButton.Layout.preferredHeight
 
             icon.name: LayoutMirroring.enabled ? "go-previous" : "go-next"
+            visible: !authenticator.busy
 
             onClicked: startLogin()
             Keys.onEnterPressed: clicked()
             Keys.onReturnPressed: clicked()
+        }
+
+        PlasmaComponents3.BusyIndicator {
+            Layout.preferredWidth: loginButton.Layout.preferredWidth
+            Layout.preferredHeight: loginButton.Layout.preferredHeight
+            running: authenticator.busy
+            visible: running
         }
     }
 }
