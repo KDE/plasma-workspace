@@ -1,10 +1,6 @@
 # KI18N Translation Domain for this library
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_lookandfeel\")
 
-if(HAVE_X11)
-    set(HAVE_XCURSOR TRUE)
-endif()
-
 if(${Breeze_FOUND})
     if(${BREEZE_WITH_KDECORATION})
         set(HAVE_BREEZE_DECO TRUE)

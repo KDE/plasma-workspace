@@ -9,9 +9,7 @@
 #include <Plasma/Theme>
 #include <QPointer>
 #include <QTimer>
-#ifdef HAVE_X11
 #include <QWindow> // For WId
-#endif
 
 #include <PlasmaQuick/ConfigView>
 #include <PlasmaQuick/ContainmentView>

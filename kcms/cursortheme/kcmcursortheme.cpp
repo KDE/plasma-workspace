@@ -30,18 +30,21 @@
 #include <KUrlRequesterDialog>
 
 #include <QStandardItemModel>
+
+#include <updatelaunchenvjob.h>
+
+#if HAVE_X11
+#include <X11/extensions/Xfixes.h>
+
 #if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
 #include <private/qtx11extras_p.h>
 #else
 #include <QX11Info>
 #endif
+
 #include <X11/Xcursor/Xcursor.h>
 #include <X11/Xlib.h>
 
-#include <updatelaunchenvjob.h>
-
-#ifdef HAVE_XFIXES
-#include <X11/extensions/Xfixes.h>
 #endif
 
 K_PLUGIN_FACTORY_WITH_JSON(CursorThemeConfigFactory, "kcm_cursortheme.json", registerPlugin<CursorThemeConfig>(); registerPlugin<CursorThemeData>();)

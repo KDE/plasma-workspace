@@ -13,6 +13,9 @@
 #include <updatelaunchenvjob.h>
 
 #include <QFile>
+
+#if HAVE_X11
+
 #if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
 #include <private/qtx11extras_p.h>
 #else
@@ -20,7 +23,6 @@
 #endif
 
 #include <X11/Xcursor/Xcursor.h>
-#ifdef HAVE_XFIXES
 #include <X11/extensions/Xfixes.h>
 #endif
 
@@ -29,7 +31,7 @@ bool applyTheme(const CursorTheme *theme, const int size)
     // Require the Xcursor version that shipped with X11R6.9 or greater, since
     // in previous versions the Xfixes code wasn't enabled due to a bug in the
     // build system (freedesktop bug #975).
-#if HAVE_XFIXES && XFIXES_MAJOR >= 2 && XCURSOR_LIB_VERSION >= 10105
+#if HAVE_X11 && XFIXES_MAJOR >= 2 && XCURSOR_LIB_VERSION >= 10105
     if (!theme) {
         return false;
     }

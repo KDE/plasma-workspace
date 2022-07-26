@@ -11,7 +11,7 @@
 #include "debug.h"
 #include "strutmanager.h"
 
-#include <config-plasma.h>
+#include <config-X11.h>
 
 #include <QApplication>
 #include <QDBusConnection>

@@ -9,7 +9,7 @@
 #pragma once
 
 #include <config-X11.h>
-#ifdef HAVE_X11
+#if HAVE_X11
 #include <xcb/xcb.h>
 #endif
 
@@ -87,7 +87,7 @@ private:
     QDBusServiceWatcher *m_menuViewWatcher;
     QPointer<VerticalMenu> m_menu;
 
-#ifdef HAVE_X11
+#if HAVE_X11
     xcb_connection_t *m_xcbConn = nullptr;
 #endif
     KWayland::Client::PlasmaShell *m_plasmashell = nullptr;

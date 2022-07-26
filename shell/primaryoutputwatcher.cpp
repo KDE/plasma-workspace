@@ -16,7 +16,7 @@
 #include <KWayland/Client/connection_thread.h>
 #include <KWayland/Client/registry.h>
 
-#include <config-plasma.h>
+#include <config-X11.h>
 #if HAVE_X11
 #include <QTimer> //Used only in x11 case
 #if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)

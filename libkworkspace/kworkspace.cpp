@@ -5,7 +5,7 @@
 */
 
 #include "kworkspace.h"
-#include "config-libkworkspace.h"
+#include "config-X11.h"
 
 #include <QDBusConnection>
 #include <QDataStream>

@@ -60,11 +60,11 @@
 #else
 #include <QX11Info>
 #endif
-#include <chrono>
 #include <xcb/xcb.h>
-
-using namespace std::chrono_literals;
 #endif
+
+#include <chrono>
+using namespace std::chrono_literals;
 
 namespace
 {

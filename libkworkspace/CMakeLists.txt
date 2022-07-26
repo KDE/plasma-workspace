@@ -66,8 +66,6 @@ target_link_libraries(kworkspace
 target_include_directories(kworkspace PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>"
                                       INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/kworkspace5>" )
 
-configure_file(config-libkworkspace.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-libkworkspace.h)
-
 if(HAVE_X11)
     target_link_libraries(kworkspace PRIVATE X11::Xau)
     if (QT_MAJOR_VERSION EQUAL "5")
@@ -94,7 +92,6 @@ install( FILES kdisplaymanager.h
                sessionmanagement.h
                updatelaunchenvjob.h
                autostartscriptdesktopfile.h
-               ${CMAKE_CURRENT_BINARY_DIR}/config-libkworkspace.h
                ${CMAKE_CURRENT_BINARY_DIR}/kworkspace_export.h
          DESTINATION ${KDE_INSTALL_INCLUDEDIR}/kworkspace5 COMPONENT Devel )
 

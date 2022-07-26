@@ -1,7 +1,5 @@
 configure_file(config-ktexteditor.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-ktexteditor.h )
 
-configure_file(${CMAKE_CURRENT_SOURCE_DIR}/config-plasma.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-plasma.h)
-
 add_definitions(-DPLASMA_DEPRECATED=)
 
 set(scripting_SRC

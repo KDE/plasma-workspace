@@ -13,7 +13,7 @@
 
 #include <config-X11.h>
 
-#ifdef HAVE_XFIXES
+#if HAVE_X11
 class CursorNotificationHandler;
 #endif
 
@@ -37,7 +37,7 @@ private Q_SLOTS:
 private:
     QPoint lastPosition;
     int timerId;
-#ifdef HAVE_XFIXES
+#if HAVE_X11
     CursorNotificationHandler *handler;
 #endif
 };

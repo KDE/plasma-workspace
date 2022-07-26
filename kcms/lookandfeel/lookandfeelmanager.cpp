@@ -19,7 +19,7 @@
 #include <QDBusConnection>
 #include <QDBusMessage>
 
-#ifdef HAVE_XCURSOR
+#ifdef HAVE_X11
 #include "../cursortheme/xcursor/xcursortheme.h"
 #include <X11/Xcursor/Xcursor.h>
 #endif

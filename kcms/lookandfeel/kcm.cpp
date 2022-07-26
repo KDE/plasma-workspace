@@ -10,6 +10,7 @@
 
 #include "kcm.h"
 #include "../kcms-common_p.h"
+#include "config-X11.h"
 #include "config-kcm.h"
 #include "config-workspace.h"
 #include "krdb.h"
@@ -30,30 +31,28 @@
 #include <QStandardPaths>
 #include <QStyle>
 #include <QStyleFactory>
-#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
-#include <private/qtx11extras_p.h>
-#else
-#include <QX11Info>
-#endif
 
 #include <KLocalizedString>
 #include <KPackage/PackageLoader>
 
 #include <array>
 
-#include <X11/Xlib.h>
-
 #include <KNSCore/EntryInternal>
 #include <QFileInfo>
 #include <updatelaunchenvjob.h>
 
-#ifdef HAVE_XCURSOR
+#if HAVE_X11
 #include "../cursortheme/xcursor/xcursortheme.h"
 #include <X11/Xcursor/Xcursor.h>
+#include <X11/Xlib.h>
+#include <X11/extensions/Xfixes.h>
+
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+#include <private/qtx11extras_p.h>
+#else
+#include <QX11Info>
 #endif
 
-#ifdef HAVE_XFIXES
-#include <X11/extensions/Xfixes.h>
 #endif
 
 KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
@@ -497,7 +496,7 @@ QDir KCMLookandFeel::cursorThemeDir(const QString &theme, const int depth)
 
 QStringList KCMLookandFeel::cursorSearchPaths()
 {
-#ifdef HAVE_XCURSOR
+#if HAVE_X11
 #if XCURSOR_LIB_MAJOR == 1 && XCURSOR_LIB_MINOR < 1
 
     if (!m_cursorSearchPaths.isEmpty())
@@ -535,11 +534,11 @@ QStringList KCMLookandFeel::cursorSearchPaths()
 
 void KCMLookandFeel::cursorsChanged(const QString &themeName)
 {
-#ifdef HAVE_XCURSOR
+#if HAVE_X11
     // Require the Xcursor version that shipped with X11R6.9 or greater, since
     // in previous versions the Xfixes code wasn't enabled due to a bug in the
     // build system (freedesktop bug #975).
-#if defined(HAVE_XFIXES) && XFIXES_MAJOR >= 2 && XCURSOR_LIB_VERSION >= 10105
+#if XFIXES_MAJOR >= 2 && XCURSOR_LIB_VERSION >= 10105
     KSharedConfigPtr config = KSharedConfig::openConfig(QStringLiteral("kcminputrc"));
     KConfigGroup cg(config, QStringLiteral("Mouse"));
     const int cursorSize = cg.readEntry("cursorSize", 24);
