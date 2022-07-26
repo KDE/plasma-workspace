@@ -92,7 +92,7 @@ void HelpRunner::run(const RunnerContext &context, const QueryMatch &match)
         const QStringList args{
             QStringLiteral("kcm_plasmasearch"),
             QStringLiteral("--args"),
-            match.data().value<KPluginMetaData>().name(),
+            match.data().value<KPluginMetaData>().pluginId(),
         };
         job = new KIO::CommandLauncherJob(QStringLiteral("systemsettings5"), args);
         job->start();
