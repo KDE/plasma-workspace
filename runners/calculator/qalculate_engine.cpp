@@ -65,6 +65,7 @@ void QalculateEngine::updateResult(KJob *job)
     }
 }
 
+#if QALCULATE_MAJOR_VERSION > 2 || QALCULATE_MINOR_VERSION > 6
 bool has_error()
 {
     while (CALCULATOR->message()) {
@@ -100,6 +101,7 @@ bool check_valid_before(const std::string &expression, const EvaluationOptions &
     }
     return b_valid;
 }
+#endif
 
 QString QalculateEngine::evaluate(const QString &expression, bool *isApproximate)
 {
@@ -125,9 +127,11 @@ QString QalculateEngine::evaluate(const QString &expression, bool *isApproximate
     // to avoid memory overflow for seemingly innocent calculations (Bug 277011)
     eo.approximation = APPROXIMATION_APPROXIMATE;
 
+#if QALCULATE_MAJOR_VERSION > 2 || QALCULATE_MINOR_VERSION > 6
     if (!check_valid_before(expression.toStdString(), eo)) {
         return QString(); // See https://github.com/Qalculate/libqalculate/issues/442
     }
+#endif
 
     CALCULATOR->setPrecision(16);
     MathStructure result = CALCULATOR->calculate(ctext, eo);

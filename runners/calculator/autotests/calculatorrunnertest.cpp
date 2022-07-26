@@ -7,6 +7,7 @@
 #include <KShell>
 #include <QMimeData>
 #include <QTest>
+#include <libqalculate/includes.h>
 
 class CalculatorRunnerTest : public AbstractRunnerTest
 {
@@ -18,7 +19,9 @@ private Q_SLOTS:
     void test42();
     void testApproximation();
     void testQuery_data();
+#if QALCULATE_MAJOR_VERSION > 2 || QALCULATE_MINOR_VERSION > 6
     void testErrorDetection();
+#endif
 };
 
 void CalculatorRunnerTest::initTestCase()
@@ -84,11 +87,13 @@ void CalculatorRunnerTest::test42()
     QCOMPARE(manager->matches().constFirst().text(), "42");
 }
 
+#if QALCULATE_MAJOR_VERSION > 2 || QALCULATE_MINOR_VERSION > 6
 void CalculatorRunnerTest::testErrorDetection()
 {
     launchQuery("SDL_VIDEODRIVER=");
     QVERIFY(manager->matches().isEmpty());
 }
+#endif
 
 QTEST_MAIN(CalculatorRunnerTest)
 
