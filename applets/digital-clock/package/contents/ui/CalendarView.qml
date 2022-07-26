@@ -106,6 +106,9 @@ PlasmaExtras.Representation {
                     text: i18nc("@action:button Add event", "Add…")
                     Layout.rightMargin: calendar.paddings
                     icon.name: "list-add"
+
+                    Accessible.description: i18nc("@info:tooltip", "Add a new event")
+
                     onClicked: ApplicationIntegration.launchCalendar()
                     KeyNavigation.tab: calendar.showAgenda ? holidaysList : clocksList
                 }
@@ -150,10 +153,14 @@ PlasmaExtras.Representation {
                 Layout.column: 4
                 Layout.alignment: Qt.AlignRight
                 visible: Plasmoid.action("configure").enabled
+
+                display: PlasmaComponents3.AbstractButton.IconOnly
                 icon.name: "configure"
+                text: Plasmoid.action("configure").text
+
                 onClicked: Plasmoid.action("configure").trigger()
                 PlasmaComponents3.ToolTip {
-                    text: Plasmoid.action("configure").text
+                    text: parent.text
                 }
             }
 
@@ -163,10 +170,15 @@ PlasmaExtras.Representation {
                 Layout.column: 5
                 checkable: true
                 checked: Plasmoid.configuration.pin
-                onToggled: Plasmoid.configuration.pin = checked
+
+                display: PlasmaComponents3.AbstractButton.IconOnly
                 icon.name: "window-pin"
+                text: i18n("Keep Open")
+
+                onToggled: Plasmoid.configuration.pin = checked
+
                 PlasmaComponents3.ToolTip {
-                    text: i18n("Keep Open")
+                    text: parent.text
                 }
             }
 
@@ -206,21 +218,25 @@ PlasmaExtras.Representation {
                 Layout.leftMargin: PlasmaCore.Units.smallSpacing
                 Layout.bottomMargin: PlasmaCore.Units.smallSpacing
                 icon.name: Qt.application.layoutDirection === Qt.RightToLeft ? "go-next" : "go-previous"
-                onClicked: monthView.previousView()
-                Accessible.name: tooltip
-                PlasmaComponents3.ToolTip {
-                    text: {
-                        switch(monthView.calendarViewDisplayed) {
-                            case PlasmaCalendar.MonthView.CalendarView.DayView:
-                                return i18n("Previous month")
-                            case PlasmaCalendar.MonthView.CalendarView.MonthView:
-                                return i18n("Previous year")
-                            case PlasmaCalendar.MonthView.CalendarView.YearView:
-                                return i18n("Previous decade")
-                            default:
-                                return "";
-                        }
+
+                display: PlasmaComponents3.AbstractButton.IconOnly
+                text: {
+                    switch(monthView.calendarViewDisplayed) {
+                    case PlasmaCalendar.MonthView.CalendarView.DayView:
+                        return i18n("Previous month")
+                    case PlasmaCalendar.MonthView.CalendarView.MonthView:
+                        return i18n("Previous year")
+                    case PlasmaCalendar.MonthView.CalendarView.YearView:
+                        return i18n("Previous decade")
+                    default:
+                        return "";
                     }
+                }
+
+                onClicked: monthView.previousView()
+
+                PlasmaComponents3.ToolTip {
+                    text: parent.text
                 }
             }
 
@@ -240,23 +256,27 @@ PlasmaExtras.Representation {
                 Layout.row: 1
                 Layout.column: 5
 
+                display: PlasmaComponents3.AbstractButton.IconOnly
                 icon.name: Qt.application.layoutDirection === Qt.RightToLeft ? "go-previous" : "go-next"
-                onClicked: monthView.nextView()
-                Accessible.name: tooltip
-                KeyNavigation.tab: monthViewWrapper
-                PlasmaComponents3.ToolTip {
-                    text: {
-                        switch(monthView.calendarViewDisplayed) {
-                            case PlasmaCalendar.MonthView.CalendarView.DayView:
-                                return i18n("Next month")
-                            case PlasmaCalendar.MonthView.CalendarView.MonthView:
-                                return i18n("Next year")
-                            case PlasmaCalendar.MonthView.CalendarView.YearView:
-                                return i18n("Next decade")
-                            default:
-                                return "";
-                        }
+                text: {
+                    switch(monthView.calendarViewDisplayed) {
+                    case PlasmaCalendar.MonthView.CalendarView.DayView:
+                        return i18n("Next month")
+                    case PlasmaCalendar.MonthView.CalendarView.MonthView:
+                        return i18n("Next year")
+                    case PlasmaCalendar.MonthView.CalendarView.YearView:
+                        return i18n("Next decade")
+                    default:
+                        return "";
                     }
+                }
+
+                KeyNavigation.tab: monthViewWrapper
+
+                onClicked: monthView.nextView()
+
+                PlasmaComponents3.ToolTip {
+                    text: parent.text
                 }
             }
         }
@@ -549,10 +569,13 @@ PlasmaExtras.Representation {
                     text: i18n("Switch…")
                     Accessible.name: i18n("Switch to another timezone")
                     icon.name: "preferences-system-time"
+
+                    Accessible.description: i18n("Switch to another timezone")
+
                     onClicked: KCMShell.openSystemSettings("kcm_clock")
 
                     PlasmaComponents3.ToolTip {
-                        text: i18n("Switch to another timezone")
+                        text: parent.Accessible.description
                     }
                 }
             }
