@@ -24,6 +24,19 @@ Item {
     PlasmaCore.ColorScope.colorGroup: PlasmaCore.Theme.NormalColorGroup
     PlasmaCore.ColorScope.inherit: false
 
+    /**
+     * These accessible properties are used in the compact representation,
+     * not here.
+     */
+    Accessible.name: i18nc("@info:tooltip %1 is a localized long date", "Today is %1", tooltipSubtext.text)
+    Accessible.description: {
+        let description = [];
+        for (let i = 0; i < timezoneRepeater.count; i += 2) {
+            description.push(`${timezoneRepeater.itemAt(i).text}: ${timezoneRepeater.itemAt(i + 1).text}`);
+        }
+        return description.join('; ');
+    }
+
     ColumnLayout {
         id: mainLayout
         anchors {
@@ -62,6 +75,8 @@ Item {
             rowSpacing: 0
 
             Repeater {
+                id: timezoneRepeater
+
                 model: {
                     // The timezones need to be duplicated in the array
                     // because we need their data twice - once for the name

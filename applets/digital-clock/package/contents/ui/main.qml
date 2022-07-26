@@ -4,7 +4,7 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-import QtQuick 2.0
+import QtQuick 2.15
 import QtQuick.Layouts 1.1
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
@@ -69,7 +69,14 @@ Item {
     }
 
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
-    Plasmoid.compactRepresentation: DigitalClock { }
+    Plasmoid.compactRepresentation: DigitalClock {
+        activeFocusOnTab: true
+        hoverEnabled: true
+
+        Accessible.name: tooltipLoader.item.Accessible.name
+        Accessible.description: tooltipLoader.item.Accessible.description
+        Accessible.role: Accessible.Button
+    }
     Plasmoid.fullRepresentation: CalendarView { }
 
     Plasmoid.toolTipItem: Loader {
