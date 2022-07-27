@@ -28,7 +28,7 @@ PlasmaComponents3.AbstractButton {
     readonly property date thisDate: new Date(yearNumber, typeof monthNumber !== "undefined" ? monthNumber - 1 : 0, typeof dayNumber !== "undefined" ? dayNumber : 1)
 
     Accessible.name: thisDate.toLocaleDateString(Qt.locale(), Locale.LongFormat)
-    Accessible.description: (model.eventCount !== undefined && model.eventCount > 0) ? i18ndp("plasmashellprivateplugin", "%1 event", "%1 events") : i18nd("plasmashellprivateplugin", "No events")
+    Accessible.description: (model.eventCount !== undefined && model.eventCount > 0) ? i18ndp("plasmashellprivateplugin", "%1 event", "%1 events", model.eventCount) : i18nd("plasmashellprivateplugin", "No events")
 
     readonly property bool today: {
         const today = root.today;
