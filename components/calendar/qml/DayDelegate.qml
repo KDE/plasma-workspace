@@ -59,37 +59,46 @@ PlasmaComponents3.AbstractButton {
         return result
     }
 
-    PlasmaCore.FrameSvgItem {
-        id: focusEffect
-        anchors {
-            fill: parent
-            leftMargin: -margins.left
-            topMargin: -margins.top
-            rightMargin: -margins.right
-            bottomMargin: -margins.bottom
+    Loader {
+        anchors.fill: parent
+
+        active: dayStyle.activeFocus
+        asynchronous: true
+
+        sourceComponent: PlasmaCore.FrameSvgItem {
+            anchors {
+                leftMargin: -margins.left
+                topMargin: -margins.top
+                rightMargin: -margins.right
+                bottomMargin: -margins.bottom
+            }
+            imagePath: "widgets/button"
+            prefix: ["toolbutton-focus", "focus"]
         }
-        opacity: dayStyle.activeFocus ? 1 : 0
-        imagePath: "widgets/button"
-        prefix: ["toolbutton-focus", "focus"]
     }
 
-    PlasmaExtras.Highlight {
-        id: todayRect
+    Loader {
         anchors.fill: parent
-        hovered: true
-        opacity: {
-            if (today) {
-                return 1;
-            } else if (selected) {
-                return 0.6;
-            } else if (dayStyle.hovered) {
-                return 0.3;
-            } else if (dayStyle.activeFocus) {
-                return 0.1;
+
+        active: today || selected || dayStyle.hovered || dayStyle.activeFocus
+        asynchronous: true
+        z: -1
+
+        sourceComponent: PlasmaExtras.Highlight {
+            hovered: true
+            opacity: {
+                if (today) {
+                    return 1;
+                } else if (selected) {
+                    return 0.6;
+                } else if (dayStyle.hovered) {
+                    return 0.3;
+                } else if (dayStyle.activeFocus) {
+                    return 0.1;
+                }
+                return 0;
             }
-            return 0;
         }
-        z: -1;
     }
 
     Loader {
