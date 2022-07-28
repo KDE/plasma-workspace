@@ -1,0 +1,13 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "Ken Vermette <vermette@gmail.com>",
+                "Name": "Ken Vermette"
+            }
+        ],
+        "Id": "Next",
+        "License": "CC-BY-SA-4.0",
+        "Name": "Honeywave (For test purpose, don't translate!)"
+    }
+}

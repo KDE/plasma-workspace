@@ -1,0 +1,12 @@
+{
+    "KPlugin": {
+        "Description": "TEST ALL THE THINGS! ;)",
+        "Icon": "user-desktop",
+        "Id": "org.kde.plasmashelltest",
+        "Name": "TestShell",
+        "ServiceTypes": [
+            "Plasma/Shell"
+        ]
+    },
+    "X-Plasma-MainScript": "layout.js"
+}

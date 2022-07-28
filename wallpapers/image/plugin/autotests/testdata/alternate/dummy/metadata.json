@@ -1,0 +1,13 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "opensuse-artwork@opensuse.org",
+                "Name": "openSUSE Artwork Team"
+            }
+        ],
+        "Id": "Azul-openSUSE",
+        "License": "GPLv2",
+        "Name": "Dummy wallpaper (For test purpose, don't translate!)"
+    }
+}

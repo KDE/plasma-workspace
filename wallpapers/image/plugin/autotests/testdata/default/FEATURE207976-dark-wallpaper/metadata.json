@@ -1,0 +1,13 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "kde@lists.fedoraproject.org",
+                "Name": "Fedora KDE-SIG"
+            }
+        ],
+        "Id": "F36",
+        "License": "CC-BY-SA",
+        "Name": "Dark Wallpaper (For test purpose, don't translate!)"
+    }
+}
