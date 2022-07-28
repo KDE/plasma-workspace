@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.22)
+cmake_minimum_required(VERSION 3.16)
 
 project(plasma-workspace)
 set(PROJECT_VERSION "5.25.80")
@@ -211,8 +211,18 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
 
 
     # find out if the build system is Ubuntu based
-    cmake_host_system_information(RESULT DISTRO_NAME QUERY DISTRIB_ID)
-    cmake_host_system_information(RESULT DISTRO_ID_LIKE QUERY DISTRIB_ID_LIKE)
+    if (${CMAKE_VERSION} VERSION_LESS 3.22)
+        find_program(LSB_RELEASE_EXEC lsb_release)
+        execute_process(COMMAND ${LSB_RELEASE_EXEC} -is
+            OUTPUT_VARIABLE DISTRO_NAME
+            OUTPUT_STRIP_TRAILING_WHITESPACE
+        )
+        string(TOLOWER "${DISTRO_NAME}" DISTRO_NAME)
+    else()
+        cmake_host_system_information(RESULT DISTRO_NAME QUERY DISTRIB_ID)
+        cmake_host_system_information(RESULT DISTRO_ID_LIKE QUERY DISTRIB_ID_LIKE)
+    endif()
+
     string(COMPARE EQUAL "ubuntu" "${DISTRO_NAME}" SYSTEM_UBUNTU_BASED)
     string(FIND "${DISTRO_ID_LIKE}" "ubuntu" FINDINDEX)
     if(NOT (FINDINDEX EQUAL -1))
