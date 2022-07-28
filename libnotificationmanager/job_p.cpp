@@ -193,7 +193,7 @@ QString JobPrivate::text() const
     } else if (m_totalItems > 1) {
         // TODO support destUrl text as well (once someone actually uses that)
 
-        if (m_totalItems > 0 && m_processedItems <= m_totalItems) {
+        if (m_processedItems <= m_totalItems) {
             return i18ncp("Copying n of m items", "%2 of %1 item", "%2 of %1 items", m_totalItems, m_processedItems);
         }
 
