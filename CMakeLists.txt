@@ -74,7 +74,7 @@ set_package_properties(KF5Baloo PROPERTIES DESCRIPTION "File Searching"
                        TYPE RECOMMENDED
                        PURPOSE "Needed for the File Search runner."
                       )
-find_package(Qalculate)
+find_package(Qalculate 2.0)
 set_package_properties(Qalculate PROPERTIES DESCRIPTION "Qalculate Library"
                        URL "https://qalculate.github.io/"
                        TYPE REQUIRED
