@@ -20,7 +20,9 @@ Job::Job(uint id, QObject *parent)
     // These properties are used in generating the pretty job text
     connect(d, &JobPrivate::infoMessageChanged, this, &Job::textChanged);
     connect(this, &Job::processedFilesChanged, this, &Job::textChanged);
+    connect(this, &Job::processedItemsChanged, this, &Job::textChanged);
     connect(this, &Job::totalFilesChanged, this, &Job::textChanged);
+    connect(this, &Job::totalItemsChanged, this, &Job::textChanged);
     connect(this, &Job::descriptionValue1Changed, this, &Job::textChanged);
     connect(this, &Job::descriptionValue2Changed, this, &Job::textChanged);
     connect(this, &Job::destUrlChanged, this, &Job::textChanged);
