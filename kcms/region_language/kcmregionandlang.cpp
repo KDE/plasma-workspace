@@ -9,6 +9,8 @@
 
 #include "kcmregionandlang.h"
 
+#include <unistd.h>
+
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QDBusPendingCall>
@@ -90,6 +92,13 @@ void KCMRegionAndLang::save()
             }
         }
     }
+
+    auto setLangCall = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.Accounts"),
+                                                      QStringLiteral("/org/freedesktop/Accounts/User%1").arg(getuid()),
+                                                      QStringLiteral("org.freedesktop.Accounts.User"),
+                                                      QStringLiteral("SetLanguage"));
+    setLangCall.setArguments({settings()->lang()});
+    QDBusConnection::systemBus().asyncCall(setLangCall);
 
     if (!locales.isEmpty()) {
         Q_EMIT startGenerateLocale();
