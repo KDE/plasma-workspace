@@ -617,13 +617,15 @@ void PanelView::resizePanel()
 
     if (formFactor() == Plasma::Types::Vertical) {
         const int minSize = qMax(MINSIZE, m_minLength);
-        const int maxSize = qMin(m_maxLength, m_screenToFollow->size().height() - m_offset);
+        int maxSize = qMin(m_maxLength, m_screenToFollow->size().height() - m_offset);
+        maxSize = qMax(minSize, maxSize);
         targetMinSize = QSize(totalThickness(), minSize);
         targetMaxSize = QSize(totalThickness(), maxSize);
         targetSize = QSize(totalThickness(), qBound(minSize, m_contentLength, maxSize));
     } else {
         const int minSize = qMax(MINSIZE, m_minLength);
-        const int maxSize = qMin(m_maxLength, m_screenToFollow->size().width() - m_offset);
+        int maxSize = qMin(m_maxLength, m_screenToFollow->size().width() - m_offset);
+        maxSize = qMax(minSize, maxSize);
         targetMinSize = QSize(minSize, totalThickness());
         targetMaxSize = QSize(maxSize, totalThickness());
         targetSize = QSize(std::clamp(m_contentLength, minSize, maxSize), totalThickness());
