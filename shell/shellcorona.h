@@ -136,6 +136,7 @@ Q_SIGNALS:
     void glInitializationFailed();
     // A preview for this containment has been rendered and saved to disk
     void containmentPreviewReady(Plasma::Containment *containment, const QString &path);
+    void containmentPreviewFailed(Plasma::Containment *containment);
     void accentColorFromWallpaperEnabledChanged();
     void colorChanged(const QString &color);
 

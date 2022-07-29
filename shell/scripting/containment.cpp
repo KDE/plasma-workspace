@@ -98,6 +98,26 @@ void Containment::setWallpaperMode(const QString &wallpaperMode)
     d->wallpaperMode = wallpaperMode;
 }
 
+QString Containment::imageSource() const
+{
+    if (!d->corona || !d->containment) {
+        return QString();
+    }
+
+    const QString savedThumbnail = d->corona->containmentPreviewPath(d->containment);
+    if (!savedThumbnail.isEmpty()) {
+        return savedThumbnail;
+    }
+
+    QEventLoop loop;
+    loop.connect(d->corona, &ShellCorona::containmentPreviewReady, &loop, &QEventLoop::quit);
+    loop.connect(d->corona, &ShellCorona::containmentPreviewFailed, &loop, &QEventLoop::quit);
+    d->corona->grabContainmentPreview(d->containment);
+    loop.exec();
+
+    return d->corona->containmentPreviewPath(d->containment);
+}
+
 QString Containment::formFactor() const
 {
     if (!d->containment) {

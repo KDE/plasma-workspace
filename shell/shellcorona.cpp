@@ -2020,6 +2020,9 @@ void ShellCorona::grabContainmentPreview(Plasma::Containment *containment)
                 emit containmentPreviewReady(containment, path);
             });
         }
+    } else {
+        // Send to next round of event loops
+        QTimer::singleShot(0, this, std::bind(&ShellCorona::containmentPreviewFailed, this, containment));
     }
 }
 

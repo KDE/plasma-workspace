@@ -34,6 +34,14 @@ class Containment : public Applet
     Q_PROPERTY(QStringList currentConfigGroup WRITE setCurrentConfigGroup READ currentConfigGroup)
     Q_PROPERTY(QString wallpaperPlugin READ wallpaperPlugin WRITE setWallpaperPlugin)
     Q_PROPERTY(QString wallpaperMode READ wallpaperMode WRITE setWallpaperMode)
+
+    /**
+     * Screenshot of the containment
+     *
+     * @since 5.26
+     */
+    Q_PROPERTY(QString imageSource READ imageSource)
+
     Q_PROPERTY(bool locked READ locked WRITE setLocked)
     Q_PROPERTY(QString type READ type)
     Q_PROPERTY(QString formFactor READ formFactor)
@@ -59,6 +67,8 @@ public:
     void setWallpaperPlugin(const QString &wallpaperPlugin);
     QString wallpaperMode() const;
     void setWallpaperMode(const QString &wallpaperMode);
+
+    QString imageSource() const;
 
     Q_INVOKABLE QJSValue widgetById(const QJSValue &paramId = QJSValue()) const;
     Q_INVOKABLE QJSValue
