@@ -31,7 +31,6 @@
 #include <Plasma/Package>
 
 #include <KWayland/Client/plasmashell.h>
-#include <KWayland/Client/plasmawindowmanagement.h>
 #include <KWayland/Client/surface.h>
 
 #if HAVE_X11
@@ -1406,28 +1405,14 @@ void PanelView::refreshStatus(Plasma::Types::ItemStatus status)
     } else if (status == Plasma::Types::AcceptingInputStatus) {
         setFlags(flags() & ~Qt::WindowDoesNotAcceptFocus);
 #ifdef HAVE_X11
-        if (KWindowSystem::isPlatformX11()) {
-            m_previousWId = KWindowSystem::activeWindow();
-        }
         KWindowSystem::forceActiveWindow(winId());
 #endif
         if (m_shellSurface) {
-            m_previousPlasmaWindow = m_corona->waylandPlasmaWindowManagementInterface()->activeWindow();
             m_shellSurface->setPanelTakesFocus(true);
         }
     } else {
         if (status == Plasma::Types::PassiveStatus) {
-            // Restores the previous focus
-#ifdef HAVE_X11
-            if (KWindowSystem::isPlatformX11() && m_previousWId) {
-                KWindowSystem::forceActiveWindow(m_previousWId);
-                m_previousWId = 0;
-            }
-#endif
-            if (m_previousPlasmaWindow) {
-                m_previousPlasmaWindow->requestActivate();
-                m_previousPlasmaWindow = nullptr;
-            }
+            m_corona->restorePreviousWindow();
         }
 
         restoreAutoHide();
