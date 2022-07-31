@@ -36,7 +36,7 @@
         "Description[uk]": "Керування обліковими записами",
         "Description[vi]": "Quản lí các danh khoản người dùng",
         "Description[x-test]": "xxManage user accountsxx",
-        "Description[zh_CN]": "管理用户帐户",
+        "Description[zh_CN]": "管理用户账户",
         "Icon": "preferences-system-users",
         "Name": "Users",
         "Name[ar]": "المستخدمين",
