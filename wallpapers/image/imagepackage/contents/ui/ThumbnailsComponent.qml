@@ -42,7 +42,9 @@ Item {
         function resetCurrentIndex() {
             //that min is needed as the module will be populated in an async way
             //and only on demand so we can't ensure it already exists
-            view.currentIndex = Qt.binding(() =>  Math.min(imageModel.indexOf(cfg_Image), imageModel.count - 1));
+            if (configDialog.currentWallpaper === "org.kde.image") {
+                view.currentIndex = Qt.binding(() =>  Math.min(imageModel.indexOf(cfg_Image), imageModel.count - 1));
+            }
         }
 
         //kill the space for label under thumbnails
