@@ -9,6 +9,7 @@
 
 import QtQuick 2.6
 import QtQuick.Layouts 1.1
+import QtQuick.Window 2.2
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as Components // Date label height breaks on vertical panel with PC3 version
@@ -110,6 +111,11 @@ MouseArea {
         return currentTime;
     }
 
+    function pointToPixel(pointSize) {
+        var pixelsPerInch = Screen.pixelDensity * 25.4
+        return Math.round(pointSize / 72 * pixelsPerInch)
+    }
+
     states: [
         State {
             name: "horizontalPanel"
@@ -149,7 +155,7 @@ MouseArea {
                 height: sizehelper.height
                 width: sizehelper.contentWidth
 
-                fontSizeMode: Text.VerticalFit
+                font.pixelSize: timeLabel.height
             }
 
             PropertyChanges {
@@ -158,8 +164,7 @@ MouseArea {
                 height: main.showDate ? 0.7 * timeLabel.height : 0.8 * timeLabel.height
                 width: main.showDate ? timezoneLabel.paintedWidth : timeLabel.width
 
-                font.pointSize: main.showDate ? 0.7 * timeLabel.font.pointSize : 0.8 * timeLabel.font.pointSize
-                fontSizeMode: main.showDate ? Text.VerticalFit : Text.Fit
+                font.pixelSize: timezoneLabel.height
             }
 
             PropertyChanges {
@@ -169,9 +174,7 @@ MouseArea {
                 width: dateLabel.paintedWidth
                 verticalAlignment: Text.AlignVCenter
 
-                font.pointSize: 0.8 * timeLabel.font.pointSize
-                font.pixelSize: -1
-                fontSizeMode: Text.VerticalFit
+                font.pixelSize: dateLabel.height
             }
 
             AnchorChanges {
@@ -192,9 +195,9 @@ MouseArea {
                  * and still fits well into the panel with all the applied margins.
                  */
                 height: Math.min(main.showDate || timezoneLabel.visible ? main.height * 0.56 : main.height * 0.71,
-                                 Plasmoid.configuration.autoFontAndSize ? 3 * PlasmaCore.Theme.defaultFont.pixelSize : 1024)
+                                 fontHelper.font.pixelSize)
 
-                fontSizeMode: Text.VerticalFit
+                font.pixelSize: sizehelper.height
             }
         },
 
@@ -226,6 +229,26 @@ MouseArea {
             }
 
             PropertyChanges {
+                target: dateLabel
+
+                height: timeLabel.height
+                width: dateLabel.paintedWidth + PlasmaCore.Units.smallSpacing
+
+                font.pixelSize: 1024
+                verticalAlignment: Text.AlignVCenter
+                anchors.rightMargin: labelsGrid.columnSpacing
+
+                fontSizeMode: Text.VerticalFit
+            }
+
+            AnchorChanges {
+                target: dateLabel
+
+                anchors.right: labelsGrid.left
+                anchors.verticalCenter: labelsGrid.verticalCenter
+            }
+
+            PropertyChanges {
                 target: timeLabel
 
                 height: sizehelper.height
@@ -240,37 +263,17 @@ MouseArea {
                 height: 0.7 * timeLabel.height
                 width: timezoneLabel.paintedWidth
 
-                font.pointSize: 0.7 * timeLabel.font.pointSize
                 fontSizeMode: Text.VerticalFit
-            }
-
-            PropertyChanges {
-                target: dateLabel
-
-                height: timeLabel.height
-                width: dateLabel.paintedWidth + PlasmaCore.Units.smallSpacing
-
-                verticalAlignment: Text.AlignVCenter
-                anchors.rightMargin: labelsGrid.columnSpacing
-
-                font.pointSize: timeLabel.font.pointSize
-                font.pixelSize: -1
-                fontSizeMode: Text.VerticalFit
-            }
-
-            AnchorChanges {
-                target: dateLabel
-
-                anchors.right: labelsGrid.left
-                anchors.verticalCenter: labelsGrid.verticalCenter
+                horizontalAlignment: Text.AlignHCenter
             }
 
             PropertyChanges {
                 target: sizehelper
 
-                height: Math.min(main.height, Plasmoid.configuration.autoFontAndSize ? 3 * PlasmaCore.Theme.defaultFont.pixelSize : 1024)
+                height: Math.min(main.height, fontHelper.contentHeight)
 
                 fontSizeMode: Text.VerticalFit
+                font.pixelSize: fontHelper.font.pixelSize
             }
         },
 
@@ -305,17 +308,18 @@ MouseArea {
                 height: sizehelper.contentHeight
                 width: main.width
 
+                font.pixelSize: Math.min(timeLabel.height, fontHelper.font.pixelSize)
                 fontSizeMode: Text.VerticalFit
             }
 
             PropertyChanges {
                 target: timezoneLabel
 
-                height: 0.7 * timeLabel.height
+                height: Math.max(0.7 * timeLabel.height, minimumPixelSize)
                 width: main.width
 
-                font.pointSize: 0.7 * timeLabel.font.pointSize
                 fontSizeMode: Text.Fit
+                minimumPixelSize: dateLabel.minimumPixelSize
                 elide: Text.ElideRight
             }
 
@@ -330,8 +334,7 @@ MouseArea {
                 verticalAlignment: Text.AlignTop
                 // Those magic numbers are purely what looks nice as maximum size, here we have it the smallest
                 // between slightly bigger than the default font (1.4 times) and a bit smaller than the time font
-                font.pixelSize: Math.min(0.7 * timeLabel.height, Plasmoid.configuration.autoFontAndSize ? PlasmaCore.Theme.defaultFont.pixelSize * 1.4 : 1024)
-                font.pointSize: -1
+                font.pixelSize: Math.min(0.7 * timeLabel.height, PlasmaCore.Theme.defaultFont.pixelSize * 1.4)
                 elide: Text.ElideRight
                 wrapMode: Text.WordWrap
             }
@@ -346,10 +349,10 @@ MouseArea {
             PropertyChanges {
                 target: sizehelper
 
-                height: Plasmoid.configuration.autoFontAndSize ? 3 * PlasmaCore.Theme.defaultFont.pixelSize : 1024
                 width: main.width
 
-                fontSizeMode: Text.Fit
+                fontSizeMode: Text.HorizontalFit
+                font.pixelSize: fontHelper.font.pixelSize
             }
         },
 
@@ -393,20 +396,20 @@ MouseArea {
                 height: 0.7 * timeLabel.height
                 width: main.width
 
-                font.pointSize: 0.7 * timeLabel.font.pointSize
                 fontSizeMode: Text.Fit
+                minimumPixelSize: 1
             }
 
             PropertyChanges {
                 target: dateLabel
 
                 height: 0.7 * timeLabel.height
+                font.pixelSize: 1024
                 width: Math.max(timeLabel.contentWidth, PlasmaCore.Units.gridUnit * 3)
                 verticalAlignment: Text.AlignVCenter
 
-                font.pointSize: 0.7 * timeLabel.font.pointSize
-                font.pixelSize: -1
                 fontSizeMode: Text.Fit
+                minimumPixelSize: 1
                 wrapMode: Text.WordWrap
             }
 
@@ -434,6 +437,7 @@ MouseArea {
                 width: main.width
 
                 fontSizeMode: Text.Fit
+                font.pixelSize: 1024
             }
         }
     ]
@@ -495,27 +499,30 @@ MouseArea {
             Components.Label  {
                 id: timeLabel
 
-                font.family: Plasmoid.configuration.autoFontAndSize ? PlasmaCore.Theme.defaultFont.family : Plasmoid.configuration.fontFamily
-                font.weight: Plasmoid.configuration.autoFontAndSize ? PlasmaCore.Theme.defaultFont.weight : Plasmoid.configuration.fontWeight
-                font.italic: Plasmoid.configuration.autoFontAndSize ? PlasmaCore.Theme.defaultFont.italic : Plasmoid.configuration.italicText
-                font.pointSize: Plasmoid.configuration.autoFontAndSize ? 1024 : Plasmoid.configuration.fontSize
-                minimumPointSize: 1
+                font {
+                    family: fontHelper.font.family
+                    weight: fontHelper.font.weight
+                    italic: fontHelper.font.italic
+                    pixelSize: 1024
+                    pointSize: -1 // Because we're setting the pixel size instead
+                                  // TODO: remove once this label is ported to PC3
+                }
                 minimumPixelSize: 1
 
                 text: Qt.formatTime(main.getCurrentTime(), main.timeFormat)
 
-                horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
+                horizontalAlignment: Text.AlignHCenter
             }
 
             Components.Label {
                 id: timezoneLabel
 
-                font.family: timeLabel.font.family
                 font.weight: timeLabel.font.weight
                 font.italic: timeLabel.font.italic
-                font.pointSize: timeLabel.font.pointSize
-                minimumPointSize: 1
+                font.pixelSize: 1024
+                font.pointSize: -1 // Because we're setting the pixel size instead
+                                   // TODO: remove once this label is ported to PC3
                 minimumPixelSize: 1
 
                 visible: text.length > 0
@@ -532,8 +539,9 @@ MouseArea {
             font.family: timeLabel.font.family
             font.weight: timeLabel.font.weight
             font.italic: timeLabel.font.italic
-            font.pointSize: timeLabel.font.pointSize
-            minimumPointSize: 1
+            font.pixelSize: 1024
+            font.pointSize: -1 // Because we're setting the pixel size instead
+                               // TODO: remove once this label is ported to PC3
             minimumPixelSize: 1
 
             horizontalAlignment: Text.AlignHCenter
@@ -551,9 +559,23 @@ MouseArea {
         font.family: timeLabel.font.family
         font.weight: timeLabel.font.weight
         font.italic: timeLabel.font.italic
-        font.pointSize: timeLabel.font.pointSize
-        minimumPointSize: timeLabel.minimumPointSize
-        minimumPixelSize: timeLabel.minimumPixelSize
+        minimumPixelSize: 1
+
+        visible: false
+    }
+
+    // To measure Label.height for maximum-sized font in VerticalFit mode
+    Components.Label {
+        id: fontHelper
+        
+        height: 1024
+
+        font.family: Plasmoid.configuration.autoFontAndSize ? PlasmaCore.Theme.defaultFont.family : Plasmoid.configuration.fontFamily
+        font.weight: Plasmoid.configuration.autoFontAndSize ? PlasmaCore.Theme.defaultFont.weight : Plasmoid.configuration.fontWeight
+        font.italic: Plasmoid.configuration.autoFontAndSize ? PlasmaCore.Theme.defaultFont.italic : Plasmoid.configuration.italicText
+        font.pixelSize: Plasmoid.configuration.autoFontAndSize ? 3 * PlasmaCore.Theme.defaultFont.pixelSize : pointToPixel(Plasmoid.configuration.fontSize)
+        font.pointSize: -1
+        fontSizeMode: Text.VerticalFit
 
         visible: false
     }
@@ -564,7 +586,6 @@ MouseArea {
         font.family: timeLabel.font.family
         font.weight: timeLabel.font.weight
         font.italic: timeLabel.font.italic
-        font.pointSize: timeLabel.font.pointSize
     }
 
     // Qt's QLocale does not offer any modular time creating like Klocale did
@@ -662,6 +683,7 @@ MouseArea {
         } else {
             sizehelper.text = timePm;
         }
+        fontHelper.text = sizehelper.text
     }
 
     function dateTimeChanged()
