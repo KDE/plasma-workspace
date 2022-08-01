@@ -4,7 +4,7 @@
     SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 */
 
-import QtQuick 2.6
+import QtQuick 2.15
 import QtQuick.Dialogs 1.1
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.5 as QQC2
@@ -33,8 +33,8 @@ KCM.SimpleKCM {
         QQC2.TextField {
             id: userNameField
             Kirigami.FormData.label: i18n("Username:")
-            validator: RegExpValidator {
-                regExp: /^[a-z_]([a-z0-9_-]{0,31}|[a-z0-9_-]{0,30}\$)$/
+            validator: RegularExpressionValidator {
+                regularExpression: /^[a-z_]([a-z0-9_-]{0,31}|[a-z0-9_-]{0,30}\$)$/
             }
         }
         QQC2.ComboBox {

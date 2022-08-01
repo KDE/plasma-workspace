@@ -4,7 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.1
+import QtQuick 2.15
 import QtQuick.Controls 2.5 as QQC2
 
 QQC2.TextField {
@@ -56,7 +56,7 @@ QQC2.TextField {
     inputMask: "00:00"
     selectByMouse: false
     inputMethodHints: Qt.ImhPreferNumbers
-    validator: RegExpValidator { regExp: /^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/ }
+    validator: RegularExpressionValidator { regularExpression: /^([0-1]?[0-9]|2[0-3]):[0-5][0-9]$/ }
 
     onEditingFinished: submit()
 }
