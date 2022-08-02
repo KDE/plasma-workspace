@@ -1,6 +1,6 @@
 {
     "KPlugin": {
-        "Description": "Sends updated location data to the compositor",
+        "Description": "Provides location updates for Night Color",
         "Description[ar]": "يرسل بيانات الموقع المحدثة إلى المؤلف",
         "Description[az]": "Yenilənmiş məlumatları Plasma pəncərə menecerinə göndərir",
         "Description[bg]": "Изпраща актуализирани данни за местоположение към композитора",
@@ -36,7 +36,7 @@
         "Description[vi]": "Gửi dữ liệu vị trí đã cập nhật đến trình kết hợp",
         "Description[x-test]": "xxSends updated location data to the compositorxx",
         "Description[zh_CN]": "发送已更新的位置数据到显示特效合成器",
-        "Name": "ColorCorrect Geolocation Updater",
+        "Name": "Automatic Location for Night Color",
         "Name[ar]": "محدث الموقع لتصحيح الألوان",
         "Name[az]": "Rənglərin korreksiyası üçün coğrafi məkan yenilənməsi",
         "Name[bg]": "ColorCorrect Geolocation Updater",
