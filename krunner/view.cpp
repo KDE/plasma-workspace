@@ -265,16 +265,14 @@ void View::positionOnScreen()
         y = qBound(r.top(), y, r.bottom() - height());
 
         setPosition(x, y);
+        setLocation(m_floating ? Plasma::Types::Floating : Plasma::Types::TopEdge);
         PlasmaQuick::Dialog::setVisible(true);
 
         if (m_floating) {
             KWindowSystem::setOnDesktop(winId(), KWindowSystem::currentDesktop());
             KWindowSystem::setType(winId(), NET::Normal);
-            // Turn the sliding effect off
-            setLocation(Plasma::Types::Floating);
         } else {
             KWindowSystem::setOnAllDesktops(winId(), true);
-            setLocation(Plasma::Types::TopEdge);
         }
 
         KWindowSystem::forceActiveWindow(winId());
