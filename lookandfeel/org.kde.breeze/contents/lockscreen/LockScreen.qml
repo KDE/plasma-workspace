@@ -5,7 +5,6 @@
 */
 
 import QtQuick 2.5
-import QtQuick.Controls 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.private.sessions 2.0
 import "../components"

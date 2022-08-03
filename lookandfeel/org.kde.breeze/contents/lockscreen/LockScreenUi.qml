@@ -6,7 +6,7 @@
 
 import QtQml 2.15
 import QtQuick 2.8
-import QtQuick.Controls 1.1
+import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.1
 import QtGraphicalEffects 1.0
 
@@ -278,16 +278,13 @@ PlasmaCore.ColorScope {
                 id: mainBlock
                 lockScreenUiVisible: lockScreenRoot.uiVisible
 
-                // This is a focus scope and QQC1 StackView (unlike QQC2) does not set focus to the current item
-                focus: true
-
                 showUserList: userList.y + mainStack.y > 0
 
                 enabled: !graceLockTimer.running
 
-                Stack.onStatusChanged: {
+                StackView.onStatusChanged: {
                     // prepare for presenting again to the user
-                    if (Stack.status === Stack.Activating) {
+                    if (StackView.status === StackView.Activating) {
                         mainPasswordBox.remove(0, mainPasswordBox.length)
                         mainPasswordBox.focus = true
                         root.notification = ""
@@ -483,8 +480,8 @@ PlasmaCore.ColorScope {
             SessionManagementScreen {
                 property var switchSession: finalSwitchSession
 
-                Stack.onStatusChanged: {
-                    if (Stack.status == Stack.Activating) {
+                StackView.onStatusChanged: {
+                    if (StackView.status == StackView.Activating) {
                         focus = true
                     }
                 }
