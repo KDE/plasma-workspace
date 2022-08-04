@@ -1,7 +1,25 @@
 {
     "KPlugin": {
         "Description": "Provides location updates for Night Color",
-        "Name": "Automatic Location for Night Color"
+        "Description[bg]": "Осигурява актуализиране на местоположението за Нощни цветове",
+        "Description[ca]": "Proporciona actualitzacions d'ubicació per al color de nit",
+        "Description[es]": "Proporciona actualizaciones de la ubicación para el color nocturno",
+        "Description[nl]": "Biedt het bijwerken van de locatie voor nachtkleur",
+        "Description[pt]": "Oferece as actualizações da localização para a Cor Nocturna",
+        "Description[sv]": "Tillhandahåller platsuppdateringar för nattfärg",
+        "Description[tr]": "Gece Rengi için konum güncellemeleri sağlar",
+        "Description[uk]": "Надає оновлення даних щодо місця перебування для «Нічних кольорів»",
+        "Description[x-test]": "xxProvides location updates for Night Colorxx",
+        "Name": "Automatic Location for Night Color",
+        "Name[bg]": "Автоматично определяне на местоположение за Нощни цветове",
+        "Name[ca]": "Ubicació automàtica del color de nit",
+        "Name[es]": "Ubicación automática para el color nocturno",
+        "Name[nl]": "Automatische locatie voor nachtkleur",
+        "Name[pt]": "Localização Automática para a Cor Nocturna",
+        "Name[sv]": "Automatisk plats för nattfärg",
+        "Name[tr]": "Gece Rengi için Otomatik Konum",
+        "Name[uk]": "Автоматичне місце для «Нічних кольорів»",
+        "Name[x-test]": "xxAutomatic Location for Night Colorxx"
     },
     "X-KDE-FactoryName": "colorcorrectlocationupdater",
     "X-KDE-Kded-autoload": true
