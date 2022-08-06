@@ -81,11 +81,15 @@ ColumnLayout {
         PlasmaComponents3.Button {
             text: i18nc("@action:button", "Save")
             icon.name: "document-save"
+            KeyNavigation.up: textArea
+            KeyNavigation.right: cancelButton
             onClicked: saveAndExit()
         }
         PlasmaComponents3.Button {
+            id: cancelButton
             text: i18nc("@action:button", "Cancel")
             icon.name: "dialog-cancel"
+            KeyNavigation.up: textArea
             onClicked: stack.pop()
         }
     }
