@@ -61,6 +61,7 @@ Item {
                     case Qt.Key_Return:
                     case Qt.Key_Select:
                         activityModel.setCurrentActivity(model.id, function() {});
+                        event.accepted = true;
                         break;
                     }
                 }
@@ -76,6 +77,9 @@ Item {
                 onCheckedChanged: {
                     if(model.current) {
                         tabBar.currentTab = tab;
+                        if (tabBar.activeFocus) {
+                            forceActiveFocus();
+                        }
                     }
                 }
 
