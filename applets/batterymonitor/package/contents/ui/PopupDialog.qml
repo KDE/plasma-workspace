@@ -83,6 +83,8 @@ PlasmaExtras.Representation {
             id: batteryList
             keyNavigationEnabled: true
 
+            contentWidth: parent.contentWidth - leftMargin - rightMargin
+
             leftMargin: PlasmaCore.Units.smallSpacing * 2
             rightMargin: PlasmaCore.Units.smallSpacing * 2
             topMargin: PlasmaCore.Units.smallSpacing * 2
