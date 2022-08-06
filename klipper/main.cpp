@@ -8,7 +8,6 @@
 #include <stdlib.h>
 
 #include <KAboutData>
-#include <KConfigDialogManager>
 #include <KDBusService>
 #include <KLocalizedString>
 
