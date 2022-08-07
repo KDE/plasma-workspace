@@ -15,10 +15,10 @@ QQC2.TextField {
 
     inputMethodHints: Qt.ImhFormattedNumbersOnly
 
-    text: backend
+    text: Math.round(backend * 100)/100;
 
     onBackendChanged: {
-        text = backend;
+        text = Math.round(backend * 100)/100;
     }
 
     onTextChanged: {
