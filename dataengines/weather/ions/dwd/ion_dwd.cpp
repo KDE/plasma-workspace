@@ -282,7 +282,7 @@ void DWDIon::setup_slotJobFinished(KJob *job)
     setData(QStringLiteral("dwd|validate|") + searchText, Data());
 
     QByteArray catalogueData = m_searchJobData[job];
-    if (!catalogueData.isNull()) {
+    if (!catalogueData.isEmpty()) {
         parseStationData(catalogueData);
         searchInStationList(searchText);
     }
@@ -299,7 +299,7 @@ void DWDIon::measure_slotJobFinished(KJob *job)
     QJsonDocument doc = QJsonDocument::fromJson(m_measureJobJSON.value(job));
 
     // Not all stations have current measurements
-    if (!doc.isNull()) {
+    if (!doc.isEmpty()) {
         parseMeasureData(source, doc);
     } else {
         m_weatherData[source].isMeasureDataPending = false;
@@ -317,7 +317,7 @@ void DWDIon::forecast_slotJobFinished(KJob *job)
 
     QJsonDocument doc = QJsonDocument::fromJson(m_forecastJobJSON.value(job));
 
-    if (!doc.isNull()) {
+    if (!doc.isEmpty()) {
         parseForecastData(source, doc);
     }
 
