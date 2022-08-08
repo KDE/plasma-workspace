@@ -19,6 +19,7 @@ void LookAndFeelPackage::initPackage(KPackage::Package *package)
 
     // Defaults
     package->addFileDefinition("defaults", QStringLiteral("defaults"), i18n("Default settings for theme, etc."));
+    package->addFileDefinition("layoutdefaults", QStringLiteral("layouts/defaults"), i18n("Default layout-related settings for titlebars, etc."));
     package->addDirectoryDefinition("plasmoidsetupscripts", QStringLiteral("plasmoidsetupscripts"), i18n("Script to tweak default configs of plasmoids"));
     // Colors
     package->addFileDefinition("colors", QStringLiteral("colors"), i18n("Color scheme to use for applications."));

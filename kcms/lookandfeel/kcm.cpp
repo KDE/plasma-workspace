@@ -79,7 +79,9 @@ KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data, con
     roles[HasRunCommandRole] = "hasRunCommand";
     roles[HasLogoutRole] = "hasLogout";
     roles[HasGlobalThemeRole] = "hasGlobalTheme"; //For the Global Theme global checkbox
-    roles[HasDesktopLayoutRole] = "hasDesktopLayout"; //For the Desktop Layout checkbox in More Options
+    roles[HasLayoutSettingsRole] = "hasLayoutSettings"; //For the Desktop Layout checkbox in More Options
+    roles[HasDesktopLayoutRole] = "hasDesktopLayout";
+    roles[HasTitlebarLayoutRole] = "hasTitlebarLayout";
     roles[HasColorsRole] = "hasColors";
     roles[HasWidgetStyleRole] = "hasWidgetStyle";
     roles[HasIconsRole] = "hasIcons";
@@ -244,6 +246,7 @@ void KCMLookandFeel::addKPackageToModel(const KPackage::Package &pkg)
 
     // What the package provides
     row->setData(!pkg.filePath("defaults").isEmpty(), HasGlobalThemeRole);
+    row->setData(!pkg.filePath("layoutdefaults").isEmpty(), HasLayoutSettingsRole);
     row->setData(!pkg.filePath("layouts").isEmpty(), HasDesktopLayoutRole);
     row->setData(!pkg.filePath("splashmainscript").isEmpty(), HasSplashRole);
     row->setData(!pkg.filePath("lockscreenmainscript").isEmpty(), HasLockScreenRole);
@@ -307,6 +310,15 @@ void KCMLookandFeel::addKPackageToModel(const KPackage::Package &pkg)
         row->setData(false, HasWindowDecorationRole);
         row->setData(false, HasFontsRole);
     }
+    if (!pkg.filePath("layoutdefaults").isEmpty()) {
+        KSharedConfigPtr conf = KSharedConfig::openConfig(pkg.filePath("layoutdefaults"));
+        KConfigGroup cg(conf, "kwinrc");
+        cg = KConfigGroup(&cg, "org.kde.kdecoration2");
+        row->setData((!cg.readEntry("ButtonsOnLeft", QString()).isEmpty() || !cg.readEntry("ButtonsOnRight", QString()).isEmpty()), HasTitlebarLayoutRole);
+    } else {
+        //This fallback is needed since the sheet 'breaks' without it
+        row->setData(false, HasTitlebarLayoutRole);
+    }
 
     m_model->appendRow(row);
 }
@@ -333,10 +345,25 @@ void KCMLookandFeel::save()
         return;
     }
 
-    const int index = pluginIndex(lookAndFeelSettings()->lookAndFeelPackage());
-    auto applyFlags = m_lnf->appearanceToApply();
     // Disable unavailable flags to prevent unintentional applies
-    // TODO: Also do for LayoutSettings once layout options get added besides just Desktop Layout
+    const int index = pluginIndex(lookAndFeelSettings()->lookAndFeelPackage());
+    auto layoutApplyFlags = m_lnf->layoutToApply();
+    // Layout Options:
+    constexpr std::array layoutPairs {
+        std::make_pair(LookAndFeelManager::DesktopLayout, HasDesktopLayoutRole),
+        std::make_pair(LookAndFeelManager::TitlebarLayout, HasTitlebarLayoutRole),
+        std::make_pair(LookAndFeelManager::WindowPlacement, HasDesktopLayoutRole),
+        std::make_pair(LookAndFeelManager::ShellPackage, HasDesktopLayoutRole),
+        std::make_pair(LookAndFeelManager::DesktopSwitcher, HasDesktopLayoutRole),
+    };
+    for (const auto &pair : layoutPairs) {
+        if ( m_lnf->layoutToApply().testFlag(pair.first) ) {
+            layoutApplyFlags.setFlag(pair.first, m_model->data(m_model->index(index, 0), pair.second).toBool());
+        }
+    }
+    m_lnf->setLayoutToApply(layoutApplyFlags);
+    // Appearance Options:
+    auto appearanceApplyFlags = m_lnf->appearanceToApply();
     constexpr std::array appearancePairs {
         std::make_pair(LookAndFeelManager::Colors, HasColorsRole),
         std::make_pair(LookAndFeelManager::WindowDecoration, HasWindowDecorationRole),
@@ -350,7 +377,7 @@ void KCMLookandFeel::save()
     };
     for (const auto &pair : appearancePairs) {
         if ( m_lnf->appearanceToApply().testFlag(pair.first) ) {
-            applyFlags.setFlag(pair.first, m_model->data(m_model->index(index, 0), pair.second).toBool());
+            appearanceApplyFlags.setFlag(pair.first, m_model->data(m_model->index(index, 0), pair.second).toBool());
         }
     }
     if ( m_lnf->appearanceToApply().testFlag(LookAndFeelManager::WidgetStyle) ) {
@@ -359,11 +386,11 @@ void KCMLookandFeel::save()
         KSharedConfigPtr conf = KSharedConfig::openConfig(package.filePath("defaults"));
         KConfigGroup cg(conf, "kdeglobals");
         std::unique_ptr<QStyle> newStyle(QStyleFactory::create(cg.readEntry("widgetStyle", QString())));
-        applyFlags.setFlag(LookAndFeelManager::WidgetStyle,
+        appearanceApplyFlags.setFlag(LookAndFeelManager::WidgetStyle,
                            (newStyle != nullptr && m_model->data(m_model->index(index, 0), HasWidgetStyleRole).toBool())); // Widget Style isn't in
         // the loop above since it has all of this extra checking too for it
     }
-    m_lnf->setAppearanceToApply(applyFlags);
+    m_lnf->setAppearanceToApply(appearanceApplyFlags);
 
     ManagedConfigModule::save();
     m_lnf->save(package, m_package);
@@ -417,15 +444,7 @@ void KCMLookandFeel::resetLayoutToApply()
         return;
     }
 
-    constexpr std::array layoutPairs{
-        std::make_pair(LookAndFeelManager::DesktopLayout, HasDesktopLayoutRole),
-        std::make_pair(LookAndFeelManager::WindowPlacement, HasDesktopLayoutRole),
-        std::make_pair(LookAndFeelManager::ShellPackage, HasDesktopLayoutRole),
-        std::make_pair(LookAndFeelManager::DesktopSwitcher, HasDesktopLayoutRole),
-    }; // NOTE: Items that have their own Has...Role instead will be added soon
-    for (const auto &pair : layoutPairs) {
-        applyFlags.setFlag(pair.first, m_model->data(m_model->index(index, 0), pair.second).toBool());
-    }
+    applyFlags.setFlag(LookAndFeelManager::LayoutSettings, m_model->data(m_model->index(index, 0), HasLayoutSettingsRole).toBool());
 
     m_lnf->setLayoutToApply(applyFlags); //emits over in lookandfeelmananager
 }

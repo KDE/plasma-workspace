@@ -44,35 +44,23 @@ ColumnLayout {
         }
         QtControls.CheckBox {
             id: resetCheckbox
-            text: i18n("Desktop layout")
-            checked: kcm.layoutToApply & Private.LookandFeelManager.DesktopLayout
-            onCheckedChanged: { //NOTE: onCheckedChanged is used here to make sure the other checkboxes
-                //it sets as well do not get inconsistent values - see FIXME right below
-                if (checked) {
-                    kcm.layoutToApply |= Private.LookandFeelManager.DesktopLayout
-                    kcm.layoutToApply |= Private.LookandFeelManager.DesktopSwitcher
-                    kcm.layoutToApply |= Private.LookandFeelManager.WindowPlacement
-                    kcm.layoutToApply |= Private.LookandFeelManager.ShellPackage
-                } else {
-                    kcm.layoutToApply &=  ~ Private.LookandFeelManager.DesktopLayout
-                    kcm.layoutToApply &=  ~ Private.LookandFeelManager.DesktopSwitcher
-                    kcm.layoutToApply &=  ~ Private.LookandFeelManager.WindowPlacement
-                    kcm.layoutToApply &=  ~ Private.LookandFeelManager.ShellPackage
-                }
-            }
-            enabled: view.model.data(view.model.index(view.currentIndex, 0), Private.KCMLookandFeel.HasDesktopLayoutRole)
+            text: i18n("Desktop and window layout")
+            checked: kcm.layoutToApply & Private.LookandFeelManager.LayoutSettings
+            onToggled: kcm.layoutToApply ^= Private.LookandFeelManager.LayoutSettings
+            enabled: view.model.data(view.model.index(view.currentIndex, 0), Private.KCMLookandFeel.HasLayoutSettingsRole) ||
+                view.model.data(view.model.index(view.currentIndex, 0), Private.KCMLookandFeel.HasDesktopLayoutRole)
             visible: enabled && !resetCheckboxLblSub.visible
         }
         QtControls.Label {
             id: resetCheckboxLblSub
             visible: resetCheckbox.enabled && !appearanceSettingsCheckbox.enabled
             Layout.fillWidth: true
-            text: i18nc("List item", "• Desktop layout")
+            text: i18nc("List item", "• Desktop and window layout")
             wrapMode: Text.WordWrap
         }
         QtControls.Label {
             Layout.fillWidth: true
-            text: i18n("Applying a Desktop layout replaces your current configuration of desktops, panels, and widgets")
+            text: i18n("Applying a Desktop layout replaces your current configuration of desktops, panels, docks, and widgets")
             elide: Text.ElideRight
             wrapMode: Text.WordWrap
             font: Kirigami.Theme.smallFont

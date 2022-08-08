@@ -123,6 +123,7 @@ KCM.GridViewKCM {
                         view.forceActiveFocus() //Prevent further button presses via keyboard
                     }
                     enabled: kcm.appearanceToApply & Private.LookandFeelManager.AppearanceSettings ||
+                        kcm.layoutToApply & Private.LookandFeelManager.LayoutSettings ||
                         kcm.layoutToApply & Private.LookandFeelManager.DesktopLayout
                 }
                 QtControls.Button {

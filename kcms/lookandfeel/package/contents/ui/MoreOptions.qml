@@ -20,33 +20,50 @@ ColumnLayout {
         Layout.leftMargin: Kirigami.Units.largeSpacing
         Layout.rightMargin: Kirigami.Units.largeSpacing
 
-        QtControls.CheckBox { //FIXME: Once we have decided the fate of these checkboxes
-            //(make them GUI selectable, or absorb them into other values like DesktopLayout)
-            //we can then convert this into a checkbox of a repeater of its own:
-            // DesktopSwitcher, WindowPlacement, ShellPackage
-            id: resetCheckbox
+        ColumnLayout {
             Kirigami.FormData.label: i18n("Layout settings:")
-            text: i18n("Desktop layout")
-            checked: kcm.layoutToApply & Private.LookandFeelManager.DesktopLayout
-            onCheckedChanged: { //NOTE: onCheckedChanged is used here to make sure the other checkboxes
-                //it sets as well do not get inconsistently set - see fixme above
-                if (checked) {
-                    kcm.layoutToApply |= Private.LookandFeelManager.DesktopLayout
-                    kcm.layoutToApply |= Private.LookandFeelManager.DesktopSwitcher
-                    kcm.layoutToApply |= Private.LookandFeelManager.WindowPlacement
-                    kcm.layoutToApply |= Private.LookandFeelManager.ShellPackage
-                } else {
-                    kcm.layoutToApply &=  ~ Private.LookandFeelManager.DesktopLayout
-                    kcm.layoutToApply &=  ~ Private.LookandFeelManager.DesktopSwitcher
-                    kcm.layoutToApply &=  ~ Private.LookandFeelManager.WindowPlacement
-                    kcm.layoutToApply &=  ~ Private.LookandFeelManager.ShellPackage
+
+            QtControls.CheckBox { //FIXME: Once we have decided the fate of these checkboxes
+                //(make them GUI selectable, or absorb them into other values like DesktopLayout)
+                //we can then move this checkbox into the below repeater:
+                // DesktopSwitcher, WindowPlacement, ShellPackage
+                id: resetCheckbox
+                Kirigami.FormData.label: i18n("Layout settings:")
+                text: i18n("Desktop layout")
+                checked: kcm.layoutToApply & Private.LookandFeelManager.DesktopLayout
+                onCheckedChanged: { //NOTE: onCheckedChanged is used here to make sure the other checkboxes
+                    //it sets as well do not get inconsistently set - see fixme above
+                    if (checked) {
+                        kcm.layoutToApply |= Private.LookandFeelManager.DesktopLayout
+                        kcm.layoutToApply |= Private.LookandFeelManager.DesktopSwitcher
+                        kcm.layoutToApply |= Private.LookandFeelManager.WindowPlacement
+                        kcm.layoutToApply |= Private.LookandFeelManager.ShellPackage
+                    } else {
+                        kcm.layoutToApply &=  ~ Private.LookandFeelManager.DesktopLayout
+                        kcm.layoutToApply &=  ~ Private.LookandFeelManager.DesktopSwitcher
+                        kcm.layoutToApply &=  ~ Private.LookandFeelManager.WindowPlacement
+                        kcm.layoutToApply &=  ~ Private.LookandFeelManager.ShellPackage
+                    }
+                }
+                visible: view.model.data(view.model.index(view.currentIndex, 0), Private.KCMLookandFeel.HasDesktopLayoutRole)
+            }
+
+            Repeater {
+                model: [
+                    { text: i18n("Titlebar Buttons layout"), role: Private.KCMLookandFeel.HasTitlebarLayoutRole, flag: Private.LookandFeelManager.TitlebarLayout },
+                ]
+                delegate: QtControls.CheckBox {
+                    required property var modelData
+                    text: modelData.text
+                    checked: kcm.layoutToApply & modelData.flag
+                    visible: view.model.data(view.model.index(view.currentIndex, 0), modelData.role)
+                    onToggled: kcm.layoutToApply ^= modelData.flag
                 }
             }
-            visible: view.model.data(view.model.index(view.currentIndex, 0), Private.KCMLookandFeel.HasDesktopLayoutRole)
         }
         QtControls.Label {
             Layout.fillWidth: true
-            text: i18n("Applying a Desktop layout replaces your current configuration of desktops, panels, and widgets")
+            text: i18n("Applying a Desktop layout replaces your current configuration of desktops, panels, docks, and widgets")
             elide: Text.ElideRight
             wrapMode: Text.WordWrap
             font: Kirigami.Theme.smallFont
