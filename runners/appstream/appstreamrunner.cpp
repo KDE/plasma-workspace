@@ -127,7 +127,7 @@ void InstallerRunner::match(Plasma::RunnerContext &context)
         }
 
         Plasma::QueryMatch match(this);
-        match.setType(Plasma::QueryMatch::PossibleMatch);
+        match.setType(Plasma::QueryMatch::NoMatch); // Make sure it is less relavant than KCMs or apps
         match.setId(componentId);
         match.setIcon(componentIcon(component));
         match.setText(i18n("Get %1…", component.name()));
