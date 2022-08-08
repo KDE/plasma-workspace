@@ -278,13 +278,17 @@ void DWDIon::forecast_slotDataArrived(KIO::Job *job, const QByteArray &data)
 
 void DWDIon::setup_slotJobFinished(KJob *job)
 {
-    const QString searchText(m_searchJobList.value(job));
-    setData(QStringLiteral("dwd|validate|") + searchText, Data());
+    if (!job->error()) {
+        const QString searchText(m_searchJobList.value(job));
+        setData(QStringLiteral("dwd|validate|") + searchText, Data());
 
-    QByteArray catalogueData = m_searchJobData[job];
-    if (!catalogueData.isEmpty()) {
-        parseStationData(catalogueData);
-        searchInStationList(searchText);
+        QByteArray catalogueData = m_searchJobData[job];
+        if (!catalogueData.isEmpty()) {
+            parseStationData(catalogueData);
+            searchInStationList(searchText);
+        }
+    } else {
+        qCWarning(IONENGINE_dwd) << "error during setup" << job->errorText();
     }
 
     m_searchJobList.remove(job);
@@ -293,17 +297,21 @@ void DWDIon::setup_slotJobFinished(KJob *job)
 
 void DWDIon::measure_slotJobFinished(KJob *job)
 {
-    const QString source(m_measureJobList.value(job));
-    setData(source, Data());
+    if (!job->error()) {
+        const QString source(m_measureJobList.value(job));
+        setData(source, Data());
 
-    QJsonDocument doc = QJsonDocument::fromJson(m_measureJobJSON.value(job));
+        QJsonDocument doc = QJsonDocument::fromJson(m_measureJobJSON.value(job));
 
-    // Not all stations have current measurements
-    if (!doc.isEmpty()) {
-        parseMeasureData(source, doc);
+        // Not all stations have current measurements
+        if (!doc.isEmpty()) {
+            parseMeasureData(source, doc);
+        } else {
+            m_weatherData[source].isMeasureDataPending = false;
+            updateWeather(source);
+        }
     } else {
-        m_weatherData[source].isMeasureDataPending = false;
-        updateWeather(source);
+        qCWarning(IONENGINE_dwd) << "error during measurement" << job->errorText();
     }
 
     m_measureJobList.remove(job);
@@ -312,28 +320,32 @@ void DWDIon::measure_slotJobFinished(KJob *job)
 
 void DWDIon::forecast_slotJobFinished(KJob *job)
 {
-    const QString source(m_forecastJobList.value(job));
-    setData(source, Data());
+    if (!job->error()) {
+        const QString source(m_forecastJobList.value(job));
+        setData(source, Data());
 
-    QJsonDocument doc = QJsonDocument::fromJson(m_forecastJobJSON.value(job));
+        QJsonDocument doc = QJsonDocument::fromJson(m_forecastJobJSON.value(job));
 
-    if (!doc.isEmpty()) {
-        parseForecastData(source, doc);
+        if (!doc.isEmpty()) {
+            parseForecastData(source, doc);
+        }
+
+        if (m_sourcesToReset.contains(source)) {
+            m_sourcesToReset.removeAll(source);
+            const QString weatherSource = QStringLiteral("dwd|weather|%1|%2").arg(source, m_place[source]);
+
+            // so the weather engine updates it's data
+            forceImmediateUpdateOfAllVisualizations();
+
+            // update the clients of our engine
+            Q_EMIT forceUpdate(this, weatherSource);
+        }
+    } else {
+        qCWarning(IONENGINE_dwd) << "error during forecast" << job->errorText();
     }
 
     m_forecastJobList.remove(job);
     m_forecastJobJSON.remove(job);
-
-    if (m_sourcesToReset.contains(source)) {
-        m_sourcesToReset.removeAll(source);
-        const QString weatherSource = QStringLiteral("dwd|weather|%1|%2").arg(source, m_place[source]);
-
-        // so the weather engine updates it's data
-        forceImmediateUpdateOfAllVisualizations();
-
-        // update the clients of our engine
-        Q_EMIT forceUpdate(this, weatherSource);
-    }
 }
 
 void DWDIon::calculatePositions(QStringList lines, QVector<int> &namePositionalInfo, QVector<int> &stationIdPositionalInfo)
