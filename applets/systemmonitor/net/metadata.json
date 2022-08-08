@@ -78,7 +78,7 @@
         "Description[uk]": "Віджет нагляду за системою, який показує швидкість отримання та вивантаження даних",
         "Description[vi]": "Phụ kiện giám sát hệ thống cho biết tốc độ tải dữ liệu về và lên",
         "Description[x-test]": "xxSystem monitor Widget that shows the download and upload data ratexx",
-        "Description[zh_CN]": "显示下载和上传速率的系统监视部件",
+        "Description[zh_CN]": "显示下载和上传速率的系统监视挂件",
         "EnabledByDefault": true,
         "FormFactors": [
             "desktop"
