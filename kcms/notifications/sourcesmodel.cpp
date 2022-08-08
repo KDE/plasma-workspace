@@ -8,6 +8,7 @@
 */
 
 #include "sourcesmodel.h"
+#include "kcm.h"
 
 #include <QCollator>
 #include <QDir>
@@ -23,8 +24,6 @@
 #include <KSharedConfig>
 
 #include <algorithm>
-
-static const QString s_plasmaWorkspaceNotifyRcName = QStringLiteral("plasma_workspace");
 
 SourcesModel::SourcesModel(QObject *parent)
     : QAbstractItemModel(parent)
@@ -236,6 +235,11 @@ void SourcesModel::load()
                 continue;
             }
 
+            // plasma_workspace notifications are linked directly from KCM main page
+            if (file == KCMNotifications::plasmaWorkspaceNotifyRcName()) {
+                continue;
+            }
+
             notifyRcFiles.append(file);
 
             KConfig config(file, KConfig::NoGlobals);
@@ -364,12 +368,6 @@ void SourcesModel::load()
 
     // Sort and make sure plasma_workspace is at the beginning of the list
     std::sort(servicesData.begin(), servicesData.end(), [&collator](const SourceData &a, const SourceData &b) {
-        if (a.notifyRcName == s_plasmaWorkspaceNotifyRcName) {
-            return true;
-        }
-        if (b.notifyRcName == s_plasmaWorkspaceNotifyRcName) {
-            return false;
-        }
         return collator.compare(a.display(), b.display()) < 0;
     });
 

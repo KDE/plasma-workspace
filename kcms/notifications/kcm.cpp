@@ -222,6 +222,11 @@ void KCMNotifications::configureEvents(const QString &notifyRcName, const QStrin
     dialog->show();
 }
 
+QString KCMNotifications::plasmaWorkspaceNotifyRcName()
+{
+    return QStringLiteral("plasma_workspace");
+}
+
 NotificationManager::BehaviorSettings *KCMNotifications::behaviorSettings(const QModelIndex &index)
 {
     if (!index.isValid()) {

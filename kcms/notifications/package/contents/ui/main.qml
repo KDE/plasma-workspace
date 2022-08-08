@@ -34,6 +34,37 @@ KCM.SimpleKCM {
         kcm.push("SourcesPage.qml");
     }
 
+    footer: ColumnLayout {
+        Row {
+            Layout.alignment: Qt.AlignRight
+            // TODO KF6 remove when SimpleKCM is fixed to have proper margins...
+            Layout.topMargin: root.margins
+            Layout.bottomMargin: root.margins
+            Layout.rightMargin: root.margins
+            Layout.leftMargin: root.margins
+            spacing: Kirigami.Units.smallSpacing
+
+            QtControls.Button {
+                text: i18nc("@action:button", "Configure System Notifications…")
+                icon.name: "preferences-desktop-notification"
+                enabled: root.notificationsAvailable
+                onClicked: kcm.configureEvents(kcm.plasmaWorkspaceNotifyRcName(), "" /*eventId*/, this)
+                // TODO SettingsHighlighter for plasma_workspace.notifyrc
+            }
+
+            QtControls.Button {
+                text: i18nc("@action:button", "Configure Application Notifications…")
+                icon.name: "configure"
+                enabled: root.notificationsAvailable
+                onClicked: root.openSourcesSettings()
+
+                KCM.SettingHighlighter {
+                    highlight: !kcm.isDefaultsBehaviorSettings
+                }
+            }
+        }
+    }
+
     Kirigami.FormLayout {
         Kirigami.InlineMessage {
             Kirigami.FormData.isSection: true
@@ -307,22 +338,6 @@ KCM.SimpleKCM {
             KCM.SettingStateBinding {
                 configObject: kcm.badgeSettings
                 settingName: "InTaskManager"
-            }
-        }
-
-        Kirigami.Separator {
-            Kirigami.FormData.isSection: true
-        }
-
-        QtControls.Button {
-            Kirigami.FormData.label: i18n("Applications:")
-            text: i18n("Configure…")
-            icon.name: "configure"
-            enabled: root.notificationsAvailable
-            onClicked: root.openSourcesSettings()
-
-            KCM.SettingHighlighter {
-                highlight: !kcm.isDefaultsBehaviorSettings
             }
         }
 

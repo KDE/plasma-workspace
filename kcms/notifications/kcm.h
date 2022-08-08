@@ -74,6 +74,7 @@ public:
     void setInitialEventId(const QString &eventId);
 
     Q_INVOKABLE void configureEvents(const QString &notifyRcName, const QString &eventId, QQuickItem *ctx = nullptr);
+    Q_INVOKABLE static QString plasmaWorkspaceNotifyRcName();
 
     Q_INVOKABLE NotificationManager::BehaviorSettings *behaviorSettings(const QModelIndex &index);
 
