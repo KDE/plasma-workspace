@@ -78,7 +78,7 @@
         "Description[uk]": "Створює віджет з вмістом буфера обміну даними",
         "Description[vi]": "Tạo một phụ kiện từ nội dung của bảng nháp",
         "Description[x-test]": "xxCreates a widget from the contents of the clipboardxx",
-        "Description[zh_CN]": "用剪贴板内容创建小部件",
+        "Description[zh_CN]": "创建基于剪贴板内容的挂件",
         "EnabledByDefault": true,
         "Icon": "edit-paste",
         "Id": "org.kde.paste",
