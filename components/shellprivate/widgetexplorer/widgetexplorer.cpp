@@ -278,7 +278,8 @@ void WidgetExplorerPrivate::addContainment(Containment *containment)
     QObject::connect(containment, SIGNAL(appletAdded(Plasma::Applet *)), q, SLOT(appletAdded(Plasma::Applet *)));
     QObject::connect(containment, SIGNAL(appletRemoved(Plasma::Applet *)), q, SLOT(appletRemoved(Plasma::Applet *)));
 
-    foreach (Applet *applet, containment->applets()) {
+    const QList<Applet *> applets = containment->applets();
+    for (auto applet : applets) {
         if (applet->pluginMetaData().isValid()) {
             Containment *childContainment = applet->property("containment").value<Containment *>();
             if (childContainment) {
