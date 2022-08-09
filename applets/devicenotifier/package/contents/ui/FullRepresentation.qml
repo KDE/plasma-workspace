@@ -38,9 +38,10 @@ PlasmaExtras.Representation {
 
             icon.name: "media-eject"
             text: i18n("Remove All")
+            Accessible.description: i18n("Click to safely remove all devices")
 
             PlasmaComponents3.ToolTip {
-                text: i18n("Click to safely remove all devices")
+                text: parent.Accessible.description
             }
         }
     }
