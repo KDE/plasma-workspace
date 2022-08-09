@@ -281,7 +281,7 @@ void WidgetExplorerPrivate::addContainment(Containment *containment)
     const QList<Applet *> applets = containment->applets();
     for (auto applet : applets) {
         if (applet->pluginMetaData().isValid()) {
-            Containment *childContainment = applet->property("containment").value<Containment *>();
+            Containment *childContainment = applet->containment();
             if (childContainment) {
                 addContainment(childContainment);
             }
@@ -298,7 +298,7 @@ void WidgetExplorerPrivate::removeContainment(Plasma::Containment *containment)
     const QList<Applet *> applets = containment->applets();
     for (auto applet : applets) {
         if (applet->pluginMetaData().isValid()) {
-            Containment *childContainment = applet->property("containment").value<Containment *>();
+            Containment *childContainment = applet->containment();
             if (childContainment) {
                 removeContainment(childContainment);
             }
