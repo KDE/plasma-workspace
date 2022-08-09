@@ -290,9 +290,8 @@ QVariantList recentDocumentActions(const KService::Ptr &service)
     while (list.count() < 6 && resultIt != results.end()) {
         const QString resource = (*resultIt).resource();
         const QString mimeType = (*resultIt).mimetype();
+        const QUrl url = (*resultIt).url();
         ++resultIt;
-
-        const QUrl url(resource);
 
         if (!url.isValid()) {
             continue;
