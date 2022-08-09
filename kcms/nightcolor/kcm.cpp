@@ -6,6 +6,9 @@
 
 #include "kcm.h"
 
+#include <QIcon>
+#include <QStandardPaths>
+
 #include <KLocalizedString>
 #include <KPluginFactory>
 
@@ -22,6 +25,8 @@ KCMNightColor::KCMNightColor(QObject *parent, const KPluginMetaData &data, const
     qmlRegisterAnonymousType<NightColorSettings>("org.kde.private.kcms.nightcolor", 1);
     qmlRegisterUncreatableMetaObject(ColorCorrect::staticMetaObject, "org.kde.private.kcms.nightcolor", 1, 0, "NightColorMode", "Error: only enums");
 
+    worldMapFile = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("plasma/nightcolor/worldmap.png"), QStandardPaths::LocateFile);
+
     setButtons(Apply | Default);
 }
 
@@ -30,6 +35,12 @@ NightColorSettings *KCMNightColor::nightColorSettings() const
     return m_data->settings();
 }
 
+// FIXME: This was added to work around the nonstandardness of the Breeze zoom icons
+// remove once https://bugs.kde.org/show_bug.cgi?id=435671 is fixed
+bool KCMNightColor::isIconThemeBreeze()
+{
+    return QIcon::themeName().contains(QStringLiteral("breeze"));
+}
 }
 
 #include "kcm.moc"

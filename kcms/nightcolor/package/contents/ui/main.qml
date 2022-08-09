@@ -187,10 +187,6 @@ KCM.SimpleKCM {
                 ]
             }
 
-            Item {
-                Kirigami.FormData.isSection: true
-            }
-
             QQC2.ComboBox {
                 id: modeSwitcher
                 // Work around https://bugs.kde.org/show_bug.cgi?id=403153
@@ -370,6 +366,7 @@ KCM.SimpleKCM {
         // Show location chooser in manual location mode
         LocationsFixedView {
             visible: kcm.nightColorSettings.mode === NightColorMode.Location
+            Layout.alignment: Qt.AlignHCenter
             enabled: activator.checked
         }
 

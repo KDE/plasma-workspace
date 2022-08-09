@@ -27,4 +27,6 @@ target_link_libraries(kcm_nightcolor
     PW::LibColorCorrect
 )
 
+install(FILES worldmap.png DESTINATION ${KDE_INSTALL_DATADIR}/plasma/nightcolor)
+
 kpackage_install_package(package kcm_nightcolor kcms)
