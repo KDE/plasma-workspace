@@ -27,5 +27,5 @@ public:
     void Run(const QString &id, const QString &actionId);
 
 private:
-    RemoteMatches matchInternal(const QString &searchTerm, const QString &type, const QString &category, QSet<QUrl> &foundUrls);
+    RemoteMatches matchInternal(const QString &searchTerm, const QStringList &types, const QString &category, QSet<QUrl> &foundUrls);
 };

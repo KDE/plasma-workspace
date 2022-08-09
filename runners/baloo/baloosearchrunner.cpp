@@ -84,24 +84,25 @@ RemoteMatches SearchRunner::Match(const QString &searchTerm)
     QSet<QUrl> foundUrls;
 
     RemoteMatches matches;
-    matches << matchInternal(searchTerm, QStringLiteral("Audio"), i18n("Audios"), foundUrls);
-    matches << matchInternal(searchTerm, QStringLiteral("Image"), i18n("Images"), foundUrls);
-    matches << matchInternal(searchTerm, QStringLiteral("Video"), i18n("Videos"), foundUrls);
-    matches << matchInternal(searchTerm, QStringLiteral("Spreadsheet"), i18n("Spreadsheets"), foundUrls);
-    matches << matchInternal(searchTerm, QStringLiteral("Presentation"), i18n("Presentations"), foundUrls);
-    matches << matchInternal(searchTerm, QStringLiteral("Folder"), i18n("Folders"), foundUrls);
-    matches << matchInternal(searchTerm, QStringLiteral("Document"), i18n("Documents"), foundUrls);
-    matches << matchInternal(searchTerm, QStringLiteral("Archive"), i18n("Archives"), foundUrls);
-    matches << matchInternal(searchTerm, QStringLiteral("Text"), i18n("Texts"), foundUrls);
+    matches << matchInternal(searchTerm, QStringList(QStringLiteral("Audio")), i18n("Audios"), foundUrls);
+    matches << matchInternal(searchTerm, QStringList(QStringLiteral("Image")), i18n("Images"), foundUrls);
+    matches << matchInternal(searchTerm, QStringList(QStringLiteral("Video")), i18n("Videos"), foundUrls);
+    matches << matchInternal(searchTerm, QStringList(QStringLiteral("Spreadsheet")), i18n("Spreadsheets"), foundUrls);
+    matches << matchInternal(searchTerm, QStringList(QStringLiteral("Presentation")), i18n("Presentations"), foundUrls);
+    matches << matchInternal(searchTerm, QStringList(QStringLiteral("Folder")), i18n("Folders"), foundUrls);
+    matches << matchInternal(searchTerm, QStringList(QStringLiteral("Document")), i18n("Documents"), foundUrls);
+    matches << matchInternal(searchTerm, QStringList(QStringLiteral("Archive")), i18n("Archives"), foundUrls);
+    matches << matchInternal(searchTerm, QStringList(QStringLiteral("Text")), i18n("Texts"), foundUrls);
+    matches << matchInternal(searchTerm, QStringList(), i18n("Files"), foundUrls);
 
     return matches;
 }
 
-RemoteMatches SearchRunner::matchInternal(const QString &searchTerm, const QString &type, const QString &category, QSet<QUrl> &foundUrls)
+RemoteMatches SearchRunner::matchInternal(const QString &searchTerm, const QStringList &types, const QString &category, QSet<QUrl> &foundUrls)
 {
     Baloo::Query query;
     query.setSearchString(searchTerm);
-    query.setType(type);
+    query.setTypes(types);
     query.setLimit(10);
 
     Baloo::ResultIterator it = query.exec();
