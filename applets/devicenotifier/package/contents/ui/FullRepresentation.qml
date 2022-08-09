@@ -29,6 +29,8 @@ PlasmaExtras.Representation {
 
     collapseMarginsHint: true
 
+    Keys.forwardTo: [notifierDialog]
+
     header: PlasmaExtras.PlasmoidHeading {
         visible: !(Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentDrawsPlasmoidHeading) && devicenotifier.mountedRemovables > 1
         PlasmaComponents3.ToolButton {
@@ -164,6 +166,11 @@ PlasmaExtras.Representation {
                         text: section
                     }
                 }
+            }
+
+            Keys.onDownPressed: {
+                notifierDialog.incrementCurrentIndex();
+                notifierDialog.currentItem.forceActiveFocus();
             }
 
             Loader {
