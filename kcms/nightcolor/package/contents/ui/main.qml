@@ -8,7 +8,7 @@ import QtQuick 2.15
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.5 as QQC2
 
-import org.kde.kirigami 2.5 as Kirigami
+import org.kde.kirigami 2.19 as Kirigami
 import org.kde.kcm 1.5 as KCM
 
 import org.kde.colorcorrect 0.1 as CC
@@ -20,6 +20,7 @@ KCM.SimpleKCM {
     property int error: cA.error
     property bool defaultRequested: false
     property var locator
+    readonly property bool doneLocating: locator !== undefined && !(locator.latitude == 0 && locator.longitude == 0)
     implicitHeight: Kirigami.Units.gridUnit * 29
     implicitWidth: Kirigami.Units.gridUnit * 35
 
@@ -258,6 +259,7 @@ KCM.SimpleKCM {
             // Show current location in auto mode
             QQC2.Label {
                 visible: kcm.nightColorSettings.mode === NightColorMode.Automatic && kcm.nightColorSettings.active
+                    && root.doneLocating
                 enabled: activator.checked
                 wrapMode: Text.Wrap
                 text: i18n("Latitude: %1°   Longitude: %2°", Math.round(locator.latitude * 100)/100, Math.round(locator.longitude * 100)/100)
@@ -372,15 +374,29 @@ KCM.SimpleKCM {
         }
 
         // Show start/end times in automatic and manual location modes
-        TimingsView {
-            id: timings
-            visible: (kcm.nightColorSettings.mode === NightColorMode.Automatic ||
-                kcm.nightColorSettings.mode === NightColorMode.Location) && kcm.nightColorSettings.active
+        Item {
+            visible: kcm.nightColorSettings.mode === NightColorMode.Automatic || kcm.nightColorSettings.mode === NightColorMode.Location
+                && kcm.nightColorSettings.active
             Layout.topMargin: Kirigami.Units.largeSpacing * 4
             Layout.alignment: Qt.AlignHCenter
-            enabled: kcm.nightColorSettings.active
-            latitude: kcm.nightColorSettings.mode === NightColorMode.Automatic ? locator.latitude : kcm.nightColorSettings.latitudeFixed
-            longitude: kcm.nightColorSettings.mode === NightColorMode.Automatic ? locator.longitude : kcm.nightColorSettings.longitudeFixed
+
+            Kirigami.LoadingPlaceholder {
+                visible: kcm.nightColorSettings.mode === NightColorMode.Automatic && (!locator || !root.doneLocating)
+                text: i18nc("@info:placeholder", "Locating…")
+                anchors.centerIn: parent
+            }
+
+            TimingsView {
+                id: timings
+                visible: kcm.nightColorSettings.mode === NightColorMode.Location ||
+                    (kcm.nightColorSettings.mode === NightColorMode.Automatic && root.doneLocating)
+                anchors.centerIn: parent
+                enabled: kcm.nightColorSettings.active
+                latitude: kcm.nightColorSettings.mode === NightColorMode.Automatic
+                    && (locator !== undefined) ? locator.latitude : kcm.nightColorSettings.latitudeFixed
+                longitude: kcm.nightColorSettings.mode === NightColorMode.Automatic
+                    && (locator !== undefined) ? locator.longitude : kcm.nightColorSettings.longitudeFixed
+            }
         }
     }
 }
