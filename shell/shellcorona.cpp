@@ -782,16 +782,9 @@ void ShellCorona::primaryScreenChanged(QScreen *oldPrimary, QScreen *newPrimary)
 #ifndef NDEBUG
     m_invariantsTimer.start();
 #endif
-    // swap order in m_desktopViewForScreen
-    if (m_desktopViewForScreen.contains(oldPrimary) && m_desktopViewForScreen.contains(newPrimary)) {
-        DesktopView *primaryDesktop = m_desktopViewForScreen.value(oldPrimary);
-        DesktopView *oldDesktopOfPrimary = m_desktopViewForScreen.value(newPrimary);
-        primaryDesktop->setScreenToFollow(newPrimary);
-        m_desktopViewForScreen[newPrimary] = primaryDesktop;
-        primaryDesktop->show();
-        oldDesktopOfPrimary->setScreenToFollow(oldPrimary);
-        m_desktopViewForScreen[oldPrimary] = oldDesktopOfPrimary;
-        oldDesktopOfPrimary->show();
+
+    if (DesktopView *desktop = m_desktopViewForScreen.value(oldPrimary)) {
+        setScreenForContainment(desktop->containment(), m_screenPool->id(newPrimary->name()));
     }
 
     for (PanelView *panel : qAsConst(m_panelViews)) {
