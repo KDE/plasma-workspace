@@ -83,7 +83,7 @@ private:
 
     QTimer m_reconsiderOutputsTimer;
     QTimer m_configSaveTimer;
-    PrimaryOutputWatcher *const m_primaryWatcher;
+    PrimaryOutputWatcher *m_primaryWatcher;
     friend QDebug operator<<(QDebug d, const ScreenPool *pool);
 };
 

@@ -26,10 +26,13 @@ using namespace std::chrono_literals;
 ScreenPool::ScreenPool(const KSharedConfig::Ptr &config, QObject *parent)
     : QObject(parent)
     , m_configGroup(KConfigGroup(config, QStringLiteral("ScreenConnectors")))
-    , m_primaryWatcher(new PrimaryOutputWatcher(this))
 {
     connect(qGuiApp, &QGuiApplication::screenAdded, this, &ScreenPool::handleScreenAdded);
     connect(qGuiApp, &QGuiApplication::screenRemoved, this, &ScreenPool::handleScreenRemoved);
+
+    // Note that the ScreenPool must process the QGuiApplication::screenAdded signal
+    // before the primary output watcher.
+    m_primaryWatcher = new PrimaryOutputWatcher(this);
     connect(m_primaryWatcher, &PrimaryOutputWatcher::primaryOutputNameChanged, this, &ScreenPool::handlePrimaryOutputNameChanged);
 
     m_reconsiderOutputsTimer.setSingleShot(true);
