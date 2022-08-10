@@ -13,7 +13,7 @@ import org.kde.config // KAuthorized
 import org.kde.kcmutils // KCMLauncher
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.milou 0.1 as Milou
+import org.kde.milou 0.3 as Milou
 import org.kde.krunner.private.view
 import org.kde.kirigami 2.20 as Kirigami
 
@@ -84,6 +84,47 @@ ColumnLayout {
             }
         }
     }
+    
+    function getCategoryName(i) {
+        return results.model.data(results.model.index(i, 0), Milou.ResultsModel.CategoryRole)
+    }
+
+    // Moving up/down categories, see 
+    function go_up_category(event) {
+        event.accepted = true;
+        const originalCategory = getCategoryName(results.currentIndex);
+        const originalIdx = results.currentIndex;;
+        let idx = results.currentIndex;
+        while (originalCategory === getCategoryName(idx)
+            || getCategoryName(idx) === getCategoryName(idx - 1)
+        ) {
+            idx--;
+            if (idx < 0) { // IF we are at the top and want to go to the previous category, we have to check from the bottom
+                idx = results.count -1;
+            }
+            if (idx === originalIdx) {
+                return; // Avoid endless loop if we only have one category
+            }
+        } 
+        results.currentIndex = idx;
+        queryField.focus && results.forceActiveFocus();
+    }
+
+    function go_down_category(event) {
+        event.accepted = true;
+        const originalCategory = getCategoryName(results.currentIndex);
+        let idx = results.currentIndex;
+        while (originalCategory === getCategoryName(idx)) {
+            idx++;
+            if (idx === results.count) {
+                idx = 0; // The first item is always the first item if it's category'
+                break;
+            }
+        } 
+        results.currentIndex = idx;
+        queryField.focus && results.forceActiveFocus();
+    }
+
 
     RowLayout {
         Layout.alignment: Qt.AlignTop
@@ -249,8 +290,8 @@ ColumnLayout {
                     }
                 }
             }
-            Keys.onUpPressed: move_up()
-            Keys.onDownPressed: move_down()
+            Keys.onUpPressed: event => event.modifiers & Qt.ControlModifier ? go_up_category(event) : move_up()
+            Keys.onDownPressed: event => event.modifiers & Qt.ControlModifier ? go_down_category(event) : move_down()
             function closeOrRun(event) {
                 // Close KRunner if no text was typed and enter was pressed, FEATURE: 211225
                 if (!root.query) {
@@ -352,6 +393,8 @@ ColumnLayout {
                 }
             }
 
+            Keys.onUpPressed: event => event.modifiers & Qt.ControlModifier ? go_up_category(event) : decrementCurrentIndex()
+            Keys.onDownPressed: event => event.modifiers & Qt.ControlModifier ? go_down_category(event) : incrementCurrentIndex()
             Keys.onEscapePressed: {
                 runnerWindow.visible = false
             }
