@@ -231,12 +231,18 @@ void PipeWireSourceItem::updateTextureDmaBuf(const QVector<DmaBufPlane> &planes,
         qCWarning(PIPEWIRE_LOGGING) << "glEGLImageTargetTexture2DOES is not available" << window();
         return;
     }
+
+    if (!window()) {
+        qCWarning(PIPEWIRE_LOGGING) << "Window not available" << this;
+        return;
+    }
+
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     const auto openglContext = window()->openglContext();
 #else
     const auto openglContext = static_cast<QOpenGLContext *>(window()->rendererInterface()->getResource(window(), QSGRendererInterface::OpenGLContextResource));
 #endif
-    if (!window() || !openglContext || !m_stream) {
+    if (!openglContext || !m_stream) {
         qCWarning(PIPEWIRE_LOGGING) << "need a window and a context" << window();
         return;
     }
