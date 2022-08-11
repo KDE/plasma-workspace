@@ -47,7 +47,7 @@
         "Description": "System monitor Widget that shows the download and upload data rate",
         "Description[ar]": "أداة مراقبة النظام التي تعرض سرعة تنزيل ورفع البيانات",
         "Description[az]": "Sistem monitporu vidjeti verilənlərin endirilməsi və yüklənməsi tezliyini göstərir",
-        "Description[bg]": "Приспособление за системен монитор, което показва скоростта на изтегляне и качване на данни",
+        "Description[bg]": "Уиджет за системен монитор, който показва скоростта на изтегляне и качване на данни",
         "Description[ca@valencia]": "Giny del monitor del sistema que mostra la velocitat de baixada i pujada de les dades",
         "Description[ca]": "Giny del monitor del sistema que mostra la velocitat de baixada i pujada de les dades",
         "Description[da]": "Systemovervågning-widget som viser download- og uploadhastighed",

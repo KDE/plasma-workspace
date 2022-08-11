@@ -46,7 +46,7 @@
         "Description": "System monitor Widget that shows physical memory usage",
         "Description[ar]": "أداة مراقبة النظام التي تعرض استخدام الذاكرة الفعلية",
         "Description[az]": "Sistem monitoru vidjeti fiziki yaddaşın istifadəsini göstərir",
-        "Description[bg]": "Приспособление за системен монитор, което показва използването на физическа памет",
+        "Description[bg]": "Уиджет за системен монитор, което показва използването на физическа памет",
         "Description[ca@valencia]": "Giny del monitor del sistema que mostra l'ús de la memòria física",
         "Description[ca]": "Giny del monitor del sistema que mostra l'ús de la memòria física",
         "Description[da]": "Systemovervågning-widget som viser brug af den fysiske hukommelse",
