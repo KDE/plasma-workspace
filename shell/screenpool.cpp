@@ -71,7 +71,7 @@ void ScreenPool::load()
         }
     }
 
-    // Populate allthe screen based on what's connected at startup
+    // Populate all the screens based on what's connected at startup
     for (QScreen *screen : qGuiApp->screens()) {
         // On some devices QGuiApp::screenAdded is always emitted for some screens at startup so at this point that screen would already be managed
         if (!m_allSortedScreens.contains(screen)) {
@@ -119,7 +119,7 @@ void ScreenPool::save()
     for (i = m_connectorForId.constBegin(); i != m_connectorForId.constEnd(); ++i) {
         m_configGroup.writeEntry(QString::number(i.key()), i.value());
     }
-    // write to disck every 30 seconds at most
+    // write to disk every 30 seconds at most
     m_configSaveTimer.start(30000);
 }
 
@@ -233,7 +233,7 @@ bool ScreenPool::isOutputFake(QScreen *screen) const
 QScreen *ScreenPool::outputRedundantTo(QScreen *screen) const
 {
     Q_ASSERT(screen);
-    // Manage separatedly fake screens
+    // Manage fake screens separately
     if (isOutputFake(screen)) {
         return nullptr;
     }
@@ -285,7 +285,7 @@ void ScreenPool::reconsiderOutputs()
     for (QScreen *screen : m_allSortedScreens) {
         if (m_redundantScreens.contains(screen)) {
             if (QScreen *toScreen = outputRedundantTo(screen)) {
-                // Insert again, redndantTo may have changed
+                // Insert again, redundantTo may have changed
                 m_fakeScreens.remove(screen);
                 m_redundantScreens.insert(screen, toScreen);
             } else {
@@ -430,7 +430,7 @@ void ScreenPool::handleScreenRemoved(QScreen *screen)
         Q_ASSERT(!m_availableScreens.contains(screen));
         m_fakeScreens.remove(screen);
     } else if (isOutputFake(screen)) {
-        // This happens when an output is recicled because it was the last one and became fake
+        // This happens when an output is recycled because it was the last one and became fake
         Q_ASSERT(m_availableScreens.contains(screen));
         Q_ASSERT(!m_redundantScreens.contains(screen));
         Q_ASSERT(!m_fakeScreens.contains(screen));
@@ -458,7 +458,7 @@ void ScreenPool::handlePrimaryOutputNameChanged(const QString &oldOutputName, co
 
     QScreen *oldPrimary = screenForConnector(oldOutputName);
     QScreen *newPrimary = m_primaryWatcher->primaryScreen();
-    // First check if the data arrived is correct, then set the new peimary considering redundants
+    // First check if the data arrived is correct, then set the new primary considering redundant ones
     Q_ASSERT(newPrimary && newPrimary->name() == newOutputName);
     newPrimary = primaryScreen();
 
@@ -485,8 +485,8 @@ void ScreenPool::handlePrimaryOutputNameChanged(const QString &oldOutputName, co
         // NOTE: when we go from 0 to 1 screen connected, screens can be renamed in those two followinf cases
         // * last output connected/disconnected -> we go between the fake screen and the single output, renamed
         // * external screen connected to a closed lid laptop, disconnecting the qscreen instance will be recycled from external output to internal
-        // In the latter case m_availableScreens will aready contain newPrimary
-        // We'll go here also once at startup, for which we don't need to do anything besides setting internally the primary conector name
+        // In the latter case m_availableScreens will already contain newPrimary
+        // We'll go here also once at startup, for which we don't need to do anything besides setting internally the primary connector name
         handleScreenAdded(newPrimary);
         return;
     } else {
