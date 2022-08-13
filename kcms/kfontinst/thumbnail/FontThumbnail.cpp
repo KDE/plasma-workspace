@@ -85,10 +85,4 @@ bool CFontThumbnail::create(const QString &path, int width, int height, QImage &
     delete tempDir;
     return !img.isNull();
 }
-
-ThumbCreator::Flags CFontThumbnail::flags() const
-{
-    return None;
-}
-
 }
