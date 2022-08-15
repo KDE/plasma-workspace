@@ -36,7 +36,7 @@ target_link_libraries(plasma_engine_geolocation
 kcoreaddons_add_plugin(plasma-geolocation-ip SOURCES location_ip.cpp INSTALL_NAMESPACE plasma/geolocationprovider)
 ecm_qt_declare_logging_category(plasma-geolocation-ip HEADER geolocdebug.h IDENTIFIER DATAENGINE_GEOLOCATION CATEGORY_NAME org.kde.plasma.dataengine.geolocation)
 target_compile_definitions(plasma-geolocation-ip PRIVATE -DQT_NO_KEYWORDS)
-target_link_libraries(plasma-geolocation-ip plasma-geolocation-interface KF5::KIOCore KF5::NetworkManagerQt)
+target_link_libraries(plasma-geolocation-ip plasma-geolocation-interface KF5::NetworkManagerQt)
 
 pkg_check_modules(LIBGPS libgps IMPORTED_TARGET)
 
