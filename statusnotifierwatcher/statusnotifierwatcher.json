@@ -18,6 +18,7 @@
         "Description[ia]": "Il gere servicios que forni interfacies de usator pro notificator de stato",
         "Description[id]": "Mengelola layanan yang menyediakan penotifikasi status antarmuka pengguna",
         "Description[it]": "Gestisce i servizi che forniscono le interfacce utente al notificatore di stato",
+        "Description[ja]": "ステータス通知ユーザインターフェースを提供するサービスを管理",
         "Description[ko]": "상태 알림 인터페이스를 제공하는 서비스를 관리합니다",
         "Description[lt]": "Valdo tarnybas, teikiančias būsenos pranešėjo naudotojo sąsajas",
         "Description[nl]": "Beheert services die statusmeldingen leveren aan gebruikersinterfaces",
