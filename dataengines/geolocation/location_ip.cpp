@@ -12,15 +12,14 @@
 
 #include "location_ip.h"
 #include "geolocdebug.h"
-#include <KIO/Job>
-#include <KIO/TransferJob>
-#include <KJob>
 #include <KSharedConfig>
 #include <NetworkManagerQt/Manager>
 #include <NetworkManagerQt/WirelessDevice>
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QNetworkAccessManager>
+#include <QNetworkReply>
 #include <QUrl>
 
 class Ip::Private : public QObject
@@ -30,19 +29,21 @@ public:
     Private(Ip *q)
         : q(q)
     {
+        m_nam.setRedirectPolicy(QNetworkRequest::NoLessSafeRedirectPolicy);
+        m_nam.setStrictTransportSecurityEnabled(true);
+        m_nam.enableStrictTransportSecurityStore(true,
+                                                 QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + QLatin1String("/plasmashell/hsts/"));
     }
 
-    void readGeoLocation(KJob *job)
+    void readGeoLocation(QNetworkReply *reply)
     {
         m_geoLocationResolved = true;
-        if (job && job->error()) {
-            qCCritical(DATAENGINE_GEOLOCATION) << "error: " << job->errorString();
-            m_geoLocationPayload.clear();
+        if (reply->error()) {
+            qCCritical(DATAENGINE_GEOLOCATION) << "error: " << reply->errorString();
             checkUpdateData();
             return;
         }
-        const QJsonObject json = QJsonDocument::fromJson(m_geoLocationPayload).object();
-        m_geoLocationPayload.clear();
+        const QJsonObject json = QJsonDocument::fromJson(reply->readAll()).object();
 
         auto accuracyIt = json.find(QStringLiteral("accuracy"));
         if (accuracyIt != json.end()) {
@@ -62,52 +63,28 @@ public:
 
     void clear()
     {
-        m_geoLocationPayload.clear();
-        m_countryPayload.clear();
         m_countryResolved = false;
         m_geoLocationResolved = false;
         m_data.clear();
     }
 
-    void geoLocationData(KIO::Job *job, const QByteArray &data)
-    {
-        Q_UNUSED(job)
-
-        if (data.isEmpty()) {
-            return;
-        }
-        m_geoLocationPayload.append(data);
-    }
-
-    void countryData(KIO::Job *job, const QByteArray &data)
-    {
-        Q_UNUSED(job)
-
-        if (data.isEmpty()) {
-            return;
-        }
-        m_countryPayload.append(data);
-    }
-
-    void readCountry(KJob *job)
+    void readCountry(QNetworkReply *reply)
     {
         m_countryResolved = true;
-        if (job && job->error()) {
-            qCCritical(DATAENGINE_GEOLOCATION) << "error: " << job->errorString();
-            m_countryPayload.clear();
+        if (reply->error()) {
+            qCCritical(DATAENGINE_GEOLOCATION) << "error: " << reply->errorString();
             checkUpdateData();
             return;
         }
 
-        const QJsonObject json = QJsonDocument::fromJson(m_countryPayload).object();
-        m_countryPayload.clear();
+        const QJsonObject json = QJsonDocument::fromJson(reply->readAll()).object();
 
         m_data[QStringLiteral("country")] = json.value(QStringLiteral("country_name")).toString();
         m_data[QStringLiteral("country code")] = json.value(QStringLiteral("country_code")).toString();
+
         checkUpdateData();
     }
 
-private:
     void checkUpdateData()
     {
         if (!m_countryResolved || !m_geoLocationResolved) {
@@ -117,11 +94,10 @@ private:
     }
 
     Ip *q;
-    QByteArray m_geoLocationPayload;
-    QByteArray m_countryPayload;
     bool m_countryResolved = false;
     bool m_geoLocationResolved = false;
     Plasma::DataEngine::Data m_data;
+    QNetworkAccessManager m_nam;
 };
 
 Ip::Ip(QObject *parent, const QVariantList &args)
@@ -176,18 +152,26 @@ void Ip::update()
     }
     const QByteArray postData = QJsonDocument(request).toJson(QJsonDocument::Compact);
     const QString apiKey = QStringLiteral("60e8eae6-3988-4ada-ad48-2cfddddf216b");
-    KIO::TransferJob *datajob =
-        KIO::http_post(QUrl(QStringLiteral("https://location.services.mozilla.com/v1/geolocate?key=%1").arg(apiKey)), postData, KIO::HideProgressInfo);
-    datajob->addMetaData(QStringLiteral("content-type"), QStringLiteral("application/json"));
 
     qCDebug(DATAENGINE_GEOLOCATION) << "Fetching https://location.services.mozilla.com/v1/geolocate";
-    connect(datajob, &KIO::TransferJob::data, d, &Ip::Private::geoLocationData);
-    connect(datajob, &KIO::TransferJob::result, d, &Ip::Private::readGeoLocation);
+    QNetworkRequest locationRequest(QUrl(QStringLiteral("https://location.services.mozilla.com/v1/geolocate?key=%1").arg(apiKey)));
+    locationRequest.setHeader(QNetworkRequest::ContentTypeHeader, QStringLiteral("application/json"));
+    QNetworkReply *locationReply = d->m_nam.post(locationRequest, postData);
 
-    datajob = KIO::http_post(QUrl(QStringLiteral("https://location.services.mozilla.com/v1/country?key=%1").arg(apiKey)), postData, KIO::HideProgressInfo);
-    datajob->addMetaData(QStringLiteral("content-type"), QStringLiteral("application/json"));
-    connect(datajob, &KIO::TransferJob::data, d, &Ip::Private::countryData);
-    connect(datajob, &KIO::TransferJob::result, d, &Ip::Private::readCountry);
+    connect(locationReply, &QNetworkReply::finished, this, [this, locationReply] {
+        locationReply->deleteLater();
+        d->readGeoLocation(locationReply);
+    });
+
+    qCDebug(DATAENGINE_GEOLOCATION) << "Fetching https://location.services.mozilla.com/v1/country";
+    QNetworkRequest countryRequest(QUrl(QStringLiteral("https://location.services.mozilla.com/v1/country?key=%1").arg(apiKey)));
+    countryRequest.setHeader(QNetworkRequest::ContentTypeHeader, QStringLiteral("application/json"));
+    QNetworkReply *countryReply = d->m_nam.post(countryRequest, postData);
+
+    connect(countryReply, &QNetworkReply::finished, this, [this, countryReply] {
+        countryReply->deleteLater();
+        d->readCountry(countryReply);
+    });
 }
 
 K_PLUGIN_CLASS_WITH_JSON(Ip, "plasma-geolocation-ip.json")
