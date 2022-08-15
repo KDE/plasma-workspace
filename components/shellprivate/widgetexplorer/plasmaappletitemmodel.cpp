@@ -13,10 +13,10 @@
 #include "config-workspace.h"
 #include <KAboutData>
 #include <KConfig>
-#include <KDeclarative/KDeclarative>
 #include <KJsonUtils>
 #include <KLocalizedString>
 #include <KPackage/PackageLoader>
+#include <KRuntimePlatform>
 #include <KSycoca>
 
 PlasmaAppletItem::PlasmaAppletItem(const KPluginMetaData &info)
@@ -294,7 +294,7 @@ void PlasmaAppletItemModel::populateModel()
             return false;
         }
 
-        static const auto formFactors = KDeclarative::KDeclarative::runtimePlatform();
+        static const auto formFactors = KRuntimePlatform::runtimePlatform();
         // If runtimePlatformis not defined, accept everything
         bool inFormFactor = formFactors.isEmpty();
 

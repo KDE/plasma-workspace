@@ -347,13 +347,6 @@ void ShellCorona::setShell(const QString &shell)
         t->setThemeName(themeName);
     }
 
-    // FIXME: this would change the runtime platform to a fixed one if available
-    // but a different way to load platform specific components is needed beforehand
-    // because if we import and use two different components plugin, the second time
-    // the import is called it will fail
-    /* KConfigGroup cg(KSharedConfig::openConfig(package.filePath("defaults")), "General");
-     KDeclarative::KDeclarative::setRuntimePlatform(cg.readEntry("DefaultRuntimePlatform", QStringList()));*/
-
     unload();
 
     /*

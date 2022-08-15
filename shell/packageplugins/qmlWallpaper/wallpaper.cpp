@@ -7,15 +7,15 @@
 
 #include "wallpaper.h"
 
-#include <KDeclarative/KDeclarative>
 #include <KLocalizedString>
+#include <KRuntimePlatform>
 
 void QmlWallpaperPackage::initPackage(KPackage::Package *package)
 {
     package->addFileDefinition("mainscript", QStringLiteral("ui/main.qml"), i18n("Main Script File"));
     package->setRequired("mainscript", true);
 
-    QStringList platform = KDeclarative::KDeclarative::runtimePlatform();
+    QStringList platform = KRuntimePlatform::runtimePlatform();
     if (!platform.isEmpty()) {
         QMutableStringListIterator it(platform);
         while (it.hasNext()) {
