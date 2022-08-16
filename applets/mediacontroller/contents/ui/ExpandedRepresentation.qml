@@ -46,6 +46,8 @@ PlasmaExtras.Representation {
     property bool disablePositionUpdate: false
     property bool keyPressed: false
 
+    KeyNavigation.down: playerSelector.count ? playerSelector.currentItem : (seekSlider.visible ? seekSlider : seekSlider.KeyNavigation.down)
+
     function retrievePosition() {
         var service = mpris2Source.serviceForSource(mpris2Source.current);
         var operation = service.operationDescription("GetPosition");
@@ -122,11 +124,11 @@ PlasmaExtras.Representation {
                 root.action_next()
             } else if (event.key === Qt.Key_S) {
                 root.action_stop()
-            } else if (event.key === Qt.Key_Left || event.key === Qt.Key_J) { // TODO ltr languages
+            } else if (event.key === Qt.Key_J) { // TODO ltr languages
                 // seek back 5s
                 seekSlider.value = Math.max(0, seekSlider.value - 5000000) // microseconds
                 seekSlider.moved();
-            } else if (event.key === Qt.Key_Right || event.key === Qt.Key_L) {
+            } else if (event.key === Qt.Key_L) {
                 // seek forward 5s
                 seekSlider.value = Math.min(seekSlider.to, seekSlider.value + 5000000)
                 seekSlider.moved();
@@ -523,6 +525,17 @@ PlasmaExtras.Representation {
                     value: 0
                     visible: canSeek
 
+                    KeyNavigation.up: playerSelector.currentItem
+                    KeyNavigation.down: playPauseButton.enabled ? playPauseButton : (playPauseButton.KeyNavigation.left.enabled ? playPauseButton.KeyNavigation.left : playPauseButton.KeyNavigation.right)
+                    Keys.onLeftPressed: {
+                        seekSlider.value = Math.max(0, seekSlider.value - 5000000) // microseconds
+                        seekSlider.moved();
+                    }
+                    Keys.onRightPressed: {
+                        seekSlider.value = Math.max(0, seekSlider.value + 5000000) // microseconds
+                        seekSlider.moved();
+                    }
+
                     onMoved: {
                         if (!disablePositionUpdate) {
                             // delay setting the position to avoid race conditions
@@ -630,6 +643,7 @@ PlasmaExtras.Representation {
                 spacing: PlasmaCore.Units.smallSpacing
 
                 PlasmaComponents3.ToolButton {
+                    id: shuffleButton
                     Layout.rightMargin: LayoutMirroring.enabled ? 0 : PlasmaCore.Units.largeSpacing - playerControls.spacing
                     Layout.leftMargin: LayoutMirroring.enabled ? PlasmaCore.Units.largeSpacing - playerControls.spacing : 0
                     icon.name: "media-playlist-shuffle"
@@ -640,6 +654,9 @@ PlasmaExtras.Representation {
 
                     display: PlasmaComponents3.AbstractButton.IconOnly
                     text: i18n("Shuffle")
+
+                    KeyNavigation.right: previousButton.enabled ? previousButton : previousButton.KeyNavigation.right
+                    KeyNavigation.up: playPauseButton.KeyNavigation.up
 
                     onClicked: {
                         const service = mpris2Source.serviceForSource(mpris2Source.current);
@@ -654,6 +671,7 @@ PlasmaExtras.Representation {
                 }
 
                 PlasmaComponents3.ToolButton { // Previous
+                    id: previousButton
                     icon.width: expandedRepresentation.controlSize
                     icon.height: expandedRepresentation.controlSize
                     Layout.alignment: Qt.AlignVCenter
@@ -663,6 +681,10 @@ PlasmaExtras.Representation {
                     display: PlasmaComponents3.AbstractButton.IconOnly
                     text: i18nc("Play previous track", "Previous Track")
 
+                    KeyNavigation.left: shuffleButton
+                    KeyNavigation.right: playPauseButton.enabled ? playPauseButton : playPauseButton.KeyNavigation.right
+                    KeyNavigation.up: playPauseButton.KeyNavigation.up
+
                     onClicked: {
                         seekSlider.value = 0    // Let the media start from beginning. Bug 362473
                         root.action_previous()
@@ -670,6 +692,7 @@ PlasmaExtras.Representation {
                 }
 
                 PlasmaComponents3.ToolButton { // Pause/Play
+                    id: playPauseButton
                     icon.width: expandedRepresentation.controlSize
                     icon.height: expandedRepresentation.controlSize
 
@@ -680,10 +703,15 @@ PlasmaExtras.Representation {
                     display: PlasmaComponents3.AbstractButton.IconOnly
                     text: root.isPlaying ? i18nc("Pause playback", "Pause") : i18nc("Start playback", "Play")
 
+                    KeyNavigation.left: previousButton.enabled ? previousButton : previousButton.KeyNavigation.left
+                    KeyNavigation.right: nextButton.enabled ? nextButton : nextButton.KeyNavigation.right
+                    KeyNavigation.up: seekSlider.visible ? seekSlider : seekSlider.KeyNavigation.up
+
                     onClicked: root.togglePlaying()
                 }
 
                 PlasmaComponents3.ToolButton { // Next
+                    id: nextButton
                     icon.width: expandedRepresentation.controlSize
                     icon.height: expandedRepresentation.controlSize
                     Layout.alignment: Qt.AlignVCenter
@@ -693,6 +721,10 @@ PlasmaExtras.Representation {
                     display: PlasmaComponents3.AbstractButton.IconOnly
                     text: i18nc("Play next track", "Next Track")
 
+                    KeyNavigation.left: playPauseButton.enabled ? playPauseButton : playPauseButton.KeyNavigation.left
+                    KeyNavigation.right: repeatButton
+                    KeyNavigation.up: playPauseButton.KeyNavigation.up
+
                     onClicked: {
                         seekSlider.value = 0    // Let the media start from beginning. Bug 362473
                         root.action_next()
@@ -700,6 +732,7 @@ PlasmaExtras.Representation {
                 }
 
                 PlasmaComponents3.ToolButton {
+                    id: repeatButton
                     Layout.leftMargin: LayoutMirroring.enabled ? 0 : PlasmaCore.Units.largeSpacing - playerControls.spacing
                     Layout.rightMargin: LayoutMirroring.enabled ? PlasmaCore.Units.largeSpacing - playerControls.spacing : 0
                     icon.name: root.loopStatus === "Track" ? "media-playlist-repeat-song" : "media-playlist-repeat"
@@ -710,6 +743,9 @@ PlasmaExtras.Representation {
 
                     display: PlasmaComponents3.AbstractButton.IconOnly
                     text: root.loopStatus === "Track" ? i18n("Repeat Track") : i18n("Repeat")
+
+                    KeyNavigation.left: nextButton.enabled ? nextButton : nextButton.KeyNavigation.left
+                    KeyNavigation.up: playPauseButton.KeyNavigation.up
 
                     onClicked: {
                         const service = mpris2Source.serviceForSource(mpris2Source.current);
@@ -751,6 +787,12 @@ PlasmaExtras.Representation {
 
             implicitHeight: contentHeight
 
+            onCurrentIndexChanged: {
+                disablePositionUpdate = true;
+                mpris2Source.current = playerList.model[currentIndex]["source"];
+                disablePositionUpdate = false;
+            }
+
             Repeater {
                 id: playerList
                 model: root.mprisSourcesModel
@@ -767,11 +809,8 @@ PlasmaExtras.Representation {
                     // Keep the delegate centered by offsetting the padding removed in the parent
                     bottomPadding: verticalPadding + headerItem.bottomPadding
                     topPadding: verticalPadding - headerItem.bottomPadding
-                    onClicked: {
-                        disablePositionUpdate = true
-                        mpris2Source.current = modelData["source"];
-                        disablePositionUpdate = false
-                    }
+
+                    KeyNavigation.down: seekSlider.visible ? seekSlider : seekSlider.KeyNavigation.down
                 }
 
                 onModelChanged: {
