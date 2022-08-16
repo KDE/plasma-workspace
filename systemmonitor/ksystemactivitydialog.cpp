@@ -26,8 +26,6 @@ KSystemActivityDialog::KSystemActivityDialog(QWidget *parent)
     : KMainWindow(parent)
     , m_configGroup(KSharedConfig::openConfig()->group("TaskDialog"))
 {
-    setWindowTitle(i18n("System Activity"));
-    setWindowIcon(QIcon::fromTheme(QStringLiteral("utilities-system-monitor")));
     setAutoSaveSettings();
 
     m_processList = new KSysGuardProcessList;

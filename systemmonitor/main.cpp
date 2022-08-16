@@ -4,9 +4,11 @@
     SPDX-License-Identifier: LGPL-2.1-or-later
 */
 
-#include <KLocalizedString>
 #include <QApplication>
 #include <QDBusConnection>
+
+#include <KAboutData>
+#include <KLocalizedString>
 
 #include <kworkspace.h>
 
@@ -18,8 +20,8 @@ int main(int argc, char **argv)
     QApplication app(argc, argv);
     KLocalizedString::setApplicationDomain("systemmonitor");
 
-    app.setOrganizationDomain(QStringLiteral("kde.org"));
-    app.setDesktopFileName(QStringLiteral("org.kde.systemmonitor"));
+    KAboutData about(QStringLiteral("systemmonitor"), i18n("System Activity"));
+    KAboutData::setApplicationData(about);
 
     app.setAttribute(Qt::AA_UseHighDpiPixmaps, true);
 
