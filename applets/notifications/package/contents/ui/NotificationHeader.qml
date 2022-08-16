@@ -232,8 +232,8 @@ RowLayout {
 
             Charts.PieChart {
                 id: chart
-                anchors.fill: parent
-                anchors.margins: PlasmaCore.Units.smallSpacing + Math.max(Math.floor(PlasmaCore.Units.devicePixelRatio), 1)
+                anchors.fill: parent.contentItem
+                anchors.margins: Math.max(Math.floor(PlasmaCore.Units.devicePixelRatio), 1)
 
                 opacity: (notificationHeading.remainingTime > 0 && notificationHeading.remainingTime < notificationHeading.timeout) ? 1 : 0
                 Behavior on opacity {
