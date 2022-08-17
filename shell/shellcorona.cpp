@@ -191,7 +191,7 @@ void ShellCorona::init()
     activityAction->setShortcut(QKeySequence(QStringLiteral("alt+d, alt+a")));
     activityAction->setShortcutContext(Qt::ApplicationShortcut);
 
-    KGlobalAccel::self()->setGlobalShortcut(activityAction, Qt::META | Qt::Key_Q);
+    KGlobalAccel::self()->setGlobalShortcut(activityAction, QKeySequence());
 
     QAction *stopActivityAction = actions()->addAction(QStringLiteral("stop current activity"));
     QObject::connect(stopActivityAction, &QAction::triggered, this, &ShellCorona::stopCurrentActivity);
@@ -200,7 +200,7 @@ void ShellCorona::init()
     stopActivityAction->setData(Plasma::Types::ControlAction);
     stopActivityAction->setVisible(false);
 
-    KGlobalAccel::self()->setGlobalShortcut(stopActivityAction, Qt::META | Qt::Key_S);
+    KGlobalAccel::self()->setGlobalShortcut(stopActivityAction, QKeySequence());
 
     QAction *previousActivityAction = actions()->addAction(QStringLiteral("switch to previous activity"));
     connect(previousActivityAction, &QAction::triggered, this, &ShellCorona::previousActivity);
