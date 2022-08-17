@@ -10,7 +10,10 @@
 #include <KWayland/Client/plasmawindowmanagement.h>
 #include <KWayland/Client/registry.h>
 #include <QDebug>
+#include <QGuiApplication>
 #include <QRect>
+#include <QScreen>
+#include <qpa/qplatformnativeinterface.h>
 
 using namespace KWayland::Client;
 
@@ -95,6 +98,25 @@ Screencasting::Screencasting(Registry *registry, int id, int version, QObject *p
 }
 
 Screencasting::~Screencasting() = default;
+
+ScreencastingStream *Screencasting::createOutputStream(const QString &outputName, Screencasting::CursorMode mode)
+{
+    wl_output *output = nullptr;
+    for (auto screen : qGuiApp->screens()) {
+        if (screen->name() == outputName) {
+            output = (wl_output *)QGuiApplication::platformNativeInterface()->nativeResourceForScreen("output", screen);
+        }
+    }
+
+    if (!output) {
+        return nullptr;
+    }
+
+    auto stream = new ScreencastingStream(this);
+    stream->setObjectName(outputName);
+    stream->d->init(d->stream_output(output, mode));
+    return stream;
+}
 
 ScreencastingStream *Screencasting::createOutputStream(Output *output, CursorMode mode)
 {

@@ -31,6 +31,11 @@ class ScreencastingRequest : public QObject
      */
     Q_PROPERTY(QString uuid READ uuid WRITE setUuid NOTIFY uuidChanged)
 
+    /**
+     * The output name as define in Screen.name
+     */
+    Q_PROPERTY(QString outputName READ outputName WRITE setOutputName NOTIFY outputNameChanged)
+
     /** The offered nodeId to give to a source */
     Q_PROPERTY(quint32 nodeId READ nodeId NOTIFY nodeIdChanged)
 public:
@@ -39,21 +44,26 @@ public:
 
     void setUuid(const QString &uuid);
     QString uuid() const;
+    void setOutputName(const QString &outputName);
+    QString outputName() const;
     quint32 nodeId() const;
 
     void create(Screencasting *screencasting);
 
 Q_SIGNALS:
     void nodeIdChanged(quint32 nodeId);
+    void outputNameChanged(const QString &outputNames);
     void uuidChanged(const QString &uuid);
     void closeRunningStreams();
     void cursorModeChanged(Screencasting::CursorMode cursorMode);
 
 private:
+    void adopt(ScreencastingStream *stream);
     void setNodeid(uint nodeId);
 
     ScreencastingStream *m_stream = nullptr;
     QString m_uuid;
+    QString m_outputName;
     KWayland::Client::Output *m_output = nullptr;
     quint32 m_nodeId = 0;
 };
