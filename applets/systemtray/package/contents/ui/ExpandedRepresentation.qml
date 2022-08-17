@@ -63,6 +63,9 @@ Item {
                 display: PlasmaComponents.AbstractButton.IconOnly
                 text: i18nc("@action:button", "Go Back")
 
+                KeyNavigation.down: hiddenItemsView.visible ? hiddenLayout : container
+                KeyNavigation.right: actionsButton.visible ? actionsButton : actionsButton.KeyNavigation.right
+
                 onClicked: systemTrayState.setActiveApplet(null)
             }
 
@@ -90,6 +93,10 @@ Item {
                 text: actionsButton.singleAction ? actionsButton.singleAction.text : i18n("More actions")
 
                 Accessible.role: actionsButton.singleAction ? Accessible.Button : Accessible.ButtonMenu
+
+                KeyNavigation.down: backButton.KeyNavigation.down
+                KeyNavigation.left: backButton
+                KeyNavigation.right: configureButton.visible ? configureButton : configureButton.KeyNavigation.right
 
                 // NOTE: it needs an IconItem because QtQuickControls2 buttons cannot load QIcons as their icon
                 PlasmaCore.IconItem {
@@ -147,11 +154,16 @@ Item {
                 }
             }
             PlasmaComponents.ToolButton {
+                id: configureButton
                 icon.name: "configure"
                 visible: actionsButton.applet && actionsButton.applet.action("configure")
 
                 display: PlasmaComponents.AbstractButton.IconOnly
                 text: actionsButton.applet.action("configure").text
+
+                KeyNavigation.down: backButton.KeyNavigation.down
+                KeyNavigation.left: actionsButton.visible ? actionsButton : actionsButton.KeyNavigation.left
+                KeyNavigation.right: pinButton
 
                 PlasmaComponents.ToolTip {
                     text: parent.visible ? parent.text : ""
@@ -169,6 +181,9 @@ Item {
                 display: PlasmaComponents.AbstractButton.IconOnly
                 text: i18n("Keep Open")
 
+                KeyNavigation.down: backButton.KeyNavigation.down
+                KeyNavigation.left: configureButton.visible ? configureButton : configureButton.KeyNavigation.left
+
                 PlasmaComponents.ToolTip {
                     text: parent.text
                 }
@@ -182,6 +197,9 @@ Item {
             Layout.fillHeight: true
             Layout.topMargin: PlasmaCore.Units.smallSpacing
             visible: !systemTrayState.activeApplet
+
+            KeyNavigation.up: pinButton
+
             onVisibleChanged: {
                 if (visible) {
                     layout.forceActiveFocus();

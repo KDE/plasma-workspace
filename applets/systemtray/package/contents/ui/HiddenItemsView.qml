@@ -77,6 +77,9 @@ PlasmaComponents3.ScrollView {
 
         keyNavigationEnabled: true
         activeFocusOnTab: true
+
+        KeyNavigation.up: hiddenTasksView.KeyNavigation.up
+
         onActiveFocusChanged: {
             if (activeFocus && currentIndex === -1) {
                 currentIndex = 0
