@@ -47,6 +47,7 @@ PlasmaExtras.Representation {
     property bool keyPressed: false
 
     KeyNavigation.down: playerSelector.count ? playerSelector.currentItem : (seekSlider.visible ? seekSlider : seekSlider.KeyNavigation.down)
+    KeyNavigation.up: seekSlider.KeyNavigation.down
 
     function retrievePosition() {
         var service = mpris2Source.serviceForSource(mpris2Source.current);
