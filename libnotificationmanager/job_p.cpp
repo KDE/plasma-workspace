@@ -114,12 +114,18 @@ QString JobPrivate::prettyUrl(const QUrl &_url) const
 
         QString pathInsidePlace = url.path().mid(placeUrl.path().length());
 
-        if (!pathInsidePlace.isEmpty() && !pathInsidePlace.startsWith(QLatin1Char('/'))) {
+        if (!pathInsidePlace.startsWith(QLatin1Char('/'))) {
             pathInsidePlace.prepend(QLatin1Char('/'));
         }
 
         if (pathInsidePlace != QLatin1Char('/')) {
-            text.append(pathInsidePlace);
+            // Avoid "500 GiB Internal Hard Drive/foo/bar" when path originates directly from root.
+            const bool isRoot = placeUrl.isLocalFile() && placeUrl.path() == QLatin1Char('/');
+            if (isRoot) {
+                text = pathInsidePlace;
+            } else {
+                text.append(pathInsidePlace);
+            }
         }
 
         return text;
