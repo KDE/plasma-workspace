@@ -166,6 +166,12 @@ KCM.ScrollViewKCM {
                     return i18n("Measurements");
                 case SettingType.PaperSize:
                     return i18n("Paper Size");
+                case SettingType.Address:
+                    return i18nc("Postal Address", "Address");
+                case SettingType.NameStyle:
+                    return i18nc("Name Style", "Name");
+                case SettingType.PhoneNumbers:
+                    return i18nc("Phone Numbers","Phone number");
                 }
                 console.warn("Invalid setting passed: ", setting);
                 return "Invalid"; // guard
@@ -229,6 +235,15 @@ KCM.ScrollViewKCM {
                                 break;
                             case SettingType.PaperSize:
                                 kcm.settings.paperSize = localeName;
+                                break;
+                            case SettingType.Address:
+                                kcm.settings.address = localeName;
+                                break;
+                            case SettingType.NameStyle:
+                                kcm.settings.nameStyle = localeName;
+                                break;
+                            case SettingType.PhoneNumbers:
+                                kcm.settings.phoneNumbers = localeName;
                                 break;
                             }
                         } else {

@@ -133,6 +133,23 @@ QString LanguageListModel::paperSizeExample() const
     return exampleHelper(Utility::paperSizeExample);
 }
 
+#ifdef LC_ADDRESS
+QString LanguageListModel::addressExample() const
+{
+    return exampleHelper(Utility::addressExample);
+}
+
+QString LanguageListModel::nameStyleExample() const
+{
+    return exampleHelper(Utility::nameStyleExample);
+}
+
+QString LanguageListModel::phoneNumbersExample() const
+{
+    return exampleHelper(Utility::phoneNumbersExample);
+}
+#endif
+
 QString LanguageListModel::metric() const
 {
     return exampleHelper(Utility::measurementExample);

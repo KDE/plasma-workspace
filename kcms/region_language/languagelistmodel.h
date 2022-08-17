@@ -38,6 +38,11 @@ public:
     QString currencyExample() const;
     QString timeExample() const;
     QString paperSizeExample() const;
+#ifdef LC_ADDRESS
+    QString addressExample() const;
+    QString nameStyleExample() const;
+    QString phoneNumbersExample() const;
+#endif
     QString metric() const;
 
     // currently unused, but we need it if we want preview examples in add langauge overlay

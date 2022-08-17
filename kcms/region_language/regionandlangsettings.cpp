@@ -26,6 +26,12 @@ bool RegionAndLangSettings::isDefaultSetting(SettingType setting) const
         return measurement() == defaultMeasurementValue();
     case SettingType::PaperSize:
         return paperSize() == defaultMeasurementValue();
+    case SettingType::Address:
+        return address() == defaultAddressValue();
+    case SettingType::NameStyle:
+        return nameStyle() == defaultNameStyleValue();
+    case SettingType::PhoneNumbers:
+        return phoneNumbers() == defaultPhoneNumbersValue();
     }
 
     return false;
@@ -60,6 +66,12 @@ QString RegionAndLangSettings::LC_LocaleWithLang(SettingType setting) const
         return measurement();
     case SettingType::PaperSize:
         return paperSize();
+    case SettingType::Address:
+        return address();
+    case SettingType::NameStyle:
+        return nameStyle();
+    case SettingType::PhoneNumbers:
+        return phoneNumbers();
     case SettingType::Lang:
         Q_UNREACHABLE();
     }

@@ -26,6 +26,12 @@ OptionsModel::OptionsModel(KCMRegionAndLang *parent)
                       {i18nc("@info:title", "Currency"), SettingType::Currency},
                       {i18nc("@info:title", "Measurements"), SettingType::Measurement},
                       {i18nc("@info:title", "Paper Size"), SettingType::PaperSize}}};
+#ifdef LC_ADDRESS
+    m_staticNames.push_back(std::make_pair(i18nc("@info:title", "Address"), SettingType::Address));
+    m_staticNames.push_back(std::make_pair(i18nc("@info:title", "Name Style"), SettingType::NameStyle)),
+        m_staticNames.push_back(std::make_pair(i18nc("@info:title", "Phone Numbers"), SettingType::PhoneNumbers));
+#endif
+
     connect(m_settings, &RegionAndLangSettings::langChanged, this, &OptionsModel::handleLangChange);
     connect(m_settings, &RegionAndLangSettings::numericChanged, this, [this] {
         QLocale locale(m_settings->LC_LocaleWithLang(SettingType::Numeric));
@@ -52,6 +58,23 @@ OptionsModel::OptionsModel(KCMRegionAndLang *parent)
         m_measurementExample = Utility::measurementExample(locale);
         Q_EMIT dataChanged(createIndex(5, 0), createIndex(5, 0), {Subtitle, Example});
     });
+#ifdef LC_ADDRESS
+    connect(m_settings, &RegionAndLangSettings::addressChanged, this, [this] {
+        QLocale locale(m_settings->LC_LocaleWithLang(SettingType::Address));
+        m_measurementExample = Utility::measurementExample(locale);
+        Q_EMIT dataChanged(createIndex(6, 0), createIndex(6, 0), {Subtitle, Example});
+    });
+    connect(m_settings, &RegionAndLangSettings::nameStyleChanged, this, [this] {
+        QLocale locale(m_settings->LC_LocaleWithLang(SettingType::NameStyle));
+        m_measurementExample = Utility::measurementExample(locale);
+        Q_EMIT dataChanged(createIndex(7, 0), createIndex(7, 0), {Subtitle, Example});
+    });
+    connect(m_settings, &RegionAndLangSettings::phoneNumbersChanged, this, [this] {
+        QLocale locale(m_settings->LC_LocaleWithLang(SettingType::PhoneNumbers));
+        m_measurementExample = Utility::measurementExample(locale);
+        Q_EMIT dataChanged(createIndex(8, 0), createIndex(8, 0), {Subtitle, Example});
+    });
+#endif
 
     // initialize examples
     m_numberExample = Utility::numericExample(QLocale(m_settings->LC_LocaleWithLang(SettingType::Numeric)));
@@ -59,6 +82,11 @@ OptionsModel::OptionsModel(KCMRegionAndLang *parent)
     m_measurementExample = Utility::measurementExample(QLocale(m_settings->LC_LocaleWithLang(SettingType::Measurement)));
     m_currencyExample = Utility::monetaryExample(QLocale(m_settings->LC_LocaleWithLang(SettingType::Currency)));
     m_paperSizeExample = Utility::paperSizeExample(QLocale(m_settings->LC_LocaleWithLang(SettingType::PaperSize)));
+#ifdef LC_ADDRESS
+    m_addressExample = Utility::addressExample(QLocale(m_settings->LC_LocaleWithLang(SettingType::Address)));
+    m_nameStyleExample = Utility::nameStyleExample(QLocale(m_settings->LC_LocaleWithLang(SettingType::NameStyle)));
+    m_phoneNumbersExample = Utility::phoneNumbersExample(QLocale(m_settings->LC_LocaleWithLang(SettingType::PhoneNumbers)));
+#endif
 }
 
 int OptionsModel::rowCount(const QModelIndex &parent) const
@@ -116,6 +144,23 @@ QVariant OptionsModel::data(const QModelIndex &index, int role) const
                 return getNativeName(m_settings->paperSize());
             }
             break;
+#ifdef LC_ADDRESS
+        case Address:
+            if (m_settings->isDefaultSetting(SettingType::Address)) {
+                return getNativeName(m_settings->address());
+            }
+            break;
+        case NameStyle:
+            if (m_settings->isDefaultSetting(SettingType::NameStyle)) {
+                return getNativeName(m_settings->nameStyle());
+            }
+            break;
+        case PhoneNumbers:
+            if (m_settings->isDefaultSetting(SettingType::PhoneNumbers)) {
+                return getNativeName(m_settings->phoneNumbers());
+            }
+            break;
+#endif
         }
         return {}; // implicit locale
     }
@@ -158,6 +203,29 @@ QVariant OptionsModel::data(const QModelIndex &index, int role) const
             }
             return example;
         }
+#ifdef LC_ADDRESS
+        case Address: {
+            QString example = m_addressExample;
+            if (m_settings->isDefaultSetting(SettingType::Address)) {
+                example += implicitFormatExampleMsg();
+            }
+            return example;
+        }
+        case NameStyle: {
+            QString example = m_nameStyleExample;
+            if (m_settings->isDefaultSetting(SettingType::NameStyle)) {
+                example += implicitFormatExampleMsg();
+            }
+            return example;
+        }
+        case PhoneNumbers: {
+            QString example = m_phoneNumbersExample;
+            if (m_settings->isDefaultSetting(SettingType::PhoneNumbers)) {
+                example += implicitFormatExampleMsg();
+            }
+            return example;
+        }
+#endif
         }
         return {};
     }
@@ -196,9 +264,23 @@ void OptionsModel::handleLangChange()
         Q_EMIT dataChanged(createIndex(4, 0), createIndex(4, 0), {Subtitle, Example});
     }
     if (m_settings->isDefaultSetting(SettingType::PaperSize)) {
-        m_paperSizeExample = Utility::measurementExample(lang);
+        m_paperSizeExample = Utility::paperSizeExample(lang);
         Q_EMIT dataChanged(createIndex(5, 0), createIndex(5, 0), {Subtitle, Example});
     }
+#ifdef LC_ADDRESS
+    if (m_settings->isDefaultSetting(SettingType::Address)) {
+        m_addressExample = Utility::addressExample(lang);
+        Q_EMIT dataChanged(createIndex(6, 0), createIndex(6, 0), {Subtitle, Example});
+    }
+    if (m_settings->isDefaultSetting(SettingType::NameStyle)) {
+        m_nameStyleExample = Utility::nameStyleExample(lang);
+        Q_EMIT dataChanged(createIndex(7, 0), createIndex(7, 0), {Subtitle, Example});
+    }
+    if (m_settings->isDefaultSetting(SettingType::PhoneNumbers)) {
+        m_phoneNumbersExample = Utility::phoneNumbersExample(lang);
+        Q_EMIT dataChanged(createIndex(8, 0), createIndex(8, 0), {Subtitle, Example});
+    }
+#endif
 }
 
 QString OptionsModel::implicitFormatExampleMsg() const

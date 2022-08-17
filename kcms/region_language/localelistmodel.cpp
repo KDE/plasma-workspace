@@ -20,6 +20,7 @@
 #include "localelistmodel.h"
 #include "exampleutility.h"
 #include "kcmregionandlang.h"
+#include "settingtype.h"
 
 #include <QTextCodec>
 
@@ -103,6 +104,14 @@ QVariant LocaleListModel::data(const QModelIndex &index, int role) const
             return Utility::measurementExample(data.locale);
         case PaperSize:
             return Utility::paperSizeExample(data.locale);
+#ifdef LC_ADDRESS
+        case Address:
+            return Utility::addressExample(data.locale);
+        case NameStyle:
+            return Utility::nameStyleExample(data.locale);
+        case PhoneNumbers:
+            return Utility::phoneNumbersExample(data.locale);
+#endif
         }
         return {};
     }

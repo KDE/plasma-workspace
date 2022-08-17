@@ -29,6 +29,15 @@
     <entry key="LC_PAGE" name="paperSize" type="String">
         <default code="true">i18n("Inherit Language")</default>
     </entry>
+    <entry key="LC_ADDRESS" name="address" type="String">
+        <default code="true">i18n("Inherit Language")</default>
+    </entry>
+    <entry key="LC_NAME" name="nameStyle" type="String">
+        <default code="true">i18n("Inherit Language")</default>
+    </entry>
+    <entry key="LC_TELEPHONE" name="phoneNumbers" type="String">
+        <default code="true">i18n("Inherit Language")</default>
+    </entry>
     <entry key="LC_CTYPE" name="ctype" type="String">
         <default code="true">i18n("Inherit Language")</default>
     </entry>

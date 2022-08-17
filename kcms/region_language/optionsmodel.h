@@ -38,8 +38,13 @@ private:
     QString m_currencyExample;
     QString m_measurementExample;
     QString m_paperSizeExample;
+#ifdef LC_ADDRESS
+    QString m_addressExample;
+    QString m_nameStyleExample;
+    QString m_phoneNumbersExample;
+#endif
 
-    std::array<std::pair<QString, KCM_RegionAndLang::SettingType>, 6> m_staticNames; // title, page
+    std::vector<std::pair<QString, KCM_RegionAndLang::SettingType>> m_staticNames; // title, page
 
     RegionAndLangSettings *m_settings;
 };

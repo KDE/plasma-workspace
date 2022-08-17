@@ -83,6 +83,15 @@ void KCMRegionAndLang::save()
     if (!settings()->isDefaultSetting(SettingType::PaperSize)) {
         locales.append(settings()->paperSize());
     }
+    if (settings()->isDefaultSetting(SettingType::Address)) {
+        locales.append(settings()->address());
+    }
+    if (settings()->isDefaultSetting(SettingType::NameStyle)) {
+        locales.append(settings()->nameStyle());
+    }
+    if (settings()->isDefaultSetting(SettingType::PhoneNumbers)) {
+        locales.append(settings()->phoneNumbers());
+    }
     if (!settings()->language().isEmpty()) {
         QStringList languages = settings()->language().split(QLatin1Char(':'));
         for (const QString &lang : languages) {
@@ -140,10 +149,20 @@ void KCMRegionAndLang::unset(SettingType setting)
     } else if (setting == SettingType::Currency) {
         entry = "LC_MONETARY";
         settings()->setMonetary(settings()->defaultMonetaryValue());
-    } else {
+    } else if (setting == SettingType::PaperSize) {
         entry = "LC_PAPER";
         settings()->setPaperSize(settings()->defaultPaperSizeValue());
+    } else if (setting == SettingType::Address) {
+        entry = "LC_ADDRESS";
+        settings()->setAddress(settings()->defaultAddressValue());
+    } else if (setting == SettingType::NameStyle) {
+        entry = "LC_NAME";
+        settings()->setNameStyle(settings()->defaultNameStyleValue());
+    } else if (setting == SettingType::PhoneNumbers) {
+        entry = "LC_TELEPHONE";
+        settings()->setPhoneNumbers(settings()->defaultPhoneNumbersValue());
     }
+
     settings()->config()->group(QStringLiteral("Formats")).deleteEntry(entry);
 }
 
