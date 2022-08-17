@@ -19,7 +19,6 @@ SessionManagementScreen {
 
     readonly property alias mainPasswordBox: passwordBox
     property bool lockScreenUiVisible: false
-    property alias showPassword: passwordBox.showPassword
 
     //the y position that should be ensured visible when the on screen keyboard is visible
     property int visibleBoundary: mapFromItem(loginButton, 0, 0).y

@@ -67,12 +67,13 @@ PlasmaCore.ColorScope {
 
         function onPrompt(msg) {
             root.notification = msg;
-            mainBlock.showPassword = true;
+            mainBlock.mainPasswordBox.showPassword = true;
             mainBlock.mainPasswordBox.forceActiveFocus();
             lockScreenUi.hadPrompt = true;
         }
+
         function onPromptForSecret(msg) {
-            mainBlock.showPassword = false;
+            mainBlock.mainPasswordBox.showPassword = false;
             mainBlock.mainPasswordBox.forceActiveFocus();
             lockScreenUi.hadPrompt = true;
         }
