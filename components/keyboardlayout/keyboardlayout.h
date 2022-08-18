@@ -47,7 +47,7 @@ private:
     template<DBusData>
     void requestDBusData();
 
-    uint mLayout;
+    uint mLayout = 0;
     QVector<LayoutNames> mLayoutsList;
     OrgKdeKeyboardLayoutsInterface *mIface;
 };
