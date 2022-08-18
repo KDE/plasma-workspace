@@ -48,7 +48,7 @@
         "Description": "System monitor Widget that shows the usage of the root partition",
         "Description[ar]": "أداة مراقبة النظام التي تعرض استخدام قسم الجذر",
         "Description[az]": "Sistem monitoru vidjeti kök bölməsinin istifadəsini göstərir",
-        "Description[bg]": "Приспособление за системен монитор, което показва използването на основния дял",
+        "Description[bg]": "Уиджет за системен монитор, който показва използването на основния дял",
         "Description[ca@valencia]": "Giny del monitor del sistema que mostra l'ús de la partició arrel",
         "Description[ca]": "Giny del monitor del sistema que mostra l'ús de la partició arrel",
         "Description[da]": "Systemovervågning-widget som viser brug af rod-partitionen",
