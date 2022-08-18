@@ -205,7 +205,7 @@ void KSMCloseConnectionProc(SmsConn smsConn, SmPointer managerData, int count, c
         SmFreeReasons(count, reasonMsgs);
     IceConn iceConn = SmsGetIceConnection(smsConn);
     SmsCleanUp(smsConn);
-    IceSetShutdownNegotiation(iceConn, False);
+    IceSetShutdownNegotiation(iceConn, false);
     IceCloseConnection(iceConn);
 }
 
@@ -687,7 +687,7 @@ void KSMServer::processData(int /*socket*/)
     IceConn iceConn = ((KSMConnection *)sender())->iceConn;
     IceProcessMessagesStatus status = IceProcessMessages(iceConn, nullptr, nullptr);
     if (status == IceProcessMessagesIOError) {
-        IceSetShutdownNegotiation(iceConn, False);
+        IceSetShutdownNegotiation(iceConn, false);
         QList<KSMClient *>::iterator it = clients.begin();
         QList<KSMClient *>::iterator const itEnd = clients.end();
         while ((it != itEnd) && *it && (SmsGetIceConnection((*it)->connection()) != iceConn))
@@ -737,7 +737,7 @@ void KSMServer::newConnection(int /*socket*/)
     IceConn iceConn = IceAcceptConnection(((KSMListener *)sender())->listenObj, &status);
     if (iceConn == nullptr)
         return;
-    IceSetShutdownNegotiation(iceConn, False);
+    IceSetShutdownNegotiation(iceConn, false);
     IceConnectStatus cstatus;
     while ((cstatus = IceConnectionStatus(iceConn)) == IceConnectPending) {
         (void)IceProcessMessages(iceConn, nullptr, nullptr);
