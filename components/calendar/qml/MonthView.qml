@@ -14,12 +14,10 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
-PinchArea { // TODO KF6 switch to Item
+Item {
     id: root
 
     anchors.fill: parent // TODO KF6 don't use anchors
-
-    enabled: false
 
     /**
      * Currently selected month name.
@@ -70,6 +68,10 @@ PinchArea { // TODO KF6 switch to Item
 
     property alias cellHeight: mainDaysCalendar.cellHeight
     property QtObject daysModel: calendarBackend.daysModel
+
+    KeyNavigation.up: nextButton
+    // The view can have no highlighted item, so always highlight the first item
+    Keys.onDownPressed: swipeView.currentItem.repeater.itemAt(0).forceActiveFocus(Qt.TabFocusReason);
 
     function isToday(date) {
         return date.toDateString() === new Date().toDateString();
@@ -247,6 +249,9 @@ PinchArea { // TODO KF6 switch to Item
 
         RowLayout {
             spacing: 0
+
+            KeyNavigation.down: tabBar.currentItem
+
             PlasmaExtras.Heading {
                 id: heading
                 text: swipeView.currentIndex > 0 || root.selectedYear !== today.getFullYear() ? i18ndc("plasmashellprivateplugin", "Format: month year", "%1 %2", root.selectedMonth, root.selectedYear.toString()) : root.selectedMonth
@@ -273,12 +278,17 @@ PinchArea { // TODO KF6 switch to Item
                 icon.name: Qt.application.layoutDirection === Qt.RightToLeft ? "go-next" : "go-previous"
                 onClicked: root.previousView()
                 Accessible.name: tooltip
+                KeyNavigation.right: todayButton
+
                 PlasmaComponents3.ToolTip { text: parent.tooltip }
             }
 
             PlasmaComponents3.ToolButton {
+                id: todayButton
                 text: i18ndc("plasmashellprivateplugin", "Reset calendar to today", "Today")
                 Accessible.description: i18nd("plasmashellprivateplugin", "Reset calendar to today")
+                KeyNavigation.right: nextButton
+
                 onClicked: root.resetToToday()
             }
 
@@ -310,6 +320,8 @@ PinchArea { // TODO KF6 switch to Item
             Layout.fillWidth: true
             Layout.bottomMargin: PlasmaCore.Units.smallSpacing
 
+            KeyNavigation.up: previousButton
+
             PlasmaComponents3.TabButton {
                 text: i18nd("plasmashellprivateplugin", "Days");
                 onClicked: root.showMonthView();
@@ -340,6 +352,14 @@ PinchArea { // TODO KF6 switch to Item
         activeFocusOnTab: false
         clip: true
 
+        Keys.onUpPressed: {
+            if (root.showCustomHeader) {
+                event.accepted = false;
+                return;
+            }
+            tabBar.currentItem.forceActiveFocus(Qt.BacktabFocusReason);
+        }
+
         onCurrentIndexChanged: if (currentIndex > 1) {
             updateDecadeOverview();
         }
@@ -357,6 +377,8 @@ PinchArea { // TODO KF6 switch to Item
             gridModel: calendarBackend.daysModel
 
             dateMatchingPrecision: Calendar.MatchYearMonthAndDay
+
+            KeyNavigation.tab: root.showCustomHeader ? root.KeyNavigation.tab : todayButton
 
             onActivated: {
                 const rowNumber = Math.floor(index / columns);
@@ -380,6 +402,9 @@ PinchArea { // TODO KF6 switch to Item
             dateMatchingPrecision: Calendar.MatchYearAndMonth
 
             gridModel: monthModel
+
+            KeyNavigation.tab: root.showCustomHeader ? root.KeyNavigation.tab : todayButton
+
             onActivated: {
                 calendarBackend.goToMonth(date.monthNumber);
                 swipeView.currentIndex = 0;
@@ -399,6 +424,9 @@ PinchArea { // TODO KF6 switch to Item
             dateMatchingPrecision: Calendar.MatchYear
 
             gridModel: yearModel
+
+            KeyNavigation.tab: root.showCustomHeader ? root.KeyNavigation.tab : todayButton
+
             onActivated: {
                 calendarBackend.goToYear(date.yearNumber);
                 swipeView.currentIndex = 1;

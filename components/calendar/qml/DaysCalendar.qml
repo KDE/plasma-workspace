@@ -36,6 +36,7 @@ Item {
     // how precise date matching should be, 3 = day+month+year, 2 = month+year, 1 = just year
     property int dateMatchingPrecision
 
+    property alias repeater: repeater
     property alias headerModel: days.model
     property alias gridModel: repeater.model
 
@@ -122,9 +123,11 @@ Item {
                 height: daysCalendar.cellHeight
                 dayModel: repeater.model
 
-                activeFocusOnTab: selected && daysCalendar.PlasmaComponents3.SwipeView.isCurrentItem
-
                 Keys.onPressed: {
+                    if (!daysCalendar.PlasmaComponents3.SwipeView.isCurrentItem) {
+                        event.accepted = false;
+                        return;
+                    }
                     switch (event.key) {
                     case Qt.Key_Space:
                     case Qt.Key_Enter:
@@ -140,11 +143,29 @@ Item {
                 } else {
                     return root.nextItemInFocusChain(false);
                 }
+                KeyNavigation.tab: daysCalendar.KeyNavigation.tab
 
-                KeyNavigation.up: if (index >= daysCalendar.columns) {
-                    return repeater.itemAt(index - daysCalendar.columns);
-                } else {
-                    return root.nextItemInFocusChain(false);
+                Keys.onUpPressed: {
+                    if (!daysCalendar.PlasmaComponents3.SwipeView.isCurrentItem) {
+                        event.accepted = false;
+                        return;
+                    }
+                    if (index >= daysCalendar.columns) {
+                        repeater.itemAt(index - daysCalendar.columns).forceActiveFocus(Qt.TabFocusReason);
+                    } else {
+                        event.accepted = false;
+                    }
+                }
+                Keys.onDownPressed: {
+                    if (!daysCalendar.PlasmaComponents3.SwipeView.isCurrentItem) {
+                        event.accepted = false;
+                        return;
+                    }
+                    if (index < (daysCalendar.rows - 1) * daysCalendar.columns) {
+                        repeater.itemAt(index + daysCalendar.columns).forceActiveFocus(Qt.TabFocusReason);
+                    } else {
+                        daysCalendar.scrollDown();
+                    }
                 }
 
                 Connections {

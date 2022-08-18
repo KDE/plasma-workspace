@@ -45,6 +45,8 @@ PlasmaExtras.Representation {
 
     property bool debug: false
 
+    Keys.onDownPressed: monthView.Keys.onDownPressed(event);
+
     Connections {
         target: Plasmoid.self
 
@@ -102,15 +104,19 @@ PlasmaExtras.Representation {
                     elide: Text.ElideRight
                 }
                 PlasmaComponents3.ToolButton {
+                    id: addEventButton
+
                     visible: agenda.visible && ApplicationIntegration.calendarInstalled
                     text: i18nc("@action:button Add event", "Add…")
                     Layout.rightMargin: calendar.paddings
                     icon.name: "list-add"
 
                     Accessible.description: i18nc("@info:tooltip", "Add a new event")
+                    KeyNavigation.down: KeyNavigation.tab
+                    KeyNavigation.right: tabbar
 
                     onClicked: ApplicationIntegration.launchCalendar()
-                    KeyNavigation.tab: calendar.showAgenda ? holidaysList : clocksList
+                    KeyNavigation.tab: calendar.showAgenda && holidaysList.count ? holidaysList : holidaysList.KeyNavigation.down
                 }
             }
         }
@@ -138,6 +144,9 @@ PlasmaExtras.Representation {
             columns: 6
             rows: 2
 
+            KeyNavigation.up: configureButton
+            Keys.onDownPressed: monthView.Keys.onDownPressed(event);
+
             PlasmaExtras.Heading {
                 Layout.row: 0
                 Layout.column: 0
@@ -158,6 +167,10 @@ PlasmaExtras.Representation {
                 icon.name: "configure"
                 text: Plasmoid.action("configure").text
 
+                KeyNavigation.left: tabbar.KeyNavigation.left
+                KeyNavigation.right: pinButton
+                KeyNavigation.down: todayButton
+
                 onClicked: Plasmoid.action("configure").trigger()
                 PlasmaComponents3.ToolTip {
                     text: parent.text
@@ -166,6 +179,7 @@ PlasmaExtras.Representation {
 
             // Allows the user to keep the calendar open for reference
             PlasmaComponents3.ToolButton {
+                id: pinButton
                 Layout.row: 0
                 Layout.column: 5
                 checkable: true
@@ -174,6 +188,8 @@ PlasmaExtras.Representation {
                 display: PlasmaComponents3.AbstractButton.IconOnly
                 icon.name: "window-pin"
                 text: i18n("Keep Open")
+
+                KeyNavigation.down: nextButton
 
                 onToggled: Plasmoid.configuration.pin = checked
 
@@ -191,6 +207,9 @@ PlasmaExtras.Representation {
                 Layout.topMargin: PlasmaCore.Units.smallSpacing
                 Layout.fillWidth: true
                 Layout.leftMargin: PlasmaCore.Units.smallSpacing
+
+                KeyNavigation.left: addEventButton.visible ? addEventButton : addEventButton.KeyNavigation.down
+                KeyNavigation.right: previousButton
 
                 PlasmaComponents3.TabButton {
                     text: i18n("Days");
@@ -233,6 +252,8 @@ PlasmaExtras.Representation {
                     }
                 }
 
+                KeyNavigation.right: todayButton
+
                 onClicked: monthView.previousView()
 
                 PlasmaComponents3.ToolTip {
@@ -241,12 +262,14 @@ PlasmaExtras.Representation {
             }
 
             PlasmaComponents3.ToolButton {
+                id: todayButton
                 Layout.bottomMargin: PlasmaCore.Units.smallSpacing
                 Layout.row: 1
                 Layout.column: 4
                 onClicked: monthView.resetToToday()
                 text: i18ndc("libplasma5", "Reset calendar to today", "Today")
                 Accessible.description: i18nd("libplasma5", "Reset calendar to today")
+                KeyNavigation.right: nextButton
             }
 
             PlasmaComponents3.ToolButton {
@@ -397,6 +420,10 @@ PlasmaExtras.Representation {
                     activeFocusOnTab: true
                     highlight: null
                     currentIndex: -1
+
+                    KeyNavigation.down: switchTimeZoneButton.visible ? switchTimeZoneButton : clocksList
+                    Keys.onRightPressed: switchTimeZoneButton.Keys.onRightPressed(event);
+
                     onCurrentIndexChanged: if (!activeFocus) {
                         currentIndex = -1;
                     }
@@ -565,12 +592,16 @@ PlasmaExtras.Representation {
                 }
 
                 PlasmaComponents3.ToolButton {
+                    id: switchTimeZoneButton
+
                     visible: KCMShell.authorize("kcm_clock.desktop").length > 0
                     text: i18n("Switch…")
                     Accessible.name: i18n("Switch to another timezone")
                     icon.name: "preferences-system-time"
 
                     Accessible.description: i18n("Switch to another timezone")
+                    KeyNavigation.down: clocksList
+                    Keys.onRightPressed: monthView.Keys.onDownPressed(event)
 
                     onClicked: KCMShell.openSystemSettings("kcm_clock")
 
@@ -606,6 +637,7 @@ PlasmaExtras.Representation {
                     currentIndex = -1;
                 }
                 KeyNavigation.tab: configureButton
+                Keys.onRightPressed: switchTimeZoneButton.Keys.onRightPressed(event);
 
                 model: {
                     let timezones = [];
@@ -690,6 +722,9 @@ PlasmaExtras.Representation {
                 : Qt.locale().firstDayOfWeek
             showWeekNumbers: Plasmoid.configuration.showWeekNumbers
             showCustomHeader: true
+
+            KeyNavigation.tab: addEventButton.visible ? addEventButton : addEventButton.KeyNavigation.down
+            Keys.onUpPressed: tabbar.currentItem.forceActiveFocus(Qt.BacktabFocusReason);
         }
     }
 }
