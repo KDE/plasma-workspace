@@ -34,6 +34,8 @@ RowLayout {
     Layout.minimumHeight: Layout.preferredHeight
     Layout.maximumWidth: Layout.preferredWidth
     Layout.maximumHeight: Layout.preferredHeight
+    width: Layout.preferredWidth
+    height: Layout.preferredHeight
 
     PlasmaCore.IconItem {
         Layout.leftMargin: PlasmaCore.Units.smallSpacing
