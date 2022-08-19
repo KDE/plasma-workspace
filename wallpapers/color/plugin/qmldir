@@ -1,0 +1,5 @@
+module org.kde.plasma.wallpapers.color
+plugin plasma_wallpaper_colorplugin
+
+
+
