@@ -26,9 +26,6 @@
 
 #include <kdeclarative/qmlobject.h>
 
-#include <KPackage/Package>
-#include <KPackage/PackageLoader>
-
 #include <KWayland/Client/connection_thread.h>
 #include <KWayland/Client/registry.h>
 #include <KWayland/Client/surface.h>
@@ -72,15 +69,8 @@ View::View(QWindow *)
     m_qmlObj->setInitializationDelayed(true);
     connect(m_qmlObj, &KDeclarative::QmlObject::finished, this, &View::objectIncubated);
 
-    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
-    KConfigGroup cg(KSharedConfig::openConfig(), "KDE");
-    const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
-    if (!packageName.isEmpty()) {
-        package.setPath(packageName);
-    }
-
     m_qmlObj->engine()->rootContext()->setContextProperty(QStringLiteral("runnerWindow"), this);
-    m_qmlObj->setSource(package.fileUrl("runcommandmainscript"));
+    m_qmlObj->setSource(QUrl(QStringLiteral("qrc:/krunner/RunCommand.qml")));
     m_qmlObj->completeInitialization();
 
     auto screenRemoved = [this](QScreen *screen) {
@@ -362,17 +352,4 @@ void View::setPinned(bool pinned)
         m_stateData.writeEntry("Pinned", pinned);
         Q_EMIT pinnedChanged();
     }
-}
-
-void View::removeFromHistory(int index)
-{
-    if (m_manager) {
-        m_manager->removeFromHistory(index);
-        Q_EMIT historyChanged();
-    }
-}
-
-QStringList View::history() const
-{
-    return m_manager ? m_manager->history() : QStringList();
 }

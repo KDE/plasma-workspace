@@ -72,11 +72,11 @@ ColumnLayout {
                 runnerWindow.visible = false
                 runnerWindow.displayConfiguration()
             }
-            Accessible.name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Configure")
-            Accessible.description: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Configure KRunner Behavior")
+            Accessible.name: i18n("Configure")
+            Accessible.description: i18n("Configure KRunner Behavior")
             visible: KCMShell.authorize("kcm_krunnersettings.desktop").length > 0
             PlasmaComponents3.ToolTip {
-                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Configure KRunner…")
+                text: i18n("Configure KRunner…")
             }
         }
         PlasmaExtras.SearchField {
@@ -87,11 +87,9 @@ ColumnLayout {
             Layout.maximumWidth: PlasmaCore.Units.gridUnit * 25
 
             activeFocusOnPress: true
-            placeholderText: results.runnerName ? i18ndc("plasma_lookandfeel_org.kde.lookandfeel",
-                                                         "Textfield placeholder text, query specific KRunner",
+            placeholderText: results.runnerName ? i18nc("Textfield placeholder text, query specific KRunner",
                                                          "Search '%1'…", results.runnerName)
-                                                : i18ndc("plasma_lookandfeel_org.kde.lookandfeel",
-                                                         "Textfield placeholder text", "Search…")
+                                                : i18nc("Textfield placeholder text", "Search…")
 
             PlasmaComponents3.BusyIndicator {
                 anchors {
@@ -227,10 +225,10 @@ ColumnLayout {
             // Reset if out quers starts with "?", otherwise set it to "?"
             onClicked: root.query = root.query.startsWith("?") ? "" : "?"
             icon.name: "question"
-            Accessible.name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Show Usage Help")
-            Accessible.description: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Show Usage Help")
+            Accessible.name: i18n("Show Usage Help")
+            Accessible.description: i18n("Show Usage Help")
             PlasmaComponents3.ToolTip {
-                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Show Usage Help")
+                text: i18n("Show Usage Help")
             }
         }
         PlasmaComponents3.ToolButton {
@@ -238,10 +236,10 @@ ColumnLayout {
             checked: runnerWindow.pinned
             onToggled: runnerWindow.pinned = checked
             icon.name: "window-pin"
-            Accessible.name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Pin")
-            Accessible.description: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Pin Search")
+            Accessible.name: i18n("Pin")
+            Accessible.description: i18n("Pin Search")
             PlasmaComponents3.ToolTip {
-                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Keep Open")
+                text: i18n("Keep Open")
             }
         }
     }
@@ -319,10 +317,10 @@ ColumnLayout {
             delegate: Milou.ResultDelegate {
                 id: resultDelegate
                 width: listView.width
-                typeText: index === 0 ? i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Recent Queries") : ""
+                typeText: index === 0 ? i18n("Recent Queries") : ""
                 additionalActions: [{
                     icon: "list-remove",
-                    text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Remove")
+                    text: i18n("Remove")
                 }]
                 Accessible.description: i18n("in category recent queries")
             }

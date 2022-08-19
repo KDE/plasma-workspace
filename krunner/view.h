@@ -40,9 +40,6 @@ class View : public PlasmaQuick::Dialog
     Q_CLASSINFO("D-Bus Interface", "org.kde.krunner.App")
 
     Q_PROPERTY(bool pinned READ pinned WRITE setPinned NOTIFY pinnedChanged)
-    Q_PROPERTY(QStringList history READ history NOTIFY historyChanged)
-    // TODO KF6 This is kept for compatibility with third party themes which override the RunCommand.qml file
-    Q_PROPERTY(Plasma::RunnerManager *runnerManager WRITE setRunnerManager)
     Q_PROPERTY(bool helpEnabled READ helpEnabled NOTIFY helpEnabledChanged)
 
 public:
@@ -54,22 +51,8 @@ public:
     bool freeFloating() const;
     void setFreeFloating(bool floating);
 
-    QStringList history() const;
-
     bool pinned() const;
     void setPinned(bool pinned);
-
-    // TODO KF6 This is kept for compatibility with third party themes which override the RunCommand.qml file
-    Q_SIGNAL void historyChanged();
-    Q_INVOKABLE void addToHistory(const QString &)
-    {
-        // Kept for compatibility, since milou f442b33af3c292c49743083493423275a51c118a the KRunner framework logic is used for handling this
-    }
-    Q_INVOKABLE void removeFromHistory(int index);
-    void setRunnerManager(Plasma::RunnerManager *manager)
-    {
-        m_manager = manager;
-    }
 
     bool helpEnabled()
     {

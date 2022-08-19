@@ -1,2 +1,2 @@
 #! /usr/bin/env bash
-$XGETTEXT *.cpp -o $podir/krunner.pot
+$XGETTEXT *.cpp qml/*.qml  -o $podir/krunner.pot

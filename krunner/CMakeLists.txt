@@ -1,6 +1,7 @@
 set(krunner_SRCS
     main.cpp
     view.cpp
+    qml/krunner.qrc
 )
 
 set(krunner_dbusAppXML dbus/org.kde.krunner.App.xml)
