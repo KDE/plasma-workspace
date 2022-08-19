@@ -90,10 +90,23 @@ bool AppEntry::isValid() const
 QIcon AppEntry::icon() const
 {
     if (m_icon.isNull()) {
-        if (QFileInfo::exists(m_service->icon())) {
-            m_icon = QIcon(m_service->icon());
+        const QString serviceIcon = m_service->icon();
+
+        // Check for absolute-path-ness this way rather than using
+        // QFileInfo.isAbsolute() because that would perform a ton of unnecessary
+        // filesystem checks, and most icons are not defined in apps' desktop
+        // files with absolute paths.
+        bool isAbsoluteFilePath = serviceIcon.startsWith(QLatin1String("/"));
+
+        // Need to first check for whether the icon has an absolute path, because
+        // otherwise if the icon is just a name, QFileInfo will treat it as a
+        // relative path and return true if there randomly happens to be a file
+        // with the name of an icon in the user's homedir and we'll go down the
+        // wrong codepath and end up with a blank QIcon; See 457965.
+        if (isAbsoluteFilePath && QFileInfo::exists(serviceIcon)) {
+            m_icon = QIcon(serviceIcon);
         } else {
-            m_icon = QIcon::fromTheme(m_service->icon(), QIcon::fromTheme(QStringLiteral("unknown")));
+            m_icon = QIcon::fromTheme(serviceIcon, QIcon::fromTheme(QStringLiteral("unknown")));
         }
     }
     return m_icon;
