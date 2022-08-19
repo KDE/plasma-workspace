@@ -723,6 +723,7 @@ PlasmaExtras.Representation {
             showWeekNumbers: Plasmoid.configuration.showWeekNumbers
             showCustomHeader: true
 
+            KeyNavigation.left: KeyNavigation.tab
             KeyNavigation.tab: addEventButton.visible ? addEventButton : addEventButton.KeyNavigation.down
             Keys.onUpPressed: tabbar.currentItem.forceActiveFocus(Qt.BacktabFocusReason);
         }

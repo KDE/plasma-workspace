@@ -141,7 +141,7 @@ Item {
                 KeyNavigation.left: if (index !== 0) {
                     return repeater.itemAt(index - 1);
                 } else {
-                    return root.nextItemInFocusChain(false);
+                    return daysCalendar.KeyNavigation.left;
                 }
                 KeyNavigation.tab: daysCalendar.KeyNavigation.tab
 

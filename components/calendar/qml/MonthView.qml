@@ -352,6 +352,9 @@ Item {
         activeFocusOnTab: false
         clip: true
 
+        KeyNavigation.left: root.showCustomHeader ? root.KeyNavigation.left : tabBar
+        KeyNavigation.tab: root.showCustomHeader ? root.KeyNavigation.tab : todayButton
+        Keys.onLeftPressed: Keys.onUpPressed(event);
         Keys.onUpPressed: {
             if (root.showCustomHeader) {
                 event.accepted = false;
@@ -378,7 +381,8 @@ Item {
 
             dateMatchingPrecision: Calendar.MatchYearMonthAndDay
 
-            KeyNavigation.tab: root.showCustomHeader ? root.KeyNavigation.tab : todayButton
+            KeyNavigation.left: swipeView.KeyNavigation.left
+            KeyNavigation.tab: swipeView.KeyNavigation.tab
 
             onActivated: {
                 const rowNumber = Math.floor(index / columns);
@@ -403,7 +407,8 @@ Item {
 
             gridModel: monthModel
 
-            KeyNavigation.tab: root.showCustomHeader ? root.KeyNavigation.tab : todayButton
+            KeyNavigation.left: swipeView.KeyNavigation.left
+            KeyNavigation.tab: swipeView.KeyNavigation.tab
 
             onActivated: {
                 calendarBackend.goToMonth(date.monthNumber);
@@ -425,7 +430,8 @@ Item {
 
             gridModel: yearModel
 
-            KeyNavigation.tab: root.showCustomHeader ? root.KeyNavigation.tab : todayButton
+            KeyNavigation.left: swipeView.KeyNavigation.left
+            KeyNavigation.tab: swipeView.KeyNavigation.tab
 
             onActivated: {
                 calendarBackend.goToYear(date.yearNumber);
