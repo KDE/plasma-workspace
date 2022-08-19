@@ -597,6 +597,12 @@ void AppletsLayout::mousePressEvent(QMouseEvent *event)
 {
     forceActiveFocus(Qt::MouseFocusReason);
 
+    // Only accept synthesized events i.e. touch events, because we only want
+    // to support press-and-hold. Click-and-hold is weird. See 457979.
+    if (!(event->source() == Qt::MouseEventSynthesizedBySystem || event->source() == Qt::MouseEventSynthesizedByQt)) {
+        return;
+    }
+
     if (!m_editMode && m_editModeCondition == AppletsLayout::Manual) {
         return;
     }
