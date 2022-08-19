@@ -265,7 +265,7 @@ void IconApplet::populateFromDesktopFile(const QString &path)
     m_openWithActions.clear();
     m_jumpListActions.clear();
 
-    m_localPath = path;
+    setLocalPath(path);
 
     setBusy(false);
 }
@@ -309,6 +309,11 @@ QString IconApplet::iconName() const
 QString IconApplet::genericName() const
 {
     return m_genericName;
+}
+
+bool IconApplet::isValid() const
+{
+    return !m_localPath.isEmpty();
 }
 
 QList<QAction *> IconApplet::contextualActions()
@@ -569,8 +574,12 @@ QString IconApplet::localPath() const
 
 void IconApplet::setLocalPath(const QString &localPath)
 {
+    const bool oldValid = isValid();
     m_localPath = localPath;
     config().writeEntry(QStringLiteral("localPath"), localPath);
+    if (oldValid != isValid()) {
+        Q_EMIT isValidChanged();
+    }
 }
 
 K_PLUGIN_CLASS(IconApplet)

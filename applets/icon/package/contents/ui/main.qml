@@ -50,6 +50,7 @@ MouseArea {
     Layout.maximumHeight: inPanel ? PlasmaCore.Units.iconSizeHints.panel : -1
 
     hoverEnabled: true
+    enabled: Plasmoid.nativeInterface.valid
 
     onClicked: Plasmoid.nativeInterface.run()
 
@@ -66,10 +67,9 @@ MouseArea {
 
     function updateActions() {
         Plasmoid.clearActions()
-
         Plasmoid.removeAction("configure");
 
-        if (Plasmoid.immutability !== PlasmaCore.Types.SystemImmutable) {
+        if (Plasmoid.nativeInterface.valid && Plasmoid.immutability !== PlasmaCore.Types.SystemImmutable) {
             Plasmoid.setAction("configure", i18n("Properties"), "document-properties");
         }
     }
@@ -82,6 +82,13 @@ MouseArea {
         target: Plasmoid.self
         function onExternalData(mimetype, data) {
             Plasmoid.nativeInterface.url = data
+        }
+    }
+
+    Connections {
+        target: Plasmoid.nativeInterface
+        function onValidChanged() {
+            updateActions();
         }
     }
 
