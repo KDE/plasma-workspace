@@ -68,6 +68,8 @@ StackView {
                 "width": Qt.binding(() => mainStack.width),
                 "height": Qt.binding(() => mainStack.height),
                 "focus": true,
+                "KeyNavigation.up": mainStack.KeyNavigation.up,
+                "KeyNavigation.backtab": mainStack.KeyNavigation.backtab,
             }, systemTrayState.expanded ? (unFlipped ? StackView.PushTransition : StackView.PopTransition) : StackView.Immediate);
         } else {
             mainStack.clear();
