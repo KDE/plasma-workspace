@@ -12,7 +12,6 @@
 #include <KAboutData>
 #include <KActionCollection>
 #include <KIO/Job>
-#include <KIO/JobUiDelegate>
 #include <KIO/StatJob>
 #include <KJobWidgets>
 #include <KMessageBox>
