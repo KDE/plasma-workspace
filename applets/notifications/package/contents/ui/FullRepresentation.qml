@@ -37,12 +37,7 @@ PlasmaExtras.Representation {
 
     collapseMarginsHint: true
 
-    // HACK forward focus to the list
-    onActiveFocusChanged: {
-        if (activeFocus) {
-            list.forceActiveFocus();
-        }
-    }
+    Keys.onDownPressed: dndCheck.forceActiveFocus(Qt.TabFocusReason);
 
     Connections {
         target: Plasmoid.self
@@ -79,6 +74,9 @@ PlasmaExtras.Representation {
                     icon.name: "notifications-disabled"
                     checkable: true
                     checked: Globals.inhibited
+
+                    KeyNavigation.down: list
+                    KeyNavigation.tab: list
 
                     // Let the menu open on press
                     onPressed: {
@@ -237,11 +235,13 @@ PlasmaExtras.Representation {
         id: scrollView
         anchors.fill: parent
         background: null
+        focus: true
         // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-83890
         PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
 
         contentItem: ListView {
             id: list
+            focus: true
             model: historyModel
             currentIndex: -1
 
@@ -250,6 +250,8 @@ PlasmaExtras.Representation {
             leftMargin: PlasmaCore.Units.smallSpacing * 2
             rightMargin: PlasmaCore.Units.smallSpacing * 2
             spacing: PlasmaCore.Units.smallSpacing
+
+            KeyNavigation.up: dndCheck
 
             Keys.onDeletePressed: {
                 var idx = historyModel.index(currentIndex, 0);
