@@ -249,7 +249,6 @@ Item {
 
         id: dialogItem
         model: Plasmoid.expanded ? batteries : null
-        focus: true
 
         isBrightnessAvailable: batterymonitor.isBrightnessAvailable
         isKeyboardBrightnessAvailable: batterymonitor.isKeyboardBrightnessAvailable

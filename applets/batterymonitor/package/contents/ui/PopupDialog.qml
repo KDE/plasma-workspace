@@ -16,7 +16,7 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 PlasmaExtras.Representation {
     id: dialog
 
-    property alias model: batteryList.model
+    property alias model: batteryRepeater.model
     property bool pluggedIn
 
     property int remainingTime
@@ -48,6 +48,8 @@ PlasmaExtras.Representation {
 
     collapseMarginsHint: true
 
+    KeyNavigation.down: pmSwitch.pmCheckBox
+
     header: PlasmaExtras.PlasmoidHeading {
         leftPadding: PlasmaCore.Units.smallSpacing
         contentItem: PowerManagementItem {
@@ -57,127 +59,134 @@ PlasmaExtras.Representation {
             inhibitsLidAction: dialog.inhibitsLidAction
             pluggedIn: dialog.pluggedIn
             onDisabledChanged: powerManagementChanged(disabled)
-
-            KeyNavigation.tab: if (batteryList.headerItem) {
-                if (isBrightnessAvailable) {
-                    return batteryList.headerItem.children[1];
-                } else if (isKeyboardBrightnessAvailable) {
-                    return batteryList.headerItem.children[2];
-                } else if (dialog.profiles.length > 0) {
-                    return batteryList.headerItem.children[3];
-                } else {
-                    return batteryList;
-                }
-            }
         }
     }
 
-    PlasmaComponents3.ScrollView {
-        focus: true
-        anchors.fill: parent
+    contentItem: PlasmaComponents3.ScrollView {
+        id: scrollView
+
+        focus: false
 
         // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-83890
         PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
 
-        contentItem: ListView {
+        Column {
             id: batteryList
-            keyNavigationEnabled: true
 
-            leftMargin: PlasmaCore.Units.smallSpacing * 2
-            rightMargin: PlasmaCore.Units.smallSpacing * 2
-            topMargin: PlasmaCore.Units.smallSpacing * 2
-            bottomMargin: PlasmaCore.Units.smallSpacing * 2
-            spacing: PlasmaCore.Units.smallSpacing
+            spacing: PlasmaCore.Units.smallSpacing * 2
 
-            // header so that it scroll with the content of the ListView
-            header: ColumnLayout {
-                spacing: PlasmaCore.Units.smallSpacing * 2
-                width: parent.width
-
-                BrightnessItem {
-                    id: brightnessSlider
-
-                    Layout.fillWidth: true
-
-                    icon: "video-display-brightness"
-                    label: i18n("Display Brightness")
-                    visible: isBrightnessAvailable
-                    value: batterymonitor.screenBrightness
-                    maximumValue: batterymonitor.maximumScreenBrightness
-                    KeyNavigation.tab: if (isKeyboardBrightnessAvailable) {
-                        return keyboardBrightnessSlider;
-                    } else if (dialog.profiles.length > 0) {
-                        return powerProfileItem
-                    } else {
-                        return batteryList
-                    }
-                    stepSize: batterymonitor.maximumScreenBrightness/100
-
-                    onMoved: batterymonitor.screenBrightness = value
-
-                    // Manually dragging the slider around breaks the binding
-                    Connections {
-                        target: batterymonitor
-                        function onScreenBrightnessChanged() {
-                            brightnessSlider.value = batterymonitor.screenBrightness;
-                        }
-                    }
+            readonly property Item firstHeaderItem: {
+                if (brightnessSlider.visible) {
+                    return brightnessSlider;
+                } else if (keyboardBrightnessSlider.visible) {
+                    return keyboardBrightnessSlider;
+                } else if (powerProfileItem.visible) {
+                    return powerProfileItem;
                 }
-
-                BrightnessItem {
-                    id: keyboardBrightnessSlider
-
-                    Layout.fillWidth: true
-
-                    icon: "input-keyboard-brightness"
-                    label: i18n("Keyboard Brightness")
-                    showPercentage: false
-                    value: batterymonitor.keyboardBrightness
-                    maximumValue: batterymonitor.maximumKeyboardBrightness
-                    visible: isKeyboardBrightnessAvailable
-                    KeyNavigation.tab: if (dialog.profiles.length > 0) {
-                        return powerProfileItem
-                    } else {
-                        return batteryList
-                    }
-
-                    onMoved: batterymonitor.keyboardBrightness = value
-
-                    // Manually dragging the slider around breaks the binding
-                    Connections {
-                        target: batterymonitor
-                        function onKeyboardBrightnessChanged() {
-                            keyboardBrightnessSlider.value = batterymonitor.keyboardBrightness;
-                        }
-                    }
+                return null;
+            }
+            readonly property Item lastHeaderItem: {
+                if (powerProfileItem.visible) {
+                    return powerProfileItem;
+                } else if (keyboardBrightnessSlider.visible) {
+                    return keyboardBrightnessSlider;
+                } else if (brightnessSlider.visible) {
+                    return brightnessSlider;
                 }
+                return null;
+            }
 
-                PowerProfileItem {
-                    id: powerProfileItem
-                    Layout.fillWidth: true
+            BrightnessItem {
+                id: brightnessSlider
 
-                    KeyNavigation.tab: batteryList
-                    activeProfile: dialog.activeProfile
-                    inhibitionReason: dialog.inhibitionReason
-                    visible: dialog.profiles.length > 0
-                    degradationReason: dialog.degradationReason
-                    profileHolds: dialog.profileHolds
-                    onActivateProfileRequested: dialog.activateProfileRequested(profile)
-                }
-                Item {
-                    Layout.fillWidth: true
-                    // additional margin, because the bottom of PowerProfileItem
-                    // and the top of BatteryItem are more dense.
+                width: scrollView.availableWidth
+
+                icon.name: "video-display-brightness"
+                text: i18n("Display Brightness")
+                visible: isBrightnessAvailable
+                value: batterymonitor.screenBrightness
+                maximumValue: batterymonitor.maximumScreenBrightness
+
+                KeyNavigation.up: pmSwitch.pmCheckBox
+                KeyNavigation.down: keyboardBrightnessSlider.visible ? keyboardBrightnessSlider : keyboardBrightnessSlider.KeyNavigation.down
+                KeyNavigation.backtab: KeyNavigation.up
+                KeyNavigation.tab: KeyNavigation.down
+                stepSize: batterymonitor.maximumScreenBrightness/100
+
+                onMoved: batterymonitor.screenBrightness = value
+
+                // Manually dragging the slider around breaks the binding
+                Connections {
+                    target: batterymonitor
+                    function onScreenBrightnessChanged() {
+                        brightnessSlider.value = batterymonitor.screenBrightness;
+                    }
                 }
             }
 
-            delegate: BatteryItem {
-                width: ListView.view.width - PlasmaCore.Units.smallSpacing * 4
+            BrightnessItem {
+                id: keyboardBrightnessSlider
 
-                battery: model
-                remainingTime: dialog.remainingTime
-                matchHeightOfSlider: ListView.view.headerItem ? ListView.view.headerItem.children[1].slider : null
+                width: scrollView.availableWidth
+
+                icon.name: "input-keyboard-brightness"
+                text: i18n("Keyboard Brightness")
+                showPercentage: false
+                value: batterymonitor.keyboardBrightness
+                maximumValue: batterymonitor.maximumKeyboardBrightness
+                visible: isKeyboardBrightnessAvailable
+
+                KeyNavigation.up: brightnessSlider.visible ? brightnessSlider : brightnessSlider.KeyNavigation.up
+                KeyNavigation.down: powerProfileItem.visible ? powerProfileItem : powerProfileItem.KeyNavigation.down
+                KeyNavigation.backtab: KeyNavigation.up
+                KeyNavigation.tab: KeyNavigation.down
+
+                onMoved: batterymonitor.keyboardBrightness = value
+
+                // Manually dragging the slider around breaks the binding
+                Connections {
+                    target: batterymonitor
+                    function onKeyboardBrightnessChanged() {
+                        keyboardBrightnessSlider.value = batterymonitor.keyboardBrightness;
+                    }
+                }
+            }
+
+            PowerProfileItem {
+                id: powerProfileItem
+
+                width: scrollView.availableWidth
+
+                KeyNavigation.up: keyboardBrightnessSlider.visible ? keyboardBrightnessSlider : keyboardBrightnessSlider.KeyNavigation.up
+                KeyNavigation.down: batteryRepeater.count > 0 ? batteryRepeater.itemAt(0) : null
+                KeyNavigation.backtab: KeyNavigation.up
+                KeyNavigation.tab: KeyNavigation.down
+
+                activeProfile: dialog.activeProfile
+                inhibitionReason: dialog.inhibitionReason
+                visible: dialog.profiles.length > 0
+                degradationReason: dialog.degradationReason
+                profileHolds: dialog.profileHolds
+                onActivateProfileRequested: dialog.activateProfileRequested(profile)
+            }
+
+            Repeater {
+                id: batteryRepeater
+
+                delegate: BatteryItem {
+                    width: scrollView.availableWidth
+
+                    battery: model
+                    remainingTime: dialog.remainingTime
+                    matchHeightOfSlider: batteryList.firstHeaderItem ? batteryList.firstHeaderItem.slider : null
+
+                    KeyNavigation.up: index === 0 ? batteryList.lastHeaderItem : batteryRepeater.itemAt(index - 1)
+                    KeyNavigation.down: index + 1 < batteryRepeater.count ? batteryRepeater.itemAt(index + 1) : null
+                    KeyNavigation.backtab: KeyNavigation.up
+                    KeyNavigation.tab: KeyNavigation.down
+                }
             }
         }
     }
 }
+

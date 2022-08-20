@@ -15,6 +15,7 @@ import org.kde.plasma.core 2.1 as PlasmaCore
 ColumnLayout {
     id: root
 
+    property alias pmCheckBox: pmCheckBox
     property alias disabled: pmCheckBox.checked
     property bool pluggedIn
 
@@ -35,6 +36,12 @@ ColumnLayout {
         Layout.fillWidth: true
         text: i18nc("Minimize the length of this string as much as possible", "Manually block sleep and screen locking")
         checked: false
+        focus: true
+
+        KeyNavigation.up: dialog.KeyNavigation.up
+        KeyNavigation.down: batteryList.children[0]
+        KeyNavigation.backtab: dialog.KeyNavigation.backtab
+        KeyNavigation.tab: KeyNavigation.down
     }
 
     // Separator line

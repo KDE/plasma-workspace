@@ -11,11 +11,9 @@ import QtQuick.Layouts 1.15
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.core 2.1 as PlasmaCore
 
-RowLayout {
+PlasmaComponents3.ItemDelegate {
     id: root
 
-    property alias icon: image.source
-    property alias label: title.text
     property alias slider: control
     property alias value: control.value
     property alias maximumValue: control.to
@@ -26,48 +24,62 @@ RowLayout {
 
     signal moved()
 
-    spacing: PlasmaCore.Units.gridUnit
+    background.visible: highlighted
+    highlighted: activeFocus
+    hoverEnabled: false
 
-    PlasmaCore.IconItem {
-        id: image
-        Layout.alignment: Qt.AlignTop
-        Layout.preferredWidth: PlasmaCore.Units.iconSizes.medium
-        Layout.preferredHeight: PlasmaCore.Units.iconSizes.medium
-    }
+    Accessible.description: percent.text
+    Accessible.role: Accessible.Slider
+    Keys.forwardTo: [slider]
 
-    ColumnLayout {
-        Layout.fillWidth: true
-        Layout.alignment: Qt.AlignTop
-        spacing: 0
+    contentItem: RowLayout {
+        spacing: PlasmaCore.Units.gridUnit
 
-        RowLayout {
-            Layout.fillWidth: true
-            spacing: PlasmaCore.Units.smallSpacing
-
-            PlasmaComponents3.Label {
-                id: title
-                Layout.fillWidth: true
-            }
-
-            PlasmaComponents3.Label {
-                id: percent
-                Layout.alignment: Qt.AlignRight
-                text: i18nc("Placeholder is brightness percentage", "%1%", root.percentage)
-            }
+        PlasmaCore.IconItem {
+            id: image
+            Layout.alignment: Qt.AlignTop
+            Layout.preferredWidth: PlasmaCore.Units.iconSizes.medium
+            Layout.preferredHeight: PlasmaCore.Units.iconSizes.medium
+            source: root.icon.name
         }
 
-        PlasmaComponents3.Slider {
-            id: control
+        ColumnLayout {
             Layout.fillWidth: true
-            // Don't allow the slider to turn off the screen
-            // Please see https://git.reviewboard.kde.org/r/122505/ for more information
-            from: to > 100 ? 1 : 0
-            stepSize: 1
+            Layout.alignment: Qt.AlignTop
+            spacing: 0
 
-            Accessible.name: root.label
-            Accessible.description: percent.text
+            RowLayout {
+                Layout.fillWidth: true
+                spacing: PlasmaCore.Units.smallSpacing
 
-            onMoved: root.moved()
+                PlasmaComponents3.Label {
+                    id: title
+                    Layout.fillWidth: true
+                    text: root.text
+                }
+
+                PlasmaComponents3.Label {
+                    id: percent
+                    Layout.alignment: Qt.AlignRight
+                    text: i18nc("Placeholder is brightness percentage", "%1%", root.percentage)
+                }
+            }
+
+            PlasmaComponents3.Slider {
+                id: control
+                Layout.fillWidth: true
+
+                activeFocusOnTab: false
+                // Don't allow the slider to turn off the screen
+                // Please see https://git.reviewboard.kde.org/r/122505/ for more information
+                from: to > 100 ? 1 : 0
+                stepSize: 1
+
+                Accessible.name: root.text
+                Accessible.description: percent.text
+
+                onMoved: root.moved()
+            }
         }
     }
 }

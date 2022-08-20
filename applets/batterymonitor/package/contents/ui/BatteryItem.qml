@@ -16,7 +16,7 @@ import org.kde.plasma.workspace.components 2.0
 
 import "logic.js" as Logic
 
-RowLayout {
+PlasmaComponents3.ItemDelegate {
     id: root
 
     // We'd love to use `required` properties, especially since the model provides role names for them;
@@ -54,148 +54,168 @@ RowLayout {
     property PlasmaComponents3.Slider matchHeightOfSlider: PlasmaComponents3.Slider {}
     readonly property real extraMargin: Math.max(0, Math.floor((matchHeightOfSlider.height - chargeBar.height) / 2))
 
-    spacing: PlasmaCore.Units.gridUnit
+    background.visible: highlighted
+    highlighted: activeFocus
+    text: battery["Pretty Name"]
 
-    BatteryIcon {
-        id: batteryIcon
+    Accessible.description: `${isPowerSupplyLabel.text} ${percentLabel.text}; ${details.Accessible.description}`
 
-        Layout.alignment: Qt.AlignTop
-        Layout.preferredWidth: PlasmaCore.Units.iconSizes.medium
-        Layout.preferredHeight: PlasmaCore.Units.iconSizes.medium
+    contentItem: RowLayout {
+        spacing: PlasmaCore.Units.gridUnit
 
-        batteryType: root.battery.Type
-        percent: root.battery.Percent
-        hasBattery: root.isPresent
-        pluggedIn: root.battery.State === "Charging" && root.battery["Is Power Supply"]
-    }
+        BatteryIcon {
+            id: batteryIcon
 
-    ColumnLayout {
-        Layout.fillWidth: true
-        Layout.alignment: root.isPresent ? Qt.AlignTop : Qt.AlignVCenter
-        spacing: 0
+            Layout.alignment: Qt.AlignTop
+            Layout.preferredWidth: PlasmaCore.Units.iconSizes.medium
+            Layout.preferredHeight: PlasmaCore.Units.iconSizes.medium
 
-        RowLayout {
-            spacing: PlasmaCore.Units.smallSpacing
+            batteryType: root.battery.Type
+            percent: root.battery.Percent
+            hasBattery: root.isPresent
+            pluggedIn: root.battery.State === "Charging" && root.battery["Is Power Supply"]
+        }
 
-            PlasmaComponents3.Label {
+        ColumnLayout {
+            Layout.fillWidth: true
+            Layout.alignment: root.isPresent ? Qt.AlignTop : Qt.AlignVCenter
+            spacing: 0
+
+            RowLayout {
+                spacing: PlasmaCore.Units.smallSpacing
+
+                PlasmaComponents3.Label {
+                    Layout.fillWidth: true
+                    elide: Text.ElideRight
+                    text: root.text
+                }
+
+                PlasmaComponents3.Label {
+                    id: isPowerSupplyLabel
+                    text: Logic.stringForBatteryState(root.battery)
+                    visible: root.battery["Is Power Supply"]
+                    enabled: false
+                }
+
+                PlasmaComponents3.Label {
+                    id: percentLabel
+                    horizontalAlignment: Text.AlignRight
+                    visible: root.isPresent
+                    text: i18nc("Placeholder is battery percentage", "%1%", root.battery.Percent)
+                }
+            }
+
+            PlasmaComponents3.ProgressBar {
+                id: chargeBar
+
                 Layout.fillWidth: true
-                elide: Text.ElideRight
-                text: root.battery["Pretty Name"]
-            }
+                Layout.topMargin: root.extraMargin
+                Layout.bottomMargin: root.extraMargin
 
-            PlasmaComponents3.Label {
-                text: Logic.stringForBatteryState(root.battery)
-                visible: root.battery["Is Power Supply"]
-                enabled: false
-            }
-
-            PlasmaComponents3.Label {
-                horizontalAlignment: Text.AlignRight
+                from: 0
+                to: 100
                 visible: root.isPresent
-                text: i18nc("Placeholder is battery percentage", "%1%", root.battery.Percent)
+                value: Number(root.battery.Percent)
             }
-        }
 
-        PlasmaComponents3.ProgressBar {
-            id: chargeBar
+            // This gridLayout basically emulates an at-most-two-rows table with a
+            // single wide fillWidth/columnSpan header. Not really worth it trying
+            // to refactor it into some more clever fancy model-delegate stuff.
+            GridLayout {
+                id: details
 
-            Layout.fillWidth: true
-            Layout.topMargin: root.extraMargin
-            Layout.bottomMargin: root.extraMargin
-
-            from: 0
-            to: 100
-            visible: root.isPresent
-            value: Number(root.battery.Percent)
-        }
-
-        // This gridLayout basically emulates an at-most-two-rows table with a
-        // single wide fillWidth/columnSpan header. Not really worth it trying
-        // to refactor it into some more clever fancy model-delegate stuff.
-        GridLayout {
-            id: details
-
-            Layout.fillWidth: true
-            Layout.topMargin: PlasmaCore.Units.smallSpacing
-
-            columns: 2
-            columnSpacing: PlasmaCore.Units.smallSpacing
-            rowSpacing: 0
-
-            component LeftLabel : PlasmaComponents3.Label {
-                // fillWidth is true, so using internal alignment
-                horizontalAlignment: Text.AlignLeft
                 Layout.fillWidth: true
-                font: PlasmaCore.Theme.smallestFont
-                wrapMode: Text.WordWrap
-                enabled: false
-            }
-            component RightLabel : PlasmaComponents3.Label {
-                // fillWidth is false, so using external (grid-cell-internal) alignment
-                Layout.alignment: Qt.AlignRight
-                Layout.fillWidth: false
-                font: PlasmaCore.Theme.smallestFont
-                enabled: false
+                Layout.topMargin: PlasmaCore.Units.smallSpacing
+
+                columns: 2
+                columnSpacing: PlasmaCore.Units.smallSpacing
+                rowSpacing: 0
+
+                Accessible.description: {
+                    let description = [];
+                    for (let i = 0; i < children.length; i++) {
+                        if (children[i].visible && children[i].hasOwnProperty("text")) {
+                            description.push(children[i].text);
+                        }
+                    }
+                    return description.join(" ");
+                }
+
+                component LeftLabel : PlasmaComponents3.Label {
+                    // fillWidth is true, so using internal alignment
+                    horizontalAlignment: Text.AlignLeft
+                    Layout.fillWidth: true
+                    font: PlasmaCore.Theme.smallestFont
+                    wrapMode: Text.WordWrap
+                    enabled: false
+                }
+                component RightLabel : PlasmaComponents3.Label {
+                    // fillWidth is false, so using external (grid-cell-internal) alignment
+                    Layout.alignment: Qt.AlignRight
+                    Layout.fillWidth: false
+                    font: PlasmaCore.Theme.smallestFont
+                    enabled: false
+                }
+
+                PlasmaComponents3.Label {
+                    Layout.fillWidth: true
+                    Layout.columnSpan: 2
+
+                    text: root.isBroken && typeof root.battery.Capacity !== "undefined"
+                        ? i18n("This battery's health is at only %1% and it should be replaced. Contact the manufacturer.", root.battery.Capacity)
+                        : ""
+                    font: PlasmaCore.Theme.smallestFont
+                    color: PlasmaCore.Theme.neutralTextColor
+                    visible: root.isBroken
+                    wrapMode: Text.WordWrap
+                }
+
+                readonly property bool remainingTimeRowVisible: root.battery !== null
+                    && root.remainingTime > 0
+                    && root.battery["Is Power Supply"]
+                    && ["Discharging", "Charging"].includes(root.battery.State)
+
+                LeftLabel {
+                    text: root.battery.State === "Charging"
+                        ? i18n("Time To Full:")
+                        : i18n("Remaining Time:")
+                    visible: details.remainingTimeRowVisible
+                }
+
+                RightLabel {
+                    text: KCoreAddons.Format.formatDuration(root.remainingTime, KCoreAddons.FormatTypes.HideSeconds)
+                    visible: details.remainingTimeRowVisible
+                }
+
+                readonly property bool healthRowVisible: root.battery !== null
+                    && root.battery["Is Power Supply"]
+                    && root.battery.Capacity !== ""
+                    && typeof root.battery.Capacity === "number"
+                    && !root.isBroken
+
+                LeftLabel {
+                    text: i18n("Battery Health:")
+                    visible: details.healthRowVisible
+                }
+
+                RightLabel {
+                    text: details.healthRowVisible
+                        ? i18nc("Placeholder is battery health percentage", "%1%", root.battery.Capacity)
+                        : ""
+                    visible: details.healthRowVisible
+                }
             }
 
-            PlasmaComponents3.Label {
+            InhibitionHint {
                 Layout.fillWidth: true
-                Layout.columnSpan: 2
+                Layout.topMargin: PlasmaCore.Units.smallSpacing
 
-                text: root.isBroken && typeof root.battery.Capacity !== "undefined"
-                    ? i18n("This battery's health is at only %1% and it should be replaced. Contact the manufacturer.", root.battery.Capacity)
-                    : ""
-                font: PlasmaCore.Theme.smallestFont
-                color: PlasmaCore.Theme.neutralTextColor
-                visible: root.isBroken
-                wrapMode: Text.WordWrap
+                readonly property var chargeStopThreshold: pmSource.data["Battery"] ? pmSource.data["Battery"]["Charge Stop Threshold"] : undefined
+                readonly property bool pluggedIn: pmSource.data["AC Adapter"] !== undefined && pmSource.data["AC Adapter"]["Plugged in"]
+                visible: pluggedIn && root.isPowerSupply && typeof chargeStopThreshold === "number" && chargeStopThreshold > 0 && chargeStopThreshold < 100
+                iconSource: "kt-speed-limits" // FIXME good icon
+                text: i18n("Battery is configured to charge up to approximately %1%.", chargeStopThreshold || 0)
             }
-
-            readonly property bool remainingTimeRowVisible: root.battery !== null
-                && root.remainingTime > 0
-                && root.battery["Is Power Supply"]
-                && ["Discharging", "Charging"].includes(root.battery.State)
-
-            LeftLabel {
-                text: root.battery.State === "Charging"
-                    ? i18n("Time To Full:")
-                    : i18n("Remaining Time:")
-                visible: details.remainingTimeRowVisible
-            }
-
-            RightLabel {
-                text: KCoreAddons.Format.formatDuration(root.remainingTime, KCoreAddons.FormatTypes.HideSeconds)
-                visible: details.remainingTimeRowVisible
-            }
-
-            readonly property bool healthRowVisible: root.battery !== null
-                && root.battery["Is Power Supply"]
-                && root.battery.Capacity !== ""
-                && typeof root.battery.Capacity === "number"
-                && !root.isBroken
-
-            LeftLabel {
-                text: i18n("Battery Health:")
-                visible: details.healthRowVisible
-            }
-
-            RightLabel {
-                text: details.healthRowVisible
-                    ? i18nc("Placeholder is battery health percentage", "%1%", root.battery.Capacity)
-                    : ""
-                visible: details.healthRowVisible
-            }
-        }
-
-        InhibitionHint {
-            Layout.fillWidth: true
-            Layout.topMargin: PlasmaCore.Units.smallSpacing
-
-            readonly property var chargeStopThreshold: pmSource.data["Battery"] ? pmSource.data["Battery"]["Charge Stop Threshold"] : undefined
-            readonly property bool pluggedIn: pmSource.data["AC Adapter"] !== undefined && pmSource.data["AC Adapter"]["Plugged in"]
-            visible: pluggedIn && root.isPowerSupply && typeof chargeStopThreshold === "number" && chargeStopThreshold > 0 && chargeStopThreshold < 100
-            iconSource: "kt-speed-limits" // FIXME good icon
-            text: i18n("Battery is configured to charge up to approximately %1%.", chargeStopThreshold || 0)
         }
     }
 }
