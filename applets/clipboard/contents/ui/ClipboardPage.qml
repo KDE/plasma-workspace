@@ -182,6 +182,9 @@ Menu {
                 clipboardMenu.view.currentIndex = -1;
                 filter.forceActiveFocus();
                 filter.selectAll();
+            } else if (filter.activeFocus) {
+                event.accepted = false;
+                return;
             } else {
                 clipboardMenu.view.decrementCurrentIndex();
                 goToCurrent();
