@@ -216,6 +216,7 @@ Item {
 
             // We need to add margin on the top so it matches the dialog's own margin
             Layout.topMargin: mergeHeadings ? 0 : dialog.margins.top
+
             onVisibleChanged: {
                 if (visible) {
                     forceActiveFocus();

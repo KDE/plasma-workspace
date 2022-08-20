@@ -4,9 +4,9 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.4
-import QtQuick.Layouts 1.1
-import QtQuick.Controls 1.4
+import QtQuick 2.15
+import QtQuick.Layouts 1.15
+import QtQuick.Controls 2.15
 //needed for units
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
@@ -32,6 +32,10 @@ StackView {
     property int footerHeight: mergeFooters ? activeApplet.fullRepresentationItem.footer.height : 0
 
     onActiveAppletChanged: {
+        if (currentItem !== null) {
+            clear();
+        }
+
         mainStack.appletHasHeading = false
         mainStack.appletHasFooter = false
         if (activeApplet != null) {
@@ -55,9 +59,18 @@ StackView {
                 }
             }
 
-            mainStack.replace({item: activeApplet.fullRepresentationItem, immediate: !systemTrayState.expanded, properties: {focus: true}});
+            let unFlipped = systemTrayState.oldVisualIndex < systemTrayState.newVisualIndex;
+            if (Qt.application.layoutDirection !== Qt.LeftToRight) {
+                unFlipped = !unFlipped;
+            }
+
+            mainStack.push(activeApplet.fullRepresentationItem, {
+                "width": Qt.binding(() => mainStack.width),
+                "height": Qt.binding(() => mainStack.height),
+                "focus": true,
+            }, systemTrayState.expanded ? (unFlipped ? StackView.PushTransition : StackView.PopTransition) : StackView.Immediate);
         } else {
-            mainStack.replace(emptyPage);
+            mainStack.clear();
         }
     }
 
@@ -71,75 +84,7 @@ StackView {
         target: Plasmoid.self
         function onAppletRemoved(applet) {
             if (applet === systemTrayState.activeApplet) {
-                mainStack.clear()
-            }
-        }
-    }
-    //used to animate away to nothing
-    Item {
-        id: emptyPage
-    }
-
-    delegate: StackViewDelegate {
-        id: transitioner
-        function transitionFinished(properties) {
-            properties.exitItem.opacity = 1
-        }
-        property bool goingLeft: {
-            const unFlipped = systemTrayState.oldVisualIndex < systemTrayState.newVisualIndex
-
-            if (Qt.application.layoutDirection == Qt.LeftToRight) {
-                return unFlipped
-            } else {
-                return !unFlipped
-            }
-        }
-        replaceTransition: StackViewTransition {
-            ParallelAnimation {
-                PropertyAnimation {
-                    target: enterItem
-                    property: "x"
-                    from: root.vertical ? 0 : (transitioner.goingLeft ? enterItem.width : -enterItem.width)
-                    to: 0
-                    easing.type: Easing.InOutQuad
-                    duration: PlasmaCore.Units.shortDuration
-                }
-                SequentialAnimation {
-                    PropertyAction {
-                        target: enterItem
-                        property: "opacity"
-                        value: 0
-                    }
-                    PauseAnimation {
-                        duration: root.vertical ? (PlasmaCore.Units.shortDuration/2) : 0
-                    }
-                    PropertyAnimation {
-                        target: enterItem
-                        property: "opacity"
-                        from: 0
-                        to: 1
-                        easing.type: Easing.InOutQuad
-                        duration: (PlasmaCore.Units.shortDuration/2)
-                    }
-                }
-            }
-            ParallelAnimation {
-                PropertyAnimation {
-                    target: exitItem
-                    property: "x"
-                    from: 0
-                    to: root.vertical ? 0 : (transitioner.goingLeft ? -exitItem.width : exitItem.width)
-                    easing.type: Easing.InOutQuad
-                    duration: PlasmaCore.Units.shortDuration
-                }
-                PropertyAnimation {
-                    target: exitItem
-                    property: "opacity"
-                    from: 1
-                    to: 0
-                    easing.type: Easing.InOutQuad
-                    duration: PlasmaCore.Units.shortDuration/2
-                }
+                mainStack.clear();
             }
         }
     }
