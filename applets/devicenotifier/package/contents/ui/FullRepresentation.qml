@@ -27,9 +27,8 @@ PlasmaExtras.Representation {
     Layout.maximumWidth: PlasmaCore.Units.gridUnit * 80
     Layout.maximumHeight: PlasmaCore.Units.gridUnit * 40
 
+    focus: true
     collapseMarginsHint: true
-
-    Keys.forwardTo: [notifierDialog]
 
     header: PlasmaExtras.PlasmoidHeading {
         visible: !(Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentDrawsPlasmoidHeading) && devicenotifier.mountedRemovables > 1
@@ -128,6 +127,8 @@ PlasmaExtras.Representation {
         anchors.fill: parent
         contentWidth: availableWidth - contentItem.leftMargin - contentItem.rightMargin
 
+        focus: true
+
         contentItem: ListView {
             id: notifierDialog
             focus: true
@@ -153,6 +154,9 @@ PlasmaExtras.Representation {
             //acceptable since one doesn't have a billion of devices
             cacheBuffer: 1000
 
+            KeyNavigation.backtab: fullRep.KeyNavigation.backtab
+            KeyNavigation.up: fullRep.KeyNavigation.up
+
             // FIXME: the model is sorted by timestamp, not type, this results in sections possibly getting listed
             //   multiple times
             section {
@@ -166,11 +170,6 @@ PlasmaExtras.Representation {
                         text: section
                     }
                 }
-            }
-
-            Keys.onDownPressed: {
-                notifierDialog.incrementCurrentIndex();
-                notifierDialog.currentItem.forceActiveFocus();
             }
 
             Loader {
