@@ -130,6 +130,7 @@ ColumnLayout {
             PlasmaCore.ColorScope.inherit: false
 
             inGroup: notificationItem.inGroup
+            inHistory: notificationItem.inHistory
 
             notificationType: notificationItem.notificationType
             jobState: notificationItem.jobState

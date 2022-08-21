@@ -23,6 +23,7 @@ import "global"
 RowLayout {
     id: notificationHeading
     property bool inGroup
+    property bool inHistory
     property int notificationType
 
     property var applicationIconSource
@@ -114,7 +115,10 @@ RowLayout {
 
             var deltaMinutes = Math.floor((Date.now() - time.getTime()) / 1000 / 60);
             if (deltaMinutes < 1) {
-                return "";
+                // "Just now" is implied by
+                return notificationHeading.inHistory
+                    ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Notification was added less than a minute ago, keep short", "Just now")
+                    : "";
             }
 
             // Received less than an hour ago, show relative minutes
