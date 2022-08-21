@@ -176,7 +176,6 @@ void ShellCorona::init()
     dashboardAction->setAutoRepeat(true);
     dashboardAction->setCheckable(true);
     dashboardAction->setIcon(QIcon::fromTheme(QStringLiteral("dashboard-show")));
-    dashboardAction->setData(Plasma::Types::ControlAction);
     KGlobalAccel::self()->setGlobalShortcut(dashboardAction, Qt::CTRL | Qt::Key_F12);
 
     checkAddPanelAction();
@@ -187,7 +186,6 @@ void ShellCorona::init()
     connect(activityAction, &QAction::triggered, this, &ShellCorona::toggleActivityManager);
     activityAction->setText(i18n("Show Activity Switcher"));
     activityAction->setIcon(QIcon::fromTheme(QStringLiteral("activities")));
-    activityAction->setData(Plasma::Types::ConfigureAction);
     activityAction->setShortcut(QKeySequence(QStringLiteral("alt+d, alt+a")));
     activityAction->setShortcutContext(Qt::ApplicationShortcut);
 
@@ -197,7 +195,6 @@ void ShellCorona::init()
     QObject::connect(stopActivityAction, &QAction::triggered, this, &ShellCorona::stopCurrentActivity);
 
     stopActivityAction->setText(i18n("Stop Current Activity"));
-    stopActivityAction->setData(Plasma::Types::ControlAction);
     stopActivityAction->setVisible(false);
 
     KGlobalAccel::self()->setGlobalShortcut(stopActivityAction, Qt::META | Qt::Key_S);
@@ -205,7 +202,6 @@ void ShellCorona::init()
     QAction *previousActivityAction = actions()->addAction(QStringLiteral("switch to previous activity"));
     connect(previousActivityAction, &QAction::triggered, this, &ShellCorona::previousActivity);
     previousActivityAction->setText(i18n("Switch to Previous Activity"));
-    previousActivityAction->setData(Plasma::Types::ConfigureAction);
     previousActivityAction->setShortcutContext(Qt::ApplicationShortcut);
 
     KGlobalAccel::self()->setGlobalShortcut(previousActivityAction, QKeySequence());
@@ -213,7 +209,6 @@ void ShellCorona::init()
     QAction *nextActivityAction = actions()->addAction(QStringLiteral("switch to next activity"));
     connect(nextActivityAction, &QAction::triggered, this, &ShellCorona::nextActivity);
     nextActivityAction->setText(i18n("Switch to Next Activity"));
-    nextActivityAction->setData(Plasma::Types::ConfigureAction);
     nextActivityAction->setShortcutContext(Qt::ApplicationShortcut);
 
     KGlobalAccel::self()->setGlobalShortcut(nextActivityAction, QKeySequence());
@@ -1798,7 +1793,6 @@ void ShellCorona::checkAddPanelAction()
 
     if (m_addPanelAction) {
         m_addPanelAction->setText(i18n("Add Panel"));
-        m_addPanelAction->setData(Plasma::Types::AddAction);
         m_addPanelAction->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
         actions()->addAction(QStringLiteral("add panel"), m_addPanelAction);
     }
