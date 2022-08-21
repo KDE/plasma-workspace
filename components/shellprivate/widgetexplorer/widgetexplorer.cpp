@@ -281,7 +281,7 @@ void WidgetExplorerPrivate::addContainment(Containment *containment)
     foreach (Applet *applet, containment->applets()) {
         if (applet->pluginMetaData().isValid()) {
             Containment *childContainment = applet->property("containment").value<Containment *>();
-            if (childContainment) {
+            if (childContainment && childContainment != containment) {
                 addContainment(childContainment);
             }
             runningApplets[applet->pluginMetaData().pluginId()]++;
