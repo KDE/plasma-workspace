@@ -88,6 +88,7 @@ Name[hu]=Parancs futtatása a vágólap tartalmával
 Name[ia]=Executa  commando sur contentos de area de transferentia
 Name[id]=Jalankan perintah pada konten-konten papan-klip
 Name[it]=Esegui comando sui contenuti degli appunti
+Name[ja]=クリップボードのコマンドを実行する
 Name[ko]=클립보드 내용에서 명령 실행하기
 Name[lt]=Vykdyti komandas su iškarpinės turiniu
 Name[ml]=ഓര്‍മ്മചെപ്പ് ഉള്ളടക്കങ്ങളിൽ ആജ്ഞ പ്രവർത്തിപ്പിക്കുക
