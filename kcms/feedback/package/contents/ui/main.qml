@@ -77,7 +77,7 @@ SimpleKCM {
                 Kirigami.FormData.label: i18n("Plasma:")
                 readonly property var currentMode: modeOptions[value]
                 Layout.fillWidth: true
-                Layout.maximumWidth: Kirigami.Units.gridUnit * 21
+                Layout.maximumWidth: Kirigami.Units.gridUnit * 22
 
                 readonly property var modeOptions: [UserFeedback.Provider.NoTelemetry, UserFeedback.Provider.BasicSystemInformation, UserFeedback.Provider.BasicUsageStatistics,
                                                     UserFeedback.Provider.DetailedSystemInformation, UserFeedback.Provider.DetailedUsageStatistics]
@@ -115,7 +115,8 @@ SimpleKCM {
             Kirigami.Heading {
                 Layout.fillWidth: true
                 Layout.alignment: Qt.AlignHCenter
-                Layout.maximumWidth: Kirigami.Units.gridUnit * 21
+                Layout.preferredWidth: Kirigami.Units.gridUnit * 22
+                Layout.maximumWidth: Kirigami.Units.gridUnit * 29
                 wrapMode: Text.WordWrap
                 level: 3
                 text: feedbackController.telemetryName(statisticsModeSlider.currentMode)
@@ -126,7 +127,7 @@ SimpleKCM {
             QQC2.Label {
                 Layout.fillWidth: true
                 Layout.alignment: Qt.AlignHCenter
-                Layout.maximumWidth: Kirigami.Units.gridUnit * 21
+                Layout.maximumWidth: Kirigami.Units.gridUnit * 22
                 wrapMode: Text.WordWrap
 
                 text: i18n("The following information will be sent:")
