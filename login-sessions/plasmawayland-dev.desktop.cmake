@@ -21,6 +21,7 @@ Name[hi]=प्लाज़्मा (विकास, वैलेंड ${CMAK
 Name[hu]=Plasma (Fejlesztői verzió, Wayland ${CMAKE_INSTALL_FULL_BINDIR})
 Name[ia]=Plasma (Disveloppamento, Wayland ${CMAKE_INSTALL_FULL_BINDIR})
 Name[id]=Plasma (Development, Wayland ${CMAKE_INSTALL_FULL_BINDIR})
+Name[is]=Plasma (Þróunarútgáfa, Wayland ${CMAKE_INSTALL_FULL_BINDIR})
 Name[it]=Plasma (Sviluppo, Wayland ${CMAKE_INSTALL_FULL_BINDIR})
 Name[ja]=Plasma (Development, Wayland ${CMAKE_INSTALL_FULL_BINDIR})
 Name[ka]=Plasma (Development, Wayland ${CMAKE_INSTALL_FULL_BINDIR})
