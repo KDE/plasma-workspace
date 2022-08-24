@@ -44,6 +44,7 @@ Item {
             }
             candidate = candidate.parent;
         }
+        return null;
     }
 
     Component.onCompleted: {
