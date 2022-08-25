@@ -100,5 +100,11 @@ void GtkPage::defaults()
 void GtkPage::load()
 {
     m_gtkThemesModel->load();
+    m_gtkThemesModel->setSelectedTheme(m_gtkConfigInterface.gtkTheme());
     Q_EMIT selectGtkThemeInCombobox(gtkThemeFromConfig());
+}
+
+bool GtkPage::isDefaults() const
+{
+    return m_gtkThemesModel->selectedTheme() == QLatin1String("Breeze");
 }
