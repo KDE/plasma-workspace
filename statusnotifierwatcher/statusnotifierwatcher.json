@@ -17,6 +17,7 @@
         "Description[hu]": "Kezeli az állapotértesítést nyújtó szolgáltatásokat",
         "Description[ia]": "Il gere servicios que forni interfacies de usator pro notificator de stato",
         "Description[id]": "Mengelola layanan yang menyediakan penotifikasi status antarmuka pengguna",
+        "Description[is]": "Stjórnar þjónustum sem sjá um stöðutilkynningar notandaviðmóta",
         "Description[it]": "Gestisce i servizi che forniscono le interfacce utente al notificatore di stato",
         "Description[ja]": "ステータス通知ユーザインターフェースを提供するサービスを管理",
         "Description[ko]": "상태 알림 인터페이스를 제공하는 서비스를 관리합니다",

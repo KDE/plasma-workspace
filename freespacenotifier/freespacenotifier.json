@@ -17,6 +17,7 @@
         "Description[hu]": "Figyelmeztet, ha kezd elfogyni a szabad lemezterület a saját könyvtárában",
         "Description[ia]": "Il avisa quando il termina le spatio sur tu dossier domo (initio)",
         "Description[id]": "Memperingatkan jika kehabisan ruang kosong di folder berandamu",
+        "Description[is]": "Varar við þegar lítið pláss er eftir í heimamöppunni þinni",
         "Description[it]": "Avvisa quando lo spazio nella tua cartella Home si sta esaurendo",
         "Description[ja]": "ホームフォルダの空き領域が少なくなったとき警告します",
         "Description[ko]": "홈 폴더에 공간이 없을 때 알려 줍니다",
