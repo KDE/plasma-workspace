@@ -87,19 +87,18 @@ KCMStyle::KCMStyle(QObject *parent, const KPluginMetaData &data, const QVariantL
     connect(styleSettings(), &StyleSettings::iconsInMenusChanged, this, [this] {
         m_effectsDirty = true;
     });
+
+    m_gtkPage = new GtkPage(this);
+    connect(m_gtkPage, &GtkPage::gtkThemeSettingsChanged, this, [this]() {
+        settingsChanged();
+        setNeedsSave(true);
+    });
 }
 
 KCMStyle::~KCMStyle() = default;
 
-GtkPage *KCMStyle::gtkPage()
+GtkPage *KCMStyle::gtkPage() const
 {
-    if (!m_gtkPage) {
-        m_gtkPage = new GtkPage(this);
-        connect(m_gtkPage, &GtkPage::gtkThemeSettingsChanged, this, [this]() {
-            setNeedsSave(true);
-        });
-    }
-
     return m_gtkPage;
 }
 
@@ -249,9 +248,7 @@ void KCMStyle::load()
 {
     checkGtkConfigKdedModuleLoaded();
 
-    if (m_gtkPage) {
-        m_gtkPage->load();
-    }
+    m_gtkPage->load();
 
     ManagedConfigModule::load();
     m_model->load();
@@ -264,9 +261,7 @@ void KCMStyle::load()
 
 void KCMStyle::save()
 {
-    if (m_gtkPage) {
-        m_gtkPage->save();
-    }
+    m_gtkPage->save();
 
     // Check whether the new style can actually be loaded before saving it.
     // Otherwise apps will use the default style despite something else having been written to the config
@@ -320,9 +315,7 @@ void KCMStyle::save()
 
 void KCMStyle::defaults()
 {
-    if (m_gtkPage) {
-        m_gtkPage->defaults();
-    }
+    m_gtkPage->defaults();
 
     // TODO the old code had a fallback chain but do we actually support not having Breeze for Plasma?
     // defaultStyle() -> oxygen -> plastique -> windows -> platinum -> motif
@@ -339,6 +332,11 @@ void KCMStyle::loadSettingsToModel()
     const QMetaEnum toolBarStyleEnum = QMetaEnum::fromType<ToolBarStyle>();
     setMainToolBarStyle(static_cast<ToolBarStyle>(toolBarStyleEnum.keyToValue(qUtf8Printable(styleSettings()->toolButtonStyle()))));
     setOtherToolBarStyle(static_cast<ToolBarStyle>(toolBarStyleEnum.keyToValue(qUtf8Printable(styleSettings()->toolButtonStyleOtherToolbars()))));
+}
+
+bool KCMStyle::isDefaults() const
+{
+    return m_gtkPage->isDefaults();
 }
 
 #include "kcmstyle.moc"

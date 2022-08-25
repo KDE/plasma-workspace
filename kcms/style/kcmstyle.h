@@ -52,7 +52,7 @@ public:
     };
     Q_ENUM(ToolBarStyle)
 
-    GtkPage *gtkPage();
+    GtkPage *gtkPage() const;
 
     StylesModel *model() const;
 
@@ -74,6 +74,8 @@ public:
     void load() override;
     void save() override;
     void defaults() override;
+
+    bool isDefaults() const override;
 
 Q_SIGNALS:
     void showErrorMessage(const QString &message);
