@@ -26,6 +26,7 @@ public:
     Q_INVOKABLE void load();
     void save();
     void defaults();
+    bool isDefaults() const;
 
 public Q_SLOTS:
     QString gtkThemeFromConfig();
