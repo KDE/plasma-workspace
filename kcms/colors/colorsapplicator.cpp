@@ -279,17 +279,17 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
         if (tintAccent) {
             const auto tintedWindowBackground = tintColor(windowBackground, getAccent(), tintFactor);
             if (!applyAccentToTitlebar) {
-                groupWMOut.writeEntry("activeBackground", tintedWindowBackground);
-                groupWMOut.writeEntry("activeForeground", accentForeground(tintedWindowBackground, true));
+                groupWMOut.writeEntry("activeBackground", tintedWindowBackground, writeConfigFlag);
+                groupWMOut.writeEntry("activeForeground", accentForeground(tintedWindowBackground, true), writeConfigFlag);
             }
-            groupWMOut.writeEntry("inactiveBackground", tintedWindowBackground);
-            groupWMOut.writeEntry("inactiveForeground", accentForeground(tintedWindowBackground, false));
+            groupWMOut.writeEntry("inactiveBackground", tintedWindowBackground, writeConfigFlag);
+            groupWMOut.writeEntry("inactiveForeground", accentForeground(tintedWindowBackground, false), writeConfigFlag);
         }
 
         if (applyAccentToTitlebar) {
             const auto accentedWindowBackground = accentBackground(getAccent(), windowBackground);
-            groupWMOut.writeEntry("activeBackground", accentedWindowBackground);
-            groupWMOut.writeEntry("activeForeground", accentForeground(accentedWindowBackground, true));
+            groupWMOut.writeEntry("activeBackground", accentedWindowBackground, writeConfigFlag);
+            groupWMOut.writeEntry("activeForeground", accentForeground(accentedWindowBackground, true), writeConfigFlag);
         }
     }
 
