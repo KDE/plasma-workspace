@@ -340,29 +340,23 @@ KCM.SimpleKCM {
             }
 
             QQC2.Label {
-                id: manualTimingsError1
-                visible: evenBeginManField.getNormedDate() - mornBeginManField.getNormedDate() <= 0
-                font.italic: true
-                text: i18n("Error: Morning is before evening.")
-            }
-
-            QQC2.Label {
-                id: manualTimingsError2
+                id: manualTimingsError
                 visible: {
-                    if (manualTimingsError1.visible) {
-                        return false;
-                    }
-                    var trTime = transTimeField.backend * 60 * 1000;
+                    var day = 86400000;
+                    var trTime = transTimeField.value * 60 * 1000;
                     var mor = mornBeginManField.getNormedDate();
                     var eve = evenBeginManField.getNormedDate();
 
-                    return eve - mor <= trTime || eve - mor >= 86400000 - trTime;
+                    var diffMorEve = eve > mor ? eve - mor : mor - eve;
+                    var diffMin = Math.min(diffMorEve, day - diffMorEve);
+
+                    return diffMin <= trTime;
                 }
                 font.italic: true
                 text: i18n("Error: Transition time overlaps.")
             }
         }
-
+        
         // Show location chooser in manual location mode
         LocationsFixedView {
             visible: kcm.nightColorSettings.mode === NightColorMode.Location
