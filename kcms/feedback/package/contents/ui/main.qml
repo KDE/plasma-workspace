@@ -151,12 +151,11 @@ SimpleKCM {
                                 visible: parent.containsMouse
                                 RowLayout {
                                     id: iconsLayout
-                                    anchors.centerIn: parent
                                     Repeater {
                                         model: modelData.icons
                                         delegate: Kirigami.Icon {
-                                            height: Kirigami.Units.gridUnit * 2
-                                            width: Kirigami.Units.gridUnit * 2
+                                            implicitHeight: Kirigami.Units.iconSizes.medium
+                                            implicitWidth: Kirigami.Units.iconSizes.medium
                                             source: modelData
                                         }
                                     }
