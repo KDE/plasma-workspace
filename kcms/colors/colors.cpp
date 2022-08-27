@@ -407,31 +407,20 @@ void KCMColors::save()
     m_activeSchemeEdited = false;
 
     processPendingDeletions();
+
+    QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/kdeglobals"), QStringLiteral("org.kde.kconfig.notify"), QStringLiteral("ConfigChanged"));
+    const QHash<QString, QByteArrayList> changes = {{QStringLiteral("General"), {"accentColorFromWallpaper", "AccentColor"}}};
+    message.setArguments({QVariant::fromValue(changes)});
+    QDBusConnection::sessionBus().send(message);
 }
 
 void KCMColors::saveColors()
 {
     const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("color-schemes/%1.colors").arg(m_model->selectedScheme()));
-    // hard to figure out why mutating from the colours settings
-    // doesn't affect the applicator's view on config, but operating on the
-    // globalConfig directly works.
-    // code already a mess, so might as well just do what works.
-    KSharedConfigPtr globalConfig = KSharedConfig::openConfig(QStringLiteral("kdeglobals"));
 
-    auto setGlobals = [=]() {
-        globalConfig->group("General").writeEntry("AccentColor", QColor());
-        globalConfig->group("General").writeEntry("accentColorFromWallpaper", accentColorFromWallpaper(), KConfig::Notify);
-        if (accentColor() != QColor(Qt::transparent)) {
-            globalConfig->group("General").writeEntry("AccentColor", accentColor(), KConfig::Notify);
-        } else {
-            globalConfig->group("General").deleteEntry("AccentColor", KConfig::Notify);
-        }
-    };
-
-    setGlobals();
-    applyScheme(path, colorsSettings()->config());
+    // Can't use KConfig readEntry because the config is not saved yet
+    applyScheme(path, colorsSettings()->config(), KConfig::Normal, accentColor());
     m_selectedSchemeDirty = false;
-    setGlobals();
 }
 
 QColor KCMColors::accentBackground(const QColor &accent, const QColor &background)

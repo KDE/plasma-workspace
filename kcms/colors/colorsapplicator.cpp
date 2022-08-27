@@ -121,20 +121,17 @@ static void copyEntry(KConfigGroup &from, KConfigGroup &to, const QString &entry
     }
 }
 
-void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig::WriteConfigFlags writeConfigFlag)
+void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig::WriteConfigFlags writeConfigFlag, std::optional<QColor> accentColor)
 {
-    KSharedConfigPtr globalConfig = KSharedConfig::openConfig(QStringLiteral("kdeglobals"));
-    globalConfig->sync();
-
-    const auto getAccent = [globalConfig]() {
-        return globalConfig->group("General").readEntry<QColor>("AccentColor", QColor());
+    const auto getAccent = [configOutput, &accentColor]() {
+        return accentColor.value_or(configOutput->group("General").readEntry("AccentColor", QColor()));
     };
 
-    const auto hasAccent = [globalConfig, &getAccent]() {
+    const auto hasAccent = [configOutput, &getAccent]() {
         if (getAccent() == QColor(Qt::transparent)) {
             return false;
         }
-        return globalConfig->group("General").hasKey("AccentColor");
+        return configOutput->group("General").hasKey("AccentColor");
     };
 
     // Using KConfig::SimpleConfig because otherwise Header colors won't be

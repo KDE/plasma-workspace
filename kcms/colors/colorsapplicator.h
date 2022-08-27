@@ -7,6 +7,8 @@
 
 #pragma once
 
+#include <optional>
+
 #include <QColor>
 #include <QString>
 
@@ -73,7 +75,10 @@ inline QColor accentForeground(const QColor &accent, const bool &isActive)
  * @param colorFilePath The scheme color file path
  * @param configOut The config which holds the information on which scheme is currently selected, and what colors it contains
  */
-void applyScheme(const QString &colorSchemePath, KConfig *configOut, KConfig::WriteConfigFlags writeFlags = KConfig::Normal);
+void applyScheme(const QString &colorSchemePath,
+                 KConfig *configOut,
+                 KConfig::WriteConfigFlags writeFlags = KConfig::Normal,
+                 std::optional<QColor> accentColor = std::nullopt);
 
 const qreal DefaultTintFactor = 0.15;
 
