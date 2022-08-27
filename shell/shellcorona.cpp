@@ -1503,13 +1503,13 @@ void ShellCorona::toggleDashboard()
     setDashboardShown(!KWindowSystem::showingDesktop());
 }
 
-QString ShellCorona::color() const
+QRgb ShellCorona::color() const
 {
     auto const primaryDesktopViewExists = m_desktopViewForScreen.contains(m_screenPool->primaryScreen());
     if (primaryDesktopViewExists) {
-        return m_desktopViewForScreen[m_screenPool->primaryScreen()]->accentColor();
+        return m_desktopViewForScreen[m_screenPool->primaryScreen()]->accentColor().rgba();
     }
-    return QStringLiteral("#00FFFFFF");
+    return QColor(Qt::transparent).rgba();
 }
 
 QString ShellCorona::evaluateScript(const QString &script)

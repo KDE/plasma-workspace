@@ -16,7 +16,7 @@
       <arg name="output" type="s" direction="out"/>
     </method>
     <method name="color">
-      <arg name="output" type="s" direction="out"/>
+      <arg name="output" type="u" direction="out"/>
     </method>
     <signal name="colorChanged">
       <arg name="changedColor" type="s" direction="out"/>

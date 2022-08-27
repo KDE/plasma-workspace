@@ -18,7 +18,7 @@ public:
     explicit AccentColorService(QObject *parent, const QList<QVariant> &);
 
 public Q_SLOTS:
-    void setAccentColor(const QString &color);
+    void setAccentColor(unsigned accentColor);
 
 private:
     ColorsSettings *m_settings;

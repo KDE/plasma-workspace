@@ -36,7 +36,7 @@
 
 DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
     : PlasmaQuick::ContainmentView(corona, nullptr)
-    , m_accentColor("transparent")
+    , m_accentColor(Qt::transparent)
     , m_windowType(Desktop)
     , m_shellSurface(nullptr)
 {
@@ -82,7 +82,7 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
     connect(static_cast<ShellCorona *>(corona), &ShellCorona::accentColorFromWallpaperEnabledChanged, this, &DesktopView::usedInAccentColorChanged);
     connect(this, &DesktopView::usedInAccentColorChanged, this, [this] {
         if (!usedInAccentColor()) {
-            m_accentColor = QStringLiteral("transparent");
+            m_accentColor = Qt::transparent;
             Q_EMIT accentColorChanged(m_accentColor);
         }
     });
@@ -152,12 +152,12 @@ bool DesktopView::usedInAccentColor() const
     return static_cast<ShellCorona *>(corona())->accentColorFromWallpaperEnabled();
 }
 
-QString DesktopView::accentColor() const
+QColor DesktopView::accentColor() const
 {
     return m_accentColor;
 }
 
-void DesktopView::setAccentColor(const QString &accentColor)
+void DesktopView::setAccentColor(const QColor &accentColor)
 {
     if (accentColor == m_accentColor) {
         return;
@@ -444,12 +444,12 @@ void DesktopView::setupWaylandIntegration()
     }
 }
 
-void DesktopView::setAccentColorFromWallpaper(const QString &accentColor)
+void DesktopView::setAccentColorFromWallpaper(const QColor &accentColor)
 {
     if (!usedInAccentColor()) {
         return;
     }
     QDBusMessage applyAccentColor = QDBusMessage::createMethodCall("org.kde.plasmashell.accentColor", "/AccentColor", "", "setAccentColor");
-    applyAccentColor << accentColor;
+    applyAccentColor << accentColor.rgba();
     QDBusConnection::sessionBus().send(applyAccentColor);
 }

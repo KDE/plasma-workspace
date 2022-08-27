@@ -24,10 +24,15 @@ AccentColorService::AccentColorService(QObject *parent, const QList<QVariant> &)
     dbus.registerService("org.kde.plasmashell.accentColor");
 }
 
-void AccentColorService::setAccentColor(const QString &accentColor)
+void AccentColorService::setAccentColor(unsigned accentColor)
 {
+    const QColor color = QColor::fromRgba(accentColor);
+    if (!color.isValid()) {
+        return;
+    }
+
     m_settings->load();
-    if (QColor::isValidColor(accentColor) && m_settings->accentColorFromWallpaper()) {
+    if (m_settings->accentColorFromWallpaper()) {
         const QString path =
             QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("color-schemes/%1.colors").arg(m_settings->colorScheme()));
 
@@ -40,7 +45,7 @@ void AccentColorService::setAccentColor(const QString &accentColor)
         // animation start event before we potentially trigger client side changes
         QDBusConnection::sessionBus().call(msg);
 
-        m_settings->setAccentColor(accentColor);
+        m_settings->setAccentColor(color);
         m_settings->save();
         applyScheme(path, m_settings->config(), KConfig::Notify);
         notifyKcmChange(GlobalChangeType::PaletteChanged);

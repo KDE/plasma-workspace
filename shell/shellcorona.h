@@ -140,7 +140,7 @@ Q_SIGNALS:
     // A preview for this containment has been rendered and saved to disk
     void containmentPreviewReady(Plasma::Containment *containment, const QString &path);
     void accentColorFromWallpaperEnabledChanged();
-    void colorChanged(const QString &color);
+    void colorChanged(const QColor &color);
 
 public Q_SLOTS:
     /**
@@ -170,7 +170,7 @@ public Q_SLOTS:
     void toggleWidgetExplorer();
     QString evaluateScript(const QString &string);
     void activateLauncherMenu();
-    QString color() const;
+    QRgb color() const;
 
     QByteArray dumpCurrentLayoutJS() const;
 
