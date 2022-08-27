@@ -24,9 +24,13 @@ Item {
     Connections {
         target: imageWallpaper
         function onLoadingChanged() {
-            if (!imageWallpaper.loading) {
-                wallpapersGrid.resetCurrentIndex();
+            if (imageWallpaper.loading) {
+                return;
             }
+            if (configDialog.currentWallpaper === "org.kde.image" && imageModel.indexOf(cfg_Image) < 0) {
+                imageWallpaper.addUsersWallpaper(cfg_Image);
+            }
+            wallpapersGrid.resetCurrentIndex();
         }
 
         function onWallpaperBrowseCompleted() {

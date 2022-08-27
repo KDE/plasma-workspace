@@ -376,7 +376,7 @@ void ImageBackend::slotWallpaperBrowseCompleted()
 
 QString ImageBackend::addUsersWallpaper(const QUrl &url)
 {
-    auto results = static_cast<ImageProxyModel *>(wallpaperModel())->addBackground(url.toLocalFile());
+    auto results = static_cast<ImageProxyModel *>(wallpaperModel())->addBackground(url.isLocalFile() ? url.toLocalFile() : url.toString());
 
     if (!m_usedInConfig) {
         m_model->commitAddition();
