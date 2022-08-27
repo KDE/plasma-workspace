@@ -126,11 +126,15 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
     KSharedConfigPtr globalConfig = KSharedConfig::openConfig(QStringLiteral("kdeglobals"));
     globalConfig->sync();
 
-    const auto hasAccent = [globalConfig]() {
-        return globalConfig->group("General").hasKey("AccentColor");
-    };
     const auto getAccent = [globalConfig]() {
         return globalConfig->group("General").readEntry<QColor>("AccentColor", QColor());
+    };
+
+    const auto hasAccent = [globalConfig, &getAccent]() {
+        if (getAccent() == QColor(Qt::transparent)) {
+            return false;
+        }
+        return globalConfig->group("General").hasKey("AccentColor");
     };
 
     // Using KConfig::SimpleConfig because otherwise Header colors won't be
