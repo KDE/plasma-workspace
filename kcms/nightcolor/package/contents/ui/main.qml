@@ -78,7 +78,7 @@ KCM.SimpleKCM {
             Layout.alignment: Qt.AlignHCenter
 
             Layout.maximumWidth: Math.round(root.width - (Kirigami.Units.gridUnit * 2))
-            text: i18n("Night Color makes the colors on the screen warmer to reduce eye strain at the time of your choosing.")
+            text: i18n("The blue light filter makes the colors on the screen warmer to reduce eye strain.")
             wrapMode: Text.WordWrap
         }
 
@@ -87,7 +87,7 @@ KCM.SimpleKCM {
 
             QQC2.CheckBox {
                 id: activator
-                text: i18n("Activate Night Color")
+                text: i18n("Activate blue light filter")
                 checked: kcm.nightColorSettings.active
                 onCheckedChanged: kcm.nightColorSettings.active = checked
 
@@ -106,14 +106,68 @@ KCM.SimpleKCM {
             }
 
             GridLayout {
-                Kirigami.FormData.label: i18n("Night Color Temperature:")
-                Kirigami.FormData.buddyFor: tempSlider
+                Kirigami.FormData.label: i18n("Day color temperature:")
+                Kirigami.FormData.buddyFor: tempSliderDay
                 enabled: kcm.nightColorSettings.active
 
                 columns: 4
 
                 QQC2.Slider {
-                    id: tempSlider
+                    id: tempSliderDay
+                    // Match combobox width
+                    Layout.minimumWidth: modeSwitcher.width
+                    from: 1000 // TODO get min/max fron kcfg
+                    to: 6500
+                    stepSize: 100
+                    live: true
+
+                    value: kcm.nightColorSettings.dayTemperature
+
+                    onMoved: {
+                        kcm.nightColorSettings.dayTemperature = value
+                        previewMessage.state = "visible"
+                        previewMessage.text = i18n("This is what day color temperature will look like when active.")
+                        cA.preview(value)
+                    }
+
+                    onPressedChanged: {
+                        previewMessage.state = "invisible"
+                        cA.stopPreview()
+                    }
+
+                    Layout.columnSpan: 3
+
+                    KCM.SettingStateBinding {
+                        configObject: kcm.nightColorSettings
+                        settingName: "DayTemperature"
+                        extraEnabledConditions: kcm.nightColorSettings.active
+                    }
+                }
+                QQC2.Label {
+                        text: i18nc("Color temperature in Kelvin", "%1K", tempSliderDay.value)
+                }
+                //row 2
+                QQC2.Label {
+                    text: i18nc("Night colour red-ish", "Warm")
+                }
+                Item {
+                    Layout.fillWidth: true
+                }
+                QQC2.Label {
+                    text: i18nc("Night colour blue-ish", "Cool")
+                }
+                Item {}
+            }
+
+            GridLayout {
+                Kirigami.FormData.label: i18n("Night color temperature:")
+                Kirigami.FormData.buddyFor: tempSliderNight
+                enabled: kcm.nightColorSettings.active
+
+                columns: 4
+
+                QQC2.Slider {
+                    id: tempSliderNight
                     // Match combobox width
                     Layout.minimumWidth: modeSwitcher.width
                     from: 1000 // TODO get min/max fron kcfg
@@ -126,6 +180,7 @@ KCM.SimpleKCM {
                     onMoved: {
                         kcm.nightColorSettings.nightTemperature = value
                         previewMessage.state = "visible"
+                        previewMessage.text = i18n("This is what night color temperature will look like when active.")
                         cA.preview(value)
                     }
 
@@ -143,7 +198,7 @@ KCM.SimpleKCM {
                     }
                 }
                 QQC2.Label {
-                        text: i18nc("Color temperature in Kelvin", "%1K", tempSlider.value)
+                        text: i18nc("Color temperature in Kelvin", "%1K", tempSliderNight.value)
                 }
                 //row 2
                 QQC2.Label {
@@ -160,7 +215,6 @@ KCM.SimpleKCM {
 
             QQC2.Label {
                 id: previewMessage
-                text: i18n("This is what Night Color will look like when active.")
                 opacity: 0
                 state: "invisible"
                 states: [
@@ -191,13 +245,13 @@ KCM.SimpleKCM {
                 id: modeSwitcher
                 // Work around https://bugs.kde.org/show_bug.cgi?id=403153
                 Layout.minimumWidth: Kirigami.Units.gridUnit * 17
-                Kirigami.FormData.label: i18n("Activation time:")
+                Kirigami.FormData.label: i18n("Switching times:")
                 enabled: activator.checked
                 model: [
-                    i18n("Sunset to sunrise at current location"),
-                    i18n("Sunset to sunrise at manual location"),
-                    i18n("Custom time"),
-                    i18n("Always on")
+                    i18n("Sunset and sunrise at current location"),
+                    i18n("Sunset and sunrise at manual location"),
+                    i18n("Custom times"),
+                    i18n("Always on night color")
                 ]
                 currentIndex: kcm.nightColorSettings.mode
                 onCurrentIndexChanged: {
@@ -268,7 +322,7 @@ KCM.SimpleKCM {
                 Layout.minimumWidth: modeSwitcher.width
                 Layout.maximumWidth: modeSwitcher.width
                 visible: kcm.nightColorSettings.mode === NightColorMode.Timings
-                Kirigami.FormData.label: i18n("Turn on at:")
+                Kirigami.FormData.label: i18n("Begin night color at:")
                 backend: kcm.nightColorSettings.eveningBeginFixed
                 onBackendChanged: {
                     kcm.nightColorSettings.eveningBeginFixed = backend;
@@ -291,7 +345,7 @@ KCM.SimpleKCM {
                 Layout.minimumWidth: modeSwitcher.width
                 Layout.maximumWidth: modeSwitcher.width
                 visible: kcm.nightColorSettings.mode === NightColorMode.Timings
-                Kirigami.FormData.label: i18n("Turn off at:")
+                Kirigami.FormData.label: i18n("Begin day color at:")
                 backend: kcm.nightColorSettings.morningBeginFixed
                 onBackendChanged: {
                     kcm.nightColorSettings.morningBeginFixed = backend;

@@ -1,6 +1,6 @@
 {
     "KPlugin": {
-        "Description": "Adjust color temperature at night to reduce eye strain",
+        "Description": "Adjust color temperature to reduce eye strain",
         "Description[ar]": "يضبط درجة حرارة اللون ليلاً لتقليل إجهاد العين",
         "Description[az]": "Gözə mənfi təsirini azaltmaq üçün gecə rəng temperaturunu ayarlayın",
         "Description[bg]": "Регулирайте цветната температура вечерно време, за да намалите напрежението в очите",
@@ -92,7 +92,7 @@
         "Name[zh_TW]": "夜色模式"
     },
     "X-DocPath": "https://userbase.kde.org/TODOX",
-    "X-KDE-Keywords": "kwin,window,manager,night,colors,redshift,eyes,night mode,colour,dark mode,dark,dim,sleep,eye strain,red,shift,orange,yellow,warm,screen tint,temperature",
+    "X-KDE-Keywords": "kwin,window,manager,night,colors,redshift,eyes,night mode,colour,dark mode,dark,dim,sleep,eye strain,red,shift,orange,yellow,warm,screen tint,temperature,blue,light",
     "X-KDE-Keywords[ar]": "ك.وين,نافذة,مدير,ليلي,ألوان,إرهاق العين,الحمرة,البرتقالي,الأصفر,دافئ,تعتيم الشاشة,درجة الحرارة",
     "X-KDE-Keywords[az]": "kwin,window,manager,night,colors,redshift,eyes,night mode,colour,dark mode,dark,dim,sleep,eye strain,red,shift,orange,yellow,warm,screen tint,temperature,pəncərə,menecer,gecə,rənglər,rəng sürüşməsi,gözlər,narıncı,sarı,xəbərdarlıq,ekranın tonu,hərarət",
     "X-KDE-Keywords[ca]": "kwin,finestra,gestor,nit,colors,desplaçament cap al roig,ulls,mode nit,color,mode fosc,fosc,enfosquiment,dormir,tensió ocular,vermell,desplaçament,taronja,groc,càlid,tint de pantalla,temperatura",

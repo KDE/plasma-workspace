@@ -29,13 +29,13 @@ ColumnLayout {
         wrapMode: Text.Wrap
         Layout.fillWidth: true
         horizontalAlignment: Qt.AlignHCenter
-        text: i18n("Night Color begins changing at %1 and is fully changed by %2", prettyTime(eveningTimings.begin), prettyTime(eveningTimings.end))
+        text: i18n("Color temperature begins changing to night time at %1 and is fully changed by %2", prettyTime(eveningTimings.begin), prettyTime(eveningTimings.end))
     }
 
     QQC2.Label {
         wrapMode: Text.Wrap
         Layout.fillWidth: true
         horizontalAlignment: Qt.AlignHCenter
-        text: i18n("Night Color begins changing back at %1 and ends at %2", prettyTime(morningTimings.begin), prettyTime(morningTimings.end))
+        text: i18n("Color temperature begings changing to day time at %1 and is fully changed by %2", prettyTime(morningTimings.begin), prettyTime(morningTimings.end))
     }
 }
