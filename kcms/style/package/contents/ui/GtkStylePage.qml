@@ -49,20 +49,13 @@ Kirigami.Page {
                     QtControls.ComboBox {
                         id: gtkThemeCombo
                         model: kcm.gtkPage.gtkThemesModel
-                        currentIndex: model.findThemeIndex(kcm.gtkPage.gtkThemeFromConfig())
+                        currentIndex: model.findThemeIndex(kcm.gtkPage.gtkThemesModel.selectedTheme)
                         onCurrentTextChanged: function() {
                             model.selectedTheme = currentText
                             gtkRemoveButton.enabled = model.selectedThemeRemovable()
                         }
                         onActivated: model.setSelectedThemeDirty()
                         textRole: "theme-name"
-
-                        Connections {
-                            target: kcm.gtkPage
-                            function onSelectGtkThemeInCombobox(themeName) {
-                                gtkThemeCombo.currentIndex = gtkThemeCombo.model.findThemeIndex(themeName)
-                            }
-                        }
                     }
 
                     QtControls.Button {
