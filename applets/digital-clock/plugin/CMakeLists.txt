@@ -1,8 +1,7 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_org.kde.plasma.digitalclock\")
 
 find_package(IsoCodes)
-set_package_properties(IsoCodes PROPERTIES DESCRIPTION "ISO language, territory, currency, script codes and their translations"
-                       URL "https://salsa.debian.org/iso-codes-team/iso-codes"
+set_package_properties(IsoCodes PROPERTIES
                        PURPOSE "Translation of country names in digital clock applet"
                        TYPE RUNTIME
                       )
