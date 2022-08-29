@@ -188,7 +188,6 @@ endif()
 
 
 # Region & Language KCM
-find_package(KF5ItemModels)
 if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
     # notes for packager:
     # This is the macro definition part of Region & Language KCM
