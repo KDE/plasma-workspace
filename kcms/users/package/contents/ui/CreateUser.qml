@@ -22,13 +22,12 @@ KCM.SimpleKCM {
         userNameField.text = realNameField.text = verifyField.text = passwordField.text = ""
         usertypeBox.currentIndex = 0
     }
-
+    Component.onCompleted: realNameField.forceActiveFocus()
     Kirigami.FormLayout {
         anchors.centerIn: parent
         QQC2.TextField {
             id: realNameField
             Kirigami.FormData.label: i18n("Name:")
-            Component.onCompleted: realNameField.forceActiveFocus()
         }
         QQC2.TextField {
             id: userNameField
