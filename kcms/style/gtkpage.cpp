@@ -31,12 +31,6 @@ GtkPage::GtkPage(QObject *parent)
 
 GtkPage::~GtkPage() = default;
 
-QString GtkPage::gtkThemeFromConfig()
-{
-    // FIXME make aysnc but that requires some refactoring on the UI side
-    return m_gtkConfigInterface.gtkTheme().value();
-}
-
 bool GtkPage::gtkPreviewAvailable()
 {
     return !QStandardPaths::findExecutable(QStringLiteral("gtk3_preview"), {CMAKE_INSTALL_FULL_LIBEXECDIR}).isEmpty();
@@ -94,17 +88,21 @@ void GtkPage::save()
 
 void GtkPage::defaults()
 {
-    Q_EMIT selectGtkThemeInCombobox(QStringLiteral("Breeze"));
+    m_gtkThemesModel->setSelectedTheme(QStringLiteral("Breeze"));
 }
 
 void GtkPage::load()
 {
     m_gtkThemesModel->load();
     m_gtkThemesModel->setSelectedTheme(m_gtkConfigInterface.gtkTheme());
-    Q_EMIT selectGtkThemeInCombobox(gtkThemeFromConfig());
 }
 
 bool GtkPage::isDefaults() const
 {
     return m_gtkThemesModel->selectedTheme() == QLatin1String("Breeze");
+}
+
+bool GtkPage::isSaveNeeded()
+{
+    return m_gtkThemesModel->selectedTheme() != m_gtkConfigInterface.gtkTheme();
 }

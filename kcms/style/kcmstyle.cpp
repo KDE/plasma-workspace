@@ -91,7 +91,6 @@ KCMStyle::KCMStyle(QObject *parent, const KPluginMetaData &data, const QVariantL
     m_gtkPage = new GtkPage(this);
     connect(m_gtkPage, &GtkPage::gtkThemeSettingsChanged, this, [this]() {
         settingsChanged();
-        setNeedsSave(true);
     });
 }
 
@@ -337,6 +336,11 @@ void KCMStyle::loadSettingsToModel()
 bool KCMStyle::isDefaults() const
 {
     return m_gtkPage->isDefaults();
+}
+
+bool KCMStyle::isSaveNeeded() const
+{
+    return m_gtkPage->isSaveNeeded();
 }
 
 #include "kcmstyle.moc"
