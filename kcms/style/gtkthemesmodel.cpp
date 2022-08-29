@@ -103,6 +103,7 @@ QMap<QString, QString> GtkThemesModel::themesList()
 void GtkThemesModel::setSelectedTheme(const QString &themeName)
 {
     m_selectedTheme = themeName;
+    Q_EMIT selectedThemeChanged(themeName);
 }
 
 QString GtkThemesModel::selectedTheme()

@@ -27,10 +27,9 @@ public:
     void save();
     void defaults();
     bool isDefaults() const;
+    bool isSaveNeeded();
 
 public Q_SLOTS:
-    QString gtkThemeFromConfig();
-
     bool gtkPreviewAvailable();
 
     void showGtkPreview();
@@ -43,7 +42,6 @@ Q_SIGNALS:
     void gtkThemesModelChanged(GtkThemesModel *model);
 
     void showErrorMessage(const QString &message);
-    void selectGtkThemeInCombobox(const QString &themeName);
 
     void gtkThemeSettingsChanged();
 

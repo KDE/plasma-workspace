@@ -76,6 +76,7 @@ public:
     void defaults() override;
 
     bool isDefaults() const override;
+    bool isSaveNeeded() const override;
 
 Q_SIGNALS:
     void showErrorMessage(const QString &message);
