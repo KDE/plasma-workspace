@@ -10,6 +10,7 @@
 #include <QObject>
 
 class ScreencastingStream;
+struct ScreencastingRequestPrivate;
 
 /**
  * Allows us to request a stream for a window identified by its universally
@@ -48,22 +49,14 @@ public:
     QString outputName() const;
     quint32 nodeId() const;
 
-    void create(Screencasting *screencasting);
-
 Q_SIGNALS:
     void nodeIdChanged(quint32 nodeId);
-    void outputNameChanged(const QString &outputNames);
     void uuidChanged(const QString &uuid);
-    void closeRunningStreams();
-    void cursorModeChanged(Screencasting::CursorMode cursorMode);
+    void outputNameChanged(const QString &outputNames);
 
 private:
     void adopt(ScreencastingStream *stream);
     void setNodeid(uint nodeId);
 
-    ScreencastingStream *m_stream = nullptr;
-    QString m_uuid;
-    QString m_outputName;
-    KWayland::Client::Output *m_output = nullptr;
-    quint32 m_nodeId = 0;
+    QScopedPointer<ScreencastingRequestPrivate> d;
 };

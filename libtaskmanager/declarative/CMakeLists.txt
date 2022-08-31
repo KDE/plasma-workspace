@@ -33,7 +33,7 @@ target_include_directories(taskmanagerplugin PRIVATE ${Libdrm_INCLUDE_DIR})
 target_sources(taskmanagerplugin PUBLIC screencasting.cpp screencastingrequest.cpp ${SRCS})
 target_link_libraries(taskmanagerplugin Qt::Qml Qt::GuiPrivate
                                         KF5::I18n
-                                        KF5::WaylandClient
+                                        Qt::WaylandClient
                                         Wayland::Client)
 if (${Qt5Gui_OPENGL_IMPLEMENTATION} STREQUAL "GLESv2")
     target_link_libraries(taskmanagerplugin Qt5::Gui_GLESv2)

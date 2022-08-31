@@ -7,24 +7,9 @@
 #pragma once
 
 #include <QObject>
-#include <QSharedPointer>
-#include <QVector>
-#include <optional>
-
-struct zkde_screencast_unstable_v1;
-
-namespace KWayland
-{
-namespace Client
-{
-class PlasmaWindow;
-class Registry;
-class Output;
-}
-}
+#include <memory>
 
 class ScreencastingPrivate;
-class ScreencastingSourcePrivate;
 class ScreencastingStreamPrivate;
 class ScreencastingStream : public QObject
 {
@@ -50,7 +35,6 @@ class Screencasting : public QObject
     Q_OBJECT
 public:
     explicit Screencasting(QObject *parent = nullptr);
-    explicit Screencasting(KWayland::Client::Registry *registry, int id, int version, QObject *parent = nullptr);
     ~Screencasting() override;
 
     enum CursorMode {
@@ -61,11 +45,8 @@ public:
     Q_ENUM(CursorMode)
 
     ScreencastingStream *createOutputStream(const QString &outputName, CursorMode mode);
-    ScreencastingStream *createOutputStream(KWayland::Client::Output *output, CursorMode mode);
-    ScreencastingStream *createWindowStream(KWayland::Client::PlasmaWindow *window, CursorMode mode);
     ScreencastingStream *createWindowStream(const QString &uuid, CursorMode mode);
 
-    void setup(zkde_screencast_unstable_v1 *screencasting);
     void destroy();
 
 Q_SIGNALS:
