@@ -36,6 +36,6 @@ ColumnLayout {
         wrapMode: Text.Wrap
         Layout.fillWidth: true
         horizontalAlignment: Qt.AlignHCenter
-        text: i18n("Color temperature begings changing to day time at %1 and is fully changed by %2", prettyTime(morningTimings.begin), prettyTime(morningTimings.end))
+        text: i18n("Color temperature begins changing to day time at %1 and is fully changed by %2", prettyTime(morningTimings.begin), prettyTime(morningTimings.end))
     }
 }
