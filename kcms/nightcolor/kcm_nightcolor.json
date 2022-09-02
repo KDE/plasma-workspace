@@ -1,6 +1,16 @@
 {
     "KPlugin": {
         "Description": "Adjust color temperature to reduce eye strain",
+        "Description[bg]": "Регулиране на цветната температура, за да се намали напрежението в очите",
+        "Description[ca]": "Ajusta la temperatura del color per reduir la tensió ocular",
+        "Description[eu]": "Egokitu kolorearen tenperatura begietako nekea gutxitzeko",
+        "Description[is]": "Stilltu lithitastig til að minnka álag á augu",
+        "Description[nl]": "Kleurtemperatuur aanpassen on vermoeidheid van de ogen te verminderen",
+        "Description[pt]": "Ajustar a temperatura da cor para reduzir o cansaço ocular",
+        "Description[ta]": "கண் சிரமத்தை குறைக்க நிறவெப்பத்தை மாற்றும்",
+        "Description[tr]": "Göz yorgunluğunu azaltmak için renk sıcaklığını ayarlayın",
+        "Description[uk]": "Коригування температури кольорів для зменшення навантаження на очі",
+        "Description[x-test]": "xxAdjust color temperature to reduce eye strainxx",
         "FormFactors": [
             "tablet",
             "handset",
