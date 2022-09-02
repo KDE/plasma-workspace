@@ -24,7 +24,7 @@ class ImageProxyModel;
 class SlideModel;
 class SlideFilterModel;
 
-class ImageBackend : public QObject, public QQmlParserStatus, public SortingMode
+class ImageBackend : public QObject, public QQmlParserStatus
 {
     Q_OBJECT
     Q_INTERFACES(QQmlParserStatus)

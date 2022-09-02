@@ -6,15 +6,14 @@
 
 #pragma once
 
-class BackgroundType
+namespace BackgroundType
 {
-    Q_GADGET
+Q_NAMESPACE
 
-public:
-    enum class Type {
-        Unknown,
-        Image,
-        AnimatedImage, /**< AnimatedImage doesn't support \QQuickImageProvider , @see https://bugreports.qt.io/browse/QTBUG-30524 */
-    };
-    Q_ENUM(Type)
+enum class Type {
+    Unknown,
+    Image,
+    AnimatedImage, /**< AnimatedImage doesn't support \QQuickImageProvider , @see https://bugreports.qt.io/browse/QTBUG-30524 */
 };
+Q_ENUM_NS(Type)
+}

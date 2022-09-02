@@ -39,6 +39,6 @@ void ImagePlugin::registerTypes(const char *uri)
 
     qmlRegisterAnonymousType<QAbstractItemModel>("QAbstractItemModel", 1);
 
-    qmlRegisterUncreatableType<BackgroundType>(uri, 2, 0, "BackgroundType", QStringLiteral("error: only enums"));
-    qmlRegisterUncreatableType<SortingMode>(uri, 2, 0, "SortingMode", QStringLiteral("error: only enums"));
+    qmlRegisterUncreatableMetaObject(BackgroundType::staticMetaObject, uri, 2, 0, "BackgroundType", QStringLiteral("error: only enums"));
+    qmlRegisterUncreatableMetaObject(SortingMode::staticMetaObject, uri, 2, 0, "SortingMode", QStringLiteral("error: only enums"));
 }

@@ -7,19 +7,18 @@
 #ifndef SORTINGMODE_H
 #define SORTINGMODE_H
 
-class SortingMode
+namespace SortingMode
 {
-    Q_GADGET
+Q_NAMESPACE
 
-public:
-    enum Mode {
-        Random,
-        Alphabetical,
-        AlphabeticalReversed,
-        Modified,
-        ModifiedReversed,
-    };
-    Q_ENUM(Mode)
+enum Mode {
+    Random,
+    Alphabetical,
+    AlphabeticalReversed,
+    Modified,
+    ModifiedReversed,
 };
+Q_ENUM_NS(Mode)
+}
 
 #endif
