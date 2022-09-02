@@ -281,28 +281,38 @@ SimpleKCM {
                     Layout.rightMargin: Kirigami.Units.largeSpacing
 
                     QQC2.Button {
+                        id: openButton
                         Layout.preferredHeight: Kirigami.Units.gridUnit * 6
                         Layout.preferredWidth: Layout.preferredHeight
 
-                        ColumnLayout {
-                            anchors.centerIn: parent
+                        contentItem: Item {
+                            ColumnLayout {
+                                // Centering rather than filling is desired to keep the
+                                // entire layout nice and tight when the text is short
+                                anchors.centerIn: parent
+                                spacing: 0 // the icon should bring its own
 
-                            Kirigami.Icon {
-                                implicitWidth: Kirigami.Units.gridUnit * 4
-                                implicitHeight: Kirigami.Units.gridUnit * 4
-                                source: "document-open"
+                                Kirigami.Icon {
+                                    id: openIcon
 
-                                Layout.alignment: Qt.AlignHCenter
-                            }
-                            QQC2.Label {
-                                text: i18n("Choose File…")
+                                    implicitWidth: Kirigami.Units.iconSizes.huge
+                                    implicitHeight: Kirigami.Units.iconSizes.huge
+                                    source: "document-open"
 
-                                horizontalAlignment: Text.AlignHCenter
-                                verticalAlignment: Text.AlignBottom
-                                fontSizeMode: Text.HorizontalFit
-                                wrapMode: Text.Wrap
-                                Layout.fillWidth: true
-                                Layout.maximumWidth: Kirigami.Units.gridUnit * 5
+                                    Layout.alignment: Qt.AlignHCenter
+                                }
+                                QQC2.Label {
+                                    text: i18n("Choose File…")
+
+                                    Layout.fillWidth: true
+                                    Layout.maximumWidth: Kirigami.Units.gridUnit * 5
+                                    Layout.maximumHeight: openButton.availableHeight - openIcon.height
+                                    horizontalAlignment: Text.AlignHCenter
+                                    verticalAlignment: Text.AlignBottom
+                                    fontSizeMode: Text.HorizontalFit
+                                    wrapMode: Text.Wrap
+                                    elide: Text.ElideRight
+                                }
                             }
                         }
 
