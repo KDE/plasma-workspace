@@ -21,7 +21,7 @@
                 <choice name="Times"/>
                 <choice name="Constant"/>
             </choices>
-            <default>Automatic</default>
+            <default>Location</default>
         </entry>
         <entry name="NightTemperatureEnabled" type="Bool">
             <default>true</default>

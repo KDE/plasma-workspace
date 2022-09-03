@@ -413,7 +413,7 @@ KCM.SimpleKCM {
         
         // Show location chooser in manual location mode
         LocationsFixedView {
-            visible: kcm.nightColorSettings.mode === NightColorMode.Location
+            visible: kcm.nightColorSettings.mode === NightColorMode.Location && kcm.nightColorSettings.active
             Layout.alignment: Qt.AlignHCenter
             enabled: activator.checked
         }
