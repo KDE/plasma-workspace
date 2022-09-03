@@ -16,6 +16,7 @@
         "Description[ta]": "கோரிக்கைக்கேற்ப, பின்புல படித்தின் பிரதான நிறத்தை நிறத்திட்டத்தின் சிறப்பு நிறமாக அமைக்கும்",
         "Description[tr]": "İsteğe bağlı olarak, duvar kağıdından çıkarılan vurgu rengini uygular",
         "Description[uk]": "Застосовує видобутий з фонового зображення стільниці колір акценту у відповідь на запит",
+        "Description[vi]": "Áp dụng màu chủ đạo trích xuất từ phông nền khi có yêu cầu",
         "Description[x-test]": "xxApplies extracted accent color from wallpaper on requestxx",
         "Name": "Accent Color",
         "Name[ar]": "لون التمييز",
@@ -36,6 +37,7 @@
         "Name[ta]": "சிறப்பு நிறம்",
         "Name[tr]": "Vurgu Rengi",
         "Name[uk]": "Колір акценту",
+        "Name[vi]": "Màu chủ đạo",
         "Name[x-test]": "xxAccent Colorxx"
     },
     "X-KDE-FactoryName": "accentColorService",
