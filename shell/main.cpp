@@ -38,21 +38,6 @@
 #include <QDBusConnectionInterface>
 #include <QDir>
 
-static QLoggingCategory::CategoryFilter oldCategoryFilter;
-
-// Qt 5.15 introduces a new syntax for connections
-// framework code can't port away due to needing Qt5.12
-// this filters out the warnings
-// Remove this once we depend on Qt5.15 in frameworks
-void filterConnectionSyntaxWarning(QLoggingCategory *category)
-{
-    if (qstrcmp(category->categoryName(), "qt.qml.connections") == 0) {
-        category->setEnabled(QtWarningMsg, false);
-    } else if (oldCategoryFilter) {
-        oldCategoryFilter(category);
-    }
-}
-
 int main(int argc, char *argv[])
 {
 #if QT_CONFIG(qml_debug)
@@ -77,8 +62,6 @@ int main(int argc, char *argv[])
     QCoreApplication::setAttribute(Qt::AA_ShareOpenGLContexts);
 
     QQuickWindow::setDefaultAlphaBuffer(true);
-
-    oldCategoryFilter = QLoggingCategory::installFilter(filterConnectionSyntaxWarning);
 
     qputenv("QT_WAYLAND_DISABLE_FIXED_POSITIONS", {});
     const bool qpaVariable = qEnvironmentVariableIsSet("QT_QPA_PLATFORM");
