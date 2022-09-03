@@ -426,7 +426,7 @@ KCM.SimpleKCM {
             Layout.alignment: Qt.AlignHCenter
 
             Kirigami.LoadingPlaceholder {
-                visible: kcm.nightColorSettings.mode === NightColorMode.Automatic && (!locator || !root.doneLocating)
+                visible: kcm.nightColorSettings.active && kcm.nightColorSettings.mode === NightColorMode.Automatic && (!locator || !root.doneLocating)
                 text: i18nc("@info:placeholder", "Locating…")
                 anchors.centerIn: parent
             }
