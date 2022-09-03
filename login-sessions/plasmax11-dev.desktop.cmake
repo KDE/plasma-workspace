@@ -22,6 +22,7 @@ Name[hi]=प्लाज़्मा (विकास, एक्स ११ ${CMA
 Name[hu]=Plasma (Fejlesztői verzió, X11 ${CMAKE_INSTALL_FULL_BINDIR})
 Name[ia]=Plasma (Disveloppamento, X11 ${CMAKE_INSTALL_FULL_BINDIR})
 Name[id]=Plasma (Development, X11 ${CMAKE_INSTALL_FULL_BINDIR})
+Name[is]=Plasma (Þróunarútgáfa, X11 ${CMAKE_INSTALL_FULL_BINDIR})
 Name[it]=Plasma (Sviluppo, X11 ${CMAKE_INSTALL_FULL_BINDIR})
 Name[ja]=Plasma (Development, X11 ${CMAKE_INSTALL_FULL_BINDIR})
 Name[ka]=Plasma (Development, X11 ${CMAKE_INSTALL_FULL_BINDIR})
