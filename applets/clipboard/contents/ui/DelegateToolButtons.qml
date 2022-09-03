@@ -22,7 +22,7 @@ RowLayout {
         display: PlasmaComponents3.AbstractButton.IconOnly
         text: i18n("Invoke action")
 
-        onClicked: menuItem.action(UuidRole)
+        onClicked: menuItem.triggerAction(UuidRole)
 
         PlasmaComponents3.ToolTip {
             text: parent.text

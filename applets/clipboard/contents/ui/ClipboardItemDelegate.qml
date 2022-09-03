@@ -30,7 +30,7 @@ PlasmaComponents.ItemDelegate {
     signal remove(string uuid)
     signal edit(string uuid)
     signal barcode(string text)
-    signal action(string uuid)
+    signal triggerAction(string uuid)
 
     // the 1.6 comes from ToolButton's default height
     height: Math.max(label.height, Math.round(PlasmaCore.Units.gridUnit * 1.6)) + 2 * PlasmaCore.Units.smallSpacing

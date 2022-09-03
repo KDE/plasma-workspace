@@ -25,7 +25,7 @@ PlasmaComponents3.ScrollView {
     signal remove(string uuid)
     signal edit(string uuid)
     signal barcode(string text)
-    signal action(string uuid)
+    signal triggerAction(string uuid)
 
     // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-83890
     PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
@@ -58,7 +58,7 @@ PlasmaComponents3.ScrollView {
             onRemove: menu.remove(uuid)
             onEdit: menu.edit(uuid)
             onBarcode: menu.barcode(text)
-            onAction: menu.action(uuid)
+            onTriggerAction: menu.triggerAction(uuid)
 
             Binding {
                 target: menuListView; when: hovered
