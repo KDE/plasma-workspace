@@ -8,6 +8,7 @@
 
 #include <KIO/ApplicationLauncherJob>
 #include <KNotificationJobUiDelegate>
+#include <QDebug>
 
 ProcessRunner::ProcessRunner(QObject *parent)
     : QObject(parent)

@@ -32,6 +32,7 @@
 #include <KFileItem>
 #include <KIO/ApplicationLauncherJob>
 #include <KIO/JobUiDelegate>
+#include <KIO/JobUiDelegateFactory>
 #include <KIO/OpenFileManagerWindowJob>
 #include <KIO/OpenUrlJob>
 #include <KLocalizedString>
@@ -367,7 +368,7 @@ bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant 
             const QUrl resourceUrl = docData(resource, Kicker::UrlRole, mimeType).toUrl();
 
             auto job = new KIO::OpenUrlJob(resourceUrl);
-            job->setUiDelegate(new KIO::JobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, QApplication::activeWindow()));
+            job->setUiDelegate(KIO::createDefaultJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, QApplication::activeWindow()));
             job->setShowOpenOrExecuteDialog(true);
             job->start();
 

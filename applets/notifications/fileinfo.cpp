@@ -12,11 +12,11 @@
 
 #include <KApplicationTrader>
 #include <KAuthorized>
-#include <KLocalizedString>
 #include <KIO/ApplicationLauncherJob>
-#include <KIO/JobUiDelegate>
+#include <KIO/JobUiDelegateFactory>
 #include <KIO/MimeTypeFinderJob>
 #include <KIO/OpenUrlJob>
+#include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
 
 FileInfo::FileInfo(QObject *parent)
@@ -145,7 +145,7 @@ void FileInfo::mimeTypeFound(const QString &mimeType)
                 job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled));
             } else {
                 // needs KIO::JobUiDelegate for open with handler
-                job->setUiDelegate(new KIO::JobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled, nullptr /*widget*/));
+                job->setUiDelegate(KIO::createDefaultJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled, nullptr /*widget*/));
             }
             job->setUrls({m_url});
             job->start();

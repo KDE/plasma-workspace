@@ -12,6 +12,7 @@
 
 #include <KIO/Job>
 #include <KIO/JobUiDelegate>
+#include <KIO/JobUiDelegateFactory>
 #include <KIO/OpenFileManagerWindowJob>
 #include <KIO/OpenUrlJob>
 #include <KLocalizedString>
@@ -110,7 +111,7 @@ void RecentDocuments::run(const Plasma::RunnerContext &context, const Plasma::Qu
     }
 
     auto *job = new KIO::OpenUrlJob(url);
-    job->setUiDelegate(new KIO::JobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, QApplication::activeWindow()));
+    job->setUiDelegate(KIO::createDefaultJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, QApplication::activeWindow()));
     job->setShowOpenOrExecuteDialog(true);
     job->start();
 }

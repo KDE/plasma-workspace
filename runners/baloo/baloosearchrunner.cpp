@@ -21,6 +21,7 @@
 #include <Baloo/Query>
 
 #include <KIO/JobUiDelegate>
+#include <KIO/JobUiDelegateFactory>
 #include <KIO/OpenFileManagerWindowJob>
 #include <KIO/OpenUrlJob>
 #include <KNotificationJobUiDelegate>
@@ -159,7 +160,7 @@ void SearchRunner::Run(const QString &id, const QString &actionId)
     }
 
     auto *job = new KIO::OpenUrlJob(url);
-    job->setUiDelegate(new KIO::JobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, QApplication::activeWindow()));
+    job->setUiDelegate(KIO::createDefaultJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, QApplication::activeWindow()));
     job->setShowOpenOrExecuteDialog(true);
     job->start();
 }
