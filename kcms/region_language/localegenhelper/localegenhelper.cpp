@@ -132,7 +132,7 @@ bool LocaleGenHelper::editLocaleGen()
     if (!locale_gen.isEmpty()) {
         auto *process = new QProcess(this);
         process->setProgram(QStringLiteral("locale-gen"));
-        connect(process, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, [this, process](int statusCode, QProcess::ExitStatus status) {
+        connect(process, &QProcess::finished, this, [this, process](int statusCode, QProcess::ExitStatus status) {
             handleLocaleGen(statusCode, status, process);
         });
         process->start();

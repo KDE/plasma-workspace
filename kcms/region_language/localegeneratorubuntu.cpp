@@ -36,7 +36,7 @@ void LocaleGeneratorUbuntu::ubuntuInstall(const QStringList &locales)
     if (!binaryPath.isEmpty()) {
         m_proc->setProgram(binaryPath);
         m_proc->setArguments(args);
-        connect(m_proc, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, &LocaleGeneratorUbuntu::ubuntuLangCheck);
+        connect(m_proc, &QProcess::finished, this, &LocaleGeneratorUbuntu::ubuntuLangCheck);
         m_proc->start();
     } else {
         Q_EMIT userHasToGenerateManually(i18nc("@info:warning", "Can't locate executable `check-language-support`"));
