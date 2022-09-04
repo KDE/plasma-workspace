@@ -3,5 +3,12 @@
 Type=Application
 Exec=systemmonitor
 Name=System Activity
+Name[ca]=Activitat del sistema
+Name[ca@valencia]=Activitat del sistema
+Name[eu]=Sistemaren jarduera
+Name[nl]=Systeemactiviteit
+Name[tr]=Sistem Etkinliği
+Name[uk]=Дії системи
+Name[x-test]=xxSystem Activityxx
 Icon=utilities-system-monitor
 NoDisplay=true
