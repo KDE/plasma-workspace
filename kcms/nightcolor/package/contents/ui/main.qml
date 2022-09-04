@@ -108,7 +108,7 @@ KCM.SimpleKCM {
             GridLayout {
                 Kirigami.FormData.label: i18n("Day color temperature:")
                 Kirigami.FormData.buddyFor: tempSliderDay
-                enabled: kcm.nightColorSettings.active
+                enabled: kcm.nightColorSettings.active && kcm.nightColorSettings.mode !== NightColorMode.Constant
 
                 columns: 4
 
