@@ -36,6 +36,7 @@ include(ECMGenerateDBusServiceFile)
 include(ECMFindQmlModule)
 include(ECMGenerateExportHeader)
 include(ECMGenerateQmlTypes)
+include(ECMDeprecationSettings)
 
 find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Svg Widgets Quick QuickWidgets Concurrent Test Network)
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
@@ -317,9 +318,11 @@ include(ConfigureChecks.cmake)
 
 include_directories("${CMAKE_CURRENT_BINARY_DIR}")
 
-add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f00)
-add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055800)
-add_definitions(-DKITEMMODELS_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054F00)
+ecm_set_disabled_deprecation_versions(
+    QT 5.15.2
+    KF 5.98.0
+    KDECLARATIVE 5.88.0
+)
 
 configure_file(config-workspace.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-workspace.h)
 configure_file(config-unix.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-unix.h )

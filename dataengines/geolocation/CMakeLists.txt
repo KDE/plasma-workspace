@@ -1,4 +1,4 @@
-remove_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f00)
+remove_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x50f02)
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050e00) # needed for QNetworkConfigurationManager
 
 set(plasma_geolocation_interface_SRCS geolocationprovider.cpp)
