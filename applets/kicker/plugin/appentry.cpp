@@ -133,9 +133,8 @@ AppEntry::AppEntry(AbstractModel *owner, KService::Ptr service, NameFormat nameF
     : AbstractEntry(owner)
     , m_service(service)
 {
-    if (m_service) {
-        init(nameFormat);
-    }
+    Q_ASSERT(service);
+    init(nameFormat);
 }
 
 AppEntry::AppEntry(AbstractModel *owner, const QString &id)
@@ -158,8 +157,11 @@ AppEntry::AppEntry(AbstractModel *owner, const QString &id)
     } else {
         m_service = KService::serviceByStorageId(id);
     }
+    if (!m_service) {
+        m_service = new KService(QString());
+    }
 
-    if (m_service) {
+    if (m_service->isValid()) {
         init((NameFormat)owner->rootModel()->property("appNameFormat").toInt());
     }
 }
@@ -177,7 +179,7 @@ void AppEntry::init(NameFormat nameFormat)
 
 bool AppEntry::isValid() const
 {
-    return m_service;
+    return m_service->isValid();
 }
 
 QIcon AppEntry::icon() const
