@@ -3,10 +3,14 @@
 Type=Application
 Exec=systemmonitor
 Name=System Activity
+Name[ar]=نشاط النظام
+Name[bg]=Системна активност
 Name[ca]=Activitat del sistema
 Name[ca@valencia]=Activitat del sistema
 Name[eu]=Sistemaren jarduera
+Name[fr]=Activité du système
 Name[nl]=Systeemactiviteit
+Name[sl]=Dejavnost sistema
 Name[tr]=Sistem Etkinliği
 Name[uk]=Дії системи
 Name[x-test]=xxSystem Activityxx
