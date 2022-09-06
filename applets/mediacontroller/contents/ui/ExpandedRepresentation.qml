@@ -172,12 +172,10 @@ PlasmaExtras.Representation {
                 saturation: 0.9
 
                 layer.enabled: true
-                layer.effect: GaussianBlur {
+                layer.effect: FastBlur {
                     cached: true
 
                     radius: 128
-                    deviation: 12
-                    samples: 63
 
                     transparentBorder: false
                 }

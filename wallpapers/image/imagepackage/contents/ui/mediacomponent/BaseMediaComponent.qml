@@ -35,10 +35,9 @@ Rectangle {
         active: blurEnabled
         visible: active
         z: 0
-        sourceComponent: GaussianBlur {
+        sourceComponent: FastBlur {
             source: backgroundColor.blurSource
             radius: 32
-            samples: 65
         }
     }
 }
