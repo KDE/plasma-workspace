@@ -78,7 +78,7 @@ KCM.SimpleKCM {
             Layout.alignment: Qt.AlignHCenter
 
             Layout.maximumWidth: Math.round(root.width - (Kirigami.Units.gridUnit * 2))
-            text: i18n("The blue light filter makes the colors on the screen warmer to reduce eye strain.")
+            text: i18n("The blue light filter makes the colors on the screen warmer.")
             wrapMode: Text.WordWrap
         }
 

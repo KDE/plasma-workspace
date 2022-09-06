@@ -1,7 +1,6 @@
 {
     "KPlugin": {
-        "Description": "Adjust color temperature to reduce eye strain",
-        "Description[ar]": "يضبط درجة حرارة اللون لتقليل إجهاد العين",
+        "Description": "Adjust color temperature based on time",
         "Description[bg]": "Регулиране на цветната температура, за да се намали напрежението в очите",
         "Description[ca@valencia]": "Ajusta la temperatura del color per a reduir la tensió ocular",
         "Description[ca]": "Ajusta la temperatura del color per reduir la tensió ocular",
