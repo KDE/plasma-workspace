@@ -36,7 +36,7 @@ void ShellPackage::initPackage(KPackage::Package *package)
     // Default layout
     package->addFileDefinition("defaultlayout", QStringLiteral("layout.js"), i18n("Default layout file"));
     package->addFileDefinition("defaults", QStringLiteral("defaults"), i18n("Default plugins for containments, containmentActions, etc."));
-    package->setMimeTypes("defaultlayout", QStringList() << QStringLiteral("application/javascript"));
+    package->setMimeTypes("defaultlayout", QStringList() << QStringLiteral("application/javascript") << QStringLiteral("text/javascript"));
     package->setMimeTypes("defaults", QStringList() << QStringLiteral("text/plain"));
 
     // Applet furniture

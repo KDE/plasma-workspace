@@ -435,7 +435,7 @@ void InteractiveConsole::saveScript()
     m_fileDialog->setWindowTitle(i18n("Save Script File"));
 
     QStringList mimetypes;
-    mimetypes << QStringLiteral("application/javascript");
+    mimetypes << QStringLiteral("application/javascript") << QStringLiteral("text/javascript");
     m_fileDialog->setMimeTypeFilters(mimetypes);
 
     connect(m_fileDialog, &QDialog::finished, this, &InteractiveConsole::saveScriptUrlSelected);
