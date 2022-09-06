@@ -45,7 +45,10 @@ void MediaProxy::componentComplete()
     // Follow system color scheme
     connect(qGuiApp, &QGuiApplication::paletteChanged, this, &MediaProxy::slotSystemPaletteChanged);
 
-    updateModelImage();
+    auto package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
+    package.setPath(m_formattedSource.toLocalFile());
+
+    updateModelImage(package);
 }
 
 QString MediaProxy::source() const
@@ -68,9 +71,15 @@ void MediaProxy::setSource(const QString &url)
     Q_EMIT sourceChanged();
 
     determineProviderType();
-    determineBackgroundType();
 
-    updateModelImage();
+    KPackage::Package package;
+    if (m_providerType == Provider::Type::Package) {
+        package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
+        package.setPath(m_formattedSource.toLocalFile());
+    }
+
+    determineBackgroundType(package);
+    updateModelImage(package);
 }
 
 QUrl MediaProxy::modelImage() const
@@ -93,8 +102,11 @@ void MediaProxy::setTargetSize(const QSize &size)
     Q_EMIT targetSizeChanged(size);
 
     if (m_providerType == Provider::Type::Package) {
-        determineBackgroundType(); // In case file format changes after size changes
-        updateModelImage();
+        auto package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
+        package.setPath(m_formattedSource.toLocalFile());
+
+        determineBackgroundType(package); // In case file format changes after size changes
+        updateModelImage(package);
     }
     if (m_providerType == Provider::Type::Image || m_backgroundType == BackgroundType::Type::AnimatedImage) {
         // When KPackage contains animated wallpapers, image provider is not used.
@@ -118,7 +130,10 @@ void MediaProxy::openModelImage()
     }
 
     case Provider::Type::Package: {
-        url = findPreferredImageInPackage();
+        auto package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
+        package.setPath(m_formattedSource.toLocalFile());
+
+        url = findPreferredImageInPackage(package);
         break;
     }
 
@@ -185,8 +200,8 @@ void MediaProxy::useSingleImageDefaults()
     Q_EMIT sourceChanged();
 
     determineProviderType();
-    determineBackgroundType();
-    updateModelImage();
+    determineBackgroundType(package);
+    updateModelImage(package);
 }
 
 QUrl MediaProxy::formatUrl(const QUrl &url)
@@ -215,7 +230,9 @@ void MediaProxy::slotSystemPaletteChanged(const QPalette &palette)
     m_isDarkColorScheme = dark;
 
     if (m_providerType == Provider::Type::Package) {
-        updateModelImageWithoutSignal();
+        auto package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
+        package.setPath(m_formattedSource.toLocalFile());
+        updateModelImageWithoutSignal(package);
     }
 
     Q_EMIT colorSchemeChanged();
@@ -230,11 +247,11 @@ bool MediaProxy::isDarkColorScheme(const QPalette &palette) const noexcept
     return qGray(palette.window().color().rgb()) < 192;
 }
 
-void MediaProxy::determineBackgroundType()
+void MediaProxy::determineBackgroundType(KPackage::Package &package)
 {
     QString filePath;
     if (m_providerType == Provider::Type::Package) {
-        filePath = findPreferredImageInPackage().toLocalFile();
+        filePath = findPreferredImageInPackage(package).toLocalFile();
     } else {
         filePath = m_formattedSource.toLocalFile();
     }
@@ -273,11 +290,8 @@ void MediaProxy::determineProviderType()
     }
 }
 
-QUrl MediaProxy::findPreferredImageInPackage()
+QUrl MediaProxy::findPreferredImageInPackage(KPackage::Package &package)
 {
-    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
-    package.setPath(m_formattedSource.toLocalFile());
-
     QUrl url;
 
     if (!package.isValid()) {
@@ -298,7 +312,7 @@ QUrl MediaProxy::findPreferredImageInPackage()
     return url;
 }
 
-void MediaProxy::updateModelImage(bool doesBlockSignal)
+void MediaProxy::updateModelImage(KPackage::Package &package, bool doesBlockSignal)
 {
     if (!m_ready) {
         return;
@@ -315,7 +329,7 @@ void MediaProxy::updateModelImage(bool doesBlockSignal)
     case Provider::Type::Package: {
         if (m_backgroundType == BackgroundType::Type::AnimatedImage) {
             // Is an animated image
-            newRealSource = findPreferredImageInPackage();
+            newRealSource = findPreferredImageInPackage(package);
             break;
         }
 
@@ -349,7 +363,7 @@ void MediaProxy::updateModelImage(bool doesBlockSignal)
     }
 }
 
-void MediaProxy::updateModelImageWithoutSignal()
+void MediaProxy::updateModelImageWithoutSignal(KPackage::Package &package)
 {
-    updateModelImage(true);
+    updateModelImage(package, true);
 }

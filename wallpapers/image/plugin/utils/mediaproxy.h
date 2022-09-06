@@ -16,6 +16,11 @@
 #include "../provider/providertype.h"
 #include "backgroundtype.h"
 
+namespace KPackage
+{
+class Package;
+}
+
 /**
  * A proxy class that converts a provider url to a real resource url.
  */
@@ -113,12 +118,12 @@ private Q_SLOTS:
 private:
     inline bool isDarkColorScheme(const QPalette &palette = {}) const noexcept;
 
-    void determineBackgroundType();
+    void determineBackgroundType(KPackage::Package &package);
     void determineProviderType();
 
-    QUrl findPreferredImageInPackage();
-    void updateModelImage(bool doesBlockSignal = false);
-    void updateModelImageWithoutSignal();
+    QUrl findPreferredImageInPackage(KPackage::Package &package);
+    void updateModelImage(KPackage::Package &package, bool doesBlockSignal = false);
+    void updateModelImageWithoutSignal(KPackage::Package &package);
 
     bool m_ready = false;
 
