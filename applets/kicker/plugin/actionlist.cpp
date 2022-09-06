@@ -430,7 +430,8 @@ QVariantList appstreamActions(const KService::Ptr &service)
         appstreamPool->load();
     }
 
-    const auto components = appstreamPool->componentsById(service->desktopEntryName() + QLatin1String(".desktop"));
+    const auto components =
+        appstreamPool->componentsByLaunchable(AppStream::Launchable::KindDesktopId, service->desktopEntryName() + QLatin1String(".desktop"));
     for (const auto &component : components) {
         const QString componentId = component.id();
 
