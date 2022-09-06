@@ -53,6 +53,8 @@ class MediaProxy : public QObject, public QQmlParserStatus
 
     Q_PROPERTY(QSize targetSize READ targetSize WRITE setTargetSize NOTIFY targetSizeChanged)
 
+    Q_PROPERTY(QColor customColor MEMBER m_customColor NOTIFY customColorChanged)
+
 public:
     explicit MediaProxy(QObject *parent = nullptr);
 
@@ -103,6 +105,12 @@ Q_SIGNALS:
      */
     void providerTypeChanged();
 
+    /**
+     * The wallpaper package has specified a custom accent color, or
+     * @c transparent if no/invalid color is specified.
+     */
+    void customColorChanged();
+
 private Q_SLOTS:
     /**
      * Switches to dark-colored wallpaper if available when system color
@@ -130,6 +138,7 @@ private:
     Provider::Type m_providerType = Provider::Type::Unknown;
 
     QSize m_targetSize;
+    QColor m_customColor = Qt::transparent;
 
     bool m_isDarkColorScheme;
 };

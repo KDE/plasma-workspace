@@ -315,6 +315,8 @@ void MediaProxy::updateModelImage(KPackage::Package &package, bool doesBlockSign
         return;
     }
 
+    m_customColor = Qt::transparent;
+
     QUrl newRealSource;
 
     switch (m_providerType) {
@@ -324,6 +326,14 @@ void MediaProxy::updateModelImage(KPackage::Package &package, bool doesBlockSign
     }
 
     case Provider::Type::Package: {
+        // Get custom accent color from
+        const QString colorString = package.metadata().value(QStringLiteral("X-KDE-PlasmaImageWallpaper-AccentColor"), QStringLiteral("transparent"));
+        const QColor color(colorString);
+        if (color.isValid() && color != Qt::transparent) {
+            m_customColor = color;
+            Q_EMIT customColorChanged();
+        }
+
         if (m_backgroundType == BackgroundType::Type::AnimatedImage) {
             // Is an animated image
             newRealSource = findPreferredImageInPackage(package);
