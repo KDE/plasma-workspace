@@ -32,6 +32,7 @@ KeyboardLayout::KeyboardLayout(QObject *parent)
 
     mIface = new OrgKdeKeyboardLayoutsInterface(QStringLiteral("org.kde.keyboard"), QStringLiteral("/Layouts"), QDBusConnection::sessionBus(), this);
     if (!mIface->isValid()) {
+        qWarning() << "DBus interface not found" << mIface->lastError();
         delete mIface;
         mIface = nullptr;
         return;

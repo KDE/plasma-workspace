@@ -10,14 +10,23 @@ import QtQuick 2.15
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents
 
+import org.kde.plasma.workspace.keyboardlayout 1.0 as KWinKeyboardLayouts
+
 PlasmaComponents.ToolButton {
     id: root
 
-    property int currentIndex: keyboard.currentLayout
-    onCurrentIndexChanged: keyboard.currentLayout = currentIndex
+    property int currentIndex: root.isWayland ? waylandKeyboardLayout.layout : keyboard.currentLayout
 
-    text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Keyboard Layout: %1", keyboard.layouts[currentIndex].shortName)
-    visible: menu.count > 1 && !Qt.platform.pluginName.includes("wayland") // This menu needs porting to wayland https://github.com/sddm/sddm/issues/1528
+    text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Keyboard Layout: %1", instantiator.model[currentIndex].shortName)
+    visible: menu.count > 1
+
+    readonly property bool isWayland: Qt.platform.pluginName.includes("wayland")
+    KWinKeyboardLayouts.KeyboardLayout {
+        // If you are trying to figure out why you don't get any layouts,
+        // make sure some are listed in /var/lib/sddm/.config/kxkbrc
+        id: waylandKeyboardLayout
+        layout: root.currentIndex
+    }
 
     checkable: true
     checked: menu.opened
@@ -38,13 +47,19 @@ PlasmaComponents.ToolButton {
 
         Instantiator {
             id: instantiator
-            model: keyboard.layouts
+            model: root.isWayland ? waylandKeyboardLayout.layoutsList : keyboard.layouts
             onObjectAdded: menu.insertItem(index, object)
             onObjectRemoved: menu.removeItem(object)
             delegate: PlasmaComponents.MenuItem {
                 text: modelData.longName
+                readonly property string shortName: modelData.shortName
                 onTriggered: {
-                    keyboard.currentLayout = model.index
+                    if (root.isWayland) {
+                        waylandKeyboardLayout.layout = model.index
+                    } else {
+                        keyboard.currentLayout = model.index
+                    }
+
                     root.keyboardLayoutChanged()
                 }
             }
