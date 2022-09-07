@@ -144,7 +144,7 @@ KCM.SimpleKCM {
                     }
                 }
                 QQC2.Label {
-                        text: i18nc("Color temperature in Kelvin", "%1K", tempSliderDay.value)
+                    text: i18nc("Color temperature in Kelvin", "%1K", tempSliderDay.value)
                 }
                 //row 2
                 QQC2.Label {
@@ -154,7 +154,7 @@ KCM.SimpleKCM {
                     Layout.fillWidth: true
                 }
                 QQC2.Label {
-                    text: i18nc("Night colour blue-ish", "Cool")
+                    text: tempSliderDay.value == tempSliderDay.to ? i18nc("No blue light filter activated", "Cool (no filter)") : i18nc("Night colour blue-ish", "Cool")
                 }
                 Item {}
             }
@@ -198,7 +198,7 @@ KCM.SimpleKCM {
                     }
                 }
                 QQC2.Label {
-                        text: i18nc("Color temperature in Kelvin", "%1K", tempSliderNight.value)
+                    text: i18nc("Color temperature in Kelvin", "%1K", tempSliderNight.value)
                 }
                 //row 2
                 QQC2.Label {
@@ -208,7 +208,7 @@ KCM.SimpleKCM {
                     Layout.fillWidth: true
                 }
                 QQC2.Label {
-                    text: i18nc("Night colour blue-ish", "Cool")
+                    text: tempSliderNight.value == tempSliderNight.to ? i18nc("No blue light filter activated", "Cool (no filter)") : i18nc("Night colour blue-ish", "Cool")
                 }
                 Item {}
             }
