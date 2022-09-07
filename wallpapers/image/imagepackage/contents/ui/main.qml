@@ -164,8 +164,12 @@ QQC2.StackView {
         // BUG 454908: Update accent color
         pendingImage.QQC2.StackView.onActivated.connect(wallpaper.repaintNeeded);
         pendingImage.QQC2.StackView.onRemoved.connect(pendingImage.destroy);
-        root.replace(pendingImage, {},
-            doesSkipAnimation ? QQC2.StackView.Immediate : QQC2.StackView.Transition);
+        if (root.depth == 0) {
+            root.push(pendingImage);
+        } else {
+            root.replace(pendingImage, {},
+                doesSkipAnimation ? QQC2.StackView.Immediate : QQC2.StackView.Transition);
+        }
         pendingImage.statusChanged.disconnect(replaceWhenLoaded);
 
         wallpaper.loading = false;
