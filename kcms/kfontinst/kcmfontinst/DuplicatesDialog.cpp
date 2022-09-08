@@ -401,7 +401,6 @@ QSet<QString> CFontFileListView::getMarkedFiles()
     QSet<QString> files;
 
     for (int t = 0; t < root->childCount(); ++t) {
-        QList<QTreeWidgetItem *> removeFiles;
         QTreeWidgetItem *font = root->child(t);
 
         for (int c = 0; c < font->childCount(); ++c) {
@@ -423,7 +422,6 @@ CJobRunner::ItemList CFontFileListView::getMarkedItems()
     QString home(Misc::dirSyntax(QDir::homePath()));
 
     for (int t = 0; t < root->childCount(); ++t) {
-        QList<QTreeWidgetItem *> removeFiles;
         StyleItem *style = (StyleItem *)root->child(t);
 
         for (int c = 0; c < style->childCount(); ++c) {
