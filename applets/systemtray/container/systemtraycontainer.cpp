@@ -18,7 +18,7 @@ SystemTrayContainer::SystemTrayContainer(QObject *parent, const KPluginMetaData 
 
 SystemTrayContainer::~SystemTrayContainer()
 {
-    if (destroyed()) {
+    if (destroyed() && m_innerContainment) {
         m_innerContainment->destroy();
     }
 }
