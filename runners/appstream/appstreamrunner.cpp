@@ -96,31 +96,23 @@ void InstallerRunner::match(Plasma::RunnerContext &context)
         if (component.kind() != AppStream::Component::KindDesktopApp)
             continue;
 
-        // KApplicationTrader uses KService which uses KSycoca which holds
+        // KService uses KSycoca which holds
         // KDirWatch instances to monitor changes. We don't need this on
         // our runner threads - let's not needlessly allocate inotify instances.
         KSycoca::disableAutoRebuild();
-        const QString componentId = component.id();
-        const auto servicesFound = KApplicationTrader::query([&componentId](const KService::Ptr &service) {
-            if (service->exec().isEmpty())
-                return false;
 
-            if (service->desktopEntryName().compare(componentId, Qt::CaseInsensitive) == 0)
-                return true;
+        const QStringList launchables = component.launchable(AppStream::Launchable::KindDesktopId).entries();
 
-            const auto idWithoutDesktop = QString(componentId).remove(".desktop");
-            if (service->desktopEntryName().compare(idWithoutDesktop, Qt::CaseInsensitive) == 0)
-                return true;
-
-            const auto renamedFrom = service->property("X-Flatpak-RenamedFrom").toStringList();
-            if (renamedFrom.contains(componentId, Qt::CaseInsensitive) || renamedFrom.contains(idWithoutDesktop, Qt::CaseInsensitive))
-                return true;
-
-            return false;
+        bool alreadyInstalled = std::any_of(launchables.begin(), launchables.end(), [](const QString &launchable) {
+            const KService::Ptr maybeService = KService::serviceByStorageId(launchable);
+            return maybeService != nullptr;
         });
 
-        if (!servicesFound.isEmpty())
+        if (alreadyInstalled) {
             continue;
+        }
+
+        const QString componentId = component.id();
         const auto [_, inserted] = uniqueIds.insert(componentId);
         if (!inserted) {
             continue;
