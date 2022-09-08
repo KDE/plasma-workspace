@@ -1,6 +1,17 @@
 {
     "KPlugin": {
         "Description": "Adjust color temperature based on time",
+        "Description[ar]": "يضبط حرارة اللون بالاعتماد على الوقت",
+        "Description[bg]": "Регулиране на цветната температура според часа",
+        "Description[ca@valencia]": "Ajusta la temperatura del color en funció de l'hora",
+        "Description[ca]": "Ajusta la temperatura del color en funció de l'hora",
+        "Description[es]": "Ajustar la temperatura del color según la hora",
+        "Description[eu]": "Egokitu kolorearen tenperatura orduaren arabera",
+        "Description[nl]": "Kleurtemperatuur aanpassen gebaseerd op tijd",
+        "Description[pt]": "Ajustar a temperatura da cor com base na hora",
+        "Description[tr]": "Zamana bağlı olarak renk sıcaklığını ayarlayın",
+        "Description[uk]": "Коригування температури кольорів за часом",
+        "Description[x-test]": "xxAdjust color temperature based on timexx",
         "FormFactors": [
             "tablet",
             "handset",
