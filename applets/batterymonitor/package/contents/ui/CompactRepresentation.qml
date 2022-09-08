@@ -75,7 +75,7 @@ MouseArea {
                     pluggedIn: batteryContainer.pluggedIn
                 }
 
-                BadgeOverlay {
+                WorkspaceComponents.BadgeOverlay {
                     anchors.bottom: parent.bottom
                     anchors.right: parent.right
 
