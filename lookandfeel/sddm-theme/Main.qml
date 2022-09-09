@@ -316,7 +316,7 @@ PlasmaCore.ColorScope {
 
         Loader {
             id: inputPanel
-            height: Math.min(root.height/3, PlasmaCore.Units.gridUnit * 15)
+            height: Qt.platform.pluginName.includes("wayland") ? implicitHeight : Math.min(root.height/3, PlasmaCore.Units.gridUnit * 15)
             state: "hidden"
             property bool keyboardActive: item ? item.active : false
             onKeyboardActiveChanged: {
