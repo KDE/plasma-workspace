@@ -19,12 +19,16 @@ Item {
     id: root
     property var overlays: []
 
-    Plasmoid.onActivated: if (!Keyboards.KWinVirtualKeyboard.available) {
-        root.action_settings()
-    } else if (Keyboards.KWinVirtualKeyboard.visible) {
-        Keyboards.KWinVirtualKeyboard.active = false
-    } else {
-        Keyboards.KWinVirtualKeyboard.enabled = !Keyboards.KWinVirtualKeyboard.enabled
+    Plasmoid.onActivated: {
+        if (!Keyboards.KWinVirtualKeyboard.available) {
+            root.action_settings()
+        } else if (unsupportedState.when) {
+            Keyboards.KWinVirtualKeyboard.forceActivate()
+        } else if (Keyboards.KWinVirtualKeyboard.visible) {
+            Keyboards.KWinVirtualKeyboard.active = false
+        } else {
+            Keyboards.KWinVirtualKeyboard.enabled = !Keyboards.KWinVirtualKeyboard.enabled
+        }
     }
     Plasmoid.preferredRepresentation: Plasmoid.compactRepresentation
     Plasmoid.fullRepresentation: Plasmoid.compactRepresentation
@@ -67,7 +71,7 @@ Item {
 
     states: [
         State {
-            name: "available"
+            name: "unavailable"
             when: !Keyboards.KWinVirtualKeyboard.available
             PropertyChanges {
                 target: Plasmoid.self
@@ -85,6 +89,20 @@ Item {
                 icon: "input-keyboard-virtual-off"
                 toolTipSubText: i18n("Virtual Keyboard: disabled")
                 status: PlasmaCore.Types.ActiveStatus
+            }
+            PropertyChanges { target: root; overlays: [] }
+        },
+        State {
+            id: unsupportedState
+            name: "unsupported"
+            when: Keyboards.KWinVirtualKeyboard.available && !Keyboards.KWinVirtualKeyboard.activeClientSupportsTextInput
+            // When the current client doesn't support input methods, we can force
+            // the display of the virtual keyboard so it emulates a hardware keyboard instead
+            PropertyChanges {
+                target: Plasmoid.self
+                icon: "arrow-up"
+                toolTipSubText: i18n("Show Virtual Keyboard")
+                status: Kirigami.Settings.tabletMode ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
             }
             PropertyChanges { target: root; overlays: [] }
         },

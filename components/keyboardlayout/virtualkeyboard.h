@@ -15,6 +15,7 @@ class KwinVirtualKeyboardInterface : public OrgKdeKwinVirtualKeyboardInterface
     Q_PROPERTY(bool enabled READ enabled WRITE setEnabled NOTIFY enabledChanged)
     Q_PROPERTY(bool visible READ visible NOTIFY visibleChanged)
     Q_PROPERTY(bool available READ available NOTIFY availableChanged)
+    Q_PROPERTY(bool activeClientSupportsTextInput READ activeClientSupportsTextInput NOTIFY activeClientSupportsTextInputChanged)
 public:
     KwinVirtualKeyboardInterface();
 };
