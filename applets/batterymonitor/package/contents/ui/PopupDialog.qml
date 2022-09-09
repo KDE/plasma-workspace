@@ -184,6 +184,15 @@ PlasmaExtras.Representation {
                     KeyNavigation.down: index + 1 < batteryRepeater.count ? batteryRepeater.itemAt(index + 1) : null
                     KeyNavigation.backtab: KeyNavigation.up
                     KeyNavigation.tab: KeyNavigation.down
+
+                    Keys.onTabPressed: {
+                        if (index === batteryRepeater.count - 1) {
+                            // Workaround to leave applet's focus on desktop
+                            nextItemInFocusChain(false).forceActiveFocus(Qt.TabFocusReason);
+                        } else {
+                            event.accepted = false;
+                        }
+                    }
                 }
             }
         }
