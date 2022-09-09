@@ -287,8 +287,7 @@ ColumnLayout {
                     anchors.fill: parent
                     usesPlasmaTheme: false
                     smooth: true
-                    // don't show a generic "info" icon since this is a notification already
-                    source: notificationItem.icon !== "dialog-information" ? notificationItem.icon : ""
+                    source: notificationItem.icon
                     visible: active
                 }
 
