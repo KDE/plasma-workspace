@@ -9,6 +9,8 @@
         "Description[eu]": "Egokitu kolorearen tenperatura orduaren arabera",
         "Description[nl]": "Kleurtemperatuur aanpassen gebaseerd op tijd",
         "Description[pt]": "Ajustar a temperatura da cor com base na hora",
+        "Description[sl]": "Prilagodi temperaturo barve glede na čas",
+        "Description[ta]": "நேரத்திற்கேற்ப நிறவெப்பத்தை மாற்றும்",
         "Description[tr]": "Zamana bağlı olarak renk sıcaklığını ayarlayın",
         "Description[uk]": "Коригування температури кольорів за часом",
         "Description[x-test]": "xxAdjust color temperature based on timexx",
