@@ -1,0 +1,2 @@
+module org.kde.kworkspace
+plugin kworkspaceplugin
