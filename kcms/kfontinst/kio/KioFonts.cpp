@@ -203,7 +203,7 @@ void CKioFonts::put(const QUrl &url, int /*permissions*/, KIO::JobFlags /*flags*
     qCDebug(KCM_KFONTINST_KIO) << url;
     QStringList pathList(url.adjusted(QUrl::StripTrailingSlash).path().split(QLatin1Char('/'), Qt::SkipEmptyParts));
     EFolder folder(getFolder(pathList));
-#if KIO_VERSION >= QT_VERSION_CHECK(5, 96, 0)
+
     if (!Misc::root() && FOLDER_ROOT == folder) {
         error(KIO::ERR_WORKER_DEFINED, i18n("Can only install fonts to either \"%1\" or \"%2\".", KFI_KIO_FONTS_USER.toString(), KFI_KIO_FONTS_SYS.toString()));
     } else if (Misc::isPackage(url.fileName())) {
@@ -211,15 +211,6 @@ void CKioFonts::put(const QUrl &url, int /*permissions*/, KIO::JobFlags /*flags*
               i18n("You cannot install a fonts package directly.\n"
                    "Please extract %1, and install the components individually.",
                    url.toDisplayString()));
-#else
-    if (!Misc::root() && FOLDER_ROOT == folder) {
-        error(KIO::ERR_SLAVE_DEFINED, i18n("Can only install fonts to either \"%1\" or \"%2\".", KFI_KIO_FONTS_USER.toString(), KFI_KIO_FONTS_SYS.toString()));
-    } else if (Misc::isPackage(url.fileName())) {
-        error(KIO::ERR_SLAVE_DEFINED,
-              i18n("You cannot install a fonts package directly.\n"
-                   "Please extract %1, and install the components individually.",
-                   url.toDisplayString()));
-#endif
     } else {
         if (!m_tempDir) {
             m_tempDir = new QTemporaryDir(QDir::tempPath() + QString::fromLatin1("/kio_fonts_") + QString::number(getpid()));
@@ -445,20 +436,12 @@ void CKioFonts::get(const QUrl &url)
 
 void CKioFonts::copy(const QUrl &, const QUrl &, int, KIO::JobFlags)
 {
-#if KIO_VERSION >= QT_VERSION_CHECK(5, 96, 0)
     error(KIO::ERR_WORKER_DEFINED, i18n("Cannot copy fonts"));
-#else
-    error(KIO::ERR_SLAVE_DEFINED, i18n("Cannot copy fonts"));
-#endif
 }
 
 void CKioFonts::rename(const QUrl &, const QUrl &, KIO::JobFlags)
 {
-#if KIO_VERSION >= QT_VERSION_CHECK(5, 96, 0)
     error(KIO::ERR_WORKER_DEFINED, i18n("Cannot move fonts"));
-#else
-    error(KIO::ERR_SLAVE_DEFINED, i18n("Cannot move fonts"));
-#endif
 }
 
 void CKioFonts::del(const QUrl &url, bool isFile)
@@ -468,17 +451,10 @@ void CKioFonts::del(const QUrl &url, bool isFile)
     EFolder folder(getFolder(pathList));
     QString name(removeKnownExtension(url));
 
-#if KIO_VERSION >= QT_VERSION_CHECK(5, 96, 0)
     if (!isFile) {
         error(KIO::ERR_WORKER_DEFINED, i18n("Only fonts may be deleted."));
     } else if (!Misc::root() && FOLDER_ROOT == folder) {
         error(KIO::ERR_WORKER_DEFINED, i18n("Can only remove fonts from either \"%1\" or \"%2\".", KFI_KIO_FONTS_USER.toString(), KFI_KIO_FONTS_SYS.toString()));
-#else
-    if (!isFile) {
-        error(KIO::ERR_SLAVE_DEFINED, i18n("Only fonts may be deleted."));
-    } else if (!Misc::root() && FOLDER_ROOT == folder) {
-        error(KIO::ERR_SLAVE_DEFINED, i18n("Can only remove fonts from either \"%1\" or \"%2\".", KFI_KIO_FONTS_USER.toString(), KFI_KIO_FONTS_SYS.toString()));
-#endif
     } else if (!name.isEmpty()) {
         handleResp(m_interface->uninstall(name, Misc::root() || FOLDER_SYS == folder), name);
     } else {
@@ -505,11 +481,7 @@ void CKioFonts::stat(const QUrl &url)
         } else if (FOLDER_SYS == folder || FOLDER_USER == folder) {
             createUDSEntry(entry, folder);
         } else {
-#if KIO_VERSION >= QT_VERSION_CHECK(5, 96, 0)
             error(KIO::ERR_WORKER_DEFINED, i18n("Please specify \"%1\" or \"%2\".", KFI_KIO_FONTS_USER.toString(), KFI_KIO_FONTS_SYS.toString()));
-#else
-            error(KIO::ERR_SLAVE_DEFINED, i18n("Please specify \"%1\" or \"%2\".", KFI_KIO_FONTS_USER.toString(), KFI_KIO_FONTS_SYS.toString()));
-#endif
             return;
         }
         break;
@@ -731,7 +703,6 @@ Family CKioFonts::getFont(const QUrl &url, EFolder folder)
 void CKioFonts::handleResp(int resp, const QString &file, const QString &tempFile, bool destIsSystem)
 {
     switch (resp) {
-#if KIO_VERSION >= QT_VERSION_CHECK(5, 96, 0)
     case FontInst::STATUS_NO_SYS_CONNECTION:
         error(KIO::ERR_WORKER_DEFINED, i18n("Failed to start the system daemon"));
         break;
@@ -755,31 +726,6 @@ void CKioFonts::handleResp(int resp, const QString &file, const QString &tempFil
         error(KIO::ERR_WORKER_DEFINED, i18n("<i>%1</i> already exists.", destFolder + name));
         break;
     }
-#else
-    case FontInst::STATUS_NO_SYS_CONNECTION:
-        error(KIO::ERR_SLAVE_DEFINED, i18n("Failed to start the system daemon"));
-        break;
-    case FontInst::STATUS_SERVICE_DIED:
-        error(KIO::ERR_SLAVE_DEFINED, i18n("Backend died"));
-        break;
-    case FontInst::STATUS_BITMAPS_DISABLED:
-        error(KIO::ERR_SLAVE_DEFINED, i18n("%1 is a bitmap font, and these have been disabled on your system.", file));
-        break;
-    case FontInst::STATUS_ALREADY_INSTALLED:
-        error(KIO::ERR_SLAVE_DEFINED, i18n("%1 contains the font <b>%2</b>, which is already installed on your system.", file, FC::getName(tempFile)));
-        break;
-    case FontInst::STATUS_NOT_FONT_FILE:
-        error(KIO::ERR_SLAVE_DEFINED, i18n("%1 is not a font.", file));
-        break;
-    case FontInst::STATUS_PARTIAL_DELETE:
-        error(KIO::ERR_SLAVE_DEFINED, i18n("Could not remove all files associated with %1", file));
-        break;
-    case KIO::ERR_FILE_ALREADY_EXIST: {
-        QString name(Misc::modifyName(file)), destFolder(Misc::getDestFolder(m_interface->folderName(destIsSystem), name));
-        error(KIO::ERR_SLAVE_DEFINED, i18n("<i>%1</i> already exists.", destFolder + name));
-        break;
-    }
-#endif
     case FontInst::STATUS_OK:
         finished();
         break;
