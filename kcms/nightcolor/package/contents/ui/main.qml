@@ -176,6 +176,7 @@ KCM.SimpleKCM {
                     id: tempSliderDay
                     // Match combobox width
                     Layout.minimumWidth: modeSwitcher.width
+                    Layout.columnSpan: 3
                     from: 1000 // TODO get min/max fron kcfg
                     to: 6500
                     stepSize: 100
@@ -194,8 +195,6 @@ KCM.SimpleKCM {
                         previewMessage.state = "invisible"
                         cA.stopPreview()
                     }
-
-                    Layout.columnSpan: 3
 
                     KCM.SettingStateBinding {
                         configObject: kcm.nightColorSettings
@@ -230,6 +229,7 @@ KCM.SimpleKCM {
                     id: tempSliderNight
                     // Match combobox width
                     Layout.minimumWidth: modeSwitcher.width
+                    Layout.columnSpan: 3
                     from: 1000 // TODO get min/max fron kcfg
                     to: 6500
                     stepSize: 100
@@ -248,8 +248,6 @@ KCM.SimpleKCM {
                         previewMessage.state = "invisible"
                         cA.stopPreview()
                     }
-
-                    Layout.columnSpan: 3
 
                     KCM.SettingStateBinding {
                         configObject: kcm.nightColorSettings
