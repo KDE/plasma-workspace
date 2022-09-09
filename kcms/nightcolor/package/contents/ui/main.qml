@@ -43,6 +43,16 @@ KCM.SimpleKCM {
         root.locator.destroy();
     }
 
+    function startPreview(value) {
+        previewMessage.state = "visible"
+        cA.preview(value)
+    }
+
+    function stopPreview() {
+        previewMessage.state = "invisible"
+        cA.stopPreview()
+    }
+
     Connections {
         target: kcm.nightColorSettings
         function onActiveChanged() {
@@ -68,6 +78,12 @@ KCM.SimpleKCM {
             type: Kirigami.MessageType.Error
             text: cA.errorText
         }
+    }
+
+    Timer {
+        id: previewMessageTimer
+        interval: Kirigami.Durations.humanMoment
+        onTriggered: stopPreview()
     }
 
     ColumnLayout {
@@ -186,14 +202,21 @@ KCM.SimpleKCM {
 
                     onMoved: {
                         kcm.nightColorSettings.dayTemperature = value
-                        previewMessage.state = "visible"
                         previewMessage.text = i18n("This is what day color temperature will look like when active.")
-                        cA.preview(value)
-                    }
+                        root.startPreview(value)
 
+                        // This can fire for scroll events; in this case we need
+                        // to use a timer to make the preview message disappear, since
+                        // we can't make it disappear in the onPressedChanged handler
+                        // since there is no press
+                        if (!pressed) {
+                            previewMessageTimer.restart()
+                        }
+                    }
                     onPressedChanged: {
-                        previewMessage.state = "invisible"
-                        cA.stopPreview()
+                        if (!pressed) {
+                            root.stopPreview()
+                        }
                     }
 
                     KCM.SettingStateBinding {
@@ -239,14 +262,21 @@ KCM.SimpleKCM {
 
                     onMoved: {
                         kcm.nightColorSettings.nightTemperature = value
-                        previewMessage.state = "visible"
                         previewMessage.text = i18n("This is what night color temperature will look like when active.")
-                        cA.preview(value)
-                    }
+                        root.startPreview(value)
 
+                        // This can fire for scroll events; in this case we need
+                        // to use a timer to make the preview message disappear, since
+                        // we can't make it disappear in the onPressedChanged handler
+                        // since there is no press
+                        if (!pressed) {
+                            previewMessageTimer.restart()
+                        }
+                    }
                     onPressedChanged: {
-                        previewMessage.state = "invisible"
-                        cA.stopPreview()
+                        if (!pressed) {
+                            root.stopPreview()
+                        }
                     }
 
                     KCM.SettingStateBinding {
