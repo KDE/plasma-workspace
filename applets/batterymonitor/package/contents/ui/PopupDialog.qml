@@ -70,6 +70,13 @@ PlasmaExtras.Representation {
         // HACK: workaround for https://bugreports.qt.io/browse/QTBUG-83890
         PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
 
+        function scrollToY(yPos) {
+            if (!PlasmaComponents3.ScrollBar.vertical.visible) {
+                return;
+            }
+            PlasmaComponents3.ScrollBar.vertical.position = Math.min(1, Math.max(0, yPos / batteryList.implicitHeight));
+        }
+
         Column {
             id: batteryList
 
@@ -114,6 +121,7 @@ PlasmaExtras.Representation {
                 stepSize: batterymonitor.maximumScreenBrightness/100
 
                 onMoved: batterymonitor.screenBrightness = value
+                onActiveFocusChanged: if (activeFocus) scrollView.scrollToY(y)
 
                 // Manually dragging the slider around breaks the binding
                 Connections {
@@ -142,6 +150,7 @@ PlasmaExtras.Representation {
                 KeyNavigation.tab: KeyNavigation.down
 
                 onMoved: batterymonitor.keyboardBrightness = value
+                onActiveFocusChanged: if (activeFocus) scrollView.scrollToY(y)
 
                 // Manually dragging the slider around breaks the binding
                 Connections {
@@ -168,6 +177,8 @@ PlasmaExtras.Representation {
                 degradationReason: dialog.degradationReason
                 profileHolds: dialog.profileHolds
                 onActivateProfileRequested: dialog.activateProfileRequested(profile)
+
+                onActiveFocusChanged: if (activeFocus) scrollView.scrollToY(y)
             }
 
             Repeater {
@@ -193,6 +204,8 @@ PlasmaExtras.Representation {
                             event.accepted = false;
                         }
                     }
+
+                    onActiveFocusChanged: if (activeFocus) scrollView.scrollToY(y)
                 }
             }
         }
