@@ -29,6 +29,7 @@ using namespace NotificationManager;
 
 AbstractNotificationsModel::Private::Private(AbstractNotificationsModel *q)
     : q(q)
+    , inhibited(false)
     , lastRead(QDateTime::currentDateTimeUtc())
 {
     pendingRemovalTimer.setSingleShot(true);

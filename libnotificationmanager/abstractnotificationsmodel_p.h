@@ -41,7 +41,7 @@ public:
     QVector<uint /*notificationId*/> pendingRemovals;
     QTimer pendingRemovalTimer;
 
-    bool inhibited = false; // "Do not disturb" mode
+    bool inhibited; // "Do not disturb" mode
     QDateTime lastRead;
 };
 
