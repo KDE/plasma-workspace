@@ -44,7 +44,6 @@ public:
 
     void startTimeout(uint notificationId);
     void stopTimeout(uint notificationId);
-    void setInhibited(bool inhibited);
 
     void clear(Notifications::ClearFlags flags);
 
