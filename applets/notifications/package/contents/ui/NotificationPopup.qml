@@ -161,10 +161,20 @@ PlasmaCore.Dialog {
             onDismissRequested: popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
 
             cursorShape: hasDefaultAction ? Qt.PointingHandCursor : Qt.ArrowCursor
-            acceptedButtons: hasDefaultAction || draggable ? Qt.LeftButton : Qt.NoButton
+            acceptedButtons: {
+                let buttons = Qt.MiddleButton;
+                if (hasDefaultAction || draggable) {
+                    buttons |= Qt.LeftButton;
+                }
+                return buttons;
+            }
 
             onClicked: {
-                if (hasDefaultAction) {
+                if (mouse.button === Qt.MiddleButton) {
+                    if (notificationItem.closable) {
+                        notificationItem.closeClicked();
+                    }
+                } else if (hasDefaultAction) {
                     notificationPopup.defaultActionInvoked();
                 }
             }
