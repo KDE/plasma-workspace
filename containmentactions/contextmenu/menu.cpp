@@ -18,6 +18,7 @@
 #include <KIO/CommandLauncherJob>
 #include <KLocalizedString>
 #include <KService>
+#include <KTerminalLauncherJob>
 #include <QDebug>
 #include <QIcon>
 
@@ -62,6 +63,7 @@ void ContextMenu::restore(const KConfigGroup &config)
                       << QStringLiteral("configure shortcuts")
                       << QStringLiteral("_sep1")
                       << QStringLiteral("_context")
+                      << QStringLiteral("_open_terminal")
                       << QStringLiteral("_run_command")
                       << QStringLiteral("add widgets")
                       << QStringLiteral("_add panel")
@@ -74,6 +76,7 @@ void ContextMenu::restore(const KConfigGroup &config)
                       << QStringLiteral("_sep3")
                       << QStringLiteral("_wallpaper");
         disabled.insert(QStringLiteral("configure shortcuts"));
+        disabled.insert(QStringLiteral("_open_terminal"));
         disabled.insert(QStringLiteral("_run_command"));
         disabled.insert(QStringLiteral("run associated application"));
         disabled.insert(QStringLiteral("_lock_screen"));
@@ -97,6 +100,10 @@ void ContextMenu::restore(const KConfigGroup &config)
         m_runCommandAction->setIcon(QIcon::fromTheme(QStringLiteral("plasma-search")));
         m_runCommandAction->setShortcut(KGlobalAccel::self()->globalShortcut(QStringLiteral("krunner.desktop"), QStringLiteral("_launch")).value(0));
         connect(m_runCommandAction, &QAction::triggered, this, &ContextMenu::runCommand);
+
+        m_openTerminalAction = new QAction(i18n("Open Terminal"), this);
+        m_openTerminalAction->setIcon(QIcon::fromTheme("utilities-terminal"));
+        connect(m_openTerminalAction, &QAction::triggered, this, &ContextMenu::openTerminal);
 
         m_lockScreenAction = new QAction(i18nc("plasma_containmentactions_contextmenu", "Lock Screen"), this);
         m_lockScreenAction->setIcon(QIcon::fromTheme(QStringLiteral("system-lock-screen")));
@@ -180,6 +187,10 @@ QAction *ContextMenu::action(const QString &name)
         if (KAuthorized::authorizeAction(QStringLiteral("run_command")) && KAuthorized::authorize(QStringLiteral("run_command"))) {
             return m_runCommandAction;
         }
+    } else if (name == QLatin1String("_open_terminal")) {
+        if (KAuthorized::authorizeAction(QStringLiteral("shell_access"))) {
+            return m_openTerminalAction;
+        }
     } else if (name == QLatin1String("_lock_screen")) {
         if (KAuthorized::authorizeAction(QStringLiteral("lock_screen"))) {
             return m_lockScreenAction;
@@ -211,6 +222,16 @@ QAction *ContextMenu::action(const QString &name)
         return c->actions()->action(name);
     }
     return nullptr;
+}
+
+void ContextMenu::openTerminal()
+{
+    if (!KAuthorized::authorizeAction(QStringLiteral("shell_access"))) {
+        return;
+    }
+    auto job = new KTerminalLauncherJob(QString());
+    job->setWorkingDirectory(QDir::homePath());
+    job->start();
 }
 
 void ContextMenu::runCommand()

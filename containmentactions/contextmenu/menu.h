@@ -29,11 +29,13 @@ public:
     void save(KConfigGroup &config) override;
 
 public Q_SLOTS:
+    void openTerminal();
     void runCommand();
     void startLogout();
     void configureDisplays();
 
 private:
+    QAction *m_openTerminalAction = nullptr;
     QAction *m_runCommandAction = nullptr;
     QAction *m_lockScreenAction = nullptr;
     QAction *m_logoutAction = nullptr;
