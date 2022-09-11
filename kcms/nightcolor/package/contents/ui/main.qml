@@ -183,8 +183,8 @@ KCM.SimpleKCM {
                     // Match combobox width
                     Layout.minimumWidth: modeSwitcher.width
                     Layout.columnSpan: 3
-                    from: 1000 // TODO get min/max fron kcfg
-                    to: 6500
+                    from: kcm.minDayTemp
+                    to: kcm.maxDayTemp
                     stepSize: 100
                     live: true
 
@@ -242,8 +242,8 @@ KCM.SimpleKCM {
                     // Match combobox width
                     Layout.minimumWidth: modeSwitcher.width
                     Layout.columnSpan: 3
-                    from: 1000 // TODO get min/max fron kcfg
-                    to: 6500
+                    from: kcm.minNightTemp
+                    to: kcm.maxNightTemp
                     stepSize: 100
                     live: true
 

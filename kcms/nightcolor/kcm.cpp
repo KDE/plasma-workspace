@@ -27,6 +27,11 @@ KCMNightColor::KCMNightColor(QObject *parent, const KPluginMetaData &data, const
 
     worldMapFile = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("plasma/nightcolor/worldmap.png"), QStandardPaths::LocateFile);
 
+    minDayTemp = nightColorSettings()->findItem("DayTemperature")->minValue().toInt();
+    maxDayTemp = nightColorSettings()->findItem("DayTemperature")->maxValue().toInt();
+    minNightTemp = nightColorSettings()->findItem("NightTemperature")->minValue().toInt();
+    maxNightTemp = nightColorSettings()->findItem("NightTemperature")->maxValue().toInt();
+
     setButtons(Apply | Default);
 }
 
