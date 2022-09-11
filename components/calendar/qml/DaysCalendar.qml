@@ -163,8 +163,6 @@ Item {
                     }
                     if (index < (daysCalendar.rows - 1) * daysCalendar.columns) {
                         repeater.itemAt(index + daysCalendar.columns).forceActiveFocus(Qt.TabFocusReason);
-                    } else {
-                        daysCalendar.scrollDown();
                     }
                 }
 

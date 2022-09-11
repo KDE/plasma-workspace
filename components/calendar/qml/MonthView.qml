@@ -6,7 +6,7 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-import QtQuick 2.0
+import QtQuick 2.15
 import QtQuick.Layouts 1.1
 
 import org.kde.plasma.workspace.calendar 2.0
@@ -71,7 +71,8 @@ Item {
 
     KeyNavigation.up: nextButton
     // The view can have no highlighted item, so always highlight the first item
-    Keys.onDownPressed: swipeView.currentItem.repeater.itemAt(0).forceActiveFocus(Qt.TabFocusReason);
+    Keys.onDownPressed: swipeView.currentItem.focusFirstCellOfView()
+    signal upPressed(var event)
 
     function isToday(date) {
         return date.toDateString() === new Date().toDateString();
@@ -86,7 +87,7 @@ Item {
      * Move calendar to month view showing today's date.
      */
     function resetToToday() {
-        calendarBackend.resetToToday();
+        mainDaysCalendar.resetToToday();
         root.currentDate = root.today;
         root.currentDateAuxilliaryText = root.todayAuxilliaryText;
         swipeView.currentIndex = 0;
@@ -131,12 +132,13 @@ Item {
      */
     function nextView() {
         if (swipeView.currentIndex === 0) {
-            calendarBackend.nextMonth();
+            mainDaysCalendar.nextView();
         } else if (swipeView.currentIndex === 1) {
-            calendarBackend.nextYear();
+            yearView.nextView();
         } else if (swipeView.currentIndex === 2) {
-            calendarBackend.nextDecade();
+            decadeView.nextView();
         }
+
     }
 
     /**
@@ -145,13 +147,14 @@ Item {
      */
     function previousView() {
         if (swipeView.currentIndex === 0) {
-            calendarBackend.previousMonth();
+            mainDaysCalendar.previousView();
         } else if (swipeView.currentIndex === 1) {
-            calendarBackend.previousYear();
+            yearView.previousView();
         } else if (swipeView.currentIndex === 2) {
-            calendarBackend.previousDecade();
+            decadeView.previousView();
         }
     }
+
 
     /**
      * \return CalendarView
@@ -181,7 +184,7 @@ Item {
     }
 
     /**
-     * Show month view.
+     * Show decade view.
      */
     function showDecadeView() {
         swipeView.currentIndex = 2;
@@ -367,79 +370,116 @@ Item {
             updateDecadeOverview();
         }
 
+        onFocusChanged: if(focus) {
+            currentItem.focusFirstCellOfView();
+        }
+
         // MonthView
-        DaysCalendar {
-            id: mainDaysCalendar
+        InfiniteList {
+           id: mainDaysCalendar
 
-            columns: calendarBackend.days
-            rows: calendarBackend.weeks
+           readonly property double cellHeight: currentItem.cellHeight
 
-            showWeekNumbers: root.showWeekNumbers
+           backend: calendarBackend
+           viewType: InfiniteList.ViewType.DayView
+           eventPluginsManager: root.eventPluginsManager
 
-            headerModel: calendarBackend.days
-            gridModel: calendarBackend.daysModel
-
-            dateMatchingPrecision: Calendar.MatchYearMonthAndDay
-
-            KeyNavigation.left: swipeView.KeyNavigation.left
-            KeyNavigation.tab: swipeView.KeyNavigation.tab
-
-            onActivated: {
-                const rowNumber = Math.floor(index / columns);
-                week = 1 + calendarBackend.weeksModel[rowNumber];
-                root.currentDate = new Date(date.yearNumber, date.monthNumber - 1, date.dayNumber)
-
-                if (date.subLabel) {
-                    root.currentDateAuxilliaryText = date.subLabel;
+           function handleUpPress(event) {
+                if(root.showCustomHeader) {
+                    root.upPressed(event);
+                    return;
                 }
+                swipeView.Keys.onUpPressed(event);
             }
 
-            onScrollUp: root.nextView()
-            onScrollDown: root.previousView()
+           delegate: DaysCalendar {
+                columns: calendarBackend.days
+                rows: calendarBackend.weeks
+
+                showWeekNumbers: root.showWeekNumbers
+
+                headerModel: calendarBackend.days
+                gridModel: calendarBackend.daysModel
+
+                dateMatchingPrecision: Calendar.MatchYearMonthAndDay
+
+                KeyNavigation.left: swipeView.KeyNavigation.left
+                KeyNavigation.tab: swipeView.KeyNavigation.tab
+                Keys.onUpPressed: mainDaysCalendar.handleUpPress(event)
+
+                onActivated: {
+                    const rowNumber = Math.floor(index / columns);
+                    week = 1 + calendarBackend.weeksModel[rowNumber];
+                    root.currentDate = new Date(date.yearNumber, date.monthNumber - 1, date.dayNumber)
+
+                    if (date.subLabel) {
+                        root.currentDateAuxilliaryText = date.subLabel;
+                    }
+                }
+                onScrollUp: root.nextView()
+                onScrollDown: root.previousView()
+            }
         }
 
         // YearView
-        DaysCalendar {
-            columns: 3
-            rows: 4
+        InfiniteList {
+           id: yearView
 
-            dateMatchingPrecision: Calendar.MatchYearAndMonth
+           backend: calendarBackend
+           viewType: InfiniteList.ViewType.YearView
+           delegate: DaysCalendar {
+                columns: 3
+                rows: 4
 
-            gridModel: monthModel
+                dateMatchingPrecision: Calendar.MatchYearAndMonth
 
-            KeyNavigation.left: swipeView.KeyNavigation.left
-            KeyNavigation.tab: swipeView.KeyNavigation.tab
+                gridModel: monthModel
 
-            onActivated: {
-                calendarBackend.goToMonth(date.monthNumber);
-                swipeView.currentIndex = 0;
+                KeyNavigation.left: swipeView.KeyNavigation.left
+                KeyNavigation.tab: swipeView.KeyNavigation.tab
+                Keys.onUpPressed: mainDaysCalendar.handleUpPress(event)
+
+                onActivated: {
+                    calendarBackend.goToMonth(date.monthNumber);
+                    swipeView.currentIndex = 0;
+                }
+                onScrollUp: root.nextView()
+                onScrollDown: root.previousView()
             }
         }
 
         // DecadeView
-        DaysCalendar {
-            readonly property int decade: {
-                const year = calendarBackend.displayedDate.getFullYear()
-                return year - year % 10
+        InfiniteList {
+            id: decadeView
+
+            backend: calendarBackend
+            viewType: InfiniteList.ViewType.DecadeView
+            delegate: DaysCalendar {
+                readonly property int decade: {
+                    const year = calendarBackend.displayedDate.getFullYear()
+                    return year - year % 10
+                }
+
+                columns: 3
+                rows: 4
+                width: decadeView.width
+                height: decadeView.height
+                dateMatchingPrecision: Calendar.MatchYear
+
+                gridModel: yearModel
+
+                KeyNavigation.left: swipeView.KeyNavigation.left
+                KeyNavigation.tab: swipeView.KeyNavigation.tab
+                Keys.onUpPressed: mainDaysCalendar.handleUpPress(event)
+
+                onActivated: {
+                    calendarBackend.goToYear(date.yearNumber);
+                    swipeView.currentIndex = 1;
+                }
+
+                onScrollUp: root.nextView()
+                onScrollDown: root.previousView()
             }
-
-            columns: 3
-            rows: 4
-
-            dateMatchingPrecision: Calendar.MatchYear
-
-            gridModel: yearModel
-
-            KeyNavigation.left: swipeView.KeyNavigation.left
-            KeyNavigation.tab: swipeView.KeyNavigation.tab
-
-            onActivated: {
-                calendarBackend.goToYear(date.yearNumber);
-                swipeView.currentIndex = 1;
-            }
-
-            onScrollUp: calendarBackend.nextYear()
-            onScrollDown: calendarBackend.previousYear()
         }
     }
 

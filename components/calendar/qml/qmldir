@@ -6,3 +6,4 @@ MonthMenu 2.0 MonthMenu.qml
 internal CalendarToolbar CalendarToolbar.qml
 internal DayDelegate DayDelegate.qml
 internal DaysCalendar DaysCalendar.qml
+internal InfiniteList InfiniteList.qml

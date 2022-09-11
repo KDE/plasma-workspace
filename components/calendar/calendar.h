@@ -103,6 +103,7 @@ class Calendar : public QObject
      *       where you would want the short month name.
      */
     Q_PROPERTY(QString monthName READ monthName NOTIFY monthNameChanged)
+    Q_PROPERTY(int month READ month NOTIFY monthChanged)
 
     /**
      * This model contains the actual grid data of days. For example, if you had set:
@@ -164,6 +165,7 @@ public:
 
     // Month name
     QString monthName() const;
+    int month() const;
     int year() const;
 
     // Models
@@ -192,6 +194,7 @@ Q_SIGNALS:
     void firstDayOfWeekChanged();
     void errorMessageChanged();
     void monthNameChanged();
+    void monthChanged();
     void yearChanged();
     void weeksModelChanged();
 

@@ -710,6 +710,7 @@ PlasmaExtras.Representation {
         anchors.bottom: parent.bottom
         onActiveFocusChanged: if (activeFocus) {
             monthViewWrapper.nextItemInFocusChain().forceActiveFocus();
+            monthView.Keys.onDownPressed(null)
         }
         PlasmaCalendar.MonthView {
             id: monthView
@@ -726,6 +727,7 @@ PlasmaExtras.Representation {
             KeyNavigation.left: KeyNavigation.tab
             KeyNavigation.tab: addEventButton.visible ? addEventButton : addEventButton.KeyNavigation.down
             Keys.onUpPressed: tabbar.currentItem.forceActiveFocus(Qt.BacktabFocusReason);
+            onUpPressed: Keys.onUpPressed(event)
         }
     }
 }

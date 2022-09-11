@@ -41,6 +41,7 @@ Calendar::Calendar(QObject *parent)
 {
     //  m_dayHelper = new CalendarDayHelper(this);
     //   connect(m_dayHelper, SIGNAL(calendarChanged()), this, SLOT(updateData()));
+    connect(this, &Calendar::monthNameChanged, this, &Calendar::monthChanged);
 }
 
 Calendar::~Calendar()
@@ -219,6 +220,11 @@ QString Calendar::monthName() const
 int Calendar::year() const
 {
     return d->m_displayedDate.year();
+}
+
+int Calendar::month() const
+{
+    return d->m_displayedDate.month();
 }
 
 QAbstractItemModel *Calendar::daysModel() const
