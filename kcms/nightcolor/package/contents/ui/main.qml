@@ -43,16 +43,6 @@ KCM.SimpleKCM {
         root.locator.destroy();
     }
 
-    function startPreview(value) {
-        previewMessage.state = "visible"
-        cA.preview(value)
-    }
-
-    function stopPreview() {
-        previewMessage.state = "invisible"
-        cA.stopPreview()
-    }
-
     Connections {
         target: kcm.nightColorSettings
         function onActiveChanged() {
@@ -81,9 +71,9 @@ KCM.SimpleKCM {
     }
 
     Timer {
-        id: previewMessageTimer
+        id: previewTimer
         interval: Kirigami.Durations.humanMoment
-        onTriggered: stopPreview()
+        onTriggered: cA.stopPreview()
     }
 
     ColumnLayout {
@@ -202,20 +192,19 @@ KCM.SimpleKCM {
 
                     onMoved: {
                         kcm.nightColorSettings.dayTemperature = value
-                        previewMessage.text = i18n("This is what day color temperature will look like when active.")
-                        root.startPreview(value)
+                        cA.preview(value)
 
                         // This can fire for scroll events; in this case we need
                         // to use a timer to make the preview message disappear, since
                         // we can't make it disappear in the onPressedChanged handler
                         // since there is no press
                         if (!pressed) {
-                            previewMessageTimer.restart()
+                            previewTimer.restart()
                         }
                     }
                     onPressedChanged: {
                         if (!pressed) {
-                            root.stopPreview()
+                            cA.stopPreview()
                         }
                     }
 
@@ -262,20 +251,19 @@ KCM.SimpleKCM {
 
                     onMoved: {
                         kcm.nightColorSettings.nightTemperature = value
-                        previewMessage.text = i18n("This is what night color temperature will look like when active.")
-                        root.startPreview(value)
+                        cA.preview(value)
 
                         // This can fire for scroll events; in this case we need
-                        // to use a timer to make the preview message disappear, since
+                        // to use a timer to make the preview disappear, since
                         // we can't make it disappear in the onPressedChanged handler
                         // since there is no press
                         if (!pressed) {
-                            previewMessageTimer.restart()
+                            previewTimer.restart()
                         }
                     }
                     onPressedChanged: {
                         if (!pressed) {
-                            root.stopPreview()
+                            cA.stopPreview()
                         }
                     }
 
@@ -299,34 +287,6 @@ KCM.SimpleKCM {
                     text: tempSliderNight.value == tempSliderNight.to ? i18nc("No blue light filter activated", "Cool (no filter)") : i18nc("Night colour blue-ish", "Cool")
                 }
                 Item {}
-            }
-
-            QQC2.Label {
-                id: previewMessage
-                opacity: 0
-                state: "invisible"
-                states: [
-                    State {
-                        name: "invisible"
-                        PropertyChanges { target: previewMessage; opacity: 0 }
-                    },
-                    State {
-                        name: "visible"
-                        PropertyChanges { target: previewMessage; opacity: 1 }
-                    }
-                ]
-                transitions: [
-                    Transition {
-                        from: "invisible"
-                        to: "visible"
-                        NumberAnimation { properties: "opacity"; easing.type: Easing.OutCubic; duration: Kirigami.Units.shortDuration }
-                    },
-                    Transition {
-                        from: "visible"
-                        to: "invisible"
-                        NumberAnimation { properties: "opacity"; easing.type: Easing.InCubic; duration: Kirigami.Units.shortDuration }
-                    }
-                ]
             }
 
             // Show current location in auto mode
