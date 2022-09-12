@@ -1698,6 +1698,17 @@ bool TasksModel::move(int row, int newPos, const QModelIndex &parent)
         // Translate to sort map indices.
         const QModelIndex &groupingRowIndex = mapToSource(index(row, 0, parent));
         const QModelIndex &preFilterRowIndex = d->preFilterIndex(groupingRowIndex);
+
+        const bool groupNotDisabled = !parent.isValid() && groupMode() != GroupDisabled;
+        QModelIndex adjacentGroupingRowIndex; // Also consolidate the adjacent group parent
+        if (groupNotDisabled) {
+            if (newPos > row && row + 1 < rowCount(parent)) {
+                adjacentGroupingRowIndex = mapToSource(index(row + 1, 0, parent) /* task on the right */);
+            } else if (newPos < row && row - 1 >= 0) {
+                adjacentGroupingRowIndex = mapToSource(index(row - 1, 0, parent) /* task on the left */);
+            }
+        }
+
         row = d->sortedPreFilterRows.indexOf(preFilterRowIndex.row());
         newPos = d->sortedPreFilterRows.indexOf(d->preFilterIndex(mapToSource(index(newPos, 0, parent))).row());
 
@@ -1705,8 +1716,16 @@ bool TasksModel::move(int row, int newPos, const QModelIndex &parent)
         d->sortedPreFilterRows.move(row, newPos);
 
         // If we moved a group parent, consolidate sort map for children.
-        if (!parent.isValid() && groupMode() != GroupDisabled && d->groupingProxyModel->rowCount(groupingRowIndex)) {
-            d->consolidateManualSortMapForGroup(groupingRowIndex);
+        if (groupNotDisabled) {
+            if (d->groupingProxyModel->rowCount(groupingRowIndex)) {
+                d->consolidateManualSortMapForGroup(groupingRowIndex);
+            }
+            // Special case: Before moving, the task at newPos is a group parent
+            // Before moving: [Task] [Group parent]
+            // After moving: [Group parent (not consolidated yet)] [Task]
+            if (adjacentGroupingRowIndex.isValid() && d->groupingProxyModel->rowCount(adjacentGroupingRowIndex)) {
+                d->consolidateManualSortMapForGroup(adjacentGroupingRowIndex);
+            }
         }
 
         endMoveRows();
