@@ -1,0 +1,7 @@
+{
+    "KPlugin": {
+        "Description": "Play audible feedback when devices are inserted or removed",
+        "Name": "Device Notifications"
+    },
+    "X-KDE-Kded-autoload": true
+}

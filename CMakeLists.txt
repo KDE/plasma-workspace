@@ -182,6 +182,11 @@ if(${AppStreamQt_FOUND})
     set(HAVE_APPSTREAMQT true)
 endif()
 
+find_package(UDev REQUIRED)
+set_package_properties(UDev PROPERTIES
+    PURPOSE "Allows to play notification sounds when (un)plugging devices"
+    TYPE OPTIONAL
+)
 
 # Region & Language KCM
 if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
@@ -413,6 +418,10 @@ if(KF6Holidays_FOUND)
 endif()
 
 add_subdirectory(appiumtests)
+
+if (TARGET UDev::UDev)
+    add_subdirectory(devicenotifications)
+endif()
 
 ki18n_install(po)
 
