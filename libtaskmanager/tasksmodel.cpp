@@ -1611,7 +1611,7 @@ bool TasksModel::move(int row, int newPos, const QModelIndex &parent)
         return false;
     }
 
-    const QModelIndex &idx = index(row, 0);
+    const QModelIndex &idx = index(row, 0, parent);
     bool isLauncherMove = false;
 
     // Figure out if we're moving a launcher so we can run barrier checks.
@@ -1631,7 +1631,7 @@ bool TasksModel::move(int row, int newPos, const QModelIndex &parent)
         return false;
     }
 
-    if (d->separateLaunchers) {
+    if (d->separateLaunchers && !parent.isValid() /* Exclude tasks in a group */) {
         const int firstTask = (d->launcherTasksModel ? (d->launchInPlace ? d->launcherTasksModel->rowCount() : launcherCount()) : 0);
 
         // Don't allow launchers to be moved past the last launcher.
@@ -1778,8 +1778,8 @@ bool TasksModel::move(int row, int newPos, const QModelIndex &parent)
              *  - after moving: [pinned 1 (launcher item)] [unpinned] [pinned 1 (window)]
              * So also check the indexes before and after the unpinned task.
              */
-            const QModelIndex beforeIdx = d->concatProxyModel->index(d->sortedPreFilterRows.at(newPos - 1), 0);
-            const QModelIndex afterIdx = d->concatProxyModel->index(d->sortedPreFilterRows.at(newPos + 1), 0);
+            const QModelIndex beforeIdx = d->concatProxyModel->index(d->sortedPreFilterRows.at(newPos - 1), 0, parent);
+            const QModelIndex afterIdx = d->concatProxyModel->index(d->sortedPreFilterRows.at(newPos + 1), 0, parent);
 
             if (appsMatch(beforeIdx, afterIdx)) {
                 // after adjusting: [unpinned] [pinned 1 (launcher item)] [pinned 1]
