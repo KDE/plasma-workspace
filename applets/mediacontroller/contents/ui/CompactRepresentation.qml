@@ -17,7 +17,7 @@ import org.kde.plasma.plasmoid 2.0
 MouseArea {
     id: compactRepresentation
 
-    Layout.preferredWidth: !inTray && !isVertical ? (iconLoader.active ? iconLoader.implicitWidth : playerRow.width) : undefined
+    Layout.preferredWidth: !inTray && !isVertical ? (iconLoader.active ? iconLoader.implicitWidth : playerRow.width) : -1
 
     readonly property bool isVertical: Plasmoid.formFactor === PlasmaCore.Types.Vertical
     readonly property bool inPanel: [PlasmaCore.Types.TopEdge, PlasmaCore.Types.RightEdge, PlasmaCore.Types.BottomEdge, PlasmaCore.Types.LeftEdge].includes(Plasmoid.location)
@@ -131,7 +131,7 @@ MouseArea {
                     id: songArtist
 
                     Layout.fillHeight: true
-                    Layout.maximumWidth: songTitle.Layout.maximumLineCount
+                    Layout.maximumWidth: songTitle.Layout.maximumWidth
                     visible: root.artist
 
                     elide: Text.ElideRight
