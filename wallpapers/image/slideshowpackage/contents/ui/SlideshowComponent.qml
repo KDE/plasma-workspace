@@ -183,13 +183,14 @@ ColumnLayout {
                 id: slidePathsView
                 model: imageWallpaper.slidePaths
                 delegate: Kirigami.SwipeListItem {
+                    id: baseListItem
                     width: slidePathsView.width
                     // content item includes its own padding
                     padding: 0
                     // Don't need a highlight or hover effects
                     hoverEnabled: false
                     contentItem: Kirigami.BasicListItem {
-                        width: slidePathsView.width - overlayWidth
+                        width: slidePathsView.width - baseListItem.overlayWidth
                         // Don't need a highlight or hover effects
                         hoverEnabled: false
                         separatorVisible: false
