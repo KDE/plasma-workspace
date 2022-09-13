@@ -57,9 +57,6 @@ int main(int argc, char **argv)
         }
     }
 
-    setupCursor(false);
-    QScopedPointer<QProcess, KillBeforeDeleter> ksplash(setupKSplash());
-
     runEnvironmentScripts();
 
     out << "startkde: Starting up...\n";
@@ -78,6 +75,11 @@ int main(int argc, char **argv)
     // Otherwise it may leads to some unwanted order of applying environment
     // variables (e.g. LANG and LC_*)
     importSystemdEnvrionment();
+
+    // NOTE: Do not start QGuiApplications before setting up the environment. We'd be at risk of dbus invoking other
+    // processes with an incomplete environment.
+    setupCursor(false);
+    std::unique_ptr<QProcess, KillBeforeDeleter> ksplash(setupKSplash());
 
     if (!startPlasmaSession(false))
         return 1;
