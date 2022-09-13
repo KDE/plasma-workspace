@@ -12,6 +12,7 @@
 #include <QScreen>
 #include <QWaylandClientExtensionTemplate>
 #include <qpa/qplatformnativeinterface.h>
+#include <qtwaylandclientversion.h>
 
 class ScreencastingStreamPrivate : public QtWayland::zkde_screencast_stream_unstable_v1
 {
