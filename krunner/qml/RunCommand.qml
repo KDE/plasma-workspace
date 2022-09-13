@@ -87,7 +87,7 @@ ColumnLayout {
             Layout.maximumWidth: PlasmaCore.Units.gridUnit * 25
 
             activeFocusOnPress: true
-            placeholderText: results.runnerName ? i18nc("Textfield placeholder text, query specific KRunner",
+            placeholderText: results.runnerName ? i18nc("Textfield placeholder text, query specific KRunner plugin",
                                                          "Search '%1'…", results.runnerName)
                                                 : i18nc("Textfield placeholder text", "Search…")
 
