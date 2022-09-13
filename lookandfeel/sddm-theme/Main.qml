@@ -316,6 +316,8 @@ PlasmaCore.ColorScope {
 
         Loader {
             id: inputPanel
+            // This is a workaround to bug 431949 a very difficult to reproduce
+            // QtVirtualkeyboard problem which sometimes goes to 0,0 size when its parent is 0 pixels tall
             height: Qt.platform.pluginName.includes("wayland") ? implicitHeight : Math.min(root.height/3, PlasmaCore.Units.gridUnit * 15)
             state: "hidden"
             property bool keyboardActive: item ? item.active : false
