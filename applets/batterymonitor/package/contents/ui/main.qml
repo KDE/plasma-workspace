@@ -2,6 +2,7 @@
     SPDX-FileCopyrightText: 2011 Sebastian Kügler <sebas@kde.org>
     SPDX-FileCopyrightText: 2011 Viranch Mehta <viranch.mehta@gmail.com>
     SPDX-FileCopyrightText: 2013-2015 Kai Uwe Broulik <kde@privat.broulik.de>
+    SPDX-FileCopyrightText: 2021-2022 ivan tkachenko <me@ratijas.tk>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -340,8 +341,7 @@ Item {
         }
         Plasmoid.setAction("showPercentage", i18n("Show Battery Percentage on Icon"), "format-number-percent");
         Plasmoid.action("showPercentage").checkable = true;
-        Plasmoid.action("showPercentage").checked = Qt.binding(() =>
-        plasmoid !== null && Plasmoid.configuration.showPercentage);
+        Plasmoid.action("showPercentage").checked = Qt.binding(() => Plasmoid.configuration.showPercentage);
 
         if (batterymonitor.kcmAuthorized) {
             Plasmoid.removeAction("configure");
