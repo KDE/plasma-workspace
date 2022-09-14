@@ -322,7 +322,7 @@ ColumnLayout {
                     icon: "list-remove",
                     text: i18n("Remove")
                 }]
-                Accessible.description: i18n("in category recent queries")
+                Accessible.description: i18n("Recent Queries")
             }
 
             onActiveFocusChanged: {
