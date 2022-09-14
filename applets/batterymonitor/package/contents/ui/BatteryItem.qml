@@ -56,6 +56,7 @@ PlasmaComponents3.ItemDelegate {
 
     background.visible: highlighted
     highlighted: activeFocus
+    hoverEnabled: false
     text: battery["Pretty Name"]
 
     Accessible.description: `${isPowerSupplyLabel.text} ${percentLabel.text}; ${details.Accessible.description}`
