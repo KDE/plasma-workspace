@@ -191,8 +191,11 @@ ColumnLayout {
                     hoverEnabled: false
                     contentItem: Kirigami.BasicListItem {
                         width: slidePathsView.width - baseListItem.overlayWidth
-                        // Don't need a highlight or hover effects
-                        hoverEnabled: false
+                        // Don't want a background highlight effect, but we can't just
+                        // set hoverEnabled to false, since then the tooltip will
+                        // never appear!
+                        activeBackgroundColor: "transparent"
+                        activeTextColor: Kirigami.Theme.textColor
                         separatorVisible: false
 
                         // Header: the folder
@@ -207,7 +210,7 @@ ColumnLayout {
                         }
 
                         QQC2.ToolTip.text: modelData
-                        QQC2.ToolTip.visible: hovered
+                        QQC2.ToolTip.visible: hovered && (labelItem.truncated || subtitleItem.truncated)
                         QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                     }
 
