@@ -79,7 +79,7 @@ int main(int argc, char **argv)
     // NOTE: Do not start QGuiApplications before setting up the environment. We'd be at risk of dbus invoking other
     // processes with an incomplete environment.
     setupCursor(false);
-    std::unique_ptr<QProcess, KillBeforeDeleter> ksplash(setupKSplash());
+    QScopedPointer<QProcess, KillBeforeDeleter> ksplash(setupKSplash());
 
     if (!startPlasmaSession(false))
         return 1;
