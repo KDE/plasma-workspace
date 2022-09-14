@@ -208,8 +208,7 @@ ColumnLayout {
 
                         QQC2.ToolTip.text: modelData
                         QQC2.ToolTip.visible: hovered
-                        QQC2.ToolTip.delay: 1000
-                        QQC2.ToolTip.timeout: 5000
+                        QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
                     }
 
                     actions: [
