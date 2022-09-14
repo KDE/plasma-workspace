@@ -223,6 +223,9 @@ Kirigami.OverlaySheet {
 
                 delegate: Kirigami.SwipeListItem {
                     property Finger finger: modelData
+                    // Don't need a background or hover effect for this use case
+                    hoverEnabled: false
+                    backgroundColor: "transparent"
                     contentItem: RowLayout {
                         Kirigami.Icon {
                             source: "fingerprint"
