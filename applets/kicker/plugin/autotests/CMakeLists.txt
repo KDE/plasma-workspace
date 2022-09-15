@@ -27,3 +27,10 @@ endmacro()
 qtquick_add_tests(
     tst_triangleFilter
 )
+
+include(ECMAddTests)
+
+ecm_add_test(
+    testrunnermodel.cpp
+    LINK_LIBRARIES kickerplugin Qt5::Test
+)
