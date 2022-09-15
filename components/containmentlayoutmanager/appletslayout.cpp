@@ -600,6 +600,16 @@ void AppletsLayout::mousePressEvent(QMouseEvent *event)
     // Only accept synthesized events i.e. touch events, because we only want
     // to support press-and-hold. Click-and-hold is weird. See 457979.
     if (!(event->source() == Qt::MouseEventSynthesizedBySystem || event->source() == Qt::MouseEventSynthesizedByQt)) {
+        const auto children = childItems();
+        // If any container is in edit mode, accept the press event so we can
+        // cancel the edit mode. If not, don't accept the event so it can be
+        // passed on to other parts.
+        if (std::none_of(children.begin(), children.end(), [](QQuickItem *child) {
+                auto container = qobject_cast<ItemContainer *>(child);
+                return container ? container->editMode() : false;
+            })) {
+            event->setAccepted(false);
+        }
         return;
     }
 
