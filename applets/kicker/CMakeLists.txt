@@ -55,6 +55,10 @@ install(FILES plugin/qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/pri
 
 add_library(kickerplugin SHARED ${kickerplugin_SRCS})
 
+if (BUILD_TESTING)
+    set_target_properties(kickerplugin PROPERTIES CXX_VISIBILITY_PRESET default)
+endif()
+
 target_link_libraries(kickerplugin
                       Qt::Core
                       Qt::Qml
