@@ -112,6 +112,13 @@ class PanelView : public PlasmaQuick::ContainmentView
      */
     Q_PROPERTY(int floating READ floating WRITE setFloating NOTIFY floatingChanged)
 
+    /**
+     * The config overlay item, if any
+     * This allows to use keyboard to move applets.
+     * @since 5.27
+     */
+    Q_PROPERTY(QQuickItem *configOverlay READ configOverlay WRITE setConfigOverlay NOTIFY configOverlayChanged)
+
 public:
     enum VisibilityMode {
         NormalPanel = 0, /** default, always visible panel, the windowmanager reserves a places for it */
@@ -163,6 +170,9 @@ public:
     bool floating() const;
     void setFloating(bool floating);
 
+    QQuickItem *configOverlay() const;
+    void setConfigOverlay(QQuickItem *item);
+
     Plasma::Types::BackgroundHints backgroundHints() const;
     void setBackgroundHints(Plasma::Types::BackgroundHints hint);
 
@@ -212,6 +222,7 @@ Q_SIGNALS:
     void backgroundHintsChanged();
     void enabledBordersChanged();
     void floatingChanged();
+    void configOverlayChanged();
 
     // QWindow does not have a property for screen. Adding this property requires re-implementing the signal
     void screenToFollowChanged(QScreen *screen);
@@ -285,6 +296,7 @@ private:
     QPointer<QScreen> m_lastScreen;
     QPointer<QScreen> m_screenToFollow;
     QMetaObject::Connection m_transientWindowVisibleWatcher;
+    QPointer<QQuickItem> m_configOverlay = nullptr;
 
     static const int STRUTSTIMERDELAY = 200;
 };

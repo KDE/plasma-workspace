@@ -372,6 +372,21 @@ void PanelView::setFloating(bool floating)
     updateMask();
 }
 
+QQuickItem *PanelView::configOverlay() const
+{
+    return m_configOverlay.data();
+}
+
+void PanelView::setConfigOverlay(QQuickItem *item)
+{
+    if (m_configOverlay == item) {
+        return;
+    }
+
+    m_configOverlay = item;
+    Q_EMIT configOverlayChanged();
+}
+
 Plasma::Types::BackgroundHints PanelView::backgroundHints() const
 {
     return m_backgroundHints;
