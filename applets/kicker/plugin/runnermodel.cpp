@@ -222,6 +222,8 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
         std::sort(list.rbegin(), list.rend());
     }
 
+    bool countHasChanged = false;
+
     if (m_mergeResults) {
         RunnerMatchesModel *matchesModel = nullptr;
 
@@ -231,7 +233,7 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
             beginInsertRows(QModelIndex(), 0, 0);
             m_models.append(matchesModel);
             endInsertRows();
-            Q_EMIT countChanged();
+            countHasChanged = true;
         } else {
             matchesModel = m_models.at(0);
         }
@@ -270,6 +272,10 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
 
         matchesModel->setMatches(matches);
 
+        if (countHasChanged) {
+            Q_EMIT countChanged();
+        }
+
         return;
     }
 
@@ -283,7 +289,7 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
             m_models.removeAt(row);
             delete matchesModel;
             endRemoveRows();
-            Q_EMIT countChanged();
+            countHasChanged = true;
         } else {
             matchesModel->setMatches(matches);
         }
@@ -317,15 +323,19 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
                 m_models.prepend(match);
             }
             endInsertRows();
-            Q_EMIT countChanged();
+            countHasChanged = true;
         }
 
         if (!toAppend.isEmpty()) {
             beginInsertRows(QModelIndex(), m_models.count(), m_models.count() + toAppend.count() - 1);
             m_models.append(toAppend);
             endInsertRows();
-            Q_EMIT countChanged();
+            countHasChanged = true;
         }
+    }
+
+    if (countHasChanged) {
+        Q_EMIT countChanged();
     }
 }
 
