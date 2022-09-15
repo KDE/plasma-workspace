@@ -295,6 +295,7 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
         auto it = matchesForRunner.constBegin();
         auto end = matchesForRunner.constEnd();
 
+        QList<RunnerMatchesModel *> toPrepend;
         QList<RunnerMatchesModel *> toAppend;
 
         for (; it != end; ++it) {
@@ -304,13 +305,19 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
             matchesModel->setMatches(matches);
 
             if (it.key() == QLatin1String("services")) {
-                beginInsertRows(QModelIndex(), 0, 0);
-                m_models.prepend(matchesModel);
-                endInsertRows();
-                Q_EMIT countChanged();
+                toPrepend.append(matchesModel);
             } else {
                 toAppend.append(matchesModel);
             }
+        }
+
+        if (!toPrepend.isEmpty()) {
+            beginInsertRows(QModelIndex(), 0, toPrepend.count() - 1);
+            for (auto match : std::as_const(toPrepend)) {
+                m_models.prepend(match);
+            }
+            endInsertRows();
+            Q_EMIT countChanged();
         }
 
         if (!toAppend.isEmpty()) {
