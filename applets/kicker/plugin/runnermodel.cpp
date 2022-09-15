@@ -294,7 +294,8 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
     if (!matchesForRunner.isEmpty()) {
         auto it = matchesForRunner.constBegin();
         auto end = matchesForRunner.constEnd();
-        int appendCount = 0;
+
+        QList<RunnerMatchesModel *> toAppend;
 
         for (; it != end; ++it) {
             QList<Plasma::QueryMatch> matches = it.value();
@@ -308,13 +309,13 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
                 endInsertRows();
                 Q_EMIT countChanged();
             } else {
-                m_models.append(matchesModel);
-                ++appendCount;
+                toAppend.append(matchesModel);
             }
         }
 
-        if (appendCount > 0) {
-            beginInsertRows(QModelIndex(), rowCount() - appendCount, rowCount() - 1);
+        if (!toAppend.isEmpty()) {
+            beginInsertRows(QModelIndex(), m_models.count(), m_models.count() + toAppend.count() - 1);
+            m_models.append(toAppend);
             endInsertRows();
             Q_EMIT countChanged();
         }
