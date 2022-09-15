@@ -16,7 +16,7 @@
 #include <QIcon>
 #include <QtConcurrent>
 
-#include <prison/Prison>
+#include <Prison/Prison>
 
 const static QString s_iconKey = QStringLiteral("icon");
 const static QString s_previewKey = QStringLiteral("preview");
