@@ -277,7 +277,49 @@ void ShellCorona::init()
     QAction *cyclePanelFocusAction = actions()->addAction(QStringLiteral("cycle-panels"));
     cyclePanelFocusAction->setText(i18n("Move keyboard focus between panels"));
     KGlobalAccel::self()->setGlobalShortcut(cyclePanelFocusAction, Qt::META | Qt::ALT | Qt::Key_P);
-    connect(cyclePanelFocusAction, &QAction::triggered, this, &ShellCorona::slotCyclePanelFocus);
+
+    connect(cyclePanelFocusAction, &QAction::triggered, this, [this]() {
+        if (m_panelViews.isEmpty()) {
+            return;
+        }
+        PanelView *activePanel = qobject_cast<PanelView *>(qGuiApp->focusWindow());
+        if (!activePanel) {
+            activePanel = m_panelViews.values().first();
+        }
+
+        if (activePanel->containment()->status() != Plasma::Types::AcceptingInputStatus) {
+            activePanel->containment()->setStatus(Plasma::Types::AcceptingInputStatus);
+
+            auto nextItem = activePanel->rootObject()->nextItemInFocusChain();
+            if (nextItem) {
+                nextItem->forceActiveFocus();
+            }
+        } else {
+            // Cancel focus
+            activePanel->containment()->setStatus(Plasma::Types::PassiveStatus);
+        }
+    });
+
+    unload();
+    /*
+     * we want to make an initial load once we have loaded the activities _IF_ KAMD is running
+     * it is valid for KAMD to not be running.
+     *
+     * Potentially 2 async jobs
+     *
+     * It might seem that we only need this connection if the activityConsumer is currently in state Unknown, however
+     * there is an issue where m_activityController will start the kactivitymanagerd, as KAMD is starting the serviceStatus will be "not running"
+     * Whilst we are loading the kscreen config, the event loop runs and we might find KAMD has started.
+     * m_activityController will change from "not running" to unknown, and might still be unknown when the kscreen fetching is complete.
+     *
+     * if that happens we want to continue monitoring for state changes, and only finally load when it is up.
+     *
+     * See https://bugs.kde.org/show_bug.cgi?id=342431 be careful about changing
+     *
+     * The unique connection makes sure we don't reload plasma if KAMD ever crashes and reloads, the signal is disconnected in the body of load
+     */
+    connect(m_activityController, &KActivities::Controller::serviceStatusChanged, this, &ShellCorona::load, Qt::UniqueConnection);
+    load();
 }
 
 ShellCorona::~ShellCorona()
@@ -326,33 +368,6 @@ void ShellCorona::setShell(const QString &shell)
         Plasma::Theme *t = new Plasma::Theme(this);
         t->setThemeName(themeName);
     }
-
-    unload();
-
-    /*
-     * we want to make an initial load once we have the initial screen config and we have loaded the activities _IF_ KAMD is running
-     * it is valid for KAMD to not be running.
-     *
-     * Potentially 2 async jobs
-     *
-     * here we connect for status changes from KAMD, and fetch the first config from kscreen.
-     * load() will check that we have a kscreen config, and m_activityController->serviceStatus() is not loading (i.e not unknown)
-     *
-     * It might seem that we only need this connection if the activityConsumer is currently in state Unknown, however
-     * there is an issue where m_activityController will start the kactivitymanagerd, as KAMD is starting the serviceStatus will be "not running"
-     * Whilst we are loading the kscreen config, the event loop runs and we might find KAMD has started.
-     * m_activityController will change from "not running" to unknown, and might still be unknown when the kscreen fetching is complete.
-     *
-     * if that happens we want to continue monitoring for state changes, and only finally load when it is up.
-     *
-     * See https://bugs.kde.org/show_bug.cgi?id=342431 be careful about changing
-     *
-     * The unique connection makes sure we don't reload plasma if KAMD ever crashes and reloads, the signal is disconnected in the body of load
-     */
-
-    connect(m_activityController, &KActivities::Controller::serviceStatusChanged, this, &ShellCorona::load, Qt::UniqueConnection);
-
-    load();
 }
 
 QJsonObject dumpconfigGroupJS(const KConfigGroup &rootGroup)
