@@ -859,6 +859,9 @@ void PanelView::moveEvent(QMoveEvent *ev)
     updateEnabledBorders();
     m_strutsTimer.start(STRUTSTIMERDELAY);
     PlasmaQuick::ContainmentView::moveEvent(ev);
+    if (m_screenToFollow && !m_screenToFollow->geometry().contains(geometry())) {
+        positionPanel();
+    }
 }
 
 void PanelView::keyPressEvent(QKeyEvent *event)
