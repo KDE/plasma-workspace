@@ -78,6 +78,15 @@ PlasmaComponents3.ItemDelegate {
                 Accessible.name: root.text
                 Accessible.description: percent.text
 
+                Keys.onPressed: {
+                    const k = event.key;
+                    if (k >= Qt.Key_0 && k <= Qt.Key_9) {
+                        control.value = Math.max(control.from, (k - Qt.Key_0) * Math.round((control.to - control.from) / 10));
+                        root.moved();
+                        event.accepted = true;
+                    }
+                }
+
                 onMoved: root.moved()
             }
         }
