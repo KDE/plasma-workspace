@@ -50,16 +50,14 @@ void MaximizedWindowMonitor::Private::init()
     q->setGroupMode(GroupMode::GroupDisabled);
 
     q->setActivity(m_activityInfo->currentActivity());
-    q->connect(m_activityInfo,
-               &TaskManager::ActivityInfo::currentActivityChanged,
-               q,
-               std::bind(&MaximizedWindowMonitor::setActivity, q, m_activityInfo->currentActivity()));
+    q->connect(m_activityInfo, &TaskManager::ActivityInfo::currentActivityChanged, q, [this] {
+        q->setActivity(m_activityInfo->currentActivity());
+    });
 
     q->setVirtualDesktop(m_virtualDesktopInfo->currentDesktop());
-    q->connect(m_virtualDesktopInfo,
-               &TaskManager::VirtualDesktopInfo::currentDesktopChanged,
-               q,
-               std::bind(&MaximizedWindowMonitor::setVirtualDesktop, q, m_virtualDesktopInfo->currentDesktop()));
+    q->connect(m_virtualDesktopInfo, &TaskManager::VirtualDesktopInfo::currentDesktopChanged, q, [this]() {
+        q->setVirtualDesktop(m_virtualDesktopInfo->currentDesktop());
+    });
 
     q->setFilterByActivity(true);
     q->setFilterByVirtualDesktop(true);
