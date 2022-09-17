@@ -20,6 +20,7 @@
 #include <KLocalizedString>
 #include <KProtocolInfo>
 #include <KSharedConfig>
+#include <KSycoca>
 
 #include <KActivities/Consumer>
 #include <KActivities/Stats/Query>
@@ -185,6 +186,21 @@ public:
 
         connect(&m_watcher, &ResultWatcher::resultUnlinked, [this](const QString &resource) {
             removeResult(resource);
+        });
+        connect(KSycoca::self(), &KSycoca::databaseChanged, [this]() {
+            QStringList keys;
+            for (auto it = m_itemEntries.cbegin(); it != m_itemEntries.cend(); it++) {
+                if (it.value() && !it.value()->isValid()) {
+                    keys << it.key();
+                }
+            }
+            if (!keys.isEmpty()) {
+                beginResetModel();
+                for (const QString &key : keys) {
+                    m_itemEntries.remove(key);
+                }
+                endResetModel();
+            }
         });
 
         // Loading the items order

@@ -141,25 +141,33 @@ AppEntry::AppEntry(AbstractModel *owner, const QString &id)
     : AbstractEntry(owner)
 {
     const QUrl url(id);
-
     if (url.scheme() == QLatin1String("preferred")) {
         m_service = defaultAppByName(url.host());
         m_id = id;
-        m_con = QObject::connect(KSycoca::self(), &KSycoca::databaseChanged, owner, [this, owner, id]() {
-            KSharedConfig::openConfig()->reparseConfiguration();
-            m_service = defaultAppByName(QUrl(id).host());
-            if (m_service) {
-                init((NameFormat)owner->rootModel()->property("appNameFormat").toInt());
-                m_icon = QIcon();
-                Q_EMIT owner->layoutChanged();
-            }
-        });
     } else {
         m_service = KService::serviceByStorageId(id);
     }
     if (!m_service) {
         m_service = new KService(QString());
     }
+
+    m_con = QObject::connect(KSycoca::self(), &KSycoca::databaseChanged, owner, [this, owner, id]() {
+        const QUrl url(id);
+        if (url.scheme() == QLatin1String("preferred")) {
+            KSharedConfig::openConfig()->reparseConfiguration();
+            m_service = defaultAppByName(url.host());
+            if (m_service) {
+                init((NameFormat)owner->rootModel()->property("appNameFormat").toInt());
+                m_icon = QIcon();
+                Q_EMIT owner->layoutChanged();
+            }
+        } else {
+            m_service = KService::serviceByStorageId(id);
+        }
+        if (!m_service) {
+            m_service = new KService(QString());
+        }
+    });
 
     if (m_service->isValid()) {
         init((NameFormat)owner->rootModel()->property("appNameFormat").toInt());
