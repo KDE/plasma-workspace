@@ -445,9 +445,9 @@ void KCMColors::applyWallpaperAccentColor()
 
 void KCMColors::wallpaperAccentColorArrivedSlot(QDBusPendingCallWatcher *call)
 {
-    QDBusPendingReply<QString> reply = *call;
+    QDBusPendingReply<uint> reply = *call;
     if (!reply.isError()) {
-        setAccentColor(QColor(reply.value()));
+        setAccentColor(QColor::fromRgba(reply.value()));
     }
     call->deleteLater();
 }
