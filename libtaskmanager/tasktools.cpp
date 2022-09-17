@@ -70,6 +70,7 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
             data.name = service->name();
             data.genericName = service->genericName();
             data.id = service->storageId();
+            data.exec = service->exec().split(QLatin1Char(' '))[0];
 
             if (data.icon.isNull()) {
                 data.icon = QIcon::fromTheme(service->icon());
@@ -93,6 +94,7 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
             data.name = service->name();
             data.genericName = service->genericName();
             data.id = service->storageId();
+            data.exec = service->exec().split(QLatin1Char(' '))[0];
 
             if (data.icon.isNull()) {
                 data.icon = QIcon::fromTheme(service->icon());
@@ -125,6 +127,7 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
             data.name = service->name();
             data.genericName = service->genericName();
             data.id = service->storageId();
+            data.exec = service->exec().split(QLatin1Char(' '))[0];
 
             if (data.icon.isNull()) {
                 data.icon = QIcon::fromTheme(service->icon());

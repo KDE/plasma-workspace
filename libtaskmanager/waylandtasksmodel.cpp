@@ -84,6 +84,7 @@ void WaylandTasksModel::Private::init()
                                            AbstractTasksModel::LauncherUrl,
                                            AbstractTasksModel::LauncherUrlWithoutIcon,
                                            AbstractTasksModel::CanLaunchNewInstance,
+                                           AbstractTasksModel::BinaryName,
                                            AbstractTasksModel::SkipTaskbar});
     };
 
@@ -201,7 +202,8 @@ void WaylandTasksModel::Private::addWindow(KWayland::Client::PlasmaWindow *windo
         appDataCache.remove(window);
 
         // Refresh roles satisfied from the app data cache.
-        this->dataChanged(window, QVector<int>{AppId, AppName, GenericName, LauncherUrl, LauncherUrlWithoutIcon, SkipTaskbar, CanLaunchNewInstance});
+        this->dataChanged(window,
+                          QVector<int>{AppId, AppName, GenericName, LauncherUrl, LauncherUrlWithoutIcon, SkipTaskbar, CanLaunchNewInstance, BinaryName});
     });
 
     QObject::connect(window, &KWayland::Client::PlasmaWindow::activeChanged, q, [window, this] {
@@ -467,6 +469,8 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
         return window->applicationMenuServiceName();
     } else if (role == CanLaunchNewInstance) {
         return canLauchNewInstance(d->appData(window));
+    } else if (role == BinaryName) {
+        return d->appData(window).exec;
     }
 
     return {};

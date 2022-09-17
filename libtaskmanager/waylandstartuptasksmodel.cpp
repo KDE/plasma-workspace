@@ -36,6 +36,7 @@ public:
         QIcon icon;
         QString applicationId;
         QUrl launcherUrl;
+        QString exec;
         KWayland::Client::PlasmaActivation *activation;
     };
 
@@ -131,6 +132,7 @@ void WaylandStartupTasksModel::Private::addActivation(KWayland::Client::PlasmaAc
             .icon = appData.icon,
             .applicationId = appId,
             .launcherUrl = launcherUrl,
+            .exec = appData.exec,
             .activation = activation,
         });
         q->endInsertRows();
@@ -197,6 +199,8 @@ QVariant WaylandStartupTasksModel::data(const QModelIndex &index, int role) cons
         return true;
     } else if (role == CanLaunchNewInstance) {
         return false;
+    } else if (role == BinaryName) {
+        return data.exec;
     }
 
     return QVariant();

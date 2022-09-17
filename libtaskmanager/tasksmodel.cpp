@@ -162,6 +162,7 @@ void TasksModel::Private::initModels()
     concatProxyModel->addSourceModel(windowTasksModel);
 
     QObject::connect(windowTasksModel, &QAbstractItemModel::rowsInserted, q, [this]() {
+        q->invalidateFilter();
         if (sortMode == SortActivity) {
             updateActivityTaskCounts();
         }
@@ -1968,6 +1969,7 @@ bool TasksModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent
 
     // Filter startup tasks we already have a window task for.
     if (sourceIndex.data(AbstractTasksModel::IsStartup).toBool()) {
+        const QString &execCommand = sourceIndex.data(AbstractTasksModel::BinaryName).toString();
         for (int i = 0; i < d->filterProxyModel->rowCount(); ++i) {
             const QModelIndex &filterIndex = d->filterProxyModel->index(i, 0);
 
@@ -1976,7 +1978,8 @@ bool TasksModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent
             }
 
             if ((!appId.isEmpty() && appId == filterIndex.data(AbstractTasksModel::AppId).toString())
-                || (!appName.isEmpty() && appName == filterIndex.data(AbstractTasksModel::AppName).toString())) {
+                || (!appName.isEmpty() && appName == filterIndex.data(AbstractTasksModel::AppName).toString())
+                || (execCommand == filterIndex.data(AbstractTasksModel::BinaryName).toString())) {
                 return false;
             }
         }

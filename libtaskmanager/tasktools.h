@@ -21,6 +21,7 @@ struct AppData {
     QString id; // Application id (*.desktop sans extension).
     QString name; // Application name.
     QString genericName; // Generic application name.
+    QString exec; // The executed command if any
     QIcon icon;
     QUrl url;
     bool skipTaskbar = false;

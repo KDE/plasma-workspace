@@ -257,6 +257,8 @@ QVariant XStartupTasksModel::data(const QModelIndex &index, int role) const
         return (data.desktop() == 0);
     } else if (role == CanLaunchNewInstance) {
         return false;
+    } else if (role == BinaryName) {
+        return data.bin();
     }
 
     return QVariant();

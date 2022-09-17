@@ -338,6 +338,8 @@ QVariant LauncherTasksModel::data(const QModelIndex &index, int role) const
         return QStringList(d->activitiesForLauncher[url].values());
     } else if (role == CanLaunchNewInstance) {
         return false;
+    } else if (role == BinaryName) {
+        return data.exec;
     }
 
     return QVariant();

@@ -85,6 +85,7 @@ public:
         IsHidden, /**< Task (i.e window) is hidden on screen. A minimzed
                        window is not necessarily hidden. */
         CanLaunchNewInstance, /**< A new instance of the task can be launched. @since 5.24 */
+        BinaryName, /**< The binary name of an executable program @since 5.27 */
     };
     Q_ENUM(AdditionalRoles)
 
