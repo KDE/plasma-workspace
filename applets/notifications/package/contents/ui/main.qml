@@ -183,7 +183,9 @@ Item {
     }
 
     Component.onCompleted: {
-        Globals.adopt(Plasmoid);
+        // Use Plasmoid.self because Plasmoid will become an object in QML after it's deleted, while
+        // Plasmoid.self will become null.
+        Globals.adopt(Plasmoid.self);
 
         Plasmoid.setAction("clearHistory", i18n("Clear All Notifications"), "edit-clear-history");
         var clearAction = Plasmoid.action("clearHistory");
