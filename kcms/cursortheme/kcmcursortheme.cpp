@@ -347,20 +347,16 @@ void CursorThemeConfig::ghnsEntryChanged(KNSCore::EntryWrapper *entry)
             }
         }
     } else if (entry->entry().status() == KNS3::Entry::Installed) {
-        for (const QString &created : entry->entry().installedFiles()) {
-            QStringList list = created.split(QLatin1Char('/'));
-            if (list.last() == QLatin1Char('*')) {
-                list.takeLast();
-            }
-            // Because we sometimes get some extra slashes in the installed files list
-            list.removeAll({});
-            // Because we'll also get the containing folder, if it was not already there
-            // we need to ignore it.
-            if (list.last() == QLatin1String(".icons")) {
-                continue;
-            }
-            m_themeModel->addTheme(list.join(QLatin1Char('/')));
+        const QList<QString> installedFiles = entry->entry().installedFiles();
+        if (installedFiles.size() != 1) {
+            return;
         }
+        const QString installedDir = installedFiles.first();
+        if (!installedDir.endsWith(QLatin1Char('*'))) {
+            return;
+        }
+
+        m_themeModel->addTheme(installedDir.left(installedDir.size() - 1));
     }
 }
 
