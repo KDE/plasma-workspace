@@ -1801,7 +1801,7 @@ void ShellCorona::populateAddPanelsMenu()
         QPair<KPluginMetaData, KPluginMetaData> pair = it.value();
         if (pair.first.isValid()) {
             KPluginMetaData plugin = pair.first;
-            QAction *action = m_addPanelsMenu->addAction(i18n("Empty %1", plugin.name()));
+            QAction *action = m_addPanelsMenu->addAction(i18nc("Creates an empty containment (%1 is the containment name)", "Empty %1", plugin.name()));
             if (!plugin.iconName().isEmpty()) {
                 action->setIcon(QIcon::fromTheme(plugin.iconName()));
             }
