@@ -38,7 +38,9 @@ void ScreencastingRequest::setUuid(const QString &uuid)
         return;
     }
 
-    d->m_stream->deleteLater();
+    if (!d->m_stream.isNull()) {
+        d->m_stream->deleteLater();
+    }
     setNodeid(0);
 
     d->m_uuid = uuid;
@@ -71,6 +73,8 @@ void ScreencastingRequest::setOutputName(const QString &outputName)
 
 void ScreencastingRequest::adopt(ScreencastingStream *stream)
 {
+    d->m_stream = stream;
+
     connect(stream, &ScreencastingStream::created, this, &ScreencastingRequest::setNodeid);
     connect(stream, &ScreencastingStream::failed, this, [](const QString &error) {
         qWarning() << "error creating screencast" << error;
