@@ -49,6 +49,6 @@ Name[zh_TW]=滑鼠游標
 
 Categories=X11 Mouse Theme
 InstallPath=.icons
-Uncompress=always
+Uncompress=subdir-archive
 RemoveDeadEntries=true
 AdoptionCommand=plasma-apply-cursortheme %f
