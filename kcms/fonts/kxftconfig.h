@@ -172,7 +172,7 @@ public:
     };
 
 public:
-    explicit KXftConfig();
+    explicit KXftConfig(const QString &path = {});
 
     virtual ~KXftConfig();
 

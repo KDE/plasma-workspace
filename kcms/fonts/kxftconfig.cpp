@@ -157,9 +157,9 @@ static KXftConfig::Hint::Style strToStyle(const char *str)
     }
 }
 
-KXftConfig::KXftConfig()
+KXftConfig::KXftConfig(const QString &path)
     : m_doc("fontconfig")
-    , m_file(getConfigFile())
+    , m_file(path.isEmpty() ? getConfigFile() : path)
 {
     qDebug() << "Using fontconfig file:" << m_file;
     reset();
