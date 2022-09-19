@@ -46,8 +46,12 @@ Item {
 
             // Animation is done by moving to the edge with zero animation
             // duration and then coming with a non-zero animation duration
-            onMonthChanged: infiniteList.animateDateChange()
-            onYearChanged: infiniteList.animateDateChange()
+            function onMonthChanged() {
+                infiniteList.animateDateChange()
+            }
+            function onYearChanged() {
+                infiniteList.animateDateChange()
+            }
         }
 
         Repeater {
