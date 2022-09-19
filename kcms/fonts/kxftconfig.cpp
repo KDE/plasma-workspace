@@ -570,125 +570,116 @@ bool KXftConfig::parseConfigFile(const QString &filename)
 
 void KXftConfig::readContents()
 {
-    QDomNode n = m_doc.documentElement().firstChild();
-
-    while (!n.isNull()) {
+    for (auto n = m_doc.documentElement().firstChild(); !n.isNull(); n = n.nextSibling()) {
         QDomElement e = n.toElement();
 
-        if (!e.isNull()) {
-            if ("match" == e.tagName()) {
-                QString str;
+        if (e.isNull()) {
+            continue;
+        }
 
-                int childNodesCount = e.childNodes().count();
-                QDomNode en = e.firstChild();
-                while (!en.isNull()) {
-                    if (en.isComment()) {
-                        childNodesCount--;
-                    }
-                    en = en.nextSibling();
-                }
+        if ("match" != e.tagName()) {
+            continue;
+        }
 
-                switch (childNodesCount) {
-                case 1:
-                    if ("font" == e.attribute("target") || "pattern" == e.attribute("target")) {
-                        QDomNode en = e.firstChild();
-                        while (!en.isNull()) {
-                            QDomElement ene = en.toElement();
-
-                            while (ene.isComment()) {
-                                ene = ene.nextSiblingElement();
-                            }
-
-                            if (!ene.isNull() && "edit" == ene.tagName()) {
-                                if (!(str = getEntry(ene, "const", 2, "name", "rgba", "mode", "assign")).isNull()
-                                    || (m_subPixel.type == SubPixel::NotSet && !(str = getEntry(ene, "const", 2, "name", "rgba", "mode", "append")).isNull())) {
-                                    m_subPixel.node = n;
-                                    m_subPixel.type = strToType(str.toLatin1());
-                                } else if (!(str = getEntry(ene, "const", 2, "name", "hintstyle", "mode", "assign")).isNull()
-                                           || (m_hint.style == Hint::NotSet
-                                               && !(str = getEntry(ene, "const", 2, "name", "hintstyle", "mode", "append")).isNull())) {
-                                    m_hint.node = n;
-                                    m_hint.style = strToStyle(str.toLatin1());
-                                } else if (!(str = getEntry(ene, "bool", 2, "name", "hinting", "mode", "assign")).isNull()) {
-                                    m_hinting.node = n;
-                                    m_hinting.set = str.toLower() != "false";
-                                } else if (!(str = getEntry(ene, "bool", 2, "name", "antialias", "mode", "assign")).isNull()
-                                           || (m_antiAliasing.state == AntiAliasing::NotSet
-                                               && !(str = getEntry(ene, "bool", 2, "name", "antialias", "mode", "append")).isNull())) {
-                                    m_antiAliasing.node = n;
-                                    m_antiAliasing.state = str.toLower() != "false" ? AntiAliasing::Enabled : AntiAliasing::Disabled;
-                                }
-                            }
-                            en = en.nextSibling();
-                        }
-                    }
-                    break;
-                case 3: // CPD: Is target "font" or "pattern" ????
-                    if ("font" == e.attribute("target")) {
-                        bool foundFalse = false;
-                        QDomNode en = e.firstChild();
-                        while (en.isComment()) {
-                            en = en.nextSibling();
-                        }
-                        double from = -1.0, to = -1.0, pixelFrom = -1.0, pixelTo = -1.0;
-
-                        while (!en.isNull()) {
-                            QDomElement ene = en.toElement();
-
-                            if (!ene.isNull()) {
-                                if ("test" == ene.tagName()) {
-                                    // kcmfonts used to write incorrectly more or less instead of
-                                    // more_eq and less_eq, so read both,
-                                    // first the old (wrong) one then the right one
-                                    if (!(str = getEntry(ene, "double", 3, "qual", "any", "name", "size", "compare", "more")).isNull()) {
-                                        from = str.toDouble();
-                                    }
-                                    if (!(str = getEntry(ene, "double", 3, "qual", "any", "name", "size", "compare", "more_eq")).isNull()) {
-                                        from = str.toDouble();
-                                    }
-                                    if (!(str = getEntry(ene, "double", 3, "qual", "any", "name", "size", "compare", "less")).isNull()) {
-                                        to = str.toDouble();
-                                    }
-                                    if (!(str = getEntry(ene, "double", 3, "qual", "any", "name", "size", "compare", "less_eq")).isNull()) {
-                                        to = str.toDouble();
-                                    }
-                                    if (!(str = getEntry(ene, "double", 3, "qual", "any", "name", "pixelsize", "compare", "more")).isNull()) {
-                                        pixelFrom = str.toDouble();
-                                    }
-                                    if (!(str = getEntry(ene, "double", 3, "qual", "any", "name", "pixelsize", "compare", "more_eq")).isNull()) {
-                                        pixelFrom = str.toDouble();
-                                    }
-                                    if (!(str = getEntry(ene, "double", 3, "qual", "any", "name", "pixelsize", "compare", "less")).isNull()) {
-                                        pixelTo = str.toDouble();
-                                    }
-                                    if (!(str = getEntry(ene, "double", 3, "qual", "any", "name", "pixelsize", "compare", "less_eq")).isNull()) {
-                                        pixelTo = str.toDouble();
-                                    }
-                                } else if ("edit" == ene.tagName() && "false" == getEntry(ene, "bool", 2, "name", "antialias", "mode", "assign")) {
-                                    foundFalse = true;
-                                }
-                            }
-
-                            en = en.nextSibling();
-                        }
-
-                        if ((from >= 0 || to >= 0) && foundFalse) {
-                            m_excludeRange.from = from < to ? from : to;
-                            m_excludeRange.to = from < to ? to : from;
-                            m_excludeRange.node = n;
-                        } else if ((pixelFrom >= 0 || pixelTo >= 0) && foundFalse) {
-                            m_excludePixelRange.from = pixelFrom < pixelTo ? pixelFrom : pixelTo;
-                            m_excludePixelRange.to = pixelFrom < pixelTo ? pixelTo : pixelFrom;
-                            m_excludePixelRange.node = n;
-                        }
-                    }
-                    break;
-                default:
-                    break;
-                }
+        int childNodesCount = e.childNodes().count();
+        for (auto en = e.firstChild(); !en.isNull(); en = en.nextSibling()) {
+            if (en.isComment()) {
+                childNodesCount--;
             }
         }
-        n = n.nextSibling();
+
+        QString str;
+        if (childNodesCount == 1) {
+            if ("font" != e.attribute("target") && "pattern" != e.attribute("target")) {
+                break;
+            }
+            for (auto en = e.firstChild(); !en.isNull(); en = en.nextSibling()) {
+                QDomElement ene = en.toElement();
+                while (ene.isComment()) {
+                    ene = ene.nextSiblingElement();
+                }
+
+                if (ene.isNull() || "edit" != ene.tagName()) {
+                    continue;
+                }
+
+                if (!(str = getEntry(ene, "const", 2, "name", "rgba", "mode", "assign")).isNull()
+                    || (m_subPixel.type == SubPixel::NotSet && !(str = getEntry(ene, "const", 2, "name", "rgba", "mode", "append")).isNull())) {
+                    m_subPixel.node = n;
+                    m_subPixel.type = strToType(str.toLatin1());
+                } else if (!(str = getEntry(ene, "const", 2, "name", "hintstyle", "mode", "assign")).isNull()
+                           || (m_hint.style == Hint::NotSet && !(str = getEntry(ene, "const", 2, "name", "hintstyle", "mode", "append")).isNull())) {
+                    m_hint.node = n;
+                    m_hint.style = strToStyle(str.toLatin1());
+                } else if (!(str = getEntry(ene, "bool", 2, "name", "hinting", "mode", "assign")).isNull()) {
+                    m_hinting.node = n;
+                    m_hinting.set = str.toLower() != "false";
+                } else if (!(str = getEntry(ene, "bool", 2, "name", "antialias", "mode", "assign")).isNull()
+                           || (m_antiAliasing.state == AntiAliasing::NotSet
+                               && !(str = getEntry(ene, "bool", 2, "name", "antialias", "mode", "append")).isNull())) {
+                    m_antiAliasing.node = n;
+                    m_antiAliasing.state = str.toLower() != "false" ? AntiAliasing::Enabled : AntiAliasing::Disabled;
+                }
+            }
+        } else if (childNodesCount == 3) { // CPD: Is target "font" or "pattern" ????
+            if ("font" != e.attribute("target")) {
+                break;
+            }
+
+            bool foundFalse = false;
+            double from = -1.0;
+            double to = -1.0;
+            double pixelFrom = -1.0;
+            double pixelTo = -1.0;
+
+            for (auto en = e.firstChild(); !en.isNull(); en = en.nextSibling()) {
+                if (en.isComment()) {
+                    continue;
+                }
+                auto ene = en.toElement();
+                if ("test" == ene.tagName()) {
+                    // kcmfonts used to write incorrectly more or less instead of
+                    // more_eq and less_eq, so read both,
+                    // first the old (wrong) one then the right one
+                    if (!(str = getEntry(ene, "double", 3, "qual", "any", "name", "size", "compare", "more")).isNull()) {
+                        from = str.toDouble();
+                    }
+                    if (!(str = getEntry(ene, "double", 3, "qual", "any", "name", "size", "compare", "more_eq")).isNull()) {
+                        from = str.toDouble();
+                    }
+                    if (!(str = getEntry(ene, "double", 3, "qual", "any", "name", "size", "compare", "less")).isNull()) {
+                        to = str.toDouble();
+                    }
+                    if (!(str = getEntry(ene, "double", 3, "qual", "any", "name", "size", "compare", "less_eq")).isNull()) {
+                        to = str.toDouble();
+                    }
+                    if (!(str = getEntry(ene, "double", 3, "qual", "any", "name", "pixelsize", "compare", "more")).isNull()) {
+                        pixelFrom = str.toDouble();
+                    }
+                    if (!(str = getEntry(ene, "double", 3, "qual", "any", "name", "pixelsize", "compare", "more_eq")).isNull()) {
+                        pixelFrom = str.toDouble();
+                    }
+                    if (!(str = getEntry(ene, "double", 3, "qual", "any", "name", "pixelsize", "compare", "less")).isNull()) {
+                        pixelTo = str.toDouble();
+                    }
+                    if (!(str = getEntry(ene, "double", 3, "qual", "any", "name", "pixelsize", "compare", "less_eq")).isNull()) {
+                        pixelTo = str.toDouble();
+                    }
+                } else if ("edit" == ene.tagName() && "false" == getEntry(ene, "bool", 2, "name", "antialias", "mode", "assign")) {
+                    foundFalse = true;
+                }
+            }
+
+            if ((from >= 0 || to >= 0) && foundFalse) {
+                m_excludeRange.from = from < to ? from : to;
+                m_excludeRange.to = from < to ? to : from;
+                m_excludeRange.node = n;
+            } else if ((pixelFrom >= 0 || pixelTo >= 0) && foundFalse) {
+                m_excludePixelRange.from = pixelFrom < pixelTo ? pixelFrom : pixelTo;
+                m_excludePixelRange.to = pixelFrom < pixelTo ? pixelTo : pixelFrom;
+                m_excludePixelRange.node = n;
+            }
+        }
     }
 }
 
