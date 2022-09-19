@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2020 Benjamin Port <benjamin.port@enioka.com>
+    SPDX-FileCopyrightText: 2022 Harald Sitter <sitter@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -211,18 +212,18 @@ public:
         // sub pixel
         KXftConfig::SubPixel::Type spType = KXftConfig::SubPixel::NotSet;
         xft.getSubPixelType(spType);
-        // if it is not set, we set it to rgb
+        // if it is not set, we have no subpixel hinting
         if (spType == KXftConfig::SubPixel::NotSet) {
-            spType = KXftConfig::SubPixel::Rgb;
+            spType = KXftConfig::SubPixel::None;
         }
         setSubPixel(spType);
 
         // hinting
         KXftConfig::Hint::Style hStyle = KXftConfig::Hint::NotSet;
         xft.getHintStyle(hStyle);
-        // if it is not set, we set it to slight hinting
+        // if it is not set, we have no hinting
         if (hStyle == KXftConfig::Hint::NotSet) {
-            hStyle = KXftConfig::Hint::Slight;
+            hStyle = KXftConfig::Hint::None;
         }
         setHinting(hStyle);
 
