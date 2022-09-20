@@ -265,7 +265,7 @@ void User::apply()
             break;
         case UserApplyJob::Error::NoError:; // Do nothing
         }
-    });
+    }, Qt::QueuedConnection /* result emission must be async, in the case of failure we'll manipulate states */);
     job->start();
 }
 
