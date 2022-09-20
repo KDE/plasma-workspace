@@ -80,7 +80,6 @@ Item {
             source: iconSource
             visible: (face.status == Image.Error || face.status == Image.Null)
             anchors.fill: parent
-            anchors.margins: PlasmaCore.Units.gridUnit * 0.5 // because mockup says so...
             colorGroup: PlasmaCore.ColorScope.colorGroup
         }
     }
