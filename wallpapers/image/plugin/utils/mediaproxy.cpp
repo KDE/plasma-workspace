@@ -318,6 +318,7 @@ void MediaProxy::updateModelImage(bool doesBlockSignal)
         // To make modelImageChaged work
         urlQuery.addQueryItem(QStringLiteral("targetWidth"), QString::number(m_targetSize.width()));
         urlQuery.addQueryItem(QStringLiteral("targetHeight"), QString::number(m_targetSize.height()));
+        urlQuery.addQueryItem(QStringLiteral("darkMode"), QString::number(isDarkColorScheme() ? 1 : 0));
 
         composedUrl.setQuery(urlQuery);
         newRealSource = composedUrl;
