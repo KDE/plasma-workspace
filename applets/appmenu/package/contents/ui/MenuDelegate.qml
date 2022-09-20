@@ -41,43 +41,38 @@ AbstractButton {
         Down
     }
 
-    Kirigami.MnemonicData.controlType: Kirigami.MnemonicData.SecondaryControl
-    Kirigami.MnemonicData.label: controlRoot.text
+    property int menuState: {
+        if (down) {
+            return MenuDelegate.State.Down;
+        } else if (hovered) {
+            return MenuDelegate.State.Hover;
+        }
+        return MenuDelegate.State.Rest;
+    }
 
-    leftPadding: rest.margins.left
+    Kirigami.MnemonicData.controlType: Kirigami.MnemonicData.SecondaryControl
+    Kirigami.MnemonicData.label: text
+
     topPadding: rest.margins.top
+    leftPadding: rest.margins.left
     rightPadding: rest.margins.right
     bottomPadding: rest.margins.bottom
 
     Accessible.description: i18nc("@info:usagetip", "Open a menu")
 
-    background: Item {
-        id: background
-
-        property int state: {
-            if (controlRoot.down) {
-                return MenuDelegate.State.Down;
-            } else if (controlRoot.hovered) {
-                return MenuDelegate.State.Hover;
-            }
-            return MenuDelegate.State.Rest;
-        }
-
-        PlasmaCore.FrameSvgItem {
-            id: rest
-            anchors.fill: parent
-            imagePath: "widgets/menubaritem"
-            prefix: switch (background.state) {
-                case MenuDelegate.State.Down: return "pressed";
-                case MenuDelegate.State.Hover: return "hover";
-                case MenuDelegate.State.Rest: return "normal";
-            }
+    background: PlasmaCore.FrameSvgItem {
+        id: rest
+        imagePath: "widgets/menubaritem"
+        prefix: switch (controlRoot.menuState) {
+            case MenuDelegate.State.Down: return "pressed";
+            case MenuDelegate.State.Hover: return "hover";
+            case MenuDelegate.State.Rest: return "normal";
         }
     }
 
     contentItem: PC3.Label {
         text: controlRoot.Kirigami.MnemonicData.richTextLabel
         textFormat: PC3.Label.StyledText
-        color: background.state == MenuDelegate.State.Rest ? PlasmaCore.Theme.textColor : PlasmaCore.Theme.highlightedTextColor
+        color: controlRoot.menuState === MenuDelegate.State.Rest ? PlasmaCore.Theme.textColor : PlasmaCore.Theme.highlightedTextColor
     }
 }
