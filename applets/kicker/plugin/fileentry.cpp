@@ -19,16 +19,10 @@ FileEntry::FileEntry(AbstractModel *owner, const QUrl &url, const QString &mimeT
     : AbstractEntry(owner)
     , m_fileItem(nullptr)
 {
-    if (url.isValid()) {
-        if (url.isLocalFile()) {
-            m_fileItem = new KFileItem(url, mimeType);
-            m_fileItem->determineMimeType();
-        } else {
-            KIO::StatJob *job = KIO::statDetails(url, KIO::StatJob::SourceSide, KIO::StatBasic, KIO::JobFlag::HideProgressInfo);
-            if (job->exec()) {
-                m_fileItem = new KFileItem(job->statResult(), url);
-            }
-        }
+
+    if (url.isValid() && url.isLocalFile()) {
+        m_fileItem = new KFileItem(url, mimeType);
+        m_fileItem->determineMimeType();
     }
 }
 
