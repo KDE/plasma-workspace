@@ -42,9 +42,10 @@ AbstractButton {
     }
 
     property int menuState: {
+        // can't trust hovered state while QMenu is grabbing mouse pointer.
         if (down) {
             return MenuDelegate.State.Down;
-        } else if (hovered) {
+        } else if (hovered && !menuIsOpen) {
             return MenuDelegate.State.Hover;
         }
         return MenuDelegate.State.Rest;
