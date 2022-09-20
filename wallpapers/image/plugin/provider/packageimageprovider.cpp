@@ -6,7 +6,6 @@
 
 #include "packageimageprovider.h"
 
-#include <QGuiApplication>
 #include <QImageReader>
 #include <QPalette>
 #include <QUrlQuery>
@@ -79,7 +78,7 @@ void AsyncPackageImageResponseRunnable::run()
 
     QString path = package.filePath("preferred");
     // 192 is from kcm_colors
-    if (qGray(qGuiApp->palette().window().color().rgb()) < 192) {
+    if (urlQuery.queryItemValue(QStringLiteral("darkMode")).toInt() == 1) {
         QString darkPath = package.filePath("preferredDark");
 
         if (!darkPath.isEmpty()) {
