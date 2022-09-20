@@ -147,7 +147,7 @@ QQC2.StackView {
                         "sourceSize": root.sourceSize,
                         "color": root.configColor,
                         "blur": root.blur,
-            "opacity": 0,
+            "opacity": doesSkipAnimation ? 1: 0,
             "width": root.width,
             "height": root.height,
         });
@@ -183,8 +183,7 @@ QQC2.StackView {
             from: 0
             to: 1
             // The value is to keep compatible with the old feeling defined by "TransitionAnimationDuration" (default: 1000)
-            // 1 is HACK for https://bugreports.qt.io/browse/QTBUG-106797 to avoid flickering
-            duration: root.doesSkipAnimation ? 1 : Math.round(PlasmaCore.Units.veryLongDuration * 2.5)
+            duration: Math.round(PlasmaCore.Units.veryLongDuration * 2.5)
         }
     }
     // Keep the old image around till the new one is fully faded in
