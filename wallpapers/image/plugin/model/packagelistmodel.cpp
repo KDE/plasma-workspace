@@ -8,6 +8,8 @@
 #include "packagelistmodel.h"
 
 #include <QDir>
+#include <QGuiApplication>
+#include <QPalette>
 #include <QPixmap>
 #include <QStandardPaths>
 #include <QThreadPool>
@@ -86,8 +88,16 @@ QVariant PackageListModel::data(const QModelIndex &index, int role) const
         return QString();
     }
 
-    case PathRole:
+    case PathRole: {
+        if (qGray(qGuiApp->palette().window().color().rgb()) < 192) {
+            const QString darkPath = b.filePath(QByteArrayLiteral("preferredDark"));
+            if (!darkPath.isEmpty()) {
+                return QUrl::fromLocalFile(darkPath);
+            }
+        }
+
         return QUrl::fromLocalFile(b.filePath("preferred"));
+    }
 
     case PackageNameRole:
         return b.path();
