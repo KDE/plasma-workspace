@@ -161,12 +161,11 @@ QQC2.StackView {
             return;
         }
 
+        pendingImage.statusChanged.disconnect(replaceWhenLoaded);
         // BUG 454908: Update accent color
         pendingImage.QQC2.StackView.onActivated.connect(wallpaper.repaintNeeded);
         pendingImage.QQC2.StackView.onRemoved.connect(pendingImage.destroy);
-        root.replace(pendingImage, {},
-            doesSkipAnimation ? QQC2.StackView.Immediate : QQC2.StackView.Transition);
-        pendingImage.statusChanged.disconnect(replaceWhenLoaded);
+        root.replace(pendingImage, {}, QQC2.StackView.Transition);
 
         wallpaper.loading = false;
 
@@ -178,6 +177,7 @@ QQC2.StackView {
     }
 
     replaceEnter: Transition {
+        enabled: !root.doesSkipAnimation
         OpacityAnimator {
             id: replaceEnterOpacityAnimator
             from: 0
