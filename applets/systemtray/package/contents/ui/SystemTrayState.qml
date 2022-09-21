@@ -32,7 +32,7 @@ QtObject {
             oldVisualIndex = -1
             newVisualIndex = -1
         } else {
-            oldVisualIndex = newVisualIndex
+            oldVisualIndex = (activeApplet && activeApplet.status === PlasmaCore.Types.PassiveStatus) ? 9999 : newVisualIndex
             newVisualIndex = visualIndex
         }
 
