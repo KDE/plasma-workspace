@@ -9,6 +9,7 @@
 #include <QCommandLineParser>
 #include <QLibraryInfo>
 #include <QQuickWindow>
+#include <QSurfaceFormat>
 
 #include "ksmserveriface.h"
 
@@ -19,6 +20,10 @@
 int main(int argc, char *argv[])
 {
     qunsetenv("SESSION_MANAGER");
+
+    auto format = QSurfaceFormat::defaultFormat();
+    format.setOption(QSurfaceFormat::ResetNotification);
+    QSurfaceFormat::setDefaultFormat(format);
 
     KWorkSpace::detectPlatform(argc, argv);
     QQuickWindow::setDefaultAlphaBuffer(true);

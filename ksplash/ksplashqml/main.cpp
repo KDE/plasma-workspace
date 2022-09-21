@@ -6,6 +6,7 @@
 
 #include "splashapp.h"
 #include <QQuickWindow>
+#include <QSurfaceFormat>
 
 #include <QFile>
 #include <QTextStream>
@@ -52,6 +53,10 @@ int main(int argc, char **argv)
 
     // read ksplashrc as config file, not ksplashqmlrc
     QCoreApplication::setApplicationName(QStringLiteral("ksplash"));
+
+    auto format = QSurfaceFormat::defaultFormat();
+    format.setOption(QSurfaceFormat::ResetNotification);
+    QSurfaceFormat::setDefaultFormat(format);
 
     // enable to send log output to /tmp/ksplash
     // which is useful for debugging

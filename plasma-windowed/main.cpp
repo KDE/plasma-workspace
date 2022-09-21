@@ -6,6 +6,7 @@
 */
 
 #include <QApplication>
+#include <QSurfaceFormat>
 #include <qcommandlineoption.h>
 #include <qcommandlineparser.h>
 
@@ -20,6 +21,10 @@ static const char version[] = "1.0";
 int main(int argc, char **argv)
 {
     QQuickWindow::setDefaultAlphaBuffer(true);
+
+    auto format = QSurfaceFormat::defaultFormat();
+    format.setOption(QSurfaceFormat::ResetNotification);
+    QSurfaceFormat::setDefaultFormat(format);
 
     QApplication app(argc, argv);
     app.setApplicationVersion(QLatin1String(version));

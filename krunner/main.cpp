@@ -14,6 +14,7 @@
 #include <QDebug>
 #include <QQuickWindow>
 #include <QSessionManager>
+#include <QSurfaceFormat>
 #include <QUrl>
 
 #include <KAboutData>
@@ -28,6 +29,10 @@
 
 int main(int argc, char **argv)
 {
+    auto format = QSurfaceFormat::defaultFormat();
+    format.setOption(QSurfaceFormat::ResetNotification);
+    QSurfaceFormat::setDefaultFormat(format);
+
     QCommandLineParser parser;
     if (!qEnvironmentVariableIsSet("PLASMA_USE_QT_SCALING")) {
         qunsetenv("QT_DEVICE_PIXEL_RATIO");
