@@ -203,6 +203,7 @@ Item {
             onVisibleChanged: {
                 if (visible) {
                     layout.forceActiveFocus();
+                    systemTrayState.oldVisualIndex = systemTrayState.newVisualIndex = -1;
                 }
             }
         }
