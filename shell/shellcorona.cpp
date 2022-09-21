@@ -278,27 +278,7 @@ void ShellCorona::init()
     cyclePanelFocusAction->setText(i18n("Move keyboard focus between panels"));
     KGlobalAccel::self()->setGlobalShortcut(cyclePanelFocusAction, Qt::META | Qt::ALT | Qt::Key_P);
 
-    connect(cyclePanelFocusAction, &QAction::triggered, this, [this]() {
-        if (m_panelViews.isEmpty()) {
-            return;
-        }
-        PanelView *activePanel = qobject_cast<PanelView *>(qGuiApp->focusWindow());
-        if (!activePanel) {
-            activePanel = m_panelViews.values().first();
-        }
-
-        if (activePanel->containment()->status() != Plasma::Types::AcceptingInputStatus) {
-            activePanel->containment()->setStatus(Plasma::Types::AcceptingInputStatus);
-
-            auto nextItem = activePanel->rootObject()->nextItemInFocusChain();
-            if (nextItem) {
-                nextItem->forceActiveFocus();
-            }
-        } else {
-            // Cancel focus
-            activePanel->containment()->setStatus(Plasma::Types::PassiveStatus);
-        }
-    });
+    connect(cyclePanelFocusAction, &QAction::triggered, this, &ShellCorona::slotCyclePanelFocus);
 
     unload();
     /*
