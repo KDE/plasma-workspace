@@ -32,10 +32,6 @@ StackView {
     property int footerHeight: mergeFooters ? activeApplet.fullRepresentationItem.footer.height : 0
 
     onActiveAppletChanged: {
-        if (currentItem !== null) {
-            clear();
-        }
-
         mainStack.appletHasHeading = false
         mainStack.appletHasFooter = false
         if (activeApplet != null) {
@@ -64,13 +60,16 @@ StackView {
                 unFlipped = !unFlipped;
             }
 
-            mainStack.push(activeApplet.fullRepresentationItem, {
+            const isTransitionEnabled = systemTrayState.expanded;
+            (mainStack.empty ? mainStack.push : mainStack.replace)(activeApplet.fullRepresentationItem, {
                 "width": Qt.binding(() => mainStack.width),
                 "height": Qt.binding(() => mainStack.height),
+                "x": 0,
                 "focus": true,
+                "opacity": 1,
                 "KeyNavigation.up": mainStack.KeyNavigation.up,
                 "KeyNavigation.backtab": mainStack.KeyNavigation.backtab,
-            }, systemTrayState.expanded ? (unFlipped ? StackView.PushTransition : StackView.PopTransition) : StackView.Immediate);
+            }, isTransitionEnabled ? (unFlipped ? StackView.PushTransition : StackView.PopTransition) : StackView.Immediate);
         } else {
             mainStack.clear();
         }
