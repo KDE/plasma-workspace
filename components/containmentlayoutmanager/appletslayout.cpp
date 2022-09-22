@@ -623,8 +623,6 @@ void AppletsLayout::mousePressEvent(QMouseEvent *event)
 
     m_mouseDownWasEditMode = m_editMode;
     m_mouseDownPosition = event->windowPos();
-
-    // event->setAccepted(false);
 }
 
 void AppletsLayout::mouseMoveEvent(QMouseEvent *event)
