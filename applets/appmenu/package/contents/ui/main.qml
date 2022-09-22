@@ -133,6 +133,12 @@ Item {
                 onActivated: Plasmoid.nativeInterface.trigger(this, index)
             }
         }
+        Item {
+            Layout.preferredWidth: 0
+            Layout.preferredHeight: 0
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+        }
     }
 
     AppMenuPrivate.AppMenuModel {
