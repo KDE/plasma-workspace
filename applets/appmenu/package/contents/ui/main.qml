@@ -25,8 +25,6 @@ Item {
     readonly property bool view: Plasmoid.configuration.compactView
     readonly property bool menuAvailable: appMenuModel.menuAvailable
 
-    readonly property bool kcmAuthorized: KCMShell.authorize(["style.desktop"]).length > 0
-
     onViewChanged: {
         Plasmoid.nativeInterface.view = view;
     }
