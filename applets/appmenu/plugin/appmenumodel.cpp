@@ -76,6 +76,7 @@ AppMenuModel::AppMenuModel(QObject *parent)
     connect(m_serviceWatcher, &QDBusServiceWatcher::serviceUnregistered, this, [this](const QString &serviceName) {
         if (serviceName == m_serviceName) {
             setMenuAvailable(false);
+            setVisible(false);
             Q_EMIT modelNeedsUpdate();
         }
     });
@@ -323,6 +324,7 @@ void AppMenuModel::updateApplicationMenu(const QString &serviceName, const QStri
         }
 
         setMenuAvailable(true);
+        setVisible(true);
         Q_EMIT modelNeedsUpdate();
     });
 
