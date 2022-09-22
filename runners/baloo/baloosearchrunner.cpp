@@ -26,6 +26,9 @@
 #include <KIO/OpenUrlJob>
 #include <KNotificationJobUiDelegate>
 #include <KShell>
+#include <algorithm>
+#include <qdebug.h>
+#include <qglobal.h>
 
 #include "krunner1adaptor.h"
 
@@ -111,6 +114,13 @@ RemoteMatches SearchRunner::matchInternal(const QString &searchTerm, const QStri
 
     QMimeDatabase mimeDb;
 
+    // search for paths split by slash
+    bool pathMatch = searchTerm.contains(QLatin1Char('/'));
+    QStringList searchPathComponents = searchTerm.split(QLatin1Char('/'), Qt::SkipEmptyParts);
+    if (pathMatch) {
+        query.setSearchString(searchPathComponents.last());
+    }
+
     // KRunner is absolutely daft and allows plugins to set the global
     // relevance levels. so Baloo should not set the relevance of results too
     // high because then Applications will often appear after if the application
@@ -135,6 +145,15 @@ RemoteMatches SearchRunner::matchInternal(const QString &searchTerm, const QStri
         match.relevance = relevance;
         match.type = url.fileName().contains(searchTerm, Qt::CaseInsensitive) ? Plasma::QueryMatch::PossibleMatch : Plasma::QueryMatch::CompletionMatch;
         QVariantMap properties;
+
+        if (pathMatch) {
+            QStringList matchPathComponents = url.toString().split(QLatin1Char('/'), Qt::SkipEmptyParts);
+            if (!std::all_of(searchPathComponents.cbegin(), searchPathComponents.cend(), [matchPathComponents](QString searchPathComponent) {
+                    return matchPathComponents.contains(searchPathComponent);
+                })) {
+                continue;
+            }
+        }
 
         QString folderPath = url.adjusted(QUrl::RemoveFilename | QUrl::StripTrailingSlash).toLocalFile();
         folderPath = KShell::tildeCollapse(folderPath);
