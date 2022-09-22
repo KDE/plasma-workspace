@@ -52,8 +52,10 @@ AppMenuModel::AppMenuModel(QObject *parent)
             [=](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QVector<int> &roles = QVector<int>()) {
                 Q_UNUSED(topLeft)
                 Q_UNUSED(bottomRight)
-                if (roles.contains(TaskManager::AbstractTasksModel::ApplicationMenuObjectPath)
-                    || roles.contains(TaskManager::AbstractTasksModel::ApplicationMenuServiceName) || roles.isEmpty()) {
+                if (roles.isEmpty() //
+                    || roles.contains(TaskManager::AbstractTasksModel::ApplicationMenuObjectPath)
+                    || roles.contains(TaskManager::AbstractTasksModel::ApplicationMenuServiceName)
+                    || roles.contains(TaskManager::AbstractTasksModel::IsMinimized)) {
                     onActiveWindowChanged();
                 }
             });
@@ -206,12 +208,42 @@ void AppMenuModel::onActiveWindowChanged()
     const QString serviceName = m_tasksModel->data(activeTaskIndex, TaskManager::AbstractTasksModel::ApplicationMenuServiceName).toString();
 
     if (!objectPath.isEmpty() && !serviceName.isEmpty()) {
-        setMenuAvailable(true);
+        m_activeTaskIndex = QPersistentModelIndex(activeTaskIndex);
         m_DBusReplyIsWelcome = true;
+        setMenuAvailable(true);
         updateApplicationMenu(serviceName, objectPath);
         setVisible(true);
         Q_EMIT modelNeedsUpdate();
+    } else if (activeTaskIndex.isValid()) {
+        // This code path is for legit apps/windows which don't support a D-Bus menu, not for popups.
+        m_activeTaskIndex = QPersistentModelIndex(activeTaskIndex);
+        m_DBusReplyIsWelcome = false;
+        setMenuAvailable(false);
+        setVisible(false);
+    } else if (m_activeTaskIndex.isValid()) {
+        // This code path is for popups and desktops. Focusing on them should not reset the menu if we had one.
+        const QString currentActivity = m_activityInfo->currentActivity();
+        const QVariant currentDesktop = m_virtualDesktopInfo->currentDesktop();
+        const QStringList activities = m_activeTaskIndex.data(TaskManager::AbstractTasksModel::Activities).toStringList();
+
+        const bool hasCurrentActivity = activities.isEmpty() || activities.contains(currentActivity);
+        const bool hasCurrentDesktop = m_activeTaskIndex.data(TaskManager::AbstractTasksModel::IsOnAllVirtualDesktops).toBool()
+            || m_activeTaskIndex.data(TaskManager::AbstractTasksModel::VirtualDesktops).toList().contains(currentDesktop);
+        const bool isMinimized = m_activeTaskIndex.data(TaskManager::AbstractTasksModel::IsMinimized).toBool();
+
+        // User has switched to a different desktop or activity, and our previously active window is not here.
+        if (!hasCurrentActivity || !hasCurrentDesktop || isMinimized) {
+            m_activeTaskIndex = QPersistentModelIndex();
+            m_DBusReplyIsWelcome = false;
+            setMenuAvailable(false);
+            setVisible(false);
+        } else {
+            // Popups (including notifications and expanded plasmoids) don't have a valid task index.
+            // Don't reset menu when they become focused to avoid extra flickering.
+        }
     } else {
+        // Nothing is valid, definitely should hide the menu.
+        m_activeTaskIndex = QPersistentModelIndex();
         m_DBusReplyIsWelcome = false;
         setMenuAvailable(false);
         setVisible(false);

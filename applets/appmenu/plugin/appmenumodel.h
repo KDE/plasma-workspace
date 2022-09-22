@@ -86,6 +86,7 @@ private:
     TaskManager::TasksModel *m_tasksModel;
     TaskManager::ActivityInfo *m_activityInfo;
     TaskManager::VirtualDesktopInfo *m_virtualDesktopInfo;
+    QPersistentModelIndex m_activeTaskIndex = QPersistentModelIndex();
 
     //! current active window used
     WId m_currentWindowId = 0;
