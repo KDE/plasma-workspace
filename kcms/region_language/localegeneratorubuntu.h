@@ -23,5 +23,5 @@ private:
 
     void ubuntuInstall(const QStringList &locales);
 private Q_SLOTS:
-    void ubuntuLangCheck(int statusCode, QProcess::ExitStatus status);
+    void ubuntuLangCheck(int statusCode, QProcess::ExitStatus exitStatus);
 };

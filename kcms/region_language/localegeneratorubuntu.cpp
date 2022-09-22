@@ -43,10 +43,10 @@ void LocaleGeneratorUbuntu::ubuntuInstall(const QStringList &locales)
     }
 }
 
-void LocaleGeneratorUbuntu::ubuntuLangCheck(int status, QProcess::ExitStatus exit)
+void LocaleGeneratorUbuntu::ubuntuLangCheck(int statusCode, QProcess::ExitStatus exitStatus)
 {
-    Q_UNUSED(exit)
-    if (status != 0) {
+    Q_UNUSED(exitStatus)
+    if (statusCode != 0) {
         // Something wrong with this Ubuntu, don't try further
         Q_EMIT userHasToGenerateManually(i18nc("the arg is the output of failed check-language-support call",
                                                "check-language-support failed, output: %1",
