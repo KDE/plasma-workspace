@@ -23,7 +23,6 @@ Item {
 
     readonly property bool vertical: Plasmoid.formFactor === PlasmaCore.Types.Vertical
     readonly property bool view: Plasmoid.configuration.compactView
-    readonly property bool menuAvailable: appMenuModel.menuAvailable
 
     onViewChanged: {
         Plasmoid.nativeInterface.view = view;
@@ -38,8 +37,8 @@ Item {
         Layout.fillHeight: false
         Layout.minimumWidth: implicitWidth
         Layout.maximumWidth: implicitWidth
-        enabled: menuAvailable
-        checkable: menuAvailable && Plasmoid.nativeInterface.currentIndex === fakeIndex
+        enabled: appMenuModel.menuAvailable
+        checkable: appMenuModel.menuAvailable && Plasmoid.nativeInterface.currentIndex === fakeIndex
         checked: checkable
         icon.name: "application-menu"
 
@@ -54,7 +53,7 @@ Item {
         id: buttonGrid
 
         Plasmoid.status: {
-            if (menuAvailable && Plasmoid.nativeInterface.currentIndex > -1 && buttonRepeater.count > 0) {
+            if (appMenuModel.menuAvailable && Plasmoid.nativeInterface.currentIndex > -1 && buttonRepeater.count > 0) {
                 return PlasmaCore.Types.NeedsAttentionStatus;
             } else {
                 //when we're not enabled set to active to show the configure button
