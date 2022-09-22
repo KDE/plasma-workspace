@@ -1375,7 +1375,7 @@ bool TasksModel::taskReorderingEnabled() const
 void TasksModel::setTaskReorderingEnabled(bool enabled)
 {
     enabled ? setDynamicSortFilter(true) : setDynamicSortFilter(false);
-    
+
     Q_EMIT taskReorderingEnabledChanged();
 }
 
@@ -1930,9 +1930,9 @@ QModelIndex TasksModel::makeModelIndex(int row, int childRow) const
     return QModelIndex();
 }
 
-QPersistentModelIndex TasksModel::makePersistentModelIndex(int row, int childCount) const
+QPersistentModelIndex TasksModel::makePersistentModelIndex(int row, int childRow) const
 {
-    return QPersistentModelIndex(makeModelIndex(row, childCount));
+    return QPersistentModelIndex(makeModelIndex(row, childRow));
 }
 
 void TasksModel::classBegin()
