@@ -125,7 +125,6 @@ void AppMenuModel::setMenuAvailable(bool set)
 {
     if (m_menuAvailable != set) {
         m_menuAvailable = set;
-        setVisible(true);
         Q_EMIT menuAvailableChanged();
     }
 }
