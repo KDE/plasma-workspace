@@ -30,7 +30,7 @@ Item {
     }
 
     Plasmoid.constraintHints: PlasmaCore.Types.CanFillArea
-    Plasmoid.preferredRepresentation: (Plasmoid.configuration.compactView) ? Plasmoid.compactRepresentation : Plasmoid.fullRepresentation
+    Plasmoid.preferredRepresentation: Plasmoid.configuration.compactView ? Plasmoid.compactRepresentation : Plasmoid.fullRepresentation
 
     Plasmoid.compactRepresentation: PlasmaComponents3.ToolButton {
         readonly property int fakeIndex: 0
@@ -38,7 +38,7 @@ Item {
         Layout.fillHeight: false
         Layout.minimumWidth: implicitWidth
         Layout.maximumWidth: implicitWidth
-        enabled:  menuAvailable
+        enabled: menuAvailable
         checkable: menuAvailable && Plasmoid.nativeInterface.currentIndex === fakeIndex
         checked: checkable
         icon.name: "application-menu"
