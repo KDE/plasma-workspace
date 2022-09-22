@@ -76,7 +76,9 @@ Q_SIGNALS:
     void visibleChanged();
 
 private:
-    bool m_menuAvailable;
+    bool m_menuAvailable = false;
+    //! If a menu was hidden before the reply for a previous request comes back, don't process the reply.
+    bool m_DBusReplyIsWelcome = false;
     bool m_updatePending = false;
     bool m_visible = true;
 

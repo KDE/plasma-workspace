@@ -207,10 +207,12 @@ void AppMenuModel::onActiveWindowChanged()
 
     if (!objectPath.isEmpty() && !serviceName.isEmpty()) {
         setMenuAvailable(true);
+        m_DBusReplyIsWelcome = true;
         updateApplicationMenu(serviceName, objectPath);
         setVisible(true);
         Q_EMIT modelNeedsUpdate();
     } else {
+        m_DBusReplyIsWelcome = false;
         setMenuAvailable(false);
         setVisible(false);
     }
@@ -297,6 +299,9 @@ void AppMenuModel::updateApplicationMenu(const QString &serviceName, const QStri
     QMetaObject::invokeMethod(m_importer, "updateMenu", Qt::QueuedConnection);
 
     connect(m_importer.data(), &DBusMenuImporter::menuUpdated, this, [=](QMenu *menu) {
+        if (!m_DBusReplyIsWelcome) {
+            return;
+        }
         m_menu = m_importer->menu();
         if (m_menu.isNull() || menu != m_menu) {
             return;
