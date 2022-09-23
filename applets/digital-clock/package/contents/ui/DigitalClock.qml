@@ -570,7 +570,7 @@ MouseArea {
         
         height: 1024
 
-        font.family: Plasmoid.configuration.autoFontAndSize ? PlasmaCore.Theme.defaultFont.family : Plasmoid.configuration.fontFamily
+        font.family: (Plasmoid.configuration.autoFontAndSize || Plasmoid.configuration.fontFamily.length === 0) ? PlasmaCore.Theme.defaultFont.family : Plasmoid.configuration.fontFamily
         font.weight: Plasmoid.configuration.autoFontAndSize ? PlasmaCore.Theme.defaultFont.weight : Plasmoid.configuration.fontWeight
         font.italic: Plasmoid.configuration.autoFontAndSize ? PlasmaCore.Theme.defaultFont.italic : Plasmoid.configuration.italicText
         font.pixelSize: Plasmoid.configuration.autoFontAndSize ? 3 * PlasmaCore.Theme.defaultFont.pixelSize : pointToPixel(Plasmoid.configuration.fontSize)
