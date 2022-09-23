@@ -192,7 +192,7 @@
     "X-Plasma-API": "declarativeappletscript",
     "X-Plasma-MainScript": "ui/main.qml",
     "X-Plasma-NotificationArea": "true",
-    "X-Plasma-NotificationAreaCategory": "ApplicationStatus",
+    "X-Plasma-NotificationAreaCategory": "SystemServices",
     "X-Plasma-Provides": [
         "org.kde.plasma.notifications"
     ]
