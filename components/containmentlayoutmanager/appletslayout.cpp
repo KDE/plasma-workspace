@@ -60,9 +60,10 @@ AppletsLayout::AppletsLayout(QQuickItem *parent)
     connect(m_layoutChangeTimer, &QTimer::timeout, this, [this]() {
         // We can't assume m_containment to be valid: if we load in a plasmoid that can run also
         // in "applet" mode, m_containment will never be valid
-        if (!m_containment) {
+        if (!m_containment || width() <= 0 || height() <= 0 || m_relayoutLock) {
             return;
         }
+
         const QString &serializedConfig = m_containment->config().readEntry(m_configKey, "");
         if ((m_layoutChanges & ConfigKeyChange) && !serializedConfig.isEmpty()) {
             if (!m_configKey.isEmpty() && m_containment) {
@@ -171,6 +172,26 @@ void AppletsLayout::setFallbackConfigKey(const QString &key)
     m_fallbackConfigKey = key;
 
     Q_EMIT fallbackConfigKeyChanged();
+}
+
+bool AppletsLayout::relayoutLock() const
+{
+    return m_relayoutLock;
+}
+
+void AppletsLayout::setRelayoutLock(bool lock)
+{
+    if (lock == m_relayoutLock) {
+        return;
+    }
+
+    m_relayoutLock = lock;
+
+    if (!lock && m_layoutChanges != NoChange) {
+        m_layoutChangeTimer->start();
+    }
+
+    Q_EMIT relayoutLockChanged();
 }
 
 QJSValue AppletsLayout::acceptsAppletCallback() const
@@ -484,7 +505,7 @@ void AppletsLayout::geometryChange(const QRectF &newGeometry, const QRectF &oldG
     }
 
     // Only do a layouting procedure if we received a valid size
-    if (!newGeometry.isEmpty()) {
+    if (!newGeometry.isEmpty() && newGeometry != oldGeometry) {
         m_layoutChanges |= SizeChange;
         m_layoutChangeTimer->start();
     }
