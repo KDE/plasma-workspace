@@ -134,6 +134,8 @@ int main(int argc, char *argv[])
         cliOptions.process(app);
         aboutData.processCommandLine(&cliOptions);
 
+        // don't let the first KJob terminate us
+        QCoreApplication::setQuitLockEnabled(false);
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
         QGuiApplication::setFallbackSessionManagementEnabled(false);
 #endif
