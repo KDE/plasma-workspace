@@ -13,14 +13,12 @@
 #include <KIO/JobUiDelegate>
 #include <KIO/JobUiDelegateFactory>
 #include <KIO/OpenUrlJob>
-#include <KIO/StatJob>
 
 FileEntry::FileEntry(AbstractModel *owner, const QUrl &url, const QString &mimeType)
     : AbstractEntry(owner)
     , m_fileItem(nullptr)
 {
-
-    if (url.isValid() && url.isLocalFile()) {
+    if (url.isValid()) {
         m_fileItem = new KFileItem(url, mimeType);
         m_fileItem->determineMimeType();
     }
@@ -33,7 +31,7 @@ FileEntry::~FileEntry()
 
 bool FileEntry::isValid() const
 {
-    return m_fileItem && (m_fileItem->isFile() || m_fileItem->isDir());
+    return m_fileItem;
 }
 
 QIcon FileEntry::icon() const
