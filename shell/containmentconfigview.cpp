@@ -59,6 +59,8 @@ ContainmentConfigView::ContainmentConfigView(Plasma::Containment *cont, QWindow 
 
 ContainmentConfigView::~ContainmentConfigView()
 {
+    // Workaround for https://bugreports.qt.io/browse/QTBUG-73388
+    engine()->trimComponentCache();
 }
 
 void ContainmentConfigView::init()
