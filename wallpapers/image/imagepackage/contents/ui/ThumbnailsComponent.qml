@@ -36,6 +36,7 @@ Item {
         function onWallpaperBrowseCompleted() {
             // Scroll to top to view added images
             wallpapersGrid.view.positionViewAtIndex(0, GridView.Beginning);
+            wallpapersGrid.resetCurrentIndex(); // BUG 455129
         }
     }
 
