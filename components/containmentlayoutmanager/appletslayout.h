@@ -39,6 +39,8 @@ class AppletsLayout : public QQuickItem
     // from the screen size and plasma starts on an "unexpected" size
     Q_PROPERTY(QString fallbackConfigKey READ fallbackConfigKey WRITE setFallbackConfigKey NOTIFY fallbackConfigKeyChanged)
 
+    Q_PROPERTY(bool relayoutLock READ relayoutLock WRITE setRelayoutLock NOTIFY relayoutLockChanged)
+
     Q_PROPERTY(PlasmaQuick::AppletQuickItem *containment READ containment WRITE setContainment NOTIFY containmentChanged)
 
     Q_PROPERTY(QJSValue acceptsAppletCallback READ acceptsAppletCallback WRITE setAcceptsAppletCallback NOTIFY acceptsAppletCallbackChanged)
@@ -103,6 +105,9 @@ public:
     QString fallbackConfigKey() const;
     void setFallbackConfigKey(const QString &key);
 
+    bool relayoutLock() const;
+    void setRelayoutLock(bool lock);
+
     PlasmaQuick::AppletQuickItem *containment() const;
     void setContainment(PlasmaQuick::AppletQuickItem *containment);
 
@@ -162,6 +167,7 @@ Q_SIGNALS:
 
     void configKeyChanged();
     void fallbackConfigKeyChanged();
+    void relayoutLockChanged();
     void containmentChanged();
     void minimumItemWidthChanged();
     void minimumItemHeightChanged();
@@ -226,6 +232,7 @@ private:
     QPointF m_mouseDownPosition = QPoint(-1, -1);
     bool m_mouseDownWasEditMode = false;
     bool m_editMode = false;
+    bool m_relayoutLock = false;
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(AppletsLayout::LayoutChanges)
