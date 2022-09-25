@@ -187,7 +187,7 @@ public:
         connect(&m_watcher, &ResultWatcher::resultUnlinked, [this](const QString &resource) {
             removeResult(resource);
         });
-        connect(KSycoca::self(), &KSycoca::databaseChanged, [this]() {
+        connect(KSycoca::self(), &KSycoca::databaseChanged, this, [this]() {
             QStringList keys;
             for (auto it = m_itemEntries.cbegin(); it != m_itemEntries.cend(); it++) {
                 if (it.value() && !it.value()->isValid()) {
