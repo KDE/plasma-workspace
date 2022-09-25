@@ -49,9 +49,8 @@ KCM.GridDelegate {
                 if (wallpapersGrid.view.currentIndex === index) {
                     const newIndex = (index + 1) % (imageModel.count - 1);
                     wallpapersGrid.view.itemAtIndex(newIndex).clicked();
-                } else {
-                    root.configurationChanged();
                 }
+                root.configurationChanged(); // BUG 438585
             }
         }
     ]
