@@ -1,6 +1,6 @@
-find_package(Qt5QuickTest ${REQUIRED_QT_VERSION} CONFIG QUIET)
+find_package(Qt${QT_MAJOR_VERSION}QuickTest ${REQUIRED_QT_VERSION} CONFIG QUIET)
 
-if(NOT Qt5QuickTest_FOUND)
+if(NOT TARGET Qt::QuickTest)
     message(STATUS "Qt5QuickTest not found, autotests will not be built.")
     return()
 endif()
