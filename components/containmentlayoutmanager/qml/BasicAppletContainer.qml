@@ -144,11 +144,9 @@ ContainmentLayoutManager.AppletContainer {
 
             visible: background.blurEnabled && (appletContainer.applet.effectiveBackgroundHints & PlasmaCore.Types.StandardBackground)
             z: -2
-            source: blur
-            maskSource: 
-            ShaderEffectSource {
-                width: mask.width
-                height: mask.height
+            maskSource: ShaderEffectSource {
+                width: appletContainer.width
+                height: appletContainer.height
                 sourceRect: Qt.rect(Math.max(0, -appletContainer.x),
                                     Math.max(0, -appletContainer.y),
                                     width, height);
@@ -161,20 +159,22 @@ ContainmentLayoutManager.AppletContainer {
                 }
             }
 
-            FastBlur {
+            source: FastBlur {
                 id: blur
-                anchors.fill: parent
+
+                width: appletContainer.width
+                height: appletContainer.height
 
                 radius: 128
                 visible: false
 
                 source: ShaderEffectSource {
-                    width: blur.width
-                    height: blur.height
-                    sourceRect: Qt.rect(Math.max(0, appletContainer.x),
-                                        Math.max(0, appletContainer.y),
-                                        appletContainer.width - Math.max(0, - (appletContainer.parent.width - appletContainer.x - appletContainer.width)),
-                                        appletContainer.height - Math.max(0, - (appletContainer.parent.height - appletContainer.y - appletContainer.height)));
+                    width: appletContainer.width
+                    height: appletContainer.height
+                    sourceRect: Qt.rect(mask.x,
+                                        mask.y,
+                                        mask.width,
+                                        mask.height)
                     sourceItem: Plasmoid.wallpaper
                 }
             }
@@ -193,4 +193,4 @@ ContainmentLayoutManager.AppletContainer {
         visible: applet.configurationRequired
         onClicked: applet.action("configure").trigger();
     }
-} 
+}
