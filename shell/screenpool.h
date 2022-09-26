@@ -19,6 +19,32 @@
 class QScreen;
 class PrimaryOutputWatcher;
 
+class ScreenIdentifier
+{
+public:
+    enum class Match { None = 0, Edid = 1, Connector = 2, All = Edid | Connector };
+
+    ScreenIdentifier(const QString &edid = QString(), const QString &connector = QString());
+    ~ScreenIdentifier();
+    static ScreenIdentifier fromScreen(QScreen *screen);
+    static ScreenIdentifier fromString(const QString &string);
+
+    bool isValid() const;
+    QString edid() const;
+    QString connector() const;
+    Match match(QScreen *screen) const;
+    bool match(QScreen *screen, Match matchMode);
+    QString toString() const;
+
+private:
+    static inline QString edidFromScreen(QScreen *screen);
+    QString m_edid;
+    QString m_connector;
+};
+
+bool operator==(const ScreenIdentifier &i1, const ScreenIdentifier &i2);
+uint qHash(const ScreenIdentifier &key, uint seed = 0);
+
 class ScreenPool : public QObject
 {
     Q_OBJECT
@@ -30,9 +56,11 @@ public:
 
     QString primaryConnector() const;
 
-    int id(const QString &connector) const;
+    int id(const QString &connector) const; // TODO: remove
+    QString connector(int id) const; // TODO: remove
 
-    QString connector(int id) const;
+    int number(const ScreenIdentifier &identifier) const;
+    ScreenIdentifier identifier(int number) const;
 
     // all ids that are known, included screens not enabled at the moment
     QList<int> knownIds() const;
@@ -41,6 +69,7 @@ public:
     QList<QScreen *> screens() const;
     QScreen *primaryScreen() const;
     QScreen *screenForId(int id) const;
+    int idForScreen(QScreen *screen) const;
     QScreen *screenForConnector(const QString &connector);
 
     bool noRealOutputsConnected() const;
@@ -53,7 +82,7 @@ Q_SIGNALS:
 private:
     void save();
     void setPrimaryConnector(const QString &primary);
-    void insertScreenMapping(int id, const QString &connector);
+    void insertScreenMapping(int id, QScreen *screen);
     int firstAvailableId() const;
 
     QScreen *outputRedundantTo(QScreen *screen) const;
@@ -65,6 +94,8 @@ private:
     void handleScreenRemoved(QScreen *screen);
     void handlePrimaryOutputNameChanged(const QString &oldOutputName, const QString &newOutputName);
 
+    inline QString identifierForScreen(QScreen *screen);
+
     void screenInvariants();
 
     KConfigGroup m_configGroup;
@@ -72,6 +103,9 @@ private:
     // order is important
     QMap<int, QString> m_connectorForId;
     QHash<QString, int> m_idForConnector;
+
+    QMap<int, ScreenIdentifier> m_identifierForNumber;
+    QHash<ScreenIdentifier, int> m_numberForIdentifier;
 
     // List correspondent to qGuiApp->screens(), but sorted first by size then by Id,
     // determines the screen importance while figuring out the reduntant ones

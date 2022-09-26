@@ -23,6 +23,85 @@
 
 using namespace std::chrono_literals;
 
+bool operator==(const ScreenIdentifier &i1, const ScreenIdentifier &i2)
+{
+    return i1.edid() == i2.edid() && i1.connector() == i2.connector();
+}
+
+uint qHash(const ScreenIdentifier &key, uint seed)
+{
+    return qHash(key.edid() + key.connector(), seed);
+}
+
+ScreenIdentifier::ScreenIdentifier(const QString &edid, const QString &connector)
+    : m_edid(edid)
+    , m_connector(connector)
+{
+}
+
+ScreenIdentifier::~ScreenIdentifier()
+{
+}
+
+ScreenIdentifier ScreenIdentifier::fromScreen(QScreen *screen)
+{
+    return ScreenIdentifier(edidFromScreen(screen), screen->name());
+}
+
+ScreenIdentifier ScreenIdentifier::fromString(const QString &string)
+{
+    auto arr = string.split(QChar(':'));
+    if (arr.size() < 2) {
+        return ScreenIdentifier();
+    } else {
+        const auto connector = arr.last();
+        arr.pop_back();
+        return ScreenIdentifier(arr.join(QChar(':')));
+    }
+}
+
+QString ScreenIdentifier::toString() const
+{
+    return m_edid + QChar(':') + m_connector;
+}
+
+QString ScreenIdentifier::edidFromScreen(QScreen *screen)
+{
+    return screen->manufacturer() + QChar('/') + screen->model() + QChar('/') + screen->serialNumber();
+}
+
+bool ScreenIdentifier::isValid() const
+{
+    return !m_edid.isEmpty() || !m_connector.isEmpty();
+}
+
+QString ScreenIdentifier::edid() const
+{
+    return m_edid;
+}
+
+QString ScreenIdentifier::connector() const
+{
+    return m_connector;
+}
+
+ScreenIdentifier::Match ScreenIdentifier::match(QScreen *screen) const
+{
+    Match m = Match::None;
+    if (m_edid == edidFromScreen(screen)) {
+        m = static_cast<Match>(int(m) | int(Match::Edid));
+    }
+    if (m_connector == screen->name()) {
+        m = static_cast<Match>(int(m) | int(Match::Connector));
+    }
+    return m;
+}
+
+bool ScreenIdentifier::match(QScreen *screen, Match matchMode)
+{
+    return match(screen) == matchMode;
+}
+
 ScreenPool::ScreenPool(const KSharedConfig::Ptr &config, QObject *parent)
     : QObject(parent)
     , m_configGroup(KConfigGroup(config, QStringLiteral("ScreenConnectors")))
@@ -80,7 +159,7 @@ void ScreenPool::load()
         if (!m_allSortedScreens.contains(screen)) {
             handleScreenAdded(screen);
         } else if (!m_idForConnector.contains(screen->name())) {
-            insertScreenMapping(firstAvailableId(), screen->name());
+            insertScreenMapping(firstAvailableId(), screen);
         }
     }
     CHECK_SCREEN_INVARIANTS
@@ -126,8 +205,9 @@ void ScreenPool::save()
     m_configSaveTimer.start(30000);
 }
 
-void ScreenPool::insertScreenMapping(int id, const QString &connector)
+void ScreenPool::insertScreenMapping(int id, QScreen *screen)
 {
+    const auto connector = screen->name();
     Q_ASSERT(!m_connectorForId.contains(id) || m_connectorForId.value(id) == connector);
     Q_ASSERT(!m_idForConnector.contains(connector) || m_idForConnector.value(connector) == id);
 
@@ -137,12 +217,33 @@ void ScreenPool::insertScreenMapping(int id, const QString &connector)
 
     m_connectorForId[id] = connector;
     m_idForConnector[connector] = id;
+
+    const auto identifier = ScreenIdentifier::fromScreen(screen);
+    m_identifierForNumber[id] = identifier;
+    m_numberForIdentifier[identifier] = id;
+
     save();
 }
 
 int ScreenPool::id(const QString &connector) const
 {
     return m_idForConnector.value(connector, -1);
+}
+
+ScreenIdentifier ScreenPool::identifier(int number) const
+{
+    Q_ASSERT(m_identifierForNumber.contains(number));
+
+    return m_identifierForNumber.value(number);
+}
+
+int ScreenPool::number(const ScreenIdentifier &identifier) const
+{
+    auto it = m_numberForIdentifier.constFind(identifier);
+    if (it != m_numberForIdentifier.constEnd()) {
+        return *it;
+    }
+    return m_numberForIdentifier.value(identifier, -1);
 }
 
 QString ScreenPool::connector(int id) const
@@ -201,6 +302,17 @@ QScreen *ScreenPool::screenForId(int id) const
         }
     }
     return nullptr;
+}
+
+int ScreenPool::idForScreen(QScreen *screen) const
+{
+    if (screen == primaryScreen()) {
+        return 0;
+    }
+
+    // TODO
+
+    return -1;
 }
 
 QScreen *ScreenPool::screenForConnector(const QString &connector)
@@ -301,7 +413,7 @@ void ScreenPool::reconsiderOutputs()
                     m_fakeScreens.remove(screen);
                     m_availableScreens.append(screen);
                     if (!m_idForConnector.contains(screen->name())) {
-                        insertScreenMapping(firstAvailableId(), screen->name());
+                        insertScreenMapping(firstAvailableId(), screen);
                     }
                     Q_EMIT screenAdded(screen);
                     QScreen *newPrimaryScreen = primaryScreen();
@@ -318,7 +430,7 @@ void ScreenPool::reconsiderOutputs()
             m_fakeScreens.remove(screen);
             m_redundantScreens.insert(screen, toScreen);
             if (!m_idForConnector.contains(screen->name())) {
-                insertScreenMapping(firstAvailableId(), screen->name());
+                insertScreenMapping(firstAvailableId(), screen);
             }
             if (m_availableScreens.contains(screen)) {
                 QScreen *newPrimaryScreen = primaryScreen();
@@ -350,7 +462,7 @@ void ScreenPool::reconsiderOutputs()
             m_fakeScreens.remove(screen);
             m_availableScreens.append(screen);
             if (!m_idForConnector.contains(screen->name())) {
-                insertScreenMapping(firstAvailableId(), screen->name());
+                insertScreenMapping(firstAvailableId(), screen);
             }
             Q_EMIT screenAdded(screen);
             QScreen *newPrimaryScreen = primaryScreen();
@@ -385,6 +497,7 @@ void ScreenPool::insertSortedScreen(QScreen *screen)
 void ScreenPool::handleScreenAdded(QScreen *screen)
 {
     qCDebug(SCREENPOOL) << "handleScreenAdded" << screen << screen->geometry();
+
     connect(
         screen,
         &QScreen::geometryChanged,
@@ -400,8 +513,10 @@ void ScreenPool::handleScreenAdded(QScreen *screen)
     if (isOutputFake(screen)) {
         m_fakeScreens.insert(screen);
         return;
-    } else if (!m_idForConnector.contains(screen->name())) {
-        insertScreenMapping(firstAvailableId(), screen->name());
+    } else {
+        if (!m_idForConnector.contains(screen->name())) {
+            insertScreenMapping(firstAvailableId(), screen);
+        }
     }
 
     if (QScreen *toScreen = outputRedundantTo(screen)) {
@@ -498,6 +613,11 @@ void ScreenPool::handlePrimaryOutputNameChanged(const QString &oldOutputName, co
         setPrimaryConnector(newOutputName);
         Q_EMIT primaryScreenChanged(oldPrimary, newPrimary);
     }
+}
+
+QString ScreenPool::identifierForScreen(QScreen *screen)
+{
+    return screen->manufacturer() + QChar('/') + screen->model() + QChar('/') + screen->serialNumber() + QChar(':') + screen->name();
 }
 
 void ScreenPool::screenInvariants()
