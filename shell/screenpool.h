@@ -33,7 +33,7 @@ public:
     QString edid() const;
     QString connector() const;
     Match match(QScreen *screen) const;
-    bool match(QScreen *screen, Match matchMode);
+    bool match(QScreen *screen, Match matchMode) const;
     QString toString() const;
 
 private:
@@ -99,6 +99,7 @@ private:
     void screenInvariants();
 
     KConfigGroup m_configGroup;
+    KConfigGroup m_configGroup2; // TODO: remove
     QString m_primaryConnector;
     // order is important
     QMap<int, QString> m_connectorForId;
