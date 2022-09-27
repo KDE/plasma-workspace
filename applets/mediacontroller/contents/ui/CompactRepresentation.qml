@@ -87,7 +87,7 @@ MouseArea {
                 Layout.alignment: Qt.AlignVCenter
                 Layout.preferredWidth: {
                     if (!inPanel) {
-                        return Math.min(compactRepresentation.width, compactRepresentation.height) / 2;
+                        return Math.min(compactRepresentation.width, compactRepresentation.height);
                     }
                     return isVertical ? compactRepresentation.width : compactRepresentation.height;
                 }
