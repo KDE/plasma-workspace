@@ -57,13 +57,15 @@ public:
     QString primaryConnector() const;
 
     int id(const QString &connector) const; // TODO: remove
+    int numberForConnector(const QString &connector) const;
+
     QString connector(int id) const; // TODO: remove
 
     int number(const ScreenIdentifier &identifier) const;
     ScreenIdentifier identifier(int number) const;
 
     // all ids that are known, included screens not enabled at the moment
-    QList<int> knownIds() const;
+    QList<int> knownIds() const; // TODO knownNumbers
 
     // QScreen API
     QList<QScreen *> screens() const;
@@ -99,12 +101,9 @@ private:
     void screenInvariants();
 
     KConfigGroup m_configGroup;
-    KConfigGroup m_configGroup2; // TODO: remove
     QString m_primaryConnector;
-    // order is important
-    QMap<int, QString> m_connectorForId;
-    QHash<QString, int> m_idForConnector;
 
+    // order is important
     QMap<int, ScreenIdentifier> m_identifierForNumber;
     QHash<ScreenIdentifier, int> m_numberForIdentifier;
 

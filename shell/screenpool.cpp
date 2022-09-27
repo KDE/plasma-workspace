@@ -56,7 +56,7 @@ ScreenIdentifier ScreenIdentifier::fromString(const QString &string)
     } else {
         const auto connector = arr.last();
         arr.pop_back();
-        return ScreenIdentifier(arr.join(QChar(':')));
+        return ScreenIdentifier(arr.join(QChar(':')), connector);
     }
 }
 
@@ -104,8 +104,7 @@ bool ScreenIdentifier::match(QScreen *screen, Match matchMode) const
 
 ScreenPool::ScreenPool(const KSharedConfig::Ptr &config, QObject *parent)
     : QObject(parent)
-    , m_configGroup(KConfigGroup(config, QStringLiteral("ScreenConnectors")))
-    , m_configGroup2(KConfigGroup(config, QStringLiteral("ScreenIdentifiers")))
+    , m_configGroup(KConfigGroup(config, QStringLiteral("ScreenIdentifiers")))
 {
     connect(qGuiApp, &QGuiApplication::screenAdded, this, &ScreenPool::handleScreenAdded);
     connect(qGuiApp, &QGuiApplication::screenRemoved, this, &ScreenPool::handleScreenRemoved);
@@ -122,16 +121,15 @@ ScreenPool::ScreenPool(const KSharedConfig::Ptr &config, QObject *parent)
     m_configSaveTimer.setSingleShot(true);
     connect(&m_configSaveTimer, &QTimer::timeout, this, [this]() {
         m_configGroup.sync();
-        m_configGroup2.sync();
     });
+
+    // TODO: migrate from ScreenIdentifiers group
 }
 
 void ScreenPool::load()
 {
     QScreen *primary = m_primaryWatcher->primaryScreen();
     m_primaryConnector = QString();
-    m_connectorForId.clear();
-    m_idForConnector.clear();
     m_identifierForNumber.clear();
     m_numberForIdentifier.clear();
 
@@ -141,36 +139,37 @@ void ScreenPool::load()
             auto identifier = ScreenIdentifier::fromScreen(primary);
             m_identifierForNumber[0] = identifier;
             m_numberForIdentifier[identifier] = 0;
-            // TODO: remove
-            m_connectorForId[0] = m_primaryConnector;
-            m_idForConnector[m_primaryConnector] = 0;
         }
     }
 
-    // restore the known ids to connector mappings TODO: remove
-    auto keys = m_configGroup.keyList();
-    for (const QString &key : keys) {
-        QString connector = m_configGroup.readEntry(key, QString());
-        const int currentId = key.toInt();
-
-        if (!key.isEmpty() && !connector.isEmpty() && !m_connectorForId.contains(currentId) && !m_idForConnector.contains(connector)) {
-            m_connectorForId[currentId] = connector;
-            m_idForConnector[connector] = currentId;
-        } else if (m_idForConnector.value(connector) != currentId) {
-            m_configGroup.deleteEntry(key);
+    // Migrating the old configuration TODO Plasma6: remove?
+    {
+        const auto oldGroup = KConfigGroup(config, QStringLiteral("ScreenConnectors"));
+        const auto keys = oldGroup.keyList();
+        for (const QString &key : keys) {
+            const int currentNumber = key.toInt();
+            const QString connector = m_configGroup.readEntry(key, QString());
+            if (connector.isEmpty()) {
+                continue;
+            }
+            const auto identifier = ScreenIdentifier(QString(), connector);
+            m_identifierForNumber[currentNumber] = identifier;
+            m_numberForIdentifier[identifier] = currentNumber;
         }
+        // oldGroup.deleteGroup(); TODO: enable
     }
-    // TODO: const auto
-    keys = m_configGroup2.keyList();
+
+    // restore the known ids to identifier mappings
+    const auto keys = m_configGroup.keyList();
     for (const QString &key : keys) {
-        auto identifier = ScreenIdentifier::fromString(m_configGroup2.readEntry(key, QString()));
+        auto identifier = ScreenIdentifier::fromString(m_configGroup.readEntry(key, QString()));
         const int currentNumber = key.toInt();
 
         if (!key.isEmpty() && identifier.isValid() && !m_identifierForNumber.contains(currentNumber) && !m_numberForIdentifier.contains(identifier)) {
             m_identifierForNumber[currentNumber] = identifier;
             m_numberForIdentifier[identifier] = currentNumber;
         } else if (m_numberForIdentifier.value(identifier) != currentNumber) {
-            m_configGroup2.deleteEntry(key);
+            m_configGroup.deleteEntry(key);
         }
     }
 
@@ -179,7 +178,7 @@ void ScreenPool::load()
         // On some devices QGuiApp::screenAdded is always emitted for some screens at startup so at this point that screen would already be managed
         if (!m_allSortedScreens.contains(screen)) {
             handleScreenAdded(screen);
-        } else if (!m_idForConnector.contains(screen->name()) || !m_numberForIdentifier.contains(ScreenIdentifier::fromScreen(screen))) {
+        } else if (!m_numberForIdentifier.contains(ScreenIdentifier::fromScreen(screen))) {
             insertScreenMapping(firstAvailableId(), screen);
         }
     }
@@ -202,16 +201,27 @@ void ScreenPool::setPrimaryConnector(const QString &primary)
         return;
     }
 
-    int oldIdForPrimary = m_idForConnector.value(primary, -1);
-    if (oldIdForPrimary == -1) {
+    int oldIdForPrimary = -1;
+    auto searchRes = std::find_if(m_numberForIdentifier.constKeyValueBegin(), m_numberForIdentifier.constKeyValueEnd(), [primary](auto keyVal) {
+        return keyVal.first.connector() == primary;
+    });
+    if (searchRes != m_numberForIdentifier.constKeyValueEnd()) {
+        oldIdForPrimary = (*searchRes).second;
+    } else {
         // move old primary to new free id
         oldIdForPrimary = firstAvailableId();
     }
 
-    m_idForConnector[primary] = 0;
-    m_connectorForId[0] = primary;
-    m_idForConnector[m_primaryConnector] = oldIdForPrimary;
-    m_connectorForId[oldIdForPrimary] = m_primaryConnector;
+    m_numberForIdentifier[(*searchRes).first] = 0;
+    m_identifierForNumber[0] = (*searchRes).first;
+
+    searchRes = std::find_if(m_numberForIdentifier.constKeyValueBegin(), m_numberForIdentifier.constKeyValueEnd(), [this](auto keyVal) {
+        return keyVal.first.connector() == m_primaryConnector;
+    });
+    if (searchRes != m_numberForIdentifier.constKeyValueEnd()) {
+        m_numberForIdentifier[(*searchRes).first] = oldIdForPrimary;
+        m_identifierForNumber[oldIdForPrimary] = (*searchRes).first;
+    }
 
     m_primaryConnector = primary;
     save();
@@ -220,45 +230,48 @@ void ScreenPool::setPrimaryConnector(const QString &primary)
 void ScreenPool::save()
 {
     qWarning() << "SAVING";
-    for (auto i = m_connectorForId.constBegin(); i != m_connectorForId.constEnd(); ++i) {
-        m_configGroup.writeEntry(QString::number(i.key()), i.value());
-    }
     for (auto i = m_identifierForNumber.constBegin(); i != m_identifierForNumber.constEnd(); ++i) {
-        m_configGroup2.writeEntry(QString::number(i.key()), i.value().toString());
+        m_configGroup.writeEntry(QString::number(i.key()), i.value().toString());
     }
     // write to disk every 30 seconds at most
     m_configSaveTimer.start(30000);
 }
 
-void ScreenPool::insertScreenMapping(int id, QScreen *screen)
+void ScreenPool::insertScreenMapping(int number, QScreen *screen)
 {
     const auto connector = screen->name();
-    Q_ASSERT(!m_connectorForId.contains(id) || m_connectorForId.value(id) == connector);
-    Q_ASSERT(!m_idForConnector.contains(connector) || m_idForConnector.value(connector) == id);
+    const auto identifier = ScreenIdentifier::fromScreen(screen);
 
-    if (id == 0) {
+    Q_ASSERT(!m_identifierForNumber.contains(number) || m_identifierForNumber.value(number) == connector);
+    Q_ASSERT(!m_numberForIdentifier.contains(connector) || m_numberForIdentifier.value(connector) == number);
+
+    if (number == 0) {
         m_primaryConnector = connector;
     }
 
-    m_connectorForId[id] = connector;
-    m_idForConnector[connector] = id;
-
-    const auto identifier = ScreenIdentifier::fromScreen(screen);
-    m_identifierForNumber[id] = identifier;
-    m_numberForIdentifier[identifier] = id;
+    m_identifierForNumber[number] = identifier;
+    m_numberForIdentifier[identifier] = number;
 
     save();
 }
 
 int ScreenPool::id(const QString &connector) const
 {
+    return numberForConnector(connector);
+}
+
+int ScreenPool::numberForConnector(const QString &connector) const
+{
     for (auto it = m_numberForIdentifier.constBegin(); it != m_numberForIdentifier.constEnd(); ++it) {
+        qWarning() << "AAAA" << it.key().connector() << connector << (it.key().connector() == connector);
         if (it.key().connector() == connector) {
+            qWarning() << "BBBBB" << it.value();
             return it.value();
         }
     }
     qWarning() << "Failed to find" << connector << "in m_numberForIdentifier";
-    return m_idForConnector.value(connector, -1);
+    // Q_ASSERT(false);
+    return -1;
 }
 
 QString ScreenPool::connector(int id) const
@@ -472,7 +485,7 @@ void ScreenPool::reconsiderOutputs()
                 } else {
                     m_fakeScreens.remove(screen);
                     m_availableScreens.append(screen);
-                    if (!m_idForConnector.contains(screen->name())) {
+                    if (numberForConnector(screen->name()) < 0) {
                         insertScreenMapping(firstAvailableId(), screen);
                     }
                     Q_EMIT screenAdded(screen);
@@ -489,7 +502,7 @@ void ScreenPool::reconsiderOutputs()
 
             m_fakeScreens.remove(screen);
             m_redundantScreens.insert(screen, toScreen);
-            if (!m_idForConnector.contains(screen->name())) {
+            if (numberForConnector(screen->name()) < 0) {
                 insertScreenMapping(firstAvailableId(), screen);
             }
             if (m_availableScreens.contains(screen)) {
@@ -521,7 +534,7 @@ void ScreenPool::reconsiderOutputs()
             Q_ASSERT(!m_availableScreens.contains(screen));
             m_fakeScreens.remove(screen);
             m_availableScreens.append(screen);
-            if (!m_idForConnector.contains(screen->name())) {
+            if (numberForConnector(screen->name()) < 0) {
                 insertScreenMapping(firstAvailableId(), screen);
             }
             Q_EMIT screenAdded(screen);
@@ -573,10 +586,8 @@ void ScreenPool::handleScreenAdded(QScreen *screen)
     if (isOutputFake(screen)) {
         m_fakeScreens.insert(screen);
         return;
-    } else {
-        if (!m_idForConnector.contains(screen->name())) {
-            insertScreenMapping(firstAvailableId(), screen);
-        }
+    } else if (numberForConnector(screen->name()) < 0) {
+        insertScreenMapping(firstAvailableId(), screen);
     }
 
     if (QScreen *toScreen = outputRedundantTo(screen)) {
@@ -714,7 +725,7 @@ void ScreenPool::screenInvariants()
                 Q_ASSERT(false);
             }
             // Is every screen mapped to an id?
-            Q_ASSERT(m_idForConnector.contains(screen->name()));
+            Q_ASSERT(numberForConnector(screen->name()) >= 0);
             // Are the two maps symmetrical?
             Q_ASSERT(connector(id(screen->name())) == screen->name());
         }
@@ -724,12 +735,18 @@ void ScreenPool::screenInvariants()
     }
 }
 
+QDebug operator<<(QDebug debug, const ScreenIdentifier &identifier)
+{
+    debug << "Edid:" << identifier.edid() << "Connector:" << identifier.connector();
+    return debug;
+}
+
 QDebug operator<<(QDebug debug, const ScreenPool *pool)
 {
     debug << pool->metaObject()->className() << '(' << static_cast<const void *>(pool) << ") Internal state:\n";
     debug << "Connector Mapping:\n";
-    auto it = pool->m_idForConnector.constBegin();
-    while (it != pool->m_idForConnector.constEnd()) {
+    auto it = pool->m_numberForIdentifier.constBegin();
+    while (it != pool->m_numberForIdentifier.constEnd()) {
         debug << it.key() << "\t-->\t" << it.value() << '\n';
         it++;
     }
