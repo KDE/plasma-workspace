@@ -135,6 +135,7 @@ MouseArea {
                     visible: root.artist
 
                     elide: Text.ElideRight
+                    font.pointSize: PlasmaCore.Theme.smallestFont.pointSize
                     maximumLineCount: 1
                     text: root.artist
                     textFormat: Text.PlainText
