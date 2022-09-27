@@ -73,7 +73,7 @@ MouseArea {
     Loader {
         id: playerRow
 
-        width: isVertical ? parent.width : item.implicitWidth
+        width: isVertical ? parent.width : inPanel ? item.implicitWidth : Math.min(item.implicitWidth, compactRepresentation.parent.width)
         height: isVertical ? parent.width : parent.height
         visible: active
 
@@ -116,7 +116,8 @@ MouseArea {
                     id: songTitle
 
                     Layout.fillHeight: true
-                    Layout.maximumWidth: PlasmaCore.Units.gridUnit * 10
+                    Layout.fillWidth: true
+                    Layout.maximumWidth: compactRepresentation.inPanel ? PlasmaCore.Units.gridUnit * 10 : -1
 
                     elide: Text.ElideRight
                     fontSizeMode: Text.VerticalFit
@@ -131,6 +132,7 @@ MouseArea {
                     id: songArtist
 
                     Layout.fillHeight: true
+                    Layout.fillWidth: true
                     Layout.maximumWidth: songTitle.Layout.maximumWidth
                     visible: root.artist
 
