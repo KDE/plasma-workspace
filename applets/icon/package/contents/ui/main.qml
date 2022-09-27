@@ -1,6 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2013 Bhushan Shah <bhush94@gmail.com>
     SPDX-FileCopyrightText: 2016 Kai Uwe Broulik <kde@privat.broulik.de>
+    SPDX-FileCopyrightText: 2022 ivan tkachenko <me@ratijas.tk>
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
@@ -128,6 +129,12 @@ MouseArea {
         active: root.containsMouse || root.containsAcceptableDrag
         usesPlasmaTheme: false
         opacity: Plasmoid.busy ? 0.6 : 1
+        Behavior on opacity {
+            OpacityAnimator {
+                duration: PlasmaCore.Units.shortDuration
+                easing.type: Easing.OutCubic
+            }
+        }
     }
 
     DropShadow {
