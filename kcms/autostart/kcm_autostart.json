@@ -1,5 +1,6 @@
 {
     "KPlugin": {
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=systemsettings&component=kcm_autostart",
         "Description": "Automatically Started Applications",
         "Description[ar]": "التطبيقات التي تبدأ آليا",
         "Description[az]": "Avtomatik işə düşən tətbiqlər",

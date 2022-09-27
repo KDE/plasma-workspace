@@ -44,6 +44,7 @@
                 "Name[zh_CN]": "Kai Uwe Broulik"
             }
         ],
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=systemsettings&component=kcm_colors",
         "Description": "Choose color scheme",
         "Description[ar]": "اختر مخطط الألوان",
         "Description[az]": "Rəng sxemini seçmək",

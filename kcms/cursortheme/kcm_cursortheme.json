@@ -1,5 +1,6 @@
 {
     "KPlugin": {
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=systemsettings&component=kcm_cursortheme",
         "Description": "Choose mouse cursor theme",
         "Description[ar]": "اختر سِمة المؤشر",
         "Description[az]": "Siçan kursoru mövzusunu seçmək",

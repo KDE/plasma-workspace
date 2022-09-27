@@ -1,5 +1,6 @@
 {
     "KPlugin": {
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=systemsettings&component=kcm_lookandfeel",
         "Description": "Choose global look and feel",
         "Description[ar]": "اختر مظهر وإحساس شامل",
         "Description[az]": "Qlobal Plasma Görünüşünü seçin",

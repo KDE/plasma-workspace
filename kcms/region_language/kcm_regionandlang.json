@@ -1,5 +1,6 @@
 {
     "KPlugin": {
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=systemsettings&component=kcm_regionandlang",
         "Description": "Language Setting, Numeric, Currency and Time Formats",
         "Description[ar]": "إعدادات اللغة وتنسيقات الأرقام والعملات والوقت",
         "Description[az]": "Dil ayarları, say, valyuta və tarix formatları",

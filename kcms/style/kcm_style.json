@@ -1,5 +1,6 @@
 {
     "KPlugin": {
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=systemsettings&component=kcm_style",
         "Description": "Configure application style and behavior",
         "Description[ar]": "اضبط سلوك ونمط التطبيق",
         "Description[az]": "Tətbiq üslubu və davranışlarını tənzimləmək",

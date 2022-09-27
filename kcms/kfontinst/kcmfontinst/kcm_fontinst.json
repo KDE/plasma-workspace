@@ -1,5 +1,6 @@
 {
     "KPlugin": {
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=systemsettings&component=kcm_fontinst",
         "Description": "Install, manage and preview fonts",
         "Description[ar]": "ثبت وأدر واستعرض الخطوط",
         "Description[az]": "Şriftləri quraşdırmaq, idarə etmək və onlara baxış",

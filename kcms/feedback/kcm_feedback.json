@@ -1,5 +1,6 @@
 {
     "KPlugin": {
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=systemsettings&component=kcm_feedback",
         "Description": "Configure user feedback settings",
         "Description[ar]": "اضبط إعدادات مشاركة بياناتك",
         "Description[az]": "İstifadəçi rəyi ayarlarını tənzimləmək",

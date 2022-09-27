@@ -1,5 +1,6 @@
 {
     "KPlugin": {
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=systemsettings&component=kcm_users",
         "Description": "Manage user accounts",
         "Description[ar]": "أدِر حسابات المستخدمين",
         "Description[az]": "İstifadəçi hesablarını idarə edin",

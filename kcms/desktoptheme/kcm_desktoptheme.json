@@ -1,5 +1,6 @@
 {
     "KPlugin": {
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=systemsettings&component=kcm_desktoptheme",
         "Description": "Choose Plasma style",
         "Description[ar]": "اختر نمط بلازما",
         "Description[az]": "Plasma üslubunu seçin",
