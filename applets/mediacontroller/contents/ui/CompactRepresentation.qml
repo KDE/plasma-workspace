@@ -137,6 +137,7 @@ MouseArea {
                     elide: Text.ElideRight
                     font.pointSize: PlasmaCore.Theme.smallestFont.pointSize
                     maximumLineCount: 1
+                    opacity: 0.6
                     text: root.artist
                     textFormat: Text.PlainText
                     wrapMode: Text.Wrap
