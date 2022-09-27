@@ -108,7 +108,6 @@ MouseArea {
 
             ColumnLayout {
                 Layout.alignment: Qt.AlignVCenter
-                Layout.fillHeight: !inPanel || !isVertical
                 visible: !isVertical
 
                 spacing: 0
@@ -117,12 +116,10 @@ MouseArea {
                 PC3.Label {
                     id: songTitle
 
-                    Layout.fillHeight: true
                     Layout.fillWidth: true
                     Layout.maximumWidth: compactRepresentation.inPanel ? PlasmaCore.Units.gridUnit * 10 : -1
 
                     elide: Text.ElideRight
-                    fontSizeMode: Text.VerticalFit
                     maximumLineCount: 1
                     text: root.track
                     textFormat: Text.PlainText
@@ -133,13 +130,11 @@ MouseArea {
                 PC3.Label {
                     id: songArtist
 
-                    Layout.fillHeight: true
                     Layout.fillWidth: true
                     Layout.maximumWidth: songTitle.Layout.maximumWidth
                     visible: root.artist
 
                     elide: Text.ElideRight
-                    fontSizeMode: Text.VerticalFit
                     maximumLineCount: 1
                     text: root.artist
                     textFormat: Text.PlainText
