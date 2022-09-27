@@ -97,8 +97,10 @@ void CoreCompositor::add(Global *global)
 
 void CoreCompositor::remove(Global *global)
 {
+    qWarning() << "DELETING" << global;
     warnIfNotLockedByThread(Q_FUNC_INFO);
     m_globals.removeAll(global);
+    Q_EMIT global->destroyed();
     delete global;
 }
 

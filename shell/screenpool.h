@@ -32,6 +32,7 @@ public:
     bool isValid() const;
     QString edid() const;
     QString connector() const;
+    Match match(const ScreenIdentifier &other) const;
     Match match(QScreen *screen) const;
     bool match(QScreen *screen, Match matchMode) const;
     QString toString() const;
@@ -84,7 +85,8 @@ Q_SIGNALS:
 private:
     void save();
     void setPrimaryConnector(const QString &primary);
-    void insertScreenMapping(int id, QScreen *screen);
+    void ensureScreenMapping(int id, QScreen *screen);
+    void unmapConnector(const QString &connector);
     int firstAvailableId() const;
 
     QScreen *outputRedundantTo(QScreen *screen) const;

@@ -40,6 +40,8 @@ private Q_SLOTS:
     void testLastScreenRemoval();
     void testFakeToRealScreen();
 
+    void testUnstableConnectorUniqueEdid();
+
 private:
     ScreenPool *m_screenPool;
 };
@@ -394,9 +396,9 @@ void ScreenPoolTest::testFakeToRealScreen()
         data.mode.resolution = {1920, 1080};
         data.position = {0, 0};
         data.physicalSize = data.mode.physicalSizeForDpi(96);
+        data.connector = QStringLiteral("WL-1");
         auto *out = add<Output>(data);
         auto *xdgOut = xdgOutput(out);
-        xdgOut->m_name = QStringLiteral("WL-1");
     });
 
     addedSpy.wait();
@@ -409,6 +411,43 @@ void ScreenPoolTest::testFakeToRealScreen()
     QCOMPARE(newScreen->geometry(), QRect(0, 0, 1920, 1080));
 
     QCOMPARE(m_screenPool->id(newScreen->name()), 0);
+}
+
+void ScreenPoolTest::testUnstableConnectorUniqueEdid()
+{
+    // The remaining one, WL-1 is a "fixed screen, like an internal laptop screen
+    QCOMPARE(QGuiApplication::screens().size(), 1);
+
+    // Those new screens simulate screens added by an usb-c dock which changes connector ids between reboots
+    QSignalSpy addedSpy(m_screenPool, SIGNAL(screenAdded(QScreen *)));
+
+    // Add a new output
+    exec([=] {
+        OutputData data;
+        data.mode.resolution = {1920, 1080};
+        data.position = {1920, 0};
+        data.physicalSize = data.mode.physicalSizeForDpi(96);
+        data.connector = QStringLiteral("UnstableConn-1");
+        data.make = QStringLiteral("Maker1");
+        data.model = QStringLiteral("Model1");
+        data.serialNumber = QStringLiteral("001");
+        // NOTE: assumes that when a screen is added it will already have the final geometry
+        auto *out = add<Output>(data);
+        auto *xdgOut = xdgOutput(out);
+        // xdgOut->m_name = QStringLiteral("UnstableConn-1");
+    });
+
+    addedSpy.wait();
+    QCOMPARE(QGuiApplication::screens().size(), 2);
+    QCOMPARE(m_screenPool->screens().size(), 2);
+    QCOMPARE(addedSpy.size(), 1);
+
+    QScreen *newScreen = addedSpy.takeFirst().at(0).value<QScreen *>();
+    QCOMPARE(newScreen->name(), QStringLiteral("UnstableConn-1"));
+    QCOMPARE(newScreen->geometry(), QRect(1920, 0, 1920, 1080));
+    // Check mapping
+    QCOMPARE(m_screenPool->id(newScreen->name()), 3);
+    QCOMPARE(m_screenPool->connector(3), QStringLiteral("UnstableConn-1"));
 }
 
 QCOMPOSITOR_TEST_MAIN(ScreenPoolTest)

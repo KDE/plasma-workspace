@@ -73,6 +73,8 @@ struct OutputData {
     QSize physicalSize = QSize(0, 0); // means unknown physical size
     QString make = "Make";
     QString model = "Model";
+    QString serialNumber = "1";
+    QString connector; // passing empty string will autogenerate
     Subpixel subpixel = Subpixel::subpixel_unknown;
     Transform transform = Transform::transform_normal;
 
