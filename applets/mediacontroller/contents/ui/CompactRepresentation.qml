@@ -102,6 +102,8 @@ MouseArea {
                         albumArt.loadAlbumArt();
                     }
                 }
+
+                Component.onCompleted: albumArt.loadAlbumArt()
             }
 
             ColumnLayout {
