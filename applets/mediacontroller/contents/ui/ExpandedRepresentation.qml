@@ -22,8 +22,8 @@ import QtGraphicalEffects 1.0
 PlasmaExtras.Representation {
     id: expandedRepresentation
 
-    Layout.minimumWidth: PlasmaCore.Units.gridUnit * 14
-    Layout.minimumHeight: PlasmaCore.Units.gridUnit * 14
+    Layout.minimumWidth: Plasmoid.switchWidth
+    Layout.minimumHeight: Plasmoid.switchHeight
     Layout.preferredWidth: PlasmaCore.Units.gridUnit * 20
     Layout.preferredHeight: PlasmaCore.Units.gridUnit * 20
     Layout.maximumWidth: PlasmaCore.Units.gridUnit * 40

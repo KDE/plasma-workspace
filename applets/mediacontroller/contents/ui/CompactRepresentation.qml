@@ -17,8 +17,56 @@ import org.kde.plasma.plasmoid 2.0
 MouseArea {
     id: compactRepresentation
 
-    Layout.preferredWidth: !inTray && inPanel && !isVertical ? (iconLoader.active ? parent.height : playerRow.width) : -1
-    Layout.maximumHeight: !inTray && isVertical ? parent.width : -1
+    Layout.preferredWidth: {
+        switch (compactRepresentation.layoutForm) {
+        case CompactRepresentation.LayoutType.VerticalPanel:
+        case CompactRepresentation.LayoutType.VerticalDesktop:
+            return compactRepresentation.parent.width;
+        case CompactRepresentation.LayoutType.HorizontalPanel:
+        case CompactRepresentation.LayoutType.HorizontalDesktop:
+            return iconLoader.active ? iconLoader.item.implicitWidth : playerRow.width;
+        case CompactRepresentation.LayoutType.IconOnly:
+        default:
+            return -1;
+        }
+    }
+    Layout.preferredHeight: {
+        switch (compactRepresentation.layoutForm) {
+        case CompactRepresentation.LayoutType.VerticalPanel:
+            return iconLoader.active ? compactRepresentation.parent.width : playerRow.height;
+        default:
+            return -1;
+        }
+    }
+    Layout.maximumHeight: Layout.preferredHeight
+
+    enum LayoutType {
+        Tray,
+        HorizontalPanel,
+        VerticalPanel,
+        HorizontalDesktop,
+        VerticalDesktop,
+        IconOnly
+    }
+
+    property int layoutForm: CompactRepresentation.LayoutType.IconOnly
+
+    Binding on layoutForm {
+        when: playerRow.active
+        delayed: true
+        value: {
+            if (compactRepresentation.inTray) {
+                return CompactRepresentation.LayoutType.Tray;
+            } else if (compactRepresentation.inPanel) {
+                return compactRepresentation.isVertical ? CompactRepresentation.LayoutType.VerticalPanel : CompactRepresentation.LayoutType.HorizontalPanel;
+            } else if (compactRepresentation.parent.width > compactRepresentation.parent.height + playerRow.item.columnSpacing) {
+                return CompactRepresentation.LayoutType.HorizontalDesktop;
+            } else if (compactRepresentation.parent.height - compactRepresentation.parent.width >= playerRow.item.labelHeight + playerRow.item.rowSpacing) {
+                return CompactRepresentation.LayoutType.VerticalDesktop;
+            }
+            return CompactRepresentation.LayoutType.IconOnly;
+        }
+    }
 
     readonly property bool isVertical: Plasmoid.formFactor === PlasmaCore.Types.Vertical
     readonly property bool inPanel: [PlasmaCore.Types.TopEdge, PlasmaCore.Types.RightEdge, PlasmaCore.Types.BottomEdge, PlasmaCore.Types.LeftEdge].includes(Plasmoid.location)
@@ -74,23 +122,76 @@ MouseArea {
     Loader {
         id: playerRow
 
-        width: isVertical ? parent.width : inPanel ? item.implicitWidth : Math.min(item.implicitWidth, compactRepresentation.parent.width)
-        height: isVertical ? parent.width : parent.height
+        width: {
+            if (!active) {
+                return 0;
+            }
+            switch (compactRepresentation.layoutForm) {
+            case CompactRepresentation.LayoutType.VerticalPanel:
+            case CompactRepresentation.LayoutType.VerticalDesktop:
+                return compactRepresentation.parent.width;
+            case CompactRepresentation.LayoutType.HorizontalPanel:
+                return item.implicitWidth;
+            case CompactRepresentation.LayoutType.HorizontalDesktop:
+                return Math.min(item.implicitWidth, compactRepresentation.parent.width);
+            case CompactRepresentation.LayoutType.IconOnly:
+            default:
+                return Math.min(compactRepresentation.parent.width, compactRepresentation.parent.height);
+            }
+        }
+
+        height: {
+            if (!active) {
+                return 0;
+            }
+            switch (compactRepresentation.layoutForm) {
+            case CompactRepresentation.LayoutType.VerticalPanel:
+                return item.implicitHeight;
+            case CompactRepresentation.LayoutType.VerticalDesktop:
+                return compactRepresentation.parent.height;
+            case CompactRepresentation.LayoutType.HorizontalPanel:
+            case CompactRepresentation.LayoutType.HorizontalDesktop:
+                return compactRepresentation.parent.height;
+            case CompactRepresentation.LayoutType.IconOnly:
+            default:
+                return Math.min(compactRepresentation.parent.width, compactRepresentation.parent.height);
+            }
+        }
+
         visible: active
 
         active: !iconLoader.active
-        sourceComponent: RowLayout {
-            spacing: PlasmaCore.Units.smallSpacing
+        sourceComponent: GridLayout {
+            id: grid
+            readonly property real labelHeight: songTitle.contentHeight
+
+            rowSpacing: PlasmaCore.Units.smallSpacing
+            columnSpacing: rowSpacing
+            flow: {
+                switch (compactRepresentation.layoutForm) {
+                case CompactRepresentation.LayoutType.VerticalPanel:
+                case CompactRepresentation.LayoutType.VerticalDesktop:
+                    return GridLayout.TopToBottom;
+                default:
+                    return GridLayout.LeftToRight;
+                }
+            }
+
+            Item {
+                id: spacerItem
+                visible: compactRepresentation.layoutForm === CompactRepresentation.LayoutType.VerticalDesktop
+                Layout.fillHeight: true
+            }
 
             AlbumArtStackView {
                 id: albumArt
 
                 Layout.alignment: Qt.AlignVCenter
                 Layout.preferredWidth: {
-                    if (!inPanel) {
-                        return Math.min(compactRepresentation.width, compactRepresentation.height);
+                    if (!compactRepresentation.inPanel) {
+                        return Math.min(compactRepresentation.parent.width, compactRepresentation.parent.height);
                     }
-                    return isVertical ? compactRepresentation.width : compactRepresentation.height;
+                    return compactRepresentation.isVertical ? compactRepresentation.parent.width : compactRepresentation.parent.height;
                 }
                 Layout.preferredHeight: Layout.preferredWidth
 
@@ -109,7 +210,10 @@ MouseArea {
 
             ColumnLayout {
                 Layout.alignment: Qt.AlignVCenter
-                visible: !isVertical
+                visible: (compactRepresentation.layoutForm !== CompactRepresentation.LayoutType.VerticalPanel
+                    && compactRepresentation.layoutForm !== CompactRepresentation.LayoutType.IconOnly)
+                    || (compactRepresentation.layoutForm === CompactRepresentation.LayoutType.VerticalPanel
+                    && compactRepresentation.parent.width >= PlasmaCore.Units.gridUnit * 5)
 
                 spacing: 0
 
@@ -121,6 +225,7 @@ MouseArea {
                     Layout.maximumWidth: compactRepresentation.inPanel ? PlasmaCore.Units.gridUnit * 10 : -1
 
                     elide: Text.ElideRight
+                    horizontalAlignment: grid.flow === GridLayout.TopToBottom ? Text.AlignHCenter : Text.AlignJustify
                     maximumLineCount: 1
                     text: root.track
                     textFormat: Text.PlainText
@@ -133,16 +238,22 @@ MouseArea {
 
                     Layout.fillWidth: true
                     Layout.maximumWidth: songTitle.Layout.maximumWidth
-                    visible: root.artist && playerRow.height >= songTitle.contentHeight + contentHeight * 0.8 /* For CJK */
+                    visible: root.artist && playerRow.height >= songTitle.contentHeight + contentHeight * 0.8 /* For CJK */ + (compactRepresentation.layoutForm === CompactRepresentation.LayoutType.VerticalDesktop ? albumArt.Layout.preferredHeight + grid.rowSpacing : 0)
 
                     elide: Text.ElideRight
                     font.pointSize: PlasmaCore.Theme.smallestFont.pointSize
+                    horizontalAlignment: songTitle.horizontalAlignment
                     maximumLineCount: 1
                     opacity: 0.6
                     text: root.artist
                     textFormat: Text.PlainText
                     wrapMode: Text.Wrap
                 }
+            }
+
+            Item {
+                visible: spacerItem.visible
+                Layout.fillHeight: true
             }
         }
     }
