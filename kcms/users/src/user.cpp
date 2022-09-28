@@ -217,9 +217,14 @@ void User::setPassword(const QString &password)
 {
     // Blocking because we need to wait for the password to be changed before we
     // can ask the user about also possibly changing their KWallet password
-    auto invocation = m_dbusIface->SetPassword(saltPassword(password), QString());
-    invocation.waitForFinished();
-    if (!invocation.isError()) {
+
+    auto mc = QDBusMessage::createMethodCall(m_dbusIface->service(), m_dbusIface->path(), m_dbusIface->interface(), "SetPassword");
+    mc.setArguments({saltPassword(password), QString()});
+    mc.setInteractiveAuthorizationAllowed(true);
+    auto message = QDBusConnection::systemBus().call(mc);
+
+    // Not an error or invalid message
+    if (message.type() == QDBusMessage::ReplyMessage) {
         Q_EMIT passwordSuccessfullyChanged();
     }
 }
