@@ -44,6 +44,7 @@
                 "Name[zh_CN]": "Kai Uwe Broulik"
             }
         ],
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Notifications",
         "Category": "Tasks",
         "Description": "Display notifications and jobs",
         "Description[ar]": "اعرض الإخطارات والمهام",

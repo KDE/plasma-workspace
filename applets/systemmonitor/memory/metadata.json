@@ -44,6 +44,7 @@
                 "Name[zh_CN]": "Kai Uwe Broulik"
             }
         ],
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=System%20Monitor",
         "Category": "System Information",
         "Description": "System monitor Widget that shows physical memory usage",
         "Description[ar]": "أداة مراقبة النظام التي تعرض استخدام الذاكرة الفعلية",

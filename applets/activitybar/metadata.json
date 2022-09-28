@@ -45,6 +45,7 @@
                 "Name[zh_CN]": "Bhushan Shah"
             }
         ],
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Activity%20Switcher",
         "Category": "Windows and Tasks",
         "Description": "Tab bar to switch activities",
         "Description[ar]": "شريط ألسنة لتبديل الأنشطة",

@@ -45,6 +45,7 @@
                 "Name[zh_CN]": "Marco Martin"
             }
         ],
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=System%20Monitor",
         "Category": "System Information",
         "Description": "An applet that monitors hard disk throughput and input/output",
         "Description[ar]": "بُريْمج يراقب استخدام إنتاجيّة القرص الصلب ودَخْله/خَرْجه",

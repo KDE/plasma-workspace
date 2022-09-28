@@ -45,6 +45,7 @@
                 "Name[zh_CN]": "Aleix Pol Gonzalez"
             }
         ],
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Input%20Method",
         "Category": "Accessibility",
         "Description": "Manage your Input Methods",
         "Description[ar]": "أدر طريقة إدخالك للنص",

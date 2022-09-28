@@ -44,6 +44,7 @@
                 "Name[zh_CN]": "Kai Uwe Broulik"
             }
         ],
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Global%20Menu",
         "Category": "Windows and Tasks",
         "Description": "Global menubar in your Plasma Desktop",
         "Description[ar]": "شريط القائمة الشاملة في سطح مكتب بلازما",

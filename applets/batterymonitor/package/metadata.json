@@ -44,6 +44,7 @@
                 "Name[zh_CN]": "Sebastian Kügler, Kai Uwe Broulik"
             }
         ],
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Battery%20Monitor",
         "Category": "System Information",
         "Description": "See the power status of your battery",
         "Description[ar]": "طالع حالة طاقة البطارية",

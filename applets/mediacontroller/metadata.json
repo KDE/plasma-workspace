@@ -45,6 +45,7 @@
                 "Name[zh_CN]": "Sebastian Kügler"
             }
         ],
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Media%20Player",
         "Category": "Multimedia",
         "Description": "Media Player Controls",
         "Description[ar]": "تحكّمات مشغّل الوسائط",

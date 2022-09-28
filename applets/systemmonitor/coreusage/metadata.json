@@ -44,6 +44,7 @@
                 "Name[zh_CN]": "Kai Uwe Broulik"
             }
         ],
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=System%20Monitor",
         "Category": "System Information",
         "Description": "System monitor Widget that shows usage of individual CPU cores",
         "Description[ar]": "أداة مراقبة النظام التي تعرض استخدام كل نواة من المعالج",
