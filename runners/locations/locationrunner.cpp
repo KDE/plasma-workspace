@@ -56,7 +56,6 @@ void LocationsRunner::match(Plasma::RunnerContext &context)
 
     if (fileInfo.exists()) {
         Plasma::QueryMatch match(this);
-        match.setType(Plasma::QueryMatch::ExactMatch);
         match.setText(i18n("Open %1", context.query()));
         match.setIconName(fileInfo.isFile() ? KIO::iconNameForUrl(url) : QStringLiteral("system-file-manager"));
 
@@ -68,6 +67,7 @@ void LocationsRunner::match(Plasma::RunnerContext &context)
     } else if (!url.isLocalFile() && !url.isEmpty() && !url.scheme().isEmpty()) {
         const QString protocol = url.scheme();
         Plasma::QueryMatch match(this);
+        match.setType(Plasma::QueryMatch::PossibleMatch);
         match.setData(url);
         match.setUrls({url});
 
