@@ -133,7 +133,7 @@ MouseArea {
 
                     Layout.fillWidth: true
                     Layout.maximumWidth: songTitle.Layout.maximumWidth
-                    visible: root.artist && playerRow.height >= songTitle.contentHeight + contentHeight
+                    visible: root.artist && playerRow.height >= songTitle.contentHeight + contentHeight * 0.8 /* For CJK */
 
                     elide: Text.ElideRight
                     font.pointSize: PlasmaCore.Theme.smallestFont.pointSize
