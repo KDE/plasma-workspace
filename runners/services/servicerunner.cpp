@@ -230,6 +230,7 @@ private:
                 }
             } else if (name.compare(term, Qt::CaseInsensitive) == 0) {
                 relevance = 1;
+                match.setType(Plasma::QueryMatch::ExactMatch);
             } else if (name.contains(queryList[0], Qt::CaseInsensitive)) {
                 relevance = 0.8;
                 relevance += increaseMatchRelavance(service, queryList, QStringLiteral("Name"));
