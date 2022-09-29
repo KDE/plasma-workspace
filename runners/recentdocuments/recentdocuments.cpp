@@ -62,6 +62,8 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
 
     const auto result = new ResultModel(query);
 
+    float relevance = 0.75;
+    Plasma::QueryMatch::Type type = Plasma::QueryMatch::CompletionMatch;
     for (int i = 0; i < result->rowCount(); ++i) {
         const auto index = result->index(i, 0);
 
@@ -73,17 +75,18 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
 
         Plasma::QueryMatch match(this);
 
-        auto relevance = 0.5;
-        match.setType(Plasma::QueryMatch::CompletionMatch);
-        if (term.size() >= 5 && url.fileName() == term) {
-            relevance = 1.0;
+        match.setRelevance(relevance);
+        match.setType(type);
+        if (term.size() >= 5
+            && (url.fileName().compare(term, Qt::CaseInsensitive) == 0 || QFileInfo(url.fileName()).baseName().compare(term, Qt::CaseInsensitive) == 0)) {
+            match.setRelevance(relevance + 0.1);
             match.setType(Plasma::QueryMatch::ExactMatch);
-        } else if (url.fileName().startsWith(term)) {
-            relevance = 0.9;
+        } else if (url.fileName().startsWith(term, Qt::CaseInsensitive)) {
+            match.setRelevance(relevance + 0.1);
             match.setType(Plasma::QueryMatch::PossibleMatch);
         }
+
         match.setIconName(KIO::iconNameForUrl(url));
-        match.setRelevance(relevance);
         match.setData(QVariant(url));
         match.setUrls({url});
         match.setId(url.toString());
@@ -91,9 +94,10 @@ void RecentDocuments::match(Plasma::RunnerContext &context)
             match.setActions(m_actions);
         }
         match.setText(name);
-
         QString destUrlString = KShell::tildeCollapse(url.adjusted(QUrl::RemoveFilename | QUrl::StripTrailingSlash).path());
         match.setSubtext(destUrlString);
+
+        relevance -= 0.05;
 
         context.addMatch(match);
     }
