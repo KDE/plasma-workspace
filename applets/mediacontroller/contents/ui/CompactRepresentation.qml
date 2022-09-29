@@ -222,7 +222,7 @@ MouseArea {
                     id: songTitle
 
                     Layout.fillWidth: true
-                    Layout.maximumWidth: compactRepresentation.inPanel ? PlasmaCore.Units.gridUnit * 10 : -1
+                    Layout.maximumWidth: compactRepresentation.layoutForm === CompactRepresentation.LayoutType.HorizontalPanel ? PlasmaCore.Units.gridUnit * 10 : -1
 
                     elide: Text.ElideRight
                     horizontalAlignment: grid.flow === GridLayout.TopToBottom ? Text.AlignHCenter : Text.AlignJustify
