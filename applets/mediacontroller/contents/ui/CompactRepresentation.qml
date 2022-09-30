@@ -148,7 +148,6 @@ MouseArea {
             case CompactRepresentation.LayoutType.VerticalPanel:
                 return item.implicitHeight;
             case CompactRepresentation.LayoutType.VerticalDesktop:
-                return compactRepresentation.parent.height;
             case CompactRepresentation.LayoutType.HorizontalPanel:
             case CompactRepresentation.LayoutType.HorizontalDesktop:
                 return compactRepresentation.parent.height;
