@@ -186,12 +186,7 @@ MouseArea {
                 id: albumArt
 
                 Layout.alignment: Qt.AlignVCenter
-                Layout.preferredWidth: {
-                    if (!compactRepresentation.inPanel) {
-                        return Math.min(compactRepresentation.parent.width, compactRepresentation.parent.height);
-                    }
-                    return compactRepresentation.isVertical ? compactRepresentation.parent.width : compactRepresentation.parent.height;
-                }
+                Layout.preferredWidth: Math.min(compactRepresentation.parent.width, compactRepresentation.parent.height)
                 Layout.preferredHeight: Layout.preferredWidth
 
                 inCompactRepresentation: true
