@@ -314,8 +314,6 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
         }
     }
 
-    configOutput->sync();
-
     bool applyToAlien{true};
     {
         KConfig cfg(QStringLiteral("kcmdisplayrc"), KConfig::NoGlobals);

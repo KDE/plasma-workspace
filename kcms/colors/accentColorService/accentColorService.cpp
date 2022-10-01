@@ -46,8 +46,8 @@ void AccentColorService::setAccentColor(unsigned accentColor)
         QDBusConnection::sessionBus().call(msg);
 
         m_settings->setAccentColor(color);
+        applyScheme(path, m_settings->config(), KConfig::Notify, color);
         m_settings->save();
-        applyScheme(path, m_settings->config(), KConfig::Notify);
         notifyKcmChange(GlobalChangeType::PaletteChanged);
     }
 }
