@@ -5,13 +5,12 @@ kcoreaddons_add_plugin(soliduiserver SOURCES soliduiserver.cpp soliduiserver.h I
 target_link_libraries(soliduiserver
     KF5::Solid
     KF5::DBusAddons
-    KF5::Wallet
     KF5::KIOCore
     KF5::WindowSystem
     KF5::I18n
     KF5::WidgetsAddons
+    ${QTKEYCHAIN_LIBRARIES}
 )
-
 
 ecm_qt_declare_logging_category(soliduiserver
     HEADER soliduiserver_debug.h

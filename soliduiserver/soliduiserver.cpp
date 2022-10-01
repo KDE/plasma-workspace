@@ -21,8 +21,9 @@
 #include <KUserTimestamp>
 
 #include <kpassworddialog.h>
-#include <kwallet.h>
 #include <kwindowsystem.h>
+
+#include <qt5keychain/keychain.h>
 
 // solid specific includes
 #include <solid/device.h>
@@ -73,18 +74,12 @@ void SolidUiServer::showPassphraseDialog(const QString &udi, const QString &retu
     if (!uuid.isEmpty()) {
         dialog->setProperty("soliduiserver.uuid", uuid);
 
-        KWallet::Wallet *wallet = KWallet::Wallet::openWallet(KWallet::Wallet::LocalWallet(), (WId)wId);
-        const QString folderName = QString::fromLatin1("SolidLuks");
-        if (wallet && wallet->hasFolder(folderName)) {
-            wallet->setFolder(folderName);
-            QString savedPassword;
-            if (wallet->readPassword(uuid, savedPassword) == 0) {
-                dialog->setKeepPassword(true);
-                dialog->setPassword(savedPassword);
-            }
-            wallet->closeWallet(wallet->walletName(), false);
-        }
-        delete wallet;
+        auto readJob = new QKeychain::ReadPasswordJob(QString::fromLatin1("SolidLuks"), dialog);
+        readJob->setKey(uuid);
+        connect(readJob, &QKeychain::ReadPasswordJob::finished, dialog, [dialog, readJob]() {
+            dialog->setKeepPassword(true);
+            dialog->setPassword(readJob->textData());
+        });
     }
 
     connect(dialog, &KPasswordDialog::gotPassword, this, &SolidUiServer::onPassphraseDialogCompleted);
@@ -117,17 +112,10 @@ void SolidUiServer::onPassphraseDialogCompleted(const QString &pass, bool keep)
         }
 
         if (keep) { // save the password into the wallet
-            KWallet::Wallet *wallet = KWallet::Wallet::openWallet(KWallet::Wallet::LocalWallet(), 0);
-            if (wallet) {
-                const QString folderName = QString::fromLatin1("SolidLuks");
-                const QString uuid = dialog->property("soliduiserver.uuid").toString();
-                if (!wallet->hasFolder(folderName))
-                    wallet->createFolder(folderName);
-                if (wallet->setFolder(folderName))
-                    wallet->writePassword(uuid, pass);
-                wallet->closeWallet(wallet->walletName(), false);
-                delete wallet;
-            }
+            auto writePassJob = new QKeychain::WritePasswordJob(QString::fromLatin1("SolidLuks"), nullptr);
+            const QString uuid = dialog->property("soliduiserver.uuid").toString();
+            writePassJob->setKey(uuid);
+            writePassJob->setTextData(pass);
         }
     }
 }

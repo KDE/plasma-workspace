@@ -99,6 +99,12 @@ set_package_properties(Phonon4Qt${QT_MAJOR_VERSION} PROPERTIES
    DESCRIPTION "Qt-based audio library"
    TYPE REQUIRED)
 
+find_package(Qt${QT_MAJOR_VERSION}Keychain REQUIRED)
+set_package_properties(Qt${QT_MAJOR_VERSION}Keychain PROPERTIES
+                                   DESCRIPTION "Provides support for secure credentials storage"
+                                   URL "https://github.com/frankosterfeld/qtkeychain"
+                                   TYPE REQUIRED)
+
 find_package(Breeze ${PROJECT_VERSION} CONFIG)
 set_package_properties(Breeze PROPERTIES
                        TYPE OPTIONAL
