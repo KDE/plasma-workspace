@@ -1,6 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2016 Kai Uwe Broulik <kde@privat.broulik.de>
     SPDX-FileCopyrightText: 2016 Chinmoy Ranjan Pradhan <chinmoyrp65@gmail.com>
+    SPDX-FileCopyrightText: 2022 ivan tkachenko <me@ratijas.tk>
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
@@ -40,6 +41,8 @@ protected:
 AppMenuModel::AppMenuModel(QObject *parent)
     : QAbstractListModel(parent)
     , m_tasksModel(new TaskManager::TasksModel(this))
+    , m_activityInfo(new TaskManager::ActivityInfo(this))
+    , m_virtualDesktopInfo(new TaskManager::VirtualDesktopInfo(this))
     , m_serviceWatcher(new QDBusServiceWatcher(this))
 {
     m_tasksModel->setFilterByScreen(true);
@@ -54,10 +57,9 @@ AppMenuModel::AppMenuModel(QObject *parent)
                     onActiveWindowChanged();
                 }
             });
-    connect(m_tasksModel, &TaskManager::TasksModel::activityChanged, this, &AppMenuModel::onActiveWindowChanged);
-    connect(m_tasksModel, &TaskManager::TasksModel::virtualDesktopChanged, this, &AppMenuModel::onActiveWindowChanged);
-    connect(m_tasksModel, &TaskManager::TasksModel::countChanged, this, &AppMenuModel::onActiveWindowChanged);
     connect(m_tasksModel, &TaskManager::TasksModel::screenGeometryChanged, this, &AppMenuModel::screenGeometryChanged);
+    connect(m_activityInfo, &TaskManager::ActivityInfo::currentActivityChanged, this, &AppMenuModel::onActiveWindowChanged);
+    connect(m_virtualDesktopInfo, &TaskManager::VirtualDesktopInfo::currentDesktopChanged, this, &AppMenuModel::onActiveWindowChanged);
 
     connect(this, &AppMenuModel::modelNeedsUpdate, this, [this] {
         if (!m_updatePending) {

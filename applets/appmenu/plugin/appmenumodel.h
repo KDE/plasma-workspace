@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2016 Chinmoy Ranjan Pradhan <chinmoyrp65@gmail.com>
+    SPDX-FileCopyrightText: 2022 ivan tkachenko <me@ratijas.tk>
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
@@ -12,7 +13,10 @@
 #include <QPointer>
 #include <QRect>
 #include <QStringList>
+
+#include <activityinfo.h>
 #include <tasksmodel.h>
+#include <virtualdesktopinfo.h>
 
 #include <Plasma/Containment>
 
@@ -78,6 +82,8 @@ private:
 
     Plasma::Types::ItemStatus m_containmentStatus = Plasma::Types::PassiveStatus;
     TaskManager::TasksModel *m_tasksModel;
+    TaskManager::ActivityInfo *m_activityInfo;
+    TaskManager::VirtualDesktopInfo *m_virtualDesktopInfo;
 
     //! current active window used
     WId m_currentWindowId = 0;
