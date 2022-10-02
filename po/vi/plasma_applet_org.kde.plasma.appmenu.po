@@ -1,0 +1,52 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Phu Hung Nguyen <phu.nguyen@kdemail.net>, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-22 00:47+0000\n"
+"PO-Revision-Date: 2022-08-02 11:13+0200\n"
+"Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
+"Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 22.04.1\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Diện mạo"
+
+#: package/contents/ui/configGeneral.qml:22
+#, kde-format
+msgid "Use single button for application menu"
+msgstr "Dùng nút đơn cho trình đơn ứng dụng"
+
+#: package/contents/ui/configGeneral.qml:28
+#, kde-format
+msgid "Show full application menu"
+msgstr "Hiện toàn bộ trình đơn ứng dụng"
+
+#: package/contents/ui/MenuDelegate.qml:62
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Open a menu"
+msgstr "Mở một trình đơn"
+
+#: plugin/appmenumodel.cpp:84
+#, kde-format
+msgid "Search"
+msgstr "Tìm kiếm"
+
+#: plugin/appmenumodel.cpp:91
+#, kde-format
+msgid "Search…"
+msgstr "Tìm kiếm…"
+
+#~ msgid "Search..."
+#~ msgstr "Tìm kiếm…"

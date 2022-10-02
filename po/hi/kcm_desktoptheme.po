@@ -1,0 +1,345 @@
+# translation of kcm_desktopthemedetails.po to Hindi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# G Karunakar <karunakar@indlinux.org>, 2009.
+# Raghavendra Kamath <raghu@raghukamath.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_desktopthemedetails\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"PO-Revision-Date: 2021-08-09 14:46+0530\n"
+"Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
+"Language-Team: kde-hindi\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.04.3\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current Plasma Style"
+msgstr "वर्तमान प्लाज़्मा शैली का नाम"
+
+#: kcm.cpp:108
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "अस्थायी फ़ाइल बनाने में असफल।"
+
+#: kcm.cpp:119
+#, kde-format
+msgid "Unable to download the theme: %1"
+msgstr "प्रसंग को डाउनलोड करने में असमर्थ: %1"
+
+#: kcm.cpp:144
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "प्रसंग सफलतापूर्वक स्थापित।"
+
+#: kcm.cpp:147 kcm.cpp:153
+#, kde-format
+msgid "Theme installation failed."
+msgstr "प्रसंग की संस्थापना असफल।"
+
+#: kcm.cpp:245
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr "प्रसंग की संस्थापना असफल : %1"
+
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "This module lets you choose the Plasma style."
+msgstr "यह मॉड्यूल आपको प्लाज़्मा शैली चुनने देता है ।"
+
+#: package/contents/ui/main.qml:69
+#, kde-format
+msgid "All Themes"
+msgstr "सभी प्रसंग"
+
+#: package/contents/ui/main.qml:70
+#, kde-format
+msgid "Light Themes"
+msgstr "हलके रंग के प्रसंग"
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgid "Dark Themes"
+msgstr "गहरे रंग के प्रसंग"
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "Color scheme compatible"
+msgstr "रंग योजना अनुरूप"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgid "Follows color scheme"
+msgstr "रंग योजना को अनुसरण करता है"
+
+#: package/contents/ui/main.qml:118
+#, kde-format
+msgid "Edit Theme…"
+msgstr "प्रसंग संपादित करें"
+
+#: package/contents/ui/main.qml:125
+#, kde-format
+msgid "Remove Theme"
+msgstr "प्रसंग हटाएँ"
+
+#: package/contents/ui/main.qml:132
+#, kde-format
+msgid "Restore Theme"
+msgstr "प्रसंग पुरानी स्तिथी में लाऐं"
+
+#: package/contents/ui/main.qml:174
+#, kde-format
+msgid "Install from File…"
+msgstr "फाइल से संस्थापित करें..."
+
+#: package/contents/ui/main.qml:179
+#, kde-format
+msgid "Get New Plasma Styles…"
+msgstr "नइ प्लाज़्मा शैलियाँ प्राप्त करें..."
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Open Theme"
+msgstr "प्रसंग खोलें"
+
+#: package/contents/ui/main.qml:195
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr "प्रसंग फ़ाइलें (*.tar.gz *.tar.bz2)"
+
+#: plasma-apply-desktoptheme.cpp:31
+#, kde-format
+msgid ""
+"This tool allows you to set the theme of the current Plasma session, without "
+"accidentally setting it to one that is either not available, or which is "
+"already set."
+msgstr ""
+"यह औज़ार आपको वर्तमान प्लाज़्मा सत्र की प्रसंग को, गलती से किसी ऐसे पर नियत किए बिना, "
+"नियत करने की अनुमति देता है जो या तो उपलब्ध नहीं है, या जो पहले से नियत है।"
+
+#: plasma-apply-desktoptheme.cpp:35
+#, kde-format
+msgid ""
+"The name of the theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+"उस प्रसंग का नाम जिसे आप अपने वर्तमान प्लाज़्मा सत्र के लिए नियत करना चाहते हैं (एक पूर्ण "
+"पथ देने से केवल पथ के अंतिम भाग का उपयोग होगा)"
+
+#: plasma-apply-desktoptheme.cpp:36
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr "तंत्र पर उपलब्ध सभी प्रसंग दिखाएं (और जो वर्तमान प्रसंग है)"
+
+#: plasma-apply-desktoptheme.cpp:49
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+"अनुरोधित प्रसंग \"%1\" पहले से ही वर्तमान प्लाज़्मा सत्र के लिए प्रसंग के रूप में नियत है ।"
+
+#: plasma-apply-desktoptheme.cpp:65
+#, kde-format
+msgid "The current Plasma session's theme has been set to %1"
+msgstr "वर्तमान प्लाज़्मा सत्र का प्रसंग %1 पर नियत किया गया है"
+
+#: plasma-apply-desktoptheme.cpp:67
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr "प्रसंग \"%1\" नहीं मिल सका। प्रसंग निम्न विकल्पों में से एक होनी चाहिए: %2"
+
+#: plasma-apply-desktoptheme.cpp:75
+#, kde-format
+msgid "You have the following Plasma themes on your system:"
+msgstr "आपके तंत्र पर निम्न प्लाज्मा थीम हैं:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "जी. करूणाकर"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "karunakar@indlinux.org"
+
+#~ msgid "Plasma Style"
+#~ msgstr "प्लाज़्मा शैली"
+
+#~ msgid "David Rosca"
+#~ msgstr "डेविड रोस्का"
+
+#, fuzzy
+#~| msgid "Get New Themes..."
+#~ msgid "Plasma Styles"
+#~ msgstr "नये प्रसंग लाएँ..."
+
+#, fuzzy
+#~| msgid "Remove Desktop Theme"
+#~ msgid "Download New Plasma Styles"
+#~ msgstr "डेस्कटॉप प्रसंग हटाएँ"
+
+#, fuzzy
+#~| msgid "Remove Desktop Theme"
+#~ msgid "Configure Desktop Theme"
+#~ msgstr "डेस्कटॉप प्रसंग हटाएँ"
+
+#~ msgid "KDE Desktop Theme Module"
+#~ msgstr "केडीई डेस्कटॉप प्रसंग मोड्यूल"
+
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
+#~ msgstr "(c) 2002 Karol Szwed, Daniel Molkentin"
+
+#~ msgid "Details"
+#~ msgstr "विवरण"
+
+#~ msgctxt "plasma name"
+#~ msgid "Panel Background"
+#~ msgstr "फलक पृष्ठभूमि"
+
+#~ msgctxt "plasma name"
+#~ msgid "Kickoff"
+#~ msgstr "किकऑफ"
+
+#~ msgctxt "plasma name"
+#~ msgid "Task Items"
+#~ msgstr "कार्य वस्तुएँ"
+
+#~ msgctxt "plasma name"
+#~ msgid "Widget Background"
+#~ msgstr "विडजट पृष्ठभूमि"
+
+#~ msgctxt "plasma name"
+#~ msgid "Dialog Background"
+#~ msgstr "संवाद पृष्ठभूमि"
+
+#~ msgctxt "plasma name"
+#~ msgid "Analog Clock"
+#~ msgstr "एनॉलॉग घड़ी"
+
+#~ msgctxt "plasma name"
+#~ msgid "Notes"
+#~ msgstr "टीप"
+
+#~ msgctxt "plasma name"
+#~ msgid "Tooltip"
+#~ msgstr "टूल टिप्पणी"
+
+#~ msgctxt "plasma name"
+#~ msgid "Pager"
+#~ msgstr "पेजर"
+
+#~ msgctxt "plasma name"
+#~ msgid "Run Command Dialog"
+#~ msgstr "कमांड संवाद चलाएँ "
+
+#~ msgctxt "plasma name"
+#~ msgid "Shutdown Dialog"
+#~ msgstr "संवाद बन्दकरें"
+
+#~ msgid "Export Desktop Theme"
+#~ msgstr "डेस्कटॉप प्रसंग निर्यात"
+
+#~ msgid "Export theme to file"
+#~ msgstr "फ़ाइल को निर्यात"
+
+#~ msgid "Theme Item"
+#~ msgstr "प्रसंग वस्तु"
+
+#~ msgid "Source"
+#~ msgstr "स्रोत"
+
+#, fuzzy
+#~| msgid "%1 %2"
+#~ msgctxt ""
+#~ "%1 is the name of the theme, %2 is the type of the element (background, "
+#~ "icon, note, etc)"
+#~ msgid "%1 %2"
+#~ msgstr "%1 %2"
+
+#~ msgid "File..."
+#~ msgstr "फ़ाइल..."
+
+#~ msgid "Select File to Use for %1"
+#~ msgstr "फ़ाइल को उपयोग के लिए चुनें %1"
+
+#~ msgid " Author: %1"
+#~ msgstr "लेखक: %1"
+
+#~ msgid "Version: %1"
+#~ msgstr "संस्करण: %1"
+
+#~ msgid "Desktop Theme Details"
+#~ msgstr "डेस्कटॉप प्रसंग विवरण"
+
+#~ msgid "Enable more options"
+#~ msgstr "और विकल्प सक्षम करें"
+
+#~ msgid "More"
+#~ msgstr "अधिक"
+
+#~ msgid "Remove the selected theme"
+#~ msgstr "चयनित प्रसंग हटाएँ"
+
+#~ msgid "Export Theme to File..."
+#~ msgstr "प्रसंग को फ़ाइल मे निर्यात..."
+
+#~ msgid "New theme name:"
+#~ msgstr "नया प्रसंग नाम:"
+
+#~ msgid "Custom theme name"
+#~ msgstr "नया प्रसंग नाम"
+
+#~ msgid "Author:"
+#~ msgstr "लेखकः"
+
+#~ msgid "Custom theme author "
+#~ msgstr "नया प्रसंग लेखक"
+
+#~ msgid "Version:"
+#~ msgstr "संस्करणः"
+
+#, fuzzy
+#~| msgid "Custom theme name"
+#~ msgid "Custom theme version number"
+#~ msgstr "नया प्रसंग नाम"
+
+#~ msgid "Description:"
+#~ msgstr "वर्णनः"
+
+#~ msgid "Custom theme description"
+#~ msgstr "नया प्रसंग वर्णन यहाँ आएगा..."
+
+#~ msgid "Theme Author"
+#~ msgstr "प्रसंग लेखक"
+
+#~ msgid "Theme Name"
+#~ msgstr "प्रसंग नाम"
+
+#~ msgid "Theme Version"
+#~ msgstr "प्रसंग संस्करण"
+
+#~ msgid "The theme description goes here..."
+#~ msgstr "प्रसंग वर्णन यहाँ आएगा..."
+
+#~ msgid "Karol Szwed"
+#~ msgstr "Karol Szwed"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "KCMDesktopTheme"
+#~ msgstr "KCMDesktopTheme"

@@ -1,0 +1,370 @@
+<?xml version="1.0" ?>
+
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Catalan  "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="colors" lang="&language;">
+<articleinfo>
+<title
+>Colors</title>
+<authorgroup>
+<author
+>&Matthew.Woehlke; &Matthew.Woehlke.mail;</author>
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+<date
+>8 d'abril de 2021</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>color</keyword>
+<keyword
+>kcm</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="color">
+<title
+>Colors</title>
+
+<sect2 id="color-scheme">
+  <title
+>Gestionar un esquema</title>
+
+  <para
+>Aquest mòdul permet gestionar els esquemes de color a l'ordinador. Mostra una llista dels esquemes de color inclosos amb el &plasma; i una vista prèvia a la part superior. Sols resta actiu un esquema alhora, però podeu editar-los. Els podeu eliminar utilitzant el botó <guibutton
+>Elimina l'esquema</guibutton
+> que es mostra quan es passa el punter del ratolí per sobre d'un element de la quadrícula. Cal tenir en compte que els esquemes del sistema no es poden eliminar, el botó per a aquesta acció romandrà inhabilitat.</para>
+
+  <para
+>És possible filtrar la llista d'esquemes utilitzant el camp <guilabel
+>Cerca...</guilabel
+> que hi ha a sobre de la quadrícula. A més, podeu utilitzar el quadre combinat al costat d'aquest camp per a només mostrar els <guimenuitem
+>Esquemes clars</guimenuitem
+> o els <guimenuitem
+>Esquemes foscos</guimenuitem
+>. </para>
+
+  <para
+>Si teniu una connexió a Internet, també podeu navegar i recuperar els esquemes creats pels usuaris utilitzant <guibutton
+>Obtén esquemes nous de colors...</guibutton
+>.</para>
+
+  <para
+>També podeu instal·lar esquemes des d'un fitxer que heu baixat o obtingut d'una altra manera, així com importar els del &kde; 4, els quals s'anomenen «*. colors». </para>
+
+  <note>
+  <para
+>Aquesta documentació, de vegades es refereixen a l'esquema «actual», o a l'esquema «actiu». L'esquema «actual» és el joc de colors i opcions d'esquema de color que s'ha aplicat recentment, &ead;, el que s'obtindria si escolliu <guibutton
+>Cancel·la</guibutton
+>. L'esquema «actiu» és el joc de colors que heu editat recentment, &ead;, el que s'obtindria si escolliu <guibutton
+>Aplica</guibutton
+>.</para>
+  </note>
+</sect2>
+
+<sect2>
+  <title
+>Editar o crear esquemes</title>
+  <para
+>Per a editar o crear esquemes nous, seleccioneu-ne un de la llista i premeu el botó <guibutton
+>Edita l'esquema</guibutton
+> per a obrir un diàleg amb tres pestanyes <guilabel
+>Opcions</guilabel
+>, <guilabel
+>Colors</guilabel
+> i <guilabel
+>Desactivat</guilabel
+>. Una vegada hàgiu creat un esquema que us agradi, el podreu pujar, restablir o desar amb un nom diferent o sobreescriure l'esquema actiu. </para>
+
+<sect3 id="color-options">
+  <title
+>Opcions d'un esquema de color</title>
+
+  <para
+>La pestanya <guilabel
+>Opcions</guilabel
+> us permet canviar algunes propietats que tenen a veure amb la forma en què s'utilitza l'esquema de color, així com algunes opcions per a canviar l'esquema de color que són diferents de l'actual assignació de colors.</para>
+
+  <itemizedlist>
+    <listitem
+><para
+><guilabel
+>Aplica els efectes a les finestres inactives</guilabel
+>: Si està marcada, els efectes de l'estat (vegeu <link linkend="color-effects"
+>més avall</link
+>) s'aplicarà a les finestres inactives. Això pot ajudar a identificar visualment les finestres actives davant les inactives, i pot tenir un valor estètic, depenent del vostre gust. No obstant això, alguns usuaris ho consideren una causa de distracció pel «parpelleig», ja que les finestres han de ser pintades quan es tornen inactives. A diferència dels efectes d'escriptori, els efectes de color de l'estat no requereixen suport de composició i funciona en tots els sistemes, però, sols funcionarà en les aplicacions &kde;. </para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Usa colors diferents per a les seleccions inactives</guilabel
+>: Si està marcada, la selecció actual en els elements que no tingui el focus d'entrada serà dibuixada amb un color diferent. Això pot facilitar la identificació visual de l'element amb el focus d'entrada en algunes aplicacions, especialment aquelles que mostren alhora diverses llistes. </para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Ombreja la columna ordenada a les llistes</guilabel
+>: Si està marcada, les llistes multicolumna utilitzaran un color lleugerament diferent per a pintar la columna i la informació s'utilitzarà per a ordenar els elements a la llista. </para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Contrast</guilabel
+>: Aquest control lliscant controla el contrast dels elements d'ombra, com les vores del marc i els efectes «3D» utilitzats per la majoria d'estils. Un valor més baix ofereix menys contrast i per tant vores més suaus, mentre que un valor més alt farà que les vores «destaquin» més. </para
+></listitem>
+  </itemizedlist>
+
+</sect3>
+
+<sect3 id="color-colors">
+  <title
+>Colors</title>
+
+  <para
+>La pestanya <guilabel
+>Colors</guilabel
+> us permetrà canviar els colors en l'esquema de color actiu.</para>
+
+  <para
+>La creació o modificació d'un esquema és una simple qüestió de fer clic sobre la mostra a la llista de colors i seleccionar un color nou. Quan acabeu suggerim que deseu el vostre esquema.</para>
+
+  <para
+>El joc <guilabel
+>Colors normals</guilabel
+>, el qual es mostra inicialment, en realitat no és un «joc» en el sentit utilitzat pel &plasma; (vegeu la secció següent), però presenta una sèrie de regles de color d'una manera que facilita editar l'esquema en el seu joc. Quan es crea un nou esquema de color, el normal és canviar-los en primer lloc i utilitzar els altres jocs per a ajustar els colors específics si és necessari.</para>
+
+  <para
+>Cal tenir en compte que els <guilabel
+>Colors normals</guilabel
+> fa les regles disponibles en tots els jocs. Per exemple, «Vista del fons» aquí és el mateix que la regla «Fons normal» del joc «Visualització». A més, l'establiment de colors que no es refereixen a un joc específic canviarà aquest color en <emphasis
+>tots</emphasis
+> els jocs. (Com a excepció, «Text inactiu» canviarà el color de tots els jocs, <emphasis
+>excepte</emphasis
+> per a la selecció, hi ha una a part «Text de la selecció inactiva» per a «Text inactiu» en el joc «Selecció»). Algunes regles poden no ser visibles sota <guilabel
+>Colors normals</guilabel
+>, i només es podran canviar (si cal), seleccionant el joc adequat.</para>
+
+  <sect4>
+    <title
+>Jocs de colors</title>
+
+    <para
+>Al Plasma es trenca l'esquema de color en diversos jocs basats en el tipus d'element a la interfície d'usuari, de la següent manera:</para>
+    <itemizedlist>
+      <listitem
+><para
+><guilabel
+>Visualitza</guilabel
+>: Presentació dels elements d'informació, com llistes, arbres, quadres d'entrada de text, &etc; </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Finestra</guilabel
+>: Elements de la finestra que no són botons o vistes. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Botó</guilabel
+>: Botons i elements similars. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Selecció</guilabel
+>: Text i elements seleccionats. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Consell</guilabel
+>: Consells sobre eines, consells «Què és això?» i elements similars. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Complementari</guilabel
+>: Àrees de les aplicacions amb un esquema de color alternatiu. en general amb un fons fosc per a esquemes de color clars. Exemples d'àrees amb aquest esquema de color invertit són la interfície de sortida de la sessió, la pantalla de bloqueig i el mode a pantalla completa per algunes aplicacions. </para
+></listitem>
+    </itemizedlist>
+
+    <para
+>Cada joc conté una sèrie de regles de color. Cada joc té les mateixes regles. Tots els colors estan associats amb un dels jocs de dalt.</para>
+  </sect4>
+
+  <sect4>
+    <title
+>Regles de color</title>
+
+    <para
+>Cada joc de colors es compon d'una sèrie de regles que estan disponibles en tots els altres jocs. A més de l'obvi «Text normal» i de «Fons normal», aquestes regles són les següents:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Fons alternatiu: S'utilitza quan hi ha una necessitat de canviar subtilment el fons per ajudar a l'associació de l'element. Això podria utilitzar-se, &pex;, com a fons d'una capçalera, però s'utilitza sobretot per a files alternes a les llistes, especialment en llistes multicolumna, per ajudar en el seguiment visual de les files. </para
+></listitem>
+      <listitem
+><para
+>Text de l'enllaç: S'utilitza per a hiper-enllaços o per indicar el contrari «quelcom que es pot visitar», o per mostrar les relacions. </para
+></listitem>
+      <listitem
+><para
+>Text visitat: S'utilitza per a «quelcom (&pex; un hiper-enllaç) que ha estat visitat», o per indicar alguna cosa que és «vella». </para
+></listitem>
+      <listitem
+><para
+>Text actiu: S'utilitza per indicar un element actiu o cridar l'atenció, &pex; alertes, notificacions, també per a quan es passa per sobre dels hiper-enllaços. </para
+></listitem>
+      <listitem
+><para
+>Text inactiu: S'utilitza per al text que ha de ser discret, &pex; comentaris, «subtítols», la informació sense importància, &etc; </para
+></listitem>
+      <listitem
+><para
+>Text negatiu: S'utilitza per als errors, avisos d'error, notificacions que una acció pot ser perillosa (&pex; la pàgina web no és segura o context de seguretat), &etc; </para
+></listitem>
+      <listitem
+><para
+>Text neutre: S'utilitza per a cridar l'atenció quan una altra regla no és apropiada, &pex; advertències, per a indicar contingut segur/encriptat, &etc; </para
+></listitem>
+      <listitem
+><para
+>Text positiu: S'utilitza per als avisos d'èxit, per a indicar el contingut de confiança, &etc; </para
+></listitem>
+    </itemizedlist>
+
+    <para
+>A més de les regles de text, hi ha unes quantes regles de «decoració» addicionals que s'utilitzen per a dibuixar línies o ombres d'elements de la IU (mentre que l'anterior, en circumstàncies apropiades, també es pot utilitzar per a aquesta finalitat, les següents no estan específicament destinades al dibuix de text). Aquestes són:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Decoració del focus: S'utilitza per a indicar l'element que té el focus d'entrada actiu. </para
+></listitem>
+      <listitem
+><para
+>Decoració en passar per sobre: S'utilitza per als efectes en passar per sobre el punter del ratolí, &pex; els efectes d'«il·luminació» per als botons. </para
+></listitem>
+    </itemizedlist>
+
+    <para
+>A més, a excepció del «Text inactiu», hi ha una regla de fons corresponent per a cadascuna de les regles de text. En l'actualitat (a excepció de «Fons normal» i de «Fons alternatiu»), aquests colors no són triats per l'usuari, sinó que es determina automàticament basant-se en el color a «Fons normal» i al color de text corresponent. Aquests colors es poden veure per endavant seleccionant un dels jocs que no sigui «Colors normals».</para>
+
+    <para
+>L'elecció del joc de colors es deixa als desenvolupadors, les anteriors són les directrius destinades a representar l'ús típic.</para>
+  </sect4>
+
+  <sect4>
+    <title
+>Colors del gestor de finestres</title>
+
+    <para
+>Com s'ha assenyalat anteriorment, el joc «Gestor de finestres» té les seves pròpies regles, independents d'altres jocs. Aquestes només (actualment) són accessibles a través dels <guilabel
+>Colors normals</guilabel
+>, i són les següents:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Barra de títol activa: Utilitzat per a dibuixar el fons de la barra de títol, les vores i/o decoració de la finestra activa (&ead; la que tingui el focus d'entrada). No totes les decoracions de les finestres s'utilitzen de la mateixa manera, i algunes poden fins i tot utilitzar el fons normal de la finestra establert per a dibuixar la barra de títol. </para
+></listitem>
+      <listitem
+><para
+>Text de la barra de títol activa: Utilitzat per a dibuixar el text de la barra de títol quan la barra de títol activa s'utilitza per a dibuixar el fons de la barra de títol. També es pot utilitzar per a altres elements de primer pla que utilitzen la regla «Barra de títol activa» com a fons. </para
+></listitem>
+    </itemizedlist>
+
+    <para
+>Els [Text] de la barra de títol inactiva funciona de la mateixa manera que l'anterior, però per a les finestres inactives, en comptes de les actives.</para>
+  </sect4>
+
+</sect3>
+
+<sect3 id="color-effects">
+  <title
+>Desactivat</title>
+
+  <para
+>Els efectes de color sobre l'estat d'aquesta pestanya s'apliquen als elements d'interfície en els estats inactius (finestres que no tenen el focus, i només si està marcada l'opció <guilabel
+>Aplica efectes de color a les finestres inactives</guilabel
+>) o inhabilitat. En canviar els efectes, l'aparició d'elements en aquests estats es pot canviar. En general, els elements inactius redueixen el contrast (el text s'esvaeix una mica a un segon pla) i pot tenir una intensitat reduïda, mentre que els elements inhabilitats redueixen fortament el contrast i sovint són molt foscos o més clars. </para>
+
+  <para
+>Es poden aplicar tres tipus d'efectes a cada estat (els efectes dels dos estats serà independent). Es tracta d'intensitat, color i contrast. Els dos primers (intensitat, color) controlen el color en general, mentre que l'últim (contrast) es refereix als colors de primer pla en relació amb el fons.</para>
+
+  <sect4>
+    <title
+>Intensitat</title>
+
+    <para
+>La intensitat permet que el color general es faci més clar o que s'enfosqueixi. Ajustant el control lliscant al mig no es produeixen canvis. Els efectes disponibles són:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Ombreig: Fa que tot sigui més clar o més fosc d'una manera controlada. Cada «tic» al control lliscant augmenta o disminueix la intensitat global (&ead; la lluminositat aparent) en una quantitat absoluta. </para
+></listitem>
+      <listitem
+><para
+>Enfosquit: Canvia la intensitat a un percentatge del valor inicial. Un ajust del control lliscant a mig camí entre el mig i el resultat màxim en un color la meitat d'intens que l'original. El mínim donarà un color dues vegades més intens que l'original. </para
+></listitem>
+      <listitem
+><para
+>Aclarit: En concepte tot l'oposat a enfosquit, aquest es pot considerar com el treball amb «la distància des del blanc», on enfosquit treballa amb «la distància des del negre». El mínim és un color dues vegades més «lluny» del blanc que l'original, mentre que a mig camí entre el mig i una màxima donarà una intensitat a mig camí entre el color original i el blanc. </para
+></listitem>
+    </itemizedlist>
+  </sect4>
+
+  <sect4>
+    <title
+>Color</title>
+
+    <para
+>El color també canvia el color en general, però no es limita a la intensitat. Els efectes disponibles són:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Dessaturat: Canvia la saturació relativa. L'opció del mig no produeix cap canvi, com a màxim, donarà un gris on la intensitat és igual que la percepció del color original. Reduir les opcions incrementarà la saturació, donant un color que és menys gris/més «vibrant» que l'original. </para
+></listitem>
+      <listitem
+><para
+>Esvaïment: Barreja suaument el color original en un color de referència. L'opció mínima en el control lliscant no produirà cap canvi, la màxima donarà el color de referència. </para
+></listitem>
+      <listitem
+><para
+>Acolorit: Similar a esvaïment, excepte que el color (matís i saturació) canviarà amb més rapidesa, mentre que els canvis d'intensitat seran més lents a mesura que augmenta el valor del control lliscant. </para
+></listitem>
+    </itemizedlist>
+  </sect4>
+
+  <sect4>
+    <title
+>Contrast</title>
+
+    <para
+>Els efectes de contrast són similars als efectes de color, excepte si s'apliquen al text, utilitzant el color de fons com a color de referència, i la dessaturació no estarà disponible. L'esvaïment produeix un text que «desapareix» més ràpid, però que manté més estona el seu color, mentre que acolorit produeix un text que canvia de color perquè coincideixi amb el fons amb més rapidesa, mantenint una intensitat de contrast més gran (on un valor «major» es tradueix en opcions més grans en el control lliscant). Per als efectes de contrast, l'opció mínima en el control lliscant no produeix cap canvi, mentre el valor màxim el fa desaparèixer per complet al fons.</para>
+  </sect4>
+
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>
+<!-- kate: indent-width 2; replace-tabs on; -->

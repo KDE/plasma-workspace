@@ -1,0 +1,378 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# Sergiu Bivol <sergiu@cip.md>, 2020, 2021, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"PO-Revision-Date: 2021-07-25 13:26+0100\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.12.2\n"
+
+#: iconsizecategorymodel.cpp:14
+#, kde-format
+msgid "Toolbar"
+msgstr "Bara de unelte"
+
+#: iconsizecategorymodel.cpp:15
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Bara de unelte principală"
+
+#: iconsizecategorymodel.cpp:16
+#, kde-format
+msgid "Small Icons"
+msgstr "Pictograme mici"
+
+#: iconsizecategorymodel.cpp:17
+#, kde-format
+msgid "Panel"
+msgstr "Panou"
+
+#: iconsizecategorymodel.cpp:18
+#, kde-format
+msgid "Dialogs"
+msgstr "Dialoguri"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr "Denumirea tematicii de pictograme actuale"
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr "Dimensiune pictograme pe birou"
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr "Dimensiune pictograme în bara de unelte"
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, kde-format
+msgid "Main toolbar icons size"
+msgstr "Dimensiune pictograme în bara de unelte principală"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, kde-format
+msgid "Small icons size"
+msgstr "Dimensiune pictograme mici"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr "Dimensiune pictograme în panou"
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr "Dimensiune pictograme în dialog"
+
+#: main.cpp:182
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Nu s-a putut crea un fișier temporar."
+
+#: main.cpp:193
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Nu s-a putut descărca arhiva cu tematici de pictograme: %1"
+
+#: main.cpp:207
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "Fișierul nu este o arhivă validă cu tematici de pictograme."
+
+#: main.cpp:212
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr ""
+"A apărut o problemă în timpul procesului de instalare. Totuși, majoritatea "
+"tematicilor din arhivă au fost instalate."
+
+#: main.cpp:216
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "Tematica a fost instalată cu succes."
+
+#: main.cpp:260
+#, kde-format
+msgid "Installing icon themes…"
+msgstr "Se instalează tematici de pictograme…"
+
+#: main.cpp:270
+#, kde-format
+msgid "Installing %1 theme…"
+msgstr "Se instalează tematica %1…"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr "Acest modul vă permite să alegeți pictogramele pentru birou."
+
+#: package/contents/ui/main.qml:147
+#, kde-format
+msgid "Remove Icon Theme"
+msgstr "Elimină tematica de pictograme"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Restore Icon Theme"
+msgstr "Restabilește tematica de pictograme"
+
+#: package/contents/ui/main.qml:228
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr "Configurează dimensiunea pictogramelor"
+
+#: package/contents/ui/main.qml:246
+#, kde-format
+msgid "Install from File…"
+msgstr "Instalează din fișier…"
+
+#: package/contents/ui/main.qml:251
+#, kde-format
+msgid "Get New Icons…"
+msgstr "Obține pictograme noi…"
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Open Theme"
+msgstr "Deschide tematica"
+
+#: package/contents/ui/main.qml:281
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr "Fișiere cu tematici (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Icon theme is already used"
+#~ msgstr "Tematica de pictograme e folosită deja"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Sergiu Bivol"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "sergiu@cip.md"
+
+#~ msgid "Icons"
+#~ msgstr "Pictograme"
+
+#~ msgid "Icons Control Panel Module"
+#~ msgstr "Modul de control pentru pictograme"
+
+#~ msgid "(c) 2000-2003 Geert Jansen"
+#~ msgstr "(c) 2000-2003 Geert Jansen"
+
+#~ msgid "Geert Jansen"
+#~ msgstr "Geert Jansen"
+
+#~ msgid "Antonio Larrosa Jimenez"
+#~ msgstr "Antonio Larrosa Jimenez"
+
+#~ msgid "Torsten Rahn"
+#~ msgstr "Torsten Rahn"
+
+#~ msgid "Jonathan Riddell"
+#~ msgstr "Jonathan Riddell"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Kai Uwe Broulik"
+
+#~ msgid "Desktop"
+#~ msgstr "Birou"
+
+#~ msgid "Use of Icon"
+#~ msgstr "Utilizarea pictogramei"
+
+#~ msgctxt "@label The icon rendered by default"
+#~ msgid "Default"
+#~ msgstr "Implicit"
+
+#~ msgctxt "@label The icon rendered as active"
+#~ msgid "Active"
+#~ msgstr "Activ"
+
+#~ msgctxt "@label The icon rendered as disabled"
+#~ msgid "Disabled"
+#~ msgstr "Dezactivat"
+
+#~ msgid "Size:"
+#~ msgstr "Mărime:"
+
+#~ msgid "Set Effect..."
+#~ msgstr "Stabilește efectul..."
+
+#~ msgid "All Icons"
+#~ msgstr "Toate pictogramele"
+
+#~ msgid "Setup Default Icon Effect"
+#~ msgstr "Configurare efect pictogramă implicită"
+
+#~ msgid "Setup Active Icon Effect"
+#~ msgstr "Configurare efect pictogramă activă"
+
+#~ msgid "Setup Disabled Icon Effect"
+#~ msgstr "Configurare efect pictogramă dezactivată"
+
+#~ msgid "&Effect:"
+#~ msgstr "&Efect:"
+
+#~ msgid "No Effect"
+#~ msgstr "Fără efect"
+
+#~ msgid "To Gray"
+#~ msgstr "În gri"
+
+#~ msgid "Colorize"
+#~ msgstr "Colorare"
+
+#~ msgid "Gamma"
+#~ msgstr "Gama"
+
+#~ msgid "Desaturate"
+#~ msgstr "Desaturare"
+
+#~ msgid "To Monochrome"
+#~ msgstr "În monocrom"
+
+#~ msgid "&Semi-transparent"
+#~ msgstr "&Semitransparent"
+
+#~ msgid "Preview"
+#~ msgstr "Previzualizare"
+
+#~ msgid "Effect Parameters"
+#~ msgstr "Parametri efect"
+
+#~ msgid "&Amount:"
+#~ msgstr "C&antitate:"
+
+#~ msgid "Co&lor:"
+#~ msgstr "&Culoare:"
+
+#~ msgid "&Second color:"
+#~ msgstr "A &doua culoare:"
+
+#~ msgid "Name"
+#~ msgstr "Nume"
+
+#~ msgid "Description"
+#~ msgstr "Descriere"
+
+#~ msgid "Install a theme archive file you already have locally"
+#~ msgstr "Instalează arhivă cu tematică deținută local"
+
+#~ msgid ""
+#~ "If you already have a theme archive locally, this button will unpack it "
+#~ "and make it available for KDE applications"
+#~ msgstr ""
+#~ "Dacă dispuneți deja de o arhivă cu tematici locală, acest buton o va "
+#~ "despacheta și o va face disponibilă pentru aplicațiile KDE"
+
+#~ msgid "Get new themes from the Internet"
+#~ msgstr "Preluare tematici noi din Internet"
+
+#~ msgid ""
+#~ "You need to be connected to the Internet to use this action. A dialog "
+#~ "will display a list of themes from the http://www.kde.org website. "
+#~ "Clicking the Install button associated with a theme will install this "
+#~ "theme locally."
+#~ msgstr ""
+#~ "Trebuie să fiți conectat la Internet pentru a utiliza această acțiune. Un "
+#~ "dialog va afișa o listă cu tematici de pe situl http://www.kde.org. "
+#~ "Făcând clic pe butonul Instalează asociat unei tematici, aceasta se va "
+#~ "instala local."
+
+#~ msgid "Remove the selected theme from your disk"
+#~ msgstr "Elimină tematica aleasă de pe disc"
+
+#~ msgid "This will remove the selected theme from your disk."
+#~ msgstr "Această acțiune va elimina tematica aleasă de pe disc."
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "Trageți sau scrieți URL-ul tematicii"
+
+#~ msgid ""
+#~ "Unable to download the icon theme archive;\n"
+#~ "please check that address %1 is correct."
+#~ msgstr ""
+#~ "Nu am putut transfera arhiva tematicii de pictograme.\n"
+#~ "Verificați că adresa %1 este corectă."
+
+#~ msgid "<qt>Installing <strong>%1</strong> theme</qt>"
+#~ msgstr "<qt>Instalez tematica <strong>%1</strong></qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <strong>%1</strong> icon theme?"
+#~ "<br /><br />This will delete the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>Doriți într-adevăr să ștergeți tematica de pictograme <strong>%1</"
+#~ "strong>?<br /><br />Această operație va șterge fișierele instalate de "
+#~ "această tematică.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Confirmare"
+
+#~ msgid "&Theme"
+#~ msgstr "&Tematică"
+
+#~ msgid "Ad&vanced"
+#~ msgstr "A&vansat"
+
+#~ msgid ""
+#~ "<h1>Icons</h1>This module allows you to choose the icons for your desktop."
+#~ "<p>To choose an icon theme, click on its name and apply your choice by "
+#~ "pressing the \"Apply\" button below. If you do not want to apply your "
+#~ "choice you can press the \"Reset\" button to discard your changes.</"
+#~ "p><p>By pressing the \"Install Theme File...\" button you can install "
+#~ "your new icon theme by writing its location in the box or browsing to the "
+#~ "location. Press the \"OK\" button to finish the installation.</p><p>The "
+#~ "\"Remove Theme\" button will only be activated if you select a theme that "
+#~ "you installed using this module. You are not able to remove globally "
+#~ "installed themes here.</p><p>You can also specify effects that should be "
+#~ "applied to the icons.</p>"
+#~ msgstr ""
+#~ "<h1>Pictograme</h1> Acest modul vă permite să alegeți pictogramele pentru "
+#~ "mediul dumneavoastră KDE.<p>Pentru a alege o tematică de pictograme, dați "
+#~ "clic pe numele ei și activați-o prin apăsarea butonului „Aplică” de mai "
+#~ "jos. Dacă nu doriți să aplicați modificările apăsați butonul „Resetează” "
+#~ "pentru a elimina modificările.</p><p>Dacă apăsați butonul „Instalare "
+#~ "fișier cu tematică” puteți instala noua tematică scriind locația ei în "
+#~ "dialog sau răsfoind la locația ei. Apăsați \"OK\" pentru a termina "
+#~ "instalarea.</p><p>Butonul „Șterge tematica” va fi activat numai dacă "
+#~ "selectați o tematică instalată cu acest modul de configurare. De aici nu "
+#~ "puteți șterge tematici instalate global.</p><p>Tot aici puteți specifica "
+#~ "și efectele care să fie aplicate pictogramelor.</p>"
+
+#~ msgid "Animate icons"
+#~ msgstr "Animează pictogramele"
+
+#~ msgid "Select the icon theme you want to use:"
+#~ msgstr "Selectați tematica de pictograme de utilizat:"
+
+#~ msgid "Double-sized pixels"
+#~ msgstr "Pixeli de mărime dublă"
+
+#~ msgid "Desktop/File Manager"
+#~ msgstr "Birou/Gestionar de fișiere"

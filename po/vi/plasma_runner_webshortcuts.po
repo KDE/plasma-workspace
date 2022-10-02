@@ -1,0 +1,43 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Phu Hung Nguyen <phu.nguyen@kdemail.net>, 2020, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-06-02 00:47+0000\n"
+"PO-Revision-Date: 2022-01-10 21:48+0100\n"
+"Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
+"Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 20.12.2\n"
+
+#: webshortcutrunner.cpp:58
+#, kde-format
+msgid "Opens \"%1\" in a web browser with the query :q:."
+msgstr "Mở \"%1\" trong một trình duyệt web với truy vấn :q:."
+
+#: webshortcutrunner.cpp:63
+#, kde-format
+msgid "Search using the DuckDuckGo bang syntax"
+msgstr "Tìm kiếm bằng cú pháp chấm than DuckDuckGo"
+
+#: webshortcutrunner.cpp:94
+#, kde-format
+msgid "Search in private window"
+msgstr "Tìm kiếm trong cửa sổ riêng tư"
+
+#: webshortcutrunner.cpp:94
+#, kde-format
+msgid "Search in incognito window"
+msgstr "Tìm kiếm trong cửa sổ ẩn danh"
+
+#: webshortcutrunner.cpp:129 webshortcutrunner.cpp:146
+#, kde-format
+msgid "Search %1 for %2"
+msgstr "Tìm kiếm %2 bằng %1"

@@ -1,0 +1,209 @@
+# translation of desktop_kdebase.po to Upper Sorbian
+# Prof. Dr. Eduard Werner <e.werner@rz.uni-leipzig.de>, 2003.
+# Eduard Werner <edi.werner@gmx.de>, 2005, 2008.
+# Bianka Šwejdźic <hertn@gmx.de>, 2005, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: desktop_kdebase\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"PO-Revision-Date: 2008-11-18 00:18+0100\n"
+"Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
+"Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
+"Language: hsb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
+"%100==4 ? 2 : 3;\n"
+
+#: PowerDevilRunner.cpp:32
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "suspend"
+msgstr "wusnyć"
+
+#: PowerDevilRunner.cpp:34
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to ram"
+msgstr "do pomjatka"
+
+#: PowerDevilRunner.cpp:36
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "sleep"
+msgstr "spać"
+
+#: PowerDevilRunner.cpp:38
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "hibernate"
+msgstr "zymski spar"
+
+#: PowerDevilRunner.cpp:40
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to disk"
+msgstr "do tačele"
+
+#: PowerDevilRunner.cpp:42 PowerDevilRunner.cpp:44 PowerDevilRunner.cpp:69
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "dim screen"
+msgstr "wobrazowku ćěmnić"
+
+#: PowerDevilRunner.cpp:53
+#, kde-format
+msgid ""
+"Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
+"activated"
+msgstr ""
+"Naliči opcije za zastajenje systema (na př. zastajić, spać) a rjaduje jich "
+"aktiwizowanje"
+
+#: PowerDevilRunner.cpp:57
+#, kde-format
+msgid "Suspends the system to RAM"
+msgstr "Zastaji system a wostaji jón w pomjatku"
+
+#: PowerDevilRunner.cpp:61
+#, kde-format
+msgid "Suspends the system to disk"
+msgstr "Zastaji system a pisa tuchwilny staw do tačele"
+
+#: PowerDevilRunner.cpp:65
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword, it should end with a space"
+#| msgid "screen brightness "
+msgctxt ""
+"Note this is a KRunner keyword, <> is a placeholder and should be at the end"
+msgid "screen brightness <percent value>"
+msgstr "swětłosć wobrazowki "
+
+#: PowerDevilRunner.cpp:67
+#, fuzzy, no-c-format, kde-format
+#| msgid ""
+#| "Lists screen brightness options or sets it to the brightness defined by :"
+#| "q:; e.g. screen brightness 50 would dim the screen to 50% maximum "
+#| "brightness"
+msgid ""
+"Lists screen brightness options or sets it to the brightness defined by the "
+"search term; e.g. screen brightness 50 would dim the screen to 50% maximum "
+"brightness"
+msgstr ""
+"Naliči opcije za swětłosć wobrazowki a rjaduje swětłosć definowanu přez :q:; "
+"na př. swětłosć 50 by wobrazowku na 50% maksimalneje swětłosće přićěmniło"
+
+#: PowerDevilRunner.cpp:95
+#, kde-format
+msgid "Set Brightness to %1%"
+msgstr "Swětłosć postajić: %1%"
+
+#: PowerDevilRunner.cpp:104
+#, kde-format
+msgid "Dim screen totally"
+msgstr "Wobrazowku doćěmnić"
+
+#: PowerDevilRunner.cpp:112
+#, kde-format
+msgid "Dim screen by half"
+msgstr "Wobrazowku přićěmnić"
+
+#: PowerDevilRunner.cpp:142
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Spać"
+
+#: PowerDevilRunner.cpp:143
+#, kde-format
+msgid "Suspend to RAM"
+msgstr "Zastajić (do RAM)"
+
+#: PowerDevilRunner.cpp:148
+#, kde-format
+msgctxt "Suspend to disk"
+msgid "Hibernate"
+msgstr "Zymski spar"
+
+#: PowerDevilRunner.cpp:149
+#, kde-format
+msgid "Suspend to disk"
+msgstr "Zastajić (do tačele)"
+
+#: PowerDevilRunner.cpp:218
+#, kde-format
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "screen brightness "
+msgstr "swětłosć wobrazowki "
+
+#: PowerDevilRunner.cpp:220
+#, kde-format
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "dim screen "
+msgstr "wobrazowku doćěmnić "
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "screen brightness"
+#~ msgstr "Swětłosć wobrazowki"
+
+#, fuzzy
+#~| msgctxt "Note this is a KRunner keyword"
+#~| msgid "screen brightness"
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "screen brightness %1"
+#~ msgstr "Swětłosć wobrazowki"
+
+#, fuzzy
+#~| msgid "Dim screen totally"
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "dim screen %1"
+#~ msgstr "Wobrazowku doćěmnić"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "power profile"
+#~ msgstr "Milinowy profil"
+
+#, fuzzy
+#~| msgctxt "Note this is a KRunner keyword"
+#~| msgid "power profile"
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "power profile %1"
+#~ msgstr "Milinowy profil"
+
+#~ msgid "Set Profile to '%1'"
+#~ msgstr "Profil postajić: %1"
+
+#~ msgid "Turn off screen"
+#~ msgstr "Wobrazowku hasnyć"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "power governor"
+#~ msgstr "Milinowy rjadwar"
+
+#, fuzzy
+#~| msgctxt "Note this is a KRunner keyword"
+#~| msgid "power governor"
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "power governor %1"
+#~ msgstr "Milinowy rjadwar"
+
+#, fuzzy
+#~| msgid "Set Powersaving Scheme to '%1'"
+#~ msgid "Set CPU frequency scaling policy to '%1'"
+#~ msgstr "Milinowu šemu postajić: %1"
+
+#, fuzzy
+#~| msgctxt "Note this is a KRunner keyword"
+#~| msgid "power scheme"
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "power scheme %1"
+#~ msgstr "Milinowa šema"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "power scheme"
+#~ msgstr "Milinowa šema"
+
+#~ msgid "Set Powersaving Scheme to '%1'"
+#~ msgstr "Milinowu šemu postajić: %1"

@@ -1,0 +1,294 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Italian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="fontinst" lang="&language;">
+<title
+>Gestione dei caratteri</title>
+<articleinfo>
+<authorgroup>
+<author
+>&Craig.Drummond; &Craig.Drummond.Mail;</author>
+
+<othercredit role="translator"
+><firstname
+>Paolo</firstname
+><surname
+>Zamponi</surname
+><affiliation
+><address
+><email
+>zapaolo@email.it</email
+></address
+></affiliation
+><contrib
+>Revisione e aggiornamento a Plasma 5.12</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Federico</firstname
+><surname
+>Zenith</surname
+><affiliation
+><address
+><email
+>federico.zenith@member.fsf.org</email
+></address
+></affiliation
+><contrib
+>Traduzione della documentazione</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Alberto</firstname
+><surname
+>Campanile</surname
+> <contrib
+>Traduzione della documentazione</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Samuele</firstname
+><surname
+>Kaplun</surname
+> <contrib
+>Traduzione della documentazione</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>09/04/2021</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Impostazioni di sistema</keyword>
+<keyword
+>caratteri</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_fontinst">
+<title
+>Gestione dei caratteri</title>
+
+<para
+>Questo modulo è responsabile dell'installazione, della disinstallazione, dell'anteprima e della gestione dei caratteri.</para>
+
+<sect2 id="font-groups">
+<title
+>Gruppi di caratteri</title>
+<para
+>Ci sono quattro gruppi di caratteri speciali predefiniti:</para>
+
+<orderedlist>
+    <listitem
+><para
+><guilabel
+>Tutti i caratteri</guilabel
+>: mostrerà tutti i caratteri, sia quelli personali che quelli di sistema.</para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Caratteri personali</guilabel
+>: saranno mostrati i caratteri personali, cioè quelli non disponibili agli altri utenti.</para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Caratteri di sistema</guilabel
+>: saranno mostrati i caratteri disponibili a tutti gli utenti. L'installazione e la rimozione dei caratteri di sistema richiederà privilegi amministrativi.</para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Non classificati</guilabel
+>: mostrerà tutti i caratteri non inseriti in nessun gruppo definito dall'utente. Questo gruppo apparirà soltanto se ci sono dei gruppi definiti dall'utente.</para
+></listitem>
+</orderedlist>
+<para
+>Per aggiungere un carattere in un gruppo, trascinalo dalla lista dei caratteri al gruppo desiderato. Per rimuoverlo da un gruppo, trascinalo nel gruppo <guilabel
+>Tutti i caratteri</guilabel
+>.</para>
+<para
+>Sotto a questo elenco trovi dei pulsanti per creare un nuovo gruppo, rimuoverne uno, e per abilitare o disabilitare i caratteri del gruppo attuale.</para>
+<para
+>Nel menu contestuale di questo elenco ci sono inoltre elementi per stampare dei campioni dei caratteri e per esportare un carattere in un archivio compresso.</para>
+
+<sect3 id="font-hiding">
+<title
+>Abilitazione e disabilitazione</title>
+<para
+>Gli utenti con molti caratteri possono trovare utile averne solo alcuni abilitati in certi momenti. Per facilitarlo il modulo ti permetterà di disattivare un tipo di carattere alla volta, oppure interi gruppi di questi. La disattivazione di un tipo di carattere non lo rimuove dal sistema, lo nasconde semplicemente in modo da non farlo apparire nelle applicazioni. Riabilitare un tipo di carattere ti permette invece di usarlo di nuovo.</para>
+</sect3>
+
+</sect2>
+
+<sect2 id="font-list">
+<title
+>Elenco dei caratteri</title>
+<para
+>La schermata principale è un elenco dei caratteri installati, raggruppati in base al nome della famiglia; il numero tra parentesi quadre rappresenta il numero di stili installati per quella famiglia. &eg;, il carattere <quote
+>Times</quote
+> può essere elencato come: <itemizedlist
+> <listitem>
+    <para
+>Times [4]</para>
+    <itemizedlist>
+        <listitem
+><para
+>Normale</para
+></listitem>
+        <listitem
+><para
+>Corsivo</para
+></listitem>
+        <listitem
+><para
+>Grassetto</para
+></listitem>
+        <listitem
+><para
+>Grassetto corsivo</para
+></listitem>
+    </itemizedlist>
+</listitem>
+</itemizedlist>
+</para>
+
+<para
+>Per installare un carattere premi il pulsante <guibutton
+>Installa da file...</guibutton
+>, e seleziona quello desiderato dalla finestra di selezione dei file. Il gruppo di caratteri selezionato determinerà dove saranno installati i caratteri.</para>
+<para
+>Per disinstallare i caratteri seleziona quelli desiderati dall'elenco, e premi il pulsante <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+>.</para>
+
+<para
+>Fai clic con il &RMB; per aprire un menu contestuale, che contiene alcune azioni aggiuntive come <guilabel
+>Abilita</guilabel
+>, <guilabel
+>Disabilita</guilabel
+>, <guilabel
+>Stampa</guilabel
+>, <ulink url="help:/kfontviewer/index.html"
+><guilabel
+>Apri nel visore di caratteri</guilabel
+>t </ulink
+> e <guilabel
+>Ricarica</guilabel
+>.</para>
+
+<sect3 id="font-filter">
+<title
+>Filtraggio dei caratteri</title>
+<para
+>Un campo testuale sopra all'anteprima dei caratteri ti permette di filtrare l'elenco. Puoi filtrare i caratteri basati su diverse categorie:</para>
+        <orderedlist>
+        <listitem
+><para
+>Famiglia.</para
+></listitem>
+        <listitem
+><para
+>Stile.</para
+></listitem>
+        <listitem
+><para
+>Fonderia.</para
+></listitem>
+        <listitem
+><para
+>Corrispondenza <application
+>FontConfig</application
+>: ti permette di inserire un nome di famiglia e di vedere quale famiglia effettivamente userebbe <application
+>FontConfig</application
+>.</para
+></listitem>
+        <listitem
+><para
+>Tipo del file di caratteri.</para
+></listitem>
+        <listitem
+><para
+>Nome del file di caratteri.</para
+></listitem>
+        <listitem
+><para
+>Posizione del file di caratteri.</para
+></listitem>
+        <listitem
+><para
+>Sistema di scrittura.</para
+></listitem>
+        </orderedlist>
+</sect3>
+
+<sect3 id="get-new-fonts">
+<title
+>Scarica nuovi caratteri</title>
+<para
+>I nuovi caratteri possono essere installare da file locali, oppure scaricati usando <quote
+>Scarica le Novità</quote
+>. La voce <guilabel
+>Scarica nuovi caratteri...</guilabel
+> nel pulsante degli strumenti (sopra l'elenco dei gruppi) ti permette di installare i caratteri da internet. I caratteri scaricati in questo modo saranno installati nel tuo gruppo dei <quote
+>Caratteri personali</quote
+>. Per installarli per tutto il sistema li dovrai spostare nel gruppo <quote
+>Caratteri di sistema</quote
+> (puoi farlo trascinandoli sulla voce del gruppo <quote
+>Caratteri di sistema</quote
+>; ti saranno richiesti i privilegi di amministrazione).</para>
+</sect3>
+
+</sect2>
+
+<sect2 id="font-duplicates">
+<title
+>Caratteri duplicati</title>
+<para
+>Se hai molti caratteri sul tuo sistema, è possibile che tu possa avere dei duplicati.</para
+> 
+<para
+>Fai clic sul pulsante <guilabel
+>Trova duplicati...</guilabel
+> per aprire un semplice strumento che esplorerà il sistema alla ricerca di caratteri con più di un file associato. Ad esempio, se hai <filename
+>times.ttf</filename
+> e <filename
+>times.TTF</filename
+> installati in <filename class="directory"
+>/usr/local/share/fonts</filename
+>, il meccanismo che gestisce i caratteri (chiamato <application
+>FontConfig</application
+>) te ne farà vedere uno solo. Così, se disinstalli un carattere questo riapparirebbe, perché verrebbe rimosso un solo file. L'esecuzione di questo strumento produrrà invece una finestra in cui sono elencati i caratteri con più di un file associato, ed il corrispondente elenco di file. Per selezionare un file da eliminare, fai clic sulla colonna contenente l'icona del cestino.</para>
+</sect2>
+
+<sect2 id="font-preview">
+<title
+>Anteprima</title>
+<para
+>Visualizza un'anteprima testuale in diverse dimensioni.</para>
+<para
+>Usando il menu contestuale puoi ingrandire o rimpicciolire, puoi selezionare un tipo di anteprima (<guilabel
+>Anteprima standard</guilabel
+> oppure <guilabel
+>Tutti i caratteri</guilabel
+>), e puoi cambiare il testo dell'anteprima.</para>
+
+<para
+>Avvia l'applicazione &kfontview; se hai bisogno di anteprime aggiuntive per i blocchi Unicode. </para>
+</sect2>
+</sect1>
+</article>

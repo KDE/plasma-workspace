@@ -1,0 +1,88 @@
+# Malayalam translations for plasma-workspace package.
+# Copyright (C) 2019 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# Automatically generated, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-28 00:47+0000\n"
+"PO-Revision-Date: 2020-11-25 19:54+0000\n"
+"Last-Translator: Subin Siby <subins2000@gmail.com>\n"
+"Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
+"org.in>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Weblate 4.3.2\n"
+
+#: package/contents/ui/main.qml:34
+#, kde-format
+msgid ""
+"User Feedback has been disabled centrally. Please contact your distributor."
+msgstr ""
+"ഉപയോക്തൃ അഭിപ്രായം കേന്ദ്രീകൃതമായി അപ്രാപ്‌തമാക്കി. നിങ്ങളുടെ വിതരണക്കാരനുമായി ബന്ധപ്പെടുക."
+
+#: package/contents/ui/main.qml:44 package/contents/ui/main.qml:77
+#, kde-format
+msgid "Plasma:"
+msgstr "പ്ലാസ്മ:"
+
+#: package/contents/ui/main.qml:51
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "You can help KDE improve Plasma by contributing information on how you "
+#| "use it, so we can focus on things that matter to you.<nl/><nl/"
+#| ">Contributing this information is optional and entirely anonymous. We "
+#| "never collect your personal data, files you use, websites you visit, or "
+#| "information that could identify you.<nl/><nl/>You can read about our "
+#| "policy in the following link:"
+msgctxt "@info"
+msgid ""
+"You can help KDE improve Plasma by contributing information on how you use "
+"it, so we can focus on things that matter to you.<nl/><nl/>Contributing this "
+"information is optional and entirely anonymous. We never collect your "
+"personal data, files you use, websites you visit, or information that could "
+"identify you.<nl/><nl/>You can read about <link url='https://kde.org/"
+"privacypolicy-apps.php'>our privacy policy here.</link>"
+msgstr ""
+"നിങ്ങൾ എങ്ങനെ പ്ലാസ്മ ഉപയോഗിക്കുന്നുവെന്നതിനെക്കുറിച്ചുള്ള വിവരങ്ങൾ സംഭാവന ചെയ്യുന്നതിലൂടെ കെ."
+"ഡി.ഇയെ മെച്ചപ്പെടുത്താൻ നിങ്ങൾക്ക് സഹായിക്കാനാകും, അതിനാൽ നിങ്ങൾക്ക് പ്രാധാന്യമുള്ള "
+"കാര്യങ്ങളിൽ ഞങ്ങൾക്ക് ശ്രദ്ധ കേന്ദ്രീകരിക്കാൻ കഴിയും.<nl/><nl/>ഈ വിവരങ്ങൾ സംഭാവന ചെയ്യുന്നത് "
+"നിർബന്ധമല്ലാത്തതും, പൂർണ്ണമായും സ്വകാര്യമായതുമാണ്. നിങ്ങളുടെ സ്വകാര്യ ഡാറ്റ, നിങ്ങൾ "
+"ഉപയോഗിക്കുന്ന ഫയലുകൾ, നിങ്ങൾ സന്ദർശിക്കുന്ന വെബ്‌സൈറ്റുകൾ അല്ലെങ്കിൽ നിങ്ങളെ തിരിച്ചറിയാൻ "
+"കഴിയുന്ന വിവരങ്ങൾ ഞങ്ങൾ ഒരിക്കലും ശേഖരിക്കുന്നില്ല.<nl/><nl/>ഞങ്ങളുടെ നയം ചുവടെയുള്ള "
+"ലിങ്കിലൂടെ വായിക്കാം:"
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Plasma"
+msgstr "പ്ലാസ്മ"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "The following information will be sent:"
+msgstr "ഈ പറയുന്ന വിവരങ്ങൾ അയക്കും:"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "View sent data:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "വിവേക് കെ ജെ"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "vivekkj2004@gmail.com"
+
+#~ msgid "User Feedback"
+#~ msgstr "ഉപയോക്തൃ അഭിപ്രായം"
+
+#~ msgid "Configure user feedback settings"
+#~ msgstr "ഉപയോക്തൃ അഭിപ്രായ സജ്ജീകരണങ്ങൾ ക്രമീകരിക്കുക"

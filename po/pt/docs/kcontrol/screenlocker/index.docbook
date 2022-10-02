@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Portuguese "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="screenlocker" lang="&language;">
+<articleinfo>
+<title
+>Bloqueio do Ecrã</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>José</firstname
+><surname
+>Pires</surname
+><affiliation
+><address
+><email
+>zepires@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+<!--FIXME code in workspace/kscreenlocker - docbook in workspace/plasma-desktop -->
+<date
+>2016-09-19</date>
+<releaseinfo
+>Plasma 5.8</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>systemsettings</keyword>
+<keyword
+>bloqueio do ecrã</keyword>
+<keyword
+>bloqueio do ecrã</keyword>
+</keywordset>
+</articleinfo>
+<!--https://bugs.kde.org/show_bug.cgi?id=317156 does this effect screenlock in kf5?-->
+<para
+>Ao usar este módulo, poderá definir quanto tempo deverá passar antes da activação do bloqueio do ecrã, assim como adicionar e remover a protecção por senha do seu bloqueio de ecrã.</para>
+
+<para
+>No topo encontra-se uma opção para o bloqueio de ecrã <guilabel
+>Bloquear o ecrã automaticamente ao fim de</guilabel
+>, e um campo incremental que define o período de inactividade antes de iniciar o bloqueio do ecrã. Poderá indicar qualquer número positivo de minutos neste campo.</para>
+
+<para
+>Por baixo disto, existe uma opção chamada <guilabel
+>Pedir uma senha após o bloqueio</guilabel
+>. Quando carregar numa tecla ou num botão do rato, de forma a terminar o bloqueio ao fim do tempo definido no campo incremental e voltar ao seu trabalho, deverá introduzir uma senha. A senha usada é a mesma senha que usou para se autenticar na sua máquina. </para>
+
+<para
+>O bloqueio manual do ecrã faz com que a protecção por senha fique em efeito imediatamente.</para>
+
+<para
+>A combinação de teclas predefinida <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>L</keycap
+></keycombo
+> oferece uma forma rápida de bloquear manualmente o ecrã.</para>
+
+<para
+>Assinale a opção <guilabel
+>Bloquear o ecrã ao reactivar</guilabel
+> se quiser um sistema protegido por senha quando reactivar o sistema a partir de um estado de suspensão/hibernação.</para>
+
+<para
+>Se quiser alterar o fundo no estado bloqueado, mude para a página do <guilabel
+>Papel de Parede</guilabel
+>.</para>
+
+<para
+>Poderá seleccionar uma <guilabel
+>Cor Simples</guilabel
+> como tipo de papel de parede.</para>
+
+<para
+>Em alternativa, use uma única imagem ou uma apresentação com imagens de uma pasta ou carregar novos papéis de parede da Internet.</para>
+
+</article>

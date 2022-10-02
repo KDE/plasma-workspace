@@ -1,0 +1,198 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Jean Cayron <jean.cayron@gmail.com>, 2009, 2010.
+# Jean Cayron et Odile Lambert <jean.cayron@gmail.com>, 2010, 2011.
+# Jean Cayron <jean.cayron@base.be>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner_sessions\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-01 00:45+0000\n"
+"PO-Revision-Date: 2011-07-14 09:06+0200\n"
+"Last-Translator: Jean Cayron <jean.cayron@base.be>\n"
+"Language-Team: Walloon <linux@walon.org>\n"
+"Language: wa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: sessionrunner.cpp:28 sessionrunner.cpp:64
+#, kde-format
+msgctxt "log out command"
+msgid "logout"
+msgstr "si dislodjî"
+
+#: sessionrunner.cpp:28
+#, kde-format
+msgid "Logs out, exiting the current desktop session"
+msgstr "Si dislodje, moussant foû del session scribanne do moumint"
+
+#: sessionrunner.cpp:29 sessionrunner.cpp:81
+#, fuzzy, kde-format
+#| msgctxt "shutdown computer command"
+#| msgid "shutdown"
+msgctxt "shut down computer command"
+msgid "shut down"
+msgstr "arester éndjole"
+
+#: sessionrunner.cpp:29
+#, kde-format
+msgid "Turns off the computer"
+msgstr "Arestêye li copiutrece"
+
+#: sessionrunner.cpp:33 sessionrunner.cpp:90
+#, kde-format
+msgctxt "lock screen command"
+msgid "lock"
+msgstr "eclawer"
+
+#: sessionrunner.cpp:33
+#, kde-format
+msgid "Locks the current sessions and starts the screen saver"
+msgstr "Eclawe les sessions do moumint eyet enonde li spårgneu di waitroûle"
+
+#: sessionrunner.cpp:36 sessionrunner.cpp:72
+#, kde-format
+msgctxt "restart computer command"
+msgid "restart"
+msgstr "renonder"
+
+#: sessionrunner.cpp:36
+#, kde-format
+msgid "Reboots the computer"
+msgstr "Renonde li copiutrece"
+
+#: sessionrunner.cpp:37 sessionrunner.cpp:73
+#, kde-format
+msgctxt "restart computer command"
+msgid "reboot"
+msgstr "renonder sistinme"
+
+#: sessionrunner.cpp:40
+#, kde-format
+msgctxt "switch user command"
+msgid "switch"
+msgstr "discandjî"
+
+#: sessionrunner.cpp:41
+#, kde-format
+msgctxt "switch user command"
+msgid "switch :q:"
+msgstr "discandjî :q:"
+
+#: sessionrunner.cpp:42
+#, kde-format
+msgid ""
+"Switches to the active session for the user :q:, or lists all active "
+"sessions if :q: is not provided"
+msgstr ""
+"Discandje li session ovrante po l' uzeu :q: oudonbén fwait l' djivêye di "
+"totes les sessions ovrantes si :q: n' est nén dné"
+
+#: sessionrunner.cpp:45 sessionrunner.cpp:130
+#, kde-format
+msgid "switch user"
+msgstr "discandjî d' uzeu"
+
+#: sessionrunner.cpp:45
+#, kde-format
+msgid "Starts a new session as a different user"
+msgstr "Enonde ene novele session pos èn ôte uzeu"
+
+#: sessionrunner.cpp:46 sessionrunner.cpp:130
+#, kde-format
+msgid "new session"
+msgstr "novele session"
+
+#: sessionrunner.cpp:50
+#, kde-format
+msgid "Lists all sessions"
+msgstr "Fwait l' djivêye di totes les sessions"
+
+#: sessionrunner.cpp:64
+#, kde-format
+msgid "log out"
+msgstr "dislodjî"
+
+#: sessionrunner.cpp:66
+#, kde-format
+msgctxt "log out command"
+msgid "Logout"
+msgstr "Dislodjî"
+
+#: sessionrunner.cpp:75
+#, kde-format
+msgid "Restart the computer"
+msgstr "Renonder l' copiutrece"
+
+#: sessionrunner.cpp:82
+#, fuzzy, kde-format
+#| msgctxt "shutdown computer command"
+#| msgid "shutdown"
+msgctxt "shut down computer command"
+msgid "shutdown"
+msgstr "arester éndjole"
+
+#: sessionrunner.cpp:84
+#, fuzzy, kde-format
+#| msgid "Shutdown the computer"
+msgid "Shut down the computer"
+msgstr "Arester li copiutrece"
+
+#: sessionrunner.cpp:93
+#, kde-format
+msgid "Lock the screen"
+msgstr "Eclawer waitroûle"
+
+#: sessionrunner.cpp:115
+#, kde-format
+msgctxt "User sessions"
+msgid "sessions"
+msgstr "sessions"
+
+#: sessionrunner.cpp:136
+#, fuzzy, kde-format
+#| msgid "switch user"
+msgid "Switch User"
+msgstr "discandjî d' uzeu"
+
+#: sessionrunner.cpp:211
+#, kde-format
+msgid "Warning - New Session"
+msgstr "Adviertixhmint - Novele session"
+
+#: sessionrunner.cpp:212
+#, fuzzy, kde-format
+#| msgid ""
+#| "<p>You have chosen to open another desktop session.<br />The current "
+#| "session will be hidden and a new login screen will be displayed.<br />An "
+#| "F-key is assigned to each session; F%1 is usually assigned to the first "
+#| "session, F%2 to the second session and so on. You can switch between "
+#| "sessions by pressing Ctrl, Alt and the appropriate F-key at the same "
+#| "time. Additionally, the KDE Panel and Desktop menus have actions for "
+#| "switching between sessions.</p>"
+msgid ""
+"<p>You have chosen to open another desktop session.<br />The current session "
+"will be hidden and a new login screen will be displayed.<br />An F-key is "
+"assigned to each session; F%1 is usually assigned to the first session, F%2 "
+"to the second session and so on. You can switch between sessions by pressing "
+"Ctrl, Alt and the appropriate F-key at the same time. Additionally, the "
+"Plasma Panel and Desktop menus have actions for switching between sessions.</"
+"p>"
+msgstr ""
+"<p>Vos avoz tchoezi d' drovi ene ôte session d' sicribanne<br />Li session "
+"do moumint serè catcheye eyet ene novele waitroûle d' elodjaedje serè "
+"håynêye.<br />Ene tape F est aroyeye a tchaeke session; F%1 est normålmint "
+"aroyî al pumire session, F%2 al deujhinme, evnd. Vos ploz passer inte vos "
+"sessions e tchôkant CTRL, ALT eyet l' boune tape F sol minme tins. Li "
+"scriftôr di KDE eyet les dressêyes des scribannes ont des faitindjes po "
+"passer d' ene session viè ene ôte, eto.</p>"
+
+#~ msgid "New Session"
+#~ msgstr "Novele session"
+
+#~ msgid "&Start New Session"
+#~ msgstr "&Enonder ene novele session"

@@ -1,0 +1,35 @@
+# Translation of plasma_engine_notifications to Norwegian Nynorsk
+#
+# Karl Ove Hufthammer <karl@huftis.org>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_engine_notifications\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"PO-Revision-Date: 2009-06-22 19:58+0200\n"
+"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
+"Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
+"Language: nn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 0.3\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: notificationaction.cpp:24
+#, kde-format
+msgid "The notification dataEngine is not set."
+msgstr "Varslings-datamotoren er ikkje definert."
+
+#: notificationaction.cpp:34
+#, kde-format
+msgid "Invalid destination: %1"
+msgstr "Ugyldig mål: %1"
+
+#: notificationsengine.cpp:88
+#, kde-format
+msgid "Unknown Application"
+msgstr "Ukjent program"

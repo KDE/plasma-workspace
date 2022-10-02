@@ -1,0 +1,363 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmdisplay\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-03 00:45+0000\n"
+"PO-Revision-Date: 2022-05-04 19:00+0100\n"
+"Last-Translator: Pedro Morais <morais@kde.org>\n"
+"Language-Team: pt <kde-i18n-pt@kde.org>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Spell-Extra: antevisão ícones itens negrito\n"
+"X-Spell-Extra: helvetica times kde\n"
+"X-POFile-SpellExtra: pt CRT BGR tm TFT ClearType kdm xorg ServerLocalArgs\n"
+"X-POFile-SpellExtra: share DisplaySize conf kdmrc config dpi Tsiapaliokas\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-POFile-IgnoreConsistency:  to \n"
+"X-POFile-SpellExtra: Antonis Wayland Window System DPI esca\n"
+
+#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, kde-format
+msgid "Force font DPI Wayland"
+msgstr "Forçar os PPP's do texto no Wayland"
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:13
+#, kde-format
+msgid "Force font DPI on X11"
+msgstr "Forçar os PPP do texto no X11"
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, kde-format
+msgid "General font"
+msgstr "Tipo de letra geral"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, kde-format
+msgid "Fixed width font"
+msgstr "Tipo de letra monoespaçado"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, kde-format
+msgid "Small font"
+msgstr "Tipo de letra pequeno"
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, kde-format
+msgid "Tool bar font"
+msgstr "Tipo de letra da barra de ferramentas"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, kde-format
+msgid "Menu font"
+msgstr "Tipo de letra do menu"
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, kde-format
+msgid "Window title font"
+msgstr "Tipo de letra do título da janela"
+
+#: kxftconfig.cpp:458
+#, kde-format
+msgctxt "use system subpixel setting"
+msgid "Vendor default"
+msgstr "Predefinição de fábrica"
+
+#: kxftconfig.cpp:460
+#, kde-format
+msgctxt "no subpixel rendering"
+msgid "None"
+msgstr "Nenhuma"
+
+#: kxftconfig.cpp:462
+#, kde-format
+msgid "RGB"
+msgstr "RGB"
+
+#: kxftconfig.cpp:464
+#, kde-format
+msgid "BGR"
+msgstr "BGR"
+
+#: kxftconfig.cpp:466
+#, kde-format
+msgid "Vertical RGB"
+msgstr "RGB Vertical"
+
+#: kxftconfig.cpp:468
+#, kde-format
+msgid "Vertical BGR"
+msgstr "BGR Vertical"
+
+#: kxftconfig.cpp:496
+#, kde-format
+msgctxt "use system hinting settings"
+msgid "Vendor default"
+msgstr "Predefinição de fábrica"
+
+#: kxftconfig.cpp:498
+#, kde-format
+msgctxt "medium hinting"
+msgid "Medium"
+msgstr "Média"
+
+#: kxftconfig.cpp:500
+#, kde-format
+msgctxt "no hinting"
+msgid "None"
+msgstr "Nenhuma"
+
+#: kxftconfig.cpp:502
+#, kde-format
+msgctxt "slight hinting"
+msgid "Slight"
+msgstr "Ligeira"
+
+#: kxftconfig.cpp:504
+#, kde-format
+msgctxt "full hinting"
+msgid "Full"
+msgstr "Completa"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module lets you configure the system fonts."
+msgstr "Este módulo permite-lhe configurar os tipos de letra do sistema."
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid "Change Display Scaling…"
+msgstr "Mudar a Escala do Ecrã…"
+
+#: package/contents/ui/main.qml:37
+#, kde-format
+msgid ""
+"Some changes such as anti-aliasing or DPI will only affect newly started "
+"applications."
+msgstr ""
+"Algumas alterações, como o 'anti-aliasing' ou a resolução em PPP, só irão "
+"afectar as aplicações acabadas de iniciar."
+
+#: package/contents/ui/main.qml:51
+#, kde-format
+msgid ""
+"Very large fonts may produce odd-looking results. Consider adjusting the "
+"global screen scale instead of using a very large font size."
+msgstr ""
+"Os tipos de letra muito grandes podem produzir resultados estranhos. Pense "
+"em ajustar a escala global do ecrã em vez de usar um tamanho de letra muito "
+"grande."
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid ""
+"Decimal font sizes can cause text layout problems in some applications. "
+"Consider using only integer font sizes."
+msgstr ""
+"Os tamanhos de letra decimais poderão causar alguns problemas de formatação "
+"em algumas aplicações; pense em usar tamanhos inteiros."
+
+#: package/contents/ui/main.qml:94
+#, kde-format
+msgid ""
+"The recommended way to scale the user interface is using the global screen "
+"scaling feature."
+msgstr ""
+"A forma recomendada de ajustar a escala da interface é usar a funcionalidade "
+"de ajuste de escala do ecrã global."
+
+#: package/contents/ui/main.qml:106
+#, kde-format
+msgid "&Adjust All Fonts…"
+msgstr "&Ajustar Todos os Tipos de Letra…"
+
+#: package/contents/ui/main.qml:119
+#, kde-format
+msgid "General:"
+msgstr "Geral:"
+
+#: package/contents/ui/main.qml:120
+#, kde-format
+msgid "Select general font"
+msgstr "Seleccionar o tipo de letra geral"
+
+#: package/contents/ui/main.qml:131
+#, kde-format
+msgid "Fixed width:"
+msgstr "Tamanho fixo:"
+
+#: package/contents/ui/main.qml:132
+#, kde-format
+msgid "Select fixed width font"
+msgstr "Seleccionar o tipo de letra monoespaçado"
+
+#: package/contents/ui/main.qml:143
+#, kde-format
+msgid "Small:"
+msgstr "Pequeno:"
+
+#: package/contents/ui/main.qml:144
+#, kde-format
+msgid "Select small font"
+msgstr "Seleccionar o tipo de letra pequeno"
+
+#: package/contents/ui/main.qml:155
+#, kde-format
+msgid "Toolbar:"
+msgstr "Barra de Ferramentas:"
+
+#: package/contents/ui/main.qml:156
+#, kde-format
+msgid "Select toolbar font"
+msgstr "Seleccionar o tipo de letra da barra de ferramentas"
+
+#: package/contents/ui/main.qml:167
+#, kde-format
+msgid "Menu:"
+msgstr "Menu:"
+
+#: package/contents/ui/main.qml:168
+#, kde-format
+msgid "Select menu font"
+msgstr "Seleccionar o tipo de letra do menu"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "Window title:"
+msgstr "Título da janela:"
+
+#: package/contents/ui/main.qml:179
+#, kde-format
+msgid "Select window title font"
+msgstr "Seleccionar o tipo de letra do título da janela"
+
+#: package/contents/ui/main.qml:194
+#, kde-format
+msgid "Anti-Aliasing:"
+msgstr "Suavização:"
+
+#: package/contents/ui/main.qml:199
+#, kde-format
+msgid "Enable"
+msgstr "Activar"
+
+#: package/contents/ui/main.qml:203
+#, kde-kuit-format
+msgctxt "@info:tooltip Anti-Aliasing"
+msgid ""
+"Pixels on displays are generally aligned in a grid. Therefore shapes of "
+"fonts that do not align with this grid will look blocky and wrong unless "
+"<emphasis>anti-aliasing</emphasis> techniques are used to reduce this "
+"effect. You generally want to keep this option enabled unless it causes "
+"problems."
+msgstr ""
+"Os pixels nos ecrãs normalmente estão alinhados numa grelha. Como tal, as "
+"formas dos tipos de letra que não se alinham com essa grelha irão parecer "
+"blocos e ficarão mal, a menos que se usem algumas técnicas de "
+"<emphasis>suavização</emphasis> para reduzir esse efeito. Geralmente irá "
+"querer manter esta opção activa, a menos que cause problemas."
+
+#: package/contents/ui/main.qml:217
+#, kde-format
+msgid "Exclude range from anti-aliasing"
+msgstr "Intervalo de exclusão da suavização"
+
+#: package/contents/ui/main.qml:236 package/contents/ui/main.qml:259
+#, kde-format
+msgid "%1 pt"
+msgstr "%1 pt"
+
+#: package/contents/ui/main.qml:251
+#, kde-format
+msgid "to"
+msgstr "até"
+
+#: package/contents/ui/main.qml:282
+#, kde-format
+msgctxt "Used as a noun, and precedes a combobox full of options"
+msgid "Sub-pixel rendering:"
+msgstr "Desenho dos sub-pixels:"
+
+#: package/contents/ui/main.qml:324
+#, kde-kuit-format
+msgctxt "@info:tooltip Sub-pixel rendering"
+msgid ""
+"<para>On TFT or LCD screens every single pixel is actually composed of three "
+"or four smaller monochrome lights. These <emphasis>sub-pixels</emphasis> can "
+"be changed independently to further improve the quality of displayed fonts.</"
+"para> <para>The rendering quality is only improved if the selection matches "
+"the manner in which the sub-pixels of your display are aligned. Most "
+"displays have a linear ordering of <emphasis>RGB</emphasis> sub-pixels, some "
+"have <emphasis>BGR</emphasis> and some exotic orderings are not supported by "
+"this feature.</para>This does not work with CRT monitors."
+msgstr ""
+"<para>Nos ecrãs TFT ou LCD, cada pixel individual é de facto composto por "
+"três ou quatro luzes monocromáticas mais pequenas. Esses <emphasis>sub-"
+"pixels</emphasis> podem ser mudados de forma independente para melhorar "
+"ainda mais a qualidade dos tipos de letra apresentados.</para> <para>A "
+"qualidade do desenho só é melhorada se a selecção corresponder à forma como "
+"estão alinhados os sub-pixels do seu ecrã. A maioria dos ecrãs têm uma "
+"ordenação linear de sub-pixels <emphasis>RGB</emphasis>, outras têm "
+"<emphasis>BGR</emphasis> ou outras ordenações mais exóticas que não são "
+"suportadas por esta funcionalidade.</para>Isto não funciona com monitores "
+"CRT."
+
+#: package/contents/ui/main.qml:329
+#, kde-format
+msgctxt "Used as a noun, and precedes a combobox full of options"
+msgid "Hinting:"
+msgstr "Sugestão:"
+
+#: package/contents/ui/main.qml:370
+#, kde-kuit-format
+msgctxt "@info:tooltip Hinting"
+msgid ""
+"Hinting is a technique in which hints embedded in a font are used to enhance "
+"the rendering quality especially at small sizes. Stronger hinting generally "
+"leads to sharper edges but the small letters will less closely resemble "
+"their shape at big sizes."
+msgstr ""
+"As sugestões são uma técnica na qual alguns dados de sugestão incorporados "
+"no tipo de letra são usados para melhorar a qualidade de desenho, "
+"especialmente com tamanhos pequenos. Uma sugestão mais forte normalmente dá "
+"origem a arestas mais nítidas mas as letras pequenas ficarão menos parecidas "
+"com a sua forma original com tamanhos grandes."
+
+#: package/contents/ui/main.qml:380
+#, kde-format
+msgid "Force font DPI:"
+msgstr "Forçar os PPP do texto:"
+
+#: package/contents/ui/main.qml:422
+#, kde-kuit-format
+msgctxt "@info:tooltip Force fonts DPI"
+msgid ""
+"<para>Enter your screen's DPI here to make on-screen fonts match their "
+"physical sizes when printed. Changing this option from its default value "
+"will conflict with many apps; some icons and images may not scale as "
+"expected.</para><para>To increase text size, change the size of the fonts "
+"above. To scale everything, use the scaling slider on the <interface>Display "
+"& Monitor</interface> page.</para>"
+msgstr ""
+"<para>Indique aqui a densidade em PPP (pontos por polegada ou DPI) para "
+"fazer com que os tipos de letra no ecrã correspondam aos seus tamanhos "
+"físicos quando forem impressos. Se mudar esta opção face ao seu valor "
+"predefinido, irá entrar em conflito com várias aplicações; alguns ícone e "
+"imagens poderão não se ajustar como seria de esperar.</para><para>Para "
+"aumentar o tamanho do texto, mude o tamanho dos tipos de letra acima. Para "
+"ajustar a escala de tudo, use a barra deslizante de escala na página do "
+"<interface>Ecrã e Monitor</interface>.</para>"
+
+#: package/contents/ui/main.qml:428
+#, kde-format
+msgid "Select Font"
+msgstr "Seleccione o Tipo de Letra"

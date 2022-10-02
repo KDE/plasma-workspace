@@ -1,0 +1,343 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Balázs Úr <urbalazs@gmail.com>, 2013, 2014.
+# Kristóf Kiszel <ulysses@kubuntu.org>, 2014, 2019, 2020.
+# Kristof Kiszel <kiszel.kristof@gmail.com>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-18 00:47+0000\n"
+"PO-Revision-Date: 2022-02-07 11:02+0100\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.07.70\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Általános"
+
+#: package/contents/config/config.qml:18
+#, kde-format
+msgid "Entries"
+msgstr "Bejegyzések"
+
+#: package/contents/ui/ConfigEntries.qml:31
+#, kde-format
+msgid "Always show all entries"
+msgstr "Összes bejegyzés megjelenítése"
+
+#: package/contents/ui/ConfigEntries.qml:37
+#, kde-format
+msgid "Application Status"
+msgstr "Alkalmazásállapot"
+
+#: package/contents/ui/ConfigEntries.qml:39
+#, kde-format
+msgid "Communications"
+msgstr "Kommunikáció"
+
+#: package/contents/ui/ConfigEntries.qml:41
+#, kde-format
+msgid "System Services"
+msgstr "Rendszerszolgáltatások"
+
+#: package/contents/ui/ConfigEntries.qml:43
+#, kde-format
+msgid "Hardware Control"
+msgstr "Hardvervezérlés"
+
+#: package/contents/ui/ConfigEntries.qml:46
+#, kde-format
+msgid "Miscellaneous"
+msgstr "Egyéb"
+
+#: package/contents/ui/ConfigEntries.qml:80
+#, kde-format
+msgctxt "Name of the system tray entry"
+msgid "Entry"
+msgstr "Bejegyzés"
+
+#: package/contents/ui/ConfigEntries.qml:85
+#, kde-format
+msgid "Visibility"
+msgstr "Láthatóság"
+
+#: package/contents/ui/ConfigEntries.qml:91
+#, kde-format
+msgid "Keyboard Shortcut"
+msgstr "Gyorsbillentyűk"
+
+#: package/contents/ui/ConfigEntries.qml:222
+#, kde-format
+msgid "Shown when relevant"
+msgstr "Megjelenítés, ha releváns"
+
+#: package/contents/ui/ConfigEntries.qml:223
+#, kde-format
+msgid "Always shown"
+msgstr "Mindig jelenjen meg"
+
+#: package/contents/ui/ConfigEntries.qml:224
+#, kde-format
+msgid "Always hidden"
+msgstr "Mindig rejtett"
+
+#: package/contents/ui/ConfigEntries.qml:225
+#, kde-format
+msgid "Disabled"
+msgstr "Kikapcsolva"
+
+#: package/contents/ui/ConfigGeneral.qml:23
+#, kde-format
+msgctxt "The arrangement of system tray icons in the Panel"
+msgid "Panel icon size:"
+msgstr "Panelikonok mérete:"
+
+#: package/contents/ui/ConfigGeneral.qml:25
+#, kde-format
+msgid "Small"
+msgstr "Kicsi"
+
+#: package/contents/ui/ConfigGeneral.qml:32
+#, kde-format
+msgid "Scale with Panel height"
+msgstr "Méretezés a panelmagassággal"
+
+#: package/contents/ui/ConfigGeneral.qml:33
+#, kde-format
+msgid "Scale with Panel width"
+msgstr "Méretezés a panelszélességgel"
+
+#: package/contents/ui/ConfigGeneral.qml:39
+#, fuzzy, kde-format
+#| msgid "Automatically enabled when in tablet mode"
+msgid "Automatically enabled when in Touch Mode"
+msgstr "Automatikus bekapcsolás tablet módban"
+
+#: package/contents/ui/ConfigGeneral.qml:48
+#, kde-format
+msgctxt "@label:listbox The spacing between system tray icons in the Panel"
+msgid "Panel icon spacing:"
+msgstr "Panelikonok térköze:"
+
+#: package/contents/ui/ConfigGeneral.qml:51
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Small"
+msgstr "Kicsi"
+
+#: package/contents/ui/ConfigGeneral.qml:55
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Normal"
+msgstr "Normál"
+
+#: package/contents/ui/ConfigGeneral.qml:59
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Large"
+msgstr "Nagy"
+
+#: package/contents/ui/ConfigGeneral.qml:82
+#, fuzzy, kde-format
+#| msgctxt "@info:usagetip under a combobox when tablet mode is on"
+#| msgid "Automatically set to Large when in tablet mode"
+msgctxt "@info:usagetip under a combobox when Touch Mode is on"
+msgid "Automatically set to Large when in Touch Mode"
+msgstr "Automatikus nagy méret tablet módban"
+
+#: package/contents/ui/ExpandedRepresentation.qml:64
+#, kde-format
+msgctxt "@action:button"
+msgid "Go Back"
+msgstr ""
+
+#: package/contents/ui/ExpandedRepresentation.qml:77
+#, kde-format
+msgid "Status and Notifications"
+msgstr "Állapot és értesítések"
+
+#: package/contents/ui/ExpandedRepresentation.qml:93
+#, kde-format
+msgid "More actions"
+msgstr "További műveletek"
+
+#: package/contents/ui/ExpandedRepresentation.qml:182
+#, kde-format
+msgid "Keep Open"
+msgstr "Tartsa nyitva"
+
+#: package/contents/ui/ExpanderArrow.qml:22
+#, kde-format
+msgid "Expand System Tray"
+msgstr "Paneltálca kiterjesztése"
+
+#: package/contents/ui/ExpanderArrow.qml:23
+#, kde-format
+msgid "Show all the items in the system tray in a popup"
+msgstr "A paneltálca összes elemének megjelenítése egy felugróban"
+
+#: package/contents/ui/ExpanderArrow.qml:36
+#, kde-format
+msgid "Close popup"
+msgstr "Felugró bezárása"
+
+#: package/contents/ui/ExpanderArrow.qml:36
+#, kde-format
+msgid "Show hidden icons"
+msgstr "Rejtett ikonok megjelenítése"
+
+#: systemtraymodel.cpp:123
+#, kde-format
+msgctxt ""
+"Suffix added to the applet name if the applet is autoloaded via DBus "
+"activation"
+msgid "%1 (Automatic load)"
+msgstr "%1 (Automatikus betöltés)"
+
+#~ msgid "Auto"
+#~ msgstr "Automatikus"
+
+#~ msgid "Shown"
+#~ msgstr "Megjelenik"
+
+#~ msgid "Hidden"
+#~ msgstr "Rejtett"
+
+#~ msgid "Categories"
+#~ msgstr "Kategóriák"
+
+#~ msgid "Extra Items"
+#~ msgstr "Extra elemek"
+
+#~ msgid "Hide icons"
+#~ msgstr "Ikonok elrejtése"
+
+#, fuzzy
+#~| msgid "Status & Notifications"
+#~ msgid "Stat&us Notifier"
+#~ msgstr "Állapot és értesítések"
+
+#~ msgid ""
+#~ "<html><head/><body><p><span style=\" font-weight:600;\">Log</span></p></"
+#~ "body></html>"
+#~ msgstr ""
+#~ "<html><head/><body><p><span style=\" font-weight:600;\">Napló</span></p></"
+#~ "body></html>"
+
+#~ msgid "<b>Status</b>"
+#~ msgstr "<b>Állapot</b>"
+
+#, fuzzy
+#~| msgid " (Automatic load)"
+#~ msgid "Automatic"
+#~ msgstr " (Automatikus betöltés)"
+
+#~ msgid "Passive"
+#~ msgstr "Passzív"
+
+#~ msgid "Ac&tive"
+#~ msgstr "Ak&tív"
+
+#, fuzzy
+#~| msgid "Destination"
+#~ msgid "&NeedsAttention"
+#~ msgstr "Cél"
+
+#~ msgid "<b>Icon</b>"
+#~ msgstr "<b>Ikon</b>"
+
+#~ msgid "<b>ToolTip</b>"
+#~ msgstr "<b>Buboréksúgó</b>"
+
+#~ msgid "Update"
+#~ msgstr "Frissítés"
+
+#~ msgid "&Jobs"
+#~ msgstr "&Feladatok"
+
+#~ msgid "<b>Job Control</b>"
+#~ msgstr "<b>Feladatvezérlő</b>"
+
+#~ msgid "<b>Progress</b>"
+#~ msgstr "<b>Folyamat</b>"
+
+#~ msgid "<b>Naming</b>"
+#~ msgstr "<b>Elnevezés</b>"
+
+#~ msgid "Job Started"
+#~ msgstr "Feladat elindítva"
+
+#~ msgid "Source"
+#~ msgstr "Forrás"
+
+#~ msgid "Destination"
+#~ msgstr "Cél"
+
+#~ msgid "Testing kuiserver (%1 seconds remaining)"
+#~ msgstr "Kui-kiszolgáló tesztelése (%1 másodperc van hátra)"
+
+#~ msgctxt "tooltip title"
+#~ msgid "System Service Item"
+#~ msgstr "Rendszerszolgáltatás elem"
+
+#, fuzzy
+#~| msgid "Status & Notifications"
+#~ msgctxt "title"
+#~ msgid "StatusNotifierTest"
+#~ msgstr "Állapot és értesítések"
+
+#~ msgid "System Tray Options"
+#~ msgstr "Rendszertálca beállításai"
+
+#~ msgctxt "%1 is the name of the containment"
+#~ msgid "%1 Options"
+#~ msgstr "%1 beállításai"
+
+#~ msgid "Unknown Category"
+#~ msgstr "Ismeretlen kategória"
+
+#~ msgid "Hardware"
+#~ msgstr "Hardver"
+
+#, fuzzy
+#~| msgctxt "%1 is the name of the containment"
+#~| msgid "%1 Options"
+#~ msgctxt "%1 is the name of the applet"
+#~ msgid "%1 Options"
+#~ msgstr "%1 beállításai"
+
+#~ msgid "Alt+S"
+#~ msgstr "Alt+S"
+
+#~ msgid "Error: Can't find plugin metadata: %1"
+#~ msgstr "Hiba: nem található a bővítmény metaadat: %1"
+
+#~ msgid "Error loading QML file: %1"
+#~ msgstr "Hiba a QML fájl betöltése közben: %1"
+
+#~ msgid "Showing info for package: %1"
+#~ msgstr "Információ megjelenítése a csomaghoz: %1"
+
+#~ msgid "      Name : %1"
+#~ msgstr "      Név: %1"
+
+#~ msgid "   Comment : %1"
+#~ msgstr "   Megjegyzés: %1"
+
+#~ msgid "    Plugin : %1"
+#~ msgstr "    Bővítmény: %1"
+
+#~ msgid "    Author : %1"
+#~ msgstr "    Szerző: %1"
+
+#~ msgid "      Path : %1"
+#~ msgstr "      Útvonal: %1"

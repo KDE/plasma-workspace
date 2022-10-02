@@ -1,0 +1,65 @@
+# translation of plasma_runner_webshortcuts.po to Dutch
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Rinse de Vries <rinsedevries@kde.nl>, 2008.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2009, 2010, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_webshortcuts\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-06-02 00:47+0000\n"
+"PO-Revision-Date: 2021-12-27 11:57+0100\n"
+"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"Language-Team: \n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.12.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: webshortcutrunner.cpp:58
+#, kde-format
+msgid "Opens \"%1\" in a web browser with the query :q:."
+msgstr "Opent \"%1\" in een webbrowser met de zoekopdracht :q:."
+
+#: webshortcutrunner.cpp:63
+#, kde-format
+msgid "Search using the DuckDuckGo bang syntax"
+msgstr "Zoeken met de syntaxis DuckDuckGo bang"
+
+#: webshortcutrunner.cpp:94
+#, kde-format
+msgid "Search in private window"
+msgstr "In privé venster zoeken"
+
+#: webshortcutrunner.cpp:94
+#, kde-format
+msgid "Search in incognito window"
+msgstr "In incognito venster zoeken"
+
+#: webshortcutrunner.cpp:129 webshortcutrunner.cpp:146
+#, kde-format
+msgid "Search %1 for %2"
+msgstr "%1 doorzoeken voor %2"
+
+#~ msgctxt "A web shortcut and its name"
+#~ msgid "%1: %2"
+#~ msgstr "%1: %2"
+
+#~ msgctxt "A web shortcut, its name and a description"
+#~ msgid "%1: %2 %3"
+#~ msgstr "%1: %2 %3"
+
+#~ msgid ""
+#~ "Opens the location associated with \"shortcut\" in a web browser with the "
+#~ "query :q:. Known shortcuts include:\n"
+#~ "%1"
+#~ msgstr ""
+#~ "Opent de locatie geassocieerd met \"sneltoets\" in een webbrowser met de "
+#~ "zoekopdracht :q:. Bekende sneltoetsen bevatten:\n"
+#~ "%1"
+
+#~ msgid "Web Shortcut"
+#~ msgstr "Webkoppeling"

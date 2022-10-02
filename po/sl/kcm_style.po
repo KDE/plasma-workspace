@@ -1,0 +1,426 @@
+# Translation of kcmstyle.po to Slovenian
+# translation of kcmstyle.po to Slovenian
+# KDEBASE TRANSLATION TO SLOVENIAN LANGUAGE.
+# Copyright (C) 2001,2002, 2003, 2004 Free Software Foundation, Inc.
+# $Id: kcm_style.po 1632798 2022-09-02 01:32:10Z scripty $
+# $Source$
+#
+# Roman Maurer <roman.maurer@amis.net>, 2000.
+# Andrej Vernekar <andrej.vernekar@moj.net>, 2002, 2010.
+# Gregor Rakar <gregor.rakar@kiss.si>, 2003, 2004.
+# Jure Repinc <jlp@holodeck1.com>, 2007, 2008, 2009, 2012.
+# Andrej Mernik <andrejm@ubuntu.si>, 2013, 2017, 2018.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmstyle\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"PO-Revision-Date: 2021-08-16 06:33+0200\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
+"X-Generator: Poedit 3.0\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+
+#: gtkpage.cpp:59
+#, kde-format
+msgid "%1 is not a valid GTK Theme archive."
+msgstr "%1 ni veljavna tema arhiva GTK."
+
+#: kcmstyle.cpp:161 kcmstyle.cpp:168
+#, kde-format
+msgid "There was an error loading the configuration dialog for this style."
+msgstr "Prišlo je do napake med nalaganjem nastavitvenega okna za ta slog."
+
+#: kcmstyle.cpp:274
+#, kde-format
+msgid "Failed to apply selected style '%1'."
+msgstr "Ni bilo mogoče uveljaviti izbranega sloga '%1'."
+
+#: package/contents/ui/EffectSettingsPopup.qml:32
+#, kde-format
+msgid "Show icons:"
+msgstr "Pokaži ikone:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:33
+#, kde-format
+msgid "On buttons"
+msgstr "Na gumbih"
+
+#: package/contents/ui/EffectSettingsPopup.qml:44
+#, kde-format
+msgid "In menus"
+msgstr "V menijih"
+
+#: package/contents/ui/EffectSettingsPopup.qml:56
+#, kde-format
+msgid "Main toolbar label:"
+msgstr "Značka glavne orodne vrstice:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "None"
+msgstr "Brez"
+
+#: package/contents/ui/EffectSettingsPopup.qml:59
+#, kde-format
+msgid "Text only"
+msgstr "Samo besedilo"
+
+#: package/contents/ui/EffectSettingsPopup.qml:60
+#, kde-format
+msgid "Beside icons"
+msgstr "Poleg ikon"
+
+#: package/contents/ui/EffectSettingsPopup.qml:61
+#, kde-format
+msgid "Below icon"
+msgstr "Pod ikonami"
+
+#: package/contents/ui/EffectSettingsPopup.qml:76
+#, kde-format
+msgid "Secondary toolbar label:"
+msgstr "Značka drugotne orodne vrstice:"
+
+#: package/contents/ui/GtkStylePage.qml:18
+#, kde-format
+msgid "GNOME/GTK Application Style"
+msgstr "Slog programov GNOME/GTK"
+
+#: package/contents/ui/GtkStylePage.qml:44
+#, kde-format
+msgid "GTK theme:"
+msgstr "Tema GTK:"
+
+#: package/contents/ui/GtkStylePage.qml:69
+#, kde-format
+msgid "Preview…"
+msgstr "Predogled…"
+
+#: package/contents/ui/GtkStylePage.qml:88
+#, kde-format
+msgid "Install from File…"
+msgstr "Namesti iz datoteke…"
+
+#: package/contents/ui/GtkStylePage.qml:93
+#, kde-format
+msgid "Get New GNOME/GTK Application Styles…"
+msgstr "Dobi nove sloge aplikacij GNOME/GTK…"
+
+#: package/contents/ui/GtkStylePage.qml:109
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr "Izberi arhiv tem GTK"
+
+#: package/contents/ui/GtkStylePage.qml:111
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr "Arhiv tem GTK (*.tar.xz *.tar.gz *.tar.bz2)"
+
+#: package/contents/ui/main.qml:17
+#, kde-format
+msgid ""
+"This module allows you to modify the visual appearance of applications' user "
+"interface elements."
+msgstr ""
+"Ta modul vam omogoča, da spremenite videz predmetov uporabniškega vmesnika."
+
+#: package/contents/ui/main.qml:96
+#, kde-format
+msgid "Configure Style…"
+msgstr "Nastavi slog…"
+
+#: package/contents/ui/main.qml:116
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr "Nastavi ikone in orodne vrstice"
+
+#: package/contents/ui/main.qml:132
+#, kde-format
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "Nastavi slog GNOME/GTK…"
+
+#: styleconfdialog.cpp:21
+#, kde-format
+msgid "Configure %1"
+msgstr "Nastavi %1"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "Zavihek 1"
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, kde-format
+msgid "Push Button"
+msgstr "Gumb za potisk"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, kde-format
+msgid "Combo box"
+msgstr "Kombinirano polje"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "Označno polje"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "Izbirni gumb"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:133
+#, kde-format
+msgid "Tab 2"
+msgstr "Zavihek 2"
+
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, kde-format
+msgid "Application style"
+msgstr "Slog aplikacije"
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, kde-format
+msgid "Show icons on buttons"
+msgstr "Pokaži ikone v gumbih"
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, kde-format
+msgid "Show icons in menus"
+msgstr "Pokaži ikone v menijih"
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, kde-format
+msgid "Main toolbar label"
+msgstr "Oznaka glavne orodne letvice"
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, kde-format
+msgid "Secondary toolbar label"
+msgstr "Oznaka drugotne orodne letvice"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Gregor Rakar,Roman Maurer,Jure Repinc,Andrej Mernik,Matjaž Jeran"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "gregor.rakar@kiss.si,roman.maurer@amis.net,jlp@holodeck1.com,"
+#~ "andrejm@ubuntu.si,matjaz.jeran@amis.net"
+
+#~ msgid "Application Style"
+#~ msgstr "Slog programov"
+
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
+#~ msgstr "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
+
+#~ msgid "Karol Szwed"
+#~ msgstr "Karol Szwed"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Kai Uwe Broulik"
+
+#~ msgid "GTK3 theme:"
+#~ msgstr "Tema GTK3:"
+
+#~ msgid "Download New GNOME/GTK2 Application Styles..."
+#~ msgstr "Dobi nove sloge programov GNOME/GTK2..."
+
+#~ msgid "GNOME/GTK2 Application Styles"
+#~ msgstr "Slog programov GNOME/GTK2"
+
+#~ msgid "Download New GNOME/GTK3 Application Styles..."
+#~ msgstr "Dobi nove sloge programov GNOME/GTK3..."
+
+#~ msgid "GNOME/GTK3 Application Styles"
+#~ msgstr "Slog programov GNOME/GTK3"
+
+#~ msgid "Unable to Load Dialog"
+#~ msgstr "Ni bilo mogoče naložiti pogovornega okna"
+
+#~ msgid "No description available."
+#~ msgstr "Opis ni na voljo."
+
+#~ msgid ""
+#~ "This area shows a preview of the currently selected style without having "
+#~ "to apply it to the whole desktop."
+#~ msgstr ""
+#~ "To območje prikazuje predogled trenutno izbranega sloga, ne da bi ga bilo "
+#~ "treba uveljaviti na celotnem namizju."
+
+#~ msgid ""
+#~ "Here you can choose from a list of predefined widget styles (e.g. the way "
+#~ "buttons are drawn) which may or may not be combined with a theme "
+#~ "(additional information like a marble texture or a gradient)."
+#~ msgstr ""
+#~ "Tu lahko izbirate iz seznama vnaprej določenih slogov gradnikov (npr. "
+#~ "kako se izrisujejo gumbi), ki so lahko kombinirani s temo (npr. dodatne "
+#~ "podrobnosti, kot je marmornata tekstura ali preliv)."
+
+#, fuzzy
+#~| msgid ""
+#~| "If you enable this option, KDE Applications will show small icons "
+#~| "alongside some important buttons."
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "some important buttons."
+#~ msgstr ""
+#~ "Če omogočite to možnost, bodo programi KDE pokazali majhne ikone ob "
+#~ "nekaterih pomembnih gumbih."
+
+#, fuzzy
+#~| msgid ""
+#~| "If you enable this option, KDE Applications will show small icons "
+#~| "alongside most menu items."
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "most menu items."
+#~ msgstr ""
+#~ "Če omogočite to možnost, bodo programi KDE pokazali majhne ikone poleg "
+#~ "večine predmetov menija."
+
+#, fuzzy
+#~| msgid ""
+#~| "<p><b>No Text:</b> Shows only icons on toolbar buttons. Best option for "
+#~| "low resolutions.</p><p><b>Text Only: </b>Shows only text on toolbar "
+#~| "buttons.</p><p><b>Text Beside Icons: </b> Shows icons and text on "
+#~| "toolbar buttons. Text is aligned beside the icon.</p><b>Text Below "
+#~| "Icons: </b> Shows icons and text on toolbar buttons. Text is aligned "
+#~| "below the icon."
+#~ msgid ""
+#~ "<p><b>No text:</b> Shows only icons on toolbar buttons. Best option for "
+#~ "low resolutions.</p><p><b>Text only: </b>Shows only text on toolbar "
+#~ "buttons.</p><p><b>Text beside icons: </b> Shows icons and text on toolbar "
+#~ "buttons. Text is aligned beside the icon.</p><b>Text below icons: </b> "
+#~ "Shows icons and text on toolbar buttons. Text is aligned below the icon."
+#~ msgstr ""
+#~ "<p><b>Brez besedila:</b> v gumbih orodne vrstice pokaže samo ikone. "
+#~ "Najprimerneje za nizke ločljivosti.</p><p><b>Samo besedilo: </b>v gumbih "
+#~ "orodne vrstice pokaže samo besedilo.</p><p><b>Besedilo poleg ikon: </b> "
+#~ "pokaže ikone in besedilo na gumbih orodne vrstice. Besedilo je poravnano "
+#~ "poleg ikone.</p><b>Besedilo pod ikonami: </b> pokaže ikone in besedilo na "
+#~ "gumbih gumbih orodne vrstice. Besedilo je poravnano pod ikono."
+
+#~ msgid "Toolbars"
+#~ msgstr "Orodne vrstice"
+
+#~ msgid "No Text"
+#~ msgstr "Brez besedila"
+
+#, fuzzy
+#~| msgid "Widget style:"
+#~ msgid "Widget Style"
+#~ msgstr "Slog gradnikov:"
+
+#~ msgid "Widget style:"
+#~ msgstr "Slog gradnikov:"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Fine Tuning"
+#~ msgstr "Po&drobno nastavljanje"
+
+#~ msgid "Description: %1"
+#~ msgstr "Opis: %1"
+
+#~ msgid ""
+#~ "This page allows you to choose details about the widget style options"
+#~ msgstr "Ta stran vam omogoča izbrati podrobne možnosti sloga gradnikov"
+
+#~ msgid "Group Box"
+#~ msgstr "Polje skupine"
+
+#~ msgid "KDE Style Module"
+#~ msgstr "Modul za sloge v KDE"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "Menubar"
+#~ msgstr "Menijska vrstica"
+
+#~ msgid "Menubar style:"
+#~ msgstr "Slog menijske vrstice:"
+
+#~ msgid "In application"
+#~ msgstr "V programu"
+
+#~ msgid "Title bar button"
+#~ msgstr "Gumb v naslovni vrstici"
+
+#, fuzzy
+#~| msgid "Application Menu widget"
+#~ msgid "Global Menu widget"
+#~ msgstr "Gradnik menija programov"
+
+#~ msgid "Your changes will take effect only on application restart."
+#~ msgstr "Vaše spremembe bodo stopile v veljavo po ponovnem zagonu programa."
+
+#~ msgid ""
+#~ "<p>Changes to the visibility of menu icons will only affect newly started "
+#~ "applications.</p>"
+#~ msgstr ""
+#~ "<p>Spremembe v vidnosti ikon v menijih bodo vplivale le na novo zagnane "
+#~ "programe.</p>"
+
+#~ msgctxt "@title:window"
+#~ msgid "Menu Icons Changed"
+#~ msgstr "Ikone menija so se spremenile"
+
+#~ msgid "Top screen menubar"
+#~ msgstr "Menijska vrstica na vrhu zaslona"
+
+#~ msgid "Only export"
+#~ msgstr "Samo izvozi"
+
+#~ msgid "Graphical effects:"
+#~ msgstr "Grafični učinki:"
+
+#~ msgid "Low display resolution and Low CPU"
+#~ msgstr "Nizka ločljivost zaslona in počasen procesor"
+
+#~ msgid "High display resolution and Low CPU"
+#~ msgstr "Visoka ločljivost zaslona in počasen procesor"
+
+#~ msgid "Low display resolution and High CPU"
+#~ msgstr "Nizka ločljivost zaslona in hiter procesor"
+
+#~ msgid "High display resolution and High CPU"
+#~ msgstr "Visoka ločljivost zaslona in hiter procesor"
+
+#~ msgid "Low display resolution and Very High CPU"
+#~ msgstr "Nizka ločljivost zaslona in zelo hiter procesor"
+
+#~ msgid "High display resolution and Very High CPU"
+#~ msgstr "Visoka ločljivost zaslona in zelo hiter procesor"
+
+#~ msgid ""
+#~ "If you enable this option, KDE Applications will run internal animations."
+#~ msgstr ""
+#~ "Če omogočite to možnost, bodo programi za KDE prikazovali vgrajene "
+#~ "animacije."
+
+#~ msgid "kcmstyle"
+#~ msgstr "kcmstyle"

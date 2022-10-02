@@ -1,0 +1,363 @@
+# translation of kcmicons.po to Nepali
+# Nabin Gautam <nabin@mpp.org.np>, 2006, 2007.
+# Mahesh Subedi <submanesh@gmail.com>, 2007.
+# shyam krishna bal <shyamkrishna_bal@yahoo.com>, 2007.
+# Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmicons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"PO-Revision-Date: 2007-11-04 18:53+0545\n"
+"Last-Translator: Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>\n"
+"Language-Team: Nepali <info@mpp.org.np>\n"
+"Language: ne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n !=1\n"
+"\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: iconsizecategorymodel.cpp:14
+#, kde-format
+msgid "Toolbar"
+msgstr "उपकरणपट्टी"
+
+#: iconsizecategorymodel.cpp:15
+#, kde-format
+msgid "Main Toolbar"
+msgstr "मुख्य उपकरणपट्टी"
+
+#: iconsizecategorymodel.cpp:16
+#, kde-format
+msgid "Small Icons"
+msgstr "साना प्रतिमा"
+
+#: iconsizecategorymodel.cpp:17
+#, kde-format
+msgid "Panel"
+msgstr "प्यानल"
+
+#: iconsizecategorymodel.cpp:18
+#, kde-format
+msgid "Dialogs"
+msgstr ""
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, fuzzy, kde-format
+#| msgid "Main Toolbar"
+msgid "Main toolbar icons size"
+msgstr "मुख्य उपकरणपट्टी"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, fuzzy, kde-format
+#| msgid "Small Icons"
+msgid "Small icons size"
+msgstr "साना प्रतिमा"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr ""
+
+#: main.cpp:182
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: main.cpp:193
+#, fuzzy, kde-format
+#| msgid "Unable to find the icon theme archive %1."
+msgid "Unable to download the icon theme archive: %1"
+msgstr "प्रतिमा विषयवस्तु सङ्ग्रह %1 फेला पार्न अक्षम ।"
+
+#: main.cpp:207
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "फाइल एउटा वैध प्रतिमा विषयवस्तु सङ्ग्रह होइन ।"
+
+#: main.cpp:212
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr ""
+"सङ्ग्रहमा धेरैजसो विषयवस्तु स्थापन भएता पनि; स्थापना प्रक्रियामा एउटा समस्या देखापर्यो"
+
+#: main.cpp:216
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: main.cpp:260
+#, fuzzy, kde-format
+#| msgid "Installing icon themes"
+msgid "Installing icon themes…"
+msgstr "प्रतिमा विषयवस्तु स्थापना गर्दैछ"
+
+#: main.cpp:270
+#, fuzzy, kde-format
+#| msgid "Installing icon themes"
+msgid "Installing %1 theme…"
+msgstr "प्रतिमा विषयवस्तु स्थापना गर्दैछ"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr ""
+
+#: package/contents/ui/main.qml:147
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Remove Icon Theme"
+msgstr "विषयवस्तु हटाउँनुहोस्"
+
+#: package/contents/ui/main.qml:154
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Icon Theme"
+msgstr "विषयवस्तु हटाउँनुहोस्"
+
+#: package/contents/ui/main.qml:228
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr ""
+
+#: package/contents/ui/main.qml:246
+#, fuzzy, kde-format
+#| msgid "Install New Theme..."
+msgid "Install from File…"
+msgstr "नयाँ विषयवस्तु स्थापना गर्नुहोस्"
+
+#: package/contents/ui/main.qml:251
+#, fuzzy, kde-format
+#| msgid "Install New Theme..."
+msgid "Get New Icons…"
+msgstr "नयाँ विषयवस्तु स्थापना गर्नुहोस्"
+
+#: package/contents/ui/main.qml:279
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Open Theme"
+msgstr "विषयवस्तु हटाउँनुहोस्"
+
+#: package/contents/ui/main.qml:281
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Nabin gautam, श्यामकृष्ण बल"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "nabin@mpp.org.np,shyamkrishna_bal@yahoo.com"
+
+#~ msgid "Icons"
+#~ msgstr "प्रतिमा"
+
+#~ msgid "Icons Control Panel Module"
+#~ msgstr "प्रतिमा नियन्त्रण प्यानल मोड्युल"
+
+#~ msgid "(c) 2000-2003 Geert Jansen"
+#~ msgstr "(सी) २०००-२००३ जर्ट जानसेन"
+
+#~ msgid "Geert Jansen"
+#~ msgstr "जर्ट जानसेन"
+
+#~ msgid "Antonio Larrosa Jimenez"
+#~ msgstr "एन्टोनियो लारोसा जिमेनेज"
+
+#~ msgid "Torsten Rahn"
+#~ msgstr "टोर्सटेन राहन"
+
+#~ msgid "Use of Icon"
+#~ msgstr "प्रतिमाको प्रयोग गर्नुहोस्"
+
+#, fuzzy
+#~| msgid "Default"
+#~ msgctxt "@label The icon rendered by default"
+#~ msgid "Default"
+#~ msgstr "पूर्वनिर्धारित"
+
+#, fuzzy
+#~| msgid "Active"
+#~ msgctxt "@label The icon rendered as active"
+#~ msgid "Active"
+#~ msgstr "सक्रिय पार्नुहोस्"
+
+#, fuzzy
+#~| msgid "Disabled"
+#~ msgctxt "@label The icon rendered as disabled"
+#~ msgid "Disabled"
+#~ msgstr "अक्षम पारिएको"
+
+#~ msgid "Size:"
+#~ msgstr "साइज:"
+
+#~ msgid "Set Effect..."
+#~ msgstr "सेट प्रभाव..."
+
+#~ msgid "All Icons"
+#~ msgstr "सबै प्रतिमा"
+
+#~ msgid "Setup Default Icon Effect"
+#~ msgstr "पूर्वनिर्धारित प्रतिमा प्रभाव सेटअप गर्नुहोस्"
+
+#~ msgid "Setup Active Icon Effect"
+#~ msgstr "सक्रिय प्रतिमा प्रभाव सेटअप गर्नुहोस्"
+
+#~ msgid "Setup Disabled Icon Effect"
+#~ msgstr "अक्षम पारिएका प्रतिमा प्रभाव सेटअप गर्नुहोस्"
+
+#~ msgid "&Effect:"
+#~ msgstr "प्रभाव:"
+
+#~ msgid "No Effect"
+#~ msgstr "प्रभाव विहिन"
+
+#~ msgid "To Gray"
+#~ msgstr "ग्रेमा"
+
+#~ msgid "Colorize"
+#~ msgstr "रङ लगाउनुहोस्"
+
+#~ msgid "Gamma"
+#~ msgstr "गामा"
+
+#~ msgid "Desaturate"
+#~ msgstr "अतितृप्त विहिन"
+
+#~ msgid "To Monochrome"
+#~ msgstr "मोनोक्रोम"
+
+#~ msgid "&Semi-transparent"
+#~ msgstr "अर्ध-पारदर्शी"
+
+#~ msgid "Preview"
+#~ msgstr "पूर्वावलोकन"
+
+#~ msgid "Effect Parameters"
+#~ msgstr "प्रभाव परिमिति"
+
+#~ msgid "&Amount:"
+#~ msgstr "मात्रा:"
+
+#~ msgid "Co&lor:"
+#~ msgstr "रङ:"
+
+#~ msgid "&Second color:"
+#~ msgstr "दोस्रो रङ:"
+
+#~ msgid "Name"
+#~ msgstr "नाम"
+
+#~ msgid "Description"
+#~ msgstr "वर्णन"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "विषयवस्तु यूआरएल तान्नुहोस् वा टाइप गर्नुहोस्"
+
+#~ msgid ""
+#~ "Unable to download the icon theme archive;\n"
+#~ "please check that address %1 is correct."
+#~ msgstr ""
+#~ "प्रतिमा विषय वस्तु सङ्ग्रह डाउनलोड गर्न अक्षम;\n"
+#~ "कृपया %1 ठेगाना ठीक भएको जाँच गर्नुहोस् ।"
+
+#~ msgid "<qt>Installing <strong>%1</strong> theme</qt>"
+#~ msgstr "<qt>विषयवस्तु <strong>%1</strong> स्थापना गर्दैछ</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <strong>%1</strong> icon theme?"
+#~ "<br /><br />This will delete the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>के तपाईँ <strong>%1</strong> प्रतिमा विषयवस्तु हटाउँन चाहनुहुन्छ? <br /><br /"
+#~ ">यो विषयवस्तुद्वारा स्थापना गरिएका फाइलहरू यसले मेट्नेछ ।</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "स्वीकृति"
+
+#~ msgid "&Theme"
+#~ msgstr "विषयवस्तु"
+
+#~ msgid "Ad&vanced"
+#~ msgstr "उन्नत"
+
+#, fuzzy
+#~| msgid ""
+#~| "<h1>Icons</h1>This module allows you to choose the icons for your "
+#~| "desktop.<p>To choose an icon theme, click on its name and apply your "
+#~| "choice by pressing the \"Apply\" button below. If you do not want to "
+#~| "apply your choice you can press the \"Reset\" button to discard your "
+#~| "changes.</p><p>By pressing the \"Install New Theme\" button you can "
+#~| "install your new icon theme by writing its location in the box or "
+#~| "browsing to the location. Press the \"OK\" button to finish the "
+#~| "installation.</p><p>The \"Remove Theme\" button will only be activated "
+#~| "if you select a theme that you installed using this module. You are not "
+#~| "able to remove globally installed themes here.</p><p>You can also "
+#~| "specify effects that should be applied to the icons.</p>"
+#~ msgid ""
+#~ "<h1>Icons</h1>This module allows you to choose the icons for your desktop."
+#~ "<p>To choose an icon theme, click on its name and apply your choice by "
+#~ "pressing the \"Apply\" button below. If you do not want to apply your "
+#~ "choice you can press the \"Reset\" button to discard your changes.</"
+#~ "p><p>By pressing the \"Install Theme File...\" button you can install "
+#~ "your new icon theme by writing its location in the box or browsing to the "
+#~ "location. Press the \"OK\" button to finish the installation.</p><p>The "
+#~ "\"Remove Theme\" button will only be activated if you select a theme that "
+#~ "you installed using this module. You are not able to remove globally "
+#~ "installed themes here.</p><p>You can also specify effects that should be "
+#~ "applied to the icons.</p>"
+#~ msgstr ""
+#~ "<h1>प्रतिमा</h1>यो मोड्यलले तपाईँलाई डेस्कटपको प्रतिमा रोज्न अनुमति दिन्छ ।"
+#~ "<p>प्रतिमा विषयवस्तु रोज्न, यसको नाममा क्लिक गर्नुहोस् र तलको \"लागू गर्नुहोस्\" "
+#~ "बटनको थिचाइद्वारा तपाईँको रोजाई लागू गर्नुहोस् । यदि तपाईँ रोजाई लागू गर्न चाहनुहुन्न "
+#~ "भने परिवर्तन छोड्नका लागि \"रिसेट\" बटन थिच्न सक्नुहुन्छ ।</p><p>तपाईँले \"नयाँ "
+#~ "विषयवस्तु स्थापना\" थिचाइद्वारा बाकसमा यसको स्थान लेखेर वा स्थानमा ब्राउजिङ गरेर "
+#~ "नयाँ प्रतिमा विषयवस्तु स्थापना गर्न सक्नुहुन्छ । स्थापन समाप्त गर्नका लागि \"ठीक छ\" "
+#~ "बटन थिच्नुहोस् ।</p><p>यदि तपाईँले यो मोड्युल प्रयोग गरेर स्थापना गरेको विषयवस्तु चयन "
+#~ "गरेमा \"विषयवस्तु हटाउनुहोस्\" बटन मात्र सक्रिय भएको हुनेछ । तपाईँ यहाँ विश्वव्यापी "
+#~ "रुपमा स्थापना गरिएका विषयवस्तु हटाउन सक्षम हुनुहुन्न ।</p><p>तपाईँले प्रतिमामा हुनुपर्ने "
+#~ "प्रभावहरू पनि निर्दिष्ट गर्न सक्नुहुन्छ ।</p>"
+
+#~ msgid "Animate icons"
+#~ msgstr "प्रतिमा एनिमेसन गर्नुहोस्"
+
+#~ msgid "Select the icon theme you want to use:"
+#~ msgstr "तपाईँले प्रयोग गर्न चाहेको प्रतिमा विषयवस्तु चयन गर्नुहोस्:"
+
+#~ msgid "Double-sized pixels"
+#~ msgstr "द्वी-गुना साइज भएको पिक्सेल"
+
+#~ msgid "Desktop/File Manager"
+#~ msgstr "डेस्कटप/फाइल प्रबन्धक"

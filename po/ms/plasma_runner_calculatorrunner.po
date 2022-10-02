@@ -1,0 +1,49 @@
+# plasma_runner_calculatorrunner Bahasa Melayu (Malay) (ms)
+# Copyright (C) 2008 K Desktop Environment
+# This file is distributed under the same license as the plasma_runner_calculatorrunner package.
+#
+# Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>, 2009, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_calculatorrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-17 00:47+0000\n"
+"PO-Revision-Date: 2010-05-10 19:38+0800\n"
+"Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
+"Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=1;\n"
+
+#: calculatorrunner.cpp:33
+#, fuzzy, kde-format
+#| msgid ""
+#| "Calculates the value of :q: when :q: is made up of numbers and "
+#| "mathematical symbols such as +, -, /, * and ^."
+msgid ""
+"Calculates the value of :q: when :q: is made up of numbers and mathematical "
+"symbols such as +, -, /, *, ! and ^."
+msgstr ""
+"Mengira nilai :q: apabila :q: terdiri dari nombor dan simbol matematik "
+"seperti +, -, /, * dan ^."
+
+#: calculatorrunner.cpp:39
+#, kde-format
+msgid "Copy to Clipboard"
+msgstr ""
+
+#: calculatorrunner.cpp:129
+#, kde-format
+msgctxt "The result of the calculation is only an approximation"
+msgid "Approximation"
+msgstr ""
+
+#~ msgid ""
+#~ "The exchange rates could not be updated. The following error has been "
+#~ "reported: %1"
+#~ msgstr ""
+#~ "Kadar pertukaran tidak dapat dikemaskini. Ralat berikut telah dilaporkan: "
+#~ "%1"

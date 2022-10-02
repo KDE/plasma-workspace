@@ -1,0 +1,568 @@
+# translation of kcminput.po to Belarusian
+#
+# Ihar Hrachyshka <ihar.hrachyshka@gmail.com>, 2006.
+# Darafei Praliaskouski <symbol@akeeri.tk>, 2006.
+# Darafei Praliaskouski <komzpa@licei2.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminput\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:50+0000\n"
+"PO-Revision-Date: 2007-08-26 22:21+0300\n"
+"Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
+"Language-Team: Belarusian <i18n@mova.org>\n"
+"Language: be\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
+"%100>=11 && n%100<=14 ? 2 : 3);\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Do not change cursor theme"
+msgid "Name of the current cursor theme"
+msgstr "Не змяняць тэму курсораў"
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr ""
+
+#: kcmcursortheme.cpp:302
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr "Трэба перастартаваць KDE, каб змены пачалі дзейнічаць."
+
+#: kcmcursortheme.cpp:376
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: kcmcursortheme.cpp:387
+#, fuzzy, kde-format
+#| msgid "Unable to find the cursor theme archive %1."
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Немагчыма знайсці архіў з тэмай курсору %1."
+
+#: kcmcursortheme.cpp:418
+#, fuzzy, kde-format
+#| msgid "The file %1 does not appear to be a valid cursor theme archive."
+msgid "The file is not a valid icon theme archive."
+msgstr "Файл %1 не з'яўляецца сапраўдным архівам з тэмай курсору."
+
+#: kcmcursortheme.cpp:425
+#, kde-format
+msgid "Failed to create 'icons' folder."
+msgstr ""
+
+#: kcmcursortheme.cpp:434
+#, kde-format
+msgid ""
+"A theme named %1 already exists in your icon theme folder. Do you want "
+"replace it with this one?"
+msgstr "Тэма з назвай %1 ужо існуе. Хочаце замяніць старую тэму новай?"
+
+#: kcmcursortheme.cpp:438
+#, kde-format
+msgid "Overwrite Theme?"
+msgstr "Перазапісаць тэму?"
+
+#: kcmcursortheme.cpp:462
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: package/contents/ui/Delegate.qml:54
+#, kde-format
+msgid "Remove Theme"
+msgstr "Выдаліць тэму"
+
+#: package/contents/ui/Delegate.qml:61
+#, fuzzy, kde-format
+#| msgid "&Cursor Theme"
+msgid "Restore Cursor Theme"
+msgstr "Тэма &курсораў"
+
+#: package/contents/ui/main.qml:20
+#, kde-format
+msgid "This module lets you choose the mouse cursor theme."
+msgstr ""
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Size:"
+msgstr ""
+
+#: package/contents/ui/main.qml:134
+#, fuzzy, kde-format
+#| msgid "Install New Theme..."
+msgid "&Install from File…"
+msgstr "Устанавіць новую тэму..."
+
+#: package/contents/ui/main.qml:140
+#, fuzzy, kde-format
+#| msgid "Install New Theme..."
+msgid "&Get New Cursors…"
+msgstr "Устанавіць новую тэму..."
+
+#: package/contents/ui/main.qml:157
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Open Theme"
+msgstr "Выдаліць тэму"
+
+#: package/contents/ui/main.qml:159
+#, kde-format
+msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:41
+#, kde-format
+msgid "The requested size '%1' is not available, using %2 instead."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:62
+#, kde-format
+msgid ""
+"This tool allows you to set the mouse cursor theme for the current Plasma "
+"session, without accidentally setting it to one that is either not "
+"available, or which is already set."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:66
+#, kde-format
+msgid ""
+"The name of the cursor theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:67
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:68
+#, kde-format
+msgid "Use a specific size, rather than the theme default size"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:89
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:100
+#, kde-format
+msgid ""
+"Successfully applied the mouse cursor theme %1 to your current Plasma session"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:102
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for your newly applied mouse cursor "
+"theme to display correctly."
+msgstr "Трэба перастартаваць KDE, каб змены пачалі дзейнічаць."
+
+#: plasma-apply-cursortheme.cpp:112
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:120
+#, kde-format
+msgid "You have the following mouse cursor themes on your system:"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:125
+#, kde-format
+msgid "(Current theme for this Plasma session)"
+msgstr ""
+
+#: xcursor/xcursortheme.cpp:60
+#, kde-format
+msgctxt ""
+"@info The argument is the list of available sizes (in pixel). Example: "
+"'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+msgid "(Available sizes: %1)"
+msgstr ""
+
+#~ msgid "Name"
+#~ msgstr "Назва"
+
+#~ msgid "Description"
+#~ msgstr "Апісанне"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Ігар Грачышка"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "ihar.hrachyshka@gmail.com"
+
+#, fuzzy
+#~| msgid "&Cursor Theme"
+#~ msgid "Cursors"
+#~ msgstr "Тэма &курсораў"
+
+#~ msgid ""
+#~ "<qt>You cannot delete the theme you are currently using.<br />You have to "
+#~ "switch to another theme first.</qt>"
+#~ msgstr ""
+#~ "<qt>Вы не можаце выдаліць тэму, якой карыстаецеся.<br />Вам трэба "
+#~ "спачатку выбраць іншую.</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <i>%1</i> cursor theme?<br />This "
+#~ "will delete all the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>Вы сапраўды хочаце выдаліць тэму курсораў <strong>%1</strong>?<br /"
+#~ ">Гэтае дзеянне выдаліць усе файлы, устаноўленыя з гэтай тэмай.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Пацверджанне"
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "Настаўленні курсору змяніліся"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "Перацягніце сюды ці вызначце самі спасылку на тэму"
+
+#~ msgid ""
+#~ "Unable to download the cursor theme archive; please check that the "
+#~ "address %1 is correct."
+#~ msgstr ""
+#~ "Немагчыма сцягнуць архіў з тэмай курсору. Калі ласка, праверце "
+#~ "правільнасць адраса %1."
+
+#~ msgid ""
+#~ "Select the cursor theme you want to use (hover preview to test cursor):"
+#~ msgstr "Выберыце тэму курсору:"
+
+#~ msgid "Select the cursor theme you want to use:"
+#~ msgstr "Выберыце тэму курсораў:"
+
+#~ msgid "Small black"
+#~ msgstr "Маленькі чорны"
+
+#~ msgid "Small black cursors"
+#~ msgstr "Маленькія чорныя курсоры"
+
+#~ msgid "Large black"
+#~ msgstr "Вялікі чорны"
+
+#~ msgid "Large black cursors"
+#~ msgstr "Вялікія чорныя курсоры"
+
+#~ msgid "Small white"
+#~ msgstr "Маленькі белы"
+
+#~ msgid "Small white cursors"
+#~ msgstr "Маленькія белывя курсоры"
+
+#~ msgid "Large white"
+#~ msgstr "Вялікі белы"
+
+#~ msgid "Large white cursors"
+#~ msgstr "Вялікія белыя курсоры"
+
+#~ msgid "Button Order"
+#~ msgstr "Парадак кнопак"
+
+#~ msgid "Righ&t handed"
+#~ msgstr "Для &праўшы"
+
+#~ msgid "Le&ft handed"
+#~ msgstr "Для &ляўшы"
+
+#~ msgid "Re&verse scroll direction"
+#~ msgstr "Ад&варотны напрамак прамотвання"
+
+#~ msgid "Icons"
+#~ msgstr "Значкі"
+
+#~ msgid ""
+#~ "Dou&ble-click to open files and folders (select icons on first click)"
+#~ msgstr ""
+#~ "&Двайны націск для адкрыцця файлаў і тэчак (выбар значак адным націскам)"
+
+#~ msgid "&Single-click to open files and folders"
+#~ msgstr "&Адзін націск для адкрыцця файлаў і тэчак"
+
+#~ msgid "Cha&nge pointer shape over icons"
+#~ msgstr "З&мяняць форму курсора па-над значкамі"
+
+#~ msgid "A&utomatically select icons"
+#~ msgstr "А&ўтаматычна выбіраць значкі"
+
+#, fuzzy
+#~| msgid "Dela&y:"
+#~ msgctxt "label. delay (on milliseconds) to automatically select icons"
+#~ msgid "Delay"
+#~ msgstr "За&трымка:"
+
+#, fuzzy
+#~| msgid " msec"
+#~ msgctxt "milliseconds. time to automatically select the items"
+#~ msgid " ms"
+#~ msgstr " мс"
+
+#~ msgid ""
+#~ "<h1>Mouse</h1> This module allows you to choose various options for the "
+#~ "way in which your pointing device works. Your pointing device may be a "
+#~ "mouse, trackball, or some other hardware that performs a similar function."
+#~ msgstr ""
+#~ "<h1>Мыш</h1> Гэты модуль дазваляе выбраць з некалькіх варыянтаў спосаб "
+#~ "працы вашай прылады пазіцыянавання курсору. Гэтай прыладай можа быць мыш, "
+#~ "трэкбол ці іншае апаратнае забеспячэнне, якое выконвае падобныя функцыі"
+
+#~ msgid "&General"
+#~ msgstr "&Агульныя"
+
+#~ msgid "Activates and opens a file or folder with a single click."
+#~ msgstr "Актывізуе і адкрывае файл ці тэчку адным націскам."
+
+#~ msgid "Advanced"
+#~ msgstr "Асаблівы"
+
+#~ msgid "Pointer acceleration:"
+#~ msgstr "Акселерацыя курсора:"
+
+#~ msgid "Pointer threshold:"
+#~ msgstr "Адлегласць зрабатвання:"
+
+#~ msgid " msec"
+#~ msgstr " мс"
+
+#~ msgid "Double click interval:"
+#~ msgstr "Інтэрвал двайнога націску:"
+
+#~ msgid "Drag start time:"
+#~ msgstr "Інтэрвал для перацягвання:"
+
+#~ msgid "Drag start distance:"
+#~ msgstr "Адлегласць для працягу:"
+
+#~ msgid ""
+#~ "If you click with the mouse and begin to move the mouse at least the drag "
+#~ "start distance, a drag operation will be initiated."
+#~ msgstr ""
+#~ "Калі вы націснулі кнопку мышы і падвінулі мыш як мінімум на гэтую "
+#~ "дыстанцыю, будзе пачатая аперацыя перацягвання."
+
+#~ msgid "Mouse wheel scrolls by:"
+#~ msgstr "Колца мышы прамотвае на:"
+
+#~ msgid "Mouse Navigation"
+#~ msgstr "Навігацыя мышшу"
+
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "&Перамяшчаць курсор клавіятурай (лічбавай клавіятурай)"
+
+#~ msgid "&Acceleration delay:"
+#~ msgstr "&Затрымка акселерацыі:"
+
+#~ msgid "R&epeat interval:"
+#~ msgstr "Інтэрвал п&аўтору:"
+
+#~ msgid "Acceleration &time:"
+#~ msgstr "&Час акселерацыі:"
+
+#~ msgid " pixel/sec"
+#~ msgstr " пікселяў/с"
+
+#~ msgid "Ma&ximum speed:"
+#~ msgstr "Най&большая хуткасць:"
+
+#~ msgid "Acceleration &profile:"
+#~ msgstr "&Профіль акселерацыі:"
+
+#~ msgid "Mouse"
+#~ msgstr "Мыш"
+
+#~ msgid "(c) 1997 - 2005 Mouse developers"
+#~ msgstr "(c) 1997 - 2005 Распрацоўшчыкі модуля \"Мыш\""
+
+#~ msgid "Patrick Dowler"
+#~ msgstr "Патрык Доўлер"
+
+#~ msgid "Dirk A. Mueller"
+#~ msgstr "Дзірк А. Мюллер"
+
+#~ msgid "David Faure"
+#~ msgstr "Дэвід Фор"
+
+#~ msgid "Bernd Gehrmann"
+#~ msgstr "Вернд Германн"
+
+#~ msgid "Rik Hemsley"
+#~ msgstr "Рік Хемслі"
+
+#~ msgid "Brad Hughes"
+#~ msgstr "Брэд Хьюджыс"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ральф Нолдэн"
+
+#~ msgid "Brad Hards"
+#~ msgstr "Брад Хардс"
+
+#, fuzzy
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] " піксель"
+#~ msgstr[1] " піксель"
+#~ msgstr[2] " піксель"
+
+#, fuzzy
+#~ msgid " line"
+#~ msgid_plural " lines"
+#~ msgstr[0] " радок"
+#~ msgstr[1] " радок"
+#~ msgstr[2] " радок"
+
+#~ msgid "Mouse type: %1"
+#~ msgstr "Тып мышы: %1"
+
+#~ msgid ""
+#~ "RF channel 1 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "Канал RF 1 быў выбраны. Калі ласка націсніце кнопку злучэння на мышы каб "
+#~ "пераўсталяваць злучэнне."
+
+#~ msgid "Press Connect Button"
+#~ msgstr "Націсніце кнопку злучэння"
+
+#~ msgid ""
+#~ "RF channel 2 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "Канал RF 2 быў выбраны. Калі ласка націсніце кнопку злучэння на мышы каб "
+#~ "пераўсталяваць злучэнне."
+
+#, fuzzy
+#~| msgid "none"
+#~ msgctxt "no cordless mouse"
+#~ msgid "none"
+#~ msgstr "няма"
+
+#~ msgid "Cordless Mouse"
+#~ msgstr "Cordless Mouse"
+
+#~ msgid "Cordless Wheel Mouse"
+#~ msgstr "Cordless Wheel Mouse"
+
+#~ msgid "Cordless MouseMan Wheel"
+#~ msgstr "Cordless MouseMan Wheel"
+
+#~ msgid "Cordless TrackMan Wheel"
+#~ msgstr "Cordless TrackMan Wheel"
+
+#~ msgid "TrackMan Live"
+#~ msgstr "TrackMan Live"
+
+#~ msgid "Cordless TrackMan FX"
+#~ msgstr "Cordless TrackMan FX"
+
+#~ msgid "Cordless MouseMan Optical"
+#~ msgstr "Cordless MouseMan Optical"
+
+#~ msgid "Cordless Optical Mouse"
+#~ msgstr "Cordless Optical Mouse"
+
+#~ msgid "Cordless MouseMan Optical (2ch)"
+#~ msgstr "Cordless MouseMan Optical (2ch)"
+
+#~ msgid "Cordless Optical Mouse (2ch)"
+#~ msgstr "Cordless Optical Mouse (2ch)"
+
+#~ msgid "Cordless Mouse (2ch)"
+#~ msgstr "Cordless Mouse (2ch)"
+
+#~ msgid "Cordless Optical TrackMan"
+#~ msgstr "Cordless Optical TrackMan"
+
+#~ msgid "MX700 Cordless Optical Mouse"
+#~ msgstr "MX700 Cordless Optical Mouse"
+
+#~ msgid "MX700 Cordless Optical Mouse (2ch)"
+#~ msgstr "MX700 Cordless Optical Mouse (2ch)"
+
+#~ msgid "Unknown mouse"
+#~ msgstr "Невядомая мыш"
+
+#~ msgid "Cordless Name"
+#~ msgstr "Радыёназва"
+
+#~ msgid "Sensor Resolution"
+#~ msgstr "Распазнаванне сэнсара"
+
+#~ msgid "400 counts per inch"
+#~ msgstr "400 на дзюйм"
+
+#~ msgid "800 counts per inch"
+#~ msgstr "800 на дзюйм"
+
+#~ msgid "Battery Level"
+#~ msgstr "Узровень батарэі"
+
+#~ msgid "RF Channel"
+#~ msgstr "Інфрачырвоны канал"
+
+#~ msgid "Channel 1"
+#~ msgstr "Канал 1"
+
+#~ msgid "Channel 2"
+#~ msgstr "Канал 2"
+
+#~ msgid ""
+#~ "You have a Logitech Mouse connected, and libusb was found at compile "
+#~ "time, but it was not possible to access this mouse. This is probably "
+#~ "caused by a permissions problem - you should consult the manual on how to "
+#~ "fix this."
+#~ msgstr ""
+#~ "У вас злучана Logitech мыш, і libusb была знойдзена ў час кампіляцыі, але "
+#~ "доступ да гэтай мышы атрымаць немагчыма. Мабыць, гэта праблема з-за "
+#~ "правоў доступу - вам трэба прачытаць даведку пра тое, як гэта выправіць."
+
+#~ msgid "KDE Classic"
+#~ msgstr "Класічны KDE"
+
+#~ msgid "The default cursor theme in KDE 2 and 3"
+#~ msgstr "Тэмаа курсораў па змаўчанні ў KDE 2 і 3"
+
+#~ msgid "No description available"
+#~ msgstr "Апісання няма"
+
+#~ msgid "Short"
+#~ msgstr "Кароткая"
+
+#~ msgid "Long"
+#~ msgstr "Працяглая"
+
+#~ msgid "Replace"
+#~ msgstr "Замяніць"
+
+#~ msgid "No theme"
+#~ msgstr "Няма тэмы"
+
+#~ msgid "The old classic X cursors"
+#~ msgstr "Старыя класічныя курсоры сервера X"
+
+#~ msgid "System theme"
+#~ msgstr "Сістэмная тэма"

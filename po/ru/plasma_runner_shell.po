@@ -1,0 +1,146 @@
+# translation of krunner_shellrunner.po to Russian
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Il'ya Mertsalov <a567765@yandex.ru>, 2008.
+# Nick Shaforostoff <shaforostoff@kde.ru>, 2008.
+# Andrey Cherepanov <skull@kde.ru>, 2009.
+# Alexander Potashev <aspotashev@gmail.com>, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner_shellrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-27 00:45+0000\n"
+"PO-Revision-Date: 2016-09-04 12:10+0300\n"
+"Last-Translator: Alexander Potashev <aspotashev@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 2.0\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: shellrunner.cpp:35
+#, kde-format
+msgid "Finds commands that match :q:, using common shell syntax"
+msgstr "Искать команды оболочки, соответствующие :q:"
+
+#: shellrunner.cpp:36
+#, kde-format
+msgid "Run in Terminal Window"
+msgstr "Запустить в окне терминала"
+
+#: shellrunner.cpp:54
+#, kde-format
+msgid "Run %1"
+msgstr "Запустить %1"
+
+#~ msgid "Enter the user you want to run the application as here."
+#~ msgstr ""
+#~ "Введите имя пользователя, от имени которого будет запущено приложение."
+
+#~ msgid "User&name:"
+#~ msgstr "Имя &пользователя:"
+
+#~ msgid "Enter the password here for the user you specified above."
+#~ msgstr "Введите пароль для выбранного выше пользователя."
+
+#~ msgid "Pass&word:"
+#~ msgstr "Па&роль:"
+
+#~ msgid ""
+#~ "Check this option if the application you want to run is a text mode "
+#~ "application. The application will then be run in a terminal emulator "
+#~ "window."
+#~ msgstr ""
+#~ "Включите этот параметр чтобы запустить приложение в окне эмулятора "
+#~ "терминала."
+
+#~ msgid "Run in &terminal window"
+#~ msgstr "Запустить в окне &терминала"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "user id. Every process has a user id associated with it. This id code "
+#~ "determines file access and other permissions. The password of the user is "
+#~ "required to do this."
+#~ msgstr ""
+#~ "Включите этот параметр чтобы запускать приложение от имени другого "
+#~ "пользователя. Каждый процесс имеет ассоциированный с ним идентификатор "
+#~ "пользователя. Этот идентификатор определяет права доступ к файлам и "
+#~ "другие привилегии. Для использовании этой возможности потребуется ввести "
+#~ "пароль пользователя."
+
+#~ msgid "Run as a different &user"
+#~ msgstr "Запустить от имени другого &пользователя"
+
+#~ msgid ""
+#~ "<qt>Select whether realtime scheduling should be enabled for the "
+#~ "application. The scheduler governs which process will run and which will "
+#~ "have to wait. Two schedulers are available:\n"
+#~ "<ul>\n"
+#~ "<li><em>Normal:</em> This is the standard, timesharing scheduler. It will "
+#~ "divide fairly the available processing time between all processes.</li>\n"
+#~ "<li><em>Realtime:</em>This scheduler will run your application "
+#~ "uninterrupted until it gives up the processor. This can be dangerous. An "
+#~ "application that does not give up the processor might hang the system. "
+#~ "You need root's password to use the scheduler.</li>\n"
+#~ "</ul>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>Использовать планировщик реального времени для приложения. "
+#~ "Планировщик в каждый момент времени определяет какой процесс будет "
+#~ "выполняться,а какому придётся подождать. Доступно два планировщика:\n"
+#~ "<ul>\n"
+#~ "<li><em>Обычный:</em> стандартный планировщик, равномерно распределяющий "
+#~ "время процессора между процессами.</li>\n"
+#~ "<li><em>Реального времени:</em> этот планировщик будет выполнять "
+#~ "приложение без прерываний, пока оно не освободит процессор. Это может "
+#~ "быть опасно.Приложение, не освобождающее процессор долгое время, может "
+#~ "вызвать зависание системы. Для использования планировщика реального "
+#~ "времени нужен пароль суперпользователя.</li>\n"
+#~ "</ul>\n"
+#~ "</qt>"
+
+#~ msgid "Run with realtime &scheduling"
+#~ msgstr "Запускать с &планировщиком реального времени"
+
+#~ msgid ""
+#~ "The priority that the command will be run with can be set here. From left "
+#~ "to right, it goes from low to high. The center position is the default "
+#~ "value. For priorities higher than the default, you will need to provide "
+#~ "the root password."
+#~ msgstr ""
+#~ "Приоритет, с которым будет запущена команда. Приоритет можно изменить "
+#~ "слева направо с низкого до высокого. Позиция по центру — значение по "
+#~ "умолчанию. Для более высокого приоритета потребуется указать пароль "
+#~ "суперпользователя."
+
+#~ msgid "&Priority:"
+#~ msgstr "&Приоритет:"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "priority. A higher priority tells the operating system to give more "
+#~ "processing time to your application."
+#~ msgstr ""
+#~ "Включите этот параметр если хотите запустить приложение с другим "
+#~ "приоритетом. Высокий приоритет указывает операционной системе дать "
+#~ "приложению больше процессорного времени."
+
+#~ msgid "Run with a &different priority"
+#~ msgstr "Запустить с &другим приоритетом"
+
+#~ msgid "Low"
+#~ msgstr "Низкий"
+
+#~ msgid "High"
+#~ msgstr "Высокий"
+
+#~ msgid "Command"
+#~ msgstr "Команда"

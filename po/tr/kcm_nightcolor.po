@@ -1,0 +1,246 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Volkan Gezer <volkangezer@gmail.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-13 00:47+0000\n"
+"PO-Revision-Date: 2022-09-10 17:52+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 22.08.0\n"
+
+#: package/contents/ui/LocationsFixedView.qml:39
+#, kde-format
+msgctxt ""
+"@label:chooser Tap should be translated to mean touching using a touchscreen"
+msgid "Tap to choose your location on the map."
+msgstr "Haritada konumunuzu seçmek için dokunun."
+
+#: package/contents/ui/LocationsFixedView.qml:40
+#, kde-format
+msgctxt ""
+"@label:chooser Click should be translated to mean clicking using a mouse"
+msgid "Click to choose your location on the map."
+msgstr "Haritada konumunuzu seçmek için tıklayın."
+
+#: package/contents/ui/LocationsFixedView.qml:78
+#: package/contents/ui/LocationsFixedView.qml:103
+#, kde-format
+msgid "Zoom in"
+msgstr "Yakınlaştır"
+
+#: package/contents/ui/LocationsFixedView.qml:222
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Modified from <link url='https://commons.wikimedia.org/wiki/File:"
+"World_location_map_(equirectangular_180).svg'>World location map</link> by "
+"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
+"by-sa/3.0'>CC BY-SA 3.0</link>"
+msgstr ""
+"<link url='https://commons.wikimedia.org/wiki/File:"
+"World_location_map_(equirectangular_180).svg'>Dünya konum haritası</"
+"link>'ndan uyarlanmıştır (TUBS / Wikimedia Commons / <link url='https://"
+"creativecommons.org/licenses/by-sa/3.0'>CC BY-SA 3.0</link>)"
+
+#: package/contents/ui/LocationsFixedView.qml:235
+#, kde-format
+msgctxt "@label: textbox"
+msgid "Latitude:"
+msgstr "Enlem:"
+
+#: package/contents/ui/LocationsFixedView.qml:261
+#, kde-format
+msgctxt "@label: textbox"
+msgid "Longitude:"
+msgstr "Boylam:"
+
+#: package/contents/ui/main.qml:87
+#, kde-format
+msgid "The blue light filter makes the colors on the screen warmer."
+msgstr "Mavi ışık süzgeci, ekrandaki renkleri daha sıcak yapar."
+
+#: package/contents/ui/main.qml:98
+#, kde-format
+msgid "Switching times:"
+msgstr "Değiştirme zamanı:"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgid "Always off"
+msgstr "Her zaman kapalı"
+
+#: package/contents/ui/main.qml:101
+#, kde-format
+msgid "Sunset and sunrise at current location"
+msgstr "Geçerli konumda, gün doğumunda ve batımında"
+
+#: package/contents/ui/main.qml:102
+#, kde-format
+msgid "Sunset and sunrise at manual location"
+msgstr "Elle girilen konumda, gün doğumunda ve batımında"
+
+#: package/contents/ui/main.qml:103
+#, kde-format
+msgid "Custom times"
+msgstr "Özel zamanlar"
+
+#: package/contents/ui/main.qml:104
+#, kde-format
+msgid "Always on night color"
+msgstr "Gece rengi her zaman açık"
+
+#: package/contents/ui/main.qml:156
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The device's location will be periodically updated using GPS (if available), "
+"or by sending network information to <link url='https://location.services."
+"mozilla.com'>Mozilla Location Service</link>."
+msgstr ""
+"Bu aygıtın konumu GPS kullanılarak (olanaklıysa) veya ağ bilgisini <a href="
+"\"https://location.services.mozilla.com\">Mozilla Konum Servisi</a>'ne "
+"gönderilerek düzenli olarak güncellenecektir."
+
+#: package/contents/ui/main.qml:175
+#, kde-format
+msgid "Day color temperature:"
+msgstr "Gün rengi sıcaklığı:"
+
+#: package/contents/ui/main.qml:218 package/contents/ui/main.qml:277
+#, kde-format
+msgctxt "Color temperature in Kelvin"
+msgid "%1K"
+msgstr "%1K"
+
+#: package/contents/ui/main.qml:222 package/contents/ui/main.qml:281
+#, kde-format
+msgctxt "Night colour red-ish"
+msgid "Warm"
+msgstr "Sıcak"
+
+#: package/contents/ui/main.qml:228 package/contents/ui/main.qml:287
+#, kde-format
+msgctxt "No blue light filter activated"
+msgid "Cool (no filter)"
+msgstr "Serin (süzgeç yok)"
+
+#: package/contents/ui/main.qml:228 package/contents/ui/main.qml:287
+#, kde-format
+msgctxt "Night colour blue-ish"
+msgid "Cool"
+msgstr "Serin"
+
+#: package/contents/ui/main.qml:234
+#, kde-format
+msgid "Night color temperature:"
+msgstr "Gece rengi sıcaklığı:"
+
+#: package/contents/ui/main.qml:298
+#, kde-format
+msgid "Latitude: %1°   Longitude: %2°"
+msgstr "Enlem: %1°   Boylam: %2°"
+
+#: package/contents/ui/main.qml:308
+#, kde-format
+msgid "Begin night color at:"
+msgstr "Gece rengini başlatma saati:"
+
+#: package/contents/ui/main.qml:321 package/contents/ui/main.qml:344
+#, kde-format
+msgid "Input format: HH:MM"
+msgstr "Girdi biçimi: SS:DD"
+
+#: package/contents/ui/main.qml:331
+#, kde-format
+msgid "Begin day color at:"
+msgstr "Gün rengini başlatma saati:"
+
+#: package/contents/ui/main.qml:353
+#, kde-format
+msgid "Transition duration:"
+msgstr "Geçiş süresi:"
+
+#: package/contents/ui/main.qml:362
+#, kde-format
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "%1 dakika"
+msgstr[1] "%1 dakika"
+
+#: package/contents/ui/main.qml:375
+#, kde-format
+msgid "Input minutes - min. 1, max. 600"
+msgstr "Girdi dakikaları - en az 1, en fazla 600"
+
+#: package/contents/ui/main.qml:393
+#, kde-format
+msgid "Error: Transition time overlaps."
+msgstr "Hata: Geçiş zamanı üst üste biniyor."
+
+#: package/contents/ui/main.qml:413
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Locating…"
+msgstr "Konum bulunuyor…"
+
+#: package/contents/ui/TimingsView.qml:32
+#, kde-format
+msgid ""
+"Color temperature begins changing to night time at %1 and is fully changed "
+"by %2"
+msgstr ""
+"Renk sıcaklığı, geceye %1 saatinde değişmeye başlar ve %2 olduğunda tümüyle "
+"değişmiş olur"
+
+#: package/contents/ui/TimingsView.qml:39
+#, kde-format
+msgid ""
+"Color temperature begins changing to day time at %1 and is fully changed by "
+"%2"
+msgstr ""
+"Renk sıcaklığı, gündüze %1 saatinde değişmeye başlar ve %2 olduğunda tümüyle "
+"değişmiş olur"
+
+#~ msgid "This is what day color temperature will look like when active."
+#~ msgstr "Bu, etkinken gün rengi sıcaklığının nice görüneceğidir."
+
+#~ msgid "This is what night color temperature will look like when active."
+#~ msgstr "Bu, etkinken gece rengi sıcaklığının nice görüneceğidir."
+
+#~ msgid "Activate blue light filter"
+#~ msgstr "Mavi ışık süzgecini etkinleştir"
+
+#~ msgid "Turn on at:"
+#~ msgstr "Şu saatte aç:"
+
+#~ msgid "Turn off at:"
+#~ msgstr "Şu saatte kapat:"
+
+#~ msgid "Night Color begins changing back at %1 and ends at %2"
+#~ msgstr ""
+#~ "Gece Rengi geri değişmeye %1 saatinde başlar ve %2 saatine kadar sürer"
+
+#~ msgid "Error: Morning is before evening."
+#~ msgstr "Hata: Sabah, akşamdan öncedir."
+
+#~ msgid "Detect Location"
+#~ msgstr "Konumu Algıla"
+
+#~ msgid ""
+#~ "The device's location will be detected using GPS (if available), or by "
+#~ "sending network information to <a href=\"https://location.services."
+#~ "mozilla.com\">Mozilla Location Service</a>."
+#~ msgstr ""
+#~ "Bu aygıtın konumu GPS kullanılarak (olanaklıysa) veya ağ bilgisini <a "
+#~ "href=\"https://location.services.mozilla.com\">Mozilla Konum Servisi</"
+#~ "a>'ne gönderilerek algılanacak."

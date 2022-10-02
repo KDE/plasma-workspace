@@ -1,0 +1,239 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Indonesian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="fonts" lang="&language;">
+<articleinfo>
+<title
+>Font</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+<othercredit role="translator"
+><firstname
+>Wantoyo</firstname
+><surname
+></surname
+><affiliation
+><address
+><email
+>wantoyek@gmail.com</email
+></address
+></affiliation
+><contrib
+>Terjemahan</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>10-12-2018</date>
+<releaseinfo
+>Plasma 5.14</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>font</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_fonts">
+
+<title
+>Font</title>
+
+<para
+>Modul ini dirancang untuk memungkinkanmu dengan mudah memilih font yang berbeda untuk bagian yang berbeda dari &kde; Desktop.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Ini adalah cuplikan dari modul pengaturan font</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Modul pengaturan font</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Panel ini terdiri dari grup font yang berbeda untuk memberi kamu banyak fleksibilitas dalam mengkonfigurasi font-font-mu: </para>
+
+<itemizedlist>
+<listitem
+><para
+><guilabel
+>Umum:</guilabel
+> Digunakan di mana-mana ketika grup font lain tidak diterapkan</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Lebar tetap:</guilabel
+> Di mana pun sebuah font nonproposional telah ditentukan</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Kecil:</guilabel
+> Ketika font kecil akan digunakan</para
+></listitem
+> 
+
+<listitem
+><para
+><guilabel
+>Bilah Alat:</guilabel
+> Font yang digunakan di bilahalat-bilahalat aplikasi &kde;</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Menu:</guilabel
+> Font yang digunakan di menu-menu aplikasi &kde;</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Judul window:</guilabel
+> Font yang digunakan di judul window</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Bilah Tugas:</guilabel
+> Font yang digunakan di applet panel bilah tugas</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Desktop:</guilabel
+> Font yang digunakan di desktop untuk ikon-ikon label</para
+></listitem>
+
+</itemizedlist>
+
+<para
+>Setiap font memiliki tombol <guibutton
+>Memilih...</guibutton
+> yang sesuai. Dengan mengeklik tombol ini, kotak dialog muncul. Kamu bisa menggunakan kotak dialog ini untuk memilih font baru, gaya dan ukuran font. Lalu tekan <guibutton
+>Oke</guibutton
+>.</para>
+
+<para
+>Sebuah contoh dari font yang telah kamuvpilih akan didisplaikan di ruang antara nama grup font dan tombol <guibutton
+>Memilih...</guibutton
+>.</para>
+
+<para
+>Ketika kamu sudah memilih, cukup klik <guibutton
+>Oke</guibutton
+> dan semua komponen yang diperlukan &kde; akan dimulai ulang sehingga perubahanmu segera berpengaruh.</para>
+
+<para
+>Tombol <guibutton
+>Sesuaikan Semua Font... </guibutton
+> memungkinkanmu untuk selekasnya mengeset properti untuk semua font yang dipilih di atas. Dialog pemilihan font yang mirip dengan yang standar akan muncul, tetapi kamu akan melihat kotak centang yang memungkinkanmu untuk ubah <guilabel
+>Font</guilabel
+>, <guilabel
+>Gaya font</guilabel
+> atau <guilabel
+>Ukuran</guilabel
+> secara terpisah satu sama lain. Kamu bisa memilih satu, dua, atau tiga opsi ini, dan mereka akan diterapkan ke semua grup font.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Menyesuaikan semua font</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="adjust-all.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Dialognya si Sesuaikan Semua Font...</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Misalnya, jika kamu telah memilih beberapa font face yang berbeda di atas, dan menyadari bahwa semuanya berukuran terlalu besar (misalnya, sering terjadi ketika kamu mengubah resolusi layar), kamu bisa menerapkan ukuran font baru untuk semua font, tanpa memengaruhi gaya dan font face yang kamu kustomisasi.</para>
+
+<sect2 id="fonts-aa">
+<title
+>Teks anti-aliasing</title>
+
+<para
+>Pengesetan anti-aliasing baku yang digunakan seluruh sistem oleh distribusimu dan <guilabel
+>Vendor Baku</guilabel
+> yang terlabel. Kamu bisa menonfungsikan semua anti-aliasing dengan memilih <guilabel
+>Dinonfungsikan</guilabel
+> di dalam kotak tarik turun.</para>
+
+<para
+>Untuk menggunakan pengaturan anti-aliasing yang berbeda, cukup pilih <guilabel
+>Difungsikan</guilabel
+> dari kotak di sebelah kanan <guilabel
+>Gunakan anti-aliasing:</guilabel
+> dan memfungsikan pengaturan kustom.</para>
+
+<para
+>Menempatkan tanda di kotak centang <guilabel
+>Kisaran kecuali:</guilabel
+> akan memungkinkanmu menentukan kisaran font yang  <emphasis
+>tidak</emphasis
+> akan dianti-aliasing. Kisaran ini ditentukan dengan dua kotak kombo di bawah ini.</para>
+
+<para
+>Kamu juga bisa memilih metode yang digunakan untuk menciptakan sebuah nuansa anti-aliasing untuk font-font-mu, dan seberapa kuatnya perubahan <ulink url="https://en.wikipedia.org/wiki/Subpixel_rendering"
+> Sub-pixel rendering</ulink
+> dan <ulink url="https://en.wikipedia.org/wiki/Font_hinting"
+> font hinting</ulink
+> yang seharusnya diterapkan. Jika kamu tidak terbiasa dengan metode secara individual, kamu harus meninggalkan opsi ini.</para>
+
+<note
+><para
+>Kemampuan untuk menggunakan font dan ikon teranti-alias mengharuskan kamu memiliki dukungan di kedua server displai dan toolkit &Qt;, bahwa kamu telah menginstal font yang sesuai, dan bahwa kamu menggunakan kemampuan penyajian font bawaan dari server displai. Jika kamu masih mengalami masalah, silakan hubungi milis &kde; yang sesuai.</para
+></note>
+
+</sect2>
+
+<sect2 id="fonts-dpi">
+<title
+>DPI Font</title>
+
+<para
+><guilabel
+>Paksa font DPI:</guilabel
+> mengusulkan kamu sebuah DPI alternatif selain sistemmu yang digunakan sebagai baku ketika pengaturan ini saat <guilabel
+>Dinonfungsikan</guilabel
+>. Kamu bisa memeriksa DPI server X kamu telah diset dengan menjalankan <userinput
+>xdpyinfo | grep resolution</userinput
+> di window terminal dan kemudian ubah DPI menggunakan kotak tarik turun. Ini akan diterapkan hanya untuk aplikasi yang baru dimulai.</para>
+</sect2>
+
+</sect1>
+
+</article>

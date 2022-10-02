@@ -1,0 +1,457 @@
+# Indonesian translations for kcm_desktopthemedetails package.
+# Copyright (C) 2010 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kcm_desktopthemedetails package.
+#
+# Andhika Padmawan <andhika.padmawan@gmail.com>, 2010-2014.
+# Wantoyo <wantoyek@gmail.com>, 2017, 2018, 2019.
+# Linerly <linerly@protonmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_desktopthemedetails\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"PO-Revision-Date: 2022-03-03 12:14+0700\n"
+"Last-Translator: Linerly <linerly@protonmail.com>\n"
+"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current Plasma Style"
+msgstr "Nama Gaya Plasma saat ini"
+
+#: kcm.cpp:108
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Tidak dapat menciptakan sebuah file temporer."
+
+#: kcm.cpp:119
+#, kde-format
+msgid "Unable to download the theme: %1"
+msgstr "Tidak dapat mengunduh tema: %1"
+
+#: kcm.cpp:144
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "Tema behasil diinstal."
+
+#: kcm.cpp:147 kcm.cpp:153
+#, kde-format
+msgid "Theme installation failed."
+msgstr "Penginstalan tema, gagal."
+
+#: kcm.cpp:245
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr "Gagal menghapus tema: %1"
+
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "This module lets you choose the Plasma style."
+msgstr "Modul ini membiarkan kamu memilih gaya Plasma."
+
+#: package/contents/ui/main.qml:69
+#, kde-format
+msgid "All Themes"
+msgstr "Semua Tema"
+
+#: package/contents/ui/main.qml:70
+#, kde-format
+msgid "Light Themes"
+msgstr "Tema Terang"
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgid "Dark Themes"
+msgstr "Tema Gelap"
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "Color scheme compatible"
+msgstr "Skema warna yang kompatibel"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgid "Follows color scheme"
+msgstr "Mengikuti skema warna"
+
+#: package/contents/ui/main.qml:118
+#, kde-format
+msgid "Edit Theme…"
+msgstr "Edit Tema..."
+
+#: package/contents/ui/main.qml:125
+#, kde-format
+msgid "Remove Theme"
+msgstr "Hapus Tema"
+
+#: package/contents/ui/main.qml:132
+#, kde-format
+msgid "Restore Theme"
+msgstr "Kembalikan Tema"
+
+#: package/contents/ui/main.qml:174
+#, kde-format
+msgid "Install from File…"
+msgstr "Instal dari File..."
+
+#: package/contents/ui/main.qml:179
+#, kde-format
+msgid "Get New Plasma Styles…"
+msgstr "Dapatkan Gaya Plasma Baru..."
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Open Theme"
+msgstr "Buka Tema"
+
+#: package/contents/ui/main.qml:195
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr "File Tema (*.zip *.tar.gz *.tar.bz2)"
+
+#: plasma-apply-desktoptheme.cpp:31
+#, kde-format
+msgid ""
+"This tool allows you to set the theme of the current Plasma session, without "
+"accidentally setting it to one that is either not available, or which is "
+"already set."
+msgstr ""
+"Alat ini memungkinkan Anda untuk mengatur tema sesi Plasma saat ini, tanpa "
+"mengatur ke tema yang tidak tersedia atau sudah diatur dengan sengaja."
+
+#: plasma-apply-desktoptheme.cpp:35
+#, kde-format
+msgid ""
+"The name of the theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+"Nama tema yang Anda ingin tetapkan untuk sesi Plasma Anda (memberikan alur "
+"yang lengkap akan hanya menggunakan bagian akhir alur)"
+
+#: plasma-apply-desktoptheme.cpp:36
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+"Tampilkan semua tema yang tersedia pada sistem ini (dan mana yang tema saat "
+"ini)"
+
+#: plasma-apply-desktoptheme.cpp:49
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+"Tema \"%1\" yang diminta telah ditetapkan sebagai tema untuk sesi Plasma "
+"saat ini."
+
+#: plasma-apply-desktoptheme.cpp:65
+#, kde-format
+msgid "The current Plasma session's theme has been set to %1"
+msgstr "Tema sesi Plasma saat ini telah ditetapkan dengan tema %1"
+
+#: plasma-apply-desktoptheme.cpp:67
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+"Tidak dapat menemukan tema \"%1\". Temanya seharusnya salah satu opsi "
+"berikut ini: %2"
+
+#: plasma-apply-desktoptheme.cpp:75
+#, kde-format
+msgid "You have the following Plasma themes on your system:"
+msgstr "Anda memiliki tema Plasma pada sistem Anda sebagai berikut:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Andhika Padmawan,Wantoyo"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "andhika.padmawan@gmail.com,wantoyek@gmail.com"
+
+#~ msgid "Plasma Style"
+#~ msgstr "Gaya Plasma"
+
+#~ msgid "David Rosca"
+#~ msgstr "David Rosca"
+
+#~ msgid "Search..."
+#~ msgstr "Cari..."
+
+#, fuzzy
+#~| msgid "Plasma Style"
+#~ msgid "Plasma Styles"
+#~ msgstr "Gaya Plasma"
+
+#~ msgid "Download New Plasma Styles"
+#~ msgstr "Unduh Gaya Plasma Baru"
+
+#~ msgid "Choose the Plasma theme"
+#~ msgstr "Memilih tema kursor mouse"
+
+#~ msgid "Configure Desktop Theme"
+#~ msgstr "Konfigurasi Tema Desktop"
+
+#, fuzzy
+#~| msgid "Theme installation failed."
+#~ msgid "Theme removal failed."
+#~ msgstr "Instalasi tema gagal."
+
+#~ msgid ""
+#~ "<h1>Desktop Theme</h1>This module allows you to modify the visual "
+#~ "appearance of the desktop."
+#~ msgstr ""
+#~ "<h1>Tema Desktop</h1>Modul ini memungkinkan anda untuk memodifikasi "
+#~ "tampilan visual desktop."
+
+#~ msgid "KDE Desktop Theme Module"
+#~ msgstr "Modul Tema Desktop KDE"
+
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
+#~ msgstr "(c) 2002 Karol Szwed, Daniel Molkentin"
+
+#~ msgid "Theme installation failed. (%1)"
+#~ msgstr "Instalasi tema gagal. (%1)"
+
+#~ msgid "Details"
+#~ msgstr "Detail"
+
+#~ msgctxt "plasma name"
+#~ msgid "Panel Background"
+#~ msgstr "Latar Belakang Panel"
+
+#~ msgctxt "plasma name"
+#~ msgid "Kickoff"
+#~ msgstr "Kickoff"
+
+#~ msgctxt "plasma name"
+#~ msgid "Task Items"
+#~ msgstr "Item Tugas"
+
+#~ msgctxt "plasma name"
+#~ msgid "Widget Background"
+#~ msgstr "Latar Belakang Widget"
+
+#~ msgctxt "plasma name"
+#~ msgid "Translucent Background"
+#~ msgstr "Latar Belakang Translusens"
+
+#~ msgctxt "plasma name"
+#~ msgid "Dialog Background"
+#~ msgstr "Latar Belakang Dialog"
+
+#~ msgctxt "plasma name"
+#~ msgid "Analog Clock"
+#~ msgstr "Jam Analog"
+
+#~ msgctxt "plasma name"
+#~ msgid "Notes"
+#~ msgstr "Catatan"
+
+#~ msgctxt "plasma name"
+#~ msgid "Tooltip"
+#~ msgstr "Tip Alat"
+
+#~ msgctxt "plasma name"
+#~ msgid "Pager"
+#~ msgstr "Pemisah"
+
+#~ msgctxt "plasma name"
+#~ msgid "Run Command Dialog"
+#~ msgstr "Jalankan Dialog Perintah"
+
+#~ msgctxt "plasma name"
+#~ msgid "Shutdown Dialog"
+#~ msgstr "Dialog Matikan"
+
+#~ msgctxt "plasma name"
+#~ msgid "Icons"
+#~ msgstr "Ikon"
+
+#~ msgid "(Customized)"
+#~ msgstr "(Disesuaikan)"
+
+#~ msgid "User customized theme"
+#~ msgstr "Tema disesuaikan pengguna"
+
+#~ msgid ""
+#~ "Theme items have been changed.  Do you still wish remove the \"%1\" theme?"
+#~ msgstr ""
+#~ "Item tema telah diubah.  Apakah anda ingin tetap menghapus tema \"%1\"?"
+
+#~ msgid "Removal of the default desktop theme is not allowed."
+#~ msgstr "Penghapusan tema desktop standar tidak diizinkan."
+
+#~ msgid "Are you sure you wish remove the \"%1\" theme?"
+#~ msgstr "Anda yakin ingin menghapus tema \"%1\"?"
+
+#~ msgid ""
+#~ "Please apply theme item changes (with a new theme name) before attempting "
+#~ "to export theme."
+#~ msgstr ""
+#~ "Silakan terapkan perubahan item tema (dengan nama tema baru) sebelum "
+#~ "mencoba untuk mengekspor tema."
+
+#~ msgid "Export Desktop Theme"
+#~ msgstr "Ekspor Tema Desktop"
+
+#~ msgid "Export theme to file"
+#~ msgstr "Ekspor tema ke berkas"
+
+#~ msgid "Archive (*.zip)"
+#~ msgstr "Arsip (*.zip)"
+
+#~ msgid "Theme Item"
+#~ msgstr "Item Tema"
+
+#~ msgid "Source"
+#~ msgstr "Sumber"
+
+#, fuzzy
+#~| msgid "%1 %2"
+#~ msgctxt ""
+#~ "%1 is the name of the theme, %2 is the type of the element (background, "
+#~ "icon, note, etc)"
+#~ msgid "%1 %2"
+#~ msgstr "%1 %2"
+
+#~ msgid "File..."
+#~ msgstr "Berkas..."
+
+#~ msgid "Select File to Use for %1"
+#~ msgstr "Pilih Berkas Untuk Digunakan %1"
+
+#~ msgid " Author: %1"
+#~ msgstr " Pembuat: %1"
+
+#~ msgid "Version: %1"
+#~ msgstr "Versi: %1"
+
+#~ msgid "Desktop Theme Details"
+#~ msgstr "Detail Tema Desktop"
+
+#~ msgid "Choose an item and customize it by assigning it a theme"
+#~ msgstr "Pilih sebuah item dan sesuaikan dengan menugaskan sebuah tema"
+
+#~ msgid ""
+#~ "You can set any theme to any item. The available themes for the item are "
+#~ "in the dropdown box on the right."
+#~ msgstr ""
+#~ "Anda dapat mengatur tema apapun untuk item apapun. Tema yang tersedia "
+#~ "untuk item ada di kotak taruh bawah di sebelah kanan."
+
+#~ msgid "Enable more options"
+#~ msgstr "Aktifkan opsi lainnya"
+
+#~ msgid ""
+#~ "This will expand the dialog and give you options to export your custom "
+#~ "theme as well as to remove a theme."
+#~ msgstr ""
+#~ "Ini akan membentangkan dialog dan memberikan anda opsi untuk mengekspor "
+#~ "tema suai anda serta untuk menghapus tema."
+
+#~ msgid "More"
+#~ msgstr "Lainnya"
+
+#~ msgid "Remove the selected theme"
+#~ msgstr "Hapus tema terpilih"
+
+#~ msgid ""
+#~ "Clicking this button will remove the selected theme. You will be asked "
+#~ "for confirmation."
+#~ msgstr ""
+#~ "Klik tombol ini akan menghapus tema terpilih. Anda akan ditanya untuk "
+#~ "konfirmasi."
+
+#~ msgid "Save your theme in a zip archive"
+#~ msgstr "Simpan tema anda dalam arsip zip"
+
+#~ msgid ""
+#~ "You can save your theme in a zip archive in order to share it with the "
+#~ "community."
+#~ msgstr ""
+#~ "Anda dapat menyimpan tema anda dalam arsip zip agar dapat dibagikan "
+#~ "dengan komunitas."
+
+#~ msgid "Export Theme to File..."
+#~ msgstr "Ekspor Tema ke Berkas..."
+
+#~ msgid "New theme name:"
+#~ msgstr "Nama tema baru:"
+
+#~ msgid "Custom theme name"
+#~ msgstr "Nama tema suai"
+
+#~ msgid "Give a name to your custom theme."
+#~ msgstr "Berikan nama untuk tema suai anda."
+
+#~ msgid "Author:"
+#~ msgstr "Pembuat:"
+
+#~ msgid "Custom theme author "
+#~ msgstr "Pembuat tema suai "
+
+#~ msgid "Enter the author name of your custom theme."
+#~ msgstr "Masukkan nama pembuat tema suai anda."
+
+#~ msgid "Version:"
+#~ msgstr "Versi:"
+
+#~ msgid "Custom theme version number"
+#~ msgstr "Nomor versi tema suai"
+
+#~ msgid "Enter the version number of your custom theme."
+#~ msgstr "Masukkan nomor versi tema suai anda."
+
+#~ msgid "Description:"
+#~ msgstr "Deskripsi:"
+
+#~ msgid "Custom theme description"
+#~ msgstr "Deskripsi tema suai"
+
+#~ msgid "Enter a description which will explain your custom theme."
+#~ msgstr "Masukkan deskripsi yang akan menjelaskan tema suai anda."
+
+#~ msgid "Select theme from above to customize"
+#~ msgstr "Pilih tema dari daftar di atas untuk menyesuaikan"
+
+#~ msgid "Theme Author"
+#~ msgstr "Pembuat Tema"
+
+#~ msgid "Theme Name"
+#~ msgstr "Nama Tema"
+
+#~ msgid "Theme Version"
+#~ msgstr "Versi Tema"
+
+#~ msgid "The theme description goes here..."
+#~ msgstr "Deskripsi tema ditulis di sini..."
+
+#~ msgid ""
+#~ "Choose a start theme in this list then customize some items below. All "
+#~ "less important items not listed below will use this start theme."
+#~ msgstr ""
+#~ "Pilih tema awal di senarai ini lalu sesuaikan beberapa item di bawah. "
+#~ "Semua item kurang penting yang tidak ada di bawah akan menggunakan tema "
+#~ "awal ini."
+
+#~ msgid "Karol Szwed"
+#~ msgstr "Karol Szwed"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "KCMDesktopTheme"
+#~ msgstr "KCMDesktopTheme"

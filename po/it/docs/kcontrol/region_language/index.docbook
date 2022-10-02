@@ -1,0 +1,97 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Italian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="translations" lang="&language;">
+<articleinfo>
+<title
+>Lingua</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Krishna.Tateneni; &Krishna.Tateneni.mail;</author>
+<othercredit role="translator"
+><firstname
+>Vincenzo</firstname
+><surname
+>Reale</surname
+><affiliation
+><address
+><email
+>smart2128vr@gmail.com</email
+></address
+></affiliation
+><contrib
+>Traduzione della documentazione</contrib
+></othercredit
+> 
+ </authorgroup>
+
+	  <date
+>9/4/2021</date>
+	  <releaseinfo
+>Plasma 5.20</releaseinfo>
+
+	  <keywordset>
+		<keyword
+>KDE</keyword>
+		<keyword
+>Impostazioni di sistema</keyword>
+		<keyword
+>localizzazione</keyword>
+		<keyword
+>nazione</keyword>
+		<keyword
+>lingua</keyword>
+		<keyword
+>traduzione</keyword>
+		<keyword
+>Lingua</keyword>
+	  </keywordset>
+</articleinfo>
+
+<para
+>In questa pagina è possibile impostare le lingue preferite con le quali visualizzare l'area di lavoro di &plasma; e le applicazioni. </para>
+
+<para
+>L'area di lavoro &plasma; e &kde; Applications sono scritte in inglese americano e sono tradotte in molte lingue diverse da squadre di volontari. Queste traduzioni devono essere installate prima di poterle utilizzare. </para>
+<note
+><para
+>Assicurarsi che siano installati i pacchetti della lingua o le traduzioni di &plasma; per le le lingue che si desidera utilizzare.</para>
+<para
+>Poiché il software &plasma; è sviluppato con le librerie &Qt;, è necessario avere le traduzioni &Qt; per le lingue selezionate per avere un'interfaccia completamente localizzata.</para
+></note>
+
+<para
+>L'elenco mostra i nomi localizzati delle lingue che saranno utilizzate per visualizzare l'area di lavoro e le applicazioni di &plasma;. Poiché l'area di lavoro e le applicazioni di &plasma; potrebbero non essere tradotti completamente in ogni lingua, &plasma; proverà a trovare le traduzioni appropriate scorrendo l'elenco fino a trovare una traduzione. Se nessuna delle lingue preferite ha una traduzione richiesta, sarà utilizzata la versione dall'inglese americano originale. </para>
+
+<para
+>È possibile aggiungere una lingua all'elenco principale facendo clic sul pulsante <guibutton
+>Aggiungi lingue...</guibutton
+>. Saranno visualizzati i nomi delle lingue localizzati delle traduzioni installate di &systemsettings; e disponibili sul proprio sistema. Se la lingua che si desidera utilizzare non è mostrata nell'elenco, sarà necessario installarla utilizzando il metodo utilizzato normalmente per il proprio sistema. Selezionare una o più lingue nell'elenco e fare clic su <guibutton
+>Aggiungi</guibutton
+>. </para>
+<para
+>È possibile rimuovere una lingua dall'elenco principale selezionandola e facendo poi clic sull'icona <inlinemediaobject
+><imageobject
+><imagedata fileref="list-remove.png" format="PNG"/></imageobject
+></inlinemediaobject
+>. È possibile cambiare l'ordine di preferenza nell'elenco selezionando una lingua e facendo clic sull'icona <inlinemediaobject
+><imageobject
+> <imagedata fileref="go-top.png" format="PNG"/> </imageobject
+></inlinemediaobject
+>. </para>
+
+<note>
+<para
+>Lingua e formati sono impostazioni indipendenti. La modifica di una lingua <emphasis
+>non</emphasis
+> cambia automaticamente le impostazioni per numeri, valuta, &etc; alla corrispondente nazione o regione. </para>
+</note>
+
+</article>

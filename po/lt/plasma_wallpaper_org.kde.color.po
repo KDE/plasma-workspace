@@ -1,0 +1,32 @@
+# Lithuanian translations for trunk-kf package.
+# Copyright (C) 2014 This_file_is_part_of_KDE
+# This file is distributed under the same license as the trunk-kf package.
+#
+# Automatically generated, 2014.
+# liudas@aksioma.lt <liudas@aksioma.lt>, 2014.
+# Liudas Ališauskas <liudas@akmc.lt>, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: trunk-kf 5\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2019-06-01 19:22+0000\n"
+"Last-Translator: Moo\n"
+"Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
+"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#: contents/ui/config.qml:21
+#, kde-format
+msgid "Color:"
+msgstr "Spalva:"
+
+#: contents/ui/config.qml:22
+#, kde-format
+msgid "Select Background Color"
+msgstr "Pasirinkti fono spalvą"

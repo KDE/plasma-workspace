@@ -1,0 +1,316 @@
+# translation of plasma_wallpaper_image.po to bosanski
+# Chusslove Illich <caslav.ilic@gmx.net>, 2009, 2010.
+# Dalibor Djuric <dalibor.djuric@mozilla-srbija.org>, 2009, 2010.
+# KDE 4 <megaribi@epn.ba>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_wallpaper_image\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-15 00:46+0000\n"
+"PO-Revision-Date: 2015-02-04 14:28+0000\n"
+"Last-Translator: Dino Babahmetovic <dbabahmeto1@etf.unsa.ba>\n"
+"Language-Team: bosanski <bs@li.org>\n"
+"Language: bs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-02-05 07:28+0000\n"
+"X-Generator: Launchpad (build 17331)\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:94
+#, kde-format
+msgid "Positioning:"
+msgstr "Postavljanje:"
+
+#: imagepackage/contents/ui/config.qml:97
+#, fuzzy, kde-format
+msgid "Scaled and Cropped"
+msgstr "Skalirano && Izrezano"
+
+# >> @item:inlistbox Positioning
+#: imagepackage/contents/ui/config.qml:101
+#, kde-format
+msgid "Scaled"
+msgstr "Skalirano"
+
+#: imagepackage/contents/ui/config.qml:105
+#, kde-format
+msgid "Scaled, Keep Proportions"
+msgstr "Skalirano, Sačuvane proprcije"
+
+# >> @item:inlistbox Positioning
+#: imagepackage/contents/ui/config.qml:109
+#, kde-format
+msgid "Centered"
+msgstr "Centrirano"
+
+# >> @item:inlistbox Positioning
+#: imagepackage/contents/ui/config.qml:113
+#, kde-format
+msgid "Tiled"
+msgstr "Popločano"
+
+#: imagepackage/contents/ui/config.qml:141
+#, fuzzy, kde-format
+#| msgid "Background Color:"
+msgid "Background:"
+msgstr "Pozadinska boja:"
+
+#: imagepackage/contents/ui/config.qml:142
+#, kde-format
+msgid "Blur"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:151
+#, kde-format
+msgid "Solid color"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:161
+#, fuzzy, kde-format
+msgid "Select Background Color"
+msgstr "Pozadinska boja:"
+
+#: imagepackage/contents/ui/config.qml:207
+#, kde-format
+msgid "Add Image…"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:213
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:257
+#, fuzzy, kde-format
+#| msgid "Download Wallpapers"
+msgid "Get New Wallpapers…"
+msgstr "Preuzimanje Pozadina"
+
+#: imagepackage/contents/ui/main.qml:69
+#, fuzzy, kde-format
+msgid "Open Wallpaper Image"
+msgstr "Sljedeća tapetna slika"
+
+#: imagepackage/contents/ui/main.qml:70
+#, kde-format
+msgid "Next Wallpaper Image"
+msgstr "Sljedeća tapetna slika"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:33
+#, kde-format
+msgid "Open Containing Folder"
+msgstr ""
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:39
+#, fuzzy, kde-format
+#| msgid "Remove wallpaper"
+msgid "Restore wallpaper"
+msgstr "Ukloni pozadinu"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:44
+#, fuzzy, kde-format
+#| msgid "Remove wallpaper"
+msgid "Remove Wallpaper"
+msgstr "Ukloni pozadinu"
+
+#: plasma-apply-wallpaperimage.cpp:29
+#, kde-format
+msgid ""
+"This tool allows you to set an image as the wallpaper for the Plasma session."
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:31
+#, kde-format
+msgid ""
+"An image file or an installed wallpaper kpackage that you wish to set as the "
+"wallpaper for your Plasma session"
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:45
+#, kde-format
+msgid ""
+"There is a stray single quote in the filename of this wallpaper (') - please "
+"contact the author of the wallpaper to fix this, or rename the file "
+"yourself: %1"
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:85
+#, kde-format
+msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:89
+#, kde-format
+msgid ""
+"Successfully set the wallpaper for all desktops to the KPackage based %1"
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:91
+#, kde-format
+msgid "Successfully set the wallpaper for all desktops to the image %1"
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:97
+#, kde-format
+msgid ""
+"The file passed to be set as wallpaper does not exist, or we cannot identify "
+"it as a wallpaper: %1"
+msgstr ""
+
+#: plugin/finder/packagefinder.cpp:152
+#, kde-format
+msgid "Recommended wallpaper file"
+msgstr "Preporučena datoteka pozadinske slike"
+
+#: plugin/imagebackend.cpp:234
+#, kde-format
+msgid "Directory with the wallpaper to show slides from"
+msgstr "Direktorij koji sadrži slajdove iz kojih će se prikazati pozadina"
+
+#: plugin/imagebackend.cpp:345
+#, kde-format
+msgid "Open Image"
+msgstr "Otvori sliku"
+
+#: plugin/imagebackend.cpp:345
+#, kde-format
+msgid "Image Files"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:38
+#, kde-format
+msgid "Order:"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:45
+#, kde-format
+msgid "Random"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:49
+#, kde-format
+msgid "A to Z"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:53
+#, kde-format
+msgid "Z to A"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:57
+#, kde-format
+msgid "Date modified (newest first)"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:61
+#, kde-format
+msgid "Date modified (oldest first)"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:86
+#, kde-format
+msgid "Group by folders"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:98
+#, kde-format
+msgid "Change every:"
+msgstr "Promjeni sve:"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:108
+#, kde-format
+msgid "%1 hour"
+msgid_plural "%1 hours"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:128
+#, fuzzy, kde-format
+#| msgid "Minutes"
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "Minute"
+msgstr[1] "Minute"
+msgstr[2] "Minute"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:148
+#, fuzzy, kde-format
+#| msgid "Seconds"
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "Sekunde"
+msgstr[1] "Sekunde"
+msgstr[2] "Sekunde"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:162
+#, fuzzy, kde-format
+#| msgid "Remove wallpaper"
+msgid "Folders"
+msgstr "Ukloni pozadinu"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:220
+#, fuzzy, kde-format
+#| msgid "Remove wallpaper"
+msgid "Remove Folder"
+msgstr "Ukloni pozadinu"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:225
+#, kde-format
+msgid "Open Folder"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:235
+#, kde-format
+msgid "There are no wallpaper locations configured"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:250
+#, fuzzy, kde-format
+#| msgid "Add Folder"
+msgid "Add Folder…"
+msgstr "Dodaj direktorij"
+
+#, fuzzy
+#~| msgid "Remove wallpaper"
+#~ msgid "Add Custom Wallpaper"
+#~ msgstr "Ukloni pozadinu"
+
+#~ msgid "Remove wallpaper"
+#~ msgstr "Ukloni pozadinu"
+
+#~ msgid "%1 by %2"
+#~ msgstr "%1 od %2"
+
+#, fuzzy
+#~| msgid "Remove wallpaper"
+#~ msgid "Wallpapers"
+#~ msgstr "Ukloni pozadinu"
+
+#~ msgid "Download Wallpapers"
+#~ msgstr "Preuzimanje Pozadina"
+
+#~ msgid "Hours"
+#~ msgstr "Sati"
+
+#~ msgid "Open..."
+#~ msgstr "Otvori..."
+
+#~ msgctxt "Unknown Author"
+#~ msgid "Unknown"
+#~ msgstr "Nepoznato"
+
+#~ msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz *.xcf)"
+#~ msgstr "Datoteke slika (*.png *.jpg *.jpeg *.bmp *.svg *.svgz *.xcf)"

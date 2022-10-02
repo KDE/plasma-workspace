@@ -1,0 +1,242 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Spanish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="fontinst" lang="&language;">
+<title
+>Gestión de tipos de letra</title>
+<articleinfo>
+<authorgroup>
+<author
+>&Craig.Drummond; &Craig.Drummond.Mail;</author>
+
+<othercredit role="translator"
+><firstname
+>Rocío</firstname
+><surname
+>Gallego</surname
+><affiliation
+><address
+><email
+>traducciones@rociogallego.com</email
+></address
+></affiliation
+><contrib
+>Traducción</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Santiago</firstname
+><surname
+>Fernández Sancho</surname
+><affiliation
+><address
+><email
+>santi@kde-es.org</email
+></address
+></affiliation
+><contrib
+>Traductor</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2018-03-31</date>
+<releaseinfo
+>Plasma 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Preferencias del sistema</keyword>
+<keyword
+>tipografía</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_fontinst">
+<title
+>Gestión de tipos de letra</title>
+
+<para
+>Este es el módulo encargado de instalar, desinstalar, previsualizar y gestionar sus tipos de letra.</para>
+
+<sect2 id="font-groups">
+<title
+>Grupos de tipos de letra</title>
+<para
+>Existen 4 grupos predefinidos de tipos de letra especiales:</para>
+
+<orderedlist>
+    <listitem
+><para
+>«Todos los tipos de letra». Muestra todos los tipos de letra, tanto los personales como los del sistema.</para
+></listitem>
+    <listitem
+><para
+>«Tipos de letra personales». Los tipos de letra mostrados serán sus tipos de letra personales, y no estarán disponibles para los demás usuarios.</para
+></listitem>
+    <listitem
+><para
+>«Tipos de letra del sistema». Se mostrarán los tipos de letra disponibles para todos los usuarios. Instalar un tipo de letra para todo el sistema o eliminarla del mismo, necesitará privilegios de administrador.</para
+></listitem>
+    <listitem
+><para
+>«No clasificado». Listará todos los tipos de letra que no estén dentro de los demás grupos definidos por el usuario. Este grupo solo aparece si tiene algún grupo definido por el usuario.</para
+></listitem>
+</orderedlist>
+<para
+>Para añadir un tipo de letra a un grupo, arrástrelo de la lista de tipos de letra al grupo. Para eliminar un tipo de letra de un grupo, arrástrelo al grupo «Todos los tipos de letra».</para>
+<para
+>Bajo esta lista encontrará los botones para crear un nuevo grupo, eliminar uno ya existente y activar o desactivar los tipos de letra del grupo actual.</para>
+<para
+>En el menú contextual de esta lista encontrará elementos adicionales para imprimir ejemplos de tipos de letras y exportar un tipo a un archivo zip.</para>
+
+<sect3 id="font-hiding">
+<title
+>Activar y desactivar</title>
+<para
+>Los usuarios con muchos tipos de letra pueden encontrar práctico tener solo algunas disponibles (o activas) algunas veces. Para facilitarlo, este módulo le permite desactivar tipos de letra individuales, o grupos de tipos de letra completos. Desactivar un tipo de letra no la eliminará del sistema, simplemente la ocultará de forma que no aparecerá en las aplicaciones. Si reactiva el tipo de letra podrá volver a utilizarla.</para>
+</sect3>
+
+</sect2>
+
+<sect2 id="font-list">
+<title
+>Lista de tipos de letras</title>
+<para
+>La parte principal está formada por una lista con los tipos de letra instalados, agrupados por las familias de los tipos de letras. El número entre corchetes representa el número de estilos instalados para una familia, p. ej., el tipo de letra «Times» se puede listar como: <itemizedlist
+> <listitem>
+    <para
+>Times [4]</para>
+    <itemizedlist>
+        <listitem
+><para
+>Regular</para
+></listitem>
+        <listitem
+><para
+>Cursiva</para
+></listitem>
+        <listitem
+><para
+>Negrita</para
+></listitem>
+        <listitem
+><para
+>Negrita Cursiva</para
+></listitem>
+    </itemizedlist>
+</listitem>
+</itemizedlist>
+</para>
+
+<para
+>Para instalar un tipo de letra, pulse el botón <guibutton
+>Añadir...</guibutton
+> y seleccione los tipos de letra deseados en el diálogo de archivo. El grupo de tipos de letra seleccionado controlará donde se instalarán los tipos de letra.</para>
+<para
+>Para desinstalar tipos de letra, selecciónelas de la lista y pulse el botón «Borrar...».</para>
+
+<para
+>Haga clic en con el &RMB; para abrir un menú de contexto con algunas acciones adicionales como <guilabel
+>Activar</guilabel
+>, <guilabel
+>Desactivar</guilabel
+>, <guilabel
+>Imprimir</guilabel
+>, <ulink url="help:/kfontviewer/index.html"
+><guilabel
+>Abrir en visor de tipos de letra</guilabel
+></ulink
+> y <guilabel
+>Recargar</guilabel
+>.</para>
+
+<sect3 id="font-filter">
+<title
+>Filtrado de tipos de letras</title>
+<para
+>Un campo de texto situado en la parte superior de la vista previa del tipo de letra le permite filtrar la lista de los tipos de letra. Puede filtrar los tipos de letra según distintas categorías.</para>
+        <orderedlist>
+        <listitem
+><para
+>Familia.</para
+></listitem>
+        <listitem
+><para
+>Estilo.</para
+></listitem>
+        <listitem
+><para
+>Fundición de tipo de letra.</para
+></listitem>
+        <listitem
+><para
+>Coincidencia FontConfig. Permite introducir un nombre de familia y ver la familia que utilizaría en realidad fontconfig.</para
+></listitem>
+        <listitem
+><para
+>Tipo del archivo de tipo de letra.</para
+></listitem>
+        <listitem
+><para
+>Nombre del archivo de tipo de letra.</para
+></listitem>
+        <listitem
+><para
+>Ubicación del archivo de tipo de letra.</para
+></listitem>
+        <listitem
+><para
+>Sistema de escritura.</para
+></listitem>
+        </orderedlist>
+</sect3>
+
+<sect3 id="get-new-fonts">
+<title
+>Obtener nuevos tipos de letras</title>
+<para
+>Los nuevos tipos de letra se pueden instalar a partir de archivos locales y también se pueden descargar usando <guilabel
+>Obtener novedades</guilabel
+>. La entrada <guilabel
+>Obtener nuevos tipos de letra</guilabel
+> del botón de herramientas (situado sobre la lista de grupos) permite instalar tipos de letra desde Internet. Los tipos de letra descargados de esta forma se instalarán en el grupo «Tipos de letra personales». Para que los tipos de letra instalados se apliquen a todo el sistema, tendrá que moverlos al grupo «Tipos del letra del sistema»; esto se puede hacer arrastrando los tipos de letra sobre la entrada del grupo «Tipos de letra del sistema», pero se necesitan privilegios de administrador.</para>
+</sect3>
+
+</sect2>
+
+<sect2 id="font-duplicates">
+<title
+>Duplicados de tipos de letra</title>
+<para
+>Si tiene muchos tipos de letra instalados en su sistema es posible que algunas estén duplicadas.</para
+> 
+<para
+>Pulse el icono de herramientas situado sobre la lista del grupo y seleccione «Buscar tipos de letra duplicados...», que es una sencilla herramienta que explorará su sistema en busca de tipos de letra que tenga varios archivos asociados con ellos. Por ejemplo, si tiene «times.ttf» y «times.TTF» instalados en «/usr/local/share/fonts», el mecanismo subyacente bajo los tipos de letra (llamado «FontConfig») solo verá uno de ellos. Por tanto, si desinstala uno de ellos, volverá a aparecer, ya que solo se ha eliminado uno de estos archivos. Ejecutar esta herramienta generará un diálogo listando cada tipo de letra que tiene varios archivos y la correspondiente lista de archivos. Para seleccionar un archivo para su borrado, pulse en la columna que contiene el icono de la papelera.</para>
+</sect2>
+
+<sect2 id="font-preview">
+<title
+>Vista previa</title>
+<para
+>Muestra una vista previa de texto con diferentes tamaños de letra.</para>
+<para
+>Mediante el menú de contexto se puede aumentar o reducir la escala, seleccionar un tipo de vista previa (<guilabel
+>Vista previa estándar</guilabel
+> o <guilabel
+>Todos los caracteres</guilabel
+>) y cambiar el texto de la vista previa.</para>
+
+<para
+>Lance la aplicación &kfontview; si necesita disponer de vistas previas adicionales para los bloques Unicode. </para>
+</sect2>
+</sect1>
+</article>

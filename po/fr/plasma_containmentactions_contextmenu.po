@@ -1,0 +1,84 @@
+# translation of plasma_containmentactions_contextmenu.po to
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Maxime Corteel <mcorteel@gmail.com>, 2015.
+# Simon Depiets <sdepiets@gmail.com>, 2019.
+# Xavier Besnard <xavier.besnard@neuf.fr>, 2021, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_containmentactions_contextmenu\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-11 00:47+0000\n"
+"PO-Revision-Date: 2022-09-24 14:57+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
+"Language-Team: French <kde-francophone@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Generator: Lokalize 22.08.1\n"
+
+#: menu.cpp:99
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Show KRunner"
+msgstr "Afficher KRunner"
+
+#: menu.cpp:104
+#, kde-format
+msgid "Open Terminal"
+msgstr "Ouvrir un terminal"
+
+#: menu.cpp:108
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Lock Screen"
+msgstr "Verrouiller l'écran"
+
+#: menu.cpp:117
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Leave…"
+msgstr "Quitter..."
+
+#: menu.cpp:126
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Configure Display Settings…"
+msgstr "Configurer les paramètres d'affichage..."
+
+#: menu.cpp:291
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Configure Contextual Menu Plugin"
+msgstr "Configurer le module externe de menu contextuel"
+
+#: menu.cpp:301
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "[Other Actions]"
+msgstr "[Autres actions]"
+
+#: menu.cpp:304
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Wallpaper Actions"
+msgstr "Actions relatives aux fonds d'écran"
+
+#: menu.cpp:308
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "[Separator]"
+msgstr "[Séparateur]"
+
+#~ msgctxt "plasma_containmentactions_contextmenu"
+#~ msgid "Run Command..."
+#~ msgstr "Exécuter une commande..."
+
+#~ msgid "Add Panel"
+#~ msgstr "Ajouter un panneau"

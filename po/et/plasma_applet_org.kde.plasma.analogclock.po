@@ -1,0 +1,94 @@
+# translation of plasma_applet_clock.po to Estonian
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Marek Laane <bald@starman.ee>, 2007-2008, 2016, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_clock\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-25 00:47+0000\n"
+"PO-Revision-Date: 2019-10-30 23:47+0200\n"
+"Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
+"Language-Team: Estonian <kde-et@lists.linux.ee>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 19.08.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Välimus"
+
+#: contents/ui/analogclock.qml:76
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Current time is %1; Current date is %2"
+msgstr ""
+
+#: contents/ui/configGeneral.qml:23
+#, kde-format
+msgid "Show seconds hand"
+msgstr "Sekundiseieri näitamine"
+
+#: contents/ui/configGeneral.qml:24
+#, kde-format
+msgid "General:"
+msgstr "Üldine:"
+
+#: contents/ui/configGeneral.qml:28
+#, kde-format
+msgid "Show time zone"
+msgstr "Ajavööndi näitamine"
+
+#~ msgid "Show the seconds"
+#~ msgstr "Sekundite näitamine"
+
+#~ msgid "Check this if you want to show the seconds."
+#~ msgstr "Märkimisel näidatakse ka sekundeid."
+
+#~ msgid "Show &seconds hand"
+#~ msgstr "&Sekundiseieri näitamine"
+
+#~ msgid "Show the Timezone in text"
+#~ msgstr "Ajavööndi näitamine tekstina"
+
+#~ msgid "Check this if you want to display Timezone in text."
+#~ msgstr "Märkimisel näidatakse ajavööndit tekstina."
+
+#~ msgid "Show &time zone"
+#~ msgstr "Ajavööndi näi&tamine"
+
+#, fuzzy
+#~| msgid "Also show the time as text"
+#~ msgid "Also show the Timezone as text"
+#~ msgstr "Kellaaja näitamine ka tekstina"
+
+#~ msgid "Area"
+#~ msgstr "Ala"
+
+#~ msgid "Region"
+#~ msgstr "Piirkond"
+
+#~ msgid "Comment"
+#~ msgstr "Kommentaar"
+
+#~ msgctxt "@title:window"
+#~ msgid "Configure Clock"
+#~ msgstr "Kella seadistamine"
+
+#~ msgid "Size of the clock:"
+#~ msgstr "Kella suurus:"
+
+#~ msgid "Change clock size"
+#~ msgstr "Kella suuruse muutmine"
+
+#~ msgid ""
+#~ "Set a new size for the clock between 0 and 500. The size is the square "
+#~ "side that contains the clock."
+#~ msgstr ""
+#~ "Kella uue suuruse määramine vahemikus 0 kuni 500. Suurus on kella "
+#~ "sisaldava ruudu küljepikkus."

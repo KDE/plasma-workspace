@@ -1,0 +1,115 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Brazilian-Portuguese "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="translations" lang="&language;">
+<articleinfo>
+<title
+>Traduções</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Krishna.Tateneni; &Krishna.Tateneni.mail;</author>
+<othercredit role="translator"
+><firstname
+>André Marcelo</firstname
+><surname
+>Alvarenga</surname
+><affiliation
+><address
+><email
+>alvarenga@kde.org</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+ </authorgroup>
+
+	  <date
+>18/05/2015</date>
+	  <releaseinfo
+>Plasma 5.3</releaseinfo>
+
+	  <keywordset>
+		<keyword
+>KDE</keyword>
+		<keyword
+>Configurações do Sistema</keyword>
+		<keyword
+>localização</keyword>
+		<keyword
+>país</keyword>
+		<keyword
+>idioma</keyword>
+		<keyword
+>tradução</keyword>
+	  </keywordset>
+</articleinfo>
+
+<para
+>Nesta página você pode definir os idiomas preferidos que serão exibidos no espaço de trabalho e aplicativos do &kde;. </para>
+
+<para
+>O &kde; Workspace e Applications são escritos em inglês americano e são traduzidos para diversos idiomas por equipes de voluntários. Estas traduções precisam ser instaladas antes que você possa selecioná-las. A lista de <guilabel
+>Idiomas disponíveis</guilabel
+> mostra os nomes dos idiomas das traduções das &systemsettings; instaladas e disponíveis no seu sistema. Se o idioma que deseja usar não estiver na lista, então você precisará instalá-lo usando o método normal do seu sistema. </para>
+<note
+><para
+>Certifique-se de que tem instalados os pacotes de idiomas do &kde; ou das traduções dos idiomas que deseja usar.</para>
+<para
+>Como o &kde; utiliza as bibliotecas do &Qt;, você também precisará das traduções do &Qt; para os idiomas selecionados, para ter uma interfacecompletamente traduzida.</para
+></note>
+<!--FIXME 
+Toooltip in GUI about available languages is wrong as well
+-->
+
+<para
+>A lista de <guilabel
+>Idiomas preferidos</guilabel
+> mostra os nomes dos idiomas que possuem informações de localização e que podem serão usados ao exibir o espaço de trabalho e aplicativos do &kde;. Uma vez que nem todos os componentes do espaço de trabalho e aplicativos do KDE podem estar traduzidos em todos os idiomas, o &kde; tentará encontrar as traduções mais adequadas seguindo a lista de <guilabel
+>Idiomas preferidos</guilabel
+> até encontrar uma tradução. Se nenhum dos seus idiomas preferidos tiver uma tradução, então o inglês americano será usado. </para>
+
+<para
+>Você pode adicionar um idioma à lista de <guilabel
+>Idiomas preferidos</guilabel
+>, selecionando-o nas <guilabel
+>Idiomas disponíveis</guilabel
+> e depois clicando no botão Adicionar. Se tiver a lista ativa, basta digitar a primeira letra do idioma desejado. Digite a primeira letra novamente para percorrer todos os itens da lista. </para>
+<para
+>Você pode remover um idioma da lista de <guilabel
+>Idiomas preferidos</guilabel
+> selecionando-o e então clicando no botão com uma seta para remover. Você pode mudar a ordem de preferência na lista de <guilabel
+>Idiomas preferidos</guilabel
+> selecionando um idioma e clicando nos botões com seta para cima e para baixo. </para>
+
+<para
+>Apenas os idiomas apresentados em <guilabel
+>Idiomas preferidos</guilabel
+> e em <guilabel
+>Idiomas disponíveis</guilabel
+> serão oferecidos como opções para o <guilabel
+>Idioma primário</guilabel
+> e <guilabel
+>Idioma secundário</guilabel
+> na caixa de diálogo <guilabel
+>Mudar o idioma do aplicativo</guilabel
+> do menu <guimenu
+>Ajuda</guimenu
+>. </para>
+
+<note>
+<para
+>As configurações das Traduções e Formatos são independentes. A mudança de um idioma <emphasis
+>não</emphasis
+> altera automaticamente as configurações dos números, moeda, &etc;, do país ou região correspondentes. </para>
+</note>
+
+</article>

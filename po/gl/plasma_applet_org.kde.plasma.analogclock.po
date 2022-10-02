@@ -1,0 +1,65 @@
+# translation of plasma_applet_clock.po to Galician
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# mvillarino <mvillarino@users.sourceforge.net>, 2007, 2008.
+# marce villarino <mvillarino@users.sourceforge.net>, 2009.
+# Marce Villarino <mvillarino@kde-espana.es>, 2012, 2013.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_clock\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-25 00:47+0000\n"
+"PO-Revision-Date: 2019-01-27 17:46+0100\n"
+"Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
+"Language-Team: Galician <kde-i18n-doc@kde.org>\n"
+"Language: gl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Aparencia"
+
+#: contents/ui/analogclock.qml:76
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Current time is %1; Current date is %2"
+msgstr ""
+
+#: contents/ui/configGeneral.qml:23
+#, kde-format
+msgid "Show seconds hand"
+msgstr "Mostrar a agulla dos segundos"
+
+#: contents/ui/configGeneral.qml:24
+#, kde-format
+msgid "General:"
+msgstr "Xeral:"
+
+#: contents/ui/configGeneral.qml:28
+#, kde-format
+msgid "Show time zone"
+msgstr "Mostrar o fuso horario"
+
+#~ msgid "Show the seconds"
+#~ msgstr "Mostrar os segundos"
+
+#~ msgid "Check this if you want to show the seconds."
+#~ msgstr "Escolla esta opción se quer mostrar os segundos."
+
+#~ msgid "Show &seconds hand"
+#~ msgstr "Mostrar a agulla dos &segundos"
+
+#~ msgid "Show the Timezone in text"
+#~ msgstr "Mostrar o fuso horario no texto"
+
+#~ msgid "Check this if you want to display Timezone in text."
+#~ msgstr "Escolla isto se quer mostrar o fuso horario como un texto."
+
+#~ msgid "Show &time zone"
+#~ msgstr "Mostrar o &fuso horario"

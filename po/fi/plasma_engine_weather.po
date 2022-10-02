@@ -1,0 +1,5194 @@
+# Finnish translation for plasma_engine_weather.
+# Copyright © 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the kdebase package.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2010, 2011, 2015, 2016.
+# Jorma Karvonen <karvonen.jorma@gmail.com>, 2011.
+# Tommi Nieminen <translator@legisign.org>, 2017, 2018, 2019, 2020, 2022.
+#
+# KDE Finnish translation sprint participants:
+#
+# KDE Finnish translation sprint participants:
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_engine_weather\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-09 00:47+0000\n"
+"PO-Revision-Date: 2022-01-27 21:24+0200\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-POT-Import-Date: 2012-12-01 22:22:34+0000\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#: bbcukmet_i18n.dat:1
+#, kde-format
+msgctxt "weather condition"
+msgid "clear"
+msgstr "selkeää"
+
+#: bbcukmet_i18n.dat:2
+#, kde-format
+msgctxt "weather condition"
+msgid "clear intervals"
+msgstr "ajoittain selkeää"
+
+#: bbcukmet_i18n.dat:3 ions/wetter.com/ion_wettercom.cpp:220
+#, kde-format
+msgctxt "weather condition"
+msgid "clear sky"
+msgstr "selkeä taivas"
+
+#: bbcukmet_i18n.dat:4 ions/wetter.com/ion_wettercom.cpp:158
+#: ions/wetter.com/ion_wettercom.cpp:159
+#, kde-format
+msgctxt "weather condition"
+msgid "cloudy"
+msgstr "pilvistä"
+
+#: bbcukmet_i18n.dat:5
+#, kde-format
+msgctxt "weather condition"
+msgid "cloudy with hail"
+msgstr "pilvistä ja raesateita"
+
+#: bbcukmet_i18n.dat:6
+#, kde-format
+msgctxt "weather condition"
+msgid "cloudy with heavy snow"
+msgstr "pilvistä ja runsasta lumisadetta"
+
+#: bbcukmet_i18n.dat:7
+#, kde-format
+msgctxt "weather condition"
+msgid "cloudy with light snow"
+msgstr "pilvistä ja heikkoa lumisadetta"
+
+#: bbcukmet_i18n.dat:8
+#, kde-format
+msgctxt "weather condition"
+msgid "cloudy with sleet"
+msgstr "pilvistä ja räntää"
+
+#: bbcukmet_i18n.dat:9 ions/wetter.com/ion_wettercom.cpp:167
+#: ions/wetter.com/ion_wettercom.cpp:168 ions/wetter.com/ion_wettercom.cpp:170
+#, kde-format
+msgctxt "weather condition"
+msgid "drizzle"
+msgstr "tihkusadetta"
+
+#: bbcukmet_i18n.dat:10
+#, kde-format
+msgctxt "weather condition"
+msgid "fog"
+msgstr "sumua"
+
+#: bbcukmet_i18n.dat:11
+#, kde-format
+msgctxt "weather condition"
+msgid "foggy"
+msgstr "sumuista"
+
+#: bbcukmet_i18n.dat:12
+#, kde-format
+msgctxt "weather condition"
+msgid "grey cloud"
+msgstr "harmaata pilveä"
+
+#: bbcukmet_i18n.dat:13
+#, kde-format
+msgctxt "weather condition"
+msgid "hail"
+msgstr "rakeita"
+
+#: bbcukmet_i18n.dat:14
+#, kde-format
+msgctxt "weather condition"
+msgid "hail shower"
+msgstr "raekuuro"
+
+#: bbcukmet_i18n.dat:15
+#, kde-format
+msgctxt "weather condition"
+msgid "hail showers"
+msgstr "raekuuroja"
+
+#: bbcukmet_i18n.dat:16
+#, kde-format
+msgctxt "weather condition"
+msgid "hazy"
+msgstr "usvaa"
+
+#: bbcukmet_i18n.dat:17 ions/wetter.com/ion_wettercom.cpp:178
+#, kde-format
+msgctxt "weather condition"
+msgid "heavy rain"
+msgstr "rankkasadetta"
+
+#: bbcukmet_i18n.dat:18
+#, kde-format
+msgctxt "weather condition"
+msgid "heavy rain shower"
+msgstr "rankkasadekuuro"
+
+#: bbcukmet_i18n.dat:19
+#, kde-format
+msgctxt "weather condition"
+msgid "heavy rain showers"
+msgstr "rankkoja sadekuuroja"
+
+#: bbcukmet_i18n.dat:20
+#, kde-format
+msgctxt "weather condition"
+msgid "heavy shower"
+msgstr "rankkasadekuuro"
+
+#: bbcukmet_i18n.dat:21 ions/wetter.com/ion_wettercom.cpp:191
+#, kde-format
+msgctxt "weather condition"
+msgid "heavy showers"
+msgstr "rankkoja sadekuuroja"
+
+#: bbcukmet_i18n.dat:22 ions/wetter.com/ion_wettercom.cpp:187
+#, kde-format
+msgctxt "weather condition"
+msgid "heavy snow"
+msgstr "runsasta lumisadetta"
+
+#: bbcukmet_i18n.dat:23
+#, kde-format
+msgctxt "weather condition"
+msgid "heavy snow shower"
+msgstr "runsas lumipyrykuuro"
+
+#: bbcukmet_i18n.dat:24
+#, kde-format
+msgctxt "weather condition"
+msgid "heavy snow showers"
+msgstr "runsaita lumipyrykuuroja"
+
+#: bbcukmet_i18n.dat:25
+#, kde-format
+msgctxt "weather condition"
+msgid "light cloud"
+msgstr "ohutta pilveä"
+
+#: bbcukmet_i18n.dat:26 ions/wetter.com/ion_wettercom.cpp:175
+#: ions/wetter.com/ion_wettercom.cpp:176
+#, kde-format
+msgctxt "weather condition"
+msgid "light rain"
+msgstr "heikkoa sadetta"
+
+#: bbcukmet_i18n.dat:27
+#, kde-format
+msgctxt "weather condition"
+msgid "light rain shower"
+msgstr "heikko sadekuuro"
+
+#: bbcukmet_i18n.dat:28
+#, kde-format
+msgctxt "weather condition"
+msgid "light rain showers"
+msgstr "heikkoja sadekuuroja"
+
+#: bbcukmet_i18n.dat:29
+#, kde-format
+msgctxt "weather condition"
+msgid "light shower"
+msgstr "heikko sadekuuro"
+
+#: bbcukmet_i18n.dat:30 ions/wetter.com/ion_wettercom.cpp:189
+#, kde-format
+msgctxt "weather condition"
+msgid "light showers"
+msgstr "heikkoja sadekuuroja"
+
+#: bbcukmet_i18n.dat:31 ions/wetter.com/ion_wettercom.cpp:184
+#: ions/wetter.com/ion_wettercom.cpp:185
+#, kde-format
+msgctxt "weather condition"
+msgid "light snow"
+msgstr "heikkoa lumisadetta"
+
+#: bbcukmet_i18n.dat:32
+#, kde-format
+msgctxt "weather condition"
+msgid "light snow shower"
+msgstr "heikko lumipyry"
+
+#: bbcukmet_i18n.dat:33 ions/wetter.com/ion_wettercom.cpp:194
+#, kde-format
+msgctxt "weather condition"
+msgid "light snow showers"
+msgstr "heikkoa lumipyrykuuroja"
+
+#: bbcukmet_i18n.dat:34
+#, kde-format
+msgctxt "weather condition"
+msgid "mist"
+msgstr "usvaa"
+
+#: bbcukmet_i18n.dat:35
+#, kde-format
+msgctxt "weather condition"
+msgid "misty"
+msgstr "usvaista"
+
+#: bbcukmet_i18n.dat:36 envcan_i18n.dat:1 noaa_i18n.dat:264
+#, kde-format
+msgctxt "weather condition"
+msgid "N/A"
+msgstr "-"
+
+#: bbcukmet_i18n.dat:37
+#, kde-format
+msgctxt "weather condition"
+msgid "na"
+msgstr "-"
+
+#: bbcukmet_i18n.dat:38
+#, kde-format
+msgctxt "weather condition"
+msgid "partly cloudy"
+msgstr "osittain pilvistä"
+
+#: bbcukmet_i18n.dat:39
+#, kde-format
+msgctxt "weather condition"
+msgid "sandstorm"
+msgstr "hiekkamyrsky"
+
+#: bbcukmet_i18n.dat:40
+#, kde-format
+msgctxt "weather condition"
+msgid "sleet"
+msgstr "räntää"
+
+#: bbcukmet_i18n.dat:41
+#, kde-format
+msgctxt "weather condition"
+msgid "sleet shower"
+msgstr "räntäkuuro"
+
+#: bbcukmet_i18n.dat:42
+#, kde-format
+msgctxt "weather condition"
+msgid "sleet showers"
+msgstr "räntäkuuroja"
+
+#: bbcukmet_i18n.dat:43 ions/wetter.com/ion_wettercom.cpp:207
+#, kde-format
+msgctxt "weather condition"
+msgid "sunny"
+msgstr "aurinkoista"
+
+#: bbcukmet_i18n.dat:44
+#, kde-format
+msgctxt "weather condition"
+msgid "sunny intervals"
+msgstr "ajoittain aurinkoista"
+
+#: bbcukmet_i18n.dat:45
+#, kde-format
+msgctxt "weather condition"
+msgid "thick cloud"
+msgstr "paksu pilviverho"
+
+#: bbcukmet_i18n.dat:46 ions/wetter.com/ion_wettercom.cpp:196
+#: ions/wetter.com/ion_wettercom.cpp:197
+#, kde-format
+msgctxt "weather condition"
+msgid "thunderstorm"
+msgstr "ukkosmyrskyä"
+
+#: bbcukmet_i18n.dat:47
+#, kde-format
+msgctxt "weather condition"
+msgid "thundery shower"
+msgstr "ukkoskuuro"
+
+#: bbcukmet_i18n.dat:48
+#, kde-format
+msgctxt "weather condition"
+msgid "thundery showers"
+msgstr "ukkoskuuroja"
+
+#: bbcukmet_i18n.dat:49
+#, kde-format
+msgctxt "weather condition"
+msgid "tropical storm"
+msgstr "trooppinen myrsky"
+
+#: bbcukmet_i18n.dat:50
+#, kde-format
+msgctxt "weather condition"
+msgid "white cloud"
+msgstr "valkoinen pilvi"
+
+#: bbcukmet_i18n.dat:51
+#, kde-format
+msgctxt "weather forecast"
+msgid "clear"
+msgstr "selkeää"
+
+#: bbcukmet_i18n.dat:52
+#, kde-format
+msgctxt "weather forecast"
+msgid "clear intervals"
+msgstr "ajoittain selkeää"
+
+#: bbcukmet_i18n.dat:53
+#, kde-format
+msgctxt "weather forecast"
+msgid "clear sky"
+msgstr "selkeä taivas"
+
+#: bbcukmet_i18n.dat:54
+#, kde-format
+msgctxt "weather forecast"
+msgid "cloudy"
+msgstr "pilvistä"
+
+#: bbcukmet_i18n.dat:55
+#, kde-format
+msgctxt "weather forecast"
+msgid "cloudy with hail"
+msgstr "pilvistä ja rakeita"
+
+#: bbcukmet_i18n.dat:56
+#, kde-format
+msgctxt "weather forecast"
+msgid "cloudy with heavy snow"
+msgstr "pilvistä ja sankkaa lumisadetta"
+
+#: bbcukmet_i18n.dat:57
+#, kde-format
+msgctxt "weather forecast"
+msgid "cloudy with light snow"
+msgstr "pilvistä ja heikkoa lumisadetta"
+
+#: bbcukmet_i18n.dat:58
+#, kde-format
+msgctxt "weather forecast"
+msgid "cloudy with sleet"
+msgstr "pilvistä ja räntää"
+
+#: bbcukmet_i18n.dat:59
+#, kde-format
+msgctxt "weather forecast"
+msgid "drizzle"
+msgstr "tihkusadetta"
+
+#: bbcukmet_i18n.dat:60
+#, kde-format
+msgctxt "weather forecast"
+msgid "fog"
+msgstr "sumua"
+
+#: bbcukmet_i18n.dat:61
+#, kde-format
+msgctxt "weather forecast"
+msgid "foggy"
+msgstr "sumuista"
+
+#: bbcukmet_i18n.dat:62
+#, kde-format
+msgctxt "weather forecast"
+msgid "grey cloud"
+msgstr "harmaa pilvi"
+
+#: bbcukmet_i18n.dat:63
+#, kde-format
+msgctxt "weather forecast"
+msgid "hail"
+msgstr "rakeita"
+
+#: bbcukmet_i18n.dat:64
+#, kde-format
+msgctxt "weather forecast"
+msgid "hail shower"
+msgstr "raekuuro"
+
+#: bbcukmet_i18n.dat:65
+#, kde-format
+msgctxt "weather forecast"
+msgid "hail showers"
+msgstr "raekuuroja"
+
+#: bbcukmet_i18n.dat:66
+#, kde-format
+msgctxt "weather forecast"
+msgid "hazy"
+msgstr "usvaa"
+
+#: bbcukmet_i18n.dat:67
+#, kde-format
+msgctxt "weather forecast"
+msgid "heavy rain"
+msgstr "rankkasade"
+
+#: bbcukmet_i18n.dat:68
+#, kde-format
+msgctxt "weather forecast"
+msgid "heavy rain shower"
+msgstr "rankka sadekuuro"
+
+#: bbcukmet_i18n.dat:69
+#, kde-format
+msgctxt "weather forecast"
+msgid "heavy rain showers"
+msgstr "rankkoja sadekuuroja"
+
+#: bbcukmet_i18n.dat:70
+#, kde-format
+msgctxt "weather forecast"
+msgid "heavy shower"
+msgstr "rankka sadekuuro"
+
+#: bbcukmet_i18n.dat:71
+#, kde-format
+msgctxt "weather forecast"
+msgid "heavy showers"
+msgstr "rankkoja sadekuuroja"
+
+#: bbcukmet_i18n.dat:72
+#, kde-format
+msgctxt "weather forecast"
+msgid "heavy snow"
+msgstr "runsasta lumisadetta"
+
+#: bbcukmet_i18n.dat:73
+#, kde-format
+msgctxt "weather forecast"
+msgid "heavy snow shower"
+msgstr "sankka lumipyry"
+
+#: bbcukmet_i18n.dat:74
+#, kde-format
+msgctxt "weather forecast"
+msgid "heavy snow showers"
+msgstr "sankkoja lumipyrykuuroja"
+
+#: bbcukmet_i18n.dat:75
+#, kde-format
+msgctxt "weather forecast"
+msgid "light cloud"
+msgstr "ohutta pilveä"
+
+#: bbcukmet_i18n.dat:76
+#, kde-format
+msgctxt "weather forecast"
+msgid "light rain"
+msgstr "heikkoa sadetta"
+
+#: bbcukmet_i18n.dat:77
+#, kde-format
+msgctxt "weather forecast"
+msgid "light rain shower"
+msgstr "heikko sadekuuro"
+
+#: bbcukmet_i18n.dat:78
+#, kde-format
+msgctxt "weather forecast"
+msgid "light rain showers"
+msgstr "heikkoja sadekuuroja"
+
+#: bbcukmet_i18n.dat:79
+#, kde-format
+msgctxt "weather forecast"
+msgid "light shower"
+msgstr "heikko sadekuuro"
+
+#: bbcukmet_i18n.dat:80
+#, kde-format
+msgctxt "weather forecast"
+msgid "light showers"
+msgstr "heikkoja sadekuuroja"
+
+#: bbcukmet_i18n.dat:81
+#, kde-format
+msgctxt "weather forecast"
+msgid "light snow"
+msgstr "heikkoa lumisadetta"
+
+#: bbcukmet_i18n.dat:82
+#, kde-format
+msgctxt "weather forecast"
+msgid "light snow shower"
+msgstr "heikko lumipyrykuuro"
+
+#: bbcukmet_i18n.dat:83
+#, kde-format
+msgctxt "weather forecast"
+msgid "light snow showers"
+msgstr "heikkoja lumipyrykuuroja"
+
+#: bbcukmet_i18n.dat:84
+#, kde-format
+msgctxt "weather forecast"
+msgid "mist"
+msgstr "usvaa"
+
+#: bbcukmet_i18n.dat:85
+#, kde-format
+msgctxt "weather forecast"
+msgid "misty"
+msgstr "usvaista"
+
+#: bbcukmet_i18n.dat:86
+#, kde-format
+msgctxt "weather forecast"
+msgid "na"
+msgstr "-"
+
+#: bbcukmet_i18n.dat:87
+#, kde-format
+msgctxt "weather forecast"
+msgid "partly cloudy"
+msgstr "osittain pilvistä"
+
+#: bbcukmet_i18n.dat:88
+#, kde-format
+msgctxt "weather forecast"
+msgid "sandstorm"
+msgstr "hiekkamyrsky"
+
+#: bbcukmet_i18n.dat:89
+#, kde-format
+msgctxt "weather forecast"
+msgid "sleet"
+msgstr "räntää"
+
+#: bbcukmet_i18n.dat:90
+#, kde-format
+msgctxt "weather forecast"
+msgid "sleet shower"
+msgstr "räntäkuuro"
+
+#: bbcukmet_i18n.dat:91
+#, kde-format
+msgctxt "weather forecast"
+msgid "sleet showers"
+msgstr "räntäkuuroja"
+
+#: bbcukmet_i18n.dat:92
+#, kde-format
+msgctxt "weather forecast"
+msgid "sunny"
+msgstr "aurinkoista"
+
+#: bbcukmet_i18n.dat:93
+#, kde-format
+msgctxt "weather forecast"
+msgid "sunny intervals"
+msgstr "ajoittain aurinkoista"
+
+#: bbcukmet_i18n.dat:94
+#, kde-format
+msgctxt "weather forecast"
+msgid "thick cloud"
+msgstr "paksu pilviverho"
+
+#: bbcukmet_i18n.dat:95
+#, kde-format
+msgctxt "weather forecast"
+msgid "thunderstorm"
+msgstr "ukkosta"
+
+#: bbcukmet_i18n.dat:96
+#, kde-format
+msgctxt "weather forecast"
+msgid "thundery shower"
+msgstr "ukkoskuuro"
+
+#: bbcukmet_i18n.dat:97
+#, kde-format
+msgctxt "weather forecast"
+msgid "thundery showers"
+msgstr "ukkoskuuroja"
+
+#: bbcukmet_i18n.dat:98
+#, kde-format
+msgctxt "weather forecast"
+msgid "tropical storm"
+msgstr "trooppinen myrsky"
+
+#: bbcukmet_i18n.dat:99
+#, kde-format
+msgctxt "weather forecast"
+msgid "white cloud"
+msgstr "valkoinen pilvi"
+
+#: bbcukmet_i18n.dat:100
+#, kde-format
+msgctxt "visibility"
+msgid "Excellent"
+msgstr "Erinomainen"
+
+#: bbcukmet_i18n.dat:101
+#, kde-format
+msgctxt "visibility"
+msgid "Very Good"
+msgstr "Erittäin hyvä"
+
+#: bbcukmet_i18n.dat:102
+#, kde-format
+msgctxt "visibility"
+msgid "Good"
+msgstr "Hyvä"
+
+#: bbcukmet_i18n.dat:103
+#, kde-format
+msgctxt "visibility"
+msgid "Moderate"
+msgstr "Kohtalainen"
+
+#: bbcukmet_i18n.dat:104
+#, kde-format
+msgctxt "visibility"
+msgid "Poor"
+msgstr "Heikko"
+
+#: bbcukmet_i18n.dat:105
+#, kde-format
+msgctxt "visibility"
+msgid "Very Poor"
+msgstr "Erittäin heikko"
+
+#: envcan_i18n.dat:2 noaa_i18n.dat:7
+#, kde-format
+msgctxt "weather condition"
+msgid "Blowing Snow"
+msgstr "Lumituisku"
+
+#: envcan_i18n.dat:3 noaa_i18n.dat:10
+#, kde-format
+msgctxt "weather condition"
+msgid "Clear"
+msgstr "Selkeä"
+
+#: envcan_i18n.dat:4
+#, kde-format
+msgctxt "weather condition"
+msgid "Cloudy"
+msgstr "Pilvistä"
+
+#: envcan_i18n.dat:5
+#, kde-format
+msgctxt "weather condition"
+msgid "Decreasing Cloud"
+msgstr "Heikkenevä pilvi"
+
+#: envcan_i18n.dat:6
+#, kde-format
+msgctxt "weather condition"
+msgid "Distant Precipitation"
+msgstr "Etäisyysennustus"
+
+#: envcan_i18n.dat:7
+#, kde-format
+msgctxt "weather condition"
+msgid "Drifting Snow"
+msgstr "Ajelehtivaa lunta"
+
+#: envcan_i18n.dat:8 noaa_i18n.dat:13
+#, kde-format
+msgctxt "weather condition"
+msgid "Drizzle"
+msgstr "Tihkusadetta"
+
+#: envcan_i18n.dat:9 noaa_i18n.dat:18
+#, kde-format
+msgctxt "weather condition"
+msgid "Dust"
+msgstr "Tomu"
+
+#: envcan_i18n.dat:10
+#, kde-format
+msgctxt "weather condition"
+msgid "Dust Devils"
+msgstr "Pölypyörteitä"
+
+#: envcan_i18n.dat:11 noaa_i18n.dat:27
+#, kde-format
+msgctxt "weather condition"
+msgid "Fog"
+msgstr "Sumu"
+
+#: envcan_i18n.dat:12
+#, kde-format
+msgctxt "weather condition"
+msgid "Fog Bank Near Station"
+msgstr "Sumurintama lähellä asemaa"
+
+#: envcan_i18n.dat:13
+#, kde-format
+msgctxt "weather condition"
+msgid "Fog Depositing Ice"
+msgstr "Lumihuurre"
+
+#: envcan_i18n.dat:14
+#, kde-format
+msgctxt "weather condition"
+msgid "Fog Patches"
+msgstr "Paikoittaista sumua"
+
+#: envcan_i18n.dat:15
+#, kde-format
+msgctxt "weather condition"
+msgid "Freezing drizzle"
+msgstr "Jäätävää tihkusadetta"
+
+#: envcan_i18n.dat:16
+#, kde-format
+msgctxt "weather condition"
+msgid "Freezing rain"
+msgstr "Jäätävää sadetta"
+
+#: envcan_i18n.dat:17 noaa_i18n.dat:40
+#, kde-format
+msgctxt "weather condition"
+msgid "Funnel Cloud"
+msgstr "Suppilopilvi"
+
+#: envcan_i18n.dat:18 noaa_i18n.dat:42
+#, kde-format
+msgctxt "weather condition"
+msgid "Hail"
+msgstr "Rakeita"
+
+#: envcan_i18n.dat:19 noaa_i18n.dat:44
+#, kde-format
+msgctxt "weather condition"
+msgid "Haze"
+msgstr "Utua"
+
+#: envcan_i18n.dat:20 noaa_i18n.dat:45
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Blowing Snow"
+msgstr "Raju lumituisku"
+
+#: envcan_i18n.dat:21
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Drifting Snow"
+msgstr "Runsaasti ajelehtivaa lunta"
+
+#: envcan_i18n.dat:22 noaa_i18n.dat:46
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Drizzle"
+msgstr "Rankkaa tihkusadetta"
+
+#: envcan_i18n.dat:23
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Hail"
+msgstr "Kova raekuuro"
+
+#: envcan_i18n.dat:24
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Mixed Rain and Drizzle"
+msgstr "Rankkaa sadetta ja tihkua sekaisin"
+
+#: envcan_i18n.dat:25
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Mixed Rain and Snow Shower"
+msgstr "Rankkaa sadetta ja lumipyrykuuroja sekaisin"
+
+#: envcan_i18n.dat:26 noaa_i18n.dat:62
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Rain"
+msgstr "Kaatosadetta"
+
+#: envcan_i18n.dat:27
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Rain and Snow"
+msgstr "Kaatosadetta ja lunta"
+
+#: envcan_i18n.dat:28
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Rainshower"
+msgstr "Rankkasadekuuroja"
+
+#: envcan_i18n.dat:29 noaa_i18n.dat:78
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Snow"
+msgstr "Sankkaa lumisadetta"
+
+#: envcan_i18n.dat:30
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Snow Pellets"
+msgstr "Runsaasti lumirakeita"
+
+#: envcan_i18n.dat:31
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Snowshower"
+msgstr "Runsaasti lumipyrykuuroja"
+
+#: envcan_i18n.dat:32 noaa_i18n.dat:225
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm"
+msgstr "Ukkosmyrsky"
+
+#: envcan_i18n.dat:33
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Thunderstorm with Hail"
+msgstr "Raju ukonilma ja rakeita"
+
+#: envcan_i18n.dat:34
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Thunderstorm with Rain"
+msgstr "Raju ukonilma ja sadetta"
+
+#: envcan_i18n.dat:35 noaa_i18n.dat:101
+#, kde-format
+msgctxt "weather condition"
+msgid "Ice Crystals"
+msgstr "Jääkiteitä"
+
+#: envcan_i18n.dat:36 noaa_i18n.dat:102
+#, kde-format
+msgctxt "weather condition"
+msgid "Ice Pellets"
+msgstr "Jäärakeita"
+
+#: envcan_i18n.dat:37
+#, kde-format
+msgctxt "weather condition"
+msgid "Increasing Cloud"
+msgstr "Vahvistuvaa pilvisyyttä"
+
+#: envcan_i18n.dat:38 noaa_i18n.dat:106
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Drizzle"
+msgstr "Heikkkoa tihkusadetta"
+
+#: envcan_i18n.dat:39 noaa_i18n.dat:111
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Freezing Drizzle"
+msgstr "Heikkoa jäätävää tihkusadetta"
+
+#: envcan_i18n.dat:40 noaa_i18n.dat:115
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Freezing Rain"
+msgstr "Heikkoa jäätävää sadetta"
+
+#: envcan_i18n.dat:41 noaa_i18n.dat:121
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Rain"
+msgstr "Heikkoa sadetta"
+
+#: envcan_i18n.dat:42
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Rainshower"
+msgstr "Heikko sadekuuro"
+
+#: envcan_i18n.dat:43 noaa_i18n.dat:137
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Snow"
+msgstr "Heikkoa lumisadetta"
+
+#: envcan_i18n.dat:44
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Snow Pellets"
+msgstr "Heikkoja lumirakeita"
+
+#: envcan_i18n.dat:45
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Snowshower"
+msgstr "Heikko lumikuuro"
+
+#: envcan_i18n.dat:46
+#, kde-format
+msgctxt "weather condition"
+msgid "Lightning Visible"
+msgstr "Salamointia näkyvissä"
+
+#: envcan_i18n.dat:47
+#, kde-format
+msgctxt "weather condition"
+msgid "Mainly Clear"
+msgstr "Pääasiallisesti selkeää"
+
+#: envcan_i18n.dat:48
+#, kde-format
+msgctxt "weather condition"
+msgid "Mainly Sunny"
+msgstr "Pääasiallisesti aurinkoista"
+
+#: envcan_i18n.dat:49
+#, kde-format
+msgctxt "weather condition"
+msgid "Mist"
+msgstr "Vesihöyryä"
+
+#: envcan_i18n.dat:50
+#, kde-format
+msgctxt "weather condition"
+msgid "Mixed Rain and Drizzle"
+msgstr "Sadetta ja tihkua sekaisin"
+
+#: envcan_i18n.dat:51
+#, kde-format
+msgctxt "weather condition"
+msgid "Mixed Rain and Snow Shower"
+msgstr "Sadetta ja lumipyrykuuroja sekaisin"
+
+#: envcan_i18n.dat:52 noaa_i18n.dat:164
+#, kde-format
+msgctxt "weather condition"
+msgid "Mostly Cloudy"
+msgstr "Enimmäkseen pilvistä"
+
+#: envcan_i18n.dat:53
+#, kde-format
+msgctxt "weather condition"
+msgid "Not Reported"
+msgstr "Ei ilmoitettu"
+
+#: envcan_i18n.dat:54 noaa_i18n.dat:174
+#, kde-format
+msgctxt "weather condition"
+msgid "Partly Cloudy"
+msgstr "Osittain pilvistä"
+
+#: envcan_i18n.dat:55
+#, kde-format
+msgctxt "weather condition"
+msgid "Rain"
+msgstr "Sadetta"
+
+#: envcan_i18n.dat:56
+#, kde-format
+msgctxt "weather condition"
+msgid "Rain and Snow"
+msgstr "Vesi- ja lumisadetta"
+
+#: envcan_i18n.dat:57
+#, kde-format
+msgctxt "weather condition"
+msgid "Rainshower"
+msgstr "Sadekuuro"
+
+#: envcan_i18n.dat:58
+#, kde-format
+msgctxt "weather condition"
+msgid "Recent Drizzle"
+msgstr "Äskettäinen tihkusade"
+
+#: envcan_i18n.dat:59
+#, kde-format
+msgctxt "weather condition"
+msgid "Recent Dust or Sand Storm"
+msgstr "Äskettäinen pöly- tai hiekkamyrsky"
+
+#: envcan_i18n.dat:60
+#, kde-format
+msgctxt "weather condition"
+msgid "Recent Fog"
+msgstr "Äskettäinen sumu"
+
+#: envcan_i18n.dat:61
+#, kde-format
+msgctxt "weather condition"
+msgid "Recent Freezing Precipitation"
+msgstr "Äskettäinen jäätävä sademäärä"
+
+#: envcan_i18n.dat:62
+#, kde-format
+msgctxt "weather condition"
+msgid "Recent Hail"
+msgstr "Äskettäinen raekuuro"
+
+#: envcan_i18n.dat:63
+#, kde-format
+msgctxt "weather condition"
+msgid "Recent Rain"
+msgstr "Äskettäinen sade"
+
+#: envcan_i18n.dat:64
+#, kde-format
+msgctxt "weather condition"
+msgid "Recent Rain and Snow"
+msgstr "Äskettäinen sade ja lumi"
+
+#: envcan_i18n.dat:65
+#, kde-format
+msgctxt "weather condition"
+msgid "Recent Rainshower"
+msgstr "Äskettäinen sadekuuro"
+
+#: envcan_i18n.dat:66
+#, kde-format
+msgctxt "weather condition"
+msgid "Recent Snow"
+msgstr "Äskettäinen lumi"
+
+#: envcan_i18n.dat:67
+#, kde-format
+msgctxt "weather condition"
+msgid "Recent Snowshower"
+msgstr "Äskettäinen lumikuuro"
+
+#: envcan_i18n.dat:68
+#, kde-format
+msgctxt "weather condition"
+msgid "Recent Thunderstorm"
+msgstr "Äskettäinen ukonilma"
+
+#: envcan_i18n.dat:69
+#, kde-format
+msgctxt "weather condition"
+msgid "Recent Thunderstorm with Hail"
+msgstr "Äskettäinen ukonilma ja rakeet"
+
+#: envcan_i18n.dat:70
+#, kde-format
+msgctxt "weather condition"
+msgid "Recent Thunderstorm with Heavy Hail"
+msgstr "Äskettäinen ukonilma ja kookkaat rakeet"
+
+#: envcan_i18n.dat:71
+#, kde-format
+msgctxt "weather condition"
+msgid "Recent Thunderstorm with Heavy Rain"
+msgstr "Äskettäinen ukonilma ja rankkasade"
+
+#: envcan_i18n.dat:72
+#, kde-format
+msgctxt "weather condition"
+msgid "Recent Thunderstorm with Rain"
+msgstr "Äskettäinen ukonilma ja sade"
+
+#: envcan_i18n.dat:73
+#, kde-format
+msgctxt "weather condition"
+msgid "Sand or Dust Storm"
+msgstr "Hiekka- tai pölymyrsky"
+
+#: envcan_i18n.dat:74
+#, kde-format
+msgctxt "weather condition"
+msgid "Severe Sand or Dust Storm"
+msgstr "Vakava hiekka- tai pölymyrsky"
+
+#: envcan_i18n.dat:75 noaa_i18n.dat:194
+#, kde-format
+msgctxt "weather condition"
+msgid "Shallow Fog"
+msgstr "Matala sumu"
+
+#: envcan_i18n.dat:76 noaa_i18n.dat:208
+#, kde-format
+msgctxt "weather condition"
+msgid "Smoke"
+msgstr "Savua"
+
+#: envcan_i18n.dat:77 noaa_i18n.dat:209
+#, kde-format
+msgctxt "weather condition"
+msgid "Snow"
+msgstr "Lunta"
+
+#: envcan_i18n.dat:78
+#, kde-format
+msgctxt "weather condition"
+msgid "Snow Crystals"
+msgstr "Lumikiteitä"
+
+# Synonyymeja ovat "soft hail" ja "snow pellets".
+#: envcan_i18n.dat:79 noaa_i18n.dat:216
+#, kde-format
+msgctxt "weather condition"
+msgid "Snow Grains"
+msgstr "Lumirakeita"
+
+# Tarkoittanee äkillistä myrskyä, etenkin merellä.
+#: envcan_i18n.dat:80
+#, kde-format
+msgctxt "weather condition"
+msgid "Squalls"
+msgstr "Puuskainen tuuli"
+
+#: envcan_i18n.dat:81
+#, kde-format
+msgctxt "weather condition"
+msgid "Sunny"
+msgstr "Aurinkoista"
+
+#: envcan_i18n.dat:82
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm with Hail"
+msgstr "Ukonilma ja rakeet"
+
+#: envcan_i18n.dat:83
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm with Rain"
+msgstr "Ukonilma ja sadetta"
+
+#: envcan_i18n.dat:84
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm with light rainshowers"
+msgstr "Ukkosta ja sadekuuroja"
+
+#: envcan_i18n.dat:85
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm with heavy rainshowers"
+msgstr "Ukonilma ja rankkasade"
+
+#: envcan_i18n.dat:86
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm with Sand or Dust Storm"
+msgstr "Ukonilma ja hiekka- tai pölymyrsky"
+
+#: envcan_i18n.dat:87
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm without Precipitation"
+msgstr "Ukonilma ilman sadetta"
+
+#: envcan_i18n.dat:88
+#, kde-format
+msgctxt "weather condition"
+msgid "Tornado"
+msgstr "Pyörremyrsky"
+
+#: envcan_i18n.dat:89
+#, kde-format
+msgctxt "weather forecast"
+msgid "A few clouds"
+msgstr "Muutama pilvi"
+
+#: envcan_i18n.dat:90
+#, kde-format
+msgctxt "weather forecast"
+msgid "A few flurries"
+msgstr "Joitakin lumipyrykuuroja"
+
+#: envcan_i18n.dat:91
+#, kde-format
+msgctxt "weather forecast"
+msgid "A few flurries mixed with ice pellets"
+msgstr "Joitakin lumipyrykuuroja ja lumirakeita sekaisin"
+
+#: envcan_i18n.dat:92
+#, kde-format
+msgctxt "weather forecast"
+msgid "A few flurries or rain showers"
+msgstr "Joitakin lumi- tai sadekuuroja"
+
+#: envcan_i18n.dat:93
+#, kde-format
+msgctxt "weather forecast"
+msgid "A few flurries or thundershowers"
+msgstr "Joitakin lumi- tai ukkoskuuroja"
+
+#: envcan_i18n.dat:94
+#, kde-format
+msgctxt "weather forecast"
+msgid "A few rain showers or flurries"
+msgstr "Joitakin sadekuuroja tai lumipyrykuuroja"
+
+#: envcan_i18n.dat:95
+#, kde-format
+msgctxt "weather forecast"
+msgid "A few rain showers or wet flurries"
+msgstr "Joitakin sadekuuroja tai märkiä lumipyrykuuroja"
+
+#: envcan_i18n.dat:96
+#, kde-format
+msgctxt "weather forecast"
+msgid "A few showers"
+msgstr "Joitain sadekuuroja"
+
+#: envcan_i18n.dat:97
+#, kde-format
+msgctxt "weather forecast"
+msgid "A few showers or drizzle"
+msgstr "Joitain sadekuuroja tai tihkua"
+
+#: envcan_i18n.dat:98
+#, kde-format
+msgctxt "weather forecast"
+msgid "A few showers or thundershowers"
+msgstr "Joitain sade- tai ukkoskuuroja"
+
+#: envcan_i18n.dat:99
+#, kde-format
+msgctxt "weather forecast"
+msgid "A few showers or thunderstorms"
+msgstr "Joitain sadekuuroja tai ukkosmyrskyjä"
+
+#: envcan_i18n.dat:100
+#, kde-format
+msgctxt "weather forecast"
+msgid "A few thundershowers"
+msgstr "Joitakin ukkoskuuroja"
+
+#: envcan_i18n.dat:101
+#, kde-format
+msgctxt "weather forecast"
+msgid "A few thunderstorms"
+msgstr "Joitakin ukkosmyrskyjä"
+
+#: envcan_i18n.dat:102
+#, kde-format
+msgctxt "weather forecast"
+msgid "A few wet flurries"
+msgstr "Joitakin märkiä lumipyrykuuroja"
+
+#: envcan_i18n.dat:103
+#, kde-format
+msgctxt "weather forecast"
+msgid "A few wet flurries or rain showers"
+msgstr "Joitakin märkiä lumipyrykuuroja tai sadekuuroja"
+
+#: envcan_i18n.dat:104
+#, kde-format
+msgctxt "weather forecast"
+msgid "A mix of sun and cloud"
+msgstr "Aurinkoista ja pilvistä"
+
+#: envcan_i18n.dat:105
+#, kde-format
+msgctxt "weather forecast"
+msgid "Blizzard"
+msgstr "Lumimyrsky"
+
+#: envcan_i18n.dat:106
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of drizzle"
+msgstr "Mahdollisesti tihkua"
+
+#: envcan_i18n.dat:107
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of drizzle mixed with freezing drizzle"
+msgstr "Mahdollisesti tihkusadetta ja jäätävää tihkusadetta sekaisin"
+
+#: envcan_i18n.dat:108
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of drizzle mixed with rain"
+msgstr "Mahdollisesti tihkusadetta ja sadetta sekaisin"
+
+#: envcan_i18n.dat:109
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of drizzle or rain"
+msgstr "Mahdollisesti tihkusadetta tai sadetta"
+
+#: envcan_i18n.dat:110
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of flurries"
+msgstr "Mahdollisesti lumipyrykuuroja"
+
+#: envcan_i18n.dat:111
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of flurries at times heavy"
+msgstr "Toisinaan kovat lumipyrykuurot mahdollisia"
+
+#: envcan_i18n.dat:112
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of flurries mixed with ice pellets"
+msgstr "Mahdollisesti lumipyrykuuroja ja lumirakeita sekaisin"
+
+#: envcan_i18n.dat:113
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of flurries or ice pellets"
+msgstr "Mahdollisesti lumipyrykuuroja tai lumirakeita"
+
+#: envcan_i18n.dat:114
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of flurries or rain showers"
+msgstr "Mahdollisesti lumipyrykuuroja tai sadekuuroja"
+
+#: envcan_i18n.dat:115
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of flurries or thundershowers"
+msgstr "Mahdollisesti lumipyrykuuroja tai ukkoskuuroja"
+
+#: envcan_i18n.dat:116
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of freezing drizzle"
+msgstr "Mahdollisesti jäätävä tihkusadetta"
+
+#: envcan_i18n.dat:117
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of freezing rain"
+msgstr "Mahdollisesti jäätävää sadetta"
+
+#: envcan_i18n.dat:118
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of freezing rain mixed with snow"
+msgstr "Mahdollisesti jäätävää sadetta ja lunta sekaisin"
+
+#: envcan_i18n.dat:119
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of freezing rain or rain"
+msgstr "Mahdollisesti jäätävää sadetta tai sadetta"
+
+#: envcan_i18n.dat:120
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of freezing rain or snow"
+msgstr "Mahdollisesti jäätävää sadetta tai lunta"
+
+#: envcan_i18n.dat:121
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of light snow"
+msgstr "Mahdollisesti heikkoa lumisadetta"
+
+#: envcan_i18n.dat:122
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of light snow and blowing snow"
+msgstr "Mahdollisesti heikkoa lumisadetta ja lumituiskua"
+
+#: envcan_i18n.dat:123
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of light snow mixed with freezing drizzle"
+msgstr "Mahdollisesti heikkoa lumisadetta ja jäätävää tihkua sekaisin"
+
+#: envcan_i18n.dat:124
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of light snow mixed with ice pellets"
+msgstr "Mahdollisesti heikkoa lumisadetta ja lumirakeita sekaisin"
+
+#: envcan_i18n.dat:125
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of light snow mixed with rain"
+msgstr "Mahdollisesti heikkoa lumisadetta ja sadetta sekaisin"
+
+#: envcan_i18n.dat:126
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of light snow or freezing rain"
+msgstr "Mahdollisesti heikkoa lumisadetta tai jäätävää sadetta"
+
+#: envcan_i18n.dat:127
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of light snow or ice pellets"
+msgstr "Mahdollisesti heikkoa lumisadetta tai lumirakeita"
+
+#: envcan_i18n.dat:128
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of light snow or rain"
+msgstr "Mahdollisesti heikkoa lumisadetta tai sadetta"
+
+#: envcan_i18n.dat:129
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of light wet snow"
+msgstr "Mahdollisesti heikkoa märkää lunta"
+
+#: envcan_i18n.dat:130
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of rain"
+msgstr "Mahdollisesti sadetta"
+
+#: envcan_i18n.dat:131
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of rain at times heavy"
+msgstr "Ajoittain runsas sade mahdollista"
+
+#: envcan_i18n.dat:132
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of rain mixed with snow"
+msgstr "Mahdollisesti sadetta ja lunta sekaisin"
+
+#: envcan_i18n.dat:133
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of rain or drizzle"
+msgstr "Mahdollisesti sadetta tai tihkua"
+
+#: envcan_i18n.dat:134
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of rain or freezing rain"
+msgstr "Mahdollisesti sadetta tai jäätävää sadetta"
+
+#: envcan_i18n.dat:135
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of rain or snow"
+msgstr "Mahdollisesti sadetta tai lunta"
+
+#: envcan_i18n.dat:136
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of rain showers or flurries"
+msgstr "Mahdollisesti sade- tai lumipyrykuuroja"
+
+#: envcan_i18n.dat:137
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of rain showers or wet flurries"
+msgstr "Mahdollisesti sadekuuroja tai märkiä lumipyrykuuroja"
+
+#: envcan_i18n.dat:138
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of severe thunderstorms"
+msgstr "Mahdollisesti rajuja ukkosmyrskyjä"
+
+#: envcan_i18n.dat:139
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of showers"
+msgstr "Mahdollisesti sadekuuroja"
+
+#: envcan_i18n.dat:140
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of showers at times heavy"
+msgstr "Ajoittain runsaat sadekuurot mahdollisia"
+
+#: envcan_i18n.dat:141
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of showers at times heavy or thundershowers"
+msgstr "Ajoittain runsaat sade- tai ukkoskuurot mahdollisia"
+
+#: envcan_i18n.dat:142
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of showers at times heavy or thunderstorms"
+msgstr "Ajoittain runsaat sadekuurot tai ukkosmyrskyt mahdollisia"
+
+#: envcan_i18n.dat:143
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of showers or drizzle"
+msgstr "Mahdollisesti sadekuuroja tai tihkua"
+
+#: envcan_i18n.dat:144
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of showers or thundershowers"
+msgstr "Mahdollisesti sade- tai ukkoskuuroja"
+
+#: envcan_i18n.dat:145
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of showers or thunderstorms"
+msgstr "Mahdollisesti sadekuuroja tai ukkosmyrskyjä"
+
+#: envcan_i18n.dat:146
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of snow"
+msgstr "Mahdollisesti lunta"
+
+#: envcan_i18n.dat:147
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of snow and blizzard"
+msgstr "Mahdollisesti lunta ja lumimyrskyjä"
+
+#: envcan_i18n.dat:148
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of snow mixed with freezing drizzle"
+msgstr "Mahdollisesti lunta ja jäätävää tihkua sekaisin"
+
+#: envcan_i18n.dat:149
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of snow mixed with freezing rain"
+msgstr "Mahdollisesti lunta ja jäätävää sadetta sekaisin"
+
+#: envcan_i18n.dat:150
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of snow mixed with rain"
+msgstr "Mahdollisesti lunta ja sadetta sekaisin"
+
+#: envcan_i18n.dat:151
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of snow or rain"
+msgstr "Mahdollisesti lunta tai sadetta"
+
+# Squalls tarkoittaa puuskaista tuulta tai yllättävää myrskyä
+#: envcan_i18n.dat:152
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of snow squalls"
+msgstr "Mahdollisesti lumimyrskyjä"
+
+#: envcan_i18n.dat:153
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of thundershowers"
+msgstr "Mahdollisesti ukkoskuuroja"
+
+#: envcan_i18n.dat:154
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of thunderstorms"
+msgstr "Mahdollisesti ukkosmyrskyjä"
+
+#: envcan_i18n.dat:155
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of thunderstorms and possible hail"
+msgstr "Mahdollisesti ukkosmyrskyjä ja rakeita"
+
+#: envcan_i18n.dat:156
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of wet flurries"
+msgstr "Mahdollisesti märkiä lumipyrykuuroja"
+
+#: envcan_i18n.dat:157
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of wet flurries at times heavy"
+msgstr "Ajoittain sankat märät lumikuurot mahdollisia"
+
+#: envcan_i18n.dat:158
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of wet flurries or rain showers"
+msgstr "Mahdollisesti märkiä lumipyrykuuroja tai sadekuuroja"
+
+#: envcan_i18n.dat:159
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of wet snow"
+msgstr "Mahdollisesti märkää lunta"
+
+#: envcan_i18n.dat:160
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of wet snow mixed with rain"
+msgstr "Mahdollisesti märkää lunta ja sadetta sekaisin"
+
+#: envcan_i18n.dat:161
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance of wet snow or rain"
+msgstr "Mahdollisesti märkää lunta tai sadetta"
+
+#: envcan_i18n.dat:162 noaa_i18n.dat:355
+#, kde-format
+msgctxt "weather forecast"
+msgid "Clear"
+msgstr "Selkeää"
+
+#: envcan_i18n.dat:163 noaa_i18n.dat:350
+#, kde-format
+msgctxt "weather forecast"
+msgid "Clearing"
+msgstr "Selkenevää"
+
+#: envcan_i18n.dat:164 noaa_i18n.dat:342
+#, kde-format
+msgctxt "weather forecast"
+msgid "Cloudy"
+msgstr "Pilvistä"
+
+#: envcan_i18n.dat:165
+#, kde-format
+msgctxt "weather forecast"
+msgid "Partly cloudy"
+msgstr "Osittain pilvistä"
+
+#: envcan_i18n.dat:166
+#, kde-format
+msgctxt "weather forecast"
+msgid "Mainly cloudy"
+msgstr "Enimmäkseen pilvistä"
+
+#: envcan_i18n.dat:167
+#, kde-format
+msgctxt "weather forecast"
+msgid "Cloudy periods"
+msgstr "Ajoittain pilvistä"
+
+#: envcan_i18n.dat:168
+#, kde-format
+msgctxt "weather forecast"
+msgid "Cloudy with sunny periods"
+msgstr "Pilvistä ja ajoittain aurinkoista"
+
+#: envcan_i18n.dat:169 noaa_i18n.dat:317
+#, kde-format
+msgctxt "weather forecast"
+msgid "Drizzle"
+msgstr "Tihkusadetta"
+
+#: envcan_i18n.dat:170
+#, kde-format
+msgctxt "weather forecast"
+msgid "Drizzle mixed with freezing drizzle"
+msgstr "Tihkua ja jäätävää tihkua sekaisin"
+
+#: envcan_i18n.dat:171
+#, kde-format
+msgctxt "weather forecast"
+msgid "Drizzle mixed with rain"
+msgstr "Tihkua ja sadetta sekaisin"
+
+#: envcan_i18n.dat:172
+#, kde-format
+msgctxt "weather forecast"
+msgid "Drizzle or freezing drizzle"
+msgstr "Tihkua tai jäätävää tihkua"
+
+#: envcan_i18n.dat:173
+#, kde-format
+msgctxt "weather forecast"
+msgid "Drizzle or rain"
+msgstr "Tihkua tai sadetta"
+
+#: envcan_i18n.dat:174 noaa_i18n.dat:309
+#, kde-format
+msgctxt "weather forecast"
+msgid "Flurries"
+msgstr "Lumikuuroja"
+
+#: envcan_i18n.dat:175
+#, kde-format
+msgctxt "weather forecast"
+msgid "Flurries at times heavy"
+msgstr "Ajoittain kovia lumipyrykuuroja"
+
+#: envcan_i18n.dat:176
+#, kde-format
+msgctxt "weather forecast"
+msgid "Flurries at times heavy or rain showers"
+msgstr "Ajoittain runsaita lumipyry- tai sadekuuroja"
+
+#: envcan_i18n.dat:177
+#, kde-format
+msgctxt "weather forecast"
+msgid "Flurries mixed with ice pellets"
+msgstr "Lumikuuroja ja lumirakeita sekaisin"
+
+#: envcan_i18n.dat:178
+#, kde-format
+msgctxt "weather forecast"
+msgid "Flurries or ice pellets"
+msgstr "Lumikuuroja tai lumirakeita"
+
+#: envcan_i18n.dat:179
+#, kde-format
+msgctxt "weather forecast"
+msgid "Flurries or rain showers"
+msgstr "Lumikuuroja tai sadekuuroja"
+
+#: envcan_i18n.dat:180
+#, kde-format
+msgctxt "weather forecast"
+msgid "Flurries or thundershowers"
+msgstr "Lumikuuroja tai ukkoskuuroja"
+
+#: envcan_i18n.dat:181 noaa_i18n.dat:336
+#, kde-format
+msgctxt "weather forecast"
+msgid "Fog"
+msgstr "Sumua"
+
+#: envcan_i18n.dat:182
+#, kde-format
+msgctxt "weather forecast"
+msgid "Fog developing"
+msgstr "Sumun lisääntymistä"
+
+#: envcan_i18n.dat:183
+#, kde-format
+msgctxt "weather forecast"
+msgid "Fog dissipating"
+msgstr "Sumun häviämistä"
+
+#: envcan_i18n.dat:184
+#, kde-format
+msgctxt "weather forecast"
+msgid "Fog patches"
+msgstr "Paikoittain sumua"
+
+#: envcan_i18n.dat:185
+#, kde-format
+msgctxt "weather forecast"
+msgid "Freezing drizzle"
+msgstr "Jäätävää tihkusadetta"
+
+#: envcan_i18n.dat:186
+#, kde-format
+msgctxt "weather forecast"
+msgid "Freezing rain"
+msgstr "Jäätävää sadetta"
+
+#: envcan_i18n.dat:187
+#, kde-format
+msgctxt "weather forecast"
+msgid "Freezing rain mixed with ice pellets"
+msgstr "Jäätävää sadetta ja lumirakeita sekaisin"
+
+#: envcan_i18n.dat:188
+#, kde-format
+msgctxt "weather forecast"
+msgid "Freezing rain mixed with rain"
+msgstr "Jäätävää sadetta ja sadetta sekaisin"
+
+#: envcan_i18n.dat:189
+#, kde-format
+msgctxt "weather forecast"
+msgid "Freezing rain mixed with snow"
+msgstr "Jäätävää sadetta ja lunta sekaisin"
+
+#: envcan_i18n.dat:190
+#, kde-format
+msgctxt "weather forecast"
+msgid "Freezing rain or ice pellets"
+msgstr "Jäätävää sadetta tai lumirakeita"
+
+#: envcan_i18n.dat:191
+#, kde-format
+msgctxt "weather forecast"
+msgid "Freezing rain or rain"
+msgstr "Jäätävää sadetta tai sadetta"
+
+#: envcan_i18n.dat:192
+#, kde-format
+msgctxt "weather forecast"
+msgid "Freezing rain or snow"
+msgstr "Jäätävää sadetta tai lunta"
+
+#: envcan_i18n.dat:193
+#, kde-format
+msgctxt "weather forecast"
+msgid "Ice fog"
+msgstr "Jääsumu"
+
+#: envcan_i18n.dat:194
+#, kde-format
+msgctxt "weather forecast"
+msgid "Ice fog developing"
+msgstr "Jääsumu lisääntyy"
+
+#: envcan_i18n.dat:195
+#, kde-format
+msgctxt "weather forecast"
+msgid "Ice fog dissipating"
+msgstr "Jääsumu katoaa"
+
+#: envcan_i18n.dat:196
+#, kde-format
+msgctxt "weather forecast"
+msgid "Ice pellets"
+msgstr "Rakeita"
+
+#: envcan_i18n.dat:197
+#, kde-format
+msgctxt "weather forecast"
+msgid "Ice pellets mixed with freezing rain"
+msgstr "Rakeita ja jäätävää sadetta"
+
+#: envcan_i18n.dat:198
+#, kde-format
+msgctxt "weather forecast"
+msgid "Ice pellets mixed with snow"
+msgstr "Rae- ja lumisadetta"
+
+#: envcan_i18n.dat:199
+#, kde-format
+msgctxt "weather forecast"
+msgid "Ice pellets or freezing rain"
+msgstr "Rakeita tai jäätävää sadetta"
+
+#: envcan_i18n.dat:200
+#, kde-format
+msgctxt "weather forecast"
+msgid "Ice pellets or snow"
+msgstr "Rakeita tai lunta"
+
+#: envcan_i18n.dat:201
+#, kde-format
+msgctxt "weather forecast"
+msgid "Increasing cloudiness"
+msgstr "Lisääntyvää pilvisyyttä"
+
+#: envcan_i18n.dat:202
+#, kde-format
+msgctxt "weather forecast"
+msgid "Increasing clouds"
+msgstr "Lisääntyviä pilviä"
+
+#: envcan_i18n.dat:203
+#, kde-format
+msgctxt "weather forecast"
+msgid "Light snow"
+msgstr "Heikkoa lumisadetta"
+
+#: envcan_i18n.dat:204
+#, kde-format
+msgctxt "weather forecast"
+msgid "Light snow and blizzard"
+msgstr "Heikkoa lumisadetta ja -pyryä"
+
+#: envcan_i18n.dat:205
+#, kde-format
+msgctxt "weather forecast"
+msgid "Light snow and blizzard and blowing snow"
+msgstr "Heikkoa lumisadetta, lumipyryä ja lumituiskua"
+
+#: envcan_i18n.dat:206
+#, kde-format
+msgctxt "weather forecast"
+msgid "Light snow and blowing snow"
+msgstr "Heikkoa lumisadetta ja -tuiskua"
+
+#: envcan_i18n.dat:207
+#, kde-format
+msgctxt "weather forecast"
+msgid "Light snow mixed with freezing drizzle"
+msgstr "Heikkoa lumisadetta ja jäätävää tihkua sekaisin"
+
+#: envcan_i18n.dat:208
+#, kde-format
+msgctxt "weather forecast"
+msgid "Light snow mixed with freezing rain"
+msgstr "Heikkoa lumisadetta ja jäätävää sadetta sekaisin"
+
+#: envcan_i18n.dat:209
+#, kde-format
+msgctxt "weather forecast"
+msgid "Light snow mixed with ice pellets"
+msgstr "Heikkoa lumisadetta ja lumirakeita sekaisin"
+
+#: envcan_i18n.dat:210
+#, kde-format
+msgctxt "weather forecast"
+msgid "Light snow mixed with rain"
+msgstr "Heikkoa lumisadetta ja sadetta sekaisin"
+
+#: envcan_i18n.dat:211
+#, kde-format
+msgctxt "weather forecast"
+msgid "Light snow or freezing drizzle"
+msgstr "Heikkoa lumisadetta tai jäätävää tihkua"
+
+#: envcan_i18n.dat:212
+#, kde-format
+msgctxt "weather forecast"
+msgid "Light snow or freezing rain"
+msgstr "Heikkoa lumisadetta tai jäätävää sadetta"
+
+#: envcan_i18n.dat:213
+#, kde-format
+msgctxt "weather forecast"
+msgid "Light snow or ice pellets"
+msgstr "Heikkoa lumisadetta tai lumirakeita"
+
+#: envcan_i18n.dat:214
+#, kde-format
+msgctxt "weather forecast"
+msgid "Light snow or rain"
+msgstr "Heikkoa lumisadetta tai sadetta"
+
+#: envcan_i18n.dat:215
+#, kde-format
+msgctxt "weather forecast"
+msgid "Light wet snow"
+msgstr "Heikkoa märkää lumisadetta"
+
+#: envcan_i18n.dat:216
+#, kde-format
+msgctxt "weather forecast"
+msgid "Light wet snow or rain"
+msgstr "Heikkoa märkää lunta tai sadetta"
+
+#: envcan_i18n.dat:217
+#, kde-format
+msgctxt "weather forecast"
+msgid "Local snow squalls"
+msgstr "Paikallisia lumimyrskyjä"
+
+#: envcan_i18n.dat:218
+#, kde-format
+msgctxt "weather forecast"
+msgid "Near blizzard"
+msgstr "Läheinen lumimyrsky"
+
+#: envcan_i18n.dat:219
+#, kde-format
+msgctxt "weather forecast"
+msgid "Overcast"
+msgstr "Pilvinen"
+
+#: envcan_i18n.dat:220
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of drizzle"
+msgstr "Ajoittain tihkua"
+
+#: envcan_i18n.dat:221
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of drizzle mixed with freezing drizzle"
+msgstr "Ajoittain tihkua ja jäätävää tihkua sekaisin"
+
+#: envcan_i18n.dat:222
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of drizzle mixed with rain"
+msgstr "Ajoittain tihkua ja sadetta sekaisin"
+
+#: envcan_i18n.dat:223
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of drizzle or freezing drizzle"
+msgstr "Ajoittain tihkua tai jäätävää tihkua"
+
+#: envcan_i18n.dat:224
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of drizzle or rain"
+msgstr "Ajoittain tihkua tai sadetta"
+
+#: envcan_i18n.dat:225
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of freezing drizzle"
+msgstr "Ajoittain jäätävää tihkua"
+
+#: envcan_i18n.dat:226
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of freezing drizzle or drizzle"
+msgstr "Ajoittain jäätävää tihkua tai tihkua"
+
+#: envcan_i18n.dat:227
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of freezing drizzle or rain"
+msgstr "Ajoittain jäätävää tihkua tai sadetta"
+
+#: envcan_i18n.dat:228
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of freezing rain"
+msgstr "Ajoittain jäätävää sadetta"
+
+#: envcan_i18n.dat:229
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of freezing rain mixed with ice pellets"
+msgstr "Ajoittain jäätävää sadetta ja lumirakeita sekaisin"
+
+#: envcan_i18n.dat:230
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of freezing rain mixed with rain"
+msgstr "Ajoittain jäätävää sadetta ja sadetta sekaisin"
+
+#: envcan_i18n.dat:231
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of freezing rain mixed with snow"
+msgstr "Ajoittain jäätävää sadetta ja lunta sekaisin"
+
+#: envcan_i18n.dat:232
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of freezing rain or ice pellets"
+msgstr "Ajoittain jäätävää sadetta tai lumirakeita"
+
+#: envcan_i18n.dat:233
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of freezing rain or rain"
+msgstr "Ajoittain jäätävää sadetta tai sadetta"
+
+#: envcan_i18n.dat:234
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of freezing rain or snow"
+msgstr "Ajoittain jäätävää sadetta tai lunta"
+
+#: envcan_i18n.dat:235
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of ice pellets"
+msgstr "Ajoittain rakeita"
+
+#: envcan_i18n.dat:236
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of ice pellets mixed with freezing rain"
+msgstr "Ajoittain rakeita ja jäätävää sadetta"
+
+#: envcan_i18n.dat:237
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of ice pellets mixed with snow"
+msgstr "Ajoittain rakeita ja lunta"
+
+#: envcan_i18n.dat:238
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of ice pellets or freezing rain"
+msgstr "Ajoittain rakeita tai jäätävää sadetta"
+
+#: envcan_i18n.dat:239
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of ice pellets or snow"
+msgstr "Ajoittain rakeita tai lunta"
+
+#: envcan_i18n.dat:240
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of light snow"
+msgstr "Ajoittain heikkoa lumisadetta"
+
+#: envcan_i18n.dat:241
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of light snow and blizzard"
+msgstr "Ajoittain heikkoa lumisadetta ja -pyryä"
+
+#: envcan_i18n.dat:242
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of light snow and blizzard and blowing snow"
+msgstr "Ajoittain heikkoa lumisadetta ja -pyryä sekä lumituiskua"
+
+#: envcan_i18n.dat:243
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of light snow and blowing snow"
+msgstr "Ajoittain heikkoa lumisadetta ja -tuiskua"
+
+#: envcan_i18n.dat:244
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of light snow mixed with freezing drizzle"
+msgstr "Ajoittain heikkoa lumisadetta ja jäätävää tihkua sekaisin"
+
+#: envcan_i18n.dat:245
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of light snow mixed with freezing rain"
+msgstr "Ajoittain heikkoa lumisadetta ja jäätävää sadetta sekaisin"
+
+#: envcan_i18n.dat:246
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of light snow mixed with ice pellets"
+msgstr "Ajoittain heikkoa lumisadetta ja lumirakeita sekaisin"
+
+#: envcan_i18n.dat:247
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of light snow mixed with rain"
+msgstr "Ajoittain heikkoa lumisadetta ja sadetta sekaisin"
+
+#: envcan_i18n.dat:248
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of light snow or freezing drizzle"
+msgstr "Ajoittain heikkoa lumisadetta tai jäätävää tihkua"
+
+#: envcan_i18n.dat:249
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of light snow or freezing rain"
+msgstr "Ajoittain heikkoa lumisadetta tai jäätävää sadetta"
+
+#: envcan_i18n.dat:250
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of light snow or ice pellets"
+msgstr "Ajoittain heikkoa lumisadetta tai lumirakeita"
+
+#: envcan_i18n.dat:251
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of light snow or rain"
+msgstr "Ajoittain heikkoa lumisadetta tai sadetta"
+
+#: envcan_i18n.dat:252
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of light wet snow"
+msgstr "Ajoittain heikkoa märkää lumisadetta"
+
+#: envcan_i18n.dat:253
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of light wet snow mixed with rain"
+msgstr "Ajoittain heikkoa märkää lumisadetta ja sadetta sekaisin"
+
+#: envcan_i18n.dat:254
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of light wet snow or rain"
+msgstr "Ajoittain heikkoa märkää lumisadetta tai sadetta"
+
+#: envcan_i18n.dat:255
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of rain"
+msgstr "Ajoittain sadetta"
+
+#: envcan_i18n.dat:256
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of rain mixed with freezing rain"
+msgstr "Ajoittain sadetta ja jäätävää sadetta sekaisin"
+
+#: envcan_i18n.dat:257
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of rain mixed with snow"
+msgstr "Ajoittain sadetta ja lunta sekaisin"
+
+#: envcan_i18n.dat:258
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of rain or drizzle"
+msgstr "Ajoittain sadetta tai tihkua"
+
+#: envcan_i18n.dat:259
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of rain or freezing rain"
+msgstr "Ajoittain sadetta tai jäätävää sadetta"
+
+#: envcan_i18n.dat:260
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of rain or snow"
+msgstr "Ajoittain sadetta tai lunta"
+
+#: envcan_i18n.dat:261
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of rain or thundershowers"
+msgstr "Ajoittain lumisadetta tai ukkoskuuroja"
+
+#: envcan_i18n.dat:262
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of rain or thunderstorms"
+msgstr "Ajoittain sadetta tai ukkosmyrskyjä"
+
+#: envcan_i18n.dat:263
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of snow"
+msgstr "Ajoittain lunta"
+
+#: envcan_i18n.dat:264
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of snow and blizzard"
+msgstr "Ajoittain lunta ja lumipyryä"
+
+#: envcan_i18n.dat:265
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of snow and blizzard and blowing snow"
+msgstr "Ajoittain lunta, lumipyryä ja lumituiskuja"
+
+#: envcan_i18n.dat:266
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of snow and blowing snow"
+msgstr "Ajoittain lunta ja lumituiskuja"
+
+#: envcan_i18n.dat:267
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of snow mixed with freezing drizzle"
+msgstr "Ajottain lunta ja jäätävää tihkua sekaisin"
+
+#: envcan_i18n.dat:268
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of snow mixed with freezing rain"
+msgstr "Ajoittain lunta ja jäätävää sadetta sekaisin"
+
+#: envcan_i18n.dat:269
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of snow mixed with ice pellets"
+msgstr "Ajoittain lunta ja lumirakeita sekaisin"
+
+#: envcan_i18n.dat:270
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of snow mixed with rain"
+msgstr "Ajoittain lunta ja sadetta sekaisin"
+
+#: envcan_i18n.dat:271
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of snow or freezing drizzle"
+msgstr "Ajoittain lunta tai jäätävää tihkua"
+
+#: envcan_i18n.dat:272
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of snow or freezing rain"
+msgstr "Ajoittain lunta tai jäätävää sadetta"
+
+#: envcan_i18n.dat:273
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of snow or ice pellets"
+msgstr "Ajoittain lunta tai lumirakeita"
+
+#: envcan_i18n.dat:274
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of snow or rain"
+msgstr "Ajoittain lunta tai sadetta"
+
+#: envcan_i18n.dat:275
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of wet snow"
+msgstr "Ajoittain märkää lunta"
+
+#: envcan_i18n.dat:276
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of wet snow mixed with rain"
+msgstr "Ajoittain märkää lunta ja sadetta sekaisin"
+
+#: envcan_i18n.dat:277
+#, kde-format
+msgctxt "weather forecast"
+msgid "Periods of wet snow or rain"
+msgstr "Ajoittain märkää lunta tai sadetta"
+
+#: envcan_i18n.dat:278 noaa_i18n.dat:321
+#, kde-format
+msgctxt "weather forecast"
+msgid "Rain"
+msgstr "Sadetta"
+
+#: envcan_i18n.dat:279
+#, kde-format
+msgctxt "weather forecast"
+msgid "Rain at times heavy"
+msgstr "Toisinaan runsaita sateita"
+
+#: envcan_i18n.dat:280
+#, kde-format
+msgctxt "weather forecast"
+msgid "Rain at times heavy mixed with freezing rain"
+msgstr "Toisinaan runsaita sateita ja jäätävää sadetta sekaisin"
+
+#: envcan_i18n.dat:281
+#, kde-format
+msgctxt "weather forecast"
+msgid "Rain at times heavy mixed with snow"
+msgstr "Toisinaan runsaita sateita ja lunta sekaisin"
+
+#: envcan_i18n.dat:282
+#, kde-format
+msgctxt "weather forecast"
+msgid "Rain at times heavy or drizzle"
+msgstr "Toisinaan runsaita sateita tai tihkua"
+
+#: envcan_i18n.dat:283
+#, kde-format
+msgctxt "weather forecast"
+msgid "Rain at times heavy or freezing rain"
+msgstr "Toisinaan runsaita sateita tai jäätävää sadetta"
+
+#: envcan_i18n.dat:284
+#, kde-format
+msgctxt "weather forecast"
+msgid "Rain at times heavy or snow"
+msgstr "Toisinaan runsaita sateita tai lunta"
+
+#: envcan_i18n.dat:285
+#, kde-format
+msgctxt "weather forecast"
+msgid "Rain at times heavy or thundershowers"
+msgstr "Toisinaan runsaita sateita tai ukkoskuuroja"
+
+#: envcan_i18n.dat:286
+#, kde-format
+msgctxt "weather forecast"
+msgid "Rain at times heavy or thunderstorms"
+msgstr "Toisinaan runsaita sateita tai ukkosmyrskyjä"
+
+#: envcan_i18n.dat:287
+#, kde-format
+msgctxt "weather forecast"
+msgid "Rain mixed with freezing rain"
+msgstr "Sadetta ja jäätävää sadetta sekaisin"
+
+#: envcan_i18n.dat:288
+#, kde-format
+msgctxt "weather forecast"
+msgid "Rain mixed with snow"
+msgstr "Sadetta ja lunta sekaisin"
+
+#: envcan_i18n.dat:289
+#, kde-format
+msgctxt "weather forecast"
+msgid "Rain or drizzle"
+msgstr "Sadetta tai tihkua"
+
+#: envcan_i18n.dat:290
+#, kde-format
+msgctxt "weather forecast"
+msgid "Rain or freezing rain"
+msgstr "Sadetta tai jäätävää sadetta"
+
+#: envcan_i18n.dat:291
+#, kde-format
+msgctxt "weather forecast"
+msgid "Rain or snow"
+msgstr "Vesi- tai lumisadetta"
+
+#: envcan_i18n.dat:292
+#, kde-format
+msgctxt "weather forecast"
+msgid "Rain or thundershowers"
+msgstr "Sadetta tai ukkoskuuroja"
+
+#: envcan_i18n.dat:293
+#, kde-format
+msgctxt "weather forecast"
+msgid "Rain or thunderstorms"
+msgstr "Sadetta tai ukkosmyrskyjä"
+
+#: envcan_i18n.dat:294
+#, kde-format
+msgctxt "weather forecast"
+msgid "Rain showers or flurries"
+msgstr "Sadekuuroja tai lumipyrykuuroja"
+
+#: envcan_i18n.dat:295
+#, kde-format
+msgctxt "weather forecast"
+msgid "Rain showers or wet flurries"
+msgstr "Sadekuuroja tai märkiä lumipyrykuuroja"
+
+#: envcan_i18n.dat:296
+#, kde-format
+msgctxt "weather forecast"
+msgid "Showers"
+msgstr "Sadekuuroja"
+
+#: envcan_i18n.dat:297
+#, kde-format
+msgctxt "weather forecast"
+msgid "Showers at times heavy"
+msgstr "Toisinaan rajuja sadekuuroja"
+
+#: envcan_i18n.dat:298
+#, kde-format
+msgctxt "weather forecast"
+msgid "Showers at times heavy or thundershowers"
+msgstr "Toisinaan rajuja sade- tai ukkoskuuroja"
+
+#: envcan_i18n.dat:299
+#, kde-format
+msgctxt "weather forecast"
+msgid "Showers at times heavy or thunderstorms"
+msgstr "Toisinaan sadekuuroja tai ukkosmyrskyjä"
+
+#: envcan_i18n.dat:300
+#, kde-format
+msgctxt "weather forecast"
+msgid "Showers or drizzle"
+msgstr "Kuuroja tai tihkusadetta"
+
+#: envcan_i18n.dat:301
+#, kde-format
+msgctxt "weather forecast"
+msgid "Showers or thundershowers"
+msgstr "Kuuroja tai ukkoskuuroja"
+
+#: envcan_i18n.dat:302
+#, kde-format
+msgctxt "weather forecast"
+msgid "Showers or thunderstorms"
+msgstr "Kuuroja tai ukkosmyrskyjä"
+
+#: envcan_i18n.dat:303 noaa_i18n.dat:328
+#, kde-format
+msgctxt "weather forecast"
+msgid "Smoke"
+msgstr "Savua"
+
+#: envcan_i18n.dat:304 noaa_i18n.dat:304
+#, kde-format
+msgctxt "weather forecast"
+msgid "Snow"
+msgstr "Lunta"
+
+#: envcan_i18n.dat:305
+#, kde-format
+msgctxt "weather forecast"
+msgid "Snow and blizzard"
+msgstr "Lunta ja lumipyryä"
+
+#: envcan_i18n.dat:306
+#, kde-format
+msgctxt "weather forecast"
+msgid "Snow and blizzard and blowing snow"
+msgstr "Lunta, lumipyryä ja lumituiskuja"
+
+#: envcan_i18n.dat:307
+#, kde-format
+msgctxt "weather forecast"
+msgid "Snow and blowing snow"
+msgstr "Lunta ja lumituiskua"
+
+#: envcan_i18n.dat:308
+#, kde-format
+msgctxt "weather forecast"
+msgid "Snow at times heavy"
+msgstr "Toisinaan runsasta lumisadetta"
+
+#: envcan_i18n.dat:309
+#, kde-format
+msgctxt "weather forecast"
+msgid "Snow at times heavy and blizzard"
+msgstr "Toisinaan runsaasti lumisadetta ja -pyryä"
+
+#: envcan_i18n.dat:310
+#, kde-format
+msgctxt "weather forecast"
+msgid "Snow at times heavy and blowing snow"
+msgstr "Toisinaan runsaasti lumisadetta ja -tuiskua"
+
+#: envcan_i18n.dat:311
+#, kde-format
+msgctxt "weather forecast"
+msgid "Snow at times heavy mixed with freezing drizzle"
+msgstr "Toisinaan runsaasti lunta ja jäätävää tihkua sekaisin"
+
+#: envcan_i18n.dat:312
+#, kde-format
+msgctxt "weather forecast"
+msgid "Snow at times heavy mixed with freezing rain"
+msgstr "Toisinaan runsaasti lunta ja jäätävää sadetta sekaisin"
+
+#: envcan_i18n.dat:313
+#, kde-format
+msgctxt "weather forecast"
+msgid "Snow at times heavy mixed with ice pellets"
+msgstr "Toisinaan runsaasti lunta ja lumirakeita sekaisin"
+
+#: envcan_i18n.dat:314
+#, kde-format
+msgctxt "weather forecast"
+msgid "Snow at times heavy mixed with rain"
+msgstr "Toisinaan lunta ja sadetta sekaisin"
+
+#: envcan_i18n.dat:315
+#, kde-format
+msgctxt "weather forecast"
+msgid "Snow at times heavy or freezing rain"
+msgstr "Toisinaan runsasta lumisadetta tai jäätävää sadetta"
+
+#: envcan_i18n.dat:316
+#, kde-format
+msgctxt "weather forecast"
+msgid "Snow at times heavy or ice pellets"
+msgstr "Toisinaan runsaasti lumisadetta ja lumirakeita"
+
+#: envcan_i18n.dat:317
+#, kde-format
+msgctxt "weather forecast"
+msgid "Snow at times heavy or rain"
+msgstr "Toisinaan runsaasti lumisadetta tai sadetta"
+
+#: envcan_i18n.dat:318
+#, kde-format
+msgctxt "weather forecast"
+msgid "Snow mixed with freezing drizzle"
+msgstr "Lunta ja jäätävää tihkua sekaisin"
+
+#: envcan_i18n.dat:319
+#, kde-format
+msgctxt "weather forecast"
+msgid "Snow mixed with freezing rain"
+msgstr "Lunta ja jäätävää sadetta sekaisin"
+
+#: envcan_i18n.dat:320
+#, kde-format
+msgctxt "weather forecast"
+msgid "Snow mixed with ice pellets"
+msgstr "Lunta ja lumirakeita sekaisin"
+
+#: envcan_i18n.dat:321
+#, kde-format
+msgctxt "weather forecast"
+msgid "Snow mixed with rain"
+msgstr "Lunta ja sadetta sekaisin"
+
+#: envcan_i18n.dat:322
+#, kde-format
+msgctxt "weather forecast"
+msgid "Snow or freezing drizzle"
+msgstr "Lunta tai jäätävää tihkua"
+
+#: envcan_i18n.dat:323
+#, kde-format
+msgctxt "weather forecast"
+msgid "Snow or freezing rain"
+msgstr "Lunta tai jäätävää sadetta"
+
+#: envcan_i18n.dat:324
+#, kde-format
+msgctxt "weather forecast"
+msgid "Snow or ice pellets"
+msgstr "Lunta tai lumirakeita"
+
+#: envcan_i18n.dat:325
+#, kde-format
+msgctxt "weather forecast"
+msgid "Snow or rain"
+msgstr "Lunta tai sadetta"
+
+#: envcan_i18n.dat:326
+#, kde-format
+msgctxt "weather forecast"
+msgid "Snow squalls"
+msgstr "Lumimyrskyjä"
+
+#: envcan_i18n.dat:327 noaa_i18n.dat:347
+#, kde-format
+msgctxt "weather forecast"
+msgid "Sunny"
+msgstr "Aurinkoista"
+
+#: envcan_i18n.dat:328
+#, kde-format
+msgctxt "weather forecast"
+msgid "Mainly sunny"
+msgstr "Enimmäkseen aurinkoista"
+
+#: envcan_i18n.dat:329
+#, kde-format
+msgctxt "weather forecast"
+msgid "Sunny with cloudy periods"
+msgstr "Aurinkoista ja ajoittain pilvistä"
+
+#: envcan_i18n.dat:330 noaa_i18n.dat:273
+#, kde-format
+msgctxt "weather forecast"
+msgid "Thunderstorms"
+msgstr "Ukkosmyrskyjä"
+
+#: envcan_i18n.dat:331
+#, kde-format
+msgctxt "weather forecast"
+msgid "Thunderstorms and possible hail"
+msgstr "Ukkosmyrskyjä ja mahdollisia raekuuroja"
+
+#: envcan_i18n.dat:332
+#, kde-format
+msgctxt "weather forecast"
+msgid "Wet flurries"
+msgstr "Märkiä lumipyrykuuroja"
+
+#: envcan_i18n.dat:333
+#, kde-format
+msgctxt "weather forecast"
+msgid "Wet flurries at times heavy"
+msgstr "Ajoittain runsaita märkiä lumipyrykuuroja"
+
+#: envcan_i18n.dat:334
+#, kde-format
+msgctxt "weather forecast"
+msgid "Wet flurries at times heavy or rain showers"
+msgstr "Ajoittain runsaita märkiä lumipyry- tai sadekuuroja"
+
+#: envcan_i18n.dat:335
+#, kde-format
+msgctxt "weather forecast"
+msgid "Wet flurries or rain showers"
+msgstr "Märkiä lumipyry- tai sadekuuroja"
+
+#: envcan_i18n.dat:336
+#, kde-format
+msgctxt "weather forecast"
+msgid "Wet snow"
+msgstr "Märkää lunta"
+
+#: envcan_i18n.dat:337
+#, kde-format
+msgctxt "weather forecast"
+msgid "Wet snow at times heavy"
+msgstr "Toisinaan runsaasti märkää lunta"
+
+#: envcan_i18n.dat:338
+#, kde-format
+msgctxt "weather forecast"
+msgid "Wet snow at times heavy mixed with rain"
+msgstr "Toisinaan runsaasti märkää lunta ja sadetta sekaisin"
+
+#: envcan_i18n.dat:339
+#, kde-format
+msgctxt "weather forecast"
+msgid "Wet snow mixed with rain"
+msgstr "Märkää lunta ja sadetta sekaisin"
+
+#: envcan_i18n.dat:340
+#, kde-format
+msgctxt "weather forecast"
+msgid "Wet snow or rain"
+msgstr "Märkää lunta tai vesisadetta"
+
+#: envcan_i18n.dat:341 noaa_i18n.dat:337
+#, kde-format
+msgctxt "weather forecast"
+msgid "Windy"
+msgstr "Tuulista"
+
+#: ions/bbcukmet/ion_bbcukmet.cpp:563
+#, kde-format
+msgid "UK"
+msgstr "UK"
+
+#: ions/bbcukmet/ion_bbcukmet.cpp:564
+#, kde-format
+msgid "USA"
+msgstr "USA"
+
+#: ions/bbcukmet/ion_bbcukmet.cpp:1009 ions/dwd/ion_dwd.cpp:664
+#, kde-format
+msgctxt "Short for Today"
+msgid "Today"
+msgstr "Tänään"
+
+#: ions/bbcukmet/ion_bbcukmet.cpp:1010
+#, kde-format
+msgctxt "Short for Tonight"
+msgid "Tonight"
+msgstr "Tänä iltana"
+
+#: ions/bbcukmet/ion_bbcukmet.cpp:1012 ions/dwd/ion_dwd.cpp:646
+#: ions/envcan/ion_envcan.cpp:1551
+#, kde-format
+msgctxt "Short for Saturday"
+msgid "Sat"
+msgstr "la"
+
+#: ions/bbcukmet/ion_bbcukmet.cpp:1013 ions/dwd/ion_dwd.cpp:647
+#: ions/envcan/ion_envcan.cpp:1552
+#, kde-format
+msgctxt "Short for Sunday"
+msgid "Sun"
+msgstr "su"
+
+#: ions/bbcukmet/ion_bbcukmet.cpp:1014 ions/dwd/ion_dwd.cpp:648
+#: ions/envcan/ion_envcan.cpp:1553
+#, kde-format
+msgctxt "Short for Monday"
+msgid "Mon"
+msgstr "ma"
+
+#: ions/bbcukmet/ion_bbcukmet.cpp:1015 ions/dwd/ion_dwd.cpp:649
+#: ions/envcan/ion_envcan.cpp:1554
+#, kde-format
+msgctxt "Short for Tuesday"
+msgid "Tue"
+msgstr "ti"
+
+#: ions/bbcukmet/ion_bbcukmet.cpp:1016 ions/dwd/ion_dwd.cpp:650
+#: ions/envcan/ion_envcan.cpp:1555
+#, kde-format
+msgctxt "Short for Wednesday"
+msgid "Wed"
+msgstr "ke"
+
+#: ions/bbcukmet/ion_bbcukmet.cpp:1017 ions/dwd/ion_dwd.cpp:651
+#: ions/envcan/ion_envcan.cpp:1556
+#, kde-format
+msgctxt "Short for Thursday"
+msgid "Thu"
+msgstr "to"
+
+#: ions/bbcukmet/ion_bbcukmet.cpp:1018 ions/dwd/ion_dwd.cpp:652
+#: ions/envcan/ion_envcan.cpp:1557
+#, kde-format
+msgctxt "Short for Friday"
+msgid "Fri"
+msgstr "pe"
+
+#: ions/bbcukmet/ion_bbcukmet.cpp:1031
+#, kde-format
+msgctxt "credit line, keep string short"
+msgid "Data from BBC Weather"
+msgstr "Tiedot tarjoaa BBC Weather"
+
+#: ions/dwd/ion_dwd.cpp:686
+#, kde-format
+msgctxt "credit line, don't change name!"
+msgid "Source: Deutscher Wetterdienst"
+msgstr "Lähde: Deutscher Wetterdienst"
+
+#: ions/envcan/ion_envcan.cpp:901 ions/envcan/ion_envcan.cpp:903
+#: ions/envcan/ion_envcan.cpp:1403 ions/envcan/ion_envcan.cpp:1544
+#: ions/envcan/ion_envcan.cpp:1560 ions/noaa/ion_noaa.cpp:365
+#: ions/noaa/ion_noaa.cpp:550
+#, kde-format
+msgid "N/A"
+msgstr "-"
+
+#: ions/envcan/ion_envcan.cpp:1548
+#, kde-format
+msgid "day"
+msgstr "päivä"
+
+#: ions/envcan/ion_envcan.cpp:1549
+#, kde-format
+msgctxt "Short for tonight"
+msgid "nite"
+msgstr "yö"
+
+#: ions/envcan/ion_envcan.cpp:1550
+#, kde-format
+msgctxt "Short for night, appended to the end of the weekday"
+msgid "nt"
+msgstr "yö"
+
+#: ions/envcan/ion_envcan.cpp:1581
+#, kde-format
+msgctxt "precipitation total, very little"
+msgid "Trace"
+msgstr "Hivenen"
+
+#: ions/envcan/ion_envcan.cpp:1607
+#, kde-format
+msgctxt "credit line, keep string short"
+msgid "Data from Environment and Climate Change Canada"
+msgstr "Tiedot tarjoaa Environment and Climate Canada"
+
+#: ions/noaa/ion_noaa.cpp:633
+#, kde-format
+msgctxt "credit line, keep string short)"
+msgid "Data from NOAA National Weather Service"
+msgstr "Tiedot tarjoaa kansallinen sääpalvelu NOAA"
+
+#: ions/wetter.com/ion_wettercom.cpp:156 ions/wetter.com/ion_wettercom.cpp:157
+#, kde-format
+msgctxt "weather condition"
+msgid "few clouds"
+msgstr "hieman pilviä"
+
+#: ions/wetter.com/ion_wettercom.cpp:160 ions/wetter.com/ion_wettercom.cpp:161
+#, kde-format
+msgctxt "weather condition"
+msgid "overcast"
+msgstr "pilvinen"
+
+#: ions/wetter.com/ion_wettercom.cpp:162 ions/wetter.com/ion_wettercom.cpp:163
+#: ions/wetter.com/ion_wettercom.cpp:164
+#, kde-format
+msgctxt "weather condition"
+msgid "haze"
+msgstr "utuista"
+
+#: ions/wetter.com/ion_wettercom.cpp:165 ions/wetter.com/ion_wettercom.cpp:166
+#, kde-format
+msgctxt "weather condition"
+msgid "fog with icing"
+msgstr "sumua ja hallaa"
+
+#: ions/wetter.com/ion_wettercom.cpp:169
+#, kde-format
+msgctxt "weather condition"
+msgid "light drizzle"
+msgstr "heikkoa tihkusadetta"
+
+#: ions/wetter.com/ion_wettercom.cpp:171
+#, kde-format
+msgctxt "weather condition"
+msgid "heavy drizzle"
+msgstr "runsasta tihkusadetta"
+
+#: ions/wetter.com/ion_wettercom.cpp:172
+#, kde-format
+msgctxt "weather condition"
+msgid "freezing drizzle"
+msgstr "jäätävää tihkusadetta"
+
+#: ions/wetter.com/ion_wettercom.cpp:173
+#, kde-format
+msgctxt "weather condition"
+msgid "heavy freezing drizzle"
+msgstr "runsasta jäätävää tihkusadetta"
+
+#: ions/wetter.com/ion_wettercom.cpp:174
+#, kde-format
+msgctxt "weather condition"
+msgid "rain"
+msgstr "sadetta"
+
+#: ions/wetter.com/ion_wettercom.cpp:177
+#, kde-format
+msgctxt "weather condition"
+msgid "moderate rain"
+msgstr "kohtalaista sadetta"
+
+#: ions/wetter.com/ion_wettercom.cpp:179
+#, kde-format
+msgctxt "weather condition"
+msgid "light freezing rain"
+msgstr "heikkoa jäätävä sadetta"
+
+#: ions/wetter.com/ion_wettercom.cpp:180
+#, kde-format
+msgctxt "weather condition"
+msgid "freezing rain"
+msgstr "jäätävää vesisadetta"
+
+# Another word for light rain and snow
+#: ions/wetter.com/ion_wettercom.cpp:181
+#, kde-format
+msgctxt "weather condition"
+msgid "light rain snow"
+msgstr "heikkoa sadetta ja lunta"
+
+# Another word for heavy rain and snow
+#: ions/wetter.com/ion_wettercom.cpp:182
+#, kde-format
+msgctxt "weather condition"
+msgid "heavy rain snow"
+msgstr "runsasta sadetta ja lunta"
+
+#: ions/wetter.com/ion_wettercom.cpp:183
+#, kde-format
+msgctxt "weather condition"
+msgid "snow"
+msgstr "lumisadetta"
+
+#: ions/wetter.com/ion_wettercom.cpp:186
+#, kde-format
+msgctxt "weather condition"
+msgid "moderate snow"
+msgstr "kohtalaista lumisadetta"
+
+#: ions/wetter.com/ion_wettercom.cpp:188 ions/wetter.com/ion_wettercom.cpp:190
+#, kde-format
+msgctxt "weather condition"
+msgid "showers"
+msgstr "sadekuuroja"
+
+#: ions/wetter.com/ion_wettercom.cpp:192
+#, kde-format
+msgctxt "weather condition"
+msgid "light snow rain showers"
+msgstr "heikkoja lumisadekuuroja"
+
+#: ions/wetter.com/ion_wettercom.cpp:193
+#, kde-format
+msgctxt "weather condition"
+msgid "heavy snow rain showers"
+msgstr "runsaita lumisadekuuroja"
+
+#: ions/wetter.com/ion_wettercom.cpp:195
+#, kde-format
+msgctxt "weather condition"
+msgid "snow showers"
+msgstr "lumipyrykuuroja"
+
+# Suomenkielessä on ukonilma ja kova/raju/ankara ukonilma. Heikkoa ukonilmaa ei googlella löydy.
+#: ions/wetter.com/ion_wettercom.cpp:198
+#, kde-format
+msgctxt "weather condition"
+msgid "light thunderstorm"
+msgstr "ukkoilma"
+
+#: ions/wetter.com/ion_wettercom.cpp:199
+#, kde-format
+msgctxt "weather condition"
+msgid "heavy thunderstorm"
+msgstr "rajuilmoja"
+
+#: ions/wetter.com/ion_wettercom.cpp:200
+#, kde-format
+msgctxt "weather condition"
+msgid "n/a"
+msgstr "–"
+
+#: ions/wetter.com/ion_wettercom.cpp:361
+#, kde-format
+msgctxt "Geographical location: city, state, ISO-country-code"
+msgid "%1, %2, %3"
+msgstr "%1, %2, %3"
+
+#: ions/wetter.com/ion_wettercom.cpp:363
+#, kde-format
+msgctxt "Geographical location: quarter (city), state, ISO-country-code"
+msgid "%1 (%2), %3, %4"
+msgstr "%1 (%2), %3, %4"
+
+#: ions/wetter.com/ion_wettercom.cpp:684
+#, kde-format
+msgid "Day"
+msgstr "päivä"
+
+#: ions/wetter.com/ion_wettercom.cpp:694
+#, kde-format
+msgid "Night"
+msgstr "yö"
+
+#: noaa_i18n.dat:1
+#, kde-format
+msgctxt "weather condition"
+msgid "A Few Clouds"
+msgstr "Muutama pilvi"
+
+#: noaa_i18n.dat:2
+#, kde-format
+msgctxt "weather condition"
+msgid "A Few Clouds and Breezy"
+msgstr "Muutamia pilviä ja tuulista"
+
+#: noaa_i18n.dat:3
+#, kde-format
+msgctxt "weather condition"
+msgid "A Few Clouds and Windy"
+msgstr "Muutamia pilviä ja tuulista"
+
+#: noaa_i18n.dat:4
+#, kde-format
+msgctxt "weather condition"
+msgid "A Few Clouds with Haze"
+msgstr "Muutamia pilviä ja utuista"
+
+#: noaa_i18n.dat:5
+#, kde-format
+msgctxt "weather condition"
+msgid "Blowing Dust"
+msgstr "Pölytuisku"
+
+#: noaa_i18n.dat:6
+#, kde-format
+msgctxt "weather condition"
+msgid "Blowing Sand"
+msgstr "Hiekkatuisku"
+
+#: noaa_i18n.dat:8
+#, kde-format
+msgctxt "weather condition"
+msgid "Blowing Snow in Vicinity"
+msgstr "Lumituiskua lähiseudulla"
+
+#: noaa_i18n.dat:9
+#, kde-format
+msgctxt "weather condition"
+msgid "Breezy"
+msgstr "Tuulista"
+
+#: noaa_i18n.dat:11
+#, kde-format
+msgctxt "weather condition"
+msgid "Clear and Breezy"
+msgstr "Selkeää ja tuulista"
+
+#: noaa_i18n.dat:12
+#, kde-format
+msgctxt "weather condition"
+msgid "Clear with Haze"
+msgstr "Selkeää ja utua"
+
+#: noaa_i18n.dat:14
+#, kde-format
+msgctxt "weather condition"
+msgid "Drizzle Fog"
+msgstr "Tihkusumua"
+
+#: noaa_i18n.dat:15
+#, kde-format
+msgctxt "weather condition"
+msgid "Drizzle Fog/Mist"
+msgstr "Tihkusumua/utua"
+
+#: noaa_i18n.dat:16
+#, kde-format
+msgctxt "weather condition"
+msgid "Drizzle Ice Pellets"
+msgstr "Tihkua ja lumirakeita"
+
+#: noaa_i18n.dat:17
+#, kde-format
+msgctxt "weather condition"
+msgid "Drizzle Snow"
+msgstr "Räntäsadetta"
+
+#: noaa_i18n.dat:19
+#, kde-format
+msgctxt "weather condition"
+msgid "Dust/Sand Whirls"
+msgstr "Pöly-/hiekkapyörteitä"
+
+#: noaa_i18n.dat:20
+#, kde-format
+msgctxt "weather condition"
+msgid "Dust/Sand Whirls in Vicinity"
+msgstr "Pöly-/hiekkapyörteitä lähiseudulla"
+
+#: noaa_i18n.dat:21
+#, kde-format
+msgctxt "weather condition"
+msgid "Dust Storm"
+msgstr "Pölymyrsky"
+
+#: noaa_i18n.dat:22
+#, kde-format
+msgctxt "weather condition"
+msgid "Dust Storm in Vicinity"
+msgstr "Pölymyrsky lähiseudulla"
+
+#: noaa_i18n.dat:23
+#, kde-format
+msgctxt "weather condition"
+msgid "Fair"
+msgstr "Poutainen"
+
+#: noaa_i18n.dat:24
+#, kde-format
+msgctxt "weather condition"
+msgid "Fair and Breezy"
+msgstr "Poutainen ja tuulinen"
+
+#: noaa_i18n.dat:25
+#, kde-format
+msgctxt "weather condition"
+msgid "Fair and Windy"
+msgstr "Poutainen ja tuulinen"
+
+#: noaa_i18n.dat:26
+#, kde-format
+msgctxt "weather condition"
+msgid "Fair with Haze"
+msgstr "Poutainen ja utuinen"
+
+#: noaa_i18n.dat:28
+#, kde-format
+msgctxt "weather condition"
+msgid "Fog in Vicinity"
+msgstr "Sumua lähiseudulla"
+
+#: noaa_i18n.dat:29
+#, kde-format
+msgctxt "weather condition"
+msgid "Fog/Mist"
+msgstr "Sumua/Utua"
+
+#: noaa_i18n.dat:30
+#, kde-format
+msgctxt "weather condition"
+msgid "Freezing Drizzle"
+msgstr "Jäätävää tihkua"
+
+#: noaa_i18n.dat:31
+#, kde-format
+msgctxt "weather condition"
+msgid "Freezing Drizzle in Vicinity"
+msgstr "Jäätävää tihkua lähiseudulla"
+
+#: noaa_i18n.dat:32
+#, kde-format
+msgctxt "weather condition"
+msgid "Freezing Drizzle Rain"
+msgstr "Jäätävää tihkusadetta"
+
+#: noaa_i18n.dat:33
+#, kde-format
+msgctxt "weather condition"
+msgid "Freezing Drizzle Snow"
+msgstr "Jäätävää räntäsadetta"
+
+#: noaa_i18n.dat:34
+#, kde-format
+msgctxt "weather condition"
+msgid "Freezing Fog"
+msgstr "Jäätävää sumua"
+
+#: noaa_i18n.dat:35
+#, kde-format
+msgctxt "weather condition"
+msgid "Freezing Fog in Vicinity"
+msgstr "Jäätävää sumua lähiseudulla"
+
+#: noaa_i18n.dat:36
+#, kde-format
+msgctxt "weather condition"
+msgid "Freezing Rain"
+msgstr "Jäätävää sadetta"
+
+#: noaa_i18n.dat:37
+#, kde-format
+msgctxt "weather condition"
+msgid "Freezing Rain in Vicinity"
+msgstr "Jäätävää sadetta lähiseudulla"
+
+# Another word for freezing rain and rain
+#: noaa_i18n.dat:38
+#, kde-format
+msgctxt "weather condition"
+msgid "Freezing Rain Rain"
+msgstr "Jäätävää sadetta ja sadetta"
+
+# Another word for freezing rain and snow
+#: noaa_i18n.dat:39
+#, kde-format
+msgctxt "weather condition"
+msgid "Freezing Rain Snow"
+msgstr "Jäätävää sadetta ja lunta"
+
+#: noaa_i18n.dat:41
+#, kde-format
+msgctxt "weather condition"
+msgid "Funnel Cloud in Vicinity"
+msgstr "Suppilopilvi lähiseudulla"
+
+#: noaa_i18n.dat:43
+#, kde-format
+msgctxt "weather condition"
+msgid "Hail Showers"
+msgstr "Raekuuroja"
+
+#: noaa_i18n.dat:47
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Drizzle Fog"
+msgstr "Runsasta tihkusadetta ja sumua"
+
+#: noaa_i18n.dat:48
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Drizzle Fog/Mist"
+msgstr "Runsasta tihkusadetta ja sumua/usvaa"
+
+#: noaa_i18n.dat:49
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Drizzle Ice Pellets"
+msgstr "Runsasta tihkusadetta ja lumirakeita"
+
+#: noaa_i18n.dat:50
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Drizzle Snow"
+msgstr "Runsasta räntäsadetta"
+
+#: noaa_i18n.dat:51
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Dust Storm"
+msgstr "Runsas pölymyrsky"
+
+#: noaa_i18n.dat:52
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Freezing Drizzle"
+msgstr "Runsasta jäätävää tihkua"
+
+#: noaa_i18n.dat:53
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Freezing Drizzle Rain"
+msgstr "Runsasta jäätävää tihkusadetta"
+
+#: noaa_i18n.dat:54
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Freezing Drizzle Snow"
+msgstr "Runsasta jäätävää räntäsadetta"
+
+#: noaa_i18n.dat:55
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Freezing Fog"
+msgstr "Runsasta jäätävää sumua"
+
+#: noaa_i18n.dat:56
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Freezing Rain"
+msgstr "Runsasta jäätävää sadetta"
+
+# Another word for heavy freezing rain and rain
+#: noaa_i18n.dat:57
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Freezing Rain Rain"
+msgstr "Runsasta jäätävää sadetta ja sadetta"
+
+# Another word for freezing rain and snow
+#: noaa_i18n.dat:58
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Freezing Rain Snow"
+msgstr "Runsasta jäätävää sadetta ja lunta"
+
+#: noaa_i18n.dat:59
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Ice Pellets"
+msgstr "Runsaasti lumirakeita"
+
+# Another word for heavy ice pellets and drizzle
+#: noaa_i18n.dat:60
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Ice Pellets Drizzle"
+msgstr "Runsaasti lumirakeita ja tihkusadetta"
+
+# Another word for heavy ice pellets and rain
+#: noaa_i18n.dat:61
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Ice Pellets Rain"
+msgstr "Runsaasti lumirakeita ja sadetta"
+
+# Another word for heavy rain and fog/mist
+#: noaa_i18n.dat:63
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Rain Fog"
+msgstr "Runsaasti sadetta ja sumua/usvaa"
+
+# Another word for heavy rain and fog/mist
+#: noaa_i18n.dat:64
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Rain Fog/Mist"
+msgstr "Runsaasti sadetta ja sumua/usvaa"
+
+# Another word for heavy rain and freezing drizzle
+#: noaa_i18n.dat:65
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Rain Freezing Drizzle"
+msgstr "Runsaasti sadetta ja jäätävää tihkua"
+
+# Another word for heavy rain and freezing rain
+#: noaa_i18n.dat:66
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Rain Freezing Rain"
+msgstr "Runsasta sadetta ja jäätävää sadetta"
+
+# Another word for heavy rain and ice pellets
+#: noaa_i18n.dat:67
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Rain Ice Pellets"
+msgstr "Runsasta sadetta ja lumirakeita"
+
+#: noaa_i18n.dat:68
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Rain Showers"
+msgstr "Runsaasti sadekuuroja"
+
+# Another word for heavy rain showers and fog/mist
+#: noaa_i18n.dat:69
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Rain Showers Fog/Mist"
+msgstr "Runsaasti sadekuuroja ja sumua/usvaa"
+
+# Another word for heavy rain and snow
+#: noaa_i18n.dat:70
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Rain Snow"
+msgstr "Runsaasti sadetta ja lunta"
+
+#: noaa_i18n.dat:71
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Sand Storm"
+msgstr "Raju hiekkamyrsky"
+
+# Another word for heavy showers and rain
+#: noaa_i18n.dat:72
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Showers Rain"
+msgstr "Runsaasti sadekuuroja ja sadetta"
+
+# Another word for heavy showers, rain and fog/mist
+#: noaa_i18n.dat:73
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Showers Rain Fog/Mist"
+msgstr "Runsaasti sadekuuroja, sadetta ja sumua/usvaa"
+
+# Another word for heavy showers and snow
+#: noaa_i18n.dat:74
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Showers Snow"
+msgstr "Runsaasti sadekuuroja ja lunta"
+
+# Another word for heavy showers, snow and fog
+#: noaa_i18n.dat:75
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Showers Snow Fog"
+msgstr "Runsaasti sadekuuroja, lumikuuroja ja sumua"
+
+# Another word for heavy showers, snow and fog/mist
+#: noaa_i18n.dat:76
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Showers Snow Fog/Mist"
+msgstr "Runsaasti sadekuuroja, lunta ja sumua/usvaa"
+
+#: noaa_i18n.dat:77
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy small Hail/Snow Pellets"
+msgstr "Runsaasti pieniä rakeita/lumirakeita"
+
+#: noaa_i18n.dat:79
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Snow Blowing Snow"
+msgstr "Runsaasti lumisadetta ja -tuiskua"
+
+# Another word for heavy snow and fog
+#: noaa_i18n.dat:80
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Snow Fog"
+msgstr "Runsaasti lunta ja sumua"
+
+# Another word for heavy snow and fog/mist
+#: noaa_i18n.dat:81
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Snow Fog/Mist"
+msgstr "Runsaasti lunta ja sumua/usvaa"
+
+# Another word for heavy snow and freezing drizzle
+#: noaa_i18n.dat:82
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Snow Freezing Drizzle"
+msgstr "Runsaasti lunta ja jäätävää tihkua"
+
+# Another word for heavy snow and freezing rain
+#: noaa_i18n.dat:83
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Snow Freezing Rain"
+msgstr "Runsaasti lunta ja jäätävää sadetta"
+
+#: noaa_i18n.dat:84
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Snow Grains"
+msgstr "Runsaasti lumirakeita"
+
+# Another word for heavy snow and low drifting snow
+#: noaa_i18n.dat:85
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Snow Low Drifting Snow"
+msgstr "Runsaasti lunta ja vähän ajelehtivaa lunta"
+
+#: noaa_i18n.dat:86
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Snow Rain"
+msgstr "Runsas lumisadetta"
+
+#: noaa_i18n.dat:87
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Snow Showers"
+msgstr "Runsaasti lumipyrykuuroja"
+
+# Another word for heavy snow showers and fog
+#: noaa_i18n.dat:88
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Snow Showers Fog"
+msgstr "Runsaita lumipyrykuuroja ja sumua"
+
+# Another word for heavy snow showers and fog/mist
+#: noaa_i18n.dat:89
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Snow Showers Fog/Mist"
+msgstr "Runsaita lumipyrykuuroja ja sumua/vesihöyryä"
+
+# Another word for heavy thunderstorm and rain
+#: noaa_i18n.dat:90
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Thunderstorm Rain"
+msgstr "Raju ukonilma ja sadetta"
+
+# Another word for heavy thunderstorm, rain and fog
+#: noaa_i18n.dat:91
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Thunderstorm Rain Fog"
+msgstr "Raju ukonilma, sateita ja sumua"
+
+# Another word for heavy thunderstorm, rain, fog and windy
+#: noaa_i18n.dat:92
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Thunderstorm Rain Fog and Windy"
+msgstr "Raju ukonilma, sadetta, sumua ja tuulisuutta"
+
+# Another word for heavy thunderstorm, rain and fog/mist
+#: noaa_i18n.dat:93
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Thunderstorm Rain Fog/Mist"
+msgstr "Raju ukonilma, sadetta ja sumua/usvaa"
+
+# Another word for heavy thunderstorm, rain and hail
+#: noaa_i18n.dat:94
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Thunderstorm Rain Hail"
+msgstr "Raju ukonilma, sadetta ja rakeita"
+
+# Another word for heavy thunderstorm, rain, hail and fog
+#: noaa_i18n.dat:95
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Thunderstorm Rain Hail Fog"
+msgstr "Raju ukonilma, sadetta, rakeita ja sumua"
+
+# Another word for heavy thunderstorm, rain, hail and fog/hail
+#: noaa_i18n.dat:96
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Thunderstorm Rain Hail Fog/Hail"
+msgstr "Raju ukonilma, sadetta, rakeita ja sumua/rakeita"
+
+# Another word for heavy thunderstorm, rain, hail and haze
+#: noaa_i18n.dat:97
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Thunderstorm Rain Hail Haze"
+msgstr "Raju ukonilma, sadetta, rakeita ja utua"
+
+# Another word for heavy thunderstorm, rain, and haze
+#: noaa_i18n.dat:98
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Thunderstorm Rain Haze"
+msgstr "Raju ukonilma, sadetta ja utua"
+
+# Another word for heavy thunderstorm, rain and small hail/snow pellets
+#: noaa_i18n.dat:99
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Thunderstorm Rain Small Hail/Snow Pellets"
+msgstr "Raju ukonilma, sadetta ja pieniä rakeita/lumirakeita"
+
+# Another word for heavy thunderstorm and snow
+#: noaa_i18n.dat:100
+#, kde-format
+msgctxt "weather condition"
+msgid "Heavy Thunderstorm Snow"
+msgstr "Raju ukonilma ja lunta"
+
+# Another word for ice pellets and drizzle
+#: noaa_i18n.dat:103
+#, kde-format
+msgctxt "weather condition"
+msgid "Ice Pellets Drizzle"
+msgstr "Lumirakeita ja tihkua"
+
+#: noaa_i18n.dat:104
+#, kde-format
+msgctxt "weather condition"
+msgid "Ice Pellets in Vicinity"
+msgstr "Lumirakeita lähiseudulla"
+
+# Another word for ice pellets and rain
+#: noaa_i18n.dat:105
+#, kde-format
+msgctxt "weather condition"
+msgid "Ice Pellets Rain"
+msgstr "Lumirakeita ja sadetta"
+
+# Another word for light drizzle and fog
+#: noaa_i18n.dat:107
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Drizzle Fog"
+msgstr "Heikko tihkua ja sumua"
+
+# Another word for light drizzle and fog/mist
+#: noaa_i18n.dat:108
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Drizzle Fog/Mist"
+msgstr "Heikkoa tihkua ja sumua/usvaa"
+
+# Another word for light drizzle and ice pellets
+#: noaa_i18n.dat:109
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Drizzle Ice Pellets"
+msgstr "Heikko tihkua ja lumirakeita"
+
+#: noaa_i18n.dat:110
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Drizzle Snow"
+msgstr "Heikko räntäsadetta"
+
+#: noaa_i18n.dat:112
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Freezing Drizzle Rain"
+msgstr "Heikkoa jäätävää tihkusadetta"
+
+#: noaa_i18n.dat:113
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Freezing Drizzle Snow"
+msgstr "Heikkoa jäätävä räntäsadetta"
+
+#: noaa_i18n.dat:114
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Freezing Fog"
+msgstr "Heikko jäätävää sumua"
+
+# Another word for light freezing rain and rain
+#: noaa_i18n.dat:116
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Freezing Rain Rain"
+msgstr "Heikkoa jäätävää sadetta ja sadetta"
+
+# Another word for light freezing rain and snow
+#: noaa_i18n.dat:117
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Freezing Rain Snow"
+msgstr "Heikkoa jäätävää sadetta ja lunta"
+
+#: noaa_i18n.dat:118
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Ice Pellets"
+msgstr "Niukasti lumirakeita"
+
+# Another word for light ice pellets and drizzle
+#: noaa_i18n.dat:119
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Ice Pellets Drizzle"
+msgstr "Niukasti lumirakeita ja tihkua"
+
+# Another word for light ice pellets and rain
+#: noaa_i18n.dat:120
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Ice Pellets Rain"
+msgstr "Niukasti lumirakeita ja sadetta"
+
+#: noaa_i18n.dat:122
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Rain and Breezy"
+msgstr "Heikkoa sadetta ja tuulta"
+
+# Another word for light rain and fog
+#: noaa_i18n.dat:123
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Rain Fog"
+msgstr "Heikkoa sadetta ja sumua"
+
+# Another word for light rain and fog/mist
+#: noaa_i18n.dat:124
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Rain Fog/Mist"
+msgstr "Heikkoa sadetta ja sumua/usvaa"
+
+# Another word for light rain and freezing drizzle
+#: noaa_i18n.dat:125
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Rain Freezing Drizzle"
+msgstr "Heikkoa sadetta ja jäätävää tihkua"
+
+# Another word for light rain and freezing rain
+#: noaa_i18n.dat:126
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Rain Freezing Rain"
+msgstr "Heikkoa sadetta ja jäätävää sadetta"
+
+# Another word for light rain and ice pellets
+#: noaa_i18n.dat:127
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Rain Ice Pellets"
+msgstr "Heikkoa sadetta ja lumirakeita"
+
+#: noaa_i18n.dat:128
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Rain Showers"
+msgstr "Heikkoja sadekuuroja"
+
+# Another word for light rain showers and fog/mist
+#: noaa_i18n.dat:129
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Rain Showers Fog/Mist"
+msgstr "Heikkoja sadekuuroja ja sumua/usvaa"
+
+# Another word for light rain and snow
+#: noaa_i18n.dat:130
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Rain Snow"
+msgstr "Heikkoa sadetta ja lunta"
+
+# Another word for light showers and rain
+#: noaa_i18n.dat:131
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Showers Rain"
+msgstr "Heikkoja sadekuuroja ja sadetta"
+
+# Another word for light showers, rain and fog/mist
+#: noaa_i18n.dat:132
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Showers Rain Fog/Mist"
+msgstr "Heikkoja sadekuuroja, sadetta ja sumua/usvaa"
+
+# Another word for light showers and snow
+#: noaa_i18n.dat:133
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Showers Snow"
+msgstr "Heikkoja sadekuuroja ja lunta"
+
+# Another word for light showers, snow and fog
+#: noaa_i18n.dat:134
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Showers Snow Fog"
+msgstr "Heikkoja sadekuuroja, lunta ja sumua"
+
+# Another word for light showers, snow and fog/mist
+#: noaa_i18n.dat:135
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Showers Snow Fog/Mist"
+msgstr "Heikkoja sadekuuroja, lunta ja sumua/usvaa"
+
+#: noaa_i18n.dat:136
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Small Hail/Snow Pellets"
+msgstr "Niukasti pieniä rakeita/lumirakeita"
+
+# Another word for light snow and blowing snow
+#: noaa_i18n.dat:138
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Snow Blowing Snow"
+msgstr "Heikkoa lumisadetta ja lumituiskua"
+
+# Another word for light snow, blowing snow and fog/mist
+#: noaa_i18n.dat:139
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Snow Blowing Snow Fog/Mist"
+msgstr "Heikkoa lumisadetta, lumituiskua ja sumua/usvaa"
+
+#: noaa_i18n.dat:140
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Snow Drizzle"
+msgstr "Heikkoa lumituiskua"
+
+# Another word for light snow and fog
+#: noaa_i18n.dat:141
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Snow Fog"
+msgstr "Heikkoa lumisadetta ja sumua"
+
+# Another word for light snow and fog/mist
+#: noaa_i18n.dat:142
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Snow Fog/Mist"
+msgstr "Heikkoa lumisadetta ja sumua/usvaa"
+
+# Another word for light snow and freezing drizzle
+#: noaa_i18n.dat:143
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Snow Freezing Drizzle"
+msgstr "Heikkoa lumisadetta ja jäätävää tihkua"
+
+# Another word for light snow and freezing rain
+#: noaa_i18n.dat:144
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Snow Freezing Rain"
+msgstr "Heikkoa lumisadetta ja jäätävää sadetta"
+
+#: noaa_i18n.dat:145
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Snow Grains"
+msgstr "Vähän lumirakeita"
+
+# Another word for light snow and low drifting snow
+#: noaa_i18n.dat:146
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Snow Low Drifting Snow"
+msgstr "Heikkoa lumisadetta ja vähän ajelehtivaa lunta"
+
+#: noaa_i18n.dat:147
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Snow Rain"
+msgstr "Heikkoa lumisadetta ja sadetta"
+
+#: noaa_i18n.dat:148
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Snow Showers"
+msgstr "Heikkoja lumipyrykuuroja"
+
+# Another word for light snow showers and fog
+#: noaa_i18n.dat:149
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Snow Showers Fog"
+msgstr "Heikkoja lumikuuroja ja sumua"
+
+# Another word for light snow showers and fog/mist
+#: noaa_i18n.dat:150
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Snow Showers Fog/Mist"
+msgstr "Heikkoja lumisadekuuroja ja sumua/usvaa"
+
+# Another word for light thunderstorm and rain
+#: noaa_i18n.dat:151
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Thunderstorm Rain"
+msgstr "Ukonilma ja sadetta"
+
+# Another word for light thunderstorm, rain and fog
+#: noaa_i18n.dat:152
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Thunderstorm Rain Fog"
+msgstr "Ukonilma, sadetta ja sumua"
+
+# Another word for light thunderstorm, rain and fog/mist
+#: noaa_i18n.dat:153
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Thunderstorm Rain Fog/Mist"
+msgstr "Ukonilma, sadetta ja sumua/usvaa"
+
+# Another word for light thunderstorm, rain and hail
+#: noaa_i18n.dat:154
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Thunderstorm Rain Hail"
+msgstr "Ukonilma, sadetta ja rakeita"
+
+# Another word for light thunderstorm, rain, hail and fog
+#: noaa_i18n.dat:155
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Thunderstorm Rain Hail Fog"
+msgstr "Ukonilma, sadetta, rakeita ja sumua"
+
+# Another word for light thunderstorm, rain, hail and fog/mist
+#: noaa_i18n.dat:156
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Thunderstorm Rain Hail Fog/Mist"
+msgstr "Ukonilma, sadetta, rakeita ja sumua/usvaa"
+
+# Another word for light thunderstorm, rain, hail and haze
+#: noaa_i18n.dat:157
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Thunderstorm Rain Hail Haze"
+msgstr "Ukonilma, sadetta, rakeita ja utua"
+
+# Another word for light thunderstorm, rain and haze
+#: noaa_i18n.dat:158
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Thunderstorm Rain Haze"
+msgstr "Ukonilma, sadetta ja utua"
+
+# Another word for light thunderstorm, rain and small hail/snow pellets
+#: noaa_i18n.dat:159
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Thunderstorm Rain Small Hail/Snow Pellets"
+msgstr "Ukonilma, sadetta ja pieniä rakeita/lumirakeita"
+
+# Another word for light thunderstorm and snow
+#: noaa_i18n.dat:160
+#, kde-format
+msgctxt "weather condition"
+msgid "Light Thunderstorm Snow"
+msgstr "Ukonilma ja lunta"
+
+#: noaa_i18n.dat:161
+#, kde-format
+msgctxt "weather condition"
+msgid "Low Drifting Dust"
+msgstr "Vähän ajelehtivaa pölyä"
+
+#: noaa_i18n.dat:162
+#, kde-format
+msgctxt "weather condition"
+msgid "Low Drifting Sand"
+msgstr "Vähän ajelehtivaa hiekkaa"
+
+#: noaa_i18n.dat:163
+#, kde-format
+msgctxt "weather condition"
+msgid "Low Drifting Snow"
+msgstr "Vähän ajelehtivaa lunta"
+
+#: noaa_i18n.dat:165
+#, kde-format
+msgctxt "weather condition"
+msgid "Mostly Cloudy and Breezy"
+msgstr "Enimmäkseen pilvistä ja tuulista"
+
+#: noaa_i18n.dat:166
+#, kde-format
+msgctxt "weather condition"
+msgid "Mostly Cloudy and Windy"
+msgstr "Enimmäkseen pilvistä ja tuulista"
+
+#: noaa_i18n.dat:167
+#, kde-format
+msgctxt "weather condition"
+msgid "Mostly Cloudy with Haze"
+msgstr "Enimmäkseen pilvistä ja utuista"
+
+#: noaa_i18n.dat:168
+#, kde-format
+msgctxt "weather condition"
+msgid "Overcast"
+msgstr "Pilvinen"
+
+#: noaa_i18n.dat:169
+#, kde-format
+msgctxt "weather condition"
+msgid "Overcast and Breezy"
+msgstr "Pilvinen ja tuulinen"
+
+#: noaa_i18n.dat:170
+#, kde-format
+msgctxt "weather condition"
+msgid "Overcast and Windy"
+msgstr "Pilvistä ja tuulista"
+
+#: noaa_i18n.dat:171
+#, kde-format
+msgctxt "weather condition"
+msgid "Overcast with Haze"
+msgstr "Pilvistä ja utuista"
+
+#: noaa_i18n.dat:172
+#, kde-format
+msgctxt "weather condition"
+msgid "Partial Fog"
+msgstr "Osittain sumuista"
+
+#: noaa_i18n.dat:173
+#, kde-format
+msgctxt "weather condition"
+msgid "Partial Fog in Vicinity"
+msgstr "Osittaista sumua lähiseudulla"
+
+#: noaa_i18n.dat:175
+#, kde-format
+msgctxt "weather condition"
+msgid "Partly Cloudy and Breezy"
+msgstr "Osittain pilvistä ja tuulista"
+
+#: noaa_i18n.dat:176
+#, kde-format
+msgctxt "weather condition"
+msgid "Partly Cloudy and Windy"
+msgstr "Osittain pilvistä ja sateista"
+
+#: noaa_i18n.dat:177
+#, kde-format
+msgctxt "weather condition"
+msgid "Partly Cloudy with Haze"
+msgstr "Osittain pilvistä ja utuista"
+
+#: noaa_i18n.dat:178
+#, kde-format
+msgctxt "weather condition"
+msgid "Patchy Freezing Fog"
+msgstr "Paikoittaista jäätävää sumua"
+
+#: noaa_i18n.dat:179
+#, kde-format
+msgctxt "weather condition"
+msgid "Patches of Fog"
+msgstr "Sumua paikoittain"
+
+#: noaa_i18n.dat:180
+#, kde-format
+msgctxt "weather condition"
+msgid "Patches of Fog in Vicinity"
+msgstr "Paikoittain sumua lähiseudulla"
+
+# Another word for rain and fog
+#: noaa_i18n.dat:181
+#, kde-format
+msgctxt "weather condition"
+msgid "Rain Fog"
+msgstr "Sadetta ja sumua"
+
+# Another word for rain and fog/mist
+#: noaa_i18n.dat:182
+#, kde-format
+msgctxt "weather condition"
+msgid "Rain Fog/Mist"
+msgstr "Sadetta ja sumua/usvaa"
+
+# Another word for rain and freezing drizzle
+#: noaa_i18n.dat:183
+#, kde-format
+msgctxt "weather condition"
+msgid "Rain Freezing Drizzle"
+msgstr "Sadetta ja jäätävää tihkua"
+
+# Another word for rain and freezing rain
+#: noaa_i18n.dat:184
+#, kde-format
+msgctxt "weather condition"
+msgid "Rain Freezing Rain"
+msgstr "Sadetta ja jäätävää sadetta"
+
+# Another word for rain and ice pellets
+#: noaa_i18n.dat:185
+#, kde-format
+msgctxt "weather condition"
+msgid "Rain Ice Pellets"
+msgstr "Sadetta ja lumirakeita"
+
+#: noaa_i18n.dat:186
+#, kde-format
+msgctxt "weather condition"
+msgid "Rain Showers"
+msgstr "Sadekuuroja"
+
+# Another word for rain showers and fog/mist
+#: noaa_i18n.dat:187
+#, kde-format
+msgctxt "weather condition"
+msgid "Rain Showers Fog/Mist"
+msgstr "Sadekuuroja ja sumua/usvaa"
+
+#: noaa_i18n.dat:188
+#, kde-format
+msgctxt "weather condition"
+msgid "Rain Showers in Vicinity"
+msgstr "Sadekuuroja lähiseudulla"
+
+# Another word for rain showes in vicinity and fog/mist
+#: noaa_i18n.dat:189
+#, kde-format
+msgctxt "weather condition"
+msgid "Rain Showers in Vicinity Fog/Mist"
+msgstr "Sadekuuroja lähiseudulla ja sumua/usvaa"
+
+#: noaa_i18n.dat:190
+#, kde-format
+msgctxt "weather condition"
+msgid "Rain Snow"
+msgstr "Räntäsadetta"
+
+#: noaa_i18n.dat:191
+#, kde-format
+msgctxt "weather condition"
+msgid "Sand"
+msgstr "Hiekkaa"
+
+#: noaa_i18n.dat:192
+#, kde-format
+msgctxt "weather condition"
+msgid "Sand Storm"
+msgstr "Hiekkamyrsky"
+
+#: noaa_i18n.dat:193
+#, kde-format
+msgctxt "weather condition"
+msgid "Sand Storm in Vicinity"
+msgstr "Hiekkamyrsky lähiseudulla"
+
+#: noaa_i18n.dat:195
+#, kde-format
+msgctxt "weather condition"
+msgid "Shallow Fog in Vicinity"
+msgstr "Pinnallista sumua lähiseudulla"
+
+# Another word for showers and hail
+#: noaa_i18n.dat:196
+#, kde-format
+msgctxt "weather condition"
+msgid "Showers Hail"
+msgstr "Sadekuuroja ja rakeita"
+
+# Another word for showers and ice pellets
+#: noaa_i18n.dat:197
+#, kde-format
+msgctxt "weather condition"
+msgid "Showers Ice Pellets"
+msgstr "Sadekuuroja ja lumirakeita"
+
+# Another word for showers in vicinity and fog
+#: noaa_i18n.dat:198
+#, kde-format
+msgctxt "weather condition"
+msgid "Showers in Vicinity Fog"
+msgstr "Sadekuuroja lähiseudulla ja sumua"
+
+# Another word for showers in vicinity and snow
+#: noaa_i18n.dat:199
+#, kde-format
+msgctxt "weather condition"
+msgid "Showers in Vicinity Snow"
+msgstr "Sadekuuroja lähiseudulla ja lunta"
+
+# Another word for showers and rain
+#: noaa_i18n.dat:200
+#, kde-format
+msgctxt "weather condition"
+msgid "Showers Rain"
+msgstr "Sadekuuroja ja sadetta"
+
+# Another word for showers, rain and fog/mist
+#: noaa_i18n.dat:201
+#, kde-format
+msgctxt "weather condition"
+msgid "Showers Rain Fog/Mist"
+msgstr "Sadekuuroja, sadetta ja sumua/usvaa"
+
+# Another word for showers and rain in vicinity
+#: noaa_i18n.dat:202
+#, kde-format
+msgctxt "weather condition"
+msgid "Showers Rain in Vicinity"
+msgstr "Sadekuuroja ja sadetta lähiseudulla"
+
+# Another word for showers, rain in vicinity and fog/mist
+#: noaa_i18n.dat:203
+#, kde-format
+msgctxt "weather condition"
+msgid "Showers Rain in Vicinity Fog/Mist"
+msgstr "Sadekuuroja, sadetta lähiseudulla ja sumua/usvaa"
+
+# Another word for showers and snow
+#: noaa_i18n.dat:204
+#, kde-format
+msgctxt "weather condition"
+msgid "Showers Snow"
+msgstr "Sadekuuroja ja lunta"
+
+# Another word for showers, snow and fog
+#: noaa_i18n.dat:205
+#, kde-format
+msgctxt "weather condition"
+msgid "Showers Snow Fog"
+msgstr "Sadekuuroja, lunta ja sumua"
+
+# Another word for showers, snow and fog/mist
+#: noaa_i18n.dat:206
+#, kde-format
+msgctxt "weather condition"
+msgid "Showers Snow Fog/Mist"
+msgstr "Sadekuuroja, lunta ja sumua/usvaa"
+
+#: noaa_i18n.dat:207
+#, kde-format
+msgctxt "weather condition"
+msgid "Small Hail/Snow Pellets"
+msgstr "Pieniä rakeita/lumirakeita"
+
+# Another word for snow and blowing snow
+#: noaa_i18n.dat:210
+#, kde-format
+msgctxt "weather condition"
+msgid "Snow Blowing Snow"
+msgstr "Lunta ja lumituiskua"
+
+#: noaa_i18n.dat:211
+#, kde-format
+msgctxt "weather condition"
+msgid "Snow Drizzle"
+msgstr "Lumituiskua"
+
+# Another word for snow and fog
+#: noaa_i18n.dat:212
+#, kde-format
+msgctxt "weather condition"
+msgid "Snow Fog"
+msgstr "Lunta ja sumua"
+
+# Another word for snow and fog/mist
+#: noaa_i18n.dat:213
+#, kde-format
+msgctxt "weather condition"
+msgid "Snow Fog/Mist"
+msgstr "Lunta ja sumua/usvaa"
+
+# Another word for snow and freezing drizzle
+#: noaa_i18n.dat:214
+#, kde-format
+msgctxt "weather condition"
+msgid "Snow Freezing Drizzle"
+msgstr "Lunta ja jäätävää tihkua"
+
+# Another word for snow and freezing rain
+#: noaa_i18n.dat:215
+#, kde-format
+msgctxt "weather condition"
+msgid "Snow Freezing Rain"
+msgstr "Lunta ja jäätävää sadetta"
+
+# Another word for snow and low drifting snow
+#: noaa_i18n.dat:217
+#, kde-format
+msgctxt "weather condition"
+msgid "Snow Low Drifting Snow"
+msgstr "Lunta ja vähän ajelehtivaa lunta"
+
+#: noaa_i18n.dat:218
+#, kde-format
+msgctxt "weather condition"
+msgid "Snow Rain"
+msgstr "Lumisadetta"
+
+#: noaa_i18n.dat:219
+#, kde-format
+msgctxt "weather condition"
+msgid "Snow Showers"
+msgstr "Lumikuuroja"
+
+# Another word for snow showers and fog
+#: noaa_i18n.dat:220
+#, kde-format
+msgctxt "weather condition"
+msgid "Snow Showers Fog"
+msgstr "Lumipyrykuuroja ja sumua"
+
+# Another word for snow showers and fog/mist
+#: noaa_i18n.dat:221
+#, kde-format
+msgctxt "weather condition"
+msgid "Snow Showers Fog/Mist"
+msgstr "Lumipyrykuuroja ja sumua/usvaa"
+
+#: noaa_i18n.dat:222
+#, kde-format
+msgctxt "weather condition"
+msgid "Snow Showers in Vicinity"
+msgstr "Lumipyrykuuroja lähiseudulla"
+
+# Another word for snow showers in vicinity and fog
+#: noaa_i18n.dat:223
+#, kde-format
+msgctxt "weather condition"
+msgid "Snow Showers in Vicinity Fog"
+msgstr "Lumipyrykuuroja lähiseudulla ja sumua"
+
+# Another word for snow showers in vicinity and fog/mist
+#: noaa_i18n.dat:224
+#, kde-format
+msgctxt "weather condition"
+msgid "Snow Showers in Vicinity Fog/Mist"
+msgstr "Lumipyrykuuroja lähiseudulla ja sumua/usvaa"
+
+# Another word for thunderstorm and fog
+#: noaa_i18n.dat:226
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm Fog"
+msgstr "Ukonilma ja sumua"
+
+# Another word for thunderstorm and hail
+#: noaa_i18n.dat:227
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm Hail"
+msgstr "Ukonilma ja rakeita"
+
+# Another word for thunderstorm, hail and fog
+#: noaa_i18n.dat:228
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm Hail Fog"
+msgstr "Ukonilma, rakeita ja sumua"
+
+# Another word for thunderstorm and haze in vicinity
+#: noaa_i18n.dat:229
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm Haze in Vicinity"
+msgstr "Ukonilma ja utua lähiseudulla"
+
+# Another word for thunderstorm, haze in vicinity and hail
+#: noaa_i18n.dat:230
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm Haze in Vicinity Hail"
+msgstr "Ukonilma, utua lähiseudulla ja rakeita"
+
+# Another word for thunderstorm and heavy rain
+#: noaa_i18n.dat:231
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm Heavy Rain"
+msgstr "Ukonilma ja rankkasade"
+
+# Another word for thunderstorm, heavy rain and fog
+#: noaa_i18n.dat:232
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm Heavy Rain Fog"
+msgstr "Ukonilma, rankkasade ja sumua"
+
+# Another word for thunderstorm, heavy rain and fog/mist
+#: noaa_i18n.dat:233
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm Heavy Rain Fog/Mist"
+msgstr "Ukonilma, rankkasade ja sumua/usvaa"
+
+#: noaa_i18n.dat:234
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm Heavy Rain Hail"
+msgstr "Ukonilma, runsasta sadetta ja rakeita"
+
+# Another word for thunderstorm, heavy rain, hail and fog
+#: noaa_i18n.dat:235
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm Heavy Rain Hail Fog"
+msgstr "Ukonilma, rankkasade, rakeita ja sumua"
+
+# Another word for thunderstorm, heavy rain, hail and fog/mist
+#: noaa_i18n.dat:236
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm Heavy Rain Hail Fog/Mist"
+msgstr "Ukonilma, rankkasade, rakeita ja sumua/usvaa"
+
+# Another word for thunderstorm, heavy rain, hail and haze
+#: noaa_i18n.dat:237
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm Heavy Rain Hail Haze"
+msgstr "Ukonilma, rankkasade, rakeita ja utua"
+
+# Another word for thunderstorm, heavy rain and haze
+#: noaa_i18n.dat:238
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm Heavy Rain Haze"
+msgstr "Ukonilma, rankkasade ja utua"
+
+# Another word for thunderstorm and ice pellets
+#: noaa_i18n.dat:239
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm Ice Pellets"
+msgstr "Ukonilma ja lumirakeita"
+
+#: noaa_i18n.dat:240
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm in Vicinity"
+msgstr "Ukonilma lähiseudulla"
+
+# Another word for thunderstorm in vicinity and fog
+#: noaa_i18n.dat:241
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm in Vicinity Fog"
+msgstr "Ukonilma lähiseudulla ja sumua"
+
+# Another word for thunderstorm in vicinity and fog/mist
+#: noaa_i18n.dat:242
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm in Vicinity Fog/Mist"
+msgstr "Ukonilma lähiseudulla ja sumua/usvaa"
+
+# Another word for thunderstorm in vicinity and hail
+#: noaa_i18n.dat:243
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm in Vicinity Hail"
+msgstr "Ukonilma lähiseudulla ja rakeita"
+
+# Another word for thunderstorm in vicinity, hail and haze
+#: noaa_i18n.dat:244
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm in Vicinity Hail Haze"
+msgstr "Ukonilma lähiseudulla, rakeita ja utua"
+
+# Another word for thunderstorm in vicinity and haze
+#: noaa_i18n.dat:245
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm in Vicinity Haze"
+msgstr "Ukonilma lähiseudulla ja utua"
+
+# Another word for thunderstorm and light rain
+#: noaa_i18n.dat:246
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm Light Rain"
+msgstr "Ukonilma ja heikkoa sadetta"
+
+# Another word for thunderstorm, light rain and fog
+#: noaa_i18n.dat:247
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm Light Rain Fog"
+msgstr "Ukonilma, heikkoa sadetta ja sumua"
+
+# Another word for thunderstorm, light rain and fog/mist
+#: noaa_i18n.dat:248
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm Light Rain Fog/Mist"
+msgstr "Ukonilma, heikkoa sadetta ja sumua/usvaa"
+
+# Another word for thunderstorm, light rain and hail
+#: noaa_i18n.dat:249
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm Light Rain Hail"
+msgstr "Ukonilma, heikkoa sadetta ja rakeita"
+
+# Another word for thunderstorm, light rain, hail and fog
+#: noaa_i18n.dat:250
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm Light Rain Hail Fog"
+msgstr "Ukonilma, heikkoa sadetta, rakeita ja sumua"
+
+# Another word for thunderstorm, light rain, hail and fog/mist
+#: noaa_i18n.dat:251
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm Light Rain Hail Fog/Mist"
+msgstr "Ukonilma, heikkoa sadetta, rakeita ja sumua/usvaa"
+
+# Another word for thunderstorm, light rain, hail and haze
+#: noaa_i18n.dat:252
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm Light Rain Hail Haze"
+msgstr "Ukonilma, heikkoa sadetta, rakeita ja utua"
+
+# Another word for thunderstorm, light rain and haze
+#: noaa_i18n.dat:253
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm Light Rain Haze"
+msgstr "Ukonilma, heikkoa sadetta ja utua"
+
+# Another word for thunderstorm and rain
+#: noaa_i18n.dat:254
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm Rain"
+msgstr "Ukonilma ja sadetta"
+
+# Another word for thunderstorm, rain and fog/mist
+#: noaa_i18n.dat:255
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm Rain Fog/Mist"
+msgstr "Ukonilma, sadetta ja sumua/usvaa"
+
+# Another word for thunderstorm, rain, hail and fog/mist
+#: noaa_i18n.dat:256
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm Rain Hail Fog/Mist"
+msgstr "Ukonilma, sadetta, rakeita ja sumua/usvaa"
+
+# Another word for thunderstorm, rain and small hail/snow pellets
+#: noaa_i18n.dat:257
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm Rain Small Hail/Snow Pellets"
+msgstr "Ukonilma, sadetta ja pieniä rakeita/lumirakeita"
+
+#: noaa_i18n.dat:258
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm Showers in Vicinity"
+msgstr "Ukkoskuuroja lähiseudulla"
+
+# Another word for thunderstorm, showers in vicinity and hail
+#: noaa_i18n.dat:259
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm Showers in Vicinity Hail"
+msgstr "Ukonilma, sadekuuroja lähiseudulla ja rakeita"
+
+# Another word for thunderstorm and small hail/snow pellets
+#: noaa_i18n.dat:260
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm Small Hail/Snow Pellets"
+msgstr "Ukonilma ja pieniä rakeita/lumirakeita"
+
+#: noaa_i18n.dat:261
+#, kde-format
+msgctxt "weather condition"
+msgid "Thunderstorm Snow"
+msgstr "Lumiukkosmyrsky"
+
+#: noaa_i18n.dat:262
+#, kde-format
+msgctxt "weather condition"
+msgid "Tornado/Water Spout"
+msgstr "Tornaado/Vesisuihku"
+
+#: noaa_i18n.dat:263
+#, kde-format
+msgctxt "weather condition"
+msgid "Windy"
+msgstr "Tuulista"
+
+#: noaa_i18n.dat:265
+#, kde-format
+msgctxt "weather forecast"
+msgid "Ice Crystals"
+msgstr "Jääkiteitä"
+
+#: noaa_i18n.dat:266
+#, kde-format
+msgctxt "weather forecast"
+msgid "Volcanic Ash"
+msgstr "Tuliperäistä tuhkaa"
+
+#: noaa_i18n.dat:267
+#, kde-format
+msgctxt "weather forecast"
+msgid "Water Spout"
+msgstr "Vesisuihku"
+
+#: noaa_i18n.dat:268
+#, kde-format
+msgctxt "weather forecast"
+msgid "Freezing Spray"
+msgstr "Jäätävä vihuri"
+
+#: noaa_i18n.dat:269
+#, kde-format
+msgctxt "weather forecast"
+msgid "Frost"
+msgstr "Jäähile"
+
+#: noaa_i18n.dat:270
+#, kde-format
+msgctxt "weather forecast"
+msgid "Slight Chance Thunderstorms"
+msgstr "Pieni mahdollisuus ukkosmyrkyihin"
+
+#: noaa_i18n.dat:271
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance Thunderstorms"
+msgstr "Mahdollisesti ukkosmyrskyjä"
+
+#: noaa_i18n.dat:272
+#, kde-format
+msgctxt "weather forecast"
+msgid "Thunderstorms Likely"
+msgstr "Todennäköisesti ukkosmyrskyjä"
+
+#: noaa_i18n.dat:274
+#, kde-format
+msgctxt "weather forecast"
+msgid "Severe Tstms"
+msgstr "Raivoisia ukkosmyrskyjä"
+
+#: noaa_i18n.dat:275
+#, kde-format
+msgctxt "weather forecast"
+msgid "Slight Chance Snow/Sleet"
+msgstr "Pieni mahdollisuus lumeen/räntään"
+
+#: noaa_i18n.dat:276
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance Snow/Sleet"
+msgstr "Mahdollisesti lunta/räntää"
+
+#: noaa_i18n.dat:277
+#, kde-format
+msgctxt "weather forecast"
+msgid "Snow/Sleet Likely"
+msgstr "Todennäköisesti lunta/räntää"
+
+#: noaa_i18n.dat:278
+#, kde-format
+msgctxt "weather forecast"
+msgid "Snow/Sleet"
+msgstr "Lunta/räntää"
+
+#: noaa_i18n.dat:279
+#, kde-format
+msgctxt "weather forecast"
+msgid "Slight Chance Rain/Sleet"
+msgstr "Pieni mahdollisuus (räntä)sateeseen"
+
+#: noaa_i18n.dat:280
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance Rain/Sleet"
+msgstr "Mahdollisesti sadetta/räntää"
+
+#: noaa_i18n.dat:281
+#, kde-format
+msgctxt "weather forecast"
+msgid "Rain/Sleet Likely"
+msgstr "Todennäköisesti sadetta/räntää"
+
+#: noaa_i18n.dat:282
+#, kde-format
+msgctxt "weather forecast"
+msgid "Rain/Sleet"
+msgstr "Sadetta/räntää"
+
+#: noaa_i18n.dat:283
+#, kde-format
+msgctxt "weather forecast"
+msgid "Slight Chance Rain/Freezing Rain"
+msgstr "Pieni mahdollisuus (jäätävään) sateeseen"
+
+#: noaa_i18n.dat:284
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance Rain/Freezing Rain"
+msgstr "Mahdollisesti sadetta/jäätävää sadetta"
+
+#: noaa_i18n.dat:285
+#, kde-format
+msgctxt "weather forecast"
+msgid "Rain/Freezing Rain Likely"
+msgstr "Todennäköisesti sadetta/jäätävää sadetta"
+
+#: noaa_i18n.dat:286
+#, kde-format
+msgctxt "weather forecast"
+msgid "Rain/Freezing Rain"
+msgstr "Sadetta/jäätävää sadetta"
+
+#: noaa_i18n.dat:287
+#, kde-format
+msgctxt "weather forecast"
+msgid "Wintry Mix Likely"
+msgstr "Talvinen sää todennäköinen"
+
+#: noaa_i18n.dat:288
+#, kde-format
+msgctxt "weather forecast"
+msgid "Wintry Mix"
+msgstr "Vettä, räntää tai lunta"
+
+#: noaa_i18n.dat:289
+#, kde-format
+msgctxt "weather forecast"
+msgid "Slight Chance Freezing Drizzle"
+msgstr "Pieni mahdollisuus jäätävään tihkusateeseen"
+
+#: noaa_i18n.dat:290
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance Freezing Drizzle"
+msgstr "Mahdollisesti jäätävää tihkusadetta"
+
+#: noaa_i18n.dat:291
+#, kde-format
+msgctxt "weather forecast"
+msgid "Freezing Drizzle Likely"
+msgstr "Todennnäköisesti jäätävää tihkusadetta"
+
+#: noaa_i18n.dat:292
+#, kde-format
+msgctxt "weather forecast"
+msgid "Freezing Drizzle"
+msgstr "Jäätävää tihkua"
+
+#: noaa_i18n.dat:293
+#, kde-format
+msgctxt "weather forecast"
+msgid "Slight Chance Freezing Rain"
+msgstr "Pieni mahdollisuus jäätävään sateeseen"
+
+#: noaa_i18n.dat:294
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance Freezing Rain"
+msgstr "Mahdollisesti jäätävää sadetta"
+
+#: noaa_i18n.dat:295
+#, kde-format
+msgctxt "weather forecast"
+msgid "Freezing Rain Likely"
+msgstr "Todennäköisesti jäätävää sadetta"
+
+#: noaa_i18n.dat:296
+#, kde-format
+msgctxt "weather forecast"
+msgid "Freezing Rain"
+msgstr "Jäätävää sadetta"
+
+#: noaa_i18n.dat:297
+#, kde-format
+msgctxt "weather forecast"
+msgid "Slight Chance Rain/Snow"
+msgstr "Pieni mahdollisuus (lumi)sateeseen"
+
+#: noaa_i18n.dat:298
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance Rain/Snow"
+msgstr "Mahdollisesti sadetta/lunta"
+
+#: noaa_i18n.dat:299
+#, kde-format
+msgctxt "weather forecast"
+msgid "Rain/Snow Likely"
+msgstr "Todennäköisesti vesi-/lumisadetta"
+
+#: noaa_i18n.dat:300
+#, kde-format
+msgctxt "weather forecast"
+msgid "Rain/Snow"
+msgstr "Vesi-/lumisadetta"
+
+#: noaa_i18n.dat:301
+#, kde-format
+msgctxt "weather forecast"
+msgid "Slight Chance Snow"
+msgstr "Mahdollisesti lunta"
+
+#: noaa_i18n.dat:302
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance Snow"
+msgstr "Mahdollisesti lunta"
+
+#: noaa_i18n.dat:303
+#, kde-format
+msgctxt "weather forecast"
+msgid "Snow Likely"
+msgstr "Lumisade todennäköinen"
+
+#: noaa_i18n.dat:305
+#, kde-format
+msgctxt "weather forecast"
+msgid "Heavy Snow"
+msgstr "Sankkaa lumisadetta"
+
+#: noaa_i18n.dat:306
+#, kde-format
+msgctxt "weather forecast"
+msgid "Slight Chance Flurries"
+msgstr "Pieni mahdollisuus lumipyrykuuroihin"
+
+#: noaa_i18n.dat:307
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance Flurries"
+msgstr "Mahdollisesti lumipyrykuuroja"
+
+#: noaa_i18n.dat:308
+#, kde-format
+msgctxt "weather forecast"
+msgid "Flurries Likely"
+msgstr "Todennäköisesti lumipyrykuuroja"
+
+#: noaa_i18n.dat:310
+#, kde-format
+msgctxt "weather forecast"
+msgid "Slight Chance Snow Showers"
+msgstr "Mahdollisesti lumikuuroja"
+
+#: noaa_i18n.dat:311
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance Snow Showers"
+msgstr "Mahdollisesti lumipyrykuuroja"
+
+#: noaa_i18n.dat:312
+#, kde-format
+msgctxt "weather forecast"
+msgid "Snow Showers Likely"
+msgstr "Todennäköisesti lumipyrykuuroja"
+
+#: noaa_i18n.dat:313
+#, kde-format
+msgctxt "weather forecast"
+msgid "Snow Showers"
+msgstr "Lumipyrykuuroja"
+
+#: noaa_i18n.dat:314
+#, kde-format
+msgctxt "weather forecast"
+msgid "Slight Chance Drizzle"
+msgstr "Pieni mahdollisuus tihkusateeseen"
+
+#: noaa_i18n.dat:315
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance Drizzle"
+msgstr "Mahdollisesti tihkusadetta"
+
+#: noaa_i18n.dat:316
+#, kde-format
+msgctxt "weather forecast"
+msgid "Drizzle Likely"
+msgstr "Todennäköisesti tihkusadetta"
+
+#: noaa_i18n.dat:318
+#, kde-format
+msgctxt "weather forecast"
+msgid "Slight Chance Rain"
+msgstr "Mahdollisesti sadetta"
+
+#: noaa_i18n.dat:319
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance Rain"
+msgstr "Mahdollisesti sataa"
+
+#: noaa_i18n.dat:320
+#, kde-format
+msgctxt "weather forecast"
+msgid "Rain Likely"
+msgstr "Todennäköisesti sadetta"
+
+#: noaa_i18n.dat:322
+#, kde-format
+msgctxt "weather forecast"
+msgid "Heavy Rain"
+msgstr "Kaatosadetta"
+
+#: noaa_i18n.dat:323
+#, kde-format
+msgctxt "weather forecast"
+msgid "Slight Chance Rain Showers"
+msgstr "Pieni mahdollisuus lumikuuroihin"
+
+#: noaa_i18n.dat:324
+#, kde-format
+msgctxt "weather forecast"
+msgid "Chance Rain Showers"
+msgstr "Mahdollisuus sadekuuroihin"
+
+#: noaa_i18n.dat:325
+#, kde-format
+msgctxt "weather forecast"
+msgid "Rain Showers Likely"
+msgstr "Todennäköisesti sadekuuroja"
+
+#: noaa_i18n.dat:326
+#, kde-format
+msgctxt "weather forecast"
+msgid "Rain Showers"
+msgstr "Sadekuuroja"
+
+#: noaa_i18n.dat:327
+#, kde-format
+msgctxt "weather forecast"
+msgid "Sleet"
+msgstr "Räntää"
+
+#: noaa_i18n.dat:329
+#, kde-format
+msgctxt "weather forecast"
+msgid "Freezing Fog"
+msgstr "Jäätävää sumua"
+
+#: noaa_i18n.dat:330
+#, kde-format
+msgctxt "weather forecast"
+msgid "Ice Fog"
+msgstr "Jääsumua"
+
+#: noaa_i18n.dat:331
+#, kde-format
+msgctxt "weather forecast"
+msgid "Haze"
+msgstr "Utua"
+
+#: noaa_i18n.dat:332
+#, kde-format
+msgctxt "weather forecast"
+msgid "Blowing Sand"
+msgstr "Heikkatuisku"
+
+#: noaa_i18n.dat:333
+#, kde-format
+msgctxt "weather forecast"
+msgid "Blowing Dust"
+msgstr "Pölytuiskua"
+
+#: noaa_i18n.dat:334
+#, kde-format
+msgctxt "weather forecast"
+msgid "Blowing Snow"
+msgstr "Lumituiskua"
+
+#: noaa_i18n.dat:335
+#, kde-format
+msgctxt "weather forecast"
+msgid "Dense Fog"
+msgstr "Sankkaa sumua"
+
+#: noaa_i18n.dat:338
+#, kde-format
+msgctxt "weather forecast"
+msgid "Blustery"
+msgstr "Puuskittaista"
+
+#: noaa_i18n.dat:339
+#, kde-format
+msgctxt "weather forecast"
+msgid "Breezy"
+msgstr "Tuulista"
+
+#: noaa_i18n.dat:340
+#, kde-format
+msgctxt "weather forecast"
+msgid "Cold"
+msgstr "Kylmää"
+
+#: noaa_i18n.dat:341
+#, kde-format
+msgctxt "weather forecast"
+msgid "Hot"
+msgstr "Kuumaa"
+
+#: noaa_i18n.dat:343
+#, kde-format
+msgctxt "weather forecast"
+msgid "Mostly Cloudy"
+msgstr "Enimmäkseen pilvistä"
+
+#: noaa_i18n.dat:344
+#, kde-format
+msgctxt "weather forecast"
+msgid "Partly Cloudy"
+msgstr "Osittain pilvistä"
+
+#: noaa_i18n.dat:345
+#, kde-format
+msgctxt "weather forecast"
+msgid "Mostly Sunny"
+msgstr "Enimmäkseen aurinkoista"
+
+#: noaa_i18n.dat:346
+#, kde-format
+msgctxt "weather forecast"
+msgid "Partly Sunny"
+msgstr "Osittain aurinkoista"
+
+#: noaa_i18n.dat:348
+#, kde-format
+msgctxt "weather forecast"
+msgid "Increasing Clouds"
+msgstr "Pilvistyy"
+
+#: noaa_i18n.dat:349
+#, kde-format
+msgctxt "weather forecast"
+msgid "Becoming Cloudy"
+msgstr "Sopivan pilvistä"
+
+#: noaa_i18n.dat:351
+#, kde-format
+msgctxt "weather forecast"
+msgid "Gradual Clearing"
+msgstr "Astettaista selkenemistä"
+
+#: noaa_i18n.dat:352
+#, kde-format
+msgctxt "weather forecast"
+msgid "Clearing Late"
+msgstr "Selkenee myöhemmin"
+
+#: noaa_i18n.dat:353
+#, kde-format
+msgctxt "weather forecast"
+msgid "Decreasing Clouds"
+msgstr "Vähenevää pilvisyyttä"
+
+#: noaa_i18n.dat:354
+#, kde-format
+msgctxt "weather forecast"
+msgid "Becoming Sunny"
+msgstr "Sopivan aurinkoista"
+
+#: noaa_i18n.dat:356
+#, kde-format
+msgctxt "weather forecast"
+msgid "Mostly Clear"
+msgstr "Enimmäkseen selkeää"
+
+#~ msgctxt "weather condition"
+#~ msgid "weather condition"
+#~ msgstr "säätila"
+
+#~ msgctxt "weather condition"
+#~ msgid "thunder storm"
+#~ msgstr "ukonilma"
+
+#~ msgctxt "weather forecast"
+#~ msgid "thunder storm"
+#~ msgstr "ukonilma"
+
+#~ msgctxt "wind direction"
+#~ msgid "N"
+#~ msgstr "N"
+
+#~ msgctxt "wind direction"
+#~ msgid "NNE"
+#~ msgstr "NNE"
+
+#~ msgctxt "wind direction"
+#~ msgid "NE"
+#~ msgstr "NE"
+
+#~ msgctxt "wind direction"
+#~ msgid "ENE"
+#~ msgstr "ENE"
+
+#~ msgctxt "wind direction"
+#~ msgid "E"
+#~ msgstr "E"
+
+#~ msgctxt "wind direction"
+#~ msgid "SSE"
+#~ msgstr "SSE"
+
+#~ msgctxt "wind direction"
+#~ msgid "SE"
+#~ msgstr "SE"
+
+#~ msgctxt "wind direction"
+#~ msgid "ESE"
+#~ msgstr "ESE"
+
+#~ msgctxt "wind direction"
+#~ msgid "S"
+#~ msgstr "S"
+
+#~ msgctxt "wind direction"
+#~ msgid "NNW"
+#~ msgstr "NNW"
+
+#~ msgctxt "wind direction"
+#~ msgid "NW"
+#~ msgstr "NW"
+
+#~ msgctxt "wind direction"
+#~ msgid "WNW"
+#~ msgstr "WNW"
+
+#~ msgctxt "wind direction"
+#~ msgid "W"
+#~ msgstr "W"
+
+#~ msgctxt "wind direction"
+#~ msgid "SSW"
+#~ msgstr "SSW"
+
+#~ msgctxt "wind direction"
+#~ msgid "SW"
+#~ msgstr "SW"
+
+#~ msgctxt "wind direction"
+#~ msgid "WSW"
+#~ msgstr "WSW"
+
+#~ msgctxt "wind direction"
+#~ msgid "VR"
+#~ msgstr "Vaiht."
+
+#~ msgctxt "pressure tendency"
+#~ msgid "rising"
+#~ msgstr "nousee"
+
+#~ msgctxt "pressure tendency"
+#~ msgid "falling"
+#~ msgstr "laskee"
+
+#~ msgctxt "pressure tendency"
+#~ msgid "no change"
+#~ msgstr "ei muutosta"
+
+#~ msgctxt "wind speed"
+#~ msgid "Calm"
+#~ msgstr "Tyyntä"
+
+#~ msgctxt "wind speed"
+#~ msgid "N/A"
+#~ msgstr "-"
+
+#~ msgctxt "pressure tendency"
+#~ msgid "steady"
+#~ msgstr "vakaata"
+
+#~ msgctxt "wind direction - wind speed is too low to measure"
+#~ msgid "VR"
+#~ msgstr "Vaiht."
+
+#~ msgid "N"
+#~ msgstr "N"
+
+#~ msgid "NNE"
+#~ msgstr "NNE"
+
+#~ msgid "NE"
+#~ msgstr "NE"
+
+#~ msgid "ENE"
+#~ msgstr "ENE"
+
+#~ msgid "E"
+#~ msgstr "E"
+
+#~ msgid "SSE"
+#~ msgstr "SSE"
+
+#~ msgid "SE"
+#~ msgstr "SE"
+
+#~ msgid "ESE"
+#~ msgstr "ESE"
+
+#~ msgid "S"
+#~ msgstr "S"
+
+#~ msgid "NNW"
+#~ msgstr "NNW"
+
+#~ msgid "NW"
+#~ msgstr "NW"
+
+#~ msgid "WNW"
+#~ msgstr "WNW"
+
+#~ msgid "W"
+#~ msgstr "W"
+
+#~ msgid "SSW"
+#~ msgstr "SSW"
+
+#~ msgid "SW"
+#~ msgstr "SW"
+
+#~ msgid "WSW"
+#~ msgstr "WSW"
+
+#~ msgid "Meteorological data is provided by Environment Canada"
+#~ msgstr "Environment Canadan tarjoamia säätietoja"
+
+#~ msgid "Supported by backstage.bbc.co.uk / Data from UK MET Office"
+#~ msgstr ""
+#~ "Sivuston backstage.bbc.co.uk tukema / Tiedot lähteestä UK MET Office"

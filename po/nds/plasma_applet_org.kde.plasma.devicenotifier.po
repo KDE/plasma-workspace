@@ -1,0 +1,291 @@
+# Translation of plasma_applet_devicenotifier.po to Low Saxon
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Sönke Dibbern <s_dibbern@web.de>, 2007, 2008, 2009, 2014.
+# Manfred Wiese <m.j.wiese@web.de>, 2009, 2010, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_devicenotifier\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-21 00:47+0000\n"
+"PO-Revision-Date: 2014-08-11 12:31+0200\n"
+"Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
+"Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
+"Language: nds\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: package/contents/ui/DeviceItem.qml:180
+#, fuzzy, kde-format
+#| msgctxt "@info:status Free disk space"
+#| msgid "%1 free"
+msgctxt "@info:status Free disk space"
+msgid "%1 free of %2"
+msgstr "%1 free"
+
+#: package/contents/ui/DeviceItem.qml:184
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Accessing is a less technical word for Mounting; translation should be "
+#| "short and mean 'Currently mounting this device'"
+#| msgid "Accessing..."
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Accessing…"
+msgstr "An't Togriepen..."
+
+#: package/contents/ui/DeviceItem.qml:187
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Removing is a less technical word for Unmounting; translation shoud be "
+#| "short and mean 'Currently unmounting this device'"
+#| msgid "Removing..."
+msgctxt ""
+"Removing is a less technical word for Unmounting; translation should be "
+"short and mean 'Currently unmounting this device'"
+msgid "Removing…"
+msgstr "An't Wegmaken..."
+
+#: package/contents/ui/DeviceItem.qml:190
+#, kde-format
+msgid "Don't unplug yet! Files are still being transferred..."
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:221
+#, kde-format
+msgid "Open in File Manager"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:224
+#, kde-format
+msgid "Mount and Open"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:226
+#, kde-format
+msgid "Eject"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:228
+#, kde-format
+msgid "Safely remove"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:270
+#, kde-format
+msgid "Mount"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:41
+#: package/contents/ui/main.qml:238
+#, kde-format
+msgid "Remove All"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:42
+#, fuzzy, kde-format
+#| msgid "Click to safely remove this device."
+msgid "Click to safely remove all devices"
+msgstr "Klick hier, wenn Du disse Reedschap seker afkoppeln wullt."
+
+#: package/contents/ui/FullRepresentation.qml:186
+#, fuzzy, kde-format
+#| msgid "Non-removable devices only"
+msgid "No removable devices attached"
+msgstr "Keen Wesselreedschappen"
+
+#: package/contents/ui/FullRepresentation.qml:186
+#, fuzzy, kde-format
+#| msgid "No devices available"
+msgid "No disks available"
+msgstr "Keen Reedschappen verföögbor"
+
+#: package/contents/ui/main.qml:47
+#, fuzzy, kde-format
+#| msgid "Most recent device"
+msgid "Most Recent Device"
+msgstr "Tolest bruukt Reedschap"
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid "No Devices Available"
+msgstr "Keen Reedschap to finnen"
+
+#: package/contents/ui/main.qml:245
+#, fuzzy, kde-format
+#| msgid "Removable devices only"
+msgid "Removable Devices"
+msgstr "Bloots Wesselreedschappen"
+
+#: package/contents/ui/main.qml:251
+#, fuzzy, kde-format
+#| msgid "Non-removable devices only"
+msgid "Non Removable Devices"
+msgstr "Keen Wesselreedschappen"
+
+#: package/contents/ui/main.qml:257
+#, fuzzy, kde-format
+#| msgid "All devices"
+msgid "All Devices"
+msgstr "All Reedschappen"
+
+#: package/contents/ui/main.qml:265
+#, fuzzy, kde-format
+#| msgid "No devices plugged in"
+msgid "Show popup when new device is plugged in"
+msgstr "Keen Reedschap tokoppelt"
+
+#: package/contents/ui/main.qml:274
+#, fuzzy, kde-format
+#| msgid "Non-removable devices only"
+msgctxt "Open auto mounter kcm"
+msgid "Configure Removable Devices…"
+msgstr "Keen Wesselreedschappen"
+
+#~ msgid "General"
+#~ msgstr "Allmeen"
+
+#~ msgid ""
+#~ "It is currently <b>not safe</b> to remove this device: applications may "
+#~ "be accessing it. Click the eject button to safely remove this device."
+#~ msgstr ""
+#~ "Opstunns lett sik disse Reedschap <b>nich seker</b> afkoppeln: Villicht "
+#~ "griept dor noch Programmen op to. Klick den Rutfohr-Knoop, wenn Du disse "
+#~ "Reedschap seker afkoppeln wullt."
+
+#~ msgid "This device is currently accessible."
+#~ msgstr "Op disse Reedschap lett sik opstunns togriepen."
+
+#~ msgid ""
+#~ "It is currently <b>not safe</b> to remove this device: applications may "
+#~ "be accessing other volumes on this device. Click the eject button on "
+#~ "these other volumes to safely remove this device."
+#~ msgstr ""
+#~ "Opstunns lett sik disse Reedschap <b>nich seker</b> afkoppeln: Villicht "
+#~ "griept noch Programmen op anner Partitschonen op disse Reedschap to. "
+#~ "Klick den Rutfohr-Knoop för disse Partitschonen, wenn Du disse Reedschap "
+#~ "seker afkoppeln wullt."
+
+#~ msgid "It is currently safe to remove this device."
+#~ msgstr "Opstunns lett sik disse Reedschap seker afkoppeln."
+
+#~ msgid "This device is not currently accessible."
+#~ msgstr "Op disse Reedschap lett sik opstunns nich togriepen."
+
+#~ msgid "1 action for this device"
+#~ msgid_plural "%1 actions for this device"
+#~ msgstr[0] "1 Akschoon för disse Reedschap"
+#~ msgstr[1] "%1 Akschonen för disse Reedschap"
+
+#~ msgid "Click to access this device from other applications."
+#~ msgstr ""
+#~ "Klick hier, wenn Du ut anner Programmen op disse Reedschap togriepen "
+#~ "wullt."
+
+#~ msgid "Click to eject this disc."
+#~ msgstr "Klick hier, wenn Du disse Schiev rutfohren wullt."
+
+#~ msgid "Click to safely remove this device."
+#~ msgstr "Klick hier, wenn Du disse Reedschap seker afkoppeln wullt."
+
+#~ msgid "Click to mount this device."
+#~ msgstr "Klick hier, wenn Du disse Reedschap inhangen wullt."
+
+#~ msgid "Available Devices"
+#~ msgstr "Verföögbor Reedschappen"
+
+#~ msgid "This device is currently not accessible."
+#~ msgstr "Op disse Reedschap lett sik opstunns nich togriepen."
+
+#~ msgid "Display"
+#~ msgstr "Wiesen"
+
+#~ msgid "Automounting"
+#~ msgstr "Automaatsch Inhanger"
+
+#~ msgid "Show hidden devices"
+#~ msgstr "Versteken Reedschappen wiesen"
+
+#~ msgctxt "Hide a device"
+#~ msgid "Hide %1"
+#~ msgstr "%1 versteken"
+
+#, fuzzy
+#~| msgid "Device is plugged in and can be accessed by applications."
+#~ msgid ""
+#~ "Device is plugged in and the volume can be accessed by applications. It "
+#~ "is not safe to remove this device."
+#~ msgstr "Reedschap is tokoppelt un för den Togriep ut Programmen praat."
+
+#, fuzzy
+#~| msgid "Device is plugged in, but not mounted for access yet."
+#~ msgid ""
+#~ "Device is plugged in and the volume is not mounted for access yet. The "
+#~ "device can be safely removed."
+#~ msgstr "Reedschap is tokoppelt, man noch nich för Togriep inhangt."
+
+#, fuzzy
+#~| msgid ""
+#~| "Could not unmount the device.\n"
+#~| "One or more files on this device are open within an application."
+#~ msgid ""
+#~ "Could not unmount device %1.\n"
+#~ "One or more files on this device are open within an application."
+#~ msgstr ""
+#~ "Reedschap lett sik nich afhangen.\n"
+#~ "En Programm hölltt dor noch een oder mehr Dateien op opmaakt."
+
+#~ msgid ""
+#~ "Cannot eject the disc.\n"
+#~ "One or more files on this disc are open within an application."
+#~ msgstr ""
+#~ "De Schiev lett sik nich rutfohren.\n"
+#~ "En Programm hett dor noch een oder mehr Dateien op apen."
+
+#, fuzzy
+#~| msgid "Last plugged in device: %1"
+#~ msgid "Could not mount device %1."
+#~ msgstr "Tolest tokoppelt Reedschap: %1"
+
+#~ msgid "Cannot mount the disc."
+#~ msgstr "De Schiev lett sik nich inhangen."
+
+#~ msgid "Devices recently plugged in:"
+#~ msgstr "Verleden tokoppelt Reedschappen:"
+
+#~ msgid "Show the popup when a device is inserted"
+#~ msgstr "Den Opduker wiesen, wenn en Reedschap tokoppelt warrt"
+
+#~ msgid " second"
+#~ msgid_plural " seconds"
+#~ msgstr[0] " Sekunn"
+#~ msgstr[1] " Sekunnen"
+
+#~ msgid "Show all the items"
+#~ msgstr "All Indrääg wiesen"
+
+#~ msgid "never"
+#~ msgstr "nienich"
+
+#~ msgid "When inserting a device close the popup after"
+#~ msgstr "Bi't Tokoppeln vun en Reedschap den Opduker tomaken na"
+
+#~ msgid "Form"
+#~ msgstr "Formulor"
+
+#~ msgid "&Time to stay on top:"
+#~ msgstr "&Tiet, de dat vörn blifft:"
+
+#~ msgid "&Number of items displayed:"
+#~ msgstr "Ta&ll vun wiest Indrääg:"
+
+#~ msgid "Unlimited"
+#~ msgstr "Keen Grenz"
+
+#~ msgid "&Display time of items:"
+#~ msgstr "&Wiestiet för de Indrääg:"

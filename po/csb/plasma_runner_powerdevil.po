@@ -1,0 +1,251 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Michôł Òstrowsczi <michol@linuxcsb.org>, 2009.
+# Mark Kwidzińśczi <mark@linuxcsb.org>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_powerdevil\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"PO-Revision-Date: 2009-12-13 00:37+0100\n"
+"Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
+"Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
+"Language: csb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2)\n"
+
+#: PowerDevilRunner.cpp:32
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "suspend"
+msgstr "ùspióny"
+
+#: PowerDevilRunner.cpp:34
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to ram"
+msgstr "w pamiãcë"
+
+#: PowerDevilRunner.cpp:36
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "sleep"
+msgstr "ùspióny"
+
+#: PowerDevilRunner.cpp:38
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "hibernate"
+msgstr "zahibernetowóny"
+
+#: PowerDevilRunner.cpp:40
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to disk"
+msgstr "na cwiardim diskù"
+
+#: PowerDevilRunner.cpp:42 PowerDevilRunner.cpp:44 PowerDevilRunner.cpp:69
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "dim screen"
+msgstr "scemni ekran"
+
+#: PowerDevilRunner.cpp:53
+#, kde-format
+msgid ""
+"Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
+"activated"
+msgstr ""
+"Lëstëje òptacëje zawiészeniô systemë (np. ùspiénié, hibernacëjô) ë pòzwôlô "
+"na jich aktiwacëjã"
+
+#: PowerDevilRunner.cpp:57
+#, kde-format
+msgid "Suspends the system to RAM"
+msgstr "Ùspi systemã w pamiãcë RAM"
+
+#: PowerDevilRunner.cpp:61
+#, kde-format
+msgid "Suspends the system to disk"
+msgstr "Ùspi systemã na cwiardim diskù"
+
+#: PowerDevilRunner.cpp:65
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "screen brightness"
+msgctxt ""
+"Note this is a KRunner keyword, <> is a placeholder and should be at the end"
+msgid "screen brightness <percent value>"
+msgstr "widnosc ekranu"
+
+#: PowerDevilRunner.cpp:67
+#, fuzzy, no-c-format, kde-format
+#| msgid ""
+#| "Lists screen brightness options or sets it to the brightness defined by :"
+#| "q:; e.g. screen brightness 50 would dim the screen to 50% maximum "
+#| "brightness"
+msgid ""
+"Lists screen brightness options or sets it to the brightness defined by the "
+"search term; e.g. screen brightness 50 would dim the screen to 50% maximum "
+"brightness"
+msgstr ""
+"Lëstëje òptacëje widnoscë abò nastawiô widnosc zdefiniowóną przez :q:. Np. "
+"widnosc ekrana 50 scemni ekran do 50% maksymalny widnoscë"
+
+#: PowerDevilRunner.cpp:95
+#, fuzzy, kde-format
+#| msgid "Set Brightness to %1"
+msgid "Set Brightness to %1%"
+msgstr "Nastôwi widnosc na %1"
+
+#: PowerDevilRunner.cpp:104
+#, kde-format
+msgid "Dim screen totally"
+msgstr "Scemni maksymalno ekran"
+
+#: PowerDevilRunner.cpp:112
+#, kde-format
+msgid "Dim screen by half"
+msgstr "Scemni ò pòłowã ekran"
+
+#: PowerDevilRunner.cpp:142
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "sleep"
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "ùspióny"
+
+#: PowerDevilRunner.cpp:143
+#, kde-format
+msgid "Suspend to RAM"
+msgstr "Ùspi w pamiãcë RAM"
+
+#: PowerDevilRunner.cpp:148
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "hibernate"
+msgctxt "Suspend to disk"
+msgid "Hibernate"
+msgstr "zahibernetowóny"
+
+#: PowerDevilRunner.cpp:149
+#, fuzzy, kde-format
+#| msgid "Suspend to Disk"
+msgid "Suspend to disk"
+msgstr "Ùspi na cwiardim diskù"
+
+#: PowerDevilRunner.cpp:218
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "screen brightness"
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "screen brightness "
+msgstr "widnosc ekranu"
+
+#: PowerDevilRunner.cpp:220
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "dim screen"
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "dim screen "
+msgstr "scemni ekran"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "screen brightness"
+#~ msgstr "widnosc ekranu"
+
+#, fuzzy
+#~| msgctxt "Note this is a KRunner keyword"
+#~| msgid "screen brightness"
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "screen brightness %1"
+#~ msgstr "widnosc ekranu"
+
+#, fuzzy
+#~| msgctxt "Note this is a KRunner keyword"
+#~| msgid "dim screen"
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "dim screen %1"
+#~ msgstr "scemni ekran"
+
+#, fuzzy
+#~| msgctxt "Note this is a KRunner keyword"
+#~| msgid "suspend"
+#~ msgid "Suspend"
+#~ msgstr "ùspióny"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "power profile"
+#~ msgstr "profil energiji"
+
+#~ msgid "Lists all power profiles and allows them to be activated"
+#~ msgstr "Lëstëje wszëtczé profile energiji ë pòzwôlô jima bëc aktiwòwónëma"
+
+#, fuzzy
+#~| msgctxt "Note this is a KRunner keyword"
+#~| msgid "power profile"
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "power profile %1"
+#~ msgstr "profil energiji"
+
+#~ msgid "Set Profile to '%1'"
+#~ msgstr "Nastôwi profil na '%1'"
+
+#~ msgid "Turn off screen"
+#~ msgstr "Wëłączë ekran"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "cpu policy"
+#~ msgstr "pòlitika cpu"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "power governor"
+#~ msgstr "sprôwnik energiji"
+
+#~ msgid "Lists all power saving schemes and allows them to be activated"
+#~ msgstr ""
+#~ "Lëstëje wszëtczé schémë òbszcządzaniô energiji ë pòzwôlô jima bëc "
+#~ "aktiwòwónëma"
+
+#~ msgid ""
+#~ "Lists all CPU frequency scaling policies and allows them to be activated"
+#~ msgstr ""
+#~ "Lëstëje wszëtczé pòliticzi skalowaniô czãstotlëwòtama CPU ë pòzwôlô na "
+#~ "jich aktiwacëjã"
+
+#, fuzzy
+#~| msgctxt "Note this is a KRunner keyword"
+#~| msgid "cpu policy"
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "cpu policy %1"
+#~ msgstr "pòlitika cpu"
+
+#, fuzzy
+#~| msgctxt "Note this is a KRunner keyword"
+#~| msgid "power governor"
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "power governor %1"
+#~ msgstr "sprôwnik energiji"
+
+#~ msgid "Set CPU frequency scaling policy to '%1'"
+#~ msgstr "Nastôwi pòlitikã skalowaniô czãstotlëwòscë CPU na '%1'"
+
+#, fuzzy
+#~| msgctxt "Note this is a KRunner keyword"
+#~| msgid "power scheme"
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "power scheme %1"
+#~ msgstr "schéma energiji"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "power scheme"
+#~ msgstr "schéma energiji"
+
+#~ msgid "Set Powersaving Scheme to '%1'"
+#~ msgstr "Nastôwi schémã òbszcządzaniô energiji na '%1'"

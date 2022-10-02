@@ -1,0 +1,47 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Phu Hung Nguyen <phu.nguyen@kdemail.net>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"PO-Revision-Date: 2020-10-24 14:20+0200\n"
+"Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
+"Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 19.12.2\n"
+
+#: locationrunner.cpp:33
+#, kde-format
+msgid ""
+"Finds local directories and files, network locations and Internet sites with "
+"paths matching :q:."
+msgstr ""
+"Tìm các tệp và thư mục cục bộ, các địa điểm mạng và Liên Mạng, với đường dẫn "
+"khớp với :q:."
+
+#: locationrunner.cpp:60
+#, kde-format
+msgid "Open %1"
+msgstr "Mở %1"
+
+#: locationrunner.cpp:78 locationrunner.cpp:82
+#, kde-format
+msgid "Launch with %1"
+msgstr "Khởi chạy với %1"
+
+#: locationrunner.cpp:88
+#, kde-format
+msgid "Go to %1"
+msgstr "Đi đến %1"
+
+#: locationrunner.cpp:96
+#, kde-format
+msgid "Send email to %1"
+msgstr "Gửi thư đến %1"

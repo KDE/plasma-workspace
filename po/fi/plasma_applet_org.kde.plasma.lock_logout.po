@@ -1,0 +1,163 @@
+# Copyright © 2010, 2011 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kde-workspace package.
+# Tommi Nieminen <translator@legisign.org>, 2010, 2019, 2020, 2021.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2011, 2013, 2014, 2015.
+#
+# KDE Finnish translation sprint participants:
+# Author: Artnay
+# Author: Lliehu
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_lockout\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2021-06-04 23:06+0300\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-POT-Import-Date: 2012-12-01 22:22:31+0000\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#: contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Yleiset"
+
+#: contents/ui/ConfigGeneral.qml:36
+#, kde-format
+msgctxt ""
+"Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
+msgid "Show actions:"
+msgstr "Näytä toiminnot:"
+
+#: contents/ui/ConfigGeneral.qml:37
+#, kde-format
+msgid "Logout"
+msgstr "Kirjaudu ulos"
+
+#: contents/ui/ConfigGeneral.qml:43
+#, kde-format
+msgid "Shutdown"
+msgstr "Sammuta"
+
+#: contents/ui/ConfigGeneral.qml:48
+#, kde-format
+msgid "Reboot"
+msgstr "Käynnistä uudelleen"
+
+#: contents/ui/ConfigGeneral.qml:53 contents/ui/data.js:5
+#, kde-format
+msgid "Lock"
+msgstr "Lukitse"
+
+#: contents/ui/ConfigGeneral.qml:58
+#, kde-format
+msgid "Switch User"
+msgstr "Vaihda käyttäjää"
+
+#: contents/ui/ConfigGeneral.qml:63 contents/ui/data.js:46
+#, kde-format
+msgid "Hibernate"
+msgstr "Lepotila"
+
+#: contents/ui/ConfigGeneral.qml:68 contents/ui/data.js:39
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Siirry valmiustilaan"
+
+#: contents/ui/data.js:6
+#, kde-format
+msgid "Lock the screen"
+msgstr "Lukitse näyttö"
+
+#: contents/ui/data.js:12
+#, kde-format
+msgid "Switch user"
+msgstr "Vaihda käyttäjää"
+
+#: contents/ui/data.js:13
+#, kde-format
+msgid "Start a parallel session as a different user"
+msgstr "Aloita rinnakkaisistunto toisena käyttäjänä"
+
+#: contents/ui/data.js:18
+#, kde-format
+msgid "Shutdown…"
+msgstr "Sammuta…"
+
+#: contents/ui/data.js:19
+#, kde-format
+msgid "Turn off the computer"
+msgstr "Sammuta tietokone"
+
+#: contents/ui/data.js:25
+#, kde-format
+msgid "Restart…"
+msgstr "Käynnistä uudelleen…"
+
+#: contents/ui/data.js:26
+#, kde-format
+msgid "Reboot the computer"
+msgstr "Käynnistä tietokone uudelleen"
+
+#: contents/ui/data.js:32
+#, kde-format
+msgid "Logout…"
+msgstr "Kirjaudu ulos…"
+
+#: contents/ui/data.js:33
+#, kde-format
+msgid "End the session"
+msgstr "Lopeta istunto"
+
+#: contents/ui/data.js:40
+#, kde-format
+msgid "Sleep (suspend to RAM)"
+msgstr "Valmiustila (keskeytä muistiin)"
+
+#: contents/ui/data.js:47
+#, kde-format
+msgid "Hibernate (suspend to disk)"
+msgstr "Lepotila (keskeytä levylle)"
+
+#~ msgid "Shutdown..."
+#~ msgstr "Sammuta…"
+
+#~ msgid "Logout..."
+#~ msgstr "Kirjaudu ulos…"
+
+#~ msgid "Do you want to suspend to disk (hibernate)?"
+#~ msgstr "Haluatko keskeyttää järjestelmän levylle?"
+
+#~ msgid "Yes"
+#~ msgstr "Kyllä"
+
+#~ msgid "No"
+#~ msgstr "Ei"
+
+#~ msgid "Do you want to suspend to RAM (sleep)?"
+#~ msgstr "Haluatko keskeyttää järjestelmän muistiin?"
+
+#~ msgid "Leave"
+#~ msgstr "Poistu"
+
+#~ msgid "Leave..."
+#~ msgstr "Poistu…"
+
+#~ msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
+#~ msgid "Actions"
+#~ msgstr "Toiminnot"
+
+#~ msgid "Suspend"
+#~ msgstr "Valmiustila"
+
+#~ msgid "Lock/Logout Settings"
+#~ msgstr "Asetukset: Lukitus/uloskirjautuminen"
+
+#~ msgid "SystemTray Settings"
+#~ msgstr "Ilmoitusalueen asetukset"

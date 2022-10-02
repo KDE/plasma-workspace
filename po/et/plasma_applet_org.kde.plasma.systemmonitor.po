@@ -1,0 +1,46 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Marek Laane <qiilaq69@gmail.com>, 2020.
+# Mihkel Tõnnov <mihhkel@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-09 00:47+0000\n"
+"PO-Revision-Date: 2020-09-28 13:23+0200\n"
+"Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
+"Language-Team: Estonian <>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.08.1\n"
+
+#: package/contents/config/config.qml:10
+#, kde-format
+msgid "Appearance"
+msgstr "Välimus"
+
+#: package/contents/config/config.qml:15
+#, kde-format
+msgid "%1 Details"
+msgstr "%1: üksikasjad"
+
+#: package/contents/config/config.qml:21
+#, kde-format
+msgid "Sensors Details"
+msgstr "Sensorite üksikasjad"
+
+#: package/contents/ui/main.qml:33
+#, kde-format
+msgid "System Monitor"
+msgstr "Süsteemi jälgija"
+
+#: package/contents/ui/main.qml:55
+#, fuzzy, kde-format
+#| msgid "System Monitor"
+msgctxt "@action"
+msgid "Open System Monitor…"
+msgstr "Süsteemi jälgija"

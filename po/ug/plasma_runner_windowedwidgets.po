@@ -1,0 +1,36 @@
+# Uyghur translation for plasma_runner_windowedwidgets.
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Sahran <sahran.ug@gmail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_windowedwidgets\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2013-09-08 07:05+0900\n"
+"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
+"Language: ug\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: windowedwidgetsrunner.cpp:30
+#, kde-format
+msgid "Finds Plasma widgets whose name or description match :q:"
+msgstr "ئاتى ياكى چۈشەندۈرۈشى :q: غا ماس كەلگەن ۋىجېتلارنى تاپىدۇ"
+
+#: windowedwidgetsrunner.cpp:31 windowedwidgetsrunner.cpp:52
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "mobile applications"
+msgstr "كۆچمە ئۈسكۈنە پروگراممىلىرى"
+
+#: windowedwidgetsrunner.cpp:32
+#, kde-format
+msgid "list all Plasma widgets that can run as standalone applications"
+msgstr ""
+"مۇستەقىل پروگرامما سۈپىتىدە ئىجرا بولىدىغان بارلىق پلازما(Plasma) "
+"ۋىجېتلىرىنى تىزىپ كۆرسەت"

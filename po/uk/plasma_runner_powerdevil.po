@@ -1,0 +1,175 @@
+# Translation of plasma_runner_powerdevil.po to Ukrainian
+# Copyright (C) 2008-2020 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2008, 2009, 2010, 2018, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_powerdevil\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"PO-Revision-Date: 2021-12-27 12:16+0200\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.12.0\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: PowerDevilRunner.cpp:32
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "suspend"
+msgstr "suspend"
+
+#: PowerDevilRunner.cpp:34
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to ram"
+msgstr "to ram"
+
+#: PowerDevilRunner.cpp:36
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "sleep"
+msgstr "sleep"
+
+#: PowerDevilRunner.cpp:38
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "hibernate"
+msgstr "hibernate"
+
+#: PowerDevilRunner.cpp:40
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to disk"
+msgstr "to disk"
+
+#: PowerDevilRunner.cpp:42 PowerDevilRunner.cpp:44 PowerDevilRunner.cpp:69
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "dim screen"
+msgstr "зменшити яскравість екрана"
+
+#: PowerDevilRunner.cpp:53
+#, kde-format
+msgid ""
+"Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
+"activated"
+msgstr ""
+"Показує список всіх варіантів присипляння системи (на диск, у пам’ять) і "
+"надає вам змогу задіяти один з них"
+
+#: PowerDevilRunner.cpp:57
+#, kde-format
+msgid "Suspends the system to RAM"
+msgstr "Присипляє систему у оперативну пам’ять"
+
+#: PowerDevilRunner.cpp:61
+#, kde-format
+msgid "Suspends the system to disk"
+msgstr "Присипляє систему на диск"
+
+#: PowerDevilRunner.cpp:65
+#, kde-format
+msgctxt ""
+"Note this is a KRunner keyword, <> is a placeholder and should be at the end"
+msgid "screen brightness <percent value>"
+msgstr "screen brightness <значення у відсотках>"
+
+#: PowerDevilRunner.cpp:67
+#, no-c-format, kde-format
+msgid ""
+"Lists screen brightness options or sets it to the brightness defined by the "
+"search term; e.g. screen brightness 50 would dim the screen to 50% maximum "
+"brightness"
+msgstr ""
+"Показує список всіх режимів яскравості екрана або встановлює яскравість "
+"екрана, відповідно до визначеного рядка пошуку; наприклад, яскравість 50 "
+"дасть вигляд на екрані за 50% від максимальної яскравості"
+
+#: PowerDevilRunner.cpp:95
+#, kde-format
+msgid "Set Brightness to %1%"
+msgstr "Встановити яскравість у %1%"
+
+#: PowerDevilRunner.cpp:104
+#, kde-format
+msgid "Dim screen totally"
+msgstr "Повністю зменшити яскравість екрана"
+
+#: PowerDevilRunner.cpp:112
+#, kde-format
+msgid "Dim screen by half"
+msgstr "Наполовину зменшити яскравість екрана"
+
+#: PowerDevilRunner.cpp:142
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Призупинити"
+
+#: PowerDevilRunner.cpp:143
+#, kde-format
+msgid "Suspend to RAM"
+msgstr "Сон зі збереженням до RAM"
+
+#: PowerDevilRunner.cpp:148
+#, kde-format
+msgctxt "Suspend to disk"
+msgid "Hibernate"
+msgstr "Приспати"
+
+#: PowerDevilRunner.cpp:149
+#, kde-format
+msgid "Suspend to disk"
+msgstr "Сон зі збереженням на диск"
+
+#: PowerDevilRunner.cpp:218
+#, kde-format
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "screen brightness "
+msgstr "screen brightness "
+
+#: PowerDevilRunner.cpp:220
+#, kde-format
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "dim screen "
+msgstr "dim screen "
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "screen brightness"
+#~ msgstr "screen brightness"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "screen brightness %1"
+#~ msgstr "screen brightness %1"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "dim screen %1"
+#~ msgstr "dim screen %1"
+
+#~ msgid "Suspend"
+#~ msgstr "Призупинити"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "power profile"
+#~ msgstr "power profile"
+
+#~ msgid "Lists all power profiles and allows them to be activated"
+#~ msgstr "Показує список всіх профілів і надає вам змогу їх активувати"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "power profile %1"
+#~ msgstr "power profile %1"
+
+#~ msgid "Set Profile to '%1'"
+#~ msgstr "Встановити профіль «%1»"
+
+#~ msgid "Turn off screen"
+#~ msgstr "Вимкнути екран"

@@ -1,0 +1,66 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Shinjo Park <kde@peremen.name>, 2014, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"PO-Revision-Date: 2015-01-02 01:54+0900\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: timesource.cpp:46
+msgid "Local"
+msgstr "지역"
+
+#: timesource.cpp:61
+msgid "Timezone"
+msgstr "시간대"
+
+#: timesource.cpp:66 timesource.cpp:69 timesource.cpp:73
+msgid "Timezone City"
+msgstr "시간대 도시"
+
+#: timesource.cpp:68 timesource.cpp:71
+msgid "Timezone Continent"
+msgstr "시간대 대륙"
+
+#: timesource.cpp:72
+msgid "Timezone Country"
+msgstr "시간대 국가"
+
+#: timesource.cpp:97
+msgid "Offset"
+msgstr "위치"
+
+#: timesource.cpp:100
+msgid "Timezone Abbreviation"
+msgstr "시간대 축약"
+
+#: timesource.cpp:131 timesource.cpp:150 timesource.cpp:171
+msgid "DateTime"
+msgstr "날짜와 시간"
+
+#: timesource.cpp:146
+msgid "Latitude"
+msgstr "위도"
+
+#: timesource.cpp:147
+msgid "Longitude"
+msgstr "경도"
+
+#: timesource.cpp:148
+msgid "Solar"
+msgstr "태양"
+
+#: timesource.cpp:149
+msgid "Moon"
+msgstr "달"

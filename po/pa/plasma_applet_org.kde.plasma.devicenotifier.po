@@ -1,0 +1,238 @@
+# translation of plasma_applet_devicenotifier.po to Punjabi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# A S Alam <aalam@users.sf.net>, 2007, 2008, 2009, 2010, 2011, 2012, 2015, 2016, 2020, 2021.
+# Amanpreet Singh Alam <apreet.alam@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_devicenotifier\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-21 00:47+0000\n"
+"PO-Revision-Date: 2021-06-08 22:43-0700\n"
+"Last-Translator: A S Alam <aalam@satluj.org>\n"
+"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.12.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: package/contents/ui/DeviceItem.qml:180
+#, kde-format
+msgctxt "@info:status Free disk space"
+msgid "%1 free of %2"
+msgstr "%2 ਚੋਂ %1 ਖਾਲੀ"
+
+#: package/contents/ui/DeviceItem.qml:184
+#, kde-format
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Accessing…"
+msgstr "…ਮਾਊੰਟ ਕਰਨਾ"
+
+#: package/contents/ui/DeviceItem.qml:187
+#, kde-format
+msgctxt ""
+"Removing is a less technical word for Unmounting; translation should be "
+"short and mean 'Currently unmounting this device'"
+msgid "Removing…"
+msgstr "…ਹਟਾਉਣਾ"
+
+#: package/contents/ui/DeviceItem.qml:190
+#, kde-format
+msgid "Don't unplug yet! Files are still being transferred..."
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:221
+#, kde-format
+msgid "Open in File Manager"
+msgstr "ਫਾਇਲ ਮੈਨੇਜਰ ਵਿੱਚ ਖੋਲ੍ਹੋ"
+
+#: package/contents/ui/DeviceItem.qml:224
+#, kde-format
+msgid "Mount and Open"
+msgstr "ਮਾਊਂਟ ਕਰੋ ਤੇ ਖੋਲ੍ਹੋ"
+
+#: package/contents/ui/DeviceItem.qml:226
+#, kde-format
+msgid "Eject"
+msgstr "ਕੱਢੋ"
+
+#: package/contents/ui/DeviceItem.qml:228
+#, kde-format
+msgid "Safely remove"
+msgstr "ਸਹੀ ਸਲਾਮਤੀ ਹਟਾਓ"
+
+#: package/contents/ui/DeviceItem.qml:270
+#, kde-format
+msgid "Mount"
+msgstr "ਮਾਊਂਟ ਕਰੋ"
+
+#: package/contents/ui/FullRepresentation.qml:41
+#: package/contents/ui/main.qml:238
+#, kde-format
+msgid "Remove All"
+msgstr "ਸਭ ਹਟਾਓ"
+
+#: package/contents/ui/FullRepresentation.qml:42
+#, kde-format
+msgid "Click to safely remove all devices"
+msgstr "ਸਾਰੇ ਡਿਵਾਈਸਾਂ ਨੂੰ ਸਹੀ ਸਲਾਮਤ ਹਟਾਉਣ ਲਈ ਕਲਿੱਕ ਕਰੋ"
+
+#: package/contents/ui/FullRepresentation.qml:186
+#, kde-format
+msgid "No removable devices attached"
+msgstr "ਕੋਈ ਹਟਾਉਣਯੋਗ ਡਿਵਾਈਸ ਅਟੈਚ ਨਹੀਂ ਹੈ"
+
+#: package/contents/ui/FullRepresentation.qml:186
+#, kde-format
+msgid "No disks available"
+msgstr "ਕੋਈ ਡਿਸਕ ਉਪਲੱਬਧ ਨਹੀਂ ਹੈ"
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid "Most Recent Device"
+msgstr "ਸਭ ਤੋਂ ਤਾਜ਼ਾ ਡਿਵਾਈਸ"
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid "No Devices Available"
+msgstr "ਕੋਈ ਡਿਵਾਈਸ ਉਪਲੱਬਧ ਨਹੀਂ"
+
+#: package/contents/ui/main.qml:245
+#, kde-format
+msgid "Removable Devices"
+msgstr "ਹਟਾਉਣਯੋਗ ਡਿਵਾਈਸ"
+
+#: package/contents/ui/main.qml:251
+#, kde-format
+msgid "Non Removable Devices"
+msgstr "ਨਾ ਹਟਾਉਣਯੋਗ ਡਿਵਾਈਸ"
+
+#: package/contents/ui/main.qml:257
+#, kde-format
+msgid "All Devices"
+msgstr "ਸਭ ਡਿਵਾਈਸ"
+
+#: package/contents/ui/main.qml:265
+#, kde-format
+msgid "Show popup when new device is plugged in"
+msgstr "ਜਦੋਂ ਨਵੇਂ ਡਿਵਾਈਸ ਨੂੰ ਲਗਾਇਆ ਜਾਵੇ ਤਾਂ ਪੋਪਅੱਪ ਵੇਖਾਓ"
+
+#: package/contents/ui/main.qml:274
+#, kde-format
+msgctxt "Open auto mounter kcm"
+msgid "Configure Removable Devices…"
+msgstr "…ਨਾ-ਹਟਾਉਣਯੋਗ ਡਿਵਾਈਸਾਂ ਦੀ ਸੰਰਚਨਾ"
+
+#~ msgid "Show:"
+#~ msgstr "ਵੇਖਾਓ:"
+
+#~ msgid "General"
+#~ msgstr "ਆਮ"
+
+#~ msgid ""
+#~ "It is currently <b>not safe</b> to remove this device: applications may "
+#~ "be accessing it. Click the eject button to safely remove this device."
+#~ msgstr ""
+#~ "ਇਹ ਜੰਤਰ ਹਾਲੇ ਹਟਾਉਣ ਲਈ <b>ਸੁਰੱਖਿਅਤ ਨਹੀਂ</b> ਹੈ: ਐਪਲੀਕੇਸ਼ਨਾਂ ਇਸ ਨੂੰ ਵਰਤ ਰਹੀਆਂ ਹੋ ਸਕਦੀਆਂ "
+#~ "ਹਨ। ਇਹ ਜੰਤਰ ਸੁਰੱਖਿਅਤ ਢੰਗ ਨਾਲ ਹਟਾਉਣ ਲਈ ਬਾਹਰ ਕੱਢੋ ਬਟਨ ਨੂੰ ਕਲਿੱਕ ਕਰੋ।"
+
+#~ msgid "This device is currently accessible."
+#~ msgstr "ਇਹ ਜੰਤਰ ਹੁਣ ਵਰਤੋਂ ਯੋਗ ਹੈ।"
+
+#~ msgid ""
+#~ "It is currently <b>not safe</b> to remove this device: applications may "
+#~ "be accessing other volumes on this device. Click the eject button on "
+#~ "these other volumes to safely remove this device."
+#~ msgstr ""
+#~ "ਇਹ ਜੰਤਰ ਹਾਲੇ ਹਟਾਉਣ ਲਈ <b>ਸੁਰੱਖਿਅਤ ਨਹੀਂ</b> ਹੈ: ਐਪਲੀਕੇਸ਼ਨਾਂ ਇਸ ਜੰਤਰ ਉੱਤੇ ਹੋਰ ਵਾਲੀਅਮ ਨੂੰ "
+#~ "ਵਰਤ ਰਹੀਆਂ ਹੋ ਸਕਦੀਆਂ ਹਨ। ਇਹ ਜੰਤਰ ਸੁਰੱਖਿਅਤ ਢੰਗ ਨਾਲ ਹਟਾਉਣ ਲਈ ਬਾਹਰ ਕੱਢੋ ਬਟਨ ਨੂੰ ਕਲਿੱਕ ਕਰੋ।"
+
+#~ msgid "It is currently safe to remove this device."
+#~ msgstr "ਇਹ ਜੰਤਰ ਹੁਣ ਹਟਾਉਣਾ ਸੁਰੱਖਿਅਤ ਹੈ।"
+
+#~ msgid "This device is not currently accessible."
+#~ msgstr "ਇਹ ਜੰਤਰ ਹੁਣ ਵਰਤੋਂ ਯੋਗ ਨਹੀਂ ਹੈ।"
+
+#~ msgid "1 action for this device"
+#~ msgid_plural "%1 actions for this device"
+#~ msgstr[0] "ਇਹ ਜੰਤਰ ਲਈ 1 ਐਕਸ਼ਨ"
+#~ msgstr[1] "ਇਹ ਜੰਤਰ ਲਈ %1 ਐਕਸ਼ਨ"
+
+#~ msgid "Click to access this device from other applications."
+#~ msgstr "ਹੋਰ ਐਪਲੀਕੇਸ਼ਨ ਤੋਂ ਇਹ ਜੰਤਰ ਵਰਤਣ ਲਈ ਕਲਿੱਕ ਕਰੋ।"
+
+#~ msgid "Click to eject this disc."
+#~ msgstr "ਇਹ ਡਿਸਕ ਬਾਹਰ ਕੱਢਣ ਲਈ ਕਲਿੱਕ ਕਰੋ।"
+
+#~ msgid "Click to safely remove this device."
+#~ msgstr "ਇਹ ਜੰਤਰ ਸੁਰੱਖਿਅਤ ਢੰਗ ਨਾਲ ਹਟਾਉਣ ਲਈ ਕਲਿੱਕ ਕਰੋ"
+
+#~ msgid "Click to mount this device."
+#~ msgstr "ਇਹ ਜੰਤਰ ਮਾਊਂਟ ਕਰਨ ਲਈ ਕਲਿੱਕ ਕਰੋ।"
+
+#~ msgid "Available Devices"
+#~ msgstr "ਉਪਲੱਬਧ ਜੰਤਰ"
+
+#~ msgid "This device is currently not accessible."
+#~ msgstr "ਇਹ ਜੰਤਰ ਹੁਣ ਵਰਤੋਂ ਯੋਗ ਨਹੀਂ ਰਿਹਾ।"
+
+#~ msgid "Display"
+#~ msgstr "ਡਿਸਪਲੇਅ"
+
+#~ msgid "Automounting"
+#~ msgstr "ਆਟੋ-ਮਾਊਂਟਿੰਗ"
+
+#~ msgid "Show hidden devices"
+#~ msgstr "ਲੁਕਵੇਂ ਜੰਤਰ ਵੇਖੋ"
+
+#~ msgctxt "Hide a device"
+#~ msgid "Hide %1"
+#~ msgstr "%1 ਓਹਲੇ"
+
+#, fuzzy
+#~| msgid "Device is plugged in and can be accessed by applications."
+#~ msgid ""
+#~ "Device is plugged in and the volume can be accessed by applications. It "
+#~ "is not safe to remove this device."
+#~ msgstr "ਜੰਤਰ ਦਾ ਪਲੱਗ ਲੱਗਾ ਹੈ ਅਤੇ ਹੋਰ ਐਪਲੀਕੇਸ਼ਨ ਰਾਹੀਂ ਵਰਤਿਆ ਜਾ ਸਕਦਾ ਹੈ।"
+
+#, fuzzy
+#~| msgid "Device is plugged in, but not mounted for access yet."
+#~ msgid ""
+#~ "Device is plugged in and the volume is not mounted for access yet. The "
+#~ "device can be safely removed."
+#~ msgstr "ਜੰਤਰ ਦਾ ਪਲੱਗ ਤਾਂ ਲੱਗਾ ਹੈ, ਪਰ ਵਰਤਣ ਲਈ ਹਾਲੇ ਮਾਊਂਟ ਨਹੀਂ ਹੈ।"
+
+#, fuzzy
+#~| msgid ""
+#~| "Could not unmount the device.\n"
+#~| "One or more files on this device are open within an application."
+#~ msgid ""
+#~ "Could not unmount device %1.\n"
+#~ "One or more files on this device are open within an application."
+#~ msgstr ""
+#~ "ਜੰਤਰ ਅਣ-ਮਾਊਂਟ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ।\n"
+#~ "ਇਸ ਜੰਤਰ ਉੱਤੇ ਮੌਜੂਦ ਇੱਕ ਜਾਂ ਵੱਧ ਫਾਈਲਾਂ ਨੂੰ ਇੱਕ ਐਪਲੀਕੇਸ਼ਨ ਵਰਤ ਰਹੀ ਹੈ।"
+
+#~ msgid ""
+#~ "Cannot eject the disc.\n"
+#~ "One or more files on this disc are open within an application."
+#~ msgstr ""
+#~ "ਡਿਸਕ ਬਾਹਰ ਨਹੀਂ ਕੱਢੀ ਜਾ ਸਕਦੀ।\n"
+#~ "ਇਸ ਡਿਸਕ ਉੱਤੇ ਮੌਜੂਦ ਇੱਕ ਜਾਂ ਵੱਧ ਫਾਈਲਾਂ ਨੂੰ ਇੱਕ ਐਪਲੀਕੇਸ਼ਨ ਵਰਤ ਰਹੀ ਹੈ।"
+
+#, fuzzy
+#~| msgid "Last plugged in device: %1"
+#~ msgid "Could not mount device %1."
+#~ msgstr "ਹੁਣੇ ਪਲੱਗ ਲਾਏ ਜੰਤਰ: %1"
+
+#~ msgid "Cannot mount the disc."
+#~ msgstr "ਡਿਸਕ ਮਾਊਂਟ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕਦੀ।"
+
+#~ msgid "Devices recently plugged in:"
+#~ msgstr "ਹੁਣੇ ਪਲੱਗ ਲਗਾਏ ਜੰਤਰ:"

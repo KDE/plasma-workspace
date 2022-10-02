@@ -1,0 +1,340 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Serbian-Latin "INCLUDE">
+]>
+<article id="autostart" lang="&language;">
+<articleinfo>
+<title
+>Samopokretanje</title>
+<authorgroup>
+<author
+><personname
+><firstname
+>An Mari</firstname
+> <surname
+>Mafu</surname
+></personname
+></author>
+<othercredit role="translator"
+><firstname
+>Dragan</firstname
+><surname
+>Pantelić</surname
+><affiliation
+><address
+><email
+>falcon-10@gmx.de</email
+></address
+></affiliation
+><contrib
+>prevod</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>22. 7. 2015.</date>
+<releaseinfo
+>Plasma 5.4</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Sistemske postavke</keyword>
+<keyword
+>samopokretanje</keyword>
+<keyword
+>.desktop fajl</keyword>
+<keyword
+>skripta</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_autostart">
+<title
+>Menadžer samopokretanja</title>
+
+<para
+>Ovaj modul je postavna alatka za upravljanje programima koji se pokreću sa Plasmom. U njemu možete dodavati i upravljati programima i skriptama koje će se automatski pokretati pri pokretanju ili gašenju vaše plasma sesije.</para>
+
+<note
+><para
+>Imajte u vidu da se izmene u ovom modulu trenutačno primenjuju.</para
+></note>
+
+<para
+>Modul skenira fascikle <filename
+>$HOME/.config/autostart/</filename
+>, <filename class="directory"
+>$HOME/.config/plasma-workspace/env</filename
+> i <filename class="directory"
+>$HOME/.config/plasma-workspace/shutdown</filename
+>, da bi pronašao i prikazao programe i skripte koji su već u njima. Zatim vam omogućava da njima lako upravljate. </para>
+
+<note
+><para
+>Mogućnost automatskog pokretanja trenutno ima jednu grešku: skriptu nije moguće izvršiti nakon pokretanja plasma sesije.</para
+></note>
+
+<note
+><para
+>Lokaciju fascikle samopokretanja možete izmeniti preko <menuchoice
+><guimenu
+>Programi</guimenu
+> <guimenuitem
+>Lokacije</guimenuitem
+></menuchoice
+> u kategoriji <guilabel
+>Prilagođavanje</guilabel
+> u Sistemskim postavkama, tj. postaviti je na nešto drugo umesto <filename class="directory"
+>$HOME/.config/autostart</filename
+>.</para
+></note>
+
+<para
+>Pročitajte još i o <ulink url="help:/kcontrol/kcmsmserver"
+>sesijama površi</ulink
+> i <ulink url="help:/kcontrol/kded"
+>pozadinskim servisima</ulink
+> za više detalja o podešavanju ponašanja pri pokretanju plasma sesije.</para>
+
+<para
+>Neki KDE programi sami rukuju automatskim pokretanjem. Na primer, negde možete uključiti i isključiti automatsko pokretanje kroz dijalog postavki programa (<application
+>K‑alarm</application
+>), a negde morate upotrebiti <menuchoice
+><guimenu
+>Fajl</guimenu
+><guimenuitem
+>Napusti</guimenuitem
+></menuchoice
+> da program ne bi nastavio da radi u sistemskoj kaseti i da se ne bi sam pokrenuo pri narednom prijavljivanju. </para>
+
+<sect2 id="migration">
+<title
+>Selidba sa radnog prostora KDE‑a 4</title>
+<para
+>Svoje postavke automatskog pokretanja iz KDE‑a 4 selite ovako:</para>
+<simplelist>
+<member
+>Kopirajte .desktop fajlove iz <filename class="directory"
+>$HOME/.kde/Autostart</filename
+> u <filename class="directory"
+>$HOME/.config/autostart</filename
+>.</member>
+<member
+>Kopirajte fajlove skripti pre pokretanja iz <filename class="directory"
+>$HOME/.kde/Autostart</filename
+> u <filename class="directory"
+>$HOME/.config/plasma-workspace/env</filename
+>.</member>
+<member
+>Kopirajte fajlove skripti pri gašenju iz <filename class="directory"
+>$HOME/.kde/Autostart</filename
+> u <filename class="directory"
+>$HOME/.config/plasma-workspace/shutdown</filename
+>.</member>
+</simplelist>
+</sect2>
+
+<!--FIXME Disabling Autostart Files Provided By Your Distribution -> http://www.sharpley.org.uk/node/8 -->
+
+<sect2 id="current">
+<title
+>Prikaz fajlova</title>
+<para
+>Glavni deo modula prikazuje programe i skripte koje se izvršavaju pri pokretanju, gašenju ili pre pokretanja Plasme.</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>ime</guilabel
+></term>
+<listitem>
+<para
+>Na ovu kolonu ne možete uticati. Ona navodi ime programa ili skripte koju želite da pokrenete sa Plasmom. U slučaju programa ime se izdvaja iz .desktop fajla (ključ <literal
+>Name</literal
+>), a za skriptu se uzima ime njenog fajla. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>naredba</guilabel
+></term>
+<listitem>
+<para
+>Ova kolona nabraja naredbe koje se izvršavaju radi pokretanja programa. Mogu se izmeniti dugmetom <guibutton
+>Svojstva...</guibutton
+> ili dvoklikom na vrstu u kojoj je program. Naredba za pokretanje se izdvaja iz .desktop fajla, ključ <literal
+>Exec</literal
+>. </para>
+<para
+>Naredba za skriptu je putanja do skripte, i ne može da se izmeni. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>stanje</guilabel
+></term>
+<listitem>
+<para
+>Ova postavka je raspoloživa samo za programe sa .desktop fajlovima. Program možete držati u fascikli samopokretanja, ali isključiti njegovo pokretanje sa Plasmom, tako što ispraznite kućicu <guilabel
+>uključen</guilabel
+>. </para>
+<para
+>Pražnjenjem kućice <guilabel
+>uključen</guilabel
+> uz program, u .desktop fajlu u fascikli samopokretanja postavlja se na <literal
+>true</literal
+> svojstvo <literal
+>Hidden</literal
+>. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>izvrši</guilabel
+></term>
+<listitem>
+<para
+>Programi (.desktop fajlovi) mogu se izvršiti samo po pokretanju. Skripte se mogu izvršiti po pokretanju, pri gašenju ili pred pokretanje. Ovom kolonom možete menjati kad se skripta izvršava. Opcija <guilabel
+>po pokretanju</guilabel
+> znači kad se Plasma pokrene, <guilabel
+>Ugasi</guilabel
+> je kad se odjavite iz Plasme, a <guilabel
+>pred pokretanje KDE‑a</guilabel
+> pre nego što se Plasma pokrene. </para>
+<para
+>Skripte i .desktop fajlovi kojima je zadato <guilabel
+>po pokretanju</guilabel
+> kopiraju se ili simpovezuju u <filename class="directory"
+>$HOME/.config/autostart</filename
+>, i izvršiće se tokom pokretanja Plasme. </para>
+<para
+>Skripte kojima je zadato <guilabel
+>Ugasi</guilabel
+> kopiraju se ili simpovezuju u fasciklu <filename class="directory"
+>$HOME/.config/plasma-workspace/shutdown</filename
+>, odakle će biti automatski izvršene tokom gašenja Plasme, nakon što se korisnik odjavi. </para>
+<para
+>Skripte kojima je zadato <guilabel
+>pred pokretanje KDE‑a</guilabel
+> kopiraju se ili simpovezuju u <filename class="directory"
+>
+>$HOME/.config/plasma-workspace/env</filename
+>, da bi ih odavde uvukla <command
+>startkde</command
+> na pokretanju Plasme. </para>
+<note
+><para
+>U režimima <guilabel
+>pred pokretanje KDE‑a</guilabel
+> i <guilabel
+>Ugasi</guilabel
+>, Plasma može da čita samo skripte sa nastavkom <filename class="extension"
+>.sh</filename
+>. </para
+></note>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+
+<sect2 id="actions">
+<title
+>Radnje</title>
+<para
+>Desno stoji dugmad za podešavanje samopokretanja. Možete dodavati programe i skripte, uklanjati ih, ili im menjati svojstva. </para>
+
+<variablelist>
+<varlistentry
+><term
+><guibutton
+>Dodaj program...</guibutton
+></term>
+<listitem>
+<para
+>Klik na ovo dugme poziva standardni Plasmin dijalog za biranje programa, odakle možete izabrati program koji želite da se pokreće. Nakon izbora, klik na <guibutton
+>U redu</guibutton
+> poziva svojstva za taj program. </para>
+<para
+>.Desktop fajl programa biće kopiran u vašu fasciklu samopokretanja. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Dodaj skriptu...</guibutton
+></term>
+<listitem>
+<para
+>Ovo dugme otvara dijalog koji vam traži lokaciju skripte koju želite da dodate. Ako ostavite popunjeno <guilabel
+>Napravi kao simvezu</guilabel
+> (podrazumevano), skripta će biti dodata kao simveza. Ako isključite ovu opciju, skripta će biti kopirana u odgovarajuću lokalnu fasciklu. </para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guibutton
+>Ukloni</guibutton
+></term>
+<listitem>
+<para
+>Odmah uklanja .desktop fajla programa ili skriptu, ili simboličku vezu, iz fascikle samopokretanja. </para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guibutton
+>Svojstva...</guibutton
+></term>
+<listitem>
+<para
+>Ovim dugmetom (aktivno samo za programe, tj. .desktop fajlove) možete izmeniti svojstva programa ili skripte. Data su opšta svojstva, svojstva dozvola, pregled kad ima smisla, i svojstva u vezi s programima ako je u pitanju program. </para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guibutton
+>Napredno...</guibutton
+></term>
+<listitem>
+<para
+>Ovo dugme odnosi se samo na programe (tj. .desktop fajlove). Dijalog vas pita da li želite da se program automatski pokreće samo u Plasmi, ili u svim okruženjima radne površi. Podrazumevano, program će se automatski pokretati u svakom okruženju radne površi koje pokrenete. Popunite li <guilabel
+>Pokreni samo u KDE‑u</guilabel
+>, program se pokreće jedino pri pokretanju Plasme. </para>
+<para
+>Ovim se u .desktop fajlu vrednost ključa <literal
+>OnlyShowIn</literal
+> postavlja na <literal
+>KDE</literal
+>. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

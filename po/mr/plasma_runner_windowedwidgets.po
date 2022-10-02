@@ -1,0 +1,34 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Chetan Khona <chetan@kompkin.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2013-01-11 09:40+0530\n"
+"Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
+"Language-Team: American English <kde-i18n-doc@kde.org>\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: windowedwidgetsrunner.cpp:30
+#, kde-format
+msgid "Finds Plasma widgets whose name or description match :q:"
+msgstr ":q: ला नाव किंवा वर्णन जुळणारे प्लाज्मा विजेट्स शोधतो"
+
+#: windowedwidgetsrunner.cpp:31 windowedwidgetsrunner.cpp:52
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "mobile applications"
+msgstr "मोबाईल अनुप्रयोग"
+
+#: windowedwidgetsrunner.cpp:32
+#, kde-format
+msgid "list all Plasma widgets that can run as standalone applications"
+msgstr "स्वयंपूर्ण कार्यक्रमा सारखे चालू शकणाऱ्या प्लाज्मा विजेट्स ची यादी करा"

@@ -1,0 +1,41 @@
+# Slovenian translation of soliduiserver.
+# Copyright (C) 2007 - 2011 Free Software Foundation, Inc.
+#
+#
+# Andrej Vernekar <andrej.vernekar@moj.net>, 2007.
+# Jure Repinc <jlp@holodeck1.com>, 2007 - 2009.
+# Andrej Žnidaršič <andrej.zndarsic@ubuntu.com>, 2011.
+# Andrej Mernik <andrejm@ubuntu.si>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: soliduiserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-17 00:47+0000\n"
+"PO-Revision-Date: 2020-07-08 10:21+0200\n"
+"Last-Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+"X-Generator: Poedit 2.3.1\n"
+
+#: soliduiserver.cpp:62
+#, kde-format
+msgid "'%1' needs a password to be accessed. Please enter a password."
+msgstr "Za dostop do '%1' je potrebno geslo. Vnesite geslo."
+
+#~ msgid "A new device has been detected.<br><b>What do you want to do?</b>"
+#~ msgstr "Zaznana je bila nova naprava.<br><b>Kaj želite storiti?</b>"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Do nothing"
+#~ msgstr "Ne naredi ničesar"
+
+#~ msgctxt "A default name for an action without proper label"
+#~ msgid "Unknown"
+#~ msgstr "Neznano"

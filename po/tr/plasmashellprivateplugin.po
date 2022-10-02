@@ -1,0 +1,180 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Volkan Gezer <volkangezer@gmail.com>, 2021, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasmashellprivateplugin\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-03 00:48+0000\n"
+"PO-Revision-Date: 2022-05-21 12:35+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 22.04.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Volkan Gezer, Emir SARI"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "volkangezer@gmail.com, emir_sari@icloud.com"
+
+#: calendar/eventdatadecorator.cpp:51
+#, kde-format
+msgctxt "Agenda listview section title"
+msgid "Holidays"
+msgstr "Tatiller"
+
+#: calendar/eventdatadecorator.cpp:53
+#, kde-format
+msgctxt "Agenda listview section title"
+msgid "Events"
+msgstr "Etkinlikler"
+
+#: calendar/eventdatadecorator.cpp:55
+#, kde-format
+msgctxt "Agenda listview section title"
+msgid "Todo"
+msgstr "Yapılacaklar"
+
+#: calendar/eventdatadecorator.cpp:57
+#, kde-format
+msgctxt "Means 'Other calendar items'"
+msgid "Other"
+msgstr "Diğer"
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:10
+#, kde-format
+msgid "Screen lock enabled"
+msgstr "Ekran kilidi etkin"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:11
+#, kde-format
+msgid "Sets whether the screen will be locked after the specified time."
+msgstr "Belirtilen zamanda ekranı kilitleyecek olan hava durumunu ayarlar."
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:16
+#, kde-format
+msgid "Screen saver timeout"
+msgstr "Ekran koruyucu zaman aşımı"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:17
+#, kde-format
+msgid "Sets the minutes after which the screen is locked."
+msgstr "Ekranın kaç saniye sonra kilitleneceğini ayarlar."
+
+#: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
+#, kde-format
+msgid "New Session"
+msgstr "Yeni Oturum"
+
+#: shellprivate/widgetexplorer/kcategorizeditemsviewmodels.cpp:64
+#, kde-format
+msgid "Filters"
+msgstr "Süzgeçler"
+
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:42
+#, kde-format
+msgid "Select Plasmoid File"
+msgstr "Plasmoid Dosyası Seç"
+
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:66
+#, kde-format
+msgid "Installing the package %1 failed."
+msgstr "%1 paketinin kurulumu başarısız oldu."
+
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:66
+#, kde-format
+msgid "Installation Failure"
+msgstr "Kurulum Başarısız Oldu"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:110
+#, kde-format
+msgid "All Widgets"
+msgstr "Tüm Araç Takımları"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:114
+#, kde-format
+msgid "Running"
+msgstr "Çalışıyor"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:118
+#, kde-format
+msgctxt ""
+"@item:inmenu used in the widget filter. Filter widgets that can be un-"
+"installed from the system, which are usually installed by the user to a "
+"local place."
+msgid "Uninstallable"
+msgstr "Kaldırılamaz"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:122
+#, kde-format
+msgid "Categories:"
+msgstr "Kategoriler:"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:199
+#, kde-format
+msgid "Download New Plasma Widgets"
+msgstr "Yeni Plasma Araç Takımları İndir"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:208
+#, kde-format
+msgid "Install Widget From Local File…"
+msgstr "Yerel Dosyadan Araç Takımı Kur…"
+
+#~ msgid "&Execute"
+#~ msgstr "&Çalıştır"
+
+#~ msgctxt "Toolbar Button to switch to Plasma Scripting Mode"
+#~ msgid "Plasma"
+#~ msgstr "Plasma"
+
+#~ msgctxt "Toolbar Button to switch to KWin Scripting Mode"
+#~ msgid "KWin"
+#~ msgstr "KWin"
+
+#~ msgid "Templates"
+#~ msgstr "Şablonlar"
+
+#~ msgid "Desktop Shell Scripting Console"
+#~ msgstr "Masaüstü Kabu Betik Konsolu"
+
+#~ msgid "Editor"
+#~ msgstr "Düzenleyici"
+
+#~ msgid "Load"
+#~ msgstr "Yükle"
+
+#~ msgid "Use"
+#~ msgstr "Kullan"
+
+#~ msgid "Output"
+#~ msgstr "Çıktı"
+
+#~ msgid "Unable to load script file <b>%1</b>"
+#~ msgstr "<b>%1</b> betik dosyası yüklenemedi"
+
+#~ msgid "Open Script File"
+#~ msgstr "Betik Dosyasını Aç"
+
+#~ msgid "Save Script File"
+#~ msgstr "Betik Dosyasını Kaydet"
+
+#~ msgid "Executing script at %1"
+#~ msgstr "%1 konumundaki betik çalıştırılıyor"
+
+#~ msgid "Runtime: %1ms"
+#~ msgstr "Çalışma zamanı: %1ms"

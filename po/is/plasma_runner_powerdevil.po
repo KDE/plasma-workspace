@@ -1,0 +1,217 @@
+# translation of plasma_runner_powerdevil.po to Icelandic
+# Copyright (C) 2009 This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sveinn í Felli <sveinki@nett.is>, 2009, 2010, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_powerdevil\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"PO-Revision-Date: 2022-08-24 18:28+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"Language-Team: Icelandic\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.12.3\n"
+"Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
+"\n"
+"\n"
+
+#: PowerDevilRunner.cpp:32
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "suspend"
+msgstr "setja í bið"
+
+#: PowerDevilRunner.cpp:34
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to ram"
+msgstr "í vinnsluminni"
+
+#: PowerDevilRunner.cpp:36
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "sleep"
+msgstr "svæfa"
+
+#: PowerDevilRunner.cpp:38
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "hibernate"
+msgstr "leggja í dvala"
+
+#: PowerDevilRunner.cpp:40
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to disk"
+msgstr "á disk"
+
+#: PowerDevilRunner.cpp:42 PowerDevilRunner.cpp:44 PowerDevilRunner.cpp:69
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "dim screen"
+msgstr "dimma skjá"
+
+#: PowerDevilRunner.cpp:53
+#, kde-format
+msgid ""
+"Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
+"activated"
+msgstr ""
+"Listar alla möguleika á kerfishvíld (t.d. svæfa, leggja í dvala) og gerir "
+"kleift að virkja þá"
+
+#: PowerDevilRunner.cpp:57
+#, kde-format
+msgid "Suspends the system to RAM"
+msgstr "Setur kerfið í bið í vinnsluminni"
+
+#: PowerDevilRunner.cpp:61
+#, kde-format
+msgid "Suspends the system to disk"
+msgstr "Setur kerfið í bið á diski"
+
+#: PowerDevilRunner.cpp:65
+#, kde-format
+msgctxt ""
+"Note this is a KRunner keyword, <> is a placeholder and should be at the end"
+msgid "screen brightness <percent value>"
+msgstr "birta skjás <prósentugildi>"
+
+#: PowerDevilRunner.cpp:67
+#, no-c-format, kde-format
+msgid ""
+"Lists screen brightness options or sets it to the brightness defined by the "
+"search term; e.g. screen brightness 50 would dim the screen to 50% maximum "
+"brightness"
+msgstr ""
+"Listar möguleika á birtustillingum skjás eða setur stillingar birtustigs á "
+"það sem er tilgreint í leitarstrengnum :q:; t.d. birta skjás í 50 myndi "
+"dimma skjáinn í 50% af mestu birtu"
+
+#: PowerDevilRunner.cpp:95
+#, kde-format
+msgid "Set Brightness to %1%"
+msgstr "Setja birtustigið á %1"
+
+#: PowerDevilRunner.cpp:104
+#, kde-format
+msgid "Dim screen totally"
+msgstr "Dimma skjáinn algerlega"
+
+#: PowerDevilRunner.cpp:112
+#, kde-format
+msgid "Dim screen by half"
+msgstr "Dimma skjáinn um helming"
+
+#: PowerDevilRunner.cpp:142
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Svæfa"
+
+#: PowerDevilRunner.cpp:143
+#, kde-format
+msgid "Suspend to RAM"
+msgstr "Setja í bið í minni (RAM)"
+
+#: PowerDevilRunner.cpp:148
+#, kde-format
+msgctxt "Suspend to disk"
+msgid "Hibernate"
+msgstr "Leggja í dvala"
+
+#: PowerDevilRunner.cpp:149
+#, kde-format
+msgid "Suspend to disk"
+msgstr "Svæfa á disk"
+
+#: PowerDevilRunner.cpp:218
+#, kde-format
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "screen brightness "
+msgstr "birta skjás"
+
+#: PowerDevilRunner.cpp:220
+#, kde-format
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "dim screen "
+msgstr "dimma skjá"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "screen brightness"
+#~ msgstr "birta skjás"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "screen brightness %1"
+#~ msgstr "birta skjás %1"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "dim screen %1"
+#~ msgstr "dimma skjá %1"
+
+#, fuzzy
+#~| msgctxt "Note this is a KRunner keyword"
+#~| msgid "suspend"
+#~ msgid "Suspend"
+#~ msgstr "setja í bið"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "power profile"
+#~ msgstr "snið orkustýringar"
+
+#~ msgid "Lists all power profiles and allows them to be activated"
+#~ msgstr "Listar öll orkustýringarsnið og gerir kleift að virkja þau"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "power profile %1"
+#~ msgstr "snið orkustýringar %1"
+
+#~ msgid "Set Profile to '%1'"
+#~ msgstr "Setja snið sem '%1'"
+
+#~ msgid "Turn off screen"
+#~ msgstr "Slökkva á skjá"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "cpu policy"
+#~ msgstr "cpu stefna"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "power governor"
+#~ msgstr "orkustýring"
+
+#~ msgid "Lists all power saving schemes and allows them to be activated"
+#~ msgstr "Listar öll orkustýringarskemu og gerir kleift að virkja þau"
+
+#~ msgid ""
+#~ "Lists all CPU frequency scaling policies and allows them to be activated"
+#~ msgstr ""
+#~ "Listar allar stefnur í tíðnibreytingum örgjörva og gerir kleift að virkja "
+#~ "þær"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "cpu policy %1"
+#~ msgstr "cpu stefna %1"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "power governor %1"
+#~ msgstr "orkustýring %1"
+
+#~ msgid "Set CPU frequency scaling policy to '%1'"
+#~ msgstr "Setja stefnu í tíðnibreytingum örgjörva sem '%1'"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "power scheme %1"
+#~ msgstr "orkustýringarskema %1"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "power scheme"
+#~ msgstr "orkustýringarskema"
+
+#~ msgid "Set Powersaving Scheme to '%1'"
+#~ msgstr "Setja orkustýringarskemað á '%1'"

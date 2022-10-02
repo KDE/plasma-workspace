@@ -1,0 +1,52 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Agron Selimaj <agron33@yahoo.com>, 2010.
+# Agron Selimaj <linuxmaster@verizon.net>, 2011, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-26 00:47+0000\n"
+"PO-Revision-Date: 2021-03-19 18:30-0400\n"
+"Last-Translator: Agron Selimaj <as9902613@gmail.com>\n"
+"Language-Team: kdeshqip\n"
+"Language: sq\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.12.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Agron Selimaj"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "as9902613@gmail.com"
+
+#: main.cpp:170
+#, kde-format
+msgid "KCMInit"
+msgstr "KCMInit"
+
+#: main.cpp:172
+#, kde-format
+msgid "KCMInit - runs startup initialization for Control Modules."
+msgstr "KCMInit - ekzekuton inicializimin e nisjes të Moduleve të Kontrollit."
+
+#: main.cpp:178
+#, kde-format
+msgid "List modules that are run at startup"
+msgstr "Trego listën e moduleve që ekzekutohen në nisje"
+
+#: main.cpp:179
+#, kde-format
+msgid "Configuration module to run"
+msgstr "Moduli i konfigurimit që ekzekutohet"
+
+#~ msgid "Module %1 not found"
+#~ msgstr "Moduli %1 nuk u gjet"

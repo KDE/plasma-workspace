@@ -1,0 +1,71 @@
+# tradução do libkworkspace.po para Brazilian Portuguese
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Diniz Bortolotto <diniz.bortolotto@gmail.com>, 2007.
+# André Marcelo Alvarenga <andrealvarenga@gmx.net>, 2009, 2010.
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: libkworkspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-03 00:48+0000\n"
+"PO-Revision-Date: 2021-06-04 14:50-0300\n"
+"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.04.2\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: kdisplaymanager.cpp:777
+#, kde-format
+msgctxt "user: …"
+msgid "%1: TTY login"
+msgstr "%1: sessão TTY"
+
+#: kdisplaymanager.cpp:782
+#, kde-format
+msgctxt "… location (TTY or X display)"
+msgid "Unused"
+msgstr "Não usado"
+
+#: kdisplaymanager.cpp:783
+#, kde-format
+msgid "X login on remote host"
+msgstr "Sessão do X em uma máquina remota"
+
+#: kdisplaymanager.cpp:783
+#, kde-format
+msgctxt "… host"
+msgid "X login on %1"
+msgstr "Sessão do X em %1"
+
+#: kdisplaymanager.cpp:785
+#, kde-format
+msgctxt "user: session type"
+msgid "%1: %2"
+msgstr "%1: %2"
+
+#: kdisplaymanager.cpp:796
+#, kde-format
+msgctxt "session (location)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#~ msgctxt ""
+#~ "Action that reorganizes the windows to try to have them less cluttered"
+#~ msgid "Unclutter Windows"
+#~ msgstr "Arrumar as janelas"
+
+#~ msgctxt "Action that reorganizes the windows so that they are in cascade"
+#~ msgid "Cascade Windows"
+#~ msgstr "Janelas em cascata"
+
+#~ msgid "On All Desktops"
+#~ msgstr "Em todas as áreas de trabalho"
+
+#~ msgid "No Windows"
+#~ msgstr "Sem janelas"

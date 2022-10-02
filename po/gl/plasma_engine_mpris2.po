@@ -1,0 +1,92 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Marce Villarino <mvillarino@kde-espana.es>, 2012.
+# Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015.
+# Adrian Chaves <adrian@chaves.io>, 2018.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2018-04-22 09:23+0100\n"
+"Last-Translator: Adrian Chaves <adrian@chaves.io>\n"
+"Language-Team: Galician <kde-i18n-doc@kde.org>\n"
+"Language: gl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: multiplexedservice.cpp:68
+#, kde-format
+msgctxt "Name for global shortcuts category"
+msgid "Media Controller"
+msgstr "Controlador multimedia"
+
+#: multiplexedservice.cpp:70
+#, kde-format
+msgid "Play/Pause media playback"
+msgstr "Reproducir ou deter a reprodución"
+
+#: multiplexedservice.cpp:88
+#, kde-format
+msgid "Media playback next"
+msgstr "Seguinte pista"
+
+#: multiplexedservice.cpp:97
+#, kde-format
+msgid "Media playback previous"
+msgstr "Pista anterior"
+
+#: multiplexedservice.cpp:106
+#, kde-format
+msgid "Stop media playback"
+msgstr "Deter a reprodución"
+
+#: multiplexedservice.cpp:115
+#, fuzzy, kde-format
+#| msgid "Play/Pause media playback"
+msgid "Pause media playback"
+msgstr "Reproducir ou deter a reprodución"
+
+#: multiplexedservice.cpp:124
+#, fuzzy, kde-format
+#| msgid "Play/Pause media playback"
+msgid "Play media playback"
+msgstr "Reproducir ou deter a reprodución"
+
+#: multiplexedservice.cpp:133
+#, kde-format
+msgid "Media volume up"
+msgstr "Subir o volume multimedia"
+
+#: multiplexedservice.cpp:142
+#, kde-format
+msgid "Media volume down"
+msgstr "Baixar o volume multimedia"
+
+#: playeractionjob.cpp:169
+#, kde-format
+msgid "The media player '%1' cannot perform the action '%2'."
+msgstr "O reprodutor «%1» non pode realizar a acción «%2»."
+
+#: playeractionjob.cpp:171
+#, kde-format
+msgid "Attempting to perform the action '%1' failed with the message '%2'."
+msgstr "O intento de facer «%1» fallou coa mensaxe «%2»."
+
+#: playeractionjob.cpp:173
+#, kde-format
+msgid "The argument '%1' for the action '%2' is missing or of the wrong type."
+msgstr "Falta o argumento «%1» para a acción «%2» ou non é do tipo correcto."
+
+#: playeractionjob.cpp:175
+#, kde-format
+msgid "The operation '%1' is unknown."
+msgstr "Descoñécese a operación «%1»."
+
+#: playeractionjob.cpp:177
+#, kde-format
+msgid "Unknown error."
+msgstr "Erro descoñecido."

@@ -1,0 +1,163 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeorg\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"PO-Revision-Date: 2022-09-20 01:56\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Project-ID: 269464\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /kf5-trunk/messages/plasma-workspace/kcm_desktoptheme.pot\n"
+"X-Crowdin-File-ID: 4201\n"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current Plasma Style"
+msgstr "当前 Plasma 视觉风格名称"
+
+#: kcm.cpp:108
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "无法创建临时文件。"
+
+#: kcm.cpp:119
+#, kde-format
+msgid "Unable to download the theme: %1"
+msgstr "无法下载主题：%1"
+
+#: kcm.cpp:144
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "主题安装成功。"
+
+#: kcm.cpp:147 kcm.cpp:153
+#, kde-format
+msgid "Theme installation failed."
+msgstr "主题安装失败。"
+
+#: kcm.cpp:245
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr "移除主题失败：%1"
+
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "This module lets you choose the Plasma style."
+msgstr "您可以在此模块中选择 Plasma 视觉风格。"
+
+#: package/contents/ui/main.qml:69
+#, kde-format
+msgid "All Themes"
+msgstr "所有主题"
+
+#: package/contents/ui/main.qml:70
+#, kde-format
+msgid "Light Themes"
+msgstr "浅色主题"
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgid "Dark Themes"
+msgstr "深色主题"
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "Color scheme compatible"
+msgstr "兼容配色方案"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgid "Follows color scheme"
+msgstr "跟随配色方案"
+
+#: package/contents/ui/main.qml:118
+#, kde-format
+msgid "Edit Theme…"
+msgstr "编辑主题…"
+
+#: package/contents/ui/main.qml:125
+#, kde-format
+msgid "Remove Theme"
+msgstr "删除主题"
+
+#: package/contents/ui/main.qml:132
+#, kde-format
+msgid "Restore Theme"
+msgstr "还原主题"
+
+#: package/contents/ui/main.qml:174
+#, kde-format
+msgid "Install from File…"
+msgstr "从文件安装…"
+
+#: package/contents/ui/main.qml:179
+#, kde-format
+msgid "Get New Plasma Styles…"
+msgstr "获取新 Plasma 视觉风格…"
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Open Theme"
+msgstr "打开主题"
+
+#: package/contents/ui/main.qml:195
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr "主题文件 (*.zip *.tar.gz *.tar.bz2)"
+
+#: plasma-apply-desktoptheme.cpp:31
+#, kde-format
+msgid ""
+"This tool allows you to set the theme of the current Plasma session, without "
+"accidentally setting it to one that is either not available, or which is "
+"already set."
+msgstr ""
+"此工具允许您设置当前 Plasma 会话的主题，并避免将其设置为不可用的或已经设置的"
+"主题。"
+
+#: plasma-apply-desktoptheme.cpp:35
+#, kde-format
+msgid ""
+"The name of the theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+"您想要为当前 Plasma 会话设置的主题名称 (传递完整路径时将只使用路径的最后一部"
+"分)"
+
+#: plasma-apply-desktoptheme.cpp:36
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr "显示系统的所有可用主题 (含当前主题)"
+
+#: plasma-apply-desktoptheme.cpp:49
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr "请求的主题“%1”已设置为当前 Plasma 会话的主题。"
+
+#: plasma-apply-desktoptheme.cpp:65
+#, kde-format
+msgid "The current Plasma session's theme has been set to %1"
+msgstr "当前 Plasma 会话主题已设置为 %1"
+
+#: plasma-apply-desktoptheme.cpp:67
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr "无法找到主题“%1”。主题应当是以下选项之一：%2"
+
+#: plasma-apply-desktoptheme.cpp:75
+#, kde-format
+msgid "You have the following Plasma themes on your system:"
+msgstr "您的系统已安装以下 Plasma 主题："

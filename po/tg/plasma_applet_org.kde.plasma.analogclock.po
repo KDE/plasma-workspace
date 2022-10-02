@@ -1,0 +1,64 @@
+# translation of plasma_applet_clock.po to Tajik Language
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Victor Ibragimov <youth_opportunities@tajikngo.org>, 2008, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_clock\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-25 00:47+0000\n"
+"PO-Revision-Date: 2019-09-16 14:04+0500\n"
+"Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
+"Language-Team: English <kde-i18n-doc@kde.org>\n"
+"Language: tg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 19.04.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Намуди зоҳирӣ"
+
+#: contents/ui/analogclock.qml:76
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Current time is %1; Current date is %2"
+msgstr ""
+
+#: contents/ui/configGeneral.qml:23
+#, kde-format
+msgid "Show seconds hand"
+msgstr "Намоиш додани ақрабаки сония"
+
+#: contents/ui/configGeneral.qml:24
+#, kde-format
+msgid "General:"
+msgstr "Умумӣ"
+
+#: contents/ui/configGeneral.qml:28
+#, kde-format
+msgid "Show time zone"
+msgstr "Намоиш додани минтақаи вақт"
+
+#~ msgid "Show the seconds"
+#~ msgstr "Намоиши ақрабаки сониявӣ"
+
+#~ msgid "Check this if you want to show the seconds."
+#~ msgstr "Интихоб кунед, агар мехоҳед ақрабаки сониявӣ пайдо шавад."
+
+#~ msgid "Show &seconds hand"
+#~ msgstr "Намоиши &сония"
+
+#~ msgid "Show the Timezone in text"
+#~ msgstr "Намоиши минтақаи вақт ба воситаи матн"
+
+#~ msgid "Check this if you want to display Timezone in text."
+#~ msgstr ""
+#~ "Интихоб кунед, агар мехоҳед минтақаи вақт ба воситаи матн пайдо шавад."
+
+#~ msgid "Show &time zone"
+#~ msgstr "Намоиши &минтақаи вақт"

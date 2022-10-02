@@ -1,0 +1,64 @@
+# tradução do plasma_runner_webshortcuts.po para Brazilian Portuguese
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Diniz Bortolotto <diniz.bortolotto@gmail.com>, 2008.
+# Fernando Boaglio <boaglio@kde.org>, 2008.
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2009, 2010, 2020, 2022.
+# André Marcelo Alvarenga <andrealvarenga@gmx.net>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_webshortcuts\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-06-02 00:47+0000\n"
+"PO-Revision-Date: 2022-01-04 12:37-0300\n"
+"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
+"Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.04.2\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: webshortcutrunner.cpp:58
+#, kde-format
+msgid "Opens \"%1\" in a web browser with the query :q:."
+msgstr "Abre \"%1\" em um navegador da Internet com a consulta :q:."
+
+#: webshortcutrunner.cpp:63
+#, kde-format
+msgid "Search using the DuckDuckGo bang syntax"
+msgstr "Pesquisar usando a sintaxe do DuckDuckGo"
+
+#: webshortcutrunner.cpp:94
+#, kde-format
+msgid "Search in private window"
+msgstr "Pesquisar na janela privada"
+
+#: webshortcutrunner.cpp:94
+#, kde-format
+msgid "Search in incognito window"
+msgstr "Pesquisar na janela incógnita"
+
+#: webshortcutrunner.cpp:129 webshortcutrunner.cpp:146
+#, kde-format
+msgid "Search %1 for %2"
+msgstr "Pesquisar em %1 por %2"
+
+#~ msgctxt "A web shortcut and its name"
+#~ msgid "%1: %2"
+#~ msgstr "%1: %2"
+
+#~ msgctxt "A web shortcut, its name and a description"
+#~ msgid "%1: %2 %3"
+#~ msgstr "%1: %2 %3"
+
+#~ msgid ""
+#~ "Opens the location associated with \"shortcut\" in a web browser with the "
+#~ "query :q:. Known shortcuts include:\n"
+#~ "%1"
+#~ msgstr ""
+#~ "Abre a localização associada com o \"atalho\" num navegador da Internet "
+#~ "com a consulta :q:. Os atalhos conhecidos incluem:\n"
+#~ "%1"

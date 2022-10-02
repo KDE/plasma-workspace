@@ -1,0 +1,121 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Russian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="screenlocker" lang="&language;">
+<articleinfo>
+<title
+>Блокировка экрана</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>Екатерина</firstname
+><surname
+>Пыжова</surname
+> <affiliation
+><address
+><email
+>haleth@yandex.ru</email
+></address
+></affiliation
+> <contrib
+>Перевод на русский язык</contrib
+></othercredit
+> <othercredit role="translator"
+><firstname
+>Олеся</firstname
+><surname
+>Герасименко</surname
+> <affiliation
+><address
+><email
+>gammaray@basealt.ru</email
+></address
+></affiliation
+> <contrib
+>Перевод на русский язык</contrib
+></othercredit
+> <othercredit role="reviewer"
+><firstname
+>Александр</firstname
+><surname
+>Яворский</surname
+><contrib
+>Рецензирование</contrib
+></othercredit
+> 
+</authorgroup>
+<!--FIXME code in plasma/kscreenlocker - docbook in plasma/plasma-workspace -->
+<date
+>2 июля 2020 г.</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>параметры системы</keyword>
+<keyword
+>блокировка экрана</keyword>
+<keyword
+>блокировка экрана</keyword>
+</keywordset>
+</articleinfo>
+<para
+>Этот модуль позволяет определить, сколько времени должно проходить перед включением блокировки экрана, настроить период отсрочки для разблокировки экрана без пароля, а также настроить внешний вид блокировки экрана.</para>
+
+<para
+>В верхней части окна находится флажок <guilabel
+>Блокировать экран автоматически после</guilabel
+> и поле со счётчиком, задающее продолжительность периода отсутствия активности пользователя до запуска блокировщика экрана. Поддерживается ввод любого положительного числа (в минутах).</para>
+
+<para
+>Флажок <guilabel
+>После выхода из ждущего режима</guilabel
+> позволяет включать и отключать блокировку экрана рабочего стола после приостановки работы системы.</para>
+
+<para
+>Ниже находится поле со счётчиком <guilabel
+>Разблокировать без пароля в течение</guilabel
+>. По истечении интервала времени после блокирования экрана, заданного в этом поле, для  возврата в систему потребуется ввод пароля. Для отключения блокировки экрана используется тот же пароль, что и для входа в систему.</para>
+
+<para
+>Если экран блокируется вручную, защита паролем включается сразу.</para>
+
+<para
+>Поле <guilabel
+>Комбинация клавиш</guilabel
+> позволяет задать комбинацию клавиш для блокировки экрана.</para>
+
+<para
+>Для быстрой блокировки экрана вручную служит установленная по умолчанию комбинация клавиш <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>L</keycap
+></keycombo
+>.</para>
+
+<para
+>Чтобы изменить фоновое изображение при заблокированном экране, нажмите кнопку <guibutton
+>Настроить…</guibutton
+>, расположенную рядом с пунктом <guilabel
+>Внешний вид</guilabel
+>. После этого можно будет изменить <guilabel
+>Тип обоев</guilabel
+>.</para>
+
+<para
+>При выборе типа обоев возможно выбрать пункт <guilabel
+>Одноцветные обои</guilabel
+>.</para>
+
+<para
+>Также возможно использовать отдельное изображение, показывать слайды изображений из папки или загрузить новые обои из Интернета.</para>
+
+</article>

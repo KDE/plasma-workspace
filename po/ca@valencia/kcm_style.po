@@ -1,0 +1,217 @@
+# Translation of kcm_style.po to Catalan (Valencian)
+# Copyright (C) 1998-2021 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Sebastià Pla i Sanz <sps@sastia.com>, 1998, 1999, 2000, 2001, 2002, 2004, 2006.
+# Antoni Bella Pérez <antonibella5@yahoo.com>, 2003, 2013, 2015, 2016, 2017.
+# Josep M. Ferrer <txemaq@gmail.com>, 2004, 2007, 2008, 2009, 2010, 2012, 2013, 2015, 2017, 2019, 2020, 2021.
+# Albert Astals Cid <aacid@kde.org>, 2005.
+# Empar Montoro Martín <montoro_mde@gva.es>, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"PO-Revision-Date: 2021-08-15 10:48+0200\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca@valencia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.12.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+
+#: gtkpage.cpp:59
+#, kde-format
+msgid "%1 is not a valid GTK Theme archive."
+msgstr "El %1no és un arxiu vàlid de tema GTK."
+
+#: kcmstyle.cpp:161 kcmstyle.cpp:168
+#, kde-format
+msgid "There was an error loading the configuration dialog for this style."
+msgstr ""
+"S'ha produït un error en carregar el diàleg de configuració per a este estil."
+
+#: kcmstyle.cpp:274
+#, kde-format
+msgid "Failed to apply selected style '%1'."
+msgstr "No s'ha pogut aplicar l'estil «%1» seleccionat."
+
+#: package/contents/ui/EffectSettingsPopup.qml:32
+#, kde-format
+msgid "Show icons:"
+msgstr "Mostra les icones:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:33
+#, kde-format
+msgid "On buttons"
+msgstr "En els botons"
+
+#: package/contents/ui/EffectSettingsPopup.qml:44
+#, kde-format
+msgid "In menus"
+msgstr "En els menús"
+
+#: package/contents/ui/EffectSettingsPopup.qml:56
+#, kde-format
+msgid "Main toolbar label:"
+msgstr "Etiqueta de la barra d'eines principal:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "None"
+msgstr "Sense"
+
+#: package/contents/ui/EffectSettingsPopup.qml:59
+#, kde-format
+msgid "Text only"
+msgstr "Només el text"
+
+#: package/contents/ui/EffectSettingsPopup.qml:60
+#, kde-format
+msgid "Beside icons"
+msgstr "Vora les icones"
+
+#: package/contents/ui/EffectSettingsPopup.qml:61
+#, kde-format
+msgid "Below icon"
+msgstr "Davall la icona"
+
+#: package/contents/ui/EffectSettingsPopup.qml:76
+#, kde-format
+msgid "Secondary toolbar label:"
+msgstr "Etiqueta de la barra d'eines secundària:"
+
+#: package/contents/ui/GtkStylePage.qml:18
+#, kde-format
+msgid "GNOME/GTK Application Style"
+msgstr "Estil de les aplicacions GNOME/GTK"
+
+#: package/contents/ui/GtkStylePage.qml:44
+#, kde-format
+msgid "GTK theme:"
+msgstr "Tema GTK:"
+
+#: package/contents/ui/GtkStylePage.qml:69
+#, kde-format
+msgid "Preview…"
+msgstr "Vista prèvia…"
+
+#: package/contents/ui/GtkStylePage.qml:88
+#, kde-format
+msgid "Install from File…"
+msgstr "Instal·la des d'un fitxer…"
+
+#: package/contents/ui/GtkStylePage.qml:93
+#, kde-format
+msgid "Get New GNOME/GTK Application Styles…"
+msgstr "Obtín estils nous de les aplicacions GNOME/GTK…"
+
+#: package/contents/ui/GtkStylePage.qml:109
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr "Selecció d'arxiu de tema GTK"
+
+#: package/contents/ui/GtkStylePage.qml:111
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr "Arxiu de tema GTK (*.tar.xz *.tar.gz *.tar.bz2)"
+
+#: package/contents/ui/main.qml:17
+#, kde-format
+msgid ""
+"This module allows you to modify the visual appearance of applications' user "
+"interface elements."
+msgstr ""
+"Este mòdul permet modificar l'aparença visual dels elements de la interfície "
+"d'usuari de les aplicacions."
+
+#: package/contents/ui/main.qml:96
+#, kde-format
+msgid "Configure Style…"
+msgstr "Configura l'estil…"
+
+#: package/contents/ui/main.qml:116
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr "Configura les icones i les barres d'eines"
+
+#: package/contents/ui/main.qml:132
+#, kde-format
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "Configura l'estil de l'aplicació GNOME/GTK…"
+
+#: styleconfdialog.cpp:21
+#, kde-format
+msgid "Configure %1"
+msgstr "Configura %1"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "Pestanya 1"
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, kde-format
+msgid "Push Button"
+msgstr "Botó premut"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, kde-format
+msgid "Combo box"
+msgstr "Quadro combinat"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "Casella de selecció"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "Botó d'opció"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:133
+#, kde-format
+msgid "Tab 2"
+msgstr "Pestanya 2"
+
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, kde-format
+msgid "Application style"
+msgstr "Estil de l'aplicació"
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, kde-format
+msgid "Show icons on buttons"
+msgstr "Mostra les icones als botons"
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, kde-format
+msgid "Show icons in menus"
+msgstr "Mostra les icones en els menús"
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, kde-format
+msgid "Main toolbar label"
+msgstr "Etiqueta de la barra d'eines principal"
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, kde-format
+msgid "Secondary toolbar label"
+msgstr "Etiqueta de la barra d'eines secundària"

@@ -1,0 +1,401 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sairan Kikkarin <sairan@computer.org>, 2010, 2011.
+# Sairan Kikkarin <sairan(at)computer.org>, 2010, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-15 00:46+0000\n"
+"PO-Revision-Date: 2013-09-26 05:29+0600\n"
+"Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
+"Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
+"Language: kk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Сайран Киккарин"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "sairan@computer.org"
+
+#: imagepackage/contents/ui/config.qml:94
+#, fuzzy, kde-format
+#| msgid "&Positioning:"
+msgid "Positioning:"
+msgstr "&Орналасуы:"
+
+#: imagepackage/contents/ui/config.qml:97
+#, fuzzy, kde-format
+#| msgid "Scaled & Cropped"
+msgid "Scaled and Cropped"
+msgstr "Масштабтау және ойып алу"
+
+#: imagepackage/contents/ui/config.qml:101
+#, kde-format
+msgid "Scaled"
+msgstr "Шақталған"
+
+#: imagepackage/contents/ui/config.qml:105
+#, fuzzy, kde-format
+#| msgid "Scaled, keep proportions"
+msgid "Scaled, Keep Proportions"
+msgstr "Ара қатынасын сақтап шақтау"
+
+#: imagepackage/contents/ui/config.qml:109
+#, kde-format
+msgid "Centered"
+msgstr "Орталандырылған"
+
+#: imagepackage/contents/ui/config.qml:113
+#, kde-format
+msgid "Tiled"
+msgstr "Қатарланған"
+
+#: imagepackage/contents/ui/config.qml:141
+#, kde-format
+msgid "Background:"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:142
+#, kde-format
+msgid "Blur"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:151
+#, kde-format
+msgid "Solid color"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:161
+#, kde-format
+msgid "Select Background Color"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:207
+#, kde-format
+msgid "Add Image…"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:213
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:257
+#, fuzzy, kde-format
+#| msgid "Get New Wallpapers..."
+msgid "Get New Wallpapers…"
+msgstr "Жаңа тұсқағаздарын алу..."
+
+#: imagepackage/contents/ui/main.qml:69
+#, kde-format
+msgid "Open Wallpaper Image"
+msgstr "Тұсқағаздың кескінін ашу"
+
+#: imagepackage/contents/ui/main.qml:70
+#, kde-format
+msgid "Next Wallpaper Image"
+msgstr "Тұсқағаздың келесі кескіні"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:33
+#, kde-format
+msgid "Open Containing Folder"
+msgstr ""
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:39
+#, fuzzy, kde-format
+#| msgid "&System wallpapers:"
+msgid "Restore wallpaper"
+msgstr "&Жүйелік тұсқағаздары:"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:44
+#, fuzzy, kde-format
+#| msgid "&System wallpapers:"
+msgid "Remove Wallpaper"
+msgstr "&Жүйелік тұсқағаздары:"
+
+#: plasma-apply-wallpaperimage.cpp:29
+#, kde-format
+msgid ""
+"This tool allows you to set an image as the wallpaper for the Plasma session."
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:31
+#, kde-format
+msgid ""
+"An image file or an installed wallpaper kpackage that you wish to set as the "
+"wallpaper for your Plasma session"
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:45
+#, kde-format
+msgid ""
+"There is a stray single quote in the filename of this wallpaper (') - please "
+"contact the author of the wallpaper to fix this, or rename the file "
+"yourself: %1"
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:85
+#, kde-format
+msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:89
+#, kde-format
+msgid ""
+"Successfully set the wallpaper for all desktops to the KPackage based %1"
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:91
+#, kde-format
+msgid "Successfully set the wallpaper for all desktops to the image %1"
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:97
+#, kde-format
+msgid ""
+"The file passed to be set as wallpaper does not exist, or we cannot identify "
+"it as a wallpaper: %1"
+msgstr ""
+
+#: plugin/finder/packagefinder.cpp:152
+#, kde-format
+msgid "Recommended wallpaper file"
+msgstr "Лайық түсқағаз файлы"
+
+#: plugin/imagebackend.cpp:234
+#, kde-format
+msgid "Directory with the wallpaper to show slides from"
+msgstr ""
+
+#: plugin/imagebackend.cpp:345
+#, fuzzy, kde-format
+#| msgid "Open Wallpaper Image"
+msgid "Open Image"
+msgstr "Тұсқағаздың кескінін ашу"
+
+#: plugin/imagebackend.cpp:345
+#, fuzzy, kde-format
+#| msgid "Images"
+msgid "Image Files"
+msgstr "Кескіндер"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:38
+#, kde-format
+msgid "Order:"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:45
+#, kde-format
+msgid "Random"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:49
+#, kde-format
+msgid "A to Z"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:53
+#, kde-format
+msgid "Z to A"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:57
+#, kde-format
+msgid "Date modified (newest first)"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:61
+#, kde-format
+msgid "Date modified (oldest first)"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:86
+#, kde-format
+msgid "Group by folders"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:98
+#, fuzzy, kde-format
+#| msgid "C&hange images every:"
+msgid "Change every:"
+msgstr "Кескіндерін &ауыстыру аралығы:"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:108
+#, kde-format
+msgid "%1 hour"
+msgid_plural "%1 hours"
+msgstr[0] ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:128
+#, kde-format
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:148
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:162
+#, fuzzy, kde-format
+#| msgid "&Remove Folder"
+msgid "Folders"
+msgstr "Қапш&ықты өшіру"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:220
+#, fuzzy, kde-format
+#| msgid "&Remove Folder"
+msgid "Remove Folder"
+msgstr "Қапш&ықты өшіру"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:225
+#, fuzzy, kde-format
+#| msgid "&Remove Folder"
+msgid "Open Folder"
+msgstr "Қапш&ықты өшіру"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:235
+#, kde-format
+msgid "There are no wallpaper locations configured"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:250
+#, fuzzy, kde-format
+#| msgid "&Add Folder..."
+msgid "Add Folder…"
+msgstr "Қ&апшықты қосу..."
+
+#, fuzzy
+#~| msgid "Use system-installed wallpapers in slideshow"
+#~ msgid "There are no wallpapers in this slideshow"
+#~ msgstr "Слайд-шоуда орнатылған жүйелік тұсқағаздар қатыссын"
+
+#, fuzzy
+#~| msgid "&System wallpapers:"
+#~ msgid "Add Custom Wallpaper"
+#~ msgstr "&Жүйелік тұсқағаздары:"
+
+#, fuzzy
+#~| msgid "&System wallpapers:"
+#~ msgid "Remove wallpaper"
+#~ msgstr "&Жүйелік тұсқағаздары:"
+
+#, fuzzy
+#~| msgctxt "Caption to wallpaper preview, %1 author name"
+#~| msgid "by %1"
+#~ msgid "%1 by %2"
+#~ msgstr "Авторы: %1"
+
+#, fuzzy
+#~| msgid "&System wallpapers:"
+#~ msgid "Wallpapers"
+#~ msgstr "&Жүйелік тұсқағаздары:"
+
+#, fuzzy
+#~| msgid "Download new wallpapers"
+#~ msgid "Download Wallpapers"
+#~ msgstr "Жаңа тұсқағазды жүктеп алу"
+
+#~ msgid "Open..."
+#~ msgstr "Ашу..."
+
+#~ msgctxt "Unknown Author"
+#~ msgid "Unknown"
+#~ msgstr "Беймәлім"
+
+#~ msgid "Screenshot"
+#~ msgstr "Экраннан түсіргені"
+
+#~ msgid "Center Tiled"
+#~ msgstr "Ортадан қатарландырылған"
+
+#~ msgid "Select Wallpaper Image File"
+#~ msgstr "Тұсқағаз кескін файлын таңдау"
+
+#~ msgid "P&ositioning:"
+#~ msgstr "О&рналасуы:"
+
+#~ msgid "&Color:"
+#~ msgstr "&Түсі:"
+
+#~ msgid "Change wallpaper frame color"
+#~ msgstr "Түсқағаздың қоршау түсін өзгерту"
+
+#~ msgid ""
+#~ "Change the color of the frame that it may be visible when the wallpaper "
+#~ "is centered or scaled with the same proportions."
+#~ msgstr ""
+#~ "КЕйбірде, мысалы, түсқағаз ортаға не бір пропорциямен орналасқанда көріну "
+#~ "ықтимал түсқағаздың қоршау түсін өзгерту."
+
+#~ msgid "Remove from list"
+#~ msgstr "Тізімден өшіру"
+
+#~ msgctxt ""
+#~ "(qtdt-format) Please do not change the quotes (') and translate only the "
+#~ "content of the quotes."
+#~ msgid "hh 'Hours' mm 'Mins' ss 'Secs'"
+#~ msgstr "hh 'сағ' mm 'мин' ss 'сек'"
+
+#~ msgid "&My downloaded wallpapers:"
+#~ msgstr "Жүктелген тұсқағаздар&ым"
+
+#~ msgid ""
+#~ "Use wallpapers I have downloaded with \"Get New Wallpapers...\" in "
+#~ "slideshow"
+#~ msgstr ""
+#~ "Слайд-шоуда \"Жаңа тұсқағаздарын алу...\" арқылы алғандарым қатыссын"
+
+#~ msgid "Custom folders:"
+#~ msgstr "Өзге қапшықтар:"
+
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:11pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Images</span></p></body></html>"
+#~ msgstr ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:11pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Кескіндер</span></p></body></html>"
+
+#~ msgid "Finding images for the wallpaper slideshow."
+#~ msgstr "Тұсқағаз слайд-шоу кескіндерін іздеу."
+
+#~ msgid "Adding wallpaper package in %1"
+#~ msgstr "%1 дегеннің тұсқағаз дестесін қосу"
+
+#~ msgid "Adding image %1"
+#~ msgstr "%1 кескінін қосу"
+
+#~ msgctxt "Wallpaper info, author name"
+#~ msgid "%1"
+#~ msgstr "%1"
+
+#~ msgid "Email:"
+#~ msgstr "Эл.пошта:"
+
+#~ msgid "License:"
+#~ msgstr "Лицензиясы:"

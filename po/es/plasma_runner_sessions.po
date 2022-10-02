@@ -1,0 +1,186 @@
+# translation of krunner_sessions.po to Spanish
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Jaime Robles <jaime@kde.org>, 2008.
+# Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>, 2010.
+# Javier Vinal <fjvinal@gmail.com>, 2011.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2016, 2018, 2020, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner_sessions\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-01 00:45+0000\n"
+"PO-Revision-Date: 2022-02-01 11:47+0100\n"
+"Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
+"Language-Team: Spanish <kde-l10n-es@kde.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.12.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: sessionrunner.cpp:28 sessionrunner.cpp:64
+#, kde-format
+msgctxt "log out command"
+msgid "logout"
+msgstr "cerrar sesión"
+
+#: sessionrunner.cpp:28
+#, kde-format
+msgid "Logs out, exiting the current desktop session"
+msgstr "Sale, cerrando la sesión de escritorio actual"
+
+#: sessionrunner.cpp:29 sessionrunner.cpp:81
+#, kde-format
+msgctxt "shut down computer command"
+msgid "shut down"
+msgstr "apagar"
+
+#: sessionrunner.cpp:29
+#, kde-format
+msgid "Turns off the computer"
+msgstr "Apaga el equipo"
+
+#: sessionrunner.cpp:33 sessionrunner.cpp:90
+#, kde-format
+msgctxt "lock screen command"
+msgid "lock"
+msgstr "bloquear"
+
+#: sessionrunner.cpp:33
+#, kde-format
+msgid "Locks the current sessions and starts the screen saver"
+msgstr "Bloquea las sesiones actuales e inicia el salvapantallas"
+
+#: sessionrunner.cpp:36 sessionrunner.cpp:72
+#, kde-format
+msgctxt "restart computer command"
+msgid "restart"
+msgstr "reiniciar"
+
+#: sessionrunner.cpp:36
+#, kde-format
+msgid "Reboots the computer"
+msgstr "Reinicia el equipo"
+
+#: sessionrunner.cpp:37 sessionrunner.cpp:73
+#, kde-format
+msgctxt "restart computer command"
+msgid "reboot"
+msgstr "reiniciar"
+
+#: sessionrunner.cpp:40
+#, kde-format
+msgctxt "switch user command"
+msgid "switch"
+msgstr "cambiar"
+
+#: sessionrunner.cpp:41
+#, kde-format
+msgctxt "switch user command"
+msgid "switch :q:"
+msgstr "cambiar :q:"
+
+#: sessionrunner.cpp:42
+#, kde-format
+msgid ""
+"Switches to the active session for the user :q:, or lists all active "
+"sessions if :q: is not provided"
+msgstr ""
+"Cambia a la sesión activa para el usuario :q:, o lista todas las sesiones "
+"activas si no se indica :q:"
+
+#: sessionrunner.cpp:45 sessionrunner.cpp:130
+#, kde-format
+msgid "switch user"
+msgstr "cambiar usuario"
+
+#: sessionrunner.cpp:45
+#, kde-format
+msgid "Starts a new session as a different user"
+msgstr "Inicia una nueva sesión como otro usuario"
+
+#: sessionrunner.cpp:46 sessionrunner.cpp:130
+#, kde-format
+msgid "new session"
+msgstr "nueva sesión"
+
+#: sessionrunner.cpp:50
+#, kde-format
+msgid "Lists all sessions"
+msgstr "Lista todas las sesiones"
+
+#: sessionrunner.cpp:64
+#, kde-format
+msgid "log out"
+msgstr "cerrar la sesión"
+
+#: sessionrunner.cpp:66
+#, kde-format
+msgctxt "log out command"
+msgid "Logout"
+msgstr "Cerrar la sesión"
+
+#: sessionrunner.cpp:75
+#, kde-format
+msgid "Restart the computer"
+msgstr "Reiniciar el equipo"
+
+#: sessionrunner.cpp:82
+#, kde-format
+msgctxt "shut down computer command"
+msgid "shutdown"
+msgstr "apagar"
+
+#: sessionrunner.cpp:84
+#, kde-format
+msgid "Shut down the computer"
+msgstr "Apagar el equipo"
+
+#: sessionrunner.cpp:93
+#, kde-format
+msgid "Lock the screen"
+msgstr "Bloquear la pantalla"
+
+#: sessionrunner.cpp:115
+#, kde-format
+msgctxt "User sessions"
+msgid "sessions"
+msgstr "sesiones"
+
+#: sessionrunner.cpp:136
+#, kde-format
+msgid "Switch User"
+msgstr "Cambiar usuario"
+
+#: sessionrunner.cpp:211
+#, kde-format
+msgid "Warning - New Session"
+msgstr "Advertencia: nueva sesión"
+
+#: sessionrunner.cpp:212
+#, kde-format
+msgid ""
+"<p>You have chosen to open another desktop session.<br />The current session "
+"will be hidden and a new login screen will be displayed.<br />An F-key is "
+"assigned to each session; F%1 is usually assigned to the first session, F%2 "
+"to the second session and so on. You can switch between sessions by pressing "
+"Ctrl, Alt and the appropriate F-key at the same time. Additionally, the "
+"Plasma Panel and Desktop menus have actions for switching between sessions.</"
+"p>"
+msgstr ""
+"<p>Ha elegido abrir otra sesión de escritorio.<br />La sesión actual se "
+"ocultará y se mostrará una nueva pantalla de identificación.<br />Se "
+"asignará una tecla de función a cada sesión. F%1 suele asignarse a la "
+"primera sesión, F%2 a la segunda, y así sucesivamente. Puede cambiar entre "
+"sesiones pulsando simultáneamente las teclas Ctrl, Alt y la tecla de función "
+"adecuada. Además, dispone de acciones para cambiar de sesión en los menús "
+"del panel y del escritorio de Plasma.</p>"
+
+#~ msgid "New Session"
+#~ msgstr "Nueva sesión"
+
+#~ msgid "&Start New Session"
+#~ msgstr "Iniciar una nueva &sesión"

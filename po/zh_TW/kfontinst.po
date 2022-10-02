@@ -1,0 +1,2311 @@
+# translation of kfontinst.po to Chinese Traditional
+# translation of kfontinst.po to
+# Copyright (C) 2004, 2007, 2008 Free Software Foundation, Inc.
+#
+# Hydonsingore Sie <hydonsingore@mail.educities.edu.tw>, 2004.
+# Frank Weng (a.k.a. Franklin) <franklin@mail.everfocus.com.tw>, 2007.
+# Franklin Weng <franklin@goodhorse.idv.tw>, 2010, 2011, 2012.
+# Jeff Huang <s8321414@gmail.com>, 2016.
+# pan93412 <pan93412@gmail.com>, 2018, 2019, 2020.
+# Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2007, 2008, 2009.
+# Franklin Weng <franklin at goodhorse dot idv dot tw>, 2007, 2008.
+# Chaoting Liu <brli@chakralinux.org>, 2021.
+# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kfontinst\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-10 00:46+0000\n"
+"PO-Revision-Date: 2022-06-12 07:26+0900\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
+"Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 22.04.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+"Chao-Hsiung Liao, Frank Weng (a.k.a. Franklin), Jeff Huang, Chaoting Liu"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"j_h_liau@yahoo.com.tw, franklin@goodhorse.idv.tw, s8321414@gmail.com, "
+"brli@chakralinux.org"
+
+#: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:956
+#, kde-format
+msgid ""
+"Do you wish to install the font(s) for personal use (only available to you), "
+"or system-wide (available to all users)?"
+msgstr "您希望安裝此字型為個人使用還是系統字型？"
+
+#: apps/Installer.cpp:38 kcmfontinst/KCmFontInst.cpp:959
+#, kde-format
+msgid "Where to Install"
+msgstr "要安裝到何處"
+
+#: apps/Installer.cpp:110
+#, kde-format
+msgid "Font Installer"
+msgstr "字型安裝程式"
+
+#: apps/Installer.cpp:112
+#, kde-format
+msgid "Simple font installer"
+msgstr "簡易字型安裝程式"
+
+#: apps/Installer.cpp:114 apps/Printer.cpp:329
+#, kde-format
+msgid "(C) Craig Drummond, 2007"
+msgstr "(C) Craig Drummond, 2007"
+
+#: apps/Installer.cpp:120 apps/Printer.cpp:335
+#, kde-format
+msgid "Makes the dialog transient for an X app specified by winid"
+msgstr "讓 X 應用程式對話框的瞬變值由 winid 指定"
+
+#: apps/Installer.cpp:122
+#, kde-format
+msgid "URL to install"
+msgstr "要安裝到何處"
+
+#: apps/Printer.cpp:238
+#, kde-format
+msgid "Print"
+msgstr "列印"
+
+#: apps/Printer.cpp:308 kcmfontinst/DuplicatesDialog.cpp:210
+#, kde-format
+msgid "Canceling…"
+msgstr "取消中…"
+
+#: apps/Printer.cpp:325
+#, kde-format
+msgid "Font Printer"
+msgstr "字型印表機"
+
+#: apps/Printer.cpp:327
+#, kde-format
+msgid "Simple font printer"
+msgstr "簡易字型印表機"
+
+#: apps/Printer.cpp:337
+#, kde-format
+msgid "Size index to print fonts"
+msgstr "要列印字型的大小"
+
+#: apps/Printer.cpp:341
+#, kde-format
+msgid ""
+"Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
+"number composed as: <weight><width><slant>"
+msgstr ""
+"要列印的字型，以「家族，風格」來表示，風格是以三個單一位元的十進位數字組成，"
+"分別為比重（weight）、寬度（width）與傾斜度（slant）"
+
+#: apps/Printer.cpp:344
+#, kde-format
+msgid "File containing list of fonts to print"
+msgstr "包含要列印的字型清單的檔案"
+
+#: apps/Printer.cpp:346
+#, kde-format
+msgid "Remove file containing list of fonts to print"
+msgstr "移除包含要列印的字型清單的檔案"
+
+#: apps/Viewer.cpp:48
+#, kde-format
+msgid "Open an existing font file"
+msgstr "開啟現存字型檔案"
+
+#: apps/Viewer.cpp:49
+#, kde-format
+msgid "Print font preview"
+msgstr "列印字型預覽"
+
+#: apps/Viewer.cpp:66
+#, kde-format
+msgid "Select Font to View"
+msgstr "選取要檢視的字型"
+
+#: apps/Viewer.cpp:109
+#, kde-format
+msgid "URL to open"
+msgstr "要開啟的網址"
+
+#: apps/Viewer.cpp:152
+#, kde-format
+msgid "Font Viewer"
+msgstr "字型檢視器"
+
+#: apps/Viewer.cpp:154
+#, kde-format
+msgid "Simple font viewer"
+msgstr "簡易字型檢視器"
+
+#: apps/Viewer.cpp:156
+#, kde-format
+msgid "(C) Craig Drummond, 2004-2007"
+msgstr "(C) Craig Drummond, 2004-2007"
+
+#: kcmfontinst/DuplicatesDialog.cpp:47
+#, kde-format
+msgid "Duplicate Fonts"
+msgstr "重複的字型"
+
+#: kcmfontinst/DuplicatesDialog.cpp:77
+#, kde-format
+msgid "Scanning for duplicate fonts. Please wait…"
+msgstr "掃描重複字型中，請稍後…"
+
+#: kcmfontinst/DuplicatesDialog.cpp:96
+#, kde-format
+msgid "No duplicate fonts found."
+msgstr "找不到重複的字型。"
+
+#: kcmfontinst/DuplicatesDialog.cpp:104
+#, kde-format
+msgid "Delete Marked Files"
+msgstr "刪除已標記的檔案"
+
+#: kcmfontinst/DuplicatesDialog.cpp:106
+#, kde-format
+msgid "%1 duplicate font found."
+msgid_plural "%1 duplicate fonts found."
+msgstr[0] "找到 %1 個重複的字型。"
+
+#: kcmfontinst/DuplicatesDialog.cpp:185
+#, kde-format
+msgid ""
+"Are you sure you wish to delete:\n"
+"%1"
+msgstr "您確定您要刪除 %1 嗎？"
+
+#: kcmfontinst/DuplicatesDialog.cpp:186
+#, kde-format
+msgid "Are you sure you wish to delete:"
+msgstr "您確定您要刪除："
+
+#: kcmfontinst/DuplicatesDialog.cpp:209
+#, kde-format
+msgid "Cancel font scan?"
+msgstr "要取消掃描字型嗎？"
+
+#: kcmfontinst/DuplicatesDialog.cpp:370
+#, kde-format
+msgid "Font/File"
+msgstr "字型/檔案"
+
+#: kcmfontinst/DuplicatesDialog.cpp:372
+#, kde-format
+msgid "Size"
+msgstr "大小"
+
+#: kcmfontinst/DuplicatesDialog.cpp:373
+#, kde-format
+msgid "Date"
+msgstr "日期"
+
+#: kcmfontinst/DuplicatesDialog.cpp:374
+#, kde-format
+msgid "Links To"
+msgstr "目標連結"
+
+#: kcmfontinst/DuplicatesDialog.cpp:387 kcmfontinst/FontList.cpp:1315
+#, kde-format
+msgid "Open in Font Viewer"
+msgstr "在字型檢視器中開啟"
+
+#: kcmfontinst/DuplicatesDialog.cpp:389
+#, kde-format
+msgid "Properties"
+msgstr "屬性"
+
+#: kcmfontinst/DuplicatesDialog.cpp:391
+#, kde-format
+msgid "Unmark for Deletion"
+msgstr "取消刪除標記"
+
+#: kcmfontinst/DuplicatesDialog.cpp:392
+#, kde-format
+msgid "Mark for Deletion"
+msgstr "標記刪除"
+
+#: kcmfontinst/DuplicatesDialog.cpp:488
+#, kde-format
+msgid "Open font in font viewer?"
+msgid_plural "Open all %1 fonts in font viewer?"
+msgstr[0] "要在字型檢視器中開啟所有的 %1 個字型嗎？"
+
+#: kcmfontinst/FontFilter.cpp:103
+#, kde-format
+msgid "Family"
+msgstr "家族"
+
+#: kcmfontinst/FontFilter.cpp:105
+#, kde-format
+msgid "Style"
+msgstr "風格"
+
+#: kcmfontinst/FontFilter.cpp:107
+#, kde-format
+msgid "Foundry"
+msgstr "鑄造"
+
+#: kcmfontinst/FontFilter.cpp:109
+#, kde-format
+msgid "FontConfig Match"
+msgstr "FontConfig 比對"
+
+#: kcmfontinst/FontFilter.cpp:111
+#, kde-format
+msgid "File Type"
+msgstr "檔案型態"
+
+#: kcmfontinst/FontFilter.cpp:113
+#, kde-format
+msgid "File Name"
+msgstr "檔案名稱"
+
+#: kcmfontinst/FontFilter.cpp:115
+#, kde-format
+msgid "File Location"
+msgstr "檔案位置"
+
+#: kcmfontinst/FontFilter.cpp:117
+#, kde-format
+msgid "Writing System"
+msgstr "寫入系統"
+
+#: kcmfontinst/FontFilter.cpp:129
+#, kde-format
+msgid "Set Criteria"
+msgstr "設定 Criteria"
+
+#: kcmfontinst/FontFilter.cpp:188
+#, kde-format
+msgid "Symbol/Other"
+msgstr "符號/其他"
+
+#: kcmfontinst/FontFilter.cpp:266 kcmfontinst/FontFilter.cpp:334
+#, kde-format
+msgid "Filter by %1…"
+msgstr "按 %1 篩選…"
+
+#: kcmfontinst/FontList.cpp:554
+#, kde-format
+msgid "Font"
+msgstr "字型"
+
+#: kcmfontinst/FontList.cpp:556
+#, kde-format
+msgid "Status"
+msgstr "狀態"
+
+#: kcmfontinst/FontList.cpp:570
+#, kde-format
+msgid ""
+"This column shows the status of the font family, and of the individual font "
+"styles."
+msgstr "這一行顯示此字型家族的狀態，以及屬於哪個字型風格。"
+
+#: kcmfontinst/FontList.cpp:677
+#, kde-format
+msgid ""
+"<p>This list shows your installed fonts. The fonts are grouped by family, "
+"and the number in square brackets represents the number of styles in which "
+"the family is available. e.g.</p><ul><li>Times [4]<ul><li>Regular</"
+"li><li>Bold</li><li>Bold Italic</li><li>Italic</li></ul></li></ul>"
+msgstr ""
+"<p>這份清單顯示您已安裝的字型。字型是以家族來分類，在方括號裡的數字是表示此家"
+"族可用的風格數目，例如，</p> <ul><li>Times [4]<ul><li>Regular</li><li>Bold</"
+"li><li>Bold Italic</li><li>Italic</li></ul></li></ul>"
+
+#: kcmfontinst/FontList.cpp:956 kcmfontinst/FontList.cpp:980
+#, kde-format
+msgid "…plus %1 more"
+msgstr "…多加 %1"
+
+#: kcmfontinst/FontList.cpp:1007
+#, kde-format
+msgid "%1 [%2]"
+msgstr "%1（%2）"
+
+#: kcmfontinst/FontList.cpp:1306
+#, kde-format
+msgid "Delete"
+msgstr "刪除"
+
+#: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:789
+#: kcmfontinst/KCmFontInst.cpp:1133 kcmfontinst/KCmFontInst.cpp:1157
+#, kde-format
+msgid "Enable"
+msgstr "開啟"
+
+#: kcmfontinst/FontList.cpp:1309 kcmfontinst/GroupList.cpp:790
+#: kcmfontinst/KCmFontInst.cpp:1134 kcmfontinst/KCmFontInst.cpp:1158
+#, kde-format
+msgid "Disable"
+msgstr "關閉"
+
+#: kcmfontinst/FontList.cpp:1313 kcmfontinst/GroupList.cpp:796
+#, kde-format
+msgid "Print…"
+msgstr "列印…"
+
+#: kcmfontinst/FontList.cpp:1317
+#, kde-format
+msgid "Reload"
+msgstr "重新載入"
+
+#: kcmfontinst/FontList.cpp:1716
+#, kde-format
+msgid "Open all %1 fonts in font viewer?"
+msgstr "要在字型檢視器中開啟所有的 %1 個字型嗎？"
+
+#: kcmfontinst/GroupList.cpp:59
+#, kde-format
+msgid "All Fonts"
+msgstr "所有字型"
+
+#: kcmfontinst/GroupList.cpp:62
+#, kde-format
+msgid "Personal Fonts"
+msgstr "個人字型"
+
+#: kcmfontinst/GroupList.cpp:65
+#, kde-format
+msgid "System Fonts"
+msgstr "系統字型"
+
+#: kcmfontinst/GroupList.cpp:68
+#, kde-format
+msgid "Unclassified"
+msgstr "未分類"
+
+#: kcmfontinst/GroupList.cpp:350
+#, kde-format
+msgid "Group"
+msgstr "群組"
+
+#: kcmfontinst/GroupList.cpp:535
+#, kde-format
+msgid ""
+"<p>Do you really want to remove '<b>%1</b>'?</p><p><i>This will only remove "
+"the group, and not the actual fonts.</i></p>"
+msgstr ""
+"<p>您確定要移除 <b>%1</b> 嗎？這只會移除群組，而不會移除實際的字型。</p>"
+
+#: kcmfontinst/GroupList.cpp:539
+#, kde-format
+msgid "Remove Group"
+msgstr "移除群組"
+
+#: kcmfontinst/GroupList.cpp:540 kcmfontinst/GroupList.cpp:787
+#, kde-format
+msgid "Remove"
+msgstr "移除"
+
+#: kcmfontinst/GroupList.cpp:540
+#, kde-format
+msgid "Remove group"
+msgstr "移除群組"
+
+#: kcmfontinst/GroupList.cpp:586
+#, kde-format
+msgid ""
+"<h3>Font Groups</h3><p>This list displays the font groups available on your "
+"system. There are 2 main types of font groups:<ul><li><b>Standard</b> are "
+"special groups used by the font manager.<ul>%1</ul></li><li><b>Custom</b> "
+"are groups created by you. To add a font family to one of these groups "
+"simply drag it from the list of fonts, and drop onto the desired group. To "
+"remove a family from the group, drag the font onto the \"All Fonts\" group.</"
+"li></ul></p>"
+msgstr ""
+"<h3>字型群組</h3><p>這份清單顯示您系統上可以使用的字型群組。有兩種主要的字型"
+"群組類型：<ul><li>「標準」是字型管理員所使用的特殊群組。<ul>%1</ul></li> "
+"<li>「自訂」是您自己建立的群組。要將一個字型家族加入這些群組，只要從字型清單"
+"中拖曳到這些群組中放下即可。要從群組中移除某個字型家族，只要將字型拖到「所有"
+"字型」群組中。</li></ul></p>"
+
+#: kcmfontinst/GroupList.cpp:594
+#, kde-format
+msgid ""
+"<li><i>All Fonts</i> contains all the fonts installed on your system.</"
+"li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
+"within a \"Custom\" group.</li>"
+msgstr ""
+"<li>「所有字型」包含了安裝在系統上的所有字型。</li> <li>「未分類」包含了尚未"
+"放進「自訂」群組的所有字型。</li>"
+
+#: kcmfontinst/GroupList.cpp:597
+#, kde-format
+msgid ""
+"<li><i>All Fonts</i> contains all the fonts installed on your system - both  "
+"\"System\" and \"Personal\".</li><li><i>System</i> contains all fonts that "
+"are installed system-wide (i.e. available to all users).</"
+"li><li><i>Personal</i> contains your personal fonts.</"
+"li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
+"within a \"Custom\" group.</li>"
+msgstr ""
+"<li>「所有字型」包含了安裝在您系統上的所有字型─包括「系統」與「個人」字型。</"
+"li> <li>「系統」包含了安裝在系統上供所有人使用的字型。</li> <li>「個人」則包"
+"含了您自己的字型。</li> <li>「未分類」包含了所有未放入「自訂」群組的字型。</"
+"li>"
+
+#: kcmfontinst/GroupList.cpp:699
+#, kde-format
+msgid "<qt>A group named <b>'%1'</b> already exists.</qt>"
+msgstr "<qt>已經有一個叫做 %1 的群組存在了。</qt>"
+
+#: kcmfontinst/GroupList.cpp:792
+#, kde-format
+msgid "Rename…"
+msgstr "重新命名…"
+
+#: kcmfontinst/GroupList.cpp:801
+#, kde-format
+msgid "Export…"
+msgstr "匯出…"
+
+#: kcmfontinst/GroupList.cpp:895
+#, kde-format
+msgid "Add to \"%1\"."
+msgstr "新增到 %1。"
+
+#: kcmfontinst/GroupList.cpp:897
+#, kde-format
+msgid "Remove from current group."
+msgstr "從目前的群組中移除。"
+
+#: kcmfontinst/GroupList.cpp:899
+#, kde-format
+msgid "Move to personal folder."
+msgstr "移到個人資料夾。"
+
+#: kcmfontinst/GroupList.cpp:901
+#, kde-format
+msgid "Move to system folder."
+msgstr "移到系統資料夾。"
+
+#: kcmfontinst/JobRunner.cpp:143
+#, kde-format
+msgid "Skip"
+msgstr "略過"
+
+#: kcmfontinst/JobRunner.cpp:146
+#, kde-format
+msgid "AutoSkip"
+msgstr "自動略過"
+
+#: kcmfontinst/JobRunner.cpp:191
+#, kde-format
+msgid "<h3>Cancel?</h3><p>Are you sure you wish to cancel?</p>"
+msgstr "<h3>取消？</h3><p>您確定您要取消嗎？</p>"
+
+#: kcmfontinst/JobRunner.cpp:203
+#, kde-format
+msgid ""
+"<h3>Finished</h3><p>Please note that any open applications will need to be "
+"restarted in order for any changes to be noticed.</p>"
+msgstr ""
+"<h3>已完成</h3><p>請注意，任何已開啟的應用程式將須要重新啟動才能反應出所做的"
+"變更。</p>"
+
+#: kcmfontinst/JobRunner.cpp:211
+#, kde-format
+msgid "Do not show this message again"
+msgstr "不要再顯示此訊息"
+
+#: kcmfontinst/JobRunner.cpp:321
+#, kde-format
+msgid "Installing"
+msgstr "安裝中"
+
+#: kcmfontinst/JobRunner.cpp:324
+#, kde-format
+msgid "Uninstalling"
+msgstr "解除安裝中"
+
+#: kcmfontinst/JobRunner.cpp:327 kcmfontinst/JobRunner.cpp:424
+#, kde-format
+msgid "Enabling"
+msgstr "開啟中"
+
+#: kcmfontinst/JobRunner.cpp:330 kcmfontinst/JobRunner.cpp:428
+#, kde-format
+msgid "Moving"
+msgstr "移動中"
+
+#: kcmfontinst/JobRunner.cpp:333
+#, kde-format
+msgid "Updating"
+msgstr "更新中"
+
+#: kcmfontinst/JobRunner.cpp:337
+#, kde-format
+msgid "Removing"
+msgstr "移除中"
+
+#: kcmfontinst/JobRunner.cpp:341
+#, kde-format
+msgid "Disabling"
+msgstr "關閉中"
+
+#: kcmfontinst/JobRunner.cpp:379
+#, kde-format
+msgid "Updating font configuration. Please wait…"
+msgstr "更新字型設定中，請稍候…"
+
+#: kcmfontinst/JobRunner.cpp:451
+#, kde-format
+msgid "Unable to start backend."
+msgstr "無法啟動後端介面。"
+
+#: kcmfontinst/JobRunner.cpp:460
+#, kde-format
+msgid "Backend died, but has been restarted. Please try again."
+msgstr "後端介面已經掛點又重開了。請再試一次。"
+
+#: kcmfontinst/JobRunner.cpp:621 kcmfontinst/JobRunner.cpp:627
+#, kde-format
+msgid "<h3>Error</h3>"
+msgstr "<h3>錯誤</h3>"
+
+#: kcmfontinst/JobRunner.cpp:693
+#, kde-format
+msgid "Failed to download <i>%1</i>"
+msgstr "下載 <i>%1</i> 時失敗"
+
+#: kcmfontinst/JobRunner.cpp:695
+#, kde-format
+msgid "System backend died. Please try again.<br><i>%1</i>"
+msgstr "系統後端介面已掛點。請再試一次。<br/><i>%1</i>"
+
+#: kcmfontinst/JobRunner.cpp:697
+#, kde-format
+msgid ""
+"<i>%1</i> is a bitmap font, and these have been disabled on your system."
+msgstr "<i>%1</i>是點陣字型，但是這些字型在您的系統上已被關閉。"
+
+#: kcmfontinst/JobRunner.cpp:699
+#, kde-format
+msgid ""
+"<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
+"system."
+msgstr "<i>%1</i> 包含字型 <b>%2</b>，而已經有此名稱的字型存在了。"
+
+#: kcmfontinst/JobRunner.cpp:701
+#, kde-format
+msgid "<i>%1</i> is not a font."
+msgstr "<i>%1</i> 不是字型。"
+
+#: kcmfontinst/JobRunner.cpp:703
+#, kde-format
+msgid "Could not remove all files associated with <i>%1</i>"
+msgstr "無法移除所有與 <i>%1</i> 相關的檔案"
+
+#: kcmfontinst/JobRunner.cpp:705
+#, kde-format
+msgid "Failed to start the system daemon.<br><i>%1</i>"
+msgstr "啟動系統守護程式失敗。<br/><i>%1</i>"
+
+#: kcmfontinst/JobRunner.cpp:708 kio/KioFonts.cpp:726
+#, kde-format
+msgid "<i>%1</i> already exists."
+msgstr "<i>%1</i> 已存在。"
+
+#: kcmfontinst/JobRunner.cpp:711
+#, kde-format
+msgid "<i>%1</i> does not exist."
+msgstr "<i>%1</i> 不存在。"
+
+#: kcmfontinst/JobRunner.cpp:713
+#, kde-format
+msgid "Permission denied.<br><i>%1</i>"
+msgstr "權限不足。<br/><i>%1</i>"
+
+#: kcmfontinst/JobRunner.cpp:715
+#, kde-format
+msgid "Unsupported action.<br><i>%1</i>"
+msgstr "不支援的動作。<br/><i>%1</i>"
+
+#: kcmfontinst/JobRunner.cpp:717
+#, kde-format
+msgid "Authentication failed.<br><i>%1</i>"
+msgstr "認證失敗。<br/><i>%1</i>"
+
+#: kcmfontinst/JobRunner.cpp:719
+#, kde-format
+msgid "Unexpected error while processing: <i>%1</i>"
+msgstr "處理時發生未預期的錯誤：<i>%1</i>"
+
+#: kcmfontinst/KCmFontInst.cpp:169
+#, kde-format
+msgid "Font Management"
+msgstr "字型管理"
+
+#: kcmfontinst/KCmFontInst.cpp:173
+#, kde-format
+msgid "(C) Craig Drummond, 2000 - 2009"
+msgstr "(C) Craig Drummond, 2000 - 2009"
+
+#: kcmfontinst/KCmFontInst.cpp:174
+#, kde-format
+msgid "Craig Drummond"
+msgstr "Craig Drummond"
+
+#: kcmfontinst/KCmFontInst.cpp:174
+#, kde-format
+msgid "Developer and maintainer"
+msgstr "開發者與維護者"
+
+#: kcmfontinst/KCmFontInst.cpp:202
+#, kde-format
+msgid "Create New Group…"
+msgstr "建立新群組"
+
+#: kcmfontinst/KCmFontInst.cpp:204
+#, kde-format
+msgid "Remove Group…"
+msgstr "移除群組"
+
+#: kcmfontinst/KCmFontInst.cpp:206
+#, kde-format
+msgid "Enable Fonts in Group…"
+msgstr "啟用群組中的字型…"
+
+#: kcmfontinst/KCmFontInst.cpp:208
+#, kde-format
+msgid "Disable Fonts in Group…"
+msgstr "停用群組中的字型…"
+
+#: kcmfontinst/KCmFontInst.cpp:233
+#, kde-format
+msgid "This displays a preview of the selected font."
+msgstr "這個會顯示所選取字型的預覽。"
+
+#: kcmfontinst/KCmFontInst.cpp:249
+#, kde-format
+msgid "Find Duplicates…"
+msgstr "搜尋重複項目…"
+
+#: kcmfontinst/KCmFontInst.cpp:249
+#, kde-format
+msgid "Scan for Duplicate Fonts…"
+msgstr "掃描重複的字型…"
+
+#: kcmfontinst/KCmFontInst.cpp:251
+#, kde-format
+msgid "Install from File…"
+msgstr "從檔案安裝…"
+
+#: kcmfontinst/KCmFontInst.cpp:251
+#, kde-format
+msgid "Install fonts from a local file"
+msgstr "從本機檔案安裝字型"
+
+#: kcmfontinst/KCmFontInst.cpp:252
+#, kde-format
+msgid "Get New Fonts…"
+msgstr "取得新字型…"
+
+#: kcmfontinst/KCmFontInst.cpp:253
+#, kde-format
+msgid "Download new fonts"
+msgstr "下載新字型"
+
+#: kcmfontinst/KCmFontInst.cpp:255
+#, kde-format
+msgid "Delete Selected Fonts…"
+msgstr "刪除選取的字型…"
+
+#: kcmfontinst/KCmFontInst.cpp:313
+#, kde-format
+msgid "Change Preview Text…"
+msgstr "改變預覽文字..."
+
+#: kcmfontinst/KCmFontInst.cpp:375
+#, kde-format
+msgid ""
+"<h1>Font Installer</h1><p> This module allows you to install TrueType, "
+"Type1, and Bitmap fonts.</p><p>You may also install fonts using Konqueror: "
+"type fonts:/ into Konqueror's location bar and this will display your "
+"installed fonts. To install a font, simply copy one into the folder.</p>"
+msgstr ""
+"<h1>字型安裝程式</h1><p>這個模組用來安裝 TrueType、Type1 以及Bitmap字型。</"
+"p><p>您也可以利用 Konqueror 來安裝 字型：在 Konqueror 的位址列鍵入 fonts:/，"
+"就會顯示出您目前已安裝的字型。要安裝新字型，只要複製一份到此資料夾即可。</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:382
+#, kde-format
+msgid ""
+"<h1>Font Installer</h1><p> This module allows you to install TrueType, "
+"Type1, and Bitmap fonts.</p><p>You may also install fonts using Konqueror: "
+"type fonts:/ into Konqueror's location bar and this will display your "
+"installed fonts. To install a font, simply copy it into the appropriate "
+"folder -  \"%1\" for fonts available to just yourself, or  \"%2\" for system-"
+"wide fonts (available to all).</p>"
+msgstr ""
+"<h1>字型安裝程式</h1><p>這個模組用來安裝 TrueType、Type1 以及 Bitmap 字型。</"
+"p><p>您也可以利用 Konqueror 來安裝字型：在 Konqueror 的位址列鍵入 fonts:/，就"
+"會顯示出您目前已安裝的字型。要安裝新字型，只要複製一份到適當的資料夾即可─"
+"\"%1\" 為個人字型，\"%2\" 為系統字型。</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:437
+#, kde-format
+msgid "Add Fonts"
+msgstr "加入字型"
+
+#: kcmfontinst/KCmFontInst.cpp:562
+#, kde-format
+msgid "Failed to save list of fonts to print."
+msgstr "儲存要列印的字型清單時失敗。"
+
+#: kcmfontinst/KCmFontInst.cpp:583
+#, kde-format
+msgid "Failed to start font printer."
+msgstr "開啟字型印表機時失敗。"
+
+#: kcmfontinst/KCmFontInst.cpp:590
+#, kde-format
+msgid ""
+"There are no printable fonts.\n"
+"You can only print non-bitmap and enabled fonts."
+msgstr ""
+"這裡沒有可供列印的字型。\n"
+"您只能列印非點陣與已開啟的字型。"
+
+#: kcmfontinst/KCmFontInst.cpp:592
+#, kde-format
+msgid "Cannot Print"
+msgstr "不能列印"
+
+#: kcmfontinst/KCmFontInst.cpp:607
+#, kde-format
+msgid "You did not select anything to delete."
+msgstr "您並沒有選擇任何要刪除的東西。"
+
+#: kcmfontinst/KCmFontInst.cpp:607
+#, kde-format
+msgid "Nothing to Delete"
+msgstr "沒有要刪除的東西"
+
+#: kcmfontinst/KCmFontInst.cpp:622
+#, kde-format
+msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
+msgstr "<p>您真的想要刪除</p> <p><b>%1</b> 嗎？</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:625
+#, kde-format
+msgid "Delete Font"
+msgstr "刪除字型"
+
+#: kcmfontinst/KCmFontInst.cpp:632
+#, kde-format
+msgid "Do you really want to delete this font?"
+msgid_plural "Do you really want to delete these %1 fonts?"
+msgstr[0] "您真的想要刪除這 %1 個項目嗎？"
+
+#: kcmfontinst/KCmFontInst.cpp:634
+#, kde-format
+msgid "Delete Fonts"
+msgstr "刪除字型"
+
+#: kcmfontinst/KCmFontInst.cpp:639
+#, kde-format
+msgid "Deleting font(s)…"
+msgstr "刪除字型中..."
+
+#: kcmfontinst/KCmFontInst.cpp:654
+#, kde-format
+msgid "You did not select anything to move."
+msgstr "您並沒有選擇任何要移動的東西。"
+
+#: kcmfontinst/KCmFontInst.cpp:654
+#, kde-format
+msgid "Nothing to Move"
+msgstr "沒有要移動的東西"
+
+#: kcmfontinst/KCmFontInst.cpp:664
+#, kde-format
+msgid ""
+"<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
+"%3</i>?</p>"
+msgstr ""
+"<p>您真的想要將</p><p>'<b>%1</b>'</p><p>從 <i>%2</i> 移動到 <i>%3</i> 嗎？</"
+"p>"
+
+#: kcmfontinst/KCmFontInst.cpp:669
+#, kde-format
+msgid "Move Font"
+msgstr "移動字型"
+
+#: kcmfontinst/KCmFontInst.cpp:670 kcmfontinst/KCmFontInst.cpp:682
+#, kde-format
+msgid "Move"
+msgstr "移動"
+
+#: kcmfontinst/KCmFontInst.cpp:675
+#, kde-format
+msgid ""
+"<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
+msgid_plural ""
+"<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?</p>"
+msgstr[0] "<p>您真的想要將這 %1 個字型從 <i>%2</i> 移動到 <i>%3</i> 嗎？</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:681
+#, kde-format
+msgid "Move Fonts"
+msgstr "移動字型"
+
+#: kcmfontinst/KCmFontInst.cpp:686
+#, kde-format
+msgid "Moving font(s)…"
+msgstr "移動字型中..."
+
+#: kcmfontinst/KCmFontInst.cpp:700
+#, kde-format
+msgid "Export Group"
+msgstr "匯出群組"
+
+#: kcmfontinst/KCmFontInst.cpp:726
+#, kde-format
+msgid "No files?"
+msgstr "沒有檔案？"
+
+#: kcmfontinst/KCmFontInst.cpp:729
+#, kde-format
+msgid "Failed to open %1 for writing"
+msgstr "開啟 %1 以寫入時失敗"
+
+#: kcmfontinst/KCmFontInst.cpp:749
+#, kde-format
+msgid "Create New Group"
+msgstr "建立新群組"
+
+#: kcmfontinst/KCmFontInst.cpp:749
+#, kde-format
+msgid "Name of new group:"
+msgstr "新群組名稱："
+
+#: kcmfontinst/KCmFontInst.cpp:749
+#, kde-format
+msgid "New Group"
+msgstr "新群組"
+
+#: kcmfontinst/KCmFontInst.cpp:777
+#, kde-format
+msgid "Preview Text"
+msgstr "預覽文字"
+
+#: kcmfontinst/KCmFontInst.cpp:777
+#, kde-format
+msgid "Please enter new text:"
+msgstr "請輸入新的文字："
+
+#: kcmfontinst/KCmFontInst.cpp:829
+#, kde-format
+msgid "Scanning font list…"
+msgstr "掃描字型清單…"
+
+#: kcmfontinst/KCmFontInst.cpp:888
+#, kde-format
+msgid "No fonts"
+msgstr "沒有字型"
+
+#: kcmfontinst/KCmFontInst.cpp:893
+#, kde-format
+msgid "1 Font"
+msgid_plural "%1 Fonts"
+msgstr[0] "%1 個字型"
+
+#: kcmfontinst/KCmFontInst.cpp:902
+#, kde-format
+msgid ""
+"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
+"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Partially "
+"enabled:</td><td>%3</td></tr><tr><td align=\"right\">Total:</td><td>%4</td></"
+"tr></table>"
+msgstr ""
+"<table><tr><td align=\"right\">已開啟：</td><td>%1</td></tr><tr><td align="
+"\"right\">已關閉：</td><td>%2</td></tr><tr><td align=\"right\">部份開啟：</"
+"td><td>%3</td></tr><tr><td align=\"right\">總計：</td><td>%4</td></tr></"
+"table>"
+
+#: kcmfontinst/KCmFontInst.cpp:912
+#, kde-format
+msgid ""
+"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
+"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Total:</"
+"td><td>%3</td></tr></table>"
+msgstr ""
+"<table><tr><td align=\"right\">已開啟：</td><td>%1</td></tr><tr><td align="
+"\"right\">已關閉：</td><td>%2</td></tr><tr><td align=\"right\">總計：</"
+"td><td>%3</td></tr></table>"
+
+#: kcmfontinst/KCmFontInst.cpp:989
+#, kde-format
+msgid "Looking for any associated files…"
+msgstr "尋找任何相關的檔案…"
+
+#: kcmfontinst/KCmFontInst.cpp:993
+#, kde-format
+msgid "Scanning Files…"
+msgstr "掃描檔案中…"
+
+#: kcmfontinst/KCmFontInst.cpp:994
+#, kde-format
+msgid "Looking for additional files to install…"
+msgstr "尋找額外要安裝的檔案…"
+
+#: kcmfontinst/KCmFontInst.cpp:1009
+#, kde-format
+msgid "Looking for files associated with %1"
+msgstr "尋找與 %1 相關的檔案"
+
+#: kcmfontinst/KCmFontInst.cpp:1037
+#, kde-format
+msgid "Installing font(s)…"
+msgstr "正在安裝字型…"
+
+#: kcmfontinst/KCmFontInst.cpp:1102
+#, kde-format
+msgid "You did not select anything to enable."
+msgstr "您並沒有選擇任何要開啟的東西。"
+
+#: kcmfontinst/KCmFontInst.cpp:1102
+#, kde-format
+msgid "You did not select anything to disable."
+msgstr "您並沒有選擇任何要關閉的東西。"
+
+#: kcmfontinst/KCmFontInst.cpp:1103
+#, kde-format
+msgid "Nothing to Enable"
+msgstr "沒有要開啟的東西"
+
+#: kcmfontinst/KCmFontInst.cpp:1103
+#, kde-format
+msgid "Nothing to Disable"
+msgstr "沒有要關閉的東西"
+
+#: kcmfontinst/KCmFontInst.cpp:1120
+#, kde-format
+msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
+msgstr "<qt>您真的想要開啟 <b>'%1'</b> 嗎？</qt>"
+
+#: kcmfontinst/KCmFontInst.cpp:1122
+#, kde-format
+msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
+msgstr "<qt>您真的想要關閉 <b>'%1'</b> 嗎？</qt>"
+
+#: kcmfontinst/KCmFontInst.cpp:1124
+#, kde-format
+msgid ""
+"<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
+"'<b>%2</b>'?</p>"
+msgstr "<qt>您真的想要開啟 <b>%2</b> 群組中的 <b>'%1'</b> 嗎？</qt>"
+
+#: kcmfontinst/KCmFontInst.cpp:1128
+#, kde-format
+msgid ""
+"<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
+"'<b>%2</b>'?</p>"
+msgstr "<qt>您真的想要關閉 <b>%2</b> 群組中的 <b>'%1'</b> 嗎？</qt>"
+
+#: kcmfontinst/KCmFontInst.cpp:1132 kcmfontinst/KCmFontInst.cpp:1133
+#, kde-format
+msgid "Enable Font"
+msgstr "開啟字型"
+
+#: kcmfontinst/KCmFontInst.cpp:1132 kcmfontinst/KCmFontInst.cpp:1134
+#, kde-format
+msgid "Disable Font"
+msgstr "關閉字型"
+
+#: kcmfontinst/KCmFontInst.cpp:1139
+#, kde-format
+msgid "Do you really want to enable this font?"
+msgid_plural "Do you really want to enable these %1 fonts?"
+msgstr[0] "您真的想要開啟這 %1 個字型嗎？"
+
+#: kcmfontinst/KCmFontInst.cpp:1142
+#, kde-format
+msgid "Do you really want to disable this font?"
+msgid_plural "Do you really want to disable these %1 fonts?"
+msgstr[0] "您真的想要關閉這 %1 個字型嗎？"
+
+#: kcmfontinst/KCmFontInst.cpp:1145
+#, kde-format
+msgid ""
+"<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
+"</p>"
+msgid_plural ""
+"<p>Do you really want to enable these %1 fonts contained within group '<b>"
+"%2</b>'?</p>"
+msgstr[0] "<p>您真的想要開啟群組 <b>%2</b> 中的這 %1 個字型嗎？</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:1150
+#, kde-format
+msgid ""
+"<p>Do you really want to disable this font contained within group '<b>%2</"
+"b>'?</p>"
+msgid_plural ""
+"<p>Do you really want to disable these %1 fonts contained within group '<b>"
+"%2</b>'?</p>"
+msgstr[0] "<p>您真的想要關閉群組 <b>%2</b> 中的這 %1 個字型嗎？</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:1156 kcmfontinst/KCmFontInst.cpp:1157
+#, kde-format
+msgid "Enable Fonts"
+msgstr "開啟字型"
+
+#: kcmfontinst/KCmFontInst.cpp:1156 kcmfontinst/KCmFontInst.cpp:1158
+#, kde-format
+msgid "Disable Fonts"
+msgstr "關閉字型"
+
+#: kcmfontinst/KCmFontInst.cpp:1164
+#, kde-format
+msgid "Enabling font(s)…"
+msgstr "正在啟用字型…"
+
+#: kcmfontinst/KCmFontInst.cpp:1166
+#, kde-format
+msgid "Disabling font(s)…"
+msgstr "正在停用字型中…"
+
+#: kcmfontinst/PrintDialog.cpp:21
+#, kde-format
+msgid "Print Font Samples"
+msgstr "列印字型樣本"
+
+#: kcmfontinst/PrintDialog.cpp:37
+#, kde-format
+msgid "Select size to print font:"
+msgstr "選擇要列印字型的大小："
+
+#: kcmfontinst/PrintDialog.cpp:41
+#, kde-format
+msgid "Waterfall"
+msgstr "瀑布"
+
+#: kcmfontinst/PrintDialog.cpp:42
+#, kde-format
+msgid "12pt"
+msgstr "12pt"
+
+#: kcmfontinst/PrintDialog.cpp:43
+#, kde-format
+msgid "18pt"
+msgstr "18pt"
+
+#: kcmfontinst/PrintDialog.cpp:44
+#, kde-format
+msgid "24pt"
+msgstr "24pt"
+
+#: kcmfontinst/PrintDialog.cpp:45
+#, kde-format
+msgid "36pt"
+msgstr "36pt"
+
+#: kcmfontinst/PrintDialog.cpp:46
+#, kde-format
+msgid "48pt"
+msgstr "48pt"
+
+#: kio/KioFonts.cpp:208
+#, kde-format
+msgid "Can only install fonts to either \"%1\" or \"%2\"."
+msgstr "無法安裝字型到 %1 或 %2 中。"
+
+#: kio/KioFonts.cpp:211
+#, kde-format
+msgid ""
+"You cannot install a fonts package directly.\n"
+"Please extract %1, and install the components individually."
+msgstr ""
+"您無法直接安裝字型軟體包。\n"
+"請展開 %1 並個別安裝其元件。"
+
+#: kio/KioFonts.cpp:439
+#, kde-format
+msgid "Cannot copy fonts"
+msgstr "無法複製字型"
+
+#: kio/KioFonts.cpp:444
+#, kde-format
+msgid "Cannot move fonts"
+msgstr "無法移動字型"
+
+#: kio/KioFonts.cpp:455
+#, kde-format
+msgid "Only fonts may be deleted."
+msgstr "只有字型可以被刪除。"
+
+#: kio/KioFonts.cpp:457
+#, kde-format
+msgid "Can only remove fonts from either \"%1\" or \"%2\"."
+msgstr "只能從 %1 或 %2 移除字型。"
+
+#: kio/KioFonts.cpp:484
+#, kde-format
+msgid "Please specify \"%1\" or \"%2\"."
+msgstr "請指定 \"%1\" 或 \"%2\"。"
+
+#: kio/KioFonts.cpp:504
+#, kde-format
+msgid "No special methods supported."
+msgstr "沒有支援特殊方法。"
+
+#: kio/KioFonts.cpp:578
+#, kde-format
+msgid "Fonts"
+msgstr "字型"
+
+#: kio/KioFonts.cpp:707
+#, kde-format
+msgid "Failed to start the system daemon"
+msgstr "啟動系統守護程式失敗"
+
+#: kio/KioFonts.cpp:710
+#, kde-format
+msgid "Backend died"
+msgstr "後端介面後已掛點"
+
+#: kio/KioFonts.cpp:713
+#, kde-format
+msgid "%1 is a bitmap font, and these have been disabled on your system."
+msgstr "%1 是點陣字型，但是這些字型在您的系統上已被關閉。"
+
+#: kio/KioFonts.cpp:716
+#, kde-format
+msgid ""
+"%1 contains the font <b>%2</b>, which is already installed on your system."
+msgstr "%1 包含字型 <b>%2</b>，而已經有此名稱的字型存在了。"
+
+#: kio/KioFonts.cpp:719
+#, kde-format
+msgid "%1 is not a font."
+msgstr "%1 不是字型。"
+
+#: kio/KioFonts.cpp:722
+#, kde-format
+msgid "Could not remove all files associated with %1"
+msgstr "無法移除所有與 %1 相關的檔案"
+
+#: lib/Fc.cpp:407 lib/KfiConstants.h:107
+#, kde-format
+msgid "Unknown"
+msgstr "未知"
+
+#: lib/FcEngine.cpp:858
+#, kde-format
+msgctxt "First letter of the alphabet (in upper then lower case)"
+msgid "Aa"
+msgstr "Aa"
+
+#: lib/FcEngine.cpp:860
+#, kde-format
+msgctxt ""
+"All letters of the alphabet (in upper/lower case pairs), followed by numbers"
+msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
+msgstr "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
+
+#: lib/FcEngine.cpp:1022
+#, kde-format
+msgid "No characters found."
+msgstr "找不到字元。"
+
+#: lib/FcEngine.cpp:1060
+#, kde-format
+msgctxt "A sentence that uses all of the letters of the alphabet"
+msgid "The quick brown fox jumps over the lazy dog"
+msgstr "The Quick Brown Fox 跳過那隻懶狗"
+
+#: lib/FcEngine.cpp:1065
+#, kde-format
+msgctxt "All of the letters of the alphabet, uppercase"
+msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+msgstr "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+#: lib/FcEngine.cpp:1070
+#, kde-format
+msgctxt "All of the letters of the alphabet, lowercase"
+msgid "abcdefghijklmnopqrstuvwxyz"
+msgstr "abcdefghijklmnopqrstuvwxyz"
+
+#: lib/FcEngine.cpp:1075
+#, kde-format
+msgctxt "Numbers and characters"
+msgid "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
+msgstr "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
+
+#: lib/FcEngine.cpp:1473
+#, kde-format
+msgid "ERROR: Could not determine font's name."
+msgstr "錯誤：無法讀取字型名稱。"
+
+#: lib/FcEngine.cpp:1476
+#, kde-format
+msgid "%2 [1 pixel]"
+msgid_plural "%2 [%1 pixels]"
+msgstr[0] "%2 [%1 像素]"
+
+#: lib/KfiConstants.h:22
+msgid "Personal"
+msgstr "個人"
+
+#: lib/KfiConstants.h:23
+msgid "System"
+msgstr "系統"
+
+#: lib/KfiConstants.h:24
+msgid "All"
+msgstr "全部"
+
+#: lib/KfiConstants.h:38
+msgid "Administrator"
+msgstr "管理員"
+
+#: lib/KfiConstants.h:74
+msgid "Thin"
+msgstr "細"
+
+#: lib/KfiConstants.h:75
+msgid "Extra Light"
+msgstr "特別亮"
+
+#: lib/KfiConstants.h:76
+msgid "Ultra Light"
+msgstr "無敵亮"
+
+#: lib/KfiConstants.h:77
+msgid "Light"
+msgstr "亮"
+
+#: lib/KfiConstants.h:78
+msgid "Regular"
+msgstr "正規"
+
+#: lib/KfiConstants.h:79 lib/KfiConstants.h:97
+msgid "Normal"
+msgstr "正常"
+
+#: lib/KfiConstants.h:80
+msgid "Medium"
+msgstr "中"
+
+#: lib/KfiConstants.h:81
+msgid "Demi Bold"
+msgstr "半粗體"
+
+#: lib/KfiConstants.h:82
+msgid "Semi Bold"
+msgstr "半粗體"
+
+#: lib/KfiConstants.h:83
+msgid "Bold"
+msgstr "粗體"
+
+#: lib/KfiConstants.h:84
+msgid "Extra Bold"
+msgstr "特別粗"
+
+#: lib/KfiConstants.h:85
+msgid "Ultra Bold"
+msgstr "無敵粗"
+
+#: lib/KfiConstants.h:86
+msgid "Black"
+msgstr "黑"
+
+#: lib/KfiConstants.h:87
+msgid "Heavy"
+msgstr "重"
+
+#: lib/KfiConstants.h:89
+msgid "Roman"
+msgstr "Roman"
+
+#: lib/KfiConstants.h:90
+msgid "Italic"
+msgstr "斜體"
+
+#: lib/KfiConstants.h:91
+msgid "Oblique"
+msgstr "傾斜體"
+
+#: lib/KfiConstants.h:93
+msgid "Ultra Condensed"
+msgstr "無敵濃縮"
+
+#: lib/KfiConstants.h:94
+msgid "Extra Condensed"
+msgstr "特別濃縮"
+
+#: lib/KfiConstants.h:95
+msgid "Condensed"
+msgstr "濃縮"
+
+#: lib/KfiConstants.h:96
+msgid "Semi Condensed"
+msgstr "半濃縮"
+
+#: lib/KfiConstants.h:98
+msgid "Semi Expanded"
+msgstr "半擴展"
+
+#: lib/KfiConstants.h:99
+msgid "Expanded"
+msgstr "擴展"
+
+#: lib/KfiConstants.h:100
+msgid "Extra Expanded"
+msgstr "特別擴展"
+
+#: lib/KfiConstants.h:101
+msgid "Ultra Expanded"
+msgstr "無敵擴展"
+
+#: lib/KfiConstants.h:103
+msgid "Monospaced"
+msgstr "單間隔"
+
+#: lib/KfiConstants.h:104
+msgid "Charcell"
+msgstr "Charcell"
+
+#: lib/KfiConstants.h:105
+msgid "Proportional"
+msgstr "按比例"
+
+#: viewpart/CharTip.cpp:42
+#, kde-format
+msgid "Other, Control"
+msgstr "其他，控制"
+
+#: viewpart/CharTip.cpp:44
+#, kde-format
+msgid "Other, Format"
+msgstr "其他，格式"
+
+#: viewpart/CharTip.cpp:46
+#, kde-format
+msgid "Other, Not Assigned"
+msgstr "其他，未指定"
+
+#: viewpart/CharTip.cpp:48
+#, kde-format
+msgid "Other, Private Use"
+msgstr "其他，個人使用"
+
+#: viewpart/CharTip.cpp:50
+#, kde-format
+msgid "Other, Surrogate"
+msgstr "其他，代理"
+
+#: viewpart/CharTip.cpp:52
+#, kde-format
+msgid "Letter, Lowercase"
+msgstr "字母，小寫"
+
+#: viewpart/CharTip.cpp:54
+#, kde-format
+msgid "Letter, Modifier"
+msgstr "字母，修飾"
+
+#: viewpart/CharTip.cpp:56
+#, kde-format
+msgid "Letter, Other"
+msgstr "字母，其他"
+
+#: viewpart/CharTip.cpp:58
+#, kde-format
+msgid "Letter, Titlecase"
+msgstr "字母，標題"
+
+#: viewpart/CharTip.cpp:60
+#, kde-format
+msgid "Letter, Uppercase"
+msgstr "字母，大寫"
+
+#: viewpart/CharTip.cpp:62
+#, kde-format
+msgid "Mark, Spacing Combining"
+msgstr "標記，間隔組合"
+
+#: viewpart/CharTip.cpp:64
+#, kde-format
+msgid "Mark, Enclosing"
+msgstr "標記，封裝"
+
+#: viewpart/CharTip.cpp:66
+#, kde-format
+msgid "Mark, Non-Spacing"
+msgstr "標記，無間隔"
+
+#: viewpart/CharTip.cpp:68
+#, kde-format
+msgid "Number, Decimal Digit"
+msgstr "數字，十進位數字"
+
+#: viewpart/CharTip.cpp:70
+#, kde-format
+msgid "Number, Letter"
+msgstr "數字，字母"
+
+#: viewpart/CharTip.cpp:72
+#, kde-format
+msgid "Number, Other"
+msgstr "數字，其他"
+
+#: viewpart/CharTip.cpp:74
+#, kde-format
+msgid "Punctuation, Connector"
+msgstr "標點，連接器"
+
+#: viewpart/CharTip.cpp:76
+#, kde-format
+msgid "Punctuation, Dash"
+msgstr "標點，破折號"
+
+#: viewpart/CharTip.cpp:78
+#, kde-format
+msgid "Punctuation, Close"
+msgstr "標點，關閉"
+
+#: viewpart/CharTip.cpp:80
+#, kde-format
+msgid "Punctuation, Final Quote"
+msgstr "標點，結束引號"
+
+#: viewpart/CharTip.cpp:82
+#, kde-format
+msgid "Punctuation, Initial Quote"
+msgstr "標點，開始引號"
+
+#: viewpart/CharTip.cpp:84
+#, kde-format
+msgid "Punctuation, Other"
+msgstr "標點，其他"
+
+#: viewpart/CharTip.cpp:86
+#, kde-format
+msgid "Punctuation, Open"
+msgstr "標點，開啟"
+
+#: viewpart/CharTip.cpp:88
+#, kde-format
+msgid "Symbol, Currency"
+msgstr "符號，貨幣"
+
+#: viewpart/CharTip.cpp:90
+#, kde-format
+msgid "Symbol, Modifier"
+msgstr "符號，修飾"
+
+#: viewpart/CharTip.cpp:92
+#, kde-format
+msgid "Symbol, Math"
+msgstr "符號，數學"
+
+#: viewpart/CharTip.cpp:94
+#, kde-format
+msgid "Symbol, Other"
+msgstr "符號，其他"
+
+#: viewpart/CharTip.cpp:96
+#, kde-format
+msgid "Separator, Line"
+msgstr "分隔器，線條"
+
+#: viewpart/CharTip.cpp:98
+#, kde-format
+msgid "Separator, Paragraph"
+msgstr "分隔器，段落"
+
+#: viewpart/CharTip.cpp:100
+#, kde-format
+msgid "Separator, Space"
+msgstr "分隔器，空白"
+
+#: viewpart/CharTip.cpp:152
+#, kde-format
+msgid "Category"
+msgstr "類別"
+
+#: viewpart/CharTip.cpp:153
+#, kde-format
+msgid "UCS-4"
+msgstr "UCS-4"
+
+#: viewpart/CharTip.cpp:156
+#, kde-format
+msgid "UTF-16"
+msgstr "UTF-16"
+
+#: viewpart/CharTip.cpp:167
+#, kde-format
+msgid "UTF-8"
+msgstr "UTF-8"
+
+#: viewpart/CharTip.cpp:184
+#, kde-format
+msgid "XML Decimal Entity"
+msgstr "XML 十進位實體"
+
+#: viewpart/FontViewPart.cpp:85
+#, kde-format
+msgid "Show Face:"
+msgstr "顯示表面："
+
+#: viewpart/FontViewPart.cpp:88
+#, kde-format
+msgid "Install…"
+msgstr "安裝中…"
+
+#: viewpart/FontViewPart.cpp:109
+#, kde-format
+msgid "Change Text…"
+msgstr "改變文字…"
+
+#: viewpart/FontViewPart.cpp:333
+#, kde-format
+msgid "Could not read font."
+msgstr "無法讀取字型。"
+
+#: viewpart/FontViewPart.cpp:385
+#, kde-format
+msgid "Preview String"
+msgstr "預覽字串"
+
+#: viewpart/FontViewPart.cpp:385
+#, kde-format
+msgid "Please enter new string:"
+msgstr "請輸入新的字串:"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: viewpart/kfontviewpart.rc:4
+#, kde-format
+msgid "&Main Toolbar"
+msgstr "主工具列(&M)"
+
+#: viewpart/PreviewSelectAction.cpp:13
+#, kde-format
+msgid "Preview Type"
+msgstr "預覽型態"
+
+#: viewpart/PreviewSelectAction.cpp:31
+#, kde-format
+msgid "Standard Preview"
+msgstr "標準預覽"
+
+#: viewpart/PreviewSelectAction.cpp:32
+#, kde-format
+msgid "All Characters"
+msgstr "全部字元"
+
+#: viewpart/PreviewSelectAction.cpp:40
+#, kde-format
+msgid "Unicode Block: %1"
+msgstr "Unicode 區塊：%1"
+
+#: viewpart/PreviewSelectAction.cpp:44
+#, kde-format
+msgid "Unicode Script: %1"
+msgstr "Unicode 文稿：%1"
+
+#: viewpart/UnicodeBlocks.h:17
+msgid "Basic Latin"
+msgstr "基本拉丁"
+
+#: viewpart/UnicodeBlocks.h:18
+msgid "Latin-1 Supplement"
+msgstr "拉丁-1 補集"
+
+#: viewpart/UnicodeBlocks.h:19
+msgid "Latin Extended-A"
+msgstr "拉丁延伸-A"
+
+#: viewpart/UnicodeBlocks.h:20
+msgid "Latin Extended-B"
+msgstr "拉丁延伸-B"
+
+#: viewpart/UnicodeBlocks.h:21
+msgid "IPA Extensions"
+msgstr "IPA 延伸"
+
+#: viewpart/UnicodeBlocks.h:22
+msgid "Spacing Modifier Letters"
+msgstr "空間改變字母"
+
+#: viewpart/UnicodeBlocks.h:23
+msgid "Combining Diacritical Marks"
+msgstr "組合讀音符號"
+
+#: viewpart/UnicodeBlocks.h:24
+msgid "Greek and Coptic"
+msgstr "希臘與哥普特"
+
+#: viewpart/UnicodeBlocks.h:25 viewpart/UnicodeScripts.h:29
+msgid "Cyrillic"
+msgstr "斯拉夫"
+
+#: viewpart/UnicodeBlocks.h:26
+msgid "Cyrillic Supplement"
+msgstr "斯拉夫補集"
+
+#: viewpart/UnicodeBlocks.h:27 viewpart/UnicodeScripts.h:16
+msgid "Armenian"
+msgstr "亞美尼亞"
+
+#: viewpart/UnicodeBlocks.h:28 viewpart/UnicodeScripts.h:42
+msgid "Hebrew"
+msgstr "希伯來"
+
+#: viewpart/UnicodeBlocks.h:29 viewpart/UnicodeScripts.h:15
+msgid "Arabic"
+msgstr "阿拉伯"
+
+#: viewpart/UnicodeBlocks.h:30 viewpart/UnicodeScripts.h:69
+msgid "Syriac"
+msgstr "敘利亞"
+
+#: viewpart/UnicodeBlocks.h:31
+msgid "Arabic Supplement"
+msgstr "阿拉伯補集"
+
+#: viewpart/UnicodeBlocks.h:32 viewpart/UnicodeScripts.h:75
+msgid "Thaana"
+msgstr "Thaana"
+
+#: viewpart/UnicodeBlocks.h:33
+msgid "NKo"
+msgstr "NKo"
+
+#: viewpart/UnicodeBlocks.h:34 viewpart/UnicodeScripts.h:31
+msgid "Devanagari"
+msgstr "Devanagari"
+
+#: viewpart/UnicodeBlocks.h:35 viewpart/UnicodeScripts.h:18
+msgid "Bengali"
+msgstr "孟加拉"
+
+#: viewpart/UnicodeBlocks.h:36 viewpart/UnicodeScripts.h:38
+msgid "Gurmukhi"
+msgstr "果魯穆奇"
+
+#: viewpart/UnicodeBlocks.h:37 viewpart/UnicodeScripts.h:37
+msgid "Gujarati"
+msgstr "古吉拉特"
+
+#: viewpart/UnicodeBlocks.h:38 viewpart/UnicodeScripts.h:61
+msgid "Oriya"
+msgstr "奧里雅"
+
+#: viewpart/UnicodeBlocks.h:39 viewpart/UnicodeScripts.h:73
+msgid "Tamil"
+msgstr "塔米爾"
+
+#: viewpart/UnicodeBlocks.h:40 viewpart/UnicodeScripts.h:74
+msgid "Telugu"
+msgstr "Telugu"
+
+#: viewpart/UnicodeBlocks.h:41 viewpart/UnicodeScripts.h:45
+msgid "Kannada"
+msgstr "Kannada"
+
+#: viewpart/UnicodeBlocks.h:42 viewpart/UnicodeScripts.h:53
+msgid "Malayalam"
+msgstr "Malayalam"
+
+#: viewpart/UnicodeBlocks.h:43 viewpart/UnicodeScripts.h:67
+msgid "Sinhala"
+msgstr "錫蘭"
+
+#: viewpart/UnicodeBlocks.h:44 viewpart/UnicodeScripts.h:76
+msgid "Thai"
+msgstr "泰語"
+
+#: viewpart/UnicodeBlocks.h:45 viewpart/UnicodeScripts.h:49
+msgid "Lao"
+msgstr "寮國語"
+
+#: viewpart/UnicodeBlocks.h:46 viewpart/UnicodeScripts.h:77
+msgid "Tibetan"
+msgstr "藏語"
+
+#: viewpart/UnicodeBlocks.h:47 viewpart/UnicodeScripts.h:55
+msgid "Myanmar"
+msgstr "Myanmar"
+
+#: viewpart/UnicodeBlocks.h:48 viewpart/UnicodeScripts.h:33
+msgid "Georgian"
+msgstr "喬治亞"
+
+#: viewpart/UnicodeBlocks.h:49
+msgid "Hangul Jamo"
+msgstr "韓國"
+
+#: viewpart/UnicodeBlocks.h:50 viewpart/UnicodeScripts.h:32
+msgid "Ethiopic"
+msgstr "衣索匹亞"
+
+#: viewpart/UnicodeBlocks.h:51
+msgid "Ethiopic Supplement"
+msgstr "衣索匹亞補集"
+
+#: viewpart/UnicodeBlocks.h:52 viewpart/UnicodeScripts.h:24
+msgid "Cherokee"
+msgstr "查拉幾"
+
+#: viewpart/UnicodeBlocks.h:53
+msgid "Unified Canadian Aboriginal Syllabics"
+msgstr "統一加拿大原住民音節"
+
+#: viewpart/UnicodeBlocks.h:54 viewpart/UnicodeScripts.h:58
+msgid "Ogham"
+msgstr "歐甘"
+
+#: viewpart/UnicodeBlocks.h:55 viewpart/UnicodeScripts.h:65
+msgid "Runic"
+msgstr "古北歐文"
+
+#: viewpart/UnicodeBlocks.h:56 viewpart/UnicodeScripts.h:70
+msgid "Tagalog"
+msgstr "塔加拉"
+
+#: viewpart/UnicodeBlocks.h:57 viewpart/UnicodeScripts.h:41
+msgid "Hanunoo"
+msgstr "Hanunoo"
+
+#: viewpart/UnicodeBlocks.h:58 viewpart/UnicodeScripts.h:22
+msgid "Buhid"
+msgstr "Buhid"
+
+#: viewpart/UnicodeBlocks.h:59 viewpart/UnicodeScripts.h:71
+msgid "Tagbanwa"
+msgstr "Tagbanwa"
+
+#: viewpart/UnicodeBlocks.h:60 viewpart/UnicodeScripts.h:48
+msgid "Khmer"
+msgstr "高棉"
+
+#: viewpart/UnicodeBlocks.h:61 viewpart/UnicodeScripts.h:54
+msgid "Mongolian"
+msgstr "蒙古"
+
+#: viewpart/UnicodeBlocks.h:62 viewpart/UnicodeScripts.h:51
+msgid "Limbu"
+msgstr "Limbu"
+
+#: viewpart/UnicodeBlocks.h:63 viewpart/UnicodeScripts.h:72
+msgid "Tai Le"
+msgstr "Tai Le"
+
+#: viewpart/UnicodeBlocks.h:64 viewpart/UnicodeScripts.h:56
+msgid "New Tai Lue"
+msgstr "New Tai Lue"
+
+#: viewpart/UnicodeBlocks.h:65
+msgid "Khmer Symbols"
+msgstr "高棉語符號"
+
+#: viewpart/UnicodeBlocks.h:66 viewpart/UnicodeScripts.h:21
+msgid "Buginese"
+msgstr "Buginese"
+
+#: viewpart/UnicodeBlocks.h:67 viewpart/UnicodeScripts.h:17
+msgid "Balinese"
+msgstr "荅里島"
+
+#: viewpart/UnicodeBlocks.h:68
+msgid "Phonetic Extensions"
+msgstr "音標延伸"
+
+#: viewpart/UnicodeBlocks.h:69
+msgid "Phonetic Extensions Supplement"
+msgstr "音標延伸補集"
+
+#: viewpart/UnicodeBlocks.h:70
+msgid "Combining Diacritical Marks Supplement"
+msgstr "組合區別標記補集"
+
+#: viewpart/UnicodeBlocks.h:71
+msgid "Latin Extended Additional"
+msgstr "拉丁額外延伸"
+
+#: viewpart/UnicodeBlocks.h:72
+msgid "Greek Extended"
+msgstr "希臘延伸"
+
+#: viewpart/UnicodeBlocks.h:73
+msgid "General Punctuation"
+msgstr "一般發音"
+
+#: viewpart/UnicodeBlocks.h:74
+msgid "Superscripts and Subscripts"
+msgstr "上標與下標"
+
+#: viewpart/UnicodeBlocks.h:75
+msgid "Currency Symbols"
+msgstr "貨幣符號"
+
+#: viewpart/UnicodeBlocks.h:76
+msgid "Combining Diacritical Marks for Symbols"
+msgstr "符號的組合區別標記"
+
+#: viewpart/UnicodeBlocks.h:77
+msgid "Letter-Like Symbols"
+msgstr "類字母符號"
+
+#: viewpart/UnicodeBlocks.h:78
+msgid "Number Forms"
+msgstr "數字表單"
+
+#: viewpart/UnicodeBlocks.h:79
+msgid "Arrows"
+msgstr "箭號"
+
+#: viewpart/UnicodeBlocks.h:80
+msgid "Mathematical Operators"
+msgstr "數學運算子"
+
+#: viewpart/UnicodeBlocks.h:81
+msgid "Miscellaneous Technical"
+msgstr "雜項技術"
+
+#: viewpart/UnicodeBlocks.h:82
+msgid "Control Pictures"
+msgstr "控制圖片"
+
+#: viewpart/UnicodeBlocks.h:83
+msgid "Optical Character Recognition"
+msgstr "光學文字辨識（OCR）"
+
+#: viewpart/UnicodeBlocks.h:84
+msgid "Enclosed Alphanumerics"
+msgstr "封閉式字母與數字"
+
+#: viewpart/UnicodeBlocks.h:85
+msgid "Box Drawing"
+msgstr "繪畫盒"
+
+#: viewpart/UnicodeBlocks.h:86
+msgid "Block Elements"
+msgstr "區塊元素"
+
+#: viewpart/UnicodeBlocks.h:87
+msgid "Geometric Shapes"
+msgstr "幾何形狀"
+
+#: viewpart/UnicodeBlocks.h:88
+msgid "Miscellaneous Symbols"
+msgstr "雜項符號"
+
+#: viewpart/UnicodeBlocks.h:89
+msgid "Dingbats"
+msgstr "錢"
+
+#: viewpart/UnicodeBlocks.h:90
+msgid "Miscellaneous Mathematical Symbols-A"
+msgstr "雜項數學符號 A"
+
+#: viewpart/UnicodeBlocks.h:91
+msgid "Supplemental Arrows-A"
+msgstr "補集箭號 A"
+
+#: viewpart/UnicodeBlocks.h:92
+msgid "Braille Patterns"
+msgstr "點字樣式"
+
+#: viewpart/UnicodeBlocks.h:93
+msgid "Supplemental Arrows-B"
+msgstr "補集箭號 B"
+
+#: viewpart/UnicodeBlocks.h:94
+msgid "Miscellaneous Mathematical Symbols-B"
+msgstr "雜項數學符號 B"
+
+#: viewpart/UnicodeBlocks.h:95
+msgid "Supplemental Mathematical Operators"
+msgstr "補集數學運算子"
+
+#: viewpart/UnicodeBlocks.h:96
+msgid "Miscellaneous Symbols and Arrows"
+msgstr "雜項符號與箭號"
+
+#: viewpart/UnicodeBlocks.h:97 viewpart/UnicodeScripts.h:34
+msgid "Glagolitic"
+msgstr "斯拉夫字母"
+
+#: viewpart/UnicodeBlocks.h:98
+msgid "Latin Extended-C"
+msgstr "拉丁延伸 C"
+
+#: viewpart/UnicodeBlocks.h:99 viewpart/UnicodeScripts.h:26
+msgid "Coptic"
+msgstr "哥普特"
+
+#: viewpart/UnicodeBlocks.h:100
+msgid "Georgian Supplement"
+msgstr "喬治亞補集"
+
+#: viewpart/UnicodeBlocks.h:101 viewpart/UnicodeScripts.h:78
+msgid "Tifinagh"
+msgstr "Tifinagh"
+
+#: viewpart/UnicodeBlocks.h:102
+msgid "Ethiopic Extended"
+msgstr "衣索匹亞延伸"
+
+#: viewpart/UnicodeBlocks.h:103
+msgid "Supplemental Punctuation"
+msgstr "補集發音"
+
+#: viewpart/UnicodeBlocks.h:104
+msgid "CJK Radicals Supplement"
+msgstr "中日韓語基礎補集"
+
+#: viewpart/UnicodeBlocks.h:105
+msgid "Kangxi Radicals"
+msgstr "Kangxi Radicals"
+
+#: viewpart/UnicodeBlocks.h:106
+msgid "Ideographic Description Characters"
+msgstr "Ideographic Description Characters"
+
+#: viewpart/UnicodeBlocks.h:107
+msgid "CJK Symbols and Punctuation"
+msgstr "中日韓符號與標點符號"
+
+#: viewpart/UnicodeBlocks.h:108 viewpart/UnicodeScripts.h:43
+msgid "Hiragana"
+msgstr "平假名"
+
+#: viewpart/UnicodeBlocks.h:109 viewpart/UnicodeScripts.h:46
+msgid "Katakana"
+msgstr "片假名"
+
+#: viewpart/UnicodeBlocks.h:110 viewpart/UnicodeScripts.h:19
+msgid "Bopomofo"
+msgstr "Bopomofo"
+
+#: viewpart/UnicodeBlocks.h:111
+msgid "Hangul Compatibility Jamo"
+msgstr "Hangul Compatibility Jamo"
+
+#: viewpart/UnicodeBlocks.h:112
+msgid "Kanbun"
+msgstr "Kanbun"
+
+#: viewpart/UnicodeBlocks.h:113
+msgid "Bopomofo Extended"
+msgstr "Bopomofo Extended"
+
+#: viewpart/UnicodeBlocks.h:114
+msgid "CJK Strokes"
+msgstr "中日韓筆畫"
+
+#: viewpart/UnicodeBlocks.h:115
+msgid "Katakana Phonetic Extensions"
+msgstr "Katakana 音標延伸"
+
+#: viewpart/UnicodeBlocks.h:116
+msgid "Enclosed CJK Letters and Months"
+msgstr "Enclosed CJK Letters and Months"
+
+#: viewpart/UnicodeBlocks.h:117
+msgid "CJK Compatibility"
+msgstr "中日韓相容"
+
+#: viewpart/UnicodeBlocks.h:118
+msgid "CJK Unified Ideographs Extension A"
+msgstr "CJK Unified Ideographs Extension A"
+
+#: viewpart/UnicodeBlocks.h:119
+msgid "Yijing Hexagram Symbols"
+msgstr "Yijing Hexagram Symbols"
+
+#: viewpart/UnicodeBlocks.h:120
+msgid "CJK Unified Ideographs"
+msgstr "CJK Unified Ideographs"
+
+#: viewpart/UnicodeBlocks.h:121
+msgid "Yi Syllables"
+msgstr "Yi Syllables"
+
+#: viewpart/UnicodeBlocks.h:122
+msgid "Yi Radicals"
+msgstr "Yi Radicals"
+
+#: viewpart/UnicodeBlocks.h:123
+msgid "Modifier Tone Letters"
+msgstr "Modifier Tone Letters"
+
+#: viewpart/UnicodeBlocks.h:124
+msgid "Latin Extended-D"
+msgstr "拉丁延伸 D"
+
+#: viewpart/UnicodeBlocks.h:125 viewpart/UnicodeScripts.h:68
+msgid "Syloti Nagri"
+msgstr "Syloti Nagri"
+
+#: viewpart/UnicodeBlocks.h:126
+msgid "Phags-pa"
+msgstr "Phags-pa"
+
+#: viewpart/UnicodeBlocks.h:127
+msgid "Hangul Syllables"
+msgstr "韓語音節"
+
+#: viewpart/UnicodeBlocks.h:128
+msgid "High Surrogates"
+msgstr "High Surrogates"
+
+#: viewpart/UnicodeBlocks.h:129
+msgid "High Private Use Surrogates"
+msgstr "High Private Use Surrogates"
+
+#: viewpart/UnicodeBlocks.h:130
+msgid "Low Surrogates"
+msgstr "Low Surrogates"
+
+#: viewpart/UnicodeBlocks.h:131
+msgid "Private Use Area"
+msgstr "個人使用區域"
+
+#: viewpart/UnicodeBlocks.h:132
+msgid "CJK Compatibility Ideographs"
+msgstr "CJK Compatibility Ideographs"
+
+#: viewpart/UnicodeBlocks.h:133
+msgid "Alphabetic Presentation Forms"
+msgstr "字母展示形式"
+
+#: viewpart/UnicodeBlocks.h:134
+msgid "Arabic Presentation Forms-A"
+msgstr "阿拉伯文表現形式-A"
+
+#: viewpart/UnicodeBlocks.h:135
+msgid "Variation Selectors"
+msgstr "變化選擇器"
+
+#: viewpart/UnicodeBlocks.h:136
+msgid "Vertical Forms"
+msgstr "垂直形式"
+
+#: viewpart/UnicodeBlocks.h:137
+msgid "Combining Half Marks"
+msgstr "組合半標記"
+
+#: viewpart/UnicodeBlocks.h:138
+msgid "CJK Compatibility Forms"
+msgstr "中日韓相容形式"
+
+#: viewpart/UnicodeBlocks.h:139
+msgid "Small Form Variants"
+msgstr "小寫變體"
+
+#: viewpart/UnicodeBlocks.h:140
+msgid "Arabic Presentation Forms-B"
+msgstr "阿拉伯文表現形式-B"
+
+#: viewpart/UnicodeBlocks.h:141
+msgid "Half-Width and Full-Width Forms"
+msgstr "半形與全形"
+
+#: viewpart/UnicodeBlocks.h:142
+msgid "Specials"
+msgstr "特殊"
+
+#: viewpart/UnicodeBlocks.h:143
+msgid "Linear B Syllabary"
+msgstr "線性 B 音節"
+
+#: viewpart/UnicodeBlocks.h:144
+msgid "Linear B Ideograms"
+msgstr "線性 B 文字"
+
+#: viewpart/UnicodeBlocks.h:145
+msgid "Aegean Numbers"
+msgstr "愛琴海數目"
+
+#: viewpart/UnicodeBlocks.h:146
+msgid "Ancient Greek Numbers"
+msgstr "古希臘數目"
+
+#: viewpart/UnicodeBlocks.h:147 viewpart/UnicodeScripts.h:59
+msgid "Old Italic"
+msgstr "舊斜體"
+
+#: viewpart/UnicodeBlocks.h:148 viewpart/UnicodeScripts.h:35
+msgid "Gothic"
+msgstr "哥特式"
+
+#: viewpart/UnicodeBlocks.h:149 viewpart/UnicodeScripts.h:79
+msgid "Ugaritic"
+msgstr "Ugaritic"
+
+#: viewpart/UnicodeBlocks.h:150 viewpart/UnicodeScripts.h:60
+msgid "Old Persian"
+msgstr "舊波斯式"
+
+#: viewpart/UnicodeBlocks.h:151 viewpart/UnicodeScripts.h:30
+msgid "Deseret"
+msgstr "Deseret"
+
+#: viewpart/UnicodeBlocks.h:152 viewpart/UnicodeScripts.h:66
+msgid "Shavian"
+msgstr "蕭伯納式"
+
+#: viewpart/UnicodeBlocks.h:153 viewpart/UnicodeScripts.h:62
+msgid "Osmanya"
+msgstr "Osmanya"
+
+#: viewpart/UnicodeBlocks.h:154
+msgid "Cypriot Syllabary"
+msgstr "Cypriot Syllabary"
+
+#: viewpart/UnicodeBlocks.h:155 viewpart/UnicodeScripts.h:64
+msgid "Phoenician"
+msgstr "Phoenician"
+
+#: viewpart/UnicodeBlocks.h:156 viewpart/UnicodeScripts.h:47
+msgid "Kharoshthi"
+msgstr "Kharoshthi"
+
+#: viewpart/UnicodeBlocks.h:157 viewpart/UnicodeScripts.h:27
+msgid "Cuneiform"
+msgstr "Cuneiform"
+
+#: viewpart/UnicodeBlocks.h:158
+msgid "Cuneiform Numbers and Punctuation"
+msgstr "Cuneiform 數字與發音"
+
+#: viewpart/UnicodeBlocks.h:159
+msgid "Byzantine Musical Symbols"
+msgstr "拜占庭音樂符號"
+
+#: viewpart/UnicodeBlocks.h:160
+msgid "Musical Symbols"
+msgstr "音樂符號"
+
+#: viewpart/UnicodeBlocks.h:161
+msgid "Ancient Greek Musical Notation"
+msgstr "古希臘音樂表示法"
+
+#: viewpart/UnicodeBlocks.h:162
+msgid "Tai Xuan Jing Symbols"
+msgstr "Tai Xuan Jing Symbols"
+
+#: viewpart/UnicodeBlocks.h:163
+msgid "Counting Rod Numerals"
+msgstr "Counting Rod Numerals"
+
+#: viewpart/UnicodeBlocks.h:164
+msgid "Mathematical Alphanumeric Symbols"
+msgstr "字母與數字符號"
+
+#: viewpart/UnicodeBlocks.h:165
+msgid "CJK Unified Ideographs Extension B"
+msgstr "CJK Unified Ideographs Extension B"
+
+#: viewpart/UnicodeBlocks.h:166
+msgid "CJK Compatibility Ideographs Supplement"
+msgstr "CJK Compatibility Ideographs Supplement"
+
+#: viewpart/UnicodeBlocks.h:167
+msgid "Tags"
+msgstr "標籤"
+
+#: viewpart/UnicodeBlocks.h:168
+msgid "Variation Selectors Supplement"
+msgstr "變化選擇器補集"
+
+#: viewpart/UnicodeBlocks.h:169
+msgid "Supplementary Private Use Area-A"
+msgstr "補集個人使用範圍 A"
+
+#: viewpart/UnicodeBlocks.h:170
+msgid "Supplementary Private Use Area-B"
+msgstr "補集個人使用範圍 B"
+
+#: viewpart/UnicodeScripts.h:20
+msgid "Braille"
+msgstr "點字"
+
+#: viewpart/UnicodeScripts.h:23
+msgid "Canadian Aboriginal"
+msgstr "加拿大原住民"
+
+#: viewpart/UnicodeScripts.h:25
+msgid "Common"
+msgstr "一般"
+
+#: viewpart/UnicodeScripts.h:28
+msgid "Cypriot"
+msgstr "Cypriot"
+
+#: viewpart/UnicodeScripts.h:36
+msgid "Greek"
+msgstr "希臘"
+
+#: viewpart/UnicodeScripts.h:39
+msgid "Han"
+msgstr "漢語"
+
+#: viewpart/UnicodeScripts.h:40
+msgid "Hangul"
+msgstr "韓語"
+
+#: viewpart/UnicodeScripts.h:44
+msgid "Inherited"
+msgstr "已繼承"
+
+#: viewpart/UnicodeScripts.h:50
+msgid "Latin"
+msgstr "拉丁"
+
+#: viewpart/UnicodeScripts.h:52
+msgid "Linear B"
+msgstr "線性 B"
+
+#: viewpart/UnicodeScripts.h:57
+msgid "Nko"
+msgstr "Nko"
+
+#: viewpart/UnicodeScripts.h:63
+msgid "Phags Pa"
+msgstr "Phags Pa"
+
+#: viewpart/UnicodeScripts.h:80
+msgid "Yi"
+msgstr "Yi"
+
+#~ msgid "Print..."
+#~ msgstr "列印..."
+
+#~ msgid "Create New Group..."
+#~ msgstr "建立新群組…"
+
+#~ msgid "Remove Group..."
+#~ msgstr "移除群組…"
+
+#~ msgid "Install..."
+#~ msgstr "安裝..."
+
+#~ msgid "FontViewPart"
+#~ msgstr "FontViewPart"
+
+#~ msgid "<p>No information</p>"
+#~ msgstr "<p>沒有資訊</p>"

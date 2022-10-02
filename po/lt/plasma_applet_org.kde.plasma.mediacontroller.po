@@ -1,0 +1,135 @@
+# Lithuanian translations for trunk-kf package.
+# Copyright (C) 2014 This_file_is_part_of_KDE
+# This file is distributed under the same license as the trunk-kf package.
+#
+# Automatically generated, 2014.
+# liudas@aksioma.lt <liudas@aksioma.lt>, 2014.
+# Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: trunk-kf 5\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"PO-Revision-Date: 2020-11-17 01:03+0200\n"
+"Last-Translator: Moo\n"
+"Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
+"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: contents/config/config.qml:12
+#, kde-format
+msgid "General"
+msgstr "Bendra"
+
+#: contents/ui/AlbumArtStackView.qml:161 contents/ui/main.qml:80
+#, kde-format
+msgid "No media playing"
+msgstr "Nieko neatkuriama"
+
+#: contents/ui/ConfigGeneral.qml:22
+#, kde-format
+msgid "Volume step:"
+msgstr ""
+
+#: contents/ui/ExpandedRepresentation.qml:363
+#: contents/ui/ExpandedRepresentation.qml:484
+#, kde-format
+msgctxt "Remaining time for song e.g -5:42"
+msgid "-%1"
+msgstr "-%1"
+
+#: contents/ui/ExpandedRepresentation.qml:513
+#, kde-format
+msgid "Shuffle"
+msgstr "Maišyti"
+
+#: contents/ui/ExpandedRepresentation.qml:539 contents/ui/main.qml:98
+#, kde-format
+msgctxt "Play previous track"
+msgid "Previous Track"
+msgstr "Ankstesnis takelis"
+
+#: contents/ui/ExpandedRepresentation.qml:561 contents/ui/main.qml:106
+#, kde-format
+msgctxt "Pause playback"
+msgid "Pause"
+msgstr "Pristabdyti"
+
+#: contents/ui/ExpandedRepresentation.qml:561 contents/ui/main.qml:111
+#, kde-format
+msgctxt "Start playback"
+msgid "Play"
+msgstr "Groti"
+
+#: contents/ui/ExpandedRepresentation.qml:579 contents/ui/main.qml:117
+#, kde-format
+msgctxt "Play next track"
+msgid "Next Track"
+msgstr "Kitas takelis"
+
+#: contents/ui/ExpandedRepresentation.qml:602
+#, kde-format
+msgid "Repeat Track"
+msgstr "Kartoti takelį"
+
+#: contents/ui/ExpandedRepresentation.qml:602
+#, kde-format
+msgid "Repeat"
+msgstr "Kartoti"
+
+#: contents/ui/main.qml:94
+#, kde-format
+msgctxt "Open player window or bring it to the front if already open"
+msgid "Open"
+msgstr "Atverti"
+
+#: contents/ui/main.qml:123
+#, kde-format
+msgctxt "Stop playback"
+msgid "Stop"
+msgstr "Stabdyti"
+
+#: contents/ui/main.qml:131
+#, kde-format
+msgctxt "Quit player"
+msgid "Quit"
+msgstr "Baigti"
+
+#: contents/ui/main.qml:241
+#, kde-format
+msgid "Choose player automatically"
+msgstr "Automatiškai parinkti leistuvę"
+
+#: contents/ui/main.qml:278
+#, kde-format
+msgctxt "by Artist (player name)"
+msgid "by %1 (%2)"
+msgstr "pagal %1 (%2)"
+
+#: contents/ui/main.qml:289
+#, kde-format
+msgctxt "by Artist (paused, player name)"
+msgid "by %1 (paused, %2)"
+msgstr "pagal %1 (pristabdyta, %2)"
+
+#: contents/ui/main.qml:289
+#, kde-format
+msgctxt "Paused (player name)"
+msgid "Paused (%1)"
+msgstr "Pristabdyta (%1)"
+
+#~ msgctxt "artist – track"
+#~ msgid "%1 – %2"
+#~ msgstr "%1 – %2"
+
+#~ msgctxt "Artist of the song"
+#~ msgid "by %1"
+#~ msgstr "autorius %1"
+
+#~ msgid "Pause playback when screen is locked"
+#~ msgstr "Pristabdyti užrakinant ekraną"

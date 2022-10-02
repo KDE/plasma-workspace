@@ -1,0 +1,226 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Martin Schlander <mschlander@opensuse.org>, 2008, 2010, 2012, 2015, 2017, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_autostart\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:50+0000\n"
+"PO-Revision-Date: 2020-10-04 17:27+0200\n"
+"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"Language-Team: Danish <kde-i18n-doc@kde.org>\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.04.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: autostartmodel.cpp:288
+#, kde-format
+msgid "\"%1\" is not an absolute url."
+msgstr "\"%1\" er ikke en absolut URL."
+
+#: autostartmodel.cpp:291
+#, kde-format
+msgid "\"%1\" does not exist."
+msgstr "\"%1\" findes ikke."
+
+#: autostartmodel.cpp:294
+#, kde-format
+msgid "\"%1\" is not a file."
+msgstr "\"%1\" er ikke en fil."
+
+#: autostartmodel.cpp:297
+#, kde-format
+msgid "\"%1\" is not readable."
+msgstr "\"%1\" er ikke læsbar."
+
+#: package/contents/ui/main.qml:40
+#, kde-format
+msgid "Make Executable"
+msgstr ""
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "The file '%1' must be executable to run at logout."
+msgstr ""
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid "The file '%1' must be executable to run at login."
+msgstr ""
+
+#: package/contents/ui/main.qml:89
+#, fuzzy, kde-format
+#| msgid "&Properties..."
+msgid "Properties"
+msgstr "&Egenskaber..."
+
+#: package/contents/ui/main.qml:95
+#, fuzzy, kde-format
+#| msgid "&Remove"
+msgid "Remove"
+msgstr "Fje&rn"
+
+#: package/contents/ui/main.qml:106
+#, kde-format
+msgid "Applications"
+msgstr ""
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Login Scripts"
+msgstr ""
+
+#: package/contents/ui/main.qml:112
+#, fuzzy, kde-format
+#| msgid "Pre-KDE startup"
+msgid "Pre-startup Scripts"
+msgstr "Præ-KDE opstart"
+
+#: package/contents/ui/main.qml:115
+#, fuzzy, kde-format
+#| msgid "Logout"
+msgid "Logout Scripts"
+msgstr "Log ud"
+
+#: package/contents/ui/main.qml:124
+#, kde-format
+msgid "No user-specified autostart items"
+msgstr ""
+
+#: package/contents/ui/main.qml:125
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Click the <interface>Add…</interface> button below to add some"
+msgstr ""
+
+#: package/contents/ui/main.qml:139
+#, fuzzy, kde-format
+#| msgid "Add Script..."
+msgid "Choose Login Script"
+msgstr "Tilføj script..."
+
+#: package/contents/ui/main.qml:160
+#, kde-format
+msgid "Choose Logout Script"
+msgstr ""
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "Add…"
+msgstr ""
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Add Application…"
+msgstr ""
+
+#: package/contents/ui/main.qml:199
+#, fuzzy, kde-format
+#| msgid "Add Script..."
+msgid "Add Login Script…"
+msgstr "Tilføj script..."
+
+#: package/contents/ui/main.qml:205
+#, fuzzy, kde-format
+#| msgid "Add Script..."
+msgid "Add Logout Script…"
+msgstr "Tilføj script..."
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Martin Schlander"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "mschlander@opensuse.org"
+
+#~ msgid "Autostart"
+#~ msgstr "Autostart"
+
+#~ msgid "Session Autostart Manager Control Panel Module"
+#~ msgstr "Kontrolpanelsmodul til sessions autostarthåndtering"
+
+#~ msgid "Copyright © 2006–2020 Autostart Manager team"
+#~ msgstr "Ophavsret © 2006–2020 Autostarthåndtering-holdet"
+
+#~ msgid "Stephen Leaf"
+#~ msgstr "Stephen Leaf"
+
+#~ msgid "Montel Laurent"
+#~ msgstr "Montel Laurent"
+
+#~ msgid "Maintainer"
+#~ msgstr "Vedligeholder"
+
+#~ msgid "Nicolas Fella"
+#~ msgstr "Nicolas Fella"
+
+#, fuzzy
+#~| msgid "Advanced..."
+#~ msgid "Add..."
+#~ msgstr "Avanceret..."
+
+#~ msgid "Shell script path:"
+#~ msgstr "Sti til skal-script:"
+
+#~ msgid "Create as symlink"
+#~ msgstr "Opret som symlink"
+
+#~ msgid "Autostart only in Plasma"
+#~ msgstr "Autostart kun i Plasma"
+
+#~ msgid "Name"
+#~ msgstr "Navn"
+
+#~ msgid "Command"
+#~ msgstr "Kommando"
+
+#~ msgid "Status"
+#~ msgstr "Status"
+
+#~ msgctxt ""
+#~ "@title:column The name of the column that decides if the program is run "
+#~ "on session startup, on session shutdown, etc"
+#~ msgid "Run On"
+#~ msgstr "Kør ved"
+
+#~ msgid "Session Autostart Manager"
+#~ msgstr "Sessions autostarthåndtering"
+
+#~ msgctxt "The program will be run"
+#~ msgid "Enabled"
+#~ msgstr "Aktiveret"
+
+#~ msgctxt "The program won't be run"
+#~ msgid "Disabled"
+#~ msgstr "Deaktiveret"
+
+#~ msgid "Desktop File"
+#~ msgstr "Desktop-fil"
+
+#~ msgid "Script File"
+#~ msgstr "Scriptfil"
+
+#~ msgid "Add Program..."
+#~ msgstr "Tilføj program..."
+
+#~ msgid "Startup"
+#~ msgstr "Opstart"
+
+#~ msgid "Before session startup"
+#~ msgstr "Før opstart af session"
+
+#~ msgid ""
+#~ "Only files with “.sh” extensions are allowed for setting up the "
+#~ "environment."
+#~ msgstr "Kun filer med \".sh\"-endelser tillades til opsætning af miljøet."
+
+#~ msgid "Shutdown"
+#~ msgstr "Nedlukning"
+
+#~ msgid "1"
+#~ msgstr "1"

@@ -1,0 +1,99 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Swedish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="screenlocker" lang="&language;">
+<articleinfo>
+<title
+>Skärmlåsning</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+<!--FIXME code in plasma/kscreenlocker - docbook in plasma/plasma-workspace -->
+<date
+>2020-07-02</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>systeminställningar</keyword>
+<keyword
+>skärmlåsning</keyword>
+<keyword
+>skärmlåsning</keyword>
+</keywordset>
+</articleinfo>
+<para
+>Genom att använda den här modulen kan du bestämma hur lång tid som måste gå innan skärmlåsning aktiveras, ställa in fristen för att låsa upp skärmen utan lösenord, och välja skärmlåsningens utseende.</para>
+
+<para
+>Längst upp finns kryssrutan <guilabel
+>Lås skärm automatiskt</guilabel
+> för att låta skärmlåsning starta automatiskt, och en nummerruta som bestämmer hur lång inaktivitet som behövs innan skärmlåsning startas. Du kan skriva in vilket positivt antal minuter som helst i rutan.</para>
+
+<para
+>Kryssrutan <guilabel
+>Vid uppvaknande ur viloläge</guilabel
+> kan användas för att sätta på eller stänga av låsning av skrivbordsskärmen efter systemet har varit i viloläge.</para>
+
+<para
+>Därunder finns en nummerruta, som heter <guilabel
+>Tillåt upplåsning utan lösenord för:</guilabel
+>. När du trycker på en tangent eller klickar på en musknapp för att avsluta skärmlåsning innan tiden i nummerrutan och återgår till arbetet, behöver du inte skriva in ett lösenord. Lösenordet som används är samma lösenord som det som du använder för att logga in på datorn.</para>
+
+<para
+>Låses skärmen för hand, så aktiveras lösenordsskyddet omedelbart.</para>
+
+<para
+>Du kan definiera en genväg för att låsa skärmen genom att använda fältet <guilabel
+>Snabbtangent</guilabel
+>.</para>
+
+<para
+>Den normala genvägen <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>L</keycap
+></keycombo
+> tillhandahåller ett snabbt sätt att låsa skärmen för hand.</para>
+
+<para
+>Om du vill ändra bakgrunden i låst tillstånd tryck på knappen <guilabel
+>Anpassa</guilabel
+> intill beteckningen <guibutton
+>Utseende</guibutton
+>. Därefter kan du ändra <guilabel
+>Typ av skrivbordsunderlägg</guilabel
+>.</para>
+
+<para
+>Du kan välja en <guilabel
+>Enkel färg</guilabel
+> som skrivbordsunderlägg.</para>
+
+<para
+>Som alternativ kan en ensam bild eller ett bildspel med bilder från en katalog användas, eller kan nya skrivbordsunderlägg laddas ner från Internet.</para>
+
+</article>

@@ -1,0 +1,218 @@
+# translation of kcm_autostart.po to Slovak
+# Richard Fric <Richard.Fric@kdemail.net>, 2008, 2009.
+# sparc3 <sparc3@azet.sk>, 2008.
+# Michal Sulek <misurel@gmail.com>, 2010, 2011.
+# Roman Paholík <wizzardsk@gmail.com>, 2012, 2015, 2017.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_autostart\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:50+0000\n"
+"PO-Revision-Date: 2021-07-27 16:25+0200\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.07.80\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: autostartmodel.cpp:288
+#, kde-format
+msgid "\"%1\" is not an absolute url."
+msgstr "\"%1\" nie je absolútna url."
+
+#: autostartmodel.cpp:291
+#, kde-format
+msgid "\"%1\" does not exist."
+msgstr "\"%1\" neexistuje."
+
+#: autostartmodel.cpp:294
+#, kde-format
+msgid "\"%1\" is not a file."
+msgstr "\"%1\" nie je súbor."
+
+#: autostartmodel.cpp:297
+#, kde-format
+msgid "\"%1\" is not readable."
+msgstr "\"%1\" nie je čitateľný."
+
+#: package/contents/ui/main.qml:40
+#, kde-format
+msgid "Make Executable"
+msgstr ""
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "The file '%1' must be executable to run at logout."
+msgstr ""
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid "The file '%1' must be executable to run at login."
+msgstr ""
+
+#: package/contents/ui/main.qml:89
+#, kde-format
+msgid "Properties"
+msgstr "Vlastnosti"
+
+#: package/contents/ui/main.qml:95
+#, kde-format
+msgid "Remove"
+msgstr "Odstrániť"
+
+#: package/contents/ui/main.qml:106
+#, kde-format
+msgid "Applications"
+msgstr "Aplikácie"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Login Scripts"
+msgstr "Skripty prihlásenia"
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Pre-startup Scripts"
+msgstr "Skripty pred spustením"
+
+#: package/contents/ui/main.qml:115
+#, kde-format
+msgid "Logout Scripts"
+msgstr "Skripty odhlásenia"
+
+#: package/contents/ui/main.qml:124
+#, kde-format
+msgid "No user-specified autostart items"
+msgstr "Žiadne položky automatického spustenia zadané používateľom"
+
+#: package/contents/ui/main.qml:125
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Click the <interface>Add…</interface> button below to add some"
+msgstr ""
+"Niektoré z nich pridáte kliknutím na tlačidlo <interface>Pridať…</interface> "
+"nižšie"
+
+#: package/contents/ui/main.qml:139
+#, kde-format
+msgid "Choose Login Script"
+msgstr "Vybrať skript prihlásenia"
+
+#: package/contents/ui/main.qml:160
+#, kde-format
+msgid "Choose Logout Script"
+msgstr "Vybrať skript odhlásenia"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "Add…"
+msgstr "Pridať…"
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Add Application…"
+msgstr "Pridať aplikáciu…"
+
+#: package/contents/ui/main.qml:199
+#, kde-format
+msgid "Add Login Script…"
+msgstr "Pridať skript pri prihlásení…"
+
+#: package/contents/ui/main.qml:205
+#, kde-format
+msgid "Add Logout Script…"
+msgstr "Pridať skript pri odhlásení…"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "sparc3,Michal Šulek"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "sparc3@azet.sk,misurel@gmail.com"
+
+#~ msgid "Autostart"
+#~ msgstr "Automatický štart"
+
+#~ msgid "Session Autostart Manager Control Panel Module"
+#~ msgstr "Ovládací modul správcu automatického spustenia"
+
+#~ msgid "Copyright © 2006–2020 Autostart Manager team"
+#~ msgstr "Copyright © 2006–2020 Autostart Manager tím"
+
+#~ msgid "Stephen Leaf"
+#~ msgstr "Stephen Leaf"
+
+#~ msgid "Montel Laurent"
+#~ msgstr "Montel Laurent"
+
+#~ msgid "Maintainer"
+#~ msgstr "Správca"
+
+#~ msgid "Nicolas Fella"
+#~ msgstr "Nicolas Fella"
+
+#~ msgid "Add..."
+#~ msgstr "Pridať..."
+
+#~ msgid "Shell script path:"
+#~ msgstr "Cesta shellového skriptu:"
+
+#~ msgid "Create as symlink"
+#~ msgstr "Vytvoriť ako symbolický odkaz"
+
+#~ msgid "Autostart only in Plasma"
+#~ msgstr "Automatický spustiť v Plasma"
+
+#~ msgid "Name"
+#~ msgstr "Názov"
+
+#~ msgid "Command"
+#~ msgstr "Príkaz"
+
+#~ msgid "Status"
+#~ msgstr "Stav"
+
+#~ msgctxt ""
+#~ "@title:column The name of the column that decides if the program is run "
+#~ "on session startup, on session shutdown, etc"
+#~ msgid "Run On"
+#~ msgstr "Spustiť pri"
+
+#~ msgid "Session Autostart Manager"
+#~ msgstr "Správca automatického spustenia"
+
+#~ msgctxt "The program will be run"
+#~ msgid "Enabled"
+#~ msgstr "Povolené"
+
+#~ msgctxt "The program won't be run"
+#~ msgid "Disabled"
+#~ msgstr "Zakázané"
+
+#~ msgid "Desktop File"
+#~ msgstr "Súbor plochy"
+
+#~ msgid "Script File"
+#~ msgstr "Súbor so skriptom"
+
+#~ msgid "Add Program..."
+#~ msgstr "Pridať program..."
+
+#~ msgid "Startup"
+#~ msgstr "Spustení"
+
+#~ msgid "Before session startup"
+#~ msgstr "Pred spustením sedenia"
+
+#~ msgid ""
+#~ "Only files with “.sh” extensions are allowed for setting up the "
+#~ "environment."
+#~ msgstr "Sú povolené len súbory s príponou  “.sh” pre nastavenie prostredia."
+
+#~ msgid "Shutdown"
+#~ msgstr "Vypnutí"

@@ -1,0 +1,435 @@
+# translation of kcmfonts.po to Français
+# translation of kcmfonts.po to
+# traduction de kcmfonts.po en Français
+# Copyright (C) 2002,2003, 2004, 2006, 2007, 2008 Free Software Foundation, Inc.
+# Ludovic Grossard <grossard@kde.org>, 2002,2003.
+# Charles de Miramon <cmiramon@kde-france.org>, 2003.
+# Delafond <gerard@delafond.org>, 2003, 2004.
+# Matthieu Robin <kde@macolu.org>, 2004, 2006.
+# Nicolas Ternisien <nicolas.ternisien@gmail.com>, 2006.
+# aminesay <aminesay@yahoo.fr>, 2007.
+# Sébastien Renard <Sebastien.Renard@digitalfox.org>, 2008.
+# Amine Say <aminesay@yahoo.fr>, 2008.
+# Guillaume Pujol <guill.p@gmail.com>, 2010.
+# xavier <ktranslator31@yahoo.fr>, 2013.
+# Maxime Corteel <mcorteel@gmail.com>, 2015.
+# Johan Claude-Breuninger <johan.claudebreuninger@gmail.com>, 2017.
+# Vincent Pinon <vpinon@kde.org>, 2017.
+# Yoann Laissus <yoann.laissus@gmail.com>, 2018.
+# Simon Depiets <sdepiets@gmail.com>, 2018, 2019.
+# Xavier Besnard <xavier.besnard@neuf.fr>, 2020, 2021, 2022.
+#
+# amine say, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmfonts\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-03 00:45+0000\n"
+"PO-Revision-Date: 2022-05-04 11:45+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
+"Language-Team: French <kde-francophone@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 22.04.0\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, kde-format
+msgid "Force font DPI Wayland"
+msgstr "Forcer la police en « DPI Wayland »"
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:13
+#, kde-format
+msgid "Force font DPI on X11"
+msgstr "Forcer la résolution « DPI » de la police sous « X11 »"
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, kde-format
+msgid "General font"
+msgstr "Police général"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, kde-format
+msgid "Fixed width font"
+msgstr "Police à chasse fixe"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, kde-format
+msgid "Small font"
+msgstr "Petite police"
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, kde-format
+msgid "Tool bar font"
+msgstr "Police de la barre d'outils"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, kde-format
+msgid "Menu font"
+msgstr "Police du menu"
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, kde-format
+msgid "Window title font"
+msgstr "police du titre de la fenêtre"
+
+#: kxftconfig.cpp:458
+#, kde-format
+msgctxt "use system subpixel setting"
+msgid "Vendor default"
+msgstr "Paramètres par défaut"
+
+#: kxftconfig.cpp:460
+#, kde-format
+msgctxt "no subpixel rendering"
+msgid "None"
+msgstr "Aucun"
+
+#: kxftconfig.cpp:462
+#, kde-format
+msgid "RGB"
+msgstr "RVB"
+
+#: kxftconfig.cpp:464
+#, kde-format
+msgid "BGR"
+msgstr "BVR"
+
+#: kxftconfig.cpp:466
+#, kde-format
+msgid "Vertical RGB"
+msgstr "RVB vertical"
+
+#: kxftconfig.cpp:468
+#, kde-format
+msgid "Vertical BGR"
+msgstr "BVR vertical"
+
+#: kxftconfig.cpp:496
+#, kde-format
+msgctxt "use system hinting settings"
+msgid "Vendor default"
+msgstr "Paramètres par défaut"
+
+#: kxftconfig.cpp:498
+#, kde-format
+msgctxt "medium hinting"
+msgid "Medium"
+msgstr "Moyen"
+
+#: kxftconfig.cpp:500
+#, kde-format
+msgctxt "no hinting"
+msgid "None"
+msgstr "Aucun"
+
+#: kxftconfig.cpp:502
+#, kde-format
+msgctxt "slight hinting"
+msgid "Slight"
+msgstr "Léger"
+
+#: kxftconfig.cpp:504
+#, kde-format
+msgctxt "full hinting"
+msgid "Full"
+msgstr "Total"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module lets you configure the system fonts."
+msgstr "Ce module vous permet de configurer les polices du système."
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid "Change Display Scaling…"
+msgstr "Modifier la mise à l'échelle de l'affichage..."
+
+#: package/contents/ui/main.qml:37
+#, kde-format
+msgid ""
+"Some changes such as anti-aliasing or DPI will only affect newly started "
+"applications."
+msgstr ""
+"Certaines modifications, comme le lissage ou « PPP », n'affecteront que les "
+"applications démarrées à partir de maintenant."
+
+#: package/contents/ui/main.qml:51
+#, kde-format
+msgid ""
+"Very large fonts may produce odd-looking results. Consider adjusting the "
+"global screen scale instead of using a very large font size."
+msgstr ""
+"Un grand nombre de polices peuvent produire des résultats bizarres. Veuillez "
+"considérer l'ajustement de la taille globale de l'écran au lieu d'utiliser "
+"des tailles de polices très grandes."
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid ""
+"Decimal font sizes can cause text layout problems in some applications. "
+"Consider using only integer font sizes."
+msgstr ""
+"Les tailles de police décimales peuvent causer des problèmes de mise en page "
+"du texte dans certaines applications. Veuillez privilégier uniquement des "
+"tailles entières de police."
+
+#: package/contents/ui/main.qml:94
+#, kde-format
+msgid ""
+"The recommended way to scale the user interface is using the global screen "
+"scaling feature."
+msgstr ""
+"La façon recommandée de mettre à l'échelle l'interface utilisateur est "
+"d'utiliser la fonctionnalité de mise à l'échelle globale de l'écran."
+
+#: package/contents/ui/main.qml:106
+#, kde-format
+msgid "&Adjust All Fonts…"
+msgstr "&Ajuster toutes les polices..."
+
+#: package/contents/ui/main.qml:119
+#, kde-format
+msgid "General:"
+msgstr "Général :"
+
+#: package/contents/ui/main.qml:120
+#, kde-format
+msgid "Select general font"
+msgstr "Sélectionner une police globale"
+
+#: package/contents/ui/main.qml:131
+#, kde-format
+msgid "Fixed width:"
+msgstr "Police à chasse fixe :"
+
+#: package/contents/ui/main.qml:132
+#, kde-format
+msgid "Select fixed width font"
+msgstr "Sélectionner une police à chasse fixe"
+
+#: package/contents/ui/main.qml:143
+#, kde-format
+msgid "Small:"
+msgstr "Petite :"
+
+#: package/contents/ui/main.qml:144
+#, kde-format
+msgid "Select small font"
+msgstr "Sélectionner une petite police"
+
+#: package/contents/ui/main.qml:155
+#, kde-format
+msgid "Toolbar:"
+msgstr "Barre d'outils :"
+
+#: package/contents/ui/main.qml:156
+#, kde-format
+msgid "Select toolbar font"
+msgstr "Sélectionner une police de la barre d'outils"
+
+#: package/contents/ui/main.qml:167
+#, kde-format
+msgid "Menu:"
+msgstr "Menu"
+
+#: package/contents/ui/main.qml:168
+#, kde-format
+msgid "Select menu font"
+msgstr "Sélectionner une police de menu"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "Window title:"
+msgstr "Titre de la fenêtre :"
+
+#: package/contents/ui/main.qml:179
+#, kde-format
+msgid "Select window title font"
+msgstr "Sélectionner une police pour les titres de fenêtre"
+
+#: package/contents/ui/main.qml:194
+#, kde-format
+msgid "Anti-Aliasing:"
+msgstr "Anticrénelage :"
+
+#: package/contents/ui/main.qml:199
+#, kde-format
+msgid "Enable"
+msgstr "Activer"
+
+#: package/contents/ui/main.qml:203
+#, kde-kuit-format
+msgctxt "@info:tooltip Anti-Aliasing"
+msgid ""
+"Pixels on displays are generally aligned in a grid. Therefore shapes of "
+"fonts that do not align with this grid will look blocky and wrong unless "
+"<emphasis>anti-aliasing</emphasis> techniques are used to reduce this "
+"effect. You generally want to keep this option enabled unless it causes "
+"problems."
+msgstr ""
+"Les pixels des affichages sont en général alignés sur une grille. Cependant, "
+"les formes de polices ne s'alignant pas avec cette grille ont un aspect par "
+"blocs et incorrect, sauf si des techniques d'anticrénelage sont utilisées "
+"pour réduire cet inconvénient. De façon générale, vous devriez vouloir "
+"conserver cette option activée sauf si elle provoque des anomalies."
+
+#: package/contents/ui/main.qml:217
+#, kde-format
+msgid "Exclude range from anti-aliasing"
+msgstr "Exclure la plage de l'anticrénelage"
+
+#: package/contents/ui/main.qml:236 package/contents/ui/main.qml:259
+#, kde-format
+msgid "%1 pt"
+msgstr "%1 pt"
+
+#: package/contents/ui/main.qml:251
+#, kde-format
+msgid "to"
+msgstr "à"
+
+#: package/contents/ui/main.qml:282
+#, kde-format
+msgctxt "Used as a noun, and precedes a combobox full of options"
+msgid "Sub-pixel rendering:"
+msgstr "Rendu par sous-pixellisation :"
+
+#: package/contents/ui/main.qml:324
+#, kde-kuit-format
+msgctxt "@info:tooltip Sub-pixel rendering"
+msgid ""
+"<para>On TFT or LCD screens every single pixel is actually composed of three "
+"or four smaller monochrome lights. These <emphasis>sub-pixels</emphasis> can "
+"be changed independently to further improve the quality of displayed fonts.</"
+"para> <para>The rendering quality is only improved if the selection matches "
+"the manner in which the sub-pixels of your display are aligned. Most "
+"displays have a linear ordering of <emphasis>RGB</emphasis> sub-pixels, some "
+"have <emphasis>BGR</emphasis> and some exotic orderings are not supported by "
+"this feature.</para>This does not work with CRT monitors."
+msgstr ""
+"<para>Sur des écrans à matrice active « TFT » ou à cristaux liquides "
+"« LCD », chaque pixel est actuellement composé de trois ou quatre points "
+"lumineux plus petits et monochromes. Ces <emphasis>sous-pixels</emphasis> "
+"peuvent être modifiés indépendamment pour améliorer encore la qualité des "
+"polices à afficher.</para> <para>La qualité de rendu n'est améliorée que si "
+"la sélection correspond à la manière dont les sous-pixels sont alignés. La "
+"plupart des affichages possèdent un organisation linéaire des sous-pixels "
+"<emphasis>RGB</emphasis>, certains <emphasis>BGR</emphasis> et certains "
+"autres des organisations exotiques qui ne sont pas prises en charge par "
+"cette fonctionnalité.</para> Ceci ne fonctionne pas avec des moniteurs à "
+"écran cathodique."
+
+#: package/contents/ui/main.qml:329
+#, kde-format
+msgctxt "Used as a noun, and precedes a combobox full of options"
+msgid "Hinting:"
+msgstr "Optimisation du rendu :"
+
+#: package/contents/ui/main.qml:370
+#, kde-kuit-format
+msgctxt "@info:tooltip Hinting"
+msgid ""
+"Hinting is a technique in which hints embedded in a font are used to enhance "
+"the rendering quality especially at small sizes. Stronger hinting generally "
+"leads to sharper edges but the small letters will less closely resemble "
+"their shape at big sizes."
+msgstr ""
+"La technique d'optimisation des polices (« Hinting ») est une technique "
+"permettant d'intégrer les optimisations dans une police pour améliorer la "
+"qualité du rendu, en particulier pour les petites tailles. Une optimisation "
+"forte conduit en général à des contours plus tranchés mais les petites "
+"lettres ne ressembleront beaucoup moins à leurs formes en grande taille."
+
+#: package/contents/ui/main.qml:380
+#, kde-format
+msgid "Force font DPI:"
+msgstr "Forcer le PPP de la police :"
+
+#: package/contents/ui/main.qml:422
+#, kde-kuit-format
+msgctxt "@info:tooltip Force fonts DPI"
+msgid ""
+"<para>Enter your screen's DPI here to make on-screen fonts match their "
+"physical sizes when printed. Changing this option from its default value "
+"will conflict with many apps; some icons and images may not scale as "
+"expected.</para><para>To increase text size, change the size of the fonts "
+"above. To scale everything, use the scaling slider on the <interface>Display "
+"& Monitor</interface> page.</para>"
+msgstr ""
+"<para>Saisissez ici le paramètre « DPI » de votre écran pour que les polices "
+"à l'écran correspondent à leurs tailles physiques à l'impression. La "
+"modification de cette option par rapport à sa valeur par défaut entrera en "
+"conflit avec de nombreuses applications. Certaines icônes et images "
+"pourraient ne pas être mises à l'échelle comme prévu.</para><para>Pour "
+"augmenter la taille du texte, veuillez modifier la taille des polices ci-"
+"dessus. Pour tout mettre à l'échelle, veuillez utiliser le curseur de mise à "
+"l'échelle sur la page <interface>Affichage & Écran</interface>.</para>"
+
+#: package/contents/ui/main.qml:428
+#, kde-format
+msgid "Select Font"
+msgstr "Sélectionner une police"
+
+#~ msgctxt "@info:tooltip Force fonts DPI"
+#~ msgid ""
+#~ "<para>This option forces a specific DPI value for fonts. It may be useful "
+#~ "when the real DPI of the hardware is not detected properly and it is also "
+#~ "often misused when poor quality fonts are used that do not look well with "
+#~ "DPI values other than 96 or 120 DPI.</para><para>The use of this option "
+#~ "is generally discouraged.</para><para>If you are using the <emphasis>X "
+#~ "Window System</emphasis>, for selecting the proper DPI value a better "
+#~ "option is explicitly configuring it for the whole X server if possible (e."
+#~ "g. DisplaySize in xorg.conf). When fonts do not render properly with the "
+#~ "real DPI value better fonts should be used or configuration of font "
+#~ "hinting should be checked.</para>"
+#~ msgstr ""
+#~ "<para>Cette option impose une valeur spécifique de « PPP » pour les "
+#~ "polices. Elle peut être utile lorsque la valeur PPP du matériel n'est pas "
+#~ "détectée correctement. Elle peut également être utilisée à tort lorsque "
+#~ "des polices de mauvaise qualité sont utilisées, s'affichant mal avec des "
+#~ "valeurs de « PPP » autres que 96 et 120.</para><para>L'utilisation de "
+#~ "cette option est déconseillée. </para> <para> Si vous utilisez le "
+#~ "<emphasis>système « X Window »</emphasis>, pour la sélection d'une valeur "
+#~ "de « PPP » convenable, la meilleure solution est de configurer "
+#~ "explicitement cette option pour tout le serveur X, si possible (ex : "
+#~ "« DisplaySize » dans « xorg.conf »). Lorsque les polices ne sont pas "
+#~ "affichées correctement avec une valeur « PPP » correcte, il est conseillé "
+#~ "d'utiliser des polices de meilleure qualité ou de cocher l'option "
+#~ "d'optimisation de polices.</para>"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Geoffray Levasseur, Matthieu Robin, Simon Depiets, Xavier Besnard"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "geoffray.levasseurbrandin@numericable.fr, kde@macolu.org, sdepiets@gmail."
+#~ "com, xavier.besnard@neuf.fr"
+
+#~ msgid "Fonts"
+#~ msgstr "Polices"
+
+#~ msgid "Antonis Tsiapaliokas"
+#~ msgstr "Antonis Tsiapaliokas"
+
+#~ msgctxt "@action:button"
+#~ msgid "Show Contextual Help"
+#~ msgstr "Afficher l'aide contextuelle"
+
+#~ msgid "Select %1 Font..."
+#~ msgstr "Sélectionner la police %1..."

@@ -1,0 +1,89 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Shinjo Park <kde@peremen.name>, 2012, 2015, 2018, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2020-10-04 19:22+0200\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 19.12.3\n"
+
+#: multiplexedservice.cpp:68
+#, kde-format
+msgctxt "Name for global shortcuts category"
+msgid "Media Controller"
+msgstr "미디어 컨트롤러"
+
+#: multiplexedservice.cpp:70
+#, kde-format
+msgid "Play/Pause media playback"
+msgstr "미디어 재생/일시 정지"
+
+#: multiplexedservice.cpp:88
+#, kde-format
+msgid "Media playback next"
+msgstr "다음 미디어 재생"
+
+#: multiplexedservice.cpp:97
+#, kde-format
+msgid "Media playback previous"
+msgstr "이전 미디어 재생"
+
+#: multiplexedservice.cpp:106
+#, kde-format
+msgid "Stop media playback"
+msgstr "미디어 재생 정지"
+
+#: multiplexedservice.cpp:115
+#, kde-format
+msgid "Pause media playback"
+msgstr "미디어 일시 정지"
+
+#: multiplexedservice.cpp:124
+#, kde-format
+msgid "Play media playback"
+msgstr "미디어 재생"
+
+#: multiplexedservice.cpp:133
+#, kde-format
+msgid "Media volume up"
+msgstr "미디어 음량 증가"
+
+#: multiplexedservice.cpp:142
+#, kde-format
+msgid "Media volume down"
+msgstr "미디어 음량 감소"
+
+#: playeractionjob.cpp:169
+#, kde-format
+msgid "The media player '%1' cannot perform the action '%2'."
+msgstr "미디어 재생기 '%1'에서 동작 '%2'을(를) 수행할 수 없습니다."
+
+#: playeractionjob.cpp:171
+#, kde-format
+msgid "Attempting to perform the action '%1' failed with the message '%2'."
+msgstr "동작 '%1'을 실행했으나 실패했고, 메시지 '%2'을(를) 반환했습니다."
+
+#: playeractionjob.cpp:173
+#, kde-format
+msgid "The argument '%1' for the action '%2' is missing or of the wrong type."
+msgstr "동작 '%2'의 인자 '%1'이(가) 없거나 형식이 잘못되었습니다."
+
+#: playeractionjob.cpp:175
+#, kde-format
+msgid "The operation '%1' is unknown."
+msgstr "동작 '%1'을(를) 알 수 없습니다."
+
+#: playeractionjob.cpp:177
+#, kde-format
+msgid "Unknown error."
+msgstr "알 수 없는 오류입니다."

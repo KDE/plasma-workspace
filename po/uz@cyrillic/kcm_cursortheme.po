@@ -1,0 +1,413 @@
+# translation of kcminput.po to Uzbek
+# Copyright (C) 2003, 2004, 2005 Free Software Foundation, Inc.
+# Mashrab Kuvatov <kmashrab@uni-bremen.de>, 2003, 2004, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminput\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:50+0000\n"
+"PO-Revision-Date: 2005-10-19 21:17+0200\n"
+"Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
+"Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
+"Language: uz@cyrillic\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.10.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current cursor theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr ""
+
+#: kcmcursortheme.cpp:302
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr "Ўзгаришлар кучга кириши учун KDE'ни қайтадан ишга туширишингиз керак."
+
+#: kcmcursortheme.cpp:376
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: kcmcursortheme.cpp:387
+#, fuzzy, kde-format
+#| msgid "Unable to find the cursor theme archive %1."
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Курсор мавзусининг %1 архиви топилмади."
+
+#: kcmcursortheme.cpp:418
+#, fuzzy, kde-format
+#| msgid "The file %1 does not appear to be a valid cursor theme archive."
+msgid "The file is not a valid icon theme archive."
+msgstr "%1 файли ҳақиқий курсор мавзусининг архивига ўхшамайди."
+
+#: kcmcursortheme.cpp:425
+#, kde-format
+msgid "Failed to create 'icons' folder."
+msgstr ""
+
+#: kcmcursortheme.cpp:434
+#, kde-format
+msgid ""
+"A theme named %1 already exists in your icon theme folder. Do you want "
+"replace it with this one?"
+msgstr "%1 мавзуси аллақачон мавжуд. Уни алмаштиришни истайсизми?"
+
+#: kcmcursortheme.cpp:438
+#, kde-format
+msgid "Overwrite Theme?"
+msgstr "Мавзуни алмаштириш"
+
+#: kcmcursortheme.cpp:462
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: package/contents/ui/Delegate.qml:54
+#, kde-format
+msgid "Remove Theme"
+msgstr "Мавзуни олиб ташлаш"
+
+#: package/contents/ui/Delegate.qml:61
+#, fuzzy, kde-format
+#| msgid "&Cursor Theme"
+msgid "Restore Cursor Theme"
+msgstr "&Курсор мавзуси"
+
+#: package/contents/ui/main.qml:20
+#, kde-format
+msgid "This module lets you choose the mouse cursor theme."
+msgstr ""
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Size:"
+msgstr ""
+
+#: package/contents/ui/main.qml:134
+#, fuzzy, kde-format
+#| msgid "Install New Theme..."
+msgid "&Install from File…"
+msgstr "Янги мавзуни ўрнатиш"
+
+#: package/contents/ui/main.qml:140
+#, fuzzy, kde-format
+#| msgid "Install New Theme..."
+msgid "&Get New Cursors…"
+msgstr "Янги мавзуни ўрнатиш"
+
+#: package/contents/ui/main.qml:157
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Open Theme"
+msgstr "Мавзуни олиб ташлаш"
+
+#: package/contents/ui/main.qml:159
+#, kde-format
+msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:41
+#, kde-format
+msgid "The requested size '%1' is not available, using %2 instead."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:62
+#, kde-format
+msgid ""
+"This tool allows you to set the mouse cursor theme for the current Plasma "
+"session, without accidentally setting it to one that is either not "
+"available, or which is already set."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:66
+#, kde-format
+msgid ""
+"The name of the cursor theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:67
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:68
+#, kde-format
+msgid "Use a specific size, rather than the theme default size"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:89
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:100
+#, kde-format
+msgid ""
+"Successfully applied the mouse cursor theme %1 to your current Plasma session"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:102
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for your newly applied mouse cursor "
+"theme to display correctly."
+msgstr "Ўзгаришлар кучга кириши учун KDE'ни қайтадан ишга туширишингиз керак."
+
+#: plasma-apply-cursortheme.cpp:112
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:120
+#, kde-format
+msgid "You have the following mouse cursor themes on your system:"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:125
+#, kde-format
+msgid "(Current theme for this Plasma session)"
+msgstr ""
+
+#: xcursor/xcursortheme.cpp:60
+#, kde-format
+msgctxt ""
+"@info The argument is the list of available sizes (in pixel). Example: "
+"'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+msgid "(Available sizes: %1)"
+msgstr ""
+
+#~ msgid "Name"
+#~ msgstr "Номи"
+
+#~ msgid "Description"
+#~ msgstr "Таърифи"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Машраб Қуватов"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kmashrab@uni-bremen.de"
+
+#, fuzzy
+#~| msgid "&Cursor Theme"
+#~ msgid "Cursors"
+#~ msgstr "&Курсор мавзуси"
+
+#, fuzzy
+#~| msgid ""
+#~| "<qt>Are you sure you want to remove the <strong>%1</strong> cursor theme?"
+#~| "<br>This will delete all the files installed by this theme.</qt>"
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <i>%1</i> cursor theme?<br />This "
+#~ "will delete all the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt><strong>%1</strong> мавзусини олиб ташлашга ишончингиз комилми?<br>Бу "
+#~ "мавзуга тегишли ҳамма файллар ўчирилади.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Тасдиқлаш"
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "Курсор мосламалари ўзгарди"
+
+#~ msgid ""
+#~ "Unable to download the cursor theme archive; please check that the "
+#~ "address %1 is correct."
+#~ msgstr ""
+#~ "Курсор мавзусининг архивини ёзиб олиб бўлмади. Илтимос %1 манзили "
+#~ "тўғрилигини текширинг."
+
+#~ msgid ""
+#~ "Select the cursor theme you want to use (hover preview to test cursor):"
+#~ msgstr "Курсор мавзусини танланг:"
+
+#~ msgid "Select the cursor theme you want to use:"
+#~ msgstr "Курсор мавзусини танланг:"
+
+#~ msgid "Small black"
+#~ msgstr "Кичик қора"
+
+#~ msgid "Small black cursors"
+#~ msgstr "Кичик қора курсорлар"
+
+#~ msgid "Large black"
+#~ msgstr "Катта қора"
+
+#~ msgid "Large black cursors"
+#~ msgstr "Катта қора курсорлар"
+
+#~ msgid "Small white"
+#~ msgstr "Кичик оқ"
+
+#~ msgid "Small white cursors"
+#~ msgstr "Кичик оқ курсорлар"
+
+#~ msgid "Large white"
+#~ msgstr "Катта оқ"
+
+#~ msgid "Large white cursors"
+#~ msgstr "Катта оқ курсорлар"
+
+#~ msgid "Button Order"
+#~ msgstr "Тугмалар тартиби"
+
+#~ msgid "Righ&t handed"
+#~ msgstr "Ў&нг қўл учун"
+
+#~ msgid "Le&ft handed"
+#~ msgstr "Ча&п қўл учун"
+
+#~ msgid "Icons"
+#~ msgstr "Нишончалар"
+
+#~ msgid ""
+#~ "Dou&ble-click to open files and folders (select icons on first click)"
+#~ msgstr "&Икки марта босиш файл ва жилдларни очади (бир марта - белгилайди)"
+
+#~ msgid "&Single-click to open files and folders"
+#~ msgstr "&Бир марта босиш файл ва жилдларни очади"
+
+#~ msgid "Cha&nge pointer shape over icons"
+#~ msgstr "&Нишончалар устида курсорнинг шаклини ўзгартириш"
+
+#~ msgid "A&utomatically select icons"
+#~ msgstr "Нишончаларни &авто-танлаш"
+
+#, fuzzy
+#~| msgid "Dela&y:"
+#~ msgctxt "label. delay (on milliseconds) to automatically select icons"
+#~ msgid "Delay"
+#~ msgstr "К&ечикиш:"
+
+#, fuzzy
+#~| msgid " msec"
+#~ msgctxt "milliseconds. time to automatically select the items"
+#~ msgid " ms"
+#~ msgstr " мс"
+
+#~ msgid ""
+#~ "<h1>Mouse</h1> This module allows you to choose various options for the "
+#~ "way in which your pointing device works. Your pointing device may be a "
+#~ "mouse, trackball, or some other hardware that performs a similar function."
+#~ msgstr ""
+#~ "<h1>Сичқонча</h1> Бу модул ёрдамида кўрсатгич ускунасининг турли "
+#~ "параметрларини танлашингиз мумкин. Кўрсатгич ускунаси сичқонча, трэкбол "
+#~ "ёки шунга ўхшган аммалларни бажарувчи бошқа ускуна бўлиши мумкин."
+
+#~ msgid "&General"
+#~ msgstr "&Умумий"
+
+#~ msgid "Activates and opens a file or folder with a single click."
+#~ msgstr "Бир марта босиб файл ёки жилдни танлаш ва опиш."
+
+#~ msgid "Advanced"
+#~ msgstr "Қўшимча"
+
+#~ msgid "Pointer acceleration:"
+#~ msgstr "Курсорнинг тезланиши:"
+
+#~ msgid " msec"
+#~ msgstr " мс"
+
+#~ msgid "Double click interval:"
+#~ msgstr "Икки марта босиш орасидаги вақт:"
+
+#~ msgid "Mouse Navigation"
+#~ msgstr "Сичқончани тугмалар билан бошқариш"
+
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "&Сичқончани тугматаг билан бошқариш"
+
+#~ msgid "&Acceleration delay:"
+#~ msgstr "&Тезланиш кечикиши:"
+
+#~ msgid "R&epeat interval:"
+#~ msgstr "&Қайтариш вақти:"
+
+#~ msgid "Acceleration &time:"
+#~ msgstr "Тезланиш &вақти:"
+
+#~ msgid " pixel/sec"
+#~ msgstr " пиксел/сек"
+
+#~ msgid "Ma&ximum speed:"
+#~ msgstr "&Энг катта тезлиги:"
+
+#~ msgid "Acceleration &profile:"
+#~ msgstr "Тезланиш &профили:"
+
+#~ msgid "Mouse"
+#~ msgstr "Сичқонча"
+
+#~ msgid "(c) 1997 - 2005 Mouse developers"
+#~ msgstr "(C) 1997-2005, Mouse тузувчилари"
+
+#~ msgid "Mouse type: %1"
+#~ msgstr "Сичқончанинг тури: %1"
+
+#, fuzzy
+#~| msgid "none"
+#~ msgctxt "no cordless mouse"
+#~ msgid "none"
+#~ msgstr "йўқ"
+
+#~ msgid "Cordless Mouse"
+#~ msgstr "Симсиз сичқонча"
+
+#~ msgid "Cordless Wheel Mouse"
+#~ msgstr "Симсиз ғилдиракли сичқонча"
+
+#~ msgid "Cordless Optical Mouse"
+#~ msgstr "Симсиз оптик сичқонча"
+
+#~ msgid "MX700 Cordless Optical Mouse"
+#~ msgstr "Симсиз оптик сичқонча MX700"
+
+#~ msgid "Unknown mouse"
+#~ msgstr "Номаълум сичқонча"
+
+#~ msgid "Channel 1"
+#~ msgstr "Канал 1"
+
+#~ msgid "Channel 2"
+#~ msgstr "Канал 2"
+
+#~ msgid "No description available"
+#~ msgstr "Ҳеч қандай таъриф мавжуд эмас"
+
+#~ msgid "Short"
+#~ msgstr "Қисқа"
+
+#~ msgid "Long"
+#~ msgstr "Узун"
+
+#~ msgid "No theme"
+#~ msgstr "Ҳеч қандан мавзу йўқ"
+
+#~ msgid "The old classic X cursors"
+#~ msgstr "Эски классик X курсорлари"
+
+#~ msgid "System theme"
+#~ msgstr "Тизим мавзуси"

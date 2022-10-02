@@ -1,0 +1,73 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Abdalrahim G. Fakhouri <abdilra7eem@yahoo.com>, 2014.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-05 00:46+0000\n"
+"PO-Revision-Date: 2022-04-28 12:46+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 21.07.70\n"
+
+#: baloosearchrunner.cpp:65
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "افتح المجلد الحاوي"
+
+#: baloosearchrunner.cpp:87
+#, kde-format
+msgid "Audio"
+msgstr "صوت"
+
+#: baloosearchrunner.cpp:88
+#, kde-format
+msgid "Image"
+msgstr "صورة"
+
+#: baloosearchrunner.cpp:89
+#, kde-format
+msgid "Video"
+msgstr "فيديو"
+
+#: baloosearchrunner.cpp:90
+#, kde-format
+msgid "Spreadsheet"
+msgstr "ورقة عمل"
+
+#: baloosearchrunner.cpp:91
+#, kde-format
+msgid "Presentation"
+msgstr "عرض تقديمي"
+
+#: baloosearchrunner.cpp:92
+#, kde-format
+msgid "Folder"
+msgstr "مجلد"
+
+#: baloosearchrunner.cpp:93
+#, kde-format
+msgid "Document"
+msgstr "مستند"
+
+#: baloosearchrunner.cpp:94
+#, kde-format
+msgid "Archive"
+msgstr "أرشيف"
+
+#: baloosearchrunner.cpp:95
+#, kde-format
+msgid "Text"
+msgstr "نص"
+
+#~ msgid "Search through files, emails and contacts"
+#~ msgstr "ابحث في الملفات وعناوين البريد والمتراسلين"

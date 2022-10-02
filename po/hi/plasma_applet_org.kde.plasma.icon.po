@@ -1,0 +1,43 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Raghavendra Kamath <raghu@raghukamath.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-20 00:46+0000\n"
+"PO-Revision-Date: 2021-07-02 18:41+0530\n"
+"Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
+"Language-Team: kde-hindi\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Lokalize 21.04.2\n"
+
+#: iconapplet.cpp:92
+#, kde-format
+msgid "Failed to create icon widgets folder '%1'"
+msgstr "प्रतीक विजेट फ़ोल्डर '%1' बनाने में विफल"
+
+#: iconapplet.cpp:138
+#, kde-format
+msgid "Failed to copy icon widget desktop file from '%1' to '%2'"
+msgstr "प्रतीक विजेट डेस्कटॉप फ़ाइल को '%1' से '%2' में नकल करने में विफल"
+
+#: iconapplet.cpp:385
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "युक्त फोल्डर खोलें"
+
+#: iconapplet.cpp:565
+#, kde-format
+msgid "Properties for %1"
+msgstr " %1 के लिए गुण"
+
+#: package/contents/ui/main.qml:73
+#, kde-format
+msgid "Properties"
+msgstr "गुण"

@@ -1,0 +1,229 @@
+# Translation for kcm_autostart.po to Euskara/Basque (eu).
+# Copyright (C) 2008-2014, The Free Software Foundation.
+# Copyright (C) 2015-2022, This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+#
+# Translators:
+# Asier Urio Larrea <asieriko@gmail.com>, 2008.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2010, 2014, 2017, 2020, 2021, 2022.
+# Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:50+0000\n"
+"PO-Revision-Date: 2022-08-11 19:46+0200\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 22.04.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: autostartmodel.cpp:288
+#, kde-format
+msgid "\"%1\" is not an absolute url."
+msgstr "«%1» ez da bide-izen absolutua."
+
+#: autostartmodel.cpp:291
+#, kde-format
+msgid "\"%1\" does not exist."
+msgstr "\"%1\" ez dago."
+
+#: autostartmodel.cpp:294
+#, kde-format
+msgid "\"%1\" is not a file."
+msgstr "\"%1\" ez da fitxategi bat."
+
+#: autostartmodel.cpp:297
+#, kde-format
+msgid "\"%1\" is not readable."
+msgstr "\"%1\" ezin da irakurri."
+
+#: package/contents/ui/main.qml:40
+#, kde-format
+msgid "Make Executable"
+msgstr "Egin exekutagarri"
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "The file '%1' must be executable to run at logout."
+msgstr "«%1» fitxategia exekutagarria izan behar da saio-ixtean ibiltzeko."
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid "The file '%1' must be executable to run at login."
+msgstr "«%1» fitxategia exekutagarria izan behar da saio-hastean ibiltzeko."
+
+#: package/contents/ui/main.qml:89
+#, kde-format
+msgid "Properties"
+msgstr "Propietateak"
+
+#: package/contents/ui/main.qml:95
+#, kde-format
+msgid "Remove"
+msgstr "Kendu"
+
+#: package/contents/ui/main.qml:106
+#, kde-format
+msgid "Applications"
+msgstr "Aplikazioak"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Login Scripts"
+msgstr "Saio-hasteko gidoiak"
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Pre-startup Scripts"
+msgstr "Abiatu aurreko gidoiak"
+
+#: package/contents/ui/main.qml:115
+#, kde-format
+msgid "Logout Scripts"
+msgstr "Saio-ixteko gidoiak"
+
+#: package/contents/ui/main.qml:124
+#, kde-format
+msgid "No user-specified autostart items"
+msgstr "Ez dago erabiltzaileak abio automatikorako zehaztutako elementurik"
+
+#: package/contents/ui/main.qml:125
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Click the <interface>Add…</interface> button below to add some"
+msgstr ""
+"Egin klik beheko <interface>Gehitu...</interface> botoiari batzuk gehitzeko"
+
+#: package/contents/ui/main.qml:139
+#, kde-format
+msgid "Choose Login Script"
+msgstr "Hautatu saio-asteko gidoia"
+
+#: package/contents/ui/main.qml:160
+#, kde-format
+msgid "Choose Logout Script"
+msgstr "Hautatu saio-ixteko gidoiak"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "Add…"
+msgstr "Gehitu…"
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Add Application…"
+msgstr "Gehitu aplikazioa..."
+
+#: package/contents/ui/main.qml:199
+#, kde-format
+msgid "Add Login Script…"
+msgstr "Gehitu saio-hasteko gidoia..."
+
+#: package/contents/ui/main.qml:205
+#, kde-format
+msgid "Add Logout Script…"
+msgstr "Gehitu saio-ixteko gidoia..."
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr ""
+#~ "Asier Urio Larrea,Iñigo Salvador Azurmendi,Hizkuntza Politikarako "
+#~ "Sailburuordetza"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "asieriko@gmail.com,xalba@ni.eus,hizpol@ej-gv.es"
+
+#~ msgid "Autostart"
+#~ msgstr "Hasiera automatikoa"
+
+#~ msgid "Session Autostart Manager Control Panel Module"
+#~ msgstr ""
+#~ "Saio abiarazte automatikoaren kudeatzailearen aginte-paneleko modulua"
+
+#~ msgid "Copyright © 2006–2020 Autostart Manager team"
+#~ msgstr "Copyright © 2006–2020 Hasiera automatikoa kudeatzeko taldea"
+
+#~ msgid "Stephen Leaf"
+#~ msgstr "Stephen Leaf"
+
+#~ msgid "Montel Laurent"
+#~ msgstr "Montel Laurent"
+
+#~ msgid "Maintainer"
+#~ msgstr "Arduraduna"
+
+#~ msgid "Nicolas Fella"
+#~ msgstr "Nicolas Fella"
+
+#~ msgid "Add..."
+#~ msgstr "Gehitu..."
+
+#~ msgid "Shell script path:"
+#~ msgstr "Shell scriptaren bide-izena:"
+
+#~ msgid "Create as symlink"
+#~ msgstr "Sortu esteka sinboliko gisa"
+
+#~ msgid "Autostart only in Plasma"
+#~ msgstr "Abiarazte automatikoa soilik Plasman"
+
+#~ msgid "Name"
+#~ msgstr "Izena"
+
+#~ msgid "Command"
+#~ msgstr "Komandoa"
+
+#~ msgid "Status"
+#~ msgstr "Egoera"
+
+#~ msgctxt ""
+#~ "@title:column The name of the column that decides if the program is run "
+#~ "on session startup, on session shutdown, etc"
+#~ msgid "Run On"
+#~ msgstr "Noiz exekutatu"
+
+#~ msgid "Session Autostart Manager"
+#~ msgstr "Saio abiarazte automatikoaren kudeatzailea"
+
+#~ msgctxt "The program will be run"
+#~ msgid "Enabled"
+#~ msgstr "Gaituta"
+
+#~ msgctxt "The program won't be run"
+#~ msgid "Disabled"
+#~ msgstr "Desgaituta"
+
+#~ msgid "Desktop File"
+#~ msgstr "Mahaigaineko fitxategia"
+
+#~ msgid "Script File"
+#~ msgstr "Script-fitxategia"
+
+#~ msgid "Add Program..."
+#~ msgstr "Gehitu programa..."
+
+#~ msgid "Startup"
+#~ msgstr "Abioa"
+
+#~ msgid "Before session startup"
+#~ msgstr "Saioa abiatu aurretik"
+
+#~ msgid ""
+#~ "Only files with “.sh” extensions are allowed for setting up the "
+#~ "environment."
+#~ msgstr ""
+#~ "“.sh” luzapena duten fitxategiak baino ez dira onartzen ingurua "
+#~ "konfiguratzeko."
+
+#~ msgid "Pre-KDE startup"
+#~ msgstr "KDEren aurrehasiera"
+
+#~ msgid "Shutdown"
+#~ msgstr "Itzali"

@@ -1,0 +1,330 @@
+# Translation of plasma_wallpaper_org.kde.image.po to Ukrainian
+# Copyright (C) 2014-2021 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_wallpaper_org.kde.image\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-15 00:46+0000\n"
+"PO-Revision-Date: 2022-05-22 07:59+0300\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Юрій Чорноіван"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "yurchor@ukr.net"
+
+#: imagepackage/contents/ui/config.qml:94
+#, kde-format
+msgid "Positioning:"
+msgstr "Розташування:"
+
+#: imagepackage/contents/ui/config.qml:97
+#, kde-format
+msgid "Scaled and Cropped"
+msgstr "Масштабоване та обрізане"
+
+#: imagepackage/contents/ui/config.qml:101
+#, kde-format
+msgid "Scaled"
+msgstr "Масштабоване"
+
+#: imagepackage/contents/ui/config.qml:105
+#, kde-format
+msgid "Scaled, Keep Proportions"
+msgstr "Масштабоване, зі збереженням пропорцій"
+
+#: imagepackage/contents/ui/config.qml:109
+#, kde-format
+msgid "Centered"
+msgstr "За центром"
+
+#: imagepackage/contents/ui/config.qml:113
+#, kde-format
+msgid "Tiled"
+msgstr "Плиткою"
+
+#: imagepackage/contents/ui/config.qml:141
+#, kde-format
+msgid "Background:"
+msgstr "Тло:"
+
+#: imagepackage/contents/ui/config.qml:142
+#, kde-format
+msgid "Blur"
+msgstr "Розмивання"
+
+#: imagepackage/contents/ui/config.qml:151
+#, kde-format
+msgid "Solid color"
+msgstr "Суцільний колір"
+
+#: imagepackage/contents/ui/config.qml:161
+#, kde-format
+msgid "Select Background Color"
+msgstr "Виберіть колір тла"
+
+#: imagepackage/contents/ui/config.qml:207
+#, kde-format
+msgid "Add Image…"
+msgstr "Додати зображення…"
+
+#: imagepackage/contents/ui/config.qml:213
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:257
+#, kde-format
+msgid "Get New Wallpapers…"
+msgstr "Отримати зображення тла стільниці…"
+
+#: imagepackage/contents/ui/main.qml:69
+#, kde-format
+msgid "Open Wallpaper Image"
+msgstr "Відкрити зображення тла стільниці"
+
+#: imagepackage/contents/ui/main.qml:70
+#, kde-format
+msgid "Next Wallpaper Image"
+msgstr "Наступне зображення тла стільниці"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:33
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Відкрити теку об’єкта"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:39
+#, kde-format
+msgid "Restore wallpaper"
+msgstr "Відновити початкове зображення тла"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:44
+#, kde-format
+msgid "Remove Wallpaper"
+msgstr "Вилучити зображення тла"
+
+#: plasma-apply-wallpaperimage.cpp:29
+#, kde-format
+msgid ""
+"This tool allows you to set an image as the wallpaper for the Plasma session."
+msgstr ""
+"За допомогою цього інструменту ви можете встановити зображення як фонове "
+"зображення для сеансу Плазми."
+
+#: plasma-apply-wallpaperimage.cpp:31
+#, kde-format
+msgid ""
+"An image file or an installed wallpaper kpackage that you wish to set as the "
+"wallpaper for your Plasma session"
+msgstr ""
+"Файл зображення або встановлений пакунок зображення тла, яким ви хочете "
+"скористатися для встановлення зображення тла для вашого сеансу Плазми"
+
+#: plasma-apply-wallpaperimage.cpp:45
+#, kde-format
+msgid ""
+"There is a stray single quote in the filename of this wallpaper (') - please "
+"contact the author of the wallpaper to fix this, or rename the file "
+"yourself: %1"
+msgstr ""
+"У назв файла цього зображення тла є один символ одинарних лапок (') — будь "
+"ласка, зв'яжіться із автором зображення тла, щоб виправити це, або "
+"перейменуйте файл власноруч: %1"
+
+#: plasma-apply-wallpaperimage.cpp:85
+#, kde-format
+msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+msgstr "Під час спроби встановити зображення тла Плазми сталася помилка:\n"
+
+#: plasma-apply-wallpaperimage.cpp:89
+#, kde-format
+msgid ""
+"Successfully set the wallpaper for all desktops to the KPackage based %1"
+msgstr ""
+"Успішно встановлено зображення тла для усіх стільниць з використанням "
+"KPackage на основі %1"
+
+#: plasma-apply-wallpaperimage.cpp:91
+#, kde-format
+msgid "Successfully set the wallpaper for all desktops to the image %1"
+msgstr ""
+"Успішно встановлено зображення тла для усіх стільниць з використанням "
+"зображення %1"
+
+#: plasma-apply-wallpaperimage.cpp:97
+#, kde-format
+msgid ""
+"The file passed to be set as wallpaper does not exist, or we cannot identify "
+"it as a wallpaper: %1"
+msgstr ""
+"Файла, вказаного як файл зображення тла, не існує або його не вдалося "
+"ідентифікувати як зображення тла: %1"
+
+#: plugin/finder/packagefinder.cpp:152
+#, kde-format
+msgid "Recommended wallpaper file"
+msgstr "Рекомендований файл зображення тла"
+
+#: plugin/imagebackend.cpp:234
+#, kde-format
+msgid "Directory with the wallpaper to show slides from"
+msgstr "Каталог із зображеннями тла, з якого слід брати картинки"
+
+#: plugin/imagebackend.cpp:345
+#, kde-format
+msgid "Open Image"
+msgstr "Відкриття зображення"
+
+#: plugin/imagebackend.cpp:345
+#, kde-format
+msgid "Image Files"
+msgstr "Файли зображень"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:38
+#, kde-format
+msgid "Order:"
+msgstr "Порядок:"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:45
+#, kde-format
+msgid "Random"
+msgstr "випадковий"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:49
+#, kde-format
+msgid "A to Z"
+msgstr "від А до Я"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:53
+#, kde-format
+msgid "Z to A"
+msgstr "від Я до А"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:57
+#, kde-format
+msgid "Date modified (newest first)"
+msgstr "за датою зміни (найновіші спочатку)"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:61
+#, kde-format
+msgid "Date modified (oldest first)"
+msgstr "за датою зміни (найстаріші спочатку)"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:86
+#, kde-format
+msgid "Group by folders"
+msgstr "Згрупувати за теками"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:98
+#, kde-format
+msgid "Change every:"
+msgstr "Змінювати кожні:"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:108
+#, kde-format
+msgid "%1 hour"
+msgid_plural "%1 hours"
+msgstr[0] "%1 година"
+msgstr[1] "%1 години"
+msgstr[2] "%1 годин"
+msgstr[3] "%1 година"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:128
+#, kde-format
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "%1 хвилина"
+msgstr[1] "%1 хвилини"
+msgstr[2] "%1 хвилин"
+msgstr[3] "%1 хвилина"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:148
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "%1 секунда"
+msgstr[1] "%1 секунди"
+msgstr[2] "%1 секунд"
+msgstr[3] "%1 секунда"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:162
+#, kde-format
+msgid "Folders"
+msgstr "Теки"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:220
+#, kde-format
+msgid "Remove Folder"
+msgstr "Вилучити теку"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:225
+#, kde-format
+msgid "Open Folder"
+msgstr "Відкрити теку"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:235
+#, kde-format
+msgid "There are no wallpaper locations configured"
+msgstr "Не налаштовано місце зберігання зображень тла стільниці"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:250
+#, kde-format
+msgid "Add Folder…"
+msgstr "Додати теку…"
+
+#~ msgid "There are no wallpapers in this slideshow"
+#~ msgstr "У цьому показі слайдів немає зображень тла стільниці"
+
+#~ msgid "Add Custom Wallpaper"
+#~ msgstr "Додати нетипове зображення тла"
+
+#~ msgid "Remove wallpaper"
+#~ msgstr "Вилучити зображення тла"
+
+#~ msgid "%1 by %2"
+#~ msgstr "%1, автор — %2"
+
+#~ msgid "Wallpapers"
+#~ msgstr "Зображення тла"
+
+#~ msgctxt "<image> by <author>"
+#~ msgid "By %1"
+#~ msgstr "Автор — %1"
+
+#~ msgid "Download Wallpapers"
+#~ msgstr "Отримати зображення тла стільниці"
+
+#~ msgid "Hours"
+#~ msgstr "год."
+
+#~ msgid "Use blur background filling"
+#~ msgstr "Розмите заповнення тла"
+
+#~ msgid "Open..."
+#~ msgstr "Відкрити…"
+
+#~ msgctxt "Unknown Author"
+#~ msgid "Unknown"
+#~ msgstr "Невідомий"
+
+#~ msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz *.xcf)"
+#~ msgstr "файли зображень (*.png *.jpg *.jpeg *.bmp *.svg *.svgz *.xcf)"
+
+#~ msgid "Screenshot"
+#~ msgstr "Знімок вікна"
+
+#~ msgid "Preview"
+#~ msgstr "Перегляд"

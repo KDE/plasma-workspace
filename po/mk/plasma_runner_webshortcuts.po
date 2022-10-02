@@ -1,0 +1,45 @@
+# translation of krunner_webshortcutsrunner.po to Macedonian
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Bozidar Proevski <bobibobi@freemail.com.mk>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner_webshortcutsrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-06-02 00:47+0000\n"
+"PO-Revision-Date: 2008-12-24 17:13+0100\n"
+"Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
+"Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
+"Language: mk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: Plural-Forms: nplurals=3; plural=n%10==1 ? 0 : n%10==2 ? 1 : "
+"2;\n"
+
+#: webshortcutrunner.cpp:58
+#, kde-format
+msgid "Opens \"%1\" in a web browser with the query :q:."
+msgstr ""
+
+#: webshortcutrunner.cpp:63
+#, kde-format
+msgid "Search using the DuckDuckGo bang syntax"
+msgstr ""
+
+#: webshortcutrunner.cpp:94
+#, kde-format
+msgid "Search in private window"
+msgstr ""
+
+#: webshortcutrunner.cpp:94
+#, kde-format
+msgid "Search in incognito window"
+msgstr ""
+
+#: webshortcutrunner.cpp:129 webshortcutrunner.cpp:146
+#, kde-format
+msgid "Search %1 for %2"
+msgstr "Пребарај на %1 за %2"

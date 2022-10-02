@@ -1,0 +1,697 @@
+# Indonesian translations for kcminput package.
+# Copyright (C) 2009 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kcminput package.
+# Andhika Padmawan <andhika.padmawan@gmail.com>, 2009-2014.
+# Wantoyo <wantoyek@gmail.com>, 2017, 2018, 2019, 2022.
+# Aziz Adam Adrian <4.adam.adrian@gmail.com>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminput\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:50+0000\n"
+"PO-Revision-Date: 2022-05-30 10:56+0700\n"
+"Last-Translator: Aziz Adam Adrian <4.adam.adrian@gmail.com>\n"
+"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 22.04.1\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current cursor theme"
+msgstr "Nama tema kursor saat ini"
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr "Ukuran kursor saat ini"
+
+#: kcmcursortheme.cpp:302
+#, kde-format
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr ""
+"Kamu harus menjalankan ulang sesi Plasma untuk perubahan tersebut agar "
+"berpengaruh."
+
+#: kcmcursortheme.cpp:376
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Tak bisa menciptakan sebuah file temporer."
+
+#: kcmcursortheme.cpp:387
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Tak bisa mengunduh arsip tema ikon: %1"
+
+#: kcmcursortheme.cpp:418
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "File bukanlah arsip tema kursor yang absah."
+
+#: kcmcursortheme.cpp:425
+#, kde-format
+msgid "Failed to create 'icons' folder."
+msgstr "Gagal menciptakan folder 'ikon-ikon'."
+
+#: kcmcursortheme.cpp:434
+#, kde-format
+msgid ""
+"A theme named %1 already exists in your icon theme folder. Do you want "
+"replace it with this one?"
+msgstr ""
+"Sebuah tema bernama %1 sudah ada di folder tema ikonmu. Apakah kamu ingin "
+"menggantinya dengan yang ini?"
+
+#: kcmcursortheme.cpp:438
+#, kde-format
+msgid "Overwrite Theme?"
+msgstr "Timpa Tema?"
+
+#: kcmcursortheme.cpp:462
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "Tema terinstal dengan sukses."
+
+#: package/contents/ui/Delegate.qml:54
+#, kde-format
+msgid "Remove Theme"
+msgstr "Hapus Tema"
+
+#: package/contents/ui/Delegate.qml:61
+#, kde-format
+msgid "Restore Cursor Theme"
+msgstr "Kembalikan Tema Kursor"
+
+#: package/contents/ui/main.qml:20
+#, kde-format
+msgid "This module lets you choose the mouse cursor theme."
+msgstr "Modul ini memungkinkanmu memilih tema kursor mouse."
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Size:"
+msgstr "Ukuran:"
+
+#: package/contents/ui/main.qml:134
+#, kde-format
+msgid "&Install from File…"
+msgstr "&Instal dari File..."
+
+#: package/contents/ui/main.qml:140
+#, kde-format
+msgid "&Get New Cursors…"
+msgstr "&Dapatkan Kursor Baru..."
+
+#: package/contents/ui/main.qml:157
+#, kde-format
+msgid "Open Theme"
+msgstr "Buka Tema"
+
+#: package/contents/ui/main.qml:159
+#, kde-format
+msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+msgstr "File-file Tema Kursor (*.tar.gz *.tar.bz2)"
+
+#: plasma-apply-cursortheme.cpp:41
+#, kde-format
+msgid "The requested size '%1' is not available, using %2 instead."
+msgstr ""
+"Ukuran yang diminta '%1' tidak tersedia, menggunakan %2 sebagai gantinya."
+
+#: plasma-apply-cursortheme.cpp:62
+#, kde-format
+msgid ""
+"This tool allows you to set the mouse cursor theme for the current Plasma "
+"session, without accidentally setting it to one that is either not "
+"available, or which is already set."
+msgstr ""
+"Alat ini memungkinkan kamu untuk mengatur tema kursor mouse untuk sesi "
+"Plasma saat ini, tanpa secara tidak sengaja mengaturnya ke tema yang tidak "
+"tersedia, atau yang sudah diatur."
+
+#: plasma-apply-cursortheme.cpp:66
+#, kde-format
+msgid ""
+"The name of the cursor theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+"Nama tema kursor yang ingin kamu atur untuk sesi Plasma saat ini (melalui "
+"alur penuh hanya akan menggunakan bagian terakhir dari alur)"
+
+#: plasma-apply-cursortheme.cpp:67
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+"Tampilkan semua tema yang tersedia di sistem (dan yang merupakan tema saat "
+"ini)"
+
+#: plasma-apply-cursortheme.cpp:68
+#, kde-format
+msgid "Use a specific size, rather than the theme default size"
+msgstr "Gunakan ukuran tertentu, bukan ukuran baku tema"
+
+#: plasma-apply-cursortheme.cpp:89
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+"Tema \"%1\" yang diminta sudah ditetapkan sebagai tema untuk sesi Plasma "
+"saat ini."
+
+#: plasma-apply-cursortheme.cpp:100
+#, kde-format
+msgid ""
+"Successfully applied the mouse cursor theme %1 to your current Plasma session"
+msgstr "Berhasil menerapkan tema kursor mouse %1 ke sesi Plasma saat ini"
+
+#: plasma-apply-cursortheme.cpp:102
+#, kde-format
+msgid ""
+"You have to restart the Plasma session for your newly applied mouse cursor "
+"theme to display correctly."
+msgstr ""
+"Kamu harus menjalankan ulang sesi Plasma untuk menerapkan tema kursor mouse "
+"yang baru agar ditampilkan dengan benar."
+
+#: plasma-apply-cursortheme.cpp:112
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+"Tidak dapat menemukan tema \"%1\". Tema seharusnya salahsatu dari opsi "
+"berikut ini: %2"
+
+#: plasma-apply-cursortheme.cpp:120
+#, kde-format
+msgid "You have the following mouse cursor themes on your system:"
+msgstr "Kamu memiliki tema kursor mouse berikut di sistem:"
+
+#: plasma-apply-cursortheme.cpp:125
+#, kde-format
+msgid "(Current theme for this Plasma session)"
+msgstr "(Tema saat ini untuk sesi Plasma ini)"
+
+#: xcursor/xcursortheme.cpp:60
+#, kde-format
+msgctxt ""
+"@info The argument is the list of available sizes (in pixel). Example: "
+"'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+msgid "(Available sizes: %1)"
+msgstr "(Ukuran tersedia: %1)"
+
+#~ msgid "Name"
+#~ msgstr "Nama"
+
+#~ msgid "Description"
+#~ msgstr "Deskripsi"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Andhika Padmawan,Wantoyo"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "andhika.padmawan@gmail.com,wantoyek@gmail.com"
+
+#~ msgid "Cursors"
+#~ msgstr "Kursor"
+
+#~ msgid "(c) 2003-2007 Fredrik Höglund"
+#~ msgstr "(c) 2003-2007 Fredrik Höglund"
+
+#~ msgid "Fredrik Höglund"
+#~ msgstr "Fredrik Höglund"
+
+#~ msgid "Marco Martin"
+#~ msgstr "Marco Martin"
+
+#~ msgid ""
+#~ "<qt>You cannot delete the theme you are currently using.<br />You have to "
+#~ "switch to another theme first.</qt>"
+#~ msgstr ""
+#~ "<qt>Anda tak dapat menghapus tema yang saat ini anda gunakan.<br />Anda "
+#~ "harus mengganti ke tema lainnya dahulu.</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <i>%1</i> cursor theme?<br />This "
+#~ "will delete all the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>Apakah anda yakin ingin menghapus tema kursor <i>%1</i>?<br />Ini "
+#~ "akan menghapus semua file yang diinstal oleh tema ini.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Konfirmasi"
+
+#~ msgctxt "@item:inlistbox size"
+#~ msgid "Resolution dependent"
+#~ msgstr "Bergantung resolusi"
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "Setelan Kursor Berubah"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "Tarik atau Ketik URL Tema"
+
+#~ msgid ""
+#~ "Unable to download the cursor theme archive; please check that the "
+#~ "address %1 is correct."
+#~ msgstr ""
+#~ "Tak dapat mengunduh arsip tema kursor; silakan cek apakah alamat %1 benar."
+
+#~ msgid "Get new color schemes from the Internet"
+#~ msgstr "Dapatkan skema warna baru dari Internet"
+
+#~ msgid ""
+#~ "Select the cursor theme you want to use (hover preview to test cursor):"
+#~ msgstr ""
+#~ "Pilih tema kursor yang ingin anda gunakan (pratilik di atas untuk tes "
+#~ "kursor):"
+
+#~ msgid "Select the cursor theme you want to use:"
+#~ msgstr "Pilih tema kursor yang ingin anda gunakan:"
+
+#~ msgid "Small black"
+#~ msgstr "Hitam kecil"
+
+#~ msgid "Small black cursors"
+#~ msgstr "Kursor hitam kecil"
+
+#~ msgid "Large black"
+#~ msgstr "Hitam besar"
+
+#~ msgid "Large black cursors"
+#~ msgstr "Kursor hitam besar"
+
+#~ msgid "Small white"
+#~ msgstr "Putih kecil"
+
+#~ msgid "Small white cursors"
+#~ msgstr "Kursor putih kecil"
+
+#~ msgid "Large white"
+#~ msgstr "Putih besar"
+
+#~ msgid "Large white cursors"
+#~ msgstr "Kursor putih besar"
+
+#~ msgid "Button Order"
+#~ msgstr "Urutan Tombol"
+
+#~ msgid "Righ&t handed"
+#~ msgstr "Kana&n"
+
+#~ msgid "Le&ft handed"
+#~ msgstr "Ki&dal"
+
+#~ msgid ""
+#~ "Change the direction of scrolling for the mouse wheel or the 4th and 5th "
+#~ "mouse buttons."
+#~ msgstr ""
+#~ "Ubah arah penggulungan untuk roda tetikus atau tombol tetikus keempat dan "
+#~ "kelima."
+
+#~ msgid "Re&verse scroll direction"
+#~ msgstr "Arah gu&lung terbalik"
+
+#~ msgid "Icons"
+#~ msgstr "Ikon"
+
+#~ msgid ""
+#~ "Dou&ble-click to open files and folders (select icons on first click)"
+#~ msgstr ""
+#~ "Kl&ik ganda untuk membuka berkas dan folder (pilih ikon saat klik pertama)"
+
+#~ msgid "&Single-click to open files and folders"
+#~ msgstr "&Klik tunggal untuk membuka berkas dan folder"
+
+#~ msgid "Cha&nge pointer shape over icons"
+#~ msgstr "Ubah bentuk penun&juk di atas ikon"
+
+#~ msgid "A&utomatically select icons"
+#~ msgstr "Se&cara otomatis memilih ikon"
+
+#~ msgctxt "label. delay (on milliseconds) to automatically select icons"
+#~ msgid "Delay"
+#~ msgstr "Jeda"
+
+#~ msgctxt "milliseconds. time to automatically select the items"
+#~ msgid " ms"
+#~ msgstr " md"
+
+#~ msgid ""
+#~ "<h1>Mouse</h1> This module allows you to choose various options for the "
+#~ "way in which your pointing device works. Your pointing device may be a "
+#~ "mouse, trackball, or some other hardware that performs a similar function."
+#~ msgstr ""
+#~ "<h1>Tetikus</h1> Modul ini memungkinkan anda untuk memilih beragam opsi "
+#~ "bagi cara divais penunjuk anda bekerja. Divais penunjuk anda dapat berupa "
+#~ "tetikus, trackball, atau beberapa peranti keras lainnya yang mempunyai "
+#~ "fungsi serupa."
+
+#~ msgid "&General"
+#~ msgstr "&Umum"
+
+#~ msgid ""
+#~ "If you are left-handed, you may prefer to swap the functions of the left "
+#~ "and right buttons on your pointing device by choosing the 'left-handed' "
+#~ "option. If your pointing device has more than two buttons, only those "
+#~ "that function as the left and right buttons are affected. For example, if "
+#~ "you have a three-button mouse, the middle button is unaffected."
+#~ msgstr ""
+#~ "Jika anda seorang kidal, anda mungkin cenderung untuk mengganti fungsi "
+#~ "tombol kiri dan kanan dari divais penunjuk anda dengan memilih opsi "
+#~ "'kidal'. Jika divais penunjuk anda mempunyai lebih dari dua tombol, hanya "
+#~ "tombol yang berfungsi seperti tombol kiri dan kanan yang terpengaruh. "
+#~ "Misalnya, jika anda memiliki tetikus tiga tombol, maka tombol tengah "
+#~ "tidak terpengaruh."
+
+#~ msgid ""
+#~ "The default behavior in KDE is to select and activate icons with a single "
+#~ "click of the left button on your pointing device. This behavior is "
+#~ "consistent with what you would expect when you click links in most web "
+#~ "browsers. If you would prefer to select with a single click, and activate "
+#~ "with a double click, check this option."
+#~ msgstr ""
+#~ "Perilaku standar di KDE adalah memilih dan mengaktifkan ikon dengan klik "
+#~ "tunggal tombol kiri di divais penunjuk anda. Perilaku ini konsisten "
+#~ "dengan apa yang anda harapkan ketika klik pada tautan di kebanyakan "
+#~ "peramban web. Jika anda memilih untuk memilih dengan klik tunggal, dan "
+#~ "mengaktifkan dengan klik ganda, centang opsi ini."
+
+#~ msgid "Activates and opens a file or folder with a single click."
+#~ msgstr "Aktifkan dan buka sebuah berkas atau folder dengan klik tunggal."
+
+#~ msgid ""
+#~ "If you check this option, pausing the mouse pointer over an icon on the "
+#~ "screen will automatically select that icon. This may be useful when "
+#~ "single clicks activate icons, and you want only to select the icon "
+#~ "without activating it."
+#~ msgstr ""
+#~ "Jika anda mencentang opsi ini, menahan penunjuk tetikus di atas ikon pada "
+#~ "layar akan secara otomatis memilih ikon tersebut. Hal ini mungkin berguna "
+#~ "jika klik tunggal mengaktifkan ikon, dan anda hanya ingin memilih ikon "
+#~ "tanpa mengaktifkannya."
+
+#~ msgid ""
+#~ "If you have checked the option to automatically select icons, this slider "
+#~ "allows you to select how long the mouse pointer must be paused over the "
+#~ "icon before it is selected."
+#~ msgstr ""
+#~ "Jika anda telah mencentang opsi untuk secara otomatis memilih ikon, "
+#~ "penggeser ini memungkinkan anda untuk memilih berapa lama penunjuk "
+#~ "tetikus harus ditahan di atas ikon sebelum terpilih."
+
+#~ msgid "Advanced"
+#~ msgstr "Lanjutan"
+
+#~ msgid " x"
+#~ msgstr " x"
+
+#~ msgid "Pointer acceleration:"
+#~ msgstr "Akselerasi penunjuk:"
+
+#~ msgid ""
+#~ "<p>This option allows you to change the relationship between the distance "
+#~ "that the mouse pointer moves on the screen and the relative movement of "
+#~ "the physical device itself (which may be a mouse, trackball, or some "
+#~ "other pointing device.)</p><p> A high value for the acceleration will "
+#~ "lead to large movements of the mouse pointer on the screen even when you "
+#~ "only make a small movement with the physical device. Selecting very high "
+#~ "values may result in the mouse pointer flying across the screen, making "
+#~ "it hard to control.</p>"
+#~ msgstr ""
+#~ "<p>Opsi ini memungkinkan anda untuk mengubah hubungan antara jarak dari "
+#~ "pergerakan penunjuk tetikus di layar dan pergerakan relatif dari divais "
+#~ "fisik itu sendiri (yang dapat berupa tetikus, trackball, atau beberapa "
+#~ "divais penunjuk lainnya.)</p><p> Nilai yang tinggi untuk akselerasi akan "
+#~ "membawa pada pergerakan yang jauh dari penunjuk tetikus di layar bahkan "
+#~ "jika anda hanya membuat pergerakan kecil dengan divais fisik. Memilih "
+#~ "nilai yang sangat tinggi dapat berakibat penunjuk tetikus anda melayang "
+#~ "melewati layar, membuatnya sulit untuk dikendalikan.</p>"
+
+#~ msgid "Pointer threshold:"
+#~ msgstr "Batas penunjuk:"
+
+#~ msgid ""
+#~ "<p>The threshold is the smallest distance that the mouse pointer must "
+#~ "move on the screen before acceleration has any effect. If the movement is "
+#~ "smaller than the threshold, the mouse pointer moves as if the "
+#~ "acceleration was set to 1X;</p><p> thus, when you make small movements "
+#~ "with the physical device, there is no acceleration at all, giving you a "
+#~ "greater degree of control over the mouse pointer. With larger movements "
+#~ "of the physical device, you can move the mouse pointer rapidly to "
+#~ "different areas on the screen.</p>"
+#~ msgstr ""
+#~ "<p>Batas adalah jarak terkecil yang penunjuk tetikus harus pindah di "
+#~ "layar sebelum akselerasi mempunyai efek. Jika pergerakan lebih kecil dari "
+#~ "batas, penunjuk tetikus bergerak seperti akselerasi diatur ke 1X;</p><p> "
+#~ "sehingga, ketika anda membuat pergerakan kecil dengan divais fisik, tidak "
+#~ "ada akselerasi sama sekali, memberikan anda kendali yang lebih besar "
+#~ "terhadap penunjuk tetikus. Dengan pergerakan yang lebih besar dari divais "
+#~ "fisik, anda dapat memindahkan penunjuk tetikus secara cepat ke berbagai "
+#~ "area yang berbeda di layar.</p>"
+
+#~ msgid " msec"
+#~ msgstr " mdet"
+
+#~ msgid "Double click interval:"
+#~ msgstr "Interval klik ganda:"
+
+#~ msgid ""
+#~ "The double click interval is the maximal time (in milliseconds) between "
+#~ "two mouse clicks which turns them into a double click. If the second "
+#~ "click happens later than this time interval after the first click, they "
+#~ "are recognized as two separate clicks."
+#~ msgstr ""
+#~ "Interval klik ganda adalah waktu maksimal (dalam milidetik) di antara dua "
+#~ "klik ganda yang menjadikan mereka klik ganda. Jika klik yang kedua "
+#~ "terjadi lebih lambat daripada interval waktu ini setelah klik pertama, "
+#~ "mereka dianggap dua klik yang terpisah."
+
+#~ msgid "Drag start time:"
+#~ msgstr "Waktu mulai tarik:"
+
+#~ msgid ""
+#~ "If you click with the mouse (e.g. in a multi-line editor) and begin to "
+#~ "move the mouse within the drag start time, a drag operation will be "
+#~ "initiated."
+#~ msgstr ""
+#~ "Jika anda klik dengan tetikus (misalnya di penyunting multi baris) dan "
+#~ "mulai memindahkan tetikus di dalam waktu mulai tarik, operasi penarikan "
+#~ "akan dijalankan."
+
+#~ msgid "Drag start distance:"
+#~ msgstr "Jarak mulai tarik:"
+
+#~ msgid ""
+#~ "If you click with the mouse and begin to move the mouse at least the drag "
+#~ "start distance, a drag operation will be initiated."
+#~ msgstr ""
+#~ "Jika anda klik dengan tetikus dan mulai untuk memindahkan tetikus "
+#~ "sekurangnya jarak mulai tarik, operasi penarikan akan dijalankan."
+
+#~ msgid "Mouse wheel scrolls by:"
+#~ msgstr "Gulung roda tetikus oleh:"
+
+#~ msgid ""
+#~ "If you use the wheel of a mouse, this value determines the number of "
+#~ "lines to scroll for each wheel movement. Note that if this number exceeds "
+#~ "the number of visible lines, it will be ignored and the wheel movement "
+#~ "will be handled as a page up/down movement."
+#~ msgstr ""
+#~ "Jika anda menggunakan roda tetikus, nilai ini menentukan jumlah baris "
+#~ "untuk menggulung untuk tiap pergerakan roda. Perlu dicatat bahwa jika "
+#~ "nomor ini melampaui jumlah baris terlihat, nomor akan diabaikan dan "
+#~ "pergerakan roda akan ditangani sebagai pergerakan satu halaman ke atas/"
+#~ "bawah."
+
+#~ msgid "Mouse Navigation"
+#~ msgstr "Navigasi Tetikus"
+
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "&Pindah penunjuk dengan papan ketik (menggunakan num pad)"
+
+#~ msgid "&Acceleration delay:"
+#~ msgstr "&Jeda akselerasi:"
+
+#~ msgid "R&epeat interval:"
+#~ msgstr "Int&erval pengulangan:"
+
+#~ msgid "Acceleration &time:"
+#~ msgstr "Wak&tu akselerasi:"
+
+#~ msgid " pixel/sec"
+#~ msgstr " pixel/det"
+
+#~ msgid "Ma&ximum speed:"
+#~ msgstr "Kecepatan ma&ksimum:"
+
+#~ msgid "Acceleration &profile:"
+#~ msgstr "&Profil akselerasi"
+
+#~ msgid "Mouse"
+#~ msgstr "Tetikus"
+
+#~ msgid "(c) 1997 - 2005 Mouse developers"
+#~ msgstr "(c) 1997 - 2005 Pengembang tetikus"
+
+#~ msgid "Patrick Dowler"
+#~ msgstr "Patrick Dowler"
+
+#~ msgid "Dirk A. Mueller"
+#~ msgstr "Dirk A. Mueller"
+
+#~ msgid "David Faure"
+#~ msgstr "David Faure"
+
+#~ msgid "Bernd Gehrmann"
+#~ msgstr "Bernd Gehrmann"
+
+#~ msgid "Rik Hemsley"
+#~ msgstr "Rik Hemsley"
+
+#~ msgid "Brad Hughes"
+#~ msgstr "Brad Hughes"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "Brad Hards"
+#~ msgstr "Brad Hards"
+
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] " pixel"
+
+#~ msgid " line"
+#~ msgid_plural " lines"
+#~ msgstr[0] " baris"
+
+#~ msgid "Mouse type: %1"
+#~ msgstr "Tipe tetikus: %1"
+
+#~ msgid ""
+#~ "RF channel 1 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "Kanal RF 1 telah diatur. Silakan tekan tombol Sambung pada tetikus untuk "
+#~ "membangun ulang tautan"
+
+#~ msgid "Press Connect Button"
+#~ msgstr "Tekan Tombol Sambung"
+
+#~ msgid ""
+#~ "RF channel 2 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "Kanan RF 2 telah diatur. Silakan tekan tombol Sambung pada tetikus untuk "
+#~ "membangun ulang tautan."
+
+#~ msgctxt "no cordless mouse"
+#~ msgid "none"
+#~ msgstr "tak ada"
+
+#~ msgid "Cordless Mouse"
+#~ msgstr "Cordless Mouse"
+
+#~ msgid "Cordless Wheel Mouse"
+#~ msgstr "Cordless Wheel Mouse"
+
+#~ msgid "Cordless MouseMan Wheel"
+#~ msgstr "Cordless MouseMan Wheel"
+
+#~ msgid "Cordless TrackMan Wheel"
+#~ msgstr "Cordless TrackMan Wheel"
+
+#~ msgid "TrackMan Live"
+#~ msgstr "TrackMan Live"
+
+#~ msgid "Cordless TrackMan FX"
+#~ msgstr "Cordless TrackMan FX"
+
+#~ msgid "Cordless MouseMan Optical"
+#~ msgstr "Cordless MouseMan Optical"
+
+#~ msgid "Cordless Optical Mouse"
+#~ msgstr "Cordless Optical Mouse"
+
+#~ msgid "Cordless MouseMan Optical (2ch)"
+#~ msgstr "Cordless MouseMan Optical (2ch)"
+
+#~ msgid "Cordless Optical Mouse (2ch)"
+#~ msgstr "Cordless Optical Mouse (2ch)"
+
+#~ msgid "Cordless Mouse (2ch)"
+#~ msgstr "Cordless Mouse (2ch)"
+
+#~ msgid "Cordless Optical TrackMan"
+#~ msgstr "Cordless Optical TrackMan"
+
+#~ msgid "MX700 Cordless Optical Mouse"
+#~ msgstr "MX700 Cordless Optical Mouse"
+
+#~ msgid "MX700 Cordless Optical Mouse (2ch)"
+#~ msgstr "MX700 Cordless Optical Mouse (2ch)"
+
+#~ msgid "Unknown mouse"
+#~ msgstr "tetikus tak diketahui"
+
+#~ msgid "Cordless Name"
+#~ msgstr "Nama Nirkabel"
+
+#~ msgid "Sensor Resolution"
+#~ msgstr "Resolusi Sensor"
+
+#~ msgid "400 counts per inch"
+#~ msgstr "400 hitungan per inci"
+
+#~ msgid "800 counts per inch"
+#~ msgstr "800 hitungan per inci"
+
+#~ msgid "Battery Level"
+#~ msgstr "Level Baterai"
+
+#~ msgid "RF Channel"
+#~ msgstr "Kanal RF"
+
+#~ msgid "Channel 1"
+#~ msgstr "Kanal 1"
+
+#~ msgid "Channel 2"
+#~ msgstr "Kanal 2"
+
+#~ msgid ""
+#~ "You have a Logitech Mouse connected, and libusb was found at compile "
+#~ "time, but it was not possible to access this mouse. This is probably "
+#~ "caused by a permissions problem - you should consult the manual on how to "
+#~ "fix this."
+#~ msgstr ""
+#~ "Jika anda memiliki Tetikus Logitech tersambung, dan libusb ditemukan saat "
+#~ "waktu kompilasi, tapi tidak mungkin untuk mengakses tetikus ini. Hal ini "
+#~ "mungkin disebabkan oleh masalah hak akses - anda harus berkonsultasi "
+#~ "dengan manual untuk cara memperbaiki ini."
+
+#~ msgid "KDE Classic"
+#~ msgstr "KDE Klasik"
+
+#~ msgid "The default cursor theme in KDE 2 and 3"
+#~ msgstr "Tema kursor standar di KDE 2 dan 3"
+
+#~ msgid "No description available"
+#~ msgstr "Tak ada deskripsi yang tersedia"
+
+#~ msgid "Short"
+#~ msgstr "Pendek"
+
+#~ msgid "Long"
+#~ msgstr "Panjang"

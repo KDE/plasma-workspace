@@ -1,0 +1,194 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Indonesian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmstyle" lang="&language;">
+<articleinfo>
+
+<title
+>Gaya Widget</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>Wantoyo</firstname
+><surname
+></surname
+><affiliation
+><address
+><email
+>wantoyek@gmail.com</email
+></address
+></affiliation
+><contrib
+>Terjemahan</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>18-03-2018</date>
+<releaseinfo
+>Plasma 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>System Settings</keyword>
+<keyword
+>gaya</keyword>
+<keyword
+>widget</keyword>
+</keywordset>
+</articleinfo>
+
+<variablelist>
+<varlistentry>
+<term
+>Pengenalan</term>
+<listitem>
+
+<para
+>Modul ini digunakan untuk mengkonfigurasi bagaimana widget secara individu akan digambari oleh Plasma.</para>
+
+<note
+><para
+>Sebuah <emphasis
+>Widget</emphasis
+> adalah istilah programmer yang umum digunakan untuk merujuk ke elemen Antarmuka Pengguna seperti tombol, menu, dan bilah gulir. Kamu bisa  menganggapnya sebagai bagian mendasar yang disusun untuk membuat aplikasimu.</para
+></note>
+
+<para
+>Kamu bisa mengkonfigurasi bagaimana witget akan digambari dengan model ini tapi untuk mengubah warna kamu harus menuju ke bagian <ulink url="help:/kcontrol/colors/index.html"
+>Warna</ulink
+>.</para>
+
+<para
+>Panel ini telah dibagi dalam dua tab: <guilabel
+>Aplikasi</guilabel
+> dan <guilabel
+>Penalaan Halus</guilabel
+>.</para>
+
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>Tab <guilabel
+>Aplikasi</guilabel
+></term>
+<listitem>
+<para
+>Kotak tarik turun di atas, yang berlabel <guilabel
+>Gaya Widget</guilabel
+> berisi sebuah daftar gaya yang ditentukan sebelumnya. Setiap gaya memiliki sebuah nama, dan deskripsi singkat.</para>
+
+<para
+>Untuk mengubah gaya, pilihlah sebuah gaya di dalam kotak tarik turun, dan sebuah pratinjau dari gaya yang akan didisplaikan di dalam kotak pratinjau di bawah daftar gaya.</para>
+
+<para
+>Jika sebuah gaya adalah dapat dikonfigurasi, tombol <guibutton
+>Konfigurasikan...</guibutton
+> di sebelah kanan kotak tarik turun adalah difungsikan dan bisa digunakan untuk membuka dialog untuk memilih pengaturan lebih lanjut.</para>
+
+</listitem>
+</varlistentry>
+
+<varlistentry
+> 
+<term
+>Tab <guilabel
+>Penalaan Halus</guilabel
+></term>
+<listitem>
+<variablelist>
+
+<varlistentry
+> 
+<term
+><guilabel
+>Tampilkan ikon di tombol</guilabel
+></term>
+<listitem>
+<para
+>Jika opsi ini dipilih, tombol aksi (seperti <guibutton
+>Oke</guibutton
+> dan <guibutton
+>Terapkan</guibutton
+>) akan memiliki sebuah ikon kecil yang terletak di dalamnya untuk beraksi sebagai referensi visual. Jika opsi ini tidak dipilih, maka hanya teks yang akan muncul di tombol.</para>
+</listitem
+> 
+</varlistentry
+> 
+
+<varlistentry
+> 
+<term
+><guilabel
+>Tampilkan ikon di menu</guilabel
+></term>
+<listitem>
+<para
+>Jika opsi ini dipilih, aplikasi &kde; akan menampilkan ikon-ikon kecil sepanjang butir(-butir) menu. Jika opsi ini tidak dipilih, maka hanya teks yang akan muncul di dalam menu. Perubahan ke keterlihatan ikon-ikon menu hanya akan berpengaruh terhadap aplikasi yang baru dijalankan.</para>
+</listitem
+> 
+</varlistentry
+> 
+
+<varlistentry
+> 
+<term
+><guilabel
+>Lokasi teks bilah alat utama</guilabel
+>, <guilabel
+>Lokasi teks bilah alat sekunder</guilabel
+></term>
+<listitem>
+<para
+>Kotak tarik turun ini memungkinkanmu menentukan di mana pada tombol di kedua bilah alat nama teks tombol akan muncul sebagai bakunya. Jika <guilabel
+>Tidak Ada Teks</guilabel
+> dipilih, maka tidak ada teks pada tombol bilah alat. Jika <guilabel
+>Hanya Teks</guilabel
+> dipilih, maka ikon tombol diganti dengan nama teks tombol. Jika <guilabel
+>Teks Di Samping Ikon</guilabel
+> dipilih, maka nama tombol akan ditempatkan ke sebelah <emphasis
+>kanan</emphasis
+> ikon. Jika <guilabel
+>Teks Di Bawah Ikon</guilabel
+> dipilih, bakunya adalah teks tombol <emphasis
+>di bawah</emphasis
+> ikon. </para>
+
+<tip
+><para
+>Opsi ini hanya menentukan lokasi <emphasis
+>baku</emphasis
+>. Setiap aplikasi dapat mengesampingkan pengaturan yang digunakan di panel ini.</para
+></tip>
+</listitem
+> 
+</varlistentry
+> 
+
+</variablelist>
+
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+<para
+>Menu global sekarang difungsikan secara otomatis ketika kamu menempatkan applet menu global di panel atau menambahkan tombol menu ke dekorasi window di tab <guilabel
+>Tombol</guilabel
+> pada modul <guilabel
+>Dekorasi Window</guilabel
+>. </para>
+
+</article>

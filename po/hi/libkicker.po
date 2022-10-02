@@ -1,0 +1,318 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Raghavendra Kamath <raghu@raghukamath.com>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-25 00:46+0000\n"
+"PO-Revision-Date: 2022-02-26 11:47+0530\n"
+"Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
+"Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Lokalize 21.12.2\n"
+
+#: plugin/actionlist.cpp:86
+#, kde-format
+msgid "Open with:"
+msgstr "इसके साथ खोलें :"
+
+#: plugin/actionlist.cpp:99
+#, kde-format
+msgid "Properties"
+msgstr "गुण"
+
+#: plugin/actionlist.cpp:146
+#, kde-format
+msgid "Add to Desktop"
+msgstr "डेस्कटॉप पर जोडें"
+
+#: plugin/actionlist.cpp:151
+#, kde-format
+msgid "Add to Panel (Widget)"
+msgstr "पैनल में जोडें (विजेट)"
+
+#: plugin/actionlist.cpp:156
+#, kde-format
+msgid "Pin to Task Manager"
+msgstr "कार्य प्रबंधक पर पिन करें"
+
+#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:429
+#, kde-format
+msgid "Recent Files"
+msgstr "हाल हीं की फ़ाइलें"
+
+#: plugin/actionlist.cpp:317
+#, kde-format
+msgid "Forget Recent Files"
+msgstr "हाल की फाइलों को भूल जाएँ"
+
+#: plugin/actionlist.cpp:395
+#, kde-format
+msgid "Edit Application…"
+msgstr "अनुप्रयोग संपादित करें…"
+
+#: plugin/actionlist.cpp:438
+#, kde-format
+msgctxt "@action opens a software center with the application"
+msgid "Uninstall or Manage Add-Ons…"
+msgstr "ऐड-ऑन की स्थापना रद्द करें या प्रबंधित करें…"
+
+#: plugin/appentry.cpp:319
+#, kde-format
+msgid "Hide Application"
+msgstr "अनुप्रयोग छुपाएँ"
+
+#: plugin/appentry.cpp:390
+#, kde-format
+msgctxt "App name (Generic name)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: plugin/appentry.cpp:392
+#, kde-format
+msgctxt "Generic name (App name)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: plugin/appsmodel.cpp:34 plugin/appsmodel.cpp:58 plugin/computermodel.cpp:98
+#: plugin/computermodel.cpp:226 plugin/recentusagemodel.cpp:163
+#: plugin/recentusagemodel.cpp:226
+#, kde-format
+msgid "Applications"
+msgstr "अनुप्रयोग"
+
+#: plugin/appsmodel.cpp:151
+#, kde-format
+msgid "Unhide Applications in this Submenu"
+msgstr "इस सबमेनू के अनुप्रयोगों को दिखाएं"
+
+#: plugin/appsmodel.cpp:160
+#, kde-format
+msgid "Unhide Applications in '%1'"
+msgstr "'%1' में के अनुप्रयोगों को दिखाएं"
+
+#: plugin/computermodel.cpp:92
+#, kde-format
+msgid "Show KRunner"
+msgstr "केरनर दिखाएँ"
+
+#: plugin/computermodel.cpp:96
+#, kde-format
+msgid "Search, calculate, or run a command"
+msgstr "खोजें, गणना करें या एक समादेश चलाएं"
+
+#: plugin/computermodel.cpp:149
+#, kde-format
+msgid "Computer"
+msgstr "कम्प्यूटर"
+
+#: plugin/contactentry.cpp:106 plugin/recentcontactsmodel.cpp:82
+#, kde-format
+msgid "Show Contact Information…"
+msgstr "सम्पर्क की जानकारी दिखाएँ..."
+
+#. i18n.
+#: plugin/kastatsfavoritesmodel.cpp:504 plugin/rootmodel.cpp:416
+#: plugin/simplefavoritesmodel.cpp:31
+#, kde-format
+msgid "Favorites"
+msgstr "पसंदीदा"
+
+#: plugin/recentcontactsmodel.cpp:40
+#, kde-format
+msgid "Contacts"
+msgstr "सम्पर्क"
+
+#: plugin/recentcontactsmodel.cpp:73
+#, kde-format
+msgid "Forget Contact"
+msgstr "सम्पर्क को भुलें"
+
+#: plugin/recentcontactsmodel.cpp:77 plugin/recentcontactsmodel.cpp:153
+#, kde-format
+msgid "Forget All Contacts"
+msgstr "सभी सम्पर्कों को भुलें"
+
+#: plugin/recentusagemodel.cpp:161
+#, kde-format
+msgid "Recently Used"
+msgstr "हाल में प्रयुक्त"
+
+#: plugin/recentusagemodel.cpp:166 plugin/recentusagemodel.cpp:308
+#, kde-format
+msgid "Files"
+msgstr "फ़ाइलें"
+
+#: plugin/recentusagemodel.cpp:248
+#, kde-format
+msgid "Forget Application"
+msgstr "अनुप्रयोग को भुलें"
+
+#: plugin/recentusagemodel.cpp:342
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "युक्त फोल्डर खोलें"
+
+#: plugin/recentusagemodel.cpp:345
+#, kde-format
+msgid "Forget File"
+msgstr "फ़ाइल भूलें"
+
+#: plugin/recentusagemodel.cpp:495
+#, kde-format
+msgid "Forget All"
+msgstr "सभी को भुलें"
+
+#: plugin/recentusagemodel.cpp:497
+#, kde-format
+msgid "Forget All Applications"
+msgstr "सभी अनुप्रयोगों को भुलें"
+
+#: plugin/recentusagemodel.cpp:500
+#, kde-format
+msgid "Forget All Files"
+msgstr "सभी फाइलों को भुलें"
+
+#: plugin/rootmodel.cpp:95
+#, kde-format
+msgid "Hide %1"
+msgstr "%1 को छुपाएँ"
+
+#: plugin/rootmodel.cpp:398
+#, kde-format
+msgid "All Applications"
+msgstr "सभी अनुप्रयोग"
+
+#: plugin/rootmodel.cpp:410
+#, kde-format
+msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
+msgstr "यह दिखाई नहीं देना चाहिए! KICKER_FAVORITES_MODEL का उपयोग करें"
+
+#: plugin/rootmodel.cpp:422
+#, kde-format
+msgid "Recent Contacts"
+msgstr "हाल के संपर्क"
+
+#: plugin/rootmodel.cpp:429
+#, kde-format
+msgid "Often Used Files"
+msgstr "अक्सर उपयोग की गइ फ़ाइलें"
+
+#: plugin/rootmodel.cpp:438
+#, kde-format
+msgid "Recent Applications"
+msgstr "हाल के अनुप्रयोग"
+
+#: plugin/rootmodel.cpp:438
+#, kde-format
+msgid "Often Used Applications"
+msgstr "अक्सर उपयोग किए जाने वाले अनुप्रयोग"
+
+#: plugin/rootmodel.cpp:453
+#, kde-format
+msgid "Power / Session"
+msgstr "शक्ती / सत्र"
+
+#: plugin/runnermodel.cpp:231
+#, kde-format
+msgid "Search results"
+msgstr "खोज परिणाम"
+
+#: plugin/systementry.cpp:195
+#, kde-format
+msgid "Lock"
+msgstr "तालाबंद"
+
+#: plugin/systementry.cpp:198
+#, kde-format
+msgid "Log Out"
+msgstr "लॉग-आउट"
+
+#: plugin/systementry.cpp:201 plugin/systementry.cpp:269
+#, kde-format
+msgid "Save Session"
+msgstr "सत्र सहेजें"
+
+#: plugin/systementry.cpp:204
+#, kde-format
+msgid "Switch User"
+msgstr "उपयोक्ता बदलें"
+
+#: plugin/systementry.cpp:207
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "निद्रा"
+
+#: plugin/systementry.cpp:210
+#, kde-format
+msgid "Hibernate"
+msgstr "सुप्तावस्था"
+
+#: plugin/systementry.cpp:213
+#, kde-format
+msgid "Restart"
+msgstr "पुनः प्रारंभ करें"
+
+#: plugin/systementry.cpp:216
+#, kde-format
+msgid "Shut Down"
+msgstr "बन्द करें"
+
+#: plugin/systementry.cpp:229 plugin/systementry.cpp:232
+#: plugin/systementry.cpp:235 plugin/systementry.cpp:238
+#, kde-format
+msgid "Session"
+msgstr "सत्र"
+
+#: plugin/systementry.cpp:241 plugin/systementry.cpp:244
+#: plugin/systementry.cpp:247 plugin/systementry.cpp:250
+#, kde-format
+msgid "System"
+msgstr "तंत्र"
+
+#: plugin/systementry.cpp:263
+#, kde-format
+msgid "Lock screen"
+msgstr "स्क्रीन तालाबंद करें"
+
+#: plugin/systementry.cpp:266
+#, kde-format
+msgid "End session"
+msgstr "सत्र का अंत करें"
+
+#: plugin/systementry.cpp:272
+#, kde-format
+msgid "Start a parallel session as a different user"
+msgstr "किसी भिन्न उपयोगकर्ता के रूप में समानांतर सत्र प्रारंभ करें"
+
+#: plugin/systementry.cpp:275
+#, kde-format
+msgid "Suspend to RAM"
+msgstr "रेम में निलंबित करें"
+
+#: plugin/systementry.cpp:278
+#, kde-format
+msgid "Suspend to disk"
+msgstr "डिस्क पर निलंबित"
+
+#: plugin/systementry.cpp:281
+#, kde-format
+msgid "Restart computer"
+msgstr "कम्प्यूटर पुनः प्रारंभ करें"
+
+#: plugin/systementry.cpp:284
+#, kde-format
+msgid "Turn off computer"
+msgstr "कंप्यूटर बंद करें"
+
+#: plugin/systemmodel.cpp:31
+#, kde-format
+msgid "System actions"
+msgstr "तंत्र क्रियाएँ"

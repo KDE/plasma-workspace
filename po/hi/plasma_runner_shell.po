@@ -1,0 +1,108 @@
+# translation of krunner_shellrunner.po to Hindi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Ravishankar Shrivastava <raviratlami@aol.in>, 2008.
+# Raghavendra Kamath <raghu@raghukamath.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner_shellrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-27 00:45+0000\n"
+"PO-Revision-Date: 2021-07-01 18:32+0530\n"
+"Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
+"Language-Team: kde-hindi\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.04.2\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: shellrunner.cpp:35
+#, kde-format
+msgid "Finds commands that match :q:, using common shell syntax"
+msgstr "सामान्य शेल सिंटैक्स का उपयोग करते हुए :q: से मेल खाने वाले समादेश ढूंढता है"
+
+#: shellrunner.cpp:36
+#, kde-format
+msgid "Run in Terminal Window"
+msgstr "टर्मिनल विंडो में चलाएँ"
+
+#: shellrunner.cpp:54
+#, kde-format
+msgid "Run %1"
+msgstr "चलाएँ %1"
+
+#~ msgid "Enter the user you want to run the application as here."
+#~ msgstr "इस अनुप्रयोग को जिस नाम से चलाना चाहते हैं, उस उपयोक्ता का नाम यहाँ भरें. "
+
+#~ msgid "User&name:"
+#~ msgstr "उपयोक्ता नामः (&n)"
+
+#~ msgid "Enter the password here for the user you specified above."
+#~ msgstr "आपने जिस उपयोक्ता को ऊपर उल्लेखित किया है, उसका पासवर्ड यहाँ भरें"
+
+#~ msgid "Pass&word:"
+#~ msgstr "पासवर्डः (&w)"
+
+#~ msgid ""
+#~ "Check this option if the application you want to run is a text mode "
+#~ "application. The application will then be run in a terminal emulator "
+#~ "window."
+#~ msgstr ""
+#~ "इस विकल्प को चेक करें यदि आप जो अनुप्रयोग चलाना चाहते हैं वह पाठ मोड अनुप्रयोग है. "
+#~ "फिर अनुप्रयोग टर्मिनल एमुलेटर विंडो में चलेगा."
+
+#~ msgid "Run in &terminal window"
+#~ msgstr "टर्मिनल विंडो में चलाएँ (&t)"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "user id. Every process has a user id associated with it. This id code "
+#~ "determines file access and other permissions. The password of the user is "
+#~ "required to do this."
+#~ msgstr ""
+#~ "इस विकल्प को चेक करें यदि आप अनुप्रयोग को भिन्न उपयोक्ता पहचान सहित चलाना चाहेंगे. "
+#~ "प्रतयेक प्रोसेस के पास उपयोक्ता पहचान संबद्ध रहता है. यह कोड आईडी फ़ाइल पहुँच तथा अन्य "
+#~ "अनुमतियों को निर्धारित करता है. उपयोक्ता का पासवर्ड इस के लिए आवश्यक होगा."
+
+#~ msgid "Run as a different &user"
+#~ msgstr "भिन्न उपयोक्ता जैसे चलाएँ (&u)"
+
+#~ msgid "Run with realtime &scheduling"
+#~ msgstr "रीयलटाइम शेड्यूलिंग सहित चलाएँ (&s)"
+
+#~ msgid ""
+#~ "The priority that the command will be run with can be set here. From left "
+#~ "to right, it goes from low to high. The center position is the default "
+#~ "value. For priorities higher than the default, you will need to provide "
+#~ "the root password."
+#~ msgstr ""
+#~ "कमांड जिस प्राथमिकता से चलेगा वह यहाँ नियत किया जा सकता है. बाएँ से दायाँ, यह कम से "
+#~ "ज्यादा जाता है. मध्य स्थिति डिफ़ॉल्ट मान है. डिफ़ॉल्ट से ज्यादा प्राथमिकता के लिए आपको "
+#~ "रूट पासवर्ड की आवश्यकता होगी."
+
+#~ msgid "&Priority:"
+#~ msgstr "प्राथमिकताः (&P)"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "priority. A higher priority tells the operating system to give more "
+#~ "processing time to your application."
+#~ msgstr ""
+#~ "इस विकल्प को चेक करें यदि आप अनुप्रयोग को भिन्न प्राथमिकता से चलाना चाहते हैं. एक उच्च "
+#~ "प्राथमिकता, ऑपरेटिंग सिस्टम को, आपके उस अनुप्रयोग को अधिक प्रोसेसिंग समय देने के लिए "
+#~ "बताता है."
+
+#~ msgid "Run with a &different priority"
+#~ msgstr "भिन्न प्राथमिकता से चलाएँ (&d)"
+
+#~ msgid "Low"
+#~ msgstr "निम्न"
+
+#~ msgid "High"
+#~ msgstr "उच्च"
+
+#~ msgid "Command"
+#~ msgstr "कमांड"

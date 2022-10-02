@@ -1,0 +1,181 @@
+# Translation of plasma_applet_org.kde.plasma.devicenotifier.po to Ukrainian
+# Copyright (C) 2013-2020 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2013, 2014, 2016, 2018, 2019, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-21 00:47+0000\n"
+"PO-Revision-Date: 2022-01-19 08:40+0200\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#: package/contents/ui/DeviceItem.qml:180
+#, kde-format
+msgctxt "@info:status Free disk space"
+msgid "%1 free of %2"
+msgstr "Вільно %1 з %2"
+
+#: package/contents/ui/DeviceItem.qml:184
+#, kde-format
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Accessing…"
+msgstr "Монтування…"
+
+#: package/contents/ui/DeviceItem.qml:187
+#, kde-format
+msgctxt ""
+"Removing is a less technical word for Unmounting; translation should be "
+"short and mean 'Currently unmounting this device'"
+msgid "Removing…"
+msgstr "Видаляємо…"
+
+#: package/contents/ui/DeviceItem.qml:190
+#, kde-format
+msgid "Don't unplug yet! Files are still being transferred..."
+msgstr "Не від'єднуйте! Триває перенесення файлів…"
+
+#: package/contents/ui/DeviceItem.qml:221
+#, kde-format
+msgid "Open in File Manager"
+msgstr "Відкрити у програмі для керування файлами"
+
+#: package/contents/ui/DeviceItem.qml:224
+#, kde-format
+msgid "Mount and Open"
+msgstr "Змонтувати і відкрити"
+
+#: package/contents/ui/DeviceItem.qml:226
+#, kde-format
+msgid "Eject"
+msgstr "Виштовхнути"
+
+#: package/contents/ui/DeviceItem.qml:228
+#, kde-format
+msgid "Safely remove"
+msgstr "Безпечно вилучити"
+
+#: package/contents/ui/DeviceItem.qml:270
+#, kde-format
+msgid "Mount"
+msgstr "Змонтувати"
+
+#: package/contents/ui/FullRepresentation.qml:41
+#: package/contents/ui/main.qml:238
+#, kde-format
+msgid "Remove All"
+msgstr "Від'єднати усі"
+
+#: package/contents/ui/FullRepresentation.qml:42
+#, kde-format
+msgid "Click to safely remove all devices"
+msgstr "Натисніть, щоб безпечно від’єднати усі пристрої"
+
+#: package/contents/ui/FullRepresentation.qml:186
+#, kde-format
+msgid "No removable devices attached"
+msgstr "З комп'ютером не з'єднано портативних пристроїв"
+
+#: package/contents/ui/FullRepresentation.qml:186
+#, kde-format
+msgid "No disks available"
+msgstr "Немає доступних дисків"
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid "Most Recent Device"
+msgstr "Останній з’єднаний пристрій"
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid "No Devices Available"
+msgstr "Не виявлено жодного пристрою"
+
+#: package/contents/ui/main.qml:245
+#, kde-format
+msgid "Removable Devices"
+msgstr "Портативні пристрої"
+
+#: package/contents/ui/main.qml:251
+#, kde-format
+msgid "Non Removable Devices"
+msgstr "Стаціонарні пристрої"
+
+#: package/contents/ui/main.qml:257
+#, kde-format
+msgid "All Devices"
+msgstr "Усі пристрої"
+
+#: package/contents/ui/main.qml:265
+#, kde-format
+msgid "Show popup when new device is plugged in"
+msgstr "Показувати контекстне меню після з’єднання нового пристрою"
+
+#: package/contents/ui/main.qml:274
+#, kde-format
+msgctxt "Open auto mounter kcm"
+msgid "Configure Removable Devices…"
+msgstr "Налаштовування портативних пристроїв…"
+
+#~ msgid "Show:"
+#~ msgstr "Показати:"
+
+#~ msgid "General"
+#~ msgstr "Загальне"
+
+#~ msgid ""
+#~ "It is currently <b>not safe</b> to remove this device: applications may "
+#~ "be accessing it. Click the eject button to safely remove this device."
+#~ msgstr ""
+#~ "Вилучати цей пристрій зараз <b>небезпечно</b>: програми можуть виконувати "
+#~ "запис на пристрій. Натисніть кнопку виштовхування, щоб вилучити цей "
+#~ "пристрій безпечно."
+
+#~ msgid "This device is currently accessible."
+#~ msgstr "Доступ до цього пристрою відкрито."
+
+#~ msgid ""
+#~ "It is currently <b>not safe</b> to remove this device: applications may "
+#~ "be accessing other volumes on this device. Click the eject button on "
+#~ "these other volumes to safely remove this device."
+#~ msgstr ""
+#~ "Вилучати цей пристрій зараз <b>небезпечно</b>: програми можуть виконувати "
+#~ "запис на інші томи цього пристрою. Натисніть кнопку виштовхування інших "
+#~ "томів цього пристрою, щоб вилучити цей пристрій безпечно."
+
+#~ msgid "It is currently safe to remove this device."
+#~ msgstr "Зараз пристрій можна безпечно вилучати."
+
+#~ msgid "This device is not currently accessible."
+#~ msgstr "Доступу до цього пристрою зараз немає."
+
+#~ msgid "1 action for this device"
+#~ msgid_plural "%1 actions for this device"
+#~ msgstr[0] "%1 дія для цього пристрою"
+#~ msgstr[1] "%1 дії для цього пристрою"
+#~ msgstr[2] "%1 дій для цього пристрою"
+#~ msgstr[3] "%1 дія для цього пристрою"
+
+#~ msgid "Click to access this device from other applications."
+#~ msgstr "Натисніть, щоб отримати доступ до цього пристрою з інших програм."
+
+#~ msgid "Click to eject this disc."
+#~ msgstr "Натисніть, щоб виштовхнути цей диск."
+
+#~ msgid "Click to safely remove this device."
+#~ msgstr "Натисніть, щоб безпечно від’єднати цей пристрій."
+
+#~ msgid "Click to mount this device."
+#~ msgstr "Натисніть, щоб змонтувати цей пристрій."

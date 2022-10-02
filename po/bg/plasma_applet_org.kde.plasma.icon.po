@@ -1,0 +1,45 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Mincho Kondarev <mkondarev@yahoo.de>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-20 00:46+0000\n"
+"PO-Revision-Date: 2022-06-28 09:54+0200\n"
+"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.04.2\n"
+
+#: iconapplet.cpp:92
+#, kde-format
+msgid "Failed to create icon widgets folder '%1'"
+msgstr "Създаването на папка с приставки за икони \"%1\" е неуспешно"
+
+#: iconapplet.cpp:138
+#, kde-format
+msgid "Failed to copy icon widget desktop file from '%1' to '%2'"
+msgstr ""
+"Копирането на работния файл на приставка за икони от \"%1\" в \"%2\" е "
+"неуспешно"
+
+#: iconapplet.cpp:385
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Отваряне на съдържащата папка"
+
+#: iconapplet.cpp:565
+#, kde-format
+msgid "Properties for %1"
+msgstr "Свойства за %1"
+
+#: package/contents/ui/main.qml:73
+#, kde-format
+msgid "Properties"
+msgstr "Свойства"

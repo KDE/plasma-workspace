@@ -1,0 +1,45 @@
+# translation of krunner_webshortcutsrunner.po to marathi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sandeep Shedmake <sandeep.shedmake@gmail.com>, 2009.
+# Chetan Khona <chetan@kompkin.com>, 2012, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner_webshortcutsrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-06-02 00:47+0000\n"
+"PO-Revision-Date: 2013-01-16 13:25+0530\n"
+"Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
+"Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: webshortcutrunner.cpp:58
+#, kde-format
+msgid "Opens \"%1\" in a web browser with the query :q:."
+msgstr "\"%1\" वेब ब्राऊजर मध्ये :q: या प्रश्नाने उधडतो."
+
+#: webshortcutrunner.cpp:63
+#, kde-format
+msgid "Search using the DuckDuckGo bang syntax"
+msgstr ""
+
+#: webshortcutrunner.cpp:94
+#, kde-format
+msgid "Search in private window"
+msgstr ""
+
+#: webshortcutrunner.cpp:94
+#, kde-format
+msgid "Search in incognito window"
+msgstr ""
+
+#: webshortcutrunner.cpp:129 webshortcutrunner.cpp:146
+#, kde-format
+msgid "Search %1 for %2"
+msgstr "%2 करिता %1 शोधा"

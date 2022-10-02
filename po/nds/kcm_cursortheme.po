@@ -1,0 +1,690 @@
+# translation of kcminput.po to Low Saxon
+# Translation of kcminput.po to Low Saxon
+# Copyright (C) 2004, 2005, 2006, 2007, 2008, 2009 Free Software Foundation, Inc.
+# Heiko Evermann <heiko@evermann.de>, 2004.
+# Sönke Dibbern <s_dibbern@web.de>, 2005, 2006, 2007, 2008, 2014.
+# Manfred Wiese <m.j.wiese@web.de>, 2009, 2010, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminput\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:50+0000\n"
+"PO-Revision-Date: 2014-09-18 15:57+0200\n"
+"Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
+"Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
+"Language: nds\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current cursor theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr ""
+
+#: kcmcursortheme.cpp:302
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr "De Ännern warrt eerst na en KDE-Niegstart warken."
+
+#: kcmcursortheme.cpp:376
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: kcmcursortheme.cpp:387
+#, fuzzy, kde-format
+#| msgid "Unable to find the cursor theme archive %1."
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Dat Wiesermuster-Archiv \"%1\" lett sik nich finnen."
+
+#: kcmcursortheme.cpp:418
+#, fuzzy, kde-format
+#| msgid "The file %1 does not appear to be a valid cursor theme archive."
+msgid "The file is not a valid icon theme archive."
+msgstr "As dat lett gellt de Datei \"%1\" nich as Wiesermuster-Archiv."
+
+#: kcmcursortheme.cpp:425
+#, kde-format
+msgid "Failed to create 'icons' folder."
+msgstr ""
+
+#: kcmcursortheme.cpp:434
+#, kde-format
+msgid ""
+"A theme named %1 already exists in your icon theme folder. Do you want "
+"replace it with this one?"
+msgstr ""
+"Dat gifft al en Muster mit den Naam \"%1\" binnen Dien Lüttbildmuster-Orner. "
+"Wullt Du dat överschrieven?"
+
+#: kcmcursortheme.cpp:438
+#, kde-format
+msgid "Overwrite Theme?"
+msgstr "Muster överschrieven?"
+
+#: kcmcursortheme.cpp:462
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: package/contents/ui/Delegate.qml:54
+#, kde-format
+msgid "Remove Theme"
+msgstr "Muster wegmaken"
+
+#: package/contents/ui/Delegate.qml:61
+#, fuzzy, kde-format
+#| msgid "Cursor Theme"
+msgid "Restore Cursor Theme"
+msgstr "Wieserutsehn"
+
+#: package/contents/ui/main.qml:20
+#, kde-format
+msgid "This module lets you choose the mouse cursor theme."
+msgstr ""
+
+#: package/contents/ui/main.qml:84
+#, fuzzy, kde-format
+#| msgctxt "@label:listbox cursor size"
+#| msgid "Size:"
+msgid "Size:"
+msgstr "Grött:"
+
+#: package/contents/ui/main.qml:134
+#, fuzzy, kde-format
+#| msgid "Install From File..."
+msgid "&Install from File…"
+msgstr "Ut Datei installeren…"
+
+#: package/contents/ui/main.qml:140
+#, fuzzy, kde-format
+#| msgid "Get New Theme..."
+msgid "&Get New Cursors…"
+msgstr "Nieg Muster daalladen…"
+
+#: package/contents/ui/main.qml:157
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Open Theme"
+msgstr "Muster wegmaken"
+
+#: package/contents/ui/main.qml:159
+#, kde-format
+msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:41
+#, kde-format
+msgid "The requested size '%1' is not available, using %2 instead."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:62
+#, kde-format
+msgid ""
+"This tool allows you to set the mouse cursor theme for the current Plasma "
+"session, without accidentally setting it to one that is either not "
+"available, or which is already set."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:66
+#, kde-format
+msgid ""
+"The name of the cursor theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:67
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:68
+#, kde-format
+msgid "Use a specific size, rather than the theme default size"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:89
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:100
+#, kde-format
+msgid ""
+"Successfully applied the mouse cursor theme %1 to your current Plasma session"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:102
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for your newly applied mouse cursor "
+"theme to display correctly."
+msgstr "De Ännern warrt eerst na en KDE-Niegstart warken."
+
+#: plasma-apply-cursortheme.cpp:112
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:120
+#, kde-format
+msgid "You have the following mouse cursor themes on your system:"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:125
+#, kde-format
+msgid "(Current theme for this Plasma session)"
+msgstr ""
+
+#: xcursor/xcursortheme.cpp:60
+#, kde-format
+msgctxt ""
+"@info The argument is the list of available sizes (in pixel). Example: "
+"'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+msgid "(Available sizes: %1)"
+msgstr "(Verföögbor Grötten: %1)"
+
+#~ msgid "Name"
+#~ msgstr "Naam"
+
+#~ msgid "Description"
+#~ msgstr "Beschrieven"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Sönke Dibbern, Manfred Wiese"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "s_dibbern@web.de, m.j.wiese@web.de"
+
+#, fuzzy
+#~| msgid "Cursor Theme"
+#~ msgid "Cursors"
+#~ msgstr "Wieserutsehn"
+
+#~ msgid "(c) 2003-2007 Fredrik Höglund"
+#~ msgstr "© 2003-2007: Fredrik Höglund"
+
+#~ msgid "Fredrik Höglund"
+#~ msgstr "Fredrik Höglund"
+
+#~ msgid ""
+#~ "<qt>You cannot delete the theme you are currently using.<br />You have to "
+#~ "switch to another theme first.</qt>"
+#~ msgstr ""
+#~ "<qt>Du kannst dat Muster, wat Du opstunns bruukst, nich wegdoon.<br />Du "
+#~ "muttst toeerst en anner Muster anmaken.</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <i>%1</i> cursor theme?<br />This "
+#~ "will delete all the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>Büst Du seker, wat Du dat Wiesermuster <i>%1</i> wegdoon wullt?<br /"
+#~ ">Dat warrt all Dateien wegdoon, de dat Muster tohöört.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Nafraag"
+
+#, fuzzy
+#~| msgctxt "@item:inlistbox size"
+#~| msgid "resolution dependent"
+#~ msgctxt "@item:inlistbox size"
+#~ msgid "Resolution dependent"
+#~ msgstr "oplösenbaseert"
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "Ännert Wieserinstellen"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "Muster-URL ingeven oder hertrecken"
+
+#~ msgid ""
+#~ "Unable to download the cursor theme archive; please check that the "
+#~ "address %1 is correct."
+#~ msgstr ""
+#~ "Dat Wiesermuster-Archiv lett sik nich daalladen, bitte prööv, wat de "
+#~ "Adress \"%1\" richtig is."
+
+#~ msgid "Get new color schemes from the Internet"
+#~ msgstr "Nieg Klöörschemas ut dat Internet daalladen"
+
+#~ msgid ""
+#~ "Select the cursor theme you want to use (hover preview to test cursor):"
+#~ msgstr ""
+#~ "Söök dat Wiesermuster ut, dat Du bruken wullt (För en Test op de "
+#~ "Vöransicht wiesen):"
+
+#~ msgid "Select the cursor theme you want to use:"
+#~ msgstr "Söök dat Wiesermuster ut, dat Du bruken wullt:"
+
+#~ msgid "Small black"
+#~ msgstr "Swatt, lütt"
+
+#~ msgid "Small black cursors"
+#~ msgstr "Lütte swatte Wiesers"
+
+#~ msgid "Large black"
+#~ msgstr "Swatt, groot"
+
+#~ msgid "Large black cursors"
+#~ msgstr "Grote swatte Wiesers"
+
+#~ msgid "Small white"
+#~ msgstr "Witt, lütt"
+
+#~ msgid "Small white cursors"
+#~ msgstr "Lütte witte Wiesers"
+
+#~ msgid "Large white"
+#~ msgstr "Witt, groot"
+
+#~ msgid "Large white cursors"
+#~ msgstr "Grote witte Wiesers"
+
+#~ msgid "Button Order"
+#~ msgstr "Knööp spegeln"
+
+#~ msgid "Righ&t handed"
+#~ msgstr "&Rechtepoot"
+
+#~ msgid "Le&ft handed"
+#~ msgstr "&Linkepoot"
+
+#~ msgid ""
+#~ "Change the direction of scrolling for the mouse wheel or the 4th and 5th "
+#~ "mouse buttons."
+#~ msgstr ""
+#~ "De Richt vun't Rullen för dat Muusrad oder den 4. un 5. Muusknoop "
+#~ "ümdreihn."
+
+#~ msgid "Re&verse scroll direction"
+#~ msgstr "Rullr&icht ümdreihn"
+
+#~ msgid "Icons"
+#~ msgstr "Lüttbiller"
+
+#~ msgid ""
+#~ "Dou&ble-click to open files and folders (select icons on first click)"
+#~ msgstr ""
+#~ "Dateien un Ornern mit en Du&bbelklick opmaken (Eenfachklick söcht bloots "
+#~ "ut)"
+
+#~ msgid "&Single-click to open files and folders"
+#~ msgstr "Dateien un Ornern mit en E&enfachklick opmaken"
+
+#~ msgid "Cha&nge pointer shape over icons"
+#~ msgstr "Muuswieser över Lüttbiller ä&nnern"
+
+#~ msgid "A&utomatically select icons"
+#~ msgstr "Lüttbiller &automaatsch utsöken"
+
+#~ msgctxt "label. delay (on milliseconds) to automatically select icons"
+#~ msgid "Delay"
+#~ msgstr "Paus"
+
+#~ msgctxt "milliseconds. time to automatically select the items"
+#~ msgid " ms"
+#~ msgstr " ms"
+
+#~ msgid ""
+#~ "<h1>Mouse</h1> This module allows you to choose various options for the "
+#~ "way in which your pointing device works. Your pointing device may be a "
+#~ "mouse, trackball, or some other hardware that performs a similar function."
+#~ msgstr ""
+#~ "<h1>Muus</h1> Mit dit Moduul kannst Du en Reeg Optschonen fastleggen, "
+#~ "wodennig Dien Wiesreedschap arbeidt. Dien Wiesreedschap kann en Muus "
+#~ "wesen, man ok en Treckball oder en anner Hardware, de de sülve Funkschoon "
+#~ "övernimmt."
+
+#~ msgid "&General"
+#~ msgstr "&Allgemeen"
+
+#~ msgid ""
+#~ "If you are left-handed, you may prefer to swap the functions of the left "
+#~ "and right buttons on your pointing device by choosing the 'left-handed' "
+#~ "option. If your pointing device has more than two buttons, only those "
+#~ "that function as the left and right buttons are affected. For example, if "
+#~ "you have a three-button mouse, the middle button is unaffected."
+#~ msgstr ""
+#~ "Wenn Du en Linkepoot büst, wullt Du villicht de Funkschonen vun den "
+#~ "rechten un linken Knoop vun de Wiesreedschap tuschen. Dat geiht, wenn Du "
+#~ "de \"Linkepoot\"-Optschoon aktiveerst. Wenn de Reedschap mehr as twee "
+#~ "Knööp hett, warrt dat bloots op de Funkschoon \"rechte / linke Knoop\" "
+#~ "anwendt. Wenn Du also en Muus mit dree Knööp hest, blifft de Middelknoop "
+#~ "as he is."
+
+#~ msgid ""
+#~ "The default behavior in KDE is to select and activate icons with a single "
+#~ "click of the left button on your pointing device. This behavior is "
+#~ "consistent with what you would expect when you click links in most web "
+#~ "browsers. If you would prefer to select with a single click, and activate "
+#~ "with a double click, check this option."
+#~ msgstr ""
+#~ "Standardwies warrt Lüttbiller in KDE mit en enkel Klick vun den linken "
+#~ "Wiesreedschap-Knoop utsöcht un aktiveert. Dat is dat sülve, wat de "
+#~ "mehrsten Nettkieker för Links maakt. Wenn Du lever mit een Klick utsöken "
+#~ "un mit en Dubbelklick aktiveren wullt, aktiveer disse Optschoon."
+
+#~ msgid "Activates and opens a file or folder with a single click."
+#~ msgstr ""
+#~ "Söcht en Datei / Orner ut un aktiveert ehr / em mit en enkelten Klick."
+
+#~ msgid ""
+#~ "If you check this option, pausing the mouse pointer over an icon on the "
+#~ "screen will automatically select that icon. This may be useful when "
+#~ "single clicks activate icons, and you want only to select the icon "
+#~ "without activating it."
+#~ msgstr ""
+#~ "Wenn anmaakt, warrt Lüttbiller utsöcht, wenn Du en lütt Tiet op se wiest. "
+#~ "Dat is denn goot, wenn en enkel Klick dat Lüttbild al aktiveert, aver Du "
+#~ "dat bloots utsöken wullt."
+
+#~ msgid ""
+#~ "If you have checked the option to automatically select icons, this slider "
+#~ "allows you to select how long the mouse pointer must be paused over the "
+#~ "icon before it is selected."
+#~ msgstr ""
+#~ "Wenn Du de Optschoon för dat automaatsche Utsöken vun Lüttbiller anmaakt "
+#~ "hest, kannst Du mit dissen Schuver fastleggen, wo lang Du op dat Lüttbild "
+#~ "wiesen muttst, ehr dat utsöcht warrt."
+
+#~ msgid "Advanced"
+#~ msgstr "Verwiedert"
+
+#~ msgid " x"
+#~ msgstr " x"
+
+#~ msgid "Pointer acceleration:"
+#~ msgstr "Wieser beslünigen:"
+
+#~ msgid ""
+#~ "<p>This option allows you to change the relationship between the distance "
+#~ "that the mouse pointer moves on the screen and the relative movement of "
+#~ "the physical device itself (which may be a mouse, trackball, or some "
+#~ "other pointing device.)</p><p> A high value for the acceleration will "
+#~ "lead to large movements of the mouse pointer on the screen even when you "
+#~ "only make a small movement with the physical device. Selecting very high "
+#~ "values may result in the mouse pointer flying across the screen, making "
+#~ "it hard to control.</p>"
+#~ msgstr ""
+#~ "<p>Mit disse Optschoon kannst Du instellen, wo wiet de Wieser sik "
+#~ "beweegt, wenn Du de Muus (oder wat Du as Wiesreedschap bruukst) beweegst."
+#~ "</p><p> En hoge Weert föhrt to lange Bewegen vun den Wieser op den "
+#~ "Schirm, ok wenn Du Dien Reedschap bloots en lütt beten beweegst. Bannig "
+#~ "hoge Weerten föhrt dor to, dat de Wieser bloots noch so över den Schirm "
+#~ "flüggt un nich mehr eenfach to kuntrulleren is.</p>"
+
+#~ msgid "Pointer threshold:"
+#~ msgstr "Wieser-Süll:"
+
+#~ msgid ""
+#~ "<p>The threshold is the smallest distance that the mouse pointer must "
+#~ "move on the screen before acceleration has any effect. If the movement is "
+#~ "smaller than the threshold, the mouse pointer moves as if the "
+#~ "acceleration was set to 1X;</p><p> thus, when you make small movements "
+#~ "with the physical device, there is no acceleration at all, giving you a "
+#~ "greater degree of control over the mouse pointer. With larger movements "
+#~ "of the physical device, you can move the mouse pointer rapidly to "
+#~ "different areas on the screen.</p>"
+#~ msgstr ""
+#~ "<p>Dat Wieser-Süll is de gröttste Stremel, över den Du den Wieser bewegen "
+#~ "kannst, ahn de Beslünigen to aktiveren. Wenn de Bewegen lütter is, "
+#~ "beweegt sik de Wieser, as wenn de Beslünigen 1 weer.</p><p>Wenn Du also "
+#~ "lütte Bewegen mit de Wieserreedschap maakst, warrt de Wieser op den "
+#~ "Schirm nich gau, wat Di beter Kuntrull över den Wieser gifft, man wenn Du "
+#~ "grötter Bewegen maakst, kannst Du den Wieser bannig fix över den Schirm "
+#~ "bewegen.</p>"
+
+#~ msgid " msec"
+#~ msgstr " ms"
+
+#~ msgid "Double click interval:"
+#~ msgstr "Dubbelklick-Tiet:"
+
+#~ msgid ""
+#~ "The double click interval is the maximal time (in milliseconds) between "
+#~ "two mouse clicks which turns them into a double click. If the second "
+#~ "click happens later than this time interval after the first click, they "
+#~ "are recognized as two separate clicks."
+#~ msgstr ""
+#~ "De Dubbelklick-Tiet is de gröttste Tiet (in Millisekunnen), de för en "
+#~ "Dubbelklick twischen de twee Klicks liggen dörv. Wenn en längere Tiet dor "
+#~ "twischen liggt, warrt se as twee enkelte Klicks ansehn."
+
+#~ msgid "Drag start time:"
+#~ msgstr "Starttiet för't Trecken:"
+
+#~ msgid ""
+#~ "If you click with the mouse (e.g. in a multi-line editor) and begin to "
+#~ "move the mouse within the drag start time, a drag operation will be "
+#~ "initiated."
+#~ msgstr ""
+#~ "Wenn Du mit de Muus klickst un binnen de Starttiet den Wieser beweegst, "
+#~ "warrt en Treck-Akschoon start (Dregen un Droppen)."
+
+#~ msgid "Drag start distance:"
+#~ msgstr "Treck-Startstreek:"
+
+#~ msgid ""
+#~ "If you click with the mouse and begin to move the mouse at least the drag "
+#~ "start distance, a drag operation will be initiated."
+#~ msgstr ""
+#~ "Wenn Du mit de Muus klickst un den Wieser wieder as disse Streek "
+#~ "beweegst, warrt en Treck-Akschoon start (Dregen un Droppen)."
+
+#~ msgid "Mouse wheel scrolls by:"
+#~ msgstr "Muusrad rullt üm:"
+
+#~ msgid ""
+#~ "If you use the wheel of a mouse, this value determines the number of "
+#~ "lines to scroll for each wheel movement. Note that if this number exceeds "
+#~ "the number of visible lines, it will be ignored and the wheel movement "
+#~ "will be handled as a page up/down movement."
+#~ msgstr ""
+#~ "Wenn Du dat Rad vun en Muus bruukst, gifft dit de Tall vun Regen an, de "
+#~ "för elk Radbewegen op- oder daalrullt warrt. Beacht bitte dit: Wenn de "
+#~ "Tall grötter is as de Tall vun sichtbor Regen, warrt se ignoreert un as "
+#~ "SietRop/SietDaal behannelt."
+
+#~ msgid "Mouse Navigation"
+#~ msgstr "Tastatuurmuus"
+
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "&Muus mit de Tastatuur bewegen (Tallenblock)"
+
+#~ msgid "&Acceleration delay:"
+#~ msgstr "Beslünigenp&aus:"
+
+#~ msgid "R&epeat interval:"
+#~ msgstr "W&edderhaaltiet:"
+
+#~ msgid "Acceleration &time:"
+#~ msgstr "Beslünigen&tiet:"
+
+#~ msgid " pixel/sec"
+#~ msgstr " Pixels/s"
+
+#~ msgid "Ma&ximum speed:"
+#~ msgstr "Ma&ximaal Gauheit:"
+
+#~ msgid "Acceleration &profile:"
+#~ msgstr "Beslünigen&profil:"
+
+#~ msgid "Mouse"
+#~ msgstr "Muus"
+
+#~ msgid "(c) 1997 - 2005 Mouse developers"
+#~ msgstr "© 1997 - 2005 De Autoren vun Mouse"
+
+#~ msgid "Patrick Dowler"
+#~ msgstr "Patrick Dowler"
+
+#~ msgid "Dirk A. Mueller"
+#~ msgstr "Dirk A. Mueller"
+
+#~ msgid "David Faure"
+#~ msgstr "David Faure"
+
+#~ msgid "Bernd Gehrmann"
+#~ msgstr "Bernd Gehrmann"
+
+#~ msgid "Rik Hemsley"
+#~ msgstr "Rik Hemsley"
+
+#~ msgid "Brad Hughes"
+#~ msgstr "Brad Hughes"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "Brad Hards"
+#~ msgstr "Brad Hards"
+
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] " Pixel"
+#~ msgstr[1] "Pixels"
+
+#~ msgid " line"
+#~ msgid_plural " lines"
+#~ msgstr[0] " Reeg"
+#~ msgstr[1] " Regen"
+
+#~ msgid "Mouse type: %1"
+#~ msgstr "Muustyp: %1"
+
+#~ msgid ""
+#~ "RF channel 1 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "RF-Kanaal 1 fastleggt. Bitte den \"Connect\"-Knoop op de Muus drücken, "
+#~ "denn warrt de Verbinnen wedder herstellt."
+
+#~ msgid "Press Connect Button"
+#~ msgstr "Connect-Knoop drücken"
+
+#~ msgid ""
+#~ "RF channel 2 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "RF-Kanaal 2 fastleggt. Bitte den \"Connect\"-Knoop op de Muus drücken, "
+#~ "denn warrt de Verbinnen wedder herstellt."
+
+#~ msgctxt "no cordless mouse"
+#~ msgid "none"
+#~ msgstr "keen"
+
+#~ msgid "Cordless Mouse"
+#~ msgstr "Cordless Mouse"
+
+#~ msgid "Cordless Wheel Mouse"
+#~ msgstr "Cordless Wheel Mouse"
+
+#~ msgid "Cordless MouseMan Wheel"
+#~ msgstr "Cordless MouseMan Wheel"
+
+#~ msgid "Cordless TrackMan Wheel"
+#~ msgstr "Cordless TrackMan Wheel"
+
+#~ msgid "TrackMan Live"
+#~ msgstr "TrackMan Live"
+
+#~ msgid "Cordless TrackMan FX"
+#~ msgstr "Cordless TrackMan FX"
+
+#~ msgid "Cordless MouseMan Optical"
+#~ msgstr "Cordless MouseMan Optical"
+
+#~ msgid "Cordless Optical Mouse"
+#~ msgstr "Cordless Optical Mouse"
+
+#~ msgid "Cordless MouseMan Optical (2ch)"
+#~ msgstr "Cordless MouseMan Optical (2ch)"
+
+#~ msgid "Cordless Optical Mouse (2ch)"
+#~ msgstr "Cordless Optical Mouse (2ch)"
+
+#~ msgid "Cordless Mouse (2ch)"
+#~ msgstr "Cordless Mouse (2ch)"
+
+#~ msgid "Cordless Optical TrackMan"
+#~ msgstr "Cordless Optical TrackMan"
+
+#~ msgid "MX700 Cordless Optical Mouse"
+#~ msgstr "MX700 Cordless Optical Mouse"
+
+#~ msgid "MX700 Cordless Optical Mouse (2ch)"
+#~ msgstr "MX700 Cordless Optical Mouse (2ch)"
+
+#~ msgid "Unknown mouse"
+#~ msgstr "Muus nich begäng"
+
+#~ msgid "Cordless Name"
+#~ msgstr "Funk-Naam"
+
+#~ msgid "Sensor Resolution"
+#~ msgstr "Aftasten"
+
+#~ msgid "400 counts per inch"
+#~ msgstr "400 Signalen per Toll (cpi)"
+
+#~ msgid "800 counts per inch"
+#~ msgstr "800 Signalen per Toll (cpi)"
+
+#~ msgid "Battery Level"
+#~ msgstr "Batterietostand"
+
+#~ msgid "RF Channel"
+#~ msgstr "RF-Kanaal"
+
+#~ msgid "Channel 1"
+#~ msgstr "Kanaal 1"
+
+#~ msgid "Channel 2"
+#~ msgstr "Kanaal 2"
+
+#~ msgid ""
+#~ "You have a Logitech Mouse connected, and libusb was found at compile "
+#~ "time, but it was not possible to access this mouse. This is probably "
+#~ "caused by a permissions problem - you should consult the manual on how to "
+#~ "fix this."
+#~ msgstr ""
+#~ "Du hest en Logitech-Muus tokoppelt, un \"libusb\" wöör bi't Kompileren "
+#~ "funnen, man dat Togriepen op ehr weer liekers nich mööglich. "
+#~ "Wohrschienlich gifft dat en Problem mit de Verlöven - bitte kiek in't "
+#~ "Handbook, wodennig dat to lösen is."
+
+#~ msgid "KDE Classic"
+#~ msgstr "KDE-Klass'sch"
+
+#~ msgid "The default cursor theme in KDE 2 and 3"
+#~ msgstr "Dat Standard-Lüttbildmuster in KDE 2 un 3"
+
+#~ msgid "No description available"
+#~ msgstr "Keen Beschrieven verföögbor"
+
+#~ msgid "Short"
+#~ msgstr "Kort"
+
+#~ msgid "Long"
+#~ msgstr "Lang"

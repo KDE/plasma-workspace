@@ -1,0 +1,78 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# A S Alam <aalam@users.sf.net>, 2009, 2014, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-11 00:47+0000\n"
+"PO-Revision-Date: 2021-06-08 22:49-0700\n"
+"Last-Translator: A S Alam <aalam@satluj.org>\n"
+"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.12.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: menu.cpp:99
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Show KRunner"
+msgstr "ਕੇ-ਰਨਰ ਵੇਖਾਓ"
+
+#: menu.cpp:104
+#, kde-format
+msgid "Open Terminal"
+msgstr ""
+
+#: menu.cpp:108
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Lock Screen"
+msgstr "ਸਕਰੀਨ ਲਾਕ ਕਰੋ"
+
+#: menu.cpp:117
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Leave…"
+msgstr "…ਛੱਡੋ"
+
+#: menu.cpp:126
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Configure Display Settings…"
+msgstr ""
+
+#: menu.cpp:291
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Configure Contextual Menu Plugin"
+msgstr "ਪਰਸੰਗ ਮੇਨੂ ਪਲੱਗਇਨ ਸੰਰਚਨਾ"
+
+#: menu.cpp:301
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "[Other Actions]"
+msgstr "[ਹੋਰ ਐਕਸ਼ਨ]"
+
+#: menu.cpp:304
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Wallpaper Actions"
+msgstr "ਵਾਲਪੇਪਰ ਐਕਸ਼ਨ"
+
+#: menu.cpp:308
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "[Separator]"
+msgstr "[ਵੱਖਰੇਵਾਂ]"
+
+#~ msgctxt "plasma_containmentactions_contextmenu"
+#~ msgid "Run Command..."
+#~ msgstr "...ਕਮਾਂਡ ਚਲਾਓ"
+
+#~ msgid "Add Panel"
+#~ msgstr "ਪੈਨਲ ਸ਼ਾਮਲ"

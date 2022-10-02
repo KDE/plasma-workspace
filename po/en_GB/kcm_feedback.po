@@ -1,0 +1,96 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Steve Allewell <steve.allewell@gmail.com>, 2019, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-28 00:47+0000\n"
+"PO-Revision-Date: 2022-02-19 12:42+0000\n"
+"Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
+"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.12.1\n"
+
+#: package/contents/ui/main.qml:34
+#, kde-format
+msgid ""
+"User Feedback has been disabled centrally. Please contact your distributor."
+msgstr ""
+"User Feedback has been disabled centrally. Please contact your distributor."
+
+#: package/contents/ui/main.qml:44 package/contents/ui/main.qml:77
+#, kde-format
+msgid "Plasma:"
+msgstr "Plasma:"
+
+#: package/contents/ui/main.qml:51
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"You can help KDE improve Plasma by contributing information on how you use "
+"it, so we can focus on things that matter to you.<nl/><nl/>Contributing this "
+"information is optional and entirely anonymous. We never collect your "
+"personal data, files you use, websites you visit, or information that could "
+"identify you.<nl/><nl/>You can read about <link url='https://kde.org/"
+"privacypolicy-apps.php'>our privacy policy here.</link>"
+msgstr ""
+"You can help KDE improve Plasma by contributing information on how you use "
+"it, so we can focus on things that matter to you.<nl/><nl/>Contributing this "
+"information is optional and entirely anonymous. We never collect your "
+"personal data, files you use, websites you visit, or information that could "
+"identify you.<nl/><nl/>You can read about <link url='https://kde.org/"
+"privacypolicy-apps.php'>our privacy policy here.</link>"
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Plasma"
+msgstr "Plasma"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "The following information will be sent:"
+msgstr "The following information will be sent:"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "View sent data:"
+msgstr "View sent data:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Steve Allewell"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "steve.allewell@gmail.com"
+
+#~ msgid "User Feedback"
+#~ msgstr "User Feedback"
+
+#~ msgid "Configure user feedback settings"
+#~ msgstr "Configure user feedback settings"
+
+#~ msgctxt "@info"
+#~ msgid "You can read about our policy in the following link:"
+#~ msgstr "You can read about our policy in the following link:"
+
+#~ msgid "Allow KDE software to collect anonymous usage information"
+#~ msgstr "Allow KDE software to collect anonymous usage information"
+
+#~ msgid "Send basic system information"
+#~ msgstr "Send basic system information"
+
+#~ msgid "Send basic usage information"
+#~ msgstr "Send basic usage information"
+
+#~ msgid "Send detailed system information"
+#~ msgstr "Send detailed system information"
+
+#~ msgid "Send detailed usage information"
+#~ msgstr "Send detailed usage information"

@@ -1,0 +1,65 @@
+# translation of plasma_applet_clock.po to Frysk
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Rinse de Vries <rinsedevries@kde.nl>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_clock\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-25 00:47+0000\n"
+"PO-Revision-Date: 2010-07-20 13:53+0100\n"
+"Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
+"Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
+"Language: fy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Uterlik"
+
+#: contents/ui/analogclock.qml:76
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Current time is %1; Current date is %2"
+msgstr ""
+
+#: contents/ui/configGeneral.qml:23
+#, fuzzy, kde-format
+#| msgid "Show &seconds hand"
+msgid "Show seconds hand"
+msgstr "&Sekondewizer sjen litte"
+
+#: contents/ui/configGeneral.qml:24
+#, fuzzy, kde-format
+msgid "General:"
+msgstr "Algemien"
+
+#: contents/ui/configGeneral.qml:28
+#, fuzzy, kde-format
+#| msgid "Show &time zone"
+msgid "Show time zone"
+msgstr "&Tiidsône sjen litte"
+
+#~ msgid "Show the seconds"
+#~ msgstr "Lit de sekonden sjen"
+
+#~ msgid "Check this if you want to show the seconds."
+#~ msgstr "Dit selektearje as jo de sekonden sjen litte wolle."
+
+#~ msgid "Show &seconds hand"
+#~ msgstr "&Sekondewizer sjen litte"
+
+#~ msgid "Show the Timezone in text"
+#~ msgstr "De tiidsône yn tekst sjen litte"
+
+#~ msgid "Check this if you want to display Timezone in text."
+#~ msgstr "Selektearje dit as jo de tiidsône sjen litte wolle yn tekst."
+
+#~ msgid "Show &time zone"
+#~ msgstr "&Tiidsône sjen litte"

@@ -1,0 +1,265 @@
+# translation of ksmserver.po to Hindi
+# Copyright (C) 2004, 2007 Free Software Foundation, Inc.
+#
+# Ravishankar Shrivastava <raviratlami@yahoo.com>, 2004.
+# Ravishankar Shrivastava <raviratlami@gmail.com>, 2004.
+# G Karunakar <karunakar@indlinux.org>, 2007.
+# Raghavendra Kamath <raghu@raghukamath.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: ksmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-22 00:47+0000\n"
+"PO-Revision-Date: 2021-07-06 20:27+0530\n"
+"Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
+"Language-Team: kde-hindi\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.04.2\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: logout.cpp:344
+#, kde-format
+msgid "Logout canceled by '%1'"
+msgstr "लॉगआउट '%1' द्वारा रद्द किया गया"
+
+#: main.cpp:117
+#, kde-format
+msgid "$HOME not set!"
+msgstr "$HOME सेट नहीं किया है"
+
+#: main.cpp:121 main.cpp:127
+#, kde-format
+msgid "$HOME directory (%1) does not exist."
+msgstr "$HOME डिरेक्ट्री (%1) मौजूद नहीं है।"
+
+#: main.cpp:123
+#, kde-format
+msgid "No write access to $HOME directory (%1)."
+msgstr "$HOME डिरेक्ट्री (%1) के लिए कोई लेखन अभिगम नहीं है।"
+
+#: main.cpp:129
+#, kde-format
+msgid "No read access to $HOME directory (%1)."
+msgstr "$HOME डिरेक्ट्री (%1) पर कोई पठन अभिगम नहीं है।"
+
+#: main.cpp:133
+#, kde-format
+msgid "$HOME directory (%1) is out of disk space."
+msgstr "$HOME डिरेक्ट्री (%1) में डिस्क स्थान बचा नही है।"
+
+#: main.cpp:136
+#, kde-format
+msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+msgstr "$HOME डिरेक्ट्री (%2) में लिखना त्रुटि '%1' के साथ विफल हुआ।"
+
+#: main.cpp:149 main.cpp:184
+#, kde-format
+msgid "No write access to '%1'."
+msgstr "'%1' में लेखन अभिगम नहीं है।"
+
+#: main.cpp:151 main.cpp:186
+#, kde-format
+msgid "No read access to '%1'."
+msgstr "'%1' में पठन अभिगम नहीं है।"
+
+#: main.cpp:159 main.cpp:172
+#, kde-format
+msgid "Temp directory (%1) is out of disk space."
+msgstr "अस्थायी डिरेक्ट्री (%1) में डिस्क स्थान बचा नही है।"
+
+#: main.cpp:162 main.cpp:175
+#, kde-format
+msgid ""
+"Writing to the temp directory (%2) failed with\n"
+"    the error '%1'"
+msgstr ""
+"अस्थायी डिरेक्ट्री में लिखना (%2) विफल हुआ \n"
+"  त्रुटि '%1' के साथ"
+
+#: main.cpp:190
+#, kde-format
+msgid ""
+"The following installation problem was detected\n"
+"while trying to start Plasma:"
+msgstr ""
+"निम्न स्थापना समस्या का पता चला\n"
+"प्लाज़्मा शुरू करने की कोशिश करते समय:"
+
+#: main.cpp:193
+#, kde-format
+msgid ""
+"\n"
+"\n"
+"Plasma is unable to start.\n"
+msgstr ""
+"\n"
+"\n"
+"प्लाज़्मा प्रारंभ होने में असमर्थ है।\n"
+
+#: main.cpp:200
+#, kde-format
+msgid "Plasma Workspace installation problem!"
+msgstr "प्लाज्मा कार्यक्षेत्र की स्थापना में समस्या!"
+
+#: main.cpp:236
+#, kde-format
+msgid ""
+"The reliable Plasma session manager that talks the standard X11R6 \n"
+"session management protocol (XSMP)."
+msgstr ""
+"विश्वसनीय सत्र प्रबंधक जो मानक X11R6 से वार्तालाप करता है \n"
+"सत्र प्रबंधक प्रोटोकॉल (XSMP)।"
+
+#: main.cpp:240
+#, kde-format
+msgid "Restores the saved user session if available"
+msgstr "यदि उपलब्ध हो तो सहेजा गया उपयोक्ता सत्र बहाल करें"
+
+#: main.cpp:243
+#, kde-format
+msgid "Also allow remote connections"
+msgstr "रिमोट कनेक्शन की भी अनुमति दें"
+
+#: main.cpp:246
+#, kde-format
+msgid "Starts the session in locked mode"
+msgstr "सत्र को तालाबंद मोड में प्रारंभ करता है"
+
+#: main.cpp:250
+#, kde-format
+msgid ""
+"Starts without lock screen support. Only needed if other component provides "
+"the lock screen."
+msgstr ""
+"तालाबंद स्क्रीन के समर्थन के बिना शुरू होता है। केवल तभी आवश्यक है जब अन्य घटक तालाबंद "
+"स्क्रीन प्रदान करें।"
+
+#: server.cpp:873
+#, kde-format
+msgid "Session Management"
+msgstr "सत्र प्रबंधन"
+
+#: server.cpp:876
+#, kde-format
+msgid "Log Out"
+msgstr "लॉग-आउट"
+
+#: server.cpp:881
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "पुष्टि किए बिना लॉग आउट करें"
+
+#: server.cpp:886
+#, kde-format
+msgid "Halt Without Confirmation"
+msgstr "पुष्टि किए बिना रोक दें"
+
+#: server.cpp:891
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "पुष्टि किए बिना पुनः प्रारंभ करें"
+
+#, fuzzy
+#~| msgid ""
+#~| "Starts 'wm' in case no other window manager is \n"
+#~| "participating in the session. Default is 'kwin'"
+#~ msgid ""
+#~ "Starts <wm> in case no other window manager is \n"
+#~ "participating in the session. Default is 'kwin'"
+#~ msgstr ""
+#~ "प्रारंभ करता है 'wm' यदि कोई अन्य विंडो प्रबंधक उपलब्ध नहीं होता है\n"
+#~ "सत्र में. डिफ़ॉल्ट है 'kwin'"
+
+#, fuzzy
+#~| msgid "&Logout"
+#~ msgid "Logout"
+#~ msgstr "लॉगआउट (&L)"
+
+#, fuzzy
+#~| msgid "Log out in 1 second."
+#~| msgid_plural "Log out in %1 seconds."
+#~ msgid "Sleeping in 1 second"
+#~ msgid_plural "Sleeping in %1 seconds"
+#~ msgstr[0] "१ सेकण्ड में लॉगआउट"
+#~ msgstr[1] "%1 सेकण्ड में लॉगआउट"
+
+#, fuzzy
+#~| msgid "Log out in 1 second."
+#~| msgid_plural "Log out in %1 seconds."
+#~ msgid "Logging out in 1 second."
+#~ msgid_plural "Logging out in %1 seconds."
+#~ msgstr[0] "१ सेकण्ड में लॉगआउट"
+#~ msgstr[1] "%1 सेकण्ड में लॉगआउट"
+
+#, fuzzy
+#~| msgid "Turn off computer in 1 second."
+#~| msgid_plural "Turn off computer in %1 seconds."
+#~ msgid "Turning off computer in 1 second."
+#~ msgid_plural "Turning off computer in %1 seconds."
+#~ msgstr[0] "कम्प्यूटर १ सेकण्ड में बन्द करें"
+#~ msgstr[1] "कम्प्यूटर %1 सेकण्ड में बन्द करें"
+
+#, fuzzy
+#~| msgid "Reboot computer in 1 second."
+#~| msgid_plural "Reboot computer in %1 seconds."
+#~ msgid "Restarting computer in 1 second."
+#~ msgid_plural "Restarting computer in %1 seconds."
+#~ msgstr[0] "कम्प्यूटर 1 सेकण्ड में रीबूट करें"
+#~ msgstr[1] "कम्प्यूटर %1 सेकण्ड में रीबूट करें"
+
+#, fuzzy
+#~| msgid "&Turn Off Computer"
+#~ msgid "Turn Off Computer"
+#~ msgstr "कम्प्यूटर बन्द करें (&T)"
+
+#, fuzzy
+#~| msgid "&Restart Computer"
+#~ msgid "Restart Computer"
+#~ msgstr "कम्प्यूटर फिर से चालू करें (&R)"
+
+#, fuzzy
+#~| msgid "&Cancel"
+#~ msgid "Cancel"
+#~ msgstr "रद्द करें (&C)"
+
+#~ msgid "&Standby"
+#~ msgstr "स्टैंडबाय (&S)"
+
+#~ msgid "Suspend to &RAM"
+#~ msgstr "रैम में सस्पेंड करें (&R)"
+
+#~ msgid "Suspend to &Disk"
+#~ msgstr "डिस्क में सस्पेंड करें (&D)"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "रविशंकर श्रीवास्तव"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "raviratlami@gmail.com"
+
+#~ msgid "(C) 2000, The KDE Developers"
+#~ msgstr "(c) 2000, केडीई डेवलपर्स"
+
+#~ msgid "Matthias Ettrich"
+#~ msgstr "मेथियास एट्रिच"
+
+#~ msgid "Luboš Luňák"
+#~ msgstr "लुबोस लुनाक"
+
+#~ msgid "Maintainer"
+#~ msgstr "अनुरक्षक"
+
+#~ msgctxt "current option in boot loader"
+#~ msgid " (current)"
+#~ msgstr "(मौज़ूदा)"
+
+#~ msgid "End Session for %1"
+#~ msgstr "%1 का सत्र बन्द करें"
+
+#~ msgid "End Session for %1 (%2)"
+#~ msgstr "%1 (%2) का सत्र बन्द करें"

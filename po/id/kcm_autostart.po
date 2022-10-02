@@ -1,0 +1,217 @@
+# Indonesian translations for kcm_autostart package.
+# Copyright (C) 2010 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kcm_autostart package.
+#
+# Andhika Padmawan <andhika.padmawan@gmail.com>, 2010-2014.
+# Wantoyo <wantoyek@gmail.com>, 2017, 2018, 2019.
+# Linerly <linerly@protonmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_autostart\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:50+0000\n"
+"PO-Revision-Date: 2022-03-03 12:50+0700\n"
+"Last-Translator: Linerly <linerly@protonmail.com>\n"
+"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: autostartmodel.cpp:288
+#, kde-format
+msgid "\"%1\" is not an absolute url."
+msgstr "\"%1\" bukan alur mutlak."
+
+#: autostartmodel.cpp:291
+#, kde-format
+msgid "\"%1\" does not exist."
+msgstr "\"%1\" tidak ada."
+
+#: autostartmodel.cpp:294
+#, kde-format
+msgid "\"%1\" is not a file."
+msgstr "\"%1\" bukan sebuah file."
+
+#: autostartmodel.cpp:297
+#, kde-format
+msgid "\"%1\" is not readable."
+msgstr "\"%1\" bukan dapat dibaca."
+
+#: package/contents/ui/main.qml:40
+#, kde-format
+msgid "Make Executable"
+msgstr ""
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "The file '%1' must be executable to run at logout."
+msgstr ""
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid "The file '%1' must be executable to run at login."
+msgstr ""
+
+#: package/contents/ui/main.qml:89
+#, kde-format
+msgid "Properties"
+msgstr "&Properti..."
+
+#: package/contents/ui/main.qml:95
+#, kde-format
+msgid "Remove"
+msgstr "&Hapus"
+
+#: package/contents/ui/main.qml:106
+#, kde-format
+msgid "Applications"
+msgstr "Aplikasi"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Login Scripts"
+msgstr "Skrip Masuk"
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Pre-startup Scripts"
+msgstr "Skip Prahidup"
+
+#: package/contents/ui/main.qml:115
+#, kde-format
+msgid "Logout Scripts"
+msgstr "Skrip Keluar"
+
+#: package/contents/ui/main.qml:124
+#, kde-format
+msgid "No user-specified autostart items"
+msgstr "Tidak ada item pemulaian otomatis yang dispesifikasikan oleh pengguna"
+
+#: package/contents/ui/main.qml:125
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Click the <interface>Add…</interface> button below to add some"
+msgstr ""
+"Klik tombol <interface>Tambahkan...</interface> untuk menambahkan beberapa "
+"hal"
+
+#: package/contents/ui/main.qml:139
+#, kde-format
+msgid "Choose Login Script"
+msgstr "Pilih Skrip Masuk"
+
+#: package/contents/ui/main.qml:160
+#, kde-format
+msgid "Choose Logout Script"
+msgstr "Pilih Skip Keluar"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "Add…"
+msgstr "Tambahkan..."
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Add Application…"
+msgstr "Tambahkan Aplikasi..."
+
+#: package/contents/ui/main.qml:199
+#, kde-format
+msgid "Add Login Script…"
+msgstr "Tambah Skrip Masuk..."
+
+#: package/contents/ui/main.qml:205
+#, kde-format
+msgid "Add Logout Script…"
+msgstr "Tambah Skrip Keluar..."
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Andhika Padmawan,Wantoyo"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "andhika.padmawan@gmail.com,wantoyek@gmail.com"
+
+#~ msgid "Session Autostart Manager Control Panel Module"
+#~ msgstr "Modul Panel Kendali Pengelola Automulai Sesi"
+
+#, fuzzy
+#~| msgid "Copyright © 2006–2010 Autostart Manager team"
+#~ msgid "Copyright © 2006–2020 Autostart Manager team"
+#~ msgstr "Hak Cipta © 2006–2010 Tim Pengelola Automulai"
+
+#~ msgid "Stephen Leaf"
+#~ msgstr "Stephen Leaf"
+
+#~ msgid "Montel Laurent"
+#~ msgstr "Montel Laurent"
+
+#~ msgid "Maintainer"
+#~ msgstr "Pemelihara"
+
+#, fuzzy
+#~| msgid "Advanced..."
+#~ msgid "Add..."
+#~ msgstr "Tingkat lanjut..."
+
+#~ msgid "Shell script path:"
+#~ msgstr "Alur skrip shell:"
+
+#~ msgid "Create as symlink"
+#~ msgstr "Ciptakan sebagai tautan simbolis"
+
+#~ msgid "Autostart only in Plasma"
+#~ msgstr "Automulai hanya di Plasma"
+
+#~ msgid "Name"
+#~ msgstr "Nama"
+
+#~ msgid "Command"
+#~ msgstr "Perintah"
+
+#~ msgid "Status"
+#~ msgstr "Status"
+
+#~ msgctxt ""
+#~ "@title:column The name of the column that decides if the program is run "
+#~ "on session startup, on session shutdown, etc"
+#~ msgid "Run On"
+#~ msgstr "Jalankan Pada Saat"
+
+#~ msgid "Session Autostart Manager"
+#~ msgstr "Pengelola Automulai KDE"
+
+#~ msgctxt "The program will be run"
+#~ msgid "Enabled"
+#~ msgstr "Difungsikan"
+
+#~ msgctxt "The program won't be run"
+#~ msgid "Disabled"
+#~ msgstr "Dinonfungsikan"
+
+#~ msgid "Desktop File"
+#~ msgstr "File Desktop"
+
+#~ msgid "Script File"
+#~ msgstr "File Skrip"
+
+#~ msgid "Add Program..."
+#~ msgstr "Tambah Program..."
+
+#~ msgid "Startup"
+#~ msgstr "Pemulaian"
+
+#~ msgid "Before session startup"
+#~ msgstr "Sebelum pemulaian sesi"
+
+#~ msgid ""
+#~ "Only files with “.sh” extensions are allowed for setting up the "
+#~ "environment."
+#~ msgstr ""
+#~ "Hanya file dengan ekstensi “.sh” yang diizinkan mengatur lingkungan."
+
+#~ msgid "Shutdown"
+#~ msgstr "Matikan"

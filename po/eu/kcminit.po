@@ -1,0 +1,53 @@
+# Translation of kcminit.po to Euskara/Basque (eu).
+# Copyright (C) 2007-2014, Free Software Foundation, Inc.
+#
+# marcos <marcos@euskalgnu.org>, 2007, 2008.
+# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2014.
+# Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminit\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-26 00:47+0000\n"
+"PO-Revision-Date: 2014-01-22 23:20+0100\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
+"Language-Team: Basque <kde-i18n-doc@lists.kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Marcos "
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "marcos@euskalgnu.org"
+
+#: main.cpp:170
+#, kde-format
+msgid "KCMInit"
+msgstr "KCMInit"
+
+#: main.cpp:172
+#, kde-format
+msgid "KCMInit - runs startup initialization for Control Modules."
+msgstr "KCMInit - kontrol-moduluen abiarazte-prozesua exekutatzen du."
+
+#: main.cpp:178
+#, kde-format
+msgid "List modules that are run at startup"
+msgstr "Zerrendatu abiaraztean exekutatuko diren moduluak"
+
+#: main.cpp:179
+#, kde-format
+msgid "Configuration module to run"
+msgstr "Exekutatu beharreko konfigurazio-modulua"
+
+#~ msgid "Module %1 not found"
+#~ msgstr "%1 modulua ez da aurkitu"

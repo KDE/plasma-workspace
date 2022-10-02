@@ -1,0 +1,301 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % German "INCLUDE">
+]>
+<article id="autostart" lang="&language;">
+<articleinfo>
+<title
+>Autostart</title>
+<authorgroup>
+<author
+>&Anne-Marie.Mahfouf;</author>
+<othercredit role="translator"
+><firstname
+>Thomas</firstname
+><surname
+>Reitelbach</surname
+><affiliation
+><address
+><email
+>tr@erdfunkstelle.de</email
+></address
+></affiliation
+><contrib
+>Deutsche Übersetzung</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-05</date>
+<releaseinfo
+>&plasma; 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systemeinstellungen</keyword>
+<keyword
+>Autostart</keyword>
+<keyword
+>Desktop-Datei</keyword>
+<keyword
+>Skriptdatei</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_autostart">
+<title
+>Autostart-Verwaltung</title>
+
+<para
+>Dieses Einrichtungsmodul ermöglicht Ihnen die Verwaltung von Programmen, die mit Ihrer &plasma;-Sitzung gestartet werden. Sie können Programme oder Skripte hinzufügen und ändern, die zusammen mit Ihrer &plasma;-Sitzung starten oder beim Abmelden ausgeführt werden sollen.</para>
+
+<note
+><para
+>Beachten Sie, dass alle Änderungen in diesem Dialog sofort angewendet werden.</para
+></note>
+
+<para
+>Das Einrichtungsmodul durchsucht die Ordner <filename
+>$HOME/.config/autostart/</filename
+> nach Anwendungen und Anmeldungs-Skripten, <filename class="directory"
+>$HOME/.config/plasma-workspace/env</filename
+> nach Skripten, die vor dem Start ausgeführt werden, und <filename class="directory"
+>$HOME/.config/plasma-workspace/shutdown</filename
+> nach Abmeldungs-Skripten. In diesen Ordnern bereits vorhandene Programme und Skripte werden angezeigt. Die Verwaltung dieser Autostart-Programme ist leicht gemacht. </para>
+
+<para
+>Anmeldungs-Skripte sind <filename class="extension"
+>.desktop</filename
+>-Dateien mit einem Schlüsselwert <literal
+>X-KDE-AutostartScript=true</literal
+>. Mit Skript-Dateien, die vor der Anmeldung ausgeführt werden, können Sie den Wert von Umgebungsvariablen setzen. </para>
+
+<note
+><para
+>Der Ort des <filename class="directory"
+>Autostart</filename
+>-Ordners kann in <menuchoice
+><guimenu
+>Anwendungen</guimenu
+> <guimenuitem
+>Orte</guimenuitem
+></menuchoice
+> in den &systemsettings; im Abschnitt <guilabel
+>Persönliche Informationen</guilabel
+> geändert werden. Ändern Sie hier den vorgegebenen Ordner <filename class="directory"
+>.config/autostart</filename
+>.</para
+></note>
+
+<para
+>In der Dokumentation zu <ulink url="help:/kcontrol/kcmsmserver"
+>Arbeitsflächen-Sitzung</ulink
+> und <ulink url="help:/kcontrol/kded"
+>Hintergrunddienste</ulink
+> finden Sie weitere Informationen zur Einrichtung des Startverhaltens Ihrer &plasma;-Sitzung.</para>
+
+<para
+>Einige &kde;-Programme kontrollieren den automatischen Start selbst. Sie können &eg; in &kalarm; den automatischen Start im Einrichtungsdialog ein- bzw. ausschalten oder müssen Programme wie &konversation;, und &kopete; mit <menuchoice
+><guimenu
+>Datei</guimenu
+><guimenuitem
+>beenden</guimenuitem
+></menuchoice
+> schließen, ansonsten werden Sie noch im Systembereich der Kontrollleiste angezeigt und werden bei der nächsten Anmeldung automatisch wieder gestartet. </para>
+
+<sect2 id="migration">
+<title
+>Migration vom &kde;4-Arbeitsbereich</title>
+<para
+>So migrieren Sie Ihre eigenen Einstellungen für den Autostart vom &kde;4-Arbeitsbereich</para>
+<simplelist>
+<member
+>Kopieren Sie Desktop-Dateien von <filename class="directory"
+>$HOME/.kde/Autostart</filename
+> in den Ordner <filename class="directory"
+>$HOME/.config/autostart</filename
+></member>
+<member
+>Kopieren Sie Skriptdateien, die vor der Anmeldung ausgeführt werden sollen, von <filename class="directory"
+>$HOME/.kde/Autostart</filename
+> in den Ordner <filename class="directory"
+>$HOME/.config/plasma-workspace/env</filename
+></member>
+<member
+>Kopieren Sie Skriptdateien zur Abmeldung von <filename class="directory"
+>$HOME/.kde/Autostart</filename
+> in den Ordner <filename class="directory"
+>$HOME/.config/plasma-workspace/shutdown</filename
+></member>
+</simplelist>
+</sect2>
+
+<sect2 id="disabling_autostart">
+<title
+>Autostart-Dateien Ihrer Distribution deaktivieren</title>
+<para
+>Um ein Autostartelement zu deaktivieren, zum Beispiel das Drucker-Miniprogramm, kopieren Sie dessen <filename class="extension"
+>.desktop</filename
+>-Datei in Ihren persönlichen Autostart-Ordner. Dann wird die Autostart-Datei in <filename class="directory"
+>$HOME/.config/autostart</filename
+> anstatt der Datei in <filename class="extension"
+>.desktop</filename
+>-Datei im Standardpaket ausgeführt. Fügen Sie die folgende Zeile in die kopierte <filename class="extension"
+>.desktop</filename
+>-Datei hinzu:</para>
+<programlisting
+>Hidden=true
+</programlisting>
+</sect2>
+
+<sect2 id="current">
+<title
+>Dateianzeige</title>
+<para
+>Der Hauptteil des Einrichtungsmoduls zeigt die eingerichteten Autostart-Dateien an. Programme können bei der &plasma;-Anmeldung gestartet werden. Skripte können sowohl bei der &plasma;-Anmeldung und beim Beenden von &plasma; ausgeführt werden.</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Symbol</guilabel
+></term>
+<listitem>
+<para
+>In dieser Spalte wird das Symbol des Programms oder Skriptes angezeigt, das mit &plasma; gestartet werden soll. Als Symbol wird bei Programmen der Wert des Schlüssels „Icon“ aus der Einrichtungsdatei <filename class="extension"
+>.desktop</filename
+> und bei Skripten ein Standardsymbol verwendet. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Name</guilabel
+></term>
+<listitem>
+<para
+>Diese Spalte zeigt den Namen des Programms oder Skriptes, das mit &plasma; gestartet werden soll. Der Name wird aus der Einrichtungsdatei <filename class="extension"
+>.desktop</filename
+> aus dem Wert des Schlüssels<literal
+>Name</literal
+> ermittelt bzw. bei Skripten aus dem Dateinamen. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Eigenschaften</guilabel
+></term>
+<listitem>
+<para
+>Dieser Knopf wird nur angezeigt, wenn sich der Mauszeiger auf einem Eintrag befindet. Mit diesem Knopf, der nur für Programme und Anmeldungs-Skripte &ie; <filename class="extension"
+>.desktop</filename
+>-Dateien aktiviert ist, können Sie die Eigenschaften eines Programms oder Skripts ändern. Es gibt allgemeine Eigenschaften, sowie Berechtigungen, eine Vorschau und Eigenschaften,  die sich auf das ausführbare Programm oder Anmeldungs-Skript als solches beziehen. Als Standardbefehl wird der Wert des Schlüssels <literal
+>Exec</literal
+> aus der <filename class="extension"
+>.desktop</filename
+>-Datei verwendet. </para>
+<para
+>Für ein Abmeldungs-Skript enthält dieser Befehl den vollständigen Pfad zum Skript, der Befehl kann nicht bearbeitet werden. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Entfernen</guilabel
+></term>
+<listitem>
+<para
+>Dieser Knopf wird nur angezeigt, wenn sich der Mauszeiger auf einem Eintrag befindet. Klicken Sie auf das Symbol <guibutton
+>&minus;</guibutton
+> und dann wird die Einrichtungsdatei <filename class="extension"
+>.desktop</filename
+> des Programms, das Skript oder die symbolische Verknüpfung im Ordner <filename class="directory"
+>Autostart</filename
+> sofort gelöscht. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+
+<sect2 id="actions">
+<title
+>Aktionen</title>
+<para
+>Unten finden Sie den Knopf <guibutton
+>Hinzufügen</guibutton
+>, um die Art des Eintrags wie Programm, Anmeldungs- und Abmeldungs-Skript auszuwählen, den Sie hinzufügen möchten.  </para>
+
+<variablelist>
+<varlistentry
+><term
+><guimenuitem
+>Programm hinzufügen</guimenuitem
+></term>
+<listitem>
+<para
+>Wenn Sie auf dieses Symbol klicken, öffnet sich der bekannte Dialog<guilabel
+>Programm auswählen</guilabel
+> von &plasma;, mit dessen Hilfe Sie ein Programm aus einer Liste auswählen können. Nachdem Sie das gewünschte Programm ausgewählt haben, klicken Sie auf <guibutton
+>OK</guibutton
+>, anschließend werden Ihnen die Eigenschaften zu dem Programm angezeigt. </para>
+<para
+>Die Einrichtungsdatei <filename class="extension"
+>.desktop</filename
+> des Programms wird in Ihren <filename class="directory"
+>Autostart</filename
+>-Ordner kopiert. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guimenuitem
+>Anmeldungs-Skript hinzufügen ...</guimenuitem
+></term>
+<listitem>
+<para
+>Öffnet einen Dialog zur Eingabe des Pfads zum Skript. Skripte, die bei der Anmeldung ausgeführt werden sollen haben eine zugehörige <filename class="extension"
+>.desktop</filename
+>-Datei, die in Ihrem Ordner <filename class="directory"
+>Autostart</filename
+> erstellt und bei der &plasma;-Anmeldung dann ausgeführt wird. </para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guimenuitem
+>Abmeldungs-Skript hinzufügen ...</guimenuitem
+></term>
+<listitem>
+<para
+>Öffnet einen Dialog zur Eingabe des Pfads zum Skript. Skripte, die bei der Abmeldung ausgeführt werden sollen, erhalten eine symbolische Verknüpfung oder werden in den Ordner <filename class="directory"
+>$HOME/.config/plasma-workspace/shutdown</filename
+> kopiert. Bei der &plasma;-Abmeldung werden sie dann ausgeführt. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

@@ -1,0 +1,36 @@
+# Translation of plasma_runner_placesrunner to Norwegian Nynorsk
+#
+# Karl Ove Hufthammer <karl@huftis.org>, 2009, 2015.
+# Eirik U. Birkeland <eirbir@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_placesrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"PO-Revision-Date: 2015-12-07 21:12+0100\n"
+"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
+"Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
+"Language: nn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 2.0\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: placesrunner.cpp:29 placesrunner.cpp:83
+#, kde-format
+msgid "places"
+msgstr "stadar"
+
+#: placesrunner.cpp:29
+#, kde-format
+msgid "Lists all file manager locations"
+msgstr "Viser alle stadene i filhandsamaren"
+
+#: placesrunner.cpp:31
+#, kde-format
+msgid "Finds file manager locations that match :q:"
+msgstr "Finn filadresser i samsvar med :q:."

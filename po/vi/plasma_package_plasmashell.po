@@ -1,0 +1,103 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Phu Hung Nguyen <phu.nguyen@kdemail.net>, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-22 00:46+0000\n"
+"PO-Revision-Date: 2022-02-09 18:27+0100\n"
+"Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
+"Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 20.12.2\n"
+
+#: shellpackage.cpp:26 shellpackage.cpp:27
+#, kde-format
+msgid "Applets furniture"
+msgstr "Đồ đạc tiểu ứng dụng"
+
+#: shellpackage.cpp:28
+#, kde-format
+msgid "Explorer UI for adding widgets"
+msgstr "Giao diện khám phá để thêm các phụ kiện"
+
+#: shellpackage.cpp:29
+#, kde-format
+msgid "User interface for the views that will show containments"
+msgstr "Giao diện cho các khung xem sẽ hiển thị các bao chứa"
+
+#: shellpackage.cpp:37
+#, kde-format
+msgid "Default layout file"
+msgstr "Tệp bố cục mặc định"
+
+#: shellpackage.cpp:38
+#, kde-format
+msgid "Default plugins for containments, containmentActions, etc."
+msgstr ""
+"Các phần cài cắm mặc định cho các bao chứa, các hành động bao chứa, v.v."
+
+#: shellpackage.cpp:43
+#, kde-format
+msgid "Error message shown when an applet fails to load"
+msgstr "Thông báo lỗi sẽ hiển thị khi một tiểu ứng dụng không tải được"
+
+#: shellpackage.cpp:44
+#, kde-format
+msgid "QML component that shows an applet in a popup"
+msgstr "Thành phần QML hiển thị một tiểu ứng dụng trong một ô bật lên"
+
+#: shellpackage.cpp:48
+#, kde-format
+msgid ""
+"Compact representation of an applet when collapsed in a popup, for instance "
+"as an icon. Applets can override this component."
+msgstr ""
+"Dạng hiển thị gọn của một tiểu ứng dụng khi bị thu gọn lại trong một ô bật "
+"lên, chẳng hạn như là một biểu tượng. Các tiểu ứng dụng có thể vượt hiệu lực "
+"thành phần này."
+
+#: shellpackage.cpp:53
+#, kde-format
+msgid "QML component for the configuration dialog for applets"
+msgstr "Thành phần QML cho hộp thoại cấu hình của các tiểu ứng dụng"
+
+#: shellpackage.cpp:56
+#, kde-format
+msgid "QML component for the configuration dialog for containments"
+msgstr "Thành phần QML cho hộp thoại cấu hình của các bao chứa"
+
+#: shellpackage.cpp:57
+#, kde-format
+msgid "Panel configuration UI"
+msgstr "Giao diện cấu hình Bảng"
+
+#: shellpackage.cpp:60
+#, kde-format
+msgid "QML component for choosing an alternate applet"
+msgstr "Thành phần QML cho việc chọn tiểu ứng dụng thay thế"
+
+#: shellpackage.cpp:63
+#, kde-format
+msgid "QML component for the configuration dialog of containments"
+msgstr "Thành phần QML cho hộp thoại cấu hình của các bao chứa"
+
+#: shellpackage.cpp:66
+#, kde-format
+msgid "Widgets explorer UI"
+msgstr "Giao diện khám phá các phụ kiện"
+
+#: shellpackage.cpp:70
+#, kde-format
+msgid ""
+"A UI for writing, loading and running desktop scripts in the current live "
+"session"
+msgstr ""
+"Một giao diện cho việc viết, tải và chạy các kịch bản bàn làm việc trong "
+"phiên hiện hành"

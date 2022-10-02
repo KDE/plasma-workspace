@@ -1,0 +1,440 @@
+# translation of kcmstyle.po to marathi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sandeep Shedmake <sandeep.shedmake@gmail.com>, 2009.
+# Chetan Khona <chetan@kompkin.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmstyle\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"PO-Revision-Date: 2013-02-23 17:39+0530\n"
+"Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
+"Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: gtkpage.cpp:59
+#, kde-format
+msgid "%1 is not a valid GTK Theme archive."
+msgstr ""
+
+#: kcmstyle.cpp:161 kcmstyle.cpp:168
+#, kde-format
+msgid "There was an error loading the configuration dialog for this style."
+msgstr "या शैली करिता संयोजना संवाद दाखल करतेवेळी त्रुटी आढळली."
+
+#: kcmstyle.cpp:274
+#, kde-format
+msgid "Failed to apply selected style '%1'."
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:32
+#, fuzzy, kde-format
+#| msgid "Show icons in menus:"
+msgid "Show icons:"
+msgstr "मेन्यूमध्ये चिन्ह दर्शवा :"
+
+#: package/contents/ui/EffectSettingsPopup.qml:33
+#, fuzzy, kde-format
+#| msgid "Radio button"
+msgid "On buttons"
+msgstr "रेडियो बटन"
+
+#: package/contents/ui/EffectSettingsPopup.qml:44
+#, kde-format
+msgid "In menus"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:56
+#, fuzzy, kde-format
+#| msgid "Main toolbar text:"
+msgid "Main toolbar label:"
+msgstr "मुख्य साधनपट्टी मजकूर :"
+
+#: package/contents/ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "None"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:59
+#, fuzzy, kde-format
+#| msgid "Text Only"
+msgid "Text only"
+msgstr "फक्त मजकूर"
+
+#: package/contents/ui/EffectSettingsPopup.qml:60
+#, fuzzy, kde-format
+#| msgid "Text Beside Icons"
+msgid "Beside icons"
+msgstr "चिन्हाच्या बाजूने मजकूर"
+
+#: package/contents/ui/EffectSettingsPopup.qml:61
+#, fuzzy, kde-format
+#| msgid "Text Below Icons"
+msgid "Below icon"
+msgstr "चिन्हाच्या खाली मजकूर"
+
+#: package/contents/ui/EffectSettingsPopup.qml:76
+#, fuzzy, kde-format
+#| msgid "Secondary toolbar text:"
+msgid "Secondary toolbar label:"
+msgstr "दुय्यम साधनपट्टी मजकूर :"
+
+#: package/contents/ui/GtkStylePage.qml:18
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "&Applications"
+msgid "GNOME/GTK Application Style"
+msgstr "अनुप्रयोग (&A)"
+
+#: package/contents/ui/GtkStylePage.qml:44
+#, kde-format
+msgid "GTK theme:"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:69
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgid "Preview…"
+msgstr "पूर्वावलोकन"
+
+#: package/contents/ui/GtkStylePage.qml:88
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:93
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "&Applications"
+msgid "Get New GNOME/GTK Application Styles…"
+msgstr "अनुप्रयोग (&A)"
+
+#: package/contents/ui/GtkStylePage.qml:109
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:111
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: package/contents/ui/main.qml:17
+#, fuzzy, kde-format
+#| msgid ""
+#| "<h1>Style</h1>This module allows you to modify the visual appearance of "
+#| "user interface elements, such as the widget style and effects."
+msgid ""
+"This module allows you to modify the visual appearance of applications' user "
+"interface elements."
+msgstr ""
+"<h1>शैली</h1> हा विभाग वापरकर्ता संवादाचे दर्शनीय घटक (जसे विजेट शैली व परिणाम) "
+"बदलण्याकरिता मदत करतो."
+
+#: package/contents/ui/main.qml:96
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure Style…"
+msgstr "संयोजीत करा (&F)..."
+
+#: package/contents/ui/main.qml:116
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr ""
+
+#: package/contents/ui/main.qml:132
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "संयोजीत करा (&F)..."
+
+#: styleconfdialog.cpp:21
+#, kde-format
+msgid "Configure %1"
+msgstr "%1 संयोजीत करा"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "टॅब 1"
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, fuzzy, kde-format
+#| msgid "Button"
+msgid "Push Button"
+msgstr "बटन"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, fuzzy, kde-format
+#| msgid "Combobox"
+msgid "Combo box"
+msgstr "कॉम्बोबॉक्स्"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "चेकबॉक्स"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "रेडियो बटन"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:133
+#, kde-format
+msgid "Tab 2"
+msgstr "टॅब 2"
+
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "&Applications"
+msgid "Application style"
+msgstr "अनुप्रयोग (&A)"
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Show icons on buttons:"
+msgid "Show icons on buttons"
+msgstr "बटनावर चिन्ह दर्शवा :"
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, fuzzy, kde-format
+#| msgid "Show icons on buttons:"
+msgid "Show icons in menus"
+msgstr "बटनावर चिन्ह दर्शवा :"
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, fuzzy, kde-format
+#| msgid "Main toolbar text:"
+msgid "Main toolbar label"
+msgstr "मुख्य साधनपट्टी मजकूर :"
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, fuzzy, kde-format
+#| msgid "Secondary toolbar text:"
+msgid "Secondary toolbar label"
+msgstr "दुय्यम साधनपट्टी मजकूर :"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr ""
+#~ "संदिप शेडमाके, \n"
+#~ "चेतन खोना"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "sandeep.shedmake@gmail.com, \n"
+#~ "chetan@kompkin.com"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "Application Style"
+#~ msgstr "अनुप्रयोग (&A)"
+
+#, fuzzy
+#~| msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
+#~ msgstr "(c) 2002 केरोल श्वेड, डेनियल मॉल्केनटिन"
+
+#~ msgid "Karol Szwed"
+#~ msgstr "केरोल श्वेड"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "डेनियल मॉल्केनटिन"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "Download New GNOME/GTK2 Application Styles..."
+#~ msgstr "अनुप्रयोग (&A)"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "GNOME/GTK2 Application Styles"
+#~ msgstr "अनुप्रयोग (&A)"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "Download New GNOME/GTK3 Application Styles..."
+#~ msgstr "अनुप्रयोग (&A)"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "GNOME/GTK3 Application Styles"
+#~ msgstr "अनुप्रयोग (&A)"
+
+#~ msgid "Unable to Load Dialog"
+#~ msgstr "संवाद दाखल करू शकत नाही"
+
+#~ msgid "No description available."
+#~ msgstr "वर्णन उपलब्ध नाही."
+
+#~ msgid ""
+#~ "This area shows a preview of the currently selected style without having "
+#~ "to apply it to the whole desktop."
+#~ msgstr ""
+#~ "हा भाग तुम्ही आता निवडलेल्या शैलीचे पूर्वावलोकन दर्शवितो. (ती शैली पूर्ण डेस्कटॉपला लागू "
+#~ "न करिता.)"
+
+#, fuzzy
+#~| msgid ""
+#~| "If you enable this option, KDE Applications will show small icons "
+#~| "alongside some important buttons."
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "some important buttons."
+#~ msgstr ""
+#~ "जर तुम्ही हा पर्याय कार्यान्वित केला तर, केडीई कार्यक्रम काही महत्वाच्या बटनांबरोबर "
+#~ "लहान चिन्हे दर्शवतील."
+
+#, fuzzy
+#~| msgid ""
+#~| "If you enable this option, KDE Applications will show small icons "
+#~| "alongside most menu items."
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "most menu items."
+#~ msgstr ""
+#~ "जर तुम्ही हा पर्याय कार्यान्वित केला तर, केडीई कार्यक्रम मेन्यू घटकांच्या बरोबर लहान "
+#~ "चिन्हे दर्शवतील."
+
+#~ msgid "Toolbars"
+#~ msgstr "साधनपट्ट्या"
+
+#~ msgid "No Text"
+#~ msgstr "मजकूर नाही"
+
+#, fuzzy
+#~| msgid "Widget style:"
+#~ msgid "Widget Style"
+#~ msgstr "विजेट शैली :"
+
+#~ msgid "Widget style:"
+#~ msgstr "विजेट शैली :"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Fine Tuning"
+#~ msgstr "फाईन ट्युनिंग (&F)"
+
+#~ msgid "Description: %1"
+#~ msgstr "वर्णन : %1"
+
+#~ msgid ""
+#~ "This page allows you to choose details about the widget style options"
+#~ msgstr "विजेट शैली पर्यायांचे तपशील निवडण्याकरिताचे पान"
+
+#~ msgid "Group Box"
+#~ msgstr "समूह बॉक्स्"
+
+#~ msgid "KDE Style Module"
+#~ msgstr "केडीई शैली विभाग"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "राल्फ नोल्डेन"
+
+#~ msgid "Menubar"
+#~ msgstr "मेन्यू पट्टी"
+
+#~ msgid "Menubar style:"
+#~ msgstr "मेन्यू पट्टी शैली :"
+
+#~ msgid "In application"
+#~ msgstr "या अनुप्रयोगात"
+
+#~ msgid "Title bar button"
+#~ msgstr "शिर्षक पट्टी बटन"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "Global Menu widget"
+#~ msgstr "अनुप्रयोग (&A)"
+
+#, fuzzy
+#~| msgid "Settings changes will take effect only on application restart"
+#~ msgid "Your changes will take effect only on application restart."
+#~ msgstr "संयोजनेतील बदल अनुप्रयोग परत सुरु केल्यावरच कार्यान्वित होतील"
+
+#~ msgid ""
+#~ "<p>Changes to the visibility of menu icons will only affect newly started "
+#~ "applications.</p>"
+#~ msgstr ""
+#~ "<p>मेन्यू चिन्ह दर्शविण्यातील बदल फक्त नव्याने सुरु होणाऱ्या अनुप्रयोगांस लागू होतील.</p>"
+
+#~ msgctxt "@title:window"
+#~ msgid "Menu Icons Changed"
+#~ msgstr "मेन्यू चिन्ह बदलले आहे"
+
+#~ msgid "Top screen menubar"
+#~ msgstr "स्क्रीनच्या वरील बाजूची मेन्यू पट्टी"
+
+#~ msgid "Only export"
+#~ msgstr "फक्त निर्यात करा"
+
+#~ msgid "Graphical effects:"
+#~ msgstr "ग्राफिकल परिणाम :"
+
+#~ msgid "Low display resolution and Low CPU"
+#~ msgstr "कमी डिस्प्ले रेझोल्युशन व कमी CPU"
+
+#~ msgid "High display resolution and Low CPU"
+#~ msgstr "उच्च डिस्प्ले रेझोल्युशन व कमी CPU"
+
+#~ msgid "Low display resolution and High CPU"
+#~ msgstr "कमी डिस्प्ले रेझोल्युशन व उच्च CPU"
+
+#~ msgid "High display resolution and High CPU"
+#~ msgstr "उच्च डिस्प्ले रेझोल्युशन व उच्च CPU"
+
+#~ msgid "Low display resolution and Very High CPU"
+#~ msgstr "कमी डिस्प्ले रेझोल्युशन व खूप उच्च CPU"
+
+#~ msgid "High display resolution and Very High CPU"
+#~ msgstr "उच्च डिस्प्ले रेझोल्युशन व खूप उच्च CPU"
+
+#~ msgid ""
+#~ "If you enable this option, KDE Applications will run internal animations."
+#~ msgstr ""
+#~ "जर तुम्ही हा पर्याय कार्यान्वित केला तर, केडीई कार्यक्रम अंतर्गत ऍनीमेशन चालवतील."
+
+#~ msgid "kcmstyle"
+#~ msgstr "केसीएम शैली"
+
+#~ msgid "Icons Only"
+#~ msgstr "फक्त चिन्ह"
+
+#, fuzzy
+#~| msgctxt "@label:listbox"
+#~| msgid "Text pos&ition:"
+#~ msgctxt "@label:listbox"
+#~ msgid "Text pos&ition of toolbar elements:"
+#~ msgstr "पाठ्य स्थान (&i):"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Style"
+#~ msgstr "शैली (&S)"

@@ -1,0 +1,194 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Spanish "INCLUDE">
+]>
+<article id="desktopthemedetails" lang="&language;">
+<articleinfo>
+<title
+>Estilo de Plasma</title>
+<authorgroup>
+<author
+><firstname
+>Andrew</firstname
+> <surname
+>Lake</surname
+></author>
+<author
+><firstname
+>Carl</firstname
+> <surname
+>Schwan</surname
+> </author>
+<othercredit role="translator"
+> <firstname
+>Rocío</firstname
+> <surname
+>Gallego</surname
+> <affiliation
+><address
+><email
+>traducciones@rociogallego.com</email
+></address
+></affiliation
+> <contrib
+>Traducción</contrib
+> </othercredit
+><othercredit role="translator"
+><firstname
+>Cristina Yenyxe</firstname
+><surname
+>González García</surname
+><affiliation
+><address
+><email
+>the.blue.valkyrie@gmail.com</email
+></address
+></affiliation
+><contrib
+>Traductor</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2019-03-08</date>
+<releaseinfo
+>Plasma 5.16</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Preferencia del sistema</keyword>
+<keyword
+>escritorio</keyword>
+<keyword
+>tema</keyword>
+<keyword
+>plasma</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>&plasma; contiene diversos temas. El tema de &plasma; define cómo se muestran los distintos componentes de &plasma; (por ejemplo, los plasmoides, los paneles y los elementos gráficos). </para>
+
+<para>
+  <screenshot>
+    <screeninfo
+>Captura de pantalla del gestor de temas de &plasma;</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="main.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase
+>Personalizar un tema de &plasma;</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</para>
+
+<para
+>En este módulo puede:</para>
+<itemizedlist>
+  <listitem
+><para
+>instalar y escoger temas de &plasma;</para
+></listitem>
+  <listitem
+><para
+>editar temas de &plasma;</para
+></listitem>
+  <listitem
+><para
+>eliminar temas de &plasma;</para
+></listitem>
+</itemizedlist>
+
+<para
+>Si quiere eliminar un tema, use el icono <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+> superpuesto en la parte inferior derecha del icono del tema. Para deshacer esta acción, pulse el icono <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-undo.png" format="PNG"/></imageobject
+></inlinemediaobject
+>. Si pulsa <guibutton
+>Aplicar</guibutton
+> o <guibutton
+>Aceptar</guibutton
+> se borrarán definitivamente los temas seleccionados para su eliminación, por lo que no podrá deshacer este tipo de borrado. </para>
+
+<para
+>Si el paquete «plasma-sdk» está instalado en su sistema, aparece un botón al situar el puntero del ratón sobre la vista previa de cualquier tema que le permite iniciar el <application
+>Explorador de temas de Plasma</application
+>. </para>
+<para
+>Para información más técnica visite <ulink url="https://techbase.kde.org/Development/Tutorials/Plasma5/ThemeDetails"
+>esta página</ulink
+>. </para>
+
+<variablelist>
+  <varlistentry>
+    <term
+><guilabel
+>Obtener nuevos estilos de Plasma...</guilabel
+></term>
+    <listitem>
+    <para
+>Debe estar conectado a Internet para poder usarlo. Al pulsar este botón se mostrará un diálogo en el que puede escoger un nuevo tema de Plasma. Si pulsa <guibutton
+>Instalar</guibutton
+> en el diálogo se instalará el tema de &plasma; escogido, que estará disponible en cuanto pulse el botón <guibutton
+>Cerrar</guibutton
+> en el instalador. </para>
+    <para>
+    <screenshot>
+    <screeninfo
+>Obtener nuevos estilos de Plasma...</screeninfo>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="get-new-theme.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase
+>Obtener nuevos estilos de Plasma...</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    </para>
+    </listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>Instalar desde archivo...</guilabel
+></term>
+    <listitem>
+      <para
+>Si ha descargado nuevos temas desde Internet, puede usar esto para explorar la ubicación de dichos temas recién descargados. Si pulsa este botón se le mostrará el diálogo de archivos para apuntar al «tarball» del tema de &plasma; que tiene en el disco.</para>
+
+      <para
+>Si pulsa <guibutton
+>Abrir</guibutton
+> en este diálogo se instalará el tema seleccionado y estará disponible en la lista de temas. </para>
+    </listitem>
+  </varlistentry>
+</variablelist>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

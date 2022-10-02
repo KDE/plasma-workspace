@@ -1,0 +1,105 @@
+# Bosnian translation for bosnianuniversetranslation
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# This file is distributed under the same license as the bosnianuniversetranslation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bosnianuniversetranslation\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-22 00:46+0000\n"
+"PO-Revision-Date: 2015-02-15 14:16+0000\n"
+"Last-Translator: Samir Ribić <Unknown>\n"
+"Language-Team: Bosnian <bs@li.org>\n"
+"Language: bs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-02-16 06:46+0000\n"
+"X-Generator: Launchpad (build 17341)\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: shellpackage.cpp:26 shellpackage.cpp:27
+#, kde-format
+msgid "Applets furniture"
+msgstr "Applets furniture"
+
+#: shellpackage.cpp:28
+#, kde-format
+msgid "Explorer UI for adding widgets"
+msgstr "Istraživač UI za dodavanje dodataka"
+
+#: shellpackage.cpp:29
+#, kde-format
+msgid "User interface for the views that will show containments"
+msgstr "Korisnički interfejs za poglede koji će pokazati sadržaj"
+
+#: shellpackage.cpp:37
+#, kde-format
+msgid "Default layout file"
+msgstr "Zadani izgled datoteke"
+
+#: shellpackage.cpp:38
+#, kde-format
+msgid "Default plugins for containments, containmentActions, etc."
+msgstr "Standardni dodaci za sadržaje, akcije nad sadržajima itd-"
+
+#: shellpackage.cpp:43
+#, kde-format
+msgid "Error message shown when an applet fails to load"
+msgstr "Poruka za grešku kada se applet ne može učitati"
+
+#: shellpackage.cpp:44
+#, kde-format
+msgid "QML component that shows an applet in a popup"
+msgstr "QML komponenta koja pokazuje applet u iskočnom prozoru"
+
+#: shellpackage.cpp:48
+#, kde-format
+msgid ""
+"Compact representation of an applet when collapsed in a popup, for instance "
+"as an icon. Applets can override this component."
+msgstr ""
+"Kompaktna reprezentacija apleta kada kolapsira u iskočni prozor, na primjer "
+"u ikonu. Apleti mogu prevazići ovu komponentu."
+
+#: shellpackage.cpp:53
+#, kde-format
+msgid "QML component for the configuration dialog for applets"
+msgstr "QML komponenta za konfiguracijski dijalog za applet"
+
+#: shellpackage.cpp:56
+#, kde-format
+msgid "QML component for the configuration dialog for containments"
+msgstr "QML komponenta za konfiguracijski dijalog za sadržaj"
+
+#: shellpackage.cpp:57
+#, kde-format
+msgid "Panel configuration UI"
+msgstr "Konfiguracija ploče UI"
+
+#: shellpackage.cpp:60
+#, kde-format
+msgid "QML component for choosing an alternate applet"
+msgstr "QML komponenta za izbor alternativnog apleta"
+
+#: shellpackage.cpp:63
+#, fuzzy, kde-format
+#| msgid "QML component for the configuration dialog for containments"
+msgid "QML component for the configuration dialog of containments"
+msgstr "QML komponenta za konfiguracijski dijalog za sadržaj"
+
+#: shellpackage.cpp:66
+#, kde-format
+msgid "Widgets explorer UI"
+msgstr "Istraživač dodataka UI"
+
+#: shellpackage.cpp:70
+#, kde-format
+msgid ""
+"A UI for writing, loading and running desktop scripts in the current live "
+"session"
+msgstr ""
+"Korisnički interfejs za pisanje, učitavanje i pokretanje desktop skripti u "
+"trenutnoj živoj sesiji"

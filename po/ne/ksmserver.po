@@ -1,0 +1,263 @@
+# translation of ksmserver.po to Nepali
+# Nabin Gautam <nabin@mpp.org.np>, 2006, 2007.
+# Kapil Timilsina <lipak21@gmail.com>, 2006.
+# Shiva Prasad Pokharel <pokharelshiva@hotmail.com>, 2006.
+# Mahesh Subedi <submanesh@gmail.com>, 2007.
+# shyam krishna bal <shyamkrishna_bal@yahoo.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: ksmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-22 00:47+0000\n"
+"PO-Revision-Date: 2007-08-20 11:53+0545\n"
+"Last-Translator: Nabin Gautam <nabin@mpp.org.np>\n"
+"Language-Team: Nepali <info@mpp.org.np>\n"
+"Language: ne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n !=1\n"
+"\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: logout.cpp:344
+#, kde-format
+msgid "Logout canceled by '%1'"
+msgstr "'%1' द्वारा रद्द गरिएको लगआउट"
+
+#: main.cpp:117
+#, kde-format
+msgid "$HOME not set!"
+msgstr ""
+
+#: main.cpp:121 main.cpp:127
+#, kde-format
+msgid "$HOME directory (%1) does not exist."
+msgstr ""
+
+#: main.cpp:123
+#, kde-format
+msgid "No write access to $HOME directory (%1)."
+msgstr ""
+
+#: main.cpp:129
+#, kde-format
+msgid "No read access to $HOME directory (%1)."
+msgstr ""
+
+#: main.cpp:133
+#, kde-format
+msgid "$HOME directory (%1) is out of disk space."
+msgstr ""
+
+#: main.cpp:136
+#, kde-format
+msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+msgstr ""
+
+#: main.cpp:149 main.cpp:184
+#, kde-format
+msgid "No write access to '%1'."
+msgstr ""
+
+#: main.cpp:151 main.cpp:186
+#, kde-format
+msgid "No read access to '%1'."
+msgstr ""
+
+#: main.cpp:159 main.cpp:172
+#, kde-format
+msgid "Temp directory (%1) is out of disk space."
+msgstr ""
+
+#: main.cpp:162 main.cpp:175
+#, kde-format
+msgid ""
+"Writing to the temp directory (%2) failed with\n"
+"    the error '%1'"
+msgstr ""
+
+#: main.cpp:190
+#, kde-format
+msgid ""
+"The following installation problem was detected\n"
+"while trying to start Plasma:"
+msgstr ""
+
+#: main.cpp:193
+#, kde-format
+msgid ""
+"\n"
+"\n"
+"Plasma is unable to start.\n"
+msgstr ""
+
+#: main.cpp:200
+#, kde-format
+msgid "Plasma Workspace installation problem!"
+msgstr ""
+
+#: main.cpp:236
+#, fuzzy, kde-format
+#| msgid ""
+#| "The reliable KDE session manager that talks the standard X11R6 \n"
+#| "session management protocol (XSMP)."
+msgid ""
+"The reliable Plasma session manager that talks the standard X11R6 \n"
+"session management protocol (XSMP)."
+msgstr ""
+"मानक X11R6 सत्र व्यवस्थापन प्रोटोकल (XSMP) लिने\n"
+"विश्वासिलो केडीई सत्र व्यवस्थापक"
+
+#: main.cpp:240
+#, kde-format
+msgid "Restores the saved user session if available"
+msgstr "उपलब्ध भएमा बचत गरिएको प्रयोगकर्ता सत्र पूर्वावस्थामा ल्याउदछ"
+
+#: main.cpp:243
+#, kde-format
+msgid "Also allow remote connections"
+msgstr "टाढाको जडानहरू पनि अनुमति दिनुहोस्"
+
+#: main.cpp:246
+#, kde-format
+msgid "Starts the session in locked mode"
+msgstr ""
+
+#: main.cpp:250
+#, kde-format
+msgid ""
+"Starts without lock screen support. Only needed if other component provides "
+"the lock screen."
+msgstr ""
+
+#: server.cpp:873
+#, fuzzy, kde-format
+#| msgid "The KDE Session Manager"
+msgid "Session Management"
+msgstr "केडीई सत्र प्रबन्धक"
+
+#: server.cpp:876
+#, fuzzy, kde-format
+#| msgid "Logout"
+msgid "Log Out"
+msgstr "लगआउट गर्नुहोस्"
+
+#: server.cpp:881
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr ""
+
+#: server.cpp:886
+#, kde-format
+msgid "Halt Without Confirmation"
+msgstr ""
+
+#: server.cpp:891
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr ""
+
+#, fuzzy
+#~| msgid ""
+#~| "Starts 'wm' in case no other window manager is \n"
+#~| "participating in the session. Default is 'kwin'"
+#~ msgid ""
+#~ "Starts <wm> in case no other window manager is \n"
+#~ "participating in the session. Default is 'kwin'"
+#~ msgstr ""
+#~ "सत्रमा अन्य सञ्झ्याल प्रबन्धकले भाग नलिएको अवस्थामा\n"
+#~ "'wm' सुरु गर्दछ । 'केडीई विन' पूर्वनिर्धारित हो ।"
+
+#, fuzzy
+#~| msgid "Logout"
+#~ msgid "Logout"
+#~ msgstr "लगआउट गर्नुहोस्"
+
+#, fuzzy
+#~| msgid "Turn Off Computer"
+#~ msgid "Sleeping in 1 second"
+#~ msgid_plural "Sleeping in %1 seconds"
+#~ msgstr[0] "कम्प्युटर बन्द गर्नुहोस्"
+#~ msgstr[1] "कम्प्युटर बन्द गर्नुहोस्"
+
+#, fuzzy
+#~| msgid "Turn Off Computer"
+#~ msgid "Logging out in 1 second."
+#~ msgid_plural "Logging out in %1 seconds."
+#~ msgstr[0] "कम्प्युटर बन्द गर्नुहोस्"
+#~ msgstr[1] "कम्प्युटर बन्द गर्नुहोस्"
+
+#, fuzzy
+#~| msgid "Turn Off Computer"
+#~ msgid "Turning off computer in 1 second."
+#~ msgid_plural "Turning off computer in %1 seconds."
+#~ msgstr[0] "कम्प्युटर बन्द गर्नुहोस्"
+#~ msgstr[1] "कम्प्युटर बन्द गर्नुहोस्"
+
+#, fuzzy
+#~| msgid "Turn Off Computer"
+#~ msgid "Restarting computer in 1 second."
+#~ msgid_plural "Restarting computer in %1 seconds."
+#~ msgstr[0] "कम्प्युटर बन्द गर्नुहोस्"
+#~ msgstr[1] "कम्प्युटर बन्द गर्नुहोस्"
+
+#, fuzzy
+#~| msgid "Turn Off Computer"
+#~ msgid "Turn Off Computer"
+#~ msgstr "कम्प्युटर बन्द गर्नुहोस्"
+
+#, fuzzy
+#~| msgid "Restart Computer"
+#~ msgid "Restart Computer"
+#~ msgstr "कम्प्युटर फेरि सुरु गर्नुहोस्"
+
+#, fuzzy
+#~| msgid "Cancel"
+#~ msgid "Cancel"
+#~ msgstr "रद्द गर्नुहोस्"
+
+#, fuzzy
+#~| msgid "Standby"
+#~ msgid "&Standby"
+#~ msgstr "स्टान्डबाइ"
+
+#, fuzzy
+#~| msgid "Suspend to RAM"
+#~ msgid "Suspend to &RAM"
+#~ msgstr "र्याममा निर्भर गर्नुहोस्"
+
+#, fuzzy
+#~| msgid "Suspend to Disk"
+#~ msgid "Suspend to &Disk"
+#~ msgstr "डिस्कमा निर्भर गर्नुहोस्"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Kapil Timilsina।, श्यामकृष्ण बल"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "lipak21@gmail.com, shyamkrishna_bal@yahoo.com"
+
+#~ msgid "(C) 2000, The KDE Developers"
+#~ msgstr "(C) 2000, केडीई विकासकर्ता"
+
+#~ msgid "Matthias Ettrich"
+#~ msgstr "माथियस इट्रिच"
+
+#~ msgid "Luboš Luňák"
+#~ msgstr "लुबोस लुनाक"
+
+#~ msgid "Maintainer"
+#~ msgstr "मर्मतकर्ता"
+
+#~ msgctxt "current option in boot loader"
+#~ msgid " (current)"
+#~ msgstr " (हालको)"
+
+#~ msgid "End Session for %1"
+#~ msgstr "%1 का लागि सत्र अन्त्य गर्नुहोस्"
+
+#~ msgid "End Session for %1 (%2)"
+#~ msgstr "%1 (%2) का लागि सत्र अन्त्य गर्नुहोस्"

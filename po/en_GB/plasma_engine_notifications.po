@@ -1,0 +1,32 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Andrew Coles <andrew_coles@yahoo.co.uk>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"PO-Revision-Date: 2009-05-06 23:56+0100\n"
+"Last-Translator: Andrew Coles <andrew_coles@yahoo.co.uk>\n"
+"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: notificationaction.cpp:24
+#, kde-format
+msgid "The notification dataEngine is not set."
+msgstr "The notification dataEngine is not set."
+
+#: notificationaction.cpp:34
+#, kde-format
+msgid "Invalid destination: %1"
+msgstr "Invalid destination: %1"
+
+#: notificationsengine.cpp:88
+#, kde-format
+msgid "Unknown Application"
+msgstr "Unknown Application"

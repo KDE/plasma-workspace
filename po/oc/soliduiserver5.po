@@ -1,0 +1,36 @@
+# translation of soliduiserver.po to Occitan (lengadocian)
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>, 2007, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: soliduiserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-17 00:47+0000\n"
+"PO-Revision-Date: 2008-08-05 22:26+0200\n"
+"Last-Translator: Yannig Marchegay (Kokoyaya) <yannig@marchegay.org>\n"
+"Language-Team: Occitan (lengadocian) <ubuntu-l10n-oci@lists.ubuntu.com>\n"
+"Language: oc\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: soliduiserver.cpp:62
+#, kde-format
+msgid "'%1' needs a password to be accessed. Please enter a password."
+msgstr ""
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Do nothing"
+#~ msgstr "Pas res far"
+
+#, fuzzy
+#~| msgid "Unknown"
+#~ msgctxt "A default name for an action without proper label"
+#~ msgid "Unknown"
+#~ msgstr "Desconegut"

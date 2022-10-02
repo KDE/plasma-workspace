@@ -1,0 +1,482 @@
+# translation of kcm_desktopthemedetails.po to Francais
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Mickael Sibelle <kimael@gmail.com>, 2008, 2009, 2010.
+# Mickaël Sibelle <kimael@gmail.com>, 2009.
+# Anne-Marie Mahfouf <annemarie.mahfouf@free.fr>, 2009.
+# xavier <xavier.besnard@neuf.fr>, 2012, 2013, 2020, 2021.
+# Sebastien Renard <renard@kde.org>, 2013, 2014, 2015.
+# Vincent Pinon <vpinon@kde.org>, 2016.
+# Simon Depiets <sdepiets@gmail.com>, 2018, 2019, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_desktopthemedetails\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"PO-Revision-Date: 2021-05-27 14:37+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
+"Language-Team: French <kde-francophone@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 21.04.1\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current Plasma Style"
+msgstr "Nom du style courant de Plasma"
+
+#: kcm.cpp:108
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Impossible de créer un fichier temporaire."
+
+#: kcm.cpp:119
+#, kde-format
+msgid "Unable to download the theme: %1"
+msgstr "Impossible de télécharger le thème : %1"
+
+#: kcm.cpp:144
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "Thème installé avec succès."
+
+#: kcm.cpp:147 kcm.cpp:153
+#, kde-format
+msgid "Theme installation failed."
+msgstr "L'installation du thème a échoué."
+
+#: kcm.cpp:245
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr "La suppression du thème a échoué : %1"
+
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "This module lets you choose the Plasma style."
+msgstr "Ce module vous permet de choisir votre style Plasma."
+
+#: package/contents/ui/main.qml:69
+#, kde-format
+msgid "All Themes"
+msgstr "Tous les thèmes"
+
+#: package/contents/ui/main.qml:70
+#, kde-format
+msgid "Light Themes"
+msgstr "Thèmes clairs"
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgid "Dark Themes"
+msgstr "Thèmes sombres"
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "Color scheme compatible"
+msgstr "Compatibles avec le schéma de couleurs"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgid "Follows color scheme"
+msgstr "Respecte le schéma de couleurs"
+
+#: package/contents/ui/main.qml:118
+#, kde-format
+msgid "Edit Theme…"
+msgstr "Modifier un thème..."
+
+#: package/contents/ui/main.qml:125
+#, kde-format
+msgid "Remove Theme"
+msgstr "Supprimer le thème"
+
+#: package/contents/ui/main.qml:132
+#, kde-format
+msgid "Restore Theme"
+msgstr "Restaurer le thème"
+
+#: package/contents/ui/main.qml:174
+#, kde-format
+msgid "Install from File…"
+msgstr "Installer depuis un fichier..."
+
+#: package/contents/ui/main.qml:179
+#, kde-format
+msgid "Get New Plasma Styles…"
+msgstr "Obtenir de nouveaux styles de Plasma..."
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Open Theme"
+msgstr "Ouvrir un thème"
+
+#: package/contents/ui/main.qml:195
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr "Fichiers de thème (*.zip *.tar.gz *.tar.bz2)"
+
+#: plasma-apply-desktoptheme.cpp:31
+#, kde-format
+msgid ""
+"This tool allows you to set the theme of the current Plasma session, without "
+"accidentally setting it to one that is either not available, or which is "
+"already set."
+msgstr ""
+"Cet outil vous permet de définir le thème de votre session actuellement "
+"active, sans le faire par inadvertance vers un thème, soit indisponible, "
+"soit déjà utilisé."
+
+#: plasma-apply-desktoptheme.cpp:35
+#, kde-format
+msgid ""
+"The name of the theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+"Le nom du thème que vous souhaitez définir pour la session courante de "
+"Plasma (La fourniture d'un emplacement n'utilisera que la dernière partie de "
+"l'emplacement)."
+
+#: plasma-apply-desktoptheme.cpp:36
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+"Afficher tous les thèmes disponibles sur le système (y compris le thème "
+"courant)."
+
+#: plasma-apply-desktoptheme.cpp:49
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+"Le thème demandé « %1 » est déjà assignée comme thème pour la session "
+"courante de Plasma."
+
+#: plasma-apply-desktoptheme.cpp:65
+#, kde-format
+msgid "The current Plasma session's theme has been set to %1"
+msgstr "Le thème de la session courante de Plasma a été défini à %1"
+
+#: plasma-apply-desktoptheme.cpp:67
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+"Impossible de trouver le thème « %1 ». Le thème devrait avoir l'une des "
+"options suivantes : %2"
+
+#: plasma-apply-desktoptheme.cpp:75
+#, kde-format
+msgid "You have the following Plasma themes on your system:"
+msgstr "Vous possédez les thèmes suivants sur votre système :"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Mickaël Sibelle, Sébastien Renard, Vincent Pinon, Simon Depiets"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "kimael@gmail.com, renard@kde.org, vpinon@kde.org, sdepiets@gmail.com"
+
+#~ msgid "Plasma Style"
+#~ msgstr "Style Plasma"
+
+#~ msgid "David Rosca"
+#~ msgstr "David Rosca"
+
+#~ msgid "Search..."
+#~ msgstr "Chercher…"
+
+#, fuzzy
+#~| msgid "Plasma Style"
+#~ msgid "Plasma Styles"
+#~ msgstr "Style Plasma"
+
+#~ msgid "Download New Plasma Styles"
+#~ msgstr "Télécharger de nouveaux styles Plasma"
+
+#~ msgid "Configure Desktop Theme"
+#~ msgstr "Configurer le thème de bureau"
+
+#~ msgid "Theme removal failed."
+#~ msgstr "La suppression du thème a échoué."
+
+#~ msgid ""
+#~ "<h1>Desktop Theme</h1>This module allows you to modify the visual "
+#~ "appearance of the desktop."
+#~ msgstr ""
+#~ "<h1>Thème de bureau</h1> Ce module vous permet de modifier l'apparence "
+#~ "visuelle du bureau."
+
+#~ msgid "KDE Desktop Theme Module"
+#~ msgstr "Module de thèmes de bureau pour KDE"
+
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
+#~ msgstr "(c) 2002 Karol Szwed, Daniel Molkentin"
+
+#~ msgid "Theme installation failed. (%1)"
+#~ msgstr "L'installation du thème a échoué. (%1)"
+
+#~ msgid "Details"
+#~ msgstr "Détails"
+
+#~ msgctxt "plasma name"
+#~ msgid "Panel Background"
+#~ msgstr "Arrière-plan du panneau"
+
+#~ msgctxt "plasma name"
+#~ msgid "Kickoff"
+#~ msgstr "Kickoff"
+
+#~ msgctxt "plasma name"
+#~ msgid "Task Items"
+#~ msgstr "Éléments de tâche"
+
+#~ msgctxt "plasma name"
+#~ msgid "Widget Background"
+#~ msgstr "Arrière-plan de composant graphique"
+
+#~ msgctxt "plasma name"
+#~ msgid "Translucent Background"
+#~ msgstr "Arrière-plan transparent"
+
+#~ msgctxt "plasma name"
+#~ msgid "Dialog Background"
+#~ msgstr "Arrière-plan des boîtes de dialogue"
+
+#~ msgctxt "plasma name"
+#~ msgid "Analog Clock"
+#~ msgstr "Horloge analogique"
+
+#~ msgctxt "plasma name"
+#~ msgid "Notes"
+#~ msgstr "Notes"
+
+#~ msgctxt "plasma name"
+#~ msgid "Tooltip"
+#~ msgstr "Infobulle"
+
+#~ msgctxt "plasma name"
+#~ msgid "Pager"
+#~ msgstr "Bippeur"
+
+#~ msgctxt "plasma name"
+#~ msgid "Run Command Dialog"
+#~ msgstr "Lancement une commande"
+
+#~ msgctxt "plasma name"
+#~ msgid "Shutdown Dialog"
+#~ msgstr "Extinction"
+
+#~ msgctxt "plasma name"
+#~ msgid "Icons"
+#~ msgstr "Icônes"
+
+#~ msgid "(Customized)"
+#~ msgstr "(Personnalisé)"
+
+#~ msgid "User customized theme"
+#~ msgstr "Thème personnalisé par l'utilisateur"
+
+#~ msgid ""
+#~ "Theme items have been changed.  Do you still wish remove the \"%1\" theme?"
+#~ msgstr ""
+#~ "Les éléments du thème ont été modifiés. Voulez-vous toujours supprimer le "
+#~ "thème « %1 » ?"
+
+#~ msgid "Removal of the default desktop theme is not allowed."
+#~ msgstr "La suppression du thème par défaut n'est pas permise."
+
+#~ msgid "Are you sure you wish remove the \"%1\" theme?"
+#~ msgstr "Voulez-vous vraiment supprimer le thème « %1 » ?"
+
+#~ msgid ""
+#~ "Please apply theme item changes (with a new theme name) before attempting "
+#~ "to export theme."
+#~ msgstr ""
+#~ "Veuillez appliquer les modifications des éléments du thème (avec un "
+#~ "nouveau nom de thème) avant de tenter son exportation."
+
+#~ msgid "Export Desktop Theme"
+#~ msgstr "Exporter le thème de bureau"
+
+#~ msgid "Export theme to file"
+#~ msgstr "Exporter le thème dans un fichier"
+
+#~ msgid "Archive (*.zip)"
+#~ msgstr "Archive (*.zip)"
+
+#~ msgid "Theme Item"
+#~ msgstr "Élément du thème"
+
+#~ msgid "Source"
+#~ msgstr "Source"
+
+#~ msgctxt ""
+#~ "%1 is the name of the theme, %2 is the type of the element (background, "
+#~ "icon, note, etc)"
+#~ msgid "%1 %2"
+#~ msgstr "%1 %2"
+
+#~ msgid "File..."
+#~ msgstr "Fichier..."
+
+#~ msgid "Select File to Use for %1"
+#~ msgstr "Sélectionner le fichier à utiliser pour %1"
+
+#~ msgid " Author: %1"
+#~ msgstr "Auteur : %1"
+
+#~ msgid "Version: %1"
+#~ msgstr "Version : %1"
+
+#~ msgid "Desktop Theme Details"
+#~ msgstr "Détails du thème de bureau"
+
+#~ msgid "Choose an item and customize it by assigning it a theme"
+#~ msgstr "Choisissez un élément et personnalisez-le en lui associant un thème"
+
+#~ msgid ""
+#~ "You can set any theme to any item. The available themes for the item are "
+#~ "in the dropdown box on the right."
+#~ msgstr ""
+#~ "Vous pouvez associer n'importe quel thème à n'importe quel élément. Les "
+#~ "thèmes disponibles pour l'élément sont disponibles dans le menu déroulant "
+#~ "sur la droite."
+
+#~ msgid "Enable more options"
+#~ msgstr "Activer plus d'options"
+
+#~ msgid ""
+#~ "This will expand the dialog and give you options to export your custom "
+#~ "theme as well as to remove a theme."
+#~ msgstr ""
+#~ "Cela étendra la boîte de dialogue et vous proposera des options pour "
+#~ "exporter votre thème personnalisé ou encore supprimer un thème."
+
+#~ msgid "More"
+#~ msgstr "Plus"
+
+#~ msgid "Remove the selected theme"
+#~ msgstr "Supprimer le thème sélectionné"
+
+#~ msgid ""
+#~ "Clicking this button will remove the selected theme. You will be asked "
+#~ "for confirmation."
+#~ msgstr ""
+#~ "En cliquant sur ce bouton, vous supprimerez le thème sélectionné. Une "
+#~ "confirmation vous sera demandée."
+
+#~ msgid "Save your theme in a zip archive"
+#~ msgstr "Enregistrer votre thème dans un fichier ZIP"
+
+#~ msgid ""
+#~ "You can save your theme in a zip archive in order to share it with the "
+#~ "community."
+#~ msgstr ""
+#~ "Vous pouvez enregistrer votre thème dans une archive ZIP afin de le "
+#~ "partager avec la communauté."
+
+#~ msgid "Export Theme to File..."
+#~ msgstr "Exporter le thème dans un fichier..."
+
+#~ msgid "New theme name:"
+#~ msgstr "Nom du nouveau thème :"
+
+#~ msgid "Custom theme name"
+#~ msgstr "Nom du thème personnalisé"
+
+#~ msgid "Give a name to your custom theme."
+#~ msgstr "Donner un nom à votre thème personnalisé."
+
+#~ msgid "Author:"
+#~ msgstr "Auteur :"
+
+#~ msgid "Custom theme author "
+#~ msgstr "Auteur du thème personnalisé"
+
+#~ msgid "Enter the author name of your custom theme."
+#~ msgstr "Indiquez le nom de l'auteur de votre thème personnalisé."
+
+#~ msgid "Version:"
+#~ msgstr "Version :"
+
+#~ msgid "Custom theme version number"
+#~ msgstr "Numéro de version du thème personnalisé"
+
+#~ msgid "Enter the version number of your custom theme."
+#~ msgstr "Indiquez le numéro de version de votre thème personnalisé."
+
+#~ msgid "Description:"
+#~ msgstr "Description :"
+
+#~ msgid "Custom theme description"
+#~ msgstr "Description du thème personnalisé"
+
+#~ msgid "Enter a description which will explain your custom theme."
+#~ msgstr "Saisissez une description présentant votre thème personnalisé."
+
+#~ msgid "Select theme from above to customize"
+#~ msgstr "Sélectionnez un thème ci-dessus pour le personnaliser"
+
+#~ msgid "Theme Author"
+#~ msgstr "Auteur du thème"
+
+#~ msgid "Theme Name"
+#~ msgstr "Nom du thème"
+
+#~ msgid "Theme Version"
+#~ msgstr "Version du thème"
+
+#~ msgid "The theme description goes here..."
+#~ msgstr "La description du thème se fait ici..."
+
+#~ msgid ""
+#~ "Choose a start theme in this list then customize some items below. All "
+#~ "less important items not listed below will use this start theme."
+#~ msgstr ""
+#~ "Choisissez un thème de départ dans cette liste, puis personnalisez "
+#~ "certains éléments ci-dessous. Tous les éléments les moins importants qui "
+#~ "ne sont pas listés ci-dessous utiliseront ce thème de départ."
+
+#~ msgid "Karol Szwed"
+#~ msgstr "Karol Szwed"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "KCMDesktopTheme"
+#~ msgstr "KCMDesktopTheme"
+
+#, fuzzy
+#~| msgid ""
+#~| "To change your desktop theme to \"%1\", open\n"
+#~| " the desktop Appearance Settings and select \"%2\" from the droplist."
+#~ msgid ""
+#~ "To change your desktop theme to \"%1\", go back to the 'General' tab of "
+#~ "System Settings; choose 'Appearance', and then 'Style'; and finally "
+#~ "select \"%2\" from the drop-down list at the top of the window."
+#~ msgstr ""
+#~ "Pour changer votre thème de bureau pour « %1 »,\n"
+#~ "ouvrez les Paramètres d'Affichage du Bureau et sélectionnez « %2 » dans "
+#~ "la liste déroulante."
+
+#~ msgid "Removal of the active desktop theme is not allowed."
+#~ msgstr "La suppression du thème par défaut n'est pas permise."
+
+#~ msgid "Unfortunately, this feature is not yet implemented."
+#~ msgstr "Malheureusement, cette fonctionnalité n'est pas encore implantée."

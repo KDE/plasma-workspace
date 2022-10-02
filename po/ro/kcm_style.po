@@ -1,0 +1,664 @@
+# Traducerea kcmstyle.po în Română
+# Claudiu Costin <claudiuc@kde.org>, 2003, 2004, 2005.
+# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2012, 2020, 2021.
+# Cristian Oneț <onet.cristian@gmail.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmstyle\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"PO-Revision-Date: 2021-07-25 14:07+0100\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 19.12.3\n"
+
+#: gtkpage.cpp:59
+#, kde-format
+msgid "%1 is not a valid GTK Theme archive."
+msgstr "%1 nu este o arhivă validă cu tematici GTK."
+
+#: kcmstyle.cpp:161 kcmstyle.cpp:168
+#, kde-format
+msgid "There was an error loading the configuration dialog for this style."
+msgstr ""
+"A apărut o eroare la încărcarea dialogului de configurare pentru acest stil."
+
+#: kcmstyle.cpp:274
+#, kde-format
+msgid "Failed to apply selected style '%1'."
+msgstr "Aplicarea stilului ales „%1” a eșuat."
+
+#: package/contents/ui/EffectSettingsPopup.qml:32
+#, kde-format
+msgid "Show icons:"
+msgstr "Arată pictograme:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:33
+#, kde-format
+msgid "On buttons"
+msgstr "Pe butoane"
+
+#: package/contents/ui/EffectSettingsPopup.qml:44
+#, kde-format
+msgid "In menus"
+msgstr "În meniuri"
+
+#: package/contents/ui/EffectSettingsPopup.qml:56
+#, kde-format
+msgid "Main toolbar label:"
+msgstr "Etichetă pe bara de unelte principală:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "None"
+msgstr "Fără"
+
+#: package/contents/ui/EffectSettingsPopup.qml:59
+#, kde-format
+msgid "Text only"
+msgstr "Numai text"
+
+#: package/contents/ui/EffectSettingsPopup.qml:60
+#, kde-format
+msgid "Beside icons"
+msgstr "Lângă pictograme"
+
+#: package/contents/ui/EffectSettingsPopup.qml:61
+#, kde-format
+msgid "Below icon"
+msgstr "Sub pictogramă"
+
+#: package/contents/ui/EffectSettingsPopup.qml:76
+#, kde-format
+msgid "Secondary toolbar label:"
+msgstr "Etichetă pe bara de unelte secundară:"
+
+#: package/contents/ui/GtkStylePage.qml:18
+#, kde-format
+msgid "GNOME/GTK Application Style"
+msgstr "Stil aplicații GNOME/GTK"
+
+#: package/contents/ui/GtkStylePage.qml:44
+#, kde-format
+msgid "GTK theme:"
+msgstr "Tematică GTK:"
+
+#: package/contents/ui/GtkStylePage.qml:69
+#, kde-format
+msgid "Preview…"
+msgstr "Previzualizează…"
+
+#: package/contents/ui/GtkStylePage.qml:88
+#, kde-format
+msgid "Install from File…"
+msgstr "Instalează din fișier…"
+
+#: package/contents/ui/GtkStylePage.qml:93
+#, kde-format
+msgid "Get New GNOME/GTK Application Styles…"
+msgstr "Obține stiluri noi pentru aplicații GNOME/GTK…"
+
+#: package/contents/ui/GtkStylePage.qml:109
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr "Alege arhiva cu tematică GTK"
+
+#: package/contents/ui/GtkStylePage.qml:111
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr "Arhivă cu tematică GTK (*.tar.xz *.tar.gz *.tar.bz2)"
+
+#: package/contents/ui/main.qml:17
+#, kde-format
+msgid ""
+"This module allows you to modify the visual appearance of applications' user "
+"interface elements."
+msgstr ""
+"Acest modul permite modificarea aspectului vizual al elementelor de "
+"interfață cu utilizatorul ale aplicațiilor."
+
+#: package/contents/ui/main.qml:96
+#, kde-format
+msgid "Configure Style…"
+msgstr "Configurează stilul…"
+
+#: package/contents/ui/main.qml:116
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr "Configurează barele de unelte și pictogramele"
+
+#: package/contents/ui/main.qml:132
+#, kde-format
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "Configurează stilul aplicațiilor GNOME/GTK…"
+
+#: styleconfdialog.cpp:21
+#, kde-format
+msgid "Configure %1"
+msgstr "Configurează %1"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "Fila 1"
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, kde-format
+msgid "Push Button"
+msgstr "Buton"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, kde-format
+msgid "Combo box"
+msgstr "Casetă de selecție"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "Casetă de bifare"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "Buton radio"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:133
+#, kde-format
+msgid "Tab 2"
+msgstr "Fila 2"
+
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, kde-format
+msgid "Application style"
+msgstr "Stil aplicații"
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, kde-format
+msgid "Show icons on buttons"
+msgstr "Arată pictograme pe butoane"
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, kde-format
+msgid "Show icons in menus"
+msgstr "Arată pictograme în meniuri"
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, kde-format
+msgid "Main toolbar label"
+msgstr "Etichetă pe bara de unelte principală"
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, kde-format
+msgid "Secondary toolbar label"
+msgstr "Etichetă pe bara de unelte secundară"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Claudiu Costin,Sergiu Bivol"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ",sergiu@cip.md"
+
+#~ msgid "Application Style"
+#~ msgstr "Stil aplicații"
+
+#, fuzzy
+#~| msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik"
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
+#~ msgstr "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik"
+
+#~ msgid "Karol Szwed"
+#~ msgstr "Karol Szwed"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Kai Uwe Broulik"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "Download New GNOME/GTK2 Application Styles..."
+#~ msgstr "&Aplicații"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "GNOME/GTK2 Application Styles"
+#~ msgstr "&Aplicații"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "Download New GNOME/GTK3 Application Styles..."
+#~ msgstr "&Aplicații"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "GNOME/GTK3 Application Styles"
+#~ msgstr "&Aplicații"
+
+#~ msgid "Unable to Load Dialog"
+#~ msgstr "Nu pot încărca dialogul"
+
+#~ msgid "No description available."
+#~ msgstr "Nici o descriere disponibilă."
+
+#~ msgid ""
+#~ "This area shows a preview of the currently selected style without having "
+#~ "to apply it to the whole desktop."
+#~ msgstr ""
+#~ "Această zonă afișează o previzualizare a stilului curent selectat fără a "
+#~ "fi nevoie să-l aplicați întregului mediu grafic."
+
+#~ msgid ""
+#~ "Here you can choose from a list of predefined widget styles (e.g. the way "
+#~ "buttons are drawn) which may or may not be combined with a theme "
+#~ "(additional information like a marble texture or a gradient)."
+#~ msgstr ""
+#~ "Aici puteți alege dintr-o listă de stiluri de componente predefinite (de "
+#~ "exemplu felul în care sunt desenate butoanele) care pot sau nu pot fi "
+#~ "combinate cu o tematică (informații adiționale precum o textură de "
+#~ "marmură sau un gradient)."
+
+#, fuzzy
+#~| msgid ""
+#~| "If you enable this option, KDE Applications will show small icons "
+#~| "alongside some important buttons."
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "some important buttons."
+#~ msgstr ""
+#~ "Dacă activați această opțiune aplicațiile KDE vor afișa mici pictograme "
+#~ "pe unele din cele mai importante butoane."
+
+#, fuzzy
+#~| msgid ""
+#~| "If you enable this option, KDE Applications will show small icons "
+#~| "alongside most menu items."
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "most menu items."
+#~ msgstr ""
+#~ "Dacă activați această opțiune aplicațiile KDE vor afișa mici pictograme "
+#~ "lângăcele mai multe intrări din meniu."
+
+#, fuzzy
+#~| msgid ""
+#~| "<p><b>No Text:</b> Shows only icons on toolbar buttons. Best option for "
+#~| "low resolutions.</p><p><b>Text Only: </b>Shows only text on toolbar "
+#~| "buttons.</p><p><b>Text Beside Icons: </b> Shows icons and text on "
+#~| "toolbar buttons. Text is aligned beside the icon.</p><b>Text Below "
+#~| "Icons: </b> Shows icons and text on toolbar buttons. Text is aligned "
+#~| "below the icon."
+#~ msgid ""
+#~ "<p><b>No text:</b> Shows only icons on toolbar buttons. Best option for "
+#~ "low resolutions.</p><p><b>Text only: </b>Shows only text on toolbar "
+#~ "buttons.</p><p><b>Text beside icons: </b> Shows icons and text on toolbar "
+#~ "buttons. Text is aligned beside the icon.</p><b>Text below icons: </b> "
+#~ "Shows icons and text on toolbar buttons. Text is aligned below the icon."
+#~ msgstr ""
+#~ "<p><b>Fără text:</b> Arată numai pictograme pe butoanele barei de unelte. "
+#~ "Cea mai bună opțiune pentru rezoluții de ecran mici.</p><p><b>Numai text:"
+#~ "</b> Arată numai text în butoanele barelor de unelte.</p><p><b>Text lângă "
+#~ "pictograme:</b> Arată pictograme și text în butoanele barelor de unelte. "
+#~ "Textul este aliniat lângă pictogramă.</p><b>Text sub pictograme:</b> "
+#~ "Arată pictograme și text în butoanele barelor de unelte. Textul este "
+#~ "aliniat sub pictogramă."
+
+#~ msgid "Toolbars"
+#~ msgstr "Bare de unelte"
+
+#~ msgid "No Text"
+#~ msgstr "Fără text"
+
+#, fuzzy
+#~| msgid "Widget style:"
+#~ msgid "Widget Style"
+#~ msgstr "Stil controale:"
+
+#~ msgid "Widget style:"
+#~ msgstr "Stil controale:"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Fine Tuning"
+#~ msgstr "Reglaj &fin"
+
+#~ msgid "Description: %1"
+#~ msgstr "Descriere: %1"
+
+#~ msgid ""
+#~ "This page allows you to choose details about the widget style options"
+#~ msgstr ""
+#~ "Această pagină vă permite să alegeți detalii despre opțiunile de stil ale "
+#~ "controalelor grafice"
+
+#~ msgid "Group Box"
+#~ msgstr "Casetă de grupare"
+
+#~ msgid "KDE Style Module"
+#~ msgstr "Modul de stil KDE"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "Menubar"
+#~ msgstr "Bară de meniu"
+
+#~ msgid "Menubar style:"
+#~ msgstr "Stilul barei de meniu:"
+
+#~ msgid "In application"
+#~ msgstr "În aplicație"
+
+#~ msgid "Title bar button"
+#~ msgstr "Buton pe bara de titlu"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "Global Menu widget"
+#~ msgstr "&Aplicații"
+
+#, fuzzy
+#~| msgid "Settings changes will take effect only on application restart"
+#~ msgid "Your changes will take effect only on application restart."
+#~ msgstr "Modificarea opțiunilor va avea efect numai la repornirea aplicației"
+
+#~ msgid ""
+#~ "<p>Changes to the visibility of menu icons will only affect newly started "
+#~ "applications.</p>"
+#~ msgstr ""
+#~ "<p>Schimbările care afectează vizibilitatea pictogramelor din meniu vor "
+#~ "avea efect numai pentru aplicațiile pornite din acest moment.</p>"
+
+#~ msgctxt "@title:window"
+#~ msgid "Menu Icons Changed"
+#~ msgstr "Pictogramele din meniu au fost schimbate"
+
+#~ msgid "Top screen menubar"
+#~ msgstr "Bare de meniu de deasupra ecranului"
+
+#~ msgid "Only export"
+#~ msgstr "Doar export"
+
+#~ msgid "Graphical effects:"
+#~ msgstr "Efecte grafice:"
+
+#~ msgid "Low display resolution and Low CPU"
+#~ msgstr "Rezoluție de afișare joasă și utilizare scăzută a procesorului"
+
+#~ msgid "High display resolution and Low CPU"
+#~ msgstr "Rezoluție de afișare înaltă și utilizare scăzută a procesorului"
+
+#~ msgid "Low display resolution and High CPU"
+#~ msgstr "Rezoluție de afișare joasă și utilizare intensă a procesorului"
+
+#~ msgid "High display resolution and High CPU"
+#~ msgstr "Rezoluție de afișare înaltă și utilizare intensă a procesorului"
+
+#~ msgid "Low display resolution and Very High CPU"
+#~ msgstr ""
+#~ "Rezoluție de afișare joasă și utilizare foarte intensă a procesorului"
+
+#~ msgid "High display resolution and Very High CPU"
+#~ msgstr ""
+#~ "Rezoluție de afișare înaltă și utilizare foarte intensă a procesorului"
+
+#~ msgid ""
+#~ "If you enable this option, KDE Applications will run internal animations."
+#~ msgstr ""
+#~ "Dacă activați această opțiune, aplicațiile KDE vor rula animații interne."
+
+#~ msgid "kcmstyle"
+#~ msgstr "kcmstyle"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Workspace"
+#~ msgstr "&Spațiu de lucru"
+
+#~ msgid "Get New Themes..."
+#~ msgstr "Preluare tematici noi..."
+
+#~ msgid "Icons Only"
+#~ msgstr "Numai pictograme"
+
+#~ msgctxt "@label:listbox"
+#~ msgid "Text pos&ition of toolbar elements:"
+#~ msgstr "Poz&iția textului elementelor barei de unelte:"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Style"
+#~ msgstr "&Stil"
+
+#~ msgid ""
+#~ "This page allows you to enable various widget style effects. For best "
+#~ "performance, it is advisable to disable all effects."
+#~ msgstr ""
+#~ "Această pagină vă permite să activați efectele de stil ale componentelor "
+#~ "grafice. Dacă doriți performanță maximă, atunci este preferabil să "
+#~ "dezactivați toate efectele."
+
+#, fuzzy
+#~| msgid "High&light buttons under mouse"
+#~ msgctxt "@option:check"
+#~ msgid "High&light buttons under mouse"
+#~ msgstr "&Evidențiază butoanele sub maus"
+
+#, fuzzy
+#~| msgid "E&nable tooltips"
+#~ msgctxt "@option:check"
+#~ msgid "E&nable tooltips"
+#~ msgstr "Activează i&ndiciile"
+
+#~ msgid ""
+#~ "If this option is selected, toolbar buttons will change their color when "
+#~ "the mouse cursor is moved over them."
+#~ msgstr ""
+#~ "Dacă această opțiune este selectată, butoanele barelor de unelte își vor "
+#~ "schimba culoarea când mouse-ul este deasupra lor."
+
+#~ msgid ""
+#~ "If you check this option, the KDE application will offer tooltips when "
+#~ "the cursor remains over items in the toolbar."
+#~ msgstr ""
+#~ "Dacă selectați această opțiune, aplicațiile KDE vor afișa baloane de "
+#~ "ajutor atunci când mouse-ul rămâne pentru ceva timp deasupra butoanelor "
+#~ "din barele de unelte."
+
+#~ msgid "&Effects"
+#~ msgstr "&Efecte"
+
+#~ msgid "Show tear-off handles in &popup menus"
+#~ msgstr "Afișează indicatorul de ru&pere în meniurile-balon"
+
+#~ msgid "&Enable GUI effects"
+#~ msgstr "&Activează efectele grafice"
+
+#~ msgid "Disable"
+#~ msgstr "Dezactivat"
+
+#~ msgid "Animate"
+#~ msgstr "Animează"
+
+#~ msgid "Combobo&x effect:"
+#~ msgstr "Efect căsuță c&ombinată:"
+
+#~ msgid "Fade"
+#~ msgstr "Tranziție"
+
+#~ msgid "&Tool tip effect:"
+#~ msgstr "Efect i&ndiciu:"
+
+#~ msgid "Make Translucent"
+#~ msgstr "Semitransparent"
+
+#~ msgid "&Menu effect:"
+#~ msgstr "Efect &meniu:"
+
+#~ msgid "Me&nu tear-off handles:"
+#~ msgstr "Indicator „rupere” &meniuri:"
+
+#~ msgid "Menu &drop shadow"
+#~ msgstr "&Umbră pentru meniu"
+
+#~ msgid "Software Tint"
+#~ msgstr "Nuanță (software)"
+
+#~ msgid "Software Blend"
+#~ msgstr "Amestecare (software)"
+
+#~ msgid "XRender Blend"
+#~ msgstr "Amestecare (XRender)"
+
+#~ msgid "0%"
+#~ msgstr "0%"
+
+#~ msgid "50%"
+#~ msgstr "50%"
+
+#~ msgid "100%"
+#~ msgstr "100%"
+
+#~ msgid "Menu trans&lucency type:"
+#~ msgstr "Tip trans&lucență meniu:"
+
+#~ msgid "Menu &opacity:"
+#~ msgstr "&Opacitate meniu:"
+
+#~ msgid "Transparent tool&bars when moving"
+#~ msgstr "Barele de &unelte sunt transparente la mutare"
+
+#~ msgid ""
+#~ "<qt>Selected style: <b>%1</b><br /><br />One or more effects that you "
+#~ "have chosen could not be applied because the selected style does not "
+#~ "support them; they have therefore been disabled.<br /><br /></qt>"
+#~ msgstr ""
+#~ "<qt>Stil selectat: <b>%1</b><br /><br />Unul sau mai multe efecte dintre "
+#~ "cele alese nu pot fi aplicate deoarece stilul selectat nu le suportă și "
+#~ "de aceea au fost dezactivate.<br /><br /></qt>"
+
+#~ msgid "Menu translucency is not available.<br />"
+#~ msgstr "Nu este disponibilă translucența pentru meniuri.<br />"
+
+#~ msgid "Menu drop-shadows are not available."
+#~ msgstr "Umbrele pentru meniuri nu sunt disponibile."
+
+#~ msgid ""
+#~ "If you check this box, you can select several effects for different "
+#~ "widgets like combo boxes, menus or tooltips."
+#~ msgstr ""
+#~ "Dacă selectați această opțiune, atunci puteți selecta efecte pentru "
+#~ "diferite componente grafice precum căsuțele combinate, meniurile sau "
+#~ "baloanele de ajutor."
+
+#~ msgid ""
+#~ "<p><b>Disable: </b>do not use any combo box effects.</p>\n"
+#~ "<b>Animate: </b>Do some animation."
+#~ msgstr ""
+#~ "<p><b>Dezactivat: </b>Nu utilizează nici un efect grafic pentru căsuțele "
+#~ "combinate.</p>\n"
+#~ "<b>Animează: </b> Aplică efectul de animație."
+
+#~ msgid ""
+#~ "<p><b>Disable: </b>do not use any tooltip effects.</p>\n"
+#~ "<p><b>Animate: </b>Do some animation.</p>\n"
+#~ "<b>Fade: </b>Fade in tooltips using alpha-blending."
+#~ msgstr ""
+#~ "<p><b>Dezactivat: </b>Nu utilizează nici un efect grafic pentru baloanele "
+#~ "de ajutor.</p>\n"
+#~ "<p><b>Animează: </b> Aplică efectul de animație.</p>\n"
+#~ "<b>Tranziție:</b> Afișează baloanele de ajutor cu efect de tranziție a "
+#~ "transparenței."
+
+#~ msgid ""
+#~ "<p><b>Disable: </b>do not use any menu effects.</p>\n"
+#~ "<p><b>Animate: </b>Do some animation.</p>\n"
+#~ "<p><b>Fade: </b>Fade in menus using alpha-blending.</p>\n"
+#~ "<b>Make Translucent: </b>Alpha-blend menus for a see-through effect. (KDE "
+#~ "styles only)"
+#~ msgstr ""
+#~ "<p><b>Dezactivat: </b>Nu utilizează nici un efect grafic pentru meniuri.</"
+#~ "p>\n"
+#~ "<p><b>Animează: </b> Aplică efectul de animație la afișare.</p>\n"
+#~ "<p><b>Tranziție:</b> Afișează meniurile cu efect de tranziție a "
+#~ "transparenței.</p> <b>Semitransparent:</b> Face ca meniurile să fie "
+#~ "semitransparente astfel încât puteți vedea prin ele. (numai la stilurile "
+#~ "KDE)"
+
+#~ msgid ""
+#~ "When enabled, all popup menus will have a drop-shadow, otherwise drop-"
+#~ "shadows will not be displayed. At present, only KDE styles can have this "
+#~ "effect enabled."
+#~ msgstr ""
+#~ "Dacă este activată, atunci toate meniurile popup vor avea asociată o "
+#~ "umbră. Deocamdată numai stilurile KDE pot avea activat acest efect."
+
+#~ msgid ""
+#~ "<p><b>Software Tint: </b>Alpha-blend using a flat color.</p>\n"
+#~ "<p><b>Software Blend: </b>Alpha-blend using an image.</p>\n"
+#~ "<p><b>XRender Blend: </b>Use the XFree RENDER extension for image "
+#~ "blending (if available). This method may be slower than the Software "
+#~ "routines on non-accelerated displays, but may however improve performance "
+#~ "on remote displays.</p>\n"
+#~ msgstr ""
+#~ "<p><b>Nuanță (software):</b> transparență utilizând o singură culoare.</"
+#~ "p>\n"
+#~ "<p><b>Amestecare (software):</b> transparență utilizând o imagine.</p>\n"
+#~ "<p><b>Amestecare (XRender): </b>Utilizează extensia RENDER XFree pentru "
+#~ "amestecarea imaginilor (dacă e disponibilă). Pentru plăcile video "
+#~ "neaccelerate această metodă poate fi mai lentă decât rutinele software, "
+#~ "dar poate îmbunătăți performanțele pentru afișarea X la distanță.</p>\n"
+
+#~ msgid "By adjusting this slider you can control the menu effect opacity."
+#~ msgstr ""
+#~ "Prin ajustarea acestui potențiometru puteți controla efectul de opacitate "
+#~ "a meniului."
+
+#~ msgid ""
+#~ "<b>Note:</b> that all widgets in this combobox do not apply to Qt-only "
+#~ "applications."
+#~ msgstr ""
+#~ "<b>Observație:</b> toate componentele din această căsuță combinată nu se "
+#~ "aplică aplicațiilor native Qt."
+
+#~ msgid ""
+#~ "If you check this box, the toolbars will be transparent when moving them "
+#~ "around."
+#~ msgstr ""
+#~ "Dacă selectați această opțiune, barele de unelte vor fi transparente când "
+#~ "sunt mutate."
+
+#~ msgid ""
+#~ "If you enable this option some pop-up menus will show so called tear-off "
+#~ "handles. If you click them, you get the menu inside a widget. This can be "
+#~ "very helpful when performing the same action multiple times."
+#~ msgstr ""
+#~ "Dacă selectați această opțiune, atunci unele meniuri popup vor avea "
+#~ "afișat așa numitul indicator de \"rupere\". Dacă dați clic pe el, atunci "
+#~ "acesta se va transforma într-o fereastră și va rămâne activ. În acest mod "
+#~ "aveți acces ușor la acțiunile pe care le repetați."
+
+#~ msgid "%"
+#~ msgstr "%"

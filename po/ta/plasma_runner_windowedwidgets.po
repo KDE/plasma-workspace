@@ -1,0 +1,36 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Kishore G <kishore96@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2021-08-13 21:22+0530\n"
+"Last-Translator: Kishore G <kishore96@gmail.com>\n"
+"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.07.90\n"
+
+#: windowedwidgetsrunner.cpp:30
+#, kde-format
+msgid "Finds Plasma widgets whose name or description match :q:"
+msgstr ""
+":q: என்பதற்கு ஏதாவது பிளாஸ்மாய்டுகளின் பெயரோ விவரணமோ பொருந்தினால், அவற்றை "
+"கண்டுபிடிக்கும்"
+
+#: windowedwidgetsrunner.cpp:31 windowedwidgetsrunner.cpp:52
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "mobile applications"
+msgstr ""
+
+#: windowedwidgetsrunner.cpp:32
+#, kde-format
+msgid "list all Plasma widgets that can run as standalone applications"
+msgstr "தனித்த செயலிகளாக இயங்கக்கூடிய பிளாஸ்மாய்டுகளை பட்டியலிடும்"

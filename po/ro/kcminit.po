@@ -1,0 +1,52 @@
+# Traducerea kcminit.po în Română
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Sergiu Bivol <sergiu@cip.md>, 2008, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminit\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-26 00:47+0000\n"
+"PO-Revision-Date: 2020-09-24 23:08+0100\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 19.12.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Sergiu Bivol"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "sergiu@cip.md"
+
+#: main.cpp:170
+#, kde-format
+msgid "KCMInit"
+msgstr "KCMInit"
+
+#: main.cpp:172
+#, kde-format
+msgid "KCMInit - runs startup initialization for Control Modules."
+msgstr "KCMInit - inițializează modulele de control la pornire."
+
+#: main.cpp:178
+#, kde-format
+msgid "List modules that are run at startup"
+msgstr "Enumeră modulele rulate la pornire"
+
+#: main.cpp:179
+#, kde-format
+msgid "Configuration module to run"
+msgstr "Modulul de configurație de rulat"
+
+#~ msgid "Module %1 not found"
+#~ msgstr "Modulul %1 nu a fost găsit"

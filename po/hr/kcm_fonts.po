@@ -1,0 +1,555 @@
+# Translation of kcmfonts to Croatian
+#
+# DoDo <DoDoEntertainment@gmail.com>, 2009.
+# Andrej Dundovic <adundovi@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmfonts 0\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-03 00:45+0000\n"
+"PO-Revision-Date: 2010-01-26 11:57+0100\n"
+"Last-Translator: Andrej Dundovic <adundovi@gmail.com>\n"
+"Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 1.0\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Force fonts DPI:"
+msgid "Force font DPI Wayland"
+msgstr "Prisilna vrijednost DPI za pisma:"
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Force fonts DPI:"
+msgid "Force font DPI on X11"
+msgstr "Prisilna vrijednost DPI za pisma:"
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "General"
+msgid "General font"
+msgstr "Opće"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Fixed width"
+msgid "Fixed width font"
+msgstr "Stalne širine"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Small"
+msgid "Small font"
+msgstr "Sitan"
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Toolbar"
+msgid "Tool bar font"
+msgstr "Alatna traka"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, kde-format
+msgid "Menu font"
+msgstr ""
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Window title"
+msgid "Window title font"
+msgstr "Naslov prozora"
+
+#: kxftconfig.cpp:458
+#, fuzzy, kde-format
+#| msgctxt "Use anti-aliasing"
+#| msgid "System Settings"
+msgctxt "use system subpixel setting"
+msgid "Vendor default"
+msgstr "Postavke sustava"
+
+#: kxftconfig.cpp:460
+#, kde-format
+msgctxt "no subpixel rendering"
+msgid "None"
+msgstr "Ništa"
+
+#: kxftconfig.cpp:462
+#, kde-format
+msgid "RGB"
+msgstr "RGB"
+
+#: kxftconfig.cpp:464
+#, kde-format
+msgid "BGR"
+msgstr "BGR"
+
+#: kxftconfig.cpp:466
+#, kde-format
+msgid "Vertical RGB"
+msgstr "Uspravni RGB"
+
+#: kxftconfig.cpp:468
+#, kde-format
+msgid "Vertical BGR"
+msgstr "Uspravni BGR"
+
+#: kxftconfig.cpp:496
+#, fuzzy, kde-format
+#| msgctxt "Use anti-aliasing"
+#| msgid "System Settings"
+msgctxt "use system hinting settings"
+msgid "Vendor default"
+msgstr "Postavke sustava"
+
+#: kxftconfig.cpp:498
+#, fuzzy, kde-format
+#| msgid "Medium"
+msgctxt "medium hinting"
+msgid "Medium"
+msgstr "Srednje"
+
+#: kxftconfig.cpp:500
+#, kde-format
+msgctxt "no hinting"
+msgid "None"
+msgstr "Ništa"
+
+#: kxftconfig.cpp:502
+#, fuzzy, kde-format
+#| msgid "Slight"
+msgctxt "slight hinting"
+msgid "Slight"
+msgstr "Lagano"
+
+#: kxftconfig.cpp:504
+#, fuzzy, kde-format
+#| msgid "Full"
+msgctxt "full hinting"
+msgid "Full"
+msgstr "Potpuno"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module lets you configure the system fonts."
+msgstr ""
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid "Change Display Scaling…"
+msgstr ""
+
+#: package/contents/ui/main.qml:37
+#, fuzzy, kde-format
+#| msgid ""
+#| "<p>Some changes such as anti-aliasing will only affect newly started "
+#| "applications.</p>"
+msgid ""
+"Some changes such as anti-aliasing or DPI will only affect newly started "
+"applications."
+msgstr ""
+"<p>Neke izmjene, poput postavki anti-aliasinga, imat će učinak samo na novo "
+"pokrenutim aplikacijama.</p>"
+
+#: package/contents/ui/main.qml:51
+#, kde-format
+msgid ""
+"Very large fonts may produce odd-looking results. Consider adjusting the "
+"global screen scale instead of using a very large font size."
+msgstr ""
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid ""
+"Decimal font sizes can cause text layout problems in some applications. "
+"Consider using only integer font sizes."
+msgstr ""
+
+#: package/contents/ui/main.qml:94
+#, kde-format
+msgid ""
+"The recommended way to scale the user interface is using the global screen "
+"scaling feature."
+msgstr ""
+
+#: package/contents/ui/main.qml:106
+#, fuzzy, kde-format
+#| msgid "Ad&just All Fonts..."
+msgid "&Adjust All Fonts…"
+msgstr "&Prilagodi sva pisma…"
+
+#: package/contents/ui/main.qml:119
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "General"
+msgid "General:"
+msgstr "Opće"
+
+#: package/contents/ui/main.qml:120
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "General"
+msgid "Select general font"
+msgstr "Opće"
+
+#: package/contents/ui/main.qml:131
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Fixed width"
+msgid "Fixed width:"
+msgstr "Stalne širine"
+
+#: package/contents/ui/main.qml:132
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Fixed width"
+msgid "Select fixed width font"
+msgstr "Stalne širine"
+
+#: package/contents/ui/main.qml:143
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Small"
+msgid "Small:"
+msgstr "Sitan"
+
+#: package/contents/ui/main.qml:144
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Small"
+msgid "Select small font"
+msgstr "Sitan"
+
+#: package/contents/ui/main.qml:155
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Toolbar"
+msgid "Toolbar:"
+msgstr "Alatna traka"
+
+#: package/contents/ui/main.qml:156
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Toolbar"
+msgid "Select toolbar font"
+msgstr "Alatna traka"
+
+#: package/contents/ui/main.qml:167
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Menu"
+msgid "Menu:"
+msgstr "Izbornik"
+
+#: package/contents/ui/main.qml:168
+#, kde-format
+msgid "Select menu font"
+msgstr ""
+
+#: package/contents/ui/main.qml:178
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Window title"
+msgid "Window title:"
+msgstr "Naslov prozora"
+
+#: package/contents/ui/main.qml:179
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Window title"
+msgid "Select window title font"
+msgstr "Naslov prozora"
+
+#: package/contents/ui/main.qml:194
+#, fuzzy, kde-format
+#| msgid "Use a&nti-aliasing:"
+msgid "Anti-Aliasing:"
+msgstr "Upotrijebi a&nti-aliasing:"
+
+#: package/contents/ui/main.qml:199
+#, fuzzy, kde-format
+#| msgctxt "Use anti-aliasing"
+#| msgid "Enabled"
+msgid "Enable"
+msgstr "Omogućeno"
+
+#: package/contents/ui/main.qml:203
+#, kde-kuit-format
+msgctxt "@info:tooltip Anti-Aliasing"
+msgid ""
+"Pixels on displays are generally aligned in a grid. Therefore shapes of "
+"fonts that do not align with this grid will look blocky and wrong unless "
+"<emphasis>anti-aliasing</emphasis> techniques are used to reduce this "
+"effect. You generally want to keep this option enabled unless it causes "
+"problems."
+msgstr ""
+
+#: package/contents/ui/main.qml:217
+#, kde-format
+msgid "Exclude range from anti-aliasing"
+msgstr ""
+
+#: package/contents/ui/main.qml:236 package/contents/ui/main.qml:259
+#, kde-format
+msgid "%1 pt"
+msgstr ""
+
+#: package/contents/ui/main.qml:251
+#, fuzzy, kde-format
+#| msgid " to "
+msgid "to"
+msgstr "do"
+
+#: package/contents/ui/main.qml:282
+#, fuzzy, kde-format
+#| msgid "&Use sub-pixel rendering:"
+msgctxt "Used as a noun, and precedes a combobox full of options"
+msgid "Sub-pixel rendering:"
+msgstr "&Upotrijebi pod-pikselno renderiranje:"
+
+#: package/contents/ui/main.qml:324
+#, kde-kuit-format
+msgctxt "@info:tooltip Sub-pixel rendering"
+msgid ""
+"<para>On TFT or LCD screens every single pixel is actually composed of three "
+"or four smaller monochrome lights. These <emphasis>sub-pixels</emphasis> can "
+"be changed independently to further improve the quality of displayed fonts.</"
+"para> <para>The rendering quality is only improved if the selection matches "
+"the manner in which the sub-pixels of your display are aligned. Most "
+"displays have a linear ordering of <emphasis>RGB</emphasis> sub-pixels, some "
+"have <emphasis>BGR</emphasis> and some exotic orderings are not supported by "
+"this feature.</para>This does not work with CRT monitors."
+msgstr ""
+
+#: package/contents/ui/main.qml:329
+#, fuzzy, kde-format
+#| msgid "Hinting style: "
+msgctxt "Used as a noun, and precedes a combobox full of options"
+msgid "Hinting:"
+msgstr "Stil naslućivanja:"
+
+#: package/contents/ui/main.qml:370
+#, kde-kuit-format
+msgctxt "@info:tooltip Hinting"
+msgid ""
+"Hinting is a technique in which hints embedded in a font are used to enhance "
+"the rendering quality especially at small sizes. Stronger hinting generally "
+"leads to sharper edges but the small letters will less closely resemble "
+"their shape at big sizes."
+msgstr ""
+
+#: package/contents/ui/main.qml:380
+#, fuzzy, kde-format
+#| msgid "Force fonts DPI:"
+msgid "Force font DPI:"
+msgstr "Prisilna vrijednost DPI za pisma:"
+
+#: package/contents/ui/main.qml:422
+#, kde-kuit-format
+msgctxt "@info:tooltip Force fonts DPI"
+msgid ""
+"<para>Enter your screen's DPI here to make on-screen fonts match their "
+"physical sizes when printed. Changing this option from its default value "
+"will conflict with many apps; some icons and images may not scale as "
+"expected.</para><para>To increase text size, change the size of the fonts "
+"above. To scale everything, use the scaling slider on the <interface>Display "
+"& Monitor</interface> page.</para>"
+msgstr ""
+
+#: package/contents/ui/main.qml:428
+#, kde-format
+msgid "Select Font"
+msgstr ""
+
+#, fuzzy
+#~| msgid ""
+#~| "<p>This option forces a specific DPI value for fonts. It may be useful "
+#~| "when the real DPI of the hardware is not detected properly and it is "
+#~| "also often misused when poor quality fonts are used that do not look "
+#~| "well with DPI values other than 96 or 120 DPI.</p><p>The use of this "
+#~| "option is generally discouraged. For selecting proper DPI value a better "
+#~| "option is explicitly configuring it for the whole X server if possible "
+#~| "(e.g. DisplaySize in xorg.conf or adding <i>-dpi value</i> to "
+#~| "ServerLocalArgs= in $KDEDIR/share/config/kdm/kdmrc). When fonts do not "
+#~| "render properly with real DPI value better fonts should be used or "
+#~| "configuration of font hinting should be checked.</p>"
+#~ msgctxt "@info:tooltip Force fonts DPI"
+#~ msgid ""
+#~ "<para>This option forces a specific DPI value for fonts. It may be useful "
+#~ "when the real DPI of the hardware is not detected properly and it is also "
+#~ "often misused when poor quality fonts are used that do not look well with "
+#~ "DPI values other than 96 or 120 DPI.</para><para>The use of this option "
+#~ "is generally discouraged.</para><para>If you are using the <emphasis>X "
+#~ "Window System</emphasis>, for selecting the proper DPI value a better "
+#~ "option is explicitly configuring it for the whole X server if possible (e."
+#~ "g. DisplaySize in xorg.conf). When fonts do not render properly with the "
+#~ "real DPI value better fonts should be used or configuration of font "
+#~ "hinting should be checked.</para>"
+#~ msgstr ""
+#~ "<p>Ova opcija prisiljava određenu vrijednost DPI za pisma. Korisno je u "
+#~ "slučaju ako stvarni DPI hardvera nije ispravno prepoznat, a često se "
+#~ "pogrešno koristi u slučaju ako su upotrebljena pisma loše kvalitete koja "
+#~ "imaju kvalitetan izgled samo s vrijednostima 96 ili 120 DPI.</p><p>Ne "
+#~ "preporučuje se upotreba ove opcije. Za odabir pravilne vrijednosti DPI, "
+#~ "bolja opcija je njezino eksplicitno podešavanje za cijelokupni X "
+#~ "poslužitelj, ako je to moguće (npr. putem opcije DisplaySize u datoteci "
+#~ "xorg.conf ili  dodavanjem vrijednosti <i>-dpi value</i> u opciju "
+#~ "ServerLocalArgs= u datoteci  $KDEDIR/share/config/kdm/kdmrc). Ako se "
+#~ "pisma ne iscrtavaju pravilno uz stvarne vrijesdnosti DPI, potrebno je "
+#~ "upotrijebiti bolja pisma ili provjeriti konfiguraciju naslućivanja pisama."
+#~ "</p>"
+
+#~ msgid "Font Settings Changed"
+#~ msgstr "Postavke pisma su izmijenjene"
+
+#~ msgid ""
+#~ "<p>Some changes such as DPI will only affect newly started applications.</"
+#~ "p>"
+#~ msgstr ""
+#~ "<p>Neke izmjene, poput postavki DPI-a, imat će učinak samo na novo "
+#~ "pokrenutim aplikacijama.</p>"
+
+#, fuzzy
+#~| msgctxt "Use anti-aliasing"
+#~| msgid "System Settings"
+#~ msgid "Vendor default"
+#~ msgstr "Postavke sustava"
+
+#, fuzzy
+#~| msgctxt "Use anti-aliasing"
+#~| msgid "Disabled"
+#~ msgid "Disabled"
+#~ msgstr "Onemogućeno"
+
+#, fuzzy
+#~| msgid "Configure..."
+#~ msgid "Configure the system fonts"
+#~ msgstr "Podesi…"
+
+#~ msgid "Configure Anti-Alias Settings"
+#~ msgstr "Podešavanje postavki anti-aliasa"
+
+#~ msgid "E&xclude range:"
+#~ msgstr "&Izuzmi raspon:"
+
+#, fuzzy
+#~| msgid " pt"
+#~ msgctxt "abbreviation for unit of points"
+#~ msgid " pt"
+#~ msgstr " točka"
+
+#~ msgid ""
+#~ "<p>If you have a TFT or LCD screen you can further improve the quality of "
+#~ "displayed fonts by selecting this option.<br />Sub-pixel rendering is "
+#~ "also known as ClearType(tm).<br /> In order for sub-pixel rendering to "
+#~ "work correctly you need to know how the sub-pixels of your display are "
+#~ "aligned.</p> <p>On TFT or LCD displays a single pixel is actually "
+#~ "composed of three sub-pixels, red, green and blue. Most displays have a "
+#~ "linear ordering of RGB sub-pixel, some have BGR.<br /> This feature does "
+#~ "not work with CRT monitors.</p>"
+#~ msgstr ""
+#~ "<p>Ako imate TFT ili LCD zaslon tada možete dodatno podignuti kvalitetu "
+#~ "prikazanih fontona tako da odaberete ovu opciju.<br /> Podpikselno "
+#~ "renderiranje je također poznato pod nazivom ClearType(tm).<br /> Da bi "
+#~ "podpikselno renderiranje radilo pravilno, morate znati kako su podpikseli "
+#~ "Vašeg zaslona poravnati.</p> <p>Na TFT i LCD zaslonima svaki je piksel "
+#~ "sastavljen od 3 podpiksela: crvenog, zelenog i plavog (RGB). Većina "
+#~ "zaslona ima linearno poredane piksele u smjeru RGB, dok neki imaju BGR."
+#~ "<br /> Ova mogućnost nije dostupna na CRT zaslonima.</p>"
+
+#~ msgid ""
+#~ "Hinting is a process used to enhance the quality of fonts at small sizes."
+#~ msgstr ""
+#~ "Naslućivanje je postupak koji se upotrebljava za poboljšavanje kvalitete "
+#~ "pisama male veličine."
+
+#~ msgid "Used for normal text (e.g. button labels, list items)."
+#~ msgstr "Za normalan tekst (npr. natpisi gumba, stavke popisa)."
+
+#~ msgid "A non-proportional font (i.e. typewriter font)."
+#~ msgstr "Neproprcionalno pismo (npr. s pisaćeg stroja)."
+
+#~ msgid "Smallest font that is still readable well."
+#~ msgstr "Najsitnije pismo koje je još uvijek čitljivo."
+
+#~ msgid "Used to display text beside toolbar icons."
+#~ msgstr "Upotrebljava se za prikaz teksta pokraj ikona na alatnim trakama."
+
+#~ msgid "Used by menu bars and popup menus."
+#~ msgstr "Upotrebljava se za trake izbornika i skočne izbornike."
+
+#~ msgid "Used by the window titlebar."
+#~ msgstr "Upotrebljava se za naslov prozora."
+
+#~ msgctxt "Font role"
+#~ msgid "%1: "
+#~ msgstr "%1: "
+
+#~ msgid "Click to change all fonts"
+#~ msgstr "Kliknite za izmjenu svih pisama"
+
+#~ msgctxt "Use anti-aliasing"
+#~ msgid "System Settings"
+#~ msgstr "Postavke sustava"
+
+#, fuzzy
+#~| msgid ""
+#~| "If this option is selected, KDE will smooth the edges of curves in fonts."
+#~ msgid "Select this option to smooth the edges of curves in fonts."
+#~ msgstr "Odabirom ove opcije KDE će omekšati rubove pisama."
+
+#~ msgctxt "font usage"
+#~ msgid "Taskbar"
+#~ msgstr "Traka sa zadacima"
+
+#~ msgctxt "font usage"
+#~ msgid "Desktop"
+#~ msgstr "Radna površina"
+
+#~ msgid "Used by the taskbar."
+#~ msgstr "Upotrebljava se na traci sa zadacima"
+
+#~ msgid "Used for desktop icons."
+#~ msgstr "Upotrebljava za ikone radne površine."
+
+#~ msgctxt "Force fonts DPI"
+#~ msgid "Disabled"
+#~ msgstr "Onemogućeno"
+
+#~ msgid "96 DPI"
+#~ msgstr "96 DPI"
+
+#~ msgid "120 DPI"
+#~ msgstr "120 DPI"
+
+#~ msgid ""
+#~ "If you have a TFT or LCD screen you can further improve the quality of "
+#~ "displayed fonts by selecting this option.<br>Sub-pixel hinting is also "
+#~ "known as ClearType(tm).<br><br><b>This will not work with CRT monitors.</"
+#~ "b>"
+#~ msgstr ""
+#~ "Ako imate TFT ili LCD zaslon, kvalitetu prikazanih fontova možete dodatno "
+#~ "unaprijediti odabirom ove opcije.<br>Pod-pikselno naslućivanje poznato je "
+#~ "i kao ClearType(tm).<br><br><b>Ova opcija ne funkcionira na CRT "
+#~ "monitorima.</b>"

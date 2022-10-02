@@ -1,0 +1,1306 @@
+# translation of klipper.po into Russian
+# KDE3 - klipper.pot Russian translation.
+# Translation of klipper.po into Russian
+# KDE3 - kdebase/klipper.po Russian translation.
+# Copyright (C) 2003, KDE Team.
+#
+# Zhitomirsky Sergey <szh@chat.ru>, 2000.
+# Andrey S. Cherepanov <sibskull@mail.ru>, 2001-2003.
+# Nickolai Shaforostoff <shafff@ukr.net>, 2004.
+# Gregory Mokhin <mok@kde.ru>, 2005.
+# Nick Shaforostoff <shafff@ukr.net>, 2006, 2009.
+# Andrey Cherepanov <skull@kde.ru>, 2009, 2011.
+# Nick Shaforostoff <shaforostoff@kde.ru>, 2009.
+# Alexander Potashev <aspotashev@gmail.com>, 2010, 2014, 2017.
+# Yuri Efremov <yur.arh@gmail.com>, 2011, 2012, 2013.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2020, 2021.
+# Olesya Gerasimenko <translation-team@basealt.ru>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: klipper\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-17 00:48+0000\n"
+"PO-Revision-Date: 2022-08-19 18:16+0300\n"
+"Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
+"Language-Team: Basealt Translation Team\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 22.04.3\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: configdialog.cpp:80
+#, kde-format
+msgid "Selection and Clipboard:"
+msgstr "Выделение и буфер обмена:"
+
+#: configdialog.cpp:87
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"When text or an area of the screen is highlighted with the mouse or "
+"keyboard, this is the <emphasis>selection</emphasis>. It can be pasted using "
+"the middle mouse button.<nl/><nl/>If the selection is explicitly copied "
+"using a <interface>Copy</interface> or <interface>Cut</interface> action, it "
+"is saved to the <emphasis>clipboard</emphasis>. It can be pasted using a "
+"<interface>Paste</interface> action. <nl/><nl/>When turned on this option "
+"keeps the selection and the clipboard the same, so that any selection is "
+"immediately available to paste by any means. If it is turned off, the "
+"selection may still be saved in the clipboard history (subject to the "
+"options below), but it can only be pasted using the middle mouse button."
+msgstr ""
+"Подсветка текста или области на экране с помощью мыши или клавиатуры "
+"называется <emphasis>выделением</emphasis>. Выделенный фрагмент можно "
+"вставить с помощью щелчка средней кнопкой мыши.<nl/><nl/>Если выделенный "
+"фрагмент явным образом скопирован с помощью действий <interface>Копировать</"
+"interface> или <interface>Вырезать</interface>, его данные хранятся в "
+"<emphasis>буфере обмена</emphasis>. Содержимое буфера обмена можно вставить "
+"с помощью действия <interface>Вставить</interface>. <nl/><nl/>Если этот "
+"параметр включён, система будет поддерживать синхронизацию между выделенным "
+"фрагментом и буфером обмена. Выделенный фрагмент можно будет немедленно "
+"вставить любым способом. Если этот параметр отключён, выделенный фрагмент "
+"всё равно может сохраняться в журнале буфера обмена (это определяется "
+"следующими далее пунктами), но вставить его возможно только с помощью щелчка "
+"средней кнопкой мыши."
+
+#: configdialog.cpp:106
+#, kde-format
+msgid "Clipboard history:"
+msgstr "Журнал буфера обмена:"
+
+#: configdialog.cpp:112
+#, kde-format
+msgctxt "Number of entries"
+msgid " entry"
+msgid_plural " entries"
+msgstr[0] " запись"
+msgstr[1] " записи"
+msgstr[2] " записей"
+msgstr[3] " запись"
+
+#: configdialog.cpp:131 configdialog.cpp:169
+#, kde-format
+msgid "Always save in history"
+msgstr "Всегда сохранять в журнале"
+
+#: configdialog.cpp:135
+#, kde-format
+msgid "Text selection:"
+msgstr "Выделение текста:"
+
+#: configdialog.cpp:137 configdialog.cpp:175
+#, kde-format
+msgid "Only when explicitly copied"
+msgstr "Только при явном копировании"
+
+#: configdialog.cpp:142
+#, kde-format
+msgid "Whether text selections are saved in the clipboard history."
+msgstr ""
+"Определяет, следует ли сохранять выделенные фрагменты текста в журнал "
+"буфераобмена."
+
+#: configdialog.cpp:173
+#, kde-format
+msgid "Non-text selection:"
+msgstr "Нетекстовое выделение:"
+
+#: configdialog.cpp:180
+#, kde-format
+msgid "Never save in history"
+msgstr "Никогда не сохранять в журнале"
+
+#: configdialog.cpp:185
+#, kde-format
+msgid ""
+"Whether non-text selections (such as images) are saved in the clipboard "
+"history."
+msgstr ""
+"Определяет, следует ли сохранять выделенные нетекстовые фрагменты (например, "
+"изображения) в журнал буфераобмена."
+
+#: configdialog.cpp:250
+#, kde-format
+msgid "Show action popup menu:"
+msgstr "Показ всплывающего меню действий:"
+
+#: configdialog.cpp:260
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"When text that matches an action pattern is selected or is chosen from the "
+"clipboard history, automatically show the popup menu with applicable "
+"actions. If the automatic menu is turned off here, or it is not shown for an "
+"excluded window, then it can be shown by using the <shortcut>%1</shortcut> "
+"key shortcut."
+msgstr ""
+"Когда текст, соответствующий шаблону, будет выделен или выбран в журнале "
+"буфера обмена, автоматически отобразится всплывающее меню с соответствующими "
+"действиями. Если показ меню автоматических действий отключён в этом разделе "
+"настройки или оно не отображается для исключённого окна, открыть это меню "
+"можно будет с помощью комбинации клавиш <shortcut>%1</shortcut>."
+
+#: configdialog.cpp:269
+#, kde-format
+msgid "Exclude Windows..."
+msgstr "Исключить окна…"
+
+#: configdialog.cpp:283
+#, kde-format
+msgctxt "Unit of time"
+msgid " second"
+msgid_plural " seconds"
+msgstr[0] " секунда"
+msgstr[1] " секунды"
+msgstr[2] " секунд"
+msgstr[3] " секунда"
+
+#: configdialog.cpp:284
+#, kde-format
+msgctxt "No timeout"
+msgid "None"
+msgstr "Нет"
+
+#: configdialog.cpp:293
+#, kde-format
+msgid "Options:"
+msgstr "Параметры:"
+
+#: configdialog.cpp:307
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The actions shown in the popup menu can be configured on the "
+"<interface>Actions Configuration</interface> page."
+msgstr ""
+"Действия, отображаемые во всплывающем меню, возможно указать на странице "
+"<interface>Настройка действий</interface>."
+
+#: configdialog.cpp:335
+#, kde-format
+msgid "Exclude Windows"
+msgstr "Исключить окна"
+
+#: configdialog.cpp:365
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"When a <interface>match pattern</interface> matches the clipboard contents, "
+"its <interface>commands</interface> appear in the Klipper popup menu and can "
+"be executed."
+msgstr ""
+"Когда содержимое буфера обмена соответствует <interface>шаблону</interface>, "
+"в Klipper появляется всплывающее меню <interface>команд</interface>, которые "
+"можно выполнить над ним."
+
+#: configdialog.cpp:374
+#, kde-format
+msgctxt "@title:column"
+msgid "Match pattern and commands"
+msgstr "Шаблон соответствия и команды"
+
+#: configdialog.cpp:374
+#, kde-format
+msgctxt "@title:column"
+msgid "Description"
+msgstr "Описание"
+
+#: configdialog.cpp:380
+#, kde-format
+msgid "Add Action..."
+msgstr "Добавить действие..."
+
+#: configdialog.cpp:384
+#, kde-format
+msgid "Edit Action..."
+msgstr "Изменить действие..."
+
+#: configdialog.cpp:389
+#, kde-format
+msgid "Delete Action"
+msgstr "Удалить действие"
+
+#: configdialog.cpp:396
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"These actions appear in the popup menu which can be configured on the "
+"<interface>Action Menu</interface> page."
+msgstr ""
+"Эти действия отображаются во всплывающем меню, которое возможно настроить на "
+"странице <interface>Меню действий</interface>."
+
+#: configdialog.cpp:580
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Delete the selected action <resource>%1</resource><nl/>and all of its "
+"commands?"
+msgstr ""
+"Удалить выбранное действие <resource>%1</resource><nl/>и все его команды?"
+
+#: configdialog.cpp:581
+#, kde-format
+msgid "Confirm Delete Action"
+msgstr "Подтверждение удаления действия"
+
+#: configdialog.cpp:610
+#, kde-format
+msgctxt "General Config"
+msgid "General"
+msgstr "Главное"
+
+#: configdialog.cpp:610
+#, kde-format
+msgid "General Configuration"
+msgstr "Основные параметры"
+
+#: configdialog.cpp:611
+#, kde-format
+msgctxt "Popup Menu Config"
+msgid "Action Menu"
+msgstr "Меню действий"
+
+#: configdialog.cpp:611
+#, kde-format
+msgid "Action Menu"
+msgstr "Меню действий"
+
+#: configdialog.cpp:612
+#, kde-format
+msgctxt "Actions Config"
+msgid "Actions Configuration"
+msgstr "Настройка действий"
+
+#: configdialog.cpp:612
+#, kde-format
+msgid "Actions Configuration"
+msgstr "Настройка действий"
+
+#: configdialog.cpp:615
+#, kde-format
+msgctxt "Shortcuts Config"
+msgid "Shortcuts"
+msgstr "Комбинации клавиш"
+
+#: configdialog.cpp:615
+#, kde-format
+msgid "Shortcuts Configuration"
+msgstr "Настройка комбинаций клавиш"
+
+#: configdialog.cpp:693
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The action popup will not be shown automatically for these windows, even if "
+"it is enabled. This is because, for example, a web browser may highlight a "
+"URL in the address bar while typing, so the menu would show for every "
+"keystroke.<nl/><nl/>If the action menu appears unexpectedly when using a "
+"particular application, then add it to this list. <link>How to find the name "
+"to enter</link>."
+msgstr ""
+"Всплывающее меню действий не будет автоматически показано для этих окон, "
+"даже если соответствующий параметр включён. Например, веб-браузер может "
+"выделять адрес в адресной строке при вводе, следовательно, меню появлялось "
+"бы после каждого нажатия клавиши.<nl/><nl/>Если появление меню действий "
+"нежелательно для определённой программы, добавьте её в список. <link>Как "
+"определить название, которое следует ввести</link>."
+
+#: configdialog.cpp:706
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"The name that needs to be entered here is the WM_CLASS name of the window to "
+"be excluded. To find the WM_CLASS name for a window, in another terminal "
+"window enter the command:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</"
+"icode><nl/><nl/>and click on the window that you want to exclude. The first "
+"name that it displays after the equal sign is the one that you need to enter."
+msgstr ""
+"Здесь следует указать название WM_CLASS окна для исключения. Чтобы узнать "
+"название WM_CLASS окна, введите в другом окне терминала следующую команду:"
+"<nl/><nl/>&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</icode><nl/><nl/>и "
+"щёлкните по окну, которое следует исключить. Искомым названием является "
+"первое после знака равенства."
+
+#: editactiondialog.cpp:34 editcommanddialog.cpp:90
+#, kde-format
+msgid "Ignore"
+msgstr "Игнорировать"
+
+#: editactiondialog.cpp:36
+#, kde-format
+msgid "Replace Clipboard"
+msgstr "Скопировать в буфер обмена"
+
+#: editactiondialog.cpp:38
+#, kde-format
+msgid "Add to Clipboard"
+msgstr "Дописать в буфер обмена"
+
+#: editactiondialog.cpp:122
+#, kde-format
+msgid "Command"
+msgstr "Команда"
+
+#: editactiondialog.cpp:124
+#, kde-format
+msgid "Output"
+msgstr "Вывод"
+
+#: editactiondialog.cpp:126
+#, kde-format
+msgid "Description"
+msgstr "Описание"
+
+#: editactiondialog.cpp:179
+#, kde-format
+msgid "Action Properties"
+msgstr "Свойства действия"
+
+#: editactiondialog.cpp:191
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"An action takes effect when its <interface>match pattern</interface> matches "
+"the clipboard contents. When this happens, the action's <interface>commands</"
+"interface> appear in the Klipper popup menu; if one of them is chosen, the "
+"command is executed."
+msgstr ""
+"Действие выполняется, если содержимое буфера обмена соответствует "
+"<interface>шаблону</interface>. Когда это происходит, <interface>команды</"
+"interface> действия появляются во всплывающем меню Klipper; если выбрать "
+"одну из них, она будет выполнена."
+
+#: editactiondialog.cpp:203
+#, kde-format
+msgid "Enter a pattern to match against the clipboard"
+msgstr "Введите шаблон для установления соответствия содержимого буфера обмена"
+
+#: editactiondialog.cpp:205
+#, kde-format
+msgid "Match pattern:"
+msgstr "Шаблон соответствия:"
+
+#: editactiondialog.cpp:208
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The match pattern is a regular expression. For more information see the "
+"<link url=\"https://en.wikipedia.org/wiki/Regular_expression\">Wikipedia "
+"entry</link> for this topic."
+msgstr ""
+"Шаблон соответствия представляет собой регулярное выражение. Дополнительные "
+"сведения доступны в <link url=\"https://ru.wikipedia.org/wiki/"
+"Регулярные_выражения\">статье на Википедии</link>."
+
+#: editactiondialog.cpp:219
+#, kde-format
+msgid "Enter a description for the action"
+msgstr "Введите описание действия"
+
+#: editactiondialog.cpp:220 editcommanddialog.cpp:84
+#, kde-format
+msgid "Description:"
+msgstr "Описание:"
+
+#: editactiondialog.cpp:223
+#, kde-format
+msgid "Include in automatic popup"
+msgstr "Включить во всплывающее меню автоматических действий"
+
+#: editactiondialog.cpp:227
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The commands for this match will be included in the automatic action popup, "
+"if it is enabled in the <interface>Action Menu</interface> page. If this "
+"option is turned off, the commands for this match will not be included in "
+"the automatic popup but they will be included if the popup is activated "
+"manually with the <shortcut>%1</shortcut> key shortcut."
+msgstr ""
+"Команды для этого соответствия будут добавлены во всплывающее меню "
+"автоматических действий, если оно включено на странице <interface>Меню "
+"действий</interface>. Если этот параметр отключён, команды для этого "
+"соответствия не будут добавлены во всплывающее меню автоматических действий "
+"(но они будут добавлены, если всплывающее меню вызвано вручную с помощью "
+"комбинации клавиш <shortcut>%1</shortcut>)."
+
+#: editactiondialog.cpp:262
+#, kde-format
+msgid "Add Command..."
+msgstr "Добавить команду…"
+
+#: editactiondialog.cpp:267
+#, kde-format
+msgid "Edit Command..."
+msgstr "Изменить команду…"
+
+#: editactiondialog.cpp:273
+#, kde-format
+msgid "Delete Command"
+msgstr "Удалить команду"
+
+#: editactiondialog.cpp:389
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Delete the selected command <resource>%1</resource>?"
+msgstr "Удалить выбранную команду <resource>%1</resource>?"
+
+#: editactiondialog.cpp:390
+#, kde-format
+msgid "Confirm Delete Command"
+msgstr "Подтверждение удаления команды"
+
+#: editcommanddialog.cpp:47
+#, kde-format
+msgid "Command Properties"
+msgstr "Свойства команды"
+
+#: editcommanddialog.cpp:60
+#, kde-format
+msgid "Enter the command and arguments"
+msgstr "Введите команду и аргументы"
+
+#: editcommanddialog.cpp:63
+#, kde-format
+msgid "Command:"
+msgstr "Команда:"
+
+#: editcommanddialog.cpp:72
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"A <placeholder>&#37;s</placeholder> in the command will be replaced by the "
+"complete clipboard contents. <placeholder>&#37;0</placeholder> through "
+"<placeholder>&#37;9</placeholder> will be replaced by the corresponding "
+"captured texts from the match pattern."
+msgstr ""
+"<placeholder>&#37;s</placeholder> в команде заменяется всем содержимым "
+"буфера обмена. <placeholder>&#37;0</placeholder> по <placeholder>&#37;9</"
+"placeholder> заменяется соответствующими захваченными фрагментами текста из "
+"шаблона соответствия."
+
+#: editcommanddialog.cpp:82
+#, kde-format
+msgid "Enter a description for the command"
+msgstr "Введите описание команды"
+
+#: editcommanddialog.cpp:92
+#, kde-format
+msgid "Output from command:"
+msgstr "Выходные данные команды:"
+
+#: editcommanddialog.cpp:94
+#, kde-format
+msgid "Replace current clipboard"
+msgstr "Заменить текущее содержимое буфера обмена"
+
+#: editcommanddialog.cpp:98
+#, kde-format
+msgid "Append to clipboard"
+msgstr "Дописать в буфер обмена"
+
+#: editcommanddialog.cpp:102
+#, kde-format
+msgid "What happens to the standard output of the command executed."
+msgstr "Что происходит со стандартным выводом исполненной команды."
+
+#: editcommanddialog.cpp:116
+#, kde-format
+msgid "Reset the icon to the default for the command"
+msgstr "Вернуть стандартный значок команды"
+
+#: editcommanddialog.cpp:122
+#, kde-format
+msgid "Icon:"
+msgstr "Значок:"
+
+#: historyimageitem.cpp:39
+#, kde-format
+msgid "%1x%2 %3bpp"
+msgstr "%1×%2 %3bpp"
+
+#: klipper.cpp:153
+#, kde-format
+msgctxt "@action:inmenu Toggle automatic action"
+msgid "Automatic Action Popup Menu"
+msgstr "Всплывающее меню автоматических действий"
+
+#: klipper.cpp:176
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "C&lear Clipboard History"
+msgstr "&Очистить журнал буфера обмена"
+
+#: klipper.cpp:183
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&Configure Klipper…"
+msgstr "&Настроить Klipper…"
+
+#: klipper.cpp:189
+#, kde-format
+msgctxt "@action:inmenu Quit Klipper"
+msgid "&Quit"
+msgstr "&Выход"
+
+#: klipper.cpp:194
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Manually Invoke Action on Current Clipboard"
+msgstr "Ручной выбор действия с буфером обмена"
+
+#: klipper.cpp:202
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&Edit Contents…"
+msgstr "&Редактирование буфера обмена…"
+
+#: klipper.cpp:210
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&Show Barcode…"
+msgstr "&Показать штрихкод…"
+
+#: klipper.cpp:218
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Next History Item"
+msgstr "Следующая запись журнала"
+
+#: klipper.cpp:222
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Previous History Item"
+msgstr "Предыдущая запись журнала"
+
+#: klipper.cpp:228
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Klipper at Mouse Position"
+msgstr "Открывать Klipper на позиции указателя мыши"
+
+#: klipper.cpp:540
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"You can enable URL actions later in the <interface>Actions</interface> page "
+"of the Clipboard applet's configuration window"
+msgstr ""
+"Действия для URL могут быть включены позднее из страницы "
+"<interface>Действия</interface>, расположенном в окне настройки параметров "
+"виджета «Содержимое буфера обмена»"
+
+#: klipper.cpp:579
+#, kde-format
+msgid "Should Klipper start automatically when you login?"
+msgstr "Запускать Klipper автоматически при входе в KDE?"
+
+#: klipper.cpp:580
+#, kde-format
+msgid "Automatically Start Klipper?"
+msgstr "Запускать Klipper автоматически?"
+
+#: klipper.cpp:581
+#, kde-format
+msgid "Start"
+msgstr "Запускать"
+
+#: klipper.cpp:582
+#, kde-format
+msgid "Do Not Start"
+msgstr "Не запускать"
+
+#: klipper.cpp:929
+#, kde-format
+msgid "Edit Contents"
+msgstr "Редактирование буфера обмена"
+
+#: klipper.cpp:996
+#, kde-format
+msgid "Mobile Barcode"
+msgstr "QR-код"
+
+#: klipper.cpp:1043
+#, fuzzy, kde-format
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "Очистить весь журнал буфера обмена?"
+
+#: klipper.cpp:1044
+#, fuzzy, kde-format
+msgid "Clear Clipboard History"
+msgstr "&Очистить журнал буфера обмена"
+
+#: klipper.cpp:1060 klipper.cpp:1069
+#, kde-format
+msgid "Clipboard history"
+msgstr "Журнал буфера обмена"
+
+#: klipper.cpp:1086
+#, kde-format
+msgid "up"
+msgstr "более новое:"
+
+#: klipper.cpp:1093
+#, kde-format
+msgid "current"
+msgstr "выбрано:"
+
+#: klipper.cpp:1100
+#, kde-format
+msgid "down"
+msgstr "более старое:"
+
+#. i18n: ectx: label, entry (Version), group (General)
+#: klipper.kcfg:10
+#, kde-format
+msgid "Klipper version"
+msgstr "Klipper version"
+
+#. i18n: ectx: label, entry (KeepClipboardContents), group (General)
+#: klipper.kcfg:13
+#, kde-format
+msgid "Save history across desktop sessions"
+msgstr "Сохранять журнал между сеансами рабочего стола"
+
+#. i18n: ectx: tooltip, entry (KeepClipboardContents), group (General)
+#: klipper.kcfg:15
+#, kde-format
+msgid ""
+"Retain the clipboard history, so it will be available the next time you log "
+"in."
+msgstr ""
+"Сохранять журнал буфера обмена, чтобы он был доступен при следующем входе в "
+"систему."
+
+#. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
+#: klipper.kcfg:18
+#, kde-format
+msgid "Prevent the clipboard from being cleared"
+msgstr "Не допускать очистки буфера обмена"
+
+#. i18n: ectx: whatsthis, entry (PreventEmptyClipboard), group (General)
+#: klipper.kcfg:20
+#, kde-format
+msgid ""
+"Do not allow the clipboard to be cleared, for example when an application "
+"exits."
+msgstr ""
+"Не допускать очистки буфера обмена (например, при завершении работы "
+"программ)."
+
+#. i18n: ectx: label, entry (SyncClipboards), group (General)
+#: klipper.kcfg:27
+#, kde-format
+msgid "Keep the selection and clipboard the same"
+msgstr "Поддерживать синхронизацию выделенного фрагмента и буфера обмена"
+
+#. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
+#: klipper.kcfg:29
+#, kde-format
+msgid ""
+"Content selected with the cursor is automatically copied to the clipboard so "
+"that it can be pasted with either a Paste action or a middle-click.<br/><a "
+"href=\"1\">More about the selection and clipboard</a>."
+msgstr ""
+"Содержимое, выделенное с помощью курсора, автоматически копируется в буфер "
+"обмена, поэтому его возможно вставить с помощью действия «Вставить» или "
+"щелчка средней кнопкой мыши.<br/><a href=\"1\">Подробнее о выделении и "
+"буфере обмена</a>."
+
+#. i18n: ectx: label, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:32
+#, kde-format
+msgid "Ignore the selection"
+msgstr "Игнорировать выделение мышью"
+
+#. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:34
+#, kde-format
+msgid ""
+"Content selected with the cursor but not explicitly copied to the clipboard "
+"is not automatically stored in the clipboard history, and can only be pasted "
+"using a middle-click."
+msgstr ""
+"Содержимое, которое было выделено с помощью курсора, но не скопировано в "
+"буфер обмена явно, не сохраняется в журнале буфера обмена автоматически. Его "
+"возможно вставить только с помощью щелчка средней кнопкой мыши."
+
+#. i18n: ectx: label, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:37
+#, kde-format
+msgid "Text selection only"
+msgstr "Только из выделения мышью"
+
+#. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:39
+#, kde-format
+msgid ""
+"Only store text selections in the clipboard history, not images or any other "
+"type of data."
+msgstr ""
+"Сохранять в журнале буфера обмена только выделенные текстовые фрагменты, а "
+"не изображения или какие-либо другие данные."
+
+#. i18n: ectx: label, entry (IgnoreImages), group (General)
+#: klipper.kcfg:42
+#, kde-format
+msgid "Always ignore images"
+msgstr "Всегда игнорировать изображения"
+
+#. i18n: ectx: whatsthis, entry (IgnoreImages), group (General)
+#: klipper.kcfg:44
+#, kde-format
+msgid ""
+"Do not store images in the clipboard history, even if explicitly copied."
+msgstr ""
+"Не сохранять изображения в журнале буфера обмена, даже если копирование было "
+"явным."
+
+#. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
+#: klipper.kcfg:47
+#, kde-format
+msgid "Use graphical regexp editor"
+msgstr "Использовать графический редактор регулярных выражений"
+
+#. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
+#: klipper.kcfg:51
+#, kde-format
+msgid "Immediately on selection"
+msgstr "Сразу после выделения"
+
+#. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
+#: klipper.kcfg:52
+#, kde-format
+msgid ""
+"Show the popup menu of applicable actions as soon as a selection is made."
+msgstr "Показать всплывающее меню доступных действий сразу после выделения."
+
+#. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
+#: klipper.kcfg:57
+#, kde-format
+msgid "No actions for WM_CLASS"
+msgstr "Отключить действия для окон класса WM_CLASS"
+
+#. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:60
+#, kde-format
+msgid "Automatic action menu time:"
+msgstr "Время показа меню автоматических действий:"
+
+#. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:64
+#, kde-format
+msgid "Display the automatic action popup menu for this time."
+msgstr "Отображать меню автоматических действий в течение указанного времени."
+
+#. i18n: ectx: label, entry (MaxClipItems), group (General)
+#: klipper.kcfg:67
+#, kde-format
+msgid "History size:"
+msgstr "Размер журнала:"
+
+#. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
+#: klipper.kcfg:71
+#, kde-format
+msgid "The clipboard history will store up to this many items."
+msgstr ""
+"Максимальное количество записей, которое может храниться в журнале буфера "
+"обмена."
+
+#. i18n: ectx: label, entry (ActionList), group (General)
+#: klipper.kcfg:74
+#, kde-format
+msgid "Dummy entry for indicating changes in an action's tree widget"
+msgstr "Пустой элемент для показа изменений в действиях древовидного виджета"
+
+#. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:87
+#, kde-format
+msgid "Trim whitespace from selection"
+msgstr "Обрезать пробелы выделения"
+
+#. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:89
+#, kde-format
+msgid ""
+"Remove any whitespace from the start and end of selected text, before "
+"performing an action. For example, this ensures that a URL pasted in a "
+"browser is interpreted as expected. The text saved on the clipboard is not "
+"affected."
+msgstr ""
+"Удалить пробелы в начале и конце выбранного текста перед выполнением "
+"действия. Например, таким образом возможно обеспечить корректную обработку "
+"URL-адреса, вставленного в браузер. Сам текст, сохранённый в буфере обмена, "
+"не будет изменён."
+
+#. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
+#: klipper.kcfg:92
+#, kde-format
+msgid "For an item chosen from history"
+msgstr "Для выбранной в журнале записи"
+
+#. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
+#: klipper.kcfg:94
+#, kde-format
+msgid ""
+"Show the popup menu of applicable actions if an entry is chosen from the "
+"clipboard history."
+msgstr ""
+"Показать всплывающее меню доступных действий при выборе записи в журнале "
+"буфера обмена."
+
+#. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
+#: klipper.kcfg:97
+#, kde-format
+msgid "Include MIME actions"
+msgstr "Включить действия на основе типов MIME"
+
+#. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
+#: klipper.kcfg:99
+#, kde-format
+msgid ""
+"If a file name or URL is selected, include applications that can accept its "
+"MIME type in the popup menu."
+msgstr ""
+"Если выбран файл или URL-адрес, во всплывающем меню также будут показаны "
+"приложения для соответствующего типа MIME."
+
+#: klipperpopup.cpp:110
+#, kde-format
+msgid "Klipper - Clipboard Tool"
+msgstr "Klipper — управление буфером обмена"
+
+# search box placeholder --aspotashev
+#: klipperpopup.cpp:114
+#, kde-format
+msgid "Search…"
+msgstr "Поиск…"
+
+#: klipperpopup.cpp:123 main.cpp:29
+#, kde-format
+msgid "KDE cut & paste history utility"
+msgstr "Утилита журнала буфера обмена KDE"
+
+#: klipperpopup.cpp:187
+#, fuzzy, kde-format
+msgid "Invalid regular expression, %1"
+msgstr "Регулярное выражение:"
+
+#: klipperpopup.cpp:193 tray.cpp:25 tray.cpp:53
+#, kde-format
+msgid "Clipboard is empty"
+msgstr "Буфер обмена пуст"
+
+#: klipperpopup.cpp:195
+#, kde-format
+msgid "No matches"
+msgstr "Совпадений не найдено"
+
+#: main.cpp:27 tray.cpp:22
+#, kde-format
+msgid "Klipper"
+msgstr "Klipper"
+
+#: main.cpp:31
+#, kde-format
+msgid ""
+"(c) 1998, Andrew Stanley-Jones\n"
+"1998-2002, Carsten Pfeiffer\n"
+"2001, Patrick Dubroy"
+msgstr ""
+"© Andrew Stanley-Jones, 1998\n"
+"© Carsten Pfeiffer, 1998-2002\n"
+"© Patrick Dubroy, 2001"
+
+#: main.cpp:34
+#, kde-format
+msgid "Carsten Pfeiffer"
+msgstr "Carsten Pfeiffer"
+
+#: main.cpp:34
+#, kde-format
+msgid "Author"
+msgstr "Автор"
+
+#: main.cpp:36
+#, kde-format
+msgid "Andrew Stanley-Jones"
+msgstr "Andrew Stanley-Jones"
+
+#: main.cpp:36
+#, kde-format
+msgid "Original Author"
+msgstr "Первоначальный автор"
+
+#: main.cpp:38
+#, kde-format
+msgid "Patrick Dubroy"
+msgstr "Patrick Dubroy"
+
+#: main.cpp:38
+#, kde-format
+msgid "Contributor"
+msgstr "Участник проекта"
+
+#: main.cpp:40
+#, kde-format
+msgid "Luboš Luňák"
+msgstr "Luboš Luňák"
+
+#: main.cpp:40
+#, kde-format
+msgid "Bugfixes and optimizations"
+msgstr "Исправление ошибок и оптимизация"
+
+#: main.cpp:42
+#, kde-format
+msgid "Esben Mose Hansen"
+msgstr "Esben Mose Hansen"
+
+#: main.cpp:42
+#, kde-format
+msgid "Previous Maintainer"
+msgstr "Предыдущий сопровождающий"
+
+#: main.cpp:44
+#, kde-format
+msgid "Martin Gräßlin"
+msgstr "Martin Gräßlin"
+
+#: main.cpp:44
+#, kde-format
+msgid "Maintainer"
+msgstr "Сопровождающий"
+
+#: main.cpp:46
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Zhitomirsky Sergey,Андрей Черепанов,Leon Kanter"
+
+#: main.cpp:46
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "szh@chat.ru,skull@kde.ru,leon@asplinux.ru"
+
+#: popupproxy.cpp:145
+#, kde-format
+msgid "&More"
+msgstr "&Больше"
+
+#: tray.cpp:25
+#, kde-format
+msgid "Clipboard Contents"
+msgstr "Содержимое буфера обмена"
+
+#: urlgrabber.cpp:198
+#, kde-format
+msgid "Disable This Popup"
+msgstr "Запретить выпадающее меню"
+
+#: urlgrabber.cpp:204
+#, kde-format
+msgid "&Cancel"
+msgstr "О&тмена"
+
+#~ msgid "Delete clipboard history?"
+#~ msgstr "Очистка журнала буфера обмена"
+
+#~ msgid "Action list:"
+#~ msgstr "Действия:"
+
+#~ msgid "Regular Expression"
+#~ msgstr "Регулярное выражение"
+
+#~ msgid ""
+#~ "Click on a highlighted item's column to change it. \"%s\" in a command "
+#~ "will be replaced with the clipboard contents.<br>For more information "
+#~ "about regular expressions, you could have a look at the <a href=\"https://"
+#~ "en.wikipedia.org/wiki/Regular_expression\">Wikipedia entry about this "
+#~ "topic</a>."
+#~ msgstr ""
+#~ "Нажмите на выбранную колонку элемента, чтобы её изменить. Символы «%s» в "
+#~ "команде будут заменены содержимым буфера.<br>Для получения информации о "
+#~ "регулярных выражениях обратитесь к <a href=\"https://ru.wikipedia.org/"
+#~ "wiki/Регулярные_выражения\">соответствующей статье на Википедии</a>."
+
+#~ msgid "Output Handling"
+#~ msgstr "Вывод команды"
+
+#~ msgid "new command"
+#~ msgstr "новая команда"
+
+#~ msgid "Command Description"
+#~ msgstr "Описание команды"
+
+#~ msgid "Action properties:"
+#~ msgstr "Свойства действия:"
+
+#~ msgid "Automatic:"
+#~ msgstr "Автоматически:"
+
+#~ msgid "List of commands for this action:"
+#~ msgstr "Список команд для данного действия:"
+
+#~ msgid "Double-click an item to edit"
+#~ msgstr "Дважды щёлкните на элементе для его изменения"
+
+#~ msgid "Remove whitespace when executing actions"
+#~ msgstr "Удалить пробелы при выполнении действий"
+
+#~ msgid "Advanced..."
+#~ msgstr "Дополнительно..."
+
+#~ msgid "Advanced Settings"
+#~ msgstr "Дополнительные настройки"
+
+#~ msgid "D&isable Actions for Windows of Type WM_CLASS"
+#~ msgstr "От&ключить действия для окон класса WM_CLASS"
+
+#~ msgid ""
+#~ "<qt>This lets you specify windows in which Klipper should not invoke "
+#~ "\"actions\". Use<br /><br /><center><b>xprop | grep WM_CLASS</b></"
+#~ "center><br />in a terminal to find out the WM_CLASS of a window. Next, "
+#~ "click on the window you want to examine. The first string it outputs "
+#~ "after the equal sign is the one you need to enter here.</qt>"
+#~ msgstr ""
+#~ "<qt>Отключить отображение меню «Действия» для окон указанного класса. "
+#~ "Используйте команду <center><b>xprop | grep WM_CLASS</b></center> в "
+#~ "терминале для определения класса окна, затем щёлкните на том окне, для "
+#~ "которого хотите узнать класс.<br />Первая строка вывода в терминале после "
+#~ "знака «=» и будет той строкой, которую необходимо ввести в это поле.</qt>"
+
+#~ msgid "Enable Clipboard Actions"
+#~ msgstr "Включить действия с буфером обмена"
+
+#~ msgid "URL grabber enabled"
+#~ msgstr "Включить действия для адресов URL"
+
+#~ msgid "Replay action in history"
+#~ msgstr "Повторить действия для элемента журнала"
+
+#~ msgid ""
+#~ "When a clipboard item is selected from the history popup, automatically "
+#~ "perform the configured actions on it."
+#~ msgstr ""
+#~ "Автоматически выполнить настроенные действия над записью буфера обмена, "
+#~ "выбранной во всплывающем окне журнала."
+
+#~ msgid "Save clipboard contents on exit"
+#~ msgstr "Сохранять содержимое буфера обмена при выходе"
+
+#~ msgid "Synchronize contents of the clipboard and the selection"
+#~ msgstr "Синхронизировать содержимое буфера обмена и выделения мышью"
+
+#~ msgid "Keep clipboard contents"
+#~ msgstr "Сохранять содержимое буфера обмена при выходе"
+
+#~ msgid ""
+#~ "Selecting this option has the effect, that the clipboard can never be "
+#~ "emptied. E.g. when an application exits, the clipboard would usually be "
+#~ "emptied."
+#~ msgstr ""
+#~ "Выбор этой опции позволяет никогда не очищать буфер обмена. Например, при "
+#~ "выходе из приложения буфер обмена очищается."
+
+#~ msgid "Ignore Selection"
+#~ msgstr "Игнорировать выделение мышью"
+
+#~ msgid ""
+#~ "When an area of the screen is selected with mouse or keyboard, this is "
+#~ "called \"the selection\".<br/>If this option is set, the selection is not "
+#~ "entered into the clipboard history, though it is still available for "
+#~ "pasting using the middle mouse button."
+#~ msgstr ""
+#~ "Выделенный с помощью курсора мыши или клавиатуры текст или изображение "
+#~ "называется «выделение».<br/>Если включить этот параметр, выделение не "
+#~ "будет сохраняться в журнал буфера обмена, хотя его по-прежнему можно "
+#~ "будет вставить средней кнопкой мыши."
+
+#~ msgid "Synchronize clipboard and selection"
+#~ msgstr "Синхронизировать содержимое буфера обмена и выделения мышью"
+
+#~ msgid ""
+#~ "When an area of the screen is selected with mouse or keyboard, this is "
+#~ "called \"the selection\".<br/>If this option is selected, the selection "
+#~ "and the clipboard is kept the same, so that anything in the selection is "
+#~ "immediately available for pasting elsewhere using any method, including "
+#~ "the traditional middle mouse button. Otherwise, the selection is recorded "
+#~ "in the clipboard history, but the selection can only be pasted using the "
+#~ "middle mouse button. Also see the 'Ignore Selection' option."
+#~ msgstr ""
+#~ "Выделенный с помощью курсора мыши или клавиатуры текст или изображение "
+#~ "называется «выделение».<br/>При включении этого параметра выделение и "
+#~ "буфер обмена будут иметь одинаковое содержимое, то есть при выделении "
+#~ "мышью текста он готов для вставки любым способом, включая традиционную "
+#~ "вставку из буфера обмена и вставку средней кнопкой мыши. При выключении "
+#~ "этого параметра, выделение записывается в журнал буфера обмена, но может "
+#~ "быть вставлено только средней кнопкой мыши. Смотрите также параметр "
+#~ "«Игнорировать выделение мышью»."
+
+#~ msgid "Selection text only"
+#~ msgstr "Только из выделения мышью"
+
+#~ msgid ""
+#~ "When an area of the screen is selected with mouse or keyboard, this is "
+#~ "called \"the selection\".<br/>If this option is selected, only text "
+#~ "selections are stored in the history, while images and other selections "
+#~ "are not."
+#~ msgstr ""
+#~ "Выделенный с помощью курсора мыши или клавиатуры текст или изображение "
+#~ "называется «выделение».<br/>При включении этого параметра в журнал "
+#~ "попадает только выделение текста, но не выделение изображений."
+
+#~ msgid "Timeout for action popups (seconds)"
+#~ msgstr "Задержка меню действий, с:"
+
+#~ msgid "A value of 0 disables the timeout"
+#~ msgstr "Значение, равное 0, отключает задержку"
+
+#~ msgid "Clipboard history size"
+#~ msgstr "Размер журнала буфера обмена"
+
+#~ msgid ""
+#~ "Sometimes, the selected text has some whitespace at the end, which, if "
+#~ "loaded as URL in a browser would cause an error. Enabling this option "
+#~ "removes any whitespace at the beginning or end of the selected string "
+#~ "(the original clipboard contents will not be modified)."
+#~ msgstr ""
+#~ "Иногда выделенный текст содержит пробелы, что при открытии его в браузере "
+#~ "как ссылки может вызвать ошибку. При включении этой опции будут удалены "
+#~ "пробелы в начале и конце текста. Содержимое буфера обмена останется "
+#~ "неизменным."
+
+#~ msgid "%1 - Actions For: %2"
+#~ msgstr "%1 — действия для %2"
+
+#~ msgid "&Edit Contents..."
+#~ msgstr "&Редактировать содержимое..."
+
+#~ msgid "<empty clipboard>"
+#~ msgstr "<пустой буфер>"
+
+#~ msgid ""
+#~ "You can enable URL actions later by left-clicking on the Klipper icon and "
+#~ "selecting 'Enable Clipboard Actions'"
+#~ msgstr ""
+#~ "Вы можете включить действия по URL позже. Для этого щёлкнув левой кнопкой "
+#~ "по значку Klipper и выбрать «Включить действия с буфером обмена»."
+
+#~ msgid "Enable Clipboard &Actions"
+#~ msgstr "Включить действия с буфером обмена"
+
+#~ msgid "Show Klipper Popup-Menu"
+#~ msgstr "Показать меню буфера обмена"
+
+#~ msgid "Popup menu at mouse-cursor position"
+#~ msgstr "Открывать меню на месте указателя мыши"
+
+#~ msgid "Replace"
+#~ msgstr "Заменить"
+
+#~ msgid "Add"
+#~ msgstr "Добавить"
+
+#~ msgid "Clipboard/Selection Behavior"
+#~ msgstr "Поведение буфера обмена и выделения мышью"
+
+#~ msgid "Separate clipboard and selection"
+#~ msgstr "Разделить буфер обмена и выделение мышью"
+
+#~ msgid ""
+#~ "This option prevents the selection being recorded in the clipboard "
+#~ "history. Only explicit clipboard changes are recorded."
+#~ msgstr ""
+#~ "Если установлен этот параметр, текст, выделенные мышью, не попадает в "
+#~ "журнал буфера обмена. Записываются только непосредственные изменения "
+#~ "буфера обмена."
+
+#~ msgid ""
+#~ "<qt>There are two different clipboard buffers available:<br /><br /"
+#~ "><b>Clipboard</b> is filled by selecting something and pressing Ctrl+C, "
+#~ "or by clicking \"Copy\" in a toolbar or menubar.<br /><br /><b>Selection</"
+#~ "b> is available immediately after selecting some text. The only way to "
+#~ "access the selection is to press the middle mouse button.<br /><br />You "
+#~ "can configure the relationship between Clipboard and Selection.</qt>"
+#~ msgstr ""
+#~ "<qt>Доступно два различных буфера обмена:<ul><li><b>Буфер обмена</b>, в "
+#~ "который текст помещается <br />текст путём выделения и нажатия клавиши "
+#~ "Ctrl-C или выбором пункта «Копировать» в меню или на панели инструментов."
+#~ "</li> <li><b>Выделение мышью</b>, которое доступно сразу после выделения "
+#~ "текста мышью. Получить доступ к выделению можно только путём нажатия "
+#~ "средней кнопки мыши.</li></ul>При помощи этого параметра можно настроить "
+#~ "взаимосвязь двух буферов обмена.</qt>"
+
+#~ msgid "Klipper - clipboard tool"
+#~ msgstr "Klipper — управление буфером обмена"
+
+#, fuzzy
+#~ msgid "Action list (right click to add/remove commands):"
+#~ msgstr "Список &действий (команды можно добавить и удалить правой кнопкой):"
+
+#~ msgid "Double-click here to set the command to be executed"
+#~ msgstr "Щёлкните дважды здесь для указания запускаемой команды"
+
+#~ msgid "Double-click here to set the regular expression"
+#~ msgstr "Щёлкните дважды здесь для указания регулярного выражения"
+
+#~ msgid "<new action>"
+#~ msgstr "<новое действие>"
+
+#~ msgid "Selecting this option synchronizes these two buffers."
+#~ msgstr "Установка этого параметра синхронизирует эти два буфера обмена."
+
+#~ msgid ""
+#~ "Using this option will only set the selection when highlighting something "
+#~ "and the clipboard when choosing e.g. \"Copy\" in a menubar."
+#~ msgstr ""
+#~ "Если установлен этот параметр, выделение мышью и буфер обмена будут "
+#~ "работать независимо. Например, вставить содержимое буфера обмена можно "
+#~ "будет только при помощи кнопки «Вставить»."
+
+#~ msgid "&Use graphical editor for editing regular expressions"
+#~ msgstr "И&спользовать графический редактор регулярных выражений"
+
+#~ msgid ""
+#~ "Click on a highlighted item's column to change it. \"%s\" in a command "
+#~ "will be replaced with the clipboard contents."
+#~ msgstr ""
+#~ "Нажмите на выбранную колонку элемента, чтобы её изменить. \"%s\" в "
+#~ "команде будет заменено содержимым буфера."
+
+#~ msgid "Enable &Actions"
+#~ msgstr "Включить &действия"
+
+#~ msgid "&Actions Enabled"
+#~ msgstr "&Действия включены"
+
+#~ msgid ""
+#~ "_: NAME OF TRANSLATORS\n"
+#~ "Your names"
+#~ msgstr "Zhitomirsky Sergey,Андрей Черепанов,Leon Kanter"
+
+#~ msgid ""
+#~ "_: EMAIL OF TRANSLATORS\n"
+#~ "Your emails"
+#~ msgstr "szh@chat.ru,sibskull@mail.ru,leon@asplinux.ru"
+
+#~ msgid ""
+#~ "_n:  entry\n"
+#~ " entries"
+#~ msgstr ""
+#~ " запись\n"
+#~ " записи\n"
+#~ " записей"
+
+#~ msgid ""
+#~ "Regular Expression (see http://doc.trolltech.com/qregexp.html#details)"
+#~ msgstr ""
+#~ "Регулярное выражение (см. http://doc.trolltech.com/qregexp.html#details)"

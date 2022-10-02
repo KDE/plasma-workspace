@@ -1,0 +1,188 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Yoann Laissus <yoann.laissus@gmail.com>, 2015.
+# Vincent Pinon <vpinon@kde.org>, 2016.
+# Simon Depiets <sdepiets@gmail.com>, 2018.
+# Xavier Besnard <xavier.besnard@neuf.fr>, 2020, 2021, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-03 00:48+0000\n"
+"PO-Revision-Date: 2022-05-20 20:26+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
+"Language-Team: French <kde-francophone@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 22.04.1\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Xavier Besnard"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "xavier.besnard@neuf.fr"
+
+#: calendar/eventdatadecorator.cpp:51
+#, kde-format
+msgctxt "Agenda listview section title"
+msgid "Holidays"
+msgstr "Vacances"
+
+#: calendar/eventdatadecorator.cpp:53
+#, kde-format
+msgctxt "Agenda listview section title"
+msgid "Events"
+msgstr "Évènements"
+
+#: calendar/eventdatadecorator.cpp:55
+#, kde-format
+msgctxt "Agenda listview section title"
+msgid "Todo"
+msgstr "Tâche à faire"
+
+#: calendar/eventdatadecorator.cpp:57
+#, kde-format
+msgctxt "Means 'Other calendar items'"
+msgid "Other"
+msgstr "Autre"
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:10
+#, kde-format
+msgid "Screen lock enabled"
+msgstr "Verrouillage d'écran activé"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:11
+#, kde-format
+msgid "Sets whether the screen will be locked after the specified time."
+msgstr "Définit si l'écran sera verrouillé après un temps spécifié."
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:16
+#, kde-format
+msgid "Screen saver timeout"
+msgstr "Temps d'expiration de l'économiseur d'écran"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:17
+#, kde-format
+msgid "Sets the minutes after which the screen is locked."
+msgstr "Définit le nombre de minutes après lequel l'écran est verrouillé."
+
+#: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
+#, kde-format
+msgid "New Session"
+msgstr "Nouvelle session"
+
+#: shellprivate/widgetexplorer/kcategorizeditemsviewmodels.cpp:64
+#, kde-format
+msgid "Filters"
+msgstr "Filtres"
+
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:42
+#, kde-format
+msgid "Select Plasmoid File"
+msgstr "Sélectionner le fichier de composant graphique"
+
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:66
+#, kde-format
+msgid "Installing the package %1 failed."
+msgstr "L'installation du paquet %1 a échoué."
+
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:66
+#, kde-format
+msgid "Installation Failure"
+msgstr "Échec de l'installation"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:110
+#, kde-format
+msgid "All Widgets"
+msgstr "Tous les composants graphiques"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:114
+#, kde-format
+msgid "Running"
+msgstr "En cours d'exécution"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:118
+#, kde-format
+msgctxt ""
+"@item:inmenu used in the widget filter. Filter widgets that can be un-"
+"installed from the system, which are usually installed by the user to a "
+"local place."
+msgid "Uninstallable"
+msgstr "Non installable"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:122
+#, kde-format
+msgid "Categories:"
+msgstr "Catégories :"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:199
+#, kde-format
+msgid "Download New Plasma Widgets"
+msgstr "Télécharger de nouveaux composants graphiques"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:208
+#, kde-format
+msgid "Install Widget From Local File…"
+msgstr "Installer un composant graphique depuis un fichier local..."
+
+#~ msgid "&Execute"
+#~ msgstr "&Exécuter"
+
+#~ msgctxt "Toolbar Button to switch to Plasma Scripting Mode"
+#~ msgid "Plasma"
+#~ msgstr "Plasma"
+
+#~ msgctxt "Toolbar Button to switch to KWin Scripting Mode"
+#~ msgid "KWin"
+#~ msgstr "KWin"
+
+#~ msgid "Templates"
+#~ msgstr "Modèles"
+
+#~ msgid "Desktop Shell Scripting Console"
+#~ msgstr "Console de langage de script de l'environnement de bureau"
+
+#~ msgid "Editor"
+#~ msgstr "Éditeur"
+
+#~ msgid "Load"
+#~ msgstr "Charger"
+
+#~ msgid "Use"
+#~ msgstr "Utiliser"
+
+#~ msgid "Output"
+#~ msgstr "Sortie"
+
+#~ msgid "Unable to load script file <b>%1</b>"
+#~ msgstr "Impossible de charger le fichier de script <b>%1</b>"
+
+#~ msgid "Open Script File"
+#~ msgstr "Ouvrir le fichier de script"
+
+#~ msgid "Save Script File"
+#~ msgstr "Enregistrer le fichier de script"
+
+#~ msgid "Executing script at %1"
+#~ msgstr "Exécuter le script à %1"
+
+#~ msgid "Runtime: %1ms"
+#~ msgstr "Exécution : %1 ms"
+
+#~ msgid "Download Wallpaper Plugins"
+#~ msgstr "Télécharger des modules externes de fonds d'écran"

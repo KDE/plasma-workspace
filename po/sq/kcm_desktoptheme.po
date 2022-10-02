@@ -1,0 +1,269 @@
+# Albanian translation for kdebase-workspace
+# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# This file is distributed under the same license as the kdebase-workspace package.
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+# Agron Selimaj <as9902613@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdebase-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"PO-Revision-Date: 2021-03-19 18:55-0400\n"
+"Last-Translator: Agron Selimaj <as9902613@gmail.com>\n"
+"Language-Team: kdeshqip\n"
+"Language: sq\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2011-05-06 00:17+0000\n"
+"X-Generator: Lokalize 20.12.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Theme Name"
+msgid "Name of the current Plasma Style"
+msgstr "Emri i Temës"
+
+#: kcm.cpp:108
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: kcm.cpp:119
+#, kde-format
+msgid "Unable to download the theme: %1"
+msgstr ""
+
+#: kcm.cpp:144
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: kcm.cpp:147 kcm.cpp:153
+#, kde-format
+msgid "Theme installation failed."
+msgstr ""
+
+#: kcm.cpp:245
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "This module lets you choose the Plasma style."
+msgstr ""
+
+#: package/contents/ui/main.qml:69
+#, fuzzy, kde-format
+#| msgid "Theme Name"
+msgid "All Themes"
+msgstr "Emri i Temës"
+
+#: package/contents/ui/main.qml:70
+#, fuzzy, kde-format
+#| msgid "Theme Name"
+msgid "Light Themes"
+msgstr "Emri i Temës"
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgid "Dark Themes"
+msgstr ""
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "Color scheme compatible"
+msgstr ""
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgid "Follows color scheme"
+msgstr ""
+
+#: package/contents/ui/main.qml:118
+#, fuzzy, kde-format
+#| msgid "Theme Name"
+msgid "Edit Theme…"
+msgstr "Emri i Temës"
+
+#: package/contents/ui/main.qml:125
+#, kde-format
+msgid "Remove Theme"
+msgstr "Hiqe Temën"
+
+#: package/contents/ui/main.qml:132
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Theme"
+msgstr "Hiqe Temën"
+
+#: package/contents/ui/main.qml:174
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: package/contents/ui/main.qml:179
+#, fuzzy, kde-format
+#| msgid "Theme Name"
+msgid "Get New Plasma Styles…"
+msgstr "Emri i Temës"
+
+#: package/contents/ui/main.qml:193
+#, fuzzy, kde-format
+#| msgid "Theme Name"
+msgid "Open Theme"
+msgstr "Emri i Temës"
+
+#: package/contents/ui/main.qml:195
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:31
+#, kde-format
+msgid ""
+"This tool allows you to set the theme of the current Plasma session, without "
+"accidentally setting it to one that is either not available, or which is "
+"already set."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:35
+#, kde-format
+msgid ""
+"The name of the theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:36
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:49
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:65
+#, kde-format
+msgid "The current Plasma session's theme has been set to %1"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:67
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:75
+#, kde-format
+msgid "You have the following Plasma themes on your system:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "KDE Shqip, Launchpad Contributions: Vilson Gjeci"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kde-i18n-sq@kde.org,vilsongjeci@gmail.com"
+
+#, fuzzy
+#~| msgid "Theme Name"
+#~ msgid "Plasma Style"
+#~ msgstr "Emri i Temës"
+
+#, fuzzy
+#~| msgid "Theme Name"
+#~ msgid "Plasma Styles"
+#~ msgstr "Emri i Temës"
+
+#, fuzzy
+#~| msgid "Theme Name"
+#~ msgid "Download New Plasma Styles"
+#~ msgstr "Emri i Temës"
+
+#~ msgctxt "plasma name"
+#~ msgid "Kickoff"
+#~ msgstr "Kickoff"
+
+#~ msgctxt "plasma name"
+#~ msgid "Analog Clock"
+#~ msgstr "Orë Analoge"
+
+#~ msgctxt "plasma name"
+#~ msgid "Notes"
+#~ msgstr "Shënimet"
+
+#~ msgctxt "plasma name"
+#~ msgid "Tooltip"
+#~ msgstr "Këshillë"
+
+#~ msgctxt "plasma name"
+#~ msgid "Pager"
+#~ msgstr "Faques"
+
+#~ msgid "Source"
+#~ msgstr "Burimi"
+
+#, fuzzy
+#~| msgid "%1 %2"
+#~ msgctxt ""
+#~ "%1 is the name of the theme, %2 is the type of the element (background, "
+#~ "icon, note, etc)"
+#~ msgid "%1 %2"
+#~ msgstr "%1 %2"
+
+#~ msgid "File..."
+#~ msgstr "Skedari..."
+
+#~ msgid "Version: %1"
+#~ msgstr "Versioni: %1"
+
+#~ msgid "More"
+#~ msgstr "Më tepër"
+
+#, fuzzy
+#~| msgid "Theme Name"
+#~ msgid "New theme name:"
+#~ msgstr "Emri i Temës"
+
+#, fuzzy
+#~| msgid "Theme Name"
+#~ msgid "Custom theme name"
+#~ msgstr "Emri i Temës"
+
+#~ msgid "Author:"
+#~ msgstr "Autori:"
+
+#, fuzzy
+#~| msgid "Author:"
+#~ msgid "Custom theme author "
+#~ msgstr "Autori:"
+
+#~ msgid "Version:"
+#~ msgstr "Versioni:"
+
+#~ msgid "Description:"
+#~ msgstr "Përshkrimi:"
+
+#, fuzzy
+#~| msgid "Author:"
+#~ msgid "Theme Author"
+#~ msgstr "Autori:"
+
+#~ msgid "Theme Name"
+#~ msgstr "Emri i Temës"
+
+#, fuzzy
+#~| msgid "Version:"
+#~ msgid "Theme Version"
+#~ msgstr "Versioni:"

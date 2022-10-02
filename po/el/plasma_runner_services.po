@@ -1,0 +1,43 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Toussis Manolis <manolis@koppermind.homelinux.org>, 2009.
+# Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_services\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-19 00:47+0000\n"
+"PO-Revision-Date: 2016-09-04 14:51+0200\n"
+"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 2.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: servicerunner.cpp:349
+#, kde-format
+msgctxt ""
+"Jump list search result, %1 is action (eg. open new tab), %2 is application "
+"(eg. browser)"
+msgid "%1 - %2"
+msgstr "%1 - %2"
+
+#: servicerunner.cpp:394
+#, kde-format
+msgid "Finds applications whose name or description match :q:"
+msgstr "Εύρεση εφαρμογών που ταιριάζουν κατά όνομα ή περιγραφή με το :q:"
+
+#, fuzzy
+#~| msgid "System Settings"
+#~ msgid "System Information"
+#~ msgstr "Ρυθμίσεις συστήματος"
+
+#~ msgid "System Settings"
+#~ msgstr "Ρυθμίσεις συστήματος"
+
+#~ msgid "Applications"
+#~ msgstr "Εφαρμογές"

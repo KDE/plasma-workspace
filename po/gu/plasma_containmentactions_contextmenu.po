@@ -1,0 +1,84 @@
+# translation of plasma_containmentactions_contextmenu.po to Gujarati
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sweta Kothari <swkothar@redhat.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_containmentactions_contextmenu\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-11 00:47+0000\n"
+"PO-Revision-Date: 2010-06-18 14:40+0530\n"
+"Last-Translator: Sweta Kothari <swkothar@redhat.com>\n"
+"Language-Team: Gujarati\n"
+"Language: gu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: menu.cpp:99
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Show KRunner"
+msgstr ""
+
+#: menu.cpp:104
+#, kde-format
+msgid "Open Terminal"
+msgstr ""
+
+#: menu.cpp:108
+#, fuzzy, kde-format
+#| msgid "Lock Screen"
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Lock Screen"
+msgstr "સ્ક્રીનને તાળુ મારો"
+
+#: menu.cpp:117
+#, fuzzy, kde-format
+#| msgid "Leave..."
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Leave…"
+msgstr "છોડી દો..."
+
+#: menu.cpp:126
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Configure Display Settings…"
+msgstr ""
+
+#: menu.cpp:291
+#, fuzzy, kde-format
+#| msgid "Configure Contextual Menu Plugin"
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Configure Contextual Menu Plugin"
+msgstr "Contextual Menu Plugin ને રૂપરેખાંકિત કરો"
+
+#: menu.cpp:301
+#, fuzzy, kde-format
+#| msgid "[Other Actions]"
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "[Other Actions]"
+msgstr "[બીજી ક્રિયાઓ]"
+
+#: menu.cpp:304
+#, fuzzy, kde-format
+#| msgid "Wallpaper Actions"
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Wallpaper Actions"
+msgstr "વોલપેપર ક્રિયાઓ"
+
+#: menu.cpp:308
+#, fuzzy, kde-format
+#| msgid "[Separator]"
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "[Separator]"
+msgstr "[વિભાજક]"
+
+#, fuzzy
+#~| msgid "Run Command..."
+#~ msgctxt "plasma_containmentactions_contextmenu"
+#~ msgid "Run Command..."
+#~ msgstr "આદેશને ચલાવો..."

@@ -1,0 +1,79 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Andrew Coles <andrew_coles@yahoo.co.uk>, 2009.
+# Steve Allewell <steve.allewell@gmail.com>, 2014, 2019, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-11 00:47+0000\n"
+"PO-Revision-Date: 2022-09-18 12:09+0100\n"
+"Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
+"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.08.1\n"
+
+#: menu.cpp:99
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Show KRunner"
+msgstr "Show KRunner"
+
+#: menu.cpp:104
+#, kde-format
+msgid "Open Terminal"
+msgstr "Open Terminal"
+
+#: menu.cpp:108
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Lock Screen"
+msgstr "Lock Screen"
+
+#: menu.cpp:117
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Leave…"
+msgstr "Leave…"
+
+#: menu.cpp:126
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Configure Display Settings…"
+msgstr "Configure Display Settings…"
+
+#: menu.cpp:291
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Configure Contextual Menu Plugin"
+msgstr "Configure Contextual Menu Plugin"
+
+#: menu.cpp:301
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "[Other Actions]"
+msgstr "[Other Actions]"
+
+#: menu.cpp:304
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Wallpaper Actions"
+msgstr "Wallpaper Actions"
+
+#: menu.cpp:308
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "[Separator]"
+msgstr "[Separator]"
+
+#~ msgctxt "plasma_containmentactions_contextmenu"
+#~ msgid "Run Command..."
+#~ msgstr "Run Command..."
+
+#~ msgid "Add Panel"
+#~ msgstr "Add Panel"

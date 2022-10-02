@@ -1,0 +1,236 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Spanish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmstyle" lang="&language;">
+<articleinfo>
+
+<title
+>Estilo de los elementos gráficos</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+> <firstname
+>Rocío</firstname
+> <surname
+>Gallego</surname
+> <affiliation
+><address
+><email
+>traducciones@rociogallego.com</email
+></address
+></affiliation
+> <contrib
+>Traducción</contrib
+></othercredit
+><othercredit role="translator"
+> <firstname
+>Pablo</firstname
+> <surname
+>de Vicente</surname
+> <affiliation
+><address
+><email
+>pablo.devicente@gmail.com</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+> </othercredit
+> <othercredit role="translator"
+> <firstname
+>Marcos</firstname
+> <surname
+>Fouces Lago</surname
+> <affiliation
+><address
+><email
+>mfouces@yahoo.es</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+> </othercredit
+><othercredit role="translator"
+> <firstname
+>Cristina Yenyxe</firstname
+> <surname
+>González García</surname
+> <affiliation
+><address
+><email
+>the.blue.valkyrie@gmail.com</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+> </othercredit
+> 
+</authorgroup>
+
+<date
+>2018-03-18</date>
+<releaseinfo
+>Plasma 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Preferencias del sistema</keyword>
+<keyword
+>estilo</keyword>
+<keyword
+>elementos gráficos</keyword>
+</keywordset>
+</articleinfo>
+
+<variablelist>
+<varlistentry>
+<term
+>Introducción</term>
+<listitem>
+
+<para
+>Este módulo se usa para configurar el modo en el que Plasma muestra los widgets individuales.</para>
+
+<note
+><para
+>Un <emphasis
+>Widget (objeto visual)</emphasis
+> es un término de uso común entre los programadores para referirse a elementos del interfaz de usuario tales como botones, menús, y barras de desplazamiento. Puede pensar en ellos como las piezas fundamentales que se ensamblan para hacer su aplicación.</para
+></note>
+
+<para
+>Con este módulo puede configurar cómo se dibujan los elementos gráficos pero, para cambiar su color, consulte la sección titulada<ulink url="help:/kcontrol/color/index.html"
+>Colores</ulink
+>.</para>
+
+<para
+>Este panel se divide en dos pestañas: <guilabel
+>Aplicaciones</guilabel
+> y <guilabel
+>Ajuste fino</guilabel
+>.</para>
+
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>La pestaña <guilabel
+>Aplicaciones</guilabel
+></term>
+<listitem>
+<para
+>La lista desplegable superior, <guilabel
+>Estilo del widget</guilabel
+>, contiene una lista de estilos predefinidos. Cada estilo posee un nombre y una breve descripción.</para>
+
+<para
+>Para cambiar los estilos, seleccione un estilo en la lista desplegable para mostrar una vista previa del estilo en el cuadro que existe debajo de la lista.</para>
+
+<para
+>Si un estilo es configurable, se activará el botón <guibutton
+>Configurar...</guibutton
+> a la derecha de la lista desplegable y podrá usarlo para abrir un diálogo donde seleccionar más preferencias.</para>
+
+</listitem>
+</varlistentry>
+
+<varlistentry
+> 
+<term
+>La pestaña <guilabel
+>Ajuste fino</guilabel
+></term>
+<listitem>
+<variablelist>
+
+<varlistentry
+> 
+<term
+><guilabel
+>Mostrar iconos en botones</guilabel
+></term>
+<listitem>
+<para
+>Si se selecciona esta opción, los botones de acción (como <guibutton
+>Aceptar</guibutton
+> y <guibutton
+>Aplicar</guibutton
+>) tendrán un pequeño icono ubicado dentro de ellos para actuar como una referencia visual. Si esta opción no se selecciona solo aparecerá el texto en el botón.</para>
+</listitem
+> 
+</varlistentry
+> 
+
+<varlistentry
+> 
+<term
+><guilabel
+>Mostrar iconos en menús</guilabel
+></term>
+<listitem>
+<para
+>Si está seleccionada esta opción, las aplicaciones de &kde; mostrarán iconos pequeños en la mayor parte de los elementos del menú. Si esta opción no está seleccionada, en los menús aparecerá solo texto. Los cambios en la visibilidad de iconos del menú afectarán solo a las aplicaciones que se inicien después.</para>
+</listitem
+> 
+</varlistentry
+> 
+
+<varlistentry
+> 
+<term
+><guilabel
+>Posición del texto en la barra de herramientas principal</guilabel
+>, <guilabel
+>Posición del texto en la barra de herramientas secundaria</guilabel
+></term>
+<listitem>
+<para
+>Estas listas desplegables le permiten indicar la posición predefinida del texto del nombre del botón en ambas barras de herramientas. Si selecciona <guilabel
+>Sin texto</guilabel
+>, no habrá texto en los botones de la barra de herramientas. Si selecciona <guilabel
+>Solo texto</guilabel
+>, el icono de los botones será reemplazado por el texto del nombre del botón. Si selecciona <guilabel
+>Texto junto a iconos</guilabel
+>, el nombre del botón se ubicará a la <emphasis
+>derecha</emphasis
+> del icono. Si selecciona <guilabel
+>Texto bajo los iconos</guilabel
+>, por defecto el texto del botón estará <emphasis
+>debajo</emphasis
+> del icono.</para>
+
+<tip
+><para
+>Esta opción especifica la posición <emphasis
+>predefinida</emphasis
+>. Cada aplicación puede sobreescribir la opción de configuración elegida en este panel.</para
+></tip>
+</listitem
+> 
+</varlistentry
+> 
+
+</variablelist>
+
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+<para
+>El menú global se activa ahora automáticamente cuando coloca una miniaplicación de menú global en un panel o cuando añade el botón de menú a la decoración de la ventana en la pestaña <guilabel
+>Botones</guilabel
+> del módulo <guilabel
+>Decoraciones de la ventana</guilabel
+>. </para>
+
+</article>

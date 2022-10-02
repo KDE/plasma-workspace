@@ -1,0 +1,994 @@
+# Translation of klipper.po to Catalan (Valencian)
+# Copyright (C) 1998-2022 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Sebastià Pla i Sanz <sps@sastia.com>, 1998, 1999, 2000, 2001, 2002, 2004, 2005, 2006.
+# Albert Astals Cid <aacid@kde.org>, 2005.
+# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2012, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022.
+# Antoni Bella Pérez <antonibella5@yahoo.com>, 2013, 2015, 2020.
+# Empar Montoro Martín <montoro_mde@gva.es>, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-17 00:48+0000\n"
+"PO-Revision-Date: 2022-06-30 09:52+0200\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca@valencia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.12.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+
+#: configdialog.cpp:80
+#, kde-format
+msgid "Selection and Clipboard:"
+msgstr "Selecció i porta-retalls:"
+
+#: configdialog.cpp:87
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"When text or an area of the screen is highlighted with the mouse or "
+"keyboard, this is the <emphasis>selection</emphasis>. It can be pasted using "
+"the middle mouse button.<nl/><nl/>If the selection is explicitly copied "
+"using a <interface>Copy</interface> or <interface>Cut</interface> action, it "
+"is saved to the <emphasis>clipboard</emphasis>. It can be pasted using a "
+"<interface>Paste</interface> action. <nl/><nl/>When turned on this option "
+"keeps the selection and the clipboard the same, so that any selection is "
+"immediately available to paste by any means. If it is turned off, the "
+"selection may still be saved in the clipboard history (subject to the "
+"options below), but it can only be pasted using the middle mouse button."
+msgstr ""
+"Quan es ressalta text o una àrea de la pantalla amb el ratolí o el teclat, "
+"esta és la <emphasis>selecció</emphasis>. Es pot apegar utilitzant el botó "
+"del mig del ratolí.<nl/><nl/>Si la selecció es copia explícitament "
+"utilitzant l'acció <interface>Copia</interface> o <interface>Retalla</"
+"interface>, es guarda al <emphasis>porta-retalls</emphasis>. Es pot apegar "
+"utilitzant l'acció <interface>Apega</interface>. <nl/><nl/>Quan està "
+"activada, esta opció manté iguals la selecció i el porta-retalls de manera "
+"que qualsevol selecció està immediatament disponible per apegar de totes les "
+"maneres. Si està desactivada, la selecció encara es pot guardar en "
+"l'historial del porta-retalls (subjecte a les opcions de davall), però només "
+"es pot apegar utilitzant el botó central del ratolí."
+
+#: configdialog.cpp:106
+#, kde-format
+msgid "Clipboard history:"
+msgstr "Historial del porta-retalls:"
+
+#: configdialog.cpp:112
+#, kde-format
+msgctxt "Number of entries"
+msgid " entry"
+msgid_plural " entries"
+msgstr[0] " entrada"
+msgstr[1] " entrades"
+
+#: configdialog.cpp:131 configdialog.cpp:169
+#, kde-format
+msgid "Always save in history"
+msgstr "Guarda sempre en l'historial"
+
+#: configdialog.cpp:135
+#, kde-format
+msgid "Text selection:"
+msgstr "Seleccioneu el text:"
+
+#: configdialog.cpp:137 configdialog.cpp:175
+#, kde-format
+msgid "Only when explicitly copied"
+msgstr "Només quan es copie explícitament"
+
+#: configdialog.cpp:142
+#, kde-format
+msgid "Whether text selections are saved in the clipboard history."
+msgstr "Si les seleccions de text es guarden en l'historial del porta-retalls."
+
+#: configdialog.cpp:173
+#, kde-format
+msgid "Non-text selection:"
+msgstr "Seleccioneu el no text:"
+
+#: configdialog.cpp:180
+#, kde-format
+msgid "Never save in history"
+msgstr "No guardes mai en l'historial"
+
+#: configdialog.cpp:185
+#, kde-format
+msgid ""
+"Whether non-text selections (such as images) are saved in the clipboard "
+"history."
+msgstr ""
+"Si les seleccions de no text (p. ex. imatges) es guarden en l'historial del "
+"porta-retalls."
+
+#: configdialog.cpp:250
+#, kde-format
+msgid "Show action popup menu:"
+msgstr "Mostra el menú emergent d'acció:"
+
+#: configdialog.cpp:260
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"When text that matches an action pattern is selected or is chosen from the "
+"clipboard history, automatically show the popup menu with applicable "
+"actions. If the automatic menu is turned off here, or it is not shown for an "
+"excluded window, then it can be shown by using the <shortcut>%1</shortcut> "
+"key shortcut."
+msgstr ""
+"Quan el text que coincidisca amb un patró d'acció està seleccionat o es tria "
+"de l'historial del porta-retalls, mostra automàticament el menú emergent amb "
+"les accions aplicables. Si el menú automàtic es desactiva ací, o no es "
+"mostra per a una finestra exclosa, llavors es pot mostrar utilitzant la "
+"drecera de teclat <shortcut>%1</shortcut>."
+
+#: configdialog.cpp:269
+#, kde-format
+msgid "Exclude Windows..."
+msgstr "Exclou finestres..."
+
+#: configdialog.cpp:283
+#, kde-format
+msgctxt "Unit of time"
+msgid " second"
+msgid_plural " seconds"
+msgstr[0] " segon"
+msgstr[1] " segons"
+
+#: configdialog.cpp:284
+#, kde-format
+msgctxt "No timeout"
+msgid "None"
+msgstr "Cap"
+
+#: configdialog.cpp:293
+#, kde-format
+msgid "Options:"
+msgstr "Opcions:"
+
+#: configdialog.cpp:307
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The actions shown in the popup menu can be configured on the "
+"<interface>Actions Configuration</interface> page."
+msgstr ""
+"Les accions mostrades en el menú emergent es poden configurar a la pàgina "
+"<interface>Configuració d'accions</interface>."
+
+#: configdialog.cpp:335
+#, kde-format
+msgid "Exclude Windows"
+msgstr "Exclou les finestres"
+
+#: configdialog.cpp:365
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"When a <interface>match pattern</interface> matches the clipboard contents, "
+"its <interface>commands</interface> appear in the Klipper popup menu and can "
+"be executed."
+msgstr ""
+"Quan un <interface>patró de coincidència</interface> coincidix amb el "
+"contingut del porta-retalls, les seues <interface>ordres</interface> "
+"apareixen en el menú emergent de Klipper i es poden executar."
+
+#: configdialog.cpp:374
+#, kde-format
+msgctxt "@title:column"
+msgid "Match pattern and commands"
+msgstr "Patrons de coincidència i ordres"
+
+#: configdialog.cpp:374
+#, kde-format
+msgctxt "@title:column"
+msgid "Description"
+msgstr "Descripció"
+
+#: configdialog.cpp:380
+#, kde-format
+msgid "Add Action..."
+msgstr "Afig una acció..."
+
+#: configdialog.cpp:384
+#, kde-format
+msgid "Edit Action..."
+msgstr "Edita l'acció..."
+
+#: configdialog.cpp:389
+#, kde-format
+msgid "Delete Action"
+msgstr "Suprimix l'acció"
+
+#: configdialog.cpp:396
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"These actions appear in the popup menu which can be configured on the "
+"<interface>Action Menu</interface> page."
+msgstr ""
+"Estes accions apareixen en el menú emergent que es pot configurar a la "
+"pàgina <interface>Menú d'accions</interface>."
+
+#: configdialog.cpp:580
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Delete the selected action <resource>%1</resource><nl/>and all of its "
+"commands?"
+msgstr ""
+"Voleu suprimir l'acció seleccionada <resource>%1</resource><nl/>i totes les "
+"seues ordres?"
+
+#: configdialog.cpp:581
+#, kde-format
+msgid "Confirm Delete Action"
+msgstr "Confirma l'acció de supressió"
+
+#: configdialog.cpp:610
+#, kde-format
+msgctxt "General Config"
+msgid "General"
+msgstr "General"
+
+#: configdialog.cpp:610
+#, kde-format
+msgid "General Configuration"
+msgstr "Configuració general"
+
+#: configdialog.cpp:611
+#, kde-format
+msgctxt "Popup Menu Config"
+msgid "Action Menu"
+msgstr "Menú d'accions"
+
+#: configdialog.cpp:611
+#, kde-format
+msgid "Action Menu"
+msgstr "Menú d'accions"
+
+#: configdialog.cpp:612
+#, kde-format
+msgctxt "Actions Config"
+msgid "Actions Configuration"
+msgstr "Configuració de les accions"
+
+#: configdialog.cpp:612
+#, kde-format
+msgid "Actions Configuration"
+msgstr "Configuració de les accions"
+
+#: configdialog.cpp:615
+#, kde-format
+msgctxt "Shortcuts Config"
+msgid "Shortcuts"
+msgstr "Dreceres"
+
+#: configdialog.cpp:615
+#, kde-format
+msgid "Shortcuts Configuration"
+msgstr "Configuració de les dreceres"
+
+#: configdialog.cpp:693
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The action popup will not be shown automatically for these windows, even if "
+"it is enabled. This is because, for example, a web browser may highlight a "
+"URL in the address bar while typing, so the menu would show for every "
+"keystroke.<nl/><nl/>If the action menu appears unexpectedly when using a "
+"particular application, then add it to this list. <link>How to find the name "
+"to enter</link>."
+msgstr ""
+"L'emergent d'acció no es mostrarà automàticament per a estes finestres, "
+"encara que estiga habilitat. Açò es deu al fet que, per exemple, un "
+"navegador web pot ressaltar un URL en la barra d'adreces mentre s'escriu, de "
+"manera que el menú es mostrarà per a cada tecla.<nl/><nl/>Si el menú d'acció "
+"apareix inesperadament quan s'utilitza una aplicació en particular, llavors "
+"afegiu-la a esta llista. <link>Com trobar el nom per introduir</link>."
+
+# skip-rule: barb-igual
+#: configdialog.cpp:706
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"The name that needs to be entered here is the WM_CLASS name of the window to "
+"be excluded. To find the WM_CLASS name for a window, in another terminal "
+"window enter the command:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</"
+"icode><nl/><nl/>and click on the window that you want to exclude. The first "
+"name that it displays after the equal sign is the one that you need to enter."
+msgstr ""
+"El nom que s'ha d'introduir ací és el nom WM_CLASS de la finestra que "
+"s'exclou. Per a trobar el nom WM_CLASS per a una finestra, en una altra "
+"finestra de terminal introduïu l'ordre:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | "
+"grep WM_CLASS</icode><nl/><nl/>i feu clic en la finestra que voleu excloure. "
+"El primer nom que es mostra després del signe d'igual és el que heu "
+"d'introduir."
+
+#: editactiondialog.cpp:34 editcommanddialog.cpp:90
+#, kde-format
+msgid "Ignore"
+msgstr "Ignora"
+
+#: editactiondialog.cpp:36
+#, kde-format
+msgid "Replace Clipboard"
+msgstr "Substituïx en el porta-retalls"
+
+#: editactiondialog.cpp:38
+#, kde-format
+msgid "Add to Clipboard"
+msgstr "Afig al porta-retalls"
+
+#: editactiondialog.cpp:122
+#, kde-format
+msgid "Command"
+msgstr "Ordre"
+
+#: editactiondialog.cpp:124
+#, kde-format
+msgid "Output"
+msgstr "Eixida"
+
+#: editactiondialog.cpp:126
+#, kde-format
+msgid "Description"
+msgstr "Descripció"
+
+#: editactiondialog.cpp:179
+#, kde-format
+msgid "Action Properties"
+msgstr "Propietats de l'acció"
+
+#: editactiondialog.cpp:191
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"An action takes effect when its <interface>match pattern</interface> matches "
+"the clipboard contents. When this happens, the action's <interface>commands</"
+"interface> appear in the Klipper popup menu; if one of them is chosen, the "
+"command is executed."
+msgstr ""
+"Una acció té efecte quan el seu <interface>patró de coincidència</interface> "
+"coincidix amb el contingut del porta-retalls. Quan passa açò, les "
+"<interface>ordres</interface> de l'acció apareixen en el menú emergent de "
+"Klipper; si es tria una d'elles, s'executa l'ordre."
+
+#: editactiondialog.cpp:203
+#, kde-format
+msgid "Enter a pattern to match against the clipboard"
+msgstr "Introduïu un patró que coincidisca amb el porta-retalls"
+
+#: editactiondialog.cpp:205
+#, kde-format
+msgid "Match pattern:"
+msgstr "Patrons de coincidència:"
+
+#: editactiondialog.cpp:208
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The match pattern is a regular expression. For more information see the "
+"<link url=\"https://en.wikipedia.org/wiki/Regular_expression\">Wikipedia "
+"entry</link> for this topic."
+msgstr ""
+"El patró de coincidència és una expressió regular. Per a més informació, "
+"vegeu l'entrada <link url=\"https://ca.wikipedia.org/wiki/Expressi"
+"%C3%B3_regular\">Viquipèdia</link> per a este tema."
+
+#: editactiondialog.cpp:219
+#, kde-format
+msgid "Enter a description for the action"
+msgstr "Introduïu una descripció de l'acció"
+
+#: editactiondialog.cpp:220 editcommanddialog.cpp:84
+#, kde-format
+msgid "Description:"
+msgstr "Descripció:"
+
+#: editactiondialog.cpp:223
+#, kde-format
+msgid "Include in automatic popup"
+msgstr "Inclou en la finestra emergent automàtica"
+
+#: editactiondialog.cpp:227
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The commands for this match will be included in the automatic action popup, "
+"if it is enabled in the <interface>Action Menu</interface> page. If this "
+"option is turned off, the commands for this match will not be included in "
+"the automatic popup but they will be included if the popup is activated "
+"manually with the <shortcut>%1</shortcut> key shortcut."
+msgstr ""
+"Les ordres d'esta coincidència s'inclouran en la finestra emergent d'acció "
+"automàtica, si està activada a la pàgina <interface>Mení d'acció</"
+"interface>. Si esta opció està desactivada, les ordres d'esta coincidència "
+"no s'inclouran en la finestra emergent automàtica però s'inclouran si la "
+"finestra emergent s'activa manualment amb la drecera de teclat <shortcut>%1</"
+"shortcut>."
+
+#: editactiondialog.cpp:262
+#, kde-format
+msgid "Add Command..."
+msgstr "Afig una ordre..."
+
+#: editactiondialog.cpp:267
+#, kde-format
+msgid "Edit Command..."
+msgstr "Edita una ordre..."
+
+#: editactiondialog.cpp:273
+#, kde-format
+msgid "Delete Command"
+msgstr "Suprimix l'ordre"
+
+#: editactiondialog.cpp:389
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Delete the selected command <resource>%1</resource>?"
+msgstr "Voleu suprimir l'ordre seleccionada <resource>%1</resource>?"
+
+#: editactiondialog.cpp:390
+#, kde-format
+msgid "Confirm Delete Command"
+msgstr "Confirma l'ordre de supressió"
+
+#: editcommanddialog.cpp:47
+#, kde-format
+msgid "Command Properties"
+msgstr "Propietats de l'ordre"
+
+#: editcommanddialog.cpp:60
+#, kde-format
+msgid "Enter the command and arguments"
+msgstr "Introduïu l'ordre i els arguments"
+
+#: editcommanddialog.cpp:63
+#, kde-format
+msgid "Command:"
+msgstr "Ordre:"
+
+#: editcommanddialog.cpp:72
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"A <placeholder>&#37;s</placeholder> in the command will be replaced by the "
+"complete clipboard contents. <placeholder>&#37;0</placeholder> through "
+"<placeholder>&#37;9</placeholder> will be replaced by the corresponding "
+"captured texts from the match pattern."
+msgstr ""
+"Un <placeholder>&#37;s</placeholder> en l'ordre serà substituït pel "
+"contingut complet del porta-retalls. Els <placeholder>&#37;0</placeholder> "
+"fins a <placeholder>&#37;9</placeholder> seran substituïts pels textos "
+"capturats corresponents del patró de coincidència."
+
+#: editcommanddialog.cpp:82
+#, kde-format
+msgid "Enter a description for the command"
+msgstr "Introduïu una descripció de l'ordre"
+
+#: editcommanddialog.cpp:92
+#, kde-format
+msgid "Output from command:"
+msgstr "Eixida de l'ordre:"
+
+#: editcommanddialog.cpp:94
+#, kde-format
+msgid "Replace current clipboard"
+msgstr "Substituïx en el porta-retalls actual"
+
+#: editcommanddialog.cpp:98
+#, kde-format
+msgid "Append to clipboard"
+msgstr "Afig al porta-retalls"
+
+#: editcommanddialog.cpp:102
+#, kde-format
+msgid "What happens to the standard output of the command executed."
+msgstr "Què passa a l'eixida estàndard de l'ordre executada."
+
+#: editcommanddialog.cpp:116
+#, kde-format
+msgid "Reset the icon to the default for the command"
+msgstr "Reinicia la icona al valor predeterminat per a l'ordre."
+
+#: editcommanddialog.cpp:122
+#, kde-format
+msgid "Icon:"
+msgstr "Icona:"
+
+#: historyimageitem.cpp:39
+#, kde-format
+msgid "%1x%2 %3bpp"
+msgstr "%1x%2 %3bpp"
+
+#: klipper.cpp:153
+#, kde-format
+msgctxt "@action:inmenu Toggle automatic action"
+msgid "Automatic Action Popup Menu"
+msgstr "Menú emergent d'acció automàtica"
+
+#: klipper.cpp:176
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "C&lear Clipboard History"
+msgstr "Neteja &l'historial del porta-retalls"
+
+#: klipper.cpp:183
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&Configure Klipper…"
+msgstr "&Configura Klipper…"
+
+#: klipper.cpp:189
+#, kde-format
+msgctxt "@action:inmenu Quit Klipper"
+msgid "&Quit"
+msgstr "I&x"
+
+#: klipper.cpp:194
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Manually Invoke Action on Current Clipboard"
+msgstr "Invoca manualment una acció al porta-retalls actual"
+
+#: klipper.cpp:202
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&Edit Contents…"
+msgstr "&Edita el contingut…"
+
+#: klipper.cpp:210
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&Show Barcode…"
+msgstr "Mo&stra el codi de barres…"
+
+#: klipper.cpp:218
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Next History Item"
+msgstr "Element següent de l'historial"
+
+#: klipper.cpp:222
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Previous History Item"
+msgstr "Element anterior de l'historial"
+
+#: klipper.cpp:228
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Klipper at Mouse Position"
+msgstr "Obri Klipper a la posició del ratolí"
+
+#: klipper.cpp:540
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"You can enable URL actions later in the <interface>Actions</interface> page "
+"of the Clipboard applet's configuration window"
+msgstr ""
+"Més tard podreu habilitar accions d'URL a la pàgina <interface>Accions</"
+"interface> de la finestra de configuració de la miniaplicació de porta-"
+"retalls"
+
+#: klipper.cpp:579
+#, kde-format
+msgid "Should Klipper start automatically when you login?"
+msgstr "Klipper ha d'iniciar automàticament en connectar-vos?"
+
+#: klipper.cpp:580
+#, kde-format
+msgid "Automatically Start Klipper?"
+msgstr "Voleu iniciar Klipper automàticament?"
+
+#: klipper.cpp:581
+#, kde-format
+msgid "Start"
+msgstr "Inicia"
+
+#: klipper.cpp:582
+#, kde-format
+msgid "Do Not Start"
+msgstr "No inicies"
+
+#: klipper.cpp:929
+#, kde-format
+msgid "Edit Contents"
+msgstr "Edita el contingut"
+
+#: klipper.cpp:996
+#, kde-format
+msgid "Mobile Barcode"
+msgstr "Codi de barres del mòbil"
+
+#: klipper.cpp:1043
+#, kde-format
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "Segur que voleu netejar i suprimir tot l'historial del porta-retalls?"
+
+#: klipper.cpp:1044
+#, kde-format
+msgid "Clear Clipboard History"
+msgstr "Neteja l'historial del porta-retalls"
+
+#: klipper.cpp:1060 klipper.cpp:1069
+#, kde-format
+msgid "Clipboard history"
+msgstr "Historial del porta-retalls"
+
+#: klipper.cpp:1086
+#, kde-format
+msgid "up"
+msgstr "amunt"
+
+#: klipper.cpp:1093
+#, kde-format
+msgid "current"
+msgstr "actual"
+
+#: klipper.cpp:1100
+#, kde-format
+msgid "down"
+msgstr "avall"
+
+#. i18n: ectx: label, entry (Version), group (General)
+#: klipper.kcfg:10
+#, kde-format
+msgid "Klipper version"
+msgstr "Versió de Klipper"
+
+#. i18n: ectx: label, entry (KeepClipboardContents), group (General)
+#: klipper.kcfg:13
+#, kde-format
+msgid "Save history across desktop sessions"
+msgstr "Guarda l'historial entre les sessions d'escriptori"
+
+#. i18n: ectx: tooltip, entry (KeepClipboardContents), group (General)
+#: klipper.kcfg:15
+#, kde-format
+msgid ""
+"Retain the clipboard history, so it will be available the next time you log "
+"in."
+msgstr ""
+"Manté l'historial del porta-retalls, així que estarà disponible la vegada "
+"següent que inicieu la sessió."
+
+#. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
+#: klipper.kcfg:18
+#, kde-format
+msgid "Prevent the clipboard from being cleared"
+msgstr "Evita que el porta-retalls es netege"
+
+#. i18n: ectx: whatsthis, entry (PreventEmptyClipboard), group (General)
+#: klipper.kcfg:20
+#, kde-format
+msgid ""
+"Do not allow the clipboard to be cleared, for example when an application "
+"exits."
+msgstr ""
+"No permet que es netege el porta-retalls, per exemple, quan es tanque una "
+"aplicació."
+
+#. i18n: ectx: label, entry (SyncClipboards), group (General)
+#: klipper.kcfg:27
+#, kde-format
+msgid "Keep the selection and clipboard the same"
+msgstr "Manté iguals la selecció i el porta-retalls"
+
+#. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
+#: klipper.kcfg:29
+#, kde-format
+msgid ""
+"Content selected with the cursor is automatically copied to the clipboard so "
+"that it can be pasted with either a Paste action or a middle-click.<br/><a "
+"href=\"1\">More about the selection and clipboard</a>."
+msgstr ""
+"El contingut seleccionat amb el cursor es copia automàticament al porta-"
+"retalls, de manera que es pot apegar amb una acció Apega o amb un clic del "
+"mig.<br/><a href=\"1\">Més quant a la selecció i el porta-retalls</a>."
+
+#. i18n: ectx: label, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:32
+#, kde-format
+msgid "Ignore the selection"
+msgstr "Ignora la selecció"
+
+#. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:34
+#, kde-format
+msgid ""
+"Content selected with the cursor but not explicitly copied to the clipboard "
+"is not automatically stored in the clipboard history, and can only be pasted "
+"using a middle-click."
+msgstr ""
+"El contingut seleccionat amb el cursor però no copiat explícitament al porta-"
+"retalls no s'emmagatzema automàticament en l'historial del porta-retalls, i "
+"només es pot apegar utilitzant un clic del mig."
+
+#. i18n: ectx: label, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:37
+#, kde-format
+msgid "Text selection only"
+msgstr "Selecciona només el text"
+
+#. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:39
+#, kde-format
+msgid ""
+"Only store text selections in the clipboard history, not images or any other "
+"type of data."
+msgstr ""
+"Emmagatzema només les seleccions de text en l'historial del porta-retalls, "
+"no les imatges ni cap altre tipus de dades."
+
+#. i18n: ectx: label, entry (IgnoreImages), group (General)
+#: klipper.kcfg:42
+#, kde-format
+msgid "Always ignore images"
+msgstr "Ignora sempre les imatges"
+
+#. i18n: ectx: whatsthis, entry (IgnoreImages), group (General)
+#: klipper.kcfg:44
+#, kde-format
+msgid ""
+"Do not store images in the clipboard history, even if explicitly copied."
+msgstr ""
+"No emmagatzema imatges en l'historial del porta-retalls, encara que es "
+"copien explícitament."
+
+#. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
+#: klipper.kcfg:47
+#, kde-format
+msgid "Use graphical regexp editor"
+msgstr "Utilitza un editor gràfic d'expressions regulars"
+
+#. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
+#: klipper.kcfg:51
+#, kde-format
+msgid "Immediately on selection"
+msgstr "Immediatament en la selecció"
+
+#. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
+#: klipper.kcfg:52
+#, kde-format
+msgid ""
+"Show the popup menu of applicable actions as soon as a selection is made."
+msgstr ""
+"Mostra el menú emergent de les accions aplicables tan prompte com es faça "
+"una selecció."
+
+#. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
+#: klipper.kcfg:57
+#, kde-format
+msgid "No actions for WM_CLASS"
+msgstr "Sense accions per a WM_CLASS"
+
+#. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:60
+#, kde-format
+msgid "Automatic action menu time:"
+msgstr "Temps del menú emergent d'acció automàtica:"
+
+#. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:64
+#, kde-format
+msgid "Display the automatic action popup menu for this time."
+msgstr "Mostra el menú emergent d'acció automàtica durant este temps."
+
+#. i18n: ectx: label, entry (MaxClipItems), group (General)
+#: klipper.kcfg:67
+#, kde-format
+msgid "History size:"
+msgstr "Mida de l'historial:"
+
+#. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
+#: klipper.kcfg:71
+#, kde-format
+msgid "The clipboard history will store up to this many items."
+msgstr "L'historial del porta-retalls emmagatzemarà esta quantitat d'elements."
+
+#. i18n: ectx: label, entry (ActionList), group (General)
+#: klipper.kcfg:74
+#, kde-format
+msgid "Dummy entry for indicating changes in an action's tree widget"
+msgstr "Entrada fictícia per a indicar canvis en un giny d'arbre d'accions"
+
+#. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:87
+#, kde-format
+msgid "Trim whitespace from selection"
+msgstr "Elimina els espais en blanc de la selecció"
+
+#. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:89
+#, kde-format
+msgid ""
+"Remove any whitespace from the start and end of selected text, before "
+"performing an action. For example, this ensures that a URL pasted in a "
+"browser is interpreted as expected. The text saved on the clipboard is not "
+"affected."
+msgstr ""
+"Elimina qualsevol espai en blanc inicial i final del text seleccionat abans "
+"de realitzar una acció. Per exemple, açò assegura que un URL apegat en un "
+"navegador s'interpreta com s'esperava. El text guardat al porta-retalls no "
+"està afectat."
+
+#. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
+#: klipper.kcfg:92
+#, kde-format
+msgid "For an item chosen from history"
+msgstr "Per a un element triat de l'historial"
+
+#. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
+#: klipper.kcfg:94
+#, kde-format
+msgid ""
+"Show the popup menu of applicable actions if an entry is chosen from the "
+"clipboard history."
+msgstr ""
+"Mostra el menú emergent de les accions aplicables si es tria una entrada en "
+"l'historial del porta-retalls."
+
+#. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
+#: klipper.kcfg:97
+#, kde-format
+msgid "Include MIME actions"
+msgstr "Inclou les accions MIME"
+
+#. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
+#: klipper.kcfg:99
+#, kde-format
+msgid ""
+"If a file name or URL is selected, include applications that can accept its "
+"MIME type in the popup menu."
+msgstr ""
+"Si se selecciona un nom de fitxer o URL, s'inclouen les aplicacions que "
+"poden gestionar el seu tipus MIME en el menú emergent."
+
+#: klipperpopup.cpp:110
+#, kde-format
+msgid "Klipper - Clipboard Tool"
+msgstr "Klipper - Eina de porta-retalls"
+
+#: klipperpopup.cpp:114
+#, kde-format
+msgid "Search…"
+msgstr "Busca…"
+
+#: klipperpopup.cpp:123 main.cpp:29
+#, kde-format
+msgid "KDE cut & paste history utility"
+msgstr "Utilitat de l'historial per a retallar i apegar de KDE"
+
+#: klipperpopup.cpp:187
+#, kde-format
+msgid "Invalid regular expression, %1"
+msgstr "Expressió regular no vàlida: %1"
+
+#: klipperpopup.cpp:193 tray.cpp:25 tray.cpp:53
+#, kde-format
+msgid "Clipboard is empty"
+msgstr "El porta-retalls està buit"
+
+#: klipperpopup.cpp:195
+#, kde-format
+msgid "No matches"
+msgstr "Sense coincidències"
+
+#: main.cpp:27 tray.cpp:22
+#, kde-format
+msgid "Klipper"
+msgstr "Klipper"
+
+#: main.cpp:31
+#, kde-format
+msgid ""
+"(c) 1998, Andrew Stanley-Jones\n"
+"1998-2002, Carsten Pfeiffer\n"
+"2001, Patrick Dubroy"
+msgstr ""
+"(c) 1998, Andrew Stanley-Jones\n"
+"1998-2002, Carsten Pfeiffer\n"
+"2001, Patrick Dubroy"
+
+#: main.cpp:34
+#, kde-format
+msgid "Carsten Pfeiffer"
+msgstr "Carsten Pfeiffer"
+
+#: main.cpp:34
+#, kde-format
+msgid "Author"
+msgstr "Autoria"
+
+#: main.cpp:36
+#, kde-format
+msgid "Andrew Stanley-Jones"
+msgstr "Andrew Stanley-Jones"
+
+#: main.cpp:36
+#, kde-format
+msgid "Original Author"
+msgstr "Autor original"
+
+#: main.cpp:38
+#, kde-format
+msgid "Patrick Dubroy"
+msgstr "Patrick Dubroy"
+
+#: main.cpp:38
+#, kde-format
+msgid "Contributor"
+msgstr "Col·laborador"
+
+#: main.cpp:40
+#, kde-format
+msgid "Luboš Luňák"
+msgstr "Luboš Luňák"
+
+#: main.cpp:40
+#, kde-format
+msgid "Bugfixes and optimizations"
+msgstr "Correccions d'errors i optimitzacions"
+
+#: main.cpp:42
+#, kde-format
+msgid "Esben Mose Hansen"
+msgstr "Esben Mose Hansen"
+
+#: main.cpp:42
+#, kde-format
+msgid "Previous Maintainer"
+msgstr "Mantenidor anterior"
+
+#: main.cpp:44
+#, kde-format
+msgid "Martin Gräßlin"
+msgstr "Martin Gräßlin"
+
+#: main.cpp:44
+#, kde-format
+msgid "Maintainer"
+msgstr "Mantenidor"
+
+#: main.cpp:46
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Empar Montoro Martín,Sebastià Pla i Sanz"
+
+#: main.cpp:46
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "montoro_mde@gva.es,sps@sastia.com"
+
+#: popupproxy.cpp:145
+#, kde-format
+msgid "&More"
+msgstr "&Més"
+
+#: tray.cpp:25
+#, kde-format
+msgid "Clipboard Contents"
+msgstr "Contingut del porta-retalls"
+
+#: urlgrabber.cpp:198
+#, kde-format
+msgid "Disable This Popup"
+msgstr "Desactiva este emergent"
+
+#: urlgrabber.cpp:204
+#, kde-format
+msgid "&Cancel"
+msgstr "&Cancel·la"

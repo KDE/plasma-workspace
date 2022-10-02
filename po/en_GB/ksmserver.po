@@ -1,0 +1,280 @@
+# translation of ksmserver.po to British English
+# Copyright (C) 2003, 2004, 2005, 2008 Free Software Foundation, Inc.
+#
+# Malcolm Hunter <malcolm.hunter@gmx.co.uk>, 2003, 2004, 2008.
+# Andrew Coles <andrew_coles@yahoo.co.uk>, 2004, 2005, 2009, 2010.
+# Steve Allewell <steve.allewell@gmail.com>, 2014, 2015, 2018, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: ksmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-22 00:47+0000\n"
+"PO-Revision-Date: 2020-06-06 14:55+0100\n"
+"Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
+"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.04.1\n"
+
+#: logout.cpp:344
+#, kde-format
+msgid "Logout canceled by '%1'"
+msgstr "Logout cancelled by '%1'"
+
+#: main.cpp:117
+#, kde-format
+msgid "$HOME not set!"
+msgstr "$HOME not set!"
+
+#: main.cpp:121 main.cpp:127
+#, kde-format
+msgid "$HOME directory (%1) does not exist."
+msgstr "$HOME directory (%1) does not exist."
+
+#: main.cpp:123
+#, kde-format
+msgid "No write access to $HOME directory (%1)."
+msgstr "No write access to $HOME directory (%1)."
+
+#: main.cpp:129
+#, kde-format
+msgid "No read access to $HOME directory (%1)."
+msgstr "No read access to $HOME directory (%1)."
+
+#: main.cpp:133
+#, kde-format
+msgid "$HOME directory (%1) is out of disk space."
+msgstr "$HOME directory (%1) is out of disk space."
+
+#: main.cpp:136
+#, kde-format
+msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+msgstr "Writing to the $HOME directory (%2) failed with the error '%1'"
+
+#: main.cpp:149 main.cpp:184
+#, kde-format
+msgid "No write access to '%1'."
+msgstr "No write access to '%1'."
+
+#: main.cpp:151 main.cpp:186
+#, kde-format
+msgid "No read access to '%1'."
+msgstr "No read access to '%1'."
+
+#: main.cpp:159 main.cpp:172
+#, kde-format
+msgid "Temp directory (%1) is out of disk space."
+msgstr "Temp directory (%1) is out of disk space."
+
+#: main.cpp:162 main.cpp:175
+#, kde-format
+msgid ""
+"Writing to the temp directory (%2) failed with\n"
+"    the error '%1'"
+msgstr ""
+"Writing to the temp directory (%2) failed with\n"
+"    the error '%1'"
+
+#: main.cpp:190
+#, kde-format
+msgid ""
+"The following installation problem was detected\n"
+"while trying to start Plasma:"
+msgstr ""
+"The following installation problem was detected\n"
+"while trying to start Plasma:"
+
+#: main.cpp:193
+#, kde-format
+msgid ""
+"\n"
+"\n"
+"Plasma is unable to start.\n"
+msgstr ""
+"\n"
+"\n"
+"Plasma is unable to start.\n"
+
+#: main.cpp:200
+#, kde-format
+msgid "Plasma Workspace installation problem!"
+msgstr "Plasma Workspace installation problem!"
+
+#: main.cpp:236
+#, kde-format
+msgid ""
+"The reliable Plasma session manager that talks the standard X11R6 \n"
+"session management protocol (XSMP)."
+msgstr ""
+"The reliable Plasma session manager that talks the standard X11R6 \n"
+"session management protocol (XSMP)."
+
+#: main.cpp:240
+#, kde-format
+msgid "Restores the saved user session if available"
+msgstr "Restores the saved user session if available"
+
+#: main.cpp:243
+#, kde-format
+msgid "Also allow remote connections"
+msgstr "Also allow remote connections"
+
+#: main.cpp:246
+#, kde-format
+msgid "Starts the session in locked mode"
+msgstr "Starts the session in locked mode"
+
+#: main.cpp:250
+#, kde-format
+msgid ""
+"Starts without lock screen support. Only needed if other component provides "
+"the lock screen."
+msgstr ""
+"Starts without lock screen support. Only needed if other component provides "
+"the lock screen."
+
+#: server.cpp:873
+#, kde-format
+msgid "Session Management"
+msgstr "Session Management"
+
+#: server.cpp:876
+#, kde-format
+msgid "Log Out"
+msgstr "Log Out"
+
+#: server.cpp:881
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "Log Out Without Confirmation"
+
+#: server.cpp:886
+#, kde-format
+msgid "Halt Without Confirmation"
+msgstr "Halt Without Confirmation"
+
+#: server.cpp:891
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "Reboot Without Confirmation"
+
+#~ msgid ""
+#~ "Starts <wm> in case no other window manager is \n"
+#~ "participating in the session. Default is 'kwin'"
+#~ msgstr ""
+#~ "Starts <wm> in case no other window manager is \n"
+#~ "participating in the session. Default is 'kwin'"
+
+#~ msgid "wm"
+#~ msgstr "wm"
+
+#~ msgid "Shut Down"
+#~ msgstr "Shut Down"
+
+#~ msgid "Reboot"
+#~ msgstr "Reboot"
+
+#~ msgid "Logout"
+#~ msgstr "Logout"
+
+#~ msgid "Sleeping in 1 second"
+#~ msgid_plural "Sleeping in %1 seconds"
+#~ msgstr[0] "Sleeping in 1 second"
+#~ msgstr[1] "Sleeping in %1 seconds"
+
+#~ msgid "Lock"
+#~ msgstr "Lock"
+
+#~ msgid "ksmserver"
+#~ msgstr "ksmserver"
+
+#~ msgid "Turn off"
+#~ msgstr "Turn off"
+
+#~ msgid "Logging out in 1 second."
+#~ msgid_plural "Logging out in %1 seconds."
+#~ msgstr[0] "Logging out in 1 second."
+#~ msgstr[1] "Logging out in %1 seconds."
+
+#~ msgid "Turning off computer in 1 second."
+#~ msgid_plural "Turning off computer in %1 seconds."
+#~ msgstr[0] "Turning off computer in 1 second."
+#~ msgstr[1] "Turning off computer in %1 seconds."
+
+#~ msgid "Restarting computer in 1 second."
+#~ msgid_plural "Restarting computer in %1 seconds."
+#~ msgstr[0] "Restarting computer in 1 second."
+#~ msgstr[1] "Restarting computer in %1 seconds."
+
+#, fuzzy
+#~| msgid "&Turn Off Computer"
+#~ msgid "Turn Off Computer"
+#~ msgstr "&Turn Off Computer"
+
+#, fuzzy
+#~| msgid "&Restart Computer"
+#~ msgid "Restart Computer"
+#~ msgstr "&Restart Computer"
+
+#~ msgctxt "default option in boot loader"
+#~ msgid " (default)"
+#~ msgstr " (default)"
+
+#, fuzzy
+#~| msgid "&Cancel"
+#~ msgid "Cancel"
+#~ msgstr "&Cancel"
+
+#~ msgid "&Standby"
+#~ msgstr "&Standby"
+
+#~ msgid "Suspend to &RAM"
+#~ msgstr "Suspend to &RAM"
+
+#~ msgid "Suspend to &Disk"
+#~ msgstr "Suspend to &Disk"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Ken Knight"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "anarchist_tomato@herzeleid.net"
+
+#~ msgid "(C) 2000, The KDE Developers"
+#~ msgstr "(C) 2000, The KDE Developers"
+
+#~ msgid "Matthias Ettrich"
+#~ msgstr "Matthias Ettrich"
+
+#~ msgid "Luboš Luňák"
+#~ msgstr "Luboš Luňák"
+
+#~ msgid "Maintainer"
+#~ msgstr "Maintainer"
+
+#~ msgctxt "current option in boot loader"
+#~ msgid " (current)"
+#~ msgstr " (current)"
+
+#~ msgctxt "@label In corner of the logout dialog"
+#~ msgid "KDE <numid>%1.%2.%3</numid>"
+#~ msgstr "KDE <numid>%1.%2.%3</numid>"
+
+#~ msgctxt "@label In corner of the logout dialog"
+#~ msgid "KDE <numid>%1.%2</numid>"
+#~ msgstr "KDE <numid>%1.%2</numid>"
+
+#~ msgid "End Session for %1"
+#~ msgstr "End Session for %1"
+
+#~ msgid "End Session for %1 (%2)"
+#~ msgstr "End Session for %1 (%2)"
+
+#, fuzzy
+#~ msgid "End Current Session"
+#~ msgstr "&End Current Session"

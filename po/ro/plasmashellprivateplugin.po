@@ -1,0 +1,183 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# Sergiu Bivol <sergiu@cip.md>, 2020, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-03 00:48+0000\n"
+"PO-Revision-Date: 2022-06-01 18:44+0100\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Sergiu Bivol"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "sergiu@cip.md"
+
+#: calendar/eventdatadecorator.cpp:51
+#, kde-format
+msgctxt "Agenda listview section title"
+msgid "Holidays"
+msgstr "Sărbători"
+
+#: calendar/eventdatadecorator.cpp:53
+#, kde-format
+msgctxt "Agenda listview section title"
+msgid "Events"
+msgstr "Evenimente"
+
+#: calendar/eventdatadecorator.cpp:55
+#, kde-format
+msgctxt "Agenda listview section title"
+msgid "Todo"
+msgstr "Obiective"
+
+#: calendar/eventdatadecorator.cpp:57
+#, kde-format
+msgctxt "Means 'Other calendar items'"
+msgid "Other"
+msgstr "Altele"
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:10
+#, kde-format
+msgid "Screen lock enabled"
+msgstr "Blocare ecran activată"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:11
+#, kde-format
+msgid "Sets whether the screen will be locked after the specified time."
+msgstr "Stabilește dacă ecranul va fi blocat după timpul specificat."
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:16
+#, kde-format
+msgid "Screen saver timeout"
+msgstr "Temporizarea protecției de ecran"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:17
+#, kde-format
+msgid "Sets the minutes after which the screen is locked."
+msgstr "Stabilește după câte minute se va bloca ecranul."
+
+#: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
+#, kde-format
+msgid "New Session"
+msgstr "Sesiune nouă"
+
+#: shellprivate/widgetexplorer/kcategorizeditemsviewmodels.cpp:64
+#, kde-format
+msgid "Filters"
+msgstr "Filtre"
+
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:42
+#, kde-format
+msgid "Select Plasmoid File"
+msgstr "Alege fișierul cu plasmoid"
+
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:66
+#, kde-format
+msgid "Installing the package %1 failed."
+msgstr "Instalarea pachetului %1 a eșuat."
+
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:66
+#, kde-format
+msgid "Installation Failure"
+msgstr "Instalare eșuată"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:110
+#, kde-format
+msgid "All Widgets"
+msgstr "Toate controalele grafice"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:114
+#, kde-format
+msgid "Running"
+msgstr "Rulează"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:118
+#, kde-format
+msgctxt ""
+"@item:inmenu used in the widget filter. Filter widgets that can be un-"
+"installed from the system, which are usually installed by the user to a "
+"local place."
+msgid "Uninstallable"
+msgstr "Dezinstalabil"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:122
+#, kde-format
+msgid "Categories:"
+msgstr "Categorii:"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:199
+#, kde-format
+msgid "Download New Plasma Widgets"
+msgstr "Descarcă controale Plasma noi"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:208
+#, kde-format
+msgid "Install Widget From Local File…"
+msgstr "Instalează control din fișier local…"
+
+#~ msgid "&Execute"
+#~ msgstr "&Execută"
+
+#~ msgctxt "Toolbar Button to switch to Plasma Scripting Mode"
+#~ msgid "Plasma"
+#~ msgstr "Plasma"
+
+#~ msgctxt "Toolbar Button to switch to KWin Scripting Mode"
+#~ msgid "KWin"
+#~ msgstr "KWin"
+
+#~ msgid "Templates"
+#~ msgstr "Șabloane"
+
+#~ msgid "Desktop Shell Scripting Console"
+#~ msgstr "Consolă de scripturi pentru învelișul de birou"
+
+#~ msgid "Editor"
+#~ msgstr "Redactor"
+
+#~ msgid "Load"
+#~ msgstr "Încarcă"
+
+#~ msgid "Use"
+#~ msgstr "Folosește"
+
+#~ msgid "Output"
+#~ msgstr "Rezultat"
+
+#~ msgid "Unable to load script file <b>%1</b>"
+#~ msgstr "Nu s-a putut încărca fișierul-script: <b>%1</b>"
+
+#~ msgid "Open Script File"
+#~ msgstr "Deschide fișier cu script"
+
+#~ msgid "Save Script File"
+#~ msgstr "Salvează fișier cu script"
+
+#~ msgid "Executing script at %1"
+#~ msgstr "Se execută script la %1"
+
+#~ msgid "Runtime: %1ms"
+#~ msgstr "Timp de rulare: %1ms"
+
+#~ msgid "Download Wallpaper Plugins"
+#~ msgstr "Descarcă extensii pentru tapet"

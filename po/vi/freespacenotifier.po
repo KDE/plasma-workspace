@@ -1,0 +1,84 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Phu Hung Nguyen <phu.nguyen@kdemail.net>, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-10-20 00:19+0000\n"
+"PO-Revision-Date: 2021-05-26 21:11+0200\n"
+"Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
+"Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 20.08.1\n"
+
+#: freespacenotifier.cpp:91
+#, kde-format
+msgid "Configure Warning…"
+msgstr "Cấu hình cảnh báo…"
+
+#: freespacenotifier.cpp:95
+#, kde-format
+msgid "Open in Filelight"
+msgstr "Mở trong Filelight"
+
+#: freespacenotifier.cpp:98
+#, kde-format
+msgid "Open in File Manager"
+msgstr "Mở trong Trình quản lí tệp"
+
+#. i18n: ectx: label, entry (minimumSpace), group (General)
+#: freespacenotifier.kcfg:9
+#, kde-format
+msgid "Minimum free space before user starts being notified."
+msgstr ""
+"Không gian trống thấp nhất trước khi người dùng bắt đầu được thông báo."
+
+#. i18n: ectx: label, entry (enableNotification), group (General)
+#: freespacenotifier.kcfg:15
+#, kde-format
+msgid "Is the free space notification enabled."
+msgstr "Thông báo không gian trống có được bật không."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
+#: freespacenotifier_prefs_base.ui:17
+#, kde-format
+msgid "Enable low disk space warning"
+msgstr "Bật cảnh báo không gian đĩa còn ít"
+
+#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
+#: freespacenotifier_prefs_base.ui:27
+#, kde-format
+msgid "Warn when free space is below:"
+msgstr "Cảnh báo khi không gian trống còn dưới:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
+#: freespacenotifier_prefs_base.ui:37
+#, kde-format
+msgid " MiB"
+msgstr " MiB"
+
+#: module.cpp:37
+#, kde-format
+msgid ""
+"Your Home folder is running out of disk space, you have %1 MiB remaining "
+"(%2%)."
+msgstr "Thư mục Nhà của bạn đang dần hết chỗ, bạn còn có %1 MiB (%2%)."
+
+#: module.cpp:46
+#, kde-format
+msgid ""
+"Your Root partition is running out of disk space, you have %1 MiB remaining "
+"(%2%)."
+msgstr "Phân vùng Gốc của bạn đang dần hết chỗ, bạn còn có %1 MiB (%2%)."
+
+#: module.cpp:63
+#, kde-format
+msgctxt "The settings dialog main page name, as in 'general settings'"
+msgid "General"
+msgstr "Chung"

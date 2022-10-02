@@ -1,0 +1,34 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_engine_notifications\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"PO-Revision-Date: 2009-06-05 10:34+0800\n"
+"Last-Translator: Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv "
+"dot tw>\n"
+"Language-Team: Chinese Traditional <zh-l10n@lists.linux.org.tw>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 0.3\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: notificationaction.cpp:24
+#, kde-format
+msgid "The notification dataEngine is not set."
+msgstr "通知資料引擎尚未設定。"
+
+#: notificationaction.cpp:34
+#, kde-format
+msgid "Invalid destination: %1"
+msgstr "不合法的目的：%1"
+
+#: notificationsengine.cpp:88
+#, kde-format
+msgid "Unknown Application"
+msgstr "未知的應用程式"

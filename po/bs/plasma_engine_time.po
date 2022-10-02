@@ -1,0 +1,69 @@
+# Bosnian translation for bosnianuniversetranslation
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
+# This file is distributed under the same license as the bosnianuniversetranslation package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bosnianuniversetranslation\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"PO-Revision-Date: 2015-02-15 12:42+0000\n"
+"Last-Translator: Samir Ribić <Unknown>\n"
+"Language-Team: Bosnian <bs@li.org>\n"
+"Language: bs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2015-02-16 06:46+0000\n"
+"X-Generator: Launchpad (build 17341)\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: timesource.cpp:46
+msgid "Local"
+msgstr "Lokalno"
+
+#: timesource.cpp:61
+msgid "Timezone"
+msgstr "Vremenska zona"
+
+#: timesource.cpp:66 timesource.cpp:69 timesource.cpp:73
+msgid "Timezone City"
+msgstr "Grad vremenske zone"
+
+#: timesource.cpp:68 timesource.cpp:71
+msgid "Timezone Continent"
+msgstr "Kontinent vremenske zone"
+
+#: timesource.cpp:72
+msgid "Timezone Country"
+msgstr "Država vremenske zone"
+
+#: timesource.cpp:97
+msgid "Offset"
+msgstr "Pomak"
+
+#: timesource.cpp:100
+msgid "Timezone Abbreviation"
+msgstr "Skraćenica vremenske zone"
+
+#: timesource.cpp:131 timesource.cpp:150 timesource.cpp:171
+msgid "DateTime"
+msgstr "DatumVrijeme"
+
+#: timesource.cpp:146
+msgid "Latitude"
+msgstr "Geografska širina"
+
+#: timesource.cpp:147
+msgid "Longitude"
+msgstr "Geografska dužina"
+
+#: timesource.cpp:148
+msgid "Solar"
+msgstr "Sunčev"
+
+#: timesource.cpp:149
+msgid "Moon"
+msgstr "Mjesec"

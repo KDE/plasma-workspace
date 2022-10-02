@@ -1,0 +1,36 @@
+# translation of plasma_engine_kuiserver.po to Khmer
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Khoem Sokhem <khoemsokhem@khmeros.info>, 2008, 2009, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_engine_kuiserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2010-01-06 14:37+0700\n"
+"Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
+"Language-Team: Khmer <support@khmeros.info>\n"
+"Language: km\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: jobaction.cpp:18
+#, kde-format
+msgctxt "%1 is the subject (can be anything) upon which the job is performed"
+msgid "The JobView for %1 cannot be found"
+msgstr "JobView សម្រាប់ %1 មិនអាច​រក​ឃើញ​ទេ"
+
+#: kuiserverengine.cpp:209
+#, fuzzy, kde-format
+#| msgctxt "Byes per second"
+#| msgid "%1/s"
+msgctxt "Bytes per second"
+msgid "%1/s"
+msgstr "%1/s"
+
+#~ msgid "Job canceled by user."
+#~ msgstr "ការងារ​ដែល​បានបោះបង់​ដោយ​អ្នក​ប្រើ ។"

@@ -1,0 +1,92 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# giovanni <g.sora@tiscali.it>, 2017, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2021-12-21 22:14+0100\n"
+"Last-Translator: giovanni <g.sora@tiscali.it>\n"
+"Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
+"Language: ia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.12.0\n"
+
+#: ksolidnotify.cpp:149
+#, kde-format
+msgid "Device Status"
+msgstr "Stato de dispositivo"
+
+#: ksolidnotify.cpp:149
+#, kde-format
+msgid "A device can now be safely removed"
+msgstr "Un dispositivo pote nunc esser removite con securitate"
+
+#: ksolidnotify.cpp:150
+#, kde-format
+msgid "This device can now be safely removed."
+msgstr "Iste dispositivo pote esser removite con securitate."
+
+#: ksolidnotify.cpp:157
+#, kde-format
+msgid "You are not authorized to mount this device."
+msgstr "Tu non es authorisate a montar iste dispositivo."
+
+#: ksolidnotify.cpp:160
+#, kde-format
+msgctxt "Remove is less technical for unmount"
+msgid "You are not authorized to remove this device."
+msgstr "Tu non es authorisate a remover iste dispositivo."
+
+#: ksolidnotify.cpp:163
+#, kde-format
+msgid "You are not authorized to eject this disc."
+msgstr "Tu non es authorisate a ejectar iste disco."
+
+#: ksolidnotify.cpp:170
+#, kde-format
+msgid "Could not mount this device as it is busy."
+msgstr "Non poteva montar iste dispositivo proque es occupate."
+
+#: ksolidnotify.cpp:200
+#, kde-format
+msgid "One or more files on this device are open within an application."
+msgstr "Un o plus files sur iste dispositivo es aperite intra un application."
+
+#: ksolidnotify.cpp:202
+#, kde-format
+msgid "One or more files on this device are opened in application \"%2\"."
+msgid_plural ""
+"One or more files on this device are opened in following applications: %2."
+msgstr[0] ""
+"Un o plus files sur iste dispositivo es aperite in application \"%2\"."
+msgstr[1] ""
+"Un o plus files sur iste dispositivo es aperite in le sequente "
+"applicationes: %2."
+
+#: ksolidnotify.cpp:205
+#, kde-format
+msgctxt "separator in list of apps blocking device unmount"
+msgid ", "
+msgstr ", "
+
+#: ksolidnotify.cpp:222
+#, kde-format
+msgid "Could not mount this device."
+msgstr "Non pote monstrar iste dispositivo."
+
+#: ksolidnotify.cpp:225
+#, kde-format
+msgctxt "Remove is less technical for unmount"
+msgid "Could not remove this device."
+msgstr "Non poteva remover iste dispositivo."
+
+#: ksolidnotify.cpp:228
+#, kde-format
+msgid "Could not eject this disc."
+msgstr "Non poteva ejectar iste disco."

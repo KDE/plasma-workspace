@@ -1,0 +1,27 @@
+# translation of plasma_runner_appstream.po to Slovak
+# Roman Paholik <wizzardsk@gmail.com>, 2018.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_appstream\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-11 00:46+0000\n"
+"PO-Revision-Date: 2021-09-15 18:43+0200\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"Language-Team: Slovak <kde-sk@linux.sk>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.08.1\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: appstreamrunner.cpp:34
+#, kde-format
+msgid "Looks for non-installed components according to :q:"
+msgstr "Prezrie nenainštalované komponenty podľa :q:"
+
+#: appstreamrunner.cpp:133
+#, kde-format
+msgid "Get %1…"
+msgstr "Získať %1..."

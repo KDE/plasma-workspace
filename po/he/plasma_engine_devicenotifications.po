@@ -1,0 +1,91 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Elkana Bardugo <ttv200@gmail.com>, 2016.
+# Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_engine_devicenotifications\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2017-05-16 06:56-0400\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Zanata 3.9.6\n"
+
+#: ksolidnotify.cpp:149
+#, kde-format
+msgid "Device Status"
+msgstr ""
+
+#: ksolidnotify.cpp:149
+#, fuzzy, kde-format
+#| msgid "This device can now be safely removed."
+msgid "A device can now be safely removed"
+msgstr "אפשר להסיר את ההתקן בביטחה"
+
+#: ksolidnotify.cpp:150
+#, kde-format
+msgid "This device can now be safely removed."
+msgstr "אפשר להסיר את ההתקן בביטחה"
+
+#: ksolidnotify.cpp:157
+#, kde-format
+msgid "You are not authorized to mount this device."
+msgstr "אין לך הרשאה לחיבור ההתקן."
+
+#: ksolidnotify.cpp:160
+#, kde-format
+msgctxt "Remove is less technical for unmount"
+msgid "You are not authorized to remove this device."
+msgstr "אין לך הרשאה לניתוק ההתקן."
+
+#: ksolidnotify.cpp:163
+#, kde-format
+msgid "You are not authorized to eject this disc."
+msgstr "אין לך הרשאה להוצאת הדיסק."
+
+#: ksolidnotify.cpp:170
+#, kde-format
+msgid "Could not mount this device as it is busy."
+msgstr "לא יכול לחבר את ההתקן כשהוא עסוק."
+
+#: ksolidnotify.cpp:200
+#, kde-format
+msgid "One or more files on this device are open within an application."
+msgstr "קובץ אחד או יותר של ההתקן פתוחים ביישומים"
+
+#: ksolidnotify.cpp:202
+#, kde-format
+msgid "One or more files on this device are opened in application \"%2\"."
+msgid_plural ""
+"One or more files on this device are opened in following applications: %2."
+msgstr[0] "קובץ אחד או יותר של ההתקן פתוחים ביישום \"%2\"."
+msgstr[1] "קובץ אחד או יותר של ההתקן פתוחים ביישומים הבאים: %2."
+
+#: ksolidnotify.cpp:205
+#, kde-format
+msgctxt "separator in list of apps blocking device unmount"
+msgid ", "
+msgstr ", "
+
+#: ksolidnotify.cpp:222
+#, kde-format
+msgid "Could not mount this device."
+msgstr "לא יכול לחבר את ההתקן."
+
+#: ksolidnotify.cpp:225
+#, kde-format
+msgctxt "Remove is less technical for unmount"
+msgid "Could not remove this device."
+msgstr "לא יכול להסיר את ההתקן."
+
+#: ksolidnotify.cpp:228
+#, kde-format
+msgid "Could not eject this disc."
+msgstr "לא יכול להוציא את הדיסק."

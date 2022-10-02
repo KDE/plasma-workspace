@@ -1,0 +1,52 @@
+# translation of krdb.po to Thai
+# Copyright (C) 2003 Free Software Foundation, Inc.
+#
+# Thanomsub Noppaburana <donga_n@yahoo.com>, 2003.
+# Thanomsub Noppaburana <donga.nb@gmail.com>, 2008, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: krdb\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-24 00:47+0000\n"
+"PO-Revision-Date: 2010-02-11 20:18+0700\n"
+"Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
+"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: krdb.cpp:261
+#, kde-format
+msgid ""
+"# created by KDE Plasma, %1\n"
+"#\n"
+msgstr ""
+
+#, fuzzy
+#~| msgid ""
+#~| "# created by KDE, %1\n"
+#~| "#\n"
+#~| "# If you do not want KDE to override your GTK settings, select\n"
+#~| "# Appearance -> Colors in the System Settings and disable the checkbox\n"
+#~| "# \"Apply colors to non-KDE4 applications\"\n"
+#~| "#\n"
+#~| "#\n"
+#~ msgid ""
+#~ "# created by KDE Plasma, %1\n"
+#~ "#\n"
+#~ "# If you do not want Plasma to override your GTK settings, select\n"
+#~ "# Colors in the System Settings and disable the checkbox\n"
+#~ "# \"Apply colors to non-Qt applications\"\n"
+#~ "#\n"
+#~ "#\n"
+#~ msgstr ""
+#~ "# ถูกสร้างโดย KDE, %1\n"
+#~ "#\n"
+#~ "# หากคุณไม่ต้องการให้ KDE เปลี่ยนการตั้งค่าแทน GTK ให้เลือก\n"
+#~ "# รูปลักษณ์ -> สี ในโปรแกรม 'ตั้งค่าระบบ' และปิดการใช้ในกล่องกา\n"
+#~ "# \"ปรับใช้ชุดสีกับโปรแกรมที่ไม่ใช่แบบ KDE-4 ด้วย\"\n"
+#~ "#\n"
+#~ "#\n"

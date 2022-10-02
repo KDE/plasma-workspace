@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Portuguese "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="formats" lang="&language;">
+<articleinfo>
+<title
+>Formatos</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Krishna.Tateneni; &Krishna.Tateneni.mail;</author>
+<othercredit role="translator"
+><firstname
+>José</firstname
+><surname
+>Pires</surname
+><affiliation
+><address
+><email
+>zepires@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+ </authorgroup>
+
+	  <date
+>2015-05-18</date>
+	  <releaseinfo
+>Plasma 5.3</releaseinfo>
+
+	  <keywordset>
+		<keyword
+>KDE</keyword>
+		<keyword
+>Systemsettings</keyword>
+		<keyword
+>localização</keyword>
+		<keyword
+>país</keyword>
+		<keyword
+>língua</keyword>
+		<keyword
+>número</keyword>
+		<keyword
+>moeda</keyword>
+	  </keywordset>
+</articleinfo>
+
+<para
+>Este módulo do &systemsettings; do &kde; permite-lhe seleccionar as opções de personalização que dependem da região do mundo onde vive. </para>
+
+<para
+>Na maioria dos casos, basta seleccionar a região, para que todas as opções sejam configuradas de forma apropriada. </para>
+
+<para
+>No fundo deste módulo, poderá ver exemplos de como a configuração fica e quais as unidades de medida usadas. Para além dos números, poderá ver como os valores monetários, datas e horas são apresentados na sua forma curta e por extenso. Quando alterar uma das definições, a antevisão mostra os efeitos das alterações antes de as aplicar. </para>
+
+<para
+>A lista <guilabel
+>Região</guilabel
+> contém a lista com os países disponíveis e irá mostrar inicialmente o seu país seleccionado de momento. Se a selecção mostrar <quote
+>Predefinição</quote
+>, então não tem definido nenhum país e está a usar por omissão o País definido pelo sistema, o qual será também apresentado. </para>
+
+<para
+>No caso de precisar de diversas definições individuais, active a <guilabel
+>Configuração Detalhada</guilabel
+> e seleccione o formato do país para os <guilabel
+>Números</guilabel
+>, <guilabel
+>Hora</guilabel
+>, <guilabel
+>Moeda</guilabel
+>, <guilabel
+>Unidades de Medida</guilabel
+> ou <guilabel
+>Comparação e Ordenação</guilabel
+> nas listas respectivas. </para>
+
+</article>

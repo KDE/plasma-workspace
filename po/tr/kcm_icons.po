@@ -1,0 +1,172 @@
+# translation of kcmicons.po to
+# translation of kcmicons.po to Turkish
+# KCMICOS
+# Copyright (C) 2003, 2004, 2005, 2008 Free Software Foundation, Inc.
+#
+# Togan Müftüoğlu <toganm@yahoo.com>, 2000.
+# Görkem Çetin <gorkem@kde.org>, 2002,2003.
+# Adil Yıldız <adil_yildiztr@yahoo.com>, 2004.
+# Adil Yıldız <adil@kde.org.tr>, 2005.
+# Serdar Soytetir <tulliana@gmail.com>, 2008, 2009.
+# H. İbrahim Güngör <ibrahim@pardus.org.tr>, 2010.
+# Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2017, 2021.
+# Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmicons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"PO-Revision-Date: 2021-07-08 17:40+0200\n"
+"Last-Translator: Volkan Gezer <volkangezer@gmail.com>\n"
+"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 20.12.3\n"
+
+#: iconsizecategorymodel.cpp:14
+#, kde-format
+msgid "Toolbar"
+msgstr "Araç Çubuğu"
+
+#: iconsizecategorymodel.cpp:15
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Ana Araç Çubuğu"
+
+#: iconsizecategorymodel.cpp:16
+#, kde-format
+msgid "Small Icons"
+msgstr "Küçük Simgeler"
+
+#: iconsizecategorymodel.cpp:17
+#, kde-format
+msgid "Panel"
+msgstr "Panel"
+
+#: iconsizecategorymodel.cpp:18
+#, kde-format
+msgid "Dialogs"
+msgstr "Pencereler"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr "Geçerli simge temasının adı"
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr "Masaüstü simgeleri boyutu"
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr "Araç çubuğu simgeleri boyutu"
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, kde-format
+msgid "Main toolbar icons size"
+msgstr "Ana araç çubuğu simgeleri boyutu"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, kde-format
+msgid "Small icons size"
+msgstr "Küçük simge boyutu"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr "Panel simgeleri boyutu"
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr "İletişim simgeleri boyutu"
+
+#: main.cpp:182
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Geçici dosya oluşturulamadı."
+
+#: main.cpp:193
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Simge teması arşivi indirilemedi: %1"
+
+#: main.cpp:207
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "Bu geçerli bir simge teması arşivi değil."
+
+#: main.cpp:212
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr ""
+"Kurulum sırasında bir hata oluştu; ancak arşivdeki temaların çoğu kuruldu"
+
+#: main.cpp:216
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "Tema başarıyla kuruldu."
+
+#: main.cpp:260
+#, kde-format
+msgid "Installing icon themes…"
+msgstr "Simge teması kuruluyor…"
+
+#: main.cpp:270
+#, kde-format
+msgid "Installing %1 theme…"
+msgstr "%1 teması kuruluyor…"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr "Bu modül, masaüstünüz için simgeleri seçmenizi sağlar."
+
+#: package/contents/ui/main.qml:147
+#, kde-format
+msgid "Remove Icon Theme"
+msgstr "Simge Temasını Kaldır"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Restore Icon Theme"
+msgstr "Simge Temasını Geri Yükle"
+
+#: package/contents/ui/main.qml:228
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr "Simge Boyutlarını Yapılandır"
+
+#: package/contents/ui/main.qml:246
+#, kde-format
+msgid "Install from File…"
+msgstr "Dosyadan Kur…"
+
+#: package/contents/ui/main.qml:251
+#, kde-format
+msgid "Get New Icons…"
+msgstr "Yeni Simgeler Al…"
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Open Theme"
+msgstr "Temayı Aç"
+
+#: package/contents/ui/main.qml:281
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr "Tema Dosyaları (*.tar.gz *.tar.bz2)"

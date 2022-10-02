@@ -1,0 +1,371 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Shinjo Park <kde@peremen.name>, 2014, 2015, 2016, 2017, 2018, 2020, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-22 00:47+0000\n"
+"PO-Revision-Date: 2022-02-20 22:34+0100\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 21.08.1\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "박신조"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kde@peremen.name"
+
+#: currentcontainmentactionsmodel.cpp:201
+#, kde-format
+msgid "Configure Mouse Actions Plugin"
+msgstr "마우스 동작 플러그인 설정"
+
+#: main.cpp:88
+#, kde-format
+msgid "Plasma"
+msgstr "Plasma"
+
+#: main.cpp:88
+#, kde-format
+msgid "Plasma Shell"
+msgstr "Plasma 셸"
+
+#: main.cpp:100
+#, kde-format
+msgid "Enable QML Javascript debugger"
+msgstr "QML 자바스크립트 디버거 사용"
+
+#: main.cpp:103
+#, kde-format
+msgid "Do not restart plasma-shell automatically after a crash"
+msgstr "충돌 이후 plasma-shell 자동 재시작 안 함"
+
+#: main.cpp:106
+#, kde-format
+msgid "Force loading the given shell plugin"
+msgstr "지정한 셸 플러그인 강제로 불러오기"
+
+#: main.cpp:111
+#, kde-format
+msgid ""
+"Load plasmashell as a standalone application, needs the shell-plugin option "
+"to be specified"
+msgstr ""
+"plasmashell을 단독 프로그램으로 불러오며, shell-plugin 옵션을 지정해야 함"
+
+#: main.cpp:113
+#, kde-format
+msgid "Replace an existing instance"
+msgstr "존재하는 인스턴스를 대체"
+
+#: main.cpp:116
+#, kde-format
+msgid ""
+"Enables test mode and specifies the layout javascript file to set up the "
+"testing environment"
+msgstr ""
+"테스트 모드를 활성화하고 레이아웃 JavaScript 파일을 테스트 환경으로 설정"
+
+#: main.cpp:117
+#, kde-format
+msgid "file"
+msgstr "파일"
+
+#: main.cpp:121
+#, kde-format
+msgid "Lists the available options for user feedback"
+msgstr "사용자 피드백 옵션을 표시합니다"
+
+#: main.cpp:219
+#, kde-format
+msgid "Plasma Failed To Start"
+msgstr "Plasma를 시작할 수 없음"
+
+#: main.cpp:220
+#, kde-format
+msgid ""
+"Plasma is unable to start as it could not correctly use OpenGL 2 or software "
+"fallback\n"
+"Please check that your graphic drivers are set up correctly."
+msgstr ""
+"OpenGL 2 또는 소프트웨어 폴백을 제대로 사용할 수 없기 때문에 Plasma를 시작할 "
+"수 없습니다.\n"
+"그래픽 드라이버 설정 상태를 확인하십시오."
+
+#: osd.cpp:54
+#, kde-format
+msgctxt "OSD informing that the system is muted, keep short"
+msgid "Audio Muted"
+msgstr "오디오 음소거"
+
+#: osd.cpp:72
+#, kde-format
+msgctxt "OSD informing that the microphone is muted, keep short"
+msgid "Microphone Muted"
+msgstr "마이크 음소거됨"
+
+#: osd.cpp:88
+#, kde-format
+msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
+msgid "%1 Muted"
+msgstr "%1 음소거"
+
+#: osd.cpp:110
+#, kde-format
+msgctxt "touchpad was enabled, keep short"
+msgid "Touchpad On"
+msgstr "터치패드 켜짐"
+
+#: osd.cpp:112
+#, kde-format
+msgctxt "touchpad was disabled, keep short"
+msgid "Touchpad Off"
+msgstr "터치패드 꺼짐"
+
+#: osd.cpp:119
+#, kde-format
+msgctxt "wireless lan was enabled, keep short"
+msgid "Wifi On"
+msgstr "Wi-Fi 켜짐"
+
+#: osd.cpp:121
+#, kde-format
+msgctxt "wireless lan was disabled, keep short"
+msgid "Wifi Off"
+msgstr "Wi-Fi 꺼짐"
+
+#: osd.cpp:128
+#, kde-format
+msgctxt "Bluetooth was enabled, keep short"
+msgid "Bluetooth On"
+msgstr "블루투스 켜짐"
+
+#: osd.cpp:130
+#, kde-format
+msgctxt "Bluetooth was disabled, keep short"
+msgid "Bluetooth Off"
+msgstr "블루투스 꺼짐"
+
+#: osd.cpp:137
+#, kde-format
+msgctxt "mobile internet was enabled, keep short"
+msgid "Mobile Internet On"
+msgstr "모바일 인터넷 켜짐"
+
+#: osd.cpp:139
+#, kde-format
+msgctxt "mobile internet was disabled, keep short"
+msgid "Mobile Internet Off"
+msgstr "모바일 인터넷 꺼짐"
+
+#: osd.cpp:147
+#, kde-format
+msgctxt ""
+"on screen keyboard was enabled because physical keyboard got unplugged, keep "
+"short"
+msgid "On-Screen Keyboard Activated"
+msgstr "가상 키보드 켜짐"
+
+#: osd.cpp:150
+#, kde-format
+msgctxt ""
+"on screen keyboard was disabled because physical keyboard was plugged in, "
+"keep short"
+msgid "On-Screen Keyboard Deactivated"
+msgstr "가상 키보드 꺼짐"
+
+#: shellcontainmentconfig.cpp:129
+#, kde-format
+msgid "Unknown %1"
+msgstr "알 수 없는 %1"
+
+#: shellcorona.cpp:170 shellcorona.cpp:172
+#, kde-format
+msgid "Show Desktop"
+msgstr "바탕 화면 표시"
+
+#: shellcorona.cpp:172
+#, kde-format
+msgid "Hide Desktop"
+msgstr "바탕 화면 숨기기"
+
+#: shellcorona.cpp:188
+#, kde-format
+msgid "Show Activity Switcher"
+msgstr "활동 전환기 표시"
+
+#: shellcorona.cpp:199
+#, kde-format
+msgid "Stop Current Activity"
+msgstr "현재 활동 중단하기"
+
+#: shellcorona.cpp:207
+#, kde-format
+msgid "Switch to Previous Activity"
+msgstr "이전 활동으로 전환"
+
+#: shellcorona.cpp:215
+#, kde-format
+msgid "Switch to Next Activity"
+msgstr "다음 활동으로 전환"
+
+#: shellcorona.cpp:231
+#, kde-format
+msgid "Activate Task Manager Entry %1"
+msgstr "활성 작업 관리자 항목 %1"
+
+#: shellcorona.cpp:257
+#, kde-format
+msgid "Manage Desktops And Panels..."
+msgstr "바탕 화면과 패널 관리..."
+
+#: shellcorona.cpp:278
+#, kde-format
+msgid "Move keyboard focus between panels"
+msgstr "패널간 키보드 초점 이동"
+
+#: shellcorona.cpp:1761
+#, kde-format
+msgid "Add Panel"
+msgstr "패널 추가하기"
+
+#: shellcorona.cpp:1798
+#, fuzzy, kde-format
+#| msgid "Empty %1"
+msgctxt "Creates an empty containment (%1 is the containment name)"
+msgid "Empty %1"
+msgstr "%1 비어 있음"
+
+#: softwarerendernotifier.cpp:27
+#, kde-format
+msgid "Software Renderer In Use"
+msgstr "소프트웨어 렌더러 사용 중"
+
+#: softwarerendernotifier.cpp:28
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Software Renderer In Use"
+msgstr "소프트웨어 렌더러 사용 중"
+
+#: softwarerendernotifier.cpp:29
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Rendering may be degraded"
+msgstr "렌더링 성능이 저하될 수 있음"
+
+#: softwarerendernotifier.cpp:39
+#, kde-format
+msgid "Never show again"
+msgstr "다시 표시하지 않기"
+
+#: userfeedback.cpp:36
+#, kde-format
+msgid "Panel Count"
+msgstr "패널 개수"
+
+#: userfeedback.cpp:40
+#, kde-format
+msgid "Counts the panels"
+msgstr "패널 개수를 셉니다"
+
+#~ msgid "Unable to load script file: %1"
+#~ msgstr "스크립트 파일을 열 수 없음: %1"
+
+#~ msgid "Activities..."
+#~ msgstr "활동..."
+
+#~ msgctxt "Fatal error message body"
+#~ msgid ""
+#~ "All shell packages missing.\n"
+#~ "This is an installation issue, please contact your distribution"
+#~ msgstr ""
+#~ "모든 셸 패키지가 없습니다.\n"
+#~ "설치 문제입니다. 배포판에 연락하십시오"
+
+#~ msgctxt "Fatal error message title"
+#~ msgid "Plasma Cannot Start"
+#~ msgstr "Plasma를 시작할 수 없음"
+
+#~ msgctxt "Fatal error message body"
+#~ msgid "Shell package %1 cannot be found"
+#~ msgstr "셸 패키지 %1을(를) 찾을 수 없음"
+
+#~ msgid "Main Script File"
+#~ msgstr "주 스크립트 파일"
+
+#~ msgid "Force a windowed view for testing purposes"
+#~ msgstr "테스트 목적으로 창 모드 강제 사용"
+
+#~ msgid "Deprecated, does nothing"
+#~ msgstr "용도 폐기됨, 아무것도 하지 않음"
+
+#~ msgid ""
+#~ "Your graphics hardware does not support OpenGL (ES) 2. Plasma will abort "
+#~ "now."
+#~ msgstr ""
+#~ "그래픽 하드웨어에서 OpenGL (ES) 2를 지원하지 않습니다. Plasma를 종료합니"
+#~ "다."
+
+#~ msgid "Incompatible OpenGL version detected"
+#~ msgstr "호환되지 않는 OpenGL 버전 감지됨"
+
+#~ msgid "Recent number of crashes"
+#~ msgstr "최근 충돌 횟수"
+
+#~ msgid "Show Dashboard"
+#~ msgstr "대시보드 보이기"
+
+#~ msgid "Hide Dashboard"
+#~ msgstr "대시보드 숨기기"
+
+#~ msgid "Shuts up the output"
+#~ msgstr "출력 비활성화"
+
+#~ msgid "&Execute"
+#~ msgstr "실행(&E)"
+
+#~ msgctxt "Toolbar Button to switch to KWin Scripting Mode"
+#~ msgid "KWin"
+#~ msgstr "KWin"
+
+#~ msgid "Templates"
+#~ msgstr "템플릿"
+
+#~ msgid "Desktop Shell Scripting Console"
+#~ msgstr "데스크톱 셸 스크립팅 콘솔"
+
+#~ msgid "Editor"
+#~ msgstr "편집기"
+
+#~ msgid "Load"
+#~ msgstr "불러오기"
+
+#~ msgid "Use"
+#~ msgstr "사용하기"
+
+#~ msgid "Output"
+#~ msgstr "출력"
+
+#~ msgid "Unable to load script file <b>%1</b>"
+#~ msgstr "스크립트 파일 <b>%1</b>을(를) 불러올 수 없음"
+
+#~ msgid "Save Script File"
+#~ msgstr "스크립트 파일 저장하기"
+
+#~ msgid "Executing script at %1"
+#~ msgstr "스크립트를 %1에서 실행하기"
+
+#~ msgid "Runtime: %1ms"
+#~ msgstr "실행 시간: %1ms"

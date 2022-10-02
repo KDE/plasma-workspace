@@ -1,0 +1,71 @@
+# translation of libkworkspace.po to British English
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Malcolm Hunter <malcolm.hunter@gmx.co.uk>, 2008.
+# Andrew Coles <andrew_coles@yahoo.co.uk>, 2009.
+# Steve Allewell <steve.allewell@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: libkworkspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-03 00:48+0000\n"
+"PO-Revision-Date: 2021-06-12 12:43+0100\n"
+"Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
+"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.04.1\n"
+
+#: kdisplaymanager.cpp:777
+#, kde-format
+msgctxt "user: …"
+msgid "%1: TTY login"
+msgstr "%1: TTY login"
+
+#: kdisplaymanager.cpp:782
+#, kde-format
+msgctxt "… location (TTY or X display)"
+msgid "Unused"
+msgstr "Unused"
+
+#: kdisplaymanager.cpp:783
+#, kde-format
+msgid "X login on remote host"
+msgstr "X login on remote host"
+
+#: kdisplaymanager.cpp:783
+#, kde-format
+msgctxt "… host"
+msgid "X login on %1"
+msgstr "X login on %1"
+
+#: kdisplaymanager.cpp:785
+#, kde-format
+msgctxt "user: session type"
+msgid "%1: %2"
+msgstr "%1: %2"
+
+#: kdisplaymanager.cpp:796
+#, kde-format
+msgctxt "session (location)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#~ msgctxt ""
+#~ "Action that reorganizes the windows to try to have them less cluttered"
+#~ msgid "Unclutter Windows"
+#~ msgstr "Unclutter Windows"
+
+#~ msgctxt "Action that reorganizes the windows so that they are in cascade"
+#~ msgid "Cascade Windows"
+#~ msgstr "Cascade Windows"
+
+#~ msgid "On All Desktops"
+#~ msgstr "On All Desktops"
+
+#~ msgid "No Windows"
+#~ msgstr "No Windows"

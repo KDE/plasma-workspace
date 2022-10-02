@@ -1,0 +1,59 @@
+# Translation of plasma_containmentactions_switchwindow.po to Euskara/Basque (eu).
+# Copyright (C) 2009-2018, Free Software Foundation.
+# This file is distributed under the same license as the kde-workspace package.
+# KDE euskaratzeko proiektuaren arduraduna <xalba@euskalnet.net>.
+#
+# Translators:
+# marcos <marcos@euskalgnu.org>, 2009.
+# Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
+# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2014, 2018.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_containmentactions_switchwindow\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"PO-Revision-Date: 2018-07-21 16:41+0100\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
+"Language-Team: Basque <kde-i18n-doc@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 2.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. i18n: ectx: property (text), widget (QRadioButton, flatButton)
+#: config.ui:16
+#, kde-format
+msgid "Display all windows in one list"
+msgstr "Bistaratu leiho guztiak zerrenda bakar batean"
+
+#. i18n: ectx: property (text), widget (QRadioButton, subButton)
+#: config.ui:23
+#, kde-format
+msgid "Display a submenu for each desktop"
+msgstr "Bistaratu azpimenu bat mahaigain bakoitzeko"
+
+#. i18n: ectx: property (text), widget (QRadioButton, curButton)
+#: config.ui:30
+#, kde-format
+msgid "Display only the current desktop's windows"
+msgstr "Bistaratu soilik uneko mahaigaineko leihoak"
+
+#: switch.cpp:75
+#, kde-format
+msgctxt "plasma_containmentactions_switchwindow"
+msgid "Configure Switch Window Plugin"
+msgstr "Konfiguratu leihoz aldatzeko plugina"
+
+#: switch.cpp:155
+#, kde-format
+msgctxt "plasma_containmentactions_switchwindow"
+msgid "Windows"
+msgstr "Leihoak"
+
+#: switch.cpp:179 switch.cpp:200 switch.cpp:202
+#, kde-format
+msgctxt "plasma_containmentactions_switchwindow"
+msgid "All Desktops"
+msgstr "Mahaigain guztiak"

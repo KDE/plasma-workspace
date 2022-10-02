@@ -1,0 +1,66 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Franklin, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"PO-Revision-Date: 2014-09-30 13:01+0800\n"
+"Last-Translator: Franklin\n"
+"Language-Team: Chinese Traditional <kde-i18n-doc@kde.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: timesource.cpp:46
+msgid "Local"
+msgstr "本地"
+
+#: timesource.cpp:61
+msgid "Timezone"
+msgstr "時區"
+
+#: timesource.cpp:66 timesource.cpp:69 timesource.cpp:73
+msgid "Timezone City"
+msgstr "時區城市"
+
+#: timesource.cpp:68 timesource.cpp:71
+msgid "Timezone Continent"
+msgstr "時區大陸"
+
+#: timesource.cpp:72
+msgid "Timezone Country"
+msgstr "時區國家"
+
+#: timesource.cpp:97
+msgid "Offset"
+msgstr "位移"
+
+#: timesource.cpp:100
+msgid "Timezone Abbreviation"
+msgstr "時區縮寫"
+
+#: timesource.cpp:131 timesource.cpp:150 timesource.cpp:171
+msgid "DateTime"
+msgstr "日期時間"
+
+#: timesource.cpp:146
+msgid "Latitude"
+msgstr "緯度"
+
+#: timesource.cpp:147
+msgid "Longitude"
+msgstr "經度"
+
+#: timesource.cpp:148
+msgid "Solar"
+msgstr "太陽"
+
+#: timesource.cpp:149
+msgid "Moon"
+msgstr "月球"

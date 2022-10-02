@@ -1,0 +1,85 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Dutch "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="screenlocker" lang="&language;">
+<articleinfo>
+<title
+>Scherm vergrendelen</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+&Freek.de.Kruijf; 
+</authorgroup>
+<!--FIXME code in plasma/kscreenlocker - docbook in plasma/plasma-workspace -->
+<date
+>2020-07-02</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>systeeminstellingen</keyword>
+<keyword
+>schermvergrendeling</keyword>
+<keyword
+>schermvergrendeling</keyword>
+</keywordset>
+</articleinfo>
+<para
+>In deze module kunt u bepalen na hoeveel tijd de schermvergrendeling wordt geactiveerd, de rustperiode voor ontgrendelen zonder wachtwoord en het uiterlijk kiezen van uw schermvergrendeling.</para>
+
+<para
+>Bovenaan bevindt zich keuzevakje <guilabel
+>Scherm automatisch vergrendelen</guilabel
+> voor de schermbeveiliging en een draaischakelaar waarin u instelt hoe lang het duurt voordat de schermbeveiliging gestart wordt. U kunt hier elk gewenst positief aantal minuten invullen.</para>
+
+<para
+>Het keuzevakje <guilabel
+>Na ontwaken uit slaap</guilabel
+> kan gebruikt worden om het vergrendelen  van het bureaubladscherm na het onderbreken van het systeem aan of uit te schakelen.</para>
+
+<para
+>Daaronder is een draaischakelaar met label <guilabel
+>Ontgrendelen zonder wachtwoord toestaan voor</guilabel
+>. Wanneer u een toets aanslaat of op de muis een knop indrukt om de schermbeveiliging te stoppen voor de tijd ingesteld in de draaischakelaar, om naar uw werk terug te keren, wordt niet gevraagd om het wachtwoord in te typen. Het wachtwoord is hetzelfde als het wachtwoord dat u gebruikt om u op het systeem aan te melden.</para>
+
+<para
+>Als u het scherm handmatig vergrendelt wordt de wachtwoordbeveiliging onmiddellijk ingeschakeld.</para>
+
+<para
+>U kunt een sneltoets definiëren om het scherm te vergrendelen met het veld <guilabel
+>Sneltoets</guilabel
+>.</para>
+
+<para
+>De standaard sneltoets <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>L</keycap
+></keycombo
+> biedt een snelle manier om het scherm handmatig te vergrendelen.</para>
+
+<para
+>Als u de achtergrond in vergrendelde status wilt wijzigen druk op de knop <guibutton
+>Configureren</guibutton
+> naast het label <guilabel
+>Uiterlijk</guilabel
+>. Daarna kunt u het <guilabel
+>Type achtergrondafbeelding</guilabel
+> wijzigen.</para>
+
+<para
+>U kunt een <guilabel
+>Vlakke kleur</guilabel
+> als type achtergrondafbeelding kiezen.</para>
+
+<para
+>Gebruik anders een enkele afbeelding of een diashow met afbeeldingen uit een map of laad nieuwe achtergrondafbeeldingen vanaf het internet.</para>
+
+</article>

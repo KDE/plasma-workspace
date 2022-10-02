@@ -1,0 +1,470 @@
+# Translation of kcm_desktopthemedetails.po into Russian
+# Copyright (C) 2009 This_file_is_part_of_KDE
+# This file is distributed under the same license as the KDE package.
+#
+# Andrey Cherepanov <skull@kde.ru>, 2009, 2011.
+# Alexander Potashev <aspotashev@gmail.com>, 2009, 2010, 2011, 2014, 2016, 2017, 2018, 2019.
+# Nick Shaforostoff <shafff@ukr.net>, 2010.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_desktopthemedetails\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"PO-Revision-Date: 2021-05-29 14:33+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.04.1\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current Plasma Style"
+msgstr "Название текущего оформления рабочего стола"
+
+#: kcm.cpp:108
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Не удалось создать временный файл."
+
+#: kcm.cpp:119
+#, kde-format
+msgid "Unable to download the theme: %1"
+msgstr "Не удалось загрузить с сервера оформление рабочего стола: %1"
+
+#: kcm.cpp:144
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "Оформление успешно установлено."
+
+#: kcm.cpp:147 kcm.cpp:153
+#, kde-format
+msgid "Theme installation failed."
+msgstr "Не удалось установить оформление."
+
+#: kcm.cpp:245
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr "Ошибка удаления оформления рабочего стола: %1"
+
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "This module lets you choose the Plasma style."
+msgstr "Этот модуль позволяет выбрать оформление рабочего стола Plasma."
+
+#: package/contents/ui/main.qml:69
+#, kde-format
+msgid "All Themes"
+msgstr "Все оформления"
+
+#: package/contents/ui/main.qml:70
+#, kde-format
+msgid "Light Themes"
+msgstr "Светлые оформления"
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgid "Dark Themes"
+msgstr "Тёмные оформления"
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "Color scheme compatible"
+msgstr "С поддержкой цветовых схем"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgid "Follows color scheme"
+msgstr "Поддерживает цветовые схемы"
+
+#: package/contents/ui/main.qml:118
+#, kde-format
+msgid "Edit Theme…"
+msgstr "Изменить оформление..."
+
+#: package/contents/ui/main.qml:125
+#, kde-format
+msgid "Remove Theme"
+msgstr "Удалить оформление"
+
+#: package/contents/ui/main.qml:132
+#, kde-format
+msgid "Restore Theme"
+msgstr "Восстановить оформление"
+
+#: package/contents/ui/main.qml:174
+#, kde-format
+msgid "Install from File…"
+msgstr "Установить из файла..."
+
+#: package/contents/ui/main.qml:179
+#, kde-format
+msgid "Get New Plasma Styles…"
+msgstr "Загрузить оформления рабочего стола..."
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Open Theme"
+msgstr "Открытие оформления"
+
+#: package/contents/ui/main.qml:195
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr "Файлы оформления (*.zip *.tar.gz *.tar.bz2)"
+
+#: plasma-apply-desktoptheme.cpp:31
+#, kde-format
+msgid ""
+"This tool allows you to set the theme of the current Plasma session, without "
+"accidentally setting it to one that is either not available, or which is "
+"already set."
+msgstr ""
+"Это приложение позволяет задать используемое оформление Plasma, не позволяя "
+"выбрать отсутствующее или уже используемое оформление."
+
+#: plasma-apply-desktoptheme.cpp:35
+#, kde-format
+msgid ""
+"The name of the theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+"Оформление для использования в Plasma (при передаче полного пути в качестве "
+"параметра, будет использована только его завершающая часть)"
+
+#: plasma-apply-desktoptheme.cpp:36
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr "Просмотр используемого оформления и списка доступных оформлений"
+
+#: plasma-apply-desktoptheme.cpp:49
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr "Оформление «%1» уже используется в Plasma."
+
+#: plasma-apply-desktoptheme.cpp:65
+#, kde-format
+msgid "The current Plasma session's theme has been set to %1"
+msgstr "Используемое в текущем сеансе Plasma оформление изменено на «%1»"
+
+#: plasma-apply-desktoptheme.cpp:67
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+"Не удалось найти оформление «%1». Необходимо указать одно из следующих "
+"оформлений: %2"
+
+#: plasma-apply-desktoptheme.cpp:75
+#, kde-format
+msgid "You have the following Plasma themes on your system:"
+msgstr "В системе установлены следующие оформления Plasma:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Андрей Черепанов, Александр Яворский"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "skull@kde.ru, kekcuha@gmail.com"
+
+#~ msgid "Plasma Style"
+#~ msgstr "Оформление рабочего стола Plasma"
+
+#~ msgid "David Rosca"
+#~ msgstr "David Rosca"
+
+#~ msgid "Search..."
+#~ msgstr "Поиск..."
+
+# download new... ---ayavorsky 20190120
+#~ msgid "Plasma Styles"
+#~ msgstr "оформления рабочего стола"
+
+#~ msgid "Download New Plasma Styles"
+#~ msgstr "Загрузка новых оформлений рабочего стола Plasma"
+
+#~ msgid "Choose the Plasma theme"
+#~ msgstr "Выбор темы оформления рабочего стола"
+
+#~ msgid "Configure Desktop Theme"
+#~ msgstr "Настройка темы рабочего стола"
+
+#~ msgid "Theme removal failed."
+#~ msgstr "При попытке удаления темы произошла ошибка."
+
+#~ msgid ""
+#~ "<h1>Desktop Theme</h1>This module allows you to modify the visual "
+#~ "appearance of the desktop."
+#~ msgstr ""
+#~ "<h1>Тема рабочего стола</h1>Этот модуль настройки позволяет изменить "
+#~ "внешний вид рабочего стола."
+
+#~ msgid "KDE Desktop Theme Module"
+#~ msgstr "Модуль настройки темы рабочего стола"
+
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
+#~ msgstr "© Karol Szwed, Daniel Molkentin, 2002"
+
+#~ msgid "Theme installation failed. (%1)"
+#~ msgstr "Не удалось установить тему. (%1)"
+
+#~ msgid "Details"
+#~ msgstr "Подробности"
+
+#~ msgctxt "plasma name"
+#~ msgid "Panel Background"
+#~ msgstr "Фон панели"
+
+#~ msgctxt "plasma name"
+#~ msgid "Kickoff"
+#~ msgstr "Kickoff"
+
+#~ msgctxt "plasma name"
+#~ msgid "Task Items"
+#~ msgstr "Кнопки задач"
+
+#~ msgctxt "plasma name"
+#~ msgid "Widget Background"
+#~ msgstr "Фон виджетов"
+
+#~ msgctxt "plasma name"
+#~ msgid "Translucent Background"
+#~ msgstr "Полупрозрачный фон"
+
+#~ msgctxt "plasma name"
+#~ msgid "Dialog Background"
+#~ msgstr "Фон диалоговых окон"
+
+#~ msgctxt "plasma name"
+#~ msgid "Analog Clock"
+#~ msgstr "Часы с циферблатом"
+
+#~ msgctxt "plasma name"
+#~ msgid "Notes"
+#~ msgstr "Заметки"
+
+#~ msgctxt "plasma name"
+#~ msgid "Tooltip"
+#~ msgstr "Подсказка"
+
+#~ msgctxt "plasma name"
+#~ msgid "Pager"
+#~ msgstr "Переключение рабочих столов"
+
+#~ msgctxt "plasma name"
+#~ msgid "Run Command Dialog"
+#~ msgstr "Диалог запуска"
+
+#~ msgctxt "plasma name"
+#~ msgid "Shutdown Dialog"
+#~ msgstr "Диалог завершения работы"
+
+#~ msgctxt "plasma name"
+#~ msgid "Icons"
+#~ msgstr "Значки"
+
+#~ msgid "(Customized)"
+#~ msgstr "(настроено)"
+
+#~ msgid "User customized theme"
+#~ msgstr "Тема, настроенная пользователем"
+
+#~ msgid ""
+#~ "Theme items have been changed.  Do you still wish remove the \"%1\" theme?"
+#~ msgstr "Тема была изменена. Удалить тему «%1»?"
+
+#~ msgid "Removal of the default desktop theme is not allowed."
+#~ msgstr "Невозможно удалить тему KDE по умолчанию."
+
+#~ msgid "Are you sure you wish remove the \"%1\" theme?"
+#~ msgstr "Удалить тему «%1»?"
+
+#~ msgid ""
+#~ "Please apply theme item changes (with a new theme name) before attempting "
+#~ "to export theme."
+#~ msgstr ""
+#~ "Сохраните изменения с новым названием темы перед тем как экспортировать "
+#~ "её."
+
+#~ msgid "Export Desktop Theme"
+#~ msgstr "Экспорт темы рабочего стола"
+
+#~ msgid "Export theme to file"
+#~ msgstr "Экспорт темы в файл"
+
+#~ msgid "Archive (*.zip)"
+#~ msgstr "Архивы ZIP (*.zip)"
+
+#~ msgid "Theme Item"
+#~ msgstr "Элемент темы"
+
+#~ msgid "Source"
+#~ msgstr "Источник"
+
+#, fuzzy
+#~| msgid "%1 %2"
+#~ msgctxt ""
+#~ "%1 is the name of the theme, %2 is the type of the element (background, "
+#~ "icon, note, etc)"
+#~ msgid "%1 %2"
+#~ msgstr "%2 из темы %1"
+
+#~ msgid "File..."
+#~ msgstr "Файл..."
+
+#~ msgid "Select File to Use for %1"
+#~ msgstr "Выберите файл для использования в %1"
+
+#~ msgid " Author: %1"
+#~ msgstr " Автор: %1"
+
+#~ msgid "Version: %1"
+#~ msgstr "Версия: %1"
+
+#~ msgid "Desktop Theme Details"
+#~ msgstr "Сведения о теме рабочего стола"
+
+#~ msgid "Choose an item and customize it by assigning it a theme"
+#~ msgstr "Выберите элемент и настройте его стиль"
+
+#~ msgid ""
+#~ "You can set any theme to any item. The available themes for the item are "
+#~ "in the dropdown box on the right."
+#~ msgstr ""
+#~ "Вы можете использовать любую тему для каждого элемента. Тему можно "
+#~ "выбрать из выпадающего списка справа."
+
+#~ msgid "Enable more options"
+#~ msgstr "Показать больше возможностей"
+
+#~ msgid ""
+#~ "This will expand the dialog and give you options to export your custom "
+#~ "theme as well as to remove a theme."
+#~ msgstr ""
+#~ "Разворачивает диалоговое окно, добавляя возможности экспорта и удаления "
+#~ "тем."
+
+#~ msgid "More"
+#~ msgstr "Дополнительно"
+
+#~ msgid "Remove the selected theme"
+#~ msgstr "Удалить выбранную тему"
+
+#~ msgid ""
+#~ "Clicking this button will remove the selected theme. You will be asked "
+#~ "for confirmation."
+#~ msgstr ""
+#~ "При нажатии на эту кнопку выбранная тема будет удалена. У вас будет "
+#~ "запрошено подтверждение удаления."
+
+#~ msgid "Save your theme in a zip archive"
+#~ msgstr "Сохранить тему в архив ZIP"
+
+#~ msgid ""
+#~ "You can save your theme in a zip archive in order to share it with the "
+#~ "community."
+#~ msgstr ""
+#~ "Вы можете сохранить вашу тему в архиве Zip для того, чтобы поделиться с "
+#~ "сообществом."
+
+#~ msgid "Export Theme to File..."
+#~ msgstr "Экспорт темы в файл..."
+
+#~ msgid "New theme name:"
+#~ msgstr "Название темы:"
+
+#~ msgid "Custom theme name"
+#~ msgstr "Название создаваемой темы"
+
+#~ msgid "Give a name to your custom theme."
+#~ msgstr "Введите название новой темы."
+
+#~ msgid "Author:"
+#~ msgstr "Автор:"
+
+#~ msgid "Custom theme author "
+#~ msgstr "Автор создаваемой темы"
+
+#~ msgid "Enter the author name of your custom theme."
+#~ msgstr "Введите имя автора новой темы."
+
+#~ msgid "Version:"
+#~ msgstr "Версия:"
+
+#~ msgid "Custom theme version number"
+#~ msgstr "Версия создаваемой темы"
+
+#~ msgid "Enter the version number of your custom theme."
+#~ msgstr "Введите номер версии новой темы."
+
+#~ msgid "Description:"
+#~ msgstr "Описание:"
+
+#~ msgid "Custom theme description"
+#~ msgstr "Описание создаваемой темы"
+
+#~ msgid "Enter a description which will explain your custom theme."
+#~ msgstr "Введите текстовое описание новой темы."
+
+#~ msgid "Select theme from above to customize"
+#~ msgstr "Выберите тему из списка выше, чтобы изменить её"
+
+#~ msgid "Theme Author"
+#~ msgstr "Автор темы"
+
+#~ msgid "Theme Name"
+#~ msgstr "Название темы"
+
+#~ msgid "Theme Version"
+#~ msgstr "Версия темы"
+
+#~ msgid "The theme description goes here..."
+#~ msgstr "Укажите описание темы..."
+
+#~ msgid ""
+#~ "Choose a start theme in this list then customize some items below. All "
+#~ "less important items not listed below will use this start theme."
+#~ msgstr ""
+#~ "Выберите тему из списка, которую будете использовать как базовую для "
+#~ "настройки отдельных элементов."
+
+#~ msgid "Karol Szwed"
+#~ msgstr "Karol Szwed"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "KCMDesktopTheme"
+#~ msgstr "KCMDesktopTheme"
+
+#, fuzzy
+#~| msgid ""
+#~| "To change your desktop theme to \"%1\", open\n"
+#~| " the desktop Appearance Settings and select \"%2\" from the droplist."
+#~ msgid ""
+#~ "To change your desktop theme to \"%1\", go back to the 'General' tab of "
+#~ "System Settings; choose 'Appearance', and then 'Style'; and finally "
+#~ "select \"%2\" from the drop-down list at the top of the window."
+#~ msgstr ""
+#~ "Для изменения темы рабочего стола на «%1» откройте\n"
+#~ "диалог изменения внешнего вида рабочего стола и выберите «%2» из "
+#~ "выпадающего списка."
+
+#~ msgid "Removal of the active desktop theme is not allowed."
+#~ msgstr "Невозможно удалить текущую тему KDE."

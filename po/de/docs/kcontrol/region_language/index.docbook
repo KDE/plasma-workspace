@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % German "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="translations" lang="&language;">
+<articleinfo>
+<title
+>Sprache</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Krishna.Tateneni; &Krishna.Tateneni.mail;</author>
+<othercredit role="translator"
+><firstname
+>Matthias</firstname
+><surname
+>Kiefer</surname
+><contrib
+>Deutsche Übersetzung</contrib
+></othercredit
+> 
+ </authorgroup>
+
+	  <date
+>2021-04-09</date>
+	  <releaseinfo
+>Plasma 5.20</releaseinfo>
+
+	  <keywordset>
+		<keyword
+>KDE</keyword>
+		<keyword
+>Systemeinstellungen</keyword>
+		<keyword
+>locale</keyword>
+		<keyword
+>country</keyword>
+		<keyword
+>language</keyword>
+		<keyword
+>Übersetzung</keyword>
+		<keyword
+>Sprache</keyword>
+	  </keywordset>
+</articleinfo>
+
+<para
+>Auf dieser Seite können Sie die Sprachen auswählen, die in der &plasma;-Arbeitsumgebung sowie Anwendungen bevorzugt verwendet werden sollen. </para>
+
+<para
+>Die &plasma;-Arbeitsumgebung und &kde;-Anwendungen werden in Amerikanischem Englisch entwickelt und von Freiwilligen in verschiedenste Sprachen übersetzt. Diese Übersetzungen müssen zuerst installiert werden, bevor Sie sie auswählen können. </para>
+<note
+><para
+>Bitte überprüfen Sie, ob die &plasma;-Sprachpakete oder -Übersetzungen für die von Ihnen verwendeten Sprachen installiert sind.</para>
+<para
+>Da &plasma; die &Qt;-Bibliotheken verwendet, müssen Sie für eine vollständig übersetzte &GUI; außerdem auch die &Qt;-Übersetzungen der ausgewählten Sprachen installieren.</para
+></note>
+
+<para
+>Die Liste zeigt die übersetzten Namen der Sprachen an, die in der &plasma;-Arbeitsumgebung sowie den Anwendungen verwendet werden. Die &plasma;-Arbeitsumgebung sowie die Anwendungen sind nicht unbedingt vollständig in jede Sprache übersetzt. Sollte eine Übersetzung in Ihre Sprache fehlen, sucht &plasma; anhand der Liste nach einer passenden Übersetzung. Falls für keine der dort aufgeführten Sprachen eine Übersetzung vorhanden ist, wird der ursprüngliche Text in amerikanischem Englisch verwendet. </para>
+
+<para
+>Sie können eine Sprache zur Liste hinzufügen, indem Sie auf <guibutton
+>Sprachen hinzufügen</guibutton
+> klicken. Es werden die übersetzten Namen der Sprachen angezeigt, für die Übersetzungen der &systemsettings; auf Ihrem System installiert und verfügbar sind. Falls die gewünschte Sprache nicht auf der Liste steht, müssen Sie sie installieren. Verwenden Sie dazu die auf Ihrem System übliche Methode. Wählen Sie eine oder mehrere Sprache aus und drücken Sie <guibutton
+>Hinzufügen</guibutton
+>. </para>
+<para
+>Zum Entfernen einer Sprache aus der Liste wählen Sie sie aus und klicken Sie auf das Symbol <inlinemediaobject
+><imageobject
+><imagedata fileref="list-remove.png" format="PNG"/> </imageobject
+></inlinemediaobject
+>.Sie können die Reihenfolge der Sprachen ändern, indem Sie eine Sprache in der Liste auswählen und auf das Symbol <inlinemediaobject
+><imageobject
+> <imagedata fileref="go-top.png" format="PNG"/> </imageobject
+></inlinemediaobject
+> klicken. </para>
+
+<note>
+<para
+>Die Einstellungen für Sprachen und Formate sind unabhängig. Mit der Auswahl einer neuen Sprache werden die Einstellungen für Zahlenformate, Währung &etc; <emphasis
+>nicht</emphasis
+> automatisch an das Land oder die Region, in der die Sprache verwendet wird, angepasst. </para>
+</note>
+
+</article>

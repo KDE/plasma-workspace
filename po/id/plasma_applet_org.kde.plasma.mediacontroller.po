@@ -1,0 +1,126 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# Lorenz Adam Damara <lorenzrenz@gmail.com>, 2018.
+# Wantoyo <wantoyek@gmail.com>, 2018, 2019, 2022.
+# Aziz Adam Adrian <4.adam.adrian@gmail.com>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"PO-Revision-Date: 2022-06-14 10:56+0700\n"
+"Last-Translator: Aziz Adam Adrian <4.adam.adrian@gmail.com>\n"
+"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 22.04.2\n"
+
+#: contents/config/config.qml:12
+#, kde-format
+msgid "General"
+msgstr "Umum"
+
+#: contents/ui/AlbumArtStackView.qml:161 contents/ui/main.qml:80
+#, kde-format
+msgid "No media playing"
+msgstr "Tidak ada media yang diputar"
+
+#: contents/ui/ConfigGeneral.qml:22
+#, kde-format
+msgid "Volume step:"
+msgstr "Langkah volume:"
+
+#: contents/ui/ExpandedRepresentation.qml:363
+#: contents/ui/ExpandedRepresentation.qml:484
+#, kde-format
+msgctxt "Remaining time for song e.g -5:42"
+msgid "-%1"
+msgstr "-%1"
+
+#: contents/ui/ExpandedRepresentation.qml:513
+#, kde-format
+msgid "Shuffle"
+msgstr "Kocok"
+
+#: contents/ui/ExpandedRepresentation.qml:539 contents/ui/main.qml:98
+#, kde-format
+msgctxt "Play previous track"
+msgid "Previous Track"
+msgstr "Trek Sebelumnya"
+
+#: contents/ui/ExpandedRepresentation.qml:561 contents/ui/main.qml:106
+#, kde-format
+msgctxt "Pause playback"
+msgid "Pause"
+msgstr "Jeda"
+
+#: contents/ui/ExpandedRepresentation.qml:561 contents/ui/main.qml:111
+#, kde-format
+msgctxt "Start playback"
+msgid "Play"
+msgstr "Putar"
+
+#: contents/ui/ExpandedRepresentation.qml:579 contents/ui/main.qml:117
+#, kde-format
+msgctxt "Play next track"
+msgid "Next Track"
+msgstr "Trek Selanjutnya"
+
+#: contents/ui/ExpandedRepresentation.qml:602
+#, kde-format
+msgid "Repeat Track"
+msgstr "Ulangi Trek"
+
+#: contents/ui/ExpandedRepresentation.qml:602
+#, kde-format
+msgid "Repeat"
+msgstr "Ulangi"
+
+#: contents/ui/main.qml:94
+#, kde-format
+msgctxt "Open player window or bring it to the front if already open"
+msgid "Open"
+msgstr "Buka"
+
+#: contents/ui/main.qml:123
+#, kde-format
+msgctxt "Stop playback"
+msgid "Stop"
+msgstr "Hentikan"
+
+#: contents/ui/main.qml:131
+#, kde-format
+msgctxt "Quit player"
+msgid "Quit"
+msgstr "Berhenti"
+
+#: contents/ui/main.qml:241
+#, kde-format
+msgid "Choose player automatically"
+msgstr "Pilih pemutar secara otomatis"
+
+#: contents/ui/main.qml:278
+#, kde-format
+msgctxt "by Artist (player name)"
+msgid "by %1 (%2)"
+msgstr "oleh %1 (%2)"
+
+#: contents/ui/main.qml:289
+#, kde-format
+msgctxt "by Artist (paused, player name)"
+msgid "by %1 (paused, %2)"
+msgstr "oleh %1 (dijeda, %2)"
+
+#: contents/ui/main.qml:289
+#, kde-format
+msgctxt "Paused (player name)"
+msgid "Paused (%1)"
+msgstr "Dijeda (%1)"
+
+#~ msgctxt "artist – track"
+#~ msgid "%1 – %2"
+#~ msgstr "%1 - %2"

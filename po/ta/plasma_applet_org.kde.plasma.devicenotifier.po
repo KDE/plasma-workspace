@@ -1,0 +1,198 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Kishore G <kishore96@gmail.com>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_devicenotifier\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-21 00:47+0000\n"
+"PO-Revision-Date: 2022-02-27 16:34+0530\n"
+"Last-Translator: Kishore G <kishore96@gmail.com>\n"
+"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.12.2\n"
+
+#: package/contents/ui/DeviceItem.qml:180
+#, kde-format
+msgctxt "@info:status Free disk space"
+msgid "%1 free of %2"
+msgstr "%2-இல் %1 காலி"
+
+#: package/contents/ui/DeviceItem.qml:184
+#, kde-format
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Accessing…"
+msgstr "அணுகப்படுகிறது…"
+
+#: package/contents/ui/DeviceItem.qml:187
+#, kde-format
+msgctxt ""
+"Removing is a less technical word for Unmounting; translation should be "
+"short and mean 'Currently unmounting this device'"
+msgid "Removing…"
+msgstr "நீக்கப்படுகிறது…"
+
+#: package/contents/ui/DeviceItem.qml:190
+#, kde-format
+msgid "Don't unplug yet! Files are still being transferred..."
+msgstr "கழற்றாதீர்கள்! கோப்புகள் இன்னும் இடமாற்றப்படுகின்றன…"
+
+#: package/contents/ui/DeviceItem.qml:221
+#, kde-format
+msgid "Open in File Manager"
+msgstr "கோப்பு மேலாளரில் திற"
+
+#: package/contents/ui/DeviceItem.qml:224
+#, kde-format
+msgid "Mount and Open"
+msgstr "ஏற்றி திற"
+
+#: package/contents/ui/DeviceItem.qml:226
+#, kde-format
+msgid "Eject"
+msgstr "வெளியேற்று"
+
+#: package/contents/ui/DeviceItem.qml:228
+#, kde-format
+msgid "Safely remove"
+msgstr "பத்திரமாக நீக்கு"
+
+#: package/contents/ui/DeviceItem.qml:270
+#, kde-format
+msgid "Mount"
+msgstr "ஏற்று"
+
+#: package/contents/ui/FullRepresentation.qml:41
+#: package/contents/ui/main.qml:238
+#, kde-format
+msgid "Remove All"
+msgstr "அனைத்தையும் நீக்கு"
+
+#: package/contents/ui/FullRepresentation.qml:42
+#, kde-format
+msgid "Click to safely remove all devices"
+msgstr "அனைத்து சாதனங்களையும் பத்திரமாக நீக்க க்ளிக் செய்யவும்"
+
+#: package/contents/ui/FullRepresentation.qml:186
+#, kde-format
+msgid "No removable devices attached"
+msgstr "கழற்றக்கூடிய சாதனங்கள் ஏதுமில்லை"
+
+#: package/contents/ui/FullRepresentation.qml:186
+#, kde-format
+msgid "No disks available"
+msgstr "வட்டுகள் ஏதுமில்லை"
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid "Most Recent Device"
+msgstr "மிக சமீபமான சாதனம்"
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid "No Devices Available"
+msgstr "எந்த சாதனமும் இல்லை"
+
+#: package/contents/ui/main.qml:245
+#, kde-format
+msgid "Removable Devices"
+msgstr "கழற்றக்கூடிய சாதனங்கள்"
+
+#: package/contents/ui/main.qml:251
+#, kde-format
+msgid "Non Removable Devices"
+msgstr "கழற்ற முடியாத சாதனங்கள்"
+
+#: package/contents/ui/main.qml:257
+#, kde-format
+msgid "All Devices"
+msgstr "அனைத்து சாதனங்கள்"
+
+#: package/contents/ui/main.qml:265
+#, kde-format
+msgid "Show popup when new device is plugged in"
+msgstr "புதிய சாதனம் செருகப்படும்போது தெரித்தெழும் பட்டியை காட்டு"
+
+#: package/contents/ui/main.qml:274
+#, kde-format
+msgctxt "Open auto mounter kcm"
+msgid "Configure Removable Devices…"
+msgstr "கழற்றக்கூடிய சாதனங்களை அமை…"
+
+#, fuzzy
+#~| msgid "1 action for this device"
+#~| msgid_plural "%1 actions for this device"
+#~ msgid "It is currently safe to remove this device."
+#~ msgstr "இக்கருவிக்கான 1 செயல்"
+
+#, fuzzy
+#~| msgid "1 action for this device"
+#~| msgid_plural "%1 actions for this device"
+#~ msgid "1 action for this device"
+#~ msgid_plural "%1 actions for this device"
+#~ msgstr[0] "இக்கருவிக்கான 1 செயல்"
+#~ msgstr[1] "இக்கருவிக்கான 1 செயல்"
+
+#, fuzzy
+#~| msgid "1 action for this device"
+#~| msgid_plural "%1 actions for this device"
+#~ msgid "Click to eject this disc."
+#~ msgstr "இக்கருவிக்கான 1 செயல்"
+
+#, fuzzy
+#~| msgid "1 action for this device"
+#~| msgid_plural "%1 actions for this device"
+#~ msgid "Click to safely remove this device."
+#~ msgstr "இக்கருவிக்கான 1 செயல்"
+
+#, fuzzy
+#~| msgid "1 action for this device"
+#~| msgid_plural "%1 actions for this device"
+#~ msgid "Click to mount this device."
+#~ msgstr "இக்கருவிக்கான 1 செயல்"
+
+#, fuzzy
+#~| msgid ""
+#~| "Cannot unmount the device.\n"
+#~| "One or more files on this device are open within an application."
+#~ msgid ""
+#~ "Could not unmount device %1.\n"
+#~ "One or more files on this device are open within an application."
+#~ msgstr ""
+#~ "கருவியை இறக்க இயலவில்லை.\n"
+#~ "ஒரு பயன்பாட்டினுள் இக்கருவியிலுள்ள ஒன்றி அல்லது அதற்கு மேற்பட்ட கோப்புகள் "
+#~ "திறக்கப்பட்டுள்ளன."
+
+#~ msgid ""
+#~ "Cannot eject the disc.\n"
+#~ "One or more files on this disc are open within an application."
+#~ msgstr ""
+#~ "தட்டினை வெளிக்கிட இயலவில்லை.\n"
+#~ "ஒரு பயன்பாட்டினுள் இத்தட்டிலுள்ள ஒன்று அல்லது அதற்கு மேற்பட்ட கோப்புகள் திறக்கப்பட்டுள்ளன."
+
+#, fuzzy
+#~| msgid "<font color=\"white\">Recently plugged devices:</font>"
+#~ msgid "Devices recently plugged in:"
+#~ msgstr "<font color=\"white\">செருகப்பட்ட சமீபத்திய கருவிகள்:</font>"
+
+#, fuzzy
+#~| msgid "Time to stay on top (s) :"
+#~ msgid "&Time to stay on top:"
+#~ msgstr "மேலே காத்திருப்பதற்கான நேரம்:"
+
+#, fuzzy
+#~| msgid "Number of items displayed (0 for no limit) :"
+#~ msgid "&Number of items displayed:"
+#~ msgstr "திரையிடப்படும் உருப்படடிகளின் எண்ணிக்கை (எல்லையில்லாதிருக்க 0):"
+
+#, fuzzy
+#~| msgid "Display time of items (0 for no limit) :"
+#~ msgid "&Display time of items:"
+#~ msgstr "உருப்படி திரையிடப்படும் தடவைகள் (எல்லயில்லாதிருக்க 0):"

@@ -1,0 +1,193 @@
+# translation of plasma_runner_sessions.po to Khmer
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Khoem Sokhem <khoemsokhem@khmeros.info>, 2008, 2009, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_sessions\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-01 00:45+0000\n"
+"PO-Revision-Date: 2010-01-06 14:51+0700\n"
+"Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
+"Language-Team: Khmer <support@khmeros.info>\n"
+"Language: km\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: KBabel 1.11.4\n"
+"X-Language: km-CM\n"
+
+#: sessionrunner.cpp:28 sessionrunner.cpp:64
+#, kde-format
+msgctxt "log out command"
+msgid "logout"
+msgstr "ចេញ"
+
+#: sessionrunner.cpp:28
+#, kde-format
+msgid "Logs out, exiting the current desktop session"
+msgstr "ចេញ មាន​សម័យ​ផ្ទៃតុ​បច្ចុប្បន្ន​រួច​ហើយ"
+
+#: sessionrunner.cpp:29 sessionrunner.cpp:81
+#, fuzzy, kde-format
+#| msgctxt "shutdown computer command"
+#| msgid "shutdown"
+msgctxt "shut down computer command"
+msgid "shut down"
+msgstr "បិទ"
+
+#: sessionrunner.cpp:29
+#, kde-format
+msgid "Turns off the computer"
+msgstr "បិទ​កុំព្យូទ័រ"
+
+#: sessionrunner.cpp:33 sessionrunner.cpp:90
+#, kde-format
+msgctxt "lock screen command"
+msgid "lock"
+msgstr "ចាក់សោ"
+
+#: sessionrunner.cpp:33
+#, kde-format
+msgid "Locks the current sessions and starts the screen saver"
+msgstr "ចាក់សោ​សម័យ​បច្ចុប្បន្ន ហើយ​ចាប់ផ្ដើម​ធាតុ​រក្សាអេក្រង់"
+
+#: sessionrunner.cpp:36 sessionrunner.cpp:72
+#, kde-format
+msgctxt "restart computer command"
+msgid "restart"
+msgstr "ចាប់ផ្ដើម​ឡើង​វិញ"
+
+#: sessionrunner.cpp:36
+#, kde-format
+msgid "Reboots the computer"
+msgstr "ចាប់ផ្ដើម​កុំព្យូទ័រ​ឡើង​វិញ"
+
+#: sessionrunner.cpp:37 sessionrunner.cpp:73
+#, kde-format
+msgctxt "restart computer command"
+msgid "reboot"
+msgstr "ចាប់ផ្ដើមឡើង​វិញ"
+
+#: sessionrunner.cpp:40
+#, kde-format
+msgctxt "switch user command"
+msgid "switch"
+msgstr "ប្ដូរ"
+
+#: sessionrunner.cpp:41
+#, kde-format
+msgctxt "switch user command"
+msgid "switch :q:"
+msgstr "ប្ដូរ :q:"
+
+#: sessionrunner.cpp:42
+#, kde-format
+msgid ""
+"Switches to the active session for the user :q:, or lists all active "
+"sessions if :q: is not provided"
+msgstr "ប្ដូរ​ទៅ​សម័យ​សកម្ម​សម្រាប់​អ្នក :q: ឬ​រាយ​សម័យ​ដែល​សកម្ម ប្រសិនបើ :q: មិន​ត្រូ​វបានផ្ដល់​ឲ្យ"
+
+#: sessionrunner.cpp:45 sessionrunner.cpp:130
+#, kde-format
+msgid "switch user"
+msgstr "ប្ដូ​រអ្នក​ប្រើ"
+
+#: sessionrunner.cpp:45
+#, kde-format
+msgid "Starts a new session as a different user"
+msgstr "ចាប់ផ្ដើម​សម័យ​ថ្មី​ជា​អ្នក​ប្រើ​ផ្សេង"
+
+#: sessionrunner.cpp:46 sessionrunner.cpp:130
+#, kde-format
+msgid "new session"
+msgstr "សម័យ​ថ្មី"
+
+#: sessionrunner.cpp:50
+#, kde-format
+msgid "Lists all sessions"
+msgstr "រាយ​សម័យ​ទាំងអស់"
+
+#: sessionrunner.cpp:64
+#, kde-format
+msgid "log out"
+msgstr "ចេញ"
+
+#: sessionrunner.cpp:66
+#, kde-format
+msgctxt "log out command"
+msgid "Logout"
+msgstr "ចេញ"
+
+#: sessionrunner.cpp:75
+#, kde-format
+msgid "Restart the computer"
+msgstr "ចាប់ផ្ដើម​កុំព្យូទ័រ​ឡើង​វិញ"
+
+#: sessionrunner.cpp:82
+#, fuzzy, kde-format
+#| msgctxt "shutdown computer command"
+#| msgid "shutdown"
+msgctxt "shut down computer command"
+msgid "shutdown"
+msgstr "បិទ"
+
+#: sessionrunner.cpp:84
+#, fuzzy, kde-format
+#| msgid "Shutdown the computer"
+msgid "Shut down the computer"
+msgstr "បិទ​កុំព្យូទ័រ"
+
+#: sessionrunner.cpp:93
+#, kde-format
+msgid "Lock the screen"
+msgstr "ចាក់សោ​អេក្រង់"
+
+#: sessionrunner.cpp:115
+#, kde-format
+msgctxt "User sessions"
+msgid "sessions"
+msgstr "សម័យ​ថ្មី​"
+
+#: sessionrunner.cpp:136
+#, fuzzy, kde-format
+#| msgid "switch user"
+msgid "Switch User"
+msgstr "ប្ដូ​រអ្នក​ប្រើ"
+
+#: sessionrunner.cpp:211
+#, kde-format
+msgid "Warning - New Session"
+msgstr "ព្រមាន - សម័យ​ថ្មី"
+
+#: sessionrunner.cpp:212
+#, fuzzy, kde-format
+#| msgid ""
+#| "<p>You have chosen to open another desktop session.<br />The current "
+#| "session will be hidden and a new login screen will be displayed.<br />An "
+#| "F-key is assigned to each session; F%1 is usually assigned to the first "
+#| "session, F%2 to the second session and so on. You can switch between "
+#| "sessions by pressing Ctrl, Alt and the appropriate F-key at the same "
+#| "time. Additionally, the KDE Panel and Desktop menus have actions for "
+#| "switching between sessions.</p>"
+msgid ""
+"<p>You have chosen to open another desktop session.<br />The current session "
+"will be hidden and a new login screen will be displayed.<br />An F-key is "
+"assigned to each session; F%1 is usually assigned to the first session, F%2 "
+"to the second session and so on. You can switch between sessions by pressing "
+"Ctrl, Alt and the appropriate F-key at the same time. Additionally, the "
+"Plasma Panel and Desktop menus have actions for switching between sessions.</"
+"p>"
+msgstr ""
+"<p>អ្នក​បានជ្រើស​ ដើម្បី​បើក​សម័យ​ផ្ទៃតុ​ផ្សេង ។<br />សម័យ​បច្ចុប្បន្ន​នឹង​ត្រូវ​បានលាក់​ ហើយ​អេក្រង់​ចូល​ថ្មី​នឹង​"
+"ត្រូវ​បានបង្ហាញ ។<br />គ្រាប់​ចុច F ត្រូវ​បានផ្ដល់​ទៅ​សម័យ​នីមួយៗ  F%1 តាម​ធម្មតា​ត្រូវ​បានផ្ដល់ទៅ​សម័យ​"
+"ដំបូង F%2 ទៅ​សម័យ​ទីពីរ និង​បន្តបន្ទាប់ ។ អ្នក​អាច​ប្ដូ​ររវាង​សម័យ​​នឹង​សម័យ ដោយ​ចុច​បញ្ជា (Ctrl) "
+"ជំនួស(Alt) និង​គ្រាប់ចុច​ F ដែល​សមរម្យ​នៅពេលតែ​មួយ ។ បន្ថែម​លើ​នេះ​ទៀត បន្ទះ​របស់ KDE និង​ម៉ឺនុយ​ផ្ទៃតុ​"
+"មាន​សកម្មភាព​សម្រាប់​ប្ដូរ​រវាង​សម័យ​ ។</p>"
+
+#~ msgid "New Session"
+#~ msgstr "សម័យ​ថ្មី"
+
+#~ msgid "&Start New Session"
+#~ msgstr "ចាប់ផ្ដើម​សម័យ​ថ្មី"

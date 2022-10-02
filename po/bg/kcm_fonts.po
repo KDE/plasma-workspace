@@ -1,0 +1,363 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007, 2008.
+# Yasen Pramatarov <yasen@lindeas.com>, 2010.
+# Mincho Kondarev <mkondarev@yahoo.de>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmfonts\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-03 00:45+0000\n"
+"PO-Revision-Date: 2022-05-22 17:24+0200\n"
+"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
+"Language-Team: Bulgarian <dict@fsa-bg.org>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 22.04.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, kde-format
+msgid "Force font DPI Wayland"
+msgstr "Принудително задаване на DPI на шрифт за Wayland"
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:13
+#, kde-format
+msgid "Force font DPI on X11"
+msgstr "Принудително задаване на DPI на шрифт за X11"
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, kde-format
+msgid "General font"
+msgstr "Общ шрифт"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, kde-format
+msgid "Fixed width font"
+msgstr "Шрифт с фиксирана ширина"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, kde-format
+msgid "Small font"
+msgstr "Дребен шрифт"
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, kde-format
+msgid "Tool bar font"
+msgstr "Шрифт на ленти с инструменти"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, kde-format
+msgid "Menu font"
+msgstr "Шрифт на менюта"
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, kde-format
+msgid "Window title font"
+msgstr "Шрифт на заглавие на прозорци"
+
+#: kxftconfig.cpp:458
+#, kde-format
+msgctxt "use system subpixel setting"
+msgid "Vendor default"
+msgstr "Стандартно"
+
+#: kxftconfig.cpp:460
+#, kde-format
+msgctxt "no subpixel rendering"
+msgid "None"
+msgstr "Без"
+
+#: kxftconfig.cpp:462
+#, kde-format
+msgid "RGB"
+msgstr "RGB"
+
+#: kxftconfig.cpp:464
+#, kde-format
+msgid "BGR"
+msgstr "BGR"
+
+#: kxftconfig.cpp:466
+#, kde-format
+msgid "Vertical RGB"
+msgstr "Vertical RGB"
+
+#: kxftconfig.cpp:468
+#, kde-format
+msgid "Vertical BGR"
+msgstr "Vertical BGR"
+
+#: kxftconfig.cpp:496
+#, kde-format
+msgctxt "use system hinting settings"
+msgid "Vendor default"
+msgstr "Стандартно"
+
+#: kxftconfig.cpp:498
+#, kde-format
+msgctxt "medium hinting"
+msgid "Medium"
+msgstr "Средно"
+
+#: kxftconfig.cpp:500
+#, kde-format
+msgctxt "no hinting"
+msgid "None"
+msgstr "Без"
+
+#: kxftconfig.cpp:502
+#, kde-format
+msgctxt "slight hinting"
+msgid "Slight"
+msgstr "Леко"
+
+#: kxftconfig.cpp:504
+#, kde-format
+msgctxt "full hinting"
+msgid "Full"
+msgstr "Пълно"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module lets you configure the system fonts."
+msgstr "Този модул ви позволява да конфигурирате системните шрифтове."
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid "Change Display Scaling…"
+msgstr "Промяна на мащабирането на екрана…"
+
+#: package/contents/ui/main.qml:37
+#, kde-format
+msgid ""
+"Some changes such as anti-aliasing or DPI will only affect newly started "
+"applications."
+msgstr ""
+"Някои промени като изглаждане или DPI ще засегнат само наново стартираните "
+"приложения."
+
+#: package/contents/ui/main.qml:51
+#, kde-format
+msgid ""
+"Very large fonts may produce odd-looking results. Consider adjusting the "
+"global screen scale instead of using a very large font size."
+msgstr ""
+"Много големи шрифтове могат да доведат до странно изглеждащи резултати. "
+"Помислете за коригиране на резолюцията на екрана, вместо да се използва "
+"много голям размер на шрифта."
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid ""
+"Decimal font sizes can cause text layout problems in some applications. "
+"Consider using only integer font sizes."
+msgstr ""
+"Размери на шрифта с десетични стойности могат да причинят проблеми с "
+"оформлението на текста в някои приложения. Препоръчително е използване само "
+"на цели числа."
+
+#: package/contents/ui/main.qml:94
+#, kde-format
+msgid ""
+"The recommended way to scale the user interface is using the global screen "
+"scaling feature."
+msgstr ""
+"Препоръчителният начин за мащабиране на потребителския интерфейс е "
+"настройването на резолюцията на екрана."
+
+#: package/contents/ui/main.qml:106
+#, kde-format
+msgid "&Adjust All Fonts…"
+msgstr "&Настройване на всички шрифтове…"
+
+#: package/contents/ui/main.qml:119
+#, kde-format
+msgid "General:"
+msgstr "Общи:"
+
+#: package/contents/ui/main.qml:120
+#, kde-format
+msgid "Select general font"
+msgstr "Избиране на общ шрифт"
+
+#: package/contents/ui/main.qml:131
+#, kde-format
+msgid "Fixed width:"
+msgstr "Фиксирана ширина:"
+
+#: package/contents/ui/main.qml:132
+#, kde-format
+msgid "Select fixed width font"
+msgstr "Избиране на шрифт с фиксирана ширина"
+
+#: package/contents/ui/main.qml:143
+#, kde-format
+msgid "Small:"
+msgstr "Дребен шрифт:"
+
+#: package/contents/ui/main.qml:144
+#, kde-format
+msgid "Select small font"
+msgstr "Избиране на дребен шрифт"
+
+#: package/contents/ui/main.qml:155
+#, kde-format
+msgid "Toolbar:"
+msgstr "Лента с инструменти:"
+
+#: package/contents/ui/main.qml:156
+#, kde-format
+msgid "Select toolbar font"
+msgstr "Избиране на шрифт за лента с инструменти"
+
+#: package/contents/ui/main.qml:167
+#, kde-format
+msgid "Menu:"
+msgstr "Меню:"
+
+#: package/contents/ui/main.qml:168
+#, kde-format
+msgid "Select menu font"
+msgstr "Избиране на шрифт за меню"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "Window title:"
+msgstr "Заглавие на прозорец:"
+
+#: package/contents/ui/main.qml:179
+#, kde-format
+msgid "Select window title font"
+msgstr "Избиране на шрифт за заглавна лента на прозорец"
+
+#: package/contents/ui/main.qml:194
+#, kde-format
+msgid "Anti-Aliasing:"
+msgstr "Изглаждане:"
+
+#: package/contents/ui/main.qml:199
+#, kde-format
+msgid "Enable"
+msgstr "Активиране"
+
+#: package/contents/ui/main.qml:203
+#, kde-kuit-format
+msgctxt "@info:tooltip Anti-Aliasing"
+msgid ""
+"Pixels on displays are generally aligned in a grid. Therefore shapes of "
+"fonts that do not align with this grid will look blocky and wrong unless "
+"<emphasis>anti-aliasing</emphasis> techniques are used to reduce this "
+"effect. You generally want to keep this option enabled unless it causes "
+"problems."
+msgstr ""
+"Пикселите на дисплеите обикновено се подравняват в решетка. Следователно "
+"форми на шрифтовете, които не са подравнени с тази решетка, ще изглеждат "
+"ъгловати и грешни, освен ако не се  използват техники на <emphasis> "
+"изглаждане </emphasis>, за да се намали този ефект. Обикновено се препоръчва "
+"да  запазите тази опция активирана, освен ако не причинява проблеми."
+
+#: package/contents/ui/main.qml:217
+#, kde-format
+msgid "Exclude range from anti-aliasing"
+msgstr "Обхват на изключване от изглаждане"
+
+#: package/contents/ui/main.qml:236 package/contents/ui/main.qml:259
+#, kde-format
+msgid "%1 pt"
+msgstr "%1 pt"
+
+#: package/contents/ui/main.qml:251
+#, kde-format
+msgid "to"
+msgstr "до"
+
+#: package/contents/ui/main.qml:282
+#, kde-format
+msgctxt "Used as a noun, and precedes a combobox full of options"
+msgid "Sub-pixel rendering:"
+msgstr "Субпикселно рендериране:"
+
+#: package/contents/ui/main.qml:324
+#, kde-kuit-format
+msgctxt "@info:tooltip Sub-pixel rendering"
+msgid ""
+"<para>On TFT or LCD screens every single pixel is actually composed of three "
+"or four smaller monochrome lights. These <emphasis>sub-pixels</emphasis> can "
+"be changed independently to further improve the quality of displayed fonts.</"
+"para> <para>The rendering quality is only improved if the selection matches "
+"the manner in which the sub-pixels of your display are aligned. Most "
+"displays have a linear ordering of <emphasis>RGB</emphasis> sub-pixels, some "
+"have <emphasis>BGR</emphasis> and some exotic orderings are not supported by "
+"this feature.</para>This does not work with CRT monitors."
+msgstr ""
+"<para> На TFT или LCD екрани всеки един пиксел всъщност се състои от три или "
+"четири по-малки монохромни светлини. Тези <emphasis> субпиксели </emphasis> "
+"могат да се променят независимо, за да се подобри допълнително качеството на "
+"показваните шрифтове. </para> <para> Качеството на изобразяване се подобрява "
+"само ако изборът съвпада по начина, по който са подравнени субпикселите на "
+"вашия дисплей. Повечето дисплеи имат линейно подреждане на <emphasis> RGB </"
+"emphasis> субпиксели, някои имат <emphasis> BGR </emphasis> и някои "
+"екзотични задачи не се поддържат от тази функция. </para> Това не работи с "
+"CRT монитори."
+
+#: package/contents/ui/main.qml:329
+#, kde-format
+msgctxt "Used as a noun, and precedes a combobox full of options"
+msgid "Hinting:"
+msgstr "Хинтиране:"
+
+#: package/contents/ui/main.qml:370
+#, kde-kuit-format
+msgctxt "@info:tooltip Hinting"
+msgid ""
+"Hinting is a technique in which hints embedded in a font are used to enhance "
+"the rendering quality especially at small sizes. Stronger hinting generally "
+"leads to sharper edges but the small letters will less closely resemble "
+"their shape at big sizes."
+msgstr ""
+"Хинтирането е техника, при която програмни инструкции - hints са вградени в "
+"шрифта за подобряване на качеството на изобразяване, особено при малки "
+"размери на шрифта. По-високи стойности като цяло водят до по-остро "
+"изобразяване, но малките букви по-малко запазват формата си при задаване на "
+"по-големи размери."
+
+#: package/contents/ui/main.qml:380
+#, kde-format
+msgid "Force font DPI:"
+msgstr "Принудително задаване на DPI на шрифта:"
+
+#: package/contents/ui/main.qml:422
+#, kde-kuit-format
+msgctxt "@info:tooltip Force fonts DPI"
+msgid ""
+"<para>Enter your screen's DPI here to make on-screen fonts match their "
+"physical sizes when printed. Changing this option from its default value "
+"will conflict with many apps; some icons and images may not scale as "
+"expected.</para><para>To increase text size, change the size of the fonts "
+"above. To scale everything, use the scaling slider on the <interface>Display "
+"& Monitor</interface> page.</para>"
+msgstr ""
+"<para>Въведете DPI на екрана тук, за да настроите екранните шрифтове да "
+"съответстват на физическите си размери. Промяната на тази опция от "
+"стойността по подразбиране ще противоречи на много приложения; Някои икони и "
+"изображения няма да може да се мащабират, както се очаква. </para><para>За "
+"да увеличите размера на текста, променете размера на шрифтовете по-горе. За "
+"да мащабирате всичко, използвайте плъзгача за мащабиране на екрана от "
+"разделът <interface>Екран и монитор</interface>.</para>"
+
+#: package/contents/ui/main.qml:428
+#, kde-format
+msgid "Select Font"
+msgstr "Избиране на шрифт"

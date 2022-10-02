@@ -1,0 +1,192 @@
+# translation of plasmashellprivateplugin.po to Slovak
+# Roman Paholik <wizzardsk@gmail.com>, 2014, 2015, 2016.
+# Mthw <jari_45@hotmail.com>, 2018.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasmashellprivateplugin\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-03 00:48+0000\n"
+"PO-Revision-Date: 2021-09-15 18:41+0200\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.08.1\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Matej Mrenica"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "matejm98mthw@gmail.com"
+
+#: calendar/eventdatadecorator.cpp:51
+#, kde-format
+msgctxt "Agenda listview section title"
+msgid "Holidays"
+msgstr ""
+
+#: calendar/eventdatadecorator.cpp:53
+#, kde-format
+msgctxt "Agenda listview section title"
+msgid "Events"
+msgstr ""
+
+#: calendar/eventdatadecorator.cpp:55
+#, kde-format
+msgctxt "Agenda listview section title"
+msgid "Todo"
+msgstr ""
+
+#: calendar/eventdatadecorator.cpp:57
+#, kde-format
+msgctxt "Means 'Other calendar items'"
+msgid "Other"
+msgstr ""
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:10
+#, kde-format
+msgid "Screen lock enabled"
+msgstr "Zamknutie obrazovky povolené"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:11
+#, kde-format
+msgid "Sets whether the screen will be locked after the specified time."
+msgstr "Nastaví, či sa obrazovka zamkne po určenom čase."
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:16
+#, kde-format
+msgid "Screen saver timeout"
+msgstr "Časový limit pre šetrič obrazovky"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:17
+#, kde-format
+msgid "Sets the minutes after which the screen is locked."
+msgstr "Nastaví počet minút, po uplynutí ktorých sa obrazovka zamkne."
+
+#: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
+#, kde-format
+msgid "New Session"
+msgstr "Nové sedenie"
+
+#: shellprivate/widgetexplorer/kcategorizeditemsviewmodels.cpp:64
+#, kde-format
+msgid "Filters"
+msgstr "Filtre"
+
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:42
+#, kde-format
+msgid "Select Plasmoid File"
+msgstr "Vybrať súbor plazmoidu"
+
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:66
+#, kde-format
+msgid "Installing the package %1 failed."
+msgstr "Inštalácia balíčka %1 zlyhala."
+
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:66
+#, kde-format
+msgid "Installation Failure"
+msgstr "Zlyhanie inštalácie"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:110
+#, kde-format
+msgid "All Widgets"
+msgstr "Všetky widgety"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:114
+#, kde-format
+msgid "Running"
+msgstr "Beží"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:118
+#, fuzzy, kde-format
+#| msgid "Uninstallable"
+msgctxt ""
+"@item:inmenu used in the widget filter. Filter widgets that can be un-"
+"installed from the system, which are usually installed by the user to a "
+"local place."
+msgid "Uninstallable"
+msgstr "Odinštalovateľné"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:122
+#, kde-format
+msgid "Categories:"
+msgstr "Kategórie:"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:199
+#, kde-format
+msgid "Download New Plasma Widgets"
+msgstr "Stiahnuť nové Plasma widgety"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:208
+#, kde-format
+msgid "Install Widget From Local File…"
+msgstr "Inštalovať widget z lokálneho súboru..."
+
+#~ msgid "&Execute"
+#~ msgstr "S&pustiť"
+
+#~ msgctxt "Toolbar Button to switch to Plasma Scripting Mode"
+#~ msgid "Plasma"
+#~ msgstr "Plasma"
+
+#~ msgctxt "Toolbar Button to switch to KWin Scripting Mode"
+#~ msgid "KWin"
+#~ msgstr "KWin"
+
+#~ msgid "Templates"
+#~ msgstr "Šablóny"
+
+#~ msgid "Desktop Shell Scripting Console"
+#~ msgstr "Skriptovacia konzola plochy"
+
+#~ msgid "Editor"
+#~ msgstr "Editor"
+
+#~ msgid "Load"
+#~ msgstr "Načítať"
+
+#~ msgid "Use"
+#~ msgstr "Použiť"
+
+#~ msgid "Output"
+#~ msgstr "Výstup"
+
+#~ msgid "Unable to load script file <b>%1</b>"
+#~ msgstr "Nepodarilo sa načítať súbor skriptu <b>%1</b>"
+
+#~ msgid "Open Script File"
+#~ msgstr "Otvoriť súbor skriptu"
+
+#~ msgid "Save Script File"
+#~ msgstr "Uložiť súbor skriptu"
+
+#~ msgid "Executing script at %1"
+#~ msgstr "Spúšťa sa skript %1"
+
+#~ msgid "Runtime: %1ms"
+#~ msgstr "Čas behu: %1ms"
+
+#~ msgid "Download Wallpaper Plugins"
+#~ msgstr "Stiahnuť doplnky tapety"
+
+#~ msgid "Containments"
+#~ msgstr "Kontajnery"
+
+#~ msgctxt ""
+#~ "%1 is a type of widgets, as defined by e.g. some plasma-packagestructure-"
+#~ "*.desktop files"
+#~ msgid "Download New %1"
+#~ msgstr "Stiahnuť nové %1"

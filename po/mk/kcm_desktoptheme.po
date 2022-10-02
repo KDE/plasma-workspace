@@ -1,0 +1,379 @@
+# translation of kcm_desktopthemedetails.po to Macedonian
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Bozidar Proevski <bobibobi@freemail.com.mk>, 2008, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_desktopthemedetails\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"PO-Revision-Date: 2009-06-21 13:48+0200\n"
+"Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
+"Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
+"Language: mk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: Plural-Forms: nplurals=3; plural=n%10==1 ? 0 : n%10==2 ? 1 : "
+"2;\n"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Get New Theme..."
+msgid "Name of the current Plasma Style"
+msgstr "Земи нова тема..."
+
+#: kcm.cpp:108
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: kcm.cpp:119
+#, kde-format
+msgid "Unable to download the theme: %1"
+msgstr ""
+
+#: kcm.cpp:144
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: kcm.cpp:147 kcm.cpp:153
+#, kde-format
+msgid "Theme installation failed."
+msgstr ""
+
+#: kcm.cpp:245
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "This module lets you choose the Plasma style."
+msgstr ""
+
+#: package/contents/ui/main.qml:69
+#, fuzzy, kde-format
+#| msgid "Theme Item"
+msgid "All Themes"
+msgstr "Елемент од тема"
+
+#: package/contents/ui/main.qml:70
+#, fuzzy, kde-format
+#| msgid "Theme Item"
+msgid "Light Themes"
+msgstr "Елемент од тема"
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgid "Dark Themes"
+msgstr ""
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "Color scheme compatible"
+msgstr ""
+
+#: package/contents/ui/main.qml:100
+#, fuzzy, kde-format
+#| msgctxt "plasma name"
+#| msgid "Color Scheme"
+msgid "Follows color scheme"
+msgstr "Шема на бои"
+
+#: package/contents/ui/main.qml:118
+#, fuzzy, kde-format
+#| msgid "Theme Item"
+msgid "Edit Theme…"
+msgstr "Елемент од тема"
+
+#: package/contents/ui/main.qml:125
+#, kde-format
+msgid "Remove Theme"
+msgstr "Отстранување тема"
+
+#: package/contents/ui/main.qml:132
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Theme"
+msgstr "Отстранување тема"
+
+#: package/contents/ui/main.qml:174
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: package/contents/ui/main.qml:179
+#, fuzzy, kde-format
+#| msgid "Get New Theme..."
+msgid "Get New Plasma Styles…"
+msgstr "Земи нова тема..."
+
+#: package/contents/ui/main.qml:193
+#, fuzzy, kde-format
+#| msgid "Theme Item"
+msgid "Open Theme"
+msgstr "Елемент од тема"
+
+#: package/contents/ui/main.qml:195
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:31
+#, kde-format
+msgid ""
+"This tool allows you to set the theme of the current Plasma session, without "
+"accidentally setting it to one that is either not available, or which is "
+"already set."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:35
+#, kde-format
+msgid ""
+"The name of the theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:36
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:49
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:65
+#, kde-format
+msgid "The current Plasma session's theme has been set to %1"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:67
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:75
+#, kde-format
+msgid "You have the following Plasma themes on your system:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Божидар Проевски"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "bobibobi@freemail.com.mk"
+
+#, fuzzy
+#~| msgid "Get New Theme..."
+#~ msgid "Plasma Style"
+#~ msgstr "Земи нова тема..."
+
+#, fuzzy
+#~| msgid "Get New Theme..."
+#~ msgid "Plasma Styles"
+#~ msgstr "Земи нова тема..."
+
+#, fuzzy
+#~| msgid "How to Change Desktop Theme"
+#~ msgid "Download New Plasma Styles"
+#~ msgstr "Како да се промени темата за раб. површина"
+
+#, fuzzy
+#~| msgid "Remove Desktop Theme"
+#~ msgid "Configure Desktop Theme"
+#~ msgstr "Отстранување тема за раб. површина"
+
+#, fuzzy
+#~| msgid "Export Desktop Theme"
+#~ msgid "KDE Desktop Theme Module"
+#~ msgstr "Изнесување тема за раб. површина"
+
+#~ msgctxt "plasma name"
+#~ msgid "Panel Background"
+#~ msgstr "Подлога на панелот"
+
+#~ msgctxt "plasma name"
+#~ msgid "Widget Background"
+#~ msgstr "Подлога на графичка контрола"
+
+#~ msgctxt "plasma name"
+#~ msgid "Translucent Background"
+#~ msgstr "Проѕирна подлога"
+
+#~ msgctxt "plasma name"
+#~ msgid "Dialog Background"
+#~ msgstr "Подлога на дијалог"
+
+#~ msgctxt "plasma name"
+#~ msgid "Analog Clock"
+#~ msgstr "Аналоген часовник"
+
+#~ msgctxt "plasma name"
+#~ msgid "Notes"
+#~ msgstr "Белешки"
+
+#~ msgctxt "plasma name"
+#~ msgid "Tooltip"
+#~ msgstr "Балонче со совет"
+
+#~ msgctxt "plasma name"
+#~ msgid "Pager"
+#~ msgstr "Пејџер"
+
+#~ msgctxt "plasma name"
+#~ msgid "Run Command Dialog"
+#~ msgstr "Дијалог „Извршување наредба“"
+
+#~ msgctxt "plasma name"
+#~ msgid "Shutdown Dialog"
+#~ msgstr "Дијалог за спуштање"
+
+#~ msgid "(Customized)"
+#~ msgstr "(Прилагодено)"
+
+#~ msgid "User customized theme"
+#~ msgstr "Кориснички прилагодена тема"
+
+#~ msgid ""
+#~ "Theme items have been changed.  Do you still wish remove the \"%1\" theme?"
+#~ msgstr ""
+#~ "Елементите на темата беа сменети. Дали сѐ уште сакате да ја отстраните "
+#~ "темата „%1“?"
+
+#~ msgid "Removal of the default desktop theme is not allowed."
+#~ msgstr ""
+#~ "Отстранувањето на стандардната тема за раб. површина не е дозволено."
+
+#~ msgid "Are you sure you wish remove the \"%1\" theme?"
+#~ msgstr "Дали навистина сакате да ја отстраните темата „%1“?"
+
+#~ msgid ""
+#~ "Please apply theme item changes (with a new theme name) before attempting "
+#~ "to export theme."
+#~ msgstr ""
+#~ "Применете ги измените на елементите на темата (со ново име на тема) пред "
+#~ "да се обидете да ја изнесете темата."
+
+#~ msgid "Export Desktop Theme"
+#~ msgstr "Изнесување тема за раб. површина"
+
+#~ msgid "Export theme to file"
+#~ msgstr "Изнесување тема во датотека"
+
+#~ msgid "Theme Item"
+#~ msgstr "Елемент од тема"
+
+#~ msgid "Source"
+#~ msgstr "Извор"
+
+#, fuzzy
+#~| msgid "%1 %2"
+#~ msgctxt ""
+#~ "%1 is the name of the theme, %2 is the type of the element (background, "
+#~ "icon, note, etc)"
+#~ msgid "%1 %2"
+#~ msgstr "%1 %2"
+
+#~ msgid "File..."
+#~ msgstr "Датотека..."
+
+#~ msgid "Select File to Use for %1"
+#~ msgstr "Изберете датотека што ќе се користи за %1"
+
+#~ msgid " Author: %1"
+#~ msgstr " Автор: %1"
+
+#~ msgid "Version: %1"
+#~ msgstr " Верзија: %1"
+
+#~ msgid "Desktop Theme Details"
+#~ msgstr "Детали за темата за работната површина"
+
+#~ msgid "More"
+#~ msgstr "Повеќе"
+
+#, fuzzy
+#~| msgid "Remove Desktop Theme"
+#~ msgid "Remove the selected theme"
+#~ msgstr "Отстранување тема за раб. површина"
+
+#~ msgid "Export Theme to File..."
+#~ msgstr "Изнесување тема во датотека..."
+
+#~ msgid "New theme name:"
+#~ msgstr "Име на новата тема:"
+
+#, fuzzy
+#~| msgid "New theme name:"
+#~ msgid "Custom theme name"
+#~ msgstr "Име на новата тема:"
+
+#~ msgid "Author:"
+#~ msgstr "Автор:"
+
+#, fuzzy
+#~| msgid "Theme Author"
+#~ msgid "Custom theme author "
+#~ msgstr "Автор на тема"
+
+#~ msgid "Version:"
+#~ msgstr "Верзијa:"
+
+#, fuzzy
+#~| msgid "New theme name:"
+#~ msgid "Custom theme version number"
+#~ msgstr "Име на новата тема:"
+
+#~ msgid "Description:"
+#~ msgstr "Опис:"
+
+#, fuzzy
+#~| msgid "The theme description goes here..."
+#~ msgid "Custom theme description"
+#~ msgstr "Тука е описот на темата..."
+
+#~ msgid "Theme Author"
+#~ msgstr "Автор на тема"
+
+#~ msgid "Theme Name"
+#~ msgstr "Име на тема"
+
+#~ msgid "Theme Version"
+#~ msgstr "Верзија на тема"
+
+#~ msgid "The theme description goes here..."
+#~ msgstr "Тука е описот на темата..."
+
+#, fuzzy
+#~| msgid "Remove Desktop Theme"
+#~ msgid "KCMDesktopTheme"
+#~ msgstr "Отстранување тема за раб. површина"
+
+#, fuzzy
+#~| msgid ""
+#~| "To change your desktop theme to \"%1\", open\n"
+#~| " the desktop Appearance Settings and select \"%2\" from the droplist."
+#~ msgid ""
+#~ "To change your desktop theme to \"%1\", go back to the 'General' tab of "
+#~ "System Settings; choose 'Appearance', and then 'Style'; and finally "
+#~ "select \"%2\" from the drop-down list at the top of the window."
+#~ msgstr ""
+#~ "За да измените вашата тема за раб. површина во „%1“, отворете\n"
+#~ "„Поставувања за реб. површина“ и изберете „%2“ од паѓачката листа."
+
+#~ msgid "Removal of the active desktop theme is not allowed."
+#~ msgstr "Отстранувањето на активната тема за раб. површина не е дозволено."

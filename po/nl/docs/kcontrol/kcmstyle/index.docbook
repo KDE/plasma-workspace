@@ -1,0 +1,151 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Dutch "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmstyle" lang="&language;">
+<articleinfo>
+
+<title
+>Stijl van toepassing</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+&Freek.de.Kruijf; 
+</authorgroup>
+
+<date
+>2021-04-09</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systeeminstellingen</keyword>
+<keyword
+>stijl</keyword>
+<keyword
+>toepassing</keyword>
+<keyword
+>widgets</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Deze module wordt gebruikt om te bepalen hoe de individuele widgets door &plasma; getekend worden.</para>
+
+<note
+><para
+>Een <emphasis
+>widget</emphasis
+> is een vaakgebruikte programmeursterm die verwijst naar elementen van een gebruikersinterface zoals knoppen, menu's en schuifbalken. U kunt ze zien als de onderliggende onderdelen die samengevoegd worden om uw programma te maken.</para
+></note>
+
+<para
+>U kunt instellen hoe widgets weergegeven moeten worden met deze module, maar om de kleuren van widgets te wijzigen, dient u de sectie <ulink url="help:/kcontrol/colors/index.html"
+>Kleuren</ulink
+> te raadplegen.</para>
+
+<para
+>Het bovenste raster, met label <guilabel
+>Stijl van toepassing</guilabel
+>, bevat een lijst met voorbeelden van voorgedefinieerde stijlen. Elke stijl heeft een naam en een korte beschrijving en wordt getoond wanneer u zweeft boven het item met de muisaanwijzer.</para>
+
+<para
+>Als u een &plasma;-thema wilt configureren, gebruik het overlaypictogram <guilabel
+>Stijl configureren...</guilabel
+> rechtsonder het widgetstijlpictogram in het raster.</para>
+
+<para
+>Indien geïmplementeerd, is het mogelijk om bijna elk aspect van de stijl te wijzigen: tabbalktabbladen centreren, scheiders van items op de werkbalk, indicator van focus tekenen in lijsten, pijlmarkeringen tekenen, uitgebreide resize hendels voor grootte wijzigen, zichtbaarheid van versnelling van toetsenbord definiëren, modus van venster verslepen, frames gebruiken voor betere toegankelijkheid, knoppen op de schuifbalken gebruiken, transparantie in de menu's gebruiken.</para>
+
+<para
+>De algemene configuratie kan gemaakt worden door op de knop <guibutton
+>Pictogrammen en werkbalken configureren</guibutton
+> onder het raster. Deze knop opent een paneel om verdere instellingen te selecteren.</para>
+<variablelist>
+
+<varlistentry
+> 
+<term
+><guilabel
+>Pictogrammen tonen: op knoppen</guilabel
+></term>
+<listitem>
+<para
+>Als deze optie geactiveerd is, hebben opdrachtknoppen (zoals <guibutton
+>OK</guibutton
+> en <guibutton
+>Toepassen</guibutton
+>) een klein pictogram als visueel hulpmiddel. Als deze optie niet geactiveerd is, wordt alleen tekst op de knop weergegeven.</para>
+</listitem
+> 
+</varlistentry
+> 
+
+<varlistentry
+> 
+<term
+><guilabel
+>Pictogrammen tonen: in menu's</guilabel
+></term>
+<listitem>
+<para
+>Als deze optie is geselecteerd, zullen &kde; toepassingen kleine pictogrammen tonen naast de meeste menu-items. Als deze optie niet is geselecteerd, dan verschijnt er alleen tekst in de menu's. Wijzigingen in de zichtbaarheid van menu-pictogrammen zullen alleen effect hebben op nieuw gestarte toepassingen.</para>
+</listitem
+> 
+</varlistentry
+> 
+
+<varlistentry
+> 
+<term
+><guilabel
+>Label van hoofdwerkbalk</guilabel
+>, <guilabel
+>Secundaire werkbalklabel</guilabel
+></term>
+<listitem>
+<para
+>Met deze afrolvakken kunt u bepalen waar standaard de knoptekst zal verschijnen in beide werkbalken. Als <guilabel
+>Geen</guilabel
+> is geselecteerd, staat er geen tekst op de werkbalkknoppen. Als <guilabel
+>Alleen tekst</guilabel
+> is geselecteerd, wordt het knoppictogram vervangen door de naam van de knop in tekst. Als <guilabel
+>Naast pictogrammen</guilabel
+> geselecteerd is, wordt de naam van de knop <emphasis
+>rechts</emphasis
+> van het pictogram geplaatst. Als <guilabel
+>Onder pictogrammen</guilabel
+> geselecteerd is, is de standaard om de naam van de knop <emphasis
+>onder</emphasis
+> het pictogram te hebben.</para>
+
+<tip
+><para
+>Deze opties bepalen alleen de <emphasis
+>standaard</emphasis
+> locatie. Elke toepassing kan een eigen waarde voor deze instelling opgeven, die dan gebruikt wordt.</para
+></tip>
+</listitem
+> 
+</varlistentry
+> 
+
+</variablelist>
+
+<para
+>De knop <guibutton
+>Toepassingstijl GNOME/GTK...</guibutton
+> kan gebruikt worden om het configuratietabblad te openen waar u het <guilabel
+>GTK-thema</guilabel
+> kunt kiezen, GTK-thema uit een bestand installeren of <guibutton
+>Nieuwe toepassingstijlen GNOME/GTK ophalen</guibutton
+> uit het internet. </para>
+
+</article>

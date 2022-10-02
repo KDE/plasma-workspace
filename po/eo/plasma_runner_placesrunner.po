@@ -1,0 +1,35 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_placesrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"PO-Revision-Date: 2009-10-23 20:04+0300\n"
+"Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
+"Language-Team: ESPERANTO <kde-i18n-eo@kde.org>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Esperanto\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: placesrunner.cpp:29 placesrunner.cpp:83
+#, kde-format
+msgid "places"
+msgstr "lokoj"
+
+#: placesrunner.cpp:29
+#, kde-format
+msgid "Lists all file manager locations"
+msgstr "Listas ĉiujn dosiermastrumilajn lokojn"
+
+#: placesrunner.cpp:31
+#, kde-format
+msgid "Finds file manager locations that match :q:"
+msgstr "Trovas dosiermastrumilajn lokojn kongruantajn kun :q:"

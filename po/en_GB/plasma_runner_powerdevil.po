@@ -1,0 +1,211 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Andrew Coles <andrew_coles@yahoo.co.uk>, 2009, 2010.
+# Steve Allewell <steve.allewell@gmail.com>, 2018, 2019, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_powerdevil\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"PO-Revision-Date: 2022-01-01 16:31+0000\n"
+"Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
+"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.12.0\n"
+
+#: PowerDevilRunner.cpp:32
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "suspend"
+msgstr "suspend"
+
+#: PowerDevilRunner.cpp:34
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to ram"
+msgstr "to ram"
+
+#: PowerDevilRunner.cpp:36
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "sleep"
+msgstr "sleep"
+
+#: PowerDevilRunner.cpp:38
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "hibernate"
+msgstr "hibernate"
+
+#: PowerDevilRunner.cpp:40
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to disk"
+msgstr "to disk"
+
+#: PowerDevilRunner.cpp:42 PowerDevilRunner.cpp:44 PowerDevilRunner.cpp:69
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "dim screen"
+msgstr "dim screen"
+
+#: PowerDevilRunner.cpp:53
+#, kde-format
+msgid ""
+"Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
+"activated"
+msgstr ""
+"Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
+"activated"
+
+#: PowerDevilRunner.cpp:57
+#, kde-format
+msgid "Suspends the system to RAM"
+msgstr "Suspends the system to RAM"
+
+#: PowerDevilRunner.cpp:61
+#, kde-format
+msgid "Suspends the system to disk"
+msgstr "Suspends the system to disk"
+
+#: PowerDevilRunner.cpp:65
+#, kde-format
+msgctxt ""
+"Note this is a KRunner keyword, <> is a placeholder and should be at the end"
+msgid "screen brightness <percent value>"
+msgstr "screen brightness <percent value>"
+
+#: PowerDevilRunner.cpp:67
+#, no-c-format, kde-format
+msgid ""
+"Lists screen brightness options or sets it to the brightness defined by the "
+"search term; e.g. screen brightness 50 would dim the screen to 50% maximum "
+"brightness"
+msgstr ""
+"Lists screen brightness options or sets it to the brightness defined by the "
+"search term; e.g. screen brightness 50 would dim the screen to 50% maximum "
+"brightness"
+
+#: PowerDevilRunner.cpp:95
+#, kde-format
+msgid "Set Brightness to %1%"
+msgstr "Set Brightness to %1%"
+
+#: PowerDevilRunner.cpp:104
+#, kde-format
+msgid "Dim screen totally"
+msgstr "Dim screen totally"
+
+#: PowerDevilRunner.cpp:112
+#, kde-format
+msgid "Dim screen by half"
+msgstr "Dim screen by half"
+
+#: PowerDevilRunner.cpp:142
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Sleep"
+
+#: PowerDevilRunner.cpp:143
+#, kde-format
+msgid "Suspend to RAM"
+msgstr "Suspend to RAM"
+
+#: PowerDevilRunner.cpp:148
+#, kde-format
+msgctxt "Suspend to disk"
+msgid "Hibernate"
+msgstr "Hibernate"
+
+#: PowerDevilRunner.cpp:149
+#, kde-format
+msgid "Suspend to disk"
+msgstr "Suspend to disk"
+
+#: PowerDevilRunner.cpp:218
+#, kde-format
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "screen brightness "
+msgstr "screen brightness "
+
+#: PowerDevilRunner.cpp:220
+#, kde-format
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "dim screen "
+msgstr "dim screen "
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "screen brightness"
+#~ msgstr "screen brightness"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "screen brightness %1"
+#~ msgstr "screen brightness %1"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "dim screen %1"
+#~ msgstr "dim screen %1"
+
+#~ msgid "Suspend"
+#~ msgstr "Suspend"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "power profile"
+#~ msgstr "power profile"
+
+#~ msgid "Lists all power profiles and allows them to be activated"
+#~ msgstr "Lists all power profiles and allows them to be activated"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "power profile %1"
+#~ msgstr "power profile %1"
+
+#~ msgid "Set Profile to '%1'"
+#~ msgstr "Set Profile to '%1'"
+
+#~ msgid "Turn off screen"
+#~ msgstr "Turn off screen"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "cpu policy"
+#~ msgstr "cpu policy"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "power governor"
+#~ msgstr "power governor"
+
+#~ msgid "Lists all power saving schemes and allows them to be activated"
+#~ msgstr "Lists all power saving schemes and allows them to be activated"
+
+#~ msgid ""
+#~ "Lists all CPU frequency scaling policies and allows them to be activated"
+#~ msgstr ""
+#~ "Lists all CPU frequency scaling policies and allows them to be activated"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "cpu policy %1"
+#~ msgstr "cpu policy %1"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "power governor %1"
+#~ msgstr "power governor %1"
+
+#~ msgid "Set CPU frequency scaling policy to '%1'"
+#~ msgstr "Set CPU frequency scaling policy to '%1'"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "power scheme %1"
+#~ msgstr "power scheme %1"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "power scheme"
+#~ msgstr "power scheme"
+
+#~ msgid "Set Powersaving Scheme to '%1'"
+#~ msgstr "Set Powersaving Scheme to '%1'"

@@ -1,0 +1,161 @@
+# translation of plasma_applet_clock.po to Nepali
+# Nabin Gautam <nabin@mpp.org.np>, 2007.
+# Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>, 2007.
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_clock\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-25 00:47+0000\n"
+"PO-Revision-Date: 2007-10-31 20:01+0545\n"
+"Last-Translator: Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>\n"
+"Language-Team: Nepali <info@mpp.org.np>\n"
+"Language: ne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n !=1\n"
+"\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr ""
+
+#: contents/ui/analogclock.qml:76
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Current time is %1; Current date is %2"
+msgstr ""
+
+#: contents/ui/configGeneral.qml:23
+#, fuzzy, kde-format
+#| msgid "Display the second hand"
+msgid "Show seconds hand"
+msgstr "दोस्रो हात प्रदर्शन गर्नुहोस्"
+
+#: contents/ui/configGeneral.qml:24
+#, fuzzy, kde-format
+#| msgid "Comment"
+msgid "General:"
+msgstr "टिप्पणी"
+
+#: contents/ui/configGeneral.qml:28
+#, fuzzy, kde-format
+#| msgid "Also display the time in text"
+msgid "Show time zone"
+msgstr "समयलाई पाठमा पनि देखाउनुहोस्"
+
+#, fuzzy
+#~| msgid "Display the second hand"
+#~ msgid "Show the seconds"
+#~ msgstr "दोस्रो हात प्रदर्शन गर्नुहोस्"
+
+#, fuzzy
+#~| msgid ""
+#~| "Check this if you want to display the second hand in order to see the "
+#~| "seconds."
+#~ msgid "Check this if you want to show the seconds."
+#~ msgstr "यदि तपाईँ सेकेन्ड हेर्न दोस्रो हात प्रदर्शन चाहनुहुन्छ भने यो जाँच गर्नुहोस् ।"
+
+#, fuzzy
+#~| msgid "Display the second hand"
+#~ msgid "Show &seconds hand"
+#~ msgstr "दोस्रो हात प्रदर्शन गर्नुहोस्"
+
+#, fuzzy
+#~| msgid "Also display the time in text"
+#~ msgid "Show the Timezone in text"
+#~ msgstr "समयलाई पाठमा पनि देखाउनुहोस्"
+
+#, fuzzy
+#~| msgid ""
+#~| "Check this if you want to display the time as a string within the clock."
+#~ msgid "Check this if you want to display Timezone in text."
+#~ msgstr ""
+#~ "यदि तपाईँ समयलाई घडी भित्र स्ट्रिङको रूपमा प्रदर्शन गर्न चाहनुहुन्छ भने यो जाँच गर्नुहोस् "
+#~ "।"
+
+#, fuzzy
+#~| msgid "Also display the time in text"
+#~ msgid "Show &time zone"
+#~ msgstr "समयलाई पाठमा पनि देखाउनुहोस्"
+
+#, fuzzy
+#~| msgid "Also display the time in text"
+#~ msgid "Also show the Timezone as text"
+#~ msgstr "समयलाई पाठमा पनि देखाउनुहोस्"
+
+#~ msgid "Area"
+#~ msgstr "क्षेत्र"
+
+#~ msgid "Region"
+#~ msgstr "प्रदेश"
+
+#~ msgid "Comment"
+#~ msgstr "टिप्पणी"
+
+#~ msgctxt "@title:window"
+#~ msgid "Configure Clock"
+#~ msgstr "घडी कन्फिगर गर्नुहोस्"
+
+#~ msgid "Display seconds"
+#~ msgstr "सेकेन्ड प्रदर्शन गर्नुहोस्"
+
+#~ msgid "Display the time as a string"
+#~ msgstr "समयलाई स्ट्रिङको रूपमा प्रदर्शन गर्नुहोस्"
+
+#, fuzzy
+#~| msgid "Area"
+#~ msgid "Accra"
+#~ msgstr "क्षेत्र"
+
+#, fuzzy
+#~| msgid "Area"
+#~ msgid "Asmara"
+#~ msgstr "क्षेत्र"
+
+#, fuzzy
+#~| msgid "Area"
+#~ msgid "Aruba"
+#~ msgstr "क्षेत्र"
+
+#, fuzzy
+#~| msgid "Region"
+#~ msgid "Regina"
+#~ msgstr "प्रदेश"
+
+#, fuzzy
+#~| msgid "Area"
+#~ msgid "Acre"
+#~ msgstr "क्षेत्र"
+
+#, fuzzy
+#~| msgid "Region"
+#~ msgid "Rangoon"
+#~ msgstr "प्रदेश"
+
+#, fuzzy
+#~| msgid "Area"
+#~ msgid "Azores"
+#~ msgstr "क्षेत्र"
+
+#, fuzzy
+#~| msgid "Region"
+#~ msgid "Reunion"
+#~ msgstr "प्रदेश"
+
+#~ msgid "Size of the clock:"
+#~ msgstr "घडीको साइज:"
+
+#~ msgid "Change clock size"
+#~ msgstr "घडी साइज परिवर्तन गर्नुहोस्"
+
+#~ msgid ""
+#~ "Set a new size for the clock between 0 and 500. The size is the square "
+#~ "side that contains the clock."
+#~ msgstr ""
+#~ "० र ५०० बीच घडीका लागि नयाँ साइज सेट गर्नुहोस् । साइज वर्गीय आकारको छ जसले घडी "
+#~ "समाविष्ट गर्दछ ।"

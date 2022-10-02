@@ -1,0 +1,480 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Serbian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="icons" lang="&language;">
+<articleinfo>
+<title
+>Иконице</title>
+<authorgroup>
+<author
+><personname
+><firstname
+>Мајк</firstname
+> <surname
+>Мекбрајд</surname
+></personname
+> &Mike.McBride.mail;</author>
+<author
+><personname
+><firstname
+>Јост</firstname
+> <surname
+>Шенк</surname
+></personname
+> &Jost.Schenck.mail;</author>
+<author
+><personname
+><firstname
+>Ан Мари</firstname
+> <surname
+>Мафу</surname
+></personname
+> &Anne-Marie.Mahfouf.mail;</author>
+<othercredit role="translator"
+><firstname
+>Драган</firstname
+><surname
+>Пантелић</surname
+><affiliation
+><address
+><email
+>falcon-10@gmx.de</email
+></address
+></affiliation
+><contrib
+>превод</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>7. 11. 2016.</date>
+<releaseinfo
+>Плазма 5.11</releaseinfo>
+
+<keywordset>
+<keyword
+>КДЕ</keyword>
+<keyword
+>К‑контрола</keyword>
+<keyword
+>иконица</keyword>
+</keywordset>
+</articleinfo>
+<sect1 id="kcm_icons">
+<title
+>Иконице</title>
+
+<sect2 id="icons-intro">
+<title
+>Увод</title>
+
+<para
+>Плазма стиже са потпуним скупом иконица у неколико величина. Те иконице користе се широм Плазме: на површи, панелу, у менаџеру фајлова <application
+>Делфину</application
+>, на свакој траци алатки сваког плазма програма, итд. У контролном модулу иконица веома флексибилно можете прилагодити Плазмино руковање иконицама. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Снимак екрана менаџера тема иконица.</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Прилагођавање плазма иконица.</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>У овом модулу можете:</para>
+<itemizedlist>
+<listitem
+><para
+>инсталирати и бирати теме иконица;</para
+></listitem>
+<listitem
+><para
+>бирати различите величине иконица;</para
+></listitem>
+<listitem
+><para
+>додељивати ефекте иконицама (нпр. учинити их полупровидним или обојити); </para
+></listitem>
+<listitem
+><para
+>подешавати ове поставке посебно по месту употребе иконица, нпр. на површи, тракама алатки, итд. </para
+></listitem>
+</itemizedlist>
+
+<important
+><para
+>Имајте у виду да неке од поставки могу зависити од изабране теме иконица. Уз Плазму се испоручује неколико подразумеваних тема иконица: Кисеоник, Поветарац и монохроматска.</para
+></important>
+
+<para
+>Овај модул садржи две странице, <guilabel
+>Тема</guilabel
+> и <guilabel
+>Напредно</guilabel
+>. <guilabel
+>Тема</guilabel
+> служи за управљање темама иконица, док под <guilabel
+>Напредно</guilabel
+> можете подесити како ће се иконице користити у Плазми.</para>
+</sect2>
+
+<sect2 id="icon-theme">
+<title
+>Тема</title>
+
+<para
+>На врху стоји преглед иконица из тренутне теме. У већини подразумеваних инсталација Плазме на располагању ће бити само неколико тема иконица, међу њима и подразумевани Поветарац. Још тема можете преузети на Интернету са <ulink url="https://store.kde.org/"
+>https://store.kde.org/</ulink
+>.</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Добави нове теме...</guilabel
+></term>
+<listitem>
+<para
+>Да бисте ово користили, морате бити повезани на Интернет. Клик на ово дугме позваће дијалог инсталатера, у којем можете изабрати нову тему иконица. Кликом на <guibutton
+>Инсталирај</guibutton
+> инсталирате изабрану тему, која ће бити на располагању одмах по клику на <guibutton
+>Затвори</guibutton
+>. </para>
+<para>
+<screenshot>
+<screeninfo
+>Добављање нових тема иконица</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="get-new-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Добављање нових тема иконица</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Инсталирај из фајла</guilabel
+></term>
+<listitem>
+<para
+>Ако сте преузели неке нове теме са Интернета, кликом на ово дугме позивате мали дијалог у којем можете прегледати и задати локацију архиве теме иконица на диску.</para>
+<para>
+<screenshot>
+<screeninfo
+>Инсталирање нове теме иконица</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="install-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Инсталирање нове теме иконица</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Клик на <guibutton
+>У реду</guibutton
+> у овом дијалогу инсталираће тему на коју сте указали и ставити је на располагање на списку тема. </para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Уклони тему</guilabel
+></term>
+<listitem>
+<para
+>Кликом на ово дугме уклањате све фајлове ове теме са система. Претходно ће вам бити затражена потврда да ли заиста желите да уклоните фајлове теме. </para>
+<para>
+<screenshot>
+<screeninfo
+>Уклањање теме</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="delete-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Уклањање теме</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Клик на <guibutton
+>Обриши</guibutton
+> уклања фајлове теме, а на <guibutton
+>Одустани</guibutton
+> не чини ништа и прекида радњу уклањања. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect2>
+
+<sect2 id="icons-use">
+<title
+>Напредно</title>
+
+<para
+>На овој, другој страници контролног модула иконица видећете две области:</para>
+
+<itemizedlist
+> 
+<listitem
+> 
+<para
+>Под <guilabel
+>Употреба иконице</guilabel
+> можете одабрати коју посебну употребу иконица желите да подесите, на пример на траци алатки или панелу. </para
+> 
+<para>
+<screenshot>
+<screeninfo
+>Избор иконица за подешавање</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="use-of-icons.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Избор иконица за подешавање</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</listitem
+> 
+
+<listitem
+> <para
+>У области прегледа можете видети како ће изгледати одабрана врста иконица с тренутним поставкама. Имајте на уму да стање овог прегледа такође зависи од стања иконице изабраног међу ефектима испод (објаснићемо ово у даљем). </para
+> </listitem>
+</itemizedlist>
+
+<para
+>При подешавању иконица прво одаберите употребу иконица које желите да подесите. Мењајте поставке све док вам се приказ не допадне. Затим можете изабрати и подесити наредну употребу иконица, итд. На крају, ако сте задовољни поставкама, кликните на <guibutton
+>У реду</guibutton
+> или <guibutton
+>Примени</guibutton
+> да примените измене.</para>
+
+<para
+>Још две опције треба узети у обзир, <guilabel
+>Величина</guilabel
+> и <guilabel
+>Ефекти</guilabel
+>. </para>
+
+<sect3 id="icons-use-size">
+<title
+>Величина иконица</title>
+
+<para>
+<screenshot>
+<screeninfo
+>Постављање величина иконица</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="size.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Постављање величина иконица</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Можете изабрати неколико величина иконица са списка. Веће иконице су нарочито корисне особама слабијег вида.</para>
+
+<para
+>Од теме иконице коју сте одабрали у контролном модулу тема иконица зависи које ће величине бити понуђене на списку. На пример, нискоколорна тема иконице нуди само величине 16 и 32 за иконице површи и 16, 22 и 32 за иконице траке алатки. Висококолорна тема нуди величине 16, 32 и 48, као и од 64 до 128. Међутим, пошто Плазма не може садржати све ове иконице статички, иконице у величинама од 64 до 128 стварају се аутоматски, због чега могу бити нешто нижег квалитета.</para>
+
+<para
+>Можете одабрати и анимиране иконице, пошто многе иконице имају придружене анимације. Попуните кућицу <guilabel
+>Анимиране иконице</guilabel
+> да укључите овај ефекат. Али пазите, анимација може бити спора или испрекидана ако вам је графичка картица стара или понестаје меморије.</para>
+
+</sect3>
+
+<sect3 id="icons-use-effects">
+<title
+>Ефекти</title>
+<para>
+<screenshot>
+<screeninfo
+>Постављање ефеката иконица</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="effects.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Постављање ефеката иконица</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Најзад, можете подесити примену извесних <emphasis
+>филтера</emphasis
+> на иконице у једном од ова три стања:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>основна</guilabel
+></term>
+<listitem
+><para
+>Овако ће иконица нормално изгледати.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>активна</guilabel
+> </term>
+<listitem
+><para
+>Овако ће иконица изгледати са показивачем миша изнад ње.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>искључена</guilabel
+>:</term>
+<listitem
+><para
+>Иконица ће овако изгледати ако је искључена њој придружена радња, тј. када клик на њу не даје никакав резултат.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Изаберите једно од ових стања и притисните дугме <guibutton
+>Постави ефекат...</guibutton
+> да подесите одговарајући ефекат иконице. Имајте у виду да ће ово подешавање утицати само на иконице из тренутно изабране категорије под <guilabel
+>Употреба иконице</guilabel
+> (види горе). На пример, подешавање ефекта за активне иконице на траци алатки <emphasis
+>неће</emphasis
+> утицати на активне иконице које се користе на другим местима.</para>
+
+<para
+>Испод списка стања иконица налазе се две опције: можете подесити ефекат и одабрати опцију <guilabel
+>Полупровидне</guilabel
+>, која чини да се позадина „пробија“ кроз иконице. Десно од списка ефеката је дугме клизача за прослеђивање додатних параметара филтеру, боје и количине.</para>
+<!-- TODO: Figure out what 'amount' really means -->
+
+<para
+>На иконице се могу применити следећи ефекти:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>без ефеката</guilabel
+> </term>
+<listitem
+><para
+>Иконице ће се користити без примене икаквог ефекта.</para
+></listitem
+> 
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>засивљено</guilabel
+>:</term>
+<listitem
+><para
+>Под овим филтером иконице постају сивкастије. Употребите клизач <guibutton
+>Количина:</guibutton
+> да подесите интензитет филтера. Запазите да се у већини корисничких сучеља овај ефекат користи само за искључене иконице.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>обојено</guilabel
+>:</term>
+<listitem
+><para
+>Иконице ће бити обојене посебном бојом. На пример, могли бисте подесити да активне иконице (оне над којима је показивач миша) имају златни одсјај. Дугмадима боје и клизачем <guilabel
+>Количина:</guilabel
+> подешавате циљну боју и њен интензитет.</para
+></listitem
+> 
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>гама</guilabel
+>:</term>
+<listitem
+><para
+>На иконице ће бити примењена другачија вредност гаме. Ако нисте фотограф и не знате шта је гама, врло је слична контрасту. Да бисте стекли осећај за овај ефекат, поиграјте се мало са поставкама гаме померањем клизача <guilabel
+>Количина:</guilabel
+>.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>одзасићено</guilabel
+>:</term>
+<listitem
+><para
+>Иконице ће се цртати одзасићено. Сасвим слично поставци боје на телевизору. Употребите клизач да подесите јачину одзасићења. </para
+></listitem
+> 
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>монохроматско:</guilabel
+></term>
+<listitem>
+<para
+>Иконице ће се цртати у само две изабране боје.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>

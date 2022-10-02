@@ -1,0 +1,268 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Steve Allewell <steve.allewell@gmail.com>, 2014, 2015, 2017, 2019, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-18 00:47+0000\n"
+"PO-Revision-Date: 2022-08-07 11:18+0100\n"
+"Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
+"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.04.3\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "General"
+
+#: package/contents/config/config.qml:18
+#, kde-format
+msgid "Entries"
+msgstr "Entries"
+
+#: package/contents/ui/ConfigEntries.qml:31
+#, kde-format
+msgid "Always show all entries"
+msgstr "Always show all entries"
+
+#: package/contents/ui/ConfigEntries.qml:37
+#, kde-format
+msgid "Application Status"
+msgstr "Application Status"
+
+#: package/contents/ui/ConfigEntries.qml:39
+#, kde-format
+msgid "Communications"
+msgstr "Communications"
+
+#: package/contents/ui/ConfigEntries.qml:41
+#, kde-format
+msgid "System Services"
+msgstr "System Services"
+
+#: package/contents/ui/ConfigEntries.qml:43
+#, kde-format
+msgid "Hardware Control"
+msgstr "Hardware Control"
+
+#: package/contents/ui/ConfigEntries.qml:46
+#, kde-format
+msgid "Miscellaneous"
+msgstr "Miscellaneous"
+
+#: package/contents/ui/ConfigEntries.qml:80
+#, kde-format
+msgctxt "Name of the system tray entry"
+msgid "Entry"
+msgstr "Entry"
+
+#: package/contents/ui/ConfigEntries.qml:85
+#, kde-format
+msgid "Visibility"
+msgstr "Visibility"
+
+#: package/contents/ui/ConfigEntries.qml:91
+#, kde-format
+msgid "Keyboard Shortcut"
+msgstr "Keyboard Shortcut"
+
+#: package/contents/ui/ConfigEntries.qml:222
+#, kde-format
+msgid "Shown when relevant"
+msgstr "Shown when relevant"
+
+#: package/contents/ui/ConfigEntries.qml:223
+#, kde-format
+msgid "Always shown"
+msgstr "Always shown"
+
+#: package/contents/ui/ConfigEntries.qml:224
+#, kde-format
+msgid "Always hidden"
+msgstr "Always hidden"
+
+#: package/contents/ui/ConfigEntries.qml:225
+#, kde-format
+msgid "Disabled"
+msgstr "Disabled"
+
+#: package/contents/ui/ConfigGeneral.qml:23
+#, kde-format
+msgctxt "The arrangement of system tray icons in the Panel"
+msgid "Panel icon size:"
+msgstr "Panel icon size:"
+
+#: package/contents/ui/ConfigGeneral.qml:25
+#, kde-format
+msgid "Small"
+msgstr "Small"
+
+#: package/contents/ui/ConfigGeneral.qml:32
+#, kde-format
+msgid "Scale with Panel height"
+msgstr "Scale with Panel height"
+
+#: package/contents/ui/ConfigGeneral.qml:33
+#, kde-format
+msgid "Scale with Panel width"
+msgstr "Scale with Panel width"
+
+#: package/contents/ui/ConfigGeneral.qml:39
+#, kde-format
+msgid "Automatically enabled when in Touch Mode"
+msgstr "Automatically enabled when in Touch Mode"
+
+#: package/contents/ui/ConfigGeneral.qml:48
+#, kde-format
+msgctxt "@label:listbox The spacing between system tray icons in the Panel"
+msgid "Panel icon spacing:"
+msgstr "Panel icon spacing:"
+
+#: package/contents/ui/ConfigGeneral.qml:51
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Small"
+msgstr "Small"
+
+#: package/contents/ui/ConfigGeneral.qml:55
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Normal"
+msgstr "Normal"
+
+#: package/contents/ui/ConfigGeneral.qml:59
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Large"
+msgstr "Large"
+
+#: package/contents/ui/ConfigGeneral.qml:82
+#, kde-format
+msgctxt "@info:usagetip under a combobox when Touch Mode is on"
+msgid "Automatically set to Large when in Touch Mode"
+msgstr "Automatically set to Large when in Touch Mode"
+
+#: package/contents/ui/ExpandedRepresentation.qml:64
+#, kde-format
+msgctxt "@action:button"
+msgid "Go Back"
+msgstr "Go Back"
+
+#: package/contents/ui/ExpandedRepresentation.qml:77
+#, kde-format
+msgid "Status and Notifications"
+msgstr "Status and Notifications"
+
+#: package/contents/ui/ExpandedRepresentation.qml:93
+#, kde-format
+msgid "More actions"
+msgstr "More actions"
+
+#: package/contents/ui/ExpandedRepresentation.qml:182
+#, kde-format
+msgid "Keep Open"
+msgstr "Keep Open"
+
+#: package/contents/ui/ExpanderArrow.qml:22
+#, kde-format
+msgid "Expand System Tray"
+msgstr "Expand System Tray"
+
+#: package/contents/ui/ExpanderArrow.qml:23
+#, kde-format
+msgid "Show all the items in the system tray in a popup"
+msgstr "Show all the items in the system tray in a popup"
+
+#: package/contents/ui/ExpanderArrow.qml:36
+#, kde-format
+msgid "Close popup"
+msgstr "Close popup"
+
+#: package/contents/ui/ExpanderArrow.qml:36
+#, kde-format
+msgid "Show hidden icons"
+msgstr "Show hidden icons"
+
+#: systemtraymodel.cpp:123
+#, kde-format
+msgctxt ""
+"Suffix added to the applet name if the applet is autoloaded via DBus "
+"activation"
+msgid "%1 (Automatic load)"
+msgstr "%1 (Automatic load)"
+
+#~ msgid "Very Small"
+#~ msgstr "Very Small"
+
+#~ msgid "Medium"
+#~ msgstr "Medium"
+
+#~ msgid "Huge"
+#~ msgstr "Huge"
+
+#~ msgid "Enormous"
+#~ msgstr "Enormous"
+
+#~ msgid "Auto"
+#~ msgstr "Auto"
+
+#~ msgid "Shown"
+#~ msgstr "Shown"
+
+#~ msgid "Hidden"
+#~ msgstr "Hidden"
+
+#~ msgid "Categories"
+#~ msgstr "Categories"
+
+#~ msgid "Extra Items"
+#~ msgstr "Extra Items"
+
+#~ msgid "Hide icons"
+#~ msgstr "Hide icons"
+
+#, fuzzy
+#~| msgid "Status & Notifications"
+#~ msgid "Stat&us Notifier"
+#~ msgstr "Status & Notifications"
+
+#, fuzzy
+#~| msgid " (Automatic load)"
+#~ msgid "Automatic"
+#~ msgstr " (Automatic load)"
+
+#, fuzzy
+#~| msgid "System Services"
+#~ msgctxt "tooltip title"
+#~ msgid "System Service Item"
+#~ msgstr "System Services"
+
+#, fuzzy
+#~| msgid "Status & Notifications"
+#~ msgctxt "title"
+#~ msgid "StatusNotifierTest"
+#~ msgstr "Status & Notifications"
+
+#~ msgid "System Tray Options"
+#~ msgstr "System Tray Options"
+
+#~ msgctxt "%1 is the name of the containment"
+#~ msgid "%1 Options"
+#~ msgstr "%1 Options"
+
+#~ msgid "Unknown Category"
+#~ msgstr "Unknown Category"
+
+#~ msgid "Hardware"
+#~ msgstr "Hardware"
+
+#~ msgctxt "%1 is the name of the applet"
+#~ msgid "%1 Options"
+#~ msgstr "%1 Options"

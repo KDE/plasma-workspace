@@ -1,0 +1,57 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Jean Cayron <jean.cayron@gmail.com>, 2010, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"PO-Revision-Date: 2011-01-14 10:12+0100\n"
+"Last-Translator: Jean Cayron <jean.cayron@gmail.com>\n"
+"Language-Team: Walloon <linux@walon.org>\n"
+"Language: wa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: property (text), widget (QRadioButton, flatButton)
+#: config.ui:16
+#, kde-format
+msgid "Display all windows in one list"
+msgstr "Håyner totes les fniesses dins ene seule djivêye"
+
+#. i18n: ectx: property (text), widget (QRadioButton, subButton)
+#: config.ui:23
+#, kde-format
+msgid "Display a submenu for each desktop"
+msgstr "Håyner ene dressêye efant po tchaeke sicribanne"
+
+#. i18n: ectx: property (text), widget (QRadioButton, curButton)
+#: config.ui:30
+#, kde-format
+msgid "Display only the current desktop's windows"
+msgstr "Èn håyner k' les fniesses do scribanne do moumint"
+
+#: switch.cpp:75
+#, fuzzy, kde-format
+#| msgid "Configure Switch Window Plugin"
+msgctxt "plasma_containmentactions_switchwindow"
+msgid "Configure Switch Window Plugin"
+msgstr "Apontyî l' tchôke-divins di passaedje d' ene finiesse a l' ôte"
+
+#: switch.cpp:155
+#, fuzzy, kde-format
+#| msgid "Windows"
+msgctxt "plasma_containmentactions_switchwindow"
+msgid "Windows"
+msgstr "Finiesses"
+
+#: switch.cpp:179 switch.cpp:200 switch.cpp:202
+#, fuzzy, kde-format
+#| msgid "All Desktops"
+msgctxt "plasma_containmentactions_switchwindow"
+msgid "All Desktops"
+msgstr "Tos les scribannes"

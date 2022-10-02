@@ -1,0 +1,172 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Catalan  "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="icons" lang="&language;">
+<articleinfo>
+<title
+>Icones</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<author
+>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+<date
+>9 d'abril de 2021</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>icona</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>El &plasma; incorpora un conjunt complet d'icones en diverses mides. Aquestes icones s'empren per a tot l'escriptori &plasma;: Al plafó, al gestor de fitxers &dolphin; i en cada barra d'eines de qualsevol aplicació del &plasma;, &etc; El mòdul de control de les icones us oferirà diversos i molt flexibles mètodes per a personalitzar la manera en què el &plasma; tractarà les icones.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Aquesta és una captura de pantalla del gestor de temes d'icones</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Personalització de les icones del &plasma;</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>En aquest mòdul, podeu:</para>
+<itemizedlist>
+<listitem
+><para
+>instal·lar i escollir temes d'icones</para
+></listitem>
+<listitem
+><para
+>escollir entre diferents mides d'icona</para
+></listitem>
+<listitem
+><para
+>eliminar temes d'icona</para
+></listitem>
+</itemizedlist>
+
+<important
+><para
+>Si us plau, cal tenir en compte que algunes d'aquestes opcions poden dependre del tema d'icones seleccionat. El &plasma; ve amb diversos temes d'icones predeterminats: Brisa, Brisa fosca i Oxigen.</para
+></important>
+
+<para
+>A la part superior hi ha una vista prèvia de les icones del tema actual. La majoria d'instal·lacions tan sols tindran disponible uns quants temes d'icones disponibles, entre ells el tema Brisa predeterminat del &plasma;. Podeu baixar-ne més des d'Internet des de <ulink url="https://store.kde.org/"
+>https://store.kde.org/</ulink
+> o instal·leu-los des d'un fitxer local.</para>
+
+<para
+>En passar el cursor es mostrarà una vista prèvia animada d'una selecció aleatòria, els tipus de MIME comuns i les icones de carpeta comunes. </para>
+
+<para
+> Si voleu eliminar un tema, utilitzeu la icona <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+> superposada que hi ha a baix a la dreta de la icona de tema. Per a desfer aquesta acció, feu clic a la icona <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-undo.png" format="PNG"/></imageobject
+></inlinemediaobject
+>. Si premeu el botó <guibutton
+>Aplica</guibutton
+> els temes seleccionats per a la seva eliminació seran realment suprimits, de manera que podreu desfer les eliminacions individuals o totes. </para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Configura la mida de les icones</guilabel
+></term>
+<listitem>
+<para
+>Seleccioneu un dels components i utilitzeu el control lliscant per a adaptar la mida corresponent. </para>
+<para>
+<screenshot>
+<screeninfo
+>Configura la mida de les icones</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="use-of-icons.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Configura la mida de les icones</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Obtén icones noves...</guilabel
+></term>
+<listitem>
+<para
+>Per a utilitzar-lo haureu d'estar connectats a Internet. Fent clic sobre aquest botó es mostrarà un diàleg des d'on podreu seleccionar un tema d'icones nou. Fent clic a <guibutton
+>Instal·la</guibutton
+> en el diàleg s'instal·larà el tema d'icones seleccionat, i després fent clic a <guibutton
+>Tanca</guibutton
+> a l'instal·lador, el tema nou estarà disponible immediatament. </para>
+<para>
+<screenshot>
+<screeninfo
+>Obtén icones noves</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="get-new-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Obtén icones noves</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Instal·la des d'un fitxer...</guilabel
+></term>
+<listitem>
+<para
+>Si heu baixat temes nous des d'Internet, podeu utilitzar això per a anar fins a la ubicació d'aquests temes baixats. Fent clic sobre aquest botó es presentarà un diàleg de fitxers per indicar l'arxiu tar del tema d'icones que hi ha al disc.</para>
+
+<para
+>Fent clic a <guibutton
+>Obre</guibutton
+> en aquest diàleg, s'instal·larà el tema que heu indicat i el mostrarà a la llista de temes. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</article>

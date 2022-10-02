@@ -1,0 +1,244 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Catalan  "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="fontinst" lang="&language;">
+<title
+>Gestió dels tipus de lletra</title>
+<articleinfo>
+<authorgroup>
+<author
+>&Craig.Drummond; &Craig.Drummond.Mail;</author>
+
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+<date
+>9 d'abril de 2021</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Arranjament del sistema</keyword>
+<keyword
+>tipus de lletra</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_fontinst">
+<title
+>Gestió dels tipus de lletra</title>
+
+<para
+>Aquest mòdul és el responsable de la instal·lació, sense instal·lar, vista prèvia i la gestió dels vostres tipus de lletra.</para>
+
+<sect2 id="font-groups">
+<title
+>Grups de tipus de lletra</title>
+<para
+>Existeixen 4 grups especials de tipus de lletra predefinits:</para>
+
+<orderedlist>
+    <listitem
+><para
+><quote
+>Tots els tipus de lletra</quote
+>: Mostra tots els tipus de lletra, tant els personals com els del sistema.</para
+></listitem>
+    <listitem
+><para
+><quote
+>Tipus de lletra personals</quote
+>: Els tipus de lletra mostrats seran els vostres tipus de lletra personals i no estaran disponibles per als altres usuaris.</para
+></listitem>
+    <listitem
+><para
+><quote
+>Tipus de lletra del sistema</quote
+>: Els tipus de lletra mostrats són els disponibles per a tots els usuaris. Instal·lar o suprimir un tipus de lletra per a tot el sistema requereix privilegis d'administrador.</para
+></listitem>
+    <listitem
+><para
+><quote
+>Sense classificar</quote
+>: Llista tots els tipus de lletra que no resten dins d'altres grups definits per usuari. Aquest grup només apareixerà si teniu alguns grups definits per usuari.</para
+></listitem>
+</orderedlist>
+<para
+>Per afegir un tipus de lletra a un grup, arrossegueu-lo des de la llista de tipus de lletra cap a un grup. Per a eliminar un tipus de lletra d'un grup, arrossegueu-lo cap al grup <quote
+>Tots els tipus de lletra</quote
+>.</para>
+<para
+>A sota d'aquesta llista trobareu botons per a crear un nou grup, eliminar-lo i habilitar o inhabilitar els tipus de lletra en el grup actual.</para>
+<para
+>Al menú contextual d'aquesta llista teniu elements de menú addicionals per a imprimir mostres dels tipus de lletra i exportar-ne un cap a un arxiu zip.</para>
+
+<sect3 id="font-hiding">
+<title
+>Habilitar i inhabilitar</title>
+<para
+>Els usuaris amb molts tipus de lletra poden trobar pràctic el només tenir alguns disponibles (o actius) certes vegades. Per a facilitar-ho, aquest mòdul us permet inhabilitar tipus de lletra individualment, o grups de tipus de lletra sencers. Inhabilitar un tipus de lletra no l'eliminarà del sistema, simplement l'ocultarà de manera que no apareixerà a les aplicacions. Si torneu a habilitar el tipus de lletra, aleshores el podreu tornar a usar.</para>
+</sect3>
+
+</sect2>
+
+<sect2 id="font-list">
+<title
+>Llista dels tipus de lletra</title>
+<para
+>La pantalla principal és una llista dels tipus de lletra instal·lats, agrupats pel nom de la família dels tipus de lletra. El número entre claudàtors representa el nombre d'estils instal·lats per a aquesta família. Per exemple, el tipus de lletra <quote
+>Times</quote
+> es pot llistar com a: <itemizedlist
+> <listitem>
+    <para
+>Times [4]</para>
+    <itemizedlist>
+        <listitem
+><para
+>Normal</para
+></listitem>
+        <listitem
+><para
+>Cursiva</para
+></listitem>
+        <listitem
+><para
+>Negreta</para
+></listitem>
+        <listitem
+><para
+>Negreta cursiva</para
+></listitem>
+    </itemizedlist>
+</listitem>
+</itemizedlist>
+</para>
+
+<para
+>Per a instal·lar un tipus de lletra, premeu el botó <guibutton
+>Instal·la des d'un fitxer...</guibutton
+>, i seleccioneu els tipus de lletra desitjats en el diàleg de fitxers. El grup de tipus de lletra seleccionats en el control de les fonts serà instal·lat.</para>
+<para
+>Per a desinstal·lar tipus de lletra, seleccioneu-los des de la llista i premeu el botó <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+>.</para>
+
+<para
+>Feu clic amb el &BMR; per obrir un menú contextual amb algunes accions addicionals, com <guilabel
+>Activa</guilabel
+>, <guilabel
+>Desactiva</guilabel
+>, <guilabel
+>Imprimeix</guilabel
+>, <ulink url="help:/kfontviewer/index.html"
+><guilabel
+>Obre al visualitzador de tipus de lletra</guilabel
+></ulink
+> i <guilabel
+>Actualitza</guilabel
+>.</para>
+
+<sect3 id="font-filter">
+<title
+>Filtrar per tipus de lletra</title>
+<para
+>Un camp de text a la part superior us permetrà filtrar la llista dels tipus de lletra. Podeu filtrar els tipus de lletra basant-vos en les diferents categories:</para>
+        <orderedlist>
+        <listitem
+><para
+>Família.</para
+></listitem>
+        <listitem
+><para
+>Estil.</para
+></listitem>
+        <listitem
+><para
+>Foneria.</para
+></listitem>
+        <listitem
+><para
+>Coincidència del FontConfig. Això us permet introduir un nom de família, i veure la família que fontconfig usa realment.</para
+></listitem>
+        <listitem
+><para
+>Tipus de fitxer del tipus de lletra.</para
+></listitem>
+        <listitem
+><para
+>Nom de fitxer del tipus de lletra.</para
+></listitem>
+        <listitem
+><para
+>Ubicació del fitxer del tipus de lletra.</para
+></listitem>
+        <listitem
+><para
+>Sistema d'escriptura.</para
+></listitem>
+        </orderedlist>
+</sect3>
+
+<sect3 id="get-new-fonts">
+<title
+>Obtenir tipus de lletra nous</title>
+<para
+>Es poden utilitzar nous tipus de lletra a partir dels fitxers locals, o baixar-los emprant <guilabel
+>Obtén les novetats candents</guilabel
+>. L'entrada <guilabel
+>Obtén tipus de lletra nous...</guilabel
+> en el botó de l'eina (que es troba sobre la llista de grups), us permet instal·lar els tipus de lletra des d'Internet. El fet de baixar tipus de lletra d'aquesta manera les instal·larà en el grup de <quote
+>Tipus de lletra personals</quote
+>. Per a instal·lar-les a tot el sistema, les haureu de moure al grup <quote
+>Tipus de lletra del sistema</quote
+> -això es pot aconseguir arrossegant-les sobre aquesta entrada del grup-.</para>
+</sect3>
+
+</sect2>
+
+<sect2 id="font-duplicates">
+<title
+>Tipus de lletra duplicats</title>
+<para
+>Si teniu un munt de tipus de lletra instal·lats al sistema, és possible que puguin estar duplicats.</para
+> 
+<para
+>Feu clic al botó <guilabel
+>Cerca els duplicats...</guilabel
+> per a obrir una eina senzilla que explorarà el vostre sistema cercant tipus de lletra amb diversos fitxers associats. Per exemple, si teniu <quote
+>times.ttf</quote
+> i <quote
+>times.TTF</quote
+> instal·lats en <quote
+>/usr/local/share/fonts</quote
+> el dorsal per als tipus de lletra (anomenat <quote
+>FontConfig</quote
+>) només en veurà un. De manera que si en desinstal·leu un, tornarà a aparèixer, atès que només s'ha eliminat un d'aquests fitxers. Executar aquesta eina generarà un diàleg llistant cada tipus de lletra que disposi de duplicat, i la corresponent llista de fitxers. Per a seleccionar un fitxer a esborrar, feu clic sobre la columna que contingui la icona de la paperera.</para>
+</sect2>
+
+<sect2 id="font-preview">
+<title
+>Vista prèvia</title>
+<para
+>Això mostra una vista prèvia del text en diferents mides de tipus de lletra.</para>
+<para
+>Usant el menú contextual podreu apropar i allunyar, seleccionar un tipus de vista prèvia (<guilabel
+>Vista prèvia estàndard</guilabel
+> o <guilabel
+>Tots els caràcters</guilabel
+>) i canviar el text per a la vista prèvia.</para>
+
+<para
+>Llanceu l'aplicació &kfontview; si necessiteu previsualitzar tipus de lletra addicionals per als blocs Unicode. </para>
+</sect2>
+</sect1>
+</article>

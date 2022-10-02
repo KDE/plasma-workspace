@@ -1,0 +1,121 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Swedish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="region_language" lang="&language;">
+<articleinfo>
+<title
+>Region och språk</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Krishna.Tateneni; &Krishna.Tateneni.mail;</author>
+<author
+><personname
+><firstname
+>Han</firstname
+><surname
+>Young</surname
+></personname
+></author>
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+ </authorgroup>
+
+          <date
+>2022-06-23</date>
+          <releaseinfo
+>Plasma 5.26</releaseinfo>
+
+	  <keywordset>
+		<keyword
+>KDE</keyword>
+		<keyword
+>Systeminställningar</keyword>
+		<keyword
+>plats</keyword>
+		<keyword
+>land</keyword>
+		<keyword
+>språk</keyword>
+		<keyword
+>nummer</keyword>
+                <keyword
+>översättning</keyword>
+		<keyword
+>valuta</keyword>
+	  </keywordset>
+</articleinfo>
+
+<para
+>På den här sidan kan du ställa in föredragna språk och format som &plasma;s arbetsyta och program ska visas med. </para>
+
+<para
+>I de flesta fall kan du helt enkelt välja språket, så ställs alla alternativ in på ett lämpligt sätt. &plasma;s arbetsyta och &kde; program är skrivna på amerikansk engelska, och översätts till många olika språk av frivilliga. Översättningarna måste först installeras innan du kan välja att använda dem. </para>
+<note
+><para
+>Försäkra dig om att du har installerat &plasma;s språkpaket eller översättningar för språken du vill använda.</para>
+<para
+>Eftersom &plasma; är byggt på &Qt;-biblioteken, behövs också översättningar av &Qt; för de valda språken för att få ett fullständigt översatt grafiskt användargränssnitt.</para
+></note>
+
+
+<para
+>För varje urvalsrad visas exempel på hur inställningarna ser ut och vilka måttenheter som används. Förutom tal kan man se hur valutavärden, datum och tider visas med långt och kort format. När någon av inställningarna ändras, visar förhandsgranskningen ändringarnas effekt innan de verkställs. </para>
+
+<para
+>Att klicka på knappen <guilabel
+>Lägg till fler...</guilabel
+> på delsidan för språk visar listan över tillgängliga språk och visar initialt språket som för närvarande är valt. Om valet visar <quote
+>Inget språk inställt</quote
+> har du inte ställt in något land och använder det förvalda språket inställt av systemet, normalt C. Om språket du vill använda inte visas i listan måste du installera det med den vanliga metoden i ditt system. </para>
+
+<para
+>Det går att ta bort ett språk från huvudlistan genom att markera det och därefter klicka på ikonen <inlinemediaobject
+><imageobject
+><imagedata fileref="list-remove.png" format="PNG"/></imageobject
+></inlinemediaobject
+>. Det går att ändra föredragen ordning i listan genom att markera ett språk och klicka på ikonen <inlinemediaobject
+><imageobject
+><imagedata fileref="go-top.png" format="PNG"/></imageobject
+></inlinemediaobject
+>. </para>
+
+<para
+>Om du behöver andra individuella formatinställningar, kan du välja landsinställning för <guilabel
+>Nummer</guilabel
+>, <guilabel
+>Tid</guilabel
+>, <guilabel
+>Valuta</guilabel
+> och <guilabel
+>Måttenheter</guilabel
+>. </para>
+
+<note>
+<para
+>Tidigare har språk och format varit oberoende inställningar. Sedan &plasma; 5.26 har de sammanfogats i den här inställningsmodulen som kallas Region och språk. Att ändra ett språk <emphasis
+>ändrar automatiskt</emphasis
+> inställningarna för nummer, valuta, etc. till motsvarande land eller region. Dock förstör inte ändringen den gamla inställningen. Inställningsfilen finns fortfarande i <emphasis
+>~/.config/plasma-localerc</emphasis
+> . </para>
+</note>
+</article>

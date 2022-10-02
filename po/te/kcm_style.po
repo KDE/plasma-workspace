@@ -1,0 +1,349 @@
+# translation of kcmstyle.po to Telugu
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Krishna Babu K <kkrothap@redhat.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmstyle\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"PO-Revision-Date: 2009-01-16 22:16+0530\n"
+"Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
+"Language-Team: Telugu <en@li.org>\n"
+"Language: te\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: gtkpage.cpp:59
+#, kde-format
+msgid "%1 is not a valid GTK Theme archive."
+msgstr ""
+
+#: kcmstyle.cpp:161 kcmstyle.cpp:168
+#, kde-format
+msgid "There was an error loading the configuration dialog for this style."
+msgstr "ఈ శైలి కొరకు ఆకృతీకరణ డైలాగును లోడుచేయుటలో వొక దోషము వుంది."
+
+#: kcmstyle.cpp:274
+#, kde-format
+msgid "Failed to apply selected style '%1'."
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:32
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Sho&w icons on buttons"
+msgid "Show icons:"
+msgstr "(&w) బటన్స్  పైన ప్రతిమలను చూపుము"
+
+#: package/contents/ui/EffectSettingsPopup.qml:33
+#, fuzzy, kde-format
+#| msgid "Radio button"
+msgid "On buttons"
+msgstr "రేడియో బటన్"
+
+#: package/contents/ui/EffectSettingsPopup.qml:44
+#, kde-format
+msgid "In menus"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:56
+#, kde-format
+msgid "Main toolbar label:"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "None"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:59
+#, fuzzy, kde-format
+#| msgid "Text Only"
+msgid "Text only"
+msgstr "వచనము మాత్రమే"
+
+#: package/contents/ui/EffectSettingsPopup.qml:60
+#, fuzzy, kde-format
+#| msgid "Text Alongside Icons"
+msgid "Beside icons"
+msgstr "ప్రతిమల ప్రక్కన వచనము"
+
+#: package/contents/ui/EffectSettingsPopup.qml:61
+#, fuzzy, kde-format
+#| msgid "Text Under Icons"
+msgid "Below icon"
+msgstr "ప్రతిమల క్రిందన వచనము"
+
+#: package/contents/ui/EffectSettingsPopup.qml:76
+#, kde-format
+msgid "Secondary toolbar label:"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:18
+#, kde-format
+msgid "GNOME/GTK Application Style"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:44
+#, kde-format
+msgid "GTK theme:"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:69
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgid "Preview…"
+msgstr "ముందస్తు వీక్షణం"
+
+#: package/contents/ui/GtkStylePage.qml:88
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:93
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Get New GNOME/GTK Application Styles…"
+msgstr "(&f) ఆకృతీకరించు..."
+
+#: package/contents/ui/GtkStylePage.qml:109
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:111
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: package/contents/ui/main.qml:17
+#, kde-format
+msgid ""
+"This module allows you to modify the visual appearance of applications' user "
+"interface elements."
+msgstr ""
+
+#: package/contents/ui/main.qml:96
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure Style…"
+msgstr "(&f) ఆకృతీకరించు..."
+
+#: package/contents/ui/main.qml:116
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr ""
+
+#: package/contents/ui/main.qml:132
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "(&f) ఆకృతీకరించు..."
+
+#: styleconfdialog.cpp:21
+#, kde-format
+msgid "Configure %1"
+msgstr "ఆకృతీకరించుము %1"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "టాబ్ 1"
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, fuzzy, kde-format
+#| msgid "Button"
+msgid "Push Button"
+msgstr "బటన్"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, fuzzy, kde-format
+#| msgid "Combobox"
+msgid "Combo box"
+msgstr "కాంబోబాక్స్"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "చెక్‌బాక్స్"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "రేడియో బటన్"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:133
+#, kde-format
+msgid "Tab 2"
+msgstr "టాబ్ 2"
+
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Application style"
+msgstr "(&f) ఆకృతీకరించు..."
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Sho&w icons on buttons"
+msgid "Show icons on buttons"
+msgstr "(&w) బటన్స్  పైన ప్రతిమలను చూపుము"
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Sho&w icons on buttons"
+msgid "Show icons in menus"
+msgstr "(&w) బటన్స్  పైన ప్రతిమలను చూపుము"
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, kde-format
+msgid "Main toolbar label"
+msgstr ""
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, kde-format
+msgid "Secondary toolbar label"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "కృష్ణబాబు కె , విజయ్ కిరణ్ కముజు"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "k.meetme@gmail.com,infyquest@gmail.com"
+
+#, fuzzy
+#~| msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
+#~ msgstr "(c) 2002 కరోల్ స్జ్వెడ్, డానియల్ మాల్కెన్‌టిన్"
+
+#~ msgid "Karol Szwed"
+#~ msgstr "కారల్ స్జ్వెడ్"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "డానియల్ మాల్కెన్టిన్"
+
+#, fuzzy
+#~| msgid "Con&figure..."
+#~ msgid "Download New GNOME/GTK2 Application Styles..."
+#~ msgstr "(&f) ఆకృతీకరించు..."
+
+#, fuzzy
+#~| msgid "Con&figure..."
+#~ msgid "GNOME/GTK2 Application Styles"
+#~ msgstr "(&f) ఆకృతీకరించు..."
+
+#, fuzzy
+#~| msgid "Con&figure..."
+#~ msgid "Download New GNOME/GTK3 Application Styles..."
+#~ msgstr "(&f) ఆకృతీకరించు..."
+
+#, fuzzy
+#~| msgid "Con&figure..."
+#~ msgid "GNOME/GTK3 Application Styles"
+#~ msgstr "(&f) ఆకృతీకరించు..."
+
+#~ msgid "Unable to Load Dialog"
+#~ msgstr "డైలాగును లోడు చేయలేకపోయింది"
+
+#~ msgid "No description available."
+#~ msgstr "ఎటువంటి వివరణ అందుబాటులోలేదు."
+
+#, fuzzy
+#~| msgid ""
+#~| "If you enable this option, KDE Applications will run internal animations."
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "some important buttons."
+#~ msgstr "మీరు ఈ ఐచ్చికమును చేతనపరచినట్లైతే, KDE అనువర్తనములు అంతర్గత యానిమేషన్లను నడుపుతాయి."
+
+#, fuzzy
+#~| msgid ""
+#~| "If you enable this option, KDE Applications will run internal animations."
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "most menu items."
+#~ msgstr "మీరు ఈ ఐచ్చికమును చేతనపరచినట్లైతే, KDE అనువర్తనములు అంతర్గత యానిమేషన్లను నడుపుతాయి."
+
+#, fuzzy
+#~| msgid "Widget style:"
+#~ msgid "Widget Style"
+#~ msgstr "విడ్జట్ శైలి:"
+
+#~ msgid "Widget style:"
+#~ msgstr "విడ్జట్ శైలి:"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Fine Tuning"
+#~ msgstr "(&F) ఫైన్ ట్యూనింగ్"
+
+#~ msgid "Description: %1"
+#~ msgstr "వివరణ: %1"
+
+#~ msgid "Group Box"
+#~ msgstr "గ్రూప్ బాక్స్"
+
+#~ msgid "KDE Style Module"
+#~ msgstr "KDE శైలి మాడ్యూల్"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "రాల్ఫ్ నోల్డెన్"
+
+#~ msgid "Low display resolution and Low CPU"
+#~ msgstr "తక్కువ ప్రదర్శన రెజొల్యూషన్ మరియు తక్కువ CPU"
+
+#~ msgid "High display resolution and Low CPU"
+#~ msgstr "ఎక్కువ ప్రదర్శన రెజొల్యూషన్ మరియు తక్కువ CPU"
+
+#~ msgid "Low display resolution and High CPU"
+#~ msgstr "తక్కువ ప్రదర్శన రెజొల్యూషన్ మరియు ఎక్కువ CPU"
+
+#~ msgid "High display resolution and High CPU"
+#~ msgstr "ఎక్కువ ప్రదర్శన రెజొల్యూషన్ మరియు ఎక్కువ CPU"
+
+#~ msgid "Low display resolution and Very High CPU"
+#~ msgstr "తక్కువ ప్రదర్శన రెజొల్యూషన్ మరియు అత్యధిక CPU"
+
+#~ msgid "High display resolution and Very High CPU"
+#~ msgstr "ఎక్కువ ప్రదర్శన రెజొల్యూషన్ మరియు అత్యధిక CPU"
+
+#~ msgid ""
+#~ "If you enable this option, KDE Applications will run internal animations."
+#~ msgstr "మీరు ఈ ఐచ్చికమును చేతనపరచినట్లైతే, KDE అనువర్తనములు అంతర్గత యానిమేషన్లను నడుపుతాయి."
+
+#~ msgid "kcmstyle"
+#~ msgstr "kcmstyle"
+
+#~ msgid "Icons Only"
+#~ msgstr "ప్రతిమలు మాత్రమే"
+
+#, fuzzy
+#~| msgctxt "@label:listbox"
+#~| msgid "Text pos&ition:"
+#~ msgctxt "@label:listbox"
+#~ msgid "Text pos&ition of toolbar elements:"
+#~ msgstr "(&i) వచనము స్థానము:"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Style"
+#~ msgstr "(&S) శైలి"

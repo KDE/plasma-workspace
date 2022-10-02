@@ -1,0 +1,382 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Swedish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmnotify" lang="&language;">
+<title
+>Inställning av systemunderrättelser</title>
+<articleinfo>
+
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+><personname
+><firstname
+>Kai Uwe</firstname
+> <surname
+>Broulik</surname
+></personname
+> <email
+>kde@broulik.de</email
+></author>
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-16</date>
+<releaseinfo
+>Plasma 5.21</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systeminställningar</keyword>
+<keyword
+>systemunderrättelse</keyword>
+<keyword
+>underrättelse</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="sys-notify">
+<title
+>Inställning av systemunderrättelser</title>
+
+<para
+>&plasma;, som alla program, måste kunna informera användaren när ett problem uppstår, en aktivitet har avslutats, eller någonting har hänt. &plasma; använder att antal <quote
+>systemunderrättelser</quote
+> för att hålla användaren informerad om vad som händer.</para>
+
+<para
+>Med den här modulen kan du avgöra vad &plasma; gör för att meddela varje händelse.</para>
+
+<sect2 id="notification-settings">
+<title
+>Underrättelseinställningar</title>
+
+<sect3 id="do-not-disturb">
+<title
+>Stör ej</title>
+
+    <para
+>Läget inaktiverar alla visuella och de flesta ljudbaserade underrättelser så att du kan fokusera på din nuvarande uppgift. Inställningar i den här delen låter dig ställa in under vilka omständigheter &plasma; automatiskt aktiverar stör ej.</para>
+
+    <variablelist>
+
+    <varlistentry>
+    <term
+><guiicon
+>Aktivera när skärmar är speglade</guiicon
+></term>
+    <listitem
+><para
+>Aktiverar automatiskt stör ej när skärmar speglas, exempelvis under en presentation. </para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Aktivera när skärmdelning pågår</guiicon
+></term>
+    <listitem
+><para
+>Aktiverar automatiskt stör ej när du delar dina skärmar, exempelvis under en presentation.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Visa kritiska underrättelser</guiicon
+></term>
+    <listitem
+><para
+>Om kritiska underrättelser ska visas, såsom att batteriet nästan är tomt, även när stör ej är aktiverat.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Ändra med:</guiicon
+></term>
+    <listitem
+><para
+>En global genväg som du kan trycka på för att aktivera eller inaktivera stör ej när som helst.</para
+></listitem>
+    </varlistentry>
+
+    </variablelist>
+
+</sect3>
+
+<sect3 id="notification-filters">
+    <title
+>Filter</title>
+
+    <variablelist>
+
+    <varlistentry>
+    <term
+>Kritiska underrättelser: <guiicon
+>Behåll alltid överst</guiicon
+></term>
+    <listitem
+><para
+>Behåller alltid kritiska underrättelser, såsom att batteriet är nästan tomt. överst. Det säkerställer att de också är synliga när en fullskärmsvideo eller visar en presentation.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+>Normala underrättelser: <guiicon
+>Behåll alltid överst</guiicon
+></term>
+    <listitem
+><para
+>Behåller alltid normala underrättelser, såsom meddelanden. överst. Det säkerställer att de också är synliga när en fullskärmsvideo eller visar en presentation.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+>Lågprioriterade underrättelser: <guiicon
+>Visa meddelanderuta</guiicon
+> och <guiicon
+>Visa i historik</guiicon
+></term>
+    <listitem
+><para
+>Om lågprioriterade underrättelser, såsom spårbyten i mediaspelaren, antingen visas som meddelanderutor eller i historiken.</para
+></listitem>
+    </varlistentry>
+
+    </variablelist>
+</sect3>
+
+<sect3 id="notification-behavior">
+    <title
+>Beteende</title>
+
+    <variablelist>
+
+    <varlistentry>
+    <term
+>Meddelanderuta: <guiicon
+>Visa nära underrättelseikon</guiicon
+></term>
+    <listitem
+><para
+>Visa underrättelserutor nära platsen där underrättelseikonen är placerad i panelen.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Välj egen position...</guiicon
+></term>
+    <listitem
+><para
+>Låter dig välja ett fast skärmhörn där underrättelserutor kommer att placeras.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+        <term
+><guiicon
+>Dölj efter:</guiicon
+></term>
+    <listitem
+><para
+>Efter hur många sekunder som underrättelserutorna automatiskt försvinner. Du kan välja allt mellan 1 och 120 sekunder.</para
+></listitem>
+    </varlistentry>
+
+    </variablelist>
+</sect3>
+
+<sect3 id="progress-and-badges">
+    <title
+>Programförlopp och brickor</title>
+
+    <sect4 id="application-progress">
+        <title
+>Programförlopp</title>
+
+        <para
+>Alternativ i den här delen styr hur programförlopp, såsom kopiering eller nerladdning av en fil, presenteras.</para>
+
+        <variablelist>
+
+        <varlistentry>
+        <term
+><guiicon
+>Visa i aktivitetshanterare</guiicon
+></term>
+        <listitem
+><para
+>Färglägger fönstret i panelen baserat på förlopp.</para
+></listitem>
+        </varlistentry>
+
+        <varlistentry>
+        <term
+><guiicon
+>Visa i underrättelser</guiicon
+></term>
+        <listitem
+><para
+>Visa en underrättelseruta under förloppet.</para
+></listitem>
+        </varlistentry>
+
+        <varlistentry>
+        <term
+><guiicon
+>Behåll meddelanderuta öppen under förlopp</guiicon
+></term>
+        <listitem
+><para
+>Om meddelanderutan ska förbli synlig under hela förloppstiden eller döljas automatiskt. Den visas alltid igen när aktiviteten slutförs eller misslyckas.</para
+></listitem>
+        </varlistentry>
+
+        </variablelist>
+    </sect4>
+
+    <sect4 id="badges">
+        <title
+>Underrättelsebrickor</title>
+
+        <variablelist>
+
+        <varlistentry>
+        <term
+><guiicon
+>Visa i aktivitetshanterare</guiicon
+></term>
+        <listitem
+><para
+>Låter program visa brickor, såsom antal olästa brev, i panelen.</para
+></listitem>
+        </varlistentry>
+
+        </variablelist>
+    </sect4>
+
+</sect3>
+
+</sect2>
+
+<sect2 id="application-settings">
+<title
+>Programinställningar</title>
+
+<para
+>Genom att klicka på knappen <guilabel
+>Anpassa...</guilabel
+> i slutet av listan öppnar programmets inställningssida, som låter dig ställa in underrättelsebeteende baserat på program eller tjänst.</para>
+
+<para
+>Använd sidoraden till vänster för att välja en post i kategorierna <guilabel
+>Program</guilabel
+> eller <guilabel
+>Systemtjänster</guilabel
+>.</para>
+
+<para
+>Allmänna varningsrutor samt start- och avslutningsljud är placerade i tjänsten <guilabel
+>Plasma arbetsrymd</guilabel
+>.</para>
+
+<para
+>Program som inte tillhandahåller riktig identifikation, såsom skalskript, kan anpassas med posten <guilabel
+>Andra program</guilabel
+>.</para>
+
+<variablelist>
+
+    <varlistentry>
+    <term
+><guiicon
+>Visa meddelanderutor</guiicon
+></term>
+    <listitem
+><para
+>Om programmet får visa underrättelserutor.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Visa vid stör ej</guiicon
+></term>
+    <listitem
+><para
+>Om programmet får visa underrättelserutor även vid stör ej.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Visa i historik</guiicon
+></term>
+    <listitem
+><para
+>Om det här programmets underrättelser behålls i underrättelsehistoriken.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Visa underrättelsebrickor</guiicon
+></term>
+    <listitem
+><para
+>Om programmet får visa brickor, såsom antal olästa brev, i panelen.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Anpassa händelser...</guiicon
+></term>
+    <listitem
+><para
+>För &kde;-program kan du också anpassa varje underrättelse individuellt.</para
+></listitem>
+    </varlistentry>
+
+</variablelist>
+
+</sect2>
+
+</sect1>
+
+</article>

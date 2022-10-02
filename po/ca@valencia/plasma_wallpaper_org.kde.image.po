@@ -1,0 +1,283 @@
+# Translation of plasma_wallpaper_org.kde.image.po to Catalan (Valencian)
+# Copyright (C) 2007-2022 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2 or later.
+#
+# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2013, 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022.
+# Orestes Mas Casals <orestes@tsc.upc.edu>, 2008.
+# Robert Millan <rmh@aybabtu.com>, 2009.
+# Antoni Bella Pérez <antonibella5@yahoo.com>, 2014, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-15 00:46+0000\n"
+"PO-Revision-Date: 2022-05-22 10:15+0200\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca@valencia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.12.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Josep M. Ferrer"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "txemaq@gmail.com"
+
+#: imagepackage/contents/ui/config.qml:94
+#, kde-format
+msgid "Positioning:"
+msgstr "Posicionament:"
+
+#: imagepackage/contents/ui/config.qml:97
+#, kde-format
+msgid "Scaled and Cropped"
+msgstr "Escalat i escapçat"
+
+#: imagepackage/contents/ui/config.qml:101
+#, kde-format
+msgid "Scaled"
+msgstr "Escalat"
+
+#: imagepackage/contents/ui/config.qml:105
+#, kde-format
+msgid "Scaled, Keep Proportions"
+msgstr "Escalat, mantenint les proporcions"
+
+#: imagepackage/contents/ui/config.qml:109
+#, kde-format
+msgid "Centered"
+msgstr "Centrat"
+
+#: imagepackage/contents/ui/config.qml:113
+#, kde-format
+msgid "Tiled"
+msgstr "Mosaic"
+
+#: imagepackage/contents/ui/config.qml:141
+#, kde-format
+msgid "Background:"
+msgstr "Fons:"
+
+#: imagepackage/contents/ui/config.qml:142
+#, kde-format
+msgid "Blur"
+msgstr "Difuminat"
+
+#: imagepackage/contents/ui/config.qml:151
+#, kde-format
+msgid "Solid color"
+msgstr "Color sòlid"
+
+#: imagepackage/contents/ui/config.qml:161
+#, kde-format
+msgid "Select Background Color"
+msgstr "Seleccioneu el color de fons"
+
+#: imagepackage/contents/ui/config.qml:207
+#, kde-format
+msgid "Add Image…"
+msgstr "Afig una imatge…"
+
+#: imagepackage/contents/ui/config.qml:213
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:257
+#, kde-format
+msgid "Get New Wallpapers…"
+msgstr "Obtín fons de pantalla nous…"
+
+#: imagepackage/contents/ui/main.qml:69
+#, kde-format
+msgid "Open Wallpaper Image"
+msgstr "Obri imatge de fons de pantalla"
+
+#: imagepackage/contents/ui/main.qml:70
+#, kde-format
+msgid "Next Wallpaper Image"
+msgstr "Fons de pantalla següent"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:33
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Obri la carpeta contenidora"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:39
+#, kde-format
+msgid "Restore wallpaper"
+msgstr "Restaura el fons de pantalla"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:44
+#, kde-format
+msgid "Remove Wallpaper"
+msgstr "Elimina el fons de pantalla"
+
+#: plasma-apply-wallpaperimage.cpp:29
+#, kde-format
+msgid ""
+"This tool allows you to set an image as the wallpaper for the Plasma session."
+msgstr ""
+"Esta eina permet definir una imatge com a fons de pantalla per a la sessió "
+"de Plasma."
+
+#: plasma-apply-wallpaperimage.cpp:31
+#, kde-format
+msgid ""
+"An image file or an installed wallpaper kpackage that you wish to set as the "
+"wallpaper for your Plasma session"
+msgstr ""
+"Un fitxer d'imatge o un «kpackage» instal·lat de fons de pantalla que "
+"vulgueu definir com a fons de pantalla per a la sessió de Plasma"
+
+#: plasma-apply-wallpaperimage.cpp:45
+#, kde-format
+msgid ""
+"There is a stray single quote in the filename of this wallpaper (') - please "
+"contact the author of the wallpaper to fix this, or rename the file "
+"yourself: %1"
+msgstr ""
+"Hi ha una cometa simple extraviada en el nom de fitxer d'este fons de "
+"pantalla (') - contacteu amb l'autor dels fons de pantalla perquè ho "
+"corregisca, o canvieu de nom el fitxer: %1"
+
+#: plasma-apply-wallpaperimage.cpp:85
+#, kde-format
+msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+msgstr ""
+"S'ha produït un error en intentar definir el fons de pantalla de Plasma:\n"
+
+#: plasma-apply-wallpaperimage.cpp:89
+#, kde-format
+msgid ""
+"Successfully set the wallpaper for all desktops to the KPackage based %1"
+msgstr ""
+"S'ha definit correctament el fons de pantalla per a tots els escriptoris amb "
+"%1 basat en KPackage"
+
+#: plasma-apply-wallpaperimage.cpp:91
+#, kde-format
+msgid "Successfully set the wallpaper for all desktops to the image %1"
+msgstr ""
+"S'ha definit correctament el fons de pantalla per a tots els escriptoris amb "
+"la imatge %1"
+
+#: plasma-apply-wallpaperimage.cpp:97
+#, kde-format
+msgid ""
+"The file passed to be set as wallpaper does not exist, or we cannot identify "
+"it as a wallpaper: %1"
+msgstr ""
+"El fitxer passat per a definir com a fons de pantalla no existix, o no s'ha "
+"pogut identificar com a fons de pantalla: %1"
+
+#: plugin/finder/packagefinder.cpp:152
+#, kde-format
+msgid "Recommended wallpaper file"
+msgstr "Fitxer de fons de pantalla recomanat"
+
+#: plugin/imagebackend.cpp:234
+#, kde-format
+msgid "Directory with the wallpaper to show slides from"
+msgstr "Directori amb el fons de pantalla mostrant les diapositives des de"
+
+#: plugin/imagebackend.cpp:345
+#, kde-format
+msgid "Open Image"
+msgstr "Obri una imatge"
+
+#: plugin/imagebackend.cpp:345
+#, kde-format
+msgid "Image Files"
+msgstr "Fitxers d'imatge"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:38
+#, kde-format
+msgid "Order:"
+msgstr "Ordre:"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:45
+#, kde-format
+msgid "Random"
+msgstr "Aleatori"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:49
+#, kde-format
+msgid "A to Z"
+msgstr "A a Z"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:53
+#, kde-format
+msgid "Z to A"
+msgstr "Z a A"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:57
+#, kde-format
+msgid "Date modified (newest first)"
+msgstr "Data de modificació (primer els més nous)"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:61
+#, kde-format
+msgid "Date modified (oldest first)"
+msgstr "Data de modificació (primer els més antics)"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:86
+#, kde-format
+msgid "Group by folders"
+msgstr "Agrupa per carpetes"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:98
+#, kde-format
+msgid "Change every:"
+msgstr "Canvia cada:"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:108
+#, kde-format
+msgid "%1 hour"
+msgid_plural "%1 hours"
+msgstr[0] "%1 hora"
+msgstr[1] "%1 hores"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:128
+#, kde-format
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "%1 minut"
+msgstr[1] "%1 minuts"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:148
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "%1 segon"
+msgstr[1] "%1 segons"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:162
+#, kde-format
+msgid "Folders"
+msgstr "Carpetes"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:220
+#, kde-format
+msgid "Remove Folder"
+msgstr "Elimina la carpeta"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:225
+#, kde-format
+msgid "Open Folder"
+msgstr "Obri una carpeta"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:235
+#, kde-format
+msgid "There are no wallpaper locations configured"
+msgstr "No s'ha configurat cap ubicació de fons de pantalla"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:250
+#, kde-format
+msgid "Add Folder…"
+msgstr "Afig una carpeta…"

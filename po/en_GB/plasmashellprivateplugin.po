@@ -1,0 +1,191 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Steve Allewell <steve.allewell@gmail.com>, 2014, 2015, 2016, 2018, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-03 00:48+0000\n"
+"PO-Revision-Date: 2022-07-22 19:26+0100\n"
+"Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
+"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.04.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Steve Allewell"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "steve.allewell@gmail.com"
+
+#: calendar/eventdatadecorator.cpp:51
+#, kde-format
+msgctxt "Agenda listview section title"
+msgid "Holidays"
+msgstr "Holidays"
+
+#: calendar/eventdatadecorator.cpp:53
+#, kde-format
+msgctxt "Agenda listview section title"
+msgid "Events"
+msgstr "Events"
+
+#: calendar/eventdatadecorator.cpp:55
+#, kde-format
+msgctxt "Agenda listview section title"
+msgid "Todo"
+msgstr "To-do"
+
+#: calendar/eventdatadecorator.cpp:57
+#, kde-format
+msgctxt "Means 'Other calendar items'"
+msgid "Other"
+msgstr "Other"
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:10
+#, kde-format
+msgid "Screen lock enabled"
+msgstr "Screen lock enabled"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:11
+#, kde-format
+msgid "Sets whether the screen will be locked after the specified time."
+msgstr "Sets whether the screen will be locked after the specified time."
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:16
+#, kde-format
+msgid "Screen saver timeout"
+msgstr "Screen saver timeout"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:17
+#, kde-format
+msgid "Sets the minutes after which the screen is locked."
+msgstr "Sets the minutes after which the screen is locked."
+
+#: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
+#, kde-format
+msgid "New Session"
+msgstr "New Session"
+
+#: shellprivate/widgetexplorer/kcategorizeditemsviewmodels.cpp:64
+#, kde-format
+msgid "Filters"
+msgstr "Filters"
+
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:42
+#, kde-format
+msgid "Select Plasmoid File"
+msgstr "Select Plasmoid File"
+
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:66
+#, kde-format
+msgid "Installing the package %1 failed."
+msgstr "Installing the package %1 failed."
+
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:66
+#, kde-format
+msgid "Installation Failure"
+msgstr "Installation Failure"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:110
+#, kde-format
+msgid "All Widgets"
+msgstr "All Widgets"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:114
+#, kde-format
+msgid "Running"
+msgstr "Running"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:118
+#, kde-format
+msgctxt ""
+"@item:inmenu used in the widget filter. Filter widgets that can be un-"
+"installed from the system, which are usually installed by the user to a "
+"local place."
+msgid "Uninstallable"
+msgstr "Uninstallable"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:122
+#, kde-format
+msgid "Categories:"
+msgstr "Categories:"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:199
+#, kde-format
+msgid "Download New Plasma Widgets"
+msgstr "Download New Plasma Widgets"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:208
+#, kde-format
+msgid "Install Widget From Local File…"
+msgstr "Install Widget From Local File…"
+
+#~ msgid "&Execute"
+#~ msgstr "&Execute"
+
+#~ msgctxt "Toolbar Button to switch to Plasma Scripting Mode"
+#~ msgid "Plasma"
+#~ msgstr "Plasma"
+
+#~ msgctxt "Toolbar Button to switch to KWin Scripting Mode"
+#~ msgid "KWin"
+#~ msgstr "KWin"
+
+#~ msgid "Templates"
+#~ msgstr "Templates"
+
+#~ msgid "Desktop Shell Scripting Console"
+#~ msgstr "Desktop Shell Scripting Console"
+
+#~ msgid "Editor"
+#~ msgstr "Editor"
+
+#~ msgid "Load"
+#~ msgstr "Load"
+
+#~ msgid "Use"
+#~ msgstr "Use"
+
+#~ msgid "Output"
+#~ msgstr "Output"
+
+#~ msgid "Unable to load script file <b>%1</b>"
+#~ msgstr "Unable to load script file <b>%1</b>"
+
+#~ msgid "Open Script File"
+#~ msgstr "Open Script File"
+
+#~ msgid "Save Script File"
+#~ msgstr "Save Script File"
+
+#~ msgid "Executing script at %1"
+#~ msgstr "Executing script at %1"
+
+#~ msgid "Runtime: %1ms"
+#~ msgstr "Runtime: %1ms"
+
+#~ msgid "Download Wallpaper Plugins"
+#~ msgstr "Download Wallpaper Plugins"
+
+#~ msgid "Containments"
+#~ msgstr "Containments"
+
+#~ msgctxt ""
+#~ "%1 is a type of widgets, as defined by e.g. some plasma-packagestructure-"
+#~ "*.desktop files"
+#~ msgid "Download New %1"
+#~ msgstr "Download New %1"

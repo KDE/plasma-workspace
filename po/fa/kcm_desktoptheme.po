@@ -1,0 +1,253 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Mohammad Reza Mirdamadi <mohi@linuxshop.ir>, 2012, 2013.
+# ehsan <ehsan.abdolahy@gmail.com>, 2016.
+# Mohi Mirdamadi <mohi@ubuntu.ir>, ۲۰۱۶.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"PO-Revision-Date: ۲۰۱۶-۰۸-۲۰ ۱۶:۵۵+0330\n"
+"Last-Translator: Mohi Mirdamadi <mohi@ubuntu.ir>\n"
+"Language-Team: Persian <kde-i18n-fa@kde.org>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 2.0\n"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Get new Theme"
+msgid "Name of the current Plasma Style"
+msgstr "دریافت چهره‌ی جدید"
+
+#: kcm.cpp:108
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: kcm.cpp:119
+#, kde-format
+msgid "Unable to download the theme: %1"
+msgstr ""
+
+#: kcm.cpp:144
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "چهره با موفقیت نصب شد."
+
+#: kcm.cpp:147 kcm.cpp:153
+#, kde-format
+msgid "Theme installation failed."
+msgstr "نصب چهره شکست خورد."
+
+#: kcm.cpp:245
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:24
+#, fuzzy, kde-format
+#| msgid "This module lets you configure the desktop theme."
+msgid "This module lets you choose the Plasma style."
+msgstr "این پیمانه به شما اجازه‌ی پیکربندی چهره‌ی رومیزی را می‌دهد."
+
+#: package/contents/ui/main.qml:69
+#, fuzzy, kde-format
+#| msgid "Open Theme"
+msgid "All Themes"
+msgstr "باز کردن چهره"
+
+#: package/contents/ui/main.qml:70
+#, fuzzy, kde-format
+#| msgid "Open Theme"
+msgid "Light Themes"
+msgstr "باز کردن چهره"
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgid "Dark Themes"
+msgstr ""
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "Color scheme compatible"
+msgstr ""
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgid "Follows color scheme"
+msgstr ""
+
+#: package/contents/ui/main.qml:118
+#, fuzzy, kde-format
+#| msgid "Open Theme"
+msgid "Edit Theme…"
+msgstr "باز کردن چهره"
+
+#: package/contents/ui/main.qml:125
+#, kde-format
+msgid "Remove Theme"
+msgstr "حذف چهره"
+
+#: package/contents/ui/main.qml:132
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Theme"
+msgstr "حذف چهره"
+
+#: package/contents/ui/main.qml:174
+#, fuzzy, kde-format
+#| msgid "Install from File"
+msgid "Install from File…"
+msgstr "نصب از پرونده"
+
+#: package/contents/ui/main.qml:179
+#, fuzzy, kde-format
+#| msgid "Get new Theme"
+msgid "Get New Plasma Styles…"
+msgstr "دریافت چهره‌ی جدید"
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Open Theme"
+msgstr "باز کردن چهره"
+
+#: package/contents/ui/main.qml:195
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr "پرونده‌های چهره (*.zip *.tar.gz *.tar.bz2)"
+
+#: plasma-apply-desktoptheme.cpp:31
+#, kde-format
+msgid ""
+"This tool allows you to set the theme of the current Plasma session, without "
+"accidentally setting it to one that is either not available, or which is "
+"already set."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:35
+#, kde-format
+msgid ""
+"The name of the theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:36
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:49
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:65
+#, kde-format
+msgid "The current Plasma session's theme has been set to %1"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:67
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:75
+#, kde-format
+msgid "You have the following Plasma themes on your system:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "محمدرضا میردامادی, احسان عبدالهی"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "mohi@ubuntu.ir, ehsan.abdolahy@gmail.com"
+
+#, fuzzy
+#~| msgid "Get new Theme"
+#~ msgid "Plasma Style"
+#~ msgstr "دریافت چهره‌ی جدید"
+
+#~ msgid "David Rosca"
+#~ msgstr "David Rosca"
+
+#, fuzzy
+#~| msgid "Get new Theme"
+#~ msgid "Plasma Styles"
+#~ msgstr "دریافت چهره‌ی جدید"
+
+#, fuzzy
+#~| msgid "Configure Desktop Theme"
+#~ msgid "Download New Plasma Styles"
+#~ msgstr "پیکربندی چهره‌ی رومیزی"
+
+#~ msgid "Configure Desktop Theme"
+#~ msgstr "پیکربندی چهره‌ی رومیزی"
+
+#~ msgid "Theme removal failed."
+#~ msgstr "حذف چهره شکست خورد."
+
+#~ msgid "Details"
+#~ msgstr "جزئیات"
+
+#~ msgid "Source"
+#~ msgstr "مبدأ"
+
+#, fuzzy
+#~ msgid "File..."
+#~ msgstr "پرونده"
+
+#, fuzzy
+#~ msgid " Author: %1"
+#~ msgstr "نویسنده"
+
+#~ msgid "Version: %1"
+#~ msgstr "نسخه: %1"
+
+#~ msgid "More"
+#~ msgstr "بیشتر"
+
+#~ msgid "Author:"
+#~ msgstr "نویسنده:"
+
+#, fuzzy
+#~| msgid "Author:"
+#~ msgid "Custom theme author "
+#~ msgstr "نویسنده:"
+
+#~ msgid "Version:"
+#~ msgstr "نسخه:"
+
+#~ msgid "Description:"
+#~ msgstr "توصیف:"
+
+#, fuzzy
+#~| msgid "Author:"
+#~ msgid "Theme Author"
+#~ msgstr "نویسنده:"
+
+#, fuzzy
+#~| msgid "Version:"
+#~ msgid "Theme Name"
+#~ msgstr "نسخه:"
+
+#, fuzzy
+#~| msgid "Version:"
+#~ msgid "Theme Version"
+#~ msgstr "نسخه:"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"

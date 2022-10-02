@@ -1,0 +1,47 @@
+# Vincent Pinon <vpinon@kde.org>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_org.kde.plasma.icon\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-20 00:46+0000\n"
+"PO-Revision-Date: 2017-07-03 17:58+0100\n"
+"Last-Translator: Vincent Pinon <vpinon@kde.org>\n"
+"Language-Team: French <kde-francophone@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 2.0\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: iconapplet.cpp:92
+#, kde-format
+msgid "Failed to create icon widgets folder '%1'"
+msgstr ""
+"Échec lors de la création du dossier du composant graphique pour les icônes "
+"« %1 »"
+
+#: iconapplet.cpp:138
+#, kde-format
+msgid "Failed to copy icon widget desktop file from '%1' to '%2'"
+msgstr ""
+"Impossible de copier le fichier desktop du composant graphique pour les "
+"icônes de « %1 » vers « %2 »"
+
+#: iconapplet.cpp:385
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Ouvrir le dossier contenant"
+
+#: iconapplet.cpp:565
+#, kde-format
+msgid "Properties for %1"
+msgstr "Propriétés de %1"
+
+#: package/contents/ui/main.qml:73
+#, kde-format
+msgid "Properties"
+msgstr "Propriétés"

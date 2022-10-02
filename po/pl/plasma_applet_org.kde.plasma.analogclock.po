@@ -1,0 +1,65 @@
+# translation of plasma_applet_clock.po to
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Marta Rybczyńska <kde-i18n@rybczynska.net>, 2007, 2008, 2009.
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2014, 2019, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_clock\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-25 00:47+0000\n"
+"PO-Revision-Date: 2022-07-31 09:39+0200\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
+"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 22.03.70\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+
+#: contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Wygląd"
+
+#: contents/ui/analogclock.qml:76
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Current time is %1; Current date is %2"
+msgstr "Bieżący czas to %1; Bieżąca data to %2"
+
+#: contents/ui/configGeneral.qml:23
+#, kde-format
+msgid "Show seconds hand"
+msgstr "Pokaż wskazówkę sekund"
+
+#: contents/ui/configGeneral.qml:24
+#, kde-format
+msgid "General:"
+msgstr "Ogólne:"
+
+#: contents/ui/configGeneral.qml:28
+#, kde-format
+msgid "Show time zone"
+msgstr "Pokaż strefę czasową"
+
+#~ msgid "Show the seconds"
+#~ msgstr "Pokaż sekundy"
+
+#~ msgid "Check this if you want to show the seconds."
+#~ msgstr "Zaznacz to, jeśli mają być pokazywane sekundy."
+
+#~ msgid "Show &seconds hand"
+#~ msgstr "Pokaż wskazówkę &sekundową"
+
+#~ msgid "Show the Timezone in text"
+#~ msgstr "Pokaż strefę czasową jako tekst"
+
+#~ msgid "Check this if you want to display Timezone in text."
+#~ msgstr "Zaznacz to, jeśli chcesz strefę czasową jako napis w zegarze."
+
+#~ msgid "Show &time zone"
+#~ msgstr "Pokaż &strefę czasową"

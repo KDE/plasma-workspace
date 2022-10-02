@@ -1,0 +1,545 @@
+# translation of plasma.po to Russian
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Nick Shaforostoff <shafff@ukr.net>, 2007, 2008, 2009.
+# Nick Shaforostoff <shaforostoff@kde.ru>, 2008, 2009.
+# Albert R. Valiev <darkstar@altlinux.ru>, 2008.
+# Leonid Kanter <leon@asplinux.ru>, 2008.
+# Alexander Potashev <aspotashev@gmail.com>, 2009, 2010, 2011, 2014, 2015, 2016.
+# Andrey Cherepanov <skull@kde.ru>, 2009.
+# Yuri Efremov <yur.arh@gmail.com>, 2010, 2011, 2012, 2013.
+# Alexander Lakhin <exclusion@gmail.com>, 2013.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-03 00:48+0000\n"
+"PO-Revision-Date: 2022-06-18 10:08+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.08.3\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Николай Шафоростов, Альберт Валиев, Александр Яворский"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "shafff@ukr.net, darkstar@altlinux.ru, kekcuha@gmail.com"
+
+#: calendar/eventdatadecorator.cpp:51
+#, kde-format
+msgctxt "Agenda listview section title"
+msgid "Holidays"
+msgstr "Праздники"
+
+#: calendar/eventdatadecorator.cpp:53
+#, kde-format
+msgctxt "Agenda listview section title"
+msgid "Events"
+msgstr "Мероприятия"
+
+#: calendar/eventdatadecorator.cpp:55
+#, kde-format
+msgctxt "Agenda listview section title"
+msgid "Todo"
+msgstr "Задачи"
+
+#: calendar/eventdatadecorator.cpp:57
+#, kde-format
+msgctxt "Means 'Other calendar items'"
+msgid "Other"
+msgstr "Другое"
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:10
+#, kde-format
+msgid "Screen lock enabled"
+msgstr "Включен блокировщик экрана"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:11
+#, kde-format
+msgid "Sets whether the screen will be locked after the specified time."
+msgstr ""
+"Если включён, то экран будет автоматически блокироваться спустя указанное "
+"время."
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:16
+#, kde-format
+msgid "Screen saver timeout"
+msgstr "Задержка блокировки экрана"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:17
+#, kde-format
+msgid "Sets the minutes after which the screen is locked."
+msgstr "Экран будет блокироваться спустя указанное число минут."
+
+#: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
+#, kde-format
+msgid "New Session"
+msgstr "Начать новый сеанс"
+
+#: shellprivate/widgetexplorer/kcategorizeditemsviewmodels.cpp:64
+#, kde-format
+msgid "Filters"
+msgstr "Фильтры"
+
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:42
+#, kde-format
+msgid "Select Plasmoid File"
+msgstr "Выбор файла виджета Plasma"
+
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:66
+#, kde-format
+msgid "Installing the package %1 failed."
+msgstr "Не удалось установить пакет %1."
+
+#: shellprivate/widgetexplorer/openwidgetassistant.cpp:66
+#, kde-format
+msgid "Installation Failure"
+msgstr "Ошибка установки"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:110
+#, kde-format
+msgid "All Widgets"
+msgstr "Все виджеты"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:114
+#, kde-format
+msgid "Running"
+msgstr "Запущенные"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:118
+#, kde-format
+msgctxt ""
+"@item:inmenu used in the widget filter. Filter widgets that can be un-"
+"installed from the system, which are usually installed by the user to a "
+"local place."
+msgid "Uninstallable"
+msgstr "Возможно удалить"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:122
+#, kde-format
+msgid "Categories:"
+msgstr "Категории:"
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:199
+#, kde-format
+msgid "Download New Plasma Widgets"
+msgstr "Загрузить виджеты Plasma..."
+
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:208
+#, kde-format
+msgid "Install Widget From Local File…"
+msgstr "Установить виджет из файла..."
+
+#~ msgid "&Execute"
+#~ msgstr "&Выполнить"
+
+#~ msgctxt "Toolbar Button to switch to Plasma Scripting Mode"
+#~ msgid "Plasma"
+#~ msgstr "Plasma"
+
+#~ msgctxt "Toolbar Button to switch to KWin Scripting Mode"
+#~ msgid "KWin"
+#~ msgstr "KWin"
+
+#~ msgid "Templates"
+#~ msgstr "Шаблоны"
+
+#~ msgid "Desktop Shell Scripting Console"
+#~ msgstr "Консоль сценариев Plasma"
+
+#~ msgid "Editor"
+#~ msgstr "Редактор"
+
+#~ msgid "Load"
+#~ msgstr "Загрузить"
+
+#~ msgid "Use"
+#~ msgstr "Использовать"
+
+#~ msgid "Output"
+#~ msgstr "Вывод"
+
+#~ msgid "Unable to load script file <b>%1</b>"
+#~ msgstr "Не удалось загрузить файл сценария <b>%1</b>"
+
+#~ msgid "Open Script File"
+#~ msgstr "Открытие файла сценария"
+
+#~ msgid "Save Script File"
+#~ msgstr "Сохранение файла сценария"
+
+#~ msgid "Executing script at %1"
+#~ msgstr "Выполнение сценария в %1"
+
+#~ msgid "Runtime: %1ms"
+#~ msgstr "Время выполнения: %1 мс"
+
+#~ msgid "Download Wallpaper Plugins"
+#~ msgstr "Загрузка подключаемых модулей, предоставляющих обои рабочего стола"
+
+#~ msgid "Get New Templates..."
+#~ msgstr "Загрузить новые шаблоны..."
+
+#~ msgid "Activities"
+#~ msgstr "Комнаты"
+
+#~ msgid "Hide Dashboard"
+#~ msgstr "Скрыть панель"
+
+#~ msgid "Widget Dashboard"
+#~ msgstr "Приборная доска"
+
+#~ msgid "The font to use on the desktop"
+#~ msgstr "Шрифт, используемый на рабочем столе"
+
+#~ msgid ""
+#~ "Set to true if each virtual desktop should get its own, unique Plasma "
+#~ "view."
+#~ msgstr ""
+#~ "Показывать свой набор панелей и виджетов Plasma на каждом рабочем столе"
+
+#~ msgid "Next Activity"
+#~ msgstr "Следующая комната"
+
+#~ msgid "Previous Activity"
+#~ msgstr "Предыдущая комната"
+
+#~ msgid "Stop Current Activity"
+#~ msgstr "Прекратить выполнение текущей комнаты"
+
+#~ msgid "Add Panel"
+#~ msgstr "Добавить панель"
+
+#~ msgctxt "Default name for a new activity"
+#~ msgid "New Activity"
+#~ msgstr "Новая комната"
+
+#~ msgid "The KDE desktop, panels and widgets workspace application."
+#~ msgstr "Активный рабочий стол KDE."
+
+#~ msgid "Plasma Desktop Shell"
+#~ msgstr "Оболочка Plasma"
+
+#~ msgid "Copyright 2006-2009, The KDE Team"
+#~ msgstr "© Команда разработчиков KDE, 2006-2009"
+
+#~ msgid "Aaron J. Seigo"
+#~ msgstr "Aaron J. Seigo"
+
+#~ msgid "Author and maintainer"
+#~ msgstr "Автор и сопровождающий"
+
+#~ msgid "John Lions"
+#~ msgstr "John Lions"
+
+#~ msgid "In memory of his contributions, 1937-1998."
+#~ msgstr "В память о его вкладе, 1937-1998."
+
+#~ msgid "Panel Alignment"
+#~ msgstr "Выравнивание панели"
+
+#~ msgid "Left"
+#~ msgstr "Слева"
+
+#~ msgid "Center"
+#~ msgstr "По центру"
+
+#~ msgid "Right"
+#~ msgstr "Справа"
+
+#~ msgid "Visibility"
+#~ msgstr "Видимость"
+
+#~ msgid "Always visible"
+#~ msgstr "Показывать всегда"
+
+#~ msgid "Auto-hide"
+#~ msgstr "Автоматически скрывать"
+
+#~ msgid "Windows can cover"
+#~ msgstr "Допускать перекрытие окнами"
+
+#~ msgid "Windows go below"
+#~ msgstr "Панель перекрывает окна"
+
+#~ msgid "Screen Edge"
+#~ msgstr "Край экрана"
+
+#~ msgid ""
+#~ "Press left mouse button and drag to a screen edge to change panel edge"
+#~ msgstr ""
+#~ "Нажмите левую клавишу мыши и перетащите к любому краю экрана, чтобы "
+#~ "переместить панель к этому краю"
+
+#~ msgid "Height"
+#~ msgstr "Высота"
+
+#~ msgid "Press left mouse button and drag vertically to change panel height"
+#~ msgstr "Нажмите левую клавишу мыши и потащите, чтобы изменить высоту панели"
+
+#~ msgid "More Settings"
+#~ msgstr "Дополнительно"
+
+#~ msgid ""
+#~ "Show more options about panel alignment, visibility and other settings"
+#~ msgstr ""
+#~ "Показать дополнительные параметры выравнивания и видимости панели и "
+#~ "остальные кнопки действий над панелью"
+
+#~ msgid "Maximize Panel"
+#~ msgstr "Растянуть панель"
+
+#~ msgid "Close this configuration window"
+#~ msgstr "Закрыть данное окно конфигурации"
+
+#~ msgid "Add Spacer"
+#~ msgstr "Добавить разделитель"
+
+#~ msgid ""
+#~ "Add a spacer to the panel useful to add some space between two widgets"
+#~ msgstr ""
+#~ "Добавить на панель разделитель, создающий свободное пространство между "
+#~ "двумя виджетами"
+
+#~ msgid "Width"
+#~ msgstr "Ширина"
+
+#~ msgid "Top"
+#~ msgstr "Вверху"
+
+#~ msgid "Bottom"
+#~ msgstr "Внизу"
+
+#~ msgid "Show Dashboard"
+#~ msgstr "Показать приборную доску"
+
+#~ msgid "Activities..."
+#~ msgstr "Комнаты..."
+
+#~ msgctxt "%1 is the activity name"
+#~ msgid "Copy of %1"
+#~ msgstr "Копия комнаты %1"
+
+#~ msgid ""
+#~ "A new widget has become available on the network:<br><b>%1</b> - <i>%2</i>"
+#~ msgstr "Виджет стал доступен по сети:<br><b>%1</b> — <i>%2</i>"
+
+#~ msgid "Unlock and add to current activity"
+#~ msgstr "Разблокировать и добавить в текущую комнату"
+
+#~ msgid "Add to current activity"
+#~ msgstr "Добавить в текущую комнату"
+
+#~ msgid "Run applications"
+#~ msgstr "Запуск приложений"
+
+#~ msgid "This activity template requests to run the following applications"
+#~ msgstr "Эта комната предлагает запустить следующие приложения:"
+
+#~ msgid "Run selected"
+#~ msgstr "Запустить выбранные"
+
+#~ msgid "Run none"
+#~ msgstr "Ничего не запускать"
+
+#~ msgid "Move this slider to set the panel position"
+#~ msgstr "Двигайте ползунок для задания расположения панели"
+
+#~ msgid "Move this slider to set the maximum panel size"
+#~ msgstr "Двигайте ползунок, чтобы указать максимальный размер панели"
+
+#~ msgid "Move this slider to set the minimum panel size"
+#~ msgstr "Двигайте ползунок, чтобы указать минимальный размер панели"
+
+#~ msgid "Remove activity?"
+#~ msgstr "Удалить комнату?"
+
+#~ msgid "Remove"
+#~ msgstr "Удалить"
+
+#~ msgid "Cancel"
+#~ msgstr "Отмена"
+
+#~ msgid "Accept changes?"
+#~ msgstr "Применить изменения?"
+
+#~ msgid "Apply"
+#~ msgstr "Применить"
+
+#~ msgid "Configure activity"
+#~ msgstr "Настроить комнату"
+
+#~ msgid "Stop activity"
+#~ msgstr "Приостановить работу комнаты"
+
+#~ msgid "Start activity"
+#~ msgstr "Возобновить работу комнаты"
+
+#~ msgid "Enter Search Term"
+#~ msgstr "Поиск..."
+
+#~ msgid "Create Activity"
+#~ msgstr "Создать комнату"
+
+#~ msgid "Empty Desktop"
+#~ msgstr "Пустая комната"
+
+#~ msgid "Clone current activity"
+#~ msgstr "Копия текущей комнаты"
+
+#~ msgctxt "Action used to create a new activity"
+#~ msgid "New Activity"
+#~ msgstr "Новая комната"
+
+#~ msgid "unnamed"
+#~ msgstr "Безымянная комната"
+
+#~ msgid "Confirm Removal"
+#~ msgstr "Удалить"
+
+#~ msgid "Apply Changes"
+#~ msgstr "Сохранить"
+
+#~ msgid "Cancel Changes"
+#~ msgstr "Отмена"
+
+#~ msgctxt "%1 is the name of the activity"
+#~ msgid "Do you really want to remove %1?"
+#~ msgstr "Удалить комнату «%1»?"
+
+#~ msgid "Plasma Workspace"
+#~ msgstr "Рабочее пространство Plasma"
+
+#~ msgid "Add Activity"
+#~ msgstr "Добавить комнату"
+
+#~ msgid "widgetById requires an id"
+#~ msgstr "widgetById требует идентификатор"
+
+#~ msgid "widgetById requires a name of a widget or a widget object"
+#~ msgstr "widgetById требует либо название виджета, либо объект виджета"
+
+#~ msgid "activityById requires an id"
+#~ msgstr "activityById требует идентификатор"
+
+#~ msgid "activityForScreen requires a screen id"
+#~ msgstr "activityForScreen требует идентификатор экрана"
+
+#~ msgid "Could not find a plugin for %1 named %2."
+#~ msgstr "Не удалось найти расширение %2 для %1"
+
+#~ msgid ""
+#~ "Error: %1 at line %2\n"
+#~ "\n"
+#~ "Backtrace:\n"
+#~ "%3"
+#~ msgstr ""
+#~ "Ошибка: %1 в строке %2\n"
+#~ "\n"
+#~ "Стек вызовов:\n"
+#~ "%3"
+
+#~ msgid "Zoom Out"
+#~ msgstr "Отдалить"
+
+#~ msgid "Configure Plasma..."
+#~ msgstr "Настроить Plasma..."
+
+#, fuzzy
+#~| msgid "Plasma settings"
+#~ msgid "Plasma Settings"
+#~ msgstr "Настройка Plasma"
+
+#~ msgid "Different activity for each desktop"
+#~ msgstr "Отдельная комната для каждого рабочего стола"
+
+#, fuzzy
+#~| msgid "Plasma Dashboard"
+#~ msgid "Use a separate dashboard"
+#~ msgstr "Панель Plasma"
+
+#, fuzzy
+#~| msgid "Center"
+#~ msgid "Ctrl"
+#~ msgstr "По центру"
+
+#, fuzzy
+#~| msgid "Configure Plasma..."
+#~ msgid "Configure Plugin"
+#~ msgstr "Настроить Plasma..."
+
+#, fuzzy
+#~| msgid "Name:"
+#~ msgid "Name"
+#~ msgstr "Название:"
+
+#, fuzzy
+#~| msgid "Bottom"
+#~ msgid "Button:"
+#~ msgstr "Внизу"
+
+#, fuzzy
+#~| msgid "Configure Plasma..."
+#~ msgid "Configure..."
+#~ msgstr "Настроить Plasma..."
+
+#~ msgid "Desktop Settings"
+#~ msgstr "Параметры рабочего стола"
+
+#~ msgid "Wallpaper"
+#~ msgstr "Обои"
+
+#~ msgid ""
+#~ "This picture of a monitor contains a preview of what the current settings "
+#~ "will look like on your desktop."
+#~ msgstr ""
+#~ "Это изображение монитора показывает как будет выглядеть ваш рабочий стол "
+#~ "с текущими параметрами."
+
+#~ msgid "Type:"
+#~ msgstr "Тип:"
+
+#~ msgid "Name:"
+#~ msgstr "Название:"
+
+#~ msgid "Appearance"
+#~ msgstr "Внешний вид"
+
+#~ msgid "Theme:"
+#~ msgstr "Оформление:"
+
+#~ msgid "Starts plasma as an ordinary window rather than as the desktop."
+#~ msgstr "Запускает Plasma в режиме обычного окна"
+
+#~ msgid "Align panel to left"
+#~ msgstr "Разместить панель слева"
+
+#~ msgid "Align panel to center"
+#~ msgstr "Разместить панель в центре"
+
+#~ msgid "Align panel to right"
+#~ msgstr "Разместить панель справа"
+
+#, fuzzy
+#~| msgid "Move this slider to set the panel position"
+#~ msgid "Drag this handle to resize the panel"
+#~ msgstr "Двигайте данный движок, чтобы указать расположение панели"

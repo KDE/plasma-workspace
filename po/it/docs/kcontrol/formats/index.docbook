@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Italian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="formats" lang="&language;">
+<articleinfo>
+<title
+>Formati</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Krishna.Tateneni; &Krishna.Tateneni.mail;</author>
+<othercredit role="translator"
+><firstname
+>Vincenzo</firstname
+><surname
+>Reale</surname
+><affiliation
+><address
+><email
+>smart2128vr@gmail.com</email
+></address
+></affiliation
+><contrib
+>Traduzione della documentazione</contrib
+></othercredit
+> 
+ </authorgroup>
+
+	  <date
+>18/05/2015</date>
+	  <releaseinfo
+>Plasma 5.3</releaseinfo>
+
+	  <keywordset>
+		<keyword
+>KDE</keyword>
+		<keyword
+>Impostazioni di sistema</keyword>
+		<keyword
+>localizzazione</keyword>
+		<keyword
+>nazione</keyword>
+		<keyword
+>lingua</keyword>
+		<keyword
+>numero</keyword>
+		<keyword
+>valuta</keyword>
+	  </keywordset>
+</articleinfo>
+
+<para
+>Questo modulo delle &systemsettings; di &kde; consente di selezionare opzioni di personalizzazione che dipendono dalla regione del mondo in cui si vive. </para>
+
+<para
+>Nella maggior parte dei casi, si può semplicemente selezionare la regione e tutte le opzioni saranno impostate in modo appropriato. </para>
+
+<para
+>Sul fondo di questo modulo si vedono esempi di come si presentano le impostazioni e quali unità di misura sono usate. Oltre ai numeri, si può vedere come vengono visualizzati i valori di valuta, data e ora in formato breve e lungo. Quando si modificano le impostazioni, l'anteprima mostra gli effetti delle modifiche prima di applicarle. </para>
+
+<para
+>Casella a tendina <guilabel
+>Regione</guilabel
+> contiene l'elenco dei paesi disponibili e mostrerà inizialmente il paese attualmente selezionato. Se la selezione mostra <quote
+>Predefinito</quote
+> non è stato impostato un paese e sarà utilizzato come valore predefinito il al paese impostato dal sistema, che sarà mostrato. </para>
+
+<para
+>Nel caso in cui siano necessarie diverse impostazioni singole, attivare <guilabel
+>Impostazioni dettagliate</guilabel
+> e selezionare il formato del paese per <guilabel
+>Numeri</guilabel
+>, <guilabel
+>Ora</guilabel
+>, <guilabel
+>Valuta</guilabel
+>, <guilabel
+>Unità di misura</guilabel
+> o le regole di <guilabel
+>confronto e ordinamento</guilabel
+> dai menu a tendina. </para>
+
+</article>

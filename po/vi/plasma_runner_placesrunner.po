@@ -1,0 +1,33 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Phu Hung Nguyen <phu.nguyen@kdemail.net>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"PO-Revision-Date: 2020-10-24 14:16+0200\n"
+"Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
+"Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 19.12.2\n"
+
+#: placesrunner.cpp:29 placesrunner.cpp:83
+#, kde-format
+msgid "places"
+msgstr "địa điểm"
+
+#: placesrunner.cpp:29
+#, kde-format
+msgid "Lists all file manager locations"
+msgstr "Liệt kê tất cả các địa điểm của trình quản lí tệp"
+
+#: placesrunner.cpp:31
+#, kde-format
+msgid "Finds file manager locations that match :q:"
+msgstr "Tìm các địa điểm của trình quản lí tệp khớp với :q:"

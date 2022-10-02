@@ -1,0 +1,99 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Wantoyo <wantoyek@gmail.com>, 2019, 2020.
+# Linerly <linerly@protonmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-28 00:47+0000\n"
+"PO-Revision-Date: 2022-03-03 12:18+0700\n"
+"Last-Translator: Linerly <linerly@protonmail.com>\n"
+"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: package/contents/ui/main.qml:34
+#, kde-format
+msgid ""
+"User Feedback has been disabled centrally. Please contact your distributor."
+msgstr ""
+"Tanggapan Pengguna telah dinonfungsikan secara terpusat. Silakan kontak "
+"distributormu."
+
+#: package/contents/ui/main.qml:44 package/contents/ui/main.qml:77
+#, kde-format
+msgid "Plasma:"
+msgstr "Plasma:"
+
+#: package/contents/ui/main.qml:51
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"You can help KDE improve Plasma by contributing information on how you use "
+"it, so we can focus on things that matter to you.<nl/><nl/>Contributing this "
+"information is optional and entirely anonymous. We never collect your "
+"personal data, files you use, websites you visit, or information that could "
+"identify you.<nl/><nl/>You can read about <link url='https://kde.org/"
+"privacypolicy-apps.php'>our privacy policy here.</link>"
+msgstr ""
+"Anda dapat membantu KDE membuat Plasma lebih baik dengan berkontribusi "
+"informasi tentang bagaimana Anda menggunakannya, sehingga kita bisa fokus "
+"pada hal-hal yang penting bagi Anda.<nl/><nl/>Mengkontribusikan informasi "
+"ini opsional dan sepenuhnya anonim. Kita tidak pernah mengumpulkan data "
+"pribadi Anda, file-file yang Anda gunakan, situs yang Anda kunjungi, atau "
+"informasi yang dapat mengidentifikasi Anda.<nl/><nl/>Anda dapat membaca "
+"tentang kebijakan kami di tautan berikut:"
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Plasma"
+msgstr "Plasma"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "The following information will be sent:"
+msgstr "Informasi berikut akan dikirim:"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "View sent data:"
+msgstr "Tampilkan data yang akan dikirim:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Wantoyo"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "wantoyek@gmail.com"
+
+#~ msgid "User Feedback"
+#~ msgstr "Tanggapan Pengguna"
+
+#~ msgid "Configure user feedback settings"
+#~ msgstr "Konfigurasikan pengaturan tanggapan pengguna"
+
+#~ msgctxt "@info"
+#~ msgid "You can read about our policy in the following link:"
+#~ msgstr "Kamu bisa baca tentang kebijakan kami di tautan berikut ini:"
+
+#~ msgid "Allow KDE software to collect anonymous usage information"
+#~ msgstr ""
+#~ "Izinkan perangkat lunak KDE mengumpulkan informasi penggunaan anonim"
+
+#~ msgid "Send basic system information"
+#~ msgstr "Kirimkan informasi dasar sistem"
+
+#~ msgid "Send basic usage information"
+#~ msgstr "Kirimkan informasi dasar penggunaan"
+
+#~ msgid "Send detailed system information"
+#~ msgstr "Kirimkan informasi terperinci sistem"
+
+#~ msgid "Send detailed usage information"
+#~ msgstr "Kirimkan informasi terperinci penggunaan"

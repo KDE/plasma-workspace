@@ -1,0 +1,254 @@
+# translation of ksmserver.po to Kashubian
+#
+# Michal Ostrowski <michol@linuxcsb.org>, 2007.
+# Mark Kwidzińsczi <mark@linuxcsb.org>, 2006, 2008.
+# Michôł Òstrowsczi <michol@linuxcsb.org>, 2008.
+# Mark Kwidzińśczi <mark@linuxcsb.org>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: ksmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-22 00:47+0000\n"
+"PO-Revision-Date: 2009-05-26 20:46+0200\n"
+"Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
+"Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
+"Language: csb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 0.3\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2)\n"
+
+#: logout.cpp:344
+#, kde-format
+msgid "Logout canceled by '%1'"
+msgstr "Wëlogòwanié rëmniãté òb '%1'"
+
+#: main.cpp:117
+#, kde-format
+msgid "$HOME not set!"
+msgstr ""
+
+#: main.cpp:121 main.cpp:127
+#, kde-format
+msgid "$HOME directory (%1) does not exist."
+msgstr ""
+
+#: main.cpp:123
+#, kde-format
+msgid "No write access to $HOME directory (%1)."
+msgstr ""
+
+#: main.cpp:129
+#, kde-format
+msgid "No read access to $HOME directory (%1)."
+msgstr ""
+
+#: main.cpp:133
+#, kde-format
+msgid "$HOME directory (%1) is out of disk space."
+msgstr ""
+
+#: main.cpp:136
+#, kde-format
+msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+msgstr ""
+
+#: main.cpp:149 main.cpp:184
+#, kde-format
+msgid "No write access to '%1'."
+msgstr ""
+
+#: main.cpp:151 main.cpp:186
+#, kde-format
+msgid "No read access to '%1'."
+msgstr ""
+
+#: main.cpp:159 main.cpp:172
+#, kde-format
+msgid "Temp directory (%1) is out of disk space."
+msgstr ""
+
+#: main.cpp:162 main.cpp:175
+#, kde-format
+msgid ""
+"Writing to the temp directory (%2) failed with\n"
+"    the error '%1'"
+msgstr ""
+
+#: main.cpp:190
+#, kde-format
+msgid ""
+"The following installation problem was detected\n"
+"while trying to start Plasma:"
+msgstr ""
+
+#: main.cpp:193
+#, kde-format
+msgid ""
+"\n"
+"\n"
+"Plasma is unable to start.\n"
+msgstr ""
+
+#: main.cpp:200
+#, kde-format
+msgid "Plasma Workspace installation problem!"
+msgstr ""
+
+#: main.cpp:236
+#, fuzzy, kde-format
+#| msgid ""
+#| "The reliable KDE session manager that talks the standard X11R6 \n"
+#| "session management protocol (XSMP)."
+msgid ""
+"The reliable Plasma session manager that talks the standard X11R6 \n"
+"session management protocol (XSMP)."
+msgstr ""
+"Wiarëwôrtnô menadżera sesëji KDE jaczi rozmiejë sztandard X11R6 \n"
+"protokòłu (XSMP) sprôwianiô sesëją."
+
+#: main.cpp:240
+#, kde-format
+msgid "Restores the saved user session if available"
+msgstr "Doprowadzë wczasniészą sesëjã nazôd, eżle ta je przistãpnô"
+
+#: main.cpp:243
+#, kde-format
+msgid "Also allow remote connections"
+msgstr "Zezwòlë na daleczi sparłączenié"
+
+#: main.cpp:246
+#, kde-format
+msgid "Starts the session in locked mode"
+msgstr ""
+
+#: main.cpp:250
+#, kde-format
+msgid ""
+"Starts without lock screen support. Only needed if other component provides "
+"the lock screen."
+msgstr ""
+
+#: server.cpp:873
+#, fuzzy, kde-format
+#| msgid "The KDE Session Manager"
+msgid "Session Management"
+msgstr "Menadżera sesëji KDE"
+
+#: server.cpp:876
+#, fuzzy, kde-format
+#| msgid "&Logout"
+msgid "Log Out"
+msgstr "&Wëlogòwanié"
+
+#: server.cpp:881
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr ""
+
+#: server.cpp:886
+#, kde-format
+msgid "Halt Without Confirmation"
+msgstr ""
+
+#: server.cpp:891
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr ""
+
+#, fuzzy
+#~| msgid ""
+#~| "Starts 'wm' in case no other window manager is \n"
+#~| "participating in the session. Default is 'kwin'"
+#~ msgid ""
+#~ "Starts <wm> in case no other window manager is \n"
+#~ "participating in the session. Default is 'kwin'"
+#~ msgstr ""
+#~ "Zrësziwô 'wm' eżle niżóden jinszi menadżer òknów \n"
+#~ "nie je aktiwny w ti sesëji. Domëslny je 'kwin'"
+
+#, fuzzy
+#~| msgid "&Logout"
+#~ msgid "Logout"
+#~ msgstr "&Wëlogòwanié"
+
+#, fuzzy
+#~| msgid "Logging out in 1 second."
+#~| msgid_plural "Logging out in %1 seconds."
+#~ msgid "Sleeping in 1 second"
+#~ msgid_plural "Sleeping in %1 seconds"
+#~ msgstr[0] "Wëlogòwanié za 1 sekùndã."
+#~ msgstr[1] "Wëlogòwanié w %1 sekùndë."
+#~ msgstr[2] "Wëlogòwanié w %1 sekùndów."
+
+#~ msgid "Logging out in 1 second."
+#~ msgid_plural "Logging out in %1 seconds."
+#~ msgstr[0] "Wëlogòwanié za 1 sekùndã."
+#~ msgstr[1] "Wëlogòwanié w %1 sekùndë."
+#~ msgstr[2] "Wëlogòwanié w %1 sekùndów."
+
+#~ msgid "Turning off computer in 1 second."
+#~ msgid_plural "Turning off computer in %1 seconds."
+#~ msgstr[0] "Wëłączenié kòmpùtra za 1 sekùndã"
+#~ msgstr[1] "Wëłączë kòmpùtr w %1 sekùndë."
+#~ msgstr[2] "Wëłączë kòmpùtr w %1 sekùndów."
+
+#~ msgid "Restarting computer in 1 second."
+#~ msgid_plural "Restarting computer in %1 seconds."
+#~ msgstr[0] "Zrësztartowanié kòmpùtra za 1 sekùndã."
+#~ msgstr[1] "Zrëstartëjë kòmpùtr w %1 sekùndë."
+#~ msgstr[2] "Zrëstartëjë kòmpùtr w %1 sekùndów."
+
+#, fuzzy
+#~| msgid "&Turn Off Computer"
+#~ msgid "Turn Off Computer"
+#~ msgstr "&Wëłączë kòmpùtr"
+
+#, fuzzy
+#~| msgid "&Restart Computer"
+#~ msgid "Restart Computer"
+#~ msgstr "&Zrëszë kòmpùtr znowa"
+
+#~ msgctxt "default option in boot loader"
+#~ msgid " (default)"
+#~ msgstr "(domëslné)"
+
+#, fuzzy
+#~| msgid "&Cancel"
+#~ msgid "Cancel"
+#~ msgstr "Ò&przestóń"
+
+#~ msgid "&Standby"
+#~ msgstr "Trib &standby"
+
+#~ msgid "Suspend to &RAM"
+#~ msgstr "Zascygôj do &RAMù"
+
+#~ msgid "Suspend to &Disk"
+#~ msgstr "Zascygôj do &diskù"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Mark Kwidzińsczi, Michôł Òstrowsczi"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "mark@linuxcsb.org, michol@linuxcsb.org"
+
+#~ msgid "(C) 2000, The KDE Developers"
+#~ msgstr "(C) 2000, The KDE Developers"
+
+#~ msgid "Matthias Ettrich"
+#~ msgstr "Matthias Ettrich"
+
+#~ msgid "Luboš Luňák"
+#~ msgstr "Luboš Luňák"
+
+#~ msgid "Maintainer"
+#~ msgstr "Òpiekùn"
+
+#~ msgctxt "current option in boot loader"
+#~ msgid " (current)"
+#~ msgstr "(biéżny)"

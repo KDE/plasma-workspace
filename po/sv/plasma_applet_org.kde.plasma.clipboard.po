@@ -1,0 +1,145 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2014, 2015, 2018, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-09 00:47+0000\n"
+"PO-Revision-Date: 2021-10-29 16:58+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.08.1\n"
+
+#: contents/ui/BarcodePage.qml:36
+#, kde-format
+msgid "Return to Clipboard"
+msgstr "Återgå till klippbordet"
+
+#: contents/ui/BarcodePage.qml:57
+#, kde-format
+msgid "QR Code"
+msgstr "QR-kod"
+
+#: contents/ui/BarcodePage.qml:58
+#, kde-format
+msgid "Data Matrix"
+msgstr "Datamatris"
+
+#: contents/ui/BarcodePage.qml:59
+#, kde-format
+msgctxt "Aztec barcode"
+msgid "Aztec"
+msgstr "Aztec"
+
+#: contents/ui/BarcodePage.qml:60
+#, kde-format
+msgid "Code 39"
+msgstr "Kod 39"
+
+#: contents/ui/BarcodePage.qml:61
+#, kde-format
+msgid "Code 93"
+msgstr "Kod 93"
+
+#: contents/ui/BarcodePage.qml:62
+#, kde-format
+msgid "Code 128"
+msgstr "Kod 128"
+
+#: contents/ui/BarcodePage.qml:85
+#, kde-format
+msgid "Change the QR code type"
+msgstr "Ändra typ av QR-kod"
+
+#: contents/ui/BarcodePage.qml:114
+#, kde-format
+msgid "Creating QR code failed"
+msgstr "Misslyckades skapa QR-kod"
+
+#: contents/ui/BarcodePage.qml:123
+#, kde-format
+msgid "The QR code is too large to be displayed"
+msgstr "QR-koden är för stor att visas"
+
+#: contents/ui/clipboard.qml:26
+#, kde-format
+msgid "Clipboard Contents"
+msgstr "Klippbordets innehåll"
+
+#: contents/ui/clipboard.qml:27 contents/ui/Menu.qml:84
+#, kde-format
+msgid "Clipboard is empty"
+msgstr "Klippbordet är tomt"
+
+#: contents/ui/clipboard.qml:55
+#, kde-format
+msgid "Configure Clipboard…"
+msgstr "Anpassa klippbordet…"
+
+#: contents/ui/clipboard.qml:57
+#, kde-format
+msgid "Clear History"
+msgstr "Rensa historik"
+
+#: contents/ui/DelegateToolButtons.qml:23
+#, kde-format
+msgid "Invoke action"
+msgstr "Utför åtgärd "
+
+#: contents/ui/DelegateToolButtons.qml:38
+#, kde-format
+msgid "Show QR code"
+msgstr "Visa QR-kod"
+
+#: contents/ui/DelegateToolButtons.qml:54
+#, kde-format
+msgid "Edit contents"
+msgstr "Redigera innehåll"
+
+#: contents/ui/DelegateToolButtons.qml:68
+#, kde-format
+msgid "Remove from history"
+msgstr "Ta bort från historik"
+
+#: contents/ui/EditPage.qml:82
+#, kde-format
+msgctxt "@action:button"
+msgid "Save"
+msgstr "Spara"
+
+#: contents/ui/EditPage.qml:90
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: contents/ui/Menu.qml:84
+#, kde-format
+msgid "No matches"
+msgstr "Inga träffar"
+
+#: contents/ui/UrlItemDelegate.qml:99
+#, kde-format
+msgctxt ""
+"Indicator that there are more urls in the clipboard than previews shown"
+msgid "+%1"
+msgstr "+%1"
+
+#~ msgid "Clear history"
+#~ msgstr "Rensa historik"
+
+#~ msgid "Search…"
+#~ msgstr "Sök…"
+
+#~ msgid "Clipboard history is empty."
+#~ msgstr "Klippbordets historik är tom."
+
+#~ msgid "Configure"
+#~ msgstr "Anpassa"

@@ -1,0 +1,767 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Alexander Potashev <aspotashev@gmail.com>, 2010, 2012, 2015, 2018.
+# Yuri Efremov <yur.arh@gmail.com>, 2010.
+# Andrey Cherepanov <skull@kde.ru>, 2011.
+# Julia Dronova <juliette.tux@gmail.com>, 2013.
+# Alexander Lakhin <exclusion@gmail.com>, 2013.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"PO-Revision-Date: 2020-09-01 09:54+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.08.0\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: soliddeviceengine.cpp:114
+msgid "Parent UDI"
+msgstr "UDI родительского устройства"
+
+#: soliddeviceengine.cpp:115
+msgid "Vendor"
+msgstr "Производитель"
+
+#: soliddeviceengine.cpp:116
+msgid "Product"
+msgstr "Устройство"
+
+#: soliddeviceengine.cpp:117
+msgid "Description"
+msgstr "Описание"
+
+#: soliddeviceengine.cpp:118
+msgid "Icon"
+msgstr "Значок"
+
+#: soliddeviceengine.cpp:119 soliddeviceengine.cpp:592
+msgid "Emblems"
+msgstr "Эмблемы"
+
+# > bool Solid::Button::hasState () const
+# > Indicates if the button mantains state (Can toggled on/off).
+# --aspotashev
+#: soliddeviceengine.cpp:120 soliddeviceengine.cpp:476
+#: soliddeviceengine.cpp:482 soliddeviceengine.cpp:495
+msgid "State"
+msgstr "Состояние"
+
+#: soliddeviceengine.cpp:121 soliddeviceengine.cpp:477
+#: soliddeviceengine.cpp:483 soliddeviceengine.cpp:491
+#: soliddeviceengine.cpp:493
+msgid "Operation result"
+msgstr "Результат действия"
+
+#: soliddeviceengine.cpp:122
+msgid "Timestamp"
+msgstr "Временная метка"
+
+#: soliddeviceengine.cpp:130
+msgid "Processor"
+msgstr "Процессор"
+
+#: soliddeviceengine.cpp:131
+msgid "Number"
+msgstr "Номер"
+
+#: soliddeviceengine.cpp:132
+msgid "Max Speed"
+msgstr "Максимальная скорость"
+
+#: soliddeviceengine.cpp:133
+msgid "Can Change Frequency"
+msgstr "Возможность изменения частоты"
+
+#: soliddeviceengine.cpp:141
+msgid "Block"
+msgstr "Блочное устройство"
+
+#: soliddeviceengine.cpp:142
+msgid "Major"
+msgstr "Старший номер (major)"
+
+#: soliddeviceengine.cpp:143
+msgid "Minor"
+msgstr "Младший номер (minor)"
+
+#: soliddeviceengine.cpp:144
+msgid "Device"
+msgstr "Устройство"
+
+#: soliddeviceengine.cpp:152
+msgid "Storage Access"
+msgstr "Доступ к данным"
+
+#: soliddeviceengine.cpp:153 soliddeviceengine.cpp:507
+#: soliddeviceengine.cpp:606
+msgid "Accessible"
+msgstr "Доступно"
+
+#: soliddeviceengine.cpp:154 soliddeviceengine.cpp:508
+msgid "File Path"
+msgstr "Путь к файлу"
+
+#: soliddeviceengine.cpp:169
+msgid "Storage Drive"
+msgstr "Устройство хранения данных"
+
+#: soliddeviceengine.cpp:172
+msgid "Ide"
+msgstr "IDE"
+
+#: soliddeviceengine.cpp:172
+msgid "Usb"
+msgstr "USB"
+
+#: soliddeviceengine.cpp:172
+msgid "Ieee1394"
+msgstr "IEEE 1394"
+
+#: soliddeviceengine.cpp:173
+msgid "Scsi"
+msgstr "SCSI"
+
+#: soliddeviceengine.cpp:173
+msgid "Sata"
+msgstr "SATA"
+
+#: soliddeviceengine.cpp:173
+msgid "Platform"
+msgstr "Внутренний"
+
+#: soliddeviceengine.cpp:175
+msgid "Hard Disk"
+msgstr "Жёсткий диск"
+
+#: soliddeviceengine.cpp:175
+msgid "Cdrom Drive"
+msgstr "Оптический привод"
+
+#: soliddeviceengine.cpp:175
+msgid "Floppy"
+msgstr "Дисковод гибких дисков"
+
+#: soliddeviceengine.cpp:176
+msgid "Tape"
+msgstr "Ленточный накопитель"
+
+#: soliddeviceengine.cpp:176
+msgid "Compact Flash"
+msgstr "Compact Flash"
+
+#: soliddeviceengine.cpp:176
+msgid "Memory Stick"
+msgstr "Memory Stick"
+
+#: soliddeviceengine.cpp:177
+msgid "Smart Media"
+msgstr "Смарт-карта"
+
+#: soliddeviceengine.cpp:177
+msgid "SdMmc"
+msgstr "SD/MMC"
+
+#: soliddeviceengine.cpp:177
+msgid "Xd"
+msgstr "xD"
+
+#: soliddeviceengine.cpp:179
+msgid "Bus"
+msgstr "Шина"
+
+#: soliddeviceengine.cpp:180
+msgid "Drive Type"
+msgstr "Тип устройства"
+
+#: soliddeviceengine.cpp:181 soliddeviceengine.cpp:194
+#: soliddeviceengine.cpp:362 soliddeviceengine.cpp:376
+msgid "Removable"
+msgstr "Со сменным носителем"
+
+#: soliddeviceengine.cpp:182 soliddeviceengine.cpp:195
+#: soliddeviceengine.cpp:363 soliddeviceengine.cpp:377
+msgid "Hotpluggable"
+msgstr "Подключается в любое время"
+
+#: soliddeviceengine.cpp:204
+msgid "Optical Drive"
+msgstr "Оптический привод"
+
+#: soliddeviceengine.cpp:209
+msgid "CD-R"
+msgstr "CD-R"
+
+#: soliddeviceengine.cpp:212
+msgid "CD-RW"
+msgstr "CD-RW"
+
+#: soliddeviceengine.cpp:215
+msgid "DVD"
+msgstr "DVD"
+
+#: soliddeviceengine.cpp:218
+msgid "DVD-R"
+msgstr "DVD-R"
+
+#: soliddeviceengine.cpp:221
+msgid "DVD-RW"
+msgstr "DVD-RW"
+
+#: soliddeviceengine.cpp:224
+msgid "DVD-RAM"
+msgstr "DVD-RAM"
+
+#: soliddeviceengine.cpp:227
+msgid "DVD+R"
+msgstr "DVD+R"
+
+#: soliddeviceengine.cpp:230
+msgid "DVD+RW"
+msgstr "DVD+RW"
+
+#: soliddeviceengine.cpp:233
+msgid "DVD+DL"
+msgstr "DVD+DL"
+
+#: soliddeviceengine.cpp:236
+msgid "DVD+DLRW"
+msgstr "DVD+DLRW"
+
+#: soliddeviceengine.cpp:239
+msgid "BD"
+msgstr "BD"
+
+#: soliddeviceengine.cpp:242
+msgid "BD-R"
+msgstr "BD-R"
+
+#: soliddeviceengine.cpp:245
+msgid "BD-RE"
+msgstr "BD-RE"
+
+#: soliddeviceengine.cpp:248
+msgid "HDDVD"
+msgstr "HDDVD"
+
+#: soliddeviceengine.cpp:251
+msgid "HDDVD-R"
+msgstr "HDDVD-R"
+
+#: soliddeviceengine.cpp:254
+msgid "HDDVD-RW"
+msgstr "HDDVD-RW"
+
+#: soliddeviceengine.cpp:256
+msgid "Supported Media"
+msgstr "Поддерживаемые носители"
+
+#: soliddeviceengine.cpp:258
+msgid "Read Speed"
+msgstr "Скорость чтения"
+
+#: soliddeviceengine.cpp:259
+msgid "Write Speed"
+msgstr "Скорость записи"
+
+#: soliddeviceengine.cpp:267
+msgid "Write Speeds"
+msgstr "Скорости записи"
+
+#: soliddeviceengine.cpp:275
+msgid "Storage Volume"
+msgstr "Логический диск"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Other"
+msgstr "Другое"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Unused"
+msgstr "Не используется"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "File System"
+msgstr "Файловая система"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Partition Table"
+msgstr "Таблица разделов"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Raid"
+msgstr "RAID"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Encrypted"
+msgstr "Зашифрованный логический диск"
+
+#: soliddeviceengine.cpp:281 soliddeviceengine.cpp:283
+msgid "Usage"
+msgstr "Использование"
+
+#: soliddeviceengine.cpp:283
+#, kde-format
+msgid "Unknown"
+msgstr "Неизвестно"
+
+#: soliddeviceengine.cpp:286
+msgid "Ignored"
+msgstr "Игнорируется"
+
+#: soliddeviceengine.cpp:287
+msgid "File System Type"
+msgstr "Файловая система"
+
+#: soliddeviceengine.cpp:288
+msgid "Label"
+msgstr "Метка"
+
+#: soliddeviceengine.cpp:289
+msgid "UUID"
+msgstr "UUID"
+
+#: soliddeviceengine.cpp:298
+msgid "Encrypted Container"
+msgstr "Зашифрованный логический диск"
+
+#: soliddeviceengine.cpp:310
+msgid "OpticalDisc"
+msgstr "Оптический диск"
+
+#: soliddeviceengine.cpp:316
+msgid "Audio"
+msgstr "Аудио"
+
+#: soliddeviceengine.cpp:319
+msgid "Data"
+msgstr "Данные"
+
+#: soliddeviceengine.cpp:322
+msgid "Video CD"
+msgstr "Video CD"
+
+#: soliddeviceengine.cpp:325
+msgid "Super Video CD"
+msgstr "Super Video CD"
+
+#: soliddeviceengine.cpp:328
+msgid "Video DVD"
+msgstr "Video DVD"
+
+#: soliddeviceengine.cpp:331
+msgid "Video Blu Ray"
+msgstr "Видео Blu-ray"
+
+#: soliddeviceengine.cpp:333
+msgid "Available Content"
+msgstr "Содержимое"
+
+#: soliddeviceengine.cpp:336
+msgid "Unknown Disc Type"
+msgstr "Неизвестный тип диска"
+
+#: soliddeviceengine.cpp:336
+msgid "CD Rom"
+msgstr "CD-ROM"
+
+#: soliddeviceengine.cpp:336
+msgid "CD Recordable"
+msgstr "CD-R"
+
+#: soliddeviceengine.cpp:337
+msgid "CD Rewritable"
+msgstr "CD-RW"
+
+#: soliddeviceengine.cpp:337
+msgid "DVD Rom"
+msgstr "DVD-ROM"
+
+#: soliddeviceengine.cpp:337
+msgid "DVD Ram"
+msgstr "DVD-RAM"
+
+#: soliddeviceengine.cpp:338
+msgid "DVD Recordable"
+msgstr "DVD-R"
+
+#: soliddeviceengine.cpp:338
+msgid "DVD Rewritable"
+msgstr "DVD-RW"
+
+#: soliddeviceengine.cpp:339
+msgid "DVD Plus Recordable"
+msgstr "DVD+R"
+
+#: soliddeviceengine.cpp:339
+msgid "DVD Plus Rewritable"
+msgstr "DVD+RW"
+
+#: soliddeviceengine.cpp:340
+msgid "DVD Plus Recordable Duallayer"
+msgstr "Двухслойный DVD+R"
+
+#: soliddeviceengine.cpp:340
+msgid "DVD Plus Rewritable Duallayer"
+msgstr "Двухслойный DVD+RW"
+
+#: soliddeviceengine.cpp:341
+msgid "Blu Ray Rom"
+msgstr "BD-ROM"
+
+#: soliddeviceengine.cpp:341
+msgid "Blu Ray Recordable"
+msgstr "BD-R"
+
+#: soliddeviceengine.cpp:342
+msgid "Blu Ray Rewritable"
+msgstr "BD-RE"
+
+#: soliddeviceengine.cpp:342
+msgid "HD DVD Rom"
+msgstr "HD DVD-ROM"
+
+#: soliddeviceengine.cpp:343
+msgid "HD DVD Recordable"
+msgstr "HD DVD-R"
+
+#: soliddeviceengine.cpp:343
+msgid "HD DVD Rewritable"
+msgstr "HD DVD-RW"
+
+#: soliddeviceengine.cpp:345
+msgid "Disc Type"
+msgstr "Тип диска"
+
+#: soliddeviceengine.cpp:346
+msgid "Appendable"
+msgstr "Дозаписываемый"
+
+#: soliddeviceengine.cpp:347
+msgid "Blank"
+msgstr "Пустой"
+
+#: soliddeviceengine.cpp:348
+msgid "Rewritable"
+msgstr "Перезаписываемый"
+
+#: soliddeviceengine.cpp:349
+msgid "Capacity"
+msgstr "Ёмкость"
+
+#: soliddeviceengine.cpp:357
+msgid "Camera"
+msgstr "Фотокамера"
+
+#: soliddeviceengine.cpp:359 soliddeviceengine.cpp:373
+msgid "Supported Protocols"
+msgstr "Поддерживаемые протоколы"
+
+#: soliddeviceengine.cpp:360 soliddeviceengine.cpp:374
+msgid "Supported Drivers"
+msgstr "Поддерживаемые драйверы"
+
+#: soliddeviceengine.cpp:371
+msgid "Portable Media Player"
+msgstr "Портативный мультимедийный проигрыватель"
+
+#: soliddeviceengine.cpp:385
+msgid "Battery"
+msgstr "Батарея"
+
+#: soliddeviceengine.cpp:388
+msgid "Unknown Battery"
+msgstr "Неизвестная батарея"
+
+#: soliddeviceengine.cpp:388
+msgid "PDA Battery"
+msgstr "Батарея КПК"
+
+#: soliddeviceengine.cpp:388
+msgid "UPS Battery"
+msgstr "Батарея ИБП"
+
+#: soliddeviceengine.cpp:389
+msgid "Primary Battery"
+msgstr "Основная батарея"
+
+#: soliddeviceengine.cpp:389
+msgid "Mouse Battery"
+msgstr "Батарея мыши"
+
+#: soliddeviceengine.cpp:390
+msgid "Keyboard Battery"
+msgstr "Батарея клавиатуры"
+
+#: soliddeviceengine.cpp:390
+msgid "Keyboard Mouse Battery"
+msgstr "Батарея клавиатуры и мыши"
+
+#: soliddeviceengine.cpp:391
+msgid "Camera Battery"
+msgstr "Батарея фотокамеры"
+
+#: soliddeviceengine.cpp:391
+msgid "Phone Battery"
+msgstr "Батарея телефона"
+
+#: soliddeviceengine.cpp:391
+msgid "Monitor Battery"
+msgstr "Батарея монитора"
+
+#: soliddeviceengine.cpp:392
+msgid "Gaming Input Battery"
+msgstr "Батарея игрового устройства"
+
+#: soliddeviceengine.cpp:392
+msgid "Bluetooth Battery"
+msgstr "Батарея устройства Bluetooth"
+
+#: soliddeviceengine.cpp:395
+msgid "Not Charging"
+msgstr "Не заряжается"
+
+#: soliddeviceengine.cpp:395
+msgid "Charging"
+msgstr "Заряжается"
+
+#: soliddeviceengine.cpp:395
+msgid "Discharging"
+msgstr "Разряжается"
+
+#: soliddeviceengine.cpp:396
+msgid "Fully Charged"
+msgstr "Полностью заряжена"
+
+#: soliddeviceengine.cpp:398
+msgid "Plugged In"
+msgstr "Подключён"
+
+#: soliddeviceengine.cpp:399
+msgid "Type"
+msgstr "Тип"
+
+#: soliddeviceengine.cpp:400
+msgid "Charge Percent"
+msgstr "Уровень заряда"
+
+#: soliddeviceengine.cpp:401
+msgid "Rechargeable"
+msgstr "Перезаряжаемая"
+
+#: soliddeviceengine.cpp:402
+msgid "Charge State"
+msgstr "Состояние заряда"
+
+#: soliddeviceengine.cpp:427
+msgid "Type Description"
+msgstr "Описание типа"
+
+#: soliddeviceengine.cpp:432
+msgid "Device Types"
+msgstr "Типы устройств"
+
+#: soliddeviceengine.cpp:456 soliddeviceengine.cpp:553
+msgid "Size"
+msgstr "Размер"
+
+#: soliddeviceengine.cpp:535
+#, kde-format
+msgid "Filesystem is not responding"
+msgstr "Файловая система не отвечает"
+
+#: soliddeviceengine.cpp:535
+#, kde-format
+msgid "Filesystem mounted at '%1' is not responding"
+msgstr "Файловая система, подключённая к «%1», не отвечает"
+
+#: soliddeviceengine.cpp:551
+msgid "Free Space"
+msgstr "Свободное место"
+
+#: soliddeviceengine.cpp:552
+msgid "Free Space Text"
+msgstr "Свободное место (текст)"
+
+#: soliddeviceengine.cpp:554
+msgid "Size Text"
+msgstr "Размер текста"
+
+#: soliddeviceengine.cpp:580
+msgid "Temperature"
+msgstr "Температура"
+
+#: soliddeviceengine.cpp:581
+msgid "Temperature Unit"
+msgstr "Единица измерения температуры"
+
+#: soliddeviceengine.cpp:625 soliddeviceengine.cpp:629
+msgid "In Use"
+msgstr "Используется"
+
+#~ msgid "Network Interface"
+#~ msgstr "Сетевой интерфейс"
+
+#~ msgid "Interface Name"
+#~ msgstr "Название интерфейса"
+
+#~ msgid "Wireless"
+#~ msgstr "Беспроводной"
+
+#~ msgid "Hardware Address"
+#~ msgstr "Аппаратный адрес"
+
+#~ msgid "MAC Address"
+#~ msgstr "MAC-адрес"
+
+#~ msgid "AC Adapter"
+#~ msgstr "Блок питания"
+
+#~ msgid "Button"
+#~ msgstr "Кнопка"
+
+#~ msgid "Lid Button"
+#~ msgstr "Кнопка крышки"
+
+#~ msgid "Power Button"
+#~ msgstr "Кнопка питания"
+
+#~ msgid "Sleep Button"
+#~ msgstr "Кнопка перехода в ждущий режим"
+
+#~ msgid "Unknown Button Type"
+#~ msgstr "Неизвестная кнопка"
+
+# > bool Solid::Button::hasState () const
+# > Indicates if the button mantains state (Can toggled on/off).
+# --aspotashev
+#~ msgid "Has State"
+#~ msgstr "Переключатель"
+
+#~ msgid "State Value"
+#~ msgstr "Значение состояния"
+
+#~ msgid "Pressed"
+#~ msgstr "Нажата"
+
+#~ msgid "Audio Interface"
+#~ msgstr "Звуковой интерфейс"
+
+#~ msgid "ALSA"
+#~ msgstr "ALSA"
+
+#~ msgid "Open Sound System"
+#~ msgstr "OSS (Open Sound System)"
+
+#~ msgid "Unknown Audio Driver"
+#~ msgstr "Неизвестный звуковой драйвер"
+
+#~ msgid "Driver"
+#~ msgstr "Драйвер"
+
+# > QVariant Solid::AudioInterface::driverHandle() const
+# >     Retrieves a driver specific handle to access the device.
+# --aspotashev
+#~ msgid "Driver Handle"
+#~ msgstr "Драйверная ссылка на устройство"
+
+#~ msgid "Name"
+#~ msgstr "Название"
+
+#~ msgid "Unknown Audio Interface Type"
+#~ msgstr "Неизвестный тип звукового интерфейса"
+
+#~ msgid "Audio Control"
+#~ msgstr "Управление звуком"
+
+#~ msgid "Audio Input"
+#~ msgstr "Ввод звука"
+
+#~ msgid "Audio Output"
+#~ msgstr "Вывод звука"
+
+#~ msgid "Audio Device Type"
+#~ msgstr "Тип звукового устройства"
+
+#~ msgid "Internal Soundcard"
+#~ msgstr "Встроенная звуковая плата"
+
+#~ msgid "USB Soundcard"
+#~ msgstr "Звуковая плата USB"
+
+#~ msgid "Firewire Soundcard"
+#~ msgstr "Звуковая плата Firewire"
+
+#~ msgid "Headset"
+#~ msgstr "Наушники"
+
+#~ msgid "Modem"
+#~ msgstr "Модем"
+
+#~ msgid "Soundcard Type"
+#~ msgstr "Тип звуковой карты"
+
+#~ msgid "DVB Interface"
+#~ msgstr "Интерфейс DVB"
+
+#~ msgid "Device Adapter"
+#~ msgstr "Адаптер устройства"
+
+#~ msgid "DVB Unknown"
+#~ msgstr "Неизвестное устройство DVB"
+
+#~ msgid "DVB Audio"
+#~ msgstr "Аудио DVB"
+
+#~ msgid "DVB Ca"
+#~ msgstr "DVB CA"
+
+#~ msgid "DVB Demux"
+#~ msgstr "Демультиплексор DVB"
+
+#~ msgid "DVB DVR"
+#~ msgstr "Запись видео DVB"
+
+#~ msgid "DVB Frontend"
+#~ msgstr "Интерфейс DVB"
+
+#~ msgid "DVB Net"
+#~ msgstr "Сеть DVB"
+
+#~ msgid "DVB OSD"
+#~ msgstr "Текст DVB"
+
+#~ msgid "DVB Sec"
+#~ msgstr "Безопасность DVB"
+
+#~ msgid "DVB Video"
+#~ msgstr "Видео DVB"
+
+#~ msgid "DVB Device Type"
+#~ msgstr "Тип устройства DVB"
+
+#~ msgid "Device Index"
+#~ msgstr "Номер устройства"
+
+#~ msgid "Video"
+#~ msgstr "Видео"
+
+#~ msgid "Driver Handles"
+#~ msgstr "Драйверные ссылки на устройства"

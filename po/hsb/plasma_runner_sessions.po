@@ -1,0 +1,198 @@
+# translation of desktop_kdebase.po to Upper Sorbian
+# Prof. Dr. Eduard Werner <e.werner@rz.uni-leipzig.de>, 2003.
+# Eduard Werner <edi.werner@gmx.de>, 2005, 2008.
+# Bianka Šwejdźic <hertn@gmx.de>, 2005, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: desktop_kdebase\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-01 00:45+0000\n"
+"PO-Revision-Date: 2008-11-18 00:15+0100\n"
+"Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
+"Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
+"Language: hsb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
+"%100==4 ? 2 : 3;\n"
+
+#: sessionrunner.cpp:28 sessionrunner.cpp:64
+#, kde-format
+msgctxt "log out command"
+msgid "logout"
+msgstr "wotzjewić"
+
+#: sessionrunner.cpp:28
+#, kde-format
+msgid "Logs out, exiting the current desktop session"
+msgstr ""
+
+#: sessionrunner.cpp:29 sessionrunner.cpp:81
+#, fuzzy, kde-format
+#| msgctxt "shutdown computer command"
+#| msgid "shutdown"
+msgctxt "shut down computer command"
+msgid "shut down"
+msgstr "hasnyć"
+
+#: sessionrunner.cpp:29
+#, fuzzy, kde-format
+#| msgid "Shutdown the computer"
+msgid "Turns off the computer"
+msgstr "Hasnje kompjuter"
+
+#: sessionrunner.cpp:33 sessionrunner.cpp:90
+#, kde-format
+msgctxt "lock screen command"
+msgid "lock"
+msgstr "zamknyć"
+
+#: sessionrunner.cpp:33
+#, kde-format
+msgid "Locks the current sessions and starts the screen saver"
+msgstr ""
+
+#: sessionrunner.cpp:36 sessionrunner.cpp:72
+#, kde-format
+msgctxt "restart computer command"
+msgid "restart"
+msgstr "znowa startować"
+
+#: sessionrunner.cpp:36
+#, fuzzy, kde-format
+#| msgid "Restart the computer"
+msgid "Reboots the computer"
+msgstr "Startuje kompjuter znowa"
+
+#: sessionrunner.cpp:37 sessionrunner.cpp:73
+#, kde-format
+msgctxt "restart computer command"
+msgid "reboot"
+msgstr "znowa startować"
+
+#: sessionrunner.cpp:40
+#, kde-format
+msgctxt "switch user command"
+msgid "switch"
+msgstr "přešaltować"
+
+#: sessionrunner.cpp:41
+#, fuzzy, kde-format
+#| msgctxt "switch user command"
+#| msgid "switch"
+msgctxt "switch user command"
+msgid "switch :q:"
+msgstr "přešaltować"
+
+#: sessionrunner.cpp:42
+#, kde-format
+msgid ""
+"Switches to the active session for the user :q:, or lists all active "
+"sessions if :q: is not provided"
+msgstr ""
+
+#: sessionrunner.cpp:45 sessionrunner.cpp:130
+#, kde-format
+msgid "switch user"
+msgstr "na hinašeho wužiwarja přešaltować"
+
+#: sessionrunner.cpp:45
+#, fuzzy, kde-format
+#| msgid "Ru&n as a different user"
+msgid "Starts a new session as a different user"
+msgstr "Jako &hinaši wužiwar startować"
+
+#: sessionrunner.cpp:46 sessionrunner.cpp:130
+#, kde-format
+msgid "new session"
+msgstr "nowe posedźenje"
+
+#: sessionrunner.cpp:50
+#, kde-format
+msgid "Lists all sessions"
+msgstr ""
+
+#: sessionrunner.cpp:64
+#, kde-format
+msgid "log out"
+msgstr "wotzjewić"
+
+#: sessionrunner.cpp:66
+#, kde-format
+msgctxt "log out command"
+msgid "Logout"
+msgstr "Wotzjewić"
+
+#: sessionrunner.cpp:75
+#, kde-format
+msgid "Restart the computer"
+msgstr "Startuje kompjuter znowa"
+
+#: sessionrunner.cpp:82
+#, fuzzy, kde-format
+#| msgctxt "shutdown computer command"
+#| msgid "shutdown"
+msgctxt "shut down computer command"
+msgid "shutdown"
+msgstr "hasnyć"
+
+#: sessionrunner.cpp:84
+#, fuzzy, kde-format
+#| msgid "Shutdown the computer"
+msgid "Shut down the computer"
+msgstr "Hasnje kompjuter"
+
+#: sessionrunner.cpp:93
+#, kde-format
+msgid "Lock the screen"
+msgstr "Wobrazowku zamknyć"
+
+#: sessionrunner.cpp:115
+#, fuzzy, kde-format
+#| msgid "new session"
+msgctxt "User sessions"
+msgid "sessions"
+msgstr "nowe posedźenje"
+
+#: sessionrunner.cpp:136
+#, fuzzy, kde-format
+#| msgid "switch user"
+msgid "Switch User"
+msgstr "na hinašeho wužiwarja přešaltować"
+
+#: sessionrunner.cpp:211
+#, kde-format
+msgid "Warning - New Session"
+msgstr "Kedźbu - nowe posedźenje"
+
+#: sessionrunner.cpp:212
+#, fuzzy, kde-format
+#| msgid ""
+#| "<p>You have chosen to open another desktop session.<br />The current "
+#| "session will be hidden and a new login screen will be displayed.<br />An "
+#| "F-key is assigned to each session; F%1 is usually assigned to the first "
+#| "session, F%2 to the second session and so on. You can switch between "
+#| "sessions by pressing Ctrl, Alt and the appropriate F-key at the same "
+#| "time. Additionally, the KDE Panel and Desktop menus have actions for "
+#| "switching between sessions.</p>"
+msgid ""
+"<p>You have chosen to open another desktop session.<br />The current session "
+"will be hidden and a new login screen will be displayed.<br />An F-key is "
+"assigned to each session; F%1 is usually assigned to the first session, F%2 "
+"to the second session and so on. You can switch between sessions by pressing "
+"Ctrl, Alt and the appropriate F-key at the same time. Additionally, the "
+"Plasma Panel and Desktop menus have actions for switching between sessions.</"
+"p>"
+msgstr ""
+"<p>Chceće nowe posedźenje započeć.<br /> Aktualne posedźenje so chowa a nowe "
+"přizjewjenišćo so pokaže.<br /> F-tasta so kóždemu posedźenju přirjaduje; F"
+"%1 je normalnje prěnje posedźenje, F%2 je druhe a tak dale. Móžeće z Strg, "
+"Alt a wotpowědnej F-tastu mjez posedźenjemi skočić. Nimo toho matej KDE-pas "
+"a meni dźěłoweho powjercha zapisy za skakanje mjez posedźenjemi.</p>"
+
+#~ msgid "New Session"
+#~ msgstr "Nowe posedźenje"
+
+#~ msgid "&Start New Session"
+#~ msgstr "&Nowe posedźenje započeć"

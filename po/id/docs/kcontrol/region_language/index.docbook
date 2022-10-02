@@ -1,0 +1,108 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Indonesian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="translations" lang="&language;">
+<articleinfo>
+<title
+>Bahasa</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Krishna.Tateneni; &Krishna.Tateneni.mail;</author>
+<othercredit role="translator"
+><firstname
+>Wantoyo</firstname
+><surname
+></surname
+><affiliation
+><address
+><email
+>wantoyek@gmail.com</email
+></address
+></affiliation
+><contrib
+>Terjemahan</contrib
+></othercredit
+> 
+ </authorgroup>
+
+	  <date
+>28-11-2018</date>
+	  <releaseinfo
+>Plasma 5.14</releaseinfo>
+
+	  <keywordset>
+		<keyword
+>KDE</keyword>
+		<keyword
+>Systemsettings</keyword>
+		<keyword
+>lokal</keyword>
+		<keyword
+>negara</keyword>
+		<keyword
+>bahasa</keyword>
+		<keyword
+>terjemahan</keyword>
+		<keyword
+>Bahasa</keyword>
+	  </keywordset>
+</articleinfo>
+
+<para
+>Pada halaman ini kamu bisa mengeset bahasa kesukaanmu untuk Aplikasi dan Workspace &plasma; yang mau didisplaikan. </para>
+
+<para
+>&plasma; Workspace dan &kde; Applications adalah ditulis dalam bahasa American English dan diterjemahkan ke dalam banyak bahasa yang berbeda oleh tim sukarelawan. Terjemahan-terjemahan tersebut perlu diinstal terlebih dahulu sebelum kamu bisa memilih untuk menggunakannya. </para>
+<note
+><para
+>Pastikan bahwa kamu memiliki paket-paket bahasa &plasma; yang terinstal atau terjemahan untuk bahasa-bahasa yang ingin kamu gunakan.</para>
+<para
+>Sebagai &plasma; adalah dibangun berdasarkan pada pustaka &Qt;, kamu perlu terjemahan &Qt; untuk bahasa yang dipilih juga untuk memiliki &GUI; yang dilokalkan secara lengkap.</para
+></note>
+
+<para
+>Daftar akan menampilkan nama bahasa yang dilokalkan yang akan digunakan ketika mendisplaikan Applications dan Workspace &plasma;. Karena tidak semua Applications dan Workspace KDE dapat diterjemahkan ke dalam masing-masing bahasa, &plasma; akan mencoba menemukan terjemahan yang pantas untuk kamu dengan mengerjakan daftar sampai menemukan sebuah terjemahan. Jika tidak adanya bahasa kesukaanmu yang memiliki terjemahan yang diperlukan maka bahasa American English akan digunakan. </para>
+
+<para
+>Kamu bisa menambahkan bahasa ke daftar utama dengan mengeklik tombol <guibutton
+>Tambahkan bahasa</guibutton
+>. Nama-nama bahasa yang dilokalkan pada terjemahan &systemsettings; yang terinstal dan tersedia pada sistemmu didisplaikan. Jika bahasa yang ingin kamu gunakan namun tidak ditampilkan di daftar ini maka kamu perlu menginstalnya menggunakan metode seperti biasanya untuk sistem kamu. Pilih satu atau lebih bahasa di dalam daftar dan klik <guibutton
+>Tambah</guibutton
+>. </para>
+<para
+>Kamu bisa menghapus bahasa dari daftar utama dengan memilihnya dan kemudian mengeklik pada ikon <inlinemediaobject
+><imageobject
+><imagedata fileref="list-remove.png" format="PNG"/> </imageobject
+></inlinemediaobject
+>. Kamu bisa mengubah urutan kesukaan di dalam daftar dengan memilih bahasa dan mengeklik pada ikon <inlinemediaobject
+><imageobject
+> <imagedata fileref="go-top.png" format="PNG"/> </imageobject
+></inlinemediaobject
+>. </para>
+
+<para
+>Hanya bahasa dengan terjemahan &systemsettings; yang terinstal yang akan ditawarkan sebagai opsi untuk <guilabel
+>Bahasa primer</guilabel
+> dan <guilabel
+>Bahasa alternatif</guilabel
+> di dalam dialog <guilabel
+>Alihkan Bahasa Aplikasi</guilabel
+> pada menu <guimenu
+>Bantuan</guimenu
+>. </para>
+
+<note>
+<para
+>Bahasa dan Format adalah pengaturan independen. Mengubah bahasa <emphasis
+>tidak</emphasis
+>lah secara otomatis mengubah pengaturan untuk angka, mata uang &etc; terhadap region atau negara yang sesuai. </para>
+</note>
+
+</article>

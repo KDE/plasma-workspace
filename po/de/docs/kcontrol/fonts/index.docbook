@@ -1,0 +1,242 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % German "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="fonts" lang="&language;">
+<articleinfo>
+<title
+>Schriften</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+<othercredit role="translator"
+><firstname
+>Carsten</firstname
+><surname
+>Niehaus</surname
+><affiliation
+><address
+><email
+>CNiehaus@gmx.de</email
+></address
+></affiliation
+><contrib
+>Übersetzung</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-09</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>Schriften</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_fonts">
+
+<title
+>Schriften</title>
+
+<para
+>Dieses Modul wurde erstellt, um Ihnen eine einfache Möglichkeit zu geben, unterschiedlichen Bereichen ihrer &plasma;-Arbeitsfläche unterschiedliche Schriften zuzuweisen.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Bildschirmfoto des Moduls Einstellung der Schriftarten</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Das Modul Einstellung der Schriftarten</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Es stehen Ihnen verschiedene Schriftgruppen zur Verfügung. Somit haben Sie viele verschiedene Einstellmöglichkeiten. </para>
+
+<itemizedlist>
+<listitem
+><para
+><guilabel
+>Allgemein:</guilabel
+> wird überall dort benutzt, wo die anderen Gruppen nicht greifen</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Feste Breite:</guilabel
+> Überall dort, wo eine nicht proportionale Schrift angegeben ist</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Klein:</guilabel
+> Wenn kleine Schriften verwendet werden</para
+></listitem
+> 
+
+<listitem
+><para
+><guilabel
+>Werkzeugleiste:</guilabel
+> Schrift für die Werkzeugleisten in &kde;-Anwendungen</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Menü:</guilabel
+> Schrift für die Menüs in &kde;-Anwendungen</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Fenstertitel:</guilabel
+> Schrift für die Fenstertitel</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Fensterleiste:</guilabel
+> Schrift für die Fensterleisten-Miniprogramme</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Arbeitsfläche:</guilabel
+>  Schrift für die Anzeige des Textes von Arbeitsflächensymbolen</para
+></listitem>
+
+</itemizedlist>
+
+<para
+>Jede Schrift hat einen zugehörigen Knopf <guibutton
+>Auswählen ...</guibutton
+> Wenn Sie auf diesen Knopf klicken, erscheint ein Dialog-Fenster. In diesem Dialog können Sie zwischen Schriftart, Schriftstil und -größe wählen. Anschließend drücken Sie auf <guibutton
+>OK</guibutton
+>.</para>
+
+<para
+>Aktivieren Sie <guilabel
+>Nur nichtproportionale Schriften anzeigen</guilabel
+>, um alle nicht proportionalen Schriften in der Liste auszufiltern.</para>
+
+<para
+>Ein Beispiel der von Ihnen ausgesuchten Schrift erscheint zwischen dem Namen der Schriftgruppe und dem Knopf <guibutton
+>Auswählen ...</guibutton
+></para>
+
+<para
+>Wenn Sie Ihre Einstellungen abgeschlossen haben, klicken Sie auf <guibutton
+>OK</guibutton
+>. Nun werden alle notwendigen Anwendungen von &kde; neu gestartet, sodass die Änderungen sofort in Kraft treten.</para>
+
+<para
+>Der Knopf <guibutton
+>Alle Schriftarten anpassen ...</guibutton
+> erlaubt die Anpassung einer Eigenschaft oder einer Gruppe von Eigenschaften für alle oben ausgewählten Schriftarten. Es erscheint ein Auswahldialog für die Schriftarten ähnlich dem Standarddialog. Der Dialog enthält zusätzliche Ankreuzfelder, die eine Änderung von <guilabel
+>Schriftart</guilabel
+>, <guilabel
+>Schriftstil</guilabel
+> oder <guilabel
+>Größe</guilabel
+> unabhängig voneinander ermöglichen. Man kann eine beliebige Kombination dieser Felder markieren und die betreffenden Einstellungen werden auf alle Schriftartgruppen angewandt.</para>
+
+<para
+>Aktivieren Sie <guilabel
+>Nur nichtproportionale Schriften anzeigen</guilabel
+>, um alle nicht proportionalen Schriften in der Liste auszufiltern.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Anpassung aller Schriftarten</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="adjust-all.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Der Dialog Anpassung aller Schriftarten</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Falls man &eg; verschiedene Schriftarten ausgewählt hat und danach feststellt, dass die gewählten Schriftgrößen zu groß sind (das passiert oft bei einer Änderung der Bildschirmauflösung), kann man allen Schriftgruppen gleichzeitig eine neue Schriftgröße zuordnen, ohne das sich die Schriftart oder der Schriftstil ändern.</para>
+
+<sect2 id="fonts-aa">
+<title
+>Kantenglättung für Schriften</title>
+
+<para
+>Um Einstellungen für Kantenglättung zu verwenden, wählen Sie <guilabel
+>Aktiviert</guilabel
+> und passen dann die Werte an.</para>
+
+<para
+>Wenn Sie das Ankreuzfeld <guilabel
+>Bereich von Kantenglättung ausschließen</guilabel
+> aktivieren, dann können Sie angeben, in welchem Bereich die Schriftarten <emphasis
+>nicht</emphasis
+> geglättet werden sollen. Dieser Bereich wird in den beiden Drehfeldern darunter eingestellt.</para>
+
+<para
+>Sie können auch die Methode festlegen, die zur Kantenglättung verwendet wird, indem Sie <ulink url="https://de.wikipedia.org/wiki/Subpixel-Rendering"
+> Subpixel-Render-Typ</ulink
+> und <ulink url="https://de.wikipedia.org/wiki/Hint"
+> Hinting-Stil</ulink
+> ändern. Sie können auch <guilabel
+>DPI für Schriften erzwingen</guilabel
+> für die <ulink url="https://de.wikipedia.org/wiki/Punktdichte"
+> Bildschirmwiedergabe</ulink
+> einstellen. Wenn Sie die verschiedenen Methoden nicht kennen, sollten Sie diese Einstellung unverändert lassen.</para>
+
+<note
+><para
+>Die Verfügbarkeit von geglätteten Schriften und Symbolen erfordert die entsprechende Unterstützung vom Anzeigeserver als auch in der &Qt;-Bibliothek. Weiterhin müssen geeignete Schriften installiert sein und vom Anzeigeserver benutzt werden. Treten dennoch Probleme auf, wenden Sie sich an die passende &kde;-Mailingliste.</para
+></note>
+
+</sect2>
+
+<sect2 id="fonts-dpi">
+<title
+>DPI für Schriften</title>
+
+<para
+>Mit <guilabel
+>DPI für Schriften erzwingen</guilabel
+> können Sie eine andere Bildschirmauflösung als die Standardeinstellung Ihres Systems auswählen. Die aktuell verwendete Auflösung des X-Servers erfahren Sie durch Eingabe von <userinput
+>xdpyinfo | grep resolution</userinput
+> in einer Konsole. Eine geänderte Bildschirmauflösung kann nur von neu gestarteten Anwendungen benutzt werden.</para>
+</sect2>
+
+</sect1>
+
+</article>

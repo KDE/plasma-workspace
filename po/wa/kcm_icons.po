@@ -1,0 +1,395 @@
+# translation of kcmicons.po to Walloon
+# Ratournaedje e walon des messaedjes di KDE.
+#
+# Lorint Hendschel <Laurent.Hendschel@skynet.be>, 1998-2002.
+# Pablo Saratxaga <pablo@walon.org>, 2003, 2004, 2007.
+# Jean Cayron <jean.cayron@gmail.com>, 2007, 2008, 2009, 2011.
+# Jean Cayron <jean.cayron@base.be>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmicons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"PO-Revision-Date: 2011-07-17 15:38+0200\n"
+"Last-Translator: Jean Cayron <jean.cayron@base.be>\n"
+"Language-Team: Walloon <linux@walon.org>\n"
+"Language: wa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: iconsizecategorymodel.cpp:14
+#, kde-format
+msgid "Toolbar"
+msgstr "Bår ås usteyes"
+
+#: iconsizecategorymodel.cpp:15
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Mwaisse bår"
+
+#: iconsizecategorymodel.cpp:16
+#, kde-format
+msgid "Small Icons"
+msgstr "Pititès imådjetes"
+
+#: iconsizecategorymodel.cpp:17
+#, kde-format
+msgid "Panel"
+msgstr "Sicriftôr"
+
+#: iconsizecategorymodel.cpp:18
+#, kde-format
+msgid "Dialogs"
+msgstr "Purneas di dvize"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, fuzzy, kde-format
+#| msgid "Main Toolbar"
+msgid "Main toolbar icons size"
+msgstr "Mwaisse bår"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, fuzzy, kde-format
+#| msgid "Small Icons"
+msgid "Small icons size"
+msgstr "Pititès imådjetes"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr ""
+
+#: main.cpp:182
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: main.cpp:193
+#, fuzzy, kde-format
+#| msgid "Unable to find the icon theme archive %1."
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Dji n' a nén savou trover l' årtchive di tinme d' imådjetes %1 ."
+
+#: main.cpp:207
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "Li fitchî n' est nén ene årtchive di tinme d' imådjetes valide."
+
+#: main.cpp:212
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr ""
+"Åk n' a nén stî tot astalant. Mins nerén, li plupårt des tinmes di "
+"l' årtchive ont stî astalés"
+
+#: main.cpp:216
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: main.cpp:260
+#, fuzzy, kde-format
+#| msgid "Installing icon themes"
+msgid "Installing icon themes…"
+msgstr "Astalaedje des tinmes d' imådjetes"
+
+#: main.cpp:270
+#, fuzzy, kde-format
+#| msgid "Installing icon themes"
+msgid "Installing %1 theme…"
+msgstr "Astalaedje des tinmes d' imådjetes"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr ""
+
+#: package/contents/ui/main.qml:147
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Remove Icon Theme"
+msgstr "Oister tinme"
+
+#: package/contents/ui/main.qml:154
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Icon Theme"
+msgstr "Oister tinme"
+
+#: package/contents/ui/main.qml:228
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr ""
+
+#: package/contents/ui/main.qml:246
+#, fuzzy, kde-format
+#| msgid "Install Theme File..."
+msgid "Install from File…"
+msgstr "Astaler fitchî di tinme..."
+
+#: package/contents/ui/main.qml:251
+#, fuzzy, kde-format
+#| msgid "Get New Themes..."
+msgid "Get New Icons…"
+msgstr "Aveur des noveas tinmes..."
+
+#: package/contents/ui/main.qml:279
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Open Theme"
+msgstr "Oister tinme"
+
+#: package/contents/ui/main.qml:281
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Lorint Hendschel,Pablo Saratxaga,Djan Cayron"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "laurent.hendschel@skynet.be,pablo@walon.org,jean.cayron@gmail.com"
+
+#~ msgid "Icons"
+#~ msgstr "Imådjetes"
+
+#~ msgid "Icons Control Panel Module"
+#~ msgstr "Module d' imådjetes di l' Aisse di manaedjmint"
+
+#~ msgid "(c) 2000-2003 Geert Jansen"
+#~ msgstr "© 2000-2003 Geert Jansen"
+
+#~ msgid "Geert Jansen"
+#~ msgstr "Geert Jansen"
+
+#~ msgid "Antonio Larrosa Jimenez"
+#~ msgstr "Antonio Larrosa Jimenez"
+
+#~ msgid "Torsten Rahn"
+#~ msgstr "Torsten Rahn"
+
+#~ msgid "Desktop"
+#~ msgstr "Sicribanne"
+
+#~ msgid "Use of Icon"
+#~ msgstr "Eployaedje di l' imådjete"
+
+#~ msgctxt "@label The icon rendered by default"
+#~ msgid "Default"
+#~ msgstr "Prémetou"
+
+#~ msgctxt "@label The icon rendered as active"
+#~ msgid "Active"
+#~ msgstr "En alaedje"
+
+#~ msgctxt "@label The icon rendered as disabled"
+#~ msgid "Disabled"
+#~ msgstr "Essocté"
+
+#~ msgid "Size:"
+#~ msgstr "Grandeu:"
+
+#~ msgid "Set Effect..."
+#~ msgstr "Defini efet..."
+
+#~ msgid "All Icons"
+#~ msgstr "Totes les imådjetes"
+
+#~ msgid "Setup Default Icon Effect"
+#~ msgstr "Defini l' efet del prémetowe imådjete"
+
+#~ msgid "Setup Active Icon Effect"
+#~ msgstr "Defini l' efet di l' imådjete en alaedje"
+
+#~ msgid "Setup Disabled Icon Effect"
+#~ msgstr "Defini l' efet di l' essoctêye imådjete"
+
+#~ msgid "&Effect:"
+#~ msgstr "&Efet:"
+
+#~ msgid "No Effect"
+#~ msgstr "Nol efet"
+
+#~ msgid "To Gray"
+#~ msgstr "Viè grijhe coleur"
+
+#~ msgid "Colorize"
+#~ msgstr "Colorijhî"
+
+#~ msgid "Gamma"
+#~ msgstr "Gama"
+
+#~ msgid "Desaturate"
+#~ msgstr "Dissaturer"
+
+#~ msgid "To Monochrome"
+#~ msgstr "Viè ene seule coleur"
+
+#~ msgid "&Semi-transparent"
+#~ msgstr "Transparint a &mitan"
+
+#~ msgid "Preview"
+#~ msgstr "Vey divant"
+
+#~ msgid "Effect Parameters"
+#~ msgstr "Parametes des efets"
+
+#~ msgid "&Amount:"
+#~ msgstr "C&wantité:"
+
+#~ msgid "Co&lor:"
+#~ msgstr "Co&leur:"
+
+#~ msgid "&Second color:"
+#~ msgstr "&Deujhinme coleur:"
+
+#~ msgid "Name"
+#~ msgstr "No"
+
+#~ msgid "Description"
+#~ msgstr "Discrijhaedje"
+
+#~ msgid "Install a theme archive file you already have locally"
+#~ msgstr "Astaler on fitchî d' årtchive di tinme ki vs avoz dedja locålmint"
+
+#~ msgid ""
+#~ "If you already have a theme archive locally, this button will unpack it "
+#~ "and make it available for KDE applications"
+#~ msgstr ""
+#~ "Si vs avoz ddja locålmint ene årtchive di tinme di xhinêyes, ci boton l' "
+#~ "disrôlrè eyet l' rindrè disponibe po les programes di KDE"
+
+#~ msgid "Get new themes from the Internet"
+#~ msgstr "Novea tinmes a pårti del daegntoele"
+
+#~ msgid ""
+#~ "You need to be connected to the Internet to use this action. A dialog "
+#~ "will display a list of themes from the http://www.kde.org website. "
+#~ "Clicking the Install button associated with a theme will install this "
+#~ "theme locally."
+#~ msgstr ""
+#~ "Vos dovz esse raloyî al daegntoele po fé cist accion. Ene divize håyenrè "
+#~ "ene djivêye di tinmes del waibe http://www.kde.org. Vos pôroz astaler "
+#~ "locålmint c' tinme so vosse copiutrece e clitchant sol boton Astaler k' "
+#~ "est elaxhî avou l' tinme ki vs inmez."
+
+#~ msgid "Remove the selected theme from your disk"
+#~ msgstr "Oister l' tinme tchoezi di vosse plake"
+
+#~ msgid "This will remove the selected theme from your disk."
+#~ msgstr "Çouci oistêyrè l' tinme tchoezi di vosse plake."
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "Bodjîz et s' saetchîz ou tapez li hårdêye d' on tinme"
+
+#~ msgid ""
+#~ "Unable to download the icon theme archive;\n"
+#~ "please check that address %1 is correct."
+#~ msgstr ""
+#~ "Dji n' a nén savou aberweter l' årtchive di tinme d' imådjetes;\n"
+#~ "Verifyîz ki l' adresse %1 est bén coreke s' i vs plait."
+
+#~ msgid "<qt>Installing <strong>%1</strong> theme</qt>"
+#~ msgstr "<qt>Astalant l' tinme <strong>%1</strong></qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <strong>%1</strong> icon theme?"
+#~ "<br /><br />This will delete the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>Estoz vs seur di voleur oister li tinme d' imådjetes <strong>%1</"
+#~ "strong>?<br /><br />Çoula disfaçrè tos les fitchîs k' on stî astalés på "
+#~ "tinme.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Racertinaedje"
+
+#~ msgid "&Theme"
+#~ msgstr "&Tinme"
+
+#~ msgid "Ad&vanced"
+#~ msgstr "&Sipepieus"
+
+#, fuzzy
+#~| msgid ""
+#~| "<h1>Icons</h1>This module allows you to choose the icons for your "
+#~| "desktop.<p>To choose an icon theme, click on its name and apply your "
+#~| "choice by pressing the \"Apply\" button below. If you do not want to "
+#~| "apply your choice you can press the \"Reset\" button to discard your "
+#~| "changes.</p><p>By pressing the \"Install New Theme\" button you can "
+#~| "install your new icon theme by writing its location in the box or "
+#~| "browsing to the location. Press the \"OK\" button to finish the "
+#~| "installation.</p><p>The \"Remove Theme\" button will only be activated "
+#~| "if you select a theme that you installed using this module. You are not "
+#~| "able to remove globally installed themes here.</p><p>You can also "
+#~| "specify effects that should be applied to the icons.</p>"
+#~ msgid ""
+#~ "<h1>Icons</h1>This module allows you to choose the icons for your desktop."
+#~ "<p>To choose an icon theme, click on its name and apply your choice by "
+#~ "pressing the \"Apply\" button below. If you do not want to apply your "
+#~ "choice you can press the \"Reset\" button to discard your changes.</"
+#~ "p><p>By pressing the \"Install Theme File...\" button you can install "
+#~ "your new icon theme by writing its location in the box or browsing to the "
+#~ "location. Press the \"OK\" button to finish the installation.</p><p>The "
+#~ "\"Remove Theme\" button will only be activated if you select a theme that "
+#~ "you installed using this module. You are not able to remove globally "
+#~ "installed themes here.</p><p>You can also specify effects that should be "
+#~ "applied to the icons.</p>"
+#~ msgstr ""
+#~ "<h1>Imådjetes</h1> Ci module chal vos permete di tchoezi les imådjetes po "
+#~ "vosse sicribanne. <p>Po tchoezi on tinme d' imådjetes, clitchîz so s' no "
+#~ "eyet metoz vosse tchuze en alaedje tot clitchant sol boton «Mete en "
+#~ "alaedje» chal pa dzo. Si vos n' voloz nén mete vosse tchuze en alaedje, "
+#~ "vos ploz clitchî so «Rimete come divant» po leyî toumer vos candjmints.</"
+#~ "p> <p>Tot clitchant sol boton «Astaler novea tinme» vos ploz astaler des "
+#~ "noveas tinmes d' imådjetes, soeye-t i e dnant l' eplaeçmint la k' i sont "
+#~ "dins l' boesse di tecse, soeye-t i tot foytant. Clitchîz sol boton «I va» "
+#~ "po fini l' astalaedje.</p> <p>Li boton «Oister tinme» èn serè possibe ki "
+#~ "si vos avoz astalé on tinme avou ci module chal. Vos n' poloz nén oister "
+#~ "chal des tinmes k' ont stî astalés globålmint sol sistinme.</p> <p>Vos "
+#~ "ploz eto specifyî des efets ki dvèt esse aplikés åzès imådjetes.</p>"
+
+#~ msgid "Animate icons"
+#~ msgstr "Imådjetes animêyes"
+
+#~ msgid "Select the icon theme you want to use:"
+#~ msgstr "Tchoezixhoz li tinme d' imådjetes ki vos vloz eployî:"
+
+#~ msgid "Double-sized pixels"
+#~ msgstr "Picsels dobe grandeu"
+
+#~ msgid "Desktop/File Manager"
+#~ msgstr "Sicribanne/Manaedjeu di fitchîs"

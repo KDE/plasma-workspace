@@ -1,0 +1,104 @@
+# Lithuanian translations for trunk-kf package.
+# Copyright (C) 2014 This_file_is_part_of_KDE
+# This file is distributed under the same license as the trunk-kf package.
+# Automatically generated, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: trunk-kf 5\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-22 00:46+0000\n"
+"PO-Revision-Date: 2019-07-31 12:41+0300\n"
+"Last-Translator: Moo\n"
+"Language-Team: lt\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
+"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#: shellpackage.cpp:26 shellpackage.cpp:27
+#, kde-format
+msgid "Applets furniture"
+msgstr "Įskiepių įrengimas"
+
+#: shellpackage.cpp:28
+#, kde-format
+msgid "Explorer UI for adding widgets"
+msgstr "Valdiklių pridėjimui skirta naudotojo sąsaja"
+
+#: shellpackage.cpp:29
+#, kde-format
+msgid "User interface for the views that will show containments"
+msgstr "Naudotojo sąsaja, skirta rodiniams, kurie parodys suvaržymus"
+
+#: shellpackage.cpp:37
+#, kde-format
+msgid "Default layout file"
+msgstr "Numatytojo išdėstymo failas"
+
+#: shellpackage.cpp:38
+#, kde-format
+msgid "Default plugins for containments, containmentActions, etc."
+msgstr "Numatytieji priedai, skirti suvaržymams, suvaržymų veiksmams ir t.t."
+
+#: shellpackage.cpp:43
+#, kde-format
+msgid "Error message shown when an applet fails to load"
+msgstr "Klaidos pranešimas, rodomas kai nepavyko įkelti įskiepio"
+
+#: shellpackage.cpp:44
+#, kde-format
+msgid "QML component that shows an applet in a popup"
+msgstr "QML komponentas, rodantis įskiepį iškylančiajame lange"
+
+#: shellpackage.cpp:48
+#, kde-format
+msgid ""
+"Compact representation of an applet when collapsed in a popup, for instance "
+"as an icon. Applets can override this component."
+msgstr ""
+"Kompaktiškas programėlės atvaizdavimas, ją suskleidus į iškylantįjį langą, "
+"pvz., kaip piktogramą. Programėlės gali nustelbti šį komponentą."
+
+#: shellpackage.cpp:53
+#, kde-format
+msgid "QML component for the configuration dialog for applets"
+msgstr "QML komponentas, skirtas įskiepių konfigūracijos dialogui"
+
+#: shellpackage.cpp:56
+#, kde-format
+msgid "QML component for the configuration dialog for containments"
+msgstr "QML komponentas, skirtas suvaržymų konfigūracijos dialogui"
+
+#: shellpackage.cpp:57
+#, kde-format
+msgid "Panel configuration UI"
+msgstr "Skydelio konfigūracijos naudotojo sąsaja"
+
+#: shellpackage.cpp:60
+#, kde-format
+msgid "QML component for choosing an alternate applet"
+msgstr "QML komponentas, skirtas alternatyvaus įskiepio pasirinkimui"
+
+#: shellpackage.cpp:63
+#, fuzzy, kde-format
+#| msgid "QML component for the configuration dialog for containments"
+msgid "QML component for the configuration dialog of containments"
+msgstr "QML komponentas, skirtas suvaržymų konfigūracijos dialogui"
+
+#: shellpackage.cpp:66
+#, kde-format
+msgid "Widgets explorer UI"
+msgstr "Valdiklių tyrinėtojo naudotojo sąsaja"
+
+#: shellpackage.cpp:70
+#, kde-format
+msgid ""
+"A UI for writing, loading and running desktop scripts in the current live "
+"session"
+msgstr ""
+"Naudotojo sąsaja, skirta darbalaukio scenarijų rašymui, įkėlimui ir "
+"paleidimui esamame demonstraciniame seanse"

@@ -1,0 +1,199 @@
+# Albanian translation for kdebase-workspace
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the kdebase-workspace package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kdebase-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-01 00:45+0000\n"
+"PO-Revision-Date: 2010-02-05 14:54+0000\n"
+"Last-Translator: Vilson Gjeci <vilsongjeci@gmail.com>\n"
+"Language-Team: Albanian <sq@li.org>\n"
+"Language: sq\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2011-05-06 01:13+0000\n"
+"X-Generator: Launchpad (build 12959)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: sessionrunner.cpp:28 sessionrunner.cpp:64
+#, kde-format
+msgctxt "log out command"
+msgid "logout"
+msgstr "dalje"
+
+#: sessionrunner.cpp:28
+#, kde-format
+msgid "Logs out, exiting the current desktop session"
+msgstr "Logs out, exiting the current desktop session"
+
+#: sessionrunner.cpp:29 sessionrunner.cpp:81
+#, fuzzy, kde-format
+#| msgctxt "shutdown computer command"
+#| msgid "shutdown"
+msgctxt "shut down computer command"
+msgid "shut down"
+msgstr "Fike"
+
+#: sessionrunner.cpp:29
+#, kde-format
+msgid "Turns off the computer"
+msgstr "Turns off the computer"
+
+#: sessionrunner.cpp:33 sessionrunner.cpp:90
+#, kde-format
+msgctxt "lock screen command"
+msgid "lock"
+msgstr "blloko"
+
+#: sessionrunner.cpp:33
+#, kde-format
+msgid "Locks the current sessions and starts the screen saver"
+msgstr "Locks the current sessions and starts the screen saver"
+
+#: sessionrunner.cpp:36 sessionrunner.cpp:72
+#, kde-format
+msgctxt "restart computer command"
+msgid "restart"
+msgstr "Rinis"
+
+#: sessionrunner.cpp:36
+#, kde-format
+msgid "Reboots the computer"
+msgstr "Reboots the computer"
+
+#: sessionrunner.cpp:37 sessionrunner.cpp:73
+#, kde-format
+msgctxt "restart computer command"
+msgid "reboot"
+msgstr "Rindiz"
+
+#: sessionrunner.cpp:40
+#, kde-format
+msgctxt "switch user command"
+msgid "switch"
+msgstr "ndërro"
+
+#: sessionrunner.cpp:41
+#, kde-format
+msgctxt "switch user command"
+msgid "switch :q:"
+msgstr "switch :q:"
+
+#: sessionrunner.cpp:42
+#, kde-format
+msgid ""
+"Switches to the active session for the user :q:, or lists all active "
+"sessions if :q: is not provided"
+msgstr ""
+"Switches to the active session for the user :q:, or lists all active "
+"sessions if :q: is not provided"
+
+#: sessionrunner.cpp:45 sessionrunner.cpp:130
+#, kde-format
+msgid "switch user"
+msgstr "ndërro përdoruesin"
+
+#: sessionrunner.cpp:45
+#, kde-format
+msgid "Starts a new session as a different user"
+msgstr "Starts a new session as a different user"
+
+#: sessionrunner.cpp:46 sessionrunner.cpp:130
+#, kde-format
+msgid "new session"
+msgstr "seksion i ri"
+
+#: sessionrunner.cpp:50
+#, kde-format
+msgid "Lists all sessions"
+msgstr "Listo të gjitha seksionet"
+
+#: sessionrunner.cpp:64
+#, kde-format
+msgid "log out"
+msgstr "dalje"
+
+#: sessionrunner.cpp:66
+#, kde-format
+msgctxt "log out command"
+msgid "Logout"
+msgstr "Dalja"
+
+#: sessionrunner.cpp:75
+#, kde-format
+msgid "Restart the computer"
+msgstr "Rinis kompjuterin"
+
+#: sessionrunner.cpp:82
+#, fuzzy, kde-format
+#| msgctxt "shutdown computer command"
+#| msgid "shutdown"
+msgctxt "shut down computer command"
+msgid "shutdown"
+msgstr "Fike"
+
+#: sessionrunner.cpp:84
+#, fuzzy, kde-format
+#| msgid "Shutdown the computer"
+msgid "Shut down the computer"
+msgstr "Fik kompjuterin"
+
+#: sessionrunner.cpp:93
+#, kde-format
+msgid "Lock the screen"
+msgstr "Blloko ekranin"
+
+#: sessionrunner.cpp:115
+#, fuzzy, kde-format
+#| msgid "new session"
+msgctxt "User sessions"
+msgid "sessions"
+msgstr "seksion i ri"
+
+#: sessionrunner.cpp:136
+#, fuzzy, kde-format
+#| msgid "switch user"
+msgid "Switch User"
+msgstr "ndërro përdoruesin"
+
+#: sessionrunner.cpp:211
+#, kde-format
+msgid "Warning - New Session"
+msgstr "Paralajmërim - Seksion i Ri"
+
+#: sessionrunner.cpp:212
+#, fuzzy, kde-format
+#| msgid ""
+#| "<p>You have chosen to open another desktop session.<br />The current "
+#| "session will be hidden and a new login screen will be displayed.<br />An "
+#| "F-key is assigned to each session; F%1 is usually assigned to the first "
+#| "session, F%2 to the second session and so on. You can switch between "
+#| "sessions by pressing Ctrl, Alt and the appropriate F-key at the same "
+#| "time. Additionally, the KDE Panel and Desktop menus have actions for "
+#| "switching between sessions.</p>"
+msgid ""
+"<p>You have chosen to open another desktop session.<br />The current session "
+"will be hidden and a new login screen will be displayed.<br />An F-key is "
+"assigned to each session; F%1 is usually assigned to the first session, F%2 "
+"to the second session and so on. You can switch between sessions by pressing "
+"Ctrl, Alt and the appropriate F-key at the same time. Additionally, the "
+"Plasma Panel and Desktop menus have actions for switching between sessions.</"
+"p>"
+msgstr ""
+"<p>Keni zgjedhur të hapni një seksion tjetër desktopi.<br />Seksioni i "
+"tanishëm do të fshihet dhe do të shfaqet një ekran hyrës.<br />Një çelës F "
+"është caktuar për çdo seksion; F%1 caktohet zakonisht për seksionin e parë, F"
+"%2 për seksionin e dytë e kështu me radhë. Ju mund të ndërroni seksionet "
+"duke shtypur Ctrl, Alt dhe çelësin e duhur F në të njëjtën kohë. Veç kësaj, "
+"Paneli KDE dhe menutë e Desktopit kanë veprimë për të kaluar midis "
+"seksioneve.</p>"
+
+#~ msgid "New Session"
+#~ msgstr "Seksion i Ri"
+
+#~ msgid "&Start New Session"
+#~ msgstr "&Nis Seancë të Re"

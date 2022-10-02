@@ -1,0 +1,77 @@
+# Indonesian translations for plasma_containmentactions_contextmenu package.
+# Copyright (C) 2010 This_file_is_part_of_KDE
+# This file is distributed under the same license as the plasma_containmentactions_contextmenu package.
+# Andhika Padmawan <andhika.padmawan@gmail.com>, 2010-2014.
+# Wantoyo <wantoyek@gmail.com>, 2017, 2018, 2019, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_containmentactions_contextmenu\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-11 00:47+0000\n"
+"PO-Revision-Date: 2022-03-13 22:09+0700\n"
+"Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
+"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: menu.cpp:99
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Show KRunner"
+msgstr "Tampilkan KRunner"
+
+#: menu.cpp:104
+#, kde-format
+msgid "Open Terminal"
+msgstr ""
+
+#: menu.cpp:108
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Lock Screen"
+msgstr "Layar Kunci"
+
+#: menu.cpp:117
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Leave…"
+msgstr "Tinggalkan..."
+
+#: menu.cpp:126
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Configure Display Settings…"
+msgstr "Konfigurasi Pengaturan Display…"
+
+#: menu.cpp:291
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Configure Contextual Menu Plugin"
+msgstr "Konfigurasi Plugin Menu Kontekstual"
+
+#: menu.cpp:301
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "[Other Actions]"
+msgstr "[Aksi Lainnya]"
+
+#: menu.cpp:304
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Wallpaper Actions"
+msgstr "Aksi Wallpaper"
+
+#: menu.cpp:308
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "[Separator]"
+msgstr "[Pemisah]"
+
+#~ msgctxt "plasma_containmentactions_contextmenu"
+#~ msgid "Run Command..."
+#~ msgstr "Jalankan Perintah..."

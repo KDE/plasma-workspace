@@ -1,0 +1,186 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % German "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="icons" lang="&language;">
+<articleinfo>
+<title
+>Symbole</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<author
+>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+<othercredit role="translator"
+><firstname
+>Jürgen</firstname
+><surname
+>Nagel</surname
+><affiliation
+><address
+><email
+>JuergenNagel@web.de</email
+></address
+></affiliation
+><contrib
+>Deutsche Übersetzung</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-09</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Kontrollzentrum</keyword>
+<keyword
+>Symbol</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>&plasma; enthält vollständige Symbolsätze in verschiedenen Größen. Diese Symbole werden überall in von &plasma; verwendet: auf der Arbeitsfläche, in der Kontrollleiste, in der Dateiverwaltung &dolphin;, in den Werkzeugleisten aller &plasma;-Anwendungen &etc; Im Einrichtungsmodul Symbole können die Eigenschaften dieser Symbole und ihre Nutzung in &plasma; flexibel angepasst werden.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Bildschirmfoto der Symbol-Design-Verwaltung</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>&plasma;-Symbole einrichten</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>In diesem Modul können Sie:</para>
+<itemizedlist>
+<listitem
+><para
+>Symbol-Designs auswählen und installieren</para
+></listitem>
+<listitem
+><para
+>unterschiedliche Symbolgrößen wählen</para
+></listitem>
+<listitem
+><para
+>Symbol-Design entfernen</para
+></listitem>
+</itemizedlist>
+
+<important
+><para
+>Beachten Sie, dass einige Einstellungen abhängig vom gewählten Symbol-Design sind. &plasma; hat mehrere Standard-Symbol-Designs: Breeze, Breeze-Dunkel und Oxygen.</para
+></important>
+
+<para
+>Oben wird eine Vorschau von Symbolen des aktuell benutzten Designs angezeigt. Die meisten Standardinstallationen enthalten nur einige Symbol-Designs, darunter das Standard-Design von &plasma; Breeze. Weitere Designs können aus dem Internet von <ulink url="https://store.kde.org/"
+>https://store.kde.org/</ulink
+> heruntergeladen oder aus einer lokalen Datei installiert werden.</para>
+
+<para
+>Halten Sie den Mauszeiger auf ein Design, wird eine animierte Vorschau als Zufallsauswahl, übliche MIME-Typen und Symbole für gemeinsame Ordner angezeigt. </para>
+
+<para
+>Möchten Sie ein Design entfernen, klicken Sie auf das Symbol <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+> rechts auf dem Designsymbol. Um diese Aktion rückgängig zu machen, benutzen Sie das Symbol <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-undo.png" format="PNG"/></imageobject
+></inlinemediaobject
+>. Klicken Sie auf <guibutton
+>Anwenden</guibutton
+>, dann werden die ausgewählten Designs tatsächlich gelöscht. So können Sie das Löschen einzelner Designs oder aller Designs zurücknehmen. </para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Symbolgröße einstellen</guilabel
+></term>
+<listitem>
+<para
+>Wählen Sie eine der Komponenten des Designs und passen Sie mit dem Schieberegler die zugehörige Größe an. </para>
+<para>
+<screenshot>
+<screeninfo
+>Symbolgröße einstellen</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="use-of-icons.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Symbolgröße einstellen</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Neue Symbole holen ...</guilabel
+></term>
+<listitem>
+<para
+>Sie müssen mit dem Internet verbunden sein, um diese Funktion benutzen zu können. Klicken Sie auf diesen Knopf, um einen Dialog zur Auswahl eines neuen Symboldesigns zu öffnen. Um ein Symboldesign zu installieren, klicken Sie auf den Knopf <guibutton
+>Installieren</guibutton
+>. Nachdem Sie den Installationsdialog mit <guibutton
+>Schließen</guibutton
+> beendet haben, können Sie das neue Symboldesign sofort benutzen. </para>
+<para>
+<screenshot>
+<screeninfo
+>Neue Symbole holen</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="get-new-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Neue Symbole holen</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Aus Datei installieren ...</guilabel
+></term>
+<listitem>
+<para
+>Wenn Sie bereits neue Designs aus dem Internet heruntergeladen haben, können Sie mit diesem Knopf bereits heruntergeladene Designs öffnen. Dazu wird der Dateidialog angezeigt, in dem Sie die Adresse des Designarchivs auf Ihrem System eingeben müssen.</para>
+
+<para
+>Klicken Sie in diesem Dialog auf <guibutton
+>Öffnen</guibutton
+>, damit wird das ausgewählte Design installiert und kann in der Liste der Designs ausgewählt werden. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</article>

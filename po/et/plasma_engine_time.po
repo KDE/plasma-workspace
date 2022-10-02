@@ -1,0 +1,66 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Marek Laane <qiilaq69@gmail.com>, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"PO-Revision-Date: 2016-01-11 17:06+0200\n"
+"Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
+"Language-Team: Estonian <kde-i18n-doc@kde.org>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: timesource.cpp:46
+msgid "Local"
+msgstr "Kohalik"
+
+#: timesource.cpp:61
+msgid "Timezone"
+msgstr "Ajavöönd"
+
+#: timesource.cpp:66 timesource.cpp:69 timesource.cpp:73
+msgid "Timezone City"
+msgstr "Ajavööndi linn"
+
+#: timesource.cpp:68 timesource.cpp:71
+msgid "Timezone Continent"
+msgstr "Ajavööndi manner"
+
+#: timesource.cpp:72
+msgid "Timezone Country"
+msgstr "Ajavööndi riik"
+
+#: timesource.cpp:97
+msgid "Offset"
+msgstr "Erinevus"
+
+#: timesource.cpp:100
+msgid "Timezone Abbreviation"
+msgstr "Ajavööndi lühend"
+
+#: timesource.cpp:131 timesource.cpp:150 timesource.cpp:171
+msgid "DateTime"
+msgstr "Kuupäev ja kellaaeg"
+
+#: timesource.cpp:146
+msgid "Latitude"
+msgstr "Laiuskraad"
+
+#: timesource.cpp:147
+msgid "Longitude"
+msgstr "Pikkuskraad"
+
+#: timesource.cpp:148
+msgid "Solar"
+msgstr "Päikesekalender"
+
+#: timesource.cpp:149
+msgid "Moon"
+msgstr "Kuukalender"

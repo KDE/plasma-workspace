@@ -1,0 +1,685 @@
+# translation of kcminput.po to Latvian
+# Copyright (C) 2007, 2008, 2010 Free Software Foundation, Inc.
+#
+# Aleksejs Zosims <locale@aleksejs.id.lv>, 2007.
+# Maris Nartiss <maris.kde@gmail.com>, 2007, 2010.
+# Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2007, 2008.
+# Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminput\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:50+0000\n"
+"PO-Revision-Date: 2011-07-08 13:24+0300\n"
+"Last-Translator: Rūdofls Mazurs <rudolfs.mazurs@gmail.com>\n"
+"Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.1\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current cursor theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr ""
+
+#: kcmcursortheme.cpp:302
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr "Jāpārstartē KDE, lai stātos spēkā kursora lieluma izmaiņas."
+
+#: kcmcursortheme.cpp:376
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: kcmcursortheme.cpp:387
+#, fuzzy, kde-format
+#| msgid "Unable to find the cursor theme archive %1."
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Nespēju atrast kursora tēmas arhīvu %1."
+
+#: kcmcursortheme.cpp:418
+#, fuzzy, kde-format
+#| msgid "The file %1 does not appear to be a valid cursor theme archive."
+msgid "The file is not a valid icon theme archive."
+msgstr "Neizskatās, ka fails %1 būtu derīgs kursora tēmu arhīvs."
+
+#: kcmcursortheme.cpp:425
+#, kde-format
+msgid "Failed to create 'icons' folder."
+msgstr ""
+
+#: kcmcursortheme.cpp:434
+#, kde-format
+msgid ""
+"A theme named %1 already exists in your icon theme folder. Do you want "
+"replace it with this one?"
+msgstr ""
+"Tēma ar nosaukumu \"%1\" jau atrodas jūsu tēmu mapē. Vai vēlaties to "
+"aizvietot ar šo te?"
+
+#: kcmcursortheme.cpp:438
+#, kde-format
+msgid "Overwrite Theme?"
+msgstr "Pārrakstīt tēmu?"
+
+#: kcmcursortheme.cpp:462
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: package/contents/ui/Delegate.qml:54
+#, kde-format
+msgid "Remove Theme"
+msgstr "Izdzēst tēmu"
+
+#: package/contents/ui/Delegate.qml:61
+#, fuzzy, kde-format
+#| msgid "Cursor Theme"
+msgid "Restore Cursor Theme"
+msgstr "Kursora tēma"
+
+#: package/contents/ui/main.qml:20
+#, kde-format
+msgid "This module lets you choose the mouse cursor theme."
+msgstr ""
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Size:"
+msgstr ""
+
+#: package/contents/ui/main.qml:134
+#, fuzzy, kde-format
+#| msgid "Install From File..."
+msgid "&Install from File…"
+msgstr "Instalēt no faila..."
+
+#: package/contents/ui/main.qml:140
+#, fuzzy, kde-format
+#| msgid "Get New Theme..."
+msgid "&Get New Cursors…"
+msgstr "Iegūt jaunu tēmu..."
+
+#: package/contents/ui/main.qml:157
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Open Theme"
+msgstr "Izdzēst tēmu"
+
+#: package/contents/ui/main.qml:159
+#, kde-format
+msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:41
+#, kde-format
+msgid "The requested size '%1' is not available, using %2 instead."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:62
+#, kde-format
+msgid ""
+"This tool allows you to set the mouse cursor theme for the current Plasma "
+"session, without accidentally setting it to one that is either not "
+"available, or which is already set."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:66
+#, kde-format
+msgid ""
+"The name of the cursor theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:67
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:68
+#, kde-format
+msgid "Use a specific size, rather than the theme default size"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:89
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:100
+#, kde-format
+msgid ""
+"Successfully applied the mouse cursor theme %1 to your current Plasma session"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:102
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for your newly applied mouse cursor "
+"theme to display correctly."
+msgstr "Jāpārstartē KDE, lai stātos spēkā kursora lieluma izmaiņas."
+
+#: plasma-apply-cursortheme.cpp:112
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:120
+#, kde-format
+msgid "You have the following mouse cursor themes on your system:"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:125
+#, kde-format
+msgid "(Current theme for this Plasma session)"
+msgstr ""
+
+#: xcursor/xcursortheme.cpp:60
+#, kde-format
+msgctxt ""
+"@info The argument is the list of available sizes (in pixel). Example: "
+"'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+msgid "(Available sizes: %1)"
+msgstr ""
+
+#~ msgid "Name"
+#~ msgstr "Nosaukums"
+
+#~ msgid "Description"
+#~ msgstr "Apraksts"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Aleksejs Zosims"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "locale@aleksejs.id.lv"
+
+#, fuzzy
+#~| msgid "Cursor Theme"
+#~ msgid "Cursors"
+#~ msgstr "Kursora tēma"
+
+#~ msgid "(c) 2003-2007 Fredrik Höglund"
+#~ msgstr "(c) 2003-2007 Fredrik Höglund"
+
+#~ msgid "Fredrik Höglund"
+#~ msgstr "Fredrik Höglund"
+
+#~ msgid ""
+#~ "<qt>You cannot delete the theme you are currently using.<br />You have to "
+#~ "switch to another theme first.</qt>"
+#~ msgstr ""
+#~ "<qt>Jūs nevarat izdzēst šobrīd lietojamo tēmu.<br />Vispirms jums "
+#~ "jāpārslēdzas uz citu tēmu.</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <i>%1</i> cursor theme?<br />This "
+#~ "will delete all the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>Vai tiešām vēlaties izmest <i>%1</i> kursoru tēmu?<br />Šī darbība "
+#~ "izdzēsīs arī visus failus, kas pieinstalēti no tēmas.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Apstiprinājums"
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "Kursora iestatījumi izmainīti"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "Ievelc vai ieraksti tēmas URL"
+
+#~ msgid ""
+#~ "Unable to download the cursor theme archive; please check that the "
+#~ "address %1 is correct."
+#~ msgstr ""
+#~ "Nespēju lejupielādēt kursora tēmas arhīvu, lūdzu, pārliecinieties, ka "
+#~ "adrese %1 ir pareiza."
+
+#~ msgid "Get new color schemes from the Internet"
+#~ msgstr "Iegūt jaunas krāsu saskaņas no interneta"
+
+#~ msgid ""
+#~ "Select the cursor theme you want to use (hover preview to test cursor):"
+#~ msgstr ""
+#~ "Izvēlieties, kuru kursora tēmu vēlaties lietot (lai izmēģinātu kursoru, "
+#~ "uzkavējieties uz priekšapskates):"
+
+#~ msgid "Select the cursor theme you want to use:"
+#~ msgstr "Izvēlieties, kuru kursora tēmu vēlaties lietot:"
+
+#~ msgid "Small black"
+#~ msgstr "Maza, melna"
+
+#~ msgid "Small black cursors"
+#~ msgstr "Mazi, melni kursori"
+
+#~ msgid "Large black"
+#~ msgstr "Liela, melna"
+
+#~ msgid "Large black cursors"
+#~ msgstr "Lieli, melni kursori"
+
+#~ msgid "Small white"
+#~ msgstr "Maza, balta"
+
+#~ msgid "Small white cursors"
+#~ msgstr "Mazi, balti kursori"
+
+#~ msgid "Large white"
+#~ msgstr "Liela, balta"
+
+#~ msgid "Large white cursors"
+#~ msgstr "Lieli, balti kursori"
+
+#~ msgid "Button Order"
+#~ msgstr "Pogu secība"
+
+#~ msgid "Righ&t handed"
+#~ msgstr "&Labrocis"
+
+#~ msgid "Le&ft handed"
+#~ msgstr "&Kreilis"
+
+#~ msgid ""
+#~ "Change the direction of scrolling for the mouse wheel or the 4th and 5th "
+#~ "mouse buttons."
+#~ msgstr ""
+#~ "Izmainīt peles ritentiņa ritināšanas virzienu vai arī samainīt vietām 4. "
+#~ "un 5. peles pogu."
+
+#~ msgid "Re&verse scroll direction"
+#~ msgstr "Ritināt pretējā &virzienā"
+
+#~ msgid "Icons"
+#~ msgstr "Ikonas"
+
+#~ msgid ""
+#~ "Dou&ble-click to open files and folders (select icons on first click)"
+#~ msgstr ""
+#~ "Du&bultklikšķis failu un mapju atvēršanai (ar pirmo klikšķi iezīmē ikonas)"
+
+#~ msgid "&Single-click to open files and folders"
+#~ msgstr "Vien&s klikšķis failu un mapju atvēršanai"
+
+#~ msgid "Cha&nge pointer shape over icons"
+#~ msgstr "Mai&nīt kursora bultiņas formu virs ikonām"
+
+#~ msgid "A&utomatically select icons"
+#~ msgstr "A&utomātiski izvēlēties ikonas"
+
+#~ msgctxt "label. delay (on milliseconds) to automatically select icons"
+#~ msgid "Delay"
+#~ msgstr "Aizture"
+
+#~ msgctxt "milliseconds. time to automatically select the items"
+#~ msgid " ms"
+#~ msgstr " ms"
+
+#~ msgid ""
+#~ "<h1>Mouse</h1> This module allows you to choose various options for the "
+#~ "way in which your pointing device works. Your pointing device may be a "
+#~ "mouse, trackball, or some other hardware that performs a similar function."
+#~ msgstr ""
+#~ "<h1>Pele</h1> Šis modulis ļauj jums izvēlēties dažādas opcijas veidam, "
+#~ "kādā strādā jūsu manipulatora ierīce. Jūsu manipulatora ierīce var būt "
+#~ "pele, kursorbumba, vai kāda cita aparatūra, kas izpilda šīs funkcijas."
+
+#~ msgid "&General"
+#~ msgstr "&Pamata"
+
+#~ msgid ""
+#~ "If you are left-handed, you may prefer to swap the functions of the left "
+#~ "and right buttons on your pointing device by choosing the 'left-handed' "
+#~ "option. If your pointing device has more than two buttons, only those "
+#~ "that function as the left and right buttons are affected. For example, if "
+#~ "you have a three-button mouse, the middle button is unaffected."
+#~ msgstr ""
+#~ "Ja jūs esat kreilis, jūs, iespējams, vēlaties apmainīt vietām kreisās un "
+#~ "labās pogas funkcijas jūsu manipulatora ierīcē, izvēloties \"Kreilis\" "
+#~ "opciju. Ja jūsu manipulatora ierīcei ir vairāk par divām pogām, tikai "
+#~ "labā un kreisā poga tiks ietekmēta. Piemēram, ja jums ir trīs pogu pele, "
+#~ "vidējā poga netiks ietekmēta."
+
+#~ msgid ""
+#~ "The default behavior in KDE is to select and activate icons with a single "
+#~ "click of the left button on your pointing device. This behavior is "
+#~ "consistent with what you would expect when you click links in most web "
+#~ "browsers. If you would prefer to select with a single click, and activate "
+#~ "with a double click, check this option."
+#~ msgstr ""
+#~ "KDE noklusētā izturēšanās ir iezīmēt un aktivēt ikonas ar vienu jūsu "
+#~ "manipulatora ierīces kreisās pogas klikšķi. Šī izturēšanās ir līdzvērtīga "
+#~ "tam, kad noklikšķiniet uz saites vairumā web pārlūku. Ja jūs vēlaties "
+#~ "iezīmēt ar vienu klikšķi, un aktivizēt ar dubultklikšķi, iezīmējiet šo "
+#~ "opciju."
+
+#~ msgid "Activates and opens a file or folder with a single click."
+#~ msgstr "Aktivizē un atver mapes un failus ar vienu klikšķi."
+
+#~ msgid ""
+#~ "If you check this option, pausing the mouse pointer over an icon on the "
+#~ "screen will automatically select that icon. This may be useful when "
+#~ "single clicks activate icons, and you want only to select the icon "
+#~ "without activating it."
+#~ msgstr ""
+#~ "Ja jūs iezīmēsiet šo opciju, peles kursora apturēšana ekrānā virs ikonas "
+#~ "automātiski iezīmēs ikonu. Tas var noderēt situācijā, kad aktivizēšana "
+#~ "notiek ar vienu klikšķi, bet jūs vēlaties tikai iezīmēt ikonas bez to "
+#~ "aktivizēšanas."
+
+#~ msgid ""
+#~ "If you have checked the option to automatically select icons, this slider "
+#~ "allows you to select how long the mouse pointer must be paused over the "
+#~ "icon before it is selected."
+#~ msgstr ""
+#~ "Ja iezīmēta šī opcija automātiski iezīmēt ikonas, tad šis slīdnis ļauj "
+#~ "jums izvēlēties, cik ilgi jātur peles bultiņa virs ikonas, līdz tā tiks "
+#~ "iezīmēta."
+
+#~ msgid "Advanced"
+#~ msgstr "Paplašināti"
+
+#~ msgid " x"
+#~ msgstr " x"
+
+#~ msgid "Pointer acceleration:"
+#~ msgstr "Kursora paātrinājums:"
+
+#~ msgid ""
+#~ "<p>This option allows you to change the relationship between the distance "
+#~ "that the mouse pointer moves on the screen and the relative movement of "
+#~ "the physical device itself (which may be a mouse, trackball, or some "
+#~ "other pointing device.)</p><p> A high value for the acceleration will "
+#~ "lead to large movements of the mouse pointer on the screen even when you "
+#~ "only make a small movement with the physical device. Selecting very high "
+#~ "values may result in the mouse pointer flying across the screen, making "
+#~ "it hard to control.</p>"
+#~ msgstr ""
+#~ "<p>Šī opcija atļauj jums mainīt attiecību starp attālumu, par kuru peles "
+#~ "bultiņa pārvietojas pa ekrānu, un relatīvo fiziskās ierīces kustību (kura "
+#~ "var būt pele, kursorbumba, vai kāda cita manipulatora ierīce).</p><p> "
+#~ "Augsta paātrinājuma vērtība izsauks straujas peles bultiņas kustības uz "
+#~ "ekrāna pat, ja jūs tikai nedaudz pakustināsiet fizisko ierīci. Ļoti "
+#~ "augstas vērtības izvēlēšanās var būt par iemeslu tam, ka peles bultiņa "
+#~ "\"lido\" pa ekrānu, padarot ļoti grūtu tās vadību.</p>"
+
+#~ msgid "Pointer threshold:"
+#~ msgstr "Kursora jutība:"
+
+#~ msgid ""
+#~ "<p>The threshold is the smallest distance that the mouse pointer must "
+#~ "move on the screen before acceleration has any effect. If the movement is "
+#~ "smaller than the threshold, the mouse pointer moves as if the "
+#~ "acceleration was set to 1X;</p><p> thus, when you make small movements "
+#~ "with the physical device, there is no acceleration at all, giving you a "
+#~ "greater degree of control over the mouse pointer. With larger movements "
+#~ "of the physical device, you can move the mouse pointer rapidly to "
+#~ "different areas on the screen.</p>"
+#~ msgstr ""
+#~ "<p>Jutība ir mazākais attālums, pa kādu jāpārvieto peles kurors pa "
+#~ "ekrānu, lai būtu efekts no paātrinājuma. Ja pārvietošana ir mazāka, par "
+#~ "jūtību, peles kursors pārvietosies tā, it kā paātrinājuma nebūtu.</"
+#~ "p><p>Tādēļ, kad jūs veicat sīkas kustības ar fizisko ierīci, paātrinājuma "
+#~ "nav vispār, sniedzot jums lielāku kontroles pakāpi pār kursoru. Ar "
+#~ "plašākām ierīces kustībām, jūs varat ātri pārvietot peles kursoru uz citu "
+#~ "ekrāna apgabalu.</p>"
+
+#~ msgid " msec"
+#~ msgstr " ms"
+
+#~ msgid "Double click interval:"
+#~ msgstr "Dubultklikšķa intervāls:"
+
+#~ msgid ""
+#~ "The double click interval is the maximal time (in milliseconds) between "
+#~ "two mouse clicks which turns them into a double click. If the second "
+#~ "click happens later than this time interval after the first click, they "
+#~ "are recognized as two separate clicks."
+#~ msgstr ""
+#~ "Dubultklikšķa intervāls ir maksimālais laiks (milisekundēs) starp diviem "
+#~ "peles klikšķiem, kurā tie pārtop dubultklikšķī. Ja otrs klikšķis ir "
+#~ "izdarīts vēlāk par šo laika intervālu pēc pirmā klikšķa, tos atpazīs kā "
+#~ "divus atsevišķus klikšķus."
+
+#~ msgid "Drag start time:"
+#~ msgstr "Pārvilkšanas sākšanās laiks:"
+
+#~ msgid ""
+#~ "If you click with the mouse (e.g. in a multi-line editor) and begin to "
+#~ "move the mouse within the drag start time, a drag operation will be "
+#~ "initiated."
+#~ msgstr ""
+#~ "Ja jūs noklikšķināt ar peli (piemēram, daudzrindu-redaktorā) un sākat to "
+#~ "pārvietot pārvilkšanas sākšanās laika ietvaros, tiks uzsākta pārvilkšanas "
+#~ "operācija."
+
+#~ msgid "Drag start distance:"
+#~ msgstr "Pārvilkšanas sākšanās attālums:"
+
+#~ msgid ""
+#~ "If you click with the mouse and begin to move the mouse at least the drag "
+#~ "start distance, a drag operation will be initiated."
+#~ msgstr ""
+#~ "Ja jūs noklikšķināt ar peli un pārvietojat kursoru par vismaz "
+#~ "pārvilkšanas sākšanās attālumu, tiks uzsākta pārvilkšanas operācija."
+
+#~ msgid "Mouse wheel scrolls by:"
+#~ msgstr "Peles rullītis ritina par:"
+
+#~ msgid ""
+#~ "If you use the wheel of a mouse, this value determines the number of "
+#~ "lines to scroll for each wheel movement. Note that if this number exceeds "
+#~ "the number of visible lines, it will be ignored and the wheel movement "
+#~ "will be handled as a page up/down movement."
+#~ msgstr ""
+#~ "Ja jūs izmantojat peles rullīti, šī vērtība nosaka līniju skaitu, kas "
+#~ "tiks paritinātas pie katras rullīša kustības. Atcerieties, ka, ja šis "
+#~ "skaitlis pārsniedz redzamo līniju skaitu, tas tiks ignorēts, un ritentiņa "
+#~ "pārvietošana tiks apstrādāta kā lapas augšup/lejup pārvietošana."
+
+#~ msgid "Mouse Navigation"
+#~ msgstr "Pārvietošanās ar peli"
+
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "&Pārvietot kursoru ar tastatūru (izmantojot ciparu taustiņus)"
+
+#~ msgid "&Acceleration delay:"
+#~ msgstr "P&aātrināšanas aizture:"
+
+#~ msgid "R&epeat interval:"
+#~ msgstr "Atkārtošanas int&ervāls:"
+
+#~ msgid "Acceleration &time:"
+#~ msgstr "Paā&trināšanās laiks:"
+
+#~ msgid " pixel/sec"
+#~ msgstr " punkti/sekundē"
+
+#~ msgid "Ma&ximum speed:"
+#~ msgstr "M&aksimālais ātrums:"
+
+#~ msgid "Acceleration &profile:"
+#~ msgstr "Paātrināšanas &profils:"
+
+#~ msgid "Mouse"
+#~ msgstr "Pele"
+
+#~ msgid "(c) 1997 - 2005 Mouse developers"
+#~ msgstr "(c) 1997 - 2005 Peles izstrādātāji"
+
+#~ msgid "Patrick Dowler"
+#~ msgstr "Patriks Doulers (Patrick Dowler)"
+
+#~ msgid "Dirk A. Mueller"
+#~ msgstr "Dirks A. Mullers (Dirk A. Mueller)"
+
+#~ msgid "David Faure"
+#~ msgstr "Deivids Fors (David Faure)"
+
+#~ msgid "Bernd Gehrmann"
+#~ msgstr "Bernds Gērmans (Bernd Gehrmann)"
+
+#~ msgid "Rik Hemsley"
+#~ msgstr "Riks Hemslijs (Rik Hemsley)"
+
+#~ msgid "Brad Hughes"
+#~ msgstr "Breds Hūgs (Brad Hughes)"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralfs Noldens (Ralf Nolden)"
+
+#~ msgid "Brad Hards"
+#~ msgstr "Breds Hārds (Brad Hards)"
+
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] "punkts"
+#~ msgstr[1] "punkti"
+#~ msgstr[2] "punktu"
+
+#~ msgid " line"
+#~ msgid_plural " lines"
+#~ msgstr[0] "līnija"
+#~ msgstr[1] "līnijas"
+#~ msgstr[2] "līniju"
+
+#~ msgid "Mouse type: %1"
+#~ msgstr "Peles veids: %1"
+
+#~ msgid ""
+#~ "RF channel 1 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "Tika izvēlēts 1. radiokanāls. Lūdzu, nospiediet pogu \"Connect"
+#~ "\" (savienoties) uz peles, lai atjaunotu sakarus."
+
+#~ msgid "Press Connect Button"
+#~ msgstr "Nospiediet \"Connect\" (savienošanās) pogu."
+
+#~ msgid ""
+#~ "RF channel 2 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "Tika izvēlēts 2. radiokanāls. Lūdzu, nospiediet pogu \"Connect"
+#~ "\" (savienoties) uz peles, lai atjaunotu sakarus."
+
+#~ msgctxt "no cordless mouse"
+#~ msgid "none"
+#~ msgstr "nekāda"
+
+#~ msgid "Cordless Mouse"
+#~ msgstr "Cordless Mouse"
+
+#~ msgid "Cordless Wheel Mouse"
+#~ msgstr "Cordless Wheel Mouse"
+
+#~ msgid "Cordless MouseMan Wheel"
+#~ msgstr "Cordless MouseMan Wheel"
+
+#~ msgid "Cordless TrackMan Wheel"
+#~ msgstr "Cordless TrackMan Wheel"
+
+#~ msgid "TrackMan Live"
+#~ msgstr "TrackMan Live"
+
+#~ msgid "Cordless TrackMan FX"
+#~ msgstr "Cordless TrackMan FX"
+
+#~ msgid "Cordless MouseMan Optical"
+#~ msgstr "Cordless MouseMan Optical"
+
+#~ msgid "Cordless Optical Mouse"
+#~ msgstr "Cordless Optical Mouse"
+
+#~ msgid "Cordless MouseMan Optical (2ch)"
+#~ msgstr "Cordless MouseMan Optical (2ch)"
+
+#~ msgid "Cordless Optical Mouse (2ch)"
+#~ msgstr "Cordless Optical Mouse (2ch)"
+
+#~ msgid "Cordless Mouse (2ch)"
+#~ msgstr "Cordless Mouse (2ch)"
+
+#~ msgid "Cordless Optical TrackMan"
+#~ msgstr "Cordless Optical TrackMan"
+
+#~ msgid "MX700 Cordless Optical Mouse"
+#~ msgstr "MX700 Cordless Optical Mouse"
+
+#~ msgid "MX700 Cordless Optical Mouse (2ch)"
+#~ msgstr "MX700 Cordless Optical Mouse (2ch)"
+
+#~ msgid "Unknown mouse"
+#~ msgstr "Nezināma pele"
+
+#~ msgid "Cordless Name"
+#~ msgstr "Bezvadu nosaukums"
+
+#~ msgid "Sensor Resolution"
+#~ msgstr "Sensora izšķirtspēja"
+
+#~ msgid "400 counts per inch"
+#~ msgstr "400 nolasījumu collā"
+
+#~ msgid "800 counts per inch"
+#~ msgstr "800 nolasījumu collā"
+
+#~ msgid "Battery Level"
+#~ msgstr "Baterijas līmenis"
+
+#~ msgid "RF Channel"
+#~ msgstr "Radiofrekvences kanāls"
+
+#~ msgid "Channel 1"
+#~ msgstr "1. kanāls"
+
+#~ msgid "Channel 2"
+#~ msgstr "2. kanāls"
+
+#~ msgid ""
+#~ "You have a Logitech Mouse connected, and libusb was found at compile "
+#~ "time, but it was not possible to access this mouse. This is probably "
+#~ "caused by a permissions problem - you should consult the manual on how to "
+#~ "fix this."
+#~ msgstr ""
+#~ "Jūsu Logitech pele ir pieslēgta un arī libusb bibliotēka tika atrasta "
+#~ "kompilēšanas laikā, taču nav iespējams piekļūt pelei. To, iespējams, "
+#~ "izraisa problēma ar piekļuves tiesībām - jums jānoskaidro instrukcijā, kā "
+#~ "to novērst."
+
+#~ msgid "KDE Classic"
+#~ msgstr "KDE klasiskā"
+
+#~ msgid "The default cursor theme in KDE 2 and 3"
+#~ msgstr "Noklusētā KDE 2 un 3 tēma"
+
+#~ msgid "No description available"
+#~ msgstr "Nav apraksta"
+
+#~ msgid "Short"
+#~ msgstr "Īsa"
+
+#~ msgid "Long"
+#~ msgstr "Gara"

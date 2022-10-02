@@ -1,0 +1,529 @@
+# translation of kcmfonts.po to Estonian
+# Copyright (C) 1999,2002, 2003, 2005 Free Software Foundation, Inc.
+#
+# Hasso Tepper <hasso@linux.ee>, 1999.
+# Hasso Tepper <hasso@estpak.ee>, 2002.
+# Marek Laane <bald@smail.ee>, 2003-2008.
+# Hasso Tepper <hasso@kde.org>, 2005.
+# Marek Laane <bald@smail.ee>, 2010, 2011, 2012, 2016, 2019, 2020.
+# Mihkel Tõnnov <mihhkel@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmfonts\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-03 00:45+0000\n"
+"PO-Revision-Date: 2020-10-25 19:45+0100\n"
+"Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
+"Language-Team: Estonian <>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.08.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, kde-format
+msgid "Force font DPI Wayland"
+msgstr "Fontidele DPI määramine Waylandi puhul"
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Force font DPI X11"
+msgid "Force font DPI on X11"
+msgstr "Fontidele DPI määramine X11 puhul"
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, kde-format
+msgid "General font"
+msgstr "Üldine font"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, kde-format
+msgid "Fixed width font"
+msgstr "Fikseeritud laiusega font"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, kde-format
+msgid "Small font"
+msgstr "Väike font"
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, kde-format
+msgid "Tool bar font"
+msgstr "Tööriistaribade font"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, kde-format
+msgid "Menu font"
+msgstr "Menüüde font"
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, kde-format
+msgid "Window title font"
+msgstr "Aknatiitlite font"
+
+#: kxftconfig.cpp:458
+#, kde-format
+msgctxt "use system subpixel setting"
+msgid "Vendor default"
+msgstr "Pakkuja vaikeväärtus"
+
+#: kxftconfig.cpp:460
+#, kde-format
+msgctxt "no subpixel rendering"
+msgid "None"
+msgstr "Puudub"
+
+#: kxftconfig.cpp:462
+#, kde-format
+msgid "RGB"
+msgstr "RGB"
+
+#: kxftconfig.cpp:464
+#, kde-format
+msgid "BGR"
+msgstr "BGR"
+
+#: kxftconfig.cpp:466
+#, kde-format
+msgid "Vertical RGB"
+msgstr "Vertikaalne RGB"
+
+#: kxftconfig.cpp:468
+#, kde-format
+msgid "Vertical BGR"
+msgstr "Vertikaalne BGR"
+
+#: kxftconfig.cpp:496
+#, kde-format
+msgctxt "use system hinting settings"
+msgid "Vendor default"
+msgstr "Pakkuja vaikeväärtus"
+
+#: kxftconfig.cpp:498
+#, kde-format
+msgctxt "medium hinting"
+msgid "Medium"
+msgstr "Keskmine"
+
+#: kxftconfig.cpp:500
+#, kde-format
+msgctxt "no hinting"
+msgid "None"
+msgstr "Puudub"
+
+#: kxftconfig.cpp:502
+#, kde-format
+msgctxt "slight hinting"
+msgid "Slight"
+msgstr "Õrn"
+
+#: kxftconfig.cpp:504
+#, kde-format
+msgctxt "full hinting"
+msgid "Full"
+msgstr "Täielik"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module lets you configure the system fonts."
+msgstr "See moodul võimaldab seadistada süsteemi fonte."
+
+#: package/contents/ui/main.qml:26
+#, fuzzy, kde-format
+#| msgid "Change Display Scaling..."
+msgid "Change Display Scaling…"
+msgstr "Muuda ekraani skaleerimist ..."
+
+#: package/contents/ui/main.qml:37
+#, kde-format
+msgid ""
+"Some changes such as anti-aliasing or DPI will only affect newly started "
+"applications."
+msgstr ""
+"Mõned muudatused, näiteks antialiast või DPI-d puudutavad seadistused, "
+"mõjuvad ainult pärast seda käivitavatele rakendustele."
+
+#: package/contents/ui/main.qml:51
+#, kde-format
+msgid ""
+"Very large fonts may produce odd-looking results. Consider adjusting the "
+"global screen scale instead of using a very large font size."
+msgstr ""
+"Väga suured fondid võivad näha välja üsna veidrad. Väga suure fondisuuruse "
+"kasutamise asemel tasuks kaaluda ekraani globaalset skaleerimist."
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid ""
+"Decimal font sizes can cause text layout problems in some applications. "
+"Consider using only integer font sizes."
+msgstr ""
+
+#: package/contents/ui/main.qml:94
+#, kde-format
+msgid ""
+"The recommended way to scale the user interface is using the global screen "
+"scaling feature."
+msgstr ""
+"Kasutajaliidese skaleerimise soovitatav viis on kasutada ekraani globaalse "
+"skaleerimise võimalust."
+
+#: package/contents/ui/main.qml:106
+#, fuzzy, kde-format
+#| msgid "&Adjust All Fonts..."
+msgid "&Adjust All Fonts…"
+msgstr "&Säti kõiki fonte ..."
+
+#: package/contents/ui/main.qml:119
+#, kde-format
+msgid "General:"
+msgstr "Üldine"
+
+#: package/contents/ui/main.qml:120
+#, kde-format
+msgid "Select general font"
+msgstr "Vali üldine font"
+
+#: package/contents/ui/main.qml:131
+#, kde-format
+msgid "Fixed width:"
+msgstr "Fikseeritud laiusega:"
+
+#: package/contents/ui/main.qml:132
+#, kde-format
+msgid "Select fixed width font"
+msgstr "Vali fikseeritud laiusega font"
+
+#: package/contents/ui/main.qml:143
+#, kde-format
+msgid "Small:"
+msgstr "Väike:"
+
+#: package/contents/ui/main.qml:144
+#, kde-format
+msgid "Select small font"
+msgstr "Vali väike font"
+
+#: package/contents/ui/main.qml:155
+#, kde-format
+msgid "Toolbar:"
+msgstr "Tööriistariba:"
+
+#: package/contents/ui/main.qml:156
+#, kde-format
+msgid "Select toolbar font"
+msgstr "Vali tööriistaribade font"
+
+#: package/contents/ui/main.qml:167
+#, kde-format
+msgid "Menu:"
+msgstr "Menüü:"
+
+#: package/contents/ui/main.qml:168
+#, kde-format
+msgid "Select menu font"
+msgstr "Vali menüüde font"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "Window title:"
+msgstr "Akna tiitel:"
+
+#: package/contents/ui/main.qml:179
+#, kde-format
+msgid "Select window title font"
+msgstr "Vali aknatiitlite font"
+
+#: package/contents/ui/main.qml:194
+#, kde-format
+msgid "Anti-Aliasing:"
+msgstr "Antialias:"
+
+#: package/contents/ui/main.qml:199
+#, kde-format
+msgid "Enable"
+msgstr "Lubatud"
+
+#: package/contents/ui/main.qml:203
+#, kde-kuit-format
+msgctxt "@info:tooltip Anti-Aliasing"
+msgid ""
+"Pixels on displays are generally aligned in a grid. Therefore shapes of "
+"fonts that do not align with this grid will look blocky and wrong unless "
+"<emphasis>anti-aliasing</emphasis> techniques are used to reduce this "
+"effect. You generally want to keep this option enabled unless it causes "
+"problems."
+msgstr ""
+"Pikslid ekraanil on üldiselt joondatud ruudustikuna. Fontides leiduvad "
+"kujundid, mis selle ruudustikuga täpselt ei joondu, näevad seetõttu välja "
+"sakilised ja muidu valed, välja arvatud <emphasis>antialiase</emphasis> "
+"kasutamise korral. Üldiselt peaks see valik olema sisse lülitatud, kui see "
+"just probleeme ei tekita."
+
+#: package/contents/ui/main.qml:217
+#, kde-format
+msgid "Exclude range from anti-aliasing"
+msgstr "Antialiast ei rakendata vahemikus"
+
+#: package/contents/ui/main.qml:236 package/contents/ui/main.qml:259
+#, kde-format
+msgid "%1 pt"
+msgstr "%1 pt"
+
+#: package/contents/ui/main.qml:251
+#, kde-format
+msgid "to"
+msgstr " kuni "
+
+#: package/contents/ui/main.qml:282
+#, kde-format
+msgctxt "Used as a noun, and precedes a combobox full of options"
+msgid "Sub-pixel rendering:"
+msgstr "Pikslisisene varjundamine:"
+
+#: package/contents/ui/main.qml:324
+#, kde-kuit-format
+msgctxt "@info:tooltip Sub-pixel rendering"
+msgid ""
+"<para>On TFT or LCD screens every single pixel is actually composed of three "
+"or four smaller monochrome lights. These <emphasis>sub-pixels</emphasis> can "
+"be changed independently to further improve the quality of displayed fonts.</"
+"para> <para>The rendering quality is only improved if the selection matches "
+"the manner in which the sub-pixels of your display are aligned. Most "
+"displays have a linear ordering of <emphasis>RGB</emphasis> sub-pixels, some "
+"have <emphasis>BGR</emphasis> and some exotic orderings are not supported by "
+"this feature.</para>This does not work with CRT monitors."
+msgstr ""
+"<para>LCD- või TFT-kuvarite iga piksel koosneb tegelikult kolmest või "
+"neljast väiksemast ühevärvilisest komponendist. Neid <emphasis>alampiksleid</"
+"emphasis> ükshaaval juhtides saab kuvatavate fontide kvaliteeti veelgi tõsta."
+"</para> <para>Renderduskvaliteet paraneb vaid siis, kui siin määratud valik "
+"vastab viisile, kuidas sinu kuvaris alampikslid joondatud on. Enamikul "
+"kuvaritest on alampikslite järjestus lineaarne <emphasis>RGB</emphasis> "
+"(puna-rohe-sinine), harvem <emphasis>BGR</emphasis> (sini-rohe-punane). "
+"Mõningaid eksootilisemaid järjestusi see funktsioon ei toeta.</para>CRT-"
+"monitoride puhul see funktsioon ei toimi."
+
+#: package/contents/ui/main.qml:329
+#, kde-format
+msgctxt "Used as a noun, and precedes a combobox full of options"
+msgid "Hinting:"
+msgstr "Varjundamine:"
+
+#: package/contents/ui/main.qml:370
+#, kde-kuit-format
+msgctxt "@info:tooltip Hinting"
+msgid ""
+"Hinting is a technique in which hints embedded in a font are used to enhance "
+"the rendering quality especially at small sizes. Stronger hinting generally "
+"leads to sharper edges but the small letters will less closely resemble "
+"their shape at big sizes."
+msgstr ""
+"Varjundamine seisneb fontidesse põimitud vihjete kasutamises "
+"renderduskvaliteedi parandamiseks, eriti väikeste kirjasuuruste korral. "
+"Tugevama varjundamisega saab üldjuhul teravamad servad, aga suuremate "
+"kirjasuuruste puhul ka oma õigest kujust mõnevõrra hälbivad väikesed tähed."
+
+#: package/contents/ui/main.qml:380
+#, kde-format
+msgid "Force font DPI:"
+msgstr "Fontide määratud DPI:"
+
+#: package/contents/ui/main.qml:422
+#, kde-kuit-format
+msgctxt "@info:tooltip Force fonts DPI"
+msgid ""
+"<para>Enter your screen's DPI here to make on-screen fonts match their "
+"physical sizes when printed. Changing this option from its default value "
+"will conflict with many apps; some icons and images may not scale as "
+"expected.</para><para>To increase text size, change the size of the fonts "
+"above. To scale everything, use the scaling slider on the <interface>Display "
+"& Monitor</interface> page.</para>"
+msgstr ""
+
+#: package/contents/ui/main.qml:428
+#, kde-format
+msgid "Select Font"
+msgstr "Fondi valimine"
+
+#~ msgctxt "@info:tooltip Force fonts DPI"
+#~ msgid ""
+#~ "<para>This option forces a specific DPI value for fonts. It may be useful "
+#~ "when the real DPI of the hardware is not detected properly and it is also "
+#~ "often misused when poor quality fonts are used that do not look well with "
+#~ "DPI values other than 96 or 120 DPI.</para><para>The use of this option "
+#~ "is generally discouraged.</para><para>If you are using the <emphasis>X "
+#~ "Window System</emphasis>, for selecting the proper DPI value a better "
+#~ "option is explicitly configuring it for the whole X server if possible (e."
+#~ "g. DisplaySize in xorg.conf). When fonts do not render properly with the "
+#~ "real DPI value better fonts should be used or configuration of font "
+#~ "hinting should be checked.</para>"
+#~ msgstr ""
+#~ "<para>See valik võimaldab fontidele kehtestada kindla DPI väärtuse. "
+#~ "Sellest võib olla abi, kui riistvara tegelikku DPI-d ei tuvastata "
+#~ "korralikult. Sageli kasutatakse seda ka siis, kui kehva kvaliteediga font "
+#~ "ei näe kuigi hea välja muu DPI väärtusega kui 96 või 120 DPI.</"
+#~ "para><para>Üldiselt ei ole mõtet seda valikut kasutada.</para><para>Kui "
+#~ "kasutusel on <emphasis>X Window System</emphasis>, on sobiva DPI väärtuse "
+#~ "valimiseks märksa mõistlikum määrata see võimaluse korral terves X-"
+#~ "serveris (nt. DisplaySize failis xorg.conf). Kui fonte ei renderdata "
+#~ "tegeliku DPI väärtuse korral korralikult, tuleks kasutada paremaid fonte "
+#~ "või kontrollida fontide varjundamise seadistusi.</para>"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Marek Laane"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "qiilaq69@gmail.com"
+
+#~ msgid "Fonts"
+#~ msgstr "Fondid"
+
+#~ msgid "Antonis Tsiapaliokas"
+#~ msgstr "Antonis Tsiapaliokas"
+
+#~ msgctxt "@action:button"
+#~ msgid "Show Contextual Help"
+#~ msgstr "Näita kontekstiabi"
+
+#~ msgid "Select %1 Font..."
+#~ msgstr "Vali %1 font ..."
+
+#~ msgid "Font Settings Changed"
+#~ msgstr "Fondiseadistusi on muudetud"
+
+#~ msgid ""
+#~ "<p>Some changes such as DPI will only affect newly started applications.</"
+#~ "p>"
+#~ msgstr ""
+#~ "<p>Mõned muudatused, näiteks DPI-d puudutavad seadistused, mõjuvad ainult "
+#~ "pärast seda käivitavatele rakendustele.</p>"
+
+#, fuzzy
+#~| msgctxt "use system subpixel setting"
+#~| msgid "System default"
+#~ msgid "Vendor default"
+#~ msgstr "Süsteemi vaikeväärtus"
+
+#, fuzzy
+#~| msgctxt "Use anti-aliasing"
+#~| msgid "Disabled"
+#~ msgid "Disabled"
+#~ msgstr "Keelatud"
+
+#, fuzzy
+#~| msgid "Configure..."
+#~ msgid "Configure the system fonts"
+#~ msgstr "Seadista..."
+
+#~ msgid "Configure Anti-Alias Settings"
+#~ msgstr "Antialiase seadistused"
+
+#~ msgid "E&xclude range:"
+#~ msgstr "&Välistatav vahemik:"
+
+#, fuzzy
+#~| msgid " pt"
+#~ msgctxt "abbreviation for unit of points"
+#~ msgid " pt"
+#~ msgstr " punkti"
+
+#~ msgid ""
+#~ "<p>If you have a TFT or LCD screen you can further improve the quality of "
+#~ "displayed fonts by selecting this option.<br />Sub-pixel rendering is "
+#~ "also known as ClearType(tm).<br /> In order for sub-pixel rendering to "
+#~ "work correctly you need to know how the sub-pixels of your display are "
+#~ "aligned.</p> <p>On TFT or LCD displays a single pixel is actually "
+#~ "composed of three sub-pixels, red, green and blue. Most displays have a "
+#~ "linear ordering of RGB sub-pixel, some have BGR.<br /> This feature does "
+#~ "not work with CRT monitors.</p>"
+#~ msgstr ""
+#~ "<p>Kui sul on TFT või LCD monitor, saab siin täiendavalt parandada "
+#~ "fontide esitamise kvaliteeti.<br />Pikslisisene varjundamine kannab ka "
+#~ "nimetust ClearType(tm).<br />Et pikslisisene varjundamine korralikult "
+#~ "toimiks, pead teadma, kuidas on korraldatud sinu monitoril alampikslite "
+#~ "esitamine.<br />TFT või LCD monitoridel koosneb üksikpiksel tegelikult "
+#~ "kolmest alampikslist, nimelt punasest (R), rohelisest (G) ja sinisest "
+#~ "(B). Enamik monitore kasutab RGB korraldust, mõned siiski ka BGR.<br /> "
+#~ "See võimalus ei toimi CRT monitoridel.</p>"
+
+#~ msgid ""
+#~ "Hinting is a process used to enhance the quality of fonts at small sizes."
+#~ msgstr ""
+#~ "Varjundamist kasutatakse fondi kvaliteedi parandamiseks väikese suuruse "
+#~ "korral."
+
+#~ msgid "Used for normal text (e.g. button labels, list items)."
+#~ msgstr ""
+#~ "Kasutatakse tavaliste tekstide puhul (nt. nuppude kirjad, nimekirja "
+#~ "elemendid)."
+
+#~ msgid "A non-proportional font (i.e. typewriter font)."
+#~ msgstr "Mitteproportsionaalne font (s.o. trükimasina font). "
+
+#~ msgid "Smallest font that is still readable well."
+#~ msgstr "Väikseim veel korralikult loetav font."
+
+#~ msgid "Used to display text beside toolbar icons."
+#~ msgstr "Kasutatakse tööriistaribade tekstide näitamisel."
+
+#~ msgid "Used by menu bars and popup menus."
+#~ msgstr "Kasutatakse menüüribade ja hüpikmenüüde näitamisel."
+
+#~ msgid "Used by the window titlebar."
+#~ msgstr "Kasutatakse akna tiitliribal."
+
+#~ msgctxt "Font role"
+#~ msgid "%1: "
+#~ msgstr "%1: "
+
+#~ msgid "Click to change all fonts"
+#~ msgstr "Kõigi fontide muutmiseks klõpsa sellel nupul"
+
+#~ msgctxt "Use anti-aliasing"
+#~ msgid "System Settings"
+#~ msgstr "Süsteemi seadistused"
+
+#, fuzzy
+#~| msgid ""
+#~| "If this option is selected, KDE will smooth the edges of curves in fonts."
+#~ msgid "Select this option to smooth the edges of curves in fonts."
+#~ msgstr ""
+#~ "Kui see valik on sisse lülitatud, joonistatakse fontide ja pikselrastrite "
+#~ "servad pehmemad."
+
+#~ msgctxt "font usage"
+#~ msgid "Taskbar"
+#~ msgstr "Tegumiriba"
+
+#~ msgctxt "font usage"
+#~ msgid "Desktop"
+#~ msgstr "Töölaud"
+
+#~ msgid "Used by the taskbar."
+#~ msgstr "Kasutatakse tegumiribal."
+
+#~ msgid "Used for desktop icons."
+#~ msgstr "Kasutatakse töölaua ikoonidel."
+
+#~ msgctxt "Force fonts DPI"
+#~ msgid "Disabled"
+#~ msgstr "Keelatud"
+
+#~ msgid "96 DPI"
+#~ msgstr "96 DPI"
+
+#~ msgid "120 DPI"
+#~ msgstr "120 DPI"

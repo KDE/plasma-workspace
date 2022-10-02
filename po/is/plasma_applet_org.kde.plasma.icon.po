@@ -1,0 +1,44 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Sveinn í Felli <sv1@fellsnet.is>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-20 00:46+0000\n"
+"PO-Revision-Date: 2022-08-24 14:59+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"Language-Team: Icelandic\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: iconapplet.cpp:92
+#, kde-format
+msgid "Failed to create icon widgets folder '%1'"
+msgstr "Gat ekki búið til möppuna '%1' undir táknmyndaviðmótshluta"
+
+#: iconapplet.cpp:138
+#, kde-format
+msgid "Failed to copy icon widget desktop file from '%1' to '%2'"
+msgstr ""
+"Mistókst að afrita skjáborðsskrá táknmyndaviðmótshluta úr '%1' yfir í '%2'"
+
+#: iconapplet.cpp:385
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Opna umlykjandi möppu"
+
+#: iconapplet.cpp:565
+#, kde-format
+msgid "Properties for %1"
+msgstr "Eiginleikar fyrir %1"
+
+#: package/contents/ui/main.qml:73
+#, kde-format
+msgid "Properties"
+msgstr "Eiginleikar"

@@ -1,0 +1,66 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sergiu Bivol <sergiu@cip.md>, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"PO-Revision-Date: 2015-04-26 15:10+0300\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+
+#: timesource.cpp:46
+msgid "Local"
+msgstr "Local"
+
+#: timesource.cpp:61
+msgid "Timezone"
+msgstr "Fus orar"
+
+#: timesource.cpp:66 timesource.cpp:69 timesource.cpp:73
+msgid "Timezone City"
+msgstr "Orașul fusului orar"
+
+#: timesource.cpp:68 timesource.cpp:71
+msgid "Timezone Continent"
+msgstr "Continentul fusului orar"
+
+#: timesource.cpp:72
+msgid "Timezone Country"
+msgstr "Țara fusului orar"
+
+#: timesource.cpp:97
+msgid "Offset"
+msgstr "Decalaj"
+
+#: timesource.cpp:100
+msgid "Timezone Abbreviation"
+msgstr "Abreviere fus orar"
+
+#: timesource.cpp:131 timesource.cpp:150 timesource.cpp:171
+msgid "DateTime"
+msgstr "DatăOră"
+
+#: timesource.cpp:146
+msgid "Latitude"
+msgstr "Latitudine"
+
+#: timesource.cpp:147
+msgid "Longitude"
+msgstr "Longitudine"
+
+#: timesource.cpp:148
+msgid "Solar"
+msgstr "Solar"
+
+#: timesource.cpp:149
+msgid "Moon"
+msgstr "Lună"

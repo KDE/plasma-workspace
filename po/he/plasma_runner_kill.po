@@ -1,0 +1,101 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Diego Iastrubni <elcuco@kde.org>, 2013.
+# Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_kill\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"PO-Revision-Date: 2017-05-16 06:57-0400\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Zanata 3.9.6\n"
+
+#: killrunner.cpp:30
+#, kde-format
+msgid "Send SIGTERM"
+msgstr "שלח SIGTERM"
+
+#: killrunner.cpp:32
+#, kde-format
+msgid "Send SIGKILL"
+msgstr "שלח SIGKILL"
+
+#: killrunner.cpp:51 killrunner_config.cpp:51 killrunner_config.cpp:77
+#, kde-format
+msgid "kill"
+msgstr "הרוג (KILL)"
+
+#: killrunner.cpp:57
+#, kde-format
+msgid "Terminate running applications whose names match the query."
+msgstr "חסל יישומים פעילמים אשר השמות שלהם מתאימים לשאילתה."
+
+#: killrunner.cpp:120
+#, kde-format
+msgid "Terminate %1"
+msgstr "חסל %1"
+
+#: killrunner.cpp:121
+#, kde-format
+msgid "Process ID: %1"
+msgstr ""
+
+#: killrunner_config.cpp:32
+#, kde-format
+msgid "CPU usage"
+msgstr "שימוש במעבד"
+
+#: killrunner_config.cpp:33
+#, kde-format
+msgid "inverted CPU usage"
+msgstr "שימוש הפוך במעבד"
+
+#: killrunner_config.cpp:34
+#, kde-format
+msgid "nothing"
+msgstr "כלום"
+
+#. i18n: ectx: property (title), widget (QGroupBox, main)
+#: killrunner_config.ui:30
+#, kde-format
+msgid "Kill Applications Config"
+msgstr "הגדרות חיסול תהליך"
+
+#. i18n: ectx: property (text), widget (QCheckBox, useTriggerWord)
+#: killrunner_config.ui:39
+#, kde-format
+msgid "&Use trigger word"
+msgstr "&השתמש במילת מפתח"
+
+#. i18n: ectx: property (text), widget (QLabel, label_trigger)
+#: killrunner_config.ui:51
+#, kde-format
+msgid "&Trigger word:"
+msgstr "&מילת מפתח:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_sorting)
+#: killrunner_config.ui:72
+#, kde-format
+msgid "&Sort by"
+msgstr "&מיין לפי"
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, sorting)
+#: killrunner_config.ui:82
+#, kde-format
+msgid "It is not sure, that this will take effect"
+msgstr "אם לא בטוח, זה יבוא בחשבון"
+
+#~ msgid ""
+#~ "Process ID: %1\n"
+#~ "Running as user: %2"
+#~ msgstr ""
+#~ "זיהוי תהליך: %1\n"
+#~ "רץ בתור משתמש: %2"

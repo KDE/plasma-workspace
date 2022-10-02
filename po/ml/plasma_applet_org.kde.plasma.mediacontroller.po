@@ -1,0 +1,122 @@
+# Malayalam translations for plasma-workspace package.
+# Copyright (C) 2019 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# Automatically generated, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"PO-Revision-Date: 2021-02-18 13:23+0000\n"
+"Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
+"Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
+"org.in>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Weblate 4.4\n"
+
+#: contents/config/config.qml:12
+#, kde-format
+msgid "General"
+msgstr ""
+
+#: contents/ui/AlbumArtStackView.qml:161 contents/ui/main.qml:80
+#, kde-format
+msgid "No media playing"
+msgstr "മീഡിയ പ്ലേ ചെയ്യുന്നില്ല"
+
+#: contents/ui/ConfigGeneral.qml:22
+#, kde-format
+msgid "Volume step:"
+msgstr ""
+
+#: contents/ui/ExpandedRepresentation.qml:363
+#: contents/ui/ExpandedRepresentation.qml:484
+#, kde-format
+msgctxt "Remaining time for song e.g -5:42"
+msgid "-%1"
+msgstr "-%1"
+
+#: contents/ui/ExpandedRepresentation.qml:513
+#, kde-format
+msgid "Shuffle"
+msgstr "കലർത്തുക"
+
+#: contents/ui/ExpandedRepresentation.qml:539 contents/ui/main.qml:98
+#, kde-format
+msgctxt "Play previous track"
+msgid "Previous Track"
+msgstr "മുൻപത്തെ ട്രാക്ക്"
+
+#: contents/ui/ExpandedRepresentation.qml:561 contents/ui/main.qml:106
+#, kde-format
+msgctxt "Pause playback"
+msgid "Pause"
+msgstr "താത്കാലികമായി നിർത്തുക"
+
+#: contents/ui/ExpandedRepresentation.qml:561 contents/ui/main.qml:111
+#, kde-format
+msgctxt "Start playback"
+msgid "Play"
+msgstr "പ്ലേ"
+
+#: contents/ui/ExpandedRepresentation.qml:579 contents/ui/main.qml:117
+#, kde-format
+msgctxt "Play next track"
+msgid "Next Track"
+msgstr "അടുത്ത ട്രാക്ക്"
+
+#: contents/ui/ExpandedRepresentation.qml:602
+#, kde-format
+msgid "Repeat Track"
+msgstr "ട്രാക്ക് ആവർത്തിക്കുക"
+
+#: contents/ui/ExpandedRepresentation.qml:602
+#, kde-format
+msgid "Repeat"
+msgstr "ആവർത്തിക്കുക"
+
+#: contents/ui/main.qml:94
+#, kde-format
+msgctxt "Open player window or bring it to the front if already open"
+msgid "Open"
+msgstr "തുറക്കുക"
+
+#: contents/ui/main.qml:123
+#, kde-format
+msgctxt "Stop playback"
+msgid "Stop"
+msgstr "നിർത്തുക"
+
+#: contents/ui/main.qml:131
+#, kde-format
+msgctxt "Quit player"
+msgid "Quit"
+msgstr "പുറത്തുകടക്കുക"
+
+#: contents/ui/main.qml:241
+#, kde-format
+msgid "Choose player automatically"
+msgstr "പ്ലയർ സ്വയമേവ തിരഞ്ഞെടുക്കുക"
+
+#: contents/ui/main.qml:278
+#, kde-format
+msgctxt "by Artist (player name)"
+msgid "by %1 (%2)"
+msgstr "%1 (%2) വക"
+
+#: contents/ui/main.qml:289
+#, kde-format
+msgctxt "by Artist (paused, player name)"
+msgid "by %1 (paused, %2)"
+msgstr "%1 ന്റെ (താത്കാലികമായി നിർത്തി, %2)"
+
+#: contents/ui/main.qml:289
+#, kde-format
+msgctxt "Paused (player name)"
+msgid "Paused (%1)"
+msgstr "താത്കാലികമായി നിർത്തി (%1)"

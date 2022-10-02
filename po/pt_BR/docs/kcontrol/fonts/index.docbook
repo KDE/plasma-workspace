@@ -1,0 +1,258 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Brazilian-Portuguese "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="fonts" lang="&language;">
+<articleinfo>
+<title
+>Fontes</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+<othercredit role="translator"
+><firstname
+>Lisiane</firstname
+> <surname
+>Sztoltz</surname
+><affiliation
+><address
+> <email
+>lisiane@conectiva.com.br</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>08/04/2015</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Centro de Controle</keyword>
+<keyword
+>fontes</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_fonts">
+
+<title
+>Fontes</title>
+
+<para
+>Este módulo foi projetado para permitir a você selecionar facilmente diferentes fontes para diferentes componentes do &kde;.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Aqui está uma imagem do módulo de configuração das fontes</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>O módulo de configuração das fontes</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>O painel consiste de diferentes grupos de fontes, que fornecem muita flexibilidade de configuração: </para>
+
+<itemizedlist>
+<listitem
+><para
+><guilabel
+>Geral:</guilabel
+> Usado em todos os lugares onde os outros grupos de fontes não são aplicados</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Largura Fixa:</guilabel
+> Em qualquer lugar onde uma fonte não-proporcional é especificada</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Pequeno:</guilabel
+> Quando são usadas fontes pequenas</para
+></listitem
+> 
+
+<listitem
+><para
+><guilabel
+>Barra de ferramentas:</guilabel
+> Fonte usada em barra de ferramentas de aplicativos do &kde;.</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Menu:</guilabel
+> Fonte usada em menus de aplicativos do &kde;</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Título da janela:</guilabel
+> Fonte usada no título da janela</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Barra de tarefas:</guilabel
+> Fonte usada pelos miniaplicativos da barra de tarefas do painel</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Área de trabalho:</guilabel
+> Fonte usada em na área de trabalho para nomear os ícones.</para
+></listitem>
+
+</itemizedlist>
+
+<para
+>Cada fonte possui o seu botão <guibutton
+>Escolher...</guibutton
+> correspondente. Ao clicar neste botão, surge uma caixa de diálogo. Você pode usar esta caixa para escolher uma nova fonte, um estilo de fonte e tamanho. Após escolher, pressione <guibutton
+>OK</guibutton
+>.</para>
+
+<para
+>Será mostrado um exemplo do tipo de fonte escolhido no espaço entre o nome do grupo de tipos de fonte e o botão <guibutton
+>Escolher...</guibutton
+>.</para>
+
+<para
+>Quando estiver pronto, simplesmente clique em <guibutton
+>OK</guibutton
+> e todos os componentes necessários ao &kde; serão reiniciados; assim, suas mudanças surtirão efeito imediatamente.</para>
+
+<para
+>O botão <guibutton
+>Ajustar Todas as Fontes...</guibutton
+> permite a você ajustar rapidamente uma propriedade ou um conjunto de propriedades de todas as fontes selecionadas acima. Um diálogo de seleção de fontes surgirá, e você verá as caixas de verificação que permitem modificar as<guilabel
+>Fontes</guilabel
+>, <guilabel
+>Estilo de fontes</guilabel
+> ou o <guilabel
+>Tamanho</guilabel
+>, independente um dos outros. Você pode escolher entre uma, duas ou três de quaisquer uma das opções, e elas serão aplicadas para todos os grupos de fontes.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Ajustando todas as fontes</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="adjust-all.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>A janela para Ajustar Todas as Fontes</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Por exemplo, se você selecionou vários tipos diferentes de fontes, e viu que todas elas possuem um tamanho muito grande (frequentemente ocorre quando você mudou a resolução da tela, por exemplo), você pode aplicar um novo tamanho para todas as fontes, sem afetar o estilo e o tipo da fonte, já personalizados.</para>
+
+<sect2 id="fonts-aa">
+<title
+>Texto com 'anti-aliasing'</title>
+
+<para
+>As opções de suavização padrão são as usadas a nível do seu sistema e chamam-se <guilabel
+>Configuração do Sistema</guilabel
+>. Você poderá desativar totalmente a suavização se escolher a opção <guilabel
+>Desativado</guilabel
+> na lista.</para>
+
+<para
+>Para usar e configurar a suavização, basta escolher <guilabel
+>Ativo</guilabel
+> no campo à direita de <guilabel
+>Usar o 'anti-aliasing':</guilabel
+>. O botão <guibutton
+>Configurar...</guibutton
+> irá então ficar ativo e, se clicar nele, aparecerá uma janela para configurar a suavização.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Propriedades do 'anti-aliasing'</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="anti-aliasing.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>A janela de propriedades do 'anti-aliasing'</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Marcar a caixa de verificação <guilabel
+>Excluir intervalo:</guilabel
+> irá permitir a você especificar qual intervalo de fontes <emphasis
+>não</emphasis
+> usará anti-aliasing. Este intervalo é especificado pelas duas caixas de verificação, na mesma linha.</para>
+
+<para
+>Você poderá também escolher o método que o &kde; irá usar para criar um visual suavizado nas suas fontes e com que potência será aplicado. Se não conhecer os métodos individuais, você deverá deixar esta opção inalterada.</para>
+
+<!-- FIXME: Cop-out, I need to write a 'hinting and AA for beginners'
+paragraph in here -->
+
+<note
+><para
+>A capacidade de usar ícones e fontes com Anti-Aliasing requer que você possua suporte no servidor X e na &Qt;, além de possuir as fontes apropriadas instaladas e esteja usando as capacidades integradas do servidor X. Se você ainda tiver problemas, entre em contato com a lista de discussão apropriada do &kde;, ou verifique o <acronym
+>FAQ</acronym
+>.</para
+></note>
+
+</sect2>
+
+<sect2 id="fonts-dpi">
+<title
+>DPI das Fontes</title>
+
+<para
+><guilabel
+>Forçar o DPI das fontes:</guilabel
+> propõe um número de DPI ou PPP (pontos por polegada) diferente do existente no seu sistema que é usado por padrão quando esta opção está como <guilabel
+>Desativado</guilabel
+>. Você poderá verificar o número de DPI que o seu servidor X tem configurado, executando o comando <userinput
+>xdpyinfo | grep resolution</userinput
+> num terminal, mudando depois o DPI na lista. Ele será aplicado apenas para os aplicativos executados após esta configuração.</para>
+</sect2>
+
+</sect1>
+
+</article>

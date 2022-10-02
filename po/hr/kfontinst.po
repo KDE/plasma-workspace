@@ -1,0 +1,2840 @@
+# Translation of kfontinst to Croatian
+#
+# Andrej Dundović <adundovi@gmail.com>, 2009.
+# Vesna Rus <rus.vesna@yahoo.com>, 2009.
+# Andrej Dundovic <adundovi@gmail.com>, 2009, 2010.
+# DoDo <DoDoEntertainment@gmail.com>, 2009.
+# Marko Dimjasevic <marko@dimjasevic.net>, 2011.
+# Marko Dimjašević <marko@dimjasevic.net>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: kfontviewpart\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-10 00:46+0000\n"
+"PO-Revision-Date: 2011-04-28 15:17+0200\n"
+"Last-Translator: Marko Dimjašević <marko@dimjasevic.net>\n"
+"Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Andrej Dundović, Nenad Mikša"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "adundovi@gmail.com, DoDoEntertainment@gmail.com"
+
+#: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:956
+#, kde-format
+msgid ""
+"Do you wish to install the font(s) for personal use (only available to you), "
+"or system-wide (available to all users)?"
+msgstr ""
+"Želite li instalirati pismo (pisma) za osobnu upotrebu (dostupno samo vama) "
+"ili za cijeli sustav (dostupno svim korisnicima)?"
+
+#: apps/Installer.cpp:38 kcmfontinst/KCmFontInst.cpp:959
+#, kde-format
+msgid "Where to Install"
+msgstr "Gdje instalirati"
+
+#: apps/Installer.cpp:110
+#, kde-format
+msgid "Font Installer"
+msgstr "Instalater pisama"
+
+#: apps/Installer.cpp:112
+#, kde-format
+msgid "Simple font installer"
+msgstr "Jednostavan instalater pisama"
+
+#: apps/Installer.cpp:114 apps/Printer.cpp:329
+#, kde-format
+msgid "(C) Craig Drummond, 2007"
+msgstr "(C) Craig Drummond, 2007"
+
+#: apps/Installer.cpp:120 apps/Printer.cpp:335
+#, kde-format
+msgid "Makes the dialog transient for an X app specified by winid"
+msgstr "Učini dijalog prolaznim za X aplikaciju označenu od winId-a"
+
+#: apps/Installer.cpp:122
+#, kde-format
+msgid "URL to install"
+msgstr "URL za instalaciju"
+
+#: apps/Printer.cpp:238
+#, kde-format
+msgid "Print"
+msgstr "Ispiši"
+
+#: apps/Printer.cpp:308 kcmfontinst/DuplicatesDialog.cpp:210
+#, fuzzy, kde-format
+#| msgid "Canceling..."
+msgid "Canceling…"
+msgstr "Prekidanje…"
+
+#: apps/Printer.cpp:325
+#, kde-format
+msgid "Font Printer"
+msgstr "Ispisivač pisama"
+
+#: apps/Printer.cpp:327
+#, kde-format
+msgid "Simple font printer"
+msgstr "Jednostavan ispisivač pisama"
+
+#: apps/Printer.cpp:337
+#, kde-format
+msgid "Size index to print fonts"
+msgstr "Promijeni veličinu indeksa da bi ispisao pisma"
+
+#: apps/Printer.cpp:341
+#, kde-format
+msgid ""
+"Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
+"number composed as: <weight><width><slant>"
+msgstr ""
+"Pismo za ispis, određeno kao \"Obitelj,Stil\" gdje je Stil 24-bitni "
+"decimalni broj sastavljen kao: <weight><width><slant>"
+
+#: apps/Printer.cpp:344
+#, kde-format
+msgid "File containing list of fonts to print"
+msgstr "Datoteka sadrži listu pisama za ispis"
+
+#: apps/Printer.cpp:346
+#, kde-format
+msgid "Remove file containing list of fonts to print"
+msgstr "Ukloni datoteku koja sadrži listu pisama za ispis"
+
+#: apps/Viewer.cpp:48
+#, fuzzy, kde-format
+#| msgid "Open all %1 fonts in font viewer?"
+msgid "Open an existing font file"
+msgstr "Otvoriti svih %1 pisama u pregledniku pisama?"
+
+#: apps/Viewer.cpp:49
+#, fuzzy, kde-format
+#| msgid "Print Font Samples"
+msgid "Print font preview"
+msgstr "Ispiši primjerke pisma"
+
+#: apps/Viewer.cpp:66
+#, kde-format
+msgid "Select Font to View"
+msgstr "Odaberite font za pregled"
+
+#: apps/Viewer.cpp:109
+#, kde-format
+msgid "URL to open"
+msgstr "URL za otvoriti"
+
+#: apps/Viewer.cpp:152
+#, kde-format
+msgid "Font Viewer"
+msgstr "Preglednik pisama"
+
+#: apps/Viewer.cpp:154
+#, kde-format
+msgid "Simple font viewer"
+msgstr "Jednostavan preglednik pisama"
+
+#: apps/Viewer.cpp:156
+#, kde-format
+msgid "(C) Craig Drummond, 2004-2007"
+msgstr "(C) Craig Drummond, 2004-2007"
+
+#: kcmfontinst/DuplicatesDialog.cpp:47
+#, kde-format
+msgid "Duplicate Fonts"
+msgstr "Dupliciraj pisma"
+
+#: kcmfontinst/DuplicatesDialog.cpp:77
+#, fuzzy, kde-format
+#| msgid "Scanning for duplicate fonts. Please wait..."
+msgid "Scanning for duplicate fonts. Please wait…"
+msgstr "Traženje za duplikatima pisama. Molim pričekajte…"
+
+#: kcmfontinst/DuplicatesDialog.cpp:96
+#, kde-format
+msgid "No duplicate fonts found."
+msgstr "Nisu nađeni duplikati pisama."
+
+#: kcmfontinst/DuplicatesDialog.cpp:104
+#, kde-format
+msgid "Delete Marked Files"
+msgstr "Izbriši označene datoteke"
+
+#: kcmfontinst/DuplicatesDialog.cpp:106
+#, kde-format
+msgid "%1 duplicate font found."
+msgid_plural "%1 duplicate fonts found."
+msgstr[0] "%1 duplikat pisma nađen."
+msgstr[1] "%1 duplikata pisama nađena."
+msgstr[2] "%1 duplikata pisama nađena."
+
+#: kcmfontinst/DuplicatesDialog.cpp:185
+#, kde-format
+msgid ""
+"Are you sure you wish to delete:\n"
+"%1"
+msgstr ""
+"Jeste li sigurni da želite izbrisati:\n"
+"%1"
+
+#: kcmfontinst/DuplicatesDialog.cpp:186
+#, kde-format
+msgid "Are you sure you wish to delete:"
+msgstr "Jeste li sigurni da želite izbrisati:"
+
+#: kcmfontinst/DuplicatesDialog.cpp:209
+#, kde-format
+msgid "Cancel font scan?"
+msgstr "Prekinuti pretragu pisama?"
+
+#: kcmfontinst/DuplicatesDialog.cpp:370
+#, kde-format
+msgid "Font/File"
+msgstr "Pismo/Datoteka"
+
+#: kcmfontinst/DuplicatesDialog.cpp:372
+#, kde-format
+msgid "Size"
+msgstr "Veličina"
+
+#: kcmfontinst/DuplicatesDialog.cpp:373
+#, kde-format
+msgid "Date"
+msgstr "Datum"
+
+#: kcmfontinst/DuplicatesDialog.cpp:374
+#, kde-format
+msgid "Links To"
+msgstr "Veze prema"
+
+#: kcmfontinst/DuplicatesDialog.cpp:387 kcmfontinst/FontList.cpp:1315
+#, kde-format
+msgid "Open in Font Viewer"
+msgstr "Otvori u pregledniku pisama"
+
+#: kcmfontinst/DuplicatesDialog.cpp:389
+#, kde-format
+msgid "Properties"
+msgstr "Svojstva"
+
+#: kcmfontinst/DuplicatesDialog.cpp:391
+#, kde-format
+msgid "Unmark for Deletion"
+msgstr "Ukloni označene za brisanje"
+
+#: kcmfontinst/DuplicatesDialog.cpp:392
+#, kde-format
+msgid "Mark for Deletion"
+msgstr "Označi za brisanje"
+
+#: kcmfontinst/DuplicatesDialog.cpp:488
+#, fuzzy, kde-format
+#| msgid "Open all %1 fonts in font viewer?"
+msgid "Open font in font viewer?"
+msgid_plural "Open all %1 fonts in font viewer?"
+msgstr[0] "Otvoriti svih %1 pisama u pregledniku pisama?"
+msgstr[1] "Otvoriti svih %1 pisama u pregledniku pisama?"
+msgstr[2] "Otvoriti svih %1 pisama u pregledniku pisama?"
+
+# pmap: =/nom=Obitelj/gen=obitelji/dat=obitelji/aku=obitelj/lok=obitelji/ins=obitelji/_r=m/_b=j/
+#: kcmfontinst/FontFilter.cpp:103
+#, kde-format
+msgid "Family"
+msgstr "Obitelj"
+
+# pmap: =/nom=Stil/gen=stila/dat=stilu/aku=stil/lok=stilu/ins=stilom/_r=m/_b=j/
+#: kcmfontinst/FontFilter.cpp:105
+#, kde-format
+msgid "Style"
+msgstr "Stil"
+
+#: kcmfontinst/FontFilter.cpp:107
+#, kde-format
+msgid "Foundry"
+msgstr "Ljevaonica"
+
+# pmap: =/nom=FontConfig podudaranje/gen=FontConfig podudaranja/dat=FontConfig podudaranju/aku=FontConfig podudaranje/lok=FontConfig podudaranju/ins=FontConfig podudaranjem/_r=s/_b=j/
+#: kcmfontinst/FontFilter.cpp:109
+#, kde-format
+msgid "FontConfig Match"
+msgstr "FontConfig podudaranje"
+
+#: kcmfontinst/FontFilter.cpp:111
+#, fuzzy, kde-format
+#| msgid "Preview Type"
+msgid "File Type"
+msgstr "Pregledni tip"
+
+#: kcmfontinst/FontFilter.cpp:113
+#, fuzzy, kde-format
+#| msgid "Full Name"
+msgid "File Name"
+msgstr "Puno ime"
+
+# pmap: =/nom=Lokacija datoteke/gen=lokacije datoteke/dat=lokaciji datoteke/aku=lokaciju datoteke/lok=lokaciji datoteke/ins=lokacijom datoteke/_r=ž/_b=j/
+#: kcmfontinst/FontFilter.cpp:115
+#, kde-format
+msgid "File Location"
+msgstr "Lokacija datoteke"
+
+#: kcmfontinst/FontFilter.cpp:117
+#, kde-format
+msgid "Writing System"
+msgstr "Sustav pisanja"
+
+#: kcmfontinst/FontFilter.cpp:129
+#, kde-format
+msgid "Set Criteria"
+msgstr "Postavi kriterij"
+
+#: kcmfontinst/FontFilter.cpp:188
+#, kde-format
+msgid "Symbol/Other"
+msgstr "Simbol/Drugo"
+
+#: kcmfontinst/FontFilter.cpp:266 kcmfontinst/FontFilter.cpp:334
+#, kde-format
+msgid "Filter by %1…"
+msgstr ""
+
+#: kcmfontinst/FontList.cpp:554
+#, kde-format
+msgid "Font"
+msgstr "Pismo"
+
+#: kcmfontinst/FontList.cpp:556
+#, kde-format
+msgid "Status"
+msgstr ""
+
+#: kcmfontinst/FontList.cpp:570
+#, kde-format
+msgid ""
+"This column shows the status of the font family, and of the individual font "
+"styles."
+msgstr ""
+"Ovaj stupac prikazuje stanje obitelji pisama i individualnih stilova pisama."
+
+#: kcmfontinst/FontList.cpp:677
+#, kde-format
+msgid ""
+"<p>This list shows your installed fonts. The fonts are grouped by family, "
+"and the number in square brackets represents the number of styles in which "
+"the family is available. e.g.</p><ul><li>Times [4]<ul><li>Regular</"
+"li><li>Bold</li><li>Bold Italic</li><li>Italic</li></ul></li></ul>"
+msgstr ""
+"<p>Ovo popiše Vaša instalirana pisma. Pisma su grupirana u obitelji, a broj "
+"u uglatim zagradama predstavlja broj stilova dostupnih u obitelji, npr.</"
+"p><ul><li>Times [4]<ul><li>Regularni</li><li>Podebljano</li><li>Podebljano "
+"Ukošeno</li><li>Ukošeno</li></ul></li></ul>"
+
+#: kcmfontinst/FontList.cpp:956 kcmfontinst/FontList.cpp:980
+#, fuzzy, kde-format
+#| msgid "...plus %1 more"
+msgid "…plus %1 more"
+msgstr "…plus %1 više"
+
+#: kcmfontinst/FontList.cpp:1007
+#, kde-format
+msgid "%1 [%2]"
+msgstr "%1 [%2]"
+
+#: kcmfontinst/FontList.cpp:1306
+#, kde-format
+msgid "Delete"
+msgstr "Izbriši"
+
+#: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:789
+#: kcmfontinst/KCmFontInst.cpp:1133 kcmfontinst/KCmFontInst.cpp:1157
+#, kde-format
+msgid "Enable"
+msgstr "Omogući"
+
+#: kcmfontinst/FontList.cpp:1309 kcmfontinst/GroupList.cpp:790
+#: kcmfontinst/KCmFontInst.cpp:1134 kcmfontinst/KCmFontInst.cpp:1158
+#, kde-format
+msgid "Disable"
+msgstr "Onemogući"
+
+#: kcmfontinst/FontList.cpp:1313 kcmfontinst/GroupList.cpp:796
+#, fuzzy, kde-format
+#| msgid "Print"
+msgid "Print…"
+msgstr "Ispiši"
+
+#: kcmfontinst/FontList.cpp:1317
+#, kde-format
+msgid "Reload"
+msgstr "Ponovo učitaj"
+
+#: kcmfontinst/FontList.cpp:1716
+#, kde-format
+msgid "Open all %1 fonts in font viewer?"
+msgstr "Otvoriti svih %1 pisama u pregledniku pisama?"
+
+#: kcmfontinst/GroupList.cpp:59
+#, kde-format
+msgid "All Fonts"
+msgstr "Sva pisma"
+
+#: kcmfontinst/GroupList.cpp:62
+#, kde-format
+msgid "Personal Fonts"
+msgstr "Osobna pisma"
+
+#: kcmfontinst/GroupList.cpp:65
+#, kde-format
+msgid "System Fonts"
+msgstr "Pisma sustava"
+
+#: kcmfontinst/GroupList.cpp:68
+#, kde-format
+msgid "Unclassified"
+msgstr "Neklasificirana"
+
+#: kcmfontinst/GroupList.cpp:350
+#, kde-format
+msgid "Group"
+msgstr "Grupa"
+
+#: kcmfontinst/GroupList.cpp:535
+#, kde-format
+msgid ""
+"<p>Do you really want to remove '<b>%1</b>'?</p><p><i>This will only remove "
+"the group, and not the actual fonts.</i></p>"
+msgstr ""
+"<p>Želite li zasita ukloniti '<b>%1</b>'?</p><p><i>Ovo će ukloniti samo "
+"grupu, a ne sama pisma.</i></p>"
+
+#: kcmfontinst/GroupList.cpp:539
+#, kde-format
+msgid "Remove Group"
+msgstr "Ukloni grupu"
+
+#: kcmfontinst/GroupList.cpp:540 kcmfontinst/GroupList.cpp:787
+#, kde-format
+msgid "Remove"
+msgstr "Ukloni"
+
+#: kcmfontinst/GroupList.cpp:540
+#, kde-format
+msgid "Remove group"
+msgstr "Ukloni grupu"
+
+#: kcmfontinst/GroupList.cpp:586
+#, kde-format
+msgid ""
+"<h3>Font Groups</h3><p>This list displays the font groups available on your "
+"system. There are 2 main types of font groups:<ul><li><b>Standard</b> are "
+"special groups used by the font manager.<ul>%1</ul></li><li><b>Custom</b> "
+"are groups created by you. To add a font family to one of these groups "
+"simply drag it from the list of fonts, and drop onto the desired group. To "
+"remove a family from the group, drag the font onto the \"All Fonts\" group.</"
+"li></ul></p>"
+msgstr ""
+"<h3>Grupe pisama</h3><p>Ovaj popis prikazuje grupe pisama dostupne na Vašem "
+"sustavu. Postoje 2 glavna tipa grupe pisama:<ul><li><b>Standardne</b> su "
+"posebne grupe korištene od strane upravitelja pismima.<ul>%1</ul></"
+"li><li><b>Prilagođene</b> su grupe koje ste Vi kreirali. Za dodavanje "
+"obitelji pisama u jednu od ovih grupa jednostavno odvucite je iz popisa "
+"pisama i pustite na željenu grupu. Za micanje obitelji iz grupe, povucite "
+"pismo u grupu \"Svi fontovi\".</li></ul></p>"
+
+#: kcmfontinst/GroupList.cpp:594
+#, kde-format
+msgid ""
+"<li><i>All Fonts</i> contains all the fonts installed on your system.</"
+"li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
+"within a \"Custom\" group.</li>"
+msgstr ""
+"<li><i>Sva pisma</i> sadrži sva pisma instalrana na vaš sustav.</"
+"li><li><i>Neklasificirana</i> sadrži sva pisma koja nisu još bila "
+"postavljena unutar grupe \"Prilagođeno\".</li>"
+
+#: kcmfontinst/GroupList.cpp:597
+#, kde-format
+msgid ""
+"<li><i>All Fonts</i> contains all the fonts installed on your system - both  "
+"\"System\" and \"Personal\".</li><li><i>System</i> contains all fonts that "
+"are installed system-wide (i.e. available to all users).</"
+"li><li><i>Personal</i> contains your personal fonts.</"
+"li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
+"within a \"Custom\" group.</li>"
+msgstr ""
+"<li><i>Sva Pisma</i> sadrži sva pisma instalirana na Vašem sustavu – i "
+"\"Sustavska\" i \"Osobna\".</li><li><i>Sustavska</i> sadrži sva pisma koja "
+"su instalirana na sustav, tj. dostupna su svim korisnicima.</"
+"li><li><i>Osobna</i> sadrži Vaša osobna pisma.</li><li><i>Neklasifirano</i> "
+"sadrži sva pisma koja još uvijek nisu stavljena u grupu \"Prilagođeno\".</li>"
+
+#: kcmfontinst/GroupList.cpp:699
+#, kde-format
+msgid "<qt>A group named <b>'%1'</b> already exists.</qt>"
+msgstr "<qt>Grupa pod imenom <b>'%1'</b> već postoji.</qt>"
+
+#: kcmfontinst/GroupList.cpp:792
+#, fuzzy, kde-format
+#| msgid "Rename..."
+msgid "Rename…"
+msgstr "Preimenuj…"
+
+#: kcmfontinst/GroupList.cpp:801
+#, fuzzy, kde-format
+#| msgid "Export..."
+msgid "Export…"
+msgstr "Izvoz…"
+
+#: kcmfontinst/GroupList.cpp:895
+#, kde-format
+msgid "Add to \"%1\"."
+msgstr "Dodaj na \"%1\"."
+
+#: kcmfontinst/GroupList.cpp:897
+#, kde-format
+msgid "Remove from current group."
+msgstr "Ukloni iz trenutne grupe."
+
+#: kcmfontinst/GroupList.cpp:899
+#, kde-format
+msgid "Move to personal folder."
+msgstr "Premjesti u osobnu mapu."
+
+#: kcmfontinst/GroupList.cpp:901
+#, kde-format
+msgid "Move to system folder."
+msgstr "Premjesti u sistemsku mapu."
+
+#: kcmfontinst/JobRunner.cpp:143
+#, kde-format
+msgid "Skip"
+msgstr "Preskoči"
+
+#: kcmfontinst/JobRunner.cpp:146
+#, kde-format
+msgid "AutoSkip"
+msgstr "Automatski preskoči"
+
+#: kcmfontinst/JobRunner.cpp:191
+#, kde-format
+msgid "<h3>Cancel?</h3><p>Are you sure you wish to cancel?</p>"
+msgstr "<h3>Prekinuti?</h3><p>Jeste li sigurni da želite prekinuti?</p>"
+
+#: kcmfontinst/JobRunner.cpp:203
+#, kde-format
+msgid ""
+"<h3>Finished</h3><p>Please note that any open applications will need to be "
+"restarted in order for any changes to be noticed.</p>"
+msgstr ""
+"<h3>Završeno</h3><p>Molim vas primjetite da je potreban restart bilo koje "
+"otvorene aplikacije da bi ikoja promjena bila zamijećena.</p>"
+
+#: kcmfontinst/JobRunner.cpp:211
+#, kde-format
+msgid "Do not show this message again"
+msgstr "Ne prikazuj više ovu poruku"
+
+#: kcmfontinst/JobRunner.cpp:321
+#, kde-format
+msgid "Installing"
+msgstr "Instaliranje"
+
+#: kcmfontinst/JobRunner.cpp:324
+#, kde-format
+msgid "Uninstalling"
+msgstr "Uklanjanje"
+
+#: kcmfontinst/JobRunner.cpp:327 kcmfontinst/JobRunner.cpp:424
+#, kde-format
+msgid "Enabling"
+msgstr "Omogućavanje"
+
+#: kcmfontinst/JobRunner.cpp:330 kcmfontinst/JobRunner.cpp:428
+#, kde-format
+msgid "Moving"
+msgstr "Premještanje"
+
+#: kcmfontinst/JobRunner.cpp:333
+#, kde-format
+msgid "Updating"
+msgstr "Ažuriranje"
+
+#: kcmfontinst/JobRunner.cpp:337
+#, kde-format
+msgid "Removing"
+msgstr "Uklanjanje"
+
+#: kcmfontinst/JobRunner.cpp:341
+#, kde-format
+msgid "Disabling"
+msgstr "Onemogućavanje"
+
+#: kcmfontinst/JobRunner.cpp:379
+#, fuzzy, kde-format
+#| msgid "Updating font configuration. Please wait..."
+msgid "Updating font configuration. Please wait…"
+msgstr "Ažuriranje postavki pisama. Molim pričekajte…"
+
+#: kcmfontinst/JobRunner.cpp:451
+#, kde-format
+msgid "Unable to start backend."
+msgstr "Nije moguće pokretanje pozadinskog sustava."
+
+#: kcmfontinst/JobRunner.cpp:460
+#, kde-format
+msgid "Backend died, but has been restarted. Please try again."
+msgstr ""
+"Pozadinski sustav se ugasio, ali je ponovno pokrenut. Pokušajte ponovno."
+
+#: kcmfontinst/JobRunner.cpp:621 kcmfontinst/JobRunner.cpp:627
+#, kde-format
+msgid "<h3>Error</h3>"
+msgstr "<h3>Greška</h3>"
+
+#: kcmfontinst/JobRunner.cpp:693
+#, kde-format
+msgid "Failed to download <i>%1</i>"
+msgstr "Nije moguće preuzeti <i>%1</i>"
+
+#: kcmfontinst/JobRunner.cpp:695
+#, kde-format
+msgid "System backend died. Please try again.<br><i>%1</i>"
+msgstr ""
+"Pozadinski sustav se ugasio. Molim da pokušate ponovno.<br /> <i>%1</i>"
+
+#: kcmfontinst/JobRunner.cpp:697
+#, kde-format
+msgid ""
+"<i>%1</i> is a bitmap font, and these have been disabled on your system."
+msgstr "<i>%1</i> je bitmapa pismo, a takva su onemogućena na vašem sustavu."
+
+#: kcmfontinst/JobRunner.cpp:699
+#, kde-format
+msgid ""
+"<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
+"system."
+msgstr ""
+"<i>%1</i> sadrži pismo <b>%2</b>, koje je već instalirano na vaš sustav."
+
+#: kcmfontinst/JobRunner.cpp:701
+#, kde-format
+msgid "<i>%1</i> is not a font."
+msgstr "<i>%1</i> nije mapa."
+
+#: kcmfontinst/JobRunner.cpp:703
+#, kde-format
+msgid "Could not remove all files associated with <i>%1</i>"
+msgstr "Nije moguće ukloniti sve datoteke pridružene <i>%1</i>"
+
+#: kcmfontinst/JobRunner.cpp:705
+#, kde-format
+msgid "Failed to start the system daemon.<br><i>%1</i>"
+msgstr "Pokretanje sistemskog servisa nije uspjelo.<br><i>%1</i>"
+
+#: kcmfontinst/JobRunner.cpp:708 kio/KioFonts.cpp:726
+#, kde-format
+msgid "<i>%1</i> already exists."
+msgstr "<i>%1</i> već postoji."
+
+#: kcmfontinst/JobRunner.cpp:711
+#, kde-format
+msgid "<i>%1</i> does not exist."
+msgstr "<i>%1</i> ne postoji."
+
+#: kcmfontinst/JobRunner.cpp:713
+#, kde-format
+msgid "Permission denied.<br><i>%1</i>"
+msgstr "Zahtjev je odbijen.<br /><i>%1</i>"
+
+#: kcmfontinst/JobRunner.cpp:715
+#, kde-format
+msgid "Unsupported action.<br><i>%1</i>"
+msgstr "Nepodržana radnja.<br><i>%1</i>"
+
+#: kcmfontinst/JobRunner.cpp:717
+#, kde-format
+msgid "Authentication failed.<br><i>%1</i>"
+msgstr "Neuspjelo ovjeravanje.<br><i>%1</i>"
+
+#: kcmfontinst/JobRunner.cpp:719
+#, kde-format
+msgid "Unexpected error while processing: <i>%1</i>"
+msgstr "Neočekivana pogreška prilikom obrade: <i>%1</i>"
+
+#: kcmfontinst/KCmFontInst.cpp:169
+#, fuzzy, kde-format
+#| msgid "Font Management Mode"
+msgid "Font Management"
+msgstr "Način za upravljanje pisama"
+
+#: kcmfontinst/KCmFontInst.cpp:173
+#, kde-format
+msgid "(C) Craig Drummond, 2000 - 2009"
+msgstr "(C) Craig Drummond, 2000 – 2009"
+
+#: kcmfontinst/KCmFontInst.cpp:174
+#, kde-format
+msgid "Craig Drummond"
+msgstr "Craig Drummond"
+
+#: kcmfontinst/KCmFontInst.cpp:174
+#, kde-format
+msgid "Developer and maintainer"
+msgstr "Razvijatelj i održavač"
+
+#: kcmfontinst/KCmFontInst.cpp:202
+#, fuzzy, kde-format
+#| msgid "Create New Group"
+msgid "Create New Group…"
+msgstr "Napravi novu grupu"
+
+#: kcmfontinst/KCmFontInst.cpp:204
+#, fuzzy, kde-format
+#| msgid "Remove Group"
+msgid "Remove Group…"
+msgstr "Ukloni grupu"
+
+#: kcmfontinst/KCmFontInst.cpp:206
+#, fuzzy, kde-format
+#| msgid "Enable Fonts"
+msgid "Enable Fonts in Group…"
+msgstr "Omogući pisma"
+
+#: kcmfontinst/KCmFontInst.cpp:208
+#, fuzzy, kde-format
+#| msgid "Disable Fonts"
+msgid "Disable Fonts in Group…"
+msgstr "Onemogući pisma"
+
+#: kcmfontinst/KCmFontInst.cpp:233
+#, kde-format
+msgid "This displays a preview of the selected font."
+msgstr "Ovo prikazuje pregled odabranih pisama."
+
+#: kcmfontinst/KCmFontInst.cpp:249
+#, fuzzy, kde-format
+#| msgid "Scan for Duplicate Fonts..."
+msgid "Find Duplicates…"
+msgstr "Traži duplikate pisama…"
+
+#: kcmfontinst/KCmFontInst.cpp:249
+#, fuzzy, kde-format
+#| msgid "Scan for Duplicate Fonts..."
+msgid "Scan for Duplicate Fonts…"
+msgstr "Traži duplikate pisama…"
+
+#: kcmfontinst/KCmFontInst.cpp:251
+#, fuzzy, kde-format
+#| msgid "Install..."
+msgid "Install from File…"
+msgstr "Instalacija…"
+
+#: kcmfontinst/KCmFontInst.cpp:251
+#, kde-format
+msgid "Install fonts from a local file"
+msgstr ""
+
+#: kcmfontinst/KCmFontInst.cpp:252
+#, fuzzy, kde-format
+#| msgid "Delete Fonts"
+msgid "Get New Fonts…"
+msgstr "Izbriši pisma"
+
+#: kcmfontinst/KCmFontInst.cpp:253
+#, kde-format
+msgid "Download new fonts"
+msgstr ""
+
+#: kcmfontinst/KCmFontInst.cpp:255
+#, fuzzy, kde-format
+#| msgid "Delete all selected fonts"
+msgid "Delete Selected Fonts…"
+msgstr "Ukloni sva odabrana pisma"
+
+#: kcmfontinst/KCmFontInst.cpp:313
+#, fuzzy, kde-format
+#| msgid "Change Preview Text..."
+msgid "Change Preview Text…"
+msgstr "Promijeni tekstualni pregled…"
+
+#: kcmfontinst/KCmFontInst.cpp:375
+#, kde-format
+msgid ""
+"<h1>Font Installer</h1><p> This module allows you to install TrueType, "
+"Type1, and Bitmap fonts.</p><p>You may also install fonts using Konqueror: "
+"type fonts:/ into Konqueror's location bar and this will display your "
+"installed fonts. To install a font, simply copy one into the folder.</p>"
+msgstr ""
+"<h1>Instalacija pisama</h1><p> Ovaj modul Vam omogućuje instalaciju "
+"TrueType, Type1, i Bitmap pisama.</p><p>Pisma također možete instalirati i "
+"koristeći Konqueror: upišite fonts:/ u Konqueroru lokacijsku traku i to će "
+"prikazati instalirana pisma. Za instalaciju pisma, jednostavno ga kopirajte "
+"u tu mapu.</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:382
+#, kde-format
+msgid ""
+"<h1>Font Installer</h1><p> This module allows you to install TrueType, "
+"Type1, and Bitmap fonts.</p><p>You may also install fonts using Konqueror: "
+"type fonts:/ into Konqueror's location bar and this will display your "
+"installed fonts. To install a font, simply copy it into the appropriate "
+"folder -  \"%1\" for fonts available to just yourself, or  \"%2\" for system-"
+"wide fonts (available to all).</p>"
+msgstr ""
+"<h1>Instalacija pisama</h1><p> Ovaj modul Vam omogućuje instalaciju "
+"TrueType, Type1, i Bitmap pisama.</p><p>Pisma također možete instalirati i "
+"koristeći Konqueror: upišite fonts:/ u Konqueroru lokacijsku traku i to će "
+"prikazati instalirana pisma. Za instalaciju, jednostavno kopirajte pismo u "
+"odgovarajuću mapu – \"%1\" za pisma dostupna samo Vama, ili \"%2\" za "
+"sustavska pisma (dostupne svima).</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:437
+#, kde-format
+msgid "Add Fonts"
+msgstr "Dodaj pisma"
+
+#: kcmfontinst/KCmFontInst.cpp:562
+#, kde-format
+msgid "Failed to save list of fonts to print."
+msgstr "Neuspjelo spremanje liste pisama za ispis."
+
+#: kcmfontinst/KCmFontInst.cpp:583
+#, kde-format
+msgid "Failed to start font printer."
+msgstr "Neuspjelo pokretanje pisača pisama."
+
+#: kcmfontinst/KCmFontInst.cpp:590
+#, kde-format
+msgid ""
+"There are no printable fonts.\n"
+"You can only print non-bitmap and enabled fonts."
+msgstr ""
+"Nema ispisivih pisama.\n"
+"Možete ispisati samo ne-bitmap i omogućena pisma."
+
+#: kcmfontinst/KCmFontInst.cpp:592
+#, kde-format
+msgid "Cannot Print"
+msgstr "Nemoguće ispisati"
+
+#: kcmfontinst/KCmFontInst.cpp:607
+#, kde-format
+msgid "You did not select anything to delete."
+msgstr "Niste odabrali ništa za brisanje."
+
+#: kcmfontinst/KCmFontInst.cpp:607
+#, kde-format
+msgid "Nothing to Delete"
+msgstr "Nema ništa za brisanje"
+
+#: kcmfontinst/KCmFontInst.cpp:622
+#, kde-format
+msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
+msgstr "<p>Želite li zaista izbrisati</p><p>'<b>%1</b>'?</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:625
+#, kde-format
+msgid "Delete Font"
+msgstr "Ukloni pismo"
+
+#: kcmfontinst/KCmFontInst.cpp:632
+#, kde-format
+msgid "Do you really want to delete this font?"
+msgid_plural "Do you really want to delete these %1 fonts?"
+msgstr[0] "Želite li zaista izbrisati ovo %1 pismo?"
+msgstr[1] "Želite li zaista izbrisati ova %1 pisma?"
+msgstr[2] "Želite li zaista izbrisati ovih %1 pisama?"
+
+#: kcmfontinst/KCmFontInst.cpp:634
+#, kde-format
+msgid "Delete Fonts"
+msgstr "Izbriši pisma"
+
+#: kcmfontinst/KCmFontInst.cpp:639
+#, fuzzy, kde-format
+#| msgid "Deleting font(s)..."
+msgid "Deleting font(s)…"
+msgstr "Brisanje pis(a)ma…"
+
+#: kcmfontinst/KCmFontInst.cpp:654
+#, kde-format
+msgid "You did not select anything to move."
+msgstr "Niste odabrali ništa za premjestiti."
+
+#: kcmfontinst/KCmFontInst.cpp:654
+#, kde-format
+msgid "Nothing to Move"
+msgstr "Nema ništa za premjestiti"
+
+#: kcmfontinst/KCmFontInst.cpp:664
+#, fuzzy, kde-format
+#| msgid "<p>Do you really want to move</p><p>'<b>%1</b>'?</p>"
+msgid ""
+"<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
+"%3</i>?</p>"
+msgstr "<p>Želite li zaista premjestiti</p><p>'<b>%1</b>'?</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:669
+#, kde-format
+msgid "Move Font"
+msgstr "Premjesti pismo"
+
+#: kcmfontinst/KCmFontInst.cpp:670 kcmfontinst/KCmFontInst.cpp:682
+#, kde-format
+msgid "Move"
+msgstr "Premjesti"
+
+#: kcmfontinst/KCmFontInst.cpp:675
+#, fuzzy, kde-format
+#| msgid "<p>Do you really want to move</p><p>'<b>%1</b>'?</p>"
+msgid ""
+"<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
+msgid_plural ""
+"<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?</p>"
+msgstr[0] "<p>Želite li zaista premjestiti</p><p>'<b>%1</b>'?</p>"
+msgstr[1] "<p>Želite li zaista premjestiti</p><p>'<b>%1</b>'?</p>"
+msgstr[2] "<p>Želite li zaista premjestiti</p><p>'<b>%1</b>'?</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:681
+#, kde-format
+msgid "Move Fonts"
+msgstr "Premjesti pisma"
+
+#: kcmfontinst/KCmFontInst.cpp:686
+#, fuzzy, kde-format
+#| msgid "Moving font(s)..."
+msgid "Moving font(s)…"
+msgstr "Premještanje pis(a)ma…"
+
+#: kcmfontinst/KCmFontInst.cpp:700
+#, kde-format
+msgid "Export Group"
+msgstr "Izvezi grupu"
+
+#: kcmfontinst/KCmFontInst.cpp:726
+#, kde-format
+msgid "No files?"
+msgstr "Nema datoteka?"
+
+#: kcmfontinst/KCmFontInst.cpp:729
+#, kde-format
+msgid "Failed to open %1 for writing"
+msgstr "Nije uspjelo otvaranje %1 za pisanje"
+
+#: kcmfontinst/KCmFontInst.cpp:749
+#, kde-format
+msgid "Create New Group"
+msgstr "Napravi novu grupu"
+
+#: kcmfontinst/KCmFontInst.cpp:749
+#, fuzzy, kde-format
+#| msgid "Create New Group"
+msgid "Name of new group:"
+msgstr "Napravi novu grupu"
+
+#: kcmfontinst/KCmFontInst.cpp:749
+#, kde-format
+msgid "New Group"
+msgstr "Nova grupa"
+
+#: kcmfontinst/KCmFontInst.cpp:777
+#, kde-format
+msgid "Preview Text"
+msgstr "Pregled teksta"
+
+#: kcmfontinst/KCmFontInst.cpp:777
+#, kde-format
+msgid "Please enter new text:"
+msgstr "Molim vas da upišete novi tekst"
+
+#: kcmfontinst/KCmFontInst.cpp:829
+#, fuzzy, kde-format
+#| msgid "Scanning font list..."
+msgid "Scanning font list…"
+msgstr "Traženje liste pisama…"
+
+#: kcmfontinst/KCmFontInst.cpp:888
+#, kde-format
+msgid "No fonts"
+msgstr "Nema pisama"
+
+#: kcmfontinst/KCmFontInst.cpp:893
+#, kde-format
+msgid "1 Font"
+msgid_plural "%1 Fonts"
+msgstr[0] "%1 pismo"
+msgstr[1] "%1 pisma"
+msgstr[2] "%1 pisama"
+
+#: kcmfontinst/KCmFontInst.cpp:902
+#, fuzzy, kde-format
+#| msgid ""
+#| "<table><tr><td>Enabled fonts:</td><td>%1</td></tr><tr><td>Disabled fonts:"
+#| "</td><td>%2</td></tr><tr><td>Partially enabled fonts:</td><td>%3</td></"
+#| "tr><tr><td>Total fonts:</td><td>%4</td></tr></table>"
+msgid ""
+"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
+"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Partially "
+"enabled:</td><td>%3</td></tr><tr><td align=\"right\">Total:</td><td>%4</td></"
+"tr></table>"
+msgstr ""
+"<table><tr><td>Omogućena pisma:</td><td>%1</td></tr><tr><td>Onemogućena "
+"pisma:</td><td>%2</td></tr><tr><td>Djelomično omogućena pisma:</td><td>%3</"
+"td></tr><tr><td>Ukupno pisama:</td><td>%4</td></tr></table>"
+
+#: kcmfontinst/KCmFontInst.cpp:912
+#, fuzzy, kde-format
+#| msgid ""
+#| "<table><tr><td>Enabled fonts:</td><td>%1</td></tr><tr><td>Disabled fonts:"
+#| "</td><td>%2</td></tr><tr><td>Partially enabled fonts:</td><td>%3</td></"
+#| "tr><tr><td>Total fonts:</td><td>%4</td></tr></table>"
+msgid ""
+"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
+"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Total:</"
+"td><td>%3</td></tr></table>"
+msgstr ""
+"<table><tr><td>Omogućena pisma:</td><td>%1</td></tr><tr><td>Onemogućena "
+"pisma:</td><td>%2</td></tr><tr><td>Djelomično omogućena pisma:</td><td>%3</"
+"td></tr><tr><td>Ukupno pisama:</td><td>%4</td></tr></table>"
+
+#: kcmfontinst/KCmFontInst.cpp:989
+#, fuzzy, kde-format
+#| msgid "Looking for any associated files..."
+msgid "Looking for any associated files…"
+msgstr "Traženje bilo kakvih povezanih datoteka…"
+
+#: kcmfontinst/KCmFontInst.cpp:993
+#, fuzzy, kde-format
+#| msgid "Scanning Files..."
+msgid "Scanning Files…"
+msgstr "Pretraživanje datoteka…"
+
+#: kcmfontinst/KCmFontInst.cpp:994
+#, fuzzy, kde-format
+#| msgid "Looking for additional files to install..."
+msgid "Looking for additional files to install…"
+msgstr "Traženje dodatnih datoteka za instalaciju…"
+
+#: kcmfontinst/KCmFontInst.cpp:1009
+#, kde-format
+msgid "Looking for files associated with %1"
+msgstr "Traženje dodatnih datoteka povezanih s %1"
+
+#: kcmfontinst/KCmFontInst.cpp:1037
+#, fuzzy, kde-format
+#| msgid "Installing font(s)..."
+msgid "Installing font(s)…"
+msgstr "Instalacija pis(a)ma…"
+
+#: kcmfontinst/KCmFontInst.cpp:1102
+#, kde-format
+msgid "You did not select anything to enable."
+msgstr "Niste odabrali ništa za omogućavanje."
+
+#: kcmfontinst/KCmFontInst.cpp:1102
+#, kde-format
+msgid "You did not select anything to disable."
+msgstr "Niste odabrali ništa za onemogućavanje."
+
+#: kcmfontinst/KCmFontInst.cpp:1103
+#, kde-format
+msgid "Nothing to Enable"
+msgstr "Ništa za omogućavanje"
+
+#: kcmfontinst/KCmFontInst.cpp:1103
+#, kde-format
+msgid "Nothing to Disable"
+msgstr "Ništa za onemogućavanje"
+
+#: kcmfontinst/KCmFontInst.cpp:1120
+#, kde-format
+msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
+msgstr "<p>Želite li zaista omogućiti</p><p>'<b>%1</b>'?</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:1122
+#, kde-format
+msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
+msgstr "<p>Želite li zaista onemogućiti</p><p>'<b>%1</b>'?</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:1124
+#, kde-format
+msgid ""
+"<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
+"'<b>%2</b>'?</p>"
+msgstr ""
+"<p>Želite li zaista omogućiti</p><p>'<b>%1</b>', sadržan unutar grupe '<b>"
+"%2</b>'?</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:1128
+#, kde-format
+msgid ""
+"<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
+"'<b>%2</b>'?</p>"
+msgstr ""
+"<p>Želite li zaista onemogućiti</p><p>'<b>%1</b>', sadržan unutar grupe '<b>"
+"%2</b>'?</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:1132 kcmfontinst/KCmFontInst.cpp:1133
+#, kde-format
+msgid "Enable Font"
+msgstr "Omogući pismo"
+
+#: kcmfontinst/KCmFontInst.cpp:1132 kcmfontinst/KCmFontInst.cpp:1134
+#, kde-format
+msgid "Disable Font"
+msgstr "Onemogući pismo"
+
+#: kcmfontinst/KCmFontInst.cpp:1139
+#, kde-format
+msgid "Do you really want to enable this font?"
+msgid_plural "Do you really want to enable these %1 fonts?"
+msgstr[0] "Želite li zaista omogućiti ovo %1 pismo?"
+msgstr[1] "Želite li zaista omogućiti ova %1 pisma?"
+msgstr[2] "Želite li zaista omogućiti ovih %1 pisama?"
+
+#: kcmfontinst/KCmFontInst.cpp:1142
+#, kde-format
+msgid "Do you really want to disable this font?"
+msgid_plural "Do you really want to disable these %1 fonts?"
+msgstr[0] "Želite li zaista onemogućiti ovo %1 pismo?"
+msgstr[1] "Želite li zaista onemogućiti ova %1 pisma?"
+msgstr[2] "Želite li zaista onemogućiti ovih %1 pisama?"
+
+#: kcmfontinst/KCmFontInst.cpp:1145
+#, kde-format
+msgid ""
+"<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
+"</p>"
+msgid_plural ""
+"<p>Do you really want to enable these %1 fonts contained within group '<b>"
+"%2</b>'?</p>"
+msgstr[0] ""
+"<p>Želite li zaista omogućiti ovo %1 pismo sadržano unutar grupe '<b>%2</b>'?"
+"</p>"
+msgstr[1] ""
+"<p>Želite li zaista omogućiti ova %1 pisma sadržana unutar grupe '<b>%2</b>'?"
+"</p>"
+msgstr[2] ""
+"<p>Želite li zaista omogućiti ovih %1 pisama sadržanih unutar grupe '<b>%2</"
+"b>'?</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:1150
+#, kde-format
+msgid ""
+"<p>Do you really want to disable this font contained within group '<b>%2</"
+"b>'?</p>"
+msgid_plural ""
+"<p>Do you really want to disable these %1 fonts contained within group '<b>"
+"%2</b>'?</p>"
+msgstr[0] ""
+"<p>Želite li zaista onemogućiti ovo %1 pismo sadržano unutar grupe '<b>%2</"
+"b>'?</p>"
+msgstr[1] ""
+"<p>Želite li zaista onemogućiti ova %1 pisma sadržana unutar grupe '<b>%2</"
+"b>'?</p>"
+msgstr[2] ""
+"<p>Želite li zaista onemogućiti ovih %1 pisama sadržanih unutar grupe '<b>"
+"%2</b>'?</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:1156 kcmfontinst/KCmFontInst.cpp:1157
+#, kde-format
+msgid "Enable Fonts"
+msgstr "Omogući pisma"
+
+#: kcmfontinst/KCmFontInst.cpp:1156 kcmfontinst/KCmFontInst.cpp:1158
+#, kde-format
+msgid "Disable Fonts"
+msgstr "Onemogući pisma"
+
+#: kcmfontinst/KCmFontInst.cpp:1164
+#, fuzzy, kde-format
+#| msgid "Enabling font(s)..."
+msgid "Enabling font(s)…"
+msgstr "Omogućavanje pis(a)ma…"
+
+#: kcmfontinst/KCmFontInst.cpp:1166
+#, fuzzy, kde-format
+#| msgid "Disabling font(s)..."
+msgid "Disabling font(s)…"
+msgstr "Onemogućavanje pis(a)ma…"
+
+#: kcmfontinst/PrintDialog.cpp:21
+#, kde-format
+msgid "Print Font Samples"
+msgstr "Ispiši primjerke pisma"
+
+#: kcmfontinst/PrintDialog.cpp:37
+#, kde-format
+msgid "Select size to print font:"
+msgstr "Odaberi veličinu za ispis pisma:"
+
+#: kcmfontinst/PrintDialog.cpp:41
+#, kde-format
+msgid "Waterfall"
+msgstr "Vodopad"
+
+#: kcmfontinst/PrintDialog.cpp:42
+#, kde-format
+msgid "12pt"
+msgstr "12pt"
+
+#: kcmfontinst/PrintDialog.cpp:43
+#, kde-format
+msgid "18pt"
+msgstr "18pt"
+
+#: kcmfontinst/PrintDialog.cpp:44
+#, kde-format
+msgid "24pt"
+msgstr "24pt"
+
+#: kcmfontinst/PrintDialog.cpp:45
+#, kde-format
+msgid "36pt"
+msgstr "36pt"
+
+#: kcmfontinst/PrintDialog.cpp:46
+#, kde-format
+msgid "48pt"
+msgstr "48pt"
+
+#: kio/KioFonts.cpp:208
+#, kde-format
+msgid "Can only install fonts to either \"%1\" or \"%2\"."
+msgstr "Moguće je instalirati samo pisma \"%1\" ili \"%2\"."
+
+#: kio/KioFonts.cpp:211
+#, kde-format
+msgid ""
+"You cannot install a fonts package directly.\n"
+"Please extract %1, and install the components individually."
+msgstr ""
+"Ne možete izravno instalirati paket pisama.\n"
+"Molim raspakirajte %1, te zatim instalirajte pisma pojedinačno."
+
+#: kio/KioFonts.cpp:439
+#, kde-format
+msgid "Cannot copy fonts"
+msgstr "Nije moguće kopirati pisma"
+
+#: kio/KioFonts.cpp:444
+#, kde-format
+msgid "Cannot move fonts"
+msgstr "Nije moguće premjestiti pisma"
+
+#: kio/KioFonts.cpp:455
+#, kde-format
+msgid "Only fonts may be deleted."
+msgstr "Samo pisma mogu biti izbrisana."
+
+#: kio/KioFonts.cpp:457
+#, kde-format
+msgid "Can only remove fonts from either \"%1\" or \"%2\"."
+msgstr "Moguće je samo ukloniti pisma od \"%1\" ili \"%2\"."
+
+#: kio/KioFonts.cpp:484
+#, kde-format
+msgid "Please specify \"%1\" or \"%2\"."
+msgstr "Molim da odredite \"%1\" ili \"%2\"."
+
+#: kio/KioFonts.cpp:504
+#, kde-format
+msgid "No special methods supported."
+msgstr "Nisu podržane posebne metode."
+
+#: kio/KioFonts.cpp:578
+#, kde-format
+msgid "Fonts"
+msgstr "Pisma"
+
+#: kio/KioFonts.cpp:707
+#, kde-format
+msgid "Failed to start the system daemon"
+msgstr "Pokretanje sistemskog servisa nije uspjelo"
+
+#: kio/KioFonts.cpp:710
+#, kde-format
+msgid "Backend died"
+msgstr "Pozadinski sustav se ugasio"
+
+#: kio/KioFonts.cpp:713
+#, kde-format
+msgid "%1 is a bitmap font, and these have been disabled on your system."
+msgstr "%1 je bitmapsko pismo, a takva su onemogućena na vašem sustavu."
+
+#: kio/KioFonts.cpp:716
+#, kde-format
+msgid ""
+"%1 contains the font <b>%2</b>, which is already installed on your system."
+msgstr "%1 sadrži pismo <b>%2</b>, koje je već instalirano na vaš sustav."
+
+#: kio/KioFonts.cpp:719
+#, kde-format
+msgid "%1 is not a font."
+msgstr "%1 nije pismo."
+
+#: kio/KioFonts.cpp:722
+#, kde-format
+msgid "Could not remove all files associated with %1"
+msgstr "Nije moguće ukloniti sve datoteke pridružene %1"
+
+#: lib/Fc.cpp:407 lib/KfiConstants.h:107
+#, kde-format
+msgid "Unknown"
+msgstr "Nepoznato"
+
+#: lib/FcEngine.cpp:858
+#, kde-format
+msgctxt "First letter of the alphabet (in upper then lower case)"
+msgid "Aa"
+msgstr "Aa"
+
+#: lib/FcEngine.cpp:860
+#, kde-format
+msgctxt ""
+"All letters of the alphabet (in upper/lower case pairs), followed by numbers"
+msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
+msgstr "AaBbCcČčĆćDdĐđEeFfGgHhIiJjKkLlMmNnOoPpRrSsŠšTtUuVvZzŽž0123456789"
+
+#: lib/FcEngine.cpp:1022
+#, kde-format
+msgid "No characters found."
+msgstr "Znakovi nisu nađeni."
+
+#: lib/FcEngine.cpp:1060
+#, kde-format
+msgctxt "A sentence that uses all of the letters of the alphabet"
+msgid "The quick brown fox jumps over the lazy dog"
+msgstr "The quick brown fox jumps over the lazy dog (šđčćž ŠĐČĆŽ)"
+
+#: lib/FcEngine.cpp:1065
+#, kde-format
+msgctxt "All of the letters of the alphabet, uppercase"
+msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+msgstr "ABCčćDđEFGHIJKLMNOPQRSšTUVWXYZž"
+
+#: lib/FcEngine.cpp:1070
+#, kde-format
+msgctxt "All of the letters of the alphabet, lowercase"
+msgid "abcdefghijklmnopqrstuvwxyz"
+msgstr "abcčćdđefghijklmnopqrsštuvwxyzž"
+
+#: lib/FcEngine.cpp:1075
+#, kde-format
+msgctxt "Numbers and characters"
+msgid "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
+msgstr "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
+
+#: lib/FcEngine.cpp:1473
+#, kde-format
+msgid "ERROR: Could not determine font's name."
+msgstr "GREŠKA: Nije moguće odrediti ime pisma."
+
+#: lib/FcEngine.cpp:1476
+#, kde-format
+msgid "%2 [1 pixel]"
+msgid_plural "%2 [%1 pixels]"
+msgstr[0] "%2 [%1 piksel]"
+msgstr[1] "%2 [%1 piksela]"
+msgstr[2] "%2 [%1 piksela]"
+
+#: lib/KfiConstants.h:22
+msgid "Personal"
+msgstr "Osobni"
+
+#: lib/KfiConstants.h:23
+msgid "System"
+msgstr "Sustavski"
+
+#: lib/KfiConstants.h:24
+msgid "All"
+msgstr "Sve"
+
+#: lib/KfiConstants.h:38
+msgid "Administrator"
+msgstr "Administrator"
+
+#: lib/KfiConstants.h:74
+msgid "Thin"
+msgstr "Tanko"
+
+#: lib/KfiConstants.h:75
+msgid "Extra Light"
+msgstr "Ekstra lagano"
+
+#: lib/KfiConstants.h:76
+msgid "Ultra Light"
+msgstr "Vrlo lagano"
+
+#: lib/KfiConstants.h:77
+msgid "Light"
+msgstr "Svijetao"
+
+#: lib/KfiConstants.h:78
+msgid "Regular"
+msgstr "Običan"
+
+#: lib/KfiConstants.h:79 lib/KfiConstants.h:97
+msgid "Normal"
+msgstr "Normalno"
+
+#: lib/KfiConstants.h:80
+msgid "Medium"
+msgstr "Srednje"
+
+#: lib/KfiConstants.h:81
+msgid "Demi Bold"
+msgstr "Polupodebljano"
+
+#: lib/KfiConstants.h:82
+msgid "Semi Bold"
+msgstr "Polupodebljano"
+
+#: lib/KfiConstants.h:83
+msgid "Bold"
+msgstr "Podebljano"
+
+#: lib/KfiConstants.h:84
+msgid "Extra Bold"
+msgstr "Jače podebljano"
+
+#: lib/KfiConstants.h:85
+msgid "Ultra Bold"
+msgstr "Jako podebljano"
+
+#: lib/KfiConstants.h:86
+msgid "Black"
+msgstr "Crna"
+
+#: lib/KfiConstants.h:87
+msgid "Heavy"
+msgstr "Jako"
+
+#: lib/KfiConstants.h:89
+msgid "Roman"
+msgstr "Roman"
+
+#: lib/KfiConstants.h:90
+msgid "Italic"
+msgstr "Kurziv"
+
+#: lib/KfiConstants.h:91
+msgid "Oblique"
+msgstr "Nakrivljeno"
+
+#: lib/KfiConstants.h:93
+msgid "Ultra Condensed"
+msgstr "Ultra sabijeno"
+
+#: lib/KfiConstants.h:94
+msgid "Extra Condensed"
+msgstr "Extra sabijeno"
+
+#: lib/KfiConstants.h:95
+msgid "Condensed"
+msgstr "Sabijeno"
+
+#: lib/KfiConstants.h:96
+msgid "Semi Condensed"
+msgstr "Polusabijeno"
+
+#: lib/KfiConstants.h:98
+msgid "Semi Expanded"
+msgstr "Poluprošireno"
+
+#: lib/KfiConstants.h:99
+msgid "Expanded"
+msgstr "Proširen"
+
+#: lib/KfiConstants.h:100
+msgid "Extra Expanded"
+msgstr "Extra prošireno"
+
+#: lib/KfiConstants.h:101
+msgid "Ultra Expanded"
+msgstr "Vrlo proširen"
+
+#: lib/KfiConstants.h:103
+msgid "Monospaced"
+msgstr "S jednakim razmakom (monospaced)"
+
+#: lib/KfiConstants.h:104
+msgid "Charcell"
+msgstr "Znakovna ćelija"
+
+#: lib/KfiConstants.h:105
+msgid "Proportional"
+msgstr "Proporcionalno"
+
+#: viewpart/CharTip.cpp:42
+#, kde-format
+msgid "Other, Control"
+msgstr "Ostalo, upravljanje"
+
+#: viewpart/CharTip.cpp:44
+#, kde-format
+msgid "Other, Format"
+msgstr "Ostalo, oblik"
+
+#: viewpart/CharTip.cpp:46
+#, kde-format
+msgid "Other, Not Assigned"
+msgstr "Ostalo, nedodijeljeno"
+
+#: viewpart/CharTip.cpp:48
+#, kde-format
+msgid "Other, Private Use"
+msgstr "Drugo, privatno korištenje"
+
+#: viewpart/CharTip.cpp:50
+#, kde-format
+msgid "Other, Surrogate"
+msgstr "Drugo, nadomjestak"
+
+#: viewpart/CharTip.cpp:52
+#, kde-format
+msgid "Letter, Lowercase"
+msgstr "Slovo, malo slovo"
+
+#: viewpart/CharTip.cpp:54
+#, kde-format
+msgid "Letter, Modifier"
+msgstr "Slovo, izmjena"
+
+#: viewpart/CharTip.cpp:56
+#, kde-format
+msgid "Letter, Other"
+msgstr "Slovo, ostalo"
+
+#: viewpart/CharTip.cpp:58
+#, kde-format
+msgid "Letter, Titlecase"
+msgstr "Slovo, naslovno"
+
+#: viewpart/CharTip.cpp:60
+#, kde-format
+msgid "Letter, Uppercase"
+msgstr "Slovo, veliko slovo"
+
+#: viewpart/CharTip.cpp:62
+#, kde-format
+msgid "Mark, Spacing Combining"
+msgstr "Oznaka, kombiniravši razmake"
+
+#: viewpart/CharTip.cpp:64
+#, kde-format
+msgid "Mark, Enclosing"
+msgstr "Oznaka, ograđivanje"
+
+#: viewpart/CharTip.cpp:66
+#, kde-format
+msgid "Mark, Non-Spacing"
+msgstr "Oznaka, bez razmaka"
+
+#: viewpart/CharTip.cpp:68
+#, kde-format
+msgid "Number, Decimal Digit"
+msgstr "Broj, decimalne znamenke"
+
+#: viewpart/CharTip.cpp:70
+#, kde-format
+msgid "Number, Letter"
+msgstr "Broj, slovo"
+
+#: viewpart/CharTip.cpp:72
+#, kde-format
+msgid "Number, Other"
+msgstr "Broj, ostalo"
+
+#: viewpart/CharTip.cpp:74
+#, kde-format
+msgid "Punctuation, Connector"
+msgstr "Interpunkcija, spojnica"
+
+#: viewpart/CharTip.cpp:76
+#, kde-format
+msgid "Punctuation, Dash"
+msgstr "Interpunkcija, crta"
+
+#: viewpart/CharTip.cpp:78
+#, kde-format
+msgid "Punctuation, Close"
+msgstr "Interpunkcija, kraj"
+
+#: viewpart/CharTip.cpp:80
+#, kde-format
+msgid "Punctuation, Final Quote"
+msgstr "Interpunkcija, završni navodnik"
+
+#: viewpart/CharTip.cpp:82
+#, kde-format
+msgid "Punctuation, Initial Quote"
+msgstr "Interpunkcija, početni navodnik"
+
+#: viewpart/CharTip.cpp:84
+#, kde-format
+msgid "Punctuation, Other"
+msgstr "Interpunkcija, ostalo"
+
+#: viewpart/CharTip.cpp:86
+#, kde-format
+msgid "Punctuation, Open"
+msgstr "Interpunkcija, otvoren"
+
+#: viewpart/CharTip.cpp:88
+#, kde-format
+msgid "Symbol, Currency"
+msgstr "Simboli, valute"
+
+#: viewpart/CharTip.cpp:90
+#, kde-format
+msgid "Symbol, Modifier"
+msgstr "Simbol, modifikator"
+
+#: viewpart/CharTip.cpp:92
+#, kde-format
+msgid "Symbol, Math"
+msgstr "Simbol, matematički"
+
+#: viewpart/CharTip.cpp:94
+#, kde-format
+msgid "Symbol, Other"
+msgstr "Simboli, ostali"
+
+#: viewpart/CharTip.cpp:96
+#, kde-format
+msgid "Separator, Line"
+msgstr "Razdjelnik, linija"
+
+#: viewpart/CharTip.cpp:98
+#, kde-format
+msgid "Separator, Paragraph"
+msgstr "Razdjelnik, paragraf"
+
+#: viewpart/CharTip.cpp:100
+#, kde-format
+msgid "Separator, Space"
+msgstr "Razdjelnik, razmak"
+
+#: viewpart/CharTip.cpp:152
+#, kde-format
+msgid "Category"
+msgstr "Kategorija"
+
+#: viewpart/CharTip.cpp:153
+#, kde-format
+msgid "UCS-4"
+msgstr "UCS-4"
+
+#: viewpart/CharTip.cpp:156
+#, kde-format
+msgid "UTF-16"
+msgstr "UTF-16"
+
+#: viewpart/CharTip.cpp:167
+#, kde-format
+msgid "UTF-8"
+msgstr "UTF-8"
+
+#: viewpart/CharTip.cpp:184
+#, kde-format
+msgid "XML Decimal Entity"
+msgstr "XML decimalni zapis"
+
+#: viewpart/FontViewPart.cpp:85
+#, kde-format
+msgid "Show Face:"
+msgstr "Prikaži lice:"
+
+#: viewpart/FontViewPart.cpp:88
+#, fuzzy, kde-format
+#| msgid "Installing"
+msgid "Install…"
+msgstr "Instaliranje"
+
+#: viewpart/FontViewPart.cpp:109
+#, fuzzy, kde-format
+#| msgid "Change Text..."
+msgid "Change Text…"
+msgstr "Promijeni tekst…"
+
+#: viewpart/FontViewPart.cpp:333
+#, kde-format
+msgid "Could not read font."
+msgstr "Nije moguće očitati pismo."
+
+#: viewpart/FontViewPart.cpp:385
+#, kde-format
+msgid "Preview String"
+msgstr "Pregledni string"
+
+#: viewpart/FontViewPart.cpp:385
+#, kde-format
+msgid "Please enter new string:"
+msgstr "Unesite novi string:"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: viewpart/kfontviewpart.rc:4
+#, kde-format
+msgid "&Main Toolbar"
+msgstr "&Glavna alatna traka"
+
+#: viewpart/PreviewSelectAction.cpp:13
+#, kde-format
+msgid "Preview Type"
+msgstr "Pregledni tip"
+
+#: viewpart/PreviewSelectAction.cpp:31
+#, kde-format
+msgid "Standard Preview"
+msgstr "Standardni pregled"
+
+#: viewpart/PreviewSelectAction.cpp:32
+#, kde-format
+msgid "All Characters"
+msgstr "Svi znakovi"
+
+#: viewpart/PreviewSelectAction.cpp:40
+#, kde-format
+msgid "Unicode Block: %1"
+msgstr "Blok univerzalnog skupa znakova: %1"
+
+#: viewpart/PreviewSelectAction.cpp:44
+#, kde-format
+msgid "Unicode Script: %1"
+msgstr "Skripta univerzalnog skupa znakova: %1"
+
+#: viewpart/UnicodeBlocks.h:17
+msgid "Basic Latin"
+msgstr "Osnovni latinski"
+
+#: viewpart/UnicodeBlocks.h:18
+msgid "Latin-1 Supplement"
+msgstr "Latinski-1 dopunjeno"
+
+#: viewpart/UnicodeBlocks.h:19
+msgid "Latin Extended-A"
+msgstr "Latinski prošireni-A"
+
+#: viewpart/UnicodeBlocks.h:20
+msgid "Latin Extended-B"
+msgstr "Latin Extended-B"
+
+#: viewpart/UnicodeBlocks.h:21
+msgid "IPA Extensions"
+msgstr "IPA nastavci"
+
+#: viewpart/UnicodeBlocks.h:22
+msgid "Spacing Modifier Letters"
+msgstr "Slova promjenljivog razmaka"
+
+#: viewpart/UnicodeBlocks.h:23
+msgid "Combining Diacritical Marks"
+msgstr "Kombinirane dijakritičke oznake"
+
+#: viewpart/UnicodeBlocks.h:24
+msgid "Greek and Coptic"
+msgstr "Grčki i koptski"
+
+#: viewpart/UnicodeBlocks.h:25 viewpart/UnicodeScripts.h:29
+msgid "Cyrillic"
+msgstr "Ćirilica"
+
+#: viewpart/UnicodeBlocks.h:26
+msgid "Cyrillic Supplement"
+msgstr "Ćirilica dopunjeno"
+
+#: viewpart/UnicodeBlocks.h:27 viewpart/UnicodeScripts.h:16
+msgid "Armenian"
+msgstr "Armenski"
+
+#: viewpart/UnicodeBlocks.h:28 viewpart/UnicodeScripts.h:42
+msgid "Hebrew"
+msgstr "Hebrejski"
+
+#: viewpart/UnicodeBlocks.h:29 viewpart/UnicodeScripts.h:15
+msgid "Arabic"
+msgstr "Arapski"
+
+#: viewpart/UnicodeBlocks.h:30 viewpart/UnicodeScripts.h:69
+msgid "Syriac"
+msgstr "Sirijski"
+
+#: viewpart/UnicodeBlocks.h:31
+msgid "Arabic Supplement"
+msgstr "Arapski dopunjeno"
+
+#: viewpart/UnicodeBlocks.h:32 viewpart/UnicodeScripts.h:75
+msgid "Thaana"
+msgstr "Thaana"
+
+#: viewpart/UnicodeBlocks.h:33
+msgid "NKo"
+msgstr "NKo"
+
+#: viewpart/UnicodeBlocks.h:34 viewpart/UnicodeScripts.h:31
+msgid "Devanagari"
+msgstr "Devanagari"
+
+#: viewpart/UnicodeBlocks.h:35 viewpart/UnicodeScripts.h:18
+msgid "Bengali"
+msgstr "Bengalski"
+
+#: viewpart/UnicodeBlocks.h:36 viewpart/UnicodeScripts.h:38
+msgid "Gurmukhi"
+msgstr "Gurmuki"
+
+#: viewpart/UnicodeBlocks.h:37 viewpart/UnicodeScripts.h:37
+msgid "Gujarati"
+msgstr "Gudžaratski"
+
+#: viewpart/UnicodeBlocks.h:38 viewpart/UnicodeScripts.h:61
+msgid "Oriya"
+msgstr "Oriyanski"
+
+#: viewpart/UnicodeBlocks.h:39 viewpart/UnicodeScripts.h:73
+msgid "Tamil"
+msgstr "Tamilski"
+
+#: viewpart/UnicodeBlocks.h:40 viewpart/UnicodeScripts.h:74
+msgid "Telugu"
+msgstr "Telugu"
+
+#: viewpart/UnicodeBlocks.h:41 viewpart/UnicodeScripts.h:45
+msgid "Kannada"
+msgstr "Kannadski"
+
+#: viewpart/UnicodeBlocks.h:42 viewpart/UnicodeScripts.h:53
+msgid "Malayalam"
+msgstr "Malajalamski"
+
+#: viewpart/UnicodeBlocks.h:43 viewpart/UnicodeScripts.h:67
+msgid "Sinhala"
+msgstr "Sinhalski"
+
+#: viewpart/UnicodeBlocks.h:44 viewpart/UnicodeScripts.h:76
+msgid "Thai"
+msgstr "Tajlandski"
+
+#: viewpart/UnicodeBlocks.h:45 viewpart/UnicodeScripts.h:49
+msgid "Lao"
+msgstr "Lao"
+
+#: viewpart/UnicodeBlocks.h:46 viewpart/UnicodeScripts.h:77
+msgid "Tibetan"
+msgstr "Tibetanski"
+
+#: viewpart/UnicodeBlocks.h:47 viewpart/UnicodeScripts.h:55
+msgid "Myanmar"
+msgstr "Mjanmarski"
+
+#: viewpart/UnicodeBlocks.h:48 viewpart/UnicodeScripts.h:33
+msgid "Georgian"
+msgstr "Gruzijski"
+
+#: viewpart/UnicodeBlocks.h:49
+msgid "Hangul Jamo"
+msgstr "Hangul Jamo"
+
+#: viewpart/UnicodeBlocks.h:50 viewpart/UnicodeScripts.h:32
+msgid "Ethiopic"
+msgstr "Etiopski"
+
+#: viewpart/UnicodeBlocks.h:51
+msgid "Ethiopic Supplement"
+msgstr "Etiopski dopunjeno"
+
+#: viewpart/UnicodeBlocks.h:52 viewpart/UnicodeScripts.h:24
+msgid "Cherokee"
+msgstr "Cherokee"
+
+#: viewpart/UnicodeBlocks.h:53
+msgid "Unified Canadian Aboriginal Syllabics"
+msgstr "Ujedinjeni Kanadski Aboridžinski slogovi"
+
+#: viewpart/UnicodeBlocks.h:54 viewpart/UnicodeScripts.h:58
+msgid "Ogham"
+msgstr "Ogham"
+
+#: viewpart/UnicodeBlocks.h:55 viewpart/UnicodeScripts.h:65
+msgid "Runic"
+msgstr "Runic"
+
+#: viewpart/UnicodeBlocks.h:56 viewpart/UnicodeScripts.h:70
+msgid "Tagalog"
+msgstr "Tamilsko"
+
+#: viewpart/UnicodeBlocks.h:57 viewpart/UnicodeScripts.h:41
+msgid "Hanunoo"
+msgstr "Hansko"
+
+#: viewpart/UnicodeBlocks.h:58 viewpart/UnicodeScripts.h:22
+msgid "Buhid"
+msgstr "Buhid"
+
+#: viewpart/UnicodeBlocks.h:59 viewpart/UnicodeScripts.h:71
+msgid "Tagbanwa"
+msgstr "Tagbanwa"
+
+#: viewpart/UnicodeBlocks.h:60 viewpart/UnicodeScripts.h:48
+msgid "Khmer"
+msgstr "Kmerski"
+
+#: viewpart/UnicodeBlocks.h:61 viewpart/UnicodeScripts.h:54
+msgid "Mongolian"
+msgstr "Mongolski"
+
+#: viewpart/UnicodeBlocks.h:62 viewpart/UnicodeScripts.h:51
+msgid "Limbu"
+msgstr "Limbu"
+
+#: viewpart/UnicodeBlocks.h:63 viewpart/UnicodeScripts.h:72
+msgid "Tai Le"
+msgstr "Tai Le"
+
+#: viewpart/UnicodeBlocks.h:64 viewpart/UnicodeScripts.h:56
+msgid "New Tai Lue"
+msgstr "Novi Thai Lue"
+
+#: viewpart/UnicodeBlocks.h:65
+msgid "Khmer Symbols"
+msgstr "Kmerski simboli"
+
+#: viewpart/UnicodeBlocks.h:66 viewpart/UnicodeScripts.h:21
+msgid "Buginese"
+msgstr "Buginski"
+
+#: viewpart/UnicodeBlocks.h:67 viewpart/UnicodeScripts.h:17
+msgid "Balinese"
+msgstr "Balineski"
+
+#: viewpart/UnicodeBlocks.h:68
+msgid "Phonetic Extensions"
+msgstr "Fonetska proširenja"
+
+#: viewpart/UnicodeBlocks.h:69
+msgid "Phonetic Extensions Supplement"
+msgstr "Fonetska proširenja, dopuna"
+
+#: viewpart/UnicodeBlocks.h:70
+msgid "Combining Diacritical Marks Supplement"
+msgstr "Kombinirane dijakritičke oznake, dopuna"
+
+#: viewpart/UnicodeBlocks.h:71
+msgid "Latin Extended Additional"
+msgstr "Latinski dodatno prošireni"
+
+#: viewpart/UnicodeBlocks.h:72
+msgid "Greek Extended"
+msgstr "Grčki prošireni"
+
+#: viewpart/UnicodeBlocks.h:73
+msgid "General Punctuation"
+msgstr "Opći interpunkcijski znakovi"
+
+#: viewpart/UnicodeBlocks.h:74
+msgid "Superscripts and Subscripts"
+msgstr "Eksponenti i indeksi"
+
+#: viewpart/UnicodeBlocks.h:75
+msgid "Currency Symbols"
+msgstr "Simboli valuta"
+
+#: viewpart/UnicodeBlocks.h:76
+msgid "Combining Diacritical Marks for Symbols"
+msgstr "Kombinirane dijakritičke oznake za simbole"
+
+#: viewpart/UnicodeBlocks.h:77
+msgid "Letter-Like Symbols"
+msgstr "Slovčani simboli"
+
+#: viewpart/UnicodeBlocks.h:78
+msgid "Number Forms"
+msgstr "Brojčani oblici"
+
+#: viewpart/UnicodeBlocks.h:79
+msgid "Arrows"
+msgstr "Strelice"
+
+#: viewpart/UnicodeBlocks.h:80
+msgid "Mathematical Operators"
+msgstr "Matematički operatori"
+
+#: viewpart/UnicodeBlocks.h:81
+msgid "Miscellaneous Technical"
+msgstr "Razni tehnički"
+
+#: viewpart/UnicodeBlocks.h:82
+msgid "Control Pictures"
+msgstr "Upravljanje slikama"
+
+#: viewpart/UnicodeBlocks.h:83
+msgid "Optical Character Recognition"
+msgstr "Optičko prepoznavanje znakova (OCR)"
+
+#: viewpart/UnicodeBlocks.h:84
+msgid "Enclosed Alphanumerics"
+msgstr "Ograđeni alfanumerici"
+
+#: viewpart/UnicodeBlocks.h:85
+msgid "Box Drawing"
+msgstr "Critanje kutije"
+
+#: viewpart/UnicodeBlocks.h:86
+msgid "Block Elements"
+msgstr "Blokovni elementi"
+
+#: viewpart/UnicodeBlocks.h:87
+msgid "Geometric Shapes"
+msgstr "Geometrijski oblici"
+
+#: viewpart/UnicodeBlocks.h:88
+msgid "Miscellaneous Symbols"
+msgstr "Razni simboli"
+
+#: viewpart/UnicodeBlocks.h:89
+msgid "Dingbats"
+msgstr "Dingbati"
+
+#: viewpart/UnicodeBlocks.h:90
+msgid "Miscellaneous Mathematical Symbols-A"
+msgstr "Razni matematički simboli-A"
+
+#: viewpart/UnicodeBlocks.h:91
+msgid "Supplemental Arrows-A"
+msgstr "Dodatne strelice-A"
+
+#: viewpart/UnicodeBlocks.h:92
+msgid "Braille Patterns"
+msgstr "Braille uzorci"
+
+#: viewpart/UnicodeBlocks.h:93
+msgid "Supplemental Arrows-B"
+msgstr "Dopunjene strelice-B"
+
+#: viewpart/UnicodeBlocks.h:94
+msgid "Miscellaneous Mathematical Symbols-B"
+msgstr "Razni matematički simboli-B"
+
+#: viewpart/UnicodeBlocks.h:95
+msgid "Supplemental Mathematical Operators"
+msgstr "Dopunjeni matematički operatori"
+
+#: viewpart/UnicodeBlocks.h:96
+msgid "Miscellaneous Symbols and Arrows"
+msgstr "Razni simboli i strelice"
+
+#: viewpart/UnicodeBlocks.h:97 viewpart/UnicodeScripts.h:34
+msgid "Glagolitic"
+msgstr "Glagoljski"
+
+#: viewpart/UnicodeBlocks.h:98
+msgid "Latin Extended-C"
+msgstr "Latinski prošireni-C"
+
+#: viewpart/UnicodeBlocks.h:99 viewpart/UnicodeScripts.h:26
+msgid "Coptic"
+msgstr "Koptski"
+
+#: viewpart/UnicodeBlocks.h:100
+msgid "Georgian Supplement"
+msgstr "Gruzijski dopunjeno"
+
+#: viewpart/UnicodeBlocks.h:101 viewpart/UnicodeScripts.h:78
+msgid "Tifinagh"
+msgstr "Tifinaški"
+
+#: viewpart/UnicodeBlocks.h:102
+msgid "Ethiopic Extended"
+msgstr "Etiopski prošireni"
+
+#: viewpart/UnicodeBlocks.h:103
+msgid "Supplemental Punctuation"
+msgstr "Dopunjene interpunkcije"
+
+#: viewpart/UnicodeBlocks.h:104
+msgid "CJK Radicals Supplement"
+msgstr "CJK korjeni dopunjeno"
+
+#: viewpart/UnicodeBlocks.h:105
+msgid "Kangxi Radicals"
+msgstr "Kangxi korjeni"
+
+#: viewpart/UnicodeBlocks.h:106
+msgid "Ideographic Description Characters"
+msgstr "Ideografski opisni znakovi"
+
+#: viewpart/UnicodeBlocks.h:107
+msgid "CJK Symbols and Punctuation"
+msgstr "CJK simboli i interpunkcija"
+
+#: viewpart/UnicodeBlocks.h:108 viewpart/UnicodeScripts.h:43
+msgid "Hiragana"
+msgstr "Hiragana"
+
+#: viewpart/UnicodeBlocks.h:109 viewpart/UnicodeScripts.h:46
+msgid "Katakana"
+msgstr "Katakana"
+
+#: viewpart/UnicodeBlocks.h:110 viewpart/UnicodeScripts.h:19
+msgid "Bopomofo"
+msgstr "Bopomofo"
+
+#: viewpart/UnicodeBlocks.h:111
+msgid "Hangul Compatibility Jamo"
+msgstr "Hangul kompatibilni Jamo"
+
+#: viewpart/UnicodeBlocks.h:112
+msgid "Kanbun"
+msgstr "Kanbun"
+
+#: viewpart/UnicodeBlocks.h:113
+msgid "Bopomofo Extended"
+msgstr "Bopomofo proširen"
+
+#: viewpart/UnicodeBlocks.h:114
+msgid "CJK Strokes"
+msgstr "CJK potezi"
+
+#: viewpart/UnicodeBlocks.h:115
+msgid "Katakana Phonetic Extensions"
+msgstr "Katakana zvučni nastavci"
+
+#: viewpart/UnicodeBlocks.h:116
+msgid "Enclosed CJK Letters and Months"
+msgstr "Ograšena CJK slova i mjeseci"
+
+#: viewpart/UnicodeBlocks.h:117
+msgid "CJK Compatibility"
+msgstr "CJK kompatibilnost"
+
+#: viewpart/UnicodeBlocks.h:118
+msgid "CJK Unified Ideographs Extension A"
+msgstr "CJK unificirani ideografi proširenje A"
+
+#: viewpart/UnicodeBlocks.h:119
+msgid "Yijing Hexagram Symbols"
+msgstr "Yijing heksagramski simboli"
+
+#: viewpart/UnicodeBlocks.h:120
+msgid "CJK Unified Ideographs"
+msgstr "CJK ujedinjeni ideografi"
+
+#: viewpart/UnicodeBlocks.h:121
+msgid "Yi Syllables"
+msgstr "Yi slogovi"
+
+#: viewpart/UnicodeBlocks.h:122
+msgid "Yi Radicals"
+msgstr "Yi korjeni"
+
+#: viewpart/UnicodeBlocks.h:123
+msgid "Modifier Tone Letters"
+msgstr "Modifikator boje slova"
+
+#: viewpart/UnicodeBlocks.h:124
+msgid "Latin Extended-D"
+msgstr "Latinski prošireni-D"
+
+#: viewpart/UnicodeBlocks.h:125 viewpart/UnicodeScripts.h:68
+msgid "Syloti Nagri"
+msgstr "Syloti Nagri"
+
+#: viewpart/UnicodeBlocks.h:126
+msgid "Phags-pa"
+msgstr "Phags-pa"
+
+#: viewpart/UnicodeBlocks.h:127
+msgid "Hangul Syllables"
+msgstr "Hangul slogovi"
+
+#: viewpart/UnicodeBlocks.h:128
+msgid "High Surrogates"
+msgstr "Visoki nadomjesci"
+
+#: viewpart/UnicodeBlocks.h:129
+msgid "High Private Use Surrogates"
+msgstr "Visoki privatno korišteni nadomjesci"
+
+#: viewpart/UnicodeBlocks.h:130
+msgid "Low Surrogates"
+msgstr "Niski nadomjesci"
+
+#: viewpart/UnicodeBlocks.h:131
+msgid "Private Use Area"
+msgstr "Privatno korišteno područje"
+
+#: viewpart/UnicodeBlocks.h:132
+msgid "CJK Compatibility Ideographs"
+msgstr "CJK kompatibilni ideografi"
+
+#: viewpart/UnicodeBlocks.h:133
+msgid "Alphabetic Presentation Forms"
+msgstr "Arapske prezentacijske forme"
+
+#: viewpart/UnicodeBlocks.h:134
+msgid "Arabic Presentation Forms-A"
+msgstr "Arapske prezentacijske forme A."
+
+#: viewpart/UnicodeBlocks.h:135
+msgid "Variation Selectors"
+msgstr "Odabiri varijacija"
+
+#: viewpart/UnicodeBlocks.h:136
+msgid "Vertical Forms"
+msgstr "Uspravne forme"
+
+#: viewpart/UnicodeBlocks.h:137
+msgid "Combining Half Marks"
+msgstr "Kombiniraj poluoznake"
+
+#: viewpart/UnicodeBlocks.h:138
+msgid "CJK Compatibility Forms"
+msgstr "CJK kompatibilne forme"
+
+#: viewpart/UnicodeBlocks.h:139
+msgid "Small Form Variants"
+msgstr "Male varijante forme."
+
+#: viewpart/UnicodeBlocks.h:140
+msgid "Arabic Presentation Forms-B"
+msgstr "Arapske prezentacijske forme B."
+
+#: viewpart/UnicodeBlocks.h:141
+msgid "Half-Width and Full-Width Forms"
+msgstr "Obrasci polovične i pune širine"
+
+#: viewpart/UnicodeBlocks.h:142
+msgid "Specials"
+msgstr "Posebni"
+
+#: viewpart/UnicodeBlocks.h:143
+msgid "Linear B Syllabary"
+msgstr "Linearni B slogovi"
+
+#: viewpart/UnicodeBlocks.h:144
+msgid "Linear B Ideograms"
+msgstr "Linearni B Ideogrami"
+
+#: viewpart/UnicodeBlocks.h:145
+msgid "Aegean Numbers"
+msgstr "Aegean brojevi"
+
+#: viewpart/UnicodeBlocks.h:146
+msgid "Ancient Greek Numbers"
+msgstr "Antički grčki brojevi"
+
+#: viewpart/UnicodeBlocks.h:147 viewpart/UnicodeScripts.h:59
+msgid "Old Italic"
+msgstr "Stari kurziv"
+
+#: viewpart/UnicodeBlocks.h:148 viewpart/UnicodeScripts.h:35
+msgid "Gothic"
+msgstr "Gotski"
+
+#: viewpart/UnicodeBlocks.h:149 viewpart/UnicodeScripts.h:79
+msgid "Ugaritic"
+msgstr "Ugaritic"
+
+#: viewpart/UnicodeBlocks.h:150 viewpart/UnicodeScripts.h:60
+msgid "Old Persian"
+msgstr "Staro-perzijski"
+
+#: viewpart/UnicodeBlocks.h:151 viewpart/UnicodeScripts.h:30
+msgid "Deseret"
+msgstr "Deseret"
+
+#: viewpart/UnicodeBlocks.h:152 viewpart/UnicodeScripts.h:66
+msgid "Shavian"
+msgstr "Shavian"
+
+#: viewpart/UnicodeBlocks.h:153 viewpart/UnicodeScripts.h:62
+msgid "Osmanya"
+msgstr "Osmanya"
+
+#: viewpart/UnicodeBlocks.h:154
+msgid "Cypriot Syllabary"
+msgstr "Cypriot Slogovi"
+
+#: viewpart/UnicodeBlocks.h:155 viewpart/UnicodeScripts.h:64
+msgid "Phoenician"
+msgstr "Phoenician"
+
+#: viewpart/UnicodeBlocks.h:156 viewpart/UnicodeScripts.h:47
+msgid "Kharoshthi"
+msgstr "Kharoshthi"
+
+#: viewpart/UnicodeBlocks.h:157 viewpart/UnicodeScripts.h:27
+msgid "Cuneiform"
+msgstr "Cuneiform"
+
+#: viewpart/UnicodeBlocks.h:158
+msgid "Cuneiform Numbers and Punctuation"
+msgstr "Cuneiform Brojevi i Interpunkcija"
+
+#: viewpart/UnicodeBlocks.h:159
+msgid "Byzantine Musical Symbols"
+msgstr "Bizantski Glazbeni Simboli"
+
+#: viewpart/UnicodeBlocks.h:160
+msgid "Musical Symbols"
+msgstr "Glazbeni simboli"
+
+#: viewpart/UnicodeBlocks.h:161
+msgid "Ancient Greek Musical Notation"
+msgstr "Antičko-grčka glazbena notacija"
+
+#: viewpart/UnicodeBlocks.h:162
+msgid "Tai Xuan Jing Symbols"
+msgstr "Tai Xuan Jing simboli"
+
+#: viewpart/UnicodeBlocks.h:163
+msgid "Counting Rod Numerals"
+msgstr "Brojevi mjerne letve"
+
+#: viewpart/UnicodeBlocks.h:164
+msgid "Mathematical Alphanumeric Symbols"
+msgstr "Matematički alfanumerički simboli"
+
+#: viewpart/UnicodeBlocks.h:165
+msgid "CJK Unified Ideographs Extension B"
+msgstr "CJK ujedinjeni ideografi proširenje B"
+
+#: viewpart/UnicodeBlocks.h:166
+msgid "CJK Compatibility Ideographs Supplement"
+msgstr "CJK kompatibilni ideografi dopunjeno"
+
+#: viewpart/UnicodeBlocks.h:167
+msgid "Tags"
+msgstr "Oznake"
+
+#: viewpart/UnicodeBlocks.h:168
+msgid "Variation Selectors Supplement"
+msgstr "Dodatak varijacijama odabiratelja"
+
+#: viewpart/UnicodeBlocks.h:169
+msgid "Supplementary Private Use Area-A"
+msgstr "Dodatni privatni Area-A"
+
+#: viewpart/UnicodeBlocks.h:170
+msgid "Supplementary Private Use Area-B"
+msgstr "Dopunsko područje za privatnu upotrebu-B"
+
+#: viewpart/UnicodeScripts.h:20
+msgid "Braille"
+msgstr "Brailleovo pismo"
+
+#: viewpart/UnicodeScripts.h:23
+msgid "Canadian Aboriginal"
+msgstr "Kanadskih aboridžina"
+
+#: viewpart/UnicodeScripts.h:25
+msgid "Common"
+msgstr "Uobičajeno"
+
+#: viewpart/UnicodeScripts.h:28
+msgid "Cypriot"
+msgstr "Ciparski"
+
+#: viewpart/UnicodeScripts.h:36
+msgid "Greek"
+msgstr "Grčki"
+
+#: viewpart/UnicodeScripts.h:39
+msgid "Han"
+msgstr "Han"
+
+#: viewpart/UnicodeScripts.h:40
+msgid "Hangul"
+msgstr "Hangul"
+
+#: viewpart/UnicodeScripts.h:44
+msgid "Inherited"
+msgstr "Nasljedno"
+
+#: viewpart/UnicodeScripts.h:50
+msgid "Latin"
+msgstr "Latinski"
+
+#: viewpart/UnicodeScripts.h:52
+msgid "Linear B"
+msgstr "Linear B"
+
+#: viewpart/UnicodeScripts.h:57
+msgid "Nko"
+msgstr "Nko"
+
+#: viewpart/UnicodeScripts.h:63
+msgid "Phags Pa"
+msgstr "Phags Pa"
+
+#: viewpart/UnicodeScripts.h:80
+msgid "Yi"
+msgstr "Yi"
+
+#~ msgid "Print..."
+#~ msgstr "Ispiši…"
+
+#, fuzzy
+#~| msgid "Create New Group"
+#~ msgid "Create New Group..."
+#~ msgstr "Napravi novu grupu"
+
+#, fuzzy
+#~| msgid "Remove Group"
+#~ msgid "Remove Group..."
+#~ msgstr "Ukloni grupu"
+
+#~ msgid "Install..."
+#~ msgstr "Instalacija…"
+
+#, fuzzy
+#~| msgid "Font Viewer"
+#~ msgid "FontViewPart"
+#~ msgstr "Preglednik pisama"
+
+#~ msgid "<p>No information</p>"
+#~ msgstr "<p>Bez informacija</p>"
+
+#~ msgid "Create a new group"
+#~ msgstr "Stvori novu grupu"
+
+#~ msgid "Enable all disabled fonts in the current group"
+#~ msgstr "Omogući sva onemogućena pisma u trenutnoj grupi"
+
+#~ msgid "Disable all enabled fonts in the current group"
+#~ msgstr "Onemogući sva omogućena pisma u trenutnoj grupi"
+
+#~ msgid "Please enter the name of the new group:"
+#~ msgstr "Molim da unesete ime nove grupe:"
+
+#, fuzzy
+#~| msgid "KDE Font Installer"
+#~ msgid "KDE Font Manager"
+#~ msgstr "KDE instalater pisama"
+
+#~ msgid "Type here to filter on %1"
+#~ msgstr ""
+#~ "Ovdje pišite za filtriranje po %1|/|Ovdje pišite za filtriranje po $[lok "
+#~ "%1]"
+
+#~ msgid "Tools"
+#~ msgstr "Alati"
+
+#~ msgid "Add..."
+#~ msgstr "Dodaj…"
+
+#~ msgid "Install fonts"
+#~ msgstr "Instaliraj pisma"
+
+#, fuzzy
+#~| msgid "Do you really want to move this font?"
+#~| msgid_plural "Do you really want to move these %1 fonts?"
+#~ msgid "Do you really want to move this font?"
+#~ msgid_plural ""
+#~ "<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?"
+#~ msgstr[0] "Želite li zaista premjestiti ovo %1 pismo?"
+#~ msgstr[1] "Želite li zaista premjestiti ova %1 pisma?"
+#~ msgstr[2] "Želite li zaista premjestiti ovih %1 pisama?"
+
+#, fuzzy
+#~| msgid "Print..."
+#~ msgid "Starting..."
+#~ msgstr "Ispiši…"
+
+#, fuzzy
+#~| msgid "Canceling..."
+#~ msgid "Cancelling..."
+#~ msgstr "Prekidanje…"
+
+#~ msgid "Failed to locate font printer."
+#~ msgstr "Neuspjelo pronalaženje pisača pisama."
+
+# pmap: =/nom=Datoteka/gen=datoteke/dat=datoteci/aku=datoteku/lok=datoteci/ins=datotekom/_r=ž/_b=j/
+#~ msgid "File"
+#~ msgstr "Datoteka"
+
+#~ msgid "Move Here"
+#~ msgstr "Premjesti ovdje"
+
+#~ msgid "Cancel"
+#~ msgstr "Odustani"
+
+#~ msgid " (<img src=\"%1\" />%2 <img src=\"%3\" />%4 <img src=\"%5\" />%6)"
+#~ msgstr " (<img src=\"%1\" />%2 <img src=\"%3\" />%4 <img src=\"%5\" />%6)"
+
+#~ msgid ""
+#~ "Configure folder for X11 - create fonts.dir and fonts.scale, plus remove "
+#~ "hidden entries. (NOTE: Use this option on its own.)"
+#~ msgstr ""
+#~ "Podesi mapu za X11 – stvori fonts.dir i fonts.scale te ukloni skrivene "
+#~ "unose. (Napomena: Koristite ovu mogućnost samostalno.)"
+
+#~ msgid ""
+#~ "Could not delete:\n"
+#~ "%1"
+#~ msgstr ""
+#~ "Nemoguće ukloniti:\n"
+#~ "%1"
+
+#~ msgid "Could not delete the following files:"
+#~ msgstr "Nije bilo moguće ukloniti sljedeće datoteke:"
+
+#~ msgid "Preview"
+#~ msgstr "Pregled"
+
+#~ msgctxt ""
+#~ "Title for a group that contains \"All Fonts\", \"Personal Fonts\", "
+#~ "\"System Fonts\" and \"Unclassified\""
+#~ msgid "Standard:"
+#~ msgstr "Standardno:"
+
+#~ msgid "Custom:"
+#~ msgstr "Prilagođeno:"
+
+#~ msgid "%1 (Disabled)"
+#~ msgstr "%1 (Isključeno)"
+
+#~ msgid "%1 (Empty)"
+#~ msgstr "%1 (Prazno)"
+
+#~ msgid "%1 (Partial)"
+#~ msgstr "%1 (Djelomično)"
+
+#~ msgid "Copy Here"
+#~ msgstr "Kopiraj ovdje"
+
+#~ msgid "Rename Group"
+#~ msgstr "Preimenuj grupu"
+
+#~ msgid "Please enter a new name for group:"
+#~ msgstr "Molim vas da upišete ime nove grupe:"
+
+#~ msgid "Drop here to add the selected fonts to \"%1\"."
+#~ msgstr "Ispustite ovdje da bi dodali odabrana pisma u \"%1\"."
+
+#~ msgid "Drop here to remove the selected fonts from the current group."
+#~ msgstr "Ispustite ovdje da bi uklonili odabrana pisma iz trenutne grupe."
+
+#~ msgid ""
+#~ "Drop here to copy, or move, the selected fonts to your personal folder."
+#~ msgstr ""
+#~ "Ispustite ovdje da bi kopirali ili premjestili odabrana pisma u vašu "
+#~ "osobnu mapu."
+
+#~ msgid "Drop here to copy, or move, the selected fonts to the system folder."
+#~ msgstr ""
+#~ "Ispustite ovdje da bi kopirali ili premjestili odabrana pisma u mapu "
+#~ "sustava."
+
+#~ msgid "Information"
+#~ msgstr "Informacije"
+
+#~ msgid "Authorization Required"
+#~ msgstr "Zahtjevaj autorizaciju"
+
+#~ msgid ""
+#~ "The requested action requires administrator privileges.\n"
+#~ "If you have these privileges then please enter your password."
+#~ msgstr ""
+#~ "Zahtjevana akcija traži administratorske privilegije.\n"
+#~ "Ako imate te privilegije upišite vašu zaporku."
+
+#~ msgid ""
+#~ "The requested action requires administrator privileges.\n"
+#~ "Please enter the system administrator's password."
+#~ msgstr ""
+#~ "Zahtjevana akcija traži administratorske privilegije.\n"
+#~ "Molim vas da unesete zaporku administratora sustava."
+
+#~ msgid "Insufficient privileges."
+#~ msgstr "Nedovoljne privilegije."
+
+#~ msgid "Conversation with su failed."
+#~ msgstr "Pregovor sa 'su' nije uspio."
+
+#~ msgid ""
+#~ "<p>Could not launch '%1'.</p><p>Make sure your PATH is set correctly.</p>"
+#~ msgstr ""
+#~ "<p>Nije moguće pokrenuti '%1'.</p><p>Budite sigurni da je vaša PATH "
+#~ "varijabla ispravno postavljena.</p>"
+
+#~ msgid "Incorrect password, please try again."
+#~ msgstr "Netočna zaporka, pokušajte ponovno."
+
+#~ msgid "Internal error: illegal return from SuProcess::checkInstall()"
+#~ msgstr "Interna greška: Nepravilan povrat iz SuProcess::checkInstall()"
+
+#~ msgid "Copying"
+#~ msgstr "Kopiranje"
+
+#~ msgid "Installing %1"
+#~ msgstr "Instaliranje %1"
+
+#~ msgid "Copying %1"
+#~ msgstr "Kopiranje %1"
+
+#~ msgid "Deleting %1"
+#~ msgstr "Brisanje %1"
+
+#~ msgid "Enabling %1"
+#~ msgstr "Omogućavanje %1"
+
+#~ msgid "Disabling %1"
+#~ msgstr "Onemogućavanje %1"
+
+#~ msgid "Moving %1"
+#~ msgstr "Premještanje %1"
+
+#~ msgid "Success"
+#~ msgstr "Uspjeh"
+
+#~ msgid ""
+#~ "GUI front-end to the fonts:/ ioslave.\n"
+#~ "(c) Craig Drummond, 2000 - 2007"
+#~ msgstr ""
+#~ "GUI prednja strana za pisma:/ ioslave.\n"
+#~ "(c) Craig Drummond, 2000 – 2007"
+
+#~ msgid "Settings"
+#~ msgstr "Postavke"
+
+#~ msgid "Show Large Preview"
+#~ msgstr "Prikaži veliki pregled"
+
+#~ msgid "Enable all selected fonts"
+#~ msgstr "Omogući sva odabrana pisma"
+
+#~ msgid "Disable all selected fonts"
+#~ msgstr "Onemogući sva odabrana pisma"
+
+#~ msgid "You did not select anything to copy."
+#~ msgstr "Niste odabrali ništa za kopiranje."
+
+#~ msgid "Nothing to Copy"
+#~ msgstr "Nema ništa za kopiranje"
+
+#~ msgid "<p>Do you really want to copy</p><p>'<b>%1</b>'?</p>"
+#~ msgstr "<p>Želite li zaista kopirati</p><p>'<b>%1</b>'?</p>"
+
+#~ msgid "Copy Font"
+#~ msgstr "Kopiraj pismo"
+
+#~ msgid "Copy"
+#~ msgstr "Kopiraj"
+
+#~ msgid "Do you really want to copy this font?"
+#~ msgid_plural "Do you really want to copy these %1 fonts?"
+#~ msgstr[0] "Želite li zaista kopirati ovo %1 pismo?"
+#~ msgstr[1] "Želite li zaista kopirati ova %1 pisma?"
+#~ msgstr[2] "Želite li zaista kopirati ovih %1 pisama?"
+
+#~ msgid "Copying font(s)..."
+#~ msgstr "Kopiranje pis(a)ma …"
+
+#~ msgid " (%1 Enabled, %2 Disabled, %3 Partial)"
+#~ msgstr " (%1 omogućeno, %2 onemogućeno, %3 djelomično)"
+
+#~ msgid "Would you like to install the font(s) for personal use?"
+#~ msgstr "Želite li instalirati pismo (pisma) za osobnu upotrebu?"
+
+#~ msgid "Authorization Failed"
+#~ msgstr "Autorizacija nije uspjela"
+
+#~ msgid ""
+#~ "The installer is currently busy. Please wait for the current operation to "
+#~ "terminate."
+#~ msgstr ""
+#~ "Instalater je trenutno zauzet. Molim vas da pričekate dok se trenutna "
+#~ "operacija ne završi."
+
+#~ msgid "Invalid Font"
+#~ msgstr "Nevaljalo pismo"
+
+#~ msgid ""
+#~ "Cannot install %1\n"
+#~ "Hidden fonts cannot be installed."
+#~ msgstr ""
+#~ "Ne mogu instalirati %1\n"
+#~ "Skrivena pisma ne mogu biti instalirana."
+
+#~ msgid "Could not access \"%1\" folder."
+#~ msgstr "Ne mogu pristupiti mapi \"%1\"."
+
+#~ msgid ""
+#~ "Cannot copy %1 to %2\n"
+#~ "Hidden/disabled fonts cannot be installed."
+#~ msgstr ""
+#~ "Ne mogu kopirati %1 u %2.\n"
+#~ "Skrivena/onemogućena pisma ne mogu biti instalirana."
+
+#~ msgid "You cannot rename font folders"
+#~ msgstr "Ne možete preimenovati mapu pisama."
+
+#~ msgid "Internal error - could not find font."
+#~ msgstr "Interna greška – nije moguće naći pismo."
+
+#~ msgid ""
+#~ "Could not enable %1\n"
+#~ "An enabled font already exists, please delete the disabled one."
+#~ msgstr ""
+#~ "Ne mogu omogućiti %1\n"
+#~ "Omogućeno pismo već postoji, molim izbrišite onemogućeno."
+
+#~ msgid ""
+#~ "Could not disable %1\n"
+#~ "A disabled font already exists, please delete the enabled one."
+#~ msgstr ""
+#~ "Ne mogu onemogućiti %1\n"
+#~ "Onemogućeno pismo već postoji, molim obrište omogućeno."
+
+#~ msgid "Sorry, fonts cannot be renamed."
+#~ msgstr "Oprostite, ali pisma ne mogu biti preimenovana."
+
+#~ msgid ""
+#~ "Cannot move %1 to %2\n"
+#~ "Disabled fonts cannot be moved."
+#~ msgstr ""
+#~ "Ne mogu premjestiti %1 u %2\n"
+#~ "Onemogućena pisma ne mogu biti pomicana."
+
+#~ msgid "Could not access \"%1\"."
+#~ msgstr "Ne mogu pristupiti \"%1\"."
+
+#~ msgid "Configuring installed fonts..."
+#~ msgstr "Postavljam instalirana pisma …"
+
+#~ msgid "Incorrect password.\n"
+#~ msgstr "Netočna zaporka.\n"
+
+#~ msgid "Internal fontconfig error."
+#~ msgstr "Unutarnja fontconfig greška."
+
+#~ msgid ""
+#~ "The selected URL (%1) matches both an enabled, and disabled font. Which "
+#~ "one do you wish to access?"
+#~ msgstr ""
+#~ "Odabrani URL (%1) se podudara i sa omogućenim i sa onemogućenim pismom. "
+#~ "Kojem želite pristupiti?"
+
+#~ msgid "Duplicate Font"
+#~ msgstr "Dupliciraj pismo"
+
+#~ msgid "Enabled Font"
+#~ msgstr "Omogućeno pismo"
+
+#~ msgid "Disabled Font"
+#~ msgstr "Onemogućeno pismo"
+
+#~ msgid ""
+#~ "Could not determine file type for: %1\n"
+#~ "Only fonts may be installed."
+#~ msgstr ""
+#~ "Ne mogu odrediti tip datoteke za: %1\n"
+#~ "Samo pisma smiju biti instalirana."
+
+#~ msgid ""
+#~ "Could not install %1\n"
+#~ "A matching enabled font already exists. Please disable that."
+#~ msgstr ""
+#~ "Ne mogu instalirati %1\n"
+#~ "Podudarno omogućeno pismo već postoji. Molim onemogućite ga."
+
+#~ msgid ""
+#~ "Could not install %1\n"
+#~ "A matching disabled font already exists. Please enable that."
+#~ msgstr ""
+#~ "Ne mogu instalirati %1\n"
+#~ "Podudarno onemogućeno pismo već postoji. Molim omogućite ga."
+
+#~ msgid ""
+#~ "<p>You are attempting to move a font that is located in a file alongside "
+#~ "other fonts; in order to proceed with the move they will all have to be "
+#~ "moved. The affected fonts are:</p><ul>%1</ul><p>\n"
+#~ " Do you wish to move all of these?</p>"
+#~ msgstr ""
+#~ "<p>Pokušavate pomaknuti pismo koje se nalazi u datoteci zajedno sa "
+#~ "ostalim pismima; da biste nastavili sa pomicanjem, sva pisma će se morati "
+#~ "pomaknuti. Riječ je o sljedećim pismima:</p> <ul>%1</ul> <p>\n"
+#~ " Želite li pomaknuti sva navedena?</p>"
+
+#~ msgid ""
+#~ "<p>You are attempting to copy a font that is located in a file alongside "
+#~ "other fonts; in order to proceed with the copy they will all have to be "
+#~ "copied. The affected fonts are:</p><ul>%1</ul><p>\n"
+#~ " Do you wish to copy all of these?</p>"
+#~ msgstr ""
+#~ "<p>Pokušavate kopirati pismo koje se nalazi u datoteci zajedno sa ostalim "
+#~ "pismima; da biste nastavili sa kopiranjem, sva pisma će se morati "
+#~ "kopirati. Riječ je o sljedećim pismima:</p> <ul>%1</ul> <p>\n"
+#~ " Želite li kopirati sva navedena?</p>"
+
+#~ msgid ""
+#~ "<p>You are attempting to delete a font that is located in a file "
+#~ "alongside other fonts; in order to proceed with the deletion they will "
+#~ "all have to be deleted. The affected fonts are:</p><ul>%1</ul><p>\n"
+#~ " Do you wish to delete all of these?</p>"
+#~ msgstr ""
+#~ "<p>Pokušavate obrisati pismo koje se nalazi u datoteci zajedno sa ostalim "
+#~ "pismima; da biste nastavili sa brisanjem, sva pisma će se morati "
+#~ "obrisati. Riječ je o sljedećim pismima:</p> <ul>%1</ul> <p>\n"
+#~ " Želite li obrisati sva navedena?</p>"
+
+#~ msgid ""
+#~ "<p>You are attempting to enable a font that is located in a file "
+#~ "alongside other fonts; in order to proceed with the enabling they will "
+#~ "all have to be enabled. The affected fonts are:</p><ul>%1</ul><p>\n"
+#~ " Do you wish to enable all of these?</p>"
+#~ msgstr ""
+#~ "<p>Pokušavate omogućiti pismo koje se nalazi u datoteci zajedno sa "
+#~ "ostalim pismima; da biste nastavili sa omogućavanjem, sva pisma će se "
+#~ "morati omogućiti. Riječ je o sljedećim pismima:</p> <ul>%1</ul> <p>\n"
+#~ " Želite li omogućiti sva navedena?</p>"
+
+#~ msgid ""
+#~ "<p>You are attempting to disable a font that is located in a file "
+#~ "alongside other fonts; in order to proceed with the disabling they will "
+#~ "all have to be disabled. The affected fonts are:</p><ul>%1</ul><p>\n"
+#~ " Do you wish to disable all of these?</p>"
+#~ msgstr ""
+#~ "<p>Pokušavate onemogućiti pismo koje se nalazi u datoteci zajedno sa "
+#~ "ostalim pismima; da biste nastavili sa onemogućavanjem, sva pisma će se "
+#~ "morati onemogućiti. Riječ je o sljedećim pismima:</p> <ul>%1</ul> <p>\n"
+#~ " Želite li onemogućiti sva navedena?</p>"
+
+#, fuzzy
+#~ msgid "Enable..."
+#~ msgstr "Instalacija..."
+
+#, fuzzy
+#~ msgid "Disable..."
+#~ msgstr "Instalacija..."
+
+#~ msgid "General"
+#~ msgstr "Općenito"
+
+#~ msgid "Weight"
+#~ msgstr "Težina"
+
+#~ msgid "Slant"
+#~ msgstr "Odstupanje"
+
+#, fuzzy
+#~ msgid "Not Available"
+#~ msgstr " Pregled nije dostupan"

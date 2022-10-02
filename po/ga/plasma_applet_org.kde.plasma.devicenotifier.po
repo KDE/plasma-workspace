@@ -1,0 +1,212 @@
+# Irish translation of plasma_applet_devicenotifier
+# Copyright (C) 2009 This_file_is_part_of_KDE
+# This file is distributed under the same license as the plasma_applet_devicenotifier package.
+# Kevin Scannell <kscanne@gmail.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdebase/plasma_applet_devicenotifier.po\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-21 00:47+0000\n"
+"PO-Revision-Date: 2007-10-23 08:08-0500\n"
+"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
+"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"Language: ga\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
+"3 : 4\n"
+
+#: package/contents/ui/DeviceItem.qml:180
+#, fuzzy, kde-format
+#| msgctxt "@info:status Free disk space"
+#| msgid "%1 free"
+msgctxt "@info:status Free disk space"
+msgid "%1 free of %2"
+msgstr "%1 saor"
+
+#: package/contents/ui/DeviceItem.qml:184
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Accessing is a less technical word for Mounting; translation should be "
+#| "short and mean 'Currently mounting this device'"
+#| msgid "Accessing..."
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Accessing…"
+msgstr "Á rochtain..."
+
+#: package/contents/ui/DeviceItem.qml:187
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Removing is a less technical word for Unmounting; translation shoud be "
+#| "short and mean 'Currently unmounting this device'"
+#| msgid "Removing..."
+msgctxt ""
+"Removing is a less technical word for Unmounting; translation should be "
+"short and mean 'Currently unmounting this device'"
+msgid "Removing…"
+msgstr "Á Bhaint..."
+
+#: package/contents/ui/DeviceItem.qml:190
+#, kde-format
+msgid "Don't unplug yet! Files are still being transferred..."
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:221
+#, kde-format
+msgid "Open in File Manager"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:224
+#, kde-format
+msgid "Mount and Open"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:226
+#, kde-format
+msgid "Eject"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:228
+#, kde-format
+msgid "Safely remove"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:270
+#, kde-format
+msgid "Mount"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:41
+#: package/contents/ui/main.qml:238
+#, kde-format
+msgid "Remove All"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:42
+#, fuzzy, kde-format
+#| msgid "Click to safely remove this device."
+msgid "Click to safely remove all devices"
+msgstr "Cliceáil chun an gléas seo a dhícheangal gan dochar a dhéanamh."
+
+#: package/contents/ui/FullRepresentation.qml:186
+#, fuzzy, kde-format
+#| msgid "Non-removable devices only"
+msgid "No removable devices attached"
+msgstr "Gléasanna neamh-inbhainte amháin"
+
+#: package/contents/ui/FullRepresentation.qml:186
+#, fuzzy, kde-format
+#| msgid "No devices available"
+msgid "No disks available"
+msgstr "Níl aon ghléasanna ar fáil"
+
+#: package/contents/ui/main.qml:47
+#, fuzzy, kde-format
+#| msgid "Most recent device"
+msgid "Most Recent Device"
+msgstr "An gléas is déanaí"
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid "No Devices Available"
+msgstr "Níl Aon Ghléasanna Ar Fáil"
+
+#: package/contents/ui/main.qml:245
+#, fuzzy, kde-format
+#| msgid "Removable devices only"
+msgid "Removable Devices"
+msgstr "Gléasanna inbhainte amháin"
+
+#: package/contents/ui/main.qml:251
+#, fuzzy, kde-format
+#| msgid "Non-removable devices only"
+msgid "Non Removable Devices"
+msgstr "Gléasanna neamh-inbhainte amháin"
+
+#: package/contents/ui/main.qml:257
+#, fuzzy, kde-format
+#| msgid "All devices"
+msgid "All Devices"
+msgstr "Gach gléas"
+
+#: package/contents/ui/main.qml:265
+#, fuzzy, kde-format
+#| msgid "No devices plugged in"
+msgid "Show popup when new device is plugged in"
+msgstr "Níl aon ghléasanna plugáilte isteach"
+
+#: package/contents/ui/main.qml:274
+#, fuzzy, kde-format
+#| msgid "Non-removable devices only"
+msgctxt "Open auto mounter kcm"
+msgid "Configure Removable Devices…"
+msgstr "Gléasanna neamh-inbhainte amháin"
+
+#~ msgid "It is currently safe to remove this device."
+#~ msgstr ""
+#~ "Tig leat an gléas seo a bhaint faoi láthair gan dochar a dhéanamh dó."
+
+#~ msgid "1 action for this device"
+#~ msgid_plural "%1 actions for this device"
+#~ msgstr[0] "Gníomh amháin le haghaidh an ghléis seo"
+#~ msgstr[1] "%1 ghníomh le haghaidh an ghléis seo"
+#~ msgstr[2] "%1 ghníomh le haghaidh an ghléis seo"
+#~ msgstr[3] "%1 ngníomh le haghaidh an ghléis seo"
+#~ msgstr[4] "%1 gníomh le haghaidh an ghléis seo"
+
+#~ msgid "Click to access this device from other applications."
+#~ msgstr "Cliceáil chun an gléas seo a rochtain ó fheidhmchláir eile."
+
+#~ msgid "Click to eject this disc."
+#~ msgstr "Cliceáil chun an diosca seo a dhíchur."
+
+#~ msgid "Click to safely remove this device."
+#~ msgstr "Cliceáil chun an gléas seo a dhícheangal gan dochar a dhéanamh."
+
+#~ msgid "Click to mount this device."
+#~ msgstr "Cliceáil chun an gléas seo a fheistiú."
+
+#~ msgid "Available Devices"
+#~ msgstr "Gléas Le Fáil"
+
+#~ msgid "Automounting"
+#~ msgstr "Uathfheistiú"
+
+#~ msgid "Show hidden devices"
+#~ msgstr "Taispeáin gléasanna folaithe"
+
+#~ msgctxt "Hide a device"
+#~ msgid "Hide %1"
+#~ msgstr "Folaigh %1"
+
+#~ msgid ""
+#~ "Cannot eject the disc.\n"
+#~ "One or more files on this disc are open within an application."
+#~ msgstr ""
+#~ "Ní féidir an diosca a dhíchur.\n"
+#~ "Tá comhad nó níos mó ná comhad amháin oscailte ar an diosca seo i "
+#~ "bhfeidhmchlár éigin."
+
+#~ msgid "&Time to stay on top:"
+#~ msgstr "&Coimeád ar barr ar feadh:"
+
+#~ msgid "&Number of items displayed:"
+#~ msgstr "Lío&n na míreanna ar taispeáint:"
+
+#~ msgid "Unlimited"
+#~ msgstr "Gan Teorainn"
+
+#~ msgid "&Display time of items:"
+#~ msgstr "&Am taispeána na míreanna:"
+
+#~ msgid "Configure New Device Notifier"
+#~ msgstr "Cumraigh an Fógróir Gléis Nua"
+
+#~ msgid "A new device has been detected: \n"
+#~ msgstr "Braitheadh gléas nua: \n"
+
+#~ msgid "Change clock size"
+#~ msgstr "Athraigh méid an chloig"

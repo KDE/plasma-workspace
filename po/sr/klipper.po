@@ -1,0 +1,754 @@
+# Translation of klipper.po into Serbian.
+# Toplica Tanaskovic <toptan@kde.org.yu>, 2003, 2004.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2005, 2006, 2007, 2009, 2010, 2011, 2012, 2013, 2014, 2016, 2017.
+# Dalibor Djuric <daliborddjuric@gmail.com>, 2009, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: klipper\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-04-24 04:01+0200\n"
+"PO-Revision-Date: 2017-11-04 20:03+0100\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_ReplayActionInHistory)
+#: actionsconfig.ui:17
+#, kde-format
+msgid "Replay actions on an item selected from history"
+msgstr "Понови радње над ставком изабраном из историјата"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_StripWhiteSpace)
+#: actionsconfig.ui:24
+#, kde-format
+msgid "Remove whitespace when executing actions"
+msgstr "Уклони празнине при извршавању радњи"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_EnableMagicMimeActions)
+#. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
+#: actionsconfig.ui:31 klipper.kcfg:84
+#, kde-format
+msgid "Enable MIME-based actions"
+msgstr "Радње по МИМЕ типу"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: actionsconfig.ui:38
+#, kde-format
+msgid "Action list:"
+msgstr "Списак радњи:"
+
+# >> @title:column
+#. i18n: ectx: property (text), widget (ActionsTreeWidget, kcfg_ActionList)
+#: actionsconfig.ui:49
+#, kde-format
+msgid "Regular Expression"
+msgstr "регуларни израз"
+
+# >> @title:column
+#. i18n: ectx: property (text), widget (ActionsTreeWidget, kcfg_ActionList)
+#: actionsconfig.ui:54 editactiondialog.cpp:222
+#, kde-format
+msgid "Description"
+msgstr "опис"
+
+#. i18n: ectx: property (text), widget (QPushButton, pbAddAction)
+#: actionsconfig.ui:64
+#, kde-format
+msgid "Add Action..."
+msgstr "Додај радњу..."
+
+#. i18n: ectx: property (text), widget (QPushButton, pbEditAction)
+#: actionsconfig.ui:71
+#, kde-format
+msgid "Edit Action..."
+msgstr "Уреди радњу..."
+
+#. i18n: ectx: property (text), widget (QPushButton, pbDelAction)
+#: actionsconfig.ui:78
+#, kde-format
+msgid "Delete Action"
+msgstr "Обриши радњу"
+
+#. i18n: ectx: property (text), widget (QPushButton, pbAdvanced)
+#: actionsconfig.ui:85
+#, kde-format
+msgid "Advanced..."
+msgstr "Напредно..."
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: actionsconfig.ui:94
+#, fuzzy, no-c-format, kde-format
+#| msgid ""
+#| "Click on a highlighted item's column to change it. \"%s\" in a command "
+#| "will be replaced with the clipboard contents.<br>For more information "
+#| "about regular expressions, you could have a look at the <a href=\"http://"
+#| "en.wikipedia.org/wiki/Regular_expression\">Wikipedia entry about this "
+#| "topic</a>."
+msgid ""
+"Click on a highlighted item's column to change it. \"%s\" in a command will "
+"be replaced with the clipboard contents.<br>For more information about "
+"regular expressions, you could have a look at the <a href=\"https://en."
+"wikipedia.org/wiki/Regular_expression\">Wikipedia entry about this topic</a>."
+msgstr ""
+"<p>Кликните на колону истакнуте ставке да је измените. <tt>%s</tt> у наредби "
+"биће замењено садржајем клипборда.</p><p>За више детаља о регуларним "
+"изразима, можете погледати <a href=\"http://en.wikipedia.org/wiki/"
+"Regular_expression\">Википедијин унос на ту тему.</a>.</p>"
+
+#: configdialog.cpp:37
+#, kde-format
+msgid " second"
+msgid_plural " seconds"
+msgstr[0] " секунда"
+msgstr[1] " секунде"
+msgstr[2] " секунди"
+msgstr[3] " секунда"
+
+#: configdialog.cpp:38
+#, kde-format
+msgid " entry"
+msgid_plural " entries"
+msgstr[0] " ставка"
+msgstr[1] " ставке"
+msgstr[2] " ставки"
+msgstr[3] " ставка"
+
+#: configdialog.cpp:263
+#, kde-format
+msgid "Advanced Settings"
+msgstr "Напредне поставке"
+
+#: configdialog.cpp:287
+#, kde-format
+msgctxt "General Config"
+msgid "General"
+msgstr "Опште"
+
+#: configdialog.cpp:287
+#, kde-format
+msgid "General Configuration"
+msgstr "Подешавање општег"
+
+#: configdialog.cpp:288
+#, kde-format
+msgctxt "Actions Config"
+msgid "Actions"
+msgstr "Радње"
+
+#: configdialog.cpp:288
+#, kde-format
+msgid "Actions Configuration"
+msgstr "Подешавање радњи"
+
+#: configdialog.cpp:292
+#, kde-format
+msgctxt "Shortcuts Config"
+msgid "Shortcuts"
+msgstr "Пречице"
+
+#: configdialog.cpp:292
+#, kde-format
+msgid "Shortcuts Configuration"
+msgstr "Подешавање пречица"
+
+#: configdialog.cpp:352
+#, kde-format
+msgid "D&isable Actions for Windows of Type WM_CLASS"
+msgstr "&Искључи радње за прозоре типа WM_CLASS"
+
+#: configdialog.cpp:360
+#, kde-format
+msgid ""
+"<qt>This lets you specify windows in which Klipper should not invoke "
+"\"actions\". Use<br /><br /><center><b>xprop | grep WM_CLASS</b></"
+"center><br />in a terminal to find out the WM_CLASS of a window. Next, click "
+"on the window you want to examine. The first string it outputs after the "
+"equal sign is the one you need to enter here.</qt>"
+msgstr ""
+"<qt>Овим можете задати прозоре за над којима се радње неће позивати. "
+"Извршите<br/><br/><tt>xprop | grep WM_CLASS</tt><br/><br/>у терминалу да "
+"бисте сазнали вредност <tt>WM_CLASS</tt> прозора. После тога, кликните на "
+"прозор који желите да испитате. Прву ниску коју <tt>xprop</tt> испише после "
+"знака једнакости треба овде да упишете.</qt>"
+
+# >> @item:intable the way command output is used
+#: editactiondialog.cpp:39
+#, kde-format
+msgid "Ignore"
+msgstr "игнорише се"
+
+# >> @item:intable the way command output is used
+#: editactiondialog.cpp:41
+#, kde-format
+msgid "Replace Clipboard"
+msgstr "смењује клипборд"
+
+# >> @item:intable the way command output is used
+#: editactiondialog.cpp:43
+#, kde-format
+msgid "Add to Clipboard"
+msgstr "додаје у клипборд"
+
+# >> @title:column
+#: editactiondialog.cpp:218
+#, kde-format
+msgid "Command"
+msgstr "наредба"
+
+# >> @title:column
+#: editactiondialog.cpp:220
+#, kde-format
+msgid "Output Handling"
+msgstr "руковање излазом"
+
+#: editactiondialog.cpp:262
+#, kde-format
+msgid "Action Properties"
+msgstr "Својства радње"
+
+#: editactiondialog.cpp:368
+#, kde-format
+msgid "new command"
+msgstr "нова наредба"
+
+#: editactiondialog.cpp:369
+#, kde-format
+msgid "Command Description"
+msgstr "Опис наредбе"
+
+#. i18n: ectx: property (text), widget (QLabel, label_3)
+#: editactiondialog.ui:20
+#, kde-format
+msgid "Action properties:"
+msgstr "Својства радње:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: editactiondialog.ui:42
+#, kde-format
+msgid "Regular expression:"
+msgstr "Регуларни израз:"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: editactiondialog.ui:52
+#, kde-format
+msgid "Description:"
+msgstr "Опис:"
+
+# >> @option:check whether the action is automatically applied
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: editactiondialog.ui:62
+#, kde-format
+msgid "Automatic:"
+msgstr "Аутоматска:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: editactiondialog.ui:87
+#, kde-format
+msgid "List of commands for this action:"
+msgstr "Списак наредби за ову радњу:"
+
+#. i18n: ectx: property (text), widget (QPushButton, pbAddCommand)
+#: editactiondialog.ui:144
+#, kde-format
+msgid "Add Command"
+msgstr "Додај наредбу"
+
+#. i18n: ectx: property (text), widget (QPushButton, pbRemoveCommand)
+#: editactiondialog.ui:151
+#, kde-format
+msgid "Remove Command"
+msgstr "Уклони наредбу"
+
+#. i18n: ectx: property (toolTip), widget (QTableView, twCommandList)
+#: editactiondialog.ui:176
+#, kde-format
+msgid "Double-click an item to edit"
+msgstr "Двокликните на ставку да је уредите"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_KeepClipboardContents)
+#: generalconfig.ui:17
+#, kde-format
+msgid "Save clipboard contents on exit"
+msgstr "Сачувај садржај клипборда при изласку"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_PreventEmptyClipboard)
+#. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
+#: generalconfig.ui:24 klipper.kcfg:16
+#, kde-format
+msgid "Prevent empty clipboard"
+msgstr "Спречи празан клипборд"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_IgnoreImages)
+#. i18n: ectx: label, entry (IgnoreImages), group (General)
+#: generalconfig.ui:31 klipper.kcfg:21
+#, kde-format
+msgid "Ignore images"
+msgstr "Игнориши слике"
+
+#. i18n: ectx: property (title), widget (QGroupBox, selection_group)
+#: generalconfig.ui:38
+#, kde-format
+msgid "Selection and Clipboard"
+msgstr "Избор и клипборд"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_IgnoreSelection)
+#: generalconfig.ui:44
+#, kde-format
+msgid "Ignore selection"
+msgstr "Игнориши избор"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_SelectionTextOnly)
+#: generalconfig.ui:51
+#, kde-format
+msgid "Text selection only"
+msgstr "Само изабрани текст"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_SyncClipboards)
+#: generalconfig.ui:58
+#, kde-format
+msgid "Synchronize contents of the clipboard and the selection"
+msgstr "Синхронизуј садржај клипборда и избор"
+
+#. i18n: ectx: property (text), widget (QLabel, timeout_label)
+#: generalconfig.ui:68
+#, kde-format
+msgid "Timeout for action popups:"
+msgstr "Прековреме искакања радње:"
+
+#. i18n: ectx: property (text), widget (QLabel, history_size_label)
+#: generalconfig.ui:82
+#, kde-format
+msgid "Clipboard history size:"
+msgstr "Величина историјата клипборда:"
+
+#: historyimageitem.cpp:50
+#, kde-format
+msgid "%1x%2 %3bpp"
+msgstr ""
+
+#: klipper.cpp:128
+#, kde-format
+msgid "Enable Clipboard Actions"
+msgstr "Укључи радње клипборда"
+
+#: klipper.cpp:154
+#, kde-format
+msgid "C&lear Clipboard History"
+msgstr "&Очисти историјат клипборда"
+
+#: klipper.cpp:161
+#, kde-format
+msgid "&Configure Klipper..."
+msgstr "&Подеси Клипер..."
+
+#: klipper.cpp:166
+#, kde-format
+msgctxt "@item:inmenu Quit Klipper"
+msgid "&Quit"
+msgstr "&Напусти"
+
+#: klipper.cpp:170
+#, kde-format
+msgid "Manually Invoke Action on Current Clipboard"
+msgstr "Ручно изврши радњу над тренутним клипбордом"
+
+#: klipper.cpp:177
+#, kde-format
+msgid "&Edit Contents..."
+msgstr "&Уреди садржај..."
+
+#: klipper.cpp:188
+#, kde-format
+msgid "&Show Barcode..."
+msgstr "&Прикажи бар‑код..."
+
+#: klipper.cpp:199
+#, kde-format
+msgid "Next History Item"
+msgstr "Следећа ставка историјата"
+
+#: klipper.cpp:203
+#, kde-format
+msgid "Previous History Item"
+msgstr "Претходна ставка историјата"
+
+#: klipper.cpp:209
+#, kde-format
+msgid "Open Klipper at Mouse Position"
+msgstr "Отвори Клипер на положају миша"
+
+#: klipper.cpp:503
+#, kde-format
+msgid ""
+"You can enable URL actions later by left-clicking on the Klipper icon and "
+"selecting 'Enable Clipboard Actions'"
+msgstr ""
+"Радње над УРЛ‑овима можете касније укључити левим кликом на иконицу Клипера "
+"и избором „Укључи радње клипборда“."
+
+#: klipper.cpp:534
+#, kde-format
+msgid "Should Klipper start automatically when you login?"
+msgstr "Да ли аутоматски покренути Клипер пошто се пријавите?"
+
+#: klipper.cpp:535
+#, kde-format
+msgid "Automatically Start Klipper?"
+msgstr "Аутоматски покретати Клипер?"
+
+#: klipper.cpp:535
+#, kde-format
+msgid "Start"
+msgstr "Покрећи"
+
+#: klipper.cpp:536
+#, kde-format
+msgid "Do Not Start"
+msgstr "Не покрећи"
+
+# >> @title:window
+#: klipper.cpp:882
+#, kde-format
+msgid "Edit Contents"
+msgstr "Уређивање садржаја"
+
+# >> @title:window
+#: klipper.cpp:949
+#, kde-format
+msgid "Mobile Barcode"
+msgstr "Мобилни бар‑код"
+
+#: klipper.cpp:997
+#, kde-format
+msgid "Really delete entire clipboard history?"
+msgstr "Заиста обрисати читав историјат клипборда?"
+
+#: klipper.cpp:998
+#, kde-format
+msgid "Delete clipboard history?"
+msgstr "Обрисати историјат клипборда?"
+
+#: klipper.cpp:1015 klipper.cpp:1024
+#, kde-format
+msgid "Clipboard history"
+msgstr "Историјат клипборда"
+
+#: klipper.cpp:1041
+#, kde-format
+msgid "up"
+msgstr "горе"
+
+#: klipper.cpp:1048
+#, kde-format
+msgid "current"
+msgstr "текуће"
+
+#: klipper.cpp:1055
+#, kde-format
+msgid "down"
+msgstr "доле"
+
+#. i18n: ectx: label, entry (Version), group (General)
+#: klipper.kcfg:9
+#, kde-format
+msgid "Klipper version"
+msgstr "Верзија Клипера"
+
+#. i18n: ectx: label, entry (KeepClipboardContents), group (General)
+#: klipper.kcfg:12
+#, kde-format
+msgid "Keep clipboard contents"
+msgstr "Задржи садржај клипборда"
+
+#. i18n: ectx: whatsthis, entry (PreventEmptyClipboard), group (General)
+#: klipper.kcfg:18
+#, kde-format
+msgid ""
+"Selecting this option has the effect, that the clipboard can never be "
+"emptied. E.g. when an application exits, the clipboard would usually be "
+"emptied."
+msgstr ""
+"Избором ове опције клипборд никада неће бити потпуно испражњен. На пример, "
+"када се програм напусти, клипборд се обично празни."
+
+#. i18n: ectx: label, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:25
+#, kde-format
+msgid "Ignore Selection"
+msgstr "Игнориши избор"
+
+#. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:27
+#, kde-format
+msgid ""
+"When an area of the screen is selected with mouse or keyboard, this is "
+"called \"the selection\".<br/>If this option is set, the selection is not "
+"entered into the clipboard history, though it is still available for pasting "
+"using the middle mouse button."
+msgstr ""
+"<html>Када се област на екрану означи мишем или тастатуром, то се назива "
+"„избором“.<br/>Ако је ова опција укључена, избор се не уноси у историјат "
+"клипборда, мада се може налепити средњим дугметом миша.</html>"
+
+#. i18n: ectx: label, entry (SyncClipboards), group (General)
+#: klipper.kcfg:34
+#, kde-format
+msgid "Synchronize clipboard and selection"
+msgstr "Синхронизуј клипборд и избор"
+
+#. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
+#: klipper.kcfg:36
+#, kde-format
+msgid ""
+"When an area of the screen is selected with mouse or keyboard, this is "
+"called \"the selection\".<br/>If this option is selected, the selection and "
+"the clipboard is kept the same, so that anything in the selection is "
+"immediately available for pasting elsewhere using any method, including the "
+"traditional middle mouse button. Otherwise, the selection is recorded in the "
+"clipboard history, but the selection can only be pasted using the middle "
+"mouse button. Also see the 'Ignore Selection' option."
+msgstr ""
+"Када се област на екрану означи мишем или тастатуром, то се назива „избором“."
+"<br/>Ако је ова опција укључена, избор и клипборд су увек једнаки, тако да "
+"је сваки избор одмах доступан за налепљивање било којим методом, укључујући "
+"и традиционалним средњим дугметом миша. У супротном, избор се бележи у "
+"историјат клипборда, али се може налепити само средњим дугметом миша. "
+"Погледајте и опцију <i>Игнориши избор</i>."
+
+#. i18n: ectx: label, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:39
+#, kde-format
+msgid "Selection text only"
+msgstr "Само изабрани текст"
+
+#. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:41
+#, kde-format
+msgid ""
+"When an area of the screen is selected with mouse or keyboard, this is "
+"called \"the selection\".<br/>If this option is selected, only text "
+"selections are stored in the history, while images and other selections are "
+"not."
+msgstr ""
+"<html>Када се област на екрану означи мишем или тастатуром, то се назива "
+"„избором“.<br/>Ако је ова опција укључена, у историјат се складиште само "
+"текстуални избори, не и слике и други избори.</html>"
+
+#. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
+#: klipper.kcfg:44
+#, kde-format
+msgid "Use graphical regexp editor"
+msgstr "Графички уређивач региза"
+
+#. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
+#: klipper.kcfg:48
+#, kde-format
+msgid "URL grabber enabled"
+msgstr "Укључен хватач УРЛ‑ова"
+
+#. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
+#: klipper.kcfg:53
+#, kde-format
+msgid "No actions for WM_CLASS"
+msgstr "Без радњи за WM_CLASS"
+
+#. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:56
+#, kde-format
+msgid "Timeout for action popups (seconds)"
+msgstr "Прековреме искакања радње (секунди)"
+
+#. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:60
+#, kde-format
+msgid "A value of 0 disables the timeout"
+msgstr "Вредност 0 искључује прековреме"
+
+#. i18n: ectx: label, entry (MaxClipItems), group (General)
+#: klipper.kcfg:63
+#, kde-format
+msgid "Clipboard history size"
+msgstr "Величина историјата клипборда"
+
+#. i18n: ectx: label, entry (ActionList), group (General)
+#: klipper.kcfg:69
+#, kde-format
+msgid "Dummy entry for indicating changes in an action's tree widget"
+msgstr "Лажни унос за указивање на измене у виџету стабла радњи"
+
+#. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:75
+#, kde-format
+msgid "Strip whitespace when executing an action"
+msgstr "Уклони празнине при извршавању радње"
+
+#. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:77
+#, kde-format
+msgid ""
+"Sometimes, the selected text has some whitespace at the end, which, if "
+"loaded as URL in a browser would cause an error. Enabling this option "
+"removes any whitespace at the beginning or end of the selected string (the "
+"original clipboard contents will not be modified)."
+msgstr ""
+"Понекад изабрани текст има нешто празнина на крају, које ако се учитају као "
+"УРЛ у прегледачу, могу изазвати грешке. Укључивањем ове опције уклањају се "
+"све празнине на почетку или крају изабране ниске (сам садржај клипборда неће "
+"бити измењен)."
+
+#. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
+#: klipper.kcfg:80
+#, kde-format
+msgid "Replay action in history"
+msgstr "Понови радњу из историјата"
+
+#: klipperpopup.cpp:70
+#, kde-format
+msgid "<empty clipboard>"
+msgstr "<празан клипборд>"
+
+#: klipperpopup.cpp:71
+#, kde-format
+msgid "<no matches>"
+msgstr "<нема поклапања>"
+
+#: klipperpopup.cpp:118
+#, kde-format
+msgid "Klipper - Clipboard Tool"
+msgstr "Клипер — алатка клипборда"
+
+#: klipperpopup.cpp:122
+#, kde-format
+msgid "Search..."
+msgstr "Тражи..."
+
+#: klipperpopup.cpp:132 main.cpp:43
+#, kde-format
+msgid "KDE cut & paste history utility"
+msgstr "КДЕ‑ова алатка за копирање/налепљивање"
+
+#: main.cpp:41 tray.cpp:35
+#, kde-format
+msgid "Klipper"
+msgstr "Клипер"
+
+#: main.cpp:45
+#, kde-format
+msgid ""
+"(c) 1998, Andrew Stanley-Jones\n"
+"1998-2002, Carsten Pfeiffer\n"
+"2001, Patrick Dubroy"
+msgstr ""
+"© 1998, Ендру Стенли-Џоунс\n"
+"© 1998-2002, Карстен Пфајфер\n"
+"© 2001, Патрик Даброј"
+
+#: main.cpp:48
+#, kde-format
+msgid "Carsten Pfeiffer"
+msgstr "Карстен Пфајфер"
+
+#: main.cpp:49
+#, kde-format
+msgid "Author"
+msgstr "аутор"
+
+#: main.cpp:52
+#, kde-format
+msgid "Andrew Stanley-Jones"
+msgstr "Ендру Стенли-Џоунс"
+
+#: main.cpp:53
+#, kde-format
+msgid "Original Author"
+msgstr "првобитни аутор"
+
+#: main.cpp:56
+#, kde-format
+msgid "Patrick Dubroy"
+msgstr "Патрик Даброј"
+
+#: main.cpp:57
+#, kde-format
+msgid "Contributor"
+msgstr "доприносилац"
+
+#: main.cpp:60
+#, kde-format
+msgid "Luboš Luňák"
+msgstr "Лубош Луњак"
+
+#: main.cpp:61
+#, kde-format
+msgid "Bugfixes and optimizations"
+msgstr "исправке грешака и оптимизација"
+
+#: main.cpp:64
+#, kde-format
+msgid "Esben Mose Hansen"
+msgstr "Есбен Мосе Хансен"
+
+#: main.cpp:65
+#, kde-format
+msgid "Previous Maintainer"
+msgstr "претходни одржавалац"
+
+#: main.cpp:68
+#, kde-format
+msgid "Martin Gräßlin"
+msgstr "Мартин Греслин"
+
+#: main.cpp:69
+#, kde-format
+msgid "Maintainer"
+msgstr "одржавалац"
+
+#: main.cpp:72
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Топлица Танасковић,Часлав Илић"
+
+#: main.cpp:72
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "toptan@kde.org.yu,caslav.ilic@gmx.net"
+
+#: popupproxy.cpp:166
+#, kde-format
+msgid "&More"
+msgstr "&Више"
+
+#: tray.cpp:38
+#, kde-format
+msgid "Clipboard Contents"
+msgstr "Садржај клипборда"
+
+#: tray.cpp:38 tray.cpp:54
+#, kde-format
+msgid "Clipboard is empty"
+msgstr "Клипборд је празан"
+
+#: urlgrabber.cpp:217
+#, kde-format
+msgid "%1 - Actions For: %2"
+msgstr "%1 — радње за: %2"
+
+#: urlgrabber.cpp:245
+#, kde-format
+msgid "Disable This Popup"
+msgstr "Искључи ово искакање"
+
+#: urlgrabber.cpp:251
+#, kde-format
+msgid "&Cancel"
+msgstr "&Одустани"

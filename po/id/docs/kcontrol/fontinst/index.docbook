@@ -1,0 +1,258 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Indonesian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="fontinst" lang="&language;">
+<title
+>Pengelolaan Font</title>
+<articleinfo>
+<authorgroup>
+<author
+>&Craig.Drummond; &Craig.Drummond.Mail;</author>
+
+<othercredit role="translator"
+><firstname
+>Wantoyo</firstname
+><surname
+></surname
+><affiliation
+><address
+><email
+>wantoyek@gmail.com</email
+></address
+></affiliation
+><contrib
+>Terjemahan</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>31-03-2018</date>
+<releaseinfo
+>Plasma 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systemsettings</keyword>
+<keyword
+>font</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_fontinst">
+<title
+>Pengelolaan Font</title>
+
+<para
+>Modul ini bertanggung jawab untuk menginstal, menguninstal, mempratinjau, dan mengelola font-font-mu.</para>
+
+<sect2 id="font-groups">
+<title
+>Grup Font</title>
+<para
+>Ada 4 grup font khusus yang telah ditentukan:</para>
+
+<orderedlist>
+    <listitem
+><para
+><quote
+>Semua Font</quote
+> Ini akan mendisplaikan semua font, baik personal dan seluruh sistem.</para
+></listitem>
+    <listitem
+><para
+><quote
+>Personal Font</quote
+> Font-font yang ditampilkan akan menjadi font personalmu, dan tidak akan tersedia untuk pengguna yang lain.</para
+></listitem>
+    <listitem
+><para
+><quote
+>Font Sistem</quote
+> Font-font yang ditampilkan akan tersedia untuk semua pengguna. Menginstal font seluruh sistem, atau menghapus font seluruh sistem, akan memerlukan hak administrator.</para
+></listitem>
+    <listitem
+><para
+><quote
+>Tidak Diklasifikasikan</quote
+> Ini akan mencantumkan semua font yang belum ditempatkan ke grup yang ditentukan pengguna. Grup ini hanya akan muncul jika kamu memiliki beberapa grup yang ditentukan pengguna.</para
+></listitem>
+</orderedlist>
+<para
+>Untuk menambahkan font ke grup, menyeretnya dari daftar font ke dalam grup. Untuk menghapus font dari grup, seret font ke dalam grup <quote
+>Semua Font</quote
+>.</para>
+<para
+>Di bawah daftar ini kamu menemukan tombol untuk menciptakan grup baru, menghapus grup dan memfungsikan atau menonfungsikan font di grup saat ini.</para>
+<para
+>Dalam menu konteks daftar ini kamu memiliki butir menu tambahan untuk mencetak sampel font dan mengekspor font ke arsip zip.</para>
+
+<sect3 id="font-hiding">
+<title
+>Memfungsikan dan Menonfungsikan</title>
+<para
+>Pengguna dengan banyak font mungkin hanya menemukan yang berguna dengan memfungsikan (atau mengaktifkan) times yang tepat. Untuk memfasilitasi ini, modul ini akan memungkinkanmu untuk menonfungsikan font secara individu, atau seluruh grup font. Menonfungsikan font tidak menghilangkan font dari sistem, hanya menyembunyikannya sehingga tidak lagi muncul di dalam aplikasi. Memfungsikan kembali font kemudian akan memungkinkannya untuk digunakan.</para>
+</sect3>
+
+</sect2>
+
+<sect2 id="font-list">
+<title
+>Daftar Font</title>
+<para
+>Displai utama adalah daftar font yang terinstal, dikelompokkan berdasarkan nama famili font - angka dalam tanda-kurung-siku mewakili jumlah gaya yang terinstal untuk famili tersebut. Misal font <quote
+>Times</quote
+> dapat dicantumkan sebagai: <itemizedlist
+> <listitem>
+    <para
+>Times [4]</para>
+    <itemizedlist>
+        <listitem
+><para
+>Reguler</para
+></listitem>
+        <listitem
+><para
+>Miring</para
+></listitem>
+        <listitem
+><para
+>Tebal</para
+></listitem>
+        <listitem
+><para
+>Tebal Miring</para
+></listitem>
+    </itemizedlist>
+</listitem>
+</itemizedlist>
+</para>
+
+<para
+>Untuk menginstal font, tekan tombol <guibutton
+>Tambah...</guibutton
+>, dan pilih font yang diinginkan dari dalam dialog file. Grup font yang dipilih akan mengendalikan di mana font akan diinstal.</para>
+<para
+>Untuk meng-uninstall font, pilih font-font yang sesuai dari daftar, dan tekan tombol <guibutton
+>Hapus</guibutton
+>.</para>
+
+<para
+>Klik dengan tombol mouse kanan (&RMB;) untuk membuka menu konteks dengan beberapa aksi tambahan seperti  <guilabel
+>Fungsikan</guilabel
+>, <guilabel
+>Nonfungsikan</guilabel
+>, <guilabel
+>Cetak</guilabel
+>, <ulink url="help:/kfontviewer/index.html"
+><guilabel
+>Buka di Penampil Font</guilabel
+></ulink
+> dan <guilabel
+>Muat-ulang</guilabel
+>.</para>
+
+<sect3 id="font-filter">
+<title
+>Pemfilteran Font</title>
+<para
+>Sebuah bidang teks di bagian atas pratinjau font memungkinkanmu untuk memfilter daftar font. Kamu bisa memfilter font-font berdasarkan kategori yang berbeda:</para>
+        <orderedlist>
+        <listitem
+><para
+>Family.</para
+></listitem>
+        <listitem
+><para
+>Style.</para
+></listitem>
+        <listitem
+><para
+>Foundry.</para
+></listitem>
+        <listitem
+><para
+>Pencocokan FontConfig. Ini memungkinkanmu untuk memasukkan nama famili, dan melihat famili yang benar-benar menggunakan fontconfig.</para
+></listitem>
+        <listitem
+><para
+>Tipe file font.</para
+></listitem>
+        <listitem
+><para
+>Nama file font.</para
+></listitem>
+        <listitem
+><para
+>Lokasi file font.</para
+></listitem>
+        <listitem
+><para
+>Sistem penulisan.</para
+></listitem>
+        </orderedlist>
+</sect3>
+
+<sect3 id="get-new-fonts">
+<title
+>Dapatkan Font Baru</title>
+<para
+>Font baru dapat diinstal dari file lokal, atau diunduh menggunakan <guilabel
+>Dapatkan Barang Baru yang Keren</guilabel
+>. Entri <guilabel
+>Dapatkan Font Baru...</guilabel
+> di dalam tombol alat (terletak di atas daftar grup), memungkinkanmu untuk menginstal font dari Internet. Font yang diunduh dengan cara ini akan diinstal ke grup <quote
+>Font Personal</quote
+>-mu. Untuk menginstal di seluruh sistem, kamu perlu memindahkannya ke <quote
+>Grup Sistem</quote
+> - ini dapat dicapai dengan menyeret font melalui entri grup <quote
+>Font Sistem</quote
+> dan akan memerlukan hak administrator.</para>
+</sect3>
+
+</sect2>
+
+<sect2 id="font-duplicates">
+<title
+>Font Duplikat</title>
+<para
+>Jika kamu memiliki banyak font yang diinstal pada sistemmu, ada kemungkinan kamu memiliki duplikat.</para
+> 
+<para
+>Klik ikon alat di bagian atas daftar grup dan pilih alat <guilabel
+>Pindai Untuk Duplikat...</guilabel
+>, alat sederhana yang akan memindai sistemmu mencari font yang memiliki beberapa file yang terkait dengannya. Misalnya , jika kamu memiliki <quote
+>times.ttf</quote
+> dan <quote
+>times.TTF</quote
+> terinstal di <quote
+>/usr/local/share/fonts</quote
+> mekanisme font yang mendasarinya (disebut <quote 
+> FontConfig </quote
+>) hanya akan melihat salahsatunya. Jadi, jika kamu tidak menginstal font, itu akan muncul kembali, karena hanya satu file yang akan dihapus. Menjalankan alat ini akan menghasilkan daftar dialog masing-masing font yang memiliki banyak file, dan daftar file yang sesuai. Untuk memilih file yang akan dihapus, klik kolom yang berisi ikon tempat sampah.</para>
+</sect2>
+
+<sect2 id="font-preview">
+<title
+>Pratinjau</title>
+<para
+>Ini mendisplaikan sebuah teks pratinjau dalam ukuran font yang berbeda.</para>
+<para
+>Menggunakan menu konteks memungkinkanmu memperbesar dan memperkecil, pilih jenis pratinjau (<guilabel
+>Pratinjau Standar</guilabel
+> atau <guilabel
+>Semua Karakter</guilabel
+>) dan ubah teks pratinjau.</para>
+
+<para
+>Luncurkan aplikasi &kfontview; jika kamu memerlukan tipe-tipe pratinjau tambahan untuk Unicode Blocks. </para>
+</sect2>
+</sect1>
+</article>

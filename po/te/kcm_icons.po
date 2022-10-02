@@ -1,0 +1,334 @@
+# translation of kcmicons.po to Telugu
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Krishna Babu K <kkrothap@redhat.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmicons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"PO-Revision-Date: 2009-01-16 22:16+0530\n"
+"Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
+"Language-Team: Telugu <en@li.org>\n"
+"Language: te\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: iconsizecategorymodel.cpp:14
+#, kde-format
+msgid "Toolbar"
+msgstr "పనిముట్టుపట్టీ"
+
+#: iconsizecategorymodel.cpp:15
+#, kde-format
+msgid "Main Toolbar"
+msgstr "మెయిన్ పనిముట్లపట్టీ"
+
+#: iconsizecategorymodel.cpp:16
+#, kde-format
+msgid "Small Icons"
+msgstr "చిన్న ప్రతిమలు"
+
+#: iconsizecategorymodel.cpp:17
+#, kde-format
+msgid "Panel"
+msgstr "ప్యానల్"
+
+#: iconsizecategorymodel.cpp:18
+#, kde-format
+msgid "Dialogs"
+msgstr ""
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, fuzzy, kde-format
+#| msgid "Main Toolbar"
+msgid "Main toolbar icons size"
+msgstr "మెయిన్ పనిముట్లపట్టీ"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, fuzzy, kde-format
+#| msgid "Small Icons"
+msgid "Small icons size"
+msgstr "చిన్న ప్రతిమలు"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr ""
+
+#: main.cpp:182
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: main.cpp:193
+#, fuzzy, kde-format
+#| msgid "Unable to find the icon theme archive %1."
+msgid "Unable to download the icon theme archive: %1"
+msgstr "ప్రతిమ థీమ్ ఆర్చివ్ %1ను కనుగొన లేకపోయింది."
+
+#: main.cpp:207
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "ఆ ఫైలు విలువైన ప్రతిమ థీమ్ ఆర్చివ్ కాదు."
+
+#: main.cpp:212
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr ""
+
+#: main.cpp:216
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: main.cpp:260
+#, fuzzy, kde-format
+#| msgid "Installing icon themes"
+msgid "Installing icon themes…"
+msgstr "ప్రతిమ థీమ్‌లను సంస్థాపిస్తోంది"
+
+#: main.cpp:270
+#, fuzzy, kde-format
+#| msgid "Installing icon themes"
+msgid "Installing %1 theme…"
+msgstr "ప్రతిమ థీమ్‌లను సంస్థాపిస్తోంది"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr ""
+
+#: package/contents/ui/main.qml:147
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Remove Icon Theme"
+msgstr "థీమ్‌ను తీసివేయి"
+
+#: package/contents/ui/main.qml:154
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Icon Theme"
+msgstr "థీమ్‌ను తీసివేయి"
+
+#: package/contents/ui/main.qml:228
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr ""
+
+#: package/contents/ui/main.qml:246
+#, fuzzy, kde-format
+#| msgid "Install Theme File..."
+msgid "Install from File…"
+msgstr "థీమ్ పైలు సంస్థాపించుము..."
+
+#: package/contents/ui/main.qml:251
+#, fuzzy, kde-format
+#| msgid "Get New Themes..."
+msgid "Get New Icons…"
+msgstr "కొత్త థీమ్సును పొందుము..."
+
+#: package/contents/ui/main.qml:279
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Open Theme"
+msgstr "థీమ్‌ను తీసివేయి"
+
+#: package/contents/ui/main.qml:281
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "కృష్ణబాబు కె , విజయ్ కిరణ్ కముజు"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "k.meetme@gmail.com,infyquest@gmail.com"
+
+#~ msgid "Icons"
+#~ msgstr "ప్రతిమలు"
+
+#~ msgid "Icons Control Panel Module"
+#~ msgstr "ప్రతిమల నియంత్రణా ప్యానల్ మాడ్యూల్"
+
+#~ msgid "(c) 2000-2003 Geert Jansen"
+#~ msgstr "(c) 2000-2003 గీర్ట్ జాన్సన్"
+
+#~ msgid "Geert Jansen"
+#~ msgstr "గీర్ట్ జాన్సన్"
+
+#~ msgid "Antonio Larrosa Jimenez"
+#~ msgstr "ఆంటోనియో లారోసా జిమెన్జ్"
+
+#~ msgid "Torsten Rahn"
+#~ msgstr "టార్‌స్టెన్ రాన్"
+
+#~ msgid "Desktop"
+#~ msgstr "రంగస్ఠలం"
+
+#~ msgid "Use of Icon"
+#~ msgstr "ప్రతిమ యొక్క వుపయోగము"
+
+#~ msgctxt "@label The icon rendered by default"
+#~ msgid "Default"
+#~ msgstr "అప్రమెయం"
+
+#~ msgctxt "@label The icon rendered as active"
+#~ msgid "Active"
+#~ msgstr "క్రియాశీల"
+
+#~ msgctxt "@label The icon rendered as disabled"
+#~ msgid "Disabled"
+#~ msgstr "అచేతనమైన"
+
+#~ msgid "Size:"
+#~ msgstr "పరిమాణము:"
+
+#~ msgid "Set Effect..."
+#~ msgstr "ప్రభావాన్ని అమర్చుము..."
+
+#~ msgid "All Icons"
+#~ msgstr "అన్ని ప్రతిమలు"
+
+#~ msgid "Setup Default Icon Effect"
+#~ msgstr "అప్రమేయ ప్రతిమ ప్రాభావాన్ని అమర్చుము"
+
+#~ msgid "Setup Active Icon Effect"
+#~ msgstr "క్రియాశీల ప్రతిమ ప్రభావాన్ని అమర్చుము"
+
+#~ msgid "Setup Disabled Icon Effect"
+#~ msgstr "అచేతనమైన ప్రతిమ ప్రభావాన్ని అమర్చుము"
+
+#~ msgid "&Effect:"
+#~ msgstr "(&E) ప్రభావము:"
+
+#~ msgid "No Effect"
+#~ msgstr "ప్రభావము లేదు"
+
+#~ msgid "To Gray"
+#~ msgstr "గ్రే కు"
+
+#~ msgid "Colorize"
+#~ msgstr "రంగైన"
+
+#~ msgid "Gamma"
+#~ msgstr "గామా"
+
+#~ msgid "Desaturate"
+#~ msgstr "డీసాట్యురేట్"
+
+#~ msgid "To Monochrome"
+#~ msgstr "మోనోక్రోమ్ కు"
+
+#~ msgid "&Semi-transparent"
+#~ msgstr "(&S) పాక్షిక-పారదర్శకమైన"
+
+#~ msgid "Preview"
+#~ msgstr "ముందస్తు వీక్షణం"
+
+#~ msgid "Effect Parameters"
+#~ msgstr "ప్రభావం పారామితులు"
+
+#~ msgid "&Amount:"
+#~ msgstr "(&A) ఎమౌంట్:"
+
+#~ msgid "Co&lor:"
+#~ msgstr "(&l) రంగు:"
+
+#~ msgid "&Second color:"
+#~ msgstr "(&S) రెండవ రంగు:"
+
+#~ msgid "Name"
+#~ msgstr "పేరు"
+
+#~ msgid "Description"
+#~ msgstr "వర్ణన"
+
+#~ msgid "Install a theme archive file you already have locally"
+#~ msgstr "మీరు యిప్పటికే స్థానికంగా కలిగిన థీమ్ అర్చివ్ ఫైలును సంస్థాపించుము"
+
+#~ msgid ""
+#~ "If you already have a theme archive locally, this button will unpack it "
+#~ "and make it available for KDE applications"
+#~ msgstr ""
+#~ "మీరు యిప్పటికే థీమ్ ఆర్చివ్‌ను స్థానికంగా కలిగివుంటే, ఈ బటన్ దీనిని అన్‌ప్యాక్ చేస్తుంది మరియు దానిని KDE "
+#~ "అనువర్తనముల కొరకు అందుబాటులో వుంచుతుంది."
+
+#~ msgid "Get new themes from the Internet"
+#~ msgstr "ఇంటర్నెట్‌నుండి కొత్త థీమ్స్‌ను పొందుము"
+
+#~ msgid "Remove the selected theme from your disk"
+#~ msgstr "ఎంపికచేసిన థీమ్‌ను డిస్కునుండి తీసివేయుము"
+
+#~ msgid "This will remove the selected theme from your disk."
+#~ msgstr "ఇది ఎంపికచేసిన థీమ్‌ను మీ డిస్కునుండి తీసివేస్తుంది."
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "థీమ్ URLను లాక్కోనితెమ్ము లేదా టైపు చేయుము"
+
+#~ msgid ""
+#~ "Unable to download the icon theme archive;\n"
+#~ "please check that address %1 is correct."
+#~ msgstr ""
+#~ "ప్రతిమ థీమ్ ఆర్చివ్‌ను డౌనులోడు చేయలేక పోయింది;\n"
+#~ "%1 చిరునామా సరైనదేమో దయచేసి పరిశీలించుము."
+
+#~ msgid "<qt>Installing <strong>%1</strong> theme</qt>"
+#~ msgstr "<qt><strong>%1</strong> థీమ్‌ను సంస్థాపిస్తోంది</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <strong>%1</strong> icon theme?"
+#~ "<br /><br />This will delete the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>మీరు ఖచ్చితంగా <strong>%1</strong> ప్రతిమ థీమ్‌ను తీసివేద్దామని అనుకొనుచున్నారా?<br /"
+#~ "><br />ఇది ఈ థీమ్ ద్వారా సంస్థాపించబడిన ఫైళ్ళను తొలగిస్తుంది.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "నిర్ధారణ"
+
+#~ msgid "&Theme"
+#~ msgstr "(&T) థీమ్"
+
+#~ msgid "Ad&vanced"
+#~ msgstr "(&v)ఆధునికమైన"
+
+#~ msgid "Animate icons"
+#~ msgstr "ప్రతిమలను యానిమేట్ చేయుము"
+
+#~ msgid "Select the icon theme you want to use:"
+#~ msgstr "మీరు వుపయోగించాలని అనుకొనుచున్న ప్రతిమ థీమ్‌ను యెంపికచేయుము:"

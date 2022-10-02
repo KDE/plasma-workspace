@@ -1,0 +1,71 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Michôł Òstrowsczi <michol@linuxcsb.org>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_shell\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-27 00:45+0000\n"
+"PO-Revision-Date: 2009-06-13 21:37+0200\n"
+"Last-Translator: Michôł Òstrowsczi <michol@linuxcsb.org>\n"
+"Language-Team: Kashubian <i18n-csb@linuxcsb.org>\n"
+"Language: csb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 0.3\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2)\n"
+
+#: shellrunner.cpp:35
+#, kde-format
+msgid "Finds commands that match :q:, using common shell syntax"
+msgstr "Nalézë pòlét, chtëren słëchô :q:, brëkùjącë syntaksë pòwłoczi"
+
+#: shellrunner.cpp:36
+#, fuzzy, kde-format
+#| msgid "Run in &terminal window"
+msgid "Run in Terminal Window"
+msgstr "Zrëszë w òknie &terminala"
+
+#: shellrunner.cpp:54
+#, kde-format
+msgid "Run %1"
+msgstr "Zrëszë %1"
+
+#~ msgid "Enter the user you want to run the application as here."
+#~ msgstr "Wpiszë brëkòwnika chtërny mô zrëszëc nã aplikacëjã."
+
+#~ msgid "User&name:"
+#~ msgstr "Mio&no brëkòwnika:"
+
+#~ msgid "Enter the password here for the user you specified above."
+#~ msgstr "Wpiszë tuwò parolã dlô brëkòwnika."
+
+#~ msgid "Pass&word:"
+#~ msgstr "Paro&la:"
+
+#~ msgid ""
+#~ "Check this option if the application you want to run is a text mode "
+#~ "application. The application will then be run in a terminal emulator "
+#~ "window."
+#~ msgstr ""
+#~ "Klëkni tuwò, jeżlë aplikacëjô jaką chcesz zrëszëc je w tekstowim tribie. "
+#~ "Òstanie òna tedë zrëszonô w òknie terminala."
+
+#~ msgid "Run in &terminal window"
+#~ msgstr "Zrëszë w òknie &terminala"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "user id. Every process has a user id associated with it. This id code "
+#~ "determines file access and other permissions. The password of the user is "
+#~ "required to do this."
+#~ msgstr ""
+#~ "Klëkni tùwò jeżlë chcesz zrëszëc aplikacrjã jakno jiny brëkòwnik. Kòżdi "
+#~ "proces mô sparłączonégò z nim ID brëkòwnika. Nen kòd ID je przëpisóny do "
+#~ "prawów przëstãpù do lopków ë jinëch. Parola tegò brëkòwnika je wëmôgónô."
+
+#~ msgid "Run as a different &user"
+#~ msgstr "Zrëszë jakno jiny &brëkòwnik"

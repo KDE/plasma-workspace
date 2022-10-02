@@ -1,0 +1,89 @@
+# translation of plasma_engine_keystate.po to Slovak
+# Michal Sulek <misurel@gmail.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_engine_keystate\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"PO-Revision-Date: 2009-07-13 19:15+0200\n"
+"Last-Translator: Michal Sulek <misurel@gmail.com>\n"
+"Language-Team: Slovak <kde-sk@linux.sk>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 0.3\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: keystate.cpp:15
+msgid "Shift"
+msgstr "Shift"
+
+#: keystate.cpp:16
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: keystate.cpp:17
+msgid "Alt"
+msgstr "Alt"
+
+#: keystate.cpp:18
+msgid "Meta"
+msgstr "Meta"
+
+#: keystate.cpp:19
+msgid "Super"
+msgstr "Super"
+
+#: keystate.cpp:20
+msgid "Hyper"
+msgstr "Hyper"
+
+#: keystate.cpp:21
+msgid "AltGr"
+msgstr "AltGr"
+
+#: keystate.cpp:22
+msgid "Num Lock"
+msgstr "Num Lock"
+
+#: keystate.cpp:23
+msgid "Caps Lock"
+msgstr "Caps Lock"
+
+#: keystate.cpp:24
+msgid "Scroll Lock"
+msgstr "Scroll Lock"
+
+#: keystate.cpp:26
+msgid "Left Button"
+msgstr "Ľavé tlačidlo"
+
+#: keystate.cpp:27
+msgid "Right Button"
+msgstr "Pravé tlačidlo"
+
+#: keystate.cpp:28
+msgid "Middle Button"
+msgstr "Stredné tlačidlo"
+
+#: keystate.cpp:29
+msgid "First X Button"
+msgstr "Prvé tlačidlo X"
+
+#: keystate.cpp:30
+msgid "Second X Button"
+msgstr "Druhé tlačidlo X"
+
+#: keystate.cpp:44 keystate.cpp:54 keystate.cpp:81 keystate.cpp:102
+#: keystate.cpp:110
+msgid "Pressed"
+msgstr "Stlačené"
+
+#: keystate.cpp:45 keystate.cpp:88 keystate.cpp:111
+msgid "Latched"
+msgstr "Prepnuté"
+
+#: keystate.cpp:46 keystate.cpp:95 keystate.cpp:112
+msgid "Locked"
+msgstr "Zamknuté"

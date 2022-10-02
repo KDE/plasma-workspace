@@ -1,0 +1,188 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Indonesian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="icons" lang="&language;">
+<articleinfo>
+<title
+>Ikon</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<author
+>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+<othercredit role="translator"
+><firstname
+>Wantoyo</firstname
+><surname
+></surname
+><affiliation
+><address
+><email
+>wantoyek@gmail.com</email
+></address
+></affiliation
+><contrib
+>Terjemahan</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>10-12-2018</date>
+<releaseinfo
+>Plasma 5.14</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>ikon</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>&plasma; hadir dengan set lengkap ikon dalam beberapa ukuran. Ikon ini digunakan di seluruh &plasma;: desktop, panel, &dolphin; pengelola file, di setiap bilah alat dari setiap aplikasi &plasma;, dll.  Modul kendali ikon menawarkan kamu dengan cara yang sangat fleksibel untuk menyesuaikan cara &plasma; menangani ikon.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Ini adalah cuplikan dari pengelola tema ikon</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Mengkustomisasi ikon-ikon &plasma;</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Dalam modul ini kamu bisa:</para>
+<itemizedlist>
+<listitem
+><para
+>instal dan memilih tema-tema ikon</para
+></listitem>
+<listitem
+><para
+>memilih ukuran ikon yang berbeda</para
+></listitem>
+<listitem
+><para
+>hapus tema-tema ikon</para
+></listitem>
+</itemizedlist>
+
+<important
+><para
+>Mohon ingat bahwa beberapa pengaturan tersebut bergantung pada tema ikon pilihanmu. &plasma; hadir dengan bermacam tema-tema ikon secara baku, Breeze, Breeze Gelap dan Oxygen.</para
+></important>
+
+<para
+>Di atas adalah pratinjau ikon tema saat ini. Kebanyakan penginstalan baku paling hanya akan memiliki beberapa ikon tema yang tersedia, di antaranya tema Breeze &plasma; sebagai bakunya. Kamu juga bisa mengunduh lebih banyak dari Internet di <ulink url="https://store.kde.org/"
+>https://store.kde.org/</ulink
+> atau menginstalnya dari file lokal.</para>
+
+<para
+>Saat melintasi sebuah pratinjau yang teranimasi menampilkan sebuah pemilihan acak type mime pada umumnya dan ikon-ikon folder pada umumnya. </para>
+
+<para
+>Jika kamu ingin menghapus tema, gunakan ikon  <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+> yang terhampar di sebelah kanan bawah dari tema ikon. Untuk membatalkan aksi ini klik pada ikon <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-undo.png" format="PNG"/></imageobject
+></inlinemediaobject
+>. Jika kamu menekan <guibutton
+>Terapkan</guibutton
+> atau <guibutton
+>Oke</guibutton
+> tema-tema yang dipilih untuk penghapusan benar-benar dihapus, sehinga kamu tidak bisa membatalkan secara individu atau semua penghapusan. </para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Konfigurasikan Ukuran Ikon</guilabel
+></term>
+<listitem>
+<para
+>Pilih satu dari komponen dan gunakan penggeser untuk mengadaptasi ukuran yang sesuai. </para>
+<para>
+<screenshot>
+<screeninfo
+>Konfigurasikan Ukuran Ikon</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="use-of-icons.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Konfigurasikan Ukuran Ikon</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Dapatkan Ikon Baru...</guilabel
+></term>
+<listitem>
+<para
+>Kamu harus terkoneksi ke Internet untuk menggunakannya. Mengeklik tombol ini akan menampilkan dialog di mana kamu bisa memilih tema ikon baru. Mengeklik pada tombol  <guibutton
+>Instal</guibutton
+> dalam dialog akan menginstal tema ikon yang dipilih dan setelah kamu <guibutton
+>Tutup</guibutton
+> penginstal maka tema barumu segera tersedia. </para>
+<para>
+<screenshot>
+<screeninfo
+>Dapatkan Tema Ikon Baru</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="get-new-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Dapatkan Tema-tema Ikon Baru</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Instal dari File...</guilabel
+></term>
+<listitem>
+<para
+>Jika kamu mengunduh tema baru dari internet, kamu bisa menggunakan ini untuk menelusuri ke lokasi tema yang baru diunduh itu. Mengeklik tombol ini akan membawa kamu sebuah dialog file untuk menunjuk ke tarball tema ikon yang kamu miliki di disk-mu.</para>
+
+<para
+>Mengeklik <guibutton
+>Buka</guibutton
+> dalam dialog ini akan menginstal tema yang kamu tunjuk dan membuatnya tersedia di daftar tema. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</article>

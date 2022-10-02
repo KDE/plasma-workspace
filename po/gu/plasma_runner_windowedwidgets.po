@@ -1,0 +1,35 @@
+# translation of plasma_runner_windowedwidgets.po to Gujarati
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sweta Kothari <swkothar@redhat.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_windowedwidgets\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2010-12-21 16:18+0530\n"
+"Last-Translator: Sweta Kothari <swkothar@redhat.com>\n"
+"Language-Team: Gujarati\n"
+"Language: gu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: windowedwidgetsrunner.cpp:30
+#, kde-format
+msgid "Finds Plasma widgets whose name or description match :q:"
+msgstr "એવી પ્લાઝ્મા વીજેટ શોધો જેનું નામ અથવા વર્ણન :q: ને મળતું હોય"
+
+#: windowedwidgetsrunner.cpp:31 windowedwidgetsrunner.cpp:52
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "mobile applications"
+msgstr "મોબાઇલ કાર્યક્રમો"
+
+#: windowedwidgetsrunner.cpp:32
+#, kde-format
+msgid "list all Plasma widgets that can run as standalone applications"
+msgstr "એવી બધી પ્લાઝ્મા વિજેટ ની યાદી બનાવો જે એકલા કાર્યક્રમ તરીકે ચાલી શકે"

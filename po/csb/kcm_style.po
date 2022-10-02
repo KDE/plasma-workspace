@@ -1,0 +1,480 @@
+# translation of kcmstyle.po to Kaszëbsczi
+# Michôł Òstrowsczi <michol@linuxcsb.org>, 2007, 2008.
+# Mark Kwidzińsczi <mark@linuxcsb.org>, 2008.
+# Mark Kwidzińśczi <mark@linuxcsb.org>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmstyle\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"PO-Revision-Date: 2009-12-20 19:19+0100\n"
+"Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
+"Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
+"Language: csb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2)\n"
+
+#: gtkpage.cpp:59
+#, kde-format
+msgid "%1 is not a valid GTK Theme archive."
+msgstr ""
+
+#: kcmstyle.cpp:161 kcmstyle.cpp:168
+#, kde-format
+msgid "There was an error loading the configuration dialog for this style."
+msgstr "Felô òbczas ladowaniô òkna kònfigùracëji tegò sztéla."
+
+#: kcmstyle.cpp:274
+#, kde-format
+msgid "Failed to apply selected style '%1'."
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:32
+#, fuzzy, kde-format
+#| msgid "Show icons on buttons:"
+msgid "Show icons:"
+msgstr "Wëskrzëni &ikònë na knąpach:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:33
+#, fuzzy, kde-format
+#| msgid "Radio button"
+msgid "On buttons"
+msgstr "Pòle wëbiérkù"
+
+#: package/contents/ui/EffectSettingsPopup.qml:44
+#, kde-format
+msgid "In menus"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:56
+#, fuzzy, kde-format
+#| msgid "Main toolbar text:"
+msgid "Main toolbar label:"
+msgstr "Tekst przédny listwë nôrzãdzów:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "None"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:59
+#, fuzzy, kde-format
+#| msgid "Text Only"
+msgid "Text only"
+msgstr "Blós tekst"
+
+#: package/contents/ui/EffectSettingsPopup.qml:60
+#, fuzzy, kde-format
+#| msgid "Text Beside Icons"
+msgid "Beside icons"
+msgstr "Tekst kòl ikònów"
+
+#: package/contents/ui/EffectSettingsPopup.qml:61
+#, fuzzy, kde-format
+#| msgid "Text Below Icons"
+msgid "Below icon"
+msgstr "Tekst pòd ikònama"
+
+#: package/contents/ui/EffectSettingsPopup.qml:76
+#, fuzzy, kde-format
+#| msgid "Secondary toolbar text:"
+msgid "Secondary toolbar label:"
+msgstr "Drëdżi tekst listwë nôrządzów:"
+
+#: package/contents/ui/GtkStylePage.qml:18
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "&Applications"
+msgid "GNOME/GTK Application Style"
+msgstr "&Aplikacëje"
+
+#: package/contents/ui/GtkStylePage.qml:44
+#, kde-format
+msgid "GTK theme:"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:69
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgid "Preview…"
+msgstr "Pòdzérk"
+
+#: package/contents/ui/GtkStylePage.qml:88
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:93
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "&Applications"
+msgid "Get New GNOME/GTK Application Styles…"
+msgstr "&Aplikacëje"
+
+#: package/contents/ui/GtkStylePage.qml:109
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:111
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: package/contents/ui/main.qml:17
+#, fuzzy, kde-format
+#| msgid ""
+#| "<h1>Style</h1>This module allows you to modify the visual appearance of "
+#| "user interface elements, such as the widget style and effects."
+msgid ""
+"This module allows you to modify the visual appearance of applications' user "
+"interface elements."
+msgstr ""
+"<h1>Sztél</h1> Mòduł nen pòzwôlô zmienic wëzdrzatk elementów interfejsa "
+"brëkòwnika a téż skònfigùrowac dodôwné widzawné efektë."
+
+#: package/contents/ui/main.qml:96
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure Style…"
+msgstr "&Kònfigùrëjë..."
+
+#: package/contents/ui/main.qml:116
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr ""
+
+#: package/contents/ui/main.qml:132
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "&Kònfigùrëjë..."
+
+#: styleconfdialog.cpp:21
+#, kde-format
+msgid "Configure %1"
+msgstr "Kònfigùracëjô: %1"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "Kôrta 1"
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, fuzzy, kde-format
+#| msgid "Button"
+msgid "Push Button"
+msgstr "Knąpa"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, fuzzy, kde-format
+#| msgid "Combobox"
+msgid "Combo box"
+msgstr "Rozwijnô lësta"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "Òptacëjô"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "Pòle wëbiérkù"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:133
+#, kde-format
+msgid "Tab 2"
+msgstr "Kôrta 2"
+
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "&Applications"
+msgid "Application style"
+msgstr "&Aplikacëje"
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Show icons on buttons:"
+msgid "Show icons on buttons"
+msgstr "Wëskrzëni &ikònë na knąpach:"
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, fuzzy, kde-format
+#| msgid "Show icons on buttons:"
+msgid "Show icons in menus"
+msgstr "Wëskrzëni &ikònë na knąpach:"
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, fuzzy, kde-format
+#| msgid "Main toolbar text:"
+msgid "Main toolbar label"
+msgstr "Tekst przédny listwë nôrzãdzów:"
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, fuzzy, kde-format
+#| msgid "Secondary toolbar text:"
+msgid "Secondary toolbar label"
+msgstr "Drëdżi tekst listwë nôrządzów:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Mark Kwidzińsczi, Michôł Òstrowsczi"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "mark@linuxcsb.org, michol@linuxcsb.org"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "Application Style"
+#~ msgstr "&Aplikacëje"
+
+#, fuzzy
+#~| msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
+#~ msgstr "(c) 2002 Karol Szwed, Daniel Molkentin"
+
+#~ msgid "Karol Szwed"
+#~ msgstr "Karol Szwed"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "Download New GNOME/GTK2 Application Styles..."
+#~ msgstr "&Aplikacëje"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "GNOME/GTK2 Application Styles"
+#~ msgstr "&Aplikacëje"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "Download New GNOME/GTK3 Application Styles..."
+#~ msgstr "&Aplikacëje"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "GNOME/GTK3 Application Styles"
+#~ msgstr "&Aplikacëje"
+
+#~ msgid "Unable to Load Dialog"
+#~ msgstr "Nie mòże wladowac dialogòwégò òkna"
+
+#~ msgid "No description available."
+#~ msgstr "Felënk òpisënkù."
+
+#~ msgid ""
+#~ "This area shows a preview of the currently selected style without having "
+#~ "to apply it to the whole desktop."
+#~ msgstr ""
+#~ "W tim òknie mòże òbaczëc wëzdrzatk biéżnô wëbrónégò sztélu, bez mùszu "
+#~ "wzãcô gò do całégò òkrãżégò."
+
+#~ msgid ""
+#~ "Here you can choose from a list of predefined widget styles (e.g. the way "
+#~ "buttons are drawn) which may or may not be combined with a theme "
+#~ "(additional information like a marble texture or a gradient)."
+#~ msgstr ""
+#~ "Stądka mòże wëbrac jeden z parôt sztélów interfejsa (òpisëjącëch m.jin. "
+#~ "wëzdrzatk knąpów). Niechtërné sztélë mògą bëc sparłãczoné z témą (dodôwną "
+#~ "informacëją ò wëzdrzatkù, taką jakno np. marmùrowé spòdlé abò gradient)."
+
+#, fuzzy
+#~| msgid ""
+#~| "If you enable this option, KDE Applications will show small icons "
+#~| "alongside some important buttons."
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "some important buttons."
+#~ msgstr ""
+#~ "Jeżlë na òptacëjô je wëłączonô, na wôżniészëch knąpach wëskrzëniwóné mdą "
+#~ "môłi ikònë."
+
+#, fuzzy
+#~| msgid ""
+#~| "If you enable this option, KDE Applications will show small icons "
+#~| "alongside some important buttons."
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "most menu items."
+#~ msgstr ""
+#~ "Jeżlë na òptacëjô je wëłączonô, na wôżniészëch knąpach wëskrzëniwóné mdą "
+#~ "môłi ikònë."
+
+#, fuzzy
+#~| msgid ""
+#~| "<p><b>No Text:</b> Shows only icons on toolbar buttons. Best option for "
+#~| "low resolutions.</p><p><b>Text Only: </b>Shows only text on toolbar "
+#~| "buttons.</p><p><b>Text Beside Icons: </b> Shows icons and text on "
+#~| "toolbar buttons. Text is aligned beside the icon.</p><b>Text Below "
+#~| "Icons: </b> Shows icons and text on toolbar buttons. Text is aligned "
+#~| "below the icon."
+#~ msgid ""
+#~ "<p><b>No text:</b> Shows only icons on toolbar buttons. Best option for "
+#~ "low resolutions.</p><p><b>Text only: </b>Shows only text on toolbar "
+#~ "buttons.</p><p><b>Text beside icons: </b> Shows icons and text on toolbar "
+#~ "buttons. Text is aligned beside the icon.</p><b>Text below icons: </b> "
+#~ "Shows icons and text on toolbar buttons. Text is aligned below the icon."
+#~ msgstr ""
+#~ "<p><b>Blós ikònë:</b> na knąpach lëstwów nôrzãdzów wëskrzëniwóné bãdą "
+#~ "blóã ikònë (nôlepszô òptacëjô przë nisczi rozdzélnoscë).</p> <p><b>TBlós "
+#~ "tekst:</b> na knąpach lëstwów nôrzãdzów wëskrzëniwóné mdze sóm tekst.</p> "
+#~ "<p><b>Tekst kòle ikònów:</b> na knąpach lëstwów nôrzãdzów wëskrzëniwóné "
+#~ "mdã kòle se tekst ë ikòna.</p> <b>Tekst pòd ikònama:</b> na knąpach "
+#~ "lëstwów nôrzãdzów wëskrzëniwóné mdą blós ikònë, a pòd nima tekst."
+
+#~ msgid "Toolbars"
+#~ msgstr "Listwë nôrzãdzów"
+
+#~ msgid "No Text"
+#~ msgstr "Bez tekstu"
+
+#, fuzzy
+#~| msgid "Widget style:"
+#~ msgid "Widget Style"
+#~ msgstr "Sztél widżetu:"
+
+#~ msgid "Widget style:"
+#~ msgstr "Sztél widżetu:"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Fine Tuning"
+#~ msgstr "A&kùratné dopasowanié"
+
+#~ msgid "Description: %1"
+#~ msgstr "Òpisënk: %1"
+
+#~ msgid ""
+#~ "This page allows you to choose details about the widget style options"
+#~ msgstr "Na starna zezwôlô ce na wëbiérk detalów òptacëji sztélu widżetów"
+
+#~ msgid "Group Box"
+#~ msgstr "Grupòwô kastka"
+
+#~ msgid "KDE Style Module"
+#~ msgstr "Mòduł kònfigùracëji sztélu KDE"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "In application"
+#~ msgstr "&Aplikacëje"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "Global Menu widget"
+#~ msgstr "&Aplikacëje"
+
+#~ msgid "Graphical effects:"
+#~ msgstr "Graficzné efektë:"
+
+#~ msgid "Low display resolution and Low CPU"
+#~ msgstr "Môłô rozdzélnota wëskrzëniwóniô ë wòlny procesor"
+
+#~ msgid "High display resolution and Low CPU"
+#~ msgstr "Wësôk rozdzélnota wëskrzënióniô ë wòlny procesor"
+
+#~ msgid "Low display resolution and High CPU"
+#~ msgstr "Môłô rozdzélnota wëskrzëniwóniô ë chùtczi procesor"
+
+#~ msgid "High display resolution and High CPU"
+#~ msgstr "Wiôlgô rozdzélnota wëskrzëniwóniô ë chùtczi procesor"
+
+#~ msgid "Low display resolution and Very High CPU"
+#~ msgstr "Môłô rozdzélnota wëskrzëniwóniô ë baro chùtczi procesor"
+
+#~ msgid "High display resolution and Very High CPU"
+#~ msgstr "Wiôlgô rozdzélnota wëskrzëniwóniô ë baro chùtczi procesor"
+
+#~ msgid ""
+#~ "If you enable this option, KDE Applications will run internal animations."
+#~ msgstr ""
+#~ "Jeżlë na òptacëjô je wëłączonô, aplikacëje KDE bãdą startowôłë bënowé "
+#~ "animacje."
+
+#~ msgid "kcmstyle"
+#~ msgstr "kcmstyle"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Workspace"
+#~ msgstr "&Robòczé rumë"
+
+#~ msgid "Get New Themes..."
+#~ msgstr "Dobëjë nowé wëzdrzatczi..."
+
+#~ msgid "Icons Only"
+#~ msgstr "Blós ikònë"
+
+#~ msgctxt "@label:listbox"
+#~ msgid "Text pos&ition of toolbar elements:"
+#~ msgstr "&Pòłożenié tekstu na elemence listwë nôrzãdzów:"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Style"
+#~ msgstr "&Sztél"
+
+#~ msgid ""
+#~ "This page allows you to enable various widget style effects. For best "
+#~ "performance, it is advisable to disable all effects."
+#~ msgstr ""
+#~ "Na ti kôrce mòże włączëc różné dodôwné efektë sztéla. Dlô zwikszëniô "
+#~ "chùtkòscë dzejania systemë nót je wëłaczëc wszëtczé efektë."
+
+#, fuzzy
+#~| msgid "High&light buttons under mouse"
+#~ msgctxt "@option:check"
+#~ msgid "High&light buttons under mouse"
+#~ msgstr "Pòd&skrzëni knąpë pòd kùrsorã mëszë"
+
+#, fuzzy
+#~| msgid "E&nable tooltips"
+#~ msgctxt "@option:check"
+#~ msgid "E&nable tooltips"
+#~ msgstr "&Włączë pòdpòwiescë"
+
+#~ msgid ""
+#~ "If this option is selected, toolbar buttons will change their color when "
+#~ "the mouse cursor is moved over them."
+#~ msgstr ""
+#~ "Wëbranié ti òptacëji sprawi zmianã farwë knąpë, nad chtërną naleze sã "
+#~ "kùrsor mëszë."
+
+#~ msgid ""
+#~ "If you check this option, the KDE application will offer tooltips when "
+#~ "the cursor remains over items in the toolbar."
+#~ msgstr ""
+#~ "Wëbranié ti òptacëji sprawi wëskrzënianié pòdpòwiesców, eżlë kùrsor mëszë "
+#~ "zatrzëmô sã nad knąpą lëstwë nôrzãdzów."
+
+#~ msgid "&Effects"
+#~ msgstr "&Efektë"

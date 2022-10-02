@@ -1,0 +1,76 @@
+# Albanian translation for kdebase-workspace
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the kdebase-workspace package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kdebase-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-03 00:48+0000\n"
+"PO-Revision-Date: 2009-05-21 17:43+0000\n"
+"Last-Translator: Vilson Gjeci <vilsongjeci@gmail.com>\n"
+"Language-Team: Albanian <sq@li.org>\n"
+"Language: sq\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2011-05-06 00:37+0000\n"
+"X-Generator: Launchpad (build 12959)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: kdisplaymanager.cpp:777
+#, fuzzy, kde-format
+#| msgctxt "user: ..."
+#| msgid "%1: TTY login"
+msgctxt "user: …"
+msgid "%1: TTY login"
+msgstr "%1: TTY hyrje"
+
+#: kdisplaymanager.cpp:782
+#, fuzzy, kde-format
+#| msgctxt "... location (TTY or X display)"
+#| msgid "Unused"
+msgctxt "… location (TTY or X display)"
+msgid "Unused"
+msgstr "I Papërdorur"
+
+#: kdisplaymanager.cpp:783
+#, kde-format
+msgid "X login on remote host"
+msgstr "X hyrje në mbartësin e largët"
+
+#: kdisplaymanager.cpp:783
+#, fuzzy, kde-format
+#| msgctxt "... host"
+#| msgid "X login on %1"
+msgctxt "… host"
+msgid "X login on %1"
+msgstr "X hyrje në %1"
+
+#: kdisplaymanager.cpp:785
+#, kde-format
+msgctxt "user: session type"
+msgid "%1: %2"
+msgstr "%1: %2"
+
+#: kdisplaymanager.cpp:796
+#, kde-format
+msgctxt "session (location)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#~ msgctxt ""
+#~ "Action that reorganizes the windows to try to have them less cluttered"
+#~ msgid "Unclutter Windows"
+#~ msgstr "Zhblloko Dritaret"
+
+#~ msgctxt "Action that reorganizes the windows so that they are in cascade"
+#~ msgid "Cascade Windows"
+#~ msgstr "Dritare në Rënie"
+
+#~ msgid "On All Desktops"
+#~ msgstr "Në Të Gjithë Desktopët"
+
+#~ msgid "No Windows"
+#~ msgstr "Pa Dritare"

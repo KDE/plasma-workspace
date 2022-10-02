@@ -1,0 +1,320 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Safa Alfulaij <safa1996alfulaij@gmail.com>, 2014, ٢٠١٦, 2017.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-15 00:46+0000\n"
+"PO-Revision-Date: 2022-06-06 18:01+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 21.07.70\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "زايد السعيدي"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "zayed.alsaidi@gmail.com"
+
+#: imagepackage/contents/ui/config.qml:94
+#, kde-format
+msgid "Positioning:"
+msgstr "الموضع:"
+
+#: imagepackage/contents/ui/config.qml:97
+#, kde-format
+msgid "Scaled and Cropped"
+msgstr "مكبّرة ومقصوصة"
+
+#: imagepackage/contents/ui/config.qml:101
+#, kde-format
+msgid "Scaled"
+msgstr "مكبّرة"
+
+#: imagepackage/contents/ui/config.qml:105
+#, kde-format
+msgid "Scaled, Keep Proportions"
+msgstr "مكبّرة مع إبقاء النّسب"
+
+#: imagepackage/contents/ui/config.qml:109
+#, kde-format
+msgid "Centered"
+msgstr "موسّطة"
+
+#: imagepackage/contents/ui/config.qml:113
+#, kde-format
+msgid "Tiled"
+msgstr "مكرّرة"
+
+#: imagepackage/contents/ui/config.qml:141
+#, kde-format
+msgid "Background:"
+msgstr "الخلفيّة:"
+
+#: imagepackage/contents/ui/config.qml:142
+#, kde-format
+msgid "Blur"
+msgstr "غشاوة"
+
+#: imagepackage/contents/ui/config.qml:151
+#, kde-format
+msgid "Solid color"
+msgstr "لون صلب"
+
+#: imagepackage/contents/ui/config.qml:161
+#, kde-format
+msgid "Select Background Color"
+msgstr "اختر لون الخلفيّة"
+
+#: imagepackage/contents/ui/config.qml:207
+#, kde-format
+msgid "Add Image…"
+msgstr "أضف صورة..."
+
+#: imagepackage/contents/ui/config.qml:213
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:257
+#, kde-format
+msgid "Get New Wallpapers…"
+msgstr "اجلب خلفيّات جديدة..."
+
+#: imagepackage/contents/ui/main.qml:69
+#, kde-format
+msgid "Open Wallpaper Image"
+msgstr "افتح صورة خلفيّة"
+
+#: imagepackage/contents/ui/main.qml:70
+#, kde-format
+msgid "Next Wallpaper Image"
+msgstr "صورة الخلفيّة التّالية"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:33
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "افتح المجلّد المحتوي"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:39
+#, kde-format
+msgid "Restore wallpaper"
+msgstr "استعد الخلفيّة"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:44
+#, kde-format
+msgid "Remove Wallpaper"
+msgstr "أزل الخلفيّة"
+
+#: plasma-apply-wallpaperimage.cpp:29
+#, kde-format
+msgid ""
+"This tool allows you to set an image as the wallpaper for the Plasma session."
+msgstr "تتيح لك هذه الأداة تعيين صورة كخلفية لجلسة البلازما."
+
+#: plasma-apply-wallpaperimage.cpp:31
+#, kde-format
+msgid ""
+"An image file or an installed wallpaper kpackage that you wish to set as the "
+"wallpaper for your Plasma session"
+msgstr ""
+"ملف صورة أو حزمة خلفيات kpackage مثبتة ترغب في تعيينها كخلفية لجلسة البلازما "
+"الخاصة بك"
+
+#: plasma-apply-wallpaperimage.cpp:45
+#, kde-format
+msgid ""
+"There is a stray single quote in the filename of this wallpaper (') - please "
+"contact the author of the wallpaper to fix this, or rename the file "
+"yourself: %1"
+msgstr ""
+"يوجد اقتباس فردي طائش في اسم ملف هذه الخلفية (') - يرجى الاتصال بمؤلف خلفية "
+"الشاشة لإصلاح ذلك ، أو إعادة تسمية الملفبنفسك: %1"
+
+#: plasma-apply-wallpaperimage.cpp:85
+#, kde-format
+msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+msgstr "حدث خطأ أثناء محاولة تعيين خلفية البلازما: \n"
+
+#: plasma-apply-wallpaperimage.cpp:89
+#, kde-format
+msgid ""
+"Successfully set the wallpaper for all desktops to the KPackage based %1"
+msgstr "نجح في تعيين خلفية الشاشة لكافة أسطح المكتب ل KPackage  %1"
+
+#: plasma-apply-wallpaperimage.cpp:91
+#, kde-format
+msgid "Successfully set the wallpaper for all desktops to the image %1"
+msgstr "نجح في تعيين الخلفية لجميع أجهزة سطح المكتب للصورة %1"
+
+#: plasma-apply-wallpaperimage.cpp:97
+#, kde-format
+msgid ""
+"The file passed to be set as wallpaper does not exist, or we cannot identify "
+"it as a wallpaper: %1"
+msgstr ""
+"الملف الذي تم تمريره ليتم تعيينه كخلفية غير موجود ، أو لا يمكننا تحديده "
+"كخلفية: %1"
+
+#: plugin/finder/packagefinder.cpp:152
+#, kde-format
+msgid "Recommended wallpaper file"
+msgstr "ملف الخلفيّة المستحسن"
+
+#: plugin/imagebackend.cpp:234
+#, kde-format
+msgid "Directory with the wallpaper to show slides from"
+msgstr "الدّليل الذي فيه الخلفيّات لعرض الشّرائح منه"
+
+#: plugin/imagebackend.cpp:345
+#, kde-format
+msgid "Open Image"
+msgstr "افتح صورة"
+
+#: plugin/imagebackend.cpp:345
+#, kde-format
+msgid "Image Files"
+msgstr "ملفّات الصّور"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:38
+#, kde-format
+msgid "Order:"
+msgstr "الترتيب:"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:45
+#, kde-format
+msgid "Random"
+msgstr "عشوائي"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:49
+#, kde-format
+msgid "A to Z"
+msgstr "أ إلى ي"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:53
+#, kde-format
+msgid "Z to A"
+msgstr "ي إلى أ"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:57
+#, kde-format
+msgid "Date modified (newest first)"
+msgstr "تاريخ التعديل (الأحدث أولا)"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:61
+#, kde-format
+msgid "Date modified (oldest first)"
+msgstr "تاريخ التعديل (الأقدم أولا)"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:86
+#, kde-format
+msgid "Group by folders"
+msgstr "اجمع بالمجلدات"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:98
+#, kde-format
+msgid "Change every:"
+msgstr "غيّر كلّ:"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:108
+#, kde-format
+msgid "%1 hour"
+msgid_plural "%1 hours"
+msgstr[0] "٠ ساعة"
+msgstr[1] "ساعة واحدة"
+msgstr[2] "ساعتين"
+msgstr[3] "%1 ساعات"
+msgstr[4] "%1 ساعة"
+msgstr[5] "%1 ساعة"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:128
+#, kde-format
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "دقيقة"
+msgstr[1] "دقيقة واحدة"
+msgstr[2] "دقيقتين"
+msgstr[3] "%1 دقائق"
+msgstr[4] "%1 دقيقة"
+msgstr[5] "%1 دقيقة"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:148
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "ثانية"
+msgstr[1] "ثانية واحدة"
+msgstr[2] "ثانيتين"
+msgstr[3] "%1 ثواني"
+msgstr[4] "%1 ثانية"
+msgstr[5] "%1 ثانية"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:162
+#, kde-format
+msgid "Folders"
+msgstr "المجلّدات"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:220
+#, kde-format
+msgid "Remove Folder"
+msgstr "أزل مجلد"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:225
+#, kde-format
+msgid "Open Folder"
+msgstr "افتح مجلّد"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:235
+#, kde-format
+msgid "There are no wallpaper locations configured"
+msgstr "لا توجد مواقع خلفية مضبوطة"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:250
+#, kde-format
+msgid "Add Folder…"
+msgstr "أضف مجلّدًا..."
+
+#~ msgid "There are no wallpapers in this slideshow"
+#~ msgstr "لا توجد خلفيات في عرض الشرائح هذا"
+
+#~ msgid "Add Custom Wallpaper"
+#~ msgstr "أضف خلفيّة مخصّصة"
+
+#~ msgid "Remove wallpaper"
+#~ msgstr "أزل الخلفيّة"
+
+#~ msgid "%1 by %2"
+#~ msgstr "%1 لِ‍ %2"
+
+#, fuzzy
+#~| msgid "Remove wallpaper"
+#~ msgid "Wallpapers"
+#~ msgstr "أزل الخلفيّة"
+
+#~ msgid "Download Wallpapers"
+#~ msgstr "نزّل خلفيّات"
+
+#~ msgid "Hours"
+#~ msgstr "ساعة"
+
+#~ msgid "Open..."
+#~ msgstr "افتح..."
+
+#~ msgctxt "Unknown Author"
+#~ msgid "Unknown"
+#~ msgstr "مجهول"
+
+#~ msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz *.xcf)"
+#~ msgstr "ملفات الصور (*.png *.jpg *.jpeg *.bmp *.svg *.svgz *.xcf)"
+
+#~ msgid "Preview"
+#~ msgstr "عاين"

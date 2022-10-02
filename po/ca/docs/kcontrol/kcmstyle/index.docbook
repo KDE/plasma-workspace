@@ -1,0 +1,151 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Catalan  "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmstyle" lang="&language;">
+<articleinfo>
+
+<title
+>Estil de l'aplicació</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+<date
+>9 d'abril de 2021</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Arranjament del sistema</keyword>
+<keyword
+>estil</keyword>
+<keyword
+>aplicació</keyword>
+<keyword
+>ginys</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Aquest mòdul s'utilitza per a configurar el mode en el qual el &plasma; dibuixarà individualment els ginys.</para>
+
+<note
+><para
+>Un <emphasis
+>giny (widget)</emphasis
+> és un terme d'ús comú entre els programadors per a referir-se a elements de la interfície d'usuari tal com els botons, menús i barres de desplaçament. Podeu pensar en ells com en les peces fonamentals que s'acoblen per a crear la vostra aplicació.</para
+></note>
+
+<para
+>Amb aquest mòdul podreu configurar com es dibuixaran els ginys, però per a canviar-ne el color haureu de consultar la secció titulada <ulink url="help:/kcontrol/colors/index.html"
+>Colors</ulink
+>.</para>
+
+<para
+>La part superior de la quadrícula, anomenada <guilabel
+>Estil de l'aplicació</guilabel
+> conté una llista de vistes prèvies dels estils preestablerts. Cada estil disposa d'un nom i mostra una breu descripció en passar el cursor del ratolí per sobre del seu element.</para>
+
+<para
+>Si voleu configurar un tema del &plasma;, utilitzeu la icona de superposada <guilabel
+>Configura l'estil...</guilabel
+> a la part inferior dreta de la icona estil de giny en la quadrícula.</para>
+
+<para
+>Si s'implementa, gairebé és possible canviar cada aspecte de l'estil: pestanyes centrals a la barra de pestanyes, dibuixar separadors d'element a la barra d'eines, dibuixar indicadors de focus a les llistes, dibuixar marques als controls lliscants, habilitar nanses per al canvi de mida estenent, definir la visibilitat dels acceleradors de teclat, mode d'arrossegament de Windows, utilitzar marcs per a una millor accessibilitat, utilitzar botons a les barres de desplaçament, utilitzar transparència en els menús.</para>
+
+<para
+>La configuració general es pot realitzar prement el botó <guibutton
+>Configura les icones i les barres d'eines</guibutton
+> que hi ha a sota de la quadrícula. Aquest botó obre una subfinestra per a seleccionar més opcions de configuració.</para>
+<variablelist>
+
+<varlistentry
+> 
+<term
+><guilabel
+>Mostra les icones: Als botons</guilabel
+></term>
+<listitem>
+<para
+>Si se selecciona aquesta opció, els botons d'acció (com <guibutton
+>D'acord</guibutton
+> i <guibutton
+>Aplica</guibutton
+>) tindran una petita icona situada a dintre seu per a actuar com a una referència visual. Si no se selecciona aquesta opció, aleshores només apareixerà el text en el botó.</para>
+</listitem
+> 
+</varlistentry
+> 
+
+<varlistentry
+> 
+<term
+><guilabel
+>Mostra les icones: Als menús</guilabel
+></term>
+<listitem>
+<para
+>Si seleccioneu aquesta opció, les aplicacions &kde; mostraran petites icones al costat de la majoria dels elements de menú. Si aquesta opció no està seleccionada, només apareixerà text als menús. Els canvis en la visibilitat de les icones de menú només afectarà les aplicacions iniciades recentment.</para>
+</listitem
+> 
+</varlistentry
+> 
+
+<varlistentry
+> 
+<term
+><guilabel
+>Etiqueta de la barra d'eines principal</guilabel
+>, <guilabel
+>Etiqueta de la barra d'eines secundària</guilabel
+></term>
+<listitem>
+<para
+>Aquesta llista desplegable permet determinar a on apareixerà de manera predeterminada el text del nom del botó. Si se selecciona <guilabel
+>Sense</guilabel
+>, aleshores no hi haurà text en els botons de la barra d'eines. Si se selecciona <guilabel
+>Només el text</guilabel
+>, aleshores la icona dels botons serà substituïda pel text amb el nom del botó. Si se selecciona <guilabel
+>Vora les icones</guilabel
+>, el nom del botó se situarà a la <emphasis
+>dreta</emphasis
+> de la icona. Si se selecciona <guilabel
+>Sota la icona</guilabel
+>, el valor predeterminat serà tenir el text del botó <emphasis
+>sota</emphasis
+> la icona.</para>
+
+<tip
+><para
+>Aquestes opcions especifiquen la ubicació <emphasis
+>predeterminada</emphasis
+>. Cada aplicació pot sobreescriure les opcions de configuració establertes en aquest plafó.</para
+></tip>
+</listitem
+> 
+</varlistentry
+> 
+
+</variablelist>
+
+<para
+>El botó <guibutton
+>Configura l'estil de l'aplicació GNOME/GTK...</guibutton
+> s'utilitza per a obrir la pestanya de configuració on triareu el <guilabel
+>Tema GTK</guilabel
+>, instal·lar un tema GTK des d'un fitxer o <guibutton
+>Obtén estils nous de les aplicacions GNOME/GTK...</guibutton
+> des d'Internet. </para>
+
+</article>

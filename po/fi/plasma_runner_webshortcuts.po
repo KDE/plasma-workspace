@@ -1,0 +1,73 @@
+# translation of krunner_webshortcutsrunner.po to Finnish
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the kde-workspace package.
+# Mikko Piippo <piippo@cc.helsinki.fi>, 2008.
+# Teemu Rytilahti <teemu.rytilahti@kde-fi.org>, 2008.
+# Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2008.
+# Tommi Nieminen <translator@legisign.org>, 2009, 2010, 2011, 2020, 2022.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2011.
+#
+# KDE Finnish translation sprint participants:
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_webshortcuts\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-06-02 00:47+0000\n"
+"PO-Revision-Date: 2022-01-10 21:15+0200\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-POT-Import-Date: 2012-12-01 22:22:37+0000\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#: webshortcutrunner.cpp:58
+#, kde-format
+msgid "Opens \"%1\" in a web browser with the query :q:."
+msgstr ""
+"Avaa palvelun %1 selaimeen kyselyllä :q:.|/|Avaa $[gen %1] selaimeen "
+"kyselyllä :q:."
+
+#: webshortcutrunner.cpp:63
+#, kde-format
+msgid "Search using the DuckDuckGo bang syntax"
+msgstr "Etsi DuckDuckGo’n huutomerkkisyntaksilla"
+
+#: webshortcutrunner.cpp:94
+#, kde-format
+msgid "Search in private window"
+msgstr "Etsi yksityisikkunassa"
+
+#: webshortcutrunner.cpp:94
+#, kde-format
+msgid "Search in incognito window"
+msgstr "Etsi yksityisikkunassa"
+
+# Esimerkiksi: $[hakumuoto Google] = ”Googlella” ja $[hakumuoto Wikipedia] = ”Wikipediasta”
+#: webshortcutrunner.cpp:129 webshortcutrunner.cpp:146
+#, kde-format
+msgid "Search %1 for %2"
+msgstr "Etsi hakukoneella %1: %2|/|Etsi $[hakumuoto %1]: %2"
+
+#~ msgctxt "A web shortcut and its name"
+#~ msgid "%1: %2"
+#~ msgstr "%1: %2"
+
+#~ msgctxt "A web shortcut, its name and a description"
+#~ msgid "%1: %2 %3"
+#~ msgstr "%1: %2 %3"
+
+#~ msgid ""
+#~ "Opens the location associated with \"shortcut\" in a web browser with the "
+#~ "query :q:. Known shortcuts include:\n"
+#~ "%1"
+#~ msgstr ""
+#~ "Avaa ”oikotietä” vastaavan sijainnin verkkoselaimeen kyselyllä :q:. "
+#~ "Tunnettuja oikoteitä ovat:\n"
+#~ "%1"
+
+#~ msgid "Web Shortcut"
+#~ msgstr "WWW-pikavalinta"

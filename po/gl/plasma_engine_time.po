@@ -1,0 +1,66 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"PO-Revision-Date: 2017-10-21 08:16+0100\n"
+"Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
+"Language-Team: Galician <kde-i18n-doc@kde.org>\n"
+"Language: gl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: timesource.cpp:46
+msgid "Local"
+msgstr "Local"
+
+#: timesource.cpp:61
+msgid "Timezone"
+msgstr "Fuso horario"
+
+#: timesource.cpp:66 timesource.cpp:69 timesource.cpp:73
+msgid "Timezone City"
+msgstr "Cidade do fuso horario"
+
+#: timesource.cpp:68 timesource.cpp:71
+msgid "Timezone Continent"
+msgstr "Continente do fuso horario"
+
+#: timesource.cpp:72
+msgid "Timezone Country"
+msgstr "País do fuso horario"
+
+#: timesource.cpp:97
+msgid "Offset"
+msgstr "Desprazamento"
+
+#: timesource.cpp:100
+msgid "Timezone Abbreviation"
+msgstr "Abreviación do fuso horario"
+
+#: timesource.cpp:131 timesource.cpp:150 timesource.cpp:171
+msgid "DateTime"
+msgstr "Hora e data"
+
+#: timesource.cpp:146
+msgid "Latitude"
+msgstr "Latitude"
+
+#: timesource.cpp:147
+msgid "Longitude"
+msgstr "Lonxitude"
+
+#: timesource.cpp:148
+msgid "Solar"
+msgstr "Solar"
+
+#: timesource.cpp:149
+msgid "Moon"
+msgstr "Lunar"

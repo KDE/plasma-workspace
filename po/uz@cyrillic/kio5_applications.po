@@ -1,0 +1,37 @@
+# translation of kio_settings.po to Uzbek
+# Copyright (C) 2003, 2005 Free Software Foundation, Inc.
+# Mashrab Kuvatov <kmashrab@uni-bremen.de>, 2003, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kio_settings\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-08 00:48+0000\n"
+"PO-Revision-Date: 2005-09-25 13:40+0200\n"
+"Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
+"Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
+"Language: uz@cyrillic\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.10.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: kio_applications.cpp:122
+#, kde-format
+msgid "Applications"
+msgstr "Дастурлар"
+
+#: kio_applications.cpp:122
+#, kde-format
+msgid "Programs"
+msgstr "Дастурлар"
+
+#: kio_applications.cpp:131
+#, fuzzy, kde-format
+#| msgid "Unknown settings folder"
+msgid "Unknown application folder"
+msgstr "Мосламалар жилди номаълум"
+
+#~ msgid "Settings"
+#~ msgstr "Мосламалар"

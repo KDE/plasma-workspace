@@ -1,0 +1,139 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Serdar Soytetir <tulliana@gmail.com>, 2008, 2009.
+# H. İbrahim Güngör <ibrahim@pardus.org.tr>, 2010.
+# Volkan Gezer <volkangezer@gmail.com>, 2014.
+# Emir SARI <emir_sari@icloud.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner_shellrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-27 00:45+0000\n"
+"PO-Revision-Date: 2022-03-12 15:18+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: shellrunner.cpp:35
+#, kde-format
+msgid "Finds commands that match :q:, using common shell syntax"
+msgstr "Genel kabuk sözdizimini kullanarak :q: ile eşleşen komutları bulur"
+
+#: shellrunner.cpp:36
+#, kde-format
+msgid "Run in Terminal Window"
+msgstr "Uçbirim Penceresinde Çalıştır"
+
+#: shellrunner.cpp:54
+#, kde-format
+msgid "Run %1"
+msgstr "%1 Çalıştır"
+
+#~ msgid "Enter the user you want to run the application as here."
+#~ msgstr "Uygulamayı çalıştırmak istediğiniz kullanıcı adını buraya girin."
+
+#~ msgid "User&name:"
+#~ msgstr ":"
+
+#~ msgid "Enter the password here for the user you specified above."
+#~ msgstr "Yukarıda belirtilen kullanıcının parolasını buraya yazın."
+
+#~ msgid "Pass&word:"
+#~ msgstr "&Parola:"
+
+#~ msgid ""
+#~ "Check this option if the application you want to run is a text mode "
+#~ "application. The application will then be run in a terminal emulator "
+#~ "window."
+#~ msgstr ""
+#~ "Eğer çalıştırmak istediğiniz uygulama text tabanlı ise bu özelliği seçin. "
+#~ "Uygulama bir uçbirim öykünücü penceresinde çalıştırılacak."
+
+#~ msgid "Run in &terminal window"
+#~ msgstr "&Uçbirimde çalıştır"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "user id. Every process has a user id associated with it. This id code "
+#~ "determines file access and other permissions. The password of the user is "
+#~ "required to do this."
+#~ msgstr ""
+#~ "Eğer uygulamayı farklı bir kullanıcı numarası ile çalıştırmak "
+#~ "istiyorsanız bu özelliği seçin. Her uygulama kendisiyle ilişkilendirilmiş "
+#~ "bir kullanıcı numarasına sahiptir. Bu kullanıcı numarası dosya erişimleri "
+#~ "ve diğer hakları düzenler. Bunu yapabilmek için kullanıcının parolası "
+#~ "gereklidir.  "
+
+#~ msgid "Run as a different &user"
+#~ msgstr "&Farklı kullanıcı ile çalıştır"
+
+#~ msgid ""
+#~ "<qt>Select whether realtime scheduling should be enabled for the "
+#~ "application. The scheduler governs which process will run and which will "
+#~ "have to wait. Two schedulers are available:\n"
+#~ "<ul>\n"
+#~ "<li><em>Normal:</em> This is the standard, timesharing scheduler. It will "
+#~ "divide fairly the available processing time between all processes.</li>\n"
+#~ "<li><em>Realtime:</em>This scheduler will run your application "
+#~ "uninterrupted until it gives up the processor. This can be dangerous. An "
+#~ "application that does not give up the processor might hang the system. "
+#~ "You need root's password to use the scheduler.</li>\n"
+#~ "</ul>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>Buradan uygulama için hangi zamanlayıcıyı kullanacağınızı "
+#~ "seçebilirsiniz. Zamanlayıcı işletim sisteminizin hangi uygulamanın "
+#~ "çalışıp hangisinin bekleyeceğini belirleyen parçasıdır. İki zamanlayıcı "
+#~ "kullanılabilir:\n"
+#~ "<ul>\n"
+#~ "<li><em>Normal:</em> Bu standart, zaman paylaştırıcıdır. Zamanı adil "
+#~ "olarak tün uygulamalara böler. </li>\n"
+#~ "<li><em>Eşzamanlı:</em> Bu zamanlayıcı uygulama işlemciyle işini bitirene "
+#~ "kadar uygulamanın işlemini kesmeyecektir. Bu tehlikeli olabilir. "
+#~ "İşlemciyi bırakmayan bir uygulama sistemi kilitleyebilir. Bunu "
+#~ "kullanabilmek için root parolasına ihtiyacınız var. </li>\n"
+#~ "</ul>\n"
+#~ "</qt>"
+
+#~ msgid "Run with realtime &scheduling"
+#~ msgstr "Gerçek &zamanlı çalış"
+
+#~ msgid ""
+#~ "The priority that the command will be run with can be set here. From left "
+#~ "to right, it goes from low to high. The center position is the default "
+#~ "value. For priorities higher than the default, you will need to provide "
+#~ "the root password."
+#~ msgstr ""
+#~ "Öncelik burada belirlenebilir. Soldan sağa, düşükten yükseğe doğru gider. "
+#~ "Orta değer öntanımlıdır. Öntanımlıdan yüksek öncelikler için root "
+#~ "parolasına ihtiyacınız vardır."
+
+#~ msgid "&Priority:"
+#~ msgstr "&Öncelik:"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "priority. A higher priority tells the operating system to give more "
+#~ "processing time to your application."
+#~ msgstr ""
+#~ "Eğer uygulamayı farklı bir öncelik ile çalıştırmak istiyorsanız bu "
+#~ "özelliği seçin. Daha büyük öncelikler işletim sisteminize uygulama için "
+#~ "daha fazla işlem zamanı ayırması gerektiğini belirtir."
+
+#~ msgid "Run with a &different priority"
+#~ msgstr "Farklı bir ö&ncelik ile çalıştır"
+
+#~ msgid "Low"
+#~ msgstr "Düşük"
+
+#~ msgid "High"
+#~ msgstr "Yüksek"
+
+#~ msgid "Command"
+#~ msgstr "Komut"

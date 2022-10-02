@@ -1,0 +1,182 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Safa Alfulaij <safa1996alfulaij@gmail.com>, 2014, 2017.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-21 00:47+0000\n"
+"PO-Revision-Date: 2022-01-19 17:38+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: ar\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 21.07.70\n"
+
+#: package/contents/ui/DeviceItem.qml:180
+#, kde-format
+msgctxt "@info:status Free disk space"
+msgid "%1 free of %2"
+msgstr "%1 حرّة من %2"
+
+# يجري هنا أفضل لأن يَصِل قصيرة والنص صغير
+#: package/contents/ui/DeviceItem.qml:184
+#, kde-format
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Accessing…"
+msgstr "يَصِل..."
+
+# هنا للتناسق مع يجري الوصول فقط
+#: package/contents/ui/DeviceItem.qml:187
+#, kde-format
+msgctxt ""
+"Removing is a less technical word for Unmounting; translation should be "
+"short and mean 'Currently unmounting this device'"
+msgid "Removing…"
+msgstr "يفصل..."
+
+#: package/contents/ui/DeviceItem.qml:190
+#, kde-format
+msgid "Don't unplug yet! Files are still being transferred..."
+msgstr "لا تفصله! ما زالت الملفات تنقل..."
+
+#: package/contents/ui/DeviceItem.qml:221
+#, kde-format
+msgid "Open in File Manager"
+msgstr "افتح في مدير الملفّات"
+
+#: package/contents/ui/DeviceItem.qml:224
+#, kde-format
+msgid "Mount and Open"
+msgstr "ضم وافتح"
+
+#: package/contents/ui/DeviceItem.qml:226
+#, kde-format
+msgid "Eject"
+msgstr "أخرِج"
+
+#: package/contents/ui/DeviceItem.qml:228
+#, kde-format
+msgid "Safely remove"
+msgstr "أزِل بأمان"
+
+#: package/contents/ui/DeviceItem.qml:270
+#, kde-format
+msgid "Mount"
+msgstr "ضمّ"
+
+#: package/contents/ui/FullRepresentation.qml:41
+#: package/contents/ui/main.qml:238
+#, kde-format
+msgid "Remove All"
+msgstr "أزِل الكل"
+
+#: package/contents/ui/FullRepresentation.qml:42
+#, kde-format
+msgid "Click to safely remove all devices"
+msgstr "انقر لإزالة جميع الأجهزة بأمان."
+
+#: package/contents/ui/FullRepresentation.qml:186
+#, kde-format
+msgid "No removable devices attached"
+msgstr "لم توصل أي أجهزة منفصلة"
+
+#: package/contents/ui/FullRepresentation.qml:186
+#, kde-format
+msgid "No disks available"
+msgstr "لا يوجد أقراص"
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid "Most Recent Device"
+msgstr "آخر جهاز حديث"
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid "No Devices Available"
+msgstr "لا أجهزة متوفّرة"
+
+#: package/contents/ui/main.qml:245
+#, kde-format
+msgid "Removable Devices"
+msgstr "الأجهزة المنفصلة"
+
+#: package/contents/ui/main.qml:251
+#, kde-format
+msgid "Non Removable Devices"
+msgstr "الأجهزة غير المنفصلة"
+
+#: package/contents/ui/main.qml:257
+#, kde-format
+msgid "All Devices"
+msgstr "كلّ الأجهزة"
+
+#: package/contents/ui/main.qml:265
+#, kde-format
+msgid "Show popup when new device is plugged in"
+msgstr "افتح منبثقة عند وصل جهاز جديد"
+
+#: package/contents/ui/main.qml:274
+#, kde-format
+msgctxt "Open auto mounter kcm"
+msgid "Configure Removable Devices…"
+msgstr "اضبط الأجهزة المنفصلة"
+
+#~ msgid "General"
+#~ msgstr "عامّ"
+
+#~ msgid ""
+#~ "It is currently <b>not safe</b> to remove this device: applications may "
+#~ "be accessing it. Click the eject button to safely remove this device."
+#~ msgstr ""
+#~ "إزالة هذا الجهاز حاليًّا <b>غير آمن</b>: قد تكون هناك تطبيقات تصل إليه. "
+#~ "انقر زر الإخراج لإزالة الجهاز هذا بأمان."
+
+#~ msgid "This device is currently accessible."
+#~ msgstr "هذا الجهاز غير قابل للوصول حاليًا."
+
+#~ msgid ""
+#~ "It is currently <b>not safe</b> to remove this device: applications may "
+#~ "be accessing other volumes on this device. Click the eject button on "
+#~ "these other volumes to safely remove this device."
+#~ msgstr ""
+#~ "إزالة هذا الجهاز حاليًّا <b>غير آمن</b>: قد تكون هناك تطبيقات تصل إلى أجزاء "
+#~ "أخرى من هذا الجهاز. انقر زر الإخراج لهذه الأجزاء لإزالة الجهاز هذا بأمان."
+
+#~ msgid "It is currently safe to remove this device."
+#~ msgstr "إزالة هذا الجهاز آمنة الآن."
+
+#~ msgid "This device is not currently accessible."
+#~ msgstr "هذا الجهاز قابل للوصول حاليًا."
+
+#~ msgid "1 action for this device"
+#~ msgid_plural "%1 actions for this device"
+#~ msgstr[0] "لا إجراءات لهذا الجهاز"
+#~ msgstr[1] "إجراء واحد لهذا الجهاز"
+#~ msgstr[2] "إجراءان لهذا الجهاز"
+#~ msgstr[3] "%1 إجراءات لهذا الجهاز"
+#~ msgstr[4] "%1 إجراء لهذا الجهاز"
+#~ msgstr[5] "%1 إجراء لهذا الجهاز"
+
+#~ msgid "Click to access this device from other applications."
+#~ msgstr "انقر للوصول إلى هذا الجهاز من تطبيقات أخرى."
+
+#~ msgid "Click to eject this disc."
+#~ msgstr "انقر لإخراج القرص هذا."
+
+#~ msgid "Click to safely remove this device."
+#~ msgstr "انقر لإزالة الجهاز هذا بأمان."
+
+#~ msgid "Click to mount this device."
+#~ msgstr "انقر لضمّ الجهاز."
+
+#~ msgid "Available Devices"
+#~ msgstr "الأجهزة المتوفّرة"

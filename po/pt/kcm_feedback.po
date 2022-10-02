@@ -1,0 +1,66 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-28 00:47+0000\n"
+"PO-Revision-Date: 2022-03-26 22:26+0000\n"
+"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
+"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: package/contents/ui/main.qml:34
+#, kde-format
+msgid ""
+"User Feedback has been disabled centrally. Please contact your distributor."
+msgstr ""
+"As Reacções do Utilizador foram desactivadas a nível central. Por favor "
+"contacte o seu distribuidor."
+
+#: package/contents/ui/main.qml:44 package/contents/ui/main.qml:77
+#, kde-format
+msgid "Plasma:"
+msgstr "Plasma:"
+
+#: package/contents/ui/main.qml:51
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"You can help KDE improve Plasma by contributing information on how you use "
+"it, so we can focus on things that matter to you.<nl/><nl/>Contributing this "
+"information is optional and entirely anonymous. We never collect your "
+"personal data, files you use, websites you visit, or information that could "
+"identify you.<nl/><nl/>You can read about <link url='https://kde.org/"
+"privacypolicy-apps.php'>our privacy policy here.</link>"
+msgstr ""
+"Poderá ajudar o KDE a melhorar o Plasma, contribuindo com informações sobre "
+"a forma como o usa, para que nos possamos focar nas coisas que realmente lhe "
+"interessam.<nl/><nl/>A contribuição desta informação é opcional e "
+"completamente anónima. Nunca recolhemos os seus dados pessoais, os ficheiros "
+"que usa, as páginas Web que visita ou quaisquer outras informações que o "
+"possam identificar.<nl/><nl/>Poderá ler mais sobre a nossa <link "
+"url='https://kde.org/privacypolicy-apps.php'>política de privacidade aqui.</"
+"link>"
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Plasma"
+msgstr "Plasma"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "The following information will be sent:"
+msgstr "Será enviada a seguinte informação:"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "View sent data:"
+msgstr "Ver os dados enviados:"

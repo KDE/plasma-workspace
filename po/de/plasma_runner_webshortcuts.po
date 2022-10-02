@@ -1,0 +1,61 @@
+#  <tr@erdfunkstelle.de>, 2008.
+# Thomas Reitelbach <tr@erdfunkstelle.de>, 2008, 2009.
+# Johannes Obermayr <johannesobermayr@gmx.de>, 2010.
+# Frederik Schwarzer <schwarzer@kde.org>, 2010, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_webshortcuts\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-06-02 00:47+0000\n"
+"PO-Revision-Date: 2020-06-19 21:48+0200\n"
+"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: webshortcutrunner.cpp:58
+#, kde-format
+msgid "Opens \"%1\" in a web browser with the query :q:."
+msgstr "Öffnet „%1“ mit der Abfrage :q: in einem Webbrowser."
+
+#: webshortcutrunner.cpp:63
+#, kde-format
+msgid "Search using the DuckDuckGo bang syntax"
+msgstr ""
+
+#: webshortcutrunner.cpp:94
+#, kde-format
+msgid "Search in private window"
+msgstr "In privatem Fenster suchen"
+
+#: webshortcutrunner.cpp:94
+#, kde-format
+msgid "Search in incognito window"
+msgstr "In Inkognito-Fenster suchen"
+
+#: webshortcutrunner.cpp:129 webshortcutrunner.cpp:146
+#, kde-format
+msgid "Search %1 for %2"
+msgstr "„%1“ nach „%2“ durchsuchen"
+
+#~ msgctxt "A web shortcut and its name"
+#~ msgid "%1: %2"
+#~ msgstr "%1: %2"
+
+#~ msgctxt "A web shortcut, its name and a description"
+#~ msgid "%1: %2 %3"
+#~ msgstr "%1: %2 %3"
+
+#~ msgid ""
+#~ "Opens the location associated with \"shortcut\" in a web browser with the "
+#~ "query :q:. Known shortcuts include:\n"
+#~ "%1"
+#~ msgstr ""
+#~ "Öffnet den zu „shortcut“ gehörigen Ort in einem Webbrowser mit der "
+#~ "Abfrage :q:. Bekannte Kürzel sind z. B. %1"
+
+#~ msgid "Web Shortcut"
+#~ msgstr "Webkürzel"

@@ -1,0 +1,71 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Martin Schlander <mschlander@opensuse.org>, 2008, 2009, 2010, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner_shellrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-27 00:45+0000\n"
+"PO-Revision-Date: 2016-06-18 14:44+0100\n"
+"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 2.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: shellrunner.cpp:35
+#, kde-format
+msgid "Finds commands that match :q:, using common shell syntax"
+msgstr "Finder kommandoer som matcher :q:, ved brug af normal skal-syntaks"
+
+#: shellrunner.cpp:36
+#, kde-format
+msgid "Run in Terminal Window"
+msgstr "Kør i terminalvindue"
+
+#: shellrunner.cpp:54
+#, kde-format
+msgid "Run %1"
+msgstr "Kør %1"
+
+#~ msgid "Enter the user you want to run the application as here."
+#~ msgstr "Angiv brugeren, som hvilken du ønsker at køre programmet, her."
+
+#~ msgid "User&name:"
+#~ msgstr "Bruger&navn:"
+
+#~ msgid "Enter the password here for the user you specified above."
+#~ msgstr "Indtast adgangskoden, for brugeren du angav ovenfor, her."
+
+#~ msgid "Pass&word:"
+#~ msgstr "Adgangs&kode:"
+
+#~ msgid ""
+#~ "Check this option if the application you want to run is a text mode "
+#~ "application. The application will then be run in a terminal emulator "
+#~ "window."
+#~ msgstr ""
+#~ "Afkryds denne indstilling hvis programmet du ønsker at køre, er et "
+#~ "program der kører i teksttilstand. Programmet vil så blive kørt i et "
+#~ "terminalemulator-vindue."
+
+#~ msgid "Run in &terminal window"
+#~ msgstr "Kør i &terminalvindue"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "user id. Every process has a user id associated with it. This id code "
+#~ "determines file access and other permissions. The password of the user is "
+#~ "required to do this."
+#~ msgstr ""
+#~ "Afkryds denne indstilling hvis du ønsker at køre programmet med et andet "
+#~ "bruger-ID. Hver proces har et bruger-ID tilknyttet til sig. Denne ID-kode "
+#~ "bestemmer filadgang og andre rettigheder. Brugerens adgangskode er "
+#~ "påkrævet for at gøre dette."
+
+#~ msgid "Run as a different &user"
+#~ msgstr "Kør som en anden br&uger"

@@ -1,0 +1,667 @@
+# translation of klipper.po into Russian
+# KDE3 - klipper.pot Russian translation.
+# Translation of klipper.po into Russian
+# KDE3 - kdebase/klipper.po Russian translation.
+# Copyright (C) 2003, KDE Team.
+#
+# Zhitomirsky Sergey <szh@chat.ru>, 2000.
+# Andrey S. Cherepanov <sibskull@mail.ru>, 2001-2003.
+# Nickolai Shaforostoff <shafff@ukr.net>, 2004.
+# Gregory Mokhin <mok@kde.ru>, 2005.
+# Nick Shaforostoff <shafff@ukr.net>, 2006, 2009.
+# Andrey Cherepanov <skull@kde.ru>, 2009, 2011.
+# Nick Shaforostoff <shaforostoff@kde.ru>, 2009.
+# Alexander Potashev <aspotashev@gmail.com>, 2010, 2014, 2015, 2018, 2019.
+# Yuri Efremov <yur.arh@gmail.com>, 2011, 2012, 2013.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: klipper\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-09 00:47+0000\n"
+"PO-Revision-Date: 2021-11-20 16:40+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.08.3\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: contents/ui/BarcodePage.qml:36
+#, kde-format
+msgid "Return to Clipboard"
+msgstr "Вернуться к журналу буфера обмена"
+
+#: contents/ui/BarcodePage.qml:57
+#, kde-format
+msgid "QR Code"
+msgstr "QR-код"
+
+#: contents/ui/BarcodePage.qml:58
+#, kde-format
+msgid "Data Matrix"
+msgstr "Data Matrix"
+
+#: contents/ui/BarcodePage.qml:59
+#, kde-format
+msgctxt "Aztec barcode"
+msgid "Aztec"
+msgstr "Aztec"
+
+#: contents/ui/BarcodePage.qml:60
+#, kde-format
+msgid "Code 39"
+msgstr "Код 39"
+
+#: contents/ui/BarcodePage.qml:61
+#, kde-format
+msgid "Code 93"
+msgstr "Код 93"
+
+#: contents/ui/BarcodePage.qml:62
+#, kde-format
+msgid "Code 128"
+msgstr "Код 128"
+
+#: contents/ui/BarcodePage.qml:85
+#, kde-format
+msgid "Change the QR code type"
+msgstr "Сменить тип QR-кода"
+
+#: contents/ui/BarcodePage.qml:114
+#, kde-format
+msgid "Creating QR code failed"
+msgstr "Не удалось создать QR-код"
+
+#: contents/ui/BarcodePage.qml:123
+#, kde-format
+msgid "The QR code is too large to be displayed"
+msgstr "QR-код слишком велик для показа."
+
+#: contents/ui/clipboard.qml:26
+#, kde-format
+msgid "Clipboard Contents"
+msgstr "Содержимое буфера обмена"
+
+#: contents/ui/clipboard.qml:27 contents/ui/Menu.qml:84
+#, kde-format
+msgid "Clipboard is empty"
+msgstr "Буфер обмена пуст"
+
+#: contents/ui/clipboard.qml:55
+#, kde-format
+msgid "Configure Clipboard…"
+msgstr "Настроить буфер обмена..."
+
+#: contents/ui/clipboard.qml:57
+#, kde-format
+msgid "Clear History"
+msgstr "Очистить журнал"
+
+#: contents/ui/DelegateToolButtons.qml:23
+#, kde-format
+msgid "Invoke action"
+msgstr "Выполнить действие..."
+
+#: contents/ui/DelegateToolButtons.qml:38
+#, kde-format
+msgid "Show QR code"
+msgstr "Показать QR-код"
+
+#: contents/ui/DelegateToolButtons.qml:54
+#, kde-format
+msgid "Edit contents"
+msgstr "Изменить содержимое..."
+
+#: contents/ui/DelegateToolButtons.qml:68
+#, kde-format
+msgid "Remove from history"
+msgstr "Удалить из журнала"
+
+#: contents/ui/EditPage.qml:82
+#, kde-format
+msgctxt "@action:button"
+msgid "Save"
+msgstr "Сохранить"
+
+#: contents/ui/EditPage.qml:90
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "Отмена"
+
+#: contents/ui/Menu.qml:84
+#, kde-format
+msgid "No matches"
+msgstr "<нет совпадений>"
+
+#: contents/ui/UrlItemDelegate.qml:99
+#, kde-format
+msgctxt ""
+"Indicator that there are more urls in the clipboard than previews shown"
+msgid "+%1"
+msgstr "+%1"
+
+#~ msgid "Clear history"
+#~ msgstr "Очистить журнал"
+
+#~ msgid "Search…"
+#~ msgstr "Поиск..."
+
+#~ msgid "Clipboard history is empty."
+#~ msgstr "Журнал буфера обмена пуст."
+
+#~ msgid "Configure"
+#~ msgstr "Настроить журнал буфера обмена..."
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Zhitomirsky Sergey,Андрей Черепанов,Leon Kanter"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "szh@chat.ru,skull@kde.ru,leon@asplinux.ru"
+
+#~ msgid "Replay actions on an item selected from history"
+#~ msgstr "Предлагать действия для элемента, выбранного из списка"
+
+#~ msgid "Remove whitespace when executing actions"
+#~ msgstr "Удалить пробелы при выполнении действий"
+
+#~ msgid "Enable MIME-based actions"
+#~ msgstr "Включить действия на основе типов MIME"
+
+#~ msgid "Action list:"
+#~ msgstr "Действия:"
+
+#~ msgid "Regular Expression"
+#~ msgstr "Регулярное выражение"
+
+#~ msgid "Description"
+#~ msgstr "Описание"
+
+#~ msgid "Add Action..."
+#~ msgstr "Добавить действие..."
+
+#~ msgid "Edit Action..."
+#~ msgstr "Изменить действие..."
+
+#~ msgid "Delete Action"
+#~ msgstr "Удалить действие"
+
+#~ msgid "Advanced..."
+#~ msgstr "Дополнительно..."
+
+#~ msgid ""
+#~ "Click on a highlighted item's column to change it. \"%s\" in a command "
+#~ "will be replaced with the clipboard contents.<br>For more information "
+#~ "about regular expressions, you could have a look at the <a href=\"http://"
+#~ "en.wikipedia.org/wiki/Regular_expression\">Wikipedia entry about this "
+#~ "topic</a>."
+#~ msgstr ""
+#~ "Нажмите на выбранную колонку элемента, чтобы её изменить. Символы «%s» в "
+#~ "команде будут заменены содержимым буфера.<br>Для получения информации о "
+#~ "регулярных выражениях обратитесь к <a href=\"http://ru.wikipedia.org/wiki/"
+#~ "Регулярные_выражения\">соответствующей статье на Википедии</a>."
+
+#~ msgid " second"
+#~ msgid_plural " seconds"
+#~ msgstr[0] " секунда"
+#~ msgstr[1] " секунды"
+#~ msgstr[2] " секунд"
+#~ msgstr[3] " секунда"
+
+#~ msgid " entry"
+#~ msgid_plural " entries"
+#~ msgstr[0] " запись"
+#~ msgstr[1] " записи"
+#~ msgstr[2] " записей"
+#~ msgstr[3] " запись"
+
+#~ msgid "Advanced Settings"
+#~ msgstr "Дополнительные настройки"
+
+#~ msgctxt "General Config"
+#~ msgid "General"
+#~ msgstr "Главное"
+
+#~ msgid "General Configuration"
+#~ msgstr "Основные параметры"
+
+#~ msgctxt "Actions Config"
+#~ msgid "Actions"
+#~ msgstr "Действия"
+
+#~ msgid "Actions Configuration"
+#~ msgstr "Настройка действий"
+
+#~ msgctxt "Shortcuts Config"
+#~ msgid "Shortcuts"
+#~ msgstr "Комбинации клавиш"
+
+#~ msgid "Shortcuts Configuration"
+#~ msgstr "Настройка комбинаций клавиш"
+
+#~ msgid "D&isable Actions for Windows of Type WM_CLASS"
+#~ msgstr "От&ключить действия для окон класса WM_CLASS"
+
+#~ msgid ""
+#~ "<qt>This lets you specify windows in which Klipper should not invoke "
+#~ "\"actions\". Use<br /><br /><center><b>xprop | grep WM_CLASS</b></"
+#~ "center><br />in a terminal to find out the WM_CLASS of a window. Next, "
+#~ "click on the window you want to examine. The first string it outputs "
+#~ "after the equal sign is the one you need to enter here.</qt>"
+#~ msgstr ""
+#~ "<qt>Отключить отображение меню «Действия» для окон указанного класса. "
+#~ "Используйте команду <center><b>xprop | grep WM_CLASS</b></center> в "
+#~ "терминале для определения класса окна, затем щёлкните на том окне, для "
+#~ "которого хотите узнать класс.<br />Первая строка вывода в терминале после "
+#~ "знака «=» и будет той строкой, которую необходимо ввести в это поле.</qt>"
+
+#~ msgid "Ignore"
+#~ msgstr "Игнорировать"
+
+#~ msgid "Replace Clipboard"
+#~ msgstr "Скопировать в буфер обмена"
+
+#~ msgid "Command"
+#~ msgstr "Команда"
+
+#~ msgid "Output Handling"
+#~ msgstr "Вывод команды"
+
+#~ msgid "Action Properties"
+#~ msgstr "Свойства действия"
+
+#~ msgid "new command"
+#~ msgstr "новая команда"
+
+#~ msgid "Command Description"
+#~ msgstr "Описание команды"
+
+#~ msgid "Action properties:"
+#~ msgstr "Свойства действия:"
+
+#~ msgid "Regular expression:"
+#~ msgstr "Регулярное выражение:"
+
+#~ msgid "Description:"
+#~ msgstr "Описание:"
+
+#~ msgid "Automatic:"
+#~ msgstr "Автоматически:"
+
+#~ msgid "List of commands for this action:"
+#~ msgstr "Список команд для данного действия:"
+
+#~ msgid "Add Command"
+#~ msgstr "Добавить команду"
+
+#~ msgid "Remove Command"
+#~ msgstr "Удалить команду"
+
+#~ msgid "Double-click an item to edit"
+#~ msgstr "Дважды щёлкните на элементе для его изменения"
+
+#~ msgid "Save clipboard contents on exit"
+#~ msgstr "Сохранять содержимое буфера обмена при выходе"
+
+#~ msgid "Prevent empty clipboard"
+#~ msgstr "Не допускать пустого буфера обмена"
+
+#~ msgid "Ignore images"
+#~ msgstr "Игнорировать изображения"
+
+#~ msgid "Selection and Clipboard"
+#~ msgstr "Выделение и буфер обмена"
+
+#~ msgid "Ignore selection"
+#~ msgstr "Игнорировать выделение мышью"
+
+#~ msgid "Text selection only"
+#~ msgstr "Только из выделения мышью"
+
+#~ msgid "Synchronize contents of the clipboard and the selection"
+#~ msgstr "Синхронизировать содержимое буфера обмена и выделения мышью"
+
+#~ msgid "Timeout for action popups:"
+#~ msgstr "Задержка выпадающих меню:"
+
+#~ msgid "Clipboard history size:"
+#~ msgstr "Размер истории буфера обмена:"
+
+#~ msgid "Enable Clipboard Actions"
+#~ msgstr "Включить действия с буфером обмена"
+
+#~ msgid "C&lear Clipboard History"
+#~ msgstr "&Очистить историю буфера обмена"
+
+#~ msgctxt "@item:inmenu Quit Klipper"
+#~ msgid "&Quit"
+#~ msgstr "&Выход"
+
+#~ msgid "Manually Invoke Action on Current Clipboard"
+#~ msgstr "Ручной выбор действия с буфером обмена"
+
+#~ msgid "&Edit Contents..."
+#~ msgstr "&Редактировать содержимое..."
+
+#~ msgid "Next History Item"
+#~ msgstr "Более старое содержимое буфера обмена"
+
+#~ msgid "Previous History Item"
+#~ msgstr "Более новое содержимое буфера обмена"
+
+#~ msgid "Open Klipper at Mouse Position"
+#~ msgstr "Открывать Klipper на месте указателя мыши"
+
+#~ msgid ""
+#~ "You can enable URL actions later by left-clicking on the Klipper icon and "
+#~ "selecting 'Enable Clipboard Actions'"
+#~ msgstr ""
+#~ "Вы можете включить действия по URL позже. Для этого щёлкнув левой кнопкой "
+#~ "по значку Klipper и выбрать «Включить действия с буфером обмена»."
+
+#~ msgid "Should Klipper start automatically when you login?"
+#~ msgstr "Запускать Klipper автоматически при входе в KDE?"
+
+#~ msgid "Automatically Start Klipper?"
+#~ msgstr "Запускать Klipper автоматически?"
+
+#~ msgid "Start"
+#~ msgstr "Запускать"
+
+#~ msgid "Do Not Start"
+#~ msgstr "Не запускать"
+
+#~ msgid "KDE cut & paste history utility"
+#~ msgstr "Утилита истории буфера обмена KDE"
+
+#~ msgid "Klipper"
+#~ msgstr "Klipper"
+
+#~ msgid ""
+#~ "(c) 1998, Andrew Stanley-Jones\n"
+#~ "1998-2002, Carsten Pfeiffer\n"
+#~ "2001, Patrick Dubroy"
+#~ msgstr ""
+#~ "© Andrew Stanley-Jones, 1998\n"
+#~ "© Carsten Pfeiffer, 1998-2002\n"
+#~ "© Patrick Dubroy, 2001"
+
+#~ msgid "Carsten Pfeiffer"
+#~ msgstr "Carsten Pfeiffer"
+
+#~ msgid "Author"
+#~ msgstr "Автор"
+
+#~ msgid "Andrew Stanley-Jones"
+#~ msgstr "Andrew Stanley-Jones"
+
+#~ msgid "Original Author"
+#~ msgstr "Первоначальный автор"
+
+#~ msgid "Patrick Dubroy"
+#~ msgstr "Patrick Dubroy"
+
+#~ msgid "Contributor"
+#~ msgstr "Участник проекта"
+
+#~ msgid "Luboš Luňák"
+#~ msgstr "Luboš Luňák"
+
+#~ msgid "Bugfixes and optimizations"
+#~ msgstr "Исправление ошибок и оптимизация"
+
+#~ msgid "Esben Mose Hansen"
+#~ msgstr "Esben Mose Hansen"
+
+#~ msgid "Maintainer"
+#~ msgstr "Сопровождающий"
+
+#~ msgid "Mobile Barcode"
+#~ msgstr "QR-код"
+
+#~ msgid "Really delete entire clipboard history?"
+#~ msgstr "Очистить историю буфера обмена?"
+
+#~ msgid "Delete clipboard history?"
+#~ msgstr "Очистка истории буфера обмена"
+
+#~ msgid "up"
+#~ msgstr "более новое:"
+
+#~ msgid "current"
+#~ msgstr "выбрано:"
+
+#~ msgid "down"
+#~ msgstr "более старое:"
+
+#~ msgid "Klipper version"
+#~ msgstr "Klipper version"
+
+#~ msgid "Keep clipboard contents"
+#~ msgstr "Сохранять содержимое буфера обмена при выходе"
+
+#~ msgid ""
+#~ "Selecting this option has the effect, that the clipboard can never be "
+#~ "emptied. E.g. when an application exits, the clipboard would usually be "
+#~ "emptied."
+#~ msgstr ""
+#~ "Выбор этой опции позволяет никогда не очищать буфер обмена. Например, при "
+#~ "выходе из приложения буфер обмена очищается."
+
+#~ msgid "Ignore Selection"
+#~ msgstr "Игнорировать выделение мышью"
+
+#~ msgid ""
+#~ "<qt>When an area of the screen is selected with mouse or keyboard, this "
+#~ "is called \"the selection\".<br/>If this option is set, the selection is "
+#~ "not entered into the clipboard history, though it is still available for "
+#~ "pasting using the middle mouse button.</qt>"
+#~ msgstr ""
+#~ "<qt>Выделенный с помощью курсора мыши или клавиатуры текст или "
+#~ "изображение называется «выделение».<br/>Если включить этот параметр, "
+#~ "выделение не будет сохраняться в историю буфера обмена, хотя его по-"
+#~ "прежнему можно будет вставить средней кнопкой мыши.</qt>"
+
+#~ msgid "Synchronize clipboard and selection"
+#~ msgstr "Синхронизировать содержимое буфера обмена и выделения мышью"
+
+#~ msgid ""
+#~ "<qt>When an area of the screen is selected with mouse or keyboard, this "
+#~ "is called \"the selection\".<br/>If this option is selected, the "
+#~ "selection and the clipboard is kept the same, so that anything in the "
+#~ "selection is immediately available for pasting elsewhere using any "
+#~ "method, including the traditional middle mouse button. Otherwise, the "
+#~ "selection is recorded in the clipboard history, but the selection can "
+#~ "only be pasted using the middle mouse button. Also see the 'Ignore "
+#~ "Selection' option.</qt>"
+#~ msgstr ""
+#~ "<qt>Выделенный с помощью курсора мыши или клавиатуры текст или "
+#~ "изображение называется «выделение».<br/>При включении этого параметра "
+#~ "выделение и буфер обмена будут иметь одинаковое содержимое, то есть при "
+#~ "выделении мышью текста он готов для вставки любым способом, включая "
+#~ "традиционную вставку из буфера обмена и вставку средней кнопкой мыши. При "
+#~ "выключении этого параметра, выделение записывается в историю, но может "
+#~ "быть вставлено только средней кнопкой мыши. Смотрите также параметр "
+#~ "«Игнорировать выделение мышью».</qt>"
+
+#~ msgid "Selection text only"
+#~ msgstr "Только из выделения мышью"
+
+#~ msgid ""
+#~ "<qt>When an area of the screen is selected with mouse or keyboard, this "
+#~ "is called \"the selection\".<br/>If this option is selected, only text "
+#~ "selections are stored in the history, while images and other selections "
+#~ "are not.</qt>"
+#~ msgstr ""
+#~ "<qt>Выделенный с помощью курсора мыши или клавиатуры текст или "
+#~ "изображение называется «выделение».<br/>При включении этого параметра в "
+#~ "историю попадает только выделение текста, но не выделение изображение.</"
+#~ "qt>"
+
+#~ msgid "Use graphical regexp editor"
+#~ msgstr "Использовать графический редактор регулярных выражений"
+
+#~ msgid "URL grabber enabled"
+#~ msgstr "Включить действия для адресов URL"
+
+#~ msgid "No actions for WM_CLASS"
+#~ msgstr "Отключить действия для окон класса WM_CLASS"
+
+#~ msgid "Timeout for action popups (seconds)"
+#~ msgstr "Задержка меню действий, с:"
+
+#~ msgid "A value of 0 disables the timeout"
+#~ msgstr "Значение, равное 0, отключает задержку"
+
+#~ msgid "Dummy entry for indicating changes in an action's tree widget"
+#~ msgstr ""
+#~ "Пустой элемент для показа изменений в действиях древовидного виджета"
+
+#~ msgid "Strip whitespace when executing an action"
+#~ msgstr "Удалить пробелы при выполнении действий"
+
+#~ msgid ""
+#~ "Sometimes, the selected text has some whitespace at the end, which, if "
+#~ "loaded as URL in a browser would cause an error. Enabling this option "
+#~ "removes any whitespace at the beginning or end of the selected string "
+#~ "(the original clipboard contents will not be modified)."
+#~ msgstr ""
+#~ "Иногда выделенный текст содержит пробелы, что при открытии его в браузере "
+#~ "как ссылки может вызвать ошибку. При включении этой опции будут удалены "
+#~ "пробелы в начале и конце текста. Содержимое буфера обмена останется "
+#~ "неизменным."
+
+#~ msgid "Replay action in history"
+#~ msgstr "Повторить действия для элемента истории"
+
+#~ msgid "<empty clipboard>"
+#~ msgstr "<пустой буфер>"
+
+#~ msgid "Klipper - Clipboard Tool"
+#~ msgstr "Klipper — управление буфером обмена"
+
+#~ msgid "&More"
+#~ msgstr "&Больше"
+
+#~ msgid "%1 - Actions For: %2"
+#~ msgstr "%1 — действия для %2"
+
+#~ msgid "Disable This Popup"
+#~ msgstr "Запретить выпадающее меню"
+
+#~ msgid "Enable Clipboard &Actions"
+#~ msgstr "Включить действия с буфером обмена"
+
+#~ msgid "Show Klipper Popup-Menu"
+#~ msgstr "Показать меню буфера обмена"
+
+#~ msgid "Popup menu at mouse-cursor position"
+#~ msgstr "Открывать меню на месте указателя мыши"
+
+#~ msgid "Replace"
+#~ msgstr "Заменить"
+
+#~ msgid "Add"
+#~ msgstr "Добавить"
+
+#~ msgid "Clipboard/Selection Behavior"
+#~ msgstr "Поведение буфера обмена и выделения мышью"
+
+#~ msgid "Separate clipboard and selection"
+#~ msgstr "Разделить буфер обмена и выделение мышью"
+
+#~ msgid ""
+#~ "This option prevents the selection being recorded in the clipboard "
+#~ "history. Only explicit clipboard changes are recorded."
+#~ msgstr ""
+#~ "Если установлен этот параметр, текст, выделенные мышью, не попадает в "
+#~ "журнал буфера обмена. Записываются только непосредственные изменения "
+#~ "буфера обмена."
+
+#~ msgid ""
+#~ "<qt>There are two different clipboard buffers available:<br /><br /"
+#~ "><b>Clipboard</b> is filled by selecting something and pressing Ctrl+C, "
+#~ "or by clicking \"Copy\" in a toolbar or menubar.<br /><br /><b>Selection</"
+#~ "b> is available immediately after selecting some text. The only way to "
+#~ "access the selection is to press the middle mouse button.<br /><br />You "
+#~ "can configure the relationship between Clipboard and Selection.</qt>"
+#~ msgstr ""
+#~ "<qt>Доступно два различных буфера обмена:<ul><li><b>Буфер обмена</b>, в "
+#~ "который текст помещается <br />текст путём выделения и нажатия клавиши "
+#~ "Ctrl-C или выбором пункта «Копировать» в меню или на панели инструментов."
+#~ "</li> <li><b>Выделение мышью</b>, которое доступно сразу после выделения "
+#~ "текста мышью. Получить доступ к выделению можно только путём нажатия "
+#~ "средней кнопки мыши.</li></ul>При помощи этого параметра можно настроить "
+#~ "взаимосвязь двух буферов обмена.</qt>"
+
+#~ msgid "Klipper - clipboard tool"
+#~ msgstr "Klipper — управление буфером обмена"
+
+#, fuzzy
+#~ msgid "Action list (right click to add/remove commands):"
+#~ msgstr "Список &действий (команды можно добавить и удалить правой кнопкой):"
+
+#~ msgid "Double-click here to set the command to be executed"
+#~ msgstr "Щёлкните дважды здесь для указания запускаемой команды"
+
+#~ msgid "Double-click here to set the regular expression"
+#~ msgstr "Щёлкните дважды здесь для указания регулярного выражения"
+
+#~ msgid "Selecting this option synchronizes these two buffers."
+#~ msgstr "Установка этого параметра синхронизирует эти два буфера обмена."
+
+#~ msgid ""
+#~ "Using this option will only set the selection when highlighting something "
+#~ "and the clipboard when choosing e.g. \"Copy\" in a menubar."
+#~ msgstr ""
+#~ "Если установлен этот параметр, выделение мышью и буфер обмена будут "
+#~ "работать независимо. Например, вставить содержимое буфера обмена можно "
+#~ "будет только при помощи кнопки «Вставить»."
+
+#~ msgid "&Use graphical editor for editing regular expressions"
+#~ msgstr "И&спользовать графический редактор регулярных выражений"
+
+#~ msgid ""
+#~ "Click on a highlighted item's column to change it. \"%s\" in a command "
+#~ "will be replaced with the clipboard contents."
+#~ msgstr ""
+#~ "Нажмите на выбранную колонку элемента, чтобы её изменить. \"%s\" в "
+#~ "команде будет заменено содержимым буфера."
+
+#~ msgid "Enable &Actions"
+#~ msgstr "Включить &действия"
+
+#~ msgid "&Actions Enabled"
+#~ msgstr "&Действия включены"
+
+#~ msgid ""
+#~ "_: NAME OF TRANSLATORS\n"
+#~ "Your names"
+#~ msgstr "Zhitomirsky Sergey,Андрей Черепанов,Leon Kanter"
+
+#~ msgid ""
+#~ "_: EMAIL OF TRANSLATORS\n"
+#~ "Your emails"
+#~ msgstr "szh@chat.ru,sibskull@mail.ru,leon@asplinux.ru"
+
+#~ msgid ""
+#~ "_n:  entry\n"
+#~ " entries"
+#~ msgstr ""
+#~ " запись\n"
+#~ " записи\n"
+#~ " записей"
+
+#~ msgid ""
+#~ "Regular Expression (see http://doc.trolltech.com/qregexp.html#details)"
+#~ msgstr ""
+#~ "Регулярное выражение (см. http://doc.trolltech.com/qregexp.html#details)"

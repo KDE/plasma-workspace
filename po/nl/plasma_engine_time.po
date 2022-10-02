@@ -1,0 +1,72 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"PO-Revision-Date: 2014-09-25 12:08+0200\n"
+"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: timesource.cpp:46
+msgid "Local"
+msgstr "Lokaal"
+
+#: timesource.cpp:61
+msgid "Timezone"
+msgstr "Tijdzone"
+
+#: timesource.cpp:66 timesource.cpp:69 timesource.cpp:73
+msgid "Timezone City"
+msgstr "Stad bij tijdzone"
+
+#: timesource.cpp:68 timesource.cpp:71
+msgid "Timezone Continent"
+msgstr "Continent bij tijdzone"
+
+#: timesource.cpp:72
+msgid "Timezone Country"
+msgstr "Tijdzone van land"
+
+#: timesource.cpp:97
+msgid "Offset"
+msgstr "Offset"
+
+#: timesource.cpp:100
+msgid "Timezone Abbreviation"
+msgstr "Afkorting van tijdzone"
+
+#: timesource.cpp:131 timesource.cpp:150 timesource.cpp:171
+msgid "DateTime"
+msgstr "Datum-tijd"
+
+#: timesource.cpp:146
+msgid "Latitude"
+msgstr "Breedtegraad"
+
+#: timesource.cpp:147
+msgid "Longitude"
+msgstr "Lengtegraad"
+
+#: timesource.cpp:148
+msgid "Solar"
+msgstr "Zonne"
+
+#: timesource.cpp:149
+msgid "Moon"
+msgstr "Maan"
+
+#~ msgid "Time"
+#~ msgstr "Tijd"
+
+#~ msgid "Date"
+#~ msgstr "Datum"

@@ -1,0 +1,326 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Indonesian "INCLUDE">
+]>
+<article id="autostart" lang="&language;">
+<articleinfo>
+<title
+>Automulai</title>
+<authorgroup>
+<author
+>&Anne-Marie.Mahfouf;</author>
+<othercredit role="translator"
+><firstname
+>Wantoyo</firstname
+><surname
+></surname
+><affiliation
+><address
+><email
+>wantoyek@gmail.com</email
+></address
+></affiliation
+><contrib
+>Terjemahan</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>25-03-2018</date>
+<releaseinfo
+>&plasma; 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>System Settings</keyword>
+<keyword
+>autostart</keyword>
+<keyword
+>file desktop</keyword>
+<keyword
+>file skrip</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_autostart">
+<title
+>Pengelola Automulai</title>
+
+<para
+>Modul ini adalah sebuah alat konfigurasi untuk mengelola pemulaian program apa, dengan &plasma; personalmu. Itu memungkinkan kamu untuk menambahkan program atau skrip sehingga ia secara otomatis berjalan selagi pemulaian atau pematian sesi &plasma;-mu dan mengelolanya.</para>
+
+<note
+><para
+>Mohon dicatat bahwa dalam modul ini semua perubahan langsung diterapkan.</para
+></note>
+
+<para
+>Program memindai folder <filename
+>$HOME/.config/autostart/</filename
+>, <filename class="directory"
+>$HOME/.config/plasma-workspace/env</filename
+> dan <filename class="directory"
+>$HOME/.config/plasma-workspace/shutdown</filename
+> untuk memeriksa apakah program dan skrip sudah ada dan menampilkannya. Itu juga memungkinkanmu untuk mengelolanya secara mudah. </para>
+
+<note
+><para
+>Catat bahwa kamu bisa mengubah lokasi folder <filename class="directory"
+>Autostart</filename
+> kamu di <menuchoice
+><guimenu
+>Aplikasi</guimenu
+> <guimenuitem
+>Lokasi</guimenuitem
+></menuchoice
+> di dalam kategori <guilabel
+>Personalisasi</guilabel
+> pada &systemsettings; dan set folder yang berbeda dari <filename class="directory"
+>$HOME/.config/autostart</filename
+>.</para
+></note>
+
+<para
+>Harap baca juga <ulink url="help:/kcontrol/kcmsmserver"
+>Sesi Desktop</ulink
+> dan <ulink url="help:/kcontrol/kded"
+>Layanan Latarbelakang</ulink
+> untuk informasi bagaimana cara mengkonfigurasi perilaku nyala sesi &plasma;-mu.</para>
+
+<para
+>Beberapa aplikasi &kde; menangani perilaku autostart pada miliknya sendiri, misal kamu bisa memfungsikan atau menonfungsikan autostart pada sebuah aplikasi di dalam dialog pengaturan (&kalarm;) atau kamu bisa menggunakan <menuchoice
+><guimenu
+>File</guimenu
+><guimenuitem
+>Quit</guimenuitem
+></menuchoice
+> (&konversation;, &kopete;), kalau tidak aplikasi yang masih berjalan di dalam systemtray dan akan direstart saat login nanti. </para>
+
+<sect2 id="migration">
+<title
+>Migrasi dari &kde; Workspaces 4</title>
+<para
+>Untuk memigrasikan pengaturan autostart personalmu dari &kde; Workspaces 4:</para>
+<simplelist>
+<member
+>Salin file desktop dari <filename class="directory"
+>$HOME/.kde/Autostart</filename
+> ke <filename class="directory"
+>$HOME/.config/autostart</filename
+></member>
+<member
+>Salin file skrip pra pemulaian dari <filename class="directory"
+>$HOME/.kde/Autostart</filename
+> ke <filename class="directory"
+>$HOME/.config/plasma-workspace/env</filename
+></member>
+<member
+>Salin file skrip shutdown dari <filename class="directory"
+>$HOME/.kde/Autostart</filename
+> ke <filename class="directory"
+>$HOME/.config/plasma-workspace/shutdown</filename
+></member>
+</simplelist>
+</sect2>
+
+<!--FIXME Disabling Autostart Files Provided By Your Distribution -> http://www.sharpley.org.uk/node/8 -->
+
+<sect2 id="current">
+<title
+>Displai file-file</title>
+<para
+>Bagian utama dari modul yang didisplaikan program yang dimuat ketika &plasma; start dan skrip yang berjalan ketika &plasma; start, shutdown atau sebelum &plasma; start.</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Nama</guilabel
+></term>
+<listitem>
+<para
+>Kamu tak dapat mengutak-atik kolom ini. Itu menyatakan nama program atau skrip yang kamu inginkan untuk memulai dengan &plasma;. Nama adalah diekstrak dari file Desktop dari kunci Nama untuk program dan itu adalah nama file untuk skrip. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Perintah</guilabel
+></term>
+<listitem>
+<para
+>Kolom ini daftar perintah yang akan berjalan untuk menjalankan program. Perintah untuk program bisa dimodifikasi melalui tombol <guibutton
+>Properti</guibutton
+> atau dengan mengeklik ganda jajaran program. Perintah telah diekstrak dari file Desktop dari kunci Eksek. </para>
+<para
+>Untuk sebuah skrip perintah adalah alur ke skrip dan enggak bisa dimodifikasi. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Status</guilabel
+></term>
+<listitem>
+<para
+>Setelan ini hanyalah tersedia untuk program melalui file Desktop. Kamu bisa menjaga program di dalam folder <filename class="directory"
+>Autostart</filename
+> tetapi menonfungsikannya dari yang sedang berjalan di &plasma; start. Menghapus centang status <guilabel
+>Difungsikan</guilabel
+> si program tidak akan berjalan saat mulai. </para>
+<para
+>Penghapusan centang status <guilabel
+>Difungsikan</guilabel
+> menyiapkan si file Desktop untuk men-true-kan properti Tersembunyi di dalam folder <filename class="directory"
+>Autostart</filename
+>. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Jalankan Saat</guilabel
+></term>
+<listitem>
+<para
+>Program (file Desktop) hanya bisa dijalankan saat pemulaian. Skrip bisa dijalankan saat <guilabel
+>Menjalankan</guilabel
+>, <guilabel
+>Mematikan</guilabel
+> atau <guilabel
+>Sebelum pemulaian sesi</guilabel
+>. Kolom ini memungkinkanmu untuk mengubah ketika skripmu berjalan. Menjalankan adalah ketika &plasma; berjalan, mematikan adalah ketika kamu logout &plasma; dan sebelum pemulaian sesi adalah sebelum &plasma; berjalan. </para>
+<para
+>File-file skrip dan desktop diset untuk menjalankan saat <guilabel
+>Pemulaian</guilabel
+> yang disalin atau di-symlink di <filename class="directory"
+>$HOME/.config/autostart</filename
+> dan akan berjalan selagi pemulaian &plasma;. </para>
+<para
+>Skrip-skrip yang diset untuk dijalankan saat <guilabel
+>Matikan</guilabel
+> yang disalin atau di-symlink di dalam direktori <filename class="directory"
+>$HOME/.config/plasma-workspace/shutdown</filename
+> dan akan secara otomatis berjalan selagi mematikan &plasma; setelah pengguna sudah ter-logout. </para>
+<para
+>Skrip-skrip yang diset untuk dijalankan di <guilabel
+>Pra Pemulaian &plasma;</guilabel
+> yang disalin atau di-symlink di <filename class="directory"
+>$HOME/.config/plasma-workspace/env</filename
+> dan tersumber selagi pemulaian &plasma; (skrip <filename
+>startkde</filename
+> akan menampakan skrip di sini). </para>
+<note
+><para
+>Hanya skrip dengan ekstensi <filename class="extension"
+>.sh</filename
+> yang bisa dibaca oleh &plasma; untuk mode <guilabel
+>Sebelum pemulaian sesi</guilabel
+> dan <guilabel
+>Matikan</guilabel
+>. </para
+></note>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+
+<sect2 id="actions">
+<title
+>Aksi</title>
+<para
+>Pada bagian bawah kamu memiliki beberapa tombol untuk mengubah cara Automulai yang telah dikonfigurasi. Kamu bisa menambahkan program atau skrip, menghapusnya atau mengubah propertinya. </para>
+
+<variablelist>
+<varlistentry
+><term
+><guibutton
+>Tambahkan Program</guibutton
+></term>
+<listitem>
+<para
+>Mengeklik tombol ini menampilkan dialog &plasma; <guilabel
+>Pilih Aplikasi</guilabel
+> standar dan memungkinkan kamu untuk memilih program mana yang kamu inginkan untuk memulai. Sesudah memilih program, mengeklik <guibutton
+>Oke</guibutton
+> menyuguhkanmu properti untuk program ini. </para>
+<para
+>Ini akan menyalin file Desktop program yang ada di folder <filename class="directory"
+>Autostart</filename
+> kamu. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Tambahkan Skrip</guibutton
+></term>
+<listitem>
+<para
+>Tombol ini membukakan sebuah dialog yang menanyakanmu di mana lokasi skrip yang kamu inginkan untuk ditambahkan. Jika kamu menjaga <guilabel
+>Ciptakan sebuah symlink</guilabel
+> tetap tercentang (baku) maka skrip akan ditambahkan sebagai symlink. Jika kamu takcentang opsi ini maka skrip akan disalin ke folder lokal yang berhubungan. </para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guibutton
+>Hapus</guibutton
+></term>
+<listitem>
+<para
+>Hapus akan segera menghapus file Desktop untuk program atau skrip atau symbolic link di dalam folder <filename class="directory"
+>Autostart</filename
+>. </para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guibutton
+>Properti</guibutton
+></term>
+<listitem>
+<para
+>Tombol ini (yang hanya difungsikan untuk program &ie; file Desktop) memungkinkan kamu untuk mengubah skrip atau propertinya program. Kamu memiliki properti general, properti perizinan, sebuah pratinjau ketika dapat diterapkan dan properti yang berhubungan ke aplikasi untuk program. </para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guibutton
+>Tingkat-lanjut</guibutton
+></term>
+<listitem>
+<para
+>Tombol ini hanya diterapkan untuk program-program (&ie; file-file Desktop). Sebuah dialog menanyakan kamu jika kamu ingin si program untuk automulai hanya di &plasma; (dan bukan di lingkungan desktop lain yang kamu ingin jalankan). Secara baku, si program akan automulai di semua lingkungan desktop yang kamu ingin jalankan. Pemeriksaan <guilabel
+>Automulai hanya di Plasma</guilabel
+> akan mengautomulai program saja jika kamu memulai lingkungan desktop &plasma;. </para>
+<para
+>Ini menyiapkan nilai Plasma ke kunci OnlyShowIn pada program file Desktop. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

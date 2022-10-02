@@ -1,0 +1,272 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Italian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="fonts" lang="&language;">
+<articleinfo>
+<title
+>Tipi di carattere</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+<othercredit role="translator"
+><firstname
+>Vincenzo</firstname
+><surname
+>Reale</surname
+><affiliation
+><address
+><email
+>smart2128vr@gmail.com</email
+></address
+></affiliation
+><contrib
+>Aggiornamento della traduzione</contrib
+></othercredit
+> <othercredit role="translator"
+><firstname
+>Samuele</firstname
+><surname
+>Kaplun</surname
+><affiliation
+><address
+><email
+>samuele.kaplun@collegiodimilano.it</email
+></address
+></affiliation
+><contrib
+>Traduzione del documento</contrib
+></othercredit
+> <othercredit role="translator"
+><firstname
+>Pino</firstname
+><surname
+>Toscano</surname
+><affiliation
+><address
+><email
+>toscano.pino@tiscali.it</email
+></address
+></affiliation
+><contrib
+>Aggiornamento della traduzione</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>9/4/2021</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>caratteri</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_fonts">
+
+<title
+>Tipi di carattere</title>
+
+<para
+>Questo modulo ti permette di selezionare facilmente differenti caratteri per diverse parti di &kde;.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Ecco un'immagine del modulo di configurazione dei caratteri</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Il modulo di configurazione dei caratteri</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Il pannello consiste di diversi gruppi di caratteri per darti molta flessibilità nel configurarli: </para>
+
+<itemizedlist>
+<listitem
+><para
+><guilabel
+>Generale:</guilabel
+> Utilizzato ovunque non vengano applicati gli altri gruppi di caratteri</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Larghezza fissa:</guilabel
+> Ovunque viene richiesto un tipo di carattere non-proporzionale</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Piccolo:</guilabel
+> Tipo di carattere piccolo</para
+></listitem
+> 
+
+<listitem
+><para
+><guilabel
+>Barra degli strumenti:</guilabel
+> Tipo di carattere per le barre degli strumenti delle applicazioni &kde;</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Menu:</guilabel
+> Tipo di carattere utilizzato nei menu delle applicazioni &kde;</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Titolo della finestra:</guilabel
+> Tipo di carattere utilizzato nel titolo della finestra</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Barra delle applicazioni:</guilabel
+> Tipo di carattere dell'applet barra delle applicazioni nel pannello</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Desktop:</guilabel
+> Tipo di carattere utilizzato per i nomi delle icone sul desktop</para
+></listitem>
+
+</itemizedlist>
+
+<para
+>Ogni carattere ha un corrispondente pulsante <guibutton
+>Scegli...</guibutton
+>. Facendo clic su questo pulsante si aprirà una finestra che può essere usata per scegliere un nuovo tipo di carattere, uno stile e la dimensione dei caratteri. Poi premi il pulsante <guibutton
+>OK</guibutton
+>.</para>
+
+<para
+>Marca <guilabel
+>Mostra solo caratteri a spaziatura fissa</guilabel
+> per filtrare tutti i caratteri non a spaziatura fissa dall'elenco.</para>
+
+<para
+>Un esempio del carattere che hai scelto verrà visualizzato nello spazio tra il nome del gruppo del carattere e il pulsante <guibutton
+>Scegli...</guibutton
+>.</para>
+
+<para
+>Quando hai terminato, premi <guibutton
+>OK</guibutton
+> e saranno riavviati tutti i componenti necessari di &kde;, in modo che le modifiche abbiano effetto immediatamente.</para>
+
+<para
+>Il pulsante <guibutton
+>Sistema Tutti i caratteri...</guibutton
+> permette di impostare rapidamente le proprietà di tutti i caratteri selezionati sopra. Apparirà una finestra di dialogo di selezione del carattere simile a quella standard, ma potrai notare delle caselle di selezione che ti permetteranno di cambiare <guilabel
+>Tipo di carattere</guilabel
+>, <guilabel
+>Stile</guilabel
+> o <guilabel
+>Dimensione</guilabel
+> indipendentemente l'uno dall'altro. Puoi scegliere una, due o tre di queste opzioni e saranno applicate a tutti i gruppi di caratteri.</para>
+
+<para
+>Marca <guilabel
+>Mostra solo caratteri a spaziatura fissa</guilabel
+> per filtrare tutti i caratteri non a spaziatura fissa dall'elenco.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Sistemazione tutti i caratteri</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="adjust-all.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>La finestra di dialogo «Sistema tutti i caratteri...»</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Se hai selezionato sopra, per esempio, diversi tipi di caratteri differenti, e ti accorgi che hanno tutti una dimensione troppo grande (questo accade spesso quando cambi la risoluzione dello schermo, ad esempio), puoi impostare una nuova dimensione a tutti i caratteri, senza modificare i tuoi tipi e stili di carattere.</para>
+
+<sect2 id="fonts-aa">
+<title
+>Testo con anti-aliasing</title>
+
+<para
+>Per usare le impostazioni per l'anti-aliasing, basta scegliere la voce <guilabel
+>Abilitato</guilabel
+> e selezionare le impostazioni personalizzate.</para>
+
+<para
+>Spuntare la casella <guilabel
+>Escludi intervallo dall'anti-aliasing:</guilabel
+> ti permetterà di specificare a quale intervallo di caratteri <emphasis
+>non</emphasis
+> verrà applicato l'anti-aliasing. Questo intervallo è specificato usando le due caselle combinate seguenti.</para>
+
+<para
+>Puoi scegliere, inoltre, il metodo usato per creare un aspetto anti-aliasing nei tuoi caratteri e con quale intensità dovrebbe essere applicato modificando la <ulink url="https://en.wikipedia.org/wiki/Subpixel_rendering"
+>Resa sotto-pixel</ulink
+> e l'<ulink url="https://en.wikipedia.org/wiki/Font_hinting"
+>hinting dei caratteri</ulink
+>. È inoltre possibile utilizzare <guilabel
+>Forza DPI dei caratteri</guilabel
+> per la <ulink url="https://en.wikipedia.org/wiki/Dots_per_inch"
+>screen resa</ulink
+>.Se non hai familiarità con i singoli metodi, non dovresti modificare questa opzione.</para>
+
+<note
+><para
+>La possibilità di utilizzare caratteri ed icone con anti-aliasing richiede il supporto sia nel sistema grafico che nella libreria &Qt;, che tu abbia adeguati caratteri installati e che tu stia utilizzando le capacità di procurarsi caratteri del sistema grafico. Se continui ad avere problemi contatta pure la mailing list di &kde;.</para
+></note>
+
+</sect2>
+
+<sect2 id="fonts-dpi">
+<title
+>DPI dei caratteri</title>
+
+<para
+><guilabel
+>Forza DPI per i caratteri:</guilabel
+> ti propone un valore alternativo di DPI diverso da quello di sistema, il quale è usato quando questa impostazione è <guilabel
+>Disabilitato</guilabel
+>. Puoi controllare a quale valore di DPI il server X è impostato eseguendo <userinput
+>xdpyinfo | grep resolution</userinput
+> in un terminale, e puoi quindi cambiare il valore di DPI usando la casella a comparsa. Il nuovo valore sarà applicato solo alle applicazioni avviate da quel momento.</para>
+</sect2>
+
+</sect1>
+
+</article>

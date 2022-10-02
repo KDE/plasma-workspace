@@ -1,0 +1,90 @@
+# translation of plasma_engine_keystate.po to Italian
+# Copyright (C) 2008 Free Software Foundation, Inc.
+# Vincenzo Reale <smart2128vr@gmail.com>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_engine_keystate\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"PO-Revision-Date: 2009-07-17 10:00+0100\n"
+"Last-Translator: Vincenzo Reale <smart2128@baslug.org>\n"
+"Language-Team: Italian <kde-i18n-it@kde.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: keystate.cpp:15
+msgid "Shift"
+msgstr "Maiusc"
+
+#: keystate.cpp:16
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: keystate.cpp:17
+msgid "Alt"
+msgstr "Alt"
+
+#: keystate.cpp:18
+msgid "Meta"
+msgstr "Meta"
+
+#: keystate.cpp:19
+msgid "Super"
+msgstr "Super"
+
+#: keystate.cpp:20
+msgid "Hyper"
+msgstr "Hyper"
+
+#: keystate.cpp:21
+msgid "AltGr"
+msgstr "AltGr"
+
+#: keystate.cpp:22
+msgid "Num Lock"
+msgstr "Bloc Num"
+
+#: keystate.cpp:23
+msgid "Caps Lock"
+msgstr "Bloc Maiusc"
+
+#: keystate.cpp:24
+msgid "Scroll Lock"
+msgstr "Bloc Scorr"
+
+#: keystate.cpp:26
+msgid "Left Button"
+msgstr "Pulsante sinistro"
+
+#: keystate.cpp:27
+msgid "Right Button"
+msgstr "Pulsante destro"
+
+#: keystate.cpp:28
+msgid "Middle Button"
+msgstr "Pulsante centrale"
+
+#: keystate.cpp:29
+msgid "First X Button"
+msgstr "Primo pulsante X"
+
+#: keystate.cpp:30
+msgid "Second X Button"
+msgstr "Secondo pulsante X"
+
+#: keystate.cpp:44 keystate.cpp:54 keystate.cpp:81 keystate.cpp:102
+#: keystate.cpp:110
+msgid "Pressed"
+msgstr "Premuto"
+
+#: keystate.cpp:45 keystate.cpp:88 keystate.cpp:111
+msgid "Latched"
+msgstr "A rilascio"
+
+#: keystate.cpp:46 keystate.cpp:95 keystate.cpp:112
+msgid "Locked"
+msgstr "Bloccato"

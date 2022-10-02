@@ -1,0 +1,101 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Sushruth Tendulkar <sushtend@gmail.com>, 2009.
+# Vasudev Kamath <kamathvasudev@gmail.com>, 2009.
+# Shankar Prasad <svenkate@redhat.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"PO-Revision-Date: 2010-01-29 12:44+0530\n"
+"Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
+"Language-Team: kn-IN <>\n"
+"Language: kn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: killrunner.cpp:30
+#, kde-format
+msgid "Send SIGTERM"
+msgstr "SIGTERM ಅನ್ನು ಕಳುಹಿಸು"
+
+#: killrunner.cpp:32
+#, kde-format
+msgid "Send SIGKILL"
+msgstr "SIGKILL ಅನ್ನು ಕಳುಹಿಸು"
+
+#: killrunner.cpp:51 killrunner_config.cpp:51 killrunner_config.cpp:77
+#, kde-format
+msgid "kill"
+msgstr "ಅಂತ್ಯಗೊಳಿಸು"
+
+#: killrunner.cpp:57
+#, kde-format
+msgid "Terminate running applications whose names match the query."
+msgstr "ಮನವಿ ಮಾಡಿದುದಕ್ಕೆ ತಾಳೆಯಾಗುವ ಹಾಗೂ ಚಾಲನೆಯಲ್ಲಿರುವ ಅನ್ವಯಗಳನ್ನು ಅಂತ್ಯಗೊಳಿಸು."
+
+#: killrunner.cpp:120
+#, kde-format
+msgid "Terminate %1"
+msgstr "%1 ಅನ್ನು  ಅಂತ್ಯಗೊಳಿಸು"
+
+#: killrunner.cpp:121
+#, kde-format
+msgid "Process ID: %1"
+msgstr ""
+
+#: killrunner_config.cpp:32
+#, kde-format
+msgid "CPU usage"
+msgstr "ಸಿಪಿಯು  ಬಳಕೆ"
+
+#: killrunner_config.cpp:33
+#, kde-format
+msgid "inverted CPU usage"
+msgstr "ವಿಲೋಮಗೊಳಿಸಿದ ಸಿಪಿಯು ಬಳಕೆ"
+
+#: killrunner_config.cpp:34
+#, kde-format
+msgid "nothing"
+msgstr "ಏನೂ ಇಲ್ಲ"
+
+#. i18n: ectx: property (title), widget (QGroupBox, main)
+#: killrunner_config.ui:30
+#, kde-format
+msgid "Kill Applications Config"
+msgstr "ಅನ್ವಯಗಳ ಸಂರಚನೆಯನ್ನು ಅಂತ್ಯಗೊಳಿಸು"
+
+#. i18n: ectx: property (text), widget (QCheckBox, useTriggerWord)
+#: killrunner_config.ui:39
+#, kde-format
+msgid "&Use trigger word"
+msgstr "ಪ್ರಚೋದಿಸುವ ಪದವನ್ನು ಉಪಯೋಗಿಸು(&U)"
+
+#. i18n: ectx: property (text), widget (QLabel, label_trigger)
+#: killrunner_config.ui:51
+#, kde-format
+msgid "&Trigger word:"
+msgstr "ಪ್ರಚೋದಿಸುವ ಪದ(&T):"
+
+#. i18n: ectx: property (text), widget (QLabel, label_sorting)
+#: killrunner_config.ui:72
+#, kde-format
+msgid "&Sort by"
+msgstr "ಹೀಗೆ ವಿಂಗಡಿಸು(&S)"
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, sorting)
+#: killrunner_config.ui:82
+#, kde-format
+msgid "It is not sure, that this will take effect"
+msgstr "ಇದು ಕಾರ್ಯರೂಪಕ್ಕೆ ಬರುತ್ತದೆಯೆ ಇಲ್ಲವೆ ಎಂದು ಖಾತ್ರಿ ಇಲ್ಲ"
+
+#~ msgid ""
+#~ "Process ID: %1\n"
+#~ "Running as user: %2"
+#~ msgstr ""
+#~ "ಪ್ರಕ್ರಿಯೆಯ ಐಡಿ : %1\n"
+#~ "ಈ ಹೆಸರಿನ ಬಳಕೆದಾರನಿಂದ ಚಲಾಯಿಸಲಾಗುತ್ತದೆ: %2"

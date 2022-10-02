@@ -1,0 +1,392 @@
+# translation of kcmicons.po to Frysk
+# translation of kcmicons.po to
+# translation of kcmicons.po to
+#
+# Rinse de Vries <rinsedevries@kde.nl>, 2005, 2006, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmicons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"PO-Revision-Date: 2009-12-19 18:38+0100\n"
+"Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
+"Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
+"Language: fy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: iconsizecategorymodel.cpp:14
+#, kde-format
+msgid "Toolbar"
+msgstr "Arkbalke"
+
+#: iconsizecategorymodel.cpp:15
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Haadbalke"
+
+#: iconsizecategorymodel.cpp:16
+#, kde-format
+msgid "Small Icons"
+msgstr "Lytse byldkaikes"
+
+#: iconsizecategorymodel.cpp:17
+#, kde-format
+msgid "Panel"
+msgstr "Paniel"
+
+#: iconsizecategorymodel.cpp:18
+#, kde-format
+msgid "Dialogs"
+msgstr "Dialogen"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, fuzzy, kde-format
+#| msgid "Main Toolbar"
+msgid "Main toolbar icons size"
+msgstr "Haadbalke"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, fuzzy, kde-format
+#| msgid "Small Icons"
+msgid "Small icons size"
+msgstr "Lytse byldkaikes"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr ""
+
+#: main.cpp:182
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: main.cpp:193
+#, fuzzy, kde-format
+#| msgid "Unable to find the icon theme archive %1."
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Het pictogramthema-archief %1 is niet gevonden."
+
+#: main.cpp:207
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "De triem is net in jildich byldkaiketema-argyf."
+
+#: main.cpp:212
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr ""
+"Der barde in flater ûnder it ynstallearjen. Dochs is it grutste diel fan de "
+"tema's út it argyf ynstallearre."
+
+#: main.cpp:216
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: main.cpp:260
+#, fuzzy, kde-format
+#| msgid "Installing icon themes"
+msgid "Installing icon themes…"
+msgstr "Byldkaiketema's ynstalearje"
+
+#: main.cpp:270
+#, fuzzy, kde-format
+#| msgid "Installing icon themes"
+msgid "Installing %1 theme…"
+msgstr "Byldkaiketema's ynstalearje"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr ""
+
+#: package/contents/ui/main.qml:147
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Remove Icon Theme"
+msgstr "Tema fuortsmite"
+
+#: package/contents/ui/main.qml:154
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Icon Theme"
+msgstr "Tema fuortsmite"
+
+#: package/contents/ui/main.qml:228
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr ""
+
+#: package/contents/ui/main.qml:246
+#, fuzzy, kde-format
+#| msgid "Install Theme File..."
+msgid "Install from File…"
+msgstr "Tematriem ynstallearje..."
+
+#: package/contents/ui/main.qml:251
+#, fuzzy, kde-format
+#| msgid "Get New Themes..."
+msgid "Get New Icons…"
+msgstr "Nije tema;s ophelje..."
+
+#: package/contents/ui/main.qml:279
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Open Theme"
+msgstr "Tema fuortsmite"
+
+#: package/contents/ui/main.qml:281
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Rinse de Vries, Berend Ytsma"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "rinsedevries@kde.nl, berendy@bigfoot.com"
+
+#~ msgid "Icons"
+#~ msgstr "Byldkaikes"
+
+#~ msgid "Icons Control Panel Module"
+#~ msgstr "Byldkaike konfiguraasjemodule"
+
+#~ msgid "(c) 2000-2003 Geert Jansen"
+#~ msgstr "(c) 2000-2003 Geert Jansen"
+
+#~ msgid "Geert Jansen"
+#~ msgstr "Geert Jansen"
+
+#~ msgid "Antonio Larrosa Jimenez"
+#~ msgstr "Antonio Larrosa Jimenez"
+
+#~ msgid "Torsten Rahn"
+#~ msgstr "Torsten Rahn"
+
+#~ msgid "Desktop"
+#~ msgstr "Buroblêd"
+
+#~ msgid "Use of Icon"
+#~ msgstr "Byldkaike brûkens"
+
+#~ msgctxt "@label The icon rendered by default"
+#~ msgid "Default"
+#~ msgstr "Standert"
+
+#~ msgctxt "@label The icon rendered as active"
+#~ msgid "Active"
+#~ msgstr "Aktive"
+
+#~ msgctxt "@label The icon rendered as disabled"
+#~ msgid "Disabled"
+#~ msgstr "Utskeakele"
+
+#~ msgid "Size:"
+#~ msgstr "Grutte:"
+
+#~ msgid "Set Effect..."
+#~ msgstr "Effekt ynstelle..."
+
+#~ msgid "All Icons"
+#~ msgstr "Alle byldkaikes"
+
+#~ msgid "Setup Default Icon Effect"
+#~ msgstr "Ynstellings foar effekt fan standertbydlkaike"
+
+#~ msgid "Setup Active Icon Effect"
+#~ msgstr "Ynstellings foar effekt fan aktyf byldkaike"
+
+#~ msgid "Setup Disabled Icon Effect"
+#~ msgstr "Ynstellings foar effekt fan ynaktyf byldkaike"
+
+#~ msgid "&Effect:"
+#~ msgstr "&Effekt:"
+
+#~ msgid "No Effect"
+#~ msgstr "Gjin effekt"
+
+#~ msgid "To Gray"
+#~ msgstr "Nei griiswearde"
+
+#~ msgid "Colorize"
+#~ msgstr "Ynkleurje"
+
+#~ msgid "Gamma"
+#~ msgstr "Gamma"
+
+#~ msgid "Desaturate"
+#~ msgstr "Untsêding"
+
+#~ msgid "To Monochrome"
+#~ msgstr "Nei monogroom"
+
+#~ msgid "&Semi-transparent"
+#~ msgstr "&Semi-trochsichtich"
+
+#~ msgid "Preview"
+#~ msgstr "Foarbyld"
+
+#~ msgid "Effect Parameters"
+#~ msgstr "Effektparameters"
+
+#~ msgid "&Amount:"
+#~ msgstr "Omf&ang:"
+
+#~ msgid "Co&lor:"
+#~ msgstr "K&leur:"
+
+#~ msgid "&Second color:"
+#~ msgstr "T&wadde kleur:"
+
+#~ msgid "Name"
+#~ msgstr "Namme"
+
+#~ msgid "Description"
+#~ msgstr "Beskriuwing"
+
+#~ msgid "Install a theme archive file you already have locally"
+#~ msgstr "Ynstallearje in lokale tema argyftriem"
+
+#~ msgid ""
+#~ "If you already have a theme archive locally, this button will unpack it "
+#~ "and make it available for KDE applications"
+#~ msgstr ""
+#~ "As jo in tema argyf al lokaal te stean hawwe, dan sil dizze knop it "
+#~ "útpakke en beskikber foar KDE applikaasje meitsje"
+
+#~ msgid "Get new themes from the Internet"
+#~ msgstr "Nije tema's ophelje fan ôf it ynternet"
+
+#~ msgid ""
+#~ "You need to be connected to the Internet to use this action. A dialog "
+#~ "will display a list of themes from the http://www.kde.org website. "
+#~ "Clicking the Install button associated with a theme will install this "
+#~ "theme locally."
+#~ msgstr ""
+#~ "Jo moatte ferbûn wêze mei it ynternet om dizze aksje te dwaan. In "
+#~ "dialooch sil in list fan tema's fan http://www.kde.org werjaan. It "
+#~ "klikken op in ynstallaasje knop dy by in tema heard sil it tema lokaal "
+#~ "ynstallearje."
+
+#~ msgid "Remove the selected theme from your disk"
+#~ msgstr "It selektearre tema fan de skiif fuortsmite"
+
+#~ msgid "This will remove the selected theme from your disk."
+#~ msgstr "Dit sil it selektearre tema fan de skiif fuortsmite."
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "URL-adres dan tema hir ynfiere/nei ta slepe"
+
+#~ msgid ""
+#~ "Unable to download the icon theme archive;\n"
+#~ "please check that address %1 is correct."
+#~ msgstr ""
+#~ "It byldkaiketema-argyf koe net ynladen wurde.\n"
+#~ "Kontrolearje of it adres %1 just is."
+
+#~ msgid "<qt>Installing <strong>%1</strong> theme</qt>"
+#~ msgstr "<qt>Tema <strong>%1</strong> wurdt ynstallearre</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <strong>%1</strong> icon theme?"
+#~ "<br /><br />This will delete the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>Binne jo wis dat jo bydlkaiketema <strong>%1</strong> fuortsmite "
+#~ "wollle?<br /><br />Alle triemmen dy't troch dit tema ynstallearre binne "
+#~ "wurde wiske.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Befêstiging"
+
+#~ msgid "&Theme"
+#~ msgstr "&Tema"
+
+#~ msgid "Ad&vanced"
+#~ msgstr "A&vansearre"
+
+#, fuzzy
+#~| msgid ""
+#~| "<h1>Icons</h1>This module allows you to choose the icons for your "
+#~| "desktop.<p>To choose an icon theme, click on its name and apply your "
+#~| "choice by pressing the \"Apply\" button below. If you do not want to "
+#~| "apply your choice you can press the \"Reset\" button to discard your "
+#~| "changes.</p><p>By pressing the \"Install New Theme\" button you can "
+#~| "install your new icon theme by writing its location in the box or "
+#~| "browsing to the location. Press the \"OK\" button to finish the "
+#~| "installation.</p><p>The \"Remove Theme\" button will only be activated "
+#~| "if you select a theme that you installed using this module. You are not "
+#~| "able to remove globally installed themes here.</p><p>You can also "
+#~| "specify effects that should be applied to the icons.</p>"
+#~ msgid ""
+#~ "<h1>Icons</h1>This module allows you to choose the icons for your desktop."
+#~ "<p>To choose an icon theme, click on its name and apply your choice by "
+#~ "pressing the \"Apply\" button below. If you do not want to apply your "
+#~ "choice you can press the \"Reset\" button to discard your changes.</"
+#~ "p><p>By pressing the \"Install Theme File...\" button you can install "
+#~ "your new icon theme by writing its location in the box or browsing to the "
+#~ "location. Press the \"OK\" button to finish the installation.</p><p>The "
+#~ "\"Remove Theme\" button will only be activated if you select a theme that "
+#~ "you installed using this module. You are not able to remove globally "
+#~ "installed themes here.</p><p>You can also specify effects that should be "
+#~ "applied to the icons.</p>"
+#~ msgstr ""
+#~ "<h1>Byldkaikes</h1>Yn dizze module kinne jo de byldkaikes foar jo "
+#~ "buroblêd kieze. <p>Om in byldkaiketema te kiezen, klik op de namme derfan "
+#~ "en befêstigje jo kar troch op \"Tapasse\" te klikken. As jo de kar net "
+#~ "tapasse wole drukke jo op de knop \"Ungedien meitsje\". </p> <p>Mei de "
+#~ "knop \"Nij tema ynstallearje\" kinne jo in nij byldkaiketema "
+#~ "ynstallearje. Skriuw de lokaasje derfan yn it ynfierfjild, of blêdzje der "
+#~ "nei ta. Druk op de knop \"Okee\" om de ynstallaasje te foltôgjen.</p> "
+#~ "<p>De knop \"Tema fuortsmite\" is allinne aktyf as jo in tema selektearre "
+#~ "ha dy jo sels ynstallearre ha. Globaal ynstallearre tema's kinne net "
+#~ "fanút dizze module fuortsmiten wurde. </p><p>Jo kinne ek effekten kieze "
+#~ "dy tapst wurde op de byldkaikes.</p>"
+
+#~ msgid "Animate icons"
+#~ msgstr "Libjende byldkaikes"
+
+#~ msgid "Select the icon theme you want to use:"
+#~ msgstr "Selektearje it byldkaiketema dy ko brûke wolle:"
+
+#~ msgid "Double-sized pixels"
+#~ msgstr "Dûbele piksels"
+
+#~ msgid "Desktop/File Manager"
+#~ msgstr "Buroblêd/Triembehearder"

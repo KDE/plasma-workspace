@@ -1,0 +1,322 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-15 00:46+0000\n"
+"PO-Revision-Date: 2022-05-22 10:05+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.08.1\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Stefan Asserhäll"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "stefan.asserhall@bredband.net"
+
+#: imagepackage/contents/ui/config.qml:94
+#, kde-format
+msgid "Positioning:"
+msgstr "Positionering:"
+
+#: imagepackage/contents/ui/config.qml:97
+#, kde-format
+msgid "Scaled and Cropped"
+msgstr "Skalat och beskuret"
+
+#: imagepackage/contents/ui/config.qml:101
+#, kde-format
+msgid "Scaled"
+msgstr "Skalat"
+
+#: imagepackage/contents/ui/config.qml:105
+#, kde-format
+msgid "Scaled, Keep Proportions"
+msgstr "Skalat, behåll proportion"
+
+#: imagepackage/contents/ui/config.qml:109
+#, kde-format
+msgid "Centered"
+msgstr "Centrerat"
+
+#: imagepackage/contents/ui/config.qml:113
+#, kde-format
+msgid "Tiled"
+msgstr "Sida vid sida"
+
+#: imagepackage/contents/ui/config.qml:141
+#, kde-format
+msgid "Background:"
+msgstr "Bakgrund:"
+
+#: imagepackage/contents/ui/config.qml:142
+#, kde-format
+msgid "Blur"
+msgstr "Suddig"
+
+#: imagepackage/contents/ui/config.qml:151
+#, kde-format
+msgid "Solid color"
+msgstr "Enkel färg"
+
+#: imagepackage/contents/ui/config.qml:161
+#, kde-format
+msgid "Select Background Color"
+msgstr "Välj bakgrundsfärg"
+
+#: imagepackage/contents/ui/config.qml:207
+#, kde-format
+msgid "Add Image…"
+msgstr "Lägg till bild…"
+
+#: imagepackage/contents/ui/config.qml:213
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:257
+#, kde-format
+msgid "Get New Wallpapers…"
+msgstr "Hämta nya skrivbordsunderlägg…"
+
+#: imagepackage/contents/ui/main.qml:69
+#, kde-format
+msgid "Open Wallpaper Image"
+msgstr "Öppna bild för skrivbordsunderlägg"
+
+#: imagepackage/contents/ui/main.qml:70
+#, kde-format
+msgid "Next Wallpaper Image"
+msgstr "Nästa skrivbordsunderlägg"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:33
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Öppna katalog med innehåll"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:39
+#, kde-format
+msgid "Restore wallpaper"
+msgstr "Återställ skrivbordsunderlägg"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:44
+#, kde-format
+msgid "Remove Wallpaper"
+msgstr "Ta bort skrivbordsunderlägg"
+
+#: plasma-apply-wallpaperimage.cpp:29
+#, kde-format
+msgid ""
+"This tool allows you to set an image as the wallpaper for the Plasma session."
+msgstr ""
+"Verktyget låter dig ange en bild som skrivbordsunderlägg för Plasma-"
+"sessionen."
+
+#: plasma-apply-wallpaperimage.cpp:31
+#, kde-format
+msgid ""
+"An image file or an installed wallpaper kpackage that you wish to set as the "
+"wallpaper for your Plasma session"
+msgstr ""
+"En bildfil eller ett installerat skrivbordsunderläggspaket som du vill "
+"använda som skrivbordsunderlägg för Plasma-sessionen"
+
+#: plasma-apply-wallpaperimage.cpp:45
+#, kde-format
+msgid ""
+"There is a stray single quote in the filename of this wallpaper (') - please "
+"contact the author of the wallpaper to fix this, or rename the file "
+"yourself: %1"
+msgstr ""
+"Det finns ett extra citationstecken i skrivbordsunderläggets filnamn ('). "
+"Kontakta skrivbordsunderläggets upphovsman för att rätta det, eller byt namn "
+"på filen själv: %1"
+
+#: plasma-apply-wallpaperimage.cpp:85
+#, kde-format
+msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+msgstr ""
+"Ett fel uppstod vid försök att ställa in Plasma-skrivbordsunderlägget:\n"
+
+#: plasma-apply-wallpaperimage.cpp:89
+#, kde-format
+msgid ""
+"Successfully set the wallpaper for all desktops to the KPackage based %1"
+msgstr ""
+"Ställde in skrivbordsunderlägget för alla skrivbord till %1 baserat på et "
+"paket med lyckat resultat"
+
+#: plasma-apply-wallpaperimage.cpp:91
+#, kde-format
+msgid "Successfully set the wallpaper for all desktops to the image %1"
+msgstr ""
+"Ställde in skrivbordsunderlägget för alla skrivbord till bilden %1 med "
+"lyckat resultat"
+
+#: plasma-apply-wallpaperimage.cpp:97
+#, kde-format
+msgid ""
+"The file passed to be set as wallpaper does not exist, or we cannot identify "
+"it as a wallpaper: %1"
+msgstr ""
+"Filen som skickades för att användas som skrivbordsunderlägg finns inte, "
+"eller kan inte identifieras som ett skrivbordsunderlägg: %1"
+
+#: plugin/finder/packagefinder.cpp:152
+#, kde-format
+msgid "Recommended wallpaper file"
+msgstr "Rekommenderat skrivbordsunderlägg"
+
+#: plugin/imagebackend.cpp:234
+#, kde-format
+msgid "Directory with the wallpaper to show slides from"
+msgstr "Katalog med skrivbordsunderlägget att visa bilder från"
+
+#: plugin/imagebackend.cpp:345
+#, kde-format
+msgid "Open Image"
+msgstr "Öppna bild"
+
+#: plugin/imagebackend.cpp:345
+#, kde-format
+msgid "Image Files"
+msgstr "Bildfiler"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:38
+#, kde-format
+msgid "Order:"
+msgstr "Ordning:"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:45
+#, kde-format
+msgid "Random"
+msgstr "Slumpmässig"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:49
+#, kde-format
+msgid "A to Z"
+msgstr "A till Z"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:53
+#, kde-format
+msgid "Z to A"
+msgstr "Z till A"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:57
+#, kde-format
+msgid "Date modified (newest first)"
+msgstr "Datum ändrat (nyaste först)"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:61
+#, kde-format
+msgid "Date modified (oldest first)"
+msgstr "Datum ändrat (äldsta först)"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:86
+#, kde-format
+msgid "Group by folders"
+msgstr "Gruppera enligt kataloger"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:98
+#, kde-format
+msgid "Change every:"
+msgstr "Ändra var:"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:108
+#, kde-format
+msgid "%1 hour"
+msgid_plural "%1 hours"
+msgstr[0] "%1 timme"
+msgstr[1] "%1 timmar"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:128
+#, kde-format
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "%1 minut"
+msgstr[1] "%1 minuter"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:148
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "%1 sekund"
+msgstr[1] "%1 sekunder"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:162
+#, kde-format
+msgid "Folders"
+msgstr "Kataloger"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:220
+#, kde-format
+msgid "Remove Folder"
+msgstr "Ta bort katalog"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:225
+#, kde-format
+msgid "Open Folder"
+msgstr "Öppna katalog"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:235
+#, kde-format
+msgid "There are no wallpaper locations configured"
+msgstr "Det finns inga platser för skrivbordsunderlägg inställda"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:250
+#, kde-format
+msgid "Add Folder…"
+msgstr "Lägg till katalog…"
+
+#~ msgid "There are no wallpapers in this slideshow"
+#~ msgstr "Det finns inga skrivbordsunderlägg i bildspelet"
+
+#~ msgid "Add Custom Wallpaper"
+#~ msgstr "Lägg till eget skrivbordsunderlägg"
+
+#~ msgid "Remove wallpaper"
+#~ msgstr "Ta bort skrivbordsunderlägg"
+
+#~ msgid "%1 by %2"
+#~ msgstr "%1 x %2"
+
+#~ msgid "Wallpapers"
+#~ msgstr "Skrivbordsunderlägg"
+
+#~ msgctxt "<image> by <author>"
+#~ msgid "By %1"
+#~ msgstr "Av %1"
+
+#~ msgid "Download Wallpapers"
+#~ msgstr "Ladda ner skrivbordsunderlägg"
+
+#~ msgid "Hours"
+#~ msgstr "timmar"
+
+#~ msgid "Use blur background filling"
+#~ msgstr "Använd suddig ifyllnad av bakgrunden"
+
+#~ msgid "Open..."
+#~ msgstr "Öppna..."
+
+#~ msgctxt "Unknown Author"
+#~ msgid "Unknown"
+#~ msgstr "Okänd"
+
+#~ msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz *.xcf)"
+#~ msgstr "Bildfiler (*.png *.jpg *.jpeg *.bmp *.svg *.svgz *.xcf)"
+
+#~ msgid "Screenshot"
+#~ msgstr "Skärmbild"
+
+#~ msgid "Preview"
+#~ msgstr "Förhandsgranskning"

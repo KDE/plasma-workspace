@@ -1,0 +1,1107 @@
+# translation of klipper.po to Bengali
+# Deepayan Sarkar <deepayan@bengalinux.org>, 2004, 2006.
+# Deepayan Sarkar <deepayan.sarkar@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: klipper\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-17 00:48+0000\n"
+"PO-Revision-Date: 2010-06-01 11:22-0700\n"
+"Last-Translator: Deepayan Sarkar <deepayan.sarkar@gmail.com>\n"
+"Language-Team: Bengali <kde-translation@bengalinux.org>\n"
+"Language: bn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: configdialog.cpp:80
+#, fuzzy, kde-format
+#| msgid "Selection and Clipboard"
+msgid "Selection and Clipboard:"
+msgstr "নির্বাচন এবং ক্লিপবোর্ড"
+
+#: configdialog.cpp:87
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"When text or an area of the screen is highlighted with the mouse or "
+"keyboard, this is the <emphasis>selection</emphasis>. It can be pasted using "
+"the middle mouse button.<nl/><nl/>If the selection is explicitly copied "
+"using a <interface>Copy</interface> or <interface>Cut</interface> action, it "
+"is saved to the <emphasis>clipboard</emphasis>. It can be pasted using a "
+"<interface>Paste</interface> action. <nl/><nl/>When turned on this option "
+"keeps the selection and the clipboard the same, so that any selection is "
+"immediately available to paste by any means. If it is turned off, the "
+"selection may still be saved in the clipboard history (subject to the "
+"options below), but it can only be pasted using the middle mouse button."
+msgstr ""
+
+#: configdialog.cpp:106
+#, fuzzy, kde-format
+#| msgid "Clipboard history"
+msgid "Clipboard history:"
+msgstr "ক্লিপবোর্ড ইতিহাস"
+
+#: configdialog.cpp:112
+#, fuzzy, kde-format
+#| msgid " entry"
+#| msgid_plural " entries"
+msgctxt "Number of entries"
+msgid " entry"
+msgid_plural " entries"
+msgstr[0] " এন্ট্রি"
+msgstr[1] " এন্ট্রি"
+
+#: configdialog.cpp:131 configdialog.cpp:169
+#, fuzzy, kde-format
+#| msgid "&Replay actions on an item selected from history"
+msgid "Always save in history"
+msgstr "ইতিবৃত্ত থেকে নির্বাচিত একটি বস্তুর উপর প্রক্রিয়া &আবার চালাও"
+
+#: configdialog.cpp:135
+#, fuzzy, kde-format
+#| msgid "Text selection only"
+msgid "Text selection:"
+msgstr "শুধুমাত্র লেখা নির্বাচন"
+
+#: configdialog.cpp:137 configdialog.cpp:175
+#, kde-format
+msgid "Only when explicitly copied"
+msgstr ""
+
+#: configdialog.cpp:142
+#, fuzzy, kde-format
+#| msgid "Really delete entire clipboard history?"
+msgid "Whether text selections are saved in the clipboard history."
+msgstr "সত্যিই পুরো ক্লিপবোর্ড ইতিহাস মুছে ফেলা হবে?"
+
+#: configdialog.cpp:173
+#, fuzzy, kde-format
+#| msgid "Ignore selection"
+msgid "Non-text selection:"
+msgstr "নির্বাচন অগ্রাহ্য করো"
+
+#: configdialog.cpp:180
+#, fuzzy, kde-format
+#| msgid "&Replay actions on an item selected from history"
+msgid "Never save in history"
+msgstr "ইতিবৃত্ত থেকে নির্বাচিত একটি বস্তুর উপর প্রক্রিয়া &আবার চালাও"
+
+#: configdialog.cpp:185
+#, kde-format
+msgid ""
+"Whether non-text selections (such as images) are saved in the clipboard "
+"history."
+msgstr ""
+
+#: configdialog.cpp:250
+#, fuzzy, kde-format
+#| msgid "Timeout for action popups:"
+msgid "Show action popup menu:"
+msgstr "প্রক্রিয়া পপ-আপ-এর জন্য টাইম-আউট:"
+
+#: configdialog.cpp:260
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"When text that matches an action pattern is selected or is chosen from the "
+"clipboard history, automatically show the popup menu with applicable "
+"actions. If the automatic menu is turned off here, or it is not shown for an "
+"excluded window, then it can be shown by using the <shortcut>%1</shortcut> "
+"key shortcut."
+msgstr ""
+
+#: configdialog.cpp:269
+#, kde-format
+msgid "Exclude Windows..."
+msgstr ""
+
+#: configdialog.cpp:283
+#, fuzzy, kde-format
+#| msgid " second"
+#| msgid_plural " seconds"
+msgctxt "Unit of time"
+msgid " second"
+msgid_plural " seconds"
+msgstr[0] " সেকণ্ড"
+msgstr[1] " সেকণ্ড"
+
+#: configdialog.cpp:284
+#, kde-format
+msgctxt "No timeout"
+msgid "None"
+msgstr ""
+
+#: configdialog.cpp:293
+#, fuzzy, kde-format
+msgid "Options:"
+msgstr "প্রক্রিয়া (&প)"
+
+#: configdialog.cpp:307
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The actions shown in the popup menu can be configured on the "
+"<interface>Actions Configuration</interface> page."
+msgstr ""
+
+#: configdialog.cpp:335
+#, kde-format
+msgid "Exclude Windows"
+msgstr ""
+
+#: configdialog.cpp:365
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"When a <interface>match pattern</interface> matches the clipboard contents, "
+"its <interface>commands</interface> appear in the Klipper popup menu and can "
+"be executed."
+msgstr ""
+
+#: configdialog.cpp:374
+#, kde-format
+msgctxt "@title:column"
+msgid "Match pattern and commands"
+msgstr ""
+
+#: configdialog.cpp:374
+#, fuzzy, kde-format
+#| msgid "Description"
+msgctxt "@title:column"
+msgid "Description"
+msgstr "বর্ণনা"
+
+#: configdialog.cpp:380
+#, kde-format
+msgid "Add Action..."
+msgstr "প্রক্রিয়া যোগ করো..."
+
+#: configdialog.cpp:384
+#, kde-format
+msgid "Edit Action..."
+msgstr "প্রক্রিয়া সম্পাদনা করো"
+
+#: configdialog.cpp:389
+#, kde-format
+msgid "Delete Action"
+msgstr "প্রক্রিয়া মুছে ফেলো"
+
+#: configdialog.cpp:396
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"These actions appear in the popup menu which can be configured on the "
+"<interface>Action Menu</interface> page."
+msgstr ""
+
+#: configdialog.cpp:580
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Delete the selected action <resource>%1</resource><nl/>and all of its "
+"commands?"
+msgstr ""
+
+#: configdialog.cpp:581
+#, fuzzy, kde-format
+#| msgid "Delete Action"
+msgid "Confirm Delete Action"
+msgstr "প্রক্রিয়া মুছে ফেলো"
+
+#: configdialog.cpp:610
+#, kde-format
+msgctxt "General Config"
+msgid "General"
+msgstr "সাধারণ"
+
+#: configdialog.cpp:610
+#, fuzzy, kde-format
+#| msgid "General Config"
+msgid "General Configuration"
+msgstr "সাধারণ কনফিগ"
+
+#: configdialog.cpp:611
+#, fuzzy, kde-format
+msgctxt "Popup Menu Config"
+msgid "Action Menu"
+msgstr "প্রক্রিয়া (&প)"
+
+#: configdialog.cpp:611
+#, fuzzy, kde-format
+msgid "Action Menu"
+msgstr "প্রক্রিয়া (&প)"
+
+#: configdialog.cpp:612
+#, fuzzy, kde-format
+msgctxt "Actions Config"
+msgid "Actions Configuration"
+msgstr "প্রক্রিয়া (&প)"
+
+#: configdialog.cpp:612
+#, fuzzy, kde-format
+msgid "Actions Configuration"
+msgstr "প্রক্রিয়া (&প)"
+
+#: configdialog.cpp:615
+#, kde-format
+msgctxt "Shortcuts Config"
+msgid "Shortcuts"
+msgstr "শর্টকাট"
+
+#: configdialog.cpp:615
+#, fuzzy, kde-format
+#| msgid "Shortcuts Config"
+msgid "Shortcuts Configuration"
+msgstr "শর্টকাট কনফিগ"
+
+#: configdialog.cpp:693
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The action popup will not be shown automatically for these windows, even if "
+"it is enabled. This is because, for example, a web browser may highlight a "
+"URL in the address bar while typing, so the menu would show for every "
+"keystroke.<nl/><nl/>If the action menu appears unexpectedly when using a "
+"particular application, then add it to this list. <link>How to find the name "
+"to enter</link>."
+msgstr ""
+
+#: configdialog.cpp:706
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"The name that needs to be entered here is the WM_CLASS name of the window to "
+"be excluded. To find the WM_CLASS name for a window, in another terminal "
+"window enter the command:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</"
+"icode><nl/><nl/>and click on the window that you want to exclude. The first "
+"name that it displays after the equal sign is the one that you need to enter."
+msgstr ""
+
+#: editactiondialog.cpp:34 editcommanddialog.cpp:90
+#, kde-format
+msgid "Ignore"
+msgstr "অগ্রাহ্য করো"
+
+#: editactiondialog.cpp:36
+#, fuzzy, kde-format
+#| msgid "Clipboard"
+msgid "Replace Clipboard"
+msgstr "ক্লিপবোর্ড"
+
+#: editactiondialog.cpp:38
+#, kde-format
+msgid "Add to Clipboard"
+msgstr "ক্লিপবোর্ড-এ যোগ করো"
+
+#: editactiondialog.cpp:122
+#, kde-format
+msgid "Command"
+msgstr "কমাণ্ড"
+
+#: editactiondialog.cpp:124
+#, kde-format
+msgid "Output"
+msgstr ""
+
+#: editactiondialog.cpp:126
+#, kde-format
+msgid "Description"
+msgstr "বর্ণনা"
+
+#: editactiondialog.cpp:179
+#, kde-format
+msgid "Action Properties"
+msgstr ""
+
+#: editactiondialog.cpp:191
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"An action takes effect when its <interface>match pattern</interface> matches "
+"the clipboard contents. When this happens, the action's <interface>commands</"
+"interface> appear in the Klipper popup menu; if one of them is chosen, the "
+"command is executed."
+msgstr ""
+
+#: editactiondialog.cpp:203
+#, kde-format
+msgid "Enter a pattern to match against the clipboard"
+msgstr ""
+
+#: editactiondialog.cpp:205
+#, kde-format
+msgid "Match pattern:"
+msgstr ""
+
+#: editactiondialog.cpp:208
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The match pattern is a regular expression. For more information see the "
+"<link url=\"https://en.wikipedia.org/wiki/Regular_expression\">Wikipedia "
+"entry</link> for this topic."
+msgstr ""
+
+#: editactiondialog.cpp:219
+#, kde-format
+msgid "Enter a description for the action"
+msgstr ""
+
+#: editactiondialog.cpp:220 editcommanddialog.cpp:84
+#, kde-format
+msgid "Description:"
+msgstr "বর্ণনা"
+
+#: editactiondialog.cpp:223
+#, kde-format
+msgid "Include in automatic popup"
+msgstr ""
+
+#: editactiondialog.cpp:227
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The commands for this match will be included in the automatic action popup, "
+"if it is enabled in the <interface>Action Menu</interface> page. If this "
+"option is turned off, the commands for this match will not be included in "
+"the automatic popup but they will be included if the popup is activated "
+"manually with the <shortcut>%1</shortcut> key shortcut."
+msgstr ""
+
+#: editactiondialog.cpp:262
+#, fuzzy, kde-format
+#| msgid "Add Command"
+msgid "Add Command..."
+msgstr "কমাণ্ড যোগ করো"
+
+#: editactiondialog.cpp:267
+#, fuzzy, kde-format
+#| msgid "Add Command"
+msgid "Edit Command..."
+msgstr "কমাণ্ড যোগ করো"
+
+#: editactiondialog.cpp:273
+#, fuzzy, kde-format
+#| msgid "Remove Command"
+msgid "Delete Command"
+msgstr "কমাণ্ড বাদ দাও"
+
+#: editactiondialog.cpp:389
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Delete the selected command <resource>%1</resource>?"
+msgstr ""
+
+#: editactiondialog.cpp:390
+#, kde-format
+msgid "Confirm Delete Command"
+msgstr ""
+
+#: editcommanddialog.cpp:47
+#, fuzzy, kde-format
+#| msgid "Action properties:"
+msgid "Command Properties"
+msgstr "প্রক্রিয়ার বৈশিষ্ট্যাবলী:"
+
+#: editcommanddialog.cpp:60
+#, kde-format
+msgid "Enter the command and arguments"
+msgstr ""
+
+#: editcommanddialog.cpp:63
+#, fuzzy, kde-format
+#| msgid "Command"
+msgid "Command:"
+msgstr "কমাণ্ড"
+
+#: editcommanddialog.cpp:72
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"A <placeholder>&#37;s</placeholder> in the command will be replaced by the "
+"complete clipboard contents. <placeholder>&#37;0</placeholder> through "
+"<placeholder>&#37;9</placeholder> will be replaced by the corresponding "
+"captured texts from the match pattern."
+msgstr ""
+
+#: editcommanddialog.cpp:82
+#, kde-format
+msgid "Enter a description for the command"
+msgstr ""
+
+#: editcommanddialog.cpp:92
+#, kde-format
+msgid "Output from command:"
+msgstr ""
+
+#: editcommanddialog.cpp:94
+#, fuzzy, kde-format
+#| msgid "Clipboard"
+msgid "Replace current clipboard"
+msgstr "ক্লিপবোর্ড"
+
+#: editcommanddialog.cpp:98
+#, fuzzy, kde-format
+#| msgid "Add to Clipboard"
+msgid "Append to clipboard"
+msgstr "ক্লিপবোর্ড-এ যোগ করো"
+
+#: editcommanddialog.cpp:102
+#, kde-format
+msgid "What happens to the standard output of the command executed."
+msgstr ""
+
+#: editcommanddialog.cpp:116
+#, kde-format
+msgid "Reset the icon to the default for the command"
+msgstr ""
+
+#: editcommanddialog.cpp:122
+#, kde-format
+msgid "Icon:"
+msgstr ""
+
+#: historyimageitem.cpp:39
+#, kde-format
+msgid "%1x%2 %3bpp"
+msgstr ""
+
+#: klipper.cpp:153
+#, fuzzy, kde-format
+#| msgid "Timeout for action popups:"
+msgctxt "@action:inmenu Toggle automatic action"
+msgid "Automatic Action Popup Menu"
+msgstr "প্রক্রিয়া পপ-আপ-এর জন্য টাইম-আউট:"
+
+#: klipper.cpp:176
+#, fuzzy, kde-format
+#| msgid "C&lear Clipboard History"
+msgctxt "@action:inmenu"
+msgid "C&lear Clipboard History"
+msgstr "ক্লিপবোর্ড ইতিহা&স ফাঁকা করো"
+
+#: klipper.cpp:183
+#, fuzzy, kde-format
+#| msgid "&Configure Klipper..."
+msgctxt "@action:inmenu"
+msgid "&Configure Klipper…"
+msgstr "ক্লিপা&র কনফিগার করো..."
+
+#: klipper.cpp:189
+#, fuzzy, kde-format
+#| msgid "&Quit"
+msgctxt "@action:inmenu Quit Klipper"
+msgid "&Quit"
+msgstr "প্রস্থা&ন করো"
+
+#: klipper.cpp:194
+#, fuzzy, kde-format
+#| msgid "Manually Invoke Action on Current Clipboard"
+msgctxt "@action:inmenu"
+msgid "Manually Invoke Action on Current Clipboard"
+msgstr "বর্তমান ক্লিপবোর্ডে নিজে হাতে প্রক্রিয়া চালাও"
+
+#: klipper.cpp:202
+#, fuzzy, kde-format
+#| msgid "Edit Contents"
+msgctxt "@action:inmenu"
+msgid "&Edit Contents…"
+msgstr "বিষয়বস্তু সম্পাদন করো"
+
+#: klipper.cpp:210
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&Show Barcode…"
+msgstr ""
+
+#: klipper.cpp:218
+#, fuzzy, kde-format
+#| msgid "Next History Item"
+msgctxt "@action:inmenu"
+msgid "Next History Item"
+msgstr "ইতিহাসে পরবর্তী বস্তু"
+
+#: klipper.cpp:222
+#, fuzzy, kde-format
+#| msgid "Previous History Item"
+msgctxt "@action:inmenu"
+msgid "Previous History Item"
+msgstr "ইতিহাসে পূর্ববর্তী বস্তু"
+
+#: klipper.cpp:228
+#, fuzzy, kde-format
+#| msgid "&Popup menu at mouse-cursor position"
+msgctxt "@action:inmenu"
+msgid "Open Klipper at Mouse Position"
+msgstr "মাউস কার্সার অবস্থানে &পপ-আপ মেনু"
+
+#: klipper.cpp:540
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"You can enable URL actions later in the <interface>Actions</interface> page "
+"of the Clipboard applet's configuration window"
+msgstr ""
+
+#: klipper.cpp:579
+#, kde-format
+msgid "Should Klipper start automatically when you login?"
+msgstr "আপনি লগ-ইন করাকালীন ক্লিপার কি আপনা আপনি চালু হবে?"
+
+#: klipper.cpp:580
+#, kde-format
+msgid "Automatically Start Klipper?"
+msgstr "ক্লিপার আপনা আপনি শুরু?"
+
+#: klipper.cpp:581
+#, kde-format
+msgid "Start"
+msgstr "শুরু করো"
+
+#: klipper.cpp:582
+#, kde-format
+msgid "Do Not Start"
+msgstr "শুরু কোর না"
+
+#: klipper.cpp:929
+#, kde-format
+msgid "Edit Contents"
+msgstr "বিষয়বস্তু সম্পাদন করো"
+
+#: klipper.cpp:996
+#, kde-format
+msgid "Mobile Barcode"
+msgstr ""
+
+#: klipper.cpp:1043
+#, fuzzy, kde-format
+#| msgid "Really delete entire clipboard history?"
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "সত্যিই পুরো ক্লিপবোর্ড ইতিহাস মুছে ফেলা হবে?"
+
+#: klipper.cpp:1044
+#, fuzzy, kde-format
+#| msgid "C&lear Clipboard History"
+msgid "Clear Clipboard History"
+msgstr "ক্লিপবোর্ড ইতিহা&স ফাঁকা করো"
+
+#: klipper.cpp:1060 klipper.cpp:1069
+#, kde-format
+msgid "Clipboard history"
+msgstr "ক্লিপবোর্ড ইতিহাস"
+
+#: klipper.cpp:1086
+#, kde-format
+msgid "up"
+msgstr "উপর"
+
+#: klipper.cpp:1093
+#, kde-format
+msgid "current"
+msgstr "বর্তমান"
+
+#: klipper.cpp:1100
+#, kde-format
+msgid "down"
+msgstr "নীচ"
+
+#. i18n: ectx: label, entry (Version), group (General)
+#: klipper.kcfg:10
+#, kde-format
+msgid "Klipper version"
+msgstr "ক্লিপার সংস্করণ"
+
+#. i18n: ectx: label, entry (KeepClipboardContents), group (General)
+#: klipper.kcfg:13
+#, kde-format
+msgid "Save history across desktop sessions"
+msgstr ""
+
+#. i18n: ectx: tooltip, entry (KeepClipboardContents), group (General)
+#: klipper.kcfg:15
+#, kde-format
+msgid ""
+"Retain the clipboard history, so it will be available the next time you log "
+"in."
+msgstr ""
+
+#. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
+#: klipper.kcfg:18
+#, fuzzy, kde-format
+#| msgid "Prevent empty clipboard"
+msgid "Prevent the clipboard from being cleared"
+msgstr "ক্লিপবোর্ড ফাঁকা হতে দিও না"
+
+#. i18n: ectx: whatsthis, entry (PreventEmptyClipboard), group (General)
+#: klipper.kcfg:20
+#, kde-format
+msgid ""
+"Do not allow the clipboard to be cleared, for example when an application "
+"exits."
+msgstr ""
+
+#. i18n: ectx: label, entry (SyncClipboards), group (General)
+#: klipper.kcfg:27
+#, fuzzy, kde-format
+#| msgid "Selection and Clipboard"
+msgid "Keep the selection and clipboard the same"
+msgstr "নির্বাচন এবং ক্লিপবোর্ড"
+
+#. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
+#: klipper.kcfg:29
+#, kde-format
+msgid ""
+"Content selected with the cursor is automatically copied to the clipboard so "
+"that it can be pasted with either a Paste action or a middle-click.<br/><a "
+"href=\"1\">More about the selection and clipboard</a>."
+msgstr ""
+
+#. i18n: ectx: label, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:32
+#, fuzzy, kde-format
+#| msgid "Ignore selection"
+msgid "Ignore the selection"
+msgstr "নির্বাচন অগ্রাহ্য করো"
+
+#. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:34
+#, kde-format
+msgid ""
+"Content selected with the cursor but not explicitly copied to the clipboard "
+"is not automatically stored in the clipboard history, and can only be pasted "
+"using a middle-click."
+msgstr ""
+
+#. i18n: ectx: label, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:37
+#, kde-format
+msgid "Text selection only"
+msgstr "শুধুমাত্র লেখা নির্বাচন"
+
+#. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:39
+#, kde-format
+msgid ""
+"Only store text selections in the clipboard history, not images or any other "
+"type of data."
+msgstr ""
+
+#. i18n: ectx: label, entry (IgnoreImages), group (General)
+#: klipper.kcfg:42
+#, fuzzy, kde-format
+#| msgid "Ignore images"
+msgid "Always ignore images"
+msgstr "ছবি অগ্রাহ্য করো"
+
+#. i18n: ectx: whatsthis, entry (IgnoreImages), group (General)
+#: klipper.kcfg:44
+#, kde-format
+msgid ""
+"Do not store images in the clipboard history, even if explicitly copied."
+msgstr ""
+
+#. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
+#: klipper.kcfg:47
+#, kde-format
+msgid "Use graphical regexp editor"
+msgstr ""
+
+#. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
+#: klipper.kcfg:51
+#, fuzzy, kde-format
+#| msgid "Ignore selection"
+msgid "Immediately on selection"
+msgstr "নির্বাচন অগ্রাহ্য করো"
+
+#. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
+#: klipper.kcfg:52
+#, kde-format
+msgid ""
+"Show the popup menu of applicable actions as soon as a selection is made."
+msgstr ""
+
+#. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
+#: klipper.kcfg:57
+#, kde-format
+msgid "No actions for WM_CLASS"
+msgstr ""
+
+#. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:60
+#, fuzzy, kde-format
+#| msgid "Timeout for action popups:"
+msgid "Automatic action menu time:"
+msgstr "প্রক্রিয়া পপ-আপ-এর জন্য টাইম-আউট:"
+
+#. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:64
+#, fuzzy, kde-format
+#| msgid "Timeout for action popups:"
+msgid "Display the automatic action popup menu for this time."
+msgstr "প্রক্রিয়া পপ-আপ-এর জন্য টাইম-আউট:"
+
+#. i18n: ectx: label, entry (MaxClipItems), group (General)
+#: klipper.kcfg:67
+#, fuzzy, kde-format
+#| msgid "Clipboard history size:"
+msgid "History size:"
+msgstr "ক্লিপবোর্ড ইতিহাসের আয়তন:"
+
+#. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
+#: klipper.kcfg:71
+#, kde-format
+msgid "The clipboard history will store up to this many items."
+msgstr ""
+
+#. i18n: ectx: label, entry (ActionList), group (General)
+#: klipper.kcfg:74
+#, kde-format
+msgid "Dummy entry for indicating changes in an action's tree widget"
+msgstr ""
+
+#. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:87
+#, fuzzy, kde-format
+#| msgid "Strip whitespace when executing an action"
+msgid "Trim whitespace from selection"
+msgstr "কোন প্রক্রিয়া চালানোর আগে ওয়াইট-স্পেস সরিয়ে ফেলো"
+
+#. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:89
+#, kde-format
+msgid ""
+"Remove any whitespace from the start and end of selected text, before "
+"performing an action. For example, this ensures that a URL pasted in a "
+"browser is interpreted as expected. The text saved on the clipboard is not "
+"affected."
+msgstr ""
+
+#. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
+#: klipper.kcfg:92
+#, fuzzy, kde-format
+#| msgid "&Replay actions on an item selected from history"
+msgid "For an item chosen from history"
+msgstr "ইতিবৃত্ত থেকে নির্বাচিত একটি বস্তুর উপর প্রক্রিয়া &আবার চালাও"
+
+#. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
+#: klipper.kcfg:94
+#, fuzzy, kde-format
+#| msgid "Really delete entire clipboard history?"
+msgid ""
+"Show the popup menu of applicable actions if an entry is chosen from the "
+"clipboard history."
+msgstr "সত্যিই পুরো ক্লিপবোর্ড ইতিহাস মুছে ফেলা হবে?"
+
+#. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
+#: klipper.kcfg:97
+#, fuzzy, kde-format
+#| msgid "Enable MIME-based actions"
+msgid "Include MIME actions"
+msgstr "মাইম-ভিত্তিক প্রক্রিয়া সক্রিয় করো "
+
+#. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
+#: klipper.kcfg:99
+#, kde-format
+msgid ""
+"If a file name or URL is selected, include applications that can accept its "
+"MIME type in the popup menu."
+msgstr ""
+
+#: klipperpopup.cpp:110
+#, kde-format
+msgid "Klipper - Clipboard Tool"
+msgstr "ক্লিপার - ক্লিপবোর্ড টুল"
+
+#: klipperpopup.cpp:114
+#, kde-format
+msgid "Search…"
+msgstr ""
+
+#: klipperpopup.cpp:123 main.cpp:29
+#, kde-format
+msgid "KDE cut & paste history utility"
+msgstr "কে.ডি.ই. কাট অ্যান্ড পেস্ট ইতিহাস ইউটিলিটি"
+
+#: klipperpopup.cpp:187
+#, fuzzy, kde-format
+#| msgid "Regular expression:"
+msgid "Invalid regular expression, %1"
+msgstr "রেগুলার এক্সপ্রেশন:"
+
+#: klipperpopup.cpp:193 tray.cpp:25 tray.cpp:53
+#, kde-format
+msgid "Clipboard is empty"
+msgstr "ক্লিপবোর্ড ফাঁকা"
+
+#: klipperpopup.cpp:195
+#, fuzzy, kde-format
+#| msgid "<no matches>"
+msgid "No matches"
+msgstr "<কোন মিল পাওয়া যায়নি>"
+
+#: main.cpp:27 tray.cpp:22
+#, kde-format
+msgid "Klipper"
+msgstr "ক্লিপার"
+
+#: main.cpp:31
+#, fuzzy, kde-format
+#| msgid ""
+#| "(c) 1998, Andrew Stanley-Jones\n"
+#| "1998-2002, Carsten Pfeiffer\n"
+#| "2001, Patrick Dubroy"
+msgid ""
+"(c) 1998, Andrew Stanley-Jones\n"
+"1998-2002, Carsten Pfeiffer\n"
+"2001, Patrick Dubroy"
+msgstr ""
+"(c) 1998, Andrew Stanley-Jones\n"
+"1998-2002, Carsten Pfeiffer\n"
+"2001, Patrick Dubroy"
+
+#: main.cpp:34
+#, kde-format
+msgid "Carsten Pfeiffer"
+msgstr "Carsten Pfeiffer"
+
+#: main.cpp:34
+#, kde-format
+msgid "Author"
+msgstr "লেখক"
+
+#: main.cpp:36
+#, kde-format
+msgid "Andrew Stanley-Jones"
+msgstr "Andrew Stanley-Jones"
+
+#: main.cpp:36
+#, kde-format
+msgid "Original Author"
+msgstr "প্রারম্ভিক লেখক"
+
+#: main.cpp:38
+#, kde-format
+msgid "Patrick Dubroy"
+msgstr "Patrick Dubroy"
+
+#: main.cpp:38
+#, kde-format
+msgid "Contributor"
+msgstr "যোগদান"
+
+#: main.cpp:40
+#, kde-format
+msgid "Luboš Luňák"
+msgstr "Luboš Luňák"
+
+#: main.cpp:40
+#, kde-format
+msgid "Bugfixes and optimizations"
+msgstr "বাগফিক্স এবং অপটিমাইজেশন"
+
+#: main.cpp:42
+#, kde-format
+msgid "Esben Mose Hansen"
+msgstr "Esben Mose Hansen"
+
+#: main.cpp:42
+#, fuzzy, kde-format
+#| msgid "Maintainer"
+msgid "Previous Maintainer"
+msgstr "রক্ষণাবেক্ষণকারী"
+
+#: main.cpp:44
+#, kde-format
+msgid "Martin Gräßlin"
+msgstr ""
+
+#: main.cpp:44
+#, kde-format
+msgid "Maintainer"
+msgstr "রক্ষণাবেক্ষণকারী"
+
+#: main.cpp:46
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "দীপায়ন সরকার"
+
+#: main.cpp:46
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "deepayan@bengalinux.org"
+
+#: popupproxy.cpp:145
+#, kde-format
+msgid "&More"
+msgstr "&আরো"
+
+#: tray.cpp:25
+#, kde-format
+msgid "Clipboard Contents"
+msgstr "ক্লিপবোর্ড-এর বিষয়বস্তু"
+
+#: urlgrabber.cpp:198
+#, kde-format
+msgid "Disable This Popup"
+msgstr "এই পপ-আপটি নিষ্ক্রিয় করো"
+
+#: urlgrabber.cpp:204
+#, kde-format
+msgid "&Cancel"
+msgstr "বাতি&ল করো"
+
+#~ msgid "Delete clipboard history?"
+#~ msgstr "ক্লিপবোর্ড ইতিহাস মুছে ফেলব?"
+
+#~ msgid "Action list:"
+#~ msgstr "প্রক্রিয়া তালিকা:"
+
+#~ msgid "Regular Expression"
+#~ msgstr "রেগুলার এক্সপ্রেশন"
+
+#~ msgid "new command"
+#~ msgstr "নতুন কমাণ্ড"
+
+#~ msgid "Command Description"
+#~ msgstr "কমাণ্ড-এর বর্ণনা"
+
+#~ msgid "Automatic:"
+#~ msgstr "স্বয়ংক্রিয়:"
+
+#~ msgid "List of commands for this action:"
+#~ msgstr "এই প্রক্রিয়ার জন্য কমাণ্ডের তালিকা:"
+
+#~ msgid "Remove whitespace when executing actions"
+#~ msgstr "কোন প্রক্রিয়া চালানোর আগে ওয়াইট-স্পেস সরিয়ে ফেলো"
+
+#, fuzzy
+#~| msgid "Advanced"
+#~ msgid "Advanced..."
+#~ msgstr "অগ্রসর"
+
+#~ msgid "Advanced Settings"
+#~ msgstr "অগ্রসর সেটিংস"
+
+#~ msgid "D&isable Actions for Windows of Type WM_CLASS"
+#~ msgstr "WM_CLASS টাইপ-এর উইণ্ডোর জন্য প্রক্রিয়াসমূহ নিষ্ক্রিয় করো"
+
+#, fuzzy
+#~| msgid "Enable/Disable Clipboard Actions"
+#~ msgid "Enable Clipboard Actions"
+#~ msgstr "ক্লিপবোর্ড প্রক্রিয়া সক্রিয়/নিষ্ক্রিয় করো "
+
+#, fuzzy
+#~| msgid "&Replay actions on an item selected from history"
+#~ msgid "Replay action in history"
+#~ msgstr "ইতিবৃত্ত থেকে নির্বাচিত একটি বস্তুর উপর প্রক্রিয়া &আবার চালাও"
+
+#~ msgid "Save clipboard contents on exit"
+#~ msgstr "প্রস্থানকালে ক্লিপবোর্ড-এর বিষয়বস্তু সংরক্ষণ করো"
+
+#, fuzzy
+#~| msgid "Sy&nchronize contents of the clipboard and the selection"
+#~ msgid "Synchronize contents of the clipboard and the selection"
+#~ msgstr "ক্লিপবোর্ড-এর বিষয়বস্তু এবং নির্বাচন সা&মঞ্জস্যে আনো"
+
+#~ msgid "Keep clipboard contents"
+#~ msgstr "ক্লিপবোর্ড-এর বিষয়বস্তু রেখে দাও"
+
+#~ msgid "Ignore Selection"
+#~ msgstr "নির্বাচন অগ্রাহ্য করো"
+
+#~ msgid "Synchronize clipboard and selection"
+#~ msgstr "ক্লিপবোর্ড এবং নির্বাচন এক করো"
+
+#~ msgid "Selection text only"
+#~ msgstr "শুধু লেখা"
+
+#, fuzzy
+#~| msgid "Tim&eout for action popups:"
+#~ msgid "Timeout for action popups (seconds)"
+#~ msgstr "প্রক্রিয়া পপ-আপ-এর জন্য টাই&ম-আউট:"
+
+#~ msgid "A value of 0 disables the timeout"
+#~ msgstr " মান -র টি টাইম-আউট"
+
+#~ msgid "Clipboard history size"
+#~ msgstr "ক্লিপবোর্ড ইতিহাসের আয়তন"
+
+#~ msgid "%1 - Actions For: %2"
+#~ msgstr "%1 - %2-এর জন্য প্রক্রিয়া"
+
+#~ msgid "&Edit Contents..."
+#~ msgstr "বিষয়বস্তু &সম্পাদন করো..."
+
+#~ msgid "<empty clipboard>"
+#~ msgstr "<ফাঁকা ক্লিপবোর্ড>"
+
+#, fuzzy
+#~| msgid "Enable/Disable Clipboard Actions"
+#~ msgid "Enable Clipboard &Actions"
+#~ msgstr "ক্লিপবোর্ড প্রক্রিয়া সক্রিয়/নিষ্ক্রিয় করো "
+
+#~ msgid "Show Klipper Popup-Menu"
+#~ msgstr "ক্লিপার পপ-আপ মেনু দেখাও"
+
+#, fuzzy
+#~| msgid "&Popup menu at mouse-cursor position"
+#~ msgid "Popup menu at mouse-cursor position"
+#~ msgstr "মাউস কার্সার অবস্থানে &পপ-আপ মেনু"
+
+#~ msgid "Clipboard/Selection Behavior"
+#~ msgstr "ক্লিপবোর্ড/নির্বাচন আচরণ"
+
+#~ msgid "Separate clipboard and selection"
+#~ msgstr "ক্লিপবোর্ড এবং নির্বাচন আলাদা করো"
+
+#~ msgid "Klipper - clipboard tool"
+#~ msgstr "ক্লিপার - ক্লিপবোর্ড টুল"
+
+#, fuzzy
+#~| msgid "Action &list (right click to add/remove commands):"
+#~ msgid "Action list (right click to add/remove commands):"
+#~ msgstr "প্রক্রিয়া&র তালিকা (কমান্ড যোগ করতে/বাদ দিতে ডানদিকের বাটন ক্লিক করুন):"
+
+#, fuzzy
+#~ msgid "Double-click here to set the regular expression"
+#~ msgstr "রেগুলার এক্সপ্রেশন সম্পাদন করতে গ্রাফিকাল সম্পাদক ব্য&বহার করো"
+
+#~ msgid "<new action>"
+#~ msgstr "<নতুন প্রক্রিয়া>"
+
+#, fuzzy
+#~ msgid "Selecting this option synchronizes these two buffers."
+#~ msgstr ""
+#~ "এই অপশনটি বেছে নিলে এই দুটি বাফারকে সামঞ্জস্যে আনা হবে, যার ফলে আপনি কে.ডি."
+#~ "ই. ১.x এবং ২.x-এর সমতুল্য আচরণ পাবেন।"
+
+#~ msgid ""
+#~ "Using this option will only set the selection when highlighting something "
+#~ "and the clipboard when choosing e.g. \"Copy\" in a menubar."
+#~ msgstr ""
+#~ "এই অপশনটি ব্যবহার করলে, কোন লেখা হাইলাইট করলে তা শুধু নির্বাচন হিসাবে নির্দিষ্ট "
+#~ "হবে, এবং মেনুবার থেকে \"কপি করো\" ইত্যাদি ব্যবহার করলে তা ক্লিপবোর্ড-এ যোগ করা "
+#~ "হবে।"
+
+#~ msgid "&Use graphical editor for editing regular expressions"
+#~ msgstr "রেগুলার এক্সপ্রেশন সম্পাদন করতে গ্রাফিকাল সম্পাদক ব্য&বহার করো"
+
+#~ msgid "Enable &Actions"
+#~ msgstr "প্রক্রিয়া (Actions) সক্রি&য় করো"
+
+#~ msgid "&Actions Enabled"
+#~ msgstr "প্রক্রিয়া (Actions) সক্রি&য়"
+
+#~ msgid ""
+#~ "Regular Expression (see http://doc.trolltech.com/qregexp.html#details)"
+#~ msgstr ""
+#~ "রেগুলার এক্সপ্রেশন (http://doc.trolltech.com/qregexp.html#details দেখুন)"
+
+#, fuzzy
+#~ msgid "Configure"
+#~ msgstr "ক্লিপা&র কনফিগার করো..."

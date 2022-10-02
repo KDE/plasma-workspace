@@ -1,0 +1,102 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Sönke Dibbern <s_dibbern@web.de>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-22 00:46+0000\n"
+"PO-Revision-Date: 2014-09-18 16:16+0200\n"
+"Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
+"Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
+"Language: nds\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.4\n"
+
+#: shellpackage.cpp:26 shellpackage.cpp:27
+#, kde-format
+msgid "Applets furniture"
+msgstr "Lüttprogramm-Möbelmang"
+
+#: shellpackage.cpp:28
+#, kde-format
+msgid "Explorer UI for adding widgets"
+msgstr "Kieker-Böversiet för't Tofögen vun Lüttprogrammen"
+
+#: shellpackage.cpp:29
+#, kde-format
+msgid "User interface for the views that will show containments"
+msgstr "Böversiet för de Ansichten, de Gelatsen wiest"
+
+#: shellpackage.cpp:37
+#, kde-format
+msgid "Default layout file"
+msgstr "Standard-Böversietdatei"
+
+#: shellpackage.cpp:38
+#, kde-format
+msgid "Default plugins for containments, containmentActions, etc."
+msgstr "Standardmoduul för Gelatsen, Gelaatsakschonen usw."
+
+#: shellpackage.cpp:43
+#, kde-format
+msgid "Error message shown when an applet fails to load"
+msgstr "Fehlermellen de wiest warrt, wenn sik en Lüttprogramm nich laden lett"
+
+#: shellpackage.cpp:44
+#, kde-format
+msgid "QML component that shows an applet in a popup"
+msgstr "QML-Komponent, de en Lüttprogramm binnen en Opduker wiest"
+
+#: shellpackage.cpp:48
+#, kde-format
+msgid ""
+"Compact representation of an applet when collapsed in a popup, for instance "
+"as an icon. Applets can override this component."
+msgstr ""
+"Drang Dorstellen för en Lüttprogramm, dat binnen en Opduker tosamenfooldt "
+"is, a.B. as en Lüttbild. Lüttprogrammen köönt disse Komponent övergahn."
+
+#: shellpackage.cpp:53
+#, kde-format
+msgid "QML component for the configuration dialog for applets"
+msgstr "QML-Komponent för den Instellendialoog vun Lüttprogrammen"
+
+#: shellpackage.cpp:56
+#, kde-format
+msgid "QML component for the configuration dialog for containments"
+msgstr "QML-Komponent för den Instellendialoog vun Gelatsen"
+
+#: shellpackage.cpp:57
+#, kde-format
+msgid "Panel configuration UI"
+msgstr "Paneelinstellen-Böversiet"
+
+#: shellpackage.cpp:60
+#, kde-format
+msgid "QML component for choosing an alternate applet"
+msgstr "QML-Komponent, mit de sik en anner Lüttprogramm utsöken lett"
+
+#: shellpackage.cpp:63
+#, fuzzy, kde-format
+#| msgid "QML component for the configuration dialog for containments"
+msgid "QML component for the configuration dialog of containments"
+msgstr "QML-Komponent för den Instellendialoog vun Gelatsen"
+
+#: shellpackage.cpp:66
+#, kde-format
+msgid "Widgets explorer UI"
+msgstr "Lüttprogrammkieker-Böversiet"
+
+#: shellpackage.cpp:70
+#, kde-format
+msgid ""
+"A UI for writing, loading and running desktop scripts in the current live "
+"session"
+msgstr ""
+"En Böversiet för't Schrieven, Laden un Utföhren vun Schriefdischskripten "
+"binnen den aktuellen Törn"

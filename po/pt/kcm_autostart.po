@@ -1,0 +1,128 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_autostart\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:50+0000\n"
+"PO-Revision-Date: 2022-07-04 13:17+0100\n"
+"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
+"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-POFile-SpellExtra: Leaf space wrap Stephen white pre Desktop Laurent sh\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-POFile-SpellExtra: Montel Fella\n"
+"X-POFile-IgnoreConsistency: Status\n"
+"X-POFile-IgnoreConsistency: Name\n"
+
+#: autostartmodel.cpp:288
+#, kde-format
+msgid "\"%1\" is not an absolute url."
+msgstr "O \"%1\" não é um URL absoluto."
+
+#: autostartmodel.cpp:291
+#, kde-format
+msgid "\"%1\" does not exist."
+msgstr "O \"%1\" não existe."
+
+#: autostartmodel.cpp:294
+#, kde-format
+msgid "\"%1\" is not a file."
+msgstr "O \"%1\" não é um ficheiro."
+
+#: autostartmodel.cpp:297
+#, kde-format
+msgid "\"%1\" is not readable."
+msgstr "O \"%1\" não é legível."
+
+#: package/contents/ui/main.qml:40
+#, kde-format
+msgid "Make Executable"
+msgstr "Tornar Executável"
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "The file '%1' must be executable to run at logout."
+msgstr ""
+"O ficheiro '%1' deverá ser executável para poder ser corrido no fim da "
+"sessão."
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid "The file '%1' must be executable to run at login."
+msgstr ""
+"O ficheiro '%1' deverá ser executável para poder ser corrido no início da "
+"sessão."
+
+#: package/contents/ui/main.qml:89
+#, kde-format
+msgid "Properties"
+msgstr "Propriedades"
+
+#: package/contents/ui/main.qml:95
+#, kde-format
+msgid "Remove"
+msgstr "Remover"
+
+#: package/contents/ui/main.qml:106
+#, kde-format
+msgid "Applications"
+msgstr "Aplicações"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Login Scripts"
+msgstr "Programas de Arranque"
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Pre-startup Scripts"
+msgstr "Programas de Pré-Arranque"
+
+#: package/contents/ui/main.qml:115
+#, kde-format
+msgid "Logout Scripts"
+msgstr "Programas de Encerramento"
+
+#: package/contents/ui/main.qml:124
+#, kde-format
+msgid "No user-specified autostart items"
+msgstr "Nenhuns itens do arranque definidos pelo utilizador"
+
+#: package/contents/ui/main.qml:125
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Click the <interface>Add…</interface> button below to add some"
+msgstr ""
+"Carregue no botão <interface>Adicionar…</interface> para adicionar alguns"
+
+#: package/contents/ui/main.qml:139
+#, kde-format
+msgid "Choose Login Script"
+msgstr "Escolher o Programa de Autenticação"
+
+#: package/contents/ui/main.qml:160
+#, kde-format
+msgid "Choose Logout Script"
+msgstr "Escolher o Programa de Encerramento"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "Add…"
+msgstr "Adicionar…"
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Add Application…"
+msgstr "Adicionar uma Aplicação…"
+
+#: package/contents/ui/main.qml:199
+#, kde-format
+msgid "Add Login Script…"
+msgstr "Adicionar um Programa de Arranque…"
+
+#: package/contents/ui/main.qml:205
+#, kde-format
+msgid "Add Logout Script…"
+msgstr "Adicionar um Programa de Encerramento…"

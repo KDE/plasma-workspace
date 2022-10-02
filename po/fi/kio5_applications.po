@@ -1,0 +1,38 @@
+# translation of kio_settings.po to
+# translation of kio_settings.po to Finnish
+# Copyright (C) 2003, 2005 Free Software Foundation, Inc.
+# Teemu Rytilahti <teemu.rytilahti@kde-fi.org>, 2003.
+# Ilpo Kantonen <ilpo@iki.fi>, 2005.
+# Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2008.
+#
+# KDE Finnish translation sprint participants:
+msgid ""
+msgstr ""
+"Project-Id-Version: kio_applications\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-08 00:48+0000\n"
+"PO-Revision-Date: 2013-01-20 20:02:32+0000\n"
+"Last-Translator: Teemu Rytilahti <teemu.rytilahti@d5k.net>\n"
+"Language-Team: Finnish <lokalisointi@lists.coss.fi>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-POT-Import-Date: 2012-12-01 22:22:13+0000\n"
+"X-Generator: MediaWiki 1.21alpha (963ddae); Translate 2012-11-08\n"
+
+#: kio_applications.cpp:122
+#, kde-format
+msgid "Applications"
+msgstr "Sovellukset"
+
+#: kio_applications.cpp:122
+#, kde-format
+msgid "Programs"
+msgstr "Ohjelmat"
+
+#: kio_applications.cpp:131
+#, kde-format
+msgid "Unknown application folder"
+msgstr "Tuntematon ohjelmakansio"

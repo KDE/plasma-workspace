@@ -1,0 +1,33 @@
+# translation of krunner_recentdocuments.po to Macedonian
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Bozidar Proevski <bobibobi@freemail.com.mk>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner_recentdocuments\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-05 00:46+0000\n"
+"PO-Revision-Date: 2008-12-24 17:13+0100\n"
+"Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
+"Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
+"Language: mk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: Plural-Forms: nplurals=3; plural=n%10==1 ? 0 : n%10==2 ? 1 : "
+"2;\n"
+
+#: recentdocuments.cpp:36
+#, kde-format
+msgid "Looks for documents recently used with names matching :q:."
+msgstr ""
+
+#: recentdocuments.cpp:38
+#, kde-format
+msgid "Open Containing Folder"
+msgstr ""
+
+#~ msgid "Recent Document"
+#~ msgstr "Скорешен документ"

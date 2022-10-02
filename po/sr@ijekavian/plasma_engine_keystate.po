@@ -1,0 +1,111 @@
+# Translation of plasma_engine_keystate into Serbian.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2009.
+# Dalibor Djuric <dalibor.djuric@mozilla-srbija.org>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_engine_keystate\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-05-20 03:26+0200\n"
+"PO-Revision-Date: 2009-12-29 22:11+0100\n"
+"Last-Translator: Dalibor Djuric <dalibor.djuric@mozilla-srbija.org>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@ijekavian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#: keystate.cpp:29
+#, kde-format
+msgid "Shift"
+msgstr "Shift"
+
+#: keystate.cpp:30
+#, kde-format
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: keystate.cpp:31
+#, kde-format
+msgid "Alt"
+msgstr "Alt"
+
+#: keystate.cpp:32
+#, kde-format
+msgid "Meta"
+msgstr "Meta"
+
+#: keystate.cpp:33
+#, kde-format
+msgid "Super"
+msgstr "Super"
+
+#: keystate.cpp:34
+#, kde-format
+msgid "Hyper"
+msgstr "Hyper"
+
+#: keystate.cpp:35
+#, kde-format
+msgid "AltGr"
+msgstr "AltGr"
+
+#: keystate.cpp:36
+#, kde-format
+msgid "Num Lock"
+msgstr "NumLock"
+
+#: keystate.cpp:37
+#, kde-format
+msgid "Caps Lock"
+msgstr "CapsLock"
+
+#: keystate.cpp:38
+#, kde-format
+msgid "Scroll Lock"
+msgstr "ScrollLock"
+
+#: keystate.cpp:40
+#, kde-format
+msgid "Left Button"
+msgstr "лијево дугме"
+
+#: keystate.cpp:41
+#, kde-format
+msgid "Right Button"
+msgstr "десно дугме"
+
+#: keystate.cpp:42
+#, kde-format
+msgid "Middle Button"
+msgstr "средње дугме"
+
+#: keystate.cpp:43
+#, kde-format
+msgid "First X Button"
+msgstr "прво X дугме"
+
+#: keystate.cpp:44
+#, kde-format
+msgid "Second X Button"
+msgstr "друго X дугме"
+
+#: keystate.cpp:59 keystate.cpp:70 keystate.cpp:98 keystate.cpp:119
+#: keystate.cpp:127
+#, kde-format
+msgid "Pressed"
+msgstr "притиснут"
+
+#: keystate.cpp:60 keystate.cpp:105 keystate.cpp:128
+#, kde-format
+msgid "Latched"
+msgstr "запет"
+
+#: keystate.cpp:61 keystate.cpp:112 keystate.cpp:129
+#, kde-format
+msgid "Locked"
+msgstr "закључан"

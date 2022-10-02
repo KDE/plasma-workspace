@@ -1,0 +1,93 @@
+# Translation for plasma_engine_mpris2.po to Euskara/Basque (eu).
+# Copyright (C) 2018, Free Software Foundation.
+# Copyright (C) 2019-2020, This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# KDE euskaratzeko proiektuko arduraduna <xalba@euskalnet.net>.
+#
+# Translators:
+# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2018, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2020-09-27 23:50+0200\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 20.08.1\n"
+
+#: multiplexedservice.cpp:68
+#, kde-format
+msgctxt "Name for global shortcuts category"
+msgid "Media Controller"
+msgstr "Euskarri kontrolatzailea"
+
+#: multiplexedservice.cpp:70
+#, kde-format
+msgid "Play/Pause media playback"
+msgstr "Jo/eten euskarria atzera-jotzea"
+
+#: multiplexedservice.cpp:88
+#, kde-format
+msgid "Media playback next"
+msgstr "Euskarria atzera-jotzea hurrengoa"
+
+#: multiplexedservice.cpp:97
+#, kde-format
+msgid "Media playback previous"
+msgstr "Euskarria atzera-jotzea aurrekoa"
+
+#: multiplexedservice.cpp:106
+#, kde-format
+msgid "Stop media playback"
+msgstr "Gelditu euskarria atzera-jotzea"
+
+#: multiplexedservice.cpp:115
+#, kde-format
+msgid "Pause media playback"
+msgstr "Eten euskarria atzera-jotzea"
+
+#: multiplexedservice.cpp:124
+#, kde-format
+msgid "Play media playback"
+msgstr "Ekin euskarria atzera-jotzea"
+
+#: multiplexedservice.cpp:133
+#, kde-format
+msgid "Media volume up"
+msgstr "Euskarria bolumena igo"
+
+#: multiplexedservice.cpp:142
+#, kde-format
+msgid "Media volume down"
+msgstr "Euskarria bolumena jaitsi"
+
+#: playeractionjob.cpp:169
+#, kde-format
+msgid "The media player '%1' cannot perform the action '%2'."
+msgstr "'%1' euskarri jotzaileak ezin du '%2' ekintza gauzatu."
+
+#: playeractionjob.cpp:171
+#, kde-format
+msgid "Attempting to perform the action '%1' failed with the message '%2'."
+msgstr "'%1' ekintza gauzatzeko saiakerak huts egin du '%2' mezuarekin."
+
+#: playeractionjob.cpp:173
+#, kde-format
+msgid "The argument '%1' for the action '%2' is missing or of the wrong type."
+msgstr "'%2' ekintzarako '%1' argumentua falta da edo mota okerrekoa da."
+
+#: playeractionjob.cpp:175
+#, kde-format
+msgid "The operation '%1' is unknown."
+msgstr "'%1' eragiketa ezezaguna da."
+
+#: playeractionjob.cpp:177
+#, kde-format
+msgid "Unknown error."
+msgstr "Errore ezezaguna."

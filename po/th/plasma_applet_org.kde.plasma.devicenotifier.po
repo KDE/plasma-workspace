@@ -1,0 +1,284 @@
+# translation of plasma_applet_devicenotifier.po to Thai
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sahachart Anukulkitch <drrider@gmail.com>, 2007.
+# Thanomsub Noppaburana <donga.nb@gmail.com>, 2008, 2010.
+# Phuwanat Sakornsakolpat <narachai@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_devicenotifier\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-21 00:47+0000\n"
+"PO-Revision-Date: 2010-12-17 16:09+0700\n"
+"Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
+"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 1.1\n"
+
+#: package/contents/ui/DeviceItem.qml:180
+#, fuzzy, kde-format
+#| msgctxt "@info:status Free disk space"
+#| msgid "%1 free"
+msgctxt "@info:status Free disk space"
+msgid "%1 free of %2"
+msgstr "เนื้อที่ว่าง %1"
+
+#: package/contents/ui/DeviceItem.qml:184
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Accessing is a less technical word for Mounting; translation should be "
+#| "short and mean 'Currently mounting this device'"
+#| msgid "Accessing..."
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Accessing…"
+msgstr "กำลังเข้าใช้งาน..."
+
+#: package/contents/ui/DeviceItem.qml:187
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Removing is a less technical word for Unmounting; translation shoud be "
+#| "short and mean 'Currently unmounting this device'"
+#| msgid "Removing..."
+msgctxt ""
+"Removing is a less technical word for Unmounting; translation should be "
+"short and mean 'Currently unmounting this device'"
+msgid "Removing…"
+msgstr "กำลังถอดออก..."
+
+#: package/contents/ui/DeviceItem.qml:190
+#, kde-format
+msgid "Don't unplug yet! Files are still being transferred..."
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:221
+#, kde-format
+msgid "Open in File Manager"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:224
+#, kde-format
+msgid "Mount and Open"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:226
+#, kde-format
+msgid "Eject"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:228
+#, kde-format
+msgid "Safely remove"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:270
+#, fuzzy, kde-format
+#| msgid "Mounting..."
+msgid "Mount"
+msgstr "ทำการเมานท์..."
+
+#: package/contents/ui/FullRepresentation.qml:41
+#: package/contents/ui/main.qml:238
+#, kde-format
+msgid "Remove All"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:42
+#, fuzzy, kde-format
+#| msgid "Click to safely remove this device."
+msgid "Click to safely remove all devices"
+msgstr "คลิกเพื่อถอดอุปกรณ์นี้ออกอย่างปลอดภัย"
+
+#: package/contents/ui/FullRepresentation.qml:186
+#, fuzzy, kde-format
+#| msgid "Non-removable devices only"
+msgid "No removable devices attached"
+msgstr "อุปกรณ์ที่ไม่สามารถถอด/เสียบได้เท่านั้น"
+
+#: package/contents/ui/FullRepresentation.qml:186
+#, fuzzy, kde-format
+#| msgid "No devices available."
+msgid "No disks available"
+msgstr "ยังไม่มีอุปกรณ์ใด ๆ ให้เลือกใช้"
+
+#: package/contents/ui/main.qml:47
+#, fuzzy, kde-format
+#| msgid "Most recent device"
+msgid "Most Recent Device"
+msgstr "อุปกรณ์ที่เสียบเข้ามาล่าสุด"
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid "No Devices Available"
+msgstr "ยังไม่มีอุปกรณ์ใด ๆ ให้เลือกใช้"
+
+#: package/contents/ui/main.qml:245
+#, fuzzy, kde-format
+#| msgid "Removable devices only"
+msgid "Removable Devices"
+msgstr "อุปกรณ์ที่สามารถถอด/เสียบได้เท่านั้น"
+
+#: package/contents/ui/main.qml:251
+#, fuzzy, kde-format
+#| msgid "Non-removable devices only"
+msgid "Non Removable Devices"
+msgstr "อุปกรณ์ที่ไม่สามารถถอด/เสียบได้เท่านั้น"
+
+#: package/contents/ui/main.qml:257
+#, fuzzy, kde-format
+#| msgid "All devices"
+msgid "All Devices"
+msgstr "อุปกรณ์ทั้งหมด"
+
+#: package/contents/ui/main.qml:265
+#, fuzzy, kde-format
+#| msgid "No devices plugged in"
+msgid "Show popup when new device is plugged in"
+msgstr "ยังไม่มีการเสียบอุปกรณ์ใด ๆ"
+
+#: package/contents/ui/main.qml:274
+#, fuzzy, kde-format
+#| msgid "Non-removable devices only"
+msgctxt "Open auto mounter kcm"
+msgid "Configure Removable Devices…"
+msgstr "อุปกรณ์ที่ไม่สามารถถอด/เสียบได้เท่านั้น"
+
+#, fuzzy
+#~| msgctxt "General options page"
+#~| msgid "General"
+#~ msgid "General"
+#~ msgstr "ทั่วไป"
+
+#~ msgid ""
+#~ "It is currently <b>not safe</b> to remove this device: applications may "
+#~ "be accessing it. Click the eject button to safely remove this device."
+#~ msgstr ""
+#~ "การถอดอุปกรณ์นี้ออก<b>ไม่ปลอดภัย</b> เนื่องจากอาจมีบางโปรแกรมใช้งานมันอยู่ "
+#~ "กรุณาคลิกที่ปุ่มเอาออก เพื่อถอดอุปกรณ์นี้ออกอย่างปลอดภัย"
+
+#~ msgid "This device is currently accessible."
+#~ msgstr "อุปกรณ์นี้สามารถเข้าใช้งานได้แล้วในตอนนี้"
+
+#~ msgid ""
+#~ "It is currently <b>not safe</b> to remove this device: applications may "
+#~ "be accessing other volumes on this device. Click the eject button on "
+#~ "these other volumes to safely remove this device."
+#~ msgstr ""
+#~ "การถอดอุปกรณ์นี้ออก<b>ไม่ปลอดภัย</b> "
+#~ "เนื่องจากอาจมีบางโปรแกรมกำลังใช้งานบางโวลุมของอุปกรณ์นี้อยู่ กรุณาคลิกปุ่มเอาออก บนโวลุมอื่น "
+#~ "เพื่อถอดอุปกรณ์นี้ออกอย่างปลอดภัย"
+
+#~ msgid "It is currently safe to remove this device."
+#~ msgstr "คุณสามารถเอาอุปกรณ์นี้ออกได้อย่างปลอดภัยแล้ว"
+
+#, fuzzy
+#~| msgid "This device is currently accessible."
+#~ msgid "This device is not currently accessible."
+#~ msgstr "อุปกรณ์นี้สามารถเข้าใช้งานได้แล้วในตอนนี้"
+
+#, fuzzy
+#~| msgid "1 action for this device"
+#~| msgid_plural "%1 actions for this device"
+#~ msgid "1 action for this device"
+#~ msgid_plural "%1 actions for this device"
+#~ msgstr[0] "มี %1 การกระทำ สำหรับอุปกรณ์นี้"
+
+#~ msgid "Click to access this device from other applications."
+#~ msgstr "คลิกเพื่อเข้าถึงอุปกรณ์นี้จากโปรแกรมต่าง ๆ"
+
+#~ msgid "Click to eject this disc."
+#~ msgstr "คลิกเพื่อดันดิสก์นี้ออก"
+
+#~ msgid "Click to safely remove this device."
+#~ msgstr "คลิกเพื่อถอดอุปกรณ์นี้ออกอย่างปลอดภัย"
+
+#, fuzzy
+#~| msgid "Click to unmount this device."
+#~ msgid "Click to mount this device."
+#~ msgstr "คลิกเพื่อยกเลิกการเมานท์อุปกรณ์นี้"
+
+#~ msgid "Available Devices"
+#~ msgstr "อุปกรณ์ต่าง ๆ ที่ใช้ได้ในตอนนี้"
+
+#~ msgid "This device is currently not accessible."
+#~ msgstr "อุปกรณ์นี้ไม่สามารถเข้าใช้งานได้แล้วในตอนนี้"
+
+#~ msgid "Display"
+#~ msgstr "แสดง"
+
+#~ msgid "Automounting"
+#~ msgstr "ทำการเมานท์อัตโนมัติ"
+
+#~ msgid "Show hidden devices"
+#~ msgstr "แสดงอุปกรณ์ที่ถูกซ่อน"
+
+#~ msgctxt "Hide a device"
+#~ msgid "Hide %1"
+#~ msgstr "ซ่อน %1"
+
+#, fuzzy
+#~| msgid "Device is plugged in and can be accessed by applications."
+#~ msgid ""
+#~ "Device is plugged in and the volume can be accessed by applications. It "
+#~ "is not safe to remove this device."
+#~ msgstr "อุปกรณ์ได้ถูกเสียบเข้ามา และสามารถเข้าถึงผ่านโปรแกรมต่าง ๆ ได้แล้ว"
+
+#, fuzzy
+#~| msgid "Device is plugged in, but not mounted for access yet."
+#~ msgid ""
+#~ "Device is plugged in and the volume is not mounted for access yet. The "
+#~ "device can be safely removed."
+#~ msgstr "อุปกรณ์ถูกเสียบเข้ามา แต่ยังไม่ได้ถูกเมานท์เพื่อเข้าใช้งานได้"
+
+#~ msgid ""
+#~ "Could not unmount device %1.\n"
+#~ "One or more files on this device are open within an application."
+#~ msgstr ""
+#~ "ไม่สามารถยกเลิกการเมานท์อุปกรณ์ %1 ได้\n"
+#~ "เนื่องจากอาจมีบางแฟ้มบนอุปกรณ์นี้กำลังถูกเปิดโดยโปรแกรมบางตัวอยู่"
+
+#~ msgid ""
+#~ "Cannot eject the disc.\n"
+#~ "One or more files on this disc are open within an application."
+#~ msgstr ""
+#~ "ไม่สามารถดันดิสก์ออกได้\n"
+#~ "เนื่องจากอาจมีบางแฟ้มบนดิสก์นี้ที่ถูกเปิดโดยโปรแกรมบางตัวอยู่"
+
+#~ msgid "Could not mount device %1."
+#~ msgstr "ไม่สามารถทำการเมานท์อุปกรณ์ %1 ได้"
+
+#~ msgid "Cannot mount the disc."
+#~ msgstr "ไม่สามารถทำการเมาทน์ดิสก์ได้"
+
+#~ msgid "No devices plugged in."
+#~ msgstr "ยังไม่มีการเสียบอุปกรณ์ใด ๆ"
+
+#~ msgid "Devices recently plugged in:"
+#~ msgstr "อุปกรณ์ที่เพิ่งเสียบเข้ามา:"
+
+#, fuzzy
+#~| msgid " sec"
+#~ msgid " second"
+#~ msgid_plural " seconds"
+#~ msgstr[0] " วินาที"
+
+#~ msgid "&Time to stay on top:"
+#~ msgstr "เวลาอยู่เหนือหน้าต่างอื่น:"
+
+#~ msgid "&Number of items displayed:"
+#~ msgstr "จำนวนรายการที่จะแสดง:"
+
+#~ msgid "Unlimited"
+#~ msgstr "ไม่จำกัด"
+
+#~ msgid "&Display time of items:"
+#~ msgstr "แสดงเวลาของรายการ:"
+
+#~ msgid "Configure New Device Notifier"
+#~ msgstr "ปรับแต่งตัวแจ้งเตือนอุปกรณ์ใหม่"

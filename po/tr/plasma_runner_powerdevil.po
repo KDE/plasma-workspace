@@ -1,0 +1,142 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Serdar Soytetir <tulliana@gmail.com>, 2008, 2009.
+# Volkan Gezer <volkangezer@gmail.com>, 2017, 2021, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: powerdevil\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"PO-Revision-Date: 2022-03-12 22:11+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: PowerDevilRunner.cpp:32
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "suspend"
+msgstr "askıya al"
+
+#: PowerDevilRunner.cpp:34
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to ram"
+msgstr "belleğe"
+
+#: PowerDevilRunner.cpp:36
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "sleep"
+msgstr "uyut"
+
+#: PowerDevilRunner.cpp:38
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "hibernate"
+msgstr "hazırda beklet"
+
+#: PowerDevilRunner.cpp:40
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to disk"
+msgstr "diske"
+
+#: PowerDevilRunner.cpp:42 PowerDevilRunner.cpp:44 PowerDevilRunner.cpp:69
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "dim screen"
+msgstr "ekranı karart"
+
+#: PowerDevilRunner.cpp:53
+#, kde-format
+msgid ""
+"Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
+"activated"
+msgstr ""
+"Sistem askıya alma (uyku kipi, bekleme kipi vs.) seçeneklerini listeler ve "
+"etkinleştirilmelerine izin verir"
+
+#: PowerDevilRunner.cpp:57
+#, kde-format
+msgid "Suspends the system to RAM"
+msgstr "Sistemi bellek kullanarak askıya alır"
+
+#: PowerDevilRunner.cpp:61
+#, kde-format
+msgid "Suspends the system to disk"
+msgstr "Sistemi disk kullanarak askıya alır"
+
+#: PowerDevilRunner.cpp:65
+#, kde-format
+msgctxt ""
+"Note this is a KRunner keyword, <> is a placeholder and should be at the end"
+msgid "screen brightness <percent value>"
+msgstr "ekran parlaklığı <yüzde değeri>"
+
+#: PowerDevilRunner.cpp:67
+#, no-c-format, kde-format
+msgid ""
+"Lists screen brightness options or sets it to the brightness defined by the "
+"search term; e.g. screen brightness 50 would dim the screen to 50% maximum "
+"brightness"
+msgstr ""
+"Ekran parlaklığı seçeneklerini listeler veya parlaklığı arama terimi ile "
+"belirlenen değere ayarlar; örn. 50 değeri ekran parlaklığını en fazla % 50 "
+"olarak ayarlar"
+
+#: PowerDevilRunner.cpp:95
+#, kde-format
+msgid "Set Brightness to %1%"
+msgstr "Parlaklığı %​%1 yap"
+
+#: PowerDevilRunner.cpp:104
+#, kde-format
+msgid "Dim screen totally"
+msgstr "Ekranı tümüyle karart"
+
+#: PowerDevilRunner.cpp:112
+#, kde-format
+msgid "Dim screen by half"
+msgstr "Ekranı yarısı kadar karart"
+
+#: PowerDevilRunner.cpp:142
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Uyut"
+
+#: PowerDevilRunner.cpp:143
+#, kde-format
+msgid "Suspend to RAM"
+msgstr "Bellek kullanarak askıya al"
+
+#: PowerDevilRunner.cpp:148
+#, kde-format
+msgctxt "Suspend to disk"
+msgid "Hibernate"
+msgstr "Hazırda beklet"
+
+#: PowerDevilRunner.cpp:149
+#, kde-format
+msgid "Suspend to disk"
+msgstr "Diskte askıya al"
+
+#: PowerDevilRunner.cpp:218
+#, kde-format
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "screen brightness "
+msgstr "ekran parlaklığı "
+
+#: PowerDevilRunner.cpp:220
+#, kde-format
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "dim screen "
+msgstr "ekranı karart "

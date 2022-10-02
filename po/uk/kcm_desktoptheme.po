@@ -1,0 +1,444 @@
+# Translation of kcm_desktoptheme.po to Ukrainian
+# Copyright (C) 2008-2021 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2008, 2009, 2010, 2011, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_desktoptheme\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"PO-Revision-Date: 2021-05-26 09:14+0300\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.12.0\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current Plasma Style"
+msgstr "Назва поточного стилю Плазми"
+
+#: kcm.cpp:108
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Не вдалося створити тимчасовий файл."
+
+#: kcm.cpp:119
+#, kde-format
+msgid "Unable to download the theme: %1"
+msgstr "Не вдалося отримати тему: %1"
+
+#: kcm.cpp:144
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "Тему успішно встановлено."
+
+#: kcm.cpp:147 kcm.cpp:153
+#, kde-format
+msgid "Theme installation failed."
+msgstr "Помилка під час спроби встановити тему."
+
+#: kcm.cpp:245
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr "Не вдалося вилучити тему: %1"
+
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "This module lets you choose the Plasma style."
+msgstr "За допомогою цього модуля ви зможете вибрати стиль Плазми."
+
+#: package/contents/ui/main.qml:69
+#, kde-format
+msgid "All Themes"
+msgstr "Усі теми"
+
+#: package/contents/ui/main.qml:70
+#, kde-format
+msgid "Light Themes"
+msgstr "Світлі теми"
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgid "Dark Themes"
+msgstr "Темні теми"
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "Color scheme compatible"
+msgstr "Сумісні зі схемою кольорів"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgid "Follows color scheme"
+msgstr "Відповідно до схеми кольорів"
+
+#: package/contents/ui/main.qml:118
+#, kde-format
+msgid "Edit Theme…"
+msgstr "Змінити тему…"
+
+#: package/contents/ui/main.qml:125
+#, kde-format
+msgid "Remove Theme"
+msgstr "Вилучити тему"
+
+#: package/contents/ui/main.qml:132
+#, kde-format
+msgid "Restore Theme"
+msgstr "Відновити тему"
+
+#: package/contents/ui/main.qml:174
+#, kde-format
+msgid "Install from File…"
+msgstr "Встановити з файла…"
+
+#: package/contents/ui/main.qml:179
+#, kde-format
+msgid "Get New Plasma Styles…"
+msgstr "Отримати нові стилі Плазми…"
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Open Theme"
+msgstr "Відкриття теми"
+
+#: package/contents/ui/main.qml:195
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr "файли тем (*.zip *.tar.gz *.tar.bz2)"
+
+#: plasma-apply-desktoptheme.cpp:31
+#, kde-format
+msgid ""
+"This tool allows you to set the theme of the current Plasma session, without "
+"accidentally setting it to one that is either not available, or which is "
+"already set."
+msgstr ""
+"За допомогою цього засобу ви зможете визначити тему для поточного сеансу "
+"Плазми без випадкового встановлення теми, яка або є недоступною, або вже "
+"встановленою."
+
+#: plasma-apply-desktoptheme.cpp:35
+#, kde-format
+msgid ""
+"The name of the theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+"Назва теми, яку ви хочете встановити для вашого поточного сеансу Плазми "
+"(якщо передати шлях повністю, буде використано лише останню частину шляху)"
+
+#: plasma-apply-desktoptheme.cpp:36
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+"Вивести список усіх тем, які доступні у системі (і те, яка з тем є поточною)"
+
+#: plasma-apply-desktoptheme.cpp:49
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr "Бажану тему «%1» вже встановлено як тему для поточного сеансу Плазми."
+
+#: plasma-apply-desktoptheme.cpp:65
+#, kde-format
+msgid "The current Plasma session's theme has been set to %1"
+msgstr "%1 встановлено темою поточного сеансу Плазми"
+
+#: plasma-apply-desktoptheme.cpp:67
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr "Не вдалося знайти тему «%1». Тему слід вибрати з таких варіантів: %2"
+
+#: plasma-apply-desktoptheme.cpp:75
+#, kde-format
+msgid "You have the following Plasma themes on your system:"
+msgstr "У вашій системі виявлено такі теми Плазми:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Юрій Чорноіван"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "yurchor@ukr.net"
+
+#~ msgid "Plasma Style"
+#~ msgstr "Стиль Плазми"
+
+#~ msgid "David Rosca"
+#~ msgstr "David Rosca"
+
+#~ msgid "Search..."
+#~ msgstr "Шукати…"
+
+#~ msgid "Plasma Styles"
+#~ msgstr "Стилі Плазми"
+
+#~ msgid "Download New Plasma Styles"
+#~ msgstr "Отримання нових стилів Плазми"
+
+#~ msgid "Choose the Plasma theme"
+#~ msgstr "Вибір теми Плазми"
+
+#~ msgid "Configure Desktop Theme"
+#~ msgstr "Налаштовування теми стільниці"
+
+#~ msgid "Theme removal failed."
+#~ msgstr "Не вдалося вилучити тему."
+
+#~ msgid ""
+#~ "<h1>Desktop Theme</h1>This module allows you to modify the visual "
+#~ "appearance of the desktop."
+#~ msgstr ""
+#~ "<h1>Тема стільниці</h1>За допомогою цього модуля ви зможете змінити "
+#~ "вигляд елементів стільниці."
+
+#~ msgid "KDE Desktop Theme Module"
+#~ msgstr "Модуль теми стільниці KDE"
+
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
+#~ msgstr "© Karol Szwed, Daniel Molkentin, 2002"
+
+#~ msgid "Theme installation failed. (%1)"
+#~ msgstr "Помилка під час спроби встановити тему. (%1)"
+
+#~ msgid "Details"
+#~ msgstr "Подробиці"
+
+#~ msgctxt "plasma name"
+#~ msgid "Panel Background"
+#~ msgstr "Тло панелі"
+
+#~ msgctxt "plasma name"
+#~ msgid "Kickoff"
+#~ msgstr "Kickoff"
+
+#~ msgctxt "plasma name"
+#~ msgid "Task Items"
+#~ msgstr "Елементи задач"
+
+#~ msgctxt "plasma name"
+#~ msgid "Widget Background"
+#~ msgstr "Тло віджетів"
+
+#~ msgctxt "plasma name"
+#~ msgid "Translucent Background"
+#~ msgstr "Прозоре тло"
+
+#~ msgctxt "plasma name"
+#~ msgid "Dialog Background"
+#~ msgstr "Тло діалогових вікон"
+
+#~ msgctxt "plasma name"
+#~ msgid "Analog Clock"
+#~ msgstr "Аналоговий годинник"
+
+#~ msgctxt "plasma name"
+#~ msgid "Notes"
+#~ msgstr "Нотатки"
+
+#~ msgctxt "plasma name"
+#~ msgid "Tooltip"
+#~ msgstr "Підказка"
+
+#~ msgctxt "plasma name"
+#~ msgid "Pager"
+#~ msgstr "Пейджер"
+
+#~ msgctxt "plasma name"
+#~ msgid "Run Command Dialog"
+#~ msgstr "Діалогове вікно запуску команд"
+
+#~ msgctxt "plasma name"
+#~ msgid "Shutdown Dialog"
+#~ msgstr "Діалогове вікно завершення роботи"
+
+#~ msgctxt "plasma name"
+#~ msgid "Icons"
+#~ msgstr "Піктограми"
+
+#~ msgid "(Customized)"
+#~ msgstr "(Змінена)"
+
+#~ msgid "User customized theme"
+#~ msgstr "Змінена користувачем тема"
+
+#~ msgid ""
+#~ "Theme items have been changed.  Do you still wish remove the \"%1\" theme?"
+#~ msgstr "Елементи теми було змінено. Ви все ще бажаєте вилучити тему «%1»?"
+
+#~ msgid "Removal of the default desktop theme is not allowed."
+#~ msgstr "Вилучати типову тему стільниці заборонено."
+
+#~ msgid "Are you sure you wish remove the \"%1\" theme?"
+#~ msgstr "Ви справді бажаєте вилучити тему «%1»?"
+
+#~ msgid ""
+#~ "Please apply theme item changes (with a new theme name) before attempting "
+#~ "to export theme."
+#~ msgstr ""
+#~ "Будь ласка, застосуйте зміни до елемента теми (у темі з новою назвою), "
+#~ "перш ніж намагатися експортувати тему."
+
+#~ msgid "Export Desktop Theme"
+#~ msgstr "Експортувати тему стільниці"
+
+#~ msgid "Export theme to file"
+#~ msgstr "Експортувати тему до файла"
+
+#~ msgid "Archive (*.zip)"
+#~ msgstr "архів (*.zip)"
+
+#~ msgid "Theme Item"
+#~ msgstr "Елемент теми"
+
+#~ msgid "Source"
+#~ msgstr "Джерело"
+
+#~ msgctxt ""
+#~ "%1 is the name of the theme, %2 is the type of the element (background, "
+#~ "icon, note, etc)"
+#~ msgid "%1 %2"
+#~ msgstr "%2 %1"
+
+#~ msgid "File..."
+#~ msgstr "Файл..."
+
+#~ msgid "Select File to Use for %1"
+#~ msgstr "Оберіть файл, який слід використовувати для %1"
+
+#~ msgid " Author: %1"
+#~ msgstr " Автор: %1"
+
+#~ msgid "Version: %1"
+#~ msgstr "Версія: %1"
+
+#~ msgid "Desktop Theme Details"
+#~ msgstr "Відомості щодо тем стільниці"
+
+#~ msgid "Choose an item and customize it by assigning it a theme"
+#~ msgstr "Виберіть елемент і налаштуйте його призначенням теми"
+
+#~ msgid ""
+#~ "You can set any theme to any item. The available themes for the item are "
+#~ "in the dropdown box on the right."
+#~ msgstr ""
+#~ "Ви можете призначити будь-яку тему до будь-якого елемента. Перелік "
+#~ "можливих тем елемента наведено у спадному списку праворуч."
+
+#~ msgid "Enable more options"
+#~ msgstr "Увімкнути додаткові параметри"
+
+#~ msgid ""
+#~ "This will expand the dialog and give you options to export your custom "
+#~ "theme as well as to remove a theme."
+#~ msgstr ""
+#~ "Діалогове вікно буде розгорнуто, ви отримаєте змогу експортувати вашу "
+#~ "нетипову тему, а також вилучити якусь з тем."
+
+#~ msgid "More"
+#~ msgstr "Більше"
+
+#~ msgid "Remove the selected theme"
+#~ msgstr "Вилучити позначену тему"
+
+#~ msgid ""
+#~ "Clicking this button will remove the selected theme. You will be asked "
+#~ "for confirmation."
+#~ msgstr ""
+#~ "Натискання цієї кнопки призведе до вилучення позначеної теми. Програма "
+#~ "попросить вас підтвердити вилучення."
+
+#~ msgid "Save your theme in a zip archive"
+#~ msgstr "Зберегти вашу тему до архіву у форматі zip"
+
+#~ msgid ""
+#~ "You can save your theme in a zip archive in order to share it with the "
+#~ "community."
+#~ msgstr ""
+#~ "Ви можете зберегти вашу тему у форматі архіву zip, щоб потім поділитися "
+#~ "нею зі спільнотою."
+
+#~ msgid "Export Theme to File..."
+#~ msgstr "Експортувати тему до файла..."
+
+#~ msgid "New theme name:"
+#~ msgstr "Назва нової теми:"
+
+#~ msgid "Custom theme name"
+#~ msgstr "Назва нетипової теми"
+
+#~ msgid "Give a name to your custom theme."
+#~ msgstr "Надайте вашій нетиповій темі назву."
+
+#~ msgid "Author:"
+#~ msgstr "Автор:"
+
+#~ msgid "Custom theme author "
+#~ msgstr "Автор нетипової теми "
+
+#~ msgid "Enter the author name of your custom theme."
+#~ msgstr "Введіть ім’я автор вашої теми."
+
+#~ msgid "Version:"
+#~ msgstr "Версія:"
+
+#~ msgid "Custom theme version number"
+#~ msgstr "Номер версії нетипової теми"
+
+#~ msgid "Enter the version number of your custom theme."
+#~ msgstr "Введіть номер версії вашої нетипової теми."
+
+#~ msgid "Description:"
+#~ msgstr "Опис:"
+
+#~ msgid "Custom theme description"
+#~ msgstr "Опис нетипової теми"
+
+#~ msgid "Enter a description which will explain your custom theme."
+#~ msgstr "Введіть опис, який розкриватиме суть вашої нетипової теми."
+
+#~ msgid "Select theme from above to customize"
+#~ msgstr "Оберіть з наведеного вище списку тему для налаштування"
+
+#~ msgid "Theme Author"
+#~ msgstr "Автор теми"
+
+#~ msgid "Theme Name"
+#~ msgstr "Назва теми"
+
+#~ msgid "Theme Version"
+#~ msgstr "Версія теми"
+
+#~ msgid "The theme description goes here..."
+#~ msgstr "Тут має бути опис теми..."
+
+#~ msgid ""
+#~ "Choose a start theme in this list then customize some items below. All "
+#~ "less important items not listed below will use this start theme."
+#~ msgstr ""
+#~ "Виберіть у цьому списку початкову тему, яку ви зміните за допомогою "
+#~ "вибору тем елементів, розташованих нижче. Всі другорядні елементи теми "
+#~ "буде взято з початкової теми."
+
+#~ msgid "Karol Szwed"
+#~ msgstr "Karol Szwed"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"

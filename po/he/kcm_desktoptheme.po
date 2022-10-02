@@ -1,0 +1,201 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Diego Iastrubni <elcuco@kde.org>, 2008, 2009, 2012, 2013.
+# elkana bardugo <ttv200@gmail.com>, 2016.
+# Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_desktoptheme\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"PO-Revision-Date: 2017-05-16 06:52-0400\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Zanata 3.9.6\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Get new Theme"
+msgid "Name of the current Plasma Style"
+msgstr "קבל ערכות חדשות..."
+
+#: kcm.cpp:108
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: kcm.cpp:119
+#, kde-format
+msgid "Unable to download the theme: %1"
+msgstr ""
+
+#: kcm.cpp:144
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "ערכת הנושא הותקנה בהצלחה."
+
+#: kcm.cpp:147 kcm.cpp:153
+#, kde-format
+msgid "Theme installation failed."
+msgstr "התקנת ערכת הנושא נכשלה."
+
+#: kcm.cpp:245
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:24
+#, fuzzy, kde-format
+#| msgid "This module lets you configure the desktop theme."
+msgid "This module lets you choose the Plasma style."
+msgstr "מודל זה מאפשר לך להגדיר את ערכת נושא של שולחן העבודה."
+
+#: package/contents/ui/main.qml:69
+#, fuzzy, kde-format
+#| msgid "Open Theme"
+msgid "All Themes"
+msgstr "פתח ערכת נושא"
+
+#: package/contents/ui/main.qml:70
+#, fuzzy, kde-format
+#| msgid "Open Theme"
+msgid "Light Themes"
+msgstr "פתח ערכת נושא"
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgid "Dark Themes"
+msgstr ""
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "Color scheme compatible"
+msgstr ""
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgid "Follows color scheme"
+msgstr ""
+
+#: package/contents/ui/main.qml:118
+#, fuzzy, kde-format
+#| msgid "Open Theme"
+msgid "Edit Theme…"
+msgstr "פתח ערכת נושא"
+
+#: package/contents/ui/main.qml:125
+#, kde-format
+msgid "Remove Theme"
+msgstr "הסר ערכה"
+
+#: package/contents/ui/main.qml:132
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Theme"
+msgstr "הסר ערכה"
+
+#: package/contents/ui/main.qml:174
+#, fuzzy, kde-format
+#| msgid "Install from File"
+msgid "Install from File…"
+msgstr "התקן מקובץ"
+
+#: package/contents/ui/main.qml:179
+#, fuzzy, kde-format
+#| msgid "Get new Theme"
+msgid "Get New Plasma Styles…"
+msgstr "קבל ערכות חדשות..."
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Open Theme"
+msgstr "פתח ערכת נושא"
+
+#: package/contents/ui/main.qml:195
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr "קובצי ערכת נושא (*.zip *.tar.gz *.tar.bz2)"
+
+#: plasma-apply-desktoptheme.cpp:31
+#, kde-format
+msgid ""
+"This tool allows you to set the theme of the current Plasma session, without "
+"accidentally setting it to one that is either not available, or which is "
+"already set."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:35
+#, kde-format
+msgid ""
+"The name of the theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:36
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:49
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:65
+#, kde-format
+msgid "The current Plasma session's theme has been set to %1"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:67
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:75
+#, kde-format
+msgid "You have the following Plasma themes on your system:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "צוות התרגום של KDE ישראל"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kde-l10n-he@kde.org"
+
+#, fuzzy
+#~| msgid "Get new Theme"
+#~ msgid "Plasma Style"
+#~ msgstr "קבל ערכות חדשות..."
+
+#~ msgid "David Rosca"
+#~ msgstr "David Rosca"
+
+#, fuzzy
+#~| msgid "Get new Theme"
+#~ msgid "Plasma Styles"
+#~ msgstr "קבל ערכות חדשות..."
+
+#, fuzzy
+#~| msgid "Configure Desktop Theme"
+#~ msgid "Download New Plasma Styles"
+#~ msgstr "הגדר ערכת נושא של שולחן העבודה"
+
+#~ msgid "Configure Desktop Theme"
+#~ msgstr "הגדר ערכת נושא של שולחן העבודה"
+
+#~ msgid "Theme removal failed."
+#~ msgstr "הסרת ערכת הנושא נכשלה."

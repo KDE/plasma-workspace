@@ -1,0 +1,137 @@
+# translation of krunner_shellrunner.po to Macedonian
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Bozidar Proevski <bobibobi@freemail.com.mk>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner_shellrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-27 00:45+0000\n"
+"PO-Revision-Date: 2008-12-23 21:40+0100\n"
+"Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
+"Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
+"Language: mk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: Plural-Forms: nplurals=3; plural=n%10==1 ? 0 : n%10==2 ? 1 : "
+"2;\n"
+
+#: shellrunner.cpp:35
+#, kde-format
+msgid "Finds commands that match :q:, using common shell syntax"
+msgstr ""
+
+#: shellrunner.cpp:36
+#, fuzzy, kde-format
+#| msgid "Run in &terminal window"
+msgid "Run in Terminal Window"
+msgstr "Изврши во прозорец од &терминал"
+
+#: shellrunner.cpp:54
+#, kde-format
+msgid "Run %1"
+msgstr "Извршување %1"
+
+#~ msgid "Enter the user you want to run the application as here."
+#~ msgstr "Внесете тука во име на кој корисник ќе се извршува апликацијата."
+
+#~ msgid "User&name:"
+#~ msgstr "&Корисник:"
+
+#~ msgid "Enter the password here for the user you specified above."
+#~ msgstr "Внесете ја тука лозинката за корисникот што е наведен погоре."
+
+#~ msgid "Pass&word:"
+#~ msgstr "Лозин&ка:"
+
+#~ msgid ""
+#~ "Check this option if the application you want to run is a text mode "
+#~ "application. The application will then be run in a terminal emulator "
+#~ "window."
+#~ msgstr ""
+#~ "Активирајте ја оваа опција ако апликацијата што сакате да ја извршите е "
+#~ "текстуална. Тогаш таа ќе се извршува во прозорец од терминал."
+
+#~ msgid "Run in &terminal window"
+#~ msgstr "Изврши во прозорец од &терминал"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "user id. Every process has a user id associated with it. This id code "
+#~ "determines file access and other permissions. The password of the user is "
+#~ "required to do this."
+#~ msgstr ""
+#~ "Активирајте ја оваа опција ако сакате да ја извршите апликацијата со друг "
+#~ "ид. на корисник. Сакој процес има ид. на корисник што е асоциран со него. "
+#~ "Овој ид. код одредува достап до датотеки и други дозволи. За ова е "
+#~ "потребна лозинката на корисникот."
+
+#~ msgid "Run as a different &user"
+#~ msgstr "Изврши како друг к&орисник"
+
+#~ msgid ""
+#~ "<qt>Select whether realtime scheduling should be enabled for the "
+#~ "application. The scheduler governs which process will run and which will "
+#~ "have to wait. Two schedulers are available:\n"
+#~ "<ul>\n"
+#~ "<li><em>Normal:</em> This is the standard, timesharing scheduler. It will "
+#~ "divide fairly the available processing time between all processes.</li>\n"
+#~ "<li><em>Realtime:</em>This scheduler will run your application "
+#~ "uninterrupted until it gives up the processor. This can be dangerous. An "
+#~ "application that does not give up the processor might hang the system. "
+#~ "You need root's password to use the scheduler.</li>\n"
+#~ "</ul>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>Изберете дали треба да биде овозможено распоредување во реално време "
+#~ "за апликацијата. Распоредувачот решава кој процес ќе се извршува, а кој "
+#~ "ќе чека. Достапни се два распоредувачи:\n"
+#~ "<ul>\n"
+#~ "<li><em>Нормален:</em> Ова е стандардниот распоредувач, со споделување на "
+#~ "време. Тој ќе го распредели процесорското време подеднакво на сите "
+#~ "процеси што се извршуваат.</li>\n"
+#~ "<li><em>Реално време:</em> Овој распоредувач ќе ја извршува Вашата "
+#~ "апликација непрекинато сѐ додека таа не се откаже од процесорот. Ова може "
+#~ "да биде опасно. Апликација што не се откажува од процесорот може да го "
+#~ "застане системот. За да го користите овој распоредувач, Ви треба "
+#~ "лозинката на root.</li>\n"
+#~ "</ul>\n"
+#~ "</qt>"
+
+#~ msgid "Run with realtime &scheduling"
+#~ msgstr "Изврши со ра&споредување во реално време"
+
+#~ msgid ""
+#~ "The priority that the command will be run with can be set here. From left "
+#~ "to right, it goes from low to high. The center position is the default "
+#~ "value. For priorities higher than the default, you will need to provide "
+#~ "the root password."
+#~ msgstr ""
+#~ "Тука може да се нагоди приоритетот со кој ќе се извршува апликацијата. Од "
+#~ "лево на десно приоритетот расте. Средната позиција е стандардната "
+#~ "вредност. За приоритети повисоки од стандардниот, ќе треба да ја зададете "
+#~ "лозинката за root."
+
+#~ msgid "&Priority:"
+#~ msgstr "&Приоритет:"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "priority. A higher priority tells the operating system to give more "
+#~ "processing time to your application."
+#~ msgstr ""
+#~ "Активирајте ја оваа опција ако сакате да ја извршите апликацијата со друг "
+#~ "приоритет. Повисокиот приоритет му кажува на оперативниот систем да "
+#~ "оддели повеќе процесорско време за Вашата апликација."
+
+#~ msgid "Run with a &different priority"
+#~ msgstr "Изврши со &друг приоритет"
+
+#~ msgid "Low"
+#~ msgstr "Низок"
+
+#~ msgid "High"
+#~ msgstr "Висок"

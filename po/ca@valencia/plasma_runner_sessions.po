@@ -1,0 +1,180 @@
+# Translation of plasma_runner_sessions.po to Catalan (Valencian)
+# Copyright (C) 2008-2022 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Josep M. Ferrer <txemaq@gmail.com>, 2008, 2009, 2010, 2011, 2018, 2020, 2022.
+# Antoni Bella Pérez <antonibella5@yahoo.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-01 00:45+0000\n"
+"PO-Revision-Date: 2022-04-11 21:52+0200\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca@valencia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.12.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+
+#: sessionrunner.cpp:28 sessionrunner.cpp:64
+#, kde-format
+msgctxt "log out command"
+msgid "logout"
+msgstr "eixida"
+
+#: sessionrunner.cpp:28
+#, kde-format
+msgid "Logs out, exiting the current desktop session"
+msgstr "Ix, desconnectant la sessió actual d'escriptori"
+
+#: sessionrunner.cpp:29 sessionrunner.cpp:81
+#, kde-format
+msgctxt "shut down computer command"
+msgid "shut down"
+msgstr "parada"
+
+#: sessionrunner.cpp:29
+#, kde-format
+msgid "Turns off the computer"
+msgstr "Apaga l'ordinador"
+
+#: sessionrunner.cpp:33 sessionrunner.cpp:90
+#, kde-format
+msgctxt "lock screen command"
+msgid "lock"
+msgstr "bloqueja"
+
+#: sessionrunner.cpp:33
+#, kde-format
+msgid "Locks the current sessions and starts the screen saver"
+msgstr "Bloqueja les sessions actuals i inicia el salvapantalla"
+
+#: sessionrunner.cpp:36 sessionrunner.cpp:72
+#, kde-format
+msgctxt "restart computer command"
+msgid "restart"
+msgstr "reinici"
+
+#: sessionrunner.cpp:36
+#, kde-format
+msgid "Reboots the computer"
+msgstr "Torna a arrancar l'ordinador"
+
+#: sessionrunner.cpp:37 sessionrunner.cpp:73
+#, kde-format
+msgctxt "restart computer command"
+msgid "reboot"
+msgstr "reinicia"
+
+#: sessionrunner.cpp:40
+#, kde-format
+msgctxt "switch user command"
+msgid "switch"
+msgstr "canvia"
+
+#: sessionrunner.cpp:41
+#, kde-format
+msgctxt "switch user command"
+msgid "switch :q:"
+msgstr "canvia :q:"
+
+#: sessionrunner.cpp:42
+#, kde-format
+msgid ""
+"Switches to the active session for the user :q:, or lists all active "
+"sessions if :q: is not provided"
+msgstr ""
+"Canvia a la sessió activa de l'usuari :q:, o llista totes les sessions "
+"actives si no es proporciona :q:"
+
+#: sessionrunner.cpp:45 sessionrunner.cpp:130
+#, kde-format
+msgid "switch user"
+msgstr "canvia d'usuari"
+
+#: sessionrunner.cpp:45
+#, kde-format
+msgid "Starts a new session as a different user"
+msgstr "Inicia una sessió nova amb un usuari diferent"
+
+#: sessionrunner.cpp:46 sessionrunner.cpp:130
+#, kde-format
+msgid "new session"
+msgstr "sessió nova"
+
+#: sessionrunner.cpp:50
+#, kde-format
+msgid "Lists all sessions"
+msgstr "Llista totes les sessions"
+
+#: sessionrunner.cpp:64
+#, kde-format
+msgid "log out"
+msgstr "eixida"
+
+#: sessionrunner.cpp:66
+#, kde-format
+msgctxt "log out command"
+msgid "Logout"
+msgstr "Eixida"
+
+#: sessionrunner.cpp:75
+#, kde-format
+msgid "Restart the computer"
+msgstr "Torna a iniciar l'ordinador"
+
+#: sessionrunner.cpp:82
+#, kde-format
+msgctxt "shut down computer command"
+msgid "shutdown"
+msgstr "parada"
+
+#: sessionrunner.cpp:84
+#, kde-format
+msgid "Shut down the computer"
+msgstr "Para l'ordinador"
+
+#: sessionrunner.cpp:93
+#, kde-format
+msgid "Lock the screen"
+msgstr "Bloqueja la pantalla"
+
+#: sessionrunner.cpp:115
+#, kde-format
+msgctxt "User sessions"
+msgid "sessions"
+msgstr "sessions"
+
+#: sessionrunner.cpp:136
+#, kde-format
+msgid "Switch User"
+msgstr "Canvia d'usuari"
+
+#: sessionrunner.cpp:211
+#, kde-format
+msgid "Warning - New Session"
+msgstr "Avís - Sessió nova"
+
+#: sessionrunner.cpp:212
+#, kde-format
+msgid ""
+"<p>You have chosen to open another desktop session.<br />The current session "
+"will be hidden and a new login screen will be displayed.<br />An F-key is "
+"assigned to each session; F%1 is usually assigned to the first session, F%2 "
+"to the second session and so on. You can switch between sessions by pressing "
+"Ctrl, Alt and the appropriate F-key at the same time. Additionally, the "
+"Plasma Panel and Desktop menus have actions for switching between sessions.</"
+"p>"
+msgstr ""
+"<p>Heu triat d'obrir una altra sessió d'escriptori.<br />La sessió actual "
+"s'amagarà i es mostrarà una pantalla nova de connexió.<br />S'assigna una "
+"tecla «Fn» a cada sessió. «F%1» normalment s'assigna a la primera sessió, «F"
+"%2» a la segona sessió i així successivament. Podeu canviar entre les "
+"sessions prement simultàniament «Ctrl», «Alt» i la tecla «Fn» apropiada. De "
+"manera addicional, el quadro de Plasma i els menús d'escriptori tenen "
+"accions per a canviar entre les sessions.</p>"

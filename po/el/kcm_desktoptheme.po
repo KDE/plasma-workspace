@@ -1,0 +1,484 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Toussis Manolis <manolis@koppermind.homelinux.org>, 2008, 2009.
+# Petros Vidalis <p_vidalis@hotmail.com>, 2009, 2010.
+# Petros <pvidalis@gmail.com>, 2010.
+# Dimitrios Glentadakis <dglent@gmail.com>, 2011.
+# Antonis Geralis <capoiosct@gmail.com>, 2013.
+# Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_desktopthemedetails\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"PO-Revision-Date: 2016-06-04 15:12+0200\n"
+"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 2.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Get new Theme"
+msgid "Name of the current Plasma Style"
+msgstr "Λήψη νέου θέματος"
+
+#: kcm.cpp:108
+#, fuzzy, kde-format
+#| msgid "Unable to save theme."
+msgid "Unable to create a temporary file."
+msgstr "Αδυναμία αποθήκευσης θέματος."
+
+#: kcm.cpp:119
+#, fuzzy, kde-format
+#| msgid "Unable to save theme."
+msgid "Unable to download the theme: %1"
+msgstr "Αδυναμία αποθήκευσης θέματος."
+
+#: kcm.cpp:144
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "Το θέμα εγκαταστάθηκε με επιτυχία."
+
+#: kcm.cpp:147 kcm.cpp:153
+#, kde-format
+msgid "Theme installation failed."
+msgstr "Η εγκατάσταση του θέματος απέτυχε."
+
+#: kcm.cpp:245
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:24
+#, fuzzy, kde-format
+#| msgid "This module lets you configure the desktop theme."
+msgid "This module lets you choose the Plasma style."
+msgstr ""
+"Το άρθρωμα αυτό σας επιτρέπει τη διαμόρφωση του θέματος επιφάνειας εργασίας."
+
+#: package/contents/ui/main.qml:69
+#, fuzzy, kde-format
+#| msgid "Available themes"
+msgid "All Themes"
+msgstr "Διαθέσιμα θέματα"
+
+#: package/contents/ui/main.qml:70
+#, fuzzy, kde-format
+#| msgid "Theme"
+msgid "Light Themes"
+msgstr "Θέμα"
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgid "Dark Themes"
+msgstr ""
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "Color scheme compatible"
+msgstr ""
+
+#: package/contents/ui/main.qml:100
+#, fuzzy, kde-format
+#| msgctxt "plasma name"
+#| msgid "Color Scheme"
+msgid "Follows color scheme"
+msgstr "Θέμα χρωμάτων"
+
+#: package/contents/ui/main.qml:118
+#, fuzzy, kde-format
+#| msgid "Theme"
+msgid "Edit Theme…"
+msgstr "Θέμα"
+
+#: package/contents/ui/main.qml:125
+#, kde-format
+msgid "Remove Theme"
+msgstr "Αφαίρεση θέματος"
+
+#: package/contents/ui/main.qml:132
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Theme"
+msgstr "Αφαίρεση θέματος"
+
+#: package/contents/ui/main.qml:174
+#, fuzzy, kde-format
+#| msgid "Install from File"
+msgid "Install from File…"
+msgstr "Εγκατάσταση από αρχείο"
+
+#: package/contents/ui/main.qml:179
+#, fuzzy, kde-format
+#| msgid "Get new Theme"
+msgid "Get New Plasma Styles…"
+msgstr "Λήψη νέου θέματος"
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Open Theme"
+msgstr "Άνοιγμα θέματος"
+
+#: package/contents/ui/main.qml:195
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr "Αρχεία θεμάτων (*.zip *.tar.gz *.tar.bz2)"
+
+#: plasma-apply-desktoptheme.cpp:31
+#, kde-format
+msgid ""
+"This tool allows you to set the theme of the current Plasma session, without "
+"accidentally setting it to one that is either not available, or which is "
+"already set."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:35
+#, kde-format
+msgid ""
+"The name of the theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:36
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:49
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:65
+#, kde-format
+msgid "The current Plasma session's theme has been set to %1"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:67
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:75
+#, kde-format
+msgid "You have the following Plasma themes on your system:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Τούσης Μανώλης"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "manolis@koppermind.homelinux.org"
+
+#, fuzzy
+#~| msgid "Get new Theme"
+#~ msgid "Plasma Style"
+#~ msgstr "Λήψη νέου θέματος"
+
+#~ msgid "David Rosca"
+#~ msgstr "David Rosca"
+
+#, fuzzy
+#~| msgid "Get new Theme"
+#~ msgid "Plasma Styles"
+#~ msgstr "Λήψη νέου θέματος"
+
+#, fuzzy
+#~| msgid "How to Change Desktop Theme"
+#~ msgid "Download New Plasma Styles"
+#~ msgstr "Πώς τροποποιείται το θέμα επιφάνειας εργασίας"
+
+#~ msgid "Configure Desktop Theme"
+#~ msgstr "Διαμόρφωση θέματος επιφάνειας εργασίας"
+
+#~ msgid "Theme removal failed."
+#~ msgstr "Η αφαίρεση του θέματος απέτυχε."
+
+#~ msgid ""
+#~ "<h1>Desktop Theme</h1>This module allows you to modify the visual "
+#~ "appearance of the desktop."
+#~ msgstr ""
+#~ "<h1>Θέμα επιφάνειας εργασίας</h1>Αυτό το άρθρωμα σας επιτρέπει να "
+#~ "τροποποιήσετε την οπτική εμφάνιση των στοιχείων της επιφάνειας εργασίας."
+
+#~ msgid "KDE Desktop Theme Module"
+#~ msgstr "Άρθρωμα θέματος επιφάνειας εργασίας KDE"
+
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
+#~ msgstr "(c) 2002 Karol Szwed, Daniel Molkentin"
+
+#~ msgid "Theme installation failed. (%1)"
+#~ msgstr "Η εγκατάσταση του θέματος απέτυχε. (%1)"
+
+#~ msgid "Details"
+#~ msgstr "Λεπτομέρειες"
+
+#~ msgctxt "plasma name"
+#~ msgid "Panel Background"
+#~ msgstr "Φόντο πίνακα"
+
+#~ msgctxt "plasma name"
+#~ msgid "Kickoff"
+#~ msgstr "Kickoff"
+
+#~ msgctxt "plasma name"
+#~ msgid "Task Items"
+#~ msgstr "Αντικείμενα εργασιών"
+
+#~ msgctxt "plasma name"
+#~ msgid "Widget Background"
+#~ msgstr "Φόντο συστατικών"
+
+#~ msgctxt "plasma name"
+#~ msgid "Translucent Background"
+#~ msgstr "Διαφανές φόντο"
+
+#~ msgctxt "plasma name"
+#~ msgid "Dialog Background"
+#~ msgstr "Φόντο διαλόγου"
+
+#~ msgctxt "plasma name"
+#~ msgid "Analog Clock"
+#~ msgstr "Αναλογικό ρολόι"
+
+#~ msgctxt "plasma name"
+#~ msgid "Notes"
+#~ msgstr "Σημειώσεις"
+
+#~ msgctxt "plasma name"
+#~ msgid "Tooltip"
+#~ msgstr "Υπόδειξη"
+
+#~ msgctxt "plasma name"
+#~ msgid "Pager"
+#~ msgstr "Βομβητής"
+
+#~ msgctxt "plasma name"
+#~ msgid "Run Command Dialog"
+#~ msgstr "Διάλογος εκτέλεσης εντολών"
+
+#~ msgctxt "plasma name"
+#~ msgid "Shutdown Dialog"
+#~ msgstr "Διάλογος τερματισμού"
+
+#~ msgctxt "plasma name"
+#~ msgid "Icons"
+#~ msgstr "Εικονίδια"
+
+#~ msgid "(Customized)"
+#~ msgstr "(προσαρμοσμένο)"
+
+#~ msgid "User customized theme"
+#~ msgstr "Προσαρμοσμένο θέμα χρήστη"
+
+#~ msgid ""
+#~ "Theme items have been changed.  Do you still wish remove the \"%1\" theme?"
+#~ msgstr ""
+#~ "Αντικείμενα θέματος τροποποιήθηκαν. Επιθυμείτε ακόμη την αφαίρεση του "
+#~ "θέματος \"%1\";"
+
+#~ msgid "Removal of the default desktop theme is not allowed."
+#~ msgstr "Η αφαίρεση του προκαθορισμένου θέματος δεν επιτρέπεται."
+
+#~ msgid "Are you sure you wish remove the \"%1\" theme?"
+#~ msgstr "Επιθυμείτε σίγουρα την αφαίρεση του θέματος \"%1\";"
+
+#~ msgid ""
+#~ "Please apply theme item changes (with a new theme name) before attempting "
+#~ "to export theme."
+#~ msgstr ""
+#~ "Παρακαλώ εφαρμόστε τις τροποποιήσεις του θέματος (με ένα νέο όνομα "
+#~ "θέματος) πριν την προσπάθεια εξαγωγής του θέματος."
+
+#~ msgid "Export Desktop Theme"
+#~ msgstr "Εξαγωγή θέματος επιφάνειας εργασίας"
+
+#~ msgid "Export theme to file"
+#~ msgstr "Εξαγωγή θέματος σε αρχείο"
+
+#~ msgid "Archive (*.zip)"
+#~ msgstr "Αρχειοθήκη (*.zip)"
+
+#~ msgid "Theme Item"
+#~ msgstr "Αντικείμενο θέματος"
+
+#~ msgid "Source"
+#~ msgstr "Πηγή"
+
+#~ msgctxt ""
+#~ "%1 is the name of the theme, %2 is the type of the element (background, "
+#~ "icon, note, etc)"
+#~ msgid "%1 %2"
+#~ msgstr "%1 %2"
+
+#~ msgid "File..."
+#~ msgstr "Αρχείο..."
+
+#~ msgid "Select File to Use for %1"
+#~ msgstr "Επιλογή αρχείου για χρήση του σε %1"
+
+#~ msgid " Author: %1"
+#~ msgstr "Συγγραφέας: %1"
+
+#~ msgid "Version: %1"
+#~ msgstr "Έκδοση: %1"
+
+#~ msgid "Desktop Theme Details"
+#~ msgstr "Λεπτομέρειες θέματος επιφάνειας εργασίας"
+
+#~ msgid "Choose an item and customize it by assigning it a theme"
+#~ msgstr ""
+#~ "Επιλέξτε ένα αντικείμενο και τροποποιήστε το αναθέτοντας το σε ένα θέμα"
+
+#~ msgid ""
+#~ "You can set any theme to any item. The available themes for the item are "
+#~ "in the dropdown box on the right."
+#~ msgstr ""
+#~ "Μπορείτε να θέσετε οποιοδήποτε θέμα σε οποιοδήποτε αντικείμενο. Τα "
+#~ "διαθέσιμα θέματα για τα αντικείμενα βρίσκονται στο κυλιόμενο κουτί στα "
+#~ "δεξιά."
+
+#~ msgid "Enable more options"
+#~ msgstr "Ενεργοποίηση περισσότερων επιλογών"
+
+#~ msgid ""
+#~ "This will expand the dialog and give you options to export your custom "
+#~ "theme as well as to remove a theme."
+#~ msgstr ""
+#~ "Αυτό θα επεκτείνει το πλαίσιο διαλόγου δίνοντας σας επιλογές για εξαγωγή "
+#~ "του προσαρμοσμένου σας θέματος όπως και την διαγραφή ενός θέματος."
+
+#~ msgid "More"
+#~ msgstr "Περισσότερα"
+
+#~ msgid "Remove the selected theme"
+#~ msgstr "Αφαίρεση του επιλεγμένου θέματος"
+
+#~ msgid ""
+#~ "Clicking this button will remove the selected theme. You will be asked "
+#~ "for confirmation."
+#~ msgstr ""
+#~ "Πατώντας το κουμπί θα αφαιρέσετε το επιλεγμένο θέμα. Θα ερωτηθείτε για "
+#~ "επιβεβαίωση."
+
+#~ msgid "Save your theme in a zip archive"
+#~ msgstr "Αποθήκευση του θέματος σας σε αρχειοθήκη zip."
+
+#~ msgid ""
+#~ "You can save your theme in a zip archive in order to share it with the "
+#~ "community."
+#~ msgstr ""
+#~ "Μπορείτε να αποθηκεύσετε το θέμα σε μία αρχειοθήκη zip με σκοπό να το "
+#~ "μοιραστείτε με την κοινότητα."
+
+#~ msgid "Export Theme to File..."
+#~ msgstr "Εξαγωγή θέματος σε αρχείο..."
+
+#~ msgid "New theme name:"
+#~ msgstr "Νέο όνομα θέματος:"
+
+#~ msgid "Custom theme name"
+#~ msgstr "Προσαρμοσμένο όνομα θέματος"
+
+#~ msgid "Give a name to your custom theme."
+#~ msgstr "Δώστε ένα όνομα στο προσαρμοσμένο θέμα σας."
+
+#~ msgid "Author:"
+#~ msgstr "Συγγραφέας:"
+
+#~ msgid "Custom theme author "
+#~ msgstr "Προσαρμοσμένος συγγραφέας θέματος"
+
+#~ msgid "Enter the author name of your custom theme."
+#~ msgstr "Εισάγετε το όνομα του συγγραφέα για το προσαρμοσμένο θέμα σας."
+
+#~ msgid "Version:"
+#~ msgstr "Έκδοση:"
+
+#~ msgid "Custom theme version number"
+#~ msgstr "Αριθμός έκδοσης προσαρμοσμένου θέματος"
+
+#~ msgid "Enter the version number of your custom theme."
+#~ msgstr "Εισάγετε τον αριθμό έκδοσης του προσαρμοσμένου θέματος."
+
+#~ msgid "Description:"
+#~ msgstr "Περιγραφή:"
+
+#~ msgid "Custom theme description"
+#~ msgstr "Περιγραφή προσαρμοσμένου θέματος"
+
+#~ msgid "Enter a description which will explain your custom theme."
+#~ msgstr "Εισάγετε μία περιγραφή που θα εξηγεί το προσαρμοσμένο θέμα σας."
+
+#~ msgid "Select theme from above to customize"
+#~ msgstr "Επιλέξτε ένα θέμα από τα παρακάτω για να το προσαρμόσετε"
+
+#~ msgid "Theme Author"
+#~ msgstr "Συγγραφέας θέματος"
+
+#~ msgid "Theme Name"
+#~ msgstr "Όνομα θέματος"
+
+#~ msgid "Theme Version"
+#~ msgstr "Έκδοση θέματος"
+
+#~ msgid "The theme description goes here..."
+#~ msgstr "Η θέση της περιγραφής του θέματος..."
+
+#~ msgid ""
+#~ "Choose a start theme in this list then customize some items below. All "
+#~ "less important items not listed below will use this start theme."
+#~ msgstr ""
+#~ "Επιλογή ενός θέματος εκκίνησης από την λίστα και έπειτα προσαρμόστε "
+#~ "μερικά αντικείμενα παρακάτω. Όλα τα λιγότερο σημαντικά αντικείμενα που "
+#~ "δεν εμφανίζονται στην λίστα παρακάτω θα χρησιμοποιούν αυτό το θέμα "
+#~ "εκκίνησης."
+
+#~ msgid "Karol Szwed"
+#~ msgstr "Karol Szwed"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "KCMDesktopTheme"
+#~ msgstr "KCMDesktopTheme"
+
+#, fuzzy
+#~| msgid ""
+#~| "To change your desktop theme to \"%1\", get back to the General tab of "
+#~| "SystemSettings in Appearance -> Style and select \"%2\" from the "
+#~| "droplist."
+#~ msgid ""
+#~ "To change your desktop theme to \"%1\", go back to the 'General' tab of "
+#~ "System Settings; choose 'Appearance', and then 'Style'; and finally "
+#~ "select \"%2\" from the drop-down list at the top of the window."
+#~ msgstr ""
+#~ "Για την τροποποίηση του θέματός σας της επιφάνειας εργασίας σε \"%1\", "
+#~ "γυρίστε πίσω στον σελιδοδείκτη Στυλ από τις Ρυθμίσεις Συστήματος - > "
+#~ "Εμφάνιση  και επιλέξτε \"%2\" από την αναπτυσσόμενη λίστα."
+
+#~ msgid "Removal of the active desktop theme is not allowed."
+#~ msgstr "Η αφαίρεση του προκαθορισμένου θέματος δεν επιτρέπεται."
+
+#~ msgid "Unfortunately, this feature is not yet implemented."
+#~ msgstr "Δυστυχώς, το χαρακτηριστικό αυτό δεν έχει υλοποιηθεί ακόμη."
+
+#~ msgid "Theme items data file could not be found."
+#~ msgstr "Αδυναμία εύρεσης του αρχείου αντικειμένων του θέματος"

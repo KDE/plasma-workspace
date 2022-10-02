@@ -1,0 +1,134 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Serdar Soytetir, 2008.
+# Serdar Soytetir <tulliana@gmail.com>, 2008, 2010, 2013.
+# Volkan Gezer <volkangezer@gmail.com>, 2013, 2021, 2022.
+# Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
+# Emir SARI <emir_sari@icloud.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_autostart\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:50+0000\n"
+"PO-Revision-Date: 2022-07-02 13:46+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 22.04.2\n"
+
+#: autostartmodel.cpp:288
+#, kde-format
+msgid "\"%1\" is not an absolute url."
+msgstr "\"%1\" gerçek bir URL değil."
+
+#: autostartmodel.cpp:291
+#, kde-format
+msgid "\"%1\" does not exist."
+msgstr "\"%1\" mevcut değil."
+
+#: autostartmodel.cpp:294
+#, kde-format
+msgid "\"%1\" is not a file."
+msgstr "\"%1\" bir dosya değil."
+
+#: autostartmodel.cpp:297
+#, kde-format
+msgid "\"%1\" is not readable."
+msgstr "\"%1\" okunabilir değil."
+
+#: package/contents/ui/main.qml:40
+#, kde-format
+msgid "Make Executable"
+msgstr "Çalıştırılabilir Yap"
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "The file '%1' must be executable to run at logout."
+msgstr ""
+"\"%1\" dosyası, çıkış sırasında çalıştırılabilmek için çalıştırılabilir "
+"türden olmalıdır."
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid "The file '%1' must be executable to run at login."
+msgstr ""
+"\"%1\" dosyası, giriş sırasında çalıştırılabilmek için çalıştırılabilir "
+"türden olmalıdır."
+
+#: package/contents/ui/main.qml:89
+#, kde-format
+msgid "Properties"
+msgstr "Özellikler"
+
+#: package/contents/ui/main.qml:95
+#, kde-format
+msgid "Remove"
+msgstr "Kaldır"
+
+#: package/contents/ui/main.qml:106
+#, kde-format
+msgid "Applications"
+msgstr "Uygulamalar"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Login Scripts"
+msgstr "Giriş Betikleri"
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Pre-startup Scripts"
+msgstr "Başlangıç Öncesi Betikleri"
+
+#: package/contents/ui/main.qml:115
+#, kde-format
+msgid "Logout Scripts"
+msgstr "Çıkış Betikleri"
+
+#: package/contents/ui/main.qml:124
+#, kde-format
+msgid "No user-specified autostart items"
+msgstr "Kullanıcı tanımlı otomatik başlat ögesi yok"
+
+#: package/contents/ui/main.qml:125
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Click the <interface>Add…</interface> button below to add some"
+msgstr ""
+"Birkaç tane eklemek için aşağıdaki <interface>Ekle…</interface> düğmesine "
+"tıklayın"
+
+#: package/contents/ui/main.qml:139
+#, kde-format
+msgid "Choose Login Script"
+msgstr "Giriş Betiği Seç"
+
+#: package/contents/ui/main.qml:160
+#, kde-format
+msgid "Choose Logout Script"
+msgstr "Çıkış Betiği Seç"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "Add…"
+msgstr "Ekle…"
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Add Application…"
+msgstr "Uygulama Ekle…"
+
+#: package/contents/ui/main.qml:199
+#, kde-format
+msgid "Add Login Script…"
+msgstr "Giriş Betiği Ekle…"
+
+#: package/contents/ui/main.qml:205
+#, kde-format
+msgid "Add Logout Script…"
+msgstr "Çıkış Betiği Ekle…"

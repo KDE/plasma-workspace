@@ -1,0 +1,74 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2009, 2014.
+# pan93412 <pan93412@gmail.com>, 2019.
+# Chaoting Liu <brli@chakralinux.org>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-11 00:47+0000\n"
+"PO-Revision-Date: 2021-09-01 02:22+0800\n"
+"Last-Translator: Chaoting Liu <brli@chakralinux.org>\n"
+"Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"dot tw>\n"
+"X-Generator: Lokalize 21.08.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: menu.cpp:99
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Show KRunner"
+msgstr "顯示 KRunner"
+
+#: menu.cpp:104
+#, kde-format
+msgid "Open Terminal"
+msgstr ""
+
+#: menu.cpp:108
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Lock Screen"
+msgstr "鎖定螢幕"
+
+#: menu.cpp:117
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Leave…"
+msgstr "離開…"
+
+#: menu.cpp:126
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Configure Display Settings…"
+msgstr ""
+
+#: menu.cpp:291
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Configure Contextual Menu Plugin"
+msgstr "設定內文選單外掛程式"
+
+#: menu.cpp:301
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "[Other Actions]"
+msgstr "【其他動作】"
+
+#: menu.cpp:304
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Wallpaper Actions"
+msgstr "桌布動作"
+
+#: menu.cpp:308
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "[Separator]"
+msgstr "【分隔符】"

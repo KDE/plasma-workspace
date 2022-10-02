@@ -1,0 +1,96 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Kishore G <kishore96@gmail.com>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_clock\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-25 00:47+0000\n"
+"PO-Revision-Date: 2022-07-26 19:59+0530\n"
+"Last-Translator: Kishore G <kishore96@gmail.com>\n"
+"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.07.80\n"
+
+#: contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "தோற்றம்"
+
+#: contents/ui/analogclock.qml:76
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Current time is %1; Current date is %2"
+msgstr "தற்போதைய நேரம் %1; தற்போதைய தேதி %2"
+
+#: contents/ui/configGeneral.qml:23
+#, kde-format
+msgid "Show seconds hand"
+msgstr "நொடி முள்ளை காட்டு"
+
+#: contents/ui/configGeneral.qml:24
+#, kde-format
+msgid "General:"
+msgstr "பொது:"
+
+#: contents/ui/configGeneral.qml:28
+#, kde-format
+msgid "Show time zone"
+msgstr "கால மண்டலத்தை காட்டு"
+
+#~ msgid "Show the seconds"
+#~ msgstr "நொடிகளைக் காட்டுக"
+
+#~ msgid "Check this if you want to show the seconds."
+#~ msgstr "நொடிகளைக் காட்ட வேண்டுமாயின் இதனைத் தேர்வு செய்க"
+
+#, fuzzy
+#~| msgid "Show &seconds"
+#~ msgid "Show &seconds hand"
+#~ msgstr "&நொடிகளைக் காட்டுக"
+
+#, fuzzy
+#~| msgid "Show the time in text"
+#~ msgid "Show the Timezone in text"
+#~ msgstr "உரையில் நேரத்தைக் காட்டுக"
+
+#, fuzzy
+#~| msgid "Check this if you want to show the time as a text within the clock."
+#~ msgid "Check this if you want to display Timezone in text."
+#~ msgstr "கடிகாரத்தினுள்ளேயே உரைவடிவில் நேரத்தைக் காட்ட விழைந்தால் இதனைச் சொடடுக்கவும்."
+
+#, fuzzy
+#~| msgid "Show the time in text"
+#~ msgid "Show &time zone"
+#~ msgstr "உரையில் நேரத்தைக் காட்டுக"
+
+#, fuzzy
+#~| msgid "Also show the time in text"
+#~ msgid "Also show the Timezone as text"
+#~ msgstr "உரைவடிவிலும் நேரத்தைக் காட்டுக"
+
+#~ msgid "Timezones"
+#~ msgstr "நேமண்டலங்கள்"
+
+#~ msgid "Use &local timezone"
+#~ msgstr "&அக நேரமண்டலத்தை பயன்படுத்துக"
+
+#~ msgid "Area"
+#~ msgstr "இடம்"
+
+#~ msgid "Region"
+#~ msgstr "பகுதி"
+
+#~ msgid "Comment"
+#~ msgstr "கருத்து"
+
+#, fuzzy
+#~| msgid "Configure Clock"
+#~ msgctxt "@title:window"
+#~ msgid "Configure Clock"
+#~ msgstr "கடிகாரத்தை வடிவமைக்க"

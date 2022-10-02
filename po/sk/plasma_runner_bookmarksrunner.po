@@ -1,0 +1,39 @@
+# translation of plasma_runner_bookmarksrunner.po to Slovak
+# Richard Fric <Richard.Fric@kdemail.net>, 2009.
+# Michal Sulek <misurel@gmail.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_bookmarksrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"PO-Revision-Date: 2009-12-28 16:34+0100\n"
+"Last-Translator: Michal Sulek <misurel@gmail.com>\n"
+"Language-Team: Slovak <kde-sk@linux.sk>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: bookmarksrunner.cpp:35
+#, kde-format
+msgid "Finds web browser bookmarks matching :q:."
+msgstr "Nájde záložky vo webovom prehliadači zodpovedajúce :q:."
+
+#: bookmarksrunner.cpp:36
+#, kde-format
+msgctxt "list of all web browser bookmarks"
+msgid "bookmarks"
+msgstr "zalozky"
+
+#: bookmarksrunner.cpp:36
+#, kde-format
+msgid "List all web browser bookmarks"
+msgstr "Zobrazí všetky záložky webového prehliadača"
+
+#: bookmarksrunner.cpp:59
+#, kde-format
+msgctxt "list of all konqueror bookmarks"
+msgid "bookmarks"
+msgstr "zalozky"

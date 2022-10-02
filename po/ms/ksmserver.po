@@ -1,0 +1,244 @@
+# ksmserver Bahasa Melayu (Malay) (ms)
+# Copyright (C) 2008, 2009 K Desktop Environment
+#
+# Muhammad Najmi Ahmad Zabidi <md_najmi@yahoo.com>, 2003.
+# Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>, 2008, 2009, 2010.
+# Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: ksmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-22 00:47+0000\n"
+"PO-Revision-Date: 2010-07-23 21:18+0800\n"
+"Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>\n"
+"Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=1;\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: logout.cpp:344
+#, kde-format
+msgid "Logout canceled by '%1'"
+msgstr "Logkeluar dibatalkan oleh '%1'"
+
+#: main.cpp:117
+#, kde-format
+msgid "$HOME not set!"
+msgstr ""
+
+#: main.cpp:121 main.cpp:127
+#, kde-format
+msgid "$HOME directory (%1) does not exist."
+msgstr ""
+
+#: main.cpp:123
+#, kde-format
+msgid "No write access to $HOME directory (%1)."
+msgstr ""
+
+#: main.cpp:129
+#, kde-format
+msgid "No read access to $HOME directory (%1)."
+msgstr ""
+
+#: main.cpp:133
+#, kde-format
+msgid "$HOME directory (%1) is out of disk space."
+msgstr ""
+
+#: main.cpp:136
+#, kde-format
+msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+msgstr ""
+
+#: main.cpp:149 main.cpp:184
+#, kde-format
+msgid "No write access to '%1'."
+msgstr ""
+
+#: main.cpp:151 main.cpp:186
+#, kde-format
+msgid "No read access to '%1'."
+msgstr ""
+
+#: main.cpp:159 main.cpp:172
+#, kde-format
+msgid "Temp directory (%1) is out of disk space."
+msgstr ""
+
+#: main.cpp:162 main.cpp:175
+#, kde-format
+msgid ""
+"Writing to the temp directory (%2) failed with\n"
+"    the error '%1'"
+msgstr ""
+
+#: main.cpp:190
+#, kde-format
+msgid ""
+"The following installation problem was detected\n"
+"while trying to start Plasma:"
+msgstr ""
+
+#: main.cpp:193
+#, kde-format
+msgid ""
+"\n"
+"\n"
+"Plasma is unable to start.\n"
+msgstr ""
+
+#: main.cpp:200
+#, kde-format
+msgid "Plasma Workspace installation problem!"
+msgstr ""
+
+#: main.cpp:236
+#, fuzzy, kde-format
+#| msgid ""
+#| "The reliable KDE session manager that talks the standard X11R6 \n"
+#| "session management protocol (XSMP)."
+msgid ""
+"The reliable Plasma session manager that talks the standard X11R6 \n"
+"session management protocol (XSMP)."
+msgstr ""
+"Pengurus sesi KDE yang berinteraksi dengan\n"
+"protokol pengurusan sesi X11R6 piawai (XSMP)."
+
+#: main.cpp:240
+#, kde-format
+msgid "Restores the saved user session if available"
+msgstr "Pulihkan semula sesi yang disimpan pengguna jika ada"
+
+#: main.cpp:243
+#, kde-format
+msgid "Also allow remote connections"
+msgstr "Benarkan sambungan jauh juga"
+
+#: main.cpp:246
+#, kde-format
+msgid "Starts the session in locked mode"
+msgstr ""
+
+#: main.cpp:250
+#, kde-format
+msgid ""
+"Starts without lock screen support. Only needed if other component provides "
+"the lock screen."
+msgstr ""
+
+#: server.cpp:873
+#, fuzzy, kde-format
+#| msgid "The KDE Session Manager"
+msgid "Session Management"
+msgstr "Pengurus Sesi KDE"
+
+#: server.cpp:876
+#, kde-format
+msgid "Log Out"
+msgstr "Log Keluar"
+
+#: server.cpp:881
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "Log Keluar Tanpa Pengesahan"
+
+#: server.cpp:886
+#, kde-format
+msgid "Halt Without Confirmation"
+msgstr "Hentikan Tanpa Pengesahan"
+
+#: server.cpp:891
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "Ulangboot Tanpa Pengesahan"
+
+#, fuzzy
+#~| msgid ""
+#~| "Starts 'wm' in case no other window manager is \n"
+#~| "participating in the session. Default is 'kwin'"
+#~ msgid ""
+#~ "Starts <wm> in case no other window manager is \n"
+#~ "participating in the session. Default is 'kwin'"
+#~ msgstr ""
+#~ "Mulakan 'wm' jika tiada pengurus tetingkap lain \n"
+#~ "yang berada di dalam sesi. Default ialah 'kwin'"
+
+#, fuzzy
+#~| msgid "&Logout"
+#~ msgid "Logout"
+#~ msgstr "&Log keluar"
+
+#, fuzzy
+#~| msgid "Logging out in 1 second."
+#~| msgid_plural "Logging out in %1 seconds."
+#~ msgid "Sleeping in 1 second"
+#~ msgid_plural "Sleeping in %1 seconds"
+#~ msgstr[0] "Log keluar dalam 1 saat."
+#~ msgstr[1] "Log keluar dalam %1 saat."
+
+#~ msgid "Logging out in 1 second."
+#~ msgid_plural "Logging out in %1 seconds."
+#~ msgstr[0] "Log keluar dalam 1 saat."
+#~ msgstr[1] "Log keluar dalam %1 saat."
+
+#~ msgid "Turning off computer in 1 second."
+#~ msgid_plural "Turning off computer in %1 seconds."
+#~ msgstr[0] "Mematikan komputer dalam 1 saat."
+#~ msgstr[1] "Mematikan komputer dalam %1 saat."
+
+#~ msgid "Restarting computer in 1 second."
+#~ msgid_plural "Restarting computer in %1 seconds."
+#~ msgstr[0] "Mengulangmula komputer dalam 1 saat."
+#~ msgstr[1] "Mengulangmula komputer dalam %1 saat."
+
+#, fuzzy
+#~| msgid "&Turn Off Computer"
+#~ msgid "Turn Off Computer"
+#~ msgstr "&Tutup Komputer"
+
+#, fuzzy
+#~| msgid "&Restart Computer"
+#~ msgid "Restart Computer"
+#~ msgstr "Ulangmula Kompute&r"
+
+#~ msgctxt "default option in boot loader"
+#~ msgid " (default)"
+#~ msgstr " (default)"
+
+#, fuzzy
+#~| msgid "&Cancel"
+#~ msgid "Cancel"
+#~ msgstr "&Batal"
+
+#~ msgid "&Standby"
+#~ msgstr "&Siapsedia"
+
+#~ msgid "Suspend to &RAM"
+#~ msgstr "Gantung ke &RAM"
+
+#~ msgid "Suspend to &Disk"
+#~ msgstr "Tangguh ke &Cakera"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Muhammad Najmi Ahmad Zabidi, Sharuzzaman Ahmat Raslan"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "md_najmi@yahoo.com, sharuzzaman@myrealbox.com"
+
+#~ msgid "(C) 2000, The KDE Developers"
+#~ msgstr "(C) 2000, Pemaju KDE"
+
+#~ msgid "Matthias Ettrich"
+#~ msgstr "Matthias Ettrich"
+
+#~ msgid "Luboš Luňák"
+#~ msgstr "Luboš Luňák"
+
+#~ msgid "Maintainer"
+#~ msgstr "Penyelenggara"

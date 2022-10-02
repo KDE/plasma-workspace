@@ -1,0 +1,107 @@
+# translation of plasma_runner_kill.po to
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# xavier <ktranslator31@yahoo.fr>, 2013.
+# Xavier Besnard <xavier.besnard@neuf.fr>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_kill\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"PO-Revision-Date: 2020-05-17 17:52+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
+"Language-Team: French <kde-francophone@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 20.04.1\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: killrunner.cpp:30
+#, kde-format
+msgid "Send SIGTERM"
+msgstr "Envoyer « SIGTERM »"
+
+#: killrunner.cpp:32
+#, kde-format
+msgid "Send SIGKILL"
+msgstr "Envoyer « SIGKILL »"
+
+#: killrunner.cpp:51 killrunner_config.cpp:51 killrunner_config.cpp:77
+#, kde-format
+msgid "kill"
+msgstr "tuer"
+
+#: killrunner.cpp:57
+#, kde-format
+msgid "Terminate running applications whose names match the query."
+msgstr ""
+"Met fin aux applications en cours d'exécution dont les noms correspondent à "
+"la requête."
+
+#: killrunner.cpp:120
+#, kde-format
+msgid "Terminate %1"
+msgstr "Terminer %1"
+
+#: killrunner.cpp:121
+#, kde-format
+msgid "Process ID: %1"
+msgstr "ID du processus : %1"
+
+#: killrunner_config.cpp:32
+#, kde-format
+msgid "CPU usage"
+msgstr "Utilisation du processeur"
+
+#: killrunner_config.cpp:33
+#, kde-format
+msgid "inverted CPU usage"
+msgstr "Utilisation du processeur inversé"
+
+#: killrunner_config.cpp:34
+#, kde-format
+msgid "nothing"
+msgstr "rien"
+
+#. i18n: ectx: property (title), widget (QGroupBox, main)
+#: killrunner_config.ui:30
+#, kde-format
+msgid "Kill Applications Config"
+msgstr "Configuration pour la fermeture des applications"
+
+#. i18n: ectx: property (text), widget (QCheckBox, useTriggerWord)
+#: killrunner_config.ui:39
+#, kde-format
+msgid "&Use trigger word"
+msgstr "&Utiliser un mot déclencheur"
+
+#. i18n: ectx: property (text), widget (QLabel, label_trigger)
+#: killrunner_config.ui:51
+#, kde-format
+msgid "&Trigger word:"
+msgstr "Mo&t déclencheur :"
+
+#. i18n: ectx: property (text), widget (QLabel, label_sorting)
+#: killrunner_config.ui:72
+#, kde-format
+msgid "&Sort by"
+msgstr "Tr&ier par"
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, sorting)
+#: killrunner_config.ui:82
+#, kde-format
+msgid "It is not sure, that this will take effect"
+msgstr "Il n'est pas certain que cela ait un effet"
+
+#~ msgid ""
+#~ "Process ID: %1\n"
+#~ "Running as user: %2"
+#~ msgstr ""
+#~ "Identifiant de processus : %1\n"
+#~ "Exécution en tant qu'utilisateur : %2"

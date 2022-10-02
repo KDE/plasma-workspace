@@ -1,0 +1,427 @@
+# translation of kcmstyle.po to
+# Version: $Revision: 1632798 $
+# translation of kcmstyle.po to Polish
+# translation of kcmstyle.po to
+# Norbert Popiołek <norbert@kde.com.pl>
+# Michał Rudolf <mrudolf@kdewebdev.org>, 2002.
+# Michal Rudolf <mrudolf@kdewebdev.org>, 2003, 2004, 2005, 2008, 2009, 2010.
+# Krzysztof Lichota <lichota@mimuw.edu.pl>, 2005.
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2011, 2012, 2014, 2015, 2017, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmstyle\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"PO-Revision-Date: 2021-09-04 09:52+0200\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
+"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+">\n"
+"X-Generator: Lokalize 20.12.1\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+
+#: gtkpage.cpp:59
+#, kde-format
+msgid "%1 is not a valid GTK Theme archive."
+msgstr "%1 nie jest prawidłowym archiwum wyglądu GTK."
+
+#: kcmstyle.cpp:161 kcmstyle.cpp:168
+#, kde-format
+msgid "There was an error loading the configuration dialog for this style."
+msgstr "Błąd podczas wczytywania okna ustawień tego wyglądu."
+
+#: kcmstyle.cpp:274
+#, kde-format
+msgid "Failed to apply selected style '%1'."
+msgstr "Nie udało się zastosować wybranego wyglądu '%1'."
+
+#: package/contents/ui/EffectSettingsPopup.qml:32
+#, kde-format
+msgid "Show icons:"
+msgstr "Pokaż ikony:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:33
+#, kde-format
+msgid "On buttons"
+msgstr "Na przyciskach"
+
+#: package/contents/ui/EffectSettingsPopup.qml:44
+#, kde-format
+msgid "In menus"
+msgstr "W menu"
+
+#: package/contents/ui/EffectSettingsPopup.qml:56
+#, kde-format
+msgid "Main toolbar label:"
+msgstr "Etykieta głównego paska:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "None"
+msgstr "Brak"
+
+#: package/contents/ui/EffectSettingsPopup.qml:59
+#, kde-format
+msgid "Text only"
+msgstr "Tylko tekst"
+
+#: package/contents/ui/EffectSettingsPopup.qml:60
+#, kde-format
+msgid "Beside icons"
+msgstr "Obok ikon"
+
+#: package/contents/ui/EffectSettingsPopup.qml:61
+#, kde-format
+msgid "Below icon"
+msgstr "Pod ikonami"
+
+#: package/contents/ui/EffectSettingsPopup.qml:76
+#, kde-format
+msgid "Secondary toolbar label:"
+msgstr "Etykieta pobocznego paska narzędzi:"
+
+#: package/contents/ui/GtkStylePage.qml:18
+#, kde-format
+msgid "GNOME/GTK Application Style"
+msgstr "Wygląd aplikacji GNOME/GTK"
+
+#: package/contents/ui/GtkStylePage.qml:44
+#, kde-format
+msgid "GTK theme:"
+msgstr "Wygląd GTK:"
+
+#: package/contents/ui/GtkStylePage.qml:69
+#, kde-format
+msgid "Preview…"
+msgstr "Podgląd..."
+
+#: package/contents/ui/GtkStylePage.qml:88
+#, kde-format
+msgid "Install from File…"
+msgstr "Wgraj z pliku..."
+
+#: package/contents/ui/GtkStylePage.qml:93
+#, kde-format
+msgid "Get New GNOME/GTK Application Styles…"
+msgstr "Pobierz nowe wyglądy aplikacji GNOME/GTK..."
+
+#: package/contents/ui/GtkStylePage.qml:109
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr "Wybierz archiwum wyglądu GTK"
+
+#: package/contents/ui/GtkStylePage.qml:111
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr "Archiwum wyglądu GTK (*.tar.xz *.tar.gz *.tar.bz2)"
+
+#: package/contents/ui/main.qml:17
+#, kde-format
+msgid ""
+"This module allows you to modify the visual appearance of applications' user "
+"interface elements."
+msgstr "Moduł ten umożliwia zmianę wyglądu elementów interfejsu użytkownika."
+
+#: package/contents/ui/main.qml:96
+#, kde-format
+msgid "Configure Style…"
+msgstr "Ustawienia wyglądu..."
+
+#: package/contents/ui/main.qml:116
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr "Ustawienia ikon i pasków narzędzi"
+
+#: package/contents/ui/main.qml:132
+#, kde-format
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "Ustawienia wyglądu aplikacji GNOME/GTK..."
+
+#: styleconfdialog.cpp:21
+#, kde-format
+msgid "Configure %1"
+msgstr "%1 - Ustawienia"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "Karta 1"
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, kde-format
+msgid "Push Button"
+msgstr "Przycisk"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, kde-format
+msgid "Combo box"
+msgstr "Pole rozwijane"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "Pole zaznaczane"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "Pole wyboru"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:133
+#, kde-format
+msgid "Tab 2"
+msgstr "Karta 2"
+
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, kde-format
+msgid "Application style"
+msgstr "Wygląd aplikacji"
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, kde-format
+msgid "Show icons on buttons"
+msgstr "Pokaż ikony na przyciskach"
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, kde-format
+msgid "Show icons in menus"
+msgstr "Pokaż ikony w menu"
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, kde-format
+msgid "Main toolbar label"
+msgstr "Etykieta głównego paska narzędzi"
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, kde-format
+msgid "Secondary toolbar label"
+msgstr "Etykieta pobocznego paska narzędzi"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Michał Rudolf, Norbert Popiołek, Łukasz Wojniłowicz"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "mrudolf@kdewebdev.org, norbert@kde.com.pl, lukasz.wojnilowicz@gmail.com"
+
+#~ msgid "Application Style"
+#~ msgstr "Wygląd programów"
+
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
+#~ msgstr "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
+
+#~ msgid "Karol Szwed"
+#~ msgstr "Karol Szwed"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Kai Uwe Broulik"
+
+#, fuzzy
+#~| msgid "Configure Application Style..."
+#~ msgid "Download New GNOME/GTK2 Application Styles..."
+#~ msgstr "Ustawienia wyglądu aplikacji..."
+
+#, fuzzy
+#~| msgid "Application Style"
+#~ msgid "GNOME/GTK2 Application Styles"
+#~ msgstr "Wygląd programów"
+
+#, fuzzy
+#~| msgid "Configure Application Style..."
+#~ msgid "Download New GNOME/GTK3 Application Styles..."
+#~ msgstr "Ustawienia wyglądu aplikacji..."
+
+#, fuzzy
+#~| msgid "Application Style"
+#~ msgid "GNOME/GTK3 Application Styles"
+#~ msgstr "Wygląd programów"
+
+#~ msgid "Unable to Load Dialog"
+#~ msgstr "Nie można wczytać okna dialogowego"
+
+#~ msgid "No description available."
+#~ msgstr "Brak opisu."
+
+#~ msgid ""
+#~ "This area shows a preview of the currently selected style without having "
+#~ "to apply it to the whole desktop."
+#~ msgstr ""
+#~ "W tym oknie można zobaczyć wygląd aktualnie wybranego wyglądu, bez "
+#~ "konieczności stosowania go do całego środowiska."
+
+#~ msgid ""
+#~ "Here you can choose from a list of predefined widget styles (e.g. the way "
+#~ "buttons are drawn) which may or may not be combined with a theme "
+#~ "(additional information like a marble texture or a gradient)."
+#~ msgstr ""
+#~ "Stąd można wybrać jeden z gotowych wyglądów interfejsu (określających m. "
+#~ "in. wygląd przycisków). Niektóre style mogą być połączone z wystrojem "
+#~ "(dodatkową informacją o wyglądzie, taką jak np. marmurowe tło lub "
+#~ "gradient)."
+
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "some important buttons."
+#~ msgstr ""
+#~ "Po włączeniu tej opcji, na ważniejszych przyciskach wyświetlane będą małe "
+#~ "ikony."
+
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "most menu items."
+#~ msgstr ""
+#~ "Po włączeniu tej opcji, programy będą pokazywać małe ikony obok "
+#~ "większości elementów menu."
+
+#~ msgid ""
+#~ "<p><b>No text:</b> Shows only icons on toolbar buttons. Best option for "
+#~ "low resolutions.</p><p><b>Text only: </b>Shows only text on toolbar "
+#~ "buttons.</p><p><b>Text beside icons: </b> Shows icons and text on toolbar "
+#~ "buttons. Text is aligned beside the icon.</p><b>Text below icons: </b> "
+#~ "Shows icons and text on toolbar buttons. Text is aligned below the icon."
+#~ msgstr ""
+#~ "<p><b>Bez tekstu:</b> na przyciskach pasków narzędzi wyświetlane będą "
+#~ "tylko ikony (najlepsza opcja przy niskiej rozdzielczości).</p> "
+#~ "<p><b>Tylko tekst:</b> na przyciskach pasków narzędzi wyświetlany będzie "
+#~ "sam tekst.</p> <p><b>Tekst obok ikon:</b> na przyciskach pasków narzędzi "
+#~ "wyświetlane będą obok siebie tekst i ikona.</p> <b>Tekst pod ikonami:</b> "
+#~ "na przyciskach pasków narzędzi wyświetlane będą ikony, a pod nimi tekst."
+
+#~ msgid "Toolbars"
+#~ msgstr "Paski narzędzi"
+
+#~ msgid "No Text"
+#~ msgstr "Tylko ikony"
+
+#~ msgid "Widget Style"
+#~ msgstr "Wygląd elementu interfejsu"
+
+#~ msgid "Widget style:"
+#~ msgstr "Wygląd interfejsu:"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Fine Tuning"
+#~ msgstr "&Dostrajanie"
+
+#~ msgid "Description: %1"
+#~ msgstr "Opis: %1"
+
+#~ msgid ""
+#~ "This page allows you to choose details about the widget style options"
+#~ msgstr "Ta karta pozwala na ustawienia wyglądu elementów interfejsu"
+
+#~ msgid "Group Box"
+#~ msgstr "Pole grupujące"
+
+#~ msgid "KDE Style Module"
+#~ msgstr "Moduł ustawień wyglądu KDE"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "Menubar"
+#~ msgstr "Pasek menu"
+
+#~ msgid "Menubar style:"
+#~ msgstr "Wygląd paska menu:"
+
+#~ msgid "In application"
+#~ msgstr "W programie"
+
+#~ msgid "Title bar button"
+#~ msgstr "Przycisk paska tytułu"
+
+#, fuzzy
+#~| msgid "Application Menu widget"
+#~ msgid "Global Menu widget"
+#~ msgstr "Element interfejsu menu aplikacji"
+
+#~ msgid "Your changes will take effect only on application restart."
+#~ msgstr ""
+#~ "Twoje zmiany będą widoczne dopiero po ponownym uruchomieniu programu."
+
+#~ msgid ""
+#~ "<p>Changes to the visibility of menu icons will only affect newly started "
+#~ "applications.</p>"
+#~ msgstr ""
+#~ "<p>Zmiany do wyglądu ikon menu będą dotyczyły tylko nowo rozpoczętych "
+#~ "programów.</p>"
+
+#~ msgctxt "@title:window"
+#~ msgid "Menu Icons Changed"
+#~ msgstr "Zmieniono ikony menu"
+
+#~ msgid "Top screen menubar"
+#~ msgstr "Pasek menu na górze ekranu"
+
+#~ msgid "Only export"
+#~ msgstr "Tylko eksport"
+
+#~ msgid "Graphical effects:"
+#~ msgstr "Efekty graficzne:"
+
+#~ msgid "Low display resolution and Low CPU"
+#~ msgstr "Niska rozdzielczość i małe obciążenie procesora"
+
+#~ msgid "High display resolution and Low CPU"
+#~ msgstr "Wysoka rozdzielczość i małe obciążenie procesora"
+
+#~ msgid "Low display resolution and High CPU"
+#~ msgstr "Niska rozdzielczość i duże obciążenie procesora"
+
+#~ msgid "High display resolution and High CPU"
+#~ msgstr "Wysoka rozdzielczość i duże obciążenie procesora"
+
+#~ msgid "Low display resolution and Very High CPU"
+#~ msgstr "Niska rozdzielczość i bardzo duże obciążenie procesora"
+
+#~ msgid "High display resolution and Very High CPU"
+#~ msgstr "Wysoka rozdzielczość i bardzo duże obciążenie procesora"
+
+#~ msgid ""
+#~ "If you enable this option, KDE Applications will run internal animations."
+#~ msgstr ""
+#~ "Jeśli ta opcja jest włączona, aplikacje KDE będą wyświetlać wbudowane "
+#~ "animacje."
+
+#~ msgid "kcmstyle"
+#~ msgstr "kcmstyle"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Workspace"
+#~ msgstr "Przestrzeń &robocza"
+
+#~ msgid "Get New Themes..."
+#~ msgstr "Pobierz nowe motywy..."
+
+#~ msgid "Icons Only"
+#~ msgstr "Tylko ikony"
+
+#~ msgctxt "@label:listbox"
+#~ msgid "Text pos&ition of toolbar elements:"
+#~ msgstr "Pozycja tekstu &elementów paska narzędzi:"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Style"
+#~ msgstr "&Styl"

@@ -1,0 +1,646 @@
+# translation of kcmstyle.po to
+# Danish translation of kcmstyle
+# Copyright (C).
+#
+# Erik Kjær Pedersen <erik@binghamton.edu>, 2000, 2002, 2003, 2004, 2005.
+# Martin Schlander <mschlander@opensuse.org>, 2008, 2009, 2010, 2012, 2017, 2018, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmstyle\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"PO-Revision-Date: 2020-10-04 17:16+0200\n"
+"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"Language-Team: Danish <kde-i18n-doc@kde.org>\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.04.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: gtkpage.cpp:59
+#, kde-format
+msgid "%1 is not a valid GTK Theme archive."
+msgstr "%1 er ikke et gyldigt GTK-temaarkiv."
+
+#: kcmstyle.cpp:161 kcmstyle.cpp:168
+#, kde-format
+msgid "There was an error loading the configuration dialog for this style."
+msgstr ""
+"Der opstod en fejl ved indlæsning af indstillingsdialogen for denne stil."
+
+#: kcmstyle.cpp:274
+#, kde-format
+msgid "Failed to apply selected style '%1'."
+msgstr "Kunne ikke anvende den valgte stil \"%1\"."
+
+#: package/contents/ui/EffectSettingsPopup.qml:32
+#, kde-format
+msgid "Show icons:"
+msgstr "Vis ikoner:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:33
+#, kde-format
+msgid "On buttons"
+msgstr "På knapper"
+
+#: package/contents/ui/EffectSettingsPopup.qml:44
+#, kde-format
+msgid "In menus"
+msgstr "I menuer"
+
+#: package/contents/ui/EffectSettingsPopup.qml:56
+#, kde-format
+msgid "Main toolbar label:"
+msgstr "Etiket på hovedværktøjslinje:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "None"
+msgstr "Ingen"
+
+#: package/contents/ui/EffectSettingsPopup.qml:59
+#, kde-format
+msgid "Text only"
+msgstr "Kun tekst"
+
+#: package/contents/ui/EffectSettingsPopup.qml:60
+#, kde-format
+msgid "Beside icons"
+msgstr "Ved siden af ikoner"
+
+#: package/contents/ui/EffectSettingsPopup.qml:61
+#, kde-format
+msgid "Below icon"
+msgstr "Under ikon"
+
+#: package/contents/ui/EffectSettingsPopup.qml:76
+#, kde-format
+msgid "Secondary toolbar label:"
+msgstr "Etiket på sekundær værktøjslinje:"
+
+#: package/contents/ui/GtkStylePage.qml:18
+#, kde-format
+msgid "GNOME/GTK Application Style"
+msgstr "Programstil for GNOME-/GTK-programmer"
+
+#: package/contents/ui/GtkStylePage.qml:44
+#, kde-format
+msgid "GTK theme:"
+msgstr "GTK-tema:"
+
+#: package/contents/ui/GtkStylePage.qml:69
+#, fuzzy, kde-format
+#| msgid "Preview..."
+msgid "Preview…"
+msgstr "Forhåndsvis..."
+
+#: package/contents/ui/GtkStylePage.qml:88
+#, fuzzy, kde-format
+#| msgid "Install from File..."
+msgid "Install from File…"
+msgstr "Installér fra fil..."
+
+#: package/contents/ui/GtkStylePage.qml:93
+#, fuzzy, kde-format
+#| msgid "Get New GNOME/GTK Application Styles..."
+msgid "Get New GNOME/GTK Application Styles…"
+msgstr "Hent nye GNOME-/GTK-programstile..."
+
+#: package/contents/ui/GtkStylePage.qml:109
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr "Vælg GTK-temaarkiv"
+
+#: package/contents/ui/GtkStylePage.qml:111
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr "GTK temaarkiv (*.tar.xz *.tar.gz *.tar.bz2)"
+
+#: package/contents/ui/main.qml:17
+#, kde-format
+msgid ""
+"This module allows you to modify the visual appearance of applications' user "
+"interface elements."
+msgstr ""
+"Dette modul lader dig ændre det visuelle udseende af programmers "
+"brugerfladeelementer."
+
+#: package/contents/ui/main.qml:96
+#, fuzzy, kde-format
+#| msgid "Configure Style..."
+msgid "Configure Style…"
+msgstr "Indstil stil..."
+
+#: package/contents/ui/main.qml:116
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr "Indstil ikoner og værktøjslinjer"
+
+#: package/contents/ui/main.qml:132
+#, fuzzy, kde-format
+#| msgid "Configure GNOME/GTK Application Style..."
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "Indstil GNOME-/GTK-programstil..."
+
+#: styleconfdialog.cpp:21
+#, kde-format
+msgid "Configure %1"
+msgstr "Indstil %1"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "Faneblad 1"
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, kde-format
+msgid "Push Button"
+msgstr "Trykknap"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, kde-format
+msgid "Combo box"
+msgstr "Kombinationsfelt"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "Afkrydsningsfelt"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "Radioknap"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:133
+#, kde-format
+msgid "Tab 2"
+msgstr "Faneblad 2"
+
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, kde-format
+msgid "Application style"
+msgstr "Programstil"
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, kde-format
+msgid "Show icons on buttons"
+msgstr "Vis ikoner på knapper"
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, kde-format
+msgid "Show icons in menus"
+msgstr "Vis ikoner i menuer"
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, kde-format
+msgid "Main toolbar label"
+msgstr "Etiket på hovedværktøjslinje"
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, kde-format
+msgid "Secondary toolbar label"
+msgstr "Etiket på sekundær værktøjslinje"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Erik Kjær Pedersen"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "erik@binghamton.edu"
+
+#~ msgid "Application Style"
+#~ msgstr "Programstil"
+
+#, fuzzy
+#~| msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik"
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
+#~ msgstr "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik"
+
+#~ msgid "Karol Szwed"
+#~ msgstr "Karol Szwed"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Kai Uwe Broulik"
+
+#~ msgid "GTK3 theme:"
+#~ msgstr "GTK3-tema:"
+
+#~ msgid "Download New GNOME/GTK2 Application Styles..."
+#~ msgstr "Download nye GNOME-/GTK2-programstile..."
+
+#~ msgid "GNOME/GTK2 Application Styles"
+#~ msgstr "GNOME-/GTK2-programstile"
+
+#~ msgid "Download New GNOME/GTK3 Application Styles..."
+#~ msgstr "Download nye GNOME-/GTK3-programstile..."
+
+#~ msgid "GNOME/GTK3 Application Styles"
+#~ msgstr "GNOME-/GTK3-programstile"
+
+#~ msgid "Unable to Load Dialog"
+#~ msgstr "Kan ikke indlæse dialog"
+
+#~ msgid "No description available."
+#~ msgstr "Ingen beskrivelse tilgængelig."
+
+#~ msgid ""
+#~ "This area shows a preview of the currently selected style without having "
+#~ "to apply it to the whole desktop."
+#~ msgstr ""
+#~ "Dette område giver en forhåndsvisning af den valgte stil, uden at skulle "
+#~ "anvende den på hele desktoppen."
+
+#~ msgid ""
+#~ "Here you can choose from a list of predefined widget styles (e.g. the way "
+#~ "buttons are drawn) which may or may not be combined with a theme "
+#~ "(additional information like a marble texture or a gradient)."
+#~ msgstr ""
+#~ "Her kan du vælge fra en liste af prædefinerede dimsstile (f.eks. den måde "
+#~ "knapper er tegnet på) som også kan være kombineret med et tema (ekstra "
+#~ "information som marmor-tekstur eller en overgang)."
+
+#, fuzzy
+#~| msgid ""
+#~| "If you enable this option, KDE Applications will show small icons "
+#~| "alongside some important buttons."
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "some important buttons."
+#~ msgstr ""
+#~ "Hvis du aktiverer dette, vil KDE-programmer vise små ikoner ved siden af "
+#~ "nogle vigtige knapper."
+
+#, fuzzy
+#~| msgid ""
+#~| "If you enable this option, KDE Applications will show small icons "
+#~| "alongside most menu items."
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "most menu items."
+#~ msgstr ""
+#~ "Hvis du aktiverer dette, vil KDE-programmer vise små ikoner ved siden af "
+#~ "de fleste menupunkter."
+
+#, fuzzy
+#~| msgid ""
+#~| "<p><b>No Text:</b> Shows only icons on toolbar buttons. Best option for "
+#~| "low resolutions.</p><p><b>Text Only: </b>Shows only text on toolbar "
+#~| "buttons.</p><p><b>Text Beside Icons: </b> Shows icons and text on "
+#~| "toolbar buttons. Text is aligned beside the icon.</p><b>Text Below "
+#~| "Icons: </b> Shows icons and text on toolbar buttons. Text is aligned "
+#~| "below the icon."
+#~ msgid ""
+#~ "<p><b>No text:</b> Shows only icons on toolbar buttons. Best option for "
+#~ "low resolutions.</p><p><b>Text only: </b>Shows only text on toolbar "
+#~ "buttons.</p><p><b>Text beside icons: </b> Shows icons and text on toolbar "
+#~ "buttons. Text is aligned beside the icon.</p><b>Text below icons: </b> "
+#~ "Shows icons and text on toolbar buttons. Text is aligned below the icon."
+#~ msgstr ""
+#~ "<p><b>Ingen tekst:</b> Viser kun ikoner på værktøjslinjeknapper. Bedste "
+#~ "valg for lave opløsninger.</p><p><b>Kun tekst: </b>Viser kun tekst på "
+#~ "værktøjslinjeknapper.</p><p><b>Tekst ved siden af ikoner: </b> Viser "
+#~ "tekst og ikoner på værktøjslinjeknapper. Teksten er justeret langs med "
+#~ "ikonet.</p><b>Tekst under ikoner: </b> Viser ikoner og tekst på "
+#~ "værktøjslinjeknapper. Teksten er justeret under ikonet."
+
+#~ msgid "Toolbars"
+#~ msgstr "Værktøjslinjer"
+
+#~ msgid "No Text"
+#~ msgstr "Ingen tekst"
+
+#, fuzzy
+#~| msgid "Widget style:"
+#~ msgid "Widget Style"
+#~ msgstr "Kontrolstil:"
+
+#~ msgid "Widget style:"
+#~ msgstr "Kontrolstil:"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Fine Tuning"
+#~ msgstr "&Finjustering"
+
+#~ msgid "Description: %1"
+#~ msgstr "Beskrivelse: %1"
+
+#~ msgid ""
+#~ "This page allows you to choose details about the widget style options"
+#~ msgstr ""
+#~ "Denne side lader dig vælge detaljer om indstillinger for kontrolstilen"
+
+#~ msgid "Group Box"
+#~ msgstr "Gruppeboks"
+
+#~ msgid "KDE Style Module"
+#~ msgstr "KDE Stil-modul"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "Menubar"
+#~ msgstr "Menulinje"
+
+#~ msgid "Menubar style:"
+#~ msgstr "Menulinje-stil:"
+
+#~ msgid "In application"
+#~ msgstr "I programmet"
+
+#~ msgid "Title bar button"
+#~ msgstr "Titellinjeknap"
+
+#, fuzzy
+#~| msgid "Application Menu widget"
+#~ msgid "Global Menu widget"
+#~ msgstr "Widget til programmenu"
+
+#~ msgid "Your changes will take effect only on application restart."
+#~ msgstr "Dine ændringer vil først få virkning efter programmet genstartes."
+
+#~ msgid ""
+#~ "<p>Changes to the visibility of menu icons will only affect newly started "
+#~ "applications.</p>"
+#~ msgstr ""
+#~ "<p>Ændring af synligheden for menuikoner vil kun påvirke nystartede "
+#~ "programmer.</p>"
+
+#~ msgctxt "@title:window"
+#~ msgid "Menu Icons Changed"
+#~ msgstr "Menuikoner ændret"
+
+#~ msgid "Top screen menubar"
+#~ msgstr "Menulinje i toppen af skærmen"
+
+#~ msgid "Only export"
+#~ msgstr "Kun eksport"
+
+#~ msgid "Graphical effects:"
+#~ msgstr "Grafiske effekter:"
+
+#~ msgid "Low display resolution and Low CPU"
+#~ msgstr "Lav skærmopløsning og lav CPU"
+
+#~ msgid "High display resolution and Low CPU"
+#~ msgstr "Høj skærmopløsning og lav CPU"
+
+#~ msgid "Low display resolution and High CPU"
+#~ msgstr "Lav skærmopløsning og høj CPU"
+
+#~ msgid "High display resolution and High CPU"
+#~ msgstr "Høj skærmopløsning og høj CPU"
+
+#~ msgid "Low display resolution and Very High CPU"
+#~ msgstr "Lav skærmopløsning og meget høj CPU"
+
+#~ msgid "High display resolution and Very High CPU"
+#~ msgstr "Høj skærmopløsning og meget høj CPU"
+
+#~ msgid ""
+#~ "If you enable this option, KDE Applications will run internal animations."
+#~ msgstr ""
+#~ "Hvis du aktiverer dette, vil KDE-programmer køre interne animationer."
+
+#~ msgid "kcmstyle"
+#~ msgstr "kcmstyle"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Workspace"
+#~ msgstr "&Arbejdsområde"
+
+#~ msgid "Get New Themes..."
+#~ msgstr "Hent nye temaer..."
+
+#~ msgid "Icons Only"
+#~ msgstr "Kun ikoner"
+
+#~ msgctxt "@label:listbox"
+#~ msgid "Text pos&ition of toolbar elements:"
+#~ msgstr "Tekstplacer&ing for værktøjslinje-elementer:"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Style"
+#~ msgstr "&Stil"
+
+#~ msgid ""
+#~ "This page allows you to enable various widget style effects. For best "
+#~ "performance, it is advisable to disable all effects."
+#~ msgstr ""
+#~ "Denne side lader dig aktivere forskellige kontrol-stil-effekter. For "
+#~ "bedste ydelse er det tilrådeligt at deaktivere disse effekter."
+
+#, fuzzy
+#~| msgid "High&light buttons under mouse"
+#~ msgctxt "@option:check"
+#~ msgid "High&light buttons under mouse"
+#~ msgstr "Frem&hæv knapper under mus"
+
+#, fuzzy
+#~| msgid "E&nable tooltips"
+#~ msgctxt "@option:check"
+#~ msgid "E&nable tooltips"
+#~ msgstr "&Aktivér værktøjsvink"
+
+#~ msgid ""
+#~ "If this option is selected, toolbar buttons will change their color when "
+#~ "the mouse cursor is moved over them."
+#~ msgstr ""
+#~ "Med dette valg, vil værktøjslinje knapper ændre deres farve når "
+#~ "musemarkøren bevæges hen over dem."
+
+#~ msgid ""
+#~ "If you check this option, the KDE application will offer tooltips when "
+#~ "the cursor remains over items in the toolbar."
+#~ msgstr ""
+#~ "Hvis du afkrydser dette, vil KDE-programmet tilbyde gode råd når markøren "
+#~ "forbliver over punkterne i værktøjslinjen."
+
+#~ msgid "&Effects"
+#~ msgstr "&Effekter"
+
+#~ msgid "Show tear-off handles in &popup menus"
+#~ msgstr "Vis afrivningshåndtag i &popop-menuer"
+
+#~ msgid "&Enable GUI effects"
+#~ msgstr "&Aktivér GUI-effekter"
+
+#~ msgid "Disable"
+#~ msgstr "Deaktivér"
+
+#~ msgid "Animate"
+#~ msgstr "Animér"
+
+#~ msgid "Combobo&x effect:"
+#~ msgstr "Kombinationsfelt-effekt:"
+
+#~ msgid "Fade"
+#~ msgstr "Svind hen"
+
+#~ msgid "&Tool tip effect:"
+#~ msgstr "&Værktøjsvink-effekt:"
+
+#~ msgid "Make Translucent"
+#~ msgstr "Gør gennemsigtigt"
+
+#~ msgid "&Menu effect:"
+#~ msgstr "&Menu-effekt:"
+
+#~ msgid "Me&nu tear-off handles:"
+#~ msgstr "Afrivelige håndtag for &menu:"
+
+#~ msgid "Menu &drop shadow"
+#~ msgstr "Menu &trækkeskygge"
+
+#~ msgid "Software Tint"
+#~ msgstr "Software-blæk"
+
+#~ msgid "Software Blend"
+#~ msgstr "Software-blanding"
+
+#~ msgid "XRender Blend"
+#~ msgstr "XRender-blanding"
+
+#~ msgid "0%"
+#~ msgstr "0%"
+
+#~ msgid "50%"
+#~ msgstr "50%"
+
+#~ msgid "100%"
+#~ msgstr "100%"
+
+#~ msgid "Menu trans&lucency type:"
+#~ msgstr "Menu-&gennemsigtighedstype:"
+
+#~ msgid "Menu &opacity:"
+#~ msgstr "Menu-&uigennemsigtighed:"
+
+#~ msgid "Transparent tool&bars when moving"
+#~ msgstr "Gennemsigtige værktøjs&linjer når de bevæges"
+
+#~ msgid ""
+#~ "<qt>Selected style: <b>%1</b><br /><br />One or more effects that you "
+#~ "have chosen could not be applied because the selected style does not "
+#~ "support them; they have therefore been disabled.<br /><br /></qt>"
+#~ msgstr ""
+#~ "<qt>Valgt stil: <b>%1</b><br /><br />En eller flere effekter som du har "
+#~ "valgt kunne ikke anvendes fordi den valgte stil ikke understøtter dem; de "
+#~ "er derfor blevet deaktiverede.<br /><br /></qt>"
+
+#~ msgid "Menu translucency is not available.<br />"
+#~ msgstr "Menugennemsigtighed er utilgængelig.<br />"
+
+#~ msgid "Menu drop-shadows are not available."
+#~ msgstr "Menu-dropskygge er ikke tilgængelig."
+
+#~ msgid ""
+#~ "If you check this box, you can select several effects for different "
+#~ "widgets like combo boxes, menus or tooltips."
+#~ msgstr ""
+#~ "Hvis du afkrydser dette felt, kan du vælge adskillige effekter for "
+#~ "forskellige kontroller såsom kombinationsfelter, menuer eller "
+#~ "værktøjsvink."
+
+#~ msgid ""
+#~ "<p><b>Disable: </b>do not use any combo box effects.</p>\n"
+#~ "<b>Animate: </b>Do some animation."
+#~ msgstr ""
+#~ "<p><b>Deaktivér: </b>Brug ingen kombinationsfelt effekter.</p>\n"
+#~ "<b>Animér: </b>Gør noget animering."
+
+#~ msgid ""
+#~ "<p><b>Disable: </b>do not use any tooltip effects.</p>\n"
+#~ "<p><b>Animate: </b>Do some animation.</p>\n"
+#~ "<b>Fade: </b>Fade in tooltips using alpha-blending."
+#~ msgstr ""
+#~ "<p><b>Deaktivér: </b>Brug ingen værktøjsvink effekter.</p>\n"
+#~ "<p><b>Animér: </b>Gør nogen animering.</p>\n"
+#~ "<b>Svind hen: </b>Lad værktøjsvink svinde hen ved brug af alfa-blanding."
+
+#~ msgid ""
+#~ "<p><b>Disable: </b>do not use any menu effects.</p>\n"
+#~ "<p><b>Animate: </b>Do some animation.</p>\n"
+#~ "<p><b>Fade: </b>Fade in menus using alpha-blending.</p>\n"
+#~ "<b>Make Translucent: </b>Alpha-blend menus for a see-through effect. (KDE "
+#~ "styles only)"
+#~ msgstr ""
+#~ "<p><b>Deaktivér: </b>Brug ingen menueffekter.</p>\n"
+#~ "<p><b>Animér: </b>Gør noget animering.</p>\n"
+#~ "<p><b>Svind hen: </b>Lad menuer svinde hen ved brug af alfa-blanding.</"
+#~ "p>\n"
+#~ "<b>Gør gennemsigtig: </b>Alfa-bland menuer for en gennemsigtig effekt. "
+#~ "(kun KDE stil)"
+
+#~ msgid ""
+#~ "When enabled, all popup menus will have a drop-shadow, otherwise drop-"
+#~ "shadows will not be displayed. At present, only KDE styles can have this "
+#~ "effect enabled."
+#~ msgstr ""
+#~ "Når dette er aktiveret, har alle popop-menuer en trækkeskygge, ellers vil "
+#~ "trækkeskygger ikke blive vist. For øjeblikket er det kun KDE-stil der kan "
+#~ "have denne effekt aktiveret. "
+
+#~ msgid ""
+#~ "<p><b>Software Tint: </b>Alpha-blend using a flat color.</p>\n"
+#~ "<p><b>Software Blend: </b>Alpha-blend using an image.</p>\n"
+#~ "<p><b>XRender Blend: </b>Use the XFree RENDER extension for image "
+#~ "blending (if available). This method may be slower than the Software "
+#~ "routines on non-accelerated displays, but may however improve performance "
+#~ "on remote displays.</p>\n"
+#~ msgstr ""
+#~ "<p><b>Softwaretoning: </b>Alfa-blend ved brug af en flad farve.</p>\n"
+#~ "<p><b>Software-blend: </b>Alfa-blend ved brug af et billede.</p>\n"
+#~ "<p><b>XRender-blend: </b>Brug XFree RENDER-udvidelsen til billedblending "
+#~ "(hvis tilgængelig). Denne metode er muligvis langsommere end Software-"
+#~ "rutiner på ikke-accelererede skærme, men den giver muligvis forbedret "
+#~ "ydelse på eksterne skærme.</p>\n"
+
+#~ msgid "By adjusting this slider you can control the menu effect opacity."
+#~ msgstr ""
+#~ "Ved at justere denne skyder kan du kontrollere menueffekten "
+#~ "gennemsigtighed."
+
+#~ msgid ""
+#~ "<b>Note:</b> that all widgets in this combobox do not apply to Qt-only "
+#~ "applications."
+#~ msgstr ""
+#~ "<b>Bemærk:</b> at alle dimser i dette kombinationsfelt ikke anvendes på "
+#~ "kun-Qt-programmerne."
+
+#~ msgid ""
+#~ "If you check this box, the toolbars will be transparent when moving them "
+#~ "around."
+#~ msgstr ""
+#~ "Hvis du afkrydser dette felt, vil værktøjslinjerne være gennemsigtige når "
+#~ "du flytter dem rundt."
+
+#~ msgid ""
+#~ "If you enable this option some pop-up menus will show so called tear-off "
+#~ "handles. If you click them, you get the menu inside a widget. This can be "
+#~ "very helpful when performing the same action multiple times."
+#~ msgstr ""
+#~ "Hvis du aktiverer dette vil nogle pop-op-menuer vise et såkaldt afrivbart "
+#~ "håndtag. Hvis du klikke på dem, vil du få menuen indeni i en dims. Dette "
+#~ "kan være en stor hjælp når man udfører den samme handling flere gange."
+
+#~ msgid "%"
+#~ msgstr "%"

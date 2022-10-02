@@ -1,0 +1,2402 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# g.sora <g.sora@tiscali.it>, 2010, 2011, 2012, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-10 00:46+0000\n"
+"PO-Revision-Date: 2021-12-21 14:32+0100\n"
+"Last-Translator: giovanni <g.sora@tiscali.it>\n"
+"Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
+"Language: ia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Giovanni Sora"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "g.sora@tiscali.it"
+
+#: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:956
+#, kde-format
+msgid ""
+"Do you wish to install the font(s) for personal use (only available to you), "
+"or system-wide (available to all users)?"
+msgstr ""
+"Tu vole installar le font(es) pro uso personal (solmente disponibile pro "
+"te), o pro tote le systema (disponibile a omne usatores)?"
+
+#: apps/Installer.cpp:38 kcmfontinst/KCmFontInst.cpp:959
+#, kde-format
+msgid "Where to Install"
+msgstr "Ubi installar"
+
+#: apps/Installer.cpp:110
+#, kde-format
+msgid "Font Installer"
+msgstr "Installator de Font"
+
+#: apps/Installer.cpp:112
+#, kde-format
+msgid "Simple font installer"
+msgstr "Simplice Installator de Font"
+
+#: apps/Installer.cpp:114 apps/Printer.cpp:329
+#, kde-format
+msgid "(C) Craig Drummond, 2007"
+msgstr "(C) Craig Drummond, 2007"
+
+#: apps/Installer.cpp:120 apps/Printer.cpp:335
+#, kde-format
+msgid "Makes the dialog transient for an X app specified by winid"
+msgstr "Il face le dialogo transiente pro un app X specificate per winid"
+
+#: apps/Installer.cpp:122
+#, kde-format
+msgid "URL to install"
+msgstr "URL a installar"
+
+#: apps/Printer.cpp:238
+#, kde-format
+msgid "Print"
+msgstr "Imprime"
+
+#: apps/Printer.cpp:308 kcmfontinst/DuplicatesDialog.cpp:210
+#, kde-format
+msgid "Canceling…"
+msgstr "Il es cancellante ..."
+
+#: apps/Printer.cpp:325
+#, kde-format
+msgid "Font Printer"
+msgstr "Imprimitor de Font"
+
+#: apps/Printer.cpp:327
+#, kde-format
+msgid "Simple font printer"
+msgstr "Simple imprimitor de font"
+
+#: apps/Printer.cpp:337
+#, kde-format
+msgid "Size index to print fonts"
+msgstr "Indice de dimension pro imprimer fonts"
+
+#: apps/Printer.cpp:341
+#, kde-format
+msgid ""
+"Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
+"number composed as: <weight><width><slant>"
+msgstr ""
+"Font de imprimer, specificate como \"Familia,Stilo\" ubi Stilo es un numero "
+"decimal de 24-bit composite como: <weight><width><slant>"
+
+#: apps/Printer.cpp:344
+#, kde-format
+msgid "File containing list of fonts to print"
+msgstr "File continente lista de fontes a imprimer"
+
+#: apps/Printer.cpp:346
+#, kde-format
+msgid "Remove file containing list of fonts to print"
+msgstr "Remove file continente lista de fonts a imprimer"
+
+#: apps/Viewer.cpp:48
+#, kde-format
+msgid "Open an existing font file"
+msgstr "Aperi un file de font existente"
+
+#: apps/Viewer.cpp:49
+#, kde-format
+msgid "Print font preview"
+msgstr "Imprime vista preliminar  de Font"
+
+#: apps/Viewer.cpp:66
+#, kde-format
+msgid "Select Font to View"
+msgstr "Selectiona un font a vider"
+
+#: apps/Viewer.cpp:109
+#, kde-format
+msgid "URL to open"
+msgstr "URL que debe aperir se"
+
+#: apps/Viewer.cpp:152
+#, kde-format
+msgid "Font Viewer"
+msgstr "Visor de Font"
+
+#: apps/Viewer.cpp:154
+#, kde-format
+msgid "Simple font viewer"
+msgstr "Simple Visor de Font"
+
+#: apps/Viewer.cpp:156
+#, kde-format
+msgid "(C) Craig Drummond, 2004-2007"
+msgstr "(C) Craig Drummond, 2004-2007"
+
+#: kcmfontinst/DuplicatesDialog.cpp:47
+#, kde-format
+msgid "Duplicate Fonts"
+msgstr "Fontes duplicate"
+
+#: kcmfontinst/DuplicatesDialog.cpp:77
+#, kde-format
+msgid "Scanning for duplicate fonts. Please wait…"
+msgstr "Il scande pro fontes duplicate. Pro favor tu expecta..."
+
+#: kcmfontinst/DuplicatesDialog.cpp:96
+#, kde-format
+msgid "No duplicate fonts found."
+msgstr "Necun fontes duplicate esseva trovate"
+
+#: kcmfontinst/DuplicatesDialog.cpp:104
+#, kde-format
+msgid "Delete Marked Files"
+msgstr "Dele Files Marcate"
+
+#: kcmfontinst/DuplicatesDialog.cpp:106
+#, kde-format
+msgid "%1 duplicate font found."
+msgid_plural "%1 duplicate fonts found."
+msgstr[0] "%1 font duplicate trovate."
+msgstr[1] "%1 fontes duplicate trovate."
+
+#: kcmfontinst/DuplicatesDialog.cpp:185
+#, kde-format
+msgid ""
+"Are you sure you wish to delete:\n"
+"%1"
+msgstr ""
+"Tu es secur que tu vole deler:\n"
+"%1"
+
+#: kcmfontinst/DuplicatesDialog.cpp:186
+#, kde-format
+msgid "Are you sure you wish to delete:"
+msgstr "Tu es secur que tu vole deler:"
+
+#: kcmfontinst/DuplicatesDialog.cpp:209
+#, kde-format
+msgid "Cancel font scan?"
+msgstr "Cancella scansion de font?"
+
+#: kcmfontinst/DuplicatesDialog.cpp:370
+#, kde-format
+msgid "Font/File"
+msgstr "Font/File"
+
+#: kcmfontinst/DuplicatesDialog.cpp:372
+#, kde-format
+msgid "Size"
+msgstr "Dimension"
+
+#: kcmfontinst/DuplicatesDialog.cpp:373
+#, kde-format
+msgid "Date"
+msgstr "Data"
+
+#: kcmfontinst/DuplicatesDialog.cpp:374
+#, kde-format
+msgid "Links To"
+msgstr "Ligamines a"
+
+#: kcmfontinst/DuplicatesDialog.cpp:387 kcmfontinst/FontList.cpp:1315
+#, kde-format
+msgid "Open in Font Viewer"
+msgstr "Aperi in visor de font"
+
+#: kcmfontinst/DuplicatesDialog.cpp:389
+#, kde-format
+msgid "Properties"
+msgstr "Proprietates"
+
+#: kcmfontinst/DuplicatesDialog.cpp:391
+#, kde-format
+msgid "Unmark for Deletion"
+msgstr "Leva signos de cancellation"
+
+#: kcmfontinst/DuplicatesDialog.cpp:392
+#, kde-format
+msgid "Mark for Deletion"
+msgstr "Marca pro cancellation"
+
+#: kcmfontinst/DuplicatesDialog.cpp:488
+#, kde-format
+msgid "Open font in font viewer?"
+msgid_plural "Open all %1 fonts in font viewer?"
+msgstr[0] "Aperi  font in un visor de font?"
+msgstr[1] "Aperi omne %1 fonts in un visor de font?"
+
+#: kcmfontinst/FontFilter.cpp:103
+#, kde-format
+msgid "Family"
+msgstr "Familia"
+
+#: kcmfontinst/FontFilter.cpp:105
+#, kde-format
+msgid "Style"
+msgstr "Stilo"
+
+#: kcmfontinst/FontFilter.cpp:107
+#, kde-format
+msgid "Foundry"
+msgstr "Funderia"
+
+#: kcmfontinst/FontFilter.cpp:109
+#, kde-format
+msgid "FontConfig Match"
+msgstr "Correspondentia de FontConfig"
+
+#: kcmfontinst/FontFilter.cpp:111
+#, kde-format
+msgid "File Type"
+msgstr "Typo de File"
+
+#: kcmfontinst/FontFilter.cpp:113
+#, kde-format
+msgid "File Name"
+msgstr "Nomine de file"
+
+#: kcmfontinst/FontFilter.cpp:115
+#, kde-format
+msgid "File Location"
+msgstr "Location de File"
+
+#: kcmfontinst/FontFilter.cpp:117
+#, kde-format
+msgid "Writing System"
+msgstr "Systema de Scriptura"
+
+#: kcmfontinst/FontFilter.cpp:129
+#, kde-format
+msgid "Set Criteria"
+msgstr "Fixa criterios"
+
+#: kcmfontinst/FontFilter.cpp:188
+#, kde-format
+msgid "Symbol/Other"
+msgstr "Symbolo/Altere"
+
+#: kcmfontinst/FontFilter.cpp:266 kcmfontinst/FontFilter.cpp:334
+#, kde-format
+msgid "Filter by %1…"
+msgstr "Filtra per %1..."
+
+#: kcmfontinst/FontList.cpp:554
+#, kde-format
+msgid "Font"
+msgstr "Font"
+
+#: kcmfontinst/FontList.cpp:556
+#, kde-format
+msgid "Status"
+msgstr "Stato"
+
+#: kcmfontinst/FontList.cpp:570
+#, kde-format
+msgid ""
+"This column shows the status of the font family, and of the individual font "
+"styles."
+msgstr ""
+"Iste columna monstra le stato del familia de font, e del stilos de font "
+"individual."
+
+#: kcmfontinst/FontList.cpp:677
+#, kde-format
+msgid ""
+"<p>This list shows your installed fonts. The fonts are grouped by family, "
+"and the number in square brackets represents the number of styles in which "
+"the family is available. e.g.</p><ul><li>Times [4]<ul><li>Regular</"
+"li><li>Bold</li><li>Bold Italic</li><li>Italic</li></ul></li></ul>"
+msgstr ""
+"<p>Iste lista monstra tu fontes installate. Le fontes es gruppate per "
+"familia, e le numero in parentheses quadrate representa le numero de stilos "
+"in le qual le familia es disponibile. p.ex.</p><ul><li>Times "
+"[4]<ul><li>Regular</li><li>Bold</li><li>Bold Italic</li><li>Italic</li></"
+"ul></li></ul>"
+
+#: kcmfontinst/FontList.cpp:956 kcmfontinst/FontList.cpp:980
+#, kde-format
+msgid "…plus %1 more"
+msgstr "...plus %1 altere"
+
+#: kcmfontinst/FontList.cpp:1007
+#, kde-format
+msgid "%1 [%2]"
+msgstr "%1 [%2]"
+
+#: kcmfontinst/FontList.cpp:1306
+#, kde-format
+msgid "Delete"
+msgstr "Dele"
+
+#: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:789
+#: kcmfontinst/KCmFontInst.cpp:1133 kcmfontinst/KCmFontInst.cpp:1157
+#, kde-format
+msgid "Enable"
+msgstr "Habilita"
+
+#: kcmfontinst/FontList.cpp:1309 kcmfontinst/GroupList.cpp:790
+#: kcmfontinst/KCmFontInst.cpp:1134 kcmfontinst/KCmFontInst.cpp:1158
+#, kde-format
+msgid "Disable"
+msgstr "Dishabilita"
+
+#: kcmfontinst/FontList.cpp:1313 kcmfontinst/GroupList.cpp:796
+#, kde-format
+msgid "Print…"
+msgstr "Imprime…"
+
+#: kcmfontinst/FontList.cpp:1317
+#, kde-format
+msgid "Reload"
+msgstr "Recarga"
+
+#: kcmfontinst/FontList.cpp:1716
+#, kde-format
+msgid "Open all %1 fonts in font viewer?"
+msgstr "Aperi omne %1 font in un visor de font?"
+
+#: kcmfontinst/GroupList.cpp:59
+#, kde-format
+msgid "All Fonts"
+msgstr "Omne fontes"
+
+#: kcmfontinst/GroupList.cpp:62
+#, kde-format
+msgid "Personal Fonts"
+msgstr "Fontes personal"
+
+#: kcmfontinst/GroupList.cpp:65
+#, kde-format
+msgid "System Fonts"
+msgstr "Fontes de systema"
+
+#: kcmfontinst/GroupList.cpp:68
+#, kde-format
+msgid "Unclassified"
+msgstr "Non classificate"
+
+#: kcmfontinst/GroupList.cpp:350
+#, kde-format
+msgid "Group"
+msgstr "Gruppo"
+
+#: kcmfontinst/GroupList.cpp:535
+#, kde-format
+msgid ""
+"<p>Do you really want to remove '<b>%1</b>'?</p><p><i>This will only remove "
+"the group, and not the actual fonts.</i></p>"
+msgstr ""
+"<p>Tu realmente vole remover '<b>%1</b>'?</p><p><i>Isto solmente removera le "
+"gruppo, e non le fontes actual.</i></p>"
+
+#: kcmfontinst/GroupList.cpp:539
+#, kde-format
+msgid "Remove Group"
+msgstr "Remove gruppo"
+
+#: kcmfontinst/GroupList.cpp:540 kcmfontinst/GroupList.cpp:787
+#, kde-format
+msgid "Remove"
+msgstr "Remove"
+
+#: kcmfontinst/GroupList.cpp:540
+#, kde-format
+msgid "Remove group"
+msgstr "Remove gruppo"
+
+#: kcmfontinst/GroupList.cpp:586
+#, kde-format
+msgid ""
+"<h3>Font Groups</h3><p>This list displays the font groups available on your "
+"system. There are 2 main types of font groups:<ul><li><b>Standard</b> are "
+"special groups used by the font manager.<ul>%1</ul></li><li><b>Custom</b> "
+"are groups created by you. To add a font family to one of these groups "
+"simply drag it from the list of fonts, and drop onto the desired group. To "
+"remove a family from the group, drag the font onto the \"All Fonts\" group.</"
+"li></ul></p>"
+msgstr ""
+"<h3>Gruppos de Font</h3><p>Iste lista monstra le gruppos de font  "
+"disponibile sur tu systema. Il ha 2 typos  principal de gruppo de font:"
+"<ul><li><b>Standard</b> es special gruppos usate per le gerente de font.<ul>"
+"%1</ul></li><li><b>Personalisate</b> es gruppos create per te mesme. Pro "
+"adder un familia de font  a uno de iste gruppos simplemente tu trahe lo ab "
+"le lista de fontes, e depone lo in le desirate gruppo. Pro remover un "
+"familia ex le gruppo, tu trahe le font in le gruppo de  \"Omne Fontes\" .</"
+"li></ul></p>"
+
+#: kcmfontinst/GroupList.cpp:594
+#, kde-format
+msgid ""
+"<li><i>All Fonts</i> contains all the fonts installed on your system.</"
+"li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
+"within a \"Custom\" group.</li>"
+msgstr ""
+"<li><i>Omne Fontes</i> contine omne le fontes installate sur tu systema.</"
+"li><li><i>Non classificate</i> contine omne fontes que non ha ancora essite "
+"placiate intra un gruppo \"Custom\" (personalisate).</li>"
+
+#: kcmfontinst/GroupList.cpp:597
+#, kde-format
+msgid ""
+"<li><i>All Fonts</i> contains all the fonts installed on your system - both  "
+"\"System\" and \"Personal\".</li><li><i>System</i> contains all fonts that "
+"are installed system-wide (i.e. available to all users).</"
+"li><li><i>Personal</i> contains your personal fonts.</"
+"li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
+"within a \"Custom\" group.</li>"
+msgstr ""
+"<li><i>Omne Fontes</i> contine omne le fontes installate sur tu systema -sia "
+"de\"System\" que \"Personal\".</li><li><i>Systema</i> contine le fontes que "
+"es installate pro le systema (i.e. disponibile a omne usatores).</"
+"li><li><i>Personal</i> contine tu fontes personal.</li><li><i>Non "
+"Classificate</i> contine omne fontes que on non ha ancora placiate intra un "
+"gruppo \"Custom\" (Personalisate) .</li>"
+
+#: kcmfontinst/GroupList.cpp:699
+#, kde-format
+msgid "<qt>A group named <b>'%1'</b> already exists.</qt>"
+msgstr "<qt>Un gruppo appellate <b>'%1'</b> jam existe.</qt>"
+
+#: kcmfontinst/GroupList.cpp:792
+#, kde-format
+msgid "Rename…"
+msgstr "Renomina…"
+
+#: kcmfontinst/GroupList.cpp:801
+#, kde-format
+msgid "Export…"
+msgstr "Exporta…"
+
+#: kcmfontinst/GroupList.cpp:895
+#, kde-format
+msgid "Add to \"%1\"."
+msgstr "Adde a \"%1\"."
+
+#: kcmfontinst/GroupList.cpp:897
+#, kde-format
+msgid "Remove from current group."
+msgstr "Remove ex gruppo currente."
+
+#: kcmfontinst/GroupList.cpp:899
+#, kde-format
+msgid "Move to personal folder."
+msgstr "Move a un dossier personal."
+
+#: kcmfontinst/GroupList.cpp:901
+#, kde-format
+msgid "Move to system folder."
+msgstr "Move al dossier de systema"
+
+#: kcmfontinst/JobRunner.cpp:143
+#, kde-format
+msgid "Skip"
+msgstr "Salta"
+
+#: kcmfontinst/JobRunner.cpp:146
+#, kde-format
+msgid "AutoSkip"
+msgstr "Salta automaticamente "
+
+#: kcmfontinst/JobRunner.cpp:191
+#, kde-format
+msgid "<h3>Cancel?</h3><p>Are you sure you wish to cancel?</p>"
+msgstr "<h3>Cancella?</h3><p>Tu es secur que tu vole cancellar?</p>"
+
+#: kcmfontinst/JobRunner.cpp:203
+#, kde-format
+msgid ""
+"<h3>Finished</h3><p>Please note that any open applications will need to be "
+"restarted in order for any changes to be noticed.</p>"
+msgstr ""
+"<h3>Finite</h3><p>Pro favor, tu nota que alcun applicationes aperite "
+"necessitara aesser reinitiate al fin que omne modificationes essera "
+"notificate.</p>"
+
+#: kcmfontinst/JobRunner.cpp:211
+#, kde-format
+msgid "Do not show this message again"
+msgstr "Non monstra iste message de nove"
+
+#: kcmfontinst/JobRunner.cpp:321
+#, kde-format
+msgid "Installing"
+msgstr "Installante"
+
+#: kcmfontinst/JobRunner.cpp:324
+#, kde-format
+msgid "Uninstalling"
+msgstr "De-Installante"
+
+#: kcmfontinst/JobRunner.cpp:327 kcmfontinst/JobRunner.cpp:424
+#, kde-format
+msgid "Enabling"
+msgstr "Habilitante"
+
+#: kcmfontinst/JobRunner.cpp:330 kcmfontinst/JobRunner.cpp:428
+#, kde-format
+msgid "Moving"
+msgstr "Movente"
+
+#: kcmfontinst/JobRunner.cpp:333
+#, kde-format
+msgid "Updating"
+msgstr "Actualisante"
+
+#: kcmfontinst/JobRunner.cpp:337
+#, kde-format
+msgid "Removing"
+msgstr "Removente"
+
+#: kcmfontinst/JobRunner.cpp:341
+#, kde-format
+msgid "Disabling"
+msgstr "Dishabilitante"
+
+#: kcmfontinst/JobRunner.cpp:379
+#, kde-format
+msgid "Updating font configuration. Please wait…"
+msgstr "Il es actualisante le configuration de font. Pro favor tu expecta…"
+
+#: kcmfontinst/JobRunner.cpp:451
+#, kde-format
+msgid "Unable to start backend."
+msgstr "Il non pote initiar retro-administration."
+
+#: kcmfontinst/JobRunner.cpp:460
+#, kde-format
+msgid "Backend died, but has been restarted. Please try again."
+msgstr ""
+"Retro-administration moriva, sed on initiava lo de nove. Pro favor tu prova "
+"de nove."
+
+#: kcmfontinst/JobRunner.cpp:621 kcmfontinst/JobRunner.cpp:627
+#, kde-format
+msgid "<h3>Error</h3>"
+msgstr "<h3>Error</h3>"
+
+#: kcmfontinst/JobRunner.cpp:693
+#, kde-format
+msgid "Failed to download <i>%1</i>"
+msgstr "Il falleva a discargar <i>%1</i>"
+
+#: kcmfontinst/JobRunner.cpp:695
+#, kde-format
+msgid "System backend died. Please try again.<br><i>%1</i>"
+msgstr ""
+"Retro-administration de systema moriva. Pro favor tu prova de nove.<br><i>"
+"%1</i>"
+
+#: kcmfontinst/JobRunner.cpp:697
+#, kde-format
+msgid ""
+"<i>%1</i> is a bitmap font, and these have been disabled on your system."
+msgstr ""
+"<i>%1</i> es un font de bitmap, e istos ha essite dishabilitate sur tu "
+"systema."
+
+#: kcmfontinst/JobRunner.cpp:699
+#, kde-format
+msgid ""
+"<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
+"system."
+msgstr ""
+"<i>%1</i> contine le font <b>%2</b> que ja il es installate sur tu systema."
+
+#: kcmfontinst/JobRunner.cpp:701
+#, kde-format
+msgid "<i>%1</i> is not a font."
+msgstr "<i>%1</i>non  es un font."
+
+#: kcmfontinst/JobRunner.cpp:703
+#, kde-format
+msgid "Could not remove all files associated with <i>%1</i>"
+msgstr "Il non pote remover omne files associate con <i>%1</i>"
+
+#: kcmfontinst/JobRunner.cpp:705
+#, kde-format
+msgid "Failed to start the system daemon.<br><i>%1</i>"
+msgstr "Il falleva a initiar le daemon de systema.<br><i>%1</i>"
+
+#: kcmfontinst/JobRunner.cpp:708 kio/KioFonts.cpp:726
+#, kde-format
+msgid "<i>%1</i> already exists."
+msgstr "<i>%1</i>jam existe."
+
+#: kcmfontinst/JobRunner.cpp:711
+#, kde-format
+msgid "<i>%1</i> does not exist."
+msgstr "<i>%1</i>non existe."
+
+#: kcmfontinst/JobRunner.cpp:713
+#, kde-format
+msgid "Permission denied.<br><i>%1</i>"
+msgstr "Permission negate.<br><i>%1</i>"
+
+#: kcmfontinst/JobRunner.cpp:715
+#, kde-format
+msgid "Unsupported action.<br><i>%1</i>"
+msgstr "Action non supportate.<br><i>%1</i>"
+
+#: kcmfontinst/JobRunner.cpp:717
+#, kde-format
+msgid "Authentication failed.<br><i>%1</i>"
+msgstr "Il falleva authentication.<br><i>%1</i>"
+
+#: kcmfontinst/JobRunner.cpp:719
+#, kde-format
+msgid "Unexpected error while processing: <i>%1</i>"
+msgstr ""
+"Il occurreva un error in-expectate durante que il processava: <i>%1</i>"
+
+#: kcmfontinst/KCmFontInst.cpp:169
+#, kde-format
+msgid "Font Management"
+msgstr "Gestion de font"
+
+#: kcmfontinst/KCmFontInst.cpp:173
+#, kde-format
+msgid "(C) Craig Drummond, 2000 - 2009"
+msgstr "(C) Craig Drummond, 2000-2009"
+
+#: kcmfontinst/KCmFontInst.cpp:174
+#, kde-format
+msgid "Craig Drummond"
+msgstr "Craig Drummond"
+
+#: kcmfontinst/KCmFontInst.cpp:174
+#, kde-format
+msgid "Developer and maintainer"
+msgstr "Disveloppator e mantenitor"
+
+#: kcmfontinst/KCmFontInst.cpp:202
+#, kde-format
+msgid "Create New Group…"
+msgstr "Crea Nove Gruppo..."
+
+#: kcmfontinst/KCmFontInst.cpp:204
+#, kde-format
+msgid "Remove Group…"
+msgstr "Remove gruppo…"
+
+#: kcmfontinst/KCmFontInst.cpp:206
+#, kde-format
+msgid "Enable Fonts in Group…"
+msgstr "Habilita Fontes in gruppo ..."
+
+#: kcmfontinst/KCmFontInst.cpp:208
+#, kde-format
+msgid "Disable Fonts in Group…"
+msgstr "Dishabilita Fontes in gruppo..."
+
+#: kcmfontinst/KCmFontInst.cpp:233
+#, kde-format
+msgid "This displays a preview of the selected font."
+msgstr "Isto monstra un vista preliminari del font selectionate."
+
+#: kcmfontinst/KCmFontInst.cpp:249
+#, kde-format
+msgid "Find Duplicates…"
+msgstr "Trova duplicatos…"
+
+#: kcmfontinst/KCmFontInst.cpp:249
+#, kde-format
+msgid "Scan for Duplicate Fonts…"
+msgstr "Scande pro fontes duplicate..."
+
+#: kcmfontinst/KCmFontInst.cpp:251
+#, kde-format
+msgid "Install from File…"
+msgstr "Installa ex file ..."
+
+#: kcmfontinst/KCmFontInst.cpp:251
+#, kde-format
+msgid "Install fonts from a local file"
+msgstr "Installa fontes ex file local "
+
+#: kcmfontinst/KCmFontInst.cpp:252
+#, kde-format
+msgid "Get New Fonts…"
+msgstr "Obtene nove fontes..."
+
+#: kcmfontinst/KCmFontInst.cpp:253
+#, kde-format
+msgid "Download new fonts"
+msgstr "Discarga nove fontes"
+
+#: kcmfontinst/KCmFontInst.cpp:255
+#, kde-format
+msgid "Delete Selected Fonts…"
+msgstr "Dele fontes selectionate ..."
+
+#: kcmfontinst/KCmFontInst.cpp:313
+#, kde-format
+msgid "Change Preview Text…"
+msgstr "Cambia texto de vista preliminari..."
+
+#: kcmfontinst/KCmFontInst.cpp:375
+#, kde-format
+msgid ""
+"<h1>Font Installer</h1><p> This module allows you to install TrueType, "
+"Type1, and Bitmap fonts.</p><p>You may also install fonts using Konqueror: "
+"type fonts:/ into Konqueror's location bar and this will display your "
+"installed fonts. To install a font, simply copy one into the folder.</p>"
+msgstr ""
+"<h1>Installator de Font</h1><p> Iste modulo permitte te a installar fontes "
+"TrueType, Type1,e Bitmap.</p><p>Tu pote anque installar fontes per uso de "
+"Konqueror: typa fonts:/ in le barra de location de Konqueror e illo "
+"monstrara tu fontes installate. Pro installar un font, simplemente tu va a "
+"copiar lo in le dossier.</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:382
+#, kde-format
+msgid ""
+"<h1>Font Installer</h1><p> This module allows you to install TrueType, "
+"Type1, and Bitmap fonts.</p><p>You may also install fonts using Konqueror: "
+"type fonts:/ into Konqueror's location bar and this will display your "
+"installed fonts. To install a font, simply copy it into the appropriate "
+"folder -  \"%1\" for fonts available to just yourself, or  \"%2\" for system-"
+"wide fonts (available to all).</p>"
+msgstr ""
+"<h1>Installator de Font</h1><p> Iste modulo permitte te de installar fontes "
+"TrueType, Type1,e Bitmap.</p><p>Tu pote anque installar fontes per uso de "
+"Konqueror: typa fonts:/ in le barra de location de Konqueror e illo "
+"monstrara tu fontes installate. Pro installar un font, simplemente tu va a "
+"copiar lo in le dossier appropriate -  \"%1\" pro fontes disponibile sol pro "
+"te mesme, o  \"%2\" pro le fontes de systema(disponibile a omne).</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:437
+#, kde-format
+msgid "Add Fonts"
+msgstr "Adde fontes"
+
+#: kcmfontinst/KCmFontInst.cpp:562
+#, kde-format
+msgid "Failed to save list of fonts to print."
+msgstr "Il falleva a salvar  lista de fontes a imprimer."
+
+#: kcmfontinst/KCmFontInst.cpp:583
+#, kde-format
+msgid "Failed to start font printer."
+msgstr "Il falleva a initiar imprimitor de font."
+
+#: kcmfontinst/KCmFontInst.cpp:590
+#, kde-format
+msgid ""
+"There are no printable fonts.\n"
+"You can only print non-bitmap and enabled fonts."
+msgstr ""
+"Il non ha fontes que il pote imprimer.\n"
+"Tu pote solmente imprimer fontes habilitate e de non-bitmap."
+
+#: kcmfontinst/KCmFontInst.cpp:592
+#, kde-format
+msgid "Cannot Print"
+msgstr "Non pote imprimer"
+
+#: kcmfontinst/KCmFontInst.cpp:607
+#, kde-format
+msgid "You did not select anything to delete."
+msgstr "Tu non seligeva alicun cosa a cancellar."
+
+#: kcmfontinst/KCmFontInst.cpp:607
+#, kde-format
+msgid "Nothing to Delete"
+msgstr "Nihil a cancellar"
+
+#: kcmfontinst/KCmFontInst.cpp:622
+#, kde-format
+msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
+msgstr "<p>realmente tu vole cancellar</p><p>'<b>%1</b>'?</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:625
+#, kde-format
+msgid "Delete Font"
+msgstr "Cancella Font"
+
+#: kcmfontinst/KCmFontInst.cpp:632
+#, kde-format
+msgid "Do you really want to delete this font?"
+msgid_plural "Do you really want to delete these %1 fonts?"
+msgstr[0] "Tu realmente vole cancellar iste font?"
+msgstr[1] "Tu realmente vole cancellar iste %1 fontes?"
+
+#: kcmfontinst/KCmFontInst.cpp:634
+#, kde-format
+msgid "Delete Fonts"
+msgstr "Cancella Fontes"
+
+#: kcmfontinst/KCmFontInst.cpp:639
+#, kde-format
+msgid "Deleting font(s)…"
+msgstr "Cancella font(es)..."
+
+#: kcmfontinst/KCmFontInst.cpp:654
+#, kde-format
+msgid "You did not select anything to move."
+msgstr "Tu non seligeva alicun cosa de mover."
+
+#: kcmfontinst/KCmFontInst.cpp:654
+#, kde-format
+msgid "Nothing to Move"
+msgstr "Nihil de mover"
+
+#: kcmfontinst/KCmFontInst.cpp:664
+#, kde-format
+msgid ""
+"<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
+"%3</i>?</p>"
+msgstr ""
+"<p>Tu realmente vole mover</p><p>'<b>%1</b>'</p><p>ex <i>%2</i> a <i>%3</i>?"
+"</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:669
+#, kde-format
+msgid "Move Font"
+msgstr "Move Font"
+
+#: kcmfontinst/KCmFontInst.cpp:670 kcmfontinst/KCmFontInst.cpp:682
+#, kde-format
+msgid "Move"
+msgstr "Move"
+
+#: kcmfontinst/KCmFontInst.cpp:675
+#, kde-format
+msgid ""
+"<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
+msgid_plural ""
+"<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?</p>"
+msgstr[0] "<p>Tu realmente vole mover iste font ex <i>%2</i> a <i>%3</i>?</p>"
+msgstr[1] ""
+"<p>Tu realmente vole mover iste %1 fontes ex <i>%2</i> a <i>%3</i>?</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:681
+#, kde-format
+msgid "Move Fonts"
+msgstr "Move Fontes"
+
+#: kcmfontinst/KCmFontInst.cpp:686
+#, kde-format
+msgid "Moving font(s)…"
+msgstr "Il  move font(es)..."
+
+#: kcmfontinst/KCmFontInst.cpp:700
+#, kde-format
+msgid "Export Group"
+msgstr "Exporta Gruppo"
+
+#: kcmfontinst/KCmFontInst.cpp:726
+#, kde-format
+msgid "No files?"
+msgstr "Necun files?"
+
+#: kcmfontinst/KCmFontInst.cpp:729
+#, kde-format
+msgid "Failed to open %1 for writing"
+msgstr "Il falleva a aperir %1 pro scriber"
+
+#: kcmfontinst/KCmFontInst.cpp:749
+#, kde-format
+msgid "Create New Group"
+msgstr "Crea Nove Gruppo"
+
+#: kcmfontinst/KCmFontInst.cpp:749
+#, kde-format
+msgid "Name of new group:"
+msgstr "Nomine de nove gruppo"
+
+#: kcmfontinst/KCmFontInst.cpp:749
+#, kde-format
+msgid "New Group"
+msgstr "Nove gruppo"
+
+#: kcmfontinst/KCmFontInst.cpp:777
+#, kde-format
+msgid "Preview Text"
+msgstr "Vista preliminari de texto"
+
+#: kcmfontinst/KCmFontInst.cpp:777
+#, kde-format
+msgid "Please enter new text:"
+msgstr "Pro favor inserta nove texto:"
+
+#: kcmfontinst/KCmFontInst.cpp:829
+#, kde-format
+msgid "Scanning font list…"
+msgstr "Scandente lista de font ..."
+
+#: kcmfontinst/KCmFontInst.cpp:888
+#, kde-format
+msgid "No fonts"
+msgstr "Necun fontes"
+
+#: kcmfontinst/KCmFontInst.cpp:893
+#, kde-format
+msgid "1 Font"
+msgid_plural "%1 Fonts"
+msgstr[0] "1 Font"
+msgstr[1] "%1 Fontes"
+
+#: kcmfontinst/KCmFontInst.cpp:902
+#, kde-format
+msgid ""
+"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
+"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Partially "
+"enabled:</td><td>%3</td></tr><tr><td align=\"right\">Total:</td><td>%4</td></"
+"tr></table>"
+msgstr ""
+"<table><tr><td align=\"right\">Habilitate:</td><td>%1</td></tr><tr><td align="
+"\"right\">Dishabilitate:</td><td>%2</td></tr><tr><td align=\"right"
+"\">Partialmente habilitate:</td><td>%3</td></tr><tr><td align=\"right"
+"\">Total:</td><td>%4</td></tr></table>"
+
+#: kcmfontinst/KCmFontInst.cpp:912
+#, kde-format
+msgid ""
+"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
+"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Total:</"
+"td><td>%3</td></tr></table>"
+msgstr ""
+"<table><tr><td align=\"right\">Habilitate:</td><td>%1</td></tr><tr><td align="
+"\"right\">Dishabilitate:</td><td>%2</td></tr><tr><td align=\"right\">Total:</"
+"td><td>%3</td></tr></table>"
+
+#: kcmfontinst/KCmFontInst.cpp:989
+#, kde-format
+msgid "Looking for any associated files…"
+msgstr "Cercar pro omne files associate..."
+
+#: kcmfontinst/KCmFontInst.cpp:993
+#, kde-format
+msgid "Scanning Files…"
+msgstr "Scandente files ..."
+
+#: kcmfontinst/KCmFontInst.cpp:994
+#, kde-format
+msgid "Looking for additional files to install…"
+msgstr "Il cerca files additional de installar..."
+
+#: kcmfontinst/KCmFontInst.cpp:1009
+#, kde-format
+msgid "Looking for files associated with %1"
+msgstr "Il cerca files associate con %1"
+
+#: kcmfontinst/KCmFontInst.cpp:1037
+#, kde-format
+msgid "Installing font(s)…"
+msgstr "Il installa font(es)..."
+
+#: kcmfontinst/KCmFontInst.cpp:1102
+#, kde-format
+msgid "You did not select anything to enable."
+msgstr "Tu non seligeva alcun cosa de habilitar"
+
+#: kcmfontinst/KCmFontInst.cpp:1102
+#, kde-format
+msgid "You did not select anything to disable."
+msgstr "Tu non seligeva alcun cosa de dishabilitar"
+
+#: kcmfontinst/KCmFontInst.cpp:1103
+#, kde-format
+msgid "Nothing to Enable"
+msgstr "Nihil a habilitar"
+
+#: kcmfontinst/KCmFontInst.cpp:1103
+#, kde-format
+msgid "Nothing to Disable"
+msgstr "Nihil a dishabilitar"
+
+#: kcmfontinst/KCmFontInst.cpp:1120
+#, kde-format
+msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
+msgstr "<p>Tu realmente vole habilitar</p><p>'<b>%1</b>'?</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:1122
+#, kde-format
+msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
+msgstr "<p>Tu realmente vole dishabilitar</p><p>'<b>%1</b>'?</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:1124
+#, kde-format
+msgid ""
+"<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
+"'<b>%2</b>'?</p>"
+msgstr ""
+"<p>Tu realmente vole habilitar</p><p>'<b>%1</b>', continite intra gruppo '<b>"
+"%2</b>'?</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:1128
+#, kde-format
+msgid ""
+"<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
+"'<b>%2</b>'?</p>"
+msgstr ""
+"<p>Tu realmente vole dishabilitar</p><p>'<b>%1</b>', continite intra gruppo "
+"'<b>%2</b>'?</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:1132 kcmfontinst/KCmFontInst.cpp:1133
+#, kde-format
+msgid "Enable Font"
+msgstr "Habilita Font"
+
+#: kcmfontinst/KCmFontInst.cpp:1132 kcmfontinst/KCmFontInst.cpp:1134
+#, kde-format
+msgid "Disable Font"
+msgstr "Dishabilita Font"
+
+#: kcmfontinst/KCmFontInst.cpp:1139
+#, kde-format
+msgid "Do you really want to enable this font?"
+msgid_plural "Do you really want to enable these %1 fonts?"
+msgstr[0] "Tu realmente vole habilitar iste font?"
+msgstr[1] "Tu realmente vole habilitar iste %1 fontes?"
+
+#: kcmfontinst/KCmFontInst.cpp:1142
+#, kde-format
+msgid "Do you really want to disable this font?"
+msgid_plural "Do you really want to disable these %1 fonts?"
+msgstr[0] "Tu realmente vole dishabilitar iste font?"
+msgstr[1] "Tu realmente vole dishabilitar iste %1 fontes?"
+
+#: kcmfontinst/KCmFontInst.cpp:1145
+#, kde-format
+msgid ""
+"<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
+"</p>"
+msgid_plural ""
+"<p>Do you really want to enable these %1 fonts contained within group '<b>"
+"%2</b>'?</p>"
+msgstr[0] ""
+"<p>Tu realmente vole habilitar iste font continite intra gruppo '<b>%2</b>'?"
+"</p>"
+msgstr[1] ""
+"<p>Tu realmente vole habilitar iste %1 fontes continite intra gruppo '<b>%2</"
+"b>'?</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:1150
+#, kde-format
+msgid ""
+"<p>Do you really want to disable this font contained within group '<b>%2</"
+"b>'?</p>"
+msgid_plural ""
+"<p>Do you really want to disable these %1 fonts contained within group '<b>"
+"%2</b>'?</p>"
+msgstr[0] ""
+"<p>Tu realmente vole dishabilitar iste font continite intra gruppo '<b>%2</"
+"b>'?</p>"
+msgstr[1] ""
+"<p>Tu realmente vole dishabilitar iste %1 fontes continite intra gruppo '<b>"
+"%2</b>'?</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:1156 kcmfontinst/KCmFontInst.cpp:1157
+#, kde-format
+msgid "Enable Fonts"
+msgstr "Habilita Fontes"
+
+#: kcmfontinst/KCmFontInst.cpp:1156 kcmfontinst/KCmFontInst.cpp:1158
+#, kde-format
+msgid "Disable Fonts"
+msgstr "Dishabilita Fontes"
+
+#: kcmfontinst/KCmFontInst.cpp:1164
+#, kde-format
+msgid "Enabling font(s)…"
+msgstr "Habilitar Font(es)..."
+
+#: kcmfontinst/KCmFontInst.cpp:1166
+#, kde-format
+msgid "Disabling font(s)…"
+msgstr "Il dishabilita font(es)..."
+
+#: kcmfontinst/PrintDialog.cpp:21
+#, kde-format
+msgid "Print Font Samples"
+msgstr "Imprime Exemplos de Font"
+
+#: kcmfontinst/PrintDialog.cpp:37
+#, kde-format
+msgid "Select size to print font:"
+msgstr "Selectiona grandor pro imprimer font:"
+
+#: kcmfontinst/PrintDialog.cpp:41
+#, kde-format
+msgid "Waterfall"
+msgstr "Cascada"
+
+#: kcmfontinst/PrintDialog.cpp:42
+#, kde-format
+msgid "12pt"
+msgstr "12pt"
+
+#: kcmfontinst/PrintDialog.cpp:43
+#, kde-format
+msgid "18pt"
+msgstr "18pt"
+
+#: kcmfontinst/PrintDialog.cpp:44
+#, kde-format
+msgid "24pt"
+msgstr "24pt"
+
+#: kcmfontinst/PrintDialog.cpp:45
+#, kde-format
+msgid "36pt"
+msgstr "36pt"
+
+#: kcmfontinst/PrintDialog.cpp:46
+#, kde-format
+msgid "48pt"
+msgstr "48pt"
+
+#: kio/KioFonts.cpp:208
+#, kde-format
+msgid "Can only install fonts to either \"%1\" or \"%2\"."
+msgstr "Il pote solmente installar fontes o a \"%1\" o a \"%2\"."
+
+#: kio/KioFonts.cpp:211
+#, kde-format
+msgid ""
+"You cannot install a fonts package directly.\n"
+"Please extract %1, and install the components individually."
+msgstr ""
+"Tu non pote installar directemente un pacchetto de font.\n"
+"Pro favor, tu extrahe %1, e installa le componentes individualmente."
+
+#: kio/KioFonts.cpp:439
+#, kde-format
+msgid "Cannot copy fonts"
+msgstr "On non pote copiar fontes"
+
+#: kio/KioFonts.cpp:444
+#, kde-format
+msgid "Cannot move fonts"
+msgstr "On non pote mover fontes"
+
+#: kio/KioFonts.cpp:455
+#, kde-format
+msgid "Only fonts may be deleted."
+msgstr "Solmente fontes pote esser cancellate."
+
+#: kio/KioFonts.cpp:457
+#, kde-format
+msgid "Can only remove fonts from either \"%1\" or \"%2\"."
+msgstr "Il pote solmente remover fontes o ex \"%1\" o ex \"%2\"."
+
+#: kio/KioFonts.cpp:484
+#, kde-format
+msgid "Please specify \"%1\" or \"%2\"."
+msgstr "Pro favor tu specifica \"%1\" o \"%2\"."
+
+#: kio/KioFonts.cpp:504
+#, kde-format
+msgid "No special methods supported."
+msgstr "Necun methodo special supportate"
+
+#: kio/KioFonts.cpp:578
+#, kde-format
+msgid "Fonts"
+msgstr "Fontes"
+
+#: kio/KioFonts.cpp:707
+#, kde-format
+msgid "Failed to start the system daemon"
+msgstr "Il falleva a initiar le daemon de systema"
+
+#: kio/KioFonts.cpp:710
+#, kde-format
+msgid "Backend died"
+msgstr "Retro-Administration moriva"
+
+#: kio/KioFonts.cpp:713
+#, kde-format
+msgid "%1 is a bitmap font, and these have been disabled on your system."
+msgstr "%1 es un font de bitmap, e istos esseva dishabilitate sur tu systema."
+
+#: kio/KioFonts.cpp:716
+#, kde-format
+msgid ""
+"%1 contains the font <b>%2</b>, which is already installed on your system."
+msgstr "%1 contine le font <b>%2</b>, que il es ja installate sur tu systema."
+
+#: kio/KioFonts.cpp:719
+#, kde-format
+msgid "%1 is not a font."
+msgstr "%1 non es un font"
+
+#: kio/KioFonts.cpp:722
+#, kde-format
+msgid "Could not remove all files associated with %1"
+msgstr "Il non pote remover omne files associate con %1"
+
+#: lib/Fc.cpp:407 lib/KfiConstants.h:107
+#, kde-format
+msgid "Unknown"
+msgstr "Incognite"
+
+#: lib/FcEngine.cpp:858
+#, kde-format
+msgctxt "First letter of the alphabet (in upper then lower case)"
+msgid "Aa"
+msgstr "Aa"
+
+#: lib/FcEngine.cpp:860
+#, kde-format
+msgctxt ""
+"All letters of the alphabet (in upper/lower case pairs), followed by numbers"
+msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
+msgstr "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
+
+#: lib/FcEngine.cpp:1022
+#, kde-format
+msgid "No characters found."
+msgstr "Necun characteres trovate"
+
+#: lib/FcEngine.cpp:1060
+#, kde-format
+msgctxt "A sentence that uses all of the letters of the alphabet"
+msgid "The quick brown fox jumps over the lazy dog"
+msgstr "Le Vulpe Brun Salta Super Le Can Pigre"
+
+#: lib/FcEngine.cpp:1065
+#, kde-format
+msgctxt "All of the letters of the alphabet, uppercase"
+msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+msgstr "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+#: lib/FcEngine.cpp:1070
+#, kde-format
+msgctxt "All of the letters of the alphabet, lowercase"
+msgid "abcdefghijklmnopqrstuvwxyz"
+msgstr "abcdefghijklmnopqrstuvwxyz"
+
+#: lib/FcEngine.cpp:1075
+#, kde-format
+msgctxt "Numbers and characters"
+msgid "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
+msgstr "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
+
+#: lib/FcEngine.cpp:1473
+#, kde-format
+msgid "ERROR: Could not determine font's name."
+msgstr "ERROR: on non pote determinar le nomine del font."
+
+#: lib/FcEngine.cpp:1476
+#, kde-format
+msgid "%2 [1 pixel]"
+msgid_plural "%2 [%1 pixels]"
+msgstr[0] "%2 [1pixel]"
+msgstr[1] "%2 [%1pixeles]"
+
+#: lib/KfiConstants.h:22
+msgid "Personal"
+msgstr "Personal"
+
+#: lib/KfiConstants.h:23
+msgid "System"
+msgstr "Systema"
+
+#: lib/KfiConstants.h:24
+msgid "All"
+msgstr "Omne"
+
+#: lib/KfiConstants.h:38
+msgid "Administrator"
+msgstr "Administrator"
+
+#: lib/KfiConstants.h:74
+msgid "Thin"
+msgstr "Subtil"
+
+#: lib/KfiConstants.h:75
+msgid "Extra Light"
+msgstr "Extra legier"
+
+#: lib/KfiConstants.h:76
+msgid "Ultra Light"
+msgstr "Ultra Legier"
+
+#: lib/KfiConstants.h:77
+msgid "Light"
+msgstr "Legier"
+
+#: lib/KfiConstants.h:78
+msgid "Regular"
+msgstr "Regular"
+
+#: lib/KfiConstants.h:79 lib/KfiConstants.h:97
+msgid "Normal"
+msgstr "Normal"
+
+#: lib/KfiConstants.h:80
+msgid "Medium"
+msgstr "Medie"
+
+#: lib/KfiConstants.h:81
+msgid "Demi Bold"
+msgstr "Demi Bold"
+
+#: lib/KfiConstants.h:82
+msgid "Semi Bold"
+msgstr "Semi Bold"
+
+#: lib/KfiConstants.h:83
+msgid "Bold"
+msgstr "Bold"
+
+#: lib/KfiConstants.h:84
+msgid "Extra Bold"
+msgstr "Extra Bold"
+
+#: lib/KfiConstants.h:85
+msgid "Ultra Bold"
+msgstr "Ultra Bold"
+
+#: lib/KfiConstants.h:86
+msgid "Black"
+msgstr "Nigre"
+
+#: lib/KfiConstants.h:87
+msgid "Heavy"
+msgstr "Pesante"
+
+#: lib/KfiConstants.h:89
+msgid "Roman"
+msgstr "Roman"
+
+#: lib/KfiConstants.h:90
+msgid "Italic"
+msgstr "Italic"
+
+#: lib/KfiConstants.h:91
+msgid "Oblique"
+msgstr "Oblique"
+
+#: lib/KfiConstants.h:93
+msgid "Ultra Condensed"
+msgstr "Ultra condensate"
+
+#: lib/KfiConstants.h:94
+msgid "Extra Condensed"
+msgstr "Extra Condensate"
+
+#: lib/KfiConstants.h:95
+msgid "Condensed"
+msgstr "Condensate"
+
+#: lib/KfiConstants.h:96
+msgid "Semi Condensed"
+msgstr "Semi Condensate"
+
+#: lib/KfiConstants.h:98
+msgid "Semi Expanded"
+msgstr "Semi expandite"
+
+#: lib/KfiConstants.h:99
+msgid "Expanded"
+msgstr "Expandite"
+
+#: lib/KfiConstants.h:100
+msgid "Extra Expanded"
+msgstr "Extra Expandite"
+
+#: lib/KfiConstants.h:101
+msgid "Ultra Expanded"
+msgstr "Ultra Expandite"
+
+#: lib/KfiConstants.h:103
+msgid "Monospaced"
+msgstr "Mono spatiate"
+
+#: lib/KfiConstants.h:104
+msgid "Charcell"
+msgstr "Charcell"
+
+#: lib/KfiConstants.h:105
+msgid "Proportional"
+msgstr "Proportional"
+
+#: viewpart/CharTip.cpp:42
+#, kde-format
+msgid "Other, Control"
+msgstr "Altere, Control"
+
+#: viewpart/CharTip.cpp:44
+#, kde-format
+msgid "Other, Format"
+msgstr "Altere, Formato"
+
+#: viewpart/CharTip.cpp:46
+#, kde-format
+msgid "Other, Not Assigned"
+msgstr "Altere, non assignate"
+
+#: viewpart/CharTip.cpp:48
+#, kde-format
+msgid "Other, Private Use"
+msgstr "Altere, Uso private"
+
+#: viewpart/CharTip.cpp:50
+#, kde-format
+msgid "Other, Surrogate"
+msgstr "Altere, Surrogate"
+
+#: viewpart/CharTip.cpp:52
+#, kde-format
+msgid "Letter, Lowercase"
+msgstr "Littera, Minuscule"
+
+#: viewpart/CharTip.cpp:54
+#, kde-format
+msgid "Letter, Modifier"
+msgstr "Littera, Modificator"
+
+#: viewpart/CharTip.cpp:56
+#, kde-format
+msgid "Letter, Other"
+msgstr "Littera, altere"
+
+#: viewpart/CharTip.cpp:58
+#, kde-format
+msgid "Letter, Titlecase"
+msgstr "Littera, Caso Titulo"
+
+#: viewpart/CharTip.cpp:60
+#, kde-format
+msgid "Letter, Uppercase"
+msgstr "Littera, majuscule"
+
+#: viewpart/CharTip.cpp:62
+#, kde-format
+msgid "Mark, Spacing Combining"
+msgstr "Signo, Combinante Spatiamento"
+
+#: viewpart/CharTip.cpp:64
+#, kde-format
+msgid "Mark, Enclosing"
+msgstr "Signo, Includente"
+
+#: viewpart/CharTip.cpp:66
+#, kde-format
+msgid "Mark, Non-Spacing"
+msgstr "Signo, sin spatiamento"
+
+#: viewpart/CharTip.cpp:68
+#, kde-format
+msgid "Number, Decimal Digit"
+msgstr "Numero, Cifra decimal"
+
+#: viewpart/CharTip.cpp:70
+#, kde-format
+msgid "Number, Letter"
+msgstr "Numero, Littera"
+
+#: viewpart/CharTip.cpp:72
+#, kde-format
+msgid "Number, Other"
+msgstr "Numero, Altere"
+
+#: viewpart/CharTip.cpp:74
+#, kde-format
+msgid "Punctuation, Connector"
+msgstr "Punctuation, Connector"
+
+#: viewpart/CharTip.cpp:76
+#, kde-format
+msgid "Punctuation, Dash"
+msgstr "Punctuation, Lineetta"
+
+#: viewpart/CharTip.cpp:78
+#, kde-format
+msgid "Punctuation, Close"
+msgstr "Punctuation, Claude"
+
+#: viewpart/CharTip.cpp:80
+#, kde-format
+msgid "Punctuation, Final Quote"
+msgstr "Punctuation, Virgulettas Final"
+
+#: viewpart/CharTip.cpp:82
+#, kde-format
+msgid "Punctuation, Initial Quote"
+msgstr "Punctuation, Virgulettas initial"
+
+#: viewpart/CharTip.cpp:84
+#, kde-format
+msgid "Punctuation, Other"
+msgstr "Punctuation, Altere"
+
+#: viewpart/CharTip.cpp:86
+#, kde-format
+msgid "Punctuation, Open"
+msgstr "Punctuation, Aperi"
+
+#: viewpart/CharTip.cpp:88
+#, kde-format
+msgid "Symbol, Currency"
+msgstr "Symbolo, Numerario"
+
+#: viewpart/CharTip.cpp:90
+#, kde-format
+msgid "Symbol, Modifier"
+msgstr "Symbolo, Modificator"
+
+#: viewpart/CharTip.cpp:92
+#, kde-format
+msgid "Symbol, Math"
+msgstr "Symbolo, Math"
+
+#: viewpart/CharTip.cpp:94
+#, kde-format
+msgid "Symbol, Other"
+msgstr "Symbolo, Altere"
+
+#: viewpart/CharTip.cpp:96
+#, kde-format
+msgid "Separator, Line"
+msgstr "Separator, linea"
+
+#: viewpart/CharTip.cpp:98
+#, kde-format
+msgid "Separator, Paragraph"
+msgstr "Separator, Paragrapho"
+
+#: viewpart/CharTip.cpp:100
+#, kde-format
+msgid "Separator, Space"
+msgstr "Separator, Spatio"
+
+#: viewpart/CharTip.cpp:152
+#, kde-format
+msgid "Category"
+msgstr "Categoria"
+
+#: viewpart/CharTip.cpp:153
+#, kde-format
+msgid "UCS-4"
+msgstr "UCS-4"
+
+#: viewpart/CharTip.cpp:156
+#, kde-format
+msgid "UTF-16"
+msgstr "UTF-16"
+
+#: viewpart/CharTip.cpp:167
+#, kde-format
+msgid "UTF-8"
+msgstr "UTF-8"
+
+#: viewpart/CharTip.cpp:184
+#, kde-format
+msgid "XML Decimal Entity"
+msgstr "Entitate decimal XML"
+
+#: viewpart/FontViewPart.cpp:85
+#, kde-format
+msgid "Show Face:"
+msgstr "Monstra Facie:"
+
+#: viewpart/FontViewPart.cpp:88
+#, kde-format
+msgid "Install…"
+msgstr "Installa…"
+
+#: viewpart/FontViewPart.cpp:109
+#, kde-format
+msgid "Change Text…"
+msgstr "Cambia Texto..."
+
+#: viewpart/FontViewPart.cpp:333
+#, kde-format
+msgid "Could not read font."
+msgstr "Il non pote leger font."
+
+#: viewpart/FontViewPart.cpp:385
+#, kde-format
+msgid "Preview String"
+msgstr "Catena de vista preliminari"
+
+#: viewpart/FontViewPart.cpp:385
+#, kde-format
+msgid "Please enter new string:"
+msgstr "Pro favor, tu inserta nove catena:"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: viewpart/kfontviewpart.rc:4
+#, kde-format
+msgid "&Main Toolbar"
+msgstr "Barra de instru&mento principal"
+
+#: viewpart/PreviewSelectAction.cpp:13
+#, kde-format
+msgid "Preview Type"
+msgstr "Typo de Vista Preliminar"
+
+#: viewpart/PreviewSelectAction.cpp:31
+#, kde-format
+msgid "Standard Preview"
+msgstr "Vista Preliminar standard"
+
+#: viewpart/PreviewSelectAction.cpp:32
+#, kde-format
+msgid "All Characters"
+msgstr "Omne Characteres"
+
+#: viewpart/PreviewSelectAction.cpp:40
+#, kde-format
+msgid "Unicode Block: %1"
+msgstr "Bloco de Unicode: %1"
+
+#: viewpart/PreviewSelectAction.cpp:44
+#, kde-format
+msgid "Unicode Script: %1"
+msgstr "Script de Unicode: %1"
+
+#: viewpart/UnicodeBlocks.h:17
+msgid "Basic Latin"
+msgstr "Latino Basic"
+
+#: viewpart/UnicodeBlocks.h:18
+msgid "Latin-1 Supplement"
+msgstr "Latino-1 Supplemento"
+
+#: viewpart/UnicodeBlocks.h:19
+msgid "Latin Extended-A"
+msgstr "Latino Extendite-A"
+
+#: viewpart/UnicodeBlocks.h:20
+msgid "Latin Extended-B"
+msgstr "Latino Extendite-B"
+
+#: viewpart/UnicodeBlocks.h:21
+msgid "IPA Extensions"
+msgstr "Extensiones IPA"
+
+#: viewpart/UnicodeBlocks.h:22
+msgid "Spacing Modifier Letters"
+msgstr "Spatiante Litteras de Modificator"
+
+#: viewpart/UnicodeBlocks.h:23
+msgid "Combining Diacritical Marks"
+msgstr "Combinante Marca Diacritica"
+
+#: viewpart/UnicodeBlocks.h:24
+msgid "Greek and Coptic"
+msgstr "Grec e Coptic"
+
+#: viewpart/UnicodeBlocks.h:25 viewpart/UnicodeScripts.h:29
+msgid "Cyrillic"
+msgstr "Cyrillic"
+
+#: viewpart/UnicodeBlocks.h:26
+msgid "Cyrillic Supplement"
+msgstr "Cyrillic Supplemento"
+
+#: viewpart/UnicodeBlocks.h:27 viewpart/UnicodeScripts.h:16
+msgid "Armenian"
+msgstr "Armenio"
+
+#: viewpart/UnicodeBlocks.h:28 viewpart/UnicodeScripts.h:42
+msgid "Hebrew"
+msgstr "Hebreo"
+
+#: viewpart/UnicodeBlocks.h:29 viewpart/UnicodeScripts.h:15
+msgid "Arabic"
+msgstr "Arabic"
+
+#: viewpart/UnicodeBlocks.h:30 viewpart/UnicodeScripts.h:69
+msgid "Syriac"
+msgstr "Syriac"
+
+#: viewpart/UnicodeBlocks.h:31
+msgid "Arabic Supplement"
+msgstr "Arabic Supplemento"
+
+#: viewpart/UnicodeBlocks.h:32 viewpart/UnicodeScripts.h:75
+msgid "Thaana"
+msgstr "Thaana"
+
+#: viewpart/UnicodeBlocks.h:33
+msgid "NKo"
+msgstr "Nko"
+
+#: viewpart/UnicodeBlocks.h:34 viewpart/UnicodeScripts.h:31
+msgid "Devanagari"
+msgstr "Devanagari"
+
+#: viewpart/UnicodeBlocks.h:35 viewpart/UnicodeScripts.h:18
+msgid "Bengali"
+msgstr "Bengalese"
+
+#: viewpart/UnicodeBlocks.h:36 viewpart/UnicodeScripts.h:38
+msgid "Gurmukhi"
+msgstr "Gurmukhi"
+
+#: viewpart/UnicodeBlocks.h:37 viewpart/UnicodeScripts.h:37
+msgid "Gujarati"
+msgstr "Gujarati"
+
+#: viewpart/UnicodeBlocks.h:38 viewpart/UnicodeScripts.h:61
+msgid "Oriya"
+msgstr "Oriya"
+
+#: viewpart/UnicodeBlocks.h:39 viewpart/UnicodeScripts.h:73
+msgid "Tamil"
+msgstr "Tamil"
+
+#: viewpart/UnicodeBlocks.h:40 viewpart/UnicodeScripts.h:74
+msgid "Telugu"
+msgstr "Telugu"
+
+#: viewpart/UnicodeBlocks.h:41 viewpart/UnicodeScripts.h:45
+msgid "Kannada"
+msgstr "Kannada"
+
+#: viewpart/UnicodeBlocks.h:42 viewpart/UnicodeScripts.h:53
+msgid "Malayalam"
+msgstr "Malayalam"
+
+#: viewpart/UnicodeBlocks.h:43 viewpart/UnicodeScripts.h:67
+msgid "Sinhala"
+msgstr "Sinhala"
+
+#: viewpart/UnicodeBlocks.h:44 viewpart/UnicodeScripts.h:76
+msgid "Thai"
+msgstr "Thai"
+
+#: viewpart/UnicodeBlocks.h:45 viewpart/UnicodeScripts.h:49
+msgid "Lao"
+msgstr "Lao"
+
+#: viewpart/UnicodeBlocks.h:46 viewpart/UnicodeScripts.h:77
+msgid "Tibetan"
+msgstr "Tibetano"
+
+#: viewpart/UnicodeBlocks.h:47 viewpart/UnicodeScripts.h:55
+msgid "Myanmar"
+msgstr "Myanmar"
+
+#: viewpart/UnicodeBlocks.h:48 viewpart/UnicodeScripts.h:33
+msgid "Georgian"
+msgstr "Georgian "
+
+#: viewpart/UnicodeBlocks.h:49
+msgid "Hangul Jamo"
+msgstr "Hangul Jamo"
+
+#: viewpart/UnicodeBlocks.h:50 viewpart/UnicodeScripts.h:32
+msgid "Ethiopic"
+msgstr "Ethiopic"
+
+#: viewpart/UnicodeBlocks.h:51
+msgid "Ethiopic Supplement"
+msgstr "Ethiopic Supplemento"
+
+#: viewpart/UnicodeBlocks.h:52 viewpart/UnicodeScripts.h:24
+msgid "Cherokee"
+msgstr "Cherokee"
+
+#: viewpart/UnicodeBlocks.h:53
+msgid "Unified Canadian Aboriginal Syllabics"
+msgstr "Syllabics Aboriginal Canadian Unificate"
+
+#: viewpart/UnicodeBlocks.h:54 viewpart/UnicodeScripts.h:58
+msgid "Ogham"
+msgstr "Ogham"
+
+#: viewpart/UnicodeBlocks.h:55 viewpart/UnicodeScripts.h:65
+msgid "Runic"
+msgstr "Runic"
+
+#: viewpart/UnicodeBlocks.h:56 viewpart/UnicodeScripts.h:70
+msgid "Tagalog"
+msgstr "Tagalog"
+
+#: viewpart/UnicodeBlocks.h:57 viewpart/UnicodeScripts.h:41
+msgid "Hanunoo"
+msgstr "Hanunoo"
+
+#: viewpart/UnicodeBlocks.h:58 viewpart/UnicodeScripts.h:22
+msgid "Buhid"
+msgstr "Buhid"
+
+#: viewpart/UnicodeBlocks.h:59 viewpart/UnicodeScripts.h:71
+msgid "Tagbanwa"
+msgstr "Tagbanwa"
+
+#: viewpart/UnicodeBlocks.h:60 viewpart/UnicodeScripts.h:48
+msgid "Khmer"
+msgstr "Khmer"
+
+#: viewpart/UnicodeBlocks.h:61 viewpart/UnicodeScripts.h:54
+msgid "Mongolian"
+msgstr "Mongolico"
+
+#: viewpart/UnicodeBlocks.h:62 viewpart/UnicodeScripts.h:51
+msgid "Limbu"
+msgstr "Limbu"
+
+#: viewpart/UnicodeBlocks.h:63 viewpart/UnicodeScripts.h:72
+msgid "Tai Le"
+msgstr "Tai le"
+
+#: viewpart/UnicodeBlocks.h:64 viewpart/UnicodeScripts.h:56
+msgid "New Tai Lue"
+msgstr "Nove Tai Lue"
+
+#: viewpart/UnicodeBlocks.h:65
+msgid "Khmer Symbols"
+msgstr "Symbolos Khmer"
+
+#: viewpart/UnicodeBlocks.h:66 viewpart/UnicodeScripts.h:21
+msgid "Buginese"
+msgstr "Bulginese"
+
+#: viewpart/UnicodeBlocks.h:67 viewpart/UnicodeScripts.h:17
+msgid "Balinese"
+msgstr "Balinese"
+
+#: viewpart/UnicodeBlocks.h:68
+msgid "Phonetic Extensions"
+msgstr "Extensiones Phonetic "
+
+#: viewpart/UnicodeBlocks.h:69
+msgid "Phonetic Extensions Supplement"
+msgstr "Extensiones Phonetic Supplemento"
+
+#: viewpart/UnicodeBlocks.h:70
+msgid "Combining Diacritical Marks Supplement"
+msgstr "Combinante Marcas Diacritica Supplemento"
+
+#: viewpart/UnicodeBlocks.h:71
+msgid "Latin Extended Additional"
+msgstr "Latino Extendite Additional"
+
+#: viewpart/UnicodeBlocks.h:72
+msgid "Greek Extended"
+msgstr "Greco Extendite"
+
+#: viewpart/UnicodeBlocks.h:73
+msgid "General Punctuation"
+msgstr "Punctuation General"
+
+#: viewpart/UnicodeBlocks.h:74
+msgid "Superscripts and Subscripts"
+msgstr "Superscripts e Subscripts"
+
+#: viewpart/UnicodeBlocks.h:75
+msgid "Currency Symbols"
+msgstr "Symbolos de numerario"
+
+#: viewpart/UnicodeBlocks.h:76
+msgid "Combining Diacritical Marks for Symbols"
+msgstr "Combinante Marca Diacritica pro Symbolos"
+
+#: viewpart/UnicodeBlocks.h:77
+msgid "Letter-Like Symbols"
+msgstr "Symbolos como Litteras"
+
+#: viewpart/UnicodeBlocks.h:78
+msgid "Number Forms"
+msgstr "Formatos de numeros"
+
+#: viewpart/UnicodeBlocks.h:79
+msgid "Arrows"
+msgstr "Flechas"
+
+#: viewpart/UnicodeBlocks.h:80
+msgid "Mathematical Operators"
+msgstr "Operatores Mathematic"
+
+#: viewpart/UnicodeBlocks.h:81
+msgid "Miscellaneous Technical"
+msgstr "Miscellanea Technical"
+
+#: viewpart/UnicodeBlocks.h:82
+msgid "Control Pictures"
+msgstr "Figuras de Controlo"
+
+#: viewpart/UnicodeBlocks.h:83
+msgid "Optical Character Recognition"
+msgstr "Recognition de Character Optic"
+
+#: viewpart/UnicodeBlocks.h:84
+msgid "Enclosed Alphanumerics"
+msgstr "Alphanumerics includite"
+
+#: viewpart/UnicodeBlocks.h:85
+msgid "Box Drawing"
+msgstr "Designo de Quadrato"
+
+#: viewpart/UnicodeBlocks.h:86
+msgid "Block Elements"
+msgstr "Elements de Block"
+
+#: viewpart/UnicodeBlocks.h:87
+msgid "Geometric Shapes"
+msgstr "Formas geometric"
+
+#: viewpart/UnicodeBlocks.h:88
+msgid "Miscellaneous Symbols"
+msgstr "Miscellanea de Symbolos"
+
+#: viewpart/UnicodeBlocks.h:89
+msgid "Dingbats"
+msgstr "Dingbats"
+
+#: viewpart/UnicodeBlocks.h:90
+msgid "Miscellaneous Mathematical Symbols-A"
+msgstr "Miscellanea de Symbolos-A Mathematic"
+
+#: viewpart/UnicodeBlocks.h:91
+msgid "Supplemental Arrows-A"
+msgstr "Flechas-A Supplemental"
+
+#: viewpart/UnicodeBlocks.h:92
+msgid "Braille Patterns"
+msgstr "Modellos Braille"
+
+#: viewpart/UnicodeBlocks.h:93
+msgid "Supplemental Arrows-B"
+msgstr "Flechas-B Supplemental"
+
+#: viewpart/UnicodeBlocks.h:94
+msgid "Miscellaneous Mathematical Symbols-B"
+msgstr "Miscellanea de Symbolos-B Mathematic"
+
+#: viewpart/UnicodeBlocks.h:95
+msgid "Supplemental Mathematical Operators"
+msgstr "Operatores Mathematic Supplemental"
+
+#: viewpart/UnicodeBlocks.h:96
+msgid "Miscellaneous Symbols and Arrows"
+msgstr "Miscellanea de Symbolos e Flechas"
+
+#: viewpart/UnicodeBlocks.h:97 viewpart/UnicodeScripts.h:34
+msgid "Glagolitic"
+msgstr "Glagolitic"
+
+#: viewpart/UnicodeBlocks.h:98
+msgid "Latin Extended-C"
+msgstr "Latino Extendite - C"
+
+#: viewpart/UnicodeBlocks.h:99 viewpart/UnicodeScripts.h:26
+msgid "Coptic"
+msgstr "Coptic"
+
+#: viewpart/UnicodeBlocks.h:100
+msgid "Georgian Supplement"
+msgstr "Georgian Supplemento"
+
+#: viewpart/UnicodeBlocks.h:101 viewpart/UnicodeScripts.h:78
+msgid "Tifinagh"
+msgstr "Tifinagh"
+
+#: viewpart/UnicodeBlocks.h:102
+msgid "Ethiopic Extended"
+msgstr "Ethiopic Extendite"
+
+#: viewpart/UnicodeBlocks.h:103
+msgid "Supplemental Punctuation"
+msgstr "Punctuation Supplemental"
+
+#: viewpart/UnicodeBlocks.h:104
+msgid "CJK Radicals Supplement"
+msgstr "Supplemento CJK Radicales"
+
+#: viewpart/UnicodeBlocks.h:105
+msgid "Kangxi Radicals"
+msgstr "Radicales Kangxi"
+
+#: viewpart/UnicodeBlocks.h:106
+msgid "Ideographic Description Characters"
+msgstr "Characteres de description ideographic"
+
+#: viewpart/UnicodeBlocks.h:107
+msgid "CJK Symbols and Punctuation"
+msgstr "Symbolos e punctuation CJK"
+
+#: viewpart/UnicodeBlocks.h:108 viewpart/UnicodeScripts.h:43
+msgid "Hiragana"
+msgstr "Hiragana"
+
+#: viewpart/UnicodeBlocks.h:109 viewpart/UnicodeScripts.h:46
+msgid "Katakana"
+msgstr "Katakana"
+
+#: viewpart/UnicodeBlocks.h:110 viewpart/UnicodeScripts.h:19
+msgid "Bopomofo"
+msgstr "Bopomofo"
+
+#: viewpart/UnicodeBlocks.h:111
+msgid "Hangul Compatibility Jamo"
+msgstr "Hangul Compatibilitate Jamo"
+
+#: viewpart/UnicodeBlocks.h:112
+msgid "Kanbun"
+msgstr "kanbun"
+
+#: viewpart/UnicodeBlocks.h:113
+msgid "Bopomofo Extended"
+msgstr "Bopomofo Extendite"
+
+#: viewpart/UnicodeBlocks.h:114
+msgid "CJK Strokes"
+msgstr "Tractos CJK"
+
+#: viewpart/UnicodeBlocks.h:115
+msgid "Katakana Phonetic Extensions"
+msgstr "Extensiones Phonetic Katakana"
+
+#: viewpart/UnicodeBlocks.h:116
+msgid "Enclosed CJK Letters and Months"
+msgstr "Includite litteras e menses CJK"
+
+#: viewpart/UnicodeBlocks.h:117
+msgid "CJK Compatibility"
+msgstr "Compatibilitate CJK"
+
+#: viewpart/UnicodeBlocks.h:118
+msgid "CJK Unified Ideographs Extension A"
+msgstr "CJK Extension A de Ideographs Unificate"
+
+#: viewpart/UnicodeBlocks.h:119
+msgid "Yijing Hexagram Symbols"
+msgstr "Symbolos Yijing Hexagram"
+
+#: viewpart/UnicodeBlocks.h:120
+msgid "CJK Unified Ideographs"
+msgstr "CJK Ideographs Unificate"
+
+#: viewpart/UnicodeBlocks.h:121
+msgid "Yi Syllables"
+msgstr "Yi Syllables"
+
+#: viewpart/UnicodeBlocks.h:122
+msgid "Yi Radicals"
+msgstr "Yi Radicales"
+
+#: viewpart/UnicodeBlocks.h:123
+msgid "Modifier Tone Letters"
+msgstr "Littera de Modificator de tono"
+
+#: viewpart/UnicodeBlocks.h:124
+msgid "Latin Extended-D"
+msgstr "Latin Extendite-D"
+
+#: viewpart/UnicodeBlocks.h:125 viewpart/UnicodeScripts.h:68
+msgid "Syloti Nagri"
+msgstr "Syloti Nagri"
+
+#: viewpart/UnicodeBlocks.h:126
+msgid "Phags-pa"
+msgstr "Phags-pa"
+
+#: viewpart/UnicodeBlocks.h:127
+msgid "Hangul Syllables"
+msgstr "Syllables Hangul"
+
+#: viewpart/UnicodeBlocks.h:128
+msgid "High Surrogates"
+msgstr "Surrogatos Alto"
+
+#: viewpart/UnicodeBlocks.h:129
+msgid "High Private Use Surrogates"
+msgstr "Alto Surrogatos de uso private"
+
+#: viewpart/UnicodeBlocks.h:130
+msgid "Low Surrogates"
+msgstr "Basso Surrogatos"
+
+#: viewpart/UnicodeBlocks.h:131
+msgid "Private Use Area"
+msgstr "Area de uso private"
+
+#: viewpart/UnicodeBlocks.h:132
+msgid "CJK Compatibility Ideographs"
+msgstr "Ideographs de Compatibilitate CJK"
+
+#: viewpart/UnicodeBlocks.h:133
+msgid "Alphabetic Presentation Forms"
+msgstr "Formatos de presentation Alphabetic"
+
+#: viewpart/UnicodeBlocks.h:134
+msgid "Arabic Presentation Forms-A"
+msgstr "Formatos-A de Presentation Arabic"
+
+#: viewpart/UnicodeBlocks.h:135
+msgid "Variation Selectors"
+msgstr "selectores de Variation"
+
+#: viewpart/UnicodeBlocks.h:136
+msgid "Vertical Forms"
+msgstr "Formatos vertical"
+
+#: viewpart/UnicodeBlocks.h:137
+msgid "Combining Half Marks"
+msgstr "Combinante Medie Signos"
+
+#: viewpart/UnicodeBlocks.h:138
+msgid "CJK Compatibility Forms"
+msgstr "Formatos de compatibilitate CJK"
+
+#: viewpart/UnicodeBlocks.h:139
+msgid "Small Form Variants"
+msgstr "Variantes de Formato parve"
+
+#: viewpart/UnicodeBlocks.h:140
+msgid "Arabic Presentation Forms-B"
+msgstr "Formato-B de presentation Arabic"
+
+#: viewpart/UnicodeBlocks.h:141
+msgid "Half-Width and Full-Width Forms"
+msgstr "Formas de Medie-largessa e Plen-largessa "
+
+#: viewpart/UnicodeBlocks.h:142
+msgid "Specials"
+msgstr "Specials"
+
+#: viewpart/UnicodeBlocks.h:143
+msgid "Linear B Syllabary"
+msgstr "Sillabario Linear B"
+
+#: viewpart/UnicodeBlocks.h:144
+msgid "Linear B Ideograms"
+msgstr "Ideogrammas Linear B"
+
+#: viewpart/UnicodeBlocks.h:145
+msgid "Aegean Numbers"
+msgstr "Numeros Aegean"
+
+#: viewpart/UnicodeBlocks.h:146
+msgid "Ancient Greek Numbers"
+msgstr "Vetule Numeros Grec"
+
+#: viewpart/UnicodeBlocks.h:147 viewpart/UnicodeScripts.h:59
+msgid "Old Italic"
+msgstr "Vetere Italic"
+
+#: viewpart/UnicodeBlocks.h:148 viewpart/UnicodeScripts.h:35
+msgid "Gothic"
+msgstr "Gothic"
+
+#: viewpart/UnicodeBlocks.h:149 viewpart/UnicodeScripts.h:79
+msgid "Ugaritic"
+msgstr "Ugaritic"
+
+#: viewpart/UnicodeBlocks.h:150 viewpart/UnicodeScripts.h:60
+msgid "Old Persian"
+msgstr "Vetere Persian (Farsi)"
+
+#: viewpart/UnicodeBlocks.h:151 viewpart/UnicodeScripts.h:30
+msgid "Deseret"
+msgstr "Deseret"
+
+#: viewpart/UnicodeBlocks.h:152 viewpart/UnicodeScripts.h:66
+msgid "Shavian"
+msgstr "Shavian"
+
+#: viewpart/UnicodeBlocks.h:153 viewpart/UnicodeScripts.h:62
+msgid "Osmanya"
+msgstr "Osmanya"
+
+#: viewpart/UnicodeBlocks.h:154
+msgid "Cypriot Syllabary"
+msgstr "Syllabario Cypriot"
+
+#: viewpart/UnicodeBlocks.h:155 viewpart/UnicodeScripts.h:64
+msgid "Phoenician"
+msgstr "Phoenician"
+
+#: viewpart/UnicodeBlocks.h:156 viewpart/UnicodeScripts.h:47
+msgid "Kharoshthi"
+msgstr "Kharoshti"
+
+#: viewpart/UnicodeBlocks.h:157 viewpart/UnicodeScripts.h:27
+msgid "Cuneiform"
+msgstr "Cuneiform"
+
+#: viewpart/UnicodeBlocks.h:158
+msgid "Cuneiform Numbers and Punctuation"
+msgstr "Numeros e Punctuation Cuneiform"
+
+#: viewpart/UnicodeBlocks.h:159
+msgid "Byzantine Musical Symbols"
+msgstr "Symbolos Musical Byzantine"
+
+#: viewpart/UnicodeBlocks.h:160
+msgid "Musical Symbols"
+msgstr "Symbolos Musical"
+
+#: viewpart/UnicodeBlocks.h:161
+msgid "Ancient Greek Musical Notation"
+msgstr "Notation musical grec vetule"
+
+#: viewpart/UnicodeBlocks.h:162
+msgid "Tai Xuan Jing Symbols"
+msgstr "Symbolos Tai Xuan Jing"
+
+#: viewpart/UnicodeBlocks.h:163
+msgid "Counting Rod Numerals"
+msgstr "Contar le numeral de Rod"
+
+#: viewpart/UnicodeBlocks.h:164
+msgid "Mathematical Alphanumeric Symbols"
+msgstr "Symbolos mathematic alphanumeric"
+
+#: viewpart/UnicodeBlocks.h:165
+msgid "CJK Unified Ideographs Extension B"
+msgstr "CJK Extension B de Ideographs Unificate"
+
+#: viewpart/UnicodeBlocks.h:166
+msgid "CJK Compatibility Ideographs Supplement"
+msgstr "Supplemento de Ideographs de Compatibilitate CJK"
+
+#: viewpart/UnicodeBlocks.h:167
+msgid "Tags"
+msgstr "Etiquettas"
+
+#: viewpart/UnicodeBlocks.h:168
+msgid "Variation Selectors Supplement"
+msgstr "Supplemento de selectores de Variation"
+
+#: viewpart/UnicodeBlocks.h:169
+msgid "Supplementary Private Use Area-A"
+msgstr "Area-A de uso private Supplementari"
+
+#: viewpart/UnicodeBlocks.h:170
+msgid "Supplementary Private Use Area-B"
+msgstr "Area-B de uso private Supplementari"
+
+#: viewpart/UnicodeScripts.h:20
+msgid "Braille"
+msgstr "Braille"
+
+#: viewpart/UnicodeScripts.h:23
+msgid "Canadian Aboriginal"
+msgstr "Aboriginal Canadian"
+
+#: viewpart/UnicodeScripts.h:25
+msgid "Common"
+msgstr "Commun"
+
+#: viewpart/UnicodeScripts.h:28
+msgid "Cypriot"
+msgstr "Cypriot"
+
+#: viewpart/UnicodeScripts.h:36
+msgid "Greek"
+msgstr "Greco"
+
+#: viewpart/UnicodeScripts.h:39
+msgid "Han"
+msgstr "Han"
+
+#: viewpart/UnicodeScripts.h:40
+msgid "Hangul"
+msgstr "Hangul"
+
+#: viewpart/UnicodeScripts.h:44
+msgid "Inherited"
+msgstr "Hereditate"
+
+#: viewpart/UnicodeScripts.h:50
+msgid "Latin"
+msgstr "Latino"
+
+#: viewpart/UnicodeScripts.h:52
+msgid "Linear B"
+msgstr "Linear B"
+
+#: viewpart/UnicodeScripts.h:57
+msgid "Nko"
+msgstr "Nko"
+
+#: viewpart/UnicodeScripts.h:63
+msgid "Phags Pa"
+msgstr "Phags-pa"
+
+#: viewpart/UnicodeScripts.h:80
+msgid "Yi"
+msgstr "Yi"
+
+#~ msgid "Print..."
+#~ msgstr "Imprime..."
+
+#~ msgid "Create New Group..."
+#~ msgstr "Crea Nove Gruppo..."
+
+#~ msgid "Remove Group..."
+#~ msgstr "Remove gruppo..."
+
+#~ msgid "Install..."
+#~ msgstr "Installa..."
+
+#~ msgid "FontViewPart"
+#~ msgstr "FontViewPart"
+
+#~ msgid "<p>No information</p>"
+#~ msgstr "<p>Necun Information</p>"
+
+#~ msgid "Create a new group"
+#~ msgstr "Crea un nove gruppo"
+
+#~ msgid "Enable all disabled fonts in the current group"
+#~ msgstr "Habilita omne dishabilitate fontes in le gruppo currente"
+
+#~ msgid "Disable all enabled fonts in the current group"
+#~ msgstr "Dishabilita omne habilitate fontes in le gruppo currente "
+
+#~ msgid "Please enter the name of the new group:"
+#~ msgstr "Pro favor tu inserta le nomine del nove gruppo:"
+
+#~ msgid "Type here to filter on %1"
+#~ msgstr "Typa ci pro filtrar super %1"
+
+#~ msgid "Tools"
+#~ msgstr "Instrumentos"
+
+#~ msgid "Add..."
+#~ msgstr "Il Adde..."
+
+#~ msgid "Install fonts"
+#~ msgstr "Installa fonts"
+
+#~ msgid "Do you really want to move this font?"
+#~ msgid_plural ""
+#~ "<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?"
+#~ msgstr[0] "Tu realmente vole mover iste font ex <i>%2</i> a <i>%3</i>?"
+#~ msgstr[1] "Tu vermente vole mover iste %1 fonts ex <i>%2</i> a <i>%3</i>?"
+
+#, fuzzy
+#~| msgid "Print..."
+#~ msgid "Starting..."
+#~ msgstr "Imprime..."
+
+#, fuzzy
+#~| msgid "Canceling..."
+#~ msgid "Cancelling..."
+#~ msgstr "Il es cancellante ..."
+
+#~ msgid "Failed to locate font printer."
+#~ msgstr "Il falleva a localisar imprimitor de font."
+
+#~ msgid "Move Here"
+#~ msgstr "Move ci"
+
+#~ msgid "Cancel"
+#~ msgstr "Cancella"
+
+#~ msgid " (<img src=\"%1\" />%2 <img src=\"%3\" />%4 <img src=\"%5\" />%6)"
+#~ msgstr "(<img src=\"%1\" />%2 <img src=\"%3\" />%4 <img src=\"%5\" />%6)"

@@ -1,0 +1,49 @@
+# Translation of plasma_runner_locations to Norwegian Nynorsk
+#
+# Karl Ove Hufthammer <karl@huftis.org>, 2008, 2009, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner_locationsrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"PO-Revision-Date: 2015-10-09 17:30+0100\n"
+"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
+"Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
+"Language: nn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 2.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: locationrunner.cpp:33
+#, kde-format
+msgid ""
+"Finds local directories and files, network locations and Internet sites with "
+"paths matching :q:."
+msgstr ""
+"Finn lokale mapper og filer, nettverksområde og Internett-sider med adresser "
+"i samsvar med søkjeteksten :q:."
+
+#: locationrunner.cpp:60
+#, kde-format
+msgid "Open %1"
+msgstr "Opna %1"
+
+#: locationrunner.cpp:78 locationrunner.cpp:82
+#, kde-format
+msgid "Launch with %1"
+msgstr "Start med %1"
+
+#: locationrunner.cpp:88
+#, kde-format
+msgid "Go to %1"
+msgstr "Gå til %1"
+
+#: locationrunner.cpp:96
+#, kde-format
+msgid "Send email to %1"
+msgstr "Send e-post til %1"

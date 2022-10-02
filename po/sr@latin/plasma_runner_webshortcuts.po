@@ -1,0 +1,40 @@
+# Translation of krunner_webshortcutsrunner.po to Serbian.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2007, 2008, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner_webshortcutsrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-06-17 11:39+0200\n"
+"PO-Revision-Date: 2009-12-20 12:24+0100\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#: webshortcutrunner.cpp:63
+#, kde-format
+msgid "Opens \"%1\" in a web browser with the query :q:."
+msgstr "Otvara „%1“ u veb pregledaču sa upitom :q:."
+
+#: webshortcutrunner.cpp:93
+#, kde-format
+msgid "Search in private window"
+msgstr ""
+
+#: webshortcutrunner.cpp:93
+#, kde-format
+msgid "Search in incognito window"
+msgstr ""
+
+# >> @label %1 a search engine, %2 word to search for
+#: webshortcutrunner.cpp:124 webshortcutrunner.cpp:141
+#, kde-format
+msgid "Search %1 for %2"
+msgstr "Potraži „%2“ pomoću %1|/|Potraži „%2“ $[ins-p %1]"

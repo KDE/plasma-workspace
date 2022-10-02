@@ -1,0 +1,373 @@
+# translation of kcmicons.po to
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kdebase package.
+# Abhishek Jacob <abhishekjacob123@gmail.com>
+# ANI PETER|അനി പീറ്റര്‍ <peter.ani@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmicons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"PO-Revision-Date: 2020-11-30 16:14+0000\n"
+"Last-Translator: Subin Siby <subins2000@gmail.com>\n"
+"Language-Team: SMC <smc.org.in>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Weblate 4.3.2\n"
+
+#: iconsizecategorymodel.cpp:14
+#, kde-format
+msgid "Toolbar"
+msgstr "ഉപകരണപ്പട്ട"
+
+#: iconsizecategorymodel.cpp:15
+#, kde-format
+msgid "Main Toolbar"
+msgstr "പ്രധാന ഉപകരണപ്പട്ട"
+
+#: iconsizecategorymodel.cpp:16
+#, kde-format
+msgid "Small Icons"
+msgstr "ചെറിയ ചിഹ്നങ്ങള്‍"
+
+#: iconsizecategorymodel.cpp:17
+#, kde-format
+msgid "Panel"
+msgstr "പാനൽ"
+
+#: iconsizecategorymodel.cpp:18
+#, kde-format
+msgid "Dialogs"
+msgstr "ഡയലോഗുകള്‍"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr "ഇപ്പോഴത്തെ ചിഹ്ന പ്രമേയത്തിന്റെ പേര്"
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr "ഡെസ്ക്ടോപ്പിലെ ചിഹ്നങ്ങളുടെ വലുപ്പം"
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr "ഉപകരണപ്പട്ടയിലെ ചിഹ്നങ്ങളുടെ വലുപ്പം"
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, kde-format
+msgid "Main toolbar icons size"
+msgstr "പ്രധാന ഉപകരണപ്പട്ടയിലെ ചിഹ്നങ്ങളുടെ വലുപ്പം"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, kde-format
+msgid "Small icons size"
+msgstr "ചെറിയ ചിഹ്നങ്ങളുടെ വലുപ്പം"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr "പാനല്‍ ചിഹ്നങ്ങളുടെ വലിപ്പം"
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr "ഡയലോഗ് ചിഹ്നങ്ങളുടെ വലിപ്പം"
+
+#: main.cpp:182
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "താല്‍കാലിക ഫയല്‍ നിര്‍മ്മിക്കാന്‍ കഴി‍‌ഞ്ഞില്ല."
+
+#: main.cpp:193
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr "ചിഹ്ന പ്രമേയത്തിന്റെ ആര്‍ക്കൈവ് ലഭ്യമായില്ല: %1"
+
+#: main.cpp:207
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "ഫയല്‍ സാധുതയുള്ള ഒരു ചിഹ്ന പ്രമേയ ആര്‍ക്കൈവ് അല്ല."
+
+#: main.cpp:212
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr ""
+"ചേര്‍ക്കുന്ന സമയത്തു് ഒരു പിശകു് സംഭവിച്ചിരിക്കുന്നു; എന്നിരുന്നാലും ആര്‍ക്കൈവിലുള്ള മിക്ക പ്രമേയങ്ങളും "
+"ചേര്‍ത്തിട്ടുണ്ടു്"
+
+#: main.cpp:216
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "പ്രമേയം വിജയകരമായി ഇന്‍സ്റ്റാള്‍ ചെയ്തു."
+
+#: main.cpp:260
+#, fuzzy, kde-format
+#| msgid "Installing icon themes..."
+msgid "Installing icon themes…"
+msgstr "ചിഹ്ന പ്രമേയങ്ങള്‍ ചേര്‍ക്കുന്നു..."
+
+#: main.cpp:270
+#, fuzzy, kde-format
+#| msgid "Installing %1 theme..."
+msgid "Installing %1 theme…"
+msgstr "%1 പ്രമേയം ചേര്‍ക്കുന്നു..."
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr "ഈ മൊഡ്യൂള്‍ നിങ്ങളുടെ ഡെസ്ക്ടോപ്പിനായുള്ള ചിഹ്നങ്ങള്‍ തിരഞ്ഞെടുക്കാന്‍ സഹായിക്കും."
+
+#: package/contents/ui/main.qml:147
+#, kde-format
+msgid "Remove Icon Theme"
+msgstr "പ്രമേയം നീക്കം ചെയ്യുക"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Restore Icon Theme"
+msgstr "പ്രമേയം തിരികെ കൊണ്ടുവരുക"
+
+#: package/contents/ui/main.qml:228
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr "ചിഹ്നങ്ങളുടെ വലിപ്പം ക്രമീകരിക്കുക"
+
+#: package/contents/ui/main.qml:246
+#, fuzzy, kde-format
+#| msgid "Install from File..."
+msgid "Install from File…"
+msgstr "പ്രമേയം ഫയലില്‍ നിന്നും ചേര്‍ക്കുക..."
+
+#: package/contents/ui/main.qml:251
+#, fuzzy, kde-format
+#| msgid "Get New Icons..."
+msgid "Get New Icons…"
+msgstr "പുതിയ പ്രമേയങ്ങള്‍ ലഭ്യമാക്കുക..."
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Open Theme"
+msgstr "പ്രമേയം തുറക്കുക"
+
+#: package/contents/ui/main.qml:281
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr "പ്രമേയ ഫയലുകള്‍ (*.tar.gz *.tar.bz2)"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "അനി പീറ്റര്‍, അഭിഷേക് ഉമ്മന്‍ ജേക്കബ്,കണ്ണന്‍ വി എം"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "shijualexonline@gmail.com,snalledam@dataone.in,vivekkj2004@gmail.com"
+
+#~ msgid "Icons"
+#~ msgstr "ചിഹ്നങ്ങള്‍"
+
+#~ msgid "Icons Control Panel Module"
+#~ msgstr "പാളിയിലെ ചിഹ്നങ്ങള്‍ നിയന്ത്രിക്കുന്ന ഘടകം"
+
+#~ msgid "(c) 2000-2003 Geert Jansen"
+#~ msgstr "(c) 2000-2003 ഗേര്‍ട്ട് ജാന്‍സന്‍"
+
+#~ msgid "Geert Jansen"
+#~ msgstr "ഗേര്‍ട്ട് ജാന്‍സന്‍"
+
+#~ msgid "Antonio Larrosa Jimenez"
+#~ msgstr "ആന്റോണിയോ ലാറോസാ ജിമനെസ്"
+
+#~ msgid "Torsten Rahn"
+#~ msgstr "റ്റോര്‍സ്ടെന്‍ റാന്‍"
+
+#~ msgid "Jonathan Riddell"
+#~ msgstr "ജോനാഥന്‍ റിഡ്ഡെല്‍"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "കൈ ഉവെ ബ്രൌലിക്‍"
+
+#~ msgid "Desktop"
+#~ msgstr "പണിയിടം"
+
+#~ msgid "Use of Icon"
+#~ msgstr "ചിഹ്നത്തിന്റെ ഉപയോഗം"
+
+#~ msgctxt "@label The icon rendered by default"
+#~ msgid "Default"
+#~ msgstr "സഹജമായ"
+
+#~ msgctxt "@label The icon rendered as active"
+#~ msgid "Active"
+#~ msgstr "സജീവം"
+
+#~ msgctxt "@label The icon rendered as disabled"
+#~ msgid "Disabled"
+#~ msgstr "പ്രവര്‍ത്തന രഹിതം"
+
+#~ msgid "Size:"
+#~ msgstr "വ്യാപ്തി:"
+
+#~ msgid "Set Effect..."
+#~ msgstr "പ്രഭാവങ്ങള്‍ സജ്ജമാക്കുക..."
+
+#~ msgid "All Icons"
+#~ msgstr "എല്ലാം ചിഹ്നങ്ങളും"
+
+#~ msgid "Setup Default Icon Effect"
+#~ msgstr "ചിഹ്നങ്ങള്‍ക്കു് സഹജമായുള്ള പ്രഭാവം സജ്ജമാക്കുക"
+
+#~ msgid "Setup Active Icon Effect"
+#~ msgstr "ചിഹ്നങ്ങള്‍ക്കു് സജീവമായ പ്രഭാവം സജ്ജമാക്കുക"
+
+#~ msgid "Setup Disabled Icon Effect"
+#~ msgstr "ചിഹ്നങ്ങള്‍ക്കു് പ്രവര്‍ത്തന രഹിതമായ പ്രഭാവം സജ്ജമാക്കുക"
+
+#~ msgid "&Effect:"
+#~ msgstr "&പ്രഭാവം:"
+
+#~ msgid "No Effect"
+#~ msgstr "പ്രഭാവമില്ല"
+
+#~ msgid "To Gray"
+#~ msgstr "ചാരനിറമാക്കുക"
+
+#~ msgid "Colorize"
+#~ msgstr "നിറം കൊടുക്കുക"
+
+#~ msgid "Gamma"
+#~ msgstr "ഗാമാ"
+
+#~ msgid "Desaturate"
+#~ msgstr "അപൂരിതമാക്കുക"
+
+#~ msgid "To Monochrome"
+#~ msgstr "മോണോക്രോം ആക്കുക"
+
+#~ msgid "&Semi-transparent"
+#~ msgstr "&അര്‍ദ്ധതാര്യം"
+
+#~ msgid "Preview"
+#~ msgstr "കണ്ടുനോക്കുക"
+
+#~ msgid "Effect Parameters"
+#~ msgstr "പ്രഭാവങ്ങളുടെ അളവുകള്‍"
+
+#~ msgid "&Amount:"
+#~ msgstr "&അളവു്:"
+
+#~ msgid "Co&lor:"
+#~ msgstr "നി&റം:"
+
+#~ msgid "&Second color:"
+#~ msgstr "&രണ്ടാമത്തെ നിറം:"
+
+#~ msgid "Name"
+#~ msgstr "പേരു്"
+
+#~ msgid "Description"
+#~ msgstr "വിവരണം"
+
+#~ msgid "Install a theme archive file you already have locally"
+#~ msgstr "നിങ്ങളുടെ സിസ്റ്റത്തിലുള്ള ഒരു പ്രമേയ ആര്‍ക്കൈവ് ഫയല്‍ ചേര്‍ക്കുക"
+
+#~ msgid ""
+#~ "If you already have a theme archive locally, this button will unpack it "
+#~ "and make it available for KDE applications"
+#~ msgstr ""
+#~ "നിങ്ങളുടെ സിസ്റ്റത്തില്‍ ഒരു പ്രമേയ ആര്‍ക്കൈവ് ഫയല്‍ ലഭ്യമാണെങ്കില്‍, ഈ ബട്ടണ്‍ ഉപയോഗിച്ചു് കെഡിഇ "
+#~ "പ്രയോഗങ്ങള്‍ക്കെല്ലാം ഇതു് ലഭ്യമാക്കുവാന്‍ സാധിക്കുന്നു"
+
+#~ msgid "Get new themes from the Internet"
+#~ msgstr "ഇന്റര്‍നെറ്റില്‍ നിന്നും പുതിയ പ്രമേയങ്ങള്‍ ലഭ്യമാക്കുക"
+
+#~ msgid ""
+#~ "You need to be connected to the Internet to use this action. A dialog "
+#~ "will display a list of themes from the http://www.kde.org website. "
+#~ "Clicking the Install button associated with a theme will install this "
+#~ "theme locally."
+#~ msgstr ""
+#~ "ഈ പ്രവൃത്തി ഉപയോഗിക്കുന്നതിനായി നിങ്ങള്‍ക്കു് ഇന്റര്‍നെറ്റ് കണക്ഷന്‍ ആവശ്യമുണ്ടു്. http://www.kde."
+#~ "org വെബ്സൈറ്റില്‍ നിന്നും പ്രമേയങ്ങളുടെ ഒരു പട്ടിക ലഭ്യമാകുന്നു. നിങ്ങളുടെ സിസ്റ്റത്തില്‍ ഇവ ഇന്‍"
+#~ "സ്റ്റോള്‍ ചെയ്യുന്നതിനായി ഓരോ പ്രമേയത്തിനുമുള്ള ബട്ടണില്‍ ക്ലിക്കു് ചെയ്യുക."
+
+#~ msgid "Remove the selected theme from your disk"
+#~ msgstr "നിങ്ങളുടെ ഡിസ്കില്‍ നിന്നും തിരഞ്ഞെടുത്ത പ്രമേയം നീക്കം ചെയ്യുക"
+
+#~ msgid "This will remove the selected theme from your disk."
+#~ msgstr "ഇതു് നിങ്ങളുടെ ഡിസ്കില്‍ നിന്നും തിരഞ്ഞെടുത്ത പ്രമേയം നീക്കം ചെയ്യുന്നു."
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "പ്രമേയത്തിനുള്ള യുആര്‍എല്‍ ടൈപ്പ് ചെയ്യുക അല്ലെങ്കില്‍ വലിച്ചിടുക"
+
+#~ msgid ""
+#~ "Unable to download the icon theme archive;\n"
+#~ "please check that address %1 is correct."
+#~ msgstr ""
+#~ "ചിഹ്നത്തിന്റെ പ്രമേയത്തിനുള്ള ആര്‍ക്കൈവ് ഇറക്കിവയ്കുവാന്‍ സാധ്യമല്ല;\n"
+#~ "%1 എന്ന വിലാസം ശരിയാണോ എന്നു് പരിശോധിക്കുക."
+
+#~ msgid "<qt>Installing <strong>%1</strong> theme</qt>"
+#~ msgstr "<qt><strong>%1</strong> എന്ന പ്രമേയം ചേര്‍ക്കുന്നു</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <strong>%1</strong> icon theme?"
+#~ "<br /><br />This will delete the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>നിങ്ങള്‍ക്കു് <strong>%1</strong> ചിഹ്നത്തിനുള്ള പ്രമേയം നീക്കം ചെയ്യണമെന്നുറപ്പാണോ?"
+#~ "<br /><br />ഈ പ്രമേയം ലഭ്യമാക്കുന്ന ഫയലുകളെല്ലാം നിങ്ങള്‍ക്കു് നഷ്ടമാകുന്നതാണു്.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "ഉറപ്പു് വരുത്തല്‍"
+
+#~ msgid "&Theme"
+#~ msgstr "&പ്രമേയം"
+
+#~ msgid "Ad&vanced"
+#~ msgstr "വി&ശദമായ"
+
+#, fuzzy
+#~ msgid ""
+#~ "<h1>Icons</h1>This module allows you to choose the icons for your desktop."
+#~ "<p>To choose an icon theme, click on its name and apply your choice by "
+#~ "pressing the \"Apply\" button below. If you do not want to apply your "
+#~ "choice you can press the \"Reset\" button to discard your changes.</"
+#~ "p><p>By pressing the \"Install Theme File...\" button you can install "
+#~ "your new icon theme by writing its location in the box or browsing to the "
+#~ "location. Press the \"OK\" button to finish the installation.</p><p>The "
+#~ "\"Remove Theme\" button will only be activated if you select a theme that "
+#~ "you installed using this module. You are not able to remove globally "
+#~ "installed themes here.</p><p>You can also specify effects that should be "
+#~ "applied to the icons.</p>"
+#~ msgstr ""
+#~ "<h1>ചിഹ്നങ്ങള്‍ (ഐക്കണുകള്‍)</h1>ഈ ഭാഗം നിങ്ങളുടെ പണിയിടത്തിലെ ചിഹ്നങ്ങള്‍ തിരഞ്ഞെടുക്കുവാന്‍ "
+#~ "സഹായിയ്കും. <p>ചിഹ്നത്തിന്റെ പ്രമേയം തെരഞ്ഞെടുക്കുന്നതിന് അതിന്റെ പേരില്‍ ക്ലിക്ക് ചെയ്ത "
+#~ "ശേഷം താഴെയുള്ള \"പ്രാവര്‍ത്തികമാക്കുക\" എന്ന ബട്ടണ്‍ അമര്‍ത്തുക. നിങ്ങളുടെ തിരഞ്ഞെടുപ്പു് പ്രാവര്‍"
+#~ "ത്തികമാക്കേണ്ട എന്നുണ്ടെങ്കില്‍ \"തിരിച്ചുപോകുക\" എന്ന ബട്ടണ്‍ അമര്‍ത്തി നിങ്ങള്‍ വരുത്തിയ "
+#~ "മാറ്റങ്ങള്‍ തിരസ്കരിക്കാം.</p><p>ചിഹ്നത്തിന്റെ പുതിയ പ്രമേയം ഇന്‍സ്റ്റാള്‍ ചെയ്യുന്നതിന് "
+#~ "\"പുതിയ പ്രമേയം ചേര്‍ക്കുക\" എന്ന ബട്ടണ്‍ അമര്‍ത്തിയശേഷം പ്രത്യക്ഷപ്പെടുന്ന പെട്ടിയില്‍ അതിന്റെ "
+#~ "വിലാസം എഴുതിച്ചേര്‍ക്കുകയോ, വിലാസം തെരഞ്ഞ് കണ്ടേത്തുകയോ ചെയ്യാം. ഇന്‍സ്റ്റാളേഷന്‍ പൂര്‍"
+#~ "ത്തിയാക്കുന്നതിന് \"ശരി\" എന്ന ബട്ടണ്‍ അമര്‍ത്തുക.</p><p>ഈ ഭാഗത്തു് നിങ്ങള്‍ ഒരു പ്രമേയം "
+#~ "തെരഞ്ഞെടുക്കുമ്പോള്‍ മാത്രമേ  \"പ്രമേയം മായ്ക്കുക\" എന്ന ബട്ടണ്‍ പ്രവര്‍ത്തനനിരതമാകുകയുള്ളൂ. "
+#~ "ആഗോളമായി ചേര്‍ത്ത പ്രമേയങ്ങള്‍ ഇവിടെവച്ച് പിന്‍വലിക്കുവാന്‍ സാധിക്കുകയില്ല.</p><p>ചിഹ്നങ്ങളില്‍ "
+#~ "വരുത്തേണ്ട പ്രഭാവങ്ങളും നിങ്ങള്‍ക്ക് ഇവിടെ വ്യക്തമാക്കാം.</p>"
+
+#~ msgid "Animate icons"
+#~ msgstr "ചിഹ്നങ്ങളെ കളിപ്പിയ്ക്കുക"
+
+#~ msgid "Select the icon theme you want to use:"
+#~ msgstr "നിങ്ങള്‍ക്കാവശ്യമുള്ള ചിഹ്നത്തിന്റെ പ്രമേയം തിരഞ്ഞെടുക്കുക:"

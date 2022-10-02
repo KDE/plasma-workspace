@@ -1,0 +1,440 @@
+<?xml version="1.0" ?>
+
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % German "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="colors" lang="&language;">
+<articleinfo>
+<title
+>Farben</title>
+<authorgroup>
+<author
+>&Matthew.Woehlke; &Matthew.Woehlke.mail;</author>
+<othercredit role="translator"
+><firstname
+>Jürgen</firstname
+><surname
+>Nagel</surname
+><affiliation
+><address
+><email
+>JuergenNagel@web.de</email
+></address
+></affiliation
+><contrib
+>Deutsche Übersetzung</contrib
+></othercredit
+> <othercredit role="translator"
+><firstname
+>Frank</firstname
+><surname
+>Brücker</surname
+><affiliation
+><address
+><email
+>f.bruecker@gmx.de</email
+></address
+></affiliation
+><contrib
+>Überarbeitung der Übersetzung</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-08</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systemeinstellungen</keyword>
+<keyword
+>Farbe</keyword>
+<keyword
+>kcm</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="color">
+<title
+>Farben</title>
+
+<sect2 id="color-scheme">
+  <title
+>Verwaltung der Farbschemata</title>
+
+  <para
+>Dieses Modul dient zum Einstellen der Farbschemata auf Ihrem Rechner. Es wird eine Liste der &plasma;-Farbschemata angezeigt. Nur ein Farbschema ist aktiv, aber Sie können Farbschemata ändern. Sie können Farbschemata  mit <guibutton
+>Schema entfernen</guibutton
+> löschen. Dieser Knopf wird angezeigt, wenn Sie den Mauszeiger auf ein Farbschema bewegen. Farbschemata des Systems können Sie nicht löschen, der Knopf für diese Aktion ist deaktiviert.</para>
+
+  <para
+>Sie können die Schemaliste mit dem Feld <guilabel
+>Suchen</guilabel
+> über den angezeigten Schemata filtern. Außerdem können Sie mit dem Kombinationsfeld neben dem Suchfeld nur <guimenuitem
+>Helle Designs</guimenuitem
+>, <guimenuitem
+>Dunkle Designs</guimenuitem
+> anzeigen. </para>
+
+  <para
+>Mit einer Internetverbindung können zusätzliche von Benutzern erstellte Schemata mit <guibutton
+>Neue Farbschemata holen</guibutton
+> installiert werden.</para>
+
+  <para
+>Sie können außerdem Schemata aus Dateien installieren, die Sie bereits heruntergeladen oder von Anderen erhalten haben, und auch Schemata aus &kde; 4 importieren. Die Farbschemata aus &kde; 4 haben die Dateierweiterung <quote
+>*.colors</quote
+>. </para>
+
+  <note>
+  <para
+>Dieses Handbuch bezieht sich mehrfach auf das <quote
+>aktuelle</quote
+> oder das <quote
+>aktive</quote
+> Farbschema. Das <quote
+>aktuelle</quote
+> Farbschema sind die Einstellungen für Farben und Optionen, die zuletzt übernommen wurden, &ie; diese würden Sie erhalten, wenn Sie auf <guibutton
+>Verwerfen</guibutton
+> klicken. Das <quote
+>aktive</quote
+> Farbschema sind die Einstellungen für Farben und Optionen, die Sie zuletzt eingestellt haben, diese würden Sie erhalten, wenn Sie auf <guibutton
+>Anwenden</guibutton
+> klicken.</para>
+  </note>
+</sect2>
+
+<sect2>
+  <title
+>Schemata bearbeiten oder erstellen</title>
+  <para
+>Um ein Schema zu bearbeiten oder ein neues Schema zu erstellen wählen Sie ein vorhandenes Schema aus der Liste und drücken dann auf <guibutton
+>Schema ändern</guibutton
+>. Damit öffnen Sie einen Dialog mit den drei Karteikarten <guilabel
+>Optionen</guilabel
+>, <guilabel
+>Farbauswahl</guilabel
+> und <guilabel
+>Deaktiviert</guilabel
+>. Haben Sie das Schem nach Ihren Vorstellungen angepasst, können Sie es hochladen, zurücksetzen, unter einem anderen Namen speichern oder das aktuelle Schema überschreiben. </para>
+
+<sect3 id="color-options">
+  <title
+>Einstellungen für das Farbschema</title>
+
+  <para
+>Die Karteikarte <guilabel
+>Optionen</guilabel
+> beinhaltet Einstellungen zum benutzten Farbschema und einige Einstellungen zum Farbschema, aber nicht zur Einstellung von Farben.</para>
+
+  <itemizedlist>
+    <listitem
+><para
+><guilabel
+>Farbeffekte für inaktive Fenster anwenden</guilabel
+> &mdash; Wenn ausgewählt, werden die <link linkend="color-effects"
+>unten</link
+> aufgeführten Farbeffekte auf inaktive Fenster angewendet. Das dient zur einfacheren Unterscheidung aktiver und inaktiver Fenster, kann aber auch einfach nur aus ästhetischen Gründen geschehen. Einige Benutzer berichten von störendem Flackern, weil die Fenster neu gezeichnet werden, wenn diese inaktiv geschaltet werden. Anders als bei Arbeitsflächeneffekten, brauchen Farbeffekte keine Unterstützung für Compositing und funktionieren auf allen Systemen, aber nur mit &kde;-Anwendungen. </para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Andere Farben für inaktive Auswahl verwenden</guilabel
+> &mdash; Wenn ausgewählt, werden die ausgewählten Elemente eines inaktiven Fensters, die nicht den Eingabefokus haben, in einer anderen Farbe dargestellt. Das hilft beim Erkennen des ausgewählten Element in einigen Anwendungen, speziell Anwendungen die mehrere Listen gleichzeitig anzeigen. </para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Sortierte Spalte in Listen einfärben</guilabel
+> &mdash; Wenn ausgewählt, wird bei Listen mit mehreren Spalten die Spalte, deren Inhalt zum Sortieren der Liste verwendet wurde, in einer etwas anderen Farbe dargestellt. </para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Kontrast</guilabel
+> &mdash; Dieser Schieberegler steuert den Kontrast von schattierten Elementen, die in den meisten Stilen benutzt werden, wie Rahmen und <quote
+>3D</quote
+>-Effekte. Kleinere Werte ergeben weniger Kontrast und demzufolge weichere Kanten, höhere Werte heben solche Kanten stärker hervor. </para
+></listitem>
+  </itemizedlist>
+
+</sect3>
+
+<sect3 id="color-colors">
+  <title
+>Farben</title>
+
+  <para
+>Auf der Karteikarte <guilabel
+>Farbauswahl</guilabel
+> können die Farben des aktiven Farbschemas eingestellt werden.</para>
+
+  <para
+>Das Erzeugen oder Ändern eines Farbschemas geschieht einfach durch Anklicken des Musterabschnitts und das Auswählen einer neuen Farbe. Es wird empfohlen, Ihr neues Farbschema  zu speichern, wenn Sie die Bearbeitung beenden möchten.</para>
+
+  <para
+>Der Farbsatz <guilabel
+>Allgemeine Farben</guilabel
+>, der anfangs angezeigt wird, ist kein wirklicher <quote
+>Farbsatz</quote
+> im Sinn von Plasma, sondern enthält eine Anzahl Farbzuordnungen, die es einfacher machen, das Farbschema als Ganzes zu ändern. Beim Erstellen eines neuen Farbschemas werden Sie diese Farben normalerweise zuerst ändern und dann die anderen Farbsätze nach Bedarf anpassen.</para>
+
+  <para
+>Beachten Sie, dass <guilabel
+>Allgemeine Farben</guilabel
+> Farbzuordnungen einstellt, die von allen Farbsätzen verfügbar sind. Zum Beispiel, <quote
+>Allgemeiner Hintergrund</quote
+> steht hier abgekürzt für die Farbzuordnung „normaler Hintergrund“ vom Farbsatz  „Anzeigen“. Das Einstellen von Farben, die nicht zu einem speziellen Farbsatz gehören, ändert diese Farbe in <emphasis
+>allen</emphasis
+> Farbsätzen. (Ausnahme: <quote
+>Inaktiver Text</quote
+> ändert die Farbe in allen Farbsätzen <emphasis
+>ausser</emphasis
+> für Auswahl, dafür gibt es eine separate Einstellung <quote
+>Ausgewählter inaktiver Text</quote
+> für inaktiven Text im Farbsatz „Auswahl“). Einige Farbzuordnungen sind nicht unter <guilabel
+>Allgemeine Farben</guilabel
+> verfügbar, diese können nur im entsprechenden Farbsatz eingestellt werden.</para>
+
+  <sect4>
+    <title
+>Farbsätze</title>
+
+    <para
+>In  Plasma werden die Farbschemata in mehrere Gruppen für unterschiedliche Elemente der Benutzerschnittstelle eingeteilt:</para>
+    <itemizedlist>
+      <listitem
+><para
+><guilabel
+>Ansichten</guilabel
+> &mdash; Elemente die Informationen anzeigen wie zum Beispiel Listen, Baumansichten, Texteingabefelder usw. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Fenster</guilabel
+> &mdash; Fensterelemente ausser Knöpfen oder Ansichten. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Knopf</guilabel
+> &mdash; Knöpfe und ähnliche Elemente. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Auswahl</guilabel
+> &mdash; ausgewählter Text und Elemente. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Kurzinfo</guilabel
+> &mdash; Kurzinfos, <quote
+>Was ist das?</quote
+>-Hilfe und ähnliche Elemente. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Komplementär</guilabel
+> &mdash; Bereiche in einer Anwendung mit einem alternativen Farbschema, normalerweise mit einem dunklen Hintergrund für helle Farbschemata. Beispiele von Bereichen mit diesem invertierten Farbschal sind der Abmeldungsdialog, die Bidschirmsperre und der Vollbildmodus in einigen Anwendungen. </para
+></listitem>
+    </itemizedlist>
+
+    <para
+>Jeder Farbsatz enthält eine Anzahl von Farbzuordnungen. Jeder Satz enthält dieselben Zuordnungen. Alle Farben sind einem der Farbsätze zugeordnet. </para>
+  </sect4>
+
+  <sect4>
+    <title
+>Farbzuordnungen</title>
+
+    <para
+>Jeder Farbsatz besteht aus einer Anzahl von Farbzuordnungen, die auch in allen anderen Farbsätzen verfügbar sind. Zusätzlich zu den offensichtlichen Zuordnungen „normaler Text“ und „normaler Hintergrund“ gibt es folgende Zuordnungen: </para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Alternativer Hintergrund &mdash; wird benutzt, wenn der Hintergrund zur Unterstützung der visuellen Zuordnung leicht umgefärbt werden soll. Dies kann &eg; als Hintergrund eines Tabellenkopfes benutzt werden, aber meistens wird es zur Unterscheidung von Zeilen in Listen verwendet, die besonders in Listen mit mehreren Spalten abwechselnd eingefärbt werden.  </para
+></listitem>
+      <listitem
+><para
+>Verknüpfung &mdash; wird zur Hervorhebung von Hyperlinks benutzt, oder um <quote
+>andere Dinge, die besucht werden können</quote
+> sowie Beziehungen hervorzuheben.  </para
+></listitem>
+      <listitem
+><para
+>Besuchte Verknüpfung &mdash; wird für <quote
+>irgendetwas (&eg; ein Hyperlink), das schon besucht wurde</quote
+> benutzt oder um Dinge zu kennzeichnen, die „alt“ sind.  </para
+></listitem>
+      <listitem
+><para
+>Text (aktiv) &mdash; wird zur Kennzeichnung eines aktiven Elementes oder schwebenden Hyperlinks benutzt oder um die Aufmerksamkeit auf &eg; Erinnerungen und Mitteilungen zu lenken.   </para
+></listitem>
+      <listitem
+><para
+>Text (inaktiv) &mdash; wird für Text benutzt, der unaufdringlich wirken soll, wie &eg; Kommentare, <quote
+>Untertitel</quote
+> unwichtige Informationen usw.  </para
+></listitem>
+      <listitem
+><para
+>Negativer Text &mdash; wird für Fehler, Fehlermeldungen oder für Meldungen zu eventuell gefährlichen Aktionen (&eg; unsichere Internetseite) usw. benutzt.  </para
+></listitem>
+      <listitem
+><para
+>Neutraler Text &mdash; wird benutzt, wenn eine andere Zuordnung nicht zutreffend ist, &eg; für Warnungen, um verschlüsselte Inhalte darzustellen usw.  </para
+></listitem>
+      <listitem
+><para
+>Positiver Text &mdash; wird für Erfolgsmeldungen oder zur Kennzeichnung von vertrauenswürdigem Inhalt usw. benutzt. </para
+></listitem>
+    </itemizedlist>
+
+    <para
+>Genau wie für die Zuordnungen für Text gibt es einige weitere Zuordnungen für die <quote
+>Dekorationen</quote
+>, die benutzt werden, um Linien oder Elemente der Bedienoberfläche hervorzuheben. Die bisher genannten Zuordnungen können bei passenden Bedingungen auch dafür benutzt werden, die jetzt im Folgenden besprochenen sind aber ausdrücklich <emphasis
+>nicht</emphasis
+> für Text gedacht. Es handelt sich im Einzelnen um: </para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Dekoration (Fokussiertes Element) &mdash; wird benutzt, um das Element zu kennzeichnen, das die Eingaben annimmt.  </para
+></listitem>
+      <listitem
+><para
+>Dekoration (Hover; Überfahren mit der Maus) &mdash; wird für Effekte benutzt, die beim Überfahren mit der Maus aktiv werden, wie &eg; die Beleuchtungseffekte von Knöpfen.  </para
+></listitem>
+    </itemizedlist>
+
+    <para
+>Zusätzlich gibt es (ausser für inaktiven Text) zu jeder Farbzuordnung eine Farbzuordnung für den Hintergrund. Gegenwärtig werden diese Farbzuordnungen automatisch in Abhängigkeit von der normalen Hintergrundfarbe und der dazugehörigen Textfarbe eingestellt, nur die Farben für den normalen und den alternativen Hintergrund können Sie selbst wählen. Die automatisch ausgewählten Farben können Sie mit der Auswahl eines der Farbsätze ausser <quote
+>Allgemeine Farben</quote
+> vorab ansehen. </para>
+
+    <para
+>Die Auswahl des Farbsatzes ist dem Entwickler überlassen, das bisher gesagte sind Richtlinien für typische Einsatzfälle. </para>
+  </sect4>
+
+  <sect4>
+    <title
+>Fensterverwaltungsfarben </title>
+
+    <para
+>Wie schon erwähnt, hat die Fensterverwaltung eigene Farbzuordnungen, die unabhängig von den anderen Farbsätzen sind. Diese werden im Folgenden beschrieben und können gegenwärtig nur über <guilabel
+>Allgemeine Farben</guilabel
+> geändert werden: </para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Aktive Titelleiste &mdash; wird für den Hintergrund der Titelleiste, die Rahmen und/oder die Dekorationen des aktiven Fensters benutzt. Nicht alle Fensterdekorationen benutzen diese Farbe in derselben Weise, manche benutzen sogar die normale Hintergrundfarbe vom Fensterfarbsatz für die Titelleiste.  </para
+></listitem>
+      <listitem
+><para
+>Text in aktiver Titelleiste &mdash; wird zum Schreiben des Titelleistentextes benutzt, wenn die Farbe „Aktive Titelleiste“ zur Darstellung des Hintergrundes benutzt wird. Diese Farbe kann auch verwendet werden, wenn andere Elemente die Farbe „Aktive Titelleiste“ als Hintergrund benutzen.  </para
+></listitem>
+    </itemizedlist>
+
+    <para
+>Die Farbzuordnungen für Text in inaktiver Titelleiste sind gleich, aber gelten für inaktive, nicht für aktive Fenster. </para>
+  </sect4>
+
+</sect3>
+
+<sect3 id="color-effects">
+  <title
+>Deaktiviert</title>
+
+  <para
+>Farbeffekte für Zustände auf dieser Karteikarte werden auf Kontrollelemente im inaktiven oder deaktivierten Zustand angewendet.Für Fenster, die den Fokus nicht haben, trifft das nur zu, wenn <guilabel
+>Farbeffekte für inaktive Fenster anwenden</guilabel
+> eingeschaltet ist. Durch das Ändern der Effekte wird das Erscheinungsbild der Elemente in diesen Zuständen beeinflusst. Normalerweise haben inaktive Elemente weniger Kontrast und können auch in der Intensität leicht reduziert sein, bei deaktivierten Elementen ist der Kontrast stark reduziert und diese sind oft erheblich dunkler oder heller als aktive Elemente. </para>
+
+  <para
+>Drei Arten von Effekten können auf die beiden Zustände angewendet werden (die beiden Zustände sind hierbei unabhängig voneinander). Diese sind Intensität, Farbe und Kontrast. Die ersten beiden (Intensität und Farbe bestimmen die Gesamtfarbe, die Einstellungen zu Kontrast bestimmen den Unterschied zwischen Vorder- und Hintergrundfarbe. </para>
+
+  <sect4>
+    <title
+>Intensität</title>
+
+    <para
+>Intensität erhellt oder verdunkelt die Gesamtfarbe. Das Schieben des Reglers auf die Mitte ändert nichts. Die vorhandenen Effekte sind: </para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Einfärben &mdash; macht Alles kontrolliert heller oder dunkler. Jede Stufe (<quote
+>tick</quote
+>) am Schieberegler erhöht oder vermindert die Gesamtintensität (&ie; wahrgenommene Helligkeit) um einen absoluten Betrag.  </para
+></listitem>
+      <listitem
+><para
+>Abdunkeln &mdash; ändert die Intensität auf einen Prozentwert des Anfangswertes. Ein Schieberegler, der auf den halben Weg zwischen Mitte und Maximum gesetzt wird, erzeugt eine Farbe mit der halben Intensität des Originals. Das Minimum ergibt eine Farbe mit der doppelten Intensität des Originals.  </para
+></listitem>
+      <listitem
+><para
+>Aufhellen &mdash; ist vom Konzept her das Gegenteil von Abdunkeln; Aufhellen kann als Abstandseinstellung zu „Weiss“ verstanden werden, während Abdunkeln die Abstandseinstellung zu „Schwarz“ darstellt. Das Minimum des Schiebereglers ist eine Farbe doppelt so <quote
+>weit</quote
+> von „Weiss“ wie das Original, während der halbe Weg zwischen der Mitte und dem Maximum eine Farbe mit der halben Intensität zwischen der Originalfarbe und „Weiss“ ergibt.  </para
+></listitem>
+    </itemizedlist>
+  </sect4>
+
+  <sect4>
+    <title
+>Farbe</title>
+
+    <para
+>Farbe ändert die Gesamtfarbe, nicht nur deren Intensität. Die verfügbaren Effekte sind: </para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Sättigung vermindern &mdash; ändert die Farbsättigung. Die Mittelstellung ändert nichts, das Maximum ergibt ein Grau, dessen Helligkeit der Originalfarbe entspricht. Kleinere Einstellungen ergeben sattere Farben, die weniger „grau“ oder mehr <quote
+>dynamisch</quote
+> als das Original sind.  </para
+></listitem>
+      <listitem
+><para
+>Überblenden &mdash; blendet die Originalfarbe weich in die Referenzfarbe über. Das Minimum ergibt keine Änderungen, das Maximum ergibt die Referenzfarbe.  </para
+></listitem>
+      <listitem
+><para
+>Einfärben &mdash; ist ähnlich zu Überblenden, aber die Farbe (Farbton und -Sättigung) wird schneller, die Intensität langsamer geändert, wenn der Schieberegler zu höheren Werten verstellt wird.  </para
+></listitem>
+    </itemizedlist>
+  </sect4>
+
+  <sect4>
+    <title
+>Kontrast</title>
+
+    <para
+>Die Kontrasteffekte sind den Farbeffekten ähnlich, sie beziehen sich aber auf den Text und die Hintergrundfarbe wird als Referenzfarbe benutzt, außerdem ist „Sättigung vermindern“ nicht vorhanden. Überblenden erzeugt Text, der schneller <quote
+>ausblendet</quote
+> und seine Farbe länger behält, während Einfärben die Farbe schneller an die Hintergrundfarbe anpasst, aber länger den Intensitätskontrast behält. Länger heißt hier bei höheren Einstellungen des Schiebereglers. Bei Kontrasteffekten verschwindet im Maximum der Text in der Hintergrundfarbe, das Minimum ändert nichts. </para>
+  </sect4>
+
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>
+<!-- kate: indent-width 2; replace-tabs on; -->

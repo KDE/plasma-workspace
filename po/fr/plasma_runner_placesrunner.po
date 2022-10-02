@@ -1,0 +1,40 @@
+# translation of plasma_runner_placesrunner.po to Français
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Joëlle Cornavin <jcornavi@club-internet.fr>, 2009.
+# Joëlle Cornavin <j.cornavin@sfr.fr>, 2009.
+# xavier <ktranslator31@yahoo.fr>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_placesrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"PO-Revision-Date: 2013-04-25 16:04+0200\n"
+"Last-Translator: xavier <ktranslator31@yahoo.fr>\n"
+"Language-Team: French <kde-i18n-doc@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 1.5\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: placesrunner.cpp:29 placesrunner.cpp:83
+#, kde-format
+msgid "places"
+msgstr "emplacements"
+
+#: placesrunner.cpp:29
+#, kde-format
+msgid "Lists all file manager locations"
+msgstr "Liste tous les emplacements du gestionnaire de fichiers"
+
+#: placesrunner.cpp:31
+#, kde-format
+msgid "Finds file manager locations that match :q:"
+msgstr ""
+"Cherche les emplacements du gestionnaire de fichiers correspondant à « :q: »"

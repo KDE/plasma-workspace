@@ -1,0 +1,134 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Vít Pelčák <vit@pelcak.org>, 2014, 2015, 2018, 2020.
+# Vit Pelcak <vpelcak@suse.cz>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-09 00:47+0000\n"
+"PO-Revision-Date: 2021-10-08 14:29+0200\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.08.1\n"
+
+#: contents/ui/BarcodePage.qml:36
+#, kde-format
+msgid "Return to Clipboard"
+msgstr "Vrátit se do schránky"
+
+#: contents/ui/BarcodePage.qml:57
+#, kde-format
+msgid "QR Code"
+msgstr "Kód QR"
+
+#: contents/ui/BarcodePage.qml:58
+#, kde-format
+msgid "Data Matrix"
+msgstr "Matice dat"
+
+#: contents/ui/BarcodePage.qml:59
+#, kde-format
+msgctxt "Aztec barcode"
+msgid "Aztec"
+msgstr "Aztec"
+
+#: contents/ui/BarcodePage.qml:60
+#, kde-format
+msgid "Code 39"
+msgstr "Kód 39"
+
+#: contents/ui/BarcodePage.qml:61
+#, kde-format
+msgid "Code 93"
+msgstr "Kód 93"
+
+#: contents/ui/BarcodePage.qml:62
+#, kde-format
+msgid "Code 128"
+msgstr "Kód 128"
+
+#: contents/ui/BarcodePage.qml:85
+#, kde-format
+msgid "Change the QR code type"
+msgstr "Změnit typ QR kódu"
+
+#: contents/ui/BarcodePage.qml:114
+#, kde-format
+msgid "Creating QR code failed"
+msgstr "Vytvoření QR kódu selhalo"
+
+#: contents/ui/BarcodePage.qml:123
+#, kde-format
+msgid "The QR code is too large to be displayed"
+msgstr "QR kód je pro zobrazení příliš velký"
+
+#: contents/ui/clipboard.qml:26
+#, kde-format
+msgid "Clipboard Contents"
+msgstr "Obsah schránky"
+
+#: contents/ui/clipboard.qml:27 contents/ui/Menu.qml:84
+#, kde-format
+msgid "Clipboard is empty"
+msgstr "Schránka je prázdná"
+
+#: contents/ui/clipboard.qml:55
+#, kde-format
+msgid "Configure Clipboard…"
+msgstr "Nastavit schránku…"
+
+#: contents/ui/clipboard.qml:57
+#, kde-format
+msgid "Clear History"
+msgstr "Vyprázdnit historii"
+
+#: contents/ui/DelegateToolButtons.qml:23
+#, kde-format
+msgid "Invoke action"
+msgstr "Vyvolat činnost"
+
+#: contents/ui/DelegateToolButtons.qml:38
+#, kde-format
+msgid "Show QR code"
+msgstr "Zobrazit QR kód"
+
+#: contents/ui/DelegateToolButtons.qml:54
+#, kde-format
+msgid "Edit contents"
+msgstr "Upravit obsah"
+
+#: contents/ui/DelegateToolButtons.qml:68
+#, kde-format
+msgid "Remove from history"
+msgstr "Odstranit z historie"
+
+#: contents/ui/EditPage.qml:82
+#, kde-format
+msgctxt "@action:button"
+msgid "Save"
+msgstr "Uložit"
+
+#: contents/ui/EditPage.qml:90
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "Zrušit"
+
+#: contents/ui/Menu.qml:84
+#, kde-format
+msgid "No matches"
+msgstr "Žádné shody"
+
+#: contents/ui/UrlItemDelegate.qml:99
+#, kde-format
+msgctxt ""
+"Indicator that there are more urls in the clipboard than previews shown"
+msgid "+%1"
+msgstr "+%1"

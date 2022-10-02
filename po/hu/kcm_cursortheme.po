@@ -1,0 +1,691 @@
+#
+# Balazs Nagy <julian7@kva.hu>, 1998.
+# John Zero <johnzero@telnet.hu>, 1998.
+# Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2011, 2014, 2015, 2019.
+# Balázs Úr <urbalazs@gmail.com>, 2012.
+# Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: KDE 4.1\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:50+0000\n"
+"PO-Revision-Date: 2021-09-29 10:17+0200\n"
+"Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.03.80\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current cursor theme"
+msgstr "A jelenlegi kurzortéma neve"
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr "Jelenlegi kurzorméret"
+
+#: kcmcursortheme.cpp:302
+#, kde-format
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr ""
+"A Plasma munkamenetet újra kell indítani, hogy a módosítások érvényesüljenek."
+
+#: kcmcursortheme.cpp:376
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Nem lehet létrehozni egy ideiglenes fájlt."
+
+#: kcmcursortheme.cpp:387
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Nem lehet letölteni a(z) %1 ikontéma-archívumot."
+
+#: kcmcursortheme.cpp:418
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "A fájl nem ikontéma-archívum."
+
+#: kcmcursortheme.cpp:425
+#, kde-format
+msgid "Failed to create 'icons' folder."
+msgstr "Nem sikerült létrehozni az „icons” mappát."
+
+#: kcmcursortheme.cpp:434
+#, kde-format
+msgid ""
+"A theme named %1 already exists in your icon theme folder. Do you want "
+"replace it with this one?"
+msgstr ""
+"Már létezik %1 nevű téma az ikontéma-mappában. Felül szeretné írni az újjal?"
+
+#: kcmcursortheme.cpp:438
+#, kde-format
+msgid "Overwrite Theme?"
+msgstr "Felül szeretné írni a témát?"
+
+#: kcmcursortheme.cpp:462
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "A téma sikeresen települt."
+
+#: package/contents/ui/Delegate.qml:54
+#, kde-format
+msgid "Remove Theme"
+msgstr "Téma eltávolítása"
+
+#: package/contents/ui/Delegate.qml:61
+#, kde-format
+msgid "Restore Cursor Theme"
+msgstr "Kurzortéma visszaállítása"
+
+#: package/contents/ui/main.qml:20
+#, kde-format
+msgid "This module lets you choose the mouse cursor theme."
+msgstr "Ebben a modulban beállíthatja az egérkurzot témáját és megjelenését."
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Size:"
+msgstr "Méret:"
+
+#: package/contents/ui/main.qml:134
+#, kde-format
+msgid "&Install from File…"
+msgstr "&Telepítés fájlból…"
+
+#: package/contents/ui/main.qml:140
+#, kde-format
+msgid "&Get New Cursors…"
+msgstr "Ú&j kurzorok letöltése…"
+
+#: package/contents/ui/main.qml:157
+#, kde-format
+msgid "Open Theme"
+msgstr "Téma megnyitása"
+
+#: package/contents/ui/main.qml:159
+#, kde-format
+msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+msgstr "Kurzortéma-fájlok (*.tar.gz, *.tar.bz2)"
+
+#: plasma-apply-cursortheme.cpp:41
+#, kde-format
+msgid "The requested size '%1' is not available, using %2 instead."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:62
+#, kde-format
+msgid ""
+"This tool allows you to set the mouse cursor theme for the current Plasma "
+"session, without accidentally setting it to one that is either not "
+"available, or which is already set."
+msgstr ""
+"Ez az eszköz lehetővé teszi a jelenlegi Plasma munkamenet kurzortémájának "
+"beállítását anélkül, hogy véletlenül egy nem elérhetőt, vagy már "
+"beállítottat választana ki."
+
+#: plasma-apply-cursortheme.cpp:66
+#, kde-format
+msgid ""
+"The name of the cursor theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+"A Plasma munkamenethez beállítandó kurzortéma neve (teljes elérési út "
+"megadása esetén csak az útvonal utolsó része lesz figyelembe véve)"
+
+#: plasma-apply-cursortheme.cpp:67
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+"A rendszer összes elérhető témájának megjelenítése (és hogy melyik a "
+"jelenlegi téma)"
+
+#: plasma-apply-cursortheme.cpp:68
+#, kde-format
+msgid "Use a specific size, rather than the theme default size"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:89
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+"A kért „%1” téma már be van állítva, mint aktuálisa téma a jelenlegi Plasma "
+"munkamenetben."
+
+#: plasma-apply-cursortheme.cpp:100
+#, kde-format
+msgid ""
+"Successfully applied the mouse cursor theme %1 to your current Plasma session"
+msgstr ""
+"A(z) %1 kurzortéma sikeresen beállítva a jelenlegi Plasma munkamenethez"
+
+#: plasma-apply-cursortheme.cpp:102
+#, kde-format
+msgid ""
+"You have to restart the Plasma session for your newly applied mouse cursor "
+"theme to display correctly."
+msgstr ""
+"A Plasma munkamenetet újra kell indítani, hogy a beállított új kurzortéma "
+"megfelelően jelenjen meg."
+
+#: plasma-apply-cursortheme.cpp:112
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+"A(z) „%1” téma nem található. A téma a következő opciók egyike kell, hogy "
+"legyen: %2"
+
+#: plasma-apply-cursortheme.cpp:120
+#, kde-format
+msgid "You have the following mouse cursor themes on your system:"
+msgstr "Az alábbi kurzortémák találhatók meg a rendszeren:"
+
+#: plasma-apply-cursortheme.cpp:125
+#, kde-format
+msgid "(Current theme for this Plasma session)"
+msgstr ""
+
+#: xcursor/xcursortheme.cpp:60
+#, kde-format
+msgctxt ""
+"@info The argument is the list of available sizes (in pixel). Example: "
+"'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+msgid "(Available sizes: %1)"
+msgstr "(Elérhető méretek: %1)"
+
+#~ msgid "Name"
+#~ msgstr "Név"
+
+#~ msgid "Description"
+#~ msgstr "Leírás"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Kiszel Kristóf,Szántó Tamás"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kiszel.kristof@gmail.com,tszanto@interware.hu"
+
+#~ msgid "Cursors"
+#~ msgstr "Kurzorok"
+
+#~ msgid "(c) 2003-2007 Fredrik Höglund"
+#~ msgstr "(C) Fredrik Höglund, 2003-2007."
+
+#~ msgid "Fredrik Höglund"
+#~ msgstr "Fredrik Höglund"
+
+#~ msgid "Marco Martin"
+#~ msgstr "Marco Martin"
+
+#~ msgid ""
+#~ "<qt>You cannot delete the theme you are currently using.<br />You have to "
+#~ "switch to another theme first.</qt>"
+#~ msgstr ""
+#~ "<qt>Nem lehet törölni az éppen használt témát.<br />Törlés előtt váltson "
+#~ "át másik témára.</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <i>%1</i> cursor theme?<br />This "
+#~ "will delete all the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>Biztosan el szeretné távolítani ezt az egérmutató-témát: <strong>%1</"
+#~ "strong>?<br />A témához tartozó összes fájl törlődni fog.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Megerősítés"
+
+#~ msgctxt "@item:inlistbox size"
+#~ msgid "Resolution dependent"
+#~ msgstr "Felbontásfüggő"
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "Az egérmutató beállításai megváltoztak"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "Írja be vagy ejtse ide a téma URL-jét"
+
+#~ msgid ""
+#~ "Unable to download the cursor theme archive; please check that the "
+#~ "address %1 is correct."
+#~ msgstr ""
+#~ "Nem sikerült letölteni az egérmutató-téma archívumát. Ellenőrizze, hogy "
+#~ "valóban ez-e a helyes cím: %1."
+
+#~ msgid "Get new color schemes from the Internet"
+#~ msgstr "Új színsémák letöltése az internetről"
+
+#~ msgid ""
+#~ "Select the cursor theme you want to use (hover preview to test cursor):"
+#~ msgstr ""
+#~ "Válassza ki a kívánt egérmutató-témát (az előnézeti kép fölött "
+#~ "kipróbálható):"
+
+#~ msgid "Select the cursor theme you want to use:"
+#~ msgstr "Válassza ki a használni kívánt egérmutató-témát:"
+
+#~ msgid "Small black"
+#~ msgstr "Kis fekete"
+
+#~ msgid "Small black cursors"
+#~ msgstr "Kis fekete egérmutatók"
+
+#~ msgid "Large black"
+#~ msgstr "Nagy fekete"
+
+#~ msgid "Large black cursors"
+#~ msgstr "Nagy fekete egérmutatók"
+
+#~ msgid "Small white"
+#~ msgstr "Kis fehér"
+
+#~ msgid "Small white cursors"
+#~ msgstr "Kis fehér egérmutatók"
+
+#~ msgid "Large white"
+#~ msgstr "Nagy fehér"
+
+#~ msgid "Large white cursors"
+#~ msgstr "Nagy fehér egérmutatók"
+
+#~ msgid "Button Order"
+#~ msgstr "Gombsorrend"
+
+#~ msgid "Righ&t handed"
+#~ msgstr "&jobbkezes"
+
+#~ msgid "Le&ft handed"
+#~ msgstr "&balkezes"
+
+#~ msgid ""
+#~ "Change the direction of scrolling for the mouse wheel or the 4th and 5th "
+#~ "mouse buttons."
+#~ msgstr "Invertálja az egérgörgő irányát (vagy a 4. és 5. egérgombét)."
+
+#~ msgid "Re&verse scroll direction"
+#~ msgstr "For&dított görgetés"
+
+#~ msgid "Icons"
+#~ msgstr "Ikonok"
+
+#~ msgid ""
+#~ "Dou&ble-click to open files and folders (select icons on first click)"
+#~ msgstr ""
+#~ "A fájlokat és mappákat &dupla kattintással lehessen megnyitni (az első "
+#~ "kattintás csak kijelöl)"
+
+#~ msgid "&Single-click to open files and folders"
+#~ msgstr "A fájlokat és mappákat &egyszeres kattintással lehessen megnyitni"
+
+#~ msgid "Cha&nge pointer shape over icons"
+#~ msgstr "Az egérmutató alakja &változzon meg, ha ikon fölé ér"
+
+#~ msgid "A&utomatically select icons"
+#~ msgstr "Automatikus ik&onkiválasztás"
+
+#~ msgctxt "label. delay (on milliseconds) to automatically select icons"
+#~ msgid "Delay"
+#~ msgstr "Késleltetés"
+
+#~ msgctxt "milliseconds. time to automatically select the items"
+#~ msgid " ms"
+#~ msgstr " ms"
+
+#~ msgid ""
+#~ "<h1>Mouse</h1> This module allows you to choose various options for the "
+#~ "way in which your pointing device works. Your pointing device may be a "
+#~ "mouse, trackball, or some other hardware that performs a similar function."
+#~ msgstr ""
+#~ "<h1>Egér</h1> Ez a modul a mutatóeszköz beállításainak a módosítására "
+#~ "szolgál. A mutatóeszköz lehet egér, hanyattegér vagy valami más hardver "
+#~ "ami hasonló funkciót lát el."
+
+#~ msgid "&General"
+#~ msgstr "Ál&talános"
+
+#~ msgid ""
+#~ "If you are left-handed, you may prefer to swap the functions of the left "
+#~ "and right buttons on your pointing device by choosing the 'left-handed' "
+#~ "option. If your pointing device has more than two buttons, only those "
+#~ "that function as the left and right buttons are affected. For example, if "
+#~ "you have a three-button mouse, the middle button is unaffected."
+#~ msgstr ""
+#~ "Ha Ön balkezes, akkor kényelmesebb, ha felcseréli a bal és jobb gombot a "
+#~ "„balkezes” beállítás kiválasztásával. Ha a mutatóeszközén több mint két "
+#~ "gomb van, akkor csak a jobb és bal gomb funkcióit ellátó gombok "
+#~ "cserélődnek fel. Például ha háromgombos egere van, akkor a középső gomb "
+#~ "funkciója nem változik."
+
+#~ msgid ""
+#~ "The default behavior in KDE is to select and activate icons with a single "
+#~ "click of the left button on your pointing device. This behavior is "
+#~ "consistent with what you would expect when you click links in most web "
+#~ "browsers. If you would prefer to select with a single click, and activate "
+#~ "with a double click, check this option."
+#~ msgstr ""
+#~ "A KDE alapértelmezett beállítása esetén a bal egérgomb egyszeres "
+#~ "kattintásával lehet kiválasztani és aktiválni egy ikont. Ez a viselkedés "
+#~ "ahhoz hasonló, mint amit az internetes böngészőkben egy linkre történő "
+#~ "kattintáskor tapasztalhat. Ha inkább egyszeres kattintással szeretné "
+#~ "kiválasztani és dupla kattintással aktiválni az ikonokat, akkor jelölje "
+#~ "be ezt a beállítást."
+
+#~ msgid "Activates and opens a file or folder with a single click."
+#~ msgstr "A fájlok és mappák megnyitása egyetlen kattintással történjen."
+
+#~ msgid ""
+#~ "If you check this option, pausing the mouse pointer over an icon on the "
+#~ "screen will automatically select that icon. This may be useful when "
+#~ "single clicks activate icons, and you want only to select the icon "
+#~ "without activating it."
+#~ msgstr ""
+#~ "Ha bejelöli ezt az opciót, akkor az egérkurzornak egy ikon fölé történő "
+#~ "mozgatásakor automatikusan kiválasztódik az ikon. Ez akkor hasznos, ha "
+#~ "egyszeres kattintás aktiválja az ikonokat és Ön csak kiválasztani "
+#~ "szeretné, aktiválás nélkül."
+
+#~ msgid ""
+#~ "If you have checked the option to automatically select icons, this slider "
+#~ "allows you to select how long the mouse pointer must be paused over the "
+#~ "icon before it is selected."
+#~ msgstr ""
+#~ "Ha bejelöli „Az ikonok automatikus kiválasztása” opciót, akkor ezzel a "
+#~ "csúszkával megadhatja, hogy mennyi ideig kell az egérkurzornak az ikon "
+#~ "fölött állnia ahhoz, hogy kiválasztódjon."
+
+#~ msgid "Advanced"
+#~ msgstr "Speciális"
+
+#~ msgid " x"
+#~ msgstr " x"
+
+#~ msgid "Pointer acceleration:"
+#~ msgstr "Az egérmutató gyorsítása:"
+
+#~ msgid ""
+#~ "<p>This option allows you to change the relationship between the distance "
+#~ "that the mouse pointer moves on the screen and the relative movement of "
+#~ "the physical device itself (which may be a mouse, trackball, or some "
+#~ "other pointing device.)</p><p> A high value for the acceleration will "
+#~ "lead to large movements of the mouse pointer on the screen even when you "
+#~ "only make a small movement with the physical device. Selecting very high "
+#~ "values may result in the mouse pointer flying across the screen, making "
+#~ "it hard to control.</p>"
+#~ msgstr ""
+#~ "<p>Itt lehet beállítani az egérmutatónak a képernyőn megtett útja és az "
+#~ "eszköz valós elmozdulása közötti arányt. Az eszköz lehet egér, "
+#~ "hanyattegér vagy más hasonló célú eszköz.</p><p> Nagy gyorsítási értéknél "
+#~ "az egérmutató nagyot fog elmozdulni a fizikai eszköz kis elmozgatásakor "
+#~ "is. Nagyon nagy értékek esetén a mutató nehezen irányíthatóan fog ugrálni "
+#~ "a képernyőn!</p>"
+
+#~ msgid "Pointer threshold:"
+#~ msgstr "Gyorsítási küszöbérték:"
+
+#~ msgid ""
+#~ "<p>The threshold is the smallest distance that the mouse pointer must "
+#~ "move on the screen before acceleration has any effect. If the movement is "
+#~ "smaller than the threshold, the mouse pointer moves as if the "
+#~ "acceleration was set to 1X;</p><p> thus, when you make small movements "
+#~ "with the physical device, there is no acceleration at all, giving you a "
+#~ "greater degree of control over the mouse pointer. With larger movements "
+#~ "of the physical device, you can move the mouse pointer rapidly to "
+#~ "different areas on the screen.</p>"
+#~ msgstr ""
+#~ "<p>A gyorsítási küszöbérték az a minimális távolság, amelyet az "
+#~ "egérkurzornak meg kell tennie a képernyőn, mielőtt a gyorsítás "
+#~ "bekapcsolódna. Ha az elmozdulás kisebb, mint a küszöbérték, akkor az "
+#~ "egérkurzor úgy fog mozogni, mintha a gyorsítás ki lenne kapcsolva.</p><p> "
+#~ "Ez azt eredményezi, hogy ha kis mozdulatokat végez az egérrel, akkor nem "
+#~ "lesz gyorsítás, ezért pontosan lehet pozicionálni a mutatót, viszont a "
+#~ "képernyő egyik feléről a másikra gyorsan el lehet jutni.</p>"
+
+#~ msgid " msec"
+#~ msgstr " ms"
+
+#~ msgid "Double click interval:"
+#~ msgstr "A dupla kattintás időköze:"
+
+#~ msgid ""
+#~ "The double click interval is the maximal time (in milliseconds) between "
+#~ "two mouse clicks which turns them into a double click. If the second "
+#~ "click happens later than this time interval after the first click, they "
+#~ "are recognized as two separate clicks."
+#~ msgstr ""
+#~ "A dupla kattintás időköze az az idő (ezredmásodpercben mérve), ami "
+#~ "maximálisan eltelhet két kattintás között, hogy dupla kattintás "
+#~ "történjen. Ha a második kattintás az első után ennél később történik, két "
+#~ "különálló egyszeres kattintást érzékel a rendszer."
+
+#~ msgid "Drag start time:"
+#~ msgstr "A húzás minimális ideje:"
+
+#~ msgid ""
+#~ "If you click with the mouse (e.g. in a multi-line editor) and begin to "
+#~ "move the mouse within the drag start time, a drag operation will be "
+#~ "initiated."
+#~ msgstr ""
+#~ "Ha kattint egyet az egérrel (pl. egy szövegszerkesztőben) és elmozdítja "
+#~ "az egérmutatót a húzás minimális idején belül, akkor a rendszer elkezd "
+#~ "egy húzási művelet."
+
+#~ msgid "Drag start distance:"
+#~ msgstr "A húzás minimális távolsága:"
+
+#~ msgid ""
+#~ "If you click with the mouse and begin to move the mouse at least the drag "
+#~ "start distance, a drag operation will be initiated."
+#~ msgstr ""
+#~ "Ha kattint egyet az egérrel és elmozdítja azt legalább a húzás minimális "
+#~ "távolságáig, a húzási művelet elkezdődik."
+
+#~ msgid "Mouse wheel scrolls by:"
+#~ msgstr "Az egérgörgő elmozgatási tényezője:"
+
+#~ msgid ""
+#~ "If you use the wheel of a mouse, this value determines the number of "
+#~ "lines to scroll for each wheel movement. Note that if this number exceeds "
+#~ "the number of visible lines, it will be ignored and the wheel movement "
+#~ "will be handled as a page up/down movement."
+#~ msgstr ""
+#~ "Ha görgős egeret használ, akkor ez az érték határozza meg, hogy hány sor "
+#~ "elmozdítását okozza a görgő egy elmozdítása. Ha ez nagyobb, mint a "
+#~ "látható sorok száma, akkor a KDE figyelmen kívül hagyja az értéket és az "
+#~ "egérgörgő hatása a Page Up/Page Down billentyűknek megfelelő lesz."
+
+#~ msgid "Mouse Navigation"
+#~ msgstr "Egérnavigáció"
+
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "Az egérmutató moz&gatható legyen a numerikus billentyűkkel"
+
+#~ msgid "&Acceleration delay:"
+#~ msgstr "Gyorsítás&i késleltetés:"
+
+#~ msgid "R&epeat interval:"
+#~ msgstr "Ismé&tlési időköz:"
+
+#~ msgid "Acceleration &time:"
+#~ msgstr "Gyorsítási i&dő:"
+
+#~ msgid " pixel/sec"
+#~ msgstr " képpont/s"
+
+#~ msgid "Ma&ximum speed:"
+#~ msgstr "Ma&ximális sebesség:"
+
+#~ msgid "Acceleration &profile:"
+#~ msgstr "Gyorsítási pr&ofil:"
+
+#~ msgid "Mouse"
+#~ msgstr "Egér"
+
+#~ msgid "(c) 1997 - 2005 Mouse developers"
+#~ msgstr "(C) Az egérbeállító modul fejlesztői, 1997-2005."
+
+#~ msgid "Patrick Dowler"
+#~ msgstr "Patrick Dowler"
+
+#~ msgid "Dirk A. Mueller"
+#~ msgstr "Dirk A. Mueller"
+
+#~ msgid "David Faure"
+#~ msgstr "David Faure"
+
+#~ msgid "Bernd Gehrmann"
+#~ msgstr "Bernd Gehrmann"
+
+#~ msgid "Rik Hemsley"
+#~ msgstr "Rik Hemsley"
+
+#~ msgid "Brad Hughes"
+#~ msgstr "Brad Hughes"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "Brad Hards"
+#~ msgstr "Brad Hards"
+
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] " képpont"
+#~ msgstr[1] " képpont"
+
+#~ msgid " line"
+#~ msgid_plural " lines"
+#~ msgstr[0] " sor"
+#~ msgstr[1] " sor"
+
+#~ msgid "Mouse type: %1"
+#~ msgstr "Egértípus: %1"
+
+#~ msgid ""
+#~ "RF channel 1 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "Az 1. RF-csatorna lett beállítva. Nyomja meg a Csatlakozás gombot az "
+#~ "egéren a kapcsolat újbóli létrehozásához"
+
+#~ msgid "Press Connect Button"
+#~ msgstr "Nyomja meg a Csatlakozás gombot"
+
+#~ msgid ""
+#~ "RF channel 2 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "A 2. RF-csatorna lett beállítva. Nyomja meg a Csatlakozás gombot az "
+#~ "egéren a kapcsolat újbóli létrehozásához"
+
+#~ msgctxt "no cordless mouse"
+#~ msgid "none"
+#~ msgstr "nincs"
+
+#~ msgid "Cordless Mouse"
+#~ msgstr "Vezeték nélküli egér"
+
+#~ msgid "Cordless Wheel Mouse"
+#~ msgstr "Vezeték nélküli görgős egér"
+
+#~ msgid "Cordless MouseMan Wheel"
+#~ msgstr "Vezeték nélküli MouseMan görgő"
+
+#~ msgid "Cordless TrackMan Wheel"
+#~ msgstr "Vezeték nélküli TrackMan görgő"
+
+#~ msgid "TrackMan Live"
+#~ msgstr "TrackMan Live"
+
+#~ msgid "Cordless TrackMan FX"
+#~ msgstr "Vezeték nélküli TrackMan FX"
+
+#~ msgid "Cordless MouseMan Optical"
+#~ msgstr "Vezeték nélküli optikai MouseMan"
+
+#~ msgid "Cordless Optical Mouse"
+#~ msgstr "Vezeték nélküli optikai egér"
+
+#~ msgid "Cordless MouseMan Optical (2ch)"
+#~ msgstr "Vezeték nélküli optikai MouseMan (2 csatornás)"
+
+#~ msgid "Cordless Optical Mouse (2ch)"
+#~ msgstr "vezeték nélküli optikai egér (2 csatornás)"
+
+#~ msgid "Cordless Mouse (2ch)"
+#~ msgstr "vezeték nélküli egér (2 csatornás)"
+
+#~ msgid "Cordless Optical TrackMan"
+#~ msgstr "Vezeték nélküli optikai TrackMan"
+
+#~ msgid "MX700 Cordless Optical Mouse"
+#~ msgstr "MX700 vezeték nélküli optikai egér"
+
+#~ msgid "MX700 Cordless Optical Mouse (2ch)"
+#~ msgstr "MX700 vezeték nélküli optikai egér (2 csatornás)"
+
+#~ msgid "Unknown mouse"
+#~ msgstr "Ismeretlen egér"
+
+#~ msgid "Cordless Name"
+#~ msgstr "Vezeték nélküli név"
+
+#~ msgid "Sensor Resolution"
+#~ msgstr "Az érzékelő felbontása"
+
+#~ msgid "400 counts per inch"
+#~ msgstr "400 beosztás / hüvelyk"
+
+#~ msgid "800 counts per inch"
+#~ msgstr "800 beosztás / hüvelyk"
+
+#~ msgid "Battery Level"
+#~ msgstr "Feltöltöttségi szint"
+
+#~ msgid "RF Channel"
+#~ msgstr "RF-csatorna"
+
+#~ msgid "Channel 1"
+#~ msgstr "1. csatorna"
+
+#~ msgid "Channel 2"
+#~ msgstr "2. csatorna"
+
+#~ msgid ""
+#~ "You have a Logitech Mouse connected, and libusb was found at compile "
+#~ "time, but it was not possible to access this mouse. This is probably "
+#~ "caused by a permissions problem - you should consult the manual on how to "
+#~ "fix this."
+#~ msgstr ""
+#~ "Logitech egér van csatlakoztatva és a libusb használata engedélyezve lett "
+#~ "fordításkor, mégsem lehet elérni az egeret. Valószínűleg valamilyen "
+#~ "jogosultsági probléma lépett fel - lehet, hogy a kézikönyvben található "
+#~ "információk segítenek elhárítani a problémát."
+
+#~ msgid "KDE Classic"
+#~ msgstr "KDE Classic"
+
+#~ msgid "The default cursor theme in KDE 2 and 3"
+#~ msgstr "A KDE 2-ben és 3-ban használt egérmutató-téma"
+
+#~ msgid "No description available"
+#~ msgstr "Nem áll rendelkezésre leírás"
+
+#~ msgid "Short"
+#~ msgstr "kicsi"
+
+#~ msgid "Long"
+#~ msgstr "nagy"

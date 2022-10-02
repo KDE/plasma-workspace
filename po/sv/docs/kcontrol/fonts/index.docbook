@@ -1,0 +1,244 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Swedish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="fonts" lang="&language;">
+<articleinfo>
+<title
+>Teckensnitt</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-09</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Kcontrol</keyword>
+<keyword
+>teckensnitt</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_fonts">
+
+<title
+>Teckensnitt</title>
+
+<para
+>Den här modulen är konstruerad för att du enkelt ska kunna välja olika teckensnitt för de olika delarna på &kde;:s skrivbord.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Här är en skärmbild av modulen för inställning av teckensnitt</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Modulen för inställning av teckensnitt</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Panelen består av olika teckensnittsgrupper för att ge dig stor flexibilitet i inställningen av teckensnitt. </para>
+
+<itemizedlist>
+<listitem
+><para
+><guilabel
+>Allmänt:</guilabel
+> Används överallt där andra teckensnittsgrupper inte gäller</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Med fast breddsteg:</guilabel
+> Överallt där ett icke-proportionellt teckensnitt anges</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Liten:</guilabel
+> När små teckensnitt används</para
+></listitem
+> 
+
+<listitem
+><para
+><guilabel
+>Verktygsrad:</guilabel
+> Teckensnitt som används för verktygsrader i &kde;-program</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Meny:</guilabel
+> Teckensnitt som används i &kde;:s programmenyer</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Namnlist:</guilabel
+> Teckensnitt som används i fönstrets namnlist</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Aktivitetsfält:</guilabel
+> Teckensnitt som används för miniprogram i aktivitetsfältet</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Skrivbord:</guilabel
+> Teckensnitt som används på skrivbordet för att namnge ikoner</para
+></listitem>
+
+</itemizedlist>
+
+<para
+>Varje teckensnitt har en tillhörande knapp, <guibutton
+>Välj...</guibutton
+>. Genom att klicka på knappen visas en dialogruta. Du kan använda dialogrutan för att välja ett nytt teckensnitt, teckenstil, och storlek. Klicka därefter på <guibutton
+>Ok</guibutton
+>.</para>
+
+<para
+>Markera <guilabel
+>Visa bara teckensnitt med fast bredd</guilabel
+> för att filtrera bort alla teckensnitt utan fast bredd från listan.</para>
+
+<para
+>Ett exempel på teckensnittet du har valt visas i utrymmet mellan teckensnittets gruppnamn och knappen <guibutton
+>Välj...</guibutton
+>.</para>
+
+<para
+>När du är klar, klicka helt enkelt på <guibutton
+>Ok</guibutton
+> så startas alla nödvändiga komponenter i &kde; om så att dina ändringar omedelbart får effekt.</para>
+
+<para
+>Knappen <guibutton
+>Justera alla teckensnitt...</guibutton
+> låter dig snabbt ange en egenskap eller ett antal egenskaper för alla teckensnitt som markerats ovan. En dialogruta för teckensnittsval som liknar den vanliga visas, men du bör lägga märke till kryssrutor som låter dig ändra <guilabel
+>Teckensnitt</guilabel
+>, <guilabel
+>Stil</guilabel
+> eller <guilabel
+>Storlek</guilabel
+> oberoende av varandra. Du kan markera en, två, eller alla tre alternativen, och de används för alla grupperna av teckensnitt.</para>
+
+<para
+>Markera <guilabel
+>Visa bara teckensnitt med fast bredd</guilabel
+> för att filtrera bort alla teckensnitt utan fast bredd från listan.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Justera alla teckensnitt</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="adjust-all.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Dialogrutan Justera alla teckensnitt...</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Om du till exempel har valt flera olika teckensnitt ovan, och inser att alla är en storlek för stora (det här inträffar ofta när du till exempel ändrar skärmupplösningen), kan du använda en ny teckenstorlek för alla teckensnitten, utan att påverka egeninställda teckensnitt och stilar.</para>
+
+<sect2 id="fonts-aa">
+<title
+>Kantutjämning</title>
+
+<para
+>För att använda en kantutjämningsinställning, markera helt enkelt alternativet <guilabel
+>Aktiverad</guilabel
+> och välj egna inställningar.</para>
+
+<para
+>Genom att markera kryssrutan <guilabel
+>Undanta intervall från kantutjämning</guilabel
+> kan du ange vilket teckensnittsintervall som <emphasis
+>inte</emphasis
+> ska kantutjämnas. Intervallet anges med de två kombinationsrutorna nedanför.</para>
+
+<para
+>Du kan också välja metoden som används för att skapa det kantutjämnade utseendet hos teckensnitten, och hur starkt den ska användas genom att ändra <ulink url="https://en.wikipedia.org/wiki/Subpixel_rendering"
+>Återgivningstyp för delbildpunkter</ulink
+> och <ulink url="https://en.wikipedia.org/wiki/Font_hinting"
+>Antydanstil</ulink
+>. Det är också möjligt att använda <guilabel
+>Tvinga teckensnittens punkter per tum</guilabel
+> för <ulink url="https://sv.wikipedia.org/wiki/Dpi"
+>skärmåtergivningen</ulink
+>. Om du inte känner till de enskilda metoderna, bör du inte röra alternativen.</para>
+
+<note
+><para
+>Möjligheten att använda kantutjämning för teckensnitt och ikoner kräver att det stöds både av skärmservern och &Qt;-verktygslådan, att du har lämpliga teckensnitt installerade och att du använder de inbyggda möjligheterna för teckensnittshantering i skärmservern. Om du fortfarande har problem, kontakta lämplig &kde; e-postlista.</para
+></note>
+
+</sect2>
+
+<sect2 id="fonts-dpi">
+<title
+>Teckensnittens punkter per tum</title>
+
+<para
+><guilabel
+>Tvinga teckensnittens punkter per tum:</guilabel
+> föreslår ett alternativt antal punkter per tum, istället för systemets som normalt används när inställningen är <guilabel
+>Inaktiverad</guilabel
+>. Du kan kontrollera vilket antal punkter per tum som X-servern är inställd till genom att köra <userinput
+>xdpyinfo | grep resolution</userinput
+> i ett terminalfönster och därefter ändra punkter per tum med kombinationsrutan. Det kommer bara att gälla för nystartade program.</para>
+</sect2>
+
+</sect1>
+
+</article>

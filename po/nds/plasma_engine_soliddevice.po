@@ -1,0 +1,761 @@
+# translation of plasma_engine_soliddevice.po to Low Saxon
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Manfred Wiese <m.j.wiese@web.de>, 2010, 2011.
+# Sönke Dibbern <s_dibbern@web.de>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_engine_soliddevice\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"PO-Revision-Date: 2014-02-19 12:49+0100\n"
+"Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
+"Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
+"Language: nds\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: soliddeviceengine.cpp:114
+msgid "Parent UDI"
+msgstr "Böver-UDI"
+
+#: soliddeviceengine.cpp:115
+msgid "Vendor"
+msgstr "Maker"
+
+#: soliddeviceengine.cpp:116
+msgid "Product"
+msgstr "Produkt"
+
+#: soliddeviceengine.cpp:117
+msgid "Description"
+msgstr "Beschrieven"
+
+#: soliddeviceengine.cpp:118
+msgid "Icon"
+msgstr "Lüttbild"
+
+#: soliddeviceengine.cpp:119 soliddeviceengine.cpp:592
+msgid "Emblems"
+msgstr "Symbolen"
+
+#: soliddeviceengine.cpp:120 soliddeviceengine.cpp:476
+#: soliddeviceengine.cpp:482 soliddeviceengine.cpp:495
+msgid "State"
+msgstr "Status"
+
+#: soliddeviceengine.cpp:121 soliddeviceengine.cpp:477
+#: soliddeviceengine.cpp:483 soliddeviceengine.cpp:491
+#: soliddeviceengine.cpp:493
+msgid "Operation result"
+msgstr "Akschoonresultaat"
+
+#: soliddeviceengine.cpp:122
+msgid "Timestamp"
+msgstr "Tietmark"
+
+#: soliddeviceengine.cpp:130
+msgid "Processor"
+msgstr "Perzesser"
+
+#: soliddeviceengine.cpp:131
+msgid "Number"
+msgstr "Nummer"
+
+#: soliddeviceengine.cpp:132
+msgid "Max Speed"
+msgstr "Hööchst Gauheit"
+
+#: soliddeviceengine.cpp:133
+msgid "Can Change Frequency"
+msgstr "Kann Frequenz wesseln"
+
+#: soliddeviceengine.cpp:141
+msgid "Block"
+msgstr "Block"
+
+#: soliddeviceengine.cpp:142
+msgid "Major"
+msgstr "Hooch"
+
+#: soliddeviceengine.cpp:143
+msgid "Minor"
+msgstr "Siet"
+
+#: soliddeviceengine.cpp:144
+msgid "Device"
+msgstr "Reedschap"
+
+#: soliddeviceengine.cpp:152
+msgid "Storage Access"
+msgstr "Spiekertogriep"
+
+#: soliddeviceengine.cpp:153 soliddeviceengine.cpp:507
+#: soliddeviceengine.cpp:606
+msgid "Accessible"
+msgstr "Togriep mööglich"
+
+#: soliddeviceengine.cpp:154 soliddeviceengine.cpp:508
+msgid "File Path"
+msgstr "Dateipadd"
+
+#: soliddeviceengine.cpp:169
+msgid "Storage Drive"
+msgstr "Spiekerloopwark"
+
+#: soliddeviceengine.cpp:172
+msgid "Ide"
+msgstr "IDE"
+
+#: soliddeviceengine.cpp:172
+msgid "Usb"
+msgstr "USB"
+
+#: soliddeviceengine.cpp:172
+msgid "Ieee1394"
+msgstr "IEEE 1394"
+
+#: soliddeviceengine.cpp:173
+msgid "Scsi"
+msgstr "SCSI"
+
+#: soliddeviceengine.cpp:173
+msgid "Sata"
+msgstr "SATA"
+
+#: soliddeviceengine.cpp:173
+msgid "Platform"
+msgstr "Systeem"
+
+#: soliddeviceengine.cpp:175
+msgid "Hard Disk"
+msgstr "Fastplaat"
+
+#: soliddeviceengine.cpp:175
+msgid "Cdrom Drive"
+msgstr "CDROM-Loopwark"
+
+#: soliddeviceengine.cpp:175
+msgid "Floppy"
+msgstr "Diskett"
+
+#: soliddeviceengine.cpp:176
+msgid "Tape"
+msgstr "Bandloopwark"
+
+#: soliddeviceengine.cpp:176
+msgid "Compact Flash"
+msgstr "Spiekerkoort (Compact Flash)"
+
+#: soliddeviceengine.cpp:176
+msgid "Memory Stick"
+msgstr "Spiekerstift"
+
+#: soliddeviceengine.cpp:177
+msgid "Smart Media"
+msgstr "Smartkoort"
+
+#: soliddeviceengine.cpp:177
+msgid "SdMmc"
+msgstr "SD-MMC"
+
+#: soliddeviceengine.cpp:177
+msgid "Xd"
+msgstr "Xd"
+
+#: soliddeviceengine.cpp:179
+msgid "Bus"
+msgstr "Bus"
+
+#: soliddeviceengine.cpp:180
+msgid "Drive Type"
+msgstr "Loopwark-Typ"
+
+#: soliddeviceengine.cpp:181 soliddeviceengine.cpp:194
+#: soliddeviceengine.cpp:362 soliddeviceengine.cpp:376
+msgid "Removable"
+msgstr "Tuuschbor"
+
+#: soliddeviceengine.cpp:182 soliddeviceengine.cpp:195
+#: soliddeviceengine.cpp:363 soliddeviceengine.cpp:377
+msgid "Hotpluggable"
+msgstr "Jümmers tokoppelbor"
+
+#: soliddeviceengine.cpp:204
+msgid "Optical Drive"
+msgstr "Optsch Loopwark"
+
+#: soliddeviceengine.cpp:209
+msgid "CD-R"
+msgstr "CD-R"
+
+#: soliddeviceengine.cpp:212
+msgid "CD-RW"
+msgstr "CD-RW"
+
+#: soliddeviceengine.cpp:215
+msgid "DVD"
+msgstr "DVD"
+
+#: soliddeviceengine.cpp:218
+msgid "DVD-R"
+msgstr "DVD-R"
+
+#: soliddeviceengine.cpp:221
+msgid "DVD-RW"
+msgstr "DVD-RW"
+
+#: soliddeviceengine.cpp:224
+msgid "DVD-RAM"
+msgstr "DVD-RAM"
+
+#: soliddeviceengine.cpp:227
+msgid "DVD+R"
+msgstr "DVD+R"
+
+#: soliddeviceengine.cpp:230
+msgid "DVD+RW"
+msgstr "DVD+RW"
+
+#: soliddeviceengine.cpp:233
+msgid "DVD+DL"
+msgstr "DVD+DL"
+
+#: soliddeviceengine.cpp:236
+msgid "DVD+DLRW"
+msgstr "DVD+DLRW"
+
+#: soliddeviceengine.cpp:239
+msgid "BD"
+msgstr "BD"
+
+#: soliddeviceengine.cpp:242
+msgid "BD-R"
+msgstr "BD-R"
+
+#: soliddeviceengine.cpp:245
+msgid "BD-RE"
+msgstr "BD-RE"
+
+#: soliddeviceengine.cpp:248
+msgid "HDDVD"
+msgstr "HDDVD"
+
+#: soliddeviceengine.cpp:251
+msgid "HDDVD-R"
+msgstr "HDDVD-R"
+
+#: soliddeviceengine.cpp:254
+msgid "HDDVD-RW"
+msgstr "HDDVD-RW"
+
+#: soliddeviceengine.cpp:256
+msgid "Supported Media"
+msgstr "Ünnerstütt Schieven"
+
+#: soliddeviceengine.cpp:258
+msgid "Read Speed"
+msgstr "Leesgauheit"
+
+#: soliddeviceengine.cpp:259
+msgid "Write Speed"
+msgstr "Schrievgauheit"
+
+#: soliddeviceengine.cpp:267
+msgid "Write Speeds"
+msgstr "Schrievgauheiten"
+
+#: soliddeviceengine.cpp:275
+msgid "Storage Volume"
+msgstr "Spiekermedium"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Other"
+msgstr "Anner"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Unused"
+msgstr "Nich bruukt"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "File System"
+msgstr "Dateisysteem"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Partition Table"
+msgstr "Partitschonentabell"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Raid"
+msgstr "Raid"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Encrypted"
+msgstr "Verslötelt"
+
+#: soliddeviceengine.cpp:281 soliddeviceengine.cpp:283
+msgid "Usage"
+msgstr "Bruuk"
+
+#: soliddeviceengine.cpp:283
+#, kde-format
+msgid "Unknown"
+msgstr "Nich begäng"
+
+#: soliddeviceengine.cpp:286
+msgid "Ignored"
+msgstr "Övergahn"
+
+#: soliddeviceengine.cpp:287
+msgid "File System Type"
+msgstr "Dateisysteem-Typ"
+
+#: soliddeviceengine.cpp:288
+msgid "Label"
+msgstr "Beteker"
+
+#: soliddeviceengine.cpp:289
+msgid "UUID"
+msgstr "UUID"
+
+#: soliddeviceengine.cpp:298
+msgid "Encrypted Container"
+msgstr "Verslötelt Gelaats"
+
+#: soliddeviceengine.cpp:310
+msgid "OpticalDisc"
+msgstr "Optsch Schiev"
+
+#: soliddeviceengine.cpp:316
+msgid "Audio"
+msgstr "Klang"
+
+#: soliddeviceengine.cpp:319
+msgid "Data"
+msgstr "Daten"
+
+#: soliddeviceengine.cpp:322
+msgid "Video CD"
+msgstr "Video-CD"
+
+#: soliddeviceengine.cpp:325
+msgid "Super Video CD"
+msgstr "Super-Video-CD"
+
+#: soliddeviceengine.cpp:328
+msgid "Video DVD"
+msgstr "Video-DVD"
+
+#: soliddeviceengine.cpp:331
+msgid "Video Blu Ray"
+msgstr ""
+
+#: soliddeviceengine.cpp:333
+msgid "Available Content"
+msgstr "Verföögbor Inholt"
+
+#: soliddeviceengine.cpp:336
+msgid "Unknown Disc Type"
+msgstr "Nich begäng Schiev-Typ"
+
+#: soliddeviceengine.cpp:336
+msgid "CD Rom"
+msgstr "CD-ROM"
+
+#: soliddeviceengine.cpp:336
+msgid "CD Recordable"
+msgstr "Schriefbor CD"
+
+#: soliddeviceengine.cpp:337
+msgid "CD Rewritable"
+msgstr "Wedderschriefbor CD"
+
+#: soliddeviceengine.cpp:337
+msgid "DVD Rom"
+msgstr "DVD-ROM"
+
+#: soliddeviceengine.cpp:337
+msgid "DVD Ram"
+msgstr "DVD-RAM"
+
+#: soliddeviceengine.cpp:338
+msgid "DVD Recordable"
+msgstr "Schriefbor DVD"
+
+#: soliddeviceengine.cpp:338
+msgid "DVD Rewritable"
+msgstr "Wedderschriefbor DVD"
+
+#: soliddeviceengine.cpp:339
+msgid "DVD Plus Recordable"
+msgstr "Schriefbor DVD-Plus"
+
+#: soliddeviceengine.cpp:339
+msgid "DVD Plus Rewritable"
+msgstr "Wedderschriefbor DVD-Plus"
+
+#: soliddeviceengine.cpp:340
+msgid "DVD Plus Recordable Duallayer"
+msgstr "Schriefbor Tweelagen-DVD-Plus"
+
+#: soliddeviceengine.cpp:340
+msgid "DVD Plus Rewritable Duallayer"
+msgstr "Wedderschriefbor Tweelagen-DVD-Plus"
+
+#: soliddeviceengine.cpp:341
+msgid "Blu Ray Rom"
+msgstr "BD-ROM"
+
+#: soliddeviceengine.cpp:341
+msgid "Blu Ray Recordable"
+msgstr "Schriefbor BD"
+
+#: soliddeviceengine.cpp:342
+msgid "Blu Ray Rewritable"
+msgstr "Wedderschriefbor BD"
+
+#: soliddeviceengine.cpp:342
+msgid "HD DVD Rom"
+msgstr "HD-DVD-ROM"
+
+#: soliddeviceengine.cpp:343
+msgid "HD DVD Recordable"
+msgstr "Schriefbor HD-DVD"
+
+#: soliddeviceengine.cpp:343
+msgid "HD DVD Rewritable"
+msgstr "Wedderschriefbor HD-DVD"
+
+#: soliddeviceengine.cpp:345
+msgid "Disc Type"
+msgstr "Schiev-Typ"
+
+#: soliddeviceengine.cpp:346
+msgid "Appendable"
+msgstr "Anhangbor"
+
+#: soliddeviceengine.cpp:347
+msgid "Blank"
+msgstr "Leddig"
+
+#: soliddeviceengine.cpp:348
+msgid "Rewritable"
+msgstr "Wedderschriefbor"
+
+#: soliddeviceengine.cpp:349
+msgid "Capacity"
+msgstr "Grött"
+
+#: soliddeviceengine.cpp:357
+msgid "Camera"
+msgstr "Kamera"
+
+#: soliddeviceengine.cpp:359 soliddeviceengine.cpp:373
+msgid "Supported Protocols"
+msgstr "Ünnerstütt Protokollen"
+
+#: soliddeviceengine.cpp:360 soliddeviceengine.cpp:374
+msgid "Supported Drivers"
+msgstr "Ünnerstütt Drievers"
+
+#: soliddeviceengine.cpp:371
+msgid "Portable Media Player"
+msgstr "Mobil-Medienafspeler"
+
+#: soliddeviceengine.cpp:385
+msgid "Battery"
+msgstr "Batterie"
+
+#: soliddeviceengine.cpp:388
+msgid "Unknown Battery"
+msgstr "Nich begäng Batterie"
+
+#: soliddeviceengine.cpp:388
+msgid "PDA Battery"
+msgstr "PDA-Batterie"
+
+#: soliddeviceengine.cpp:388
+msgid "UPS Battery"
+msgstr "Nootstroomreedschap-Batterie"
+
+#: soliddeviceengine.cpp:389
+msgid "Primary Battery"
+msgstr "Hööftbatterie"
+
+#: soliddeviceengine.cpp:389
+msgid "Mouse Battery"
+msgstr "Muusbatterie"
+
+#: soliddeviceengine.cpp:390
+msgid "Keyboard Battery"
+msgstr "Tastatuurbatterie"
+
+#: soliddeviceengine.cpp:390
+msgid "Keyboard Mouse Battery"
+msgstr "Tastatuur-Muusbatterie"
+
+#: soliddeviceengine.cpp:391
+msgid "Camera Battery"
+msgstr "Kamerabatterie"
+
+#: soliddeviceengine.cpp:391
+#, fuzzy
+#| msgid "Mouse Battery"
+msgid "Phone Battery"
+msgstr "Muusbatterie"
+
+#: soliddeviceengine.cpp:391
+#, fuzzy
+#| msgid "Mouse Battery"
+msgid "Monitor Battery"
+msgstr "Muusbatterie"
+
+#: soliddeviceengine.cpp:392
+msgid "Gaming Input Battery"
+msgstr ""
+
+#: soliddeviceengine.cpp:392
+#, fuzzy
+#| msgid "Mouse Battery"
+msgid "Bluetooth Battery"
+msgstr "Muusbatterie"
+
+#: soliddeviceengine.cpp:395
+#, fuzzy
+#| msgid "Charging"
+msgid "Not Charging"
+msgstr "Bi to laden"
+
+#: soliddeviceengine.cpp:395
+msgid "Charging"
+msgstr "Bi to laden"
+
+#: soliddeviceengine.cpp:395
+msgid "Discharging"
+msgstr "Bi to utladen"
+
+#: soliddeviceengine.cpp:396
+msgid "Fully Charged"
+msgstr "Heel laadt"
+
+#: soliddeviceengine.cpp:398
+msgid "Plugged In"
+msgstr "Tokoppelt "
+
+#: soliddeviceengine.cpp:399
+msgid "Type"
+msgstr "Typ"
+
+#: soliddeviceengine.cpp:400
+msgid "Charge Percent"
+msgstr "Perzent laadt"
+
+#: soliddeviceengine.cpp:401
+msgid "Rechargeable"
+msgstr "Oplaadbor"
+
+#: soliddeviceengine.cpp:402
+msgid "Charge State"
+msgstr "Oplaadtostand"
+
+#: soliddeviceengine.cpp:427
+msgid "Type Description"
+msgstr "Typ-Beschrieven"
+
+#: soliddeviceengine.cpp:432
+msgid "Device Types"
+msgstr "Reedschaptypen"
+
+#: soliddeviceengine.cpp:456 soliddeviceengine.cpp:553
+msgid "Size"
+msgstr "Grött"
+
+#: soliddeviceengine.cpp:535
+#, kde-format
+msgid "Filesystem is not responding"
+msgstr ""
+
+#: soliddeviceengine.cpp:535
+#, kde-format
+msgid "Filesystem mounted at '%1' is not responding"
+msgstr ""
+
+#: soliddeviceengine.cpp:551
+msgid "Free Space"
+msgstr "Free Platz"
+
+#: soliddeviceengine.cpp:552
+msgid "Free Space Text"
+msgstr "Free Platz för Text"
+
+#: soliddeviceengine.cpp:554
+#, fuzzy
+#| msgid "Size"
+msgid "Size Text"
+msgstr "Grött"
+
+#: soliddeviceengine.cpp:580
+msgid "Temperature"
+msgstr "Temperatuur"
+
+#: soliddeviceengine.cpp:581
+msgid "Temperature Unit"
+msgstr "Temperatuureenheit"
+
+#: soliddeviceengine.cpp:625 soliddeviceengine.cpp:629
+msgid "In Use"
+msgstr "In Bruuk"
+
+#~ msgid "Network Interface"
+#~ msgstr "Nettwark-Koppelsteed"
+
+#~ msgid "Interface Name"
+#~ msgstr "Koppelsteednaam"
+
+#~ msgid "Wireless"
+#~ msgstr "Funk"
+
+#~ msgid "Hardware Address"
+#~ msgstr "Reedschap-Adress"
+
+#~ msgid "MAC Address"
+#~ msgstr "MAC-Adress"
+
+#~ msgid "AC Adapter"
+#~ msgstr "Stroomnett"
+
+#~ msgid "Button"
+#~ msgstr "Knoop"
+
+#~ msgid "Lid Button"
+#~ msgstr "Deckelknoop"
+
+#~ msgid "Power Button"
+#~ msgstr "Anmaakknoop"
+
+#~ msgid "Sleep Button"
+#~ msgstr "Slaapknoop"
+
+#~ msgid "Unknown Button Type"
+#~ msgstr "Nich begäng Knooptyp"
+
+#~ msgid "Has State"
+#~ msgstr "Hett Status"
+
+#~ msgid "State Value"
+#~ msgstr "Statusweert"
+
+#~ msgid "Pressed"
+#~ msgstr "Drückt"
+
+#~ msgid "Audio Interface"
+#~ msgstr "Klangkoppelsteed"
+
+#~ msgid "ALSA"
+#~ msgstr "ALSA"
+
+#~ msgid "Open Sound System"
+#~ msgstr "Klangsysteem opmaken"
+
+#~ msgid "Unknown Audio Driver"
+#~ msgstr "Nich begäng Klangdriever"
+
+#~ msgid "Driver"
+#~ msgstr "Driever"
+
+#~ msgid "Driver Handle"
+#~ msgstr "Drieverhölper"
+
+#~ msgid "Name"
+#~ msgstr "Naam"
+
+#~ msgid "Unknown Audio Interface Type"
+#~ msgstr "Nich begäng Klangkoppelsteed-Typ"
+
+#~ msgid "Audio Control"
+#~ msgstr "Klangkuntrull"
+
+#~ msgid "Audio Input"
+#~ msgstr "Klangingaav"
+
+#~ msgid "Audio Output"
+#~ msgstr "Klangutgaav"
+
+#~ msgid "Audio Device Type"
+#~ msgstr "Klangreedschap-Typ"
+
+#~ msgid "Internal Soundcard"
+#~ msgstr "Inbuut Klangkoort"
+
+#~ msgid "USB Soundcard"
+#~ msgstr "USB-Klangkoort"
+
+#~ msgid "Firewire Soundcard"
+#~ msgstr "FireWire-Klangkoort"
+
+#~ msgid "Headset"
+#~ msgstr "Snacksett"
+
+#~ msgid "Modem"
+#~ msgstr "Modem"
+
+#~ msgid "Soundcard Type"
+#~ msgstr "Klangkoort-Typ"
+
+#~ msgid "DVB Interface"
+#~ msgstr "DVB-Koppelsteed"
+
+#~ msgid "Device Adapter"
+#~ msgstr "Reedschap"
+
+#~ msgid "DVB Unknown"
+#~ msgstr "DVB - Nich begäng"
+
+#~ msgid "DVB Audio"
+#~ msgstr "DVB-Klang"
+
+#~ msgid "DVB Ca"
+#~ msgstr "DVB-CA"
+
+#~ msgid "DVB Demux"
+#~ msgstr "DVB-Demux"
+
+#~ msgid "DVB DVR"
+#~ msgstr "DVB-DVR"
+
+#~ msgid "DVB Frontend"
+#~ msgstr "DVB-Böversiet"
+
+#~ msgid "DVB Net"
+#~ msgstr "DVB-Nett"
+
+#~ msgid "DVB OSD"
+#~ msgstr "DVB-OSD"
+
+#~ msgid "DVB Sec"
+#~ msgstr "DVB-Sec"
+
+#~ msgid "DVB Video"
+#~ msgstr "DVB-Video"
+
+#~ msgid "DVB Device Type"
+#~ msgstr "DVB-Reedschaptyp"
+
+#~ msgid "Device Index"
+#~ msgstr "Reedschap-Index"
+
+#~ msgid "Video"
+#~ msgstr "Video"
+
+#~ msgid "Driver Handles"
+#~ msgstr "Drieverhölpers"

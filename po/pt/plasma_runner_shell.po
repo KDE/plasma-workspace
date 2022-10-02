@@ -1,0 +1,72 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner_shellrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-27 00:45+0000\n"
+"PO-Revision-Date: 2016-05-13 12:02+0100\n"
+"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
+"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: shellrunner.cpp:35
+#, kde-format
+msgid "Finds commands that match :q:, using common shell syntax"
+msgstr ""
+"Procura por comandos correspondentes a :q:, usando uma sintaxe comum das "
+"linhas de comandos"
+
+#: shellrunner.cpp:36
+#, kde-format
+msgid "Run in Terminal Window"
+msgstr "Executar numa Janela de Terminal"
+
+#: shellrunner.cpp:54
+#, kde-format
+msgid "Run %1"
+msgstr "Executar o %1"
+
+#~ msgid "Enter the user you want to run the application as here."
+#~ msgstr "Indique aqui o utilizador com o qual deseja executar a aplicação."
+
+#~ msgid "User&name:"
+#~ msgstr "Utili&zador:"
+
+#~ msgid "Enter the password here for the user you specified above."
+#~ msgstr "Indique aqui a senha do utilizador que definiu."
+
+#~ msgid "Pass&word:"
+#~ msgstr "Sen&ha:"
+
+#~ msgid ""
+#~ "Check this option if the application you want to run is a text mode "
+#~ "application. The application will then be run in a terminal emulator "
+#~ "window."
+#~ msgstr ""
+#~ "Assinale esta opção se a aplicação que deseja executar for em modo texto. "
+#~ "A aplicação será então executada num emulador de terminal."
+
+#~ msgid "Run in &terminal window"
+#~ msgstr "Executar numa janela de &terminal"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "user id. Every process has a user id associated with it. This id code "
+#~ "determines file access and other permissions. The password of the user is "
+#~ "required to do this."
+#~ msgstr ""
+#~ "Assinale esta opção se desejar executar a aplicação como outro "
+#~ "utilizador. Cada processo tem um utilizador a ele associado. Este código "
+#~ "identificador determina o acesso aos ficheiros e outras permissões. A "
+#~ "senha do utilizador é necessária para fazer isto."
+
+#~ msgid "Run as a different &user"
+#~ msgstr "Correr como outro &utilizador"

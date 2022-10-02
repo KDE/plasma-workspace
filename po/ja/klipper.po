@@ -1,0 +1,1169 @@
+# Translation of klipper into Japanese.
+# This file is distributed under the same license as the kdebase package.
+# Ryuichi Kakuda <ryuk@user.script.nu>, 2004.
+# Kurose Shushi <md81@bird.email.ne.jp>, 2004.
+# Fumiaki Okushi <fumiaki@okushi.com>, 2005.
+# Shinichi Tsunoda <tsuno@ngy.1st.ne.jp>, 2005.
+# Yukiko Bando <ybando@k6.dion.ne.jp>, 2006, 2008, 2009, 2010.
+# Taiki Komoda <kom@kde.gr.jp>, 2010.
+# Jumpei Ogawa <phanective@gmail.com>, 2010.
+# Jumpei Ogawa (phanect) <phanective@gmail.com>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: klipper\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-17 00:48+0000\n"
+"PO-Revision-Date: 2010-09-25 16:37-0700\n"
+"Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
+"Language-Team: Japanese <kde-jp@kde.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Generator: Lokalize 1.1\n"
+
+#: configdialog.cpp:80
+#, fuzzy, kde-format
+#| msgid "Selection and Clipboard"
+msgid "Selection and Clipboard:"
+msgstr "選択とクリップボード"
+
+#: configdialog.cpp:87
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"When text or an area of the screen is highlighted with the mouse or "
+"keyboard, this is the <emphasis>selection</emphasis>. It can be pasted using "
+"the middle mouse button.<nl/><nl/>If the selection is explicitly copied "
+"using a <interface>Copy</interface> or <interface>Cut</interface> action, it "
+"is saved to the <emphasis>clipboard</emphasis>. It can be pasted using a "
+"<interface>Paste</interface> action. <nl/><nl/>When turned on this option "
+"keeps the selection and the clipboard the same, so that any selection is "
+"immediately available to paste by any means. If it is turned off, the "
+"selection may still be saved in the clipboard history (subject to the "
+"options below), but it can only be pasted using the middle mouse button."
+msgstr ""
+
+#: configdialog.cpp:106
+#, fuzzy, kde-format
+#| msgid "Clipboard history"
+msgid "Clipboard history:"
+msgstr "クリップボードの履歴"
+
+#: configdialog.cpp:112
+#, fuzzy, kde-format
+#| msgid " entry"
+#| msgid_plural " entries"
+msgctxt "Number of entries"
+msgid " entry"
+msgid_plural " entries"
+msgstr[0] " エントリ"
+msgstr[1] " エントリ"
+
+#: configdialog.cpp:131 configdialog.cpp:169
+#, fuzzy, kde-format
+#| msgid "Replay action in history"
+msgid "Always save in history"
+msgstr "履歴の項目に対してもアクションを有効にする"
+
+#: configdialog.cpp:135
+#, fuzzy, kde-format
+#| msgid "Text selection only"
+msgid "Text selection:"
+msgstr "テキストの選択のみ"
+
+#: configdialog.cpp:137 configdialog.cpp:175
+#, kde-format
+msgid "Only when explicitly copied"
+msgstr ""
+
+#: configdialog.cpp:142
+#, fuzzy, kde-format
+#| msgid "Really delete entire clipboard history?"
+msgid "Whether text selections are saved in the clipboard history."
+msgstr "本当にクリップボードの全履歴を消去しますか？"
+
+#: configdialog.cpp:173
+#, fuzzy, kde-format
+#| msgid "Ignore selection"
+msgid "Non-text selection:"
+msgstr "選択を無視する"
+
+#: configdialog.cpp:180
+#, fuzzy, kde-format
+#| msgid "Replay action in history"
+msgid "Never save in history"
+msgstr "履歴の項目に対してもアクションを有効にする"
+
+#: configdialog.cpp:185
+#, kde-format
+msgid ""
+"Whether non-text selections (such as images) are saved in the clipboard "
+"history."
+msgstr ""
+
+#: configdialog.cpp:250
+#, fuzzy, kde-format
+#| msgid "Timeout for action popups:"
+msgid "Show action popup menu:"
+msgstr "アクションメニューのタイムアウト:"
+
+#: configdialog.cpp:260
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"When text that matches an action pattern is selected or is chosen from the "
+"clipboard history, automatically show the popup menu with applicable "
+"actions. If the automatic menu is turned off here, or it is not shown for an "
+"excluded window, then it can be shown by using the <shortcut>%1</shortcut> "
+"key shortcut."
+msgstr ""
+
+#: configdialog.cpp:269
+#, kde-format
+msgid "Exclude Windows..."
+msgstr ""
+
+#: configdialog.cpp:283
+#, fuzzy, kde-format
+#| msgid " second"
+#| msgid_plural " seconds"
+msgctxt "Unit of time"
+msgid " second"
+msgid_plural " seconds"
+msgstr[0] " 秒"
+msgstr[1] " 秒"
+
+#: configdialog.cpp:284
+#, kde-format
+msgctxt "No timeout"
+msgid "None"
+msgstr ""
+
+#: configdialog.cpp:293
+#, fuzzy, kde-format
+#| msgctxt "Actions Config"
+#| msgid "Actions"
+msgid "Options:"
+msgstr "アクション"
+
+#: configdialog.cpp:307
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The actions shown in the popup menu can be configured on the "
+"<interface>Actions Configuration</interface> page."
+msgstr ""
+
+#: configdialog.cpp:335
+#, kde-format
+msgid "Exclude Windows"
+msgstr ""
+
+#: configdialog.cpp:365
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"When a <interface>match pattern</interface> matches the clipboard contents, "
+"its <interface>commands</interface> appear in the Klipper popup menu and can "
+"be executed."
+msgstr ""
+
+#: configdialog.cpp:374
+#, kde-format
+msgctxt "@title:column"
+msgid "Match pattern and commands"
+msgstr ""
+
+#: configdialog.cpp:374
+#, fuzzy, kde-format
+#| msgid "Description"
+msgctxt "@title:column"
+msgid "Description"
+msgstr "説明"
+
+#: configdialog.cpp:380
+#, kde-format
+msgid "Add Action..."
+msgstr "アクションを追加..."
+
+#: configdialog.cpp:384
+#, kde-format
+msgid "Edit Action..."
+msgstr "アクションを編集..."
+
+#: configdialog.cpp:389
+#, kde-format
+msgid "Delete Action"
+msgstr "アクションを削除"
+
+#: configdialog.cpp:396
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"These actions appear in the popup menu which can be configured on the "
+"<interface>Action Menu</interface> page."
+msgstr ""
+
+#: configdialog.cpp:580
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Delete the selected action <resource>%1</resource><nl/>and all of its "
+"commands?"
+msgstr ""
+
+#: configdialog.cpp:581
+#, fuzzy, kde-format
+#| msgid "Delete Action"
+msgid "Confirm Delete Action"
+msgstr "アクションを削除"
+
+#: configdialog.cpp:610
+#, kde-format
+msgctxt "General Config"
+msgid "General"
+msgstr "全般"
+
+#: configdialog.cpp:610
+#, fuzzy, kde-format
+#| msgid "General Config"
+msgid "General Configuration"
+msgstr "全般設定"
+
+#: configdialog.cpp:611
+#, fuzzy, kde-format
+#| msgctxt "Actions Config"
+#| msgid "Actions"
+msgctxt "Popup Menu Config"
+msgid "Action Menu"
+msgstr "アクション"
+
+#: configdialog.cpp:611
+#, fuzzy, kde-format
+#| msgctxt "Actions Config"
+#| msgid "Actions"
+msgid "Action Menu"
+msgstr "アクション"
+
+#: configdialog.cpp:612
+#, fuzzy, kde-format
+#| msgid "Actions Config"
+msgctxt "Actions Config"
+msgid "Actions Configuration"
+msgstr "アクションの設定"
+
+#: configdialog.cpp:612
+#, fuzzy, kde-format
+#| msgid "Actions Config"
+msgid "Actions Configuration"
+msgstr "アクションの設定"
+
+#: configdialog.cpp:615
+#, kde-format
+msgctxt "Shortcuts Config"
+msgid "Shortcuts"
+msgstr "ショートカット"
+
+#: configdialog.cpp:615
+#, fuzzy, kde-format
+#| msgid "Shortcuts Config"
+msgid "Shortcuts Configuration"
+msgstr "ショートカットの設定"
+
+#: configdialog.cpp:693
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The action popup will not be shown automatically for these windows, even if "
+"it is enabled. This is because, for example, a web browser may highlight a "
+"URL in the address bar while typing, so the menu would show for every "
+"keystroke.<nl/><nl/>If the action menu appears unexpectedly when using a "
+"particular application, then add it to this list. <link>How to find the name "
+"to enter</link>."
+msgstr ""
+
+#: configdialog.cpp:706
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"The name that needs to be entered here is the WM_CLASS name of the window to "
+"be excluded. To find the WM_CLASS name for a window, in another terminal "
+"window enter the command:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</"
+"icode><nl/><nl/>and click on the window that you want to exclude. The first "
+"name that it displays after the equal sign is the one that you need to enter."
+msgstr ""
+
+#: editactiondialog.cpp:34 editcommanddialog.cpp:90
+#, kde-format
+msgid "Ignore"
+msgstr "無視"
+
+#: editactiondialog.cpp:36
+#, kde-format
+msgid "Replace Clipboard"
+msgstr "クリップボードを置換"
+
+#: editactiondialog.cpp:38
+#, kde-format
+msgid "Add to Clipboard"
+msgstr "クリップボードに追加"
+
+#: editactiondialog.cpp:122
+#, kde-format
+msgid "Command"
+msgstr "コマンド"
+
+#: editactiondialog.cpp:124
+#, kde-format
+msgid "Output"
+msgstr ""
+
+#: editactiondialog.cpp:126
+#, kde-format
+msgid "Description"
+msgstr "説明"
+
+#: editactiondialog.cpp:179
+#, kde-format
+msgid "Action Properties"
+msgstr "アクションのプロパティ"
+
+#: editactiondialog.cpp:191
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"An action takes effect when its <interface>match pattern</interface> matches "
+"the clipboard contents. When this happens, the action's <interface>commands</"
+"interface> appear in the Klipper popup menu; if one of them is chosen, the "
+"command is executed."
+msgstr ""
+
+#: editactiondialog.cpp:203
+#, kde-format
+msgid "Enter a pattern to match against the clipboard"
+msgstr ""
+
+#: editactiondialog.cpp:205
+#, kde-format
+msgid "Match pattern:"
+msgstr ""
+
+#: editactiondialog.cpp:208
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The match pattern is a regular expression. For more information see the "
+"<link url=\"https://en.wikipedia.org/wiki/Regular_expression\">Wikipedia "
+"entry</link> for this topic."
+msgstr ""
+
+#: editactiondialog.cpp:219
+#, kde-format
+msgid "Enter a description for the action"
+msgstr ""
+
+#: editactiondialog.cpp:220 editcommanddialog.cpp:84
+#, kde-format
+msgid "Description:"
+msgstr "説明:"
+
+#: editactiondialog.cpp:223
+#, kde-format
+msgid "Include in automatic popup"
+msgstr ""
+
+#: editactiondialog.cpp:227
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The commands for this match will be included in the automatic action popup, "
+"if it is enabled in the <interface>Action Menu</interface> page. If this "
+"option is turned off, the commands for this match will not be included in "
+"the automatic popup but they will be included if the popup is activated "
+"manually with the <shortcut>%1</shortcut> key shortcut."
+msgstr ""
+
+#: editactiondialog.cpp:262
+#, fuzzy, kde-format
+#| msgid "Add Command"
+msgid "Add Command..."
+msgstr "コマンドを追加"
+
+#: editactiondialog.cpp:267
+#, fuzzy, kde-format
+#| msgid "Add Command"
+msgid "Edit Command..."
+msgstr "コマンドを追加"
+
+#: editactiondialog.cpp:273
+#, fuzzy, kde-format
+#| msgid "Remove Command"
+msgid "Delete Command"
+msgstr "コマンドを削除"
+
+#: editactiondialog.cpp:389
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Delete the selected command <resource>%1</resource>?"
+msgstr ""
+
+#: editactiondialog.cpp:390
+#, kde-format
+msgid "Confirm Delete Command"
+msgstr ""
+
+#: editcommanddialog.cpp:47
+#, fuzzy, kde-format
+#| msgid "Action Properties"
+msgid "Command Properties"
+msgstr "アクションのプロパティ"
+
+#: editcommanddialog.cpp:60
+#, kde-format
+msgid "Enter the command and arguments"
+msgstr ""
+
+#: editcommanddialog.cpp:63
+#, fuzzy, kde-format
+#| msgid "Command"
+msgid "Command:"
+msgstr "コマンド"
+
+#: editcommanddialog.cpp:72
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"A <placeholder>&#37;s</placeholder> in the command will be replaced by the "
+"complete clipboard contents. <placeholder>&#37;0</placeholder> through "
+"<placeholder>&#37;9</placeholder> will be replaced by the corresponding "
+"captured texts from the match pattern."
+msgstr ""
+
+#: editcommanddialog.cpp:82
+#, kde-format
+msgid "Enter a description for the command"
+msgstr ""
+
+#: editcommanddialog.cpp:92
+#, kde-format
+msgid "Output from command:"
+msgstr ""
+
+#: editcommanddialog.cpp:94
+#, fuzzy, kde-format
+#| msgid "Replace Clipboard"
+msgid "Replace current clipboard"
+msgstr "クリップボードを置換"
+
+#: editcommanddialog.cpp:98
+#, fuzzy, kde-format
+#| msgid "Add to Clipboard"
+msgid "Append to clipboard"
+msgstr "クリップボードに追加"
+
+#: editcommanddialog.cpp:102
+#, kde-format
+msgid "What happens to the standard output of the command executed."
+msgstr ""
+
+#: editcommanddialog.cpp:116
+#, kde-format
+msgid "Reset the icon to the default for the command"
+msgstr ""
+
+#: editcommanddialog.cpp:122
+#, kde-format
+msgid "Icon:"
+msgstr ""
+
+#: historyimageitem.cpp:39
+#, kde-format
+msgid "%1x%2 %3bpp"
+msgstr ""
+
+#: klipper.cpp:153
+#, fuzzy, kde-format
+#| msgid "Timeout for action popups:"
+msgctxt "@action:inmenu Toggle automatic action"
+msgid "Automatic Action Popup Menu"
+msgstr "アクションメニューのタイムアウト:"
+
+#: klipper.cpp:176
+#, fuzzy, kde-format
+#| msgid "C&lear Clipboard History"
+msgctxt "@action:inmenu"
+msgid "C&lear Clipboard History"
+msgstr "クリップボードの履歴を消去(&L)"
+
+#: klipper.cpp:183
+#, fuzzy, kde-format
+#| msgid "&Configure Klipper..."
+msgctxt "@action:inmenu"
+msgid "&Configure Klipper…"
+msgstr "Klipper を設定(&C)..."
+
+#: klipper.cpp:189
+#, fuzzy, kde-format
+#| msgid "&Quit"
+msgctxt "@action:inmenu Quit Klipper"
+msgid "&Quit"
+msgstr "終了(&Q)"
+
+#: klipper.cpp:194
+#, fuzzy, kde-format
+#| msgid "Manually Invoke Action on Current Clipboard"
+msgctxt "@action:inmenu"
+msgid "Manually Invoke Action on Current Clipboard"
+msgstr "現在のクリップボードに対するアクションを手動で呼び出す"
+
+#: klipper.cpp:202
+#, fuzzy, kde-format
+#| msgid "Edit Contents"
+msgctxt "@action:inmenu"
+msgid "&Edit Contents…"
+msgstr "内容を編集"
+
+#: klipper.cpp:210
+#, fuzzy, kde-format
+#| msgid "&Show Barcode..."
+msgctxt "@action:inmenu"
+msgid "&Show Barcode…"
+msgstr "バーコードを表示する(&S)..."
+
+#: klipper.cpp:218
+#, fuzzy, kde-format
+#| msgid "Next History Item"
+msgctxt "@action:inmenu"
+msgid "Next History Item"
+msgstr "履歴の次のアイテム"
+
+#: klipper.cpp:222
+#, fuzzy, kde-format
+#| msgid "Previous History Item"
+msgctxt "@action:inmenu"
+msgid "Previous History Item"
+msgstr "履歴の前のアイテム"
+
+#: klipper.cpp:228
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Klipper at Mouse Position"
+msgstr ""
+
+#: klipper.cpp:540
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"You can enable URL actions later in the <interface>Actions</interface> page "
+"of the Clipboard applet's configuration window"
+msgstr ""
+
+#: klipper.cpp:579
+#, kde-format
+msgid "Should Klipper start automatically when you login?"
+msgstr "ログイン時に Klipper を自動的に開始しますか？"
+
+#: klipper.cpp:580
+#, kde-format
+msgid "Automatically Start Klipper?"
+msgstr "Klipper を自動的に開始しますか？"
+
+#: klipper.cpp:581
+#, kde-format
+msgid "Start"
+msgstr "開始する"
+
+#: klipper.cpp:582
+#, kde-format
+msgid "Do Not Start"
+msgstr "開始しない"
+
+#: klipper.cpp:929
+#, kde-format
+msgid "Edit Contents"
+msgstr "内容を編集"
+
+#: klipper.cpp:996
+#, kde-format
+msgid "Mobile Barcode"
+msgstr "モバイルバーコード"
+
+#: klipper.cpp:1043
+#, fuzzy, kde-format
+#| msgid "Really delete entire clipboard history?"
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "本当にクリップボードの全履歴を消去しますか？"
+
+#: klipper.cpp:1044
+#, fuzzy, kde-format
+#| msgid "C&lear Clipboard History"
+msgid "Clear Clipboard History"
+msgstr "クリップボードの履歴を消去(&L)"
+
+#: klipper.cpp:1060 klipper.cpp:1069
+#, kde-format
+msgid "Clipboard history"
+msgstr "クリップボードの履歴"
+
+#: klipper.cpp:1086
+#, kde-format
+msgid "up"
+msgstr "上"
+
+#: klipper.cpp:1093
+#, kde-format
+msgid "current"
+msgstr "現在"
+
+#: klipper.cpp:1100
+#, kde-format
+msgid "down"
+msgstr "下"
+
+#. i18n: ectx: label, entry (Version), group (General)
+#: klipper.kcfg:10
+#, kde-format
+msgid "Klipper version"
+msgstr "Klipper バージョン"
+
+#. i18n: ectx: label, entry (KeepClipboardContents), group (General)
+#: klipper.kcfg:13
+#, kde-format
+msgid "Save history across desktop sessions"
+msgstr ""
+
+#. i18n: ectx: tooltip, entry (KeepClipboardContents), group (General)
+#: klipper.kcfg:15
+#, kde-format
+msgid ""
+"Retain the clipboard history, so it will be available the next time you log "
+"in."
+msgstr ""
+
+#. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
+#: klipper.kcfg:18
+#, fuzzy, kde-format
+#| msgid "Prevent empty clipboard"
+msgid "Prevent the clipboard from being cleared"
+msgstr "クリップボードを空にしない"
+
+#. i18n: ectx: whatsthis, entry (PreventEmptyClipboard), group (General)
+#: klipper.kcfg:20
+#, kde-format
+msgid ""
+"Do not allow the clipboard to be cleared, for example when an application "
+"exits."
+msgstr ""
+
+#. i18n: ectx: label, entry (SyncClipboards), group (General)
+#: klipper.kcfg:27
+#, fuzzy, kde-format
+#| msgid "Selection and Clipboard"
+msgid "Keep the selection and clipboard the same"
+msgstr "選択とクリップボード"
+
+#. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
+#: klipper.kcfg:29
+#, kde-format
+msgid ""
+"Content selected with the cursor is automatically copied to the clipboard so "
+"that it can be pasted with either a Paste action or a middle-click.<br/><a "
+"href=\"1\">More about the selection and clipboard</a>."
+msgstr ""
+
+#. i18n: ectx: label, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:32
+#, fuzzy, kde-format
+#| msgid "Ignore selection"
+msgid "Ignore the selection"
+msgstr "選択を無視する"
+
+#. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:34
+#, kde-format
+msgid ""
+"Content selected with the cursor but not explicitly copied to the clipboard "
+"is not automatically stored in the clipboard history, and can only be pasted "
+"using a middle-click."
+msgstr ""
+
+#. i18n: ectx: label, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:37
+#, kde-format
+msgid "Text selection only"
+msgstr "テキストの選択のみ"
+
+#. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:39
+#, kde-format
+msgid ""
+"Only store text selections in the clipboard history, not images or any other "
+"type of data."
+msgstr ""
+
+#. i18n: ectx: label, entry (IgnoreImages), group (General)
+#: klipper.kcfg:42
+#, fuzzy, kde-format
+#| msgid "Ignore images"
+msgid "Always ignore images"
+msgstr "画像を無視する"
+
+#. i18n: ectx: whatsthis, entry (IgnoreImages), group (General)
+#: klipper.kcfg:44
+#, kde-format
+msgid ""
+"Do not store images in the clipboard history, even if explicitly copied."
+msgstr ""
+
+#. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
+#: klipper.kcfg:47
+#, kde-format
+msgid "Use graphical regexp editor"
+msgstr "グラフィカルな正規表現エディタを使う"
+
+#. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
+#: klipper.kcfg:51
+#, fuzzy, kde-format
+#| msgid "Ignore selection"
+msgid "Immediately on selection"
+msgstr "選択を無視する"
+
+#. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
+#: klipper.kcfg:52
+#, kde-format
+msgid ""
+"Show the popup menu of applicable actions as soon as a selection is made."
+msgstr ""
+
+#. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
+#: klipper.kcfg:57
+#, kde-format
+msgid "No actions for WM_CLASS"
+msgstr "アクションを無効にする WM_CLASS"
+
+#. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:60
+#, fuzzy, kde-format
+#| msgid "Timeout for action popups:"
+msgid "Automatic action menu time:"
+msgstr "アクションメニューのタイムアウト:"
+
+#. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:64
+#, fuzzy, kde-format
+#| msgid "Timeout for action popups:"
+msgid "Display the automatic action popup menu for this time."
+msgstr "アクションメニューのタイムアウト:"
+
+#. i18n: ectx: label, entry (MaxClipItems), group (General)
+#: klipper.kcfg:67
+#, fuzzy, kde-format
+#| msgid "Clipboard history size:"
+msgid "History size:"
+msgstr "クリップボード履歴の数:"
+
+#. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
+#: klipper.kcfg:71
+#, kde-format
+msgid "The clipboard history will store up to this many items."
+msgstr ""
+
+#. i18n: ectx: label, entry (ActionList), group (General)
+#: klipper.kcfg:74
+#, kde-format
+msgid "Dummy entry for indicating changes in an action's tree widget"
+msgstr "アクションのツリーウィジェットでの変更を示すためのダミーエントリ"
+
+#. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:87
+#, fuzzy, kde-format
+#| msgid "Strip whitespace when executing an action"
+msgid "Trim whitespace from selection"
+msgstr "アクションの実行時に空白文字を削除する"
+
+#. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:89
+#, kde-format
+msgid ""
+"Remove any whitespace from the start and end of selected text, before "
+"performing an action. For example, this ensures that a URL pasted in a "
+"browser is interpreted as expected. The text saved on the clipboard is not "
+"affected."
+msgstr ""
+
+#. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
+#: klipper.kcfg:92
+#, fuzzy, kde-format
+#| msgid "Replay actions on an item selected from history"
+msgid "For an item chosen from history"
+msgstr "履歴から選択した項目に対してもアクションを有効にする"
+
+#. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
+#: klipper.kcfg:94
+#, fuzzy, kde-format
+#| msgid "Really delete entire clipboard history?"
+msgid ""
+"Show the popup menu of applicable actions if an entry is chosen from the "
+"clipboard history."
+msgstr "本当にクリップボードの全履歴を消去しますか？"
+
+#. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
+#: klipper.kcfg:97
+#, fuzzy, kde-format
+#| msgid "Enable MIME-based actions"
+msgid "Include MIME actions"
+msgstr "MIME タイプに基くアクションを有効にする"
+
+#. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
+#: klipper.kcfg:99
+#, kde-format
+msgid ""
+"If a file name or URL is selected, include applications that can accept its "
+"MIME type in the popup menu."
+msgstr ""
+
+#: klipperpopup.cpp:110
+#, kde-format
+msgid "Klipper - Clipboard Tool"
+msgstr "Klipper - クリップボードツール"
+
+#: klipperpopup.cpp:114
+#, kde-format
+msgid "Search…"
+msgstr ""
+
+#: klipperpopup.cpp:123 main.cpp:29
+#, kde-format
+msgid "KDE cut & paste history utility"
+msgstr "KDE カット＆ペースト履歴ユーティリティ"
+
+#: klipperpopup.cpp:187
+#, fuzzy, kde-format
+#| msgid "Regular expression:"
+msgid "Invalid regular expression, %1"
+msgstr "正規表現:"
+
+#: klipperpopup.cpp:193 tray.cpp:25 tray.cpp:53
+#, kde-format
+msgid "Clipboard is empty"
+msgstr "クリップボードは空です"
+
+#: klipperpopup.cpp:195
+#, fuzzy, kde-format
+#| msgid "<no matches>"
+msgid "No matches"
+msgstr "<一致なし>"
+
+#: main.cpp:27 tray.cpp:22
+#, kde-format
+msgid "Klipper"
+msgstr "Klipper"
+
+#: main.cpp:31
+#, kde-format
+msgid ""
+"(c) 1998, Andrew Stanley-Jones\n"
+"1998-2002, Carsten Pfeiffer\n"
+"2001, Patrick Dubroy"
+msgstr ""
+"(c) 1998, Andrew Stanley-Jones\n"
+"1998-2002, Carsten Pfeiffer\n"
+"2001, Patrick Dubroy"
+
+#: main.cpp:34
+#, kde-format
+msgid "Carsten Pfeiffer"
+msgstr "Carsten Pfeiffer"
+
+#: main.cpp:34
+#, kde-format
+msgid "Author"
+msgstr "作者"
+
+#: main.cpp:36
+#, kde-format
+msgid "Andrew Stanley-Jones"
+msgstr "Andrew Stanley-Jones"
+
+#: main.cpp:36
+#, kde-format
+msgid "Original Author"
+msgstr "オリジナルの作者"
+
+#: main.cpp:38
+#, kde-format
+msgid "Patrick Dubroy"
+msgstr "Patrick Dubroy"
+
+#: main.cpp:38
+#, kde-format
+msgid "Contributor"
+msgstr "協力者"
+
+#: main.cpp:40
+#, kde-format
+msgid "Luboš Luňák"
+msgstr "Luboš Luňák"
+
+#: main.cpp:40
+#, kde-format
+msgid "Bugfixes and optimizations"
+msgstr "バグ修正と最適化"
+
+#: main.cpp:42
+#, kde-format
+msgid "Esben Mose Hansen"
+msgstr "Esben Mose Hansen"
+
+#: main.cpp:42
+#, fuzzy, kde-format
+#| msgid "Maintainer"
+msgid "Previous Maintainer"
+msgstr "メンテナ"
+
+#: main.cpp:44
+#, kde-format
+msgid "Martin Gräßlin"
+msgstr ""
+
+#: main.cpp:44
+#, kde-format
+msgid "Maintainer"
+msgstr "メンテナ"
+
+#: main.cpp:46
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+"Noboru Sinohara,Ryuichi Kakuda,Kurose Shushi, Fumiaki Okushi,Shinichi Tsunoda"
+
+#: main.cpp:46
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"shinobo@leo.bekkoame.ne.jp,ryuk@user.script.nu,md81@bird.email.ne.jp, "
+"fumiaki@okushi.com,tsuno@ngy.1st.ne.jp"
+
+#: popupproxy.cpp:145
+#, kde-format
+msgid "&More"
+msgstr "その他(&M)"
+
+#: tray.cpp:25
+#, kde-format
+msgid "Clipboard Contents"
+msgstr "クリップボードの内容"
+
+#: urlgrabber.cpp:198
+#, kde-format
+msgid "Disable This Popup"
+msgstr "このポップアップを無効にする"
+
+#: urlgrabber.cpp:204
+#, kde-format
+msgid "&Cancel"
+msgstr "キャンセル(&C)"
+
+#~ msgid "Delete clipboard history?"
+#~ msgstr "クリップボードの履歴を消去しますか？"
+
+#~ msgid "Action list:"
+#~ msgstr "アクションのリスト:"
+
+#~ msgid "Regular Expression"
+#~ msgstr "正規表現"
+
+#, fuzzy
+#~| msgid ""
+#~| "Click on a highlighted item's column to change it. \"%s\" in a command "
+#~| "will be replaced with the clipboard contents.<br>For more information "
+#~| "about regular expressions, you could have a look at the <a href=\"http://"
+#~| "en.wikipedia.org/wiki/Regular_expression\">Wikipedia entry about this "
+#~| "topic</a>."
+#~ msgid ""
+#~ "Click on a highlighted item's column to change it. \"%s\" in a command "
+#~ "will be replaced with the clipboard contents.<br>For more information "
+#~ "about regular expressions, you could have a look at the <a href=\"https://"
+#~ "en.wikipedia.org/wiki/Regular_expression\">Wikipedia entry about this "
+#~ "topic</a>."
+#~ msgstr ""
+#~ "<html>アクションを編集するには、選択した項目の正規表現または説明をダブルク"
+#~ "リックします。コマンドの中の %s はクリップボードの内容に置き換えられます。"
+#~ "<br/>正規表現の詳細については <a href=\"http://ja.wikipedia.org/wiki/正規"
+#~ "表現\">Wikipedia の記事</a> を参照してください。</html>"
+
+#~ msgid "Output Handling"
+#~ msgstr "出力の扱い"
+
+#~ msgid "new command"
+#~ msgstr "新しいコマンド"
+
+#~ msgid "Command Description"
+#~ msgstr "コマンドの説明"
+
+#~ msgid "Action properties:"
+#~ msgstr "アクションのプロパティ:"
+
+#~ msgid "Automatic:"
+#~ msgstr "自動:"
+
+#~ msgid "List of commands for this action:"
+#~ msgstr "このアクションのためのコマンドのリスト:"
+
+#~ msgid "Double-click an item to edit"
+#~ msgstr "アイテムをダブルクリックして編集します"
+
+#~ msgid "Remove whitespace when executing actions"
+#~ msgstr "アクションの実行時に空白文字を削除する"
+
+#, fuzzy
+#~| msgid "Advanced"
+#~ msgid "Advanced..."
+#~ msgstr "詳細"
+
+#~ msgid "Advanced Settings"
+#~ msgstr "詳細設定"
+
+# ACCELERATOR removed by translator
+#~ msgid "D&isable Actions for Windows of Type WM_CLASS"
+#~ msgstr "アクションを無効にするウィンドウ (WM_CLASS)"
+
+#~ msgid ""
+#~ "<qt>This lets you specify windows in which Klipper should not invoke "
+#~ "\"actions\". Use<br /><br /><center><b>xprop | grep WM_CLASS</b></"
+#~ "center><br />in a terminal to find out the WM_CLASS of a window. Next, "
+#~ "click on the window you want to examine. The first string it outputs "
+#~ "after the equal sign is the one you need to enter here.</qt>"
+#~ msgstr ""
+#~ "<qt>ここで Klipper がアクションを呼び出すべきではないウィンドウを指定でき"
+#~ "ます。ウィンドウの WM_CLASS を調べるには、まず、ターミナルで<br /><br /"
+#~ "><center><b>xprop | grep WM_CLASS</b></center><br />としてください。次に調"
+#~ "べるウィンドウをマウスでクリックします。出力の等号 (=) の後の最初の文字列"
+#~ "をここに入力してください。</qt>"
+
+#~ msgid "Enable Clipboard Actions"
+#~ msgstr "クリップボードのアクションを有効にする"
+
+#~ msgid "URL grabber enabled"
+#~ msgstr "URL の取り込みを有効にする"
+
+#~ msgid "Replay action in history"
+#~ msgstr "履歴の項目に対してもアクションを有効にする"
+
+#~ msgid "Save clipboard contents on exit"
+#~ msgstr "終了時にクリップボードの内容を保存する"
+
+#~ msgid "Synchronize contents of the clipboard and the selection"
+#~ msgstr "クリップボードと選択の内容を同期する"
+
+#~ msgid "Keep clipboard contents"
+#~ msgstr "クリップボードの内容を保持する"
+
+#~ msgid ""
+#~ "Selecting this option has the effect, that the clipboard can never be "
+#~ "emptied. E.g. when an application exits, the clipboard would usually be "
+#~ "emptied."
+#~ msgstr ""
+#~ "このオプションを有効にすると、クリップボードは決して空になりません。普通ア"
+#~ "プリケーションが終了するときには、クリップボードは空にされますが。"
+
+#~ msgid "Ignore Selection"
+#~ msgstr "選択を無視する"
+
+#, fuzzy
+#~| msgid ""
+#~| "<qt>When an area of the screen is selected with mouse or keyboard, this "
+#~| "is called \"the selection\". If this option is set, the selection is not "
+#~| "entered into the clipboard history, though it is still available for "
+#~| "pasting using the middle mouse button.</qt>"
+#~ msgid ""
+#~ "When an area of the screen is selected with mouse or keyboard, this is "
+#~ "called \"the selection\".<br/>If this option is set, the selection is not "
+#~ "entered into the clipboard history, though it is still available for "
+#~ "pasting using the middle mouse button."
+#~ msgstr ""
+#~ "<qt>マウスやキーボードを使ってスクリーン上の領域を選択したものを「選択」と"
+#~ "呼びます。このオプションを有効にすると、選択はクリップボードの履歴に追加さ"
+#~ "れません (メニューやショートカットを使ってコピーすると追加されます)。選択"
+#~ "を貼り付けるにはマウスの中ボタンを使います。</qt>"
+
+#~ msgid "Synchronize clipboard and selection"
+#~ msgstr "クリップボードと選択を同期する"
+
+#, fuzzy
+#~| msgid ""
+#~| "<qt>When an area of the screen is selected with mouse or keyboard, this "
+#~| "is called \"the selection\". If this option is selected, the selection "
+#~| "and the clipboard is kept the same, so that anything in the selection is "
+#~| "immediately available for pasting elsewhere using any method, including "
+#~| "the traditional middle mouse button. Otherwise, the selection is "
+#~| "recorded in the clipboard history, but the selection can only be pasted "
+#~| "using the middle mouse button. Also see the 'Ignore Selection' option.</"
+#~| "qt>"
+#~ msgid ""
+#~ "When an area of the screen is selected with mouse or keyboard, this is "
+#~ "called \"the selection\".<br/>If this option is selected, the selection "
+#~ "and the clipboard is kept the same, so that anything in the selection is "
+#~ "immediately available for pasting elsewhere using any method, including "
+#~ "the traditional middle mouse button. Otherwise, the selection is recorded "
+#~ "in the clipboard history, but the selection can only be pasted using the "
+#~ "middle mouse button. Also see the 'Ignore Selection' option."
+#~ msgstr ""
+#~ "<qt>マウスやキーボードを使ってスクリーン上の領域を選択したものを「選択」と"
+#~ "呼びます。このオプションを有効にすると、選択とクリップボードの内容が常に同"
+#~ "期されます。したがって、選択はマウスの中ボタンだけでなく他の方法でも直ちに"
+#~ "貼り付けることができます。有効にしなかった場合は、選択はクリップボードの履"
+#~ "歴には追加されますが、マウスの中ボタンでしか貼り付けることができません。"
+#~ "<interface>選択を無視する</interface>の説明も参照してください。</qt>"
+
+#~ msgid "Selection text only"
+#~ msgstr "テキストの選択のみ"
+
+#, fuzzy
+#~| msgid ""
+#~| "<qt>When an area of the screen is selected with mouse or keyboard, this "
+#~| "is called \"the selection\". If this option is selected, only text "
+#~| "selections are stored in the history, while images and other selections "
+#~| "are not.</qt>"
+#~ msgid ""
+#~ "When an area of the screen is selected with mouse or keyboard, this is "
+#~ "called \"the selection\".<br/>If this option is selected, only text "
+#~ "selections are stored in the history, while images and other selections "
+#~ "are not."
+#~ msgstr ""
+#~ "<qt>マウスやキーボードを使ってスクリーン上の領域を選択したものを「選択」と"
+#~ "呼びます。このオプションを有効にすると、テキストの選択のみがクリップボード"
+#~ "の履歴に追加され、画像やその他の選択は追加されません。</qt>"
+
+#~ msgid "Timeout for action popups (seconds)"
+#~ msgstr "アクションメニューのタイムアウト (秒)"
+
+#~ msgid "A value of 0 disables the timeout"
+#~ msgstr "0 を指定するとタイムアウトを無効にします"
+
+#~ msgid "Clipboard history size"
+#~ msgstr "クリップボード履歴の数"
+
+#~ msgid ""
+#~ "Sometimes, the selected text has some whitespace at the end, which, if "
+#~ "loaded as URL in a browser would cause an error. Enabling this option "
+#~ "removes any whitespace at the beginning or end of the selected string "
+#~ "(the original clipboard contents will not be modified)."
+#~ msgstr ""
+#~ "選択したテキストの終端に空白文字がある場合があります。それをそのままブラウ"
+#~ "ザに URL として読み込ませるとエラーになります。このオプションを有効にする"
+#~ "と、選択した文字列の先頭と終端にある空白文字をすべて除去します。クリップ"
+#~ "ボードの元の内容は修正されません。"
+
+#~ msgid "%1 - Actions For: %2"
+#~ msgstr "%1 - %2"
+
+#~ msgid "&Edit Contents..."
+#~ msgstr "内容を編集(&E)..."

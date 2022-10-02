@@ -1,0 +1,613 @@
+# translation of kcmstyle.po to
+# translation of kcmstyle.po to
+# translation of kcmstyle.po to
+# translation of kcmstyle.po to
+# translation of kcmstyle.po to Xhosa
+# K Desktop Environment - kdebase
+# Copyright (C) 2001 translate.org.za
+# Antoinette Dekeni <antoinette@transalate.org.za>, 2001.
+# Lwandle Mgidlana <lwandle@translate.org.za>, 2002
+# Thelma Lungcuzo <thelma@translate.org.za>, 2002
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmstyle\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"PO-Revision-Date: 2002-11-08 09:44+0200\n"
+"Last-Translator: Thelma Lungcuzo <thelma@translate.org.za>\n"
+"Language-Team: Xhosa <xhosa@translate.org.za>\n"
+"Language: xh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.0beta2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: gtkpage.cpp:59
+#, kde-format
+msgid "%1 is not a valid GTK Theme archive."
+msgstr ""
+
+#: kcmstyle.cpp:161 kcmstyle.cpp:168
+#, kde-format
+msgid "There was an error loading the configuration dialog for this style."
+msgstr ""
+
+#: kcmstyle.cpp:274
+#, kde-format
+msgid "Failed to apply selected style '%1'."
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:32
+#, fuzzy, kde-format
+#| msgid "Sho&w icons on buttons"
+msgid "Show icons:"
+msgstr "Ibonis&a iimphawu zomfanekiso emaqosheni"
+
+#: package/contents/ui/EffectSettingsPopup.qml:33
+#, fuzzy, kde-format
+#| msgid "Radio button"
+msgid "On buttons"
+msgstr "Iqosha lika nomatotolo"
+
+#: package/contents/ui/EffectSettingsPopup.qml:44
+#, kde-format
+msgid "In menus"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:56
+#, kde-format
+msgid "Main toolbar label:"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "None"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:59
+#, fuzzy, kde-format
+#| msgid "Text Only"
+msgid "Text only"
+msgstr "Umbhalo Kuphela"
+
+#: package/contents/ui/EffectSettingsPopup.qml:60
+#, fuzzy, kde-format
+#| msgid "Text Alongside Icons"
+msgid "Beside icons"
+msgstr "Umbhalo Ecaleni Kophawu lwemifanekiso"
+
+#: package/contents/ui/EffectSettingsPopup.qml:61
+#, fuzzy, kde-format
+#| msgid "Text Under Icons"
+msgid "Below icon"
+msgstr "Umbhalo Ezantsi Kweemphawu zemifanekiso"
+
+#: package/contents/ui/EffectSettingsPopup.qml:76
+#, kde-format
+msgid "Secondary toolbar label:"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:18
+#, fuzzy, kde-format
+#| msgid "Application Level"
+msgid "GNOME/GTK Application Style"
+msgstr "Umphakamo Wesicelo"
+
+#: package/contents/ui/GtkStylePage.qml:44
+#, kde-format
+msgid "GTK theme:"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:69
+#, fuzzy, kde-format
+msgid "Preview…"
+msgstr "Uhlobo Lwemboniso yangaphambili"
+
+#: package/contents/ui/GtkStylePage.qml:88
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:93
+#, fuzzy, kde-format
+#| msgid "Application Level"
+msgid "Get New GNOME/GTK Application Styles…"
+msgstr "Umphakamo Wesicelo"
+
+#: package/contents/ui/GtkStylePage.qml:109
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:111
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: package/contents/ui/main.qml:17
+#, fuzzy, kde-format
+msgid ""
+"This module allows you to modify the visual appearance of applications' user "
+"interface elements."
+msgstr ""
+"<h1>Uhlobo Lwezicwangciso</h1>Le modula ikuvumela ukuba uguqule kancincane "
+"imbonakalo yosebenziso lojongano ye elements, njengohlobo lwe widget "
+"neziqhamo."
+
+#: package/contents/ui/main.qml:96
+#, fuzzy, kde-format
+#| msgid "Widget Style"
+msgid "Configure Style…"
+msgstr "Uhlobo lwe Widget"
+
+#: package/contents/ui/main.qml:116
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr ""
+
+#: package/contents/ui/main.qml:132
+#, fuzzy, kde-format
+#| msgid "Widget Style"
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "Uhlobo lwe Widget"
+
+#: styleconfdialog.cpp:21
+#, kde-format
+msgid "Configure %1"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "Tab 1"
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, fuzzy, kde-format
+#| msgid "Button"
+msgid "Push Button"
+msgstr "Iqhosha"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, fuzzy, kde-format
+#| msgid "Combobox"
+msgid "Combo box"
+msgstr "ComboBox"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "Checkbox"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "Iqosha lika nomatotolo"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:133
+#, kde-format
+msgid "Tab 2"
+msgstr "Tab 2"
+
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Application Level"
+msgid "Application style"
+msgstr "Umphakamo Wesicelo"
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Sho&w icons on buttons"
+msgid "Show icons on buttons"
+msgstr "Ibonis&a iimphawu zomfanekiso emaqosheni"
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, fuzzy, kde-format
+#| msgid "Sho&w icons on buttons"
+msgid "Show icons in menus"
+msgstr "Ibonis&a iimphawu zomfanekiso emaqosheni"
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, kde-format
+msgid "Main toolbar label"
+msgstr ""
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, kde-format
+msgid "Secondary toolbar label"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Antoinette Dekeni,Lwandle Mgidlana"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "antoinette@translate.org.za,lwandle@translate.org.za"
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "Application Style"
+#~ msgstr "Umphakamo Wesicelo"
+
+#, fuzzy
+#~| msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
+#~ msgstr "(c) 2002 Karol Szwed, Daniel Molkentin"
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "Download New GNOME/GTK2 Application Styles..."
+#~ msgstr "Umphakamo Wesicelo"
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "GNOME/GTK2 Application Styles"
+#~ msgstr "Umphakamo Wesicelo"
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "Download New GNOME/GTK3 Application Styles..."
+#~ msgstr "Umphakamo Wesicelo"
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "GNOME/GTK3 Application Styles"
+#~ msgstr "Umphakamo Wesicelo"
+
+#~ msgid "No description available."
+#~ msgstr "Akukho nkcazelo ikhoyo."
+
+#~ msgid ""
+#~ "This area shows a preview of the currently selected style without having "
+#~ "to apply it to the whole desktop."
+#~ msgstr ""
+#~ "Lendawo ibonisa imboniso yohlobo oselelukhetiwe ingafuni ukuyifaka kwi "
+#~ "desktop yonke."
+
+#~ msgid ""
+#~ "Here you can choose from a list of predefined widget styles (e.g. the way "
+#~ "buttons are drawn) which may or may not be combined with a theme "
+#~ "(additional information like a marble texture or a gradient)."
+#~ msgstr ""
+#~ "Apha uyakwazi ukukhetha kuluhlu olucaziweyo uhlobo lwe widgets (umzekelo "
+#~ "indlela amaqosha azotywe ngayo) enokwazi okanye engeno ukudityaniswa "
+#~ "nomxholo wokuxoxwa (olongeziweyo ulwazi njenge marble texture okanye "
+#~ "ithambeka)."
+
+#, fuzzy
+#~| msgid ""
+#~| "If you enable this option, KDE Applications will show small icons "
+#~| "alongside some important buttons."
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "some important buttons."
+#~ msgstr ""
+#~ "Ukuba wenza olukhetho, i KDE Izakubonisa iicons ezincinci ecaleni "
+#~ "kwamanye amgqosha abalulekileyo."
+
+#, fuzzy
+#~| msgid ""
+#~| "If you enable this option, KDE Applications will show small icons "
+#~| "alongside some important buttons."
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "most menu items."
+#~ msgstr ""
+#~ "Ukuba wenza olukhetho, i KDE Izakubonisa iicons ezincinci ecaleni "
+#~ "kwamanye amgqosha abalulekileyo."
+
+#, fuzzy
+#~| msgid ""
+#~| "<p><b>Icons only:</b> Shows only icons on toolbar buttons. Best option "
+#~| "for low resolutions.</p><p><b>Text only: </b>Shows only text on toolbar "
+#~| "buttons.</p><p><b>Text alongside icons: </b> Shows icons and text on "
+#~| "toolbar buttons. Text is aligned alongside the icon.</p><b>Text under "
+#~| "icons: </b> Shows icons and text on toolbar buttons. Text is aligned "
+#~| "below the icon."
+#~ msgid ""
+#~ "<p><b>No text:</b> Shows only icons on toolbar buttons. Best option for "
+#~ "low resolutions.</p><p><b>Text only: </b>Shows only text on toolbar "
+#~ "buttons.</p><p><b>Text beside icons: </b> Shows icons and text on toolbar "
+#~ "buttons. Text is aligned beside the icon.</p><b>Text below icons: </b> "
+#~ "Shows icons and text on toolbar buttons. Text is aligned below the icon."
+#~ msgstr ""
+#~ "<p><b>Icons only:</b> Ibonisa i icons kwi toolbar emaqhosheni. Yeyona "
+#~ "ingcono kwi resolution ezisezantsi.</p><p><b>Okubhaliweyo kuphela: </"
+#~ "b>bonisa okubhaliweyo kuphela emaqhosheni e toolbar.</"
+#~ "p><p><b>okubhaliweyo ecaleni kwe iicon.> Bonisa i icons nokubhaliweyo "
+#~ "emaqhosheni e toolbars. Okubhaliweyo ecaleni kwe icon.</p><b>okubhaliweyo "
+#~ "phantsi kwe icon: </b> Bonisa i icons nokubhaliweyo kwi toolbar. "
+#~ "okubhaliweyo kubekwe ngapantsi kwe icon."
+
+#, fuzzy
+#~ msgid "Toolbars"
+#~ msgstr "Ii &Icon zebar yesixhobo:"
+
+#, fuzzy
+#~| msgid "Widget Style"
+#~ msgid "Widget style:"
+#~ msgstr "Uhlobo lwe Widget"
+
+#, fuzzy
+#~ msgid "Description: %1"
+#~ msgstr "Inkcazelo"
+
+#~ msgid "KDE Style Module"
+#~ msgstr "Uhlobo Mnqongo we KDE"
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "In application"
+#~ msgstr "Umphakamo Wesicelo"
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "Global Menu widget"
+#~ msgstr "Umphakamo Wesicelo"
+
+#, fuzzy
+#~| msgid ""
+#~| "If you enable this option, KDE Applications will show small icons "
+#~| "alongside some important buttons."
+#~ msgid ""
+#~ "If you enable this option, KDE Applications will run internal animations."
+#~ msgstr ""
+#~ "Ukuba wenza olukhetho, i KDE Izakubonisa iicons ezincinci ecaleni "
+#~ "kwamanye amgqosha abalulekileyo."
+
+#~ msgid "kcmstyle"
+#~ msgstr "kcmstyle"
+
+#~ msgid "Icons Only"
+#~ msgstr "Uphawu lwemifaneksio Kuphela"
+
+#, fuzzy
+#~| msgid "Text pos&ition:"
+#~ msgctxt "@label:listbox"
+#~ msgid "Text pos&ition of toolbar elements:"
+#~ msgstr "Indawo yom&bhalo:"
+
+#, fuzzy
+#~| msgid "&Style"
+#~ msgctxt "@title:tab"
+#~ msgid "&Style"
+#~ msgstr "&Uhlobo"
+
+#~ msgid ""
+#~ "This page allows you to enable various widget style effects. For best "
+#~ "performance, it is advisable to disable all effects."
+#~ msgstr ""
+#~ "Eliphepha likuvumela ukuba wenze i widgets ezinintsi iziqhamo. Eyona "
+#~ "engcono ukwenzeka, uyacebiswa ukuba ucime zonke izenzakalo."
+
+#, fuzzy
+#~| msgid "High&light buttons under mouse"
+#~ msgctxt "@option:check"
+#~ msgid "High&light buttons under mouse"
+#~ msgstr "&Yenza uphawu kumaqhosha ezantsi kwe mouse"
+
+#, fuzzy
+#~| msgid "E&nable tooltips"
+#~ msgctxt "@option:check"
+#~ msgid "E&nable tooltips"
+#~ msgstr "Y&enza izixhobo zotshuphe"
+
+#~ msgid ""
+#~ "If this option is selected, toolbar buttons will change their color when "
+#~ "the mouse cursor is moved over them."
+#~ msgstr ""
+#~ "Ukuba olu khetho lukhethiwe, amaqhosha ebar yesixhobo azakutshintsha "
+#~ "umbala wawo xa isalathisi semouse sihanjiswa phezu kwawo."
+
+#~ msgid ""
+#~ "If you check this option, the KDE application will offer tooltips when "
+#~ "the cursor remains over items in the toolbar."
+#~ msgstr ""
+#~ "Xa u jonga lomkhete i KDE application izakunika i tooltips xa i cursor "
+#~ "ishiyeka kwi toolbar."
+
+#~ msgid "&Effects"
+#~ msgstr "&Iziqhamo"
+
+#~ msgid "Show tear-off handles in &popup menus"
+#~ msgstr "Bonisa izibambo ze &pop up menus"
+
+#~ msgid "&Enable GUI effects"
+#~ msgstr "&Vumela iziqhano ze GUI"
+
+#~ msgid "Disable"
+#~ msgstr "Khubaza"
+
+#~ msgid "Animate"
+#~ msgstr "Philisa"
+
+#~ msgid "Combobo&x effect:"
+#~ msgstr "Iziqhamo ze Combobo&x:"
+
+#~ msgid "Fade"
+#~ msgstr "Ukuphela"
+
+#~ msgid "&Tool tip effect:"
+#~ msgstr "&Isiphumo sotshuphe lwesixhobo:"
+
+#~ msgid "Make Translucent"
+#~ msgstr "Vumela Ukhanyo lungene"
+
+#~ msgid "&Menu effect:"
+#~ msgstr "&Isiphumo se menu:"
+
+#~ msgid "Me&nu tear-off handles:"
+#~ msgstr "Me&nu okanye uluhlu lwezinto:"
+
+#~ msgid "Menu &drop shadow"
+#~ msgstr "Menu &okanye uluhlu lwezinto"
+
+#~ msgid "Software Tint"
+#~ msgstr "Software Tint"
+
+#~ msgid "Software Blend"
+#~ msgstr "Uxubo lwe Software"
+
+#~ msgid "XRender Blend"
+#~ msgstr "Uxubo lwe XRender"
+
+#~ msgid "0%"
+#~ msgstr "0%"
+
+#~ msgid "50%"
+#~ msgstr "50%"
+
+#~ msgid "100%"
+#~ msgstr "100%"
+
+#~ msgid "Menu trans&lucency type:"
+#~ msgstr "Udidi lwe menu okwazi ukubona n&gaphakwayo:"
+
+#~ msgid "Menu &opacity:"
+#~ msgstr "Okungabonisiweyo &kwe menu:"
+
+#~ msgid "Transparent tool&bars when moving"
+#~ msgstr "Ibar z&esixhobo zibonisa ngaphaya xa ushukuma"
+
+#, fuzzy
+#~| msgid ""
+#~| "<qt>Selected style: <b>%1</b><br><br>One or more effects that you have "
+#~| "chosen could not be applied because the selected style does not support "
+#~| "them; they have therefore been disabled.<br><br>"
+#~ msgid ""
+#~ "<qt>Selected style: <b>%1</b><br /><br />One or more effects that you "
+#~ "have chosen could not be applied because the selected style does not "
+#~ "support them; they have therefore been disabled.<br /><br /></qt>"
+#~ msgstr ""
+#~ "<qt>Udidi olukhetiweyo: <b>%1</b><br><br>Ezinye iziphumo ozikhethileyo "
+#~ "azikwazanga ukwenziwa ngenxa yokuba udidi olukhethiweyo alizixhasi; yiyo "
+#~ "lonto zikhubaziwe.<br><br>"
+
+#, fuzzy
+#~| msgid "Menu translucency is not available.<br>"
+#~ msgid "Menu translucency is not available.<br />"
+#~ msgstr "I menu yokuvumela ukukhanya kudlule ayikho.<br>"
+
+#~ msgid "Menu drop-shadows are not available."
+#~ msgstr "I menu ewisa-izithunzi ayikho."
+
+#~ msgid ""
+#~ "If you check this box, you can select several effects for different "
+#~ "widgets like combo boxes, menus or tooltips."
+#~ msgstr ""
+#~ "Ukuba ukhangela lebhokisi, ungakhetha iziphumo eziliqela ze widgets "
+#~ "ezahlukileyo njenge bhokisi ze combo, ii menu okanye izixhobo zootshuphe."
+
+#, fuzzy
+#~ msgid ""
+#~ "<p><b>Disable: </b>do not use any combo box effects.</p>\n"
+#~ "<b>Animate: </b>Do some animation."
+#~ msgstr ""
+#~ "<p><b>Khubaza: </b>Sukusebenzisa nayiphi na ibhokisi ze combo effects.</"
+#~ "p>\n"
+#~ "<b>Philisa: </b>Yenza iziphiliso."
+
+#, fuzzy
+#~ msgid ""
+#~ "<p><b>Disable: </b>do not use any tooltip effects.</p>\n"
+#~ "<p><b>Animate: </b>Do some animation.</p>\n"
+#~ "<b>Fade: </b>Fade in tooltips using alpha-blending."
+#~ msgstr ""
+#~ "<p><b>Khubaza: </b>Sukusebenzisa naliphi na incam lesixhobo iziqhamo.</"
+#~ "p>\n"
+#~ "<p><b>Philisa: </b>Yenza iziphiliso.</p>\n"
+#~ "<b>Ukuphela: </b>Ukuphela kwincam lesixhobo lodibaniso lwe alpha."
+
+#, fuzzy
+#~ msgid ""
+#~ "<p><b>Disable: </b>do not use any menu effects.</p>\n"
+#~ "<p><b>Animate: </b>Do some animation.</p>\n"
+#~ "<p><b>Fade: </b>Fade in menus using alpha-blending.</p>\n"
+#~ "<b>Make Translucent: </b>Alpha-blend menus for a see-through effect. (KDE "
+#~ "styles only)"
+#~ msgstr ""
+#~ "<p><b>Khubaza: </b>Sukusebenzisa ulwenzo lwe menu.</p>\n"
+#~ "<p><b>Philisa: </b>Yenza uphiliso.</p>\n"
+#~ "<p><b>Ukuphela: </b>Phelia kwimenu usebenzisa udibaniso lwe alpha.</p>\n"
+#~ "<b>Yenza Kubonakale: </b>Udibaniso lwemenu ze alpha uzenze zibonakale. "
+#~ "(uhlobo lwe KDE qa)"
+
+#~ msgid ""
+#~ "When enabled, all popup menus will have a drop-shadow, otherwise drop-"
+#~ "shadows will not be displayed. At present, only KDE styles can have this "
+#~ "effect enabled."
+#~ msgstr ""
+#~ "Xa yenziwe, zonke i menu eziqhekezayo zizakubanomthunzi-owayo, kungenjalo "
+#~ "Umthunzi-owayo akazukuboniswa. Okwangoku, ludidi lwe KDE olunokuba "
+#~ "nolwenziwo olunesiphumo."
+
+#, fuzzy
+#~| msgid ""
+#~| "<p><b>Software Tint: </b>Alpha-blend using a flat color.</p>\n"
+#~| "<p><b>Software Blend: </b>Alpha-blend using an image.</p>\n"
+#~| "<b>XRender Blend: </b>Use the XFree RENDER extension for image blending "
+#~| "(if available). This method may be slower than the Software routines on "
+#~| "non-accelerated displays, but may however improve performance on remote "
+#~| "displays.</p>\n"
+#~ msgid ""
+#~ "<p><b>Software Tint: </b>Alpha-blend using a flat color.</p>\n"
+#~ "<p><b>Software Blend: </b>Alpha-blend using an image.</p>\n"
+#~ "<p><b>XRender Blend: </b>Use the XFree RENDER extension for image "
+#~ "blending (if available). This method may be slower than the Software "
+#~ "routines on non-accelerated displays, but may however improve performance "
+#~ "on remote displays.</p>\n"
+#~ msgstr ""
+#~ "<p><b>Isoftware Tint: </b>Dibanisa i Alpha usebenzisa umbala obanzi.</p>\n"
+#~ "<p><b>:Uxubo lwesoftware: </b>Uxubo lwe alpha usebenzisa umfanekiso.</p>\n"
+#~ "<b>Uxubo lweXRender: </b>Sebenzisa i XFree RENDER ulongezo lomfanekiso "
+#~ "wokuxuba (Ukuba lukhona). Lendlela ingacota kunendlela ye Software kwi "
+#~ "boniso olungongezwanga, kodwa lingapucula usebenzo kuboniso olusendaweni "
+#~ "efihlakekeyo.</p>\n"
+
+#~ msgid "By adjusting this slider you can control the menu effect opacity."
+#~ msgstr ""
+#~ "Ngokutshintsha umtyibilikisi uyakwazi ukulawula isiphumo semenu "
+#~ "engabonisiyo."
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Note:</b> that all widgets in this combobox do not apply to Qt-only "
+#~ "applications."
+#~ msgstr ""
+#~ "<b>Qaphela;</b>zonke i widgets kwi bhokisi ye combo ayizizo eze Qt-qha "
+#~ "izicelo!"
+
+#~ msgid ""
+#~ "If you check this box, the toolbars will be transparent when moving them "
+#~ "around."
+#~ msgstr ""
+#~ "Ukuba ujongisisa lebhokisi, i bar zesixhobo ziza ku bonakala ngaphaya xa "
+#~ "uzi hamba hambisa."
+
+#~ msgid ""
+#~ "If you enable this option some pop-up menus will show so called tear-off "
+#~ "handles. If you click them, you get the menu inside a widget. This can be "
+#~ "very helpful when performing the same action multiple times."
+#~ msgstr ""
+#~ "Xa usenza ezinye ipop up menus zizakubonisa i susa  izibambo Ukuba uzi "
+#~ "cofa iufumana i widget Inga ba ziyanceda xa usenza into enye"
+
+#~ msgid "%"
+#~ msgstr "%"
+
+#~ msgid "Button Group"
+#~ msgstr "Iqela Leqhosha"

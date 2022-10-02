@@ -1,0 +1,331 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Aman Alam <aalam@users.sf.net>, 2013, 2014, 2015, 2016.
+# A S Alam <aalam.yellow@gmail.com>, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-18 00:47+0000\n"
+"PO-Revision-Date: 2021-06-08 22:49-0700\n"
+"Last-Translator: A S Alam <aalam@satluj.org>\n"
+"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.12.2\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "ਆਮ"
+
+#: package/contents/config/config.qml:18
+#, kde-format
+msgid "Entries"
+msgstr "ਐਂਟਰੀਆਂ"
+
+#: package/contents/ui/ConfigEntries.qml:31
+#, kde-format
+msgid "Always show all entries"
+msgstr "ਹਮੇਸ਼ਾ ਸਾਰੀਆਂ ਐਂਟਰੀਆਂ ਨੂੰ ਦਿਖਾਓ"
+
+#: package/contents/ui/ConfigEntries.qml:37
+#, kde-format
+msgid "Application Status"
+msgstr "ਐਪਲੀਕੇਸ਼ਨ ਸਥਿਤੀ"
+
+#: package/contents/ui/ConfigEntries.qml:39
+#, kde-format
+msgid "Communications"
+msgstr "ਸੰਚਾਰ"
+
+#: package/contents/ui/ConfigEntries.qml:41
+#, kde-format
+msgid "System Services"
+msgstr "ਸਿਸਟਮ ਸਰਵਿਸਾਂ"
+
+#: package/contents/ui/ConfigEntries.qml:43
+#, kde-format
+msgid "Hardware Control"
+msgstr "ਹਾਰਡਵੇਅਰ ਕੰਟਰੋਲ"
+
+#: package/contents/ui/ConfigEntries.qml:46
+#, kde-format
+msgid "Miscellaneous"
+msgstr "ਫੁਟਕਲ"
+
+#: package/contents/ui/ConfigEntries.qml:80
+#, kde-format
+msgctxt "Name of the system tray entry"
+msgid "Entry"
+msgstr "ਐਂਟਰੀ"
+
+#: package/contents/ui/ConfigEntries.qml:85
+#, kde-format
+msgid "Visibility"
+msgstr "ਦਿੱਖ"
+
+#: package/contents/ui/ConfigEntries.qml:91
+#, kde-format
+msgid "Keyboard Shortcut"
+msgstr "ਕੀਬੋਰਡ ਦਾ ਸ਼ਾਰਟਕੱਟ"
+
+#: package/contents/ui/ConfigEntries.qml:222
+#, kde-format
+msgid "Shown when relevant"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:223
+#, kde-format
+msgid "Always shown"
+msgstr "ਹਮੇਸ਼ਾਂ ਵੇਖਾਓ"
+
+#: package/contents/ui/ConfigEntries.qml:224
+#, kde-format
+msgid "Always hidden"
+msgstr "ਹਮੇਸ਼ਾਂ ਓਹਲੇ"
+
+#: package/contents/ui/ConfigEntries.qml:225
+#, kde-format
+msgid "Disabled"
+msgstr "ਬੰਦ ਹੈ"
+
+#: package/contents/ui/ConfigGeneral.qml:23
+#, kde-format
+msgctxt "The arrangement of system tray icons in the Panel"
+msgid "Panel icon size:"
+msgstr "ਪੈਨਲ ਆਈਕਾਨ ਆਕਾਰ:"
+
+#: package/contents/ui/ConfigGeneral.qml:25
+#, kde-format
+msgid "Small"
+msgstr "ਛੋਟਾ"
+
+#: package/contents/ui/ConfigGeneral.qml:32
+#, kde-format
+msgid "Scale with Panel height"
+msgstr "ਪੈਨਲ ਦੀ ਉਚਾਈ ਨਾਲ ਸਕੇਲ ਕਰੋ"
+
+#: package/contents/ui/ConfigGeneral.qml:33
+#, kde-format
+msgid "Scale with Panel width"
+msgstr "ਪੈਨਲ ਦੀ ਚੌੜਾਈ ਨਾਲ ਸਕੇਲ ਕਰੋ"
+
+#: package/contents/ui/ConfigGeneral.qml:39
+#, kde-format
+msgid "Automatically enabled when in Touch Mode"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:48
+#, fuzzy, kde-format
+#| msgctxt "The arrangement of system tray icons in the Panel"
+#| msgid "Panel icon size:"
+msgctxt "@label:listbox The spacing between system tray icons in the Panel"
+msgid "Panel icon spacing:"
+msgstr "ਪੈਨਲ ਆਈਕਾਨ ਆਕਾਰ:"
+
+#: package/contents/ui/ConfigGeneral.qml:51
+#, fuzzy, kde-format
+#| msgid "Small"
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Small"
+msgstr "ਛੋਟਾ"
+
+#: package/contents/ui/ConfigGeneral.qml:55
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Normal"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:59
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Large"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:82
+#, kde-format
+msgctxt "@info:usagetip under a combobox when Touch Mode is on"
+msgid "Automatically set to Large when in Touch Mode"
+msgstr ""
+
+#: package/contents/ui/ExpandedRepresentation.qml:64
+#, kde-format
+msgctxt "@action:button"
+msgid "Go Back"
+msgstr ""
+
+#: package/contents/ui/ExpandedRepresentation.qml:77
+#, kde-format
+msgid "Status and Notifications"
+msgstr "ਹਾਲਤ ਅਤੇ ਸੂਚਨਾਵਾਂ"
+
+#: package/contents/ui/ExpandedRepresentation.qml:93
+#, kde-format
+msgid "More actions"
+msgstr "ਹੋਰ ਕਾਰਵਾਈਆਂ"
+
+#: package/contents/ui/ExpandedRepresentation.qml:182
+#, kde-format
+msgid "Keep Open"
+msgstr "ਖੁੱਲਾ ਰੱਖੋ"
+
+#: package/contents/ui/ExpanderArrow.qml:22
+#, kde-format
+msgid "Expand System Tray"
+msgstr ""
+
+#: package/contents/ui/ExpanderArrow.qml:23
+#, kde-format
+msgid "Show all the items in the system tray in a popup"
+msgstr ""
+
+#: package/contents/ui/ExpanderArrow.qml:36
+#, kde-format
+msgid "Close popup"
+msgstr "ਪੌਪਅੱਪ ਬੰਦ ਕਰੋ"
+
+#: package/contents/ui/ExpanderArrow.qml:36
+#, kde-format
+msgid "Show hidden icons"
+msgstr "ਲੁਕਵੇਂ ਆਈਕਾਨ ਵੇਖਾਓ"
+
+#: systemtraymodel.cpp:123
+#, kde-format
+msgctxt ""
+"Suffix added to the applet name if the applet is autoloaded via DBus "
+"activation"
+msgid "%1 (Automatic load)"
+msgstr "%1 (ਆਟੋਮੈਟਿਕ ਲੋਡ)"
+
+#~ msgid "Auto"
+#~ msgstr "ਆਟੋ"
+
+#~ msgid "Shown"
+#~ msgstr "ਦਿਖਾਏ"
+
+#~ msgid "Hidden"
+#~ msgstr "ਓਹਲੇ"
+
+#~ msgid "Categories"
+#~ msgstr "ਕੈਟਾਗਰੀਆਂ"
+
+#~ msgid "Extra Items"
+#~ msgstr "ਵਾਧੂ ਆਈਟਮਾਂ"
+
+#~ msgid "Hide icons"
+#~ msgstr "ਆਈਕਾਨ ਓਹਲੇ"
+
+#, fuzzy
+#~| msgid "Stat&us Notifier"
+#~ msgid "Stat&usNotifier Testap"
+#~ msgstr "ਹਾਲਤ ਨੋਟੀਫਾਇਰ(&u)"
+
+#~ msgid "Stat&us Notifier"
+#~ msgstr "ਹਾਲਤ ਨੋਟੀਫਾਇਰ(&u)"
+
+#~ msgid ""
+#~ "<html><head/><body><p><span style=\" font-weight:600;\">Log</span></p></"
+#~ "body></html>"
+#~ msgstr ""
+#~ "<html><head/><body><p><span style=\" font-weight:600;\">ਲਾਗ</span></p></"
+#~ "body></html>"
+
+#~ msgid "<b>Status</b>"
+#~ msgstr "<b>ਹਾਲਤ</b>"
+
+#, fuzzy
+#~| msgid " (Automatic load)"
+#~ msgid "Automatic"
+#~ msgstr " (ਆਟੋਮੈਟਿਕ ਲੋਡ)"
+
+#~ msgid "Passive"
+#~ msgstr "ਅਕਰਮਕ"
+
+#~ msgid "Ac&tive"
+#~ msgstr "ਸਰਗਰਮ(&t)"
+
+#~ msgid "&NeedsAttention"
+#~ msgstr "ਧਿਆਨ ਦੀ ਲੋੜ(&N)"
+
+#~ msgid "<b>Icon</b>"
+#~ msgstr "<b>ਆਈਕਾਨ</b>"
+
+#~ msgid "<b>ToolTip</b>"
+#~ msgstr "<b>ਇਸ਼ਾਰਾ</b>"
+
+#~ msgid "Update"
+#~ msgstr "ਅੱਪਡੇਟ"
+
+#~ msgid "&Jobs"
+#~ msgstr "ਕੰਮ(&J)"
+
+#~ msgid "<b>Job Control</b>"
+#~ msgstr "<b>ਜਾਬ ਕੰਟਰੋਲ</b>"
+
+#~ msgid "<b>Progress</b>"
+#~ msgstr "<b>ਤਰੱਕੀ</b>"
+
+#~ msgid "<b>Naming</b>"
+#~ msgstr "<b>ਨਾਂ</b>"
+
+#~ msgid "Job Started"
+#~ msgstr "ਕੰਮ ਸ਼ੁਰੂ ਸੀ"
+
+#~ msgid "Source"
+#~ msgstr "ਸਰੋਤ"
+
+#~ msgid "Destination"
+#~ msgstr "ਟਿਕਾਣਾ"
+
+#~ msgctxt "tooltip title"
+#~ msgid "System Service Item"
+#~ msgstr "ਸਿਸਟਮ ਸਰਵਿਸ ਆਈਟਮ"
+
+#, fuzzy
+#~| msgid "Stat&us Notifier"
+#~ msgctxt "title"
+#~ msgid "StatusNotifierTest"
+#~ msgstr "ਹਾਲਤ ਨੋਟੀਫਾਇਰ(&u)"
+
+#~ msgid "System Tray Options"
+#~ msgstr "ਸਿਸਟਮ ਟਰੇ ਚੋਣਾਂ"
+
+#~ msgctxt "%1 is the name of the containment"
+#~ msgid "%1 Options"
+#~ msgstr "%1 ਚੋਣਾਂ"
+
+#~ msgid "Unknown Category"
+#~ msgstr "ਅਣਜਾਣ ਕੈਟਾਗਰੀ"
+
+#~ msgid "Hardware"
+#~ msgstr "ਹਾਰਡਵੇਅਰ"
+
+#, fuzzy
+#~| msgctxt "%1 is the name of the containment"
+#~| msgid "%1 Options"
+#~ msgctxt "%1 is the name of the applet"
+#~ msgid "%1 Options"
+#~ msgstr "%1 ਚੋਣਾਂ"
+
+#~ msgid "Alt+S"
+#~ msgstr "Alt+S"
+
+#~ msgid "Showing info for package: %1"
+#~ msgstr "ਪੈਕੇਜ ਲਈ ਜਾਣਕਾਰੀ ਵੇਖਾਈ ਜਾ ਰਹੀ ਹੈ: %1"
+
+#~ msgid "      Name : %1"
+#~ msgstr "      ਨਾਂ : %1"
+
+#~ msgid "   Comment : %1"
+#~ msgstr "   ਟਿੱਪਣੀ : %1"
+
+#~ msgid "    Plugin : %1"
+#~ msgstr "    ਪਲੱਗਇਨ : %1"
+
+#~ msgid "    Author : %1"
+#~ msgstr "    ਲੇਖਕ : %1"

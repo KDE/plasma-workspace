@@ -1,0 +1,281 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Catalan  "INCLUDE">
+]>
+<article id="autostart" lang="&language;">
+<articleinfo>
+<title
+>Inici automàtic</title>
+<authorgroup>
+<author
+>&Anne-Marie.Mahfouf;</author>
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+<date
+>5 d'abril de 2021</date>
+<releaseinfo
+>&plasma; 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Arranjament del sistema</keyword>
+<keyword
+>inici automàtic</keyword>
+<keyword
+>fitxer d'escriptori</keyword>
+<keyword
+>fitxer de script</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_autostart">
+<title
+>Gestor de l'inici automàtic</title>
+
+<para
+>Aquest mòdul és una eina de configuració per a la gestió dels programes que s'inicien amb el vostre &plasma; personal. Permet afegir programes o scripts perquè s'executin automàticament durant l'inici o sortida de la vostra sessió del &plasma; i per a gestionar-los.</para>
+
+<note
+><para
+>Si us plau, cal tenir en compte que els canvis en aquest mòdul s'aplicaran immediatament.</para
+></note>
+
+<para
+>El programa escaneja les carpetes <filename
+>$HOME/.config/autostart/</filename
+> per a les aplicacions o els scripts d'inici de la sessió, <filename class="directory"
+>$HOME/.config/plasma-workspace/env</filename
+> per als scripts abans de l'inici i <filename class="directory"
+>$HOME/.config/plasma-workspace/shutdown</filename
+> per als scripts de la sortida i comprovar quins programes i scripts hi ha, i els mostra. Us permetrà gestionar-los amb facilitat. </para>
+
+<para
+>Els scripts d'inici de la sessió són fitxers <filename class="extension"
+>.desktop</filename
+> amb una clau <literal
+>X-KDE-AutostartScript=true</literal
+>. Els scripts abans de l'inici s'executaran abans i es poden utilitzar per a establir les variables d'entorn. </para>
+
+<note
+><para
+>Cal tenir en compte que podeu canviar la ubicació de la carpeta <filename class="directory"
+>Autostart</filename
+> al programa &systemsettings;, categoria <guilabel
+>Personalització</guilabel
+>, <menuchoice
+><guimenu
+>Aplicacions</guimenu
+> <guimenuitem
+>Ubicacions</guimenuitem
+></menuchoice
+> i establir una carpeta diferent de <filename class="directory"
+>$HOME/.config/autostart</filename
+>.</para
+></note>
+
+<para
+>Llegiu també <ulink url="help:/kcontrol/kcmsmserver"
+>Sessió de l'escriptori</ulink
+> i <ulink url="help:/kcontrol/kded"
+>Serveis en segon pla</ulink
+> per a informació sobre com configurar el comportament de l'inici de la vostra sessió del &plasma;.</para>
+
+<para
+>Algunes aplicacions &kde; manegen el comportament de l'inici automàtic pel seu compte, &pex;, podeu habilitar o inhabilitar l'inici automàtic d'una aplicació des del seu diàleg de configuració (el &kalarm;) o podeu utilitzar <menuchoice
+><guimenu
+>Fitxer</guimenu
+><guimenuitem
+>Surt</guimenuitem
+></menuchoice
+> (el &konversation;, &kopete;), altrament l'aplicació encara s'estarà executant a la safata del sistema i es reiniciarà durant el proper inici de la sessió. </para>
+
+<sect2 id="migration">
+<title
+>Migració des dels espais de treball del &kde; 4</title>
+<para
+>Per a migrar la vostra configuració personal de l'inici automàtic des dels espais de treball del &kde; 4:</para>
+<simplelist>
+<member
+>Copieu els fitxers «desktop» des de <filename class="directory"
+>$HOME/.kde/Autostart</filename
+> a <filename class="directory"
+>$HOME/.config/autostart</filename
+></member>
+<member
+>Copieu els fitxers dels scripts per a abans de l'inici des de <filename class="directory"
+>$HOME/.kde/Autostart</filename
+> a <filename class="directory"
+>$HOME/.config/plasma-workspace/env</filename
+></member>
+<member
+>Copieu els fitxers dels scripts per a la sortida des de <filename class="directory"
+>$HOME/.kde/Autostart</filename
+> a <filename class="directory"
+>$HOME/.config/plasma-workspace/shutdown</filename
+></member>
+</simplelist>
+</sect2>
+
+<sect2 id="disabling_autostart">
+<title
+>Inhabilitar els fitxers d'inici automàtic proporcionats per la vostra distribució</title>
+<para
+>La forma correcta d'inhabilitar un element d'inici automàtic, per exemple, la miniaplicació d'impressora si utilitzeu la impressora de tant en tant, és copiar el seu fitxer <filename class="extension"
+>.desktop</filename
+> a la vostra carpeta d'inici automàtic personal. Qualsevol cosa amb el mateix nom a <filename class="directory"
+>$HOME/.config/autostart</filename
+> se superposarà al fitxer <filename class="extension"
+>.desktop</filename
+> en el paquet predeterminat. Afegiu la línia següent al fitxer <filename class="extension"
+>.desktop</filename
+> que heu copiat:</para>
+<programlisting
+>Hidden=true
+</programlisting>
+</sect2>
+
+<sect2 id="current">
+<title
+>Fitxers mostrats</title>
+<para
+>La part principal del mòdul mostra els programes que es carreguen quan s'està iniciant el &plasma; i els scripts mentre s'executa o surt.</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Icona</guilabel
+></term>
+<listitem>
+<para
+>Aquesta columna mostra la icona del programa o script que voleu iniciar amb el &plasma;. La icona s'extreu de la clau <literal
+>Icon</literal
+> del fitxer d'escriptori d'un programa i és la icona predeterminada d'un script. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Nom</guilabel
+></term>
+<listitem>
+<para
+>Aquesta columna mostra el nom del programa o script que voleu iniciar amb el &plasma;. El nom s'extreu de la clau <literal
+>Name</literal
+> del fitxer d'escriptori d'un programa i és el nom de fitxer d'un script. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Propietats</guilabel
+></term>
+<listitem>
+<para
+>Aquest botó només es mostra quan es manté el punter del ratolí a sobre d'un element. El botó (només habilitat per als programes i scripts d'inici de la sessió, &ead;, els fitxers <filename class="extension"
+>.desktop</filename
+>) permet canviar les propietats del programa o script. Té propietats generals, propietats dels permisos, una vista prèvia quan correspongui i propietats relacionades amb l'aplicació o script d'inici de la sessió. L'ordre predeterminada s'extreu de la clau <literal
+>Exec</literal
+> des del fitxer d'escriptori. </para>
+<para
+>Per a un script de sortida, l'ordre és el camí cap a l'script, i no es pot modificar. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Elimina</guilabel
+></term>
+<listitem>
+<para
+>Aquest botó només es mostra quan es manté el punter del ratolí a sobre d'un element. En prémer el botó <guibutton
+>&minus;</guibutton
+> s'eliminarà immediatament el fitxer d'escriptori per al programa, l'script o enllaç simbòlic a la carpeta d'inici automàtic (<filename class="directory"
+>Autostart</filename
+>). </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+
+<sect2 id="actions">
+<title
+>Accions</title>
+<para
+>A la part inferior, teniu el botó combinat <guibutton
+>Afegeix...</guibutton
+> per a triar el tipus d'element que voleu afegir. Podeu afegir programes i scripts d'inici o de tancament de la sessió. </para>
+
+<variablelist>
+<varlistentry
+><term
+><guimenuitem
+>Afegeix un programa</guimenuitem
+></term>
+<listitem>
+<para
+>En fer clic en aquest element es mostrarà el diàleg estàndard del &plasma; <guilabel
+>Tria l'aplicació</guilabel
+> i permet escollir quin programa iniciar. Després de triar el programa, feu clic a <guibutton
+>D'acord</guibutton
+> i se us oferiran les propietats per a aquest programa. </para>
+<para
+>Això copiarà el fitxer <filename class="extension"
+>.desktop</filename
+> del programa a la vostra carpeta <filename class="directory"
+>Autostart</filename
+>. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guimenuitem
+>Afegeix un script d'inici...</guimenuitem
+></term>
+<listitem>
+<para
+>Aquest element obre un diàleg que us demanarà la ubicació de l'script que voleu afegir. Els scripts configurats per a executar-se en iniciar la sessió tindran un fitxer <filename class="extension"
+>.desktop</filename
+> creat a la carpeta <filename class="directory"
+>Autostart</filename
+> i s'executaran durant l'inici del &plasma;. </para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guimenuitem
+>Afegeix un script de sortida...</guimenuitem
+></term>
+<listitem>
+<para
+>Aquest element obre un diàleg que us demanarà la ubicació de l'script que voleu afegir. Els scripts configurats per a executar-se en tancar sessió es copien o enllacen simbòlicament en el directori <filename class="directory"
+>$HOME/.config/plasma-workspace/shutdown</filename
+> i s'executaran automàticament durant l'apagat del &plasma; una vegada l'usuari hagi tancat la sessió. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

@@ -1,0 +1,158 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ksmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-22 00:47+0000\n"
+"PO-Revision-Date: 2020-04-25 01:43+0100\n"
+"Last-Translator: Pedro Morais <morais@kde.org>\n"
+"Language-Team: pt <kde-i18n-pt@kde.org>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Spell-Extra: KDE XSMP kwin wm\n"
+"X-POFile-SpellExtra: XSMP wm kwin Luboš Ettrich Luňák Matthias HOME\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-POFile-SpellExtra: ksmserver\n"
+
+#: logout.cpp:344
+#, kde-format
+msgid "Logout canceled by '%1'"
+msgstr "Encerramento cancelado por '%1'"
+
+#: main.cpp:117
+#, kde-format
+msgid "$HOME not set!"
+msgstr "A $HOME não está definida!"
+
+#: main.cpp:121 main.cpp:127
+#, kde-format
+msgid "$HOME directory (%1) does not exist."
+msgstr "A pasta da $HOME (%1) não existe."
+
+#: main.cpp:123
+#, kde-format
+msgid "No write access to $HOME directory (%1)."
+msgstr "Não tem acesso de escrita para a pasta da $HOME (%1)."
+
+#: main.cpp:129
+#, kde-format
+msgid "No read access to $HOME directory (%1)."
+msgstr "Não tem acesso de leitura para a pasta da $HOME (%1)."
+
+#: main.cpp:133
+#, kde-format
+msgid "$HOME directory (%1) is out of disk space."
+msgstr "A pasta da $HOME (%1) não tem espaço livre em disco."
+
+#: main.cpp:136
+#, kde-format
+msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+msgstr "A gravação na pasta da $HOME (%2) falhou com o erro '%1'"
+
+#: main.cpp:149 main.cpp:184
+#, kde-format
+msgid "No write access to '%1'."
+msgstr "Não tem acesso de escrita em '%1'."
+
+#: main.cpp:151 main.cpp:186
+#, kde-format
+msgid "No read access to '%1'."
+msgstr "Não tem acesso de leitura em '%1'."
+
+#: main.cpp:159 main.cpp:172
+#, kde-format
+msgid "Temp directory (%1) is out of disk space."
+msgstr "A pasta temporária (%1) não tem espaço livre no disco."
+
+#: main.cpp:162 main.cpp:175
+#, kde-format
+msgid ""
+"Writing to the temp directory (%2) failed with\n"
+"    the error '%1'"
+msgstr ""
+"A gravação na pasta temporária (%2) falhou com\n"
+"o erro '%1'"
+
+#: main.cpp:190
+#, kde-format
+msgid ""
+"The following installation problem was detected\n"
+"while trying to start Plasma:"
+msgstr ""
+"Foi detectado o seguinte problema de instalação\n"
+"ao tentar iniciar o Plasma:"
+
+#: main.cpp:193
+#, kde-format
+msgid ""
+"\n"
+"\n"
+"Plasma is unable to start.\n"
+msgstr ""
+"\n"
+"\n"
+"O Plasma não consegue iniciar.\n"
+
+#: main.cpp:200
+#, kde-format
+msgid "Plasma Workspace installation problem!"
+msgstr "Problema de instalação na Área de Trabalho do Plasma!"
+
+#: main.cpp:236
+#, kde-format
+msgid ""
+"The reliable Plasma session manager that talks the standard X11R6 \n"
+"session management protocol (XSMP)."
+msgstr ""
+"O gestor de sessões do Plasma que sabe falar o protocolo normalizado\n"
+"de gestão de sessões do X11R6 (XSMP)."
+
+#: main.cpp:240
+#, kde-format
+msgid "Restores the saved user session if available"
+msgstr "Restaura a sessão gravada do utilizador, se disponível"
+
+#: main.cpp:243
+#, kde-format
+msgid "Also allow remote connections"
+msgstr "Permitir também as ligações remotas"
+
+#: main.cpp:246
+#, kde-format
+msgid "Starts the session in locked mode"
+msgstr "Inicia a sessão no modo bloqueado"
+
+#: main.cpp:250
+#, kde-format
+msgid ""
+"Starts without lock screen support. Only needed if other component provides "
+"the lock screen."
+msgstr ""
+"Inicia sem o suporte para o bloqueio do ecrã. Só é necessário se outro "
+"componente oferecer o ecrã de bloqueio."
+
+#: server.cpp:873
+#, kde-format
+msgid "Session Management"
+msgstr "Gestão de Sessões"
+
+#: server.cpp:876
+#, kde-format
+msgid "Log Out"
+msgstr "Sair"
+
+#: server.cpp:881
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "Sair sem Confirmação"
+
+#: server.cpp:886
+#, kde-format
+msgid "Halt Without Confirmation"
+msgstr "Encerrar sem Confirmação"
+
+#: server.cpp:891
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "Reiniciar sem Confirmação"

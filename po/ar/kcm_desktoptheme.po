@@ -1,0 +1,374 @@
+# translation of kcm_desktopthemedetails.po to Arabic
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# zayed <zayed.alsaidi@gmail.com>, 2008, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_desktopthemedetails\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"PO-Revision-Date: 2021-06-23 14:51+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: ar\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 21.07.70\n"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current Plasma Style"
+msgstr "اسم نمط بلازما الحالي"
+
+#: kcm.cpp:108
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "لم يتمكن من إنشاء ملف مؤقت"
+
+#: kcm.cpp:119
+#, kde-format
+msgid "Unable to download the theme: %1"
+msgstr "لم يتمكن من تنزيل السمة: %1"
+
+#: kcm.cpp:144
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "ثبتت السمة بنجاح."
+
+#: kcm.cpp:147 kcm.cpp:153
+#, kde-format
+msgid "Theme installation failed."
+msgstr "فشل في تثبيت السمة."
+
+#: kcm.cpp:245
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr "فشل في إزالة السمة: %1"
+
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "This module lets you choose the Plasma style."
+msgstr "هذه الوحدة تجعلك تختار نمط بلازما"
+
+#: package/contents/ui/main.qml:69
+#, kde-format
+msgid "All Themes"
+msgstr "جميع السمات"
+
+#: package/contents/ui/main.qml:70
+#, kde-format
+msgid "Light Themes"
+msgstr "سمات فاتحة"
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgid "Dark Themes"
+msgstr "سمات مظلمة"
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "Color scheme compatible"
+msgstr "متوافق مع تشكيلة الألوان"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgid "Follows color scheme"
+msgstr "تتبع تشكيلة الألوان"
+
+#: package/contents/ui/main.qml:118
+#, kde-format
+msgid "Edit Theme…"
+msgstr "حرر السمة..."
+
+#: package/contents/ui/main.qml:125
+#, kde-format
+msgid "Remove Theme"
+msgstr "أزل السمة"
+
+#: package/contents/ui/main.qml:132
+#, kde-format
+msgid "Restore Theme"
+msgstr "استعد السمة"
+
+#: package/contents/ui/main.qml:174
+#, kde-format
+msgid "Install from File…"
+msgstr "ثبت من ملف..."
+
+#: package/contents/ui/main.qml:179
+#, kde-format
+msgid "Get New Plasma Styles…"
+msgstr "احصل على أنماط بلازما جديدة..."
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Open Theme"
+msgstr "افتح سمة"
+
+#: package/contents/ui/main.qml:195
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr "ملفات السمة (*.zip *.tar.gz *.tar.bz2)"
+
+#: plasma-apply-desktoptheme.cpp:31
+#, kde-format
+msgid ""
+"This tool allows you to set the theme of the current Plasma session, without "
+"accidentally setting it to one that is either not available, or which is "
+"already set."
+msgstr ""
+"تتيح لك هذه الأداة ضبط السمة لجلسة البلازما الحالية، دون ضبطه عن طريق الخطأ "
+"على نظام إما غير متوفر ، أو تم تعيينه بالفعل."
+
+#: plasma-apply-desktoptheme.cpp:35
+#, kde-format
+msgid ""
+"The name of the theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+"اسم السمة الذي ترغب في تعيينه لجلسة البلازما الحالية(تمرير مسار كامل سيستخدم "
+"فقط الجزء الأخير من المسار)"
+
+#: plasma-apply-desktoptheme.cpp:36
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr "اعرض جميع السمات المتوفرة على النظام (وما السمة الحالية)"
+
+#: plasma-apply-desktoptheme.cpp:49
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr "تم بالفعل تعيين السمة المطلوبة \"%1\" كسمة لجلسة البلازما الحالية."
+
+#: plasma-apply-desktoptheme.cpp:65
+#, kde-format
+msgid "The current Plasma session's theme has been set to %1"
+msgstr "عينت سمة جلسة بلازما الحالية لـ%1"
+
+#: plasma-apply-desktoptheme.cpp:67
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+"لم يعثر على السمة المطلوبة \"%1\". السمة يجب أن تكون واحدة من الخيارات "
+"التالية: %2"
+
+#: plasma-apply-desktoptheme.cpp:75
+#, kde-format
+msgid "You have the following Plasma themes on your system:"
+msgstr "لديك سمات بلازما التالية على نظامك:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "زايد السعيدي"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "zayed.alsaidi@gmail.com"
+
+#~ msgid "Plasma Style"
+#~ msgstr "نمط بلازما"
+
+#~ msgid "David Rosca"
+#~ msgstr "David Rosca"
+
+#, fuzzy
+#~ msgid "Plasma Styles"
+#~ msgstr "احصل على سمة جديدة..."
+
+#, fuzzy
+#~| msgid "How to Change Desktop Theme"
+#~ msgid "Download New Plasma Styles"
+#~ msgstr "كيف تغير سمة سطح المكتب"
+
+#, fuzzy
+#~| msgid "Remove Desktop Theme"
+#~ msgid "Configure Desktop Theme"
+#~ msgstr "أزل سمة سطح المكتب"
+
+#, fuzzy
+#~ msgid "KDE Desktop Theme Module"
+#~ msgstr "صدر سمة سطح المكتب"
+
+#~ msgctxt "plasma name"
+#~ msgid "Panel Background"
+#~ msgstr "خلفية اللوحة"
+
+#~ msgctxt "plasma name"
+#~ msgid "Kickoff"
+#~ msgstr "قائمة راكل"
+
+#~ msgctxt "plasma name"
+#~ msgid "Task Items"
+#~ msgstr "عناصر المهام"
+
+#~ msgctxt "plasma name"
+#~ msgid "Widget Background"
+#~ msgstr "خلفية الودجة"
+
+#~ msgctxt "plasma name"
+#~ msgid "Translucent Background"
+#~ msgstr "الخلفية شبه شفافة"
+
+#~ msgctxt "plasma name"
+#~ msgid "Dialog Background"
+#~ msgstr "خلفية الحوار"
+
+#~ msgctxt "plasma name"
+#~ msgid "Analog Clock"
+#~ msgstr "الساعة التماثلية"
+
+#~ msgctxt "plasma name"
+#~ msgid "Notes"
+#~ msgstr "الملاحظات"
+
+#~ msgctxt "plasma name"
+#~ msgid "Tooltip"
+#~ msgstr "التلميحات"
+
+#~ msgctxt "plasma name"
+#~ msgid "Pager"
+#~ msgstr "المنادي"
+
+#~ msgctxt "plasma name"
+#~ msgid "Run Command Dialog"
+#~ msgstr "حوار تشغيل الأوامر"
+
+#~ msgctxt "plasma name"
+#~ msgid "Shutdown Dialog"
+#~ msgstr "حوار إطفاء الجهاز"
+
+#~ msgid "(Customized)"
+#~ msgstr "(مخصص)"
+
+#~ msgid "User customized theme"
+#~ msgstr "سمة مستخدم مخصصة"
+
+#~ msgid ""
+#~ "Theme items have been changed.  Do you still wish remove the \"%1\" theme?"
+#~ msgstr "عناصر السمة تغيرت. هل ترغب في إزالة سمة  \"%1\" ؟"
+
+#~ msgid "Removal of the default desktop theme is not allowed."
+#~ msgstr "إزالة سمة سطح المكتب الافتراضية غير مسموح."
+
+#~ msgid "Are you sure you wish remove the \"%1\" theme?"
+#~ msgstr "أمتأكد أنك تريد إزالة سمة \"%1\" ؟"
+
+#~ msgid ""
+#~ "Please apply theme item changes (with a new theme name) before attempting "
+#~ "to export theme."
+#~ msgstr ""
+#~ "الرجاء تطبيق تغيرات عنصر السمة (باسم سمة جديدة) قبل المحاولة تصدير السمة."
+
+#~ msgid "Export Desktop Theme"
+#~ msgstr "صدر سمة سطح المكتب"
+
+#~ msgid "Export theme to file"
+#~ msgstr "صدر السمة إلى ملف"
+
+#~ msgid "Theme Item"
+#~ msgstr "عنصر السمة"
+
+#~ msgid "Source"
+#~ msgstr "المصدر"
+
+#, fuzzy
+#~| msgid "%1 %2"
+#~ msgctxt ""
+#~ "%1 is the name of the theme, %2 is the type of the element (background, "
+#~ "icon, note, etc)"
+#~ msgid "%1 %2"
+#~ msgstr "%1 %2"
+
+#~ msgid "File..."
+#~ msgstr "الملف..."
+
+#~ msgid "Select File to Use for %1"
+#~ msgstr "اختر ملف لتستخدمه لأجل %1"
+
+#~ msgid " Author: %1"
+#~ msgstr "المؤلف: %1"
+
+#~ msgid "Version: %1"
+#~ msgstr "الإصدارة: %1"
+
+#~ msgid "Desktop Theme Details"
+#~ msgstr "تفاصيل سمة سطح المكتب"
+
+#~ msgid "More"
+#~ msgstr "أكثر"
+
+#, fuzzy
+#~ msgid "Remove the selected theme"
+#~ msgstr "أزل سمة سطح المكتب"
+
+#~ msgid "Export Theme to File..."
+#~ msgstr "صدر السمة إلى ملف..."
+
+#~ msgid "New theme name:"
+#~ msgstr "اسم السمة الجديد:"
+
+#, fuzzy
+#~ msgid "Custom theme name"
+#~ msgstr "اسم السمة الجديد:"
+
+#~ msgid "Author:"
+#~ msgstr "المؤلف:"
+
+#, fuzzy
+#~ msgid "Custom theme author "
+#~ msgstr "مؤلف السمة"
+
+#~ msgid "Version:"
+#~ msgstr "الإصدارة:"
+
+#, fuzzy
+#~ msgid "Custom theme version number"
+#~ msgstr "اسم السمة الجديد:"
+
+#~ msgid "Description:"
+#~ msgstr "الوصف:"
+
+#, fuzzy
+#~ msgid "Custom theme description"
+#~ msgstr "وصف السمة من هنا..."
+
+#~ msgid "Theme Author"
+#~ msgstr "مؤلف السمة"
+
+#~ msgid "Theme Name"
+#~ msgstr "اسم السمة"
+
+#~ msgid "Theme Version"
+#~ msgstr "إصدارة السمة"
+
+#~ msgid "The theme description goes here..."
+#~ msgstr "وصف السمة من هنا..."
+
+#, fuzzy
+#~ msgid "KCMDesktopTheme"
+#~ msgstr "أزل سمة سطح المكتب"
+
+#, fuzzy
+#~| msgid ""
+#~| "To change your desktop theme to \"%1\", open\n"
+#~| "Desktop Settings and select \"%2\" from the droplist."
+#~ msgid ""
+#~ "To change your desktop theme to \"%1\", go back to the 'General' tab of "
+#~ "System Settings; choose 'Appearance', and then 'Style'; and finally "
+#~ "select \"%2\" from the drop-down list at the top of the window."
+#~ msgstr ""
+#~ "لتغير سمة سطح مكتبك إلى  \"%1\" افتح \n"
+#~ "إعدادات سطح المكتب و انتق \"%2\" من القائمة المنسدلة."
+
+#, fuzzy
+#~| msgid "Removal of the default KDE theme is not allowed."
+#~ msgid "Removal of the active desktop theme is not allowed."
+#~ msgstr "إزالة سمة سطح المكتب المبدئية غير مسموح."

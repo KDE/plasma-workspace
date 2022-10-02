@@ -1,0 +1,111 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-22 00:47+0000\n"
+"PO-Revision-Date: 2022-09-15 18:09+0100\n"
+"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
+"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-POFile-SpellExtra: krunner KRunner\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "José Nuno Pires"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "zepires@gmail.com"
+
+#: main.cpp:57 view.cpp:46
+#, kde-format
+msgid "KRunner"
+msgstr "KRunner"
+
+#: main.cpp:57
+#, kde-format
+msgid "Run Command interface"
+msgstr "Interface de Execução de Comandos"
+
+#: main.cpp:62
+#, kde-format
+msgid "Use the clipboard contents as query for KRunner"
+msgstr "Usar o conteúdo da área de transferência como pesquisa no KRunner"
+
+#: main.cpp:63
+#, kde-format
+msgid "Start KRunner in the background, don't show it."
+msgstr "Iniciar o KRunner em segundo plano, não o mostrando."
+
+#: main.cpp:64
+#, kde-format
+msgid "Replace an existing instance"
+msgstr "Substituir uma instância existente"
+
+#: main.cpp:69
+#, kde-format
+msgid "The query to run, only used if -c is not provided"
+msgstr "A pesquisa a executar - só é usada se não for indicado o '-c'"
+
+#: qml/RunCommand.qml:75
+#, kde-format
+msgid "Configure"
+msgstr "Configurar"
+
+#: qml/RunCommand.qml:76
+#, kde-format
+msgid "Configure KRunner Behavior"
+msgstr "Configurar o Comportamento do KRunner"
+
+#: qml/RunCommand.qml:79
+#, kde-format
+msgid "Configure KRunner…"
+msgstr "Configurar o KRunner…"
+
+#: qml/RunCommand.qml:91
+#, kde-format
+msgctxt "Textfield placeholder text, query specific KRunner plugin"
+msgid "Search '%1'…"
+msgstr "Procurar por '%1'…"
+
+#: qml/RunCommand.qml:92
+#, kde-format
+msgctxt "Textfield placeholder text"
+msgid "Search…"
+msgstr "Procurar…"
+
+#: qml/RunCommand.qml:228 qml/RunCommand.qml:229 qml/RunCommand.qml:231
+#, kde-format
+msgid "Show Usage Help"
+msgstr "Mostrar a Ajuda do Utilizador"
+
+#: qml/RunCommand.qml:239
+#, kde-format
+msgid "Pin"
+msgstr "Fixar"
+
+#: qml/RunCommand.qml:240
+#, kde-format
+msgid "Pin Search"
+msgstr "Fixar a Pesquisa"
+
+#: qml/RunCommand.qml:242
+#, kde-format
+msgid "Keep Open"
+msgstr "Manter Aberto"
+
+#: qml/RunCommand.qml:320 qml/RunCommand.qml:325
+#, kde-format
+msgid "Recent Queries"
+msgstr "Pesquisas Recentes"
+
+#: qml/RunCommand.qml:323
+#, kde-format
+msgid "Remove"
+msgstr "Remover"

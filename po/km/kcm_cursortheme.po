@@ -1,0 +1,677 @@
+# translation of kcminput.po to Khmer
+# Khoem Sokhem <khoemsokhem@khmeros.info>, 2007, 2008, 2010, 2012.
+# Auk Piseth <piseth_dv@khmeros.info>, 2007, 2008.
+# Sokun <sokun_poch@khmeros.info>, 2007.
+# Eng Vannak <evannak@khmeros.info>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminput\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:50+0000\n"
+"PO-Revision-Date: 2012-06-13 15:26+0700\n"
+"Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
+"Language-Team: Khmer\n"
+"Language: km\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: KBabel 1.11.4\n"
+"X-Language: km-CM\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current cursor theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr ""
+
+#: kcmcursortheme.cpp:302
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr "អ្នក​ត្រូវ​តែ​ចាប់ផ្តើម KDE ឡើងវិញ ដើម្បី​ឲ្យ​ការ​ផ្លាស់ប្តូរ​មាន​ប្រសិទ្ធិភាព ។"
+
+#: kcmcursortheme.cpp:376
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: kcmcursortheme.cpp:387
+#, fuzzy, kde-format
+#| msgid "Unable to find the cursor theme archive %1."
+msgid "Unable to download the icon theme archive: %1"
+msgstr "មិន​អាច​រក​ប័ណ្ណសារ​ស្បែក​ទស្សន៍​ទ្រនិច %1 បាន​ឡើយ ។"
+
+#: kcmcursortheme.cpp:418
+#, fuzzy, kde-format
+#| msgid "The file %1 does not appear to be a valid cursor theme archive."
+msgid "The file is not a valid icon theme archive."
+msgstr "ឯកសារ %1 ទំនង​ជា​មិន​មែន​ប័ណ្ណសារស្បែក​ទស្សន៍​ទ្រនិច​ត្រឹមត្រូវ​ទេ ។"
+
+#: kcmcursortheme.cpp:425
+#, kde-format
+msgid "Failed to create 'icons' folder."
+msgstr ""
+
+#: kcmcursortheme.cpp:434
+#, kde-format
+msgid ""
+"A theme named %1 already exists in your icon theme folder. Do you want "
+"replace it with this one?"
+msgstr ""
+"​ស្បែក​ដែល​មាន​ឈ្មោះ %1 មាន​រួច​ហើយ​ក្នុង​ថត​ស្បែក​រូប​តំណាង​របស់​អ្នក ។ តើ​អ្នក​ចង់​ជំនួស​វា ​ដោយ​ស្បែក​នេះ​ឬ​ទេ?"
+
+#: kcmcursortheme.cpp:438
+#, kde-format
+msgid "Overwrite Theme?"
+msgstr "សរសេរ​ជាន់​លើ​ស្បែក​ឬ ?"
+
+#: kcmcursortheme.cpp:462
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: package/contents/ui/Delegate.qml:54
+#, kde-format
+msgid "Remove Theme"
+msgstr "យក​ស្បែក​ចេញ"
+
+#: package/contents/ui/Delegate.qml:61
+#, fuzzy, kde-format
+#| msgid "Cursor Theme"
+msgid "Restore Cursor Theme"
+msgstr "ស្បែក​ទស្សន៍​ទ្រនិច"
+
+#: package/contents/ui/main.qml:20
+#, kde-format
+msgid "This module lets you choose the mouse cursor theme."
+msgstr ""
+
+#: package/contents/ui/main.qml:84
+#, fuzzy, kde-format
+#| msgctxt "@label:listbox cursor size"
+#| msgid "Size:"
+msgid "Size:"
+msgstr "ទំហំ ៖"
+
+#: package/contents/ui/main.qml:134
+#, fuzzy, kde-format
+#| msgid "Install From File..."
+msgid "&Install from File…"
+msgstr "ដំឡើង​ពី​ឯកសារ​..."
+
+#: package/contents/ui/main.qml:140
+#, fuzzy, kde-format
+#| msgid "Get New Theme..."
+msgid "&Get New Cursors…"
+msgstr "ទទួល​បាន​ស្បែក​ថ្មី​..."
+
+#: package/contents/ui/main.qml:157
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Open Theme"
+msgstr "យក​ស្បែក​ចេញ"
+
+#: package/contents/ui/main.qml:159
+#, kde-format
+msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:41
+#, kde-format
+msgid "The requested size '%1' is not available, using %2 instead."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:62
+#, kde-format
+msgid ""
+"This tool allows you to set the mouse cursor theme for the current Plasma "
+"session, without accidentally setting it to one that is either not "
+"available, or which is already set."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:66
+#, kde-format
+msgid ""
+"The name of the cursor theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:67
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:68
+#, kde-format
+msgid "Use a specific size, rather than the theme default size"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:89
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:100
+#, kde-format
+msgid ""
+"Successfully applied the mouse cursor theme %1 to your current Plasma session"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:102
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for your newly applied mouse cursor "
+"theme to display correctly."
+msgstr "អ្នក​ត្រូវ​តែ​ចាប់ផ្តើម KDE ឡើងវិញ ដើម្បី​ឲ្យ​ការ​ផ្លាស់ប្តូរ​មាន​ប្រសិទ្ធិភាព ។"
+
+#: plasma-apply-cursortheme.cpp:112
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:120
+#, kde-format
+msgid "You have the following mouse cursor themes on your system:"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:125
+#, kde-format
+msgid "(Current theme for this Plasma session)"
+msgstr ""
+
+#: xcursor/xcursortheme.cpp:60
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@info/plain The argument is the list of available sizes (in pixel). "
+#| "Example: 'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+#| msgid "(Available sizes: %1)"
+msgctxt ""
+"@info The argument is the list of available sizes (in pixel). Example: "
+"'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+msgid "(Available sizes: %1)"
+msgstr "(ទំហំ​ដែល​អាច​ប្រើបាន​ ៖ %1)"
+
+#~ msgid "Name"
+#~ msgstr "ឈ្មោះ"
+
+#~ msgid "Description"
+#~ msgstr "សេចក្ដី​ពិពណ៌នា"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "ខឹម សុខែម, អេង វណ្ណៈ, អោក ពិសិដ្ឋ​​"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "khoemsokhem@khmeros.info,​​evannak@khmeros.info,piseth_dv@khmeros.info"
+
+#, fuzzy
+#~| msgid "Cursor Theme"
+#~ msgid "Cursors"
+#~ msgstr "ស្បែក​ទស្សន៍​ទ្រនិច"
+
+#~ msgid "(c) 2003-2007 Fredrik Höglund"
+#~ msgstr "រក្សាសិទ្ធិ​ឆ្នាំ ២០០៣-២០០៧ ដោយ Fredrik Höglund"
+
+#~ msgid "Fredrik Höglund"
+#~ msgstr "Fredrik Höglund"
+
+#~ msgid ""
+#~ "<qt>You cannot delete the theme you are currently using.<br />You have to "
+#~ "switch to another theme first.</qt>"
+#~ msgstr ""
+#~ "<qt>អ្នក​មិន​អាច​លុប​ស្បែក​ដែល​អ្នក​កំពុង​ប្រើ​បច្ចុប្បន្ន​ឡើយ ។<br />អ្នក​ត្រូវ​តែ​ប្ដូរ​ទៅ​ស្បែក​មួយ​ផ្សេង​ទៀត​"
+#~ "ជាមុន​សិន ។</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <i>%1</i> cursor theme?<br />This "
+#~ "will delete all the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>តើ​អ្នក​ពិត​ជា​ចង់​យក​ស្បែក​ទស្សន៍ទ្រនិច <i>%1</i> ចេញ​ឬ?<br />វា​នឹង​លុប​ឯកសារ​ទាំងអស់​ដែល​បាន​"
+#~ "ដំឡើង​ដោយ​ស្បែក​នេះ ។</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "ការ​អះអាង"
+
+#, fuzzy
+#~| msgctxt "@item:inlistbox size"
+#~| msgid "resolution dependent"
+#~ msgctxt "@item:inlistbox size"
+#~ msgid "Resolution dependent"
+#~ msgstr "គុណភាព​បង្ហាញ​មិន​ឯករាជ្យ"
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "ការ​កំណត់​ទស្សន៍​ទ្រនិច​ត្រូវ​បាន​ផ្លាស់ប្តូរ"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "ទាញ ឬ​វាយ URL របស់​ស្បែក"
+
+#~ msgid ""
+#~ "Unable to download the cursor theme archive; please check that the "
+#~ "address %1 is correct."
+#~ msgstr "មិន​អាច​ទាញ​យក​ប័ណ្ណសារ​របស់​ស្បែក​ទស្សន៍​ទ្រនិច ។ សូម​ពិនិត្យ​ថា អាសយដ្ឋាន %1 គឺ​ត្រឹមត្រូវ ។"
+
+#~ msgid "Get new color schemes from the Internet"
+#~ msgstr "ទទួល​បាន​ឌីយ៉ា​ក្រាម​ពណ៌​​ថ្មី​ពី​អ៊ីនធឺណិត"
+
+#~ msgid ""
+#~ "Select the cursor theme you want to use (hover preview to test cursor):"
+#~ msgstr "ជ្រើស​ស្បែក​ទស្សន៍​ទ្រនិច​ដែល​អ្នក​ចង់​ប្រើ (មើល​ការ​សំកាំង​ជា​មុន​ដើម្បី​សាកល្បង​ទស្សន៍ទ្រនិច) ៖"
+
+#~ msgid "Select the cursor theme you want to use:"
+#~ msgstr "ជ្រើស​ស្បែក​ទស្សន៍ទ្រនិច​ដែល​អ្នក​ចង់​ប្រើ ៖"
+
+#~ msgid "Small black"
+#~ msgstr "ខ្មៅ​​តូច"
+
+#~ msgid "Small black cursors"
+#~ msgstr "ទស្សន៍​ទ្រនិច​ខ្មៅ​តូច"
+
+#~ msgid "Large black"
+#~ msgstr "ខ្មៅ​ធំ"
+
+#~ msgid "Large black cursors"
+#~ msgstr "ទស្សន៍​ទ្រនិច​ខ្មៅ​ធំ"
+
+#~ msgid "Small white"
+#~ msgstr "ស​តូច"
+
+#~ msgid "Small white cursors"
+#~ msgstr "ទស្សន៍​ទ្រនិច​ស​តូច"
+
+#~ msgid "Large white"
+#~ msgstr "ស​ធំ"
+
+#~ msgid "Large white cursors"
+#~ msgstr "ទស្សន៍​ទ្រនិច​ស​ធំ"
+
+#  i18n: file kmousedlg.ui line 38
+#~ msgid "Button Order"
+#~ msgstr "លំដាប់​ប៊ូតុង"
+
+#  i18n: file kmousedlg.ui line 89
+#~ msgid "Righ&t handed"
+#~ msgstr "ប្រើ​ដៃ​ស្ដាំ"
+
+#  i18n: file kmousedlg.ui line 100
+#~ msgid "Le&ft handed"
+#~ msgstr "ប្រើ​ដៃ​ឆ្វេង"
+
+#  i18n: file kmousedlg.ui line 135
+#~ msgid ""
+#~ "Change the direction of scrolling for the mouse wheel or the 4th and 5th "
+#~ "mouse buttons."
+#~ msgstr "ផ្លាស់ប្ដូរ​ទិស​ការ​រមូរ​កង់​កណ្ដុរ ឬ​ប៊ូតុង​កណ្តុរ​ទី៤ និង​ទី៥​ឡើយ​"
+
+#  i18n: file kmousedlg.ui line 132
+#~ msgid "Re&verse scroll direction"
+#~ msgstr "បញ្ច្រាស​ទិស​រមូរ"
+
+#  i18n: file kmousedlg.ui line 143
+#~ msgid "Icons"
+#~ msgstr "រូប​តំណាង"
+
+#  i18n: file kmousedlg.ui line 154
+#~ msgid ""
+#~ "Dou&ble-click to open files and folders (select icons on first click)"
+#~ msgstr "ចុច​ទ្វេ​ដង ដើម្បី​បើក​ឯកសារ និង​ថត (ជ្រើស​រូប​តំណាង ពេល​ចុច​លើក​ទីមួយ)"
+
+#  i18n: file kmousedlg.ui line 316
+#~ msgid "&Single-click to open files and folders"
+#~ msgstr "ចុច​ម្តង​ដើម្បី​បើក​ឯកសារ ឬ​ថត​"
+
+#  i18n: file kmousedlg.ui line 187
+#~ msgid "Cha&nge pointer shape over icons"
+#~ msgstr "ផ្លាស់ប្ដូរ​រូបរាង​របស់​ព្រួញ​លើ​រូបតំណាង"
+
+#  i18n: file kmousedlg.ui line 198
+#~ msgid "A&utomatically select icons"
+#~ msgstr "ជ្រើស​រូប​តំណាង​ដោយ​ស្វ័យប្រវត្តិ"
+
+#  i18n: file kmousedlg.ui line 273
+#~ msgctxt "label. delay (on milliseconds) to automatically select icons"
+#~ msgid "Delay"
+#~ msgstr "ពន្យារ​ពេល"
+
+#~ msgctxt "milliseconds. time to automatically select the items"
+#~ msgid " ms"
+#~ msgstr " ម.វិ."
+
+#~ msgid ""
+#~ "<h1>Mouse</h1> This module allows you to choose various options for the "
+#~ "way in which your pointing device works. Your pointing device may be a "
+#~ "mouse, trackball, or some other hardware that performs a similar function."
+#~ msgstr ""
+#~ "<h1>កណ្តុរ</h1> ម៉ូឌុល​នេះ​អនុញ្ញាត​ឲ្យ​អ្នក​ជ្រើស​ជម្រើស​ផ្សេងៗ​សម្រាប់​មធ្យោបាយ​ដែល​ឧបករណ៍​ចង្អុល​របស់​"
+#~ "អ្នក​នឹង​ដំណើរការ ។ ឧបករណ៍​ចង្អុល​របស់​អ្នក​អាច​ជា​កណ្ដុរ trackball ឬ​ផ្នែក​រឹង​ដទៃ​ផ្សេង​ខ្លះ​ដែល​"
+#~ "អនុវត្ត​មុខងារ​ស្រដៀង​គ្នា ។"
+
+#~ msgid "&General"
+#~ msgstr "ទូទៅ"
+
+#~ msgid ""
+#~ "If you are left-handed, you may prefer to swap the functions of the left "
+#~ "and right buttons on your pointing device by choosing the 'left-handed' "
+#~ "option. If your pointing device has more than two buttons, only those "
+#~ "that function as the left and right buttons are affected. For example, if "
+#~ "you have a three-button mouse, the middle button is unaffected."
+#~ msgstr ""
+#~ "បើ​អ្នក​ជា​អ្នក​ប្រើ​ដៃ​ឆ្វេង អ្នក​អាច​ដូរ​មុខងារ​របស់​ប៊ូតុង​ឆ្វេង និង​ប៊ូតុង​ស្តាំ​លើ​ឧបករណ៍​ចង្អុល​របស់​អ្នក​ដោយ​"
+#~ "ជ្រើស​ជម្រើស​ខាង 'ឆ្វេង​ដៃ' ។ បើ​ឧបករណ៍​ចង្អុល​របស់​អ្នក​មាន​ប៊ូតុង​ច្រើន​ជាង​ពីរ នោះ​​មាន​តែ​ប៊ូតុង​ឆ្វេង​ "
+#~ "និង​ស្តាំ​ដែល​ត្រូវ​បាន​ចុច ។ ឧទាហរណ៍ ៖ ​អ្នក​មាន​កណ្ដុរ​ដែល​មាន​បី​ប៊ូតុង នោះ​ប៊ូតុង​កណ្តាល​នឹង​មិន​ត្រូវ​បាន​"
+#~ "ប៉ះពាល់​ឡើយ ។"
+
+#~ msgid ""
+#~ "The default behavior in KDE is to select and activate icons with a single "
+#~ "click of the left button on your pointing device. This behavior is "
+#~ "consistent with what you would expect when you click links in most web "
+#~ "browsers. If you would prefer to select with a single click, and activate "
+#~ "with a double click, check this option."
+#~ msgstr ""
+#~ "ឥរិយាបថ​លំនាំ​ដើម​ក្នុង KDE ​ត្រូវ​ជ្រើស ហើយ​​ធ្វើ​ឲ្យ​រូប​តំណាង​សកម្ម ដោយ​ចុច​ប៊ូតុង​ខាង​ឆ្វេង​លើ​ឧបករណ៍​ចង្អុល​"
+#~ "របស់​អ្នក​តែ​ម្តង ។ ឥរិយាបថ​នេះ​ត្រូវ​បាន​ប្រើ ពេល​អ្នក​ចុច​លើ​តំណ​ក្នុង​កម្មវិធី​រុករក ​បណ្ដាញ​ជាច្រើន​ ។ បើ​"
+#~ "អ្នក​ចង់​ជ្រើស​ដោយ​ចុច​តែ​ម្តង ហើយ​​ធ្វើ​ឲ្យ​សកម្ម​ដោយ​ចុច​ទ្វេ​ដង សូម​ជ្រើស​ជម្រើស​នេះ ។"
+
+#~ msgid "Activates and opens a file or folder with a single click."
+#~ msgstr "ធ្វើ​ឲ្យ​សកម្ម​ ហើយ​បើក​ឯកសារ​ ឬ​ថត​ដោយ​ចុច​តែ​កណ្តុរ​តែ​ម្តង ។"
+
+#~ msgid ""
+#~ "If you check this option, pausing the mouse pointer over an icon on the "
+#~ "screen will automatically select that icon. This may be useful when "
+#~ "single clicks activate icons, and you want only to select the icon "
+#~ "without activating it."
+#~ msgstr ""
+#~ "បើ​ធីក​ជម្រើស​នេះ ដាក់​ព្រួញ​កណ្តុរ​ចំ​រូប​តំណាង​លើ​អេក្រង់​នឹង​ជ្រើស​រូប​តំណាង​ស្វ័យ​ប្រវត្តិ ។ ការ​ធ្វើ​របៀប​នេះ​"
+#~ "មាន​អត្ថ​ប្រយោជន៍​ពេល​ចុច​កណ្តុរ​តែ​ម្តង វា​ធ្វើ​ឲ្យ​រូប​តំណាង​សកម្ម​ភ្លាម​តែ​ម្តង ហើយ​អ្នក​​អាច​ជ្រើស​យក​​តែ​រូប​"
+#~ "តំណាង​ដោយ​ពុំ​ចាំបាច់​ធ្វើ​ឲ្យ​វា​សកម្ម​ក៏​បាន​ដែរ ។"
+
+#~ msgid ""
+#~ "If you have checked the option to automatically select icons, this slider "
+#~ "allows you to select how long the mouse pointer must be paused over the "
+#~ "icon before it is selected."
+#~ msgstr ""
+#~ "បើ​អ្នក​បាន​ធីក​ជម្រើស​នេះ​វា​នឹង​ជ្រើស​រូប​តំណាង​ស្វ័យប្រត្តិ គ្រាប់​រំកិល​នេះ​អនុញ្ញាត​ឲ្យ​អ្នក​ជ្រើស​ ​រយៈ​ពេល​"
+#~ "ដែល​ព្រួញ​កណ្ដុរ​ត្រូវ​បាន​ឈប់​សំកាំង​លើ​រូប​តំណាង មុន​ពេល​វា​ត្រូវ​បាន​ជ្រើស ។"
+
+#~ msgid "Advanced"
+#~ msgstr "កម្រិត​ខ្ពស់"
+
+#~ msgid " x"
+#~ msgstr " x"
+
+#~ msgid "Pointer acceleration:"
+#~ msgstr "ការ​បង្កើន​ល្បឿន​ព្រួញ ៖"
+
+#~ msgid ""
+#~ "<p>This option allows you to change the relationship between the distance "
+#~ "that the mouse pointer moves on the screen and the relative movement of "
+#~ "the physical device itself (which may be a mouse, trackball, or some "
+#~ "other pointing device.)</p><p> A high value for the acceleration will "
+#~ "lead to large movements of the mouse pointer on the screen even when you "
+#~ "only make a small movement with the physical device. Selecting very high "
+#~ "values may result in the mouse pointer flying across the screen, making "
+#~ "it hard to control.</p>"
+#~ msgstr ""
+#~ "<p>ជម្រើស​នេះ​អនុញ្ញាត​ឲ្យ​អ្នក​ផ្លាស់ប្តូរ​ទំនាក់ទំនង​រវាង​ចម្ងាយ​ដែល​ព្រួញ​កណ្តុរ​ផ្លាស់ទី​លើ​អេក្រង់ និង​ការ​"
+#~ "ផ្លាស់ទី​ទំនាក់ទំនង​របស់ឧបករណ៍​ពិត​របស់​វា​ (ដែល​អាច​ជា​កណ្តុរ trackball ឬ​ឧបករណ៍​ចង្អុល ​ផ្សេងៗ​"
+#~ "ទៀត ។) </p><p> តម្លៃ​កាន់​តែ​ខ្ពស់ ល្បឿន​ផ្លាស់ទី​កាន់​តែ​លឿន ទោះ​បី​ជា​អ្នក​ធ្វើការ​ផ្លាស់ទី​កណ្តុរ​តែ​"
+#~ "បន្តិច​បន្តួច​ក៏​ដោយ ។ ការ​ជ្រើស​តម្លៃ​ខ្ពស់​ណាស់ អាច​ធ្វើ​ឲ្យ​ព្រួញ​កណ្តុរ​ហោះ​ឆ្លងកាត់​អេក្រង់ ជា​ហេតុ​​ធ្វើ​​ឲ្យ​​"
+#~ "វា​​ពិបាក​​បញ្ជា ។</p>"
+
+#~ msgid "Pointer threshold:"
+#~ msgstr "កម្រិត​ពន្លឺ​របស់​ព្រួញ​កណ្តុរ ៖"
+
+#~ msgid ""
+#~ "<p>The threshold is the smallest distance that the mouse pointer must "
+#~ "move on the screen before acceleration has any effect. If the movement is "
+#~ "smaller than the threshold, the mouse pointer moves as if the "
+#~ "acceleration was set to 1X;</p><p> thus, when you make small movements "
+#~ "with the physical device, there is no acceleration at all, giving you a "
+#~ "greater degree of control over the mouse pointer. With larger movements "
+#~ "of the physical device, you can move the mouse pointer rapidly to "
+#~ "different areas on the screen.</p>"
+#~ msgstr ""
+#~ "<p>កម្រិត​ពន្លឺ​គឺ​ជា​ចម្ងាយ​តូច​បំផុត​ដែល​ព្រួញ​កណ្តុរ​ត្រូវ​តែ​ផ្លាស់ទី​លើ​អេក្រង់ មុន​ការ​​បង្កើន​ល្បឿន​មាន​"
+#~ "ប្រសិទ្ធិភាព ។ បើ​ការ​ផ្លាស់ទី​តូចជាង​កម្រិត​ចាប់ផ្តើម នោះ​ព្រួញ​កណ្តុរ​នឹង​ផ្លាស់ទី​ទៅ​តាម​ការ​បង្កើន​ល្បឿន​"
+#~ "ដែល​បាន​កំណត់​ទៅ 1X</p><p> ដូច្នេះ​ពេល​អ្នក​បង្កើត​ការ​ផ្លាស់ទី​តូច​ជា​មួយ​​ឧបករណ៍​ពិត នោះ​វា​គ្មាន​​ការ​"
+#~ "បង្កើន​ល្បឿន​ទាល់​តែ​សោះ ការ​ផ្តល់​ឲ្យ​អ្នក​នូវ​កម្រិត​បញ្ជា​ព្រួញ​កណ្ដុរ​យ៉ាង​មាន​ប្រសិទ្ធិភាព ។ ជាមួយ​បំលាស់​ទី​"
+#~ "ឧបករណ៍​ពិត​កាន់​តែ​ធំ អ្នក​អាច​ផ្លាស់ទី​ព្រួញ​កណ្ដុរ​បាន យ៉ាង​លឿន​ទៅ​កាន់​កន្លែង​ផ្សេងៗ​លើ​អេក្រង់ ។</p>"
+
+#~ msgid " msec"
+#~ msgstr " ម.វិ."
+
+#~ msgid "Double click interval:"
+#~ msgstr "ចន្លោះ​ពេល​ចុច​ទ្វេ​ដង ៖"
+
+#~ msgid ""
+#~ "The double click interval is the maximal time (in milliseconds) between "
+#~ "two mouse clicks which turns them into a double click. If the second "
+#~ "click happens later than this time interval after the first click, they "
+#~ "are recognized as two separate clicks."
+#~ msgstr ""
+#~ "​ចុច​ទ្វេ​ដង​លើ​ចន្លោះ​ពេល ​ជា​ពេល​វេលា​​អតិបរមា (គិត​ជា​មីល្លីវិនាទី) រវាង​ការចុច​កណ្ដុរ​ពីរ​ដង​នឹង​ប្រែក្លាយ​"
+#~ "ពួក​វា​ទៅ​ជា​ការ​ចុច​ទ្វេដង បើ​ការ​ចុច​លើក​ទី​ពីរ​យឺត​ជាង​ចន្លោះ​ពេល​នេះ​បន្ទាប់​ពី​ចុច​លើក​ទី​មួយ​ ពួក​វា​ត្រូវ​បាន​"
+#~ "ចាត់ទុក​ថា​ជា​ការ​ចុច​ពីរ​ដង​ខុស​គ្នា ។"
+
+#~ msgid "Drag start time:"
+#~ msgstr "ពេល​វេលា​ចាប់ផ្តើម​អូស ៖"
+
+#~ msgid ""
+#~ "If you click with the mouse (e.g. in a multi-line editor) and begin to "
+#~ "move the mouse within the drag start time, a drag operation will be "
+#~ "initiated."
+#~ msgstr ""
+#~ "បើ​អ្នក​ប្រើ​កណ្ដុរ​ចុច (ឧ. ក្នុង​កម្មវិធី​និពន្ធ​ច្រើន​បន្ទាត់) ហើយ​ចាប់ផ្ដើម​ផ្លាស់ទី​កណ្ដុរ​ក្នុង​ពេល​ចាប់ផ្តើម​"
+#~ "អូស ដូច្នេះ​ប្រតិបត្តិកា​អូស​មួយ​នឹង​ត្រូវ​បាន​ចាប់ផ្តើម ។"
+
+#~ msgid "Drag start distance:"
+#~ msgstr "ចម្ងាយ​ចាប់ផ្តើម​អូស ៖"
+
+#~ msgid ""
+#~ "If you click with the mouse and begin to move the mouse at least the drag "
+#~ "start distance, a drag operation will be initiated."
+#~ msgstr ""
+#~ "បើ​អ្នក​ប្រើ​កណ្ដុរ​ចុច ហើយ​ចាប់ផ្ដើម​ផ្លាស់ទី​កណ្ដុរ​នូវ​ចម្ងាយ​ចាប់ផ្ដើម​អូស ប្រតិបត្តិការ​អូស​នឹង​ត្រូវ​បាន​"
+#~ "ចាប់ផ្ដើម ។"
+
+#~ msgid "Mouse wheel scrolls by:"
+#~ msgstr "កង់​កណ្ដុរ​រមូរ​ដោយ ៖"
+
+#~ msgid ""
+#~ "If you use the wheel of a mouse, this value determines the number of "
+#~ "lines to scroll for each wheel movement. Note that if this number exceeds "
+#~ "the number of visible lines, it will be ignored and the wheel movement "
+#~ "will be handled as a page up/down movement."
+#~ msgstr ""
+#~ "បើ​អ្នក​ប្រើ​កង់​កណ្តុរ តម្លៃ​នេះ​នឹង​កំណត់​ចំនួន​បន្ទាត់​ដែល​ត្រូវ​រមូរ សម្រាប់​ការ​ផ្លាស់ទី​កង់​នីមួយៗ ។ សូម​ចំណាំ​"
+#~ "ថា បើ​ចំនួន​នេះ​លើស​ចំនួន​បន្ទាត់​ដែល​មើលឃើញ វា​នឹង​មិន​អើពើ ហើយ​ការ​ផ្លាស់ទី​កង់នឹង​ត្រូវ​បាន​ដោះស្រាយ​ជា​"
+#~ "ការ​ផ្លាស់ទី ទំព័រ​លើ/ទំព័រ​ក្រោម ។"
+
+#~ msgid "Mouse Navigation"
+#~ msgstr "ការ​រុករក​កណ្ដុរ"
+
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "ផ្លាស់ទី​ព្រួញ​កណ្តុរ​ដោយ​ក្តារចុច (ប្រើ​បន្ទះ​លេខ)"
+
+#~ msgid "&Acceleration delay:"
+#~ msgstr "​ពន្យា​ពេល​​នៃ​ការ​បង្កើន​ល្បឿន ៖"
+
+#~ msgid "R&epeat interval:"
+#~ msgstr "ធ្វើ​ចន្លោះ​ពេល​ឡើង​វិញ ៖"
+
+#~ msgid "Acceleration &time:"
+#~ msgstr "រយៈ​ពេល​បង្កើន​ល្បឿន ៖"
+
+#~ msgid " pixel/sec"
+#~ msgstr "ភីកសែល/វិនាទី"
+
+#~ msgid "Ma&ximum speed:"
+#~ msgstr "ល្បឿន​អតិបរមា ៖"
+
+#~ msgid "Acceleration &profile:"
+#~ msgstr "ទម្រង់​បង្កើន​ល្បឿន ៖"
+
+#~ msgid "Mouse"
+#~ msgstr "កណ្តុរ"
+
+#~ msgid "(c) 1997 - 2005 Mouse developers"
+#~ msgstr "រក្សា​សិទ្ធិ​ឆ្នាំ ៩៩៧-២០០៥ ដោយ​ក្រុម​អ្នក​អភិវឌ្ឍន៍​កណ្ដុរ"
+
+#~ msgid "Patrick Dowler"
+#~ msgstr "Patrick Dowler"
+
+#~ msgid "Dirk A. Mueller"
+#~ msgstr "Dirk A. Mueller"
+
+#~ msgid "David Faure"
+#~ msgstr "David Faure"
+
+#~ msgid "Bernd Gehrmann"
+#~ msgstr "Bernd Gehrmann"
+
+#~ msgid "Rik Hemsley"
+#~ msgstr "Rik Hemsley"
+
+#~ msgid "Brad Hughes"
+#~ msgstr "Brad Hughes"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "Brad Hards"
+#~ msgstr "Brad Hards"
+
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] " ភីកសែល"
+
+#~ msgid " line"
+#~ msgid_plural " lines"
+#~ msgstr[0] " បន្ទាត់"
+
+#~ msgid "Mouse type: %1"
+#~ msgstr "ប្រភេទ​កណ្តុរ ៖ %1"
+
+#~ msgid ""
+#~ "RF channel 1 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr "ឆានែល RF ទីមួយ​ត្រូវ​បាន​កំណត់ ។ សូម​ចុច​ប៊ូតុង​ តភ្ជាប់​ដើម្បី​បង្កើត​តំណ​ឡើង​វិញ ។"
+
+#~ msgid "Press Connect Button"
+#~ msgstr "ចុច​ប៊ូតុង តភ្ជាប់"
+
+#~ msgid ""
+#~ "RF channel 2 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr "ឆានែល RF ទីពីរ​ត្រូវ​បាន​កំណត់ ។ សូម​ចុច​ប៊ូតុង​តភ្ជាប់​ដើម្បី​បង្កើត​តំណ​ឡើង​វិញ ។"
+
+#~ msgctxt "no cordless mouse"
+#~ msgid "none"
+#~ msgstr "គ្មាន"
+
+#~ msgid "Cordless Mouse"
+#~ msgstr "កណ្ដុរ​ឥត​ខ្សែ"
+
+#~ msgid "Cordless Wheel Mouse"
+#~ msgstr "កណ្ដុរ​កង់​ឥត​ខ្សែ"
+
+#~ msgid "Cordless MouseMan Wheel"
+#~ msgstr "កង់ MouseMan ឥតខ្សែ"
+
+#~ msgid "Cordless TrackMan Wheel"
+#~ msgstr "កង់ TrackMan ឥត​ខ្សែ"
+
+#~ msgid "TrackMan Live"
+#~ msgstr "TrackMan ផ្សាយ​បន្ត​ផ្ទាល់​"
+
+#~ msgid "Cordless TrackMan FX"
+#~ msgstr "TrackMan FX ឥត​ខ្សែ"
+
+#~ msgid "Cordless MouseMan Optical"
+#~ msgstr "MouseMan អុបទិក​ឥត​ខ្សែ"
+
+#~ msgid "Cordless Optical Mouse"
+#~ msgstr "កណ្ដុរ​អុបទិក​ឥត​ខ្សែ"
+
+#~ msgid "Cordless MouseMan Optical (2ch)"
+#~ msgstr "MouseMan អុបទិក​ឥត​ខ្សែ (2ch)"
+
+#~ msgid "Cordless Optical Mouse (2ch)"
+#~ msgstr "កណ្ដុរ​អុបទិក​ឥតខ្សែ (2ch)"
+
+#~ msgid "Cordless Mouse (2ch)"
+#~ msgstr "កណ្ដុរ​ឥត​ខ្សែ (2ch)"
+
+#~ msgid "Cordless Optical TrackMan"
+#~ msgstr "TrackMan អុបទិក​ឥត​ខ្សែ"
+
+#~ msgid "MX700 Cordless Optical Mouse"
+#~ msgstr "កណ្ដុរ​អុបទិក​ឥត​ខ្សែ MX700"
+
+#~ msgid "MX700 Cordless Optical Mouse (2ch)"
+#~ msgstr "កណ្ដុរ​អុបទិក​ឥត​ខ្សែ (2ch) MX700"
+
+#~ msgid "Unknown mouse"
+#~ msgstr "កណ្ដុរ​ដែល​មិន​ស្គាល់"
+
+#  i18n: file logitechmouse_base.ui line 24
+#~ msgid "Cordless Name"
+#~ msgstr "ឈ្មោះ​ឥត​ខ្សែ"
+
+#  i18n: file logitechmouse_base.ui line 46
+#~ msgid "Sensor Resolution"
+#~ msgstr "គុណភាព​បង្ហាញ​ឧបករណ៍​ចាប់​សញ្ញា"
+
+#  i18n: file logitechmouse_base.ui line 60
+#~ msgid "400 counts per inch"
+#~ msgstr "ចំនួន ៤០០ ក្នុង​មួយ​អ៊ិន្ឈ៍"
+
+#~ msgid "800 counts per inch"
+#~ msgstr "ចំនួន ៨០០ ក្នុង​មួយ​អ៊ិន្ឈ៍"
+
+#  i18n: file logitechmouse_base.ui line 87
+#~ msgid "Battery Level"
+#~ msgstr "កម្រិត​ថ្ម"
+
+#  i18n: file logitechmouse_base.ui line 111
+#~ msgid "RF Channel"
+#~ msgstr "ឆានែល RF"
+
+#  i18n: file logitechmouse_base.ui line 125
+#~ msgid "Channel 1"
+#~ msgstr "ឆានែល​លេខ​មួយ"
+
+#  i18n: file logitechmouse_base.ui line 142
+#~ msgid "Channel 2"
+#~ msgstr "ឆានែល​លេខ​ពីរ"
+
+#  i18n: file logitechmouse_base.ui line 32
+#~ msgid ""
+#~ "You have a Logitech Mouse connected, and libusb was found at compile "
+#~ "time, but it was not possible to access this mouse. This is probably "
+#~ "caused by a permissions problem - you should consult the manual on how to "
+#~ "fix this."
+#~ msgstr ""
+#~ "អ្នក​បាន​តភ្ជាប់​កណ្ដុរ​ Logitech ហើយ libusb ត្រូវ​បាន​រក​ឃើញ​នៅ​ពេល​ចងក្រង ប៉ុន្តែ​វា​មិន​អាច​ចូល​"
+#~ "ដំណើរការ​បាន​ទេ ។ នេះ​ប្រហែល​ជា​បណ្ដាល​មក​ពី​បញ្ហា​សិទ្ធ អ្នក​គួរ​មើល​សៀវភៅ​ដៃ​ស្តី​អំពី​របៀប​ជួសជុល​វា ។​"
+
+#~ msgid "KDE Classic"
+#~ msgstr "KDE បែប​បុរាណ​"
+
+#~ msgid "The default cursor theme in KDE 2 and 3"
+#~ msgstr "ស្បែក​​ទស្សន៍​ទ្រនិច​លំនាំ​ដើម​នៅ​ក្នុង ​KDE 2 និង KDE 3"

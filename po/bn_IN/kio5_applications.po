@@ -1,0 +1,35 @@
+# translation of kio_applications.po to Bengali INDIA
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Runa Bhattacharjee <runab@fedoraproject.org>, 2008.
+# Runa Bhattacharjee <runab@redhat.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kio_applications\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-08 00:48+0000\n"
+"PO-Revision-Date: 2008-12-29 15:37+0530\n"
+"Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
+"Language-Team: Bengali INDIA <fedora-trans-bn_IN@redhat.com>\n"
+"Language: bn_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: kio_applications.cpp:122
+#, kde-format
+msgid "Applications"
+msgstr "অ্যাপ্লিকেশন"
+
+#: kio_applications.cpp:122
+#, kde-format
+msgid "Programs"
+msgstr "প্রোগ্রাম"
+
+#: kio_applications.cpp:131
+#, kde-format
+msgid "Unknown application folder"
+msgstr "অজানা অ্যাপ্লিকেশনের ফোল্ডার"

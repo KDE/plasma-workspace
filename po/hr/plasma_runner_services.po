@@ -1,0 +1,33 @@
+# Translation of plasma_runner_services to Croatian
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_services\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-19 00:47+0000\n"
+"PO-Revision-Date: 2009-08-18 11:10+0200\n"
+"Last-Translator: \n"
+"Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 0.3\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: servicerunner.cpp:349
+#, kde-format
+msgctxt ""
+"Jump list search result, %1 is action (eg. open new tab), %2 is application "
+"(eg. browser)"
+msgid "%1 - %2"
+msgstr ""
+
+#: servicerunner.cpp:394
+#, kde-format
+msgid "Finds applications whose name or description match :q:"
+msgstr "Traži aplikacije čiji se naziv ili opis slažu s :q:"

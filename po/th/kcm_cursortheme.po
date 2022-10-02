@@ -1,0 +1,656 @@
+# translation of kcminput.po to Thai
+# Copyright (C) 2003, 2005, 2007, 2008 Free Software Foundation, Inc.
+#
+# Thanomsub Noppaburana <donga_n@yahoo.com>, 2003.
+# Sahachart Anukulkitch <drrider@gmail.com>, 2005, 2007.
+# Thanomsub Noppaburana <donga.nb@gmail.com>, 2008, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminput\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:50+0000\n"
+"PO-Revision-Date: 2010-12-17 20:54+0700\n"
+"Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
+"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.1\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current cursor theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr ""
+
+#: kcmcursortheme.cpp:302
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr "ต้องทำการเริ่มการทำงาน KDE ใหม่ เพื่อให้การเปลี่ยนชุดตกแต่งของเคอร์เซอร์มีผล"
+
+#: kcmcursortheme.cpp:376
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: kcmcursortheme.cpp:387
+#, fuzzy, kde-format
+#| msgid "Unable to find the cursor theme archive %1."
+msgid "Unable to download the icon theme archive: %1"
+msgstr "หาแฟ้มจัดเก็บชุดตกแต่ง %1 ไม่เจอ"
+
+#: kcmcursortheme.cpp:418
+#, fuzzy, kde-format
+#| msgid "The file %1 does not appear to be a valid cursor theme archive."
+msgid "The file is not a valid icon theme archive."
+msgstr "แฟ้ม %1 ไม่ใช่แฟ้มจัดเก็บของชุดตกแต่งเคอร์เซอร์"
+
+#: kcmcursortheme.cpp:425
+#, kde-format
+msgid "Failed to create 'icons' folder."
+msgstr ""
+
+#: kcmcursortheme.cpp:434
+#, kde-format
+msgid ""
+"A theme named %1 already exists in your icon theme folder. Do you want "
+"replace it with this one?"
+msgstr ""
+"มีชุดตกแต่งชื่อ %1 อยู่แล้วในโฟลเดอร์ของชุดตกแต่งไอคอนของคุณ "
+"คุณต้องการจะแทนที่ชุดเดิมด้วยชุดตกแต่งนี้หรือไม่ ?"
+
+#: kcmcursortheme.cpp:438
+#, kde-format
+msgid "Overwrite Theme?"
+msgstr "เขียนชุดตกแต่งทับของเดิมหรือไม่ ?"
+
+#: kcmcursortheme.cpp:462
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: package/contents/ui/Delegate.qml:54
+#, kde-format
+msgid "Remove Theme"
+msgstr "ลบชุดตกแต่งออก"
+
+#: package/contents/ui/Delegate.qml:61
+#, fuzzy, kde-format
+#| msgid "Cursor Theme"
+msgid "Restore Cursor Theme"
+msgstr "ชุดตกแต่งเคอร์เซอร์"
+
+#: package/contents/ui/main.qml:20
+#, kde-format
+msgid "This module lets you choose the mouse cursor theme."
+msgstr ""
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Size:"
+msgstr ""
+
+#: package/contents/ui/main.qml:134
+#, fuzzy, kde-format
+#| msgid "Install New Theme..."
+msgid "&Install from File…"
+msgstr "ติดตั้งชุดตกแต่งใหม่..."
+
+#: package/contents/ui/main.qml:140
+#, fuzzy, kde-format
+#| msgid "Install New Theme..."
+msgid "&Get New Cursors…"
+msgstr "ติดตั้งชุดตกแต่งใหม่..."
+
+#: package/contents/ui/main.qml:157
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Open Theme"
+msgstr "ลบชุดตกแต่งออก"
+
+#: package/contents/ui/main.qml:159
+#, kde-format
+msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:41
+#, kde-format
+msgid "The requested size '%1' is not available, using %2 instead."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:62
+#, kde-format
+msgid ""
+"This tool allows you to set the mouse cursor theme for the current Plasma "
+"session, without accidentally setting it to one that is either not "
+"available, or which is already set."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:66
+#, kde-format
+msgid ""
+"The name of the cursor theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:67
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:68
+#, kde-format
+msgid "Use a specific size, rather than the theme default size"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:89
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:100
+#, kde-format
+msgid ""
+"Successfully applied the mouse cursor theme %1 to your current Plasma session"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:102
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for your newly applied mouse cursor "
+"theme to display correctly."
+msgstr "ต้องทำการเริ่มการทำงาน KDE ใหม่ เพื่อให้การเปลี่ยนชุดตกแต่งของเคอร์เซอร์มีผล"
+
+#: plasma-apply-cursortheme.cpp:112
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:120
+#, kde-format
+msgid "You have the following mouse cursor themes on your system:"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:125
+#, kde-format
+msgid "(Current theme for this Plasma session)"
+msgstr ""
+
+#: xcursor/xcursortheme.cpp:60
+#, kde-format
+msgctxt ""
+"@info The argument is the list of available sizes (in pixel). Example: "
+"'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+msgid "(Available sizes: %1)"
+msgstr ""
+
+#~ msgid "Name"
+#~ msgstr "ชื่อ"
+
+#~ msgid "Description"
+#~ msgstr "รายละเอียด"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "ถนอมทรัพย์ นพบูรณ์, สหชาติ อนุกูลกิจ"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "donga.nb@gmail.com, drrider@gmail.com"
+
+#, fuzzy
+#~| msgid "Cursor Theme"
+#~ msgid "Cursors"
+#~ msgstr "ชุดตกแต่งเคอร์เซอร์"
+
+#~ msgid "(c) 2003-2007 Fredrik Höglund"
+#~ msgstr "สงวนลิขสิทธิ์ (c) 2003-2007 Fredrik Höglund"
+
+#~ msgid "Fredrik Höglund"
+#~ msgstr "Fredrik Höglund"
+
+#~ msgid ""
+#~ "<qt>You cannot delete the theme you are currently using.<br />You have to "
+#~ "switch to another theme first.</qt>"
+#~ msgstr ""
+#~ "<qt>คุณไม่สามารถลบชุดเคอร์เซอร์ที่กำลังใช้งานอยู่ได้<br />คุณต้องเปลี่ยนไปใช้งานชุดอื่นก่อน</"
+#~ "qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <i>%1</i> cursor theme?<br />This "
+#~ "will delete all the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>คุณแน่ใจหรือว่าต้องการจะลบชุดเคอร์เซอร์ <strong>%1</strong> นี้ออก ?<br /"
+#~ ">การทำแบบนี้จะเป็นการลบแฟ้มทั้งหมดที่ติดตั้งโดยชุดเคอร์เซอร์นี้</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "การยืนยัน"
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "มีการเปลี่ยนแปลงค่าของเคอร์เซอร์"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "ให้ลากหรือพิมพ์ที่อยู่ URL ของชุดตกแต่ง"
+
+#~ msgid ""
+#~ "Unable to download the cursor theme archive; please check that the "
+#~ "address %1 is correct."
+#~ msgstr "ไม่สามารถดาวน์โหลดชุดตกแต่งได้ โปรดตรวจสอบว่าที่อยู่ %1 ถูกต้องหรือไม่"
+
+#~ msgid ""
+#~ "Select the cursor theme you want to use (hover preview to test cursor):"
+#~ msgstr ""
+#~ "เลือกชุดตกแต่งเคอร์เซอร์ที่คุณต้องการใช้ (เคลื่อนตัวชี้มาอยู่เหนือเคอร์เซอร์ที่จะดูตัวอย่าง):"
+
+#~ msgid "Select the cursor theme you want to use:"
+#~ msgstr "เลือกชุดตกแต่งเคอร์เซอร์ที่คุณต้องการใช้:"
+
+#~ msgid "Small black"
+#~ msgstr "ขนาดเล็กสีดำ"
+
+#~ msgid "Small black cursors"
+#~ msgstr "เคอร์เซอร์ขนาดเล็กสีดำ"
+
+#~ msgid "Large black"
+#~ msgstr "ขนาดใหญ่สีดำ"
+
+#~ msgid "Large black cursors"
+#~ msgstr "เคอร์เซอร์ขนาดใหญ่สีดำ"
+
+#~ msgid "Small white"
+#~ msgstr "ขนาดเล็กสีขาว"
+
+#~ msgid "Small white cursors"
+#~ msgstr "เคอร์เซอร์ขนาดเล็กสีขาว"
+
+#~ msgid "Large white"
+#~ msgstr "ขนาดใหญ่สีขาว"
+
+#~ msgid "Large white cursors"
+#~ msgstr "เคอร์เซอร์ใหญ่สีขาว"
+
+#~ msgid "Button Order"
+#~ msgstr "ลำดับปุ่ม"
+
+#~ msgid "Righ&t handed"
+#~ msgstr "ใช้มือขวา"
+
+#~ msgid "Le&ft handed"
+#~ msgstr "ใช้มือซ้าย"
+
+#~ msgid ""
+#~ "Change the direction of scrolling for the mouse wheel or the 4th and 5th "
+#~ "mouse buttons."
+#~ msgstr "เปลี่ยนทิศทางของการเลื่อนบรรทัดสำหรับล้อเลื่อนของเมาส์ หรือปุ่มที่ 4 และ 5 ของเมาส์"
+
+#~ msgid "Re&verse scroll direction"
+#~ msgstr "กลับทิศทางการเลื่อนบรรทัด"
+
+#~ msgid "Icons"
+#~ msgstr "ภาพไอคอน"
+
+#~ msgid ""
+#~ "Dou&ble-click to open files and folders (select icons on first click)"
+#~ msgstr "เปิดแฟ้มและโฟลเดอร์เมื่อดับเบิลคลิก (คลิกครั้งแรกเป็นการเลือกไอคอน)"
+
+#~ msgid "&Single-click to open files and folders"
+#~ msgstr "คลิกหนึ่งครั้งเพื่อเปิดแฟ้มและโฟลเดอร์"
+
+#~ msgid "Cha&nge pointer shape over icons"
+#~ msgstr "เปลี่ยนรูปร่างเคอร์เซอร์เมื่ออยู่เหนือไอคอน"
+
+#~ msgid "A&utomatically select icons"
+#~ msgstr "เลือกไอคอนอัตโนมัติ"
+
+#~ msgctxt "label. delay (on milliseconds) to automatically select icons"
+#~ msgid "Delay"
+#~ msgstr "หน่วงเวลา"
+
+#~ msgctxt "milliseconds. time to automatically select the items"
+#~ msgid " ms"
+#~ msgstr " มิลลิวินาที"
+
+#~ msgid ""
+#~ "<h1>Mouse</h1> This module allows you to choose various options for the "
+#~ "way in which your pointing device works. Your pointing device may be a "
+#~ "mouse, trackball, or some other hardware that performs a similar function."
+#~ msgstr ""
+#~ "<h1>เมาส์</h1> มอดูลนี้ ให้คุณได้เลือกปรับแต่ง อุปกรณ์ชี้ของคุณ ซึ่งอาจเป็นเมาส์, แทร็กบอล "
+#~ "หรืออุปกรณ์อื่น ที่มีการทำงานคล้ายกัน"
+
+#~ msgid "&General"
+#~ msgstr "ทั่วไป"
+
+#~ msgid ""
+#~ "If you are left-handed, you may prefer to swap the functions of the left "
+#~ "and right buttons on your pointing device by choosing the 'left-handed' "
+#~ "option. If your pointing device has more than two buttons, only those "
+#~ "that function as the left and right buttons are affected. For example, if "
+#~ "you have a three-button mouse, the middle button is unaffected."
+#~ msgstr ""
+#~ "หากคุณถนัดซ้าย คุณอาจต้องการที่จะสลับหน้าที่ของปุ่มซ้ายและขวาที่อุปกณ์สำหรับชี้ของคุณ "
+#~ "โดยเลือกตัวเลือก 'ถนัดซ้าย' หากอุปกรณ์ชี้ของคุณมีปุ่มมากกว่าสองปุ่ม "
+#~ "จะมีผลกับปุ่มด้านซ้ายและขวาเท่านั้น ตัวอย่างเช่น ถ้าคุณมีเมาส์ 3 ปุ่ม ปุ่มกลางจะไม่ได้รับผลใด ๆ"
+
+#~ msgid ""
+#~ "The default behavior in KDE is to select and activate icons with a single "
+#~ "click of the left button on your pointing device. This behavior is "
+#~ "consistent with what you would expect when you click links in most web "
+#~ "browsers. If you would prefer to select with a single click, and activate "
+#~ "with a double click, check this option."
+#~ msgstr ""
+#~ "ลักษณะพื้นฐานของ KDE คือจะเลือกและสั่งทำงาน ด้วยการคลิกปุ่มซ้ายเพียงหนึ่งครั้ง "
+#~ "ที่อุปกรณ์ที่ใช้ชี้ของคุณ ซึ่งมีลักษณะเดียวกันกับเมื่อคลิกที่อยู่เชื่อมโยงบนเว็บเบราว์เซอร์ "
+#~ "หากคุณต้องการที่จะให้การคลิกหนึ่งครั้งเป็นการเลือก และดับเบิลคลิกเป็นการสั่งทำงาน "
+#~ "ให้เลือกตัวเลือกนี้"
+
+#~ msgid "Activates and opens a file or folder with a single click."
+#~ msgstr "เรียกใช้และเปิดแฟ้มหรือโฟลเดอร์ด้วยการคลิกเพียงหนึ่งครั้ง"
+
+#~ msgid ""
+#~ "If you check this option, pausing the mouse pointer over an icon on the "
+#~ "screen will automatically select that icon. This may be useful when "
+#~ "single clicks activate icons, and you want only to select the icon "
+#~ "without activating it."
+#~ msgstr ""
+#~ "หากคุณเลือกตัวเลือกนี้ จะมีการเลือกไอคอนนั้นโดยอัตโนมัติ เมื่อมีการหยุดตัวชี้ของเมาส์ "
+#~ "บนไอคอนที่หน้าจอระยะหนึ่ง สิ่งนี้อาจจะมีประโยชน์เมื่อการคลิก 1 "
+#~ "ครั้งเป็นการสั่งให้ไอคอนทำงานและคุณต้องการให้มีการเลือกไอคอนเท่านั้น โดยไม่มีการสั่งทำงาน"
+
+#~ msgid ""
+#~ "If you have checked the option to automatically select icons, this slider "
+#~ "allows you to select how long the mouse pointer must be paused over the "
+#~ "icon before it is selected."
+#~ msgstr ""
+#~ "หากคุณเลือกใช้ตัวเลือกการเลือกไอคอนอัตโนมัติ ใช้แถบเลื่อนนี้ "
+#~ "ปรับค่าระยะเวลาที่ตัวชี้ของเมาส์จะต้องใช้อยู่เหนือไอคอน ก่อนที่จะทำการเลือกมัน"
+
+#~ msgid "Advanced"
+#~ msgstr "ขั้นสูง"
+
+#~ msgid " x"
+#~ msgstr " x"
+
+#~ msgid "Pointer acceleration:"
+#~ msgstr "การเร่งความเร็วตัวชี้:"
+
+#~ msgid ""
+#~ "<p>This option allows you to change the relationship between the distance "
+#~ "that the mouse pointer moves on the screen and the relative movement of "
+#~ "the physical device itself (which may be a mouse, trackball, or some "
+#~ "other pointing device.)</p><p> A high value for the acceleration will "
+#~ "lead to large movements of the mouse pointer on the screen even when you "
+#~ "only make a small movement with the physical device. Selecting very high "
+#~ "values may result in the mouse pointer flying across the screen, making "
+#~ "it hard to control.</p>"
+#~ msgstr ""
+#~ "<p>ตัวเลือกนี้ ใช้เปลี่ยนความสัมพันธ์ ระหว่างระยะที่ตัวชี้ของเมาส์ เคลื่อนไปบนหน้าจอ "
+#~ "และการเคลื่อนที่ของตัวอุปกรณ์เอง (ซึ่งอาจเป็นเมาส์, แทร็กบอล, หรืออุปกรณ์ชี้อื่น)</p> <p> "
+#~ "การตั้งค่าที่สูงจะทำให้การเลื่อนตัวชี้ของเมาส์บนหน้าจอที่มากขึ้นด้วย "
+#~ "แม้ว่าคุณจะเลื่อนตัวอุปกรณ์เพียงเล็กน้อยก็ตามการเลือกค่าที่สูงมาก อาจจะส่งผลให้ตัวชี้ของเมาส์ "
+#~ "เคลื่อนตัวอย่างสะเปะสะปะบนหน้าจอได้ ทำให้ควบคุมได้ยาก</p>"
+
+#~ msgid "Pointer threshold:"
+#~ msgstr "ขีดเริ่มของตัวชี้:"
+
+#~ msgid ""
+#~ "<p>The threshold is the smallest distance that the mouse pointer must "
+#~ "move on the screen before acceleration has any effect. If the movement is "
+#~ "smaller than the threshold, the mouse pointer moves as if the "
+#~ "acceleration was set to 1X;</p><p> thus, when you make small movements "
+#~ "with the physical device, there is no acceleration at all, giving you a "
+#~ "greater degree of control over the mouse pointer. With larger movements "
+#~ "of the physical device, you can move the mouse pointer rapidly to "
+#~ "different areas on the screen.</p>"
+#~ msgstr ""
+#~ "<p>ขีดเริ่มคือ ระยะที่น้อยที่สุดที่ตัวชี้ของเมาส์จะต้องเคลื่อนที่บนหน้าจอ ก่อนที่การเพิ่มความเร็วใด ๆ "
+#~ "จะมีผล หากการเคลื่อนที่ของเมาส์น้อยกว่าขีดเริ่ม "
+#~ "ตัวชี้ของเมาส์ก็จะเคลื่อนที่เหมือนกับตั้งการเร่งความเร็วไว้ที่ 1 เท่า</p> <p> ดังนั้น "
+#~ "เมื่อคุณเคลื่อนที่ตัวอุปกรณ์เพียงเล็กน้อย นั่นหมายถึงจะไม่มีการเร่งความเร็วเกิดขึ้นเลย "
+#~ "ทำให้คุณสามารถควบคุม ตัวชี้ของเมาส์ได้มากขึ้น และด้วยการเคลื่อนที่อุปกรณ์ที่มากขึ้น "
+#~ "คุณจะสามารถเลื่อนตัวชี้ไปยังพื้นที่ต่าง ๆ บนหน้าจอได้อย่างรวดเร็ว</p>"
+
+#~ msgid " msec"
+#~ msgstr " มิลลิวินาที"
+
+#~ msgid "Double click interval:"
+#~ msgstr "ช่วงหน่วงการดับเบิลคลิก:"
+
+#~ msgid ""
+#~ "The double click interval is the maximal time (in milliseconds) between "
+#~ "two mouse clicks which turns them into a double click. If the second "
+#~ "click happens later than this time interval after the first click, they "
+#~ "are recognized as two separate clicks."
+#~ msgstr ""
+#~ "ช่วงหน่วงเวลาของการดับเบิลคลิก เป็นระยะเวลาที่มากที่สุด (หน่วยเป็นมิลลิวินาที) "
+#~ "ระหว่างการคลิกเมาส์สองครั้งติดต่อกัน เพื่อให้เป็นการดับเบิลคลิก หากการคลิกครั้งที่สอง "
+#~ "เกินจากระยะเวลาที่ตั้งไว้นับจากการคลิกครั้งแรก มันจะกลายเป็นการคลิกสองครั้งแยกกันแทน"
+
+#~ msgid "Drag start time:"
+#~ msgstr "เวลาเริ่มการลาก:"
+
+#~ msgid ""
+#~ "If you click with the mouse (e.g. in a multi-line editor) and begin to "
+#~ "move the mouse within the drag start time, a drag operation will be "
+#~ "initiated."
+#~ msgstr ""
+#~ "หากคุณคลิกเมาส์ (เช่น ในตัวแก้ไขข้อความหลายบรรทัด) และเริ่มเคลื่อนเมาส์ "
+#~ "ภายในระยะเวลาเริ่มการลากที่ตั้งไว้นี้ จะเป็นการเริ่มการลากวัตถุ"
+
+#~ msgid "Drag start distance:"
+#~ msgstr "ระยะทางที่เริ่มการลาก:"
+
+#~ msgid ""
+#~ "If you click with the mouse and begin to move the mouse at least the drag "
+#~ "start distance, a drag operation will be initiated."
+#~ msgstr ""
+#~ "หากคุณคลิกเมาส์ และเริ่มเคลื่อนเมาส์เป็นระยะอย่างน้อย เท่ากับระยะที่เริ่มการลากที่ตั้งไว้ "
+#~ "จะเป็นการเริ่มการลากวัตถุ"
+
+#~ msgid "Mouse wheel scrolls by:"
+#~ msgstr "ใช้ล้อเลื่อนของเมาส์เลื่อนบรรทัด:"
+
+#~ msgid ""
+#~ "If you use the wheel of a mouse, this value determines the number of "
+#~ "lines to scroll for each wheel movement. Note that if this number exceeds "
+#~ "the number of visible lines, it will be ignored and the wheel movement "
+#~ "will be handled as a page up/down movement."
+#~ msgstr ""
+#~ "หากคุณใช้ล้อเลื่อน (ที่ปุ่มกลาง) ของเมาส์ ค่านี้จะเป็นการตั้งจำนวนบรรทัดที่จะมีการเลื่อน "
+#~ "สำหรับการเคลื่อนล้อของเมาส์แต่ละครั้ง "
+#~ "โปรดสังเกตว่าหากค่าที่ตั้งนี้เกินจำนวนของบรรทัดที่มองเห็นได้ "
+#~ "การเคลื่อนของล้อเลื่อนจะเป็นเหมือนการใช้ page up/down"
+
+#~ msgid "Mouse Navigation"
+#~ msgstr "นำร่องเมาส์"
+
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "ย้ายเมาส์โดยใช้แป้นพิมพ์ (ใช้แผงแป้นตัวเลข)"
+
+#~ msgid "&Acceleration delay:"
+#~ msgstr "หน่วงการเร่ง:"
+
+#~ msgid "R&epeat interval:"
+#~ msgstr "ช่วงเวลาทำซ้ำ:"
+
+#~ msgid "Acceleration &time:"
+#~ msgstr "การเร่งความเร็วตัวชี้:"
+
+#~ msgid " pixel/sec"
+#~ msgstr " พิกเซล/วินาที"
+
+#~ msgid "Ma&ximum speed:"
+#~ msgstr "ความเร็วสูงสุด:"
+
+#~ msgid "Acceleration &profile:"
+#~ msgstr "โพรไฟล์การเร่งความเร็ว:"
+
+#~ msgid "Mouse"
+#~ msgstr "เมาส์"
+
+#~ msgid "(c) 1997 - 2005 Mouse developers"
+#~ msgstr "สงวนลิขสิทธิ์ (c) 1997 - 2005 ผู้พัฒนามอดูลเมาส์"
+
+#~ msgid "Patrick Dowler"
+#~ msgstr "Patrick Dowler"
+
+#~ msgid "Dirk A. Mueller"
+#~ msgstr "Dirk A. Mueller"
+
+#~ msgid "David Faure"
+#~ msgstr "David Faure"
+
+#~ msgid "Bernd Gehrmann"
+#~ msgstr "Bernd Gehrmann"
+
+#~ msgid "Rik Hemsley"
+#~ msgstr "Rik Hemsley"
+
+#~ msgid "Brad Hughes"
+#~ msgstr "Brad Hughes"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "Brad Hards"
+#~ msgstr "Brad Hards"
+
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] " พิกเซล"
+
+#~ msgid " line"
+#~ msgid_plural " lines"
+#~ msgstr[0] " บรรทัด"
+
+#~ msgid "Mouse type: %1"
+#~ msgstr "ชนิดของเมาส์: %1"
+
+#~ msgid ""
+#~ "RF channel 1 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "ได้ตั้งคลื่นวิทยุช่อง 1 แล้ว โปรดกดปุ่ม Connect ที่เมาส์เพื่อให้เมาส์ส่งสัญญาณเชื่อมต่ออีกครั้ง"
+
+#~ msgid "Press Connect Button"
+#~ msgstr "กดปุ่ม Connect"
+
+#~ msgid ""
+#~ "RF channel 2 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "ได้ตั้งคลื่นวิทยุช่อง 2 แล้ว โปรดกดปุ่ม Connect ที่เมาส์เพื่อให้เมาส์ส่งสัญญาณเชื่อมต่ออีกครั้ง"
+
+#~ msgctxt "no cordless mouse"
+#~ msgid "none"
+#~ msgstr "ไม่มี"
+
+#~ msgid "Cordless Mouse"
+#~ msgstr "เมาส์ไร้สาย"
+
+#~ msgid "Cordless Wheel Mouse"
+#~ msgstr "เมาส์ไร้สายมีลูกล้อ"
+
+#~ msgid "Cordless MouseMan Wheel"
+#~ msgstr "MouseMan Wheel ไร้สาย"
+
+#~ msgid "Cordless TrackMan Wheel"
+#~ msgstr "TrackMan Wheel ไร้สาย"
+
+#~ msgid "TrackMan Live"
+#~ msgstr "TrackMan Live"
+
+#~ msgid "Cordless TrackMan FX"
+#~ msgstr "TrackMan FX ไร้สาย"
+
+#~ msgid "Cordless MouseMan Optical"
+#~ msgstr "MouseMan Optical ไร้สาย"
+
+#~ msgid "Cordless Optical Mouse"
+#~ msgstr "เมาส์แบบใช้แสง ไร้สาย"
+
+#~ msgid "Cordless MouseMan Optical (2ch)"
+#~ msgstr "MouseMan Optical ไร้สาย (ใช้คลื่น 2 ช่อง)"
+
+#~ msgid "Cordless Optical Mouse (2ch)"
+#~ msgstr "เมาส์แบบใช้แสง ไร้สาย (ใช้คลื่น 2 ช่อง)"
+
+#~ msgid "Cordless Mouse (2ch)"
+#~ msgstr "เมาส์ไร้สาย (ใช้สัญญาณ 2 ช่อง)"
+
+#~ msgid "Cordless Optical TrackMan"
+#~ msgstr "Optical TrackMan ไร้สาย"
+
+#~ msgid "MX700 Cordless Optical Mouse"
+#~ msgstr "เมาส์แบบใช้แสง ไร้สาย รุ่น MX700"
+
+#~ msgid "MX700 Cordless Optical Mouse (2ch)"
+#~ msgstr "เมาส์แบบใช้แสง ไร้สาย รุ่น MX700 (ใช้สัญญาณ 2 ช่อง)"
+
+#~ msgid "Unknown mouse"
+#~ msgstr "เมาส์ที่ไม่รู้จัก"
+
+#~ msgid "Cordless Name"
+#~ msgstr "ชื่อเมาส์ไร้สาย"
+
+#~ msgid "Sensor Resolution"
+#~ msgstr "ความละเอียดของตัวตรวจจับ"
+
+#~ msgid "400 counts per inch"
+#~ msgstr "400 ครั้งต่อนิ้ว"
+
+#~ msgid "800 counts per inch"
+#~ msgstr "800 ครั้งต่อนิ้ว"
+
+#~ msgid "Battery Level"
+#~ msgstr "ระดับแบตเตอรี"
+
+#~ msgid "RF Channel"
+#~ msgstr "ช่องสัญญาณวิทยุ"
+
+#~ msgid "Channel 1"
+#~ msgstr "ช่องสัญญาณ 1"
+
+#~ msgid "Channel 2"
+#~ msgstr "ช่องสัญญาณ 2"
+
+#~ msgid ""
+#~ "You have a Logitech Mouse connected, and libusb was found at compile "
+#~ "time, but it was not possible to access this mouse. This is probably "
+#~ "caused by a permissions problem - you should consult the manual on how to "
+#~ "fix this."
+#~ msgstr ""
+#~ "คุณมีเมาส์ของ Logitech ต่ออยู่ และพบ libusb เมื่อตอนที่ทำการคอมไพล์ แต่ "
+#~ "ไม่สามารถติดต่อกับเมาส์นี้ได้ สิ่งนี้อาจมีสาเหตุจากปัญหาเรื่องสิทธิ์อนุญาต - "
+#~ "คุณควรอ่านคู่มือเพื่อหาวิธีแก้ปัญหา"
+
+#~ msgid "KDE Classic"
+#~ msgstr "แบบ KDE คลาสสิค"
+
+#~ msgid "The default cursor theme in KDE 2 and 3"
+#~ msgstr "ชุดของเคอร์เซอร์เมาส์ใน KDE 2 และ 3"
+
+#~ msgid "No description available"
+#~ msgstr "ไม่มีคำบรรยาย"
+
+#~ msgid "Short"
+#~ msgstr "เร็ว"
+
+#~ msgid "Long"
+#~ msgstr "ช้า"

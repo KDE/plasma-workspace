@@ -1,0 +1,286 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# Xəyyam Qocayev <xxmn77@gmail.com>, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-09 00:47+0000\n"
+"PO-Revision-Date: 2022-08-16 16:43+0400\n"
+"Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
+"Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
+"Language: az\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 22.04.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Xəyyam Qocayev"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "xxmn77@gmail.com"
+
+#: kcm.cpp:590
+#, kde-format
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr ""
+"Bu dəyişikliklərin qüvvəyə minməsi üçün Plazma seansını yenidən "
+"başlatmalısınız."
+
+#: kcm.cpp:591
+#, kde-format
+msgid "Cursor Settings Changed"
+msgstr "Kursor Ayarları Dəyişdirildi"
+
+#: lnftool.cpp:33
+#, kde-format
+msgid "Global Theme Tool"
+msgstr "Qlobal Mövzu Aləti"
+
+#: lnftool.cpp:35
+#, kde-format
+msgid ""
+"Command line tool to apply global theme packages for changing the look and "
+"feel."
+msgstr ""
+"Xarici görünüşü dəyişdirmək məqsədi ilə, Qlobal Mövzu paketlərini tətbiq "
+"etmək üçün əmrlər sətiri vasitəsi."
+
+#: lnftool.cpp:37
+#, kde-format
+msgid "Copyright 2017, Marco Martin"
+msgstr "Copyright 2017, Marco Martin"
+
+#: lnftool.cpp:38
+#, kde-format
+msgid "Marco Martin"
+msgstr "Marco Martin"
+
+#: lnftool.cpp:38
+#, kde-format
+msgid "Maintainer"
+msgstr "Müşayətçi"
+
+#: lnftool.cpp:46
+#, kde-format
+msgid "List available global theme packages"
+msgstr "Sonuncu mövcud Qlobal Mövzu paketləri"
+
+#: lnftool.cpp:49
+#, kde-format
+msgid ""
+"Apply a global theme package. This can be the name of a package, or a full "
+"path to an installed package, at which point this tool will ensure it is a "
+"global theme package and then attempt to apply it"
+msgstr ""
+"Qlobal mövzu paketini tətbiq edin. Bu paket adı və ya quraşdırılmış paketin "
+"tam yolu ola bilər, hansı ki bu mərhələdə bu alət onun qlobal mövzu paketi "
+"olmasını yoxlayacaq və yenidən cəhd edəcək."
+
+#: lnftool.cpp:51
+#, kde-format
+msgid "packagename"
+msgstr "packagename"
+
+#: lnftool.cpp:52
+#, kde-format
+msgid "Reset the Plasma Desktop layout"
+msgstr "Plasma İş masası nizamını sıfırlamaq"
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: lookandfeelsettings.kcfg:9
+#, kde-format
+msgid "Global look and feel"
+msgstr "Qlobal Xarici Görünüş"
+
+#: package/contents/ui/main.qml:20
+#, kde-format
+msgid "This module lets you choose the global look and feel."
+msgstr ""
+"Bu modul sizə xarici görünüşü dəyişmək üçün mövzunu seçməyə imkan verəcək."
+
+#: package/contents/ui/main.qml:53
+#, kde-format
+msgid "Contains Desktop layout"
+msgstr "İş masası tərtibatı tərkibləri"
+
+#: package/contents/ui/main.qml:67
+#, kde-format
+msgid "Preview Theme"
+msgstr "Mövzuya öncədən baxış"
+
+#: package/contents/ui/main.qml:83
+#, kde-format
+msgctxt ""
+"Confirmation question about applying the Global Theme - %1 is the Global "
+"Theme's name"
+msgid "Apply %1?"
+msgstr "%1 tətbiq edilsin?"
+
+#: package/contents/ui/main.qml:101
+#, kde-format
+msgid "Choose what to apply…"
+msgstr "Necə tətbiq olunacağını seçin..."
+
+#: package/contents/ui/main.qml:101
+#, kde-format
+msgid "Show fewer options…"
+msgstr "Daha az seçimləri göstərmək..."
+
+#: package/contents/ui/main.qml:118
+#, kde-format
+msgid "Apply"
+msgstr "Tətbiq edin"
+
+#: package/contents/ui/main.qml:130
+#, kde-format
+msgid "Cancel"
+msgstr "İmtina"
+
+#: package/contents/ui/main.qml:147
+#, kde-format
+msgid "Get New Global Themes…"
+msgstr "Yeni Qlobal Mövzu Almaq..."
+
+#: package/contents/ui/MoreOptions.qml:24
+#: package/contents/ui/MoreOptions.qml:31
+#, kde-format
+msgid "Layout settings:"
+msgstr "Tərtibat ayarları:"
+
+#: package/contents/ui/MoreOptions.qml:32
+#, kde-format
+msgid "Desktop layout"
+msgstr "İş masası tərtibatı"
+
+#: package/contents/ui/MoreOptions.qml:53
+#, kde-format
+msgid "Titlebar Buttons layout"
+msgstr "Başlıq düymələri qatı"
+
+#: package/contents/ui/MoreOptions.qml:66
+#: package/contents/ui/SimpleOptions.qml:63
+#, kde-format
+msgid ""
+"Applying a Desktop layout replaces your current configuration of desktops, "
+"panels, docks, and widgets"
+msgstr ""
+"Sizin cari iş masaları, panellər, doklar və vidjetlərinizin tənzimləmələri "
+"əvəzinə İş masası tərtibatını tətbiq edir."
+
+#: package/contents/ui/MoreOptions.qml:75
+#, kde-format
+msgid "Appearance settings:"
+msgstr "Xarici görünüş ayarları:"
+
+#: package/contents/ui/MoreOptions.qml:78
+#, kde-format
+msgid "Colors"
+msgstr "Rənglər"
+
+#: package/contents/ui/MoreOptions.qml:79
+#, kde-format
+msgid "Application Style"
+msgstr "Tətbiq üslubu"
+
+#: package/contents/ui/MoreOptions.qml:80
+#, kde-format
+msgid "Window Decorations"
+msgstr "Pəncərə dekorasiyası"
+
+#: package/contents/ui/MoreOptions.qml:81
+#, kde-format
+msgid "Icons"
+msgstr "Nişanlar"
+
+#: package/contents/ui/MoreOptions.qml:82
+#, kde-format
+msgid "Plasma Style"
+msgstr "Plasma üslubu"
+
+#: package/contents/ui/MoreOptions.qml:83
+#, kde-format
+msgid "Cursors"
+msgstr "Kursorlar"
+
+#: package/contents/ui/MoreOptions.qml:84
+#, kde-format
+msgid "Fonts"
+msgstr "Şriftlər"
+
+#: package/contents/ui/MoreOptions.qml:85
+#, kde-format
+msgid "Task Switcher"
+msgstr "Tapşırıq dəyişdirici"
+
+#: package/contents/ui/MoreOptions.qml:86
+#, kde-format
+msgid "Splash Screen"
+msgstr "Açılış ekranı"
+
+#: package/contents/ui/MoreOptions.qml:87
+#, kde-format
+msgid "Lock Screen"
+msgstr "Kilid ekranı"
+
+#: package/contents/ui/SimpleOptions.qml:19
+#, kde-format
+msgid "The following will be applied by this Global Theme:"
+msgstr "Bunlar Qlobal mövzu tərəfindən tətbiq ediləcək:"
+
+#: package/contents/ui/SimpleOptions.qml:32
+#, kde-format
+msgid "Appearance settings"
+msgstr "Xarici görünüş ayarları"
+
+#: package/contents/ui/SimpleOptions.qml:42
+#, kde-format
+msgctxt "List item"
+msgid "• Appearance settings"
+msgstr "• Xarici görünüş ayarları"
+
+#: package/contents/ui/SimpleOptions.qml:47
+#, kde-format
+msgid "Desktop and window layout"
+msgstr "İş masası və pəncərə tərtibatı"
+
+#: package/contents/ui/SimpleOptions.qml:58
+#, kde-format
+msgctxt "List item"
+msgid "• Desktop and window layout"
+msgstr "• İş masası və pəncərə tərtibatı"
+
+#: package/contents/ui/SimpleOptions.qml:75
+#, kde-format
+msgid ""
+"This Global Theme does not provide any applicable settings. Please contact "
+"the maintainer of this Global Theme as it might be broken."
+msgstr ""
+"Bu Qlobal mövzu tətbiq ediləbilən ayarlar ilə təmin edilməyib. Lütfən Qlobal "
+"mövzunun himayəçisi ilə əlaqə saxlayın, ola bilsin həmin mövzu korlanıb."
+
+#~ msgid ""
+#~ "Your current layout and configuration of panels, desktop widgets, and "
+#~ "wallpapers will be lost and reset to the default layout provided by the "
+#~ "selected theme."
+#~ msgstr ""
+#~ "Sizin cari maketiniz və panellərin konfiqurasiyaları, iş masası "
+#~ "vidjetləri və divar kağızları itiriləcək və seçilmiş mövzunun təqdim "
+#~ "etdiyi standart maketlər bərpa oluncaq."
+
+#~ msgid "Use desktop layout from theme"
+#~ msgstr "Mövzunun İş Masası nizamını istifadə etmək"
+
+#~ msgid "Global Theme"
+#~ msgstr "Qlobal Mövzu"
+
+#~ msgid "Apply a global theme package"
+#~ msgstr "Qlobal Mövzu paketlərini tətbiq etmək"

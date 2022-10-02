@@ -1,0 +1,230 @@
+# translation of kcm_autostart.po to Persian
+# Saied Taghavi <s.taghavi@gmail.com>, 2008.
+# vahid fazl <vahid.fazl2000@gmail.com>, 2011.
+# Mohamad Reza Mirdamadi <mohi@linuxshop.ir>, 2011.
+# ehsan <ehsan.abdolahy@gmail.com>, 2016.
+# Mohi Mirdamadi <mohi@ubuntu.ir>, ۲۰۱۶.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_autostart\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:50+0000\n"
+"PO-Revision-Date: ۲۰۱۶-۰۸-۲۰ ۱۶:۵۴+0330\n"
+"Last-Translator: Mohi Mirdamadi <mohi@ubuntu.ir>\n"
+"Language-Team: Persian <kde-i18n-fa@kde.org>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: autostartmodel.cpp:288
+#, fuzzy, kde-format
+#| msgid "\"%1\" is not an absolute path."
+msgid "\"%1\" is not an absolute url."
+msgstr "\"%1\" یک مسیر مطلق نیست."
+
+#: autostartmodel.cpp:291
+#, kde-format
+msgid "\"%1\" does not exist."
+msgstr "\"%1\" وجود ندارد."
+
+#: autostartmodel.cpp:294
+#, kde-format
+msgid "\"%1\" is not a file."
+msgstr "\"%1\" یک پرونده نیست"
+
+#: autostartmodel.cpp:297
+#, kde-format
+msgid "\"%1\" is not readable."
+msgstr "\"%1\" قابل خواندن نیست."
+
+#: package/contents/ui/main.qml:40
+#, kde-format
+msgid "Make Executable"
+msgstr ""
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "The file '%1' must be executable to run at logout."
+msgstr ""
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid "The file '%1' must be executable to run at login."
+msgstr ""
+
+#: package/contents/ui/main.qml:89
+#, fuzzy, kde-format
+#| msgid "&Properties..."
+msgid "Properties"
+msgstr "&ویژگی‌ها..."
+
+#: package/contents/ui/main.qml:95
+#, fuzzy, kde-format
+#| msgid "&Remove"
+msgid "Remove"
+msgstr "&حذف"
+
+#: package/contents/ui/main.qml:106
+#, kde-format
+msgid "Applications"
+msgstr ""
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Login Scripts"
+msgstr ""
+
+#: package/contents/ui/main.qml:112
+#, fuzzy, kde-format
+#| msgid "Pre-KDE startup"
+msgid "Pre-startup Scripts"
+msgstr "پیش شروع KDE"
+
+#: package/contents/ui/main.qml:115
+#, fuzzy, kde-format
+#| msgid "Logout"
+msgid "Logout Scripts"
+msgstr "خروج"
+
+#: package/contents/ui/main.qml:124
+#, kde-format
+msgid "No user-specified autostart items"
+msgstr ""
+
+#: package/contents/ui/main.qml:125
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Click the <interface>Add…</interface> button below to add some"
+msgstr ""
+
+#: package/contents/ui/main.qml:139
+#, fuzzy, kde-format
+#| msgid "Add Script..."
+msgid "Choose Login Script"
+msgstr "افزودن کدنوشته..."
+
+#: package/contents/ui/main.qml:160
+#, kde-format
+msgid "Choose Logout Script"
+msgstr ""
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "Add…"
+msgstr ""
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Add Application…"
+msgstr ""
+
+#: package/contents/ui/main.qml:199
+#, fuzzy, kde-format
+#| msgid "Add Script..."
+msgid "Add Login Script…"
+msgstr "افزودن کدنوشته..."
+
+#: package/contents/ui/main.qml:205
+#, fuzzy, kde-format
+#| msgid "Add Script..."
+msgid "Add Logout Script…"
+msgstr "افزودن کدنوشته..."
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "وحید فضل الله زاده, محمدرضا میردامادی, احسان عبدالهی"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "vahid.fazl2000@gmail.com, mohi@ubuntu.ir, ehsan.abdolahy@gmail.com"
+
+#, fuzzy
+#~| msgid "KDE Autostart Manager Control Panel Module"
+#~ msgid "Session Autostart Manager Control Panel Module"
+#~ msgstr "پیمانه‌ی مدیر شروع خودکار در تابلوی کنترل KDE"
+
+#, fuzzy
+#~| msgid "Copyright © 2006–2010 Autostart Manager team"
+#~ msgid "Copyright © 2006–2020 Autostart Manager team"
+#~ msgstr "Copyright © 2006–2010 تیم مدیریت شروع خودکار"
+
+#~ msgid "Stephen Leaf"
+#~ msgstr "Stephen Leaf"
+
+#~ msgid "Montel Laurent"
+#~ msgstr "Montel Laurent"
+
+#~ msgid "Maintainer"
+#~ msgstr "نگه‌دارنده"
+
+#, fuzzy
+#~| msgid "Advanced..."
+#~ msgid "Add..."
+#~ msgstr "پیشرفته..."
+
+#~ msgid "Shell script path:"
+#~ msgstr "میسر دست‌نوشته‌ی پوسته:"
+
+#~ msgid "Create as symlink"
+#~ msgstr "ایجاد مانند پیوند نمادین"
+
+#, fuzzy
+#~| msgid "Autostart only in KDE"
+#~ msgid "Autostart only in Plasma"
+#~ msgstr "شروع خودکار فقط در KDE"
+
+#~ msgid "Name"
+#~ msgstr "نام"
+
+#~ msgid "Command"
+#~ msgstr "فرمان"
+
+#~ msgid "Status"
+#~ msgstr "وضعیت"
+
+#, fuzzy
+#~| msgctxt ""
+#~| "@title:column The name of the column that decides if the program is run "
+#~| "on kde startup, on kde shutdown, etc"
+#~| msgid "Run On"
+#~ msgctxt ""
+#~ "@title:column The name of the column that decides if the program is run "
+#~ "on session startup, on session shutdown, etc"
+#~ msgid "Run On"
+#~ msgstr "اجرا برروی"
+
+#, fuzzy
+#~| msgid "KDE Autostart Manager"
+#~ msgid "Session Autostart Manager"
+#~ msgstr "مدیر شروع خودکار KDE"
+
+#~ msgctxt "The program will be run"
+#~ msgid "Enabled"
+#~ msgstr "فعال شده"
+
+#~ msgctxt "The program won't be run"
+#~ msgid "Disabled"
+#~ msgstr "غیرفعال شده"
+
+#~ msgid "Desktop File"
+#~ msgstr "پرونده‌ی رومیزی"
+
+#~ msgid "Script File"
+#~ msgstr "پرونده‌ی کدنوشته"
+
+#~ msgid "Add Program..."
+#~ msgstr "افزودن برنامه..."
+
+#~ msgid "Startup"
+#~ msgstr "راه‌اندازی"
+
+#~ msgid ""
+#~ "Only files with “.sh” extensions are allowed for setting up the "
+#~ "environment."
+#~ msgstr "تنها پرونده‌های با پسوند «sh.» مجاز به تنظیم محیط هستند."
+
+#~ msgid "Shutdown"
+#~ msgstr "خاموش"

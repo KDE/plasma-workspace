@@ -1,0 +1,62 @@
+# translation of phonon_kde.po to Italian
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Marcello Anni <marcello.anni@alice.it>, 2007.
+# Luca Bellonda <lbellonda@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: phonon_kde\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-05-20 03:26+0200\n"
+"PO-Revision-Date: 2008-07-17 22:03+0200\n"
+"Last-Translator: Luca Bellonda <lbellonda@gmail.com>\n"
+"Language-Team: Italian <kde-i18n-it@kde.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Marcello Anni"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "marcello.anni@alice.it"
+
+#~ msgid "<qt>Unable to use the <b>%1</b> Multimedia Backend:<br/>%2</qt>"
+#~ msgstr ""
+#~ "<qt>Impossibile usare il <b>%1</b> backend multimediale:<br/>%2</qt>"
+
+#~ msgid "Unable to find a Multimedia Backend"
+#~ msgstr "Impossibile trovare un backend multimediale"
+
+#~ msgid "Unable to find the requested Multimedia Backend"
+#~ msgstr "Impossibile trovare il backend multimediale richiesto"
+
+#~ msgid "create method returned 0"
+#~ msgstr "il metodo di creazione ha ritornato 0 come risultato"
+
+#~ msgid "%1 (OSS)"
+#~ msgstr "%1 (OSS)"
+
+#~ msgid "%1 (ALSA)"
+#~ msgstr "%1 (ALSA)"
+
+#~ msgid ""
+#~ "<html>This device is currently not available (either it is unplugged or "
+#~ "the driver is not loaded).</html>"
+#~ msgstr ""
+#~ "<html>Il dispositivo non è disponibile al momento (o è scollegato o il "
+#~ "driver non è caricato).</html>"
+
+#~ msgid ""
+#~ "<html>This will try the following devices and use the first that works: "
+#~ "<ol><li>%1</li></ol></html>"
+#~ msgstr ""
+#~ "<html>Proverà i seguenti ed userà il primo disponibile: <ol><li>%1</li></"
+#~ "ol></html>"

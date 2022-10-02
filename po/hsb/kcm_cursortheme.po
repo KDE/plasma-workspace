@@ -1,0 +1,540 @@
+# translation of kcminput.po to Hornjoserbsce
+# Eduard Werner <edi.werner@gmx.de>, 2005, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminput\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:50+0000\n"
+"PO-Revision-Date: 2008-11-13 22:59+0100\n"
+"Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
+"Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
+"Language: hsb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
+"%100==4 ? 2 : 3;\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current cursor theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr ""
+
+#: kcmcursortheme.cpp:302
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr "Dyrbiće KDE znowa startować, zo bychu so tute změny wuskutkowali."
+
+#: kcmcursortheme.cpp:376
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: kcmcursortheme.cpp:387
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr ""
+
+#: kcmcursortheme.cpp:418
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr ""
+
+#: kcmcursortheme.cpp:425
+#, kde-format
+msgid "Failed to create 'icons' folder."
+msgstr ""
+
+#: kcmcursortheme.cpp:434
+#, kde-format
+msgid ""
+"A theme named %1 already exists in your icon theme folder. Do you want "
+"replace it with this one?"
+msgstr ""
+
+#: kcmcursortheme.cpp:438
+#, kde-format
+msgid "Overwrite Theme?"
+msgstr ""
+
+#: kcmcursortheme.cpp:462
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: package/contents/ui/Delegate.qml:54
+#, kde-format
+msgid "Remove Theme"
+msgstr "Temu wumaznyć"
+
+#: package/contents/ui/Delegate.qml:61
+#, fuzzy, kde-format
+#| msgid "&Cursor Theme"
+msgid "Restore Cursor Theme"
+msgstr "&Cursorowa tema"
+
+#: package/contents/ui/main.qml:20
+#, kde-format
+msgid "This module lets you choose the mouse cursor theme."
+msgstr ""
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Size:"
+msgstr ""
+
+#: package/contents/ui/main.qml:134
+#, fuzzy, kde-format
+#| msgid "Install New Theme..."
+msgid "&Install from File…"
+msgstr "Nowu temu instalować..."
+
+#: package/contents/ui/main.qml:140
+#, fuzzy, kde-format
+#| msgid "Install New Theme..."
+msgid "&Get New Cursors…"
+msgstr "Nowu temu instalować..."
+
+#: package/contents/ui/main.qml:157
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Open Theme"
+msgstr "Temu wumaznyć"
+
+#: package/contents/ui/main.qml:159
+#, kde-format
+msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:41
+#, kde-format
+msgid "The requested size '%1' is not available, using %2 instead."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:62
+#, kde-format
+msgid ""
+"This tool allows you to set the mouse cursor theme for the current Plasma "
+"session, without accidentally setting it to one that is either not "
+"available, or which is already set."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:66
+#, kde-format
+msgid ""
+"The name of the cursor theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:67
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:68
+#, kde-format
+msgid "Use a specific size, rather than the theme default size"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:89
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:100
+#, kde-format
+msgid ""
+"Successfully applied the mouse cursor theme %1 to your current Plasma session"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:102
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for your newly applied mouse cursor "
+"theme to display correctly."
+msgstr "Dyrbiće KDE znowa startować, zo bychu so tute změny wuskutkowali."
+
+#: plasma-apply-cursortheme.cpp:112
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:120
+#, kde-format
+msgid "You have the following mouse cursor themes on your system:"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:125
+#, kde-format
+msgid "(Current theme for this Plasma session)"
+msgstr ""
+
+#: xcursor/xcursortheme.cpp:60
+#, kde-format
+msgctxt ""
+"@info The argument is the list of available sizes (in pixel). Example: "
+"'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+msgid "(Available sizes: %1)"
+msgstr ""
+
+#~ msgid "Name"
+#~ msgstr "Mjeno"
+
+#~ msgid "Description"
+#~ msgstr "Wopisanje"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Edward Wornar"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "edi.werner@gmx.de"
+
+#, fuzzy
+#~| msgid "&Cursor Theme"
+#~ msgid "Cursors"
+#~ msgstr "&Cursorowa tema"
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "Nastajenja za cursor změnjene"
+
+#~ msgid ""
+#~ "Select the cursor theme you want to use (hover preview to test cursor):"
+#~ msgstr "Wubjerće cursorowu temu, kotruž chceće wužiwać:"
+
+#~ msgid "Select the cursor theme you want to use:"
+#~ msgstr "Wubjerće cursorowu temu, kotruž chceće wužiwać:"
+
+#~ msgid "Small black"
+#~ msgstr "mały čorny"
+
+#~ msgid "Small black cursors"
+#~ msgstr "małe čorne cursory"
+
+#~ msgid "Large black"
+#~ msgstr "wulke čorne"
+
+#~ msgid "Large black cursors"
+#~ msgstr "wulke čorne cursory"
+
+#~ msgid "Button Order"
+#~ msgstr " Rjad kneflow"
+
+#~ msgid "Righ&t handed"
+#~ msgstr "za &prawu ruku"
+
+#~ msgid "Le&ft handed"
+#~ msgstr "za &lěwu ruku"
+
+#~ msgid "Re&verse scroll direction"
+#~ msgstr "směr suwanja wob&roćić"
+
+#~ msgid "Icons"
+#~ msgstr "Piktogramy"
+
+#~ msgid ""
+#~ "Dou&ble-click to open files and folders (select icons on first click)"
+#~ msgstr ""
+#~ "Dwójny &klik za wočinjenje datajow a zapiskow (prěni klik wubjerje "
+#~ "piktogramy)"
+
+#~ msgid "&Single-click to open files and folders"
+#~ msgstr "&jenički klik wočini dataje a zapiski"
+
+#~ msgid "Cha&nge pointer shape over icons"
+#~ msgstr "Pokazowak &změnić na piktogramach"
+
+#~ msgid "A&utomatically select icons"
+#~ msgstr "Piktogramy &awtomatisce wubrać"
+
+#, fuzzy
+#~| msgid "Dela&y:"
+#~ msgctxt "label. delay (on milliseconds) to automatically select icons"
+#~ msgid "Delay"
+#~ msgstr "Inter&wal:"
+
+#, fuzzy
+#~| msgid " msec"
+#~ msgctxt "milliseconds. time to automatically select the items"
+#~ msgid " ms"
+#~ msgstr " msek"
+
+#~ msgid ""
+#~ "<h1>Mouse</h1> This module allows you to choose various options for the "
+#~ "way in which your pointing device works. Your pointing device may be a "
+#~ "mouse, trackball, or some other hardware that performs a similar function."
+#~ msgstr ""
+#~ "<h1>Myš</h1> Tutón modul dowoli Wam wšelake opcije wubrać za Waš "
+#~ "pokazowadło. Pokazowadło móže być myš, trackball abo druhi grat z "
+#~ "podobnej funkciju."
+
+#~ msgid "&General"
+#~ msgstr "&Powšitkownje"
+
+#~ msgid ""
+#~ "If you are left-handed, you may prefer to swap the functions of the left "
+#~ "and right buttons on your pointing device by choosing the 'left-handed' "
+#~ "option. If your pointing device has more than two buttons, only those "
+#~ "that function as the left and right buttons are affected. For example, if "
+#~ "you have a three-button mouse, the middle button is unaffected."
+#~ msgstr ""
+#~ "Hdyž sće lěwicar, chceće snadź radšo funkcije lěweho a praweho myšaceho "
+#~ "knefla zaměnić. Ma-li waša myš wjace hač dwaj kneflej, budźe to jenož tej "
+#~ "kneflej potrjechić, kiž fungujetej jako lěwy a prawy knefl."
+
+#~ msgid ""
+#~ "The default behavior in KDE is to select and activate icons with a single "
+#~ "click of the left button on your pointing device. This behavior is "
+#~ "consistent with what you would expect when you click links in most web "
+#~ "browsers. If you would prefer to select with a single click, and activate "
+#~ "with a double click, check this option."
+#~ msgstr ""
+#~ "Standard w KDE je wuběranje a aktiwizowanje piktograma z jednorym "
+#~ "kliknjenjom lěweho myšaceho knefla. To je konsistentne ze zadźerženjom, "
+#~ "kiž dóstanjeće, hdyž na wotkaz we www-stronje kliknjeće. Jeli chceće z "
+#~ "jednorym kliknjenjom jenož wuběrać a z dwójnym aktiwizować (kaž w MS-"
+#~ "windows), wubjerće tutu opciju."
+
+#~ msgid "Activates and opens a file or folder with a single click."
+#~ msgstr "Aktiwizuje a wočini zapisk z jeničkim kliknjenjom."
+
+#~ msgid ""
+#~ "If you check this option, pausing the mouse pointer over an icon on the "
+#~ "screen will automatically select that icon. This may be useful when "
+#~ "single clicks activate icons, and you want only to select the icon "
+#~ "without activating it."
+#~ msgstr ""
+#~ "Hdyž wubjerjeć tutu opciju, so piktogram awtomatisce wubjerje, hdyž myš "
+#~ "na nim stejo wostanje. To móže być wužitne, hdyž jenički klik piktogram "
+#~ "aktiwizuje, a chceće piktogram jenož wubrać, bjeztoho zo so aktiwizuje."
+
+#~ msgid ""
+#~ "If you have checked the option to automatically select icons, this slider "
+#~ "allows you to select how long the mouse pointer must be paused over the "
+#~ "icon before it is selected."
+#~ msgstr ""
+#~ "Hdyž sće opciju za awtomatiske wuběranje piktogramow wubrali, dowoli wam "
+#~ "tutón suwak nastajić, kak dołho dyrbi myš na piktogramje stejo wostać, "
+#~ "prjedy hač so wubjerje."
+
+#~ msgid "Advanced"
+#~ msgstr "Za pokročenych"
+
+#~ msgid " x"
+#~ msgstr " x"
+
+#~ msgid "Pointer acceleration:"
+#~ msgstr "Pospěšenje pokazowaka:"
+
+#~ msgid "Pointer threshold:"
+#~ msgstr "Minimalna distanca:"
+
+#, fuzzy
+#~ msgid ""
+#~ "<p>The threshold is the smallest distance that the mouse pointer must "
+#~ "move on the screen before acceleration has any effect. If the movement is "
+#~ "smaller than the threshold, the mouse pointer moves as if the "
+#~ "acceleration was set to 1X;</p><p> thus, when you make small movements "
+#~ "with the physical device, there is no acceleration at all, giving you a "
+#~ "greater degree of control over the mouse pointer. With larger movements "
+#~ "of the physical device, you can move the mouse pointer rapidly to "
+#~ "different areas on the screen.</p>"
+#~ msgstr "<p> ně."
+
+#~ msgid " msec"
+#~ msgstr " msek"
+
+#~ msgid "Double click interval:"
+#~ msgstr "Interwal za dwójny klik:"
+
+#~ msgid "Mouse wheel scrolls by:"
+#~ msgstr "Myšace koleso přesuwa wo:"
+
+#~ msgid "Mouse Navigation"
+#~ msgstr "Nawigaciju z myšu"
+
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "&Pokazowak z tastaturu pohibować (z ličbami)"
+
+#~ msgid "R&epeat interval:"
+#~ msgstr "Interwal za &wospjetowanje:"
+
+#~ msgid " pixel/sec"
+#~ msgstr "pixle/sek"
+
+#~ msgid "Ma&ximum speed:"
+#~ msgstr "Maksimalna &spěšnosć:"
+
+#~ msgid "Acceleration &profile:"
+#~ msgstr "Profil pos&pěšenja:"
+
+#~ msgid "Mouse"
+#~ msgstr "Myš"
+
+#~ msgid "(c) 1997 - 2005 Mouse developers"
+#~ msgstr "(c) 1997 - 2005 Mouse wuwiwarjo"
+
+#~ msgid "Patrick Dowler"
+#~ msgstr "Patrick Dowler"
+
+#~ msgid "Dirk A. Mueller"
+#~ msgstr "Dirk A. Mueller"
+
+#~ msgid "David Faure"
+#~ msgstr "David Faure"
+
+#~ msgid "Bernd Gehrmann"
+#~ msgstr "Bernd Gehrmann"
+
+#~ msgid "Rik Hemsley"
+#~ msgstr "Rik Hemsley"
+
+#~ msgid "Brad Hughes"
+#~ msgstr "Brad Hughes"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "Brad Hards"
+#~ msgstr "Brad Hards"
+
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] " dypk"
+#~ msgstr[1] " dypkaj"
+#~ msgstr[2] " dypki"
+#~ msgstr[3] " dypkow"
+
+#~ msgid " line"
+#~ msgid_plural " lines"
+#~ msgstr[0] " linka"
+#~ msgstr[1] " lince"
+#~ msgstr[2] " linki"
+#~ msgstr[3] " linkow"
+
+#~ msgid "Mouse type: %1"
+#~ msgstr "Družina myše: %1"
+
+#~ msgid ""
+#~ "RF channel 1 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "RF-kanal 1 nastajeny. Prošu stłóčće knefl na myšce za znowanastajenje "
+#~ "zwiska."
+
+#~ msgid "Press Connect Button"
+#~ msgstr "Stłóčće na knefl za zwisk"
+
+#~ msgid ""
+#~ "RF channel 2 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "RF-kanal 2 nastajeny.  Prošu stłóčće knefl na myšce za znowanastajenje "
+#~ "zwiska."
+
+#, fuzzy
+#~| msgid "none"
+#~ msgctxt "no cordless mouse"
+#~ msgid "none"
+#~ msgstr "žana"
+
+#~ msgid "Cordless Mouse"
+#~ msgstr "myška bjez kabla"
+
+#~ msgid "Cordless Wheel Mouse"
+#~ msgstr "Kolesata myška bjez kabla"
+
+#~ msgid "Cordless MouseMan Wheel"
+#~ msgstr "MouseMan Wheel bjez kabla"
+
+#~ msgid "Cordless TrackMan Wheel"
+#~ msgstr "TrackMan Wheel bjez kabla"
+
+#~ msgid "TrackMan Live"
+#~ msgstr "TrackMan Live"
+
+#~ msgid "Cordless TrackMan FX"
+#~ msgstr "TrackMan FX bjez kabla"
+
+#~ msgid "Cordless MouseMan Optical"
+#~ msgstr "MouseMan Optical bjez kabla"
+
+#~ msgid "Cordless Optical Mouse"
+#~ msgstr "optiska myš bjez kabla"
+
+#~ msgid "Cordless MouseMan Optical (2ch)"
+#~ msgstr "optiski MouseMan bjez kabla (2 kanalej)"
+
+#~ msgid "Cordless Optical Mouse (2ch)"
+#~ msgstr "optiska myš bjez kabla (2 kanalej)"
+
+#~ msgid "Cordless Mouse (2ch)"
+#~ msgstr "Bjezkablowa myš (2 kanalej)"
+
+#~ msgid "Cordless Optical TrackMan"
+#~ msgstr "Optiski TrackMan bjez kabla"
+
+#~ msgid "MX700 Cordless Optical Mouse"
+#~ msgstr "MX700 bjezkablowa optiska myš"
+
+#~ msgid "MX700 Cordless Optical Mouse (2ch)"
+#~ msgstr "MX700 bjezkablowa optiska myš (2 kanalej)"
+
+#~ msgid "Unknown mouse"
+#~ msgstr "Njeznata myš"
+
+#~ msgid "Cordless Name"
+#~ msgstr "Mjeno bjezkabloweje myše"
+
+#~ msgid "Sensor Resolution"
+#~ msgstr "Rozpušćenje sensora"
+
+#~ msgid "400 counts per inch"
+#~ msgstr "400/inch"
+
+#~ msgid "800 counts per inch"
+#~ msgstr "800/inch"
+
+#~ msgid "Battery Level"
+#~ msgstr "Staw baterije"
+
+#~ msgid "RF Channel"
+#~ msgstr "RF-kanal"
+
+#~ msgid "Channel 1"
+#~ msgstr "Kanal 1"
+
+#~ msgid "Channel 2"
+#~ msgstr "Kanal 2"
+
+#~ msgid ""
+#~ "You have a Logitech Mouse connected, and libusb was found at compile "
+#~ "time, but it was not possible to access this mouse. This is probably "
+#~ "caused by a permissions problem - you should consult the manual on how to "
+#~ "fix this."
+#~ msgstr ""
+#~ "Maće Logitech myšku a libusb je instalowane, ale njeje móžno myš "
+#~ "skontaktować. To najskerje na přistupnych prawach zaleži. Prošu "
+#~ "pohladajće do přiručki po dalšu informaciju."
+
+#~ msgid "Short"
+#~ msgstr "krótki"
+
+#~ msgid "Long"
+#~ msgstr "dołhi"

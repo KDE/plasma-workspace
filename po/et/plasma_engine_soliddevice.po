@@ -1,0 +1,750 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Marek Laane <bald@smail.ee>, 2009, 2011, 2012, 2016, 2019.
+# Mihkel Tõnnov <mihhkel@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"PO-Revision-Date: 2020-09-26 10:16+0200\n"
+"Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
+"Language-Team: Estonian <>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.08.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: soliddeviceengine.cpp:114
+msgid "Parent UDI"
+msgstr "Eellas-UDI"
+
+#: soliddeviceengine.cpp:115
+msgid "Vendor"
+msgstr "Tootja"
+
+#: soliddeviceengine.cpp:116
+msgid "Product"
+msgstr "Toode"
+
+#: soliddeviceengine.cpp:117
+msgid "Description"
+msgstr "Kirjeldus"
+
+#: soliddeviceengine.cpp:118
+msgid "Icon"
+msgstr "Ikoon"
+
+#: soliddeviceengine.cpp:119 soliddeviceengine.cpp:592
+msgid "Emblems"
+msgstr "Embleemid"
+
+#: soliddeviceengine.cpp:120 soliddeviceengine.cpp:476
+#: soliddeviceengine.cpp:482 soliddeviceengine.cpp:495
+msgid "State"
+msgstr "Olek"
+
+#: soliddeviceengine.cpp:121 soliddeviceengine.cpp:477
+#: soliddeviceengine.cpp:483 soliddeviceengine.cpp:491
+#: soliddeviceengine.cpp:493
+msgid "Operation result"
+msgstr "Toimingu tulemus"
+
+#: soliddeviceengine.cpp:122
+msgid "Timestamp"
+msgstr "Ajatempel"
+
+#: soliddeviceengine.cpp:130
+msgid "Processor"
+msgstr "Protsessor"
+
+#: soliddeviceengine.cpp:131
+msgid "Number"
+msgstr "Arv"
+
+#: soliddeviceengine.cpp:132
+msgid "Max Speed"
+msgstr "Maks. kiirus"
+
+#: soliddeviceengine.cpp:133
+msgid "Can Change Frequency"
+msgstr "Muudetava sagedusega"
+
+#: soliddeviceengine.cpp:141
+msgid "Block"
+msgstr "Plokk"
+
+#: soliddeviceengine.cpp:142
+msgid "Major"
+msgstr "Põhiversioon"
+
+#: soliddeviceengine.cpp:143
+msgid "Minor"
+msgstr "Alamversioon"
+
+#: soliddeviceengine.cpp:144
+msgid "Device"
+msgstr "Seade"
+
+#: soliddeviceengine.cpp:152
+msgid "Storage Access"
+msgstr "Salvesti juurdepääs"
+
+#: soliddeviceengine.cpp:153 soliddeviceengine.cpp:507
+#: soliddeviceengine.cpp:606
+msgid "Accessible"
+msgstr "Juurdepääsuga"
+
+#: soliddeviceengine.cpp:154 soliddeviceengine.cpp:508
+msgid "File Path"
+msgstr "Faili asukoht"
+
+#: soliddeviceengine.cpp:169
+msgid "Storage Drive"
+msgstr "Salvestusseade"
+
+#: soliddeviceengine.cpp:172
+msgid "Ide"
+msgstr "IDE"
+
+#: soliddeviceengine.cpp:172
+msgid "Usb"
+msgstr "USB"
+
+#: soliddeviceengine.cpp:172
+msgid "Ieee1394"
+msgstr "IEEE1394"
+
+#: soliddeviceengine.cpp:173
+msgid "Scsi"
+msgstr "SCSI"
+
+#: soliddeviceengine.cpp:173
+msgid "Sata"
+msgstr "SATA"
+
+#: soliddeviceengine.cpp:173
+msgid "Platform"
+msgstr "Platvorm"
+
+#: soliddeviceengine.cpp:175
+msgid "Hard Disk"
+msgstr "Kõvaketas"
+
+#: soliddeviceengine.cpp:175
+msgid "Cdrom Drive"
+msgstr "CD-seade"
+
+#: soliddeviceengine.cpp:175
+msgid "Floppy"
+msgstr "Diskett"
+
+#: soliddeviceengine.cpp:176
+msgid "Tape"
+msgstr "Lindiseade"
+
+#: soliddeviceengine.cpp:176
+msgid "Compact Flash"
+msgstr "Compact Flash"
+
+#: soliddeviceengine.cpp:176
+msgid "Memory Stick"
+msgstr "Mälupulk"
+
+#: soliddeviceengine.cpp:177
+msgid "Smart Media"
+msgstr "Smart Media"
+
+#: soliddeviceengine.cpp:177
+msgid "SdMmc"
+msgstr "SdMmc"
+
+#: soliddeviceengine.cpp:177
+msgid "Xd"
+msgstr "Xd"
+
+#: soliddeviceengine.cpp:179
+msgid "Bus"
+msgstr "Siin"
+
+#: soliddeviceengine.cpp:180
+msgid "Drive Type"
+msgstr "Seadme tüüp"
+
+#: soliddeviceengine.cpp:181 soliddeviceengine.cpp:194
+#: soliddeviceengine.cpp:362 soliddeviceengine.cpp:376
+msgid "Removable"
+msgstr "Eemaldatav"
+
+#: soliddeviceengine.cpp:182 soliddeviceengine.cpp:195
+#: soliddeviceengine.cpp:363 soliddeviceengine.cpp:377
+msgid "Hotpluggable"
+msgstr "Töö ajal ühendatav"
+
+#: soliddeviceengine.cpp:204
+msgid "Optical Drive"
+msgstr "Optiline seade"
+
+#: soliddeviceengine.cpp:209
+msgid "CD-R"
+msgstr "CD-R"
+
+#: soliddeviceengine.cpp:212
+msgid "CD-RW"
+msgstr "CD-RW"
+
+#: soliddeviceengine.cpp:215
+msgid "DVD"
+msgstr "DVD"
+
+#: soliddeviceengine.cpp:218
+msgid "DVD-R"
+msgstr "DVD-R"
+
+#: soliddeviceengine.cpp:221
+msgid "DVD-RW"
+msgstr "DVD-RW"
+
+#: soliddeviceengine.cpp:224
+msgid "DVD-RAM"
+msgstr "DVD-RAM"
+
+#: soliddeviceengine.cpp:227
+msgid "DVD+R"
+msgstr "DVD+R"
+
+#: soliddeviceengine.cpp:230
+msgid "DVD+RW"
+msgstr "DVD+RW"
+
+#: soliddeviceengine.cpp:233
+msgid "DVD+DL"
+msgstr "DVD+DL"
+
+#: soliddeviceengine.cpp:236
+msgid "DVD+DLRW"
+msgstr "DVD+DLRW"
+
+#: soliddeviceengine.cpp:239
+msgid "BD"
+msgstr "BD"
+
+#: soliddeviceengine.cpp:242
+msgid "BD-R"
+msgstr "BD-R"
+
+#: soliddeviceengine.cpp:245
+msgid "BD-RE"
+msgstr "BD-RE"
+
+#: soliddeviceengine.cpp:248
+msgid "HDDVD"
+msgstr "HDDVD"
+
+#: soliddeviceengine.cpp:251
+msgid "HDDVD-R"
+msgstr "HDDVD-R"
+
+#: soliddeviceengine.cpp:254
+msgid "HDDVD-RW"
+msgstr "HDDVD-RW"
+
+#: soliddeviceengine.cpp:256
+msgid "Supported Media"
+msgstr "Toetatud andmekandjad"
+
+#: soliddeviceengine.cpp:258
+msgid "Read Speed"
+msgstr "Lugemiskiirus"
+
+#: soliddeviceengine.cpp:259
+msgid "Write Speed"
+msgstr "Kirjutamiskiirus"
+
+#: soliddeviceengine.cpp:267
+msgid "Write Speeds"
+msgstr "Kirjutamiskiirus"
+
+#: soliddeviceengine.cpp:275
+msgid "Storage Volume"
+msgstr "Salvesti"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Other"
+msgstr "Muu"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Unused"
+msgstr "Kasutamata"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "File System"
+msgstr "Failisüsteem"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Partition Table"
+msgstr "Partitsioonitabel"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Raid"
+msgstr "RAID"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Encrypted"
+msgstr "Krüptitud"
+
+#: soliddeviceengine.cpp:281 soliddeviceengine.cpp:283
+msgid "Usage"
+msgstr "Kasutamine"
+
+#: soliddeviceengine.cpp:283
+#, kde-format
+msgid "Unknown"
+msgstr "Tundmatu"
+
+#: soliddeviceengine.cpp:286
+msgid "Ignored"
+msgstr "Eiratav"
+
+#: soliddeviceengine.cpp:287
+msgid "File System Type"
+msgstr "Failisüsteemi tüüp"
+
+#: soliddeviceengine.cpp:288
+msgid "Label"
+msgstr "Nimi"
+
+#: soliddeviceengine.cpp:289
+msgid "UUID"
+msgstr "UUID"
+
+#: soliddeviceengine.cpp:298
+msgid "Encrypted Container"
+msgstr "Krüptitud konteiner"
+
+#: soliddeviceengine.cpp:310
+msgid "OpticalDisc"
+msgstr "Optiline plaat"
+
+#: soliddeviceengine.cpp:316
+msgid "Audio"
+msgstr "Heli"
+
+#: soliddeviceengine.cpp:319
+msgid "Data"
+msgstr "Andmed"
+
+#: soliddeviceengine.cpp:322
+msgid "Video CD"
+msgstr "Video CD"
+
+#: soliddeviceengine.cpp:325
+msgid "Super Video CD"
+msgstr "Super Video CD"
+
+#: soliddeviceengine.cpp:328
+msgid "Video DVD"
+msgstr "Video DVD"
+
+#: soliddeviceengine.cpp:331
+msgid "Video Blu Ray"
+msgstr "Video Blu-ray"
+
+#: soliddeviceengine.cpp:333
+msgid "Available Content"
+msgstr "Sisuga"
+
+#: soliddeviceengine.cpp:336
+msgid "Unknown Disc Type"
+msgstr "Tundmatu plaaditüüp"
+
+#: soliddeviceengine.cpp:336
+msgid "CD Rom"
+msgstr "CD-ROM"
+
+#: soliddeviceengine.cpp:336
+msgid "CD Recordable"
+msgstr "Kirjutatav CD"
+
+#: soliddeviceengine.cpp:337
+msgid "CD Rewritable"
+msgstr "Korduvkirjutatav CD"
+
+#: soliddeviceengine.cpp:337
+msgid "DVD Rom"
+msgstr "DVD-ROM"
+
+#: soliddeviceengine.cpp:337
+msgid "DVD Ram"
+msgstr "DVD-RAM"
+
+#: soliddeviceengine.cpp:338
+msgid "DVD Recordable"
+msgstr "Kirjutav DVD"
+
+#: soliddeviceengine.cpp:338
+msgid "DVD Rewritable"
+msgstr "Korduvkirjutatav DVD"
+
+#: soliddeviceengine.cpp:339
+msgid "DVD Plus Recordable"
+msgstr "Kirjutav DVD Plus"
+
+#: soliddeviceengine.cpp:339
+msgid "DVD Plus Rewritable"
+msgstr "Korduvkirjutatav DVD Plus"
+
+#: soliddeviceengine.cpp:340
+msgid "DVD Plus Recordable Duallayer"
+msgstr "Kahekihiline kirjutav DVD Plus"
+
+#: soliddeviceengine.cpp:340
+msgid "DVD Plus Rewritable Duallayer"
+msgstr "Kahekihiline korduvkirjutatav DVD Plus"
+
+#: soliddeviceengine.cpp:341
+msgid "Blu Ray Rom"
+msgstr "Blu-ray"
+
+#: soliddeviceengine.cpp:341
+msgid "Blu Ray Recordable"
+msgstr "Kirjutav Blu-ray"
+
+#: soliddeviceengine.cpp:342
+msgid "Blu Ray Rewritable"
+msgstr "Korduvkirjutatav Blu-ray"
+
+#: soliddeviceengine.cpp:342
+msgid "HD DVD Rom"
+msgstr "HD DVD-ROM"
+
+#: soliddeviceengine.cpp:343
+msgid "HD DVD Recordable"
+msgstr "Kirjutav HD DVD"
+
+#: soliddeviceengine.cpp:343
+msgid "HD DVD Rewritable"
+msgstr "Korduvkirjutatav HD DVD"
+
+#: soliddeviceengine.cpp:345
+msgid "Disc Type"
+msgstr "Plaadi tüüp"
+
+#: soliddeviceengine.cpp:346
+msgid "Appendable"
+msgstr "Lisatav"
+
+#: soliddeviceengine.cpp:347
+msgid "Blank"
+msgstr "Tühi"
+
+#: soliddeviceengine.cpp:348
+msgid "Rewritable"
+msgstr "Korduvkirjutatav"
+
+#: soliddeviceengine.cpp:349
+msgid "Capacity"
+msgstr "Maht"
+
+#: soliddeviceengine.cpp:357
+msgid "Camera"
+msgstr "Kaamera"
+
+#: soliddeviceengine.cpp:359 soliddeviceengine.cpp:373
+msgid "Supported Protocols"
+msgstr "Toetatud protokollid"
+
+#: soliddeviceengine.cpp:360 soliddeviceengine.cpp:374
+msgid "Supported Drivers"
+msgstr "Toetatud draiverid"
+
+#: soliddeviceengine.cpp:371
+msgid "Portable Media Player"
+msgstr "Kaasaskantav meediamängija"
+
+#: soliddeviceengine.cpp:385
+msgid "Battery"
+msgstr "Aku"
+
+#: soliddeviceengine.cpp:388
+msgid "Unknown Battery"
+msgstr "Tundmatu aku"
+
+#: soliddeviceengine.cpp:388
+msgid "PDA Battery"
+msgstr "PDA aku"
+
+#: soliddeviceengine.cpp:388
+msgid "UPS Battery"
+msgstr "UPS-i aku"
+
+#: soliddeviceengine.cpp:389
+msgid "Primary Battery"
+msgstr "Esmane aku"
+
+#: soliddeviceengine.cpp:389
+msgid "Mouse Battery"
+msgstr "Hiireaku"
+
+#: soliddeviceengine.cpp:390
+msgid "Keyboard Battery"
+msgstr "Klaviatuuriaku"
+
+#: soliddeviceengine.cpp:390
+msgid "Keyboard Mouse Battery"
+msgstr "Klaviatuuri- ja hiireaku"
+
+#: soliddeviceengine.cpp:391
+msgid "Camera Battery"
+msgstr "Kaameraaku"
+
+#: soliddeviceengine.cpp:391
+msgid "Phone Battery"
+msgstr "Telefoniaku"
+
+#: soliddeviceengine.cpp:391
+msgid "Monitor Battery"
+msgstr "Monitoriaku"
+
+#: soliddeviceengine.cpp:392
+msgid "Gaming Input Battery"
+msgstr "Mängusisendi aku"
+
+#: soliddeviceengine.cpp:392
+msgid "Bluetooth Battery"
+msgstr "Bluetoothi aku"
+
+#: soliddeviceengine.cpp:395
+msgid "Not Charging"
+msgstr "Ei lae"
+
+#: soliddeviceengine.cpp:395
+msgid "Charging"
+msgstr "Laadimisel"
+
+#: soliddeviceengine.cpp:395
+msgid "Discharging"
+msgstr "Mahalaadimisel"
+
+#: soliddeviceengine.cpp:396
+msgid "Fully Charged"
+msgstr "Täielikult laetud"
+
+#: soliddeviceengine.cpp:398
+msgid "Plugged In"
+msgstr "Ühendatud"
+
+#: soliddeviceengine.cpp:399
+msgid "Type"
+msgstr "Tüüp"
+
+#: soliddeviceengine.cpp:400
+msgid "Charge Percent"
+msgstr "Täituvuse protsent"
+
+#: soliddeviceengine.cpp:401
+msgid "Rechargeable"
+msgstr "Laetav"
+
+#: soliddeviceengine.cpp:402
+msgid "Charge State"
+msgstr "Täituvuse olek"
+
+#: soliddeviceengine.cpp:427
+msgid "Type Description"
+msgstr "Tüübi kirjeldus"
+
+#: soliddeviceengine.cpp:432
+msgid "Device Types"
+msgstr "Seadmete tüübid"
+
+#: soliddeviceengine.cpp:456 soliddeviceengine.cpp:553
+msgid "Size"
+msgstr "Suurus"
+
+#: soliddeviceengine.cpp:535
+#, kde-format
+msgid "Filesystem is not responding"
+msgstr "Failisüsteem ei reageeri"
+
+#: soliddeviceengine.cpp:535
+#, kde-format
+msgid "Filesystem mounted at '%1' is not responding"
+msgstr "Asukohta '%1' haagitud failisüsteem ei reageeri"
+
+#: soliddeviceengine.cpp:551
+msgid "Free Space"
+msgstr "Vaba ruum"
+
+#: soliddeviceengine.cpp:552
+msgid "Free Space Text"
+msgstr "Vaba ruumi tekst"
+
+#: soliddeviceengine.cpp:554
+msgid "Size Text"
+msgstr "Suuruse tekst"
+
+#: soliddeviceengine.cpp:580
+msgid "Temperature"
+msgstr "Temperatuur"
+
+#: soliddeviceengine.cpp:581
+msgid "Temperature Unit"
+msgstr "Temperatuuriühik"
+
+#: soliddeviceengine.cpp:625 soliddeviceengine.cpp:629
+msgid "In Use"
+msgstr "Kasutusel"
+
+#~ msgid "Network Interface"
+#~ msgstr "Võrguliides"
+
+#~ msgid "Interface Name"
+#~ msgstr "Liidese nimi"
+
+#~ msgid "Wireless"
+#~ msgstr "Juhtmeta"
+
+#~ msgid "Hardware Address"
+#~ msgstr "Riistvara-aadress"
+
+#~ msgid "MAC Address"
+#~ msgstr "MAC-aadress"
+
+#~ msgid "AC Adapter"
+#~ msgstr "Toiteadapter"
+
+#~ msgid "Button"
+#~ msgstr "Nupp"
+
+#~ msgid "Lid Button"
+#~ msgstr "Kaanenupp"
+
+#~ msgid "Power Button"
+#~ msgstr "Toitenupp"
+
+#~ msgid "Sleep Button"
+#~ msgstr "Unenupp"
+
+#~ msgid "Unknown Button Type"
+#~ msgstr "Tundmatu nuputüüp"
+
+#~ msgid "Has State"
+#~ msgstr "Olekuga"
+
+#~ msgid "State Value"
+#~ msgstr "Oleku väärtus"
+
+#~ msgid "Pressed"
+#~ msgstr "Vajutatud"
+
+#~ msgid "Audio Interface"
+#~ msgstr "Heliliides"
+
+#~ msgid "ALSA"
+#~ msgstr "ALSA"
+
+#~ msgid "Open Sound System"
+#~ msgstr "OSS (Open Sound System)"
+
+#~ msgid "Unknown Audio Driver"
+#~ msgstr "Tundmatu helidraiver"
+
+#~ msgid "Driver"
+#~ msgstr "Draiver"
+
+#~ msgid "Driver Handle"
+#~ msgstr "Draiveri pide"
+
+#~ msgid "Name"
+#~ msgstr "Nimi"
+
+#~ msgid "Unknown Audio Interface Type"
+#~ msgstr "Tundmatu heliliidese tüüp"
+
+#~ msgid "Audio Control"
+#~ msgstr "Heli juhtimine"
+
+#~ msgid "Audio Input"
+#~ msgstr "Helisisend"
+
+#~ msgid "Audio Output"
+#~ msgstr "Heliväljund"
+
+#~ msgid "Audio Device Type"
+#~ msgstr "Heliseadme tüüp"
+
+#~ msgid "Internal Soundcard"
+#~ msgstr "Sisemine helikaart"
+
+#~ msgid "USB Soundcard"
+#~ msgstr "USB helikaart"
+
+#~ msgid "Firewire Soundcard"
+#~ msgstr "Firewire helikaart"
+
+#~ msgid "Headset"
+#~ msgstr "Peakomplekt"
+
+#~ msgid "Modem"
+#~ msgstr "Modem"
+
+#~ msgid "Soundcard Type"
+#~ msgstr "Helikaardi tüüp"
+
+#~ msgid "DVB Interface"
+#~ msgstr "DVB liides"
+
+#~ msgid "Device Adapter"
+#~ msgstr "Seadme adapter"
+
+#~ msgid "DVB Unknown"
+#~ msgstr "Tundmatu DVB"
+
+#~ msgid "DVB Audio"
+#~ msgstr "DVB Audio"
+
+#~ msgid "DVB Ca"
+#~ msgstr "DVB Ca"
+
+#~ msgid "DVB Demux"
+#~ msgstr "DVB Demux"
+
+#~ msgid "DVB DVR"
+#~ msgstr "DVB DVR"
+
+#~ msgid "DVB Frontend"
+#~ msgstr "DVB Frontend"
+
+#~ msgid "DVB Net"
+#~ msgstr "DVB Net"
+
+#~ msgid "DVB OSD"
+#~ msgstr "DVB OSD"
+
+#~ msgid "DVB Sec"
+#~ msgstr "DVB Sec"
+
+#~ msgid "DVB Video"
+#~ msgstr "DVB Video"
+
+#~ msgid "DVB Device Type"
+#~ msgstr "DVB-seadme tüüp"
+
+#~ msgid "Device Index"
+#~ msgstr "Seadme indeks"
+
+#~ msgid "Video"
+#~ msgstr "Video"
+
+#~ msgid "Driver Handles"
+#~ msgstr "Draiveri pidemed"

@@ -1,0 +1,159 @@
+# translation of plasma_applet_lockout.po to Hindi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Rajesh Ranjan <rajesh672@gmail.com>, 2010.
+# Raghavendra Kamath <raghu@raghukamath.com>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_lockout\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2022-02-26 11:47+0530\n"
+"Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
+"Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.12.2\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"\n"
+"\n"
+
+#: contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "सामान्य"
+
+#: contents/ui/ConfigGeneral.qml:36
+#, kde-format
+msgctxt ""
+"Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
+msgid "Show actions:"
+msgstr "क्रियाएं दिखाएँ"
+
+#: contents/ui/ConfigGeneral.qml:37
+#, kde-format
+msgid "Logout"
+msgstr "लॉगआउट"
+
+#: contents/ui/ConfigGeneral.qml:43
+#, kde-format
+msgid "Shutdown"
+msgstr "बंद करें"
+
+#: contents/ui/ConfigGeneral.qml:48
+#, kde-format
+msgid "Reboot"
+msgstr "फिर से चालू (रीबूट) करें"
+
+#: contents/ui/ConfigGeneral.qml:53 contents/ui/data.js:5
+#, kde-format
+msgid "Lock"
+msgstr "तालाबंद"
+
+#: contents/ui/ConfigGeneral.qml:58
+#, kde-format
+msgid "Switch User"
+msgstr "उपयोक्ता बदलें"
+
+#: contents/ui/ConfigGeneral.qml:63 contents/ui/data.js:46
+#, kde-format
+msgid "Hibernate"
+msgstr "सुप्तावस्था"
+
+#: contents/ui/ConfigGeneral.qml:68 contents/ui/data.js:39
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "निद्रा"
+
+#: contents/ui/data.js:6
+#, kde-format
+msgid "Lock the screen"
+msgstr "स्क्रीन पर ताला लगाएँ"
+
+#: contents/ui/data.js:12
+#, kde-format
+msgid "Switch user"
+msgstr "उपयोक्ता बदलें"
+
+#: contents/ui/data.js:13
+#, kde-format
+msgid "Start a parallel session as a different user"
+msgstr "किसी भिन्न उपयोक्ता के रूप में समानांतर सत्र प्रारंभ करें"
+
+#: contents/ui/data.js:18
+#, kde-format
+msgid "Shutdown…"
+msgstr "बंद करें…"
+
+#: contents/ui/data.js:19
+#, kde-format
+msgid "Turn off the computer"
+msgstr "कंप्यूटर बंद करें"
+
+#: contents/ui/data.js:25
+#, kde-format
+msgid "Restart…"
+msgstr "पुनः प्रारंभ करें…"
+
+#: contents/ui/data.js:26
+#, kde-format
+msgid "Reboot the computer"
+msgstr "कम्प्यूटर बंद कर फिर से प्रारंभ करें"
+
+#: contents/ui/data.js:32
+#, kde-format
+msgid "Logout…"
+msgstr "लॉगआउट…"
+
+#: contents/ui/data.js:33
+#, kde-format
+msgid "End the session"
+msgstr "सत्र का अंत करें"
+
+#: contents/ui/data.js:40
+#, kde-format
+msgid "Sleep (suspend to RAM)"
+msgstr "स्लीप (रैम में सस्पेंड करें)"
+
+#: contents/ui/data.js:47
+#, kde-format
+msgid "Hibernate (suspend to disk)"
+msgstr "सुप्तावस्था (डिस्क में सस्पेंड करें)"
+
+#~ msgid "Do you want to suspend to disk (hibernate)?"
+#~ msgstr "क्या तुम डिस्क में स्थगित करना चाहते हो (hibernate)?"
+
+#~ msgid "Do you want to suspend to RAM (sleep)?"
+#~ msgstr "क्या तुम रैम में स्थगित करना चाहते हो (sleep)?"
+
+#, fuzzy
+#~| msgid "Leave..."
+#~ msgid "Leave"
+#~ msgstr "छोड़ें..."
+
+#~ msgid "Leave..."
+#~ msgstr "छोड़ें..."
+
+#~ msgid "Suspend"
+#~ msgstr "स्थगित"
+
+#~ msgid "Configure Lock/Logout"
+#~ msgstr "तालाबंद/ लॉगआउट कॉन्फ़िगर करें"
+
+#, fuzzy
+#~| msgid "Show sleep button"
+#~ msgid "Show \"switch user\" button"
+#~ msgstr "स्लीप बटन दिखाएँ"
+
+#~ msgid "Show logout button"
+#~ msgstr "लॉगआउट बटन दिखाएँ"
+
+#~ msgid "Show hibernate button"
+#~ msgstr "हाइबरनेट बटन दिखाएँ "
+
+#~ msgid "Show sleep button"
+#~ msgstr "स्लीप बटन दिखाएँ"

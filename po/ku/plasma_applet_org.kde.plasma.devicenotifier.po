@@ -1,0 +1,207 @@
+# translation of plasma_applet_devicenotifier.po to Kurdish
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Erdal Ronahi <erdal.ronahi@nospam.gmail.com>, 2007, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_devicenotifier\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-21 00:47+0000\n"
+"PO-Revision-Date: 2008-12-25 02:34+0200\n"
+"Last-Translator: Omer Ensari <oensari@gmail.com>\n"
+"Language-Team: Kurdish <kde-i18n-doc@lists.kde.org>\n"
+"Language: ku\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 0.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Kurdish\n"
+
+#: package/contents/ui/DeviceItem.qml:180
+#, kde-format
+msgctxt "@info:status Free disk space"
+msgid "%1 free of %2"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:184
+#, kde-format
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Accessing…"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:187
+#, kde-format
+msgctxt ""
+"Removing is a less technical word for Unmounting; translation should be "
+"short and mean 'Currently unmounting this device'"
+msgid "Removing…"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:190
+#, kde-format
+msgid "Don't unplug yet! Files are still being transferred..."
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:221
+#, kde-format
+msgid "Open in File Manager"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:224
+#, kde-format
+msgid "Mount and Open"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:226
+#, kde-format
+msgid "Eject"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:228
+#, kde-format
+msgid "Safely remove"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:270
+#, kde-format
+msgid "Mount"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:41
+#: package/contents/ui/main.qml:238
+#, kde-format
+msgid "Remove All"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:42
+#, fuzzy, kde-format
+#| msgid "1 action for this device"
+#| msgid_plural "%1 actions for this device"
+msgid "Click to safely remove all devices"
+msgstr "1 çalakiya ji bo vê cîhazê"
+
+#: package/contents/ui/FullRepresentation.qml:186
+#, fuzzy, kde-format
+#| msgid "Configure New Device Notifier"
+msgid "No removable devices attached"
+msgstr "Agahdarkerê Cîhazan Nû Bimîhengîne"
+
+#: package/contents/ui/FullRepresentation.qml:186
+#, fuzzy, kde-format
+#| msgid "No devices plugged in"
+msgid "No disks available"
+msgstr "Tu cîhaz nehatiye girêdan"
+
+#: package/contents/ui/main.qml:47
+#, fuzzy, kde-format
+#| msgid "Last plugged in device: %1"
+msgid "Most Recent Device"
+msgstr "Demê dawî hatiye girêdan bi cîhaza: %1"
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid "No Devices Available"
+msgstr ""
+
+#: package/contents/ui/main.qml:245
+#, fuzzy, kde-format
+#| msgid "Configure New Device Notifier"
+msgid "Removable Devices"
+msgstr "Agahdarkerê Cîhazan Nû Bimîhengîne"
+
+#: package/contents/ui/main.qml:251
+#, fuzzy, kde-format
+#| msgid "Configure New Device Notifier"
+msgid "Non Removable Devices"
+msgstr "Agahdarkerê Cîhazan Nû Bimîhengîne"
+
+#: package/contents/ui/main.qml:257
+#, kde-format
+msgid "All Devices"
+msgstr ""
+
+#: package/contents/ui/main.qml:265
+#, fuzzy, kde-format
+#| msgid "No devices plugged in"
+msgid "Show popup when new device is plugged in"
+msgstr "Tu cîhaz nehatiye girêdan"
+
+#: package/contents/ui/main.qml:274
+#, fuzzy, kde-format
+#| msgid "Configure New Device Notifier"
+msgctxt "Open auto mounter kcm"
+msgid "Configure Removable Devices…"
+msgstr "Agahdarkerê Cîhazan Nû Bimîhengîne"
+
+#, fuzzy
+#~| msgid "1 action for this device"
+#~| msgid_plural "%1 actions for this device"
+#~ msgid "It is currently safe to remove this device."
+#~ msgstr "1 çalakiya ji bo vê cîhazê"
+
+#, fuzzy
+#~| msgid "1 action for this device"
+#~| msgid_plural "%1 actions for this device"
+#~ msgid "1 action for this device"
+#~ msgid_plural "%1 actions for this device"
+#~ msgstr[0] "1 çalakiya ji bo vê cîhazê"
+#~ msgstr[1] "1 çalakiya ji bo vê cîhazê"
+
+#, fuzzy
+#~| msgid "1 action for this device"
+#~| msgid_plural "%1 actions for this device"
+#~ msgid "Click to eject this disc."
+#~ msgstr "1 çalakiya ji bo vê cîhazê"
+
+#, fuzzy
+#~| msgid "1 action for this device"
+#~| msgid_plural "%1 actions for this device"
+#~ msgid "Click to safely remove this device."
+#~ msgstr "1 çalakiya ji bo vê cîhazê"
+
+#, fuzzy
+#~| msgid "1 action for this device"
+#~| msgid_plural "%1 actions for this device"
+#~ msgid "Click to mount this device."
+#~ msgstr "1 çalakiya ji bo vê cîhazê"
+
+#, fuzzy
+#~| msgid ""
+#~| "Cannot unmount the device.\n"
+#~| "One or more files on this device are open within an application."
+#~ msgid ""
+#~ "Could not unmount device %1.\n"
+#~ "One or more files on this device are open within an application."
+#~ msgstr ""
+#~ "Nikare girêdana cîhazê qut bike.\n"
+#~ "Yek an jî zêdetir pelên di vê cîhazê de bi sepanekê re vekirî ne."
+
+#~ msgid ""
+#~ "Cannot eject the disc.\n"
+#~ "One or more files on this disc are open within an application."
+#~ msgstr ""
+#~ "Nikare dîskê jê bavêje.\n"
+#~ "Yek an jî zêdetir pelên di vê dîskê de bi sepanekê re vekirî ne."
+
+#, fuzzy
+#~| msgid "Last plugged in device: %1"
+#~ msgid "Could not mount device %1."
+#~ msgstr "Demê dawî hatiye girêdan bi cîhaza: %1"
+
+#, fuzzy
+#~| msgid "<font color=\"%1\">Devices recently plugged in:</font>"
+#~ msgid "Devices recently plugged in:"
+#~ msgstr "<font color=\"%1\">Cîhazên pir hatine girêdan:</font>"
+
+#~ msgid "&Time to stay on top:"
+#~ msgstr "&Dema li ser bimîne:"
+
+#~ msgid "&Number of items displayed:"
+#~ msgstr "&Hejmara hêmanên nîşandayî: "
+
+#~ msgid "&Display time of items:"
+#~ msgstr "Dema hêman werîn &nîşandayîn :"

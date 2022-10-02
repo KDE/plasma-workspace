@@ -1,0 +1,267 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# Xəyyam Qocayev <xxmn77@gmail.com>, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-27 00:47+0000\n"
+"PO-Revision-Date: 2021-08-10 18:48+0400\n"
+"Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
+"Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
+"Language: az\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.04.3\n"
+
+#: kcm.cpp:64
+#, kde-format
+msgid "Toggle do not disturb"
+msgstr "Narahat etmə açarı"
+
+#: kcm.cpp:192
+#, kde-format
+msgid "Configure Notifications"
+msgstr "Bildirişləri Tənzimləmək"
+
+#: package/contents/ui/ApplicationConfiguration.qml:63
+#, kde-format
+msgid "Show popups"
+msgstr "Sürüşüb çıxan pəncərələri göstərmək"
+
+#: package/contents/ui/ApplicationConfiguration.qml:77
+#, kde-format
+msgid "Show in do not disturb mode"
+msgstr "\"Narahat etmə\" rejimində göstərmək"
+
+#: package/contents/ui/ApplicationConfiguration.qml:90
+#: package/contents/ui/main.qml:148
+#, kde-format
+msgid "Show in history"
+msgstr "Tarixçədə göstərmək"
+
+#: package/contents/ui/ApplicationConfiguration.qml:101
+#, kde-format
+msgid "Show notification badges"
+msgstr "Bildiriş nişanlarını göstərmək"
+
+#: package/contents/ui/ApplicationConfiguration.qml:119
+#, kde-format
+msgid "Configure Events…"
+msgstr "Hadisələri tənzimləmək..."
+
+#: package/contents/ui/ApplicationConfiguration.qml:130
+#, kde-format
+msgid ""
+"This application does not support configuring notifications on a per-event "
+"basis."
+msgstr "Bu tətbiq hər hadisəyə aid bildirişləri tənzimləyi dəstəkləmir."
+
+#: package/contents/ui/main.qml:18
+#, kde-format
+msgid "This module lets you manage application and system notifications."
+msgstr ""
+"Bu modul tətbiqlərinizin və sisteminizin bildirişlərini idarə etmənizə imkan "
+"verir."
+
+#: package/contents/ui/main.qml:42
+#, kde-format
+msgid ""
+"Could not find a 'Notifications' widget, which is required for displaying "
+"notifications. Make sure that it is enabled either in your System Tray or as "
+"a standalone widget."
+msgstr ""
+"Bildirişləri göstərmək üçün tələb olunan \"Bildirişlər\" vidjeti tapılmadı. "
+"Onun, Sistem treyində və ya bir müstəqil vidjet kimi aktiv edildiyindən əmin "
+"olun."
+
+#: package/contents/ui/main.qml:53
+#, kde-format
+msgctxt "Vendor and product name"
+msgid "Notifications are currently provided by '%1 %2' instead of Plasma."
+msgstr "Bildirişlər hazırda Plasma ilə deyil, \"%1 %2\" ilə təqdim edilir."
+
+#: package/contents/ui/main.qml:57
+#, kde-format
+msgid "Notifications are currently not provided by Plasma."
+msgstr "Bildirişlər hazırda Plasma ilə təqdim edilmir."
+
+#: package/contents/ui/main.qml:64
+#, kde-format
+msgid "Do Not Disturb mode:"
+msgstr "\"Narahat etmə\" rejimi:"
+
+#: package/contents/ui/main.qml:65
+#, kde-format
+msgctxt "Do not disturb when screens are mirrored"
+msgid "Enable when screens are mirrored"
+msgstr "Ekran çevrildiyində aktiv etmək"
+
+#: package/contents/ui/main.qml:77
+#, kde-format
+msgctxt "Do not disturb while screen sharing"
+msgid "Enable while screen sharing"
+msgstr "Ekran paylaşıldığında aktiv etmək"
+
+#: package/contents/ui/main.qml:95
+#, kde-format
+msgctxt "Turn do not disturb mode on/off with keyboard shortcut"
+msgid "Toggle with:"
+msgstr "Bununla dəyişdir:"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Critical notifications:"
+msgstr "Kritik bildirişlər:"
+
+#: package/contents/ui/main.qml:110
+#, kde-format
+msgid "Show in Do Not Disturb mode"
+msgstr "\"Narahat etməyin\" rejimində göstərmək"
+
+#: package/contents/ui/main.qml:122
+#, kde-format
+msgid "Normal notifications:"
+msgstr "Normal bildirişlər:"
+
+#: package/contents/ui/main.qml:123
+#, kde-format
+msgid "Show over full screen windows"
+msgstr "Tam ekran pəncərələrdə göstərmək"
+
+#: package/contents/ui/main.qml:135
+#, kde-format
+msgid "Low priority notifications:"
+msgstr "Az əhəmiyyətli bildirişlər:"
+
+#: package/contents/ui/main.qml:136
+#, kde-format
+msgid "Show popup"
+msgstr "Sürüşüb çıxan pəncərələri göstərmək"
+
+#: package/contents/ui/main.qml:170
+#, kde-format
+msgid "Popup:"
+msgstr "Sürüşüb çıxan pəncərələr:"
+
+#: package/contents/ui/main.qml:171
+#, kde-format
+msgctxt "Popup position near notification plasmoid"
+msgid "Show near notification icon"
+msgstr "Bildiriş nişanının yanında göstərmək"
+
+#: package/contents/ui/main.qml:208
+#, kde-format
+msgid "Choose Custom Position…"
+msgstr "Fərdi mövqe seçin..."
+
+#: package/contents/ui/main.qml:217 package/contents/ui/main.qml:241
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "%1saniyə"
+msgstr[1] "%1saniyə"
+
+#: package/contents/ui/main.qml:226
+#, kde-format
+msgctxt "Part of a sentence like, 'Hide popup after n seconds'"
+msgid "Hide after:"
+msgstr "Bundan sonra gizlətmək:"
+
+#: package/contents/ui/main.qml:258
+#, kde-format
+msgid "Application progress:"
+msgstr "Tətbiqin gedişi:"
+
+#: package/contents/ui/main.qml:259 package/contents/ui/main.qml:303
+#, kde-format
+msgid "Show in task manager"
+msgstr "Tapşırıq menecerində göstərmək"
+
+#: package/contents/ui/main.qml:271
+#, kde-format
+msgctxt "Show application jobs in notification widget"
+msgid "Show in notifications"
+msgstr "Bildirişlərdə göstərmək"
+
+#: package/contents/ui/main.qml:285
+#, kde-format
+msgctxt "Keep application job popup open for entire duration of job"
+msgid "Keep popup open during progress"
+msgstr "Şürüşərək üzə çıxan pəncərələri işin gedişatı zamanı açıq tutmaq"
+
+#: package/contents/ui/main.qml:302
+#, kde-format
+msgid "Notification badges:"
+msgstr "Bildiriş nişanları:"
+
+#: package/contents/ui/main.qml:318
+#, kde-format
+msgid "Applications:"
+msgstr "Tətbiqlər:"
+
+#: package/contents/ui/main.qml:319
+#, kde-format
+msgid "Configure…"
+msgstr "Tənzimləmək..."
+
+#: package/contents/ui/PopupPositionPage.qml:15
+#, kde-format
+msgid "Popup Position"
+msgstr "Sürüşərək üzə çıxan pəncərənin mövqeyi"
+
+#: package/contents/ui/SourcesPage.qml:19
+#, kde-format
+msgid "Application Settings"
+msgstr "Tətbiq Ayarları"
+
+#: package/contents/ui/SourcesPage.qml:91
+#, kde-format
+msgid "Applications"
+msgstr "Tətbiqlər"
+
+#: package/contents/ui/SourcesPage.qml:92
+#, kde-format
+msgid "System Services"
+msgstr "Sistem xidmətləri"
+
+#: package/contents/ui/SourcesPage.qml:130
+#, kde-format
+msgid "No application or event matches your search term."
+msgstr "Axtarışınıza uyğun tətbiq və ya hadisə yoxdur."
+
+#: package/contents/ui/SourcesPage.qml:150
+#, kde-format
+msgid ""
+"Select an application from the list to configure its notification settings "
+"and behavior."
+msgstr ""
+"Bildirişlərini və davranışlarını tənzimləmək üçün tətbiqi siyahıdan seçin."
+
+#: sourcesmodel.cpp:363
+#, kde-format
+msgid "Other Applications"
+msgstr "Digər tətbiqlər"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Xəyyam Qocayev"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "xxmn77@gmail.com"
+
+#~ msgid "Notifications"
+#~ msgstr "Bildirişlər"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Kai Uwe Broulik"
+
+#~ msgid "Show critical notifications"
+#~ msgstr "Kritik bildirişləri göstərmək"
+
+#~ msgid "Always keep on top"
+#~ msgstr "Həmişə ön planda tutmaq"

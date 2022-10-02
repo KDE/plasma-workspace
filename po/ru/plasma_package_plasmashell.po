@@ -1,0 +1,1111 @@
+# translation of libplasma.po to Russian
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Nick Shaforostoff <shaforostoff@kde.ru>, 2007, 2008, 2009.
+# Albert R. Valiev <a.valiev@drweb.com>, 2008.
+# Albert R. Valiev <darkstar@altlinux.ru>, 2008.
+# Leonid Kanter <leon@asplinux.ru>, 2008.
+# Andrey Cherepanov <skull@kde.ru>, 2008, 2009.
+# Nick Shaforostoff <shafff@ukr.net>, 2009.
+# Alexander Potashev <aspotashev@gmail.com>, 2010, 2011, 2014, 2015.
+# Alexander Lakhin <exclusion@gmail.com>, 2013.
+# Yuri Efremov <yur.arh@gmail.com>, 2013.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: libplasma\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-22 00:46+0000\n"
+"PO-Revision-Date: 2022-02-11 12:51+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.08.3\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+# BUGME: what is "furniture"? Is it OK to have identical descriptions for two directories "applet" and "configuration"? --aspotashev
+#: shellpackage.cpp:26 shellpackage.cpp:27
+#, kde-format
+msgid "Applets furniture"
+msgstr "Расстановка виджетов"
+
+#: shellpackage.cpp:28
+#, kde-format
+msgid "Explorer UI for adding widgets"
+msgstr "Пользовательский интерфейс выбора виджета"
+
+#: shellpackage.cpp:29
+#, kde-format
+msgid "User interface for the views that will show containments"
+msgstr "Пользовательский интерфейс для обзора контейнеров"
+
+#: shellpackage.cpp:37
+#, kde-format
+msgid "Default layout file"
+msgstr "Стандартная схема расположения виджетов"
+
+#: shellpackage.cpp:38
+#, kde-format
+msgid "Default plugins for containments, containmentActions, etc."
+msgstr ""
+"Стандартные модули для контейнеров, наборов действий для контейнеров и т.п."
+
+#: shellpackage.cpp:43
+#, kde-format
+msgid "Error message shown when an applet fails to load"
+msgstr "Диалог сообщения об ошибке при неудачной попытке загрузки виджета"
+
+#: shellpackage.cpp:44
+#, kde-format
+msgid "QML component that shows an applet in a popup"
+msgstr "Компонент на QML для показа виджета во всплывающем окне"
+
+#: shellpackage.cpp:48
+#, kde-format
+msgid ""
+"Compact representation of an applet when collapsed in a popup, for instance "
+"as an icon. Applets can override this component."
+msgstr ""
+"Компактное представление виджета, свёрнутого из всплывающего окна, например "
+"— в значок. Виджеты могут заменить этот компонент."
+
+#: shellpackage.cpp:53
+#, kde-format
+msgid "QML component for the configuration dialog for applets"
+msgstr "Компонент на QML для диалога настройки виджета"
+
+#: shellpackage.cpp:56
+#, kde-format
+msgid "QML component for the configuration dialog for containments"
+msgstr "Компонент на QML для диалога настройки контейнера"
+
+# BUGME: panel configuration UI does not look like a normal "окно", how to say it better in Russian? --aspotashev
+#: shellpackage.cpp:57
+#, kde-format
+msgid "Panel configuration UI"
+msgstr "Окно настройки панели"
+
+#: shellpackage.cpp:60
+#, kde-format
+msgid "QML component for choosing an alternate applet"
+msgstr "Компонент на QML для выбора взаимозаменяемых виджетов"
+
+#: shellpackage.cpp:63
+#, kde-format
+msgid "QML component for the configuration dialog of containments"
+msgstr "Компонент на QML для диалога настройки контейнера"
+
+# BUGME: widgets explorer does not look like a normal "окно", how to say it better in Russian? --aspotashev
+#: shellpackage.cpp:66
+#, kde-format
+msgid "Widgets explorer UI"
+msgstr "Окно добавления виджета"
+
+#: shellpackage.cpp:70
+#, kde-format
+msgid ""
+"A UI for writing, loading and running desktop scripts in the current live "
+"session"
+msgstr ""
+"Интерфейс для написания, загрузки и выполнения сценариев в запущенном сеансе "
+"оболочки Plasma"
+
+#~ msgid "OK"
+#~ msgstr "ОК"
+
+#~ msgid "Cancel"
+#~ msgstr "Отмена"
+
+#~ msgid "Script initialization failed"
+#~ msgstr "Ошибка открытия скрипта"
+
+#~ msgid "Unknown"
+#~ msgstr "Неизв."
+
+#~ msgid "Activate %1 Widget"
+#~ msgstr "Сделать виджет «%1» активным"
+
+#~ msgctxt "%1 is the name of the applet"
+#~ msgid "Remove this %1"
+#~ msgstr "Удалить виджет «%1»"
+
+#~ msgctxt "%1 is the name of the applet"
+#~ msgid "%1 Settings"
+#~ msgstr "Настроить виджет «%1»"
+
+#~ msgid "Lock Widgets"
+#~ msgstr "Заблокировать виджеты"
+
+#~ msgid "Unlock Widgets"
+#~ msgstr "Разблокировать виджеты"
+
+#~ msgid "Whether or not to create an on-disk cache for the theme."
+#~ msgstr "Создавать ли на диске кэш для темы."
+
+#~ msgid ""
+#~ "The maximum size of the on-disk Theme cache in kilobytes. Note that these "
+#~ "files are sparse files, so the maximum size may not be used. Setting a "
+#~ "larger size is therefore often quite safe."
+#~ msgstr ""
+#~ "Максимальный размер кэша темы на диске в килобайтах. Кэш хранится в "
+#~ "разреженных файлах, и на диске может быть не использован указанный "
+#~ "максимальный объём. Поэтому увеличение этого параметра обычно безопасно."
+
+#~ msgid "Accessibility"
+#~ msgstr "Специальные возможности"
+
+#~ msgid "Application Launchers"
+#~ msgstr "Запуск приложений"
+
+#~ msgid "Astronomy"
+#~ msgstr "Астрономия"
+
+#~ msgid "Date and Time"
+#~ msgstr "Дата и время"
+
+#~ msgid "Development Tools"
+#~ msgstr "Средства разработки"
+
+#~ msgid "Education"
+#~ msgstr "Образование"
+
+#~ msgid "Environment and Weather"
+#~ msgstr "Погода"
+
+#~ msgid "Examples"
+#~ msgstr "Примеры"
+
+#~ msgid "File System"
+#~ msgstr "Файловая система"
+
+#~ msgid "Fun and Games"
+#~ msgstr "Игры и развлечения"
+
+#~ msgid "Graphics"
+#~ msgstr "Графика"
+
+#~ msgid "Language"
+#~ msgstr "Лингвистика"
+
+#~ msgid "Mapping"
+#~ msgstr "Картография"
+
+#~ msgid "Miscellaneous"
+#~ msgstr "Разное"
+
+#~ msgid "Multimedia"
+#~ msgstr "Мультимедиа"
+
+#~ msgid "Online Services"
+#~ msgstr "Интернет-службы"
+
+#~ msgid "Productivity"
+#~ msgstr "Офис"
+
+#~ msgid "System Information"
+#~ msgstr "Сведения о системе"
+
+#~ msgid "Utilities"
+#~ msgstr "Утилиты"
+
+#~ msgid "Windows and Tasks"
+#~ msgstr "Окна и задачи"
+
+#~ msgctxt "misc category"
+#~ msgid "Miscellaneous"
+#~ msgstr "Разное"
+
+# BUGME: %2 -> %1 --aspotashev
+#~ msgid "The %2 widget did not define which ScriptEngine to use."
+#~ msgstr ""
+#~ "Для виджета %2 не указано, какой язык программирования и программный "
+#~ "интерфейс (API) он использует."
+
+#~ msgctxt "Package file, name of the widget"
+#~ msgid "Could not open the %1 package required for the %2 widget."
+#~ msgstr "Не удалось открыть пакет «%1», необходимый для виджета «%2»."
+
+#~ msgctxt ""
+#~ "API or programming language the widget was written in, name of the widget"
+#~ msgid "Could not create a %1 ScriptEngine for the %2 widget."
+#~ msgstr "Не удалось создать движок %1, необходимый для виджета «%2»."
+
+# BUGME: how long this message can be? --aspotashev
+#~ msgid "Alternatives..."
+#~ msgstr "Взаимозаменяемые виджеты..."
+
+#~ msgctxt "@title:window %1 is the name of the containment"
+#~ msgid "Remove %1"
+#~ msgstr "Удалить виджет «%1»"
+
+#~ msgctxt "%1 is the name of the containment"
+#~ msgid "Do you really want to remove this %1?"
+#~ msgstr "Удалить виджет «%1»?"
+
+#~ msgid "Widget Settings"
+#~ msgstr "Настроить виджет"
+
+#~ msgid "Remove this Widget"
+#~ msgstr "Удалить виджет"
+
+#~ msgid "Run the Associated Application"
+#~ msgstr "Запустить соответствующее приложение"
+
+#, fuzzy
+#~| msgid "Open Widget"
+#~ msgid "Open with %1"
+#~ msgstr "Открыть виджет"
+
+#~ msgid "Remove this Panel"
+#~ msgstr "Удалить панель"
+
+#~ msgid "Remove this Activity"
+#~ msgstr "Удалить комнату"
+
+#~ msgid "Activity Settings"
+#~ msgstr "Настроить комнату"
+
+#~ msgid "Add Widgets..."
+#~ msgstr "Добавить виджеты..."
+
+#~ msgid "Could not find requested component: %1"
+#~ msgstr "Невозможно найти компонент %1"
+
+#~ msgid "Could not create package root directory: %1"
+#~ msgstr "Не удалось создать корневой каталог пакета: %1"
+
+#~ msgid "No such file: %1"
+#~ msgstr "Нет такого файла: %1"
+
+#~ msgid "Could not open package file, unsupported archive format: %1 %2"
+#~ msgstr "Не удалось открыть пакет %1: неподдерживаемый формат архива %2"
+
+#~ msgid "Could not open package file: %1"
+#~ msgstr "Не удалось открыть пакет: %1"
+
+#~ msgid "No metadata file in package: %1"
+#~ msgstr "Нет файла метаданных в пакете: %1"
+
+#~ msgid "Package plugin name not specified: %1"
+#~ msgstr "В пакете не указано имя модуля: %1"
+
+#~ msgid "Package plugin name %1 contains invalid characters"
+#~ msgstr "Имя модуля «%1», указанное в пакете, содержит недопустимые символы"
+
+#~ msgid "%1 already exists"
+#~ msgstr "Файл или каталог %1 уже существует"
+
+#~ msgid "Could not move package to destination: %1"
+#~ msgstr "Не удалось переместить пакет в следующий каталог: %1"
+
+#~ msgid "Could not copy package to destination: %1"
+#~ msgstr "Не удалось скопировать пакет в следующий каталог: %1"
+
+#~ msgid "Could not create local service directory: %1"
+#~ msgstr "Не удалось создать локальный каталог службы: %1"
+
+#~ msgid ""
+#~ "Could not register package as service (this is not necessarily fatal): %1"
+#~ msgstr ""
+#~ "Не удалось зарегистрировать пакет как службу (эта ошибка не всегда имеет "
+#~ "серьёзные последствия): %1"
+
+#~ msgid "%1 does not exist"
+#~ msgstr "%1 не существует"
+
+#~ msgid "Could not delete package from: %1"
+#~ msgstr "Ошибка удаления пакета из: %1"
+
+#~ msgid "Main Script File"
+#~ msgstr "Основной файл скрипта"
+
+#~ msgid "Images"
+#~ msgstr "Изображения"
+
+#~ msgid "Themed Images"
+#~ msgstr "Изображения тем"
+
+#~ msgid "Configuration Definitions"
+#~ msgstr "Определения параметров"
+
+#~ msgid "User Interface"
+#~ msgstr "Пользовательский интерфейс"
+
+#~ msgid "Data Files"
+#~ msgstr "Файлы данных"
+
+#~ msgid "Executable Scripts"
+#~ msgstr "Исполняемые скрипты"
+
+#~ msgid "Translations"
+#~ msgstr "Переводы"
+
+# Another translation "Файл описания страниц диалога настройки" has poorer readability --aspotashev
+#~ msgid "Configuration UI pages model"
+#~ msgstr "Файл, описывающий страницы диалога настройки"
+
+#~ msgid "Configuration XML file"
+#~ msgstr "Файл настройки в XML"
+
+#~ msgid "Service Descriptions"
+#~ msgstr "Описания служб"
+
+#~ msgid "Images for dialogs"
+#~ msgstr "Изображения для диалогов"
+
+#~ msgid "Generic dialog background"
+#~ msgstr "Фон стандартных диалогов"
+
+#~ msgid "Theme for the logout dialog"
+#~ msgstr "Тема экрана выхода из системы"
+
+#~ msgid "Wallpaper packages"
+#~ msgstr "Пакеты с обоями"
+
+#~ msgid "Images for widgets"
+#~ msgstr "Изображения для виджетов"
+
+#~ msgid "Background image for widgets"
+#~ msgstr "Фоновое изображение для виджетов"
+
+#~ msgid "Analog clock face"
+#~ msgstr "Циферблат аналоговых часов"
+
+#~ msgid "Background image for panels"
+#~ msgstr "Фоновое изображение для панелей"
+
+#~ msgid "Background for graphing widgets"
+#~ msgstr "Фоновое изображение для диаграмм"
+
+#~ msgid "Background image for tooltips"
+#~ msgstr "Фоновое изображение для подсказок"
+
+#~ msgid "Opaque images for dialogs"
+#~ msgstr "Непрозрачные изображения для диалогов"
+
+#~ msgid "Opaque generic dialog background"
+#~ msgstr "Непрозрачный фон для стандартных диалогов"
+
+#~ msgid "Opaque theme for the logout dialog"
+#~ msgstr "Непрозрачная тема экрана выхода из системы"
+
+#~ msgid "Opaque images for widgets"
+#~ msgstr "Непрозрачные изображения для виджетов"
+
+#~ msgid "Opaque background image for panels"
+#~ msgstr "Непрозрачное фоновое изображение для панелей"
+
+#~ msgid "Opaque background image for tooltips"
+#~ msgstr "Непрозрачное фоновое изображение для подсказок"
+
+#~ msgid "Low color images for dialogs"
+#~ msgstr "Изображения с малым количеством цветов для диалогов"
+
+#~ msgid "Low color generic dialog background"
+#~ msgstr "Фон с малым количеством цветов для стандартных диалогов"
+
+#~ msgid "Low color theme for the logout dialog"
+#~ msgstr "Тема с малым количеством цветов для экрана выхода из системы"
+
+#~ msgid "Low color background image for widgets"
+#~ msgstr "Фоновое изображение для виджетов с малым количеством цветов"
+
+#~ msgid "Low color analog clock face"
+#~ msgstr "Циферблат аналоговых часов с малым количеством цветов"
+
+#~ msgid "Low color background image for panels"
+#~ msgstr "Фоновое изображение с малым количеством цветов для панелей"
+
+#~ msgid "Low color background for graphing widgets"
+#~ msgstr "Фоновое изображение с малым количеством цветов для диаграмм"
+
+#~ msgid "Low color background image for tooltips"
+#~ msgstr "Фоновое изображение с малым количеством цветов для подсказок"
+
+#~ msgid "KColorScheme configuration file"
+#~ msgstr "Файл схемы цветов"
+
+#~ msgid ""
+#~ "Sharing a widget on the network allows you to access this widget from "
+#~ "another computer as a remote control."
+#~ msgstr ""
+#~ "Открытие удалённого доступа к виджету позволяет работать с ним на других "
+#~ "компьютерах."
+
+#~ msgid "Share this widget on the network"
+#~ msgstr "Разрешить удалённый доступ к этому виджету"
+
+#~ msgid "Allow everybody to freely access this widget"
+#~ msgstr "Разрешить свободный доступ для всех"
+
+#~ msgctxt "Error message, tried to start an invalid service"
+#~ msgid "Invalid (null) service, can not perform any operations."
+#~ msgstr "Ошибка при использовании службы."
+
+#~ msgid "Plasma Package Manager"
+#~ msgstr "Управление пакетами Plasma"
+
+#~ msgctxt "Do not translate <path>"
+#~ msgid "Generate a SHA1 hash for the package at <path>"
+#~ msgstr "Создать хэш SHA1 для пакета в <path>"
+
+#~ msgid "For install or remove, operates on packages installed for all users."
+#~ msgstr ""
+#~ "Установка, просмотр и удаление пакетов Plasma для всех пользователей."
+
+#~ msgctxt ""
+#~ "theme, wallpaper, etc. are keywords, but they may be translated, as both "
+#~ "versions are recognized by the application (if translated, should be same "
+#~ "as messages with 'package type' context below)"
+#~ msgid ""
+#~ "The type of package, e.g. theme, wallpaper, plasmoid, dataengine, runner, "
+#~ "layout-template, etc."
+#~ msgstr ""
+#~ "Тип пакета, например, тема (theme), обои (wallpaper), виджет (plasmoid), "
+#~ "источник данных (dataengine), расширение поиска (runner), шаблон "
+#~ "размещения (layout-template) и так далее."
+
+#~ msgctxt "Do not translate <path>"
+#~ msgid "Install the package at <path>"
+#~ msgstr "Установить пакет в <path>"
+
+# BUGME: developers are wrong: <name> and <path> should be translated, but it should be done in sync with translation of the same placeholder in command line options, e.g.
+# "  -u, --upgrade <path>      Обновить пакет в <path>" -> "  -u, --upgrade <путь>      Обновить пакет в <путь>" --aspotashev
+#~ msgctxt "Do not translate <name>"
+#~ msgid "Show information of package <name>"
+#~ msgstr "Показать информацию о пакете <name>"
+
+#~ msgctxt "Do not translate <path>"
+#~ msgid "Upgrade the package at <path>"
+#~ msgstr "Обновить пакет в <path>"
+
+#~ msgid "List installed packages"
+#~ msgstr "Список установленных пакетов"
+
+#~ msgid "List all known package types that can be installed"
+#~ msgstr "Список всех доступных для установки типов пакетов"
+
+#~ msgctxt "Do not translate <name>"
+#~ msgid "Remove the package named <name>"
+#~ msgstr "Удалить установленный пакет <name>"
+
+#~ msgid ""
+#~ "Absolute path to the package root. If not supplied, then the standard "
+#~ "data directories for this KDE session will be searched instead."
+#~ msgstr ""
+#~ "Путь к корневому каталогу установленных пакетов. Если не указан, будет "
+#~ "использован стандартный каталог данных KDE."
+
+#~ msgid "Failed to generate a Package hash for %1"
+#~ msgstr "Ошибка создания хэша пакета для %1"
+
+#~ msgid "SHA1 hash for Package at %1: '%2'"
+#~ msgstr "Хэш SHA1 для пакета в %1: «%2»"
+
+#~ msgctxt "package type"
+#~ msgid "wallpaper"
+#~ msgstr "обои"
+
+#~ msgctxt "package type"
+#~ msgid "plasmoid"
+#~ msgstr "виджет"
+
+#~ msgctxt "package type"
+#~ msgid "package"
+#~ msgstr "пакет"
+
+#~ msgctxt "package type"
+#~ msgid "theme"
+#~ msgstr "тема"
+
+#~ msgctxt "package type"
+#~ msgid "dataengine"
+#~ msgstr "источник_данных"
+
+#~ msgctxt "package type"
+#~ msgid "runner"
+#~ msgstr "пускатель"
+
+#~ msgctxt "package type"
+#~ msgid "wallpaperplugin"
+#~ msgstr "модуль_обоев"
+
+#~ msgctxt "package type"
+#~ msgid "lookandfeel"
+#~ msgstr "оформление"
+
+#~ msgctxt "package type"
+#~ msgid "shell"
+#~ msgstr "оболочка"
+
+#~ msgctxt "package type"
+#~ msgid "layout-template"
+#~ msgstr "шаблон_размещения"
+
+#~ msgctxt "package type"
+#~ msgid "kwineffect"
+#~ msgstr "графический_эффект"
+
+#~ msgctxt "package type"
+#~ msgid "windowswitcher"
+#~ msgstr "переключатель_окон"
+
+#~ msgctxt "package type"
+#~ msgid "kwinscript"
+#~ msgstr "сценарий_kwin"
+
+#~ msgid "Could not find a suitable installer for package of type %1"
+#~ msgstr "Не удалось найти модуль установки для пакета типа «%1»"
+
+#~ msgid ""
+#~ "Could not load installer for package of type %1. Error reported was: %2"
+#~ msgstr ""
+#~ "Не удалось запустить модуль установки для пакета типа «%1». Ошибка: %2"
+
+#~ msgid "Listing service types: %1"
+#~ msgstr "Список типов служб: %1"
+
+#~ msgid "Error: Plugin %1 is not installed."
+#~ msgstr "Ошибка: модуль «%1» не установлен."
+
+#~ msgctxt ""
+#~ "No option was given, this is the error message telling the user he needs "
+#~ "at least one, do not translate install, remove, upgrade nor list"
+#~ msgid "One of install, remove, upgrade or list is required."
+#~ msgstr "Необходимо указать одну из команд install, remove, upgrade или list"
+
+#~ msgid "Error: Can't find plugin metadata: %1"
+#~ msgstr "Ошибка: не удалось найти метаданные модуля «%1»"
+
+#~ msgid "Showing info for package: %1"
+#~ msgstr "Сведения о пакете %1:"
+
+#~ msgid "      Name : %1"
+#~ msgstr "      Название: %1"
+
+#~ msgid "   Comment : %1"
+#~ msgstr "   Комментарий: %1"
+
+#~ msgid "    Plugin : %1"
+#~ msgstr "        Модуль: %1"
+
+#~ msgid "    Author : %1"
+#~ msgstr "         Автор: %1"
+
+#~ msgid "      Path : %1"
+#~ msgstr "          Путь: %1"
+
+#~ msgctxt ""
+#~ "The user entered conflicting options packageroot and global, this is the "
+#~ "error message telling the user he can use only one"
+#~ msgid ""
+#~ "The packageroot and global options conflict each other, please select "
+#~ "only one."
+#~ msgstr ""
+#~ "Путь к корневому каталогу пакета конфликтует с глобальными параметрами. "
+#~ "Выберите один вариант."
+
+#~ msgid "Addon Name"
+#~ msgstr "Название дополнения"
+
+#~ msgid "Service Type"
+#~ msgstr "Тип службы"
+
+#~ msgid "Path"
+#~ msgstr "Путь"
+
+#~ msgid "Type Argument"
+#~ msgstr "Название для аргументов"
+
+#~ msgid "Package types that are installable with this tool:"
+#~ msgstr ""
+#~ "С помощью этого инструмента можно установить пакеты следующих типов:"
+
+#~ msgid "Built in:"
+#~ msgstr "Встроенная поддержка:"
+
+#~ msgid "DataEngine"
+#~ msgstr "Источник данных"
+
+#~ msgid "Layout Template"
+#~ msgstr "Шаблон размещения"
+
+#~ msgid "Look and Feel"
+#~ msgstr "Оформление"
+
+#~ msgid "Package"
+#~ msgstr "Пакет"
+
+#~ msgid "Plasmoid"
+#~ msgstr "Виджет"
+
+#~ msgid "Runner"
+#~ msgstr "Модуль KRunner"
+
+#~ msgid "Shell"
+#~ msgstr "Оболочка"
+
+#~ msgid "Theme"
+#~ msgstr "Тема"
+
+#~ msgid "Wallpaper Images"
+#~ msgstr "Изображение обоев"
+
+#~ msgid "Animated Wallpaper"
+#~ msgstr "Анимированные обои"
+
+#~ msgid "KWin Effect"
+#~ msgstr "Эффект KWin"
+
+#~ msgid "KWin Window Switcher"
+#~ msgstr "Переключатель окон для KWin"
+
+#~ msgid "KWin Script"
+#~ msgstr "Сценарий KWin"
+
+#~ msgid "Provided by plugins:"
+#~ msgstr "Поддерживается модулями:"
+
+#~ msgid "Provided by .desktop files:"
+#~ msgstr "Поддерживается файлами .desktop:"
+
+#~ msgid "Successfully upgraded %1"
+#~ msgstr "Пакет обновлён: %1"
+
+#~ msgid "Successfully installed %1"
+#~ msgstr "Пакет установлен: %1"
+
+#~ msgid "Error: Installation of %1 failed: %2"
+#~ msgstr "Ошибка установки пакета %1: %2"
+
+#~ msgid "Upgrading package from file: %1"
+#~ msgstr "Обновление пакета из файла: %1"
+
+#~ msgid "Successfully uninstalled %1"
+#~ msgstr "Пакет удалён: %1"
+
+#~ msgid "Error: Uninstallation of %1 failed: %2"
+#~ msgstr "Ошибка удаления пакета %1: %2"
+
+#~ msgid "Error loading QML file: %1"
+#~ msgstr "Ошибка загрузки файла QML: %1"
+
+#~ msgid "Error loading Applet: package inexistent. %1"
+#~ msgstr "Ошибка загрузки виджета: пакет не существует. %1"
+
+#~ msgid "%1 Settings"
+#~ msgstr "Настроить виджет «%1»"
+
+#~ msgid "Default settings for theme, etc."
+#~ msgstr "Стандартные параметры темы и т.п."
+
+#~ msgid "Preview Images"
+#~ msgstr "Изображения для предварительного просмотра"
+
+#~ msgid "Preview for the Login Manager"
+#~ msgstr "Предварительный просмотр экрана входа в систему"
+
+#~ msgid "Preview for the Lock Screen"
+#~ msgstr "Предварительный просмотр заблокированного экрана"
+
+#~ msgid "Preview for the Userswitcher"
+#~ msgstr "Предварительный просмотр переключателя пользователей"
+
+#~ msgid "Preview for the Virtual Desktop Switcher"
+#~ msgstr "Предварительный просмотр переключателя рабочих столов"
+
+#~ msgid "Preview for Splash Screen"
+#~ msgstr "Предварительный просмотр загрузочного экрана"
+
+#~ msgid "Preview for KRunner"
+#~ msgstr "Предварительный просмотр диалога поиска и запуска"
+
+#~ msgid "Preview for the Window Decorations"
+#~ msgstr "Предварительный просмотр оформления окон"
+
+#~ msgid "Preview for Window Switcher"
+#~ msgstr "Предварительный просмотр переключателя окон"
+
+#~ msgid "Login Manager"
+#~ msgstr "Экран входа в систему"
+
+#~ msgid "Main Script for Login Manager"
+#~ msgstr "Главный сценарий экрана входа в систему"
+
+#~ msgid "Logout Dialog"
+#~ msgstr "Диалог завершения работы"
+
+#~ msgid "Main Script for Logout Dialog"
+#~ msgstr "Главный сценарий диалога завершения работы"
+
+#~ msgid "Screenlocker"
+#~ msgstr "Блокировщик экрана"
+
+#~ msgid "Main Script for Lock Screen"
+#~ msgstr "Главный сценарий блокировщика экрана"
+
+#~ msgid "UI for fast user switching"
+#~ msgstr "Переключатель пользователей"
+
+#~ msgid "Main Script for User Switcher"
+#~ msgstr "Главный сценарий переключателя пользователей"
+
+#~ msgid "Virtual Desktop Switcher"
+#~ msgstr "Переключатель рабочих столов"
+
+#~ msgid "Main Script for Virtual Desktop Switcher"
+#~ msgstr "Главный сценарий переключателя рабочих столов"
+
+# BUGME: please clarify how they look like and where they are used --aspotashev
+#~ msgid "On-Screen Display Notifications"
+#~ msgstr "Всплывающие уведомления"
+
+# BUGME: please clarify how they look like and where they are used --aspotashev
+#~ msgid "Main Script for On-Screen Display Notifications"
+#~ msgstr "Главный сценарий всплывающих уведомлений"
+
+#~ msgid "Splash Screen"
+#~ msgstr "Загрузочный экран"
+
+#~ msgid "Main Script for Splash Screen"
+#~ msgstr "Главный сценарий загрузочного экрана"
+
+#~ msgid "KRunner UI"
+#~ msgstr "Диалог поиска и запуска"
+
+#~ msgid "Main Script KRunner"
+#~ msgstr "Главный сценарий диалога поиска и запуска"
+
+#~ msgid "Window Decoration"
+#~ msgstr "Оформление окон"
+
+#~ msgid "Main Script for Window Decoration"
+#~ msgstr "Главный сценарий оформления окон"
+
+#~ msgid "Window Switcher"
+#~ msgstr "Переключатель окон"
+
+#~ msgid "Main Script for Window Switcher"
+#~ msgstr "Главный сценарий переключателя окон"
+
+#~ msgid "Fetching file type..."
+#~ msgstr "Получение типа файла..."
+
+#~ msgid "Widgets"
+#~ msgstr "Виджеты"
+
+#~ msgid "Icon"
+#~ msgstr "Значок"
+
+#~ msgid "Wallpaper"
+#~ msgstr "Обои"
+
+#~ msgctxt "%1 is the name of the containment"
+#~ msgid "%1 Options"
+#~ msgstr "Настроить виджет «%1»"
+
+#~ msgid "animation() takes one argument"
+#~ msgstr "Функция animation() принимает один аргумент"
+
+#~ msgid "%1 is not a known animation type"
+#~ msgstr "Неизвестный тип анимации «%1»"
+
+#~ msgid "Unable to load the widget"
+#~ msgstr "Не удалось загрузить виджет"
+
+#~ msgid "Panel"
+#~ msgstr "Панель"
+
+#~ msgid "Unknown Widget"
+#~ msgstr "Неизвестный виджет"
+
+#~ msgid "Configure..."
+#~ msgstr "Настроить..."
+
+#~ msgid "&OK"
+#~ msgstr "&ОК"
+
+#~ msgid "&Yes"
+#~ msgstr "&Да"
+
+#~ msgid "&No"
+#~ msgstr "&Нет"
+
+#~ msgid "&Cancel"
+#~ msgstr "О&тмена"
+
+#~ msgid "Settings"
+#~ msgstr "Настройка"
+
+#~ msgctxt "@title:window"
+#~ msgid "%1 Settings"
+#~ msgstr "Настройка виджета «%1»"
+
+#~ msgid "Keyboard Shortcut"
+#~ msgstr "Комбинация клавиш"
+
+#~ msgctxt ""
+#~ "%1 is the name of a plasmoid, %2 the name of the machine that plasmoid is "
+#~ "published on"
+#~ msgid "%1 on %2"
+#~ msgstr "%1 на %2"
+
+#~ msgid "This object could not be created."
+#~ msgstr "Не удалось создать объект."
+
+#~ msgid ""
+#~ "This object could not be created for the following reason:<p><b>%1</b></p>"
+#~ msgstr "Не удалось создать объект по следующей причине:<p><b>%1</b></p>"
+
+#~ msgid "Next Widget"
+#~ msgstr "Следующий виджет"
+
+#~ msgid "Previous Widget"
+#~ msgstr "Предыдущий виджет"
+
+#~ msgid "This plugin needs to be configured"
+#~ msgstr "Это действие необходимо настроить"
+
+#~ msgid "Unknown ContainmentActions"
+#~ msgstr "Неизвестный набор действий для контейнера"
+
+#~ msgid "Shortcut Settings"
+#~ msgstr "Настроить комбинации клавиш"
+
+#~ msgid "Unnamed"
+#~ msgstr "Без имени"
+
+#~ msgid "Show this group."
+#~ msgstr "Показать эту группу"
+
+#~ msgid "Hide this group."
+#~ msgstr "Скрыть эту группу"
+
+#~ msgid "Expand this widget"
+#~ msgstr "Развернуть виджет"
+
+#~ msgid "Collapse this widget"
+#~ msgstr "Свернуть виджет"
+
+#~ msgid "Reattach"
+#~ msgstr "Встроить"
+
+#~ msgid "Close"
+#~ msgstr "Закрыть"
+
+#~ msgid "This system does not support OpenGL widgets."
+#~ msgstr "Система не поддерживает виджеты OpenGL."
+
+#~ msgid "Your machine does not support OpenGL widgets."
+#~ msgstr "Компьютер не поддерживает виджеты OpenGL."
+
+#~ msgctxt "A non-functional package"
+#~ msgid "Invalid"
+#~ msgstr "Пакет с ошибкой"
+
+#~ msgid ""
+#~ "There was an error attempting to exec the associated application with "
+#~ "this widget."
+#~ msgstr "Не удалось запустить соответствующее этому виджету приложение."
+
+#~ msgctxt "Error message, access to a remote service failed."
+#~ msgid "Invalid token."
+#~ msgstr "Недопустимый идентификатор подключения."
+
+#~ msgctxt "Error message, access to a remote service failed."
+#~ msgid "Matching password required."
+#~ msgstr "Неправильный пароль."
+
+#~ msgctxt "Error message, access to a remote service failed."
+#~ msgid "Access denied."
+#~ msgstr "Доступ запрещён."
+
+#~ msgid "Unknown error."
+#~ msgstr "Неизвестная ошибка."
+
+#~ msgid "Main Config UI File"
+#~ msgstr "Основной файл диалога настройки"
+
+#~ msgid "Animation scripts"
+#~ msgstr "Сценарии анимации"
+
+#~ msgid "Recommended wallpaper file"
+#~ msgstr "Рекомендованные обои"
+
+#~ msgid ""
+#~ "Enter a password below. Enter the same password on the device to which "
+#~ "you are trying to connect."
+#~ msgstr ""
+#~ "Введите пароль ниже. На компьютере, к которому вы подключаетесь, должен "
+#~ "быть введён такой же пароль."
+
+#~ msgid "Allow this user access to any service"
+#~ msgstr "Разрешить этому пользователю доступ ко всем службам"
+
+#~ msgid "Remember this user"
+#~ msgstr "Запомнить этого пользователя"
+
+#~ msgid "Incoming connection request"
+#~ msgstr "Запрос на подключение"
+
+#~ msgid "Connect with remote widget"
+#~ msgstr "Подключение к удалённому виджету"
+
+#~ msgid "Job no longer valid, operation is not enabled."
+#~ msgstr "Недопустимая задача: операция не разрешена."
+
+#~ msgid "Job no longer valid, invalid parameters."
+#~ msgstr "Недопустимая задача: недопустимые параметры."
+
+#~ msgid "Timeout."
+#~ msgstr "Время ожидания истекло."
+
+#~ msgid "Server sent an invalid plasmoid package."
+#~ msgstr "Не удалось открыть пакет с виджетом, полученный от сервера."
+
+#~ msgid "You are about to open a remote widget on your system.<br>"
+#~ msgstr ""
+#~ "Вы собираетесь открыть удалённо доступный виджет на этом компьютере.<br>"
+
+#~ msgid "<table width=\"100%\">"
+#~ msgstr "<table width=\"100%\">"
+
+#~ msgid "<tr><td align=\"right\"><b>Name:</b></td><td>&nbsp; %1</td></tr>"
+#~ msgstr ""
+#~ "<tr><td align=\"right\"><b>Название:</b></td><td>&nbsp; %1</td></tr>"
+
+#~ msgid ""
+#~ "<tr><td align=\"right\"><b>Description:</b></td><td>&nbsp; %1</td></tr>"
+#~ msgstr ""
+#~ "<tr><td align=\"right\"><b>Описание:</b></td><td>&nbsp; %1</td></tr>"
+
+#~ msgid ""
+#~ "<tr><td align=\"right\"><b>Author:</b></td><td>&nbsp; %1 &lt;%2&gt;</td></"
+#~ "tr>"
+#~ msgstr ""
+#~ "<tr><td align=\"right\"><b>Автор:</b></td><td>&nbsp; %1 &lt;%2&gt;</td></"
+#~ "tr>"
+
+#~ msgid "<tr><td align=\"right\"><b>Server:</b></td><td>&nbsp; %1</td></tr>"
+#~ msgstr "<tr><td align=\"right\"><b>Сервер:</b></td><td>&nbsp; %1</td></tr>"
+
+#~ msgid "</table>"
+#~ msgstr "</table>"
+
+#~ msgid "<br><br>Are you sure you want to open this widget on your system?"
+#~ msgstr "<br><br>Открыть виджет на этом компьютере?"
+
+#~ msgid "Remote Widget"
+#~ msgstr "Подключение к удалённому виджету"
+
+#~ msgid "Reject Widget"
+#~ msgstr "Не открывать"
+
+#~ msgid "User rejected"
+#~ msgstr "Пользователь запретил открытие этого виджета"
+
+#~ msgid "Timeout"
+#~ msgstr "Время ожидания истекло."
+
+#~ msgid ""
+#~ "Your system does not provide support for the 'remote widgets' feature. "
+#~ "Access Failed."
+#~ msgstr ""
+#~ "Ваша система не поддерживает удалённый доступ к виджетам на других "
+#~ "компьютерах."
+
+#~ msgid "Allow everybody access to %1."
+#~ msgstr "Разрешить всем доступ к %1."
+
+#~ msgid "Deny everybody access to %1"
+#~ msgstr "Запретить всем доступ к %1."
+
+#~ msgid "Allow %1 access to all services."
+#~ msgstr "Разрешить пользователю %1 доступ ко всем службам."
+
+#~ msgid "Deny %1 access to all services."
+#~ msgstr "Запретить пользователю %1 доступ ко всем службам."
+
+#~ msgid "Allow access to %1, by %2."
+#~ msgstr "Разрешить пользователю %2 доступ к %1."
+
+#~ msgid "Deny access to %1, by %2."
+#~ msgstr "Запретить пользователю %2 доступ к %1."
+
+#~ msgid "Allow access to %1, by %2?"
+#~ msgstr "Разрешить пользователю %2 доступ к %1?"
+
+#~ msgid "You have requested access to the %1 hosted at %2."
+#~ msgstr "Вы запросили доступ к %1 на %2."
+
+#~ msgid "search term"
+#~ msgstr "поисковый запрос"
+
+#~ msgid "Unknown Wallpaper"
+#~ msgstr "Неизвестные обои"
+
+#~ msgid "Share"
+#~ msgstr "Удалённый доступ"
+
+#~ msgid "Ok"
+#~ msgstr "ОК"
+
+#~ msgid "Yes"
+#~ msgstr "Да"
+
+#~ msgid "No"
+#~ msgstr "Нет"
+
+#~ msgid "This menu needs to be configured"
+#~ msgstr "Это меню необходимо настроить"
+
+#~ msgid "Tool Box"
+#~ msgstr "Инструменты Plasma"
+
+#~ msgid ""
+#~ "Click to access configuration options and controls, or to add more "
+#~ "widgets to the %1."
+#~ msgstr ""
+#~ "Нажмите здесь для настройки рабочего пространства Plasma или добавления "
+#~ "новых виджетов в %1."
+
+#~ msgid "Panel Tool Box"
+#~ msgstr "Настройка панели"
+
+#~ msgid ""
+#~ "Click to access size, location and hiding controls as well as to add new "
+#~ "widgets to the panel."
+#~ msgstr ""
+#~ "Нажмите здесь для настройки панели и добавления на неё новых виджетов."
+
+#~ msgid "%1 Activity"
+#~ msgstr "Комната: %1"
+
+#~ msgid "Unknown Activity"
+#~ msgstr "Неизвестная комната"
+
+#~ msgid "Zoom In"
+#~ msgstr "Приблизить"
+
+#~ msgid "Installation Failed"
+#~ msgstr "Ошибка установки"
+
+#~ msgid "Zoom Out"
+#~ msgstr "Отдалить"
+
+#~ msgid "Appearance Settings"
+#~ msgstr "Внешний вид"
+
+#~ msgid "Background image for plasmoids"
+#~ msgstr "Фоновое изображение для виджетов"
+
+#~ msgid "Low color background image for plasmoids"
+#~ msgstr "Фоновое изображение с малым количеством цветов для виджетов"

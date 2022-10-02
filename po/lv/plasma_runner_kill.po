@@ -1,0 +1,101 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"PO-Revision-Date: 2009-12-05 23:06+0200\n"
+"Last-Translator: Viesturs Zarins <viesturs.zarins@mii.lu.lv>\n"
+"Language-Team: Latvian <locale@laka.lv>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+
+#: killrunner.cpp:30
+#, kde-format
+msgid "Send SIGTERM"
+msgstr "Sūtīt SIGTERM"
+
+#: killrunner.cpp:32
+#, kde-format
+msgid "Send SIGKILL"
+msgstr "Sūtīt SIGKILL"
+
+#: killrunner.cpp:51 killrunner_config.cpp:51 killrunner_config.cpp:77
+#, kde-format
+msgid "kill"
+msgstr "Nokaut"
+
+#: killrunner.cpp:57
+#, kde-format
+msgid "Terminate running applications whose names match the query."
+msgstr "Nokauj darbojošās programmas, kuru nosaukumi atbilst vaicājumam."
+
+#: killrunner.cpp:120
+#, kde-format
+msgid "Terminate %1"
+msgstr "Nokaut %1"
+
+#: killrunner.cpp:121
+#, kde-format
+msgid "Process ID: %1"
+msgstr ""
+
+#: killrunner_config.cpp:32
+#, kde-format
+msgid "CPU usage"
+msgstr "CPU izmantošana"
+
+#: killrunner_config.cpp:33
+#, kde-format
+msgid "inverted CPU usage"
+msgstr "Invertēta CPU izmantošana"
+
+#: killrunner_config.cpp:34
+#, kde-format
+msgid "nothing"
+msgstr "nekas"
+
+#. i18n: ectx: property (title), widget (QGroupBox, main)
+#: killrunner_config.ui:30
+#, kde-format
+msgid "Kill Applications Config"
+msgstr "Programmu nokaušanas konfigurācija"
+
+#. i18n: ectx: property (text), widget (QCheckBox, useTriggerWord)
+#: killrunner_config.ui:39
+#, kde-format
+msgid "&Use trigger word"
+msgstr "&Lietot aktivizēšanas vārdu"
+
+#. i18n: ectx: property (text), widget (QLabel, label_trigger)
+#: killrunner_config.ui:51
+#, kde-format
+msgid "&Trigger word:"
+msgstr "&Aktivizēšanas vārds:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_sorting)
+#: killrunner_config.ui:72
+#, kde-format
+msgid "&Sort by"
+msgstr "&Kārtot pēc"
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, sorting)
+#: killrunner_config.ui:82
+#, kde-format
+msgid "It is not sure, that this will take effect"
+msgstr "Nav garantijas, ka šis iedarbosies"
+
+#~ msgid ""
+#~ "Process ID: %1\n"
+#~ "Running as user: %2"
+#~ msgstr ""
+#~ "Procesa ID: %1\n"
+#~ "Darbojas kā lietotājs: %2"

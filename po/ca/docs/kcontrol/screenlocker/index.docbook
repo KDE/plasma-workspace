@@ -1,0 +1,85 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Catalan  "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="screenlocker" lang="&language;">
+<articleinfo>
+<title
+>Bloqueig de la pantalla</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+&traductor.Antoni.Bella; 
+</authorgroup>
+<!--FIXME code in plasma/kscreenlocker - docbook in plasma/plasma-workspace -->
+<date
+>2 de juliol de 2020</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Arranjament del sistema</keyword>
+<keyword
+>bloqueig de la pantalla</keyword>
+<keyword
+>Bloqueig de la pantalla</keyword>
+</keywordset>
+</articleinfo>
+<para
+>Emprant aquest mòdul, podreu determinar quant de temps haurà de passar abans que s'activi el bloquejador de la pantalla, configurar el període de gràcia per a desbloquejar la pantalla sense contrasenya i triar l'aparença del bloqueig de pantalla.</para>
+
+<para
+>A la part superior hi ha una casella de selecció per a tenir blocada la pantalla <guilabel
+>Bloqueja automàticament la pantalla</guilabel
+>, i un botó de selecció de valors que determina el període d'inactivitat abans d'iniciar-lo. En aquest quadre podeu introduir qualsevol nombre positiu de minuts.</para>
+
+<para
+>La casella de selecció <guilabel
+>Després de despertar-se</guilabel
+> pot utilitzar-se per a canviar el bloqueig de pantalla de l'escriptori després d'activar o desactivar la suspensió del sistema.</para>
+
+<para
+>A sota hi ha un botó de selecció de valors anomenat <guilabel
+>Permet el desbloqueig sense contrasenya durant</guilabel
+>. Quan premeu una tecla o feu clic amb un botó del ratolí per a desactivar el bloquejador de la pantalla abans del temps establert al botó de selecció de valors i tornar al vostre treball, no haureu d'introduir una contrasenya. La contrasenya utilitzada és la mateixa que heu emprat per iniciar la sessió al sistema.</para>
+
+<para
+>El bloqueig de la pantalla manualment provoca immediatament la protecció amb contrasenya.</para>
+
+<para
+>Podeu definir una drecera per a bloquejar la pantalla utilitzant el camp <guilabel
+>Drecera de teclat</guilabel
+>.</para>
+
+<para
+>La drecera predeterminada <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>L</keycap
+></keycombo
+> proporciona una forma ràpida per a bloquejar la pantalla manualment.</para>
+
+<para
+>Si voleu canviar el fons per a l'estat bloquejat, premeu el botó <guibutton
+>Configura</guibutton
+> que es troba al costat de l'etiqueta <guilabel
+>Aparença</guilabel
+>. Després podreu canviar el <guilabel
+>Tipus de fons de pantalla</guilabel
+>.</para>
+
+<para
+>Podeu seleccionar un <guilabel
+>Color llis</guilabel
+> com a tipus de fons de pantalla.</para>
+
+<para
+>De manera alternativa, podeu utilitzar una sola imatge o un passi de diapositives amb imatges d'una carpeta o carregar nous fons de pantalla des d'Internet.</para>
+
+</article>

@@ -1,0 +1,312 @@
+# Translation for plasmashell.po to Euskara/Basque (eu).
+# Copyright (C) 2017-2018, Free Software Foundation.
+# Copyright (C) 2019-2022, This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+#
+# Translators:
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2017, 2018, 2020, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-22 00:47+0000\n"
+"PO-Revision-Date: 2022-09-19 22:00+0200\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 22.08.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Iñigo Salvador Azurmendi"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "xalba@ni.eus"
+
+#: currentcontainmentactionsmodel.cpp:201
+#, kde-format
+msgid "Configure Mouse Actions Plugin"
+msgstr "Konfiguratu sagu-ekintzen plugina"
+
+#: main.cpp:88
+#, kde-format
+msgid "Plasma"
+msgstr "Plasma"
+
+#: main.cpp:88
+#, kde-format
+msgid "Plasma Shell"
+msgstr "Plasma Shell"
+
+#: main.cpp:100
+#, kde-format
+msgid "Enable QML Javascript debugger"
+msgstr "Gaitu QML Javascript araztailea"
+
+#: main.cpp:103
+#, kde-format
+msgid "Do not restart plasma-shell automatically after a crash"
+msgstr "Ez berrabiarazi plasma-shell automatikoki kraskatu ondoren"
+
+#: main.cpp:106
+#, kde-format
+msgid "Force loading the given shell plugin"
+msgstr "Behartu adierazitako shell plugina zamatzea"
+
+#: main.cpp:111
+#, kde-format
+msgid ""
+"Load plasmashell as a standalone application, needs the shell-plugin option "
+"to be specified"
+msgstr ""
+"Zamatu plasmashell aplikazio autonomo gisa, shell-plugin aukera zehaztea "
+"behar du"
+
+#: main.cpp:113
+#, kde-format
+msgid "Replace an existing instance"
+msgstr "Ordezkatu aurrez dagoen instantzia bat"
+
+#: main.cpp:116
+#, kde-format
+msgid ""
+"Enables test mode and specifies the layout javascript file to set up the "
+"testing environment"
+msgstr ""
+"Proba modua gaitzen du eta probarako ingurunea ezartzeko javascript "
+"fitxategiaren diseinua zehazten du"
+
+#: main.cpp:117
+#, kde-format
+msgid "file"
+msgstr "fitxategia"
+
+#: main.cpp:121
+#, kde-format
+msgid "Lists the available options for user feedback"
+msgstr ""
+"Erabiltzaileen erreakzioak bidaltzeko aukera erabilgarriak zerrendatzen ditu"
+
+#: main.cpp:219
+#, kde-format
+msgid "Plasma Failed To Start"
+msgstr "Plasma abiatzea huts egin du"
+
+#: main.cpp:220
+#, kde-format
+msgid ""
+"Plasma is unable to start as it could not correctly use OpenGL 2 or software "
+"fallback\n"
+"Please check that your graphic drivers are set up correctly."
+msgstr ""
+"Plasma ezin da abiatu ezin duelako zuzen erabili OpenGL 2 edo erreserbako "
+"softwarea.\n"
+"Egiaztatu zure grafikoen gidariak zuzen ezarrita daudela."
+
+#: osd.cpp:54
+#, kde-format
+msgctxt "OSD informing that the system is muted, keep short"
+msgid "Audio Muted"
+msgstr "Audioa isilduta"
+
+#: osd.cpp:72
+#, kde-format
+msgctxt "OSD informing that the microphone is muted, keep short"
+msgid "Microphone Muted"
+msgstr "Mikrofonoa isilduta"
+
+#: osd.cpp:88
+#, kde-format
+msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
+msgid "%1 Muted"
+msgstr "%1 isilduta"
+
+#: osd.cpp:110
+#, kde-format
+msgctxt "touchpad was enabled, keep short"
+msgid "Touchpad On"
+msgstr "Ukimen-sagua piztuta"
+
+#: osd.cpp:112
+#, kde-format
+msgctxt "touchpad was disabled, keep short"
+msgid "Touchpad Off"
+msgstr "Ukimen-sagua itzalita"
+
+#: osd.cpp:119
+#, kde-format
+msgctxt "wireless lan was enabled, keep short"
+msgid "Wifi On"
+msgstr "Wifi piztuta"
+
+#: osd.cpp:121
+#, kde-format
+msgctxt "wireless lan was disabled, keep short"
+msgid "Wifi Off"
+msgstr "Wifi itzalita"
+
+#: osd.cpp:128
+#, kde-format
+msgctxt "Bluetooth was enabled, keep short"
+msgid "Bluetooth On"
+msgstr "Bluetooth piztuta"
+
+#: osd.cpp:130
+#, kde-format
+msgctxt "Bluetooth was disabled, keep short"
+msgid "Bluetooth Off"
+msgstr "Bluetooth itzalita"
+
+#: osd.cpp:137
+#, kde-format
+msgctxt "mobile internet was enabled, keep short"
+msgid "Mobile Internet On"
+msgstr "Mugikorreko Internet piztuta"
+
+#: osd.cpp:139
+#, kde-format
+msgctxt "mobile internet was disabled, keep short"
+msgid "Mobile Internet Off"
+msgstr "Mugikorreko Internet itzalita"
+
+#: osd.cpp:147
+#, kde-format
+msgctxt ""
+"on screen keyboard was enabled because physical keyboard got unplugged, keep "
+"short"
+msgid "On-Screen Keyboard Activated"
+msgstr "Pantailako teklatua aktibatuta"
+
+#: osd.cpp:150
+#, kde-format
+msgctxt ""
+"on screen keyboard was disabled because physical keyboard was plugged in, "
+"keep short"
+msgid "On-Screen Keyboard Deactivated"
+msgstr "Pantailako teklatua desaktibatuta"
+
+#: shellcontainmentconfig.cpp:129
+#, kde-format
+msgid "Unknown %1"
+msgstr "Ezezaguna %1"
+
+#: shellcorona.cpp:170 shellcorona.cpp:172
+#, kde-format
+msgid "Show Desktop"
+msgstr "Erakutsi mahaigaina"
+
+#: shellcorona.cpp:172
+#, kde-format
+msgid "Hide Desktop"
+msgstr "Ezkutatu mahaigaina"
+
+#: shellcorona.cpp:188
+#, kde-format
+msgid "Show Activity Switcher"
+msgstr "Erakutsi jarduera aldatzailea"
+
+#: shellcorona.cpp:199
+#, kde-format
+msgid "Stop Current Activity"
+msgstr "Gelditu uneko jarduera"
+
+#: shellcorona.cpp:207
+#, kde-format
+msgid "Switch to Previous Activity"
+msgstr "Aldatu aurreko jarduerara"
+
+#: shellcorona.cpp:215
+#, kde-format
+msgid "Switch to Next Activity"
+msgstr "Aldatu hurrengo jarduerara"
+
+#: shellcorona.cpp:231
+#, kde-format
+msgid "Activate Task Manager Entry %1"
+msgstr "Aktibatu Ataza Kudeatzaileko %1 sarrera"
+
+#: shellcorona.cpp:257
+#, kde-format
+msgid "Manage Desktops And Panels..."
+msgstr "Kudeatu mahaigainak eta panelak..."
+
+#: shellcorona.cpp:278
+#, kde-format
+msgid "Move keyboard focus between panels"
+msgstr "Mugitu teklatuaren arreta panelen artean"
+
+#: shellcorona.cpp:1761
+#, kde-format
+msgid "Add Panel"
+msgstr "Gehitu panela"
+
+#: shellcorona.cpp:1798
+#, kde-format
+msgctxt "Creates an empty containment (%1 is the containment name)"
+msgid "Empty %1"
+msgstr "%1 hutsik"
+
+#: softwarerendernotifier.cpp:27
+#, kde-format
+msgid "Software Renderer In Use"
+msgstr "Errendatzeko softwarea erabilita"
+
+#: softwarerendernotifier.cpp:28
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Software Renderer In Use"
+msgstr "Errendatzeko softwarea erabilita"
+
+#: softwarerendernotifier.cpp:29
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Rendering may be degraded"
+msgstr "Errendatzea degradatu daiteke"
+
+#: softwarerendernotifier.cpp:39
+#, kde-format
+msgid "Never show again"
+msgstr "Inoiz ez berriz erakutsi"
+
+#: userfeedback.cpp:36
+#, kde-format
+msgid "Panel Count"
+msgstr "Panel kopurua"
+
+#: userfeedback.cpp:40
+#, kde-format
+msgid "Counts the panels"
+msgstr "Panelak zenbatzen ditu"
+
+#~ msgid "Unable to load script file: %1"
+#~ msgstr "Ezin da script fitxategia zamatu: %1"
+
+#~ msgid "Activities..."
+#~ msgstr "Jarduerak..."
+
+#~ msgctxt "Fatal error message body"
+#~ msgid ""
+#~ "All shell packages missing.\n"
+#~ "This is an installation issue, please contact your distribution"
+#~ msgstr ""
+#~ "Shell pakete guztiak falta dira.\n"
+#~ "Instalazioaren arazo bat da hau, jarri zure banatzailearekin harremanean"
+
+#~ msgctxt "Fatal error message title"
+#~ msgid "Plasma Cannot Start"
+#~ msgstr "Plasma ezin da abiatu"
+
+#~ msgctxt "Fatal error message body"
+#~ msgid "Shell package %1 cannot be found"
+#~ msgstr "%1 shell paketea ezin da aurkitu"
+
+#~ msgid "Main Script File"
+#~ msgstr "Script nagusiaren fitxategia"

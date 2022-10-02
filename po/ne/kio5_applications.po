@@ -1,0 +1,37 @@
+# translation of kio_settings.po to Nepali
+# Nabin Gautam <nabin@mpp.org.np>, 2006, 2007.
+# Ishwor sharma <sharmabeeshwar@gmail.com>, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: kio_settings\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-08 00:48+0000\n"
+"PO-Revision-Date: 2007-08-20 10:57+0545\n"
+"Last-Translator: Nabin Gautam <nabin@mpp.org.np>\n"
+"Language-Team: Nepali <info@mpp.org.np>\n"
+"Language: ne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n !=1\n"
+"\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: kio_applications.cpp:122
+#, kde-format
+msgid "Applications"
+msgstr "अनुप्रयोग"
+
+#: kio_applications.cpp:122
+#, kde-format
+msgid "Programs"
+msgstr "कार्यक्रम"
+
+#: kio_applications.cpp:131
+#, fuzzy, kde-format
+#| msgid "Unknown settings folder"
+msgid "Unknown application folder"
+msgstr "अज्ञात सेटिङ फोल्डर"
+
+#~ msgid "Settings"
+#~ msgstr "सेटिङ"

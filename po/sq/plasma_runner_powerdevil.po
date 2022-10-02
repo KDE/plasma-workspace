@@ -1,0 +1,192 @@
+# Albanian translation for kdebase-workspace
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the kdebase-workspace package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kdebase-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"PO-Revision-Date: 2010-03-18 03:37+0000\n"
+"Last-Translator: Vilson Gjeci <vilsongjeci@gmail.com>\n"
+"Language-Team: Albanian <sq@li.org>\n"
+"Language: sq\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2011-05-06 01:56+0000\n"
+"X-Generator: Launchpad (build 12959)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: PowerDevilRunner.cpp:32
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "suspend"
+msgstr "pezullo"
+
+#: PowerDevilRunner.cpp:34
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to ram"
+msgstr "në ram"
+
+#: PowerDevilRunner.cpp:36
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "sleep"
+msgstr "gjumë"
+
+#: PowerDevilRunner.cpp:38
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "hibernate"
+msgstr "hiberno"
+
+#: PowerDevilRunner.cpp:40
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to disk"
+msgstr "në disk"
+
+#: PowerDevilRunner.cpp:42 PowerDevilRunner.cpp:44 PowerDevilRunner.cpp:69
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "dim screen"
+msgstr "dim screen"
+
+#: PowerDevilRunner.cpp:53
+#, kde-format
+msgid ""
+"Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
+"activated"
+msgstr ""
+"Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
+"activated"
+
+#: PowerDevilRunner.cpp:57
+#, kde-format
+msgid "Suspends the system to RAM"
+msgstr "Pezullon sistemin në ram"
+
+#: PowerDevilRunner.cpp:61
+#, kde-format
+msgid "Suspends the system to disk"
+msgstr "Pezullon sistemin në disk"
+
+#: PowerDevilRunner.cpp:65
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "screen brightness"
+msgctxt ""
+"Note this is a KRunner keyword, <> is a placeholder and should be at the end"
+msgid "screen brightness <percent value>"
+msgstr "ndriçimi i ekranit"
+
+#: PowerDevilRunner.cpp:67
+#, fuzzy, no-c-format, kde-format
+#| msgid ""
+#| "Lists screen brightness options or sets it to the brightness defined by :"
+#| "q:; e.g. screen brightness 50 would dim the screen to 50% maximum "
+#| "brightness"
+msgid ""
+"Lists screen brightness options or sets it to the brightness defined by the "
+"search term; e.g. screen brightness 50 would dim the screen to 50% maximum "
+"brightness"
+msgstr ""
+"Lists screen brightness options or sets it to the brightness defined by :q:; "
+"e.g. screen brightness 50 would dim the screen to 50% maximum brightness"
+
+#: PowerDevilRunner.cpp:95
+#, fuzzy, kde-format
+#| msgid "Set Brightness to %1"
+msgid "Set Brightness to %1%"
+msgstr "Vendos ndriçimin në %1"
+
+#: PowerDevilRunner.cpp:104
+#, kde-format
+msgid "Dim screen totally"
+msgstr "Ul ndriçimin e ekranit tërësisht"
+
+#: PowerDevilRunner.cpp:112
+#, kde-format
+msgid "Dim screen by half"
+msgstr "Ul ndriçimin përgjysëm"
+
+#: PowerDevilRunner.cpp:142
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "sleep"
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "gjumë"
+
+#: PowerDevilRunner.cpp:143
+#, kde-format
+msgid "Suspend to RAM"
+msgstr "Pezullo në RAM"
+
+#: PowerDevilRunner.cpp:148
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "hibernate"
+msgctxt "Suspend to disk"
+msgid "Hibernate"
+msgstr "hiberno"
+
+#: PowerDevilRunner.cpp:149
+#, fuzzy, kde-format
+#| msgid "Suspend to Disk"
+msgid "Suspend to disk"
+msgstr "Pezullo në Disk"
+
+#: PowerDevilRunner.cpp:218
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "screen brightness"
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "screen brightness "
+msgstr "ndriçimi i ekranit"
+
+#: PowerDevilRunner.cpp:220
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "dim screen"
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "dim screen "
+msgstr "dim screen"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "screen brightness"
+#~ msgstr "ndriçimi i ekranit"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "screen brightness %1"
+#~ msgstr "ndriçimi i ekranit %1"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "dim screen %1"
+#~ msgstr "zbeh ekranin %1"
+
+#, fuzzy
+#~| msgctxt "Note this is a KRunner keyword"
+#~| msgid "suspend"
+#~ msgid "Suspend"
+#~ msgstr "pezullo"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "power profile"
+#~ msgstr "profili i tensionit"
+
+#~ msgid "Lists all power profiles and allows them to be activated"
+#~ msgstr "Lists all power profiles and allows them to be activated"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "power profile %1"
+#~ msgstr "profili i tensionit %1"
+
+#~ msgid "Set Profile to '%1'"
+#~ msgstr "Vendose profilin tek '%1'"
+
+#~ msgid "Turn off screen"
+#~ msgstr "Fik ekranin"

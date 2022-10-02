@@ -1,0 +1,390 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Andrej Mernik <andrejm@ubuntu.si>, 2014, 2015, 2016, 2017.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-22 00:47+0000\n"
+"PO-Revision-Date: 2022-09-20 07:32+0200\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+"X-Generator: Lokalize 22.04.1\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Andrej Mernik,Matjaž Jeran"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "andrejm@ubuntu.si,matjaz.jeran@amis.net"
+
+#: currentcontainmentactionsmodel.cpp:201
+#, kde-format
+msgid "Configure Mouse Actions Plugin"
+msgstr "Nastavi vstavek za dejanja miške"
+
+#: main.cpp:88
+#, kde-format
+msgid "Plasma"
+msgstr "Plasma"
+
+#: main.cpp:88
+#, kde-format
+msgid "Plasma Shell"
+msgstr "Lupina za Plasmo"
+
+#: main.cpp:100
+#, kde-format
+msgid "Enable QML Javascript debugger"
+msgstr "Omogoči razhroščevalnik QML Javascript"
+
+#: main.cpp:103
+#, kde-format
+msgid "Do not restart plasma-shell automatically after a crash"
+msgstr "Po sesutju plasma-shell ga ne zaženi znova samodejno"
+
+#: main.cpp:106
+#, kde-format
+msgid "Force loading the given shell plugin"
+msgstr "Vsili nalaganje podanega vstavka lupine"
+
+#: main.cpp:111
+#, kde-format
+msgid ""
+"Load plasmashell as a standalone application, needs the shell-plugin option "
+"to be specified"
+msgstr ""
+"Naloži lupino Plasma kot samostojni program. Zahteva navedeno možnost shell-"
+"plugin"
+
+#: main.cpp:113
+#, kde-format
+msgid "Replace an existing instance"
+msgstr "Zamenjaj obstoječi pojavek"
+
+#: main.cpp:116
+#, kde-format
+msgid ""
+"Enables test mode and specifies the layout javascript file to set up the "
+"testing environment"
+msgstr ""
+"Omogoči preizkusni način in določi datoteko z javascriptom za nastavitev "
+"preizkusnega okolja"
+
+#: main.cpp:117
+#, kde-format
+msgid "file"
+msgstr "datoteka"
+
+#: main.cpp:121
+#, kde-format
+msgid "Lists the available options for user feedback"
+msgstr "Prikaže seznam možnosti za povratne informacije"
+
+#: main.cpp:219
+#, kde-format
+msgid "Plasma Failed To Start"
+msgstr "Plasme ni bilo mogoče začeti"
+
+#: main.cpp:220
+#, kde-format
+msgid ""
+"Plasma is unable to start as it could not correctly use OpenGL 2 or software "
+"fallback\n"
+"Please check that your graphic drivers are set up correctly."
+msgstr ""
+"Plasme ni bilo mogoče pognati, ker ni bilo mogoče pravilno uporabiti OpenGL "
+"2.\n"
+"Preverite, ali so vaši grafični gonilniki pravilno nastavljeni."
+
+#: osd.cpp:54
+#, kde-format
+msgctxt "OSD informing that the system is muted, keep short"
+msgid "Audio Muted"
+msgstr "Zvok utišan"
+
+#: osd.cpp:72
+#, kde-format
+msgctxt "OSD informing that the microphone is muted, keep short"
+msgid "Microphone Muted"
+msgstr "Mikrofon utišan"
+
+#: osd.cpp:88
+#, kde-format
+msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
+msgid "%1 Muted"
+msgstr "%1 utišan"
+
+#: osd.cpp:110
+#, kde-format
+msgctxt "touchpad was enabled, keep short"
+msgid "Touchpad On"
+msgstr "Sledilna pl. vklopljena"
+
+#: osd.cpp:112
+#, kde-format
+msgctxt "touchpad was disabled, keep short"
+msgid "Touchpad Off"
+msgstr "Sledilna pl. izklopljena"
+
+#: osd.cpp:119
+#, kde-format
+msgctxt "wireless lan was enabled, keep short"
+msgid "Wifi On"
+msgstr "Brezžično vklopljeno"
+
+#: osd.cpp:121
+#, kde-format
+msgctxt "wireless lan was disabled, keep short"
+msgid "Wifi Off"
+msgstr "Brezžično izklopljeno"
+
+#: osd.cpp:128
+#, kde-format
+msgctxt "Bluetooth was enabled, keep short"
+msgid "Bluetooth On"
+msgstr "Bluetooth vklopljen"
+
+#: osd.cpp:130
+#, kde-format
+msgctxt "Bluetooth was disabled, keep short"
+msgid "Bluetooth Off"
+msgstr "Bluetooth izklopljen"
+
+#: osd.cpp:137
+#, kde-format
+msgctxt "mobile internet was enabled, keep short"
+msgid "Mobile Internet On"
+msgstr "Mobilni int. vklopljen"
+
+#: osd.cpp:139
+#, kde-format
+msgctxt "mobile internet was disabled, keep short"
+msgid "Mobile Internet Off"
+msgstr "Mobilni int. izklopljen"
+
+#: osd.cpp:147
+#, kde-format
+msgctxt ""
+"on screen keyboard was enabled because physical keyboard got unplugged, keep "
+"short"
+msgid "On-Screen Keyboard Activated"
+msgstr "Zaslonska tipkovnica vklopljena"
+
+#: osd.cpp:150
+#, kde-format
+msgctxt ""
+"on screen keyboard was disabled because physical keyboard was plugged in, "
+"keep short"
+msgid "On-Screen Keyboard Deactivated"
+msgstr "Zaslonska tipkovnica izklopljena"
+
+#: shellcontainmentconfig.cpp:129
+#, kde-format
+msgid "Unknown %1"
+msgstr "Neznano %1"
+
+#: shellcorona.cpp:170 shellcorona.cpp:172
+#, kde-format
+msgid "Show Desktop"
+msgstr "Pokaži namizje"
+
+#: shellcorona.cpp:172
+#, kde-format
+msgid "Hide Desktop"
+msgstr "Skrij namizje"
+
+#: shellcorona.cpp:188
+#, kde-format
+msgid "Show Activity Switcher"
+msgstr "Prikaži preklopnika dejavnosti"
+
+#: shellcorona.cpp:199
+#, kde-format
+msgid "Stop Current Activity"
+msgstr "Zaustavi trenutno dejavnost"
+
+#: shellcorona.cpp:207
+#, kde-format
+msgid "Switch to Previous Activity"
+msgstr "Preklopi na predhodno dejavnost"
+
+#: shellcorona.cpp:215
+#, kde-format
+msgid "Switch to Next Activity"
+msgstr "Preklopi na naslednjo dejavnost"
+
+#: shellcorona.cpp:231
+#, kde-format
+msgid "Activate Task Manager Entry %1"
+msgstr "Omogoči vnos %1 upravljalnika opravil"
+
+#: shellcorona.cpp:257
+#, kde-format
+msgid "Manage Desktops And Panels..."
+msgstr "Upravljaj namizja in plošče..."
+
+#: shellcorona.cpp:278
+#, kde-format
+msgid "Move keyboard focus between panels"
+msgstr "Prenašaj osredotočenost tipkovnice med ploščami"
+
+#: shellcorona.cpp:1761
+#, kde-format
+msgid "Add Panel"
+msgstr "Dodaj pult"
+
+#: shellcorona.cpp:1798
+#, kde-format
+msgctxt "Creates an empty containment (%1 is the containment name)"
+msgid "Empty %1"
+msgstr "Prazno %1"
+
+#: softwarerendernotifier.cpp:27
+#, kde-format
+msgid "Software Renderer In Use"
+msgstr "Programski izrisovalnik v rabi"
+
+#: softwarerendernotifier.cpp:28
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Software Renderer In Use"
+msgstr "Programski izrisovalnik v rabi"
+
+#: softwarerendernotifier.cpp:29
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Rendering may be degraded"
+msgstr "Izrisovanje je lahko poslabšano"
+
+#: softwarerendernotifier.cpp:39
+#, kde-format
+msgid "Never show again"
+msgstr "Nikoli ne prikaži več"
+
+#: userfeedback.cpp:36
+#, kde-format
+msgid "Panel Count"
+msgstr "Število pultov"
+
+#: userfeedback.cpp:40
+#, kde-format
+msgid "Counts the panels"
+msgstr "Poštej pulte"
+
+#~ msgid "Unable to load script file: %1"
+#~ msgstr "Ni mogoče naložiti skriptne datoteke: %1"
+
+#~ msgid "Activities..."
+#~ msgstr "Dejavnosti ..."
+
+#~ msgctxt "Fatal error message body"
+#~ msgid ""
+#~ "All shell packages missing.\n"
+#~ "This is an installation issue, please contact your distribution"
+#~ msgstr ""
+#~ "Manjkajo vsi lupinski paketi.\n"
+#~ "To je težava z namestitvijo. Stopite v stik z avtorji vaše distribucije"
+
+#~ msgctxt "Fatal error message title"
+#~ msgid "Plasma Cannot Start"
+#~ msgstr "Plasme ni mogoče začeti"
+
+#~ msgctxt "Fatal error message body"
+#~ msgid "Shell package %1 cannot be found"
+#~ msgstr "Lupinskega paketa %1 ni mogoče najti"
+
+#~ msgid "Main Script File"
+#~ msgstr "Glavna skriptna datoteka"
+
+#~ msgid "Force a windowed view for testing purposes"
+#~ msgstr "Vsili okenski prikaz za namene preizkušanja"
+
+#~ msgid "Deprecated, does nothing"
+#~ msgstr "Opuščeno, ne naredi nič"
+
+#~ msgid ""
+#~ "Your graphics hardware does not support OpenGL (ES) 2. Plasma will abort "
+#~ "now."
+#~ msgstr ""
+#~ "Vaša strojna oprema ne podpira OpenGL (ES) 2. Plasma se bo sedaj "
+#~ "prekinila."
+
+#~ msgid "Incompatible OpenGL version detected"
+#~ msgstr "Zaznana nezdružljiva različica OpenGL"
+
+#~ msgid "Recent number of crashes"
+#~ msgstr "Število nedavnih sesutij"
+
+#~ msgid "Show Dashboard"
+#~ msgstr "Pokaži nadzorno ploščo"
+
+#~ msgid "Hide Dashboard"
+#~ msgstr "Skrij nadzorno ploščo"
+
+#~ msgid "Shuts up the output"
+#~ msgstr "Utiša izpis"
+
+#~ msgid "&Execute"
+#~ msgstr "Izv&edi"
+
+#~ msgctxt "Toolbar Button to switch to KWin Scripting Mode"
+#~ msgid "KWin"
+#~ msgstr "KWin"
+
+#~ msgid "Templates"
+#~ msgstr "Predloge"
+
+#~ msgid "Desktop Shell Scripting Console"
+#~ msgstr "Konzola za skriptanje za namizno lupino"
+
+#~ msgid "Editor"
+#~ msgstr "Urejevalnik"
+
+#~ msgid "Load"
+#~ msgstr "Naloži"
+
+#~ msgid "Use"
+#~ msgstr "Uporabi"
+
+#~ msgid "Output"
+#~ msgstr "Izhod"
+
+#~ msgid "Unable to load script file <b>%1</b>"
+#~ msgstr "Ni mogoče naložiti skriptne datoteke <b>%1</b>"
+
+#~ msgid "Save Script File"
+#~ msgstr "Shrani skriptno datoteko"
+
+#~ msgid "Executing script at %1"
+#~ msgstr "Izvajanje skripta v %1"
+
+#~ msgid "Runtime: %1ms"
+#~ msgstr "Izvajalni čas: %1 ms"
+
+#~ msgid "No plugins found, check your installation."
+#~ msgstr "Najdenega ni bilo nobenega vstavka. Preverite namestitev."
+
+#~ msgctxt "About mouse action"
+#~ msgid "About"
+#~ msgstr "O"
+
+#~ msgctxt "Configure mouse action"
+#~ msgid "Configure"
+#~ msgstr "Nastavi"
+
+#~ msgctxt "Remove mouse action"
+#~ msgid "Remove"
+#~ msgstr "Odstrani"

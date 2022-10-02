@@ -1,0 +1,463 @@
+# translation of kcm_desktopthemedetails.po to bosanski
+# Chusslove Illich <caslav.ilic@gmx.net>, 2009, 2010.
+# Dalibor Djuric <dalibor.djuric@mozilla-srbija.org>, 2009.
+# Dalibor Djuric <daliborddjuric@gmail.com>, 2010.
+# KDE 4 <megaribi@epn.ba>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_desktopthemedetails\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"PO-Revision-Date: 2015-01-07 16:08+0100\n"
+"Last-Translator: Samir Ribic <samir.ribic@etf.unsa.ba>\n"
+"Language-Team: bosanski <bs@li.org>\n"
+"Language: bs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Launchpad (build 17341)\n"
+"X-Launchpad-Export-Date: 2015-02-15 05:58+0000\n"
+"X-Associated-UI-Catalogs: plasma\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Get New Themes..."
+msgid "Name of the current Plasma Style"
+msgstr "Dobavi nove teme..."
+
+#: kcm.cpp:108
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: kcm.cpp:119
+#, kde-format
+msgid "Unable to download the theme: %1"
+msgstr ""
+
+#: kcm.cpp:144
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "Tema uspješno instalirana"
+
+#: kcm.cpp:147 kcm.cpp:153
+#, kde-format
+msgid "Theme installation failed."
+msgstr "Instalacija teme neuspjela."
+
+#: kcm.cpp:245
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "This module lets you choose the Plasma style."
+msgstr ""
+
+#: package/contents/ui/main.qml:69
+#, fuzzy, kde-format
+#| msgid "Available themes"
+msgid "All Themes"
+msgstr "Dostupne teme"
+
+#: package/contents/ui/main.qml:70
+#, fuzzy, kde-format
+#| msgid "Theme"
+msgid "Light Themes"
+msgstr "Tema"
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgid "Dark Themes"
+msgstr ""
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "Color scheme compatible"
+msgstr ""
+
+#: package/contents/ui/main.qml:100
+#, fuzzy, kde-format
+#| msgctxt "plasma name"
+#| msgid "Color Scheme"
+msgid "Follows color scheme"
+msgstr "Šema boja"
+
+#: package/contents/ui/main.qml:118
+#, fuzzy, kde-format
+#| msgid "Theme"
+msgid "Edit Theme…"
+msgstr "Tema"
+
+#: package/contents/ui/main.qml:125
+#, kde-format
+msgid "Remove Theme"
+msgstr "Ukloni temu"
+
+#: package/contents/ui/main.qml:132
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Theme"
+msgstr "Ukloni temu"
+
+#: package/contents/ui/main.qml:174
+#, fuzzy, kde-format
+#| msgid "Insta&ll from File"
+msgid "Install from File…"
+msgstr "Insta&liraj iz datoteke"
+
+#: package/contents/ui/main.qml:179
+#, fuzzy, kde-format
+#| msgid "Get New Themes..."
+msgid "Get New Plasma Styles…"
+msgstr "Dobavi nove teme..."
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Open Theme"
+msgstr "Otvori temu"
+
+#: package/contents/ui/main.qml:195
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr "Tematske datoteke (*.zip *.tar.gz *.tar.bz2)"
+
+#: plasma-apply-desktoptheme.cpp:31
+#, kde-format
+msgid ""
+"This tool allows you to set the theme of the current Plasma session, without "
+"accidentally setting it to one that is either not available, or which is "
+"already set."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:35
+#, kde-format
+msgid ""
+"The name of the theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:36
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:49
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:65
+#, kde-format
+msgid "The current Plasma session's theme has been set to %1"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:67
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:75
+#, kde-format
+msgid "You have the following Plasma themes on your system:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Samir Ribić"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "Samir.ribic@etf.unsa.ba"
+
+#, fuzzy
+#~| msgid "Get New Themes..."
+#~ msgid "Plasma Style"
+#~ msgstr "Dobavi nove teme..."
+
+#, fuzzy
+#~| msgid "Get New Themes..."
+#~ msgid "Plasma Styles"
+#~ msgstr "Dobavi nove teme..."
+
+# >> @title:window
+#, fuzzy
+#~| msgid "Remove Desktop Theme"
+#~ msgid "Download New Plasma Styles"
+#~ msgstr "Uklanjanje teme površi"
+
+# >> @title:window
+#, fuzzy
+#~| msgid "Remove Desktop Theme"
+#~ msgid "Configure Desktop Theme"
+#~ msgstr "Uklanjanje teme površi"
+
+#, fuzzy
+#~| msgid "Theme installation failed."
+#~ msgid "Theme removal failed."
+#~ msgstr "Instalacija teme neuspjela."
+
+#~ msgid ""
+#~ "<h1>Desktop Theme</h1>This module allows you to modify the visual "
+#~ "appearance of the desktop."
+#~ msgstr ""
+#~ "<h1>Tema površi</h1>Ovaj modul vam omogućava da izmijenite vizuelni "
+#~ "izgled površi."
+
+#~ msgid "KDE Desktop Theme Module"
+#~ msgstr "KDE‑ov modul za teme površi"
+
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
+#~ msgstr "© 2002, Karol Sved i Danijel Molkentin"
+
+#~ msgid "Theme installation failed. (%1)"
+#~ msgstr "Instalacija teme neuspjela. (%1)"
+
+#~ msgid "Details"
+#~ msgstr "Detalji"
+
+#~ msgctxt "plasma name"
+#~ msgid "Panel Background"
+#~ msgstr "Pozadina panela"
+
+#~ msgctxt "plasma name"
+#~ msgid "Kickoff"
+#~ msgstr "Odskok"
+
+#~ msgctxt "plasma name"
+#~ msgid "Task Items"
+#~ msgstr "Stavke zadataka"
+
+#~ msgctxt "plasma name"
+#~ msgid "Widget Background"
+#~ msgstr "Pozadina grafičke kontrole"
+
+#~ msgctxt "plasma name"
+#~ msgid "Translucent Background"
+#~ msgstr "Prozirna pozadina"
+
+#~ msgctxt "plasma name"
+#~ msgid "Dialog Background"
+#~ msgstr "Pozadina dijaloga"
+
+#~ msgctxt "plasma name"
+#~ msgid "Analog Clock"
+#~ msgstr "Analogni sat"
+
+#~ msgctxt "plasma name"
+#~ msgid "Notes"
+#~ msgstr "Zabilješke"
+
+#~ msgctxt "plasma name"
+#~ msgid "Tooltip"
+#~ msgstr "Savjet"
+
+#~ msgctxt "plasma name"
+#~ msgid "Pager"
+#~ msgstr "Pejdžer"
+
+#~ msgctxt "plasma name"
+#~ msgid "Run Command Dialog"
+#~ msgstr "Dijalog naredbi"
+
+#~ msgctxt "plasma name"
+#~ msgid "Shutdown Dialog"
+#~ msgstr "Dijalog gašenja"
+
+#~ msgctxt "plasma name"
+#~ msgid "Icons"
+#~ msgstr "Ikone"
+
+# >> Placeholder title for a customized theme
+#~ msgid "(Customized)"
+#~ msgstr "(Prilagođena)"
+
+#~ msgid "User customized theme"
+#~ msgstr "Korisnikova prilagođena tema"
+
+#~ msgid ""
+#~ "Theme items have been changed.  Do you still wish remove the \"%1\" theme?"
+#~ msgstr ""
+#~ "Neke stavke teme su izmijenjene. Želite li ipak da uklonite temu „%1“?"
+
+#~ msgid "Removal of the default desktop theme is not allowed."
+#~ msgstr "Nije dozvoljeno ukloniti podrazumijevanu temu površi."
+
+#~ msgid "Are you sure you wish remove the \"%1\" theme?"
+#~ msgstr "Želite li zaista da uklonite temu „%1“?"
+
+#~ msgid ""
+#~ "Please apply theme item changes (with a new theme name) before attempting "
+#~ "to export theme."
+#~ msgstr ""
+#~ "Primijenite izmijenjene stavke teme (s novim imenom za temu) prije "
+#~ "pokušaja da je izvezete."
+
+# >> @title:window
+#~ msgid "Export Desktop Theme"
+#~ msgstr "Izvoz teme površi"
+
+#~ msgid "Export theme to file"
+#~ msgstr "Izvoz teme u datoteku"
+
+#~ msgid "Archive (*.zip)"
+#~ msgstr "Arhiva (*.zip)"
+
+# >> @title:column
+#~ msgid "Theme Item"
+#~ msgstr "Stavka teme"
+
+# >> @title:column
+#~ msgid "Source"
+#~ msgstr "Izvor"
+
+#, fuzzy
+#~| msgid "%1 %2"
+#~ msgctxt ""
+#~ "%1 is the name of the theme, %2 is the type of the element (background, "
+#~ "icon, note, etc)"
+#~ msgid "%1 %2"
+#~ msgstr "%1 %2"
+
+# @item:inlistbox Desktop item source
+#~ msgid "File..."
+#~ msgstr "Iz datoteke..."
+
+# >> @title:window %1 theme item, e.g. "Tooltip"
+#~ msgid "Select File to Use for %1"
+#~ msgstr "Izbor datoteke za %1"
+
+#~ msgid " Author: %1"
+#~ msgstr " Autor: %1"
+
+#~ msgid "Version: %1"
+#~ msgstr "Izdanje: %1"
+
+#~ msgid "Desktop Theme Details"
+#~ msgstr "Detalji teme površi"
+
+#~ msgid "Choose an item and customize it by assigning it a theme"
+#~ msgstr "Izaberite stavku i prilagodite je dodjeljivanjem teme."
+
+#~ msgid ""
+#~ "You can set any theme to any item. The available themes for the item are "
+#~ "in the dropdown box on the right."
+#~ msgstr ""
+#~ "Svakoj stavci možete zadati svaku temu. Dostupne teme za stavku date su u "
+#~ "padajućem spisku desno."
+
+#~ msgid "Enable more options"
+#~ msgstr "Uključi još opcija"
+
+#~ msgid ""
+#~ "This will expand the dialog and give you options to export your custom "
+#~ "theme as well as to remove a theme."
+#~ msgstr ""
+#~ "Ovo će proširiti dijalog i dati vam više opcija za izvoženje posebne "
+#~ "teme, kao i za uklanjanje teme."
+
+#~ msgid "More"
+#~ msgstr "Više"
+
+#~ msgid "Remove the selected theme"
+#~ msgstr "Ukloni izabranu temu"
+
+#~ msgid ""
+#~ "Clicking this button will remove the selected theme. You will be asked "
+#~ "for confirmation."
+#~ msgstr ""
+#~ "Klikom na ovo dugme uklanjate izabranu temu. Tražiće vam se potvrda."
+
+#~ msgid "Save your theme in a zip archive"
+#~ msgstr "Sačuvajte temu u ZIP arhivu."
+
+#~ msgid ""
+#~ "You can save your theme in a zip archive in order to share it with the "
+#~ "community."
+#~ msgstr ""
+#~ "Možete sačuvati svoju temu kao ZIP arhivu da biste je podijelili sa "
+#~ "zajednicom."
+
+#~ msgid "Export Theme to File..."
+#~ msgstr "Izvezi temu u datoteku..."
+
+# >> The nami for a new theme.
+#~ msgid "New theme name:"
+#~ msgstr "Ime nove teme:"
+
+#~ msgid "Custom theme name"
+#~ msgstr "Ime posebne teme"
+
+#~ msgid "Give a name to your custom theme."
+#~ msgstr "Imenujte svoju posebnu temu."
+
+#~ msgid "Author:"
+#~ msgstr "Autor:"
+
+#~ msgid "Custom theme author "
+#~ msgstr "Autor posebne teme. "
+
+#~ msgid "Enter the author name of your custom theme."
+#~ msgstr "Unesite ime autora za svoju posebnu temu."
+
+#~ msgid "Version:"
+#~ msgstr "Izdanje:"
+
+#~ msgid "Custom theme version number"
+#~ msgstr "Broj verzije posebne teme."
+
+#~ msgid "Enter the version number of your custom theme."
+#~ msgstr "Unesite broj verzije za svoju posebnu temu."
+
+#~ msgid "Description:"
+#~ msgstr "Opis:"
+
+#~ msgid "Custom theme description"
+#~ msgstr "Opis posebne teme."
+
+#~ msgid "Enter a description which will explain your custom theme."
+#~ msgstr "Unesite opis koji odslikava vašu posebnu temu."
+
+#~ msgid "Select theme from above to customize"
+#~ msgstr "Izaberite temu odozgo za prilagođavanje"
+
+#~ msgid "Theme Author"
+#~ msgstr "Autor teme"
+
+#~ msgid "Theme Name"
+#~ msgstr "Ime teme"
+
+#~ msgid "Theme Version"
+#~ msgstr "Izdanje teme"
+
+#~ msgid "The theme description goes here..."
+#~ msgstr "Ovdje dođe opis teme..."
+
+#~ msgid ""
+#~ "Choose a start theme in this list then customize some items below. All "
+#~ "less important items not listed below will use this start theme."
+#~ msgstr ""
+#~ "Iz ovog spiska birate temu u kojoj ćete prilagoditi neke od stavki ispod. "
+#~ "Sve manje važne stavke, koje nisu nabrojane ispod, koristiće izabranu "
+#~ "temu."
+
+#~ msgid "Karol Szwed"
+#~ msgstr "Karol Szwed"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"

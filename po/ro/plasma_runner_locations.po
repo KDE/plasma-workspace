@@ -1,0 +1,53 @@
+# Traducerea krunner_locationsrunner.po în Română
+# translation of krunner_locationsrunner to Romanian
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the krunner_locationsrunner package.
+# Laurenţiu Buzdugan <lbuz@rolix.org>, 2008".
+# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner_locationsrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"PO-Revision-Date: 2013-01-30 22:39+0200\n"
+"Last-Translator: Sergiu Bivol <sergiu@ase.md>\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+
+#: locationrunner.cpp:33
+#, kde-format
+msgid ""
+"Finds local directories and files, network locations and Internet sites with "
+"paths matching :q:."
+msgstr ""
+"Găsește dosare și fișiere locale, locuri din rețea și saituri Internet cu "
+"căile ce se potrivesc :q:."
+
+#: locationrunner.cpp:60
+#, kde-format
+msgid "Open %1"
+msgstr "Deschide %1"
+
+#: locationrunner.cpp:78 locationrunner.cpp:82
+#, kde-format
+msgid "Launch with %1"
+msgstr "Lansează cu %1"
+
+#: locationrunner.cpp:88
+#, kde-format
+msgid "Go to %1"
+msgstr "Mergi la %1"
+
+#: locationrunner.cpp:96
+#, kde-format
+msgid "Send email to %1"
+msgstr "Trimite scrisoare către %1"
+
+#~ msgid "Locations"
+#~ msgstr "Locații"

@@ -1,0 +1,1259 @@
+# Translation of klipper.po to Low Saxon
+# Copyright (C) 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
+# Heiko Evermann <heiko@evermann.de>, 2004.
+# Volker Jockheck <volkae@gmx.net>, 2004.
+# Sönke Dibbern <s_dibbern@web.de>, 2004, 2005, 2006, 2007, 2008, 2009, 2014.
+# Manfred Wiese <m.j.wiese@web.de>, 2009, 2010, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: klipper\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-17 00:48+0000\n"
+"PO-Revision-Date: 2014-08-15 14:42+0200\n"
+"Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
+"Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
+"Language: nds\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: configdialog.cpp:80
+#, fuzzy, kde-format
+#| msgid "Selection and Clipboard"
+msgid "Selection and Clipboard:"
+msgstr "Köör un Twischenaflaag"
+
+#: configdialog.cpp:87
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"When text or an area of the screen is highlighted with the mouse or "
+"keyboard, this is the <emphasis>selection</emphasis>. It can be pasted using "
+"the middle mouse button.<nl/><nl/>If the selection is explicitly copied "
+"using a <interface>Copy</interface> or <interface>Cut</interface> action, it "
+"is saved to the <emphasis>clipboard</emphasis>. It can be pasted using a "
+"<interface>Paste</interface> action. <nl/><nl/>When turned on this option "
+"keeps the selection and the clipboard the same, so that any selection is "
+"immediately available to paste by any means. If it is turned off, the "
+"selection may still be saved in the clipboard history (subject to the "
+"options below), but it can only be pasted using the middle mouse button."
+msgstr ""
+
+#: configdialog.cpp:106
+#, fuzzy, kde-format
+#| msgid "Clipboard history"
+msgid "Clipboard history:"
+msgstr "Twischenaflaag-Vörgeschicht"
+
+#: configdialog.cpp:112
+#, fuzzy, kde-format
+#| msgid " entry"
+#| msgid_plural " entries"
+msgctxt "Number of entries"
+msgid " entry"
+msgid_plural " entries"
+msgstr[0] "  Indrag"
+msgstr[1] " Indrääg"
+
+#: configdialog.cpp:131 configdialog.cpp:169
+#, fuzzy, kde-format
+#| msgid "Replay action in history"
+msgid "Always save in history"
+msgstr "Akschoon ut Vörgeschicht nochmaal utföhren"
+
+#: configdialog.cpp:135
+#, fuzzy, kde-format
+#| msgid "Text selection only"
+msgid "Text selection:"
+msgstr "Bloots utsöcht Text"
+
+#: configdialog.cpp:137 configdialog.cpp:175
+#, kde-format
+msgid "Only when explicitly copied"
+msgstr ""
+
+#: configdialog.cpp:142
+#, fuzzy, kde-format
+#| msgid "Really delete entire clipboard history?"
+msgid "Whether text selections are saved in the clipboard history."
+msgstr "Twischenaflaag-Vörgeschicht redig heel leddig maken?"
+
+#: configdialog.cpp:173
+#, fuzzy, kde-format
+#| msgid "Ignore selection"
+msgid "Non-text selection:"
+msgstr "Köör övergahn"
+
+#: configdialog.cpp:180
+#, fuzzy, kde-format
+#| msgid "Replay action in history"
+msgid "Never save in history"
+msgstr "Akschoon ut Vörgeschicht nochmaal utföhren"
+
+#: configdialog.cpp:185
+#, kde-format
+msgid ""
+"Whether non-text selections (such as images) are saved in the clipboard "
+"history."
+msgstr ""
+
+#: configdialog.cpp:250
+#, fuzzy, kde-format
+#| msgid "Timeout for action popups:"
+msgid "Show action popup menu:"
+msgstr "Tietgrenz för't Akschonen-Menü:"
+
+#: configdialog.cpp:260
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"When text that matches an action pattern is selected or is chosen from the "
+"clipboard history, automatically show the popup menu with applicable "
+"actions. If the automatic menu is turned off here, or it is not shown for an "
+"excluded window, then it can be shown by using the <shortcut>%1</shortcut> "
+"key shortcut."
+msgstr ""
+
+#: configdialog.cpp:269
+#, kde-format
+msgid "Exclude Windows..."
+msgstr ""
+
+#: configdialog.cpp:283
+#, fuzzy, kde-format
+#| msgid " second"
+#| msgid_plural " seconds"
+msgctxt "Unit of time"
+msgid " second"
+msgid_plural " seconds"
+msgstr[0] " Sekunn"
+msgstr[1] " Sekunnen"
+
+#: configdialog.cpp:284
+#, kde-format
+msgctxt "No timeout"
+msgid "None"
+msgstr ""
+
+#: configdialog.cpp:293
+#, fuzzy, kde-format
+#| msgctxt "Actions Config"
+#| msgid "Actions"
+msgid "Options:"
+msgstr "Akschonen"
+
+#: configdialog.cpp:307
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The actions shown in the popup menu can be configured on the "
+"<interface>Actions Configuration</interface> page."
+msgstr ""
+
+#: configdialog.cpp:335
+#, kde-format
+msgid "Exclude Windows"
+msgstr ""
+
+#: configdialog.cpp:365
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"When a <interface>match pattern</interface> matches the clipboard contents, "
+"its <interface>commands</interface> appear in the Klipper popup menu and can "
+"be executed."
+msgstr ""
+
+#: configdialog.cpp:374
+#, kde-format
+msgctxt "@title:column"
+msgid "Match pattern and commands"
+msgstr ""
+
+#: configdialog.cpp:374
+#, fuzzy, kde-format
+#| msgid "Description"
+msgctxt "@title:column"
+msgid "Description"
+msgstr "Beschrieven"
+
+#: configdialog.cpp:380
+#, kde-format
+msgid "Add Action..."
+msgstr "Akschoon tofögen..."
+
+#: configdialog.cpp:384
+#, kde-format
+msgid "Edit Action..."
+msgstr "Akschoon bewerken..."
+
+#: configdialog.cpp:389
+#, kde-format
+msgid "Delete Action"
+msgstr "Akschoon wegdoon"
+
+#: configdialog.cpp:396
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"These actions appear in the popup menu which can be configured on the "
+"<interface>Action Menu</interface> page."
+msgstr ""
+
+#: configdialog.cpp:580
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Delete the selected action <resource>%1</resource><nl/>and all of its "
+"commands?"
+msgstr ""
+
+#: configdialog.cpp:581
+#, fuzzy, kde-format
+#| msgid "Delete Action"
+msgid "Confirm Delete Action"
+msgstr "Akschoon wegdoon"
+
+#: configdialog.cpp:610
+#, kde-format
+msgctxt "General Config"
+msgid "General"
+msgstr "Allgemeen"
+
+#: configdialog.cpp:610
+#, kde-format
+msgid "General Configuration"
+msgstr "Allmeen Instellen"
+
+#: configdialog.cpp:611
+#, fuzzy, kde-format
+#| msgctxt "Actions Config"
+#| msgid "Actions"
+msgctxt "Popup Menu Config"
+msgid "Action Menu"
+msgstr "Akschonen"
+
+#: configdialog.cpp:611
+#, fuzzy, kde-format
+#| msgctxt "Actions Config"
+#| msgid "Actions"
+msgid "Action Menu"
+msgstr "Akschonen"
+
+#: configdialog.cpp:612
+#, fuzzy, kde-format
+#| msgid "Actions Configuration"
+msgctxt "Actions Config"
+msgid "Actions Configuration"
+msgstr "Akschonen instellen"
+
+#: configdialog.cpp:612
+#, kde-format
+msgid "Actions Configuration"
+msgstr "Akschonen instellen"
+
+#: configdialog.cpp:615
+#, kde-format
+msgctxt "Shortcuts Config"
+msgid "Shortcuts"
+msgstr "Tastkombinatschonen"
+
+#: configdialog.cpp:615
+#, kde-format
+msgid "Shortcuts Configuration"
+msgstr "Tastkombinatschonen instellen"
+
+#: configdialog.cpp:693
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The action popup will not be shown automatically for these windows, even if "
+"it is enabled. This is because, for example, a web browser may highlight a "
+"URL in the address bar while typing, so the menu would show for every "
+"keystroke.<nl/><nl/>If the action menu appears unexpectedly when using a "
+"particular application, then add it to this list. <link>How to find the name "
+"to enter</link>."
+msgstr ""
+
+#: configdialog.cpp:706
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"The name that needs to be entered here is the WM_CLASS name of the window to "
+"be excluded. To find the WM_CLASS name for a window, in another terminal "
+"window enter the command:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</"
+"icode><nl/><nl/>and click on the window that you want to exclude. The first "
+"name that it displays after the equal sign is the one that you need to enter."
+msgstr ""
+
+#: editactiondialog.cpp:34 editcommanddialog.cpp:90
+#, kde-format
+msgid "Ignore"
+msgstr "Övergahn"
+
+#: editactiondialog.cpp:36
+#, kde-format
+msgid "Replace Clipboard"
+msgstr "Twischenaflaag utwesseln"
+
+#: editactiondialog.cpp:38
+#, kde-format
+msgid "Add to Clipboard"
+msgstr "Na Twischenaflaag tofögen"
+
+#: editactiondialog.cpp:122
+#, kde-format
+msgid "Command"
+msgstr "Befehl"
+
+#: editactiondialog.cpp:124
+#, fuzzy, kde-format
+#| msgid "Use Output"
+msgid "Output"
+msgstr "Utgaav bruken"
+
+#: editactiondialog.cpp:126
+#, kde-format
+msgid "Description"
+msgstr "Beschrieven"
+
+#: editactiondialog.cpp:179
+#, kde-format
+msgid "Action Properties"
+msgstr "Akschoon-Egenschappen"
+
+#: editactiondialog.cpp:191
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"An action takes effect when its <interface>match pattern</interface> matches "
+"the clipboard contents. When this happens, the action's <interface>commands</"
+"interface> appear in the Klipper popup menu; if one of them is chosen, the "
+"command is executed."
+msgstr ""
+
+#: editactiondialog.cpp:203
+#, kde-format
+msgid "Enter a pattern to match against the clipboard"
+msgstr ""
+
+#: editactiondialog.cpp:205
+#, kde-format
+msgid "Match pattern:"
+msgstr ""
+
+#: editactiondialog.cpp:208
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The match pattern is a regular expression. For more information see the "
+"<link url=\"https://en.wikipedia.org/wiki/Regular_expression\">Wikipedia "
+"entry</link> for this topic."
+msgstr ""
+
+#: editactiondialog.cpp:219
+#, kde-format
+msgid "Enter a description for the action"
+msgstr ""
+
+#: editactiondialog.cpp:220 editcommanddialog.cpp:84
+#, kde-format
+msgid "Description:"
+msgstr "Beschrieven:"
+
+#: editactiondialog.cpp:223
+#, kde-format
+msgid "Include in automatic popup"
+msgstr ""
+
+#: editactiondialog.cpp:227
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The commands for this match will be included in the automatic action popup, "
+"if it is enabled in the <interface>Action Menu</interface> page. If this "
+"option is turned off, the commands for this match will not be included in "
+"the automatic popup but they will be included if the popup is activated "
+"manually with the <shortcut>%1</shortcut> key shortcut."
+msgstr ""
+
+#: editactiondialog.cpp:262
+#, fuzzy, kde-format
+#| msgid "Add Command"
+msgid "Add Command..."
+msgstr "Befehl tofögen"
+
+#: editactiondialog.cpp:267
+#, fuzzy, kde-format
+#| msgid "Add Command"
+msgid "Edit Command..."
+msgstr "Befehl tofögen"
+
+#: editactiondialog.cpp:273
+#, fuzzy, kde-format
+#| msgid "Remove Command"
+msgid "Delete Command"
+msgstr "Befehl wegdoon"
+
+#: editactiondialog.cpp:389
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Delete the selected command <resource>%1</resource>?"
+msgstr ""
+
+#: editactiondialog.cpp:390
+#, kde-format
+msgid "Confirm Delete Command"
+msgstr ""
+
+#: editcommanddialog.cpp:47
+#, fuzzy, kde-format
+#| msgid "Action Properties"
+msgid "Command Properties"
+msgstr "Akschoon-Egenschappen"
+
+#: editcommanddialog.cpp:60
+#, kde-format
+msgid "Enter the command and arguments"
+msgstr ""
+
+#: editcommanddialog.cpp:63
+#, fuzzy, kde-format
+#| msgid "Command"
+msgid "Command:"
+msgstr "Befehl"
+
+#: editcommanddialog.cpp:72
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"A <placeholder>&#37;s</placeholder> in the command will be replaced by the "
+"complete clipboard contents. <placeholder>&#37;0</placeholder> through "
+"<placeholder>&#37;9</placeholder> will be replaced by the corresponding "
+"captured texts from the match pattern."
+msgstr ""
+
+#: editcommanddialog.cpp:82
+#, kde-format
+msgid "Enter a description for the command"
+msgstr ""
+
+#: editcommanddialog.cpp:92
+#, kde-format
+msgid "Output from command:"
+msgstr ""
+
+#: editcommanddialog.cpp:94
+#, fuzzy, kde-format
+#| msgid "Replace Clipboard"
+msgid "Replace current clipboard"
+msgstr "Twischenaflaag utwesseln"
+
+#: editcommanddialog.cpp:98
+#, fuzzy, kde-format
+#| msgid "Add to Clipboard"
+msgid "Append to clipboard"
+msgstr "Na Twischenaflaag tofögen"
+
+#: editcommanddialog.cpp:102
+#, kde-format
+msgid "What happens to the standard output of the command executed."
+msgstr ""
+
+#: editcommanddialog.cpp:116
+#, kde-format
+msgid "Reset the icon to the default for the command"
+msgstr ""
+
+#: editcommanddialog.cpp:122
+#, kde-format
+msgid "Icon:"
+msgstr ""
+
+#: historyimageitem.cpp:39
+#, kde-format
+msgid "%1x%2 %3bpp"
+msgstr ""
+
+#: klipper.cpp:153
+#, fuzzy, kde-format
+#| msgid "Timeout for action popups:"
+msgctxt "@action:inmenu Toggle automatic action"
+msgid "Automatic Action Popup Menu"
+msgstr "Tietgrenz för't Akschonen-Menü:"
+
+#: klipper.cpp:176
+#, fuzzy, kde-format
+#| msgid "C&lear Clipboard History"
+msgctxt "@action:inmenu"
+msgid "C&lear Clipboard History"
+msgstr "Twischenaflaag-Vörgeschicht &leddig maken"
+
+#: klipper.cpp:183
+#, fuzzy, kde-format
+#| msgid "&Configure Klipper..."
+msgctxt "@action:inmenu"
+msgid "&Configure Klipper…"
+msgstr "Klipper &instellen..."
+
+#: klipper.cpp:189
+#, fuzzy, kde-format
+#| msgctxt "@item:inmenu Quit Klipper"
+#| msgid "&Quit"
+msgctxt "@action:inmenu Quit Klipper"
+msgid "&Quit"
+msgstr "&Utmaken"
+
+#: klipper.cpp:194
+#, fuzzy, kde-format
+#| msgid "Manually Invoke Action on Current Clipboard"
+msgctxt "@action:inmenu"
+msgid "Manually Invoke Action on Current Clipboard"
+msgstr "Akschoon för de aktuelle Twischenaflaag vun Hand opropen"
+
+#: klipper.cpp:202
+#, fuzzy, kde-format
+#| msgid "Edit Contents"
+msgctxt "@action:inmenu"
+msgid "&Edit Contents…"
+msgstr "Inholden bewerken"
+
+#: klipper.cpp:210
+#, fuzzy, kde-format
+#| msgid "&Show Barcode..."
+msgctxt "@action:inmenu"
+msgid "&Show Barcode…"
+msgstr "Streekkode &wiesen..."
+
+#: klipper.cpp:218
+#, fuzzy, kde-format
+#| msgid "Next History Item"
+msgctxt "@action:inmenu"
+msgid "Next History Item"
+msgstr "Nakamen Vörgeschicht-Indrag"
+
+#: klipper.cpp:222
+#, fuzzy, kde-format
+#| msgid "Previous History Item"
+msgctxt "@action:inmenu"
+msgid "Previous History Item"
+msgstr "Verleden Vörgeschicht-Indrag"
+
+#: klipper.cpp:228
+#, fuzzy, kde-format
+#| msgid "Open Klipper at Mouse Position"
+msgctxt "@action:inmenu"
+msgid "Open Klipper at Mouse Position"
+msgstr "Klipper bi Steed vun de Muus opmaken"
+
+#: klipper.cpp:540
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"You can enable URL actions later in the <interface>Actions</interface> page "
+"of the Clipboard applet's configuration window"
+msgstr ""
+
+#: klipper.cpp:579
+#, kde-format
+msgid "Should Klipper start automatically when you login?"
+msgstr "Wullt Du Klipper bi't Anmellen automaatsch opropen?"
+
+#: klipper.cpp:580
+#, kde-format
+msgid "Automatically Start Klipper?"
+msgstr "Klipper automaatsch starten?"
+
+#: klipper.cpp:581
+#, kde-format
+msgid "Start"
+msgstr "Starten"
+
+#: klipper.cpp:582
+#, kde-format
+msgid "Do Not Start"
+msgstr "Nich starten"
+
+#: klipper.cpp:929
+#, kde-format
+msgid "Edit Contents"
+msgstr "Inholden bewerken"
+
+#: klipper.cpp:996
+#, kde-format
+msgid "Mobile Barcode"
+msgstr "Streekkode för Handreedschappen"
+
+#: klipper.cpp:1043
+#, fuzzy, kde-format
+#| msgid "Really delete entire clipboard history?"
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "Twischenaflaag-Vörgeschicht redig heel leddig maken?"
+
+#: klipper.cpp:1044
+#, fuzzy, kde-format
+#| msgid "C&lear Clipboard History"
+msgid "Clear Clipboard History"
+msgstr "Twischenaflaag-Vörgeschicht &leddig maken"
+
+#: klipper.cpp:1060 klipper.cpp:1069
+#, kde-format
+msgid "Clipboard history"
+msgstr "Twischenaflaag-Vörgeschicht"
+
+#: klipper.cpp:1086
+#, kde-format
+msgid "up"
+msgstr "na baven"
+
+#: klipper.cpp:1093
+#, kde-format
+msgid "current"
+msgstr "aktuell"
+
+#: klipper.cpp:1100
+#, kde-format
+msgid "down"
+msgstr "na nerrn"
+
+#. i18n: ectx: label, entry (Version), group (General)
+#: klipper.kcfg:10
+#, kde-format
+msgid "Klipper version"
+msgstr "Klipper-Verschoon"
+
+#. i18n: ectx: label, entry (KeepClipboardContents), group (General)
+#: klipper.kcfg:13
+#, kde-format
+msgid "Save history across desktop sessions"
+msgstr ""
+
+#. i18n: ectx: tooltip, entry (KeepClipboardContents), group (General)
+#: klipper.kcfg:15
+#, kde-format
+msgid ""
+"Retain the clipboard history, so it will be available the next time you log "
+"in."
+msgstr ""
+
+#. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
+#: klipper.kcfg:18
+#, fuzzy, kde-format
+#| msgid "Prevent empty clipboard"
+msgid "Prevent the clipboard from being cleared"
+msgstr "Leddig Twischenaflaag verhöden"
+
+#. i18n: ectx: whatsthis, entry (PreventEmptyClipboard), group (General)
+#: klipper.kcfg:20
+#, kde-format
+msgid ""
+"Do not allow the clipboard to be cleared, for example when an application "
+"exits."
+msgstr ""
+
+#. i18n: ectx: label, entry (SyncClipboards), group (General)
+#: klipper.kcfg:27
+#, fuzzy, kde-format
+#| msgid "Selection and Clipboard"
+msgid "Keep the selection and clipboard the same"
+msgstr "Köör un Twischenaflaag"
+
+#. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
+#: klipper.kcfg:29
+#, kde-format
+msgid ""
+"Content selected with the cursor is automatically copied to the clipboard so "
+"that it can be pasted with either a Paste action or a middle-click.<br/><a "
+"href=\"1\">More about the selection and clipboard</a>."
+msgstr ""
+
+#. i18n: ectx: label, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:32
+#, fuzzy, kde-format
+#| msgid "Ignore selection"
+msgid "Ignore the selection"
+msgstr "Köör övergahn"
+
+#. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:34
+#, kde-format
+msgid ""
+"Content selected with the cursor but not explicitly copied to the clipboard "
+"is not automatically stored in the clipboard history, and can only be pasted "
+"using a middle-click."
+msgstr ""
+
+#. i18n: ectx: label, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:37
+#, kde-format
+msgid "Text selection only"
+msgstr "Bloots utsöcht Text"
+
+#. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:39
+#, kde-format
+msgid ""
+"Only store text selections in the clipboard history, not images or any other "
+"type of data."
+msgstr ""
+
+#. i18n: ectx: label, entry (IgnoreImages), group (General)
+#: klipper.kcfg:42
+#, fuzzy, kde-format
+#| msgid "Ignore images"
+msgid "Always ignore images"
+msgstr "Biller övergahn"
+
+#. i18n: ectx: whatsthis, entry (IgnoreImages), group (General)
+#: klipper.kcfg:44
+#, kde-format
+msgid ""
+"Do not store images in the clipboard history, even if explicitly copied."
+msgstr ""
+
+#. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
+#: klipper.kcfg:47
+#, kde-format
+msgid "Use graphical regexp editor"
+msgstr "Graafsch Editor för reguleer Utdrück bruken"
+
+#. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
+#: klipper.kcfg:51
+#, fuzzy, kde-format
+#| msgid "Ignore selection"
+msgid "Immediately on selection"
+msgstr "Köör övergahn"
+
+#. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
+#: klipper.kcfg:52
+#, kde-format
+msgid ""
+"Show the popup menu of applicable actions as soon as a selection is made."
+msgstr ""
+
+#. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
+#: klipper.kcfg:57
+#, kde-format
+msgid "No actions for WM_CLASS"
+msgstr "Keen Akschonen för WM_CLASS"
+
+#. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:60
+#, fuzzy, kde-format
+#| msgid "Timeout for action popups:"
+msgid "Automatic action menu time:"
+msgstr "Tietgrenz för't Akschonen-Menü:"
+
+#. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:64
+#, fuzzy, kde-format
+#| msgid "Timeout for action popups:"
+msgid "Display the automatic action popup menu for this time."
+msgstr "Tietgrenz för't Akschonen-Menü:"
+
+#. i18n: ectx: label, entry (MaxClipItems), group (General)
+#: klipper.kcfg:67
+#, fuzzy, kde-format
+#| msgid "Clipboard history size:"
+msgid "History size:"
+msgstr "Grött för de Twischenaflaag-Vörgeschicht:"
+
+#. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
+#: klipper.kcfg:71
+#, kde-format
+msgid "The clipboard history will store up to this many items."
+msgstr ""
+
+#. i18n: ectx: label, entry (ActionList), group (General)
+#: klipper.kcfg:74
+#, kde-format
+msgid "Dummy entry for indicating changes in an action's tree widget"
+msgstr "Platzhollindrag för Ännern binnen den Akschonenboom"
+
+#. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:87
+#, fuzzy, kde-format
+#| msgid "Strip whitespace when executing an action"
+msgid "Trim whitespace from selection"
+msgstr "Freetekens bi't Utföhren vun Akschonen wegmaken"
+
+#. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:89
+#, kde-format
+msgid ""
+"Remove any whitespace from the start and end of selected text, before "
+"performing an action. For example, this ensures that a URL pasted in a "
+"browser is interpreted as expected. The text saved on the clipboard is not "
+"affected."
+msgstr ""
+
+#. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
+#: klipper.kcfg:92
+#, fuzzy, kde-format
+#| msgid "Replay actions on an item selected from history"
+msgid "For an item chosen from history"
+msgstr "Akschonen för en Indrag ut de Vörgeschicht nochmaal utföhren"
+
+#. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
+#: klipper.kcfg:94
+#, fuzzy, kde-format
+#| msgid "Really delete entire clipboard history?"
+msgid ""
+"Show the popup menu of applicable actions if an entry is chosen from the "
+"clipboard history."
+msgstr "Twischenaflaag-Vörgeschicht redig heel leddig maken?"
+
+#. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
+#: klipper.kcfg:97
+#, fuzzy, kde-format
+#| msgid "Enable MIME-based actions"
+msgid "Include MIME actions"
+msgstr "MIME-baseert Akschonen anmaken"
+
+#. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
+#: klipper.kcfg:99
+#, kde-format
+msgid ""
+"If a file name or URL is selected, include applications that can accept its "
+"MIME type in the popup menu."
+msgstr ""
+
+#: klipperpopup.cpp:110
+#, kde-format
+msgid "Klipper - Clipboard Tool"
+msgstr "Klipper - Twischenaflaagwarktüüch"
+
+#: klipperpopup.cpp:114
+#, fuzzy, kde-format
+#| msgid "Search..."
+msgid "Search…"
+msgstr "Söken..."
+
+#: klipperpopup.cpp:123 main.cpp:29
+#, kde-format
+msgid "KDE cut & paste history utility"
+msgstr "KDE-Vörgeschichtwarktüüch för't Knippen & Infögen"
+
+#: klipperpopup.cpp:187
+#, fuzzy, kde-format
+#| msgid "Regular expression:"
+msgid "Invalid regular expression, %1"
+msgstr "Reguleer Utdruck:"
+
+#: klipperpopup.cpp:193 tray.cpp:25 tray.cpp:53
+#, kde-format
+msgid "Clipboard is empty"
+msgstr "Twischenaflaag is leddig"
+
+#: klipperpopup.cpp:195
+#, fuzzy, kde-format
+#| msgid "<no matches>"
+msgid "No matches"
+msgstr "<keen Övereenstimmen>"
+
+#: main.cpp:27 tray.cpp:22
+#, kde-format
+msgid "Klipper"
+msgstr "Klipper"
+
+#: main.cpp:31
+#, kde-format
+msgid ""
+"(c) 1998, Andrew Stanley-Jones\n"
+"1998-2002, Carsten Pfeiffer\n"
+"2001, Patrick Dubroy"
+msgstr ""
+"© 1998: Andrew Stanley-Jones\n"
+"1998-2002: Carsten Pfeiffer\n"
+"2001: Patrick Dubroy"
+
+#: main.cpp:34
+#, kde-format
+msgid "Carsten Pfeiffer"
+msgstr "Carsten Pfeiffer"
+
+#: main.cpp:34
+#, kde-format
+msgid "Author"
+msgstr "Autor"
+
+#: main.cpp:36
+#, kde-format
+msgid "Andrew Stanley-Jones"
+msgstr "Andrew Stanley-Jones"
+
+#: main.cpp:36
+#, kde-format
+msgid "Original Author"
+msgstr "Orginaalautor"
+
+#: main.cpp:38
+#, kde-format
+msgid "Patrick Dubroy"
+msgstr "Patrick Dubroy"
+
+#: main.cpp:38
+#, kde-format
+msgid "Contributor"
+msgstr "Bidreger"
+
+#: main.cpp:40
+#, kde-format
+msgid "Luboš Luňák"
+msgstr "Luboš Luňák"
+
+#: main.cpp:40
+#, kde-format
+msgid "Bugfixes and optimizations"
+msgstr "Kode richten un verbetern"
+
+#: main.cpp:42
+#, kde-format
+msgid "Esben Mose Hansen"
+msgstr "Esben Mose Hansen"
+
+#: main.cpp:42
+#, kde-format
+msgid "Previous Maintainer"
+msgstr "Verleden Pleger"
+
+#: main.cpp:44
+#, kde-format
+msgid "Martin Gräßlin"
+msgstr "Martin Gräßlin"
+
+#: main.cpp:44
+#, kde-format
+msgid "Maintainer"
+msgstr "Pleger"
+
+#: main.cpp:46
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Sönke Dibbern, Manfred Wiese"
+
+#: main.cpp:46
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "s_dibbern@web.de, m.j.wiese@web.de"
+
+#: popupproxy.cpp:145
+#, kde-format
+msgid "&More"
+msgstr "&Mehr"
+
+#: tray.cpp:25
+#, kde-format
+msgid "Clipboard Contents"
+msgstr "Twischenaflaag-Inholt"
+
+#: urlgrabber.cpp:198
+#, kde-format
+msgid "Disable This Popup"
+msgstr "Dit Popup utmaken"
+
+#: urlgrabber.cpp:204
+#, kde-format
+msgid "&Cancel"
+msgstr "&Afbreken"
+
+#~ msgid "Delete clipboard history?"
+#~ msgstr "Twischenaflaag-Vörgeschicht leddig maken?"
+
+#~ msgid "Action list:"
+#~ msgstr "Akschonenlist:"
+
+#~ msgid "Regular Expression"
+#~ msgstr "Reguleer Utdruck"
+
+#, fuzzy
+#~| msgid ""
+#~| "Click on a highlighted item's column to change it. \"%s\" in a command "
+#~| "will be replaced with the clipboard contents.<br>For more information "
+#~| "about regular expressions, you could have a look at the <a href=\"http://"
+#~| "en.wikipedia.org/wiki/Regular_expression\">Wikipedia entry about this "
+#~| "topic</a>."
+#~ msgid ""
+#~ "Click on a highlighted item's column to change it. \"%s\" in a command "
+#~ "will be replaced with the clipboard contents.<br>For more information "
+#~ "about regular expressions, you could have a look at the <a href=\"https://"
+#~ "en.wikipedia.org/wiki/Regular_expression\">Wikipedia entry about this "
+#~ "topic</a>."
+#~ msgstr ""
+#~ "Klick op den Striep vun en rutheevt Indrag, wenn Du em ännern wullt. För "
+#~ "\"%s\" binnen en Befehl warrt de Twischenaflaag-Inholt infööt.<br>Wenn Du "
+#~ "mehr över reguleer Utdrück weten wullt, kiek Di man maal den Wikipedia-"
+#~ "Indrag för <a href=\"de.wikipedia.org/wiki/Regulärer_Ausdruck\">Reguleer "
+#~ "Utdrück</a> an."
+
+#~ msgid "Output Handling"
+#~ msgstr "Utgaavbedoon"
+
+#~ msgid "new command"
+#~ msgstr "nieg Befehl"
+
+#~ msgid "Command Description"
+#~ msgstr "Befehl-Beschrieven"
+
+#~ msgid "Action properties:"
+#~ msgstr "Akschoon-Egenschappen:"
+
+#~ msgid "Automatic:"
+#~ msgstr "Automaatsch:"
+
+#~ msgid "List of commands for this action:"
+#~ msgstr "List mit Befehlen för disse Akschoon:"
+
+#~ msgid "Double-click an item to edit"
+#~ msgstr "Dubbelklicken, wenn Du en Indrag bewerken wullt"
+
+#~ msgid "Remove whitespace when executing actions"
+#~ msgstr "Freetekens wegmaken, wenn Akschonen utföhrt warrt"
+
+#~ msgid "Advanced..."
+#~ msgstr "Verwiedert..."
+
+#~ msgid "Advanced Settings"
+#~ msgstr "Verwiedert Instellen"
+
+#~ msgid "D&isable Actions for Windows of Type WM_CLASS"
+#~ msgstr "Akschonen för Finstern vun den Typ WM_CLASS ver&höden"
+
+#~ msgid ""
+#~ "<qt>This lets you specify windows in which Klipper should not invoke "
+#~ "\"actions\". Use<br /><br /><center><b>xprop | grep WM_CLASS</b></"
+#~ "center><br />in a terminal to find out the WM_CLASS of a window. Next, "
+#~ "click on the window you want to examine. The first string it outputs "
+#~ "after the equal sign is the one you need to enter here.</qt>"
+#~ msgstr ""
+#~ "<qt>Mit disse Optschoon kannst du Finstern angeven, binnen de Klipper "
+#~ "keen \"Akschonen\" opropen schall. In en Konsool kannst Du<br /><br /"
+#~ "><center><b>xprop | grep WM_CLASS</b></center> bruken, wenn Du de "
+#~ "WM_CLASS vun en Finster rutfinnen wullt. Achteran klick op dat Finster, "
+#~ "dat Du ünnersöken wullt. De eerste Tekenkeed achter dat Liekteken is de, "
+#~ "de Du hier angeven muttst.</qt>"
+
+#~ msgid "Enable Clipboard Actions"
+#~ msgstr "Twischenaflaag-Akschonen anmaken"
+
+#~ msgid "URL grabber enabled"
+#~ msgstr "URL-Grieper anmaakt"
+
+#~ msgid "Replay action in history"
+#~ msgstr "Akschoon ut Vörgeschicht nochmaal utföhren"
+
+#~ msgid "Save clipboard contents on exit"
+#~ msgstr "Twischenaflaag-Inholt bi't Utmaken sekern"
+
+#~ msgid "Synchronize contents of the clipboard and the selection"
+#~ msgstr "Inholt vun Twischenaflaag un Köör synkroniseren"
+
+#~ msgid "Keep clipboard contents"
+#~ msgstr "Twischenaflaag-Inholt sekern"
+
+#~ msgid ""
+#~ "Selecting this option has the effect, that the clipboard can never be "
+#~ "emptied. E.g. when an application exits, the clipboard would usually be "
+#~ "emptied."
+#~ msgstr ""
+#~ "Wenn disse Optschoon anmaakt is, warrt de Twischenaflaag nich leddig "
+#~ "maakt. Normalerwies warrt se t.B. leddig maakt, wenn en Programm beendt "
+#~ "warrt."
+
+#~ msgid "Ignore Selection"
+#~ msgstr "Köör övergahn"
+
+#, fuzzy
+#~| msgid ""
+#~| "<qt>When an area of the screen is selected with mouse or keyboard, this "
+#~| "is called \"the selection\".<br/>If this option is set, the selection is "
+#~| "not entered into the clipboard history, though it is still available for "
+#~| "pasting using the middle mouse button.</qt>"
+#~ msgid ""
+#~ "When an area of the screen is selected with mouse or keyboard, this is "
+#~ "called \"the selection\".<br/>If this option is set, the selection is not "
+#~ "entered into the clipboard history, though it is still available for "
+#~ "pasting using the middle mouse button."
+#~ msgstr ""
+#~ "<qt>Is en Schirmrebeet mit de Muus oder Tastatuur markeert, warrt dit <em>"
+#~ "\"Köör\"</em> nöömt.<br/>Is dit anmaakt, warrt de Köör nich na de "
+#~ "Twischenaflaag-Vörgeschicht opnahmen, ok wenn se sik liekers mit den "
+#~ "Middel-Muusknoop infögen lett. </qt>"
+
+#~ msgid "Synchronize clipboard and selection"
+#~ msgstr "Twischenaflaag un Köör synkroniseren"
+
+#, fuzzy
+#~| msgid ""
+#~| "<qt>When an area of the screen is selected with mouse or keyboard, this "
+#~| "is called \"the selection\".<br/>If this option is selected, the "
+#~| "selection and the clipboard is kept the same, so that anything in the "
+#~| "selection is immediately available for pasting elsewhere using any "
+#~| "method, including the traditional middle mouse button. Otherwise, the "
+#~| "selection is recorded in the clipboard history, but the selection can "
+#~| "only be pasted using the middle mouse button. Also see the 'Ignore "
+#~| "Selection' option.</qt>"
+#~ msgid ""
+#~ "When an area of the screen is selected with mouse or keyboard, this is "
+#~ "called \"the selection\".<br/>If this option is selected, the selection "
+#~ "and the clipboard is kept the same, so that anything in the selection is "
+#~ "immediately available for pasting elsewhere using any method, including "
+#~ "the traditional middle mouse button. Otherwise, the selection is recorded "
+#~ "in the clipboard history, but the selection can only be pasted using the "
+#~ "middle mouse button. Also see the 'Ignore Selection' option."
+#~ msgstr ""
+#~ "<qt>Is en Schirmrebeet mit de Muus oder Tastatuur markeert, warrt dit <em>"
+#~ "\"Köör\"</em> nöömt.<br/>Is dit anmaakt, sünd Köör un Twischenaflaag dat "
+#~ "sülve. Allens binnen de Köör steiht fuurts överall för't Infögen mit "
+#~ "jichtenseen Metood praat, ok mit den Middel-Muusknoop. Anners warrt de "
+#~ "Köör na de Twischenaflaag-Vörgeschicht opnahmen, man lett sik bloots mit "
+#~ "den Middel-Muusknoop infögen. Kiek ok bi de Optschoon \"Köör övergahn\".</"
+#~ "qt>"
+
+#~ msgid "Selection text only"
+#~ msgstr "Bloots köört Text"
+
+#, fuzzy
+#~| msgid ""
+#~| "<qt>When an area of the screen is selected with mouse or keyboard, this "
+#~| "is called \"the selection\".<br/>If this option is selected, only text "
+#~| "selections are stored in the history, while images and other selections "
+#~| "are not.</qt>"
+#~ msgid ""
+#~ "When an area of the screen is selected with mouse or keyboard, this is "
+#~ "called \"the selection\".<br/>If this option is selected, only text "
+#~ "selections are stored in the history, while images and other selections "
+#~ "are not."
+#~ msgstr ""
+#~ "<qt>Is en Schirmrebeet mit de Muus oder Tastatuur markeert, warrt dit "
+#~ "\"Köör\" nöömt.<br/>Is dit anmaakt, warrt in de Vörgeschicht bloots "
+#~ "Textkören, man keen Biller oder anner Kören sekert.</qt>"
+
+#~ msgid "Timeout for action popups (seconds)"
+#~ msgstr "Tietgrenz för't Akschonen-Menü (Sekunnen)"
+
+#~ msgid "A value of 0 disables the timeout"
+#~ msgstr "Mit 0 as Weert gellt keen Tietgrenz"
+
+#~ msgid "Clipboard history size"
+#~ msgstr "Grött vun de Twischenaflaag-Vörgeschicht"
+
+#~ msgid ""
+#~ "Sometimes, the selected text has some whitespace at the end, which, if "
+#~ "loaded as URL in a browser would cause an error. Enabling this option "
+#~ "removes any whitespace at the beginning or end of the selected string "
+#~ "(the original clipboard contents will not be modified)."
+#~ msgstr ""
+#~ "Mennigmaal hett markeert Text Freetekens an't Enn. Dat kann to Fehlers "
+#~ "föhren, wenn de Text as URL in'n Nettkieker inföögt warrt. Wenn disse "
+#~ "Optschoon aktiveert is, warrt all Freetekens vörn un achtern vun den "
+#~ "markeerten Text wegmaakt. De Inholt vun de Twischenaflaag warrt dor nich "
+#~ "bi ännert."
+
+#~ msgid "%1 - Actions For: %2"
+#~ msgstr "%1 - Akschonen för: %2"
+
+#~ msgid "&Edit Contents..."
+#~ msgstr "Inholden b&ewerken..."
+
+#~ msgid "<empty clipboard>"
+#~ msgstr "<Leddig Twischenaflaag>"
+
+#~ msgid ""
+#~ "You can enable URL actions later by left-clicking on the Klipper icon and "
+#~ "selecting 'Enable Clipboard Actions'"
+#~ msgstr ""
+#~ "Du kannst URL-Akschonen ok later noch tolaten, wenn Du op dat Klipper-"
+#~ "Lüttbild linksklickst un \"Akschonen tolaten\" utsöchst"
+
+#~ msgid "Enable Clipboard &Actions"
+#~ msgstr "Twischenaflaag-&Akschonen anmaken"
+
+#~ msgid "Show Klipper Popup-Menu"
+#~ msgstr "Klipper-Opdukmenü wiesen"
+
+#~ msgid "Popup menu at mouse-cursor position"
+#~ msgstr "Menü bi de Steed vun de Muus opmaken"
+
+#~ msgid "Replace"
+#~ msgstr "Utwesseln"
+
+#~ msgid "Add"
+#~ msgstr "Tofögen"
+
+#~ msgid "Clipboard/Selection Behavior"
+#~ msgstr "Twischenaflaag / Markeren-Bedregen"
+
+#~ msgid "Separate clipboard and selection"
+#~ msgstr "Twischenaflaag un Markeren scheden"
+
+#~ msgid ""
+#~ "This option prevents the selection being recorded in the clipboard "
+#~ "history. Only explicit clipboard changes are recorded."
+#~ msgstr ""
+#~ "Disse Optschoon verhöödt, dat de Markeren in de Twischenaflaag-"
+#~ "Vörgeschicht opnahmen warrt. Bloots direkte Ännern warrt opnahmen."
+
+#~ msgid ""
+#~ "<qt>There are two different clipboard buffers available:<br /><br /"
+#~ "><b>Clipboard</b> is filled by selecting something and pressing Ctrl+C, "
+#~ "or by clicking \"Copy\" in a toolbar or menubar.<br /><br /><b>Selection</"
+#~ "b> is available immediately after selecting some text. The only way to "
+#~ "access the selection is to press the middle mouse button.<br /><br />You "
+#~ "can configure the relationship between Clipboard and Selection.</qt>"
+#~ msgstr ""
+#~ "<qt>Dat gifft twee verscheden Twischenaflaag-Puffers: <br /><br />De "
+#~ "<b>Twischenaflaag</b> warrt füllt, wenn wat markeert un denn Strg+C "
+#~ "drückt oder op \"Koperen\" in en Warktüüch- oder Menübalken klickt warrt."
+#~ "<br /><br />En <b>Markeren</b> is direktemang verföögbor, na dat Text "
+#~ "markeert worrn is. Se kann bloots dör Drücken vun den Middel-Muusknoop "
+#~ "inföögt warrn.<br /><br />Du kannst den Tosamenhang vun Twischenaflaag un "
+#~ "Markeren fastleggen.</qt>"
+
+#~ msgid "Klipper - clipboard tool"
+#~ msgstr "Klipper - Twischenaflaagwarktüüch"
+
+#~ msgid "Action list (right click to add/remove commands):"
+#~ msgstr "Akschonenlist (Rechtsklick för't Tofögen / Wegdoon vun Befehlen):"
+
+#~ msgid "Double-click here to set the command to be executed"
+#~ msgstr "Dubbelklick hier, wenn Du den utföhrten Befehl fastleggen wullt"
+
+#~ msgid "Double-click here to set the regular expression"
+#~ msgstr "Dubbelklick hier, wenn Du den reguleren Utdruck fastleggen wullt"
+
+#~ msgid "<new action>"
+#~ msgstr "<Nieg Akschoon>"
+
+#~ msgid "Selecting this option synchronizes these two buffers."
+#~ msgstr "Disse Optschoon synkroniseert disse twee Puffers."
+
+#~ msgid ""
+#~ "Using this option will only set the selection when highlighting something "
+#~ "and the clipboard when choosing e.g. \"Copy\" in a menubar."
+#~ msgstr ""
+#~ "Wenn disse Optschoon anmaakt is, warrt de Markeren-Puffer bloots füllt, "
+#~ "wenn wat markeert warrt, un de Twischenaflaag bloots, wenn t.B. op "
+#~ "\"Koperen\" in en Warktüüchbalken klickt warrt."
+
+#~ msgid "&Use graphical editor for editing regular expressions"
+#~ msgstr "Graafschen Editor för't Bewerken vun regulere Utdrück br&uken"
+
+#~ msgid ""
+#~ "Click on a highlighted item's column to change it. \"%s\" in a command "
+#~ "will be replaced with the clipboard contents."
+#~ msgstr ""
+#~ "Klick op den Striep vun en markeerten Indrag, wenn Du dat ännern wullt. "
+#~ "Ansteed vun \"%s\" warrt de Inholt vun de Twischenaflaag in den Befehl "
+#~ "insett."
+
+#~ msgid "Enable &Actions"
+#~ msgstr "&Akschonen tolaten"
+
+#~ msgid "&Actions Enabled"
+#~ msgstr "&Akschonen sünd tolaten"

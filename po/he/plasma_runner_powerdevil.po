@@ -1,0 +1,187 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Diego Iastrubni <elcuco@kde.org>, 2008, 2013.
+# elkana bardugo <ttv200@gmail.com>, 2016.
+# Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_powerdevil\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"PO-Revision-Date: 2017-05-16 06:57-0400\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Zanata 3.9.6\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: PowerDevilRunner.cpp:32
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "suspend"
+msgstr "השהה"
+
+#: PowerDevilRunner.cpp:34
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to ram"
+msgstr "אל הזכרון"
+
+#: PowerDevilRunner.cpp:36
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "sleep"
+msgstr "המתנה"
+
+#: PowerDevilRunner.cpp:38
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "hibernate"
+msgstr "שינה"
+
+#: PowerDevilRunner.cpp:40
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to disk"
+msgstr "אל הדיסק"
+
+#: PowerDevilRunner.cpp:42 PowerDevilRunner.cpp:44 PowerDevilRunner.cpp:69
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "dim screen"
+msgstr "הורד בהירות"
+
+#: PowerDevilRunner.cpp:53
+#, kde-format
+msgid ""
+"Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
+"activated"
+msgstr "מציג את אפשרויות ההשהיה (למשל שינה, השהייה) ומאפשר להפעיל אותם"
+
+#: PowerDevilRunner.cpp:57
+#, kde-format
+msgid "Suspends the system to RAM"
+msgstr "משהה את המערכת על הזכרון"
+
+#: PowerDevilRunner.cpp:61
+#, kde-format
+msgid "Suspends the system to disk"
+msgstr "משהה את המערכת לכונן"
+
+#: PowerDevilRunner.cpp:65
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "screen brightness"
+msgctxt ""
+"Note this is a KRunner keyword, <> is a placeholder and should be at the end"
+msgid "screen brightness <percent value>"
+msgstr "בהירות מסך"
+
+#: PowerDevilRunner.cpp:67
+#, fuzzy, no-c-format, kde-format
+#| msgid ""
+#| "Lists screen brightness options or sets it to the brightness defined by :"
+#| "q:; e.g. screen brightness 50 would dim the screen to 50% maximum "
+#| "brightness"
+msgid ""
+"Lists screen brightness options or sets it to the brightness defined by the "
+"search term; e.g. screen brightness 50 would dim the screen to 50% maximum "
+"brightness"
+msgstr ""
+"מציג את האפרויות החשכת המסך או קובע את הבהירות אל :q: , למשל בהירות של 50 "
+"תהפוך את המסך לחצי מוחשך."
+
+#: PowerDevilRunner.cpp:95
+#, fuzzy, kde-format
+#| msgid "Set Brightness to %1"
+msgid "Set Brightness to %1%"
+msgstr "קבע את הבהירות אל %1"
+
+#: PowerDevilRunner.cpp:104
+#, kde-format
+msgid "Dim screen totally"
+msgstr "הורד את הבהירות לגמרי"
+
+#: PowerDevilRunner.cpp:112
+#, kde-format
+msgid "Dim screen by half"
+msgstr "הורד בהירות חלקית"
+
+#: PowerDevilRunner.cpp:142
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "sleep"
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "המתנה"
+
+#: PowerDevilRunner.cpp:143
+#, kde-format
+msgid "Suspend to RAM"
+msgstr "השהייה לזכרון"
+
+#: PowerDevilRunner.cpp:148
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "hibernate"
+msgctxt "Suspend to disk"
+msgid "Hibernate"
+msgstr "שינה"
+
+#: PowerDevilRunner.cpp:149
+#, fuzzy, kde-format
+#| msgid "Suspend to Disk"
+msgid "Suspend to disk"
+msgstr "השהייה לכונן"
+
+#: PowerDevilRunner.cpp:218
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "screen brightness"
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "screen brightness "
+msgstr "בהירות מסך"
+
+#: PowerDevilRunner.cpp:220
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "dim screen"
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "dim screen "
+msgstr "הורד בהירות"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "screen brightness"
+#~ msgstr "בהירות מסך"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "screen brightness %1"
+#~ msgstr "בהירות מסך היא %1"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "dim screen %1"
+#~ msgstr "מסך מוחשך אל %1"
+
+#, fuzzy
+#~| msgctxt "Note this is a KRunner keyword"
+#~| msgid "suspend"
+#~ msgid "Suspend"
+#~ msgstr "השהה"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "power profile"
+#~ msgstr "פרופיל חשמל"
+
+#~ msgid "Lists all power profiles and allows them to be activated"
+#~ msgstr "מציג את כל הפרופילים של החשמל ומאפשר להם להיות מופעלים"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "power profile %1"
+#~ msgstr "פרופיל חשמל %1"
+
+#~ msgid "Set Profile to '%1'"
+#~ msgstr "הפעל את הפרופיל: %1"

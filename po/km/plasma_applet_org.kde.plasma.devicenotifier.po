@@ -1,0 +1,187 @@
+# translation of plasma_applet_notifier.po to Khmer
+# Khoem Sokhem <khoemsokhem@khmeros.info>, 2008, 2009, 2010, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_notifier\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-21 00:47+0000\n"
+"PO-Revision-Date: 2012-06-14 10:53+0700\n"
+"Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
+"Language-Team: Khmer\n"
+"Language: km\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: package/contents/ui/DeviceItem.qml:180
+#, fuzzy, kde-format
+#| msgctxt "@info:status Free disk space"
+#| msgid "%1 free"
+msgctxt "@info:status Free disk space"
+msgid "%1 free of %2"
+msgstr "ទំនេរ %1"
+
+#: package/contents/ui/DeviceItem.qml:184
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Accessing is a less technical word for Mounting; translation should be "
+#| "short and mean 'Currently mounting this device'"
+#| msgid "Accessing..."
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Accessing…"
+msgstr "កំពុង​ចូល​ដំណើរការ..."
+
+#: package/contents/ui/DeviceItem.qml:187
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Removing is a less technical word for Unmounting; translation shoud be "
+#| "short and mean 'Currently unmounting this device'"
+#| msgid "Removing..."
+msgctxt ""
+"Removing is a less technical word for Unmounting; translation should be "
+"short and mean 'Currently unmounting this device'"
+msgid "Removing…"
+msgstr "កំពុង​យកចេញ..."
+
+#: package/contents/ui/DeviceItem.qml:190
+#, kde-format
+msgid "Don't unplug yet! Files are still being transferred..."
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:221
+#, kde-format
+msgid "Open in File Manager"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:224
+#, kde-format
+msgid "Mount and Open"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:226
+#, kde-format
+msgid "Eject"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:228
+#, kde-format
+msgid "Safely remove"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:270
+#, kde-format
+msgid "Mount"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:41
+#: package/contents/ui/main.qml:238
+#, kde-format
+msgid "Remove All"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:42
+#, fuzzy, kde-format
+#| msgid "Click to safely remove this device."
+msgid "Click to safely remove all devices"
+msgstr "ចុច​ដើម្បី​យក​ឧបករណ៍​នេះ​ចេញ​ដោយ​សុវត្ថិភាព ។"
+
+#: package/contents/ui/FullRepresentation.qml:186
+#, fuzzy, kde-format
+#| msgid "Non-removable devices only"
+msgid "No removable devices attached"
+msgstr "គ្មាន​ឧបករណ៍​ចល័ត"
+
+#: package/contents/ui/FullRepresentation.qml:186
+#, fuzzy, kde-format
+#| msgid "No Devices Available"
+msgid "No disks available"
+msgstr "មិនមាន​ឧបករណ៍​ទេ"
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid "Most Recent Device"
+msgstr ""
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid "No Devices Available"
+msgstr "មិនមាន​ឧបករណ៍​ទេ"
+
+#: package/contents/ui/main.qml:245
+#, fuzzy, kde-format
+#| msgid "Removable devices only"
+msgid "Removable Devices"
+msgstr "មានតែ​ឧបករណ៍​ចល័ត"
+
+#: package/contents/ui/main.qml:251
+#, fuzzy, kde-format
+#| msgid "Non-removable devices only"
+msgid "Non Removable Devices"
+msgstr "គ្មាន​ឧបករណ៍​ចល័ត"
+
+#: package/contents/ui/main.qml:257
+#, fuzzy, kde-format
+#| msgid "All devices"
+msgid "All Devices"
+msgstr "ឧបករណ៍​ទាំងអស់"
+
+#: package/contents/ui/main.qml:265
+#, kde-format
+msgid "Show popup when new device is plugged in"
+msgstr ""
+
+#: package/contents/ui/main.qml:274
+#, fuzzy, kde-format
+#| msgid "Non-removable devices only"
+msgctxt "Open auto mounter kcm"
+msgid "Configure Removable Devices…"
+msgstr "គ្មាន​ឧបករណ៍​ចល័ត"
+
+#~ msgid ""
+#~ "It is currently <b>not safe</b> to remove this device: applications may "
+#~ "be accessing it. Click the eject button to safely remove this device."
+#~ msgstr ""
+#~ "ឥឡូវ​នេះ <b>មិនមាន​សុវត្ថិភាព</b> ដើម្បី​យក​ឧបករណ៍​នេះ​ចេញ​ទេ ៖ កម្មវិធី​ប្រហែល​ជា​ចូល​ដំណើរការ​"
+#~ "វា ។ ចុច​ប៊ូតុង​ច្រាន​ចេញ ដើម្បី​យក​ឧបករណ៍​នេះ​ចេញ​​ដោយ​សុវត្ថិភាព ។"
+
+#~ msgid "This device is currently accessible."
+#~ msgstr "ឧបករណ៍​នេះ​បច្ចុប្បន្ន​អាច​ប្រើ​បាន ។"
+
+#~ msgid ""
+#~ "It is currently <b>not safe</b> to remove this device: applications may "
+#~ "be accessing other volumes on this device. Click the eject button on "
+#~ "these other volumes to safely remove this device."
+#~ msgstr ""
+#~ "ឧបករណ៍​ត្រូវ​បាន​ដោ​តចូល ហើយ​កម្រិត​សំឡេង​មិន​ត្រូវបាន​ម៉ោន​សម្រាប់​ចូលដំណើរការ​នៅ​ឡើយ​ទេ ។ កម្រិត​សំឡេង​"
+#~ "ផ្សេង​ទៀត​អាច​ចូល​ដំណើរការ​​​​​​បាននៅ​លើ​ឧបករណ៍​ដូច​គ្នា ដែល​មិនអាច​ត្រូវ​បាន​យកចេញ​ដោយ​សុវត្ថិភាព​នោះ​ទេ ។"
+
+#~ msgid "It is currently safe to remove this device."
+#~ msgstr "ឥឡូវ​នេះ​មាន​សុវត្ថិភាព​ដើម្បី​យក​ឧបករណ៍​នេះ​ចេញ ។"
+
+#~ msgid "This device is not currently accessible."
+#~ msgstr "ឧបករណ៍​នេះ​បច្ចុប្បន្ន​អាច​ប្រើ​បាន ។"
+
+#, fuzzy
+#~| msgid "%1 actions for this device"
+#~ msgid "1 action for this device"
+#~ msgid_plural "%1 actions for this device"
+#~ msgstr[0] "សកម្មភាព %1 សម្រាប់​ឧបករណ៍​នេះ"
+
+#~ msgid "Click to access this device from other applications."
+#~ msgstr "ចុច​ដើម្បី​ចូលដំណើរការ​ឧបករណ៍​នេះ​ពី​កម្មវិធី​ផ្សេង ។"
+
+#~ msgid "Click to eject this disc."
+#~ msgstr "ចុច​ដើម្បី​ច្រាន​ថាស​នេះ​ចេញ ។"
+
+#~ msgid "Click to safely remove this device."
+#~ msgstr "ចុច​ដើម្បី​យក​ឧបករណ៍​នេះ​ចេញ​ដោយ​សុវត្ថិភាព ។"
+
+#~ msgid "Click to mount this device."
+#~ msgstr "ចុច ដើម្បីម៉ោន​ឧបករណ៍​នេះ ។"
+
+#~ msgid "Available Devices"
+#~ msgstr "ឧបករណ៍​ដែល​អាច​ប្រើបាន"

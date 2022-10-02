@@ -1,0 +1,258 @@
+# translation of ksmserver.po to Punjabi
+# Amanpreet Singh Alam <aalam@redhat.com>, 2004, 2005.
+# Amanpreet Singh Alam <amanpreetalam@yahoo.com>, 2005.
+# Amanpreet Singh Brar <amanpreetalam@yahoo.com>, 2005.
+# A S Alam <aalam@users.sf.net>, 2007, 2008, 2009, 2010, 2020, 2021.
+# ASB <aalam@users.sf.net>, 2007, 2012, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: ksmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-22 00:47+0000\n"
+"PO-Revision-Date: 2021-01-01 11:07-0800\n"
+"Last-Translator: A S Alam <aalam.yellow@gmail.com>\n"
+"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.08.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: logout.cpp:344
+#, kde-format
+msgid "Logout canceled by '%1'"
+msgstr "ਲਾਗਆਉਟ '%1' ਵਲੋਂ ਰੱਦ ਕੀਤਾ ਗਿਆ"
+
+#: main.cpp:117
+#, kde-format
+msgid "$HOME not set!"
+msgstr "$HOME ਸੈੱਟ ਨਹੀਂ ਹੈ!"
+
+#: main.cpp:121 main.cpp:127
+#, kde-format
+msgid "$HOME directory (%1) does not exist."
+msgstr "$HOME ਡਾਇਰੈਕਟਰੀ (%1) ਮੌਜੂਦ ਨਹੀਂ ਹੈ।"
+
+#: main.cpp:123
+#, kde-format
+msgid "No write access to $HOME directory (%1)."
+msgstr "$HOME (%1) ਲਈ ਕੋਈ ਲਿਖਣ ਪਹੁੰਚ ਨਹੀਂ ਹੈ।"
+
+#: main.cpp:129
+#, kde-format
+msgid "No read access to $HOME directory (%1)."
+msgstr "$HOME (%1) ਲਈ ਕੋਈ ਪੜ੍ਹਨ ਪਹੁੰਚ ਨਹੀਂ ਹੈ।"
+
+#: main.cpp:133
+#, kde-format
+msgid "$HOME directory (%1) is out of disk space."
+msgstr "$HOME ਡਾਇਰੈਕਟਰੀ (%1) ਲਈ ਡਿਸਕ ਥਾਂ ਭਰ ਗਈ ਹੈ।"
+
+#: main.cpp:136
+#, kde-format
+msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+msgstr "'%1' ਗ਼ਲਤੀ ਨਾਲ $HOME ਡਾਇਰੈਕਟਰੀ (%2) ਵਿੱਚ ਲਿਖਣਾ ਅਸਫ਼ਲ ਹੈ"
+
+#: main.cpp:149 main.cpp:184
+#, kde-format
+msgid "No write access to '%1'."
+msgstr "'%1' ਲਈ ਕੋਈ ਲਿਖਣ ਅਧਿਕਾਰ ਨਹੀਂ ਹੈ।"
+
+#: main.cpp:151 main.cpp:186
+#, kde-format
+msgid "No read access to '%1'."
+msgstr "'%1' ਲਈ ਕੋਈ ਪੜ੍ਹਨ ਪਹੁੰਚ ਨਹੀਂ ਹੈ।"
+
+#: main.cpp:159 main.cpp:172
+#, kde-format
+msgid "Temp directory (%1) is out of disk space."
+msgstr "ਆਰਜ਼ੀ ਡਾਇਰੈਕਟਰੀ (%1) ਲਈ ਡਿਸਕ ਥਾਂ ਭਰ ਗਈ ਹੈ।"
+
+#: main.cpp:162 main.cpp:175
+#, kde-format
+msgid ""
+"Writing to the temp directory (%2) failed with\n"
+"    the error '%1'"
+msgstr ""
+"'%1' ਗ਼ਲਤੀ ਨਾਲ ਆਰਜ਼ੀ ਡਾਇਰੈਕਟਰੀ (%2) ਵਿੱਚ ਲਿਖਣਾ\n"
+"   ਅਸਫ਼ਲ ਹੈ"
+
+#: main.cpp:190
+#, kde-format
+msgid ""
+"The following installation problem was detected\n"
+"while trying to start Plasma:"
+msgstr ""
+
+#: main.cpp:193
+#, kde-format
+msgid ""
+"\n"
+"\n"
+"Plasma is unable to start.\n"
+msgstr ""
+"\n"
+"\n"
+"ਪਲਾਜ਼ਮਾ ਸ਼ੁਰੂ ਹੋਣ ਲਈ ਅਸਫ਼ਲ ਹੈ।\n"
+
+#: main.cpp:200
+#, kde-format
+msgid "Plasma Workspace installation problem!"
+msgstr "ਪਲਾਜ਼ਮਾ ਵਰਕਸਪੇਸ ਇੰਸਟਾਲੇਸ਼ਨ ਦੀ ਸਮੱਸਿਆ ਹੈ!"
+
+#: main.cpp:236
+#, kde-format
+msgid ""
+"The reliable Plasma session manager that talks the standard X11R6 \n"
+"session management protocol (XSMP)."
+msgstr ""
+"ਇੱਕ ਭਰੋਸੇਯੋਗ ਪਲਾਜ਼ਮਾ ਸ਼ੈਸ਼ਨ ਮੈਨੇਜਰ, ਜੋ ਕਿ ਸਟੈਂਡਰਡ X11R6 \n"
+"ਸ਼ੈਸ਼ਨ ਪਰਬੰਧ ਪਰੋਟੋਕਾਲ (XSMP) ਨਾਲ ਸੰਚਾਰ ਕਰਦਾ ਹੈ।"
+
+#: main.cpp:240
+#, kde-format
+msgid "Restores the saved user session if available"
+msgstr "ਵਰਤੋਂਕਾਰ ਦਾ, ਜੇ ਸੰਭਾਲਿਆ ਸ਼ੈਸ਼ਨ ਹੈ, ਤਾਂ ਮੁੜ-ਸਟੋਰ ਕਰੋ"
+
+#: main.cpp:243
+#, kde-format
+msgid "Also allow remote connections"
+msgstr "ਰਿਮੋਟ ਕੁਨੈਕਸ਼ਨ ਵੀ ਮਨਜ਼ੂਰ ਹਨ"
+
+#: main.cpp:246
+#, kde-format
+msgid "Starts the session in locked mode"
+msgstr "ਸ਼ੈਸ਼ਨ ਲਾਕ ਕੀਤੇ ਮੋਡ ਵਿੱਚ ਸ਼ੁਰੂ ਕਰੋ"
+
+#: main.cpp:250
+#, kde-format
+msgid ""
+"Starts without lock screen support. Only needed if other component provides "
+"the lock screen."
+msgstr ""
+
+#: server.cpp:873
+#, kde-format
+msgid "Session Management"
+msgstr "ਸ਼ੈਸ਼ਨ ਦਾ ਇੰਤਜ਼ਾਮ"
+
+#: server.cpp:876
+#, kde-format
+msgid "Log Out"
+msgstr "ਲਾਗ ਆਉਟ"
+
+#: server.cpp:881
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "ਬਿਨਾਂ ਪੁੱਛੇ ਲਾਗ ਆਉਟ ਕਰੋ"
+
+#: server.cpp:886
+#, kde-format
+msgid "Halt Without Confirmation"
+msgstr "ਬਿਨਾਂ ਪੁੱਛੇ ਬੰਦ ਕਰੋ"
+
+#: server.cpp:891
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "ਬਿਨਾਂ ਪੁੱਛੇ ਮੁੜ-ਚਾਲੂ ਕਰੋ"
+
+#, fuzzy
+#~| msgid ""
+#~| "Starts 'wm' in case no other window manager is \n"
+#~| "participating in the session. Default is 'kwin'"
+#~ msgid ""
+#~ "Starts <wm> in case no other window manager is \n"
+#~ "participating in the session. Default is 'kwin'"
+#~ msgstr ""
+#~ "ਜੇਕਰ ਵਿੰਡੋ ਮੈਨੇਜਰ ਸ਼ੈਸ਼ਨ ਵਿੱਚ ਸ਼ਾਮਿਲ ਨਹੀਂ ਹੈ ਤਾਂ\n"
+#~ "'wm' ਵਰਤੋਂ। ਮੂਲ 'kwin' ਹੈ।"
+
+#~ msgid "wm"
+#~ msgstr "wm"
+
+#, fuzzy
+#~| msgid "&Logout"
+#~ msgid "Logout"
+#~ msgstr "ਲਾਗਆਉਟ(&L)"
+
+#~ msgid "Sleeping in 1 second"
+#~ msgid_plural "Sleeping in %1 seconds"
+#~ msgstr[0] "1 ਸਕਿੰਟ ਵਿੱਚ ਸਲੀਪ"
+#~ msgstr[1] "%1 ਸਕਿੰਟਾਂ ਵਿੱਚ ਸਲੀਪ"
+
+#~ msgid "Lock"
+#~ msgstr "ਲਾਕ ਕਰੋ"
+
+#~ msgid "Turn off"
+#~ msgstr "ਬੰਦ ਕਰੋ"
+
+#~ msgid "Sleep"
+#~ msgstr "ਸਲੀਪ"
+
+#~ msgid "Logging out in 1 second."
+#~ msgid_plural "Logging out in %1 seconds."
+#~ msgstr[0] "1 ਸਕਿੰਟ ਵਿੱਚ ਲਾਗ ਆਉਟ"
+#~ msgstr[1] "%1 ਸਕਿੰਟਾਂ ਵਿੱਚ ਲਾਗ ਆਉਟ"
+
+#~ msgid "Turning off computer in 1 second."
+#~ msgid_plural "Turning off computer in %1 seconds."
+#~ msgstr[0] "%1 ਸਕਿੰਟ ਕੰਪਿਊਟਰ ਬੰਦ"
+#~ msgstr[1] "%1 ਸਕਿੰਟਾਂ ਵਿੱਚ ਕੰਪਿਊਟਰ ਬੰਦ"
+
+#~ msgid "Restarting computer in 1 second."
+#~ msgid_plural "Restarting computer in %1 seconds."
+#~ msgstr[0] "1 ਸਕਿੰਟ ਵਿੱਚ ਕੰਪਿਊਟਰ ਮੁੜ-ਚਾਲੂ"
+#~ msgstr[1] "%1 ਸਕਿੰਟਾਂ ਵਿੱਚ ਕੰਪਿਊਟਰ ਮੁੜ-ਚਾਲੂ"
+
+#, fuzzy
+#~| msgid "&Turn Off Computer"
+#~ msgid "Turn Off Computer"
+#~ msgstr "ਕੰਪਿਊਟਰ ਬੰਦ ਕਰੋ(&T)"
+
+#, fuzzy
+#~| msgid "&Restart Computer"
+#~ msgid "Restart Computer"
+#~ msgstr "ਕੰਪਿਊਟਰ ਮੁੜ-ਚਾਲੂ ਕਰੋ(&R)"
+
+#~ msgctxt "default option in boot loader"
+#~ msgid " (default)"
+#~ msgstr " (ਡਿਫਾਲਟ)"
+
+#, fuzzy
+#~| msgid "&Cancel"
+#~ msgid "Cancel"
+#~ msgstr "ਰੱਦ ਕਰੋ(&C)"
+
+#~ msgid "&Standby"
+#~ msgstr "ਸਟੈਂਡਬਾਏ(&S)"
+
+#~ msgid "Suspend to &RAM"
+#~ msgstr "&RAM ਉੱਤੇ ਸਸਪੈਂਡ ਕਰੋ"
+
+#~ msgid "Suspend to &Disk"
+#~ msgstr "ਡਿਸਕ ਉੱਤੇ ਸਸਪੈਂਡ ਕਰੋ(&D)"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "ਅਮਨਪਰੀਤ ਸਿੰਘ ਆਲਮ"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "aalam@users.sf.net"
+
+#~ msgid "(C) 2000, The KDE Developers"
+#~ msgstr "(C) ੨੦੦੦, KDE ਡਿਵੈਲਪਰ"
+
+#~ msgid "Matthias Ettrich"
+#~ msgstr "ਮੈਥਿਊ ਇੱਟਰਿਚ"
+
+#~ msgid "Luboš Luňák"
+#~ msgstr "ਲੁਬੋਸ ਲੁਨਿਕ"
+
+#~ msgid "Maintainer"
+#~ msgstr "ਪਰਬੰਧਕ"
+
+#~ msgctxt "current option in boot loader"
+#~ msgid " (current)"
+#~ msgstr " (ਮੌਜੂਦਾ)"

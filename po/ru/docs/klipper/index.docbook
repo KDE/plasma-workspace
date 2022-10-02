@@ -1,0 +1,669 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" 
+"dtd/kdedbx45.dtd" [
+  <!ENTITY kappname "&klipper;">
+  <!ENTITY package "kdebase">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Russian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<book id="klipper" lang="&language;">
+<bookinfo>
+<title
+>Руководство пользователя &klipper; </title>
+
+<authorgroup>
+<author
+>&Philip.Rodrigues; &Philip.Rodrigues.mail;</author>
+
+<othercredit role="developer"
+>&Carsten.Pfeiffer; &Carsten.Pfeiffer.mail; </othercredit>
+
+<othercredit role="translator"
+><firstname
+>Екатерина</firstname
+><surname
+>Пыжова</surname
+> <affiliation
+><address
+><email
+>haleth@yandex.ru</email
+></address
+></affiliation
+> <contrib
+>Перевод на русский</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Олег</firstname
+><surname
+>Баталов</surname
+><affiliation
+><address
+><email
+>olegbatalov@mail.ru</email
+></address
+></affiliation
+><contrib
+>Обновление русского перевода</contrib
+></othercredit
+> 
+
+</authorgroup>
+
+<copyright>
+<year
+>2000-2003</year>
+<holder
+>&Philip.Rodrigues;</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>5 мая 2022 г.</date>
+<releaseinfo
+>Plasma 5.25</releaseinfo>
+
+<abstract>
+<para
+>&klipper; &mdash; служебная программа &plasma; для работы с буфером обмена.</para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Klipper</keyword>
+<keyword
+>kdebase</keyword>
+<keyword
+>буфер обмена</keyword>
+</keywordset>
+</bookinfo>
+<!--http://blog.martin-graesslin.com/blog/2014/07/next-generation-klipper/-->
+<chapter id="introduction">
+<title
+>Введение</title>
+<para
+>Программа &klipper; работает с буфером обмена в среде &plasma;. Она сохраняет журнал буфера обмена и позволяет связывать содержание буфера обмена с действиями приложений. Информацию о проблемах или пожелания направляйте через <ulink url="http://bugs.kde.org"
+>систему отслеживания ошибок KDE Bugzilla</ulink
+>.</para>
+
+</chapter>
+
+<chapter id="using-klipper">
+<title
+>Использование &klipper;</title>
+
+<sect1 id="basic-usage">
+<title
+>Основные функции</title>
+<para
+>Программу &klipper; можно использовать в системном лотке как виджет &plasma; или как классическое приложение. Оба способа предоставляют одинаковую функциональность, но имеют разные &GUI;, а также при наведении указателя мыши на значок &klipper; в системном лотке показывается последний элемент журнала: </para>
+
+<screenshot>
+<screeninfo
+>Значок &klipper;</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Значок &klipper;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Виджет &klipper; скрыт, если буфер обмена пуст.</para>
+
+<para
+>Для просмотра журнала буфера обмена щёлкните по значку &klipper; в системном лотке.</para>
+
+<sect2 id="klipper-widget">
+<title
+>Виджет &klipper;</title>
+<screenshot>
+<screeninfo
+>Виджет &klipper;.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="klipper-widget.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Виджет &klipper;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Наведите указатель мыши на запись: появятся четыре значка, которые позволяют выполнить действие, показать штрихкод, изменить содержимое или удалить запись из журнала. Сделать и сохранить снимки штрихкодов позволяет приложение &spectacle;. </para>
+
+<para
+>В журнале буфера обмена можно выполнять поиск, открыв &klipper; и введя запрос. Результаты поиска обновляются по мере ввода текста. Чтобы очистить историю буфера обмена, щёлкните по значку, который расположен справа от поля поиска. </para>
+
+<para
+>Пункт <guilabel
+>Настроить буфер обмена...</guilabel
+> в контекстном меню вызывает <link linkend="preferences"
+>диалог настройки</link
+>. </para>
+
+</sect2>
+</sect1>
+
+<sect1 id="actions">
+<title
+>Действия</title>
+
+<para
+>&klipper; может выполнять над содержимым буфера некоторые действия, если это содержимое соответствует определённому регулярному выражению. Например, любая запись в буфере, которая начинается с <quote
+>http://</quote
+>, может быть передана Firefox или &konqueror; как &URL;, который можно открыть. Кроме того, если содержимое является путём к файлу, возможно выполнить аналогичные действия, зависящие от типа этого файла. Например, если скопировать в буфер обмена путь к файлу <acronym
+>PDF</acronym
+>, этот файл будет возможно просмотреть в &okular;.</para>
+
+<para
+>Чтобы использовать эту возможность, выберите &URL; или путь. Если в списке &klipper; есть подходящее регулярное выражение, появится меню, содержащее все доступные программы. С помощью мыши или клавиш со стрелками выберите нужную программу, и &klipper; запустит её, открыв указанный в буфере обмена адрес.</para>
+
+<para
+>Если с содержимым буфера обмена не требуется выполнять никаких действий, выберите в меню пункт<guimenuitem
+>Запретить всплывающее меню</guimenuitem
+>. После выхода из меню оно исчезнет, позволив продолжать работу. В диалоге настройки возможно изменить время, в течение которого меню присутствует на экране: для этого предназначен параметр <guilabel
+>Задержка всплывающих меню</guilabel
+> на вкладке <guilabel
+>Главное</guilabel
+>. Чтобы отключить действия для путей к файлам, снимите флажок <guilabel
+>Включить действия на основе типов MIME</guilabel
+> на вкладке <guilabel
+>Действия</guilabel
+>.</para>
+
+<para
+>Действия могут быть полностью отключены нажатием <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>X</keycap
+></keycombo
+>.</para>
+
+<para
+>Содержимое буфера обмена, соответствующее регулярному выражению, может быть изменено перед выполнением действия над ним. Выберите пункт <guimenuitem
+>Редактировать содержимое...</guimenuitem
+>, который расположен справа от записи буфера обмена, чтобы изменить содержимое буфера обмена в появившемся диалоге, а затем нажмите кнопку <guibutton
+>OK</guibutton
+> для запуска соответствующего действия.</para>
+
+<para
+>Комбинация <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>R</keycap
+></keycombo
+> показывает меню для повторения последнего действия &klipper;.</para>
+
+</sect1>
+
+<sect1 id="clipboard-modes">
+<title
+>Работа с буфером обмена</title>
+
+<sect2 id="clipboard-modes-general">
+<title
+>Общие</title>
+<para
+>&klipper; может использоваться для настройки поведения буфера обмена и выделения в &plasma;. </para>
+
+<note
+><para
+>&X-Window; использует два отдельных буфера: <quote
+>выделения</quote
+> и <quote
+>буфер обмена</quote
+>. Текст помещается в буфер выделения просто при его выделении, затем его возможно вставить с помощью средней кнопки мыши. Для помещения текста в буфер обмена его необходимо выделить и нажать <keycombo
+>&Ctrl;<keycap
+>X</keycap
+> </keycombo
+> или <keycombo
+>&Ctrl; <keycap
+>C</keycap
+> </keycombo
+>. Текст из буфера обмена возможно вставить с помощью <keycombo
+>&Ctrl; <keycap
+>V</keycap
+> </keycombo
+> или выбором пункта <guimenuitem
+>Вставить</guimenuitem
+> в контекстном меню.</para>
+</note>
+
+</sect2>
+
+<sect2 id="changing-clipboard-modes">
+<title
+>Изменение поведения выделения/буфера обмена</title>
+<para
+>Чтобы изменить поведение выделения или буфера обмена, выберите пункт <guimenuitem
+>Настроить буфер обмена…</guimenuitem
+> в контекстном меню &klipper; и в появившемся диалоге выберите вкладку <guilabel
+>Главное</guilabel
+>. Снятие флажка <guilabel
+>Выделение и буфер обмена</guilabel
+> делает функции буфера обмена и выделения отдельными буферами, как описано ранее. Включение этого параметра и параметра <guilabel
+>Игнорировать выделение мышью</guilabel
+> предотвратит включение содержимого выделений в журнал буфера обмена и выполнение над ними действий. Установка флажка <guilabel
+>Выделение и буфер обмена</guilabel
+> будет синхронизировать содержимое буфера обмена и выделения. Это означает, что выделенный текст возможно вставить с помощью <mousebutton
+>средней</mousebutton
+> кнопки мыши или комбинации клавиш <keycombo
+>&Ctrl;<keycap
+>V</keycap
+> </keycombo
+>, как и текст из буфера обмена. </para>
+
+ <!-- The
+<guilabel
+>Synchronize contents of the clipboard and the
+selection</guilabel
+> check box determines the clipboard mode. If the box is
+selected, the clipboard functions in the &UNIX; mode; if not, the
+&Windows;/&Mac; mode is used. -->
+
+</sect2>
+
+
+</sect1>
+
+</chapter>
+
+<chapter id="preferences">
+<title
+>Настройка &klipper;</title>
+
+<sect1 id="general-page">
+<title
+>Основные параметры</title>
+
+<variablelist>
+
+<varlistentry
+><term
+><guilabel
+>Выделение и буфер обмена</guilabel
+></term>
+<listitem
+><para
+>Выбор области экрана с помощью мыши или клавиатуры называется <emphasis
+>выделением</emphasis
+>. Вставка выделения выполняется щелчком средней кнопкой мыши.</para
+><para
+>Если выделение явно копируется с помощью действия <guimenuitem
+>Копировать</guimenuitem
+> или <guimenuitem
+>Вставить</guimenuitem
+>, оно сохраняется в <emphasis
+>буфер обмена</emphasis
+>. Вставку выделения можно выполнить с помощью действия <guimenuitem
+>Вставить</guimenuitem
+>.</para
+><para
+>Если этот параметр включён, содержание выделения и буфера обмена совпадает, поэтому выделение сразу же становится доступным для вставки любым способом. Если этот параметр отключён, выделение всё равно можно сохранить в журнале буфера (в соответствии с расположенными ниже параметрами), но его вставку будет возможно выполнить только с помощью средней кнопки мыши.</para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Журнал буфера обмена</guilabel
+></term>
+<listitem
+><para
+>Включает и отключает ведение журнала буфера обмена.</para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Количество записей</guilabel
+></term>
+<listitem
+><para
+>Устанавливает количество записей, которое сохраняется в истории буфера обмена.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Выделение текста</guilabel
+></term>
+<listitem
+><para
+>Выбранная с помощью мыши или клавиатуры область экрана называется <quote
+>выделением</quote
+>. Этот параметр определяет, сохраняются ли выделения текста в журнале буфера обмена. Возможно выбрать один следующих вариантов: <guilabel
+>Всегда сохранять в журнале</guilabel
+> или <guilabel
+>Только при явном копировании</guilabel
+>. Вариант <guilabel
+>Всегда сохранять в журнале</guilabel
+> недоступен, если синхронизация выделения и буфера обмена отключена (в этом случае выделение не будет автоматически сохраняться в журнале буфера обмена). Смотрите раздел <xref linkend="clipboard-modes"/>. </para>
+</listitem>
+</varlistentry
+> 
+
+<varlistentry>
+<term
+><guilabel
+>Нетекстовое выделение</guilabel
+></term>
+<listitem
+><para
+>Этот параметр определяет, сохраняются ли нетекстовые выделения (например, изображения) в журнале буфера обмена. Возможно выбрать один следующих вариантов: <guilabel
+>Всегда сохранять в журнале</guilabel
+>, <guilabel
+>Только при явном копировании</guilabel
+> или <guilabel
+>Никогда не сохранять в журнале</guilabel
+>. Вариант <guilabel
+>Всегда сохранять в журнале</guilabel
+> недоступен, если синхронизация выделения и буфера обмена отключена (в этом случае выделение не будет автоматически сохраняться в журнале буфера обмена). Смотрите раздел <xref linkend="clipboard-modes"/>. </para>
+</listitem>
+</varlistentry
+> 
+
+</variablelist>
+
+</sect1>
+
+<sect1 id="action-menu-page">
+<title
+>Меню действий</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Показ всплывающего меню действий</guilabel
+></term>
+<listitem
+><para
+>Устанавливает время, в течение которого всплывающее меню будет показываться, если вы ничего с ним не делаете.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Повторить действия для элемента, выбранного из списка</guilabel
+></term>
+<listitem
+><para
+>Если этот флажок установлен, при выборе элемента из списка истории &klipper; покажет действия для этого элемента (если они, конечно, есть).</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Исключить окна…</guibutton
+></term>
+<listitem
+><para
+>Вызывает окно <guilabel
+>Отключить действия для окон класса WM_CLASS</guilabel
+>.</para>
+<para
+>Некоторые программы, такие как &konqueror;, используют буфер обмена внутри себя. Если ненужные меню &klipper; всплывают всякий раз, когда используется определённое приложение, сделайте следующее: </para>
+
+<orderedlist>
+<listitem
+><para
+>Откройте приложение.</para
+></listitem>
+<listitem
+><para
+>В терминале, выполните <userinput
+><command
+>xprop</command
+> | <command
+>grep</command
+> <parameter
+>WM_CLASS</parameter
+></userinput
+> и затем щёлкните в окне выполняющегося приложения.</para
+></listitem
+> 
+<listitem
+><para
+>Первая строка после знаков =, является той, которую необходимо ввести.</para
+></listitem>
+</orderedlist>
+
+<para
+>После добавления WM_CLASS для окон этого приложения не будет больше производиться никаких действий.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Удалять пробелы при выполнении действий</guilabel
+></term>
+<listitem
+><para
+>Если параметр установлен, любые пробелы (пробелы, табуляция, &etc;) в начале и конце содержимого буфера обмена будут удалены перед обработкой его в приложении. Это полезно, например, если буфер обмена содержит &URL; с пробелами, поскольку его открытие в браузере вызовет ошибку.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Включить действия на основе типов MIME</guilabel
+></term>
+<listitem
+><para
+>Если этот флажок установлен, то во всплывающем меню будут показаны не только заданные действия, но и список приложений для обнаруженного типа MIME.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+
+<sect1 id="actions-configuration-page">
+<title
+>Настройка действий</title>
+
+<variablelist>
+<varlistentry>
+<term
+>Редактирование выражений/действий</term>
+<listitem
+><para
+>На странице <guilabel
+>Действия</guilabel
+> двойным щелчком откройте регулярное выражение или действие, которое требуется изменить (также можно выбрать его и нажать кнопку <guibutton
+>Изменить действие...</guibutton
+>). Появится диалог, в котором текст может быть изменён необходимым образом.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>Добавление выражений/действий</term>
+<listitem
+><para
+>Нажмите кнопку <guibutton
+>Добавить действие…</guibutton
+>, чтобы добавить в &klipper; регулярное выражение для сравнения. &klipper; использует <classname
+>QRegularExpression</classname
+> &Qt;, который использует регулярные выражения PCRE (Perl Compatible Regular Expressions).</para>
+<para
+>Вы можете добавить описание к регулярному выражению (&eg; <quote
+>HTTP URL</quote
+>), щелкнув <mousebutton
+>левой</mousebutton
+> кнопкой мыши по столбцу <guilabel
+>Описание</guilabel
+>.</para
+>   
+
+<note
+><para
+>Подробная информация об использовании регулярных выражений <classname
+>QRegularExpression</classname
+> доступна в <ulink url="https://doc.qt.io/qt-5/qregularexpression.html#details"
+>документации основной версии Qt</ulink
+>.</para
+></note>
+
+<para
+>Измените регулярное выражение, как описано выше. Чтобы добавить команду для исполнения, нажмите кнопку <guimenuitem
+>Добавить команду</guimenuitem
+> и измените появившуюся команду в поле редактирования текста. Двойной щелчок по команде делает её доступной для редактирования.</para>
+
+<para
+>Обратите внимание, что <token
+>%s</token
+> в командной строке заменяется содержимым буфера обмена. Например, если определение команды выглядит как <userinput
+><command
+>kwrite</command
+> <token
+>%s</token
+></userinput
+>, а в буфере обмена находится <filename
+>/home/phil/textfile</filename
+>, будет выполнена команда <userinput
+><command
+>kwrite</command
+> <filename
+>/home/phil/textfile</filename
+></userinput
+>. Чтобы ввести в командной строке <token
+>%s</token
+>, предварите его обратной наклонной чертой вот так: <userinput
+>\%s</userinput
+>.</para>
+
+<para
+>Записи <userinput
+><token
+>%0</token
+></userinput
+> — <userinput
+><token
+>%9</token
+></userinput
+> будут заменены соответствующими захваченными текстами из шаблона сопоставления. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+
+<sect1 id="shortcuts-page">
+<title
+>Параметры комбинаций клавиш</title>
+
+<para
+>Эта вкладка позволяет изменять комбинации клавиш для доступа к функциям &klipper;. Комбинации могут находиться в одном из трех режимов:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Нет</guilabel
+></term>
+<listitem
+><para
+>К выбранному действию нельзя получить доступ непосредственно с клавиатуры.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>По умолчанию</guilabel
+></term>
+<listitem
+><para
+>Выбранное действие использует комбинации клавиш &klipper; по умолчанию. Это комбинации, использовавшиеся в этом руководстве.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>По выбору</guilabel
+></term>
+<listitem
+><para
+>Выбранному действию назначены установленные вами комбинации клавиш.</para>
+<para
+>Чтобы назначить выбранному действию другую комбинацию клавиш, нажмите кнопку <guilabel
+>Другая</guilabel
+>, затем кнопку <guilabel
+>Не определена</guilabel
+> и нажмите нужные клавиши на клавиатуре. Этот способ назначения комбинации клавиш применяется во всех приложениях &kde;. </para
+> </listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Если задана комбинация клавиш для действия <guilabel
+>Открывать Klipper на месте указателя мыши</guilabel
+>, с её помощью можно вызвать всплывающее меню &klipper;: оно появится на месте указателя мыши, а не на месте по умолчанию (то есть в панели &plasma;). Это может быть полезно, если мышь используется чаще, чем клавиатура.</para>
+
+</sect1>
+</chapter>
+
+<chapter id="credits">
+<title
+>Авторские права и лицензия</title>
+
+<para
+>&klipper; </para>
+<para
+>(c) 1998 Авторские права на программу: Эндрю Стэнли-Джонс (&Andrew.Stanley-Jones;) <email
+>asj@cban.com</email
+> </para>
+<para
+>Авторское право на программу 1998-2000 &Carsten.Pfeiffer; &Carsten.Pfeiffer.mail;</para>
+<para
+>Текущий разработчик - Esben Mose Hansen. Зайдите на сайт <ulink url="http://mosehansen.dk/about"
+>http://mosehansen.dk/about</ulink
+>. </para>
+
+<para
+>Авторское право на документацию: 2000-2003, 2005 &Philip.Rodrigues; &Philip.Rodrigues.mail;</para>
+
+<para
+>Олеся Герасименко<email
+>translation-team@basealt.ru</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+
+&documentation.index; 
+
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes: nil
+sgml-general-insert-case: lower
+sgml-indent-step: 0
+End:
+-->
+
+
+
+
+
+
+
+
+
+

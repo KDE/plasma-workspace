@@ -1,0 +1,710 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" 
+"dtd/kdedbx45.dtd" [
+  <!ENTITY kappname "&klipper;">
+  <!ENTITY package "kdebase">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Indonesian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<book id="klipper" lang="&language;">
+<bookinfo>
+<title
+>Buku Petunjuk &klipper; </title>
+
+<authorgroup>
+<author
+>&Philip.Rodrigues; &Philip.Rodrigues.mail;</author>
+
+<othercredit role="developer"
+>&Carsten.Pfeiffer; &Carsten.Pfeiffer.mail; </othercredit>
+
+<othercredit role="translator"
+><firstname
+>Wantoyo</firstname
+><surname
+></surname
+><affiliation
+><address
+><email
+>wantoyek@gmail.com</email
+></address
+></affiliation
+><contrib
+>Terjemahan</contrib
+></othercredit
+> 
+
+</authorgroup>
+
+<copyright>
+<year
+>2000-2003</year>
+<holder
+>&Philip.Rodrigues;</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>20-07-2015</date>
+<releaseinfo
+>Plasma 5.4</releaseinfo>
+
+<abstract>
+<para
+>&klipper; adalah papan-klip &plasma; utilitas potong &amp; tempel.</para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Klipper</keyword>
+<keyword
+>kdebase</keyword>
+<keyword
+>papan klip</keyword>
+</keywordset>
+</bookinfo>
+<!--http://blog.martin-graesslin.com/blog/2014/07/next-generation-klipper/-->
+<chapter id="introduction">
+<title
+>Pengenalan</title>
+<para
+>&klipper; adalah utilitas papan klip &plasma;. Yang menyimpankan histori papan klip, dan memungkinkan kamu untuk menautkan konten  papan klip terhadap aksi aplikasi. Silakan laporkan permasalahan apa pun atau fitur yang diminta ke <ulink url="http://bugs.kde.org"
+>KDEs bugzilla</ulink
+>.</para>
+
+</chapter>
+
+<chapter id="using-klipper">
+<title
+>Penggunaan &klipper;</title>
+
+<sect1 id="basic-usage">
+<title
+>Dasar Penggunaan</title>
+<para
+>Kamu bisa menggunakan &klipper; dalam systemtray baik sebagai widget &plasma; atau aplikasi klasik. Kedua-duanya secara fungsinya sama tetapi memiliki &GUI; yang berbeda dan menampilkan item terakhir dari histori ketika melayangi ikon &klipper; di systemtray: </para>
+
+<screenshot>
+<screeninfo
+>Ikon &klipper;.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Ikon &klipper;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Widget &klipper; disembunyikan jika papan klip telah kosong.</para>
+
+<para
+>Untuk mendisplaikan histori papan klip, klik pada ikon &klipper; di systemtray.</para>
+
+<sect2 id="klipper-widget">
+<title
+>Widget &klipper;</title>
+<screenshot>
+<screeninfo
+>Widget &klipper;.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="klipper-widget.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Widget &klipper;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Melayangi entri dengan pointer mouse dan empat ikon muncul yang mana memungkinkan kamu untuk meminta suatu aksi, menampilkan barcode, mengedit konten atau menghapus entri dari histori. Gunakan &ksnapshot; untuk menangkap barcode dan menyimpannya. </para>
+
+<para
+>Kamu bisa mencari melalui histori papan klip dengan membukanya (klik pada &klipper;) dan mengetik query-mu. Hasilnya akan di-pembaruan sebagai apa yang kamu ketik. Untuk membersihkan histori papan klip, klik pada ikon di sebelah kanan bidang pencarian. </para>
+
+<para
+>Aksi <guilabel
+>Konfigurasikan</guilabel
+> di dalam menu konteks membukakan <link linkend="preferences"
+>dialog pengaturan</link
+>. </para>
+
+<para
+>Untuk menonfungsikan widget &klipper;, hapus pemilihannya di dalam halaman <guilabel
+>Umum</guilabel
+> dari <guilabel
+>Pengaturan Baki Sistem</guilabel
+> (<keycombo action="simul"
+>&Alt;<keycap
+>D</keycap
+></keycombo
+>, <keycap
+>S</keycap
+>).</para>
+
+</sect2>
+
+<sect2 id="klipper-application">
+<title
+>Aplikasi &klipper;</title>
+<screenshot>
+<screeninfo
+>Aplikasi &klipper;.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="klipper-application.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>Aplikasi &klipper;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Di bagian atas menu yang tersedia, aksi entri papan klip sebelumnya akan ditampilkan. Memilih salahsatu dari salinan ini ke papan klip, dari tempat itu bisa ditempelkan ke aplikasi X atau &kde; apa pun seperti biasa.</para>
+
+<para
+>Kamu bisa mencari melalui histori papan klip dengan mengetik di dalam bidang pencarian di bagian atas. Hasilnya akan di-pembaruan sebagaimana apa yang kamu ketik. </para>
+
+</sect2>
+</sect1>
+
+<sect1 id="actions">
+<title
+>Aksi</title>
+
+<para
+>&klipper; bisa melakukan aksi pada konten papan klip, berdasarkan pada apakah mereka cocok dengan ekspresi reguler tertentu. Misalnya, konten papan klip dimulai dengan <quote
+>http://</quote
+> bisa diteruskan ke Firefox atau &konqueror; sebagai &URL; untuk dibuka. Selain itu, jika isinya cocok dengan alur, tindakan serupa dapat dilakukan sesuai dengan file ketik. &eg;, jika jalur ke file <acronym
+>PDF</acronym
+> disalin ke papan klip, file dapat dilihat di &okular;.</para>
+
+<para
+>Untuk menggunakan fitur ini, cukup pilih &URL; atau alur. Jika ada ekspresi reguler yang cocok dalam daftar &klipper;, akan muncul menu yang menunjukkan kamu program untuk pemilihanmu. Gunakan mouse atau tombol kursor untuk memilih program, dan &klipper; akan menjalankan program ini, pembukaan alamat yang ditunjuk, berdasarkan pemilihan.</para>
+
+<para
+>Jika kamu tidak ingin melakukan aksi apa pun pada konten papan klip, pilih <guimenuitem
+>Nonfungsikan Sembulan Ini</guimenuitem
+> pada menu sembul untuk kembali ke apa yang kamu lakukan sebelumnya. Jika kamu biarkan menu, itu akan hilang, membiarkan kamu untuk melanjutkan pekerjaanmu. Kamu bisa mengubah sisa waktu menu yang ada di dialog pengaturan, dengan opsi <guilabel
+>Batas waktu untuk aksi sembulan</guilabel
+> di bawah halaman <guilabel
+>Umum</guilabel
+>. Kamu bisa secara terpisah menonfungsikan bagian alur file menggunakan opsi <guilabel
+>Fungsikan aksi berbasis MIME</guilabel
+> di bawah halaman <guilabel
+>Aksi</guilabel
+>.</para>
+
+<para
+>Aksi bisa dinonfungsikan secara keseluruhan dengan menekan pintasan <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>X</keycap
+></keycombo
+>.</para>
+
+<para
+>Konten papan klip yang cocok dengan ekspresi reguler juga bisa diedit sebelum melakukan aksi padanya. Pilih <guimenuitem
+>Edit konten...</guimenuitem
+> di sebelah kanan entri papan klip, dan kamu bisa mengubah konten papan klip dalam dialog yang muncul, sebelum mengeklik tombol <guibutton
+>Oke</guibutton
+> untuk menjalankan aksi yang sesuai.</para>
+
+<para
+>Menekan <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>R</keycap
+></keycombo
+> menampilkan menu sembul untuk mengulangi aksi terakhir yang dilakukan &klipper;.</para>
+
+</sect1>
+
+<sect1 id="clipboard-modes">
+<title
+>Perilaku pemilihan/Papan-Klip</title>
+
+<sect2 id="clipboard-modes-general">
+<title
+>Umum</title>
+<para
+>&klipper; bisa digunakan untuk mengatur perilaku papan klip dan pemilihan di &plasma;. </para>
+
+<note
+><para
+>&X-Window; menggunakan dua buffer papan klip terpisah: pilihan <quote
+>pemilihan</quote
+> dan <quote
+>papan klip</quote
+>. Teks ditempatkan dalam pilihan buffer dengan hanya memilihnya, dan bisa ditempelkan dengan tombol mouse tengah. Untuk menempatkan teks di buffer papan klip, pilih dan tekan <keycombo
+>&Ctrl;<keycap
+>X</keycap
+> </keycombo
+> or <keycombo
+>&Ctrl;<keycap
+>C</keycap
+> </keycombo
+>. Teks dari buffer papan klip ditempelkan menggunakan <keycombo
+>&Ctrl;<keycap
+>V</keycap
+> </keycombo
+> atau dengan memilih <guimenuitem
+>Tempelkan</guimenuitem
+> dalam menu konteks.</para>
+</note>
+
+<!-- &klipper; can be used to set the clipboard mode for the whole of &kde;. The
+first mode will be familiar to &Microsoft; &Windows; and &Mac; users: Text is
+inserted into the clipboard using an application's cut/copy (or generally
+<keycombo
+>&Ctrl;<keycap
+>X</keycap
+></keycombo
+> and
+<keycombo
+>&Ctrl;<keycap
+>C</keycap
+></keycombo
+> respectively)
+function, and the application's paste (or generally 
+<keycombo
+>&Ctrl;<keycap
+>V</keycap
+></keycombo
+>) function pastes the
+contents of this clipboard.
+</para>
+<para>
+The second mode will be more familiar to longtime &UNIX; users: Selected text
+is copied to this clipboard, and clicking the <mousebutton
+>middle</mousebutton
+> 
+mouse button pastes the
+contents of this clipboard.
+-->
+</sect2>
+
+<sect2 id="changing-clipboard-modes">
+<title
+>Mengubah Perilaku pemilihan/Papan-klip</title>
+<para
+>Untuk mengubah perilaku pemilihan/papan klip, pilih <guimenuitem
+>Konfigurasikan &klipper;...</guimenuitem
+> dari menu konteks &klipper; dan di kotak dialog yang muncul, pilih halaman <guilabel
+>Umum</guilabel
+>. Hapus centang <guilabel
+>Menyinkronkan konten papan klip dan pemilihan</guilabel
+> membuat papan klip dan fungsi pemilihan sebagai buffer terpisah secara lengkap seperti dijelaskan di atas. Dengan mengatur opsi ini, opsi  <guilabel
+>Abaikan pemilihan</guilabel
+> akan mencegah &klipper; penyertaan konten pemilihan di dalam histori papan klip dan dari perlakuan aksi pada konten pemilihan. Memilih <guilabel
+>Sinkronisasi konten papan klip dan pemilihan</guilabel
+> menyebabkan papan klip dan buffer pemilihan menjadi selalu sama, artinya teks dalam pemilihan bisa ditempel dengan tombol mouse <mousebutton
+>tengah</mousebutton
+> atau kombinasi tuts <keycombo
+>&Ctrl;<keycap
+>V</keycap
+> </keycombo
+>, dan juga untuk teks di dalam buffer papan klip. </para>
+
+ <!-- The
+<guilabel
+>Synchronize contents of the clipboard and the
+selection</guilabel
+> check box determines the clipboard mode. If the box is
+selected, the clipboard functions in the &UNIX; mode; if not, the
+&Windows;/&Mac; mode is used. -->
+
+</sect2>
+
+
+</sect1>
+
+</chapter>
+
+<chapter id="preferences">
+<title
+>Mengkonfigurasi &klipper;</title>
+
+<sect1 id="general-page">
+<title
+>Opsi Umum</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Simpan konten papan klip saat keluar</guilabel
+></term
+> <listitem
+><para
+>Jika opsi ini nyala, histori papan klip akan disimpan ketika &klipper; keluar, memungkinkan kamu untuk menggunakannya kala &klipper; dijalankan.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Cegah papan klip kosong</guilabel
+></term>
+<listitem
+><para
+>Jika dicentang, papan klip tidak akan kosong: &klipper; akan menyisipkan beberapa item baru-baru ini dari histori papan klip ke dalam alih-alih papan klip yang memungkinkannya menjadi kosong.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Abaikan citra</guilabel
+></term>
+<listitem
+><para
+>Ketika sebuah area pada layar dipilih dengan mouse atau keyboard, ini yang disebut sebagai <quote
+>pemilihan</quote
+>. Jika opsi ini dipilih, hanya pemilihan teks yang disimpan di histori, sementara citra dan pemilihan lainnya tidak. </para>
+</listitem>
+</varlistentry
+> 
+
+<varlistentry>
+<term
+><guilabel
+>Abaikan pemilihan</guilabel
+></term>
+<listitem
+><para
+>Set mode papan klip. Opsi ini akan mencegah &klipper; dari penyertaan konten pemilihan di dalam histori papan klip dan dari perlakuan aksi pada konten pemilihan. Lihat <xref linkend="clipboard-modes"/>. </para>
+</listitem>
+</varlistentry
+> 
+
+<varlistentry>
+<term
+><guilabel
+>Hanya pemilihan teks</guilabel
+></term>
+<listitem
+><para
+>Ketika area pada layar telah dipilih dengan mouse atau keyboard, ini adalah disebut <quote
+>pemilihan</quote
+>. Jika opsi ini dipilih hanya teks pemilihan yang disimpan di dalam histori selagi citra dan pemilihan lain tidak. Lihatlah <xref linkend="clipboard-modes"/>. </para>
+</listitem>
+</varlistentry
+> 
+
+<varlistentry>
+<term
+><guilabel
+>Sinkronisasi konten papan klip dan pemilihan</guilabel
+></term>
+<listitem
+><para
+>Set mode papan klip. Ketika area layar dipilih dengan mouse atau keyboard, ini disebut <quote
+>pemilihan</quote
+>. Jika opsi ini dipilih, pemilihan dan papan klip tetap sama, sehingga apa pun dalam pemilihan segera tersedia untuk menempel di tempat lain menggunakan metode, termasuk tombol tengah mouse tradisional. Kalau tidak, pemilihan direkam dalam histori papan klip, tetapi pilihan hanya bisa disisipkan menggunakan tombol tengah mouse. Lihat juga opsi <guilabel
+>Abaikan pemilihan</guilabel
+>. Lihat <xref linkend="clipboard-modes"/>. </para>
+</listitem>
+</varlistentry
+> 
+
+<varlistentry>
+<term
+><guilabel
+>Batas waktu untuk aksi sembulan</guilabel
+></term>
+<listitem
+><para
+>Set waktunya menu sembul yang akan tersisa jika kamu tidak melakukan apa-apa dengannya.</para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Ukuran histori papan klip</guilabel
+></term>
+<listitem
+><para
+>Set jumlah item yang akan disimpan di dalam histori papan klip.</para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect1>
+
+<sect1 id="actions-page">
+<title
+>Opsi Aksi</title>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Perulangan aksi pada item yang dipilih dari histori</guilabel
+></term>
+<listitem
+><para
+>Jika ini dinyalakan, pemilihan sebuah item dari histori menyebabkan &klipper; mendisplaikan aksi sembul pada item tersebut, jika diperlukan.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Hapus spasi putih ketika mengeksekusi aksi.</guilabel
+></term>
+<listitem
+><para
+>Jika dipilih, spasi putih (spasi, tab, &etc;) di awal dan akhir konten papan klip akan dihapus sebelum melewati konten papan klip ke sebuah aplikasi. Ini berguna, misalnya, jika papan klip berisi &URL; dengan spasi, jika dibuka oleh browser web, akan menyebabkan error.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Fungsikan aksi berbasis MIME</guilabel
+></term>
+<listitem
+><para
+>Jika dipilih, selain untuk aksi yang kamu tentukan sebuah daftar aplikasi tipe MIME yang terdeteksi akan muncul di dalam menu sembul.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>Mengedit Aksi/Ekspresi</term>
+<listitem
+><para
+>Pada halaman <guilabel
+>Aksi</guilabel
+>, klik ganda ekspresi reguler atau aksi yang ingin kamu edit atau pilih dan tekan tombol  <guibutton
+>Edit Aksi</guibutton
+>. Dialog akan muncul di mana teks ekspresi bisa diedit sesuai keinginan.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>Menambahkan Aksi/Ekspresi</term>
+<listitem
+><para
+>Klik tombol <guibutton
+>Tambahkan Aksi...</guibutton
+> untuk menambahkan ekspresi reguler bagi &klipper; untuk mencocokkan. &klipper; menggunakan <classname
+>QRegExp</classname
+> &Qt;, yang banyak memahami ekspresi reguler seperti yang kamu gunakan dalam <application
+>grep</application
+> atau <application
+>egrep</application
+> misalnya.</para>
+<para
+>Kamu bisa menambahkan sebuah deskripsinya tipe ekspresi reguler (&eg; <quote
+>HTTP URL</quote
+>) dengan mengeklik <mousebutton
+>kiri</mousebutton
+> di dalam kolom <guilabel
+>Deskripsi</guilabel
+>.</para
+>   
+
+<note
+><para
+>Kamu bisa menemukan informasi terperinci tentang penggunaan ekspresi reguler <classname
+>QRegExp</classname
+> di <ulink url="http://doc.qt.io/qt-5/qregexp.html#details"
+>http://doc.qt.io/qt-5/qregexp.html#details</ulink
+>. Ingat bahwa &klipper; belum mendukung mode wildcard tersebut pada halaman ini.</para
+></note
+> 
+
+<para
+>Edit ekspresi reguler sebagaimana yang dijelaskan di atas. Untuk menambahkan sebuah perintah untuk pengeksekusian, klik <guimenuitem
+>Tambahkan Perintah</guimenuitem
+> dan edit si perintah dalam suatu tempat kotak pengeditan teks. Klik ganda pada perintah memungkinkan kamu untuk mengeditnya.</para>
+
+<para
+>Ingat bahwa <token
+>%s</token
+> di dalam baris perintah telah digantikan dengan konten papan klip, &eg; jika definisi perintahmu adalah  <userinput
+><command
+>kwrite</command
+> <token
+>%s</token
+></userinput
+> dan konten papan klipmu adalah  <filename
+>/home/phil/textfile</filename
+>, maka perintah <userinput
+><command
+>kwrite</command
+> <filename
+>/home/phil/textfile</filename
+></userinput
+> akan dijalankan. Untuk menyertakan <token
+>%s</token
+> di dalam baris perintah, meloloskannya dengan sebuah garis-miring-terbalik, seperti ini: <userinput
+>\%s</userinput
+>.</para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Tingkat lanjut</guibutton
+></term>
+<listitem
+><para
+>Memberikan dialog <guilabel
+>Nonfungsikan Aksi bagi window bertipe WM_CLASS</guilabel
+>.</para>
+<para
+>Beberapa program sepertihalnya &konqueror; menggunakan papan klip secara internal. Jika kamu mendapatkan sembulan &klipper; yang tidak diinginkan setiap saat ketika menggunakan aplikasi tertentu lakukanlah berikut ini:</para>
+
+<orderedlist>
+<listitem
+><para
+>Buka aplikasi.</para
+></listitem>
+<listitem
+><para
+>Dari terminal, jalankan <userinput
+><command
+>xprop</command
+> | <command
+>grep</command
+> <parameter
+>WM_CLASS</parameter
+></userinput
+> dan kemudian klik pada window-nya aplikasi yang kamu jalankan.</para
+></listitem
+> 
+<listitem
+><para
+>Deretan pertama setelah tanda samadengan adalah satu-satunya untuk masuk.</para
+></listitem>
+</orderedlist>
+
+<para
+>Setelah WM_CLASS ditambahkan, tidak ada lagi aksi yang akan dihasilkan untuk window aplikasi tersebut.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+
+<sect1 id="shortcuts-page">
+<title
+>Opsi Pintasan</title>
+
+<para
+>Halaman pintasan memungkinkan kamu untuk mengubah pintasan keyboard yang digunakan untuk mengakses fungsi &klipper;. Kamu bisa mengubah pintasan ke salahsatu dari tiga hal:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Nihil</guilabel
+></term>
+<listitem
+><para
+>Aksi yang dipilih tidak bisa diakses langsung dari keyboard</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Baku</guilabel
+></term>
+<listitem
+><para
+>Aksi yang dipilih menggunakan tuts baku &klipper;. Ini adalah pintasan yang diacukan dalam manual ini.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Kustom</guilabel
+></term>
+<listitem
+><para
+>Aksi yang dipilih telah ditandatangani ke tuts yang kamu pilih.</para>
+<para
+>Untuk memilih sebuah tuts kustom untuk aksi yang telah kamu pilih, klik pada <guilabel
+>Kustom</guilabel
+> dan kemudian <guilabel
+>Nihil</guilabel
+>. Sekarang ketik kombinasi tuts yang diinginkan pada keyboard-mu sebagaimana dalam aplikasi &kde; apapun. </para
+> </listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Jika kamu menentukan pintasan untuk <guilabel
+>Buka Klipper di Posisi Mouse</guilabel
+> menekan pintasan ini akan membuka menu sembul &klipper; di posisi kursor mouse, bukannya posisi baku mereka (di Panel &plasma;). Berguna jika kamu menggunakan mouse melebihi dari keyboard.</para>
+
+</sect1>
+</chapter>
+
+<chapter id="credits">
+<title
+>Penghargaan dan Lisensi</title>
+
+<para
+>&klipper; </para>
+<para
+>Hakcipta program 1998 &Andrew.Stanley-Jones; <email
+>asj@cban.com</email
+> </para>
+<para
+>Hakcipta program 1998-2000 &Carsten.Pfeiffer; &Carsten.Pfeiffer.mail;</para>
+<para
+>Saat ini dirawat oleh Esben Mose Hansen. Lihatlah <ulink url="http://mosehansen.dk/about"
+>http://mosehansen.dk/about</ulink
+> untuk perincian kontak. </para>
+
+<para
+>Hakcipta dokumentasi 2000-2003, 2005 &Philip.Rodrigues; &Philip.Rodrigues.mail;</para>
+
+<para
+>Wantoyo<email
+>wantoyek@gmail.com</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+
+&documentation.index; 
+
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes: nil
+sgml-general-insert-case: lower
+sgml-indent-step: 0
+End:
+-->
+
+
+
+
+
+
+
+
+
+

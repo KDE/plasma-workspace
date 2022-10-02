@@ -1,0 +1,536 @@
+# translation of kcmfonts.po to Polish
+# translation of kcmfonts.po to
+# Version: $Revision: 1623908 $
+# Michał Rudolf <mrudolf@kdewebdev.org>, 2002.
+# Michal Rudolf <mrudolf@kdewebdev.org>, 2002, 2003, 2004, 2005, 2006, 2008.
+# Krzysztof Lichota <lichota@mimuw.edu.pl>, 2005.
+# Marta Rybczyńska <kde-i18n@rybczynska.net>, 2008.
+# Maciej Wikło <maciej.wiklo@wp.pl>, 2010.
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2012, 2014, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmfonts\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-03 00:45+0000\n"
+"PO-Revision-Date: 2022-05-03 07:38+0200\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
+"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 22.03.70\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"(n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, kde-format
+msgid "Force font DPI Wayland"
+msgstr "Wymuś DPI czcionek na Waylandzie"
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:13
+#, kde-format
+msgid "Force font DPI on X11"
+msgstr "Wymuś DPI czcionek na X11"
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, kde-format
+msgid "General font"
+msgstr "Ogólna czcionka"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, kde-format
+msgid "Fixed width font"
+msgstr "Czcionka o stałej szerokości"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, kde-format
+msgid "Small font"
+msgstr "Mała czcionka"
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, kde-format
+msgid "Tool bar font"
+msgstr "Czcionka paska narzędzi"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, kde-format
+msgid "Menu font"
+msgstr "Czcionka menu"
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, kde-format
+msgid "Window title font"
+msgstr "Czcionka nazwy okna"
+
+#: kxftconfig.cpp:458
+#, kde-format
+msgctxt "use system subpixel setting"
+msgid "Vendor default"
+msgstr "Domyślne systemu"
+
+#: kxftconfig.cpp:460
+#, kde-format
+msgctxt "no subpixel rendering"
+msgid "None"
+msgstr "Brak"
+
+#: kxftconfig.cpp:462
+#, kde-format
+msgid "RGB"
+msgstr "RGB"
+
+#: kxftconfig.cpp:464
+#, kde-format
+msgid "BGR"
+msgstr "BGR"
+
+#: kxftconfig.cpp:466
+#, kde-format
+msgid "Vertical RGB"
+msgstr "Pionowe RGB"
+
+#: kxftconfig.cpp:468
+#, kde-format
+msgid "Vertical BGR"
+msgstr "Pionowe BGR"
+
+#: kxftconfig.cpp:496
+#, kde-format
+msgctxt "use system hinting settings"
+msgid "Vendor default"
+msgstr "Domyślne systemu"
+
+#: kxftconfig.cpp:498
+#, kde-format
+msgctxt "medium hinting"
+msgid "Medium"
+msgstr "Średni"
+
+#: kxftconfig.cpp:500
+#, kde-format
+msgctxt "no hinting"
+msgid "None"
+msgstr "Brak"
+
+#: kxftconfig.cpp:502
+#, kde-format
+msgctxt "slight hinting"
+msgid "Slight"
+msgstr "Delikatny"
+
+#: kxftconfig.cpp:504
+#, kde-format
+msgctxt "full hinting"
+msgid "Full"
+msgstr "Pełny"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module lets you configure the system fonts."
+msgstr "Ten moduł umożliwia określenie czcionek systemowych."
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid "Change Display Scaling…"
+msgstr "Zmień skalowanie wyświetlania..."
+
+#: package/contents/ui/main.qml:37
+#, kde-format
+msgid ""
+"Some changes such as anti-aliasing or DPI will only affect newly started "
+"applications."
+msgstr ""
+"Niektóre zmiany, m. in dotyczące antyaliasingu lub DPI, zostaną uwzględnione "
+"jedynie w nowo uruchamianych programach."
+
+#: package/contents/ui/main.qml:51
+#, kde-format
+msgid ""
+"Very large fonts may produce odd-looking results. Consider adjusting the "
+"global screen scale instead of using a very large font size."
+msgstr ""
+"Bardzo duże czcionki mogą dziwnie wyglądać. Spróbuj dostosować globalną "
+"skalę ekranu, zanim zwiększysz rozmiar czcionki."
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid ""
+"Decimal font sizes can cause text layout problems in some applications. "
+"Consider using only integer font sizes."
+msgstr ""
+"Dziesiętne rozmiary czcionek mogą powodować kłopoty w niektórych "
+"aplikacjach. Rozważ używanie tylko liczb całkowitych jako rozmiarów czcionek."
+
+#: package/contents/ui/main.qml:94
+#, kde-format
+msgid ""
+"The recommended way to scale the user interface is using the global screen "
+"scaling feature."
+msgstr ""
+"Zalecanym sposobem na przeskalowanie interfejsu użytkownika jest użycie "
+"globalnej skali ekranu."
+
+#: package/contents/ui/main.qml:106
+#, kde-format
+msgid "&Adjust All Fonts…"
+msgstr "Dostosuj &wszystkie czcionki..."
+
+#: package/contents/ui/main.qml:119
+#, kde-format
+msgid "General:"
+msgstr "Ogólne:"
+
+#: package/contents/ui/main.qml:120
+#, kde-format
+msgid "Select general font"
+msgstr "Wybierz ogólną czcionkę"
+
+#: package/contents/ui/main.qml:131
+#, kde-format
+msgid "Fixed width:"
+msgstr "Stała szerokość:"
+
+#: package/contents/ui/main.qml:132
+#, kde-format
+msgid "Select fixed width font"
+msgstr "Wybierz czcionkę o stałej szerokości"
+
+#: package/contents/ui/main.qml:143
+#, kde-format
+msgid "Small:"
+msgstr "Małe:"
+
+#: package/contents/ui/main.qml:144
+#, kde-format
+msgid "Select small font"
+msgstr "Wybierz małą czcionkę"
+
+#: package/contents/ui/main.qml:155
+#, kde-format
+msgid "Toolbar:"
+msgstr "Pasek narzędzi:"
+
+#: package/contents/ui/main.qml:156
+#, kde-format
+msgid "Select toolbar font"
+msgstr "Wybierz czcionkę paska narzędzi"
+
+#: package/contents/ui/main.qml:167
+#, kde-format
+msgid "Menu:"
+msgstr "Menu:"
+
+#: package/contents/ui/main.qml:168
+#, kde-format
+msgid "Select menu font"
+msgstr "Wybierz czcionkę menu"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "Window title:"
+msgstr "Nazwa okna:"
+
+#: package/contents/ui/main.qml:179
+#, kde-format
+msgid "Select window title font"
+msgstr "Wybierz czcionka nazwy okna"
+
+#: package/contents/ui/main.qml:194
+#, kde-format
+msgid "Anti-Aliasing:"
+msgstr "Wygładzanie:"
+
+#: package/contents/ui/main.qml:199
+#, kde-format
+msgid "Enable"
+msgstr "Włącz"
+
+#: package/contents/ui/main.qml:203
+#, kde-kuit-format
+msgctxt "@info:tooltip Anti-Aliasing"
+msgid ""
+"Pixels on displays are generally aligned in a grid. Therefore shapes of "
+"fonts that do not align with this grid will look blocky and wrong unless "
+"<emphasis>anti-aliasing</emphasis> techniques are used to reduce this "
+"effect. You generally want to keep this option enabled unless it causes "
+"problems."
+msgstr ""
+"Piksele na wyświetlaczach są zazwyczaj wyrównane w siatkę. Stąd kształty "
+"czcionek, które nie pokrywają się z tą siatką, będą wyglądać blokowo i jakby "
+"w złym miejscu, chyba że zastosowane zostaną techniki <emphasis>wygładzania "
+"krawędzi</emphasis>, aby temu przeciwdziałać. Zalecamy pozostawienie tego "
+"ustawienia włączonym, chyba że powoduje kłopoty."
+
+#: package/contents/ui/main.qml:217
+#, kde-format
+msgid "Exclude range from anti-aliasing"
+msgstr "Nie wygładzaj z tego zakresu"
+
+#: package/contents/ui/main.qml:236 package/contents/ui/main.qml:259
+#, kde-format
+msgid "%1 pt"
+msgstr "%1 pt"
+
+#: package/contents/ui/main.qml:251
+#, kde-format
+msgid "to"
+msgstr "do"
+
+#: package/contents/ui/main.qml:282
+#, kde-format
+msgctxt "Used as a noun, and precedes a combobox full of options"
+msgid "Sub-pixel rendering:"
+msgstr "Wyświetlanie podpikselowe:"
+
+#: package/contents/ui/main.qml:324
+#, kde-kuit-format
+msgctxt "@info:tooltip Sub-pixel rendering"
+msgid ""
+"<para>On TFT or LCD screens every single pixel is actually composed of three "
+"or four smaller monochrome lights. These <emphasis>sub-pixels</emphasis> can "
+"be changed independently to further improve the quality of displayed fonts.</"
+"para> <para>The rendering quality is only improved if the selection matches "
+"the manner in which the sub-pixels of your display are aligned. Most "
+"displays have a linear ordering of <emphasis>RGB</emphasis> sub-pixels, some "
+"have <emphasis>BGR</emphasis> and some exotic orderings are not supported by "
+"this feature.</para>This does not work with CRT monitors."
+msgstr ""
+"<para>Na ekranach TFT czy LCD, każdy piksel składa się z trzech mniejszych "
+"monochromatycznych świateł. Te <emphasis>podpiksele</emphasis> mogą się "
+"zmienić niezależnie, aby polepszyć jakość wyświetlanych czcionek.</"
+"para><para>Jakość wyświetlania jest polepszona tylko wtedy, gdy wybór pasuje "
+"do sposobu w jaki podpiksele twojego wyświetlacza są wyrównane. Większość "
+"wyświetlaczy ma liniowe wyrównanie podpikseli <emphasis>RGB</emphasis>, "
+"niektóre z nich mają <emphasis>BGR</emphasis>, a niektóre egzotyczne "
+"wyrównania są nieobsługiwane przez nas.</para>Nie działa to na monitorach "
+"CRT."
+
+#: package/contents/ui/main.qml:329
+#, kde-format
+msgctxt "Used as a noun, and precedes a combobox full of options"
+msgid "Hinting:"
+msgstr "Hinting:"
+
+#: package/contents/ui/main.qml:370
+#, kde-kuit-format
+msgctxt "@info:tooltip Hinting"
+msgid ""
+"Hinting is a technique in which hints embedded in a font are used to enhance "
+"the rendering quality especially at small sizes. Stronger hinting generally "
+"leads to sharper edges but the small letters will less closely resemble "
+"their shape at big sizes."
+msgstr ""
+"Hinting jest techniką, w której podpowiedzi osadzone w czcionce są używane "
+"do polepszenia jakości ich wyświetlania, szczególnie dla małych rozmiarów. "
+"Silniejszy hinting ogólnie prowadzi do ostrzejszych krawędzi, lecz małe "
+"litery będą mniej przypominać swój kształt względem tego z większych "
+"rozmiarów."
+
+#: package/contents/ui/main.qml:380
+#, kde-format
+msgid "Force font DPI:"
+msgstr "Wymuś DPI czcionek:"
+
+#: package/contents/ui/main.qml:422
+#, kde-kuit-format
+msgctxt "@info:tooltip Force fonts DPI"
+msgid ""
+"<para>Enter your screen's DPI here to make on-screen fonts match their "
+"physical sizes when printed. Changing this option from its default value "
+"will conflict with many apps; some icons and images may not scale as "
+"expected.</para><para>To increase text size, change the size of the fonts "
+"above. To scale everything, use the scaling slider on the <interface>Display "
+"& Monitor</interface> page.</para>"
+msgstr ""
+"<para>Wpisz tutaj DPI swojego ekranu, aby sprawić, że czcionki na ekranie są "
+"tego samego rozmiaru, co gdyby były wydrukowane. Zmiana tego ustawienia z "
+"jego wartości domyślnej spowoduje kłopoty w wielu aplikacjach; pewne ikony i "
+"obrazy mogą nie przeskalować się zgodnie z oczekiwaniami.</para><para>Aby "
+"zwiększyć rozmiar tekstu, zwiększ rozmiar czcionek powyżej. Aby przeskalować "
+"wszystko, użyj suwaka skalowania na stronie <interface>Wyświetlanie i "
+"monitor</interface>.</para>"
+
+#: package/contents/ui/main.qml:428
+#, kde-format
+msgid "Select Font"
+msgstr "Wybierz czcionkę"
+
+#~ msgctxt "@info:tooltip Force fonts DPI"
+#~ msgid ""
+#~ "<para>This option forces a specific DPI value for fonts. It may be useful "
+#~ "when the real DPI of the hardware is not detected properly and it is also "
+#~ "often misused when poor quality fonts are used that do not look well with "
+#~ "DPI values other than 96 or 120 DPI.</para><para>The use of this option "
+#~ "is generally discouraged.</para><para>If you are using the <emphasis>X "
+#~ "Window System</emphasis>, for selecting the proper DPI value a better "
+#~ "option is explicitly configuring it for the whole X server if possible (e."
+#~ "g. DisplaySize in xorg.conf). When fonts do not render properly with the "
+#~ "real DPI value better fonts should be used or configuration of font "
+#~ "hinting should be checked.</para>"
+#~ msgstr ""
+#~ "<para>Ta opcja ustawia daną wartość DPI dla czcionek. Może być to "
+#~ "użyteczne, kiedy systemowa wartość DPI (liczba punktów na cal) nie jest "
+#~ "rozpoznawana poprawnie, albo kiedy czcionki niskiej jakości nie wyglądają "
+#~ "dobrze przy ustawieniach DPI różnych od 96 lub 120.</para><para>Używanie "
+#~ "tej opcji nie jest zalecane.</para><para>Lepiej podać odpowiednią wartość "
+#~ "dla całego <emphasis>serwera X</emphasis> (np. przez ustawienie "
+#~ "DisplaySize w xorg.conf. Jeśli czcionki nie wyglądają dobrze przy "
+#~ "prawdziwej wartości DPI value, lepiej użyć lepszych czcionek lub "
+#~ "sprawdzić ustawienia hintingu.</para>"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Łukasz Wojniłowicz"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "lukasz.wojnilowicz@gmail.com"
+
+#~ msgid "Fonts"
+#~ msgstr "Czcionki"
+
+#~ msgid "Antonis Tsiapaliokas"
+#~ msgstr "Antonis Tsiapaliokas"
+
+#~ msgctxt "@action:button"
+#~ msgid "Show Contextual Help"
+#~ msgstr "Pokaż pomoc podręczną"
+
+#~ msgid "Select %1 Font..."
+#~ msgstr "Wybierz czcionkę %1..."
+
+#~ msgid "Font Settings Changed"
+#~ msgstr "Zmieniono ustawienia czcionek"
+
+#~ msgid ""
+#~ "<p>Some changes such as DPI will only affect newly started applications.</"
+#~ "p>"
+#~ msgstr ""
+#~ "<p>Niektóre zmiany, m. in dotyczące DPI, zostaną uwzględnione jedynie w "
+#~ "nowo uruchamianych programach.</p>"
+
+#~ msgid "Vendor default"
+#~ msgstr "Domyślne dostawcy"
+
+#~ msgid "Disabled"
+#~ msgstr "Wyłączone"
+
+#, fuzzy
+#~| msgid "Configure Fonts"
+#~ msgid "Configure the system fonts"
+#~ msgstr "Ustawienia czcionek"
+
+#~ msgid "Choose..."
+#~ msgstr "Wybierz..."
+
+#~ msgid "Configure Anti-Alias Settings"
+#~ msgstr "Ustawienia wygładzania"
+
+#~ msgid "E&xclude range:"
+#~ msgstr "Wyklucz &zakres:"
+
+#~ msgctxt "abbreviation for unit of points"
+#~ msgid " pt"
+#~ msgstr " pt"
+
+#~ msgid ""
+#~ "<p>If you have a TFT or LCD screen you can further improve the quality of "
+#~ "displayed fonts by selecting this option.<br />Sub-pixel rendering is "
+#~ "also known as ClearType(tm).<br /> In order for sub-pixel rendering to "
+#~ "work correctly you need to know how the sub-pixels of your display are "
+#~ "aligned.</p> <p>On TFT or LCD displays a single pixel is actually "
+#~ "composed of three sub-pixels, red, green and blue. Most displays have a "
+#~ "linear ordering of RGB sub-pixel, some have BGR.<br /> This feature does "
+#~ "not work with CRT monitors.</p>"
+#~ msgstr ""
+#~ "<p>Na ekranach TFT i LCD wybierając tę opcję można dodatkowo poprawić "
+#~ "jakość wyświetlanych czcionek.<br /> Wygładzanie podpikselowe, znane jest "
+#~ "także jako ClearType(tm).<br /> Żeby wygładzanie podpikselowe działało "
+#~ "poprawnie, trzeba wybrać sposób ustawienia podpikseli na Twoim ekranie.</"
+#~ "p> <p>Na wyświetlaczach TFT i LCD pojedynczy piksel w rzeczywistości "
+#~ "składa się z trzech podpikseli: czerwonego (R), zielonego (G) i "
+#~ "niebieskiego (B). Najczęstsza kolejność to RGB, ale zdarza się także BGR."
+#~ "<br />Ta opcja nie działa na monitorach CRT.</p>"
+
+#~ msgid ""
+#~ "Hinting is a process used to enhance the quality of fonts at small sizes."
+#~ msgstr ""
+#~ "Hinting to procedura używana do poprawiania wyglądu czcionek o małym "
+#~ "rozmiarze."
+
+#~ msgid "Used for normal text (e.g. button labels, list items)."
+#~ msgstr "Zwykły tekst (np. napisy na przyciskach, elementy list)."
+
+#~ msgid "A non-proportional font (i.e. typewriter font)."
+#~ msgstr "Czcionka stałej szerokości (jak na maszynie do pisania)."
+
+#~ msgid "Smallest font that is still readable well."
+#~ msgstr "Najmniejsza czcionka, która jest jeszcze czytelna."
+
+#~ msgid "Used to display text beside toolbar icons."
+#~ msgstr "Używana do wyświetlania napisów obok ikon na pasku narzędzi."
+
+#~ msgid "Used by menu bars and popup menus."
+#~ msgstr "Używana w menu."
+
+#~ msgid "Used by the window titlebar."
+#~ msgstr "Używana w tytule okna."
+
+#~ msgctxt "Font role"
+#~ msgid "%1: "
+#~ msgstr "%1: "
+
+#~ msgid "Click to change all fonts"
+#~ msgstr "Kliknij, by zmienić wszystkie czcionki"
+
+#~ msgctxt "Use anti-aliasing"
+#~ msgid "System Settings"
+#~ msgstr "Ustawienia systemowe"
+
+#~ msgid "Select this option to smooth the edges of curves in fonts."
+#~ msgstr "Wybierz tę opcję, aby czcionki były wygładzone."
+
+#~ msgid "This property has no effect on this platform"
+#~ msgstr "Ta właściwośc nie ma zastosowania na tej platformie"
+
+#~ msgctxt "use system subpixel setting"
+#~ msgid "System default"
+#~ msgstr "Domyślne systemowe"
+
+#~ msgctxt "use system hinting settings"
+#~ msgid "System default"
+#~ msgstr "Domyślne systemowe"
+
+#~ msgctxt "font usage"
+#~ msgid "Taskbar"
+#~ msgstr "Pasek zadań"
+
+#~ msgctxt "font usage"
+#~ msgid "Desktop"
+#~ msgstr "Pulpit"
+
+#~ msgid "Used by the taskbar."
+#~ msgstr "Używana przez pasek zadań."
+
+#~ msgid "Used for desktop icons."
+#~ msgstr "Używane w ikonach pulpitu."
+
+#~ msgctxt "Force fonts DPI"
+#~ msgid "Disabled"
+#~ msgstr "Wyłączone"
+
+#~ msgid "96 DPI"
+#~ msgstr "96 DPI"
+
+#~ msgid "120 DPI"
+#~ msgstr "120 DPI"

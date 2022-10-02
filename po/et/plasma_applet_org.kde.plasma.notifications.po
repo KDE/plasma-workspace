@@ -1,0 +1,592 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Marek Laane <bald@smail.ee>, 2010, 2011, 2012, 2016, 2019, 2020.
+# Mihkel Tõnnov <mihhkel@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-20 00:48+0000\n"
+"PO-Revision-Date: 2020-10-08 10:18+0200\n"
+"Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
+"Language-Team: Estonian <>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.08.1\n"
+
+#: fileinfo.cpp:170
+#, kde-format
+msgid "Open with %1"
+msgstr ""
+
+#: fileinfo.cpp:174
+#, kde-format
+msgid "Open with…"
+msgstr ""
+
+#: filemenu.cpp:115 package/contents/ui/JobItem.qml:266
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Ava sisaldav kataloog"
+
+#: filemenu.cpp:129
+#, kde-format
+msgid "&Copy"
+msgstr "&Kopeeri"
+
+#: filemenu.cpp:137
+#, kde-format
+msgctxt "@action:incontextmenu"
+msgid "Copy Location"
+msgstr ""
+
+#: filemenu.cpp:193
+#, kde-format
+msgid "Properties"
+msgstr "Omadused"
+
+#: globalshortcuts.cpp:23
+#, kde-format
+msgid "Toggle do not disturb"
+msgstr "Mittehäirimise lülitamine"
+
+#: globalshortcuts.cpp:42
+#, kde-format
+msgctxt "OSD popup, keep short"
+msgid "Notifications Off"
+msgstr "Märguanded keelatud"
+
+#: globalshortcuts.cpp:43
+#, kde-format
+msgctxt "OSD popup, keep short"
+msgid "Notifications On"
+msgstr "Märguanded lubatud"
+
+#: package/contents/ui/EditContextMenu.qml:33
+#, kde-format
+msgid "Copy Link Address"
+msgstr "Kopeeri lingi aadress"
+
+#: package/contents/ui/EditContextMenu.qml:44
+#, kde-format
+msgid "Copy"
+msgstr "Kopeeri"
+
+#: package/contents/ui/EditContextMenu.qml:61
+#, kde-format
+msgid "Select All"
+msgstr "Vali kõik"
+
+#: package/contents/ui/FullRepresentation.qml:73
+#: package/contents/ui/main.qml:86
+#, kde-format
+msgid "Do not disturb"
+msgstr "Ei häirita"
+
+#: package/contents/ui/FullRepresentation.qml:115
+#, kde-format
+msgid "For 1 hour"
+msgstr "1 tund"
+
+#: package/contents/ui/FullRepresentation.qml:120
+#, kde-format
+msgid "For 4 hours"
+msgstr "4 tundi"
+
+#: package/contents/ui/FullRepresentation.qml:129
+#, kde-format
+msgid "Until this evening"
+msgstr "Täna õhtuni"
+
+#: package/contents/ui/FullRepresentation.qml:139
+#, kde-format
+msgid "Until tomorrow morning"
+msgstr "Homme hommikuni"
+
+#: package/contents/ui/FullRepresentation.qml:151
+#, kde-format
+msgid "Until Monday"
+msgstr "Esmaspäevani"
+
+#: package/contents/ui/FullRepresentation.qml:158
+#, kde-format
+msgid "Until manually disabled"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:203
+#, kde-format
+msgctxt "Do not disturb until date"
+msgid "Until %1"
+msgstr "Kuni %1"
+
+#: package/contents/ui/FullRepresentation.qml:216
+#, kde-format
+msgctxt "Do not disturb until app has finished (reason)"
+msgid "While %1 is active (%2)"
+msgstr "Kuni %1 on aktiivne (%2)"
+
+#: package/contents/ui/FullRepresentation.qml:218
+#, kde-format
+msgctxt "Do not disturb until app has finished"
+msgid "While %1 is active"
+msgstr "Kui %1 on aktiivne"
+
+#: package/contents/ui/FullRepresentation.qml:224
+#, kde-format
+msgctxt "Do not disturb because external mirrored screens connected"
+msgid "Screens are mirrored"
+msgstr "Ekraanid on peegeldatud"
+
+#: package/contents/ui/FullRepresentation.qml:400
+#, kde-format
+msgid "Close Group"
+msgstr "Sulge grupp"
+
+#: package/contents/ui/FullRepresentation.qml:541
+#, kde-format
+msgid "Show Fewer"
+msgstr "Näita vähem"
+
+#: package/contents/ui/FullRepresentation.qml:543
+#, kde-format
+msgctxt "Expand to show n more notifications"
+msgid "Show %1 More"
+msgstr "Näita veel %1"
+
+#: package/contents/ui/FullRepresentation.qml:583
+#: package/contents/ui/main.qml:89
+#, kde-format
+msgid "No unread notifications"
+msgstr "Lugemata märguandeid pole"
+
+#: package/contents/ui/FullRepresentation.qml:598
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgid "Notification service not available"
+msgstr "Märguandeteenus pole saadaval"
+
+#: package/contents/ui/FullRepresentation.qml:600
+#, kde-format
+msgctxt "Vendor and product name"
+msgid "Notifications are currently provided by '%1 %2'"
+msgstr "Märguandeid pakub praegu \"%1 %2\""
+
+#: package/contents/ui/JobDetails.qml:35
+#, kde-format
+msgctxt "Row description, e.g. Source"
+msgid "%1:"
+msgstr "%1:"
+
+#: package/contents/ui/JobDetails.qml:106
+#, kde-format
+msgctxt "How many bytes have been copied"
+msgid "%2 of %1"
+msgstr "%2 / %1"
+
+#: package/contents/ui/JobDetails.qml:110
+#, kde-format
+msgctxt "How many files have been copied"
+msgid "%2 of %1 file"
+msgid_plural "%2 of %1 files"
+msgstr[0] "%2 fail %1-st"
+msgstr[1] "%2 faili %1-st"
+
+#: package/contents/ui/JobDetails.qml:113
+#, kde-format
+msgctxt "How many dirs have been copied"
+msgid "%2 of %1 folder"
+msgid_plural "%2 of %1 folders"
+msgstr[0] "%2 kataloog %1-st"
+msgstr[1] "%2 kataloogi %1-st"
+
+#: package/contents/ui/JobDetails.qml:116
+#, kde-format
+msgctxt "How many items (that includes files and dirs) have been copied"
+msgid "%2 of %1 item"
+msgid_plural "%2 of %1 items"
+msgstr[0] "%2 element %1-st"
+msgstr[1] "%2 elementi %1-st"
+
+#: package/contents/ui/JobDetails.qml:124
+#, kde-format
+msgid "%1 file"
+msgid_plural "%1 files"
+msgstr[0] "%1 fail"
+msgstr[1] "%1 faili"
+
+#: package/contents/ui/JobDetails.qml:126
+#, kde-format
+msgid "%1 folder"
+msgid_plural "%1 folders"
+msgstr[0] "%1 kataloog"
+msgstr[1] "%1 kataloogi"
+
+#: package/contents/ui/JobDetails.qml:128
+#, kde-format
+msgid "%1 item"
+msgid_plural "%1 items"
+msgstr[0] "%1 element"
+msgstr[1] "%1 elementi"
+
+#: package/contents/ui/JobDetails.qml:145
+#, kde-format
+msgctxt "Bytes per second"
+msgid "%1/s"
+msgstr "%1/s"
+
+#: package/contents/ui/JobItem.qml:163
+#, fuzzy, kde-format
+#| msgctxt "Row description, e.g. Source"
+#| msgid "%1:"
+msgctxt "Percentage of a job"
+msgid "%1%"
+msgstr "%1:"
+
+#: package/contents/ui/JobItem.qml:177
+#, kde-format
+msgctxt "Pause running job"
+msgid "Pause"
+msgstr "Paus"
+
+#: package/contents/ui/JobItem.qml:187
+#, kde-format
+msgctxt "Cancel running job"
+msgid "Cancel"
+msgstr "Loobu"
+
+#: package/contents/ui/JobItem.qml:198
+#, kde-format
+msgctxt "A button tooltip; hides item details"
+msgid "Hide Details"
+msgstr "Peida üksikasjad"
+
+#: package/contents/ui/JobItem.qml:199
+#, kde-format
+msgctxt "A button tooltip; expands the item to show details"
+msgid "Show Details"
+msgstr "Näita üksikasju"
+
+#: package/contents/ui/JobItem.qml:230
+#: package/contents/ui/ThumbnailStrip.qml:169
+#, fuzzy, kde-format
+#| msgid "More Options..."
+msgid "More Options…"
+msgstr "Rohkem valikuid ..."
+
+#: package/contents/ui/JobItem.qml:258
+#, kde-format
+msgid "Open"
+msgstr "Ava"
+
+#: package/contents/ui/main.qml:50
+#, kde-format
+msgid "%1 running job"
+msgid_plural "%1 running jobs"
+msgstr[0] "%1 käimas töö"
+msgstr[1] "%1 käimas tööd"
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgctxt "Job title (percentage)"
+msgid "%1 (%2%)"
+msgstr ""
+
+#: package/contents/ui/main.qml:59
+#, fuzzy, kde-format
+#| msgctxt "Number of jobs and the speed at which they are downloading"
+#| msgid "%1 running job (%2/s)"
+#| msgid_plural "%1 running jobs (%2/s)"
+msgid "%1 running job (%2%)"
+msgid_plural "%1 running jobs (%2%)"
+msgstr[0] "%1 käimas töö (%2/s)"
+msgstr[1] "%1 käimas tööd (%2/s)"
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "%1 unread notification"
+msgid_plural "%1 unread notifications"
+msgstr[0] "%1 lugemata märguanne"
+msgstr[1] "%1 lugemata märguannet"
+
+#: package/contents/ui/main.qml:83
+#, kde-format
+msgid "Do not disturb until %1"
+msgstr "Ei häirita kuni %1"
+
+#: package/contents/ui/main.qml:190
+#, fuzzy, kde-format
+#| msgctxt "OSD popup, keep short"
+#| msgid "Notifications On"
+msgid "Clear All Notifications"
+msgstr "Märguanded lubatud"
+
+#: package/contents/ui/main.qml:200
+#, fuzzy, kde-format
+#| msgid "&Configure Event Notifications and Actions..."
+msgid "&Configure Event Notifications and Actions…"
+msgstr "&Seadista sündmuste märguandeid ja toiminguid..."
+
+#: package/contents/ui/NotificationHeader.qml:120
+#, fuzzy, kde-format
+#| msgctxt "notification was just added, keep short"
+#| msgid "Just now"
+msgctxt "Notification was added less than a minute ago, keep short"
+msgid "Just now"
+msgstr "Praegu"
+
+#: package/contents/ui/NotificationHeader.qml:126
+#, kde-format
+msgctxt "Notification was added minutes ago, keep short"
+msgid "%1 min ago"
+msgid_plural "%1 min ago"
+msgstr[0] "%1 min tagasi"
+msgstr[1] "%1 min tagasi"
+
+#: package/contents/ui/NotificationHeader.qml:160
+#, kde-format
+msgctxt "seconds remaining, keep short"
+msgid "%1 s remaining"
+msgid_plural "%1 s remaining"
+msgstr[0] "%1 s jäänud"
+msgstr[1] "%1 s jäänud"
+
+#: package/contents/ui/NotificationHeader.qml:164
+#, kde-format
+msgctxt "minutes remaining, keep short"
+msgid "%1 min remaining"
+msgid_plural "%1 min remaining"
+msgstr[0] "%1 min jäänud"
+msgstr[1] "%1 min jäänud"
+
+#: package/contents/ui/NotificationHeader.qml:169
+#, kde-format
+msgctxt "hours remaining, keep short"
+msgid "%1 h remaining"
+msgid_plural "%1 h remaining"
+msgstr[0] "%1 t jäänud"
+msgstr[1] "%1 t jäänud"
+
+#: package/contents/ui/NotificationHeader.qml:193
+#, kde-format
+msgid "Configure"
+msgstr "Seadista"
+
+#: package/contents/ui/NotificationHeader.qml:210
+#, kde-format
+msgctxt "Opposite of minimize"
+msgid "Restore"
+msgstr "Taasta"
+
+#: package/contents/ui/NotificationHeader.qml:211
+#, kde-format
+msgid "Minimize"
+msgstr "Minimeeri"
+
+#: package/contents/ui/NotificationHeader.qml:234
+#, kde-format
+msgid "Close"
+msgstr "Sulge"
+
+#: package/contents/ui/NotificationItem.qml:207
+#, kde-format
+msgctxt "Job name, e.g. Copying is paused"
+msgid "%1 (Paused)"
+msgstr "%1 (pausil)"
+
+#: package/contents/ui/NotificationItem.qml:212
+#, kde-format
+msgctxt "Job name, e.g. Copying has failed"
+msgid "%1 (Failed)"
+msgstr "%1 (nurjus)"
+
+#: package/contents/ui/NotificationItem.qml:214
+#, kde-format
+msgid "Job Failed"
+msgstr "Töö nurjus"
+
+#: package/contents/ui/NotificationItem.qml:218
+#, kde-format
+msgctxt "Job name, e.g. Copying has finished"
+msgid "%1 (Finished)"
+msgstr "%1 (lõpetatud)"
+
+#: package/contents/ui/NotificationItem.qml:220
+#, kde-format
+msgid "Job Finished"
+msgstr "Töö lõpetatud"
+
+#: package/contents/ui/NotificationItem.qml:367
+#, kde-format
+msgctxt "Reply to message"
+msgid "Reply"
+msgstr "Vasta"
+
+#: package/contents/ui/NotificationReplyField.qml:36
+#, fuzzy, kde-format
+#| msgctxt "Text field placeholder"
+#| msgid "Type a reply..."
+msgctxt "Text field placeholder"
+msgid "Type a reply…"
+msgstr "Kirjuta vastus ..."
+
+#: package/contents/ui/NotificationReplyField.qml:56
+#, kde-format
+msgctxt "@action:button"
+msgid "Send"
+msgstr "Saada"
+
+#~ msgid "Clear History"
+#~ msgstr "Puhasta ajalugu"
+
+#, fuzzy
+#~| msgid "Select All"
+#~ msgctxt "Clear all notifications"
+#~ msgid "Clear All"
+#~ msgstr "Vali kõik"
+
+#~ msgctxt "Resume paused job"
+#~ msgid "Resume"
+#~ msgstr "Jätka"
+
+#~ msgid "Until turned off"
+#~ msgstr "Väljalülitamiseni"
+
+#~ msgid "No unread notifications."
+#~ msgstr "Lugemata märguandeid pole."
+
+#~ msgid "Information"
+#~ msgstr "Teave"
+
+#~ msgid "Show application and system notifications"
+#~ msgstr "Rakenduste ja süsteemi märguannete näitamine"
+
+#, fuzzy
+#~| msgid "No active jobs or notifications"
+#~ msgid "Show a history of notifications"
+#~ msgstr "Aktiivseid töid ega märguandeid pole"
+
+#~ msgid "Track file transfers and other jobs"
+#~ msgstr "Failiedastuste ja muude tööde jälgimine"
+
+#~ msgid "Use custom position for the notification popup"
+#~ msgstr "Hüpikmärguannete kohandatud asukoha kasutamine"
+
+#~ msgctxt "Either just 1 dir or m of n dirs are being processed"
+#~ msgid "1 dir"
+#~ msgid_plural "%2 of %1 dirs"
+#~ msgstr[0] "1 kataloog"
+#~ msgstr[1] "%2 %1 kataloogist"
+
+#~ msgid "%1 of %2 %3"
+#~ msgstr "%1 / %2 %3"
+
+#~ msgid "No notifications or jobs"
+#~ msgstr "Märguanded ja tööd puuduvad"
+
+#~ msgctxt "10 seconds ago, keep short"
+#~ msgid "10 s ago"
+#~ msgstr "10 s tagasi"
+
+#~ msgctxt "30 seconds ago, keep short"
+#~ msgid "30 s ago"
+#~ msgstr "30 s tagasi"
+
+#~ msgctxt "notification was added yesterday, keep short"
+#~ msgid "Yesterday"
+#~ msgstr "Eile"
+
+#~ msgctxt "notification was added n days ago, keep short"
+#~ msgid "%1 day ago"
+#~ msgid_plural "%1 days ago"
+#~ msgstr[0] "%1 päeva eest"
+#~ msgstr[1] "%1 päeva eest"
+
+#, fuzzy
+#~| msgctxt "placeholder is row description, such as Source or Destination"
+#~| msgid "%1:"
+#~ msgctxt ""
+#~ "Indicator that there are more urls in the notification than previews shown"
+#~ msgid "+%1"
+#~ msgstr "%1:"
+
+#, fuzzy
+#~| msgid "Application notifications"
+#~ msgid "&Application notifications:"
+#~ msgstr "Rakenduste märguanded"
+
+#, fuzzy
+#~| msgid "File transfers and other jobs"
+#~ msgid "&File transfers and jobs:"
+#~ msgstr "Failiedastused ja muud tööd"
+
+#~ msgid "Choose which information to show"
+#~ msgstr "Vali, millist teavet näidata"
+
+#~ msgid "Transfers"
+#~ msgstr "Ülekanded"
+
+#~ msgid "All"
+#~ msgstr "Kõik"
+
+#~ msgid "KiB/s"
+#~ msgstr "KiB/s"
+
+#~ msgid "%1 file, to: %2"
+#~ msgid_plural "%1 files, to: %2"
+#~ msgstr[0] "%1 fail asukohta: %2"
+#~ msgstr[1] "%1 faili asukohta: %2"
+
+#~ msgid "1 running job (%2 remaining)"
+#~ msgid_plural "%1 running jobs (%2 remaining)"
+#~ msgstr[0] "1 töö käimas (%2 jäänud)"
+#~ msgstr[1] "%1 tööd käimas (%2 jäänud)"
+
+#~ msgid "%1 suspended job"
+#~ msgid_plural "%1 suspended jobs"
+#~ msgstr[0] "%1 peatatud töö"
+#~ msgstr[1] "%1 peatatud tööd"
+
+#~ msgid "%1 completed job"
+#~ msgid_plural "%1 completed jobs"
+#~ msgstr[0] "%1 lõpetatud töö"
+#~ msgstr[1] "%1 lõpetatud tööd"
+
+#~ msgctxt "Generic title for the job transfer popup"
+#~ msgid "Jobs"
+#~ msgstr "Tööd"
+
+#~ msgid "More"
+#~ msgstr "Rohkem"
+
+#~ msgid "Pause job"
+#~ msgstr "Peata töö"
+
+#~ msgctxt ""
+#~ "%1 is the name of the job, can be things like Copying, deleting, moving"
+#~ msgid "%1 [Finished]"
+#~ msgstr "%1 [lõpetatud]"
+
+#~ msgid "Less"
+#~ msgstr "Vähem"
+
+#~ msgid "Notification from %1"
+#~ msgstr "%1 märguanne"
+
+#~ msgid "Pop Up Notices"
+#~ msgstr "Hüpikmärguanded"
+
+#~ msgid "Popup"
+#~ msgstr "Hüpikdialoog"
+
+#~ msgid "Automatically hide"
+#~ msgstr "Automaatne peitmine"
+
+#~ msgid "Open destination"
+#~ msgstr "Ava sihtkoht"
+
+#~ msgid "Show jobs"
+#~ msgstr "Tööde näitamine"

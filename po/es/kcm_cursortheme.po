@@ -1,0 +1,278 @@
+# Spanish translations for kcm_cursortheme.po package.
+# Copyright (C) 2015 This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Automatically generated, 2015.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2015, 2016, 2018, 2019, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_cursortheme\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:50+0000\n"
+"PO-Revision-Date: 2022-03-17 16:24+0100\n"
+"Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
+"Language-Team: Spanish <kde-l10n-es@kde.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current cursor theme"
+msgstr "Nombre del tema de cursores actual"
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr "Tamaño del cursor actual"
+
+#: kcmcursortheme.cpp:302
+#, kde-format
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr ""
+"Debe reiniciar la sesión de Plasma para que estos cambios tengan efecto."
+
+#: kcmcursortheme.cpp:376
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "No se ha podido crear un archivo temporal."
+
+#: kcmcursortheme.cpp:387
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr "No se ha podido descargar el archivo del tema de iconos: %1"
+
+#: kcmcursortheme.cpp:418
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "El archivo no es un archivo válido de tema de iconos."
+
+#: kcmcursortheme.cpp:425
+#, kde-format
+msgid "Failed to create 'icons' folder."
+msgstr "Ha fallado la creación de la carpeta «iconos»."
+
+#: kcmcursortheme.cpp:434
+#, kde-format
+msgid ""
+"A theme named %1 already exists in your icon theme folder. Do you want "
+"replace it with this one?"
+msgstr ""
+"Ya existe un tema llamado %1 en su carpeta de temas de iconos. ¿Desea "
+"sustituirlo por este?"
+
+#: kcmcursortheme.cpp:438
+#, kde-format
+msgid "Overwrite Theme?"
+msgstr "¿Sobrescribir tema?"
+
+#: kcmcursortheme.cpp:462
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "Tema instalado con éxito."
+
+#: package/contents/ui/Delegate.qml:54
+#, kde-format
+msgid "Remove Theme"
+msgstr "Eliminar tema"
+
+#: package/contents/ui/Delegate.qml:61
+#, kde-format
+msgid "Restore Cursor Theme"
+msgstr "Restaurar el tema de cursores"
+
+#: package/contents/ui/main.qml:20
+#, kde-format
+msgid "This module lets you choose the mouse cursor theme."
+msgstr "Este módulo le permite escoger el tema de cursores de ratón."
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Size:"
+msgstr "Tamaño:"
+
+#: package/contents/ui/main.qml:134
+#, kde-format
+msgid "&Install from File…"
+msgstr "&Instalar desde archivo..."
+
+#: package/contents/ui/main.qml:140
+#, kde-format
+msgid "&Get New Cursors…"
+msgstr "&Obtener nuevos cursores..."
+
+#: package/contents/ui/main.qml:157
+#, kde-format
+msgid "Open Theme"
+msgstr "Abrir tema"
+
+#: package/contents/ui/main.qml:159
+#, kde-format
+msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+msgstr "Archivos de temas de cursores (*.tar.gz *.tar.bz2)"
+
+#: plasma-apply-cursortheme.cpp:41
+#, kde-format
+msgid "The requested size '%1' is not available, using %2 instead."
+msgstr "El tamaño «%1» solicitado no está disponible; se usa %2 en su lugar."
+
+#: plasma-apply-cursortheme.cpp:62
+#, kde-format
+msgid ""
+"This tool allows you to set the mouse cursor theme for the current Plasma "
+"session, without accidentally setting it to one that is either not "
+"available, or which is already set."
+msgstr ""
+"Esta herramienta le permite definir el tema de cursores del ratón para la "
+"sesión actual de Plasma, sin definirlo accidentalmente a uno que no esté "
+"disponible o que ya esté en uso."
+
+#: plasma-apply-cursortheme.cpp:66
+#, kde-format
+msgid ""
+"The name of the cursor theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+"El nombre del tema de cursores que desea asignar a la sesión de Plasma "
+"actual (si se pasa una ruta completa, solo se usará la última parte de ella)."
+
+#: plasma-apply-cursortheme.cpp:67
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+"Mostrar todos los temas disponibles en el sistema (y el que se usa "
+"actualmente)"
+
+#: plasma-apply-cursortheme.cpp:68
+#, kde-format
+msgid "Use a specific size, rather than the theme default size"
+msgstr "Usar un tamaño específico en lugar del tamaño predeterminado del tema."
+
+#: plasma-apply-cursortheme.cpp:89
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+"El tema solicitado «%1» ya se está usando como tema de la sesión de Plasma "
+"actual."
+
+#: plasma-apply-cursortheme.cpp:100
+#, kde-format
+msgid ""
+"Successfully applied the mouse cursor theme %1 to your current Plasma session"
+msgstr ""
+"Se ha aplicado con éxito el tema de cursores del ratón %1 a la sesión actual "
+"de Plasma"
+
+#: plasma-apply-cursortheme.cpp:102
+#, kde-format
+msgid ""
+"You have to restart the Plasma session for your newly applied mouse cursor "
+"theme to display correctly."
+msgstr ""
+"Debe reiniciar la sesión de Plasma para que tenga efecto el tema de cursores "
+"del ratón que acaba de aplicar."
+
+#: plasma-apply-cursortheme.cpp:112
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+"No se ha podido encontrar el tema «%1». El tema puede ser una de las "
+"siguientes opciones: %2"
+
+#: plasma-apply-cursortheme.cpp:120
+#, kde-format
+msgid "You have the following mouse cursor themes on your system:"
+msgstr "Su sistema tiene los siguientes temas de cursores del ratón:"
+
+#: plasma-apply-cursortheme.cpp:125
+#, kde-format
+msgid "(Current theme for this Plasma session)"
+msgstr "(Tema actual para esta sesión de Plasma)"
+
+#: xcursor/xcursortheme.cpp:60
+#, kde-format
+msgctxt ""
+"@info The argument is the list of available sizes (in pixel). Example: "
+"'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+msgid "(Available sizes: %1)"
+msgstr "(Tamaños disponibles: %1)"
+
+#~ msgid "Name"
+#~ msgstr "Nombre"
+
+#~ msgid "Description"
+#~ msgstr "Descripción"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Eloy Cuadra"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "ecuadra@eloihr.net"
+
+#~ msgid "Cursors"
+#~ msgstr "Cursores"
+
+#~ msgid "(c) 2003-2007 Fredrik Höglund"
+#~ msgstr "© 2003-2007 Fredrik Höglund"
+
+#~ msgid "Fredrik Höglund"
+#~ msgstr "Fredrik Höglund"
+
+#~ msgid "Marco Martin"
+#~ msgstr "Marco Martin"
+
+#~ msgid ""
+#~ "<qt>You cannot delete the theme you are currently using.<br />You have to "
+#~ "switch to another theme first.</qt>"
+#~ msgstr ""
+#~ "<qt>No puede borrar el tema que está usando actualmente.<br />Primero "
+#~ "debe cambiar a otro tema.</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <i>%1</i> cursor theme?<br />This "
+#~ "will delete all the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>¿Seguro que quiere eliminar el tema de cursores <i>%1</i>?<br />Esto "
+#~ "borrará todos los archivos instalados por dicho tema.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Confirmación"
+
+#~ msgctxt "@item:inlistbox size"
+#~ msgid "Resolution dependent"
+#~ msgstr "Dependiente de la resolución"
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "Preferencias de cursores cambiadas"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "Arrastre o introduzca el URL del tema"
+
+#~ msgid ""
+#~ "Unable to download the cursor theme archive; please check that the "
+#~ "address %1 is correct."
+#~ msgstr ""
+#~ "No se ha podido descargar el archivo del tema de cursores. Por favor, "
+#~ "compruebe que la dirección %1 es correcta."
+
+#~ msgid "Get new color schemes from the Internet"
+#~ msgstr "Obtener nuevos esquemas de color de Internet"
+
+#~ msgid ""
+#~ "Select the cursor theme you want to use (hover preview to test cursor):"
+#~ msgstr ""
+#~ "Seleccione el tema de cursores que quiere usar (sitúe el ratón sobre la "
+#~ "vista previa para probar el cursor):"

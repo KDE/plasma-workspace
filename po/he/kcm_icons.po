@@ -1,0 +1,379 @@
+# translation of kcmicons.po to hebrew
+# translation of kcmicons.po to Hebrew Israel
+# KDE Hebrew Localization Project
+# Translation of kcmicons.po into Hebrew
+#
+# In addition to the copyright owners of the program
+# which this translation accompanies, this translation is
+# Copyright (C) 1999-2002 Meni Livne <livne@kde.org>
+#
+# This translation is subject to the same Open Source
+# license as the program which it accompanies.
+#
+# Dror Levin <spatz@012.net.il>, 2003.
+# Diego Iastrubni <elcuco@kdemail.net>, 2004.
+# Diego Iastrubni <elcuco@kde.org>, 2005, 2008.
+# elkana bardugo <ttv200@gmail.com>, 2016.
+# Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm5_icons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"PO-Revision-Date: 2017-05-16 06:52-0400\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Zanata 3.9.6\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: iconsizecategorymodel.cpp:14
+#, kde-format
+msgid "Toolbar"
+msgstr "סרגלי כלים"
+
+#: iconsizecategorymodel.cpp:15
+#, kde-format
+msgid "Main Toolbar"
+msgstr "סרגל כלים ראשי"
+
+#: iconsizecategorymodel.cpp:16
+#, kde-format
+msgid "Small Icons"
+msgstr "סמלים קטנים"
+
+#: iconsizecategorymodel.cpp:17
+#, kde-format
+msgid "Panel"
+msgstr "לוח"
+
+#: iconsizecategorymodel.cpp:18
+#, kde-format
+msgid "Dialogs"
+msgstr "תיבות דו־שיח"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, fuzzy, kde-format
+#| msgid "Main Toolbar"
+msgid "Main toolbar icons size"
+msgstr "סרגל כלים ראשי"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, fuzzy, kde-format
+#| msgid "Small Icons"
+msgid "Small icons size"
+msgstr "סמלים קטנים"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr ""
+
+#: main.cpp:182
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "אין אפשרות ליצור קובץ זמני."
+
+#: main.cpp:193
+#, fuzzy, kde-format
+#| msgid "Unable to find the icon theme archive %1."
+msgid "Unable to download the icon theme archive: %1"
+msgstr "אין אפשרות למצוא את ארכיון ערכת הסמלים %1."
+
+#: main.cpp:207
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "הקובץ אינו ארכיון ערכת סמלים תקף."
+
+#: main.cpp:212
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr "אירעה שגיאה במהלך ההתקנה, אך רוב הערכות בארכיון כבר הותקנו"
+
+#: main.cpp:216
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: main.cpp:260
+#, fuzzy, kde-format
+#| msgid "Installing icon themes..."
+msgid "Installing icon themes…"
+msgstr "מתקין ערכות סמלים..."
+
+#: main.cpp:270
+#, fuzzy, kde-format
+#| msgid "Installing icon themes..."
+msgid "Installing %1 theme…"
+msgstr "מתקין ערכות סמלים..."
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr ""
+
+#: package/contents/ui/main.qml:147
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Remove Icon Theme"
+msgstr "הסר ערכה"
+
+#: package/contents/ui/main.qml:154
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Icon Theme"
+msgstr "הסר ערכה"
+
+#: package/contents/ui/main.qml:228
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr ""
+
+#: package/contents/ui/main.qml:246
+#, fuzzy, kde-format
+#| msgid "Install from File"
+msgid "Install from File…"
+msgstr "התקן מתוך קובץ"
+
+#: package/contents/ui/main.qml:251
+#, fuzzy, kde-format
+#| msgid "Get new Theme"
+msgid "Get New Icons…"
+msgstr "קבל ערכות חדשות"
+
+#: package/contents/ui/main.qml:279
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Open Theme"
+msgstr "הסר ערכה"
+
+#: package/contents/ui/main.qml:281
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "דרור לוין"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "spatz@012.net.il"
+
+#~ msgid "Icons"
+#~ msgstr "סמלים"
+
+#~ msgid "Icons Control Panel Module"
+#~ msgstr "מודול סמלים ללוח הבקרה"
+
+#~ msgid "(c) 2000-2003 Geert Jansen"
+#~ msgstr "(c) 2000-2003 Geert Jansen"
+
+#~ msgid "Geert Jansen"
+#~ msgstr "Geert Jansen"
+
+#~ msgid "Antonio Larrosa Jimenez"
+#~ msgstr "Antonio Larrosa Jimenez"
+
+#~ msgid "Torsten Rahn"
+#~ msgstr "Torsten Rahn"
+
+#~ msgid "Jonathan Riddell"
+#~ msgstr "Jonathan Riddell"
+
+#~ msgid "Desktop"
+#~ msgstr "שולחן עבודה"
+
+#~ msgid "Use of Icon"
+#~ msgstr "שימוש הסמל"
+
+#~ msgctxt "@label The icon rendered by default"
+#~ msgid "Default"
+#~ msgstr "ברירת־מחדל"
+
+#~ msgctxt "@label The icon rendered as active"
+#~ msgid "Active"
+#~ msgstr "פעיל"
+
+#~ msgctxt "@label The icon rendered as disabled"
+#~ msgid "Disabled"
+#~ msgstr "לא־זמין"
+
+#~ msgid "Size:"
+#~ msgstr "גודל:"
+
+#~ msgid "Set Effect..."
+#~ msgstr "הגדרת אפקט..."
+
+#~ msgid "All Icons"
+#~ msgstr "כל הסמלים"
+
+#~ msgid "Setup Default Icon Effect"
+#~ msgstr "הגדרות אפקט סמל ברירת מחדל"
+
+#~ msgid "Setup Active Icon Effect"
+#~ msgstr "הגדרות אפקט סמל פעיל"
+
+#~ msgid "Setup Disabled Icon Effect"
+#~ msgstr "הגדרות אפקט סמל לא זמין"
+
+#~ msgid "&Effect:"
+#~ msgstr "אפק&ט:"
+
+#~ msgid "No Effect"
+#~ msgstr "ללא אפקט"
+
+#~ msgid "To Gray"
+#~ msgstr "גווני אפור"
+
+#~ msgid "Colorize"
+#~ msgstr "צביעה"
+
+#~ msgid "Gamma"
+#~ msgstr "שקיפות"
+
+#~ msgid "Desaturate"
+#~ msgstr "ביטול הרוויה (הפחתת צבע)"
+
+#~ msgid "To Monochrome"
+#~ msgstr "שני צבעים"
+
+#~ msgid "&Semi-transparent"
+#~ msgstr "&שקוף למחצה"
+
+#~ msgid "Preview"
+#~ msgstr "תצוגה מקדימה"
+
+#~ msgid "Effect Parameters"
+#~ msgstr "פרמטרי אפקט"
+
+#~ msgid "&Amount:"
+#~ msgstr "&כמות:"
+
+#~ msgid "Co&lor:"
+#~ msgstr "&צבע:"
+
+#~ msgid "&Second color:"
+#~ msgstr "צבע משני:"
+
+#~ msgid "Name"
+#~ msgstr "שם"
+
+#~ msgid "Description"
+#~ msgstr "תיאור"
+
+#~ msgid "Install a theme archive file you already have locally"
+#~ msgstr "התקנה של קובץ ערכה ששמורה אצלך במחשב"
+
+#~ msgid ""
+#~ "If you already have a theme archive locally, this button will unpack it "
+#~ "and make it available for KDE applications"
+#~ msgstr ""
+#~ "אם כבר הורדת ערכה למחשב שלך, כפתור זה יפרוס את הערכה ויהפוך אותה לזמינה "
+#~ "עבור על יישומי KDE"
+
+#~ msgid "Get new themes from the Internet"
+#~ msgstr "הורד ערכות נושא חדשות מהאינטרנט"
+
+#~ msgid ""
+#~ "You need to be connected to the Internet to use this action. A dialog "
+#~ "will display a list of themes from the http://www.kde.org website. "
+#~ "Clicking the Install button associated with a theme will install this "
+#~ "theme locally."
+#~ msgstr ""
+#~ "אתה צריך להיות מחובר לאינטרנט כדי להשתמש באפשרות זו. חלון חדש יציג את "
+#~ "הערכות הזמינות מהאתר http://www.kde.org. לחיצה על כפתור ההתקנה יתקין את "
+#~ "הערכה הנבחרת במחשב."
+
+#~ msgid "Remove the selected theme from your disk"
+#~ msgstr "הסרת הערכה הנבחרת מהמחשב שלך"
+
+#~ msgid "This will remove the selected theme from your disk."
+#~ msgstr "זה ימחק את הערכה הנבחרת מהדיסק שלך."
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "גרור או הקלד את כתובת הערכה"
+
+#~ msgid ""
+#~ "Unable to download the icon theme archive;\n"
+#~ "please check that address %1 is correct."
+#~ msgstr ""
+#~ "אין אפשרות להוריד את ארכיון ערכת הסמלים.\n"
+#~ "בדוק שהכתובת %1 נכונה."
+
+#~ msgid "<qt>Installing <strong>%1</strong> theme</qt>"
+#~ msgstr "<qt>מתקין את הערכה <strong>%1</strong></qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <strong>%1</strong> icon theme?"
+#~ "<br /><br />This will delete the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>האם אתה בטוח שברצונך להסיר את ערכת הסמלים <strong>%1</strong>?<br /"
+#~ "><br />ההסרה תביא למחיקת הקבצים שהותקנו על ידי ערכה זו.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "בקשה לאישור"
+
+#~ msgid "&Theme"
+#~ msgstr "ער&כה"
+
+#~ msgid "Ad&vanced"
+#~ msgstr "מתק&דם"
+
+#~ msgid ""
+#~ "<h1>Icons</h1>This module allows you to choose the icons for your desktop."
+#~ "<p>To choose an icon theme, click on its name and apply your choice by "
+#~ "pressing the \"Apply\" button below. If you do not want to apply your "
+#~ "choice you can press the \"Reset\" button to discard your changes.</"
+#~ "p><p>By pressing the \"Install Theme File...\" button you can install "
+#~ "your new icon theme by writing its location in the box or browsing to the "
+#~ "location. Press the \"OK\" button to finish the installation.</p><p>The "
+#~ "\"Remove Theme\" button will only be activated if you select a theme that "
+#~ "you installed using this module. You are not able to remove globally "
+#~ "installed themes here.</p><p>You can also specify effects that should be "
+#~ "applied to the icons.</p>"
+#~ msgstr ""
+#~ "<h1>סמלים</h1>מודול זה מאפשר לך לבחור בסמלי לשולחן העבודה שלך.<p>על מנת "
+#~ "לבחור ערכת סמלים לחץ על שמה והחל את בחירתך על ידי לחיצה על הכפתור \"החל\" "
+#~ "למטה. אם אינך רוצה להחל את בחירתך באפשרותך ללחוץ על הכפתור \"אפס\" על מנת "
+#~ "להתעלם משינוייך.</p><p>בלחיצה על הכפתור \"התקן ערכה מתוך קובץ...\" "
+#~ "באפשרותך להתקין ערכות סמלים על ידי כתיבת המיקום בתיבה או על ידי עיון "
+#~ "וחיפוש המיקום. לחץ על הכפתור \"אשר\" על מנת לסיים את ההתקנה.</p><p>הכפתור "
+#~ "\"הסר ערכת נושא\" יאופשר רק אם בחרת ערכת נושא שהתקנת בעזרת מודול זה. אין "
+#~ "באפשרותך להסיר ערכות נושא גלובליות כאן.</p><p>באפשרותך גם לציין אפקטים "
+#~ "שיוחלו על הסמלים.</p>"
+
+#~ msgid "Animate icons"
+#~ msgstr "הנפש סמלים"

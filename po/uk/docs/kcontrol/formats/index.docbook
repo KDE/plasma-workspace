@@ -1,0 +1,87 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Ukrainian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="formats" lang="&language;">
+<articleinfo>
+<title
+>Формати</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Krishna.Tateneni; &Krishna.Tateneni.mail;</author>
+<othercredit role="translator"
+><firstname
+>Юрій</firstname
+><surname
+>Чорноіван</surname
+><affiliation
+><address
+><email
+>yurchor@ukr.net</email
+></address
+></affiliation
+><contrib
+>Переклад українською</contrib
+></othercredit
+> 
+ </authorgroup>
+
+	  <date
+>18 травня 2015 року</date>
+	  <releaseinfo
+>Плазма 5.3</releaseinfo>
+
+	  <keywordset>
+		<keyword
+>KDE</keyword>
+		<keyword
+>Системні параметри</keyword>
+		<keyword
+>локаль</keyword>
+		<keyword
+>країна</keyword>
+		<keyword
+>мова</keyword>
+		<keyword
+>числа</keyword>
+		<keyword
+>валюта</keyword>
+	  </keywordset>
+</articleinfo>
+
+<para
+>За допомогою цього модуля Системних параметрів &kde; ви зможете вибрати параметри налаштування, які залежать від частини світу, у якій ви мешкаєте. </para>
+
+<para
+>У більшості випадків, ви можете просто вибрати регіон світу, у якому ви живете, — інші параметри буде встановлено відповідним чином. </para>
+
+<para
+>У нижній частині вікна цього модуля буде показано приклади застосованих параметрів та одиниць виміру. Окрім чисел, ви побачите суми у валюті, дати і час у скороченому та повному форматах. Якщо до параметрів буде внесено зміни, модуль негайно покаже результати цих змін у полі попереднього перегляду, щоб можна було переконатися у їхній правильності до застосування. </para>
+
+<para
+>У спадному списку <guilabel
+>Регіон</guilabel
+> буде показано список країн. Початковим пунктом у списку буде поточна вибрана країна. Якщо буде показано пункт «Типова», у графічній оболонці ще не встановлено параметрів країни, тому використовуватиметься країна, встановлена на загальносистемному рівні, саме її дані буде показано. </para>
+
+<para
+>Якщо вам потрібні якісь спеціальні значення певних параметрів, позначте пункт <guilabel
+>Докладні параметри</guilabel
+> і виберіть формат для <guilabel
+>Чисел</guilabel
+>, <guilabel
+>Часу</guilabel
+>, <guilabel
+>Валюти</guilabel
+>, <guilabel
+>Одиниць виміру</guilabel
+> та <guilabel
+>Групування і впорядкування</guilabel
+> за допомогою спадних списків. </para>
+
+</article>

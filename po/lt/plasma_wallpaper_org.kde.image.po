@@ -1,0 +1,318 @@
+# Lithuanian translations for plasma_wallpaper_image package.
+# This file is distributed under the same license as the plasma_wallpaper_image package.
+#
+# Andrius Štikonas <andrius@stikonas.eu>, 2008.
+# Tomas Straupis <tomasstraupis@gmail.com>, 2011.
+# Remigijus Jarmalavičius <remigijus@jarmalavicius.lt>, 2011.
+# Liudas Ališauskas <liudas.alisauskas@gmail.com>, 2012, 2014.
+# Liudas Alisauskas <liudas@akmc.lt>, 2013, 2015.
+# liudas@aksioma.lt <liudas@aksioma.lt>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_wallpaper_image\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-15 00:46+0000\n"
+"PO-Revision-Date: 2021-08-17 21:10+0300\n"
+"Last-Translator: Moo\n"
+"Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
+"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 3.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:94
+#, kde-format
+msgid "Positioning:"
+msgstr "Išdėstymas:"
+
+#: imagepackage/contents/ui/config.qml:97
+#, kde-format
+msgid "Scaled and Cropped"
+msgstr "Pakeisto mastelio ir apkarpytas"
+
+#: imagepackage/contents/ui/config.qml:101
+#, kde-format
+msgid "Scaled"
+msgstr "Pakeisto mastelio"
+
+#: imagepackage/contents/ui/config.qml:105
+#, kde-format
+msgid "Scaled, Keep Proportions"
+msgstr "Pakeisto mastelio, išlaikytų proporcijų"
+
+#: imagepackage/contents/ui/config.qml:109
+#, kde-format
+msgid "Centered"
+msgstr "Centruotas"
+
+#: imagepackage/contents/ui/config.qml:113
+#, kde-format
+msgid "Tiled"
+msgstr "Išklotas"
+
+#: imagepackage/contents/ui/config.qml:141
+#, kde-format
+msgid "Background:"
+msgstr "Fonas:"
+
+#: imagepackage/contents/ui/config.qml:142
+#, kde-format
+msgid "Blur"
+msgstr "Suliejimas"
+
+#: imagepackage/contents/ui/config.qml:151
+#, kde-format
+msgid "Solid color"
+msgstr "Vientisa spalva"
+
+#: imagepackage/contents/ui/config.qml:161
+#, kde-format
+msgid "Select Background Color"
+msgstr "Pasirinkti fono spalvą"
+
+#: imagepackage/contents/ui/config.qml:207
+#, kde-format
+msgid "Add Image…"
+msgstr "Pridėti paveikslą…"
+
+#: imagepackage/contents/ui/config.qml:213
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:257
+#, kde-format
+msgid "Get New Wallpapers…"
+msgstr "Gauti naujų darbalaukio fonų…"
+
+#: imagepackage/contents/ui/main.qml:69
+#, kde-format
+msgid "Open Wallpaper Image"
+msgstr "Atverti darbalaukio fono paveikslą"
+
+#: imagepackage/contents/ui/main.qml:70
+#, kde-format
+msgid "Next Wallpaper Image"
+msgstr "Kitas darbalaukio fono paveikslas"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:33
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Atverti vidinį aplanką"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:39
+#, kde-format
+msgid "Restore wallpaper"
+msgstr "Atkurti darbalaukio foną"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:44
+#, kde-format
+msgid "Remove Wallpaper"
+msgstr "Šalinti darbalaukio foną"
+
+#: plasma-apply-wallpaperimage.cpp:29
+#, kde-format
+msgid ""
+"This tool allows you to set an image as the wallpaper for the Plasma session."
+msgstr ""
+"Šis įrankis leidžia jums nustatyti paveikslą kaip Plasma seanso darbalaukio "
+"foną."
+
+#: plasma-apply-wallpaperimage.cpp:31
+#, kde-format
+msgid ""
+"An image file or an installed wallpaper kpackage that you wish to set as the "
+"wallpaper for your Plasma session"
+msgstr ""
+"Paveikslo failas ar įdiegtas darbalaukio fono kpackage paketas, kurį norite "
+"nustatyti kaip darbalaukio foną savo Plasma seansui"
+
+#: plasma-apply-wallpaperimage.cpp:45
+#, kde-format
+msgid ""
+"There is a stray single quote in the filename of this wallpaper (') - please "
+"contact the author of the wallpaper to fix this, or rename the file "
+"yourself: %1"
+msgstr ""
+"Šio darbalaukio fono failo pavadinime yra pašalinė kabutė (') - susisiekite "
+"su darbalaukio fono autoriumi, kad jis tai pataisytų arba patys pervadinkite "
+"failą: %1"
+
+#: plasma-apply-wallpaperimage.cpp:85
+#, kde-format
+msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+msgstr "Bandant nustatyti Plasma darbalaukio foną, įvyko klaida:\n"
+
+#: plasma-apply-wallpaperimage.cpp:89
+#, kde-format
+msgid ""
+"Successfully set the wallpaper for all desktops to the KPackage based %1"
+msgstr ""
+"KPackage paketas, paremtas %1, sėkmingai nustatytas visų darbalaukių fonu"
+
+#: plasma-apply-wallpaperimage.cpp:91
+#, kde-format
+msgid "Successfully set the wallpaper for all desktops to the image %1"
+msgstr "Paveikslas %1 sėkmingai nustatytas visų darbalaukių fonu"
+
+#: plasma-apply-wallpaperimage.cpp:97
+#, kde-format
+msgid ""
+"The file passed to be set as wallpaper does not exist, or we cannot identify "
+"it as a wallpaper: %1"
+msgstr ""
+"Failo, kuris buvo perduotas, kad būtų nustatytas darbalaukio fonu, nėra, "
+"arba nepavyksta jo atpažinti kaip darbalaukio fono: %1"
+
+#: plugin/finder/packagefinder.cpp:152
+#, kde-format
+msgid "Recommended wallpaper file"
+msgstr "Rekomenduojamas darbalaukio fono failas"
+
+#: plugin/imagebackend.cpp:234
+#, kde-format
+msgid "Directory with the wallpaper to show slides from"
+msgstr "Katalogas su darbalaukio fonais skaidrių rodymui"
+
+#: plugin/imagebackend.cpp:345
+#, kde-format
+msgid "Open Image"
+msgstr "Atverti paveikslą"
+
+#: plugin/imagebackend.cpp:345
+#, kde-format
+msgid "Image Files"
+msgstr "Paveikslų failai"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:38
+#, kde-format
+msgid "Order:"
+msgstr "Tvarka:"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:45
+#, kde-format
+msgid "Random"
+msgstr "Atsitiktinė"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:49
+#, kde-format
+msgid "A to Z"
+msgstr "Nuo A iki Ž"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:53
+#, kde-format
+msgid "Z to A"
+msgstr "Nuo Ž iki A"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:57
+#, kde-format
+msgid "Date modified (newest first)"
+msgstr "Modifikavimo data (iš pradžių, naujausi)"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:61
+#, kde-format
+msgid "Date modified (oldest first)"
+msgstr "Modifikavimo data (iš pradžių, seniausi)"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:86
+#, kde-format
+msgid "Group by folders"
+msgstr "Grupuoti pagal aplankus"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:98
+#, kde-format
+msgid "Change every:"
+msgstr "Keisti kas:"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:108
+#, kde-format
+msgid "%1 hour"
+msgid_plural "%1 hours"
+msgstr[0] "%1 valandą"
+msgstr[1] "%1 valandas"
+msgstr[2] "%1 valandų"
+msgstr[3] "%1 valandą"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:128
+#, kde-format
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "%1 minutę"
+msgstr[1] "%1 minutes"
+msgstr[2] "%1 minučių"
+msgstr[3] "%1 minutę"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:148
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "%1 sekundę"
+msgstr[1] "%1 sekundes"
+msgstr[2] "%1 sekundžių"
+msgstr[3] "%1 sekundę"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:162
+#, kde-format
+msgid "Folders"
+msgstr "Aplankai"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:220
+#, kde-format
+msgid "Remove Folder"
+msgstr "Šalinti aplanką"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:225
+#, kde-format
+msgid "Open Folder"
+msgstr "Atverti aplanką"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:235
+#, kde-format
+msgid "There are no wallpaper locations configured"
+msgstr "Nėra sukonfigūruotų darbalaukio fono vietų"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:250
+#, kde-format
+msgid "Add Folder…"
+msgstr "Pridėti aplanką…"
+
+#~ msgid "There are no wallpapers in this slideshow"
+#~ msgstr "Šiame skaidrių rodyme nėra jokių paveikslų"
+
+#~ msgid "Add Custom Wallpaper"
+#~ msgstr "Pridėti tinkintą darbalaukio foną"
+
+#~ msgid "Remove wallpaper"
+#~ msgstr "Šalinti darbalaukio foną"
+
+#~ msgid "%1 by %2"
+#~ msgstr "%1, sukūrė: %2"
+
+#~ msgid "Wallpapers"
+#~ msgstr "Darbalaukio fonai"
+
+#~ msgctxt "<image> by <author>"
+#~ msgid "By %1"
+#~ msgstr "Pagal %1"
+
+#~ msgid "Download Wallpapers"
+#~ msgstr "Atsisiųsti darbalaukio fonų"
+
+#~ msgid "Hours"
+#~ msgstr "val."
+
+#~ msgid "Open..."
+#~ msgstr "Atverti..."
+
+#~ msgctxt "Unknown Author"
+#~ msgid "Unknown"
+#~ msgstr "Nežinoma"

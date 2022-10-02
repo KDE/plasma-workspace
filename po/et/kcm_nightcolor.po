@@ -1,0 +1,290 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# Marek Laane <qiilaq69@gmail.com>, 2019, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-13 00:47+0000\n"
+"PO-Revision-Date: 2020-03-05 18:29+0200\n"
+"Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
+"Language-Team: Estonian <kde-et@lists.linux.ee>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 19.08.1\n"
+
+#: package/contents/ui/LocationsFixedView.qml:39
+#, kde-format
+msgctxt ""
+"@label:chooser Tap should be translated to mean touching using a touchscreen"
+msgid "Tap to choose your location on the map."
+msgstr ""
+
+#: package/contents/ui/LocationsFixedView.qml:40
+#, kde-format
+msgctxt ""
+"@label:chooser Click should be translated to mean clicking using a mouse"
+msgid "Click to choose your location on the map."
+msgstr ""
+
+#: package/contents/ui/LocationsFixedView.qml:78
+#: package/contents/ui/LocationsFixedView.qml:103
+#, kde-format
+msgid "Zoom in"
+msgstr ""
+
+#: package/contents/ui/LocationsFixedView.qml:222
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Modified from <link url='https://commons.wikimedia.org/wiki/File:"
+"World_location_map_(equirectangular_180).svg'>World location map</link> by "
+"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
+"by-sa/3.0'>CC BY-SA 3.0</link>"
+msgstr ""
+
+#: package/contents/ui/LocationsFixedView.qml:235
+#, fuzzy, kde-format
+#| msgid "Latitude:"
+msgctxt "@label: textbox"
+msgid "Latitude:"
+msgstr "Laiuskraad:"
+
+#: package/contents/ui/LocationsFixedView.qml:261
+#, fuzzy, kde-format
+#| msgid "Longitude:"
+msgctxt "@label: textbox"
+msgid "Longitude:"
+msgstr "Pikkuskraad:"
+
+#: package/contents/ui/main.qml:87
+#, fuzzy, kde-format
+#| msgid ""
+#| "Night Color makes the colors on the screen warmer to reduce eye strain at "
+#| "the time of your choosing."
+msgid "The blue light filter makes the colors on the screen warmer."
+msgstr ""
+"Öörežiim muudab ekraani värvid soojemaks, vähendades silmade pinget just "
+"siis, kui sa seda soovid."
+
+#: package/contents/ui/main.qml:98
+#, fuzzy, kde-format
+#| msgid "Activation time:"
+msgid "Switching times:"
+msgstr "Aktiveerimise aeg:"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgid "Always off"
+msgstr ""
+
+#: package/contents/ui/main.qml:101
+#, fuzzy, kde-format
+#| msgid "Sunset to sunrise at current location"
+msgid "Sunset and sunrise at current location"
+msgstr "Loojangust koiduni praeguses asukohas"
+
+#: package/contents/ui/main.qml:102
+#, fuzzy, kde-format
+#| msgid "Sunset to sunrise at manual location"
+msgid "Sunset and sunrise at manual location"
+msgstr "Loojangust koiduni käsitsi valitud asukohas"
+
+#: package/contents/ui/main.qml:103
+#, fuzzy, kde-format
+#| msgid "Custom time"
+msgid "Custom times"
+msgstr "Kohandatud ajal"
+
+#: package/contents/ui/main.qml:104
+#, fuzzy, kde-format
+#| msgid "Always on"
+msgid "Always on night color"
+msgstr "Alati sees"
+
+#: package/contents/ui/main.qml:156
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The device's location will be periodically updated using GPS (if available), "
+"or by sending network information to <link url='https://location.services."
+"mozilla.com'>Mozilla Location Service</link>."
+msgstr ""
+
+#: package/contents/ui/main.qml:175
+#, fuzzy, kde-format
+#| msgid "Night Color Temperature:"
+msgid "Day color temperature:"
+msgstr "Öine värvustemperatuur:"
+
+#: package/contents/ui/main.qml:218 package/contents/ui/main.qml:277
+#, kde-format
+msgctxt "Color temperature in Kelvin"
+msgid "%1K"
+msgstr ""
+
+#: package/contents/ui/main.qml:222 package/contents/ui/main.qml:281
+#, kde-format
+msgctxt "Night colour red-ish"
+msgid "Warm"
+msgstr "Soe "
+
+#: package/contents/ui/main.qml:228 package/contents/ui/main.qml:287
+#, kde-format
+msgctxt "No blue light filter activated"
+msgid "Cool (no filter)"
+msgstr ""
+
+#: package/contents/ui/main.qml:228 package/contents/ui/main.qml:287
+#, kde-format
+msgctxt "Night colour blue-ish"
+msgid "Cool"
+msgstr "Külm"
+
+#: package/contents/ui/main.qml:234
+#, fuzzy, kde-format
+#| msgid "Night Color Temperature:"
+msgid "Night color temperature:"
+msgstr "Öine värvustemperatuur:"
+
+#: package/contents/ui/main.qml:298
+#, fuzzy, kde-format
+#| msgid "Latitude: %1   Longitude: %2"
+msgid "Latitude: %1°   Longitude: %2°"
+msgstr "Laiuskraad: %1   Pikkuskraad: %2"
+
+#: package/contents/ui/main.qml:308
+#, kde-format
+msgid "Begin night color at:"
+msgstr ""
+
+#: package/contents/ui/main.qml:321 package/contents/ui/main.qml:344
+#, kde-format
+msgid "Input format: HH:MM"
+msgstr "Sisestusvorming: HH:MM"
+
+#: package/contents/ui/main.qml:331
+#, kde-format
+msgid "Begin day color at:"
+msgstr ""
+
+#: package/contents/ui/main.qml:353
+#, kde-format
+msgid "Transition duration:"
+msgstr "Ülemineku kestus:"
+
+#: package/contents/ui/main.qml:362
+#, kde-format
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "%1 minut"
+msgstr[1] "%1 minutit"
+
+#: package/contents/ui/main.qml:375
+#, kde-format
+msgid "Input minutes - min. 1, max. 600"
+msgstr "Minutite sisestamine: min 1, maks 60"
+
+#: package/contents/ui/main.qml:393
+#, kde-format
+msgid "Error: Transition time overlaps."
+msgstr "Viga: üleminekuaeg kattub"
+
+#: package/contents/ui/main.qml:413
+#, fuzzy, kde-format
+#| msgid "Location"
+msgctxt "@info:placeholder"
+msgid "Locating…"
+msgstr "Asukoht"
+
+#: package/contents/ui/TimingsView.qml:32
+#, fuzzy, kde-format
+#| msgid "Night Color begins changing back at %1"
+msgid ""
+"Color temperature begins changing to night time at %1 and is fully changed "
+"by %2"
+msgstr "Öörežiim hakkab lõppema kell %1"
+
+#: package/contents/ui/TimingsView.qml:39
+#, fuzzy, kde-format
+#| msgid "Night Color begins changing back at %1"
+msgid ""
+"Color temperature begins changing to day time at %1 and is fully changed by "
+"%2"
+msgstr "Öörežiim hakkab lõppema kell %1"
+
+#, fuzzy
+#~| msgid "Activate Night Color"
+#~ msgid "Activate blue light filter"
+#~ msgstr "Öörežiimi lubamine"
+
+#~ msgid "Turn on at:"
+#~ msgstr "Sisselülitamise aeg:"
+
+#~ msgid "Turn off at:"
+#~ msgstr "Väljalülitamise aeg:"
+
+#, fuzzy
+#~| msgid "Night Color begins changing back at %1"
+#~ msgid "Night Color begins changing back at %1 and ends at %2"
+#~ msgstr "Öörežiim hakkab lõppema kell %1"
+
+#~ msgid "Error: Morning is before evening."
+#~ msgstr "Viga: hommik on enne õhtut"
+
+#~ msgid "Detect Location"
+#~ msgstr "Tuvasta asukoht"
+
+#~ msgid "Night Color begins at %1"
+#~ msgstr "Öörežiim algab kell %1"
+
+#~ msgid "Color fully changed at %1"
+#~ msgstr "Täielik öörežiim kell %1"
+
+#~ msgid "Normal coloration restored by %1"
+#~ msgstr "Päevarežiimi taastumine kell %1"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Marek Laane"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "qiilaq69@gmail.com"
+
+#~ msgid "Night Color"
+#~ msgstr "Öörežiim"
+
+#~ msgid "Roman Gilg"
+#~ msgstr "Roman Gilg"
+
+#~ msgid " K"
+#~ msgstr " K"
+
+#~ msgid "Operation mode:"
+#~ msgstr "Tegutsemise alus:"
+
+#~ msgid "Automatic"
+#~ msgstr "Automaatne"
+
+#~ msgid "Times"
+#~ msgstr "Aeg"
+
+#~ msgid "Constant"
+#~ msgstr "Püsiv"
+
+#~ msgid "Sunrise begins:"
+#~ msgstr "Päike tõuseb:"
+
+#~ msgid "(Input format: HH:MM)"
+#~ msgstr "(Sisestusvorming: HH:MM)"
+
+#~ msgid "Sunset begins:"
+#~ msgstr "Päike loojub:"
+
+#~ msgid "...and ends:"
+#~ msgstr "... ja lõpeb:"

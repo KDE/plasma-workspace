@@ -1,0 +1,139 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner_shellrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-27 00:45+0000\n"
+"PO-Revision-Date: 2020-08-31 23:43+0100\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 19.12.3\n"
+
+#: shellrunner.cpp:35
+#, kde-format
+msgid "Finds commands that match :q:, using common shell syntax"
+msgstr ""
+"Găsește comenzile ce se potrivesc cu :q:, utilizând sintaxa obișnuită a "
+"consolei"
+
+#: shellrunner.cpp:36
+#, kde-format
+msgid "Run in Terminal Window"
+msgstr "Execută în fereastră de terminal"
+
+#: shellrunner.cpp:54
+#, kde-format
+msgid "Run %1"
+msgstr "Lansează %1"
+
+#~ msgid "Enter the user you want to run the application as here."
+#~ msgstr "Introduceți aici utilizatorul cu care doriți să lansați aplicația."
+
+#~ msgid "User&name:"
+#~ msgstr "&Utilizator:"
+
+#~ msgid "Enter the password here for the user you specified above."
+#~ msgstr "Introduceți aici parola utilizatorului specificat mai sus."
+
+#~ msgid "Pass&word:"
+#~ msgstr "Pa&rola:"
+
+#~ msgid ""
+#~ "Check this option if the application you want to run is a text mode "
+#~ "application. The application will then be run in a terminal emulator "
+#~ "window."
+#~ msgstr ""
+#~ "Marcați această opțiune dacă aplicația ce doriți să o lansați este una în "
+#~ "regim textual. Aplicația va fi apoi lansată într-o fereastră a "
+#~ "emulatorului de terminal."
+
+#~ msgid "Run in &terminal window"
+#~ msgstr "Execută într-o fereastră de &terminal"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "user id. Every process has a user id associated with it. This id code "
+#~ "determines file access and other permissions. The password of the user is "
+#~ "required to do this."
+#~ msgstr ""
+#~ "Marcați această opțiune dacă doriți să lansați aplicația cu "
+#~ "identificatorul altui utilizator. Fiecare proces are asociat un "
+#~ "identificator de utilizator. Acest identificator determină permisiunile "
+#~ "de acces la fișiere și alte permisiuni. Pentru a face aceasta, aveți "
+#~ "nevoie de parola utilizatorului."
+
+#~ msgid "Run as a different &user"
+#~ msgstr "Execută ca alt &utilizator"
+
+#~ msgid ""
+#~ "<qt>Select whether realtime scheduling should be enabled for the "
+#~ "application. The scheduler governs which process will run and which will "
+#~ "have to wait. Two schedulers are available:\n"
+#~ "<ul>\n"
+#~ "<li><em>Normal:</em> This is the standard, timesharing scheduler. It will "
+#~ "divide fairly the available processing time between all processes.</li>\n"
+#~ "<li><em>Realtime:</em>This scheduler will run your application "
+#~ "uninterrupted until it gives up the processor. This can be dangerous. An "
+#~ "application that does not give up the processor might hang the system. "
+#~ "You need root's password to use the scheduler.</li>\n"
+#~ "</ul>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>Alegeți dacă să fie aplicată planificarea în timp real pentru "
+#~ "aplicație.  Planificatorul decide care procese vor rula și care vor fi nevoite să "
+#~ "aștepte. Sunt disponibili doi planificatori:\n"
+#~ " <ul>\n"
+#~ " <li><em>Normal:</em> Acesta este planificatorul implicit, cu partajarea "
+#~ "timpilor. El va împărți egal timpii de calcul disponibili între toate "
+#~ "procesele.</li>\n"
+#~ " <li><em>În timp real:</em> Acest planificator va rula neîntrerupt "
+#~ "aplicația dumneavoastră până când aceasta eliberează procesorul  Acest "
+#~ "lucru poate fi periculos. O aplicație ce nu eliberează procesorul poate "
+#~ "bloca sistemul. Aveți nevoie de parola administratorului pentru a utiliza "
+#~ "planificatorul.</li>\n"
+#~ " </ul>\n"
+#~ " </qt>"
+
+#~ msgid "Run with realtime &scheduling"
+#~ msgstr "E&xecută cu planificare în timp real"
+
+#~ msgid ""
+#~ "The priority that the command will be run with can be set here. From left "
+#~ "to right, it goes from low to high. The center position is the default "
+#~ "value. For priorities higher than the default, you will need to provide "
+#~ "the root password."
+#~ msgstr ""
+#~ "Aici puteți stabili prioritatea cu care va rula comanda. Aceasta crește "
+#~ "de la stânga spre dreapta. Poziția centrală determină valoarea implicită. "
+#~ "Pentru priorități mai mari decât cea implicită, trebuie să specificați "
+#~ "parola de administrator."
+
+#~ msgid "&Priority:"
+#~ msgstr "&Prioritate:"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "priority. A higher priority tells the operating system to give more "
+#~ "processing time to your application."
+#~ msgstr ""
+#~ "Marcați această opțiune dacă doriți să lansați aplicația cu altă "
+#~ "prioritate. O prioritate mai înaltă spune sistemului de operare să acorde "
+#~ "mai mult timp de calcul aplicației dumneavoastră."
+
+#~ msgid "Run with a &different priority"
+#~ msgstr "Lansează cu &altă prioritate"
+
+#~ msgid "Low"
+#~ msgstr "Joasă"
+
+#~ msgid "High"
+#~ msgstr "Înaltă"

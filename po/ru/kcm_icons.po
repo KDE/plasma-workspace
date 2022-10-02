@@ -1,0 +1,395 @@
+# translation of kcmicons.po into Russian
+# translation of kcmicons.po to
+# translation of kcmicons.po to Russian
+# KDE3 - kcmicons.pot Russian translation
+# Copyright (C) 2000 KDE Team
+#
+# Konstantin Volckov <goldhead@linux.ru.net>, 2001.
+# Zhitomirsky Sergey <szh@chat.ru>, 2000.
+# Leonid Kanter <leon@asplinux.ru>, 2004, 2005.
+# Andrey Cherepanov <sibskull@mail.ru>, 2005.
+# Gregory Mokhin <mok@kde.ru>, 2005.
+# Andrey Cherepanov <skull@kde.ru>, 2009.
+# Alexander Potashev <aspotashev@gmail.com>, 2010, 2014, 2016, 2017, 2018.
+# Yuri Efremov <yur.arh@gmail.com>, 2013.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmicons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"PO-Revision-Date: 2021-05-29 13:35+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.04.1\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: iconsizecategorymodel.cpp:14
+#, kde-format
+msgid "Toolbar"
+msgstr "Панель инструментов"
+
+#: iconsizecategorymodel.cpp:15
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Основная панель инструментов"
+
+#: iconsizecategorymodel.cpp:16
+#, kde-format
+msgid "Small Icons"
+msgstr "Маленькие значки"
+
+#: iconsizecategorymodel.cpp:17
+#, kde-format
+msgid "Panel"
+msgstr "Панель"
+
+#: iconsizecategorymodel.cpp:18
+#, kde-format
+msgid "Dialogs"
+msgstr "Диалоговые окна"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr "Название текущего набора значков"
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr "Размер значков рабочего стола"
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr "Размер значков панели инструментов"
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, kde-format
+msgid "Main toolbar icons size"
+msgstr "Размер значков основной панели инструментов"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, kde-format
+msgid "Small icons size"
+msgstr "Размер маленьких значков"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr "Размер значков панели"
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr "Размер значков диалога"
+
+#: main.cpp:182
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Не удалось создать временный файл."
+
+#: main.cpp:193
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Не удалось загрузить с сервера архив с набором значков: %1"
+
+#: main.cpp:207
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "Выбранный файл не является архивом с набором значков."
+
+#: main.cpp:212
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr ""
+"Во время установки произошла ошибка; однако, некоторые файлы из архива были "
+"установлены."
+
+#: main.cpp:216
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "Набор значков успешно установлен."
+
+#: main.cpp:260
+#, kde-format
+msgid "Installing icon themes…"
+msgstr "Установка наборов значков..."
+
+#: main.cpp:270
+#, kde-format
+msgid "Installing %1 theme…"
+msgstr "Установка набора значков %1..."
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr "Этот модуль настройки позволяет выбрать набор значков."
+
+#: package/contents/ui/main.qml:147
+#, kde-format
+msgid "Remove Icon Theme"
+msgstr "Удалить набор значков"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Restore Icon Theme"
+msgstr "Восстановить набор значков"
+
+#: package/contents/ui/main.qml:228
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr "Выбрать размеры значков"
+
+#: package/contents/ui/main.qml:246
+#, kde-format
+msgid "Install from File…"
+msgstr "Установить из файла..."
+
+#: package/contents/ui/main.qml:251
+#, kde-format
+msgid "Get New Icons…"
+msgstr "Загрузить наборы значков..."
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Open Theme"
+msgstr "Открытие темы"
+
+#: package/contents/ui/main.qml:281
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr "Наборы значков (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Icon theme is already used"
+#~ msgstr "Набор значков уже используется"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr ""
+#~ "Константин Волков,Сергей Житомирский,Леонид Кантер, Николай Шафоростов,"
+#~ "Ольга Миронова"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "goldhead@linux.ru.net,szh@chat.ru,leon@asplinux.ru, shaforostoff@kde.ru, "
+#~ "omiro@basealt.ru"
+
+# BUGME: please split window title and download new button's caption ---ayavorsky 20190120
+#~ msgid "Icons"
+#~ msgstr "Значки"
+
+#~ msgid "Icons Control Panel Module"
+#~ msgstr "Модуль управления значками"
+
+#~ msgid "(c) 2000-2003 Geert Jansen"
+#~ msgstr "© Geert Jansen, 2000-2003"
+
+#~ msgid "Geert Jansen"
+#~ msgstr "Geert Jansen"
+
+#~ msgid "Antonio Larrosa Jimenez"
+#~ msgstr "Antonio Larrosa Jimenez"
+
+#~ msgid "Torsten Rahn"
+#~ msgstr "Torsten Rahn"
+
+#~ msgid "Jonathan Riddell"
+#~ msgstr "Jonathan Riddell"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Kai Uwe Broulik"
+
+#~ msgid "Desktop"
+#~ msgstr "Рабочий стол"
+
+#~ msgid "Download New Icon Themes"
+#~ msgstr "Загрузка новых наборов значков"
+
+#~ msgid "Use of Icon"
+#~ msgstr "Использование значков"
+
+#~ msgctxt "@label The icon rendered by default"
+#~ msgid "Default"
+#~ msgstr "По умолчанию"
+
+#~ msgctxt "@label The icon rendered as active"
+#~ msgid "Active"
+#~ msgstr "Активный"
+
+#~ msgctxt "@label The icon rendered as disabled"
+#~ msgid "Disabled"
+#~ msgstr "Недоступный"
+
+#~ msgid "Size:"
+#~ msgstr "Размер:"
+
+#~ msgid "Enable icon animations"
+#~ msgstr "Использовать анимацию значков"
+
+#~ msgid "Set Effect..."
+#~ msgstr "Настроить эффект..."
+
+#~ msgid "All Icons"
+#~ msgstr "Все значки"
+
+#~ msgid "Setup Default Icon Effect"
+#~ msgstr "Настроить эффект для обычных значков"
+
+#~ msgid "Setup Active Icon Effect"
+#~ msgstr "Настроить эффект для активных значков"
+
+#~ msgid "Setup Disabled Icon Effect"
+#~ msgstr "Настроить эффект для недоступных значков"
+
+#~ msgid "&Effect:"
+#~ msgstr "&Эффекты:"
+
+#~ msgid "No Effect"
+#~ msgstr "Нет"
+
+#~ msgid "To Gray"
+#~ msgstr "Градации серого"
+
+#~ msgid "Colorize"
+#~ msgstr "Окрасить"
+
+#~ msgid "Gamma"
+#~ msgstr "Гамма"
+
+#~ msgid "Desaturate"
+#~ msgstr "Обесцветить"
+
+#~ msgid "To Monochrome"
+#~ msgstr "Монохромные"
+
+#~ msgid "&Semi-transparent"
+#~ msgstr "&Полупрозрачные"
+
+#~ msgid "Preview"
+#~ msgstr "Предварительный просмотр"
+
+#~ msgid "Effect Parameters"
+#~ msgstr "Параметры эффекта"
+
+#~ msgid "&Amount:"
+#~ msgstr "&Количество:"
+
+#~ msgid "Co&lor:"
+#~ msgstr "&Цвет:"
+
+#~ msgid "&Second color:"
+#~ msgstr "&Второй цвет:"
+
+#~ msgid "Name"
+#~ msgstr "Имя"
+
+#~ msgid "Description"
+#~ msgstr "Описание"
+
+#~ msgid "Install a theme archive file you already have locally"
+#~ msgstr "Установить набор значков из локального файла"
+
+#~ msgid ""
+#~ "If you already have a theme archive locally, this button will unpack it "
+#~ "and make it available for KDE applications"
+#~ msgstr ""
+#~ "Если архив с набором значков уже сохранён локально, это действие "
+#~ "распакует его и сделает доступным для приложений KDE"
+
+#~ msgid "Get new themes from the Internet"
+#~ msgstr "Загрузить наборы значков из Интернета"
+
+#~ msgid ""
+#~ "You need to be connected to the Internet to use this action. A dialog "
+#~ "will display a list of themes from the http://www.kde.org website. "
+#~ "Clicking the Install button associated with a theme will install this "
+#~ "theme locally."
+#~ msgstr ""
+#~ "Для выполнения этого действия необходимо подключение к Интернету. Вам "
+#~ "будет показан список всех наборов значков с сайта http://www.kde.org. "
+#~ "Нажатие кнопки напротив набора значков  приведёт к его установке на компьютер."
+
+#~ msgid "Remove the selected theme from your disk"
+#~ msgstr "Удалить выделенный набор значков с диска"
+
+#~ msgid "This will remove the selected theme from your disk."
+#~ msgstr "Выделенный набор значков будет удалён с вашего диска."
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "Перетащите или введите адрес файла с набором значков"
+
+#~ msgid ""
+#~ "Unable to download the icon theme archive;\n"
+#~ "please check that address %1 is correct."
+#~ msgstr ""
+#~ "Не удаётся загрузить архив с набором значков.\n"
+#~ "Проверьте правильность адреса: %1."
+
+#~ msgid "<qt>Installing <strong>%1</strong> theme</qt>"
+#~ msgstr "<qt>Установка набора значков <strong>%1</strong></qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <strong>%1</strong> icon theme?"
+#~ "<br /><br />This will delete the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>Удалить набор значков <strong>%1</strong>?<br /><br />Будут удалены "
+#~ "все файлы принадлежащие этому набору.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Подтверждение"
+
+#~ msgid "&Theme"
+#~ msgstr "&Набор значков"
+
+#~ msgid "Ad&vanced"
+#~ msgstr "&Дополнительно"
+
+#~ msgid ""
+#~ "<h1>Icons</h1>This module allows you to choose the icons for your desktop."
+#~ "<p>To choose an icon theme, click on its name and apply your choice by "
+#~ "pressing the \"Apply\" button below. If you do not want to apply your "
+#~ "choice you can press the \"Reset\" button to discard your changes.</"
+#~ "p><p>By pressing the \"Install Theme File...\" button you can install "
+#~ "your new icon theme by writing its location in the box or browsing to the "
+#~ "location. Press the \"OK\" button to finish the installation.</p><p>The "
+#~ "\"Remove Theme\" button will only be activated if you select a theme that "
+#~ "you installed using this module. You are not able to remove globally "
+#~ "installed themes here.</p><p>You can also specify effects that should be "
+#~ "applied to the icons.</p>"
+#~ msgstr ""
+#~ "<h1>Значки</h1>Этот модуль позволяет выбрать значки для рабочего стола."
+#~ "<p>Для смены используемого набора значков щёлкните на нём и подтвердите "
+#~ "выбор, нажав кнопку «Применить» ниже. Для отмены выбора и отмены "
+#~ "изменений нажмите кнопку «Восстановить».</p><p>Для установки нового "
+#~ "набора значков нажмите кнопку «Установить из файла...» и введите путь к "
+#~ "файлу с набором значков   или воспользуйтесь диалогом выбора файла.</p><p>Кнопка «Удалить набор "
+#~ "значков» активируется только в том случае, если выбрана тема, "
+#~ "установленная этим модулем. Удалить набор значков установленный в системе "
+#~ "и доступный всем пользователям нельзя.</p><p>Здесь можно также настроить "
+#~ "эффекты применяемые к значкам.</p>"
+
+#~ msgid "Animate icons"
+#~ msgstr "Анимация значков"
+
+#~ msgid "Select the icon theme you want to use:"
+#~ msgstr "Выберите набор значков:"

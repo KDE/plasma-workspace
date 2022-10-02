@@ -1,0 +1,261 @@
+# Translation of ksmserver.po to Euskara/Basque (eu).
+# Copyright (C) 2002-2017, The Free Software Foundation, Inc.
+# Copyright (C) 2018-2020, This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# KDE Euskaratzeko proiektuko arduraduna <xalba@euskalnet.net>.
+#
+# Translators:
+# Marcos  <marcos@euskalgnu.org>, 2002, 2004, 2005, 2006, 2007, 2008.
+# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2011, 2014, 2017, 2020.
+# Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-22 00:47+0000\n"
+"PO-Revision-Date: 2020-04-25 18:16+0200\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.04.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: logout.cpp:344
+#, kde-format
+msgid "Logout canceled by '%1'"
+msgstr "'%1'-(e)k bertan behera utzi du saio-bukaera"
+
+#: main.cpp:117
+#, kde-format
+msgid "$HOME not set!"
+msgstr "$HOME ezarri gabe!"
+
+#: main.cpp:121 main.cpp:127
+#, kde-format
+msgid "$HOME directory (%1) does not exist."
+msgstr "$HOME direktorioa (%1) ez dago."
+
+#: main.cpp:123
+#, kde-format
+msgid "No write access to $HOME directory (%1)."
+msgstr "Idazteko sarbiderik ez $HOME direktoriora (%1)."
+
+#: main.cpp:129
+#, kde-format
+msgid "No read access to $HOME directory (%1)."
+msgstr "Irakurtzeko sarbiderik ez $HOME direktoriora (%1)."
+
+#: main.cpp:133
+#, kde-format
+msgid "$HOME directory (%1) is out of disk space."
+msgstr "$HOME direktorioa (%1) disko-lekurik gabe dago."
+
+#: main.cpp:136
+#, kde-format
+msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+msgstr "%HOME direktoriora (%2) idaztea huts egin du '%1' errorearekin"
+
+#: main.cpp:149 main.cpp:184
+#, kde-format
+msgid "No write access to '%1'."
+msgstr "Idazteko sarbiderik ez '%1'-era."
+
+#: main.cpp:151 main.cpp:186
+#, kde-format
+msgid "No read access to '%1'."
+msgstr "Irakurtzeko sarbiderik ez '%1'-era."
+
+#: main.cpp:159 main.cpp:172
+#, kde-format
+msgid "Temp directory (%1) is out of disk space."
+msgstr "Aldi baterako direktorioa (%1) disko-lekurik gabe dago."
+
+#: main.cpp:162 main.cpp:175
+#, kde-format
+msgid ""
+"Writing to the temp directory (%2) failed with\n"
+"    the error '%1'"
+msgstr ""
+"Aldi baterako direktoriora (%2) idaztea huts egin du\n"
+"    '%1' errorearekin"
+
+#: main.cpp:190
+#, kde-format
+msgid ""
+"The following installation problem was detected\n"
+"while trying to start Plasma:"
+msgstr ""
+"Ondoko instalazio arazoa antzeman da\n"
+"Plasma abiatzen saiatzean:"
+
+#: main.cpp:193
+#, kde-format
+msgid ""
+"\n"
+"\n"
+"Plasma is unable to start.\n"
+msgstr ""
+"\n"
+"\n"
+"Plasma ezin da abiatu.\n"
+
+#: main.cpp:200
+#, kde-format
+msgid "Plasma Workspace installation problem!"
+msgstr "Plasma Langunearen instalazio arazoa!"
+
+#: main.cpp:236
+#, kde-format
+msgid ""
+"The reliable Plasma session manager that talks the standard X11R6 \n"
+"session management protocol (XSMP)."
+msgstr ""
+"Plasmaren saio-kudeatzaile fidagarria, X11R6 saio-kudeaketa protokolo\n"
+"estandarrean (XSMP) mintzo dena."
+
+#: main.cpp:240
+#, kde-format
+msgid "Restores the saved user session if available"
+msgstr "Erabiltzailearen saio gordea berreskuratzen du, erabilgarria bada."
+
+#: main.cpp:243
+#, kde-format
+msgid "Also allow remote connections"
+msgstr "Urruneko konexioak ere onartzen ditu."
+
+#: main.cpp:246
+#, kde-format
+msgid "Starts the session in locked mode"
+msgstr "Giltzatuta moduan hasten du saioa"
+
+#: main.cpp:250
+#, kde-format
+msgid ""
+"Starts without lock screen support. Only needed if other component provides "
+"the lock screen."
+msgstr ""
+"Pantaila giltzatzeko euskarri gabe abiatzen da. Beharrezkoa soilik beste "
+"osagaiek pantaila giltzatzea hornitzen badute."
+
+#: server.cpp:873
+#, kde-format
+msgid "Session Management"
+msgstr "Saio-kudeaketa"
+
+#: server.cpp:876
+#, kde-format
+msgid "Log Out"
+msgstr "Amaitu saioa"
+
+#: server.cpp:881
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "Amaitu saioa berrespenik gabe"
+
+#: server.cpp:886
+#, kde-format
+msgid "Halt Without Confirmation"
+msgstr "Gelditu berrespenik gabe"
+
+#: server.cpp:891
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "Berrabiarazi berrespenik gabe"
+
+#~ msgid ""
+#~ "Starts <wm> in case no other window manager is \n"
+#~ "participating in the session. Default is 'kwin'"
+#~ msgstr ""
+#~ "<wm> hasten du beste leiho-kudeatzailearik\n"
+#~ "saioan ez badago. Lehenetsitakoa 'kwin' da"
+
+#~ msgid "wm"
+#~ msgstr "wm"
+
+#, fuzzy
+#~| msgid "&Logout"
+#~ msgid "Logout"
+#~ msgstr "&Saioa amaitzea"
+
+#~ msgid "Sleeping in 1 second"
+#~ msgid_plural "Sleeping in %1 seconds"
+#~ msgstr[0] "Saioa lotan geldituko da segundo batean"
+#~ msgstr[1] "Saioa lotan geldituko da %1 segundotan"
+
+#~ msgid "Lock"
+#~ msgstr "Giltzatu"
+
+#~ msgid "ksmserver"
+#~ msgstr "ksmserver"
+
+#~ msgid "Turn off"
+#~ msgstr "Desaktibatu"
+
+#~ msgid "Sleep"
+#~ msgstr "Lo egin"
+
+#~ msgid "Logging out in 1 second."
+#~ msgid_plural "Logging out in %1 seconds."
+#~ msgstr[0] "Saioa segundo batean amaituko da."
+#~ msgstr[1] "Saioa %1 segundotan amaituko da."
+
+#~ msgid "Turning off computer in 1 second."
+#~ msgid_plural "Turning off computer in %1 seconds."
+#~ msgstr[0] "Ordenagailua segundo batean itzaliko da."
+#~ msgstr[1] "Ordenagailua %1 segundotan itzaliko da."
+
+#~ msgid "Restarting computer in 1 second."
+#~ msgid_plural "Restarting computer in %1 seconds."
+#~ msgstr[0] "Ordenagailua segundo batean berrabiaraziko da."
+#~ msgstr[1] "Ordenagailua %1 segundotan berrabiaraziko da."
+
+#, fuzzy
+#~| msgid "&Turn Off Computer"
+#~ msgid "Turn Off Computer"
+#~ msgstr "&Itzali ordenagailua"
+
+#, fuzzy
+#~| msgid "&Restart Computer"
+#~ msgid "Restart Computer"
+#~ msgstr "&Berrabiarazi ordenagailua"
+
+#~ msgctxt "default option in boot loader"
+#~ msgid " (default)"
+#~ msgstr "(lehenetsia)"
+
+#, fuzzy
+#~| msgid "&Cancel"
+#~ msgid "Cancel"
+#~ msgstr "&Utzi"
+
+#~ msgid "&Standby"
+#~ msgstr "&Egonean"
+
+#~ msgid "Suspend to &RAM"
+#~ msgstr "Eseki &RAMean"
+
+#~ msgid "Suspend to &Disk"
+#~ msgstr "Eseki &diskoan"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Marcos "
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "marcos@euskalgnu.org"
+
+#~ msgid "(C) 2000, The KDE Developers"
+#~ msgstr "(C) 2000, KDE garatzaileak"
+
+#~ msgid "Matthias Ettrich"
+#~ msgstr "Matthias Ettrich"
+
+#~ msgid "Luboš Luňák"
+#~ msgstr "Luboš Luňák"
+
+#~ msgid "Maintainer"
+#~ msgstr "Mantentzailea"

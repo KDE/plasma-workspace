@@ -1,0 +1,245 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# g.sora <g.sora@tiscali.it>, 2010, 2012, 2013, 2021.
+# Giovanni Sora <g.sora@tioscali.it>, 2014, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-22 00:47+0000\n"
+"PO-Revision-Date: 2021-12-21 14:47+0100\n"
+"Last-Translator: giovanni <g.sora@tiscali.it>\n"
+"Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
+"Language: ia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#: logout.cpp:344
+#, kde-format
+msgid "Logout canceled by '%1'"
+msgstr "Clausura de session cancellate per '%1'"
+
+#: main.cpp:117
+#, kde-format
+msgid "$HOME not set!"
+msgstr "$HOME non fixate!"
+
+#: main.cpp:121 main.cpp:127
+#, kde-format
+msgid "$HOME directory (%1) does not exist."
+msgstr "$HOME directorio (%1) non existe."
+
+#: main.cpp:123
+#, kde-format
+msgid "No write access to $HOME directory (%1)."
+msgstr "Necun accesso in scriptura al directorio $HOME  (%1)."
+
+#: main.cpp:129
+#, kde-format
+msgid "No read access to $HOME directory (%1)."
+msgstr "Necun accesso in lectura al directorio $HOME  (%1)."
+
+#: main.cpp:133
+#, kde-format
+msgid "$HOME directory (%1) is out of disk space."
+msgstr "$HOME directorio (%1) ha exaurite le spatio de disco."
+
+#: main.cpp:136
+#, kde-format
+msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+msgstr "Scriber in le directorio $HOME (%2) falleva con le error '%1'"
+
+#: main.cpp:149 main.cpp:184
+#, kde-format
+msgid "No write access to '%1'."
+msgstr "Necun accesso in scriptura a '%1'."
+
+#: main.cpp:151 main.cpp:186
+#, kde-format
+msgid "No read access to '%1'."
+msgstr "Necun accesso in lectura a '%1'."
+
+#: main.cpp:159 main.cpp:172
+#, kde-format
+msgid "Temp directory (%1) is out of disk space."
+msgstr "Directorio temporanee (%1) ha exaurite le spatio de disco."
+
+#: main.cpp:162 main.cpp:175
+#, kde-format
+msgid ""
+"Writing to the temp directory (%2) failed with\n"
+"    the error '%1'"
+msgstr ""
+"Scriber le directorio temporanee (%2) falleva con\n"
+"  le error '%1'"
+
+#: main.cpp:190
+#, kde-format
+msgid ""
+"The following installation problem was detected\n"
+"while trying to start Plasma:"
+msgstr ""
+"Le sequente problema de installation esseva detigite\n"
+"durante que essayava startar Plasma:"
+
+#: main.cpp:193
+#, kde-format
+msgid ""
+"\n"
+"\n"
+"Plasma is unable to start.\n"
+msgstr ""
+"\n"
+"\n"
+"Plasma es incapace de initiar.\n"
+
+#: main.cpp:200
+#, kde-format
+msgid "Plasma Workspace installation problem!"
+msgstr "Problema de installation de Spatio de Labor de Plasma!"
+
+#: main.cpp:236
+#, kde-format
+msgid ""
+"The reliable Plasma session manager that talks the standard X11R6 \n"
+"session management protocol (XSMP)."
+msgstr ""
+"Le gerente de session de Plasma digne de fide que parla le protocollo\n"
+"de gestion de session standard de X11R6 (XSMP)"
+
+#: main.cpp:240
+#, kde-format
+msgid "Restores the saved user session if available"
+msgstr "Il restabili le session salvate del usator, si disponibile"
+
+#: main.cpp:243
+#, kde-format
+msgid "Also allow remote connections"
+msgstr "Permitte anque connexiones remote"
+
+#: main.cpp:246
+#, kde-format
+msgid "Starts the session in locked mode"
+msgstr "Initia le session de modo blocate"
+
+#: main.cpp:250
+#, kde-format
+msgid ""
+"Starts without lock screen support. Only needed if other component provides "
+"the lock screen."
+msgstr ""
+"Starta sin supporto de schermo blocate. Solmente  necessari si altere "
+"componente forni le schermo blocate."
+
+#: server.cpp:873
+#, kde-format
+msgid "Session Management"
+msgstr "Gestion de Session"
+
+#: server.cpp:876
+#, kde-format
+msgid "Log Out"
+msgstr "Claude session"
+
+#: server.cpp:881
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "Claude session sin confirmation"
+
+#: server.cpp:886
+#, kde-format
+msgid "Halt Without Confirmation"
+msgstr "Stoppa  (halto) sin confirmation"
+
+#: server.cpp:891
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "Re-starta (reboot) sin confirmation"
+
+#~ msgid ""
+#~ "Starts <wm> in case no other window manager is \n"
+#~ "participating in the session. Default is 'kwin'"
+#~ msgstr ""
+#~ "Il initia <wm> in caso nulle altere gerente de fenestra es\n"
+#~ "participante in le session. Lo que es predefinite es 'kwin'"
+
+#~ msgid "wm"
+#~ msgstr "wm"
+
+#~ msgid "Logout"
+#~ msgstr "Clausura de session"
+
+#~ msgid "Sleeping in 1 second"
+#~ msgid_plural "Sleeping in %1 seconds"
+#~ msgstr[0] "Dormiente in 1 secunda"
+#~ msgstr[1] "Dormiente in %1 secundas"
+
+#~ msgid "Lock"
+#~ msgstr "Bloca"
+
+#~ msgid "Turn off"
+#~ msgstr "Extingue"
+
+#~ msgid "Sleep"
+#~ msgstr "Dormi"
+
+#~ msgid "Logging out in 1 second."
+#~ msgid_plural "Logging out in %1 seconds."
+#~ msgstr[0] "Clausura de session in 1 secunda"
+#~ msgstr[1] "Clausura de session in %1 secundas"
+
+#~ msgid "Turning off computer in 1 second."
+#~ msgid_plural "Turning off computer in %1 seconds."
+#~ msgstr[0] "Extingue le computator in 1 secunda."
+#~ msgstr[1] "Extingue le computator in %1 secundas."
+
+#~ msgid "Restarting computer in 1 second."
+#~ msgid_plural "Restarting computer in %1 seconds."
+#~ msgstr[0] "Re-starta computator in 1 secunda"
+#~ msgstr[1] "Re-starta computator in %1 secundas"
+
+#~ msgid "Turn Off Computer"
+#~ msgstr "Extingue computator "
+
+#~ msgid "Restart Computer"
+#~ msgstr "Re-initia computator (Pone lo in marcha) "
+
+#~ msgctxt "default option in boot loader"
+#~ msgid " (default)"
+#~ msgstr " (Predefinite)"
+
+#~ msgid "Cancel"
+#~ msgstr "Cancella"
+
+#~ msgid "&Standby"
+#~ msgstr "in re&serva (Stand by)"
+
+#~ msgid "Suspend to &RAM"
+#~ msgstr "Suspende a &RAM"
+
+#~ msgid "Suspend to &Disk"
+#~ msgstr "Suspende a &Disco"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Giovanni Sora"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "g.sora@tiscali.it"
+
+#~ msgid "(C) 2000, The KDE Developers"
+#~ msgstr "(c) 2000, disveloppatores de KDE"
+
+#~ msgid "Matthias Ettrich"
+#~ msgstr "Matthias Ettrich"
+
+#~ msgid "Luboš Luňák"
+#~ msgstr "Luboš Luňák"
+
+#~ msgid "Maintainer"
+#~ msgstr "Mantenitor"

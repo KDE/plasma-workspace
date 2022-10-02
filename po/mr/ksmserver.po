@@ -1,0 +1,258 @@
+# translation of ksmserver.po to marathi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sandeep Shedmake <sandeep.shedmake@gmail.com>, 2009.
+# Chetan Khona <chetan@kompkin.com>, 2012, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: ksmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-22 00:47+0000\n"
+"PO-Revision-Date: 2013-02-23 17:39+0530\n"
+"Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
+"Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: logout.cpp:344
+#, kde-format
+msgid "Logout canceled by '%1'"
+msgstr "'%1' द्वारे बाहेर पडणे रद्द झाले"
+
+#: main.cpp:117
+#, kde-format
+msgid "$HOME not set!"
+msgstr ""
+
+#: main.cpp:121 main.cpp:127
+#, kde-format
+msgid "$HOME directory (%1) does not exist."
+msgstr ""
+
+#: main.cpp:123
+#, kde-format
+msgid "No write access to $HOME directory (%1)."
+msgstr ""
+
+#: main.cpp:129
+#, kde-format
+msgid "No read access to $HOME directory (%1)."
+msgstr ""
+
+#: main.cpp:133
+#, kde-format
+msgid "$HOME directory (%1) is out of disk space."
+msgstr ""
+
+#: main.cpp:136
+#, kde-format
+msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+msgstr ""
+
+#: main.cpp:149 main.cpp:184
+#, kde-format
+msgid "No write access to '%1'."
+msgstr ""
+
+#: main.cpp:151 main.cpp:186
+#, kde-format
+msgid "No read access to '%1'."
+msgstr ""
+
+#: main.cpp:159 main.cpp:172
+#, kde-format
+msgid "Temp directory (%1) is out of disk space."
+msgstr ""
+
+#: main.cpp:162 main.cpp:175
+#, kde-format
+msgid ""
+"Writing to the temp directory (%2) failed with\n"
+"    the error '%1'"
+msgstr ""
+
+#: main.cpp:190
+#, kde-format
+msgid ""
+"The following installation problem was detected\n"
+"while trying to start Plasma:"
+msgstr ""
+
+#: main.cpp:193
+#, kde-format
+msgid ""
+"\n"
+"\n"
+"Plasma is unable to start.\n"
+msgstr ""
+
+#: main.cpp:200
+#, kde-format
+msgid "Plasma Workspace installation problem!"
+msgstr ""
+
+#: main.cpp:236
+#, fuzzy, kde-format
+#| msgid ""
+#| "The reliable KDE session manager that talks the standard X11R6 \n"
+#| "session management protocol (XSMP)."
+msgid ""
+"The reliable Plasma session manager that talks the standard X11R6 \n"
+"session management protocol (XSMP)."
+msgstr ""
+"विश्वासार्ह केडीई सत्र व्यवस्थापक जे प्रमाणित X11R6 \n"
+"सत्र व्यवस्थापन शिष्टाचार (XSMP) शी संलग्न आहे."
+
+#: main.cpp:240
+#, kde-format
+msgid "Restores the saved user session if available"
+msgstr "उपलब्ध असल्यास वापकर्त्याचे साठवलेले सत्र पुन्हस्थापित करतो"
+
+#: main.cpp:243
+#, kde-format
+msgid "Also allow remote connections"
+msgstr "व अधिक दूरस्थ जुळवणी करिता परवानगी द्या"
+
+#: main.cpp:246
+#, kde-format
+msgid "Starts the session in locked mode"
+msgstr "कुलूपबंद सत्र सुरु करा"
+
+#: main.cpp:250
+#, kde-format
+msgid ""
+"Starts without lock screen support. Only needed if other component provides "
+"the lock screen."
+msgstr ""
+
+#: server.cpp:873
+#, fuzzy, kde-format
+#| msgid "The KDE Session Manager"
+msgid "Session Management"
+msgstr "केडीई सत्र व्यवस्थापक"
+
+#: server.cpp:876
+#, kde-format
+msgid "Log Out"
+msgstr "बाहेर पडा"
+
+#: server.cpp:881
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "न विचारता बाहेर पडा"
+
+#: server.cpp:886
+#, kde-format
+msgid "Halt Without Confirmation"
+msgstr "न विचारता प्रणाली जागेवर थांबवा"
+
+#: server.cpp:891
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "न विचारता पुन्हा सुरु करा"
+
+#, fuzzy
+#~| msgid ""
+#~| "Starts 'wm' in case no other window manager is \n"
+#~| "participating in the session. Default is 'kwin'"
+#~ msgid ""
+#~ "Starts <wm> in case no other window manager is \n"
+#~ "participating in the session. Default is 'kwin'"
+#~ msgstr ""
+#~ "सत्र अंतर्गत इतर कोणताही चौकट व्यवस्थापक सहभाग करत नसल्यास 'wm' सुरु करतो \n"
+#~ ". 'kwin' मूलभूत आहे"
+
+#, fuzzy
+#~| msgid "&Logout"
+#~ msgid "Logout"
+#~ msgstr "बाहेर पडा (&L)"
+
+#~ msgid "Sleeping in 1 second"
+#~ msgid_plural "Sleeping in %1 seconds"
+#~ msgstr[0] "१ सेकंदात झोपत आहे"
+#~ msgstr[1] "%1 सेकंदात झोपत आहे"
+
+#~ msgid "Lock"
+#~ msgstr "कूलूपबंद करा"
+
+#~ msgid "Turn off"
+#~ msgstr "बंद करा"
+
+#~ msgid "Sleep"
+#~ msgstr "झोप"
+
+#~ msgid "Logging out in 1 second."
+#~ msgid_plural "Logging out in %1 seconds."
+#~ msgstr[0] "१ सेकंदात बाहेर पडत आहे."
+#~ msgstr[1] "%1 सेकंदात बाहेर पडत आहे."
+
+#~ msgid "Turning off computer in 1 second."
+#~ msgid_plural "Turning off computer in %1 seconds."
+#~ msgstr[0] "१ सेकंदात संगणक बंद करत आहे."
+#~ msgstr[1] "%1 सेकंदात संगणक बंद करत आहे."
+
+#~ msgid "Restarting computer in 1 second."
+#~ msgid_plural "Restarting computer in %1 seconds."
+#~ msgstr[0] "१ सेकंदात संगणक पुन्हा सुरु करत आहे."
+#~ msgstr[1] "%1 सेकंदात संगणक पुन्हा सुरु करत आहे."
+
+#, fuzzy
+#~| msgid "&Turn Off Computer"
+#~ msgid "Turn Off Computer"
+#~ msgstr "संगणक बंद करा (&T)"
+
+#, fuzzy
+#~| msgid "&Restart Computer"
+#~ msgid "Restart Computer"
+#~ msgstr "संगणक पुन्हा सुरु करा (&R)"
+
+#~ msgctxt "default option in boot loader"
+#~ msgid " (default)"
+#~ msgstr " (मूलभूत)"
+
+#, fuzzy
+#~| msgid "&Cancel"
+#~ msgid "Cancel"
+#~ msgstr "रद्द करा (&C)"
+
+#~ msgid "&Standby"
+#~ msgstr "स्टॅन्डबाय (&S)"
+
+#~ msgid "Suspend to &RAM"
+#~ msgstr "RAM करिता सस्पेंड करा (&R)"
+
+#~ msgid "Suspend to &Disk"
+#~ msgstr "डिस्क करिता सस्पेंड करा (&D)"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr ""
+#~ "संदिप शेडमाके, \n"
+#~ "चेतन खोना"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "sandeep.shedmake@gmail.com, \n"
+#~ "chetan@kompkin.com"
+
+#~ msgid "(C) 2000, The KDE Developers"
+#~ msgstr "(C) 2000, केडीई विकासकर्ते"
+
+#~ msgid "Matthias Ettrich"
+#~ msgstr "मात्थिआस एट्ट्रीच"
+
+#~ msgid "Luboš Luňák"
+#~ msgstr "ल्युबोस ल्युनाक"
+
+#~ msgid "Maintainer"
+#~ msgstr "पालक"
+
+#~ msgctxt "current option in boot loader"
+#~ msgid " (current)"
+#~ msgstr " (वर्तमान)"

@@ -1,0 +1,165 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Swedish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmstyle" lang="&language;">
+<articleinfo>
+
+<title
+>Programstil</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-09</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systeminställningar</keyword>
+<keyword
+>stil</keyword>
+<keyword
+>program</keyword>
+<keyword
+>grafiska komponenter</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Den här modulen används för att ställa in hur enskilda grafikkomponenter ritas av &plasma;.</para>
+
+<note
+><para
+>En <emphasis
+>grafisk komponent</emphasis
+> (eng. widget) är en vanlig term för att beskriva element i ett användargränssnitt som knappar, menyer och rullningslister. Du kan betrakta dem som de grundläggande delarna som sätts ihop för att skapa ditt program.</para
+></note>
+
+<para
+>Du kan ställa in hur de grafiska komponenterna ritas med den här modulen, men när det gäller att ändra färg på komponenterna, se avsnittet <ulink url="help:/kcontrol/color/index.html"
+>Färger</ulink
+>.</para>
+
+<para
+>Det översta rutnätet, med beteckningen <guilabel
+>Programstil</guilabel
+> innehåller en lista med förhandsgranskningar av de fördefinierade stilarna. Varje stil har ett namn, och en kort beskrivning visas när du håller muspekaren över den.</para>
+
+<para
+>Om du vill ställa in ett &plasma;-tema, använd den överlagrade ikonen <guilabel
+>Anpassa stil...</guilabel
+> längst ner till höger i komponentens stilikon i rutnätet.</para>
+
+<para
+>Om implementerat, är det möjligt att ändra nästan alla stilens aspekter: centrera flikar på flikraden, rita avdelare av verktygsrader, rita fokusindikator i listor, rita streckmarkeringar för skjutreglage, aktivera utökade storleksändringsgrepp, definiera snabbtangenters synlighet, dragmetod för fönster, använda ramar för bättre åtkomst, använda knappar på rullningslister, använda genomskinlighet i menyer.</para>
+
+<para
+>Allmänna inställningar kan göras genom att klicka på knappen <guibutton
+>Anpassa ikoner och verktygsrader</guibutton
+> under rutnätet. Knappen visar en ruta för att välja ytterligare inställningar.</para>
+<variablelist>
+
+<varlistentry
+> 
+<term
+><guilabel
+>Visa ikoner: På knappar</guilabel
+></term>
+<listitem>
+<para
+>Om det här alternativet är markerat, så har åtgärdsknappar (som <guibutton
+>Ok</guibutton
+> och <guibutton
+>Verkställ</guibutton
+>) en liten ikon placerad inne i knappen som en visuell referens. Om alternativet inte är markerat, så visas bara text på knappen.</para>
+</listitem
+> 
+</varlistentry
+> 
+
+<varlistentry
+> 
+<term
+><guilabel
+>Visa ikoner: I menyer</guilabel
+></term>
+<listitem>
+<para
+>Om alternativet är markerat, visar &kde;-program små ikoner intill de flesta menyer. Om alternativet inte är markerat syns bara text i menyerna. Ändringar av menyikonernas synlighet påverkar bara nystartade program.</para>
+</listitem
+> 
+</varlistentry
+> 
+
+<varlistentry
+> 
+<term
+><guilabel
+>Huvudverktygsradens beteckning</guilabel
+>, <guilabel
+>Sekundära verktygsradens beteckning</guilabel
+></term>
+<listitem>
+<para
+>Dessa kombinationsrutor låter dig avgöra var på knappen textnamnet normalt visas i båda verktygsrader. Om <guilabel
+>Ingen</guilabel
+> är valt, finns det ingen text på knappar i verktygsraderna. Om <guilabel
+>Enbart text</guilabel
+> är valt, så ersätts knappens ikon med ett textnamn. Om <guilabel
+>Bredvid ikon</guilabel
+> är valt, så placeras knappens namn till <emphasis
+>höger</emphasis
+> om ikonen. Om <guilabel
+>Under ikon</guilabel
+> är valt, blir normalvärdet att knappens text är <emphasis
+>under</emphasis
+> ikonen.</para>
+
+<tip
+><para
+>Dessa alternativ anger bara den <emphasis
+>normala</emphasis
+> platsen. Varje program kan överskrida inställningarna som anges i den här panelen.</para
+></tip>
+</listitem
+> 
+</varlistentry
+> 
+
+</variablelist>
+
+<para
+>Knappen <guibutton
+>Anpassa GNOME/GTK-programstil och beteende...</guibutton
+> kan användas för att visa inställningsfliken där du kan välja <guilabel
+>GTK-tema</guilabel
+>, installera GTK-tema från fil eller <guibutton
+>Hämta nya GNOME/GTK-programstilar</guibutton
+> från Internet. </para>
+
+</article>

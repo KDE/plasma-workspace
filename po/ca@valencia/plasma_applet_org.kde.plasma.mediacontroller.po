@@ -1,0 +1,124 @@
+# Translation of plasma_applet_org.kde.plasma.mediacontroller.po to Catalan (Valencian)
+# Copyright (C) 2014-2022 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Antoni Bella Pérez <antonibella5@yahoo.com>, 2014, 2017.
+# Josep M. Ferrer <txemaq@gmail.com>, 2016, 2017, 2018, 2020, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"PO-Revision-Date: 2022-06-09 09:55+0200\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca@valencia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#: contents/config/config.qml:12
+#, kde-format
+msgid "General"
+msgstr "General"
+
+#: contents/ui/AlbumArtStackView.qml:161 contents/ui/main.qml:80
+#, kde-format
+msgid "No media playing"
+msgstr "No s'està reproduint cap suport"
+
+#: contents/ui/ConfigGeneral.qml:22
+#, kde-format
+msgid "Volume step:"
+msgstr "Pas del volum:"
+
+#: contents/ui/ExpandedRepresentation.qml:363
+#: contents/ui/ExpandedRepresentation.qml:484
+#, kde-format
+msgctxt "Remaining time for song e.g -5:42"
+msgid "-%1"
+msgstr "-%1"
+
+#: contents/ui/ExpandedRepresentation.qml:513
+#, kde-format
+msgid "Shuffle"
+msgstr "Barreja"
+
+#: contents/ui/ExpandedRepresentation.qml:539 contents/ui/main.qml:98
+#, kde-format
+msgctxt "Play previous track"
+msgid "Previous Track"
+msgstr "Peça anterior"
+
+#: contents/ui/ExpandedRepresentation.qml:561 contents/ui/main.qml:106
+#, kde-format
+msgctxt "Pause playback"
+msgid "Pause"
+msgstr "Pausa"
+
+#: contents/ui/ExpandedRepresentation.qml:561 contents/ui/main.qml:111
+#, kde-format
+msgctxt "Start playback"
+msgid "Play"
+msgstr "Reproduïx"
+
+#: contents/ui/ExpandedRepresentation.qml:579 contents/ui/main.qml:117
+#, kde-format
+msgctxt "Play next track"
+msgid "Next Track"
+msgstr "Peça següent"
+
+#: contents/ui/ExpandedRepresentation.qml:602
+#, kde-format
+msgid "Repeat Track"
+msgstr "Repetix la peça"
+
+#: contents/ui/ExpandedRepresentation.qml:602
+#, kde-format
+msgid "Repeat"
+msgstr "Repetix"
+
+#: contents/ui/main.qml:94
+#, kde-format
+msgctxt "Open player window or bring it to the front if already open"
+msgid "Open"
+msgstr "Obri"
+
+#: contents/ui/main.qml:123
+#, kde-format
+msgctxt "Stop playback"
+msgid "Stop"
+msgstr "Para"
+
+#: contents/ui/main.qml:131
+#, kde-format
+msgctxt "Quit player"
+msgid "Quit"
+msgstr "Ix"
+
+#: contents/ui/main.qml:241
+#, kde-format
+msgid "Choose player automatically"
+msgstr "Tria automàticament el reproductor"
+
+#: contents/ui/main.qml:278
+#, kde-format
+msgctxt "by Artist (player name)"
+msgid "by %1 (%2)"
+msgstr "per %1 (%2)"
+
+#: contents/ui/main.qml:289
+#, kde-format
+msgctxt "by Artist (paused, player name)"
+msgid "by %1 (paused, %2)"
+msgstr "per %1 (en pausa, %2)"
+
+#: contents/ui/main.qml:289
+#, kde-format
+msgctxt "Paused (player name)"
+msgid "Paused (%1)"
+msgstr "En pausa (%1)"

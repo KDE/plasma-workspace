@@ -1,0 +1,384 @@
+# translation of kcmstyle.po to Lithuanian
+# Ričardas Čepas <rch@richard.eu.org>, 2002.
+# Donatas Glodenis <dgvirtual@akl.lt>, 2004-2005.
+# Donatas Glodenis <dgvirtual@akl.lt>, 2007-2009.
+# Tomas Straupis <tomasstraupis@gmail.com>, 2011.
+# Liudas Ališauskas <liudas@akmc.lt>, 2013.
+# Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>, 2015, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmstyle\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"PO-Revision-Date: 2021-08-17 21:16+0300\n"
+"Last-Translator: Moo\n"
+"Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
+"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 3.0\n"
+
+#: gtkpage.cpp:59
+#, kde-format
+msgid "%1 is not a valid GTK Theme archive."
+msgstr "%1 nėra teisingas GTK apipavidalinimo archyvas."
+
+#: kcmstyle.cpp:161 kcmstyle.cpp:168
+#, kde-format
+msgid "There was an error loading the configuration dialog for this style."
+msgstr "Bandant įkelti konfigūravimo dialogą šiam stiliui, įvyko klaida."
+
+#: kcmstyle.cpp:274
+#, kde-format
+msgid "Failed to apply selected style '%1'."
+msgstr "Nepavyko taikyti pasirinktą stilių \"%1\"."
+
+#: package/contents/ui/EffectSettingsPopup.qml:32
+#, kde-format
+msgid "Show icons:"
+msgstr "Rodyti piktogramas:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:33
+#, kde-format
+msgid "On buttons"
+msgstr "Ant mygtukų"
+
+#: package/contents/ui/EffectSettingsPopup.qml:44
+#, kde-format
+msgid "In menus"
+msgstr "Meniu"
+
+#: package/contents/ui/EffectSettingsPopup.qml:56
+#, kde-format
+msgid "Main toolbar label:"
+msgstr "Pagrindinės įrankių juostos etiketė:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "None"
+msgstr "Nėra"
+
+#: package/contents/ui/EffectSettingsPopup.qml:59
+#, kde-format
+msgid "Text only"
+msgstr "Tik tekstas"
+
+#: package/contents/ui/EffectSettingsPopup.qml:60
+#, kde-format
+msgid "Beside icons"
+msgstr "Šalia piktogramų"
+
+#: package/contents/ui/EffectSettingsPopup.qml:61
+#, kde-format
+msgid "Below icon"
+msgstr "Po piktograma"
+
+#: package/contents/ui/EffectSettingsPopup.qml:76
+#, kde-format
+msgid "Secondary toolbar label:"
+msgstr "Antrinės įrankių juostos etiketė:"
+
+#: package/contents/ui/GtkStylePage.qml:18
+#, kde-format
+msgid "GNOME/GTK Application Style"
+msgstr "GNOME/GTK programų stilius"
+
+#: package/contents/ui/GtkStylePage.qml:44
+#, kde-format
+msgid "GTK theme:"
+msgstr "GTK apipavidalinimas:"
+
+#: package/contents/ui/GtkStylePage.qml:69
+#, kde-format
+msgid "Preview…"
+msgstr "Peržiūra…"
+
+#: package/contents/ui/GtkStylePage.qml:88
+#, kde-format
+msgid "Install from File…"
+msgstr "Įdiegti iš failo…"
+
+#: package/contents/ui/GtkStylePage.qml:93
+#, kde-format
+msgid "Get New GNOME/GTK Application Styles…"
+msgstr "Gauti naujus GNOME/GTK programų stilius…"
+
+#: package/contents/ui/GtkStylePage.qml:109
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr "Pasirinkti GTK apipavidalinimo archyvą"
+
+#: package/contents/ui/GtkStylePage.qml:111
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr "GTK apipavidalinimo archyvas (*.tar.xz *.tar.gz *.tar.bz2)"
+
+#: package/contents/ui/main.qml:17
+#, kde-format
+msgid ""
+"This module allows you to modify the visual appearance of applications' user "
+"interface elements."
+msgstr ""
+"Šis modulis jums leidžia modifikuoti programų naudotojo sąsajos elementų "
+"vaizdinę išvaizdą."
+
+#: package/contents/ui/main.qml:96
+#, kde-format
+msgid "Configure Style…"
+msgstr "Konfigūruoti stilių…"
+
+#: package/contents/ui/main.qml:116
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr "Konfigūruoti piktogramas ir įrankių juostas"
+
+#: package/contents/ui/main.qml:132
+#, kde-format
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "Konfigūruoti GNOME/GTK programų stilių…"
+
+#: styleconfdialog.cpp:21
+#, kde-format
+msgid "Configure %1"
+msgstr "Konfigūruoti %1"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "Kortelė 1"
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, kde-format
+msgid "Push Button"
+msgstr "Paspaudimo mygtukas"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, kde-format
+msgid "Combo box"
+msgstr "Jungtinis langelis"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "Žymimasis langelis"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "Akutė"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:133
+#, kde-format
+msgid "Tab 2"
+msgstr "Kortelė 2"
+
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, kde-format
+msgid "Application style"
+msgstr "Programų stilius"
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, kde-format
+msgid "Show icons on buttons"
+msgstr "Rodyti piktogramas ant mygtukų"
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, kde-format
+msgid "Show icons in menus"
+msgstr "Rodyti piktogramas meniu"
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, kde-format
+msgid "Main toolbar label"
+msgstr "Pagrindinės įrankių juostos etiketė"
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, kde-format
+msgid "Secondary toolbar label"
+msgstr "Antrinės įrankių juostos etiketė"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Ričardas Čepas, Donatas Glodenis, Moo"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "rch@richard.eu.org, dgvirtual@akl.lt, <>"
+
+#~ msgid "Application Style"
+#~ msgstr "Programų stilius"
+
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
+#~ msgstr "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
+
+#~ msgid "Karol Szwed"
+#~ msgstr "Karol Szwed"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Kai Uwe Broulik"
+
+#~ msgid "GTK3 theme:"
+#~ msgstr "GTK3 apipavidalinimas:"
+
+#~ msgid "Download New GNOME/GTK Application Styles..."
+#~ msgstr "Atsisiųsti naujus GNOME/GTK programų stilius..."
+
+#~ msgid "Download New GNOME/GTK2 Application Styles..."
+#~ msgstr "Atsisiųsti naujus GNOME/GTK2 programų stilius..."
+
+#~ msgid "GNOME/GTK2 Application Styles"
+#~ msgstr "GNOME/GTK2 programų stilius"
+
+#~ msgid "Download New GNOME/GTK3 Application Styles..."
+#~ msgstr "Atsisiųsti naujus GNOME/GTK3 programų stilius..."
+
+#~ msgid "GNOME/GTK3 Application Styles"
+#~ msgstr "GNOME/GTK3 programų stilius"
+
+#~ msgid "Get New GNOME/GTK2 Application Styles..."
+#~ msgstr "Gauti naujus GNOME/GTK2 programų stilius..."
+
+#~ msgid "Get New GNOME/GTK3 Application Styles..."
+#~ msgstr "Gauti naujus GNOME/GTK3 programų stilius..."
+
+#~ msgid "Unable to Load Dialog"
+#~ msgstr "Nepavyko įkelti dialogo"
+
+#~ msgid "No description available."
+#~ msgstr "Nėra prieinamas joks aprašas."
+
+#~ msgid ""
+#~ "This area shows a preview of the currently selected style without having "
+#~ "to apply it to the whole desktop."
+#~ msgstr ""
+#~ "Ši sritis rodo šiuo metu pasirinkto stiliaus peržiūrą, be būtinybės "
+#~ "taikyti jį visam darbalaukiui."
+
+#~ msgid ""
+#~ "Here you can choose from a list of predefined widget styles (e.g. the way "
+#~ "buttons are drawn) which may or may not be combined with a theme "
+#~ "(additional information like a marble texture or a gradient)."
+#~ msgstr ""
+#~ "Čia iš sąrašo galite pasirinkti iš anksto apibrėžtus valdiklių stilius "
+#~ "(pvz., kaip atrodys mygtukai), kurie gali būti sujungti su "
+#~ "apipavidalinimu (papildoma informacija - kaip marmuro tekstūra ar spalvų "
+#~ "perėjimas)."
+
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "some important buttons."
+#~ msgstr ""
+#~ "Jei įjungsite šią parinktį, programos šalia svarbių mygtukų rodys mažas "
+#~ "piktogramas."
+
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "most menu items."
+#~ msgstr ""
+#~ "Jei įjungsite šią parinktį, programos šalia daugelio meniu punktų rodys "
+#~ "mažas piktogramas."
+
+#~ msgid ""
+#~ "<p><b>No text:</b> Shows only icons on toolbar buttons. Best option for "
+#~ "low resolutions.</p><p><b>Text only: </b>Shows only text on toolbar "
+#~ "buttons.</p><p><b>Text beside icons: </b> Shows icons and text on toolbar "
+#~ "buttons. Text is aligned beside the icon.</p><b>Text below icons: </b> "
+#~ "Shows icons and text on toolbar buttons. Text is aligned below the icon."
+#~ msgstr ""
+#~ "<p><b>Jokio teksto:</b> Ant įrankių juostų mygtukų rodo tik piktogramas. "
+#~ "Geriausia parinktis naudojant mažas skiriamąsias gebas.</p><p><b>Tik "
+#~ "tekstas: </b>Ant įrankių juostų mygtukų rodo tik tekstą.</p><p><b>Tekstas "
+#~ "šalia piktogramų: </b> Ant įrankių juostų mygtukų rodo piktogramas ir "
+#~ "tekstą. Tekstas yra lygiuojamas šalia piktogramos.</p><b>Tekstas po "
+#~ "piktogramomis: </b> Ant įrankių juostų mygtukų rodo piktogramas ir "
+#~ "tekstą. Tekstas yra lygiuojamas po piktograma."
+
+#~ msgid "Toolbars"
+#~ msgstr "Įrankinės"
+
+#~ msgid "No Text"
+#~ msgstr "Nėra teksto"
+
+#, fuzzy
+#~| msgid "Widget style:"
+#~ msgid "Widget Style"
+#~ msgstr "Valdiklių stilius:"
+
+#~ msgid "Widget style:"
+#~ msgstr "Valdiklių stilius:"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Fine Tuning"
+#~ msgstr "&Derinimas"
+
+#~ msgid "Description: %1"
+#~ msgstr "Aprašymas: %1"
+
+#~ msgid ""
+#~ "This page allows you to choose details about the widget style options"
+#~ msgstr ""
+#~ "Šiame puslapyje galite parinkti valdiklių stiliaus parinkčių detales"
+
+#~ msgid "Group Box"
+#~ msgstr "Grupė"
+
+#~ msgid "KDE Style Module"
+#~ msgstr "KDE stiliaus modulis"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "Menubar"
+#~ msgstr "Meniu juosta"
+
+#~ msgid "Menubar style:"
+#~ msgstr "Meniu juostos stilius"
+
+#~ msgid "In application"
+#~ msgstr "Programoje"
+
+#~ msgid "Title bar button"
+#~ msgstr "Pavadinimo juostos mygtukas"
+
+#, fuzzy
+#~| msgid "Application Menu widget"
+#~ msgid "Global Menu widget"
+#~ msgstr "Programų meniu valdiklis"
+
+#~ msgid "Your changes will take effect only on application restart."
+#~ msgstr "Pakeitimai įsigalios tik iš naujo paleidus programą"
+
+#~ msgid ""
+#~ "<p>Changes to the visibility of menu icons will only affect newly started "
+#~ "applications.</p>"
+#~ msgstr ""
+#~ "<p>Meniu ženkliukų rodymo parinkčių pakeitimai veiks tik naujai "
+#~ "paleistose programose.</p>"
+
+#~ msgctxt "@title:window"
+#~ msgid "Menu Icons Changed"
+#~ msgstr "Pakeisti meniu ženkliukai"
+
+#~ msgid "Top screen menubar"
+#~ msgstr "Viršutinio ekrano krašto meniu juosta"
+
+#~ msgid "Only export"
+#~ msgstr "Tik eksportuoti"

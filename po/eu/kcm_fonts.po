@@ -1,0 +1,553 @@
+# Translation for kcm_fonts.po to Euskara/Basque (eu).
+# Copyright (C) 2002-2018,  Free Software Foundation, Inc.
+# Copyright (C) 2019-2022, This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+#
+# Translators:
+# Marcos  <marcos@euskalgnu.org>, 2002,2003, 2005, 2006, 2007, 2008.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2010, 2011, 2014, 2018, 2019, 2020, 2021, 2022.
+# Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-03 00:45+0000\n"
+"PO-Revision-Date: 2022-08-11 20:23+0200\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 22.04.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, kde-format
+msgid "Force font DPI Wayland"
+msgstr "Behartu letra-tipoen DPI Wayland-ekin"
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:13
+#, kde-format
+msgid "Force font DPI on X11"
+msgstr "Behartu letra-tipoen DPI X11-rekin"
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, kde-format
+msgid "General font"
+msgstr "Letra-tipo orokorra"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, kde-format
+msgid "Fixed width font"
+msgstr "Zabalera finkoko letra-tipoa"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, kde-format
+msgid "Small font"
+msgstr "Letra-tipo txikia"
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, kde-format
+msgid "Tool bar font"
+msgstr "Tresna-barrako letra-tipa"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, kde-format
+msgid "Menu font"
+msgstr "Menuko letra-tipoa"
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, kde-format
+msgid "Window title font"
+msgstr "Leiho-tituluko letra-tipoa"
+
+#: kxftconfig.cpp:458
+#, kde-format
+msgctxt "use system subpixel setting"
+msgid "Vendor default"
+msgstr "Hornitzailearen lehenetsia"
+
+#: kxftconfig.cpp:460
+#, kde-format
+msgctxt "no subpixel rendering"
+msgid "None"
+msgstr "Bat ere ez"
+
+#: kxftconfig.cpp:462
+#, kde-format
+msgid "RGB"
+msgstr "RGB"
+
+#: kxftconfig.cpp:464
+#, kde-format
+msgid "BGR"
+msgstr "BGR"
+
+#: kxftconfig.cpp:466
+#, kde-format
+msgid "Vertical RGB"
+msgstr "RGB bertikala"
+
+#: kxftconfig.cpp:468
+#, kde-format
+msgid "Vertical BGR"
+msgstr "BGR bertikala"
+
+#: kxftconfig.cpp:496
+#, kde-format
+msgctxt "use system hinting settings"
+msgid "Vendor default"
+msgstr "Hornitzailearen lehenetsia"
+
+#: kxftconfig.cpp:498
+#, kde-format
+msgctxt "medium hinting"
+msgid "Medium"
+msgstr "Ertaina"
+
+#: kxftconfig.cpp:500
+#, kde-format
+msgctxt "no hinting"
+msgid "None"
+msgstr "Bat ere ez"
+
+#: kxftconfig.cpp:502
+#, kde-format
+msgctxt "slight hinting"
+msgid "Slight"
+msgstr "Arina"
+
+#: kxftconfig.cpp:504
+#, kde-format
+msgctxt "full hinting"
+msgid "Full"
+msgstr "Osoa"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module lets you configure the system fonts."
+msgstr "Modulu honek sistemaren letra-tipoa aukeratzen uzten dizu."
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid "Change Display Scaling…"
+msgstr "Aldatu bistaratzearen eskalatzea..."
+
+#: package/contents/ui/main.qml:37
+#, kde-format
+msgid ""
+"Some changes such as anti-aliasing or DPI will only affect newly started "
+"applications."
+msgstr ""
+"Aldaketa batzuk, tartean ertzak-leuntzea edo DPI, hemendik aurrera "
+"abiarazten diren aplikazioetan baino ez dute izango eragina."
+
+#: package/contents/ui/main.qml:51
+#, kde-format
+msgid ""
+"Very large fonts may produce odd-looking results. Consider adjusting the "
+"global screen scale instead of using a very large font size."
+msgstr ""
+"Letra-tipo oso handiek itxura arraroko emaitzak sor ditzakete. Kontuan izan "
+"pantailako eskalatze orokorreko aukera, letra-tipo oso handiak erabili ordez."
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid ""
+"Decimal font sizes can cause text layout problems in some applications. "
+"Consider using only integer font sizes."
+msgstr ""
+"Letra-tipo neurri hamartarrek arazoak sor ditzakete aplikazio batzuetan. "
+"Hausnar ezazu letra-tipo neurri osoak bakarrik erabiltzea."
+
+#: package/contents/ui/main.qml:94
+#, kde-format
+msgid ""
+"The recommended way to scale the user interface is using the global screen "
+"scaling feature."
+msgstr ""
+"Erabiltzailearen interfazea eskalatzeko gomendatutako bidea pantailako "
+"eskalatze orokorreko ezaugarria erabiltzea da."
+
+#: package/contents/ui/main.qml:106
+#, kde-format
+msgid "&Adjust All Fonts…"
+msgstr "&Doitu letra-tipo guztiak..."
+
+#: package/contents/ui/main.qml:119
+#, kde-format
+msgid "General:"
+msgstr "Orokorra:"
+
+#: package/contents/ui/main.qml:120
+#, kde-format
+msgid "Select general font"
+msgstr "Hautatu Letra-tipo orokorra"
+
+#: package/contents/ui/main.qml:131
+#, kde-format
+msgid "Fixed width:"
+msgstr "Zabalera finkoa:"
+
+#: package/contents/ui/main.qml:132
+#, kde-format
+msgid "Select fixed width font"
+msgstr "Hautatu zabalera finkoko letra-tipoa"
+
+#: package/contents/ui/main.qml:143
+#, kde-format
+msgid "Small:"
+msgstr "Txikia:"
+
+#: package/contents/ui/main.qml:144
+#, kde-format
+msgid "Select small font"
+msgstr "Hautatu letra-tipo txikia"
+
+#: package/contents/ui/main.qml:155
+#, kde-format
+msgid "Toolbar:"
+msgstr "Tresna-barra:"
+
+#: package/contents/ui/main.qml:156
+#, kde-format
+msgid "Select toolbar font"
+msgstr "Hautatu tresna-barrako letra-tipoa"
+
+#: package/contents/ui/main.qml:167
+#, kde-format
+msgid "Menu:"
+msgstr "Menua:"
+
+#: package/contents/ui/main.qml:168
+#, kde-format
+msgid "Select menu font"
+msgstr "Hautatu menuko letra-tipoa"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "Window title:"
+msgstr "Leihoaren titulua:"
+
+#: package/contents/ui/main.qml:179
+#, kde-format
+msgid "Select window title font"
+msgstr "Hautatu leihoko tituluaren letra-tipoa"
+
+#: package/contents/ui/main.qml:194
+#, kde-format
+msgid "Anti-Aliasing:"
+msgstr "Ertzak-leuntzea:"
+
+#: package/contents/ui/main.qml:199
+#, kde-format
+msgid "Enable"
+msgstr "Gaitua"
+
+#: package/contents/ui/main.qml:203
+#, kde-kuit-format
+msgctxt "@info:tooltip Anti-Aliasing"
+msgid ""
+"Pixels on displays are generally aligned in a grid. Therefore shapes of "
+"fonts that do not align with this grid will look blocky and wrong unless "
+"<emphasis>anti-aliasing</emphasis> techniques are used to reduce this "
+"effect. You generally want to keep this option enabled unless it causes "
+"problems."
+msgstr ""
+"Bistaratzaileetako pixelak saretetan lerrokatuta egon ohi dira. Hori dela "
+"eta sareta honekin lerrokatzen ez diren letra-tipoek itxura txarra, "
+"blokeena, izango dute <emphasis>ertzak leuntzeko</emphasis> teknikak erabili "
+"ezean. Orokorrean aukera hau gaituta izan nahiko duzu, arazoak sortzen ez "
+"baditu behintzat."
+
+#: package/contents/ui/main.qml:217
+#, kde-format
+msgid "Exclude range from anti-aliasing"
+msgstr "Baztertu barrutia ertzak-leuntzetik"
+
+#: package/contents/ui/main.qml:236 package/contents/ui/main.qml:259
+#, kde-format
+msgid "%1 pt"
+msgstr "%1 pt"
+
+#: package/contents/ui/main.qml:251
+#, kde-format
+msgid "to"
+msgstr "->"
+
+#: package/contents/ui/main.qml:282
+#, kde-format
+msgctxt "Used as a noun, and precedes a combobox full of options"
+msgid "Sub-pixel rendering:"
+msgstr "Azpi-pixel errendatzea:"
+
+#: package/contents/ui/main.qml:324
+#, kde-kuit-format
+msgctxt "@info:tooltip Sub-pixel rendering"
+msgid ""
+"<para>On TFT or LCD screens every single pixel is actually composed of three "
+"or four smaller monochrome lights. These <emphasis>sub-pixels</emphasis> can "
+"be changed independently to further improve the quality of displayed fonts.</"
+"para> <para>The rendering quality is only improved if the selection matches "
+"the manner in which the sub-pixels of your display are aligned. Most "
+"displays have a linear ordering of <emphasis>RGB</emphasis> sub-pixels, some "
+"have <emphasis>BGR</emphasis> and some exotic orderings are not supported by "
+"this feature.</para>This does not work with CRT monitors."
+msgstr ""
+"<para>TFT edo LCD pantailetan pixel bakoitza hiru edo lau argi monokromo "
+"txikiagok osatzen dute. <emphasis>Azpi-pixel</emphasis> hauek independenteki "
+"aldatu daitezke azaldutako letra-tipoen kalitatea oraindik gehiago hobetzeko."
+"</para> <para>Errendatze kalitatea hobetzen da soilik, hautapena zure "
+"bistaratzaileko azpi-pixelak lerrokatuta dauden erarekin bat datorrenean. "
+"Bistaratzaile gehienek <emphasis>RGB</emphasis> azpi-pixelen ordena lineal "
+"bat dute, batzuek <emphasis>BGR</emphasis> ordena dute eta ordenatze exotiko "
+"batzuk ez dute ezaugarri honetarako euskarririk.</para>Hau ez dabil CRT "
+"monitoreekin."
+
+# Font hinting <https://en.wikipedia.org/wiki/Font_hinting>
+# Font hinting (also known as instructing) is the use of mathematical instructions to adjust the display of an outline font so that it lines up with a rasterized grid. At low screen resolutions, hinting is critical for producing clear, legible text. It can be accompanied by antialiasing and (on liquid crystal displays) subpixel rendering for further clarity.
+#: package/contents/ui/main.qml:329
+#, kde-format
+msgctxt "Used as a noun, and precedes a combobox full of options"
+msgid "Hinting:"
+msgstr "Errendatzea doitzea:"
+
+#: package/contents/ui/main.qml:370
+#, kde-kuit-format
+msgctxt "@info:tooltip Hinting"
+msgid ""
+"Hinting is a technique in which hints embedded in a font are used to enhance "
+"the rendering quality especially at small sizes. Stronger hinting generally "
+"leads to sharper edges but the small letters will less closely resemble "
+"their shape at big sizes."
+msgstr ""
+"Errendatzea doitzea, letra-tipo batean txertatutako «aholkuak» errendatze "
+"kalitatea areagotzeko, bereziki neurri txikietan, erabiltzeko teknika bat "
+"da. Errendatze doitze indartsuagoarekin ertz zorrotzagoak lortzen dira, "
+"baina letra txikiak gehiago urrunduko dira neurri handietan duten formatik."
+
+#: package/contents/ui/main.qml:380
+#, kde-format
+msgid "Force font DPI:"
+msgstr "Behartu letra-tipoen DPI:"
+
+#: package/contents/ui/main.qml:422
+#, kde-kuit-format
+msgctxt "@info:tooltip Force fonts DPI"
+msgid ""
+"<para>Enter your screen's DPI here to make on-screen fonts match their "
+"physical sizes when printed. Changing this option from its default value "
+"will conflict with many apps; some icons and images may not scale as "
+"expected.</para><para>To increase text size, change the size of the fonts "
+"above. To scale everything, use the scaling slider on the <interface>Display "
+"& Monitor</interface> page.</para>"
+msgstr ""
+"<para>Sartu zure pantailaren DPIa hemen, pantailako letra-tipoak, "
+"inprimatzean, haien neurri fisikoekin bat etor daitezen. Aukera hau "
+"lehenetsitako baliotik aldatzeak aplikazio askorekin gatazka eragingo du; "
+"baliteke ikono batzuk eta irudi batzuk espero bezala ez eskalatzea.</"
+"para><para>Testu-neurria handiagotzeko, aldatu goiko letra-tipoen neurria. "
+"Guztia eskalatzeko, erabili <interface>Bistaratzea eta Monitorea</interface> "
+"orriko eskalatzeko graduatzailea.</para>"
+
+#: package/contents/ui/main.qml:428
+#, kde-format
+msgid "Select Font"
+msgstr "Hautatu letra-tipoa"
+
+#~ msgctxt "@info:tooltip Force fonts DPI"
+#~ msgid ""
+#~ "<para>This option forces a specific DPI value for fonts. It may be useful "
+#~ "when the real DPI of the hardware is not detected properly and it is also "
+#~ "often misused when poor quality fonts are used that do not look well with "
+#~ "DPI values other than 96 or 120 DPI.</para><para>The use of this option "
+#~ "is generally discouraged.</para><para>If you are using the <emphasis>X "
+#~ "Window System</emphasis>, for selecting the proper DPI value a better "
+#~ "option is explicitly configuring it for the whole X server if possible (e."
+#~ "g. DisplaySize in xorg.conf). When fonts do not render properly with the "
+#~ "real DPI value better fonts should be used or configuration of font "
+#~ "hinting should be checked.</para>"
+#~ msgstr ""
+#~ "<para>Aukera honek letra-tipoetarako DPI balio jakin bat behartzen du. "
+#~ "Lagungarria izan liteke hardwarearen benetako DPI ondo detektatzen ez "
+#~ "denean. Askotan gaizki erabiltzen da kalitate eskaseko letra-tipoak, 96 "
+#~ "edo 120 DPIrekin baino ondo ikusten ez direnak, erabiltzen direnean.</"
+#~ "para> <para>Normalean, ez da gomendagarria aukera hori erabiltzea.</"
+#~ "para><para><emphasis>X Window Sistema</emphasis> erabiltzen baduzu, DPI "
+#~ "balio egokia hautatzeko, ahal izanez gero, hobe da X zerbitzari osorako "
+#~ "esplizituki konfiguratzea (adib. «Display Size» xorg.conf fitxategian). "
+#~ "Letra-tipoak DPI balio errealarekin ondo errendatzen ez direnean, letra-"
+#~ "tipo hobeak erabili beharko lirateke edo letra-tipoen errendatzea "
+#~ "doitzeko konfigurazioa aztertu beharko litzateke.</para>"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr ""
+#~ "Marcos Goyeneche,Iñigo Salvador Azurmendi,Hizkuntza Politikarako "
+#~ "Sailburuordetza"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "marcos@euskalgnu.org,xalba@ni.eus,Hizpol@ej-gv.es"
+
+#~ msgid "Fonts"
+#~ msgstr "Letra-tipoak"
+
+#~ msgid "Antonis Tsiapaliokas"
+#~ msgstr "Antonis Tsiapaliokas"
+
+#~ msgctxt "@action:button"
+#~ msgid "Show Contextual Help"
+#~ msgstr "Erakutsi testuinguru-laguntza"
+
+#~ msgid "Select %1 Font..."
+#~ msgstr "Hautatu %1 letra-tipoa..."
+
+#~ msgid "Font Settings Changed"
+#~ msgstr "Letra-tipoen ezarpenak aldatuak"
+
+#~ msgid ""
+#~ "<p>Some changes such as DPI will only affect newly started applications.</"
+#~ "p>"
+#~ msgstr ""
+#~ "<p>Aldaketa batzuk, tartean DPI, hemendik aurrera abiarazten diren "
+#~ "aplikazioetan baino ez dute izango eragina.</p>"
+
+#~ msgid "Vendor default"
+#~ msgstr "Hornitzailearen lehenetsia"
+
+#~ msgid "Disabled"
+#~ msgstr "Desgaituta"
+
+#, fuzzy
+#~| msgid "Configure Fonts"
+#~ msgid "Configure the system fonts"
+#~ msgstr "Konfiguratu letra-tipoak"
+
+#~ msgid "Choose..."
+#~ msgstr "Hautatu..."
+
+#~ msgid "Configure Anti-Alias Settings"
+#~ msgstr "Konfiguratu ertzak leuntzeko ezarpenak"
+
+#~ msgid "E&xclude range:"
+#~ msgstr "&Baztertu barrutia:"
+
+#, fuzzy
+#~| msgid " pt"
+#~ msgctxt "abbreviation for unit of points"
+#~ msgid " pt"
+#~ msgstr " pt"
+
+#~ msgid ""
+#~ "<p>If you have a TFT or LCD screen you can further improve the quality of "
+#~ "displayed fonts by selecting this option.<br />Sub-pixel rendering is "
+#~ "also known as ClearType(tm).<br /> In order for sub-pixel rendering to "
+#~ "work correctly you need to know how the sub-pixels of your display are "
+#~ "aligned.</p> <p>On TFT or LCD displays a single pixel is actually "
+#~ "composed of three sub-pixels, red, green and blue. Most displays have a "
+#~ "linear ordering of RGB sub-pixel, some have BGR.<br /> This feature does "
+#~ "not work with CRT monitors.</p>"
+#~ msgstr ""
+#~ "<p>TFT edo LCD pantaila bat baldin badaukazu, bistaratutako tipografien "
+#~ "kalitatea gehiago hobetu dezakezu aukera hau hautatuz.<br />Azpipixel-"
+#~ "errendatzeari ClearType(tm) ere esaten zaio.<br /> Azpipixel-errendatzea "
+#~ "behar bezala ibil dadin, pantailaren azpipixelak nola dauden lerrokatuta "
+#~ "jakin behar duzu.</p> <p>TFT edo LCD pantailetan pixel bakarra hiru "
+#~ "azpipixelez osatuta dago: gorriaz (R); berdeaz (G) eta urdinaz (B). "
+#~ "Pantaila gehienek azpipixelen RGB lerro ordena dute, batzuek BGR.<br /> "
+#~ "Ezaugarri hau ez dabil CRT monitoreetan.</p>"
+
+#~ msgid ""
+#~ "Hinting is a process used to enhance the quality of fonts at small sizes."
+#~ msgstr ""
+#~ "Letra-tipo txikiak hobeto erakusteko erabiltzen den prozesu bat da "
+#~ "'hinting'."
+
+#~ msgid "Used for normal text (e.g. button labels, list items)."
+#~ msgstr ""
+#~ "Testu arrunterako erabiltzen da (adibidez, botoien etiketak, zerrendetako "
+#~ "elementuak)."
+
+#~ msgid "A non-proportional font (i.e. typewriter font)."
+#~ msgstr ""
+#~ "Letra-tipo ez-proportzional bat (adibidez, idazmakinako letra-tipoa)."
+
+#~ msgid "Smallest font that is still readable well."
+#~ msgstr "Irakurgarria den letra-tiporik txikiena."
+
+#~ msgid "Used to display text beside toolbar icons."
+#~ msgstr "Tresna-barrako ikonoen ondoko testua bistaratzeko erabiltzen da."
+
+#~ msgid "Used by menu bars and popup menus."
+#~ msgstr "Menu-barretan eta leiho gainerakorretan erabiltzen da."
+
+#~ msgid "Used by the window titlebar."
+#~ msgstr "Leihoen izenburu-barran erabiltzen da."
+
+#~ msgctxt "Font role"
+#~ msgid "%1: "
+#~ msgstr "%1: "
+
+#~ msgid "Click to change all fonts"
+#~ msgstr "Klikatu letra-tipo guztiak aldatzeko"
+
+#~ msgctxt "Use anti-aliasing"
+#~ msgid "System Settings"
+#~ msgstr "Sistemaren ezarpenak"
+
+#, fuzzy
+#~| msgid ""
+#~| "If this option is selected, KDE will smooth the edges of curves in fonts."
+#~ msgid "Select this option to smooth the edges of curves in fonts."
+#~ msgstr ""
+#~ "Aukera hau hautatuta baldin badago, KDEk leundu egingo ditu letra-tipoen "
+#~ "ertzak."
+
+#, fuzzy
+#~| msgctxt "Use anti-aliasing"
+#~| msgid "System Settings"
+#~ msgctxt "use system subpixel setting"
+#~ msgid "System default"
+#~ msgstr "Sistemaren ezarpenak"
+
+#, fuzzy
+#~| msgctxt "Use anti-aliasing"
+#~| msgid "System Settings"
+#~ msgctxt "use system hinting settings"
+#~ msgid "System default"
+#~ msgstr "Sistemaren ezarpenak"
+
+#~ msgctxt "font usage"
+#~ msgid "Taskbar"
+#~ msgstr "Ataza-barra"
+
+#~ msgctxt "font usage"
+#~ msgid "Desktop"
+#~ msgstr "Mahaigaina"
+
+#~ msgid "Used by the taskbar."
+#~ msgstr "Ataza-barran erabiltzen da."
+
+#~ msgid "Used for desktop icons."
+#~ msgstr "Mahaigaineko ikonoetan erabiltzen da."
+
+#~ msgctxt "Force fonts DPI"
+#~ msgid "Disabled"
+#~ msgstr "Desgaituta"
+
+#~ msgid "96 DPI"
+#~ msgstr "96 DPI"
+
+#~ msgid "120 DPI"
+#~ msgstr "120 DPI"

@@ -1,0 +1,64 @@
+# translation of phonon_kde.po to
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Serdar Soytetir <tulliana@gmail.com>, 2007, 2008, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: phonon_kde\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-05-20 03:26+0200\n"
+"PO-Revision-Date: 2014-10-21 09:48+0000\n"
+"Last-Translator: Necdet <necdetyucel@gmail.com>\n"
+"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 1.5\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Serdar Soytetir"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "tulliana@gmail.com"
+
+#~ msgid "<qt>Unable to use the <b>%1</b> Multimedia Backend:<br/>%2</qt>"
+#~ msgstr "<qt><b>%1</b> Çoklu Ortam Arka Ucu kullanılamıyor:<br/>%2</qt>"
+
+#~ msgid "Unable to find a Multimedia Backend"
+#~ msgstr "Bir Çoklu Ortam Arka Ucu bulunamadı"
+
+#~ msgid "Unable to find the requested Multimedia Backend"
+#~ msgstr "İstenilen Çoklu Ortam Arka Ucu bulunamadı"
+
+#~ msgid "create method returned 0"
+#~ msgstr "oluşturma yöntemi 0 döndürdü"
+
+#~ msgid "%1 (OSS)"
+#~ msgstr "%1 (OSS)"
+
+#~ msgid "%1 (ALSA)"
+#~ msgstr "%1 (ALSA)"
+
+#~ msgid ""
+#~ "<html>This device is currently not available (either it is unplugged or "
+#~ "the driver is not loaded).</html>"
+#~ msgstr ""
+#~ "<html>Bu aygıt şu anda kullanılabilir değil (aygıt sürücüsü yüklenmemiş "
+#~ "ya da aygıt çıkarılmış olabilir).</html>"
+
+#~ msgid ""
+#~ "<html>This will try the following devices and use the first that works: "
+#~ "<ol><li>%1</li></ol></html>"
+#~ msgstr ""
+#~ "<html>Bu işlem aşağıdaki aygıtları deneyecek ve ilk çalışan aygıtı "
+#~ "kullanacak: <ol><li>%1</li></ol></html>"
+
+#~ msgid "Unable to use the <b>%1</b> Multimedia Backend:"
+#~ msgstr "<b>%1</b> Çokluortam Arka Ucu kullanılamıyor:"

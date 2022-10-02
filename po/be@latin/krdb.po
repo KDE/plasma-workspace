@@ -1,0 +1,55 @@
+# translation of krdb.po to Belarusian Latin
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Ihar Hrachyshka <ihar.hrachyshka@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: krdb\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-24 00:47+0000\n"
+"PO-Revision-Date: 2008-12-27 13:49+0200\n"
+"Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
+"Language-Team: Belarusian Latin <i18n@mova.org>\n"
+"Language: be@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
+"%100>=11 && n%100<=14 ? 2 : 3);\n"
+
+#: krdb.cpp:261
+#, kde-format
+msgid ""
+"# created by KDE Plasma, %1\n"
+"#\n"
+msgstr ""
+
+#, fuzzy
+#~| msgid ""
+#~| "# created by KDE, %1\n"
+#~| "#\n"
+#~| "# If you do not want KDE to override your GTK settings, select\n"
+#~| "# Appearance & Themes -> Colors in the Control Center and disable the "
+#~| "checkbox\n"
+#~| "# \"Apply colors to non-KDE applications\"\n"
+#~| "#\n"
+#~| "#\n"
+#~ msgid ""
+#~ "# created by KDE Plasma, %1\n"
+#~ "#\n"
+#~ "# If you do not want Plasma to override your GTK settings, select\n"
+#~ "# Colors in the System Settings and disable the checkbox\n"
+#~ "# \"Apply colors to non-Qt applications\"\n"
+#~ "#\n"
+#~ "#\n"
+#~ msgstr ""
+#~ "# stvorany systemaju „KDE”, %1\n"
+#~ "#\n"
+#~ "# Kali ty nia chočaš, kab „KDE” źmianiała nałady „GTK”, vybiery\n"
+#~ "# „Vonkavaść i matyvy → Kolery” ŭ Centry kiravańnia j vyklučy opcyju\n"
+#~ "# „Prymianiaj kolery dla aplikacyjaŭ, jakija nie naležać KDE4”\n"
+#~ "#\n"
+#~ "#\n"

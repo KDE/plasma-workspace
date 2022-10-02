@@ -1,0 +1,63 @@
+# translation of phonon_kde.po to Kaszëbsczi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Michôł Òstrowsczi <michol@linuxcsb.org>, 2007, 2008.
+# Mark Kwidzińsczi <mark@linuxcsb.org>, 2007, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: phonon_kde\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-05-20 03:26+0200\n"
+"PO-Revision-Date: 2008-12-14 13:20+0100\n"
+"Last-Translator: Mark Kwidzińsczi <mark@linuxcsb.org>\n"
+"Language-Team: Kashubian <i18n-csb@linuxcsb.org>\n"
+"Language: csb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 0.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2)\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Michôł Òstrowsczi, Mark Kwidzińsczi"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "michol@linuxcsb.org, mark@linuxcsb.org"
+
+#~ msgid "<qt>Unable to use the <b>%1</b> Multimedia Backend:<br/>%2</qt>"
+#~ msgstr "<qt>Ni mòże brëkòwac <b>%1</b> interfejsu mùltimediów:<br/>%2</qt>"
+
+#~ msgid "Unable to find a Multimedia Backend"
+#~ msgstr "Ni mòże nalezc interfejsu mùltimediów"
+
+#~ msgid "Unable to find the requested Multimedia Backend"
+#~ msgstr "Ni mòże nalezc żądónégò interfejsu mùltimediów"
+
+#~ msgid "create method returned 0"
+#~ msgstr "ùsôdzonô metoda dała nazôd 0"
+
+#~ msgid "%1 (OSS)"
+#~ msgstr "%1 (OSS)"
+
+#~ msgid "%1 (ALSA)"
+#~ msgstr "%1 (ALSA)"
+
+#~ msgid ""
+#~ "<html>This device is currently not available (either it is unplugged or "
+#~ "the driver is not loaded).</html>"
+#~ msgstr ""
+#~ "<html>Ne ùrządzenié nie je terô przëstãpné (abò je òdłączoné abò "
+#~ "czerownik nie je załadowóny).</html>"
+
+#~ msgid ""
+#~ "<html>This will try the following devices and use the first that works: "
+#~ "<ol><li>%1</li></ol></html>"
+#~ msgstr ""
+#~ "<html>No spróbùje pòstãpné ùrządzenia ë ùżëje pierszégò jaczi bãdze "
+#~ "robił: <ol><li>%1</li></ol></html>"

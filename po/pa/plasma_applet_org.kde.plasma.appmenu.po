@@ -1,0 +1,55 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# A S Alam <aalam@users.sf.net>, 2017, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-22 00:47+0000\n"
+"PO-Revision-Date: 2021-06-08 22:41-0700\n"
+"Last-Translator: A S Alam <aalam@satluj.org>\n"
+"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.12.2\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "ਦਿੱਖ"
+
+#: package/contents/ui/configGeneral.qml:22
+#, kde-format
+msgid "Use single button for application menu"
+msgstr "ਐਪਲੀਕੇਸ਼ਨ ਮੇਨੂ ਲਈ ਇਕੱਲਾ ਬਟਨ ਵਰਤੋਂ"
+
+#: package/contents/ui/configGeneral.qml:28
+#, kde-format
+msgid "Show full application menu"
+msgstr "ਪੂਰਾ ਐਪਲੀਕੇਸ਼ਨ ਮੇਨੂ ਵੇਖਾਓ"
+
+#: package/contents/ui/MenuDelegate.qml:62
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Open a menu"
+msgstr ""
+
+#: plugin/appmenumodel.cpp:84
+#, kde-format
+msgid "Search"
+msgstr "ਖੋਜੋ"
+
+#: plugin/appmenumodel.cpp:91
+#, kde-format
+msgid "Search…"
+msgstr "…ਖੋਜੋ"
+
+#~ msgid "Search..."
+#~ msgstr "...ਖੋਜੋ"
+
+#~ msgid "application-menu"
+#~ msgstr "ਐਪਲੀਕੇਸ਼ਨ-ਮੀਨੂ"

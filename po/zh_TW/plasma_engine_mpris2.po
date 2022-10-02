@@ -1,0 +1,92 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Franklin Weng <franklin@goodhorse.idv.tw>, 2012, 2015.
+# pan93412 <pan93412@gmail.com>, 2018.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2018-04-04 11:22+0800\n"
+"Last-Translator: pan93412 <pan93412@gmail.com>\n"
+"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 2.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: multiplexedservice.cpp:68
+#, kde-format
+msgctxt "Name for global shortcuts category"
+msgid "Media Controller"
+msgstr "媒體控制器"
+
+#: multiplexedservice.cpp:70
+#, kde-format
+msgid "Play/Pause media playback"
+msgstr "播放/暫停媒體"
+
+#: multiplexedservice.cpp:88
+#, kde-format
+msgid "Media playback next"
+msgstr "播放下一首"
+
+#: multiplexedservice.cpp:97
+#, kde-format
+msgid "Media playback previous"
+msgstr "播放前一首"
+
+#: multiplexedservice.cpp:106
+#, kde-format
+msgid "Stop media playback"
+msgstr "停止媒體播放"
+
+#: multiplexedservice.cpp:115
+#, fuzzy, kde-format
+#| msgid "Play/Pause media playback"
+msgid "Pause media playback"
+msgstr "播放/暫停媒體"
+
+#: multiplexedservice.cpp:124
+#, fuzzy, kde-format
+#| msgid "Play/Pause media playback"
+msgid "Play media playback"
+msgstr "播放/暫停媒體"
+
+#: multiplexedservice.cpp:133
+#, kde-format
+msgid "Media volume up"
+msgstr "媒體音量增大"
+
+#: multiplexedservice.cpp:142
+#, kde-format
+msgid "Media volume down"
+msgstr "媒體音量減小"
+
+#: playeractionjob.cpp:169
+#, kde-format
+msgid "The media player '%1' cannot perform the action '%2'."
+msgstr "媒體播放器 '%1' 無法執行動作 %2。"
+
+#: playeractionjob.cpp:171
+#, kde-format
+msgid "Attempting to perform the action '%1' failed with the message '%2'."
+msgstr "試著執行動作 %1 時失敗，訊息為 %2。"
+
+#: playeractionjob.cpp:173
+#, kde-format
+msgid "The argument '%1' for the action '%2' is missing or of the wrong type."
+msgstr "遺失了動作 %2 的參數 %1，或是參數型態不正確。"
+
+#: playeractionjob.cpp:175
+#, kde-format
+msgid "The operation '%1' is unknown."
+msgstr "未知的操作 %1。"
+
+#: playeractionjob.cpp:177
+#, kde-format
+msgid "Unknown error."
+msgstr "未知的錯誤。"

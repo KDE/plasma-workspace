@@ -1,0 +1,93 @@
+# Lithuanian translations for plasma-workspace package.
+# Copyright (C) 2019 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# Automatically generated, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-28 00:47+0000\n"
+"PO-Revision-Date: 2021-08-26 13:16+0300\n"
+"Last-Translator: Moo\n"
+"Language-Team: none\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
+"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 2.3\n"
+
+#: package/contents/ui/main.qml:34
+#, kde-format
+msgid ""
+"User Feedback has been disabled centrally. Please contact your distributor."
+msgstr ""
+"Naudotojo grįžtamasis ryšys yra išjungtas centralizuotai. Susisiekite su "
+"savo platintoju."
+
+#: package/contents/ui/main.qml:44 package/contents/ui/main.qml:77
+#, kde-format
+msgid "Plasma:"
+msgstr "Plasma:"
+
+#: package/contents/ui/main.qml:51
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info"
+#| msgid ""
+#| "You can help KDE improve Plasma by contributing information on how you "
+#| "use it, so we can focus on things that matter to you.<nl/><nl/"
+#| ">Contributing this information is optional and entirely anonymous. We "
+#| "never collect your personal data, files you use, websites you visit, or "
+#| "information that could identify you.<nl/><nl/>You can read about our "
+#| "privacy policy in the following link:"
+msgctxt "@info"
+msgid ""
+"You can help KDE improve Plasma by contributing information on how you use "
+"it, so we can focus on things that matter to you.<nl/><nl/>Contributing this "
+"information is optional and entirely anonymous. We never collect your "
+"personal data, files you use, websites you visit, or information that could "
+"identify you.<nl/><nl/>You can read about <link url='https://kde.org/"
+"privacypolicy-apps.php'>our privacy policy here.</link>"
+msgstr ""
+"Galite padėti KDE tobulinti Plasma pateikdami informaciją apie tai, kaip "
+"naudojatės Plasma darbalaukiu. Tokiu būdu mes galėsime susitelkti ties "
+"dalykais, kurie yra jums svarbūs.<nl/><nl/>Šios informacijos pateikimas yra "
+"laisvanoriškas ir visiškai anoniminis. Mes niekada nerenkame jūsų asmeninių "
+"duomenų, jūsų naudojamų failų, jūsų aplankytų internetinių svetainių ar "
+"informacijos, kuri galėtų jus identifikuoti.<nl/><nl/>Galite perskaityti "
+"apie mūsų privatumo politiką apsilankę šiuo adresu:"
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Plasma"
+msgstr "Plasma"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "The following information will be sent:"
+msgstr "Bus išsiųsta ši informacija:"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "View sent data:"
+msgstr "Rodyti išsiųstus duomenis:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Moo"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "<>"
+
+#~ msgid "User Feedback"
+#~ msgstr "Naudotojo grįžtamasis ryšys"
+
+#~ msgid "Configure user feedback settings"
+#~ msgstr "Konfigūruoti naudotojo grįžtamojo ryšio nuostatas"
+
+#~ msgctxt "@info"
+#~ msgid "You can read about our policy in the following link:"
+#~ msgstr "Galite sužinoti apie mūsų politiką, apsilankę nurodyta nuoroda:"

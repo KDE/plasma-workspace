@@ -1,0 +1,271 @@
+# translation of ksmserver.po to Arabic
+# translation of ksmserver.po to
+# Copyright (C) 2001,2002, 2004, 2006, 2007, 2008 Free Software Foundation, Inc.
+# Majid Moggamel <Anatolia@linux-team.org>, 2001.
+# Isam Bayazidi <bayazidi@arabeyes.org>, 2002.
+# Ossama Khayat <okhayat@yahoo.com>, 2004.
+# Munzir Taha <munzir@kacst.edu.sa>, 2004.
+# محمد سعد  Mohamed SAAD <metehyi@free.fr>, 2006.
+# AbdulAziz AlSharif <a.a-a.s@hotmail.com>, 2007.
+# Youssef Chahibi <chahibi@gmail.com>, 2007.
+# zayed <zayed.alsaidi@gmail.com>, 2008, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: ksmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-22 00:47+0000\n"
+"PO-Revision-Date: 2021-06-19 20:20+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: Arabic <kde-i18n-ar@kde.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 21.07.70\n"
+
+#: logout.cpp:344
+#, kde-format
+msgid "Logout canceled by '%1'"
+msgstr "ألغي الخروج بواسطة '%1'"
+
+#: main.cpp:117
+#, kde-format
+msgid "$HOME not set!"
+msgstr "لم تضع البيت"
+
+#: main.cpp:121 main.cpp:127
+#, kde-format
+msgid "$HOME directory (%1) does not exist."
+msgstr "مجلد البيت (%1) غير موجود"
+
+#: main.cpp:123
+#, kde-format
+msgid "No write access to $HOME directory (%1)."
+msgstr "لا توجد صلاحية الكتابة لمجلد البيت (%1)."
+
+#: main.cpp:129
+#, kde-format
+msgid "No read access to $HOME directory (%1)."
+msgstr "لا توجد صلاحية القراءة لمجلد البيت (%1)."
+
+#: main.cpp:133
+#, kde-format
+msgid "$HOME directory (%1) is out of disk space."
+msgstr "مجلد البيت (%1) ممتلئ"
+
+#: main.cpp:136
+#, kde-format
+msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+msgstr "فشل في الكتابة لمجلد البيت (%2) بخطأ '%1'"
+
+#: main.cpp:149 main.cpp:184
+#, kde-format
+msgid "No write access to '%1'."
+msgstr "لا يوجد صلاحية الكتابة لـ'%1'."
+
+#: main.cpp:151 main.cpp:186
+#, kde-format
+msgid "No read access to '%1'."
+msgstr "لا يوجد صلاحية القراءة لـ'%1'."
+
+#: main.cpp:159 main.cpp:172
+#, kde-format
+msgid "Temp directory (%1) is out of disk space."
+msgstr "مجلد المؤقت (%1) ممتلئ"
+
+#: main.cpp:162 main.cpp:175
+#, kde-format
+msgid ""
+"Writing to the temp directory (%2) failed with\n"
+"    the error '%1'"
+msgstr ""
+"فشل في الكتابة للمجلد المؤقت (%2)\n"
+" بخطأ '%1'"
+
+#: main.cpp:190
+#, kde-format
+msgid ""
+"The following installation problem was detected\n"
+"while trying to start Plasma:"
+msgstr ""
+"وجدت مشكلة في التثبيت التالية\n"
+"عند محاولة بدء بلازما:"
+
+#: main.cpp:193
+#, kde-format
+msgid ""
+"\n"
+"\n"
+"Plasma is unable to start.\n"
+msgstr ""
+"\n"
+"\n"
+"بلازما غير قادرة على البدء.\n"
+
+#: main.cpp:200
+#, kde-format
+msgid "Plasma Workspace installation problem!"
+msgstr "مشكلة في تثبيت مساحة عمل بلازما!"
+
+#: main.cpp:236
+#, kde-format
+msgid ""
+"The reliable Plasma session manager that talks the standard X11R6 \n"
+"session management protocol (XSMP)."
+msgstr ""
+"مدير جلسة بلازما الموثوق به و الذي يتطابق معيارياً مع X11R6 \n"
+"بروتوكول إدارة الجلسة (XSMP)."
+
+#: main.cpp:240
+#, kde-format
+msgid "Restores the saved user session if available"
+msgstr "يستعيد جلسة المستخدم المحفوظة إذا كانت متوفرة"
+
+#: main.cpp:243
+#, kde-format
+msgid "Also allow remote connections"
+msgstr "اسمح أيضاً بالاتصال عن بعد"
+
+#: main.cpp:246
+#, kde-format
+msgid "Starts the session in locked mode"
+msgstr "تبدأ الجلسة في النمط المقفل"
+
+#: main.cpp:250
+#, kde-format
+msgid ""
+"Starts without lock screen support. Only needed if other component provides "
+"the lock screen."
+msgstr "تبدأ بدون دعم غلق الشاشة. تحتاجها فقط إذا كان المكون يقدم شاشة القفل."
+
+#: server.cpp:873
+#, kde-format
+msgid "Session Management"
+msgstr "إدارة الجلسة"
+
+#: server.cpp:876
+#, kde-format
+msgid "Log Out"
+msgstr "اخرج"
+
+#: server.cpp:881
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "اخرج بدون تأكيد"
+
+#: server.cpp:886
+#, kde-format
+msgid "Halt Without Confirmation"
+msgstr "أوقف بدون تأكيد"
+
+#: server.cpp:891
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "أعد التشغيل بدون تأكيد"
+
+#, fuzzy
+#~| msgid ""
+#~| "Starts 'wm' in case no other window manager is \n"
+#~| "participating in the session. Default is 'kwin'"
+#~ msgid ""
+#~ "Starts <wm> in case no other window manager is \n"
+#~ "participating in the session. Default is 'kwin'"
+#~ msgstr ""
+#~ "يبدأ بتشغيل 'wm' (مدير النوافذ ) في حال عدم وجود مدير نوافذ آخر\n"
+#~ "يشارك في الجلسة. الافتراضي هو 'kwin'"
+
+#, fuzzy
+#~| msgid "&Logout"
+#~ msgid "Logout"
+#~ msgstr "ا&خرج"
+
+#, fuzzy
+#~ msgid "Sleeping in 1 second"
+#~ msgid_plural "Sleeping in %1 seconds"
+#~ msgstr[0] "اخرج حالا."
+#~ msgstr[1] "اخرج في ثانية واحدة."
+#~ msgstr[2] "اخرج في ثانيتين."
+#~ msgstr[3] "اخرج في %1  ثوان."
+#~ msgstr[4] "اخرج في %1  ثانية."
+#~ msgstr[5] "اخرج في %1  ثانية."
+
+#~ msgid "Logging out in 1 second."
+#~ msgid_plural "Logging out in %1 seconds."
+#~ msgstr[0] "اخرج حالا."
+#~ msgstr[1] "اخرج في ثانية واحدة."
+#~ msgstr[2] "اخرج في ثانيتين."
+#~ msgstr[3] "اخرج في %1  ثوان."
+#~ msgstr[4] "اخرج في %1  ثانية."
+#~ msgstr[5] "اخرج في %1  ثانية."
+
+#~ msgid "Turning off computer in 1 second."
+#~ msgid_plural "Turning off computer in %1 seconds."
+#~ msgstr[0] "اطفئ الحاسوب حالا."
+#~ msgstr[1] "اطفئ الحاسوب في ثانية."
+#~ msgstr[2] "اطفئ الحاسوب في ثانيتين."
+#~ msgstr[3] "اطفئ الحاسوب في %1 ثوان."
+#~ msgstr[4] "اطفئ الحاسوب في %1 ثانية."
+#~ msgstr[5] "اطفئ الحاسوب في %1 ثانية."
+
+#~ msgid "Restarting computer in 1 second."
+#~ msgid_plural "Restarting computer in %1 seconds."
+#~ msgstr[0] "أعد تشغيل الحاسوب حالا."
+#~ msgstr[1] "أعد تشغيل الحاسوب في ثانية واحدة."
+#~ msgstr[2] "أعد تشغيل الحاسوب في ثانيتين."
+#~ msgstr[3] "أعد تشغيل الحاسوب في %1 ثوان."
+#~ msgstr[4] "أعد تشغيل الحاسوب في %1 ثانية."
+#~ msgstr[5] "أعد تشغيل الحاسوب في %1 ثانية."
+
+#, fuzzy
+#~| msgid "&Turn Off Computer"
+#~ msgid "Turn Off Computer"
+#~ msgstr "ا&طفئ الحاسوب"
+
+#, fuzzy
+#~| msgid "&Restart Computer"
+#~ msgid "Restart Computer"
+#~ msgstr "أ&عد تشغيل الحاسوب"
+
+#~ msgctxt "default option in boot loader"
+#~ msgid " (default)"
+#~ msgstr "(الافتراضي)"
+
+#, fuzzy
+#~| msgid "&Cancel"
+#~ msgid "Cancel"
+#~ msgstr "أل&غ"
+
+#~ msgid "&Standby"
+#~ msgstr "الا&ستعداد"
+
+#~ msgid "Suspend to &RAM"
+#~ msgstr "علّق إلى ال&ذاكرة"
+
+#~ msgid "Suspend to &Disk"
+#~ msgstr "علّق إلى ال&قرص"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Mohamed SAAD محمد سعد,زايد السعيدي"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "metehyi@free.fr,zayed.alsaidi@gmail.com"
+
+#~ msgid "(C) 2000, The KDE Developers"
+#~ msgstr "(C) 2000, مطوري كدي"
+
+#~ msgid "Matthias Ettrich"
+#~ msgstr "Matthias Ettrich"
+
+#~ msgid "Luboš Luňák"
+#~ msgstr "Luboš Luňák"
+
+#~ msgid "Maintainer"
+#~ msgstr "المشرف على المشروع"
+
+#~ msgctxt "current option in boot loader"
+#~ msgid " (current)"
+#~ msgstr "(الحالي)"

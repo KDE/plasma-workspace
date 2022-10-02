@@ -1,0 +1,47 @@
+# translation of plasma_runner_services.po to Français
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Joëlle Cornavin <jcornavi@club-internet.fr>, 2009.
+# Yoann Laissus <yoann.laissus@gmail.com>, 2015, 2016.
+# Xavier Besnard <xavier.besnard@neuf.fr>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_services\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-19 00:47+0000\n"
+"PO-Revision-Date: 2020-05-18 17:28+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
+"Language-Team: French <kde-francophone@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Generator: Lokalize 20.04.1\n"
+
+#: servicerunner.cpp:349
+#, kde-format
+msgctxt ""
+"Jump list search result, %1 is action (eg. open new tab), %2 is application "
+"(eg. browser)"
+msgid "%1 - %2"
+msgstr "%1 - %2"
+
+#: servicerunner.cpp:394
+#, kde-format
+msgid "Finds applications whose name or description match :q:"
+msgstr ""
+"Trouve les applications dont le nom ou la description correspondent à :q:"
+
+#~ msgid "System Information"
+#~ msgstr "Information du système"
+
+#~ msgid "System Settings"
+#~ msgstr "Configuration du système"
+
+#~ msgid "Applications"
+#~ msgstr "Applications"

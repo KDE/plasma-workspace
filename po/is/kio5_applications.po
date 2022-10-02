@@ -1,0 +1,37 @@
+# translation of kio_applications.po to icelandic
+# Icelandic translation of kio_settings
+# Copyright (C) 2004, 2005, 2008 Free Software Foundation, Inc.
+# Richard Allen <ra@ra.is>, 2004.
+# Arnar Leosson <leosson@frisurf.no>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kio_applications\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-08 00:48+0000\n"
+"PO-Revision-Date: 2008-12-09 10:43+0000\n"
+"Last-Translator: Sveinn í Felli\n"
+"Language-Team: icelandic <kde-isl@molar.is>\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
+"\n"
+"\n"
+
+#: kio_applications.cpp:122
+#, kde-format
+msgid "Applications"
+msgstr "Forrit"
+
+#: kio_applications.cpp:122
+#, kde-format
+msgid "Programs"
+msgstr "Forrit"
+
+#: kio_applications.cpp:131
+#, kde-format
+msgid "Unknown application folder"
+msgstr "Óþekkt forritamappa"

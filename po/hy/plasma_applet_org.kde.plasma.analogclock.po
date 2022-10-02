@@ -1,0 +1,103 @@
+# Armenian translation of plasma_applet_clock.po file
+# Copyright (C) 2008 Armenian KDE Translation Team
+# This file is distributed under the same license as the plasma_applet_clock package.
+#
+# Vardan Gevorgyan <vgevorgyan@debian.am>, 2008.
+# Tamara Zeynalyan <tamara@debian.am>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_clock\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-25 00:47+0000\n"
+"PO-Revision-Date: 2008-02-01 18:45+0400\n"
+"Last-Translator: Vardan Gevorgyan <vgevorgyan@debian.am>\n"
+"Language-Team: Armenian <kde@debian.am>\n"
+"Language: hy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Country: Armenia\n"
+"X-Poedit-Language: Armenian\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Հայտնվել"
+
+#: contents/ui/analogclock.qml:76
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Current time is %1; Current date is %2"
+msgstr ""
+
+#: contents/ui/configGeneral.qml:23
+#, fuzzy, kde-format
+#| msgid "Show &seconds"
+msgid "Show seconds hand"
+msgstr "Ցույց տալ &վայրկյանները"
+
+#: contents/ui/configGeneral.qml:24
+#, kde-format
+msgid "General:"
+msgstr ""
+
+#: contents/ui/configGeneral.qml:28
+#, fuzzy, kde-format
+#| msgid "Show the time in text"
+msgid "Show time zone"
+msgstr "Ժամը ցույց տալ տեքստում"
+
+#~ msgid "Show the seconds"
+#~ msgstr "Ցույց տալ վայրկյանները"
+
+#~ msgid "Check this if you want to show the seconds."
+#~ msgstr "Նշեք սա, եթե ուզում եք վայրկյանները երևան։ "
+
+#, fuzzy
+#~| msgid "Show &seconds"
+#~ msgid "Show &seconds hand"
+#~ msgstr "Ցույց տալ &վայրկյանները"
+
+#, fuzzy
+#~| msgid "Show the time in text"
+#~ msgid "Show the Timezone in text"
+#~ msgstr "Ժամը ցույց տալ տեքստում"
+
+#, fuzzy
+#~| msgid "Check this if you want to show the seconds."
+#~ msgid "Check this if you want to display Timezone in text."
+#~ msgstr "Նշեք սա, եթե ուզում եք վայրկյանները երևան։ "
+
+#, fuzzy
+#~| msgid "Show the time in text"
+#~ msgid "Show &time zone"
+#~ msgstr "Ժամը ցույց տալ տեքստում"
+
+#, fuzzy
+#~| msgid "Also show the time in text"
+#~ msgid "Also show the Timezone as text"
+#~ msgstr "Տեքստում ժամը  միշտ ցույց տալ"
+
+#~ msgid "Timezones"
+#~ msgstr "Ժամանակագոտիներ"
+
+#~ msgid "Use &local timezone"
+#~ msgstr "Օգտագործել &տեղային ժամանակագոտի"
+
+#~ msgid "Area"
+#~ msgstr "Տարածք"
+
+#~ msgid "Region"
+#~ msgstr "Շրջան"
+
+#~ msgid "Comment"
+#~ msgstr "Մեկնաբանություն"
+
+#, fuzzy
+#~| msgid "Configure Clock"
+#~ msgctxt "@title:window"
+#~ msgid "Configure Clock"
+#~ msgstr "Կարգավորել ժամը"

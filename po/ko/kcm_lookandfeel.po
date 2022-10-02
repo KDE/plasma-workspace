@@ -1,0 +1,312 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Shinjo Park <kde@peremen.name>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-09 00:47+0000\n"
+"PO-Revision-Date: 2022-05-05 23:51+0200\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "박신조"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kde@peremen.name"
+
+#: kcm.cpp:590
+#, kde-format
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr "커서 변경 사항을 적용하려면 Plasma 세션을 다시 시작해야 합니다."
+
+#: kcm.cpp:591
+#, kde-format
+msgid "Cursor Settings Changed"
+msgstr "커서 설정 변경됨"
+
+#: lnftool.cpp:33
+#, kde-format
+msgid "Global Theme Tool"
+msgstr "전역 테마 도구"
+
+#: lnftool.cpp:35
+#, kde-format
+msgid ""
+"Command line tool to apply global theme packages for changing the look and "
+"feel."
+msgstr "전역 테마 패키지를 적용하는 명령행 도구입니다."
+
+#: lnftool.cpp:37
+#, kde-format
+msgid "Copyright 2017, Marco Martin"
+msgstr "Copyright 2017, Marco Martin"
+
+#: lnftool.cpp:38
+#, kde-format
+msgid "Marco Martin"
+msgstr "Marco Martin"
+
+#: lnftool.cpp:38
+#, kde-format
+msgid "Maintainer"
+msgstr "관리자"
+
+#: lnftool.cpp:46
+#, kde-format
+msgid "List available global theme packages"
+msgstr "사용 가능한 전역 테마 패키지 목록 표시"
+
+#: lnftool.cpp:49
+#, kde-format
+msgid ""
+"Apply a global theme package. This can be the name of a package, or a full "
+"path to an installed package, at which point this tool will ensure it is a "
+"global theme package and then attempt to apply it"
+msgstr ""
+"전역 테마 패키지를 적용합니다. 패키지 이름, 설치된 패키지의 전체 경로일 수 있"
+"습니다. 전역 테마 패키지임을 확인하면 적용합니다"
+
+#: lnftool.cpp:51
+#, kde-format
+msgid "packagename"
+msgstr "packagename"
+
+#: lnftool.cpp:52
+#, kde-format
+msgid "Reset the Plasma Desktop layout"
+msgstr "Plasma 바탕 화면 레이아웃 초기화"
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: lookandfeelsettings.kcfg:9
+#, kde-format
+msgid "Global look and feel"
+msgstr "전역 모습과 느낌"
+
+#: package/contents/ui/main.qml:20
+#, kde-format
+msgid "This module lets you choose the global look and feel."
+msgstr "이 모듈에서 전역 모습과 느낌 테마를 선택할 수 있습니다."
+
+#: package/contents/ui/main.qml:53
+#, kde-format
+msgid "Contains Desktop layout"
+msgstr "바탕 화면 레이아웃 포함"
+
+#: package/contents/ui/main.qml:67
+#, kde-format
+msgid "Preview Theme"
+msgstr "테마 미리 보기"
+
+#: package/contents/ui/main.qml:83
+#, kde-format
+msgctxt ""
+"Confirmation question about applying the Global Theme - %1 is the Global "
+"Theme's name"
+msgid "Apply %1?"
+msgstr "%1 테마를 적용하시겠습니까?"
+
+#: package/contents/ui/main.qml:101
+#, kde-format
+msgid "Choose what to apply…"
+msgstr "적용할 항목 선택…"
+
+#: package/contents/ui/main.qml:101
+#, kde-format
+msgid "Show fewer options…"
+msgstr "옵션 덜 보기…"
+
+#: package/contents/ui/main.qml:118
+#, kde-format
+msgid "Apply"
+msgstr "적용"
+
+#: package/contents/ui/main.qml:130
+#, kde-format
+msgid "Cancel"
+msgstr "취소"
+
+#: package/contents/ui/main.qml:147
+#, kde-format
+msgid "Get New Global Themes…"
+msgstr "새 전역 테마 가져오기…"
+
+#: package/contents/ui/MoreOptions.qml:24
+#: package/contents/ui/MoreOptions.qml:31
+#, kde-format
+msgid "Layout settings:"
+msgstr "레이아웃 설정:"
+
+#: package/contents/ui/MoreOptions.qml:32
+#, kde-format
+msgid "Desktop layout"
+msgstr "바탕 화면 레이아웃"
+
+#: package/contents/ui/MoreOptions.qml:53
+#, kde-format
+msgid "Titlebar Buttons layout"
+msgstr ""
+
+#: package/contents/ui/MoreOptions.qml:66
+#: package/contents/ui/SimpleOptions.qml:63
+#, fuzzy, kde-format
+#| msgid ""
+#| "Applying a Desktop layout replaces your current configuration of "
+#| "desktops, panels, and widgets"
+msgid ""
+"Applying a Desktop layout replaces your current configuration of desktops, "
+"panels, docks, and widgets"
+msgstr ""
+"바탕 화면 레이아웃을 적용하면 현재 바탕 화면, 패널, 위젯 설정을 대체합니다"
+
+#: package/contents/ui/MoreOptions.qml:75
+#, kde-format
+msgid "Appearance settings:"
+msgstr "모양 설정:"
+
+#: package/contents/ui/MoreOptions.qml:78
+#, kde-format
+msgid "Colors"
+msgstr "색상"
+
+#: package/contents/ui/MoreOptions.qml:79
+#, kde-format
+msgid "Application Style"
+msgstr "프로그램 스타일"
+
+#: package/contents/ui/MoreOptions.qml:80
+#, kde-format
+msgid "Window Decorations"
+msgstr "창 장식"
+
+#: package/contents/ui/MoreOptions.qml:81
+#, kde-format
+msgid "Icons"
+msgstr "아이콘"
+
+#: package/contents/ui/MoreOptions.qml:82
+#, kde-format
+msgid "Plasma Style"
+msgstr "Plasma 스타일"
+
+#: package/contents/ui/MoreOptions.qml:83
+#, kde-format
+msgid "Cursors"
+msgstr "커서"
+
+#: package/contents/ui/MoreOptions.qml:84
+#, kde-format
+msgid "Fonts"
+msgstr "글꼴"
+
+#: package/contents/ui/MoreOptions.qml:85
+#, kde-format
+msgid "Task Switcher"
+msgstr "작업 전환기"
+
+#: package/contents/ui/MoreOptions.qml:86
+#, kde-format
+msgid "Splash Screen"
+msgstr "시작 화면"
+
+#: package/contents/ui/MoreOptions.qml:87
+#, kde-format
+msgid "Lock Screen"
+msgstr "잠금 화면"
+
+#: package/contents/ui/SimpleOptions.qml:19
+#, kde-format
+msgid "The following will be applied by this Global Theme:"
+msgstr "전역 테마의 다음 부분을 적용합니다:"
+
+#: package/contents/ui/SimpleOptions.qml:32
+#, kde-format
+msgid "Appearance settings"
+msgstr "모양 설정"
+
+#: package/contents/ui/SimpleOptions.qml:42
+#, kde-format
+msgctxt "List item"
+msgid "• Appearance settings"
+msgstr "• 모양 설정"
+
+#: package/contents/ui/SimpleOptions.qml:47
+#, fuzzy, kde-format
+#| msgid "Desktop layout"
+msgid "Desktop and window layout"
+msgstr "바탕 화면 레이아웃"
+
+#: package/contents/ui/SimpleOptions.qml:58
+#, fuzzy, kde-format
+#| msgctxt "List item"
+#| msgid "• Desktop layout"
+msgctxt "List item"
+msgid "• Desktop and window layout"
+msgstr "• 바탕 화면 레이아웃"
+
+#: package/contents/ui/SimpleOptions.qml:75
+#, kde-format
+msgid ""
+"This Global Theme does not provide any applicable settings. Please contact "
+"the maintainer of this Global Theme as it might be broken."
+msgstr ""
+"이 전역 테마에 변경할 수 있는 설정이 없습니다. 전역 테마에 문제가 있는 것일 "
+"수도 있으므로 테마 관리자에게 연락하십시오."
+
+#~ msgid ""
+#~ "Your current layout and configuration of panels, desktop widgets, and "
+#~ "wallpapers will be lost and reset to the default layout provided by the "
+#~ "selected theme."
+#~ msgstr ""
+#~ "현재 사용 중인 레이아웃, 패널, 데스크톱 위젯, 바탕 화면 배경 그림 설정이 "
+#~ "선택한 테마에서 지정한 기본 설정으로 변경됩니다."
+
+#~ msgid "Use desktop layout from theme"
+#~ msgstr "테마에서 지정한 바탕 화면 레이아웃 사용"
+
+#~ msgid "Global Theme"
+#~ msgstr "전역 테마"
+
+#~ msgid "Apply a global theme package"
+#~ msgstr "전역 테마 패키지 적용"
+
+#~ msgid "Global Themes"
+#~ msgstr "전역 테마"
+
+#~ msgid "Download New Global Themes"
+#~ msgstr "새 전역 테마 다운로드"
+
+#~ msgid "Look and feel tool"
+#~ msgstr "모습과 느낌 도구"
+
+#, fuzzy
+#~| msgid "Get New Looks..."
+#~ msgid "Choose the Look and Feel theme"
+#~ msgstr "새 모습과 느낌 가져오기..."
+
+#~ msgid "Configure Look and Feel details"
+#~ msgstr "모습과 느낌 설정"
+
+#~ msgid ""
+#~ "Select an overall theme for your workspace (including plasma theme, color "
+#~ "scheme, mouse cursor, window and desktop switcher, splash screen, lock "
+#~ "screen etc.)"
+#~ msgstr ""
+#~ "작업 공간의 전체적인 테마를 선택하십시오. (Plasma 테마, 색 배열, 마우스 커"
+#~ "서, 창 및 데스크톱 전환기, 시작 화면, 잠금 화면 등 포함)"
+
+#~ msgid "Show Preview"
+#~ msgstr "미리 보기 보이기"

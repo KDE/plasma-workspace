@@ -1,0 +1,68 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Volkan Gezer <volkangezer@gmail.com>, 2017, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2021-01-16 14:09+0100\n"
+"Last-Translator: Volkan Gezer <volkangezer@gmail.com>\n"
+"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 20.08.2\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Genel"
+
+#: package/contents/ui/configGeneral.qml:24
+#, kde-format
+msgid "Calendar version:"
+msgstr "Takvim sürümü:"
+
+#: package/contents/ui/configGeneral.qml:26
+#, kde-format
+msgid "Show week numbers"
+msgstr "Hafta numaralarını göster"
+
+#: package/contents/ui/configGeneral.qml:36
+#, kde-format
+msgctxt "What information is shown in the calendar icon"
+msgid "Compact version:"
+msgstr "Kompakt sürüm:"
+
+#: package/contents/ui/configGeneral.qml:38
+#, kde-format
+msgctxt "Show the number of the day (eg. 31) in the icon"
+msgid "Show day of the month"
+msgstr "Ayın gününü göster"
+
+#: package/contents/ui/configGeneral.qml:44
+#, kde-format
+msgctxt "Show the week number (eg. 50) in the icon"
+msgid "Show week number"
+msgstr "Hafta numarasını göster"
+
+#~ msgid "Working Day"
+#~ msgstr "İş Günü"
+
+#~ msgid "Starts at 9"
+#~ msgstr "9'da Başlar"
+
+#~ msgid "Ends at 5"
+#~ msgstr "17'de Biter"
+
+#~ msgctxt "What information is shown in the calendar icon"
+#~ msgid "Icon:"
+#~ msgstr "Simge:"
+
+#~ msgctxt "Show the number of the day (eg. 31) in the icon"
+#~ msgid "Day in month"
+#~ msgstr "Ayın günü"

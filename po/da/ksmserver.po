@@ -1,0 +1,267 @@
+# translation of ksmserver.po to
+# Danish translation of ksmserver
+# Copyright (C).
+#
+# Erik Kjær Pedersen <erik@binghamton.edu>, 1999, 2002, 2004, 2005.
+# Martin Schlander <mschlander@opensuse.org>, 2008, 2010, 2012, 2014, 2015, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: ksmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-22 00:47+0000\n"
+"PO-Revision-Date: 2020-07-21 18:30+0200\n"
+"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"Language-Team: Danish <kde-i18n-doc@kde.org>\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.04.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: logout.cpp:344
+#, kde-format
+msgid "Logout canceled by '%1'"
+msgstr "Log ud annulleret af \"%1\""
+
+#: main.cpp:117
+#, kde-format
+msgid "$HOME not set!"
+msgstr "$HOME er ikke angivet!"
+
+#: main.cpp:121 main.cpp:127
+#, kde-format
+msgid "$HOME directory (%1) does not exist."
+msgstr "$HOME-mappen (%1) findes ikke."
+
+#: main.cpp:123
+#, kde-format
+msgid "No write access to $HOME directory (%1)."
+msgstr "Ingen skriveadgang til $HOME-hjemme (%1)."
+
+#: main.cpp:129
+#, kde-format
+msgid "No read access to $HOME directory (%1)."
+msgstr "Ingen læseadgang til $HOME-mappen (%1)."
+
+#: main.cpp:133
+#, kde-format
+msgid "$HOME directory (%1) is out of disk space."
+msgstr "$HOME-mappen (%1) er løbet tør for diskplads."
+
+#: main.cpp:136
+#, kde-format
+msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+msgstr "Skrivning til $HOME-mappen (%2) mislykkedes med fejlen \"%1\""
+
+#: main.cpp:149 main.cpp:184
+#, kde-format
+msgid "No write access to '%1'."
+msgstr "Ingen skriveadgang til \"%1\"."
+
+#: main.cpp:151 main.cpp:186
+#, kde-format
+msgid "No read access to '%1'."
+msgstr "Ingen læseadgang til \"%1\"."
+
+#: main.cpp:159 main.cpp:172
+#, kde-format
+msgid "Temp directory (%1) is out of disk space."
+msgstr "Temp-mappen (%1) er løbet tør for diskplads."
+
+#: main.cpp:162 main.cpp:175
+#, kde-format
+msgid ""
+"Writing to the temp directory (%2) failed with\n"
+"    the error '%1'"
+msgstr ""
+"Skrivning til temp-mappen (%2) mislykkedes med\n"
+"    fejlen \"%1\""
+
+#: main.cpp:190
+#, kde-format
+msgid ""
+"The following installation problem was detected\n"
+"while trying to start Plasma:"
+msgstr ""
+"Det følgende installationsproblem blev detekteret\n"
+"under forsøg på opstart af Plasma:"
+
+#: main.cpp:193
+#, kde-format
+msgid ""
+"\n"
+"\n"
+"Plasma is unable to start.\n"
+msgstr ""
+"\n"
+"\n"
+"Plasma kan ikke starte.\n"
+
+#: main.cpp:200
+#, kde-format
+msgid "Plasma Workspace installation problem!"
+msgstr "Installationsproblem med Plasma Workspace!"
+
+#: main.cpp:236
+#, kde-format
+msgid ""
+"The reliable Plasma session manager that talks the standard X11R6 \n"
+"session management protocol (XSMP)."
+msgstr ""
+"Den driftssikre Plasma-sessionshåndtering der taler standard-X11R6-\n"
+"sessionshåndteringsprotokollen (XSMP)."
+
+#: main.cpp:240
+#, kde-format
+msgid "Restores the saved user session if available"
+msgstr "Genopretter den gemte brugersession hvis den er tilgængelig."
+
+#: main.cpp:243
+#, kde-format
+msgid "Also allow remote connections"
+msgstr "Tillad også fjernforbindelser"
+
+#: main.cpp:246
+#, kde-format
+msgid "Starts the session in locked mode"
+msgstr "Starter sessionen i låst tilstand"
+
+#: main.cpp:250
+#, kde-format
+msgid ""
+"Starts without lock screen support. Only needed if other component provides "
+"the lock screen."
+msgstr ""
+"Starter uden understøttelse af låseskærm. Kun nødvendigt hvis en anden "
+"komponent giver en låseskærm."
+
+#: server.cpp:873
+#, kde-format
+msgid "Session Management"
+msgstr "Sessionshåndtering"
+
+#: server.cpp:876
+#, kde-format
+msgid "Log Out"
+msgstr "Log ud"
+
+#: server.cpp:881
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "Log ud uden bekræftelse"
+
+#: server.cpp:886
+#, kde-format
+msgid "Halt Without Confirmation"
+msgstr "Sluk uden bekræftelse"
+
+#: server.cpp:891
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "Genstart uden bekræftelse"
+
+#~ msgid ""
+#~ "Starts <wm> in case no other window manager is \n"
+#~ "participating in the session. Default is 'kwin'"
+#~ msgstr ""
+#~ "Starter <wm> hvis ingen anden vindueshåndtering deltager\n"
+#~ "i sessionen. Standard er \"kwin\""
+
+#~ msgid "wm"
+#~ msgstr "wm"
+
+#~ msgid "Logout"
+#~ msgstr "Log ud"
+
+#~ msgid "Sleeping in 1 second"
+#~ msgid_plural "Sleeping in %1 seconds"
+#~ msgstr[0] "Går i slumretilstand om 1 sekund"
+#~ msgstr[1] "Går i slumretilstand om %1 sekunder"
+
+#~ msgid "Lock"
+#~ msgstr "Lås"
+
+#~ msgid "ksmserver"
+#~ msgstr "ksmserver"
+
+#~ msgid "Turn off"
+#~ msgstr "Sluk"
+
+#~ msgid "Sleep"
+#~ msgstr "Slumre"
+
+#~ msgid "Logging out in 1 second."
+#~ msgid_plural "Logging out in %1 seconds."
+#~ msgstr[0] "Logger ud om 1 sekund."
+#~ msgstr[1] "Logger ud om %1 sekunder."
+
+#~ msgid "Turning off computer in 1 second."
+#~ msgid_plural "Turning off computer in %1 seconds."
+#~ msgstr[0] "Slukker computeren om 1 sekund."
+#~ msgstr[1] "Slukker computeren om %1 sekunder."
+
+#~ msgid "Restarting computer in 1 second."
+#~ msgid_plural "Restarting computer in %1 seconds."
+#~ msgstr[0] "Genstarter computeren om 1 sekund."
+#~ msgstr[1] "Genstarter computeren om %1 sekunder."
+
+#~ msgid "Turn Off Computer"
+#~ msgstr "Sluk computeren"
+
+#~ msgid "Restart Computer"
+#~ msgstr "Genstart computeren"
+
+#~ msgctxt "default option in boot loader"
+#~ msgid " (default)"
+#~ msgstr "(standard)"
+
+#~ msgid "Cancel"
+#~ msgstr "Annullér"
+
+#~ msgid "&Standby"
+#~ msgstr "Stand&by"
+
+#~ msgid "Suspend to &RAM"
+#~ msgstr "Suspendér til &ram"
+
+#~ msgid "Suspend to &Disk"
+#~ msgstr "Suspendér til &disk"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Erik Kjær Pedersen,Martin Schlander"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "erik@binghamton.edu,mschlander@opensuse.org"
+
+#~ msgid "(C) 2000, The KDE Developers"
+#~ msgstr "(C) 2000, KDE-udviklerne"
+
+#~ msgid "Matthias Ettrich"
+#~ msgstr "Matthias Ettrich"
+
+#~ msgid "Luboš Luňák"
+#~ msgstr "Luboš Luňák"
+
+#~ msgid "Maintainer"
+#~ msgstr "Vedligeholder"
+
+#~ msgctxt "current option in boot loader"
+#~ msgid " (current)"
+#~ msgstr " (denne)"
+
+#~ msgctxt "@label In corner of the logout dialog"
+#~ msgid "KDE <numid>%1.%2.%3</numid>"
+#~ msgstr "KDE <numid>%1.%2.%3</numid>"
+
+#~ msgctxt "@label In corner of the logout dialog"
+#~ msgid "KDE <numid>%1.%2</numid>"
+#~ msgstr "KDE <numid>%1.%2</numid>"
+
+#~ msgid "End Session for %1"
+#~ msgstr "Afslut session for %1"
+
+#~ msgid "End Session for %1 (%2)"
+#~ msgstr "Afslut session for %1 (%2)"

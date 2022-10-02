@@ -1,0 +1,73 @@
+# Uyghur translation for plasma_runner_shell.
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Sahran <sahran.ug@gmail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_shell\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-27 00:45+0000\n"
+"PO-Revision-Date: 2013-09-08 07:05+0900\n"
+"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
+"Language: ug\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: shellrunner.cpp:35
+#, kde-format
+msgid "Finds commands that match :q:, using common shell syntax"
+msgstr "ئورتاق shell تىلقۇرما ئىشلىتىپ :q: غا ماس كەلگەن بۇيرۇقنى ئىزدەيدۇ"
+
+#: shellrunner.cpp:36
+#, fuzzy, kde-format
+#| msgid "Run in &terminal window"
+msgid "Run in Terminal Window"
+msgstr "تېرمىنال ئىجرا قىل(&T)"
+
+#: shellrunner.cpp:54
+#, kde-format
+msgid "Run %1"
+msgstr "ئىجرا قىل %1"
+
+#~ msgid "Enter the user you want to run the application as here."
+#~ msgstr ""
+#~ "قايسى ئىشلەتكۈچى پروگراممىنى ئىجرا قىلىدىغانلىقىنى بۇ جايغا كىرگۈزۈڭ."
+
+#~ msgid "User&name:"
+#~ msgstr "ئىشلەتكۈچى ئاتى(&N):"
+
+#~ msgid "Enter the password here for the user you specified above."
+#~ msgstr "يۇقىرىدا بەلگىلەنگەن ئىشلەتكۈچى ئىمىنى بۇ جايغا كىرگۈزۈڭ."
+
+#~ msgid "Pass&word:"
+#~ msgstr "ئىم(&W):"
+
+#~ msgid ""
+#~ "Check this option if the application you want to run is a text mode "
+#~ "application. The application will then be run in a terminal emulator "
+#~ "window."
+#~ msgstr ""
+#~ "ئەگەر بۇ پروگراممىنى تېكىست ھالىتىدە ئىجرا قىلسىڭىز، بۇ تاللانمىنى "
+#~ "تاللاڭ. پروگرامما تېرمىنال تەقلىدلىگۈچ كۆزنىكىدە ئىجرا قىلىنىدۇ."
+
+#~ msgid "Run in &terminal window"
+#~ msgstr "تېرمىنال ئىجرا قىل(&T)"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "user id. Every process has a user id associated with it. This id code "
+#~ "determines file access and other permissions. The password of the user is "
+#~ "required to do this."
+#~ msgstr ""
+#~ "ئەگەر پروگراممىنى ئوخشىمىغان ئىشلەتكۈچى كىملىكى(id)دە ئىجرا قىلماقچى "
+#~ "بولسىڭىز، بۇ تاللانمىنى تاللاڭ. ھەر بىر جەرياننىڭ ماس ھالدىكى ئىشلەتكۈچى "
+#~ "كىملىكى بار، بۇ كىملىك مۇناسىپ جەرياننىڭ ھۆججەت زىيارەت ھوقۇقى ۋە باشقا "
+#~ "ھوقۇقلىرىنى بەلگىلەيدۇ. سىز بۇنىڭ ئۈچۈن شۇ ئىشلەتكۈچىنىڭ ئىمىنى "
+#~ "تەمىنلىشىڭىز زۆرۈر."
+
+#~ msgid "Run as a different &user"
+#~ msgstr "باشقا ئىشلەتكۈچى سۈپىتىدە ئىجرا قىل(&U)"

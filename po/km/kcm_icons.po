@@ -1,0 +1,380 @@
+# translation of kcmicons.po to Khmer
+# Khoem Sokhem <khoemsokhem@khmeros.info>, 2007, 2008, 2009.
+# Auk Piseth <piseth_dv@khmeros.info>, 2007, 2008.
+# Eng Vannak <evannak@khmeros.info>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmicons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"PO-Revision-Date: 2009-06-29 10:20+0700\n"
+"Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
+"Language-Team: Khmer <en@li.org>\n"
+"Language: km\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: iconsizecategorymodel.cpp:14
+#, kde-format
+msgid "Toolbar"
+msgstr "របារ​ឧបករណ៍"
+
+#: iconsizecategorymodel.cpp:15
+#, kde-format
+msgid "Main Toolbar"
+msgstr "របារ​ឧបករណ៍​មេ​"
+
+#: iconsizecategorymodel.cpp:16
+#, kde-format
+msgid "Small Icons"
+msgstr "រូប​តំណាង​តូច"
+
+#: iconsizecategorymodel.cpp:17
+#, kde-format
+msgid "Panel"
+msgstr "បន្ទះ"
+
+#: iconsizecategorymodel.cpp:18
+#, kde-format
+msgid "Dialogs"
+msgstr "ប្រអប់"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, fuzzy, kde-format
+#| msgid "Main Toolbar"
+msgid "Main toolbar icons size"
+msgstr "របារ​ឧបករណ៍​មេ​"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, fuzzy, kde-format
+#| msgid "Small Icons"
+msgid "Small icons size"
+msgstr "រូប​តំណាង​តូច"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr ""
+
+#: main.cpp:182
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: main.cpp:193
+#, fuzzy, kde-format
+#| msgid "Unable to find the icon theme archive %1."
+msgid "Unable to download the icon theme archive: %1"
+msgstr "មិន​អាច​រក​ឃើញ​ប័ណ្ណសារ​ស្បែក​រូប​តំណាង %1 ។"
+
+#: main.cpp:207
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "ឯកសារ​មិន​មែន​ជា​ប័ណ្ណសារ​ស្បែក​រូប​តំណាង​ត្រឹមត្រូវ ។"
+
+#: main.cpp:212
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr ""
+"បញ្ហា​មួយ​បាន​កើត​ឡើង កំឡុង​ពេល​ដំណើរការ​ដំឡើង ។ ទោះ​យ៉ាងណា ​ស្បែក​ភាគ​ច្រើន​ក្នុង​ប័ណ្ណសារ​ត្រូវ​បាន​ដំឡើង"
+
+#: main.cpp:216
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: main.cpp:260
+#, fuzzy, kde-format
+#| msgid "Installing icon themes"
+msgid "Installing icon themes…"
+msgstr "កំពុង​ដំឡើង​ស្បែក​រូប​តំណាង"
+
+#: main.cpp:270
+#, fuzzy, kde-format
+#| msgid "Installing icon themes"
+msgid "Installing %1 theme…"
+msgstr "កំពុង​ដំឡើង​ស្បែក​រូប​តំណាង"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr ""
+
+#: package/contents/ui/main.qml:147
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Remove Icon Theme"
+msgstr "យក​ស្បែក​ចេញ"
+
+#: package/contents/ui/main.qml:154
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Icon Theme"
+msgstr "យក​ស្បែក​ចេញ"
+
+#: package/contents/ui/main.qml:228
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr ""
+
+#: package/contents/ui/main.qml:246
+#, fuzzy, kde-format
+#| msgid "Install Theme File..."
+msgid "Install from File…"
+msgstr "ដំឡើង​ឯកសារ​ស្បែក..."
+
+#: package/contents/ui/main.qml:251
+#, fuzzy, kde-format
+#| msgid "Get New Themes..."
+msgid "Get New Icons…"
+msgstr "យក​ស្បែកថ្មី..."
+
+#: package/contents/ui/main.qml:279
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Open Theme"
+msgstr "យក​ស្បែក​ចេញ"
+
+#: package/contents/ui/main.qml:281
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "ខឹម សុខែម, អេង វណ្ណៈ, អោក ពិសិដ្ឋ​​"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "khoemsokhem@khmeros.info,​​evannak@khmeros.info,piseth_dv@khmeros.info"
+
+#~ msgid "Icons"
+#~ msgstr "រូប​តំណាង"
+
+#~ msgid "Icons Control Panel Module"
+#~ msgstr "ម៉ូឌុល​បន្ទះ​ត្រួត​ពិនិត្យ​រូប​តំណាង"
+
+#~ msgid "(c) 2000-2003 Geert Jansen"
+#~ msgstr "រក្សា​សិទ្ធិ​ឆ្នាំ ២០០២-២០០៣ ដោយ Geert Jansen"
+
+#~ msgid "Geert Jansen"
+#~ msgstr "Geert Jansen"
+
+#~ msgid "Antonio Larrosa Jimenez"
+#~ msgstr "Antonio Larrosa Jimenez"
+
+#~ msgid "Torsten Rahn"
+#~ msgstr "Torsten Rahn"
+
+#~ msgid "Desktop"
+#~ msgstr "ផ្ទៃតុ"
+
+#~ msgid "Use of Icon"
+#~ msgstr "ការ​ប្រើ​រូប​តំណាង​"
+
+#~ msgctxt "@label The icon rendered by default"
+#~ msgid "Default"
+#~ msgstr "លំនាំ​ដើម​"
+
+#~ msgctxt "@label The icon rendered as active"
+#~ msgid "Active"
+#~ msgstr "សកម្ម"
+
+#~ msgctxt "@label The icon rendered as disabled"
+#~ msgid "Disabled"
+#~ msgstr "បាន​បិទ"
+
+#~ msgid "Size:"
+#~ msgstr "ទំហំ ៖"
+
+#~ msgid "Set Effect..."
+#~ msgstr "កំណត់​បែបផែន..."
+
+#~ msgid "All Icons"
+#~ msgstr "រូប​តំណាង​ទាំងអស់"
+
+#~ msgid "Setup Default Icon Effect"
+#~ msgstr "ដំឡើង​បែបផែន​រូប​តំណាង​លំនាំ​ដើម"
+
+#~ msgid "Setup Active Icon Effect"
+#~ msgstr "ដំឡើង​បែបផែន​រូប​តំណាង​សកម្ម"
+
+#~ msgid "Setup Disabled Icon Effect"
+#~ msgstr "ដំឡើង​បែបផែន​រូបតំណាង​ដែល​មិនបាន​អនុញ្ញាត"
+
+#~ msgid "&Effect:"
+#~ msgstr "បែបផែន ៖"
+
+#~ msgid "No Effect"
+#~ msgstr "គ្មាន​បែបផែន"
+
+#~ msgid "To Gray"
+#~ msgstr "ទៅ​ជា​ប្រផេះ"
+
+#~ msgid "Colorize"
+#~ msgstr "ផាត់​ពណ៌"
+
+#~ msgid "Gamma"
+#~ msgstr "ហ្គាម៉ា"
+
+#~ msgid "Desaturate"
+#~ msgstr "មិន​ជោគជាំ"
+
+#~ msgid "To Monochrome"
+#~ msgstr "ទៅ​ជា​មួយ​ពណ៌"
+
+#~ msgid "&Semi-transparent"
+#~ msgstr "ថ្លា​ពាក់​កណ្ដាល"
+
+#~ msgid "Preview"
+#~ msgstr "មើល​ជាមុន"
+
+#~ msgid "Effect Parameters"
+#~ msgstr "ប៉ារ៉ាម៉ែត្រ​បែបផែន"
+
+#~ msgid "&Amount:"
+#~ msgstr "ចំនួន ៖"
+
+#~ msgid "Co&lor:"
+#~ msgstr "ពណ៌ ៖"
+
+#~ msgid "&Second color:"
+#~ msgstr "ពណ៌​ទីពីរ ៖"
+
+#~ msgid "Name"
+#~ msgstr "ឈ្មោះ"
+
+#~ msgid "Description"
+#~ msgstr "សេចក្ដី​ពណ៌នាំ"
+
+#~ msgid "Install a theme archive file you already have locally"
+#~ msgstr "ដំឡើង​ឯកសារ​ប័ណ្ណសារ​ស្បែក ដែល​អ្នក​មាន​ជាមូលដ្ឋាន​រួច"
+
+#~ msgid ""
+#~ "If you already have a theme archive locally, this button will unpack it "
+#~ "and make it available for KDE applications"
+#~ msgstr ""
+#~ "ប្រសិន​បើ​អ្នក​មាន​បណ្ណសារ​ស្បែក​ជាមូលដ្ឋាន​រួចហើយ ប៊ូតុង​នេះ​នឹង​ស្រង់វា​ចេញ ហើយ​ធ្វើឲ្យ​វា​មាន​សម្រាប់​"
+#~ "កម្មវិធី KDE"
+
+#~ msgid "Get new themes from the Internet"
+#~ msgstr "យក​ស្បែកថ្មី​ពី​អ៊ីនធឺណិត"
+
+#~ msgid ""
+#~ "You need to be connected to the Internet to use this action. A dialog "
+#~ "will display a list of themes from the http://www.kde.org website. "
+#~ "Clicking the Install button associated with a theme will install this "
+#~ "theme locally."
+#~ msgstr ""
+#~ "អ្នក​ត្រូវ​តភ្ជាប់​ទៅ​អ៊ីនធឺណិត​សិន ដើម្បី​ប្រើ​អំពើ​នេះ ។ ប្រអប់​នឹង​បង្ហាញ​បញ្ជី​ស្បែក​ពី​តំបន់បណ្ដាញ http://"
+#~ "www.kde.org website ។ ចុច​ប៊ូតុង​ដំឡើង​ដែល​មាន​នៅ​ជាប់​នឹង​ស្បែក ដើម្បី​ដំឡើង​ស្បែក​នោះ ។"
+
+#~ msgid "Remove the selected theme from your disk"
+#~ msgstr "យក​ស្បែក​ដែលបាន​ជ្រើស​ចេញ​ពី​ថាស​របស់​អ្នក"
+
+#~ msgid "This will remove the selected theme from your disk."
+#~ msgstr "វា​នឹង​យក​ស្បែក​ដែលបាន​ជ្រើស​ចេញ​ពី​ថាស​របស់​អ្នក ។"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "អូស ឬ​វាយ URL របស់​ស្បែក"
+
+#~ msgid ""
+#~ "Unable to download the icon theme archive;\n"
+#~ "please check that address %1 is correct."
+#~ msgstr ""
+#~ "មិន​អាច​ទាញ​យក​ប័ណ្ណសារ​ស្បែក​រូប​តំណាង​\n"
+#~ "សូម​ពិនិត្យ​មើល​ថា​អាសយដ្ឋាន %1 គឺ​ត្រឹមត្រូវ ។"
+
+#~ msgid "<qt>Installing <strong>%1</strong> theme</qt>"
+#~ msgstr "<qt>កំពុង​ដំឡើង​ស្បែក <strong>%1</strong></qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <strong>%1</strong> icon theme?"
+#~ "<br /><br />This will delete the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>តើ​អ្នក​ពិត​ជា​ចង់​យក​ស្បែក​រូបតំណាង <strong>%1</strong> ចេញ​ឬ?<br /><br />វា​នឹង​លុប​"
+#~ "ឯកសារ​ដែល​បាន​ដំឡើង​ដោយ​ស្បែក​នេះ ។</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "ការ​អះអាង"
+
+#~ msgid "&Theme"
+#~ msgstr "ស្បែក"
+
+#~ msgid "Ad&vanced"
+#~ msgstr "កម្រិត​ខ្ពស់"
+
+#, fuzzy
+#~| msgid ""
+#~| "<h1>Icons</h1>This module allows you to choose the icons for your "
+#~| "desktop.<p>To choose an icon theme, click on its name and apply your "
+#~| "choice by pressing the \"Apply\" button below. If you do not want to "
+#~| "apply your choice you can press the \"Reset\" button to discard your "
+#~| "changes.</p><p>By pressing the \"Install New Theme\" button you can "
+#~| "install your new icon theme by writing its location in the box or "
+#~| "browsing to the location. Press the \"OK\" button to finish the "
+#~| "installation.</p><p>The \"Remove Theme\" button will only be activated "
+#~| "if you select a theme that you installed using this module. You are not "
+#~| "able to remove globally installed themes here.</p><p>You can also "
+#~| "specify effects that should be applied to the icons.</p>"
+#~ msgid ""
+#~ "<h1>Icons</h1>This module allows you to choose the icons for your desktop."
+#~ "<p>To choose an icon theme, click on its name and apply your choice by "
+#~ "pressing the \"Apply\" button below. If you do not want to apply your "
+#~ "choice you can press the \"Reset\" button to discard your changes.</"
+#~ "p><p>By pressing the \"Install Theme File...\" button you can install "
+#~ "your new icon theme by writing its location in the box or browsing to the "
+#~ "location. Press the \"OK\" button to finish the installation.</p><p>The "
+#~ "\"Remove Theme\" button will only be activated if you select a theme that "
+#~ "you installed using this module. You are not able to remove globally "
+#~ "installed themes here.</p><p>You can also specify effects that should be "
+#~ "applied to the icons.</p>"
+#~ msgstr ""
+#~ "<h1>រូប​តំណាង</h1>ម៉ូឌុល​នេះ​អនុញ្ញាត​ឲ្យ​អ្នក​ជ្រើស​រូបតំណាង​សម្រាប់​ផ្ទៃតុ​របស់​អ្នក ។<p>ដើម្បី​ជ្រើសស្បែក​"
+#~ "រូបតំណាង​មួយ ចុច​លើ​ឈ្មោះ​របស់​វា ហើយ​​អនុវត្ត​ជម្រើស​របស់អ្នក​ដោយប៊ូតុង​\"អនុវត្ត\"​ខាង​ក្រោម ។ បើ​អ្នក​មិន​"
+#~ "ចង់​អនុវត្ត​ជម្រើស​របស់​អ្នក​ទេ នោះ​អ្នក​អាច​ជ្រើស​ប៊ូតុង​\"​កំណត់​ឡើង​វិញ​\"​ដើម្បី​បោះចោល​ការ​ផ្លាស់ប្តូរ​របស់​"
+#~ "អ្នក ។​</p><p>ដោយ​ចុច​ប៊ូតុង​\"​ដំឡើងស្បែក​ថ្មី\" អ្នក​អាច​ដំឡើងស្បែក​រូបតំណាង​ថ្មី​របស់​អ្នក ដោយ​សរសេរ​"
+#~ "ទីតាំង​របស់​វា​ក្នុង​ប្រអប់ ឬ ដោយ​រក​មើល​ទីតាំង​របស់​វា ។ ចុច​ប៊ូតុង \"យល់ព្រម\" ដើម្បី​បញ្ចប់​ការ​ដំឡើង ។</"
+#~ "p><p>ប៊ូតុង \"យកស្បែក​ចេញ\" នឹង​ត្រូវ​បាន​ធ្វើ​ឲ្យ​សកម្ម បើ​អ្នក​ជ្រើសស្បែក​មួយ​ដែល​អ្នក​បាន​ដំឡើង​ដោយ​"
+#~ "ប្រើ​ម៉ូឌុល​នេះ ។ នៅ​ទីនេះ អ្នក​មិន​អាច​យក​ស្បែក​ដែល​ដំឡើង​ជា​សកល​ចេញ​ទេ ។</p><p>អ្នក​ក៏​អាច​បញ្ជាក់​"
+#~ "លម្អិត​បែបផែន​ដែល​គួរ​អនុវត្ត​ទៅ​រូប​តំណាង​នេះ ។</p>"
+
+#~ msgid "Animate icons"
+#~ msgstr "ធ្វើ​ឲ្យ​រូប​តំណាង​មាន​ចលនា"
+
+#~ msgid "Select the icon theme you want to use:"
+#~ msgstr "ជ្រើស​ស្បែក​រូប​តំណាង​ដែល​អ្នក​ចង់​ប្រើ ៖"

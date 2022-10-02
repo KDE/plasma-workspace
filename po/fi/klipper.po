@@ -1,0 +1,1256 @@
+# translation of klipper.po to Finnish
+# Copyright © 2010, 2011 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kde-workspace package.
+# Kim Enkovaara <kim.enkovaara@iki.fi>, 2002, 2006.
+# Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2003, 2008.
+# Teemu Rytilahti <teemu.rytilahti@kde-fi.org>, 2003, 2008.
+# Tapio Kautto <eleknader@phnet.fi>, 2004.
+# Ilpo Kantonen <ilpo@iki.fi>, 2005.
+# Niklas Laxström <niklas.laxstrom+kdetrans@gmail.com>, 2006, 2007.
+# Tommi Nieminen <translator@legisign.org>, 2009, 2010, 2018, 2019, 2021, 2022.
+# Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017.
+# Copyright © 2002, 2003, 2004, 2005, 2006 Free Software Foundation, Inc.
+#
+# KDE Finnish translation sprint participants:
+# Author: Artnay
+# Author: Lliehu
+msgid ""
+msgstr ""
+"Project-Id-Version: klipper\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-17 00:48+0000\n"
+"PO-Revision-Date: 2022-08-02 22:48+0300\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-POT-Import-Date: 2012-12-01 22:22:26+0000\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#: configdialog.cpp:80
+#, kde-format
+msgid "Selection and Clipboard:"
+msgstr "Valinta ja leikepöytä:"
+
+#: configdialog.cpp:87
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"When text or an area of the screen is highlighted with the mouse or "
+"keyboard, this is the <emphasis>selection</emphasis>. It can be pasted using "
+"the middle mouse button.<nl/><nl/>If the selection is explicitly copied "
+"using a <interface>Copy</interface> or <interface>Cut</interface> action, it "
+"is saved to the <emphasis>clipboard</emphasis>. It can be pasted using a "
+"<interface>Paste</interface> action. <nl/><nl/>When turned on this option "
+"keeps the selection and the clipboard the same, so that any selection is "
+"immediately available to paste by any means. If it is turned off, the "
+"selection may still be saved in the clipboard history (subject to the "
+"options below), but it can only be pasted using the middle mouse button."
+msgstr ""
+"Kun näytöltä on hiirellä tai näppäimistöllä korostettu tekstiä tai alue, "
+"tämä on <emphasis>valinta</emphasis>, jonka voi liittää hiiren "
+"keskipainikkeella.<nl/><nl/>Jos valinta nimenomaisesti kopioidaan "
+"<interface>Kopioi</interface>- tai <interface>Leikkaa</interface>-"
+"toiminnolla, se tallentuu <emphasis>leikepöydälle</emphasis>, josta sen voi "
+"liittää <interface>Liitä</interface>-toiminnolla.<nl/><nl/>"
+
+#: configdialog.cpp:106
+#, kde-format
+msgid "Clipboard history:"
+msgstr "Leikepöydän historia:"
+
+#: configdialog.cpp:112
+#, kde-format
+msgctxt "Number of entries"
+msgid " entry"
+msgid_plural " entries"
+msgstr[0] " tietue"
+msgstr[1] " tietuetta"
+
+#: configdialog.cpp:131 configdialog.cpp:169
+#, kde-format
+msgid "Always save in history"
+msgstr "Tallenna aina historiaan"
+
+#: configdialog.cpp:135
+#, kde-format
+msgid "Text selection:"
+msgstr "Tekstivalinta:"
+
+#: configdialog.cpp:137 configdialog.cpp:175
+#, kde-format
+msgid "Only when explicitly copied"
+msgstr "Vain kun on kopioitu"
+
+#: configdialog.cpp:142
+#, kde-format
+msgid "Whether text selections are saved in the clipboard history."
+msgstr "Tallentuvatko tekstivalinnat leikepöytähistoriaan."
+
+#: configdialog.cpp:173
+#, kde-format
+msgid "Non-text selection:"
+msgstr "Ei-tekstivalinta:"
+
+#: configdialog.cpp:180
+#, kde-format
+msgid "Never save in history"
+msgstr "Älä koskaan tallenna historiaan"
+
+#: configdialog.cpp:185
+#, kde-format
+msgid ""
+"Whether non-text selections (such as images) are saved in the clipboard "
+"history."
+msgstr "Tallentuvatko ei-tekstivalinnat (kuten kuvat) leikepöytähistoriaan."
+
+#: configdialog.cpp:250
+#, kde-format
+msgid "Show action popup menu:"
+msgstr "Näytä toimintoponnahdusvalikko:"
+
+#: configdialog.cpp:260
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"When text that matches an action pattern is selected or is chosen from the "
+"clipboard history, automatically show the popup menu with applicable "
+"actions. If the automatic menu is turned off here, or it is not shown for an "
+"excluded window, then it can be shown by using the <shortcut>%1</shortcut> "
+"key shortcut."
+msgstr ""
+"Kun toimintokuviota vastaava teksti on valittu tai valitaan leikepöydän "
+"historiasta, näytä automaattisesti toimintoponnahdusvalikko. Jos "
+"automaattinen valikko otetaan tässä pois käytöstä tai sitä ei näytetä pois "
+"suljetulle ikkunalle, sen saa näkyviin pikanäppäimellä <shortcut>%1</"
+"shortcut>."
+
+#: configdialog.cpp:269
+#, kde-format
+msgid "Exclude Windows..."
+msgstr "Sulje pois ikkunoita…"
+
+#: configdialog.cpp:283
+#, kde-format
+msgctxt "Unit of time"
+msgid " second"
+msgid_plural " seconds"
+msgstr[0] " sekunti"
+msgstr[1] " sekuntia"
+
+#: configdialog.cpp:284
+#, kde-format
+msgctxt "No timeout"
+msgid "None"
+msgstr "Ei mitään"
+
+#: configdialog.cpp:293
+#, kde-format
+msgid "Options:"
+msgstr "Valinnat:"
+
+#: configdialog.cpp:307
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The actions shown in the popup menu can be configured on the "
+"<interface>Actions Configuration</interface> page."
+msgstr ""
+"Ponnahdusvalikossa näytetyt toiminnot voi asettaa "
+"<interface>toimintoasetusten</interface> sivulla."
+
+#: configdialog.cpp:335
+#, kde-format
+msgid "Exclude Windows"
+msgstr "Sulje pois ikkunoita"
+
+#: configdialog.cpp:365
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"When a <interface>match pattern</interface> matches the clipboard contents, "
+"its <interface>commands</interface> appear in the Klipper popup menu and can "
+"be executed."
+msgstr ""
+"Kun <interface>sovituskuvio</interface> vastaa leikepöydän sisältöä, sen "
+"<interface>komennot</interface> näytetään Klipperin ponnahdusvalikossa, "
+"mistä ne voi suorittaa."
+
+#: configdialog.cpp:374
+#, kde-format
+msgctxt "@title:column"
+msgid "Match pattern and commands"
+msgstr "Sovituskuviot ja komennot"
+
+#: configdialog.cpp:374
+#, kde-format
+msgctxt "@title:column"
+msgid "Description"
+msgstr "Kuvaus"
+
+#: configdialog.cpp:380
+#, kde-format
+msgid "Add Action..."
+msgstr "Lisää toiminto…"
+
+#: configdialog.cpp:384
+#, kde-format
+msgid "Edit Action..."
+msgstr "Muokkaa toimintoa…"
+
+#: configdialog.cpp:389
+#, kde-format
+msgid "Delete Action"
+msgstr "Poista toiminto"
+
+#: configdialog.cpp:396
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"These actions appear in the popup menu which can be configured on the "
+"<interface>Action Menu</interface> page."
+msgstr ""
+"Nämä toiminnot näkyvät ponnahdusvalikossa, jonka voi määrittää "
+"<interface>toimintovalikon</interface> sivulla."
+
+#: configdialog.cpp:580
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Delete the selected action <resource>%1</resource><nl/>and all of its "
+"commands?"
+msgstr ""
+"Poistetaanko valittu toiminto <resource>%1</resource><nl/>kaikkine "
+"komentoineen?"
+
+#: configdialog.cpp:581
+#, kde-format
+msgid "Confirm Delete Action"
+msgstr "Vahvista poistamistoiminto"
+
+#: configdialog.cpp:610
+#, kde-format
+msgctxt "General Config"
+msgid "General"
+msgstr "Perusasetukset"
+
+#: configdialog.cpp:610
+#, kde-format
+msgid "General Configuration"
+msgstr "Perusasetukset"
+
+#: configdialog.cpp:611
+#, kde-format
+msgctxt "Popup Menu Config"
+msgid "Action Menu"
+msgstr "Toimintovalikko"
+
+#: configdialog.cpp:611
+#, kde-format
+msgid "Action Menu"
+msgstr "Toimintovalikko"
+
+#: configdialog.cpp:612
+#, kde-format
+msgctxt "Actions Config"
+msgid "Actions Configuration"
+msgstr "Toimintoasetukset"
+
+#: configdialog.cpp:612
+#, kde-format
+msgid "Actions Configuration"
+msgstr "Toimintoasetukset"
+
+#: configdialog.cpp:615
+#, kde-format
+msgctxt "Shortcuts Config"
+msgid "Shortcuts"
+msgstr "Pikanäppäimet"
+
+#: configdialog.cpp:615
+#, kde-format
+msgid "Shortcuts Configuration"
+msgstr "Pikanäppäinasetukset"
+
+#: configdialog.cpp:693
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The action popup will not be shown automatically for these windows, even if "
+"it is enabled. This is because, for example, a web browser may highlight a "
+"URL in the address bar while typing, so the menu would show for every "
+"keystroke.<nl/><nl/>If the action menu appears unexpectedly when using a "
+"particular application, then add it to this list. <link>How to find the name "
+"to enter</link>."
+msgstr ""
+"Näille ikkunoille ei toimintoponnahdusvalikkoa näytetä automaattisesti, "
+"vaikka se olisi käytössä. Esimerkiksi verkkoselain voi korostaa verkko-"
+"osoitteen osoiterivillä kirjoitettaessa, jolloin valikko näkyisi joka "
+"näppäinpainalluksella.<nl/><nl/>Jos toimintovalikko jossakin sovelluksessa "
+"näyttäytyy odottamatta, lisää sovellus tähän luetteloon. <link>Mistä löytää "
+"lisättävän nimen</link>?"
+
+#: configdialog.cpp:706
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"The name that needs to be entered here is the WM_CLASS name of the window to "
+"be excluded. To find the WM_CLASS name for a window, in another terminal "
+"window enter the command:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</"
+"icode><nl/><nl/>and click on the window that you want to exclude. The first "
+"name that it displays after the equal sign is the one that you need to enter."
+msgstr ""
+"Tähän kirjoitettava nimi on pois suljettavan ikkunan WM_CLASS-nimi. WM_CLASS-"
+"nimen löytämiseksi syötä toiseen päätteeseen komento:<nl/><nl/>&nbsp;&nbsp;"
+"<icode>xprop | grep WM_CLASS</icode><nl/><nl/>ja napsauta ikkunaa, jonka "
+"haluat sulkea pois. Nimi, jota tarvitset, on ensimmäinen joka näkyy "
+"yhtäsuuruusmerkin jäljessä."
+
+#: editactiondialog.cpp:34 editcommanddialog.cpp:90
+#, kde-format
+msgid "Ignore"
+msgstr "Ohita"
+
+#: editactiondialog.cpp:36
+#, kde-format
+msgid "Replace Clipboard"
+msgstr "Korvaa leikepöytä"
+
+#: editactiondialog.cpp:38
+#, kde-format
+msgid "Add to Clipboard"
+msgstr "Lisää leikepöydälle"
+
+#: editactiondialog.cpp:122
+#, kde-format
+msgid "Command"
+msgstr "Komento"
+
+#: editactiondialog.cpp:124
+#, kde-format
+msgid "Output"
+msgstr "Tuloste"
+
+#: editactiondialog.cpp:126
+#, kde-format
+msgid "Description"
+msgstr "Kuvaus"
+
+#: editactiondialog.cpp:179
+#, kde-format
+msgid "Action Properties"
+msgstr "Toiminto-ominaisuudet"
+
+#: editactiondialog.cpp:191
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"An action takes effect when its <interface>match pattern</interface> matches "
+"the clipboard contents. When this happens, the action's <interface>commands</"
+"interface> appear in the Klipper popup menu; if one of them is chosen, the "
+"command is executed."
+msgstr ""
+"Toimintoa käytetään, kun sen <interface>sovituskuvio</interface> vastaa "
+"leikepöydän sisältöä. Kun näin tapahtuu, toiminnon <interface>komennot</"
+"interface> ilmestyvät Klipperin ponnahdusvalikkoon. Komento suoritetaan, jos "
+"se valitaan."
+
+#: editactiondialog.cpp:203
+#, kde-format
+msgid "Enter a pattern to match against the clipboard"
+msgstr "Anna leikepöytään sovitettava kuvio"
+
+#: editactiondialog.cpp:205
+#, kde-format
+msgid "Match pattern:"
+msgstr "Sovita kuvioon:"
+
+#: editactiondialog.cpp:208
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The match pattern is a regular expression. For more information see the "
+"<link url=\"https://en.wikipedia.org/wiki/Regular_expression\">Wikipedia "
+"entry</link> for this topic."
+msgstr ""
+"Sovitettava kuvio on säännöllinen lauseke. Lisätietoa löytyy aiheen <link "
+"url=\"https://fi.wikipedia.org/wiki/Säännöllinen_lauseke\">Wikipedia-"
+"artikkelista</link>."
+
+#: editactiondialog.cpp:219
+#, kde-format
+msgid "Enter a description for the action"
+msgstr "Anna toiminnolle kuvaus"
+
+#: editactiondialog.cpp:220 editcommanddialog.cpp:84
+#, kde-format
+msgid "Description:"
+msgstr "Kuvaus:"
+
+#: editactiondialog.cpp:223
+#, kde-format
+msgid "Include in automatic popup"
+msgstr "Sisällytä automaattiseen ponnahdusvalikkoon"
+
+#: editactiondialog.cpp:227
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The commands for this match will be included in the automatic action popup, "
+"if it is enabled in the <interface>Action Menu</interface> page. If this "
+"option is turned off, the commands for this match will not be included in "
+"the automatic popup but they will be included if the popup is activated "
+"manually with the <shortcut>%1</shortcut> key shortcut."
+msgstr ""
+"Tätä vastaavat komennot sisällytetään automaattiseen "
+"toimintoponnahdusvalikkoon, jos se on otettu käyttöön "
+"<interface>toimintovalikko</interface>sivulla. Ellei asetus ole käytössä, "
+"komentoja ei sisällytetä valikkoon automaattisesti, mutta ne otetaan mukaan, "
+"jos käyttäjä avaa sen itse <shortcut>%1</shortcut>-pikanäppäimellä."
+
+#: editactiondialog.cpp:262
+#, kde-format
+msgid "Add Command..."
+msgstr "Lisää komento…"
+
+#: editactiondialog.cpp:267
+#, kde-format
+msgid "Edit Command..."
+msgstr "Muokkaa komentoa…"
+
+#: editactiondialog.cpp:273
+#, kde-format
+msgid "Delete Command"
+msgstr "Poista komento"
+
+#: editactiondialog.cpp:389
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Delete the selected command <resource>%1</resource>?"
+msgstr "Poistetaanko valittu komento <resource>%1</resource>?"
+
+#: editactiondialog.cpp:390
+#, kde-format
+msgid "Confirm Delete Command"
+msgstr "Vahvista poistokomento"
+
+#: editcommanddialog.cpp:47
+#, kde-format
+msgid "Command Properties"
+msgstr "Komennon ominaisuudet"
+
+#: editcommanddialog.cpp:60
+#, kde-format
+msgid "Enter the command and arguments"
+msgstr "Anna komento parametreineen"
+
+#: editcommanddialog.cpp:63
+#, kde-format
+msgid "Command:"
+msgstr "Komento:"
+
+#: editcommanddialog.cpp:72
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"A <placeholder>&#37;s</placeholder> in the command will be replaced by the "
+"complete clipboard contents. <placeholder>&#37;0</placeholder> through "
+"<placeholder>&#37;9</placeholder> will be replaced by the corresponding "
+"captured texts from the match pattern."
+msgstr ""
+"<placeholder>&#37;</placeholder> komennossa korvataan leikepöydän koko "
+"sisällöllä. <placeholder>&#37;0</placeholder>–<placeholder>&#37;9</"
+"placeholder> korvataan sovituskuvion vastaavalla tekstikaappauksella."
+
+#: editcommanddialog.cpp:82
+#, kde-format
+msgid "Enter a description for the command"
+msgstr "Anna komennolle kuvaus"
+
+#: editcommanddialog.cpp:92
+#, kde-format
+msgid "Output from command:"
+msgstr "Komennon tuloste:"
+
+#: editcommanddialog.cpp:94
+#, kde-format
+msgid "Replace current clipboard"
+msgstr "Korvaa nykyinen leikepöytä"
+
+#: editcommanddialog.cpp:98
+#, kde-format
+msgid "Append to clipboard"
+msgstr "Lisää leikepöydälle"
+
+#: editcommanddialog.cpp:102
+#, kde-format
+msgid "What happens to the standard output of the command executed."
+msgstr "Mitä tapahtuu suoritetun komennon vakiotulosvirrassa."
+
+#: editcommanddialog.cpp:116
+#, kde-format
+msgid "Reset the icon to the default for the command"
+msgstr "Palauta komennon kuvake oletuksekseen"
+
+#: editcommanddialog.cpp:122
+#, kde-format
+msgid "Icon:"
+msgstr "Kuvake:"
+
+#: historyimageitem.cpp:39
+#, kde-format
+msgid "%1x%2 %3bpp"
+msgstr "%1×%2 %3 bpp"
+
+#: klipper.cpp:153
+#, kde-format
+msgctxt "@action:inmenu Toggle automatic action"
+msgid "Automatic Action Popup Menu"
+msgstr "Automaattinen toimintoponnahdusvalikko"
+
+#: klipper.cpp:176
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "C&lear Clipboard History"
+msgstr "T&yhjennä leikepöydän historia"
+
+#: klipper.cpp:183
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&Configure Klipper…"
+msgstr "&Klipperin asetukset…"
+
+#: klipper.cpp:189
+#, kde-format
+msgctxt "@action:inmenu Quit Klipper"
+msgid "&Quit"
+msgstr "&Lopeta"
+
+#: klipper.cpp:194
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Manually Invoke Action on Current Clipboard"
+msgstr "Valitse toiminto nykyiselle leikepöydän sisällölle"
+
+#: klipper.cpp:202
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&Edit Contents…"
+msgstr "Muokkaa &sisältöä…"
+
+#: klipper.cpp:210
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&Show Barcode…"
+msgstr "Näytä &viivakoodi…"
+
+#: klipper.cpp:218
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Next History Item"
+msgstr "Seuraava historiatietue"
+
+#: klipper.cpp:222
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Previous History Item"
+msgstr "Edellinen historiatietue"
+
+#: klipper.cpp:228
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Open Klipper at Mouse Position"
+msgstr "Avaa Klipper hiiriosoittimen kohdalle"
+
+#: klipper.cpp:540
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"You can enable URL actions later in the <interface>Actions</interface> page "
+"of the Clipboard applet's configuration window"
+msgstr ""
+"Verkko-osoitetoiminnot voi ottaa käyttöön myöhemmin leikepöytäsovelman "
+"asetusikkunan <interface>Toiminnot</interface>-sivulla"
+
+#: klipper.cpp:579
+#, kde-format
+msgid "Should Klipper start automatically when you login?"
+msgstr "Käynnistetäänkö Klipper automaattisesti sisäänkirjauduttaessa?"
+
+#: klipper.cpp:580
+#, kde-format
+msgid "Automatically Start Klipper?"
+msgstr "Käynnistä Klipper automaattisesti?"
+
+#: klipper.cpp:581
+#, kde-format
+msgid "Start"
+msgstr "Käynnistä"
+
+#: klipper.cpp:582
+#, kde-format
+msgid "Do Not Start"
+msgstr "Älä käynnistä"
+
+#: klipper.cpp:929
+#, kde-format
+msgid "Edit Contents"
+msgstr "Leikepöydän sisältö"
+
+#: klipper.cpp:996
+#, kde-format
+msgid "Mobile Barcode"
+msgstr "Kuviokoodi mobiilikäyttöön"
+
+#: klipper.cpp:1043
+#, kde-format
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "Haluatko varmasti tyhjentää ja poistaa leikepöydän koko historian?"
+
+#: klipper.cpp:1044
+#, kde-format
+msgid "Clear Clipboard History"
+msgstr "Tyhjennä leikepöydän historia"
+
+#: klipper.cpp:1060 klipper.cpp:1069
+#, kde-format
+msgid "Clipboard history"
+msgstr "Leikepöydän historia"
+
+#: klipper.cpp:1086
+#, kde-format
+msgid "up"
+msgstr "ylemmäs"
+
+#: klipper.cpp:1093
+#, kde-format
+msgid "current"
+msgstr "nykyinen"
+
+#: klipper.cpp:1100
+#, kde-format
+msgid "down"
+msgstr "alemmas"
+
+#. i18n: ectx: label, entry (Version), group (General)
+#: klipper.kcfg:10
+#, kde-format
+msgid "Klipper version"
+msgstr "Klipperin versio"
+
+#. i18n: ectx: label, entry (KeepClipboardContents), group (General)
+#: klipper.kcfg:13
+#, kde-format
+msgid "Save history across desktop sessions"
+msgstr "Tallenna historia työpöytäistuntojen kesken"
+
+#. i18n: ectx: tooltip, entry (KeepClipboardContents), group (General)
+#: klipper.kcfg:15
+#, kde-format
+msgid ""
+"Retain the clipboard history, so it will be available the next time you log "
+"in."
+msgstr ""
+"Säilytä leikepöydän historia, jotta se on käytettävissä seuraavalla "
+"kirjautumiskerralla."
+
+#. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
+#: klipper.kcfg:18
+#, kde-format
+msgid "Prevent the clipboard from being cleared"
+msgstr "Estä leikepöydän tyhjentyminen"
+
+#. i18n: ectx: whatsthis, entry (PreventEmptyClipboard), group (General)
+#: klipper.kcfg:20
+#, kde-format
+msgid ""
+"Do not allow the clipboard to be cleared, for example when an application "
+"exits."
+msgstr ""
+"Älä salli tyhjentää leikepöytää (esimerkiksi sovelluksen sulkeutuessa)."
+
+#. i18n: ectx: label, entry (SyncClipboards), group (General)
+#: klipper.kcfg:27
+#, kde-format
+msgid "Keep the selection and clipboard the same"
+msgstr "Pidä valinta ja leikepöytä samoina"
+
+#. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
+#: klipper.kcfg:29
+#, kde-format
+msgid ""
+"Content selected with the cursor is automatically copied to the clipboard so "
+"that it can be pasted with either a Paste action or a middle-click.<br/><a "
+"href=\"1\">More about the selection and clipboard</a>."
+msgstr ""
+"Kohdistimella valittu sisältö kopioituu automaattisesti leikepöydälle, josta "
+"sen voi liittää joko Liitä-toiminnolla tai hiiren keskipainikkeella.<br/><a "
+"href=\"1\">Lisätietoa valinnasta ja leikepöydästä</a>."
+
+#. i18n: ectx: label, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:32
+#, kde-format
+msgid "Ignore the selection"
+msgstr "Sivuuta valinta"
+
+#. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:34
+#, kde-format
+msgid ""
+"Content selected with the cursor but not explicitly copied to the clipboard "
+"is not automatically stored in the clipboard history, and can only be pasted "
+"using a middle-click."
+msgstr ""
+"Kohdistimella valittu sisältö, jota ei ole kopioitu, ei automaattisesti "
+"tallennu leikepöytähistoriaan, ja sen voi liittää vain hiiren "
+"keskipainikkeella."
+
+#. i18n: ectx: label, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:37
+#, kde-format
+msgid "Text selection only"
+msgstr "Vain tekstivalinta"
+
+#. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:39
+#, kde-format
+msgid ""
+"Only store text selections in the clipboard history, not images or any other "
+"type of data."
+msgstr ""
+"Tallenna leikepöytähistoriaan vain tekstivalinnat, ei kuvia tai muita "
+"tietotyyppejä."
+
+#. i18n: ectx: label, entry (IgnoreImages), group (General)
+#: klipper.kcfg:42
+#, kde-format
+msgid "Always ignore images"
+msgstr "Sivuuta aina kuvat"
+
+#. i18n: ectx: whatsthis, entry (IgnoreImages), group (General)
+#: klipper.kcfg:44
+#, kde-format
+msgid ""
+"Do not store images in the clipboard history, even if explicitly copied."
+msgstr "Älä tallenna kuvia leikepöytähistoriaan, vaikka ne olisi kopioitu."
+
+#. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
+#: klipper.kcfg:47
+#, kde-format
+msgid "Use graphical regexp editor"
+msgstr "Käytä graafista muokkainta"
+
+#. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
+#: klipper.kcfg:51
+#, kde-format
+msgid "Immediately on selection"
+msgstr "Heti valittaessa"
+
+#. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
+#: klipper.kcfg:52
+#, kde-format
+msgid ""
+"Show the popup menu of applicable actions as soon as a selection is made."
+msgstr ""
+"Näytä käytettävissä olevien komentojen ponnahdusvalikko heti, kun valinta on "
+"tehty."
+
+#. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
+#: klipper.kcfg:57
+#, kde-format
+msgid "No actions for WM_CLASS"
+msgstr "Ei toimintoja WM_CLASSille"
+
+#. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:60
+#, kde-format
+msgid "Automatic action menu time:"
+msgstr "Automaattisen toimintovalikon aika:"
+
+#. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:64
+#, kde-format
+msgid "Display the automatic action popup menu for this time."
+msgstr "Näytä automaattinen toimintoponnahdusvalikko näin kauan."
+
+#. i18n: ectx: label, entry (MaxClipItems), group (General)
+#: klipper.kcfg:67
+#, kde-format
+msgid "History size:"
+msgstr "Historian koko:"
+
+#. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
+#: klipper.kcfg:71
+#, kde-format
+msgid "The clipboard history will store up to this many items."
+msgstr "Leikepöytähistoria tallentaa enintään näin monta tietuetta."
+
+#. i18n: ectx: label, entry (ActionList), group (General)
+#: klipper.kcfg:74
+#, kde-format
+msgid "Dummy entry for indicating changes in an action's tree widget"
+msgstr "Tyhjä tietue (osoittaa toiminnon puusovelman muutoksia)"
+
+#. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:87
+#, kde-format
+msgid "Trim whitespace from selection"
+msgstr "Poista valinnasta tyhjemerkit"
+
+#. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:89
+#, kde-format
+msgid ""
+"Remove any whitespace from the start and end of selected text, before "
+"performing an action. For example, this ensures that a URL pasted in a "
+"browser is interpreted as expected. The text saved on the clipboard is not "
+"affected."
+msgstr ""
+"Poista tyhjemerkit valitun tekstin alusta ja lopusta ennen toiminnon "
+"suorittamista. Tällä voi esimerkiksi varmistaa, että selaimeen liitetty "
+"verkko-osoite toimii oikein. Leikepöydälle tallennettua tekstiä ei muuteta."
+
+#. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
+#: klipper.kcfg:92
+#, kde-format
+msgid "For an item chosen from history"
+msgstr "Historiasta valitulle tietueelle"
+
+#. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
+#: klipper.kcfg:94
+#, kde-format
+msgid ""
+"Show the popup menu of applicable actions if an entry is chosen from the "
+"clipboard history."
+msgstr ""
+"Näytä käytettävissä olevien toimintojen ponnahdusvalikko, jos leikepöydän "
+"historiasta valitaan tietue."
+
+#. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
+#: klipper.kcfg:97
+#, kde-format
+msgid "Include MIME actions"
+msgstr "Sisällytä MIME-toiminnot"
+
+#. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
+#: klipper.kcfg:99
+#, kde-format
+msgid ""
+"If a file name or URL is selected, include applications that can accept its "
+"MIME type in the popup menu."
+msgstr ""
+"Jos tiedostonimi tai verkko-osoite on valittu, sisällytä ponnahdusvalikkoon "
+"sen MIME-tyypin hyväksyvät sovellukset."
+
+#: klipperpopup.cpp:110
+#, kde-format
+msgid "Klipper - Clipboard Tool"
+msgstr "Klipper – leikepöytätyökalu"
+
+#: klipperpopup.cpp:114
+#, kde-format
+msgid "Search…"
+msgstr "Etsi…"
+
+#: klipperpopup.cpp:123 main.cpp:29
+#, kde-format
+msgid "KDE cut & paste history utility"
+msgstr "KDE:n leikepöydän historia"
+
+#: klipperpopup.cpp:187
+#, kde-format
+msgid "Invalid regular expression, %1"
+msgstr "Virheellinen säännöllinen lauseke, %1"
+
+#: klipperpopup.cpp:193 tray.cpp:25 tray.cpp:53
+#, kde-format
+msgid "Clipboard is empty"
+msgstr "Leikepöytä on tyhjä"
+
+#: klipperpopup.cpp:195
+#, kde-format
+msgid "No matches"
+msgstr "Ei osumia"
+
+# pmap: =/gen=Klipperin/
+# pmap: =/elat=Klipperistä/
+#: main.cpp:27 tray.cpp:22
+#, kde-format
+msgid "Klipper"
+msgstr "Klipper"
+
+#: main.cpp:31
+#, kde-format
+msgid ""
+"(c) 1998, Andrew Stanley-Jones\n"
+"1998-2002, Carsten Pfeiffer\n"
+"2001, Patrick Dubroy"
+msgstr ""
+"© 1998 Andrew Stanley-Jones\n"
+"1998–2002 Carsten Pfeiffer\n"
+"2001 Patrick Dubroy"
+
+#: main.cpp:34
+#, kde-format
+msgid "Carsten Pfeiffer"
+msgstr "Carsten Pfeiffer"
+
+#: main.cpp:34
+#, kde-format
+msgid "Author"
+msgstr "Tekijä"
+
+#: main.cpp:36
+#, kde-format
+msgid "Andrew Stanley-Jones"
+msgstr "Andrew Stanley-Jones"
+
+#: main.cpp:36
+#, kde-format
+msgid "Original Author"
+msgstr "Alkuperäinen tekijä"
+
+#: main.cpp:38
+#, kde-format
+msgid "Patrick Dubroy"
+msgstr "Patrick Dubroy"
+
+#: main.cpp:38
+#, kde-format
+msgid "Contributor"
+msgstr "Avustanut"
+
+#: main.cpp:40
+#, kde-format
+msgid "Luboš Luňák"
+msgstr "Luboš Luňák"
+
+#: main.cpp:40
+#, kde-format
+msgid "Bugfixes and optimizations"
+msgstr "Virhekorjauksia ja optimointeja"
+
+#: main.cpp:42
+#, kde-format
+msgid "Esben Mose Hansen"
+msgstr "Esben Mose Hansen"
+
+#: main.cpp:42
+#, kde-format
+msgid "Previous Maintainer"
+msgstr "Edellinen ylläpitäjä"
+
+#: main.cpp:44
+#, kde-format
+msgid "Martin Gräßlin"
+msgstr "Martin Gräßlin"
+
+#: main.cpp:44
+#, kde-format
+msgid "Maintainer"
+msgstr "Ylläpitäjä"
+
+#: main.cpp:46
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+"Kim Enkovaara, Tapio Kautto, Teemu Rytilahti, Ilpo Kantonen, Niklas "
+"Laxström, Tommi Nieminen, Jorma Karvonen, Lasse Liehu, Jiri Grönroos"
+
+#: main.cpp:46
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"kim.enkovaara@iki.fi, eleknader@phnet.fi, teemu.rytilahti@kde-fi.org, "
+"ilpo@iki.fi, niklas.laxstrom+kdetrans@gmail.com, translator@legisign.org, "
+"karvonen.jorma@gmail.com, lasse.liehu@gmail.com, jiri.gronroos+kde@iki.fi"
+
+#: popupproxy.cpp:145
+#, kde-format
+msgid "&More"
+msgstr "&Lisää"
+
+#: tray.cpp:25
+#, kde-format
+msgid "Clipboard Contents"
+msgstr "Leikepöydän sisältö"
+
+#: urlgrabber.cpp:198
+#, kde-format
+msgid "Disable This Popup"
+msgstr "Älä näytä tätä ponnahdusikkunaa"
+
+#: urlgrabber.cpp:204
+#, kde-format
+msgid "&Cancel"
+msgstr "&Peru"
+
+#~ msgid "Delete clipboard history?"
+#~ msgstr "Poistetaanko leikepöydän historia?"
+
+#~ msgid "Action list:"
+#~ msgstr "Toimintoluettelo:"
+
+#~ msgid "Regular Expression"
+#~ msgstr "Säännöllinen lauseke"
+
+#~ msgid ""
+#~ "Click on a highlighted item's column to change it. \"%s\" in a command "
+#~ "will be replaced with the clipboard contents.<br>For more information "
+#~ "about regular expressions, you could have a look at the <a href=\"https://"
+#~ "en.wikipedia.org/wiki/Regular_expression\">Wikipedia entry about this "
+#~ "topic</a>."
+#~ msgstr ""
+#~ "Muuta valittua kohtaa napsauttamalla sen saraketta. ”%s” komennossa "
+#~ "korvataan leikepöydän sisällöllä.<br>Lisätietoa säännöllisistä "
+#~ "lausekkeista saa esimerkiksi <a href=\"https://fi.wikipedia.org/wiki/"
+#~ "Säännöllinen_lauseke\">Wikipediasta</a>."
+
+#~ msgid "Output Handling"
+#~ msgstr "Tulosteen käsittely"
+
+#~ msgid "new command"
+#~ msgstr "uusi komento"
+
+#~ msgid "Command Description"
+#~ msgstr "Komennon kuvaus"
+
+#~ msgid "Action properties:"
+#~ msgstr "Toiminnon ominaisuudet:"
+
+#~ msgid "Automatic:"
+#~ msgstr "Automaattinen:"
+
+#~ msgid "List of commands for this action:"
+#~ msgstr "Toiminnon komentoluettelo:"
+
+#~ msgid "Double-click an item to edit"
+#~ msgstr "Muokkaa kohtaa kaksoisnapsauttamalla"
+
+#~ msgid "Remove whitespace when executing actions"
+#~ msgstr "Poista tyhjemerkit suoritettavista toiminnoista"
+
+#~ msgid "Advanced..."
+#~ msgstr "Lisäasetukset…"
+
+#~ msgid "Advanced Settings"
+#~ msgstr "Lisäasetukset"
+
+#~ msgid "D&isable Actions for Windows of Type WM_CLASS"
+#~ msgstr "&Älä käytä toimintoja WM_CLASS-tyypin ikkunoille"
+
+#~ msgid ""
+#~ "<qt>This lets you specify windows in which Klipper should not invoke "
+#~ "\"actions\". Use<br /><br /><center><b>xprop | grep WM_CLASS</b></"
+#~ "center><br />in a terminal to find out the WM_CLASS of a window. Next, "
+#~ "click on the window you want to examine. The first string it outputs "
+#~ "after the equal sign is the one you need to enter here.</qt>"
+#~ msgstr ""
+#~ "<qt>Tässä voi määrittää, mille ikkunoille Klipperin ei pitäisi toimintoja "
+#~ "soveltaa.<br />Ikkunan WM_CLASS-arvon saa päätteessä komennolla<br /><br /"
+#~ "><center><b>xprop | grep WM_CLASS</b> </center><br />Napsauta seuraavaksi "
+#~ "ikkunaa, jota haluat tutkia. Tähän pitää syöttää ensimmäinen "
+#~ "yhtäläisyysmerkin jälkeinen merkkijono.</qt>"
+
+#~ msgid "Enable Clipboard Actions"
+#~ msgstr "Käytä leikepöydän toimintoja"
+
+#~ msgid "URL grabber enabled"
+#~ msgstr "Verkko-osoitekaappaus käytössä"
+
+#~ msgid "Replay action in history"
+#~ msgstr "Toista toiminta historiasta"
+
+#~ msgid ""
+#~ "When a clipboard item is selected from the history popup, automatically "
+#~ "perform the configured actions on it."
+#~ msgstr ""
+#~ "Kun leikepöytätietue valitaan historiavalikosta, tee sille "
+#~ "automaattisesti määritetyt toiminnot."
+
+#~ msgid "Save clipboard contents on exit"
+#~ msgstr "Tallenna leikepöydän sisältö lopetettaessa"
+
+#~ msgid "Synchronize contents of the clipboard and the selection"
+#~ msgstr "Synkronoi leikepöydän sisältö ja valinta"
+
+#~ msgid "Keep clipboard contents"
+#~ msgstr "Säilytä leikepöydän sisältö"
+
+#~ msgid ""
+#~ "Selecting this option has the effect, that the clipboard can never be "
+#~ "emptied. E.g. when an application exits, the clipboard would usually be "
+#~ "emptied."
+#~ msgstr ""
+#~ "Mikäli valittu, leikepöytä ei menetä sisältöään. Normaalisti leikepöytä "
+#~ "tyhjenee esimerkiksi silloin, kun sovellus lopetetaan."
+
+#~ msgid "Ignore Selection"
+#~ msgstr "Ohita valinta"
+
+#~ msgid ""
+#~ "When an area of the screen is selected with mouse or keyboard, this is "
+#~ "called \"the selection\".<br/>If this option is set, the selection is not "
+#~ "entered into the clipboard history, though it is still available for "
+#~ "pasting using the middle mouse button."
+#~ msgstr ""
+#~ "Hiirellä tai näppäimistöllä valittua näytön aluetta kutsutaan "
+#~ "”valinnaksi”.<br/>Jos otat tämän asetuksen käyttöön, valinta ei siirry "
+#~ "leikepöydän historiaan, vaikka se on yhä käytössä liitettäväksi hiiren "
+#~ "keskipainikkeella."
+
+#~ msgid "Synchronize clipboard and selection"
+#~ msgstr "Synkronoi leikepöytä ja valinta"
+
+#~ msgid ""
+#~ "When an area of the screen is selected with mouse or keyboard, this is "
+#~ "called \"the selection\".<br/>If this option is selected, the selection "
+#~ "and the clipboard is kept the same, so that anything in the selection is "
+#~ "immediately available for pasting elsewhere using any method, including "
+#~ "the traditional middle mouse button. Otherwise, the selection is recorded "
+#~ "in the clipboard history, but the selection can only be pasted using the "
+#~ "middle mouse button. Also see the 'Ignore Selection' option."
+#~ msgstr ""
+#~ "Hiirellä tai näppäimistöllä valittua näytön aluetta kutsutaan "
+#~ "”valinnaksi”.<br/>Jos otat tämän asetuksen käyttöön, valinta ja "
+#~ "leikepöytä pidetään samana, jolloin valinta on välittömästi käytössä "
+#~ "liitettäväksi muualle eri menetelmillä, myös perinteisesti hiiren "
+#~ "keskipainikkeella. Muussa tapauksessa valinta tallentuu kyllä leikepöydän "
+#~ "historiaan, mutta se voidaan liittää vain keskipainikkeella. Katso myös "
+#~ "”Ohita valinta” -asetus."
+
+#~ msgid "Selection text only"
+#~ msgstr "Vain valittu teksti"
+
+#~ msgid ""
+#~ "When an area of the screen is selected with mouse or keyboard, this is "
+#~ "called \"the selection\".<br/>If this option is selected, only text "
+#~ "selections are stored in the history, while images and other selections "
+#~ "are not."
+#~ msgstr ""
+#~ "Kun näytön alue on valittu hiirellä tai näppäimistöllä, sitä kutsutaan "
+#~ "nimellä ”valinta”.<br/>Jos tämä valitsin on valittuna, vain "
+#~ "tekstivalinnat tallennetaan historiatietoihin, kun taas kuvat ja muita "
+#~ "valintoja ei tallenneta."
+
+#~ msgid "Timeout for action popups (seconds)"
+#~ msgstr "Toimintovalikoiden aikakatkaisu (sekuntia)"
+
+#~ msgid "A value of 0 disables the timeout"
+#~ msgstr "Arvo 0 poistaa aikakatkaisun"
+
+#~ msgid "Clipboard history size"
+#~ msgstr "Leikepöydän historian koko"
+
+#~ msgid ""
+#~ "Sometimes, the selected text has some whitespace at the end, which, if "
+#~ "loaded as URL in a browser would cause an error. Enabling this option "
+#~ "removes any whitespace at the beginning or end of the selected string "
+#~ "(the original clipboard contents will not be modified)."
+#~ msgstr ""
+#~ "Joskus valittu teksti sisältää välimerkkejä, jotka saattavat estää verkko-"
+#~ "osoitetta toimimasta selaimessa. Jos valitset tämän, kaikki tekstin "
+#~ "alusta tai lopusta löytyvät välimerkit poistetaan valitusta tekstistä. "
+#~ "Leikepöydän sisältö pysyy muuttumattomana."
+
+#~ msgid "%1 - Actions For: %2"
+#~ msgstr "%1 – Toiminnot osoitteelle: %2"
+
+#~ msgid "&Edit Contents..."
+#~ msgstr "&Muokkaa sisältöä…"
+
+#~ msgid "<empty clipboard>"
+#~ msgstr "<tyhjä leikepöytä>"
+
+#~ msgid ""
+#~ "You can enable URL actions later by left-clicking on the Klipper icon and "
+#~ "selecting 'Enable Clipboard Actions'"
+#~ msgstr ""
+#~ "Voit ottaa verkko-osoitetoiminnot myöhemmin käyttöön napsauttamalla "
+#~ "Klipperin kuvaketta hiiren vasemmalla painikkeella ja valitsemalla Käytä "
+#~ "leikepöydän toimintoja."
+
+#~ msgid "Enable Clipboard &Actions"
+#~ msgstr "Käytä leikepöytä&toimintoja"
+
+#~ msgid "Show Klipper Popup-Menu"
+#~ msgstr "Näytä Klipperin ponnahdusvalikko"
+
+#~ msgid "Popup menu at mouse-cursor position"
+#~ msgstr "Avaa ponnahdusvalikko hiiriosoittimen kohdalle"
+
+#~ msgid "Clipboard/Selection Behavior"
+#~ msgstr "Leikepöydän ja valinnan tahdistus"
+
+#~ msgid "Separate clipboard and selection"
+#~ msgstr "Erota leikepöytä ja valinta"
+
+#~ msgid ""
+#~ "This option prevents the selection being recorded in the clipboard "
+#~ "history. Only explicit clipboard changes are recorded."
+#~ msgstr ""
+#~ "Tämä asetus estää tekstivalintojen lisäämisen leikepöydän historiaan. "
+#~ "Vain leikepöydälle kopioinnit muutokset tallennetaan muistiin."
+
+#~ msgid ""
+#~ "<qt>There are two different clipboard buffers available:<br /><br /"
+#~ "><b>Clipboard</b> is filled by selecting something and pressing Ctrl+C, "
+#~ "or by clicking \"Copy\" in a toolbar or menubar.<br /><br /><b>Selection</"
+#~ "b> is available immediately after selecting some text. The only way to "
+#~ "access the selection is to press the middle mouse button.<br /><br />You "
+#~ "can configure the relationship between Clipboard and Selection.</qt>"
+#~ msgstr ""
+#~ "<qt>Leikepöytää varten voidaan käyttää kahta eri tyyppistä puskuria:<br /"
+#~ "><br /><b>Leikepöytä</b>, jonka täytät valitsemalla<br />ja painamalla "
+#~ "Ctrl+C tai Kopioi-komennolla.<br /><br /><b>Valinta</b>, joka kopioi "
+#~ "valitun tekstin välittömästi leikepöydälle.<br />Valittu teksti voidaan "
+#~ "liittää hiiren keskipainikkeella.<br /><br />Voit asettaa "
+#~ "riippuvuussuhteita leikepöydän ja valinnan välillä.</qt>"
+
+#~ msgid "Klipper - clipboard tool"
+#~ msgstr "Klipper – leikepöytätyökalu"
+
+#~ msgid "Action list (right click to add/remove commands):"
+#~ msgstr ""
+#~ "Toiminto&luettelo (lisääminen ja poistaminen tapahtuu hiiren oikealla "
+#~ "napilla):"
+
+#~ msgid "Double-click here to set the command to be executed"
+#~ msgstr "Aseta suoritettava komento kaksoisnapsauttamalla"
+
+#~ msgid "Double-click here to set the regular expression"
+#~ msgstr "Aseta säännöllinen lauseke kaksoisnapsauttamalla"
+
+#~ msgid "<new action>"
+#~ msgstr "<uusi toiminto>"
+
+#~ msgid "Selecting this option synchronizes these two buffers."
+#~ msgstr "Tämä valinta tahdistaa nämä kaksi puskuria."
+
+#~ msgid ""
+#~ "Using this option will only set the selection when highlighting something "
+#~ "and the clipboard when choosing e.g. \"Copy\" in a menubar."
+#~ msgstr ""
+#~ "Tämän asetuksen kanssa leikepöytä ja valinta toimivat toisista erillään."
+
+#~ msgid "&Use graphical editor for editing regular expressions"
+#~ msgstr "&Käytä säännöllisten lausekkeiden muokkaamiseen graafista editoria"
+
+#~ msgid ""
+#~ "Click on a highlighted item's column to change it. \"%s\" in a command "
+#~ "will be replaced with the clipboard contents."
+#~ msgstr ""
+#~ "Muokkaa korostettua kohdetta napsauttamalla. Merkkijono %s komennossa "
+#~ "korvataan leikepöydän sisällöllä."
+
+#~ msgid "Enable &Actions"
+#~ msgstr "Käytä &toimintoja"
+
+#~ msgid "&Actions Enabled"
+#~ msgstr "&Toiminnot käytössä"

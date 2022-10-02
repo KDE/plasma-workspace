@@ -1,0 +1,661 @@
+# translation of kcminput.po to Nepali
+# Nabin Gautam <nabin@mpp.org.np>, 2006, 2007.
+# Mahesh Subedi <submanesh@gmail.com>, 2007.
+# shyam krishna bal <shyamkrishna_bal@yahoo.com>, 2007.
+# Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminput\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:50+0000\n"
+"PO-Revision-Date: 2007-11-04 18:50+0545\n"
+"Last-Translator: Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>\n"
+"Language-Team: Nepali <info@mpp.org.np>\n"
+"Language: ne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n !=1\n"
+"\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current cursor theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr ""
+
+#: kcmcursortheme.cpp:302
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr "ती परिवर्तनको प्रभाव लिनका लागि तपाईँले केडीई फेरि सुरु गर्नुपर्छ ।"
+
+#: kcmcursortheme.cpp:376
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: kcmcursortheme.cpp:387
+#, fuzzy, kde-format
+#| msgid "Unable to find the cursor theme archive %1."
+msgid "Unable to download the icon theme archive: %1"
+msgstr "कर्सर विषयवस्तु सङ्ग्रह %1 फेला पार्न अक्षम ।"
+
+#: kcmcursortheme.cpp:418
+#, fuzzy, kde-format
+#| msgid "The file %1 does not appear to be a valid cursor theme archive."
+msgid "The file is not a valid icon theme archive."
+msgstr "%1 फाइल वैध कर्सर विषयवस्तु सङ्ग्रह हो जस्तो देखिदैन ।"
+
+#: kcmcursortheme.cpp:425
+#, kde-format
+msgid "Failed to create 'icons' folder."
+msgstr ""
+
+#: kcmcursortheme.cpp:434
+#, kde-format
+msgid ""
+"A theme named %1 already exists in your icon theme folder. Do you want "
+"replace it with this one?"
+msgstr ""
+"%1 नाम गरिएको विषयवस्तु तपाईँको प्रतिमा विषयवस्तु फोल्डरमा पहिले नै अवस्थित छ । के तपाईँ "
+"यसलाई योसँग प्रतिस्थापन गर्न चाहनुहुन्छ?"
+
+#: kcmcursortheme.cpp:438
+#, kde-format
+msgid "Overwrite Theme?"
+msgstr "विषयवस्तु अधिलेखन गर्नुहुन्छ?"
+
+#: kcmcursortheme.cpp:462
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: package/contents/ui/Delegate.qml:54
+#, kde-format
+msgid "Remove Theme"
+msgstr ""
+
+#: package/contents/ui/Delegate.qml:61
+#, fuzzy, kde-format
+#| msgid "&Cursor Theme"
+msgid "Restore Cursor Theme"
+msgstr "कर्सर विषयवस्तु"
+
+#: package/contents/ui/main.qml:20
+#, kde-format
+msgid "This module lets you choose the mouse cursor theme."
+msgstr ""
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Size:"
+msgstr ""
+
+#: package/contents/ui/main.qml:134
+#, kde-format
+msgid "&Install from File…"
+msgstr ""
+
+#: package/contents/ui/main.qml:140
+#, fuzzy, kde-format
+#| msgid "Overwrite Theme?"
+msgid "&Get New Cursors…"
+msgstr "विषयवस्तु अधिलेखन गर्नुहुन्छ?"
+
+#: package/contents/ui/main.qml:157
+#, fuzzy, kde-format
+#| msgid "Overwrite Theme?"
+msgid "Open Theme"
+msgstr "विषयवस्तु अधिलेखन गर्नुहुन्छ?"
+
+#: package/contents/ui/main.qml:159
+#, kde-format
+msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:41
+#, kde-format
+msgid "The requested size '%1' is not available, using %2 instead."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:62
+#, kde-format
+msgid ""
+"This tool allows you to set the mouse cursor theme for the current Plasma "
+"session, without accidentally setting it to one that is either not "
+"available, or which is already set."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:66
+#, kde-format
+msgid ""
+"The name of the cursor theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:67
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:68
+#, kde-format
+msgid "Use a specific size, rather than the theme default size"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:89
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:100
+#, kde-format
+msgid ""
+"Successfully applied the mouse cursor theme %1 to your current Plasma session"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:102
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for your newly applied mouse cursor "
+"theme to display correctly."
+msgstr "ती परिवर्तनको प्रभाव लिनका लागि तपाईँले केडीई फेरि सुरु गर्नुपर्छ ।"
+
+#: plasma-apply-cursortheme.cpp:112
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:120
+#, kde-format
+msgid "You have the following mouse cursor themes on your system:"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:125
+#, kde-format
+msgid "(Current theme for this Plasma session)"
+msgstr ""
+
+#: xcursor/xcursortheme.cpp:60
+#, kde-format
+msgctxt ""
+"@info The argument is the list of available sizes (in pixel). Example: "
+"'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+msgid "(Available sizes: %1)"
+msgstr ""
+
+#~ msgid "Name"
+#~ msgstr "नाम"
+
+#~ msgid "Description"
+#~ msgstr "वर्णन"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Nabin Gautam, श्यामकृष्ण बल"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "nabin@mpp.org.np,shyamkrishna_bal@yahoo.com"
+
+#, fuzzy
+#~| msgid "&Cursor Theme"
+#~ msgid "Cursors"
+#~ msgstr "कर्सर विषयवस्तु"
+
+#~ msgid ""
+#~ "<qt>You cannot delete the theme you are currently using.<br />You have to "
+#~ "switch to another theme first.</qt>"
+#~ msgstr ""
+#~ "<qt>तपाईँ हाल प्रयोग गरिरहेको विषयवस्तु मेट्न सक्नुहुन्न ।<br />तपाईँले पहिले अर्को "
+#~ "विषयवस्तु स्विच गर्नुपर्नेछ ।</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <i>%1</i> cursor theme?<br />This "
+#~ "will delete all the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>के तपाईँ <strong>%1</strong> कर्सर विषयवस्तु हटाउन निश्चिन्त हुनुहुन्छ?<br /> "
+#~ "यसले यस विषयवस्तुद्वारा स्थापना गरिएका सबै फाइल मेट्नेछ ।</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "स्वीकृति"
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "कर्सर सेटिङ परिवर्तन गरियो"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "विषयवस्तु यूआरएल तान्नुहोस् वा टाइप गर्नुहोस्"
+
+#~ msgid ""
+#~ "Unable to download the cursor theme archive; please check that the "
+#~ "address %1 is correct."
+#~ msgstr ""
+#~ "कर्सर विषयवस्तु सङ्ग्रह डाउनलोड गर्न अक्षम; कृपया %1 ठेगाना ठीक भएको जाँच गर्नुहोस् ।"
+
+#, fuzzy
+#~| msgid "Select the cursor theme you want to use:"
+#~ msgid ""
+#~ "Select the cursor theme you want to use (hover preview to test cursor):"
+#~ msgstr "तपाईँले प्रयोग गर्न चाहेको कर्सर विषयवस्तु चयन गर्नुहोस्:"
+
+#~ msgid "Select the cursor theme you want to use:"
+#~ msgstr "तपाईँले प्रयोग गर्न चाहेको कर्सर विषयवस्तु चयन गर्नुहोस्:"
+
+#~ msgid "Small black"
+#~ msgstr "सानो कालो"
+
+#~ msgid "Small black cursors"
+#~ msgstr "सानो कालो कर्सर"
+
+#~ msgid "Large black"
+#~ msgstr "ठूलो कालो"
+
+#~ msgid "Large black cursors"
+#~ msgstr "ठूलो कालो कर्सर"
+
+#~ msgid "Small white"
+#~ msgstr "सानो सेतो"
+
+#~ msgid "Small white cursors"
+#~ msgstr "सानो सेतो कर्सर"
+
+#~ msgid "Large white"
+#~ msgstr "ठूलो सेतो"
+
+#~ msgid "Large white cursors"
+#~ msgstr "ठूलो सेतो कर्सर"
+
+#~ msgid "Button Order"
+#~ msgstr "बटन क्रम"
+
+#~ msgid "Righ&t handed"
+#~ msgstr "दायाँ हाते"
+
+#~ msgid "Le&ft handed"
+#~ msgstr "बायाँ हाते"
+
+#~ msgid ""
+#~ "Change the direction of scrolling for the mouse wheel or the 4th and 5th "
+#~ "mouse buttons."
+#~ msgstr ""
+#~ "माउस चक्र वा चौथो र पाँचौ माउस बटनका लागि स्क्रोलिङको दिशा परिवर्तन गर्नुहोस् ।"
+
+#~ msgid "Re&verse scroll direction"
+#~ msgstr "स्क्रोल दिशा उल्टाउनुहोस्"
+
+#~ msgid "Icons"
+#~ msgstr "प्रतिमा"
+
+#~ msgid ""
+#~ "Dou&ble-click to open files and folders (select icons on first click)"
+#~ msgstr ""
+#~ "फाइल र फोल्डर खोल्नका लागि डबल क्लिक गर्नुहोस् (पहिलो क्लिकमा प्रतिमा चयन गर्नुहोस्)"
+
+#~ msgid "&Single-click to open files and folders"
+#~ msgstr "फाइल र फोल्डर खोल्नका लागि एकल क्लिक गर्नुहोस्"
+
+#~ msgid "Cha&nge pointer shape over icons"
+#~ msgstr "प्रतिमा माथि सङ्केतकको आकार परिवर्तन गर्नुहोस्"
+
+#~ msgid "A&utomatically select icons"
+#~ msgstr "स्वचालित रूपमा प्रतिमा चयन गर्नुहोस्"
+
+#, fuzzy
+#~| msgid "Dela&y:"
+#~ msgctxt "label. delay (on milliseconds) to automatically select icons"
+#~ msgid "Delay"
+#~ msgstr "बिलम्ब:"
+
+#, fuzzy
+#~| msgid " msec"
+#~ msgctxt "milliseconds. time to automatically select the items"
+#~ msgid " ms"
+#~ msgstr " मिलि सेकेन्ड"
+
+#~ msgid ""
+#~ "<h1>Mouse</h1> This module allows you to choose various options for the "
+#~ "way in which your pointing device works. Your pointing device may be a "
+#~ "mouse, trackball, or some other hardware that performs a similar function."
+#~ msgstr ""
+#~ "<h1>माउस</h1>तपाईँको सङ्केतक यन्त्रले कार्य गर्ने ठाउँमा तपाईँलाई मार्गका लागि धेरै "
+#~ "विकल्प रोज्न यो मोड्युलले अनुमति दिन्छ । तपाईँको सङ्केतक यन्त्र माउस, ट्र्याकबल, वा अन्य "
+#~ "केही हार्डवेयर हुन सक्छ जसले समान कार्य सम्पादन गर्छ ।"
+
+#~ msgid "&General"
+#~ msgstr "सामान्य"
+
+#~ msgid ""
+#~ "If you are left-handed, you may prefer to swap the functions of the left "
+#~ "and right buttons on your pointing device by choosing the 'left-handed' "
+#~ "option. If your pointing device has more than two buttons, only those "
+#~ "that function as the left and right buttons are affected. For example, if "
+#~ "you have a three-button mouse, the middle button is unaffected."
+#~ msgstr ""
+#~ "यदि तपाईँ बायाँ हाते हुनुहुन्छ भने, तपाईँ बायाँको कार्य र दायाँ बटन तपाईँको सूचक यन्त्रमा "
+#~ "'बायाँ' विकल्प रोजाइद्वारा साट्न रुचाउनुहुन्छ । यदि तपईँको सूचक यन्त्रमा दुई भन्दा बढी "
+#~ "बटन भएमा, तिनीहरूका ति कार्य मात्र बायाँ र दायाँ बटन जस्तै प्रभावित हुन्छन् । "
+#~ "उदाहरणका लागि यदि तपाईँसँग तीन बटन भएको माउस छ भने, बीचको बटन प्रभावित हुदैन ।"
+
+#~ msgid ""
+#~ "The default behavior in KDE is to select and activate icons with a single "
+#~ "click of the left button on your pointing device. This behavior is "
+#~ "consistent with what you would expect when you click links in most web "
+#~ "browsers. If you would prefer to select with a single click, and activate "
+#~ "with a double click, check this option."
+#~ msgstr ""
+#~ "केडीईको पूर्वनिर्धारित व्यवहार तपाईँको देखाइरहेको यन्त्रमा बायाँ बटनमा एकल क्लिकले "
+#~ "प्रतिमा चयन गर्नु र सक्रिय पार्नु हो । तपाईँले धेरै वेब ब्राउजरमा लिङ्क क्लिक गरेको "
+#~ "बेलामा तपाईँले अपेक्षा गरेकोसँग यो व्यवहार सुसङ्गत छ । यदि तापईँले एकल क्लिकमा चयन गर्न "
+#~ "रुचाउनुहुन्छ, र डबल क्लिकमा सक्रिय पार्न चाहनुहुन्छ भने, यो विकल्प जाँच गर्नुहोस् ।"
+
+#~ msgid "Activates and opens a file or folder with a single click."
+#~ msgstr "एकल क्लिकमा फाइल वा फोल्डरलाई सक्रिय पार्छ र खोल्दछ ।"
+
+#~ msgid ""
+#~ "If you check this option, pausing the mouse pointer over an icon on the "
+#~ "screen will automatically select that icon. This may be useful when "
+#~ "single clicks activate icons, and you want only to select the icon "
+#~ "without activating it."
+#~ msgstr ""
+#~ "यदि तपाईँले यो विकल्प जाँच गरेमा, पर्दामा एउटा प्रतिमा माथि माउसको सङ्केतक पज गर्दा "
+#~ "स्वचालित तरीकाले त्यो प्रतिमा चयन गर्छ । एकल क्लिकले प्रतिमा सक्रिय पार्दा, र तपाईँले "
+#~ "यसलाई सक्रिय नपारी प्रतिमा मात्र चयन गर्न चाहेमा यो उपयोगि हुन सक्छ ।"
+
+#~ msgid ""
+#~ "If you have checked the option to automatically select icons, this slider "
+#~ "allows you to select how long the mouse pointer must be paused over the "
+#~ "icon before it is selected."
+#~ msgstr ""
+#~ "यदि तपाईँले स्वचालित तरिकाले प्रतिमा चयन गर्न विकल्प जाँच गर्नु भएको छ भने, यो "
+#~ "स्लाइडरले यसलाई चयन गर्नु भन्दा पहिला कति समयसम्म प्रतिमा माथि माउस सङ्केतक पज गर्नु "
+#~ "पर्छ चयन गर्न अनुमति दिन्छ ।"
+
+#~ msgid "Advanced"
+#~ msgstr "उन्नत"
+
+#~ msgid "Pointer acceleration:"
+#~ msgstr "सङ्केतक गतिबर्धन:"
+
+#~ msgid ""
+#~ "<p>This option allows you to change the relationship between the distance "
+#~ "that the mouse pointer moves on the screen and the relative movement of "
+#~ "the physical device itself (which may be a mouse, trackball, or some "
+#~ "other pointing device.)</p><p> A high value for the acceleration will "
+#~ "lead to large movements of the mouse pointer on the screen even when you "
+#~ "only make a small movement with the physical device. Selecting very high "
+#~ "values may result in the mouse pointer flying across the screen, making "
+#~ "it hard to control.</p>"
+#~ msgstr ""
+#~ "<p>यो विकल्पले तपाईँलाई माउस सूचक पर्दामा सरेको र भौतिक यन्त्र आफैँको सापेक्षीक चाल "
+#~ "बीचको दुरीको सम्बन्ध परिवर्तन गर्न अनुमति दिन्छ (जुन माउस, ट्र्याकबल, वा अन्य कुनै "
+#~ "देखाउने यन्त्र हुन सक्छ ।)</p><p> तपाईँले भौतिक यन्त्रमा सानो चाल मात्र ल्याउदा पनि "
+#~ "गतिबर्धनका लागि एउटा उच्च मानले पर्दामा माउस सूचकको ठूलो चाल नेतृत्व गर्नेछ । धेरै उच्च "
+#~ "मान चयन गर्दा यसको परिणाम स्वरुप नियन्त्रण गर्न कठीन हुने गरि, पर्दामा माउस सूचक "
+#~ "उडी राख्छ ।</p>"
+
+#~ msgid "Pointer threshold:"
+#~ msgstr "सङ्केतक थ्रेसहोल्ड:"
+
+#~ msgid ""
+#~ "<p>The threshold is the smallest distance that the mouse pointer must "
+#~ "move on the screen before acceleration has any effect. If the movement is "
+#~ "smaller than the threshold, the mouse pointer moves as if the "
+#~ "acceleration was set to 1X;</p><p> thus, when you make small movements "
+#~ "with the physical device, there is no acceleration at all, giving you a "
+#~ "greater degree of control over the mouse pointer. With larger movements "
+#~ "of the physical device, you can move the mouse pointer rapidly to "
+#~ "different areas on the screen.</p>"
+#~ msgstr ""
+#~ "<p>थ्रेसहोल्ड गतिबर्धनको कुनै पनि प्रभाव भन्दा पहिले माउस देखाउने पर्दामा सर्ने सबैभन्दा "
+#~ "सानो दुरी हो । यदि चाल थ्रेसहोल्ड भन्दा सानो छ भने, माउस देखाउने 1X मा सेट भएको "
+#~ "गतिवर्धन अनुरुप सर्दछ;</p><p>त्यसैले, तपाईँलाई माउस देखाउमा नियन्त्रणको बृहत अंश दिइ, "
+#~ "भौतिक यन्त्रलाई थोरै सार्दा, त्यहाँ सबैमा गतिबर्धन हुदैँन । भौतिक यन्त्रको ठूलो चालमा, "
+#~ "तपाईँले पर्दाको विभिन्न क्षेत्रमा माउस देखाउने तत्काल सर्न सक्नुहुन्छ ।</p>"
+
+#~ msgid " msec"
+#~ msgstr " मिलि सेकेन्ड"
+
+#~ msgid "Double click interval:"
+#~ msgstr "डबल क्लिक अन्तराल:"
+
+#~ msgid ""
+#~ "The double click interval is the maximal time (in milliseconds) between "
+#~ "two mouse clicks which turns them into a double click. If the second "
+#~ "click happens later than this time interval after the first click, they "
+#~ "are recognized as two separate clicks."
+#~ msgstr ""
+#~ "डबल क्लिक अन्तराल तीनिहरूलाई डबल क्लिक विषयवस्तुमा फर्काउने दुई माउस क्लिक बीचको "
+#~ "अधिकतम समय (मिलिसेकेन्डमा) हो । यदि दोस्रो क्लिक यो समय अन्तराल पछि आउछ भने "
+#~ "त्यसपछि पहिलो क्लिकलाई दुई फरक क्लिकहरू अनुरुप चिनिन्छ ।"
+
+#~ msgid "Drag start time:"
+#~ msgstr "सुरुआत समय तान्नुहोस्:"
+
+#~ msgid ""
+#~ "If you click with the mouse (e.g. in a multi-line editor) and begin to "
+#~ "move the mouse within the drag start time, a drag operation will be "
+#~ "initiated."
+#~ msgstr ""
+#~ "यदि तपाईँले माउसमा क्लिक गरेमा (जस्तै: बहु-लाइन सम्पादकमा) र तान्ने सुरु समयमा माउस "
+#~ "सार्न सुरु गरेमा, तान्ने कार्य सुरुआत हुनेछ ।"
+
+#~ msgid "Drag start distance:"
+#~ msgstr "सुरुआत दूरी तान्नुहोस्:"
+
+#~ msgid ""
+#~ "If you click with the mouse and begin to move the mouse at least the drag "
+#~ "start distance, a drag operation will be initiated."
+#~ msgstr ""
+#~ "यदि तपाईँले माउसमा क्लिक गरेमा र कम्तिमा तान्ने सुरुआत दूरीमा माउस सार्न सुरु गरेमा, "
+#~ "तान्ने कार्य सुरुआत हुनेछ ।"
+
+#~ msgid "Mouse wheel scrolls by:"
+#~ msgstr "यसद्वारा माउस चक्र स्क्रोल गर्छ:"
+
+#~ msgid ""
+#~ "If you use the wheel of a mouse, this value determines the number of "
+#~ "lines to scroll for each wheel movement. Note that if this number exceeds "
+#~ "the number of visible lines, it will be ignored and the wheel movement "
+#~ "will be handled as a page up/down movement."
+#~ msgstr ""
+#~ "यदि तपाईँले माउसको चक्र प्रयोग गरेमा, यो मानले प्रत्येक चक्र चालका लागि स्क्रोल "
+#~ "गर्नुपर्ने लाइनको सङ्ख्या निर्धारण गर्छ । याद गर्नुहोस् यदि यो सङ्ख्या देखिने लाइनको "
+#~ "सङ्ख्या भन्दा बढी भएमा, यसलाई उपेक्षा गरिनेछ र चक्र चाललाई पृष्ठ तल/माथि चाल अनुरुप "
+#~ "ह्यान्डल गरिनेछ ।"
+
+#~ msgid "Mouse Navigation"
+#~ msgstr "माउस नेभिगेसन"
+
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "(नम प्याड प्रयोग गरेर) कुञ्जीपाटीबाट सङ्केतक सार्नुहोस्"
+
+#~ msgid "&Acceleration delay:"
+#~ msgstr "गतिबर्धन बिलम्व:"
+
+#~ msgid "R&epeat interval:"
+#~ msgstr "अन्तराल दोहोर्याउनुहोस्:"
+
+#~ msgid "Acceleration &time:"
+#~ msgstr "गतिबर्धन समय:"
+
+#~ msgid " pixel/sec"
+#~ msgstr " पिक्सेल/सेकेन्ड"
+
+#~ msgid "Ma&ximum speed:"
+#~ msgstr "अधिकतम गति:"
+
+#~ msgid "Acceleration &profile:"
+#~ msgstr "गतिबर्धन प्रोफाइल:"
+
+#~ msgid "Mouse"
+#~ msgstr "माउस"
+
+#~ msgid "(c) 1997 - 2005 Mouse developers"
+#~ msgstr "(c) 1997 - 2005 माउस विकासकर्ता"
+
+#~ msgid "Patrick Dowler"
+#~ msgstr "प्याट्रिक डाउलर"
+
+#~ msgid "Dirk A. Mueller"
+#~ msgstr "डिर्क ए. मुइलर"
+
+#~ msgid "David Faure"
+#~ msgstr "डेभिड फाउरे"
+
+#~ msgid "Bernd Gehrmann"
+#~ msgstr "बर्न्ड गेयरम्यान"
+
+#~ msgid "Rik Hemsley"
+#~ msgstr "रिक हेम्सले"
+
+#~ msgid "Brad Hughes"
+#~ msgstr "ब्राड हगेस"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "राल्फ नोल्डेन"
+
+#~ msgid "Brad Hards"
+#~ msgstr "ब्राड हार्ड्स"
+
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] " पिक्सेल"
+#~ msgstr[1] " पिक्सेल"
+
+#~ msgid " line"
+#~ msgid_plural " lines"
+#~ msgstr[0] "रेखा"
+#~ msgstr[1] "रेखा"
+
+#~ msgid "Mouse type: %1"
+#~ msgstr "माउस प्रकार: %1"
+
+#~ msgid ""
+#~ "RF channel 1 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "RF च्यानल १ सेट भएको छ । लिङ्क पुन: कृपया स्थापना गर्न माउसको जडान बटन थिच्नुहोस् ।"
+
+#~ msgid "Press Connect Button"
+#~ msgstr "जडान बटन थिच्नुहोस्"
+
+#~ msgid ""
+#~ "RF channel 2 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "RF च्यानल २ सेट भएको छ । कृपया लिङ्क पुन: स्थापना गर्न माउसको जडान बटन थिच्नुहोस् ।"
+
+#, fuzzy
+#~| msgid "none"
+#~ msgctxt "no cordless mouse"
+#~ msgid "none"
+#~ msgstr "कुनै पनि होइन"
+
+#~ msgid "Cordless Mouse"
+#~ msgstr "तार नभएको माउस"
+
+#~ msgid "Cordless Wheel Mouse"
+#~ msgstr "तार नभएको चक्र माउस"
+
+#~ msgid "Cordless MouseMan Wheel"
+#~ msgstr "तार नभएको माउस म्यान चक्र"
+
+#~ msgid "Cordless TrackMan Wheel"
+#~ msgstr "तार नभएको ट्र्याक म्यान चक्र"
+
+#~ msgid "TrackMan Live"
+#~ msgstr "ट्र्याक म्यान लाइभ"
+
+#~ msgid "Cordless TrackMan FX"
+#~ msgstr "तार नभएको ट्र्याक म्यान FX"
+
+#~ msgid "Cordless MouseMan Optical"
+#~ msgstr "तार नभएको माउस म्यान अप्टिकल"
+
+#~ msgid "Cordless Optical Mouse"
+#~ msgstr "तार नभएको अप्टिकल माउस"
+
+#~ msgid "Cordless MouseMan Optical (2ch)"
+#~ msgstr "तार नभएको माउस म्यान अप्टिकल (2ch)"
+
+#~ msgid "Cordless Optical Mouse (2ch)"
+#~ msgstr "तार नभएको अप्टिकल माउस (2ch)"
+
+#~ msgid "Cordless Mouse (2ch)"
+#~ msgstr "तार नभएको माउस (2ch)"
+
+#~ msgid "Cordless Optical TrackMan"
+#~ msgstr "तार नभएको अप्टिकल ट्र्याक म्यान"
+
+#~ msgid "MX700 Cordless Optical Mouse"
+#~ msgstr "तार नभएको अप्टिकल माउस MX700"
+
+#~ msgid "MX700 Cordless Optical Mouse (2ch)"
+#~ msgstr "तार नभएको अप्टिकल माउस MX700 (2ch)"
+
+#~ msgid "Unknown mouse"
+#~ msgstr "अज्ञात माउस"
+
+#~ msgid "Cordless Name"
+#~ msgstr "कर्डलेस नाम"
+
+#~ msgid "Sensor Resolution"
+#~ msgstr "सचेतक रिजोल्युसन"
+
+#~ msgid "400 counts per inch"
+#~ msgstr "प्रति इन्च ४०० गणना हुन्छ"
+
+#~ msgid "800 counts per inch"
+#~ msgstr "प्रति इन्च ८०० गणना हुन्छ"
+
+#~ msgid "Battery Level"
+#~ msgstr "ब्याट्री तह"
+
+#~ msgid "RF Channel"
+#~ msgstr "RF च्यानल"
+
+#~ msgid "Channel 1"
+#~ msgstr "च्यानल १"
+
+#~ msgid "Channel 2"
+#~ msgstr "च्यानल २"
+
+#~ msgid ""
+#~ "You have a Logitech Mouse connected, and libusb was found at compile "
+#~ "time, but it was not possible to access this mouse. This is probably "
+#~ "caused by a permissions problem - you should consult the manual on how to "
+#~ "fix this."
+#~ msgstr ""
+#~ "तपाईँसँग लोगिटेक माउस जडान गरिएको छ र कम्पाइलको समयमा लिबुस्ब फेला पारेको थियो, "
+#~ "तर यो माउसमा पहुँच प्राप्त गर्न सम्भव थिएन । यो सम्भवत अनुमतिको समस्याका कारणले हुन "
+#~ "सक्छ - तपाईँले यसलाई कसरी स्थिर गर्ने म्यानुअलको ध्यान राख्नु पर्छ ।"
+
+#~ msgid "KDE Classic"
+#~ msgstr "केडीई शास्त्रिय"
+
+#~ msgid "The default cursor theme in KDE 2 and 3"
+#~ msgstr "केडीई २ र ३ मा पूर्वानिर्धारित कर्सर विषयवस्तु"
+
+#~ msgid "No description available"
+#~ msgstr "विवरण उपलव्ध छैन"
+
+#~ msgid "Short"
+#~ msgstr "छोटो"
+
+#~ msgid "Long"
+#~ msgstr "लामो"

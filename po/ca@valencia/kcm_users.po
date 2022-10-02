@@ -1,0 +1,445 @@
+# Translation of kcm_users.po to Catalan (Valencian)
+# Copyright (C) 2020-2022 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Josep M. Ferrer <txemaq@gmail.com>, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-29 00:48+0000\n"
+"PO-Revision-Date: 2022-04-19 12:22+0200\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca@valencia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.12.0\n"
+"X-Accelerator-Marker: &\n"
+
+#: package/contents/ui/ChangePassword.qml:26
+#: package/contents/ui/UserDetailsPage.qml:166
+#, kde-format
+msgid "Change Password"
+msgstr "Canvi de contrasenya"
+
+#: package/contents/ui/ChangePassword.qml:41
+#, kde-format
+msgid "Password"
+msgstr "Contrasenya"
+
+#: package/contents/ui/ChangePassword.qml:55
+#, kde-format
+msgid "Confirm password"
+msgstr "Confirma la contrasenya"
+
+#: package/contents/ui/ChangePassword.qml:68
+#: package/contents/ui/CreateUser.qml:65
+#, kde-format
+msgid "Passwords must match"
+msgstr "Cal que les contrasenyes coincidisquen"
+
+#: package/contents/ui/ChangePassword.qml:73
+#, kde-format
+msgid "Set Password"
+msgstr "Establix la contrasenya"
+
+#: package/contents/ui/ChangeWalletPassword.qml:17
+#, kde-format
+msgid "Change Wallet Password?"
+msgstr "Voleu canviar la contrasenya de la cartera?"
+
+#: package/contents/ui/ChangeWalletPassword.qml:26
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Now that you have changed your login password, you may also want to change "
+"the password on your default KWallet to match it."
+msgstr ""
+"Ara que s'ha canviat la contrasenya de l'usuari, potser voleu canviar la "
+"contrasenya de la vostra KWallet predeterminada perquè coincidisquen."
+
+#: package/contents/ui/ChangeWalletPassword.qml:31
+#, kde-format
+msgid "What is KWallet?"
+msgstr "Què és KWallet?"
+
+#: package/contents/ui/ChangeWalletPassword.qml:41
+#, kde-format
+msgid ""
+"KWallet is a password manager that stores your passwords for wireless "
+"networks and other encrypted resources. It is locked with its own password "
+"which differs from your login password. If the two passwords match, it can "
+"be unlocked at login automatically so you don't have to enter the KWallet "
+"password yourself."
+msgstr ""
+"KWallet és un gestor de contrasenyes que emmagatzema les contrasenyes per a "
+"les xarxes sense fil i altres recursos encriptats. Està tancat amb una "
+"contrasenya pròpia que és diferent de la contrasenya d'usuari. Si les dues "
+"contrasenyes coincidixen, es bot desbloquejar automàticament en iniciar la "
+"sessió i així no cal introduir la contrasenya de KWallet."
+
+#: package/contents/ui/ChangeWalletPassword.qml:57
+#, kde-format
+msgid "Change Wallet Password"
+msgstr "Canvia la contrasenya de la cartera"
+
+#: package/contents/ui/ChangeWalletPassword.qml:66
+#, kde-format
+msgid "Leave Unchanged"
+msgstr "Deixa sense canviar"
+
+#: package/contents/ui/CreateUser.qml:16
+#, kde-format
+msgid "Create User"
+msgstr "Creació d'un usuari"
+
+#: package/contents/ui/CreateUser.qml:30
+#: package/contents/ui/UserDetailsPage.qml:134
+#, kde-format
+msgid "Name:"
+msgstr "Nom:"
+
+#: package/contents/ui/CreateUser.qml:34
+#: package/contents/ui/UserDetailsPage.qml:141
+#, kde-format
+msgid "Username:"
+msgstr "Nom d'usuari:"
+
+#: package/contents/ui/CreateUser.qml:44
+#: package/contents/ui/UserDetailsPage.qml:149
+#, kde-format
+msgid "Standard"
+msgstr "Estàndard"
+
+#: package/contents/ui/CreateUser.qml:45
+#: package/contents/ui/UserDetailsPage.qml:150
+#, kde-format
+msgid "Administrator"
+msgstr "Administrador"
+
+#: package/contents/ui/CreateUser.qml:48
+#: package/contents/ui/UserDetailsPage.qml:153
+#, kde-format
+msgid "Account type:"
+msgstr "Tipus de compte:"
+
+#: package/contents/ui/CreateUser.qml:53
+#, kde-format
+msgid "Password:"
+msgstr "Contrasenya:"
+
+#: package/contents/ui/CreateUser.qml:58
+#, kde-format
+msgid "Confirm password:"
+msgstr "Confirma la contrasenya:"
+
+#: package/contents/ui/CreateUser.qml:69
+#, kde-format
+msgid "Create"
+msgstr "Crea"
+
+#: package/contents/ui/FingerprintDialog.qml:57
+#, kde-format
+msgid "Configure Fingerprints"
+msgstr "Configura les empremtes dactilars"
+
+#: package/contents/ui/FingerprintDialog.qml:67
+#, kde-format
+msgid "Clear Fingerprints"
+msgstr "Neteja les empremtes dactilars"
+
+#: package/contents/ui/FingerprintDialog.qml:74
+#, kde-format
+msgid "Add"
+msgstr "Afig"
+
+#: package/contents/ui/FingerprintDialog.qml:83
+#: package/contents/ui/FingerprintDialog.qml:100
+#, kde-format
+msgid "Cancel"
+msgstr "Cancel·la"
+
+#: package/contents/ui/FingerprintDialog.qml:89
+#, kde-format
+msgid "Continue"
+msgstr "Continua"
+
+#: package/contents/ui/FingerprintDialog.qml:108
+#, kde-format
+msgid "Done"
+msgstr "Fet"
+
+#: package/contents/ui/FingerprintDialog.qml:131
+#, kde-format
+msgid "Enrolling Fingerprint"
+msgstr "Registre de les empremtes dactilars"
+
+#: package/contents/ui/FingerprintDialog.qml:137
+#, kde-format
+msgctxt ""
+"%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgstr "%1 repetidament el dit %2 al sensor d'empremtes dactilars."
+
+#: package/contents/ui/FingerprintDialog.qml:147
+#, kde-format
+msgid "Finger Enrolled"
+msgstr "S'ha registrat el dit"
+
+#: package/contents/ui/FingerprintDialog.qml:183
+#, kde-format
+msgid "Pick a finger to enroll"
+msgstr "Triu un dit per a registrar"
+
+#: package/contents/ui/FingerprintDialog.qml:247
+#, kde-format
+msgid "Re-enroll finger"
+msgstr "Torna a registrar el dit"
+
+#: package/contents/ui/FingerprintDialog.qml:265
+#, kde-format
+msgid "No fingerprints added"
+msgstr "No s'ha afegit cap empremta dactilar"
+
+#: package/contents/ui/main.qml:22
+#, kde-format
+msgid "Manage Users"
+msgstr "Gestió d'usuaris"
+
+#: package/contents/ui/main.qml:123
+#, kde-format
+msgid "Add New User"
+msgstr "Afig un usuari nou"
+
+#: package/contents/ui/UserDetailsPage.qml:89
+#, kde-format
+msgid "Choose a picture"
+msgstr "Trieu una imatge"
+
+#: package/contents/ui/UserDetailsPage.qml:120
+#, kde-format
+msgid "Change avatar"
+msgstr "Canvia l'avatar"
+
+#: package/contents/ui/UserDetailsPage.qml:162
+#, kde-format
+msgid "Email address:"
+msgstr "Adreça de correu electrònic:"
+
+#: package/contents/ui/UserDetailsPage.qml:186
+#, kde-format
+msgid "Delete files"
+msgstr "Suprimix els fitxers"
+
+#: package/contents/ui/UserDetailsPage.qml:193
+#, kde-format
+msgid "Keep files"
+msgstr "Conserva els fitxers"
+
+#: package/contents/ui/UserDetailsPage.qml:200
+#, kde-format
+msgid "Delete User…"
+msgstr "Suprimix l'usuari…"
+
+#: package/contents/ui/UserDetailsPage.qml:211
+#, kde-format
+msgid "Configure Fingerprint Authentication…"
+msgstr "Configura l'autenticació d'empremtes dactilars…"
+
+#: package/contents/ui/UserDetailsPage.qml:225
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Fingerprints can be used in place of a password when unlocking the screen "
+"and providing administrator permissions to applications and command-line "
+"programs that request them.<nl/><nl/>Logging into the system with your "
+"fingerprint is not yet supported."
+msgstr ""
+"Les empremtes dactilars es poden utilitzar en lloc d'una contrasenya per a "
+"desblocar la pantalla i proporcionar permís d'administrador a les "
+"aplicacions i als programes de la línia d'ordres que el requerisquen.<nl/"
+"><nl/>Encara no s'admet l'inici de sessió en el sistema amb l'empremta "
+"dactilar."
+
+#: package/contents/ui/UserDetailsPage.qml:235
+#, kde-format
+msgid "Change Avatar"
+msgstr "Canvia l'avatar"
+
+#: package/contents/ui/UserDetailsPage.qml:238
+#, kde-format
+msgid "It's Nothing"
+msgstr "No és res"
+
+#: package/contents/ui/UserDetailsPage.qml:239
+#, kde-format
+msgid "Feisty Flamingo"
+msgstr "Rosa flamenc intens"
+
+#: package/contents/ui/UserDetailsPage.qml:240
+#, kde-format
+msgid "Dragon's Fruit"
+msgstr "Pitaya"
+
+#: package/contents/ui/UserDetailsPage.qml:241
+#, kde-format
+msgid "Sweet Potato"
+msgstr "Moniato"
+
+#: package/contents/ui/UserDetailsPage.qml:242
+#, kde-format
+msgid "Ambient Amber"
+msgstr "Ambre ambient"
+
+#: package/contents/ui/UserDetailsPage.qml:243
+#, kde-format
+msgid "Sparkle Sunbeam"
+msgstr "Raig de sol lluent"
+
+#: package/contents/ui/UserDetailsPage.qml:244
+#, kde-format
+msgid "Lemon-Lime"
+msgstr "Llima - llima dolça"
+
+#: package/contents/ui/UserDetailsPage.qml:245
+#, kde-format
+msgid "Verdant Charm"
+msgstr "Encant verdenc"
+
+#: package/contents/ui/UserDetailsPage.qml:246
+#, kde-format
+msgid "Mellow Meadow"
+msgstr "Prat dolç"
+
+#: package/contents/ui/UserDetailsPage.qml:247
+#, kde-format
+msgid "Tepid Teal"
+msgstr "Anedó tebi"
+
+#: package/contents/ui/UserDetailsPage.qml:248
+#, kde-format
+msgid "Plasma Blue"
+msgstr "Blau plasma"
+
+#: package/contents/ui/UserDetailsPage.qml:249
+#, kde-format
+msgid "Pon Purple"
+msgstr "Porpra pujat"
+
+#: package/contents/ui/UserDetailsPage.qml:250
+#, kde-format
+msgid "Bajo Purple"
+msgstr "Porpra baix"
+
+#: package/contents/ui/UserDetailsPage.qml:251
+#, kde-format
+msgid "Burnt Charcoal"
+msgstr "Carbonet cremat"
+
+#: package/contents/ui/UserDetailsPage.qml:252
+#, kde-format
+msgid "Paper Perfection"
+msgstr "Paper perfecte"
+
+#: package/contents/ui/UserDetailsPage.qml:253
+#, kde-format
+msgid "Cafétera Brown"
+msgstr "Marró cafetera"
+
+#: package/contents/ui/UserDetailsPage.qml:254
+#, kde-format
+msgid "Rich Hardwood"
+msgstr "Fusta dura brillant"
+
+#: package/contents/ui/UserDetailsPage.qml:305
+#, kde-format
+msgid "Choose File…"
+msgstr "Tria un fitxer…"
+
+#: src/fingerprintmodel.cpp:147 src/fingerprintmodel.cpp:254
+#, kde-format
+msgid "No fingerprint device found."
+msgstr "No s'ha trobat cap dispositiu d'empremta dactilar."
+
+#: src/fingerprintmodel.cpp:313
+#, kde-format
+msgid "Retry scanning your finger."
+msgstr "Reintenta l'escaneig del dit."
+
+#: src/fingerprintmodel.cpp:315
+#, kde-format
+msgid "Swipe too short. Try again."
+msgstr "El lliscament és massa curt. Torneu-ho a intentar."
+
+#: src/fingerprintmodel.cpp:317
+#, kde-format
+msgid "Finger not centered on the reader. Try again."
+msgstr "El dit no està centrat en el lector. Torneu-ho a intentar."
+
+# skip-rule: kct-remove
+#: src/fingerprintmodel.cpp:319
+#, kde-format
+msgid "Remove your finger from the reader, and try again."
+msgstr "Retireu el dit del lector, i torneu-ho a intentar."
+
+#: src/fingerprintmodel.cpp:327
+#, kde-format
+msgid "Fingerprint enrollment has failed."
+msgstr "No s'ha pogut fer el registre de l'empremta digital."
+
+#: src/fingerprintmodel.cpp:330
+#, kde-format
+msgid ""
+"There is no space left for this device, delete other fingerprints to "
+"continue."
+msgstr ""
+"No queda espai en este dispositiu, suprimiu altres empremtes dactilars per "
+"continuar."
+
+#: src/fingerprintmodel.cpp:333
+#, kde-format
+msgid "The device was disconnected."
+msgstr "S'ha desconnectat el dispositiu."
+
+#: src/fingerprintmodel.cpp:338
+#, kde-format
+msgid "An unknown error has occurred."
+msgstr "S'ha produït un error desconegut."
+
+#: src/user.cpp:264
+#, kde-format
+msgid "Could not get permission to save user %1"
+msgstr "No s'ha pogut obtindre el permís per a guardar l'usuari %1"
+
+#: src/user.cpp:269
+#, kde-format
+msgid "There was an error while saving changes"
+msgstr "S'ha produït un error en guardar els canvis"
+
+#: src/user.cpp:364
+#, kde-format
+msgid "Failed to resize image: opening temp file failed"
+msgstr ""
+"No s'ha pogut redimensionar la imatge: ha fallat l'obertura del fitxer "
+"temporal"
+
+#: src/user.cpp:372
+#, kde-format
+msgid "Failed to resize image: writing to temp file failed"
+msgstr ""
+"No s'ha pogut redimensionar la imatge: ha fallat en escriure en el fitxer "
+"temporal"
+
+#: src/usermodel.cpp:138
+#, kde-format
+msgid "Your Account"
+msgstr "El vostre compte"
+
+#: src/usermodel.cpp:138
+#, kde-format
+msgid "Other Accounts"
+msgstr "Altres comptes"

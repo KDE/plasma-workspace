@@ -1,0 +1,83 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# , 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-11 00:47+0000\n"
+"PO-Revision-Date: 2010-03-12 04:59+0600\n"
+"Last-Translator: \n"
+"Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
+"Language: kk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: menu.cpp:99
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Show KRunner"
+msgstr ""
+
+#: menu.cpp:104
+#, kde-format
+msgid "Open Terminal"
+msgstr ""
+
+#: menu.cpp:108
+#, fuzzy, kde-format
+#| msgid "Lock Screen"
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Lock Screen"
+msgstr "Экранды бұғаттау"
+
+#: menu.cpp:117
+#, fuzzy, kde-format
+#| msgid "Leave..."
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Leave…"
+msgstr "Аяқтау..."
+
+#: menu.cpp:126
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Configure Display Settings…"
+msgstr ""
+
+#: menu.cpp:291
+#, fuzzy, kde-format
+#| msgid "Configure Contextual Menu Plugin"
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Configure Contextual Menu Plugin"
+msgstr "Контекстті мәзір плагинін баптау"
+
+#: menu.cpp:301
+#, fuzzy, kde-format
+#| msgid "[Other Actions]"
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "[Other Actions]"
+msgstr "[Басқа амалдары]"
+
+#: menu.cpp:304
+#, fuzzy, kde-format
+#| msgid "Wallpaper Actions"
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Wallpaper Actions"
+msgstr "Тұсқағаз амалдары"
+
+#: menu.cpp:308
+#, fuzzy, kde-format
+#| msgid "[Separator]"
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "[Separator]"
+msgstr "[Бөлгіш]"
+
+#, fuzzy
+#~| msgid "Run Command..."
+#~ msgctxt "plasma_containmentactions_contextmenu"
+#~ msgid "Run Command..."
+#~ msgstr "Команданы орындау..."

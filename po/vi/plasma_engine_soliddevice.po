@@ -1,0 +1,605 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Phu Hung Nguyen <phu.nguyen@kdemail.net>, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"PO-Revision-Date: 2021-09-03 10:07+0200\n"
+"Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
+"Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 20.12.2\n"
+
+#: soliddeviceengine.cpp:114
+msgid "Parent UDI"
+msgstr "UDI cha"
+
+#: soliddeviceengine.cpp:115
+msgid "Vendor"
+msgstr "Nhà cung cấp"
+
+#: soliddeviceengine.cpp:116
+msgid "Product"
+msgstr "Sản phẩm"
+
+#: soliddeviceengine.cpp:117
+msgid "Description"
+msgstr "Mô tả"
+
+#: soliddeviceengine.cpp:118
+msgid "Icon"
+msgstr "Biểu tượng"
+
+#: soliddeviceengine.cpp:119 soliddeviceengine.cpp:592
+msgid "Emblems"
+msgstr "Huy hiệu"
+
+#: soliddeviceengine.cpp:120 soliddeviceengine.cpp:476
+#: soliddeviceengine.cpp:482 soliddeviceengine.cpp:495
+msgid "State"
+msgstr "Tình trạng"
+
+#: soliddeviceengine.cpp:121 soliddeviceengine.cpp:477
+#: soliddeviceengine.cpp:483 soliddeviceengine.cpp:491
+#: soliddeviceengine.cpp:493
+msgid "Operation result"
+msgstr "Kết quả thao tác"
+
+#: soliddeviceengine.cpp:122
+msgid "Timestamp"
+msgstr "Mốc thời gian"
+
+#: soliddeviceengine.cpp:130
+msgid "Processor"
+msgstr "Bộ xử lí"
+
+#: soliddeviceengine.cpp:131
+msgid "Number"
+msgstr "Số"
+
+#: soliddeviceengine.cpp:132
+msgid "Max Speed"
+msgstr "Tốc độ tối đa"
+
+#: soliddeviceengine.cpp:133
+msgid "Can Change Frequency"
+msgstr "Có thể thay đổi tần số"
+
+#: soliddeviceengine.cpp:141
+msgid "Block"
+msgstr "Khối"
+
+#: soliddeviceengine.cpp:142
+msgid "Major"
+msgstr "Lớn"
+
+#: soliddeviceengine.cpp:143
+msgid "Minor"
+msgstr "Nhỏ"
+
+#: soliddeviceengine.cpp:144
+msgid "Device"
+msgstr "Thiết bị"
+
+#: soliddeviceengine.cpp:152
+msgid "Storage Access"
+msgstr "Truy cập bộ lưu trữ"
+
+#: soliddeviceengine.cpp:153 soliddeviceengine.cpp:507
+#: soliddeviceengine.cpp:606
+msgid "Accessible"
+msgstr "Truy cập được"
+
+#: soliddeviceengine.cpp:154 soliddeviceengine.cpp:508
+msgid "File Path"
+msgstr "Đường dẫn tệp"
+
+#: soliddeviceengine.cpp:169
+msgid "Storage Drive"
+msgstr "Ổ lưu trữ"
+
+#: soliddeviceengine.cpp:172
+msgid "Ide"
+msgstr "IDE"
+
+#: soliddeviceengine.cpp:172
+msgid "Usb"
+msgstr "USB"
+
+#: soliddeviceengine.cpp:172
+msgid "Ieee1394"
+msgstr "IEEE 1394"
+
+#: soliddeviceengine.cpp:173
+msgid "Scsi"
+msgstr "SCSI"
+
+#: soliddeviceengine.cpp:173
+msgid "Sata"
+msgstr "SATA"
+
+#: soliddeviceengine.cpp:173
+msgid "Platform"
+msgstr "Nền tảng"
+
+#: soliddeviceengine.cpp:175
+msgid "Hard Disk"
+msgstr "Đĩa cứng"
+
+#: soliddeviceengine.cpp:175
+msgid "Cdrom Drive"
+msgstr "Ổ CD-ROM"
+
+#: soliddeviceengine.cpp:175
+msgid "Floppy"
+msgstr "Đĩa mềm"
+
+#: soliddeviceengine.cpp:176
+msgid "Tape"
+msgstr "Băng"
+
+#: soliddeviceengine.cpp:176
+msgid "Compact Flash"
+msgstr "Compact Flash"
+
+#: soliddeviceengine.cpp:176
+msgid "Memory Stick"
+msgstr "Memory Stick"
+
+#: soliddeviceengine.cpp:177
+msgid "Smart Media"
+msgstr "Smart Media"
+
+#: soliddeviceengine.cpp:177
+msgid "SdMmc"
+msgstr "SDMMC"
+
+#: soliddeviceengine.cpp:177
+msgid "Xd"
+msgstr "xD"
+
+#: soliddeviceengine.cpp:179
+msgid "Bus"
+msgstr "Buýt"
+
+#: soliddeviceengine.cpp:180
+msgid "Drive Type"
+msgstr "Kiểu ổ"
+
+#: soliddeviceengine.cpp:181 soliddeviceengine.cpp:194
+#: soliddeviceengine.cpp:362 soliddeviceengine.cpp:376
+msgid "Removable"
+msgstr "Rút được"
+
+#: soliddeviceengine.cpp:182 soliddeviceengine.cpp:195
+#: soliddeviceengine.cpp:363 soliddeviceengine.cpp:377
+msgid "Hotpluggable"
+msgstr "Cắm nóng được"
+
+#: soliddeviceengine.cpp:204
+msgid "Optical Drive"
+msgstr "Ổ quang"
+
+#: soliddeviceengine.cpp:209
+msgid "CD-R"
+msgstr "CD-R"
+
+#: soliddeviceengine.cpp:212
+msgid "CD-RW"
+msgstr "CD-RW"
+
+#: soliddeviceengine.cpp:215
+msgid "DVD"
+msgstr "DVD"
+
+#: soliddeviceengine.cpp:218
+msgid "DVD-R"
+msgstr "DVD-R"
+
+#: soliddeviceengine.cpp:221
+msgid "DVD-RW"
+msgstr "DVD-RW"
+
+#: soliddeviceengine.cpp:224
+msgid "DVD-RAM"
+msgstr "DVD-RAM"
+
+#: soliddeviceengine.cpp:227
+msgid "DVD+R"
+msgstr "DVD+R"
+
+#: soliddeviceengine.cpp:230
+msgid "DVD+RW"
+msgstr "DVD+RW"
+
+#: soliddeviceengine.cpp:233
+msgid "DVD+DL"
+msgstr "DVD+DL"
+
+#: soliddeviceengine.cpp:236
+msgid "DVD+DLRW"
+msgstr "DVD+DLRW"
+
+#: soliddeviceengine.cpp:239
+msgid "BD"
+msgstr "BD"
+
+#: soliddeviceengine.cpp:242
+msgid "BD-R"
+msgstr "BD-R"
+
+#: soliddeviceengine.cpp:245
+msgid "BD-RE"
+msgstr "BD-RE"
+
+#: soliddeviceengine.cpp:248
+msgid "HDDVD"
+msgstr "HD DVD"
+
+#: soliddeviceengine.cpp:251
+msgid "HDDVD-R"
+msgstr "HD DVD-R"
+
+#: soliddeviceengine.cpp:254
+msgid "HDDVD-RW"
+msgstr "HD DVD-RW"
+
+#: soliddeviceengine.cpp:256
+msgid "Supported Media"
+msgstr "Phương tiện được hỗ trợ"
+
+#: soliddeviceengine.cpp:258
+msgid "Read Speed"
+msgstr "Tốc độ đọc"
+
+#: soliddeviceengine.cpp:259
+msgid "Write Speed"
+msgstr "Tốc độ ghi"
+
+#: soliddeviceengine.cpp:267
+msgid "Write Speeds"
+msgstr "Các tốc độ ghi"
+
+#: soliddeviceengine.cpp:275
+msgid "Storage Volume"
+msgstr "Ổ lưu trữ luận lí"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Other"
+msgstr "Khác"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Unused"
+msgstr "Không dùng đến"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "File System"
+msgstr "Hệ thống tệp"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Partition Table"
+msgstr "Bảng phân vùng"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Raid"
+msgstr "RAID"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Encrypted"
+msgstr "Mật mã hoá"
+
+#: soliddeviceengine.cpp:281 soliddeviceengine.cpp:283
+msgid "Usage"
+msgstr "Sử dụng"
+
+#: soliddeviceengine.cpp:283
+#, kde-format
+msgid "Unknown"
+msgstr "Không rõ"
+
+#: soliddeviceengine.cpp:286
+msgid "Ignored"
+msgstr "Bỏ qua"
+
+#: soliddeviceengine.cpp:287
+msgid "File System Type"
+msgstr "Kiểu hệ thống tệp"
+
+#: soliddeviceengine.cpp:288
+msgid "Label"
+msgstr "Nhãn"
+
+#: soliddeviceengine.cpp:289
+msgid "UUID"
+msgstr "UUID"
+
+#: soliddeviceengine.cpp:298
+msgid "Encrypted Container"
+msgstr "Vật chứa mật mã hoá"
+
+#: soliddeviceengine.cpp:310
+msgid "OpticalDisc"
+msgstr "Đĩa quang"
+
+#: soliddeviceengine.cpp:316
+msgid "Audio"
+msgstr "Âm thanh"
+
+#: soliddeviceengine.cpp:319
+msgid "Data"
+msgstr "Dữ liệu"
+
+#: soliddeviceengine.cpp:322
+msgid "Video CD"
+msgstr "CD hình"
+
+#: soliddeviceengine.cpp:325
+msgid "Super Video CD"
+msgstr "Siêu CD hình"
+
+#: soliddeviceengine.cpp:328
+msgid "Video DVD"
+msgstr "DVD hình"
+
+#: soliddeviceengine.cpp:331
+msgid "Video Blu Ray"
+msgstr "Blu-ray hình"
+
+#: soliddeviceengine.cpp:333
+msgid "Available Content"
+msgstr "Nội dung hiện có"
+
+#: soliddeviceengine.cpp:336
+msgid "Unknown Disc Type"
+msgstr "Kiểu đĩa không rõ"
+
+#: soliddeviceengine.cpp:336
+msgid "CD Rom"
+msgstr "CD-ROM"
+
+#: soliddeviceengine.cpp:336
+msgid "CD Recordable"
+msgstr "CD ghi được"
+
+#: soliddeviceengine.cpp:337
+msgid "CD Rewritable"
+msgstr "CD ghi lại được"
+
+#: soliddeviceengine.cpp:337
+msgid "DVD Rom"
+msgstr "DVD-ROM"
+
+#: soliddeviceengine.cpp:337
+msgid "DVD Ram"
+msgstr "DVD-RAM"
+
+#: soliddeviceengine.cpp:338
+msgid "DVD Recordable"
+msgstr "DVD ghi được"
+
+#: soliddeviceengine.cpp:338
+msgid "DVD Rewritable"
+msgstr "DVD ghi lại được"
+
+#: soliddeviceengine.cpp:339
+msgid "DVD Plus Recordable"
+msgstr "DVD cộng ghi được"
+
+#: soliddeviceengine.cpp:339
+msgid "DVD Plus Rewritable"
+msgstr "DVD cộng ghi lại được"
+
+#: soliddeviceengine.cpp:340
+msgid "DVD Plus Recordable Duallayer"
+msgstr "DVD cộng ghi được lớp kép"
+
+#: soliddeviceengine.cpp:340
+msgid "DVD Plus Rewritable Duallayer"
+msgstr "DVD cộng ghi lại được lớp kép"
+
+#: soliddeviceengine.cpp:341
+msgid "Blu Ray Rom"
+msgstr "BD-ROM"
+
+#: soliddeviceengine.cpp:341
+msgid "Blu Ray Recordable"
+msgstr "Blu-ray ghi được"
+
+#: soliddeviceengine.cpp:342
+msgid "Blu Ray Rewritable"
+msgstr "Blu-ray ghi lại được"
+
+#: soliddeviceengine.cpp:342
+msgid "HD DVD Rom"
+msgstr "HD DVD-ROM"
+
+#: soliddeviceengine.cpp:343
+msgid "HD DVD Recordable"
+msgstr "HD DVD ghi được"
+
+#: soliddeviceengine.cpp:343
+msgid "HD DVD Rewritable"
+msgstr "HD DVD ghi lại được"
+
+#: soliddeviceengine.cpp:345
+msgid "Disc Type"
+msgstr "Kiểu đĩa"
+
+#: soliddeviceengine.cpp:346
+msgid "Appendable"
+msgstr "Ghi thêm được"
+
+#: soliddeviceengine.cpp:347
+msgid "Blank"
+msgstr "Trống"
+
+#: soliddeviceengine.cpp:348
+msgid "Rewritable"
+msgstr "Ghi lại được"
+
+#: soliddeviceengine.cpp:349
+msgid "Capacity"
+msgstr "Dung lượng"
+
+#: soliddeviceengine.cpp:357
+msgid "Camera"
+msgstr "Máy ảnh"
+
+#: soliddeviceengine.cpp:359 soliddeviceengine.cpp:373
+msgid "Supported Protocols"
+msgstr "Giao thức được hỗ trợ"
+
+#: soliddeviceengine.cpp:360 soliddeviceengine.cpp:374
+msgid "Supported Drivers"
+msgstr "Trình điều khiển được hỗ trợ"
+
+#: soliddeviceengine.cpp:371
+msgid "Portable Media Player"
+msgstr "Trình phát phương tiện di động"
+
+#: soliddeviceengine.cpp:385
+msgid "Battery"
+msgstr "Pin"
+
+#: soliddeviceengine.cpp:388
+msgid "Unknown Battery"
+msgstr "Pin không rõ"
+
+#: soliddeviceengine.cpp:388
+msgid "PDA Battery"
+msgstr "Pin PDA"
+
+#: soliddeviceengine.cpp:388
+msgid "UPS Battery"
+msgstr "Pin UPS"
+
+#: soliddeviceengine.cpp:389
+msgid "Primary Battery"
+msgstr "Pin chính"
+
+#: soliddeviceengine.cpp:389
+msgid "Mouse Battery"
+msgstr "Pin chuột"
+
+#: soliddeviceengine.cpp:390
+msgid "Keyboard Battery"
+msgstr "Pin bàn phím"
+
+#: soliddeviceengine.cpp:390
+msgid "Keyboard Mouse Battery"
+msgstr "Pin bàn phím chuột"
+
+#: soliddeviceengine.cpp:391
+msgid "Camera Battery"
+msgstr "Pin máy ảnh"
+
+#: soliddeviceengine.cpp:391
+msgid "Phone Battery"
+msgstr "Pin điện thoại"
+
+#: soliddeviceengine.cpp:391
+msgid "Monitor Battery"
+msgstr "Pin màn hình"
+
+#: soliddeviceengine.cpp:392
+msgid "Gaming Input Battery"
+msgstr "Pin đầu vào trò chơi"
+
+#: soliddeviceengine.cpp:392
+msgid "Bluetooth Battery"
+msgstr "Pin Bluetooth"
+
+#: soliddeviceengine.cpp:395
+msgid "Not Charging"
+msgstr "Đang không sạc"
+
+#: soliddeviceengine.cpp:395
+msgid "Charging"
+msgstr "Đang sạc"
+
+#: soliddeviceengine.cpp:395
+msgid "Discharging"
+msgstr "Đang xả"
+
+#: soliddeviceengine.cpp:396
+msgid "Fully Charged"
+msgstr "Đã sạc đầy"
+
+#: soliddeviceengine.cpp:398
+msgid "Plugged In"
+msgstr "Đang cắm"
+
+#: soliddeviceengine.cpp:399
+msgid "Type"
+msgstr "Kiểu"
+
+#: soliddeviceengine.cpp:400
+msgid "Charge Percent"
+msgstr "Phần trăm sạc"
+
+#: soliddeviceengine.cpp:401
+msgid "Rechargeable"
+msgstr "Sạc lại được"
+
+#: soliddeviceengine.cpp:402
+msgid "Charge State"
+msgstr "Trạng thái sạc"
+
+#: soliddeviceengine.cpp:427
+msgid "Type Description"
+msgstr "Mô tả kiểu"
+
+#: soliddeviceengine.cpp:432
+msgid "Device Types"
+msgstr "Kiểu thiết bị"
+
+#: soliddeviceengine.cpp:456 soliddeviceengine.cpp:553
+msgid "Size"
+msgstr "Kích thước"
+
+#: soliddeviceengine.cpp:535
+#, kde-format
+msgid "Filesystem is not responding"
+msgstr "Hệ thống tệp đang không hồi đáp"
+
+#: soliddeviceengine.cpp:535
+#, kde-format
+msgid "Filesystem mounted at '%1' is not responding"
+msgstr "Hệ thống tệp gắn kết ở '%1' đang không hồi đáp"
+
+#: soliddeviceengine.cpp:551
+msgid "Free Space"
+msgstr "Không gian trống"
+
+#: soliddeviceengine.cpp:552
+msgid "Free Space Text"
+msgstr "Chữ không gian trống"
+
+#: soliddeviceengine.cpp:554
+msgid "Size Text"
+msgstr "Chữ kích thước"
+
+#: soliddeviceengine.cpp:580
+msgid "Temperature"
+msgstr "Nhiệt độ"
+
+#: soliddeviceengine.cpp:581
+msgid "Temperature Unit"
+msgstr "Đơn vị nhiệt độ"
+
+#: soliddeviceengine.cpp:625 soliddeviceengine.cpp:629
+msgid "In Use"
+msgstr "Đang dùng"

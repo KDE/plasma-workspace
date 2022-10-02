@@ -1,0 +1,35 @@
+# Translation of plasma_runner_placesrunner to Norwegian Bokmål
+#
+# Bjørn Steensrud <bjornst@skogkatt.homelinux.org>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"PO-Revision-Date: 2009-10-25 19:10+0100\n"
+"Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
+"Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
+"Language: nb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: placesrunner.cpp:29 placesrunner.cpp:83
+#, kde-format
+msgid "places"
+msgstr "steder"
+
+#: placesrunner.cpp:29
+#, kde-format
+msgid "Lists all file manager locations"
+msgstr "Lister alle filbehandlersteder"
+
+#: placesrunner.cpp:31
+#, kde-format
+msgid "Finds file manager locations that match :q:"
+msgstr "Finner filbehandlersteder som passer med :q:"

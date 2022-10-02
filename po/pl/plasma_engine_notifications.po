@@ -1,0 +1,34 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Marta Rybczyńska <kde-i18n@rybczynska.net>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_engine_notifications\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"PO-Revision-Date: 2009-06-18 23:19+0200\n"
+"Last-Translator: Marta Rybczyńska <kde-i18n@rybczynska.net>\n"
+"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 0.3\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+
+#: notificationaction.cpp:24
+#, kde-format
+msgid "The notification dataEngine is not set."
+msgstr "Nie ma ustawionego silnika danych powiadomień."
+
+#: notificationaction.cpp:34
+#, kde-format
+msgid "Invalid destination: %1"
+msgstr "Niepoprawny cel: %1"
+
+#: notificationsengine.cpp:88
+#, kde-format
+msgid "Unknown Application"
+msgstr "Nieznany program"

@@ -1,0 +1,609 @@
+# Language  translations for KDE package.
+# Copyright (C) 2014 This_file_is_part_of_KDE
+# This file is distributed under the same license as the KDE package.
+# Safa Alfulaij <safa1996alfulaij@gmail.com>, 2014.
+# Abdalrahim G. Fakhouri <abdilra7eem@yahoo.com>, 2014.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: KDE 5\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"PO-Revision-Date: 2021-06-21 20:38+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: Arabic <kde-i18n-ar@kde.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 21.07.70\n"
+"X-Project-Style: kde\n"
+
+#: soliddeviceengine.cpp:114
+msgid "Parent UDI"
+msgstr "UDI الأمّ"
+
+#: soliddeviceengine.cpp:115
+msgid "Vendor"
+msgstr "البائع"
+
+#: soliddeviceengine.cpp:116
+msgid "Product"
+msgstr "المنتج"
+
+#: soliddeviceengine.cpp:117
+msgid "Description"
+msgstr "الوصف"
+
+#: soliddeviceengine.cpp:118
+msgid "Icon"
+msgstr "الأيقونة"
+
+#: soliddeviceengine.cpp:119 soliddeviceengine.cpp:592
+msgid "Emblems"
+msgstr "الشعارات"
+
+#: soliddeviceengine.cpp:120 soliddeviceengine.cpp:476
+#: soliddeviceengine.cpp:482 soliddeviceengine.cpp:495
+msgid "State"
+msgstr "الحالة"
+
+#: soliddeviceengine.cpp:121 soliddeviceengine.cpp:477
+#: soliddeviceengine.cpp:483 soliddeviceengine.cpp:491
+#: soliddeviceengine.cpp:493
+msgid "Operation result"
+msgstr "نتيجة العملية"
+
+#: soliddeviceengine.cpp:122
+msgid "Timestamp"
+msgstr "الختم الزمني"
+
+#: soliddeviceengine.cpp:130
+msgid "Processor"
+msgstr "المعالج"
+
+#: soliddeviceengine.cpp:131
+msgid "Number"
+msgstr "الرقم"
+
+#: soliddeviceengine.cpp:132
+msgid "Max Speed"
+msgstr "أقصى سرعة"
+
+#: soliddeviceengine.cpp:133
+msgid "Can Change Frequency"
+msgstr "يمكن تغيير التردّد"
+
+#: soliddeviceengine.cpp:141
+msgid "Block"
+msgstr "كتلي"
+
+#: soliddeviceengine.cpp:142
+msgid "Major"
+msgstr "رئيسيّ"
+
+#: soliddeviceengine.cpp:143
+msgid "Minor"
+msgstr "ثانويّ"
+
+#: soliddeviceengine.cpp:144
+msgid "Device"
+msgstr "الجهاز"
+
+#: soliddeviceengine.cpp:152
+msgid "Storage Access"
+msgstr "وصول التخزين"
+
+#: soliddeviceengine.cpp:153 soliddeviceengine.cpp:507
+#: soliddeviceengine.cpp:606
+msgid "Accessible"
+msgstr "قابل للوصول"
+
+#: soliddeviceengine.cpp:154 soliddeviceengine.cpp:508
+msgid "File Path"
+msgstr "مسار الملف"
+
+#: soliddeviceengine.cpp:169
+msgid "Storage Drive"
+msgstr "قرص تخزين"
+
+#: soliddeviceengine.cpp:172
+msgid "Ide"
+msgstr "Ide"
+
+#: soliddeviceengine.cpp:172
+msgid "Usb"
+msgstr "Usb"
+
+#: soliddeviceengine.cpp:172
+msgid "Ieee1394"
+msgstr "Ieee1394"
+
+#: soliddeviceengine.cpp:173
+msgid "Scsi"
+msgstr "Scsi"
+
+#: soliddeviceengine.cpp:173
+msgid "Sata"
+msgstr "Sata"
+
+#: soliddeviceengine.cpp:173
+msgid "Platform"
+msgstr "المنصّة"
+
+#: soliddeviceengine.cpp:175
+msgid "Hard Disk"
+msgstr "قرص صلب"
+
+#: soliddeviceengine.cpp:175
+msgid "Cdrom Drive"
+msgstr "محرّك أقراص ضوئيّة"
+
+#: soliddeviceengine.cpp:175
+msgid "Floppy"
+msgstr "قرص مرن"
+
+#: soliddeviceengine.cpp:176
+msgid "Tape"
+msgstr "شريط"
+
+#: soliddeviceengine.cpp:176
+msgid "Compact Flash"
+msgstr "فلاش مضغوط"
+
+#: soliddeviceengine.cpp:176
+msgid "Memory Stick"
+msgstr "اصبع ذاكرة"
+
+#: soliddeviceengine.cpp:177
+msgid "Smart Media"
+msgstr "وسائط ذكية"
+
+#: soliddeviceengine.cpp:177
+msgid "SdMmc"
+msgstr "SdMmc"
+
+#: soliddeviceengine.cpp:177
+msgid "Xd"
+msgstr "Xd"
+
+#: soliddeviceengine.cpp:179
+msgid "Bus"
+msgstr "الناقل"
+
+#: soliddeviceengine.cpp:180
+msgid "Drive Type"
+msgstr "نوع الجهاز"
+
+#: soliddeviceengine.cpp:181 soliddeviceengine.cpp:194
+#: soliddeviceengine.cpp:362 soliddeviceengine.cpp:376
+msgid "Removable"
+msgstr "قابل للإزالة"
+
+#: soliddeviceengine.cpp:182 soliddeviceengine.cpp:195
+#: soliddeviceengine.cpp:363 soliddeviceengine.cpp:377
+msgid "Hotpluggable"
+msgstr "قابل للإزالة الفورية"
+
+#: soliddeviceengine.cpp:204
+msgid "Optical Drive"
+msgstr "قرص ضوئي"
+
+#: soliddeviceengine.cpp:209
+msgid "CD-R"
+msgstr "CD-R"
+
+#: soliddeviceengine.cpp:212
+msgid "CD-RW"
+msgstr "CD-RW"
+
+#: soliddeviceengine.cpp:215
+msgid "DVD"
+msgstr "DVD"
+
+#: soliddeviceengine.cpp:218
+msgid "DVD-R"
+msgstr "DVD-R"
+
+#: soliddeviceengine.cpp:221
+msgid "DVD-RW"
+msgstr "DVD-RW"
+
+#: soliddeviceengine.cpp:224
+msgid "DVD-RAM"
+msgstr "DVD-RAM"
+
+#: soliddeviceengine.cpp:227
+msgid "DVD+R"
+msgstr "DVD+R"
+
+#: soliddeviceengine.cpp:230
+msgid "DVD+RW"
+msgstr "DVD+RW"
+
+#: soliddeviceengine.cpp:233
+msgid "DVD+DL"
+msgstr "DVD+DL"
+
+#: soliddeviceengine.cpp:236
+msgid "DVD+DLRW"
+msgstr "DVD+DLRW"
+
+#: soliddeviceengine.cpp:239
+msgid "BD"
+msgstr "BD"
+
+#: soliddeviceengine.cpp:242
+msgid "BD-R"
+msgstr "BD-R"
+
+#: soliddeviceengine.cpp:245
+msgid "BD-RE"
+msgstr "BD-RE"
+
+#: soliddeviceengine.cpp:248
+msgid "HDDVD"
+msgstr "HDDVD"
+
+#: soliddeviceengine.cpp:251
+msgid "HDDVD-R"
+msgstr "HDDVD-R"
+
+#: soliddeviceengine.cpp:254
+msgid "HDDVD-RW"
+msgstr "HDDVD-RW"
+
+#: soliddeviceengine.cpp:256
+msgid "Supported Media"
+msgstr "الوسائط المدعومة"
+
+#: soliddeviceengine.cpp:258
+msgid "Read Speed"
+msgstr "سرعة القراءة"
+
+#: soliddeviceengine.cpp:259
+msgid "Write Speed"
+msgstr "سرعة الكتابة"
+
+#: soliddeviceengine.cpp:267
+msgid "Write Speeds"
+msgstr "سرعات الكتابة"
+
+#: soliddeviceengine.cpp:275
+msgid "Storage Volume"
+msgstr "حجم التخزين"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Other"
+msgstr "أخرى"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Unused"
+msgstr "غير مُستخدَمة"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "File System"
+msgstr "نظام ملفات"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Partition Table"
+msgstr "جدول تقسيم"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Raid"
+msgstr "Raid"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Encrypted"
+msgstr "مشفّر"
+
+#: soliddeviceengine.cpp:281 soliddeviceengine.cpp:283
+msgid "Usage"
+msgstr "الاستخدام"
+
+#: soliddeviceengine.cpp:283
+#, kde-format
+msgid "Unknown"
+msgstr "مجهول"
+
+#: soliddeviceengine.cpp:286
+msgid "Ignored"
+msgstr "مُتجاهَل"
+
+#: soliddeviceengine.cpp:287
+msgid "File System Type"
+msgstr "نوع نظام الملفات"
+
+#: soliddeviceengine.cpp:288
+msgid "Label"
+msgstr "اللصيقة"
+
+#: soliddeviceengine.cpp:289
+msgid "UUID"
+msgstr "UUID"
+
+#: soliddeviceengine.cpp:298
+msgid "Encrypted Container"
+msgstr "حاوي مشفّر"
+
+#: soliddeviceengine.cpp:310
+msgid "OpticalDisc"
+msgstr "قرص ضوئي"
+
+#: soliddeviceengine.cpp:316
+msgid "Audio"
+msgstr "صوتي"
+
+#: soliddeviceengine.cpp:319
+msgid "Data"
+msgstr "بيانات"
+
+#: soliddeviceengine.cpp:322
+msgid "Video CD"
+msgstr "CD فيديو"
+
+#: soliddeviceengine.cpp:325
+msgid "Super Video CD"
+msgstr "CD فيديو فائق"
+
+#: soliddeviceengine.cpp:328
+msgid "Video DVD"
+msgstr "DVD فيديو"
+
+#: soliddeviceengine.cpp:331
+msgid "Video Blu Ray"
+msgstr "فيديو بلوري"
+
+#: soliddeviceengine.cpp:333
+msgid "Available Content"
+msgstr "المحتوى المتوفّر"
+
+#: soliddeviceengine.cpp:336
+msgid "Unknown Disc Type"
+msgstr "نوع قرص مجهول"
+
+#: soliddeviceengine.cpp:336
+msgid "CD Rom"
+msgstr "قرص مضغوط للقراءة فقط"
+
+#: soliddeviceengine.cpp:336
+msgid "CD Recordable"
+msgstr "قرص مضغوط للكتابة"
+
+#: soliddeviceengine.cpp:337
+msgid "CD Rewritable"
+msgstr "قرص مضغوط إعادة الكتابة"
+
+#: soliddeviceengine.cpp:337
+msgid "DVD Rom"
+msgstr "قرص DVD للقراءة فقط"
+
+#: soliddeviceengine.cpp:337
+msgid "DVD Ram"
+msgstr "قرص  DVD Ram"
+
+#: soliddeviceengine.cpp:338
+msgid "DVD Recordable"
+msgstr "قرص DVD للكتابة"
+
+#: soliddeviceengine.cpp:338
+msgid "DVD Rewritable"
+msgstr "قرص DVD لإعادة الكتابة"
+
+#: soliddeviceengine.cpp:339
+msgid "DVD Plus Recordable"
+msgstr "قرص DVD Plus للكتابة"
+
+#: soliddeviceengine.cpp:339
+msgid "DVD Plus Rewritable"
+msgstr "قرص DVD Plus لإعادة الكتابة"
+
+#: soliddeviceengine.cpp:340
+msgid "DVD Plus Recordable Duallayer"
+msgstr "قرص DVD Plus للكتابة ثنائي الطبقات"
+
+#: soliddeviceengine.cpp:340
+msgid "DVD Plus Rewritable Duallayer"
+msgstr "قرص DVD Plus لإعادة الكتابة ثنائيّ الطبقات"
+
+#: soliddeviceengine.cpp:341
+msgid "Blu Ray Rom"
+msgstr "Blu Ray Rom"
+
+#: soliddeviceengine.cpp:341
+msgid "Blu Ray Recordable"
+msgstr "Blu Ray Recordable"
+
+#: soliddeviceengine.cpp:342
+msgid "Blu Ray Rewritable"
+msgstr "Blu Ray Rewritable"
+
+#: soliddeviceengine.cpp:342
+msgid "HD DVD Rom"
+msgstr "HD DVD Rom"
+
+#: soliddeviceengine.cpp:343
+msgid "HD DVD Recordable"
+msgstr "HD DVD Recordable"
+
+#: soliddeviceengine.cpp:343
+msgid "HD DVD Rewritable"
+msgstr "HD DVD Rewritable"
+
+#: soliddeviceengine.cpp:345
+msgid "Disc Type"
+msgstr "نوع القرص"
+
+#: soliddeviceengine.cpp:346
+msgid "Appendable"
+msgstr "قابل للإلحاق"
+
+#: soliddeviceengine.cpp:347
+msgid "Blank"
+msgstr "فارغ"
+
+#: soliddeviceengine.cpp:348
+msgid "Rewritable"
+msgstr "قابل لإعادة الكتابة"
+
+#: soliddeviceengine.cpp:349
+msgid "Capacity"
+msgstr "السعة"
+
+#: soliddeviceengine.cpp:357
+msgid "Camera"
+msgstr "كاميرا"
+
+#: soliddeviceengine.cpp:359 soliddeviceengine.cpp:373
+msgid "Supported Protocols"
+msgstr "الموافيق المدعومة"
+
+#: soliddeviceengine.cpp:360 soliddeviceengine.cpp:374
+msgid "Supported Drivers"
+msgstr "المشغّلات المدعومة"
+
+#: soliddeviceengine.cpp:371
+msgid "Portable Media Player"
+msgstr "مشغّل وسائط محمول"
+
+#: soliddeviceengine.cpp:385
+msgid "Battery"
+msgstr "بطارية"
+
+#: soliddeviceengine.cpp:388
+msgid "Unknown Battery"
+msgstr "بطارية مجهولة"
+
+#: soliddeviceengine.cpp:388
+msgid "PDA Battery"
+msgstr "بطارية PDA"
+
+#: soliddeviceengine.cpp:388
+msgid "UPS Battery"
+msgstr "بطارية UPS"
+
+#: soliddeviceengine.cpp:389
+msgid "Primary Battery"
+msgstr "بطارية أساسية"
+
+#: soliddeviceengine.cpp:389
+msgid "Mouse Battery"
+msgstr "بطارية فأرة"
+
+#: soliddeviceengine.cpp:390
+msgid "Keyboard Battery"
+msgstr "بطارية لوحة مفاتيح"
+
+#: soliddeviceengine.cpp:390
+msgid "Keyboard Mouse Battery"
+msgstr "بطارية فأرة ولوحة مفاتيح"
+
+#: soliddeviceengine.cpp:391
+msgid "Camera Battery"
+msgstr "بطارية كاميرا"
+
+#: soliddeviceengine.cpp:391
+msgid "Phone Battery"
+msgstr "بطارية هاتف"
+
+#: soliddeviceengine.cpp:391
+msgid "Monitor Battery"
+msgstr "بطارية شاشة"
+
+#: soliddeviceengine.cpp:392
+msgid "Gaming Input Battery"
+msgstr "بطارية إدخال ألعاب"
+
+#: soliddeviceengine.cpp:392
+msgid "Bluetooth Battery"
+msgstr "بطارية بلوتوث"
+
+#: soliddeviceengine.cpp:395
+msgid "Not Charging"
+msgstr "لا تُشحن"
+
+#: soliddeviceengine.cpp:395
+msgid "Charging"
+msgstr "تشحن"
+
+#: soliddeviceengine.cpp:395
+msgid "Discharging"
+msgstr "تُفرِّغ"
+
+#: soliddeviceengine.cpp:396
+msgid "Fully Charged"
+msgstr "مشحونة بالكامل"
+
+#: soliddeviceengine.cpp:398
+msgid "Plugged In"
+msgstr "موصولة بالكهرباء"
+
+#: soliddeviceengine.cpp:399
+msgid "Type"
+msgstr "النوع"
+
+#: soliddeviceengine.cpp:400
+msgid "Charge Percent"
+msgstr "نسبة الشحن"
+
+#: soliddeviceengine.cpp:401
+msgid "Rechargeable"
+msgstr "قابلة لإعادة الشحن"
+
+#: soliddeviceengine.cpp:402
+msgid "Charge State"
+msgstr "حالة الشحن"
+
+#: soliddeviceengine.cpp:427
+msgid "Type Description"
+msgstr "وصف النوع"
+
+#: soliddeviceengine.cpp:432
+msgid "Device Types"
+msgstr "أنواع الأجهزة"
+
+#: soliddeviceengine.cpp:456 soliddeviceengine.cpp:553
+msgid "Size"
+msgstr "الحجم"
+
+#: soliddeviceengine.cpp:535
+#, kde-format
+msgid "Filesystem is not responding"
+msgstr "نظام الملفات لا يستجيب"
+
+#: soliddeviceengine.cpp:535
+#, kde-format
+msgid "Filesystem mounted at '%1' is not responding"
+msgstr "نظام الملفات المربوط في '%1' لا يستجيب"
+
+#: soliddeviceengine.cpp:551
+msgid "Free Space"
+msgstr "المساحة الحرّة"
+
+#: soliddeviceengine.cpp:552
+msgid "Free Space Text"
+msgstr "نصّ المساحة الحرّة"
+
+#: soliddeviceengine.cpp:554
+msgid "Size Text"
+msgstr "حجم النص"
+
+#: soliddeviceengine.cpp:580
+msgid "Temperature"
+msgstr "درجة الحرارة"
+
+#: soliddeviceengine.cpp:581
+msgid "Temperature Unit"
+msgstr "وحدة درجة الحرارة"
+
+#: soliddeviceengine.cpp:625 soliddeviceengine.cpp:629
+msgid "In Use"
+msgstr "مستخدَمة"

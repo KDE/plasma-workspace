@@ -1,0 +1,181 @@
+# Translation of krunner_sessions to Korean.
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kdebase package.
+# Shinjo Park <kde@peremen.name>, 2008, 2009, 2011, 2019, 2020, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner_sessions\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-01 00:45+0000\n"
+"PO-Revision-Date: 2022-02-20 22:31+0100\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 21.08.1\n"
+
+#: sessionrunner.cpp:28 sessionrunner.cpp:64
+#, kde-format
+msgctxt "log out command"
+msgid "logout"
+msgstr "로그아웃"
+
+#: sessionrunner.cpp:28
+#, kde-format
+msgid "Logs out, exiting the current desktop session"
+msgstr "로그아웃, 현재 데스크톱 세션 끝내기"
+
+#: sessionrunner.cpp:29 sessionrunner.cpp:81
+#, kde-format
+msgctxt "shut down computer command"
+msgid "shut down"
+msgstr "끄기"
+
+#: sessionrunner.cpp:29
+#, kde-format
+msgid "Turns off the computer"
+msgstr "컴퓨터 끄기"
+
+#: sessionrunner.cpp:33 sessionrunner.cpp:90
+#, kde-format
+msgctxt "lock screen command"
+msgid "lock"
+msgstr "잠그기"
+
+#: sessionrunner.cpp:33
+#, kde-format
+msgid "Locks the current sessions and starts the screen saver"
+msgstr "현재 화면을 잠그고 화면 보호기를 시작하기"
+
+#: sessionrunner.cpp:36 sessionrunner.cpp:72
+#, kde-format
+msgctxt "restart computer command"
+msgid "restart"
+msgstr "재시작"
+
+#: sessionrunner.cpp:36
+#, kde-format
+msgid "Reboots the computer"
+msgstr "컴퓨터 다시 시작"
+
+#: sessionrunner.cpp:37 sessionrunner.cpp:73
+#, kde-format
+msgctxt "restart computer command"
+msgid "reboot"
+msgstr "재부팅"
+
+#: sessionrunner.cpp:40
+#, kde-format
+msgctxt "switch user command"
+msgid "switch"
+msgstr "전환"
+
+#: sessionrunner.cpp:41
+#, kde-format
+msgctxt "switch user command"
+msgid "switch :q:"
+msgstr "전환 :q:"
+
+#: sessionrunner.cpp:42
+#, kde-format
+msgid ""
+"Switches to the active session for the user :q:, or lists all active "
+"sessions if :q: is not provided"
+msgstr ""
+"사용자 :q:의 세션으로 전환하거나, :q:을(를) 지정하지 않으면 모든 활성 세션을 "
+"표시합니다"
+
+#: sessionrunner.cpp:45 sessionrunner.cpp:130
+#, kde-format
+msgid "switch user"
+msgstr "사용자 전환"
+
+#: sessionrunner.cpp:45
+#, kde-format
+msgid "Starts a new session as a different user"
+msgstr "새 사용자로 세션 시작하기"
+
+#: sessionrunner.cpp:46 sessionrunner.cpp:130
+#, kde-format
+msgid "new session"
+msgstr "새 세션"
+
+#: sessionrunner.cpp:50
+#, kde-format
+msgid "Lists all sessions"
+msgstr "모든 세션 표시"
+
+#: sessionrunner.cpp:64
+#, kde-format
+msgid "log out"
+msgstr "로그아웃"
+
+#: sessionrunner.cpp:66
+#, kde-format
+msgctxt "log out command"
+msgid "Logout"
+msgstr "로그아웃"
+
+#: sessionrunner.cpp:75
+#, kde-format
+msgid "Restart the computer"
+msgstr "컴퓨터 다시 시작"
+
+#: sessionrunner.cpp:82
+#, kde-format
+msgctxt "shut down computer command"
+msgid "shutdown"
+msgstr "끄기"
+
+#: sessionrunner.cpp:84
+#, kde-format
+msgid "Shut down the computer"
+msgstr "컴퓨터 끄기"
+
+#: sessionrunner.cpp:93
+#, kde-format
+msgid "Lock the screen"
+msgstr "화면 잠그기"
+
+#: sessionrunner.cpp:115
+#, kde-format
+msgctxt "User sessions"
+msgid "sessions"
+msgstr "세션"
+
+#: sessionrunner.cpp:136
+#, kde-format
+msgid "Switch User"
+msgstr "사용자 전환"
+
+#: sessionrunner.cpp:211
+#, kde-format
+msgid "Warning - New Session"
+msgstr "경고 - 새 세션"
+
+#: sessionrunner.cpp:212
+#, kde-format
+msgid ""
+"<p>You have chosen to open another desktop session.<br />The current session "
+"will be hidden and a new login screen will be displayed.<br />An F-key is "
+"assigned to each session; F%1 is usually assigned to the first session, F%2 "
+"to the second session and so on. You can switch between sessions by pressing "
+"Ctrl, Alt and the appropriate F-key at the same time. Additionally, the "
+"Plasma Panel and Desktop menus have actions for switching between sessions.</"
+"p>"
+msgstr ""
+"<p>새 데스크톱 세션을 시작하려고 합니다.<br />현재 세션은 숨겨지고 새 로그인 "
+"화면이 표시됩니다.<br />각각 세션별로 기능 키가 할당되며 F%1 키가 첫 번째 세"
+"션, F%2 키가 두 번째 세션과 같은 식으로 할당됩니다. 세션을 바꾸려면 Ctrl, "
+"Alt 키를 누르면서 세션별 F 키를 누르면 됩니다. Plasma 패널과 바탕 화면에 세"
+"션 전환 메뉴가 생깁니다.</p>"
+
+#~ msgid "New Session"
+#~ msgstr "새 세션"
+
+#~ msgid "&Start New Session"
+#~ msgstr "새 세션 시작하기(&S)"

@@ -1,0 +1,38 @@
+# translation of kio_settings.po to Kannada
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Umesh Rudrapatna <urudrapatna@yahoo.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: kio_settings\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-08 00:48+0000\n"
+"PO-Revision-Date: 2007-07-09 12:03+0530\n"
+"Last-Translator: Umesh Rudrapatna <urudrapatna@yahoo.com>\n"
+"Language-Team: Kannada <kde-l10n-kn@kde.org>\n"
+"Language: kn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: kio_applications.cpp:122
+#, kde-format
+msgid "Applications"
+msgstr "ಅನ್ವಯಿಕಗಳು (applications)"
+
+#: kio_applications.cpp:122
+#, kde-format
+msgid "Programs"
+msgstr "ಕ್ರಮವಿಧಿಗಳು (programs)"
+
+#: kio_applications.cpp:131
+#, fuzzy, kde-format
+#| msgid "Unknown settings folder"
+msgid "Unknown application folder"
+msgstr "ಗೊತ್ತಿಲ್ಲದ ಸಂಯೋಜನಾ ಕಡತಕೋಶ"
+
+#~ msgid "Settings"
+#~ msgstr "ಸಂಯೋಜನೆಗಳು"

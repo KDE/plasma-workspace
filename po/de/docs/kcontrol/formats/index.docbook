@@ -1,0 +1,83 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % German "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="formats" lang="&language;">
+<articleinfo>
+<title
+>Formate</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Krishna.Tateneni; &Krishna.Tateneni.mail;</author>
+<othercredit role="translator"
+><firstname
+>Matthias</firstname
+><surname
+>Kiefer</surname
+><contrib
+>Deutsche Übersetzung</contrib
+></othercredit
+> 
+ </authorgroup>
+
+	  <date
+>2015-05-18</date>
+	  <releaseinfo
+>Plasma 5.3</releaseinfo>
+
+	  <keywordset>
+		<keyword
+>KDE</keyword>
+		<keyword
+>Systemeinstellungen</keyword>
+		<keyword
+>Regionales</keyword>
+		<keyword
+>Land</keyword>
+		<keyword
+>Sprache</keyword>
+		<keyword
+>Zahlen</keyword>
+		<keyword
+>Währung</keyword>
+	  </keywordset>
+</articleinfo>
+
+<para
+>Dieses Modul der &kde;-&systemsettings; erlaubt es Ihnen, Einstellungen vorzunehmen, die auf Gegebenheiten der Region beruhen, in der Sie leben. </para>
+
+<para
+>Normalerweise reicht es aus, wenn Sie die Region auswählen, in der Sie leben. Die anderen Einstellungen werden dann passend gesetzt. </para>
+
+<para
+>Unten in diesem Modul können Sie in einer Vorschau sehen, wie sich die von Ihnen gewählten Einstellungen auswirken und welches Maßsystem verwendet wird. Zusätzlich zu den Zahlen können Sie sehen, wie Geldbeträge sowie ausführliche und kurze Datums- und Zeitangaben dargestellt werden. Änderungen an den Einstellungen können Sie in der Vorschau überprüfen, bevor Sie sie tatsächlich anwenden. </para>
+
+<para
+>Das Auswahlfeld <guilabel
+>Region</guilabel
+> enthält eine Liste der verfügbaren Länder und zeigt das momentan ausgewählte Land an. Falls <quote
+>Systemeinstellung</quote
+> angezeigt wird, haben Sie kein Land eingestellt, weshalb das vom System eingestellte Land verwendet und angezeigt wird.  </para>
+
+<para
+>Wenn Sie unterschiedliche einzelne Einstellungen verwenden möchten, wählen Sie <guilabel
+>Detaillierte Einstellungen</guilabel
+> und wählen das Format für <guilabel
+>Zahlen</guilabel
+>, <guilabel
+>Zeit</guilabel
+>, <guilabel
+>Währung</guilabel
+>, <guilabel
+>Maßsystem</guilabel
+> oder Regeln für <guilabel
+>Sortierung</guilabel
+> in den Auswahlfeldern. </para>
+
+</article>

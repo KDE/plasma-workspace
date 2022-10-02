@@ -1,0 +1,92 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Serdar Soytetir <tulliana@gmail.com>, 2009.
+# Emir SARI <emir_sari@icloud.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_engine_keystate\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"PO-Revision-Date: 2022-03-12 15:27+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: keystate.cpp:15
+msgid "Shift"
+msgstr "Shift"
+
+#: keystate.cpp:16
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: keystate.cpp:17
+msgid "Alt"
+msgstr "Alt"
+
+#: keystate.cpp:18
+msgid "Meta"
+msgstr "Meta"
+
+#: keystate.cpp:19
+msgid "Super"
+msgstr "Süper"
+
+#: keystate.cpp:20
+msgid "Hyper"
+msgstr "Hiper"
+
+#: keystate.cpp:21
+msgid "AltGr"
+msgstr "AltGr"
+
+#: keystate.cpp:22
+msgid "Num Lock"
+msgstr "Num Lock"
+
+#: keystate.cpp:23
+msgid "Caps Lock"
+msgstr "Caps Lock"
+
+#: keystate.cpp:24
+msgid "Scroll Lock"
+msgstr "Scroll Lock"
+
+#: keystate.cpp:26
+msgid "Left Button"
+msgstr "Sol Ok Düğmesi"
+
+#: keystate.cpp:27
+msgid "Right Button"
+msgstr "Sağ Ok Düğmesi"
+
+#: keystate.cpp:28
+msgid "Middle Button"
+msgstr "Orta Düğme"
+
+#: keystate.cpp:29
+msgid "First X Button"
+msgstr "İlk X Düğmesi"
+
+#: keystate.cpp:30
+msgid "Second X Button"
+msgstr "İkinci X Düğmesi"
+
+#: keystate.cpp:44 keystate.cpp:54 keystate.cpp:81 keystate.cpp:102
+#: keystate.cpp:110
+msgid "Pressed"
+msgstr "Basıldı"
+
+#: keystate.cpp:45 keystate.cpp:88 keystate.cpp:111
+msgid "Latched"
+msgstr "Tutturuldu"
+
+#: keystate.cpp:46 keystate.cpp:95 keystate.cpp:112
+msgid "Locked"
+msgstr "Kilitlendi"

@@ -1,0 +1,104 @@
+# translation of freespacenotifier.po to Gujarati
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sweta Kothari <swkothar@redhat.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: freespacenotifier\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-10-20 00:19+0000\n"
+"PO-Revision-Date: 2010-12-21 16:10+0530\n"
+"Last-Translator: Sweta Kothari <swkothar@redhat.com>\n"
+"Language-Team: Gujarati\n"
+"Language: gu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: freespacenotifier.cpp:91
+#, fuzzy, kde-format
+#| msgctxt "Allows the user to configure the warning notification being shown"
+#| msgid "Configure Warning"
+msgid "Configure Warning…"
+msgstr "ચેતવણીને રૂપરેખાંકિત કરો"
+
+#: freespacenotifier.cpp:95
+#, kde-format
+msgid "Open in Filelight"
+msgstr ""
+
+#: freespacenotifier.cpp:98
+#, fuzzy, kde-format
+#| msgctxt "Opens a file manager like dolphin"
+#| msgid "Open File Manager"
+msgid "Open in File Manager"
+msgstr "ફાઇલ સંચાલક ખોલો"
+
+#. i18n: ectx: label, entry (minimumSpace), group (General)
+#: freespacenotifier.kcfg:9
+#, kde-format
+msgid "Minimum free space before user starts being notified."
+msgstr "લઘુત્તમ મુક્ત સ્પેસ જેના પછી વપરાશકર્તાને સૂચિત કરવામાં આવે."
+
+#. i18n: ectx: label, entry (enableNotification), group (General)
+#: freespacenotifier.kcfg:15
+#, kde-format
+msgid "Is the free space notification enabled."
+msgstr "મુક્ત સ્પેસ સૂચિત કરવાનું સક્રિય છે."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
+#: freespacenotifier_prefs_base.ui:17
+#, kde-format
+msgid "Enable low disk space warning"
+msgstr "ઓછી ડિસ્ક સ્પેસ ચેતવણીને સક્રિય કરો"
+
+#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
+#: freespacenotifier_prefs_base.ui:27
+#, kde-format
+msgid "Warn when free space is below:"
+msgstr "જયારે નીચે મુજબની મુક્ત સ્પેસ હોય ત્યારે ચેતવણી આપો:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
+#: freespacenotifier_prefs_base.ui:37
+#, kde-format
+msgid " MiB"
+msgstr " MiB"
+
+#: module.cpp:37
+#, kde-format
+msgid ""
+"Your Home folder is running out of disk space, you have %1 MiB remaining "
+"(%2%)."
+msgstr ""
+
+#: module.cpp:46
+#, kde-format
+msgid ""
+"Your Root partition is running out of disk space, you have %1 MiB remaining "
+"(%2%)."
+msgstr ""
+
+#: module.cpp:63
+#, kde-format
+msgctxt "The settings dialog main page name, as in 'general settings'"
+msgid "General"
+msgstr "સામાન્ય"
+
+#~ msgctxt ""
+#~ "Warns the user that the system is running low on space on his home "
+#~ "folder, indicating the percentage and absolute MiB size remaining, and "
+#~ "asks if the user wants to do something about it"
+#~ msgid ""
+#~ "You are running low on disk space on your home folder (currently %2%, %1 "
+#~ "MiB free).\n"
+#~ "Would you like to run a file manager to free some disk space?"
+#~ msgstr ""
+#~ "તમે તમારા ઘર ફોલ્ડર પર ડિસ્ક જગ્યા પર ઓછી છે (હાલમાં %2%, %1 MiB મુક્ત).\n"
+#~ "શું તમને અમુક ડિસ્ક જગ્યાને મુક્ત રાખવા ફાઇલ સંચાલકને ચલાવવાનું ગમે છે?"
+
+#~ msgctxt "Closes the notification"
+#~ msgid "Do Nothing"
+#~ msgstr "કંઈ ન કરો"

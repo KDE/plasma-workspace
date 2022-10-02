@@ -1,0 +1,41 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Danishka Navin <danishka@gmail.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-17 00:47+0000\n"
+"PO-Revision-Date: 2009-11-09 23:27+0530\n"
+"Last-Translator: Danishka Navin <danishka@gmail.com>\n"
+"Language-Team: Sinhala <danishka@gmail.com>\n"
+"Language: si\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: calculatorrunner.cpp:33
+#, fuzzy, kde-format
+#| msgid ""
+#| "Calculates the value of :q: when :q: is made up of numbers and "
+#| "mathematical symbols such as +, -, /, * and ^."
+msgid ""
+"Calculates the value of :q: when :q: is made up of numbers and mathematical "
+"symbols such as +, -, /, *, ! and ^."
+msgstr ""
+":q: සංඛ්‍යා වලින් හා  +, -, /, * හා ^ වැනි ගණිතමය සංඛේත වලින් සෑදී ඇති විට අගය ගණනය "
+"කරන්න."
+
+#: calculatorrunner.cpp:39
+#, kde-format
+msgid "Copy to Clipboard"
+msgstr ""
+
+#: calculatorrunner.cpp:129
+#, kde-format
+msgctxt "The result of the calculation is only an approximation"
+msgid "Approximation"
+msgstr ""

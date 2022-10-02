@@ -1,0 +1,534 @@
+# translation of kcmfonts.po to Persian
+# Nazanin Kazemi <kazemi@itland.ir>, 2006, 2007.
+# Tahereh Dadkhahfar <dadkhahfar@itland.ir>, 2006.
+# MaryamSadat Razavi <razavi@itland.ir>, 2006.
+# Nasim Daniarzadeh <daniarzadeh@itland.ir>, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmfonts\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-03 00:45+0000\n"
+"PO-Revision-Date: 2007-09-02 12:23+0330\n"
+"Last-Translator: Nazanin Kazemi <kazemi@itland.ir>\n"
+"Language-Team: Persian <kde-i18n-fa@kde.org>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Force fonts DPI:"
+msgid "Force font DPI Wayland"
+msgstr "قلمهای اجباری DPI"
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Force fonts DPI:"
+msgid "Force font DPI on X11"
+msgstr "قلمهای اجباری DPI"
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "General font"
+msgstr "عمومی"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, fuzzy, kde-format
+#| msgid "Fixed width"
+msgid "Fixed width font"
+msgstr "عرض ثابت"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, fuzzy, kde-format
+#| msgid "Small"
+msgid "Small font"
+msgstr "کوچک"
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, fuzzy, kde-format
+#| msgid "Toolbar"
+msgid "Tool bar font"
+msgstr "میله ابزار"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, kde-format
+msgid "Menu font"
+msgstr ""
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, fuzzy, kde-format
+#| msgid "Window title"
+msgid "Window title font"
+msgstr "عنوان پنجره"
+
+#: kxftconfig.cpp:458
+#, fuzzy, kde-format
+msgctxt "use system subpixel setting"
+msgid "Vendor default"
+msgstr "تنظیمات سیستم"
+
+#: kxftconfig.cpp:460
+#, fuzzy, kde-format
+#| msgid "None"
+msgctxt "no subpixel rendering"
+msgid "None"
+msgstr "هیچ‌کدام"
+
+#: kxftconfig.cpp:462
+#, kde-format
+msgid "RGB"
+msgstr "RGB"
+
+#: kxftconfig.cpp:464
+#, kde-format
+msgid "BGR"
+msgstr "BGR"
+
+#: kxftconfig.cpp:466
+#, kde-format
+msgid "Vertical RGB"
+msgstr "RGB عمودی"
+
+#: kxftconfig.cpp:468
+#, kde-format
+msgid "Vertical BGR"
+msgstr "BGR عمودی"
+
+#: kxftconfig.cpp:496
+#, fuzzy, kde-format
+msgctxt "use system hinting settings"
+msgid "Vendor default"
+msgstr "تنظیمات سیستم"
+
+#: kxftconfig.cpp:498
+#, fuzzy, kde-format
+#| msgid "Medium"
+msgctxt "medium hinting"
+msgid "Medium"
+msgstr "متوسط"
+
+#: kxftconfig.cpp:500
+#, fuzzy, kde-format
+#| msgid "None"
+msgctxt "no hinting"
+msgid "None"
+msgstr "هیچ‌کدام"
+
+#: kxftconfig.cpp:502
+#, fuzzy, kde-format
+#| msgid "Slight"
+msgctxt "slight hinting"
+msgid "Slight"
+msgstr "اندک"
+
+#: kxftconfig.cpp:504
+#, fuzzy, kde-format
+#| msgid "Full"
+msgctxt "full hinting"
+msgid "Full"
+msgstr "کامل"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module lets you configure the system fonts."
+msgstr ""
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid "Change Display Scaling…"
+msgstr ""
+
+#: package/contents/ui/main.qml:37
+#, fuzzy, kde-format
+#| msgid ""
+#| "<p>Some changes such as anti-aliasing will only affect newly started "
+#| "applications.</p>"
+msgid ""
+"Some changes such as anti-aliasing or DPI will only affect newly started "
+"applications."
+msgstr ""
+"<p>برخی تغییرات مانند حذف لبه ناصاف، فقط بر کاربردهایی تأثیر دارند که جدیداً "
+"آغاز شده‌اند.</p>"
+
+#: package/contents/ui/main.qml:51
+#, kde-format
+msgid ""
+"Very large fonts may produce odd-looking results. Consider adjusting the "
+"global screen scale instead of using a very large font size."
+msgstr ""
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid ""
+"Decimal font sizes can cause text layout problems in some applications. "
+"Consider using only integer font sizes."
+msgstr ""
+
+#: package/contents/ui/main.qml:94
+#, kde-format
+msgid ""
+"The recommended way to scale the user interface is using the global screen "
+"scaling feature."
+msgstr ""
+
+#: package/contents/ui/main.qml:106
+#, fuzzy, kde-format
+#| msgid "Ad&just All Fonts..."
+msgid "&Adjust All Fonts…"
+msgstr "&میزان کردن همه قلمها...‌"
+
+#: package/contents/ui/main.qml:119
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "General:"
+msgstr "عمومی"
+
+#: package/contents/ui/main.qml:120
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "Select general font"
+msgstr "عمومی"
+
+#: package/contents/ui/main.qml:131
+#, fuzzy, kde-format
+#| msgid "Fixed width"
+msgid "Fixed width:"
+msgstr "عرض ثابت"
+
+#: package/contents/ui/main.qml:132
+#, fuzzy, kde-format
+#| msgid "Fixed width"
+msgid "Select fixed width font"
+msgstr "عرض ثابت"
+
+#: package/contents/ui/main.qml:143
+#, fuzzy, kde-format
+#| msgid "Small"
+msgid "Small:"
+msgstr "کوچک"
+
+#: package/contents/ui/main.qml:144
+#, fuzzy, kde-format
+#| msgid "Small"
+msgid "Select small font"
+msgstr "کوچک"
+
+#: package/contents/ui/main.qml:155
+#, fuzzy, kde-format
+#| msgid "Toolbar"
+msgid "Toolbar:"
+msgstr "میله ابزار"
+
+#: package/contents/ui/main.qml:156
+#, fuzzy, kde-format
+#| msgid "Toolbar"
+msgid "Select toolbar font"
+msgstr "میله ابزار"
+
+#: package/contents/ui/main.qml:167
+#, fuzzy, kde-format
+#| msgid "Menu"
+msgid "Menu:"
+msgstr "گزینگان"
+
+#: package/contents/ui/main.qml:168
+#, kde-format
+msgid "Select menu font"
+msgstr ""
+
+#: package/contents/ui/main.qml:178
+#, fuzzy, kde-format
+#| msgid "Window title"
+msgid "Window title:"
+msgstr "عنوان پنجره"
+
+#: package/contents/ui/main.qml:179
+#, fuzzy, kde-format
+#| msgid "Window title"
+msgid "Select window title font"
+msgstr "عنوان پنجره"
+
+#: package/contents/ui/main.qml:194
+#, fuzzy, kde-format
+#| msgid "Use a&nti-aliasing:"
+msgid "Anti-Aliasing:"
+msgstr "استفاده از &حذف لبه ناصاف:"
+
+#  msgid "Enabled"
+#: package/contents/ui/main.qml:199
+#, fuzzy, kde-format
+#| msgctxt "Use anti-aliasing"
+#| msgid "Enabled"
+msgid "Enable"
+msgstr "فعال"
+
+#: package/contents/ui/main.qml:203
+#, kde-kuit-format
+msgctxt "@info:tooltip Anti-Aliasing"
+msgid ""
+"Pixels on displays are generally aligned in a grid. Therefore shapes of "
+"fonts that do not align with this grid will look blocky and wrong unless "
+"<emphasis>anti-aliasing</emphasis> techniques are used to reduce this "
+"effect. You generally want to keep this option enabled unless it causes "
+"problems."
+msgstr ""
+
+#: package/contents/ui/main.qml:217
+#, kde-format
+msgid "Exclude range from anti-aliasing"
+msgstr ""
+
+#: package/contents/ui/main.qml:236 package/contents/ui/main.qml:259
+#, kde-format
+msgid "%1 pt"
+msgstr ""
+
+#: package/contents/ui/main.qml:251
+#, fuzzy, kde-format
+#| msgid " to "
+msgid "to"
+msgstr " به "
+
+#: package/contents/ui/main.qml:282
+#, fuzzy, kde-format
+#| msgid "&Use sub-pixel rendering:"
+msgctxt "Used as a noun, and precedes a combobox full of options"
+msgid "Sub-pixel rendering:"
+msgstr "&استفاده از پرداخت تصویردانه فرعی:‌"
+
+#: package/contents/ui/main.qml:324
+#, kde-kuit-format
+msgctxt "@info:tooltip Sub-pixel rendering"
+msgid ""
+"<para>On TFT or LCD screens every single pixel is actually composed of three "
+"or four smaller monochrome lights. These <emphasis>sub-pixels</emphasis> can "
+"be changed independently to further improve the quality of displayed fonts.</"
+"para> <para>The rendering quality is only improved if the selection matches "
+"the manner in which the sub-pixels of your display are aligned. Most "
+"displays have a linear ordering of <emphasis>RGB</emphasis> sub-pixels, some "
+"have <emphasis>BGR</emphasis> and some exotic orderings are not supported by "
+"this feature.</para>This does not work with CRT monitors."
+msgstr ""
+
+#: package/contents/ui/main.qml:329
+#, fuzzy, kde-format
+#| msgid "Hinting style: "
+msgctxt "Used as a noun, and precedes a combobox full of options"
+msgid "Hinting:"
+msgstr "سبک اشاره: "
+
+#: package/contents/ui/main.qml:370
+#, kde-kuit-format
+msgctxt "@info:tooltip Hinting"
+msgid ""
+"Hinting is a technique in which hints embedded in a font are used to enhance "
+"the rendering quality especially at small sizes. Stronger hinting generally "
+"leads to sharper edges but the small letters will less closely resemble "
+"their shape at big sizes."
+msgstr ""
+
+#: package/contents/ui/main.qml:380
+#, fuzzy, kde-format
+#| msgid "Force fonts DPI:"
+msgid "Force font DPI:"
+msgstr "قلمهای اجباری DPI"
+
+#: package/contents/ui/main.qml:422
+#, kde-kuit-format
+msgctxt "@info:tooltip Force fonts DPI"
+msgid ""
+"<para>Enter your screen's DPI here to make on-screen fonts match their "
+"physical sizes when printed. Changing this option from its default value "
+"will conflict with many apps; some icons and images may not scale as "
+"expected.</para><para>To increase text size, change the size of the fonts "
+"above. To scale everything, use the scaling slider on the <interface>Display "
+"& Monitor</interface> page.</para>"
+msgstr ""
+
+#: package/contents/ui/main.qml:428
+#, kde-format
+msgid "Select Font"
+msgstr ""
+
+#, fuzzy
+#~| msgid ""
+#~| "<p>This option forces a specific DPI value for fonts. It may be useful "
+#~| "when the real DPI of the hardware is not detected properly and it is "
+#~| "also often misused when poor quality fonts are used that do not look "
+#~| "well with DPI values other than 96 or 120 DPI.</p><p>The use of this "
+#~| "option is generally discouraged. For selecting proper DPI value a better "
+#~| "option is explicitly configuring it for the whole X server if possible "
+#~| "(e.g. DisplaySize in xorg.conf or adding <i>-dpi value</i> to "
+#~| "ServerLocalArgs= in $KDEDIR/share/config/kdm/kdmrc). When fonts do not "
+#~| "render properly with real DPI value better fonts should be used or "
+#~| "configuration of font hinting should be checked.</p>"
+#~ msgctxt "@info:tooltip Force fonts DPI"
+#~ msgid ""
+#~ "<para>This option forces a specific DPI value for fonts. It may be useful "
+#~ "when the real DPI of the hardware is not detected properly and it is also "
+#~ "often misused when poor quality fonts are used that do not look well with "
+#~ "DPI values other than 96 or 120 DPI.</para><para>The use of this option "
+#~ "is generally discouraged.</para><para>If you are using the <emphasis>X "
+#~ "Window System</emphasis>, for selecting the proper DPI value a better "
+#~ "option is explicitly configuring it for the whole X server if possible (e."
+#~ "g. DisplaySize in xorg.conf). When fonts do not render properly with the "
+#~ "real DPI value better fonts should be used or configuration of font "
+#~ "hinting should be checked.</para>"
+#~ msgstr ""
+#~ "<p>این گزینه، مقدار مشخص DPI را برای قلمها تحمیل می‌کند. ممکن است زمانی "
+#~ "مفید باشد که DPI حقیقی سخت‌افزار درست آشکار نشده است، و همچنین هنگامی که "
+#~ "از قلمهای با کیفیت پایین که با مقادیر DPI، به غیر از 96 یا 120 DPI زیبا "
+#~ "به نظر نمی‌آیند استفاده می‌شود، بلا استفاده می‌ماند.</p> <p>عموماً، استفاده "
+#~ "از این گزینه توصیه نمی‌شود. برای برگزیدن مقدار DPI مناسب، در صورت امکان، "
+#~ "گزینه بهتری آن را برای کل کارساز X پیکربندی می‌کند )مثلاً DisplaySize در "
+#~ "xorg.conf یا افزودن <i>مقدار -dpi</i> به ServerLocalArgs= در $KDEDIR/"
+#~ "share/config/kdm/kdmrc(. هنگامی که قلمها با مقدار حقیقی DPI کامل پرداخت "
+#~ "نشوند، باید از قلمهای بهتر استفاده شود یا باید پیکربندی اشاره قلم بررسی "
+#~ "شود.</p>"
+
+#~ msgid "Font Settings Changed"
+#~ msgstr "تنظیمات قلم، تغییر یافت"
+
+#~ msgid ""
+#~ "<p>Some changes such as DPI will only affect newly started applications.</"
+#~ "p>"
+#~ msgstr ""
+#~ "<p>برخی تغییرات مانند DPI، فقط بر کاربردهایی تأثیر دارند که جدیداً آغاز "
+#~ "شده‌اند.</p>"
+
+#, fuzzy
+#~ msgid "Vendor default"
+#~ msgstr "تنظیمات سیستم"
+
+#, fuzzy
+#~ msgid "Disabled"
+#~ msgstr "غیرفعال"
+
+#, fuzzy
+#~| msgid "Configure..."
+#~ msgid "Configure the system fonts"
+#~ msgstr "پیکربندی..."
+
+#~ msgid "Configure Anti-Alias Settings"
+#~ msgstr "پیکربندی تنظیمات حذف لبه ناصاف"
+
+#~ msgid "E&xclude range:"
+#~ msgstr "گستره &استخراج:‌"
+
+#, fuzzy
+#~| msgid " pt"
+#~ msgctxt "abbreviation for unit of points"
+#~ msgid " pt"
+#~ msgstr " نقطه"
+
+#~ msgid ""
+#~ "<p>If you have a TFT or LCD screen you can further improve the quality of "
+#~ "displayed fonts by selecting this option.<br />Sub-pixel rendering is "
+#~ "also known as ClearType(tm).<br /> In order for sub-pixel rendering to "
+#~ "work correctly you need to know how the sub-pixels of your display are "
+#~ "aligned.</p> <p>On TFT or LCD displays a single pixel is actually "
+#~ "composed of three sub-pixels, red, green and blue. Most displays have a "
+#~ "linear ordering of RGB sub-pixel, some have BGR.<br /> This feature does "
+#~ "not work with CRT monitors.</p>"
+#~ msgstr ""
+#~ "<p>اگر صفحه TFT یا LCD دارید، می توانید کیفیت قلمهای نشان‌داده‌شده را با "
+#~ "انتخاب این گزینه بهبود بخشید.<br />تصویردانه فرعی همچنین به عنوان "
+#~ "ClearType(tm) شناخته می‌شود.<br /> برای این که پرداخت تصویردانه فرعی درست "
+#~ "کار کند، لازم است بدانید که چگونه تصویردانه‌های فرعی صفحه نمایشتان همتراز "
+#~ "شده‌اند.</p> <p>روی صفحه نمایشهای TFT یا LCD، یک تصویردانه در واقع از سه "
+#~ "تصویردانه فرعی قرمز، سبز و آبی تشکیل می‌شود. اغلب صفحه نمایشها ترتیب خطی "
+#~ "از تصویردانه فرعی RGB دارند، و برخی از آنها BGR دارند.<br /> این ویژگی با "
+#~ "نمایشگرهای CRT کار نمی‌کند.</p>"
+
+#~ msgid ""
+#~ "Hinting is a process used to enhance the quality of fonts at small sizes."
+#~ msgstr ""
+#~ "اشاره، فرایندی است که برای ارتقا کیفیت قلمها در اندازه‌های کوچک استفاده "
+#~ "می‌شود."
+
+#~ msgid "Used for normal text (e.g. button labels, list items)."
+#~ msgstr "قابل استفاده برای متن عادی )مثلاً برچسبهای دکمه، فقره‌های فهرست(."
+
+#~ msgid "A non-proportional font (i.e. typewriter font)."
+#~ msgstr "یک قلم نامتناسب )یعنی قلم ماشین تحریر(."
+
+#~ msgid "Smallest font that is still readable well."
+#~ msgstr "کوچک‌ترین قلمی که هنوز به خوبی قابل خواندن است."
+
+#~ msgid "Used to display text beside toolbar icons."
+#~ msgstr "قابل استفاده برای نمایش متن در کنار شمایل میله‌های ابزار."
+
+#~ msgid "Used by menu bars and popup menus."
+#~ msgstr "قابل استفاده به وسیله میله‌های گزینگان و گزینگان بالاپر."
+
+#~ msgid "Used by the window titlebar."
+#~ msgstr "قابل استفاده توسط میله عنوان پنجره."
+
+#~ msgctxt "Font role"
+#~ msgid "%1: "
+#~ msgstr "%1: "
+
+#~ msgid "Click to change all fonts"
+#~ msgstr "برای تغییر همه قلمها فشار دهید"
+
+#, fuzzy
+#~ msgctxt "Use anti-aliasing"
+#~ msgid "System Settings"
+#~ msgstr "تنظیمات سیستم"
+
+#, fuzzy
+#~| msgid ""
+#~| "If this option is selected, KDE will smooth the edges of curves in fonts."
+#~ msgid "Select this option to smooth the edges of curves in fonts."
+#~ msgstr "اگر این گزینه انتخاب شود، KDE لبه‌های انحنای قلمها را صاف می‌کند."
+
+#, fuzzy
+#~| msgid "Taskbar"
+#~ msgctxt "font usage"
+#~ msgid "Taskbar"
+#~ msgstr "میله تکلیف"
+
+#, fuzzy
+#~| msgid "Desktop"
+#~ msgctxt "font usage"
+#~ msgid "Desktop"
+#~ msgstr "رومیزی"
+
+#~ msgid "Used by the taskbar."
+#~ msgstr "قابل استفاده توسط میله تکلیف."
+
+#~ msgid "Used for desktop icons."
+#~ msgstr "قابل استفاده برای شمایلهای رومیزی."
+
+#  msgid "Disabled"
+#~ msgctxt "Force fonts DPI"
+#~ msgid "Disabled"
+#~ msgstr "غیرفعال"
+
+#~ msgid "96 DPI"
+#~ msgstr "۹۶ DPI"
+
+#~ msgid "120 DPI"
+#~ msgstr "۱۲۰ DPI"
+
+#  msgid "System settings"
+#~ msgctxt "Use anti-aliasing"
+#~ msgid "System settings"
+#~ msgstr "تنظیمات سیستم"
+
+#  msgid "Disabled"
+#~ msgctxt "Use annti-aliasing"
+#~ msgid "Disabled"
+#~ msgstr "غیرفعال"

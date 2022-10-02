@@ -1,0 +1,89 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Phu Hung Nguyen <phu.nguyen@kdemail.net>, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2021-02-09 14:38+0100\n"
+"Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
+"Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 20.08.1\n"
+
+#: ksolidnotify.cpp:149
+#, kde-format
+msgid "Device Status"
+msgstr "Trạng thái thiết bị"
+
+#: ksolidnotify.cpp:149
+#, kde-format
+msgid "A device can now be safely removed"
+msgstr "Một thiết bị hiện có thể rút ra an toàn."
+
+#: ksolidnotify.cpp:150
+#, kde-format
+msgid "This device can now be safely removed."
+msgstr "Thiết bị này giờ có thể rút ra an toàn."
+
+#: ksolidnotify.cpp:157
+#, kde-format
+msgid "You are not authorized to mount this device."
+msgstr "Bạn không có quyền gắn kết thiết bị này."
+
+#: ksolidnotify.cpp:160
+#, kde-format
+msgctxt "Remove is less technical for unmount"
+msgid "You are not authorized to remove this device."
+msgstr "Bạn không có quyền bỏ gắn kết thiết bị này."
+
+#: ksolidnotify.cpp:163
+#, kde-format
+msgid "You are not authorized to eject this disc."
+msgstr "Bạn không có quyền rút đĩa này."
+
+#: ksolidnotify.cpp:170
+#, kde-format
+msgid "Could not mount this device as it is busy."
+msgstr "Không gắn kết được thiết bị này vì nó đang bận."
+
+#: ksolidnotify.cpp:200
+#, kde-format
+msgid "One or more files on this device are open within an application."
+msgstr "Một hoặc nhiều tệp trên thiết bị này đang mở trong một ứng dụng."
+
+#: ksolidnotify.cpp:202
+#, kde-format
+msgid "One or more files on this device are opened in application \"%2\"."
+msgid_plural ""
+"One or more files on this device are opened in following applications: %2."
+msgstr[0] ""
+"Một hoặc nhiều tệp trên thiết bị này đang mở trong các ứng dụng sau: %2."
+
+#: ksolidnotify.cpp:205
+#, kde-format
+msgctxt "separator in list of apps blocking device unmount"
+msgid ", "
+msgstr ", "
+
+#: ksolidnotify.cpp:222
+#, kde-format
+msgid "Could not mount this device."
+msgstr "Không gắn kết được thiết bị này."
+
+#: ksolidnotify.cpp:225
+#, kde-format
+msgctxt "Remove is less technical for unmount"
+msgid "Could not remove this device."
+msgstr "Không bỏ gắn kết được thiết bị này."
+
+#: ksolidnotify.cpp:228
+#, kde-format
+msgid "Could not eject this disc."
+msgstr "Không rút được đĩa này."

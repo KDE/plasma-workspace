@@ -1,0 +1,318 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2014, 2015, 2017.
+# Tommi Nieminen <translator@legisign.org>, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+#
+# Larso, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-09 00:47+0000\n"
+"PO-Revision-Date: 2022-06-11 19:04+0300\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Lasse Liehu, Tommi Nieminen"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "lasse.liehu@gmail.com, translator@legisign.org"
+
+#: kcm.cpp:590
+#, kde-format
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr ""
+"Plasma-istunto on käynnistettävä uudestaan, jotta muutokset tulisivat "
+"voimaan."
+
+#: kcm.cpp:591
+#, kde-format
+msgid "Cursor Settings Changed"
+msgstr "Osoitinasetuksia muutettiin"
+
+#: lnftool.cpp:33
+#, kde-format
+msgid "Global Theme Tool"
+msgstr "Yleisteematyökalu"
+
+#: lnftool.cpp:35
+#, kde-format
+msgid ""
+"Command line tool to apply global theme packages for changing the look and "
+"feel."
+msgstr ""
+"Komentorivityökalu yleisteemapakettien käyttämiseksi ulkoasun muuttamiseen."
+
+#: lnftool.cpp:37
+#, kde-format
+msgid "Copyright 2017, Marco Martin"
+msgstr "Tekijänoikeudet 2017 Marco Martin"
+
+#: lnftool.cpp:38
+#, kde-format
+msgid "Marco Martin"
+msgstr "Marco Martin"
+
+#: lnftool.cpp:38
+#, kde-format
+msgid "Maintainer"
+msgstr "Ylläpitäjä"
+
+#: lnftool.cpp:46
+#, kde-format
+msgid "List available global theme packages"
+msgstr "Luettele saatavilla olevat yleisteemapaketit"
+
+#: lnftool.cpp:49
+#, kde-format
+msgid ""
+"Apply a global theme package. This can be the name of a package, or a full "
+"path to an installed package, at which point this tool will ensure it is a "
+"global theme package and then attempt to apply it"
+msgstr ""
+"Ota käyttöön yleisteemapaketti. Tämä voi olla paketin nimi tai täysi "
+"polkunimi asennettuun pakettiin, jolloin työkalu varmistaa ensin, että se on "
+"yleisteemapaketti, ja ottaa sen sitten käyttöön"
+
+#: lnftool.cpp:51
+#, kde-format
+msgid "packagename"
+msgstr "paketinnimi"
+
+#: lnftool.cpp:52
+#, kde-format
+msgid "Reset the Plasma Desktop layout"
+msgstr "Palauta Plasma-työpöydän alkuperäinen asettelu"
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: lookandfeelsettings.kcfg:9
+#, kde-format
+msgid "Global look and feel"
+msgstr "Yleisulkoasu ja -tuntuma"
+
+#: package/contents/ui/main.qml:20
+#, kde-format
+msgid "This module lets you choose the global look and feel."
+msgstr "Tässä osiossa voit asettaa työpöydän yleisen ulkoasun."
+
+#: package/contents/ui/main.qml:53
+#, kde-format
+msgid "Contains Desktop layout"
+msgstr "Sisältää työpöytäasettelun"
+
+#: package/contents/ui/main.qml:67
+#, kde-format
+msgid "Preview Theme"
+msgstr "Esikatsele teemaa"
+
+#: package/contents/ui/main.qml:83
+#, kde-format
+msgctxt ""
+"Confirmation question about applying the Global Theme - %1 is the Global "
+"Theme's name"
+msgid "Apply %1?"
+msgstr "Otetaanko %1 käyttöön?"
+
+#: package/contents/ui/main.qml:101
+#, kde-format
+msgid "Choose what to apply…"
+msgstr "Valitse, mitä otetaan käyttöön…"
+
+#: package/contents/ui/main.qml:101
+#, kde-format
+msgid "Show fewer options…"
+msgstr "Näytä vähemmän valintoja…"
+
+#: package/contents/ui/main.qml:118
+#, kde-format
+msgid "Apply"
+msgstr "Käytä"
+
+#: package/contents/ui/main.qml:130
+#, kde-format
+msgid "Cancel"
+msgstr "Peru"
+
+#: package/contents/ui/main.qml:147
+#, kde-format
+msgid "Get New Global Themes…"
+msgstr "Hae uusia yleisteemoja…"
+
+#: package/contents/ui/MoreOptions.qml:24
+#: package/contents/ui/MoreOptions.qml:31
+#, kde-format
+msgid "Layout settings:"
+msgstr "Asetteluasetukset:"
+
+#: package/contents/ui/MoreOptions.qml:32
+#, kde-format
+msgid "Desktop layout"
+msgstr "Työpöytäasettelu"
+
+#: package/contents/ui/MoreOptions.qml:53
+#, kde-format
+msgid "Titlebar Buttons layout"
+msgstr ""
+
+#: package/contents/ui/MoreOptions.qml:66
+#: package/contents/ui/SimpleOptions.qml:63
+#, fuzzy, kde-format
+#| msgid ""
+#| "Applying a Desktop layout replaces your current configuration of "
+#| "desktops, panels, and widgets"
+msgid ""
+"Applying a Desktop layout replaces your current configuration of desktops, "
+"panels, docks, and widgets"
+msgstr ""
+"Työpöytäasettelun käyttöönotto korvaa työpöytien, paneelien ja sovelmien "
+"nykyisen asettelun"
+
+#: package/contents/ui/MoreOptions.qml:75
+#, kde-format
+msgid "Appearance settings:"
+msgstr "Ulkoasuasetukset:"
+
+#: package/contents/ui/MoreOptions.qml:78
+#, kde-format
+msgid "Colors"
+msgstr "Värit"
+
+#: package/contents/ui/MoreOptions.qml:79
+#, kde-format
+msgid "Application Style"
+msgstr "Sovellustyyli"
+
+#: package/contents/ui/MoreOptions.qml:80
+#, kde-format
+msgid "Window Decorations"
+msgstr "Ikkunakoristeet"
+
+#: package/contents/ui/MoreOptions.qml:81
+#, kde-format
+msgid "Icons"
+msgstr "Kuvakkeet"
+
+#: package/contents/ui/MoreOptions.qml:82
+#, kde-format
+msgid "Plasma Style"
+msgstr "Plasma-tyyli"
+
+#: package/contents/ui/MoreOptions.qml:83
+#, kde-format
+msgid "Cursors"
+msgstr "Osoittimet"
+
+#: package/contents/ui/MoreOptions.qml:84
+#, kde-format
+msgid "Fonts"
+msgstr "Fontit"
+
+#: package/contents/ui/MoreOptions.qml:85
+#, kde-format
+msgid "Task Switcher"
+msgstr "Tehtävävaihto"
+
+#: package/contents/ui/MoreOptions.qml:86
+#, kde-format
+msgid "Splash Screen"
+msgstr "Tervetulonäyttö"
+
+#: package/contents/ui/MoreOptions.qml:87
+#, kde-format
+msgid "Lock Screen"
+msgstr "Lukitusnäyttö"
+
+#: package/contents/ui/SimpleOptions.qml:19
+#, kde-format
+msgid "The following will be applied by this Global Theme:"
+msgstr "Tämä yleisteema ottaa käyttöön seuraavat:"
+
+#: package/contents/ui/SimpleOptions.qml:32
+#, kde-format
+msgid "Appearance settings"
+msgstr "Ulkoasuasetukset"
+
+#: package/contents/ui/SimpleOptions.qml:42
+#, kde-format
+msgctxt "List item"
+msgid "• Appearance settings"
+msgstr "• Ulkoasuasetukset"
+
+#: package/contents/ui/SimpleOptions.qml:47
+#, fuzzy, kde-format
+#| msgid "Desktop layout"
+msgid "Desktop and window layout"
+msgstr "Työpöytäasettelu"
+
+#: package/contents/ui/SimpleOptions.qml:58
+#, fuzzy, kde-format
+#| msgctxt "List item"
+#| msgid "• Desktop layout"
+msgctxt "List item"
+msgid "• Desktop and window layout"
+msgstr "• Työpöytäasettelu"
+
+#: package/contents/ui/SimpleOptions.qml:75
+#, kde-format
+msgid ""
+"This Global Theme does not provide any applicable settings. Please contact "
+"the maintainer of this Global Theme as it might be broken."
+msgstr ""
+"Tämä yleisteema ei tarjoa käyttöön otettavia asetuksia. Ota yhteyttä sen "
+"ylläpitäjään, koska se on todennäköisesti rikki."
+
+#~ msgid ""
+#~ "Your current layout and configuration of panels, desktop widgets, and "
+#~ "wallpapers will be lost and reset to the default layout provided by the "
+#~ "selected theme."
+#~ msgstr ""
+#~ "Nykyinen asettelusi paneeleineen, sovelmineen ja taustakuvineen "
+#~ "menetetään ja palautetaan valitun teeman tarjoamaksi oletusasetteluksi."
+
+#~ msgid "Use desktop layout from theme"
+#~ msgstr "Käytä teeman työpöytäasettelua"
+
+#~ msgid "Global Theme"
+#~ msgstr "Yleisteema"
+
+#~ msgid "Apply a global theme package"
+#~ msgstr "Käytä yleisteemapakettia"
+
+#~ msgid "Global Themes"
+#~ msgstr "Yleisteemat"
+
+#~ msgid "Download New Global Themes"
+#~ msgstr "Lataa uusia yleisteemoja"
+
+#~ msgid "Look and feel tool"
+#~ msgstr "Ulkoasutyökalu"
+
+#~ msgid "Choose the Look and Feel theme"
+#~ msgstr "Valitse uusi ulkoasuteema"
+
+#~ msgid "Configure Look and Feel details"
+#~ msgstr "Ulkoasun ja tuntuman yksityiskohtien asetukset"
+
+#~ msgid ""
+#~ "Select an overall theme for your workspace (including plasma theme, color "
+#~ "scheme, mouse cursor, window and desktop switcher, splash screen, lock "
+#~ "screen etc.)"
+#~ msgstr ""
+#~ "Valitse työtilan ulkoasun ja käyttötuntuman yhtenäisteema (sisältää "
+#~ "Plasma- ja väriteeman, hiiriosoittimet, ikkuna- ja työpöytävaihtimen, "
+#~ "tervetulo- ja lukitusnäytöt jne.)"
+
+#~ msgid "Show Preview"
+#~ msgstr "Näytä esikatselu"

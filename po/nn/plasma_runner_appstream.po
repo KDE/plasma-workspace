@@ -1,0 +1,30 @@
+# Translation of plasma_runner_appstream to Norwegian Nynorsk
+#
+# Karl Ove Hufthammer <karl@huftis.org>, 2018, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-11 00:46+0000\n"
+"PO-Revision-Date: 2021-09-18 20:11+0200\n"
+"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
+"Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
+"Language: nn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.11.70\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: appstreamrunner.cpp:34
+#, kde-format
+msgid "Looks for non-installed components according to :q:"
+msgstr "Ser etter ikkje-installerte komponentar ifølgje :q:"
+
+#: appstreamrunner.cpp:133
+#, kde-format
+msgid "Get %1…"
+msgstr "Hent %1 …"

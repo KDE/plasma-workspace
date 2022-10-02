@@ -1,0 +1,138 @@
+# translation of krunner.po to Italian
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Federico Zenith <federico.zenith@member.fsf.org>, 2007, 2008, 2009, 2010.
+# Federico Zenith <federico.zenith@member.fsf.org>, 2008, 2012, 2014, 2015.
+# Luigi Toscano <luigi.toscano@tiscali.it>, 2016, 2017, 2019, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-22 00:47+0000\n"
+"PO-Revision-Date: 2022-09-20 00:21+0200\n"
+"Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
+"Language-Team: Italian <kde-i18n-it@kde.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Federico Zenith"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "federico.zenith@member.fsf.org"
+
+#: main.cpp:57 view.cpp:46
+#, kde-format
+msgid "KRunner"
+msgstr "KRunner"
+
+#: main.cpp:57
+#, kde-format
+msgid "Run Command interface"
+msgstr "Interfaccia al comando di esecuzione"
+
+#: main.cpp:62
+#, kde-format
+msgid "Use the clipboard contents as query for KRunner"
+msgstr "Usa i contenuti degli appunti come interrogazione per KRunner"
+
+#: main.cpp:63
+#, kde-format
+msgid "Start KRunner in the background, don't show it."
+msgstr "Esegui KRunner sullo sfondo, non mostrarlo."
+
+#: main.cpp:64
+#, kde-format
+msgid "Replace an existing instance"
+msgstr "Sostituisci un'istanza esistente"
+
+#: main.cpp:69
+#, kde-format
+msgid "The query to run, only used if -c is not provided"
+msgstr "L'interrogazione da eseguire, usata solo se -c non è presente"
+
+#: qml/RunCommand.qml:75
+#, kde-format
+msgid "Configure"
+msgstr "Configura"
+
+#: qml/RunCommand.qml:76
+#, kde-format
+msgid "Configure KRunner Behavior"
+msgstr "Configure il comportamento di KRunner"
+
+#: qml/RunCommand.qml:79
+#, kde-format
+msgid "Configure KRunner…"
+msgstr "Configure KRunner…"
+
+#: qml/RunCommand.qml:91
+#, kde-format
+msgctxt "Textfield placeholder text, query specific KRunner plugin"
+msgid "Search '%1'…"
+msgstr "Cerca «%1»…"
+
+#: qml/RunCommand.qml:92
+#, kde-format
+msgctxt "Textfield placeholder text"
+msgid "Search…"
+msgstr "Cerca…"
+
+#: qml/RunCommand.qml:228 qml/RunCommand.qml:229 qml/RunCommand.qml:231
+#, kde-format
+msgid "Show Usage Help"
+msgstr "Mostra aiuto sull'uso"
+
+#: qml/RunCommand.qml:239
+#, kde-format
+msgid "Pin"
+msgstr "Fissa"
+
+#: qml/RunCommand.qml:240
+#, kde-format
+msgid "Pin Search"
+msgstr "Fissa ricerca"
+
+#: qml/RunCommand.qml:242
+#, kde-format
+msgid "Keep Open"
+msgstr "Mantieni aperto"
+
+#: qml/RunCommand.qml:320 qml/RunCommand.qml:325
+#, kde-format
+msgid "Recent Queries"
+msgstr "Interrogazioni recenti"
+
+#: qml/RunCommand.qml:323
+#, kde-format
+msgid "Remove"
+msgstr "Rimuovi"
+
+#~ msgid "krunner"
+#~ msgstr "krunner"
+
+#~ msgid "Show KRunner"
+#~ msgstr "Mostra KRunner"
+
+#~ msgctxt "Name for krunner shortcuts category"
+#~ msgid "KRunner"
+#~ msgstr "KRunner"
+
+#~ msgid "Run Command on clipboard contents"
+#~ msgstr "Esegui comando sui contenuti degli appunti"
+
+#~ msgid "Run Command"
+#~ msgstr "Esegui comando"
+
+#~ msgctxt "Name for krunner shortcuts category"
+#~ msgid "Run Command"
+#~ msgstr "Esegui comando"

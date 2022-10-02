@@ -1,0 +1,89 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Phu Hung Nguyen <phu.nguyen@kdemail.net>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2020-10-24 21:06+0200\n"
+"Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
+"Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 19.12.2\n"
+
+#: multiplexedservice.cpp:68
+#, kde-format
+msgctxt "Name for global shortcuts category"
+msgid "Media Controller"
+msgstr "Trình điều khiển phương tiện"
+
+#: multiplexedservice.cpp:70
+#, kde-format
+msgid "Play/Pause media playback"
+msgstr "Phát / Tạm dừng phát phương tiện"
+
+#: multiplexedservice.cpp:88
+#, kde-format
+msgid "Media playback next"
+msgstr "Phát phương tiện sau"
+
+#: multiplexedservice.cpp:97
+#, kde-format
+msgid "Media playback previous"
+msgstr "Phát phương tiện trước"
+
+#: multiplexedservice.cpp:106
+#, kde-format
+msgid "Stop media playback"
+msgstr "Dừng phát phương tiện"
+
+#: multiplexedservice.cpp:115
+#, kde-format
+msgid "Pause media playback"
+msgstr "Tạm dừng phát phương tiện"
+
+#: multiplexedservice.cpp:124
+#, kde-format
+msgid "Play media playback"
+msgstr "Phát phương tiện"
+
+#: multiplexedservice.cpp:133
+#, kde-format
+msgid "Media volume up"
+msgstr "Tăng âm lượng"
+
+#: multiplexedservice.cpp:142
+#, kde-format
+msgid "Media volume down"
+msgstr "Giảm âm lượng"
+
+#: playeractionjob.cpp:169
+#, kde-format
+msgid "The media player '%1' cannot perform the action '%2'."
+msgstr "Trình phát phương tiện '%1' không thể thực hiện hành động '%2'."
+
+#: playeractionjob.cpp:171
+#, kde-format
+msgid "Attempting to perform the action '%1' failed with the message '%2'."
+msgstr "Việc thực hiện hành động '%1' đã thất bại với thông báo '%2'."
+
+#: playeractionjob.cpp:173
+#, kde-format
+msgid "The argument '%1' for the action '%2' is missing or of the wrong type."
+msgstr "Đối số '%1' cho hành động '%2' bị thiếu hoặc thuộc kiểu sai."
+
+#: playeractionjob.cpp:175
+#, kde-format
+msgid "The operation '%1' is unknown."
+msgstr "Thao tác '%1' không rõ."
+
+#: playeractionjob.cpp:177
+#, kde-format
+msgid "Unknown error."
+msgstr "Lỗi không rõ."

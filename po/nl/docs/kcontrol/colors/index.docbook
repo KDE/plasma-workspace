@@ -1,0 +1,372 @@
+<?xml version="1.0" ?>
+
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Dutch "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="colors" lang="&language;">
+<articleinfo>
+<title
+>Kleuren</title>
+<authorgroup>
+<author
+>&Matthew.Woehlke; &Matthew.Woehlke.mail;</author>
+&Niels.Reedijk;&Freek.de.Kruijf; 
+</authorgroup>
+
+<date
+>2021-04-08</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>kleur</keyword>
+<keyword
+>kcm</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="color">
+<title
+>Kleuren</title>
+
+<sect2 id="color-scheme">
+  <title
+>Schemabeheer</title>
+
+  <para
+>Het tabblad laat u de kleurschema's op uw systeem beheren. Het toont een lijst met kleurenschema's geleverd met &plasma; en een voorbeeld bovenaan. Slechts één schema is actief, maar u kunt schema's bewerken. U kunt schema's verwijderen met de knop <guibutton
+>Schema verwijderen</guibutton
+> die getoond wordt wanneer met de muis zweeft boven een item in het raster. Opmerking: u kunt geen systeemschema's verwijderen; de knop voor deze actie is uitgeschakeld.</para>
+
+  <para
+>Het is mogelijk om de lijst met schema's te filteren met het veld <guilabel
+>Zoeken...</guilabel
+> boven het raster. Bovendien kunt u de keuzelijst naast dit veld gebruiken om alleen de <guimenuitem
+>Lichte schema's</guimenuitem
+> of de <guimenuitem
+>Donkere schema's</guimenuitem
+> te tonen. </para>
+
+  <para
+>Als u een internet-verbinding hebt, dan kunt u ook door gebruikers gemaakte schema's ophalen met <guibutton
+>Nieuwe kleurschema's ophalen...</guibutton
+>.</para>
+
+  <para
+>U kunt ook schema's installeren uit een bestand dat u hebt gedownload of op een andere manier hebt verkregen, alsook &kde; 4 schema's importeren met een naam zoals &quot;*.colors&quot;. </para>
+
+  <note>
+  <para
+>Deze documentatie zal soms verwijzen naar het &quot;huidige&quot; schema of het &quot;actieve&quot; schema. Het &quot;huidige&quot; schema is de set kleuren en kleurenschema-opties die het meest recent zijn toegepast, &ie; wat u zou krijgen als <guibutton
+>Annuleren</guibutton
+> kiest. Het &quot;actieve&quot; schema is de set kleuren zoals ze het meest recent door u zijn bewerkt, &ie; wat u zou krijgen als <guibutton
+>Toepassen</guibutton
+> kiest.</para>
+  </note>
+</sect2>
+
+<sect2>
+  <title
+>Bewerken of aanmaken van schema's</title>
+  <para
+>Om nieuwe schema's te bewerken of aan te maken selecteert u een schema uit de lijst en drukt u op de knop <guibutton
+>Schema bewerken</guibutton
+> om een dialoog te openen met drie tabbladen <guilabel
+>Opties</guilabel
+>, <guilabel
+>Kleuren</guilabel
+> en <guilabel
+>Uitgeschakeld</guilabel
+>. Wanneer een schema naar uw zin hebt gemaakt, kunt u het uploaden, het resetten of opslaan onder een andere naam of het actieve schema overschrijven. </para>
+
+<sect3 id="color-options">
+  <title
+>Kleurenschema-opties</title>
+
+  <para
+>Het tabblad <guilabel
+>Opties</guilabel
+> stelt u in staat om sommige eigenschappen die met hoe het kleurschema wordt gebruikt, evenals sommige opties die het kleurenschema wijzigen die anders zijn dan de actueel toegekende kleuren.</para>
+
+  <itemizedlist>
+    <listitem
+><para
+><guilabel
+>Effecten op inactieve vensters toepassen</guilabel
+> &mdash; Indien geactiveerd, worden statuseffecten (zie <link linkend="color-effects"
+>onder</link
+>) toegepast op inactive vensters. Dit kan helpen bij het zichtbaar maken van actieve versus inactieve vensters en kan esthetische waarde hebben, afhankelijk van uw smaak. Sommige gebruikers hebben het gevoel dat het voor afleiding zorgt vanwege het &quot;geflikker&quot; omdat vensters opnieuw geschreven moeten worden wanneer zij inactief worden. In tegenstelling tot bureaubladeffecten, vereisen kleurstatuseffecten geen ondersteuning van compositing en werken in alle systemen, zij werken echter alleen in &kde; toepassingen. </para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Verschillende kleuren voor inactieve selecties gebruiken</guilabel
+> &mdash; Indien geactiveerd, wordt de huidige selectie van elementen die geen invoerfocus hebben in een andere kleur getoond. Dit kan helpen bij het visueel identificeren van het element met invoerfocus in sommige applicaties, speciaal die welke verschillende lijsten tonen. </para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Gesorteerde kolom in lijsten van schaduw voorzien</guilabel
+> &mdash; Indien geactiveerd, gebruiken lijsten met meerdere kolommen een enigszins andere kleur om de kolom te laten zien waarvan de informatie wordt gebruikt om de items in de lijst te sorteren. </para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Contrast</guilabel
+> &mdash; Deze schuifregelaar bestuurt het contrast van verduisterde elementen, zoals frameranden en de &quot;3D&quot;-effecten die gebruikt worden door de meeste stijlen. Een lagere waarde geeft minder contrast en heeft daarom zachtere randen, terwijl een hogere waarde de randen meer &quot;uit laat komen&quot;. </para
+></listitem>
+  </itemizedlist>
+
+</sect3>
+
+<sect3 id="color-colors">
+  <title
+>Kleuren</title>
+
+  <para
+>Het <guilabel
+>Kleuren</guilabel
+> tabblad staat u toe om kleuren in het actieve kleurenschema te wijzigen.</para>
+
+  <para
+>Aanmaken of wijzigen van een schema is eenvoudig het klikken op de strip in de kleurlijst en het selecteren van een nieuwe kleur. U wordt aangeraden om uw schema op te slaan wanneer u gereed bent.</para>
+
+  <para
+>De set <guilabel
+>Algemene kleuren</guilabel
+>, die eerst wordt getoond, is niet echt een &quot;set&quot; in de manier waarop Plasma deze gebruikt (zie volgende sectie), maar presenteert een aantal kleurrollen op een manier die het gemakkelijker maakt om het schema als geheel te bewerken. Bij het aanmaken van een nieuw kleurschema, zult u gewoonlijk deze kleuren als eerste wijzigen en de andere sets gebruiken om specifieke kleuren te maken indien nodig.</para>
+
+  <para
+>Merk op dat <guilabel
+>Gewone kleuren</guilabel
+> regels beschikbaar maakt uit alle sets. Bijvoorbeeld, &quot;Weergave achtergrond&quot; hier is kort voor de Normale achtergrond regel uit de Beeldset. Ook, kleuren instellen die niet verwijzen naar een specifieke set veranderen die kleur in <emphasis
+>alle</emphasis
+> sets. (Als uitzondering, &quot;Inactieve tekst&quot; zal de kleur voor alle sets wijzigen <emphasis
+>behalve</emphasis
+> voor Selectie; er is een separate &quot;Selectie inactieve tekst&quot; voor Inactieve tekst in de Selectieset.) Sommige regels kunnen in het geheel niet zichtbaar zijn onder <guilabel
+>Gewone kleuren</guilabel
+> en kunnen alleen gewijzigd worden (indien nodig) door de betreffende set te selecteren.</para>
+
+  <sect4>
+    <title
+>Kleurensets</title>
+
+    <para
+>Plasma breekt het kleurenschema op in verschillende sets gebaseerd op het type interface-element van de gebruiker, als volgt:</para>
+    <itemizedlist>
+      <listitem
+><para
+><guilabel
+>Beeld</guilabel
+> &mdash; elementen voor de presentatie van informatie, zoals lijsten, boomstructuren, tekstinvoervakken, etc. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Venster</guilabel
+> &mdash; vensterelementen die geen knoppen of weergaven zijn. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Knop</guilabel
+> &mdash; knoppen en gelijksoortige elementen. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Selectie</guilabel
+> &mdash; geselecteerde tekst en items. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Tekstballon</guilabel
+> &mdash; tekstballonnen, &quot;Wat-is-dit&quot;-tips en gelijksoortige elementen. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Complementair</guilabel
+> &mdash; gebieden in toepassingen met een alternatief kleurschema; gewoonlijk met een donkere achtergrond voor schema's met lichte kleuren. Voorbeelden van gebieden met dit geïnverteerde kleurschema zijn het afmeldinterface, het vergrendelingsscherm en de modus volledig-scherm voor sommige toepassingen. </para
+></listitem>
+    </itemizedlist>
+
+    <para
+>Elke set bevat een aantal kleurregels. Elke set heeft dezelfde regels. Alle kleuren zijn geassocieerd met een van de bovenstaande sets.</para>
+  </sect4>
+
+  <sect4>
+    <title
+>Rol van kleuren</title>
+
+    <para
+>Elke kleurset bestaat uit een aantal regels die beschikbaar zijn in alle andere sets. Bovenop de gewone regels Normale tekst en Normale achtergrond, zijn deze als volgt:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Afwisselende achtergrond &mdash; wordt gebruikt wanneer er een noodzaak is om subtiele wijzigingen in de achtergrond aan te brengen om te helpen bij het herkennen van items. Dit kan &eg; worden gebruikt als de achtergrond van een kop, maar wordt meestal gebruikt voor alternerende rijen in lijsten, speciaal lijsten met meerdere kolommen, om visueel te helpen bij het volgen van rijen. </para
+></listitem>
+      <listitem
+><para
+>Koppelingstekst &mdash; gebruikt voor hyperlinks of anderszins aangeeft &quot;iets dat kan worden bezocht&quot;, of om relaties te tonen. </para
+></listitem>
+      <listitem
+><para
+>Bezochte tekst &mdash; wordt gebruikt voor &quot;iets (&eg; een hyperlink) dat is bezocht&quot;, of om aan te geven iets dat "oud" is. </para
+></listitem>
+      <listitem
+><para
+>Actieve tekst &mdash; gebruikt om een actief element aan te geven of aandacht vraagt, &eg; alarm-, meldingen; ook voor hyperlinks waar overheen gegaan wordt. </para
+></listitem>
+      <listitem
+><para
+>Inactieve tekst &mdash; gebruikt voor tekst die niet op de voorgrond hoeft, &eg; commentaar, &quot;ondertitels&quot;, onbelangrijke information, etc. </para
+></listitem>
+      <listitem
+><para
+>Negatieve tekst &mdash; gebruikt voor fouten, mislukt-meldingen, mededelingen dat een actie gevaarlijk kan zijn (&eg; onveilige webpagina of beveiligingscontext), etc. </para
+></listitem>
+      <listitem
+><para
+>Neutrale tekst &mdash; gebruikt om aandacht te trekken wanneer een andere regel niet past; &eg; waarschuwingen, om beveiligde/versleutelde inhoud aan te geven, etc. </para
+></listitem>
+      <listitem
+><para
+>Positieve tekst &mdash; gebruikt voor succesmeldingen, om vertrouwde inhoud aan te geven, etc. </para
+></listitem>
+    </itemizedlist>
+
+    <para
+>Naast de tekstregels, zijn er een paar extra &quot;decoratieve&quot; regels die worden gebruikt voor tekenen van lijnen of UI-elementen te verdonkeren (terwijl de bovenstaanden, in toepasselijke omstandigheden, ook voor dit doel kunnen worden gebruikt, de volgende zijn speciaal <emphasis
+>niet</emphasis
+> bedoeld voor het weergeven van tekst). Dit zijn:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Focusdecoratie &mdash; gebruikt om het item aan te geven dat actieve invoerfocus heeft. </para
+></listitem>
+      <listitem
+><para
+>Hover-versiering &mdash; gebruikt voor muis-over effecten, &eg; de "oplicht" effecten voor knoppen. </para
+></listitem>
+    </itemizedlist>
+
+    <para
+>Bovendien is er, behalve voor Inactieve tekst, een overeenkomstige achtergrond regel voor elk van de tekstregels. Op dit moment (behalve voor Normale en Alternerende achtergrond), kunnen deze kleuren niet door de gebruiker gekozen worden, maar worden automatisch bepaald gebaseerd op Normale achtergrond en de overeenkomstige tekstkleur. Van deze kleuren kan een voorbeeld getoond worden door een van de sets anders dan &quot;Gewone kleuren&quot;.</para>
+
+    <para
+>De keuze van de kleurregel is overgelaten aan de ontwikkelaar; het bovenstaande zijn richtlijnen bedoelt voor typisch gebruik aan te geven.</para>
+  </sect4>
+
+  <sect4>
+    <title
+>Kleuren van vensterbeheer</title>
+
+    <para
+>Zoals eerder aangegeven, heeft de Windowmanager zijn eigen set regels, onafhankelijk van die in andere sets. Deze zijn (op dit moment) alleen toegankelijk via <guilabel
+>Gewone kleuren</guilabel
+> en zijn als volgt:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Actieve titelbalk &mdash; gebruikt om de achtergrond van de titelbalk, randen en/of decoraties voor het actieve venster (dat is die met invoerfocus). Niet alle vensterdecoraties zullen op dezelfde manier worden gebruikt en sommige kunnen zelfs de Normale achtergrond uit de vensterset gebruiken om de titelbalk weer te geven. </para
+></listitem>
+      <listitem
+><para
+>Actieve titelbalktekst &mdash; gebruikt om de titelbalktekst weer te geven wanneer Actieve titelbalk wordt gebruikt om de titelbalkachtergrond weer te geven. Kan ook worden gebruikt voor andere voorgrondelementen die Actieve titelbalk als de achtergrond gebruiken. </para
+></listitem>
+    </itemizedlist>
+
+    <para
+>De Inactieve titelbalk [tekst] regel zijn hetzelfde als hier boven, maar voor inactieve vensters, in plaats van actieve vensters.</para>
+  </sect4>
+
+</sect3>
+
+<sect3 id="color-effects">
+  <title
+>Uitgeschakeld</title>
+
+  <para
+>Kleur-status-effecten uit dit tabblad worden toegepast op interface-elementen in het de status inactief (vensters die geen focus hebben; alleen als <guilabel
+>Inactieve venster-kleureffecten toepassen</guilabel
+> is ingeschakeld) of status uitgeschakeld. Door de effecten te wijzigen, kan het uiterlijk van elementen in deze statussen worden gewijzigd. Gebruikelijk is dat inactieve elementen een gereduceerd contrast hebben (tekst vervaagt lichtjes in de achtergrond) en kan een licht gereduceerde intensiteit hebben, terwijl uitgeschakelde elementen een sterk gereduceerd contrast hebben en zijn vaak merkbaar donkerder of lichter. </para>
+
+  <para
+>Drie typen effecten zouden kunnen worden toegepast op elke status (waarbij de effecten van de twee statussen onafhankelijk zijn). Dit zijn Intensiteit, Kleur en Contrast. De eerste twee (Intensiteit en Kleur) besturen de kleur in het algemeen, terwijl de laatste (Contrast) invloed heeft op kleuren van de voorgrond relatief tot de achtergrond.</para>
+
+  <sect4>
+    <title
+>Intensiteit</title>
+
+    <para
+>Intensiteit laat de kleur in het algemeen lichter of donker worden. De schuifregelaar in het midden produceert geen wijziging. De beschikbare effecten zijn:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Donkeren &mdash; maakt alles lichter of donkerder op een gecontroleerde manier. Elke &quot;tik&quot; op de schuifregelaar vergroot of verlaagt de intensiteit in het algemeen (&ie; waargenomen helderheid) met een absolute hoeveelheid. </para
+></listitem>
+      <listitem
+><para
+>Donkerder &mdash; wijzigt de intensiteit met een percentage van de initiële waarde. Een instelling van de schuifregelaar halfweg tussen het midden en het maximum resulteert in een kleur half zo intens als het origineel. Het minimum geeft een kleur tweemaal zo intens als het origineel. </para
+></listitem>
+      <listitem
+><para
+>Lichter &mdash; is in concept het tegenovergestelde van donkerder; lichter kan worden gedacht als werking met &quot;afstand tot wit&quot;, waar donkerder werkt met &quot;afstand tot zwart&quot;. Het minimum is een kleur tweemaal zo &quot;ver&quot; van wit als het origineel, terwijl halfweg tussen midden en maximum een intensiteit geeft halfweg tussen de originele kleur en wit. </para
+></listitem>
+    </itemizedlist>
+  </sect4>
+
+  <sect4>
+    <title
+>Kleur</title>
+
+    <para
+>Kleur wijzigt de kleur in het algemeen, maar is niet beperkt tot intensiteit. De beschikbare effecten zijn:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Onverzadigd &mdash; wijzigt de relatieve kleurintensiteit. De midden instelling produceert geen verandering; maximum geeft een grijs waarvan de waargenomen intensiteit gelijk is aan die van de originele kleur. Een lagere instelling doet de kleurintensiteit toenemen, die een kleur geeft die minder grijs is / &quot;levendiger&quot; dan de originele kleur. </para
+></listitem>
+      <listitem
+><para
+>Vervagen &mdash; mengt de originele kleur naar een referentiekleur. De minimum instelling op de schuifregelaar produceert geen verandering; het maximum geeft de referentiekleur. </para
+></listitem>
+      <listitem
+><para
+>Tint &mdash; is vergelijkbaar met Vervagen, behalve dat de kleur (tint en kleurintensiteit) sneller wijzigt terwijl de intensiteit langzamer wijzigt als de waarde van de schuifregelaar toeneemt. </para
+></listitem>
+    </itemizedlist>
+  </sect4>
+
+  <sect4>
+    <title
+>Contrast</title>
+
+    <para
+>De contrasteffecten zijn vergelijkbaar met de kleureffecten, behalve dat ze van toepassing zijn op de tekst, waarbij de achtergrondkleur wordt gebruikt als de referentiekleur en Onverzadigd niet beschikbaar is. Vervagen produceert tekst die sneller &quot;vervaagt&quot;, maar zijn kleur langer behoudt, terwijl Tint tekst produceert waarvan de kleur sneller verandert om overeen te komen met de achtergrond terwijl het langer een groter intensiteitscontrast behoudt (waar &quot;langer&quot; een hogere instelling op de schuifregelaar betekent). Voor Contrasteffecten, levert de minimum instelling op de schuifregelaar geen wijziging, terwijl maximum veroorzaakt dat de tekst volledig verdwijnt in de achtergrond.</para>
+  </sect4>
+
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>
+<!-- kate: indent-width 2; replace-tabs on; -->

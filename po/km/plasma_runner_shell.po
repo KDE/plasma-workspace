@@ -1,0 +1,72 @@
+# translation of plasma_runner_shell.po to Khmer
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Khoem Sokhem <khoemsokhem@khmeros.info>, 2008, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_shell\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-27 00:45+0000\n"
+"PO-Revision-Date: 2009-04-21 10:07+0700\n"
+"Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
+"Language-Team: Khmer <support@khmeros.info>\n"
+"Language: km\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"\n"
+
+#: shellrunner.cpp:35
+#, kde-format
+msgid "Finds commands that match :q:, using common shell syntax"
+msgstr "រក​ពាក្យ​បញ្ជា​ដែល​ផ្គូផ្គង​នឹង :q: ដោយ​ប្រើ​វាក្យសម្ព័ន្ធ​សែល​ធម្មតា"
+
+#: shellrunner.cpp:36
+#, fuzzy, kde-format
+#| msgid "Run in &terminal window"
+msgid "Run in Terminal Window"
+msgstr "រត់​នៅ​ក្នុយ​​បង្អួច​ស្ថានីយ"
+
+#: shellrunner.cpp:54
+#, kde-format
+msgid "Run %1"
+msgstr "រត់ %1"
+
+#~ msgid "Enter the user you want to run the application as here."
+#~ msgstr "បញ្ចូល​អ្នក​ប្រើ​ ដែល​អ្នក​ចង់​ឲ្យ​រត់​កម្មវិធី​នៅ​ទីនេះ ។"
+
+#~ msgid "User&name:"
+#~ msgstr "ឈ្មោះ​អ្នកប្រើ ៖"
+
+#~ msgid "Enter the password here for the user you specified above."
+#~ msgstr "បញ្ចូល​ពាក្យសម្ងាត់​​នៅទីនេះ សម្រាប់​អ្នកប្រើ​ដែល​​អ្នកបានបញ្ជាក់​ខាង​លើ ។"
+
+#~ msgid "Pass&word:"
+#~ msgstr "ពាក្យ​សម្ងាត់ ៖"
+
+#~ msgid ""
+#~ "Check this option if the application you want to run is a text mode "
+#~ "application. The application will then be run in a terminal emulator "
+#~ "window."
+#~ msgstr ""
+#~ "គូស​ធីក​ជម្រើស​នេះ​ ប្រសិនបើ​កម្មវិធី​ដែល​អ្នក​ចង់​ឲ្យ​រត់​​​គឺ​ជា​កម្មវិធី​របៀប​អត្ថបទ ។ បន្ទាប់​មក​កម្មវិធី​នឹង​ត្រូវ​"
+#~ "បានរត់​នៅ​ក្នុង​បង្អួច​កម្មវិធី​ស្ថានីយ ។"
+
+#~ msgid "Run in &terminal window"
+#~ msgstr "រត់​នៅ​ក្នុយ​​បង្អួច​ស្ថានីយ"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "user id. Every process has a user id associated with it. This id code "
+#~ "determines file access and other permissions. The password of the user is "
+#~ "required to do this."
+#~ msgstr ""
+#~ "គូស​ធីក​ជម្រើស​នេះ ប្រសិនបើ​អ្នកចង់​ឲ្យ​រត់​កម្មវិធី​ជា​មួយ​លេខ​សម្គាល់​អ្នក​ប្រើ​ផ្សេង ។ ដំណើរការ​នីមួយៗ​មាន​"
+#~ "លេខសម្គាល់​អ្នក​ប្រើ​ជា​មួយ​វា ។ កូដ​លេខ​សម្គាល់​នេះ​កំណត់​កា​រចូលដំណើរការ​ឯកសារ និង​សិទ្ធិផ្សេងៗ ។ ពាក្យ​"
+#~ "សម្ងាត់​អ្នក​ប្រើ​ត្រូ​វបានទាមទារ​ឲ្យ​ធ្វើ​ដូច្នេះ ។"
+
+#~ msgid "Run as a different &user"
+#~ msgstr "រត់​ជា​អ្នក​ប្រើ​ផ្សេង"

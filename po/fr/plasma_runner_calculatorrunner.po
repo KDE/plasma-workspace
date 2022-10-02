@@ -1,0 +1,52 @@
+# translation of plasma_runner_calculatorrunner.po to Français
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Joëlle Cornavin <jcornavi@club-internet.fr>, 2009.
+# Joëlle Cornavin <jcornavin@laposte.net>, 2010.
+# Vincent Pinon <vpinon@kde.org>, 2016, 2017.
+# Xavier Besnard <xavier.besnard@neuf.fr>, 2020, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_calculatorrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-17 00:47+0000\n"
+"PO-Revision-Date: 2021-01-14 15:43+0100\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
+"Language-Team: French <kde-francophone@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#: calculatorrunner.cpp:33
+#, kde-format
+msgid ""
+"Calculates the value of :q: when :q: is made up of numbers and mathematical "
+"symbols such as +, -, /, *, ! and ^."
+msgstr ""
+"Calcule la valeur de :q: lorsque :q: est composé de nombres et de symboles "
+"mathématiques tels que +, -, /, *, ! et ^."
+
+#: calculatorrunner.cpp:39
+#, kde-format
+msgid "Copy to Clipboard"
+msgstr "Copier dans le presse-papiers"
+
+#: calculatorrunner.cpp:129
+#, kde-format
+msgctxt "The result of the calculation is only an approximation"
+msgid "Approximation"
+msgstr "Approximation"
+
+#~ msgid ""
+#~ "The exchange rates could not be updated. The following error has been "
+#~ "reported: %1"
+#~ msgstr ""
+#~ "Impossible de mettre à jour les taux d'échange. L'erreur suivante a été "
+#~ "signalée : %1"

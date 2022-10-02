@@ -1,0 +1,439 @@
+# Translation of kcm_users to Norwegian Nynorsk
+#
+# Karl Ove Hufthammer <karl@huftis.org>, 2020, 2022.
+# Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-29 00:48+0000\n"
+"PO-Revision-Date: 2022-06-18 23:54+0200\n"
+"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
+"Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
+"Language: nn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.04.2\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: package/contents/ui/ChangePassword.qml:26
+#: package/contents/ui/UserDetailsPage.qml:166
+#, kde-format
+msgid "Change Password"
+msgstr "Byt passord"
+
+#: package/contents/ui/ChangePassword.qml:41
+#, kde-format
+msgid "Password"
+msgstr "Passord"
+
+#: package/contents/ui/ChangePassword.qml:55
+#, kde-format
+msgid "Confirm password"
+msgstr "Stadfest passord"
+
+#: package/contents/ui/ChangePassword.qml:68
+#: package/contents/ui/CreateUser.qml:65
+#, kde-format
+msgid "Passwords must match"
+msgstr "Passorda må vera like"
+
+#: package/contents/ui/ChangePassword.qml:73
+#, kde-format
+msgid "Set Password"
+msgstr "Vel passord"
+
+#: package/contents/ui/ChangeWalletPassword.qml:17
+#, kde-format
+msgid "Change Wallet Password?"
+msgstr "Byta lommebok-passord?"
+
+#: package/contents/ui/ChangeWalletPassword.qml:26
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Now that you have changed your login password, you may also want to change "
+"the password on your default KWallet to match it."
+msgstr ""
+"Sidan du no har bytt innloggings­passord, bør du vurdera å også byta "
+"passordet til standard KWallet-lommeboka, slik at passorda er like."
+
+#: package/contents/ui/ChangeWalletPassword.qml:31
+#, kde-format
+msgid "What is KWallet?"
+msgstr "Kva er KWallet?"
+
+#: package/contents/ui/ChangeWalletPassword.qml:41
+#, kde-format
+msgid ""
+"KWallet is a password manager that stores your passwords for wireless "
+"networks and other encrypted resources. It is locked with its own password "
+"which differs from your login password. If the two passwords match, it can "
+"be unlocked at login automatically so you don't have to enter the KWallet "
+"password yourself."
+msgstr ""
+"KWallet er ein passord­handsamar som lagrar passorda dine for trådlaus­"
+"nettverk og andre krypterte ressursar. KWallet-lommeboka er låst med eit "
+"eige passord, som er forskjellig frå innloggings­passordet ditt. Viss dei to "
+"passorda er like, kan ho låsast opp automatisk ved innlogging, slik at du "
+"slepp å skriva inn passordet to gongar."
+
+#: package/contents/ui/ChangeWalletPassword.qml:57
+#, kde-format
+msgid "Change Wallet Password"
+msgstr "Byt lommebok-passord"
+
+#: package/contents/ui/ChangeWalletPassword.qml:66
+#, kde-format
+msgid "Leave Unchanged"
+msgstr "La det vera uendra"
+
+#: package/contents/ui/CreateUser.qml:16
+#, kde-format
+msgid "Create User"
+msgstr "Legg til brukar"
+
+#: package/contents/ui/CreateUser.qml:30
+#: package/contents/ui/UserDetailsPage.qml:134
+#, kde-format
+msgid "Name:"
+msgstr "Namn:"
+
+#: package/contents/ui/CreateUser.qml:34
+#: package/contents/ui/UserDetailsPage.qml:141
+#, kde-format
+msgid "Username:"
+msgstr "Brukarnamn:"
+
+#: package/contents/ui/CreateUser.qml:44
+#: package/contents/ui/UserDetailsPage.qml:149
+#, kde-format
+msgid "Standard"
+msgstr "Standard"
+
+#: package/contents/ui/CreateUser.qml:45
+#: package/contents/ui/UserDetailsPage.qml:150
+#, kde-format
+msgid "Administrator"
+msgstr "Administrator"
+
+#: package/contents/ui/CreateUser.qml:48
+#: package/contents/ui/UserDetailsPage.qml:153
+#, kde-format
+msgid "Account type:"
+msgstr "Kontotype:"
+
+#: package/contents/ui/CreateUser.qml:53
+#, kde-format
+msgid "Password:"
+msgstr "Passord:"
+
+#: package/contents/ui/CreateUser.qml:58
+#, kde-format
+msgid "Confirm password:"
+msgstr "Stadfest passord:"
+
+#: package/contents/ui/CreateUser.qml:69
+#, kde-format
+msgid "Create"
+msgstr "Legg til"
+
+#: package/contents/ui/FingerprintDialog.qml:57
+#, kde-format
+msgid "Configure Fingerprints"
+msgstr "Set opp fingeravtrykk"
+
+#: package/contents/ui/FingerprintDialog.qml:67
+#, kde-format
+msgid "Clear Fingerprints"
+msgstr "Fjern fingeravtrykk"
+
+#: package/contents/ui/FingerprintDialog.qml:74
+#, kde-format
+msgid "Add"
+msgstr "Legg til"
+
+#: package/contents/ui/FingerprintDialog.qml:83
+#: package/contents/ui/FingerprintDialog.qml:100
+#, kde-format
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: package/contents/ui/FingerprintDialog.qml:89
+#, kde-format
+msgid "Continue"
+msgstr "Hald fram"
+
+#: package/contents/ui/FingerprintDialog.qml:108
+#, kde-format
+msgid "Done"
+msgstr "Fullført"
+
+#: package/contents/ui/FingerprintDialog.qml:131
+#, kde-format
+msgid "Enrolling Fingerprint"
+msgstr "Registrerer fingeravtrykk"
+
+#: package/contents/ui/FingerprintDialog.qml:137
+#, kde-format
+msgctxt ""
+"%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgstr "%1 din %2 på fingeravtrykk-sensoren fleire gongar."
+
+#: package/contents/ui/FingerprintDialog.qml:147
+#, kde-format
+msgid "Finger Enrolled"
+msgstr "Finger registrert"
+
+#: package/contents/ui/FingerprintDialog.qml:183
+#, kde-format
+msgid "Pick a finger to enroll"
+msgstr "Vel finger som skal registrerast"
+
+#: package/contents/ui/FingerprintDialog.qml:247
+#, kde-format
+msgid "Re-enroll finger"
+msgstr "Registrer finger på nytt"
+
+#: package/contents/ui/FingerprintDialog.qml:265
+#, kde-format
+msgid "No fingerprints added"
+msgstr "Ingen fingeravtrykk lagde til"
+
+#: package/contents/ui/main.qml:22
+#, kde-format
+msgid "Manage Users"
+msgstr "Handsam brukarar"
+
+#: package/contents/ui/main.qml:123
+#, kde-format
+msgid "Add New User"
+msgstr "Legg til ny brukar"
+
+#: package/contents/ui/UserDetailsPage.qml:89
+#, kde-format
+msgid "Choose a picture"
+msgstr "Vel bilete"
+
+#: package/contents/ui/UserDetailsPage.qml:120
+#, kde-format
+msgid "Change avatar"
+msgstr "Byt avatar"
+
+#: package/contents/ui/UserDetailsPage.qml:162
+#, kde-format
+msgid "Email address:"
+msgstr "E-postadresse:"
+
+#: package/contents/ui/UserDetailsPage.qml:186
+#, kde-format
+msgid "Delete files"
+msgstr "Slett filer"
+
+#: package/contents/ui/UserDetailsPage.qml:193
+#, kde-format
+msgid "Keep files"
+msgstr "Behald filer"
+
+#: package/contents/ui/UserDetailsPage.qml:200
+#, kde-format
+msgid "Delete User…"
+msgstr "Slett brukar …"
+
+#: package/contents/ui/UserDetailsPage.qml:211
+#, kde-format
+msgid "Configure Fingerprint Authentication…"
+msgstr "Set opp fingeravtrykk-autentisering …"
+
+#: package/contents/ui/UserDetailsPage.qml:225
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Fingerprints can be used in place of a password when unlocking the screen "
+"and providing administrator permissions to applications and command-line "
+"programs that request them.<nl/><nl/>Logging into the system with your "
+"fingerprint is not yet supported."
+msgstr ""
+"Fingeravtrykk kan brukast i staden for passord for å låsa opp skjermen og "
+"gje administrator­løyve til brukar­program og kommandolinje­program som spør om "
+"det.<nl/><nl/>Systempålogging med fingeravtrykk er førebels ikkje støtta."
+
+#: package/contents/ui/UserDetailsPage.qml:235
+#, kde-format
+msgid "Change Avatar"
+msgstr "Byt avatar"
+
+#: package/contents/ui/UserDetailsPage.qml:238
+#, kde-format
+msgid "It's Nothing"
+msgstr "Det er ingenting"
+
+# Er visst namn på fargar, ikkje bilde. Denne er rosa (fargekodar på https://invent.kde.org/plasma/plasma-desktop/-/blob/master/kcms/users/package/contents/ui/UserDetailsPage.qml). Og bør ha alliterasjon. Mine forslag vart laga «kjapt og gæli», så finn heller betre alternativ.
+#: package/contents/ui/UserDetailsPage.qml:239
+#, kde-format
+msgid "Feisty Flamingo"
+msgstr "Flaksande flamingo"
+
+#: package/contents/ui/UserDetailsPage.qml:240
+#, kde-format
+msgid "Dragon's Fruit"
+msgstr "Drakefrukt"
+
+#: package/contents/ui/UserDetailsPage.qml:241
+#, kde-format
+msgid "Sweet Potato"
+msgstr "Søtpotet"
+
+#: package/contents/ui/UserDetailsPage.qml:242
+#, kde-format
+msgid "Ambient Amber"
+msgstr "Glødande glo"
+
+#: package/contents/ui/UserDetailsPage.qml:243
+#, kde-format
+msgid "Sparkle Sunbeam"
+msgstr "Solstrålar"
+
+#: package/contents/ui/UserDetailsPage.qml:244
+#, kde-format
+msgid "Lemon-Lime"
+msgstr "Limegrønt"
+
+#: package/contents/ui/UserDetailsPage.qml:245
+#, kde-format
+msgid "Verdant Charm"
+msgstr "Frodig og fint"
+
+#: package/contents/ui/UserDetailsPage.qml:246
+#, kde-format
+msgid "Mellow Meadow"
+msgstr "Vårgrønt"
+
+#: package/contents/ui/UserDetailsPage.qml:247
+#, kde-format
+msgid "Tepid Teal"
+msgstr "Tafatt turkis"
+
+#: package/contents/ui/UserDetailsPage.qml:248
+#, kde-format
+msgid "Plasma Blue"
+msgstr "Plasma-blått"
+
+#: package/contents/ui/UserDetailsPage.qml:249
+#, kde-format
+msgid "Pon Purple"
+msgstr "Lat lavendel"
+
+#: package/contents/ui/UserDetailsPage.qml:250
+#, kde-format
+msgid "Bajo Purple"
+msgstr "Interessant indigo"
+
+#: package/contents/ui/UserDetailsPage.qml:251
+#, kde-format
+msgid "Burnt Charcoal"
+msgstr "Brent kol"
+
+#: package/contents/ui/UserDetailsPage.qml:252
+#, kde-format
+msgid "Paper Perfection"
+msgstr "Perfekt papir"
+
+#: package/contents/ui/UserDetailsPage.qml:253
+#, kde-format
+msgid "Cafétera Brown"
+msgstr "Kafeteriabrunt"
+
+#: package/contents/ui/UserDetailsPage.qml:254
+#, kde-format
+msgid "Rich Hardwood"
+msgstr "Tydeleg trevirke"
+
+#: package/contents/ui/UserDetailsPage.qml:305
+#, kde-format
+msgid "Choose File…"
+msgstr "Vel fil …"
+
+#: src/fingerprintmodel.cpp:147 src/fingerprintmodel.cpp:254
+#, kde-format
+msgid "No fingerprint device found."
+msgstr "Fann inga eining for fingeravtrykk."
+
+#: src/fingerprintmodel.cpp:313
+#, kde-format
+msgid "Retry scanning your finger."
+msgstr "Prøv å skanna fingeren på nytt."
+
+#: src/fingerprintmodel.cpp:315
+#, kde-format
+msgid "Swipe too short. Try again."
+msgstr "Sveipet var for kort. Prøv på nytt."
+
+#: src/fingerprintmodel.cpp:317
+#, kde-format
+msgid "Finger not centered on the reader. Try again."
+msgstr "Heile fingeren var ikkje lagd på lesaren. Prøv på nytt."
+
+#: src/fingerprintmodel.cpp:319
+#, kde-format
+msgid "Remove your finger from the reader, and try again."
+msgstr "Ta fingeren frå lesaren og prøv på nytt."
+
+#: src/fingerprintmodel.cpp:327
+#, kde-format
+msgid "Fingerprint enrollment has failed."
+msgstr "Klarte ikkje å registrera fingeravtrykk."
+
+#: src/fingerprintmodel.cpp:330
+#, kde-format
+msgid ""
+"There is no space left for this device, delete other fingerprints to "
+"continue."
+msgstr "For lite plass på eininga. Slett andre fingeravtrykk for å halda fram."
+
+#: src/fingerprintmodel.cpp:333
+#, kde-format
+msgid "The device was disconnected."
+msgstr "Eininga vart kopla frå."
+
+#: src/fingerprintmodel.cpp:338
+#, kde-format
+msgid "An unknown error has occurred."
+msgstr "Det oppstod ein ukjend feil."
+
+#: src/user.cpp:264
+#, kde-format
+msgid "Could not get permission to save user %1"
+msgstr "Fekk ikkje løyve til å lagra brukaren %1"
+
+#: src/user.cpp:269
+#, kde-format
+msgid "There was an error while saving changes"
+msgstr "Det oppstod ein feil ved lagring av endringane"
+
+#: src/user.cpp:364
+#, kde-format
+msgid "Failed to resize image: opening temp file failed"
+msgstr ""
+"Klarte ikkje endra storleik på bilete: Feil ved opning av mellombels fil."
+
+#: src/user.cpp:372
+#, kde-format
+msgid "Failed to resize image: writing to temp file failed"
+msgstr ""
+"Klarte ikkje endra storleik på bilete: Klarte ikkje lagra til mellombels fil."
+
+#: src/usermodel.cpp:138
+#, kde-format
+msgid "Your Account"
+msgstr "Kontoen din"
+
+#: src/usermodel.cpp:138
+#, kde-format
+msgid "Other Accounts"
+msgstr "Andre kontoar"

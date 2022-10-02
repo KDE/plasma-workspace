@@ -1,0 +1,685 @@
+# translation of kcminput.po to Lithuanian
+# Ričardas Čepas <rch@online.lt>, 2003.
+# Donatas Glodenis <dgvirtual@akl.lt>, 2005-2009.
+# Tomas Straupis <tomasstraupis@gmail.com>, 2010, 2011.
+# Remigijus Jarmalavičius <remigijus@jarmalavicius.lt>, 2011.
+# Liudas Ališauskas <liudas.alisauskas@gmail.com>, 2012.
+# Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>, 2015, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminput\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:50+0000\n"
+"PO-Revision-Date: 2021-08-21 20:16+0300\n"
+"Last-Translator: Moo\n"
+"Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
+"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 3.0\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current cursor theme"
+msgstr "Dabartinio žymeklių apipavidalinimo pavadinimas"
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr "Dabartinis žymeklio dydis"
+
+#: kcmcursortheme.cpp:302
+#, kde-format
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr ""
+"Tam, kad įsigaliotų šie pakeitimai, turite paleisti Plasma seansą iš naujo."
+
+#: kcmcursortheme.cpp:376
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Nepavyko sukurti laikinojo failo."
+
+#: kcmcursortheme.cpp:387
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Nepavyko atsisiųsti piktogramų apipavidalinimo archyvo: %1"
+
+#: kcmcursortheme.cpp:418
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "Failas nėra teisingas piktogramų apipavidalinimo archyvas."
+
+#: kcmcursortheme.cpp:425
+#, kde-format
+msgid "Failed to create 'icons' folder."
+msgstr "Nepavyko sukurti 'icons' aplanko."
+
+#: kcmcursortheme.cpp:434
+#, kde-format
+msgid ""
+"A theme named %1 already exists in your icon theme folder. Do you want "
+"replace it with this one?"
+msgstr ""
+"Apipavidalinimas, pavadinimu %1, jūsų piktogramų apipavidalinimo aplanke jau "
+"yra. Ar norite jį pakeisti šiuo apipavidalinimu?"
+
+#: kcmcursortheme.cpp:438
+#, kde-format
+msgid "Overwrite Theme?"
+msgstr "Perrašyti apipavidalinimą?"
+
+#: kcmcursortheme.cpp:462
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "Apipavidalinimas sėkmingai įdiegtas."
+
+#: package/contents/ui/Delegate.qml:54
+#, kde-format
+msgid "Remove Theme"
+msgstr "Šalinti apipavidalinimą"
+
+#: package/contents/ui/Delegate.qml:61
+#, kde-format
+msgid "Restore Cursor Theme"
+msgstr "Atkurti žymeklių apipavidalinimą"
+
+#: package/contents/ui/main.qml:20
+#, kde-format
+msgid "This module lets you choose the mouse cursor theme."
+msgstr "Šis modulis jums leidžia pasirinkti pelės žymeklio apipavidalinimą."
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Size:"
+msgstr "Dydis:"
+
+#: package/contents/ui/main.qml:134
+#, kde-format
+msgid "&Install from File…"
+msgstr "Į&diegti iš failo…"
+
+#: package/contents/ui/main.qml:140
+#, kde-format
+msgid "&Get New Cursors…"
+msgstr "&Gauti naujų žymeklių…"
+
+#: package/contents/ui/main.qml:157
+#, kde-format
+msgid "Open Theme"
+msgstr "Atverti apipavidalinimą"
+
+#: package/contents/ui/main.qml:159
+#, kde-format
+msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+msgstr "Žymeklio apipavidalinimo failai (*.tar.gz *.tar.bz2)"
+
+#: plasma-apply-cursortheme.cpp:41
+#, kde-format
+msgid "The requested size '%1' is not available, using %2 instead."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:62
+#, kde-format
+msgid ""
+"This tool allows you to set the mouse cursor theme for the current Plasma "
+"session, without accidentally setting it to one that is either not "
+"available, or which is already set."
+msgstr ""
+"Šis įrankis leidžia jums nusistatyti pelės žymeklio apipavidalinimą "
+"dabartiniam Plasma seansui ir padeda išvengti ir nenustatyti neprieinamo ar "
+"jau nustatyto pelės žymeklio apipavidalinimo."
+
+#: plasma-apply-cursortheme.cpp:66
+#, kde-format
+msgid ""
+"The name of the cursor theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+"Pelės žymeklio apipavidalinimo, kurį norite nustatyti dabartiniam Plasma "
+"seansui, pavadinimas (perduodant pilną kelią, bus naudojama tik paskutinė "
+"kelio dalis)"
+
+#: plasma-apply-cursortheme.cpp:67
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+"Rodyti visus sistemoje prieinamus apipavidalinimus (ir kuris yra dabartinis "
+"apipavidalinimas)"
+
+#: plasma-apply-cursortheme.cpp:68
+#, kde-format
+msgid "Use a specific size, rather than the theme default size"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:89
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+"Užklaustas apipavidalinimas „%1“ jau yra nustatytas kaip dabartinio Plasma "
+"seanso apipavidalinimas."
+
+#: plasma-apply-cursortheme.cpp:100
+#, kde-format
+msgid ""
+"Successfully applied the mouse cursor theme %1 to your current Plasma session"
+msgstr ""
+"Sėkmingai pritaikytas pelės žymeklio apipavidalinimas %1jūsų dabartiniam "
+"Plasma seansui"
+
+#: plasma-apply-cursortheme.cpp:102
+#, kde-format
+msgid ""
+"You have to restart the Plasma session for your newly applied mouse cursor "
+"theme to display correctly."
+msgstr ""
+"Tam, kad būtų tinkamai atvaizduojamas naujai pritaikytas pelės žymeklio "
+"apipavidalinimas, reikia paleisti Plasma seansą iš naujo."
+
+#: plasma-apply-cursortheme.cpp:112
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+"Nepavyko rasti apipavidalinimo „%1“. Apipavidalinimas turėtų būti vienas iš "
+"šių variantų: %2"
+
+#: plasma-apply-cursortheme.cpp:120
+#, kde-format
+msgid "You have the following mouse cursor themes on your system:"
+msgstr "Savo sistemoje turite šiuos pelės žymeklio apipavidalinimus:"
+
+#: plasma-apply-cursortheme.cpp:125
+#, kde-format
+msgid "(Current theme for this Plasma session)"
+msgstr ""
+
+#: xcursor/xcursortheme.cpp:60
+#, kde-format
+msgctxt ""
+"@info The argument is the list of available sizes (in pixel). Example: "
+"'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+msgid "(Available sizes: %1)"
+msgstr "(Prieinami dydžiai: %1)"
+
+#~ msgid "Name"
+#~ msgstr "Pavadinimas"
+
+#~ msgid "Description"
+#~ msgstr "Aprašas"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Donatas Glodenis,Liudas Ališauskas, Moo"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "dgvirtual@akl.lt,liudas@akmc.lt, <>"
+
+#~ msgid "Cursors"
+#~ msgstr "Žymekliai"
+
+#~ msgid "(c) 2003-2007 Fredrik Höglund"
+#~ msgstr "(c) 2003-2007 Fredrik Höglund"
+
+#~ msgid "Fredrik Höglund"
+#~ msgstr "Fredrik Höglund"
+
+#~ msgid "Marco Martin"
+#~ msgstr "Marco Martin"
+
+#~ msgid ""
+#~ "<qt>You cannot delete the theme you are currently using.<br />You have to "
+#~ "switch to another theme first.</qt>"
+#~ msgstr ""
+#~ "<qt>Negalite ištrinti šiuo metu naudojamo apipavidalinimo.<br />Iš "
+#~ "pradžių, turite persijungti į kitą apipavidalinimą.</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <i>%1</i> cursor theme?<br />This "
+#~ "will delete all the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>Ar tikrai norite pašalinti <i>%1</i> žymekliu apipavidalinimą?<br /"
+#~ ">Tai ištrins visus šio apipavidalinimo įdiegtus failus.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Patvirtinimas"
+
+#~ msgctxt "@item:inlistbox size"
+#~ msgid "Resolution dependent"
+#~ msgstr "Priklausomai nuo skiriamosios gebos"
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "Žymeklio nustatymai pakeisti"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "Nutempkite arba įrašykite apipavidalinimo URL"
+
+#~ msgid ""
+#~ "Unable to download the cursor theme archive; please check that the "
+#~ "address %1 is correct."
+#~ msgstr ""
+#~ "Nepavyksta atsisiųsti žymeklių temos archyvo; prašome patikrinti, ar "
+#~ "teisingas %1 adresas."
+
+#~ msgid "Get new color schemes from the Internet"
+#~ msgstr "Gaukite naujų spalvų schemų iš interneto"
+
+#~ msgid ""
+#~ "Select the cursor theme you want to use (hover preview to test cursor):"
+#~ msgstr ""
+#~ "Pažymėkite žymeklių apipavidalinimą, kurią norite naudoti (užveskite "
+#~ "žymeklį ant peržiūros lauko pabandymui):"
+
+#~ msgid "Select the cursor theme you want to use:"
+#~ msgstr "Pasirinkite norimą naudoti žymeklio temą:"
+
+#~ msgid "Small black"
+#~ msgstr "Maži juodi"
+
+#~ msgid "Small black cursors"
+#~ msgstr "Maži juodi žymekliai"
+
+#~ msgid "Large black"
+#~ msgstr "Dideli juodi"
+
+#~ msgid "Large black cursors"
+#~ msgstr "Dideli juodi žymekliai"
+
+#~ msgid "Small white"
+#~ msgstr "Maži balti"
+
+#~ msgid "Small white cursors"
+#~ msgstr "Maži balti žymekliai"
+
+#~ msgid "Large white"
+#~ msgstr "Dideli balti"
+
+#~ msgid "Large white cursors"
+#~ msgstr "Dideli balti žymekliai"
+
+#~ msgid "Button Order"
+#~ msgstr "Mygtukų tvarka"
+
+#~ msgid "Righ&t handed"
+#~ msgstr "&Dešinės rankos"
+
+#~ msgid "Le&ft handed"
+#~ msgstr "&Kairės rankos"
+
+#~ msgid ""
+#~ "Change the direction of scrolling for the mouse wheel or the 4th and 5th "
+#~ "mouse buttons."
+#~ msgstr ""
+#~ "Pakeisti pelės ratuko ar 4-tojo ir 5-tojo pelės mygtuko veikimo kryptį."
+
+#~ msgid "Re&verse scroll direction"
+#~ msgstr "At&virkštinė ratuko veikimo kryptis"
+
+#~ msgid "Icons"
+#~ msgstr "Ženkliukai"
+
+#~ msgid ""
+#~ "Dou&ble-click to open files and folders (select icons on first click)"
+#~ msgstr ""
+#~ "Atverti &failus ir aplankus dvigubu spragtelėjimu (viengubas "
+#~ "spragtelėjimas ženkliuką pažymės)"
+
+#~ msgid "&Single-click to open files and folders"
+#~ msgstr "Atverti failus ir aplankus &viengubu spragtelėjimu"
+
+#~ msgid "Cha&nge pointer shape over icons"
+#~ msgstr "&Pakeisti žymeklio išvaizdą virš ženkliukų"
+
+#~ msgid "A&utomatically select icons"
+#~ msgstr "A&utomatiškai pažymės ženkliukus"
+
+#~ msgctxt "label. delay (on milliseconds) to automatically select icons"
+#~ msgid "Delay"
+#~ msgstr "Delsa"
+
+#~ msgctxt "milliseconds. time to automatically select the items"
+#~ msgid " ms"
+#~ msgstr " ms"
+
+#~ msgid ""
+#~ "<h1>Mouse</h1> This module allows you to choose various options for the "
+#~ "way in which your pointing device works. Your pointing device may be a "
+#~ "mouse, trackball, or some other hardware that performs a similar function."
+#~ msgstr ""
+#~ "<h1>Pelė</h1> Šis modulis leidžia jums pasirinkti įvairias "
+#~ "manipuliatoriaus darbo parinktis. Manipuliatorius gali būti pelė, "
+#~ "trekbolas arba koks nors kitas įtaisas, atliekantis panašią funkciją."
+
+#~ msgid "&General"
+#~ msgstr "&Bendri"
+
+#~ msgid ""
+#~ "If you are left-handed, you may prefer to swap the functions of the left "
+#~ "and right buttons on your pointing device by choosing the 'left-handed' "
+#~ "option. If your pointing device has more than two buttons, only those "
+#~ "that function as the left and right buttons are affected. For example, if "
+#~ "you have a three-button mouse, the middle button is unaffected."
+#~ msgstr ""
+#~ "Jeigu esate kairiarankis, galite sukeisti savo manipuliatoriaus kairį ir "
+#~ "dešinį klavišus, pasirinkdami 'kairės “rankos' parinktį. Jeigu Jūsų "
+#~ "manipuliatorius turi daugiau kaip du klavišus, bus įtakojamas tik kairio "
+#~ "ir dešinio klavišų funkcionalumas. Pavyzdžiui, jeigu Jūsų pelė yra trijų "
+#~ "klavišų, šio klavišo funkcija nepasikeis."
+
+#~ msgid ""
+#~ "The default behavior in KDE is to select and activate icons with a single "
+#~ "click of the left button on your pointing device. This behavior is "
+#~ "consistent with what you would expect when you click links in most web "
+#~ "browsers. If you would prefer to select with a single click, and activate "
+#~ "with a double click, check this option."
+#~ msgstr ""
+#~ "Numatytas KDE aplinkos elgesys yra pažymėti ir aktyvuoti ženkliukus vienu "
+#~ "kairiojo klavišo spragtelėjimu. Tai yra pamažu į tai, kaip Jūs "
+#~ "spragtelėjate jungtis daugelyje Žiniatinklio naršyklių. Jeigu norite "
+#~ "pažymėti vienu spragtelėjimu, o aktyvuoti dviem, pažymėkite šitą parinktį."
+
+#~ msgid "Activates and opens a file or folder with a single click."
+#~ msgstr "Suaktyvina arba atveria failą arba aplanką vienu spragtelėjimu."
+
+#~ msgid ""
+#~ "If you check this option, pausing the mouse pointer over an icon on the "
+#~ "screen will automatically select that icon. This may be useful when "
+#~ "single clicks activate icons, and you want only to select the icon "
+#~ "without activating it."
+#~ msgstr ""
+#~ "Jeigu pažymėsite šitą parinktį, sulaikius pelės žymeklį virš ženkliuko "
+#~ "ekrane,ženkliukas automatiškai bus pažymėtas. Tai gali būti patogu, kai "
+#~ "viengubas spragtelėjimas suaktyvina ženkliukus, o Jūs norite juos tik "
+#~ "pažymėti, jų neaktyvuojant."
+
+#~ msgid ""
+#~ "If you have checked the option to automatically select icons, this slider "
+#~ "allows you to select how long the mouse pointer must be paused over the "
+#~ "icon before it is selected."
+#~ msgstr ""
+#~ "Jeigu Jūs pažymėjote parinktį automatiškai pažymėti ženkliukus, šis "
+#~ "šliaužiklis leidžia jums pasirinkti kaip ilgai pelės žymeklis turi būti "
+#~ "sulaikytas virš ženkliuko kol jis bus pažymėtas."
+
+#~ msgid "Advanced"
+#~ msgstr "Sudėtingesni"
+
+#~ msgid " x"
+#~ msgstr " x"
+
+#~ msgid "Pointer acceleration:"
+#~ msgstr "Žymiklio pagreitis:"
+
+#~ msgid ""
+#~ "<p>This option allows you to change the relationship between the distance "
+#~ "that the mouse pointer moves on the screen and the relative movement of "
+#~ "the physical device itself (which may be a mouse, trackball, or some "
+#~ "other pointing device.)</p><p> A high value for the acceleration will "
+#~ "lead to large movements of the mouse pointer on the screen even when you "
+#~ "only make a small movement with the physical device. Selecting very high "
+#~ "values may result in the mouse pointer flying across the screen, making "
+#~ "it hard to control.</p>"
+#~ msgstr ""
+#~ "<p>Ši parinktis leidžia pakeisti sąryšį tarp pelės žymeklio judėjimo "
+#~ "distancijos ekrane ir reliatyvaus paties fizinio įtaiso judėjimo (tai "
+#~ "gali būti pelė, trekbolas arba kitoks manipuliatorius).</p><p> Didelė "
+#~ "pagreičio reikšmė gali sukelti didelius pelės žymeklio judesius ekrane, "
+#~ "nors Jūs tik truputį pajudinsite fizinį įtaisą. Pasirinkus labai dideles "
+#~ "reikšmes galite pasiekti to, kad pelės žymeklis tiesiog skraidys ekrane, "
+#~ "labai apsunkindamas jo kontrolę.</p>"
+
+#~ msgid "Pointer threshold:"
+#~ msgstr "Žymiklio žingsnis:"
+
+#~ msgid ""
+#~ "<p>The threshold is the smallest distance that the mouse pointer must "
+#~ "move on the screen before acceleration has any effect. If the movement is "
+#~ "smaller than the threshold, the mouse pointer moves as if the "
+#~ "acceleration was set to 1X;</p><p> thus, when you make small movements "
+#~ "with the physical device, there is no acceleration at all, giving you a "
+#~ "greater degree of control over the mouse pointer. With larger movements "
+#~ "of the physical device, you can move the mouse pointer rapidly to "
+#~ "different areas on the screen.</p>"
+#~ msgstr ""
+#~ "<p>Žingsnis yra mažiausias atstumas, kurį ekrane turi nueiti pelės "
+#~ "žymeklis, kol pagreitis turės efektą. Jeigu judesys yra mažesnis už "
+#~ "žingsnį, pelės žymeklis judės lyg būtų nustatytas viengubas pagreitis.</"
+#~ "p><p> Tokiu būdu, kai Jūs atliekate savo fiziniu įtaisu mažus judesius, "
+#~ "nebus jokio pagreičio. Tai jums suteikia didesnes galimybes "
+#~ "kontroliuojant pelės žymeklį. Didesniais fizinio įrenginio judesiais, Jūs "
+#~ "galite sparčiau perkelti pelės žymeklį į įvairias ekrano sritis.</p>"
+
+#~ msgid " msec"
+#~ msgstr " msec"
+
+#~ msgid "Double click interval:"
+#~ msgstr "Dvigubo spragtelėjimo intervalas:"
+
+#~ msgid ""
+#~ "The double click interval is the maximal time (in milliseconds) between "
+#~ "two mouse clicks which turns them into a double click. If the second "
+#~ "click happens later than this time interval after the first click, they "
+#~ "are recognized as two separate clicks."
+#~ msgstr ""
+#~ "Dvigubo spragtelėjimo intervalas yra didžiausias laikas (milisekundėmis) "
+#~ "tarp dviejų pelės klavišo paspaudimų, kurio metu jis laikomas dvigubu "
+#~ "spragtelėjimu. Jeigu antrasis paspaudimas atliekamas vėliau, nei "
+#~ "nustatyta šiuo laiko intervalu, tai bus traktuojama kaip du atskiri "
+#~ "spragtelėjimai."
+
+#~ msgid "Drag start time:"
+#~ msgstr "Tempimo pradžios laikas:"
+
+#~ msgid ""
+#~ "If you click with the mouse (e.g. in a multi-line editor) and begin to "
+#~ "move the mouse within the drag start time, a drag operation will be "
+#~ "initiated."
+#~ msgstr ""
+#~ "Jeigu Jūs spragtelėjate pele (pvz., tekstų redaktoriuje) ir pradedate "
+#~ "judinti pelę tempimo pradžios laiko intervale, bus pradėta tempimo "
+#~ "operacija."
+
+#~ msgid "Drag start distance:"
+#~ msgstr "Tempimo pradžios distancija:"
+
+#~ msgid ""
+#~ "If you click with the mouse and begin to move the mouse at least the drag "
+#~ "start distance, a drag operation will be initiated."
+#~ msgstr ""
+#~ "Jeigu Jūs spragtelėjate pele ir pradedate judinti pelę mažesniu atstumu "
+#~ "nei tempimo distancija, bus pradėta tempimo operacija."
+
+#~ msgid "Mouse wheel scrolls by:"
+#~ msgstr "Pelės ratukas pastumia per:"
+
+#~ msgid ""
+#~ "If you use the wheel of a mouse, this value determines the number of "
+#~ "lines to scroll for each wheel movement. Note that if this number exceeds "
+#~ "the number of visible lines, it will be ignored and the wheel movement "
+#~ "will be handled as a page up/down movement."
+#~ msgstr ""
+#~ "Jeigu naudojate pelę su ratuku, šita reikšmė nustato pastumiamų eilučių "
+#~ "skaičių, kiekvienu ratuko pasukimu. Atminkite, kad, jeigu šis skaičius "
+#~ "viršija matomų eilučių skaičių, eilučių prasukimas bus ignoruojamas, o "
+#~ "ratuko judesys perstums puslapį aukštyn arba žemyn."
+
+#~ msgid "Mouse Navigation"
+#~ msgstr "Pelės navigacija"
+
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "&Judinti pelę klaviatūra (su skaitine klaviatūra)"
+
+#~ msgid "&Acceleration delay:"
+#~ msgstr "P&agreičio delsa:"
+
+#~ msgid "R&epeat interval:"
+#~ msgstr "Ka&rtojimo intervalas:"
+
+#~ msgid "Acceleration &time:"
+#~ msgstr "Pa&greičio laikas:"
+
+#~ msgid " pixel/sec"
+#~ msgstr " pikseliai/sek."
+
+#~ msgid "Ma&ximum speed:"
+#~ msgstr "Didžiau&sias greitis:"
+
+#~ msgid "Acceleration &profile:"
+#~ msgstr "Pagreičio &profilis:"
+
+#~ msgid "Mouse"
+#~ msgstr "Pelė"
+
+#~ msgid "(c) 1997 - 2005 Mouse developers"
+#~ msgstr "(c) 1997 - 2005 Pelės programuotojai"
+
+#~ msgid "Patrick Dowler"
+#~ msgstr "Patrick Dowler"
+
+#~ msgid "Dirk A. Mueller"
+#~ msgstr "Dirk A. Mueller"
+
+#~ msgid "David Faure"
+#~ msgstr "David Faure"
+
+#~ msgid "Bernd Gehrmann"
+#~ msgstr "Bernd Gehrmann"
+
+#~ msgid "Rik Hemsley"
+#~ msgstr "Rik Hemsley"
+
+#~ msgid "Brad Hughes"
+#~ msgstr "Brad Hughes"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "Brad Hards"
+#~ msgstr "Brad Hards"
+
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] " pikselis"
+#~ msgstr[1] " pikseliai"
+#~ msgstr[2] " pikselių"
+#~ msgstr[3] " pikselis"
+
+#~ msgid " line"
+#~ msgid_plural " lines"
+#~ msgstr[0] " eilutę"
+#~ msgstr[1] " eilutes"
+#~ msgstr[2] " eilučių"
+#~ msgstr[3] " eilutę"
+
+#~ msgid "Mouse type: %1"
+#~ msgstr "Pelės tipas: %1"
+
+#~ msgid ""
+#~ "RF channel 1 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "Radijo kanalas 1 nustatytas. Prašome paspausti Prisijungti mygtuką ant "
+#~ "pelės ryšio atnaujinimui"
+
+#~ msgid "Press Connect Button"
+#~ msgstr "Spausti mygtuką Prisijungti"
+
+#~ msgid ""
+#~ "RF channel 2 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "Radijo kanalas 2 nustatytas. Prašome paspausti Prisijungti mygtuką ant "
+#~ "pelės ryšio atnaujinimui"
+
+#~ msgctxt "no cordless mouse"
+#~ msgid "none"
+#~ msgstr "nėra"
+
+#~ msgid "Cordless Mouse"
+#~ msgstr "Cordless Mouse"
+
+#~ msgid "Cordless Wheel Mouse"
+#~ msgstr "Cordless Wheel Mouse"
+
+#~ msgid "Cordless MouseMan Wheel"
+#~ msgstr "Cordless MouseMan Wheel"
+
+#~ msgid "Cordless TrackMan Wheel"
+#~ msgstr "Cordless TrackMan Wheel"
+
+#~ msgid "TrackMan Live"
+#~ msgstr "TrackMan Live"
+
+#~ msgid "Cordless TrackMan FX"
+#~ msgstr "Cordless TrackMan FX"
+
+#~ msgid "Cordless MouseMan Optical"
+#~ msgstr "Cordless MouseMan Optical"
+
+#~ msgid "Cordless Optical Mouse"
+#~ msgstr "Cordless Optical Mouse"
+
+#~ msgid "Cordless MouseMan Optical (2ch)"
+#~ msgstr "Cordless MouseMan Optical (2ch)"
+
+#~ msgid "Cordless Optical Mouse (2ch)"
+#~ msgstr "Cordless Optical Mouse (2ch)"
+
+#~ msgid "Cordless Mouse (2ch)"
+#~ msgstr "Cordless Mouse (2ch)"
+
+#~ msgid "Cordless Optical TrackMan"
+#~ msgstr "Cordless Optical TrackMan"
+
+#~ msgid "MX700 Cordless Optical Mouse"
+#~ msgstr "MX700 Cordless Optical Mouse"
+
+#~ msgid "MX700 Cordless Optical Mouse (2ch)"
+#~ msgstr "MX700 Cordless Optical Mouse (2ch)"
+
+#~ msgid "Unknown mouse"
+#~ msgstr "Nežinoma pelė"
+
+#~ msgid "Cordless Name"
+#~ msgstr "Belaidės vardas"
+
+#~ msgid "Sensor Resolution"
+#~ msgstr "Sensoriaus raiška"
+
+#~ msgid "400 counts per inch"
+#~ msgstr "400 taškų colyje"
+
+#~ msgid "800 counts per inch"
+#~ msgstr "800 taškų colyje"
+
+#~ msgid "Battery Level"
+#~ msgstr "Baterijos lygmuo"
+
+#~ msgid "RF Channel"
+#~ msgstr "Radio kanalas"
+
+#~ msgid "Channel 1"
+#~ msgstr "1 kanalas"
+
+#~ msgid "Channel 2"
+#~ msgstr "2 kanalas"
+
+#~ msgid ""
+#~ "You have a Logitech Mouse connected, and libusb was found at compile "
+#~ "time, but it was not possible to access this mouse. This is probably "
+#~ "caused by a permissions problem - you should consult the manual on how to "
+#~ "fix this."
+#~ msgstr ""
+#~ "Turite prijungę Logitech pelę, o kompiliavimo metu buvo aptiktas libusb, "
+#~ "tačiau pelės pasiekti nepavyko. Greičiausiai taip yra dėl leidimų "
+#~ "problemos; norėdami tai pataisyti, ieškokite sprendimo vadove."

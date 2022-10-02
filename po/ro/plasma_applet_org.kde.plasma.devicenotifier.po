@@ -1,0 +1,281 @@
+# Traducerea plasma_applet_devicenotifier.po în Română
+# translation of plasma_applet_devicenotifier to Romanian
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the plasma_applet_devicenotifier package.
+# Laurenţiu Buzdugan <lbuz@rolix.org>, 2008".
+# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2011, 2012, 2020, 2021, 2022.
+# Cristian Oneț <onet.cristian@gmail.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_devicenotifier\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-21 00:47+0000\n"
+"PO-Revision-Date: 2022-02-04 17:20+0000\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.12.2\n"
+
+#: package/contents/ui/DeviceItem.qml:180
+#, kde-format
+msgctxt "@info:status Free disk space"
+msgid "%1 free of %2"
+msgstr "%1 liber din %2"
+
+#: package/contents/ui/DeviceItem.qml:184
+#, kde-format
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Accessing…"
+msgstr "Se accesează…"
+
+#: package/contents/ui/DeviceItem.qml:187
+#, kde-format
+msgctxt ""
+"Removing is a less technical word for Unmounting; translation should be "
+"short and mean 'Currently unmounting this device'"
+msgid "Removing…"
+msgstr "Se elimină…"
+
+#: package/contents/ui/DeviceItem.qml:190
+#, kde-format
+msgid "Don't unplug yet! Files are still being transferred..."
+msgstr "Încă nu deconectați! Fișierele sunt în curs de transferare…"
+
+#: package/contents/ui/DeviceItem.qml:221
+#, kde-format
+msgid "Open in File Manager"
+msgstr "Deschide cu gestionar de fișiere"
+
+#: package/contents/ui/DeviceItem.qml:224
+#, kde-format
+msgid "Mount and Open"
+msgstr "Montează și deschide"
+
+#: package/contents/ui/DeviceItem.qml:226
+#, kde-format
+msgid "Eject"
+msgstr "Scoate suportul"
+
+#: package/contents/ui/DeviceItem.qml:228
+#, kde-format
+msgid "Safely remove"
+msgstr "Scoate în siguranță"
+
+#: package/contents/ui/DeviceItem.qml:270
+#, kde-format
+msgid "Mount"
+msgstr "Montează"
+
+#: package/contents/ui/FullRepresentation.qml:41
+#: package/contents/ui/main.qml:238
+#, kde-format
+msgid "Remove All"
+msgstr "Elimină toate"
+
+#: package/contents/ui/FullRepresentation.qml:42
+#, kde-format
+msgid "Click to safely remove all devices"
+msgstr "Apăsați pentru a elimina în siguranță toate dispozitivele"
+
+#: package/contents/ui/FullRepresentation.qml:186
+#, kde-format
+msgid "No removable devices attached"
+msgstr "Niciun dispozitiv amovibil atașat"
+
+#: package/contents/ui/FullRepresentation.qml:186
+#, kde-format
+msgid "No disks available"
+msgstr "Niciun disc disponibil"
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid "Most Recent Device"
+msgstr "Cel mai recent dispozitiv"
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid "No Devices Available"
+msgstr "Niciun dispozitiv disponibil"
+
+#: package/contents/ui/main.qml:245
+#, kde-format
+msgid "Removable Devices"
+msgstr "Dispozitive amovibile"
+
+#: package/contents/ui/main.qml:251
+#, kde-format
+msgid "Non Removable Devices"
+msgstr "Dispozitive ne-amovibile"
+
+#: package/contents/ui/main.qml:257
+#, kde-format
+msgid "All Devices"
+msgstr "Toate dispozitivele"
+
+#: package/contents/ui/main.qml:265
+#, kde-format
+msgid "Show popup when new device is plugged in"
+msgstr "Arată meniul contextual la atașarea unui dispozitiv nou"
+
+#: package/contents/ui/main.qml:274
+#, kde-format
+msgctxt "Open auto mounter kcm"
+msgid "Configure Removable Devices…"
+msgstr "Configurează dispozitive amovibile…"
+
+#~ msgid "Show:"
+#~ msgstr "Arată:"
+
+#, fuzzy
+#~| msgctxt "General options page"
+#~| msgid "General"
+#~ msgid "General"
+#~ msgstr "General"
+
+#~ msgid ""
+#~ "It is currently <b>not safe</b> to remove this device: applications may "
+#~ "be accessing it. Click the eject button to safely remove this device."
+#~ msgstr ""
+#~ "Acum <b>nu este sigur</b> să scoateți acest dispozitiv: aplicațiile îl "
+#~ "pot accesa. Apăsați pe butonul de eliminare pentru a scoate dispozitivul "
+#~ "în siguranță."
+
+#~ msgid "This device is currently accessible."
+#~ msgstr "Acest dispozitiv este accesibil în prezent."
+
+#~ msgid ""
+#~ "It is currently <b>not safe</b> to remove this device: applications may "
+#~ "be accessing other volumes on this device. Click the eject button on "
+#~ "these other volumes to safely remove this device."
+#~ msgstr ""
+#~ "Acum <b>nu este sigur</b> să scoateți acest dispozitiv: aplicațiile pot "
+#~ "accesa alte volume de pe dispozitiv. Apăsați pe butonul de eliminare "
+#~ "pentru a scoate dispozitivul în siguranță."
+
+#~ msgid "It is currently safe to remove this device."
+#~ msgstr "Puteți scoate acest dispozitiv în siguranță acum."
+
+#~ msgid "This device is not currently accessible."
+#~ msgstr "Acest dispozitiv nu este accesibil în prezent."
+
+#~ msgid "1 action for this device"
+#~ msgid_plural "%1 actions for this device"
+#~ msgstr[0] "1 acțiune pentru acest dispozitiv"
+#~ msgstr[1] "%1 acțiuni pentru acest dispozitiv"
+#~ msgstr[2] "%1 de acțiuni pentru acest dispozitiv"
+
+#~ msgid "Click to access this device from other applications."
+#~ msgstr "Apăsați pentru a accesa acest dispozitiv din alte aplicații."
+
+#~ msgid "Click to eject this disc."
+#~ msgstr "Apăsați pentru a scoate acest disc."
+
+#~ msgid "Click to safely remove this device."
+#~ msgstr "Apăsați pentru a elimina în siguranță acest dispozitiv."
+
+#~ msgid "Click to mount this device."
+#~ msgstr "Apăsați pentru a monta acest dispozitiv."
+
+#~ msgid "Available Devices"
+#~ msgstr "Dispozitive disponibile"
+
+#~ msgid "This device is currently not accessible."
+#~ msgstr "Acest dispozitiv nu este accesibil în prezent."
+
+#~ msgid "Display"
+#~ msgstr "Afișare"
+
+#~ msgid "Automounting"
+#~ msgstr "Montare automată"
+
+#~ msgid "Show hidden devices"
+#~ msgstr "Arată dispozitive ascunse"
+
+#~ msgctxt "Hide a device"
+#~ msgid "Hide %1"
+#~ msgstr "Ascunde %1"
+
+#, fuzzy
+#~| msgid "Device is plugged in and can be accessed by applications."
+#~ msgid ""
+#~ "Device is plugged in and the volume can be accessed by applications. It "
+#~ "is not safe to remove this device."
+#~ msgstr "Dispozitivul este atașat și poate fi accesat de către aplicații."
+
+#, fuzzy
+#~| msgid "Device is plugged in, but not mounted for access yet."
+#~ msgid ""
+#~ "Device is plugged in and the volume is not mounted for access yet. The "
+#~ "device can be safely removed."
+#~ msgstr "Dispozitivul este atașat, dar încă nu este montat pentru acces."
+
+#, fuzzy
+#~| msgid ""
+#~| "Could not unmount the device.\n"
+#~| "One or more files on this device are open within an application."
+#~ msgid ""
+#~ "Could not unmount device %1.\n"
+#~ "One or more files on this device are open within an application."
+#~ msgstr ""
+#~ "Nu s-a putut demonta dispozitivul.\n"
+#~ "Unul sau mai multe fișiere de pe acest dispozitiv sunt deschise într-o "
+#~ "aplicație."
+
+#~ msgid ""
+#~ "Cannot eject the disc.\n"
+#~ "One or more files on this disc are open within an application."
+#~ msgstr ""
+#~ "Nu s-a putut scoate discul.\n"
+#~ "Unul sau mai multe fișiere de pe acest disc sunt deschise într-o "
+#~ "aplicație."
+
+#, fuzzy
+#~| msgid "Last plugged in device: %1"
+#~ msgid "Could not mount device %1."
+#~ msgstr "Ultimul dispozitiv atașat: %1"
+
+#~ msgid "Cannot mount the disc."
+#~ msgstr "Discul nu a putut fi montat."
+
+#~ msgid "Devices recently plugged in:"
+#~ msgstr "Dispozitive atașate recent:"
+
+#~ msgid "Show the popup when a device is inserted"
+#~ msgstr "Arată indiciul la inserarea unui dispozitiv"
+
+#~ msgid " second"
+#~ msgid_plural " seconds"
+#~ msgstr[0] " secundă"
+#~ msgstr[1] " secunde"
+#~ msgstr[2] " secunde"
+
+#~ msgid "Show all the items"
+#~ msgstr "Arată toate elementele"
+
+#~ msgid "never"
+#~ msgstr "niciodată"
+
+#~ msgid "When inserting a device close the popup after"
+#~ msgstr "La inserarea unui dispozitiv, închide indiciul după"
+
+#~ msgid "&Time to stay on top:"
+#~ msgstr "&Timpul de aflare deasupra:"
+
+#~ msgid "&Number of items displayed:"
+#~ msgstr "&Numărul de elemente afișate:"
+
+#~ msgid "Unlimited"
+#~ msgstr "Nelimitat"
+
+#~ msgid "&Display time of items:"
+#~ msgstr "Timpul de &afișare a elementelor:"
+
+#~ msgid "Configure New Device Notifier"
+#~ msgstr "Configurare Notificator dispozitiv nou"

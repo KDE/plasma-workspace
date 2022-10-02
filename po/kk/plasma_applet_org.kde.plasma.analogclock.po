@@ -1,0 +1,67 @@
+# translation of plasma_applet_clock.po to Karakh
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sairan Kikkarin <sairan@computer.org>, 2007, 2008, 2010, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_clock\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-25 00:47+0000\n"
+"PO-Revision-Date: 2013-09-30 00:40+0600\n"
+"Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
+"Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
+"Language: kk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"\n"
+"\n"
+"\n"
+
+#: contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Көрінісі"
+
+#: contents/ui/analogclock.qml:76
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Current time is %1; Current date is %2"
+msgstr ""
+
+#: contents/ui/configGeneral.qml:23
+#, kde-format
+msgid "Show seconds hand"
+msgstr "Секундтар тілі көрсетілсін"
+
+#: contents/ui/configGeneral.qml:24
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "General:"
+msgstr "Жалпы"
+
+#: contents/ui/configGeneral.qml:28
+#, kde-format
+msgid "Show time zone"
+msgstr "Белдеуі жазылсын"
+
+#~ msgid "Show the seconds"
+#~ msgstr "Секундтар көрсетілсін"
+
+#~ msgid "Check this if you want to show the seconds."
+#~ msgstr "Секундтары көрсетілсін десеңіз белгісін қойыңыз."
+
+#~ msgid "Show &seconds hand"
+#~ msgstr "&Секундтар тілі көрсетілсін"
+
+#~ msgid "Show the Timezone in text"
+#~ msgstr "Белдеу мәтінмен жазылсын"
+
+#~ msgid "Check this if you want to display Timezone in text."
+#~ msgstr "Белдеу мәтінмен жазылсын десеңіз белісін қойыңыз."
+
+#~ msgid "Show &time zone"
+#~ msgstr "Белдеуі &жазылсын"

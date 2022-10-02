@@ -1,0 +1,49 @@
+# Slovenian translation of palsma_runner_calculatorrunner.
+# Copyright (C) 2009 - 2011 Free Software Foundation, Inc.
+#
+#
+# Jure Repinc <jlp@holodeck1.com>, 2009 - 2010.
+# Andrej Mernik <andrejm@ubuntu.si>, 2013, 2016, 2017.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_calculatorrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-17 00:47+0000\n"
+"PO-Revision-Date: 2020-12-14 08:46+0100\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+"X-Generator: Lokalize 20.08.1\n"
+
+#: calculatorrunner.cpp:33
+#, kde-format
+msgid ""
+"Calculates the value of :q: when :q: is made up of numbers and mathematical "
+"symbols such as +, -, /, *, ! and ^."
+msgstr ""
+"Izračuna vrednost :q:, ko :q: vsebuje številke in matematične simbole, kot "
+"so +, -, /, *, ! in ^."
+
+#: calculatorrunner.cpp:39
+#, kde-format
+msgid "Copy to Clipboard"
+msgstr "Kopiraj v odložišče"
+
+#: calculatorrunner.cpp:129
+#, kde-format
+msgctxt "The result of the calculation is only an approximation"
+msgid "Approximation"
+msgstr "Približek"
+
+#~ msgid ""
+#~ "The exchange rates could not be updated. The following error has been "
+#~ "reported: %1"
+#~ msgstr ""
+#~ "Menjalnih tečajev ni bilo mogoče osvežiti. Javljena je bila naslednja "
+#~ "napaka: %1"

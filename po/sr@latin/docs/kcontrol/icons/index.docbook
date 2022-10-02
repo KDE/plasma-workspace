@@ -1,0 +1,480 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Serbian-Latin "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="icons" lang="&language;">
+<articleinfo>
+<title
+>Ikonice</title>
+<authorgroup>
+<author
+><personname
+><firstname
+>Majk</firstname
+> <surname
+>Mekbrajd</surname
+></personname
+> &Mike.McBride.mail;</author>
+<author
+><personname
+><firstname
+>Jost</firstname
+> <surname
+>Šenk</surname
+></personname
+> &Jost.Schenck.mail;</author>
+<author
+><personname
+><firstname
+>An Mari</firstname
+> <surname
+>Mafu</surname
+></personname
+> &Anne-Marie.Mahfouf.mail;</author>
+<othercredit role="translator"
+><firstname
+>Dragan</firstname
+><surname
+>Pantelić</surname
+><affiliation
+><address
+><email
+>falcon-10@gmx.de</email
+></address
+></affiliation
+><contrib
+>prevod</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>7. 11. 2016.</date>
+<releaseinfo
+>Plasma 5.11</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>K‑kontrola</keyword>
+<keyword
+>ikonica</keyword>
+</keywordset>
+</articleinfo>
+<sect1 id="kcm_icons">
+<title
+>Ikonice</title>
+
+<sect2 id="icons-intro">
+<title
+>Uvod</title>
+
+<para
+>Plasma stiže sa potpunim skupom ikonica u nekoliko veličina. Te ikonice koriste se širom Plasme: na površi, panelu, u menadžeru fajlova <application
+>Dolphinu</application
+>, na svakoj traci alatki svakog plasma programa, itd. U kontrolnom modulu ikonica veoma fleksibilno možete prilagoditi Plasmino rukovanje ikonicama. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Snimak ekrana menadžera tema ikonica.</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Prilagođavanje plasma ikonica.</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>U ovom modulu možete:</para>
+<itemizedlist>
+<listitem
+><para
+>instalirati i birati teme ikonica;</para
+></listitem>
+<listitem
+><para
+>birati različite veličine ikonica;</para
+></listitem>
+<listitem
+><para
+>dodeljivati efekte ikonicama (npr. učiniti ih poluprovidnim ili obojiti); </para
+></listitem>
+<listitem
+><para
+>podešavati ove postavke posebno po mestu upotrebe ikonica, npr. na površi, trakama alatki, itd. </para
+></listitem>
+</itemizedlist>
+
+<important
+><para
+>Imajte u vidu da neke od postavki mogu zavisiti od izabrane teme ikonica. Uz Plasmu se isporučuje nekoliko podrazumevanih tema ikonica: Kiseonik, Povetarac i monohromatska.</para
+></important>
+
+<para
+>Ovaj modul sadrži dve stranice, <guilabel
+>Tema</guilabel
+> i <guilabel
+>Napredno</guilabel
+>. <guilabel
+>Tema</guilabel
+> služi za upravljanje temama ikonica, dok pod <guilabel
+>Napredno</guilabel
+> možete podesiti kako će se ikonice koristiti u Plasmi.</para>
+</sect2>
+
+<sect2 id="icon-theme">
+<title
+>Tema</title>
+
+<para
+>Na vrhu stoji pregled ikonica iz trenutne teme. U većini podrazumevanih instalacija Plasme na raspolaganju će biti samo nekoliko tema ikonica, među njima i podrazumevani Povetarac. Još tema možete preuzeti na Internetu sa <ulink url="https://store.kde.org/"
+>https://store.kde.org/</ulink
+>.</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Dobavi nove teme...</guilabel
+></term>
+<listitem>
+<para
+>Da biste ovo koristili, morate biti povezani na Internet. Klik na ovo dugme pozvaće dijalog instalatera, u kojem možete izabrati novu temu ikonica. Klikom na <guibutton
+>Instaliraj</guibutton
+> instalirate izabranu temu, koja će biti na raspolaganju odmah po kliku na <guibutton
+>Zatvori</guibutton
+>. </para>
+<para>
+<screenshot>
+<screeninfo
+>Dobavljanje novih tema ikonica</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="get-new-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Dobavljanje novih tema ikonica</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Instaliraj iz fajla</guilabel
+></term>
+<listitem>
+<para
+>Ako ste preuzeli neke nove teme sa Interneta, klikom na ovo dugme pozivate mali dijalog u kojem možete pregledati i zadati lokaciju arhive teme ikonica na disku.</para>
+<para>
+<screenshot>
+<screeninfo
+>Instaliranje nove teme ikonica</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="install-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Instaliranje nove teme ikonica</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Klik na <guibutton
+>U redu</guibutton
+> u ovom dijalogu instaliraće temu na koju ste ukazali i staviti je na raspolaganje na spisku tema. </para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Ukloni temu</guilabel
+></term>
+<listitem>
+<para
+>Klikom na ovo dugme uklanjate sve fajlove ove teme sa sistema. Prethodno će vam biti zatražena potvrda da li zaista želite da uklonite fajlove teme. </para>
+<para>
+<screenshot>
+<screeninfo
+>Uklanjanje teme</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="delete-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Uklanjanje teme</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Klik na <guibutton
+>Obriši</guibutton
+> uklanja fajlove teme, a na <guibutton
+>Odustani</guibutton
+> ne čini ništa i prekida radnju uklanjanja. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect2>
+
+<sect2 id="icons-use">
+<title
+>Napredno</title>
+
+<para
+>Na ovoj, drugoj stranici kontrolnog modula ikonica videćete dve oblasti:</para>
+
+<itemizedlist
+> 
+<listitem
+> 
+<para
+>Pod <guilabel
+>Upotreba ikonice</guilabel
+> možete odabrati koju posebnu upotrebu ikonica želite da podesite, na primer na traci alatki ili panelu. </para
+> 
+<para>
+<screenshot>
+<screeninfo
+>Izbor ikonica za podešavanje</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="use-of-icons.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Izbor ikonica za podešavanje</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</listitem
+> 
+
+<listitem
+> <para
+>U oblasti pregleda možete videti kako će izgledati odabrana vrsta ikonica s trenutnim postavkama. Imajte na umu da stanje ovog pregleda takođe zavisi od stanja ikonice izabranog među efektima ispod (objasnićemo ovo u daljem). </para
+> </listitem>
+</itemizedlist>
+
+<para
+>Pri podešavanju ikonica prvo odaberite upotrebu ikonica koje želite da podesite. Menjajte postavke sve dok vam se prikaz ne dopadne. Zatim možete izabrati i podesiti narednu upotrebu ikonica, itd. Na kraju, ako ste zadovoljni postavkama, kliknite na <guibutton
+>U redu</guibutton
+> ili <guibutton
+>Primeni</guibutton
+> da primenite izmene.</para>
+
+<para
+>Još dve opcije treba uzeti u obzir, <guilabel
+>Veličina</guilabel
+> i <guilabel
+>Efekti</guilabel
+>. </para>
+
+<sect3 id="icons-use-size">
+<title
+>Veličina ikonica</title>
+
+<para>
+<screenshot>
+<screeninfo
+>Postavljanje veličina ikonica</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="size.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Postavljanje veličina ikonica</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Možete izabrati nekoliko veličina ikonica sa spiska. Veće ikonice su naročito korisne osobama slabijeg vida.</para>
+
+<para
+>Od teme ikonice koju ste odabrali u kontrolnom modulu tema ikonica zavisi koje će veličine biti ponuđene na spisku. Na primer, niskokolorna tema ikonice nudi samo veličine 16 i 32 za ikonice površi i 16, 22 i 32 za ikonice trake alatki. Visokokolorna tema nudi veličine 16, 32 i 48, kao i od 64 do 128. Međutim, pošto Plasma ne može sadržati sve ove ikonice statički, ikonice u veličinama od 64 do 128 stvaraju se automatski, zbog čega mogu biti nešto nižeg kvaliteta.</para>
+
+<para
+>Možete odabrati i animirane ikonice, pošto mnoge ikonice imaju pridružene animacije. Popunite kućicu <guilabel
+>Animirane ikonice</guilabel
+> da uključite ovaj efekat. Ali pazite, animacija može biti spora ili isprekidana ako vam je grafička kartica stara ili ponestaje memorije.</para>
+
+</sect3>
+
+<sect3 id="icons-use-effects">
+<title
+>Efekti</title>
+<para>
+<screenshot>
+<screeninfo
+>Postavljanje efekata ikonica</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="effects.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Postavljanje efekata ikonica</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Najzad, možete podesiti primenu izvesnih <emphasis
+>filtera</emphasis
+> na ikonice u jednom od ova tri stanja:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>osnovna</guilabel
+></term>
+<listitem
+><para
+>Ovako će ikonica normalno izgledati.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>aktivna</guilabel
+> </term>
+<listitem
+><para
+>Ovako će ikonica izgledati sa pokazivačem miša iznad nje.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>isključena</guilabel
+>:</term>
+<listitem
+><para
+>Ikonica će ovako izgledati ako je isključena njoj pridružena radnja, tj. kada klik na nju ne daje nikakav rezultat.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Izaberite jedno od ovih stanja i pritisnite dugme <guibutton
+>Postavi efekat...</guibutton
+> da podesite odgovarajući efekat ikonice. Imajte u vidu da će ovo podešavanje uticati samo na ikonice iz trenutno izabrane kategorije pod <guilabel
+>Upotreba ikonice</guilabel
+> (vidi gore). Na primer, podešavanje efekta za aktivne ikonice na traci alatki <emphasis
+>neće</emphasis
+> uticati na aktivne ikonice koje se koriste na drugim mestima.</para>
+
+<para
+>Ispod spiska stanja ikonica nalaze se dve opcije: možete podesiti efekat i odabrati opciju <guilabel
+>Poluprovidne</guilabel
+>, koja čini da se pozadina „probija“ kroz ikonice. Desno od spiska efekata je dugme klizača za prosleđivanje dodatnih parametara filteru, boje i količine.</para>
+<!-- TODO: Figure out what 'amount' really means -->
+
+<para
+>Na ikonice se mogu primeniti sledeći efekti:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>bez efekata</guilabel
+> </term>
+<listitem
+><para
+>Ikonice će se koristiti bez primene ikakvog efekta.</para
+></listitem
+> 
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>zasivljeno</guilabel
+>:</term>
+<listitem
+><para
+>Pod ovim filterom ikonice postaju sivkastije. Upotrebite klizač <guibutton
+>Količina:</guibutton
+> da podesite intenzitet filtera. Zapazite da se u većini korisničkih sučelja ovaj efekat koristi samo za isključene ikonice.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>obojeno</guilabel
+>:</term>
+<listitem
+><para
+>Ikonice će biti obojene posebnom bojom. Na primer, mogli biste podesiti da aktivne ikonice (one nad kojima je pokazivač miša) imaju zlatni odsjaj. Dugmadima boje i klizačem <guilabel
+>Količina:</guilabel
+> podešavate ciljnu boju i njen intenzitet.</para
+></listitem
+> 
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>gama</guilabel
+>:</term>
+<listitem
+><para
+>Na ikonice će biti primenjena drugačija vrednost game. Ako niste fotograf i ne znate šta je gama, vrlo je slična kontrastu. Da biste stekli osećaj za ovaj efekat, poigrajte se malo sa postavkama game pomeranjem klizača <guilabel
+>Količina:</guilabel
+>.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>odzasićeno</guilabel
+>:</term>
+<listitem
+><para
+>Ikonice će se crtati odzasićeno. Sasvim slično postavci boje na televizoru. Upotrebite klizač da podesite jačinu odzasićenja. </para
+></listitem
+> 
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>monohromatsko:</guilabel
+></term>
+<listitem>
+<para
+>Ikonice će se crtati u samo dve izabrane boje.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>

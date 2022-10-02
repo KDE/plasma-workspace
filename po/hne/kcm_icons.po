@@ -1,0 +1,339 @@
+# translation of kcmicons.po to Hindi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Ravishankar Shrivastava <raviratlami@yahoo.com>, 2007.
+# Ravishankar Shrivastava <raviratlami@aol.in>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmicons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"PO-Revision-Date: 2009-01-22 15:58+0530\n"
+"Last-Translator: Ravishankar Shrivastava <raviratlami@aol.in>\n"
+"Language-Team: Hindi <kde-i18n-doc@lists.kde.org>\n"
+"Language: hne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 0.2\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: iconsizecategorymodel.cpp:14
+#, kde-format
+msgid "Toolbar"
+msgstr "औजार पट्टी"
+
+#: iconsizecategorymodel.cpp:15
+#, kde-format
+msgid "Main Toolbar"
+msgstr "मुख्य औजार पट्टी"
+
+#: iconsizecategorymodel.cpp:16
+#, kde-format
+msgid "Small Icons"
+msgstr "छोटे चिनहा"
+
+#: iconsizecategorymodel.cpp:17
+#, kde-format
+msgid "Panel"
+msgstr "पेनल"
+
+#: iconsizecategorymodel.cpp:18
+#, kde-format
+msgid "Dialogs"
+msgstr ""
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, fuzzy, kde-format
+#| msgid "Main Toolbar"
+msgid "Main toolbar icons size"
+msgstr "मुख्य औजार पट्टी"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, fuzzy, kde-format
+#| msgid "Small Icons"
+msgid "Small icons size"
+msgstr "छोटे चिनहा"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr ""
+
+#: main.cpp:182
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: main.cpp:193
+#, fuzzy, kde-format
+#| msgid "Unable to find the icon theme archive %1."
+msgid "Unable to download the icon theme archive: %1"
+msgstr "चिनहा प्रसंग अभिलेख %1 पाय मं अक्छम."
+
+#: main.cpp:207
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "ए फाइल एक वैध चिनहा प्रसंग अभिलेख नइ हे."
+
+#: main.cpp:212
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr ""
+"संस्थापन काम के समय समस्या उत्पन्न होइस, हालाकि अभिलेख के लगभग सब्बो प्रसंग इनस्टाल हो "
+"गिस"
+
+#: main.cpp:216
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: main.cpp:260
+#, fuzzy, kde-format
+#| msgid "Installing icon themes"
+msgid "Installing icon themes…"
+msgstr "चिनहा प्रसंग इनस्टाल करत हे"
+
+#: main.cpp:270
+#, fuzzy, kde-format
+#| msgid "Installing icon themes"
+msgid "Installing %1 theme…"
+msgstr "चिनहा प्रसंग इनस्टाल करत हे"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr ""
+
+#: package/contents/ui/main.qml:147
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Remove Icon Theme"
+msgstr "प्रसंग हटाव"
+
+#: package/contents/ui/main.qml:154
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Icon Theme"
+msgstr "प्रसंग हटाव"
+
+#: package/contents/ui/main.qml:228
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr ""
+
+#: package/contents/ui/main.qml:246
+#, fuzzy, kde-format
+#| msgid "Install Theme File..."
+msgid "Install from File…"
+msgstr "प्रसंग फाइल इनस्टाल करव..."
+
+#: package/contents/ui/main.qml:251
+#, fuzzy, kde-format
+#| msgid "Get New Themes..."
+msgid "Get New Icons…"
+msgstr "नवा प्रसंग लाव..."
+
+#: package/contents/ui/main.qml:279
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Open Theme"
+msgstr "प्रसंग हटाव"
+
+#: package/contents/ui/main.qml:281
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "रविसंकर सिरीवास्तव, जी. करूनाकर"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "raviratlami@aol.in,"
+
+#~ msgid "Icons"
+#~ msgstr "चिनहा"
+
+#~ msgid "Icons Control Panel Module"
+#~ msgstr "चिनहा नियंत्रन पेनल माड्यूल"
+
+#~ msgid "(c) 2000-2003 Geert Jansen"
+#~ msgstr "(c) 2000-2003 गीर्त जानसन"
+
+#~ msgid "Geert Jansen"
+#~ msgstr "गीर्त जानसन"
+
+#~ msgid "Antonio Larrosa Jimenez"
+#~ msgstr "एंटोनियो लारोसा जिमेनेज"
+
+#~ msgid "Torsten Rahn"
+#~ msgstr "तार्स्तेन रान"
+
+#~ msgid "Desktop"
+#~ msgstr "डेस्कटाप"
+
+#~ msgid "Use of Icon"
+#~ msgstr "चिनहा के उपयोग"
+
+#, fuzzy
+#~ msgctxt "@label The icon rendered by default"
+#~ msgid "Default"
+#~ msgstr "डिफाल्ट"
+
+#, fuzzy
+#~ msgctxt "@label The icon rendered as active"
+#~ msgid "Active"
+#~ msgstr "सक्रिय"
+
+#, fuzzy
+#~ msgctxt "@label The icon rendered as disabled"
+#~ msgid "Disabled"
+#~ msgstr "अक्छम"
+
+#~ msgid "Size:"
+#~ msgstr "आकारः"
+
+#~ msgid "Set Effect..."
+#~ msgstr "प्रभाव सेट करव..."
+
+#~ msgid "All Icons"
+#~ msgstr "सब्बो चिनहा"
+
+#~ msgid "Setup Default Icon Effect"
+#~ msgstr "डिफाल्ट चिनहा प्रभाव सेटअप करव"
+
+#~ msgid "Setup Active Icon Effect"
+#~ msgstr "सक्रिय चिनहा प्रभाव सेटअप करव"
+
+#~ msgid "Setup Disabled Icon Effect"
+#~ msgstr "अक्छम चिनहा प्रभाव सेटअप करव"
+
+#~ msgid "&Effect:"
+#~ msgstr "प्रभावः (&E)"
+
+#~ msgid "No Effect"
+#~ msgstr "कोई प्रभाव नइ"
+
+#~ msgid "To Gray"
+#~ msgstr "धूसरहा"
+
+#~ msgid "Colorize"
+#~ msgstr "रंगीन"
+
+#~ msgid "Gamma"
+#~ msgstr "गामा"
+
+#~ msgid "Desaturate"
+#~ msgstr "डि-सेचुरेट"
+
+#~ msgid "To Monochrome"
+#~ msgstr "कालासफेद पर"
+
+#~ msgid "&Semi-transparent"
+#~ msgstr "अर्ध-पारदर्सी (&S)"
+
+#~ msgid "Preview"
+#~ msgstr "प्रिव्यू"
+
+#~ msgid "Effect Parameters"
+#~ msgstr "प्रभाव पैरामीटर्स"
+
+#~ msgid "&Amount:"
+#~ msgstr "मात्राः (&A)"
+
+#~ msgid "Co&lor:"
+#~ msgstr "रंग: (&l)"
+
+#~ msgid "&Second color:"
+#~ msgstr "दुसरा रंगः (&S)"
+
+#~ msgid "Name"
+#~ msgstr "नाम"
+
+#~ msgid "Description"
+#~ msgstr "वर्नन"
+
+#~ msgid "Install a theme archive file you already have locally"
+#~ msgstr "प्रसंग अभिलेख फाइल जऊन आप मन के पास पहिली से लोकल मं हे ओला इंस्टाल करव"
+
+#~ msgid "Get new themes from the Internet"
+#~ msgstr "इंटरनेट से नवा प्रसंग लाव"
+
+#~ msgid "Remove the selected theme from your disk"
+#~ msgstr "अपन डिस्क से चुने गे प्रसंग ल मेटाव"
+
+#~ msgid "This will remove the selected theme from your disk."
+#~ msgstr "ए आप मन के डिस्क से चुने गे प्रसंग ल मिटा देही."
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "प्रसंग यूआरएल खींचलाव या टाइप करव"
+
+#~ msgid ""
+#~ "Unable to download the icon theme archive;\n"
+#~ "please check that address %1 is correct."
+#~ msgstr ""
+#~ "चिनहा प्रसंग अभिलेख डाउनलोड करे मं अक्छम;\n"
+#~ "किरपा करके, जांचव कि पता %1 सही हे."
+
+#~ msgid "<qt>Installing <strong>%1</strong> theme</qt>"
+#~ msgstr "<qt>इनस्टाल करत हे <strong>%1</strong> प्रसंग</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <strong>%1</strong> icon theme?"
+#~ "<br /><br />This will delete the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>का आप मन चिनहा प्रसंग <strong>%1</strong> ल मिटाना चाहथो ?<br /><br /"
+#~ ">एखर से ये प्रसंग से इनस्टाल करे गे फाइल मन मिट जाही.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "पुस्टिकरन"
+
+#~ msgid "&Theme"
+#~ msgstr "प्रसंग (&T)"
+
+#~ msgid "Ad&vanced"
+#~ msgstr "विस्तृत (&v)"
+
+#~ msgid "Animate icons"
+#~ msgstr "चिनहा एनिमेट करव"
+
+#~ msgid "Select the icon theme you want to use:"
+#~ msgstr "अइसन चिनहा प्रसंग चुनव जेखर आप मन उपयोग करना चाहथो :"
+
+#~ msgid "Double-sized pixels"
+#~ msgstr "दोगुने-आकार के पिक्सेल्स"
+
+#~ msgid "Desktop/File Manager"
+#~ msgstr "डेस्कटाप/फाइल मैनेजर"

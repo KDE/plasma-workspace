@@ -1,0 +1,277 @@
+# Translation of ksmserver.po to Low Saxon
+# Copyright (C) 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
+# Heiko Evermann <heiko@evermann.de>, 2004.
+# Volker Jockheck <volkae@gmx.net>, 2004.
+# Sönke Dibbern <s_dibbern@web.de>, 2005, 2006, 2007, 2008, 2009, 2014.
+# Manfred Wiese <m.j.wiese@web.de>, 2010, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ksmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-22 00:47+0000\n"
+"PO-Revision-Date: 2014-06-20 02:05+0200\n"
+"Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
+"Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
+"Language: nds\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: logout.cpp:344
+#, kde-format
+msgid "Logout canceled by '%1'"
+msgstr "\"%1\" hett dat Afmellen afbraken"
+
+#: main.cpp:117
+#, kde-format
+msgid "$HOME not set!"
+msgstr "$HOME nich fastleggt!"
+
+#: main.cpp:121 main.cpp:127
+#, kde-format
+msgid "$HOME directory (%1) does not exist."
+msgstr "Dat gifft den $HOME-Orner (%1) nich."
+
+#: main.cpp:123
+#, kde-format
+msgid "No write access to $HOME directory (%1)."
+msgstr "Du hest binnen den $HOME-Orner (%1) keen Schriefverlööf."
+
+#: main.cpp:129
+#, kde-format
+msgid "No read access to $HOME directory (%1)."
+msgstr "Du hest binnen den $HOME-Orner (%1) keen Leesverlööf."
+
+#: main.cpp:133
+#, kde-format
+msgid "$HOME directory (%1) is out of disk space."
+msgstr ""
+"Dat gifft binne den $HOME-Orner (%1) keen free Ruum op de Fastplaat mehr."
+
+#: main.cpp:136
+#, kde-format
+msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+msgstr "Schrieven na den $HOME-Orner (%2) is fehlslaan mit den Fehler „%1“."
+
+#: main.cpp:149 main.cpp:184
+#, kde-format
+msgid "No write access to '%1'."
+msgstr "Keen Schrieftogriep op „%1“."
+
+#: main.cpp:151 main.cpp:186
+#, kde-format
+msgid "No read access to '%1'."
+msgstr "Keen Leestogriep op „%1“."
+
+#: main.cpp:159 main.cpp:172
+#, kde-format
+msgid "Temp directory (%1) is out of disk space."
+msgstr ""
+"Dat gifft binne den Temporeerorner (%1) keen free Ruum op de Fastplaat mehr."
+
+#: main.cpp:162 main.cpp:175
+#, kde-format
+msgid ""
+"Writing to the temp directory (%2) failed with\n"
+"    the error '%1'"
+msgstr ""
+"Schrieven na den Temporeerorner (%2) is fehlslaan\n"
+"   mit den Fehler „%1“."
+
+#: main.cpp:190
+#, fuzzy, kde-format
+#| msgid ""
+#| "The following installation problem was detected\n"
+#| "while trying to start KDE:"
+msgid ""
+"The following installation problem was detected\n"
+"while trying to start Plasma:"
+msgstr "Bi't Starten vun KDE wöör en Problem funnen:"
+
+#: main.cpp:193
+#, fuzzy, kde-format
+#| msgid ""
+#| "\n"
+#| "\n"
+#| "KDE is unable to start.\n"
+msgid ""
+"\n"
+"\n"
+"Plasma is unable to start.\n"
+msgstr ""
+"\n"
+"\n"
+"KDE lett sik nich starten.\n"
+
+#: main.cpp:200
+#, kde-format
+msgid "Plasma Workspace installation problem!"
+msgstr "Problem mit de Plasma-Arbeitrebeet-Installeren!"
+
+#: main.cpp:236
+#, fuzzy, kde-format
+#| msgid ""
+#| "The reliable KDE session manager that talks the standard X11R6 \n"
+#| "session management protocol (XSMP)."
+msgid ""
+"The reliable Plasma session manager that talks the standard X11R6 \n"
+"session management protocol (XSMP)."
+msgstr ""
+"De KDE-Törnpleger op den Verlaat is, de ok dat Standard-X11R6-\n"
+"Törnpleegprotokoll (\"XSMP\") snackt."
+
+#: main.cpp:240
+#, kde-format
+msgid "Restores the saved user session if available"
+msgstr "Stellt den sekerten Brukertörn wedder her (wenn mööglich)"
+
+#: main.cpp:243
+#, kde-format
+msgid "Also allow remote connections"
+msgstr "Ok Verbinnen mit anner Reekners tolaten"
+
+#: main.cpp:246
+#, kde-format
+msgid "Starts the session in locked mode"
+msgstr "Start den Törn afslaten"
+
+#: main.cpp:250
+#, kde-format
+msgid ""
+"Starts without lock screen support. Only needed if other component provides "
+"the lock screen."
+msgstr ""
+
+#: server.cpp:873
+#, fuzzy, kde-format
+#| msgid "The KDE Session Manager"
+msgid "Session Management"
+msgstr "De KDE-Törnpleger"
+
+#: server.cpp:876
+#, kde-format
+msgid "Log Out"
+msgstr "Afmellen"
+
+#: server.cpp:881
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "Ahn Nafraag afmellen"
+
+#: server.cpp:886
+#, kde-format
+msgid "Halt Without Confirmation"
+msgstr "Ahn Nafraag utmaken"
+
+#: server.cpp:891
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "Ahn Nafraag nieg starten"
+
+#~ msgid ""
+#~ "Starts <wm> in case no other window manager is \n"
+#~ "participating in the session. Default is 'kwin'"
+#~ msgstr ""
+#~ "Start <wm>, wenn keen anner Finsterpleger an\n"
+#~ "den Törn Andeel hett. Standard is \"kwin\""
+
+#~ msgid "wm"
+#~ msgstr "wm"
+
+#~ msgid "Logout"
+#~ msgstr "Afmellen"
+
+#~ msgid "Sleeping in 1 second"
+#~ msgid_plural "Sleeping in %1 seconds"
+#~ msgstr[0] "Inslapen in 1 Sekunn"
+#~ msgstr[1] "Inslapen in %1 Sekunnen"
+
+#~ msgid "Lock"
+#~ msgstr "Afsluten"
+
+#~ msgid "ksmserver"
+#~ msgstr "ksmserver"
+
+#~ msgid "Turn off"
+#~ msgstr "Utmaken"
+
+#~ msgid "Sleep"
+#~ msgstr "Slapen"
+
+#~ msgid "Logging out in 1 second."
+#~ msgid_plural "Logging out in %1 seconds."
+#~ msgstr[0] "Du warrst in 1 Sekunn afmeldt."
+#~ msgstr[1] "Du warrst in %1 Sekunnen afmeldt."
+
+#~ msgid "Turning off computer in 1 second."
+#~ msgid_plural "Turning off computer in %1 seconds."
+#~ msgstr[0] "Reekner warrt in 1 Sekunn utmaakt."
+#~ msgstr[1] "Reekner warrt in %1 Sekunnen utmaakt."
+
+#~ msgid "Restarting computer in 1 second."
+#~ msgid_plural "Restarting computer in %1 seconds."
+#~ msgstr[0] "De Reekner warrt in 1 Sekunn nieg start."
+#~ msgstr[1] "Reekner warrt in %1 Sekunnen nieg start."
+
+#~ msgid "Turn Off Computer"
+#~ msgstr "Reekner utmaken"
+
+#~ msgid "Restart Computer"
+#~ msgstr "Reekner nieg starten"
+
+#~ msgctxt "default option in boot loader"
+#~ msgid " (default)"
+#~ msgstr "(Standard)"
+
+#~ msgid "Cancel"
+#~ msgstr "Afbreken"
+
+#~ msgid "&Standby"
+#~ msgstr "&Praatschap"
+
+#~ msgid "Suspend to &RAM"
+#~ msgstr "Utsetten (&RAM)"
+
+#~ msgid "Suspend to &Disk"
+#~ msgstr "&Infreren (op Fastplaat)"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Sönke Dibbern, Manfred Wiese"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "s_dibbern@web.de, m.j.wiese@web.de"
+
+#~ msgid "(C) 2000, The KDE Developers"
+#~ msgstr "© 2000, De KDE-Schrievers"
+
+#~ msgid "Matthias Ettrich"
+#~ msgstr "Matthias Ettrich"
+
+#~ msgid "Luboš Luňák"
+#~ msgstr "Luboš Luňák"
+
+#~ msgid "Maintainer"
+#~ msgstr "Pleger"
+
+#~ msgctxt "current option in boot loader"
+#~ msgid " (current)"
+#~ msgstr " (dit)"
+
+#~ msgctxt "@label In corner of the logout dialog"
+#~ msgid "KDE <numid>%1.%2.%3</numid>"
+#~ msgstr "KDE <numid>%1.%2.%3</numid>"
+
+#~ msgctxt "@label In corner of the logout dialog"
+#~ msgid "KDE <numid>%1.%2</numid>"
+#~ msgstr "KDE <numid>%1.%2</numid>"
+
+#~ msgid "End Session for %1"
+#~ msgstr "Törn vun \"%1\" beennen"
+
+#~ msgid "End Session for %1 (%2)"
+#~ msgstr "Törn vun \"%1\" (%2) beennen"

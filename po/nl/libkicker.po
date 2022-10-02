@@ -1,0 +1,502 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2014, 2015, 2016, 2017, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-25 00:46+0000\n"
+"PO-Revision-Date: 2021-05-26 14:57+0200\n"
+"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.04.1\n"
+
+#: plugin/actionlist.cpp:86
+#, kde-format
+msgid "Open with:"
+msgstr "Openen met:"
+
+#: plugin/actionlist.cpp:99
+#, kde-format
+msgid "Properties"
+msgstr "Eigenschappen"
+
+#: plugin/actionlist.cpp:146
+#, kde-format
+msgid "Add to Desktop"
+msgstr "Aan bureaublad toevoegen"
+
+#: plugin/actionlist.cpp:151
+#, kde-format
+msgid "Add to Panel (Widget)"
+msgstr "Aan paneel toevoegen (widget)"
+
+#: plugin/actionlist.cpp:156
+#, kde-format
+msgid "Pin to Task Manager"
+msgstr "Pin naar takenbeheerder"
+
+#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:429
+#, kde-format
+msgid "Recent Files"
+msgstr "Recente bestanden"
+
+#: plugin/actionlist.cpp:317
+#, kde-format
+msgid "Forget Recent Files"
+msgstr "Recente bestanden vergeten"
+
+#: plugin/actionlist.cpp:395
+#, kde-format
+msgid "Edit Application…"
+msgstr "Toepassing bewerken…"
+
+#: plugin/actionlist.cpp:438
+#, kde-format
+msgctxt "@action opens a software center with the application"
+msgid "Uninstall or Manage Add-Ons…"
+msgstr "Add-ons deïnstalleren of beheren…"
+
+#: plugin/appentry.cpp:319
+#, kde-format
+msgid "Hide Application"
+msgstr "Toepassing verbergen"
+
+#: plugin/appentry.cpp:390
+#, kde-format
+msgctxt "App name (Generic name)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: plugin/appentry.cpp:392
+#, kde-format
+msgctxt "Generic name (App name)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: plugin/appsmodel.cpp:34 plugin/appsmodel.cpp:58 plugin/computermodel.cpp:98
+#: plugin/computermodel.cpp:226 plugin/recentusagemodel.cpp:163
+#: plugin/recentusagemodel.cpp:226
+#, kde-format
+msgid "Applications"
+msgstr "Toepassingen"
+
+#: plugin/appsmodel.cpp:151
+#, kde-format
+msgid "Unhide Applications in this Submenu"
+msgstr "Het verbergen van toepassingen in dit submenu ongedaan maken"
+
+#: plugin/appsmodel.cpp:160
+#, kde-format
+msgid "Unhide Applications in '%1'"
+msgstr "Het verbergen van toepassingen in '%1' ongedaan maken"
+
+#: plugin/computermodel.cpp:92
+#, kde-format
+msgid "Show KRunner"
+msgstr "KRunner tonen"
+
+#: plugin/computermodel.cpp:96
+#, kde-format
+msgid "Search, calculate, or run a command"
+msgstr "Zoek, bereken of voer een commando uit"
+
+#: plugin/computermodel.cpp:149
+#, kde-format
+msgid "Computer"
+msgstr "Computer"
+
+#: plugin/contactentry.cpp:106 plugin/recentcontactsmodel.cpp:82
+#, kde-format
+msgid "Show Contact Information…"
+msgstr "Contactpersooninformatie tonen…"
+
+#. i18n.
+#: plugin/kastatsfavoritesmodel.cpp:504 plugin/rootmodel.cpp:416
+#: plugin/simplefavoritesmodel.cpp:31
+#, kde-format
+msgid "Favorites"
+msgstr "Favorieten"
+
+#: plugin/recentcontactsmodel.cpp:40
+#, kde-format
+msgid "Contacts"
+msgstr "Contactpersonen"
+
+#: plugin/recentcontactsmodel.cpp:73
+#, kde-format
+msgid "Forget Contact"
+msgstr "Contactpersoon vergeten"
+
+#: plugin/recentcontactsmodel.cpp:77 plugin/recentcontactsmodel.cpp:153
+#, kde-format
+msgid "Forget All Contacts"
+msgstr "Alle contactpersonen vergeten"
+
+#: plugin/recentusagemodel.cpp:161
+#, kde-format
+msgid "Recently Used"
+msgstr "Recent gebruikt"
+
+#: plugin/recentusagemodel.cpp:166 plugin/recentusagemodel.cpp:308
+#, kde-format
+msgid "Files"
+msgstr "Bestanden"
+
+#: plugin/recentusagemodel.cpp:248
+#, kde-format
+msgid "Forget Application"
+msgstr "Toepassing vergeten"
+
+#: plugin/recentusagemodel.cpp:342
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "De map openen waarin het zich bevindt"
+
+#: plugin/recentusagemodel.cpp:345
+#, kde-format
+msgid "Forget File"
+msgstr "Bestand vergeten"
+
+#: plugin/recentusagemodel.cpp:495
+#, kde-format
+msgid "Forget All"
+msgstr "Alles vergeten"
+
+#: plugin/recentusagemodel.cpp:497
+#, kde-format
+msgid "Forget All Applications"
+msgstr "Alle toepassingen vergeten"
+
+#: plugin/recentusagemodel.cpp:500
+#, kde-format
+msgid "Forget All Files"
+msgstr "Alle bestanden vergeten"
+
+#: plugin/rootmodel.cpp:95
+#, kde-format
+msgid "Hide %1"
+msgstr "%1 verbergen"
+
+#: plugin/rootmodel.cpp:398
+#, kde-format
+msgid "All Applications"
+msgstr "Alle toepassingen"
+
+#: plugin/rootmodel.cpp:410
+#, kde-format
+msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
+msgstr "Dit zou niet zichtbaar moeten zijn! KICKER_FAVORITES_MODEL gebruiken"
+
+#: plugin/rootmodel.cpp:422
+#, kde-format
+msgid "Recent Contacts"
+msgstr "Recente contactpersonen"
+
+#: plugin/rootmodel.cpp:429
+#, kde-format
+msgid "Often Used Files"
+msgstr "Vaak gebruikte bestanden"
+
+#: plugin/rootmodel.cpp:438
+#, kde-format
+msgid "Recent Applications"
+msgstr "Recente programma's"
+
+#: plugin/rootmodel.cpp:438
+#, kde-format
+msgid "Often Used Applications"
+msgstr "Vaak gebruikte toepassingen"
+
+#: plugin/rootmodel.cpp:453
+#, kde-format
+msgid "Power / Session"
+msgstr "Energieverbruik / sessie"
+
+#: plugin/runnermodel.cpp:231
+#, kde-format
+msgid "Search results"
+msgstr "Zoekresultaten"
+
+#: plugin/systementry.cpp:195
+#, kde-format
+msgid "Lock"
+msgstr "Vergrendelen"
+
+#: plugin/systementry.cpp:198
+#, kde-format
+msgid "Log Out"
+msgstr "Afmelden"
+
+#: plugin/systementry.cpp:201 plugin/systementry.cpp:269
+#, kde-format
+msgid "Save Session"
+msgstr "Sessie opslaan"
+
+#: plugin/systementry.cpp:204
+#, kde-format
+msgid "Switch User"
+msgstr "Gebruiker wisselen"
+
+#: plugin/systementry.cpp:207
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Slaapstand naar RAM"
+
+#: plugin/systementry.cpp:210
+#, kde-format
+msgid "Hibernate"
+msgstr "Slaapstand naar schijf"
+
+#: plugin/systementry.cpp:213
+#, kde-format
+msgid "Restart"
+msgstr "Herstarten"
+
+#: plugin/systementry.cpp:216
+#, kde-format
+msgid "Shut Down"
+msgstr "Afsluiten"
+
+#: plugin/systementry.cpp:229 plugin/systementry.cpp:232
+#: plugin/systementry.cpp:235 plugin/systementry.cpp:238
+#, kde-format
+msgid "Session"
+msgstr "Sessie"
+
+#: plugin/systementry.cpp:241 plugin/systementry.cpp:244
+#: plugin/systementry.cpp:247 plugin/systementry.cpp:250
+#, kde-format
+msgid "System"
+msgstr "Systeem"
+
+#: plugin/systementry.cpp:263
+#, kde-format
+msgid "Lock screen"
+msgstr "Scherm vergrendelen"
+
+#: plugin/systementry.cpp:266
+#, kde-format
+msgid "End session"
+msgstr "Sessie beëindigen"
+
+#: plugin/systementry.cpp:272
+#, kde-format
+msgid "Start a parallel session as a different user"
+msgstr "Start een parallelle sessie onder een andere gebruikersnaam"
+
+#: plugin/systementry.cpp:275
+#, kde-format
+msgid "Suspend to RAM"
+msgstr "Slaapstand naar RAM"
+
+#: plugin/systementry.cpp:278
+#, kde-format
+msgid "Suspend to disk"
+msgstr "Schijf-slaapstand"
+
+#: plugin/systementry.cpp:281
+#, kde-format
+msgid "Restart computer"
+msgstr "Computer herstarten"
+
+#: plugin/systementry.cpp:284
+#, kde-format
+msgid "Turn off computer"
+msgstr "Computer uitschakelen"
+
+#: plugin/systemmodel.cpp:31
+#, kde-format
+msgid "System actions"
+msgstr "Systeemacties"
+
+#~ msgid "Documents"
+#~ msgstr "Documenten"
+
+#~ msgid "Forget Document"
+#~ msgstr "Document vergeten"
+
+#~ msgid "Forget All Documents"
+#~ msgstr "Alle documenten vergeten"
+
+#~ msgid "General"
+#~ msgstr "Algemeen"
+
+#~ msgid "Remove from Favorites"
+#~ msgstr "Uit Favorieten verwijderen"
+
+#~ msgid "Add to Favorites"
+#~ msgstr "Aan Favorieten toevoegen"
+
+#~ msgid "On All Activities"
+#~ msgstr "Op alle activiteiten"
+
+#~ msgid "On The Current Activity"
+#~ msgstr "Op de huidige activiteit"
+
+#~ msgid "Show In Favorites"
+#~ msgstr "In Favorieten tonen"
+
+#~ msgid "Icon:"
+#~ msgstr "Pictogram:"
+
+#~ msgctxt "@item:inmenu Open icon chooser dialog"
+#~ msgid "Choose..."
+#~ msgstr "Kiezen..."
+
+#~ msgctxt "@item:inmenu Reset icon to default"
+#~ msgid "Clear Icon"
+#~ msgstr "Pictogram wissen"
+
+#~ msgid "Show applications as:"
+#~ msgstr "Toepassing tonen als:"
+
+#~ msgid "Name only"
+#~ msgstr "Alleen naam"
+
+#~ msgid "Description only"
+#~ msgstr "Alleen beschrijving"
+
+#~ msgid "Name (Description)"
+#~ msgstr "Naam (beschrijving)"
+
+#~ msgid "Description (Name)"
+#~ msgstr "Beschrijving (Naam)"
+
+#~ msgid "Behavior:"
+#~ msgstr "Gedrag:"
+
+#~ msgid "Sort applications alphabetically"
+#~ msgstr "Toepassingen alfabetisch sorteren"
+
+#~ msgid "Flatten sub-menus to a single level"
+#~ msgstr "Submenu's afvlakken tot een enkel niveau"
+
+#~ msgid "Show categories:"
+#~ msgstr "Categorieën tonen:"
+
+#~ msgid "Recent applications"
+#~ msgstr "Recente toepassingen"
+
+#~ msgid "Often used applications"
+#~ msgstr "Vaak gebruikte toepassingen"
+
+#~ msgid "Recent documents"
+#~ msgstr "Recente documenten"
+
+#~ msgid "Often used documents"
+#~ msgstr "Vaak gebruikte documenten"
+
+#~ msgid "Recent contacts"
+#~ msgstr "Recente contactpersonen"
+
+#~ msgid "Often used contacts"
+#~ msgstr "Vaak gebruikte contactpersonen"
+
+#~ msgid "Sort items in categories by:"
+#~ msgstr "Items in categorieën sorteren op:"
+
+#~ msgctxt ""
+#~ "@item:inlistbox Sort items in categories by [Recently used | Often used]"
+#~ msgid "Recently used"
+#~ msgstr "Recent gebruikt"
+
+#~ msgctxt ""
+#~ "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
+#~ msgid "Often used"
+#~ msgstr "Vaak gebruikt"
+
+#~ msgid "Search:"
+#~ msgstr "Zoeken:"
+
+#~ msgid "Expand search to bookmarks, files and emails"
+#~ msgstr "Zoeken uitbreiden naar bladwijzers, bestanden en e-mailberichten"
+
+#~ msgid "Align search results to bottom"
+#~ msgstr "Zoekresultaten uitlijnen naar onderen"
+
+#~ msgid "Searching for '%1'"
+#~ msgstr "Zoeken naar '%1'"
+
+#~ msgid "Type to search..."
+#~ msgstr "Typen om te zoeken..."
+
+#~ msgid "Widgets"
+#~ msgstr "Widgets"
+
+#~ msgid "Apps & Docs"
+#~ msgstr "Apps & Docs"
+
+#~ msgid "Edit Applications..."
+#~ msgstr "Toepassingen bewerken..."
+
+#~ msgid "Search..."
+#~ msgstr "Zoeken..."
+
+#~ msgctxt "@action opens a software center with the application"
+#~ msgid "Manage '%1'..."
+#~ msgstr "'%1' beheren..."
+
+#~ msgid "Run Command..."
+#~ msgstr "Commando uitvoeren..."
+
+#~ msgid "Run a command or a search query"
+#~ msgstr "Een commando uitvoeren of een zoekvraag"
+
+#~ msgid "Show:"
+#~ msgstr "Tonen:"
+
+#~ msgid "Show recent applications"
+#~ msgstr "Recente toepassingen tonen"
+
+#~ msgid "Show often used applications"
+#~ msgstr "Vaak gebruikte toepassingen tonen"
+
+#~ msgid "Show recent documents"
+#~ msgstr "Recente documenten tonen"
+
+#~ msgid "Show often used documents"
+#~ msgstr "Vaak gebruikte documenten tonen"
+
+#~ msgid "Show recent contacts"
+#~ msgstr "Recente contactpersonen tonen"
+
+#~ msgid "Removable Storage"
+#~ msgstr "Verwijderbare opslag"
+
+#~ msgid "Places"
+#~ msgstr "Plaatsen"
+
+#~ msgid "Logout"
+#~ msgstr "Afmelden"
+
+#~ msgid "Suspend"
+#~ msgstr "Onderbreken"
+
+#~ msgid "Reboot"
+#~ msgstr "Herstarten"
+
+#~ msgid "Use custom image:"
+#~ msgstr "Eigen afbeelding gebruiken:"
+
+#~ msgid "Choose an image"
+#~ msgstr "Een afbeelding kiezen"
+
+#~ msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+#~ msgstr "Afbeeldingsbestanden (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+
+#~ msgid "Add as Launcher"
+#~ msgstr "Als programmastarter toevoegen"
+
+#~ msgid "New Session"
+#~ msgstr "Nieuwe sessie"
+
+#~ msgid "(Empty)"
+#~ msgstr "(Leeg)"

@@ -1,0 +1,86 @@
+# translation of plasma_applet_clock.po to greek
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Toussis Manolis <manolis@koppermind.homelinux.org>, 2007, 2008.
+# Spiros Georgaras <sng@hellug.gr>, 2007.
+# Antonis Geralis <capoiosct@gmail.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_clock\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-25 00:47+0000\n"
+"PO-Revision-Date: 2013-11-07 15:18+0200\n"
+"Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Εμφάνιση"
+
+#: contents/ui/analogclock.qml:76
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Current time is %1; Current date is %2"
+msgstr ""
+
+#: contents/ui/configGeneral.qml:23
+#, kde-format
+msgid "Show seconds hand"
+msgstr "Εμφάνιση δείκτη &λεπτών"
+
+#: contents/ui/configGeneral.qml:24
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "General:"
+msgstr "Γενικά"
+
+#: contents/ui/configGeneral.qml:28
+#, kde-format
+msgid "Show time zone"
+msgstr "Εμφάνιση ωρολογιακής ζώνης"
+
+#~ msgid "Show the seconds"
+#~ msgstr "Εμφάνιση των δευτερολέπτων"
+
+#~ msgid "Check this if you want to show the seconds."
+#~ msgstr "Ενεργοποιήστε αυτήν την επιλογή για την εμφάνιση των δευτερολέπτων."
+
+#~ msgid "Show &seconds hand"
+#~ msgstr "Εμφάνιση δείκτη &δευτερολέπτων"
+
+#~ msgid "Show the Timezone in text"
+#~ msgstr "Εμφάνιση της ωρολογιακής ζώνης στο κείμενο"
+
+#~ msgid "Check this if you want to display Timezone in text."
+#~ msgstr ""
+#~ "Ενεργοποιήστε αυτήν την επιλογή για την εμφάνιση της ωρολογιακής ζώνης "
+#~ "στο κείμενο."
+
+#~ msgid "Show &time zone"
+#~ msgstr "Εμφάνιση &ωρολογιακής ζώνης"
+
+#~ msgid "Also show the Timezone as text"
+#~ msgstr "Εμφάνιση επίσης της ωρολογιακής ζώνης ως κείμενο"
+
+#~ msgid "Timezones"
+#~ msgstr "Ζώνες ώρας"
+
+#~ msgid "Use &local timezone"
+#~ msgstr "Χρήση &τοπικής ζώνης ώρας"
+
+#~ msgid "Area"
+#~ msgstr "Τοποθεσία"
+
+#~ msgid "Region"
+#~ msgstr "Περιοχή"
+
+#~ msgid "Comment"
+#~ msgstr "Σχόλιο"

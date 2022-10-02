@@ -1,0 +1,179 @@
+# translation of plasma_applet_devicenotifier.po to Persian
+# Saied Taghavi <s.taghavi@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_devicenotifier\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-21 00:47+0000\n"
+"PO-Revision-Date: 2008-04-18 14:31+0330\n"
+"Last-Translator: Saied Taghavi <s.taghavi@gmail.com>\n"
+"Language-Team: Persian <kde-i18n-fa@kde.org>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: package/contents/ui/DeviceItem.qml:180
+#, kde-format
+msgctxt "@info:status Free disk space"
+msgid "%1 free of %2"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:184
+#, kde-format
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Accessing…"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:187
+#, kde-format
+msgctxt ""
+"Removing is a less technical word for Unmounting; translation should be "
+"short and mean 'Currently unmounting this device'"
+msgid "Removing…"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:190
+#, kde-format
+msgid "Don't unplug yet! Files are still being transferred..."
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:221
+#, kde-format
+msgid "Open in File Manager"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:224
+#, kde-format
+msgid "Mount and Open"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:226
+#, kde-format
+msgid "Eject"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:228
+#, kde-format
+msgid "Safely remove"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:270
+#, kde-format
+msgid "Mount"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:41
+#: package/contents/ui/main.qml:238
+#, kde-format
+msgid "Remove All"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:42
+#, fuzzy, kde-format
+#| msgid "1 action for this device"
+#| msgid_plural "%1 actions for this device"
+msgid "Click to safely remove all devices"
+msgstr "%1 کنش برای دستگاه"
+
+#: package/contents/ui/FullRepresentation.qml:186
+#, fuzzy, kde-format
+#| msgid "Configure New Device Notifier"
+msgid "No removable devices attached"
+msgstr "پیکربندی آگاه‌ساز دستگاه جدید"
+
+#: package/contents/ui/FullRepresentation.qml:186
+#, kde-format
+msgid "No disks available"
+msgstr ""
+
+#: package/contents/ui/main.qml:47
+#, fuzzy, kde-format
+#| msgid "Recently plugged devices :"
+msgid "Most Recent Device"
+msgstr "دستگاه‌های تازه‌متصل‌شده :"
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid "No Devices Available"
+msgstr ""
+
+#: package/contents/ui/main.qml:245
+#, fuzzy, kde-format
+#| msgid "Configure New Device Notifier"
+msgid "Removable Devices"
+msgstr "پیکربندی آگاه‌ساز دستگاه جدید"
+
+#: package/contents/ui/main.qml:251
+#, fuzzy, kde-format
+#| msgid "Configure New Device Notifier"
+msgid "Non Removable Devices"
+msgstr "پیکربندی آگاه‌ساز دستگاه جدید"
+
+#: package/contents/ui/main.qml:257
+#, kde-format
+msgid "All Devices"
+msgstr ""
+
+#: package/contents/ui/main.qml:265
+#, kde-format
+msgid "Show popup when new device is plugged in"
+msgstr ""
+
+#: package/contents/ui/main.qml:274
+#, fuzzy, kde-format
+#| msgid "Configure New Device Notifier"
+msgctxt "Open auto mounter kcm"
+msgid "Configure Removable Devices…"
+msgstr "پیکربندی آگاه‌ساز دستگاه جدید"
+
+#, fuzzy
+#~| msgid "1 action for this device"
+#~| msgid_plural "%1 actions for this device"
+#~ msgid "It is currently safe to remove this device."
+#~ msgstr "%1 کنش برای دستگاه"
+
+#, fuzzy
+#~| msgid "1 action for this device"
+#~| msgid_plural "%1 actions for this device"
+#~ msgid "1 action for this device"
+#~ msgid_plural "%1 actions for this device"
+#~ msgstr[0] "%1 کنش برای دستگاه"
+
+#, fuzzy
+#~| msgid "1 action for this device"
+#~| msgid_plural "%1 actions for this device"
+#~ msgid "Click to eject this disc."
+#~ msgstr "%1 کنش برای دستگاه"
+
+#, fuzzy
+#~| msgid "1 action for this device"
+#~| msgid_plural "%1 actions for this device"
+#~ msgid "Click to safely remove this device."
+#~ msgstr "%1 کنش برای دستگاه"
+
+#, fuzzy
+#~| msgid "1 action for this device"
+#~| msgid_plural "%1 actions for this device"
+#~ msgid "Click to mount this device."
+#~ msgstr "%1 کنش برای دستگاه"
+
+#, fuzzy
+#~| msgid "Recently plugged devices :"
+#~ msgid "Could not mount device %1."
+#~ msgstr "دستگاه‌های تازه‌متصل‌شده :"
+
+#~ msgid "<font color=white>Recently plugged devices:</font>"
+#~ msgstr "<font color=white>دستگاه‌های تازه‌متصل‌شده:</font>"
+
+#~ msgid "Time to stay on top (s) :"
+#~ msgstr "مدت زمانِ رو ماندن (ثانیه) :"
+
+#~ msgid "Number of items displayed (0 for no limit) :"
+#~ msgstr "تعداد موارد نمایش‌داده‌شده (۰ برای نامحدود) :"
+
+#~ msgid "Display time of items (0 for no limit) :"
+#~ msgstr "مدت زمان نمایش موارد (۰ برای نامحدود) :"

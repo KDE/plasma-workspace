@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Indonesian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="formats" lang="&language;">
+<articleinfo>
+<title
+>Format</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Krishna.Tateneni; &Krishna.Tateneni.mail;</author>
+<othercredit role="translator"
+><firstname
+>Wantoyo</firstname
+><surname
+></surname
+><affiliation
+><address
+><email
+>wantoyek@gmail.com</email
+></address
+></affiliation
+><contrib
+>Terjemahan</contrib
+></othercredit
+> 
+ </authorgroup>
+
+	  <date
+>18-05-2015</date>
+	  <releaseinfo
+>Plasma 5.3</releaseinfo>
+
+	  <keywordset>
+		<keyword
+>KDE</keyword>
+		<keyword
+>Systemsettings</keyword>
+		<keyword
+>lokal</keyword>
+		<keyword
+>negara</keyword>
+		<keyword
+>bahasa</keyword>
+		<keyword
+>angka</keyword>
+		<keyword
+>mata uang</keyword>
+	  </keywordset>
+</articleinfo>
+
+<para
+>Modul ini dari &systemsettings; &kde; memungkinkanmu untuk memilih opsi kustomisasi yang bergantung pada region dunia tempat kamu tinggal. </para>
+
+<para
+>Dalam beberapa kasus, kamu bisa dengan mudah memilih region dan semua opsi yang akan diset dalam cara yang tepat. </para>
+
+<para
+>Di bagian bawah modul ini kamu bisa melihat contoh bagaimana pengaturannya terlihat dan unit pengukuran mana yang digunakan. Selain angka, kamu bisa melihat bagaimana nilai mata uang, tanggal, dan waktu dalam format panjang dan pendek yang ditampilkan. Ketika kamu mengubah apa pun pada pengaturan, pratinjau menampilkan pengaruh perubahannya sebelum kamu menerapkannya. </para>
+
+<para
+>Kotak tarik-turun <guilabel
+>Region</guilabel
+> berisi daftar negara-negara yang tersedia dan secara inisial akan menampilkan negara yang kamu pilih saat ini. Jika pemilihan menampilkan <quote
+>Baku</quote
+> maka kamu belum menetapkan negara dan membaku ke Negara yang ditetapkan oleh sistem, yang juga akan ditampilkan. </para>
+
+<para
+>Jika kamu membutuhkan pengaturan secara individu yang berbeda, fungsikan <guilabel
+>Pengaturan Terperinci</guilabel
+> dan pilih format negara untuk pengaturan <guilabel
+>Angka</guilabel
+>, <guilabel
+>Waktu</guilabel
+>, <guilabel
+>Mata Uang</guilabel
+>, <guilabel
+>Unit Pengukuran</guilabel
+> atau <guilabel
+>Kolasi dan Pengurutan</guilabel
+> dari kotak tarik turun. </para>
+
+</article>

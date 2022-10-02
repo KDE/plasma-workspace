@@ -1,0 +1,37 @@
+# translation of plasma_engine_applicationjobs.po to marathi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sandeep Shedmake <sandeep.shedmake@gmail.com>, 2009.
+# Chetan Khona <chetan@kompkin.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_engine_applicationjobs\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2013-01-06 11:11+0530\n"
+"Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
+"Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: jobaction.cpp:18
+#, kde-format
+msgctxt "%1 is the subject (can be anything) upon which the job is performed"
+msgid "The JobView for %1 cannot be found"
+msgstr "%1 साठी कार्य दृश्य सापडले नाही"
+
+#: kuiserverengine.cpp:209
+#, fuzzy, kde-format
+#| msgctxt "Byes per second"
+#| msgid "%1/s"
+msgctxt "Bytes per second"
+msgid "%1/s"
+msgstr "%1/s"
+
+#~ msgid "Job canceled by user."
+#~ msgstr "वापरकर्त्याने कार्य रद्द केले."

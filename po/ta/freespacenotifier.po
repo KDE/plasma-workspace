@@ -1,0 +1,83 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Kishore G <kishore96@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-10-20 00:19+0000\n"
+"PO-Revision-Date: 2021-08-08 16:15+0530\n"
+"Last-Translator: Kishore G <kishore96@gmail.com>\n"
+"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.07.90\n"
+
+#: freespacenotifier.cpp:91
+#, kde-format
+msgid "Configure Warning…"
+msgstr "எச்சரிக்கையை அமை…"
+
+#: freespacenotifier.cpp:95
+#, kde-format
+msgid "Open in Filelight"
+msgstr "ஃபைல்-லைட்டில் திற"
+
+#: freespacenotifier.cpp:98
+#, kde-format
+msgid "Open in File Manager"
+msgstr "கோப்பு உலாவியில் திற"
+
+#. i18n: ectx: label, entry (minimumSpace), group (General)
+#: freespacenotifier.kcfg:9
+#, kde-format
+msgid "Minimum free space before user starts being notified."
+msgstr "இதைவிட குறைவாக காலியிடம் இருந்தால் பயனரிடம் தெரிவிக்கப்படும்."
+
+#. i18n: ectx: label, entry (enableNotification), group (General)
+#: freespacenotifier.kcfg:15
+#, kde-format
+msgid "Is the free space notification enabled."
+msgstr "காலியிட அறிவிப்பு இயக்கப்பட்டுள்ளதா."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
+#: freespacenotifier_prefs_base.ui:17
+#, kde-format
+msgid "Enable low disk space warning"
+msgstr "வட்டில் காலியிடம் குறைவாக இருக்கும்போது வரும் எச்சரிக்கையை இயக்கு"
+
+#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
+#: freespacenotifier_prefs_base.ui:27
+#, kde-format
+msgid "Warn when free space is below:"
+msgstr "இதைவிட குறைவாக காலியிடம் இருந்தால் எச்சரி:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
+#: freespacenotifier_prefs_base.ui:37
+#, kde-format
+msgid " MiB"
+msgstr " MiB"
+
+#: module.cpp:37
+#, kde-format
+msgid ""
+"Your Home folder is running out of disk space, you have %1 MiB remaining "
+"(%2%)."
+msgstr "உங்கள் முகப்பு அடைவில் இடம் குறைவாக உள்ளது, %1 MiB மீதி உள்ளது (%2%)."
+
+#: module.cpp:46
+#, kde-format
+msgid ""
+"Your Root partition is running out of disk space, you have %1 MiB remaining "
+"(%2%)."
+msgstr "உங்கள் ரூட் அடைவில் இடம் குறைவாக உள்ளது, %1 MiB மீதி உள்ளது (%2%)."
+
+#: module.cpp:63
+#, kde-format
+msgctxt "The settings dialog main page name, as in 'general settings'"
+msgid "General"
+msgstr "பொது"

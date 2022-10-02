@@ -1,0 +1,391 @@
+# translation of kcmicons.po to Belarusian Latin
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Ihar Hrachyshka <ihar.hrachyshka@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmicons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"PO-Revision-Date: 2008-11-19 17:37+0200\n"
+"Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
+"Language-Team: Belarusian Latin <i18n@mova.org>\n"
+"Language: be@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
+"%100>=11 && n%100<=14 ? 2 : 3);\n"
+
+#: iconsizecategorymodel.cpp:14
+#, kde-format
+msgid "Toolbar"
+msgstr "Panel pryładździa"
+
+#: iconsizecategorymodel.cpp:15
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Hałoŭnaja panel pryładździa"
+
+#: iconsizecategorymodel.cpp:16
+#, kde-format
+msgid "Small Icons"
+msgstr "Drobnyja ikony"
+
+#: iconsizecategorymodel.cpp:17
+#, kde-format
+msgid "Panel"
+msgstr "Panel"
+
+#: iconsizecategorymodel.cpp:18
+#, kde-format
+msgid "Dialogs"
+msgstr ""
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, fuzzy, kde-format
+#| msgid "Main Toolbar"
+msgid "Main toolbar icons size"
+msgstr "Hałoŭnaja panel pryładździa"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, fuzzy, kde-format
+#| msgid "Small Icons"
+msgid "Small icons size"
+msgstr "Drobnyja ikony"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr ""
+
+#: main.cpp:182
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: main.cpp:193
+#, fuzzy, kde-format
+#| msgid "Unable to find the icon theme archive %1."
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Nie ŭdałosia znajści archiŭ z matyvam ikon „%1”."
+
+#: main.cpp:207
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "Hety fajł nia jość sapraŭdnym archivam z matyvam ikon."
+
+#: main.cpp:212
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr ""
+"Padčas instalacyi ŭźnikła prablema. Ale balšynia matyvaŭ z hetaha archiva "
+"była zainstalavanaja."
+
+#: main.cpp:216
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: main.cpp:260
+#, fuzzy, kde-format
+#| msgid "Installing icon themes"
+msgid "Installing icon themes…"
+msgstr "Instalavańnie matyvaŭ ikon"
+
+#: main.cpp:270
+#, fuzzy, kde-format
+#| msgid "Installing icon themes"
+msgid "Installing %1 theme…"
+msgstr "Instalavańnie matyvaŭ ikon"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr ""
+
+#: package/contents/ui/main.qml:147
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Remove Icon Theme"
+msgstr "Vydali matyŭ"
+
+#: package/contents/ui/main.qml:154
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Icon Theme"
+msgstr "Vydali matyŭ"
+
+#: package/contents/ui/main.qml:228
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr ""
+
+#: package/contents/ui/main.qml:246
+#, fuzzy, kde-format
+#| msgid "Install Theme File..."
+msgid "Install from File…"
+msgstr "Zainstaluj matyŭ z fajła..."
+
+#: package/contents/ui/main.qml:251
+#, fuzzy, kde-format
+#| msgid "Get New Themes..."
+msgid "Get New Icons…"
+msgstr "Vaźmi novych matyvaŭ..."
+
+#: package/contents/ui/main.qml:279
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Open Theme"
+msgstr "Vydali matyŭ"
+
+#: package/contents/ui/main.qml:281
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Ihar Hračyška"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "ihar.hrachyshka@gmail.com"
+
+#~ msgid "Icons"
+#~ msgstr "Ikony"
+
+#~ msgid "Icons Control Panel Module"
+#~ msgstr "Modul kiravańnia ikonami"
+
+#~ msgid "(c) 2000-2003 Geert Jansen"
+#~ msgstr "© 2000-2003 Geert Jansen"
+
+#~ msgid "Geert Jansen"
+#~ msgstr "Geert Jansen"
+
+#~ msgid "Antonio Larrosa Jimenez"
+#~ msgstr "Antonio Larrosa Jimenez"
+
+#~ msgid "Torsten Rahn"
+#~ msgstr "Torsten Rahn"
+
+#~ msgid "Desktop"
+#~ msgstr "Rabočy stoł"
+
+#~ msgid "Use of Icon"
+#~ msgstr "Vykarystańnie ikony"
+
+#~ msgctxt "@label The icon rendered by default"
+#~ msgid "Default"
+#~ msgstr "Zmoŭčanaja"
+
+#~ msgctxt "@label The icon rendered as active"
+#~ msgid "Active"
+#~ msgstr "Dziejnaja"
+
+#~ msgctxt "@label The icon rendered as disabled"
+#~ msgid "Disabled"
+#~ msgstr "Vyklučanaja"
+
+#~ msgid "Size:"
+#~ msgstr "Pamier:"
+
+#~ msgid "Set Effect..."
+#~ msgstr "Vybiery efekt..."
+
+#~ msgid "All Icons"
+#~ msgstr "Usie ikony"
+
+#~ msgid "Setup Default Icon Effect"
+#~ msgstr "Nałady zmoŭčanaha efektu dla ikon"
+
+#~ msgid "Setup Active Icon Effect"
+#~ msgstr "Nałady efektu dla dziejnych ikon"
+
+#~ msgid "Setup Disabled Icon Effect"
+#~ msgstr "Nałady efektu dla vyklučanych ikon"
+
+#~ msgid "&Effect:"
+#~ msgstr "&Efekt:"
+
+#~ msgid "No Effect"
+#~ msgstr "Biez efektu"
+
+#~ msgid "To Gray"
+#~ msgstr "Šerań"
+
+#~ msgid "Colorize"
+#~ msgstr "Farba"
+
+#~ msgid "Gamma"
+#~ msgstr "Hama"
+
+#~ msgid "Desaturate"
+#~ msgstr "Pryciamniaj"
+
+#~ msgid "To Monochrome"
+#~ msgstr "Čorna-biełaje"
+
+#~ msgid "&Semi-transparent"
+#~ msgstr "&Napałovu prazrystaje"
+
+#~ msgid "Preview"
+#~ msgstr "Padhlad"
+
+#~ msgid "Effect Parameters"
+#~ msgstr "Parametry efektu"
+
+#~ msgid "&Amount:"
+#~ msgstr "&Kolkaść:"
+
+#~ msgid "Co&lor:"
+#~ msgstr "Ko&ler:"
+
+#~ msgid "&Second color:"
+#~ msgstr "&Druhi koler:"
+
+#~ msgid "Name"
+#~ msgstr "Nazva"
+
+#~ msgid "Description"
+#~ msgstr "Apisańnie"
+
+#~ msgid "Install a theme archive file you already have locally"
+#~ msgstr ""
+#~ "Zainstaluj matyŭ z archiŭnaha fajła, jaki ty ŭžo maješ u siabie na "
+#~ "kamputary"
+
+#~ msgid ""
+#~ "If you already have a theme archive locally, this button will unpack it "
+#~ "and make it available for KDE applications"
+#~ msgstr ""
+#~ "Kali ŭ ciabie ŭ kamputary ŭžo jość archiŭ z matyvam, tady z dapamohaju "
+#~ "hetaj knopki ty zmožaš raspakavać jaho j zrabić dastupnym dla inšych "
+#~ "aplikacyjaŭ systemy „KDE”."
+
+#~ msgid "Get new themes from the Internet"
+#~ msgstr "Vaźmi novych matyvaŭ ź sieciva"
+
+#~ msgid ""
+#~ "You need to be connected to the Internet to use this action. A dialog "
+#~ "will display a list of themes from the http://www.kde.org website. "
+#~ "Clicking the Install button associated with a theme will install this "
+#~ "theme locally."
+#~ msgstr ""
+#~ "Dla hetaj aperacyi patrebnaje spałučeńnie ź siecivam. Akno pakaža śpis "
+#~ "matyvaŭ z sajta „http://www.kde.org”. Kliknuŭšy ŭ knopku „Zainstaluj” "
+#~ "peŭnaha matyva, ty zainstaluješ jaho ŭ svajoj systemie."
+
+#~ msgid "Remove the selected theme from your disk"
+#~ msgstr "Vydali z svajho dyska vybrany matyŭ"
+
+#~ msgid "This will remove the selected theme from your disk."
+#~ msgstr "Hetaja aperacyja vydalaje vybrany matyŭ z svajho dyska."
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "Kiń siudy albo ŭpišy adras matyva"
+
+#~ msgid ""
+#~ "Unable to download the icon theme archive;\n"
+#~ "please check that address %1 is correct."
+#~ msgstr ""
+#~ "Nie ŭdałosia ŭziać archiŭ z matyvam ikon.\n"
+#~ "Spraŭdź słušnaść adrasu „%1”."
+
+#~ msgid "<qt>Installing <strong>%1</strong> theme</qt>"
+#~ msgstr "<qt>Instalavańnie matyva <strong>%1</strong></qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <strong>%1</strong> icon theme?"
+#~ "<br /><br />This will delete the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>Ty sapraŭdy chočaš vydalić matyŭ ikon <strong>%1</strong>?<br /><br /"
+#~ ">Hetaja aperacyja vydalić fajły, jakija naležać hetamu matyvu.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Paćviardžeńnie"
+
+#~ msgid "&Theme"
+#~ msgstr "&Matyŭ"
+
+#~ msgid "Ad&vanced"
+#~ msgstr "&Asablivaje"
+
+#, fuzzy
+#~| msgid ""
+#~| "<h1>Icons</h1>This module allows you to choose the icons for your "
+#~| "desktop.<p>To choose an icon theme, click on its name and apply your "
+#~| "choice by pressing the \"Apply\" button below. If you do not want to "
+#~| "apply your choice you can press the \"Reset\" button to discard your "
+#~| "changes.</p><p>By pressing the \"Install New Theme\" button you can "
+#~| "install your new icon theme by writing its location in the box or "
+#~| "browsing to the location. Press the \"OK\" button to finish the "
+#~| "installation.</p><p>The \"Remove Theme\" button will only be activated "
+#~| "if you select a theme that you installed using this module. You are not "
+#~| "able to remove globally installed themes here.</p><p>You can also "
+#~| "specify effects that should be applied to the icons.</p>"
+#~ msgid ""
+#~ "<h1>Icons</h1>This module allows you to choose the icons for your desktop."
+#~ "<p>To choose an icon theme, click on its name and apply your choice by "
+#~ "pressing the \"Apply\" button below. If you do not want to apply your "
+#~ "choice you can press the \"Reset\" button to discard your changes.</"
+#~ "p><p>By pressing the \"Install Theme File...\" button you can install "
+#~ "your new icon theme by writing its location in the box or browsing to the "
+#~ "location. Press the \"OK\" button to finish the installation.</p><p>The "
+#~ "\"Remove Theme\" button will only be activated if you select a theme that "
+#~ "you installed using this module. You are not able to remove globally "
+#~ "installed themes here.</p><p>You can also specify effects that should be "
+#~ "applied to the icons.</p>"
+#~ msgstr ""
+#~ "<h1>Ikony</h1>Hety modul dazvalaje vybirać ikony dla svajho rabočaha "
+#~ "stała.<p>Kab vybrać matyŭ ikon, klikni ŭ jaho nazvu i zaćvierdź svoj "
+#~ "vybar knopkaju „Prymiani”, jakaja mieścicca nižej. Kali ty nia chočaš "
+#~ "zaćviardžać svajho vybaru, klikni ŭ knopku „Viarni”.</p><p>Kliknuŭšy ŭ "
+#~ "knopku „Zainstaluj novy matyŭ”, možna dadać u systemu novy matyŭ, padaŭšy "
+#~ "jahony adras. Kab skončyć instalacyju, klikni ŭ knopku „Ok”.</p><p>Knopka "
+#~ "„Vydali matyŭ” budzie dziejnaj tolki dla matyvaŭ, jakija ty sam "
+#~ "zainstalavaŭ praz hety modul. Adsiul nielha vydalać matyvy, "
+#~ "zainstalavanyja ŭ usiu systemu.</p><p>Taksama tut možna vybrać efekty dla "
+#~ "vyjaŭleńnia ikon.</p>"
+
+#~ msgid "Animate icons"
+#~ msgstr "Animuj ikony"
+
+#~ msgid "Select the icon theme you want to use:"
+#~ msgstr "Vybiery patrebny matyŭ ikon:"
+
+#~ msgid "Double-sized pixels"
+#~ msgstr "Padvojenyja punkty"

@@ -1,0 +1,484 @@
+# translation of kcmstyle.po to Karakh
+#
+# Sairan Kikkarin <sairan@computer.org>, 2005, 2007, 2008, 2010.
+# Sairan Kikkarin <sairan(at)computer.org>, 2010, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmstyle\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"PO-Revision-Date: 2013-01-02 07:43+0600\n"
+"Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
+"Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
+"Language: kk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"\n"
+"\n"
+"\n"
+
+#: gtkpage.cpp:59
+#, kde-format
+msgid "%1 is not a valid GTK Theme archive."
+msgstr ""
+
+#: kcmstyle.cpp:161 kcmstyle.cpp:168
+#, kde-format
+msgid "There was an error loading the configuration dialog for this style."
+msgstr "Бұл стильді баптау диалогын жүктеу кезінде қате пайда болды."
+
+#: kcmstyle.cpp:274
+#, kde-format
+msgid "Failed to apply selected style '%1'."
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:32
+#, fuzzy, kde-format
+#| msgid "Show icons in menus:"
+msgid "Show icons:"
+msgstr "Мәзірде таңбашалар көрсетілсін"
+
+#: package/contents/ui/EffectSettingsPopup.qml:33
+#, fuzzy, kde-format
+#| msgid "Radio button"
+msgid "On buttons"
+msgstr "Қосқыш"
+
+#: package/contents/ui/EffectSettingsPopup.qml:44
+#, kde-format
+msgid "In menus"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:56
+#, fuzzy, kde-format
+#| msgid "Main toolbar text:"
+msgid "Main toolbar label:"
+msgstr "Негізгі құрал панелінің жазуы:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "None"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:59
+#, fuzzy, kde-format
+#| msgid "Text Only"
+msgid "Text only"
+msgstr "Таңбашасыз жазулар"
+
+#: package/contents/ui/EffectSettingsPopup.qml:60
+#, fuzzy, kde-format
+#| msgid "Text Beside Icons"
+msgid "Beside icons"
+msgstr "Жазу таңбашаның жанында"
+
+#: package/contents/ui/EffectSettingsPopup.qml:61
+#, fuzzy, kde-format
+#| msgid "Text Below Icons"
+msgid "Below icon"
+msgstr "Жазу таңбашаның астында"
+
+#: package/contents/ui/EffectSettingsPopup.qml:76
+#, fuzzy, kde-format
+#| msgid "Secondary toolbar text:"
+msgid "Secondary toolbar label:"
+msgstr "Қосалқы құрал панелінің жазуы:"
+
+#: package/contents/ui/GtkStylePage.qml:18
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "&Applications"
+msgid "GNOME/GTK Application Style"
+msgstr "Қ&олданбалар"
+
+#: package/contents/ui/GtkStylePage.qml:44
+#, kde-format
+msgid "GTK theme:"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:69
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgid "Preview…"
+msgstr "Қарау"
+
+#: package/contents/ui/GtkStylePage.qml:88
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:93
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "&Applications"
+msgid "Get New GNOME/GTK Application Styles…"
+msgstr "Қ&олданбалар"
+
+#: package/contents/ui/GtkStylePage.qml:109
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:111
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: package/contents/ui/main.qml:17
+#, fuzzy, kde-format
+#| msgid ""
+#| "<h1>Style</h1>This module allows you to modify the visual appearance of "
+#| "user interface elements, such as the widget style and effects."
+msgid ""
+"This module allows you to modify the visual appearance of applications' user "
+"interface elements."
+msgstr ""
+"<h1>Стиль</h1>Бұл модуль пайдаланушының интерфейс бөлшектерінің стилі мен "
+"эффекттерін көрнектілігін баптауға мүмкіндік береді."
+
+#: package/contents/ui/main.qml:96
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure Style…"
+msgstr "Ба&птау..."
+
+#: package/contents/ui/main.qml:116
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr ""
+
+#: package/contents/ui/main.qml:132
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "Ба&птау..."
+
+#: styleconfdialog.cpp:21
+#, kde-format
+msgid "Configure %1"
+msgstr "%1 дегенді баптау"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "1-қойынды"
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, fuzzy, kde-format
+#| msgid "Button"
+msgid "Push Button"
+msgstr "Батырма"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, fuzzy, kde-format
+#| msgid "Combobox"
+msgid "Combo box"
+msgstr "Ашылмалы тізім"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "Құсбелгі көзі"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "Қосқыш"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:133
+#, kde-format
+msgid "Tab 2"
+msgstr "2-қойынды"
+
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "&Applications"
+msgid "Application style"
+msgstr "Қ&олданбалар"
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Show icons on buttons:"
+msgid "Show icons on buttons"
+msgstr "Батырмаларда таңбашалар кө&рсетілсін"
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, fuzzy, kde-format
+#| msgid "Show icons on buttons:"
+msgid "Show icons in menus"
+msgstr "Батырмаларда таңбашалар кө&рсетілсін"
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, fuzzy, kde-format
+#| msgid "Main toolbar text:"
+msgid "Main toolbar label"
+msgstr "Негізгі құрал панелінің жазуы:"
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, fuzzy, kde-format
+#| msgid "Secondary toolbar text:"
+msgid "Secondary toolbar label"
+msgstr "Қосалқы құрал панелінің жазуы:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Ақсәуле Мамаева, Сайран Киккарин"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "ak78@sci.kz, sairan@computer.org"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "Application Style"
+#~ msgstr "Қ&олданбалар"
+
+#, fuzzy
+#~| msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
+#~ msgstr "(c) 2002 Karol Szwed, Daniel Molkentin"
+
+#~ msgid "Karol Szwed"
+#~ msgstr "Karol Szwed"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "Download New GNOME/GTK2 Application Styles..."
+#~ msgstr "Қ&олданбалар"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "GNOME/GTK2 Application Styles"
+#~ msgstr "Қ&олданбалар"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "Download New GNOME/GTK3 Application Styles..."
+#~ msgstr "Қ&олданбалар"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "GNOME/GTK3 Application Styles"
+#~ msgstr "Қ&олданбалар"
+
+#~ msgid "Unable to Load Dialog"
+#~ msgstr "Диалогты жүктеуі болмады"
+
+#~ msgid "No description available."
+#~ msgstr "Сипаттамасы жоқ."
+
+#~ msgid ""
+#~ "This area shows a preview of the currently selected style without having "
+#~ "to apply it to the whole desktop."
+#~ msgstr ""
+#~ "Бұнда, бірден барлық үстел үшін іске асырмай-ақ, таңдап жатқан стилді, "
+#~ "мысалы үшін келтірілген барлық бөлшектер үлгісінде қарап ала аласыз."
+
+#~ msgid ""
+#~ "Here you can choose from a list of predefined widget styles (e.g. the way "
+#~ "buttons are drawn) which may or may not be combined with a theme "
+#~ "(additional information like a marble texture or a gradient)."
+#~ msgstr ""
+#~ "Мұнда тізімінен, безендіру нақышымен біректіре алатын (мысалы, мәрмәрлі "
+#~ "текстурасымен немесе градиентімен) дайын бөлшек стилін таңдай аласыз "
+#~ "(мысалы, батырмаларды бейнелеу түрін)."
+
+#, fuzzy
+#~| msgid ""
+#~| "If you enable this option, KDE Applications will show small icons "
+#~| "alongside some important buttons."
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "some important buttons."
+#~ msgstr ""
+#~ "Белгісі қойылса, KDE қолданбасы, кейбір маңызды батырмалардың жанында "
+#~ "кішірек таңбашаларын көрсетеді."
+
+#, fuzzy
+#~| msgid ""
+#~| "If you enable this option, KDE Applications will show small icons "
+#~| "alongside most menu items."
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "most menu items."
+#~ msgstr ""
+#~ "Белгісі қойылса, KDE қолданбасы, мәзір аталымдарының көбінде кішірек "
+#~ "таңбашаларын көрсетеді."
+
+#, fuzzy
+#~| msgid ""
+#~| "<p><b>No Text:</b> Shows only icons on toolbar buttons. Best option for "
+#~| "low resolutions.</p><p><b>Text Only: </b>Shows only text on toolbar "
+#~| "buttons.</p><p><b>Text Beside Icons: </b> Shows icons and text on "
+#~| "toolbar buttons. Text is aligned beside the icon.</p><b>Text Below "
+#~| "Icons: </b> Shows icons and text on toolbar buttons. Text is aligned "
+#~| "below the icon."
+#~ msgid ""
+#~ "<p><b>No text:</b> Shows only icons on toolbar buttons. Best option for "
+#~ "low resolutions.</p><p><b>Text only: </b>Shows only text on toolbar "
+#~ "buttons.</p><p><b>Text beside icons: </b> Shows icons and text on toolbar "
+#~ "buttons. Text is aligned beside the icon.</p><b>Text below icons: </b> "
+#~ "Shows icons and text on toolbar buttons. Text is aligned below the icon."
+#~ msgstr ""
+#~ "<p><b>Жазусыз таңбашалар:</b> Құралдар панелінің батырмасында тек қана "
+#~ "таңбашалар көрсетіледі. Экранның айырымдылығы төмен болғанда ыңғайлы.</"
+#~ "p><p><b>Таңбашасыз жазулар:</b> Құралдар панелінің батырмасында тек жазу "
+#~ "ғана көрсетіледі.</p> <p><b>Жазу таңбашаның жанында:</b> Құралдар "
+#~ "панелінің батырмасында таңбаша мен жазу көрсетіледі. Жазу таңбашамен "
+#~ "қатар.</p> <b>Жазу таңбашаның астында:</b> Құралдар панелінің "
+#~ "батырмасында таңбаша мен жазу көрсетіледі. Жазу таңбашаның астында."
+
+#~ msgid "Toolbars"
+#~ msgstr "Құралдар"
+
+#~ msgid "No Text"
+#~ msgstr "Жазусыз таңбашалар"
+
+#, fuzzy
+#~| msgid "Widget style:"
+#~ msgid "Widget Style"
+#~ msgstr "Бөлшектің стилі:"
+
+#~ msgid "Widget style:"
+#~ msgstr "Бөлшектің стилі:"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Fine Tuning"
+#~ msgstr "&Дәлдеп баптау"
+
+#~ msgid "Description: %1"
+#~ msgstr "Сипаттамасы: %1 "
+
+#~ msgid ""
+#~ "This page allows you to choose details about the widget style options"
+#~ msgstr "Бұнда виджет стилінің параметрлерін егжейлеп таңдай аласыз"
+
+#~ msgid "Group Box"
+#~ msgstr "Топтастыру"
+
+#~ msgid "KDE Style Module"
+#~ msgstr "KDE стилінің баптау модулі"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "Menubar"
+#~ msgstr "Мәзір панелі"
+
+#~ msgid "Menubar style:"
+#~ msgstr "Мәзір панелінің стилі:"
+
+#~ msgid "In application"
+#~ msgstr "Мына қолданбада:"
+
+#~ msgid "Title bar button"
+#~ msgstr "Терезе айдарының батырмасы"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "Global Menu widget"
+#~ msgstr "Қ&олданбалар"
+
+#, fuzzy
+#~| msgid "Settings changes will take effect only on application restart"
+#~ msgid "Your changes will take effect only on application restart."
+#~ msgstr ""
+#~ "Параметр өзгерістері бағдарлама жүмысын жаңадан бастағанда іске асады"
+
+#~ msgid ""
+#~ "<p>Changes to the visibility of menu icons will only affect newly started "
+#~ "applications.</p>"
+#~ msgstr ""
+#~ "<p>Мәзір таңбашалары енді жаңадан жегілген қолданбаларында көрсетіледі.</"
+#~ "p>"
+
+#~ msgctxt "@title:window"
+#~ msgid "Menu Icons Changed"
+#~ msgstr "Мәзір таңбашалары өзгертілді"
+
+#~ msgid "Top screen menubar"
+#~ msgstr "Экран жоғарындағы мәзір"
+
+#~ msgid "Only export"
+#~ msgstr "Тек экспорттау"
+
+#~ msgid "Graphical effects:"
+#~ msgstr "Графикалық эффекттері:"
+
+#~ msgid "Low display resolution and Low CPU"
+#~ msgstr "Төмен дисплей айрымдылығы мен осал процессор"
+
+#~ msgid "High display resolution and Low CPU"
+#~ msgstr "Жоғары дисплей айрымдылығы мен осал процессор"
+
+#~ msgid "Low display resolution and High CPU"
+#~ msgstr "Төмен дисплей айрымдылығы мен күшті процессор"
+
+#~ msgid "High display resolution and High CPU"
+#~ msgstr "Жоғары дисплей айрымдылығы мен күшті процессор"
+
+#~ msgid "Low display resolution and Very High CPU"
+#~ msgstr "Төмен дисплей айрымдылығы мен өте күшті процессор"
+
+#~ msgid "High display resolution and Very High CPU"
+#~ msgstr "Жоғары дисплей айрымдылығы мен өте күшті процессор"
+
+#~ msgid ""
+#~ "If you enable this option, KDE Applications will run internal animations."
+#~ msgstr "Белгісі қойылса, KDE бағдарламалары ішіндегі анимациясын етеді."
+
+#~ msgid "kcmstyle"
+#~ msgstr "kcmstyle"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Workspace"
+#~ msgstr "&Жұмыс орны"
+
+#~ msgid "Get New Themes..."
+#~ msgstr "Жаңа нақыштар..."
+
+#~ msgid "Icons Only"
+#~ msgstr "Жазусыз таңбашалар"
+
+#, fuzzy
+#~| msgctxt "@label:listbox"
+#~| msgid "Text pos&ition:"
+#~ msgctxt "@label:listbox"
+#~ msgid "Text pos&ition of toolbar elements:"
+#~ msgstr "Жазудың ор&наласуы:"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Style"
+#~ msgstr "&Стиль"
+
+#~ msgid ""
+#~ "This page allows you to enable various widget style effects. For best "
+#~ "performance, it is advisable to disable all effects."
+#~ msgstr ""
+#~ "Бұл бетте бөлшектерге эффекттерді тағайындауға мүмкіндік береді. "
+#~ "Жылдамдық мақсатты болса, барлық эффекттерді бұғаттаған жөн."

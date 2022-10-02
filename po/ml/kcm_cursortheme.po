@@ -1,0 +1,662 @@
+# translation of kcminput.po to
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kdebase package.
+# SHIJU ALEX|ഷിജൂ അലക്സ്, <shijualexonline@gmail.com>, 2008.
+# HARI VISHNU <harivishnu@gmail.com>, 2008.
+# മണിലാല്‍ കെ.എം|Manilal K M <libregeek@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminput\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:50+0000\n"
+"PO-Revision-Date: 2021-08-19 13:59+0000\n"
+"Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
+"Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
+"discuss@googlegroups.com>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Weblate 4.7.2\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current cursor theme"
+msgstr "ഇപ്പോഴത്തെ ചൂണ്ടുവിരലിന്റെ പ്രമേയനാമം"
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr "ഇപ്പോഴത്തെ ചൂണ്ടുവിരൽ വലിപ്പം"
+
+#: kcmcursortheme.cpp:302
+#, kde-format
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr "ഈ മാറ്റങ്ങള്‍ പ്രയോഗത്തില്‍ വരുവാന്‍ പ്ലാസ്മ പുനരാരംഭിക്കണം."
+
+#: kcmcursortheme.cpp:376
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "താത്കാലിക ഫയൽ നിർമ്മിക്കാൻ കഴിഞ്ഞില്ല."
+
+#: kcmcursortheme.cpp:387
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr "%1 എന്ന ചിഹനപ്രമേയശേഖരം ഡൗൺലോഡാൻ കഴിഞ്ഞില്ല"
+
+#: kcmcursortheme.cpp:418
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "ഫയല്‍ ശരിയായ ഒരു ചിഹ്ന പ്രമേയ ശേഖരം അല്ല."
+
+#: kcmcursortheme.cpp:425
+#, kde-format
+msgid "Failed to create 'icons' folder."
+msgstr "'icons' അറ നിർമ്മിക്കുന്നത് പരാജയപ്പെട്ടു."
+
+#: kcmcursortheme.cpp:434
+#, kde-format
+msgid ""
+"A theme named %1 already exists in your icon theme folder. Do you want "
+"replace it with this one?"
+msgstr ""
+"%1 എന്ന പേരിലുള്ള ഒരു പ്രമേയം നിങ്ങളുടെ ചിഹ്ന പ്രമേയ അറയിൽ ഇതിനകം നിലവിലുണ്ട്. നിങ്ങൾക്ക് "
+"ഇത് മാറ്റിസ്ഥാപിക്കണോ?"
+
+#: kcmcursortheme.cpp:438
+#, kde-format
+msgid "Overwrite Theme?"
+msgstr "പ്രമേയം മാറ്റിയെഴുതട്ടെ?"
+
+#: kcmcursortheme.cpp:462
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "പ്രമേയം വിജയകരമായി ഇൻസ്റ്റാൾ ചെയ്തു."
+
+#: package/contents/ui/Delegate.qml:54
+#, kde-format
+msgid "Remove Theme"
+msgstr "പ്രമേയം കളയുക"
+
+#: package/contents/ui/Delegate.qml:61
+#, kde-format
+msgid "Restore Cursor Theme"
+msgstr "ചൂണ്ടുവിരൽ പ്രമേയം പുനഃസ്ഥാപിക്കുക"
+
+#: package/contents/ui/main.qml:20
+#, kde-format
+msgid "This module lets you choose the mouse cursor theme."
+msgstr "ചൂണ്ടുവിരൽ പ്രമേയം തിരഞ്ഞെടുക്കാൻ ഈ മൊഡ്യൂൾ നിങ്ങളെ അനുവദിക്കുന്നു."
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Size:"
+msgstr "വലുപ്പം:"
+
+#: package/contents/ui/main.qml:134
+#, kde-format
+msgid "&Install from File…"
+msgstr "ഫയലിൽ നിന്ന് ഇൻസ്റ്റാൾ ചെയ്യുക… (&I)"
+
+#: package/contents/ui/main.qml:140
+#, kde-format
+msgid "&Get New Cursors…"
+msgstr "പുതിയ ചൂണ്ടുവിരലുകൾ നേടുക… (&G)"
+
+#: package/contents/ui/main.qml:157
+#, kde-format
+msgid "Open Theme"
+msgstr "പ്രമേയം തുറക്കുക"
+
+#: package/contents/ui/main.qml:159
+#, kde-format
+msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+msgstr "ചൂണ്ടുവിരൽ പ്രമേയ ഫയലുകൾ (*.tar.gz *.tar.bz2)"
+
+#: plasma-apply-cursortheme.cpp:41
+#, kde-format
+msgid "The requested size '%1' is not available, using %2 instead."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:62
+#, kde-format
+msgid ""
+"This tool allows you to set the mouse cursor theme for the current Plasma "
+"session, without accidentally setting it to one that is either not "
+"available, or which is already set."
+msgstr ""
+"അബദ്ധവശാൽ അത് ലഭ്യമല്ലാത്തതോ അല്ലെങ്കിൽ ഇതിനകം സജ്ജീകരിച്ചിട്ടുള്ളതോ ആയ ഒന്നിലേക്ക് "
+"ക്രമീകരിക്കാതെ, നിലവിലെ പ്ലാസ്മ സെഷനായി ചൂണ്ടുവിരല്‍ പ്രമേയം സജ്ജീകരിക്കാൻ ഈ ഉപകരണം "
+"നിങ്ങളെ അനുവദിക്കുന്നു."
+
+#: plasma-apply-cursortheme.cpp:66
+#, kde-format
+msgid ""
+"The name of the cursor theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+"നിങ്ങളുടെ നിലവിലെ പ്ലാസ്മ സെഷനായി നിങ്ങൾ സജ്ജമാക്കാൻ ആഗ്രഹിക്കുന്ന ചൂണ്ടുവിരല്‍ തീമിന്റെ പേര് "
+"(ഒരു പൂർണ്ണ പാത നൽകിയാലും അതിന്റെ അവസാന ഭാഗം മാത്രമേ ഉപയോഗിക്കൂ)"
+
+#: plasma-apply-cursortheme.cpp:67
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr "സിസ്റ്റത്തിൽ ലഭ്യമായ എല്ലാ പ്രമേയങ്ങളും കാണിക്കുക (കൂടാതെ നിലവിലെ തീമും)"
+
+#: plasma-apply-cursortheme.cpp:68
+#, kde-format
+msgid "Use a specific size, rather than the theme default size"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:89
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+"അഭ്യർത്ഥിച്ച പ്രമേയം \"%1\" നിലവിലെ പ്ലാസ്മ സെഷന്റെ പ്രമേയം ആയി ഇതിനകം "
+"സജ്ജീകരിച്ചിരിക്കുന്നു."
+
+#: plasma-apply-cursortheme.cpp:100
+#, kde-format
+msgid ""
+"Successfully applied the mouse cursor theme %1 to your current Plasma session"
+msgstr "നിങ്ങളുടെ നിലവിലെ പ്ലാസ്മ സെഷനിൽ ചൂണ്ടുവിരല്‍ പ്രമേയം %1 വിജയകരമായി പ്രയോഗിച്ചു"
+
+#: plasma-apply-cursortheme.cpp:102
+#, kde-format
+msgid ""
+"You have to restart the Plasma session for your newly applied mouse cursor "
+"theme to display correctly."
+msgstr ""
+"നിങ്ങളുടെ പുതുതായി പ്രയോഗിച്ച ചൂണ്ടുവിരല്‍ പ്രമേയം ശരിയായി പ്രദർശിപ്പിക്കുന്നതിന് നിങ്ങൾ പ്ലാസ്മ "
+"സെഷൻ പുനരാരംഭിക്കേണ്ടതുണ്ട്."
+
+#: plasma-apply-cursortheme.cpp:112
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+"\"%1\" പ്രമേയം കണ്ടെത്താനായില്ല. പ്രമേയം ഇനിപ്പറയുന്ന ഓപ്ഷനുകളിൽ ഒന്നായിരിക്കണം: %2"
+
+#: plasma-apply-cursortheme.cpp:120
+#, kde-format
+msgid "You have the following mouse cursor themes on your system:"
+msgstr "നിങ്ങളുടെ സിസ്റ്റത്തിൽ ഇനിപ്പറയുന്ന ചൂണ്ടുവിരല്‍ പ്രമേയങ്ങൾ ഉണ്ട്:"
+
+#: plasma-apply-cursortheme.cpp:125
+#, kde-format
+msgid "(Current theme for this Plasma session)"
+msgstr ""
+
+#: xcursor/xcursortheme.cpp:60
+#, kde-format
+msgctxt ""
+"@info The argument is the list of available sizes (in pixel). Example: "
+"'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+msgid "(Available sizes: %1)"
+msgstr "(ലഭ്യമായ വലുപ്പങ്ങൾ: %1)"
+
+#~ msgid "Name"
+#~ msgstr "പേര്"
+
+#~ msgid "Description"
+#~ msgstr "വിവരണം"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Shiju Alex,Subin Siby, Vivek K J"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "shijualexonline@gmail.com,mail@subinsb.com,vivekkj2004@gmail.com"
+
+#~ msgid "Cursors"
+#~ msgstr "ചൂണ്ടുവിരലുകൾ"
+
+#~ msgid "(c) 2003-2007 Fredrik Höglund"
+#~ msgstr "(c) 2003-2007 ഫ്രെഡ്രിക് ഹഗ്ലണ്ട്"
+
+#~ msgid "Fredrik Höglund"
+#~ msgstr "ഫ്രെഡ്രിക് ഹഗ്ലണ്ട്"
+
+#~ msgid "Marco Martin"
+#~ msgstr "മാർക്കോ മാർട്ടിൻ"
+
+#~ msgid ""
+#~ "<qt>You cannot delete the theme you are currently using.<br />You have to "
+#~ "switch to another theme first.</qt>"
+#~ msgstr ""
+#~ "<qt>നിലവില്‍ ഉപയോഗിച്ചു കൊണ്ടിരിക്കുന്ന പ്രമേയം മായ്ക്കുവാന്‍ താങ്കള്‍ക്കു സാധിക്കില്ല.<br /"
+#~ ">ആദ്യം മറ്റൊരു തീമിലേക്കു മാറേണ്ടതാണു.</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <i>%1</i> cursor theme?<br />This "
+#~ "will delete all the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt><i>%1</i> എന്ന കര്‍സര്‍ പ്രമേയം ഒഴിവാക്കണം എന്നു താങ്കള്‍ക്കു ഉറപ്പാണോ?<br />ഈ പ്രവര്‍"
+#~ "ത്തനം %1 എന്ന പ്രമേയം ഇന്‍സ്റ്റാള്‍ ചെയ്ത ഫയലുകള്‍ എല്ലാം മായ്ക്കും.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "സ്ഥിരീകരണം"
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "കര്‍സറിന്റെ ക്രമീകരണങ്ങള്‍ മാറി"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "പ്രമേയം യൂആര്‍‌എല്‍ ടൈപ്പ് ചെയ്യുകയോ ഡ്രാഗ് ചെയ്യുകയോ ചെയ്യുക."
+
+#~ msgid ""
+#~ "Unable to download the cursor theme archive; please check that the "
+#~ "address %1 is correct."
+#~ msgstr ""
+#~ "കര്‍സര്‍ പ്രമേയം ഡൌണ്‍ലോഡ് ചെയ്യുവാന്‍ സാധിച്ചില്ല. %1 എന്ന വിലാസം ശരിയാണോ എന്നു "
+#~ "പുനഃപരിശോധിക്കുക."
+
+#~ msgid ""
+#~ "Select the cursor theme you want to use (hover preview to test cursor):"
+#~ msgstr ""
+#~ "നിങ്ങള്‍ക്കു ഉപയോഗിക്കാനുള്ള കര്‍സര്‍ പ്രമേയം തെരഞ്ഞെടുക്കുക (പ്രിവ്യു എന്നതിന്റെ മുകളില്‍ ഹോവര്‍ "
+#~ "ചെയ്യുക ചൂണ്ടുവിരള്‍ പരീക്ഷിക്കാന്‍):"
+
+#~ msgid "Select the cursor theme you want to use:"
+#~ msgstr "നിങ്ങള്‍ക്കു ഉപയോഗിക്കാനുള്ള കര്‍സര്‍ പ്രമേയം തെരഞ്ഞെടുക്കുക:"
+
+#~ msgid "Small black"
+#~ msgstr "കറുത്ത ചെറിയ"
+
+#~ msgid "Small black cursors"
+#~ msgstr "കറുത്ത ചെറിയ കര്‍സറുകള്‍"
+
+#~ msgid "Large black"
+#~ msgstr "കറുത്ത വലിയ"
+
+#~ msgid "Large black cursors"
+#~ msgstr "കറുത്ത വലിയ കര്‍സറുകള്‍"
+
+#~ msgid "Small white"
+#~ msgstr "വെളുത്ത ചെറിയ"
+
+#~ msgid "Small white cursors"
+#~ msgstr "വെളുത്ത ചെറിയ കര്‍സറുകള്‍"
+
+#~ msgid "Large white"
+#~ msgstr "വെളുത്ത വലിയ"
+
+#~ msgid "Large white cursors"
+#~ msgstr "വെളുത്ത വലിയ കര്‍സറുകള്‍"
+
+#~ msgid "Button Order"
+#~ msgstr "ബട്ടണിന്റെ ക്രമം"
+
+#~ msgid "Righ&t handed"
+#~ msgstr "&വലം കൈയ്യന്‍"
+
+#~ msgid "Le&ft handed"
+#~ msgstr "&ഇടം കൈയ്യന്‍"
+
+#~ msgid ""
+#~ "Change the direction of scrolling for the mouse wheel or the 4th and 5th "
+#~ "mouse buttons."
+#~ msgstr ""
+#~ "മൌസ് ചക്രത്തിന്റെ സ്ക്രോളിന്റെ അല്ലെങ്കില്‍ നാലാമത്തേയും അഞ്ചാമത്തേയും ബട്ടണുകളുടെ ദിശ "
+#~ "മാറ്റുക. "
+
+#~ msgid "Re&verse scroll direction"
+#~ msgstr "&സ്ക്രോള്‍ എതിര്‍ദിശയിലാക്കുക"
+
+#~ msgid "Icons"
+#~ msgstr "ചിഹ്നങ്ങള്‍"
+
+#~ msgid ""
+#~ "Dou&ble-click to open files and folders (select icons on first click)"
+#~ msgstr ""
+#~ "ഫയലുകളും അറകളും തുറക്കാന്‍ ഇരട്ട&ക്ലിക്ക് നടത്തുക (ആദ്യത്തെ ക്ലിക്കില്‍ ചിഹ്നം "
+#~ "തെരഞ്ഞെടുക്കപ്പെടുന്നു)"
+
+#~ msgid "&Single-click to open files and folders"
+#~ msgstr "ഫയലുകളും അറകളും ഒറ്റ ക്ലിക്കില്‍ തുറക്കുക "
+
+#~ msgid "Cha&nge pointer shape over icons"
+#~ msgstr "ചിഹ്നങ്ങളുടെ മുകളിലൂടെ പോകുമ്പോള്‍ പോയിന്ററിന്റെ രൂപം മാറ്റുക"
+
+#~ msgid "A&utomatically select icons"
+#~ msgstr "&യാന്ത്രികമായി ചിഹ്നങ്ങള്‍ തെരഞ്ഞെടുക്കുന്നു"
+
+#, fuzzy
+#~ msgctxt "label. delay (on milliseconds) to automatically select icons"
+#~ msgid "Delay"
+#~ msgstr "താ&മസം:"
+
+#, fuzzy
+#~ msgctxt "milliseconds. time to automatically select the items"
+#~ msgid " ms"
+#~ msgstr " മില്ലിസെക്കന്റ്"
+
+#~ msgid ""
+#~ "<h1>Mouse</h1> This module allows you to choose various options for the "
+#~ "way in which your pointing device works. Your pointing device may be a "
+#~ "mouse, trackball, or some other hardware that performs a similar function."
+#~ msgstr ""
+#~ "<h1>മൌസ്</h1>നിങ്ങളുടെ ഇന്‍പുട്ട് പോയിന്റിങ്ങ് ഡിവൈസ് പ്രവര്‍ത്തിക്കേണ്ട ക്രമീകരണങ്ങള്‍ "
+#~ "തെരഞ്ഞെടുക്കാന്‍ ഈ മോഡ്യൂള്‍ സഹായിക്കുന്നു.  മൌസ്, ട്രാക്ക്ബാള്‍, അല്ലെങ്കില്‍ അതെ പോലെ പ്രവര്‍"
+#~ "ത്തിക്കുന്ന മറ്റു എന്തെങ്കിലും ഉപാധിയായിരിക്കാം താങ്കളുടെ പോയിന്റിങ്ങ് ഡിവൈസ്. "
+
+#~ msgid "&General"
+#~ msgstr "&പൊതുവായത്"
+
+#~ msgid ""
+#~ "If you are left-handed, you may prefer to swap the functions of the left "
+#~ "and right buttons on your pointing device by choosing the 'left-handed' "
+#~ "option. If your pointing device has more than two buttons, only those "
+#~ "that function as the left and right buttons are affected. For example, if "
+#~ "you have a three-button mouse, the middle button is unaffected."
+#~ msgstr ""
+#~ "നിങ്ങള്‍ ഇടങ്കയ്യനാണെങ്കില്‍ ഇടത്തെ ബട്ടണിന്റേയും വലത്തെ ബട്ടണിന്റേയും പ്രവര്‍ത്തനങ്ങള്‍ തമ്മില്‍ "
+#~ "അന്യോന്യം ‌‌‌‌ മാറ്റുവാന്‍ ഇടംകൈയ്യന്‍ എന്ന ഓപ്ഷന്‍ തെരഞ്ഞെടുത്താന്‍ മതി. നിങ്ങളുടെ പോയിന്റിങ്ങ് "
+#~ "ഡിവൈസിനു രണ്ടിലേറെ ബട്ടണുണ്ടെങ്കില്‍ ഇടത്തെയും വലത്തെയും ബട്ടണുകളുടെ പ്രവര്‍ത്തനം മാത്രമേ "
+#~ "ഇതിലൂടെ പരസ്പരം കൈമാറുകയുള്ളൂ. ഉദാഹരണത്തിനു, നിങ്ങളുടേതു മൂന്നു ബട്ടണുള്ള മൌസാണെങ്കില്‍ "
+#~ "നടുവിലുത്തെ ബട്ടന്റെ പ്രവര്‍ത്തനത്തിനു വ്യത്യാസം ഒന്നും വരില്ല."
+
+#~ msgid ""
+#~ "The default behavior in KDE is to select and activate icons with a single "
+#~ "click of the left button on your pointing device. This behavior is "
+#~ "consistent with what you would expect when you click links in most web "
+#~ "browsers. If you would prefer to select with a single click, and activate "
+#~ "with a double click, check this option."
+#~ msgstr ""
+#~ "നിങ്ങളുടെ പോയിന്റിങ്ങ് ഡിവൈസിന്റെ ഇടത്തേ ബട്ടണിന്റെ ഒറ്റ ഞെക്കിലൂടെ ചിഹ്നങ്ങള്‍ തെരഞ്ഞെടുത്ത് "
+#~ "സജീവമാക്കുക എന്നതാണു കെഡി‌ഇയില്‍ സ്വതവെയുള്ള ക്രമീകരണം. മിക്കവാറും എല്ലാ വെബ്ബ് "
+#~ "ബ്രൌസറുകളിലെ പ്രവര്‍ത്തനത്തിനു സമാനമായാണു ഈ ക്രമീകരണം ഒരുക്കിയിരിക്കുന്നതു. ഒറ്റ ഞെക്കിലൂടെ "
+#~ "തെരഞ്ഞെടുക്കുക, ഇരട്ട ഞെക്കിലൂടെ സജീവമാക്കുക എന്ന ക്രമീകരണമാണു നിങ്ങള്‍ ആഗ്രഹിക്കുന്നതെങ്കില്‍ "
+#~ "ഈ ഓപ്ഷന്‍ തെരഞ്ഞെടുക്കുക. "
+
+#~ msgid "Activates and opens a file or folder with a single click."
+#~ msgstr "ഫയലോ ഫോള്‍ഡറോ ഒറ്റ ഞെക്കില്‍ തുറക്കാനും സജീവമാക്കാനും സഹായിക്കുന്നു"
+
+#~ msgid ""
+#~ "If you check this option, pausing the mouse pointer over an icon on the "
+#~ "screen will automatically select that icon. This may be useful when "
+#~ "single clicks activate icons, and you want only to select the icon "
+#~ "without activating it."
+#~ msgstr ""
+#~ "ഐക്കണിന്റെ മുകളില്‍ മൌസ് പോയിന്റര്‍ വച്ചാല്‍ ആ ചിഹ്നം യാന്ത്രികമായി തെരഞ്ഞെടുക്കുന്ന ക്രമീകരണം "
+#~ "സജീവമാക്കുവാന്‍ ഈ ഓപ്ഷന്റെ തെരഞ്ഞെടുപ്പ് സഹായിക്കും. ഒറ്റ ഞെക്കിലൂടെ ചിഹ്നം സജീവമാക്കാനും, "
+#~ "സജീവമാക്കാതെ ചിഹ്നം മാത്രമായി തെരഞ്ഞെടുക്കാനും ഈ ക്രമീകരണം സഹായിക്കും.   "
+
+#~ msgid ""
+#~ "If you have checked the option to automatically select icons, this slider "
+#~ "allows you to select how long the mouse pointer must be paused over the "
+#~ "icon before it is selected."
+#~ msgstr ""
+#~ "ചിഹ്നങ്ങള്‍ യാന്ത്രികമായി തെരഞ്ഞെടുക്കുന്നതിനുള്ള ഓപ്ഷന്‍ നിങ്ങള്‍ തെരഞ്ഞെടുത്തുവെങ്കില്‍, ഒരു "
+#~ "ഐക്കണിനു മുകളില്‍ എത്ര നേരം പോയിന്റര്‍ വെച്ചാല്‍ പ്രസ്തുത ചിഹ്നം തെരഞ്ഞെടുക്കപ്പെടണം എന്നു "
+#~ "തീരുമാനിക്കാന്‍ ഈ സ്ലൈഡര്‍ നിങ്ങളെ സഹായിക്കും."
+
+#~ msgid "Advanced"
+#~ msgstr "വിശദമായ"
+
+#~ msgid " x"
+#~ msgstr "എക്സ്"
+
+#~ msgid "Pointer acceleration:"
+#~ msgstr "മൌസ് പോയിന്ററിന്റെ ത്വരണം:"
+
+#~ msgid "Pointer threshold:"
+#~ msgstr "പോയിന്റര്‍ ത്രെഷ്ഹോള്‍ഡ്"
+
+#~ msgid ""
+#~ "<p>The threshold is the smallest distance that the mouse pointer must "
+#~ "move on the screen before acceleration has any effect. If the movement is "
+#~ "smaller than the threshold, the mouse pointer moves as if the "
+#~ "acceleration was set to 1X;</p><p> thus, when you make small movements "
+#~ "with the physical device, there is no acceleration at all, giving you a "
+#~ "greater degree of control over the mouse pointer. With larger movements "
+#~ "of the physical device, you can move the mouse pointer rapidly to "
+#~ "different areas on the screen.</p>"
+#~ msgstr ""
+#~ "<p>ത്വരണത്തിന്റെ സ്വാധീനം പ്രകടമാകാന്‍ മൌസ് പോയിന്റര്‍ ചലിക്കേണ്ട ഏറ്റവും കുറഞ്ഞ ദൂരമാണു "
+#~ "ത്രെഷ്ഹോള്‍ഡ്. ത്രെഷ്ഹോള്‍ഡിനേക്കാള്‍ കുറഞ്ഞ ദൂരമാണു മൌസ് പോയിന്റര്‍ ചലിക്കുന്നതെങ്കില്‍ ത്വരണം 1Xനു "
+#~ "ക്രമീകരിക്കപ്പെട്ടതു പോലെ മൌസ് പോയിന്റര്‍ ചലിക്കും.</p><p> അതിനാല്‍ കുറഞ്ഞ ദൂരം "
+#~ "ചലിപ്പിക്കേണ്ടി വരുമ്പോള്‍ താങ്കള്‍ക്കു മൌസ് പോയിന്ററിനു മേല്‍ കൂടുതല്‍ നിയന്ത്രണമുണ്ടാകും. കൂടുതല്‍ "
+#~ "ദൂരം ചലിപ്പിക്കേണ്ടി വരുമ്പോള്‍ ത്വരണം മൂലം മൌസ് പോയിന്റര്‍ കൂടുതല്‍ വേഗത്തില്‍ സ്ക്രീന്റെ "
+#~ "വിവിധയിടങ്ങളിലേക്കു പോവുകയും ചെയ്യും.</p>"
+
+#~ msgid " msec"
+#~ msgstr " മില്ലിസെക്കന്റ്"
+
+#~ msgid "Double click interval:"
+#~ msgstr "ഇരട്ടഞെക്കലിന്റെ കാലയളവ്:"
+
+#~ msgid ""
+#~ "The double click interval is the maximal time (in milliseconds) between "
+#~ "two mouse clicks which turns them into a double click. If the second "
+#~ "click happens later than this time interval after the first click, they "
+#~ "are recognized as two separate clicks."
+#~ msgstr ""
+#~ "തുടര്‍ച്ചയായ രണ്ടു മൌസ് ക്ലിക്കുകള്‍, ഇരട്ടക്ലിക്ക് ആയി മാറാനുള്ള പരമാവധി സമയമാണു "
+#~ "(മില്ലിസെക്കന്റില്‍) “ഇരട്ടക്ലിക്ക് ഇടവേള“. ഒന്നാമത്തെ ക്ലിക്കിനു ശേഷം “ഇരട്ട ക്ലിക്ക് "
+#~ "ഇടവേളയ്ക്കു“ ശേഷമാണു രണ്ടാമത്തെ ക്ലിക്കു നടക്കുന്നതെങ്കില്‍ അതു രണ്ട് വ്യതസ്ത ക്ലിക്കുകളായി "
+#~ "കണക്കാക്കും."
+
+#~ msgid "Drag start time:"
+#~ msgstr "മൌസിന്റെ വലിവ് തുടങ്ങേണ്ട സമയം:"
+
+#~ msgid ""
+#~ "If you click with the mouse (e.g. in a multi-line editor) and begin to "
+#~ "move the mouse within the drag start time, a drag operation will be "
+#~ "initiated."
+#~ msgstr ""
+#~ "മൌസ് കൊണ്ട് ഒരു ഐക്കണില്‍ ഞെക്കിയതിനു ശേഷം, ഡ്രാഗ് തുടക്ക സമയത്തിനുള്ളില്‍ മൌസ് ചലിക്കാന്‍ "
+#~ "തുടങ്ങിയാല്‍ ഡ്രാഗ് പ്രവര്‍ത്തനത്തിനു തുടക്കമാവും. "
+
+#~ msgid "Drag start distance:"
+#~ msgstr "മൌസിന്റെ വലിവ് തുടങ്ങേണ്ട ദൂരം:"
+
+#~ msgid ""
+#~ "If you click with the mouse and begin to move the mouse at least the drag "
+#~ "start distance, a drag operation will be initiated."
+#~ msgstr ""
+#~ "മൌസ് കൊണ്ട് ഒരു ഐക്കണില്‍ ഞെക്കിയതിനു ശേഷം, കുറഞ്ഞത് ഡ്രാഗ് തുടക്ക ദൂരത്തേക്കു മൌസ് ചലിച്ചാല്‍ "
+#~ "തുടങ്ങിയാല്‍ ഡ്രാഗ് പ്രവര്‍ത്തനത്തിനു തുടക്കമാവും. "
+
+#~ msgid "Mouse wheel scrolls by:"
+#~ msgstr "മൌസ് ചക്രം സ്ക്രോള്‍ ചെയ്യുന്നത്:"
+
+#~ msgid ""
+#~ "If you use the wheel of a mouse, this value determines the number of "
+#~ "lines to scroll for each wheel movement. Note that if this number exceeds "
+#~ "the number of visible lines, it will be ignored and the wheel movement "
+#~ "will be handled as a page up/down movement."
+#~ msgstr ""
+#~ "താങ്കള്‍ മൌസിന്റെ ചക്രം ഉപയോഗിക്കുമ്പോള്‍ ചക്രത്തിന്റെ ഓരോ ചലനത്തിനും എത്ര വരികള്‍ നീങ്ങണം "
+#~ "എന്നതു ഈ മൂല്യം മുഖേന നിര്‍ണ്ണയിക്കുന്നു.  ഈ സംഖ്യ മൊത്തം കാണാവുന്ന വരികള്‍"
+#~ "ക്കപ്പുറമാവുകയാണെങ്കില്‍ ചക്രത്തിന്റെ ചലനം പേജ് അപ്/പേജ് ഡൌണ്‍ ചലനം പോലെ കണക്കാക്കും. "
+
+#~ msgid "Mouse Navigation"
+#~ msgstr "മൌസിന്റെ പര്യവേക്ഷം"
+
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "&കീബോര്‍ഡിലെ നമ്പര്‍ പാഡ് ഉപയോഗിച്ച്  മൌസ് പോയിന്റര്‍ നീക്കുക"
+
+#~ msgid "&Acceleration delay:"
+#~ msgstr "&ത്വരണത്തിന്റെ താമസം:"
+
+#~ msgid "R&epeat interval:"
+#~ msgstr "ആ&വര്‍ത്തിക്കേണ്ട ഇടവേള:"
+
+#~ msgid "Acceleration &time:"
+#~ msgstr "ത്വരണത്തിന്റെ &സമയം:"
+
+#~ msgid " pixel/sec"
+#~ msgstr "പിക്സല്‍/സെക്കന്റ്"
+
+#~ msgid "Ma&ximum speed:"
+#~ msgstr "പരമാവധി വേഗത:"
+
+#~ msgid "Acceleration &profile:"
+#~ msgstr "ത്വരണത്തിന്റെ &പ്രൊഫൈല്‍:"
+
+#~ msgid "Mouse"
+#~ msgstr "മൌസ്"
+
+#~ msgid "(c) 1997 - 2005 Mouse developers"
+#~ msgstr "(c) 1997 - 2005 മൌസ് ഡെവലപ്പേര്‍സ്"
+
+#~ msgid "Patrick Dowler"
+#~ msgstr "പാട്രിക്ക് ഡൌളര്‍"
+
+#~ msgid "Dirk A. Mueller"
+#~ msgstr "ഡിര്‍ക് എ. മുള്ളര്‍"
+
+#~ msgid "David Faure"
+#~ msgstr "ഡേവിഡ് ഫൌറെ"
+
+#~ msgid "Bernd Gehrmann"
+#~ msgstr "ബെര്‍ന്‍ഡ് ഗെര്‍മാന്‍"
+
+#~ msgid "Rik Hemsley"
+#~ msgstr "റിക് ഹെംസ്‌ലി"
+
+#~ msgid "Brad Hughes"
+#~ msgstr "ബ്രാഡ് ഹ്യൂസ്"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "റാള്‍ഫ് നോള്‍ഡെന്‍"
+
+#~ msgid "Brad Hards"
+#~ msgstr "ബ്രാഡ് ഹാര്‍ഡ്സ്"
+
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] " പിക്സല്"
+#~ msgstr[1] " പിക്സലുകള്"
+
+#~ msgid " line"
+#~ msgid_plural " lines"
+#~ msgstr[0] " വരി"
+#~ msgstr[1] " വരികള്"
+
+#~ msgid "Mouse type: %1"
+#~ msgstr "മൌസിന്റെ തരം: %1"
+
+#~ msgid ""
+#~ "RF channel 1 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "ആര്‍എഫ് ചാനല്‍ 1 ക്രമപ്പെടുത്തിയിരിക്കുന്നു. കണ്ണി പുനഃസ്ഥാപിക്കുവാന്‍ മൌസിലെ കണക്റ്റ് ബട്ടണ്‍ അമര്‍ത്തൂ"
+
+#~ msgid "Press Connect Button"
+#~ msgstr "കണക്റ്റ് ബട്ടണ്‍ അമര്‍ത്തൂ"
+
+#~ msgid ""
+#~ "RF channel 2 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "ആര്‍ എഫ് ചാനല്‍ 2 ക്രമപ്പെടുത്തിയിരിക്കുന്നു. കണ്ണി പുനഃസ്ഥാപിക്കുവാന്‍ മൌസില്‍ കണക്റ്റ് ബട്ടണ്‍ അമര്‍ത്തൂ"
+
+#, fuzzy
+#~ msgctxt "no cordless mouse"
+#~ msgid "none"
+#~ msgstr "ഒന്നുമില്ല"
+
+#~ msgid "Cordless Mouse"
+#~ msgstr "കോര്‍ഡ്‌ലെസ്സ് മൌസ്"
+
+#~ msgid "Cordless Wheel Mouse"
+#~ msgstr "കോര്‍ഡ്‌ലെസ്സ്  വീല്‍ മൌസ്"
+
+#~ msgid "Cordless MouseMan Wheel"
+#~ msgstr "കോര്‍ഡ്‌ലെസ്സ്  മൌസ്‌‌മാന്‍ വീല്‍"
+
+#~ msgid "Cordless TrackMan Wheel"
+#~ msgstr "കോര്‍ഡ്‌ലെസ്സ്  ട്രാക്ക്മാന്‍ വീല്‍"
+
+#~ msgid "TrackMan Live"
+#~ msgstr "ട്രാക്ക്മാന്‍ ലൈവ്"
+
+#~ msgid "Cordless TrackMan FX"
+#~ msgstr "കോര്‍ഡ്‌ലെസ്സ് ട്രാക്ക്മാന്‍ എഫ്‌എസ്"
+
+#~ msgid "Cordless MouseMan Optical"
+#~ msgstr "കോര്‍ഡ്‌ലെസ്സ് മൌസ്‌മാന്‍ ഒപ്റ്റിക്കല്‍"
+
+#~ msgid "Cordless Optical Mouse"
+#~ msgstr "കോര്‍ഡ്‌ലെസ്സ് ഒപ്റ്റിക്കല്‍ മൌസ്"
+
+#~ msgid "Cordless MouseMan Optical (2ch)"
+#~ msgstr "കോര്‍ഡ്‌ലെസ്സ് മൌസ്‌മാന്‍ ഒപ്റ്റിക്കല്‍  (2ch)"
+
+#~ msgid "Cordless Optical Mouse (2ch)"
+#~ msgstr "കോര്‍ഡ്‌ലെസ്സ് ഒപ്റ്റിക്കല്‍ മൌസ് (2ch)"
+
+#~ msgid "Cordless Mouse (2ch)"
+#~ msgstr "കോര്‍ഡ്‌ലെസ്സ് മൌസ്  (2ch)"
+
+#~ msgid "Cordless Optical TrackMan"
+#~ msgstr "കോര്‍ഡ്‌ലെസ്സ് ഒപ്റ്റിക്കല്‍ ട്രാക്ക്മാന്‍"
+
+#~ msgid "MX700 Cordless Optical Mouse"
+#~ msgstr "MX700 കോര്‍ഡ്‌ലെസ്സ് ഒപ്റ്റിക്കല്‍ മൌസ്"
+
+#~ msgid "MX700 Cordless Optical Mouse (2ch)"
+#~ msgstr "MX700 കോര്‍ഡ്‌ലെസ്സ് ഒപ്റ്റിക്കല്‍ മൌസ്  (2ch)"
+
+#~ msgid "Unknown mouse"
+#~ msgstr "മൌസ് ഏതെന്നു് അറിയില്ല"
+
+#~ msgid "Cordless Name"
+#~ msgstr "കോര്‍ഡ്‌ലെസ്സിന്റെ പേര്"
+
+#~ msgid "Sensor Resolution"
+#~ msgstr "സെന്‍സറിന്റെ റെസലൂഷന്‍"
+
+#~ msgid "400 counts per inch"
+#~ msgstr "ഓരോ ഇഞ്ചിലും 40 കൌണ്ട്"
+
+#~ msgid "800 counts per inch"
+#~ msgstr "ഓരോ ഇഞ്ചിലും 800 കൌണ്ട്"
+
+#~ msgid "Battery Level"
+#~ msgstr "ബാറ്ററിയുടെ നില"
+
+#~ msgid "RF Channel"
+#~ msgstr "ആര്‍‌എഫ് ചാനല്‍"
+
+#~ msgid "Channel 1"
+#~ msgstr "ചാനല്‍ 1"
+
+#~ msgid "Channel 2"
+#~ msgstr "ചാനല്‍ 2"
+
+#~ msgid ""
+#~ "You have a Logitech Mouse connected, and libusb was found at compile "
+#~ "time, but it was not possible to access this mouse. This is probably "
+#~ "caused by a permissions problem - you should consult the manual on how to "
+#~ "fix this."
+#~ msgstr ""
+#~ "നിങ്ങള്‍ക്ക് ഒരു Logitech മൌസ് കണക്റ്റ് ചെയ്തിട്ടുണ്ട്, കംപൈല്‍ ചെയ്യുന്ന സമയത്ത് libusb "
+#~ "കണ്ടെത്തിയിരുന്നു, പക്ഷെ ഈ മൌസ് പ്രവേശിക്കാന്‍ (ഉപയോഗിക്കാന്‍) സാധ്യമായില്ല. ഇതു മിക്കുവാറും "
+#~ "അനുവാദത്തിന്റെ പ്രശ്നം കാരണമായിരിക്കാം - നിങ്ങള്‍ ഇതെങ്ങനെ നേരെ ആക്കാം എന്നതിനെ "
+#~ "കുറിച്ചറിയാന്‍ മാനുവല്‍ (സഹായകുറിപ്പ്) നോക്കണം."
+
+#~ msgid "KDE Classic"
+#~ msgstr "കെഡി‌ഇ ഉദാത്തം"
+
+#~ msgid "The default cursor theme in KDE 2 and 3"
+#~ msgstr "കെഡി‌ഇ 2ലും 3ലും സ്വതവെയുള്ള കര്‍സര്‍ പ്രമേയം"
+
+#~ msgid "No description available"
+#~ msgstr "വിവരണം ഒന്നും ലഭ്യമല്ല"
+
+#~ msgid "Short"
+#~ msgstr "ചെറുത്"
+
+#~ msgid "Long"
+#~ msgstr "നീളമേറിയത്"

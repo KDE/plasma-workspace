@@ -1,0 +1,159 @@
+# translation of krunner_shellrunner.po to Français
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Arnaud <arnaud.bienner@gmail.com>, 2008.
+# Sébastien Renard <Sebastien.Renard@digitalfox.org>, 2008.
+# xavier <ktranslator31@yahoo.fr>, 2013.
+# Vincent Pinon <vpinon@kde.org>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner_shellrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-27 00:45+0000\n"
+"PO-Revision-Date: 2016-11-23 09:54+0100\n"
+"Last-Translator: Vincent Pinon <vpinon@kde.org>\n"
+"Language-Team: French <kde-i18n-doc@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 2.0\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: shellrunner.cpp:35
+#, kde-format
+msgid "Finds commands that match :q:, using common shell syntax"
+msgstr ""
+"Cherche les commandes correspondant à « :q: », en utilisant la syntaxe de "
+"ligne de commande courante"
+
+#: shellrunner.cpp:36
+#, kde-format
+msgid "Run in Terminal Window"
+msgstr "Exécuter dans un terminal"
+
+#: shellrunner.cpp:54
+#, kde-format
+msgid "Run %1"
+msgstr "Exécuter %1"
+
+#~ msgid "Enter the user you want to run the application as here."
+#~ msgstr ""
+#~ "Saisissez le nom de l'utilisateur sous lequel vous voulez exécuter "
+#~ "l'application."
+
+# unreviewed-context
+#~ msgid "User&name:"
+#~ msgstr "&Nom d'utilisateur :"
+
+#~ msgid "Enter the password here for the user you specified above."
+#~ msgstr ""
+#~ "Saisissez ici le mot de passe de l'utilisateur que vous avez spécifié ci-"
+#~ "dessus."
+
+# unreviewed-context
+#~ msgid "Pass&word:"
+#~ msgstr "&Mot de passe :"
+
+#~ msgid ""
+#~ "Check this option if the application you want to run is a text mode "
+#~ "application. The application will then be run in a terminal emulator "
+#~ "window."
+#~ msgstr ""
+#~ "Cochez cette case si l'application que vous voulez exécuter est en mode "
+#~ "texte. L'application sera exécutée dans une fenêtre d'émulateur de "
+#~ "terminal."
+
+#~ msgid "Run in &terminal window"
+#~ msgstr "Exécuter dans un &terminal"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "user id. Every process has a user id associated with it. This id code "
+#~ "determines file access and other permissions. The password of the user is "
+#~ "required to do this."
+#~ msgstr ""
+#~ "Cochez cette case si vous voulez exécuter l'application avec "
+#~ "l'identifiant d'un autre utilisateur. Chaque processus est associé à un "
+#~ "identifiant d'utilisateur. Ce dernier détermine les droits d'accès aux "
+#~ "fichiers et les autres permissions. Le mot de passe de l'utilisateur est "
+#~ "nécessaire pour faire ceci."
+
+#~ msgid "Run as a different &user"
+#~ msgstr "Exécuter comme &utilisateur différent"
+
+# unreviewed-context
+#~ msgid ""
+#~ "<qt>Select whether realtime scheduling should be enabled for the "
+#~ "application. The scheduler governs which process will run and which will "
+#~ "have to wait. Two schedulers are available:\n"
+#~ "<ul>\n"
+#~ "<li><em>Normal:</em> This is the standard, timesharing scheduler. It will "
+#~ "divide fairly the available processing time between all processes.</li>\n"
+#~ "<li><em>Realtime:</em>This scheduler will run your application "
+#~ "uninterrupted until it gives up the processor. This can be dangerous. An "
+#~ "application that does not give up the processor might hang the system. "
+#~ "You need root's password to use the scheduler.</li>\n"
+#~ "</ul>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>Sélectionnez si l'ordonnancement temps réel doit être activé pour "
+#~ "l'application. L'ordonnanceur détermine quel est le processus qui va être "
+#~ "exécuté, et quels sont ceux qui vont attendre. Deux ordonnanceurs sont "
+#~ "disponibles : \n"
+#~ "<ul>\n"
+#~ "<li><em>Normal :</em> C'est l'ordonnanceur standard, à temps partagé. Il "
+#~ "répartira le temps de traitement disponible entre tous les processus.</"
+#~ "li>\n"
+#~ "<li><em>Temps réel :</em> Cet ordonnanceur exécutera votre application de "
+#~ "façon ininterrompue tant qu'elle n'aura pas rendue le contrôle au "
+#~ "processeur. Cela peut être dangereux : une application qui ne rend pas le "
+#~ "contrôle au processeur peut bloquer le système. Vous devez avoir le mot "
+#~ "de passe superutilisateur pour utiliser cet ordonnanceur.</li>\n"
+#~ "</ul>\n"
+#~ "</qt>"
+
+#~ msgid "Run with realtime &scheduling"
+#~ msgstr "Exécuter avec un &ordonnancement temps réel"
+
+# unreviewed-context
+#~ msgid ""
+#~ "The priority that the command will be run with can be set here. From left "
+#~ "to right, it goes from low to high. The center position is the default "
+#~ "value. For priorities higher than the default, you will need to provide "
+#~ "the root password."
+#~ msgstr ""
+#~ "La priorité avec laquelle la commande va être exécutée peut être définie "
+#~ "ici : de la plus basse (à gauche), à la plus haute (à droite). La "
+#~ "position centrale est la valeur par défaut. Pour les priorités plus "
+#~ "grandes que celle par défaut, vous devrez fournir le mot de passe du "
+#~ "superutilisateur."
+
+# unreviewed-context
+#~ msgid "&Priority:"
+#~ msgstr "&Priorité :"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "priority. A higher priority tells the operating system to give more "
+#~ "processing time to your application."
+#~ msgstr ""
+#~ "Cochez cette case si vous voulez exécuter l'application avec une priorité "
+#~ "différente. Un priorité élevée implique que le système d'exploitation "
+#~ "donnera plus de temps de traitement à votre application."
+
+#~ msgid "Run with a &different priority"
+#~ msgstr "Exécuter avec une priorité &différente"
+
+#~ msgid "Low"
+#~ msgstr "Basse"
+
+#~ msgid "High"
+#~ msgstr "Haute"
+
+#~ msgid "Command"
+#~ msgstr "Commande"

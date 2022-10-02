@@ -1,0 +1,191 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Swedish "INCLUDE">
+]>
+<article id="desktopthemedetails" lang="&language;">
+<articleinfo>
+<title
+>Plasmastil</title>
+<authorgroup>
+<author
+><firstname
+>Andrew</firstname
+> <surname
+>Lake</surname
+></author>
+<author
+><firstname
+>Carl</firstname
+> <surname
+>Schwan</surname
+> </author>
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-09</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systeminställningar</keyword>
+<keyword
+>skrivbord</keyword>
+<keyword
+>stil</keyword>
+<keyword
+>tema</keyword>
+<keyword
+>plasma</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>&plasma; levereras med flera stilar. &plasma;s stil definierar hur de olika komponenterna i &plasma; visas (t.ex. Plasmoider, paneler, grafiska komponenter). </para>
+
+<para>
+  <screenshot>
+    <screeninfo
+>Här är en skärmbild av &plasma;s stilhanterare</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="main.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase
+>Anpassa &plasma;s stil</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</para>
+
+<para
+>I den här modulen kan du:</para>
+<itemizedlist>
+  <listitem
+><para
+>installera och välja &plasma;s stilar</para
+></listitem>
+  <listitem
+><para
+>redigera &plasma;s stilar</para
+></listitem>
+  <listitem
+><para
+>ta bort &plasma;s stilar</para
+></listitem>
+</itemizedlist>
+
+<para
+>Det är möjligt att filtrera stillistan genom att använda fältet <guilabel
+>Sök...</guilabel
+> ovanför rutnätet. Dessutom kan du använda kombinationsrutan intill fältet för att bara visa <guimenuitem
+>Ljusa teman</guimenuitem
+>, <guimenuitem
+>Mörka teman</guimenuitem
+>, eller teman <guimenuitem
+>Kompatibla med färgschema</guimenuitem
+>. </para>
+
+<para
+>Använd den överlagrade ikonen  <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+> längst ner till höger om stilikonen för att ta bort en stil. Klicka på ikonen <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-undo.png" format="PNG"/></imageobject
+></inlinemediaobject
+> för att ångra åtgärden. Om du klickar på <guibutton
+>Verkställ</guibutton
+> tas stilarna markerade för borttagning verkligen bort, så att det inte går att ångra enskilda eller alla borttagningar. </para>
+
+<para
+>Om paketet plasma-sdk är installerat på systemet, visas en knapp när pekaren hålls över en förhandsgranskning av en stil som låter dig starta <application
+>Plasma temautforskare</application
+>. </para>
+<para
+>Besök <ulink url="https://develop.kde.org/docs/plasma/theme/theme-details/"
+>den här sidan</ulink
+> för mer teknisk information. </para>
+
+<variablelist>
+  <varlistentry>
+    <term
+><guilabel
+>Hämta nya Plasmastilar...</guilabel
+></term>
+    <listitem>
+    <para
+>Du måste vara ansluten till Internet för att använda det. Att klicka på knappen visar en dialogruta där det går att välja en ny plasmastil. Att klicka på <guibutton
+>Installera</guibutton
+> i dialogrutan installerar den valda &plasma;stilen, och efter installationsverktyget har stängts med <guibutton
+>Stäng</guibutton
+> är den nya stilen omedelbart tillgängligt. </para>
+    <para>
+    <screenshot>
+    <screeninfo
+>Hämta nya Plasmastilar...</screeninfo>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="get-new-theme.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase
+>Hämta nya Plasmastilar...</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    </para>
+    </listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>Installera från fil...</guilabel
+></term>
+    <listitem>
+      <para
+>Om du laddade ner nya stilar från Internet, kan du använda detta för att bläddra till platsen för nya nerladdade stilar. Att klicka på knappen visar fildialogrutan för att peka på &plasma;stilens komprimerade arkiv som finns på hårddisken.</para>
+
+      <para
+>Att klicka på <guibutton
+>Öppna</guibutton
+> i dialogrutan installerar stilen som du pekade på och gör det tillgängligt i stillistan. </para>
+    </listitem>
+  </varlistentry>
+</variablelist>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

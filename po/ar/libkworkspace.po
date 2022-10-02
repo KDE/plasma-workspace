@@ -1,0 +1,71 @@
+# translation of libkworkspace.po to Arabic
+# translation of libkworkspace.po to
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Youssef Chahibi <chahibi@gmail.com>, 2007.
+# zayed <zayed.alsaidi@gmail.com>, 2008, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: libkworkspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-03 00:48+0000\n"
+"PO-Revision-Date: 2021-06-22 14:08+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: Arabic <kde-i18n-ar@kde.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 21.07.70\n"
+
+#: kdisplaymanager.cpp:777
+#, kde-format
+msgctxt "user: …"
+msgid "%1: TTY login"
+msgstr "%1: ولج إلىTTY"
+
+#: kdisplaymanager.cpp:782
+#, kde-format
+msgctxt "… location (TTY or X display)"
+msgid "Unused"
+msgstr "غير مستخدم"
+
+#: kdisplaymanager.cpp:783
+#, kde-format
+msgid "X login on remote host"
+msgstr "دخول اكس على مضيف بعيد"
+
+#: kdisplaymanager.cpp:783
+#, kde-format
+msgctxt "… host"
+msgid "X login on %1"
+msgstr " دخول اكس على %1"
+
+#: kdisplaymanager.cpp:785
+#, kde-format
+msgctxt "user: session type"
+msgid "%1: %2"
+msgstr "%1: %2"
+
+#: kdisplaymanager.cpp:796
+#, kde-format
+msgctxt "session (location)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#~ msgctxt ""
+#~ "Action that reorganizes the windows to try to have them less cluttered"
+#~ msgid "Unclutter Windows"
+#~ msgstr "نوافذ غير مختلطة"
+
+#~ msgctxt "Action that reorganizes the windows so that they are in cascade"
+#~ msgid "Cascade Windows"
+#~ msgstr "نوافذ متتالية"
+
+#~ msgid "On All Desktops"
+#~ msgstr "على كلّ أسطح المكتب"
+
+#~ msgid "No Windows"
+#~ msgstr "بدون نوافذ"

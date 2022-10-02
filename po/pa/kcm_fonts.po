@@ -1,0 +1,456 @@
+# translation of kcmfonts.po to Punjabi
+# Amanpreet Singh Alam <aalam@redhat.com>, 2004, 2005.
+# Amanpreet Singh Alam <amanpreetalam@yahoo.com>, 2005.
+# A S Alam <aalam@users.sf.net>, 2007, 2008, 2010, 2012, 2018, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmfonts\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-03 00:45+0000\n"
+"PO-Revision-Date: 2021-06-08 22:27-0700\n"
+"Last-Translator: A S Alam <aalam@satluj.org>\n"
+"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.12.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"\n"
+
+#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, kde-format
+msgid "Force font DPI Wayland"
+msgstr "ਫੋਂਟ DPI ਵੇਲੈਂਡ ਲਈ ਮਜ਼ਬੂਰ"
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Force font DPI X11"
+msgid "Force font DPI on X11"
+msgstr "ਫੋਂਟ DPI X11 ਲਈ ਮਜ਼ਬੂਰ"
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, kde-format
+msgid "General font"
+msgstr "ਸਧਾਰਨ ਫ਼ੋਂਟ"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, kde-format
+msgid "Fixed width font"
+msgstr "ਸਥਿਰ ਚੌੜਾਈ ਫ਼ੋਂਟ"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, kde-format
+msgid "Small font"
+msgstr "ਛੋਟੇ ਫ਼ੋਂਟ"
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, kde-format
+msgid "Tool bar font"
+msgstr "ਟੂਲਬਾਰ ਫ਼ੋਂਟ"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, kde-format
+msgid "Menu font"
+msgstr "ਮੇਨੂ ਫ਼ੋਂਟ"
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, kde-format
+msgid "Window title font"
+msgstr "ਵਿੰਡੋ ਟਾਇਟਲ ਫ਼ੋਂਟ"
+
+#: kxftconfig.cpp:458
+#, kde-format
+msgctxt "use system subpixel setting"
+msgid "Vendor default"
+msgstr "ਵੇਂਡਰ ਡਿਫਾਲਟ"
+
+#: kxftconfig.cpp:460
+#, kde-format
+msgctxt "no subpixel rendering"
+msgid "None"
+msgstr "ਕੋਈ ਨਹੀਂ"
+
+#: kxftconfig.cpp:462
+#, kde-format
+msgid "RGB"
+msgstr "RGB"
+
+#: kxftconfig.cpp:464
+#, kde-format
+msgid "BGR"
+msgstr "BGR"
+
+#: kxftconfig.cpp:466
+#, kde-format
+msgid "Vertical RGB"
+msgstr "ਵਰਟੀਕਲ RGB"
+
+#: kxftconfig.cpp:468
+#, kde-format
+msgid "Vertical BGR"
+msgstr "ਵਰਟੀਕਲ BGR"
+
+#: kxftconfig.cpp:496
+#, kde-format
+msgctxt "use system hinting settings"
+msgid "Vendor default"
+msgstr "ਵੇਂਡਰ ਡਿਫਾਲਟ"
+
+#: kxftconfig.cpp:498
+#, kde-format
+msgctxt "medium hinting"
+msgid "Medium"
+msgstr "ਮੱਧਮ"
+
+#: kxftconfig.cpp:500
+#, kde-format
+msgctxt "no hinting"
+msgid "None"
+msgstr "ਕੋਈ ਨਹੀਂ"
+
+#: kxftconfig.cpp:502
+#, kde-format
+msgctxt "slight hinting"
+msgid "Slight"
+msgstr "ਹਲਕਾ"
+
+#: kxftconfig.cpp:504
+#, kde-format
+msgctxt "full hinting"
+msgid "Full"
+msgstr "ਪੂਰਾ"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module lets you configure the system fonts."
+msgstr "ਇਹ ਮੋਡਿਊਲ ਤੁਹਾਨੂੰ ਸਿਸਟਮ ਫ਼ੋਂਟ ਸੰਰਚਨਾ ਕਰਨ ਲਈ ਹੈ।"
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid "Change Display Scaling…"
+msgstr "…ਡਿਸਪਲੇਅ ਸਕੇਲਿੰਗ ਬਦਲੋ"
+
+#: package/contents/ui/main.qml:37
+#, kde-format
+msgid ""
+"Some changes such as anti-aliasing or DPI will only affect newly started "
+"applications."
+msgstr ""
+"ਤੁਸੀਂ ਐਂਟੀ-ਲਾਇਸਿੰਗ ਜਾਂ DPI ਨਾਲ ਸੈਟਿੰਗ ਤਬਦੀਲ ਕੀਤੀ ਹੈ। ਇਹ ਸਿਰਫ ਨਵੇਂ ਜਾਰੀ ਕਾਰਜ ਲਈ ਸਹਾਇਕ ਹੋ "
+"ਸਕੇਗੀ।"
+
+#: package/contents/ui/main.qml:51
+#, kde-format
+msgid ""
+"Very large fonts may produce odd-looking results. Consider adjusting the "
+"global screen scale instead of using a very large font size."
+msgstr ""
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid ""
+"Decimal font sizes can cause text layout problems in some applications. "
+"Consider using only integer font sizes."
+msgstr ""
+
+#: package/contents/ui/main.qml:94
+#, kde-format
+msgid ""
+"The recommended way to scale the user interface is using the global screen "
+"scaling feature."
+msgstr ""
+
+#: package/contents/ui/main.qml:106
+#, kde-format
+msgid "&Adjust All Fonts…"
+msgstr "…ਸਭ ਫੋਂਟ ਅਡਜੱਸਟ ਕਰੋ(&A)"
+
+#: package/contents/ui/main.qml:119
+#, kde-format
+msgid "General:"
+msgstr "ਸਧਾਰਨ:"
+
+#: package/contents/ui/main.qml:120
+#, kde-format
+msgid "Select general font"
+msgstr "ਸਧਾਰਨ ਫ਼ੋਂਟ ਚੁਣੋ"
+
+#: package/contents/ui/main.qml:131
+#, kde-format
+msgid "Fixed width:"
+msgstr "ਸਥਿਰ ਚੌੜਾਈ:"
+
+#: package/contents/ui/main.qml:132
+#, kde-format
+msgid "Select fixed width font"
+msgstr "ਸਥਿਰ ਚੌੜਾਈ ਫ਼ੋਂਟ ਚੁਣੋ"
+
+#: package/contents/ui/main.qml:143
+#, kde-format
+msgid "Small:"
+msgstr "ਛੋਟਾ:"
+
+#: package/contents/ui/main.qml:144
+#, kde-format
+msgid "Select small font"
+msgstr "ਛੋਟੇ ਫ਼ੋਂਟ ਚੁਣੋ"
+
+#: package/contents/ui/main.qml:155
+#, kde-format
+msgid "Toolbar:"
+msgstr "ਟੂਲਬਾਰ:"
+
+#: package/contents/ui/main.qml:156
+#, kde-format
+msgid "Select toolbar font"
+msgstr "ਟੂਲਬਾਰ ਫ਼ੋਂਟ ਚੁਣੋ"
+
+#: package/contents/ui/main.qml:167
+#, kde-format
+msgid "Menu:"
+msgstr "ਮੇਨੂ:"
+
+#: package/contents/ui/main.qml:168
+#, kde-format
+msgid "Select menu font"
+msgstr "ਮੇਨੂ ਫੋਂਟ ਚੁਣੋ"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "Window title:"
+msgstr "ਵਿੰਡੋ ਟਾਇਟਲ:"
+
+#: package/contents/ui/main.qml:179
+#, kde-format
+msgid "Select window title font"
+msgstr "ਵਿੰਡੋ ਟਾਇਟਲ ਫ਼ੋਂਟ ਚੁਣੋ"
+
+#: package/contents/ui/main.qml:194
+#, kde-format
+msgid "Anti-Aliasing:"
+msgstr "ਐਂਟੀਲਾਇਸਿੰਗ:"
+
+#: package/contents/ui/main.qml:199
+#, kde-format
+msgid "Enable"
+msgstr "ਸਮਰੱਥ"
+
+#: package/contents/ui/main.qml:203
+#, kde-kuit-format
+msgctxt "@info:tooltip Anti-Aliasing"
+msgid ""
+"Pixels on displays are generally aligned in a grid. Therefore shapes of "
+"fonts that do not align with this grid will look blocky and wrong unless "
+"<emphasis>anti-aliasing</emphasis> techniques are used to reduce this "
+"effect. You generally want to keep this option enabled unless it causes "
+"problems."
+msgstr ""
+
+#: package/contents/ui/main.qml:217
+#, kde-format
+msgid "Exclude range from anti-aliasing"
+msgstr "ਐਂਟੀ-ਅਲਾਈਸਿੰਗ ਦੀ ਰੇਜ਼ ਤੋਂ ਅਲਹਿਦਾ"
+
+#: package/contents/ui/main.qml:236 package/contents/ui/main.qml:259
+#, kde-format
+msgid "%1 pt"
+msgstr "%1 ਪੁਆਇੰਟ"
+
+#: package/contents/ui/main.qml:251
+#, kde-format
+msgid "to"
+msgstr "ਤੋਂ"
+
+#: package/contents/ui/main.qml:282
+#, kde-format
+msgctxt "Used as a noun, and precedes a combobox full of options"
+msgid "Sub-pixel rendering:"
+msgstr "ਸਬ-ਪਿਕਸਲ ਰੈਂਡਰਿੰਗ:"
+
+#: package/contents/ui/main.qml:324
+#, kde-kuit-format
+msgctxt "@info:tooltip Sub-pixel rendering"
+msgid ""
+"<para>On TFT or LCD screens every single pixel is actually composed of three "
+"or four smaller monochrome lights. These <emphasis>sub-pixels</emphasis> can "
+"be changed independently to further improve the quality of displayed fonts.</"
+"para> <para>The rendering quality is only improved if the selection matches "
+"the manner in which the sub-pixels of your display are aligned. Most "
+"displays have a linear ordering of <emphasis>RGB</emphasis> sub-pixels, some "
+"have <emphasis>BGR</emphasis> and some exotic orderings are not supported by "
+"this feature.</para>This does not work with CRT monitors."
+msgstr ""
+
+#: package/contents/ui/main.qml:329
+#, kde-format
+msgctxt "Used as a noun, and precedes a combobox full of options"
+msgid "Hinting:"
+msgstr "ਹਿੰਟਿੰਗ:"
+
+#: package/contents/ui/main.qml:370
+#, kde-kuit-format
+msgctxt "@info:tooltip Hinting"
+msgid ""
+"Hinting is a technique in which hints embedded in a font are used to enhance "
+"the rendering quality especially at small sizes. Stronger hinting generally "
+"leads to sharper edges but the small letters will less closely resemble "
+"their shape at big sizes."
+msgstr ""
+
+#: package/contents/ui/main.qml:380
+#, kde-format
+msgid "Force font DPI:"
+msgstr "ਫੋਂਟ DPI ਲਈ ਮਜ਼ਬੂਰ:"
+
+#: package/contents/ui/main.qml:422
+#, kde-kuit-format
+msgctxt "@info:tooltip Force fonts DPI"
+msgid ""
+"<para>Enter your screen's DPI here to make on-screen fonts match their "
+"physical sizes when printed. Changing this option from its default value "
+"will conflict with many apps; some icons and images may not scale as "
+"expected.</para><para>To increase text size, change the size of the fonts "
+"above. To scale everything, use the scaling slider on the <interface>Display "
+"& Monitor</interface> page.</para>"
+msgstr ""
+
+#: package/contents/ui/main.qml:428
+#, kde-format
+msgid "Select Font"
+msgstr "ਫੋਂਟ ਚੁਣੋ"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "ਅਮਨਪਰੀਤ ਸਿੰਘ ਆਲਮ"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "alam.yellow@gmail.com"
+
+#~ msgid "Fonts"
+#~ msgstr "ਫੋਂਟ"
+
+#~ msgid "Antonis Tsiapaliokas"
+#~ msgstr "Antonis Tsiapaliokas"
+
+#~ msgid "Select %1 Font..."
+#~ msgstr "...%1 ਫ਼ੋਂਟ ਚੁਣੋ"
+
+#~ msgid "Font Settings Changed"
+#~ msgstr "ਫੋਂਟ ਸੈਟਿੰਗ ਬਦਲੀ"
+
+#~ msgid ""
+#~ "<p>Some changes such as DPI will only affect newly started applications.</"
+#~ "p>"
+#~ msgstr "<p>ਕੁਝ ਬਦਲਾਅ ਜਿਵੇਂ DPI ਕੇਵਲ ਨਵੀਆਂ ਚਲਾਈਆਂ ਐਪਲੀਕੇਸ਼ਨ ਲਈ ਹੀ ਲਾਗੂ ਹੋਣਗੇ।</p>"
+
+#, fuzzy
+#~| msgid "Vendor Default"
+#~ msgid "Vendor default"
+#~ msgstr "ਵੇਂਡਰ ਡਿਟਾਲਟ"
+
+#~ msgid "Disabled"
+#~ msgstr "ਅਸਮਰੱਥ ਹੈ"
+
+#, fuzzy
+#~| msgid "Configure Fonts"
+#~ msgid "Configure the system fonts"
+#~ msgstr "ਫ਼ੋਂਟ ਸੰਰਚਨਾ..."
+
+#~ msgid "Configure Anti-Alias Settings"
+#~ msgstr "ਐਂਟੀਲਾਇਸ ਸੈਟਿੰਗ ਸੰਰਚਨਾ"
+
+#~ msgid "E&xclude range:"
+#~ msgstr "ਬਾਹਰ ਰੱਖੀ ਰੇਜ਼(&x):"
+
+#, fuzzy
+#~| msgid " pt"
+#~ msgctxt "abbreviation for unit of points"
+#~ msgid " pt"
+#~ msgstr " pt"
+
+#~ msgid ""
+#~ "Hinting is a process used to enhance the quality of fonts at small sizes."
+#~ msgstr "ਹਿੰਟਿੰਗ ਇੱਕ ਕਾਰਵਾਈ ਹੈ, ਜਿਸ ਅਧੀਨ ਫੋਂਟਾਂ ਦੀ ਕੁਆਲਟੀ ਛੋਟੇ ਆਕਾਰ ਹੋਣ ਉੱਤੇ ਵਧਾਈ ਜਾਂਦੀ ਹੈ।"
+
+#~ msgid "Used for normal text (e.g. button labels, list items)."
+#~ msgstr "ਆਮ ਟੈਕਸਟ ਲਈ ਵਰਤੋਂ (ਜਿਵੇਂ ਕਿ ਲੇਬਲ, ਲਿਸਟ ਆਈਟਮਾਂ)"
+
+#~ msgid "A non-proportional font (i.e. typewriter font)."
+#~ msgstr "ਨਾ-ਅਨੁਪਾਤੀ ਫੋਂਟ (ਜਿਵੇਂ ਕਿ ਟਾਇਪਰਾਇਟਰ) ਹੈ।"
+
+#~ msgid "Smallest font that is still readable well."
+#~ msgstr "ਸਭ ਤੋਂ ਛੋਟੇ ਫੋਂਟ, ਜੋ ਕਿ ਪੜ੍ਹਨਯੋਗ ਵੀ ਹੋਣ।"
+
+#~ msgid "Used to display text beside toolbar icons."
+#~ msgstr "ਟੂਲਬਾਰ ਆਈਕਾਨ ਦੇ ਹੇਠਾਂ ਟੈਕਸਟ ਵੇਖਾਉਣ ਲਈ ਵਰਤੇ ਜਾਂਦੇ ਹਨ।"
+
+#~ msgid "Used by menu bars and popup menus."
+#~ msgstr "ਮੇਨੂ ਅਤੇ ਪੋਪਅੱਪ ਮੇਨੂ ਰਾਹੀਂ ਵਰਤੇ ਜਾਂਦੇ ਹਨ।"
+
+#~ msgid "Used by the window titlebar."
+#~ msgstr "ਵਿੰਡੋ ਟਾਇਟਲਬਾਰ ਰਾਹੀਂ ਵਰਤੇ ਜਾਂਦੇ ਹਨ"
+
+#~ msgctxt "Font role"
+#~ msgid "%1: "
+#~ msgstr "%1: "
+
+#~ msgid "Click to change all fonts"
+#~ msgstr "ਸਭ ਫੋਂਟ ਬਦਲਣ ਲਈ ਕਲਿੱਕ ਕਰੋ"
+
+#~ msgctxt "Use anti-aliasing"
+#~ msgid "System Settings"
+#~ msgstr "ਸਿਸਟਮ ਸੈਟਿੰਗ"
+
+#, fuzzy
+#~| msgid ""
+#~| "If this option is selected, KDE will smooth the edges of curves in fonts."
+#~ msgid "Select this option to smooth the edges of curves in fonts."
+#~ msgstr "ਜੇਕਰ ਇਹ ਚੋਣ ਕੀਤੀ ਗਈ, ਤਾਂ KDE ਫੋਂਟਾਂ ਵਿੱਚ ਕਿਨਾਰਿਆਂ ਨੂੰ ਗੋਲ ਕਰ ਦੇਵੇਗਾ।"
+
+#, fuzzy
+#~| msgctxt "Use anti-aliasing"
+#~| msgid "System Settings"
+#~ msgctxt "use system subpixel setting"
+#~ msgid "System default"
+#~ msgstr "ਸਿਸਟਮ ਸੈਟਿੰਗ"
+
+#, fuzzy
+#~| msgctxt "Use anti-aliasing"
+#~| msgid "System Settings"
+#~ msgctxt "use system hinting settings"
+#~ msgid "System default"
+#~ msgstr "ਸਿਸਟਮ ਸੈਟਿੰਗ"
+
+#~ msgctxt "font usage"
+#~ msgid "Taskbar"
+#~ msgstr "ਟਾਸਕਬਾਰ"
+
+#~ msgctxt "font usage"
+#~ msgid "Desktop"
+#~ msgstr "ਡੈਸਕਟਾਪ"
+
+#~ msgid "Used by the taskbar."
+#~ msgstr "ਟਾਸਕਬਾਰ ਰਾਹੀਂ ਵਰਤੇ ਜਾਂਦੇ ਹਨ।"
+
+#~ msgid "Used for desktop icons."
+#~ msgstr "ਡੈਸਕਟਾਪ ਆਈਕਾਨਾਂ ਵਲੋਂ ਵਰਤੇ ਜਾਂਦੇ ਹਨ।"
+
+#~ msgctxt "Force fonts DPI"
+#~ msgid "Disabled"
+#~ msgstr "ਆਯੋਗ ਕੀਤਾ"
+
+#~ msgid "96 DPI"
+#~ msgstr "96 DPI"
+
+#~ msgid "120 DPI"
+#~ msgstr "120 DPI"

@@ -1,0 +1,44 @@
+# Albanian translation for kdebase-runtime
+# Copyright (c) 2009 Rosetta Contributors and Canonical Ltd 2009
+# This file is distributed under the same license as the kdebase-runtime package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kdebase-runtime\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-05-20 03:26+0200\n"
+"PO-Revision-Date: 2009-05-02 18:42+0000\n"
+"Last-Translator: Vilson Gjeci <vilsongjeci@gmail.com>\n"
+"Language-Team: Albanian <sq@li.org>\n"
+"Language: sq\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2011-04-22 16:07+0000\n"
+"X-Generator: Launchpad (build 12883)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "KDE Shqip, Launchpad Contributions: Vilson Gjeci"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kde-shqip@yahoogroups.com,vilsongjeci@gmail.com"
+
+#~ msgid "<qt>Unable to use the <b>%1</b> Multimedia Backend:<br/>%2</qt>"
+#~ msgstr ""
+#~ "<qt>Nuk jemi në gjendje të përdorim <b>%1</b> Multimedia Backend:<br/>%2</"
+#~ "qt>"
+
+#~ msgid "Unable to find a Multimedia Backend"
+#~ msgstr "Nuk mund të gjejmë një Multimedia Backend"
+
+#~ msgid "Unable to find the requested Multimedia Backend"
+#~ msgstr "Nuk mund të gjejmë Multimedia Backend të kërkuar"
+
+#~ msgid "create method returned 0"
+#~ msgstr "metoda e krijimit dha përgjigjen 0"

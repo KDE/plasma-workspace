@@ -1,0 +1,158 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Steve Allewell <steve.allewell@gmail.com>, 2014, 2015, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2021-06-12 12:43+0100\n"
+"Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
+"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.04.1\n"
+
+#: contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "General"
+
+#: contents/ui/ConfigGeneral.qml:36
+#, kde-format
+msgctxt ""
+"Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
+msgid "Show actions:"
+msgstr "Show actions:"
+
+#: contents/ui/ConfigGeneral.qml:37
+#, kde-format
+msgid "Logout"
+msgstr "Logout"
+
+#: contents/ui/ConfigGeneral.qml:43
+#, kde-format
+msgid "Shutdown"
+msgstr "Shutdown"
+
+#: contents/ui/ConfigGeneral.qml:48
+#, kde-format
+msgid "Reboot"
+msgstr "Reboot"
+
+#: contents/ui/ConfigGeneral.qml:53 contents/ui/data.js:5
+#, kde-format
+msgid "Lock"
+msgstr "Lock"
+
+#: contents/ui/ConfigGeneral.qml:58
+#, kde-format
+msgid "Switch User"
+msgstr "Switch User"
+
+#: contents/ui/ConfigGeneral.qml:63 contents/ui/data.js:46
+#, kde-format
+msgid "Hibernate"
+msgstr "Hibernate"
+
+#: contents/ui/ConfigGeneral.qml:68 contents/ui/data.js:39
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Sleep"
+
+#: contents/ui/data.js:6
+#, kde-format
+msgid "Lock the screen"
+msgstr "Lock the screen"
+
+#: contents/ui/data.js:12
+#, kde-format
+msgid "Switch user"
+msgstr "Switch user"
+
+#: contents/ui/data.js:13
+#, kde-format
+msgid "Start a parallel session as a different user"
+msgstr "Start a parallel session as a different user"
+
+#: contents/ui/data.js:18
+#, kde-format
+msgid "Shutdown…"
+msgstr "Shutdown…"
+
+#: contents/ui/data.js:19
+#, kde-format
+msgid "Turn off the computer"
+msgstr "Turn off the computer"
+
+#: contents/ui/data.js:25
+#, kde-format
+msgid "Restart…"
+msgstr "Restart…"
+
+#: contents/ui/data.js:26
+#, kde-format
+msgid "Reboot the computer"
+msgstr "Reboot the computer"
+
+#: contents/ui/data.js:32
+#, kde-format
+msgid "Logout…"
+msgstr "Logout…"
+
+#: contents/ui/data.js:33
+#, kde-format
+msgid "End the session"
+msgstr "End the session"
+
+#: contents/ui/data.js:40
+#, kde-format
+msgid "Sleep (suspend to RAM)"
+msgstr "Sleep (suspend to RAM)"
+
+#: contents/ui/data.js:47
+#, kde-format
+msgid "Hibernate (suspend to disk)"
+msgstr "Hibernate (suspend to disk)"
+
+#~ msgid "Shutdown..."
+#~ msgstr "Shutdown..."
+
+#~ msgid "Logout..."
+#~ msgstr "Logout..."
+
+#~ msgid "Do you want to suspend to disk (hibernate)?"
+#~ msgstr "Do you want to suspend to disk (hibernate)?"
+
+#~ msgid "Yes"
+#~ msgstr "Yes"
+
+#~ msgid "No"
+#~ msgstr "No"
+
+#~ msgid "Do you want to suspend to RAM (sleep)?"
+#~ msgstr "Do you want to suspend to RAM (sleep)?"
+
+#~ msgid "Leave"
+#~ msgstr "Leave"
+
+#~ msgid "Leave..."
+#~ msgstr "Leave..."
+
+#~ msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
+#~ msgid "Actions"
+#~ msgstr "Actions"
+
+#~ msgid "Suspend"
+#~ msgstr "Suspend"
+
+#~ msgid "Lock/Logout Settings"
+#~ msgstr "Lock/Logout Settings"
+
+#~ msgid "SystemTray Settings"
+#~ msgstr "SystemTray Settings"

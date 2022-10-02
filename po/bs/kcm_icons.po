@@ -1,0 +1,391 @@
+# Translation of kcmicons.po into Bosnian.
+# Milos Puzovic <m.puzovic@etoncollege.org.uk>, 2001.
+# Toplica Tanaskovic <toptan@kde.org.yu>, 2003, 2004.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2005, 2007, 2008, 2009, 2010.
+# Dalibor Djuric <dalibor.djuric@mozilla-srbija.org>, 2009, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmicons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"PO-Revision-Date: 2014-10-20 19:32+0000\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Bosnian <bs@li.org>\n"
+"Language: bs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Launchpad (build 17341)\n"
+"X-Launchpad-Export-Date: 2015-02-16 06:42+0000\n"
+"X-Associated-UI-Catalogs: kdelibs4\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+# >> @item:inlistbox
+#: iconsizecategorymodel.cpp:14
+#, kde-format
+msgid "Toolbar"
+msgstr "Traka alatki"
+
+# >> @item:inlistbox
+#: iconsizecategorymodel.cpp:15
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Glavna traka"
+
+# >> @item:inlistbox
+#: iconsizecategorymodel.cpp:16
+#, kde-format
+msgid "Small Icons"
+msgstr "Male ikone"
+
+# >> @item:inlistbox
+#: iconsizecategorymodel.cpp:17
+#, kde-format
+msgid "Panel"
+msgstr "Panel"
+
+# >> @item:inlistbox
+#: iconsizecategorymodel.cpp:18
+#, kde-format
+msgid "Dialogs"
+msgstr "Dijalozi"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr ""
+
+# >> @item:inlistbox
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, fuzzy, kde-format
+#| msgid "Main Toolbar"
+msgid "Main toolbar icons size"
+msgstr "Glavna traka"
+
+# >> @item:inlistbox
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, fuzzy, kde-format
+#| msgid "Small Icons"
+msgid "Small icons size"
+msgstr "Male ikone"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr ""
+
+#: main.cpp:182
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Ne mogu kreirati privremenu datoteku."
+
+#: main.cpp:193
+#, fuzzy, kde-format
+#| msgid "Unable to find the icon theme archive %1."
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Ne mogu da pronađem arhivu teme ikona %1."
+
+#: main.cpp:207
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "Ovaa datoteka nije ispravna arhiva teme ikona."
+
+#: main.cpp:212
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr ""
+"Došlo je do problema u toku instalacije. Ipak, veći dio tema iz arhive je "
+"instaliran."
+
+#: main.cpp:216
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: main.cpp:260
+#, fuzzy, kde-format
+#| msgid "Installing icon themes..."
+msgid "Installing icon themes…"
+msgstr "Instaliram temu ikona..."
+
+#: main.cpp:270
+#, fuzzy, kde-format
+#| msgid "Installing icon themes..."
+msgid "Installing %1 theme…"
+msgstr "Instaliram temu ikona..."
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr ""
+
+#: package/contents/ui/main.qml:147
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Remove Icon Theme"
+msgstr "Ukloni temu"
+
+#: package/contents/ui/main.qml:154
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Icon Theme"
+msgstr "Ukloni temu"
+
+#: package/contents/ui/main.qml:228
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr ""
+
+#: package/contents/ui/main.qml:246
+#, fuzzy, kde-format
+#| msgid "Install Theme File..."
+msgid "Install from File…"
+msgstr "Instaliraj datoteku teme..."
+
+#: package/contents/ui/main.qml:251
+#, fuzzy, kde-format
+#| msgid "Get New Themes..."
+msgid "Get New Icons…"
+msgstr "Dobavi nove teme..."
+
+#: package/contents/ui/main.qml:279
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Open Theme"
+msgstr "Ukloni temu"
+
+#: package/contents/ui/main.qml:281
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Chusslove Illich"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "Caslav.ilic@gmx.net"
+
+#~ msgid "Icons"
+#~ msgstr "Ikone"
+
+#~ msgid "Icons Control Panel Module"
+#~ msgstr "Modul kontrolnog panela za ikone"
+
+#~ msgid "(c) 2000-2003 Geert Jansen"
+#~ msgstr "© 2000-2003, Gert Jansen"
+
+#~ msgid "Geert Jansen"
+#~ msgstr "Gert Jansen"
+
+#~ msgid "Antonio Larrosa Jimenez"
+#~ msgstr "Antonio Larosa Himenez"
+
+#~ msgid "Torsten Rahn"
+#~ msgstr "Torsten Ran"
+
+#~ msgid "Jonathan Riddell"
+#~ msgstr "Jonathan Riddell"
+
+# >> @item:inlistbox
+#~ msgid "Desktop"
+#~ msgstr "Površ"
+
+#~ msgid "Use of Icon"
+#~ msgstr "Upotreba ikone"
+
+#~ msgctxt "@label The icon rendered by default"
+#~ msgid "Default"
+#~ msgstr "Osnovna"
+
+#~ msgctxt "@label The icon rendered as active"
+#~ msgid "Active"
+#~ msgstr "Aktivna"
+
+#~ msgctxt "@label The icon rendered as disabled"
+#~ msgid "Disabled"
+#~ msgstr "Isključena"
+
+#~ msgid "Size:"
+#~ msgstr "Veličina:"
+
+#~ msgid "Set Effect..."
+#~ msgstr "Postavi efekat..."
+
+# >> @item:inlistbox
+#~ msgid "All Icons"
+#~ msgstr "Sve ikone"
+
+#~ msgid "Setup Default Icon Effect"
+#~ msgstr "Podesi efekte osnovnih ikona"
+
+#~ msgid "Setup Active Icon Effect"
+#~ msgstr "Podesi efekte aktivnih ikona"
+
+#~ msgid "Setup Disabled Icon Effect"
+#~ msgstr "Podesi efekte isključenih ikona"
+
+#~ msgid "&Effect:"
+#~ msgstr "&Efekti:"
+
+#~ msgid "No Effect"
+#~ msgstr "Bez efekata"
+
+#~ msgid "To Gray"
+#~ msgstr "Zasivljeno"
+
+#~ msgid "Colorize"
+#~ msgstr "Obojeno"
+
+#~ msgid "Gamma"
+#~ msgstr "Gama"
+
+#~ msgid "Desaturate"
+#~ msgstr "Odzasićeno"
+
+#~ msgid "To Monochrome"
+#~ msgstr "Monohromatsko"
+
+#~ msgid "&Semi-transparent"
+#~ msgstr "&Poluprovidne"
+
+#~ msgid "Preview"
+#~ msgstr "Pregled"
+
+#~ msgid "Effect Parameters"
+#~ msgstr "Parametri efekta"
+
+#~ msgid "&Amount:"
+#~ msgstr "&Količina:"
+
+#~ msgid "Co&lor:"
+#~ msgstr "&Boja:"
+
+#~ msgid "&Second color:"
+#~ msgstr "&Druga boja:"
+
+#~ msgid "Name"
+#~ msgstr "Ime"
+
+#~ msgid "Description"
+#~ msgstr "Opis"
+
+#~ msgid "Install a theme archive file you already have locally"
+#~ msgstr "Instaliraj arhivu teme koja je smještena lokalno"
+
+#~ msgid ""
+#~ "If you already have a theme archive locally, this button will unpack it "
+#~ "and make it available for KDE applications"
+#~ msgstr ""
+#~ "Ako arhivu teme već imate lokalno, ovim dugmetom je možete raspakovati i "
+#~ "staviti na raspolaganje KDE programima."
+
+#~ msgid "Get new themes from the Internet"
+#~ msgstr "Dobavi nove teme sa Interneta"
+
+#~ msgid ""
+#~ "You need to be connected to the Internet to use this action. A dialog "
+#~ "will display a list of themes from the http://www.kde.org website. "
+#~ "Clicking the Install button associated with a theme will install this "
+#~ "theme locally."
+#~ msgstr ""
+#~ "<html>Za ovu radnju morate biti povezani na Internet. Pojaviće se dijalog "
+#~ "sa spiskom tema sa veb sajta <link>http://www.kde.org</link>, odakle ih "
+#~ "možete instalirati klikom na dugme <interface>Instaliraj</interface> "
+#~ "pokraj željene teme.</html>."
+
+#~ msgid "Remove the selected theme from your disk"
+#~ msgstr "Ukloni izabranu temu sa diska"
+
+#~ msgid "This will remove the selected theme from your disk."
+#~ msgstr "Ovo će ukloniti izabranu temu sa diska."
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "Prevucite ili ukucajte URL teme"
+
+#~ msgid ""
+#~ "Unable to download the icon theme archive;\n"
+#~ "please check that address %1 is correct."
+#~ msgstr ""
+#~ "Ne mogu da preuzmem arhivu teme ikona.\n"
+#~ "Provjerite da li je adresa %1 ispravna."
+
+# >> @info:progress
+#~ msgid "<qt>Installing <strong>%1</strong> theme</qt>"
+#~ msgstr "<qt>Instaliram temu <strong>%1</strong></qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <strong>%1</strong> icon theme?"
+#~ "<br /><br />This will delete the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>Želite li zaista da uklonite temu ikona <strong>%1</strong>?<br/><br/"
+#~ ">Ovo će obrisati sve datoteke instalirane ovom temom.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Potvrda"
+
+#~ msgid "&Theme"
+#~ msgstr "&Tema"
+
+#~ msgid "Ad&vanced"
+#~ msgstr "&Napredno"
+
+# >! "Install New Theme" no longer, perhaps "Install Theme File..."?
+#~ msgid ""
+#~ "<h1>Icons</h1>This module allows you to choose the icons for your desktop."
+#~ "<p>To choose an icon theme, click on its name and apply your choice by "
+#~ "pressing the \"Apply\" button below. If you do not want to apply your "
+#~ "choice you can press the \"Reset\" button to discard your changes.</"
+#~ "p><p>By pressing the \"Install Theme File...\" button you can install "
+#~ "your new icon theme by writing its location in the box or browsing to the "
+#~ "location. Press the \"OK\" button to finish the installation.</p><p>The "
+#~ "\"Remove Theme\" button will only be activated if you select a theme that "
+#~ "you installed using this module. You are not able to remove globally "
+#~ "installed themes here.</p><p>You can also specify effects that should be "
+#~ "applied to the icons.</p>"
+#~ msgstr ""
+#~ "<h1>Ikone</h1>U ovom modulu birate izgled ikona na radnoj površini.<p>Da "
+#~ "biste izabrali temu ikona, kliknite na njeno ime i primijenite izbor "
+#~ "klikom na dugme \"Primijeni\". Ako ne želite da primijenite izbor, "
+#~ "kliknite na dugme \"Reset\" i promjene će biti odbačene.</p><p>Dugmetom "
+#~ "\"Instaliraj datoteku teme...\"možete instalirati temu ikona upisivanjem "
+#~ "njene lokacije ili izborom iz dijaloga. Kliknite na dugme \"U redu\" da "
+#~ "biste završili instalaciju.</p><p>Dugme \"Ukloni temu\" će biti aktivno "
+#~ "samo ako izaberete temu instaliranu ovim modulom. Odavdje ne možete "
+#~ "ukloniti globalno instalirane teme.</p><p>Takođe možete naznačiti i koji "
+#~ "će se efekti primjenjivati nad ikonama.</p>"
+
+#~ msgid "Animate icons"
+#~ msgstr "Animirane ikone"
+
+#~ msgid "Select the icon theme you want to use:"
+#~ msgstr "Izaberite temu ikona koju želite da koristite:"

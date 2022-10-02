@@ -1,0 +1,83 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Brazilian-Portuguese "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="screenlocker" lang="&language;">
+<articleinfo>
+<title
+>Bloqueio de tela</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>Lisiane</firstname
+> <surname
+>Sztoltz</surname
+><affiliation
+><address
+> <email
+>lisiane@conectiva.com.br</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>20/05/2015</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>configurações do sistema</keyword>
+<keyword
+>bloqueio de tela</keyword>
+<keyword
+>bloqueador de sessão</keyword>
+</keywordset>
+</articleinfo>
+<!--https://bugs.kde.org/show_bug.cgi?id=317156 does this effect screenlock in kf5?-->
+<para
+>Com este módulo é possível determinar a rapidez com que a tela é bloqueada e adicionar/remover a senha de proteção.</para>
+
+<para
+>Na parte superior encontra-se uma opção para bloqueio da tela <guilabel
+>Bloquear a tela automaticamente após</guilabel
+> e um campo incremental que define o período de inatividade, em minutos, antes de iniciar o bloqueio. Você pode indicar qualquer número positivo neste campo.</para>
+
+<para
+>Abaixo desta opção existe outra chamada <guilabel
+>Pedir uma senha após o bloqueio</guilabel
+>. Se esta opção estiver assinalada, quando clicar em uma tecla ou botão do mouse, de forma a terminar o bloqueio ao fim do tempo definido no campo incremental e voltar ao seu trabalho, será necessário informar uma senha. A senha é a mesma usada para autenticação na máquina. </para>
+
+<para
+>O bloqueio manual da tela faz com que a proteção por senha seja aplicada imediatamente.</para>
+
+<para
+>A combinação de teclas padrão <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>L</keycap
+></keycombo
+> oferece uma forma rápida de bloquear a tela manualmente.</para>
+
+<para
+>Assinale a opção <guilabel
+>Bloquear a tela ao reativar</guilabel
+> se quiser um sistema protegido por senha quando reativá-lo a partir de um estado de suspensão/hibernação.</para>
+
+<para
+>Se quiser alterar o plano de fundo no estado bloqueado, clique no botão de imagem à direita do <guilabel
+>Plano de fundo personalizado</guilabel
+>, de modo a abrir um menu com ações para carregar uma imagem a partir de um arquivo ou limpar a imagem que está em uso.</para>
+
+</article>

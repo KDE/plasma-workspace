@@ -1,0 +1,71 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Kishore G <kishore96@gmail.com>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-28 00:47+0000\n"
+"PO-Revision-Date: 2022-02-27 16:23+0530\n"
+"Last-Translator: Kishore G <kishore96@gmail.com>\n"
+"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.12.2\n"
+
+#: package/contents/ui/main.qml:34
+#, kde-format
+msgid ""
+"User Feedback has been disabled centrally. Please contact your distributor."
+msgstr ""
+"பயனர் பின்னூட்டம் நிர்வாகியால் முடக்கப்பட்டுள்ளது. உங்கள் இயக்குதள நிறுவனத்தை தொடர்பு "
+"கொள்ளுங்கள்."
+
+#: package/contents/ui/main.qml:44 package/contents/ui/main.qml:77
+#, kde-format
+msgid "Plasma:"
+msgstr "பிளாஸ்மா:"
+
+#: package/contents/ui/main.qml:51
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"You can help KDE improve Plasma by contributing information on how you use "
+"it, so we can focus on things that matter to you.<nl/><nl/>Contributing this "
+"information is optional and entirely anonymous. We never collect your "
+"personal data, files you use, websites you visit, or information that could "
+"identify you.<nl/><nl/>You can read about <link url='https://kde.org/"
+"privacypolicy-apps.php'>our privacy policy here.</link>"
+msgstr ""
+"நீங்கள் கே.டீ.யீ. பிளாஸ்மாவை பயன்படுத்தும் விதத்தைக் குறித்த சில விவரங்களை அனுப்பி, அதனை "
+"மேம்படுத்த உதவலாம்; இவ்வாறு செய்வதன் மூலம், பயனர்களுக்கு தேவையான அம்சங்கள் எவையென்று "
+"நாங்கள் தெரிந்துகொள்கிறோம்.<nl/><nl/>இவ்விவரங்களை அனுப்புதல் கட்டாயமில்லை, மேலும் உங்கள் "
+"அடையாளத்தை எங்களுக்கு தெரியப்படுத்தாது. உங்கள் தனிப்பட்ட தரவுகள், நீங்கள் பயன்படுத்தும் "
+"கோப்புகள், நீங்கள் பார்க்கும் இணையதளங்கள், அல்லது உங்களை அடையாளங்கான பயன்படும் விவரங்களை "
+"நாங்கள் ஒருபோதும் சேகரிக்க மாட்டோம். <nl/><nl/>எங்கள் தனியுரிமை கொள்கையை பற்றி <link "
+"url='https://kde.org/privacypolicy-apps.php'>இங்கு படிக்கலாம்.</link>"
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Plasma"
+msgstr "பிளாஸ்மா"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "The following information will be sent:"
+msgstr "கீழ்காணும் விவரங்கள் அனுப்பப்படும்:"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "View sent data:"
+msgstr "அனுப்பியுள்ள தரவை பாருங்கள்:"
+
+#~ msgid "User Feedback"
+#~ msgstr "பயனர் பின்னூட்டம்"
+
+#~ msgid "Configure user feedback settings"
+#~ msgstr "பயனர் பின்னூட்டத்திற்கான விருப்பங்களை அமையுங்கள்"

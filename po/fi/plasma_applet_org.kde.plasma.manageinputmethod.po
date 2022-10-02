@@ -1,0 +1,51 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# Tommi Nieminen <translator@legisign.org>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-13 00:47+0000\n"
+"PO-Revision-Date: 2021-08-02 19:52+0300\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#: contents/ui/manage-inputmethod.qml:64
+#, kde-format
+msgctxt "Opens the system settings module"
+msgid "Configure Virtual Keyboards..."
+msgstr "Näyttönäppäimistöasetukset…"
+
+#: contents/ui/manage-inputmethod.qml:79
+#, kde-format
+msgid "Virtual Keyboard: unavailable"
+msgstr "Näyttönäppäimistö: ei käytettävissä"
+
+#: contents/ui/manage-inputmethod.qml:90
+#, kde-format
+msgid "Virtual Keyboard: disabled"
+msgstr "Näyttönäppäimistö: poistettu käytöstä"
+
+#: contents/ui/manage-inputmethod.qml:104
+#, fuzzy, kde-format
+#| msgctxt "Opens the system settings module"
+#| msgid "Configure Virtual Keyboards..."
+msgid "Show Virtual Keyboard"
+msgstr "Näyttönäppäimistöasetukset…"
+
+#: contents/ui/manage-inputmethod.qml:115
+#, kde-format
+msgid "Virtual Keyboard: visible"
+msgstr "Näyttönäppäimistö: näkyvissä"
+
+#: contents/ui/manage-inputmethod.qml:128
+#, kde-format
+msgid "Virtual Keyboard: enabled"
+msgstr "Näyttönäppäimistö: otettu käyttöön"

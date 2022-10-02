@@ -1,0 +1,256 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % German "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="fontinst" lang="&language;">
+<title
+>Schriftarten-Verwaltung</title>
+<articleinfo>
+<authorgroup>
+<author
+>&Craig.Drummond; &Craig.Drummond.Mail;</author>
+
+<othercredit role="translator"
+><firstname
+>Stephan</firstname
+><surname
+>Johach</surname
+><affiliation
+><address
+><email
+>hunsum@gmx.de</email
+></address
+></affiliation
+><contrib
+>Übersetzung</contrib
+></othercredit
+>  
+</authorgroup>
+
+<date
+>2021-04-09</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systemeinstellungen</keyword>
+<keyword
+>fonts</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_fontinst">
+<title
+>Schriftarten-Verwaltung</title>
+
+<para
+>In diesem Modul können Sie Schriftarten installieren, entfernen, verwalten und als Vorschau betrachten.</para>
+
+<sect2 id="font-groups">
+<title
+>Schriftartgruppen</title>
+<para
+>Es gibt vier vordefinierte Schriftartgruppen:</para>
+
+<orderedlist>
+    <listitem
+><para
+><quote
+>Alle Schriftarten</quote
+>: Hierbei werden alle Schriftarten, persönliche und systemweite angezeigt.</para
+></listitem>
+    <listitem
+><para
+><quote
+>Persönliche Schriftarten</quote
+>: Die angezeigten Schriftarten stehen nur für Sie zur Verfügung und nicht für andere Benutzer.</para
+></listitem>
+    <listitem
+><para
+><quote
+>System-Schriftarten</quote
+>: Die hier angezeigten Schriftarten sind für alle Benutzer verfügbar. Das Installieren oder Deinstallieren einer System-Schriftart erfordert Systemverwalterrechte.</para
+></listitem>
+    <listitem
+><para
+><quote
+>Nicht klassifiziert</quote
+>: Hier werden alle Schriftarten angezeigt, die zu keiner der benutzerdefinierten Gruppen gehören. Diese Gruppe wird nur dann angezeigt, wenn sie benutzerdefinierte Gruppen erstellt haben.</para
+></listitem>
+</orderedlist>
+<para
+>Um eine Schriftart zu einer Gruppe hinzuzufügen, ziehen Sie sie aus der Liste in die Gruppe. Um eine Schriftart aus einer Gruppe zu entfernen, ziehen Sie diese auf die Gruppe <quote
+>Alle Schriftarten</quote
+>.</para>
+<para
+>Unterhalb dieser Listenansicht gibt es vier Knöpfe, um eine neue Gruppe zu erstellen, eine Gruppe zu entfernen und um Schriftarten in der ausgewählten Gruppe zu aktivieren oder zu deaktivieren.</para>
+<para
+>Im Kontextmenü  dieser Liste gibt es noch weitere Menüeinträge, um Schriften auszudrucken oder eine Schrift in ein Zip-Archiv zu exportieren.</para>
+
+<sect3 id="font-hiding">
+<title
+>Aktivieren und Deaktivieren</title>
+<para
+>Benutzer, die viele Schriftarten installiert haben, finden es möglicherweise nützlich zu bestimmten Zeitpunkten immer nur bestimmte Schriftarten aktiv (oder inaktiv) zu haben. Um dem nachzukommen können Sie in diesem Modul einzelne Schriftarten oder Schriftartgruppen deaktivieren. Das Deaktivieren einer Schriftart entfernt diese nicht aus dem System, sie wird nur ausgeblendet, sodass Sie in den Programmen nicht mehr erscheint. Das Aktivieren der Schriftart ermöglicht die Benutzung dann wieder. </para>
+</sect3>
+
+</sect2>
+
+<sect2 id="font-list">
+<title
+>Schriftartenliste</title>
+<para
+>Der mittlere Bereich des Moduls stellt eine Liste der installierten Schriftarten dar, gruppiert nach der Schriftfamilie. Die Zahl in eckigen Klammern zeigt die Anzahl der installierten Schriftstile aus dieser Familie an. Ein Beispiel: Die Schriftart <quote
+>Times</quote
+> wird möglicherweise so dargestellt: <itemizedlist
+> <listitem>
+    <para
+>Times [4]</para>
+    <itemizedlist>
+        <listitem
+><para
+>Normal</para
+></listitem>
+        <listitem
+><para
+>Kursiv</para
+></listitem>
+        <listitem
+><para
+>Fett</para
+></listitem>
+        <listitem
+><para
+>Fett kursiv</para
+></listitem>
+    </itemizedlist>
+</listitem>
+</itemizedlist>
+</para>
+
+<para
+>Um eine Schriftart zu installieren, drücken Sie den Knopf <guibutton
+>Aus Datei installieren ...</guibutton
+> und wählen im angezeigten Dateiauswahldialog die gewünschten Schriftarten aus. Die ausgewählte Schriftgruppe legt fest, wo die Schriftarten installiert werden.</para>
+<para
+>Um Schriftarten zu deinstallieren, markieren Sie die entsprechenden Schriftarten in der Liste und drücken den Knopf <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+>.</para>
+
+<para
+>Klicken Sie mit der &RMBn; um ein Kontextmenü mit folgenden zusätzlichen Einträgen zu öffnen: <guilabel
+>Aktivieren</guilabel
+>, <guilabel
+>Deaktivieren</guilabel
+>, <guilabel
+>Drucken</guilabel
+>, <ulink url="help:/kfontviewer/index.html"
+><guilabel
+>Im Schriftartenbetrachter öffnen</guilabel
+></ulink
+> und <guilabel
+>Erneut laden</guilabel
+>.</para>
+
+<sect3 id="font-filter">
+<title
+>Filterung der Schriftarten</title>
+<para
+>Im Textfeld über der Schriftvorschau kann ein Filter für die Liste der Schriftarten eingegeben werden. Schriftarten können nach verschiedenen Kategorien gefiltert werden.</para>
+        <orderedlist>
+        <listitem
+><para
+>Familie</para
+></listitem>
+        <listitem
+><para
+>Stil</para
+></listitem>
+        <listitem
+><para
+>Hersteller</para
+></listitem>
+        <listitem
+><para
+>Nach FontConfig filtern. Geben Sie den Namen einer Schriftfamilie ein, dann wird angezeigt, welche Schriftfamilie FontConfig tatsächlich benutzt.</para
+></listitem>
+        <listitem
+><para
+>Dateityp</para
+></listitem>
+        <listitem
+><para
+>Dateiname</para
+></listitem>
+        <listitem
+><para
+>Datei-Speicherort</para
+></listitem>
+        <listitem
+><para
+>Schrift-System</para
+></listitem>
+        </orderedlist>
+</sect3>
+
+<sect3 id="get-new-fonts">
+<title
+>Neue Schriftarten installieren </title>
+<para
+>Neue Schriften können von lokalen Dateien installiert oder  aus dem Internet heruntergeladen werden. Mit dem Extras-Knopf <guilabel
+>Neue Schriftarten holen</guilabel
+> über der Gruppenliste können Sie Schriften herunterladen und installieren. Die auf diese Weise heruntergeladenen Schriften werden in Ihrer Gruppe <guilabel
+>Persönliche Schriftarten</guilabel
+> installiert. Um diese Schriften systemweit zu benutzen, ziehen Sie sie durch Ziehen und Ablegen in die Gruppe <guilabel
+>System-Schriftarten</guilabel
+>. Dies erfordert Systemverwalterrechte.</para>
+</sect3>
+
+</sect2>
+
+<sect2 id="font-duplicates">
+<title
+>Doppelte Schriftarten</title>
+<para
+>Wenn sie viele Schriftarten auf Ihrem System installiert haben, gibt es darunter möglicherweise Duplikate.</para
+> 
+<para
+>Klicken Sie auf <guilabel
+>Duplikate suchen ...</guilabel
+>. Dann wird Ihr System auf Schriftarten untersucht, die mit mehreren Dateien verknüpft sind. Wenn Sie beispielsweise <quote
+>times.ttf</quote
+> und <quote
+>times.TTF</quote
+> in <quote
+>/usr/local/share/fonts</quote
+> installiert haben, erkennt das darunterliegende Schriftsystem (mit dem Namen <quote
+>FontConfig</quote
+>) nur eine davon. Wenn Sie diese Schriftart deinstallieren, würde sie doch wieder auftauchen, da nur eine der beiden Dateien entfernt wurde. Wenn Sie dieses Hilfsprogramm aufrufen, erscheint ein Dialog mit einer Liste der Schriftarten, für die mehrere Dateien gefunden wurden. Die betreffenden Dateien werden angezeigt und können durch Anklicken des Papierkorb-Symbols in der betreffenden Spalte zum Löschen markiert werden.</para>
+</sect2>
+
+<sect2 id="font-preview">
+<title
+>Vorschau</title>
+<para
+>Hier wird ein Vorschautext in verschieden Schriftgrößen angezeigt.</para>
+<para
+>Im Kontextmenü können Sie die Ansicht vergrößern und verkleinern, den Vorschautyp (<guilabel
+>Standard-Vorschau</guilabel
+> oder <guilabel
+>Alle Zeichen</guilabel
+>) und den Vorschautext ändern.</para>
+
+<para
+>Verwenden Sie das Programm &kfontview;, wenn Sie weiter Vorschauarten für Unicode-Blöcke ansehen möchten. </para>
+</sect2>
+</sect1>
+</article>

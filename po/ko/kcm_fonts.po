@@ -1,0 +1,507 @@
+# Translation of kcmfonts.po to Korean.
+# Copyright (C) 2001, 2007 Free Software Foundation, Inc.
+# Shinjo Park <kde@peremen.name>, 2007, 2010, 2012, 2015, 2017, 2018, 2019, 2020, 2021, 2022.
+#
+# Yu-Chan, Park, 2001.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmfonts\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-03 00:45+0000\n"
+"PO-Revision-Date: 2022-05-05 23:49+0200\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, kde-format
+msgid "Force font DPI Wayland"
+msgstr "글꼴 DPI 강제 지정(Wayland)"
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:13
+#, kde-format
+msgid "Force font DPI on X11"
+msgstr "X11에서 글꼴 DPI 강제 지정"
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, kde-format
+msgid "General font"
+msgstr "일반 글꼴"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, kde-format
+msgid "Fixed width font"
+msgstr "고정폭 글꼴"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, kde-format
+msgid "Small font"
+msgstr "작은 글꼴"
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, kde-format
+msgid "Tool bar font"
+msgstr "도구 모음 글꼴"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, kde-format
+msgid "Menu font"
+msgstr "메뉴 글꼴"
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, kde-format
+msgid "Window title font"
+msgstr "창 제목 글꼴"
+
+#: kxftconfig.cpp:458
+#, kde-format
+msgctxt "use system subpixel setting"
+msgid "Vendor default"
+msgstr "제조사 기본값"
+
+#: kxftconfig.cpp:460
+#, kde-format
+msgctxt "no subpixel rendering"
+msgid "None"
+msgstr "없음"
+
+#: kxftconfig.cpp:462
+#, kde-format
+msgid "RGB"
+msgstr "RGB"
+
+#: kxftconfig.cpp:464
+#, kde-format
+msgid "BGR"
+msgstr "BGR"
+
+#: kxftconfig.cpp:466
+#, kde-format
+msgid "Vertical RGB"
+msgstr "수직 RGB"
+
+#: kxftconfig.cpp:468
+#, kde-format
+msgid "Vertical BGR"
+msgstr "수직 BGR"
+
+#: kxftconfig.cpp:496
+#, kde-format
+msgctxt "use system hinting settings"
+msgid "Vendor default"
+msgstr "제조사 기본값"
+
+#: kxftconfig.cpp:498
+#, kde-format
+msgctxt "medium hinting"
+msgid "Medium"
+msgstr "중간"
+
+#: kxftconfig.cpp:500
+#, kde-format
+msgctxt "no hinting"
+msgid "None"
+msgstr "없음"
+
+#: kxftconfig.cpp:502
+#, kde-format
+msgctxt "slight hinting"
+msgid "Slight"
+msgstr "살짝"
+
+#: kxftconfig.cpp:504
+#, kde-format
+msgctxt "full hinting"
+msgid "Full"
+msgstr "완전히"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module lets you configure the system fonts."
+msgstr "이 모듈에서 시스템 글꼴을 설정할 수 있습니다."
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid "Change Display Scaling…"
+msgstr "디스플레이 크기 조정 변경…"
+
+#: package/contents/ui/main.qml:37
+#, kde-format
+msgid ""
+"Some changes such as anti-aliasing or DPI will only affect newly started "
+"applications."
+msgstr ""
+"앤티에일리어싱 및 DPI 같은 일부 설정은 새로 시작한 프로그램에만 적용됩니다."
+
+#: package/contents/ui/main.qml:51
+#, kde-format
+msgid ""
+"Very large fonts may produce odd-looking results. Consider adjusting the "
+"global screen scale instead of using a very large font size."
+msgstr ""
+"매우 큰 글꼴을 지정하면 결과가 보기 좋지 않을 수도 있습니다. 글꼴 크기를 확대"
+"하기보다는 전역 크기 조정 배율을 조정하십시오."
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid ""
+"Decimal font sizes can cause text layout problems in some applications. "
+"Consider using only integer font sizes."
+msgstr ""
+"소수점 단위 글꼴 크기는 일부 프로그램에서 레이아웃 문제를 발생시킬 수 있습니"
+"다. 정수 크기만을 사용하기를 권장합니다."
+
+#: package/contents/ui/main.qml:94
+#, kde-format
+msgid ""
+"The recommended way to scale the user interface is using the global screen "
+"scaling feature."
+msgstr ""
+"추천하는 사용자 인터페이스의 크기 조절 방법은 전역 화면 크기 조정 기능입니다."
+
+#: package/contents/ui/main.qml:106
+#, kde-format
+msgid "&Adjust All Fonts…"
+msgstr "모든 글꼴 설정(&A)…"
+
+#: package/contents/ui/main.qml:119
+#, kde-format
+msgid "General:"
+msgstr "일반:"
+
+#: package/contents/ui/main.qml:120
+#, kde-format
+msgid "Select general font"
+msgstr "일반 글꼴 선택"
+
+#: package/contents/ui/main.qml:131
+#, kde-format
+msgid "Fixed width:"
+msgstr "고정폭:"
+
+#: package/contents/ui/main.qml:132
+#, kde-format
+msgid "Select fixed width font"
+msgstr "고정폭 글꼴 선택"
+
+#: package/contents/ui/main.qml:143
+#, kde-format
+msgid "Small:"
+msgstr "작음:"
+
+#: package/contents/ui/main.qml:144
+#, kde-format
+msgid "Select small font"
+msgstr "작은 글꼴 선택"
+
+#: package/contents/ui/main.qml:155
+#, kde-format
+msgid "Toolbar:"
+msgstr "도구 모음:"
+
+#: package/contents/ui/main.qml:156
+#, kde-format
+msgid "Select toolbar font"
+msgstr "도구 모음 글꼴 선택"
+
+#: package/contents/ui/main.qml:167
+#, kde-format
+msgid "Menu:"
+msgstr "메뉴:"
+
+#: package/contents/ui/main.qml:168
+#, kde-format
+msgid "Select menu font"
+msgstr "메뉴 글꼴 선택"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "Window title:"
+msgstr "창 제목:"
+
+#: package/contents/ui/main.qml:179
+#, kde-format
+msgid "Select window title font"
+msgstr "창 제목 글꼴 선택"
+
+#: package/contents/ui/main.qml:194
+#, kde-format
+msgid "Anti-Aliasing:"
+msgstr "앤티에일리어싱:"
+
+#: package/contents/ui/main.qml:199
+#, kde-format
+msgid "Enable"
+msgstr "사용함"
+
+#: package/contents/ui/main.qml:203
+#, kde-kuit-format
+msgctxt "@info:tooltip Anti-Aliasing"
+msgid ""
+"Pixels on displays are generally aligned in a grid. Therefore shapes of "
+"fonts that do not align with this grid will look blocky and wrong unless "
+"<emphasis>anti-aliasing</emphasis> techniques are used to reduce this "
+"effect. You generally want to keep this option enabled unless it causes "
+"problems."
+msgstr ""
+"디스플레이상의 픽셀은 일반적으로 격자 형태로 배열되어 있습니다. 따라서 글꼴 "
+"모양과 격자 형태가 일치하지 않으면 오돌토돌하게 보일 수 있으며 <emphasis>앤티"
+"에일리어싱</emphasis>을 통해서 좀 더 부드럽게 표시할 수 있습니다. 문제가 생기"
+"지 않는 한 이 옵션을 활성화하기를 추천합니다."
+
+#: package/contents/ui/main.qml:217
+#, kde-format
+msgid "Exclude range from anti-aliasing"
+msgstr "앤티에일리어싱 제외 범위"
+
+#: package/contents/ui/main.qml:236 package/contents/ui/main.qml:259
+#, kde-format
+msgid "%1 pt"
+msgstr "%1pt"
+
+#: package/contents/ui/main.qml:251
+#, kde-format
+msgid "to"
+msgstr " 부터 "
+
+#: package/contents/ui/main.qml:282
+#, kde-format
+msgctxt "Used as a noun, and precedes a combobox full of options"
+msgid "Sub-pixel rendering:"
+msgstr "서브픽셀 렌더링:"
+
+#: package/contents/ui/main.qml:324
+#, kde-kuit-format
+msgctxt "@info:tooltip Sub-pixel rendering"
+msgid ""
+"<para>On TFT or LCD screens every single pixel is actually composed of three "
+"or four smaller monochrome lights. These <emphasis>sub-pixels</emphasis> can "
+"be changed independently to further improve the quality of displayed fonts.</"
+"para> <para>The rendering quality is only improved if the selection matches "
+"the manner in which the sub-pixels of your display are aligned. Most "
+"displays have a linear ordering of <emphasis>RGB</emphasis> sub-pixels, some "
+"have <emphasis>BGR</emphasis> and some exotic orderings are not supported by "
+"this feature.</para>This does not work with CRT monitors."
+msgstr ""
+"<para>TFT-LCD 화면의 단일 픽셀은 실제로는 3개 또는 4개의 독립된 <emphasis>서"
+"브픽셀</emphasis>로 구성되어 있습니다. 각 서브픽셀은 개별적으로 제어할 수 있"
+"으며 글꼴 표시를 개선할 때 사용할 수 있습니다.</para><para>최적화된 렌더링을 "
+"사용하려면 현재 디스플레이의 서브픽셀 구조와 여기에서 선택한 서브픽셀 구조가 "
+"같아야 합니다. 대부분 디스플레이는 <emphasis>RGB</emphasis> 순서대로 서브픽셀"
+"이 배치되어 있지만, 일부 디스플레이는 <emphasis>BGR</emphasis> 순서대로 배치"
+"되어 있을 수도 있으며, 기타 비선형 서브픽셀 구조는 지원하지 않습니다.</para>"
+"이 기능은 CRT 모니터에서는 작동하지 않습니다."
+
+#: package/contents/ui/main.qml:329
+#, kde-format
+msgctxt "Used as a noun, and precedes a combobox full of options"
+msgid "Hinting:"
+msgstr "힌팅:"
+
+#: package/contents/ui/main.qml:370
+#, kde-kuit-format
+msgctxt "@info:tooltip Hinting"
+msgid ""
+"Hinting is a technique in which hints embedded in a font are used to enhance "
+"the rendering quality especially at small sizes. Stronger hinting generally "
+"leads to sharper edges but the small letters will less closely resemble "
+"their shape at big sizes."
+msgstr ""
+"힌팅은 글꼴에 내장된 힌팅 정보를 사용하여 특히 작은 글꼴 크기에서의 렌더링 품"
+"질을 개선하는 기술입니다. 힌팅을 강하게 적용하면 경계선이 더 선명하게 보이지"
+"만 작은 글꼴 크기의 글자가 큰 글꼴 크기의 글자와 더 다르게 보일 수도 있습니"
+"다."
+
+#: package/contents/ui/main.qml:380
+#, kde-format
+msgid "Force font DPI:"
+msgstr "글꼴 DPI 강제 지정:"
+
+#: package/contents/ui/main.qml:422
+#, kde-kuit-format
+msgctxt "@info:tooltip Force fonts DPI"
+msgid ""
+"<para>Enter your screen's DPI here to make on-screen fonts match their "
+"physical sizes when printed. Changing this option from its default value "
+"will conflict with many apps; some icons and images may not scale as "
+"expected.</para><para>To increase text size, change the size of the fonts "
+"above. To scale everything, use the scaling slider on the <interface>Display "
+"& Monitor</interface> page.</para>"
+msgstr ""
+"<para>인쇄했을 때 글꼴 크기와 화면상 글꼴 크기를 맞추려면 화면의 DPI를 입력하"
+"십시오. 이 옵션을 기본값에서 변경하면 대부분 앱에서 문제가 발생할 수도 있으"
+"며, 일부 아이콘이나 그림은 올바르게 크기 조정되지 않을 수도 있습니다.</"
+"para><para>텍스트 크기를 증가시키려면 위쪽에서 글꼴 크기를 변경하십시오. 모"
+"든 것의 크기를 변경하려면 <interface>디스플레이와 모니터</interface> 페이지"
+"의 크기 조절 슬라이더를 사용하십시오.</para>"
+
+#: package/contents/ui/main.qml:428
+#, kde-format
+msgid "Select Font"
+msgstr "글꼴 선택"
+
+#~ msgctxt "@info:tooltip Force fonts DPI"
+#~ msgid ""
+#~ "<para>This option forces a specific DPI value for fonts. It may be useful "
+#~ "when the real DPI of the hardware is not detected properly and it is also "
+#~ "often misused when poor quality fonts are used that do not look well with "
+#~ "DPI values other than 96 or 120 DPI.</para><para>The use of this option "
+#~ "is generally discouraged.</para><para>If you are using the <emphasis>X "
+#~ "Window System</emphasis>, for selecting the proper DPI value a better "
+#~ "option is explicitly configuring it for the whole X server if possible (e."
+#~ "g. DisplaySize in xorg.conf). When fonts do not render properly with the "
+#~ "real DPI value better fonts should be used or configuration of font "
+#~ "hinting should be checked.</para>"
+#~ msgstr ""
+#~ "<para>이 옵션은 글꼴의 DPI 값을 강제로 지정합니다. 실제 하드웨어의 DPI 값"
+#~ "이 잘못 계산되었거나, 96이나 120 DPI 이외의 화면에서 제대로 보이지 않는 글"
+#~ "꼴에 사용합니다.</para><para>`이 옵션의 사용은 일반적으로 권장하지 않습니"
+#~ "다.</para><para><emphasis>X 윈도 시스템</emphasis>을 사용한다면 xorg.conf"
+#~ "의 DisplaySize 항목과 같이 전체 X 서버의 DPI를 명시적으로 지정하기를 추천"
+#~ "합니다. 실제 DPI 값을 강제로 지정해도 글꼴이 제대로 표시되지 않으면 다른 "
+#~ "글꼴을 사용하거나 글꼴 힌팅 설정을 확인하십시오.</para>"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "박신조"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kde@peremen.name"
+
+#~ msgid "Fonts"
+#~ msgstr "글꼴"
+
+#~ msgid "Antonis Tsiapaliokas"
+#~ msgstr "Antonis Tsiapaliokas"
+
+#~ msgctxt "@action:button"
+#~ msgid "Show Contextual Help"
+#~ msgstr "문맥 도움말 표시"
+
+#~ msgid "Select %1 Font..."
+#~ msgstr "%1 글꼴 선택..."
+
+#~ msgid "Font Settings Changed"
+#~ msgstr "글꼴 설정 변경됨"
+
+#~ msgid ""
+#~ "<p>Some changes such as DPI will only affect newly started applications.</"
+#~ "p>"
+#~ msgstr "<p>DPI와 같은 일부 설정은 새로 시작한 프로그램에만 적용됩니다.</p>"
+
+#~ msgid "Vendor default"
+#~ msgstr "제조사 기본값"
+
+#~ msgid "Disabled"
+#~ msgstr "사용 안 함"
+
+#, fuzzy
+#~| msgid "Configure Fonts"
+#~ msgid "Configure the system fonts"
+#~ msgstr "글꼴 설정"
+
+#~ msgid "Choose..."
+#~ msgstr "선택..."
+
+#~ msgid "Configure Anti-Alias Settings"
+#~ msgstr "앤티에일리어싱 설정"
+
+#~ msgid "E&xclude range:"
+#~ msgstr "제외할 범위(&X):"
+
+#~ msgctxt "abbreviation for unit of points"
+#~ msgid " pt"
+#~ msgstr "pt"
+
+#~ msgid ""
+#~ "<p>If you have a TFT or LCD screen you can further improve the quality of "
+#~ "displayed fonts by selecting this option.<br />Sub-pixel rendering is "
+#~ "also known as ClearType(tm).<br /> In order for sub-pixel rendering to "
+#~ "work correctly you need to know how the sub-pixels of your display are "
+#~ "aligned.</p> <p>On TFT or LCD displays a single pixel is actually "
+#~ "composed of three sub-pixels, red, green and blue. Most displays have a "
+#~ "linear ordering of RGB sub-pixel, some have BGR.<br /> This feature does "
+#~ "not work with CRT monitors.</p>"
+#~ msgstr ""
+#~ "<p>만약 LCD 화면을 사용한다면 이 설정을 선택해서 표시되는 글꼴의 품질을 향"
+#~ "상시킬 수 있습니다.<br />서브픽셀 렌더링은 ClearType(tm)으로도 알려져 있습"
+#~ "니다.<br />서브픽셀 렌더링을 올바르게 사용하려면 디스플레이가 정렬된 순서"
+#~ "를 알고 있어야 합니다.</p><p>LCD 화면의 단일 픽셀은 세 종류의 서브픽셀로 "
+#~ "이루어져 있습니다. 대부분의 디스플레이에서는 빨간색-녹색-파란색 순서로 배"
+#~ "열되어 있으며, 일부의 경우 파란색-녹색-빨간색 순서로 배열되어 있습니다."
+#~ "<br />CRT 모니터에서 이 설정을 사용하는 것은 권장하지 않습니다.</p>"
+
+#~ msgid ""
+#~ "Hinting is a process used to enhance the quality of fonts at small sizes."
+#~ msgstr "힌팅은 작은 크기의 글꼴 품질을 개선하는 과정입니다."
+
+#~ msgid "Used for normal text (e.g. button labels, list items)."
+#~ msgstr "일반적인 텍스트(예: 단추 이름, 목록 항목)에서 사용합니다."
+
+#~ msgid "A non-proportional font (i.e. typewriter font)."
+#~ msgstr "고정폭 글꼴(예. 타자기 글꼴)입니다."
+
+#~ msgid "Smallest font that is still readable well."
+#~ msgstr "읽을 수 있는 가장 작은 글꼴입니다."
+
+#~ msgid "Used to display text beside toolbar icons."
+#~ msgstr "도구 모음 아이콘 주변의 텍스트를 표시하는 데 사용합니다."
+
+#~ msgid "Used by menu bars and popup menus."
+#~ msgstr "메뉴 바와 팝업 메뉴에서 사용합니다."
+
+#~ msgid "Used by the window titlebar."
+#~ msgstr "창 제목 표시줄에서 사용합니다."
+
+#~ msgctxt "Font role"
+#~ msgid "%1: "
+#~ msgstr "%1: "
+
+#~ msgid "Click to change all fonts"
+#~ msgstr "모든 글꼴을 변경하시려면 누르십시오"
+
+#~ msgctxt "Use anti-aliasing"
+#~ msgid "System Settings"
+#~ msgstr "시스템 설정"
+
+#~ msgid "Select this option to smooth the edges of curves in fonts."
+#~ msgstr "이 옵션을 선택하면 글꼴의 곡선을 부드럽게 합니다."
+
+#~ msgid "This property has no effect on this platform"
+#~ msgstr "이 속성은 현재 플랫폼에서 지원하지 않음"
+
+#~ msgctxt "use system subpixel setting"
+#~ msgid "System default"
+#~ msgstr "시스템 기본값"
+
+#~ msgctxt "use system hinting settings"
+#~ msgid "System default"
+#~ msgstr "시스템 기본값"
+
+#~ msgctxt "font usage"
+#~ msgid "Taskbar"
+#~ msgstr "작업 표시줄 글꼴"
+
+#~ msgctxt "font usage"
+#~ msgid "Desktop"
+#~ msgstr "바탕 화면 아이콘 글꼴"
+
+#~ msgid "Used by the taskbar."
+#~ msgstr "작업 표시줄에서 사용합니다."
+
+#~ msgid "Used for desktop icons."
+#~ msgstr "바탕 화면 아이콘에서 사용됩니다."

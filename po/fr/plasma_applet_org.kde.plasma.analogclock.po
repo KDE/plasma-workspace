@@ -1,0 +1,89 @@
+# translation of plasma_applet_clock.po to
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Bruno Patri <bruno.patri@gmail.com>, 2007, 2008, 2013.
+# xavier <ktranslator31@yahoo.fr>, 2013.
+# Xavier Besnard <xavier.besnard@neuf.fr>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_clock\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-25 00:47+0000\n"
+"PO-Revision-Date: 2022-07-26 15:48+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
+"Language-Team: French <kde-francophone@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 22.04.3\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Apparence"
+
+#: contents/ui/analogclock.qml:76
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Current time is %1; Current date is %2"
+msgstr "L'heure courante est %1. La date courante est %2."
+
+#: contents/ui/configGeneral.qml:23
+#, kde-format
+msgid "Show seconds hand"
+msgstr "Afficher la trotteuse"
+
+#: contents/ui/configGeneral.qml:24
+#, kde-format
+msgid "General:"
+msgstr "Général :"
+
+#: contents/ui/configGeneral.qml:28
+#, kde-format
+msgid "Show time zone"
+msgstr "Afficher le fuseau horaire"
+
+#~ msgid "Show the seconds"
+#~ msgstr "Affiche les secondes"
+
+#~ msgid "Check this if you want to show the seconds."
+#~ msgstr "Cochez ceci si vous voulez afficher les secondes."
+
+#~ msgid "Show &seconds hand"
+#~ msgstr "Afficher la trotteu&se"
+
+#~ msgid "Show the Timezone in text"
+#~ msgstr "Affiche le fuseau horaire sous forme de texte"
+
+#~ msgid "Check this if you want to display Timezone in text."
+#~ msgstr ""
+#~ "Cochez ceci si vous voulez afficher le fuseau horaire sous forme de texte."
+
+#~ msgid "Show &time zone"
+#~ msgstr "Afficher le &fuseau horaire"
+
+#, fuzzy
+#~| msgid "Also show the time as text"
+#~ msgid "Also show the Timezone as text"
+#~ msgstr "Afficher également l'heure en chiffres"
+
+#~ msgid "Timezones"
+#~ msgstr "Fuseaux horaires"
+
+#~ msgid "Use &local timezone"
+#~ msgstr "Utiliser le fuseau horaire &local"
+
+#~ msgid "Area"
+#~ msgstr "Zone"
+
+#~ msgid "Region"
+#~ msgstr "Région"
+
+#~ msgid "Comment"
+#~ msgstr "Commentaire"

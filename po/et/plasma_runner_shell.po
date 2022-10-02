@@ -1,0 +1,138 @@
+# translation of krunner_shellrunner.po to Estonian
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Marek Laane <bald@smail.ee>, 2008, 2009, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner_shellrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-27 00:45+0000\n"
+"PO-Revision-Date: 2016-07-27 17:37+0300\n"
+"Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
+"Language-Team: Estonian <kde-et@linux.ee>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: shellrunner.cpp:35
+#, kde-format
+msgid "Finds commands that match :q:, using common shell syntax"
+msgstr "Käskude leidmine :q: järgi tavalist shelli süntaksit kasutades"
+
+#: shellrunner.cpp:36
+#, kde-format
+msgid "Run in Terminal Window"
+msgstr "Käivitamine terminalis"
+
+#: shellrunner.cpp:54
+#, kde-format
+msgid "Run %1"
+msgstr "Käivita %1"
+
+#~ msgid "Enter the user you want to run the application as here."
+#~ msgstr ""
+#~ "Sisesta siia kasutaja nimi, kelle õigustes soovid rakendust käivitada."
+
+#~ msgid "User&name:"
+#~ msgstr "Kasutaja&nimi:"
+
+#~ msgid "Enter the password here for the user you specified above."
+#~ msgstr "Sisesta siia nõutud parool."
+
+#~ msgid "Pass&word:"
+#~ msgstr "Pa&rool:"
+
+#~ msgid ""
+#~ "Check this option if the application you want to run is a text mode "
+#~ "application. The application will then be run in a terminal emulator "
+#~ "window."
+#~ msgstr ""
+#~ "Vali see, kui rakendus, mida soovid käivitada, on tekstipõhine. Sel juhul "
+#~ "käivitatakse rakendus terminaliemulaatori aknas."
+
+#~ msgid "Run in &terminal window"
+#~ msgstr "Käivitamine &terminalis"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "user id. Every process has a user id associated with it. This id code "
+#~ "determines file access and other permissions. The password of the user is "
+#~ "required to do this."
+#~ msgstr ""
+#~ "Vali see, kui soovid käivitada rakendust mõne teise kasutaja õigustes. "
+#~ "Iga käivitatav protsess on seotud kasutaja nimega. See määrab juurdepääsu "
+#~ "failidele ja muud õigused. Et seda võimalust kasutada, on vajalik "
+#~ "kasutaja parool."
+
+#~ msgid "Run as a different &user"
+#~ msgstr "Käivitamine teise kas&utajana"
+
+#~ msgid ""
+#~ "<qt>Select whether realtime scheduling should be enabled for the "
+#~ "application. The scheduler governs which process will run and which will "
+#~ "have to wait. Two schedulers are available:\n"
+#~ "<ul>\n"
+#~ "<li><em>Normal:</em> This is the standard, timesharing scheduler. It will "
+#~ "divide fairly the available processing time between all processes.</li>\n"
+#~ "<li><em>Realtime:</em>This scheduler will run your application "
+#~ "uninterrupted until it gives up the processor. This can be dangerous. An "
+#~ "application that does not give up the processor might hang the system. "
+#~ "You need root's password to use the scheduler.</li>\n"
+#~ "</ul>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>Siin saab valida planeerija, mida rakendusega kasutatakse. Planeerija "
+#~ "on operatsioonisüsteemi osa, mis otsustab, milline rakendus saab "
+#~ "protsessori aega ja milline protsess peab ootama. Valida saab kahe "
+#~ "planeerija vahel:\n"
+#~ "<ul>\n"
+#~ "<li><em>Tavaline:</em> See on standardne, aega jaotav planeerija. See "
+#~ "jaotab ausalt kogu aja kõigi protsesside vahel. </li>\n"
+#~ "<li><em>Reaalajas:</em> See jooksutab sinu rakendust nii kaua, kuni see "
+#~ "protsessori käest annab. See võib olla ohtlik. Rakenduse tõttu, mis ei "
+#~ "anna protsessorit enam käest, võib terve süsteem hanguda. Selle "
+#~ "planeerija kasutamiseks on vajalik administraatori (root) parool.</li>\n"
+#~ "</ul>\n"
+#~ "</qt>"
+
+#~ msgid "Run with realtime &scheduling"
+#~ msgstr "Käivitamine reaala&ja prioriteediga"
+
+#~ msgid ""
+#~ "The priority that the command will be run with can be set here. From left "
+#~ "to right, it goes from low to high. The center position is the default "
+#~ "value. For priorities higher than the default, you will need to provide "
+#~ "the root password."
+#~ msgstr ""
+#~ "Siin on võimalik prioriteeti seada. Mida enam paremal on liugur, seda "
+#~ "kõrgem on prioriteet ja vastupidi. Vaikeasend on keskel. Et anda "
+#~ "rakendusele kõrgemat prioriteeti kui vaikeväärtus, on vajalik "
+#~ "administraatori (root) parool."
+
+#~ msgid "&Priority:"
+#~ msgstr "&Prioriteet:"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "priority. A higher priority tells the operating system to give more "
+#~ "processing time to your application."
+#~ msgstr ""
+#~ "Vali see, kui soovid, et rakendus käivitataks teistest erineva "
+#~ "prioriteediga. Kõrgema prioriteedi andmine teavitab operatsioonisüsteemi "
+#~ "sellest, et rakendus vajab rohkem protsessori aega."
+
+#~ msgid "Run with a &different priority"
+#~ msgstr "Käivitamine erineva prioritee&diga"
+
+#~ msgid "Low"
+#~ msgstr "Madal"
+
+#~ msgid "High"
+#~ msgstr "Kõrge"
+
+#~ msgid "Command"
+#~ msgstr "Käsk"

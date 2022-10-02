@@ -1,0 +1,76 @@
+# translation of libkworkspace.po to
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kdebase package.
+# ANI PETER|അനി പീറ്റര്‍ <peter.ani@gmail.com>, 2008.
+# Hari|ഹരി  Vishnu | വിഷ്ണു <harivishnu@gmail.com>, 2008.
+# Praveen Arimbrathodiyil <pravi.a@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdebase\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-03 00:48+0000\n"
+"PO-Revision-Date: 2020-11-20 06:03+0000\n"
+"Last-Translator: Subin Siby <subins2000@gmail.com>\n"
+"Language-Team: SMC <smc.org.in>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Weblate 4.0.4\n"
+
+#: kdisplaymanager.cpp:777
+#, fuzzy, kde-format
+#| msgctxt "user: ..."
+#| msgid "%1: TTY login"
+msgctxt "user: …"
+msgid "%1: TTY login"
+msgstr "%1: TTY ലോഗിന്‍"
+
+#: kdisplaymanager.cpp:782
+#, fuzzy, kde-format
+#| msgctxt "... location (TTY or X display)"
+#| msgid "Unused"
+msgctxt "… location (TTY or X display)"
+msgid "Unused"
+msgstr "ഉപയോഗിക്കാത്തവ"
+
+#: kdisplaymanager.cpp:783
+#, kde-format
+msgid "X login on remote host"
+msgstr "റിമോട്ട് ഹോസ്റ്റിലുള്ള X ലോഗിന്‍"
+
+#: kdisplaymanager.cpp:783
+#, fuzzy, kde-format
+#| msgctxt "... host"
+#| msgid "X login on %1"
+msgctxt "… host"
+msgid "X login on %1"
+msgstr "%1-ലുള്ള X ലോഗിന്‍"
+
+#: kdisplaymanager.cpp:785
+#, kde-format
+msgctxt "user: session type"
+msgid "%1: %2"
+msgstr "%1: %2"
+
+#: kdisplaymanager.cpp:796
+#, kde-format
+msgctxt "session (location)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#~ msgctxt ""
+#~ "Action that reorganizes the windows to try to have them less cluttered"
+#~ msgid "Unclutter Windows"
+#~ msgstr "ജാലകങ്ങള്‍ അണ്‍ ക്ലട്ടര്‍ ചെയ്യുക"
+
+#~ msgctxt "Action that reorganizes the windows so that they are in cascade"
+#~ msgid "Cascade Windows"
+#~ msgstr "ജാലകങ്ങള്‍ കാസ്കേഡ് ചെയ്യുക (ഒന്നിനു പുറകില്‍ മറ്റൊന്നായ് സജ്ജികരിക്കുക)"
+
+#~ msgid "On All Desktops"
+#~ msgstr "എല്ലാ പണിയിടത്തിലും"
+
+#~ msgid "No Windows"
+#~ msgstr "ജാലകങ്ങളില്ല"

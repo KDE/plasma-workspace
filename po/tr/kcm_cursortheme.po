@@ -1,0 +1,216 @@
+# translation of kcminput.po to Turkish
+# KDE TÜRKÇELEŞTİRME PROJESİ.
+# Copyright (C) 2000,2003, 2004, 2005, 2008 Free Software Foundation, Inc.
+#
+# Adem GUNES <adem@alaeddin.cc.selcuk.edu.tr>, 2000.
+# Görkem Çetin <gorkem@kde.org>, 2003.
+# Adil Yıldız <adil_yildiztr@yahoo.com>, 2004.
+# Adem Alp Yıldız <ademalp@linux-sevenler.org>, 2004.
+# Adil Yıldız <adil@linux-sevenler.org>, 2004.
+# Adil Yıldız <adil@kde.org.tr>, 2005.
+# Koray Löker <loker@pardus.org.tr>, 2008.
+# Serdar Soytetir <tulliana@gmail.com>, 2008.
+# H. İbrahim Güngör <ibrahim@pardus.org.tr>, 2010, 2011.
+# Ozan Çağlayan <ozan@pardus.org.tr>, 2010, 2011.
+# Serdar SOYTETİR <tulliana@gmail.com>, 2010, 2012.
+# Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2015, 2017, 2021, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminput\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:50+0000\n"
+"PO-Revision-Date: 2022-03-19 19:06+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current cursor theme"
+msgstr "Geçerli imleç temasının adı"
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr "Geçerli imleç boyutu"
+
+#: kcmcursortheme.cpp:302
+#, kde-format
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr ""
+"Bu değişikliklerin etkili olması için Plasma oturumunu yeniden başlatmanız "
+"gerekir."
+
+#: kcmcursortheme.cpp:376
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Geçici dosya oluşturulamadı."
+
+#: kcmcursortheme.cpp:387
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Simge tema arşivi indirilemedi: %1"
+
+#: kcmcursortheme.cpp:418
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "Dosya geçerli bir ikon tema arşivi değil."
+
+#: kcmcursortheme.cpp:425
+#, kde-format
+msgid "Failed to create 'icons' folder."
+msgstr "'icons' klasörü oluşturulamadı."
+
+#: kcmcursortheme.cpp:434
+#, kde-format
+msgid ""
+"A theme named %1 already exists in your icon theme folder. Do you want "
+"replace it with this one?"
+msgstr ""
+"%1 adında bir tema, simge temaları klasöründe var. Üzerine yazmak istiyor "
+"musunuz?"
+
+#: kcmcursortheme.cpp:438
+#, kde-format
+msgid "Overwrite Theme?"
+msgstr "Temanın Üzerine Yazılsın mı?"
+
+#: kcmcursortheme.cpp:462
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "Tema başarıyla yüklendi."
+
+#: package/contents/ui/Delegate.qml:54
+#, kde-format
+msgid "Remove Theme"
+msgstr "Temayı Kaldır"
+
+#: package/contents/ui/Delegate.qml:61
+#, kde-format
+msgid "Restore Cursor Theme"
+msgstr "İmleç Temasını Geri Yükle"
+
+#: package/contents/ui/main.qml:20
+#, kde-format
+msgid "This module lets you choose the mouse cursor theme."
+msgstr "Bu modül fare imleç temasını seçmenize izin verir."
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Size:"
+msgstr "Boyut:"
+
+#: package/contents/ui/main.qml:134
+#, kde-format
+msgid "&Install from File…"
+msgstr "&Dosyadan Kur…"
+
+#: package/contents/ui/main.qml:140
+#, kde-format
+msgid "&Get New Cursors…"
+msgstr "&Yeni İmleçler Al…"
+
+#: package/contents/ui/main.qml:157
+#, kde-format
+msgid "Open Theme"
+msgstr "Temayı Aç"
+
+#: package/contents/ui/main.qml:159
+#, kde-format
+msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+msgstr "İmleç Tema Dosyaları (*.tar.gz *.tar.bz2)"
+
+#: plasma-apply-cursortheme.cpp:41
+#, kde-format
+msgid "The requested size '%1' is not available, using %2 instead."
+msgstr "İstenen '%1' boyutu kullanılabilir değil, yerine '%2' kullanılıyor."
+
+#: plasma-apply-cursortheme.cpp:62
+#, kde-format
+msgid ""
+"This tool allows you to set the mouse cursor theme for the current Plasma "
+"session, without accidentally setting it to one that is either not "
+"available, or which is already set."
+msgstr ""
+"Bu araç, yanlışlıkla mevcut olmayan veya önceden ayarlanmış olana "
+"ayarlamadan, geçerli Plasma oturumu için fare imleci temasını ayarlamanıza "
+"olanak tanır."
+
+#: plasma-apply-cursortheme.cpp:66
+#, kde-format
+msgid ""
+"The name of the cursor theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+"Mevcut Plasma oturumunuz için ayarlamak istediğiniz imleç temasının adı (tam "
+"bir yolu girmek, yolun yalnızca son kısmını kullanır)"
+
+#: plasma-apply-cursortheme.cpp:67
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr "Sistemde mevcut olan tüm temaları göster (ve mevcut tema hangisi)"
+
+#: plasma-apply-cursortheme.cpp:68
+#, kde-format
+msgid "Use a specific size, rather than the theme default size"
+msgstr "Tema öntanımlı boyutu yerine belirli bir boyut kullanın"
+
+#: plasma-apply-cursortheme.cpp:89
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+"İstenen tema \"%1\" , zaten geçerli Plasma oturumu için tema olarak "
+"ayarlanmış."
+
+#: plasma-apply-cursortheme.cpp:100
+#, kde-format
+msgid ""
+"Successfully applied the mouse cursor theme %1 to your current Plasma session"
+msgstr "Fare imleç teması %1, başarıyla geçerli Plasma oturumunuza uygulandı"
+
+#: plasma-apply-cursortheme.cpp:102
+#, kde-format
+msgid ""
+"You have to restart the Plasma session for your newly applied mouse cursor "
+"theme to display correctly."
+msgstr ""
+"Yeni uygulanan fare imleci temanızın doğru şekilde görüntülenmesi için "
+"Plasma oturumunu yeniden başlatmanız gerekir."
+
+#: plasma-apply-cursortheme.cpp:112
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+"\"%1\" teması bulunamadı. Tema aşağıdaki seçeneklerden biri olmalıdır: %2"
+
+#: plasma-apply-cursortheme.cpp:120
+#, kde-format
+msgid "You have the following mouse cursor themes on your system:"
+msgstr "Sisteminizde aşağıdaki fare imleci temaları var:"
+
+#: plasma-apply-cursortheme.cpp:125
+#, kde-format
+msgid "(Current theme for this Plasma session)"
+msgstr "(Bu Plasma oturumu için geçerli tema)"
+
+#: xcursor/xcursortheme.cpp:60
+#, kde-format
+msgctxt ""
+"@info The argument is the list of available sizes (in pixel). Example: "
+"'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+msgid "(Available sizes: %1)"
+msgstr "(Kullanılabilir boyutlar: %1)"

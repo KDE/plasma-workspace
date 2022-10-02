@@ -1,0 +1,192 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Axel Rousseau <axel@esperanto-jeunes.org>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:50+0000\n"
+"PO-Revision-Date: 2009-10-31 20:40+0100\n"
+"Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
+"Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: autostartmodel.cpp:288
+#, kde-format
+msgid "\"%1\" is not an absolute url."
+msgstr ""
+
+#: autostartmodel.cpp:291
+#, kde-format
+msgid "\"%1\" does not exist."
+msgstr ""
+
+#: autostartmodel.cpp:294
+#, kde-format
+msgid "\"%1\" is not a file."
+msgstr ""
+
+#: autostartmodel.cpp:297
+#, kde-format
+msgid "\"%1\" is not readable."
+msgstr ""
+
+#: package/contents/ui/main.qml:40
+#, kde-format
+msgid "Make Executable"
+msgstr ""
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "The file '%1' must be executable to run at logout."
+msgstr ""
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid "The file '%1' must be executable to run at login."
+msgstr ""
+
+#: package/contents/ui/main.qml:89
+#, fuzzy, kde-format
+#| msgid "&Properties"
+msgid "Properties"
+msgstr "E&coj"
+
+#: package/contents/ui/main.qml:95
+#, fuzzy, kde-format
+#| msgid "&Remove"
+msgid "Remove"
+msgstr "Fo&rigi"
+
+#: package/contents/ui/main.qml:106
+#, kde-format
+msgid "Applications"
+msgstr ""
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Login Scripts"
+msgstr ""
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Pre-startup Scripts"
+msgstr ""
+
+#: package/contents/ui/main.qml:115
+#, kde-format
+msgid "Logout Scripts"
+msgstr ""
+
+#: package/contents/ui/main.qml:124
+#, kde-format
+msgid "No user-specified autostart items"
+msgstr ""
+
+#: package/contents/ui/main.qml:125
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Click the <interface>Add…</interface> button below to add some"
+msgstr ""
+
+#: package/contents/ui/main.qml:139
+#, kde-format
+msgid "Choose Login Script"
+msgstr ""
+
+#: package/contents/ui/main.qml:160
+#, kde-format
+msgid "Choose Logout Script"
+msgstr ""
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "Add…"
+msgstr ""
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Add Application…"
+msgstr ""
+
+#: package/contents/ui/main.qml:199
+#, kde-format
+msgid "Add Login Script…"
+msgstr ""
+
+#: package/contents/ui/main.qml:205
+#, kde-format
+msgid "Add Logout Script…"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Axel Rousseau"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "axel@esperanto-jeunes.org"
+
+#, fuzzy
+#~| msgid "(c) 2006-2007-2008 Autostart Manager team"
+#~ msgid "Copyright © 2006–2020 Autostart Manager team"
+#~ msgstr "(c) 2006-2007-2008 Autostart Manager team"
+
+#~ msgid "Stephen Leaf"
+#~ msgstr "Stephen Leaf"
+
+#~ msgid "Montel Laurent"
+#~ msgstr "Montel Laurent"
+
+#~ msgid "Maintainer"
+#~ msgstr "Administranto"
+
+#, fuzzy
+#~| msgid "Advanced"
+#~ msgid "Add..."
+#~ msgstr "Pliaj"
+
+#, fuzzy
+#~| msgid "Shell script:"
+#~ msgid "Shell script path:"
+#~ msgstr "Ŝela skripto:"
+
+#~ msgid "Create as symlink"
+#~ msgstr "Krei kiel simbola ligilo"
+
+#, fuzzy
+#~| msgid "Autostart only in KDE"
+#~ msgid "Autostart only in Plasma"
+#~ msgstr "Aŭtolanĉi nur en KDE"
+
+#~ msgid "Name"
+#~ msgstr "Nomo"
+
+#~ msgid "Command"
+#~ msgstr "Komando"
+
+#~ msgid "Status"
+#~ msgstr "Stato"
+
+#~ msgctxt "The program will be run"
+#~ msgid "Enabled"
+#~ msgstr "Ŝaltita"
+
+#~ msgctxt "The program won't be run"
+#~ msgid "Disabled"
+#~ msgstr "Malŝaltita"
+
+#~ msgid "Script File"
+#~ msgstr "Skriptdosiero"
+
+#~ msgid "Startup"
+#~ msgstr "Lanĉo"
+
+#~ msgid "Shutdown"
+#~ msgstr "Sistemfermi"

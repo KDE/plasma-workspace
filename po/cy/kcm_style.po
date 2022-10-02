@@ -1,0 +1,617 @@
+# translation of kcmstyle.po to Cymraeg
+# Translation of kcmstyle.po to Cymraeg
+# Bwrdd Gwaith yn Gymraeg.
+# Copyright (C) 2003, 2004 Free Software Foundation, Inc.
+# www.kyfieithu.co.uk<kyfieithu@dotmon.com>, www.gyfieithu.co.uk<kyfieithu@dotmon.com>, 2003.
+# KGyfieithu <kyfieithu@dotmon.com>, 2003.
+# KD at KGyfieithu <kyfieithu@dotmon.com>, 2003, 2004.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmstyle\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"PO-Revision-Date: 2004-07-04 17:23+0100\n"
+"Last-Translator: KD at KGyfieithu <kyfieithu@dotmon.com>\n"
+"Language-Team: Cymraeg <cy@li.org>\n"
+"Language: cy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: gtkpage.cpp:59
+#, kde-format
+msgid "%1 is not a valid GTK Theme archive."
+msgstr ""
+
+#: kcmstyle.cpp:161 kcmstyle.cpp:168
+#, kde-format
+msgid "There was an error loading the configuration dialog for this style."
+msgstr "Roedd gwall wrth lwytho'r ymgom ffurfweddu ar gyfer yr arddull yma."
+
+#: kcmstyle.cpp:274
+#, kde-format
+msgid "Failed to apply selected style '%1'."
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:32
+#, fuzzy, kde-format
+#| msgid "Sho&w icons on buttons"
+msgid "Show icons:"
+msgstr "Dan&gos eiconau ar fotymau"
+
+#: package/contents/ui/EffectSettingsPopup.qml:33
+#, fuzzy, kde-format
+#| msgid "Radio button"
+msgid "On buttons"
+msgstr "Botwm radio"
+
+#: package/contents/ui/EffectSettingsPopup.qml:44
+#, kde-format
+msgid "In menus"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:56
+#, kde-format
+msgid "Main toolbar label:"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "None"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:59
+#, fuzzy, kde-format
+#| msgid "Text Only"
+msgid "Text only"
+msgstr "Testun yn Unig"
+
+#: package/contents/ui/EffectSettingsPopup.qml:60
+#, fuzzy, kde-format
+#| msgid "Text Alongside Icons"
+msgid "Beside icons"
+msgstr "Testun wrth Ymyl Eiconau"
+
+#: package/contents/ui/EffectSettingsPopup.qml:61
+#, fuzzy, kde-format
+#| msgid "Text Under Icons"
+msgid "Below icon"
+msgstr "Testun Dan Eiconau"
+
+#: package/contents/ui/EffectSettingsPopup.qml:76
+#, kde-format
+msgid "Secondary toolbar label:"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:18
+#, fuzzy, kde-format
+#| msgid "Application Level"
+msgid "GNOME/GTK Application Style"
+msgstr "Safon Cymhwysiant"
+
+#: package/contents/ui/GtkStylePage.qml:44
+#, kde-format
+msgid "GTK theme:"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:69
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgid "Preview…"
+msgstr "Rhagolwg"
+
+#: package/contents/ui/GtkStylePage.qml:88
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:93
+#, fuzzy, kde-format
+#| msgid "Application Level"
+msgid "Get New GNOME/GTK Application Styles…"
+msgstr "Safon Cymhwysiant"
+
+#: package/contents/ui/GtkStylePage.qml:109
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:111
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: package/contents/ui/main.qml:17
+#, fuzzy, kde-format
+#| msgid ""
+#| "<h1>Style</h1>This module allows you to modify the visual appearance of "
+#| "user interface elements, such as the widget style and effects."
+msgid ""
+"This module allows you to modify the visual appearance of applications' user "
+"interface elements."
+msgstr ""
+"<h1>Arddull</h1>Mae'r modiwl hwn yn galluogi chi i newid golwg elfennau y "
+"rhyngwyneb defnyddiwr, er enghraifft ardulliau ac effeithiau y celfigion."
+
+#: package/contents/ui/main.qml:96
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure Style…"
+msgstr "Ffurf&weddu..."
+
+#: package/contents/ui/main.qml:116
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr ""
+
+#: package/contents/ui/main.qml:132
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "Ffurf&weddu..."
+
+#: styleconfdialog.cpp:21
+#, kde-format
+msgid "Configure %1"
+msgstr "Ffurfweddu %1"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "Tab 1"
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, fuzzy, kde-format
+#| msgid "Button"
+msgid "Push Button"
+msgstr "Botwm"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, fuzzy, kde-format
+#| msgid "Combobox"
+msgid "Combo box"
+msgstr "Blwch Cyfunol"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "Blwch brith"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "Botwm radio"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:133
+#, kde-format
+msgid "Tab 2"
+msgstr "Tab 2"
+
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Application Level"
+msgid "Application style"
+msgstr "Safon Cymhwysiant"
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Sho&w icons on buttons"
+msgid "Show icons on buttons"
+msgstr "Dan&gos eiconau ar fotymau"
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, fuzzy, kde-format
+#| msgid "Sho&w icons on buttons"
+msgid "Show icons in menus"
+msgstr "Dan&gos eiconau ar fotymau"
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, kde-format
+msgid "Main toolbar label"
+msgstr ""
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, kde-format
+msgid "Secondary toolbar label"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "KD"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kyfieithu@dotmon.com"
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "Application Style"
+#~ msgstr "Safon Cymhwysiant"
+
+#, fuzzy
+#~| msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
+#~ msgstr "(h)(c) 2002 Karol Szwed, Daniel Molkentin"
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "Download New GNOME/GTK2 Application Styles..."
+#~ msgstr "Safon Cymhwysiant"
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "GNOME/GTK2 Application Styles"
+#~ msgstr "Safon Cymhwysiant"
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "Download New GNOME/GTK3 Application Styles..."
+#~ msgstr "Safon Cymhwysiant"
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "GNOME/GTK3 Application Styles"
+#~ msgstr "Safon Cymhwysiant"
+
+#~ msgid "Unable to Load Dialog"
+#~ msgstr "Methu Llwytho'r Ymgom"
+
+#~ msgid "No description available."
+#~ msgstr "Nid oes disgrifiad ar gael."
+
+#~ msgid ""
+#~ "This area shows a preview of the currently selected style without having "
+#~ "to apply it to the whole desktop."
+#~ msgstr ""
+#~ "Mae'r ardal hon yn dangos rhagolwg o'r arddull dewisiedig heb fod rhaid "
+#~ "gweithredu'r arddull ar y penbwrdd cyfan."
+
+#~ msgid ""
+#~ "Here you can choose from a list of predefined widget styles (e.g. the way "
+#~ "buttons are drawn) which may or may not be combined with a theme "
+#~ "(additional information like a marble texture or a gradient)."
+#~ msgstr ""
+#~ "Fan hyn gallwch chi ddewis oddiar restr o gelfigion rhagosodedig (e.e. "
+#~ "sut mae'r botymau yn cael eu darlunio) sydd yn gallu neu beidio cael ei "
+#~ "gyfuno gyda chynllun (gyda gwybodaeth arall fel gwead marmor neu raddliw)"
+
+#, fuzzy
+#~| msgid ""
+#~| "If you enable this option, KDE Applications will show small icons "
+#~| "alongside some important buttons."
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "some important buttons."
+#~ msgstr ""
+#~ "Os alluogwch y dewisiad yma, dangosa Cymhwysiadau KDE eiconau bach wrth "
+#~ "ochr rhai botymau pwysig."
+
+#, fuzzy
+#~| msgid ""
+#~| "If you enable this option, KDE Applications will show small icons "
+#~| "alongside some important buttons."
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "most menu items."
+#~ msgstr ""
+#~ "Os alluogwch y dewisiad yma, dangosa Cymhwysiadau KDE eiconau bach wrth "
+#~ "ochr rhai botymau pwysig."
+
+#, fuzzy
+#~| msgid ""
+#~| "<p><b>Icons only:</b> Shows only icons on toolbar buttons. Best option "
+#~| "for low resolutions.</p><p><b>Text only: </b>Shows only text on toolbar "
+#~| "buttons.</p><p><b>Text alongside icons: </b> Shows icons and text on "
+#~| "toolbar buttons. Text is aligned alongside the icon.</p><b>Text under "
+#~| "icons: </b> Shows icons and text on toolbar buttons. Text is aligned "
+#~| "below the icon."
+#~ msgid ""
+#~ "<p><b>No text:</b> Shows only icons on toolbar buttons. Best option for "
+#~ "low resolutions.</p><p><b>Text only: </b>Shows only text on toolbar "
+#~ "buttons.</p><p><b>Text beside icons: </b> Shows icons and text on toolbar "
+#~ "buttons. Text is aligned beside the icon.</p><b>Text below icons: </b> "
+#~ "Shows icons and text on toolbar buttons. Text is aligned below the icon."
+#~ msgstr ""
+#~ "<p><b>Eiconau'n unig:</b> Dangosa eiconau'n unig ar fotymau barrau offer. "
+#~ "Y dewisiad gorau ar gyfer graddfeydd isel.</p><p><b>Testun yn unig:</"
+#~ "b>Dangosa destun yn unig ar fotymau barrau offer.</p><p><b>Testun wrth "
+#~ "ochr eiconau:</b>Dangosa eiconau a thestun ar fotymau barrau offer. "
+#~ "Alinir testun wrth ochr yr eicon.</p> <p><b>Testun o dan eiconau:</"
+#~ "b>Dangosa eiconau a thestun ar fotymau barrau offer. Alinir testun o dan "
+#~ "yr eicon.</p>"
+
+#, fuzzy
+#~| msgid "&Toolbar"
+#~ msgid "Toolbars"
+#~ msgstr "&Bar offer"
+
+#, fuzzy
+#~| msgid "Widget Style"
+#~ msgid "Widget Style"
+#~ msgstr "Ardull Celfigyn"
+
+#, fuzzy
+#~| msgid "Widget Style"
+#~ msgid "Widget style:"
+#~ msgstr "Ardull Celfigyn"
+
+#~ msgid "Description: %1"
+#~ msgstr "Disgrifiad: %1"
+
+#~ msgid "KDE Style Module"
+#~ msgstr "Modwl Arddull KDE"
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "In application"
+#~ msgstr "Safon Cymhwysiant"
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "Global Menu widget"
+#~ msgstr "Safon Cymhwysiant"
+
+#, fuzzy
+#~| msgid ""
+#~| "If you enable this option, KDE Applications will show small icons "
+#~| "alongside some important buttons."
+#~ msgid ""
+#~ "If you enable this option, KDE Applications will run internal animations."
+#~ msgstr ""
+#~ "Os alluogwch y dewisiad yma, dangosa Cymhwysiadau KDE eiconau bach wrth "
+#~ "ochr rhai botymau pwysig."
+
+#~ msgid "kcmstyle"
+#~ msgstr "kcmstyle"
+
+#~ msgid "Icons Only"
+#~ msgstr "Eiconau yn Unig"
+
+#, fuzzy
+#~| msgid "Text pos&ition:"
+#~ msgctxt "@label:listbox"
+#~ msgid "Text pos&ition of toolbar elements:"
+#~ msgstr "Lleoliad y tes&tun"
+
+#, fuzzy
+#~| msgid "&Style"
+#~ msgctxt "@title:tab"
+#~ msgid "&Style"
+#~ msgstr "A&rddull"
+
+#~ msgid ""
+#~ "This page allows you to enable various widget style effects. For best "
+#~ "performance, it is advisable to disable all effects."
+#~ msgstr ""
+#~ "Galluoga'r dudalen hon i chi alluogi amryw o effeithiau arddull "
+#~ "celfigion. Ar gyfer y perfformiad gorau, argymellir analluogi pob effaith."
+
+#, fuzzy
+#~| msgid "High&light buttons under mouse"
+#~ msgctxt "@option:check"
+#~ msgid "High&light buttons under mouse"
+#~ msgstr "A&mlygu'r botymau dan y lygoden"
+
+#, fuzzy
+#~| msgid "E&nable tooltips"
+#~ msgctxt "@option:check"
+#~ msgid "E&nable tooltips"
+#~ msgstr "Gall&uogi cynghorion offer"
+
+#~ msgid ""
+#~ "If this option is selected, toolbar buttons will change their color when "
+#~ "the mouse cursor is moved over them."
+#~ msgstr ""
+#~ "Os dewisir y dewisiad yma, newida botymau barrau offer eu lliw pan "
+#~ "symudir cyrchydd y lygoden drostynt."
+
+#~ msgid ""
+#~ "If you check this option, the KDE application will offer tooltips when "
+#~ "the cursor remains over items in the toolbar."
+#~ msgstr ""
+#~ "Os frithwch y dewisiad yma, cynniga'r cymhwysiad KDE gynghorion offer pan "
+#~ "arhosa'r cyrchydd dros eitemau yn y bar offer."
+
+#~ msgid "&Effects"
+#~ msgstr "E&ffeithiau"
+
+#~ msgid "Show tear-off handles in &popup menus"
+#~ msgstr "Dangos dolenni rhwygo mewn &naidlenni"
+
+#~ msgid "&Enable GUI effects"
+#~ msgstr "&Alluogi effeithiau RGD"
+
+#~ msgid "Disable"
+#~ msgstr "Analluogi"
+
+#~ msgid "Animate"
+#~ msgstr "Bywlunio"
+
+#~ msgid "Combobo&x effect:"
+#~ msgstr "Effaith &blwch cyfunol:"
+
+#~ msgid "Fade"
+#~ msgstr "Pylu"
+
+#~ msgid "&Tool tip effect:"
+#~ msgstr "Effaith &cynghoryn offer:"
+
+#~ msgid "Make Translucent"
+#~ msgstr "Gwneud yn lled-dryloyw"
+
+#~ msgid "&Menu effect:"
+#~ msgstr "Effaith &Dewislen"
+
+#~ msgid "Me&nu tear-off handles:"
+#~ msgstr "Dolennu rhwygo i'r dde&wislen:"
+
+#~ msgid "Menu &drop shadow"
+#~ msgstr "Ta&n-gysgod i'r ddewislen"
+
+#~ msgid "Software Tint"
+#~ msgstr "Arlliw Meddalwedd"
+
+#~ msgid "Software Blend"
+#~ msgstr "Cyfuno Meddalwedd"
+
+#~ msgid "XRender Blend"
+#~ msgstr "Cyfuno XRender"
+
+#~ msgid "0%"
+#~ msgstr "0%"
+
+#~ msgid "50%"
+#~ msgstr "50%"
+
+#~ msgid "100%"
+#~ msgstr "100%"
+
+#~ msgid "Menu trans&lucency type:"
+#~ msgstr "Math lled-dry&loywder y ddewislen:"
+
+#~ msgid "Menu &opacity:"
+#~ msgstr "Didr&eiddiad y ddewislen:"
+
+#~ msgid "Transparent tool&bars when moving"
+#~ msgstr "Bariau o&ffer tryloyw wrth symud"
+
+#, fuzzy
+#~| msgid ""
+#~| "<qt>Selected style: <b>%1</b><br><br>One or more effects that you have "
+#~| "chosen could not be applied because the selected style does not support "
+#~| "them; they have therefore been disabled.<br><br>"
+#~ msgid ""
+#~ "<qt>Selected style: <b>%1</b><br /><br />One or more effects that you "
+#~ "have chosen could not be applied because the selected style does not "
+#~ "support them; they have therefore been disabled.<br /><br /></qt>"
+#~ msgstr ""
+#~ "<qt>Arddull dewisiedig: <b>%1</b><br><br>Nid oedd modd gweithredu un neu "
+#~ "fwy o'r effeithiau yr ydych wedi eu dewis gan nad yw'r arddull dewisiedig "
+#~ "yn eu cynnal; maen nhw felly wedi eu analluogi<br><br>"
+
+#, fuzzy
+#~| msgid "Menu translucency is not available.<br>"
+#~ msgid "Menu translucency is not available.<br />"
+#~ msgstr "Nid yw lled-dryloywder dewislenni ar gael.<br>"
+
+#~ msgid "Menu drop-shadows are not available."
+#~ msgstr "Nid yw tan-gysgodi dewislenni ar gael."
+
+#~ msgid ""
+#~ "If you check this box, you can select several effects for different "
+#~ "widgets like combo boxes, menus or tooltips."
+#~ msgstr ""
+#~ "Os frithwch y blwch yma, gallwch ddewis sawl effaith ar gyfer celfigion "
+#~ "gwahanol megis blychau cyfuno, dewislenni, neu gynghorion offer."
+
+#~ msgid ""
+#~ "<p><b>Disable: </b>do not use any combo box effects.</p>\n"
+#~ "<b>Animate: </b>Do some animation."
+#~ msgstr ""
+#~ "<p><b>Analluogi:</b>Peidio â defnyddio unrhyw effeithiau blychau cyfuno.</"
+#~ "p>\n"
+#~ "<b>Bywlunio:</b>Defnyddio rhai bywluniadau."
+
+#~ msgid ""
+#~ "<p><b>Disable: </b>do not use any tooltip effects.</p>\n"
+#~ "<p><b>Animate: </b>Do some animation.</p>\n"
+#~ "<b>Fade: </b>Fade in tooltips using alpha-blending."
+#~ msgstr ""
+#~ "<p><b>Analluogi:</b>Peidio â defnyddio unrhyw effeithiau cynghorion offer."
+#~ "</p>\n"
+#~ "<p><b>Bywlunio:</b>Defnyddio rhai bywluniadau.</p>\n"
+#~ "<b>Pylu:</b>Pylu cynghorion offer i mewn gan ddefnyddio cyfuno-alffa."
+
+#~ msgid ""
+#~ "<p><b>Disable: </b>do not use any menu effects.</p>\n"
+#~ "<p><b>Animate: </b>Do some animation.</p>\n"
+#~ "<p><b>Fade: </b>Fade in menus using alpha-blending.</p>\n"
+#~ "<b>Make Translucent: </b>Alpha-blend menus for a see-through effect. (KDE "
+#~ "styles only)"
+#~ msgstr ""
+#~ "<p><b>Analluogi:</b>Peidio â defnyddio unrhyw effeithiau dewislenni.</p>\n"
+#~ "<p><b>Bywlunio:</b>Defnyddio rhai bywluniadau.</p>\n"
+#~ "<p><b>Pylu:</b>Pylu  dewislenni i mewn gan ddefnyddio cyfuno-alffa.</p>\n"
+#~ "<b>Gwneud yn Lled-dryloyw:</b>Creu effaith dryloyw ar ddewislenni drwy "
+#~ "gyfuno-alffa. (Arddulliau KDE yn unig)"
+
+#~ msgid ""
+#~ "When enabled, all popup menus will have a drop-shadow, otherwise drop-"
+#~ "shadows will not be displayed. At present, only KDE styles can have this "
+#~ "effect enabled."
+#~ msgstr ""
+#~ "Pan yn alluog, bydd gan bob naidlen dan-gysgod, heb hynny ni ddengys tan-"
+#~ "gysgodion. Ar hyn o bryd, dim ond ar arddulliau KDE gellir galluogi'r "
+#~ "effaith yma. "
+
+#, fuzzy
+#~| msgid ""
+#~| "<p><b>Software Tint: </b>Alpha-blend using a flat color.</p>\n"
+#~| "<p><b>Software Blend: </b>Alpha-blend using an image.</p>\n"
+#~| "<b>XRender Blend: </b>Use the XFree RENDER extension for image blending "
+#~| "(if available). This method may be slower than the Software routines on "
+#~| "non-accelerated displays, but may however improve performance on remote "
+#~| "displays.</p>\n"
+#~ msgid ""
+#~ "<p><b>Software Tint: </b>Alpha-blend using a flat color.</p>\n"
+#~ "<p><b>Software Blend: </b>Alpha-blend using an image.</p>\n"
+#~ "<p><b>XRender Blend: </b>Use the XFree RENDER extension for image "
+#~ "blending (if available). This method may be slower than the Software "
+#~ "routines on non-accelerated displays, but may however improve performance "
+#~ "on remote displays.</p>\n"
+#~ msgstr ""
+#~ "<p><b>Arlliwio Meddalwedd:</b>Cyfuno-alffa â lliw plaen.</p>\n"
+#~ "<p><b>Cyfuno Meddalwedd:</b>Cyfuno-alffa â delwedd.</p>\n"
+#~ "<b>Cyfuno XLunio:</b>Defnyddio'r estyniad LLUNIO XFree i gyfuno delweddau "
+#~ "(os ar gael). Gall y dull hwn fod yn arafach na'r rheolweithiau "
+#~ "Meddalwedd ar ddangosyddion heb gyflymiad, ond gall serch hynny wella "
+#~ "perfformiad ar ddangosyddion pell.</p>\n"
+
+#~ msgid "By adjusting this slider you can control the menu effect opacity."
+#~ msgstr ""
+#~ "Drwy addasu'r llithrydd yma gallwch reoli tryloywder effaith y ddewislen."
+
+#~ msgid ""
+#~ "<b>Note:</b> that all widgets in this combobox do not apply to Qt-only "
+#~ "applications."
+#~ msgstr ""
+#~ "<b>Noder:</b> bod pob celfigyn yn y blwch cyfuno yn peidio â gweithredu "
+#~ "ar gymhwysiadau Qt-yn-unig!"
+
+#~ msgid ""
+#~ "If you check this box, the toolbars will be transparent when moving them "
+#~ "around."
+#~ msgstr ""
+#~ "Os frithwch y blwch yma, bydd y barrau offer yn dryloyw pan eu symudir o "
+#~ "gwmpas."
+
+#~ msgid ""
+#~ "If you enable this option some pop-up menus will show so called tear-off "
+#~ "handles. If you click them, you get the menu inside a widget. This can be "
+#~ "very helpful when performing the same action multiple times."
+#~ msgstr ""
+#~ "Os alluogwch y dewisiad yma bydd rhai naidlenni'n dangos dolenni rhwygo, "
+#~ "fel y'u gelwir. Os gliciwch arnynt, cewch y ddewislen o fewn celfigyn. "
+#~ "Gall hyn fod o gymorth mawr pan yn cyflawni'r un weithred sawl gwaith."
+
+#~ msgid "%"
+#~ msgstr "%"
+
+#~ msgid "Button Group"
+#~ msgstr "Casgliad Botymau"

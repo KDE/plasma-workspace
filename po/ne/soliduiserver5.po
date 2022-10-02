@@ -1,0 +1,62 @@
+# translation of soliduiserver.po to Nepali
+# Nabin Gautam <nabin@mpp.org.np>, 2007.
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+msgid ""
+msgstr ""
+"Project-Id-Version: soliduiserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-17 00:47+0000\n"
+"PO-Revision-Date: 2007-08-22 16:48+0545\n"
+"Last-Translator: Nabin Gautam <nabin@mpp.org.np>\n"
+"Language-Team: Nepali <info@mpp.org.np>\n"
+"Language: ne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n !=1\n"
+"\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: soliduiserver.cpp:62
+#, kde-format
+msgid "'%1' needs a password to be accessed. Please enter a password."
+msgstr "'%1' लाई पहुँच प्राप्त पासवर्ड आवश्यक हुन्छ । कृपया एउटा पासवर्ड प्रविष्ट गर्नुहोस् ।"
+
+#~ msgid "A new device has been detected.<br><b>What do you want to do?</b>"
+#~ msgstr "एउटा नयाँ यन्त्र पत्ता लागेको छ ।<br><b>तपाईँ के गर्न चाहनुहुन्छ ?</b>"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Do nothing"
+#~ msgstr "केही नगर्नुहोस्"
+
+#, fuzzy
+#~| msgid "Unknown"
+#~ msgctxt "A default name for an action without proper label"
+#~ msgid "Unknown"
+#~ msgstr "अज्ञात"
+
+#~ msgid ""
+#~ "An autorun file as been found on your '%1'. Do you want to execute it?\n"
+#~ "Note that executing a file on a medium may compromise your system's "
+#~ "security"
+#~ msgstr ""
+#~ "तपाईँको '%1' मा स्वचालित फाइल फेला परेको छ । तपाईँ यसलाई कार्यान्वयन गर्न "
+#~ "चाहनुहुन्छ ?\n"
+#~ "याद गर्नुहोस् यस माध्यममा फाइल कार्यान्वयन गर्दा तपाईँको प्रणाली सूरक्षामा जोखिम आउन "
+#~ "सक्छ"
+
+#~ msgid "Autorun - %1"
+#~ msgstr "स्वचालित - %1"
+
+#~ msgid ""
+#~ "An autoopen file as been found on your '%1'. Do you want to open '%2'?\n"
+#~ "Note that opening a file on a medium may compromise your system's security"
+#~ msgstr ""
+#~ "तपाईँको '%1' मा स्वत: खुल्ने फाइल फेला परेकोछ । तपाईँ '%2' खोल्न चाहनुहुन्छ ?\n"
+#~ "याद गर्नुहोस् यस माध्यममा फाइल खोल्दा तपाईँको प्रणाली सूरक्षामा जोखिम आउन सक्छ"
+
+#~ msgid "Autoopen - %1"
+#~ msgstr "स्वत: खुल्ने - %1"

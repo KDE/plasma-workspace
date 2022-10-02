@@ -1,0 +1,297 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Swedish "INCLUDE">
+]>
+<article id="autostart" lang="&language;">
+<articleinfo>
+<title
+>Automatisk start</title>
+<authorgroup>
+<author
+>&Anne-Marie.Mahfouf;</author>
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-05</date>
+<releaseinfo
+>&plasma; 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systeminställningar</keyword>
+<keyword
+>Automatisk start</keyword>
+<keyword
+>skrivbordsfil</keyword>
+<keyword
+>skriptfil</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_autostart">
+<title
+>Hantering av automatisk start</title>
+
+<para
+>Den här modulen är ett inställningsverktyg för att hantera vilka program som startas tillsammans ditt personliga &plasma;. Den låter dig lägga till och hantera program eller skript så att de automatiskt kör när din &plasma;-session startas eller avslutas.</para>
+
+<note
+><para
+>Observera att alla ändringar i den här modulen verkställs omedelbart.</para
+></note>
+
+<para
+>Programmet söker igenom <filename
+>$HOME/.config/autostart/</filename
+> efter program och inloggningsskript, <filename class="directory"
+>$HOME/.config/plasma-workspace/env</filename
+> efter skript att köra innan start och <filename class="directory"
+>$HOME/.config/plasma-workspace/shutdown</filename
+> efter utloggningsskript, för att kontrollera vilka program och skript som redan finns där, och visar dem. Det låter dig enkelt hantera dem. </para>
+
+<para
+>Inloggningsskript är <filename class="extension"
+>.desktop</filename
+>-filer med nyckeln <literal
+>X-KDE-AutostartScript=true</literal
+>. Skript innan start körs tidigare och kan användas för att ange miljövariabler. </para>
+
+<note
+><para
+>Observera att du kan ändra plats på katalogen <filename class="directory"
+>Autostart</filename
+> med <menuchoice
+><guimenu
+>Program</guimenu
+> <guimenuitem
+>Platser</guimenuitem
+></menuchoice
+> under kategorin <guilabel
+>Personlig information</guilabel
+> i systeminställningarna och ange en annan katalog än <filename class="directory"
+>$HOME/.config/autostart</filename
+>.</para
+></note>
+
+<para
+>Läs också gärna <ulink url="help:/kcontrol/kcmsmserver"
+>Skrivbordssession</ulink
+> och <ulink url="help:/kcontrol/kded"
+>Bakgrundstjänster</ulink
+> för information om hur man ställer in &plasma;-sessionens startbeteende.</para>
+
+<para
+>Vissa &kde;-program hanterar beteended för automatisk start själva. Det går exempelvis att aktivera eller inaktivera automatisk start av ett program i inställningsdialogrutan (&kalarm;), eller så måste man använda <menuchoice
+><guimenu
+>Arkiv</guimenu
+><guimenuitem
+>Avsluta</guimenuitem
+></menuchoice
+> (&konversation;, &kopete;), annars kör programmet fortfarande i systembrickan och startas om vid nästa inloggning. </para>
+
+<sect2 id="migration">
+<title
+>Konvertering från &kde; arbetsrymd 4</title>
+<para
+>För att överföra dina personliga inställningar av automatisk start från &kde; arbetsrymd 4:</para>
+<simplelist>
+<member
+>Kopiera skrivbordsfiler från <filename class="directory"
+>$HOME/.kde/Autostart</filename
+> till <filename class="directory"
+>$HOME/.config/autostart</filename
+></member>
+<member
+>Kopiera skriptfiler att köra innan start från <filename class="directory"
+>$HOME/.kde/Autostart</filename
+> till <filename class="directory"
+>$HOME/.config/plasma-workspace/env</filename
+></member>
+<member
+>Kopiera skriptfiler för avstängning från <filename class="directory"
+>$HOME/.kde/Autostart</filename
+> till <filename class="directory"
+>$HOME/.config/plasma-workspace/shutdown</filename
+></member>
+</simplelist>
+</sect2>
+
+<sect2 id="disabling_autostart">
+<title
+>Inaktivera filer för automatisk start som distributionen tillhandahåller</title>
+<para
+>Det riktiga sättet att inaktivera ett objekt för automatisk start, exempelvis skrivarminiprogrammet om du använder skrivaren då och då, är att kopiera dess <filename class="extension"
+>.desktop</filename
+>-fil till din personliga katalog för automatisk start. Allting med samma namn i <filename class="directory"
+>$HOME/.config/autostart</filename
+> överskrider <filename class="extension"
+>.desktop</filename
+>-filen i standardpaketet. Lägg till följande rad i den kopierade <filename class="extension"
+>.desktop</filename
+>-filen:</para>
+<programlisting
+>Hidden=true
+</programlisting>
+</sect2>
+
+<sect2 id="current">
+<title
+>Filvisning</title>
+<para
+>Huvuddelen av modulen visar programmen som laddas när &plasma; startas, skript som körs när &plasma; startas, vid avstängning eller innan &plasma; startas eller stängs av.</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Ikon</guilabel
+></term>
+<listitem>
+<para
+>Kolumnen visar uppger programmets eller skriptets ikon som du vill ska startas med &plasma;. Ikonen hämtas från .desktop-filen från nyckeln Icon för ett program, och är standardikonen för ett skript. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Namn</guilabel
+></term>
+<listitem>
+<para
+>Kolumnen visar programmets eller skriptets namn som du vill ska startas med &plasma;. Namnet hämtas från <filename class="extension"
+>.desktop</filename
+>-filen från nyckeln <literal
+>Name</literal
+> för ett program, och är filnamnet för ett skript. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Egenskaper</guilabel
+></term>
+<listitem>
+<para
+>Knappen visas bara när du håller muspekaren över objektet. Knappen (som bara är aktiverad för program och inloggningsskript, dvs. <filename class="extension"
+>.desktop</filename
+>-filer) låter dig ändra programmets eller skriptets egenskaper. Det finns allmänna egenskaper, skyddsegenskaper, en förhandsgranskning om tillämpligt, och egenskaper som hör till programmet eller inloggningsskriptet. Standardkommandot extraheras från <filename class="extension"
+>.desktop</filename
+>-filen från nyckeln <literal
+>Exec</literal
+>. </para>
+<para
+>För ett utloggningsskript är kommandot sökvägen till skriptet och kan inte ändras. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Ta bort</guilabel
+></term>
+<listitem>
+<para
+>Knappen visar bara när du håller muspekaren över objektet. Att trycka på knappen <guibutton
+>&minus;</guibutton
+> tar omedelbart bort .desktop-filen för programmet eller skriptet eller den symboliska länken i katalogen <filename class="directory"
+>Autostart</filename
+>. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+
+<sect2 id="actions">
+<title
+>Åtgärder</title>
+<para
+>Längst ner finns den kombinerade knappen <guibutton
+>Lägg till...</guibutton
+> för att välja typ av objekt som du vill lägga till. Du kan lägga till program och inloggnings- eller utloggningsskript. </para>
+
+<variablelist>
+<varlistentry
+><term
+><guimenuitem
+>Lägg till program</guimenuitem
+></term>
+<listitem>
+<para
+>Att klicka på det här objektet visar &plasma;s vanliga dialogruta <guilabel
+>Välj program</guilabel
+> och låter dig välja vilket program du vill starta. Efter programmet har valts, visas programmet egenskaper när du klickar på <guibutton
+>Ok</guibutton
+>. </para>
+<para
+>Kopierar programmets <filename class="extension"
+>.desktop</filename
+>-fil till katalogen <filename class="directory"
+>Autostart</filename
+>. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guimenuitem
+>Lägg till inloggningsskript...</guimenuitem
+></term>
+<listitem>
+<para
+>Objektet öppnar en dialogruta som frågar dig efter platsen för skriptet som du vill lägga till. Skript som ställs in att köra vid inloggning får en <filename class="extension"
+>.desktop</filename
+>-fil skapad i katalogen <filename class="directory"
+>Autostart</filename
+> och körs när Plasma startas. </para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guimenuitem
+>Lägg till utloggningsskript...</guimenuitem
+></term>
+<listitem>
+<para
+>Objektet öppnar en dialogruta som frågar dig efter platsen för skriptet som du vill lägga till. Skript som ställs in att köra vid utloggning kopieras till eller får en symbolisk länk i katalogen <filename class="directory"
+>$HOME/.config/plasma-workspace/shutdown</filename
+> och körs automatiskt när &plasma; stängs av efter att användaren har loggat ut. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

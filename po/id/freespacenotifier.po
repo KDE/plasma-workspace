@@ -1,0 +1,115 @@
+# Indonesian translations for freespacenotifier package.
+# Copyright (C) 2010 This_file_is_part_of_KDE
+# This file is distributed under the same license as the freespacenotifier package.
+#
+# Andhika Padmawan <andhika.padmawan@gmail.com>, 2010-2014.
+# Wantoyo <wantoyek@gmail.com>, 2017, 2018, 2019, 2021.
+# Linerly <linerly@protonmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: freespacenotifier\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-10-20 00:19+0000\n"
+"PO-Revision-Date: 2022-02-25 14:25+0700\n"
+"Last-Translator: Linerly <linerly@protonmail.com>\n"
+"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: freespacenotifier.cpp:91
+#, kde-format
+msgid "Configure Warning…"
+msgstr "Konfigurasikan Peringatan..."
+
+#: freespacenotifier.cpp:95
+#, kde-format
+msgid "Open in Filelight"
+msgstr "Buka di Filelight"
+
+#: freespacenotifier.cpp:98
+#, kde-format
+msgid "Open in File Manager"
+msgstr "Buka di File Manager"
+
+#. i18n: ectx: label, entry (minimumSpace), group (General)
+#: freespacenotifier.kcfg:9
+#, kde-format
+msgid "Minimum free space before user starts being notified."
+msgstr "Ruang kosong minimum sebelum pengguna akan diperingatkan."
+
+#. i18n: ectx: label, entry (enableNotification), group (General)
+#: freespacenotifier.kcfg:15
+#, kde-format
+msgid "Is the free space notification enabled."
+msgstr "Adalah notifikasi ruang kosong yang difungsikan."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
+#: freespacenotifier_prefs_base.ui:17
+#, kde-format
+msgid "Enable low disk space warning"
+msgstr "Fungsikan peringatan kekurangan ruang kosong"
+
+#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
+#: freespacenotifier_prefs_base.ui:27
+#, kde-format
+msgid "Warn when free space is below:"
+msgstr "Peringatkan jika ruang kosong kurang dari:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
+#: freespacenotifier_prefs_base.ui:37
+#, kde-format
+msgid " MiB"
+msgstr " MiB"
+
+#: module.cpp:37
+#, kde-format
+msgid ""
+"Your Home folder is running out of disk space, you have %1 MiB remaining "
+"(%2%)."
+msgstr ""
+"Folder Beranda-mu kehabisan ruang disk, kamu mempunyai sisa %1 MiB (%2%)."
+
+#: module.cpp:46
+#, kde-format
+msgid ""
+"Your Root partition is running out of disk space, you have %1 MiB remaining "
+"(%2%)."
+msgstr ""
+"Partisi Root-mu kehabisan ruang disk, kamu mempunyai sisa %1 MiB (%2%)."
+
+#: module.cpp:63
+#, kde-format
+msgctxt "The settings dialog main page name, as in 'general settings'"
+msgid "General"
+msgstr "Umum"
+
+#~ msgid "Low Disk Space"
+#~ msgstr "Ruang Cakram Habis"
+
+#~ msgid "Remaining space in your Home folder: %1 MiB"
+#~ msgstr "Ruang tersisa di folder Beranda anda: %1 MiB"
+
+#~ msgctxt "Allows the user to hide this notifier item"
+#~ msgid "Hide"
+#~ msgstr "Sembunyikan"
+
+#~ msgctxt ""
+#~ "Warns the user that the system is running low on space on his home "
+#~ "folder, indicating the percentage and absolute MiB size remaining, and "
+#~ "asks if the user wants to do something about it"
+#~ msgid ""
+#~ "You are running low on disk space on your home folder (currently %2%, %1 "
+#~ "MiB free).\n"
+#~ "Would you like to run a file manager to free some disk space?"
+#~ msgstr ""
+#~ "Anda kekurangan ruang kosong di folder rumah anda (saat ini %2%, %1 MiB "
+#~ "bebas).\n"
+#~ "Apakah anda ingin menjalankan manajer berkas untuk menambahkan ruang "
+#~ "kosong?"
+
+#~ msgctxt "Closes the notification"
+#~ msgid "Do Nothing"
+#~ msgstr "Jangan Lakukan Apapun"

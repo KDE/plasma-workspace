@@ -1,0 +1,31 @@
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kdebase package.
+# HARI VISHNU <harivishnu@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdebase\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-05 00:46+0000\n"
+"PO-Revision-Date: 2020-11-30 16:14+0000\n"
+"Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
+"Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
+"discuss@googlegroups.com>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Weblate 4.3.2\n"
+
+#: recentdocuments.cpp:36
+#, kde-format
+msgid "Looks for documents recently used with names matching :q:."
+msgstr ":q: പേരുകളുമായി പൊരുത്തപ്പെടുന്ന സമീപകാലത്ത് ഉപയോഗിച്ച കുറിപ്പുകൾക്കായി തിരയുന്നു."
+
+#: recentdocuments.cpp:38
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "അടങ്ങിയിരിക്കുന്ന അറ തുറക്കുക"
+
+#~ msgid "Recent Document"
+#~ msgstr "അടുത്തിടെ പ്രവ്വേശിച്ച രചന"

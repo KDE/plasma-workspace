@@ -1,0 +1,464 @@
+# translation of kcm_desktopthemedetails.po to Swedish
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2008, 2009, 2010, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021.
+# Arve Eriksson <031299870@telia.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_desktopthemedetails\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"PO-Revision-Date: 2021-05-27 18:45+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.08.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current Plasma Style"
+msgstr "Namn på aktuell Plasmastil"
+
+#: kcm.cpp:108
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Kan inte skapa en tillfällig fil."
+
+#: kcm.cpp:119
+#, kde-format
+msgid "Unable to download the theme: %1"
+msgstr "Kan inte ladda ner temat: %1"
+
+#: kcm.cpp:144
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "Tema installerat med lyckat resultat."
+
+#: kcm.cpp:147 kcm.cpp:153
+#, kde-format
+msgid "Theme installation failed."
+msgstr "Installation av tema misslyckades."
+
+#: kcm.cpp:245
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr "Borttagning av tema misslyckades: %1"
+
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "This module lets you choose the Plasma style."
+msgstr "Den här modulen låter dig välja Plasmastilen."
+
+#: package/contents/ui/main.qml:69
+#, kde-format
+msgid "All Themes"
+msgstr "Alla teman"
+
+#: package/contents/ui/main.qml:70
+#, kde-format
+msgid "Light Themes"
+msgstr "Ljusa teman"
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgid "Dark Themes"
+msgstr "Mörka teman"
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "Color scheme compatible"
+msgstr "Kompatibla med färgschema"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgid "Follows color scheme"
+msgstr "Följer färgschemat"
+
+#: package/contents/ui/main.qml:118
+#, kde-format
+msgid "Edit Theme…"
+msgstr "Redigera tema…"
+
+#: package/contents/ui/main.qml:125
+#, kde-format
+msgid "Remove Theme"
+msgstr "Ta bort tema"
+
+#: package/contents/ui/main.qml:132
+#, kde-format
+msgid "Restore Theme"
+msgstr "Återställ tema"
+
+#: package/contents/ui/main.qml:174
+#, kde-format
+msgid "Install from File…"
+msgstr "Installera från fil…"
+
+#: package/contents/ui/main.qml:179
+#, kde-format
+msgid "Get New Plasma Styles…"
+msgstr "Hämta nya Plasmastilar…"
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Open Theme"
+msgstr "Öppna Tema"
+
+#: package/contents/ui/main.qml:195
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr "Temafiler (*.zip *.tar.gz *.tar.bz2)"
+
+#: plasma-apply-desktoptheme.cpp:31
+#, kde-format
+msgid ""
+"This tool allows you to set the theme of the current Plasma session, without "
+"accidentally setting it to one that is either not available, or which is "
+"already set."
+msgstr ""
+"Verktyget låder dig ställa in temat för den aktuella Plasma-sessionen, utan "
+"att av misstag ställa in det till ett som antingen inte är tillgängligt "
+"eller som redan används."
+
+#: plasma-apply-desktoptheme.cpp:35
+#, kde-format
+msgid ""
+"The name of the theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+"Namnet på temat som du vill använda för den aktuella Plasma-sessionen (om en "
+"fullständig sökväg anges används bara den senare delen av sökvägen)"
+
+#: plasma-apply-desktoptheme.cpp:36
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+"Visa alla tillgängliga teman på system (och vilket som är det aktuella temat)"
+
+#: plasma-apply-desktoptheme.cpp:49
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+"Begärt tema \"%1\" är redan använt som tema för den aktuella Plasma-"
+"sessionen."
+
+#: plasma-apply-desktoptheme.cpp:65
+#, kde-format
+msgid "The current Plasma session's theme has been set to %1"
+msgstr "Den aktuella Plasma-sessionens tema har ställts in till %1"
+
+#: plasma-apply-desktoptheme.cpp:67
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+"Kunde inte hitta temat \"%1\". Temat ska vara ett av följande alternativ: %2"
+
+#: plasma-apply-desktoptheme.cpp:75
+#, kde-format
+msgid "You have the following Plasma themes on your system:"
+msgstr "Du har följande Plasmateman på systemet:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Stefan Asserhäll"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "stefan.asserhall@bredband.net"
+
+#~ msgid "Plasma Style"
+#~ msgstr "Plasmastil"
+
+#~ msgid "David Rosca"
+#~ msgstr "David Rosca"
+
+#~ msgid "Search..."
+#~ msgstr "Sök..."
+
+#~ msgid "Plasma Styles"
+#~ msgstr "Plasmastilar"
+
+#~ msgid "Download New Plasma Styles"
+#~ msgstr "Ladda ner nya Plasmastilar"
+
+#~ msgid "Choose the Plasma theme"
+#~ msgstr "Välj Plasmatemat"
+
+#~ msgid "Configure Desktop Theme"
+#~ msgstr "Anpassa skrivbordstema"
+
+#~ msgid "Theme removal failed."
+#~ msgstr "Borttagning av tema misslyckades."
+
+#~ msgid ""
+#~ "<h1>Desktop Theme</h1>This module allows you to modify the visual "
+#~ "appearance of the desktop."
+#~ msgstr ""
+#~ "<h1>Skrivbordstema</h1>Den här modulen låter dig ändra det visuella "
+#~ "utseendet för skrivbordet."
+
+#~ msgid "KDE Desktop Theme Module"
+#~ msgstr "KDE.s skrivbordstemamodul"
+
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
+#~ msgstr "© 2002 Karol Szwed, Daniel Molkentin"
+
+#~ msgid "Theme installation failed. (%1)"
+#~ msgstr "Installation av tema misslyckades. (%1)"
+
+#~ msgid "Details"
+#~ msgstr "Detaljinformation"
+
+#~ msgctxt "plasma name"
+#~ msgid "Panel Background"
+#~ msgstr "Panelbakgrund"
+
+#~ msgctxt "plasma name"
+#~ msgid "Kickoff"
+#~ msgstr "Kickoff"
+
+#~ msgctxt "plasma name"
+#~ msgid "Task Items"
+#~ msgstr "Aktivitetsobjekt"
+
+#~ msgctxt "plasma name"
+#~ msgid "Widget Background"
+#~ msgstr "Grafisk komponentbakgrund"
+
+#~ msgctxt "plasma name"
+#~ msgid "Translucent Background"
+#~ msgstr "Genomskinlig bakgrund"
+
+#~ msgctxt "plasma name"
+#~ msgid "Dialog Background"
+#~ msgstr "Dialogbakgrund"
+
+#~ msgctxt "plasma name"
+#~ msgid "Analog Clock"
+#~ msgstr "Analog klocka"
+
+#~ msgctxt "plasma name"
+#~ msgid "Notes"
+#~ msgstr "Anteckningar"
+
+#~ msgctxt "plasma name"
+#~ msgid "Tooltip"
+#~ msgstr "Verktygstips"
+
+#~ msgctxt "plasma name"
+#~ msgid "Pager"
+#~ msgstr "Skrivbordsvisning"
+
+#~ msgctxt "plasma name"
+#~ msgid "Run Command Dialog"
+#~ msgstr "Kör kommando dialogruta"
+
+#~ msgctxt "plasma name"
+#~ msgid "Shutdown Dialog"
+#~ msgstr "Avstängningsdialogruta"
+
+#~ msgctxt "plasma name"
+#~ msgid "Icons"
+#~ msgstr "Ikoner"
+
+#~ msgid "(Customized)"
+#~ msgstr "(anpassat)"
+
+#~ msgid "User customized theme"
+#~ msgstr "Tema anpassat av användaren"
+
+#~ msgid ""
+#~ "Theme items have been changed.  Do you still wish remove the \"%1\" theme?"
+#~ msgstr "Objekt i temat har ändrats. Vill du ändå ta bort temat \"%1\"?"
+
+#~ msgid "Removal of the default desktop theme is not allowed."
+#~ msgstr "Borttagning av skrivbordets standardtema är inte tillåtet."
+
+#~ msgid "Are you sure you wish remove the \"%1\" theme?"
+#~ msgstr "Är du säker på att du vill ta bort temat \"%1\"?"
+
+#~ msgid ""
+#~ "Please apply theme item changes (with a new theme name) before attempting "
+#~ "to export theme."
+#~ msgstr ""
+#~ "Verkställ ändringar av temaobjekt (med ett nytt temanamn) innan försök "
+#~ "att exportera temat görs."
+
+#~ msgid "Export Desktop Theme"
+#~ msgstr "Exportera skrivbordstema"
+
+#~ msgid "Export theme to file"
+#~ msgstr "Exportera tema till fil"
+
+#~ msgid "Archive (*.zip)"
+#~ msgstr "Arkiv (*.zip)"
+
+#~ msgid "Theme Item"
+#~ msgstr "Temaobjekt"
+
+#~ msgid "Source"
+#~ msgstr "Källa"
+
+#~ msgctxt ""
+#~ "%1 is the name of the theme, %2 is the type of the element (background, "
+#~ "icon, note, etc)"
+#~ msgid "%1 %2"
+#~ msgstr "%1 %2"
+
+#~ msgid "File..."
+#~ msgstr "Fil..."
+
+#~ msgid "Select File to Use for %1"
+#~ msgstr "Välj fil att använda för %1"
+
+#~ msgid " Author: %1"
+#~ msgstr " Upphovsman: %1"
+
+#~ msgid "Version: %1"
+#~ msgstr "Version: %1"
+
+#~ msgid "Desktop Theme Details"
+#~ msgstr "Information om skrivbordstema"
+
+#~ msgid "Choose an item and customize it by assigning it a theme"
+#~ msgstr ""
+#~ "Välj ett objekt och anpassa det genom att tilldela ett tema till det"
+
+#~ msgid ""
+#~ "You can set any theme to any item. The available themes for the item are "
+#~ "in the dropdown box on the right."
+#~ msgstr ""
+#~ "Du kan ange vilket tema som helst för vilket objekt som helst. "
+#~ "Tillgängliga teman för objektet finns i kombinationsrutan till höger."
+
+#~ msgid "Enable more options"
+#~ msgstr "Aktivera fler alternativ"
+
+#~ msgid ""
+#~ "This will expand the dialog and give you options to export your custom "
+#~ "theme as well as to remove a theme."
+#~ msgstr ""
+#~ "Det här expanderar dialogrutan och ger dig alternativ för att exportera "
+#~ "ditt egna tema, samt för att ta bort ett tema."
+
+#~ msgid "More"
+#~ msgstr "Mer"
+
+#~ msgid "Remove the selected theme"
+#~ msgstr "Ta bort markerat tema"
+
+#~ msgid ""
+#~ "Clicking this button will remove the selected theme. You will be asked "
+#~ "for confirmation."
+#~ msgstr ""
+#~ "Genom att klicka på knappen tas det markerade temat bort. Du blir "
+#~ "tillfrågad om bekräftelse."
+
+#~ msgid "Save your theme in a zip archive"
+#~ msgstr "Spara temat i ett zip-arkiv"
+
+#~ msgid ""
+#~ "You can save your theme in a zip archive in order to share it with the "
+#~ "community."
+#~ msgstr ""
+#~ "Du kan spara ditt tema i ett zip-arkiv för att kunna dela med dig det."
+
+#~ msgid "Export Theme to File..."
+#~ msgstr "Exportera tema till fil..."
+
+#~ msgid "New theme name:"
+#~ msgstr "Nytt temanamn:"
+
+#~ msgid "Custom theme name"
+#~ msgstr "Namn på eget tema"
+
+#~ msgid "Give a name to your custom theme."
+#~ msgstr "Ange ett namn på det egna temat."
+
+#~ msgid "Author:"
+#~ msgstr "Upphovsman:"
+
+#~ msgid "Custom theme author "
+#~ msgstr "Upphovsman av eget tema "
+
+#~ msgid "Enter the author name of your custom theme."
+#~ msgstr "Ange upphovsman av ditt egna tema."
+
+#~ msgid "Version:"
+#~ msgstr "Version:"
+
+#~ msgid "Custom theme version number"
+#~ msgstr "Versionsnummer för eget tema"
+
+#~ msgid "Enter the version number of your custom theme."
+#~ msgstr "Ange versionsnummer för ditt egna tema."
+
+#~ msgid "Description:"
+#~ msgstr "Beskrivning:"
+
+#~ msgid "Custom theme description"
+#~ msgstr "Beskrivning av eget tema"
+
+#~ msgid "Enter a description which will explain your custom theme."
+#~ msgstr "Ange en beskrivning som förklarar ditt egna tema."
+
+#~ msgid "Select theme from above to customize"
+#~ msgstr "Välj temat att anpassa ovan"
+
+#~ msgid "Theme Author"
+#~ msgstr "Temats upphovsman"
+
+#~ msgid "Theme Name"
+#~ msgstr "Temats namn"
+
+#~ msgid "Theme Version"
+#~ msgstr "Temats version"
+
+#~ msgid "The theme description goes here..."
+#~ msgstr "Temats beskrivning ska vara här..."
+
+#~ msgid ""
+#~ "Choose a start theme in this list then customize some items below. All "
+#~ "less important items not listed below will use this start theme."
+#~ msgstr ""
+#~ "Välj ett starttema i listan och anpassa därefter vissa objekt nedan. Alla "
+#~ "mindre viktiga objekt som inte anges i listan nedan kommer att använda "
+#~ "detta starttema."
+
+#~ msgid "Karol Szwed"
+#~ msgstr "Karol Szwed"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "KCMDesktopTheme"
+#~ msgstr "IM skrivbordstema"
+
+#~ msgid "Form"
+#~ msgstr "Formulär"
+
+#~ msgid ""
+#~ "To change your desktop theme to \"%1\", go back to the 'General' tab of "
+#~ "System Settings; choose 'Appearance', and then 'Style'; and finally "
+#~ "select \"%2\" from the drop-down list at the top of the window."
+#~ msgstr ""
+#~ "För att ändra skrivbordstema till \"%1\", gå tillbaka till fliken "
+#~ "'Allmänt' i systeminställningarna, välj 'Utseende' och därefter 'Stil', "
+#~ "och välj slutligen \"%2\" i kombinationslistan längst upp i fönstret.."
+
+#~ msgid "Removal of the active desktop theme is not allowed."
+#~ msgstr "Borttagning av det aktiva skrivbordstemat är inte tillåtet."

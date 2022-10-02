@@ -1,0 +1,86 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Jean Cayron <jean.cayron@gmail.com>, 2010, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-11 00:47+0000\n"
+"PO-Revision-Date: 2011-01-09 10:30+0100\n"
+"Last-Translator: Jean Cayron <jean.cayron@gmail.com>\n"
+"Language-Team: Walloon <linux@walon.org>\n"
+"Language: wa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: menu.cpp:99
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Show KRunner"
+msgstr ""
+
+#: menu.cpp:104
+#, kde-format
+msgid "Open Terminal"
+msgstr ""
+
+#: menu.cpp:108
+#, fuzzy, kde-format
+#| msgid "Lock Screen"
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Lock Screen"
+msgstr "Eclawer l' waitroûle"
+
+#: menu.cpp:117
+#, fuzzy, kde-format
+#| msgid "Leave..."
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Leave…"
+msgstr "End aler..."
+
+#: menu.cpp:126
+#, kde-format
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Configure Display Settings…"
+msgstr ""
+
+#: menu.cpp:291
+#, fuzzy, kde-format
+#| msgid "Configure Contextual Menu Plugin"
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Configure Contextual Menu Plugin"
+msgstr "Apontyî l' tchôke-divins del dressêye di contecse"
+
+#: menu.cpp:301
+#, fuzzy, kde-format
+#| msgid "[Other Actions]"
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "[Other Actions]"
+msgstr "[Ôtes faitindjes]"
+
+#: menu.cpp:304
+#, fuzzy, kde-format
+#| msgid "Wallpaper Actions"
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "Wallpaper Actions"
+msgstr "Faitindjes del tapisreye"
+
+#: menu.cpp:308
+#, fuzzy, kde-format
+#| msgid "[Separator]"
+msgctxt "plasma_containmentactions_contextmenu"
+msgid "[Separator]"
+msgstr "[Separateu]"
+
+#, fuzzy
+#~| msgid "Run Command..."
+#~ msgctxt "plasma_containmentactions_contextmenu"
+#~ msgid "Run Command..."
+#~ msgstr "Enonder comande..."
+
+#~ msgid "Add Panel"
+#~ msgstr "Radjouter scriftôr"

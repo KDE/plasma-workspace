@@ -1,0 +1,377 @@
+# translation of kcmicons.po to Arabic
+# translation of kcmicons.po to
+# Copyright (C) 2001,2002, 2004, 2006, 2007, 2008, 2009 Free Software Foundation, Inc.
+# Mohammed Gamal <f2c2001@yahoo.com>, 2001.
+# Isam Bayazidi <bayazidi@arabeyes.org>, 2002.
+# Ammar Tabbaa <atabba@kacst.edu.sa>, 2004.
+# محمد سعد  Mohamed SAAD <metehyi@free.fr>, 2006.
+# AbdulAziz AlSharif <a.a-a.s@hotmail.com>, 2007.
+# Youssef Chahibi <chahibi@gmail.com>, 2007.
+# Amine Roukh <amineroukh@gmail.com>, 2008.
+# zayed <zayed.alsaidi@gmail.com>, 2008, 2009.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2010, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmicons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"PO-Revision-Date: 2021-06-23 22:58+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: ar\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 21.07.70\n"
+
+#: iconsizecategorymodel.cpp:14
+#, kde-format
+msgid "Toolbar"
+msgstr "شريط الأدوات"
+
+#: iconsizecategorymodel.cpp:15
+#, kde-format
+msgid "Main Toolbar"
+msgstr "شريط الأدوات الرئيسي"
+
+#: iconsizecategorymodel.cpp:16
+#, kde-format
+msgid "Small Icons"
+msgstr "أيقونات صغيرة"
+
+#: iconsizecategorymodel.cpp:17
+#, kde-format
+msgid "Panel"
+msgstr "اللوحة"
+
+#: iconsizecategorymodel.cpp:18
+#, kde-format
+msgid "Dialogs"
+msgstr "مربعات الحوار"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr "اسم سمة الأيقونات الحالية"
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr "حجم أيقونات سطح المكتب"
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr "حجم أيقونة شريط الأدوات"
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, kde-format
+msgid "Main toolbar icons size"
+msgstr "حجم أيقونة شريط الأدوات الرئيس"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, kde-format
+msgid "Small icons size"
+msgstr "حجم الأيقونات صغير"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr "حجم أيقونات اللوحة"
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr "حجم أيقونات الحوراي"
+
+#: main.cpp:182
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "لم يتمكن من إنشاء ملف مؤقت"
+
+#: main.cpp:193
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr "لم يتمكن من تنزيل سمة الأيقونات: %1"
+
+#: main.cpp:207
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "الملف ليس أرشيف سمة أيقونة صالحًا."
+
+#: main.cpp:212
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr ""
+"هناك مشكلة حدثت أثناء عملية التثبيت; على أية حال, معظم السِمات في الأرشيف قد "
+"تم تثبيتها"
+
+#: main.cpp:216
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "ثبتت السمة بنجاح."
+
+#: main.cpp:260
+#, kde-format
+msgid "Installing icon themes…"
+msgstr "يثبت سِمات الأيقونات..."
+
+#: main.cpp:270
+#, kde-format
+msgid "Installing %1 theme…"
+msgstr "يثبت سمة %1 ..."
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr "هذه الوحدة تجعلك تختار أيقونات لسطح مكتبك."
+
+#: package/contents/ui/main.qml:147
+#, kde-format
+msgid "Remove Icon Theme"
+msgstr "أزل سِمة الأيقونات"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Restore Icon Theme"
+msgstr "استعد سمة الأيقونات"
+
+#: package/contents/ui/main.qml:228
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr "اضبط حجم الأيقونات"
+
+#: package/contents/ui/main.qml:246
+#, kde-format
+msgid "Install from File…"
+msgstr "ثبت من ملف..."
+
+#: package/contents/ui/main.qml:251
+#, kde-format
+msgid "Get New Icons…"
+msgstr "أحصل على أيقونات جديدة..."
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Open Theme"
+msgstr "افتح سمة"
+
+#: package/contents/ui/main.qml:281
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr "ملفات السمة (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Icon theme is already used"
+#~ msgstr "سمة الأيقونات مستخدمة بالفعل"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "زايد السعيدي, محمد سعد"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "zayed.alsaidi@gmail.com,metehyi@free.fr"
+
+#~ msgid "Icons"
+#~ msgstr "الأيقونات"
+
+#~ msgid "Icons Control Panel Module"
+#~ msgstr "وحدة لوحة التحكم بالأيقونات"
+
+#~ msgid "(c) 2000-2003 Geert Jansen"
+#~ msgstr "(c) 2000-2003 Geert Jansen"
+
+#~ msgid "Geert Jansen"
+#~ msgstr "Geert Jansen"
+
+#~ msgid "Antonio Larrosa Jimenez"
+#~ msgstr "Antonio Larrosa Jimenez"
+
+#~ msgid "Torsten Rahn"
+#~ msgstr "Torsten Rahn"
+
+#~ msgid "Jonathan Riddell"
+#~ msgstr "Jonathan Riddell"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Kai Uwe Broulik"
+
+#~ msgid "Desktop"
+#~ msgstr "سطح المكتب"
+
+#~ msgid "Use of Icon"
+#~ msgstr "استخدام الأيقونة"
+
+#~ msgctxt "@label The icon rendered by default"
+#~ msgid "Default"
+#~ msgstr "مبدئي"
+
+#~ msgctxt "@label The icon rendered as active"
+#~ msgid "Active"
+#~ msgstr "نشط"
+
+#~ msgctxt "@label The icon rendered as disabled"
+#~ msgid "Disabled"
+#~ msgstr "معطل"
+
+#~ msgid "Size:"
+#~ msgstr "الحجم:"
+
+#~ msgid "Set Effect..."
+#~ msgstr "عيّن التأثير..."
+
+#~ msgid "All Icons"
+#~ msgstr "كلّ الأيقونات"
+
+#~ msgid "Setup Default Icon Effect"
+#~ msgstr "إعداد تأثير الأيقونة المبدئي"
+
+#~ msgid "Setup Active Icon Effect"
+#~ msgstr "إعداد تأثير الأيقونة النشطة"
+
+#~ msgid "Setup Disabled Icon Effect"
+#~ msgstr "إعداد تأثير الأيقونة الخاملة"
+
+#~ msgid "&Effect:"
+#~ msgstr "ال&تأثير:"
+
+#~ msgid "No Effect"
+#~ msgstr "لا تأثير"
+
+#~ msgid "To Gray"
+#~ msgstr "إلى الرمادي"
+
+#~ msgid "Colorize"
+#~ msgstr "لوّن"
+
+#~ msgid "Gamma"
+#~ msgstr "جاما"
+
+#~ msgid "Desaturate"
+#~ msgstr "إلغاء الإشباع"
+
+#~ msgid "To Monochrome"
+#~ msgstr "إلى أحاديِّ اللون"
+
+#~ msgid "&Semi-transparent"
+#~ msgstr "&شبه شفاف"
+
+#~ msgid "Preview"
+#~ msgstr "المعاينة"
+
+#~ msgid "Effect Parameters"
+#~ msgstr "موسطات التأثير"
+
+#~ msgid "&Amount:"
+#~ msgstr "ال&كمية:"
+
+#~ msgid "Co&lor:"
+#~ msgstr "اللو&ن:"
+
+#~ msgid "&Second color:"
+#~ msgstr "اللون ال&ثاني:"
+
+#~ msgid "Name"
+#~ msgstr "الاسم"
+
+#~ msgid "Description"
+#~ msgstr "الوصف"
+
+#~ msgid "Install a theme archive file you already have locally"
+#~ msgstr "ثبت سمة مضغوطة تملكها مسبقا محلبا"
+
+#~ msgid ""
+#~ "If you already have a theme archive locally, this button will unpack it "
+#~ "and make it available for KDE applications"
+#~ msgstr ""
+#~ "إذا كنت تملك سمة مضغوطة، هذا الزر سيفك الضغط عنها ويجعلها متوفرة لتطبيقات "
+#~ "كدي"
+
+#~ msgid "Get new themes from the Internet"
+#~ msgstr "استيراد مخطط اللون من الإنترنت"
+
+#~ msgid ""
+#~ "You need to be connected to the Internet to use this action. A dialog "
+#~ "will display a list of themes from the http://www.kde.org website. "
+#~ "Clicking the Install button associated with a theme will install this "
+#~ "theme locally."
+#~ msgstr ""
+#~ "يجب أن تتصل بالإنترنت للقيام بهذه الخطوة. ستظهر قائمة للسمات من الموقع "
+#~ "http://www.kde.org. يالضغط على .زر التثبيت المقابل لإحدى السمات سيقوم "
+#~ "بثبيت السمية محليا"
+
+#~ msgid "Remove the selected theme from your disk"
+#~ msgstr "احذف السمة المحددة من القرص"
+
+#~ msgid "This will remove the selected theme from your disk."
+#~ msgstr "هذا سيقوم بحذف السمة المحددة من القرص."
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "اسحب أو اكتب عنوان السِمة"
+
+#~ msgid ""
+#~ "Unable to download the icon theme archive;\n"
+#~ "please check that address %1 is correct."
+#~ msgstr ""
+#~ "لم استطع تنزيل أرشيف سِمة الأيقونات;\n"
+#~ "من فضلك تأكد من صحة العنوان %1 ."
+
+#~ msgid "<qt>Installing <strong>%1</strong> theme</qt>"
+#~ msgstr "<qt>جاري تثبيت <strong>سِمة</strong> %1</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <strong>%1</strong> icon theme?"
+#~ "<br /><br />This will delete the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>هل أنت متأكد من حذف <strong>%1</strong>سمة الأيقونة؟<br /><br />هذا "
+#~ "سيقوم بحذف الملفات المثبتة مع هذه السمة.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "تأكيد"
+
+#~ msgid "&Theme"
+#~ msgstr "ال&سِمة"
+
+#~ msgid "Ad&vanced"
+#~ msgstr "مت&قدم"
+
+#, fuzzy
+#~ msgid ""
+#~ "<h1>Icons</h1>This module allows you to choose the icons for your desktop."
+#~ "<p>To choose an icon theme, click on its name and apply your choice by "
+#~ "pressing the \"Apply\" button below. If you do not want to apply your "
+#~ "choice you can press the \"Reset\" button to discard your changes.</"
+#~ "p><p>By pressing the \"Install Theme File...\" button you can install "
+#~ "your new icon theme by writing its location in the box or browsing to the "
+#~ "location. Press the \"OK\" button to finish the installation.</p><p>The "
+#~ "\"Remove Theme\" button will only be activated if you select a theme that "
+#~ "you installed using this module. You are not able to remove globally "
+#~ "installed themes here.</p><p>You can also specify effects that should be "
+#~ "applied to the icons.</p>"
+#~ msgstr ""
+#~ "<h1>الأيقونات</h1>هذه الوحدة تسمح لك باختيار الأيقونات لسطح مكتبك. "
+#~ "<p>لاختيار سِمة أيقونات إنقر على اسمها و طبق اختيارك عن طريق ضغط زر \"طبّق"
+#~ "\" أدناه. إذا لم تكن تريد تطبيق اختيارك يمكنك ضغط زر \"أعد الضبط\" للتخلص "
+#~ "من تغييراتك.</p><p>بضغط زر \"ثبّت سِمة جديدة\" يمكنك تثبيت سِمة أيقونات "
+#~ "جديدة عن طريق كتابة موقعها في مربع النص أو قم باستعراض الموقع. اضغط زر "
+#~ "\"موافق\" لإنهاء التثبيت.</p><p>زر \"أزل السِمة\" سيتم تنشيطه فقط إذا "
+#~ "انتقيت السِمة التي قمت بتثبيتها باستخدام هذه الوحدة. لا يمكنك إزالة السِمات "
+#~ "العامة من هنا.</p><p>يمكنك كذلك تحديد التأثيرات التي يجب تطبيقها على "
+#~ "الأيقونات.</p>"
+
+#~ msgid "Animate icons"
+#~ msgstr "حرّك الأيقونات"
+
+#~ msgid "Select the icon theme you want to use:"
+#~ msgstr "انتق سِمة الأيقونات التي ترغب باستخدامها:"

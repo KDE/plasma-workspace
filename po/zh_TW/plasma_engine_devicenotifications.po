@@ -1,0 +1,90 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Franklin, 2015.
+# Jeff Huang <s8321414@gmail.com>, 2016.
+# Chaoting Liu <brli@chakralinux.org>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2021-09-01 02:30+0800\n"
+"Last-Translator: Chaoting Liu <brli@chakralinux.org>\n"
+"Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 21.08.0\n"
+
+#: ksolidnotify.cpp:149
+#, kde-format
+msgid "Device Status"
+msgstr "裝置狀態"
+
+#: ksolidnotify.cpp:149
+#, kde-format
+msgid "A device can now be safely removed"
+msgstr "裝置已可安全移除。"
+
+#: ksolidnotify.cpp:150
+#, kde-format
+msgid "This device can now be safely removed."
+msgstr "裝置已可安全移除。"
+
+#: ksolidnotify.cpp:157
+#, kde-format
+msgid "You are not authorized to mount this device."
+msgstr "您未獲授權去掛載此裝置。"
+
+#: ksolidnotify.cpp:160
+#, kde-format
+msgctxt "Remove is less technical for unmount"
+msgid "You are not authorized to remove this device."
+msgstr "您未獲授權去移除此裝置。"
+
+#: ksolidnotify.cpp:163
+#, kde-format
+msgid "You are not authorized to eject this disc."
+msgstr "您未獲授權去取出此碟片。"
+
+#: ksolidnotify.cpp:170
+#, kde-format
+msgid "Could not mount this device as it is busy."
+msgstr "無法掛載裝置，因為裝置忙碌中。"
+
+#: ksolidnotify.cpp:200
+#, kde-format
+msgid "One or more files on this device are open within an application."
+msgstr "可能此裝置上有一個以上的檔案被開啟，尚未關閉。"
+
+#: ksolidnotify.cpp:202
+#, kde-format
+msgid "One or more files on this device are opened in application \"%2\"."
+msgid_plural ""
+"One or more files on this device are opened in following applications: %2."
+msgstr[0] "可能此裝置上有一個以上的檔案被以下的應用程式開啟：%2"
+
+#: ksolidnotify.cpp:205
+#, kde-format
+msgctxt "separator in list of apps blocking device unmount"
+msgid ", "
+msgstr ", "
+
+#: ksolidnotify.cpp:222
+#, kde-format
+msgid "Could not mount this device."
+msgstr "無法掛載裝置。"
+
+#: ksolidnotify.cpp:225
+#, kde-format
+msgctxt "Remove is less technical for unmount"
+msgid "Could not remove this device."
+msgstr "無法移除此裝置。"
+
+#: ksolidnotify.cpp:228
+#, kde-format
+msgid "Could not eject this disc."
+msgstr "無法取出此碟片。"

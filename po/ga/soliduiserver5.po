@@ -1,0 +1,60 @@
+# Irish translation of soliduiserver
+# Copyright (C) 2009 This_file_is_part_of_KDE
+# This file is distributed under the same license as the soliduiserver package.
+# Kevin Scannell <kscanne@gmail.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdebase/soliduiserver.po\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-17 00:47+0000\n"
+"PO-Revision-Date: 2007-07-22 14:30-0500\n"
+"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
+"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"Language: ga\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
+"3 : 4\n"
+
+#: soliduiserver.cpp:62
+#, kde-format
+msgid "'%1' needs a password to be accessed. Please enter a password."
+msgstr "Tá focal faire de dhíth chun '%1' a rochtain.  Iontráil focal faire."
+
+#~ msgid "A new device has been detected.<br><b>What do you want to do?</b>"
+#~ msgstr "Braitheadh gléas nua.<br><b>Cad is mian leat a dhéanamh?</b>"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Do nothing"
+#~ msgstr "Ná déan faic"
+
+#~ msgctxt "A default name for an action without proper label"
+#~ msgid "Unknown"
+#~ msgstr "Anaithnid"
+
+#~ msgid ""
+#~ "An autorun file as been found on your '%1'. Do you want to execute it?\n"
+#~ "Note that executing a file on a medium may compromise your system's "
+#~ "security"
+#~ msgstr ""
+#~ "Aimsíodh comhad uathrite ar do '%1'. An bhfuil fonn ort é a rith?\n"
+#~ "Tabhair faoi deara gur féidir slándáil do chórais a shárú trí chomhad ar "
+#~ "mheán a rith"
+
+#~ msgid "Autorun - %1"
+#~ msgstr "Uathrith - %1"
+
+#~ msgid ""
+#~ "An autoopen file as been found on your '%1'. Do you want to open '%2'?\n"
+#~ "Note that opening a file on a medium may compromise your system's security"
+#~ msgstr ""
+#~ "Aimsíodh comhad uathoscailte ar do '%1'. An bhfuil fonn ort '%2' a "
+#~ "oscailt?\n"
+#~ "Tabhair faoi deara gur féidir slándáil do chórais a shárú trí chomhad ar "
+#~ "mheán a oscailt"
+
+#~ msgid "Autoopen - %1"
+#~ msgstr "Uathoscail - %1"

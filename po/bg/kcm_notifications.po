@@ -1,0 +1,250 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Mincho Kondarev <mkondarev@yahoo.de>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-27 00:47+0000\n"
+"PO-Revision-Date: 2022-07-10 16:25+0200\n"
+"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.04.2\n"
+
+#: kcm.cpp:64
+#, kde-format
+msgid "Toggle do not disturb"
+msgstr "Превключване на \"Не безпокойте\""
+
+#: kcm.cpp:192
+#, kde-format
+msgid "Configure Notifications"
+msgstr "Конфигуриране на известия"
+
+#: package/contents/ui/ApplicationConfiguration.qml:63
+#, kde-format
+msgid "Show popups"
+msgstr "Показване на изскачащи прозорци"
+
+#: package/contents/ui/ApplicationConfiguration.qml:77
+#, kde-format
+msgid "Show in do not disturb mode"
+msgstr "Показване в режим \"не безпокойте\""
+
+#: package/contents/ui/ApplicationConfiguration.qml:90
+#: package/contents/ui/main.qml:148
+#, kde-format
+msgid "Show in history"
+msgstr "Показване в историята"
+
+#: package/contents/ui/ApplicationConfiguration.qml:101
+#, kde-format
+msgid "Show notification badges"
+msgstr "Показване на значки на известия"
+
+#: package/contents/ui/ApplicationConfiguration.qml:119
+#, kde-format
+msgid "Configure Events…"
+msgstr "Конфигуриране на събития…"
+
+#: package/contents/ui/ApplicationConfiguration.qml:130
+#, kde-format
+msgid ""
+"This application does not support configuring notifications on a per-event "
+"basis."
+msgstr ""
+"Това приложение не поддържа конфигуриране на известия въз основа на събитие."
+
+#: package/contents/ui/main.qml:18
+#, kde-format
+msgid "This module lets you manage application and system notifications."
+msgstr ""
+"Този модул ви позволява да управлявате системните известия и известията от "
+"приложения."
+
+#: package/contents/ui/main.qml:42
+#, kde-format
+msgid ""
+"Could not find a 'Notifications' widget, which is required for displaying "
+"notifications. Make sure that it is enabled either in your System Tray or as "
+"a standalone widget."
+msgstr ""
+"Не може да се намери уиджет \"Известия\", необходим за показване на "
+"известия. Уверете се, че е активиран в системната област или като "
+"самостоятелен уиджет."
+
+#: package/contents/ui/main.qml:53
+#, kde-format
+msgctxt "Vendor and product name"
+msgid "Notifications are currently provided by '%1 %2' instead of Plasma."
+msgstr "Понастоящем известията се предоставят от \"%1 %2\" вместо от Plasma."
+
+#: package/contents/ui/main.qml:57
+#, kde-format
+msgid "Notifications are currently not provided by Plasma."
+msgstr "Понастоящем известията не се предоставят от Plasma."
+
+#: package/contents/ui/main.qml:64
+#, kde-format
+msgid "Do Not Disturb mode:"
+msgstr "Режим \"Не безпокойте\":"
+
+#: package/contents/ui/main.qml:65
+#, kde-format
+msgctxt "Do not disturb when screens are mirrored"
+msgid "Enable when screens are mirrored"
+msgstr "Активиране, когато екраните са дублирани"
+
+#: package/contents/ui/main.qml:77
+#, kde-format
+msgctxt "Do not disturb while screen sharing"
+msgid "Enable while screen sharing"
+msgstr "Активиране по време на споделяне на екраните"
+
+#: package/contents/ui/main.qml:95
+#, kde-format
+msgctxt "Turn do not disturb mode on/off with keyboard shortcut"
+msgid "Toggle with:"
+msgstr "Превключване с:"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Critical notifications:"
+msgstr "Критични известия:"
+
+#: package/contents/ui/main.qml:110
+#, kde-format
+msgid "Show in Do Not Disturb mode"
+msgstr "Показване в режим \"не безпокойте\""
+
+#: package/contents/ui/main.qml:122
+#, kde-format
+msgid "Normal notifications:"
+msgstr "Нормални известия:"
+
+#: package/contents/ui/main.qml:123
+#, kde-format
+msgid "Show over full screen windows"
+msgstr "Показване над прозорци на цял екран"
+
+#: package/contents/ui/main.qml:135
+#, kde-format
+msgid "Low priority notifications:"
+msgstr "Известия с нисък приоритет:"
+
+#: package/contents/ui/main.qml:136
+#, kde-format
+msgid "Show popup"
+msgstr "Показване на изскачащ прозорец"
+
+#: package/contents/ui/main.qml:170
+#, kde-format
+msgid "Popup:"
+msgstr "Изскачащ прозорец:"
+
+#: package/contents/ui/main.qml:171
+#, kde-format
+msgctxt "Popup position near notification plasmoid"
+msgid "Show near notification icon"
+msgstr "Показване в близост до икона за известия"
+
+#: package/contents/ui/main.qml:208
+#, kde-format
+msgid "Choose Custom Position…"
+msgstr "Изберете персонализирана позиция…"
+
+#: package/contents/ui/main.qml:217 package/contents/ui/main.qml:241
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "%1 секунда"
+msgstr[1] "%1 секунди"
+
+#: package/contents/ui/main.qml:226
+#, kde-format
+msgctxt "Part of a sentence like, 'Hide popup after n seconds'"
+msgid "Hide after:"
+msgstr "Скриване след:"
+
+#: package/contents/ui/main.qml:258
+#, kde-format
+msgid "Application progress:"
+msgstr "Прогрес на приложението:"
+
+#: package/contents/ui/main.qml:259 package/contents/ui/main.qml:303
+#, kde-format
+msgid "Show in task manager"
+msgstr "Показване в диспечера на задачите"
+
+#: package/contents/ui/main.qml:271
+#, kde-format
+msgctxt "Show application jobs in notification widget"
+msgid "Show in notifications"
+msgstr "Показване в известията"
+
+#: package/contents/ui/main.qml:285
+#, kde-format
+msgctxt "Keep application job popup open for entire duration of job"
+msgid "Keep popup open during progress"
+msgstr "Задържане на изскачащото меню отворено по време на прогрес"
+
+#: package/contents/ui/main.qml:302
+#, kde-format
+msgid "Notification badges:"
+msgstr "Значки на известия:"
+
+#: package/contents/ui/main.qml:318
+#, kde-format
+msgid "Applications:"
+msgstr "Приложения:"
+
+#: package/contents/ui/main.qml:319
+#, kde-format
+msgid "Configure…"
+msgstr "Конфигуриране…"
+
+#: package/contents/ui/PopupPositionPage.qml:15
+#, kde-format
+msgid "Popup Position"
+msgstr "Изскачаща позиция"
+
+#: package/contents/ui/SourcesPage.qml:19
+#, kde-format
+msgid "Application Settings"
+msgstr "Настройки на приложението"
+
+#: package/contents/ui/SourcesPage.qml:91
+#, kde-format
+msgid "Applications"
+msgstr "Приложения"
+
+#: package/contents/ui/SourcesPage.qml:92
+#, kde-format
+msgid "System Services"
+msgstr "Системни услуги"
+
+#: package/contents/ui/SourcesPage.qml:130
+#, kde-format
+msgid "No application or event matches your search term."
+msgstr ""
+"Нито едно приложение или събитие не съответства на думата ви за търсене."
+
+#: package/contents/ui/SourcesPage.qml:150
+#, kde-format
+msgid ""
+"Select an application from the list to configure its notification settings "
+"and behavior."
+msgstr ""
+"Изберете приложение от списъка, за да конфигурирате настройките му за "
+"известяване и поведение."
+
+#: sourcesmodel.cpp:363
+#, kde-format
+msgid "Other Applications"
+msgstr "Други програми"

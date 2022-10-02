@@ -1,0 +1,91 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Indonesian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="screenlocker" lang="&language;">
+<articleinfo>
+<title
+>Penguncian Layar</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>Wantoyo</firstname
+><surname
+></surname
+><affiliation
+><address
+><email
+>wantoyek@gmail.com</email
+></address
+></affiliation
+><contrib
+>Terjemahan</contrib
+></othercredit
+> 
+</authorgroup>
+<!--FIXME code in workspace/kscreenlocker - docbook in workspace/plasma-desktop -->
+<date
+>19-09-2016</date>
+<releaseinfo
+>Plasma 5.8</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>systemsettings</keyword>
+<keyword
+>screenlocker</keyword>
+<keyword
+>pengunci layar</keyword>
+</keywordset>
+</articleinfo>
+<!--https://bugs.kde.org/show_bug.cgi?id=317156 does this effect screenlock in kf5?-->
+<para
+>Menggunakan modul ini, kamu bisa menentukan berapa waktu yang mesti berlalu sebelum pengunci layar diaktifkan, dan menambahakan atau menghapus perlindungan sandi untuk pengunci layarmu.</para>
+
+<para
+>Di bagian atas adalah sebuah kotak centang untuk memiliki pengunci layar <guilabel
+>Kunci layar secara otomatis setelah</guilabel
+>, dan sebuah kotak spin yang mana menentukan periode dari tidak adanya akivitas sebelum pengunci layar harus dimulai. Kamu bisa memasukkan angka positif menit di dalam kotak ini.</para>
+
+<para
+>Di bagian bawahnya adalah kotak spin yang berlabel <guilabel
+>Memerlukan sandi setelah penguncian</guilabel
+>. Ketika kamu menekan tuts atau klik tombol mouse untuk mengakhiri si  pengunci layar setelah waktu di dalam kotak spin dan kembali ke pekerjaanmu, kamu diharuskan memasukkan sebuah sandi. Sandi yang digunakan adalah sandi yang sama yang kamu gunakan untuk login ke mesinmu. </para>
+
+<para
+>Penguncian layar secara manual menyebabkan perlindungan sandi yang segera terlibat.</para>
+
+<para
+>Pintasan baku <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>L</keycap
+></keycombo
+> menyediakan cara yang cepat untuk mengunci si layar secara manual.</para>
+
+<para
+>Centang <guilabel
+>Kunci layar saat melanjutkan</guilabel
+> jika kamu ingin sebuah sistem perlindungan sandi ketika bangun dari suspensi.</para>
+
+<para
+>Jika kamu berkeinginan mengubah latarbelakang dalam status terkunci, beralihlah ke tab <guilabel
+>Wallpaper</guilabel
+>.</para>
+
+<para
+>Kamu bisa memilih <guilabel
+>Warna Polos</guilabel
+> sebagai tipe wallpaper.</para>
+
+<para
+>Selain itu, gunakanlah sebuah citra tunggal atau slideshow dengan citra dari folder atau muatan wallpaper baru dari Internet.</para>
+
+</article>

@@ -1,0 +1,516 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Elkana Bardugo <ttv200@gmail.com>, 2016.
+# Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-25 00:46+0000\n"
+"PO-Revision-Date: 2017-05-22 05:23-0400\n"
+"Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
+"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Zanata 3.9.6\n"
+
+#: plugin/actionlist.cpp:86
+#, kde-format
+msgid "Open with:"
+msgstr "פתח באמצעות:"
+
+#: plugin/actionlist.cpp:99
+#, kde-format
+msgid "Properties"
+msgstr "מאפיינים"
+
+#: plugin/actionlist.cpp:146
+#, kde-format
+msgid "Add to Desktop"
+msgstr "הוסף לשולחן עבודה"
+
+#: plugin/actionlist.cpp:151
+#, kde-format
+msgid "Add to Panel (Widget)"
+msgstr "הוסף ללוח (יישומון)"
+
+#: plugin/actionlist.cpp:156
+#, kde-format
+msgid "Pin to Task Manager"
+msgstr "הצמדה למנהל המשימות"
+
+#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:429
+#, fuzzy, kde-format
+#| msgid "Recent Documents"
+msgid "Recent Files"
+msgstr "מסמכים אחרונים"
+
+#: plugin/actionlist.cpp:317
+#, fuzzy, kde-format
+#| msgid "Forget Recent Documents"
+msgid "Forget Recent Files"
+msgstr "נקה יישומים אחרונים"
+
+#: plugin/actionlist.cpp:395
+#, fuzzy, kde-format
+#| msgid "Edit Application..."
+msgid "Edit Application…"
+msgstr "ערוך יישום..."
+
+#: plugin/actionlist.cpp:438
+#, kde-format
+msgctxt "@action opens a software center with the application"
+msgid "Uninstall or Manage Add-Ons…"
+msgstr ""
+
+#: plugin/appentry.cpp:319
+#, kde-format
+msgid "Hide Application"
+msgstr "הסתר יישום"
+
+#: plugin/appentry.cpp:390
+#, kde-format
+msgctxt "App name (Generic name)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: plugin/appentry.cpp:392
+#, kde-format
+msgctxt "Generic name (App name)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: plugin/appsmodel.cpp:34 plugin/appsmodel.cpp:58 plugin/computermodel.cpp:98
+#: plugin/computermodel.cpp:226 plugin/recentusagemodel.cpp:163
+#: plugin/recentusagemodel.cpp:226
+#, kde-format
+msgid "Applications"
+msgstr "יישומים"
+
+#: plugin/appsmodel.cpp:151
+#, kde-format
+msgid "Unhide Applications in this Submenu"
+msgstr "בטל הסתרת יישומים בתת־תפריט זה"
+
+#: plugin/appsmodel.cpp:160
+#, kde-format
+msgid "Unhide Applications in '%1'"
+msgstr "בטל יישומים מוסתרים ב־\"%1\""
+
+#: plugin/computermodel.cpp:92
+#, kde-format
+msgid "Show KRunner"
+msgstr ""
+
+#: plugin/computermodel.cpp:96
+#, kde-format
+msgid "Search, calculate, or run a command"
+msgstr ""
+
+#: plugin/computermodel.cpp:149
+#, kde-format
+msgid "Computer"
+msgstr "מחשב"
+
+#: plugin/contactentry.cpp:106 plugin/recentcontactsmodel.cpp:82
+#, fuzzy, kde-format
+#| msgid "Show Contact Information..."
+msgid "Show Contact Information…"
+msgstr "הראה נתוני איש קשר..."
+
+#. i18n.
+#: plugin/kastatsfavoritesmodel.cpp:504 plugin/rootmodel.cpp:416
+#: plugin/simplefavoritesmodel.cpp:31
+#, kde-format
+msgid "Favorites"
+msgstr "מועדפים"
+
+#: plugin/recentcontactsmodel.cpp:40
+#, kde-format
+msgid "Contacts"
+msgstr "אנשי קשר"
+
+#: plugin/recentcontactsmodel.cpp:73
+#, kde-format
+msgid "Forget Contact"
+msgstr "שכח אנשי קשר"
+
+#: plugin/recentcontactsmodel.cpp:77 plugin/recentcontactsmodel.cpp:153
+#, kde-format
+msgid "Forget All Contacts"
+msgstr "שכח את כל האנשי קשר"
+
+#: plugin/recentusagemodel.cpp:161
+#, kde-format
+msgid "Recently Used"
+msgstr "היו בשימוש לאחרונה"
+
+#: plugin/recentusagemodel.cpp:166 plugin/recentusagemodel.cpp:308
+#, kde-format
+msgid "Files"
+msgstr ""
+
+#: plugin/recentusagemodel.cpp:248
+#, kde-format
+msgid "Forget Application"
+msgstr "שכח יישומים"
+
+#: plugin/recentusagemodel.cpp:342
+#, kde-format
+msgid "Open Containing Folder"
+msgstr ""
+
+#: plugin/recentusagemodel.cpp:345
+#, fuzzy, kde-format
+#| msgid "Forget All"
+msgid "Forget File"
+msgstr "שכח הכל"
+
+#: plugin/recentusagemodel.cpp:495
+#, kde-format
+msgid "Forget All"
+msgstr "שכח הכל"
+
+#: plugin/recentusagemodel.cpp:497
+#, kde-format
+msgid "Forget All Applications"
+msgstr "שכח את כל היישומים"
+
+#: plugin/recentusagemodel.cpp:500
+#, fuzzy, kde-format
+#| msgid "Forget All"
+msgid "Forget All Files"
+msgstr "שכח הכל"
+
+#: plugin/rootmodel.cpp:95
+#, kde-format
+msgid "Hide %1"
+msgstr "הסתר %1"
+
+#: plugin/rootmodel.cpp:398
+#, kde-format
+msgid "All Applications"
+msgstr "כל היישומים"
+
+#: plugin/rootmodel.cpp:410
+#, kde-format
+msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
+msgstr ""
+
+#: plugin/rootmodel.cpp:422
+#, kde-format
+msgid "Recent Contacts"
+msgstr "אנשי קשר אחרונים"
+
+#: plugin/rootmodel.cpp:429
+#, fuzzy, kde-format
+#| msgid "Often Used Documents"
+msgid "Often Used Files"
+msgstr "מסמכים בשימוש נפוץ"
+
+#: plugin/rootmodel.cpp:438
+#, kde-format
+msgid "Recent Applications"
+msgstr "יישומים אחרונים"
+
+#: plugin/rootmodel.cpp:438
+#, kde-format
+msgid "Often Used Applications"
+msgstr "יישומים בשימוש נפוץ"
+
+#: plugin/rootmodel.cpp:453
+#, kde-format
+msgid "Power / Session"
+msgstr "יציאה"
+
+#: plugin/runnermodel.cpp:231
+#, kde-format
+msgid "Search results"
+msgstr "תוצאות חיפוש"
+
+#: plugin/systementry.cpp:195
+#, kde-format
+msgid "Lock"
+msgstr "נעילה"
+
+#: plugin/systementry.cpp:198
+#, kde-format
+msgid "Log Out"
+msgstr ""
+
+#: plugin/systementry.cpp:201 plugin/systementry.cpp:269
+#, kde-format
+msgid "Save Session"
+msgstr "שמור הפעלה"
+
+#: plugin/systementry.cpp:204
+#, kde-format
+msgid "Switch User"
+msgstr "החלף משתמש"
+
+#: plugin/systementry.cpp:207
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr ""
+
+#: plugin/systementry.cpp:210
+#, kde-format
+msgid "Hibernate"
+msgstr "שינה"
+
+#: plugin/systementry.cpp:213
+#, fuzzy, kde-format
+msgid "Restart"
+msgstr "הפעל מחדש את המחשב"
+
+#: plugin/systementry.cpp:216
+#, kde-format
+msgid "Shut Down"
+msgstr "כיבוי"
+
+#: plugin/systementry.cpp:229 plugin/systementry.cpp:232
+#: plugin/systementry.cpp:235 plugin/systementry.cpp:238
+#, kde-format
+msgid "Session"
+msgstr "הפעלה"
+
+#: plugin/systementry.cpp:241 plugin/systementry.cpp:244
+#: plugin/systementry.cpp:247 plugin/systementry.cpp:250
+#, kde-format
+msgid "System"
+msgstr "מערכת"
+
+#: plugin/systementry.cpp:263
+#, kde-format
+msgid "Lock screen"
+msgstr "מסך נעילה"
+
+#: plugin/systementry.cpp:266
+#, kde-format
+msgid "End session"
+msgstr "סיים הפעלה"
+
+#: plugin/systementry.cpp:272
+#, kde-format
+msgid "Start a parallel session as a different user"
+msgstr "התחל הפעלה מקבילה כמשתמש אחר"
+
+#: plugin/systementry.cpp:275
+#, kde-format
+msgid "Suspend to RAM"
+msgstr "השהה לזיכרון ה־RAM"
+
+#: plugin/systementry.cpp:278
+#, kde-format
+msgid "Suspend to disk"
+msgstr "השהה לכונן אחסון"
+
+#: plugin/systementry.cpp:281
+#, kde-format
+msgid "Restart computer"
+msgstr "הפעל מחדש את המחשב"
+
+#: plugin/systementry.cpp:284
+#, kde-format
+msgid "Turn off computer"
+msgstr "כבה את המחשב"
+
+#: plugin/systemmodel.cpp:31
+#, kde-format
+msgid "System actions"
+msgstr "פעולות מערכת"
+
+#~ msgid "Documents"
+#~ msgstr "מסמכים"
+
+#~ msgid "Forget Document"
+#~ msgstr "שכח מסמכים"
+
+#~ msgid "Forget All Documents"
+#~ msgstr "שכח את כל המסמכים"
+
+#~ msgid "General"
+#~ msgstr "כללי"
+
+#~ msgid "Remove from Favorites"
+#~ msgstr "הסר ממועדפים"
+
+#~ msgid "Add to Favorites"
+#~ msgstr "הוסף למועדפים"
+
+#, fuzzy
+#~| msgid "Favorites"
+#~ msgid "Show In Favorites"
+#~ msgstr "מועדפים"
+
+#, fuzzy
+#~| msgid "Icon"
+#~ msgid "Icon:"
+#~ msgstr "סמל"
+
+#~ msgid "Show applications as:"
+#~ msgstr "הראה יישומים כ:"
+
+#~ msgid "Name only"
+#~ msgstr "שם בלבד"
+
+#~ msgid "Description only"
+#~ msgstr "תיאור בלבד"
+
+#~ msgid "Name (Description)"
+#~ msgstr "שם (תיאור)"
+
+#~ msgid "Description (Name)"
+#~ msgstr "תיאור (שם)"
+
+#, fuzzy
+#~| msgid "Behavior"
+#~ msgid "Behavior:"
+#~ msgstr "התנהגות"
+
+#, fuzzy
+#~| msgid "Sort alphabetically"
+#~ msgid "Sort applications alphabetically"
+#~ msgstr "סדר לפי שם"
+
+#, fuzzy
+#~| msgid "Flatten menu to a single level"
+#~ msgid "Flatten sub-menus to a single level"
+#~ msgstr "שטח תפריט לרמה אחת"
+
+#, fuzzy
+#~| msgid "Categories"
+#~ msgid "Show categories:"
+#~ msgstr "קטגוריות"
+
+#, fuzzy
+#~| msgid "Recent Applications"
+#~ msgid "Recent applications"
+#~ msgstr "יישומים אחרונים"
+
+#, fuzzy
+#~| msgid "Often Used Applications"
+#~ msgid "Often used applications"
+#~ msgstr "יישומים בשימוש נפוץ"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Recent documents"
+#~ msgstr "מסמכים אחרונים"
+
+#, fuzzy
+#~| msgid "Often Used Documents"
+#~ msgid "Often used documents"
+#~ msgstr "מסמכים בשימוש נפוץ"
+
+#, fuzzy
+#~| msgid "Recent Contacts"
+#~ msgid "Recent contacts"
+#~ msgstr "אנשי קשר אחרונים"
+
+#, fuzzy
+#~| msgid "Show often used contacts"
+#~ msgid "Often used contacts"
+#~ msgstr "הצג אנשי קשר בשימוש נפוץ"
+
+#, fuzzy
+#~| msgid "Recently used"
+#~ msgctxt ""
+#~ "@item:inlistbox Sort items in categories by [Recently used | Often used]"
+#~ msgid "Recently used"
+#~ msgstr "בשימוש לאחרונה"
+
+#, fuzzy
+#~| msgid "Often used"
+#~ msgctxt ""
+#~ "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
+#~ msgid "Often used"
+#~ msgstr "בשימוש לעיתים קרובות"
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgid "Search:"
+#~ msgstr "חיפוש"
+
+#~ msgid "Expand search to bookmarks, files and emails"
+#~ msgstr "הרחב חיפוש ל־סמניות, קבצים והודעות דואר אלקטרוני"
+
+#~ msgid "Align search results to bottom"
+#~ msgstr "ישר תוצאות חיפוש לתחתית"
+
+#~ msgid "Searching for '%1'"
+#~ msgstr "מחפש \"%1\""
+
+#, fuzzy
+#~| msgid "Type to search."
+#~ msgid "Type to search..."
+#~ msgstr "הקלד כדי לחפש."
+
+#~ msgid "Widgets"
+#~ msgstr "יישומונים"
+
+#~ msgid "Apps & Docs"
+#~ msgstr "יישומים ומסמכים"
+
+#~ msgid "Edit Applications..."
+#~ msgstr "ערוך יישומים..."
+
+#~ msgid "Search..."
+#~ msgstr "חפש..."
+
+#~ msgctxt "@action opens a software center with the application"
+#~ msgid "Manage '%1'..."
+#~ msgstr "נהל את \"%1\"..."
+
+#~ msgid "Run Command..."
+#~ msgstr "הרץ פקודה..."
+
+#~ msgid "Run a command or a search query"
+#~ msgstr "הרץ פקודה או חיפוש"
+
+#~ msgid "Show:"
+#~ msgstr "הצג:"
+
+#~ msgid "Show recent applications"
+#~ msgstr "הראה יישומים אחרונים"
+
+#~ msgid "Show often used applications"
+#~ msgstr "הצג יישומים בשימוש נפוץ"
+
+#~ msgid "Show recent documents"
+#~ msgstr "הראה מסמכים אחרונים"
+
+#~ msgid "Show often used documents"
+#~ msgstr "הצג מסמכים בשימוש נפוץ"
+
+#~ msgid "Show recent contacts"
+#~ msgstr "הראה אנשי קשר אחרונים"
+
+#~ msgid "Removable Storage"
+#~ msgstr "אחסון נשלף"
+
+#~ msgid "Places"
+#~ msgstr "מקומות"
+
+#~ msgid "Logout"
+#~ msgstr "התנתקות"
+
+#~ msgid "Suspend"
+#~ msgstr "השהיה"
+
+#~ msgid "Reboot"
+#~ msgstr "הפעלה מחדש"
+
+#~ msgid "Use custom image:"
+#~ msgstr "השתמש בתמונה מותאמת אישית"
+
+#~ msgid "Choose an image"
+#~ msgstr "במר תמונה"
+
+#~ msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+#~ msgstr "קבצי תמונה (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"

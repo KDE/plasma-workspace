@@ -1,0 +1,72 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sairan Kikkarin <sairan@computer.org>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-27 00:45+0000\n"
+"PO-Revision-Date: 2010-03-19 05:46+0600\n"
+"Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
+"Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
+"Language: kk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: shellrunner.cpp:35
+#, kde-format
+msgid "Finds commands that match :q:, using common shell syntax"
+msgstr ":q: дегенге сәйкесті қоршау-орта командасын іздеу"
+
+#: shellrunner.cpp:36
+#, fuzzy, kde-format
+#| msgid "Run in &terminal window"
+msgid "Run in Terminal Window"
+msgstr "&Терминал терезесінде жегггілсін"
+
+#: shellrunner.cpp:54
+#, kde-format
+msgid "Run %1"
+msgstr "%1 дегенді жегу"
+
+#~ msgid "Enter the user you want to run the application as here."
+#~ msgstr ""
+#~ "Қай пайдаланушының атынан қолданбаны жегуді қалайсыз, осында келтіріңіз."
+
+#~ msgid "User&name:"
+#~ msgstr "П&айдаланушы:"
+
+#~ msgid "Enter the password here for the user you specified above."
+#~ msgstr "Жоғарда келтірілген пайдаланушының паролін осында келтіріңіз."
+
+#~ msgid "Pass&word:"
+#~ msgstr "Па&ролі:"
+
+#~ msgid ""
+#~ "Check this option if the application you want to run is a text mode "
+#~ "application. The application will then be run in a terminal emulator "
+#~ "window."
+#~ msgstr ""
+#~ "Қалаған қолданбаңыз мәтін режімінде орындалатын болса - осы белгіні "
+#~ "қойыңыз. Қолданба терминал эмуляторының терезесінде орындалатын болады."
+
+#~ msgid "Run in &terminal window"
+#~ msgstr "&Терминал терезесінде жегггілсін"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "user id. Every process has a user id associated with it. This id code "
+#~ "determines file access and other permissions. The password of the user is "
+#~ "required to do this."
+#~ msgstr ""
+#~ "Қалаған қолданбаңыз басқа пайдаланушының атынан жегілсін десеңіз - осы "
+#~ "белгіні қойыңыз. Әрбір процесс бір пайдаланушымен байланысты болады. Ол "
+#~ "файлға қатынау және басқа да рұқсаттарды анықтайды. Пайдаланушының атынан "
+#~ "жегу үшін оның паролін келтіру қажет."
+
+#~ msgid "Run as a different &user"
+#~ msgstr "Басқа &пайдаланушының атынан жегілсін"

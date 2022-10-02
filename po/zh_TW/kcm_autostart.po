@@ -1,0 +1,220 @@
+# translation of kcm_autostart.po to Chinese Traditional
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2008, 2010, 2012.
+# Jeff Huang <s8321414@gmail.com>, 2016, 2017.
+# pan93412 <pan93412@gmail.com>, 2018.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_autostart\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:50+0000\n"
+"PO-Revision-Date: 2018-03-25 11:36+0800\n"
+"Last-Translator: pan93412 <pan93412@gmail.com>\n"
+"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"dot tw>\n"
+"X-Generator: Lokalize 2.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: autostartmodel.cpp:288
+#, fuzzy, kde-format
+#| msgid "\"%1\" is not an absolute path."
+msgid "\"%1\" is not an absolute url."
+msgstr "\"%1\" 不是絕對路徑。"
+
+#: autostartmodel.cpp:291
+#, kde-format
+msgid "\"%1\" does not exist."
+msgstr "\"%1\" 不存在。"
+
+#: autostartmodel.cpp:294
+#, kde-format
+msgid "\"%1\" is not a file."
+msgstr "\"%1\" 不是檔案"
+
+#: autostartmodel.cpp:297
+#, kde-format
+msgid "\"%1\" is not readable."
+msgstr "\"%1\" 無法讀取。"
+
+#: package/contents/ui/main.qml:40
+#, kde-format
+msgid "Make Executable"
+msgstr ""
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "The file '%1' must be executable to run at logout."
+msgstr ""
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid "The file '%1' must be executable to run at login."
+msgstr ""
+
+#: package/contents/ui/main.qml:89
+#, fuzzy, kde-format
+#| msgid "&Properties..."
+msgid "Properties"
+msgstr "屬性(&P)..."
+
+#: package/contents/ui/main.qml:95
+#, fuzzy, kde-format
+#| msgid "&Remove"
+msgid "Remove"
+msgstr "移除(&R)"
+
+#: package/contents/ui/main.qml:106
+#, kde-format
+msgid "Applications"
+msgstr ""
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Login Scripts"
+msgstr ""
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Pre-startup Scripts"
+msgstr ""
+
+#: package/contents/ui/main.qml:115
+#, fuzzy, kde-format
+#| msgid "Logout"
+msgid "Logout Scripts"
+msgstr "登出"
+
+#: package/contents/ui/main.qml:124
+#, kde-format
+msgid "No user-specified autostart items"
+msgstr ""
+
+#: package/contents/ui/main.qml:125
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Click the <interface>Add…</interface> button below to add some"
+msgstr ""
+
+#: package/contents/ui/main.qml:139
+#, fuzzy, kde-format
+#| msgid "Add Script..."
+msgid "Choose Login Script"
+msgstr "新增文稿..."
+
+#: package/contents/ui/main.qml:160
+#, kde-format
+msgid "Choose Logout Script"
+msgstr ""
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "Add…"
+msgstr ""
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Add Application…"
+msgstr ""
+
+#: package/contents/ui/main.qml:199
+#, fuzzy, kde-format
+#| msgid "Add Script..."
+msgid "Add Login Script…"
+msgstr "新增文稿..."
+
+#: package/contents/ui/main.qml:205
+#, fuzzy, kde-format
+#| msgid "Add Script..."
+msgid "Add Logout Script…"
+msgstr "新增文稿..."
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Frank Weng (a.k.a. Franklin), Jeff Huang"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "franklin@goodhorse.idv.tw, s8321414@gmail.com"
+
+#~ msgid "Session Autostart Manager Control Panel Module"
+#~ msgstr "工作階段自啟管理員控制面板模組"
+
+#, fuzzy
+#~| msgid "Copyright © 2006–2010 Autostart Manager team"
+#~ msgid "Copyright © 2006–2020 Autostart Manager team"
+#~ msgstr "Copyright © 2006–2010 自動啟動管理員開發團隊"
+
+#~ msgid "Stephen Leaf"
+#~ msgstr "Stephen Leaf"
+
+#~ msgid "Montel Laurent"
+#~ msgstr "Montel Laurent"
+
+#~ msgid "Maintainer"
+#~ msgstr "維護者"
+
+#, fuzzy
+#~| msgid "Advanced..."
+#~ msgid "Add..."
+#~ msgstr "進階..."
+
+#~ msgid "Shell script path:"
+#~ msgstr "Shell 文稿路徑："
+
+#~ msgid "Create as symlink"
+#~ msgstr "以符號連結建立"
+
+#~ msgid "Autostart only in Plasma"
+#~ msgstr "只在 Plasma 自動啟動"
+
+#~ msgid "Name"
+#~ msgstr "名稱"
+
+#~ msgid "Command"
+#~ msgstr "指令"
+
+#~ msgid "Status"
+#~ msgstr "狀態"
+
+#~ msgctxt ""
+#~ "@title:column The name of the column that decides if the program is run "
+#~ "on session startup, on session shutdown, etc"
+#~ msgid "Run On"
+#~ msgstr "執行於"
+
+#~ msgid "Session Autostart Manager"
+#~ msgstr "工作階段自啟管理員"
+
+#~ msgctxt "The program will be run"
+#~ msgid "Enabled"
+#~ msgstr "已開啟"
+
+#~ msgctxt "The program won't be run"
+#~ msgid "Disabled"
+#~ msgstr "已關閉"
+
+#~ msgid "Desktop File"
+#~ msgstr "桌面檔案"
+
+#~ msgid "Script File"
+#~ msgstr "文稿檔案"
+
+#~ msgid "Add Program..."
+#~ msgstr "新增程式..."
+
+#~ msgid "Startup"
+#~ msgstr "啟動"
+
+#~ msgid "Before session startup"
+#~ msgstr "在工作階段啟動前"
+
+#~ msgid ""
+#~ "Only files with “.sh” extensions are allowed for setting up the "
+#~ "environment."
+#~ msgstr "KDE 只會讀取副檔名為 \".sh\" 的檔案來設定環境。"

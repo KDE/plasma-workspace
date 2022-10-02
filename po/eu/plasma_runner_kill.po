@@ -1,0 +1,106 @@
+# Translation of plasma_runner_kill.po to Euskara/Basque (eu).
+# Copyright (C) 2008-2014, Free Software Foundation.
+# Copyright (C) 2015-2020, This file is copyright:
+# This file is distributed under the same license as the kde-workspace package.
+# KDE euskaratzeko proiektuko arduraduna <xalba@euskalnet.net>.
+#
+# Translators:
+# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2010, 2014, 2020.
+# Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"PO-Revision-Date: 2020-06-09 20:18+0200\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.04.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: killrunner.cpp:30
+#, kde-format
+msgid "Send SIGTERM"
+msgstr "Bidali SIGTERM"
+
+#: killrunner.cpp:32
+#, kde-format
+msgid "Send SIGKILL"
+msgstr "Bidali SIGKILL"
+
+#: killrunner.cpp:51 killrunner_config.cpp:51 killrunner_config.cpp:77
+#, kde-format
+msgid "kill"
+msgstr "bukatu"
+
+#: killrunner.cpp:57
+#, kde-format
+msgid "Terminate running applications whose names match the query."
+msgstr ""
+"Kontsultarekin bat datozen eta martxan dauden aplikazioak amaitzen ditu"
+
+#: killrunner.cpp:120
+#, kde-format
+msgid "Terminate %1"
+msgstr "Amaitu %1"
+
+#: killrunner.cpp:121
+#, kde-format
+msgid "Process ID: %1"
+msgstr "Prozesuaren ID: %1"
+
+#: killrunner_config.cpp:32
+#, kde-format
+msgid "CPU usage"
+msgstr "PUZaren erabilera"
+
+#: killrunner_config.cpp:33
+#, kde-format
+msgid "inverted CPU usage"
+msgstr "PUZaren erabilera alderantzikatua"
+
+#: killrunner_config.cpp:34
+#, kde-format
+msgid "nothing"
+msgstr "ezer ere ez"
+
+#. i18n: ectx: property (title), widget (QGroupBox, main)
+#: killrunner_config.ui:30
+#, kde-format
+msgid "Kill Applications Config"
+msgstr "Aplikazioak bukatzeko konfigurazioa"
+
+#. i18n: ectx: property (text), widget (QCheckBox, useTriggerWord)
+#: killrunner_config.ui:39
+#, kde-format
+msgid "&Use trigger word"
+msgstr "&Erabili aktibazio-hitza"
+
+#. i18n: ectx: property (text), widget (QLabel, label_trigger)
+#: killrunner_config.ui:51
+#, kde-format
+msgid "&Trigger word:"
+msgstr "&Aktibazio-hitza:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_sorting)
+#: killrunner_config.ui:72
+#, kde-format
+msgid "&Sort by"
+msgstr "O&rdenatzeko irizpidea"
+
+#. i18n: ectx: property (toolTip), widget (KComboBox, sorting)
+#: killrunner_config.ui:82
+#, kde-format
+msgid "It is not sure, that this will take effect"
+msgstr "Ez dakigu seguru honek eragina izango duen"
+
+#~ msgid ""
+#~ "Process ID: %1\n"
+#~ "Running as user: %2"
+#~ msgstr ""
+#~ "Prozesuaren IDa: %1\n"
+#~ "Erabiltzaile gisa exekutatzen: %2"

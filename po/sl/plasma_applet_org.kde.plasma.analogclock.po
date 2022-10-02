@@ -1,0 +1,70 @@
+# Slovenian translation of plasma_applet_clock.
+# Copyright (C) 2007 - 2011 Free Software Foundation, Inc.
+#
+#
+# Andrej Vernekar <andrej.vernekar@moj.net>, 2007.
+# Jure Repinc <jlp@holodeck1.com>, 2007 - 2009.
+# Andrej Žnidaršič <andrej.znidarsic@ubuntu.com>, 2011.
+# Andrej Mernik <andrejm@ubuntu.si>, 2013, 2014.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_clock\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-25 00:47+0000\n"
+"PO-Revision-Date: 2022-07-26 07:34+0200\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+"X-Generator: Lokalize 22.04.1\n"
+
+#: contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Videz"
+
+#: contents/ui/analogclock.qml:76
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Current time is %1; Current date is %2"
+msgstr "Trenutni čas je %1; Trenutni datum je %2"
+
+#: contents/ui/configGeneral.qml:23
+#, kde-format
+msgid "Show seconds hand"
+msgstr "Pokaži sekundni kazalec"
+
+#: contents/ui/configGeneral.qml:24
+#, kde-format
+msgid "General:"
+msgstr "Splošno:"
+
+#: contents/ui/configGeneral.qml:28
+#, kde-format
+msgid "Show time zone"
+msgstr "Pokaži časovni pas"
+
+#~ msgid "Show the seconds"
+#~ msgstr "Pokaži sekunde"
+
+#~ msgid "Check this if you want to show the seconds."
+#~ msgstr "Izberite to možnost, če želite, da se pokažejo sekunde."
+
+#~ msgid "Show &seconds hand"
+#~ msgstr "Pokaži &sekundni kazalec"
+
+#~ msgid "Show the Timezone in text"
+#~ msgstr "Pokaži časovni pas kot besedilo"
+
+#~ msgid "Check this if you want to display Timezone in text."
+#~ msgstr ""
+#~ "Izberite to možnost, če želite, da se pokaže časovni pas kot besedilo."
+
+#~ msgid "Show &time zone"
+#~ msgstr "Pokaži &časovni pas"

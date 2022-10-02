@@ -1,0 +1,108 @@
+# Translation of freespacenotifier to Croatian
+#
+# Marko Dimjasevic <marko@dimjasevic.net>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-10-20 00:19+0000\n"
+"PO-Revision-Date: 2011-02-21 22:46+0100\n"
+"Last-Translator: Marko Dimjasevic <marko@dimjasevic.net>\n"
+"Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: freespacenotifier.cpp:91
+#, fuzzy, kde-format
+#| msgctxt "Allows the user to configure the warning notification being shown"
+#| msgid "Configure Warning"
+msgid "Configure Warning…"
+msgstr "Podesi upozorenje"
+
+#: freespacenotifier.cpp:95
+#, kde-format
+msgid "Open in Filelight"
+msgstr ""
+
+#: freespacenotifier.cpp:98
+#, fuzzy, kde-format
+#| msgctxt "Opens a file manager like dolphin"
+#| msgid "Open File Manager"
+msgid "Open in File Manager"
+msgstr "Otvori upravitelj datoteka"
+
+#. i18n: ectx: label, entry (minimumSpace), group (General)
+#: freespacenotifier.kcfg:9
+#, kde-format
+msgid "Minimum free space before user starts being notified."
+msgstr "Minimum slobodnog mjesta prije nego se obavijesti korisnika."
+
+#. i18n: ectx: label, entry (enableNotification), group (General)
+#: freespacenotifier.kcfg:15
+#, kde-format
+msgid "Is the free space notification enabled."
+msgstr "Je li obavijest o slobodnom mjestu omogućena."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
+#: freespacenotifier_prefs_base.ui:17
+#, kde-format
+msgid "Enable low disk space warning"
+msgstr "Omogući upozorenje o manjku diskovnog mjesta"
+
+#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
+#: freespacenotifier_prefs_base.ui:27
+#, kde-format
+msgid "Warn when free space is below:"
+msgstr "Upozori kad je slobodnog mjesta manje od:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
+#: freespacenotifier_prefs_base.ui:37
+#, kde-format
+msgid " MiB"
+msgstr " MiB"
+
+#: module.cpp:37
+#, kde-format
+msgid ""
+"Your Home folder is running out of disk space, you have %1 MiB remaining "
+"(%2%)."
+msgstr ""
+
+#: module.cpp:46
+#, kde-format
+msgid ""
+"Your Root partition is running out of disk space, you have %1 MiB remaining "
+"(%2%)."
+msgstr ""
+
+#: module.cpp:63
+#, kde-format
+msgctxt "The settings dialog main page name, as in 'general settings'"
+msgid "General"
+msgstr "Opće"
+
+#~ msgctxt ""
+#~ "Warns the user that the system is running low on space on his home "
+#~ "folder, indicating the percentage and absolute MiB size remaining, and "
+#~ "asks if the user wants to do something about it"
+#~ msgid ""
+#~ "You are running low on disk space on your home folder (currently %2%, %1 "
+#~ "MiB free).\n"
+#~ "Would you like to run a file manager to free some disk space?"
+#~ msgstr ""
+#~ "Nestaje Vam diskovnog prostora u Vašoj osobnoj mapi (trenutno %2%, %1 MiB "
+#~ "slobodno).\n"
+#~ "Želite li pokrenuti upravitelja datoteka kako bi oslobodili diskovni "
+#~ "prostor?"
+
+#~ msgctxt "Closes the notification"
+#~ msgid "Do Nothing"
+#~ msgstr "Ništa ne poduzimaj"

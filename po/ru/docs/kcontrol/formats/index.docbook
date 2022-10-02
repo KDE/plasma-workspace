@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Russian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="formats" lang="&language;">
+<articleinfo>
+<title
+>Форматы</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Krishna.Tateneni; &Krishna.Tateneni.mail;</author>
+<othercredit role="translator"
+><firstname
+>Екатерина</firstname
+> <surname
+>Пыжова</surname
+> <affiliation
+><address
+><email
+>haleth@yandex.ru</email
+></address
+></affiliation
+> <contrib
+>Перевод на русский</contrib
+></othercredit
+> <othercredit role="translator"
+><firstname
+>Ольга</firstname
+><surname
+>Миронова</surname
+><affiliation
+><address
+><email
+>omiro@basealt.ru</email
+></address
+></affiliation
+><contrib
+>Перевод на русский язык</contrib
+></othercredit
+><othercredit role="reviewer"
+><firstname
+>Александр</firstname
+><surname
+>Яворский</surname
+><contrib
+>Рецензирование</contrib
+></othercredit
+> 
+ </authorgroup>
+
+	  <date
+>18 мая 2015 г.</date>
+	  <releaseinfo
+>Plasma 5.3</releaseinfo>
+
+	  <keywordset>
+		<keyword
+>KDE</keyword>
+		<keyword
+>Параметры системы</keyword>
+		<keyword
+>локализация</keyword>
+		<keyword
+>страна</keyword>
+		<keyword
+>язык</keyword>
+		<keyword
+>число</keyword>
+		<keyword
+>валюта</keyword>
+	  </keywordset>
+</articleinfo>
+
+<para
+>Этот модуль приложения &systemsettings; позволяет настроить параметры, зависящие от местоположения. </para>
+
+<para
+>В большинстве случаев достаточно выбрать регион, а остальные параметры будут выбраны автоматически. </para>
+
+<para
+>В нижней части модуля показан пример того, как будут выглядеть форматы записи в зависимости от выбранных параметров. Кроме чисел в примере показаны форматы валюты, даты и времени (полный и сокращённый варианты записи). Любые изменения параметров отображаются в примере до подтверждения их применения. </para>
+
+<para
+>В раскрывающемся списке <guilabel
+>Регион</guilabel
+> перечислены страны, для которых доступна настройка форматов записи. При открытии модуля в этом списке будет показана выбранная в настоящий момент страна. При выборе варианта <quote
+>Default</quote
+> будет выбрана страна, заданная в параметрах системы по умолчанию, а в примере будут показаны настроенные для неё форматы записи. </para>
+
+<para
+>Чтобы настроить индивидуальные форматы записи разных категорий данных, установите флажок <guilabel
+>Настроить форматы отдельно</guilabel
+> и в соответствующих раскрывающихся списках выберите страну отдельно для <guilabel
+>Чисел</guilabel
+>, <guilabel
+>Времени</guilabel
+>, <guilabel
+>Валюты</guilabel
+>, <guilabel
+>Системы мер</guilabel
+> и <guilabel
+>Словарного порядка</guilabel
+>. </para>
+
+</article>

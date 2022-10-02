@@ -1,0 +1,463 @@
+# translation of kcmstyle.po to Walon
+# Ratournaedje e walon des messaedjes di KDE.
+#
+# Pablo Saratxaga <pablo@walon.org>, 2007.
+# Jean Cayron <jean.cayron@gmail.com>, 2008.
+# Jean Cayron <jean.cayron@base.be>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmstyle\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"PO-Revision-Date: 2011-07-17 16:00+0200\n"
+"Last-Translator: Jean Cayron <jean.cayron@base.be>\n"
+"Language-Team: Walloon <linux@walon.org>\n"
+"Language: wa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: gtkpage.cpp:59
+#, kde-format
+msgid "%1 is not a valid GTK Theme archive."
+msgstr ""
+
+#: kcmstyle.cpp:161 kcmstyle.cpp:168
+#, kde-format
+msgid "There was an error loading the configuration dialog for this style."
+msgstr ""
+"Åk n' a nén stî come dji tcherdjive li purnea d' apontiaedje po ci stîle ci."
+
+#: kcmstyle.cpp:274
+#, kde-format
+msgid "Failed to apply selected style '%1'."
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:32
+#, fuzzy, kde-format
+#| msgid "Show icons in menus:"
+msgid "Show icons:"
+msgstr "Håyner les imådjetes ezès menus :"
+
+#: package/contents/ui/EffectSettingsPopup.qml:33
+#, fuzzy, kde-format
+#| msgid "Radio button"
+msgid "On buttons"
+msgstr "Boton radio"
+
+#: package/contents/ui/EffectSettingsPopup.qml:44
+#, kde-format
+msgid "In menus"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:56
+#, fuzzy, kde-format
+#| msgid "Main toolbar text:"
+msgid "Main toolbar label:"
+msgstr "Sicrijhaedje del mwaisse bår ås usteyes:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "None"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:59
+#, fuzzy, kde-format
+#| msgid "Text Only"
+msgid "Text only"
+msgstr "Rén kel tecse"
+
+#: package/contents/ui/EffectSettingsPopup.qml:60
+#, fuzzy, kde-format
+#| msgid "Text Beside Icons"
+msgid "Beside icons"
+msgstr "Tecse adlé ls imådjetes"
+
+#: package/contents/ui/EffectSettingsPopup.qml:61
+#, fuzzy, kde-format
+#| msgid "Text Below Icons"
+msgid "Below icon"
+msgstr "Tecse å dzo des imådjetes"
+
+#: package/contents/ui/EffectSettingsPopup.qml:76
+#, fuzzy, kde-format
+#| msgid "Secondary toolbar text:"
+msgid "Secondary toolbar label:"
+msgstr "2inme livea di scrijhaedje del bår ås usteyes:"
+
+#: package/contents/ui/GtkStylePage.qml:18
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "&Applications"
+msgid "GNOME/GTK Application Style"
+msgstr "&Programes"
+
+#: package/contents/ui/GtkStylePage.qml:44
+#, kde-format
+msgid "GTK theme:"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:69
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgid "Preview…"
+msgstr "Prévoeyaedje"
+
+#: package/contents/ui/GtkStylePage.qml:88
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:93
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "&Applications"
+msgid "Get New GNOME/GTK Application Styles…"
+msgstr "&Programes"
+
+#: package/contents/ui/GtkStylePage.qml:109
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:111
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: package/contents/ui/main.qml:17
+#, fuzzy, kde-format
+#| msgid ""
+#| "<h1>Style</h1>This module allows you to modify the visual appearance of "
+#| "user interface elements, such as the widget style and effects."
+msgid ""
+"This module allows you to modify the visual appearance of applications' user "
+"interface elements."
+msgstr ""
+"<h1>Stîle</h1>Ci module ci vs permet d' candjî l' rivnance des elemints di "
+"l' eterface di l' uzeu, come li stîle des ahesses eyet ls efets."
+
+#: package/contents/ui/main.qml:96
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure Style…"
+msgstr "A&pontyî..."
+
+#: package/contents/ui/main.qml:116
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr ""
+
+#: package/contents/ui/main.qml:132
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "A&pontyî..."
+
+#: styleconfdialog.cpp:21
+#, kde-format
+msgid "Configure %1"
+msgstr "Apontyî %1"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "Linwete 1"
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, fuzzy, kde-format
+#| msgid "Button"
+msgid "Push Button"
+msgstr "Boton"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, fuzzy, kde-format
+#| msgid "Combobox"
+msgid "Combo box"
+msgstr "Djivêye menu disrôlant"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "Boesse a clitchî"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "Boton radio"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:133
+#, kde-format
+msgid "Tab 2"
+msgstr "Linwete 2"
+
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "&Applications"
+msgid "Application style"
+msgstr "&Programes"
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Show icons on buttons:"
+msgid "Show icons on buttons"
+msgstr "Håyner des imådjetes ezès botons:"
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, fuzzy, kde-format
+#| msgid "Show icons on buttons:"
+msgid "Show icons in menus"
+msgstr "Håyner des imådjetes ezès botons:"
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, fuzzy, kde-format
+#| msgid "Main toolbar text:"
+msgid "Main toolbar label"
+msgstr "Sicrijhaedje del mwaisse bår ås usteyes:"
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, fuzzy, kde-format
+#| msgid "Secondary toolbar text:"
+msgid "Secondary toolbar label"
+msgstr "2inme livea di scrijhaedje del bår ås usteyes:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Lorint Hendschel,Pablo Saratxaga,Djan Cayron"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "laurent.hendschel@skynet.be,pablo@walon.org,jean.cayron@gmail.com"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "Application Style"
+#~ msgstr "&Programes"
+
+#, fuzzy
+#~| msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
+#~ msgstr "© 2002 Karol Szwed, Daniel Molkentin"
+
+#~ msgid "Karol Szwed"
+#~ msgstr "Karol Szwed"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "Download New GNOME/GTK2 Application Styles..."
+#~ msgstr "&Programes"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "GNOME/GTK2 Application Styles"
+#~ msgstr "&Programes"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "Download New GNOME/GTK3 Application Styles..."
+#~ msgstr "&Programes"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "GNOME/GTK3 Application Styles"
+#~ msgstr "&Programes"
+
+#~ msgid "Unable to Load Dialog"
+#~ msgstr "Dji n' a nén savou tcherdjî l' purnea di dvize"
+
+#~ msgid "No description available."
+#~ msgstr "Nou discrijhaedje"
+
+#~ msgid "Toolbars"
+#~ msgstr "Bår ås usteyes"
+
+#~ msgid "No Text"
+#~ msgstr "Nou scrijhaedje"
+
+#, fuzzy
+#~| msgid "Widget style:"
+#~ msgid "Widget Style"
+#~ msgstr "Stîle des ahesses:"
+
+#~ msgid "Widget style:"
+#~ msgstr "Stîle des ahesses:"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Fine Tuning"
+#~ msgstr "&Fén apontiaedje"
+
+#~ msgid "Description: %1"
+#~ msgstr "Discrijhaedje: %1"
+
+#~ msgid "Group Box"
+#~ msgstr "Boesse di groupe"
+
+#~ msgid "KDE Style Module"
+#~ msgstr "Module do stîle di KDE"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "In application"
+#~ msgstr "&Programes"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "Global Menu widget"
+#~ msgstr "&Programes"
+
+#~ msgctxt "@title:window"
+#~ msgid "Menu Icons Changed"
+#~ msgstr "Les imådjetes del dressêye ont candjî"
+
+#~ msgid "Graphical effects:"
+#~ msgstr "Efets grafikes:"
+
+#~ msgid "Low display resolution and Low CPU"
+#~ msgstr "Håynaedje di basse finté eyet londjin processeu"
+
+#~ msgid "High display resolution and Low CPU"
+#~ msgstr "Håynaedje di hôte finté eyet londjin processeu"
+
+#~ msgid "Low display resolution and High CPU"
+#~ msgstr "Håynaedje di basse finté eyet fel processeu"
+
+#~ msgid "High display resolution and High CPU"
+#~ msgstr "Håynaedje di hôte finté eyet fel processeu"
+
+#~ msgid "Low display resolution and Very High CPU"
+#~ msgstr "Håynaedje di basse finté eyet mo fel processeu"
+
+#~ msgid "High display resolution and Very High CPU"
+#~ msgstr "Håynaedje di hôte finté eyet mo fel processeu"
+
+#~ msgid "kcmstyle"
+#~ msgstr "kcmstyle"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Workspace"
+#~ msgstr "Espåce di &boutaedje"
+
+#~ msgid "Get New Themes..."
+#~ msgstr "Cweri d' noveas tinmes..."
+
+#~ msgid "Icons Only"
+#~ msgstr "Rén k' les imådjetes"
+
+#~| msgid "Text pos&ition:"
+#~ msgctxt "@label:listbox"
+#~ msgid "Text pos&ition of toolbar elements:"
+#~ msgstr "Eplaeçmint do &tecse"
+
+#~| msgid "&Style"
+#~ msgctxt "@title:tab"
+#~ msgid "&Style"
+#~ msgstr "&Stîle"
+
+#~| msgid "High&light buttons under mouse"
+#~ msgctxt "@option:check"
+#~ msgid "High&light buttons under mouse"
+#~ msgstr "&Sorbriyance des botons pa dzo l' sori"
+
+#~| msgid "E&nable tooltips"
+#~ msgctxt "@option:check"
+#~ msgid "E&nable tooltips"
+#~ msgstr "Håyner des bules di &racsegnes"
+
+#~ msgid "&Effects"
+#~ msgstr "&Efets"
+
+#~ msgid "&Enable GUI effects"
+#~ msgstr "&Permete les efets vizuwels"
+
+#~ msgid "Disable"
+#~ msgstr "Dismete"
+
+#~ msgid "Animate"
+#~ msgstr "Animer"
+
+#~ msgid "Combobo&x effect:"
+#~ msgstr "Efet &djivêye menu disrôlant:"
+
+#~ msgid "Fade"
+#~ msgstr "Blanki"
+
+#~ msgid "&Tool tip effect:"
+#~ msgstr "Efet &racsegnes:"
+
+#~ msgid "Make Translucent"
+#~ msgstr "Voeyaedje houte"
+
+#~ msgid "&Menu effect:"
+#~ msgstr "Efet pol &menu:"
+
+#~ msgid "Me&nu tear-off handles:"
+#~ msgstr "Pou&gnêyes menu distaetchåve:"
+
+#~ msgid "Menu &drop shadow"
+#~ msgstr "&Ombion pa dzo les menus"
+
+#~ msgid "Software Tint"
+#~ msgstr "Tinte do programe"
+
+#, fuzzy
+#~ msgid "Software Blend"
+#~ msgstr "Metaedje a djoû des programes"
+
+#~ msgid "0%"
+#~ msgstr "0%"
+
+#~ msgid "50%"
+#~ msgstr "50%"
+
+#~ msgid "100%"
+#~ msgstr "100%"
+
+#, fuzzy
+#~ msgid "Menu trans&lucency type:"
+#~ msgstr "Sôre di recurince:"
+
+#, fuzzy
+#~ msgid "Menu &opacity:"
+#~ msgstr "Metacity"
+
+#~ msgid "Transparent tool&bars when moving"
+#~ msgstr "Bår ås usteyes k' on voet &houte cwand on les displaece"
+
+#, fuzzy
+#~ msgid "Menu translucency is not available.<br />"
+#~ msgstr "li sopoirt «%s» n' est nén disponibe"
+
+#, fuzzy
+#~ msgid "Menu drop-shadows are not available."
+#~ msgstr "Li ridant måjhon n' est nén disponibe."
+
+#~ msgid "%"
+#~ msgstr "%"

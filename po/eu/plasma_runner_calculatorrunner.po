@@ -1,0 +1,49 @@
+# Translation of plasma_runner_calculatorrunner.po to Euskara/Basque (eu).
+# Copyright (C) 2008-2018, Free Software Foundation.
+# Copyright (C) 2019-2020, This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# KDE euskaratzeko proiektuko arduraduna <xalba@euskalnet.net>.
+#
+# Translators:
+# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2010, 2014, 2018, 2020.
+# Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-17 00:47+0000\n"
+"PO-Revision-Date: 2020-12-13 11:17+0100\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.08.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: calculatorrunner.cpp:33
+#, kde-format
+msgid ""
+"Calculates the value of :q: when :q: is made up of numbers and mathematical "
+"symbols such as +, -, /, *, ! and ^."
+msgstr ""
+":q:(r)en balioa kalkulatzen du :q: zenbakiz eta ikur matematikoz, hala nola "
+"+, -, /, *, ! eta ^, osatuta dagoenean."
+
+#: calculatorrunner.cpp:39
+#, kde-format
+msgid "Copy to Clipboard"
+msgstr "Kopiatu arbelera"
+
+#: calculatorrunner.cpp:129
+#, kde-format
+msgctxt "The result of the calculation is only an approximation"
+msgid "Approximation"
+msgstr "Hurbilketa"
+
+#~ msgid ""
+#~ "The exchange rates could not be updated. The following error has been "
+#~ "reported: %1"
+#~ msgstr ""
+#~ "Truke-tasak ezin izan dira eguneratu. Ondoko errorearen berri eman da: %1"

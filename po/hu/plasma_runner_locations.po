@@ -1,0 +1,48 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Tamas Szanto <tszanto@interware.hu>, 2008.
+# Balázs Úr <urbalazs@gmail.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: KDE 4.3\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"PO-Revision-Date: 2013-03-29 10:02+0100\n"
+"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: locationrunner.cpp:33
+#, kde-format
+msgid ""
+"Finds local directories and files, network locations and Internet sites with "
+"paths matching :q:."
+msgstr ""
+"Olyan helyi mappák és fájlok, hálózati helyek és weboldalak keresése, melyek "
+"elérési útja illeszkedik ehhez: :q:."
+
+#: locationrunner.cpp:60
+#, kde-format
+msgid "Open %1"
+msgstr "%1 megnyitása"
+
+#: locationrunner.cpp:78 locationrunner.cpp:82
+#, kde-format
+msgid "Launch with %1"
+msgstr "Indítás ezzel: %1"
+
+#: locationrunner.cpp:88
+#, kde-format
+msgid "Go to %1"
+msgstr "Ugrás ide: %1"
+
+#: locationrunner.cpp:96
+#, kde-format
+msgid "Send email to %1"
+msgstr "E-mail küldése neki: %1"

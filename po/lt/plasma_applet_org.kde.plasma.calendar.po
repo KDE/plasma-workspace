@@ -1,0 +1,76 @@
+# Lithuanian translations for trunk-kf package.
+# Copyright (C) 2014 This_file_is_part_of_KDE
+# This file is distributed under the same license as the trunk-kf package.
+#
+# Automatically generated, 2014.
+# liudas@aksioma.lt <liudas@aksioma.lt>, 2014.
+# Liudas Ališauskas <liudas@akmc.lt>, 2015.
+# Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: trunk-kf 5\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2019-06-04 22:15+0000\n"
+"Last-Translator: Moo\n"
+"Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
+"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Bendra"
+
+#: package/contents/ui/configGeneral.qml:24
+#, kde-format
+msgid "Calendar version:"
+msgstr "Kalendoriaus versija:"
+
+#: package/contents/ui/configGeneral.qml:26
+#, kde-format
+msgid "Show week numbers"
+msgstr "Rodyti savaitės numerius"
+
+#: package/contents/ui/configGeneral.qml:36
+#, kde-format
+msgctxt "What information is shown in the calendar icon"
+msgid "Compact version:"
+msgstr "Kompaktiška versija:"
+
+#: package/contents/ui/configGeneral.qml:38
+#, kde-format
+msgctxt "Show the number of the day (eg. 31) in the icon"
+msgid "Show day of the month"
+msgstr "Rodyti mėnesio dieną"
+
+#: package/contents/ui/configGeneral.qml:44
+#, kde-format
+msgctxt "Show the week number (eg. 50) in the icon"
+msgid "Show week number"
+msgstr "Rodyti savaitės numerį"
+
+#~ msgid "Working Day"
+#~ msgstr "Darbo diena"
+
+#~ msgid "Starts at 9"
+#~ msgstr "Prasideda nuo 9"
+
+#~ msgid "Ends at 5"
+#~ msgstr "Baigiasi 17"
+
+#~ msgctxt "What information is shown in the calendar icon"
+#~ msgid "Icon:"
+#~ msgstr "Ženkliukas:"
+
+#~ msgctxt "Show the number of the day (eg. 31) in the icon"
+#~ msgid "Day in month"
+#~ msgstr "Mėnesio diena"
+
+#~ msgid "Agenda"
+#~ msgstr "Darbotvarkė"

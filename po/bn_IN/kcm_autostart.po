@@ -1,0 +1,233 @@
+# translation of kcm_autostart.po to Bengali INDIA
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Runa Bhattacharjee <runab@redhat.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_autostart\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:50+0000\n"
+"PO-Revision-Date: 2009-01-13 15:46+0530\n"
+"Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
+"Language-Team: Bengali INDIA <fedora-trans-bn_IN@redhat.com>\n"
+"Language: bn_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: autostartmodel.cpp:288
+#, kde-format
+msgid "\"%1\" is not an absolute url."
+msgstr ""
+
+#: autostartmodel.cpp:291
+#, kde-format
+msgid "\"%1\" does not exist."
+msgstr ""
+
+#: autostartmodel.cpp:294
+#, kde-format
+msgid "\"%1\" is not a file."
+msgstr ""
+
+#: autostartmodel.cpp:297
+#, kde-format
+msgid "\"%1\" is not readable."
+msgstr ""
+
+#: package/contents/ui/main.qml:40
+#, kde-format
+msgid "Make Executable"
+msgstr ""
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "The file '%1' must be executable to run at logout."
+msgstr ""
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid "The file '%1' must be executable to run at login."
+msgstr ""
+
+#: package/contents/ui/main.qml:89
+#, fuzzy, kde-format
+#| msgid "&Properties"
+msgid "Properties"
+msgstr "বিবিধ বৈশিষ্ট্য (&P)"
+
+#: package/contents/ui/main.qml:95
+#, fuzzy, kde-format
+#| msgid "&Remove"
+msgid "Remove"
+msgstr "মুছে ফেলুন (&R)"
+
+#: package/contents/ui/main.qml:106
+#, kde-format
+msgid "Applications"
+msgstr ""
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Login Scripts"
+msgstr ""
+
+#: package/contents/ui/main.qml:112
+#, fuzzy, kde-format
+#| msgid "Pre-KDE startup"
+msgid "Pre-startup Scripts"
+msgstr "KDE প্রারম্ভের পূর্বে"
+
+#: package/contents/ui/main.qml:115
+#, kde-format
+msgid "Logout Scripts"
+msgstr ""
+
+#: package/contents/ui/main.qml:124
+#, kde-format
+msgid "No user-specified autostart items"
+msgstr ""
+
+#: package/contents/ui/main.qml:125
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Click the <interface>Add…</interface> button below to add some"
+msgstr ""
+
+#: package/contents/ui/main.qml:139
+#, fuzzy, kde-format
+#| msgid "Add Script..."
+msgid "Choose Login Script"
+msgstr "স্ক্রিপ্ট যোগ করুন..."
+
+#: package/contents/ui/main.qml:160
+#, kde-format
+msgid "Choose Logout Script"
+msgstr ""
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "Add…"
+msgstr ""
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Add Application…"
+msgstr ""
+
+#: package/contents/ui/main.qml:199
+#, fuzzy, kde-format
+#| msgid "Add Script..."
+msgid "Add Login Script…"
+msgstr "স্ক্রিপ্ট যোগ করুন..."
+
+#: package/contents/ui/main.qml:205
+#, fuzzy, kde-format
+#| msgid "Add Script..."
+msgid "Add Logout Script…"
+msgstr "স্ক্রিপ্ট যোগ করুন..."
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "রুণা ভট্টাচার্য্য"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "runab@redhat.com"
+
+#, fuzzy
+#~| msgid "KDE Autostart Manager Control Panel Module"
+#~ msgid "Session Autostart Manager Control Panel Module"
+#~ msgstr "KDE Autostart পরিচালনব্যবস্থার কনট্রোল প্যানেলের মডিউল"
+
+#, fuzzy
+#~| msgid "(c) 2006-2007-2008 Autostart Manager team"
+#~ msgid "Copyright © 2006–2020 Autostart Manager team"
+#~ msgstr "(c) ২০০৬-২০০৭-২০০৮ Autostart পরিচালনব্যবস্থার দল"
+
+#~ msgid "Stephen Leaf"
+#~ msgstr "স্টেফান লিফ"
+
+#~ msgid "Montel Laurent"
+#~ msgstr "মন্টেল লরেন্ট"
+
+#~ msgid "Maintainer"
+#~ msgstr "মেইন্টেনার"
+
+#, fuzzy
+#~| msgid "Advanced"
+#~ msgid "Add..."
+#~ msgstr "উন্নত বৈশিষ্ট্য"
+
+#, fuzzy
+#~| msgid "Shell script:"
+#~ msgid "Shell script path:"
+#~ msgstr "শেল স্ক্রিপ্ট:"
+
+#~ msgid "Create as symlink"
+#~ msgstr "symlink রূপে নির্মাণ করুন"
+
+#, fuzzy
+#~| msgid "Autostart only in KDE"
+#~ msgid "Autostart only in Plasma"
+#~ msgstr "শুধুমাত্র KDE-র মধ্যে স্বয়ংক্রিয়রূপে আরম্ভ করা হবে"
+
+#~ msgid "Name"
+#~ msgstr "নাম"
+
+#~ msgid "Command"
+#~ msgstr "কমান্ড"
+
+#~ msgid "Status"
+#~ msgstr "অবস্থা"
+
+#, fuzzy
+#~| msgctxt ""
+#~| "@title:column The name of the column that decides if the program is run "
+#~| "on kde startup, on kde shutdown, etc"
+#~| msgid "Run On"
+#~ msgctxt ""
+#~ "@title:column The name of the column that decides if the program is run "
+#~ "on session startup, on session shutdown, etc"
+#~ msgid "Run On"
+#~ msgstr "সঞ্চালনের সময়"
+
+#, fuzzy
+#~| msgid "KDE Autostart Manager"
+#~ msgid "Session Autostart Manager"
+#~ msgstr "KDE Autostart পরিচালনব্যবস্থা"
+
+#~ msgctxt "The program will be run"
+#~ msgid "Enabled"
+#~ msgstr "সক্রিয়"
+
+#~ msgctxt "The program won't be run"
+#~ msgid "Disabled"
+#~ msgstr "নিষ্ক্রিয়"
+
+#~ msgid "Desktop File"
+#~ msgstr "ডেস্কটপ ফাইল"
+
+#~ msgid "Script File"
+#~ msgstr "স্ক্রিপ্ট ফাইল"
+
+#~ msgid "Add Program..."
+#~ msgstr "প্রোগ্রাম যোগ করুন..."
+
+#~ msgid "Startup"
+#~ msgstr "প্রারম্ভ"
+
+#, fuzzy
+#~| msgid ""
+#~| "KDE only reads files with sh extensions for setting up the environment."
+#~ msgid ""
+#~ "Only files with “.sh” extensions are allowed for setting up the "
+#~ "environment."
+#~ msgstr ""
+#~ "পরিবেশ নির্ধারণের জন্য KDE দ্বারা শুধুমাত্র sh এক্সটেনশন বিশিষ্ট ফাইল পড়া হয়।"
+
+#~ msgid "Shutdown"
+#~ msgstr "বন্ধ"

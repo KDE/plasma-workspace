@@ -1,0 +1,72 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"PO-Revision-Date: 2014-09-25 18:11+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: timesource.cpp:46
+msgid "Local"
+msgstr "Lokal"
+
+#: timesource.cpp:61
+msgid "Timezone"
+msgstr "Tidszon"
+
+#: timesource.cpp:66 timesource.cpp:69 timesource.cpp:73
+msgid "Timezone City"
+msgstr "Tidszon stad"
+
+#: timesource.cpp:68 timesource.cpp:71
+msgid "Timezone Continent"
+msgstr "Tidszon kontinent"
+
+#: timesource.cpp:72
+msgid "Timezone Country"
+msgstr "Tidszon land"
+
+#: timesource.cpp:97
+msgid "Offset"
+msgstr "Skillnad"
+
+#: timesource.cpp:100
+msgid "Timezone Abbreviation"
+msgstr "Tidszon förkortning"
+
+#: timesource.cpp:131 timesource.cpp:150 timesource.cpp:171
+msgid "DateTime"
+msgstr "Datum- och tid"
+
+#: timesource.cpp:146
+msgid "Latitude"
+msgstr "Latitud"
+
+#: timesource.cpp:147
+msgid "Longitude"
+msgstr "Longitud"
+
+#: timesource.cpp:148
+msgid "Solar"
+msgstr "Sol"
+
+#: timesource.cpp:149
+msgid "Moon"
+msgstr "Måne"
+
+#~ msgid "Time"
+#~ msgstr "Tid"
+
+#~ msgid "Date"
+#~ msgstr "Datum"

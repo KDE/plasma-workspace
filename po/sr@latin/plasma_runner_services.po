@@ -1,0 +1,48 @@
+# Translation of plasma_runner_services.po into Serbian.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2009, 2014, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_services\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-06-16 02:25+0200\n"
+"PO-Revision-Date: 2016-05-06 16:01+0200\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#: servicerunner.cpp:298
+#, fuzzy, kde-format
+#| msgid "System Settings"
+msgid "System Information"
+msgstr "Sistemske postavke"
+
+#: servicerunner.cpp:300 servicerunner.cpp:417 servicerunner.cpp:424
+#, kde-format
+msgid "System Settings"
+msgstr "Sistemske postavke"
+
+#: servicerunner.cpp:372
+#, kde-format
+msgctxt ""
+"Jump list search result, %1 is action (eg. open new tab), %2 is application "
+"(eg. browser)"
+msgid "%1 - %2"
+msgstr "%1 — %2"
+
+#: servicerunner.cpp:410
+#, kde-format
+msgid "Finds applications whose name or description match :q:"
+msgstr "Nalazi programe čija imena ili opis poklapaju :q:"
+
+#: servicerunner.cpp:417 servicerunner.cpp:422
+#, kde-format
+msgid "Applications"
+msgstr "Programi"

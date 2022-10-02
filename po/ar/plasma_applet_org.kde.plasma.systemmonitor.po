@@ -1,0 +1,45 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-09 00:47+0000\n"
+"PO-Revision-Date: 2021-06-19 23:40+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: Arabic <kde-i18n-ar@kde.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 21.07.70\n"
+
+#: package/contents/config/config.qml:10
+#, kde-format
+msgid "Appearance"
+msgstr "المظهر"
+
+#: package/contents/config/config.qml:15
+#, kde-format
+msgid "%1 Details"
+msgstr "تفاصيل %1"
+
+#: package/contents/config/config.qml:21
+#, kde-format
+msgid "Sensors Details"
+msgstr "تفاصيل المستشعرات"
+
+#: package/contents/ui/main.qml:33
+#, kde-format
+msgid "System Monitor"
+msgstr "مراقب النظام"
+
+#: package/contents/ui/main.qml:55
+#, kde-format
+msgctxt "@action"
+msgid "Open System Monitor…"
+msgstr "افتح مراقب النظام..."

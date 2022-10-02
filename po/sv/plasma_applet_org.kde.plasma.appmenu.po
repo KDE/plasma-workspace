@@ -1,0 +1,69 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2017, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-22 00:47+0000\n"
+"PO-Revision-Date: 2022-08-03 09:27+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.08.1\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Utseende"
+
+#: package/contents/ui/configGeneral.qml:22
+#, kde-format
+msgid "Use single button for application menu"
+msgstr "Använd en knapp för programmeny"
+
+#: package/contents/ui/configGeneral.qml:28
+#, kde-format
+msgid "Show full application menu"
+msgstr "Visa fullständig programmeny"
+
+#: package/contents/ui/MenuDelegate.qml:62
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Open a menu"
+msgstr "Visa en meny"
+
+#: plugin/appmenumodel.cpp:84
+#, kde-format
+msgid "Search"
+msgstr "Sök"
+
+#: plugin/appmenumodel.cpp:91
+#, kde-format
+msgid "Search…"
+msgstr "Sök…"
+
+#~ msgid "Search..."
+#~ msgstr "Sök..."
+
+#~ msgid "application-menu"
+#~ msgstr "Programmeny"
+
+#~ msgid "Application Menu Widget is disabled"
+#~ msgstr "Programmenykomponent är inaktiverad"
+
+#~ msgctxt "it being the 'Application Menu Widget'"
+#~ msgid ""
+#~ "Go to System Settings > Application Style > Fine Tuning (tab) to enable "
+#~ "it."
+#~ msgstr ""
+#~ "Gå till systeminställningarna, Programstil, Finjustering (flik) för att "
+#~ "aktivera den."
+
+#~ msgid "emblem-warning"
+#~ msgstr "Varningsemblem"

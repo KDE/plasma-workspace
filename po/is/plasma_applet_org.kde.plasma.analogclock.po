@@ -1,0 +1,68 @@
+# translation of plasma_applet_clock.po to icelandic
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sveinn í Felli <sveinki@nett.is>, 2008, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_clock\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-25 00:47+0000\n"
+"PO-Revision-Date: 2009-04-11 21:51+0000\n"
+"Last-Translator: Sveinn í Felli <sveinki@nett.is>\n"
+"Language-Team: icelandic <kde-isl@molar.is>\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
+"\n"
+"\n"
+
+#: contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Útlit"
+
+#: contents/ui/analogclock.qml:76
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Current time is %1; Current date is %2"
+msgstr ""
+
+#: contents/ui/configGeneral.qml:23
+#, fuzzy, kde-format
+#| msgid "Show &seconds hand"
+msgid "Show seconds hand"
+msgstr "Sýna &sekúnduvísi"
+
+#: contents/ui/configGeneral.qml:24
+#, kde-format
+msgid "General:"
+msgstr ""
+
+#: contents/ui/configGeneral.qml:28
+#, fuzzy, kde-format
+#| msgid "Show &time zone"
+msgid "Show time zone"
+msgstr "Sýna &tímabelti"
+
+#~ msgid "Show the seconds"
+#~ msgstr "Sýna sekúndur"
+
+#~ msgid "Check this if you want to show the seconds."
+#~ msgstr "Veldu þetta ef þú vilt geta séð sekúndurnar."
+
+#~ msgid "Show &seconds hand"
+#~ msgstr "Sýna &sekúnduvísi"
+
+#~ msgid "Show the Timezone in text"
+#~ msgstr "Líka sýna tímabelti í texta"
+
+#~ msgid "Check this if you want to display Timezone in text."
+#~ msgstr ""
+#~ "Veldu þetta ef þú vilt geta séð tímanbeltið sem texta inni í klukkunni."
+
+#~ msgid "Show &time zone"
+#~ msgstr "Sýna &tímabelti"

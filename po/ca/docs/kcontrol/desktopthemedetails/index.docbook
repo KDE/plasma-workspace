@@ -1,0 +1,177 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Catalan  "INCLUDE">
+]>
+<article id="desktopthemedetails" lang="&language;">
+<articleinfo>
+<title
+>Estil del Plasma</title>
+<authorgroup>
+<author
+><firstname
+>Andrew</firstname
+> <surname
+>Lake</surname
+></author>
+<author
+><firstname
+>Carl</firstname
+> <surname
+>Schwan</surname
+> </author>
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+<date
+>9 d'abril de 2021</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Arranjament del sistema</keyword>
+<keyword
+>escriptori</keyword>
+<keyword
+>estil</keyword>
+<keyword
+>tema</keyword>
+<keyword
+>plasma</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>El &plasma; ve amb múltiples estils. L'estil del &plasma; defineix com es mostraran els diferents components del &plasma; (&pex;, plasmoides, plafons, ginys). </para>
+
+<para>
+  <screenshot>
+    <screeninfo
+>Aquesta és una captura de pantalla del gestor d'estils del &plasma;</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="main.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase
+>Personalització de l'estil del &plasma;</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</para>
+
+<para
+>En aquest mòdul, podeu:</para>
+<itemizedlist>
+  <listitem
+><para
+>instal·lar i escollir estils del &plasma;</para
+></listitem>
+  <listitem
+><para
+>editar els estils del &plasma;</para
+></listitem>
+  <listitem
+><para
+>eliminar els estils del &plasma;</para
+></listitem>
+</itemizedlist>
+
+<para
+>És possible filtrar la llista d'estils utilitzant el camp <guilabel
+>Cerca...</guilabel
+> que hi ha a sobre de la quadrícula. A més, podeu utilitzar el quadre combinat al costat d'aquest camp per a només mostrar els temes <guimenuitem
+>Temes clars</guimenuitem
+>, <guimenuitem
+>Temes foscos</guimenuitem
+> o <guimenuitem
+>Compatible amb l'esquema de color</guimenuitem
+>. </para>
+
+<para
+>Si voleu eliminar un estil, utilitzeu la icona <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+> superposada que hi ha a baix a la dreta de la icona d'estil. Per a desfer aquesta acció, feu clic a la icona <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-undo.png" format="PNG"/></imageobject
+></inlinemediaobject
+>. Si premeu el botó <guibutton
+>Aplica</guibutton
+> els estils seleccionats per a la seva eliminació seran realment suprimits, de manera que podreu desfer les eliminacions individuals o totes. </para>
+
+<para
+>Si el paquet plasma-sdk està instal·lat al vostre sistema, apareixerà un botó sobre la vista prèvia d'un estil i us permetrà iniciar-lo a l'<application
+>Explorador per als temes del Plasma</application
+>. </para>
+<para
+>Per a més informació tècnica, visiteu <ulink url="https://develop.kde.org/docs/plasma/theme/theme-details/"
+>aquesta pàgina</ulink
+>. </para>
+
+<variablelist>
+  <varlistentry>
+    <term
+><guilabel
+>Obtén estils nous del Plasma...</guilabel
+></term>
+    <listitem>
+    <para
+>Per a utilitzar-lo haureu d'estar connectats a Internet. Fent clic sobre aquest botó es mostrarà un diàleg des d'on podreu seleccionar un estil nou del &plasma;. Fent clic a <guibutton
+>Instal·la</guibutton
+> en el diàleg s'instal·larà l'estil del &plasma; seleccionat, i després fent clic a <guibutton
+>Tanca</guibutton
+> a l'instal·lador, l'estil nou restarà disponible immediatament. </para>
+    <para>
+    <screenshot>
+    <screeninfo
+>Obtén estils nous del Plasma...</screeninfo>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="get-new-theme.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase
+>Obtén estils nous del Plasma...</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    </para>
+    </listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>Instal·la des d'un fitxer...</guilabel
+></term>
+    <listitem>
+      <para
+>Si heu baixat estils nous des d'Internet, podeu utilitzar això per a anar fins a la ubicació d'aquests estils baixats. Fent clic sobre aquest botó es presentarà un diàleg de fitxers per a indicar l'arxiu tar de l'estil del &plasma; que hi ha al disc.</para>
+
+      <para
+>Fent clic a <guibutton
+>Obre</guibutton
+> en aquest diàleg, s'instal·larà l'estil que heu indicat i el mostrarà a la llista d'estils. </para>
+    </listitem>
+  </varlistentry>
+</variablelist>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

@@ -1,0 +1,412 @@
+<?xml version="1.0" ?>
+
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Italian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="colors" lang="&language;">
+<articleinfo>
+<title
+>Colori</title>
+<authorgroup>
+<author
+>&Matthew.Woehlke; &Matthew.Woehlke.mail;</author>
+<othercredit role="translator"
+><firstname
+>Vincenzo</firstname
+><surname
+>Reale</surname
+><affiliation
+><address
+><email
+>smart2128vr@gmail.com</email
+></address
+></affiliation
+><contrib
+>Traduzione</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Luciano</firstname
+><surname
+>Montanaro</surname
+><affiliation
+><address
+><email
+>mikelima@cirulla.net</email
+></address
+></affiliation
+><contrib
+>Traduzione</contrib
+></othercredit
+> <othercredit role="translator"
+><firstname
+>Daniele</firstname
+><surname
+>Micci</surname
+><affiliation
+><address
+><email
+>daniele.micci@tiscali.it</email
+></address
+></affiliation
+><contrib
+>Traduzione</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>8/4/2021</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>colore</keyword>
+<keyword
+>kcm</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="color">
+<title
+>Colori</title>
+
+<sect2 id="color-scheme">
+  <title
+>Gestione dello schema</title>
+
+  <para
+>Questo modulo consente di gestire gli schemi di colori sulla propria macchina. Mostra un elenco di schemi di colore forniti con &plasma; e un'anteprima in alto. Ci può essere solo uno schema attivo, ma è possibile modificare gli schemi. Si può rimuovere uno schema utilizzando il pulsante <guibutton
+>Rimuovi schema</guibutton
+>mostrato quando si passa il puntatore del mouse sopra un elemento della griglia. Notare che gli schemi di sistema non possono essere rimossi; il pulsante per questa azione è disabilitato.</para>
+
+  <para
+>È possibile filtrare l'elenco degli schemi utilizzando il campo <guilabel
+>Cerca...</guilabel
+> sulla griglia. Inoltre, puoi utilizzare la casella combinata accanto a questo campo per mostrare solo gli <guimenuitem
+>Schemi chiari</guimenuitem
+> o gli <guimenuitem
+>Schemi scuri</guimenuitem
+>. </para>
+
+  <para
+>Se si dispone di una connessione a Internet, è possibile anche sfogliare e scaricare schemi creati da altri utenti utilizzando il pulsante <guibutton
+>Ottieni nuovi schemi di colore...</guibutton
+>.</para>
+
+  <para
+>È possibile inoltre installare gli schemi scaricati o ottenuti in altro modo, così come importare gli schemi di &kde; 4 con nomi del tipo &quot;*.colors&quot;. </para>
+
+  <note>
+  <para
+>Questa documentazione farà talvolta riferimento allo schema &quot;attuale&quot;, oppure allo schema &quot;attivo&quot;. Lo schema &quot;attuale&quot; è l'insieme di colori e le opzioni dello schema di colori che sono state applicate per ultime, ovvero ciò si otterrebbe premendo il pulsante <guibutton
+>Annulla</guibutton
+>. Lo schema &quot;attivo&quot; è l'insieme di colori che è stato modificato per ultimo, ovvero ciò che si otterrebbe facendo clic sul pulsante <guibutton
+>Applica</guibutton
+>.</para>
+  </note>
+</sect2>
+
+<sect2>
+  <title
+>Modificare o creare schemi</title>
+  <para
+>Per modificare o creare nuovi schemi selezionare uno schema dall'elenco e premere il pulsante <guibutton
+>Modifica schema</guibutton
+> per aprire una finestra di dialogo con tre schede <guilabel
+>Opzioni</guilabel
+>, <guilabel
+>Colori</guilabel
+> e <guilabel
+>Disabilitato</guilabel
+>. Una volta creato uno schema di proprio gradimento, è possibile caricarlo, reimpostarlo o salvarlo con un nome diverso o sovrascrivere lo schema attivo. </para>
+
+<sect3 id="color-options">
+  <title
+>Opzioni dello schema di colori</title>
+
+  <para
+>La scheda <guilabel
+>Opzioni</guilabel
+> ti consente di modificare alcune proprietà che hanno a che fare con il modo in cui lo schema di colori è utilizzato, così come alcune opzioni che modificano lo schema di colori differenti dalla reale assegnazione dei colori.</para>
+
+  <itemizedlist>
+    <listitem
+><para
+><guilabel
+>Applica gli effetti alle finestre inattive</guilabel
+> &mdash; Se selezionata, gli effetti di stato (vedi di <link linkend="color-effects"
+>seguito</link
+>) saranno applicati alle finestre inattive. Ciò può aiutare a distinguere visivamente le finestre attive da quelle inattive, e potrebbe avere un valore estetico, secondo il tuo gusto. Tuttavia, alcuni utenti trovano che ciò causi un &quot;tremolio&quot; fastidioso, dal momento che le finestre devono essere ridisegnate quando diventano inattive. A differenza degli effetti del desktop, gli effetti di stato dei colori non richiedono il supporto della composizione e funzioneranno su tutti i sistemi, anche se solo sulle applicazioni di &kde;. </para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Usa colori diversi per le selezione inattive</guilabel
+> &mdash; Se selezionata, la selezione di elementi non attivi sarà disegnata utilizzando un colore diverso. Ciò facilita l'individuazione visiva dell'elemento attivo in alcune applicazioni, in special modo in quelle che visualizzano simultaneamente diversi elenchi. </para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Ombreggia la colonna ordinata nelle liste</guilabel
+> &mdash; Se selezionato, le liste suddivise in varie colonne adotteranno un colore lievemente differente per la colonna le cui informazioni sono utilizzate per ordinare gli elementi nella lista. </para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Contrasto</guilabel
+> &mdash; Questo cursore controlla il contrasto degli elementi ombreggiati, come i bordi del riquadro e gli effetti &quot;3D&quot; usati da molti stili. Un valore basso dà minor contrasto e quindi margini più morbidi, mentre un valore alto fa &quot;risaltare&quot; maggiormente quei margini. </para
+></listitem>
+  </itemizedlist>
+
+</sect3>
+
+<sect3 id="color-colors">
+  <title
+>Colori</title>
+
+  <para
+>La scheda <guilabel
+>Colori</guilabel
+> ti permette di modificare i colori nello schema di colori attivo.</para>
+
+  <para
+>Creare o modificare uno schema è semplicemente questione di fare clic sull'interruttore nella lista dei colori e selezionare un nuovo colore. Si suggerisce di salvare lo schema una volta apportate le modifiche.</para>
+
+  <para
+>L'insieme <guilabel
+>Colori comuni</guilabel
+>, che viene visualizzato inizialmente, non è realmente un &quot;insieme&quot; nel senso in cui il termine è utilizzato in Plasma (vedi la prossima sezione), ma rappresenta un certo numero di ruoli del colore in un modo che rende più semplice modificare lo schema nel suo insieme. Durante la creazione di un nuovo schema dei colori, di solito per prima cosa modificherai questi colori, e se necessario userai gli altri insiemi per mettere a punto singoli colori.</para>
+
+  <para
+>Tieni presente che <guilabel
+>Colori comuni</guilabel
+> rende disponibili ruoli da tutti gli insiemi. Ad esempio, &quot;Sfondo vista&quot; qui indica il ruolo Sfondo normale dall'insieme Vista. Inoltre, impostare colori che non si riferiscono ad uno specifico insieme comporterà la modifica di quel colore in <emphasis
+>tutti</emphasis
+> gli insiemi. (Ad eccezione di &quot;Testo inattivo&quot;, che modificherà il colore per tutti gli insiemi con l'esclusione di Selezione; nell'insieme Selezione esiste un apposito &quot;Selezione di testo inattivo&quot; per il Testo inattivo.) Alcuni ruoli potrebbero non comparire affatto in <guilabel
+>Colori comuni</guilabel
+>, e se necessario possono essere cambiati solo selezionato l'insieme appropriato.</para>
+
+  <sect4>
+    <title
+>Insiemi di colori</title>
+
+    <para
+>Plasma divide lo schema di colori in differenti insiemi di colori secondo il tipo di elemento dell'interfaccia utente, come descritto di seguito:</para>
+    <itemizedlist>
+      <listitem
+><para
+><guilabel
+>Vista</guilabel
+> &mdash; elementi di presentazione dell'informazione, come liste, alberi, caselle di inserimento testuale, etc. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Finestra</guilabel
+> &mdash; elementi della finestra che non sono pulsanti o viste. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Pulsante</guilabel
+> &mdash; pulsanti ed elementi analoghi. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Selezione</guilabel
+> &mdash; il testo e gli oggetti selezionati. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Suggerimento</guilabel
+> &mdash; consigli per l'uso, suggerimenti &quot;Che cos'è?&quot; ed elementi analoghi. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Complementare</guilabel
+> &mdash; Aree di applicazioni con uno schema di colori alternativo; di solito con uno sfondo scuro per schemi di colori chiari. Esempi di aree con questo schema di colori invertiti sono l'interfaccia di chiusura della sessione, la schermata di blocco e la modalità a schermo intero per alcune applicazioni. </para
+></listitem>
+    </itemizedlist>
+
+    <para
+>Ciascun insieme contiene un certo numero di ruoli del colore. Tutti i colori sono associati con uno degli insiemi di cui sopra.</para>
+  </sect4>
+
+  <sect4>
+    <title
+>Ruoli dei colori</title>
+
+    <para
+>Ciascun insieme di colori è composto da un certo numero di ruoli che sono disponibili in tutti gli altri insiemi. Oltre agli ovvi Testo normale e Sfondo normale, i ruoli sono i seguenti:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Sfondo alternativo &mdash; utilizzato quando vi è la necessità di cambiare leggermente lo sfondo per aiutare nell'associazione dell'elemento. Può essere adottato, ad esempio, come sfondo di un'intestazione, ma è soprattutto usato per alternare le righe nelle liste, specialmente in quelle composte di molte colonne, per aiutare nell'individuazione visiva delle singole righe. </para
+></listitem>
+      <listitem
+><para
+>Collegamento testuale &mdash; utilizzato per i collegamenti ipertestuali o per indicare comunque &quot;qualcosa che può essere visitato&quot;, oppure per mostrare relazioni. </para
+></listitem>
+      <listitem
+><para
+>Testo visitato &mdash; usato per &quot;qualcosa (ad esempio, un collegamento ipertestuale) che è stato visitato&quot;, oppure per indicare qualcosa di  "vecchio". </para
+></listitem>
+      <listitem
+><para
+>Testo attivo &mdash; utilizzato per indicare un elemento attivo oppure per attrarre l'attenzione, ad esempio: avvisi, notifiche; usato anche per collegamenti ipertestuali su cui si sta passando con il puntatore. </para
+></listitem>
+      <listitem
+><para
+>Testo inattivo &mdash; usato per testo che dovrebbe essere non invadente: ad esempio, commenti, &quot;sottotitoli&quot;, informazioni non importanti, etc. </para
+></listitem>
+      <listitem
+><para
+>Testo negativo &mdash; usato per errori, avvisi di fallimento, notifiche relative ad azioni potenzialmente dannose (ad esempio, una pagina web non sicura oppure in relazione ad aspetti della sicurezza), etc. </para
+></listitem>
+      <listitem
+><para
+>Testo neutrale &mdash; usato per attirare l'attenzione quando nessun altro ruolo è appropriato; ad esempio: avvisi, per indicare contenuto sicuro o cifrato, etc. </para
+></listitem>
+      <listitem
+><para
+>Testo positivo &mdash; usato per notifiche di successo, per indicare contenuto affidabile, etc. </para
+></listitem>
+    </itemizedlist>
+
+    <para
+>Così come i ruoli di testo, esistono alcuni altri ruoli &quot;decorativi&quot; che vengono utilizzati per disegnare linee od ombreggiare elementi dell'interfaccia utente (mentre i precedenti potrebbero, in circostanze adatte, essere usati anche per questo scopo, i seguenti <emphasis
+>non</emphasis
+> sono pensati per disegnare il testo). Essi sono:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Decorazione dell'elemento attivo &mdash; utilizzato per indicare l'elemento attivo. </para
+></listitem>
+      <listitem
+><para
+>Decorazione del passaggio con il mouse &mdash; utilizzata per gli effetti legati al passaggio con il mouse al di sopra dell'elemento, ad esempio per gli effetti di "illuminazione" dei pulsanti. </para
+></listitem>
+    </itemizedlist>
+
+    <para
+>Inoltre, fatta eccezione per il Testo inattivo, c'è un corrispondente ruolo di sfondo per ciascun ruolo di testo. Attualmente (tranne lo Sfondo normale e lo Sfondo alternativo), questi colori non sono scelti dall'utente, ma determinati automaticamente sulla base dello Sfondo normale e del corrispondente colore di testo. Un'anteprima di questi colori può essere vista selezionando un insieme diverso da &quot;Colori comuni&quot;.</para>
+
+    <para
+>La scelta del ruolo del colore è lasciata agli sviluppatori; di seguito alcune indicazioni sull'utilizzo tipico.</para>
+  </sect4>
+
+  <sect4>
+    <title
+>Colori del gestore delle finestre</title>
+
+    <para
+>Come già detto, l'insieme del gestore delle finestre possiede i propri ruoli, indipendenti da quelli degli altri insiemi. Attualmente, essi sono accessibili solo per mezzo di <guilabel
+>Colori comuni </guilabel
+>, e sono i seguenti:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Barra del titolo attiva &mdash; usato per disegnare lo sfondo, i bordi e le decorazioni della barra del titolo della finestra attiva. Non tutte le decorazioni della finestra faranno uso di questo insieme allo stesso modo, ed alcune potrebbero perfino usare lo Sfondo normale dall'insieme Finestra per disegnare la barra del titolo. </para
+></listitem>
+      <listitem
+><para
+>Testo della barra del titolo attiva &mdash; utilizzato per disegnare il testo della barra del titolo quando viene usato Barra del titolo attiva per disegnare lo sfondo della barra del titolo. Può anche essere utilizzato per altri elementi di primo piano che usano come sfondo Barra del titolo attiva. </para
+></listitem>
+    </itemizedlist>
+
+    <para
+>I ruoli per il testo della barra del titolo inattiva corrispondo a quelli visti sopra, ma si riferiscono alle finestre inattive anziché a quelle attive.</para>
+  </sect4>
+
+</sect3>
+
+<sect3 id="color-effects">
+  <title
+>Disabilitato</title>
+
+  <para
+>Gli effetti di stato colorati di questa scheda sono applicati agli elementi dell'interfaccia negli stati inattivo (finestre inattive; solo se è abilitato <guilabel
+>Applica gli effetti di colore della finestra inattiva</guilabel
+>) e disabilitato. L'aspetto degli elementi in questi stati può essere cambiato modificando gli effetti. Di solito gli elementi inattivi avranno un contrasto ridotto (il testo si confonde leggermente nello sfondo) e potrebbero avere un'intensità lievemente ridotta, mentre gli elementi disabilitati avranno un contrasto fortemente ridotto e saranno spesso molto più scuri o molto più chiari. </para>
+
+  <para
+>A ciascuno stato possono applicarsi tre tipi di effetto (rimanendo indipendenti gli effetti di ciascuno stato rispetto a quelli dell'altro). Questi sono intensità, colore e contrasto. I primi due (intensità e colore) controllano il colore complessivo, mentre l'ultimo (contrasto) gestisce il rapporto tra i colori di primo piano rispetto allo sfondo.</para>
+
+  <sect4>
+    <title
+>Intensità</title>
+
+    <para
+>L'intensità consente di schiarire o scurire il colore complessivo. Posizionare il cursore al centro non produce alcuna variazione. Gli effetti disponibili sono:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Ombreggia &mdash; rende ogni cosa più chiara o più scura in una maniera controllata. Ogni &quot;scatto&quot; del cursore aumenta o diminuisce l'intensità complessiva (e quindi la luminosità percepita) di una quantità assoluta. </para
+></listitem>
+      <listitem
+><para
+>Scurisci &mdash; imposta l'intensità ad una percentuale del valore iniziale. Impostare il cursore tra la metà ed il massimo produce un colore di intensità pari alla metà dell'originale. Il valore minimo restituisce un colore con il doppio dell'intensità dell'originale. </para
+></listitem>
+      <listitem
+><para
+>Schiarisci &mdash; concettualmente l'opposto di scurisci, l'effetto può essere pensato come se si stia lavorando con la &quot;distanza dal bianco&quot;, mentre con scurisci si lavora con la &quot;distanza dal nero&quot;. Il minimo è un colore la cui &quot;distanza dal bianco&quot; è doppia rispetto a quella del colore originale, mentre un valore intermedio tra la metà ed il massimo restituisce una intensità intermedia tra il colore originale ed il bianco. </para
+></listitem>
+    </itemizedlist>
+  </sect4>
+
+  <sect4>
+    <title
+>Colore</title>
+
+    <para
+>Anche colore modifica il colore complessivo, ma non si limita all'intensità. Gli effetti disponibili sono:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Desatura &mdash; modifica l'intensità del colore. L'impostazione intermedia non produce alcun cambiamento; il valore massimo restituisce un grigio di intensità equivalente a quella del colore originale. Valori più bassi aumentano l'intensità del colore, producendo un colore meno grigio / più &quot;vibrante&quot; dell'originale. </para
+></listitem>
+      <listitem
+><para
+>Trascolora &mdash; armonizza gradualmente il colore originale con un colore di riferimento. Il valore minimo sul cursore non produce alcun cambiamento, mentre il massimo produce il colore di riferimento. </para
+></listitem>
+      <listitem
+><para
+>Tingi &mdash; simile a trascolora, ad eccezione del fatto che il colore (tinta ed intensità cromatica) cambia più velocemente, mentre l'intensità cambia più lentamente man mano che il valore del cursore viene aumentato. </para
+></listitem>
+    </itemizedlist>
+  </sect4>
+
+  <sect4>
+    <title
+>Contrasto</title>
+
+    <para
+>Gli effetti di contrasto sono simili agli effetti di colore, ad eccezione del fatto che si applicano al testo, utilizzando il colore di sfondo come colore di riferimento, e che l'effetto di desaturazione non è disponibile. Trascolora produce testo che &quot;svanisce&quot; più velocemente, ma mantiene il suo colore più a lungo, mentre tingi produce testo che cambia colore in accordo con lo sfondo più velocemente mentre mantiene una maggior intensità più a lungo (cioè fino a valori più elevati lungo il cursore). Negli effetti di contrasto, il valore minimo sul cursore non produce alcun cambiamento, mentre il massimo fa completamente scomparire il testo nello sfondo.</para>
+  </sect4>
+
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>
+<!-- kate: indent-width 2; replace-tabs on; -->

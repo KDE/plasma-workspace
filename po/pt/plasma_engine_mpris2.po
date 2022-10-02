@@ -1,0 +1,85 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_engine_mpris2\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2020-09-21 10:11+0100\n"
+"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
+"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: multiplexedservice.cpp:68
+#, kde-format
+msgctxt "Name for global shortcuts category"
+msgid "Media Controller"
+msgstr "Controlador Multimédia"
+
+#: multiplexedservice.cpp:70
+#, kde-format
+msgid "Play/Pause media playback"
+msgstr "Reproduzir/pausar o conteúdo"
+
+#: multiplexedservice.cpp:88
+#, kde-format
+msgid "Media playback next"
+msgstr "Reprodução do conteúdo seguinte"
+
+#: multiplexedservice.cpp:97
+#, kde-format
+msgid "Media playback previous"
+msgstr "Reprodução do conteúdo anterior"
+
+#: multiplexedservice.cpp:106
+#, kde-format
+msgid "Stop media playback"
+msgstr "Parar a reprodução do conteúdo"
+
+#: multiplexedservice.cpp:115
+#, kde-format
+msgid "Pause media playback"
+msgstr "Pausar a reprodução do conteúdo"
+
+#: multiplexedservice.cpp:124
+#, kde-format
+msgid "Play media playback"
+msgstr "Reproduzir o conteúdo"
+
+#: multiplexedservice.cpp:133
+#, kde-format
+msgid "Media volume up"
+msgstr "Subir o volume"
+
+#: multiplexedservice.cpp:142
+#, kde-format
+msgid "Media volume down"
+msgstr "Descer o volume"
+
+#: playeractionjob.cpp:169
+#, kde-format
+msgid "The media player '%1' cannot perform the action '%2'."
+msgstr "Não é possível ao leitor multimédia '%1' efectuar a acção '%2'."
+
+#: playeractionjob.cpp:171
+#, kde-format
+msgid "Attempting to perform the action '%1' failed with the message '%2'."
+msgstr ""
+"A tentativa de execução da acção '%1' foi mal-sucedida com a mensagem '%2'."
+
+#: playeractionjob.cpp:173
+#, kde-format
+msgid "The argument '%1' for the action '%2' is missing or of the wrong type."
+msgstr "Falta o argumento '%1' para a acção '%2' ou é de um tipo errado."
+
+#: playeractionjob.cpp:175
+#, kde-format
+msgid "The operation '%1' is unknown."
+msgstr "A operação '%1' é desconhecida."
+
+#: playeractionjob.cpp:177
+#, kde-format
+msgid "Unknown error."
+msgstr "O erro é desconhecido."

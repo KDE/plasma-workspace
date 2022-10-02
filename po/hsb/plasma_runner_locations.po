@@ -1,0 +1,45 @@
+# translation of desktop_kdebase.po to Upper Sorbian
+# Prof. Dr. Eduard Werner <e.werner@rz.uni-leipzig.de>, 2003.
+# Eduard Werner <edi.werner@gmx.de>, 2005, 2008.
+# Bianka Šwejdźic <hertn@gmx.de>, 2005, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: desktop_kdebase\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"PO-Revision-Date: 2008-11-06 22:08+0100\n"
+"Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
+"Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
+"Language: hsb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
+"%100==4 ? 2 : 3;\n"
+
+#: locationrunner.cpp:33
+#, kde-format
+msgid ""
+"Finds local directories and files, network locations and Internet sites with "
+"paths matching :q:."
+msgstr ""
+
+#: locationrunner.cpp:60
+#, kde-format
+msgid "Open %1"
+msgstr ""
+
+#: locationrunner.cpp:78 locationrunner.cpp:82
+#, kde-format
+msgid "Launch with %1"
+msgstr ""
+
+#: locationrunner.cpp:88
+#, kde-format
+msgid "Go to %1"
+msgstr ""
+
+#: locationrunner.cpp:96
+#, kde-format
+msgid "Send email to %1"
+msgstr ""

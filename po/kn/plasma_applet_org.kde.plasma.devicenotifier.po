@@ -1,0 +1,236 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Vasudev Kamath <kamathvasudev@gmail.com>, 2009.
+# Shankar Prasad <svenkate@redhat.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-21 00:47+0000\n"
+"PO-Revision-Date: 2010-01-05 11:10+0530\n"
+"Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
+"Language-Team: Kannada <kde-l10n-kn@kde.org>\n"
+"Language: kn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.0\n"
+
+#: package/contents/ui/DeviceItem.qml:180
+#, fuzzy, kde-format
+#| msgctxt "@info:status Free disk space"
+#| msgid "%1 free"
+msgctxt "@info:status Free disk space"
+msgid "%1 free of %2"
+msgstr "%1 ಖಾಲಿ ಇದೆ"
+
+#: package/contents/ui/DeviceItem.qml:184
+#, kde-format
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Accessing…"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:187
+#, kde-format
+msgctxt ""
+"Removing is a less technical word for Unmounting; translation should be "
+"short and mean 'Currently unmounting this device'"
+msgid "Removing…"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:190
+#, kde-format
+msgid "Don't unplug yet! Files are still being transferred..."
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:221
+#, kde-format
+msgid "Open in File Manager"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:224
+#, kde-format
+msgid "Mount and Open"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:226
+#, kde-format
+msgid "Eject"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:228
+#, kde-format
+msgid "Safely remove"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:270
+#, kde-format
+msgid "Mount"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:41
+#: package/contents/ui/main.qml:238
+#, kde-format
+msgid "Remove All"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:42
+#, fuzzy, kde-format
+#| msgid "Click to safely remove this device from the computer."
+msgid "Click to safely remove all devices"
+msgstr "ಸಾಧನವನ್ನು ಸುರಕ್ಷಿತವಾಗಿ ಗಣಕಯಂತ್ರದಿಂದ ಬೇರ್ಪಡಿಸಲು ಕ್ಲಿಕ್ಕಿಸಿ"
+
+#: package/contents/ui/FullRepresentation.qml:186
+#, fuzzy, kde-format
+#| msgid "Non-removable devices only"
+msgid "No removable devices attached"
+msgstr "ಬೇರ್ಪಡಿಸಲಾಗದ ಸಾಧನಗಳು ಮಾತ್ರ"
+
+#: package/contents/ui/FullRepresentation.qml:186
+#, fuzzy, kde-format
+#| msgid "No devices plugged in."
+msgid "No disks available"
+msgstr "ಯಾವುದೇ ಸಾಧನಗಳನ್ನು ಜೋಡಿಸಲಾಗಿಲ್ಲ."
+
+#: package/contents/ui/main.qml:47
+#, fuzzy, kde-format
+#| msgid "Last plugged in device: %1"
+msgid "Most Recent Device"
+msgstr "ಕೊನೆಯ ಬಾರಿಗೆ ಜೋಡಿಸಲಾದ ಸಾಧನ: %1"
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid "No Devices Available"
+msgstr ""
+
+#: package/contents/ui/main.qml:245
+#, fuzzy, kde-format
+#| msgid "Removable devices only"
+msgid "Removable Devices"
+msgstr "ಬೇರ್ಪಡಿಸಬಹುದಾದ ಸಾಧನಗಳು ಮಾತ್ರ"
+
+#: package/contents/ui/main.qml:251
+#, fuzzy, kde-format
+#| msgid "Non-removable devices only"
+msgid "Non Removable Devices"
+msgstr "ಬೇರ್ಪಡಿಸಲಾಗದ ಸಾಧನಗಳು ಮಾತ್ರ"
+
+#: package/contents/ui/main.qml:257
+#, fuzzy, kde-format
+#| msgid "All devices"
+msgid "All Devices"
+msgstr "ಎಲ್ಲಾ ಸಾಧನಗಳು"
+
+#: package/contents/ui/main.qml:265
+#, fuzzy, kde-format
+#| msgid "No devices plugged in"
+msgid "Show popup when new device is plugged in"
+msgstr "ಯಾವುದೇ ಸಾಧನಗಳನ್ನು ಜೋಡಿಸಲಾಗಿಲ್ಲ"
+
+#: package/contents/ui/main.qml:274
+#, fuzzy, kde-format
+#| msgid "Non-removable devices only"
+msgctxt "Open auto mounter kcm"
+msgid "Configure Removable Devices…"
+msgstr "ಬೇರ್ಪಡಿಸಲಾಗದ ಸಾಧನಗಳು ಮಾತ್ರ"
+
+#, fuzzy
+#~| msgctxt "General options page"
+#~| msgid "General"
+#~ msgid "General"
+#~ msgstr "ಸಾಮಾನ್ಯ"
+
+#, fuzzy
+#~| msgid "Click to safely remove this device from the computer."
+#~ msgid "It is currently safe to remove this device."
+#~ msgstr "ಸಾಧನವನ್ನು ಸುರಕ್ಷಿತವಾಗಿ ಗಣಕಯಂತ್ರದಿಂದ ಬೇರ್ಪಡಿಸಲು ಕ್ಲಿಕ್ಕಿಸಿ"
+
+#, fuzzy
+#~| msgid "1 action for this device"
+#~| msgid_plural "%1 actions for this device"
+#~ msgid "1 action for this device"
+#~ msgid_plural "%1 actions for this device"
+#~ msgstr[0] "ಈ ಸಾಧನಕ್ಕಾಗಿನ ೧ ಕಾರ್ಯ"
+#~ msgstr[1] "ಈ ಸಾಧನಕ್ಕಾಗಿನ ೧ ಕಾರ್ಯ"
+
+#~ msgid "Click to access this device from other applications."
+#~ msgstr "ಬೇರೆ ಅನ್ವಯಗಳಿಂದ ಈ ಸಾಧನವನ್ನು ನಿಲುಕಿಸಿಕೊಳ್ಳಲು ಕ್ಲಿಕ್ಕಿಸಿ."
+
+#, fuzzy
+#~| msgid "Click to safely remove this device from the computer."
+#~ msgid "Click to eject this disc."
+#~ msgstr "ಸಾಧನವನ್ನು ಸುರಕ್ಷಿತವಾಗಿ ಗಣಕಯಂತ್ರದಿಂದ ಬೇರ್ಪಡಿಸಲು ಕ್ಲಿಕ್ಕಿಸಿ"
+
+#, fuzzy
+#~| msgid "Click to safely remove this device from the computer."
+#~ msgid "Click to safely remove this device."
+#~ msgstr "ಸಾಧನವನ್ನು ಸುರಕ್ಷಿತವಾಗಿ ಗಣಕಯಂತ್ರದಿಂದ ಬೇರ್ಪಡಿಸಲು ಕ್ಲಿಕ್ಕಿಸಿ"
+
+#, fuzzy
+#~| msgid "Click to safely remove this device from the computer."
+#~ msgid "Click to mount this device."
+#~ msgstr "ಸಾಧನವನ್ನು ಸುರಕ್ಷಿತವಾಗಿ ಗಣಕಯಂತ್ರದಿಂದ ಬೇರ್ಪಡಿಸಲು ಕ್ಲಿಕ್ಕಿಸಿ"
+
+#, fuzzy
+#~| msgid "All devices"
+#~ msgid "Available Devices"
+#~ msgstr "ಎಲ್ಲಾ ಸಾಧನಗಳು"
+
+#, fuzzy
+#~| msgid "Display:"
+#~ msgid "Display"
+#~ msgstr "ಪ್ರದರ್ಶಕ:"
+
+#~ msgid "Show hidden devices"
+#~ msgstr "ಅಡಗಿಸಲಾಗಿರುವ ಸಾಧನಗಳನ್ನು ತೋರಿಸು"
+
+#~ msgctxt "Hide a device"
+#~ msgid "Hide %1"
+#~ msgstr "%1 ಅನ್ನು ಅಡಗಿಸು"
+
+#, fuzzy
+#~| msgid "Device is plugged in and can be accessed by applications."
+#~ msgid ""
+#~ "Device is plugged in and the volume can be accessed by applications. It "
+#~ "is not safe to remove this device."
+#~ msgstr "ಸಾಧನವನ್ನು ಗಣಕಕ್ಕೆ ಜೋಡಿಸಲಾಗಿದೆ ಹಾಗು ಅನ್ವಯಗಳ ಬಳಕೆಗೆ ಸೂಕ್ತವಾಗಿದೆ"
+
+#, fuzzy
+#~| msgid "Device is plugged in, but not mounted for access yet."
+#~ msgid ""
+#~ "Device is plugged in and the volume is not mounted for access yet. The "
+#~ "device can be safely removed."
+#~ msgstr "ಸಾಧನವನ್ನು ಗಣಕಕ್ಕೆ ಜೋಡಿಸಲಾಗಿದೆ, ಆದರೆ ಬಳಕೆಗಾಗಿ ಅದನ್ನು ಆರೋಹಿಸಲಾಗಿಲ್ಲ."
+
+#, fuzzy
+#~| msgid ""
+#~| "Could not unmount the device.\n"
+#~| "One or more files on this device are open within an application."
+#~ msgid ""
+#~ "Could not unmount device %1.\n"
+#~ "One or more files on this device are open within an application."
+#~ msgstr ""
+#~ "ಸಾಧನವನ್ನು ಅವರೋಹಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ.\n"
+#~ "ಈ ಸಾಧನದಲ್ಲಿರುವ ಒಂದು ಅಥವಾ ಹೆಚ್ಚು ಕಡತಗಳು ಒಂದು ಅನ್ವಯದೊಳಗೆ ತೆರೆಯಲ್ಪಟ್ಟಿದೆ."
+
+#~ msgid ""
+#~ "Cannot eject the disc.\n"
+#~ "One or more files on this disc are open within an application."
+#~ msgstr ""
+#~ "ಮುದ್ರಿಕೆಯನ್ನು (ಡಿಸ್ಕ್) ಹೊರತಳ್ಳಲು(ಇಜೆಕ್ಟ್) ಸಾಧ್ಯವಾಗಿಲ್ಲ.\n"
+#~ "ಈ ಮುದ್ರಿಕೆಯಲ್ಲಿರುವ ಒಂದು ಅಥವಾ ಹೆಚ್ಚು ಕಡತಗಳು ಒಂದು ಅನ್ವಯದೊಳಗೆ ತೆರೆಯಲ್ಪಟ್ಟಿದೆ."
+
+#, fuzzy
+#~| msgid "Last plugged in device: %1"
+#~ msgid "Could not mount device %1."
+#~ msgstr "ಕೊನೆಯ ಬಾರಿಗೆ ಜೋಡಿಸಲಾದ ಸಾಧನ: %1"
+
+#~ msgid "Cannot mount the disc."
+#~ msgstr "ಮುದ್ರಿಕೆಯನ್ನು ಆರೋಹಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ."
+
+#~ msgid "Devices recently plugged in:"
+#~ msgstr "ಇತ್ತೀಚೆಗೆ ಜೋಡಿಸಲಾದ ಸಾಧನಗಳು:"

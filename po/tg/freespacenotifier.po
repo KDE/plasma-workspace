@@ -1,0 +1,129 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Victor Ibragimov <victor.ibragimov@gmail.com>, 2010, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-10-20 00:19+0000\n"
+"PO-Revision-Date: 2019-10-06 20:59+0500\n"
+"Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
+"Language-Team: English <kde-i18n-doc@kde.org>\n"
+"Language: tg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 19.04.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: freespacenotifier.cpp:91
+#, fuzzy, kde-format
+#| msgctxt "Allows the user to configure the warning notification being shown"
+#| msgid "Configure Warning..."
+msgid "Configure Warning…"
+msgstr "Танзимоти огоҳиҳо..."
+
+#: freespacenotifier.cpp:95
+#, kde-format
+msgid "Open in Filelight"
+msgstr ""
+
+#: freespacenotifier.cpp:98
+#, fuzzy, kde-format
+#| msgctxt "Opens a file manager like dolphin"
+#| msgid "Open File Manager..."
+msgid "Open in File Manager"
+msgstr "Кушодани мудири файлҳо..."
+
+#. i18n: ectx: label, entry (minimumSpace), group (General)
+#: freespacenotifier.kcfg:9
+#, kde-format
+msgid "Minimum free space before user starts being notified."
+msgstr "Ҳадди ақали фазои озод пеш аз корбар огоҳиҳоро қабул мекунад."
+
+#. i18n: ectx: label, entry (enableNotification), group (General)
+#: freespacenotifier.kcfg:15
+#, kde-format
+msgid "Is the free space notification enabled."
+msgstr "Огоҳӣ дар бораи фазои озоди боқимонда фаъол аст"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
+#: freespacenotifier_prefs_base.ui:17
+#, kde-format
+msgid "Enable low disk space warning"
+msgstr "Фаъол кардани огоҳӣ барои фазои озоди боқимонда"
+
+#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
+#: freespacenotifier_prefs_base.ui:27
+#, kde-format
+msgid "Warn when free space is below:"
+msgstr "Ҳаҷми фазои озоди боқимонда барои огоҳонидан:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
+#: freespacenotifier_prefs_base.ui:37
+#, kde-format
+msgid " MiB"
+msgstr "МБ"
+
+#: module.cpp:37
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Warns the user that the system is running low on space on his home "
+#| "folder, indicating the percentage and absolute MiB size remaining"
+#| msgid ""
+#| "Your Home folder is running out of disk space, you have %1 MiB remaining "
+#| "(%2%)"
+msgid ""
+"Your Home folder is running out of disk space, you have %1 MiB remaining "
+"(%2%)."
+msgstr ""
+"Фазои диски барои ҷузвадони асосии шумо кифоя нест, зеро ки танҳо %1 МБ боқӣ "
+"мондааст (%2%)"
+
+#: module.cpp:46
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Warns the user that the system is running low on space on his home "
+#| "folder, indicating the percentage and absolute MiB size remaining"
+#| msgid ""
+#| "Your Home folder is running out of disk space, you have %1 MiB remaining "
+#| "(%2%)"
+msgid ""
+"Your Root partition is running out of disk space, you have %1 MiB remaining "
+"(%2%)."
+msgstr ""
+"Фазои диски барои ҷузвадони асосии шумо кифоя нест, зеро ки танҳо %1 МБ боқӣ "
+"мондааст (%2%)"
+
+#: module.cpp:63
+#, kde-format
+msgctxt "The settings dialog main page name, as in 'general settings'"
+msgid "General"
+msgstr "Умумӣ"
+
+#~ msgid "Low Disk Space"
+#~ msgstr "Фазои диск кифоя нест"
+
+#~ msgid "Remaining space in your Home folder: %1 MiB"
+#~ msgstr "Фазои боқимонда дар ҷузвадони асосии шумо: %1 МБ"
+
+#~ msgctxt "Allows the user to hide this notifier item"
+#~ msgid "Hide"
+#~ msgstr "Пинҳон кардан"
+
+#~ msgctxt ""
+#~ "Warns the user that the system is running low on space on his home "
+#~ "folder, indicating the percentage and absolute MiB size remaining, and "
+#~ "asks if the user wants to do something about it"
+#~ msgid ""
+#~ "You are running low on disk space on your home folder (currently %2%, %1 "
+#~ "MiB free).\n"
+#~ "Would you like to run a file manager to free some disk space?"
+#~ msgstr ""
+#~ "Хотираи диски компютерӣ ба итмом мерасад (хотираи озод %2%, %1 MiB).\n"
+#~ "Оё шумо мехоҳед барои холӣ кардани хотира, мудири файлҳоро истифода баред?"
+
+#~ msgctxt "Closes the notification"
+#~ msgid "Do Nothing"
+#~ msgstr "Ягон чиз накунед"

@@ -1,0 +1,737 @@
+# Translation of plasma_engine_soliddevice.po into Serbian.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2009, 2011, 2012, 2013, 2014, 2015, 2016.
+# Dalibor Djuric <daliborddjuric@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_engine_soliddevice\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-05-20 03:26+0200\n"
+"PO-Revision-Date: 2016-03-20 15:25+0100\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#: soliddeviceengine.cpp:130
+#, kde-format
+msgid "Parent UDI"
+msgstr "УДИ родитеља"
+
+#: soliddeviceengine.cpp:131
+#, kde-format
+msgid "Vendor"
+msgstr "произвођач"
+
+#: soliddeviceengine.cpp:132
+#, kde-format
+msgid "Product"
+msgstr "производ"
+
+#: soliddeviceengine.cpp:133
+#, kde-format
+msgid "Description"
+msgstr "опис"
+
+#: soliddeviceengine.cpp:134
+#, kde-format
+msgid "Icon"
+msgstr "иконица"
+
+#: soliddeviceengine.cpp:135 soliddeviceengine.cpp:615
+#, kde-format
+msgid "Emblems"
+msgstr "амблеми"
+
+#: soliddeviceengine.cpp:136 soliddeviceengine.cpp:498
+#: soliddeviceengine.cpp:504 soliddeviceengine.cpp:517
+#, kde-format
+msgid "State"
+msgstr "стање"
+
+#: soliddeviceengine.cpp:137 soliddeviceengine.cpp:499
+#: soliddeviceengine.cpp:505 soliddeviceengine.cpp:513
+#: soliddeviceengine.cpp:515
+#, kde-format
+msgid "Operation result"
+msgstr "резултат поступка"
+
+#: soliddeviceengine.cpp:138
+#, kde-format
+msgid "Timestamp"
+msgstr "време"
+
+#: soliddeviceengine.cpp:146
+#, kde-format
+msgid "Processor"
+msgstr "процесор"
+
+#: soliddeviceengine.cpp:147
+#, kde-format
+msgid "Number"
+msgstr "број"
+
+#: soliddeviceengine.cpp:148
+#, kde-format
+msgid "Max Speed"
+msgstr "највећа брзина"
+
+#: soliddeviceengine.cpp:149
+#, kde-format
+msgid "Can Change Frequency"
+msgstr "може да мења такт"
+
+#: soliddeviceengine.cpp:157
+#, kde-format
+msgid "Block"
+msgstr "блок"
+
+#: soliddeviceengine.cpp:158
+#, kde-format
+msgid "Major"
+msgstr "велики"
+
+#: soliddeviceengine.cpp:159
+#, kde-format
+msgid "Minor"
+msgstr "мали"
+
+#: soliddeviceengine.cpp:160
+#, kde-format
+msgid "Device"
+msgstr "уређај"
+
+#: soliddeviceengine.cpp:168
+#, kde-format
+msgid "Storage Access"
+msgstr "складишни приступ"
+
+#: soliddeviceengine.cpp:169 soliddeviceengine.cpp:529
+#: soliddeviceengine.cpp:629
+#, kde-format
+msgid "Accessible"
+msgstr "приступан"
+
+#: soliddeviceengine.cpp:170 soliddeviceengine.cpp:530
+#, kde-format
+msgid "File Path"
+msgstr "путања фајла"
+
+#: soliddeviceengine.cpp:185
+#, kde-format
+msgid "Storage Drive"
+msgstr "складишна јединица"
+
+#: soliddeviceengine.cpp:188
+#, kde-format
+msgid "Ide"
+msgstr "ИДЕ"
+
+#: soliddeviceengine.cpp:188
+#, kde-format
+msgid "Usb"
+msgstr "УСБ"
+
+#: soliddeviceengine.cpp:188
+#, kde-format
+msgid "Ieee1394"
+msgstr "ИЕЕЕ‑1394"
+
+#: soliddeviceengine.cpp:188
+#, kde-format
+msgid "Scsi"
+msgstr "скази"
+
+#: soliddeviceengine.cpp:188
+#, kde-format
+msgid "Sata"
+msgstr "С‑АТА"
+
+#: soliddeviceengine.cpp:188
+#, kde-format
+msgid "Platform"
+msgstr "платформа"
+
+#: soliddeviceengine.cpp:190
+#, kde-format
+msgid "Hard Disk"
+msgstr "хард‑диск"
+
+#: soliddeviceengine.cpp:190
+#, kde-format
+msgid "Cdrom Drive"
+msgstr "ЦД‑РОМ јединица"
+
+#: soliddeviceengine.cpp:190
+#, kde-format
+msgid "Floppy"
+msgstr "дискетна јединица"
+
+#: soliddeviceengine.cpp:190
+#, kde-format
+msgid "Tape"
+msgstr "трака"
+
+#: soliddeviceengine.cpp:190
+#, kde-format
+msgid "Compact Flash"
+msgstr "компактни ⁠флеш"
+
+#: soliddeviceengine.cpp:190
+#, kde-format
+msgid "Memory Stick"
+msgstr "меморијски штапић"
+
+#: soliddeviceengine.cpp:190
+#, kde-format
+msgid "Smart Media"
+msgstr "смарт-медијум"
+
+#: soliddeviceengine.cpp:190
+#, kde-format
+msgid "SdMmc"
+msgstr "СД/ММЦ"
+
+#: soliddeviceengine.cpp:190
+#, kde-format
+msgid "Xd"
+msgstr "Иксд"
+
+#: soliddeviceengine.cpp:192
+#, kde-format
+msgid "Bus"
+msgstr "магистрала"
+
+#: soliddeviceengine.cpp:193
+#, kde-format
+msgid "Drive Type"
+msgstr "тип јединице"
+
+#: soliddeviceengine.cpp:194 soliddeviceengine.cpp:207
+#: soliddeviceengine.cpp:377 soliddeviceengine.cpp:392
+#, kde-format
+msgid "Removable"
+msgstr "уклоњива"
+
+#: soliddeviceengine.cpp:195 soliddeviceengine.cpp:208
+#: soliddeviceengine.cpp:378 soliddeviceengine.cpp:393
+#, kde-format
+msgid "Hotpluggable"
+msgstr "вруће укључива"
+
+#: soliddeviceengine.cpp:218
+#, kde-format
+msgid "Optical Drive"
+msgstr "оптичка јединица"
+
+#: soliddeviceengine.cpp:223
+#, kde-format
+msgid "CD-R"
+msgstr "ЦД‑Р"
+
+#: soliddeviceengine.cpp:226
+#, kde-format
+msgid "CD-RW"
+msgstr "ЦД‑РВ"
+
+#: soliddeviceengine.cpp:229
+#, kde-format
+msgid "DVD"
+msgstr "ДВД"
+
+#: soliddeviceengine.cpp:232
+#, kde-format
+msgid "DVD-R"
+msgstr "ДВД‑Р"
+
+#: soliddeviceengine.cpp:235
+#, kde-format
+msgid "DVD-RW"
+msgstr "ДВД‑РВ"
+
+#: soliddeviceengine.cpp:238
+#, kde-format
+msgid "DVD-RAM"
+msgstr "ДВД‑РАМ"
+
+#: soliddeviceengine.cpp:241
+#, kde-format
+msgid "DVD+R"
+msgstr "ДВД+Р"
+
+#: soliddeviceengine.cpp:244
+#, kde-format
+msgid "DVD+RW"
+msgstr "ДВД+РВ"
+
+#: soliddeviceengine.cpp:247
+#, kde-format
+msgid "DVD+DL"
+msgstr "ДВД+Р ДЛ"
+
+#: soliddeviceengine.cpp:250
+#, kde-format
+msgid "DVD+DLRW"
+msgstr "ДВД+РВ ДЛ"
+
+#: soliddeviceengine.cpp:253
+#, kde-format
+msgid "BD"
+msgstr "БД"
+
+#: soliddeviceengine.cpp:256
+#, kde-format
+msgid "BD-R"
+msgstr "БД‑Р"
+
+#: soliddeviceengine.cpp:259
+#, kde-format
+msgid "BD-RE"
+msgstr "БД‑РЕ"
+
+#: soliddeviceengine.cpp:262
+#, kde-format
+msgid "HDDVD"
+msgstr "ХД ДВД"
+
+#: soliddeviceengine.cpp:265
+#, kde-format
+msgid "HDDVD-R"
+msgstr "ХД ДВД‑Р"
+
+#: soliddeviceengine.cpp:268
+#, kde-format
+msgid "HDDVD-RW"
+msgstr "ХД ДВД‑РВ"
+
+#: soliddeviceengine.cpp:270
+#, kde-format
+msgid "Supported Media"
+msgstr "подржани медијуми"
+
+#: soliddeviceengine.cpp:272
+#, kde-format
+msgid "Read Speed"
+msgstr "брзина читања"
+
+#: soliddeviceengine.cpp:273
+#, kde-format
+msgid "Write Speed"
+msgstr "брзина писања"
+
+#: soliddeviceengine.cpp:281
+#, kde-format
+msgid "Write Speeds"
+msgstr "брзине писања"
+
+#: soliddeviceengine.cpp:290
+#, kde-format
+msgid "Storage Volume"
+msgstr "складишни простор"
+
+#: soliddeviceengine.cpp:293
+#, kde-format
+msgid "Other"
+msgstr "други"
+
+#: soliddeviceengine.cpp:293
+#, kde-format
+msgid "Unused"
+msgstr "неискоришћени"
+
+#: soliddeviceengine.cpp:293
+#, kde-format
+msgid "File System"
+msgstr "фајл систем"
+
+#: soliddeviceengine.cpp:294
+#, kde-format
+msgid "Partition Table"
+msgstr "табела партиција"
+
+#: soliddeviceengine.cpp:294
+#, kde-format
+msgid "Raid"
+msgstr "РАИД"
+
+#: soliddeviceengine.cpp:294
+#, kde-format
+msgid "Encrypted"
+msgstr "шифрована"
+
+#: soliddeviceengine.cpp:297 soliddeviceengine.cpp:299
+#, kde-format
+msgid "Usage"
+msgstr "искоришћење"
+
+#: soliddeviceengine.cpp:299
+#, kde-format
+msgid "Unknown"
+msgstr "непознато"
+
+#: soliddeviceengine.cpp:302
+#, kde-format
+msgid "Ignored"
+msgstr "игнорисано"
+
+#: soliddeviceengine.cpp:303
+#, kde-format
+msgid "File System Type"
+msgstr "тип фајл система"
+
+#: soliddeviceengine.cpp:304
+#, kde-format
+msgid "Label"
+msgstr "етикета"
+
+#: soliddeviceengine.cpp:305
+#, kde-format
+msgid "UUID"
+msgstr "УУИД"
+
+#: soliddeviceengine.cpp:314
+#, kde-format
+msgid "Encrypted Container"
+msgstr "шифровани садржалац"
+
+#: soliddeviceengine.cpp:326
+#, kde-format
+msgid "OpticalDisc"
+msgstr "оптички диск"
+
+#: soliddeviceengine.cpp:332
+#, kde-format
+msgid "Audio"
+msgstr "аудио"
+
+#: soliddeviceengine.cpp:335
+#, kde-format
+msgid "Data"
+msgstr "подаци"
+
+#: soliddeviceengine.cpp:338
+#, kde-format
+msgid "Video CD"
+msgstr "видео ЦД"
+
+#: soliddeviceengine.cpp:341
+#, kde-format
+msgid "Super Video CD"
+msgstr "супер видео ЦД"
+
+#: soliddeviceengine.cpp:344
+#, kde-format
+msgid "Video DVD"
+msgstr "видео ДВД"
+
+#: soliddeviceengine.cpp:347
+#, kde-format
+msgid "Video Blu Ray"
+msgstr "видео блуреј"
+
+#: soliddeviceengine.cpp:349
+#, kde-format
+msgid "Available Content"
+msgstr "доступан садржај"
+
+#: soliddeviceengine.cpp:352
+#, kde-format
+msgid "Unknown Disc Type"
+msgstr "непознат тип диска"
+
+#: soliddeviceengine.cpp:352
+#, kde-format
+msgid "CD Rom"
+msgstr "ЦД"
+
+#: soliddeviceengine.cpp:352
+#, kde-format
+msgid "CD Recordable"
+msgstr "уписиви ЦД"
+
+#: soliddeviceengine.cpp:353
+#, kde-format
+msgid "CD Rewritable"
+msgstr "пребрисиви ЦД"
+
+#: soliddeviceengine.cpp:353
+#, kde-format
+msgid "DVD Rom"
+msgstr "ДВД"
+
+#: soliddeviceengine.cpp:353
+#, kde-format
+msgid "DVD Ram"
+msgstr "ДВД‑РАМ"
+
+#: soliddeviceengine.cpp:354
+#, kde-format
+msgid "DVD Recordable"
+msgstr "уписиви ДВД"
+
+#: soliddeviceengine.cpp:354
+#, kde-format
+msgid "DVD Rewritable"
+msgstr "пребрисиви ДВД"
+
+#: soliddeviceengine.cpp:354
+#, kde-format
+msgid "DVD Plus Recordable"
+msgstr "уписиви ДВД (плус)"
+
+#: soliddeviceengine.cpp:355
+#, kde-format
+msgid "DVD Plus Rewritable"
+msgstr "пребрисиви ДВД (плус)"
+
+#: soliddeviceengine.cpp:355
+#, kde-format
+msgid "DVD Plus Recordable Duallayer"
+msgstr "уписиви двослојни ДВД (плус)"
+
+#: soliddeviceengine.cpp:356
+#, kde-format
+msgid "DVD Plus Rewritable Duallayer"
+msgstr "пребрисиви двослојни ДВД (плус)"
+
+#: soliddeviceengine.cpp:356
+#, kde-format
+msgid "Blu Ray Rom"
+msgstr "блуреј"
+
+#: soliddeviceengine.cpp:356
+#, kde-format
+msgid "Blu Ray Recordable"
+msgstr "уписиви блуреј"
+
+#: soliddeviceengine.cpp:357
+#, kde-format
+msgid "Blu Ray Rewritable"
+msgstr "пребрисиви блуреј"
+
+#: soliddeviceengine.cpp:357
+#, kde-format
+msgid "HD DVD Rom"
+msgstr "ХД ДВД"
+
+#: soliddeviceengine.cpp:357
+#, kde-format
+msgid "HD DVD Recordable"
+msgstr "уписиви ХД ДВД"
+
+#: soliddeviceengine.cpp:358
+#, kde-format
+msgid "HD DVD Rewritable"
+msgstr "пребрисиви ХД ДВД"
+
+#: soliddeviceengine.cpp:360
+#, kde-format
+msgid "Disc Type"
+msgstr "тип диска"
+
+#: soliddeviceengine.cpp:361
+#, kde-format
+msgid "Appendable"
+msgstr "допуњив"
+
+#: soliddeviceengine.cpp:362
+#, kde-format
+msgid "Blank"
+msgstr "празан"
+
+#: soliddeviceengine.cpp:363
+#, kde-format
+msgid "Rewritable"
+msgstr "пребрисиви"
+
+#: soliddeviceengine.cpp:364
+#, kde-format
+msgid "Capacity"
+msgstr "капацитет"
+
+#: soliddeviceengine.cpp:372
+#, kde-format
+msgid "Camera"
+msgstr "фотоапарат"
+
+#: soliddeviceengine.cpp:374 soliddeviceengine.cpp:389
+#, kde-format
+msgid "Supported Protocols"
+msgstr "подржани протоколи"
+
+#: soliddeviceengine.cpp:375 soliddeviceengine.cpp:390
+#, kde-format
+msgid "Supported Drivers"
+msgstr "подржани драјвери"
+
+#: soliddeviceengine.cpp:387
+#, kde-format
+msgid "Portable Media Player"
+msgstr "преносиви медија плејер"
+
+#: soliddeviceengine.cpp:401
+#, kde-format
+msgid "Battery"
+msgstr "батерија"
+
+#: soliddeviceengine.cpp:404
+#, kde-format
+msgid "Unknown Battery"
+msgstr "непозната батерија"
+
+#: soliddeviceengine.cpp:404
+#, kde-format
+msgid "PDA Battery"
+msgstr "ПДА батерија"
+
+#: soliddeviceengine.cpp:404
+#, kde-format
+msgid "UPS Battery"
+msgstr "УПС батерија"
+
+#: soliddeviceengine.cpp:405
+#, kde-format
+msgid "Primary Battery"
+msgstr "примарна батерија"
+
+#: soliddeviceengine.cpp:405
+#, kde-format
+msgid "Mouse Battery"
+msgstr "батерија миша"
+
+#: soliddeviceengine.cpp:405
+#, kde-format
+msgid "Keyboard Battery"
+msgstr "батерија тастатуре"
+
+#: soliddeviceengine.cpp:406
+#, kde-format
+msgid "Keyboard Mouse Battery"
+msgstr "батерија тастатуре и миша"
+
+#: soliddeviceengine.cpp:406
+#, kde-format
+msgid "Camera Battery"
+msgstr "батерија фотоапарата"
+
+#: soliddeviceengine.cpp:406
+#, kde-format
+msgid "Phone Battery"
+msgstr "батерија телефона"
+
+#: soliddeviceengine.cpp:407
+#, kde-format
+msgid "Monitor Battery"
+msgstr "батерија монитора"
+
+#: soliddeviceengine.cpp:407
+#, kde-format
+msgid "Gaming Input Battery"
+msgstr ""
+
+#: soliddeviceengine.cpp:407
+#, fuzzy, kde-format
+#| msgid "Mouse Battery"
+msgid "Bluetooth Battery"
+msgstr "батерија миша"
+
+#: soliddeviceengine.cpp:410
+#, kde-format
+msgid "Not Charging"
+msgstr "не пуни се"
+
+#: soliddeviceengine.cpp:410
+#, kde-format
+msgid "Charging"
+msgstr "пуни се"
+
+#: soliddeviceengine.cpp:410
+#, kde-format
+msgid "Discharging"
+msgstr "празни се"
+
+#: soliddeviceengine.cpp:410
+#, kde-format
+msgid "Fully Charged"
+msgstr "скроз пуна"
+
+#: soliddeviceengine.cpp:412
+#, kde-format
+msgid "Plugged In"
+msgstr "утакнут"
+
+#: soliddeviceengine.cpp:413
+#, kde-format
+msgid "Type"
+msgstr "тип"
+
+#: soliddeviceengine.cpp:414
+#, kde-format
+msgid "Charge Percent"
+msgstr "проценат пуњења"
+
+#: soliddeviceengine.cpp:415
+#, kde-format
+msgid "Rechargeable"
+msgstr "пуњива"
+
+#: soliddeviceengine.cpp:416
+#, kde-format
+msgid "Charge State"
+msgstr "стање пуњења"
+
+#: soliddeviceengine.cpp:441
+#, kde-format
+msgid "Type Description"
+msgstr "опис типа"
+
+#: soliddeviceengine.cpp:446
+#, kde-format
+msgid "Device Types"
+msgstr "типови уређаја"
+
+#: soliddeviceengine.cpp:473 soliddeviceengine.cpp:577
+#, kde-format
+msgid "Size"
+msgstr "величина"
+
+#: soliddeviceengine.cpp:557
+#, kde-format
+msgid "Filesystem is not responding"
+msgstr ""
+
+#: soliddeviceengine.cpp:558
+#, kde-format
+msgid "Filesystem mounted at '%1' is not responding"
+msgstr ""
+
+#: soliddeviceengine.cpp:575
+#, kde-format
+msgid "Free Space"
+msgstr "слободан простор"
+
+#: soliddeviceengine.cpp:576
+#, kde-format
+msgid "Free Space Text"
+msgstr "текст слободног простора"
+
+#: soliddeviceengine.cpp:603
+#, kde-format
+msgid "Temperature"
+msgstr "температура"
+
+#: soliddeviceengine.cpp:604
+#, kde-format
+msgid "Temperature Unit"
+msgstr "јединица температуре"
+
+#: soliddeviceengine.cpp:648 soliddeviceengine.cpp:652
+#, kde-format
+msgid "In Use"
+msgstr "у употреби"

@@ -1,0 +1,499 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Brazilian-Portuguese "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="icons" lang="&language;">
+<articleinfo>
+<title
+>Ícones</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<author
+>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+<othercredit role="translator"
+><firstname
+>Lisiane</firstname
+> <surname
+>Sztoltz</surname
+><affiliation
+><address
+> <email
+>lisiane@conectiva.com.br</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>08/04/2015</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Centro de Controle</keyword>
+<keyword
+>ícone</keyword>
+</keywordset>
+</articleinfo>
+<sect1 id="kcm_icons">
+<title
+>Ícones</title>
+
+<sect2 id="icons-intro">
+<title
+>Introdução</title>
+
+<para
+>O &kde; vem com um conjunto completo de ícones, de vários tamanhos. Estes ícones estão sendo usados em todo o ambiente de trabalho do &kde;: no painel, no gerenciador de arquivos &konqueror;, na barra de ferramentas de cada aplicativo do &kde;, etc. O módulo de controle de ícones oferece a você muitas maneiras de personalizar o modo como o &kde; manipula ícones. </para>
+
+<para>
+<screenshot>
+<screeninfo
+>Aqui está uma imagem do gerenciador de temas de ícones</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Personalizando os ícones do &kde;</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Neste módulo você poderá:</para>
+<itemizedlist>
+<listitem
+><para
+>instalar e escolher temas de ícones</para
+></listitem>
+<listitem
+><para
+>selecionar diferentes tamanhos para o ícone</para
+></listitem>
+<listitem
+><para
+>atribuir efeitos aos ícones (por exemplo, torná-lo semitransparente, ou colori-lo) </para
+></listitem>
+<listitem
+><para
+>configurar estas opções para cada local diferente onde o ícone será usado; por exemplo, na área de trabalho, nas barras de ferramentas, &etc; </para
+></listitem>
+</itemizedlist>
+
+<important
+><para
+>Observe que algumas destas configurações podem depender do tema de ícones que você selecionou. O &kde; disponibiliza diversos temas de ícones por padrão: Oxygen, Monocromático e Breeze.</para
+></important>
+
+<para
+>Existem duas páginas neste módulo: a <guilabel
+>Tema</guilabel
+> e a <guilabel
+>Avançado</guilabel
+>. A <guilabel
+>Tema</guilabel
+> gerencia os temas de ícones, enquanto a <guilabel
+>Avançado</guilabel
+> permite-lhe configurar a forma como os ícones serão usados no &kde;.</para>
+</sect2>
+
+<sect2 id="icon-theme">
+<title
+>Tema</title>
+
+<para
+>Começando pelo topo, você pode ver alguns ícones de exemplo. A maioria das instalações, por padrão, só terão um tema de ícones disponível: o tema padrão do &kde; chamado Oxygen. Existem outros temas empacotados separadamente no pacote 'kdeartwork' e você poderá obter outros na Internet, em <ulink url="http://www.kde-look.org"
+>http://www.kde-look.org</ulink
+>.</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Obter novos temas...</guilabel
+></term>
+<listitem>
+<para
+>Você precisará estar conectado à Internet para usar esta opção. Clicando neste botão, será apresentada uma janela de onde poderá escolher um novo tema de ícones. Clicar em <guibutton
+>Instalar</guibutton
+> na janela irá instalar o tema de ícones escolhido e se depois disso você <guibutton
+>Fechar</guibutton
+> o instalador, o seu tema ficará imediatamente disponível. </para>
+<para>
+<screenshot>
+<screeninfo
+>Obter novos temas de ícones</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="get-new-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Obter novos temas de ícones</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Instalar arquivo de tema...</guilabel
+></term>
+<listitem>
+<para
+>Se você baixou novos temas da Internet, poderá usar esta opção para navegar até a localização destes temas recém transferidos. Ao clicar neste botão, irá aparecer uma pequena janela para que você insira o caminho do pacote do tema de ícones que você possui no seu disco.</para>
+<para>
+<screenshot>
+<screeninfo
+>Instalando um novo tema de ícones</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="install-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Instalando um novo tema de ícones</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Clicar em <guibutton
+>OK</guibutton
+> nesta janela, irá instalar o tema selecionado, que será disponibilizado na lista de temas. </para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Remover tema</guilabel
+></term>
+<listitem>
+<para
+>Clicar neste botão irá remover todos os arquivos deste tema do seu sistema. Aparecerá uma mensagem de confirmação, onde lhe será questionado se deseja realmente remover todos os arquivos instalados por este tema. </para>
+<para>
+<screenshot>
+<screeninfo
+>Removendo um tema</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="delete-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Removendo um tema</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+<para
+>Clicar em <guibutton
+>Excluir</guibutton
+> irá remover os arquivos do tema, enquanto clicando-se em <guibutton
+>Cancelar</guibutton
+> não irá remover nada, cancelando a ação de remoção. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect2>
+
+<sect2 id="icons-use">
+<title
+>Avançado</title>
+
+<para
+>Nesta segunda página você verá duas áreas:</para>
+
+<itemizedlist
+> 
+<listitem
+> 
+<para
+>Uma área chamada <guilabel
+>Uso do ícone</guilabel
+>. Aqui você pode escolher qual a utilidade particular do ícone que você deseja configurar, como por exemplo para a <guilabel
+>Barra de ferramentas</guilabel
+> ou <guilabel
+>Painel</guilabel
+>. </para
+> 
+<para>
+<screenshot>
+<screeninfo
+>Escolhendo os ícones a configurar</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="use-of-icons.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Escolhendo os ícones a configurar</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</listitem
+> 
+
+<listitem
+> <para
+>Uma área de previsão, onde você pode ver como os ícones do tipo selecionado ficarão, usando as configurações atuais. Note que o estado desta visualização depende do estado do ícone, selecionado nos efeitos abaixo (não se preocupe por enquanto - nós explicaremos isto mais adiante). </para
+> </listitem>
+</itemizedlist>
+
+<para
+>Quando você desejar configurar ícones, primeiramente selecione o uso destes ícones. Modifique as configurações até que goste da visualização. Você pode escolher, em seguida, um diferente uso para o ícone e configurá-lo. No final, se você estiver satisfeito, clique em <guibutton
+>OK</guibutton
+> ou em <guibutton
+>Aplicar</guibutton
+> para que as mudanças tenham efeito.</para>
+
+<para
+>Existem mais duas opções a considerar: <guilabel
+>Tamanho</guilabel
+> e <guilabel
+>Efeitos</guilabel
+>. </para>
+
+<sect3 id="icons-use-size">
+<title
+>Tamanho do ícone</title>
+
+<para>
+<screenshot>
+<screeninfo
+>Configurando os tamanhos dos ícones</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="size.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Configurando os tamanhos dos ícones</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Você pode escolher de uma lista de tamanhos de ícones. Os tamanhos de ícones maiores são especialmente úteis para as pessoas com dificuldades visuais.</para>
+
+<para
+>Os tamanhos que serão oferecidos pela caixa de lista de tamanhos depende do tema que você selecionou no módulo de controle de temas de ícones. Por exemplo, temas de baixa resolução oferecem os tamanhos 16 e 32 para ícones da área de trabalho, e tamanho 16, 22 e 32 para ícones das barras de ferramentas. Temas com alta resolução oferecem os tamanhos 16, 32 e 48, bem como tamanhos de 64 a 128. No entanto, como o &kde; não pode ter todos estes ícones armazenados, os ícones que usam tamanhos de 64 a 128 serão gerados automaticamente, o que pode resultar em perda de qualidade.</para>
+<!-- not in 4.5
+<para
+>If the icon sizes offered by your chosen icon theme are not enough
+for you, there is still the option <guilabel
+>Double-sized
+pixels</guilabel
+>. If this option is selected, all icons will have
+double sized pixels, &ie; a 2x2 block instead of normal pixels. While
+this makes it possible to achieve very large icon sizes, the quality is
+poor: icons will look <quote
+>blocky</quote
+>, an effect you may remember
+if you've grown up using a Sinclair ZX Spectrum or similar. If this is
+an option for you, using the large sizes offered by &kde;'s HiColor
+icon theme will always result in a much better quality than using the
+low color icon theme with double sized pixels.</para
+> 
+-->
+<!-- 
+<para
+>You can also choose to have smoothed icons, an effect similar to
+anti-aliasing of fonts.  Enable the checkbox <guilabel
+>Blend alpha
+channel</guilabel
+> to see this in action, but note that it will slow
+down graphics on a slower computer.</para>
+-->
+
+<para
+>Você pode escolher ícones animados, sendo isto um efeito associado a eles. Ative a opção <guilabel
+>Animar os ícones</guilabel
+> para ter este efeito, mas note que isto poderá ser lento se sua placa de vídeo é mais antiga ou seu computador dispõe de pouca memória.</para>
+
+</sect3>
+
+<sect3 id="icons-use-effects">
+<title
+>Efeitos</title>
+<para>
+<screenshot>
+<screeninfo
+>Configurando os efeitos dos ícones</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="effects.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Configurando os efeitos dos ícones</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Finalmente, você pode configurar certos <quote
+>filtros</quote
+> a serem aplicados em cada ícone, quando eles estiverem em um dos três estados a seguir:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Padrão</guilabel
+></term>
+<listitem
+><para
+>É como o ícone normalmente se parecerá.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Ativo</guilabel
+>:</term>
+<listitem
+><para
+>É como o ícone ficará quando o ponteiro do mouse estiver sobre o ícone.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Desabilitado</guilabel
+>:</term>
+<listitem
+><para
+>É como o ícone ficará se a sua ação correspondente estiver desabilitada, &ie;, o clique sobre o ícone não terá efeito.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Selecione um destes estados e pressione o botão <guibutton
+>Configurar efeito</guibutton
+> para ajustar o efeito do ícone correspondente. Observe que esta configuração só afetará os ícones selecionados na área <guilabel
+>Uso do ícone</guilabel
+>: a configuração de um efeito para os ícones usados na <guilabel
+>Barra de ferramentas</guilabel
+> <emphasis
+>não</emphasis
+> afetará os ícones usados em outros locais.</para>
+
+<para
+>Abaixo da lista de estados de ícones existem duas opções. Você poderá configurar um efeito e selecionar a opção <guilabel
+>Semitransparente</guilabel
+>, na qual o fundo <quote
+>passará através</quote
+> do ícone. Além disso, à direita da lista de efeitos existe um botão de configuração para passar parâmetros adicionais a um filtro, no que se refere a cores e à <guilabel
+>Quantidade</guilabel
+>.</para>
+<!-- TODO: Figure out what 'amount' really means -->
+
+<para
+>Os seguintes efeitos podem ser aplicados aos ícones:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Nenhum efeito</guilabel
+>:</term>
+<listitem
+><para
+>Os ícones serão usados sem aplicar qualquer efeito.</para
+></listitem
+> 
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Acinzentar</guilabel
+>:</term>
+<listitem
+><para
+>Este filtro aplicará uma aparência cinza ao ícone. Use a barra deslizante <guilabel
+>Quantidade</guilabel
+> para configurar a intensidade deste filtro. Lembre-se de que é comum para a maioria das interfaces de usuário usar este efeito apenas para ícones inativos.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Colorir</guilabel
+>:</term>
+<listitem
+><para
+>Os ícones serão coloridos com uma cor personalizada. Por exemplo, você pode configurar os ícones ativos (&ie;, o ícone usado quando o cursor está acima dele) para ficarem dourados. Use os botões de cor e a barra deslizante <guilabel
+>Quantidade</guilabel
+> para alterar a cor usada e a intensidade da coloração.</para
+></listitem
+> 
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Gama</guilabel
+>:</term>
+<listitem
+><para
+>Um valor gama diferente será aplicado a todos os ícones. Se você não é fotógrafo e não sabe o que Gama significa, considere que ele é muito parecido ao que as pessoas chamam de contraste. Teste várias configurações de gama movendo a barra deslizante <guilabel
+>Quantidade</guilabel
+> para ter uma ideia sobre este efeito.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Reduzir saturação</guilabel
+>:</term>
+<listitem
+><para
+>Os ícones serão desenhados sem saturação, o que é muito parecido com a configuração de <quote
+>Cor</quote
+> da sua televisão. Use a barra deslizante para configurar esta opção. </para
+></listitem
+> 
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Para monocromático:</guilabel
+></term>
+<listitem>
+<para
+>Os ícones serão desenhados apenas com as duas cores selecionadas.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>

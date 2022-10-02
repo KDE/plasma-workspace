@@ -1,0 +1,47 @@
+# Traditional Chinese Translation of krdb.
+# Copyright (C) 2002 Free Software Foundation, Inc.
+#
+# Chen Yang <chenyang@elsewhere.idv.tw>, 2002.
+# Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2008, 2009.
+# Jeff Huang <s8321414@gmail.com>, 2017.
+# Yi-Jyun Pan <pan93412@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: krdb\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-24 00:47+0000\n"
+"PO-Revision-Date: 2020-01-26 19:01+0800\n"
+"Last-Translator: Yi-Jyun Pan <pan93412@gmail.com>\n"
+"Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 19.12.1\n"
+
+#: krdb.cpp:261
+#, kde-format
+msgid ""
+"# created by KDE Plasma, %1\n"
+"#\n"
+msgstr ""
+"# 由 KDE Plasma 建立，%1\n"
+"#\n"
+
+#~ msgid ""
+#~ "# created by KDE Plasma, %1\n"
+#~ "#\n"
+#~ "# If you do not want Plasma to override your GTK settings, select\n"
+#~ "# Colors in the System Settings and disable the checkbox\n"
+#~ "# \"Apply colors to non-Qt applications\"\n"
+#~ "#\n"
+#~ "#\n"
+#~ msgstr ""
+#~ "# 由 KDE 所建立, %1\n"
+#~ "#\n"
+#~ "# 如果您不希望 Plasma 覆寫您的 GTK 設定值，請在\n"
+#~ "# 系統設定裡的顏色下取消\n"
+#~ "# 「套用色彩至非 Qt 應用程式」\n"
+#~ "#\n"
+#~ "#\n"

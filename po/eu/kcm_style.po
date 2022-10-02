@@ -1,0 +1,429 @@
+# Translation for kcm_style.po to Euskara/Basque (eu).
+# Copyright (C) 2002-2014, Free Software Foundation, Inc.
+# Copyright (C) 2015-2021, This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+#
+# Translators:
+# Marcos  <marcos@euskalgnu.org>, 2002, 2004, 2005, 2006, 2007.
+# Juan Irigoien <juanirigoien@irakasle.net>, 2004.
+# Ion Gaztañaga <igaztanaga@gmail.com>, 2005.
+# Asier Urio Larrea <asieriko@gmail.com>, 2008.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2011, 2014, 2018, 2019, 2020, 2021.
+# Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"PO-Revision-Date: 2021-08-15 16:24+0200\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.08.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: gtkpage.cpp:59
+#, kde-format
+msgid "%1 is not a valid GTK Theme archive."
+msgstr "%1 ez da GTK gai artxibo balioduna."
+
+#: kcmstyle.cpp:161 kcmstyle.cpp:168
+#, kde-format
+msgid "There was an error loading the configuration dialog for this style."
+msgstr ""
+"Errore bat gertatu da estilo honetako konfigurazioko elkarrizketa-koadroa "
+"kargatzean."
+
+#: kcmstyle.cpp:274
+#, kde-format
+msgid "Failed to apply selected style '%1'."
+msgstr "Huts egin du hautatutako estiloa ezartzea '%1'."
+
+#: package/contents/ui/EffectSettingsPopup.qml:32
+#, kde-format
+msgid "Show icons:"
+msgstr "Erakutsi ikonoak:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:33
+#, kde-format
+msgid "On buttons"
+msgstr "Botoietan"
+
+#: package/contents/ui/EffectSettingsPopup.qml:44
+#, kde-format
+msgid "In menus"
+msgstr "Menuetan"
+
+#: package/contents/ui/EffectSettingsPopup.qml:56
+#, kde-format
+msgid "Main toolbar label:"
+msgstr "Tresna-barra nagusiko etiketa:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "None"
+msgstr "Bat ere ez"
+
+#: package/contents/ui/EffectSettingsPopup.qml:59
+#, kde-format
+msgid "Text only"
+msgstr "Testua soilik"
+
+#: package/contents/ui/EffectSettingsPopup.qml:60
+#, kde-format
+msgid "Beside icons"
+msgstr "Ikonoen alboan"
+
+#: package/contents/ui/EffectSettingsPopup.qml:61
+#, kde-format
+msgid "Below icon"
+msgstr "Ikonoen azpian"
+
+#: package/contents/ui/EffectSettingsPopup.qml:76
+#, kde-format
+msgid "Secondary toolbar label:"
+msgstr "Bigarren mailako tresna-barrako etiketa:"
+
+#: package/contents/ui/GtkStylePage.qml:18
+#, kde-format
+msgid "GNOME/GTK Application Style"
+msgstr "GNOME/GTK aplikazio-estiloa"
+
+#: package/contents/ui/GtkStylePage.qml:44
+#, kde-format
+msgid "GTK theme:"
+msgstr "GTK gaia:"
+
+#: package/contents/ui/GtkStylePage.qml:69
+#, kde-format
+msgid "Preview…"
+msgstr "Aurrez ikusi..."
+
+#: package/contents/ui/GtkStylePage.qml:88
+#, kde-format
+msgid "Install from File…"
+msgstr "Instalatu fitxategitik..."
+
+#: package/contents/ui/GtkStylePage.qml:93
+#, kde-format
+msgid "Get New GNOME/GTK Application Styles…"
+msgstr "Lortu GNOME/GTK aplikazio-estilo berriak..."
+
+#: package/contents/ui/GtkStylePage.qml:109
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr "Aukeratu GTK gai artxiboa"
+
+#: package/contents/ui/GtkStylePage.qml:111
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr "GTK gai artxiboa (*.tar.xz *.tar.gz *.tar.bz2)"
+
+#: package/contents/ui/main.qml:17
+#, kde-format
+msgid ""
+"This module allows you to modify the visual appearance of applications' user "
+"interface elements."
+msgstr ""
+"Modulu honek aplikazioen erabiltzaile-interfazeko elementuen ikus-itxura "
+"aldatzen uzten dizu."
+
+#: package/contents/ui/main.qml:96
+#, kde-format
+msgid "Configure Style…"
+msgstr "Konfiguratu estiloa..."
+
+#: package/contents/ui/main.qml:116
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr "Konfiguratu ikonoak eta tresna-barrak"
+
+#: package/contents/ui/main.qml:132
+#, kde-format
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "Konfiguratu GNOME/GTK aplikazio-estiloa..."
+
+#: styleconfdialog.cpp:21
+#, kde-format
+msgid "Configure %1"
+msgstr "Konfiguratu %1"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "1. fitxa"
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, kde-format
+msgid "Push Button"
+msgstr "Sakatzeko botoia"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, kde-format
+msgid "Combo box"
+msgstr "Lauki konbinatua"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "Kontrol-laukia"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "Aukera-botoia"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:133
+#, kde-format
+msgid "Tab 2"
+msgstr "2. fitxa"
+
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, kde-format
+msgid "Application style"
+msgstr "Aplikazioaren estiloa"
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, kde-format
+msgid "Show icons on buttons"
+msgstr "Erakutsi ikonoak botoietan"
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, kde-format
+msgid "Show icons in menus"
+msgstr "Erakutsi ikonoak menuetan"
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, kde-format
+msgid "Main toolbar label"
+msgstr "Tresna-barra nagusiko etiketa"
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, kde-format
+msgid "Secondary toolbar label"
+msgstr "Bigarren mailako tresna-barrako etiketa"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr ""
+#~ "Juan Irigoien,Ion Gaztañaga,Asier Urio Larrea,Marcos Goyeneche,Iñigo "
+#~ "Salvador Azurmendi,Hizkuntza Politikarako Sailburuordetza"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "juanirigoien@irakasle.net,igaztanaga@gmail.com,asieriko@gmail.com,"
+#~ "marcos@euskalgnu.org,xalba@ni.eus,hizpol@ej-gv.es"
+
+#~ msgid "Application Style"
+#~ msgstr "Aplikazio-estiloa"
+
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
+#~ msgstr "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
+
+#~ msgid "Karol Szwed"
+#~ msgstr "Karol Szwed"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Kai Uwe Broulik"
+
+#~ msgid "GTK3 theme:"
+#~ msgstr "GTK3 gaia:"
+
+#~ msgid "Download New GNOME/GTK Application Styles..."
+#~ msgstr "Zama-jaitsi GNOME/GTK aplikazio-estilo berriak..."
+
+#~ msgid "Download New GNOME/GTK2 Application Styles..."
+#~ msgstr "Zama-jaitsi GNOME/GTK2 aplikazio-estilo berriak..."
+
+#~ msgid "GNOME/GTK2 Application Styles"
+#~ msgstr "GNOME/GTK2 aplikazio-estiloak"
+
+#~ msgid "Download New GNOME/GTK3 Application Styles..."
+#~ msgstr "Zama-jaitsi GNOME/GTK3 aplikazio-estilo berriak..."
+
+#~ msgid "GNOME/GTK3 Application Styles"
+#~ msgstr "GNOME/GTK aplikazio-estiloak"
+
+#~ msgid "Get New GNOME/GTK2 Application Styles..."
+#~ msgstr "Lortu GNOME/GTK2 aplikazio-estilo berria..."
+
+#~ msgid "Get New GNOME/GTK3 Application Styles..."
+#~ msgstr "Lortu GNOME/GTK3 aplikazio-estilo berriak..."
+
+#~ msgid "Unable to Load Dialog"
+#~ msgstr "Ezin da kargatu elkarrizketa-koadroa"
+
+#~ msgid "No description available."
+#~ msgstr "Ez dago deskribapenik erabilgarri."
+
+#~ msgid ""
+#~ "This area shows a preview of the currently selected style without having "
+#~ "to apply it to the whole desktop."
+#~ msgstr ""
+#~ "Eremu honetan, unean hautatuta dagoen estiloaren aurrebista bistaratzen "
+#~ "da mahaigain osoari aplikatu beharrik gabe."
+
+#~ msgid ""
+#~ "Here you can choose from a list of predefined widget styles (e.g. the way "
+#~ "buttons are drawn) which may or may not be combined with a theme "
+#~ "(additional information like a marble texture or a gradient)."
+#~ msgstr ""
+#~ "Hemen, aldez aurretik esleitutako trepet-estiloen zerrenda batetik "
+#~ "(adibidez, botoiak nola marraztuko diren) aukeratu dezakezu zein konbina "
+#~ "daitekeen eta zein ez gai batekin (informazio osagarria, hala nola marmol-"
+#~ "itxura edo gradientea)."
+
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "some important buttons."
+#~ msgstr ""
+#~ "Aukera hau gaitzen baduzu, aplikazioek ikono txikiak erakutsiko dituzte "
+#~ "botoi garrantzitsu batzuen alboan."
+
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "most menu items."
+#~ msgstr ""
+#~ "Aukera hau gaitzen baduzu, aplikazioek ikono txikiak erakutsiko dituzte "
+#~ "menuko elementu gehienen alboan."
+
+#~ msgid ""
+#~ "<p><b>No text:</b> Shows only icons on toolbar buttons. Best option for "
+#~ "low resolutions.</p><p><b>Text only: </b>Shows only text on toolbar "
+#~ "buttons.</p><p><b>Text beside icons: </b> Shows icons and text on toolbar "
+#~ "buttons. Text is aligned beside the icon.</p><b>Text below icons: </b> "
+#~ "Shows icons and text on toolbar buttons. Text is aligned below the icon."
+#~ msgstr ""
+#~ "<p><b>Testurik ez:</b> Bakarrik ikonoak erakusten ditu tresna-barrako "
+#~ "botoietan. Bereizmen baxuetarako aukerarik onena da.</p><p><b>Testua "
+#~ "bakarrik:</b>Bakarrik testua erakusten du tresna-barrako botoietan.</"
+#~ "p><p><b>Testua ikonoen ondoan:</b> Ikonoak eta testua erakusten ditu "
+#~ "tresna-barrako botoietan. Testua ikonoaren ondoan lerrokatzen da.</"
+#~ "p><b>Testua ikonoen azpian:</b> Ikonoak eta testua erakusten ditu tresna-"
+#~ "barrako botoietan. Testua ikonoaren azpian lerrokatzen da."
+
+#~ msgid "Toolbars"
+#~ msgstr "Tresna-barrak"
+
+#~ msgid "No Text"
+#~ msgstr "Testurik ez"
+
+#, fuzzy
+#~| msgid "Widget style:"
+#~ msgid "Widget Style"
+#~ msgstr "Trepeten estiloa:"
+
+#~ msgid "Widget style:"
+#~ msgstr "Trepeten estiloa:"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Fine Tuning"
+#~ msgstr "&Doikuntza aurreratua"
+
+#~ msgid "Description: %1"
+#~ msgstr "Deskribapena: %1"
+
+#~ msgid ""
+#~ "This page allows you to choose details about the widget style options"
+#~ msgstr ""
+#~ "Orri honek aukera ematen du trepet-estiloen aukeren xehetasunak hautatzeko"
+
+#~ msgid "Group Box"
+#~ msgstr "Talde-koadroa"
+
+#~ msgid "KDE Style Module"
+#~ msgstr "KDEren estilo-modulua"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "Menubar"
+#~ msgstr "Menu-barra"
+
+#~ msgid "Menubar style:"
+#~ msgstr "Menu-barraren estiloa:"
+
+#~ msgid "In application"
+#~ msgstr "Aplikazioan"
+
+#~ msgid "Title bar button"
+#~ msgstr "Izenburu-barra botoia"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "Global Menu widget"
+#~ msgstr "&Aplikazioak"
+
+#, fuzzy
+#~| msgid "Settings changes will take effect only on application restart"
+#~ msgid "Your changes will take effect only on application restart."
+#~ msgstr ""
+#~ "Ezarpen aldaketak gauzatuko dira soilik aplikazioa berrabiarazi ondoren"
+
+#~ msgid ""
+#~ "<p>Changes to the visibility of menu icons will only affect newly started "
+#~ "applications.</p>"
+#~ msgstr ""
+#~ "<p>Menu-ikonoen ikusgarritasunari egindako aldaketek hemendik aurrera "
+#~ "hasitako aplikazioei baino ez die eragingo.</p>"
+
+#~ msgctxt "@title:window"
+#~ msgid "Menu Icons Changed"
+#~ msgstr "Menu-ikonoak aldatuta"
+
+#~ msgid "Top screen menubar"
+#~ msgstr "Pantaila gaineko menu-barra"
+
+#~ msgid "Only export"
+#~ msgstr "Soilik esportatu"
+
+#~ msgid "Graphical effects:"
+#~ msgstr "Efektu grafikoak:"
+
+#~ msgid "Low display resolution and Low CPU"
+#~ msgstr "Bistaratzeko bereizmen baxua eta PUZ baxua"
+
+#~ msgid "High display resolution and Low CPU"
+#~ msgstr "Bistaratzeko bereizmen altua eta PUZ baxua"
+
+#~ msgid "Low display resolution and High CPU"
+#~ msgstr "Bistaratzeko bereizmen baxua eta PUZ altua"
+
+#~ msgid "High display resolution and High CPU"
+#~ msgstr "Bistaratzeko bereizmen altua eta PUZ altua"
+
+#~ msgid "Low display resolution and Very High CPU"
+#~ msgstr "Bistaratzeko bereizmen baxua eta PUZ oso altua"
+
+#~ msgid "High display resolution and Very High CPU"
+#~ msgstr "Bistaratzeko bereizmen altua eta PUZ oso altua"
+
+#~ msgid ""
+#~ "If you enable this option, KDE Applications will run internal animations."
+#~ msgstr ""
+#~ "Aukera hau gaituz gero, KDE aplikazioek barne-animazioak exekutatzen "
+#~ "dituzte."
+
+#~ msgid "kcmstyle"
+#~ msgstr "kcmstyle"

@@ -1,0 +1,215 @@
+# translation of krunner_powerdevil.po to Macedonian
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Bozidar Proevski <bobibobi@freemail.com.mk>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner_powerdevil\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"PO-Revision-Date: 2008-12-23 21:28+0100\n"
+"Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
+"Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
+"Language: mk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: Plural-Forms: nplurals=3; plural=n%10==1 ? 0 : n%10==2 ? 1 : "
+"2;\n"
+
+#: PowerDevilRunner.cpp:32
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "suspend"
+msgstr "суспендирај"
+
+#: PowerDevilRunner.cpp:34
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to ram"
+msgstr ""
+
+#: PowerDevilRunner.cpp:36
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "sleep"
+msgstr ""
+
+#: PowerDevilRunner.cpp:38
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "hibernate"
+msgstr ""
+
+#: PowerDevilRunner.cpp:40
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to disk"
+msgstr ""
+
+#: PowerDevilRunner.cpp:42 PowerDevilRunner.cpp:44 PowerDevilRunner.cpp:69
+#, fuzzy, kde-format
+#| msgid "Dim screen totally"
+msgctxt "Note this is a KRunner keyword"
+msgid "dim screen"
+msgstr "Затемни го екранот целосно"
+
+#: PowerDevilRunner.cpp:53
+#, kde-format
+msgid ""
+"Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
+"activated"
+msgstr ""
+
+#: PowerDevilRunner.cpp:57
+#, kde-format
+msgid "Suspends the system to RAM"
+msgstr ""
+
+#: PowerDevilRunner.cpp:61
+#, kde-format
+msgid "Suspends the system to disk"
+msgstr ""
+
+#: PowerDevilRunner.cpp:65
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "screen brightness"
+msgctxt ""
+"Note this is a KRunner keyword, <> is a placeholder and should be at the end"
+msgid "screen brightness <percent value>"
+msgstr "осветленост на екран"
+
+#: PowerDevilRunner.cpp:67
+#, no-c-format, kde-format
+msgid ""
+"Lists screen brightness options or sets it to the brightness defined by the "
+"search term; e.g. screen brightness 50 would dim the screen to 50% maximum "
+"brightness"
+msgstr ""
+
+#: PowerDevilRunner.cpp:95
+#, fuzzy, kde-format
+#| msgid "Set Brightness to %1"
+msgid "Set Brightness to %1%"
+msgstr "Поставување осветленост на %1"
+
+#: PowerDevilRunner.cpp:104
+#, kde-format
+msgid "Dim screen totally"
+msgstr "Затемни го екранот целосно"
+
+#: PowerDevilRunner.cpp:112
+#, kde-format
+msgid "Dim screen by half"
+msgstr "Затемни го екранот на половина"
+
+#: PowerDevilRunner.cpp:142
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr ""
+
+#: PowerDevilRunner.cpp:143
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "suspend"
+msgid "Suspend to RAM"
+msgstr "суспендирај"
+
+#: PowerDevilRunner.cpp:148
+#, kde-format
+msgctxt "Suspend to disk"
+msgid "Hibernate"
+msgstr ""
+
+#: PowerDevilRunner.cpp:149
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "suspend"
+msgid "Suspend to disk"
+msgstr "суспендирај"
+
+#: PowerDevilRunner.cpp:218
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "screen brightness"
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "screen brightness "
+msgstr "осветленост на екран"
+
+#: PowerDevilRunner.cpp:220
+#, fuzzy, kde-format
+#| msgid "Dim screen totally"
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "dim screen "
+msgstr "Затемни го екранот целосно"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "screen brightness"
+#~ msgstr "осветленост на екран"
+
+#, fuzzy
+#~| msgctxt "Note this is a KRunner keyword"
+#~| msgid "screen brightness"
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "screen brightness %1"
+#~ msgstr "осветленост на екран"
+
+#, fuzzy
+#~| msgid "Dim screen totally"
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "dim screen %1"
+#~ msgstr "Затемни го екранот целосно"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "power profile"
+#~ msgstr "профил за напојување"
+
+#, fuzzy
+#~| msgctxt "Note this is a KRunner keyword"
+#~| msgid "power profile"
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "power profile %1"
+#~ msgstr "профил за напојување"
+
+#~ msgid "Set Profile to '%1'"
+#~ msgstr "Поставување профил на „%1“"
+
+#~ msgid "Turn off screen"
+#~ msgstr "Исклучи го екранот"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "power governor"
+#~ msgstr "регулатор за напојување"
+
+#, fuzzy
+#~| msgctxt "Note this is a KRunner keyword"
+#~| msgid "power governor"
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "power governor %1"
+#~ msgstr "регулатор за напојување"
+
+#, fuzzy
+#~| msgid "Set Powersaving Scheme to '%1'"
+#~ msgid "Set CPU frequency scaling policy to '%1'"
+#~ msgstr "Поставување шема за заштеда на „%1“"
+
+#, fuzzy
+#~| msgctxt "Note this is a KRunner keyword"
+#~| msgid "power scheme"
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "power scheme %1"
+#~ msgstr "шема за напојување"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "power scheme"
+#~ msgstr "шема за напојување"
+
+#~ msgid "Set Powersaving Scheme to '%1'"
+#~ msgstr "Поставување шема за заштеда на „%1“"
+
+#~ msgid "Set CPU Governor to '%1'"
+#~ msgstr "Поставување регулатор на процесор на „%1“"

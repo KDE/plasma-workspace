@@ -1,0 +1,56 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Serdar Soytetir <tulliana@gmail.com>, 2009.
+# Volkan Gezer <volkangezer@gmail.com>, 2014.
+# Emir SARI <emir_sari@icloud.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_containmentactions_switchwindow\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"PO-Revision-Date: 2022-03-12 15:28+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#. i18n: ectx: property (text), widget (QRadioButton, flatButton)
+#: config.ui:16
+#, kde-format
+msgid "Display all windows in one list"
+msgstr "Tüm pencereleri bir listede göster"
+
+#. i18n: ectx: property (text), widget (QRadioButton, subButton)
+#: config.ui:23
+#, kde-format
+msgid "Display a submenu for each desktop"
+msgstr "Her masaüstü için bir alt menü göster"
+
+#. i18n: ectx: property (text), widget (QRadioButton, curButton)
+#: config.ui:30
+#, kde-format
+msgid "Display only the current desktop's windows"
+msgstr "Yalnızca geçerli masaüstünün pencerelerini göster"
+
+#: switch.cpp:75
+#, kde-format
+msgctxt "plasma_containmentactions_switchwindow"
+msgid "Configure Switch Window Plugin"
+msgstr "Pencere Değiştirme Eklentisini Yapılandır"
+
+#: switch.cpp:155
+#, kde-format
+msgctxt "plasma_containmentactions_switchwindow"
+msgid "Windows"
+msgstr "Pencereler"
+
+#: switch.cpp:179 switch.cpp:200 switch.cpp:202
+#, kde-format
+msgctxt "plasma_containmentactions_switchwindow"
+msgid "All Desktops"
+msgstr "Tüm Masaüstleri"

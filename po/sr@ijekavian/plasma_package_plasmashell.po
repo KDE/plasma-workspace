@@ -1,0 +1,112 @@
+# Translation of plasma_package_plasmashell.po into Serbian.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2014, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_package_plasmashell\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-05-20 03:26+0200\n"
+"PO-Revision-Date: 2016-03-20 15:25+0100\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@ijekavian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+# >? Furniture?
+# >> @item file/directory definition
+#: shellpackage.cpp:39 shellpackage.cpp:40
+#, kde-format
+msgid "Applets furniture"
+msgstr "намештај аплета"
+
+# >> @item file/directory definition
+#: shellpackage.cpp:41
+#, kde-format
+msgid "Explorer UI for adding widgets"
+msgstr "сучеље истраживача за додавање виџета"
+
+# >> @item file/directory definition
+#: shellpackage.cpp:42
+#, kde-format
+msgid "User interface for the views that will show containments"
+msgstr "корисничко сучеље за приказе садржалаца"
+
+# >> @item file/directory definition
+#: shellpackage.cpp:50
+#, kde-format
+msgid "Default layout file"
+msgstr "фајл подразумијеваног распореда"
+
+# >> @item file/directory definition
+#: shellpackage.cpp:51
+#, kde-format
+msgid "Default plugins for containments, containmentActions, etc."
+msgstr "подразумевани прикључци за садржаоце, радње садржалаца, итд."
+
+# >> @item file/directory definition
+#: shellpackage.cpp:56
+#, kde-format
+msgid "Error message shown when an applet fails to load"
+msgstr "порука о грешци када аплет не успе да се учита"
+
+# >> @item file/directory definition
+#: shellpackage.cpp:57
+#, kde-format
+msgid "QML component that shows an applet in a popup"
+msgstr "КуМЛ компонента за приказ аплета у искакачу"
+
+# >> @item file/directory definition
+#: shellpackage.cpp:58
+#, kde-format
+msgid ""
+"Compact representation of an applet when collapsed in a popup, for instance "
+"as an icon. Applets can override this component."
+msgstr ""
+"представа аплета када је сажет у искакачу, нпр. као иконица; аплети могу "
+"потиснути ову компоненту"
+
+# >> @item file/directory definition
+#: shellpackage.cpp:61
+#, kde-format
+msgid "QML component for the configuration dialog for applets"
+msgstr "КуМЛ компонента дијалога за подешавање аплета"
+
+# >> @item file/directory definition
+#: shellpackage.cpp:62
+#, kde-format
+msgid "QML component for the configuration dialog for containments"
+msgstr "КуМЛ компонента дијалога за подешавање садржалаца"
+
+# >> @item file/directory definition
+#: shellpackage.cpp:63
+#, kde-format
+msgid "Panel configuration UI"
+msgstr "сучеље поставе панела"
+
+# >> @item file/directory definition
+#: shellpackage.cpp:64
+#, kde-format
+msgid "QML component for choosing an alternate applet"
+msgstr "КуМЛ компонента за бирање алтернативног аплета"
+
+# >> @item file/directory definition
+#: shellpackage.cpp:67
+#, kde-format
+msgid "Widgets explorer UI"
+msgstr "сучеље истраживача виџета"
+
+# >> @item file/directory definition
+#: shellpackage.cpp:70
+#, kde-format
+msgid ""
+"A UI for writing, loading and running desktop scripts in the current live "
+"session"
+msgstr ""
+"сучеље за писање, учитавање и извршавање скрипта површи у тренутној живој "
+"сесији"

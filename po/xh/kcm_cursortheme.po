@@ -1,0 +1,459 @@
+# translation of kcminput.po to
+# translation of kcminput.po to
+# translation of kcminput.po to
+# translation of kcminput.po to
+# translation of kcminput.po to Xhosa
+# K Desktop Environment - kdebase
+# Copyright (C) 2001 translate.org.za
+# Antoinette Dekeni <antoinette@transalate.org.za>, 2001.
+# Lwandle Mgidlana <lwandle@translate.org.za>, 2002
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminput\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:50+0000\n"
+"PO-Revision-Date: 2002-11-04 09:21SAST\n"
+"Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
+"Language-Team: Xhosa <xhosa@translate.org.za>\n"
+"Language: xh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.0beta2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current cursor theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr ""
+
+#: kcmcursortheme.cpp:302
+#, fuzzy, kde-format
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr ""
+"KDE kufuneka iqale kwakhona ngenxa yokutshintsha kobungakanani besalathisi "
+"ukwenza isiphumo"
+
+#: kcmcursortheme.cpp:376
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: kcmcursortheme.cpp:387
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr ""
+
+#: kcmcursortheme.cpp:418
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr ""
+
+#: kcmcursortheme.cpp:425
+#, kde-format
+msgid "Failed to create 'icons' folder."
+msgstr ""
+
+#: kcmcursortheme.cpp:434
+#, kde-format
+msgid ""
+"A theme named %1 already exists in your icon theme folder. Do you want "
+"replace it with this one?"
+msgstr ""
+
+#: kcmcursortheme.cpp:438
+#, kde-format
+msgid "Overwrite Theme?"
+msgstr ""
+
+#: kcmcursortheme.cpp:462
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: package/contents/ui/Delegate.qml:54
+#, kde-format
+msgid "Remove Theme"
+msgstr ""
+
+#: package/contents/ui/Delegate.qml:61
+#, kde-format
+msgid "Restore Cursor Theme"
+msgstr ""
+
+#: package/contents/ui/main.qml:20
+#, kde-format
+msgid "This module lets you choose the mouse cursor theme."
+msgstr ""
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Size:"
+msgstr ""
+
+#: package/contents/ui/main.qml:134
+#, kde-format
+msgid "&Install from File…"
+msgstr ""
+
+#: package/contents/ui/main.qml:140
+#, kde-format
+msgid "&Get New Cursors…"
+msgstr ""
+
+#: package/contents/ui/main.qml:157
+#, kde-format
+msgid "Open Theme"
+msgstr ""
+
+#: package/contents/ui/main.qml:159
+#, kde-format
+msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:41
+#, kde-format
+msgid "The requested size '%1' is not available, using %2 instead."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:62
+#, kde-format
+msgid ""
+"This tool allows you to set the mouse cursor theme for the current Plasma "
+"session, without accidentally setting it to one that is either not "
+"available, or which is already set."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:66
+#, kde-format
+msgid ""
+"The name of the cursor theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:67
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:68
+#, kde-format
+msgid "Use a specific size, rather than the theme default size"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:89
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:100
+#, kde-format
+msgid ""
+"Successfully applied the mouse cursor theme %1 to your current Plasma session"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:102
+#, fuzzy, kde-format
+msgid ""
+"You have to restart the Plasma session for your newly applied mouse cursor "
+"theme to display correctly."
+msgstr ""
+"KDE kufuneka iqale kwakhona ngenxa yokutshintsha kobungakanani besalathisi "
+"ukwenza isiphumo"
+
+#: plasma-apply-cursortheme.cpp:112
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:120
+#, kde-format
+msgid "You have the following mouse cursor themes on your system:"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:125
+#, kde-format
+msgid "(Current theme for this Plasma session)"
+msgstr ""
+
+#: xcursor/xcursortheme.cpp:60
+#, kde-format
+msgctxt ""
+"@info The argument is the list of available sizes (in pixel). Example: "
+"'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+msgid "(Available sizes: %1)"
+msgstr ""
+
+#, fuzzy
+#~ msgid "Large black cursors"
+#~ msgstr "&Isalathisi esikhulu"
+
+#, fuzzy
+#~ msgid "Small white cursors"
+#~ msgstr "&Isalathisi esimhlophe"
+
+#, fuzzy
+#~ msgid "Large white cursors"
+#~ msgstr "&Isalathisi esikhulu"
+
+#, fuzzy
+#~ msgid "Righ&t handed"
+#~ msgstr "O&kwesandla sasekunene"
+
+#~ msgid "Le&ft handed"
+#~ msgstr "Ok&wesandla sasekunene"
+
+#~ msgid "Icons"
+#~ msgstr "Uphawu lwemifanekiso"
+
+#~ msgid ""
+#~ "Dou&ble-click to open files and folders (select icons on first click)"
+#~ msgstr ""
+#~ "Nqakr&aza-kabini ukuvula iifayile kunye neencwadi ezinenkcukacha (khetha "
+#~ "ii icons kunqakrazo lokuqala)"
+
+#~ msgid "&Single-click to open files and folders"
+#~ msgstr "&Nqakraza-kubekanye ukuvula iifayile kunye neencwadi ezinenkcukacha"
+
+#, fuzzy
+#~ msgid "Cha&nge pointer shape over icons"
+#~ msgstr "Tshintsha ubume besalathisi ngap&hezulu kwe icons"
+
+#~ msgid "A&utomatically select icons"
+#~ msgstr "K&hetha iimphawu ngokuzenzekelayo"
+
+#, fuzzy
+#~ msgctxt "label. delay (on milliseconds) to automatically select icons"
+#~ msgid "Delay"
+#~ msgstr "Uliba&ziseko:"
+
+#, fuzzy
+#~| msgid " msec"
+#~ msgctxt "milliseconds. time to automatically select the items"
+#~ msgid " ms"
+#~ msgstr " msec"
+
+#~ msgid ""
+#~ "<h1>Mouse</h1> This module allows you to choose various options for the "
+#~ "way in which your pointing device works. Your pointing device may be a "
+#~ "mouse, trackball, or some other hardware that performs a similar function."
+#~ msgstr ""
+#~ "<h1>Mouse</h1> Lo mnqongo womlinganiselo ukuvumela ukukhetha iinketho "
+#~ "ezahlukeneyo ngendlela apho icebo lokwalatha lisebenza khona. Icebo lakho "
+#~ "lokwalatha linokuba yi mouse, ibhola yophawu, okanye ezinye iintsimbi "
+#~ "ezisebenza umsebenzi ofanayo."
+
+#~ msgid "&General"
+#~ msgstr "&Ngokubanzi"
+
+#~ msgid ""
+#~ "If you are left-handed, you may prefer to swap the functions of the left "
+#~ "and right buttons on your pointing device by choosing the 'left-handed' "
+#~ "option. If your pointing device has more than two buttons, only those "
+#~ "that function as the left and right buttons are affected. For example, if "
+#~ "you have a three-button mouse, the middle button is unaffected."
+#~ msgstr ""
+#~ "Ukuba usebenzisa isandla-sasekhohlo, ungakhetha ukutshintsha imisebenzi "
+#~ "yasekhohlo kunye namaqhiosha aekunene kwiceboi lakho lokwalatha "
+#~ "ngokukhetha  ukhetho 'lwesandla-sasekhohlo'. UKuba icebo lakho lokwalatha "
+#~ "linamaqhosha angapha kwesibini, ezo kuphela zisebenzayo njengamaqhosha "
+#~ "asekhohlo nasekunene echaphazeleka. Umzekelo, ukuba unemouse enamaqhosha-"
+#~ "amathathu, iqhosha eliphakathi alichaphazeleki."
+
+#~ msgid ""
+#~ "The default behavior in KDE is to select and activate icons with a single "
+#~ "click of the left button on your pointing device. This behavior is "
+#~ "consistent with what you would expect when you click links in most web "
+#~ "browsers. If you would prefer to select with a single click, and activate "
+#~ "with a double click, check this option."
+#~ msgstr ""
+#~ "Ukuziphatha kokwendalo kwi KDE kukukhetha kunye nokusebenzisa ii icon "
+#~ "ngonqakrazo olunye lweqhosha lasekhohlo kwicebo lakho lokwalatha. Oku "
+#~ "kuziphatha kuyahluka nokulindeleyo xa unqakraza amakhonkco kubakhangeli "
+#~ "abaninzi bencwadi be web. Ukuba ukhetha ukukhetha unqakrazo olunye, kunye "
+#~ "nokusebenza ngonqakrazo kabini, khangela olu khetho."
+
+#~ msgid "Activates and opens a file or folder with a single click."
+#~ msgstr ""
+#~ "Sebenzisa uvule ifayile okanye incwadi eneenkcukacha enonqakrazo olunye."
+
+#~ msgid ""
+#~ "If you check this option, pausing the mouse pointer over an icon on the "
+#~ "screen will automatically select that icon. This may be useful when "
+#~ "single clicks activate icons, and you want only to select the icon "
+#~ "without activating it."
+#~ msgstr ""
+#~ "Ukuba ukhangela olu khetho, uphumlisa isalathisi se mouse ngapha kwe icon "
+#~ "kwi khusi kuzakukhetha ngokuzenzekelayo lo icon. Oku kunokuba luncedo xa "
+#~ "unqakrazo olunye lusebenzisa ii icon, kwaye ufuna ukukhetha i icon "
+#~ "kuphela ngaphandle kokuyenza isebenze."
+
+#~ msgid ""
+#~ "If you have checked the option to automatically select icons, this slider "
+#~ "allows you to select how long the mouse pointer must be paused over the "
+#~ "icon before it is selected."
+#~ msgstr ""
+#~ "Ukuba ukhangele ukhetho ukukhetha ngokuzenzekelayo ii icon, esi "
+#~ "sityibilikisi sikuvumela ukhethe ithuba isalathisi se mouse esizakuphumla "
+#~ "ngapha kwe icon phambi kokuba ikhethwe."
+
+#~ msgid "Advanced"
+#~ msgstr "Ukubheka phambili"
+
+#~ msgid "Pointer acceleration:"
+#~ msgstr "Unikezelo lwesalathisi:"
+
+#, fuzzy
+#~ msgid ""
+#~ "<p>This option allows you to change the relationship between the distance "
+#~ "that the mouse pointer moves on the screen and the relative movement of "
+#~ "the physical device itself (which may be a mouse, trackball, or some "
+#~ "other pointing device.)</p><p> A high value for the acceleration will "
+#~ "lead to large movements of the mouse pointer on the screen even when you "
+#~ "only make a small movement with the physical device. Selecting very high "
+#~ "values may result in the mouse pointer flying across the screen, making "
+#~ "it hard to control.</p>"
+#~ msgstr ""
+#~ "Olu khetho likuvumela ukuba utshintshe uzalano phakathi komgama "
+#~ "oshukunyiswa sisalathisi se mouse kwikhusi kunye nentshukumo efanayo "
+#~ "yecebo elizibonakalisa ngokwalo (elinokuba yi mouse, ibhola yomonakalo, "
+#~ "okanye elinye icebo lokwalatha.)<p> Ixabiso eliphezulu lokunikezela "
+#~ "lizakusa kwiintshukumo ezinkulu zesalathisi se mouse kwikhusi naxa usenza "
+#~ "intshukumo encinane ngecebo elibonakalayo. Ukukhetha amaxabiso aphezulu "
+#~ "kunokubangela isalathisi se mouse sibhabhe ngapha kwekhusi, iyenza nzima "
+#~ "ukulawula!<p> Ungacwangcisa ixabiso lonikezelo ngokutsala iqhosha "
+#~ "lwesityibilikisi okanye ngoku nqakraza phezulu/ezantsi iintolo "
+#~ "ezikwiqhosha-lokujikeleza ekhohlo kwesityibilikisi."
+
+#~ msgid "Pointer threshold:"
+#~ msgstr "Isalathisi sendawo yokungena:"
+
+#, fuzzy
+#~ msgid ""
+#~ "<p>The threshold is the smallest distance that the mouse pointer must "
+#~ "move on the screen before acceleration has any effect. If the movement is "
+#~ "smaller than the threshold, the mouse pointer moves as if the "
+#~ "acceleration was set to 1X;</p><p> thus, when you make small movements "
+#~ "with the physical device, there is no acceleration at all, giving you a "
+#~ "greater degree of control over the mouse pointer. With larger movements "
+#~ "of the physical device, you can move the mouse pointer rapidly to "
+#~ "different areas on the screen.</p>"
+#~ msgstr ""
+#~ "Ungeno ngumgama omncinane esimele isalathisi semouse sihambise ngawo "
+#~ "ikhusi phambi kokuba unikezelo lube nasonasiphi na isiphumo. Ukuba "
+#~ "intshukumo incinane kunongeno, isalathisi se mouse siyahamba ngokungathi "
+#~ "unikezelo belucwangcisiwe ku 1X.<p> Nje, xa usenza iintshukumo ezincinane "
+#~ "ngecebo elibonakalayo, akukho lunikezelo nakanye, ikunika iqondo elikhulu "
+#~ "lolawulo ngapha kwesalathisi se mouse. Ngeentshukumo ezinkulu zecebo "
+#~ "elibonakalayo, ungahambisa isalathisi se mouse ngokukhawuleza kwi ariya "
+#~ "ezahlukileyo kwikhusi.<p> Unga cwangcisa ixabiso longeno ngokutsala "
+#~ "iqhosha lwesityibilikisi okanye ngokunqakraza phezulu/ezantsi iintolo "
+#~ "zeqhosha-lokujikeleza ekhohlo kwesityibilikisi."
+
+#~ msgid " msec"
+#~ msgstr " msec"
+
+#~ msgid "Double click interval:"
+#~ msgstr "Nqakraza kabini kwithuba sokuphumla:"
+
+#~ msgid ""
+#~ "The double click interval is the maximal time (in milliseconds) between "
+#~ "two mouse clicks which turns them into a double click. If the second "
+#~ "click happens later than this time interval after the first click, they "
+#~ "are recognized as two separate clicks."
+#~ msgstr ""
+#~ "Ithuba lokuphumla lokunqakraza kabini lixesha elininzi (kwimizuzwana "
+#~ "emininzi) phakathi konqakrazo kabini lwemouse oluzijikela kunqakrazo "
+#~ "kabini. Ukuba unqakrazo lwesibini luyenzeka mva kunelixesha lokuphumla "
+#~ "emva konqakrazo lokuqala, zijongwa njengonqakrazo kabini olwahlukeneyo."
+
+#~ msgid "Drag start time:"
+#~ msgstr "Rhuqa ixesha lokuqala:"
+
+#~ msgid ""
+#~ "If you click with the mouse (e.g. in a multi-line editor) and begin to "
+#~ "move the mouse within the drag start time, a drag operation will be "
+#~ "initiated."
+#~ msgstr ""
+#~ "Ukuba unqakraza nge mouse (umzekelo umhleli welayini-ezininzi) kwaye "
+#~ "uqale ukususa imouse ngexesha lokuqala utsalo, umsebenzi wotsalo "
+#~ "uzakwenziwa."
+
+#~ msgid "Drag start distance:"
+#~ msgstr "Rhuqa uqalo lomgamo:"
+
+#~ msgid ""
+#~ "If you click with the mouse and begin to move the mouse at least the drag "
+#~ "start distance, a drag operation will be initiated."
+#~ msgstr ""
+#~ "Ukuba unqakraza ngemouse kwaye uqale ukususa imouse noko kumgama wokuqala "
+#~ "utsalo, umsebenzi wotsalo uzakwenziwa."
+
+#~ msgid "Mouse wheel scrolls by:"
+#~ msgstr "Ivili le mouse lirolwa ngu:"
+
+#~ msgid ""
+#~ "If you use the wheel of a mouse, this value determines the number of "
+#~ "lines to scroll for each wheel movement. Note that if this number exceeds "
+#~ "the number of visible lines, it will be ignored and the wheel movement "
+#~ "will be handled as a page up/down movement."
+#~ msgstr ""
+#~ "Ukuba usebenzisa ivili le mouse,eli xabiso ligqiba inani le layini "
+#~ "ukurola nayiphi na intshukumo yevili ngalinye. Qaphela ukuba ukuba eli "
+#~ "nani likhulu kune nani lelayini ezibonakalayo, izakulahlwa kwaye "
+#~ "intshukumo yevili izakuphathwa njengentshukumo yephepha phezulu/ezantsi."
+
+#~ msgid "Mouse Navigation"
+#~ msgstr "Ulawulo lwe Mouse"
+
+#, fuzzy
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "&Shukumisa i mouse ngebhodi yezitshixo (usebenzisa i num pad)"
+
+#~ msgid "&Acceleration delay:"
+#~ msgstr "&Ulibaziso lonikezelo:"
+
+#, fuzzy
+#~ msgid "R&epeat interval:"
+#~ msgstr "&Phinda ithuba lokuphumla:"
+
+#~ msgid "Acceleration &time:"
+#~ msgstr "&Ixesha lonikezelo:"
+
+#, fuzzy
+#~ msgid " pixel/sec"
+#~ msgstr " pixels"
+
+#, fuzzy
+#~ msgid "Ma&ximum speed:"
+#~ msgstr "&Isantya esikhulu:"
+
+#~ msgid "Acceleration &profile:"
+#~ msgstr "&Unikezelo lwemboniselo yasecaleni:"
+
+#~ msgid "Short"
+#~ msgstr "Mfutshane"
+
+#~ msgid "Long"
+#~ msgstr "Nde"
+
+#~ msgid "Show feedback when clicking an icon"
+#~ msgstr "Bonisa ingxelo xa unqakraza uphawu olunomfanekiso"
+
+#, fuzzy
+#~ msgid "Visual f&eedback on activation"
+#~ msgstr "&Ingxelo ebonakalayo yokusebenza"

@@ -1,0 +1,675 @@
+# translation of kcminput.po to Icelandic
+# Copyright (C) 1998-2000, 2004, 2005, 2006, 2008, 2010, 2011 Free Software Foundation, Inc.
+#
+# Logi Ragnarsson <logir@hi.is>, 1998-2000.
+# Richard Allen <ra@ra.is>, 1998-2004.
+# Stígur Snæsson <stigur@vortex.is>, 2004.
+# Arnar Leosson <leosson@frisurf.no>, 2004, 2005.
+# Sveinn í Felli <sveinki@nett.is>, 2010, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminput\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:50+0000\n"
+"PO-Revision-Date: 2011-05-30 22:53+0000\n"
+"Last-Translator: Sveinn í Felli <sveinki@nett.is>\n"
+"Language-Team: Icelandic <kde-isl@molar.is>\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
+"\n"
+"\n"
+"\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current cursor theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr ""
+
+#: kcmcursortheme.cpp:302
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr "Það þarf að endurræsa KDE til að breytingarnar taki gildi."
+
+#: kcmcursortheme.cpp:376
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: kcmcursortheme.cpp:387
+#, fuzzy, kde-format
+#| msgid "Unable to find the cursor theme archive %1."
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Gat ekki fundið bendilþemasafn %1."
+
+#: kcmcursortheme.cpp:418
+#, fuzzy, kde-format
+#| msgid "The file %1 does not appear to be a valid cursor theme archive."
+msgid "The file is not a valid icon theme archive."
+msgstr "Skráin %1 virðist ekki vera gilt bendilþemasafn."
+
+#: kcmcursortheme.cpp:425
+#, kde-format
+msgid "Failed to create 'icons' folder."
+msgstr ""
+
+#: kcmcursortheme.cpp:434
+#, kde-format
+msgid ""
+"A theme named %1 already exists in your icon theme folder. Do you want "
+"replace it with this one?"
+msgstr ""
+"Þema nefnt %1 er til staðar í möppu fyrir táknmyndaþema. Viltu setja þetta í "
+"staðinn fyrir það?"
+
+#: kcmcursortheme.cpp:438
+#, kde-format
+msgid "Overwrite Theme?"
+msgstr "Skrifa yfir þema?"
+
+#: kcmcursortheme.cpp:462
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: package/contents/ui/Delegate.qml:54
+#, kde-format
+msgid "Remove Theme"
+msgstr "Fjarlægja þema"
+
+#: package/contents/ui/Delegate.qml:61
+#, fuzzy, kde-format
+#| msgid "Cursor Theme"
+msgid "Restore Cursor Theme"
+msgstr "Bendilþema"
+
+#: package/contents/ui/main.qml:20
+#, kde-format
+msgid "This module lets you choose the mouse cursor theme."
+msgstr ""
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Size:"
+msgstr ""
+
+#: package/contents/ui/main.qml:134
+#, fuzzy, kde-format
+#| msgid "Install From File..."
+msgid "&Install from File…"
+msgstr "Setja inn úr skrá..."
+
+#: package/contents/ui/main.qml:140
+#, fuzzy, kde-format
+#| msgid "Get New Theme..."
+msgid "&Get New Cursors…"
+msgstr "Ná í nýtt þema..."
+
+#: package/contents/ui/main.qml:157
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Open Theme"
+msgstr "Fjarlægja þema"
+
+#: package/contents/ui/main.qml:159
+#, kde-format
+msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:41
+#, kde-format
+msgid "The requested size '%1' is not available, using %2 instead."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:62
+#, kde-format
+msgid ""
+"This tool allows you to set the mouse cursor theme for the current Plasma "
+"session, without accidentally setting it to one that is either not "
+"available, or which is already set."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:66
+#, kde-format
+msgid ""
+"The name of the cursor theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:67
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:68
+#, kde-format
+msgid "Use a specific size, rather than the theme default size"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:89
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:100
+#, kde-format
+msgid ""
+"Successfully applied the mouse cursor theme %1 to your current Plasma session"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:102
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for your newly applied mouse cursor "
+"theme to display correctly."
+msgstr "Það þarf að endurræsa KDE til að breytingarnar taki gildi."
+
+#: plasma-apply-cursortheme.cpp:112
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:120
+#, kde-format
+msgid "You have the following mouse cursor themes on your system:"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:125
+#, kde-format
+msgid "(Current theme for this Plasma session)"
+msgstr ""
+
+#: xcursor/xcursortheme.cpp:60
+#, kde-format
+msgctxt ""
+"@info The argument is the list of available sizes (in pixel). Example: "
+"'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+msgid "(Available sizes: %1)"
+msgstr ""
+
+#~ msgid "Name"
+#~ msgstr "Heiti"
+
+#~ msgid "Description"
+#~ msgstr "Lýsing"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Arnar Leósson"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "leosson@frisurf.no"
+
+#, fuzzy
+#~| msgid "Cursor Theme"
+#~ msgid "Cursors"
+#~ msgstr "Bendilþema"
+
+#~ msgid "(c) 2003-2007 Fredrik Höglund"
+#~ msgstr "(c) 2003-2007 Fredrik Höglund"
+
+#~ msgid "Fredrik Höglund"
+#~ msgstr "Fredrik Höglund"
+
+#~ msgid ""
+#~ "<qt>You cannot delete the theme you are currently using.<br />You have to "
+#~ "switch to another theme first.</qt>"
+#~ msgstr ""
+#~ "<qt>Þú getur ekki eytt þemu sem þú ert að nota.<br />Þú verður fyrst að "
+#~ "skipta í aðra þemu.</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <i>%1</i> cursor theme?<br />This "
+#~ "will delete all the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>Ertu viss um að þú viljir fjarlægja <strong>%1</strong> bendilþemuna? "
+#~ "<br />Þetta mun eyða út öllum skrám sem þetta þema setti inn.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Staðfesting"
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "Bendilstillingum hefur verið breytt"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "Dragðu eða sláðu inn slóð þemans"
+
+#~ msgid ""
+#~ "Unable to download the cursor theme archive; please check that the "
+#~ "address %1 is correct."
+#~ msgstr ""
+#~ "Gat ekki hlaðið niður bendilþemasafni. Vinsamlegast athugið hvort slóðin "
+#~ "%1 er rétt."
+
+#~ msgid "Get new color schemes from the Internet"
+#~ msgstr "Flytja inn litastef af netinu"
+
+#~ msgid ""
+#~ "Select the cursor theme you want to use (hover preview to test cursor):"
+#~ msgstr ""
+#~ "Veldu bendilþema sem þú vilt nota (haltu músinni yfir til að prófa):"
+
+#~ msgid "Select the cursor theme you want to use:"
+#~ msgstr "Veldu bendilþema sem þú vilt nota:"
+
+#~ msgid "Small black"
+#~ msgstr "Lítill svartur"
+
+#~ msgid "Small black cursors"
+#~ msgstr "Lítill svartur bendill"
+
+#~ msgid "Large black"
+#~ msgstr "Stór svartur"
+
+#~ msgid "Large black cursors"
+#~ msgstr "Stór svartur bendil"
+
+#~ msgid "Small white"
+#~ msgstr "Lítill hvítur"
+
+#~ msgid "Small white cursors"
+#~ msgstr "Lítill hvítur bendill"
+
+#~ msgid "Large white"
+#~ msgstr "Stór hvítur"
+
+#~ msgid "Large white cursors"
+#~ msgstr "Stór hvítur bendil"
+
+#~ msgid "Button Order"
+#~ msgstr "Röð músahnappa"
+
+#~ msgid "Righ&t handed"
+#~ msgstr "Ré&tthent"
+
+#~ msgid "Le&ft handed"
+#~ msgstr "Ö&rvhent"
+
+#~ msgid ""
+#~ "Change the direction of scrolling for the mouse wheel or the 4th and 5th "
+#~ "mouse buttons."
+#~ msgstr ""
+#~ "Skipta um skrunstefnu músarhjólsins eða fjórða og fimmta músarhnappsins."
+
+#~ msgid "Re&verse scroll direction"
+#~ msgstr "Snúa &við skruni"
+
+#~ msgid "Icons"
+#~ msgstr "Táknmyndir"
+
+#~ msgid ""
+#~ "Dou&ble-click to open files and folders (select icons on first click)"
+#~ msgstr ""
+#~ "&Tvísmella til að opna skrár og möppur (velur táknmynd við fyrsta smell)"
+
+#~ msgid "&Single-click to open files and folders"
+#~ msgstr "&Einsmella til að opna skrár og möppur"
+
+#~ msgid "Cha&nge pointer shape over icons"
+#~ msgstr "Breyta músarbe&ndli yfir táknmynd"
+
+#~ msgid "A&utomatically select icons"
+#~ msgstr "Velja táknmyndir &sjálfkrafa"
+
+#~ msgctxt "label. delay (on milliseconds) to automatically select icons"
+#~ msgid "Delay"
+#~ msgstr "Seinkun"
+
+#~ msgctxt "milliseconds. time to automatically select the items"
+#~ msgid " ms"
+#~ msgstr " ms"
+
+#~ msgid ""
+#~ "<h1>Mouse</h1> This module allows you to choose various options for the "
+#~ "way in which your pointing device works. Your pointing device may be a "
+#~ "mouse, trackball, or some other hardware that performs a similar function."
+#~ msgstr ""
+#~ "<h1>Mús</h1> Þessi eining gerir þér kleyft að stilla virkni "
+#~ "benditækisins. Það kann að vera mús, bendikúla eða annað tæki með sömu "
+#~ "virkni."
+
+#~ msgid "&General"
+#~ msgstr "&Almennt"
+
+#~ msgid ""
+#~ "If you are left-handed, you may prefer to swap the functions of the left "
+#~ "and right buttons on your pointing device by choosing the 'left-handed' "
+#~ "option. If your pointing device has more than two buttons, only those "
+#~ "that function as the left and right buttons are affected. For example, if "
+#~ "you have a three-button mouse, the middle button is unaffected."
+#~ msgstr ""
+#~ "Örvhentum þykir oft beta að víxla virkni vinstri og hægri takkanna á "
+#~ "benditækinu (músinni). Það er gert með því að velja \"örvhenta\" "
+#~ "hnappanotkun í þessari einingu. Allir takkar umfram þessa tvo eru óháðir "
+#~ "þessari stillingu. Þannig hefur þessi stilling engin áhrif á miðtakkann á "
+#~ "þriggja takka mús."
+
+#~ msgid ""
+#~ "The default behavior in KDE is to select and activate icons with a single "
+#~ "click of the left button on your pointing device. This behavior is "
+#~ "consistent with what you would expect when you click links in most web "
+#~ "browsers. If you would prefer to select with a single click, and activate "
+#~ "with a double click, check this option."
+#~ msgstr ""
+#~ "Sjálfgefið er í KDE að tákn séu valin og virkjuð með einum smell með "
+#~ "vinstri músatatakkanum svipað og tenglar í vöfrum. Ef þú vilt frekar "
+#~ "velja táknin með einum smell og virkja þau með því að tvísmella þá skaltu "
+#~ "haka við hér. Ef þú krossar við hér þá eru tákn valin með einum smell með "
+#~ "vinstri músartakkanum og gerð virk með tvísmelli."
+
+#~ msgid "Activates and opens a file or folder with a single click."
+#~ msgstr "Virkjar og opnar skrá eða möppu með einum smelli."
+
+#~ msgid ""
+#~ "If you check this option, pausing the mouse pointer over an icon on the "
+#~ "screen will automatically select that icon. This may be useful when "
+#~ "single clicks activate icons, and you want only to select the icon "
+#~ "without activating it."
+#~ msgstr ""
+#~ "Ef þú krossar við hér þá er tákn sjálfkrafa valið ef músabendillinn "
+#~ "stöðvast yfir því í smá stund. Þetta kann að vera gagnlegt ef einn "
+#~ "smellur virkjar táknið og þú vilt bara velja það."
+
+#~ msgid ""
+#~ "If you have checked the option to automatically select icons, this slider "
+#~ "allows you to select how long the mouse pointer must be paused over the "
+#~ "icon before it is selected."
+#~ msgstr ""
+#~ "Ef þú hefur krossað við að velja tákn sjálfkrafa þá getur þú stillt "
+#~ "hversu lengi músabendillinn þarf að stöðvast yfir tákninu áður en það er "
+#~ "valið."
+
+#~ msgid "Advanced"
+#~ msgstr "Ítarlegra"
+
+#~ msgid " x"
+#~ msgstr " x"
+
+#~ msgid "Pointer acceleration:"
+#~ msgstr "Hröðun bendils:"
+
+#~ msgid ""
+#~ "<p>This option allows you to change the relationship between the distance "
+#~ "that the mouse pointer moves on the screen and the relative movement of "
+#~ "the physical device itself (which may be a mouse, trackball, or some "
+#~ "other pointing device.)</p><p> A high value for the acceleration will "
+#~ "lead to large movements of the mouse pointer on the screen even when you "
+#~ "only make a small movement with the physical device. Selecting very high "
+#~ "values may result in the mouse pointer flying across the screen, making "
+#~ "it hard to control.</p>"
+#~ msgstr ""
+#~ "<p>Þessi stilling ræður sambandinu milli þess hversu mikið músabendillinn "
+#~ "hreyfist á skjánum og því hvernig þú meðhöndlar samsvarandi inntakstæki, "
+#~ "hvort sem það er mús eða annað bendiltæki.</p><p> Há gildi geta valdið "
+#~ "því að bendillinn kastast um skjáinn við smáhreyfingu á músinni og gera "
+#~ "þér erfitt er að stjórna honum!</p>"
+
+#~ msgid "Pointer threshold:"
+#~ msgstr "Þröskuldur fyrir hröðun bendils:"
+
+#~ msgid ""
+#~ "<p>The threshold is the smallest distance that the mouse pointer must "
+#~ "move on the screen before acceleration has any effect. If the movement is "
+#~ "smaller than the threshold, the mouse pointer moves as if the "
+#~ "acceleration was set to 1X;</p><p> thus, when you make small movements "
+#~ "with the physical device, there is no acceleration at all, giving you a "
+#~ "greater degree of control over the mouse pointer. With larger movements "
+#~ "of the physical device, you can move the mouse pointer rapidly to "
+#~ "different areas on the screen.</p>"
+#~ msgstr ""
+#~ "<p>Þröskuldurinn er vegalengdin sem músabendillinn þarf að færast á "
+#~ "skjánum áður en hröðunin hefur einhver áhrif. Ef hann er hreyfður styttra "
+#~ "lætur hann eins og ef hröðunin væri stillt á 1X.</p><p> Þetta þýðir að "
+#~ "þegar þú hreyfir músina (eða álíka) hægt er engin hröðun, sem gefur betri "
+#~ "fínhreyfingar. Þegar þú hreyfir músina hraðar færist bendillinn hratt "
+#~ "yfir stór svæði af skjánum.</p>"
+
+#~ msgid " msec"
+#~ msgstr " ms"
+
+#~ msgid "Double click interval:"
+#~ msgstr "Bil á milli tvísmella (Double click):"
+
+#~ msgid ""
+#~ "The double click interval is the maximal time (in milliseconds) between "
+#~ "two mouse clicks which turns them into a double click. If the second "
+#~ "click happens later than this time interval after the first click, they "
+#~ "are recognized as two separate clicks."
+#~ msgstr ""
+#~ "Bilið á milli smella er hámarkstími (í millisekúndum) milli tveggja "
+#~ "smella með músinni sem túlka skal sem tvísmell. Ef seinni smellurinn á "
+#~ "sér stað síðar en téður hámarkstími segir til um, eru þeir túlkaðir sem "
+#~ "tveir stakir smellir."
+
+#~ msgid "Drag start time:"
+#~ msgstr "Ræsitími dráttar:"
+
+#~ msgid ""
+#~ "If you click with the mouse (e.g. in a multi-line editor) and begin to "
+#~ "move the mouse within the drag start time, a drag operation will be "
+#~ "initiated."
+#~ msgstr ""
+#~ "Ef þú ýtir á takkann á músinni (t.d. í ritli) og dregur hana til með "
+#~ "hnappinn niðri innan ræsitímamarkanna, þá er litið svo á að þú viljir "
+#~ "draga hlutinn til (e. drag-n-drop)"
+
+#~ msgid "Drag start distance:"
+#~ msgstr "Fjarlægðarmörk dráttar:"
+
+#~ msgid ""
+#~ "If you click with the mouse and begin to move the mouse at least the drag "
+#~ "start distance, a drag operation will be initiated."
+#~ msgstr ""
+#~ "Ef þú ýtir á takkann á músinni og dregur hana svo til um a.m.k. "
+#~ "fjarlægðarmörkin, er litið svo á að þú viljir draga hlutinn til (e. drag-"
+#~ "n-drop)."
+
+#~ msgid "Mouse wheel scrolls by:"
+#~ msgstr "Rennihjól músar rennir um:"
+
+#~ msgid ""
+#~ "If you use the wheel of a mouse, this value determines the number of "
+#~ "lines to scroll for each wheel movement. Note that if this number exceeds "
+#~ "the number of visible lines, it will be ignored and the wheel movement "
+#~ "will be handled as a page up/down movement."
+#~ msgstr ""
+#~ "Ef þú notar rennijólið á músinni ákveður þetta gildi fjölda lína sem munu "
+#~ "renna framhjá við hverja hreyfingu hjólsins. Athugið að ef þessi tala er "
+#~ "hærri en fjöldi sýnilegra lína verður hún hunsuð og hreyfing hjólsins "
+#~ "túlkuð sem síða upp/niður hreyfing."
+
+#~ msgid "Mouse Navigation"
+#~ msgstr "Músarstýring"
+
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "Færa &mús með lyklaborði (nota talnalykla)"
+
+#~ msgid "&Acceleration delay:"
+#~ msgstr "&Hröðunartöf:"
+
+#~ msgid "R&epeat interval:"
+#~ msgstr "&Endurtekningarbil:"
+
+#~ msgid "Acceleration &time:"
+#~ msgstr "Hröðunar&tími:"
+
+#~ msgid " pixel/sec"
+#~ msgstr " punktar/sek"
+
+#~ msgid "Ma&ximum speed:"
+#~ msgstr "Há&markshraði:"
+
+#~ msgid "Acceleration &profile:"
+#~ msgstr "Hröðunar&snið:"
+
+#~ msgid "Mouse"
+#~ msgstr "Mús"
+
+#~ msgid "(c) 1997 - 2005 Mouse developers"
+#~ msgstr "(c) 1997 - 2005 Músahöfundarnir"
+
+#~ msgid "Patrick Dowler"
+#~ msgstr "Patrick Dowler"
+
+#~ msgid "Dirk A. Mueller"
+#~ msgstr "Dirk A. Mueller"
+
+#~ msgid "David Faure"
+#~ msgstr "David Faure"
+
+#~ msgid "Bernd Gehrmann"
+#~ msgstr "Bernd Gehrmann"
+
+#~ msgid "Rik Hemsley"
+#~ msgstr "Rik Hemsley"
+
+#~ msgid "Brad Hughes"
+#~ msgstr "Brad Hughes"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "Brad Hards"
+#~ msgstr "Brad Hards"
+
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] " punktur"
+#~ msgstr[1] " punktar"
+
+#~ msgid " line"
+#~ msgid_plural " lines"
+#~ msgstr[0] " lína"
+#~ msgstr[1] " línur"
+
+#~ msgid "Mouse type: %1"
+#~ msgstr "Músartegund: %1"
+
+#~ msgid ""
+#~ "RF channel 1 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "RF rás 1 hefur verið sett. Vinsamlega ýttu á 'Connect' hnappinn á músinni "
+#~ "til að endurtengjast"
+
+#~ msgid "Press Connect Button"
+#~ msgstr "Ýttu á 'Connect' hnappinn"
+
+#~ msgid ""
+#~ "RF channel 2 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "RF rás 2 hefur verið sett. Vinsamlega ýttu á 'Connect' hnappinn á músinni "
+#~ "til að endurtengjast"
+
+#~ msgctxt "no cordless mouse"
+#~ msgid "none"
+#~ msgstr "engin"
+
+#~ msgid "Cordless Mouse"
+#~ msgstr "Þráðlaus mús"
+
+#~ msgid "Cordless Wheel Mouse"
+#~ msgstr "Þráðlaus mús með skrunhjóli"
+
+#~ msgid "Cordless MouseMan Wheel"
+#~ msgstr "Þráðlaus MouseMan með skrunhjóli"
+
+#~ msgid "Cordless TrackMan Wheel"
+#~ msgstr "Þráðlaus TrackMan með skrunhjóli"
+
+#~ msgid "TrackMan Live"
+#~ msgstr "TrackMan Live"
+
+#~ msgid "Cordless TrackMan FX"
+#~ msgstr "Þráðlaus TrackMan FX"
+
+#~ msgid "Cordless MouseMan Optical"
+#~ msgstr "Þráðlaus MouseMan Optical"
+
+#~ msgid "Cordless Optical Mouse"
+#~ msgstr "Þráðlaus Optical mús"
+
+#~ msgid "Cordless MouseMan Optical (2ch)"
+#~ msgstr "Þráðlaus MouseMan Optical (2ch)"
+
+#~ msgid "Cordless Optical Mouse (2ch)"
+#~ msgstr "Þráðlaus Optical mús (2ch)"
+
+#~ msgid "Cordless Mouse (2ch)"
+#~ msgstr "Þráðlaus mús (2ch)"
+
+#~ msgid "Cordless Optical TrackMan"
+#~ msgstr "Þráðlaus Optical TrackMan"
+
+#~ msgid "MX700 Cordless Optical Mouse"
+#~ msgstr "MX700 þráðlaus Optical mús"
+
+#~ msgid "MX700 Cordless Optical Mouse (2ch)"
+#~ msgstr "MX700 þráðlaus Optical mús (2ch)"
+
+#~ msgid "Unknown mouse"
+#~ msgstr "Óþekkt mús"
+
+#~ msgid "Cordless Name"
+#~ msgstr "Nafn á þráðlausri mús"
+
+#~ msgid "Sensor Resolution"
+#~ msgstr "Upplausn skynjara"
+
+#~ msgid "400 counts per inch"
+#~ msgstr "400 fjöldar á tommu"
+
+#~ msgid "800 counts per inch"
+#~ msgstr "800 fjöldar á tommu"
+
+#~ msgid "Battery Level"
+#~ msgstr "Styrkur rafhlöðu"
+
+#~ msgid "RF Channel"
+#~ msgstr "RF rás"
+
+#~ msgid "Channel 1"
+#~ msgstr "Rás 1"
+
+#~ msgid "Channel 2"
+#~ msgstr "Rás 2"
+
+#~ msgid ""
+#~ "You have a Logitech Mouse connected, and libusb was found at compile "
+#~ "time, but it was not possible to access this mouse. This is probably "
+#~ "caused by a permissions problem - you should consult the manual on how to "
+#~ "fix this."
+#~ msgstr ""
+#~ "Þú hefur Logitech mús tengda og libusb er rétt sett upp, en samt tókst "
+#~ "ekki að fá aðgang að músinni. Þetta er trúlega vandamál með "
+#~ "aðgangsheimildir - þú ættir að skoða handbókina yfir hvernig má laga "
+#~ "þetta."
+
+#~ msgid "KDE Classic"
+#~ msgstr "Hefðbundið KDE"
+
+#~ msgid "The default cursor theme in KDE 2 and 3"
+#~ msgstr "Sjálfgefin bendlaþema í KDE 2 og 3"
+
+#~ msgid "No description available"
+#~ msgstr "Engin lýsing tiltæk"

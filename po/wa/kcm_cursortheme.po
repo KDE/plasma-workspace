@@ -1,0 +1,582 @@
+# translation of kcminput.po to Walloon
+# Ratournaedje e walon des messaedjes di KDE.
+#
+# Lorint Hendschel <Laurent.Hendschel@skynet.be>, 1999-2002.
+# Pablo Saratxaga <pablo@walon.org>, 2002-2004, 2007.
+# Jean Cayron <jean.cayron@gmail.com>, 2008, 2009, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminput\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:50+0000\n"
+"PO-Revision-Date: 2010-10-22 18:29+0200\n"
+"Last-Translator: Jean Cayron <jean.cayron@gmail.com>\n"
+"Language-Team: Walloon <linux@walon.org>\n"
+"Language: wa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current cursor theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr ""
+
+#: kcmcursortheme.cpp:302
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr "KDE doet esse renondé po k' les candjmints soeyexhe en alaedje."
+
+#: kcmcursortheme.cpp:376
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: kcmcursortheme.cpp:387
+#, fuzzy, kde-format
+#| msgid "Unable to find the cursor theme archive %1."
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Dji n' a nén savou trover l' årtchive di tinme di cursoe %1 ."
+
+#: kcmcursortheme.cpp:418
+#, fuzzy, kde-format
+#| msgid "The file %1 does not appear to be a valid cursor theme archive."
+msgid "The file is not a valid icon theme archive."
+msgstr ""
+"I shonne kel fitchî %1 ni soeye nén ene årtchive di tinme di cursoe valide."
+
+#: kcmcursortheme.cpp:425
+#, kde-format
+msgid "Failed to create 'icons' folder."
+msgstr ""
+
+#: kcmcursortheme.cpp:434
+#, kde-format
+msgid ""
+"A theme named %1 already exists in your icon theme folder. Do you want "
+"replace it with this one?"
+msgstr ""
+"I gn a ddja on tinme lomé %1 dins vosse ridant des tinmes des imådjetes. El "
+"voloz vs replaecî avou ci chal?"
+
+#: kcmcursortheme.cpp:438
+#, kde-format
+msgid "Overwrite Theme?"
+msgstr "Sipotchî l' tinme?"
+
+#: kcmcursortheme.cpp:462
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: package/contents/ui/Delegate.qml:54
+#, kde-format
+msgid "Remove Theme"
+msgstr "Oister tinme"
+
+#: package/contents/ui/Delegate.qml:61
+#, fuzzy, kde-format
+#| msgid "Cursor Theme"
+msgid "Restore Cursor Theme"
+msgstr "Tinme do cursoe"
+
+#: package/contents/ui/main.qml:20
+#, kde-format
+msgid "This module lets you choose the mouse cursor theme."
+msgstr ""
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Size:"
+msgstr ""
+
+#: package/contents/ui/main.qml:134
+#, fuzzy, kde-format
+#| msgid "Install New Theme..."
+msgid "&Install from File…"
+msgstr "Astaler novea tinme..."
+
+#: package/contents/ui/main.qml:140
+#, fuzzy, kde-format
+#| msgid "Install New Theme..."
+msgid "&Get New Cursors…"
+msgstr "Astaler novea tinme..."
+
+#: package/contents/ui/main.qml:157
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Open Theme"
+msgstr "Oister tinme"
+
+#: package/contents/ui/main.qml:159
+#, kde-format
+msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:41
+#, kde-format
+msgid "The requested size '%1' is not available, using %2 instead."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:62
+#, kde-format
+msgid ""
+"This tool allows you to set the mouse cursor theme for the current Plasma "
+"session, without accidentally setting it to one that is either not "
+"available, or which is already set."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:66
+#, kde-format
+msgid ""
+"The name of the cursor theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:67
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:68
+#, kde-format
+msgid "Use a specific size, rather than the theme default size"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:89
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:100
+#, kde-format
+msgid ""
+"Successfully applied the mouse cursor theme %1 to your current Plasma session"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:102
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for your newly applied mouse cursor "
+"theme to display correctly."
+msgstr "KDE doet esse renondé po k' les candjmints soeyexhe en alaedje."
+
+#: plasma-apply-cursortheme.cpp:112
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:120
+#, kde-format
+msgid "You have the following mouse cursor themes on your system:"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:125
+#, kde-format
+msgid "(Current theme for this Plasma session)"
+msgstr ""
+
+#: xcursor/xcursortheme.cpp:60
+#, kde-format
+msgctxt ""
+"@info The argument is the list of available sizes (in pixel). Example: "
+"'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+msgid "(Available sizes: %1)"
+msgstr ""
+
+#~ msgid "Name"
+#~ msgstr "No"
+
+#~ msgid "Description"
+#~ msgstr "Discrijhaedje"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Jean Cayron,Lorint Hendschel,Pablo Saratxaga"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "jean.cayron@gmail.com,laurent.hendschel@skynet.be,pablo@walon.org"
+
+#, fuzzy
+#~| msgid "Cursor Theme"
+#~ msgid "Cursors"
+#~ msgstr "Tinme do cursoe"
+
+#~ msgid "(c) 2003-2007 Fredrik Höglund"
+#~ msgstr " © 2003-2007 Fredrik Höglund"
+
+#~ msgid "Fredrik Höglund"
+#~ msgstr "Fredrik Höglund"
+
+#~ msgid ""
+#~ "<qt>You cannot delete the theme you are currently using.<br />You have to "
+#~ "switch to another theme first.</qt>"
+#~ msgstr ""
+#~ "<qt>Vos n' poloz nén disfacer l' tinme ki vs eployîs pol moumint.<br /"
+#~ ">Vos dvoz aprume candjî viè èn ôte tinme.</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <i>%1</i> cursor theme?<br />This "
+#~ "will delete all the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>Estoz vs seur di voleur oister li tinme do cursoe <i>%1</i>?<br /"
+#~ ">Çoula disfaçrè tos les fitchîs k' ont stî astalé på tinme.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Racertinaedje"
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "Les apontiaedjes do cursoe ont candjî"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "Bodjîz et s' saetchîz ou tapez li hårdêye d' on tinme"
+
+#~ msgid ""
+#~ "Unable to download the cursor theme archive; please check that the "
+#~ "address %1 is correct."
+#~ msgstr ""
+#~ "Dji n' a nén savou aberweter l' årtchive di tinme di cursoe; acertinez vs "
+#~ "ki l' adresse %1 est coreke."
+
+#~ msgid ""
+#~ "Select the cursor theme you want to use (hover preview to test cursor):"
+#~ msgstr ""
+#~ "Tchoezixhoz li tinme do cursoe ki vos vloz eployî (passez å dzeu do "
+#~ "prévoeyaedje po sayî l' cursoe) :"
+
+#~ msgid "Select the cursor theme you want to use:"
+#~ msgstr "Tchoezixhoz li tinme do cursoe ki vos vloz eployî :"
+
+#~ msgid "Small black"
+#~ msgstr "Pitit noer"
+
+#~ msgid "Small black cursors"
+#~ msgstr "Pitits noers cursoes"
+
+#~ msgid "Large black"
+#~ msgstr "Lådje noer"
+
+#~ msgid "Large black cursors"
+#~ msgstr "Lådjes noers cursoes"
+
+#~ msgid "Small white"
+#~ msgstr "Pitit blanc"
+
+#~ msgid "Small white cursors"
+#~ msgstr "Pitits blancs cursoes"
+
+#~ msgid "Large white"
+#~ msgstr "Lådje blanc"
+
+#~ msgid "Large white cursors"
+#~ msgstr "Lådjes blancs cursoes"
+
+#~ msgid "Button Order"
+#~ msgstr "Ôre des botons"
+
+#~ msgid "Righ&t handed"
+#~ msgstr "&Droetî"
+
+#~ msgid "Le&ft handed"
+#~ msgstr "&Gåtchî"
+
+#~ msgid "Re&verse scroll direction"
+#~ msgstr "Direccion d' erôlaedje å r&vier"
+
+#~ msgid "Icons"
+#~ msgstr "Imådjetes"
+
+#~ msgid ""
+#~ "Dou&ble-click to open files and folders (select icons on first click)"
+#~ msgstr ""
+#~ "Drovi les fitchîs et ridants avou on &dobe clitchaedje (li prumî po les "
+#~ "tchoezi)"
+
+#~ msgid "&Single-click to open files and folders"
+#~ msgstr "Drovi les fitchîs et ridants d' on &seu clitchaedje"
+
+#~ msgid "Cha&nge pointer shape over icons"
+#~ msgstr "Ca&ndjî li cursoe so ene imådjete"
+
+#~ msgid "A&utomatically select icons"
+#~ msgstr "Tchoezi &otomaticmint les imådjetes"
+
+#~ msgctxt "label. delay (on milliseconds) to automatically select icons"
+#~ msgid "Delay"
+#~ msgstr "Tårdjaedje"
+
+#~ msgctxt "milliseconds. time to automatically select the items"
+#~ msgid " ms"
+#~ msgstr " ms"
+
+#~ msgid ""
+#~ "<h1>Mouse</h1> This module allows you to choose various options for the "
+#~ "way in which your pointing device works. Your pointing device may be a "
+#~ "mouse, trackball, or some other hardware that performs a similar function."
+#~ msgstr ""
+#~ "<h1>Sori</h1> Ci module ci vos permete di candjî sacwantès tchuzes sol "
+#~ "manire ki vost éndjin d' pwintaedje overe. L' éndjin d' pwintaedje da "
+#~ "vosse ça pout esse ene sori, ene bole (trackball) ou ene ôte éndjolreye "
+#~ "ki vs permete ene sifwaite fonccionålité."
+
+#~ msgid "&General"
+#~ msgstr "&Djenerå"
+
+#~ msgid ""
+#~ "If you are left-handed, you may prefer to swap the functions of the left "
+#~ "and right buttons on your pointing device by choosing the 'left-handed' "
+#~ "option. If your pointing device has more than two buttons, only those "
+#~ "that function as the left and right buttons are affected. For example, if "
+#~ "you have a three-button mouse, the middle button is unaffected."
+#~ msgstr ""
+#~ "Si vs estoz gåtchî, vos discandjroz motoit voltî les fonccions des botons "
+#~ "hintche et droet so vosse sori e tchoezixhant li tchuze « gåtchî ». Si "
+#~ "vosse sori a pus ki deus botons, i gn årè k' les cis k' ont come fonccion "
+#~ "li hintche eyet l' droete ki candjront. Metans, si vs avoz ene sori avou "
+#~ "troes botons, li boton do mitan n' candjrè nén."
+
+#~ msgid "Activates and opens a file or folder with a single click."
+#~ msgstr "Mete en alaedje et drovi on fitchî ou ridant d' on simpe clitch."
+
+#~ msgid "Advanced"
+#~ msgstr "Sipepieus"
+
+#~ msgid " x"
+#~ msgstr " x"
+
+#~ msgid "Pointer acceleration:"
+#~ msgstr "Acceleråcion do pwinteu:"
+
+#~ msgid "Pointer threshold:"
+#~ msgstr "Soû do pwinteu :"
+
+#~ msgid " msec"
+#~ msgstr " mseg"
+
+#~ msgid "Double click interval:"
+#~ msgstr "Tårdjaedje pol dobe clitchaedje :"
+
+#~ msgid ""
+#~ "The double click interval is the maximal time (in milliseconds) between "
+#~ "two mouse clicks which turns them into a double click. If the second "
+#~ "click happens later than this time interval after the first click, they "
+#~ "are recognized as two separate clicks."
+#~ msgstr ""
+#~ "Li tårdjaedje pol dobe clitchaedje c' est li tins macsimom (e "
+#~ "milisegondes) inte deus clitchaedjes del sori ki fjhèt todi on dobe "
+#~ "clitchaedje (et nén deus clitchaedjes separés). Si l' deujhinme "
+#~ "clitchaedje arive pus tård ki l' tårdjaedje defini chal, i sront veyous "
+#~ "come deus clitchaedjes simpes separé."
+
+#~ msgid "Drag start time:"
+#~ msgstr "Tins divant l' cominçmint do bodjaedje et satchaedje :"
+
+#~ msgid "Drag start distance:"
+#~ msgstr "Distance do bodjaedje et saetchaedje :"
+
+#~ msgid "Mouse wheel scrolls by:"
+#~ msgstr "Li rôlete del sori erôle pa:"
+
+#~ msgid "Mouse Navigation"
+#~ msgstr "Naiviaedje al sori"
+
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "&Bodjî l' cursoe avou l' taprece (avou l' pavé limerike)"
+
+#~ msgid "&Acceleration delay:"
+#~ msgstr "Tårdjaedje d' &acceleråcion:"
+
+#~ msgid "R&epeat interval:"
+#~ msgstr "Tins d' &repetaedje:"
+
+#~ msgid "Acceleration &time:"
+#~ msgstr "&Tins d' acceleråcion:"
+
+#~ msgid " pixel/sec"
+#~ msgstr " picsels/s"
+
+#~ msgid "Ma&ximum speed:"
+#~ msgstr "Radisté m&acsimom:"
+
+#~ msgid "Acceleration &profile:"
+#~ msgstr "&Profil d' acceleråcion:"
+
+#~ msgid "Mouse"
+#~ msgstr "Sori"
+
+#~ msgid "(c) 1997 - 2005 Mouse developers"
+#~ msgstr "© 1997 - 2005 les programeus del sori"
+
+#~ msgid "Patrick Dowler"
+#~ msgstr "Patrick Dowler"
+
+#~ msgid "Dirk A. Mueller"
+#~ msgstr "Dirk A. Müller"
+
+#~ msgid "David Faure"
+#~ msgstr "David Faure"
+
+#~ msgid "Bernd Gehrmann"
+#~ msgstr "Bernd Gehrmann"
+
+#~ msgid "Rik Hemsley"
+#~ msgstr "Rik Hemsley"
+
+#~ msgid "Brad Hughes"
+#~ msgstr "Brad Hughes"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "Brad Hards"
+#~ msgstr "Brad Hards"
+
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] " picsel"
+#~ msgstr[1] " picsels"
+
+#~ msgid " line"
+#~ msgid_plural " lines"
+#~ msgstr[0] " roye"
+#~ msgstr[1] " royes"
+
+#~ msgid "Mouse type: %1"
+#~ msgstr "Sôre di sori: %1"
+
+#~ msgid ""
+#~ "RF channel 1 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "Li canå RF 1 a stî defini. Tchôkîz s' i vs plait li boton d' raloyaedje "
+#~ "(Connect) del sori po rfé l' loyén"
+
+#~ msgid "Press Connect Button"
+#~ msgstr "Tchôkîz sol boton d' raloyaedje"
+
+#~ msgid ""
+#~ "RF channel 2 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "Li canå RF 2 a stî defini. Tchôkîz s' i vs plait li boton d' raloyaedje "
+#~ "(Connect) del sori po rfé l' loyén"
+
+#~ msgctxt "no cordless mouse"
+#~ msgid "none"
+#~ msgstr "nole"
+
+#~ msgid "Cordless Mouse"
+#~ msgstr "Sori sins fyis"
+
+#~ msgid "Cordless Wheel Mouse"
+#~ msgstr "Sori a rôlete sins fyis"
+
+#~ msgid "Cordless MouseMan Wheel"
+#~ msgstr "Sori a rôlete MouseMan sins fyis"
+
+#~ msgid "Cordless TrackMan Wheel"
+#~ msgstr "Sori a rôlete TrakMan sins fyis"
+
+#~ msgid "TrackMan Live"
+#~ msgstr "TrackMan Live"
+
+#~ msgid "Cordless TrackMan FX"
+#~ msgstr "TrackMan FX sins fyis"
+
+#~ msgid "Cordless MouseMan Optical"
+#~ msgstr "Sori MouseMan optike sins fyis"
+
+#~ msgid "Cordless Optical Mouse"
+#~ msgstr "Sori optike sins fyis"
+
+#~ msgid "Cordless MouseMan Optical (2ch)"
+#~ msgstr "Sori MouseMan optike sins fyis (2 canås)"
+
+#~ msgid "Cordless Optical Mouse (2ch)"
+#~ msgstr "Sori optike sins fyis (2 canås)"
+
+#~ msgid "Cordless Mouse (2ch)"
+#~ msgstr "Sori sins fyis (2 canås)"
+
+#~ msgid "Cordless Optical TrackMan"
+#~ msgstr "Sori TrackMan optike sins fyis"
+
+#~ msgid "MX700 Cordless Optical Mouse"
+#~ msgstr "Sori MX700 optike sins fyis"
+
+#~ msgid "MX700 Cordless Optical Mouse (2ch)"
+#~ msgstr "Sori MX700 optike sins fyis (2 canås)"
+
+#~ msgid "Unknown mouse"
+#~ msgstr "Sori nén cnoxhowe"
+
+#~ msgid "Cordless Name"
+#~ msgstr "No del sori sins fyis"
+
+#~ msgid "Sensor Resolution"
+#~ msgstr "Finté do sinteu"
+
+#~ msgid "400 counts per inch"
+#~ msgstr "400 contaedjes pa pôce"
+
+#~ msgid "800 counts per inch"
+#~ msgstr "800 contaedjes pa pôce"
+
+#~ msgid "Battery Level"
+#~ msgstr "Livea del batreye"
+
+#~ msgid "RF Channel"
+#~ msgstr "Canå radio"
+
+#~ msgid "Channel 1"
+#~ msgstr "Canå 1"
+
+#~ msgid "Channel 2"
+#~ msgstr "Canå 2"
+
+#~ msgid ""
+#~ "You have a Logitech Mouse connected, and libusb was found at compile "
+#~ "time, but it was not possible to access this mouse. This is probably "
+#~ "caused by a permissions problem - you should consult the manual on how to "
+#~ "fix this."
+#~ msgstr ""
+#~ "Vos avoz ene sori Logitech raloyeye eyet libusb a stî trovêye å moumint "
+#~ "do copilaedje mins i n' a nén stî possibe d' arinner cisse sori ci. C' "
+#~ "est motoit a cåze d' ene rujhe avou les droets - vos dvrîz lére les "
+#~ "esplikêyes po sawè comint rezoude ci problinme."
+
+#~ msgid "KDE Classic"
+#~ msgstr "KDE Classike"
+
+#~ msgid "The default cursor theme in KDE 2 and 3"
+#~ msgstr "Li prémetou tinme do cursoe dins KDE 2 et 3"
+
+#~ msgid "No description available"
+#~ msgstr "Nou discrijhaedje"
+
+#~ msgid "Short"
+#~ msgstr "Court"
+
+#~ msgid "Long"
+#~ msgstr "Long"
+
+#~ msgid "Visual f&eedback on activation"
+#~ msgstr "Ritoû &vizuwel po ls enondaedjes"

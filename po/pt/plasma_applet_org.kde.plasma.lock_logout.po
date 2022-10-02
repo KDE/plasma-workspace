@@ -1,0 +1,122 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_org\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2021-06-08 19:45+0100\n"
+"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
+"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-POFile-IgnoreConsistency: Lock\n"
+
+#: contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Geral"
+
+#: contents/ui/ConfigGeneral.qml:36
+#, kde-format
+msgctxt ""
+"Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
+msgid "Show actions:"
+msgstr "Mostrar as acções:"
+
+#: contents/ui/ConfigGeneral.qml:37
+#, kde-format
+msgid "Logout"
+msgstr "Encerrar"
+
+#: contents/ui/ConfigGeneral.qml:43
+#, kde-format
+msgid "Shutdown"
+msgstr "Desligar"
+
+#: contents/ui/ConfigGeneral.qml:48
+#, kde-format
+msgid "Reboot"
+msgstr "Reiniciar"
+
+#: contents/ui/ConfigGeneral.qml:53 contents/ui/data.js:5
+#, kde-format
+msgid "Lock"
+msgstr "Bloquear"
+
+#: contents/ui/ConfigGeneral.qml:58
+#, kde-format
+msgid "Switch User"
+msgstr "Mudar de Utilizador"
+
+#: contents/ui/ConfigGeneral.qml:63 contents/ui/data.js:46
+#, kde-format
+msgid "Hibernate"
+msgstr "Hibernar"
+
+#: contents/ui/ConfigGeneral.qml:68 contents/ui/data.js:39
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Suspender"
+
+#: contents/ui/data.js:6
+#, kde-format
+msgid "Lock the screen"
+msgstr "Bloquear o ecrã"
+
+#: contents/ui/data.js:12
+#, kde-format
+msgid "Switch user"
+msgstr "Mudar de utilizador"
+
+#: contents/ui/data.js:13
+#, kde-format
+msgid "Start a parallel session as a different user"
+msgstr "Iniciar uma sessão paralela como um utilizador diferente"
+
+#: contents/ui/data.js:18
+#, kde-format
+msgid "Shutdown…"
+msgstr "Desligar…"
+
+#: contents/ui/data.js:19
+#, kde-format
+msgid "Turn off the computer"
+msgstr "Desligar o computador"
+
+#: contents/ui/data.js:25
+#, kde-format
+msgid "Restart…"
+msgstr "Reiniciar…"
+
+#: contents/ui/data.js:26
+#, kde-format
+msgid "Reboot the computer"
+msgstr "Reiniciar o computador"
+
+#: contents/ui/data.js:32
+#, kde-format
+msgid "Logout…"
+msgstr "Encerrar…"
+
+#: contents/ui/data.js:33
+#, kde-format
+msgid "End the session"
+msgstr "Terminar a sessão"
+
+#: contents/ui/data.js:40
+#, kde-format
+msgid "Sleep (suspend to RAM)"
+msgstr "Suspender (para a RAM)"
+
+#: contents/ui/data.js:47
+#, kde-format
+msgid "Hibernate (suspend to disk)"
+msgstr "Hibernar (para o disco)"

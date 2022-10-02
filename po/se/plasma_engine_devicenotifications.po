@@ -1,0 +1,91 @@
+# Translation of plasma_engine_devicenotifications to Northern Sami
+#
+# Børre Gaup <boerre@skolelinux.no>, 2003, 2004, 2005, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: knotify4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2006-08-30 21:33+0000\n"
+"Last-Translator: Børre Gaup <boerre@skolelinux.no>\n"
+"Language-Team: Northern Sami <l10n-no@lister.huftis.org>\n"
+"Language: se\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: ksolidnotify.cpp:149
+#, kde-format
+msgid "Device Status"
+msgstr ""
+
+#: ksolidnotify.cpp:149
+#, kde-format
+msgid "A device can now be safely removed"
+msgstr ""
+
+#: ksolidnotify.cpp:150
+#, kde-format
+msgid "This device can now be safely removed."
+msgstr ""
+
+#: ksolidnotify.cpp:157
+#, kde-format
+msgid "You are not authorized to mount this device."
+msgstr ""
+
+#: ksolidnotify.cpp:160
+#, kde-format
+msgctxt "Remove is less technical for unmount"
+msgid "You are not authorized to remove this device."
+msgstr ""
+
+#: ksolidnotify.cpp:163
+#, kde-format
+msgid "You are not authorized to eject this disc."
+msgstr ""
+
+#: ksolidnotify.cpp:170
+#, kde-format
+msgid "Could not mount this device as it is busy."
+msgstr ""
+
+#: ksolidnotify.cpp:200
+#, kde-format
+msgid "One or more files on this device are open within an application."
+msgstr ""
+
+#: ksolidnotify.cpp:202
+#, kde-format
+msgid "One or more files on this device are opened in application \"%2\"."
+msgid_plural ""
+"One or more files on this device are opened in following applications: %2."
+msgstr[0] ""
+msgstr[1] ""
+
+#: ksolidnotify.cpp:205
+#, kde-format
+msgctxt "separator in list of apps blocking device unmount"
+msgid ", "
+msgstr ""
+
+#: ksolidnotify.cpp:222
+#, kde-format
+msgid "Could not mount this device."
+msgstr ""
+
+#: ksolidnotify.cpp:225
+#, kde-format
+msgctxt "Remove is less technical for unmount"
+msgid "Could not remove this device."
+msgstr ""
+
+#: ksolidnotify.cpp:228
+#, kde-format
+msgid "Could not eject this disc."
+msgstr ""

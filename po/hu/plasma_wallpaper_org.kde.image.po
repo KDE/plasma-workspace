@@ -1,0 +1,408 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Tamas Szanto <tszanto@interware.hu>, 2009.
+# Kristóf Kiszel <ulysses@kubuntu.org>, 2011, 2014, 2015, 2019.
+# Balázs Úr <urbalazs@gmail.com>, 2013, 2014.
+# Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: KDE 4.2\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-15 00:46+0000\n"
+"PO-Revision-Date: 2021-09-28 14:24+0200\n"
+"Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.03.80\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Szántó Tamás"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "tszanto@interware.hu"
+
+#: imagepackage/contents/ui/config.qml:94
+#, kde-format
+msgid "Positioning:"
+msgstr "Elhelyezkedés:"
+
+#: imagepackage/contents/ui/config.qml:97
+#, kde-format
+msgid "Scaled and Cropped"
+msgstr "Nyújtva és levágva"
+
+#: imagepackage/contents/ui/config.qml:101
+#, kde-format
+msgid "Scaled"
+msgstr "Nyújtva"
+
+#: imagepackage/contents/ui/config.qml:105
+#, kde-format
+msgid "Scaled, Keep Proportions"
+msgstr "Arányosan nyújtva"
+
+#: imagepackage/contents/ui/config.qml:109
+#, kde-format
+msgid "Centered"
+msgstr "Középre"
+
+#: imagepackage/contents/ui/config.qml:113
+#, kde-format
+msgid "Tiled"
+msgstr "Mozaikszerűen"
+
+#: imagepackage/contents/ui/config.qml:141
+#, kde-format
+msgid "Background:"
+msgstr "Háttér:"
+
+#: imagepackage/contents/ui/config.qml:142
+#, kde-format
+msgid "Blur"
+msgstr "Elmosás"
+
+#: imagepackage/contents/ui/config.qml:151
+#, kde-format
+msgid "Solid color"
+msgstr "Egyszínű"
+
+#: imagepackage/contents/ui/config.qml:161
+#, kde-format
+msgid "Select Background Color"
+msgstr "Válassza ki a háttér színét"
+
+#: imagepackage/contents/ui/config.qml:207
+#, kde-format
+msgid "Add Image…"
+msgstr "Kép hozzáadása…"
+
+#: imagepackage/contents/ui/config.qml:213
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:257
+#, kde-format
+msgid "Get New Wallpapers…"
+msgstr "Háttérképek letöltése…"
+
+#: imagepackage/contents/ui/main.qml:69
+#, kde-format
+msgid "Open Wallpaper Image"
+msgstr "Háttérkép megnyitása"
+
+#: imagepackage/contents/ui/main.qml:70
+#, kde-format
+msgid "Next Wallpaper Image"
+msgstr "Következő háttérkép"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:33
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Tartalmazó mappa megnyitása"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:39
+#, kde-format
+msgid "Restore wallpaper"
+msgstr "Háttérkép visszaállítása"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:44
+#, kde-format
+msgid "Remove Wallpaper"
+msgstr "Háttérkép eltávolítása"
+
+#: plasma-apply-wallpaperimage.cpp:29
+#, kde-format
+msgid ""
+"This tool allows you to set an image as the wallpaper for the Plasma session."
+msgstr ""
+"Ez a segédprogram lehetővé teszi egy kép beállítását a Plasma munkamenet "
+"háttérképeként."
+
+#: plasma-apply-wallpaperimage.cpp:31
+#, kde-format
+msgid ""
+"An image file or an installed wallpaper kpackage that you wish to set as the "
+"wallpaper for your Plasma session"
+msgstr ""
+"A Plasma munkamenet háttérképeként használni kívánt képfájl vagy háttérkép "
+"kpackage"
+
+#: plasma-apply-wallpaperimage.cpp:45
+#, kde-format
+msgid ""
+"There is a stray single quote in the filename of this wallpaper (') - please "
+"contact the author of the wallpaper to fix this, or rename the file "
+"yourself: %1"
+msgstr ""
+"Egy aposztróf van a háttérkép fájlnevében - vegye fel a kapcsolatot a "
+"háttérkép készítőjével, hogy javítsa, vagy nevezze át a fájlt saját maga: %1"
+
+#: plasma-apply-wallpaperimage.cpp:85
+#, kde-format
+msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+msgstr "Hiba történt a Plasma háttérkép beállítása során:\n"
+
+#: plasma-apply-wallpaperimage.cpp:89
+#, kde-format
+msgid ""
+"Successfully set the wallpaper for all desktops to the KPackage based %1"
+msgstr ""
+"Az összes asztal háttérképe sikeresen beállítva erre: %1 (KPackage-alapú)"
+
+#: plasma-apply-wallpaperimage.cpp:91
+#, kde-format
+msgid "Successfully set the wallpaper for all desktops to the image %1"
+msgstr "Az összes asztal háttérképe sikeresen beállítva erre a képre: %1"
+
+#: plasma-apply-wallpaperimage.cpp:97
+#, kde-format
+msgid ""
+"The file passed to be set as wallpaper does not exist, or we cannot identify "
+"it as a wallpaper: %1"
+msgstr ""
+"A háttérképként használni kívánt fájl nem létezik, vagy nem azonosítható "
+"háttérképként: %1"
+
+#: plugin/finder/packagefinder.cpp:152
+#, kde-format
+msgid "Recommended wallpaper file"
+msgstr "Ajánlott háttérképfájl"
+
+#: plugin/imagebackend.cpp:234
+#, kde-format
+msgid "Directory with the wallpaper to show slides from"
+msgstr "Diavetítés háttérképeit tartalmazó mappa"
+
+#: plugin/imagebackend.cpp:345
+#, kde-format
+msgid "Open Image"
+msgstr "Kép megnyitása"
+
+#: plugin/imagebackend.cpp:345
+#, kde-format
+msgid "Image Files"
+msgstr "Képfájlok"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:38
+#, kde-format
+msgid "Order:"
+msgstr "Sorrend:"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:45
+#, kde-format
+msgid "Random"
+msgstr "Véletlenszerű"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:49
+#, kde-format
+msgid "A to Z"
+msgstr "A-tól Z-ig"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:53
+#, kde-format
+msgid "Z to A"
+msgstr "Z-től A-ig"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:57
+#, kde-format
+msgid "Date modified (newest first)"
+msgstr "Dátum szerint (újak elöl)"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:61
+#, kde-format
+msgid "Date modified (oldest first)"
+msgstr "Dátum szerint (régiek elöl)"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:86
+#, kde-format
+msgid "Group by folders"
+msgstr "Csoportosítás mappák szerint"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:98
+#, kde-format
+msgid "Change every:"
+msgstr "Váltási időköz:"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:108
+#, kde-format
+msgid "%1 hour"
+msgid_plural "%1 hours"
+msgstr[0] "%1 óra"
+msgstr[1] "%1 óra"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:128
+#, kde-format
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "%1 perc"
+msgstr[1] "%1 perc"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:148
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "%1 másodperc"
+msgstr[1] "%1 másodperc"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:162
+#, kde-format
+msgid "Folders"
+msgstr "Mappák"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:220
+#, kde-format
+msgid "Remove Folder"
+msgstr "Mappa eltávolítása"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:225
+#, kde-format
+msgid "Open Folder"
+msgstr "Mappa megnyitása…"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:235
+#, kde-format
+msgid "There are no wallpaper locations configured"
+msgstr "Nincsenek beállítva háttérkép-mappák"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:250
+#, kde-format
+msgid "Add Folder…"
+msgstr "Mappa hozzáadása…"
+
+#~ msgid "There are no wallpapers in this slideshow"
+#~ msgstr "Nincsenek háttérképek ebben a diavetítésben"
+
+#~ msgid "Add Custom Wallpaper"
+#~ msgstr "Egyéni háttérkép hozzáadása"
+
+#~ msgid "Remove wallpaper"
+#~ msgstr "Háttérkép eltávolítása"
+
+#~ msgid "%1 by %2"
+#~ msgstr "%1, készítette: %2"
+
+#, fuzzy
+#~| msgid "Remove Wallpaper"
+#~ msgid "Wallpapers"
+#~ msgstr "Háttérkép eltávolítása"
+
+#~ msgctxt "<image> by <author>"
+#~ msgid "By %1"
+#~ msgstr ", készítette: %1"
+
+#~ msgid "Download Wallpapers"
+#~ msgstr "Háttérképek letöltése"
+
+#~ msgid "Hours"
+#~ msgstr "óra"
+
+#~ msgid "Open..."
+#~ msgstr "Megnyitás…"
+
+#~ msgctxt "Unknown Author"
+#~ msgid "Unknown"
+#~ msgstr "Ismeretlen"
+
+#~ msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz *.xcf)"
+#~ msgstr "Képfájlok (*.png *.jpg *.jpeg *.bmp *.svg *.svgz *.xcf)"
+
+#~ msgid "Screenshot"
+#~ msgstr "Felvétel"
+
+#~ msgid "Preview"
+#~ msgstr "Előnézet"
+
+#~ msgid "Center Tiled"
+#~ msgstr "Középre, mozaikszerűen"
+
+#~ msgid "Select Wallpaper Image File"
+#~ msgstr "Háttérkép kiválasztása"
+
+#~ msgid "P&ositioning:"
+#~ msgstr "&Pozíció:"
+
+#~ msgid "&Color:"
+#~ msgstr "S&zín:"
+
+#~ msgid "Change wallpaper frame color"
+#~ msgstr "Háttérkép keretszínének módosítása"
+
+#~ msgid ""
+#~ "Change the color of the frame that it may be visible when the wallpaper "
+#~ "is centered or scaled with the same proportions."
+#~ msgstr ""
+#~ "A középre igazított vagy arányosan nyújtott kép esetén látható keret "
+#~ "színének módosítása."
+
+#~ msgid "Remove from list"
+#~ msgstr "Eltávolítás a listából"
+
+#~ msgctxt ""
+#~ "(qtdt-format) Please do not change the quotes (') and translate only the "
+#~ "content of the quotes."
+#~ msgid "hh 'Hours' mm 'Mins' ss 'Secs'"
+#~ msgstr "hh 'óra' mm 'perc' ss 'másodperc'"
+
+#~ msgid "&My downloaded wallpapers:"
+#~ msgstr "Letöltött háttérképei&m:"
+
+#~ msgid ""
+#~ "Use wallpapers I have downloaded with \"Get New Wallpapers...\" in "
+#~ "slideshow"
+#~ msgstr ""
+#~ "Az „Új háttérképek letöltése…” opcióval letöltött háttérképek használata "
+#~ "a diavetítésben"
+
+#~ msgid "Custom folders:"
+#~ msgstr "Saját mappák:"
+
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:11pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Images</span></p></body></html>"
+#~ msgstr ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:11pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Képek</span></p></body></html>"
+
+#~ msgctxt "Wallpaper info, author name"
+#~ msgid "%1"
+#~ msgstr "%1"
+
+#~ msgid "Email:"
+#~ msgstr "E-mail:"
+
+#~ msgid "License:"
+#~ msgstr "Licenc:"
+
+#~ msgid "Color:"
+#~ msgstr "Szín:"
+
+#~ msgid "Author:"
+#~ msgstr "Szerző:"
+
+#~ msgid "Browse"
+#~ msgstr "Tallózás"
+
+#~ msgid "&Picture:"
+#~ msgstr "&Kép:"

@@ -1,0 +1,260 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Swedish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="fontinst" lang="&language;">
+<title
+>Teckensnittshantering</title>
+<articleinfo>
+<authorgroup>
+<author
+>&Craig.Drummond; &Craig.Drummond.Mail;</author>
+
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-09</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systeminställningar</keyword>
+<keyword
+>teckensnitt</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_fontinst">
+<title
+>Teckensnittshantering</title>
+
+<para
+>Den här modulen är ansvarig för att installera, avinstallera, förhandsgranska och hantera teckensnitt.</para>
+
+<sect2 id="font-groups">
+<title
+>Teckensnittsgrupper</title>
+<para
+>Det finns fyra speciella fördefinierade teckensnittsgrupper:</para>
+
+<orderedlist>
+    <listitem
+><para
+><quote
+>Alla teckensnitt</quote
+> Detta visar alla teckensnitt, både personliga och systemteckensnitt.</para
+></listitem>
+    <listitem
+><para
+><quote
+>Personliga teckensnitt</quote
+> Teckensnitten som visas är dina personliga teckensnitt som inte är tillgängliga för andra användare.</para
+></listitem>
+    <listitem
+><para
+><quote
+>Systemteckensnitt</quote
+>Teckensnitten som visas är de som är tillgängliga för alla användare. Att installera eller ta bort ett systemteckensnitt kräver administratörsrättigheter.</para
+></listitem>
+    <listitem
+><para
+><quote
+>Oklassificerade</quote
+> Detta listar alla teckensnitt som inte har placerats i några användardefinierade grupper. Gruppen visas bara om det finns några användardefinierade grupper.</para
+></listitem>
+</orderedlist>
+<para
+>Dra teckensnittet från listan med teckensnitt till en grupp för att lägga till det i gruppen. Dra teckensnittet till gruppen <quote
+>Alla teckensnitt</quote
+> för att ta bort det från en grupp.</para>
+<para
+>Under listan hittar du knappar för att skapa en ny grupp, ta bort en grupp och aktivera eller inaktivera teckensnitten i den aktuella gruppen.</para>
+<para
+>I listans sammanhangsberoende meny finns ytterligare menyalternativ för att skriva ut exempel på teckensnitt och exportera ett teckensnitt till ett zip-arkiv.</para>
+
+<sect3 id="font-hiding">
+<title
+>Aktivera och inaktivera</title>
+<para
+>Användare med många teckensnitt kan märka att det är användbart att bara aktivera vissa teckensnitt under vissa tider. För att förenkla det låter modulen dig inaktivera enskilda teckensnitt eller hela grupper av teckensnitt. Att inaktivera ett teckensnitt tar inte bort det från datorn, utan döljer det helt enkelt så att det inte längre visas i program. Att aktivera teckensnittet gör att det kan användas igen.</para>
+</sect3>
+
+</sect2>
+
+<sect2 id="font-list">
+<title
+>Teckensnittslista</title>
+<para
+>Huvudskärmen är en lista med installerade teckensnitt, grupperade enligt teckensnittets familjenamn. Numret inom hakparenteser motsvarar antalet installerade stilar i familjen, t.ex. kan teckensnittet <quote
+>Times</quote
+> anges som: <itemizedlist
+> <listitem>
+    <para
+>Times [4]</para>
+    <itemizedlist>
+        <listitem
+><para
+>Rak</para
+></listitem>
+        <listitem
+><para
+>Kursiv</para
+></listitem>
+        <listitem
+><para
+>Fetstil</para
+></listitem>
+        <listitem
+><para
+>Fetstil kursiv</para
+></listitem>
+    </itemizedlist>
+</listitem>
+</itemizedlist>
+</para>
+
+<para
+>Klicka på knappen <guibutton
+>Installera från fil...</guibutton
+> och välj önskade teckensnitt i fildialogrutan för att installera teckensnitt. Den valda teckensnittsgruppen styr var teckensnitten installeras.</para>
+<para
+>Markera lämpliga teckensnitt i listan och klicka på knappen <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+> för att avinstallera teckensnitt.</para>
+
+<para
+>Klicka med höger musknapp för att visa en sammanhangsberoende meny med några ytterligare åtgärder som <guilabel
+>Aktivera</guilabel
+>, <guilabel
+>Inaktivera</guilabel
+>, <guilabel
+>Skriv ut</guilabel
+>, <ulink url="help:/kfontviewer/index.html"
+><guilabel
+>Öppna i teckensnittsvisning</guilabel
+></ulink
+> och <guilabel
+>Uppdatera</guilabel
+>.</para>
+
+<sect3 id="font-filter">
+<title
+>Filtrering av teckensnitt</title>
+<para
+>Ett textfält ovanför förhandsgranskningen av teckensnitt som låter dig filtrera listan med teckensnitt. Du kan filtrera teckensnitt baserat på olika kategorier:</para>
+        <orderedlist>
+        <listitem
+><para
+>Familj.</para
+></listitem>
+        <listitem
+><para
+>Stil.</para
+></listitem>
+        <listitem
+><para
+>Tillverkare.</para
+></listitem>
+        <listitem
+><para
+>Matchning av teckeninställning. Det låter dig ange ett familjenamn, och se familjen som fontconfig verkligen skulle använda.</para
+></listitem>
+        <listitem
+><para
+>Teckensnittets filtyp.</para
+></listitem>
+        <listitem
+><para
+>Teckensnittets filnamn.</para
+></listitem>
+        <listitem
+><para
+>Teckensnittets filplats.</para
+></listitem>
+        <listitem
+><para
+>Skrivsystem.</para
+></listitem>
+        </orderedlist>
+</sect3>
+
+<sect3 id="get-new-fonts">
+<title
+>Hämta nya teckensnitt</title>
+<para
+>Nya teckensnitt kan installeras från lokala filer, eller laddas genom att använda <guilabel
+>Hämta heta nyheter</guilabel
+>. Alternativet <guilabel
+>Hämta nya teckensnitt...</guilabel
+> i verktygsknappen (placerad ovanför grupplistan) låter dig installera teckensnitt från Internet. Teckensnitten som laddas ner på detta sätt installeras i gruppen <quote
+>Personliga teckensnitt</quote
+>. För att installera för hela systemet måste de flyttas till gruppen <quote
+>Systemteckensnitt</quote
+>. Det kan åstadkommas genom att dra över teckensnitten till grupposten <quote
+>Systemteckensnitt</quote
+>, vilket kräver administratörsrättigheter.</para>
+</sect3>
+
+</sect2>
+
+<sect2 id="font-duplicates">
+<title
+>Duplicerade teckensnitt</title>
+<para
+>Om du har mängder av teckensnitt installerade på systemet är det möjligt att du har dubbletter.</para
+> 
+<para
+>Klicka på knappen <guilabel
+>Sök efter dubbletter...</guilabel
+> för att visa ett enkelt verktyg som söker igenom systemet och letar efter teckensnitt som hör ihop med flera filer. Om du till exempel har <quote
+>times.ttf</quote
+> och <quote
+>times.TTF</quote
+> installerade i <quote
+>/usr/local/share/fonts</quote
+> ser den underliggande teckensnittsmekanismen (benämnd <quote
+>FontConfig</quote
+>) bara en av dem. Om du alltså avinstallerade teckensnittet, skulle det dyka upp igen, eftersom bara en av filerna skulle ha tagits bort. När verktyget körs skapas en dialogruta som listar varje teckensnitt som har flera filer, och motsvarande lista med filer. Klicka på kolumnen som innehåller ikonen av papperskorgen för att markera att en fil ska tas bort.</para>
+</sect2>
+
+<sect2 id="font-preview">
+<title
+>Förhandsgranskning</title>
+<para
+>Detta visar en förhandsgranskningstext i olika teckenstorlekar.</para>
+<para
+>Att använda den sammanhangsberoende menyn låter dig zooma in och ut, välja förhandsgranskningstyp (<guilabel
+>Standardförhandsgranskning</guilabel
+> eller <guilabel
+>Alla tecken</guilabel
+>) och ändra förhandsgranskningstexten.</para>
+
+<para
+>Starta programmet &kfontview; om du behöver ytterligare förhandsgranskningstyper för Unicode-block. </para>
+</sect2>
+</sect1>
+</article>

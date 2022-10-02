@@ -1,0 +1,258 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Brazilian-Portuguese "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmstyle" lang="&language;">
+<articleinfo>
+
+<title
+>Estilo dos widgets</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>Lisiane</firstname
+> <surname
+>Sztoltz</surname
+><affiliation
+><address
+> <email
+>lisiane@conectiva.com.br</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Marcus</firstname
+><surname
+>Gama</surname
+><affiliation
+><address
+><email
+>marcus.gama@gmail.com</email
+></address
+></affiliation
+><contrib
+>Revisão</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>07/07/2015</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Configuração do Sistema</keyword>
+<keyword
+>estilo</keyword>
+</keywordset>
+</articleinfo>
+
+<variablelist>
+<varlistentry>
+<term
+>Introdução</term>
+<listitem>
+
+<para
+>Este módulo é usado para configurar a forma como os widgets individuais são desenhados pelo Plasma.</para>
+
+<note
+><para
+>Um <emphasis
+>Widget</emphasis
+> é um termo normalmente usado por programadores para se referirem a elementos da Interface do Usuário, tais como botões, menus e barras de rolagem. Você pode considerá-los como partes fundamentais que são reunidas para formar o seu aplicativo.</para
+></note>
+
+<para
+>Com este módulo, você pode configurar como os widgets são desenhados, mas para alterar suas cores, você deve ir para a seção <ulink url="help:/kcontrol/colors/index.html" 
+>Cores</ulink
+>.</para>
+
+<para
+>Este painel encontra-se dividido em duas abas: <guilabel
+>Aplicativos</guilabel
+> e <guilabel
+>Ajuste fino</guilabel
+>.</para>
+
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>A aba <guilabel
+>Aplicativos</guilabel
+></term>
+<listitem>
+<para
+>A lista chamada <guilabel
+>Estilo dos widgets</guilabel
+>, contém vários estilos predefinidos. Cada estilo possui um nome e uma breve descrição.</para>
+
+<para
+>Para alterar o estilo, selecione um deles na lista disponível. Uma prévia do estilo pode ser vista no quadro abaixo dessa lista.</para>
+
+<para
+>Se um estilo for configurável, o botão <guibutton
+>Configurar...</guibutton
+>, do lado direito da lista, ficará ativo e poderá ser usado para abrir uma janela e selecionar outras opções.</para>
+
+</listitem>
+</varlistentry>
+
+<varlistentry
+> 
+<term
+>A aba <guilabel
+>Ajuste fino</guilabel
+></term>
+<listitem>
+<variablelist>
+<varlistentry
+> 
+<term
+><guilabel
+>Efeitos gráficos</guilabel
+></term>
+<listitem>
+<para
+>Os aplicativos do &kde; irão executar as animações internas com a resolução e carga de CPU selecionados.</para>
+</listitem
+> 
+</varlistentry
+> 
+
+<varlistentry
+> 
+<term
+><guilabel
+>Mostrar ícones sobre os botões</guilabel
+></term>
+<listitem>
+<para
+>Se esta opção estiver selecionada, os botões de ação (como o <guibutton
+>OK</guibutton
+> e o <guibutton
+>Aplicar</guibutton
+>) ficarão com um pequeno ícone localizado dentro deles para ser usado como uma referência visual. Se esta opção não estiver selecionada, somente aparecerá o texto do botão.</para>
+</listitem
+> 
+</varlistentry
+> 
+
+<varlistentry
+> 
+<term
+><guilabel
+>Mostrar ícones nos menus</guilabel
+></term>
+<listitem>
+<para
+>Se esta opção estiver selecionada, os aplicativos do &kde; irão exibir pequenos ícones ao lado da maioria dos itens do menu. Se esta opção não estiver selecionada, somente o texto dos menus será mostrado. As alterações da visibilidade dos ícones no menu somente afetarão os aplicativos iniciados após as alterações.</para>
+</listitem
+> 
+</varlistentry
+> 
+
+<varlistentry
+> 
+<term
+><guilabel
+>Texto da barra de ferramentas principal</guilabel
+>, <guilabel
+>Texto da barra de ferramentas secundária</guilabel
+></term>
+<listitem>
+<para
+>Estas listas permitem-lhe determinar em qual parte do botão irá aparecer o texto por padrão. Se estiver selecionada a opção <guilabel
+>Sem texto</guilabel
+>, então nenhum texto aparecerá nos botões das barras de ferramentas. Se estiver selecionada a opção <guilabel
+>Apenas texto</guilabel
+>, então o ícone dos botões será substituído pelo seu respectivo nome. Se estiver selecionada a opção <guilabel
+>Texto ao lado dos ícones</guilabel
+>, então o nome do botão será colocado à <emphasis
+>direita</emphasis
+> do ícone. Se estiver selecionada a opção <guilabel
+>Texto abaixo dos ícones</guilabel
+>, o texto aparecerá <emphasis
+>abaixo</emphasis
+> do ícone dos botões.</para>
+
+<tip
+><para
+>Esta opção somente especifica a localização <emphasis
+>padrão</emphasis
+>. Cada aplicativo pode sobrescrever a configuração padrão usada neste painel.</para
+></tip>
+</listitem
+> 
+</varlistentry
+> 
+
+<!-- appmenu is so far not in kf5, status in kf5 see
+https://forum.kde.org/viewtopic.php?f=285&t=125058&p=336313&hilit=appmenu#p336313
+https://bugs.kde.org/show_bug.cgi?id=341071#c9
+
+<varlistentry
+> 
+<term
+><guilabel
+>Menubar style</guilabel
+></term>
+<listitem>
+<para
+><guilabel
+>In application</guilabel
+>: The classic menubar at the top of the application window.</para>
+<para
+><guilabel
+>Title bar button</guilabel
+>: The window has an additional menu button top left. 
+All changes will take effect only for newly started applications.</para>
+<para
+><guilabel
+>Top screen menubar</guilabel
+>: This will turn on a menubar at the top of the screen that 
+is hidden by default and revealed on mouse over or a menu button on the window decoration.
+This menubar will reflect the menu options of the active application.</para>
+<para
+><guilabel
+>Only export</guilabel
+>: for use by plasma runners + applets. 
+To use this feature you need a KRunner plugin like <guilabel
+>Appmenu action launcher</guilabel
+>.
+Select an application, press <keycombo action="simul"
+>&Alt;<keycap
+>F2</keycap
+></keycombo
+> 
+and type the menu action you want to perform.</para>
+</listitem
+> 
+</varlistentry
+> 
+-->
+</variablelist>
+
+</listitem>
+</varlistentry>
+
+
+</variablelist>
+
+
+</article>

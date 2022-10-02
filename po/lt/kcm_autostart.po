@@ -1,0 +1,220 @@
+# translation of kcm_autostart.po to Lithuanian
+# Matas Brazdeikis <matasbbb@gmail.com>, 2008.
+# Antanas Uršulis <antanas.ursulis@gmail.com>, 2008.
+# Donatas Glodenis <dgvirtual@akl.lt>, 2009.
+# Tomas Straupis <tomasstraupis@gmail.com>, 2010.
+# Liudas Alisauskas <liudas@akmc.lt>, 2013.
+# Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>, 2016, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_autostart\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:50+0000\n"
+"PO-Revision-Date: 2021-08-17 21:30+0300\n"
+"Last-Translator: Moo\n"
+"Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
+"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 3.0\n"
+
+#: autostartmodel.cpp:288
+#, kde-format
+msgid "\"%1\" is not an absolute url."
+msgstr "„%1“ nėra absoliutusis url."
+
+#: autostartmodel.cpp:291
+#, kde-format
+msgid "\"%1\" does not exist."
+msgstr "„%1“ nėra."
+
+#: autostartmodel.cpp:294
+#, kde-format
+msgid "\"%1\" is not a file."
+msgstr "„%1“ nėra failas."
+
+#: autostartmodel.cpp:297
+#, kde-format
+msgid "\"%1\" is not readable."
+msgstr "„%1“ yra neskaitomas."
+
+#: package/contents/ui/main.qml:40
+#, kde-format
+msgid "Make Executable"
+msgstr ""
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "The file '%1' must be executable to run at logout."
+msgstr ""
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid "The file '%1' must be executable to run at login."
+msgstr ""
+
+#: package/contents/ui/main.qml:89
+#, kde-format
+msgid "Properties"
+msgstr "Savybės"
+
+#: package/contents/ui/main.qml:95
+#, kde-format
+msgid "Remove"
+msgstr "Šalinti"
+
+#: package/contents/ui/main.qml:106
+#, kde-format
+msgid "Applications"
+msgstr "Programos"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Login Scripts"
+msgstr "Prisijungimo scenarijai"
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Pre-startup Scripts"
+msgstr "Prieš paleidimo scenarijai"
+
+#: package/contents/ui/main.qml:115
+#, kde-format
+msgid "Logout Scripts"
+msgstr "Atsijungimo scenarijai"
+
+#: package/contents/ui/main.qml:124
+#, kde-format
+msgid "No user-specified autostart items"
+msgstr "Nėra jokių naudotojo apibrėžtų automatinio paleidimo elementų"
+
+#: package/contents/ui/main.qml:125
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Click the <interface>Add…</interface> button below to add some"
+msgstr ""
+"Norėdami pridėti, žemiau spustelėkite mygtuką <interface>Pridėti…</interface>"
+
+#: package/contents/ui/main.qml:139
+#, kde-format
+msgid "Choose Login Script"
+msgstr "Pasirinkti prisijungimo scenarijų"
+
+#: package/contents/ui/main.qml:160
+#, kde-format
+msgid "Choose Logout Script"
+msgstr "Pasirinkti atsijungimo scenarijų"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "Add…"
+msgstr "Pridėti…"
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Add Application…"
+msgstr "Pridėti programą…"
+
+#: package/contents/ui/main.qml:199
+#, kde-format
+msgid "Add Login Script…"
+msgstr "Pridėti prisijungimo scenarijų…"
+
+#: package/contents/ui/main.qml:205
+#, kde-format
+msgid "Add Logout Script…"
+msgstr "Pridėti atsijungimo scenarijų…"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Matas Brazdeikis, Antanas Uršulis, Moo"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "matasbbb@gmail.com, antanas.ursulis@gmail.com, <>"
+
+#~ msgid "Autostart"
+#~ msgstr "Automatinis paleidimas"
+
+#~ msgid "Session Autostart Manager Control Panel Module"
+#~ msgstr "Seanso automatinio paleidimo tvarkytuvės valdymo skydelio modulis"
+
+#~ msgid "Copyright © 2006–2020 Autostart Manager team"
+#~ msgstr ""
+#~ "Autorių teisės © 2006–2020 Automatinio paleidimo tvarkytuvės komanda"
+
+#~ msgid "Stephen Leaf"
+#~ msgstr "Stephen Leaf"
+
+#~ msgid "Montel Laurent"
+#~ msgstr "Montel Laurent"
+
+#~ msgid "Maintainer"
+#~ msgstr "Prižiūrėtojas"
+
+#~ msgid "Nicolas Fella"
+#~ msgstr "Nicolas Fella"
+
+#~ msgid "Add..."
+#~ msgstr "Pridėti..."
+
+#~ msgid "Shell script path:"
+#~ msgstr "Apvalkalo scenarijaus kelias:"
+
+#~ msgid "Create as symlink"
+#~ msgstr "Sukurti simbolinę nuorodą"
+
+#~ msgid "Autostart only in Plasma"
+#~ msgstr "Automatiškai paleisti tik Plasma seanse"
+
+#~ msgid "Name"
+#~ msgstr "Pavadinimas"
+
+#~ msgid "Command"
+#~ msgstr "Komanda"
+
+#~ msgid "Status"
+#~ msgstr "Būsena"
+
+#~ msgctxt ""
+#~ "@title:column The name of the column that decides if the program is run "
+#~ "on session startup, on session shutdown, etc"
+#~ msgid "Run On"
+#~ msgstr "Kada paleisti"
+
+#~ msgid "Session Autostart Manager"
+#~ msgstr "Seanso automatinio paleidimo tvarkytuvė"
+
+#~ msgctxt "The program will be run"
+#~ msgid "Enabled"
+#~ msgstr "Įjungta"
+
+#~ msgctxt "The program won't be run"
+#~ msgid "Disabled"
+#~ msgstr "Išjungta"
+
+#~ msgid "Desktop File"
+#~ msgstr "Darbalaukio failas"
+
+#~ msgid "Script File"
+#~ msgstr "Scenarijaus failas"
+
+#~ msgid "Add Program..."
+#~ msgstr "Pridėti programą..."
+
+#~ msgid "Startup"
+#~ msgstr "Paleidimo metu"
+
+#~ msgid "Before session startup"
+#~ msgstr "Prieš seanso paleidimą"
+
+#~ msgid ""
+#~ "Only files with “.sh” extensions are allowed for setting up the "
+#~ "environment."
+#~ msgstr "Aplinkos nustatymui yra leidžiami tik failai su „.sh“ plėtiniais."
+
+#~ msgid "Shutdown"
+#~ msgstr "Išjungimo metu"

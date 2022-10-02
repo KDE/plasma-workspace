@@ -1,0 +1,283 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Dutch "INCLUDE">
+]>
+<article id="autostart" lang="&language;">
+<articleinfo>
+<title
+>Autostart</title>
+<authorgroup>
+<author
+>&Anne-Marie.Mahfouf;</author>
+&Freek.de.Kruijf; 
+</authorgroup>
+
+<date
+>2021-04-05</date>
+<releaseinfo
+>&plasma; 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systeeminstellingen</keyword>
+<keyword
+>automatisch starten</keyword>
+<keyword
+>bureaubladbestand</keyword>
+<keyword
+>scriptbestand</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_autostart">
+<title
+>Autostartbeheerder</title>
+
+<para
+>Deze module is een configuratiehulpmiddel voor het beheren van welke programma's opstarten samen met uw persoonlijke &plasma;. Het stelt u in staat om programma's of scripts toe te voegen zodat deze automatisch draaien tijdens opstarten van uw &plasma;-sessie en om ze te beheren.</para>
+
+<note
+><para
+>Opmerking: alle wijzigingen in deze module worden onmiddellijk toegepast.</para
+></note>
+
+<para
+>Het programma scant <filename
+>$HOME/.config/autostart/</filename
+> op toepassingen en aanmeldscripts, <filename class="directory"
+>$HOME/.config/plasma-workspace/env</filename
+> op pre-opstartscripts en <filename class="directory"
+>$HOME/.config/plasma-workspace/shutdown</filename
+> op afmeldscripts om na te gaan welke programma's en scripts daar al zijn en deze te tonen. Het stelt u in staat deze gemakkelijk te beheren. </para>
+
+<para
+>Aanmeldscripts zijn <filename class="extension"
+>.desktop</filename
+> bestanden met een sleutel <literal
+>X-KDE-AutostartScript=true</literal
+>. Pre-opstartscripts worden eerder uitgevoerd en kunnen gebruikt worden om omgevingsvariabelen in te stellen. </para>
+
+<note
+><para
+>Opmerking: u kunt de locatie van uw <filename class="directory"
+>Autostart</filename
+> map in <menuchoice
+><guimenu
+>Toepassingen</guimenu
+> <guimenuitem
+>Locaties</guimenuitem
+></menuchoice
+> in de categorie <guilabel
+>Persoonlijke instellingen</guilabel
+> van &systemsettings; wijzigen en een andere map instellen dan <filename class="directory"
+>$HOME/.config/autostart</filename
+>.</para
+></note>
+
+<para
+>Lees ook <ulink url="help:/kcontrol/kcmsmserver"
+>Bureaubladessie</ulink
+> en <ulink url="help:/kcontrol/kded"
+>Achtergrondservices</ulink
+> voor informatie over hoe het gedrag bij opstarten van uw &plasma;-sessie in te stellen.</para>
+
+<para
+>Sommige &kde;-toepassingen handelen het gedrag voor autostart op hun eigen manier af, &eg; u kunt autostart van een toepassing in- of uitschakelen in de instellingendialoog (&kalarm;) of u moet <menuchoice
+><guimenu
+>Bestand</guimenu
+><guimenuitem
+>Afsluiten</guimenuitem
+></menuchoice
+> (&konversation;, &kopete;) gebruiken, anders zal de toepassing nog steeds in het systeemvak actief zijn en zal gestart worden bij de volgende keer aanmelden. </para>
+
+<sect2 id="migration">
+<title
+>Migratie van &kde; Workspaces 4</title>
+<para
+>Om uw persoonlijke autostart instelling uit &kde; Workspaces 4 te migreren:</para>
+<simplelist>
+<member
+>Kopieer desktop-bestanden uit <filename class="directory"
+>$HOME/.kde/Autostart</filename
+> naar <filename class="directory"
+>$HOME/.config/autostart</filename
+></member>
+<member
+>Kopieer pre-startup scriptbestanden uit <filename class="directory"
+>$HOME/.kde/Autostart</filename
+> naar <filename class="directory"
+>$HOME/.config/plasma-workspace/env</filename
+></member>
+<member
+>Scriptbestanden voor Afsluiten kopiëren uit <filename class="directory"
+>$HOME/.kde/Autostart</filename
+> naar <filename class="directory"
+>$HOME/.config/plasma-workspace/shutdown</filename
+></member>
+</simplelist>
+</sect2>
+
+<sect2 id="disabling_autostart">
+<title
+>Bestanden voor autostart geleverd door uw distributie uitschakelen</title>
+<para
+>De juiste manier om een autostart-item uit te schakelen, bijvoorbeeld het printer-applet als u de printer af-en-toe gebruikt, is om zijn <filename class="extension"
+>.desktop</filename
+> bestand naar uw persoonlijke autostartmap te kopiëren. Alles met dezelfde naam in <filename class="directory"
+>$HOME/.config/autostart</filename
+> overstijgt het <filename class="extension"
+>.desktop</filename
+> bestand in het standaard pakket. Voeg de volgende regel toe aan het gekopieerde <filename class="extension"
+>.desktop</filename
+> bestand:</para>
+<programlisting
+>Hidden=true
+</programlisting>
+</sect2>
+
+<sect2 id="current">
+<title
+>Tonen van bestanden</title>
+<para
+>Het hoofdgedeelte van de module toont de programma's die geladen worden en scripts die uitgevoerd worden als &plasma; start of afsluit.</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Pictogram</guilabel
+></term>
+<listitem>
+<para
+>Deze kolom bevat het pictogram of script dat u wilt starten met &plasma;. Het pictogram komt uit het bureaubladbestand (.desktop) uit de pictogramsleutel voor een programma en is het standaard pictogram voor een script. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Naam</guilabel
+></term>
+<listitem>
+<para
+>Deze kolom toont de naam van het programma of script dat u wilt starten met &plasma;. De naam komt uit het <filename class="extension"
+>.desktop</filename
+> bestand uit het <literal
+>Name</literal
+>-sleutel voor een programma en is de bestandsnaam voor een script. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Eigenschappen</guilabel
+></term>
+<listitem>
+<para
+>Deze knop wordt alleen getoond wanneer u zweeft boven het item met de muisaanwijzer. De knop (alleen ingeschakeld voor programma's en aanmeldscripts &ie; <filename class="extension"
+>.desktop</filename
+> bestanden) biedt u de eigenschappen van het programma of script te wijzigen. Er zijn algemene eigenschappen, rechten, een voorbeeld, indien van toepassing, en eigenschappen gerelateerd aan het gebruik van het programma of aanmeldscript. De standaard opdracht komt uit het <filename class="extension"
+>.desktop</filename
+> bestand uit de <literal
+>Exec</literal
+> sleutel. </para>
+<para
+>Voor een afmeldscript is het commando het pad naar het script en het kan niet gewijzigd worden. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Verwijderen</guilabel
+></term>
+<listitem>
+<para
+>Deze knop wordt alleen getoond wanneer u zweeft boven het item met de muisaanwijzer. Op de knop <guibutton
+>&minus;</guibutton
+> drukken zal het bureaubladbestand van het programma of het script of de symbolische koppeling in de map <filename class="directory"
+>Autostart</filename
+> onmiddellijk verwijderen. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+
+<sect2 id="actions">
+<title
+>Acties</title>
+<para
+>Onderaan hebt u de gecombineerde knop <guibutton
+>Toevoegen...</guibutton
+> om het type van het item te kiezen dat u wilt toevoegen. U kunt programma's en login- of logoutscripts. toevoegen </para>
+
+<variablelist>
+<varlistentry
+><term
+><guimenuitem
+>Programma toevoegen</guimenuitem
+></term>
+<listitem>
+<para
+>Op dit item drukken toont de standaard dialoog &plasma; <guilabel
+>Toepassing kiezen</guilabel
+> en stelt u in staat om te kiezen welk programma u wilt opstarten. Na het kiezen van het programma, klikken op <guibutton
+>OK</guibutton
+> geeft u de eigenschappen van dit programma. </para>
+<para
+>Dit zal het <filename class="extension"
+>.desktop</filename
+> bestand in uw map <filename class="directory"
+>Autostart</filename
+> kopiëren. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guimenuitem
+>Aanmeldscript toevoegen...</guimenuitem
+></term>
+<listitem>
+<para
+>Dit item opent een dialoog die u vraagt naar de locatie van het script dat u wilt toevoegen. Scripts ingesteld om te worden uitgevoerd bij aanmelden zullen een overeenkomstig <filename class="extension"
+>.desktop</filename
+> bestand hebben aangemaakt in uw map <filename class="directory"
+>Autostart</filename
+> en zullen uitgevoerd worden tijdens opstarten van Plasma. </para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guimenuitem
+>Afmeldscript toevoegen...</guimenuitem
+></term>
+<listitem>
+<para
+>Dit item opent een dialoog die u vraagt naar de locatie van het script dat u wilt toevoegen. Scripts ingesteld om te  worden uitgevoerd bij afmelden worden gekopieerd of krijgen een symbolische koppeling in de map <filename class="directory"
+>$HOME/.config/shutdown</filename
+> en zullen automatisch worden uitgevoerd bij het afsluiten van &plasma; nadat de gebruiker zich heeft afgemeld. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

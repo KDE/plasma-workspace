@@ -1,0 +1,48 @@
+# translation of plasma_runner_locations.po to Swedish
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2008, 2009, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_locations\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"PO-Revision-Date: 2013-01-22 20:45+0100\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: locationrunner.cpp:33
+#, kde-format
+msgid ""
+"Finds local directories and files, network locations and Internet sites with "
+"paths matching :q:."
+msgstr ""
+"Hittar lokala kataloger och filer, nätverksplatser och Internetplatser med "
+"sökvägar som motsvarar :q:."
+
+#: locationrunner.cpp:60
+#, kde-format
+msgid "Open %1"
+msgstr "Öppna %1"
+
+#: locationrunner.cpp:78 locationrunner.cpp:82
+#, kde-format
+msgid "Launch with %1"
+msgstr "Starta med %1"
+
+#: locationrunner.cpp:88
+#, kde-format
+msgid "Go to %1"
+msgstr "Gå till %1"
+
+#: locationrunner.cpp:96
+#, kde-format
+msgid "Send email to %1"
+msgstr "Skicka e-post till %1"

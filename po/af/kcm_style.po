@@ -1,0 +1,616 @@
+# UTF-8 test:äëïöü
+# Copyright (C) 2001 Free Software Foundation, Inc.
+# Frikkie Thirion <frix@expertron.co.za>, 2001,2002.
+# Juanita Franz <juanita.franz@vr-web.de>, 2005.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmstyle stable\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"PO-Revision-Date: 2005-06-30 11:29+0200\n"
+"Last-Translator: JUANITA FRANZ <JUANITA.FRANZ@VR-WEB.DE>\n"
+"Language-Team: AFRIKAANS <translate-discuss-af@lists.sourceforge.net>\n"
+"Language: af\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: gtkpage.cpp:59
+#, kde-format
+msgid "%1 is not a valid GTK Theme archive."
+msgstr ""
+
+#: kcmstyle.cpp:161 kcmstyle.cpp:168
+#, kde-format
+msgid "There was an error loading the configuration dialog for this style."
+msgstr ""
+"Daar was 'n fout by laai van die konfigurasie dialoog vir hierdie styl."
+
+#: kcmstyle.cpp:274
+#, kde-format
+msgid "Failed to apply selected style '%1'."
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:32
+#, fuzzy, kde-format
+#| msgid "Sho&w icons on buttons"
+msgid "Show icons:"
+msgstr "Vertoon ikoone op knoppies"
+
+#: package/contents/ui/EffectSettingsPopup.qml:33
+#, fuzzy, kde-format
+#| msgid "Radio button"
+msgid "On buttons"
+msgstr "Radio knoppie"
+
+#: package/contents/ui/EffectSettingsPopup.qml:44
+#, kde-format
+msgid "In menus"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:56
+#, kde-format
+msgid "Main toolbar label:"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "None"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:59
+#, fuzzy, kde-format
+#| msgid "Text Only"
+msgid "Text only"
+msgstr "Teks Slegs"
+
+#: package/contents/ui/EffectSettingsPopup.qml:60
+#, fuzzy, kde-format
+#| msgid "Text Alongside Icons"
+msgid "Beside icons"
+msgstr "Teks Langs Ikoone"
+
+#: package/contents/ui/EffectSettingsPopup.qml:61
+#, fuzzy, kde-format
+#| msgid "Text Under Icons"
+msgid "Below icon"
+msgstr "Teks Onder Ikoone"
+
+#: package/contents/ui/EffectSettingsPopup.qml:76
+#, kde-format
+msgid "Secondary toolbar label:"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:18
+#, fuzzy, kde-format
+#| msgid "Application Level"
+msgid "GNOME/GTK Application Style"
+msgstr "Aansoek Vlak"
+
+#: package/contents/ui/GtkStylePage.qml:44
+#, kde-format
+msgid "GTK theme:"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:69
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgid "Preview…"
+msgstr "Voorskou"
+
+#: package/contents/ui/GtkStylePage.qml:88
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:93
+#, fuzzy, kde-format
+#| msgid "Application Level"
+msgid "Get New GNOME/GTK Application Styles…"
+msgstr "Aansoek Vlak"
+
+#: package/contents/ui/GtkStylePage.qml:109
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:111
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: package/contents/ui/main.qml:17
+#, fuzzy, kde-format
+#| msgid ""
+#| "<h1>Style</h1>This module allows you to modify the visual appearance of "
+#| "user interface elements, such as the widget style and effects."
+msgid ""
+"This module allows you to modify the visual appearance of applications' user "
+"interface elements."
+msgstr ""
+"<h1>Styl</h1>Hierdie module laat jou toe om te verander die visuele voorkoms "
+"van gebruiker koppelvlak elemente, soos die gui-element Styl en effekte."
+
+#: package/contents/ui/main.qml:96
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure Style…"
+msgstr "Stel op..."
+
+#: package/contents/ui/main.qml:116
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr ""
+
+#: package/contents/ui/main.qml:132
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "Stel op..."
+
+#: styleconfdialog.cpp:21
+#, kde-format
+msgid "Configure %1"
+msgstr "Konfigureer %1"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "Oortjie 1"
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, fuzzy, kde-format
+#| msgid "Button"
+msgid "Push Button"
+msgstr "Knoppie"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, fuzzy, kde-format
+#| msgid "Combobox"
+msgid "Combo box"
+msgstr "Komboboks"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "Keuseblokkie"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "Radio knoppie"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:133
+#, kde-format
+msgid "Tab 2"
+msgstr "Oortjie 2"
+
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Application Level"
+msgid "Application style"
+msgstr "Aansoek Vlak"
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Sho&w icons on buttons"
+msgid "Show icons on buttons"
+msgstr "Vertoon ikoone op knoppies"
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, fuzzy, kde-format
+#| msgid "Sho&w icons on buttons"
+msgid "Show icons in menus"
+msgstr "Vertoon ikoone op knoppies"
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, kde-format
+msgid "Main toolbar label"
+msgstr ""
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, kde-format
+msgid "Secondary toolbar label"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Frikkie Thirion, Juanita Franz"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "frix@expertron.co.za, juanita.franz@vr-web.de"
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "Application Style"
+#~ msgstr "Aansoek Vlak"
+
+#, fuzzy
+#~| msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
+#~ msgstr "(c) 2002 Karol Szwed, Daniel Molkentin"
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "Download New GNOME/GTK2 Application Styles..."
+#~ msgstr "Aansoek Vlak"
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "GNOME/GTK2 Application Styles"
+#~ msgstr "Aansoek Vlak"
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "Download New GNOME/GTK3 Application Styles..."
+#~ msgstr "Aansoek Vlak"
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "GNOME/GTK3 Application Styles"
+#~ msgstr "Aansoek Vlak"
+
+#~ msgid "Unable to Load Dialog"
+#~ msgstr "Nie moontlik om Dialoog te laai"
+
+#~ msgid "No description available."
+#~ msgstr "Nee beskrywing beskikbaar."
+
+#~ msgid ""
+#~ "This area shows a preview of the currently selected style without having "
+#~ "to apply it to the whole desktop."
+#~ msgstr ""
+#~ "Hierdie area vertoon 'n voorskou van die huidiglik gekose styl sonder om "
+#~ "te moet na wend aan dit na die volledige werkskerm."
+
+#~ msgid ""
+#~ "Here you can choose from a list of predefined widget styles (e.g. the way "
+#~ "buttons are drawn) which may or may not be combined with a theme "
+#~ "(additional information like a marble texture or a gradient)."
+#~ msgstr ""
+#~ "Hier jy kan kies van 'n lys van vooraf gedefinieerde gui-element style (e."
+#~ "g. die weg knoppies word geteken) wat dalk mag of dalk mag nie wees "
+#~ "gekombineer met 'n tema (aditionele informasie hou van 'n marmer tekstuur "
+#~ "of 'n gradiënt)."
+
+#, fuzzy
+#~| msgid ""
+#~| "If you enable this option, KDE Applications will show small icons "
+#~| "alongside some important buttons."
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "some important buttons."
+#~ msgstr ""
+#~ "As jy aktiveer hierdie opsie, Kde Programme sal vertoon klein ikoone "
+#~ "langs sommige belangrik knoppies."
+
+#, fuzzy
+#~| msgid ""
+#~| "If you enable this option, KDE Applications will show small icons "
+#~| "alongside some important buttons."
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "most menu items."
+#~ msgstr ""
+#~ "As jy aktiveer hierdie opsie, Kde Programme sal vertoon klein ikoone "
+#~ "langs sommige belangrik knoppies."
+
+#, fuzzy
+#~| msgid ""
+#~| "<p><b>Icons only:</b> Shows only icons on toolbar buttons. Best option "
+#~| "for low resolutions.</p><p><b>Text only: </b>Shows only text on toolbar "
+#~| "buttons.</p><p><b>Text alongside icons: </b> Shows icons and text on "
+#~| "toolbar buttons. Text is aligned alongside the icon.</p><b>Text under "
+#~| "icons: </b> Shows icons and text on toolbar buttons. Text is aligned "
+#~| "below the icon."
+#~ msgid ""
+#~ "<p><b>No text:</b> Shows only icons on toolbar buttons. Best option for "
+#~ "low resolutions.</p><p><b>Text only: </b>Shows only text on toolbar "
+#~ "buttons.</p><p><b>Text beside icons: </b> Shows icons and text on toolbar "
+#~ "buttons. Text is aligned beside the icon.</p><b>Text below icons: </b> "
+#~ "Shows icons and text on toolbar buttons. Text is aligned below the icon."
+#~ msgstr ""
+#~ "<p><b>Ikoone slegs:</b> Vertoon slegs Ikoone op nutsbalk knoppies. Beste "
+#~ "opsie vir lae resolusie.</p><p><b>Teks slegs: </b>Vertoon slegs Teks op "
+#~ "nutsbalk knoppies.</p><p><b>Teks langs Ikoone: </b> Vertoon Ikoone en "
+#~ "Teks op nutsbalk knoppies. Teks is opgelyn langs die ikoon.</p><b>Teks "
+#~ "onder Ikoone: </b> Vertoon Ikoone en Teks op nutsbalk knoppies. Teks is "
+#~ "opgelyn onder die ikoon."
+
+#, fuzzy
+#~| msgid "&Toolbar"
+#~ msgid "Toolbars"
+#~ msgstr "Nutsbalk"
+
+#, fuzzy
+#~| msgid "Widget Style"
+#~ msgid "Widget Style"
+#~ msgstr "Gui-element Styl"
+
+#, fuzzy
+#~| msgid "Widget Style"
+#~ msgid "Widget style:"
+#~ msgstr "Gui-element Styl"
+
+#~ msgid "Description: %1"
+#~ msgstr "Beskrywing: %1"
+
+#~ msgid "KDE Style Module"
+#~ msgstr "Kde Styl Module"
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "In application"
+#~ msgstr "Aansoek Vlak"
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "Global Menu widget"
+#~ msgstr "Aansoek Vlak"
+
+#, fuzzy
+#~| msgid ""
+#~| "If you enable this option, KDE Applications will show small icons "
+#~| "alongside some important buttons."
+#~ msgid ""
+#~ "If you enable this option, KDE Applications will run internal animations."
+#~ msgstr ""
+#~ "As jy aktiveer hierdie opsie, Kde Programme sal vertoon klein ikoone "
+#~ "langs sommige belangrik knoppies."
+
+#~ msgid "kcmstyle"
+#~ msgstr "kcmstyle"
+
+#~ msgid "Icons Only"
+#~ msgstr "Ikoone Slegs"
+
+#, fuzzy
+#~| msgid "Text pos&ition:"
+#~ msgctxt "@label:listbox"
+#~ msgid "Text pos&ition of toolbar elements:"
+#~ msgstr "Teks posisie:"
+
+#, fuzzy
+#~| msgid "&Style"
+#~ msgctxt "@title:tab"
+#~ msgid "&Style"
+#~ msgstr "Styl"
+
+#~ msgid ""
+#~ "This page allows you to enable various widget style effects. For best "
+#~ "performance, it is advisable to disable all effects."
+#~ msgstr ""
+#~ "Hierdie bladsy laat toe jy na aktiveer verskeie gui-element styl effekte. "
+#~ "Vir beste produktiwiteit, dit is aan te beveel na deaktiveer alle effekte."
+
+#, fuzzy
+#~| msgid "High&light buttons under mouse"
+#~ msgctxt "@option:check"
+#~ msgid "High&light buttons under mouse"
+#~ msgstr "Verlig knoppies onder muis"
+
+#, fuzzy
+#~| msgid "E&nable tooltips"
+#~ msgctxt "@option:check"
+#~ msgid "E&nable tooltips"
+#~ msgstr "Aktiveer sleutel-leidraad"
+
+#~ msgid ""
+#~ "If this option is selected, toolbar buttons will change their color when "
+#~ "the mouse cursor is moved over them."
+#~ msgstr ""
+#~ "As hierdie opsie is gekose, nutsbalk knoppies sal verander hulle kleur "
+#~ "wanneer die muis plekaanduier is verskuif bo hulle."
+
+#~ msgid ""
+#~ "If you check this option, the KDE application will offer tooltips when "
+#~ "the cursor remains over items in the toolbar."
+#~ msgstr ""
+#~ "As jy bevestig hierdie opsie, die Kde aansoek sal bied sleutel-leidraad "
+#~ "wanneer die plekaanduier oorblyfsel bo iteme in die nutsbalk."
+
+#~ msgid "&Effects"
+#~ msgstr "Effekte"
+
+#~ msgid "Show tear-off handles in &popup menus"
+#~ msgstr "Vertoon tear-off handvatsels in opspring kieslyste"
+
+#~ msgid "&Enable GUI effects"
+#~ msgstr "Aktiveer Gui effekte"
+
+#~ msgid "Disable"
+#~ msgstr "Deaktiveer"
+
+#~ msgid "Animate"
+#~ msgstr "Animeer"
+
+#~ msgid "Combobo&x effect:"
+#~ msgstr "Komboboks effek:"
+
+#~ msgid "Fade"
+#~ msgstr "Uitdoof"
+
+#~ msgid "&Tool tip effect:"
+#~ msgstr "Gereedskap punt effek:"
+
+#~ msgid "Make Translucent"
+#~ msgstr "Maak Deurskynend"
+
+#~ msgid "&Menu effect:"
+#~ msgstr "Kieslys effek:"
+
+#~ msgid "Me&nu tear-off handles:"
+#~ msgstr "Kieslys tear-off handvatsels:"
+
+#~ msgid "Menu &drop shadow"
+#~ msgstr "Kieslys laat val skadu"
+
+#~ msgid "Software Tint"
+#~ msgstr "Sagteware Tint"
+
+#~ msgid "Software Blend"
+#~ msgstr "Sagteware Smelt saam"
+
+#~ msgid "XRender Blend"
+#~ msgstr "Xrender Smelt saam"
+
+#~ msgid "0%"
+#~ msgstr "0%"
+
+#~ msgid "50%"
+#~ msgstr "50%"
+
+#~ msgid "100%"
+#~ msgstr "100%"
+
+#~ msgid "Menu trans&lucency type:"
+#~ msgstr "Kieslys deurskynendheid tipe:"
+
+#~ msgid "Menu &opacity:"
+#~ msgstr "Kieslys ondeursigtigheid:"
+
+#~ msgid "Transparent tool&bars when moving"
+#~ msgstr "Transparent nutsbalke wanneer beweeg"
+
+#, fuzzy
+#~| msgid ""
+#~| "<qt>Selected style: <b>%1</b><br><br>One or more effects that you have "
+#~| "chosen could not be applied because the selected style does not support "
+#~| "them; they have therefore been disabled.<br><br>"
+#~ msgid ""
+#~ "<qt>Selected style: <b>%1</b><br /><br />One or more effects that you "
+#~ "have chosen could not be applied because the selected style does not "
+#~ "support them; they have therefore been disabled.<br /><br /></qt>"
+#~ msgstr ""
+#~ "<qt>Gekose styl: <b>%1</b><br><br>Een of meer effekte wat jy het gekies "
+#~ "kon nie wees aangewend omdat die Gekose styl doen nie ondersteun hulle; "
+#~ "hulle het daarom al gestremde.<br><br>"
+
+#, fuzzy
+#~| msgid "Menu translucency is not available.<br>"
+#~ msgid "Menu translucency is not available.<br />"
+#~ msgstr "Kieslys deurskynendheid is nie beskikbar.<br>"
+
+#~ msgid "Menu drop-shadows are not available."
+#~ msgstr "Kieslys laatval-skaduwees is nie beskikbaar nie."
+
+#~ msgid ""
+#~ "If you check this box, you can select several effects for different "
+#~ "widgets like combo boxes, menus or tooltips."
+#~ msgstr ""
+#~ "As jy bevestig hierdie boks, jy kan kies klomp effekte vir ander widgets "
+#~ "hou van gekombineerde bokse, kieslyste of sleutel-leidraad."
+
+#~ msgid ""
+#~ "<p><b>Disable: </b>do not use any combo box effects.</p>\n"
+#~ "<b>Animate: </b>Do some animation."
+#~ msgstr ""
+#~ "<p><b>Deaktiveer: </b>Moet nie gebruik enige combo boks effekte.</p>\n"
+#~ "<b>Animeer: </b>Doen sommige animasie."
+
+#~ msgid ""
+#~ "<p><b>Disable: </b>do not use any tooltip effects.</p>\n"
+#~ "<p><b>Animate: </b>Do some animation.</p>\n"
+#~ "<b>Fade: </b>Fade in tooltips using alpha-blending."
+#~ msgstr ""
+#~ "<p><b>Deaktiveer: </b>Moet nie gebruik enige gereedskap punt effekte.</"
+#~ "p>\n"
+#~ "<p><b>Animeer: </b>Doen sommige animasie.</p>\n"
+#~ "<b>Uitdoof: </b>Uitdoof in sleutel-leidraad deur te gebruik alpha-"
+#~ "blending."
+
+#~ msgid ""
+#~ "<p><b>Disable: </b>do not use any menu effects.</p>\n"
+#~ "<p><b>Animate: </b>Do some animation.</p>\n"
+#~ "<p><b>Fade: </b>Fade in menus using alpha-blending.</p>\n"
+#~ "<b>Make Translucent: </b>Alpha-blend menus for a see-through effect. (KDE "
+#~ "styles only)"
+#~ msgstr ""
+#~ "<p><b>Deaktiveer: </b>Moet nie gebruik enige kieslys effekte.</p>\n"
+#~ "<p><b>Animeer: </b>Doen sommige animasie.</p>\n"
+#~ "<p><b>Uitdoof: </b>Uitdoof in kieslyste deur te gebruik alpha-blending.</"
+#~ "p>\n"
+#~ "<b>Maak Deurskynend: </b>Alpha-blend kieslyste vir 'n sien-deur effek. "
+#~ "(Kde style slegs)"
+
+#~ msgid ""
+#~ "When enabled, all popup menus will have a drop-shadow, otherwise drop-"
+#~ "shadows will not be displayed. At present, only KDE styles can have this "
+#~ "effect enabled."
+#~ msgstr ""
+#~ "Wanneer geaktiveer, alle opspring kieslyste sal het 'n drop-shadow, "
+#~ "andersins drop-shadows sal nie wees vertoon. Na voordra, slegs Kde style "
+#~ "kan het hierdie effek geaktiveer."
+
+#, fuzzy
+#~| msgid ""
+#~| "<p><b>Software Tint: </b>Alpha-blend using a flat color.</p>\n"
+#~| "<p><b>Software Blend: </b>Alpha-blend using an image.</p>\n"
+#~| "<b>XRender Blend: </b>Use the XFree RENDER extension for image blending "
+#~| "(if available). This method may be slower than the Software routines on "
+#~| "non-accelerated displays, but may however improve performance on remote "
+#~| "displays.</p>\n"
+#~ msgid ""
+#~ "<p><b>Software Tint: </b>Alpha-blend using a flat color.</p>\n"
+#~ "<p><b>Software Blend: </b>Alpha-blend using an image.</p>\n"
+#~ "<p><b>XRender Blend: </b>Use the XFree RENDER extension for image "
+#~ "blending (if available). This method may be slower than the Software "
+#~ "routines on non-accelerated displays, but may however improve performance "
+#~ "on remote displays.</p>\n"
+#~ msgstr ""
+#~ "<p><b>Sagteware Tint: </b>Alpha-Smelt saam te gebruik 'n plat kleur.</p>\n"
+#~ "<p><b>Sagteware Smelt saam: </b>Alpha-Smelt saam te gebruik 'n beeld.</"
+#~ "p>\n"
+#~ "<b>Xrender Smelt saam: </b>Gebruik die Xfree Interpreteer uitbreiding vir "
+#~ "beeld inmenging (as beskikbaar). Hierdie metode dalk mag wees stadiger as "
+#~ "die Sagteware roetines op non-accelerated vertoon, maar dalk mag egter "
+#~ "verbeter produktiwiteit op afgeleë vertoon.</p>\n"
+
+#~ msgid "By adjusting this slider you can control the menu effect opacity."
+#~ msgstr ""
+#~ "Deur verstel hierdie skuiwer jy kan kontrole die kieslys effek "
+#~ "ondeursigtigheid."
+
+#~ msgid ""
+#~ "<b>Note:</b> that all widgets in this combobox do not apply to Qt-only "
+#~ "applications."
+#~ msgstr ""
+#~ "<b>Nota:</b> dat alle gui-elemente in hierdie komboboks is nie "
+#~ "aanwendbaar na Qt-only programme."
+
+#~ msgid ""
+#~ "If you check this box, the toolbars will be transparent when moving them "
+#~ "around."
+#~ msgstr ""
+#~ "As jy bevestig hierdie boks, die nutsbalke sal wees transparent wanneer "
+#~ "beweeg hulle omtrent."
+
+#~ msgid ""
+#~ "If you enable this option some pop-up menus will show so called tear-off "
+#~ "handles. If you click them, you get the menu inside a widget. This can be "
+#~ "very helpful when performing the same action multiple times."
+#~ msgstr ""
+#~ "As jy aktiveer hierdie opsie sommige pop-up kieslyste sal vertoon sodat "
+#~ "wat genoem word tear-off handvatsels. As jy kliek hulle, jy kry die "
+#~ "kieslys binne in 'n gui-element. hierdie kan wees baie hulpvaardig "
+#~ "wanneer doen / uitvoer die selfde aksie veelvuldige  times ."
+
+#~ msgid "%"
+#~ msgstr "%"
+
+#~ msgid "Button Group"
+#~ msgstr "Knoppie Groep"

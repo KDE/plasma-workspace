@@ -1,0 +1,186 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Ukrainian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="icons" lang="&language;">
+<articleinfo>
+<title
+>Піктограми</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<author
+>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+<othercredit role="translator"
+><firstname
+>Юрій</firstname
+><surname
+>Чорноіван</surname
+><affiliation
+><address
+><email
+>yurchor@ukr.net</email
+></address
+></affiliation
+><contrib
+>Переклад українською</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>9 квітня 2021 року</date>
+<releaseinfo
+>Плазма 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>піктограма</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Плазма постачається з повним набором піктограм декількох розмірів. Ці піктограми використовуються всюди у Плазмі: на стільниці, на панелі, у програмі для керування файлами &dolphin;, на всіх панелях інструментів програм Плазми, тощо. За допомогою модуля керування піктограмами ви зможете налаштувати спосіб, у який Плазма керуватиме піктограмами.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Ось знімок вікна менеджера тем піктограм</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Налаштування піктограм Плазми</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>За допомогою цього модуля ви можете:</para>
+<itemizedlist>
+<listitem
+><para
+>встановлювати і обирати теми піктограм</para
+></listitem>
+<listitem
+><para
+>обирати розмір піктограм</para
+></listitem>
+<listitem
+><para
+>вилучати теми піктограм</para
+></listitem>
+</itemizedlist>
+
+<important
+><para
+>Будь ласка, зауважте, що ці параметри можуть залежати від обраної теми піктограм. Типово, Плазма постачається з декількома темами піктограм: Breeze, Темна Breeze та Oxygen.</para
+></important>
+
+<para
+>У верхній частині буде показано попередній перегляд піктограм поточної теми. За найпростішого встановлення доступною буде лише одна тема піктограм, типова тема Breeze для Плазми. Існують і інші теми, які ви можете отримати з сайта <ulink url="https://store.kde.org/"
+>https://store.kde.org/</ulink
+> або встановити їх з локального файла.</para>
+
+<para
+>Якщо навести вказівник миші на мініатюру, програма покаже зображення попереднього перегляду із випадковим позначення, стандартними типами MIME та типовими піктограмами тек. </para>
+
+<para
+>Якщо ви хочете вилучити тему, скористайтеся кнопкою <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+> на накладній панелі внизу праворуч на піктограмі теми. Скасувати цю дію можна натисканням піктограми <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-undo.png" format="PNG"/></imageobject
+></inlinemediaobject
+>. Якщо ви натиснете кнопку <guibutton
+>Застосувати</guibutton
+>, позначені теми буде вилучено, і ви вже не зможете скасувати окремі або усі вилучення. </para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Налаштувати розміри піктограм</guilabel
+></term>
+<listitem>
+<para
+>Позначте один з компонентів і скористайтеся повзунком для коригування відповідного розміру. </para>
+<para>
+<screenshot>
+<screeninfo
+>Налаштувати розміри піктограм</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="use-of-icons.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Налаштувати розміри піктограм</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Отримати нові піктограми...</guilabel
+></term>
+<listitem>
+<para
+>Щоб скористатися цією можливістю, вам потрібне з’єднання вашого комп’ютера з мережею Інтернет. Натискання цієї кнопки відкриє діалогове вікно, у якому ви зможете обрати нову тему піктограм. Натискання кнопки <guibutton
+>Встановити</guibutton
+> у цьому діалоговому вікні встановить обрану тему піктограм, після того, як ви натиснете кнопку <guibutton
+>Закрити</guibutton
+> у засобі встановлення, вашу нову тему негайно можна буде застосувати. </para>
+<para>
+<screenshot>
+<screeninfo
+>Отримати нові піктограми</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="get-new-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Отримати нові піктограми</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Встановити з файла…</guilabel
+></term>
+<listitem>
+<para
+>Якщо ви отримали нові теми з мережі Інтернет, ви можете скористатися цією кнопкою для того, щоб відкрити архів з тільки-но отриманими темами. Натискання цієї кнопки відкриє невеличке діалогове вікно роботи з файлами, за допомогою якого ви зможете вказати програмі розташування файла з архівом теми на вашому диску.</para>
+
+<para
+>Натискання кнопки <guibutton
+>Відкрити</guibutton
+> у цьому діалоговому вікні встановить тему, яку ви вказали, і зробить її доступною зі списку тем. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</article>

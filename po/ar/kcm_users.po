@@ -1,0 +1,464 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-29 00:48+0000\n"
+"PO-Revision-Date: 2022-04-28 12:45+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 21.07.70\n"
+
+#: package/contents/ui/ChangePassword.qml:26
+#: package/contents/ui/UserDetailsPage.qml:166
+#, kde-format
+msgid "Change Password"
+msgstr "غيّر كلمة السر"
+
+#: package/contents/ui/ChangePassword.qml:41
+#, kde-format
+msgid "Password"
+msgstr "كلمة السر"
+
+#: package/contents/ui/ChangePassword.qml:55
+#, kde-format
+msgid "Confirm password"
+msgstr "أكد كلمة السر"
+
+#: package/contents/ui/ChangePassword.qml:68
+#: package/contents/ui/CreateUser.qml:65
+#, kde-format
+msgid "Passwords must match"
+msgstr "يجب أن تتطابق كلمتي السر"
+
+#: package/contents/ui/ChangePassword.qml:73
+#, kde-format
+msgid "Set Password"
+msgstr "ضع كلمة سر"
+
+#: package/contents/ui/ChangeWalletPassword.qml:17
+#, kde-format
+msgid "Change Wallet Password?"
+msgstr "هل تغير كلمة سر المحفظة؟"
+
+#: package/contents/ui/ChangeWalletPassword.qml:26
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Now that you have changed your login password, you may also want to change "
+"the password on your default KWallet to match it."
+msgstr ""
+"الآن بعد أن قمت بتغيير كلمة مرور الولوج الخاصة بك، قد ترغب أيضًا في تغيير "
+"كلمة المرور على حافظة ك المبدئية لمطابقتها."
+
+#: package/contents/ui/ChangeWalletPassword.qml:31
+#, kde-format
+msgid "What is KWallet?"
+msgstr "ما هي حافظة ك؟"
+
+#: package/contents/ui/ChangeWalletPassword.qml:41
+#, kde-format
+msgid ""
+"KWallet is a password manager that stores your passwords for wireless "
+"networks and other encrypted resources. It is locked with its own password "
+"which differs from your login password. If the two passwords match, it can "
+"be unlocked at login automatically so you don't have to enter the KWallet "
+"password yourself."
+msgstr ""
+"حافظة ك هي مدير كلمات مرور يخزن كلمات المرور الخاصة بك للشبكات اللاسلكية "
+"والموارد المشفرة الأخرى. إنه مؤمن بكلمة المرور الخاصة به والتي تختلف عن كلمة "
+"مرور الولوج الخاصة بك. إذا كانت كلمتا المرور متطابقتين ، فيمكن إلغاء قفله "
+"عند الولوج تلقائيًا حتى لا تضطر إلى إدخال كلمة مرور حافظة ك بنفسك. "
+
+#: package/contents/ui/ChangeWalletPassword.qml:57
+#, kde-format
+msgid "Change Wallet Password"
+msgstr "غير كلمة سر المحفظة"
+
+#: package/contents/ui/ChangeWalletPassword.qml:66
+#, kde-format
+msgid "Leave Unchanged"
+msgstr "اتركه بدون تعديل"
+
+#: package/contents/ui/CreateUser.qml:16
+#, kde-format
+msgid "Create User"
+msgstr "أنشئ مستخدِم"
+
+#: package/contents/ui/CreateUser.qml:30
+#: package/contents/ui/UserDetailsPage.qml:134
+#, kde-format
+msgid "Name:"
+msgstr "الاسم:"
+
+#: package/contents/ui/CreateUser.qml:34
+#: package/contents/ui/UserDetailsPage.qml:141
+#, kde-format
+msgid "Username:"
+msgstr "اسم المستخدم:"
+
+#: package/contents/ui/CreateUser.qml:44
+#: package/contents/ui/UserDetailsPage.qml:149
+#, kde-format
+msgid "Standard"
+msgstr "عادي"
+
+#: package/contents/ui/CreateUser.qml:45
+#: package/contents/ui/UserDetailsPage.qml:150
+#, kde-format
+msgid "Administrator"
+msgstr "إداري"
+
+#: package/contents/ui/CreateUser.qml:48
+#: package/contents/ui/UserDetailsPage.qml:153
+#, kde-format
+msgid "Account type:"
+msgstr "نوع الحساب:"
+
+#: package/contents/ui/CreateUser.qml:53
+#, kde-format
+msgid "Password:"
+msgstr "كلمة السر:"
+
+#: package/contents/ui/CreateUser.qml:58
+#, kde-format
+msgid "Confirm password:"
+msgstr "أكد كلمة السر:"
+
+#: package/contents/ui/CreateUser.qml:69
+#, kde-format
+msgid "Create"
+msgstr "أنشئ"
+
+#: package/contents/ui/FingerprintDialog.qml:57
+#, kde-format
+msgid "Configure Fingerprints"
+msgstr "اضبط البصمات"
+
+#: package/contents/ui/FingerprintDialog.qml:67
+#, kde-format
+msgid "Clear Fingerprints"
+msgstr "امسح البصمات"
+
+#: package/contents/ui/FingerprintDialog.qml:74
+#, kde-format
+msgid "Add"
+msgstr "أضف"
+
+#: package/contents/ui/FingerprintDialog.qml:83
+#: package/contents/ui/FingerprintDialog.qml:100
+#, kde-format
+msgid "Cancel"
+msgstr "ألغِ"
+
+#: package/contents/ui/FingerprintDialog.qml:89
+#, kde-format
+msgid "Continue"
+msgstr "تابع"
+
+#: package/contents/ui/FingerprintDialog.qml:108
+#, kde-format
+msgid "Done"
+msgstr "تمّ"
+
+#: package/contents/ui/FingerprintDialog.qml:131
+#, kde-format
+msgid "Enrolling Fingerprint"
+msgstr "تسجيل البصمة"
+
+#: package/contents/ui/FingerprintDialog.qml:137
+#, kde-format
+msgctxt ""
+"%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgstr "الرجاء تكرار %1 إصبعك %2 على متحسس البصمات."
+
+#: package/contents/ui/FingerprintDialog.qml:147
+#, kde-format
+msgid "Finger Enrolled"
+msgstr "الأصبع سُجّل"
+
+#: package/contents/ui/FingerprintDialog.qml:183
+#, kde-format
+msgid "Pick a finger to enroll"
+msgstr "اختر اصبع لتسجيله"
+
+#: package/contents/ui/FingerprintDialog.qml:247
+#, kde-format
+msgid "Re-enroll finger"
+msgstr "أعد تسجيل الإصبع"
+
+#: package/contents/ui/FingerprintDialog.qml:265
+#, kde-format
+msgid "No fingerprints added"
+msgstr "لم يضف أي بصمة"
+
+#: package/contents/ui/main.qml:22
+#, kde-format
+msgid "Manage Users"
+msgstr "أدر المستخدمين"
+
+#: package/contents/ui/main.qml:123
+#, kde-format
+msgid "Add New User"
+msgstr "أضف مستخدم جديد"
+
+#: package/contents/ui/UserDetailsPage.qml:89
+#, kde-format
+msgid "Choose a picture"
+msgstr "اختر صورة"
+
+#: package/contents/ui/UserDetailsPage.qml:120
+#, kde-format
+msgid "Change avatar"
+msgstr "غيّر الصورة"
+
+#: package/contents/ui/UserDetailsPage.qml:162
+#, kde-format
+msgid "Email address:"
+msgstr "عنوان البريد الإلكتروني:"
+
+#: package/contents/ui/UserDetailsPage.qml:186
+#, kde-format
+msgid "Delete files"
+msgstr "احذف الملفات"
+
+#: package/contents/ui/UserDetailsPage.qml:193
+#, kde-format
+msgid "Keep files"
+msgstr "احتفظ بالملفات"
+
+#: package/contents/ui/UserDetailsPage.qml:200
+#, kde-format
+msgid "Delete User…"
+msgstr "احذف المستخدم..."
+
+#: package/contents/ui/UserDetailsPage.qml:211
+#, kde-format
+msgid "Configure Fingerprint Authentication…"
+msgstr "اضبط عملية الاستيثاق بالبصمة..."
+
+#: package/contents/ui/UserDetailsPage.qml:225
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Fingerprints can be used in place of a password when unlocking the screen "
+"and providing administrator permissions to applications and command-line "
+"programs that request them.<nl/><nl/>Logging into the system with your "
+"fingerprint is not yet supported."
+msgstr ""
+"يمكن استخدام بصمات الأصابع بدلاً من كلمة المرور عند إلغاء قفل الشاشة وتوفير "
+"أذونات المسؤول للتطبيقات وبرامج سطر الأوامر التي تطلبها. <nl/><nl/> الولوج "
+"إلى النظام باستخدام البصمة غير مدعوم لحد الآن."
+
+#: package/contents/ui/UserDetailsPage.qml:235
+#, kde-format
+msgid "Change Avatar"
+msgstr "غيّر الصورة"
+
+#: package/contents/ui/UserDetailsPage.qml:238
+#, kde-format
+msgid "It's Nothing"
+msgstr "لا شيء"
+
+#: package/contents/ui/UserDetailsPage.qml:239
+#, kde-format
+msgid "Feisty Flamingo"
+msgstr "فلامنغو المشاكس"
+
+#: package/contents/ui/UserDetailsPage.qml:240
+#, kde-format
+msgid "Dragon's Fruit"
+msgstr "فاكهة التنين"
+
+#: package/contents/ui/UserDetailsPage.qml:241
+#, kde-format
+msgid "Sweet Potato"
+msgstr "بطاطا حلوة"
+
+#: package/contents/ui/UserDetailsPage.qml:242
+#, kde-format
+msgid "Ambient Amber"
+msgstr "محيط العنبر"
+
+#: package/contents/ui/UserDetailsPage.qml:243
+#, kde-format
+msgid "Sparkle Sunbeam"
+msgstr "تألق شعاع الشمس"
+
+#: package/contents/ui/UserDetailsPage.qml:244
+#, kde-format
+msgid "Lemon-Lime"
+msgstr "ليمون حامض"
+
+#: package/contents/ui/UserDetailsPage.qml:245
+#, kde-format
+msgid "Verdant Charm"
+msgstr "سحر الخضرة"
+
+#: package/contents/ui/UserDetailsPage.qml:246
+#, kde-format
+msgid "Mellow Meadow"
+msgstr "مرج ناضج"
+
+#: package/contents/ui/UserDetailsPage.qml:247
+#, kde-format
+msgid "Tepid Teal"
+msgstr "البط البري الفاتر"
+
+#: package/contents/ui/UserDetailsPage.qml:248
+#, kde-format
+msgid "Plasma Blue"
+msgstr "بلازما الزرقاء"
+
+#: package/contents/ui/UserDetailsPage.qml:249
+#, kde-format
+msgid "Pon Purple"
+msgstr "بون الأرجواني"
+
+#: package/contents/ui/UserDetailsPage.qml:250
+#, kde-format
+msgid "Bajo Purple"
+msgstr "باجو الأرجواني"
+
+#: package/contents/ui/UserDetailsPage.qml:251
+#, kde-format
+msgid "Burnt Charcoal"
+msgstr "فحم محترق"
+
+#: package/contents/ui/UserDetailsPage.qml:252
+#, kde-format
+msgid "Paper Perfection"
+msgstr "إتقان الورق"
+
+#: package/contents/ui/UserDetailsPage.qml:253
+#, kde-format
+msgid "Cafétera Brown"
+msgstr "كافيترا براون"
+
+#: package/contents/ui/UserDetailsPage.qml:254
+#, kde-format
+msgid "Rich Hardwood"
+msgstr "خشب صلب غني "
+
+#: package/contents/ui/UserDetailsPage.qml:305
+#, kde-format
+msgid "Choose File…"
+msgstr "اختر ملف..."
+
+#: src/fingerprintmodel.cpp:147 src/fingerprintmodel.cpp:254
+#, kde-format
+msgid "No fingerprint device found."
+msgstr "لم يعثر على جهاز قراءة البصمة."
+
+#: src/fingerprintmodel.cpp:313
+#, kde-format
+msgid "Retry scanning your finger."
+msgstr "أعد محاولة مسحة الإصبع."
+
+#: src/fingerprintmodel.cpp:315
+#, kde-format
+msgid "Swipe too short. Try again."
+msgstr "التمريرة سريعة جدا. حاول مرة أخرى."
+
+#: src/fingerprintmodel.cpp:317
+#, kde-format
+msgid "Finger not centered on the reader. Try again."
+msgstr "الإصبع ليست في وسط القارئ. أعد المحاولة."
+
+#: src/fingerprintmodel.cpp:319
+#, kde-format
+msgid "Remove your finger from the reader, and try again."
+msgstr "أزل إصبعك من القارئ، و أعد المحاولة."
+
+#: src/fingerprintmodel.cpp:327
+#, kde-format
+msgid "Fingerprint enrollment has failed."
+msgstr "عملية تسجيل البصمة فشلت."
+
+#: src/fingerprintmodel.cpp:330
+#, kde-format
+msgid ""
+"There is no space left for this device, delete other fingerprints to "
+"continue."
+msgstr "لا يوجد مساحة باقية لهذا الجهاز، احذف أيا من البصمات الأخرى للمواصلة."
+
+#: src/fingerprintmodel.cpp:333
+#, kde-format
+msgid "The device was disconnected."
+msgstr "الجهاز مفصول."
+
+#: src/fingerprintmodel.cpp:338
+#, kde-format
+msgid "An unknown error has occurred."
+msgstr "حدث خطأ مجهول."
+
+#: src/user.cpp:264
+#, kde-format
+msgid "Could not get permission to save user %1"
+msgstr "تعذر الحصول على إذن لحفظ المستخدم %1"
+
+#: src/user.cpp:269
+#, kde-format
+msgid "There was an error while saving changes"
+msgstr "حدث خطأ أثناء حفظ التغييرات"
+
+#: src/user.cpp:364
+#, kde-format
+msgid "Failed to resize image: opening temp file failed"
+msgstr "فشل في تغيير حجم الصورة: فشل في فتح الملف المؤقت"
+
+#: src/user.cpp:372
+#, kde-format
+msgid "Failed to resize image: writing to temp file failed"
+msgstr "فشل في تغيير حجم الصورة: فشلت الكتابة إلى ملف مؤقت"
+
+#: src/usermodel.cpp:138
+#, kde-format
+msgid "Your Account"
+msgstr "حسابك"
+
+#: src/usermodel.cpp:138
+#, kde-format
+msgid "Other Accounts"
+msgstr "حسابات أخرى"
+
+#~ msgid "Please repeatedly "
+#~ msgstr "الرجاء التكرار"
+
+#~ msgctxt "Example email address"
+#~ msgid "john.doe@kde.org"
+#~ msgstr "john.doe@kde.org"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "زايد السعيدي"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "zayed.alsaidi@gmail.com"
+
+#~ msgid "Manage user accounts"
+#~ msgstr "أدِر حسابات المستخدمين"
+
+#~ msgid "Nicolas Fella"
+#~ msgstr "Nicolas Fella"
+
+#~ msgid "Carson Black"
+#~ msgstr "Carson Black"
+
+#~ msgid "Devin Lin"
+#~ msgstr "Devin Lin"
+
+#~ msgctxt "Example name"
+#~ msgid "John Doe"
+#~ msgstr "خالد بن الوليد"

@@ -1,0 +1,102 @@
+# translation of knotify4.po to Japanese
+# This file is distributed under the same license as the kdebase package.
+# Toyohiro Asukai <toyohiro@ksmplus.com>, 2004.
+# Shinichi Tsunoda <tsuno@ngy.1st.ne.jp>, 2005.
+# Jumpei Ogawa <phanective@gmail.com>, 2010.
+# Jumpei Ogawa (phanect) <phanective@gmail.com>, 2010.
+# Fumiaki Okushi <okushi@kde.gr.jp>, 2011.
+# Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: knotify4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2019-05-21 16:09+0900\n"
+"Last-Translator: Tomohiro Hyakutake <tomhioo@outlook.jp>\n"
+"Language-Team: Japanese <kde-jp@kde.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 19.04.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: ksolidnotify.cpp:149
+#, kde-format
+msgid "Device Status"
+msgstr ""
+
+#: ksolidnotify.cpp:149
+#, fuzzy, kde-format
+#| msgid "This device can now be safely removed."
+msgid "A device can now be safely removed"
+msgstr "このデバイスを安全に取り外しできます。"
+
+#: ksolidnotify.cpp:150
+#, kde-format
+msgid "This device can now be safely removed."
+msgstr "このデバイスを安全に取り外しできます。"
+
+#: ksolidnotify.cpp:157
+#, kde-format
+msgid "You are not authorized to mount this device."
+msgstr "このデバイスをマウントする権限がありません。"
+
+#: ksolidnotify.cpp:160
+#, kde-format
+msgctxt "Remove is less technical for unmount"
+msgid "You are not authorized to remove this device."
+msgstr "このデバイスを取り外す権限がありません。"
+
+#: ksolidnotify.cpp:163
+#, kde-format
+msgid "You are not authorized to eject this disc."
+msgstr "このディスクを取り出す権限がありません。"
+
+#: ksolidnotify.cpp:170
+#, kde-format
+msgid "Could not mount this device as it is busy."
+msgstr "デバイスがビジー状態のためマウントできませんでした。"
+
+#: ksolidnotify.cpp:200
+#, kde-format
+msgid "One or more files on this device are open within an application."
+msgstr ""
+"このデバイス上の一つ以上のファイルがアプリケーションによって開かれています。"
+
+#: ksolidnotify.cpp:202
+#, kde-format
+msgid "One or more files on this device are opened in application \"%2\"."
+msgid_plural ""
+"One or more files on this device are opened in following applications: %2."
+msgstr[0] ""
+"このデバイス上の一つ以上のファイルがアプリケーション \"%2\" によって開かれて"
+"います。"
+msgstr[1] ""
+"このデバイス上の一つ以上のファイルが次のアプリケーションによって開かれていま"
+"す: %2"
+
+#: ksolidnotify.cpp:205
+#, kde-format
+msgctxt "separator in list of apps blocking device unmount"
+msgid ", "
+msgstr ""
+
+#: ksolidnotify.cpp:222
+#, kde-format
+msgid "Could not mount this device."
+msgstr "このデバイスをマウントできませんでした"
+
+#: ksolidnotify.cpp:225
+#, kde-format
+msgctxt "Remove is less technical for unmount"
+msgid "Could not remove this device."
+msgstr "このデバイスを取り外しできませんでした。"
+
+#: ksolidnotify.cpp:228
+#, kde-format
+msgid "Could not eject this disc."
+msgstr "ディスクを取り出せませんでした。"

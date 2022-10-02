@@ -1,0 +1,161 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2015, 2016, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2021-02-14 08:29+0100\n"
+"Last-Translator: Łukasz Wojniłowicz <<lukasz.wojnilowicz@gmail.com>>\n"
+"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 20.12.1\n"
+
+#: ksolidnotify.cpp:149
+#, kde-format
+msgid "Device Status"
+msgstr "Stan urządzenia"
+
+#: ksolidnotify.cpp:149
+#, kde-format
+msgid "A device can now be safely removed"
+msgstr "Możesz teraz bezpiecznie wysunąć to urządzenie"
+
+#: ksolidnotify.cpp:150
+#, kde-format
+msgid "This device can now be safely removed."
+msgstr "Możesz teraz bezpiecznie wysunąć to urządzenie."
+
+#: ksolidnotify.cpp:157
+#, kde-format
+msgid "You are not authorized to mount this device."
+msgstr "Nie masz uprawnień do podpięcia tego urządzenia."
+
+#: ksolidnotify.cpp:160
+#, kde-format
+msgctxt "Remove is less technical for unmount"
+msgid "You are not authorized to remove this device."
+msgstr "Nie masz uprawnień do wysunięcia tego urządzenia."
+
+#: ksolidnotify.cpp:163
+#, kde-format
+msgid "You are not authorized to eject this disc."
+msgstr "Nie masz uprawnień do wysunięcia tego dysku."
+
+#: ksolidnotify.cpp:170
+#, kde-format
+msgid "Could not mount this device as it is busy."
+msgstr "Nie można podpiąć tego urządzenia, bo jest zajęte."
+
+#: ksolidnotify.cpp:200
+#, kde-format
+msgid "One or more files on this device are open within an application."
+msgstr ""
+"Jeden lub więcej plików na tym urządzeniu jest otwartych w jakiejś aplikacji."
+
+#: ksolidnotify.cpp:202
+#, kde-format
+msgid "One or more files on this device are opened in application \"%2\"."
+msgid_plural ""
+"One or more files on this device are opened in following applications: %2."
+msgstr[0] ""
+"Jeden lub więcej plików na tym urządzeniu jest otwartych w aplikacji \"%2\"."
+msgstr[1] ""
+"Jeden lub więcej plików na tym urządzeniu jest otwartych w następujących "
+"aplikacjach \"%2\"."
+msgstr[2] ""
+"Jeden lub więcej plików na tym urządzeniu jest otwartych w następujących "
+"aplikacjach \"%2\"."
+
+#: ksolidnotify.cpp:205
+#, kde-format
+msgctxt "separator in list of apps blocking device unmount"
+msgid ", "
+msgstr ", "
+
+#: ksolidnotify.cpp:222
+#, kde-format
+msgid "Could not mount this device."
+msgstr "Nie można podpiąć tego urządzenia."
+
+#: ksolidnotify.cpp:225
+#, kde-format
+msgctxt "Remove is less technical for unmount"
+msgid "Could not remove this device."
+msgstr "Nie można wysunąć tego urządzenia."
+
+#: ksolidnotify.cpp:228
+#, kde-format
+msgid "Could not eject this disc."
+msgstr "Nie można wysunąć dysku."
+
+#~ msgid ""
+#~ "Could not safely remove the following device: %1\n"
+#~ "One or more files on this device are open within an application"
+#~ msgstr ""
+#~ "Nie można bezpiecznie wysunąć następującego urządzenia: %1\n"
+#~ "Jeden lub więcej plików z tego urządzenia jest otwartych wewnątrz jakiejś "
+#~ "aplikacji"
+
+#~ msgid ""
+#~ "Could not safely remove the following device: %1\n"
+#~ "One or more files on this device are opened in application \"%3\"\n"
+#~ "Please close it and try again"
+#~ msgid_plural ""
+#~ "Could not safely remove the following device: %1\n"
+#~ "One or more files on this device are opened in following applications: "
+#~ "%3\n"
+#~ "Please close it and try again"
+#~ msgstr[0] ""
+#~ "Nie można bezpiecznie wysunąć następującego urządzenia: %1\n"
+#~ "Jeden lub więcej plików z tego urządzenia jest otwartych wewnątrz "
+#~ "aplikacji \"%3\"\n"
+#~ "Zamknij je i spróbuj ponownie"
+#~ msgstr[1] ""
+#~ "Nie można bezpiecznie wysunąć następującego urządzenia: %1\n"
+#~ "Jeden lub więcej plików z tego urządzenia jest otwartych wewnątrz "
+#~ "następujących aplikacji: \"%3\"\n"
+#~ "Zamknij je i spróbuj ponownie"
+#~ msgstr[2] ""
+#~ "Nie można bezpiecznie wysunąć następującego urządzenia: %1\n"
+#~ "Jeden lub więcej plików z tego urządzenia jest otwartych wewnątrz "
+#~ "następujących aplikacji: \"%3\"\n"
+#~ "Zamknij je i spróbuj ponownie"
+
+#~ msgctxt ""
+#~ "The term \"remove\" here means \"physically disconnect the device from "
+#~ "the computer\", whereas \"safely\" means \"without risk of data loss\""
+#~ msgid "The following device can now be safely removed: %1"
+#~ msgstr "Następujące urządzenie teraz może zostać bezpiecznie wysunięte: %1"
+
+#~ msgid ""
+#~ "Could not eject the following device: %1\n"
+#~ "One or more files on this device are opened in application \"%3\"\n"
+#~ "Please close it and try again"
+#~ msgid_plural ""
+#~ "Could not eject the following device: %1\n"
+#~ "One or more files on this device are opened in following applications: "
+#~ "%3\n"
+#~ "Please close it and try again"
+#~ msgstr[0] ""
+#~ "Nie można wysunąć następującego urządzenia: %1\n"
+#~ "Jeden lub więcej plików z tego urządzenia jest otwartych wewnątrz "
+#~ "aplikacji \"%3\"\n"
+#~ "Zamknij je i spróbuj ponownie"
+#~ msgstr[1] ""
+#~ "Nie można wysunąć następującego urządzenia: %1\n"
+#~ "Jeden lub więcej plików z tego urządzenia jest otwartych wewnątrz "
+#~ "następujących aplikacji: \"%3\"\n"
+#~ "Zamknij je i spróbuj ponownie"
+#~ msgstr[2] ""
+#~ "Nie można wysunąć następującego urządzenia: %1\n"
+#~ "Jeden lub więcej plików z tego urządzenia jest otwartych wewnątrz "
+#~ "następujących aplikacji: \"%3\"\n"
+#~ "Zamknij je i spróbuj ponownie"

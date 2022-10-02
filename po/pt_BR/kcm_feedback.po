@@ -1,0 +1,82 @@
+# Translation of kcm_feedback.po to Brazilian Portuguese
+# Copyright (C) 2019-2020 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2019, 2021, 2022.
+# André Marcelo Alvarenga <alvarenga@kde.org>, 2019, 2020.
+# Thiago Masato Costa Sueto <herzenschein@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-28 00:47+0000\n"
+"PO-Revision-Date: 2022-01-17 15:14-0300\n"
+"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
+"Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#: package/contents/ui/main.qml:34
+#, kde-format
+msgid ""
+"User Feedback has been disabled centrally. Please contact your distributor."
+msgstr ""
+"As sugestões dos usuários foram desativadas globalmente. Contate o seu "
+"distribuidor."
+
+#: package/contents/ui/main.qml:44 package/contents/ui/main.qml:77
+#, kde-format
+msgid "Plasma:"
+msgstr "Plasma:"
+
+#: package/contents/ui/main.qml:51
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"You can help KDE improve Plasma by contributing information on how you use "
+"it, so we can focus on things that matter to you.<nl/><nl/>Contributing this "
+"information is optional and entirely anonymous. We never collect your "
+"personal data, files you use, websites you visit, or information that could "
+"identify you.<nl/><nl/>You can read about <link url='https://kde.org/"
+"privacypolicy-apps.php'>our privacy policy here.</link>"
+msgstr ""
+"Você pode ajudar a KDE a melhorar o Plasma contribuindo com informações "
+"sobre a forma como o usa, para que nos possamos focar nas coisas que "
+"realmente lhe interessam.<nl/><nl/>Contribuir com essas informações é "
+"opcional e completamente anônima. Nunca coletaremos os seus dados pessoais, "
+"arquivos, sites que visita ou quaisquer outras informações que o possam "
+"identificá-lo.<nl/><nl/>Você pode ler sobre <link url='https://kde.org/"
+"privacypolicy-apps.php'>nossa política de privacidade aqui.</link>"
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Plasma"
+msgstr "Plasma"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "The following information will be sent:"
+msgstr "Será enviada a seguinte informação:"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "View sent data:"
+msgstr "Visualizar dados enviados:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Luiz Fernando Ranghetti, André Marcelo Alvarenga"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "elchevive@opensuse.org, alvarenga@kde.org"
+
+#~ msgid "User Feedback"
+#~ msgstr "Comentários do usuário"
+
+#~ msgid "Configure user feedback settings"
+#~ msgstr "Configurar as definições dos comentários do usuário"

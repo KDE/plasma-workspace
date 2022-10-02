@@ -1,0 +1,410 @@
+# translation of kcm_desktopthemedetails.po to Punjabi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Amanpreet Singh <aalam@users.sf.net>, 2008.
+# A S Alam <aalam@users.sf.net>, 2008, 2010, 2018, 2020, 2021, 2022.
+# Amanpreet Singh Alam <aalam@users.sf.net>, 2009, 2012, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_desktopthemedetails\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"PO-Revision-Date: 2022-01-03 11:19-0800\n"
+"Last-Translator: A S Alam <aalam@satluj.org>\n"
+"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.04.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current Plasma Style"
+msgstr "ਮੌਜੂਦਾ ਪਲਾਜ਼ਮਾ ਸਟਾਈਲ ਦਾ ਨਾਂ"
+
+#: kcm.cpp:108
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "ਆਰਜ਼ੀ ਫ਼ਾਇਲ ਬਣਾਉਣ ਲਈ ਅਸਮਰੱਥ ਹੈ।"
+
+#: kcm.cpp:119
+#, kde-format
+msgid "Unable to download the theme: %1"
+msgstr "ਥੀਮ ਡਾਊਨਲੋਡ ਕਰਨ ਲਈ ਅਸਮਰੱਥ: %1"
+
+#: kcm.cpp:144
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "ਥੀਮ ਠੀਕ ਤਰ੍ਹਾਂ ਇੰਸਟਾਲ ਕੀਤਾ ਗਿਆ।"
+
+#: kcm.cpp:147 kcm.cpp:153
+#, kde-format
+msgid "Theme installation failed."
+msgstr "ਇੰਸਟਾਲੇਸ਼ਨ ਫੇਲ੍ਹ ਹੋਈ।"
+
+#: kcm.cpp:245
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "This module lets you choose the Plasma style."
+msgstr ""
+
+#: package/contents/ui/main.qml:69
+#, kde-format
+msgid "All Themes"
+msgstr "ਸਾਰੇ ਥੀਮ"
+
+#: package/contents/ui/main.qml:70
+#, kde-format
+msgid "Light Themes"
+msgstr "ਹਲਕੇ ਥੀਮ"
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgid "Dark Themes"
+msgstr "ਗੂੜ੍ਹੇ ਥੀਮ"
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "Color scheme compatible"
+msgstr ""
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgid "Follows color scheme"
+msgstr "ਰੰਗ ਸਕੀਮ ਮੁਤਾਬਕ"
+
+#: package/contents/ui/main.qml:118
+#, kde-format
+msgid "Edit Theme…"
+msgstr "…ਥੀਮ ਸੋਧੋ"
+
+#: package/contents/ui/main.qml:125
+#, kde-format
+msgid "Remove Theme"
+msgstr "ਥੀਮ ਹਟਾਓ"
+
+#: package/contents/ui/main.qml:132
+#, kde-format
+msgid "Restore Theme"
+msgstr "ਥੀਮ ਬਹਾਲ ਕਰੋ"
+
+#: package/contents/ui/main.qml:174
+#, kde-format
+msgid "Install from File…"
+msgstr "…ਫਾਇਲ ਤੋਂ ਇੰਸਟਾਲ ਕਰੋ"
+
+#: package/contents/ui/main.qml:179
+#, kde-format
+msgid "Get New Plasma Styles…"
+msgstr "…ਨਵੇਂ ਪਲਾਜ਼ਮਾ ਸਟਾਈਲ ਲਵੋ"
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Open Theme"
+msgstr "ਥੀਮ ਖੋਲ੍ਹੋ"
+
+#: package/contents/ui/main.qml:195
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr "ਥੀਮ ਫਾਇਲਾਂ (*.zip *.tar.gz *.tar.bz2)"
+
+#: plasma-apply-desktoptheme.cpp:31
+#, kde-format
+msgid ""
+"This tool allows you to set the theme of the current Plasma session, without "
+"accidentally setting it to one that is either not available, or which is "
+"already set."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:35
+#, kde-format
+msgid ""
+"The name of the theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:36
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:49
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:65
+#, kde-format
+msgid "The current Plasma session's theme has been set to %1"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:67
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:75
+#, kde-format
+msgid "You have the following Plasma themes on your system:"
+msgstr "ਤੁਹਾਡੇ ਸਿਸਟਮ ਉੱਤੇ ਅੱਗੇ ਦਿੱਤੇ ਪਲਾਜ਼ਮਾ ਥੀਮ ਮੌਜੂਦ ਹਨ:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "ਅਮਨਪਰੀਤ ਸਿੰਘ ਆਲਮ"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "aalam@users.sf.net"
+
+#~ msgid "Plasma Style"
+#~ msgstr "ਪਲਾਜ਼ਮਾ ਸਟਾਈਲ"
+
+#, fuzzy
+#~| msgid "Get New Themes..."
+#~ msgid "Plasma Styles"
+#~ msgstr "ਨਵੇਂ ਥੀਮ ਲਵੋ..."
+
+#, fuzzy
+#~| msgid "Download New Desktop Themes"
+#~ msgid "Download New Plasma Styles"
+#~ msgstr "ਨਵੇਂ ਡੈਸਕਟਾਪ ਥੀਮ ਡਾਊਨਲੋਡ ਕਰੋ"
+
+#~ msgid "Configure Desktop Theme"
+#~ msgstr "ਡੈਸਕਟਾਪ ਥੀਮ ਸੰਰਚਨਾ"
+
+#, fuzzy
+#~| msgid "Theme installation failed."
+#~ msgid "Theme removal failed."
+#~ msgstr "ਇੰਸਟਾਲੇਸ਼ਨ ਫੇਲ੍ਹ ਹੋਈ।"
+
+#~ msgid ""
+#~ "<h1>Desktop Theme</h1>This module allows you to modify the visual "
+#~ "appearance of the desktop."
+#~ msgstr "<h1>ਡੈਸਕਟਾਪ ਥੀਮ</h1> ਇਹ ਮੋਡੀਊਲ ਤੁਹਾਨੂੰ ਡੈਸਕਟਾਪ ਦੀ ਦਿੱਖ ਨੂੰ ਸੋਧਣ ਲਈ ਸਹਾਇਕ ਹੈ।"
+
+#~ msgid "KDE Desktop Theme Module"
+#~ msgstr " KDE ਡੈਸਕਟਾਪ ਥੀਮ ਮੋਡੀਊਲ"
+
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
+#~ msgstr "(c) 2002 Karol Szwed, Daniel Molkentin"
+
+#~ msgid "Theme installation failed. (%1)"
+#~ msgstr "ਇੰਸਟਾਲੇਸ਼ਨ ਫੇਲ੍ਹ ਹੋਈ। (%1)"
+
+#~ msgid "Details"
+#~ msgstr "ਵੇਰਵਾ"
+
+#~ msgctxt "plasma name"
+#~ msgid "Panel Background"
+#~ msgstr "ਪੈਨਲ ਬੈਕਗਰਾਊਂਡ"
+
+#~ msgctxt "plasma name"
+#~ msgid "Kickoff"
+#~ msgstr "ਕਿੱਕ-ਆਫ"
+
+#~ msgctxt "plasma name"
+#~ msgid "Task Items"
+#~ msgstr "ਟਾਸਕ ਆਈਟਮਾਂ"
+
+#~ msgctxt "plasma name"
+#~ msgid "Widget Background"
+#~ msgstr "ਵਿਦਜੈੱਟ ਬੈਕਗਰਾਊਂਡ"
+
+#~ msgctxt "plasma name"
+#~ msgid "Translucent Background"
+#~ msgstr "ਬਲੌਰੀ ਬੈਕਗਰਾਊਂਡ"
+
+#~ msgctxt "plasma name"
+#~ msgid "Dialog Background"
+#~ msgstr "ਡਾਈਲਾਗ ਬੈਕਗਾਊਂਡ"
+
+#~ msgctxt "plasma name"
+#~ msgid "Analog Clock"
+#~ msgstr "ਐਨਲਾਗ ਘੜੀ"
+
+#~ msgctxt "plasma name"
+#~ msgid "Notes"
+#~ msgstr "ਨੋਟਿਸ"
+
+#~ msgctxt "plasma name"
+#~ msgid "Tooltip"
+#~ msgstr "ਟੂਲ-ਟਿੱਪ"
+
+#~ msgctxt "plasma name"
+#~ msgid "Pager"
+#~ msgstr "ਪੇਜ਼ਰ"
+
+#~ msgctxt "plasma name"
+#~ msgid "Run Command Dialog"
+#~ msgstr "ਕਮਾਂਡ ਡਾਈਲਾਗ ਚਲਾਓ"
+
+#~ msgctxt "plasma name"
+#~ msgid "Shutdown Dialog"
+#~ msgstr "ਬੰਦ ਕਰੋ ਡਾਈਲਾਗ"
+
+#~ msgctxt "plasma name"
+#~ msgid "Icons"
+#~ msgstr "ਆਈਕਾਨ"
+
+#~ msgid "(Customized)"
+#~ msgstr "(ਪਸੰਦੀਦਾ)"
+
+#~ msgid "User customized theme"
+#~ msgstr "ਪਸੰਦੀਦਾ ਥੀਮ ਵਰਤੋਂ"
+
+#~ msgid ""
+#~ "Theme items have been changed.  Do you still wish remove the \"%1\" theme?"
+#~ msgstr ""
+#~ "ਥੀਮ ਆਈਟਮਾਂ ਬਦਲੀਆਂ ਗਈਆਂ ਹਨ। ਕੀ ਤੁਸੀਂ ਹਾਲੇ ਵੀ \"%1\" ਥੀਮ ਹਾਲੇ ਵੀ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
+
+#~ msgid "Removal of the default desktop theme is not allowed."
+#~ msgstr "ਡਿਫਾਲਟ ਥੀਮ ਹਟਾਉਣ ਦੀ ਮਨਜ਼ੂਰੀ ਨਹੀਂ ਹੈ।"
+
+#~ msgid "Are you sure you wish remove the \"%1\" theme?"
+#~ msgstr "ਕੀ ਤੁਸੀਂ \"%1\" ਥੀਮ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
+
+#~ msgid ""
+#~ "Please apply theme item changes (with a new theme name) before attempting "
+#~ "to export theme."
+#~ msgstr "ਥੀਮ ਐਕਸਪੋਰਟ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਥੀਮ ਆਈਟਮ ਬਦਲਾਅ ਲਾਗੂ ਕਰੋ (ਨਵੇਂ ਥੀਮ ਨਾਂ ਨਾਲ)।"
+
+#~ msgid "Export Desktop Theme"
+#~ msgstr "ਡੈਸਕਟਾਪ ਥੀਮ ਐਕਸਪੋਰਟ ਕਰੋ"
+
+#~ msgid "Export theme to file"
+#~ msgstr "ਥੀਮ ਫਾਈਲ ਵਿੱਚ ਐਕਸਪੋਰਟ"
+
+#~ msgid "Theme Item"
+#~ msgstr "ਥੀਮ ਆਈਟਮਾਂ"
+
+#~ msgid "Source"
+#~ msgstr "ਸਰੋਤ"
+
+#, fuzzy
+#~| msgid "%1 %2"
+#~ msgctxt ""
+#~ "%1 is the name of the theme, %2 is the type of the element (background, "
+#~ "icon, note, etc)"
+#~ msgid "%1 %2"
+#~ msgstr "%1 %2"
+
+#~ msgid "File..."
+#~ msgstr "ਫਾਈਲ..."
+
+#~ msgid "Select File to Use for %1"
+#~ msgstr "%1 ਲਈ ਵਰਤਣ ਵਾਸਤੇ ਫਾਈਲ ਚੁਣੋ"
+
+#~ msgid " Author: %1"
+#~ msgstr "ਲੇਖਕ: %1"
+
+#~ msgid "Version: %1"
+#~ msgstr "ਵਰਜਨ: %1"
+
+#~ msgid "Desktop Theme Details"
+#~ msgstr "ਡੈਸਕਟਾਪ ਥੀਮ ਵੇਰਵਾ"
+
+#~ msgid "Choose an item and customize it by assigning it a theme"
+#~ msgstr "ਆਈਟਮ ਚੁਣੋ ਅਤੇ ਇਸ ਨੂੰ ਥੀਮ ਦੇ ਕੇ ਪਸੰਦ ਮੁਤਾਬਕ ਬਣਾਉ"
+
+#~ msgid "Enable more options"
+#~ msgstr "ਹੋਰ ਚੋਣਾਂ ਚਾਲੂ ਕਰੋ"
+
+#~ msgid "More"
+#~ msgstr "ਹੋਰ"
+
+#~ msgid "Remove the selected theme"
+#~ msgstr "ਚੁਣੇ ਥੀਮ ਹਟਾਓ"
+
+#~ msgid "Save your theme in a zip archive"
+#~ msgstr "ਆਪਣੇ ਥੀਮ ਨੂੰ ਜ਼ਿੱਪ ਅਕਾਇਵ ਵਿੱਚ ਸੰਭਾਲੋ"
+
+#~ msgid "Export Theme to File..."
+#~ msgstr "ਥੀਮ ਫਾਈਲ ਵਿੱਚ ਐਕਸਪੋਰਟ..."
+
+#~ msgid "New theme name:"
+#~ msgstr "ਨਵਾਂ ਥੀਮ ਨਾਂ:"
+
+#~ msgid "Custom theme name"
+#~ msgstr "ਪਸੰਦੀਦਾ ਥੀਮ ਨਾਂ"
+
+#~ msgid "Give a name to your custom theme."
+#~ msgstr "ਆਪਣੇ ਪਸੰਦੀਦਾ ਥੀਮ ਲਈ ਨਾਂ ਦਿਉ।"
+
+#~ msgid "Author:"
+#~ msgstr "ਲੇਖਕ:"
+
+#~ msgid "Custom theme author "
+#~ msgstr "ਪਸੰਦੀਦਾ ਥੀਮ ਲੇਖਕ "
+
+#~ msgid "Enter the author name of your custom theme."
+#~ msgstr "ਆਪਣੇ ਪਸੰਦੀਦਾ ਥੀਮ ਲਈ ਲੇਖਕ ਦਾ ਨਾਂ ਦਿਉ।"
+
+#~ msgid "Version:"
+#~ msgstr "ਵਰਜਨ:"
+
+#~ msgid "Custom theme version number"
+#~ msgstr "ਪਸੰਦੀਦਾ ਥੀਮ ਵਰਜਨ ਨੰਬਰ"
+
+#, fuzzy
+#~| msgid "Enter the author name of your custom theme."
+#~ msgid "Enter the version number of your custom theme."
+#~ msgstr "ਆਪਣੇ ਪਸੰਦੀਦਾ ਥੀਮ ਲਈ ਲੇਖਕ ਦਾ ਨਾਂ ਦਿਉ।"
+
+#~ msgid "Description:"
+#~ msgstr "ਵੇਰਵਾ:"
+
+#~ msgid "Custom theme description"
+#~ msgstr "ਪਸੰਦੀਦਾ ਥੀਮ ਵੇਰਵਾ"
+
+#, fuzzy
+#~| msgid "Enter the author name of your custom theme."
+#~ msgid "Enter a description which will explain your custom theme."
+#~ msgstr "ਆਪਣੇ ਪਸੰਦੀਦਾ ਥੀਮ ਲਈ ਲੇਖਕ ਦਾ ਨਾਂ ਦਿਉ।"
+
+#~ msgid "Select theme from above to customize"
+#~ msgstr "ਕਸਟਮਾਈਜ਼ ਕਰਨ ਲਈ ਉੱਤੇ ਤੋਂ ਥੀਮ ਚੁਣੋ"
+
+#~ msgid "Theme Author"
+#~ msgstr "ਥੀਮ ਲੇਖਕ"
+
+#~ msgid "Theme Name"
+#~ msgstr "ਥੀਮ ਨਾਂ"
+
+#~ msgid "Theme Version"
+#~ msgstr "ਥੀਮ ਵਰਜਨ"
+
+#~ msgid "The theme description goes here..."
+#~ msgstr "ਥੀਮ ਵੇਰਵਾ ਇੱਥੇ ਦਿਓ..."
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "ਡੈਨੀਅਲ ਮੋਲਕਿਨਟਿਨ"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "ਰਲਫ ਨੋਲਡਿਨ"
+
+#~ msgid "KCMDesktopTheme"
+#~ msgstr "KCMDesktopTheme"
+
+#, fuzzy
+#~| msgid "Removal of the default KDE theme is not allowed."
+#~ msgid "Removal of the active desktop theme is not allowed."
+#~ msgstr "ਡਿਫਾਲਟ KDE ਥੀਮ ਹਟਾਉਣ ਦੀ ਮਨਜ਼ੂਰੀ ਨਹੀਂ ਹੈ।"
+
+#~ msgid "Unfortunately, this feature is not yet implemented."
+#~ msgstr "ਅਫਸੋਸ ਹੈ ਕਿ ਇਹ ਫੀਚਰ ਹਾਲੇ ਬਣਾਇਆ ਨਹੀਂ ਗਿਆ ਹੈ।"
+
+#~ msgid "Theme items data file could not be found."
+#~ msgstr "ਥੀਮ ਆਈਟਮਾਂ ਡਾਟਾ ਫਾਈਲ ਲੱਭੀ ਨਹੀਂ ਜਾ ਸਕੀ।"

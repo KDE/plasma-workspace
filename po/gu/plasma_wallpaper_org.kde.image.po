@@ -1,0 +1,376 @@
+# translation of plasma_wallpaper_image.po to Gujarati
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sweta Kothari <swkothar@redhat.com>, 2008, 2010.
+# Kartik Mistry <kartik.mistry@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_wallpaper_image\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-15 00:46+0000\n"
+"PO-Revision-Date: 2010-12-23 11:31+0530\n"
+"Last-Translator: Sweta Kothari <swkothar@redhat.com>\n"
+"Language-Team: Gujarati\n"
+"Language: gu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:94
+#, fuzzy, kde-format
+#| msgid "&Positioning:"
+msgid "Positioning:"
+msgstr "સ્થિતિ (&P):"
+
+#: imagepackage/contents/ui/config.qml:97
+#, fuzzy, kde-format
+#| msgid "Scaled & Cropped"
+msgid "Scaled and Cropped"
+msgstr "વિસ્તૃત અને કાપેલ"
+
+#: imagepackage/contents/ui/config.qml:101
+#, kde-format
+msgid "Scaled"
+msgstr "વિસ્તૃત"
+
+#: imagepackage/contents/ui/config.qml:105
+#, fuzzy, kde-format
+#| msgid "Scaled, keep proportions"
+msgid "Scaled, Keep Proportions"
+msgstr "વિસ્તૃત, પ્રમાણમાપ જાળવી રાખો"
+
+#: imagepackage/contents/ui/config.qml:109
+#, kde-format
+msgid "Centered"
+msgstr "મધ્યમાં"
+
+#: imagepackage/contents/ui/config.qml:113
+#, kde-format
+msgid "Tiled"
+msgstr "તકતી"
+
+#: imagepackage/contents/ui/config.qml:141
+#, kde-format
+msgid "Background:"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:142
+#, kde-format
+msgid "Blur"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:151
+#, kde-format
+msgid "Solid color"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:161
+#, kde-format
+msgid "Select Background Color"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:207
+#, kde-format
+msgid "Add Image…"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:213
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:257
+#, fuzzy, kde-format
+#| msgid "Get New Wallpapers..."
+msgid "Get New Wallpapers…"
+msgstr "નવાં વોલપેપર્સ મેળવો..."
+
+#: imagepackage/contents/ui/main.qml:69
+#, kde-format
+msgid "Open Wallpaper Image"
+msgstr "વોલપેપર ચિત્ર ખોલો"
+
+#: imagepackage/contents/ui/main.qml:70
+#, kde-format
+msgid "Next Wallpaper Image"
+msgstr "આગલું વોલપેપર ચિત્ર"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:33
+#, kde-format
+msgid "Open Containing Folder"
+msgstr ""
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:39
+#, fuzzy, kde-format
+#| msgid "&System wallpapers:"
+msgid "Restore wallpaper"
+msgstr "સિસ્ટમ વોલપેપર્સ (&S):"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:44
+#, fuzzy, kde-format
+#| msgid "&System wallpapers:"
+msgid "Remove Wallpaper"
+msgstr "સિસ્ટમ વોલપેપર્સ (&S):"
+
+#: plasma-apply-wallpaperimage.cpp:29
+#, kde-format
+msgid ""
+"This tool allows you to set an image as the wallpaper for the Plasma session."
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:31
+#, kde-format
+msgid ""
+"An image file or an installed wallpaper kpackage that you wish to set as the "
+"wallpaper for your Plasma session"
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:45
+#, kde-format
+msgid ""
+"There is a stray single quote in the filename of this wallpaper (') - please "
+"contact the author of the wallpaper to fix this, or rename the file "
+"yourself: %1"
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:85
+#, kde-format
+msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:89
+#, kde-format
+msgid ""
+"Successfully set the wallpaper for all desktops to the KPackage based %1"
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:91
+#, kde-format
+msgid "Successfully set the wallpaper for all desktops to the image %1"
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:97
+#, kde-format
+msgid ""
+"The file passed to be set as wallpaper does not exist, or we cannot identify "
+"it as a wallpaper: %1"
+msgstr ""
+
+#: plugin/finder/packagefinder.cpp:152
+#, kde-format
+msgid "Recommended wallpaper file"
+msgstr ""
+
+#: plugin/imagebackend.cpp:234
+#, kde-format
+msgid "Directory with the wallpaper to show slides from"
+msgstr ""
+
+#: plugin/imagebackend.cpp:345
+#, fuzzy, kde-format
+#| msgid "Open Wallpaper Image"
+msgid "Open Image"
+msgstr "વોલપેપર ચિત્ર ખોલો"
+
+#: plugin/imagebackend.cpp:345
+#, kde-format
+msgid "Image Files"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:38
+#, kde-format
+msgid "Order:"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:45
+#, kde-format
+msgid "Random"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:49
+#, kde-format
+msgid "A to Z"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:53
+#, kde-format
+msgid "Z to A"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:57
+#, kde-format
+msgid "Date modified (newest first)"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:61
+#, kde-format
+msgid "Date modified (oldest first)"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:86
+#, kde-format
+msgid "Group by folders"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:98
+#, fuzzy, kde-format
+#| msgid "C&hange images every:"
+msgid "Change every:"
+msgstr "ચિત્રોને આ દરેક વખતે બદલો (&h):"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:108
+#, kde-format
+msgid "%1 hour"
+msgid_plural "%1 hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:128
+#, kde-format
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:148
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:162
+#, fuzzy, kde-format
+#| msgid "&Remove Folder"
+msgid "Folders"
+msgstr "ફોલ્ડર દૂર કરો (&R)"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:220
+#, fuzzy, kde-format
+#| msgid "&Remove Folder"
+msgid "Remove Folder"
+msgstr "ફોલ્ડર દૂર કરો (&R)"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:225
+#, fuzzy, kde-format
+#| msgid "&Remove Folder"
+msgid "Open Folder"
+msgstr "ફોલ્ડર દૂર કરો (&R)"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:235
+#, kde-format
+msgid "There are no wallpaper locations configured"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:250
+#, fuzzy, kde-format
+#| msgid "&Add Folder..."
+msgid "Add Folder…"
+msgstr "ફોલ્ડર ઉમેરો (&A)..."
+
+#, fuzzy
+#~| msgid "Use system-installed wallpapers in slideshow"
+#~ msgid "There are no wallpapers in this slideshow"
+#~ msgstr "સ્લાઇડશોમાં સિસ્ટમ-સ્થાપિત વોલપેપર્સ ઉપયોગ કરો"
+
+#, fuzzy
+#~| msgid "&System wallpapers:"
+#~ msgid "Add Custom Wallpaper"
+#~ msgstr "સિસ્ટમ વોલપેપર્સ (&S):"
+
+#, fuzzy
+#~| msgid "&System wallpapers:"
+#~ msgid "Remove wallpaper"
+#~ msgstr "સિસ્ટમ વોલપેપર્સ (&S):"
+
+#, fuzzy
+#~| msgctxt "Caption to wallpaper preview, %1 author name"
+#~| msgid "by %1"
+#~ msgid "%1 by %2"
+#~ msgstr "%1 દ્વારા"
+
+#, fuzzy
+#~| msgid "&System wallpapers:"
+#~ msgid "Wallpapers"
+#~ msgstr "સિસ્ટમ વોલપેપર્સ (&S):"
+
+#, fuzzy
+#~| msgid "Download new wallpapers"
+#~ msgid "Download Wallpapers"
+#~ msgstr "નવા વોલપેપર્સ ડાઉનલોડ કરો"
+
+#~ msgid "Open..."
+#~ msgstr "ખોલો..."
+
+#~ msgid "Center Tiled"
+#~ msgstr "મધ્યમાં તકતી"
+
+#~ msgid "Select Wallpaper Image File"
+#~ msgstr "વોલપેપર ચિત્ર ફાઇલને પસંદ કરો"
+
+#~ msgid "P&ositioning:"
+#~ msgstr "સ્થિતિ (&o):"
+
+#~ msgid "&Color:"
+#~ msgstr "રંગ (&C):"
+
+#~ msgid "Remove from list"
+#~ msgstr "યાદીમાંથી દૂર કરો"
+
+#~ msgctxt ""
+#~ "(qtdt-format) Please do not change the quotes (') and translate only the "
+#~ "content of the quotes."
+#~ msgid "hh 'Hours' mm 'Mins' ss 'Secs'"
+#~ msgstr "hh 'Hours' mm 'Mins' ss 'Secs'"
+
+#~ msgid "&My downloaded wallpapers:"
+#~ msgstr "મારા ડાઉનલોડ કરેલ વોલપેપર્સ (&M):"
+
+#~ msgid ""
+#~ "Use wallpapers I have downloaded with \"Get New Wallpapers...\" in "
+#~ "slideshow"
+#~ msgstr "મેં \"નવાં વોલપેપર્સ મેળવો...\" વડે ડાઉનલોડ કરેલ વોલપેપર્સને સ્લાઈડશોમાં વાપરો"
+
+#~ msgid "Custom folders:"
+#~ msgstr "વૈવિધ્ય ફોલ્ડરો:"
+
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:11pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Images</span></p></body></html>"
+#~ msgstr ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:11pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Images</span></p></body></html>"
+
+#~ msgid "Finding images for the wallpaper slideshow."
+#~ msgstr "વોલપેપર સ્લાઈડશો માટે ચિત્રો શોધે છે."
+
+#~ msgid "Adding wallpaper package in %1"
+#~ msgstr "વોલપેપર પેકેજ %1 માં ઉમેરે છે"
+
+#~ msgid "Adding image %1"
+#~ msgstr "ચિત્ર %1 ઉમેરે છે"

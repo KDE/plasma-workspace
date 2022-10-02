@@ -1,0 +1,761 @@
+# translation of kcminput.po into Russian
+# translation of kcminput.po to
+# translation of kcminput.po to
+#
+# translation of kcminput.po to Russian
+#
+# KDE2 - kcminput.pot Russian translation.
+# Copyright (C) 1998, KDE Team.
+#
+# Denis Pershin <dyp@perchine.com>, 1998.
+# Hermann Zheboldov <Hermann.Zheboldov@shq.ru>, 2000.
+# Leonid Kanter <leon@asplinux.ru>, 2004, 2005.
+# Nick Shaforostoff <shafff@ukr.net>, 2005, 2006.
+# Gregory Mokhin <mok@kde.ru>, 2005.
+# Andrey Cherepanov <skull@kde.ru>, 2009.
+# Alexander Potashev <aspotashev@gmail.com>, 2010, 2011, 2015, 2016, 2018, 2019.
+# Yuri Efremov <yur.arh@gmail.com>, 2010, 2011, 2012, 2013.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminput\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:50+0000\n"
+"PO-Revision-Date: 2022-05-03 22:40+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.08.3\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current cursor theme"
+msgstr "Название текущего набора курсоров"
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr "Текущий размер курсора"
+
+#: kcmcursortheme.cpp:302
+#, kde-format
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr ""
+"Чтобы изменения вступили в силу, необходимо перезапустить сеанс Plasma."
+
+#: kcmcursortheme.cpp:376
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Не удалось создать временный файл."
+
+# BUGME: it's mouse cursor theme, not icon theme --aspotashev
+#: kcmcursortheme.cpp:387
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Не удалось загрузить с сервера архив с набором курсоров: %1"
+
+# BUGME: it's mouse cursor theme, not icon theme --aspotashev
+#: kcmcursortheme.cpp:418
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "Выбранный файл не является архивом темы курсоров."
+
+# BUGME: folder -> directory? --aspotashev
+# BUGME: 'cursors'? --ayavorsky 20200901
+#: kcmcursortheme.cpp:425
+#, kde-format
+msgid "Failed to create 'icons' folder."
+msgstr "Не удалось создать папку «icons»."
+
+# BUGME: it's mouse cursor theme, not icon theme --ayavorsky 2020091
+#: kcmcursortheme.cpp:434
+#, kde-format
+msgid ""
+"A theme named %1 already exists in your icon theme folder. Do you want "
+"replace it with this one?"
+msgstr ""
+"Набор с именем «%1» уже существует в папке наборов курсоров. Заменить новым "
+"набором?"
+
+#: kcmcursortheme.cpp:438
+#, kde-format
+msgid "Overwrite Theme?"
+msgstr "Заменить набор?"
+
+#: kcmcursortheme.cpp:462
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "Набор курсоров мыши успешно установлен."
+
+#: package/contents/ui/Delegate.qml:54
+#, kde-format
+msgid "Remove Theme"
+msgstr "Удалить набор"
+
+#: package/contents/ui/Delegate.qml:61
+#, kde-format
+msgid "Restore Cursor Theme"
+msgstr "Восстановить набор курсоров мыши"
+
+#: package/contents/ui/main.qml:20
+#, kde-format
+msgid "This module lets you choose the mouse cursor theme."
+msgstr "Этот модуль позволяет выбрать тему курсоров мыши."
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Size:"
+msgstr "Размер:"
+
+#: package/contents/ui/main.qml:134
+#, kde-format
+msgid "&Install from File…"
+msgstr "&Установить из файла..."
+
+#: package/contents/ui/main.qml:140
+#, kde-format
+msgid "&Get New Cursors…"
+msgstr "З&агрузить наборы курсоров..."
+
+#: package/contents/ui/main.qml:157
+#, kde-format
+msgid "Open Theme"
+msgstr "Открытие набора"
+
+#: package/contents/ui/main.qml:159
+#, kde-format
+msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+msgstr "Наборы курсоров мыши (*.tar.gz *.tar.bz2)"
+
+#: plasma-apply-cursortheme.cpp:41
+#, kde-format
+msgid "The requested size '%1' is not available, using %2 instead."
+msgstr ""
+"Указанный размер курсоров (%1) недоступен, будет использоваться размер %2."
+
+#: plasma-apply-cursortheme.cpp:62
+#, kde-format
+msgid ""
+"This tool allows you to set the mouse cursor theme for the current Plasma "
+"session, without accidentally setting it to one that is either not "
+"available, or which is already set."
+msgstr ""
+"Это приложение позволяет задать используемый набор курсоров, не позволяя "
+"выбрать отсутствующий или уже используемый набор."
+
+#: plasma-apply-cursortheme.cpp:66
+#, kde-format
+msgid ""
+"The name of the cursor theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+"Название набора курсоров для использования в Plasma (при передаче полного "
+"пути в качестве параметра, будет использована только его завершающая часть)"
+
+#: plasma-apply-cursortheme.cpp:67
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+"Просмотр используемого набора курсоров и списка доступных наборов курсоров"
+
+#: plasma-apply-cursortheme.cpp:68
+#, kde-format
+msgid "Use a specific size, rather than the theme default size"
+msgstr "Использовать указанный размер вместо определённого в наборе"
+
+#: plasma-apply-cursortheme.cpp:89
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr "Набор курсоров «%1» уже используется в Plasma."
+
+#: plasma-apply-cursortheme.cpp:100
+#, kde-format
+msgid ""
+"Successfully applied the mouse cursor theme %1 to your current Plasma session"
+msgstr "Набор курсоров %1 успешно задан для использования в Plasma"
+
+#: plasma-apply-cursortheme.cpp:102
+#, kde-format
+msgid ""
+"You have to restart the Plasma session for your newly applied mouse cursor "
+"theme to display correctly."
+msgstr ""
+"Чтобы выбранные курсоры отображались верно, необходимо перезапустить сеанс "
+"Plasma."
+
+#: plasma-apply-cursortheme.cpp:112
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+"Не удалось найти набор «%1». Необходимо указать один из следующих наборов: %2"
+
+#: plasma-apply-cursortheme.cpp:120
+#, kde-format
+msgid "You have the following mouse cursor themes on your system:"
+msgstr "В системе установлены следующие наборы курсоров:"
+
+#: plasma-apply-cursortheme.cpp:125
+#, kde-format
+msgid "(Current theme for this Plasma session)"
+msgstr "(Текущий набор для этого сеанса работы в Plasma)"
+
+#: xcursor/xcursortheme.cpp:60
+#, kde-format
+msgctxt ""
+"@info The argument is the list of available sizes (in pixel). Example: "
+"'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+msgid "(Available sizes: %1)"
+msgstr "(доступные размеры: %1)"
+
+#~ msgid "Name"
+#~ msgstr "Имя"
+
+#~ msgid "Description"
+#~ msgstr "Описание"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Denis Pershin, Hermann Zheboldov, Leonid Kanter, Александр Яворский"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "dyp@perchine.com, Hermann.Zheboldov@shq.ru, leon@asplinux.ru, "
+#~ "kekcuha@gmail.com"
+
+# BUGME: please split window title and download new button's caption ---ayavorsky 20190120
+#~ msgid "Cursors"
+#~ msgstr "Наборы курсоров мыши"
+
+#~ msgid "(c) 2003-2007 Fredrik Höglund"
+#~ msgstr "© Fredrik Höglund, 2003-2007"
+
+#~ msgid "Fredrik Höglund"
+#~ msgstr "Fredrik Höglund"
+
+#~ msgid "Marco Martin"
+#~ msgstr "Marco Martin"
+
+#~ msgid ""
+#~ "<qt>You cannot delete the theme you are currently using.<br />You have to "
+#~ "switch to another theme first.</qt>"
+#~ msgstr ""
+#~ "<qt>Вы не можете удалить эту тему, потому что она сейчас используется."
+#~ "<br />Сначала необходимо переключиться на другую тему.</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <i>%1</i> cursor theme?<br />This "
+#~ "will delete all the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>Вы действительно хотите удалить тему курсоров<i>%1</i>? <br />Все "
+#~ "файлы, установленные этой темой, будут удалены.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Подтверждение"
+
+#~ msgctxt "@item:inlistbox size"
+#~ msgid "Resolution dependent"
+#~ msgstr "В зависимости от разрешения"
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "Параметры курсора изменены"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "Перетащите или введите ссылку (URL) к теме"
+
+#~ msgid ""
+#~ "Unable to download the cursor theme archive; please check that the "
+#~ "address %1 is correct."
+#~ msgstr ""
+#~ "Не удаётся загрузить архив темы курсоров, Убедитесь, что адрес %1 верен."
+
+#~ msgid "Get new color schemes from the Internet"
+#~ msgstr "Загрузить новые цветовые схемы из Интернета"
+
+#~ msgid ""
+#~ "Select the cursor theme you want to use (hover preview to test cursor):"
+#~ msgstr ""
+#~ "Выберите тему курсоров, которую вы хотите использовать (наведите на "
+#~ "образец для тестирования)"
+
+#~ msgid "Select the cursor theme you want to use:"
+#~ msgstr "Выберите желаемую тему курсоров:"
+
+#~ msgid "Small black"
+#~ msgstr "Маленькие чёрные"
+
+#~ msgid "Small black cursors"
+#~ msgstr "Маленькие чёрные курсоры"
+
+#~ msgid "Large black"
+#~ msgstr "Большие чёрные"
+
+#~ msgid "Large black cursors"
+#~ msgstr "Большие чёрные курсоры"
+
+#~ msgid "Small white"
+#~ msgstr "Маленькие белые"
+
+#~ msgid "Small white cursors"
+#~ msgstr "Маленькие белые курсоры"
+
+#~ msgid "Large white"
+#~ msgstr "Большие белые"
+
+#~ msgid "Large white cursors"
+#~ msgstr "Большие белые курсоры"
+
+#~ msgid "Button Order"
+#~ msgstr "Порядок кнопок"
+
+#~ msgid "Righ&t handed"
+#~ msgstr "Для &правшей"
+
+#~ msgid "Le&ft handed"
+#~ msgstr "Для &левшей"
+
+#~ msgid ""
+#~ "Change the direction of scrolling for the mouse wheel or the 4th and 5th "
+#~ "mouse buttons."
+#~ msgstr ""
+#~ "Изменить направление прокрутки при помощи колеса мыши или 4-й и 5-й "
+#~ "кнопок."
+
+#~ msgid "Re&verse scroll direction"
+#~ msgstr "Изменить напра&вление прокрутки"
+
+#~ msgid "Icons"
+#~ msgstr "Значки"
+
+#~ msgid ""
+#~ "Dou&ble-click to open files and folders (select icons on first click)"
+#~ msgstr ""
+#~ "&Двойной щелчок для открытия файлов и каталогов (первый щелчок для "
+#~ "выделения)"
+
+#~ msgid "&Single-click to open files and folders"
+#~ msgstr "&Одинарный щелчок для открытия файлов и каталогов"
+
+#~ msgid "Cha&nge pointer shape over icons"
+#~ msgstr "&Менять вид курсора при наведении на значок"
+
+#~ msgid "A&utomatically select icons"
+#~ msgstr "&Автоматически выделять значки"
+
+#~ msgctxt "label. delay (on milliseconds) to automatically select icons"
+#~ msgid "Delay"
+#~ msgstr "Задержка:"
+
+#~ msgctxt "milliseconds. time to automatically select the items"
+#~ msgid " ms"
+#~ msgstr " мс"
+
+#~ msgid "Mouse type: %1"
+#~ msgstr "Тип мыши: %1"
+
+#~ msgid ""
+#~ "RF channel 1 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "Установлен радиочастотный канал 1. Нажмите кнопку Connect на мыши, чтобы "
+#~ "установить связь повторно"
+
+#~ msgid "Press Connect Button"
+#~ msgstr "Нажмите кнопку Connect"
+
+#~ msgid ""
+#~ "RF channel 2 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "Установлен радиочастотный канал 2. Нажмите кнопку Connect на мыши, чтобы "
+#~ "установить связь повторно"
+
+#~ msgctxt "no cordless mouse"
+#~ msgid "none"
+#~ msgstr "нет"
+
+#~ msgid "Cordless Mouse"
+#~ msgstr "Беспроводная мышь"
+
+#~ msgid "Cordless Wheel Mouse"
+#~ msgstr "Беспроводная мышь с колесом"
+
+#~ msgid "Cordless MouseMan Wheel"
+#~ msgstr "Беспроводная мышь MouseMan Wheel"
+
+#~ msgid "Cordless TrackMan Wheel"
+#~ msgstr "Беспроводная мышь TrackMan"
+
+#~ msgid "TrackMan Live"
+#~ msgstr "TrackMan Live"
+
+#~ msgid "Cordless TrackMan FX"
+#~ msgstr "Беспроводный TrackMan FX"
+
+#~ msgid "Cordless MouseMan Optical"
+#~ msgstr "Беспроводная оптическая MouseMan"
+
+#~ msgid "Cordless Optical Mouse"
+#~ msgstr "Беспроводная оптическая мышь"
+
+#~ msgid "Cordless MouseMan Optical (2ch)"
+#~ msgstr "Беспроводная оптическая мышь MouseMan (2 канала)"
+
+#~ msgid "Cordless Optical Mouse (2ch)"
+#~ msgstr "Беспроводная оптическая мышь (2 канала)"
+
+#~ msgid "Cordless Mouse (2ch)"
+#~ msgstr "Беспроводная мышь (2 канала)"
+
+#~ msgid "Cordless Optical TrackMan"
+#~ msgstr "Беспроводный оптический TrackMan"
+
+#~ msgid "MX700 Cordless Optical Mouse"
+#~ msgstr "Беспроводная оптическая мышь MX700"
+
+#~ msgid "MX700 Cordless Optical Mouse (2ch)"
+#~ msgstr "Беспроводная оптическая мышь MX700 (2 канала)"
+
+#~ msgid "Unknown mouse"
+#~ msgstr "Неизвестная мышь"
+
+#~ msgid "Cordless Name"
+#~ msgstr "Беспроводное имя"
+
+#~ msgid "Sensor Resolution"
+#~ msgstr "Разрешение сенсора"
+
+#~ msgid "400 counts per inch"
+#~ msgstr "400 точек на дюйм"
+
+#~ msgid "800 counts per inch"
+#~ msgstr "800 точек на дюйм"
+
+#~ msgid "Battery Level"
+#~ msgstr "Уровень батареи"
+
+#~ msgid "RF Channel"
+#~ msgstr "Радиоканал"
+
+#~ msgid "Channel 1"
+#~ msgstr "Канал 1"
+
+#~ msgid "Channel 2"
+#~ msgstr "Канал 2"
+
+#~ msgid ""
+#~ "You have a Logitech Mouse connected, and libusb was found at compile "
+#~ "time, but it was not possible to access this mouse. This is probably "
+#~ "caused by a permissions problem - you should consult the manual on how to "
+#~ "fix this."
+#~ msgstr ""
+#~ "У вас подключена мышь Logitech Mouse, и при компиляции найдена библиотека "
+#~ "libusb, но получить доступ к мыши невозможно. Вероятно, это вызвано "
+#~ "проблемой с правами - обратитесь к руководству, чтобы исправить их"
+
+#~ msgid ""
+#~ "<h1>Mouse</h1> This module allows you to choose various options for the "
+#~ "way in which your pointing device works. Your pointing device may be a "
+#~ "mouse, trackball, or some other hardware that performs a similar function."
+#~ msgstr ""
+#~ "<h1>Мышь</h1>В этом модуле вы можете задать различные параметры для "
+#~ "вашего указательного устройства. Им может быть мышь, трекбол или какое-"
+#~ "либо другое устройство, выполняющее аналогичные функции."
+
+#~ msgid "&General"
+#~ msgstr "О&бщие"
+
+#~ msgid ""
+#~ "If you are left-handed, you may prefer to swap the functions of the left "
+#~ "and right buttons on your pointing device by choosing the 'left-handed' "
+#~ "option. If your pointing device has more than two buttons, only those "
+#~ "that function as the left and right buttons are affected. For example, if "
+#~ "you have a three-button mouse, the middle button is unaffected."
+#~ msgstr ""
+#~ "Если вы левша, то для удобства можете поменять местами левую и правую "
+#~ "кнопки вашей мыши или трекбола путём выбора режима для левшей. Если ваше "
+#~ "устройство имеет более двух кнопок, то этот параметр влияет только на "
+#~ "правую и левую из них. Так, в случае трёхкнопочной мыши средняя кнопка "
+#~ "остаётся нетронутой."
+
+#~ msgid ""
+#~ "The default behavior in KDE is to select and activate icons with a single "
+#~ "click of the left button on your pointing device. This behavior is "
+#~ "consistent with what you would expect when you click links in most web "
+#~ "browsers. If you would prefer to select with a single click, and activate "
+#~ "with a double click, check this option."
+#~ msgstr ""
+#~ "По умолчанию в KDE выбор и активация значков осуществляется простым "
+#~ "одиночным щелчком левой кнопки мыши. Тоже самое происходит, когда вы "
+#~ "нажимаете на ссылку в большинстве веб-браузеров. Чтобы выбирать значок "
+#~ "одиночным щелчком, а активировать — двойным, включите данный параметр."
+
+#~ msgid "Activates and opens a file or folder with a single click."
+#~ msgstr "Активировать и открыть файл или каталог одним щелчком мыши."
+
+#~ msgid ""
+#~ "If you check this option, pausing the mouse pointer over an icon on the "
+#~ "screen will automatically select that icon. This may be useful when "
+#~ "single clicks activate icons, and you want only to select the icon "
+#~ "without activating it."
+#~ msgstr ""
+#~ "Если включён этот параметр, то наведение указателя мыши на значок "
+#~ "вызывает автоматическое его подсвечивание. Это удобно в том случае, если "
+#~ "одиночный щелчок активирует приложение, а вы хотите просто выбрать "
+#~ "значок, не запуская приложение."
+
+#~ msgid ""
+#~ "If you have checked the option to automatically select icons, this slider "
+#~ "allows you to select how long the mouse pointer must be paused over the "
+#~ "icon before it is selected."
+#~ msgstr ""
+#~ "При включённой опции автоматической подсветки значков этот движок "
+#~ "позволяет выбрать, как долго указатель должен находиться над значком, "
+#~ "чтобы он стал выбранным."
+
+#~ msgid "Advanced"
+#~ msgstr "Дополнительно"
+
+#~ msgid " x"
+#~ msgstr " x"
+
+#~ msgid "Pointer acceleration:"
+#~ msgstr "Ускорение курсора:"
+
+#~ msgid ""
+#~ "<p>This option allows you to change the relationship between the distance "
+#~ "that the mouse pointer moves on the screen and the relative movement of "
+#~ "the physical device itself (which may be a mouse, trackball, or some "
+#~ "other pointing device.)</p><p> A high value for the acceleration will "
+#~ "lead to large movements of the mouse pointer on the screen even when you "
+#~ "only make a small movement with the physical device. Selecting very high "
+#~ "values may result in the mouse pointer flying across the screen, making "
+#~ "it hard to control.</p>"
+#~ msgstr ""
+#~ "<p>Эта опция позволяет изменить соотношение между расстоянием, которое "
+#~ "пробегает курсор мыши на экране, и движением самого устройства (мышь, "
+#~ "трекбол или какое-либо другое устройство указания).</p><p> Более высокое "
+#~ "значение ускорения приводит к значительному перемещению курсора мыши даже "
+#~ "при небольшом движении физического устройства. Выбор высокого значения "
+#~ "ускорения может привести к трудностям в работе с устройством, когда "
+#~ "указатель мыши будет просто летать по экрану и управлять ею будет сложно."
+#~ "</p>"
+
+#~ msgid "Pointer threshold:"
+#~ msgstr "Порог ускорения курсора:"
+
+#~ msgid ""
+#~ "<p>The threshold is the smallest distance that the mouse pointer must "
+#~ "move on the screen before acceleration has any effect. If the movement is "
+#~ "smaller than the threshold, the mouse pointer moves as if the "
+#~ "acceleration was set to 1X;</p><p> thus, when you make small movements "
+#~ "with the physical device, there is no acceleration at all, giving you a "
+#~ "greater degree of control over the mouse pointer. With larger movements "
+#~ "of the physical device, you can move the mouse pointer rapidly to "
+#~ "different areas on the screen.</p>"
+#~ msgstr ""
+#~ "<p>Порог — это наименьшее расстояние, на которое должен сместиться "
+#~ "указатель мыши, прежде чем включится ускорение. Пока перемещение меньше "
+#~ "заданной величины порога, курсор будет двигаться так, как если бы "
+#~ "ускорение имело значение 1X.</p><p> Таким образом, перемещая физическое "
+#~ "устройство на небольшие расстояния, вы не используете ускорение, так "
+#~ "легче управлять указателем мыши. В то же время большим перемещением "
+#~ "физического устройства вы можете быстро переместить курсор в нужную "
+#~ "область экрана.</p>"
+
+#~ msgid " msec"
+#~ msgstr " мс"
+
+#~ msgid "Double click interval:"
+#~ msgstr "Интервал двойного щелчка:"
+
+#~ msgid ""
+#~ "The double click interval is the maximal time (in milliseconds) between "
+#~ "two mouse clicks which turns them into a double click. If the second "
+#~ "click happens later than this time interval after the first click, they "
+#~ "are recognized as two separate clicks."
+#~ msgstr ""
+#~ "Интервал двойного щелчка — это максимальное время (в миллисекундах) между "
+#~ "двумя нажатиями кнопки мыши, которые будут интерпретироваться как двойной "
+#~ "щелчок. Если второй щелчок произошёл позже заданного интервала, то щелчки "
+#~ "будут считаться двумя одиночными."
+
+#~ msgid "Drag start time:"
+#~ msgstr "Время начала перетаскивания:"
+
+#~ msgid ""
+#~ "If you click with the mouse (e.g. in a multi-line editor) and begin to "
+#~ "move the mouse within the drag start time, a drag operation will be "
+#~ "initiated."
+#~ msgstr ""
+#~ "Если вы нажмёте кнопку мыши (например, в текстовом редакторе) и начнёте "
+#~ "перемещать мышь не позже времени, заданного в этой настройке, будет "
+#~ "выполнена операция перетаскивания."
+
+#~ msgid "Drag start distance:"
+#~ msgstr "Расстояние начала перетаскивания:"
+
+#~ msgid ""
+#~ "If you click with the mouse and begin to move the mouse at least the drag "
+#~ "start distance, a drag operation will be initiated."
+#~ msgstr ""
+#~ "Если вы нажмёте кнопку мыши и переместите её как минимум на расстояние "
+#~ "начала перетаскивания, то будет выполнена операция перетаскивания."
+
+#~ msgid "Mouse wheel scrolls by:"
+#~ msgstr "Колесо мыши прокручивает:"
+
+#~ msgid ""
+#~ "If you use the wheel of a mouse, this value determines the number of "
+#~ "lines to scroll for each wheel movement. Note that if this number exceeds "
+#~ "the number of visible lines, it will be ignored and the wheel movement "
+#~ "will be handled as a page up/down movement."
+#~ msgstr ""
+#~ "Это значение задаёт, сколько строк будет прокручиваться при использовании "
+#~ "колёсика мыши. Если заданное число превосходит количество видимых строк, "
+#~ "движение колёсика будет обрабатываться просто как команда вверх/вниз на "
+#~ "страницу."
+
+#~ msgid "Mouse Navigation"
+#~ msgstr "Управление курсором мыши с клавиатуры"
+
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr ""
+#~ "Курсор мыши передвигается с &клавиатуры (дополнительными цифровыми "
+#~ "клавишами)"
+
+#~ msgid "&Acceleration delay:"
+#~ msgstr "Задержка перед &ускорением:"
+
+#~ msgid "R&epeat interval:"
+#~ msgstr "Интервал &повтора:"
+
+#~ msgid "Acceleration &time:"
+#~ msgstr "Время &ускорения курсора:"
+
+#~ msgid " pixel/sec"
+#~ msgstr " пикселов/с"
+
+#~ msgid "Ma&ximum speed:"
+#~ msgstr "&Максимальная скорость:"
+
+#~ msgid "Acceleration &profile:"
+#~ msgstr "Режим у&скорения:"
+
+#~ msgid "Mouse"
+#~ msgstr "Мышь"
+
+#~ msgid "(c) 1997 - 2005 Mouse developers"
+#~ msgstr "© Разработчики модуля настройки мыши, 1997-2005"
+
+#~ msgid "Patrick Dowler"
+#~ msgstr "Patrick Dowler"
+
+#~ msgid "Dirk A. Mueller"
+#~ msgstr "Dirk A. Mueller"
+
+#~ msgid "David Faure"
+#~ msgstr "David Faure"
+
+#~ msgid "Bernd Gehrmann"
+#~ msgstr "Bernd Gehrmann"
+
+#~ msgid "Rik Hemsley"
+#~ msgstr "Rik Hemsley"
+
+#~ msgid "Brad Hughes"
+#~ msgstr "Brad Hughes"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "Brad Hards"
+#~ msgstr "Brad Hards"
+
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] " пиксел"
+#~ msgstr[1] " пиксела"
+#~ msgstr[2] " пикселов"
+#~ msgstr[3] " пиксел"
+
+#~ msgid " line"
+#~ msgid_plural " lines"
+#~ msgstr[0] " строка"
+#~ msgstr[1] " строки"
+#~ msgstr[2] " строк"
+#~ msgstr[3] " строка"
+
+#~ msgid "KDE Classic"
+#~ msgstr "KDE Classic"
+
+#~ msgid "The default cursor theme in KDE 2 and 3"
+#~ msgstr "Основная тема курсоров в KDE 2 и 3"
+
+#~ msgid "No description available"
+#~ msgstr "Описание недоступно"
+
+#~ msgid "Short"
+#~ msgstr "кратко"
+
+#~ msgid "Long"
+#~ msgstr "с подробностями"
+
+#~ msgid ""
+#~ "_: NAME OF TRANSLATORS\n"
+#~ "Your names"
+#~ msgstr "Denis Pershin, Hermann Zheboldov, Leonid Kanter"
+
+#~ msgid ""
+#~ "_: EMAIL OF TRANSLATORS\n"
+#~ "Your emails"
+#~ msgstr "<dyp@perchine.com>, <Hermann.Zheboldov@shq.ru>, <leon@asplinux.ru>"
+
+#~ msgid "Show feedback when clicking an icon"
+#~ msgstr ""
+#~ "При включении этой опции щелчок на значке сопровождается визуальным "
+#~ "эффектом"
+
+#~ msgid ""
+#~ "_n:  pixel\n"
+#~ " pixels"
+#~ msgstr ""
+#~ " пиксел\n"
+#~ " пиксела\n"
+#~ " пикселов"
+
+#~ msgid ""
+#~ "_n:  line\n"
+#~ " lines"
+#~ msgstr ""
+#~ " строка\n"
+#~ " строки\n"
+#~ " строк"
+
+#~ msgid "Visual f&eedback on activation"
+#~ msgstr "&Визуальный эффект при активации"
+
+#~ msgid "No theme"
+#~ msgstr "Нет темы"
+
+#~ msgid "The old classic X cursors"
+#~ msgstr "Старые классические курсоры X"
+
+#~ msgid "System theme"
+#~ msgstr "Системная тема"

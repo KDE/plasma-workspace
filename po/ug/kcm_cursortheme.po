@@ -1,0 +1,470 @@
+# Uyghur translation for kcminput.
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Sahran <sahran.ug@gmail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminput\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:50+0000\n"
+"PO-Revision-Date: 2013-09-08 07:05+0900\n"
+"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
+"Language: ug\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current cursor theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr ""
+
+#: kcmcursortheme.cpp:302
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr ""
+"بۇ ئۆزگىرىشلەرنىڭ كۈچكە ئىگە قىلماقچى بولسىڭىز KDE نى قايتا قوزغىتىشىڭىز "
+"كېرەك."
+
+#: kcmcursortheme.cpp:376
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: kcmcursortheme.cpp:387
+#, fuzzy, kde-format
+#| msgid "Unable to find the cursor theme archive %1."
+msgid "Unable to download the icon theme archive: %1"
+msgstr "نۇربەلگە ئۆرنەك ئارخىپى %1 تېپىلمىدى."
+
+#: kcmcursortheme.cpp:418
+#, fuzzy, kde-format
+#| msgid "The file %1 does not appear to be a valid cursor theme archive."
+msgid "The file is not a valid icon theme archive."
+msgstr "«%1» ئىناۋەتلىك نۇربەلگە ئۆرنەك  ئارخىپى ئەمەستەك تۇرىدۇ."
+
+#: kcmcursortheme.cpp:425
+#, kde-format
+msgid "Failed to create 'icons' folder."
+msgstr ""
+
+#: kcmcursortheme.cpp:434
+#, kde-format
+msgid ""
+"A theme named %1 already exists in your icon theme folder. Do you want "
+"replace it with this one?"
+msgstr "سىنبەلگە  ئۆرنەك قىسقۇچىدا %1 ئاتلىق ئۆرنەك مەۋجۇت. ئالماشتۇرامسىز؟"
+
+#: kcmcursortheme.cpp:438
+#, kde-format
+msgid "Overwrite Theme?"
+msgstr "ئۆرنەكنى قاپلامسىز؟"
+
+#: kcmcursortheme.cpp:462
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: package/contents/ui/Delegate.qml:54
+#, kde-format
+msgid "Remove Theme"
+msgstr "ئۆرنەكنى چىقىرىۋەت"
+
+#: package/contents/ui/Delegate.qml:61
+#, fuzzy, kde-format
+#| msgid "Cursor Theme"
+msgid "Restore Cursor Theme"
+msgstr "نۇربەلگە ئۆرنىكى"
+
+#: package/contents/ui/main.qml:20
+#, kde-format
+msgid "This module lets you choose the mouse cursor theme."
+msgstr ""
+
+#: package/contents/ui/main.qml:84
+#, fuzzy, kde-format
+#| msgctxt "@label:listbox cursor size"
+#| msgid "Size:"
+msgid "Size:"
+msgstr "چوڭلۇقى:"
+
+#: package/contents/ui/main.qml:134
+#, fuzzy, kde-format
+#| msgid "Install From File..."
+msgid "&Install from File…"
+msgstr "ھۆججەتتىن ئورنىتىش…"
+
+#: package/contents/ui/main.qml:140
+#, fuzzy, kde-format
+#| msgid "Get New Theme..."
+msgid "&Get New Cursors…"
+msgstr "يېڭى ئۆرنەك ئېلىش…"
+
+#: package/contents/ui/main.qml:157
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Open Theme"
+msgstr "ئۆرنەكنى چىقىرىۋەت"
+
+#: package/contents/ui/main.qml:159
+#, kde-format
+msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:41
+#, kde-format
+msgid "The requested size '%1' is not available, using %2 instead."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:62
+#, kde-format
+msgid ""
+"This tool allows you to set the mouse cursor theme for the current Plasma "
+"session, without accidentally setting it to one that is either not "
+"available, or which is already set."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:66
+#, kde-format
+msgid ""
+"The name of the cursor theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:67
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:68
+#, kde-format
+msgid "Use a specific size, rather than the theme default size"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:89
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:100
+#, kde-format
+msgid ""
+"Successfully applied the mouse cursor theme %1 to your current Plasma session"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:102
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for your newly applied mouse cursor "
+"theme to display correctly."
+msgstr ""
+"بۇ ئۆزگىرىشلەرنىڭ كۈچكە ئىگە قىلماقچى بولسىڭىز KDE نى قايتا قوزغىتىشىڭىز "
+"كېرەك."
+
+#: plasma-apply-cursortheme.cpp:112
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:120
+#, kde-format
+msgid "You have the following mouse cursor themes on your system:"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:125
+#, kde-format
+msgid "(Current theme for this Plasma session)"
+msgstr ""
+
+#: xcursor/xcursortheme.cpp:60
+#, kde-format
+msgctxt ""
+"@info The argument is the list of available sizes (in pixel). Example: "
+"'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+msgid "(Available sizes: %1)"
+msgstr ""
+
+#~ msgid "Name"
+#~ msgstr "ئاتى"
+
+#~ msgid "Description"
+#~ msgstr "چۈشەندۈرۈش"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "ئابدۇقادىر ئابلىز, غەيرەت كەنجى"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "sahran.ug@gmail.com,  gheyret@gmail.com"
+
+#, fuzzy
+#~| msgid "Cursor Theme"
+#~ msgid "Cursors"
+#~ msgstr "نۇربەلگە ئۆرنىكى"
+
+#~ msgid "(c) 2003-2007 Fredrik Höglund"
+#~ msgstr "(c) 2003-2007 Fredrik Höglund"
+
+#~ msgid "Fredrik Höglund"
+#~ msgstr "Fredrik Höglund"
+
+#~ msgid ""
+#~ "<qt>You cannot delete the theme you are currently using.<br />You have to "
+#~ "switch to another theme first.</qt>"
+#~ msgstr ""
+#~ "<qt>نۆۋەتتە ئىشلىتىۋاتقان ئۆرنەكنى ئۆچۈرگىلى بولمايدۇ.<br />ئالدى بىلەن "
+#~ "باشقا بىر ئۆرنەككە ئالمىشىشىڭىز كېرەك.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "جەزملەش"
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "نۇربەلگە تەڭشىكى ئۆزگەردى"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "ئۆرنەك تور ئادرېسى(URL)نى سۆرەپ كېلىڭ ياكى كىرگۈزۈڭ"
+
+#~ msgid ""
+#~ "Unable to download the cursor theme archive; please check that the "
+#~ "address %1 is correct."
+#~ msgstr ""
+#~ "نۇربەلگە ئۆرنەك ئارخىپىنى چۈشۈرگىلى بولمىدى؛ ئادرېس %1 توغرىمۇ تەكشۈرۈڭ."
+
+#~ msgid "Get new color schemes from the Internet"
+#~ msgstr "ئىنتېرنېتتىن يېڭى رەڭ لايىھىسىنى ئېلىش"
+
+#~ msgid ""
+#~ "Select the cursor theme you want to use (hover preview to test cursor):"
+#~ msgstr ""
+#~ "ئىشلەتمەكچى بولغان نۇربەلگە ئۆرنىكىنى تاللاڭ(hover preview to test "
+#~ "cursor):"
+
+#~ msgid "Select the cursor theme you want to use:"
+#~ msgstr "ئىشلەتمەكچى بولغان نۇربەلگە ئۆرنىكىنى تاللاڭ:"
+
+#~ msgid "Button Order"
+#~ msgstr "توپچا تەرىپى"
+
+#~ msgid "Righ&t handed"
+#~ msgstr "ئوڭخاي(&T)"
+
+#~ msgid "Le&ft handed"
+#~ msgstr "سولخاي(&F)"
+
+#~ msgid "Icons"
+#~ msgstr "سىنبەلگىلەر"
+
+#~ msgid ""
+#~ "Dou&ble-click to open files and folders (select icons on first click)"
+#~ msgstr ""
+#~ "ھۆججەت ۋە قىسقۇچلارنى ئېچىش ئۈچۈن قوش چەك(بىرىنچى چېكىلىشتە سىنبەلگىنى "
+#~ "تاللايدۇ)"
+
+#~ msgid "&Single-click to open files and folders"
+#~ msgstr "قىسقۇچ ۋە ھۆججەتلەرنى ئېچىش ئۈچۈن تاق چېكىڭ(&S)"
+
+#~ msgid "Cha&nge pointer shape over icons"
+#~ msgstr "سىنبەلگە ئۈستىگە كەلگەندە نۇرنەلگىسىنى ئۆزگەرت(&N)"
+
+#~ msgid "A&utomatically select icons"
+#~ msgstr "سىنبەلگىلەرنى ئاپتوماتىك تاللا(&U)"
+
+#~ msgctxt "label. delay (on milliseconds) to automatically select icons"
+#~ msgid "Delay"
+#~ msgstr "كېچىكتۈر"
+
+#~ msgctxt "milliseconds. time to automatically select the items"
+#~ msgid " ms"
+#~ msgstr " ms"
+
+#~ msgid "&General"
+#~ msgstr "ئادەتتىكى(&G)"
+
+#~ msgid "Advanced"
+#~ msgstr "ئالىي"
+
+#~ msgid " x"
+#~ msgstr " x"
+
+#~ msgid "Pointer acceleration:"
+#~ msgstr "نۇربەلگە تېزلىتىش:"
+
+#~ msgid "Pointer threshold:"
+#~ msgstr "نۇربەلگە بوسۇغا قىممەت:"
+
+#~ msgid " msec"
+#~ msgstr " مىللىسېكۇنت"
+
+#~ msgid "Double click interval:"
+#~ msgstr "قوش چېكىش ئىنتېرۋالى"
+
+#~ msgid "Drag start time:"
+#~ msgstr "سۆرەشنىڭ باشلىنىش ۋاقتى"
+
+#~ msgid "Drag start distance:"
+#~ msgstr "سۆرەشنىڭ باشلىنىش ئارىلىقى"
+
+#~ msgid "Mouse Navigation"
+#~ msgstr "چاشقىنەك يولباشچىسى"
+
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "چاشقىنەكنى ھەرپتاختا بىلەن يۆتكە(رەقەم رايونىنى ئىشلىتىپ)"
+
+#~ msgid "&Acceleration delay:"
+#~ msgstr "تېزلىتىشنىڭ كېچىكىش ۋاقتى(&A):"
+
+#~ msgid "R&epeat interval:"
+#~ msgstr "تەكرارلاش ئىنتېرۋالى(&E):"
+
+#~ msgid "Acceleration &time:"
+#~ msgstr "تېزلىتىش ۋاقتى(&T):"
+
+#~ msgid " pixel/sec"
+#~ msgstr " پىكسېل/سېكۇنت"
+
+#~ msgid "Ma&ximum speed:"
+#~ msgstr "ئەڭ يۇقىرى سۈرئىتى(&X):"
+
+#~ msgid "Mouse"
+#~ msgstr "چاشقىنەك"
+
+#~ msgid "(c) 1997 - 2005 Mouse developers"
+#~ msgstr "(c) 1997 - 2005 چاشقىنەك ئىجادىيەتچىلىرى"
+
+#~ msgid "Patrick Dowler"
+#~ msgstr "Patrick Dowler"
+
+#~ msgid "Dirk A. Mueller"
+#~ msgstr "Dirk A. Mueller"
+
+#~ msgid "David Faure"
+#~ msgstr "David Faure"
+
+#~ msgid "Bernd Gehrmann"
+#~ msgstr "Bernd Gehrmann"
+
+#~ msgid "Rik Hemsley"
+#~ msgstr "Rik Hemsley"
+
+#~ msgid "Brad Hughes"
+#~ msgstr "Brad Hughes"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "Brad Hards"
+#~ msgstr "Brad Hards"
+
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] " چېكىت"
+
+#~ msgid " line"
+#~ msgid_plural " lines"
+#~ msgstr[0] " سىزىقلار"
+
+#~ msgid "Mouse type: %1"
+#~ msgstr "چاشقىنەك تىپى: %1"
+
+#~ msgid ""
+#~ "RF channel 1 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "بىرىنچى نومۇرلۇق RF قانىلى بېكىتىلدى. «باغلاش» توپچىسى بېسىلسا قايتا "
+#~ "ئۇلىنىدۇ"
+
+#~ msgid "Press Connect Button"
+#~ msgstr "باغلاش توپچىسىنى چېكىڭ"
+
+#~ msgid ""
+#~ "RF channel 2 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "ئىككىنچى نومۇرلۇق RF قانىلى بېكىتىلدى. «باغلاش» توپچىسى بېسىلسا قايتا "
+#~ "ئۇلىنىدۇ"
+
+#~ msgctxt "no cordless mouse"
+#~ msgid "none"
+#~ msgstr "يوق"
+
+#~ msgid "Cordless Mouse"
+#~ msgstr "سىمسىز چاشقىنەك"
+
+#~ msgid "Cordless Wheel Mouse"
+#~ msgstr "سىمسىز غالتەكلىك چاشقىنەك"
+
+#~ msgid "Cordless MouseMan Wheel"
+#~ msgstr "سىمسىز MouseMan غاكتىكى"
+
+#~ msgid "Cordless TrackMan Wheel"
+#~ msgstr "سىملىق MouseMan غاكتىكى"
+
+#~ msgid "Cordless TrackMan FX"
+#~ msgstr "سىملىق TrackMan FX"
+
+#~ msgid "Cordless Optical Mouse"
+#~ msgstr "سىمسىز ئوپتىكىلىق چاشقىنەك"
+
+#~ msgid "Cordless Optical Mouse (2ch)"
+#~ msgstr "سىمسىز ئوپتىكىلىق چاشقىنەك(2ch)"
+
+#~ msgid "Cordless Mouse (2ch)"
+#~ msgstr "سىمسىز چاشقىنەك(2ch)"
+
+#~ msgid "Cordless Optical TrackMan"
+#~ msgstr "سىمسىز ئوپتىكىلىق TrackMan"
+
+#~ msgid "MX700 Cordless Optical Mouse"
+#~ msgstr "MX700 سىمسىز ئوپتىكىلىق چاشقىنەك"
+
+#~ msgid "MX700 Cordless Optical Mouse (2ch)"
+#~ msgstr "MX700 سىمسىز ئوپتىكىلىق چاشقىنەك(2ch)"
+
+#~ msgid "Unknown mouse"
+#~ msgstr "نامەلۇم چاشقىنەك"
+
+#~ msgid "Cordless Name"
+#~ msgstr "سىمسىز ئاتى"
+
+#~ msgid "Sensor Resolution"
+#~ msgstr "سەزگۈچ"
+
+#~ msgid "Battery Level"
+#~ msgstr "توكدان دەرىجىسى"
+
+#~ msgid "RF Channel"
+#~ msgstr "RF قانىلى"
+
+#~ msgid "Channel 1"
+#~ msgstr "قانال 1"
+
+#~ msgid "Channel 2"
+#~ msgstr "قانال 2"
+
+#~ msgid "KDE Classic"
+#~ msgstr "ك د ئې(KDE) كلاسسىك"
+
+#~ msgid "The default cursor theme in KDE 2 and 3"
+#~ msgstr "KDE 2 ۋە KDE 3 تىكى كۆڭۈلدىكى نۇربەلگە ئۆرنىكى"
+
+#~ msgid "No description available"
+#~ msgstr "چۈشەندۈرۈشى يوق"

@@ -1,0 +1,47 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminit\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-26 00:47+0000\n"
+"PO-Revision-Date: 2008-04-08 01:58+0100\n"
+"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
+"Language-Team: KDE <kde-i18n-doc@kde.org>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-POFile-SpellExtra: KCMInit\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "José Nuno Pires,Pedro Morais"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "zepires@gmail.com,morais@kde.org"
+
+#: main.cpp:170
+#, kde-format
+msgid "KCMInit"
+msgstr "KCMInit"
+
+#: main.cpp:172
+#, kde-format
+msgid "KCMInit - runs startup initialization for Control Modules."
+msgstr "KCMInit - executa a inicialização de arranque dos Módulos de Controlo."
+
+#: main.cpp:178
+#, kde-format
+msgid "List modules that are run at startup"
+msgstr "Lista os módulos executados no arranque"
+
+#: main.cpp:179
+#, kde-format
+msgid "Configuration module to run"
+msgstr "Módulo de configuração a executar"
+
+#~ msgid "Module %1 not found"
+#~ msgstr "O módulo %1 não foi encontrado"

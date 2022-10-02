@@ -1,0 +1,230 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Catalan  "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="fonts" lang="&language;">
+<articleinfo>
+<title
+>Tipus de lletra</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+<date
+>9 d'abril de 2021</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>tipus de lletra</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_fonts">
+
+<title
+>Tipus de lletra</title>
+
+<para
+>Aquest mòdul està dissenyat per a permetre la fàcil selecció de diferents tipus de lletra per a les diferents parts de l'escriptori &kde;.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Aquí hi ha una captura de pantalla del mòdul d'arranjament dels tipus de lletra</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>El mòdul d'arranjament dels tipus de lletra</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>El plafó consisteix en diferents grups de tipus de lletra que us permetran una gran flexibilitat a l'hora de configurar els tipus de lletra: </para>
+
+<itemizedlist>
+<listitem
+><para
+><guilabel
+>General:</guilabel
+> Emprada en qualsevol lloc a on la resta de grups de tipus de lletra no es puguin aplicar</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Amplada fixa:</guilabel
+> Emprada sempre que no s'especifiqui la proporció del tipus de lletra</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Petita:</guilabel
+> Quan s'empri un tipus de lletra petit</para
+></listitem
+> 
+
+<listitem
+><para
+><guilabel
+>Barra d'eines:</guilabel
+> El tipus de lletra emprat en les barres d'eines de les aplicacions &kde;</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Menú:</guilabel
+> El tipus de lletra emprat en els menús de les aplicacions &kde;</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Títol de la finestra:</guilabel
+> El tipus de lletra emprat als títols de les finestres</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Barra de tasques:</guilabel
+> El tipus de lletra emprat a les miniaplicacions del plafó de la barra de tasques</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Escriptori:</guilabel
+> El tipus de lletra emprat a l'escriptori per a etiquetar les icones</para
+></listitem>
+
+</itemizedlist>
+
+<para
+>Cada tipus de lletra disposa del seu botó <guibutton
+>Tria...</guibutton
+> corresponent. Fent clic en el mateix, apareixerà un diàleg. Podreu emprar-la per a seleccionar un tipus de lletra nou, estil, mida i joc de caràcters. Després premeu <guibutton
+>D'acord</guibutton
+>.</para>
+
+<para
+>Marqueu l'opció <guilabel
+>Mostra només els tipus de lletra monoespai</guilabel
+> per a filtrar tots els tipus de lletra no monoespai de la llista.</para>
+
+<para
+>Se us mostrarà un exemple del tipus de lletra seleccionat a l'espai entre el nom del grup de tipus de lletra i el botó <guibutton
+>Tria...</guibutton
+>.</para>
+
+<para
+>Quan hàgiu finalitzat, simplement feu clic a <guibutton
+>D'acord</guibutton
+> i tots els components necessaris del &kde; seran reiniciats de manera que els canvis tinguin efecte immediat.</para>
+
+<para
+>El botó <guibutton
+>Ajusta tots els tipus de lletra...</guibutton
+> us permetrà configurar ràpidament un conjunt de propietats a tots els tipus de lletra anteriors. Apareixerà un diàleg de selecció de tipus de lletra semblant a l'estàndard, però observareu la presència de caselles de selecció que us permetran canviar independentment el <guilabel
+>Tipus de lletra</guilabel
+>, <guilabel
+>Estil dels tipus de lletra</guilabel
+> o <guilabel
+>Mida</guilabel
+>. Podreu escollir-ne una, dues o tres d'aquestes opcions i s'aplicaran a tots els grups de tipus de lletra.</para>
+
+<para
+>Marqueu l'opció <guilabel
+>Mostra només els tipus de lletra monoespai</guilabel
+> per a filtrar tots els tipus de lletra no monoespai de la llista.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Ajustant tots els tipus de lletra</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="adjust-all.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>El diàleg Ajusta tots els tipus de lletra...</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Per exemple, si a dalt heu seleccionat diferents tipus de lletra i us adoneu que tenen una mida excessivament gran (això ocorre amb freqüència, per exemple quan canvieu la resolució de la pantalla) podreu aplicar la nova mida del tipus de lletra a tots els tipus de lletra, sense que afecti els vostres tipus i estils de lletra personalitzats.</para>
+
+<sect2 id="fonts-aa">
+<title
+>Text amb antialiàsing</title>
+
+<para
+>Per a utilitzar la configuració de l'antialiàsing, senzillament marqueu l'element <guilabel
+>Activat</guilabel
+> i seleccioneu les opcions de configuració personalitzades.</para>
+
+<para
+>Marcant la casella de selecció <guilabel
+>Exclou l'interval de l'antialiàsing</guilabel
+> podreu especificar quin interval de tipus de lletra <emphasis
+>no</emphasis
+> serà suavitzat. Aquest interval s'especificarà amb els dos quadres combinats següents.</para>
+
+<para
+>També podreu escollir el mètode que s'usarà per a crear un aspecte suavitzat dels vostres tipus de lletra i amb quina força s'ha d'aplicar canviant el <ulink url="https://en.wikipedia.org/wiki/Subpixel_rendering"
+>Tipus de renderització dels subpíxels</ulink
+> i l'<ulink url="https://en.wikipedia.org/wiki/Font_hinting"
+>Estil per a la correcció de les lletres</ulink
+>. També és possible <guilabel
+>Força els ppp dels tipus de lletra</guilabel
+> per la <ulink url="https://en.wikipedia.org/wiki/Dots_per_inch"
+>representació de la pantalla</ulink
+>. Si no esteu familiaritzat amb els mètodes individuals, hauríeu de deixar aquestes opcions buides.</para>
+
+<note
+><para
+>La possibilitat d'emprar tipus de lletra i icones suavitzades requereix que hi tingueu la funcionalitat tant a X com al conjunt d'eines de les &Qt;, que hàgiu instal·lat els tipus de lletra adequats i que s'estiguin emprant les capacitats del servei de tipus de lletra integrades del servidor de visualització. Si continueu tenint problemes, si us plau, contacteu amb la llista de correu adequada del &kde;.</para
+></note>
+
+</sect2>
+
+<sect2 id="fonts-dpi">
+<title
+>DPI dels tipus de lletra</title>
+
+<para
+><guilabel
+>Força els DPI del tipus de lletra:</guilabel
+> proposeu un DPI alternatiu al del sistema que s'usa com a predeterminat quan aquest arranjament és <guilabel
+>Activat</guilabel
+>. Podeu esbrinar el DPI que està definit en el sistema executant <userinput
+>xdpyinfo | grep resolution</userinput
+> en una finestra de terminal i aleshores canviar el DPI usant la llista desplegable. Això només s'aplicarà a les aplicacions que s'iniciïn de nou.</para>
+</sect2>
+
+</sect1>
+
+</article>

@@ -1,0 +1,384 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Safa Alfulaij <safa1996alfulaij@gmail.com>, 2014, ٢٠١٦.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-22 00:47+0000\n"
+"PO-Revision-Date: 2022-09-19 18:52+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: ar\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "صفا الفليج"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "safa1996alfulaij@gmail.com"
+
+#: currentcontainmentactionsmodel.cpp:201
+#, kde-format
+msgid "Configure Mouse Actions Plugin"
+msgstr "اضبط ملحقة إجراءات الفأرة"
+
+#: main.cpp:88
+#, kde-format
+msgid "Plasma"
+msgstr "بلازما"
+
+#: main.cpp:88
+#, kde-format
+msgid "Plasma Shell"
+msgstr "صدفة بلازما"
+
+#: main.cpp:100
+#, kde-format
+msgid "Enable QML Javascript debugger"
+msgstr "فعّل منقّح جافاسكربت QML"
+
+#: main.cpp:103
+#, kde-format
+msgid "Do not restart plasma-shell automatically after a crash"
+msgstr "لا تعيد تشغيل صدفة بلازما آليًّا بعد أن تنهار"
+
+#: main.cpp:106
+#, kde-format
+msgid "Force loading the given shell plugin"
+msgstr "أجبِر تحميل ملحقة الصّدفة المعطاة"
+
+#: main.cpp:111
+#, kde-format
+msgid ""
+"Load plasmashell as a standalone application, needs the shell-plugin option "
+"to be specified"
+msgstr "حمّل صدفة بلازما كتطبيق مستقلّ، على خيار ملحقة الصّدفة أن يكون محدّدًا"
+
+#: main.cpp:113
+#, kde-format
+msgid "Replace an existing instance"
+msgstr "استبدل نسخة موجودة"
+
+#: main.cpp:116
+#, kde-format
+msgid ""
+"Enables test mode and specifies the layout javascript file to set up the "
+"testing environment"
+msgstr "يفعّل وضع الاختبار ويحدّد ملفّ جافاسكربت المخطّطي لضبطه للبيئة الاختباريّة"
+
+#: main.cpp:117
+#, kde-format
+msgid "file"
+msgstr "الملفّ"
+
+#: main.cpp:121
+#, kde-format
+msgid "Lists the available options for user feedback"
+msgstr "يسرد الخيارات المتاحة لمشاركة بياناتك"
+
+#: main.cpp:219
+#, kde-format
+msgid "Plasma Failed To Start"
+msgstr "فشل بدء بلازما"
+
+#: main.cpp:220
+#, kde-format
+msgid ""
+"Plasma is unable to start as it could not correctly use OpenGL 2 or software "
+"fallback\n"
+"Please check that your graphic drivers are set up correctly."
+msgstr ""
+"تعذّر بدء بلازما إذ أنّها لا تستطيع استخدام أوبن‌جي‌إل 2  أو البرنامج الاحتياطي "
+"كما ينبغي.\n"
+" فضلًا تحقّق من أنّ المشغّلات الرّسوميّة لديك مُعدّة كما ينبغي."
+
+#: osd.cpp:54
+#, kde-format
+msgctxt "OSD informing that the system is muted, keep short"
+msgid "Audio Muted"
+msgstr "كُتم الصّوت"
+
+#: osd.cpp:72
+#, kde-format
+msgctxt "OSD informing that the microphone is muted, keep short"
+msgid "Microphone Muted"
+msgstr "كُتم المكرفون"
+
+#: osd.cpp:88
+#, kde-format
+msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
+msgid "%1 Muted"
+msgstr "كُتم %1"
+
+#: osd.cpp:110
+#, kde-format
+msgctxt "touchpad was enabled, keep short"
+msgid "Touchpad On"
+msgstr "لوحة اللمس تعمل"
+
+#: osd.cpp:112
+#, kde-format
+msgctxt "touchpad was disabled, keep short"
+msgid "Touchpad Off"
+msgstr "لوحة اللمس لا تعمل"
+
+#: osd.cpp:119
+#, kde-format
+msgctxt "wireless lan was enabled, keep short"
+msgid "Wifi On"
+msgstr "اللاسلكيّ يعمل"
+
+#: osd.cpp:121
+#, kde-format
+msgctxt "wireless lan was disabled, keep short"
+msgid "Wifi Off"
+msgstr "اللاسلكيّ لا يعمل"
+
+#: osd.cpp:128
+#, kde-format
+msgctxt "Bluetooth was enabled, keep short"
+msgid "Bluetooth On"
+msgstr "بلوتوث تعمل"
+
+#: osd.cpp:130
+#, kde-format
+msgctxt "Bluetooth was disabled, keep short"
+msgid "Bluetooth Off"
+msgstr "بلوتوث لا تعمل"
+
+#: osd.cpp:137
+#, kde-format
+msgctxt "mobile internet was enabled, keep short"
+msgid "Mobile Internet On"
+msgstr "إنترنت الهاتف يعمل"
+
+#: osd.cpp:139
+#, kde-format
+msgctxt "mobile internet was disabled, keep short"
+msgid "Mobile Internet Off"
+msgstr "إنترنت الهاتف لا يعمل"
+
+#: osd.cpp:147
+#, kde-format
+msgctxt ""
+"on screen keyboard was enabled because physical keyboard got unplugged, keep "
+"short"
+msgid "On-Screen Keyboard Activated"
+msgstr "فُعّلت لوحة المفاتيح على الشّاشة"
+
+#: osd.cpp:150
+#, kde-format
+msgctxt ""
+"on screen keyboard was disabled because physical keyboard was plugged in, "
+"keep short"
+msgid "On-Screen Keyboard Deactivated"
+msgstr "عُطّلت لوحة المفاتيح على الشّاشة"
+
+#: shellcontainmentconfig.cpp:129
+#, kde-format
+msgid "Unknown %1"
+msgstr "مجهول %1"
+
+#: shellcorona.cpp:170 shellcorona.cpp:172
+#, kde-format
+msgid "Show Desktop"
+msgstr "أظهر سطح المكتب"
+
+#: shellcorona.cpp:172
+#, kde-format
+msgid "Hide Desktop"
+msgstr "أخفِ سطح المكتب"
+
+#: shellcorona.cpp:188
+#, kde-format
+msgid "Show Activity Switcher"
+msgstr "أظهر مبدل الأنشطة"
+
+#: shellcorona.cpp:199
+#, kde-format
+msgid "Stop Current Activity"
+msgstr "أوقف النّشاط الحاليّ"
+
+#: shellcorona.cpp:207
+#, kde-format
+msgid "Switch to Previous Activity"
+msgstr "بدل إلى النّشاط السابق"
+
+#: shellcorona.cpp:215
+#, kde-format
+msgid "Switch to Next Activity"
+msgstr "بدل إلى النّشاط التالي"
+
+#: shellcorona.cpp:231
+#, kde-format
+msgid "Activate Task Manager Entry %1"
+msgstr "نشط مدخلة مدير المهام %1"
+
+#: shellcorona.cpp:257
+#, kde-format
+msgid "Manage Desktops And Panels..."
+msgstr "أدر الأسطح و اللوحات..."
+
+#: shellcorona.cpp:278
+#, kde-format
+msgid "Move keyboard focus between panels"
+msgstr "حرّك تركيز لوحة المفاتيح بين اللوحات"
+
+#: shellcorona.cpp:1761
+#, kde-format
+msgid "Add Panel"
+msgstr "أضف لوحة"
+
+#: shellcorona.cpp:1798
+#, kde-format
+msgctxt "Creates an empty containment (%1 is the containment name)"
+msgid "Empty %1"
+msgstr "%1 فارغة"
+
+#: softwarerendernotifier.cpp:27
+#, kde-format
+msgid "Software Renderer In Use"
+msgstr "تصيير برمجي في الاستخدام"
+
+#: softwarerendernotifier.cpp:28
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Software Renderer In Use"
+msgstr "تصيير برمجي في الاستخدام"
+
+#: softwarerendernotifier.cpp:29
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Rendering may be degraded"
+msgstr "قد يتدهور التصيير"
+
+#: softwarerendernotifier.cpp:39
+#, kde-format
+msgid "Never show again"
+msgstr "لا تظهر مرة أخرى"
+
+#: userfeedback.cpp:36
+#, kde-format
+msgid "Panel Count"
+msgstr "عدد اللوحات"
+
+#: userfeedback.cpp:40
+#, kde-format
+msgid "Counts the panels"
+msgstr "يعد عدد اللوحات"
+
+#~ msgid "Unable to load script file: %1"
+#~ msgstr "تعذّر تحميل ملفّ السّكربت: %1"
+
+#~ msgid "Activities..."
+#~ msgstr "الأنشطة..."
+
+#~ msgctxt "Fatal error message body"
+#~ msgid ""
+#~ "All shell packages missing.\n"
+#~ "This is an installation issue, please contact your distribution"
+#~ msgstr ""
+#~ "كلّ حزم الصّدفة ناقصة.\n"
+#~ "هذه مشكلة في التّثبيت، فضلًا تواصل مع توزيعتك"
+
+#~ msgctxt "Fatal error message title"
+#~ msgid "Plasma Cannot Start"
+#~ msgstr "تعذّر على بلازما البدء"
+
+#~ msgctxt "Fatal error message body"
+#~ msgid "Shell package %1 cannot be found"
+#~ msgstr "تعذّر العثور على حزمة الصّدفة %1"
+
+#~ msgid "Main Script File"
+#~ msgstr "ملفّ السّكربت الرّئيسيّ"
+
+#~ msgid "Force a windowed view for testing purposes"
+#~ msgstr "أجبِر عرض نافذيّ لأغراض تجريبية"
+
+#~ msgid "Deprecated, does nothing"
+#~ msgstr "مهجورة، لا تفعل شيئًا"
+
+#~ msgid ""
+#~ "Your graphics hardware does not support OpenGL (ES) 2. Plasma will abort "
+#~ "now."
+#~ msgstr "بطاقتك الرّسوميّة لا تدعم أوبن‌جي‌إل (إي‌إس) 2. ستُجهض بلازما الآن."
+
+#~ msgid "Incompatible OpenGL version detected"
+#~ msgstr "اكتشفتُ إصدارة أوبن‌جي‌إل غير متوافقة"
+
+#~ msgid "Recent number of crashes"
+#~ msgstr "عدد الانهيارات الأخير"
+
+#~ msgid "Show Dashboard"
+#~ msgstr "أظهر لوحة الأدوات"
+
+#~ msgid "Hide Dashboard"
+#~ msgstr "أخفِ لوحة الأدوات"
+
+#~ msgid "Shuts up the output"
+#~ msgstr "يكتم الخَرْج"
+
+#~ msgid "&Execute"
+#~ msgstr "ن&فّذ"
+
+#~ msgctxt "Toolbar Button to switch to KWin Scripting Mode"
+#~ msgid "KWin"
+#~ msgstr "نوافذ.ك"
+
+#~ msgid "Templates"
+#~ msgstr "قوالب"
+
+#, fuzzy
+#~ msgid "Desktop Shell Scripting Console"
+#~ msgstr "كونسول برمجة سطح مكتب الصَدفة"
+
+#~ msgid "Editor"
+#~ msgstr "المحرّر"
+
+#~ msgid "Load"
+#~ msgstr "حمّل"
+
+#~ msgid "Use"
+#~ msgstr "استخدم"
+
+#~ msgid "Output"
+#~ msgstr "الخَرْج"
+
+#~ msgid "Unable to load script file <b>%1</b>"
+#~ msgstr "تعذّر تحميل ملف السكرِبت <b>%1</b>"
+
+#~ msgid "Save Script File"
+#~ msgstr "احفظ ملف السكرِبت"
+
+#~ msgid "Executing script at %1"
+#~ msgstr "ينفّذ السكرِبت في %1"
+
+#~ msgid "Runtime: %1ms"
+#~ msgstr "زمن التشغيل: %1مث"
+
+#~ msgid "No plugins found, check your installation."
+#~ msgstr "لم يُعثر على ملحقات، تحقّق من تثبيتك."
+
+#~ msgctxt "About mouse action"
+#~ msgid "About"
+#~ msgstr "عن"
+
+#~ msgctxt "Configure mouse action"
+#~ msgid "Configure"
+#~ msgstr "اضبط"
+
+#~ msgctxt "Remove mouse action"
+#~ msgid "Remove"
+#~ msgstr "أزل"

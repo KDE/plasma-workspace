@@ -1,0 +1,338 @@
+# translation of kcmicons.po to Hindi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Ravishankar Shrivastava <raviratlami@yahoo.com>, 2007.
+# G Karunakar <karunakar@indlinux.org>, 2012.
+# Raghavendra Kamath <raghu@raghukamath.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmicons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"PO-Revision-Date: 2021-07-28 13:31+0530\n"
+"Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
+"Language-Team: kde-hindi\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.04.3\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: iconsizecategorymodel.cpp:14
+#, kde-format
+msgid "Toolbar"
+msgstr "औज़ार पट्टी"
+
+#: iconsizecategorymodel.cpp:15
+#, kde-format
+msgid "Main Toolbar"
+msgstr "मुख्य औज़ार पट्टी"
+
+#: iconsizecategorymodel.cpp:16
+#, kde-format
+msgid "Small Icons"
+msgstr "छोटे प्रतीक"
+
+#: iconsizecategorymodel.cpp:17
+#, kde-format
+msgid "Panel"
+msgstr "फलक"
+
+#: iconsizecategorymodel.cpp:18
+#, kde-format
+msgid "Dialogs"
+msgstr "संवाद"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr "वर्तमान प्रतीक प्रसंग का नाम"
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr "डेस्कटॉप प्रतीक आकार"
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr "औज़ार पट्टी प्रतीक आकार"
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, kde-format
+msgid "Main toolbar icons size"
+msgstr "मुख्य औज़ार पट्टी प्रतीक आकार"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, kde-format
+msgid "Small icons size"
+msgstr "छोटे प्रतीक आकार"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr "पैनल प्रतीक आकार"
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr "संवाद प्रतीक आकार"
+
+#: main.cpp:182
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "अस्थायी फ़ाइल बनाने में अक्षम ।"
+
+#: main.cpp:193
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr "प्रतीक प्रसंग अभिलेख को डाउनलोड करने में असमर्थ: %1"
+
+#: main.cpp:207
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "यह फ़ाइल एक वैध प्रतीक प्रसंग फ़ाइल नहीं है."
+
+#: main.cpp:212
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr ""
+"संस्थापन प्रक्रिया के दौरान समस्या उत्पन्न हुई, हालॉकि फ़ाइल के लगभग सारे प्रसंग संस्थापित "
+"हो गए हैं"
+
+#: main.cpp:216
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "प्रसंग सफलतापूर्वक स्थापित।"
+
+#: main.cpp:260
+#, kde-format
+msgid "Installing icon themes…"
+msgstr "प्रतीक प्रसंग संस्थापित किया जा रहा है..."
+
+#: main.cpp:270
+#, kde-format
+msgid "Installing %1 theme…"
+msgstr "%1 प्रसंग संस्थापित किया जा रहा है..."
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr "यह मॉड्यूल आपको अपने डेस्कटॉप के लिए प्रतीक चुनने की अनुमति देता है।"
+
+#: package/contents/ui/main.qml:147
+#, kde-format
+msgid "Remove Icon Theme"
+msgstr "प्रतीक प्रसंग हटाएँ"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Restore Icon Theme"
+msgstr "प्रतीक प्रसंग बहाल करें"
+
+#: package/contents/ui/main.qml:228
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr "प्रतीक आकार विन्यस्त करें"
+
+#: package/contents/ui/main.qml:246
+#, kde-format
+msgid "Install from File…"
+msgstr "फाइल से संस्थापित करें..."
+
+#: package/contents/ui/main.qml:251
+#, kde-format
+msgid "Get New Icons…"
+msgstr "नए प्रतीक प्राप्त करें..."
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Open Theme"
+msgstr "प्रसंग खोलें"
+
+#: package/contents/ui/main.qml:281
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr "प्रसंग फ़ाइलें (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Icon theme is already used"
+#~ msgstr "प्रतीक प्रसंग पहले से ही उपयोग में है"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "रविशंकर श्रीवास्तव, जी. करूणाकर, राघवेंद्र कामत"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "raviratlami@aol.in, karunakar@indlinux.org, raghu@raghukamath.com"
+
+#~ msgid "Icons"
+#~ msgstr "प्रतीक"
+
+#~ msgid "Icons Control Panel Module"
+#~ msgstr "प्रतीक नियंत्रण फलक मॉड्यूल"
+
+#~ msgid "(c) 2000-2003 Geert Jansen"
+#~ msgstr "(c) 2000-2003 गीर्त जानसन"
+
+#~ msgid "Geert Jansen"
+#~ msgstr "गीर्त जानसन"
+
+#~ msgid "Antonio Larrosa Jimenez"
+#~ msgstr "अंतोनियो लारोसा जिमेनेज"
+
+#~ msgid "Torsten Rahn"
+#~ msgstr "तॉर्स्तेन रान"
+
+#~ msgid "Jonathan Riddell"
+#~ msgstr "जोनाथन रिड्डेल"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "काइ ऊवे ब्रौलिक"
+
+#~ msgid "Desktop"
+#~ msgstr "डेस्कटॉप"
+
+#~ msgid "Use of Icon"
+#~ msgstr "प्रतीक का उपयोग"
+
+#~ msgctxt "@label The icon rendered by default"
+#~ msgid "Default"
+#~ msgstr "डिफ़ॉल्ट"
+
+#~ msgctxt "@label The icon rendered as active"
+#~ msgid "Active"
+#~ msgstr "सक्रिय"
+
+#~ msgctxt "@label The icon rendered as disabled"
+#~ msgid "Disabled"
+#~ msgstr "अक्षम"
+
+#~ msgid "Size:"
+#~ msgstr "आकारः"
+
+#~ msgid "Set Effect..."
+#~ msgstr "प्रभाव नियत करें..."
+
+#~ msgid "All Icons"
+#~ msgstr "सभी प्रतीक"
+
+#~ msgid "Setup Default Icon Effect"
+#~ msgstr "डिफ़ॉल्ट प्रतीक प्रभाव सेटअप करें"
+
+#~ msgid "Setup Active Icon Effect"
+#~ msgstr "सक्रिय प्रतीक प्रभाव सेटअप करें"
+
+#~ msgid "Setup Disabled Icon Effect"
+#~ msgstr "अक्षम प्रतीक प्रभाव सेटअप करें"
+
+#~ msgid "&Effect:"
+#~ msgstr "प्रभावः (&E)"
+
+#~ msgid "No Effect"
+#~ msgstr "कोई प्रभाव नहीं"
+
+#~ msgid "To Gray"
+#~ msgstr "धूसर"
+
+#~ msgid "Colorize"
+#~ msgstr "रंगीन"
+
+#~ msgid "Gamma"
+#~ msgstr "गामा"
+
+#~ msgid "Desaturate"
+#~ msgstr "डि-सेचुरेट"
+
+#~ msgid "To Monochrome"
+#~ msgstr "श्वेत श्याम पर"
+
+#~ msgid "&Semi-transparent"
+#~ msgstr "अर्ध-पारदर्शी (&S)"
+
+#~ msgid "Preview"
+#~ msgstr "पूर्वावलोकन"
+
+#~ msgid "Effect Parameters"
+#~ msgstr "प्रभाव पैरामीटर्स"
+
+#~ msgid "&Amount:"
+#~ msgstr "मात्राः (&A)"
+
+#~ msgid "Co&lor:"
+#~ msgstr "रंग: (&l)"
+
+#~ msgid "&Second color:"
+#~ msgstr "द्वितीय रंगः (&S)"
+
+#~ msgid "Name"
+#~ msgstr "नाम"
+
+#~ msgid "Description"
+#~ msgstr "वर्णन"
+
+#~ msgid "Install a theme archive file you already have locally"
+#~ msgstr ""
+#~ "प्रसंग अभिलेख फ़ाइल जो आपके पास पहले से ही स्थानीय रूप से मौजूद है उसे संस्थापित करें"
+
+#~ msgid ""
+#~ "If you already have a theme archive locally, this button will unpack it "
+#~ "and make it available for KDE applications"
+#~ msgstr ""
+#~ "प्रसंग अभिलेख फ़ाइल जो आपके पास पहले से ही स्थानीय रूप से मौजूद है यह बटन उसे केडीई "
+#~ "अनुप्रयोगों को उपलब्ध कराएगा"
+
+#~ msgid "Get new themes from the Internet"
+#~ msgstr "इंटरनेट से नए प्रसंग प्राप्त करें"
+
+#~ msgid "Remove the selected theme from your disk"
+#~ msgstr "चयनित प्रसंग को डिस्क से हटाएँ"
+
+#~ msgid "This will remove the selected theme from your disk."
+#~ msgstr "यह चयनित प्रसंग को डिस्क से हटा देगा"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "प्रसंग यूआरएल खींचलाएँ या टाइप करें"
+
+#~ msgid ""
+#~ "Unable to download the icon theme archive;\n"
+#~ "please check that address %1 is correct."
+#~ msgstr ""
+#~ "प्रतीक प्रसंग अभिलेख डाउनलोड करने में अक्षम;\n"
+#~ "कृपया जाँच करें कि पता %1 सही है."
+
+#~ msgid "<qt>Installing <strong>%1</strong> theme</qt>"
+#~ msgstr "<qt>संस्थापित किया जा रहा है <strong>%1</strong> प्रसंग</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <strong>%1</strong> icon theme?"
+#~ "<br /><br />This will delete the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>क्या आप प्रतीक प्रसंग <strong>%1</strong> को मिटाना चाहते हैं?<br /><br /"
+#~ ">इससे इस प्रसंग द्वारा संस्थापित की गई फ़ाइलें मिट जाएंगीं.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "पुष्टिकरण"
+
+#~ msgid "&Theme"
+#~ msgstr "प्रसंग (&T)"
+
+#~ msgid "Ad&vanced"
+#~ msgstr "विस्तृत (&v)"
+
+#~ msgid "Animate icons"
+#~ msgstr "प्रतीक एनिमेट करें"
+
+#~ msgid "Select the icon theme you want to use:"
+#~ msgstr "ऐसा प्रतीक प्रसंग चुनें जिसका आप इस्तेमाल करना चाहते हैं:"

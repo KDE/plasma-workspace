@@ -1,0 +1,234 @@
+# Translation of kcm_autostart.po to Low Saxon
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Sönke Dibbern <s_dibbern@web.de>, 2008, 2014.
+# Manfred Wiese <m.j.wiese@web.de>, 2010, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_autostart\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:50+0000\n"
+"PO-Revision-Date: 2014-02-15 01:45+0100\n"
+"Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
+"Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
+"Language: nds\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: autostartmodel.cpp:288
+#, fuzzy, kde-format
+#| msgid "\"%1\" is not an absolute path."
+msgid "\"%1\" is not an absolute url."
+msgstr "\"%1\" is keen afsoluut Padd."
+
+#: autostartmodel.cpp:291
+#, kde-format
+msgid "\"%1\" does not exist."
+msgstr "\"%1\" gifft dat nich."
+
+#: autostartmodel.cpp:294
+#, kde-format
+msgid "\"%1\" is not a file."
+msgstr "\"%1\" is keen Datei."
+
+#: autostartmodel.cpp:297
+#, kde-format
+msgid "\"%1\" is not readable."
+msgstr "\"%1\" lett sik nich lesen."
+
+#: package/contents/ui/main.qml:40
+#, kde-format
+msgid "Make Executable"
+msgstr ""
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "The file '%1' must be executable to run at logout."
+msgstr ""
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid "The file '%1' must be executable to run at login."
+msgstr ""
+
+#: package/contents/ui/main.qml:89
+#, fuzzy, kde-format
+#| msgid "&Properties..."
+msgid "Properties"
+msgstr "&Egenschappen..."
+
+#: package/contents/ui/main.qml:95
+#, fuzzy, kde-format
+#| msgid "&Remove"
+msgid "Remove"
+msgstr "&Wegmaken"
+
+#: package/contents/ui/main.qml:106
+#, kde-format
+msgid "Applications"
+msgstr ""
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Login Scripts"
+msgstr ""
+
+#: package/contents/ui/main.qml:112
+#, fuzzy, kde-format
+#| msgid "Pre-KDE startup"
+msgid "Pre-startup Scripts"
+msgstr "Vöran KDE-Start"
+
+#: package/contents/ui/main.qml:115
+#, kde-format
+msgid "Logout Scripts"
+msgstr ""
+
+#: package/contents/ui/main.qml:124
+#, kde-format
+msgid "No user-specified autostart items"
+msgstr ""
+
+#: package/contents/ui/main.qml:125
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Click the <interface>Add…</interface> button below to add some"
+msgstr ""
+
+#: package/contents/ui/main.qml:139
+#, fuzzy, kde-format
+#| msgid "Add Script..."
+msgid "Choose Login Script"
+msgstr "Skript tofögen..."
+
+#: package/contents/ui/main.qml:160
+#, kde-format
+msgid "Choose Logout Script"
+msgstr ""
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "Add…"
+msgstr ""
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Add Application…"
+msgstr ""
+
+#: package/contents/ui/main.qml:199
+#, fuzzy, kde-format
+#| msgid "Add Script..."
+msgid "Add Login Script…"
+msgstr "Skript tofögen..."
+
+#: package/contents/ui/main.qml:205
+#, fuzzy, kde-format
+#| msgid "Add Script..."
+msgid "Add Logout Script…"
+msgstr "Skript tofögen..."
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Sönke Dibbern, Manfred Wiese"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "s_dibbern@web.de, m.j.wiese@web.de"
+
+#, fuzzy
+#~| msgid "KDE Autostart Manager Control Panel Module"
+#~ msgid "Session Autostart Manager Control Panel Module"
+#~ msgstr "Kuntrullmoduul för den KDE-Autostartpleger"
+
+#, fuzzy
+#~| msgid "Copyright © 2006–2010 Autostart Manager team"
+#~ msgid "Copyright © 2006–2020 Autostart Manager team"
+#~ msgstr "Copyright © 2006–2010: De Autostartpleger-Koppel"
+
+#~ msgid "Stephen Leaf"
+#~ msgstr "Stephen Leaf"
+
+#~ msgid "Montel Laurent"
+#~ msgstr "Montel Laurent"
+
+#~ msgid "Maintainer"
+#~ msgstr "Pleger"
+
+#, fuzzy
+#~| msgid "Advanced..."
+#~ msgid "Add..."
+#~ msgstr "Verwiedert..."
+
+#~ msgid "Shell script path:"
+#~ msgstr "Konsoolskript-Padd:"
+
+#~ msgid "Create as symlink"
+#~ msgstr "As symboolsch Link opstellen"
+
+#, fuzzy
+#~| msgid "Autostart only in KDE"
+#~ msgid "Autostart only in Plasma"
+#~ msgstr "Bloots mit KDE automaatsch starten"
+
+#~ msgid "Name"
+#~ msgstr "Naam"
+
+#~ msgid "Command"
+#~ msgstr "Befehl"
+
+#~ msgid "Status"
+#~ msgstr "Status"
+
+#, fuzzy
+#~| msgctxt ""
+#~| "@title:column The name of the column that decides if the program is run "
+#~| "on kde startup, on kde shutdown, etc"
+#~| msgid "Run On"
+#~ msgctxt ""
+#~ "@title:column The name of the column that decides if the program is run "
+#~ "on session startup, on session shutdown, etc"
+#~ msgid "Run On"
+#~ msgstr "Oproop bi"
+
+#, fuzzy
+#~| msgid "KDE Autostart Manager"
+#~ msgid "Session Autostart Manager"
+#~ msgstr "KDE-Autostartpleger"
+
+#~ msgctxt "The program will be run"
+#~ msgid "Enabled"
+#~ msgstr "Anmaakt"
+
+#~ msgctxt "The program won't be run"
+#~ msgid "Disabled"
+#~ msgstr "Utmaakt"
+
+#~ msgid "Desktop File"
+#~ msgstr "Desktop-Datei"
+
+#~ msgid "Script File"
+#~ msgstr "Skriptdatei"
+
+#~ msgid "Add Program..."
+#~ msgstr "Programm tofögen..."
+
+#~ msgid "Startup"
+#~ msgstr "Start"
+
+#~ msgid ""
+#~ "Only files with “.sh” extensions are allowed for setting up the "
+#~ "environment."
+#~ msgstr ""
+#~ "Bloots Dateien mit de Verwiedern \"sh\" sünd för't Torechtmaken vun de "
+#~ "Ümgeven tolaten."
+
+#~ msgid "Shutdown"
+#~ msgstr "Utmaken"
+
+#~ msgid "1"
+#~ msgstr "1"

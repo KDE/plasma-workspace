@@ -1,0 +1,385 @@
+# Translation of kcm5_icons.po to Ukrainian
+# Copyright (C) 2002-2020 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Andriy Rysin <rysin@kde.org>, 2002, 2003, 2006.
+# Eugene Onischenko <oneugene@ukr.net>, 2004, 2005.
+# Ivan Petrouchtchak <fr.ivan@ukrainian-orthodox.org>, 2005, 2007, 2008.
+# Yuri Chornoivan <yurchor@ukr.net>, 2008, 2009, 2010, 2011, 2012, 2014, 2016, 2017, 2018, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm5_icons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"PO-Revision-Date: 2021-05-26 09:18+0300\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.12.0\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: iconsizecategorymodel.cpp:14
+#, kde-format
+msgid "Toolbar"
+msgstr "Пенал"
+
+#: iconsizecategorymodel.cpp:15
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Головний пенал"
+
+#: iconsizecategorymodel.cpp:16
+#, kde-format
+msgid "Small Icons"
+msgstr "Малі піктограми"
+
+#: iconsizecategorymodel.cpp:17
+#, kde-format
+msgid "Panel"
+msgstr "Панель"
+
+#: iconsizecategorymodel.cpp:18
+#, kde-format
+msgid "Dialogs"
+msgstr "Діалогові вікна"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr "Назва поточної теми піктограм"
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr "Розмір піктограм на стільниці"
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr "Розмір піктограм на панелі інструментів"
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, kde-format
+msgid "Main toolbar icons size"
+msgstr "Розмір піктограм головної панелі інструментів"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, kde-format
+msgid "Small icons size"
+msgstr "Розмір малих піктограм"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr "Розмір піктограм на панелі"
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr "Розмір піктограм у діалогових вікнах"
+
+#: main.cpp:182
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Не вдалося створити тимчасовий файл."
+
+#: main.cpp:193
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Не вдалося отримати архів теми курсорів %1."
+
+#: main.cpp:207
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "Цей файл не є архівом тем."
+
+#: main.cpp:212
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr ""
+"Під час спроби встановлення сталася помилка; однак, більшість тем з архіву "
+"було встановлено"
+
+#: main.cpp:216
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "Тему успішно встановлено."
+
+#: main.cpp:260
+#, kde-format
+msgid "Installing icon themes…"
+msgstr "Встановлюємо теми піктограм…"
+
+#: main.cpp:270
+#, kde-format
+msgid "Installing %1 theme…"
+msgstr "Встановлюємо тему %1…"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr ""
+"За допомогою цього модуля ви можете вибрати піктограми для вашої стільниці."
+
+#: package/contents/ui/main.qml:147
+#, kde-format
+msgid "Remove Icon Theme"
+msgstr "Вилучення теми піктограм"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Restore Icon Theme"
+msgstr "Відновити тему піктограм"
+
+#: package/contents/ui/main.qml:228
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr "Налаштувати розміри піктограм"
+
+#: package/contents/ui/main.qml:246
+#, kde-format
+msgid "Install from File…"
+msgstr "Встановити з файла…"
+
+#: package/contents/ui/main.qml:251
+#, kde-format
+msgid "Get New Icons…"
+msgstr "Отримати нові піктограми…"
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Open Theme"
+msgstr "Відкриття теми"
+
+#: package/contents/ui/main.qml:281
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr "файли тем (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Icon theme is already used"
+#~ msgstr "Тему піктограм вже використано"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Andriy Rysin,о. Іван Петрущак"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "rysin@kde.org,fr.ivan@ukrainian-orthodox.org"
+
+#~ msgid "Icons"
+#~ msgstr "Піктограми"
+
+#~ msgid "Icons Control Panel Module"
+#~ msgstr "Модуль панелі керування піктограмами"
+
+#~ msgid "(c) 2000-2003 Geert Jansen"
+#~ msgstr "© Geert Jansen, 2000–2003"
+
+#~ msgid "Geert Jansen"
+#~ msgstr "Geert Jansen"
+
+#~ msgid "Antonio Larrosa Jimenez"
+#~ msgstr "Antonio Larrosa Jimenez"
+
+#~ msgid "Torsten Rahn"
+#~ msgstr "Torsten Rahn"
+
+#~ msgid "Jonathan Riddell"
+#~ msgstr "Jonathan Riddell"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Kai Uwe Broulik"
+
+#~ msgid "Desktop"
+#~ msgstr "Стільниця"
+
+#~ msgid "Download New Icon Themes"
+#~ msgstr "Отримання нових тем піктограм"
+
+#~ msgid "Use of Icon"
+#~ msgstr "Використання піктограм"
+
+#~ msgctxt "@label The icon rendered by default"
+#~ msgid "Default"
+#~ msgstr "Типова"
+
+#~ msgctxt "@label The icon rendered as active"
+#~ msgid "Active"
+#~ msgstr "Активна"
+
+#~ msgctxt "@label The icon rendered as disabled"
+#~ msgid "Disabled"
+#~ msgstr "Вимкнена"
+
+#~ msgid "Size:"
+#~ msgstr "Розмір:"
+
+#~ msgid "Enable icon animations"
+#~ msgstr "Увімкнути анімацію піктограм"
+
+#~ msgid "Set Effect..."
+#~ msgstr "Встановити ефект..."
+
+#~ msgid "All Icons"
+#~ msgstr "Всі піктограми"
+
+#~ msgid "Setup Default Icon Effect"
+#~ msgstr "Встановити типовий ефект піктограм"
+
+#~ msgid "Setup Active Icon Effect"
+#~ msgstr "Встановити ефект активних піктограм"
+
+#~ msgid "Setup Disabled Icon Effect"
+#~ msgstr "Встановити ефект вимкнених піктограм"
+
+#~ msgid "&Effect:"
+#~ msgstr "&Ефект:"
+
+#~ msgid "No Effect"
+#~ msgstr "Без ефектів"
+
+#~ msgid "To Gray"
+#~ msgstr "В сірий"
+
+#~ msgid "Colorize"
+#~ msgstr "Розфарбовування"
+
+#~ msgid "Gamma"
+#~ msgstr "Гама"
+
+#~ msgid "Desaturate"
+#~ msgstr "Прибрати насичення"
+
+#~ msgid "To Monochrome"
+#~ msgstr "Зробити монохромною"
+
+#~ msgid "&Semi-transparent"
+#~ msgstr "&Напівпрозора"
+
+#~ msgid "Preview"
+#~ msgstr "Перегляд"
+
+#~ msgid "Effect Parameters"
+#~ msgstr "Параметри ефекту"
+
+#~ msgid "&Amount:"
+#~ msgstr "&Величина:"
+
+#~ msgid "Co&lor:"
+#~ msgstr "Ко&лір:"
+
+#~ msgid "&Second color:"
+#~ msgstr "&Другий колір:"
+
+#~ msgid "Name"
+#~ msgstr "Назва"
+
+#~ msgid "Description"
+#~ msgstr "Опис"
+
+#~ msgid "Install a theme archive file you already have locally"
+#~ msgstr "Встановити файл архіву теми, який ви вже маєте локально"
+
+#~ msgid ""
+#~ "If you already have a theme archive locally, this button will unpack it "
+#~ "and make it available for KDE applications"
+#~ msgstr ""
+#~ "Якщо ви маєте локально збережений файл архіву теми, то цією кнопкою можна "
+#~ "розпакувати його і зробити доступним для всіх програм KDE"
+
+#~ msgid "Get new themes from the Internet"
+#~ msgstr "Отримати нові теми з інтернету"
+
+#~ msgid ""
+#~ "You need to be connected to the Internet to use this action. A dialog "
+#~ "will display a list of themes from the http://www.kde.org website. "
+#~ "Clicking the Install button associated with a theme will install this "
+#~ "theme locally."
+#~ msgstr ""
+#~ "Ваш комп’ютер має бути з’єднано з інтернетом, щоб використовувати цю дію. "
+#~ "У діалоговому вікні буде показано список тем емоційок з вебсайта http://"
+#~ "www.kde.org. Натискання кнопки «Встановити», що відповідає темі, призведе "
+#~ "до локального встановлення теми."
+
+#~ msgid "Remove the selected theme from your disk"
+#~ msgstr "Вилучити вибрану тему з вашого диска"
+
+#~ msgid "This will remove the selected theme from your disk."
+#~ msgstr "Вилучить вибрану тему з вашого диска."
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "Перетягніть або наберіть URL для теми"
+
+#~ msgid ""
+#~ "Unable to download the icon theme archive;\n"
+#~ "please check that address %1 is correct."
+#~ msgstr ""
+#~ "Неможливо отримати архів тем;\n"
+#~ "будь ласка, перевірте, чи є адреса %1 коректною."
+
+#~ msgid "<qt>Installing <strong>%1</strong> theme</qt>"
+#~ msgstr "<qt>Встановлення теми<strong>%1</strong></qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <strong>%1</strong> icon theme?"
+#~ "<br /><br />This will delete the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>Ви впевнені, що хочете вилучити тему піктограм <strong>%1</strong>?"
+#~ "<br /><br />Всі файли цієї теми буде витерто.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Підтвердження"
+
+#~ msgid "&Theme"
+#~ msgstr "&Тема"
+
+#~ msgid "Ad&vanced"
+#~ msgstr "Дода&тково"
+
+#~ msgid ""
+#~ "<h1>Icons</h1>This module allows you to choose the icons for your desktop."
+#~ "<p>To choose an icon theme, click on its name and apply your choice by "
+#~ "pressing the \"Apply\" button below. If you do not want to apply your "
+#~ "choice you can press the \"Reset\" button to discard your changes.</"
+#~ "p><p>By pressing the \"Install Theme File...\" button you can install "
+#~ "your new icon theme by writing its location in the box or browsing to the "
+#~ "location. Press the \"OK\" button to finish the installation.</p><p>The "
+#~ "\"Remove Theme\" button will only be activated if you select a theme that "
+#~ "you installed using this module. You are not able to remove globally "
+#~ "installed themes here.</p><p>You can also specify effects that should be "
+#~ "applied to the icons.</p>"
+#~ msgstr ""
+#~ "<h1>Піктограми</h1>За допомогою цього модуля ви можете вибрати піктограми "
+#~ "для вашої стільниці. <p>Щоб вибрати тему піктограм, наведіть на позначку "
+#~ "з її назвою вказівник миші, клацніть лівою кнопкою та збережіть ваш "
+#~ "вибір, натиснувши на кнопці «Застосувати», розташованій нижче. Якщо ви не "
+#~ "хочете зберігати внесені зміни, ви можете натиснути кнопку «Скинути».</p> "
+#~ "<p>Натисканням кнопки «Встановити файл теми…» ви зможете встановити нову "
+#~ "тему піктограм, вказавши її адресу в полі вводу або за допомогою "
+#~ "навігації. Натисканням кнопки «Гаразд» можна завершити процедуру "
+#~ "встановлення.</p> <p>Доступ до кнопки «Вилучити тему» можна буде "
+#~ "отримати, лише якщо ви позначили тему, яку було встановлено за допомогою "
+#~ "цього модуля. За допомогою модуля ви не зможете вилучати теми, "
+#~ "встановлені на загальному рівні.</p> <p>Крім того, тут ви можете вказати "
+#~ "ефекти, які будуть застосовані до піктограм.</p>"
+
+#~ msgid "Animate icons"
+#~ msgstr "Анімація піктограм"
+
+#~ msgid "Select the icon theme you want to use:"
+#~ msgstr "Виберіть тему піктограм:"

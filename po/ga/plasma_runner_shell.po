@@ -1,0 +1,143 @@
+# Irish translation of plasma_runner_shell
+# Copyright (C) 2009 This_file_is_part_of_KDE
+# This file is distributed under the same license as the plasma_runner_shell package.
+# Kevin Scannell <kscanne@gmail.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdebase/krunner_shellrunner.po\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-27 00:45+0000\n"
+"PO-Revision-Date: 2008-05-10 14:57-0500\n"
+"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
+"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"Language: ga\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
+"3 : 4\n"
+
+#: shellrunner.cpp:35
+#, kde-format
+msgid "Finds commands that match :q:, using common shell syntax"
+msgstr ""
+"Aimsíonn sé seo orduithe atá comhoiriúnach do :q:, ag baint úsáide as gnáth-"
+"chomhréir blaoisce"
+
+#: shellrunner.cpp:36
+#, fuzzy, kde-format
+#| msgid "Run in &terminal window"
+msgid "Run in Terminal Window"
+msgstr "Rith i d&teirminéal"
+
+#: shellrunner.cpp:54
+#, kde-format
+msgid "Run %1"
+msgstr "Rith %1"
+
+#~ msgid "Enter the user you want to run the application as here."
+#~ msgstr ""
+#~ "Iontráil ainm úsáideora anseo agus rithfear an feidhmchlár mar an t-"
+#~ "úsáideoir seo."
+
+#~ msgid "User&name:"
+#~ msgstr "Ai&nm úsáideora:"
+
+#~ msgid "Enter the password here for the user you specified above."
+#~ msgstr "Iontráil focal faire an úsáideora a roghnaigh tú thuas."
+
+#~ msgid "Pass&word:"
+#~ msgstr "&Focal Faire:"
+
+#~ msgid ""
+#~ "Check this option if the application you want to run is a text mode "
+#~ "application. The application will then be run in a terminal emulator "
+#~ "window."
+#~ msgstr ""
+#~ "Cuir tic leis an rogha seo más feidhmchlár téacs é an feidhmchlár is mian "
+#~ "leat a rith. Sa chás seo, rithfear an feidhmchlár in aithriseoir "
+#~ "teirminéil."
+
+#~ msgid "Run in &terminal window"
+#~ msgstr "Rith i d&teirminéal"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "user id. Every process has a user id associated with it. This id code "
+#~ "determines file access and other permissions. The password of the user is "
+#~ "required to do this."
+#~ msgstr ""
+#~ "Cuir tic leis an rogha seo más mian leat an feidhmchlár a rith mar "
+#~ "úsáideoir eile. Tá gach próiseas ceangailte le haitheantas úsáideora a "
+#~ "chinneann rochtain ar chomhaid agus ceadanna eile. Caithfidh tú focal "
+#~ "faire an úsáideora a iontráil chun an t-aitheantas seo a athrú."
+
+#~ msgid "Run as a different &user"
+#~ msgstr "Rith mar úsáideoir &eile"
+
+#~ msgid ""
+#~ "<qt>Select whether realtime scheduling should be enabled for the "
+#~ "application. The scheduler governs which process will run and which will "
+#~ "have to wait. Two schedulers are available:\n"
+#~ "<ul>\n"
+#~ "<li><em>Normal:</em> This is the standard, timesharing scheduler. It will "
+#~ "divide fairly the available processing time between all processes.</li>\n"
+#~ "<li><em>Realtime:</em>This scheduler will run your application "
+#~ "uninterrupted until it gives up the processor. This can be dangerous. An "
+#~ "application that does not give up the processor might hang the system. "
+#~ "You need root's password to use the scheduler.</li>\n"
+#~ "</ul>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>Roghnaigh cineál an sceidealóra is mian leat a chumasú le haghaidh an "
+#~ "fheidhmchláir. Rialaíonn an sceidealóir na próisis a rithfear agus na "
+#~ "cinn a fhanfaidh. Tá dhá sceidealóir ar fáil:\n"
+#~ "<ul>\n"
+#~ "<li><em>Gnáth:</em> Seo é an sceidealóir caighdeánach comhroinnte ama. "
+#~ "Roinnfidh sé an t-am próiseála atá ar fáil ar na próisis go léir agus "
+#~ "tabharfaidh cothrom na Féinne do chách.</li>\n"
+#~ "<li><em>Fíor-Ama:</em>Rithfidh an sceidealóir seo d'fheidhmchlár gan "
+#~ "staonadh go dtí go ngéillfidh sé an próiseálaí. Tig leis seo a bheith "
+#~ "contúirteach. Mura ngéillfidh feidhmchlár an próiseálaí, seans go "
+#~ "dtuairtfidh an córas. Tá focal faire an fhorúsáideoir de dhíth ort chun "
+#~ "an sceidealóir a úsáid.</li>\n"
+#~ "</ul>\n"
+#~ "</qt>"
+
+#~ msgid "Run with realtime &scheduling"
+#~ msgstr "Rith le &sceidealadh fíor-ama"
+
+#~ msgid ""
+#~ "The priority that the command will be run with can be set here. From left "
+#~ "to right, it goes from low to high. The center position is the default "
+#~ "value. For priorities higher than the default, you will need to provide "
+#~ "the root password."
+#~ msgstr ""
+#~ "Is féidir tosaíocht an ordaithe a shocrú anseo. Ó chlé go deas, ritheann "
+#~ "sé ó íseal go hard. Is é an lárphointe an luach réamhshocraithe. Chun "
+#~ "tosaíocht a shocrú atá níos airde ná an réamhshocrú, caithfidh tú focal "
+#~ "faire an fhorúsáideora a sholáthar."
+
+#~ msgid "&Priority:"
+#~ msgstr "&Tosaíocht:"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "priority. A higher priority tells the operating system to give more "
+#~ "processing time to your application."
+#~ msgstr ""
+#~ "Cuir tic leis an rogha seo más mian leat an feidhmchlár a rith le "
+#~ "tosaíocht dhifriúil. Le tosaíocht níos airde, tabharfaidh an córas "
+#~ "oibriúcháin tuilleadh ama próiseála do d'fheidhmchlár."
+
+#~ msgid "Run with a &different priority"
+#~ msgstr "Rith le tosaíocht &dhifriúil"
+
+#~ msgid "Low"
+#~ msgstr "Íseal"
+
+#~ msgid "High"
+#~ msgstr "Ard"
+
+#~ msgid "Command"
+#~ msgstr "Ordú"

@@ -1,0 +1,608 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Lukáš Tinkl <ltinkl@redhat.com>, 2010, 2012.
+# Vít Pelčák <vit@pelcak.org>, 2011, 2013, 2014, 2015, 2018, 2019, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"PO-Revision-Date: 2019-01-14 16:58+0100\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 20.04.3\n"
+"X-Language: cs_CZ\n"
+"X-Source-Language: en_US\n"
+
+#: soliddeviceengine.cpp:114
+msgid "Parent UDI"
+msgstr "Nadřazené UDI"
+
+#: soliddeviceengine.cpp:115
+msgid "Vendor"
+msgstr "Dodavatel"
+
+#: soliddeviceengine.cpp:116
+msgid "Product"
+msgstr "Produkt"
+
+#: soliddeviceengine.cpp:117
+msgid "Description"
+msgstr "Popis"
+
+#: soliddeviceengine.cpp:118
+msgid "Icon"
+msgstr "Ikona"
+
+#: soliddeviceengine.cpp:119 soliddeviceengine.cpp:592
+msgid "Emblems"
+msgstr "Emblémy"
+
+#: soliddeviceengine.cpp:120 soliddeviceengine.cpp:476
+#: soliddeviceengine.cpp:482 soliddeviceengine.cpp:495
+msgid "State"
+msgstr "Stav"
+
+#: soliddeviceengine.cpp:121 soliddeviceengine.cpp:477
+#: soliddeviceengine.cpp:483 soliddeviceengine.cpp:491
+#: soliddeviceengine.cpp:493
+msgid "Operation result"
+msgstr "Výsledek operace"
+
+#: soliddeviceengine.cpp:122
+msgid "Timestamp"
+msgstr "Časové razítko"
+
+#: soliddeviceengine.cpp:130
+msgid "Processor"
+msgstr "Procesor"
+
+#: soliddeviceengine.cpp:131
+msgid "Number"
+msgstr "Číslo"
+
+#: soliddeviceengine.cpp:132
+msgid "Max Speed"
+msgstr "Maximální rychlost"
+
+#: soliddeviceengine.cpp:133
+msgid "Can Change Frequency"
+msgstr "Může měnit frekvenci"
+
+#: soliddeviceengine.cpp:141
+msgid "Block"
+msgstr "Blok"
+
+#: soliddeviceengine.cpp:142
+msgid "Major"
+msgstr "Hlavní"
+
+#: soliddeviceengine.cpp:143
+msgid "Minor"
+msgstr "Vedlejší"
+
+#: soliddeviceengine.cpp:144
+msgid "Device"
+msgstr "Zařízení"
+
+#: soliddeviceengine.cpp:152
+msgid "Storage Access"
+msgstr "Přístup k úložišti"
+
+#: soliddeviceengine.cpp:153 soliddeviceengine.cpp:507
+#: soliddeviceengine.cpp:606
+msgid "Accessible"
+msgstr "Přístupné"
+
+#: soliddeviceengine.cpp:154 soliddeviceengine.cpp:508
+msgid "File Path"
+msgstr "Cesta k souboru"
+
+#: soliddeviceengine.cpp:169
+msgid "Storage Drive"
+msgstr "Úložiště"
+
+#: soliddeviceengine.cpp:172
+msgid "Ide"
+msgstr "IDE"
+
+#: soliddeviceengine.cpp:172
+msgid "Usb"
+msgstr "USB"
+
+#: soliddeviceengine.cpp:172
+msgid "Ieee1394"
+msgstr "IEEE 1394"
+
+#: soliddeviceengine.cpp:173
+msgid "Scsi"
+msgstr "SCSI"
+
+#: soliddeviceengine.cpp:173
+msgid "Sata"
+msgstr "SATA"
+
+#: soliddeviceengine.cpp:173
+msgid "Platform"
+msgstr "Platforma"
+
+#: soliddeviceengine.cpp:175
+msgid "Hard Disk"
+msgstr "Pevný disk"
+
+#: soliddeviceengine.cpp:175
+msgid "Cdrom Drive"
+msgstr "Mechanika CD-ROM"
+
+#: soliddeviceengine.cpp:175
+msgid "Floppy"
+msgstr "Disketa"
+
+#: soliddeviceengine.cpp:176
+msgid "Tape"
+msgstr "Páska"
+
+#: soliddeviceengine.cpp:176
+msgid "Compact Flash"
+msgstr "Compact Flash"
+
+#: soliddeviceengine.cpp:176
+msgid "Memory Stick"
+msgstr "Paměťová karta"
+
+#: soliddeviceengine.cpp:177
+msgid "Smart Media"
+msgstr "Smart Media"
+
+#: soliddeviceengine.cpp:177
+msgid "SdMmc"
+msgstr "SdMmc"
+
+#: soliddeviceengine.cpp:177
+msgid "Xd"
+msgstr "Xd"
+
+#: soliddeviceengine.cpp:179
+msgid "Bus"
+msgstr "Sběrnice"
+
+#: soliddeviceengine.cpp:180
+msgid "Drive Type"
+msgstr "Typ mechaniky"
+
+#: soliddeviceengine.cpp:181 soliddeviceengine.cpp:194
+#: soliddeviceengine.cpp:362 soliddeviceengine.cpp:376
+msgid "Removable"
+msgstr "Vyměnitelné"
+
+#: soliddeviceengine.cpp:182 soliddeviceengine.cpp:195
+#: soliddeviceengine.cpp:363 soliddeviceengine.cpp:377
+msgid "Hotpluggable"
+msgstr "Hotplug"
+
+#: soliddeviceengine.cpp:204
+msgid "Optical Drive"
+msgstr "Optická mechanika"
+
+#: soliddeviceengine.cpp:209
+msgid "CD-R"
+msgstr "CD-R"
+
+#: soliddeviceengine.cpp:212
+msgid "CD-RW"
+msgstr "CD-RW"
+
+#: soliddeviceengine.cpp:215
+msgid "DVD"
+msgstr "DVD"
+
+#: soliddeviceengine.cpp:218
+msgid "DVD-R"
+msgstr "DVD-R"
+
+#: soliddeviceengine.cpp:221
+msgid "DVD-RW"
+msgstr "DVD-RW"
+
+#: soliddeviceengine.cpp:224
+msgid "DVD-RAM"
+msgstr "DVD-RAM"
+
+#: soliddeviceengine.cpp:227
+msgid "DVD+R"
+msgstr "DVD+R"
+
+#: soliddeviceengine.cpp:230
+msgid "DVD+RW"
+msgstr "DVD+RW"
+
+#: soliddeviceengine.cpp:233
+msgid "DVD+DL"
+msgstr "DVD+DL"
+
+#: soliddeviceengine.cpp:236
+msgid "DVD+DLRW"
+msgstr "DVD+DLRW"
+
+#: soliddeviceengine.cpp:239
+msgid "BD"
+msgstr "BD"
+
+#: soliddeviceengine.cpp:242
+msgid "BD-R"
+msgstr "BD-R"
+
+#: soliddeviceengine.cpp:245
+msgid "BD-RE"
+msgstr "BD-RE"
+
+#: soliddeviceengine.cpp:248
+msgid "HDDVD"
+msgstr "HDDVD"
+
+#: soliddeviceengine.cpp:251
+msgid "HDDVD-R"
+msgstr "HDDVD-R"
+
+#: soliddeviceengine.cpp:254
+msgid "HDDVD-RW"
+msgstr "HDDVD-RW"
+
+#: soliddeviceengine.cpp:256
+msgid "Supported Media"
+msgstr "Podporovaná média"
+
+#: soliddeviceengine.cpp:258
+msgid "Read Speed"
+msgstr "Rychlost čtení"
+
+#: soliddeviceengine.cpp:259
+msgid "Write Speed"
+msgstr "Rychlost zápisu"
+
+#: soliddeviceengine.cpp:267
+msgid "Write Speeds"
+msgstr "Rychlosti zápisu"
+
+#: soliddeviceengine.cpp:275
+msgid "Storage Volume"
+msgstr "Svazek úložiště"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Other"
+msgstr "Jiné"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Unused"
+msgstr "Nevyužito"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "File System"
+msgstr "Souborový systém"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Partition Table"
+msgstr "Tabulka diskových oddílů"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Raid"
+msgstr "RAID"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Encrypted"
+msgstr "Zašifrováno"
+
+#: soliddeviceengine.cpp:281 soliddeviceengine.cpp:283
+msgid "Usage"
+msgstr "Využití"
+
+#: soliddeviceengine.cpp:283
+#, kde-format
+msgid "Unknown"
+msgstr "Neznámé"
+
+#: soliddeviceengine.cpp:286
+msgid "Ignored"
+msgstr "Ignorováno"
+
+#: soliddeviceengine.cpp:287
+msgid "File System Type"
+msgstr "Typ souborového systému"
+
+#: soliddeviceengine.cpp:288
+msgid "Label"
+msgstr "Popisek"
+
+#: soliddeviceengine.cpp:289
+msgid "UUID"
+msgstr "UUID"
+
+#: soliddeviceengine.cpp:298
+msgid "Encrypted Container"
+msgstr "Šifrovaný kontejner"
+
+#: soliddeviceengine.cpp:310
+msgid "OpticalDisc"
+msgstr "Optický disk"
+
+#: soliddeviceengine.cpp:316
+msgid "Audio"
+msgstr "Audio"
+
+#: soliddeviceengine.cpp:319
+msgid "Data"
+msgstr "Data"
+
+#: soliddeviceengine.cpp:322
+msgid "Video CD"
+msgstr "Video CD"
+
+#: soliddeviceengine.cpp:325
+msgid "Super Video CD"
+msgstr "Super Video CD"
+
+#: soliddeviceengine.cpp:328
+msgid "Video DVD"
+msgstr "Video DVD"
+
+#: soliddeviceengine.cpp:331
+msgid "Video Blu Ray"
+msgstr "Video BluRay"
+
+#: soliddeviceengine.cpp:333
+msgid "Available Content"
+msgstr "Dostupný obsah"
+
+#: soliddeviceengine.cpp:336
+msgid "Unknown Disc Type"
+msgstr "Neznámý typ disku"
+
+#: soliddeviceengine.cpp:336
+msgid "CD Rom"
+msgstr "CD-ROM"
+
+#: soliddeviceengine.cpp:336
+msgid "CD Recordable"
+msgstr "Zapisovatelné CD"
+
+#: soliddeviceengine.cpp:337
+msgid "CD Rewritable"
+msgstr "Přepisovatelné CD"
+
+#: soliddeviceengine.cpp:337
+msgid "DVD Rom"
+msgstr "DVD-ROM"
+
+#: soliddeviceengine.cpp:337
+msgid "DVD Ram"
+msgstr "DVD-RAM"
+
+#: soliddeviceengine.cpp:338
+msgid "DVD Recordable"
+msgstr "Zapisovatelné DVD"
+
+#: soliddeviceengine.cpp:338
+msgid "DVD Rewritable"
+msgstr "Přepisovatelné DVD"
+
+#: soliddeviceengine.cpp:339
+msgid "DVD Plus Recordable"
+msgstr "Zapisovatelné DVD Plus"
+
+#: soliddeviceengine.cpp:339
+msgid "DVD Plus Rewritable"
+msgstr "Přepisovatelné DVD Plus"
+
+#: soliddeviceengine.cpp:340
+msgid "DVD Plus Recordable Duallayer"
+msgstr "DVD+R DL"
+
+#: soliddeviceengine.cpp:340
+msgid "DVD Plus Rewritable Duallayer"
+msgstr "DVD+RW DL"
+
+#: soliddeviceengine.cpp:341
+msgid "Blu Ray Rom"
+msgstr "Blu Ray Rom"
+
+#: soliddeviceengine.cpp:341
+msgid "Blu Ray Recordable"
+msgstr "Zapisovatelný Blu Ray"
+
+#: soliddeviceengine.cpp:342
+msgid "Blu Ray Rewritable"
+msgstr "Přepisovatelný Blu Ray"
+
+#: soliddeviceengine.cpp:342
+msgid "HD DVD Rom"
+msgstr "HD DVD-ROM"
+
+#: soliddeviceengine.cpp:343
+msgid "HD DVD Recordable"
+msgstr "Zapisovatelné HD DVD"
+
+#: soliddeviceengine.cpp:343
+msgid "HD DVD Rewritable"
+msgstr "Přepisovatelné HD DVD"
+
+#: soliddeviceengine.cpp:345
+msgid "Disc Type"
+msgstr "Typ disku"
+
+#: soliddeviceengine.cpp:346
+msgid "Appendable"
+msgstr "Připojitelný"
+
+#: soliddeviceengine.cpp:347
+msgid "Blank"
+msgstr "Prázdný"
+
+#: soliddeviceengine.cpp:348
+msgid "Rewritable"
+msgstr "Přepisovatelný"
+
+#: soliddeviceengine.cpp:349
+msgid "Capacity"
+msgstr "Kapacita"
+
+#: soliddeviceengine.cpp:357
+msgid "Camera"
+msgstr "Fotoaparát"
+
+#: soliddeviceengine.cpp:359 soliddeviceengine.cpp:373
+msgid "Supported Protocols"
+msgstr "Podporované protokoly"
+
+#: soliddeviceengine.cpp:360 soliddeviceengine.cpp:374
+msgid "Supported Drivers"
+msgstr "Podporované ovladače"
+
+#: soliddeviceengine.cpp:371
+msgid "Portable Media Player"
+msgstr "Přenosný přehrávač médií"
+
+#: soliddeviceengine.cpp:385
+msgid "Battery"
+msgstr "Baterie"
+
+#: soliddeviceengine.cpp:388
+msgid "Unknown Battery"
+msgstr "Neznámá baterie"
+
+#: soliddeviceengine.cpp:388
+msgid "PDA Battery"
+msgstr "PDA baterie"
+
+#: soliddeviceengine.cpp:388
+msgid "UPS Battery"
+msgstr "UPS baterie"
+
+#: soliddeviceengine.cpp:389
+msgid "Primary Battery"
+msgstr "Primární baterie"
+
+#: soliddeviceengine.cpp:389
+msgid "Mouse Battery"
+msgstr "Baterie myši"
+
+#: soliddeviceengine.cpp:390
+msgid "Keyboard Battery"
+msgstr "Baterie klávesnice"
+
+#: soliddeviceengine.cpp:390
+msgid "Keyboard Mouse Battery"
+msgstr "Baterie myši/klávesnice"
+
+#: soliddeviceengine.cpp:391
+msgid "Camera Battery"
+msgstr "Baterie fotoaparátu"
+
+#: soliddeviceengine.cpp:391
+msgid "Phone Battery"
+msgstr "Baterie telefonu"
+
+#: soliddeviceengine.cpp:391
+msgid "Monitor Battery"
+msgstr "Monitorovat baterii"
+
+#: soliddeviceengine.cpp:392
+msgid "Gaming Input Battery"
+msgstr "Baterie herního ovladače"
+
+#: soliddeviceengine.cpp:392
+msgid "Bluetooth Battery"
+msgstr "Baterie Bluetooth"
+
+#: soliddeviceengine.cpp:395
+msgid "Not Charging"
+msgstr "Nenabíjí se"
+
+#: soliddeviceengine.cpp:395
+msgid "Charging"
+msgstr "Nabíjí se"
+
+#: soliddeviceengine.cpp:395
+msgid "Discharging"
+msgstr "Vybíjí se"
+
+#: soliddeviceengine.cpp:396
+msgid "Fully Charged"
+msgstr "Plně nabitá"
+
+#: soliddeviceengine.cpp:398
+msgid "Plugged In"
+msgstr "Připojena"
+
+#: soliddeviceengine.cpp:399
+msgid "Type"
+msgstr "Typ"
+
+#: soliddeviceengine.cpp:400
+msgid "Charge Percent"
+msgstr "Procento nabití"
+
+#: soliddeviceengine.cpp:401
+msgid "Rechargeable"
+msgstr "Nabíjecí"
+
+#: soliddeviceengine.cpp:402
+msgid "Charge State"
+msgstr "Stav nabití"
+
+#: soliddeviceengine.cpp:427
+msgid "Type Description"
+msgstr "Popis typu"
+
+#: soliddeviceengine.cpp:432
+msgid "Device Types"
+msgstr "Typy zařízení"
+
+#: soliddeviceengine.cpp:456 soliddeviceengine.cpp:553
+msgid "Size"
+msgstr "Velikost"
+
+#: soliddeviceengine.cpp:535
+#, kde-format
+msgid "Filesystem is not responding"
+msgstr "Souborový systém neodpovídá"
+
+#: soliddeviceengine.cpp:535
+#, kde-format
+msgid "Filesystem mounted at '%1' is not responding"
+msgstr "Souborový systém připojeny v '%1' neodpovídá"
+
+#: soliddeviceengine.cpp:551
+msgid "Free Space"
+msgstr "Volné místo"
+
+#: soliddeviceengine.cpp:552
+msgid "Free Space Text"
+msgstr "Text volného místa"
+
+#: soliddeviceengine.cpp:554
+msgid "Size Text"
+msgstr ""
+
+#: soliddeviceengine.cpp:580
+msgid "Temperature"
+msgstr "Teplota"
+
+#: soliddeviceengine.cpp:581
+msgid "Temperature Unit"
+msgstr "Jednotka teploty"
+
+#: soliddeviceengine.cpp:625 soliddeviceengine.cpp:629
+msgid "In Use"
+msgstr "Používá se"

@@ -1,0 +1,43 @@
+# Indonesian translations for plasma_runner_services package.
+# Copyright (C) 2009 This_file_is_part_of_KDE
+# This file is distributed under the same license as the plasma_runner_services package.
+# Andhika Padmawan <andhika.padmawan@gmail.com>, 2009-2014.
+# Wantoyo <wantoyek@gmail.com>, 2017, 2018, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_services\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-19 00:47+0000\n"
+"PO-Revision-Date: 2019-01-18 19:21+0700\n"
+"Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
+"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: servicerunner.cpp:349
+#, kde-format
+msgctxt ""
+"Jump list search result, %1 is action (eg. open new tab), %2 is application "
+"(eg. browser)"
+msgid "%1 - %2"
+msgstr "%2 - %1"
+
+#: servicerunner.cpp:394
+#, kde-format
+msgid "Finds applications whose name or description match :q:"
+msgstr "Temukan aplikasi yang nama atau deskripsinya cocok :q:"
+
+#, fuzzy
+#~| msgid "System Settings"
+#~ msgid "System Information"
+#~ msgstr "System Settings"
+
+#~ msgid "System Settings"
+#~ msgstr "System Settings"
+
+#~ msgid "Applications"
+#~ msgstr "Aplikasi"

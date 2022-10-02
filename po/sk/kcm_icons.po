@@ -1,0 +1,377 @@
+# translation of kcmicons.po to Slovak
+# Marián Čavojský <cavojsky@soria-grey.sk>, 2000.
+# Branislav Gajdoš <brian@linuxee.sk>, 2000.
+# Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>,2001,2002.
+# Stanislav Visnovsky <stano@ms.mff.cuni.cz>, 2002.
+# Stanislav Visnovsky <visnovsky@kde.org>, 2003, 2004.
+# Richard Fric <Richard.Fric@kdemail.net>, 2006, 2009.
+# Miroslav David <mirodav@gmail.com>, 2009.
+# Roman Paholík <wizzardsk@gmail.com>, 2012, 2014, 2016, 2017.
+# Mthw <jari_45@hotmail.com>, 2018.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmicons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"PO-Revision-Date: 2021-09-15 18:45+0200\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.08.1\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: iconsizecategorymodel.cpp:14
+#, kde-format
+msgid "Toolbar"
+msgstr "Panel nástrojov"
+
+#: iconsizecategorymodel.cpp:15
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Hlavný panel nástrojov"
+
+#: iconsizecategorymodel.cpp:16
+#, kde-format
+msgid "Small Icons"
+msgstr "Malé ikony"
+
+#: iconsizecategorymodel.cpp:17
+#, kde-format
+msgid "Panel"
+msgstr "Panel"
+
+#: iconsizecategorymodel.cpp:18
+#, kde-format
+msgid "Dialogs"
+msgstr "Dialógy"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr "Názov aktuálnej témy ikon"
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr "Veľkosť ikon na pracovnej ploche"
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr "Veľkosť ikon panela nástrojov"
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, kde-format
+msgid "Main toolbar icons size"
+msgstr "Veľkosť ikon panelu nástrojov"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, kde-format
+msgid "Small icons size"
+msgstr "Veľkosť malých ikon"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr "Veľkosť ikon panela"
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr "Veľkosť ikon dialógov"
+
+#: main.cpp:182
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Nemôžem vytvoriť dočasný súbor."
+
+#: main.cpp:193
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Nepodarilo sa stiahnuť archív témy ikon: %1"
+
+#: main.cpp:207
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "Súbor nie je platný archív tém ikon."
+
+#: main.cpp:212
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr ""
+"Počas inštalácie nastal problém, avšak väčšina tém z archívu bola "
+"nainštalovaná"
+
+#: main.cpp:216
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "Téma úspešne nainštalovaná."
+
+#: main.cpp:260
+#, kde-format
+msgid "Installing icon themes…"
+msgstr "Inštalujem témy ikon..."
+
+#: main.cpp:270
+#, kde-format
+msgid "Installing %1 theme…"
+msgstr "Inštalujem tému %1 ..."
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr "Tento modul vám umožnuje vybrať ikony pre vašu plochu."
+
+#: package/contents/ui/main.qml:147
+#, kde-format
+msgid "Remove Icon Theme"
+msgstr "Odstrániť tému ikon"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Restore Icon Theme"
+msgstr "Obnoviť tému ikon"
+
+#: package/contents/ui/main.qml:228
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr "Nastaviť veľkosť ikon"
+
+#: package/contents/ui/main.qml:246
+#, kde-format
+msgid "Install from File…"
+msgstr "Nainštalovať zo súboru..."
+
+#: package/contents/ui/main.qml:251
+#, kde-format
+msgid "Get New Icons…"
+msgstr "Získať nové ikony..."
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Open Theme"
+msgstr "Otvoriť tému"
+
+#: package/contents/ui/main.qml:281
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr "Súbory tém (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Icon theme is already used"
+#~ msgstr "Téma ikon je už použitá"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Pavol Cvengroš,Miroslav Dávid"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "orpheus@hq.alert.sk,mirodav@gmail.com"
+
+#~ msgid "Icons"
+#~ msgstr "Ikony"
+
+#~ msgid "Icons Control Panel Module"
+#~ msgstr "Modul ovládacieho centra pre ikony"
+
+#~ msgid "(c) 2000-2003 Geert Jansen"
+#~ msgstr "(c) 2000-2003 Geert Jansen"
+
+#~ msgid "Geert Jansen"
+#~ msgstr "Geert Jansen"
+
+#~ msgid "Antonio Larrosa Jimenez"
+#~ msgstr "Antonio Larrosa Jimenez"
+
+#~ msgid "Torsten Rahn"
+#~ msgstr "Torsten Rahn"
+
+#~ msgid "Jonathan Riddell"
+#~ msgstr "Jonathan Riddell"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Kai Uwe Broulik"
+
+#~ msgid "Desktop"
+#~ msgstr "Plocha"
+
+#~ msgid "Download New Icon Themes"
+#~ msgstr "Stiahnuť nové témy ikon"
+
+#~ msgid "Use of Icon"
+#~ msgstr "Použitie ikony"
+
+#~ msgctxt "@label The icon rendered by default"
+#~ msgid "Default"
+#~ msgstr "Štandardná"
+
+#~ msgctxt "@label The icon rendered as active"
+#~ msgid "Active"
+#~ msgstr "Aktívna"
+
+#~ msgctxt "@label The icon rendered as disabled"
+#~ msgid "Disabled"
+#~ msgstr "Zakázaná"
+
+#~ msgid "Size:"
+#~ msgstr "Veľkosť:"
+
+#~ msgid "Set Effect..."
+#~ msgstr "Nastaviť efekt..."
+
+#~ msgid "All Icons"
+#~ msgstr "Všetky ikony"
+
+#~ msgid "Setup Default Icon Effect"
+#~ msgstr "Nastavenie efektu pre štandardnú ikonu"
+
+#~ msgid "Setup Active Icon Effect"
+#~ msgstr "Nastavenie efektu pre aktívnu ikonu"
+
+#~ msgid "Setup Disabled Icon Effect"
+#~ msgstr "Nastavenie efektu pre zakázanú ikonu"
+
+#~ msgid "&Effect:"
+#~ msgstr "&Efekt:"
+
+#~ msgid "No Effect"
+#~ msgstr "Bez efektu"
+
+#~ msgid "To Gray"
+#~ msgstr "Zošednúť"
+
+#~ msgid "Colorize"
+#~ msgstr "Zafarbiť"
+
+#~ msgid "Gamma"
+#~ msgstr "Zjasniť"
+
+#~ msgid "Desaturate"
+#~ msgstr "Odfarbiť"
+
+#~ msgid "To Monochrome"
+#~ msgstr "Čierno-biele"
+
+#~ msgid "&Semi-transparent"
+#~ msgstr "&Polopriesvitné"
+
+#~ msgid "Preview"
+#~ msgstr "Náhľad"
+
+#~ msgid "Effect Parameters"
+#~ msgstr "Parametre efektu"
+
+#~ msgid "&Amount:"
+#~ msgstr "&Úroveň:"
+
+#~ msgid "Co&lor:"
+#~ msgstr "&Farba:"
+
+#~ msgid "&Second color:"
+#~ msgstr "&Druhá farba:"
+
+#~ msgid "Name"
+#~ msgstr "Meno"
+
+#~ msgid "Description"
+#~ msgstr "Popis"
+
+#~ msgid "Install a theme archive file you already have locally"
+#~ msgstr "Nainštalovať tému z lokálneho súboru"
+
+#~ msgid ""
+#~ "If you already have a theme archive locally, this button will unpack it "
+#~ "and make it available for KDE applications"
+#~ msgstr ""
+#~ "Ak už máte lokálny súbor s témou, toto tlačidlo ho rozbalí a umožní "
+#~ "používať tému KDE aplikáciám."
+
+#~ msgid "Get new themes from the Internet"
+#~ msgstr "Získať nové témy z Internetu"
+
+#~ msgid ""
+#~ "You need to be connected to the Internet to use this action. A dialog "
+#~ "will display a list of themes from the http://www.kde.org website. "
+#~ "Clicking the Install button associated with a theme will install this "
+#~ "theme locally."
+#~ msgstr ""
+#~ "Pre použitie tejto akcie musíte byť pripojení k Internetu. Dialógové okno "
+#~ "zobrazí zoznam tém z webstránky http://www.kde.org. Kliknutím na tlačidlo "
+#~ "Nainštalovať sa vybraná téma nainštaluje."
+
+#~ msgid "Remove the selected theme from your disk"
+#~ msgstr "Odstráni vybranú tému z vášho disku."
+
+#~ msgid "This will remove the selected theme from your disk."
+#~ msgstr "Toto odstráni vybranú tému z vášho disku."
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "Zadajte URL témy"
+
+#~ msgid ""
+#~ "Unable to download the icon theme archive;\n"
+#~ "please check that address %1 is correct."
+#~ msgstr ""
+#~ "Nepodarilo sa stiahnuť archív témy;\n"
+#~ "prosím overte, že adresa %1 je správna."
+
+#~ msgid "<qt>Installing <strong>%1</strong> theme</qt>"
+#~ msgstr "<qt>Inštalujem tému <strong>%1</strong></qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <strong>%1</strong> icon theme?"
+#~ "<br /><br />This will delete the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>Naozaj chcete odstrániť tému ikon <strong>%1</strong>?<br /><br /> "
+#~ "Tým odstránite aj súbory nainštalované touto témou.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Potvrdenie"
+
+#~ msgid "&Theme"
+#~ msgstr "&Téma"
+
+#~ msgid "Ad&vanced"
+#~ msgstr "&Pokročilé"
+
+#~ msgid ""
+#~ "<h1>Icons</h1>This module allows you to choose the icons for your desktop."
+#~ "<p>To choose an icon theme, click on its name and apply your choice by "
+#~ "pressing the \"Apply\" button below. If you do not want to apply your "
+#~ "choice you can press the \"Reset\" button to discard your changes.</"
+#~ "p><p>By pressing the \"Install Theme File...\" button you can install "
+#~ "your new icon theme by writing its location in the box or browsing to the "
+#~ "location. Press the \"OK\" button to finish the installation.</p><p>The "
+#~ "\"Remove Theme\" button will only be activated if you select a theme that "
+#~ "you installed using this module. You are not able to remove globally "
+#~ "installed themes here.</p><p>You can also specify effects that should be "
+#~ "applied to the icons.</p>"
+#~ msgstr ""
+#~ "<h1>Ikony</h1>Tento modul umožňuje vybrať ikony pre vaše prostredie."
+#~ "<p>Tému ikon vyberiete kliknutím na jej meno a stlačením tlačidla \"Použiť"
+#~ "\". Ak zmeny použiť nechcete, môžete stlačiť \"Vrátiť pôvodné\" a tým "
+#~ "zahodiť všetky zmeny.</p><p>Stlačením \"Nainštalovať novú tému\" je možné "
+#~ "pridať novú tému zadaním jej umiestnenia. Potom stlačte \"OK\" pre "
+#~ "dokončenie inštalácie</p><p>Tlačidlo \"Odstrániť tému\" je aktívne iba ak "
+#~ "označíte tému, ktorú ste nainštalovali pomocou tohto modulu. Nie je možné "
+#~ "odstrániť globálne témy.</p><p>Môžete zadať aj efekty, ktoré sa majú na "
+#~ "ikony použiť.</p>"
+
+#~ msgid "Animate icons"
+#~ msgstr "Animovať ikony"
+
+#~ msgid "Select the icon theme you want to use:"
+#~ msgstr "Vyberte tému ikon, ktorú chcete použiť:"

@@ -1,0 +1,254 @@
+# translation of ksmserver.po to icelandic
+# Íslensk þýðing ksmserver.po
+# Copyright (C) 2000,2003, 2005, 2008, 2009 Free Software Foundation, Inc.
+#
+# Bjarni R. Einarsson <bre@netverjar.is>, 2000.
+# Richard Allen <ra@ra.is>, 2000.
+# Pjetur G. Hjaltason <pjetur@pjetur.net>, 2003.
+# Arnar Leósson <leosson@frisurf.no>, 2003.
+# Arnar Leosson <leosson@frisurf.no>, 2005.
+# Sveinn í Felli <sveinki@nett.is>, 2008, 2009, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: ksmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-22 00:47+0000\n"
+"PO-Revision-Date: 2022-08-25 10:06+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"Language-Team: Icelandic\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.12.3\n"
+"Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
+"\n"
+"\n"
+
+#: logout.cpp:344
+#, kde-format
+msgid "Logout canceled by '%1'"
+msgstr "Hætt við útskráningu af '%1'"
+
+#: main.cpp:117
+#, kde-format
+msgid "$HOME not set!"
+msgstr ""
+
+#: main.cpp:121 main.cpp:127
+#, kde-format
+msgid "$HOME directory (%1) does not exist."
+msgstr ""
+
+#: main.cpp:123
+#, kde-format
+msgid "No write access to $HOME directory (%1)."
+msgstr ""
+
+#: main.cpp:129
+#, kde-format
+msgid "No read access to $HOME directory (%1)."
+msgstr ""
+
+#: main.cpp:133
+#, kde-format
+msgid "$HOME directory (%1) is out of disk space."
+msgstr "HOME-möppu (%1) vantar diskpláss."
+
+#: main.cpp:136
+#, kde-format
+msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+msgstr ""
+
+#: main.cpp:149 main.cpp:184
+#, kde-format
+msgid "No write access to '%1'."
+msgstr "Enginn skrifaðgangur að '%1'."
+
+#: main.cpp:151 main.cpp:186
+#, kde-format
+msgid "No read access to '%1'."
+msgstr "Enginn lesaðgangur að '%1'."
+
+#: main.cpp:159 main.cpp:172
+#, kde-format
+msgid "Temp directory (%1) is out of disk space."
+msgstr "Bráðabigðamöppu (%1) vantar diskpláss."
+
+#: main.cpp:162 main.cpp:175
+#, kde-format
+msgid ""
+"Writing to the temp directory (%2) failed with\n"
+"    the error '%1'"
+msgstr ""
+
+#: main.cpp:190
+#, kde-format
+msgid ""
+"The following installation problem was detected\n"
+"while trying to start Plasma:"
+msgstr ""
+
+#: main.cpp:193
+#, kde-format
+msgid ""
+"\n"
+"\n"
+"Plasma is unable to start.\n"
+msgstr ""
+"\n"
+"\n"
+"Tekst ekki að ræsa Plasma.\n"
+
+#: main.cpp:200
+#, kde-format
+msgid "Plasma Workspace installation problem!"
+msgstr "Vandamál við uppsetningu Plasma-vinnusvæðis!"
+
+#: main.cpp:236
+#, kde-format
+msgid ""
+"The reliable Plasma session manager that talks the standard X11R6 \n"
+"session management protocol (XSMP)."
+msgstr ""
+"Áreiðanlegi Plasma setustjórinn sem skilur almenna X11R6 "
+"setustjórnunarstaðalinn \n"
+"(e. session management protocol, XSMP)."
+
+#: main.cpp:240
+#, kde-format
+msgid "Restores the saved user session if available"
+msgstr "Heldur áfram með síðustu setu, ef hægt er"
+
+#: main.cpp:243
+#, kde-format
+msgid "Also allow remote connections"
+msgstr "Leyfa einnig utanaðkomandi tengingar"
+
+#: main.cpp:246
+#, kde-format
+msgid "Starts the session in locked mode"
+msgstr ""
+
+#: main.cpp:250
+#, kde-format
+msgid ""
+"Starts without lock screen support. Only needed if other component provides "
+"the lock screen."
+msgstr ""
+
+#: server.cpp:873
+#, kde-format
+msgid "Session Management"
+msgstr "Setustýring"
+
+#: server.cpp:876
+#, kde-format
+msgid "Log Out"
+msgstr "Skrá út"
+
+#: server.cpp:881
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "Skrá út án staðfestingar"
+
+#: server.cpp:886
+#, kde-format
+msgid "Halt Without Confirmation"
+msgstr "Stöðva tölvu án staðfestingar"
+
+#: server.cpp:891
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "Endurræsa tölvu án staðfestingar"
+
+#, fuzzy
+#~| msgid ""
+#~| "Starts 'wm' in case no other window manager is \n"
+#~| "participating in the session. Default is 'kwin'"
+#~ msgid ""
+#~ "Starts <wm> in case no other window manager is \n"
+#~ "participating in the session. Default is 'kwin'"
+#~ msgstr ""
+#~ "Ræsir gluggastjóra ef enginn gluggastjóri er \n"
+#~ "þegar þáttakandi í setunni.  Sjálfgefið er 'kwin'"
+
+#, fuzzy
+#~| msgid "&Logout"
+#~ msgid "Logout"
+#~ msgstr "S&krá út"
+
+#, fuzzy
+#~| msgid "Logging out in 1 second."
+#~| msgid_plural "Logging out in %1 seconds."
+#~ msgid "Sleeping in 1 second"
+#~ msgid_plural "Sleeping in %1 seconds"
+#~ msgstr[0] "Útskráning eftir 1 sekúndu."
+#~ msgstr[1] "Útskráning eftir %1 sekúndur."
+
+#~ msgid "Logging out in 1 second."
+#~ msgid_plural "Logging out in %1 seconds."
+#~ msgstr[0] "Útskráning eftir 1 sekúndu."
+#~ msgstr[1] "Útskráning eftir %1 sekúndur."
+
+#~ msgid "Turning off computer in 1 second."
+#~ msgid_plural "Turning off computer in %1 seconds."
+#~ msgstr[0] "Slökkva á tölvunni eftir 1 sekúndu."
+#~ msgstr[1] "Slökkva á tölvunni eftir %1 sekúndur."
+
+#~ msgid "Restarting computer in 1 second."
+#~ msgid_plural "Restarting computer in %1 seconds."
+#~ msgstr[0] "Endurræsa tölvu eftir 1 sekúndu."
+#~ msgstr[1] "Endurræsa tölvu eftir %1 sekúndur."
+
+#, fuzzy
+#~| msgid "&Turn Off Computer"
+#~ msgid "Turn Off Computer"
+#~ msgstr "Slökkva á &tölvunni"
+
+#, fuzzy
+#~| msgid "&Restart Computer"
+#~ msgid "Restart Computer"
+#~ msgstr "Endu&rræsa tölvu"
+
+#~ msgctxt "default option in boot loader"
+#~ msgid " (default)"
+#~ msgstr " (sjálfgefið)"
+
+#, fuzzy
+#~| msgid "&Cancel"
+#~ msgid "Cancel"
+#~ msgstr "Hæ&tta við"
+
+#~ msgid "&Standby"
+#~ msgstr "&Biðstaða"
+
+#~ msgid "Suspend to &RAM"
+#~ msgstr "Svæfa í minni (&RAM)"
+
+#~ msgid "Suspend to &Disk"
+#~ msgstr "Svæfa á &disk"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr ""
+#~ "Bjarni R. Einarsson, Richard Allen, Pjetur G. Hjaltason, Arnar Leósson, "
+#~ "Sveinn í Felli"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "bre@mmedia.is, ra@ra.is, pjetur@hugbun.is, leosson@freesurf.no, "
+#~ "sveinki@nett.is"
+
+#~ msgid "(C) 2000, The KDE Developers"
+#~ msgstr "(C) 2000, KDE forritararnir"
+
+#~ msgid "Matthias Ettrich"
+#~ msgstr "Matthias Ettrich"
+
+#~ msgid "Luboš Luňák"
+#~ msgstr "Luboš Luňák"
+
+#~ msgid "Maintainer"
+#~ msgstr "Umsjónarmaður"

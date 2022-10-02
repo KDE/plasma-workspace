@@ -1,0 +1,196 @@
+# translation of plasma_runner_sessions.po to Gujarati
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sweta Kothari <swkothar@redhat.com>, 2008, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_sessions\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-01 00:45+0000\n"
+"PO-Revision-Date: 2010-06-24 12:12+0530\n"
+"Last-Translator: Sweta Kothari <swkothar@redhat.com>\n"
+"Language-Team: Gujarati\n"
+"Language: gu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: sessionrunner.cpp:28 sessionrunner.cpp:64
+#, kde-format
+msgctxt "log out command"
+msgid "logout"
+msgstr "બહાર નીકળો"
+
+#: sessionrunner.cpp:28
+#, kde-format
+msgid "Logs out, exiting the current desktop session"
+msgstr "હાલનાં ડેસ્કટોપ સત્રમાંથી બહાર નીકાળે છે"
+
+#: sessionrunner.cpp:29 sessionrunner.cpp:81
+#, fuzzy, kde-format
+#| msgctxt "shutdown computer command"
+#| msgid "shutdown"
+msgctxt "shut down computer command"
+msgid "shut down"
+msgstr "બંધ કરો"
+
+#: sessionrunner.cpp:29
+#, kde-format
+msgid "Turns off the computer"
+msgstr "કમ્પ્યુટરને બંધ કરો"
+
+#: sessionrunner.cpp:33 sessionrunner.cpp:90
+#, kde-format
+msgctxt "lock screen command"
+msgid "lock"
+msgstr "તાળું"
+
+#: sessionrunner.cpp:33
+#, kde-format
+msgid "Locks the current sessions and starts the screen saver"
+msgstr "હાલનાં સત્રોને તાળું લગાવે છે અને સ્ક્રિન સેવર શરૂ કરે છે"
+
+#: sessionrunner.cpp:36 sessionrunner.cpp:72
+#, kde-format
+msgctxt "restart computer command"
+msgid "restart"
+msgstr "પુન:શરૂ કરો"
+
+#: sessionrunner.cpp:36
+#, kde-format
+msgid "Reboots the computer"
+msgstr "કમ્પ્યુટરને પુન:શરૂ કરો"
+
+#: sessionrunner.cpp:37 sessionrunner.cpp:73
+#, kde-format
+msgctxt "restart computer command"
+msgid "reboot"
+msgstr "પુન:શરૂ કરો"
+
+#: sessionrunner.cpp:40
+#, kde-format
+msgctxt "switch user command"
+msgid "switch"
+msgstr "કળ"
+
+#: sessionrunner.cpp:41
+#, kde-format
+msgctxt "switch user command"
+msgid "switch :q:"
+msgstr "કળ :q:"
+
+#: sessionrunner.cpp:42
+#, kde-format
+msgid ""
+"Switches to the active session for the user :q:, or lists all active "
+"sessions if :q: is not provided"
+msgstr ""
+"વપરાશકર્તા :q: માટે સક્રિય સત્ર પર જાય છે, અથવા જો :q: ન આપવામાં આવેલ હોય તો બધા "
+"સક્રિય સત્રોની યાદી આપે છે"
+
+#: sessionrunner.cpp:45 sessionrunner.cpp:130
+#, kde-format
+msgid "switch user"
+msgstr "વપરાશકર્તાની ફેરબદલી"
+
+#: sessionrunner.cpp:45
+#, kde-format
+msgid "Starts a new session as a different user"
+msgstr "બીજા વપરાશકર્તા તરીકે નવું સત્ર શરૂ કરો"
+
+#: sessionrunner.cpp:46 sessionrunner.cpp:130
+#, kde-format
+msgid "new session"
+msgstr "નવુ સત્ર"
+
+#: sessionrunner.cpp:50
+#, kde-format
+msgid "Lists all sessions"
+msgstr "બધા સત્રોની યાદી લે છે"
+
+#: sessionrunner.cpp:64
+#, kde-format
+msgid "log out"
+msgstr "બહાર નીકળો"
+
+#: sessionrunner.cpp:66
+#, kde-format
+msgctxt "log out command"
+msgid "Logout"
+msgstr "બહાર નીકળો"
+
+#: sessionrunner.cpp:75
+#, kde-format
+msgid "Restart the computer"
+msgstr "કમ્પ્યુટરને પુન:શરૂ કરો"
+
+#: sessionrunner.cpp:82
+#, fuzzy, kde-format
+#| msgctxt "shutdown computer command"
+#| msgid "shutdown"
+msgctxt "shut down computer command"
+msgid "shutdown"
+msgstr "બંધ કરો"
+
+#: sessionrunner.cpp:84
+#, fuzzy, kde-format
+#| msgid "Shutdown the computer"
+msgid "Shut down the computer"
+msgstr "કમ્પ્યુટરને બંધ કરો"
+
+#: sessionrunner.cpp:93
+#, kde-format
+msgid "Lock the screen"
+msgstr "સ્ક્રીનને લોક કરો"
+
+#: sessionrunner.cpp:115
+#, fuzzy, kde-format
+#| msgid "new session"
+msgctxt "User sessions"
+msgid "sessions"
+msgstr "નવુ સત્ર"
+
+#: sessionrunner.cpp:136
+#, fuzzy, kde-format
+#| msgid "switch user"
+msgid "Switch User"
+msgstr "વપરાશકર્તાની ફેરબદલી"
+
+#: sessionrunner.cpp:211
+#, kde-format
+msgid "Warning - New Session"
+msgstr "ચેતવણી - નવુ સત્ર"
+
+#: sessionrunner.cpp:212
+#, fuzzy, kde-format
+#| msgid ""
+#| "<p>You have chosen to open another desktop session.<br />The current "
+#| "session will be hidden and a new login screen will be displayed.<br />An "
+#| "F-key is assigned to each session; F%1 is usually assigned to the first "
+#| "session, F%2 to the second session and so on. You can switch between "
+#| "sessions by pressing Ctrl, Alt and the appropriate F-key at the same "
+#| "time. Additionally, the KDE Panel and Desktop menus have actions for "
+#| "switching between sessions.</p>"
+msgid ""
+"<p>You have chosen to open another desktop session.<br />The current session "
+"will be hidden and a new login screen will be displayed.<br />An F-key is "
+"assigned to each session; F%1 is usually assigned to the first session, F%2 "
+"to the second session and so on. You can switch between sessions by pressing "
+"Ctrl, Alt and the appropriate F-key at the same time. Additionally, the "
+"Plasma Panel and Desktop menus have actions for switching between sessions.</"
+"p>"
+msgstr ""
+"<p> તમે બીજા ડેસ્કટોપ સત્ર ખોલવા માટે પસંદ કરેલુ છે.<br />હાલનુ સત્ર છુપાયેલ હશે અને નવુ "
+"લોગીન સ્ક્રીન દર્શાવેલુ હશે.<br /> F-key એ દરેક સત્રને સોંપવામાં આવેલ છે; F%1 એ સામાન્ય "
+"રીતે પહેલા સત્રને સોંપવામાં આવેલ છે, F%2 એ બીજા સત્રને અને આ રીતે આગળ બધા અંત થાય છે. તમે "
+"Ctrl, Alt અને યોગ્ય F-key એજ સમય પર દબાવીને સત્રો વચ્ચે ફેરબદલી કરી શકો છો. "
+"વધારાના, KDE પેનલ અને ડેસ્કટોપ મેનુઓ પાસે સત્રો વચ્ચે ફેરબદલી માટે ક્રિયાઓ છે.</p>"
+
+#~ msgid "New Session"
+#~ msgstr "નવુ સત્ર"
+
+#~ msgid "&Start New Session"
+#~ msgstr "નવુ સત્ર શરૂ કરો (&S)"

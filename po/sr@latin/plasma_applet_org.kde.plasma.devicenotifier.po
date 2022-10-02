@@ -1,0 +1,168 @@
+# Translation of plasma_applet_org.kde.plasma.devicenotifier.po into Serbian.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2007, 2008, 2009, 2010, 2011, 2012, 2014, 2016.
+# Dalibor Djuric <daliborddjuric@gmail.com>, 2009, 2010, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-02-09 03:42+0100\n"
+"PO-Revision-Date: 2016-07-10 19:45+0200\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#: package/contents/config/config.qml:25
+#, kde-format
+msgid "General"
+msgstr "Opšte"
+
+#: package/contents/ui/configGeneral.qml:38
+#, kde-format
+msgid "Show:"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:39
+#, kde-format
+msgid "Removable devices only"
+msgstr "samo uklonjive uređaje"
+
+#: package/contents/ui/configGeneral.qml:44
+#, kde-format
+msgid "Non-removable devices only"
+msgstr "samo neuklonjive uređaje"
+
+#: package/contents/ui/configGeneral.qml:49
+#, kde-format
+msgid "All devices"
+msgstr "sve uređaje"
+
+#: package/contents/ui/configGeneral.qml:54
+#, kde-format
+msgid "Open popup when new device is plugged in"
+msgstr "Prikaži iskakač kad se utakne novi uređaj"
+
+#: package/contents/ui/DeviceItem.qml:190
+#, kde-format
+msgid ""
+"It is currently <b>not safe</b> to remove this device: applications may be "
+"accessing it. Click the eject button to safely remove this device."
+msgstr ""
+"Trenutno <b>nije bezbedno</b> ukloniti ovaj uređaj, jer mu programi možda "
+"pristupaju. Kliknite na dugme za izbacivanje da ga bezbedno uklonite."
+
+#: package/contents/ui/DeviceItem.qml:192
+#, kde-format
+msgid "This device is currently accessible."
+msgstr "Ovom uređaju se trenutno može pristupiti."
+
+#: package/contents/ui/DeviceItem.qml:197
+#, kde-format
+msgid ""
+"It is currently <b>not safe</b> to remove this device: applications may be "
+"accessing other volumes on this device. Click the eject button on these "
+"other volumes to safely remove this device."
+msgstr ""
+"Trenutno <b>nije bezbedno</b> ukloniti ovaj uređaj, jer programi možda "
+"pristupaju drugim skladištima na njemu. Kliknite na dugme za izbacivanje na "
+"tim drugim skladištima da bezbedno uklonite ovaj uređaj."
+
+#: package/contents/ui/DeviceItem.qml:199
+#, kde-format
+msgid "It is currently safe to remove this device."
+msgstr "Trenutno je bezbedno ukloniti ovaj uređaj."
+
+#: package/contents/ui/DeviceItem.qml:202
+#, kde-format
+msgid "This device is not currently accessible."
+msgstr "Ovom uređaju se trenutno ne može pristupiti."
+
+#: package/contents/ui/DeviceItem.qml:245
+#, kde-format
+msgctxt "@info:status Free disk space"
+msgid "%1 free"
+msgstr "%1 slobodno"
+
+#: package/contents/ui/DeviceItem.qml:271
+#, kde-format
+msgid "1 action for this device"
+msgid_plural "%1 actions for this device"
+msgstr[0] "%1 radnja za ovaj uređaj"
+msgstr[1] "%1 radnje za ovaj uređaj"
+msgstr[2] "%1 radnji za ovaj uređaj"
+msgstr[3] "radnja za ovaj uređaj"
+
+#: package/contents/ui/DeviceItem.qml:276
+#, kde-format
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Accessing..."
+msgstr "Pristupam..."
+
+#: package/contents/ui/DeviceItem.qml:278
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Removing is a less technical word for Unmounting; translation shoud be "
+#| "short and mean 'Currently unmounting this device'"
+#| msgid "Removing..."
+msgctxt ""
+"Removing is a less technical word for Unmounting; translation should be "
+"short and mean 'Currently unmounting this device'"
+msgid "Removing..."
+msgstr "Uklanjam..."
+
+#: package/contents/ui/devicenotifier.qml:62
+#, kde-format
+msgid "Most Recent Device"
+msgstr "Poslednji uređaj"
+
+#: package/contents/ui/devicenotifier.qml:62
+#, kde-format
+msgid "No Devices Available"
+msgstr "Nema dostupnih uređaja"
+
+#: package/contents/ui/devicenotifier.qml:239
+#, kde-format
+msgctxt "Open auto mounter kcm"
+msgid "Configure Removable Devices"
+msgstr "Podesi uklonjive uređaje"
+
+#: package/contents/ui/FullRepresentation.qml:46
+#, fuzzy, kde-format
+#| msgid "No Devices Available"
+msgid "No devices available"
+msgstr "Nema dostupnih uređaja"
+
+#: package/contents/ui/FullRepresentation.qml:124
+#, fuzzy, kde-format
+#| msgid "Click to safely remove this device."
+msgid "Click to safely remove all devices"
+msgstr "Kliknite da bezbedno uklonite ovaj uređaj."
+
+#: package/contents/ui/FullRepresentation.qml:125
+#, kde-format
+msgid "Remove all"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:202
+#, kde-format
+msgid "Click to access this device from other applications."
+msgstr "Kliknite da pristupite ovom uređaju iz drugih programa."
+
+#: package/contents/ui/FullRepresentation.qml:204
+#, kde-format
+msgid "Click to eject this disc."
+msgstr "Kliknite za izbacivanje ovog diska."
+
+#: package/contents/ui/FullRepresentation.qml:206
+#, kde-format
+msgid "Click to safely remove this device."
+msgstr "Kliknite da bezbedno uklonite ovaj uređaj."

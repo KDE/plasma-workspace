@@ -1,0 +1,3919 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Andrej Mernik <andrejm@ubuntu.si>, 2014, 2015, 2016.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-19 00:47+0000\n"
+"PO-Revision-Date: 2022-07-28 07:13+0200\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+"X-Generator: Lokalize 22.04.1\n"
+
+#: package/contents/config/config.qml:19
+#, kde-format
+msgid "Appearance"
+msgstr "Videz"
+
+#: package/contents/config/config.qml:24
+#, kde-format
+msgid "Calendar"
+msgstr "Koledar"
+
+#: package/contents/config/config.qml:29
+#: package/contents/ui/CalendarView.qml:589
+#, kde-format
+msgid "Time Zones"
+msgstr "Časovni pasovi"
+
+#: package/contents/ui/CalendarView.qml:102
+#, kde-format
+msgid "Events"
+msgstr "Dogodki"
+
+#: package/contents/ui/CalendarView.qml:110
+#, kde-format
+msgctxt "@action:button Add event"
+msgid "Add…"
+msgstr "Dodaj…"
+
+#: package/contents/ui/CalendarView.qml:114
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Add a new event"
+msgstr "Dodaj nov dogodek"
+
+#: package/contents/ui/CalendarView.qml:156
+#, kde-format
+msgctxt "Format: month year"
+msgid "%1 %2"
+msgstr "%1 %2"
+
+#: package/contents/ui/CalendarView.qml:190
+#, kde-format
+msgid "Keep Open"
+msgstr "Obdrži odprto"
+
+#: package/contents/ui/CalendarView.qml:215
+#, kde-format
+msgid "Days"
+msgstr "Dnevi"
+
+#: package/contents/ui/CalendarView.qml:220
+#, kde-format
+msgid "Months"
+msgstr "Meseci"
+
+#: package/contents/ui/CalendarView.qml:225
+#, kde-format
+msgid "Years"
+msgstr "Leta"
+
+#: package/contents/ui/CalendarView.qml:245
+#, kde-format
+msgid "Previous month"
+msgstr "Prejšnji mesec"
+
+#: package/contents/ui/CalendarView.qml:247
+#, kde-format
+msgid "Previous year"
+msgstr "Prejšnje leto"
+
+#: package/contents/ui/CalendarView.qml:249
+#, kde-format
+msgid "Previous decade"
+msgstr "Prejšnja dekada"
+
+#: package/contents/ui/CalendarView.qml:270
+#, kde-format
+msgctxt "Reset calendar to today"
+msgid "Today"
+msgstr "Danes"
+
+#: package/contents/ui/CalendarView.qml:271
+#, kde-format
+msgid "Reset calendar to today"
+msgstr "Ponovno nastavi koledar na danes"
+
+#: package/contents/ui/CalendarView.qml:287
+#, kde-format
+msgid "Next month"
+msgstr "Naslednji mesec"
+
+#: package/contents/ui/CalendarView.qml:289
+#, kde-format
+msgid "Next year"
+msgstr "Naslednje leto"
+
+#: package/contents/ui/CalendarView.qml:291
+#, kde-format
+msgid "Next decade"
+msgstr "Naslednja dekada"
+
+#: package/contents/ui/CalendarView.qml:556
+#, kde-format
+msgid "No events for today"
+msgstr "Za danes ni dogodkov"
+
+#: package/contents/ui/CalendarView.qml:557
+#, kde-format
+msgid "No events for this day"
+msgstr "Za ta dan ni dogodkov"
+
+#: package/contents/ui/CalendarView.qml:598
+#, kde-format
+msgid "Switch…"
+msgstr "Preklop…"
+
+#: package/contents/ui/CalendarView.qml:599
+#: package/contents/ui/CalendarView.qml:602
+#, kde-format
+msgid "Switch to another timezone"
+msgstr "Preklopi v drugi časovni pas"
+
+#: package/contents/ui/configAppearance.qml:51
+#, kde-format
+msgid "Information:"
+msgstr "Informacije:"
+
+#: package/contents/ui/configAppearance.qml:55
+#, kde-format
+msgid "Show date"
+msgstr "Pokaži datum"
+
+#: package/contents/ui/configAppearance.qml:63
+#, kde-format
+msgid "Adaptive location"
+msgstr "Adaptivna lokacija"
+
+#: package/contents/ui/configAppearance.qml:64
+#, kde-format
+msgid "Always beside time"
+msgstr "Vedno zraven časa"
+
+#: package/contents/ui/configAppearance.qml:65
+#, kde-format
+msgid "Always below time"
+msgstr "Vedno pod časom"
+
+#: package/contents/ui/configAppearance.qml:73
+#, kde-format
+msgid "Show seconds"
+msgstr "Pokaži sekunde"
+
+#: package/contents/ui/configAppearance.qml:81
+#, kde-format
+msgid "Show time zone:"
+msgstr "Pokaži časovni pas:"
+
+#: package/contents/ui/configAppearance.qml:86
+#, kde-format
+msgid "Only when different from local time zone"
+msgstr "Samo kadar je različno od krajevnega časovnega pasu"
+
+#: package/contents/ui/configAppearance.qml:91
+#, kde-format
+msgid "Always"
+msgstr "Vedno"
+
+#: package/contents/ui/configAppearance.qml:100
+#, kde-format
+msgid "Display time zone as:"
+msgstr "Pokaži časovni pas kot:"
+
+#: package/contents/ui/configAppearance.qml:105
+#, kde-format
+msgid "Code"
+msgstr "Koda"
+
+#: package/contents/ui/configAppearance.qml:106
+#, kde-format
+msgid "City"
+msgstr "Mesto"
+
+#: package/contents/ui/configAppearance.qml:107
+#, kde-format
+msgid "Offset from UTC time"
+msgstr "Odmik od UTC"
+
+#: package/contents/ui/configAppearance.qml:119
+#, kde-format
+msgid "Time display:"
+msgstr "Prikaz časa:"
+
+#: package/contents/ui/configAppearance.qml:124
+#, kde-format
+msgid "12-Hour"
+msgstr "12 urni"
+
+#: package/contents/ui/configAppearance.qml:125
+#: package/contents/ui/configCalendar.qml:58
+#, kde-format
+msgid "Use Region Defaults"
+msgstr "Uporabi privzete območne nastavitve"
+
+#: package/contents/ui/configAppearance.qml:126
+#, kde-format
+msgid "24-Hour"
+msgstr "24 urni"
+
+#: package/contents/ui/configAppearance.qml:133
+#, kde-format
+msgid "Change Regional Settings…"
+msgstr "Spremeni območne nastavitve…"
+
+#: package/contents/ui/configAppearance.qml:144
+#, kde-format
+msgid "Date format:"
+msgstr "Oblika datuma:"
+
+#: package/contents/ui/configAppearance.qml:152
+#, kde-format
+msgid "Long Date"
+msgstr "Dolg datum"
+
+#: package/contents/ui/configAppearance.qml:157
+#, kde-format
+msgid "Short Date"
+msgstr "Kratek datum"
+
+#: package/contents/ui/configAppearance.qml:162
+#, kde-format
+msgid "ISO Date"
+msgstr "Datum ISO"
+
+#: package/contents/ui/configAppearance.qml:167
+#, kde-format
+msgctxt "custom date format"
+msgid "Custom"
+msgstr "Po meri"
+
+#: package/contents/ui/configAppearance.qml:198
+#, kde-format
+msgid ""
+"<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
+"\">Time Format Documentation</a>"
+msgstr ""
+"<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
+"\">Dokumentacija formatov časa</a>"
+
+#: package/contents/ui/configAppearance.qml:222
+#, kde-format
+msgctxt "@label:group"
+msgid "Text display:"
+msgstr "Prikaz besedila:"
+
+#: package/contents/ui/configAppearance.qml:224
+#, kde-format
+msgctxt "@option:radio"
+msgid "Automatic"
+msgstr "Samodejni"
+
+#: package/contents/ui/configAppearance.qml:228
+#, kde-format
+msgctxt "@label"
+msgid ""
+"Text will follow the system font and expand to fill the available space."
+msgstr ""
+"Besedilo bo sledilo sistemskemu črkopisu in bo razširjeno, da zapolni "
+"razpoložljivi prostor."
+
+#: package/contents/ui/configAppearance.qml:237
+#, kde-format
+msgctxt "@option:radio setting for manually configuring the font settings"
+msgid "Manual"
+msgstr "Ročno"
+
+#: package/contents/ui/configAppearance.qml:247
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose Style…"
+msgstr "Izberi slog…"
+
+#: package/contents/ui/configAppearance.qml:260
+#, kde-format
+msgctxt "@info %1 is the font size, %2 is the font family"
+msgid "%1pt %2"
+msgstr "%1pt %2"
+
+#: package/contents/ui/configAppearance.qml:271
+#, kde-format
+msgctxt "@title:window"
+msgid "Choose a Font"
+msgstr "Izberite črkopis"
+
+#: package/contents/ui/configCalendar.qml:44
+#, kde-format
+msgid "General:"
+msgstr "Splošno:"
+
+#: package/contents/ui/configCalendar.qml:45
+#, kde-format
+msgid "Show week numbers"
+msgstr "Prikaži številke tednov"
+
+#: package/contents/ui/configCalendar.qml:50
+#, kde-format
+msgid "First day of week:"
+msgstr "Prvi dan v tednu:"
+
+#: package/contents/ui/configCalendar.qml:73
+#, kde-format
+msgid "Available Plugins:"
+msgstr "Razpoložljivi vstavki:"
+
+#: package/contents/ui/configTimeZones.qml:90
+#, kde-format
+msgid "Clock is currently using this time zone"
+msgstr "Ura trenutno uporablja ta časovni pas"
+
+#: package/contents/ui/configTimeZones.qml:100
+#, kde-format
+msgid "Switch Local Time Zone…"
+msgstr "Preklopi lokalni časovni pas…"
+
+#: package/contents/ui/configTimeZones.qml:109
+#, kde-format
+msgid "Remove this time zone"
+msgstr "Odstrani ta časovni pas"
+
+#: package/contents/ui/configTimeZones.qml:118
+#, kde-format
+msgid "System's Local Time Zone"
+msgstr "Sistemski lokalni časovni pas"
+
+#: package/contents/ui/configTimeZones.qml:118
+#, kde-format
+msgid "Additional Time Zones"
+msgstr "Dodatni časovni pasovi"
+
+#: package/contents/ui/configTimeZones.qml:131
+#, kde-format
+msgid ""
+"Add more time zones to display all of them in the applet's pop-up, or use "
+"one of them for the clock itself"
+msgstr ""
+"Dodajte več časovnih pasov, če jih želite prikazati v pojavnem oknu "
+"programčka ali uporabite enega izmed njih za samo uro"
+
+#: package/contents/ui/configTimeZones.qml:138
+#, kde-format
+msgid "Add Time Zones…"
+msgstr "Dodaj časovne pasove…"
+
+#: package/contents/ui/configTimeZones.qml:149
+#, kde-format
+msgid "Switch displayed time zone by scrolling over clock applet"
+msgstr ""
+"Prikazani časovni pas preklapljate tako, da se pomaknete nad apletom ure"
+
+#: package/contents/ui/configTimeZones.qml:160
+#, kde-format
+msgid ""
+"Note that using a different time zone for the clock does not change the "
+"systemwide local time zone. When you travel, switch the local time zone "
+"instead."
+msgstr ""
+"Upoštevajte, da uporaba drugega časovnega pasu za uro ne spremeni lokalnega "
+"sistemskega časovnega pasu. Ko potujete, namesto tega preklopite lokalni "
+"časovni pas."
+
+#: package/contents/ui/configTimeZones.qml:189
+#, kde-format
+msgid "Add More Timezones"
+msgstr "Dodaj več časovnih pasov"
+
+#: package/contents/ui/configTimeZones.qml:200
+#, kde-format
+msgid ""
+"At least one time zone needs to be enabled. Your local timezone was enabled "
+"automatically."
+msgstr ""
+"Omogočen mora biti vsaj en časovni pas. Vaš lokalni časovni pas je bil "
+"samodejno omogočen."
+
+#: package/contents/ui/configTimeZones.qml:225
+#, kde-format
+msgid "%1, %2 (%3)"
+msgstr "%1, %2 (%3)"
+
+#: package/contents/ui/configTimeZones.qml:225
+#, kde-format
+msgid "%1, %2"
+msgstr "%1, %2"
+
+#: package/contents/ui/main.qml:128
+#, kde-format
+msgid "Copy to Clipboard"
+msgstr "Kopiraj na odložišče"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "Adjust Date and Time…"
+msgstr "Prilagodi datum in čas…"
+
+#: package/contents/ui/main.qml:136
+#, kde-format
+msgid "Set Time Format…"
+msgstr "Nastavi obliko časa…"
+
+#: package/contents/ui/Tooltip.qml:31
+#, kde-format
+msgctxt "@info:tooltip %1 is a localized long date"
+msgid "Today is %1"
+msgstr "Danes je %1"
+
+#: plugin/clipboardmenu.cpp:107
+#, kde-format
+msgid "Other Calendars"
+msgstr "Ostali koledarji"
+
+#: plugin/clipboardmenu.cpp:115
+#, kde-format
+msgctxt "unix timestamp (seconds since 1.1.1970)"
+msgid "%1 (UNIX Time)"
+msgstr "%1 (UNIXov čas)"
+
+#: plugin/clipboardmenu.cpp:118
+#, kde-format
+msgctxt "for astronomers (days and decimals since ~7000 years ago)"
+msgid "%1 (Julian Date)"
+msgstr "%1 (Julijanski datum)"
+
+#: plugin/timezonemodel.cpp:141
+#, kde-format
+msgctxt "This means \"Local Timezone\""
+msgid "Local"
+msgstr "Krajevni"
+
+#: plugin/timezonemodel.cpp:143
+#, kde-format
+msgid "System's local time zone"
+msgstr "Sistemski lokalni časovni pas"
+
+#~ msgctxt "Use default font"
+#~ msgid "Default"
+#~ msgstr "Privzeta"
+
+#~ msgid "Font style:"
+#~ msgstr "Slog pisave:"
+
+#~ msgid "Bold text"
+#~ msgstr "Krepko besedilo"
+
+#~ msgid "Italic text"
+#~ msgstr "Ležeče besedilo"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Abidjan"
+#~ msgstr "Abidžan"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Accra"
+#~ msgstr "Akra"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Adak"
+#~ msgstr "Adak"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Addis Ababa"
+#~ msgstr "Adis Abeba"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Adelaide"
+#~ msgstr "Adelaide"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Aden"
+#~ msgstr "Aden"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Algiers"
+#~ msgstr "Alžir"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Almaty"
+#~ msgstr "Almati"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Amman"
+#~ msgstr "Aman"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Amsterdam"
+#~ msgstr "Amsterdam"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Anadyr"
+#~ msgstr "Anadir"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Anchorage"
+#~ msgstr "Anchorage"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Andorra"
+#~ msgstr "Andora"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Anguilla"
+#~ msgstr "Angvila"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Antananarivo"
+#~ msgstr "Antananarivo"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Antigua"
+#~ msgstr "Antigva"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Apia"
+#~ msgstr "Apia"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Aqtau"
+#~ msgstr "Aktau"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Aqtobe"
+#~ msgstr "Aktobe"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Araguaina"
+#~ msgstr "Araguaina"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Aruba"
+#~ msgstr "Aruba"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Ashgabat"
+#~ msgstr "Ašhabad"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Asmara"
+#~ msgstr "Asmara"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Astrakhan"
+#~ msgstr "Astrakhan"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Asuncion"
+#~ msgstr "Asuncion"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Athens"
+#~ msgstr "Atene"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Atikokan"
+#~ msgstr "Antitokan"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Atyrau"
+#~ msgstr "Atyrau"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Auckland"
+#~ msgstr "Auckland"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Azores"
+#~ msgstr "Azori"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Baghdad"
+#~ msgstr "Bagdad"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Bahia Banderas"
+#~ msgstr "Bahia Banderas"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Bahia"
+#~ msgstr "Bahia"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Bahrain"
+#~ msgstr "Bahrajn"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Baku"
+#~ msgstr "Baku"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Bamako"
+#~ msgstr "Bamako"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Bangkok"
+#~ msgstr "Bangkok"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Bangui"
+#~ msgstr "Bangui"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Banjul"
+#~ msgstr "Banjul"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Barbados"
+#~ msgstr "Barbados"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Barnaul"
+#~ msgstr "Barnaul"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Beirut"
+#~ msgstr "Bejrut"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Belem"
+#~ msgstr "Belem"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Belgrade"
+#~ msgstr "Beograd"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Belize"
+#~ msgstr "Belize"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Berlin"
+#~ msgstr "Berlin"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Bermuda"
+#~ msgstr "Bermudi"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Beulah"
+#~ msgstr "Beulah"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Bishkek"
+#~ msgstr "Biškek"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Bissau"
+#~ msgstr "Bissau"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Blanc-Sablon"
+#~ msgstr "Blanc-Sablon"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Blantyre"
+#~ msgstr "Blantyre"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Boa Vista"
+#~ msgstr "Boa Vista"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Bogota"
+#~ msgstr "Bogota"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Boise"
+#~ msgstr "Boise"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Bougainville"
+#~ msgstr "Bougainville"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Bratislava"
+#~ msgstr "Bratislava"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Brazzaville"
+#~ msgstr "Brazzaville"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Brisbane"
+#~ msgstr "Brisbane"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Broken Hill"
+#~ msgstr "Broken Hill"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Brunei"
+#~ msgstr "Brunej"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Brussels"
+#~ msgstr "Bruselj"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Bucharest"
+#~ msgstr "Bukarešta"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Budapest"
+#~ msgstr "Budimpešta"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Buenos Aires"
+#~ msgstr "Buenos Aires"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Bujumbura"
+#~ msgstr "Bujumbura"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Busingen"
+#~ msgstr "Busingen"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Cairo"
+#~ msgstr "Kairo"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Cambridge Bay"
+#~ msgstr "Cambridge Bay"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Campo Grande"
+#~ msgstr "Campo Grande"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Canary"
+#~ msgstr "Kanari"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Cancun"
+#~ msgstr "Cancun"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Cape Verde"
+#~ msgstr "Zelenortski otoki"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Caracas"
+#~ msgstr "Caracas"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Casablanca"
+#~ msgstr "Casablanca"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Casey"
+#~ msgstr "Casey"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Catamarca"
+#~ msgstr "Catamarca"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Cayenne"
+#~ msgstr "Cayenne"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Cayman"
+#~ msgstr "Kajmanski"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Center"
+#~ msgstr "Center"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Ceuta"
+#~ msgstr "Ceuta"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Chagos"
+#~ msgstr "Chagos"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Chatham"
+#~ msgstr "Chatham"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Chicago"
+#~ msgstr "Chicago"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Chihuahua"
+#~ msgstr "Chihuahua"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Chisinau"
+#~ msgstr "Kišinjev"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Chita"
+#~ msgstr "Chita"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Choibalsan"
+#~ msgstr "Čojbalsan"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Chongqing"
+#~ msgstr "Čongking"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Christmas"
+#~ msgstr "Božični"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Chuuk"
+#~ msgstr "Chuuk"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Cocos"
+#~ msgstr "Kokosovi"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Colombo"
+#~ msgstr "Colombo"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Comoro"
+#~ msgstr "Komori"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Conakry"
+#~ msgstr "Conakry"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Copenhagen"
+#~ msgstr "Kopenhagen"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Cordoba"
+#~ msgstr "Cordoba"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Costa Rica"
+#~ msgstr "Kostarika"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Creston"
+#~ msgstr "Creston"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Cuiaba"
+#~ msgstr "Cuiaba"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Curacao"
+#~ msgstr "Curacao"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Currie"
+#~ msgstr "Currie"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Dakar"
+#~ msgstr "Dakar"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Damascus"
+#~ msgstr "Damask"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Danmarkshavn"
+#~ msgstr "Danmarkshavn"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Dar es Salaam"
+#~ msgstr "Dar es Salaam"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Darwin"
+#~ msgstr "Darwin"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Davis"
+#~ msgstr "Davis"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Dawson Creek"
+#~ msgstr "Dawson Creek"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Dawson"
+#~ msgstr "Dawson"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Denver"
+#~ msgstr "Denver"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Detroit"
+#~ msgstr "Detroit"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Dhaka"
+#~ msgstr "Daka"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Dili"
+#~ msgstr "Dili"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Djibouti"
+#~ msgstr "Džibuti"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Dominica"
+#~ msgstr "Dominika"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Douala"
+#~ msgstr "Douala"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Dubai"
+#~ msgstr "Dubaj"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Dublin"
+#~ msgstr "Dublin"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Dumont d’Urville"
+#~ msgstr "Dumont d’Urville"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Dushanbe"
+#~ msgstr "Dušanbe"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Easter"
+#~ msgstr "Velikonočni"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Edmonton"
+#~ msgstr "Edmonton"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Efate"
+#~ msgstr "Efate"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Eirunepe"
+#~ msgstr "Eirunepe"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "El Aaiun"
+#~ msgstr "Laayoune"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "El Salvador"
+#~ msgstr "Salvador"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Enderbury"
+#~ msgstr "Enderbury"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Eucla"
+#~ msgstr "Eucla"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Fakaofo"
+#~ msgstr "Fakaofo"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Famagusta"
+#~ msgstr "Famagusta"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Faroe"
+#~ msgstr "Ferski"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Fiji"
+#~ msgstr "Fidži"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Fort Nelson"
+#~ msgstr "Fort Nelson"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Fortaleza"
+#~ msgstr "Fortaleza"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Freetown"
+#~ msgstr "Freetown"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Funafuti"
+#~ msgstr "Funafuti"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Gaborone"
+#~ msgstr "Gaborone"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Galapagos"
+#~ msgstr "Galapaški otoki"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Gambier"
+#~ msgstr "Gambier"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Gaza"
+#~ msgstr "Gaza"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Gibraltar"
+#~ msgstr "Gibraltar"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Glace Bay"
+#~ msgstr "Glace Bay"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Godthab"
+#~ msgstr "Nuuk"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Goose Bay"
+#~ msgstr "Goose Bay"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Grand Turk"
+#~ msgstr "Grand Turk"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Grenada"
+#~ msgstr "Grenada"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Guadalcanal"
+#~ msgstr "Guadalcanal"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Guadeloupe"
+#~ msgstr "Gvadelup"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Guam"
+#~ msgstr "Guam"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Guatemala"
+#~ msgstr "Gvatemala"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Guayaquil"
+#~ msgstr "Guayaquil"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Guernsey"
+#~ msgstr "Guernsey"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Guyana"
+#~ msgstr "Gvajana"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Halifax"
+#~ msgstr "Halifax"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Harare"
+#~ msgstr "Harare"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Harbin"
+#~ msgstr "Harbin"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Havana"
+#~ msgstr "Havana"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Hebron"
+#~ msgstr "Hebron"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Helsinki"
+#~ msgstr "Helsinki"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Hermosillo"
+#~ msgstr "Hermosillo"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Ho Chi Minh"
+#~ msgstr "Hošiminh"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Hobart"
+#~ msgstr "Hobart"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Hong Kong"
+#~ msgstr "Hong Kong"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Honolulu"
+#~ msgstr "Honolulu"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Hovd"
+#~ msgstr "Hovd"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Indianapolis"
+#~ msgstr "Indianapolis"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Inuvik"
+#~ msgstr "Inuvik"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Iqaluit"
+#~ msgstr "Iqaluit"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Irkutsk"
+#~ msgstr "Irkutsk"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Isle of Man"
+#~ msgstr "Otok Man"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Istanbul"
+#~ msgstr "Carigrad"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Jakarta"
+#~ msgstr "Džakarta"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Jamaica"
+#~ msgstr "Jamajka"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Jayapura"
+#~ msgstr "Jayapura"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Jersey"
+#~ msgstr "Jersey"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Jerusalem"
+#~ msgstr "Jeruzalem"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Johannesburg"
+#~ msgstr "Johannesburg"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Johnston"
+#~ msgstr "Johnston"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Juba"
+#~ msgstr "Juba"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Jujuy"
+#~ msgstr "Jujuy"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Juneau"
+#~ msgstr "Juneau"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Kabul"
+#~ msgstr "Kabul"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Kaliningrad"
+#~ msgstr "Kaliningrad"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Kamchatka"
+#~ msgstr "Kamčatka"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Kampala"
+#~ msgstr "Kampala"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Karachi"
+#~ msgstr "Karači"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Kashgar"
+#~ msgstr "Kašgar"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Kathmandu"
+#~ msgstr "Katmandu"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Kerguelen"
+#~ msgstr "Kerguelenovi otoki"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Khandyga"
+#~ msgstr "Khandyga"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Khartoum"
+#~ msgstr "Kartum"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Kyiv"
+#~ msgstr "Kyiv"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Kigali"
+#~ msgstr "Kigali"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Kinshasa"
+#~ msgstr "Kinšasa"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Kiritimati"
+#~ msgstr "Kiritimati"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Kirov"
+#~ msgstr "Kirov"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Knox"
+#~ msgstr "Knox"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Kolkata"
+#~ msgstr "Kolkata"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Kosrae"
+#~ msgstr "Kosrae"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Kralendijk"
+#~ msgstr "Kralendijk"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Krasnoyarsk"
+#~ msgstr "Krasnojarsk"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Kuala Lumpur"
+#~ msgstr "Kuala Lumpur"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Kuching"
+#~ msgstr "Kuching"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Kuwait"
+#~ msgstr "Kuvajt"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Kwajalein"
+#~ msgstr "Kwajalein"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "La Paz"
+#~ msgstr "La Paz"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "La Rioja"
+#~ msgstr "La Rioja"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Lagos"
+#~ msgstr "Lagos"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Libreville"
+#~ msgstr "Libreville"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Lima"
+#~ msgstr "Lima"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Lindeman"
+#~ msgstr "Lindeman"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Lisbon"
+#~ msgstr "Lizbona"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Ljubljana"
+#~ msgstr "Ljubljana"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Lome"
+#~ msgstr "Lomé"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "London"
+#~ msgstr "London"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Longyearbyen"
+#~ msgstr "Longyearbyen"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Lord Howe"
+#~ msgstr "Lord Howe"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Los Angeles"
+#~ msgstr "Los Angeles"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Louisville"
+#~ msgstr "Louisville"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Lower Princes"
+#~ msgstr "Lower Princes"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Luanda"
+#~ msgstr "Luanda"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Lubumbashi"
+#~ msgstr "Lubumbashi"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Lusaka"
+#~ msgstr "Lusaka"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Luxembourg"
+#~ msgstr "Luksemburg"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Macau"
+#~ msgstr "Macao"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Maceio"
+#~ msgstr "Maceio"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Macquarie"
+#~ msgstr "Macquarie"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Madeira"
+#~ msgstr "Madeira"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Madrid"
+#~ msgstr "Madrid"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Magadan"
+#~ msgstr "Magadan"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Mahe"
+#~ msgstr "Mahe"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Majuro"
+#~ msgstr "Majuro"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Makassar"
+#~ msgstr "Makassar"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Malabo"
+#~ msgstr "Malabo"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Maldives"
+#~ msgstr "Maldivi"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Malta"
+#~ msgstr "Malta"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Managua"
+#~ msgstr "Managua"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Manaus"
+#~ msgstr "Manaus"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Manila"
+#~ msgstr "Manila"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Maputo"
+#~ msgstr "Maputo"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Marengo"
+#~ msgstr "Marengo"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Mariehamn"
+#~ msgstr "Mariehamn"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Marigot"
+#~ msgstr "Marigot"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Marquesas"
+#~ msgstr "Marquesas"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Martinique"
+#~ msgstr "Martinik"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Maseru"
+#~ msgstr "Maseru"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Matamoros"
+#~ msgstr "Matamoros"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Mauritius"
+#~ msgstr "Mauritius"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Mawson"
+#~ msgstr "Mawson"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Mayotte"
+#~ msgstr "Mayotte"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Mazatlan"
+#~ msgstr "Mazatlan"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Mbabane"
+#~ msgstr "Mbabane"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "McMurdo"
+#~ msgstr "McMurdo"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Melbourne"
+#~ msgstr "Melbourne"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Mendoza"
+#~ msgstr "Mendoza"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Menominee"
+#~ msgstr "Menominee"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Merida"
+#~ msgstr "Merida"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Metlakatla"
+#~ msgstr "Metlakatla"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Mexico City"
+#~ msgstr "Ciudad de México"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Midway"
+#~ msgstr "Midwayski atol"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Minsk"
+#~ msgstr "Minsk"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Miquelon"
+#~ msgstr "Miquelon"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Mogadishu"
+#~ msgstr "Mogadiš"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Monaco"
+#~ msgstr "Monako"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Moncton"
+#~ msgstr "Moncton"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Monrovia"
+#~ msgstr "Monrovija"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Monterrey"
+#~ msgstr "Monterrey"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Montevideo"
+#~ msgstr "Montevideo"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Monticello"
+#~ msgstr "Monticello"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Montserrat"
+#~ msgstr "Montserrat"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Moscow"
+#~ msgstr "Moskva"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Muscat"
+#~ msgstr "Muškat"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Nairobi"
+#~ msgstr "Nairobi"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Nassau"
+#~ msgstr "Nassau"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Nauru"
+#~ msgstr "Nauru"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Ndjamena"
+#~ msgstr "Ndjamena"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "New Salem"
+#~ msgstr "New Salem"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "New York"
+#~ msgstr "New York"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Niamey"
+#~ msgstr "Niamey"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Nicosia"
+#~ msgstr "Nikozija"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Nipigon"
+#~ msgstr "Nipigon"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Niue"
+#~ msgstr "Niue"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Nome"
+#~ msgstr "Nome"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Norfolk"
+#~ msgstr "Norfolk"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Noronha"
+#~ msgstr "Noronha"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Nouakchott"
+#~ msgstr "Nouakchott"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Noumea"
+#~ msgstr "Nouméa"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Novokuznetsk"
+#~ msgstr "Novokuzneck"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Novosibirsk"
+#~ msgstr "Novosibirsk"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Nuuk"
+#~ msgstr "Nuuk"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Ojinaga"
+#~ msgstr "Ojinaga"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Omsk"
+#~ msgstr "Omsk"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Oral"
+#~ msgstr "Oral"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Oslo"
+#~ msgstr "Oslo"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Ouagadougou"
+#~ msgstr "Ouagadougou"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Pago Pago"
+#~ msgstr "Pago Pago"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Palau"
+#~ msgstr "Palau"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Palmer"
+#~ msgstr "Palmer"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Panama"
+#~ msgstr "Panama"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Pangnirtung"
+#~ msgstr "Pangnirtung"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Paramaribo"
+#~ msgstr "Paramaribo"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Paris"
+#~ msgstr "Pariz"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Perth"
+#~ msgstr "Perth"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Petersburg"
+#~ msgstr "Petersburg"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Phnom Penh"
+#~ msgstr "Phnom Penh"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Phoenix"
+#~ msgstr "Phoenix"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Pitcairn"
+#~ msgstr "Pitcairnovi otoki"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Podgorica"
+#~ msgstr "Podgorica"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Pohnpei"
+#~ msgstr "Pohnpei"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Pontianak"
+#~ msgstr "Pontianak"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Port-au-Prince"
+#~ msgstr "Port-au-Prince"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Port Moresby"
+#~ msgstr "Port Moresby"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Port of Spain"
+#~ msgstr "Port of Spain"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Porto-Novo"
+#~ msgstr "Porto Novo"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Porto Velho"
+#~ msgstr "Porto Velho"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Prague"
+#~ msgstr "Praga"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Puerto Rico"
+#~ msgstr "Portoriko"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Punta Arenas"
+#~ msgstr "Punta Arenas"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Pyongyang"
+#~ msgstr "Pjongjang"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Qatar"
+#~ msgstr "Katar"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Qostanay"
+#~ msgstr "Qostanay"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Qyzylorda"
+#~ msgstr "Kyzylorda"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Rainy River"
+#~ msgstr "Rainy River"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Rangoon"
+#~ msgstr "Rangun"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Rankin Inlet"
+#~ msgstr "Rankin Inlet"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Rarotonga"
+#~ msgstr "Rarotonga"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Recife"
+#~ msgstr "Recife"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Regina"
+#~ msgstr "Regina"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Resolute"
+#~ msgstr "Resolute"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Reunion"
+#~ msgstr "Reunion"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Reykjavik"
+#~ msgstr "Reykjavik"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Riga"
+#~ msgstr "Riga"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Rio Branco"
+#~ msgstr "Rio Branco"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Rio Gallegos"
+#~ msgstr "Rio Gallegos"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Riyadh"
+#~ msgstr "Rijad"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Rome"
+#~ msgstr "Rim"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Rothera"
+#~ msgstr "Rothera"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Saipan"
+#~ msgstr "Saipan"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Sakhalin"
+#~ msgstr "Sahalin"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Salta"
+#~ msgstr "Salta"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Samara"
+#~ msgstr "Samara"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Samarkand"
+#~ msgstr "Samarkand"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "San Juan"
+#~ msgstr "San Juan"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "San Luis"
+#~ msgstr "San Luis"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "San Marino"
+#~ msgstr "San Marino"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Santa Isabel"
+#~ msgstr "Santa Isabel"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Santarem"
+#~ msgstr "Santarem"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Santiago"
+#~ msgstr "Santiago"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Santo Domingo"
+#~ msgstr "Santo Domingo"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Sao Paulo"
+#~ msgstr "Sao Paulo"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Sao Tome"
+#~ msgstr "Sao Tome"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Sarajevo"
+#~ msgstr "Sarajevo"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Saratov"
+#~ msgstr "Saratov"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Scoresbysund"
+#~ msgstr "Ittoqqortoormiit"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Seoul"
+#~ msgstr "Seul"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Shanghai"
+#~ msgstr "Šanghaj"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Simferopol"
+#~ msgstr "Simferopol"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Singapore"
+#~ msgstr "Singapur"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Sitka"
+#~ msgstr "Sitka"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Skopje"
+#~ msgstr "Skopje"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Sofia"
+#~ msgstr "Sofija"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "South Georgia"
+#~ msgstr "Južna Georgia"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Srednekolymsk"
+#~ msgstr "Srednekolymsk"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "St Barthelemy"
+#~ msgstr "St Barthelemy"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "St Helena"
+#~ msgstr "Sveta Helena"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "St Johns"
+#~ msgstr "St Johns"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "St Kitts"
+#~ msgstr "St Kitts"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "St Lucia"
+#~ msgstr "St Lucia"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "St Thomas"
+#~ msgstr "St Thomas"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "St Vincent"
+#~ msgstr "Sveti Vincent"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Stanley"
+#~ msgstr "Stanley"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Stockholm"
+#~ msgstr "Stockholm"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Swift Current"
+#~ msgstr "Swift Current"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Sydney"
+#~ msgstr "Sydney"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Syowa"
+#~ msgstr "Showa"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Tahiti"
+#~ msgstr "Tahiti"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Taipei"
+#~ msgstr "Tajpej"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Tallinn"
+#~ msgstr "Talin"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Tarawa"
+#~ msgstr "Tarawa"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Tashkent"
+#~ msgstr "Taškent"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Tbilisi"
+#~ msgstr "Tbilisi"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Tegucigalpa"
+#~ msgstr "Tegucigalpa"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Tehran"
+#~ msgstr "Teheran"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Tell City"
+#~ msgstr "Tell City"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Thimphu"
+#~ msgstr "Thimphu"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Thule"
+#~ msgstr "Qaanaaq"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Thunder Bay"
+#~ msgstr "Thunder Bay"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Tijuana"
+#~ msgstr "Tijuana"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Tirane"
+#~ msgstr "Tirana"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Tokyo"
+#~ msgstr "Tokio"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Tomsk"
+#~ msgstr "Tomsk"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Tongatapu"
+#~ msgstr "Tongatapu"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Toronto"
+#~ msgstr "Toronto"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Tortola"
+#~ msgstr "Tortola"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Tripoli"
+#~ msgstr "Tripoli"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Troll"
+#~ msgstr "Troll"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Tucuman"
+#~ msgstr "Tucuman"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Tunis"
+#~ msgstr "Tunis"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Ulaanbaatar"
+#~ msgstr "Ulan Bator"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Ulyanovsk"
+#~ msgstr "Ulyanovsk"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Urumqi"
+#~ msgstr "Urumqi"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Ushuaia"
+#~ msgstr "Ushuaia"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Ust-Nera"
+#~ msgstr "Ust-Nera"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC+00:00"
+#~ msgstr "UTC+00:00"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC+01:00"
+#~ msgstr "UTC+01:00"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC+02:00"
+#~ msgstr "UTC+02:00"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC+03:00"
+#~ msgstr "UTC+03:00"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC+03:30"
+#~ msgstr "UTC+03:30"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC+04:00"
+#~ msgstr "UTC+04:00"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC+04:30"
+#~ msgstr "UTC+04:30"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC+05:00"
+#~ msgstr "UTC+05:00"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC+05:30"
+#~ msgstr "UTC+05:30"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC+05:45"
+#~ msgstr "UTC+05:45"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC+06:00"
+#~ msgstr "UTC+06:00"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC+06:30"
+#~ msgstr "UTC+06:30"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC+07:00"
+#~ msgstr "UTC+07:00"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC+08:00"
+#~ msgstr "UTC+08:00"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC+09:00"
+#~ msgstr "UTC+09:00"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC+09:30"
+#~ msgstr "UTC+09:30"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC+10:00"
+#~ msgstr "UTC+10:00"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC+11:00"
+#~ msgstr "UTC+11:00"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC+12:00"
+#~ msgstr "UTC+12:00"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC+13:00"
+#~ msgstr "UTC+13:00"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC+14:00"
+#~ msgstr "UTC+14:00"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC-00:00"
+#~ msgstr "UTC-00:00"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC-01:00"
+#~ msgstr "UTC-01:00"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC-02:00"
+#~ msgstr "UTC-02:00"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC-03:00"
+#~ msgstr "UTC-03:00"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC-03:30"
+#~ msgstr "UTC-03:30"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC-04:00"
+#~ msgstr "UTC-04:00"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC-04:30"
+#~ msgstr "UTC-04:30"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC-05:00"
+#~ msgstr "UTC-05:00"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC-06:00"
+#~ msgstr "UTC-06:00"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC-07:00"
+#~ msgstr "UTC-07:00"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC-08:00"
+#~ msgstr "UTC-08:00"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC-09:00"
+#~ msgstr "UTC-09:00"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC-10:00"
+#~ msgstr "UTC-10:00"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC-11:00"
+#~ msgstr "UTC-11:00"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC-12:00"
+#~ msgstr "UTC-12:00"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC-13:00"
+#~ msgstr "UTC-13:00"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC-14:00"
+#~ msgstr "UTC-14:00"
+
+#~ msgctxt "This is a generic time zone name, localize as needed"
+#~ msgid "UTC"
+#~ msgstr "UTC"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Uzhhorod"
+#~ msgstr "Užhorod"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Vaduz"
+#~ msgstr "Vaduz"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Vancouver"
+#~ msgstr "Vancouver"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Vatican"
+#~ msgstr "Vatikan"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Vevay"
+#~ msgstr "Vevay"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Vienna"
+#~ msgstr "Dunaj"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Vientiane"
+#~ msgstr "Vientiane"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Vilnius"
+#~ msgstr "Vilna"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Vincennes"
+#~ msgstr "Vincennes"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Vladivostok"
+#~ msgstr "Vladivostok"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Volgograd"
+#~ msgstr "Volgograd"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Vostok"
+#~ msgstr "Vostok"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Wake"
+#~ msgstr "Wake"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Wallis"
+#~ msgstr "Wallis"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Warsaw"
+#~ msgstr "Varšava"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Whitehorse"
+#~ msgstr "Whitehorse"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Winamac"
+#~ msgstr "Winamac"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Windhoek"
+#~ msgstr "Windhoek"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Winnipeg"
+#~ msgstr "Winnipeg"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Yakutat"
+#~ msgstr "Yakutat"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Yakutsk"
+#~ msgstr "Jakutsk"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Yangon"
+#~ msgstr "Yangon"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Yekaterinburg"
+#~ msgstr "Jekaterinburg"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Yellowknife"
+#~ msgstr "Yellowknife"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Yerevan"
+#~ msgstr "Erevan"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Zagreb"
+#~ msgstr "Zagreb"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Zaporizhzhia"
+#~ msgstr "Zaporižnia"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Zurich"
+#~ msgstr "Zürich"
+
+#~ msgctxt "This is a continent/area associated with a particular timezone"
+#~ msgid "Africa"
+#~ msgstr "Afrika"
+
+#~ msgctxt "This is a continent/area associated with a particular timezone"
+#~ msgid "America"
+#~ msgstr "Amerika"
+
+#~ msgctxt "This is a continent/area associated with a particular timezone"
+#~ msgid "Antarctica"
+#~ msgstr "Antarktika"
+
+#~ msgctxt "This is a continent/area associated with a particular timezone"
+#~ msgid "Asia"
+#~ msgstr "Azija"
+
+#~ msgctxt "This is a continent/area associated with a particular timezone"
+#~ msgid "Atlantic"
+#~ msgstr "Atlantik"
+
+#~ msgctxt "This is a continent/area associated with a particular timezone"
+#~ msgid "Australia"
+#~ msgstr "Avstralija"
+
+#~ msgctxt "This is a continent/area associated with a particular timezone"
+#~ msgid "Europe"
+#~ msgstr "Evropa"
+
+#~ msgctxt "This is a continent/area associated with a particular timezone"
+#~ msgid "Indian"
+#~ msgstr "Indijski ocean"
+
+#~ msgctxt "This is a continent/area associated with a particular timezone"
+#~ msgid "Pacific"
+#~ msgstr "Tihi ocean"
+
+#~ msgctxt "@action:button Add event"
+#~ msgid "Add..."
+#~ msgstr "Dodaj..."
+
+#~ msgid "Time zone city"
+#~ msgstr "Mesto časovnega pasu"
+
+#~ msgid "Time zone code"
+#~ msgstr "Koda časovnega pasu"
+
+#~ msgctxt "This is a city associated with particular time zone"
+#~ msgid "Kiev"
+#~ msgstr "Kijev"
+
+#~ msgid "Switch time zone with mouse wheel"
+#~ msgstr "Preklopi časovni pas z miškinim koleščkom"
+
+#~ msgid "Search Time Zones"
+#~ msgstr "Iskanje po časovnih pasovih"
+
+#~ msgid "Region"
+#~ msgstr "Območje"
+
+#~ msgid "Comment"
+#~ msgstr "Opomba"
+
+#~ msgctxt "Checkbox label; means 24h clock format, without am/pm"
+#~ msgid "Use 24-hour Clock"
+#~ msgstr "Uporabi 24-urni prikaz"
+
+#~ msgid "Font"
+#~ msgstr "Pisava"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Ivory Coast"
+#~ msgstr "Slonokoščena obala"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Ghana"
+#~ msgstr "Gana"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Ethiopia"
+#~ msgstr "Etiopija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Algeria"
+#~ msgstr "Alžirija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Eritrea"
+#~ msgstr "Eritreja"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Mali"
+#~ msgstr "Mali"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Central African Republic"
+#~ msgstr "Srednjeafriška republika"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Gambia"
+#~ msgstr "Gambija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Guinea Bissau"
+#~ msgstr "Gvineja Bissau"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Malawi"
+#~ msgstr "Malavi"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Congo Brazzaville"
+#~ msgstr "Kongo Brazzaville"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Burundi"
+#~ msgstr "Burundi"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Egypt"
+#~ msgstr "Egipt"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Morocco"
+#~ msgstr "Maroko"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Spain"
+#~ msgstr "Španija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Guinea"
+#~ msgstr "Gvineja"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Senegal"
+#~ msgstr "Senegal"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Tanzania"
+#~ msgstr "Tanzanija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Djibouti"
+#~ msgstr "Džibuti"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Cameroon"
+#~ msgstr "Kamerun"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Western Sahara"
+#~ msgstr "Zahodna Sahara"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Sierra Leone"
+#~ msgstr "Sierra Leone"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Botswana"
+#~ msgstr "Bocvana"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Zimbabwe"
+#~ msgstr "Zimbabve"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "South Africa"
+#~ msgstr "Južna Afrika"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "South Sudan"
+#~ msgstr "Južni Sudan"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Uganda"
+#~ msgstr "Uganda"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Sudan"
+#~ msgstr "Sudan"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Rwanda"
+#~ msgstr "Ruanda"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Congo (Kinshasa)"
+#~ msgstr "Kongo (Kinšasa)"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Nigeria"
+#~ msgstr "Nigerija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Gabon"
+#~ msgstr "Gabon"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Togo"
+#~ msgstr "Togo"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Angola"
+#~ msgstr "Angola"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Zambia"
+#~ msgstr "Zambija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Equatorial Guinea"
+#~ msgstr "Ekvatorialna Gvineja"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Mozambique"
+#~ msgstr "Mozambik"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Lesotho"
+#~ msgstr "Lesoto"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Swaziland"
+#~ msgstr "Svazi"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Somalia"
+#~ msgstr "Somalija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Liberia"
+#~ msgstr "Liberija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Kenya"
+#~ msgstr "Kenija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Chad"
+#~ msgstr "Čad"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Niger"
+#~ msgstr "Niger"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Mauritania"
+#~ msgstr "Mavretanija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Burkina Faso"
+#~ msgstr "Burkina Faso"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Benin"
+#~ msgstr "Benin"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Sao Tome And Principe"
+#~ msgstr "Sao Tome in Principe"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Libya"
+#~ msgstr "Libija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Tunisia"
+#~ msgstr "Tunizija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Namibia"
+#~ msgstr "Namibija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "United States"
+#~ msgstr "Združene države Amerike"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Anguilla"
+#~ msgstr "Angvila"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Antigua And Barbuda"
+#~ msgstr "Antigva in Barbuda"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Brazil"
+#~ msgstr "Brazilija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Argentina"
+#~ msgstr "Argentina"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Aruba"
+#~ msgstr "Aruba"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Paraguay"
+#~ msgstr "Paragvaj"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Canada"
+#~ msgstr "Kanada"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Mexico"
+#~ msgstr "Mehika"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Barbados"
+#~ msgstr "Barbados"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Belize"
+#~ msgstr "Belize"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Colombia"
+#~ msgstr "Kolumbija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Venezuela"
+#~ msgstr "Venezuela"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "French Guiana"
+#~ msgstr "Francoska Gvajana"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Cayman Islands"
+#~ msgstr "Kajmanski otoki"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Costa Rica"
+#~ msgstr "Kostarika"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Cura Sao"
+#~ msgstr "Curaçao"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Greenland"
+#~ msgstr "Grenlandija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Dominica"
+#~ msgstr "Dominika"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "El Salvador"
+#~ msgstr "Salvador"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Turks And Caicos Islands"
+#~ msgstr "Otočji Turks in Caicos"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Grenada"
+#~ msgstr "Grenada"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Guadeloupe"
+#~ msgstr "Gvadelup"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Guatemala"
+#~ msgstr "Gvatemala"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Ecuador"
+#~ msgstr "Ekvador"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Guyana"
+#~ msgstr "Gvajana"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Cuba"
+#~ msgstr "Kuba"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Jamaica"
+#~ msgstr "Jamajka"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Bonaire"
+#~ msgstr "Bonaire"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Bolivia"
+#~ msgstr "Bolivija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Peru"
+#~ msgstr "Peru"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Sint Maarten"
+#~ msgstr "Sint Maarten"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Nicaragua"
+#~ msgstr "Nikaragva"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Saint Martin"
+#~ msgstr "Sveti Martin"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Martinique"
+#~ msgstr "Martinik"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Saint Pierre And Miquelon"
+#~ msgstr "Saint Pierre in Miquelon"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Uruguay"
+#~ msgstr "Urugvaj"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Montserrat"
+#~ msgstr "Montserrat"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Bahamas"
+#~ msgstr "Bahami"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Panama"
+#~ msgstr "Panama"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Suriname"
+#~ msgstr "Surinam"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Haiti"
+#~ msgstr "Haiti"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Trinidad And Tobago"
+#~ msgstr "Trinidad in Tobago"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Puerto Rico"
+#~ msgstr "Portoriko"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Chile"
+#~ msgstr "Čile"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Dominican Republic"
+#~ msgstr "Dominikanska republika"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Saint Barthelemy"
+#~ msgstr "Saint Barthelemy"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Saint Kitts And Nevis"
+#~ msgstr "Saint Kitts in Nevis"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Saint Lucia"
+#~ msgstr "Saint Lucia"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "United States Virgin Islands"
+#~ msgstr "Ameriški Deviški otoki"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Saint Vincent And The Grenadines"
+#~ msgstr "Sveti Vincent in Grenadini"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Honduras"
+#~ msgstr "Honduras"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "British Virgin Islands"
+#~ msgstr "Britanski Deviški otoki"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Antarctica"
+#~ msgstr "Antarktika"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Australia"
+#~ msgstr "Avstralija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Svalbard And Jan Mayen Islands"
+#~ msgstr "Otočje Svalbard in Jan Mayen"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Yemen"
+#~ msgstr "Jemen"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Kazakhstan"
+#~ msgstr "Kazahstan"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Jordan"
+#~ msgstr "Jordanija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Russia"
+#~ msgstr "Rusija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Turkmenistan"
+#~ msgstr "Turkmenistan"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Iraq"
+#~ msgstr "Irak"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Bahrain"
+#~ msgstr "Bahrajn"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Azerbaijan"
+#~ msgstr "Azerbajdžan"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Thailand"
+#~ msgstr "Tajska"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Lebanon"
+#~ msgstr "Libanon"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Kyrgyzstan"
+#~ msgstr "Kirgizistan"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Brunei"
+#~ msgstr "Brunej"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Mongolia"
+#~ msgstr "Mongolija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "China"
+#~ msgstr "Kitajska"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Sri Lanka"
+#~ msgstr "Šrilanka"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Syria"
+#~ msgstr "Sirija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Bangladesh"
+#~ msgstr "Bangladeš"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "East Timor"
+#~ msgstr "Vzhodni Timor"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "United Arab Emirates"
+#~ msgstr "Združeni arabski emirati"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Tajikistan"
+#~ msgstr "Tadžikistan"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Palestinian Territories"
+#~ msgstr "Palestinska ozemlja"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Vietnam"
+#~ msgstr "Vietnam"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Hong Kong"
+#~ msgstr "Hong Kong"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Indonesia"
+#~ msgstr "Indonezija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Israel"
+#~ msgstr "Izrael"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Afghanistan"
+#~ msgstr "Afganistan"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Pakistan"
+#~ msgstr "Pakistan"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Nepal"
+#~ msgstr "Nepal"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "India"
+#~ msgstr "Indija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Malaysia"
+#~ msgstr "Malezija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Kuwait"
+#~ msgstr "Kuvajt"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Macau"
+#~ msgstr "Macao"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Philippines"
+#~ msgstr "Filipini"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Oman"
+#~ msgstr "Oman"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Cyprus"
+#~ msgstr "Ciper"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Cambodia"
+#~ msgstr "Kambodža"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "North Korea"
+#~ msgstr "Severna Koreja"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Qatar"
+#~ msgstr "Katar"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Myanmar"
+#~ msgstr "Mjanmar"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Saudi Arabia"
+#~ msgstr "Saudova Arabija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Uzbekistan"
+#~ msgstr "Uzbekistan"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "South Korea"
+#~ msgstr "Južna Koreja"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Singapore"
+#~ msgstr "Singapur"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Taiwan"
+#~ msgstr "Tajvan"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Georgia"
+#~ msgstr "Gruzija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Iran"
+#~ msgstr "Iran"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Bhutan"
+#~ msgstr "Butan"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Japan"
+#~ msgstr "Japonska"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Laos"
+#~ msgstr "Laos"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Armenia"
+#~ msgstr "Armenija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Portugal"
+#~ msgstr "Portugalska"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Bermuda"
+#~ msgstr "Bermudi"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Cape Verde"
+#~ msgstr "Zelenortski otoki"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Faroe Islands"
+#~ msgstr "Ferski otoki"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Iceland"
+#~ msgstr "Islandija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "South Georgia And The South Sandwich Islands"
+#~ msgstr "Južna Georgia in Južni Sandwichevi otoki"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Saint Helena"
+#~ msgstr "Sveta Helena"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Falkland Islands"
+#~ msgstr "Falklandski otoki"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Netherlands"
+#~ msgstr "Nizozemska"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Andorra"
+#~ msgstr "Andora"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Greece"
+#~ msgstr "Grčija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Serbia"
+#~ msgstr "Srbija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Germany"
+#~ msgstr "Nemčija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Slovakia"
+#~ msgstr "Slovaška"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Belgium"
+#~ msgstr "Belgija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Romania"
+#~ msgstr "Romunija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Hungary"
+#~ msgstr "Madžarska"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Moldova"
+#~ msgstr "Moldavija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Denmark"
+#~ msgstr "Danska"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Ireland"
+#~ msgstr "Irska"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Gibraltar"
+#~ msgstr "Gibraltar"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Guernsey"
+#~ msgstr "Guernsey"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Finland"
+#~ msgstr "Finska"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Isle Of Man"
+#~ msgstr "Otok Man"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Turkey"
+#~ msgstr "Turčija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Jersey"
+#~ msgstr "Jersey"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Ukraine"
+#~ msgstr "Ukrajina"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Slovenia"
+#~ msgstr "Slovenija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "United Kingdom"
+#~ msgstr "Velika Britanija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Luxembourg"
+#~ msgstr "Luksemburg"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Malta"
+#~ msgstr "Malta"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Aland Islands"
+#~ msgstr "Ålandsko otočje"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Belarus"
+#~ msgstr "Belorusija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Monaco"
+#~ msgstr "Monako"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Norway"
+#~ msgstr "Norveška"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "France"
+#~ msgstr "Francija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Montenegro"
+#~ msgstr "Črna gora"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Czech Republic"
+#~ msgstr "Češka republika"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Latvia"
+#~ msgstr "Latvija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Italy"
+#~ msgstr "Italija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "San Marino"
+#~ msgstr "San Marino"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Bosnia And Herzegowina"
+#~ msgstr "Bosna in Hercegovina"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Macedonia"
+#~ msgstr "Makedonija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Bulgaria"
+#~ msgstr "Bolgarija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Sweden"
+#~ msgstr "Švedska"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Estonia"
+#~ msgstr "Estonija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Albania"
+#~ msgstr "Albanija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Liechtenstein"
+#~ msgstr "Lihtenštajn"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Vatican City State"
+#~ msgstr "Mestna država Vatikan"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Austria"
+#~ msgstr "Avstrija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Lithuania"
+#~ msgstr "Litva"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Poland"
+#~ msgstr "Poljska"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Croatia"
+#~ msgstr "Hrvaška"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Switzerland"
+#~ msgstr "Švica"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Madagascar"
+#~ msgstr "Madagaskar"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "British Indian Ocean Territory"
+#~ msgstr "Britansko ozemlje v Indijskem oceanu"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "ChristmasIsland"
+#~ msgstr "Božični otok"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "CocosIslands"
+#~ msgstr "Kokosovo otočje"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Comoros"
+#~ msgstr "Komori"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "French Southern Territories"
+#~ msgstr "Francoske južne in antarktične dežele"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Seychelles"
+#~ msgstr "Sejšeli"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Maldives"
+#~ msgstr "Maldivi"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Mauritius"
+#~ msgstr "Mauritius"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Mayotte"
+#~ msgstr "Mayotte"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Reunion"
+#~ msgstr "Reunion"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Samoa"
+#~ msgstr "Samoa"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "New Zealand"
+#~ msgstr "Nova Zelandija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Micronesia"
+#~ msgstr "Mikronezija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Kiribati"
+#~ msgstr "Kiribati"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Tokelau"
+#~ msgstr "Tokelau"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Fiji"
+#~ msgstr "Fidži"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Tuvalu"
+#~ msgstr "Tuvalu"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "French Polynesia"
+#~ msgstr "Francoska Polinezija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Solomon Islands"
+#~ msgstr "Salomonovi otoki"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Guam"
+#~ msgstr "Guam"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "United States Minor Outlying Islands"
+#~ msgstr "Manjši zunanji otoki Združenih držav Amerike"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Marshall Islands"
+#~ msgstr "Marshallovi otoki"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Nauru"
+#~ msgstr "Nauru"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Niue"
+#~ msgstr "Niue"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Norfolk Island"
+#~ msgstr "Otok Norfolk"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "New Caledonia"
+#~ msgstr "Nova Kaledonija"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "American Samoa"
+#~ msgstr "Ameriška Samoa"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Palau"
+#~ msgstr "Palau"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Pitcairn"
+#~ msgstr "Pitcairnovi otoki"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Papua New Guinea"
+#~ msgstr "Papua Nova Gvineja"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Cook Islands"
+#~ msgstr "Cookovi otoki"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Northern Mariana Islands"
+#~ msgstr "Severni Marianski otoki"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Tonga"
+#~ msgstr "Tonga"
+
+#~ msgctxt ""
+#~ "This is a country name associated with a particular time zone in a zone "
+#~ "selection dialog"
+#~ msgid "Wallis And Futuna Islands"
+#~ msgstr "Otoka Wallis in Futuna"
+
+#~ msgctxt ""
+#~ "This composes time and a timezone into one string that's displayed in the "
+#~ "clock applet (the main clock in the panel). "
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgctxt ""
+#~ "This composes time and a timezone into one string that's displayed in the "
+#~ "clock applet (the main clock in the panel). "
+#~ msgid "%1<br/>%2"
+#~ msgstr "%1<br/>%2"
+
+#~ msgid "Narrow Date"
+#~ msgstr "Ozek datum"

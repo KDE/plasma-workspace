@@ -1,0 +1,35 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Jure Repinc <jlp@holodeck1.com>, 2010, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2020-08-26 10:26+0200\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.1\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+
+#: windowedwidgetsrunner.cpp:30
+#, kde-format
+msgid "Finds Plasma widgets whose name or description match :q:"
+msgstr "Najde gradnike za Plasmo, katerih ime ali opis se ujema s :q:"
+
+#: windowedwidgetsrunner.cpp:31 windowedwidgetsrunner.cpp:52
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "mobile applications"
+msgstr "mobilni programi"
+
+#: windowedwidgetsrunner.cpp:32
+#, kde-format
+msgid "list all Plasma widgets that can run as standalone applications"
+msgstr "izpiše seznam vseh gradnikov za Plasmo, ki lahko tečejo samostojno"

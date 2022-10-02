@@ -1,0 +1,29 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_engine_applicationjobs\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2014-06-19 19:51+0100\n"
+"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
+"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-POFile-SpellExtra: JobView\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: jobaction.cpp:18
+#, kde-format
+msgctxt "%1 is the subject (can be anything) upon which the job is performed"
+msgid "The JobView for %1 cannot be found"
+msgstr "O objecto JobView de %1 não foi encontrado"
+
+#: kuiserverengine.cpp:209
+#, kde-format
+msgctxt "Bytes per second"
+msgid "%1/s"
+msgstr "%1/s"
+
+#~ msgid "Job canceled by user."
+#~ msgstr "Trabalho cancelado pelo utilizador."

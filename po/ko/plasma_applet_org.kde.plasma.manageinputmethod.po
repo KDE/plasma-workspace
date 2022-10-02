@@ -1,0 +1,51 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# Shinjo Park <kde@peremen.name>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-13 00:47+0000\n"
+"PO-Revision-Date: 2021-07-28 02:39+0200\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 20.12.3\n"
+
+#: contents/ui/manage-inputmethod.qml:64
+#, kde-format
+msgctxt "Opens the system settings module"
+msgid "Configure Virtual Keyboards..."
+msgstr "가상 키보드 설정..."
+
+#: contents/ui/manage-inputmethod.qml:79
+#, kde-format
+msgid "Virtual Keyboard: unavailable"
+msgstr "가상 키보드: 사용할 수 없음"
+
+#: contents/ui/manage-inputmethod.qml:90
+#, kde-format
+msgid "Virtual Keyboard: disabled"
+msgstr "가상 키보드: 비활성"
+
+#: contents/ui/manage-inputmethod.qml:104
+#, fuzzy, kde-format
+#| msgctxt "Opens the system settings module"
+#| msgid "Configure Virtual Keyboards..."
+msgid "Show Virtual Keyboard"
+msgstr "가상 키보드 설정..."
+
+#: contents/ui/manage-inputmethod.qml:115
+#, kde-format
+msgid "Virtual Keyboard: visible"
+msgstr "가상 키보드: 표시됨"
+
+#: contents/ui/manage-inputmethod.qml:128
+#, kde-format
+msgid "Virtual Keyboard: enabled"
+msgstr "가상 키보드: 활성"

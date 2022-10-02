@@ -1,0 +1,36 @@
+# translation of plasma_engine_notifications.po to galician
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Marce Villarino <mvillarino@users.sourceforge.net>, 2009.
+# marce villarino <mvillarino@users.sourceforge.net>, 2009.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_engine_notifications\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"PO-Revision-Date: 2019-10-19 21:48+0200\n"
+"Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
+"Language-Team: Galician <proxecto@trasno.gal>\n"
+"Language: gl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 19.11.70\n"
+
+#: notificationaction.cpp:24
+#, kde-format
+msgid "The notification dataEngine is not set."
+msgstr "O motor de datos de notificacións non está configurado."
+
+#: notificationaction.cpp:34
+#, kde-format
+msgid "Invalid destination: %1"
+msgstr "Destino incorrecto: %1"
+
+#: notificationsengine.cpp:88
+#, kde-format
+msgid "Unknown Application"
+msgstr "Aplicación descoñecida"

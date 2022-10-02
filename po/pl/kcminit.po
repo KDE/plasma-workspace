@@ -1,0 +1,53 @@
+# translation of kcminit.po to
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Marta Rybczyńska <kde-i18n@rybczynska.net>, 2007, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminit\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-26 00:47+0000\n"
+"PO-Revision-Date: 2008-07-20 14:20+0200\n"
+"Last-Translator: Marta Rybczyńska <kde-i18n@rybczynska.net>\n"
+"Language-Team:  <pl@li.org>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Marta Rybczyńska"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kde-i18n@rybczynska.net"
+
+#: main.cpp:170
+#, kde-format
+msgid "KCMInit"
+msgstr "KCMInit"
+
+#: main.cpp:172
+#, kde-format
+msgid "KCMInit - runs startup initialization for Control Modules."
+msgstr "KCMInit - uruchamia programy inicjujące moduły Centrum Sterowania."
+
+#: main.cpp:178
+#, kde-format
+msgid "List modules that are run at startup"
+msgstr "Lista modułów uruchamianych na starcie"
+
+#: main.cpp:179
+#, kde-format
+msgid "Configuration module to run"
+msgstr "Moduł konfiguracyjny do uruchomienia"
+
+#~ msgid "Module %1 not found"
+#~ msgstr "Moduł %1 nie znaleziony"

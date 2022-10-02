@@ -1,0 +1,320 @@
+# Translation of kcm_lookandfeel.po to Ukrainian
+# Copyright (C) 2014-2021 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_lookandfeel\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-09 00:47+0000\n"
+"PO-Revision-Date: 2022-08-09 09:06+0300\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Юрій Чорноіван"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "yurchor@ukr.net"
+
+#: kcm.cpp:590
+#, kde-format
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr ""
+"Вам потрібно перезапустити сеанс Плазми, щоб внесені зміни набули чинності."
+
+#: kcm.cpp:591
+#, kde-format
+msgid "Cursor Settings Changed"
+msgstr "Параметри курсора змінено"
+
+#: lnftool.cpp:33
+#, kde-format
+msgid "Global Theme Tool"
+msgstr "Засіб роботи із загальними темами"
+
+#: lnftool.cpp:35
+#, kde-format
+msgid ""
+"Command line tool to apply global theme packages for changing the look and "
+"feel."
+msgstr ""
+"Засіб командного рядка для застосування пакунків загальних тем для зміни "
+"вигляду і поведінки робочого простору."
+
+#: lnftool.cpp:37
+#, kde-format
+msgid "Copyright 2017, Marco Martin"
+msgstr "© Marco Martin, 2017"
+
+#: lnftool.cpp:38
+#, kde-format
+msgid "Marco Martin"
+msgstr "Marco Martin"
+
+#: lnftool.cpp:38
+#, kde-format
+msgid "Maintainer"
+msgstr "Супровідник"
+
+#: lnftool.cpp:46
+#, kde-format
+msgid "List available global theme packages"
+msgstr "Показати список доступних пакунків загальних тем"
+
+#: lnftool.cpp:49
+#, kde-format
+msgid ""
+"Apply a global theme package. This can be the name of a package, or a full "
+"path to an installed package, at which point this tool will ensure it is a "
+"global theme package and then attempt to apply it"
+msgstr ""
+"Застосувати пакунок загальної теми. Можна вказати назву пакунка або повний "
+"шлях до встановленого пакунка, для якого цей інструмент встановить "
+"відповідність загальній темі, а потім спробує її застосувати."
+
+#: lnftool.cpp:51
+#, kde-format
+msgid "packagename"
+msgstr "назва_пакунка"
+
+#: lnftool.cpp:52
+#, kde-format
+msgid "Reset the Plasma Desktop layout"
+msgstr "Повернутися до компонування стільниці Плазми"
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: lookandfeelsettings.kcfg:9
+#, kde-format
+msgid "Global look and feel"
+msgstr "Загальний вигляд і поведінка"
+
+#: package/contents/ui/main.qml:20
+#, kde-format
+msgid "This module lets you choose the global look and feel."
+msgstr ""
+"За допомогою цього модуля ви можете вибрати загальний вигляд і поведінку "
+"робочого простору."
+
+#: package/contents/ui/main.qml:53
+#, kde-format
+msgid "Contains Desktop layout"
+msgstr "Місить компонування стільниці"
+
+#: package/contents/ui/main.qml:67
+#, kde-format
+msgid "Preview Theme"
+msgstr "Попередній перегляд теми"
+
+#: package/contents/ui/main.qml:83
+#, kde-format
+msgctxt ""
+"Confirmation question about applying the Global Theme - %1 is the Global "
+"Theme's name"
+msgid "Apply %1?"
+msgstr "Застосувати %1?"
+
+#: package/contents/ui/main.qml:101
+#, kde-format
+msgid "Choose what to apply…"
+msgstr "Виберіть, що застосовувати…"
+
+#: package/contents/ui/main.qml:101
+#, kde-format
+msgid "Show fewer options…"
+msgstr "Показати скорочений список…"
+
+#: package/contents/ui/main.qml:118
+#, kde-format
+msgid "Apply"
+msgstr "Застосувати"
+
+#: package/contents/ui/main.qml:130
+#, kde-format
+msgid "Cancel"
+msgstr "Скасувати"
+
+#: package/contents/ui/main.qml:147
+#, kde-format
+msgid "Get New Global Themes…"
+msgstr "Отримати нові загальні теми…"
+
+#: package/contents/ui/MoreOptions.qml:24
+#: package/contents/ui/MoreOptions.qml:31
+#, kde-format
+msgid "Layout settings:"
+msgstr "Параметри компонування:"
+
+#: package/contents/ui/MoreOptions.qml:32
+#, kde-format
+msgid "Desktop layout"
+msgstr "Компонування стільниці"
+
+#: package/contents/ui/MoreOptions.qml:53
+#, kde-format
+msgid "Titlebar Buttons layout"
+msgstr "Компонування кнопок смужки заголовка"
+
+#: package/contents/ui/MoreOptions.qml:66
+#: package/contents/ui/SimpleOptions.qml:63
+#, kde-format
+msgid ""
+"Applying a Desktop layout replaces your current configuration of desktops, "
+"panels, docks, and widgets"
+msgstr ""
+"Застосування компонування стільниці призведе до заміни ваших поточних "
+"налаштувань стільниць, панелей, бічних панелей та віджетів"
+
+#: package/contents/ui/MoreOptions.qml:75
+#, kde-format
+msgid "Appearance settings:"
+msgstr "Параметри вигляду:"
+
+#: package/contents/ui/MoreOptions.qml:78
+#, kde-format
+msgid "Colors"
+msgstr "Кольори"
+
+#: package/contents/ui/MoreOptions.qml:79
+#, kde-format
+msgid "Application Style"
+msgstr "Стиль вікон програм"
+
+#: package/contents/ui/MoreOptions.qml:80
+#, kde-format
+msgid "Window Decorations"
+msgstr "Обрамлення вікон"
+
+#: package/contents/ui/MoreOptions.qml:81
+#, kde-format
+msgid "Icons"
+msgstr "Піктограми"
+
+#: package/contents/ui/MoreOptions.qml:82
+#, kde-format
+msgid "Plasma Style"
+msgstr "Стиль Плазми"
+
+#: package/contents/ui/MoreOptions.qml:83
+#, kde-format
+msgid "Cursors"
+msgstr "Вказівники"
+
+#: package/contents/ui/MoreOptions.qml:84
+#, kde-format
+msgid "Fonts"
+msgstr "Шрифти"
+
+#: package/contents/ui/MoreOptions.qml:85
+#, kde-format
+msgid "Task Switcher"
+msgstr "Перемикання задач"
+
+#: package/contents/ui/MoreOptions.qml:86
+#, kde-format
+msgid "Splash Screen"
+msgstr "Вікно вітання"
+
+#: package/contents/ui/MoreOptions.qml:87
+#, kde-format
+msgid "Lock Screen"
+msgstr "Вікно блокування"
+
+#: package/contents/ui/SimpleOptions.qml:19
+#, kde-format
+msgid "The following will be applied by this Global Theme:"
+msgstr "Ось це буде застосовано за цією загальною темою:"
+
+#: package/contents/ui/SimpleOptions.qml:32
+#, kde-format
+msgid "Appearance settings"
+msgstr "Параметри вигляду"
+
+#: package/contents/ui/SimpleOptions.qml:42
+#, kde-format
+msgctxt "List item"
+msgid "• Appearance settings"
+msgstr "• Параметри вигляду"
+
+#: package/contents/ui/SimpleOptions.qml:47
+#, kde-format
+msgid "Desktop and window layout"
+msgstr "Компонування стільниці та вікон"
+
+#: package/contents/ui/SimpleOptions.qml:58
+#, kde-format
+msgctxt "List item"
+msgid "• Desktop and window layout"
+msgstr "• Компонування стільниці та вікон"
+
+#: package/contents/ui/SimpleOptions.qml:75
+#, kde-format
+msgid ""
+"This Global Theme does not provide any applicable settings. Please contact "
+"the maintainer of this Global Theme as it might be broken."
+msgstr ""
+"У цій загальній темі не передбачено жодних параметрів вікон програм. Будь "
+"ласка, зв'яжіться із супровідником цієї загальної теми, оскільки, можливо, "
+"тема є непрацездатною."
+
+#~ msgid ""
+#~ "Your current layout and configuration of panels, desktop widgets, and "
+#~ "wallpapers will be lost and reset to the default layout provided by the "
+#~ "selected theme."
+#~ msgstr ""
+#~ "Параметри поточного компонування та налаштування панелей, віджетів "
+#~ "стільниці та зображень тла стільниці буде втрачено, їх буде замінено на "
+#~ "типові для компонування вибраної теми."
+
+#~ msgid "Use desktop layout from theme"
+#~ msgstr "Компонування стільниці з теми"
+
+#~ msgid "Global Theme"
+#~ msgstr "Загальна тема"
+
+#~ msgid "Apply a global theme package"
+#~ msgstr "Застосувати пакунок загальної теми"
+
+#~ msgid "Customize..."
+#~ msgstr "Налаштувати…"
+
+#~ msgid "Global Themes"
+#~ msgstr "Загальна теми"
+
+#~ msgid "Download New Global Themes"
+#~ msgstr "Отримати нові загальні теми"
+
+#~ msgid "Look and feel tool"
+#~ msgstr "Засіб вигляду і поведінки"
+
+#~ msgid "Choose the Look and Feel theme"
+#~ msgstr "Вибір теми вигляду і поведінки"
+
+#~ msgid "Configure Look and Feel details"
+#~ msgstr "Налаштування параметрів вигляду і поведінки"
+
+#~ msgid ""
+#~ "Select an overall theme for your workspace (including plasma theme, color "
+#~ "scheme, mouse cursor, window and desktop switcher, splash screen, lock "
+#~ "screen etc.)"
+#~ msgstr ""
+#~ "Визначтеся із загальним виглядом і поведінкою вашого робочого простору "
+#~ "(зокрема теми Плазми, схеми кольорів, перемикачі вікон і стільниць, вікна "
+#~ "вітання, вікна блокування тощо)"
+
+#~ msgid "Show Preview"
+#~ msgstr "Показати попередній перегляд"

@@ -1,0 +1,92 @@
+# Indonesian translations for plasma_engine_keystate package.
+# Copyright (C) 2010 This_file_is_part_of_KDE
+# This file is distributed under the same license as the plasma_engine_keystate package.
+# Andhika Padmawan <andhika.padmawan@gmail.com>, 2010.
+# Wantoyo <wantoyek@gmail.com>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_engine_keystate\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"PO-Revision-Date: 2018-10-03 18:11+0700\n"
+"Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
+"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: keystate.cpp:15
+msgid "Shift"
+msgstr "Shift"
+
+#: keystate.cpp:16
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: keystate.cpp:17
+msgid "Alt"
+msgstr "Alt"
+
+#: keystate.cpp:18
+msgid "Meta"
+msgstr "Meta"
+
+#: keystate.cpp:19
+msgid "Super"
+msgstr "Super"
+
+#: keystate.cpp:20
+msgid "Hyper"
+msgstr "Hiper"
+
+#: keystate.cpp:21
+msgid "AltGr"
+msgstr "AltGr"
+
+#: keystate.cpp:22
+msgid "Num Lock"
+msgstr "Num Lock"
+
+#: keystate.cpp:23
+msgid "Caps Lock"
+msgstr "Caps Lock"
+
+#: keystate.cpp:24
+msgid "Scroll Lock"
+msgstr "Scroll Lock"
+
+#: keystate.cpp:26
+msgid "Left Button"
+msgstr "Tombol Kiri"
+
+#: keystate.cpp:27
+msgid "Right Button"
+msgstr "Tombol Kanan"
+
+#: keystate.cpp:28
+msgid "Middle Button"
+msgstr "Tombol Tengah"
+
+#: keystate.cpp:29
+msgid "First X Button"
+msgstr "Tombol X Pertama"
+
+#: keystate.cpp:30
+msgid "Second X Button"
+msgstr "Tombol X Kedua"
+
+#: keystate.cpp:44 keystate.cpp:54 keystate.cpp:81 keystate.cpp:102
+#: keystate.cpp:110
+msgid "Pressed"
+msgstr "Ditekan"
+
+#: keystate.cpp:45 keystate.cpp:88 keystate.cpp:111
+msgid "Latched"
+msgstr "Dikunci"
+
+#: keystate.cpp:46 keystate.cpp:95 keystate.cpp:112
+msgid "Locked"
+msgstr "Dikunci"

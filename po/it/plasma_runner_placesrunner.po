@@ -1,0 +1,32 @@
+# translation of plasma_runner_placesrunner.po to Italian
+# Copyright (C) 2008 Free Software Foundation, Inc.
+# Vincenzo Reale <smart2128vr@gmail.com>, 2008, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_placesrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"PO-Revision-Date: 2009-11-07 12:30+0100\n"
+"Last-Translator: Vincenzo Reale <smart2128@baslug.org>\n"
+"Language-Team: Italian <kde-i18n-it@kde.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: placesrunner.cpp:29 placesrunner.cpp:83
+#, kde-format
+msgid "places"
+msgstr "risorse"
+
+#: placesrunner.cpp:29
+#, kde-format
+msgid "Lists all file manager locations"
+msgstr "Elenca tutte le posizioni del gestore file"
+
+#: placesrunner.cpp:31
+#, kde-format
+msgid "Finds file manager locations that match :q:"
+msgstr "Trova posizioni del gestore file che corrispondono a :q:"

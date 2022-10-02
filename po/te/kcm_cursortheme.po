@@ -1,0 +1,533 @@
+# translation of kcminput.po to Telugu
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Krishna Babu K <kkrothap@redhat.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminput\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:50+0000\n"
+"PO-Revision-Date: 2009-01-16 22:16+0530\n"
+"Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
+"Language-Team: Telugu <en@li.org>\n"
+"Language: te\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current cursor theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr ""
+
+#: kcmcursortheme.cpp:302
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr "ఈ మార్పులు ప్రభావితం అగుటకు మీరు KDEను పునఃప్రారంభించవలసి వుంటుంది."
+
+#: kcmcursortheme.cpp:376
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: kcmcursortheme.cpp:387
+#, fuzzy, kde-format
+#| msgid "Unable to find the cursor theme archive %1."
+msgid "Unable to download the icon theme archive: %1"
+msgstr "కర్సర్ థీమ్ ఆర్చివ్‌ను %1 కనుగొనలేక పోయింది."
+
+#: kcmcursortheme.cpp:418
+#, fuzzy, kde-format
+#| msgid "The file %1 does not appear to be a valid cursor theme archive."
+msgid "The file is not a valid icon theme archive."
+msgstr "ఫైలు %1 చెల్లునటువంటి కర్సర్ థీమ్ ఆర్చివ్ వలె అనిపించుటలేదు."
+
+#: kcmcursortheme.cpp:425
+#, kde-format
+msgid "Failed to create 'icons' folder."
+msgstr ""
+
+#: kcmcursortheme.cpp:434
+#, kde-format
+msgid ""
+"A theme named %1 already exists in your icon theme folder. Do you want "
+"replace it with this one?"
+msgstr ""
+"%1 నామముతో వున్న థీమ్ యిప్పటికే మీ ప్రతిమ థీమ్ ఫోల్డర్‌లో వుంది. మీరు దానిని దీనితో పునఃస్థాపించుదామని "
+"అనుకొనుచున్నారా?"
+
+#: kcmcursortheme.cpp:438
+#, kde-format
+msgid "Overwrite Theme?"
+msgstr "థీమ్‌ను వోవర్‌రైట్ చేయాలా?"
+
+#: kcmcursortheme.cpp:462
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: package/contents/ui/Delegate.qml:54
+#, kde-format
+msgid "Remove Theme"
+msgstr "థీమ్‌ను తీసివేయి"
+
+#: package/contents/ui/Delegate.qml:61
+#, fuzzy, kde-format
+#| msgid "&Cursor Theme"
+msgid "Restore Cursor Theme"
+msgstr "(&C) కర్సర్ థీమ్"
+
+#: package/contents/ui/main.qml:20
+#, kde-format
+msgid "This module lets you choose the mouse cursor theme."
+msgstr ""
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Size:"
+msgstr ""
+
+#: package/contents/ui/main.qml:134
+#, fuzzy, kde-format
+#| msgid "Install New Theme..."
+msgid "&Install from File…"
+msgstr "కొత్త థీమ్‌ను సంస్థాపించుము..."
+
+#: package/contents/ui/main.qml:140
+#, fuzzy, kde-format
+#| msgid "Install New Theme..."
+msgid "&Get New Cursors…"
+msgstr "కొత్త థీమ్‌ను సంస్థాపించుము..."
+
+#: package/contents/ui/main.qml:157
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Open Theme"
+msgstr "థీమ్‌ను తీసివేయి"
+
+#: package/contents/ui/main.qml:159
+#, kde-format
+msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:41
+#, kde-format
+msgid "The requested size '%1' is not available, using %2 instead."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:62
+#, kde-format
+msgid ""
+"This tool allows you to set the mouse cursor theme for the current Plasma "
+"session, without accidentally setting it to one that is either not "
+"available, or which is already set."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:66
+#, kde-format
+msgid ""
+"The name of the cursor theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:67
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:68
+#, kde-format
+msgid "Use a specific size, rather than the theme default size"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:89
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:100
+#, kde-format
+msgid ""
+"Successfully applied the mouse cursor theme %1 to your current Plasma session"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:102
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for your newly applied mouse cursor "
+"theme to display correctly."
+msgstr "ఈ మార్పులు ప్రభావితం అగుటకు మీరు KDEను పునఃప్రారంభించవలసి వుంటుంది."
+
+#: plasma-apply-cursortheme.cpp:112
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:120
+#, kde-format
+msgid "You have the following mouse cursor themes on your system:"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:125
+#, kde-format
+msgid "(Current theme for this Plasma session)"
+msgstr ""
+
+#: xcursor/xcursortheme.cpp:60
+#, kde-format
+msgctxt ""
+"@info The argument is the list of available sizes (in pixel). Example: "
+"'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+msgid "(Available sizes: %1)"
+msgstr ""
+
+#~ msgid "Name"
+#~ msgstr "పేరు"
+
+#~ msgid "Description"
+#~ msgstr "వర్ణన"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "కృష్ణబాబు కె , విజయ్ కిరణ్ కముజు"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "k.meetme@gmail.com,infyquest@gmail.com"
+
+#, fuzzy
+#~| msgid "&Cursor Theme"
+#~ msgid "Cursors"
+#~ msgstr "(&C) కర్సర్ థీమ్"
+
+#~ msgid ""
+#~ "<qt>You cannot delete the theme you are currently using.<br />You have to "
+#~ "switch to another theme first.</qt>"
+#~ msgstr ""
+#~ "<qt>మీరు ప్రస్తుతం వుపయోగిస్తున్న థీమ్‌ను మీరు తొలగించలేరు.<br />మీరు ముందు వేరొక థీమ్‌కు మారాలి."
+#~ "</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <i>%1</i> cursor theme?<br />This "
+#~ "will delete all the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>మీరు ఖచ్చితంగా <i>%1</i> కర్సర్ థీమ్‌ను తీసివేద్దామని అనుకొనుచున్నారా?<br />ఈ థీమ్ ద్వారా "
+#~ "సంస్థాపించబడిన అన్ని ఫైళ్ళను తొలగిస్తుంది.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "నిర్ధారణ"
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "కర్సర్ అమర్పులు మార్చబడినవి"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "థీమ్ URLను లాక్కోనితెమ్ము లేదా టైపు చేయుము"
+
+#~ msgid ""
+#~ "Unable to download the cursor theme archive; please check that the "
+#~ "address %1 is correct."
+#~ msgstr "కర్సర్ థీమ్ ఆర్చివ్‌ను డౌనులోడు చేయలేక పోయింది, చిరునామా %1 సరైనదేనేమో దయచేసి పరిశీలించండి."
+
+#~ msgid ""
+#~ "Select the cursor theme you want to use (hover preview to test cursor):"
+#~ msgstr ""
+#~ "మీరు వుపయోగించాలని అనుకొనుచున్న కర్సర్ థీమ్‌ను యెంపికచేయుము (కర్సర్‌ను పరీక్షించుటకు hover "
+#~ "ముందస్తు వీక్షణం):"
+
+#~ msgid "Select the cursor theme you want to use:"
+#~ msgstr "మీరు వుపయోగించాలని అనుకొనుచున్న కర్సర్ థీమ్‌ను యెంపికచేయుము:"
+
+#~ msgid "Small black"
+#~ msgstr "చిన్న నలుపు"
+
+#~ msgid "Small black cursors"
+#~ msgstr "చిన్న నలుపు కర్సర్లు"
+
+#~ msgid "Large black"
+#~ msgstr "పెద్ద నలుపు"
+
+#~ msgid "Large black cursors"
+#~ msgstr "పెద్ద నలుపు కర్సర్లు"
+
+#~ msgid "Small white"
+#~ msgstr "చిన్న తెలుపు"
+
+#~ msgid "Small white cursors"
+#~ msgstr "చిన్న తెలుపు కర్సర్లు"
+
+#~ msgid "Large white"
+#~ msgstr "పెద్ద తెలుపు"
+
+#~ msgid "Large white cursors"
+#~ msgstr "పెద్ద తెలుపు కర్సర్లు"
+
+#~ msgid "Button Order"
+#~ msgstr "బటన్ క్రమము"
+
+#~ msgid "Righ&t handed"
+#~ msgstr "(&t) కుడిచేయి వాటపు"
+
+#~ msgid "Le&ft handed"
+#~ msgstr "(&f) ఎడమచేయి వాటపు"
+
+#~ msgid "Re&verse scroll direction"
+#~ msgstr "(&v) స్క్రాల్ దిశలను వ్యతిరేకము చేయుము"
+
+#~ msgid "Icons"
+#~ msgstr "ప్రతిమలు"
+
+#~ msgid ""
+#~ "Dou&ble-click to open files and folders (select icons on first click)"
+#~ msgstr ""
+#~ "(&b) ఫైళ్ళను మరియు ఫోల్డర్లను తెరువుటకు రెండుసార్లు-నొక్కుము (మొదటి ట్రాక్‌పై ప్రతిమలను "
+#~ "యెంపికచేయుము)"
+
+#~ msgid "&Single-click to open files and folders"
+#~ msgstr "(&S) ఫైళ్ళను మరియు ఫోల్డర్లను తెరువుటకు వొకే-నొక్కు"
+
+#~ msgid "Cha&nge pointer shape over icons"
+#~ msgstr "(&n) ప్రతిమల పై సూచకి ఆకారమును మార్చుము"
+
+#~ msgid "A&utomatically select icons"
+#~ msgstr "(&u) స్వయంచాలకంగా ప్రతిమలను ఎంపికచేయుము"
+
+#, fuzzy
+#~| msgid "Dela&y:"
+#~ msgctxt "label. delay (on milliseconds) to automatically select icons"
+#~ msgid "Delay"
+#~ msgstr "(&y) ఆలస్యము:"
+
+#, fuzzy
+#~| msgid " msec"
+#~ msgctxt "milliseconds. time to automatically select the items"
+#~ msgid " ms"
+#~ msgstr " msec"
+
+#~ msgid "&General"
+#~ msgstr "(&G) సాదారణ"
+
+#~ msgid "Activates and opens a file or folder with a single click."
+#~ msgstr "ఒకే నొక్కుతో ఫైలును లేదా ఫోల్డరును క్రియాశీలము చేస్తుంది మరియు తెరుస్తుంది."
+
+#~ msgid "Advanced"
+#~ msgstr "ఆధునాతన"
+
+#~ msgid " x"
+#~ msgstr " x"
+
+#~ msgid "Pointer acceleration:"
+#~ msgstr "సూచకి త్వరుణం:"
+
+#~ msgid "Pointer threshold:"
+#~ msgstr "సూచకి త్రెష్‌హోల్డ్:"
+
+#~ msgid " msec"
+#~ msgstr " msec"
+
+#~ msgid "Double click interval:"
+#~ msgstr "రెండు నొక్కుల విరామం:"
+
+#~ msgid "Drag start time:"
+#~ msgstr "లాగునప్పటి ప్రారంభ సమయం:"
+
+#~ msgid "Drag start distance:"
+#~ msgstr "లాగునప్పటి ప్రారంభ దూరము:"
+
+#~ msgid "Mouse wheel scrolls by:"
+#~ msgstr "ఇన్నిటికి మౌస్ వీలు స్క్రాలు అవుతుంది:"
+
+#~ msgid "Mouse Navigation"
+#~ msgstr "మౌస్ నావిగేషన్"
+
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "(&M) సూచకిని కీబోర్డ్‌తో కదుపుము (నమ్ పాడ్ వుపయోగించి)"
+
+#~ msgid "&Acceleration delay:"
+#~ msgstr "(&A) త్వరుణం ఆలస్యము:"
+
+#~ msgid "R&epeat interval:"
+#~ msgstr "(&e) విరామంను పునరావృతము చేయుము:"
+
+#~ msgid "Acceleration &time:"
+#~ msgstr "(&t) త్వరుణం సమయం:"
+
+#~ msgid " pixel/sec"
+#~ msgstr " పిగ్జెల్/సెకను"
+
+#~ msgid "Ma&ximum speed:"
+#~ msgstr "(&x) గరిష్ట వేగము:"
+
+#~ msgid "Acceleration &profile:"
+#~ msgstr "(&p) త్వరుణం ప్రొఫైల్:"
+
+#~ msgid "Mouse"
+#~ msgstr "మౌస్"
+
+#~ msgid "(c) 1997 - 2005 Mouse developers"
+#~ msgstr "(c) 1997 - 2005 మౌస్ అభివృద్దికారులు"
+
+#~ msgid "Patrick Dowler"
+#~ msgstr "పాట్రిక్ డౌలర్"
+
+#~ msgid "Dirk A. Mueller"
+#~ msgstr "డిర్క్ ఎ. ముల్లర్"
+
+#~ msgid "David Faure"
+#~ msgstr "డెవిడ్ ఫారె"
+
+#~ msgid "Bernd Gehrmann"
+#~ msgstr "బెరన్డ్ గెర్మాన్"
+
+#~ msgid "Rik Hemsley"
+#~ msgstr "రిక్ హెమ్‌స్లి"
+
+#~ msgid "Brad Hughes"
+#~ msgstr "బ్రాడ్ హగ్స్"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "రాల్ఫ్ నోల్డెన్"
+
+#~ msgid "Brad Hards"
+#~ msgstr "బ్రాడ్ హార్డ్స్"
+
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] " పిగ్జల్"
+#~ msgstr[1] " పిగ్జల్"
+#~ msgstr[2] " పిగ్జల్"
+#~ msgstr[3] " పిగ్జల్"
+#~ msgstr[4] " పిగ్జల్"
+
+#~ msgid " line"
+#~ msgid_plural " lines"
+#~ msgstr[0] " వరుస"
+#~ msgstr[1] " వరుస"
+#~ msgstr[2] " వరుస"
+#~ msgstr[3] " వరుస"
+#~ msgstr[4] " వరుస"
+
+#~ msgid "Mouse type: %1"
+#~ msgstr "మౌస్ రకము: %1"
+
+#~ msgid ""
+#~ "RF channel 1 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "RF చానెల్ 1 అమర్చబడింది. లింకును పునఃనిర్మించుటకు దయచేసి మౌస్ పైని అనుసంధాన బటన్‌ను వత్తుము"
+
+#~ msgid "Press Connect Button"
+#~ msgstr "అనుసంధాన బటన్‌ను వత్తుము"
+
+#~ msgid ""
+#~ "RF channel 2 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "RF చానల్ 2 అమర్చబడింది. లింకును పునఃనిర్మించుటకు దయచేసి మౌస్ పైని అనుసంధాన బటన్‌ను వత్తుము"
+
+#, fuzzy
+#~| msgid "none"
+#~ msgctxt "no cordless mouse"
+#~ msgid "none"
+#~ msgstr "ఏదీకాదు"
+
+#~ msgid "Cordless Mouse"
+#~ msgstr "వైరులేని మౌస్"
+
+#~ msgid "Cordless Wheel Mouse"
+#~ msgstr "వైరులేని వీల్ మౌస్"
+
+#~ msgid "Cordless MouseMan Wheel"
+#~ msgstr "వైరులేని మౌస్‌మాన్ వీల్"
+
+#~ msgid "Cordless TrackMan Wheel"
+#~ msgstr "వైరులేని ట్రాక్‌మాన్ వీల్"
+
+#~ msgid "TrackMan Live"
+#~ msgstr "ట్రాక్‌మాన్ లైవ్"
+
+#~ msgid "Cordless TrackMan FX"
+#~ msgstr "వైరులేని ట్రాక్‌మాన్ FX"
+
+#~ msgid "Cordless MouseMan Optical"
+#~ msgstr "వైరులేని మౌస్‌మాన్ ఆప్టికల్"
+
+#~ msgid "Cordless Optical Mouse"
+#~ msgstr "వైరులేని ఆప్టికల్ మౌస్"
+
+#~ msgid "Cordless MouseMan Optical (2ch)"
+#~ msgstr "వైరులేని మౌస్‌మాన్ ఆప్టికల్ (2ch)"
+
+#~ msgid "Cordless Optical Mouse (2ch)"
+#~ msgstr "వైరులేని ఆప్టికల్ మౌస్ (2ch)"
+
+#~ msgid "Cordless Mouse (2ch)"
+#~ msgstr "వైరులేని మౌస్ (2ch)"
+
+#~ msgid "Cordless Optical TrackMan"
+#~ msgstr "వైరులేని ఆప్టికల్ ట్రాక్‌మాన్"
+
+#~ msgid "MX700 Cordless Optical Mouse"
+#~ msgstr "MX700 వైరులేని ఆప్టికల్ మౌస్"
+
+#~ msgid "MX700 Cordless Optical Mouse (2ch)"
+#~ msgstr "MX700 వైరులేని ఆప్టికల్ మౌస్ (2ch)"
+
+#~ msgid "Unknown mouse"
+#~ msgstr "తెలియని మౌస్"
+
+#~ msgid "Cordless Name"
+#~ msgstr "వేరులేనిదాని పేరు"
+
+#~ msgid "Sensor Resolution"
+#~ msgstr "సెన్సార్ రెజొల్యూషన్"
+
+#~ msgid "400 counts per inch"
+#~ msgstr "అంగుళముకు 400 చొప్పున"
+
+#~ msgid "800 counts per inch"
+#~ msgstr "అంగుళముకు 800 చొప్పున"
+
+#~ msgid "Battery Level"
+#~ msgstr "బ్యాటరీ స్థాయి"
+
+#~ msgid "RF Channel"
+#~ msgstr "RF చానల్"
+
+#~ msgid "Channel 1"
+#~ msgstr "చానల్ 1"
+
+#~ msgid "Channel 2"
+#~ msgstr "చానల్ 2"
+
+#~ msgid "KDE Classic"
+#~ msgstr "KDE క్లాసిక్"
+
+#~ msgid "The default cursor theme in KDE 2 and 3"
+#~ msgstr "KDE 2 మరియు 3 నందు అప్రమేయ కర్సర్ థీమ్"
+
+#~ msgid "No description available"
+#~ msgstr "ఎటువంటి వివరణ అందుబాటులో లేదు"
+
+#~ msgid "Short"
+#~ msgstr "పొట్టి"
+
+#~ msgid "Long"
+#~ msgstr "పొడుగు"

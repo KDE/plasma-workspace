@@ -1,0 +1,391 @@
+# translation of kcmicons.po to Thai
+# Copyright (C) 2003, 2005, 2007, 2008 Free Software Foundation, Inc.
+#
+# Thanomsub Noppaburana <donga_n@yahoo.com>, 2003.
+# Sahachart Anukulkitch <drrider@gmail.com>, 2005, 2007.
+# Thanomsub Noppaburana <donga.nb@gmail.com>, 2008, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmicons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"PO-Revision-Date: 2010-02-27 10:15+0700\n"
+"Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
+"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: iconsizecategorymodel.cpp:14
+#, kde-format
+msgid "Toolbar"
+msgstr "แถบเครื่องมือ"
+
+#: iconsizecategorymodel.cpp:15
+#, kde-format
+msgid "Main Toolbar"
+msgstr "แถบเครื่องมือหลัก"
+
+#: iconsizecategorymodel.cpp:16
+#, kde-format
+msgid "Small Icons"
+msgstr "ภาพไอคอนขนาดเล็ก"
+
+#: iconsizecategorymodel.cpp:17
+#, kde-format
+msgid "Panel"
+msgstr "ถาดพาเนล"
+
+#: iconsizecategorymodel.cpp:18
+#, kde-format
+msgid "Dialogs"
+msgstr "กล่องโต้ตอบ"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, fuzzy, kde-format
+#| msgid "Main Toolbar"
+msgid "Main toolbar icons size"
+msgstr "แถบเครื่องมือหลัก"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, fuzzy, kde-format
+#| msgid "Small Icons"
+msgid "Small icons size"
+msgstr "ภาพไอคอนขนาดเล็ก"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr ""
+
+#: main.cpp:182
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: main.cpp:193
+#, fuzzy, kde-format
+#| msgid "Unable to find the icon theme archive %1."
+msgid "Unable to download the icon theme archive: %1"
+msgstr "หาแฟ้มจัดเก็บชุดภาพไอคอน %1 ไม่พบ"
+
+#: main.cpp:207
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "แฟ้มไม่ใช่แฟ้มจัดเก็บชุดภาพไอคอนที่ถูกต้อง"
+
+#: main.cpp:212
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr ""
+"เกิดปัญหาขึ้นในระหว่างการติดตั้ง อย่างไรก็ตาม ส่วนใหญ่ของชุดภาพไอคอนในแฟ้มจัดเก็บ "
+"ได้ถูกติดตั้งไว้แล้ว"
+
+#: main.cpp:216
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: main.cpp:260
+#, fuzzy, kde-format
+#| msgid "Installing icon themes"
+msgid "Installing icon themes…"
+msgstr "กำลังติดตั้งชุดภาพไอคอน"
+
+#: main.cpp:270
+#, fuzzy, kde-format
+#| msgid "Installing icon themes"
+msgid "Installing %1 theme…"
+msgstr "กำลังติดตั้งชุดภาพไอคอน"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr ""
+
+#: package/contents/ui/main.qml:147
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Remove Icon Theme"
+msgstr "ลบชุดตกแต่งออก"
+
+#: package/contents/ui/main.qml:154
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Icon Theme"
+msgstr "ลบชุดตกแต่งออก"
+
+#: package/contents/ui/main.qml:228
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr ""
+
+#: package/contents/ui/main.qml:246
+#, fuzzy, kde-format
+#| msgid "Install Theme File..."
+msgid "Install from File…"
+msgstr "ติดตั้งแฟ้มชุดตกแต่ง..."
+
+#: package/contents/ui/main.qml:251
+#, fuzzy, kde-format
+#| msgid "Get New Themes..."
+msgid "Get New Icons…"
+msgstr "หาชุดตกแต่งใหม่ ๆ ..."
+
+#: package/contents/ui/main.qml:279
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Open Theme"
+msgstr "ลบชุดตกแต่งออก"
+
+#: package/contents/ui/main.qml:281
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "ถนอมทรัพย์ นพบูรณ์, สหชาติ อนุกูลกิจ"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "donga.nb@gmail.com, drrider@gmail.com"
+
+#~ msgid "Icons"
+#~ msgstr "ภาพไอคอน"
+
+#~ msgid "Icons Control Panel Module"
+#~ msgstr "มอดูลควบคุมภาพไอคอน"
+
+#~ msgid "(c) 2000-2003 Geert Jansen"
+#~ msgstr "สงวนลิขสิทธิ์ (c) 2000-2003 Geert Jansen"
+
+#~ msgid "Geert Jansen"
+#~ msgstr "Geert Jansen"
+
+#~ msgid "Antonio Larrosa Jimenez"
+#~ msgstr "Antonio Larrosa Jimenez"
+
+#~ msgid "Torsten Rahn"
+#~ msgstr "Torsten Rahn"
+
+#~ msgid "Desktop"
+#~ msgstr "พื้นที่ทำงาน"
+
+#~ msgid "Use of Icon"
+#~ msgstr "ใช้กับภาพไอคอน"
+
+#~ msgctxt "@label The icon rendered by default"
+#~ msgid "Default"
+#~ msgstr "ค่าปริยาย"
+
+#~ msgctxt "@label The icon rendered as active"
+#~ msgid "Active"
+#~ msgstr "ทำงาน"
+
+#~ msgctxt "@label The icon rendered as disabled"
+#~ msgid "Disabled"
+#~ msgstr "ปิดการใช้งาน"
+
+#~ msgid "Size:"
+#~ msgstr "ขนาด:"
+
+#~ msgid "Set Effect..."
+#~ msgstr "ตั้งลูกเล่น..."
+
+#~ msgid "All Icons"
+#~ msgstr "ทุกภาพไอคอน"
+
+#~ msgid "Setup Default Icon Effect"
+#~ msgstr "ตั้งค่าลูกเล่นของภาพไอคอนโดยปริยาย"
+
+#~ msgid "Setup Active Icon Effect"
+#~ msgstr "ตั้งค่าลูกเล่นของภาพไอคอนที่แอ็กทีฟ"
+
+#~ msgid "Setup Disabled Icon Effect"
+#~ msgstr "ตั้งค่าลูกเล่นของภาพไอคอนที่ปิดการใช้"
+
+#~ msgid "&Effect:"
+#~ msgstr "ลู&กเล่น:"
+
+#~ msgid "No Effect"
+#~ msgstr "ไม่มีลู&กเล่น"
+
+#~ msgid "To Gray"
+#~ msgstr "เป็นระดับสีเทา"
+
+#~ msgid "Colorize"
+#~ msgstr "เป็นสี"
+
+#~ msgid "Gamma"
+#~ msgstr "แกมมา"
+
+#~ msgid "Desaturate"
+#~ msgstr "ลดความอิ่มสี"
+
+#~ msgid "To Monochrome"
+#~ msgstr "เปลี่ยนเป็นแบบใช้สีเดียว"
+
+#~ msgid "&Semi-transparent"
+#~ msgstr "กึ่งโปร่งใส"
+
+#~ msgid "Preview"
+#~ msgstr "แสดงตัวอย่าง"
+
+#~ msgid "Effect Parameters"
+#~ msgstr "พารามิเตอร์ของลูกเล่น"
+
+#~ msgid "&Amount:"
+#~ msgstr "จำ&นวน:"
+
+#~ msgid "Co&lor:"
+#~ msgstr "สี:"
+
+#~ msgid "&Second color:"
+#~ msgstr "สีที่สอง:"
+
+#~ msgid "Name"
+#~ msgstr "ชื่อ"
+
+#~ msgid "Description"
+#~ msgstr "รายละเอียด"
+
+#~ msgid "Install a theme archive file you already have locally"
+#~ msgstr "ติดตั้งแฟ้มจัดเก็บชุดตกแต่งที่คุณมีอยู่แล้วภายในเครื่อง"
+
+#~ msgid ""
+#~ "If you already have a theme archive locally, this button will unpack it "
+#~ "and make it available for KDE applications"
+#~ msgstr ""
+#~ "หากคุณมีแฟ้มจัดเก็บชุดตกแต่งที่มีอยู่ภายในเครื่องอยู่แล้ว การใช้ปุ่มนี้จะเป็นการแตกแฟ้มจัดเก็บนั้น "
+#~ "และทำให้มันพร้อมใช้งานสำหรับโปรแกรมของ KDE"
+
+#~ msgid "Get new themes from the Internet"
+#~ msgstr "หาชุดตกแต่งใหม่ ๆ จากอินเทอร์เน็ต"
+
+#~ msgid ""
+#~ "You need to be connected to the Internet to use this action. A dialog "
+#~ "will display a list of themes from the http://www.kde.org website. "
+#~ "Clicking the Install button associated with a theme will install this "
+#~ "theme locally."
+#~ msgstr ""
+#~ "คุณจำเป็นต้องมีการเชื่อมต่อไปยังอินเทอร์เน็ตเพื่อใช้การกระทำนี้ "
+#~ "กล่องโต้ตอบนี้จะแสดงรายการของชุดภาพไอคอนที่มีอยู่บนเว็บไซต์ http://www.kde.org "
+#~ "การคลิกที่ปุ่ม ติดตั้ง ซึ่งอยู่บนแถบรายการของชุดตกแต่งนั้น ๆ จะเป็นการติดตั้งชุดแต่งนั้น ๆ "
+#~ "ไว้ในเครื่องของคุณ"
+
+#~ msgid "Remove the selected theme from your disk"
+#~ msgstr "ลบชุดตกแต่งที่เลือกไว้ออกจากดิสก์ของคุณ"
+
+#~ msgid "This will remove the selected theme from your disk."
+#~ msgstr "ใช้สำหรับลบชุดตกแต่งที่เลือกไว้ออกจากดิสก์ของคุณ"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "ลากหรือพิมพ์ที่อยู่ URL ของชุดตกแต่ง"
+
+#~ msgid ""
+#~ "Unable to download the icon theme archive;\n"
+#~ "please check that address %1 is correct."
+#~ msgstr ""
+#~ "ไม่สามารถดาวน์โหลดแฟ้มจัดเก็บชุดภาพไอคอนได้\n"
+#~ "โปรดตรวจสอบว่าที่อยู่ %1 นี้ถูกต้องแล้ว"
+
+#~ msgid "<qt>Installing <strong>%1</strong> theme</qt>"
+#~ msgstr "<qt>กำลังติดตั้งชุดตกแต่ง <strong>%1</strong></qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <strong>%1</strong> icon theme?"
+#~ "<br /><br />This will delete the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>คุณแน่ใจว่าจะลบชุดภาพไอคอน <strong>%1</strong> หรือไม่ ?<br /><br /"
+#~ ">โดยการลบนี้จะเป็นการลบแฟ้มที่ถูกติดตั้งไว้โดยชุดภาพไอคอนนี้</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "การยืนยัน"
+
+#~ msgid "&Theme"
+#~ msgstr "&ชุดตกแต่ง"
+
+#~ msgid "Ad&vanced"
+#~ msgstr "เ&พิ่มเติม"
+
+#, fuzzy
+#~| msgid ""
+#~| "<h1>Icons</h1>This module allows you to choose the icons for your "
+#~| "desktop.<p>To choose an icon theme, click on its name and apply your "
+#~| "choice by pressing the \"Apply\" button below. If you do not want to "
+#~| "apply your choice you can press the \"Reset\" button to discard your "
+#~| "changes.</p><p>By pressing the \"Install New Theme\" button you can "
+#~| "install your new icon theme by writing its location in the box or "
+#~| "browsing to the location. Press the \"OK\" button to finish the "
+#~| "installation.</p><p>The \"Remove Theme\" button will only be activated "
+#~| "if you select a theme that you installed using this module. You are not "
+#~| "able to remove globally installed themes here.</p><p>You can also "
+#~| "specify effects that should be applied to the icons.</p>"
+#~ msgid ""
+#~ "<h1>Icons</h1>This module allows you to choose the icons for your desktop."
+#~ "<p>To choose an icon theme, click on its name and apply your choice by "
+#~ "pressing the \"Apply\" button below. If you do not want to apply your "
+#~ "choice you can press the \"Reset\" button to discard your changes.</"
+#~ "p><p>By pressing the \"Install Theme File...\" button you can install "
+#~ "your new icon theme by writing its location in the box or browsing to the "
+#~ "location. Press the \"OK\" button to finish the installation.</p><p>The "
+#~ "\"Remove Theme\" button will only be activated if you select a theme that "
+#~ "you installed using this module. You are not able to remove globally "
+#~ "installed themes here.</p><p>You can also specify effects that should be "
+#~ "applied to the icons.</p>"
+#~ msgstr ""
+#~ "<hl>ภาพไอคอน<hl> มอดูลนี้จะให้คุณเลือกภาพไอคอนสำหรับพื้นที่ทำงานของคุณ "
+#~ "<p>ในการเลือกใช้ชุดภาพไอคอน ให้คลิกที่ชื่อของชุดนั้น แล้วปรับใช้กับระบบโดยกดที่ปุ่ม \"ปรับใช้\" "
+#~ "ด้านล่าง หากคุณไม่ต้องการปรับใช้ตัวเลือกของคุณ คุณสามารถกดปุ่ม \"ตั้งใหม่\" "
+#~ "เพื่อละทิ้งสิ่งที่คุณได้เปลี่ยนแปลงไป</p><p>โดยการกดที่ปุ่ม \"ติดตั้งชุดภาพไอคอนใหม่\" "
+#~ "คุณจะสามารถติดตั้งชุดภาพไอคอนใหม่ได้โดย เขียนที่อยู่ของชุดภาพไอคอนลงไปที่ช่อง "
+#~ "หรือการเรียกดูที่อยู่ของชุดภาพไอคอน แล้วกดปุ่ม \"ตกลง\" เพื่อสิ้นสุดการติดตั้ง</p> <p>ปุ่ม "
+#~ "\"ลบชุดภาพไอคอน\" "
+#~ "จะสามารถใช้งานได้หากคุณได้ทำการเลือกชุดภาพไอคอนที่คุณได้ทำการติดตั้งผ่านมอดูลนี้เท่านั้น "
+#~ "คุณไม่สามารถลบชุดภาพไอคอนที่ทำการติดตั้งสำหรับทั้งระบบได้ตรงนี้</p> "
+#~ "<p>คุณสามารถระบุลูกเล่นที่จะปรับไช้กับภาพไอคอนได้ด้วย</p>"
+
+#~ msgid "Animate icons"
+#~ msgstr "ภาพไอคอนแบบเคลื่อนไหว"
+
+#~ msgid "Select the icon theme you want to use:"
+#~ msgstr "เลือกชุดภาพไอคอนที่คุณต้องการใช้:"
+
+#~ msgid "Double-sized pixels"
+#~ msgstr "ขนาดพิกเซลใหญ่เป็นสองเท่า"
+
+#~ msgid "Desktop/File Manager"
+#~ msgstr "พื้นที่ทำงาน/ตัวจัดการแฟ้ม"

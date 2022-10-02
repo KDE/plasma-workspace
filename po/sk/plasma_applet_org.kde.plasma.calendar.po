@@ -1,0 +1,70 @@
+# translation of plasma_applet_org.kde.plasma.calendar.po to Slovak
+# Roman Paholik <wizzardsk@gmail.com>, 2014, 2015, 2016.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_org.kde.plasma.calendar\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2019-05-01 15:49+0200\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 19.04.0\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Všeobecné"
+
+#: package/contents/ui/configGeneral.qml:24
+#, kde-format
+msgid "Calendar version:"
+msgstr "Verzia kalendáru:"
+
+#: package/contents/ui/configGeneral.qml:26
+#, kde-format
+msgid "Show week numbers"
+msgstr "Zobrazovať čísla týždňov"
+
+#: package/contents/ui/configGeneral.qml:36
+#, kde-format
+msgctxt "What information is shown in the calendar icon"
+msgid "Compact version:"
+msgstr "Kompaktná verzia:"
+
+#: package/contents/ui/configGeneral.qml:38
+#, kde-format
+msgctxt "Show the number of the day (eg. 31) in the icon"
+msgid "Show day of the month"
+msgstr "Zobraziť deň v mesiaci"
+
+#: package/contents/ui/configGeneral.qml:44
+#, kde-format
+msgctxt "Show the week number (eg. 50) in the icon"
+msgid "Show week number"
+msgstr "Zobraziť číslo týždňa"
+
+#~ msgid "Working Day"
+#~ msgstr "Pracovný deň"
+
+#~ msgid "Starts at 9"
+#~ msgstr "Začína o 9"
+
+#~ msgid "Ends at 5"
+#~ msgstr "Končí o 5"
+
+#~ msgctxt "What information is shown in the calendar icon"
+#~ msgid "Icon:"
+#~ msgstr "Ikona:"
+
+#~ msgctxt "Show the number of the day (eg. 31) in the icon"
+#~ msgid "Day in month"
+#~ msgstr "Deň v mesiaci"
+
+#~ msgid "Agenda"
+#~ msgstr "Agenda"

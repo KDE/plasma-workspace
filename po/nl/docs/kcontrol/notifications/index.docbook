@@ -1,0 +1,368 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Dutch "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmnotify" lang="&language;">
+<title
+>Instellingen voor systeemmeldingen</title>
+<articleinfo>
+
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+><personname
+><firstname
+>Kai Uwe</firstname
+> <surname
+>Broulik</surname
+></personname
+> <email
+>kde@broulik.de</email
+></author>
+&Freek.de.Kruijf; 
+</authorgroup>
+
+<date
+>2021-04-16</date>
+<releaseinfo
+>Plasma 5.21</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systeeminstellingen</keyword>
+<keyword
+>systeemmeldingen</keyword>
+<keyword
+>melding</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="sys-notify">
+<title
+>Instellingen voor systeemmeldingen</title>
+
+<para
+>In &plasma;, zoals bij alle toepassingen, dient de gebruiker geïnformeerd te worden wanneer er een probleem is opgetreden of er iets is gebeurd. &plasma; gebruikt <quote
+>Systeemmeldingen</quote
+> om de gebruiker te informeren wat er gebeurt.</para>
+
+<para
+>Met deze module kunt u bepalen wat &plasma; doet om u van een gebeurtenis op de hoogte te stellen.</para>
+
+<sect2 id="notification-settings">
+<title
+>Instellingen voor meldingen</title>
+
+<sect3 id="do-not-disturb">
+<title
+>Modus Niet storen</title>
+
+    <para
+>Deze modus schakelt alle visuele en de meeste hoorbare meldingen uit om u te kunnen focussen op uw huidige taak. Instellingen in deze sectie laten u configureren onder welke omstandigheden &plasma; automatisch de modus Niet storen inschakelt.</para>
+
+    <variablelist>
+
+    <varlistentry>
+    <term
+><guiicon
+>Wanneer schermen gespiegeld zijn inschakelen</guiicon
+></term>
+    <listitem
+><para
+>Automatisch modus Niet storen inschakelen wanneer u uw schermen spiegelt, bijvoorbeeld gedurende een presentatie.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Tijdens scherm delen inschakelen</guiicon
+></term>
+    <listitem
+><para
+>Automatisch modus Niet storen inschakelen wanneer u uw schermen deelt, bijvoorbeeld gedurende een online lezing.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Kritieke meldingen tonen</guiicon
+></term>
+    <listitem
+><para
+>Of kritieke meldingen getoond moeten worden, zoals wanneer uw batterij bijna leeg is, zelfs wanneer u in modus Niet storen bent.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Omschakelen met:</guiicon
+></term>
+    <listitem
+><para
+>Een globale sneltoets die u kunt indrukken om modus Niet storen op elk moment in of uit te schakelen.</para
+></listitem>
+    </varlistentry>
+
+    </variablelist>
+
+</sect3>
+
+<sect3 id="notification-filters">
+    <title
+>Filters</title>
+
+    <variablelist>
+
+    <varlistentry>
+    <term
+>Kritieke meldingen: <guiicon
+>Altijd op de voorgrond</guiicon
+></term>
+    <listitem
+><para
+>Kritieke meldingen bovenaan houden, zoals wanneer uw batterij bijna leeg is. Dit verzekert dat deze altijd zichtbaar is bij het bekijken van een video in modus volledig scherm of bij het geven van een presentatie.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+>Normale meldingen: <guiicon
+>Altijd op de voorgrond</guiicon
+></term>
+    <listitem
+><para
+>Normale meldingen, zoals berichten, bovenaan houden. Dit verzekert dat deze altijd zichtbaar zijn bij het bekijken van een video in modus volledig scherm of bij het geven van een presentatie.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+>Meldingen met lage prioriteit tonen: <guiicon
+>Pop-up tonen</guiicon
+> en <guiicon
+>In geschiedenis tonen</guiicon
+></term>
+    <listitem
+><para
+>Of meldingen met lage prioriteit, zoals wijziging van track in uw mediaspeler, respectievelijk als pop-ups of in de geschiedenis getoond worden.</para
+></listitem>
+    </varlistentry>
+
+    </variablelist>
+</sect3>
+
+<sect3 id="notification-behavior">
+    <title
+>Gedrag</title>
+
+    <variablelist>
+
+    <varlistentry>
+    <term
+>Pop-up: <guiicon
+>Nabij pictogram voor meldingen tonen</guiicon
+></term>
+    <listitem
+><para
+>Pop-ups voor meldingen tonen dichtbij waar uw meldingenpictogram zich in uw paneel bevindt.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Aangepaste positie kiezen...</guiicon
+></term>
+    <listitem
+><para
+>Laat u een vaste schermhoek kiezen waar pop-ups van meldingen geplaatst zullen worden.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+        <term
+><guiicon
+>Verbergen achter:</guiicon
+></term>
+    <listitem
+><para
+>Na hoeveel seconden de pop-up voor meldingen automatisch verdwijnt. U kunt iets kiezen ergens tussen 1 en 120 seconden.</para
+></listitem>
+    </varlistentry>
+
+    </variablelist>
+</sect3>
+
+<sect3 id="progress-and-badges">
+    <title
+>Voortgang van toepassing en bijeenhouden</title>
+
+    <sect4 id="application-progress">
+        <title
+>Voortgang van toepassing</title>
+
+        <para
+>Opties in deze sectie besturen hoe voortgang van toepassingen, zoals kopiëren of downloaden van een bestand, wordt getoond.</para>
+
+        <variablelist>
+
+        <varlistentry>
+        <term
+><guiicon
+>In takenbeheer tonen</guiicon
+></term>
+        <listitem
+><para
+>Kleur het venster in het paneel gebaseerd op de voortgang.</para
+></listitem>
+        </varlistentry>
+
+        <varlistentry>
+        <term
+><guiicon
+>In meldingen tonen</guiicon
+></term>
+        <listitem
+><para
+>Een pop-up voor meldingen tonen gedurende de voortgang.</para
+></listitem>
+        </varlistentry>
+
+        <varlistentry>
+        <term
+><guiicon
+>Pop-up open houden tijdens voortgang</guiicon
+></term>
+        <listitem
+><para
+>Of de pop-up zichtbaar zou moeten blijven tijdens de gehele duur van de voortgang of automatisch zich verbergt. Het zal altijd weer getoond worden wanneer de taak eindigt of mislukt.</para
+></listitem>
+        </varlistentry>
+
+        </variablelist>
+    </sect4>
+
+    <sect4 id="badges">
+        <title
+>Bijeen gehouden meldingen</title>
+
+        <variablelist>
+
+        <varlistentry>
+        <term
+><guiicon
+>In takenbeheer tonen</guiicon
+></term>
+        <listitem
+><para
+>Laat toepassingen een samenvatting in het paneel tonen, zoals een aantal ongelezen meldingen.</para
+></listitem>
+        </varlistentry>
+
+        </variablelist>
+    </sect4>
+
+</sect3>
+
+</sect2>
+
+<sect2 id="application-settings">
+<title
+>Toepassinginstellingen</title>
+
+<para
+>Klikken op de knop <guilabel
+>Configureren...</guilabel
+> aan het eind van de lijst opent de instellingenpagina van de toepassing die u het gedrag van meldingen laat configureren op basis van per-toepassing en per-service.</para>
+
+<para
+>De zijbalk links gebruiken om een item te kiezen uit de categorie <guilabel
+>Toepassingen</guilabel
+> of <guilabel
+>Systeemservices</guilabel
+>.</para>
+
+<para
+>Algemene pop-ups voor waarschuwingen evenals opstart= en afsluitgeluiden zijn gelocaliseerd onder de service <guilabel
+>Plasma Workspace</guilabel
+>.</para>
+
+<para
+>Toepassingen die geen juiste identificatie leveren, zoals shell-scripts, kunnen geconfigureerd worden met het item <guilabel
+>Andere toepassingen</guilabel
+>.</para>
+
+<variablelist>
+
+    <varlistentry>
+    <term
+><guiicon
+>Pop-ups tonen</guiicon
+></term>
+    <listitem
+><para
+>Of deze toepassing pop-up-meldingen mag tonen.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>In modus niet storen tonen</guiicon
+></term>
+    <listitem
+><para
+>Of deze toepassing pop-up-meldingen mag tonen zelfs indien in modus Niet storen.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>In geschiedenis tonen</guiicon
+></term>
+    <listitem
+><para
+>Of deze meldingen van de toepassing bewaard zullen worden in de geschiedenis van meldingen..</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Bijeen gehouden meldingen tonen</guiicon
+></term>
+    <listitem
+><para
+>Of deze toepassing samenvattingen in het paneel mag tonen, zoals aantal ongelezen meldingen.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Gebeurtenissen configureren...</guiicon
+></term>
+    <listitem
+><para
+>Voor &kde;-toepassingen kunt u ook elke melding individueel configureren.</para
+></listitem>
+    </varlistentry>
+
+</variablelist>
+
+</sect2>
+
+</sect1>
+
+</article>

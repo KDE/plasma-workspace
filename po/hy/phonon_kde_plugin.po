@@ -1,0 +1,32 @@
+# translation of phonon_kde.po to Armenian
+# Copyright (C) 2007 KDE Armenian translation team
+#
+# Vardan Gevorgyan <vardangevorgyan@yahoo.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: phonon_kde\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-05-20 03:26+0200\n"
+"PO-Revision-Date: 2007-12-24 12:04+0400\n"
+"Last-Translator: Vardan Gevorgyan <vardangevorgyan@yahoo.com>\n"
+"Language-Team: Armenian <translation-team-hy@lists.sourceforge.net>\n"
+"Language: hy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Vardan Gevorgyan"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "vardangevorgyan@yahoo.com"
+
+#~ msgid "create method returned 0"
+#~ msgstr "ստեղծեք մեթոդ, որը կվերադարձնի 0"

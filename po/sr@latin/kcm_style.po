@@ -1,0 +1,272 @@
+# Translation of kcmstyle.po into Serbian.
+# Tiron Andric <tiron@beotel.yu>, 2003.
+# Toplica Tanaskovic <toptan@kde.org.yu>, 2003, 2004.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2005, 2007, 2008, 2009, 2010, 2012, 2016, 2017.
+# Dalibor Djuric <daliborddjuric@gmail.com>, 2009, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmstyle\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-01-23 03:49+0100\n"
+"PO-Revision-Date: 2017-12-17 18:00+0100\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@latin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Časlav Ilić"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "caslav.ilic@gmx.net"
+
+#: gtkpage.cpp:117
+#, kde-format
+msgid "%1 is not a valid GTK Theme archive."
+msgstr ""
+
+#: kcmstyle.cpp:92
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "&Applications"
+msgid "Application Style"
+msgstr "&Programi"
+
+#: kcmstyle.cpp:94
+#, fuzzy, kde-format
+#| msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
+msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik"
+msgstr "© 2002, Karol Sved, Danijel Molkentin"
+
+#: kcmstyle.cpp:96
+#, kde-format
+msgid "Karol Szwed"
+msgstr "Karol Sved"
+
+#: kcmstyle.cpp:97
+#, kde-format
+msgid "Daniel Molkentin"
+msgstr "Danijel Molkentin"
+
+#: kcmstyle.cpp:98
+#, kde-format
+msgid "Kai Uwe Broulik"
+msgstr ""
+
+#: kcmstyle.cpp:181 kcmstyle.cpp:188
+#, kde-format
+msgid "There was an error loading the configuration dialog for this style."
+msgstr "Greška pri učitavanju dijaloga za podešavanje ovog stila."
+
+#: kcmstyle.cpp:283
+#, kde-format
+msgid "Failed to apply selected style '%1'."
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:43
+#, fuzzy, kde-format
+#| msgid "Show icons in menus:"
+msgid "Show icons:"
+msgstr "&Ikonice u menijima:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:44
+#, fuzzy, kde-format
+#| msgid "Radio button"
+msgid "On buttons"
+msgstr "Radio dugme"
+
+#: package/contents/ui/EffectSettingsPopup.qml:51
+#, kde-format
+msgid "In menus"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:60
+#, fuzzy, kde-format
+#| msgid "Main &toolbar text location:"
+msgid "Main toolbar label:"
+msgstr "&Lokacija teksta glavne trake:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:62
+#, kde-format
+msgid "None"
+msgstr ""
+
+# @item:inlistbox Text position
+#: package/contents/ui/EffectSettingsPopup.qml:63
+#, fuzzy, kde-format
+#| msgid "Text Only"
+msgid "Text only"
+msgstr "samo tekst"
+
+# @item:inlistbox Text position
+#: package/contents/ui/EffectSettingsPopup.qml:64
+#, fuzzy, kde-format
+#| msgid "Text Beside Icons"
+msgid "Beside icons"
+msgstr "tekst pored ikonica"
+
+# @item:inlistbox Text position
+#: package/contents/ui/EffectSettingsPopup.qml:65
+#, fuzzy, kde-format
+#| msgid "Text Below Icons"
+msgid "Below icon"
+msgstr "tekst ispod ikonica"
+
+#: package/contents/ui/EffectSettingsPopup.qml:76
+#, fuzzy, kde-format
+#| msgid "Secondary toolbar text &location:"
+msgid "Secondary toolbar label:"
+msgstr "Lokacija &teksta drugih traka:"
+
+#: package/contents/ui/GtkStylePage.qml:32
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "&Applications"
+msgid "GNOME/GTK Application Style"
+msgstr "&Programi"
+
+#: package/contents/ui/GtkStylePage.qml:58
+#, kde-format
+msgid "GTK2 theme:"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:90
+#: package/contents/ui/GtkStylePage.qml:130
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgid "Preview..."
+msgstr "Pregled"
+
+#: package/contents/ui/GtkStylePage.qml:98
+#, kde-format
+msgid "GTK3 theme:"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:151
+#, kde-format
+msgid "Install from File..."
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:157
+#, kde-format
+msgid "Download New GNOME/GTK Application Styles..."
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:165
+#, kde-format
+msgid "Download New GNOME/GTK2 Application Styles..."
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:173
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "&Applications"
+msgid "GNOME/GTK2 Application Styles"
+msgstr "&Programi"
+
+#: package/contents/ui/GtkStylePage.qml:182
+#, kde-format
+msgid "Download New GNOME/GTK3 Application Styles..."
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:190
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "&Applications"
+msgid "GNOME/GTK3 Application Styles"
+msgstr "&Programi"
+
+#: package/contents/ui/GtkStylePage.qml:207
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:209
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: package/contents/ui/main.qml:31
+#, fuzzy, kde-format
+#| msgid ""
+#| "<h1>Style</h1>This module allows you to modify the visual appearance of "
+#| "user interface elements, such as the widget style and effects."
+msgid ""
+"This module allows you to modify the visual appearance of applications' user "
+"interface elements."
+msgstr ""
+"<h1>Stil</h1><p>U ovom modulu možete menjati vizuelni izgled elemenata "
+"korisničkog sučelja, kao što su stil vidžeta i efekti.</p>"
+
+# >> @title:window %1 style name
+#: package/contents/ui/main.qml:107
+#, fuzzy, kde-format
+#| msgid "Configure %1"
+msgid "Configure Style..."
+msgstr "Podesi %1|/|Podesi $[aku %1]"
+
+#: package/contents/ui/main.qml:124
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr ""
+
+#: package/contents/ui/main.qml:137
+#, kde-format
+msgid "Configure GNOME/GTK Application Style..."
+msgstr ""
+
+# >> @title:window %1 style name
+#: styleconfdialog.cpp:33
+#, kde-format
+msgid "Configure %1"
+msgstr "Podesi %1|/|Podesi $[aku %1]"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "Jezičak 1"
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, fuzzy, kde-format
+#| msgid "Button"
+msgid "Push Button"
+msgstr "Dugme"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, fuzzy, kde-format
+#| msgid "Combobox"
+msgid "Combo box"
+msgstr "Spisak"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "Kućica"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "Radio dugme"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:133
+#, kde-format
+msgid "Tab 2"
+msgstr "Jezičak 2"

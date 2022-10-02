@@ -1,0 +1,223 @@
+# translation of kcm_autostart.po to Punjabi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Amanpreet Singh <aalam@users.sf.net>, 2008.
+# A S Alam <aalam@users.sf.net>, 2008, 2010, 2020, 2021.
+# Amanpreet Singh Alam <aalam@users.sf.net>, 2009, 2012, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_autostart\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:50+0000\n"
+"PO-Revision-Date: 2021-06-08 22:25-0700\n"
+"Last-Translator: A S Alam <aalam@satluj.org>\n"
+"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.12.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: autostartmodel.cpp:288
+#, kde-format
+msgid "\"%1\" is not an absolute url."
+msgstr "\"%1\" ਅਸਲ url ਨਹੀਂ ਹੈ।"
+
+#: autostartmodel.cpp:291
+#, kde-format
+msgid "\"%1\" does not exist."
+msgstr "\"%1 ਮੌਜੂਦ ਨਹੀਂ ਹੈ।"
+
+#: autostartmodel.cpp:294
+#, kde-format
+msgid "\"%1\" is not a file."
+msgstr "\"%1\" ਫਾਈਲ ਨਹੀਂ ਹੈ।"
+
+#: autostartmodel.cpp:297
+#, kde-format
+msgid "\"%1\" is not readable."
+msgstr "\"%1\" ਪੜ੍ਹਨਯੋਗ ਨਹੀਂ।"
+
+#: package/contents/ui/main.qml:40
+#, kde-format
+msgid "Make Executable"
+msgstr ""
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "The file '%1' must be executable to run at logout."
+msgstr ""
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid "The file '%1' must be executable to run at login."
+msgstr ""
+
+#: package/contents/ui/main.qml:89
+#, kde-format
+msgid "Properties"
+msgstr "ਵਿਸ਼ੇਸ਼ਤਾ"
+
+#: package/contents/ui/main.qml:95
+#, kde-format
+msgid "Remove"
+msgstr "ਹਟਾਓ"
+
+#: package/contents/ui/main.qml:106
+#, kde-format
+msgid "Applications"
+msgstr "ਐਪਲੀਕੇਸ਼ਨਾਂ"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Login Scripts"
+msgstr "ਲਾਗਇਨ ਸਕ੍ਰਿਪਟਾਂ"
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Pre-startup Scripts"
+msgstr "ਪ੍ਰੀ-ਸਟਾਰਟਅੱਪ ਸਕ੍ਰਿਪਟਾਂ"
+
+#: package/contents/ui/main.qml:115
+#, kde-format
+msgid "Logout Scripts"
+msgstr "ਲਾਗਆਉਟ ਸਕ੍ਰਿਪਟਾਂ"
+
+#: package/contents/ui/main.qml:124
+#, kde-format
+msgid "No user-specified autostart items"
+msgstr ""
+
+#: package/contents/ui/main.qml:125
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Click the <interface>Add…</interface> button below to add some"
+msgstr ""
+
+#: package/contents/ui/main.qml:139
+#, kde-format
+msgid "Choose Login Script"
+msgstr "ਲਾਗਇਨ ਸਕ੍ਰਿਪਟ ਚੁਣੋ"
+
+#: package/contents/ui/main.qml:160
+#, kde-format
+msgid "Choose Logout Script"
+msgstr "ਲਾਗਆਉਟ ਸਕ੍ਰਿਪਟ ਚੁਣੋ"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "Add…"
+msgstr "…ਜੋੜੋ"
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Add Application…"
+msgstr "…ਐਪਲੀਕੇਸ਼ਨ ਜੋੜੋ"
+
+#: package/contents/ui/main.qml:199
+#, kde-format
+msgid "Add Login Script…"
+msgstr "…ਲਾਗਇਨ ਸਕ੍ਰਿਪਟ ਜੋੜੋ"
+
+#: package/contents/ui/main.qml:205
+#, kde-format
+msgid "Add Logout Script…"
+msgstr "…ਲਾਗਆਉਟ ਸਕ੍ਰਿਪਟ ਜੋੜੋ"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "ਅਮਨਪਰੀਤ ਸਿੰਘ ਆਲਮ ੨੦੨੦"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "alam.yellow@gmail.com"
+
+#~ msgid "Autostart"
+#~ msgstr "ਆਟੋ-ਸਟਾਰਟ"
+
+#~ msgid "Session Autostart Manager Control Panel Module"
+#~ msgstr "ਸ਼ੈਸ਼ਨ ਆਟੋਸਟਾਰਟ ਮੈਨੇਜਰ ਕੰਟਰੋਲ ਪੈਨਲ ਮੋਡੀਊਲ"
+
+#~ msgid "Copyright © 2006–2020 Autostart Manager team"
+#~ msgstr "Copyright © 2006–2020 Autostart ਮੈਨੇਜਰ ਟੀਮ"
+
+#~ msgid "Stephen Leaf"
+#~ msgstr "Stephen Leaf"
+
+#~ msgid "Montel Laurent"
+#~ msgstr "Montel Laurent"
+
+#~ msgid "Maintainer"
+#~ msgstr "ਪਰਬੰਧਕ"
+
+#~ msgid "Nicolas Fella"
+#~ msgstr "ਨਿਕੋਲਸ ਫੇਲਾ"
+
+#~ msgid "Add..."
+#~ msgstr "...ਜੋੜੋ"
+
+#~ msgid "Shell script path:"
+#~ msgstr "ਸੈੱਲ ਸਕ੍ਰਿਪਟ ਪਾਥ:"
+
+#~ msgid "Create as symlink"
+#~ msgstr "ਸਿਮਲਿੰਕ ਵਾਂਗ ਬਣਾਓ"
+
+#, fuzzy
+#~| msgid "Autostart only in KDE"
+#~ msgid "Autostart only in Plasma"
+#~ msgstr "KDE ਵਿੱਚ ਹੀ ਆਟੋ-ਸਟਾਰਟ"
+
+#~ msgid "Name"
+#~ msgstr "ਨਾਂ"
+
+#~ msgid "Command"
+#~ msgstr "ਕਮਾਂਡ"
+
+#~ msgid "Status"
+#~ msgstr "ਹਾਲਤ"
+
+#, fuzzy
+#~| msgctxt ""
+#~| "@title:column The name of the column that decides if the program is run "
+#~| "on kde startup, on kde shutdown, etc"
+#~| msgid "Run On"
+#~ msgctxt ""
+#~ "@title:column The name of the column that decides if the program is run "
+#~ "on session startup, on session shutdown, etc"
+#~ msgid "Run On"
+#~ msgstr "ਚਲਾਓ"
+
+#, fuzzy
+#~| msgid "KDE Autostart Manager"
+#~ msgid "Session Autostart Manager"
+#~ msgstr "KDE ਆਟੋ-ਸਟਾਰਟ ਮੈਨੇਜਰ"
+
+#~ msgctxt "The program will be run"
+#~ msgid "Enabled"
+#~ msgstr "ਯੋਗ ਹੈ"
+
+#~ msgctxt "The program won't be run"
+#~ msgid "Disabled"
+#~ msgstr "ਆਯੋਗ ਹੈ"
+
+#~ msgid "Desktop File"
+#~ msgstr "ਡੈਸਕਟਾਪ ਫਾਈਲ"
+
+#~ msgid "Script File"
+#~ msgstr "ਸਕ੍ਰਿਪਟ ਫਾਈਲ"
+
+#~ msgid "Add Program..."
+#~ msgstr "ਪਰੋਗਰਾਮ ਸ਼ਾਮਲ..."
+
+#~ msgid "Startup"
+#~ msgstr "ਸਟਾਰਟਅੱਪ"
+
+#~ msgid ""
+#~ "Only files with “.sh” extensions are allowed for setting up the "
+#~ "environment."
+#~ msgstr "ਸੈਟਿੰਗ ਅੱਪ ਇੰਵਾਇਰਨਮੈਂਟ ਲਈ ਕੇਵਲ “.sh” ਇਕਸਟੈਨਸ਼ਨ ਵਾਲੀਆਂ ਫਾਈਲਾਂ ਹੀ ਪੜ੍ਹ ਸਕਦਾ ਹੈ।"
+
+#~ msgid "Shutdown"
+#~ msgstr "ਬੰਦ ਕਰੋ"

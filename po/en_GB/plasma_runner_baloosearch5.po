@@ -1,0 +1,74 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Steve Allewell <steve.allewell@gmail.com>, 2014, 2016, 2018, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-05 00:46+0000\n"
+"PO-Revision-Date: 2022-04-23 14:24+0100\n"
+"Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
+"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language: en_GB\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: baloosearchrunner.cpp:65
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Open Containing Folder"
+
+#: baloosearchrunner.cpp:87
+#, kde-format
+msgid "Audio"
+msgstr "Audio"
+
+#: baloosearchrunner.cpp:88
+#, kde-format
+msgid "Image"
+msgstr "Image"
+
+#: baloosearchrunner.cpp:89
+#, kde-format
+msgid "Video"
+msgstr "Video"
+
+#: baloosearchrunner.cpp:90
+#, kde-format
+msgid "Spreadsheet"
+msgstr "Spreadsheet"
+
+#: baloosearchrunner.cpp:91
+#, kde-format
+msgid "Presentation"
+msgstr "Presentation"
+
+#: baloosearchrunner.cpp:92
+#, kde-format
+msgid "Folder"
+msgstr "Folder"
+
+#: baloosearchrunner.cpp:93
+#, kde-format
+msgid "Document"
+msgstr "Document"
+
+#: baloosearchrunner.cpp:94
+#, kde-format
+msgid "Archive"
+msgstr "Archive"
+
+#: baloosearchrunner.cpp:95
+#, kde-format
+msgid "Text"
+msgstr "Text"
+
+#~ msgid "Search through files, emails and contacts"
+#~ msgstr "Search through files, emails and contacts"
+
+#~ msgid "Email"
+#~ msgstr "Email"

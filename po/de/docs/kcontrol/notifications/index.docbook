@@ -1,0 +1,382 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % German "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmnotify" lang="&language;">
+<title
+>Einstellungen für Systembenachrichtigungen</title>
+<articleinfo>
+
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+><personname
+><firstname
+>Kai Uwe</firstname
+> <surname
+>Broulik</surname
+></personname
+> <email
+>kde@broulik.de</email
+></author>
+<othercredit role="translator"
+><firstname
+>Deutsches</firstname
+><surname
+>KDE-Übersetzerteam</surname
+><affiliation
+><address
+><email
+>kde-i18n-de@kde.org</email
+></address
+></affiliation
+><contrib
+>Übersetzung</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-16</date>
+<releaseinfo
+>Plasma 5.21</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systemeinstellungen</keyword>
+<keyword
+>Systembenachrichtigungen</keyword>
+<keyword
+>Benachrichtigung</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="sys-notify">
+<title
+>Einstellungen für Systembenachrichtigungen</title>
+
+<para
+>Wie andere Anwendungen muss auch &plasma; den Benutzer informieren, wenn ein Problem aufgetreten ist, wenn eine Aufgabe beendet wurde oder wenn ein anderes Ereignis eingetreten ist. &plasma; verwendet eine Reihe von <quote
+>Systemnachrichten</quote
+>, um den Benutzer zu informieren.</para>
+
+<para
+>In diesem Modul können Sie einstellen, wie &plasma; Ereignisse bekanntmachen soll.</para>
+
+<sect2 id="notification-settings">
+<title
+>Einstellungen für Benachrichtigungen</title>
+
+<sect3 id="do-not-disturb">
+<title
+>„Nicht stören“-Modus</title>
+
+    <para
+>In diesem Modus werden alle visuellen und die meisten akustischen Benachrichtigungen deaktiviert, damit Sie sich sich auf Ihre aktuelle Aufgabe konzentrieren können. Mit den Einstellungen in diesem Abschnitt können Sie festlegen, unter unter welchen Umständen &plasma; automatisch den Modus „Nicht stören“ aktiviert.</para>
+
+    <variablelist>
+
+    <varlistentry>
+    <term
+><guiicon
+>Einschalten, wenn Bildschirmausgabe vereinheitlicht ist</guiicon
+></term>
+    <listitem
+><para
+>Aktivieren Sie automatisch den Modus „Nicht stören“, wenn Sie Bildschirmausgabe vereinheitlicht ist, zum Beispiel während einer Präsentation.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Einschalten bei Bildschirmübertragung</guiicon
+></term>
+    <listitem
+><para
+>Aktivieren Sie automatisch den Modus „Nicht stören“ bei einer Bildschirmübertragung, z. B. zum Beispiel während einer Online-Vorlesung.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Kritische Benachrichtigungen anzeigen</guiicon
+></term>
+    <listitem
+><para
+>Ob kritische Benachrichtigungen wie z. B. dass der Akku fast leer ist, auch im Modus „Nicht stören“ angezeigt werden sollen.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Ein-/ausschalten mit:</guiicon
+></term>
+    <listitem
+><para
+>Ein globales Kurzbefehl, um den Modus „Nicht stören“ ederzeit zu aktivieren und zu deaktivieren.</para
+></listitem>
+    </varlistentry>
+
+    </variablelist>
+
+</sect3>
+
+<sect3 id="notification-filters">
+    <title
+>Filter</title>
+
+    <variablelist>
+
+    <varlistentry>
+    <term
+>Kritische Benachrichtigungen: <guiicon
+>Immer im Vordergrund</guiicon
+></term>
+    <listitem
+><para
+>Kritische Benachrichtigungen, wie z. B. dass Ihr Akku fast leer ist, immer anzeigen. So werden sie auch angezeigt, wenn Sie ein Video im Vollbildmodus ansehen oder eine Präsentation halten.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+>Normale Benachrichtigungen: <guiicon
+>Immer im Vordergrund</guiicon
+></term>
+    <listitem
+><para
+>Normale Benachrichtigungen immer anzeigen. So werden sie auch angezeigt, wenn Sie ein Video im Vollbildmodus ansehen oder eine Präsentation halten.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+>Benachrichtigungen mit niedriger Priorität: <guiicon
+>Aufklappfenster anzeigen</guiicon
+> und <guiicon
+>Im Verlauf anzeigen</guiicon
+></term>
+    <listitem
+><para
+>Ob Benachrichtigungen mit niedriger Priorität, wie z. B. Änderungen des Stücks in Ihrer Medienwiedergabe  als Aufklappfenster bzw. im Verlauf angezeigt werden sollen.</para
+></listitem>
+    </varlistentry>
+
+    </variablelist>
+</sect3>
+
+<sect3 id="notification-behavior">
+    <title
+>Verhalten</title>
+
+    <variablelist>
+
+    <varlistentry>
+    <term
+>Aufklappfenster: <guiicon
+>Neben dem Benachrichtigungssymbol anzeigen</guiicon
+></term>
+    <listitem
+><para
+>Aufklappfenster mit Benachrichtigungen neben dem Benachrichtigungssymbol in Ihrer Kontrollleiste anzeigen.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Benutzerdefinierte Position auswählen ...</guiicon
+></term>
+    <listitem
+><para
+>Hier können Sie eine Bildschirmecke festlegen, in der Aufklappfenster mit Benachrichtigungen angezeigt werden.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+        <term
+><guiicon
+>Ausblenden nach:</guiicon
+></term>
+    <listitem
+><para
+>Nach wie vielen Sekunden das Aufklappfenster mit Benachrichtigungen automatisch ausgeblendet wird. Sie können einen Wert zwischen 1 und 120 Sekunden wählen.</para
+></listitem>
+    </varlistentry>
+
+    </variablelist>
+</sect3>
+
+<sect3 id="progress-and-badges">
+    <title
+>Fortschritt der Anwendung und Symbole</title>
+
+    <sect4 id="application-progress">
+        <title
+>Fortschritt der Anwendung</title>
+
+        <para
+>Die Einstellungen in diesem Abschnitt legen fest, wie der Fortschritt einer Anwendung, z. B. beim Kopieren oder Herunterladen einer Datei, dargestellt wird.</para>
+
+        <variablelist>
+
+        <varlistentry>
+        <term
+><guiicon
+>In Fensterleiste anzeigen</guiicon
+></term>
+        <listitem
+><para
+>Färbt das Fenster in der Kontrollleiste entsprechend dem Fortschritt ein.</para
+></listitem>
+        </varlistentry>
+
+        <varlistentry>
+        <term
+><guiicon
+>In Benachrichtigungen anzeigen</guiicon
+></term>
+        <listitem
+><para
+>Zieht ein Aufklappfenster mit Benachrichtigungen während des Fortschritts ein.</para
+></listitem>
+        </varlistentry>
+
+        <varlistentry>
+        <term
+><guiicon
+>Aufklappfenster beim Fortschritt geöffnet lassen</guiicon
+></term>
+        <listitem
+><para
+>Ob das Aufklappfenster für die gesamte Dauer des Fortschritts sichtbar bleibt oder automatisch ausgeblendet wird. Es wird immer dann wieder angezeigt, wenn die Aufgabe beendet ist oder fehlschlägt.</para
+></listitem>
+        </varlistentry>
+
+        </variablelist>
+    </sect4>
+
+    <sect4 id="badges">
+        <title
+>Benachrichtigungs-Symbole</title>
+
+        <variablelist>
+
+        <varlistentry>
+        <term
+><guiicon
+>In Fensterleiste anzeigen</guiicon
+></term>
+        <listitem
+><para
+>Anwendungen zeigen Symbole, wie z. B. die Anzahl ungelesener Nachrichten, in der Kontrollleiste an.</para
+></listitem>
+        </varlistentry>
+
+        </variablelist>
+    </sect4>
+
+</sect3>
+
+</sect2>
+
+<sect2 id="application-settings">
+<title
+>Anwendungseinstellungen</title>
+
+<para
+>Ein Klick auf den Knopf <guilabel
+>Einrichten</guilabel
+> am Ende der Liste öffnet einen Dialog mit den Anwendungseinstellungen, auf der Sie das Benachrichtigungsverhalten für jede Anwendung und jeden Dienst einzeln einstellen können.</para>
+
+<para
+>Wählen Sie in der Seitenleiste links einen Eintrag aus der Kategorie <guilabel
+>Anwendungen</guilabel
+> or <guilabel
+>Systemdienste</guilabel
+>.</para>
+
+<para
+>Aufklappfenster mit allgemeinen Warnungen sowie Klänge zum An- und Abmelden finden Sie im <guilabel
+>Plasma-Arbeitsbereich</guilabel
+>.</para>
+
+<para
+>Einstellungen für Anwendungen wie z. B. Shell-Skripte, die nicht identifiziert werden können, finden Sie im Eintrag <guilabel
+>Andere Anwendungen</guilabel
+>.</para>
+
+<variablelist>
+
+    <varlistentry>
+    <term
+><guiicon
+>Aufklappfenster anzeigen</guiicon
+></term>
+    <listitem
+><para
+>Ob diese Anwendung Aufklappfenster anzeigen soll.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Im „Nicht stören“-Modus anzeigen</guiicon
+></term>
+    <listitem
+><para
+>Ob diese Anwendung Aufklappfenster sogar im Modus „Nicht stören“ anzeigen soll.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Im Verlauf anzeigen</guiicon
+></term>
+    <listitem
+><para
+>Ob die Benachrichtigungen der Anwendungen im Verlaufsspeicher der Benachrichtigungen behalten werden.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Benachrichtigungs-Symbole anzeigen</guiicon
+></term>
+    <listitem
+><para
+>Ob Anwendungen Symbole, wie z. B. die Anzahl ungelesener Nachrichten, in der Kontrollleiste anzeigen.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Ereignisse einrichten ...</guiicon
+></term>
+    <listitem
+><para
+>Für &kde;-Anwendungen können Sie jede Benachrichtigung einzeln einrichten.</para
+></listitem>
+    </varlistentry>
+
+</variablelist>
+
+</sect2>
+
+</sect1>
+
+</article>

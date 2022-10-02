@@ -1,0 +1,35 @@
+# translation of kio_settings.po to Esperanto
+# Matthias Peick <matthias@peick.de>, 2004.
+# Michael Moroni <michael.moroni@mailoo.org>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: kio_settings\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-08 00:48+0000\n"
+"PO-Revision-Date: 2012-05-23 11:01+0200\n"
+"Last-Translator: Michael Moroni <michael.moroni@mailoo.org>\n"
+"Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: kio_applications.cpp:122
+#, kde-format
+msgid "Applications"
+msgstr "Aplikaĵoj"
+
+#: kio_applications.cpp:122
+#, kde-format
+msgid "Programs"
+msgstr "Programaroj"
+
+#: kio_applications.cpp:131
+#, kde-format
+msgid "Unknown application folder"
+msgstr "Nekonata aplikaĵa dosierujo"
+
+#~ msgid "Settings"
+#~ msgstr "Agordaro"

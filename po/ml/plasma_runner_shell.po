@@ -1,0 +1,132 @@
+# translation of krunner_shellrunner.po to
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the krunner_shellrunner.po package.
+#
+# മണിലാല്‍ കെ.എം|Manilal K M <libregeek@gmail.com>, 2008.
+# പ്രവീണ്‍ അരിമ്പ്രത്തൊടിയില്‍ <pravi.a@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: KDE Malayalam Translation\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-27 00:45+0000\n"
+"PO-Revision-Date: 2020-11-30 16:14+0000\n"
+"Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
+"Language-Team: SMC <smc.org.in>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Weblate 4.7.2\n"
+
+#: shellrunner.cpp:35
+#, kde-format
+msgid "Finds commands that match :q:, using common shell syntax"
+msgstr "സാധാരണ ഷെൽ വാക്യഘടന ഉപയോഗിച്ച് :q: മായി പൊരുത്തപ്പെടുന്ന കമാൻഡുകൾ കണ്ടെത്തുന്നു"
+
+#: shellrunner.cpp:36
+#, kde-format
+msgid "Run in Terminal Window"
+msgstr "ടെര്‍മിനലില്‍ പ്രവര്‍ത്തിപ്പിക്കുക"
+
+#: shellrunner.cpp:54
+#, kde-format
+msgid "Run %1"
+msgstr "%1 പ്രവര്‍ത്തിപ്പിക്കുക"
+
+#~ msgid "Enter the user you want to run the application as here."
+#~ msgstr "ഈ പ്രയോഗം പ്രവര്‍ത്തിപ്പിക്കാനുള്ള ഉപയോക്താവിന്റെ പേരു കൊടുക്കുക"
+
+#~ msgid "User&name:"
+#~ msgstr "ഉപയോക്താവിന്റെ &പേരു്:"
+
+#~ msgid "Enter the password here for the user you specified above."
+#~ msgstr "മുകളില്‍ പറഞ്ഞ ഉപയോക്താവിന്റെ അടയാളവാക്ക് ഇവിടെ കൊടുക്കുക"
+
+#~ msgid "Pass&word:"
+#~ msgstr "അടയാള&വാക്ക്"
+
+#~ msgid ""
+#~ "Check this option if the application you want to run is a text mode "
+#~ "application. The application will then be run in a terminal emulator "
+#~ "window."
+#~ msgstr ""
+#~ "നിങ്ങള്‍ക്ക് പ്രവര്‍ത്തിപ്പിക്കാനുള്ള പ്രയോഗം ടെക്സ്റ്റ് മോഡ് പ്രയോഗമാണെങ്കില്‍ ഈ ഐച്ഛികം പ്രവര്‍"
+#~ "ത്തിപ്പിക്കുക. അങ്ങനെയെങ്കില്‍ ഒരു ടെര്‍മിനല്‍ എമുലേറ്റര്‍ ജാലകത്തില്‍ അതു പ്രവര്‍ത്തിപ്പിക്കുന്നതാണു്."
+
+#~ msgid "Run in &terminal window"
+#~ msgstr "&ടെര്‍മിനലില്‍ പ്രവര്‍ത്തിപ്പിക്കുക"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "user id. Every process has a user id associated with it. This id code "
+#~ "determines file access and other permissions. The password of the user is "
+#~ "required to do this."
+#~ msgstr ""
+#~ "മറ്റൊരു ഉപയോക്താവിന്റെ ഐഡി ഉപയോഗിച്ച് പ്രയോഗം പ്രവര്‍ത്തിപ്പിക്കണമെങ്കില്‍ ഈ ഐച്ഛികം "
+#~ "തെരഞ്ഞെടുക്കുക. ഓരോ പ്രക്രിയയുമായും ഒരു ഉപയോക്താവിന്റെ ഐഡി ബന്ധപ്പെട്ടിരിക്കും. ഈ ഐഡി "
+#~ "ഫയലുമായും മറ്റു അനുമതികളുമായും ബന്ധപ്പെട്ടിരിക്കുന്നു. ഇതു ചെയ്യാന്‍ ഉപയോക്താവിന്റെ അടയാളവാക്ക് "
+#~ "ആവശ്യമാണു്."
+
+#~ msgid "Run as a different &user"
+#~ msgstr "മറ്റൊരു ഉപയോക്താവായി പ്രവര്‍ത്തിപ്പിക്കുക"
+
+#~ msgid ""
+#~ "<qt>Select whether realtime scheduling should be enabled for the "
+#~ "application. The scheduler governs which process will run and which will "
+#~ "have to wait. Two schedulers are available:\n"
+#~ "<ul>\n"
+#~ "<li><em>Normal:</em> This is the standard, timesharing scheduler. It will "
+#~ "divide fairly the available processing time between all processes.</li>\n"
+#~ "<li><em>Realtime:</em>This scheduler will run your application "
+#~ "uninterrupted until it gives up the processor. This can be dangerous. An "
+#~ "application that does not give up the processor might hang the system. "
+#~ "You need root's password to use the scheduler.</li>\n"
+#~ "</ul>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>പ്രയോഗത്തനു് റിയല്‍ടൈം ഷെഡ്യൂളിങ്ങ് പ്രാവര്‍ത്തികമാക്കണമോ എന്നു് തെരഞ്ഞെടുക്കുക. ഏതൊക്കെ "
+#~ "പ്രവൃത്തികള്‍ പ്രവര്‍ത്തിയ്ക്കണം ഏതൊക്കെ പ്രവൃത്തികള്‍ കാത്തു് നില്‍ക്കണം എന്നതു് ഷെഡ്യൂളര്‍ പ്രവൃത്തി "
+#~ "നിയന്ത്രിയ്ക്കും. രണ്ടു് ഷെഡ്യൂളറുകള്‍ ലഭ്യമാണു്:\n"
+#~ "<ul>\n"
+#~ "<li><em>സാധാരണ:</em> സമയം പങ്കിട്ടു് കൊണ്ടുള്ള സാധാരണ ഷെഡ്യൂളറാണിതു്. ലഭ്യമായ പ്രവൃത്തികള്‍"
+#~ "ക്കുള്ള സമയം എല്ലാ പ്രവൃത്തികള്‍ക്കുമായി ന്യായമായി വിഭജിയ്ക്കും.</li>\n"
+#~ "<li><em>റിയല്‍ടൈം:</em> ഈ ഷെഡ്യൂളര്‍ നിങ്ങളുടെ പ്രയോഗം പ്രൊസസ്സറിനെ വിടുന്നതു് വരെ "
+#~ "തടസ്സമില്ലാതെ പ്രവര്‍ത്തിപ്പിയ്ക്കും. ഇതു് അപകടകരമായേയ്ക്കാം. പ്രൊസസ്സറിനെ വിടാത്തൊരു "
+#~ "പ്രവൃത്തി സിസ്റ്റത്തെ കുടുക്കിലാക്കിയേയ്ക്കാം. ഈ ഷെഡ്യൂളറുപയോഗിയ്ക്കാന്‍ നിങ്ങള്‍ക്കു് റൂട്ടിന്റെ "
+#~ "അടയാളവാക്കു് ആവശ്യമുണ്ടു്.</li>\n"
+#~ "</ul>\n"
+#~ "</qt>"
+
+#~ msgid "Run with realtime &scheduling"
+#~ msgstr "റിയല്‍ടൈം &ഷെഡ്യൂളിങ്ങോടു് കൂടി പ്രവര്‍ത്തിപ്പിയ്ക്കുക"
+
+#~ msgid ""
+#~ "The priority that the command will be run with can be set here. From left "
+#~ "to right, it goes from low to high. The center position is the default "
+#~ "value. For priorities higher than the default, you will need to provide "
+#~ "the root password."
+#~ msgstr ""
+#~ "ആജ്ഞകള്‍ പ്രവര്‍ത്തിക്കാനുള്ള മുന്‍ഗണന ഇവിടെ ക്രമീകരിക്കാവുന്നതാണ്. ഇടത്തെ അറ്റത്തുള്ളതിന് ഏറ്റവും "
+#~ "കുറഞ്ഞ മുന്‍ഗണനയും വലത്തോട്ട് പോകുന്തോറും മുന്‍ഗണന കൂടുകയും ചെയ്യും. മദ്ധ്യത്തുള്ളതാണ് സഹജമായ മൂല്യം. "
+#~ "സഹജമായതിനെക്കാളും കൂടിയ മുന്‍ഗണന കൊടുക്കണമെങ്കില്‍ റൂട്ടിന്റെ അടയാളവാക്ക് ആവശ്യമാണ്."
+
+#~ msgid "&Priority:"
+#~ msgstr "&മുന്‍ഗണന"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "priority. A higher priority tells the operating system to give more "
+#~ "processing time to your application."
+#~ msgstr ""
+#~ "മറ്റൊരു മുന്‍ഗണനാക്രമത്തില്‍ പ്രവര്‍ത്തിപ്പിക്കണമെങ്കില്‍ ഈ ഐച്ഛികം തെരഞ്ഞെടുക്കുക. കൂടിയ മുന്‍ഗണ "
+#~ "കൊടുത്താല്‍ ഓപ്പറേറ്റിങ് സിസ്റ്റം നിങ്ങളുടെ പ്രയോഗത്തിനു പ്രവര്‍ത്തിക്കാന്‍ കൂടുതല്‍ സമയം അനുവദിക്കും"
+
+#~ msgid "Run with a &different priority"
+#~ msgstr "&മറ്റൊരു മുന്‍ഗണനാക്രമത്തില്‍ പ്രവര്‍ത്തിപ്പിക്കുക"
+
+#~ msgid "Low"
+#~ msgstr "കുറഞ്ഞത്"
+
+#~ msgid "High"
+#~ msgstr "കൂടിയത്"

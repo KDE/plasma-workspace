@@ -1,0 +1,111 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2010, 2021.
+# Safa Alfulaij <safa1996alfulaij@gmail.com>, ٢٠١٦.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-10-20 00:19+0000\n"
+"PO-Revision-Date: 2021-06-21 23:22+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: Arabic <kde-i18n-ar@kde.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 21.07.70\n"
+
+#: freespacenotifier.cpp:91
+#, kde-format
+msgid "Configure Warning…"
+msgstr "اضبط التّحذير..."
+
+#: freespacenotifier.cpp:95
+#, kde-format
+msgid "Open in Filelight"
+msgstr "افتح في فلايت لايت"
+
+#: freespacenotifier.cpp:98
+#, kde-format
+msgid "Open in File Manager"
+msgstr "افتح في مدير الملفّات"
+
+#. i18n: ectx: label, entry (minimumSpace), group (General)
+#: freespacenotifier.kcfg:9
+#, kde-format
+msgid "Minimum free space before user starts being notified."
+msgstr "أقلّ مساحة حرّة متبقّية قبل البدء في إخطار المستخدم."
+
+#. i18n: ectx: label, entry (enableNotification), group (General)
+#: freespacenotifier.kcfg:15
+#, kde-format
+msgid "Is the free space notification enabled."
+msgstr "هل إخطار المساحة الحرّة مفعّل."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
+#: freespacenotifier_prefs_base.ui:17
+#, kde-format
+msgid "Enable low disk space warning"
+msgstr "فعّل التّحذير عند انخفاض المساحة الحرّة"
+
+#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
+#: freespacenotifier_prefs_base.ui:27
+#, kde-format
+msgid "Warn when free space is below:"
+msgstr "حذّر إن انخفضت المساحة الحرّة عن:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
+#: freespacenotifier_prefs_base.ui:37
+#, kde-format
+msgid " MiB"
+msgstr " م.بايت"
+
+#: module.cpp:37
+#, kde-format
+msgid ""
+"Your Home folder is running out of disk space, you have %1 MiB remaining "
+"(%2%)."
+msgstr "مساحة مجلّد المنزل تنفذ، بقيت %1 م.بايت (%2٪)"
+
+#: module.cpp:46
+#, kde-format
+msgid ""
+"Your Root partition is running out of disk space, you have %1 MiB remaining "
+"(%2%)."
+msgstr "مساحة مجلّد الجذر تنفذ، بقيت %1 م.بايت (%2٪)"
+
+#: module.cpp:63
+#, kde-format
+msgctxt "The settings dialog main page name, as in 'general settings'"
+msgid "General"
+msgstr "عامّ"
+
+#~ msgid "Low Disk Space"
+#~ msgstr "مساحة القرص منخفضة"
+
+#~ msgid "Remaining space in your Home folder: %1 MiB"
+#~ msgstr "المساحة المتبقّية في مجلّد المنزل: %1 م.بايت"
+
+#~ msgctxt "Allows the user to hide this notifier item"
+#~ msgid "Hide"
+#~ msgstr "أخفِ"
+
+#~ msgctxt ""
+#~ "Warns the user that the system is running low on space on his home "
+#~ "folder, indicating the percentage and absolute MiB size remaining, and "
+#~ "asks if the user wants to do something about it"
+#~ msgid ""
+#~ "You are running low on disk space on your home folder (currently %2%, %1 "
+#~ "MiB free).\n"
+#~ "Would you like to run a file manager to free some disk space?"
+#~ msgstr ""
+#~ "لقد أصبحت المساحة الحرة في مجلد البيت منخفضة (حاليا %2%, %1 ميجابايت "
+#~ "حر). \n"
+#~ "هل ترغب بتشغيل مدير الملفات لتزيد من المساحة الحرة في القرص الصلب؟"
+
+#~ msgctxt "Closes the notification"
+#~ msgid "Do Nothing"
+#~ msgstr "لا تفعل شيئا"

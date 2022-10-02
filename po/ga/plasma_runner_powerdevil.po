@@ -1,0 +1,234 @@
+# Irish translation of plasma_runner_powerdevil
+# Copyright (C) 2009 This_file_is_part_of_KDE
+# This file is distributed under the same license as the plasma_runner_powerdevil package.
+# Kevin Scannell <kscanne@gmail.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdebase/plasma_runner_powerdevil.po\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"PO-Revision-Date: 2009-01-20 10:11-0500\n"
+"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
+"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"Language: ga\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
+"3 : 4\n"
+
+#: PowerDevilRunner.cpp:32
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "suspend"
+msgstr "cuir ar fionraí"
+
+#: PowerDevilRunner.cpp:34
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to ram"
+msgstr "ram"
+
+#: PowerDevilRunner.cpp:36
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "sleep"
+msgstr "codail"
+
+#: PowerDevilRunner.cpp:38
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "hibernate"
+msgstr "geimhrigh"
+
+#: PowerDevilRunner.cpp:40
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to disk"
+msgstr "diosca"
+
+#: PowerDevilRunner.cpp:42 PowerDevilRunner.cpp:44 PowerDevilRunner.cpp:69
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "dim screen"
+msgstr "doiléirigh"
+
+#: PowerDevilRunner.cpp:53
+#, kde-format
+msgid ""
+"Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
+"activated"
+msgstr ""
+"Taispeáin na roghanna fionraíochta (m.sh. codladh, geimhriú) agus ceadaigh "
+"don úsáideoir iad a ghníomhachtú"
+
+#: PowerDevilRunner.cpp:57
+#, kde-format
+msgid "Suspends the system to RAM"
+msgstr "Cuir an córas ar fionraí i RAM"
+
+#: PowerDevilRunner.cpp:61
+#, kde-format
+msgid "Suspends the system to disk"
+msgstr "Cuir an córas ar fionraí ar an diosca"
+
+#: PowerDevilRunner.cpp:65
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "screen brightness"
+msgctxt ""
+"Note this is a KRunner keyword, <> is a placeholder and should be at the end"
+msgid "screen brightness <percent value>"
+msgstr "gile"
+
+#: PowerDevilRunner.cpp:67
+#, fuzzy, no-c-format, kde-format
+#| msgid ""
+#| "Lists screen brightness options or sets it to the brightness defined by :"
+#| "q:; e.g. screen brightness 50 would dim the screen to 50% maximum "
+#| "brightness"
+msgid ""
+"Lists screen brightness options or sets it to the brightness defined by the "
+"search term; e.g. screen brightness 50 would dim the screen to 50% maximum "
+"brightness"
+msgstr ""
+"Taispeáin na roghanna ghile an scáileáin nó socraigh é go dtí an ghile :q:; "
+"m.sh. má roghnaíonn tú gile 50, socrófar gile an scáileáin go dtí 50% den "
+"ghile is mó"
+
+#: PowerDevilRunner.cpp:95
+#, fuzzy, kde-format
+#| msgid "Set Brightness to %1"
+msgid "Set Brightness to %1%"
+msgstr "Socraigh '%1' mar Ghile an Scáileáin"
+
+#: PowerDevilRunner.cpp:104
+#, kde-format
+msgid "Dim screen totally"
+msgstr "Doiléirigh an scáileán go hiomlán"
+
+#: PowerDevilRunner.cpp:112
+#, kde-format
+msgid "Dim screen by half"
+msgstr "Déan an scáileán leath chomh geal"
+
+#: PowerDevilRunner.cpp:142
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "sleep"
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "codail"
+
+#: PowerDevilRunner.cpp:143
+#, kde-format
+msgid "Suspend to RAM"
+msgstr "Cuir ar fionraí i RAM"
+
+#: PowerDevilRunner.cpp:148
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "hibernate"
+msgctxt "Suspend to disk"
+msgid "Hibernate"
+msgstr "geimhrigh"
+
+#: PowerDevilRunner.cpp:149
+#, fuzzy, kde-format
+#| msgid "Suspend to Disk"
+msgid "Suspend to disk"
+msgstr "Cuir ar fionraí ar an Diosca"
+
+#: PowerDevilRunner.cpp:218
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "screen brightness"
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "screen brightness "
+msgstr "gile"
+
+#: PowerDevilRunner.cpp:220
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "dim screen"
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "dim screen "
+msgstr "doiléirigh"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "screen brightness"
+#~ msgstr "gile"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "screen brightness %1"
+#~ msgstr "gile %1"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "dim screen %1"
+#~ msgstr "doiléirigh %1"
+
+#, fuzzy
+#~| msgctxt "Note this is a KRunner keyword"
+#~| msgid "suspend"
+#~ msgid "Suspend"
+#~ msgstr "cuir ar fionraí"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "power profile"
+#~ msgstr "próifíl chumhachta"
+
+#~ msgid "Lists all power profiles and allows them to be activated"
+#~ msgstr ""
+#~ "Taispeáin gach próifíl chumhachta agus ceadaigh don úsáideoir iad a "
+#~ "ghníomhachtú"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "power profile %1"
+#~ msgstr "próifíl chumhachta %1"
+
+#~ msgid "Set Profile to '%1'"
+#~ msgstr "Socraigh '%1' mar Phróifíl"
+
+#~ msgid "Turn off screen"
+#~ msgstr "Múch an scáileán"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "cpu policy"
+#~ msgstr "polasaí lap"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "power governor"
+#~ msgstr "rialtóir cumhachta"
+
+#~ msgid "Lists all power saving schemes and allows them to be activated"
+#~ msgstr ""
+#~ "Taispeáin gach scéim spárála cumhachta agus ceadaigh don úsáideoir iad a "
+#~ "ghníomhachtú"
+
+#~ msgid ""
+#~ "Lists all CPU frequency scaling policies and allows them to be activated"
+#~ msgstr ""
+#~ "Taispeáin gach polasaí scálú mhinicíocht an LAP agus ceadaigh don "
+#~ "úsáideoir iad a ghníomhachtú"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "cpu policy %1"
+#~ msgstr "polasaí lap %1"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "power governor %1"
+#~ msgstr "rialtóir cumhachta %1"
+
+#~ msgid "Set CPU frequency scaling policy to '%1'"
+#~ msgstr "Socraigh '%1' mar pholasaí scálaithe mhinicíocht an LAP"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "power scheme %1"
+#~ msgstr "power scheme %1"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "power scheme"
+#~ msgstr "power scheme"
+
+#~ msgid "Set Powersaving Scheme to '%1'"
+#~ msgstr "Socraigh '%1' mar Scéim Spárála Cumhachta"

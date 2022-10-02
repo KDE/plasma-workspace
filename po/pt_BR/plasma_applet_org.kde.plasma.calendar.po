@@ -1,0 +1,70 @@
+# Translation of plasma_applet_org.kde.plasma.calendar.po to Brazilian Portuguese
+# Copyright (C) 2014-2015 This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# André Marcelo Alvarenga <alvarenga@kde.org>, 2014, 2015.
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2016, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_org.kde.plasma.calendar\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2019-05-20 17:46-0300\n"
+"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
+"Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 19.04.0\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Geral"
+
+#: package/contents/ui/configGeneral.qml:24
+#, kde-format
+msgid "Calendar version:"
+msgstr "Versão do calendário:"
+
+#: package/contents/ui/configGeneral.qml:26
+#, kde-format
+msgid "Show week numbers"
+msgstr "Mostrar os números das semanas"
+
+#: package/contents/ui/configGeneral.qml:36
+#, kde-format
+msgctxt "What information is shown in the calendar icon"
+msgid "Compact version:"
+msgstr "Versão compacta:"
+
+#: package/contents/ui/configGeneral.qml:38
+#, kde-format
+msgctxt "Show the number of the day (eg. 31) in the icon"
+msgid "Show day of the month"
+msgstr "Mostrar o dia do mês"
+
+#: package/contents/ui/configGeneral.qml:44
+#, kde-format
+msgctxt "Show the week number (eg. 50) in the icon"
+msgid "Show week number"
+msgstr "Mostrar o número da semana"
+
+#~ msgid "Working Day"
+#~ msgstr "Dia de trabalho"
+
+#~ msgid "Starts at 9"
+#~ msgstr "Começa às 9:00"
+
+#~ msgid "Ends at 5"
+#~ msgstr "Termina às 17:00"
+
+#~ msgctxt "What information is shown in the calendar icon"
+#~ msgid "Icon:"
+#~ msgstr "Ícone:"
+
+#~ msgctxt "Show the number of the day (eg. 31) in the icon"
+#~ msgid "Day in month"
+#~ msgstr "Dia no mês"

@@ -1,0 +1,282 @@
+# translation of ksmserver.po to Irish
+# Copyright (C) 2002,2004 Free Software Foundation, Inc.
+# Séamus Ó Ciardhuáin <seoc at iolfree dot ie>, 2002, 2004
+# Kevin Scannell <kscanne at gmail dot com>, 2009
+msgid ""
+msgstr ""
+"Project-Id-Version: ksmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-22 00:47+0000\n"
+"PO-Revision-Date: 2004-12-31 00:55+0000\n"
+"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
+"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"Language: ga\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9.1\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
+"3 : 4\n"
+
+#: logout.cpp:344
+#, kde-format
+msgid "Logout canceled by '%1'"
+msgstr "Chealaigh '%1' an logáil amach"
+
+#: main.cpp:117
+#, kde-format
+msgid "$HOME not set!"
+msgstr ""
+
+#: main.cpp:121 main.cpp:127
+#, kde-format
+msgid "$HOME directory (%1) does not exist."
+msgstr ""
+
+#: main.cpp:123
+#, kde-format
+msgid "No write access to $HOME directory (%1)."
+msgstr ""
+
+#: main.cpp:129
+#, kde-format
+msgid "No read access to $HOME directory (%1)."
+msgstr ""
+
+#: main.cpp:133
+#, kde-format
+msgid "$HOME directory (%1) is out of disk space."
+msgstr ""
+
+#: main.cpp:136
+#, kde-format
+msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+msgstr ""
+
+#: main.cpp:149 main.cpp:184
+#, kde-format
+msgid "No write access to '%1'."
+msgstr ""
+
+#: main.cpp:151 main.cpp:186
+#, kde-format
+msgid "No read access to '%1'."
+msgstr ""
+
+#: main.cpp:159 main.cpp:172
+#, kde-format
+msgid "Temp directory (%1) is out of disk space."
+msgstr ""
+
+#: main.cpp:162 main.cpp:175
+#, kde-format
+msgid ""
+"Writing to the temp directory (%2) failed with\n"
+"    the error '%1'"
+msgstr ""
+
+#: main.cpp:190
+#, kde-format
+msgid ""
+"The following installation problem was detected\n"
+"while trying to start Plasma:"
+msgstr ""
+
+#: main.cpp:193
+#, kde-format
+msgid ""
+"\n"
+"\n"
+"Plasma is unable to start.\n"
+msgstr ""
+
+#: main.cpp:200
+#, kde-format
+msgid "Plasma Workspace installation problem!"
+msgstr ""
+
+#: main.cpp:236
+#, fuzzy, kde-format
+#| msgid ""
+#| "The reliable KDE session manager that talks the standard X11R6 \n"
+#| "session management protocol (XSMP)."
+msgid ""
+"The reliable Plasma session manager that talks the standard X11R6 \n"
+"session management protocol (XSMP)."
+msgstr ""
+"Bainisteoir iontaofa na seisiún KDE a úsáideann prótacal caighdeánaithe\n"
+"X11R6 um bainistiú na seisiún (X Session Management Protocol, XSMP)."
+
+#: main.cpp:240
+#, kde-format
+msgid "Restores the saved user session if available"
+msgstr "Athchóirigh seisiún sábháilte an úsáideora, má tá sé le fáil"
+
+#: main.cpp:243
+#, kde-format
+msgid "Also allow remote connections"
+msgstr "Ceadaigh ceangail chianda freisin"
+
+#: main.cpp:246
+#, kde-format
+msgid "Starts the session in locked mode"
+msgstr "Tosaigh an seisiún sa mhód faoi ghlas"
+
+#: main.cpp:250
+#, kde-format
+msgid ""
+"Starts without lock screen support. Only needed if other component provides "
+"the lock screen."
+msgstr ""
+
+#: server.cpp:873
+#, fuzzy, kde-format
+#| msgid "The KDE Session Manager"
+msgid "Session Management"
+msgstr "Bainisteoir na Seisiún KDE"
+
+#: server.cpp:876
+#, kde-format
+msgid "Log Out"
+msgstr "Logáil Amach"
+
+#: server.cpp:881
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "Logáil Amach Gan Deimhniú"
+
+#: server.cpp:886
+#, kde-format
+msgid "Halt Without Confirmation"
+msgstr "Stop gan Deimhniú"
+
+#: server.cpp:891
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "Atosaigh gan Deimhniú"
+
+#, fuzzy
+#~| msgid ""
+#~| "Starts 'wm' in case no other window manager is \n"
+#~| "participating in the session. Default is 'kwin'"
+#~ msgid ""
+#~ "Starts <wm> in case no other window manager is \n"
+#~ "participating in the session. Default is 'kwin'"
+#~ msgstr ""
+#~ "Tosaigh 'wm' sa chás nach bhfuil bainisteoir fuinneog eile\n"
+#~ "páirteach sa seisiún. Is é 'kwin' an ceann réamhshocraithe"
+
+#, fuzzy
+#~| msgid "&Logout"
+#~ msgid "Logout"
+#~ msgstr "&Logáil Amach"
+
+#~ msgid "Sleeping in 1 second"
+#~ msgid_plural "Sleeping in %1 seconds"
+#~ msgstr[0] "Ag dul a chodladh i gceann 1 soicind."
+#~ msgstr[1] "Ag dul a chodladh i gceann %1 shoicind."
+#~ msgstr[2] "Ag dul a chodladh i gceann %1 shoicind."
+#~ msgstr[3] "Ag dul a chodladh i gceann %1 soicind."
+#~ msgstr[4] "Ag dul a chodladh i gceann %1 soicind."
+
+#~ msgid "Lock"
+#~ msgstr "Cuir Faoi Ghlas"
+
+#~ msgid "Turn off"
+#~ msgstr "Múch"
+
+#~ msgid "Sleep"
+#~ msgstr "Codail"
+
+#~ msgid "Logging out in 1 second."
+#~ msgid_plural "Logging out in %1 seconds."
+#~ msgstr[0] "Logáil amach i gceann 1 soicind."
+#~ msgstr[1] "Logáil amach i gceann %1 shoicind."
+#~ msgstr[2] "Logáil amach i gceann %1 shoicind."
+#~ msgstr[3] "Logáil amach i gceann %1 soicind."
+#~ msgstr[4] "Logáil amach i gceann %1 soicind."
+
+#~ msgid "Turning off computer in 1 second."
+#~ msgid_plural "Turning off computer in %1 seconds."
+#~ msgstr[0] "Ríomhaire á mhúchadh i gceann 1 soicind."
+#~ msgstr[1] "Ríomhaire á mhúchadh i gceann %1 shoicind."
+#~ msgstr[2] "Ríomhaire á mhúchadh i gceann %1 shoicind."
+#~ msgstr[3] "Ríomhaire á mhúchadh i gceann %1 soicind."
+#~ msgstr[4] "Ríomhaire á mhúchadh i gceann %1 soicind."
+
+#~ msgid "Restarting computer in 1 second."
+#~ msgid_plural "Restarting computer in %1 seconds."
+#~ msgstr[0] "Ríomhaire á atosú i gceann 1 soicind."
+#~ msgstr[1] "Ríomhaire á atosú i gceann %1 shoicind."
+#~ msgstr[2] "Ríomhaire á atosú i gceann %1 shoicind."
+#~ msgstr[3] "Ríomhaire á atosú i gceann %1 soicind."
+#~ msgstr[4] "Ríomhaire á atosú i gceann %1 soicind."
+
+#, fuzzy
+#~| msgid "&Turn Off Computer"
+#~ msgid "Turn Off Computer"
+#~ msgstr "&Múch an Ríomhaire"
+
+#, fuzzy
+#~| msgid "&Restart Computer"
+#~ msgid "Restart Computer"
+#~ msgstr "&Atosaigh an Ríomhaire"
+
+#~ msgctxt "default option in boot loader"
+#~ msgid " (default)"
+#~ msgstr " (réamhshocrú)"
+
+#, fuzzy
+#~| msgid "&Cancel"
+#~ msgid "Cancel"
+#~ msgstr "&Cealaigh"
+
+#~ msgid "&Standby"
+#~ msgstr "&Fuireachas"
+
+#~ msgid "Suspend to &RAM"
+#~ msgstr "Cuir ar fionraí i &RAM"
+
+#~ msgid "Suspend to &Disk"
+#~ msgstr "Cuir ar fionraí ar an &Diosca"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Séamus Ó Ciardhuáin,Kevin Scannell"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "seoc@iolfree.ie,kscanne@gmail.com"
+
+#~ msgid "(C) 2000, The KDE Developers"
+#~ msgstr "© 2000, Forbróirí KDE"
+
+#~ msgid "Matthias Ettrich"
+#~ msgstr "Matthias Ettrich"
+
+#~ msgid "Luboš Luňák"
+#~ msgstr "Luboš Luňák"
+
+#~ msgid "Maintainer"
+#~ msgstr "Cothaitheoir"
+
+#~ msgctxt "current option in boot loader"
+#~ msgid " (current)"
+#~ msgstr " (reatha)"
+
+#~ msgctxt "@label In corner of the logout dialog"
+#~ msgid "KDE <numid>%1.%2.%3</numid>"
+#~ msgstr "KDE <numid>%1.%2.%3</numid>"
+
+#~ msgctxt "@label In corner of the logout dialog"
+#~ msgid "KDE <numid>%1.%2</numid>"
+#~ msgstr "KDE <numid>%1.%2</numid>"
+
+#~ msgid "End Session for %1"
+#~ msgstr "Cuir Deireadh leis an Seisiún do %1"
+
+#~ msgid "End Session for %1 (%2)"
+#~ msgstr "Cuir Deireadh leis an Seisiún do %1 (%2)"
+
+#~ msgid "End Current Session"
+#~ msgstr "Cuir Deireadh leis an Seisiún Reatha"

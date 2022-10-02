@@ -1,0 +1,222 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Portuguese "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmstyle" lang="&language;">
+<articleinfo>
+
+<title
+>Estilo Gráfico</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>José</firstname
+><surname
+>Pires</surname
+><affiliation
+><address
+><email
+>zepires@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2017-04-01</date>
+<releaseinfo
+>Plasma 5.9</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Configuração do Sistema</keyword>
+<keyword
+>estilo</keyword>
+<keyword
+>elementos gráficos</keyword>
+</keywordset>
+</articleinfo>
+
+<variablelist>
+<varlistentry>
+<term
+>Introdução</term>
+<listitem>
+
+<para
+>Este módulo é usado para configurar como os elementos gráficos individuais são desenhados pelo Plasma.</para>
+
+<note
+><para
+>Um <emphasis
+>elemento gráfico</emphasis
+> ou <emphasis
+>widget</emphasis
+> é um termo comum de programação que corresponde aos elementos das interfaces gráficas como os botões, menus ou barras deslizantes. Pode vê-los como as peças fundamentais que são reunidas para compor uma aplicação.</para
+></note>
+
+<para
+>Pode configurar como é que os 'widgets' são desenhados com este módulo, mas para alterar a cor destes, deverá ver a secção <ulink url="help:/kcontrol/colors/index.html"
+>Cores</ulink
+>.</para>
+
+<para
+>Este painel encontra-se dividido em duas secções: <guilabel
+>Aplicações</guilabel
+> e <guilabel
+>Ajuste Fino</guilabel
+>.</para>
+
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>A página <guilabel
+>Aplicações</guilabel
+></term>
+<listitem>
+<para
+>A lista <guilabel
+>Estilo dos Elementos</guilabel
+>, no topo, enumera os vários estilos predefinidos. Cada estilo tem um nome e uma breve descrição.</para>
+
+<para
+>Para alterar os estilos, seleccione um estilo na lista para ver o resultado do estilo na área de antevisão por baixo da lista de estilos.</para>
+
+<para
+>Se um estilo for configurável, o botão <guibutton
+>Configurar...</guibutton
+>, do lado direito da lista, ficará activo e poderá ser usado para abrir uma janela e seleccionar outras opções.</para>
+
+</listitem>
+</varlistentry>
+
+<varlistentry
+> 
+<term
+>A página de <guilabel
+>Ajuste Fino</guilabel
+></term>
+<listitem>
+<variablelist>
+
+<varlistentry
+> 
+<term
+><guilabel
+>Mostrar os ícones nos botões</guilabel
+></term>
+<listitem>
+<para
+>Se esta opção estiver assinalada, os botões de acção (como o <guibutton
+>OK</guibutton
+> e o <guibutton
+>Aplicar</guibutton
+>) ficarão com um pequeno ícone localizado dentro deles para usar como uma referência visual. Se esta opção não estiver seleccionada, então apenas o texto do botão irá aparecer no mesmo.</para>
+</listitem
+> 
+</varlistentry
+> 
+
+<varlistentry
+> 
+<term
+><guilabel
+>Mostrar os ícones nos menus</guilabel
+></term>
+<listitem>
+<para
+>Se esta opção estiver seleccionada, as aplicações do &kde; irão mostrar ícones pequeno ao lado da maioria dos itens do menu. Se esta opção não estiver seleccionada, só irá aparecer então o texto nos itens. As mudanças de visibilidade dos ícones do menu só irão afectar as aplicações acabadas de iniciar.</para>
+</listitem
+> 
+</varlistentry
+> 
+
+<varlistentry
+> 
+<term
+><guilabel
+>Texto da barra principal</guilabel
+>, <guilabel
+>Texto da barra secundária</guilabel
+></term>
+<listitem>
+<para
+>Esta lista permite-lhe determinar em que parte do botão irá aparecer o texto do mesmo por omissão. Se estiver seleccionada a opção <guilabel
+>Sem Texto</guilabel
+>, então não existirá nenhum texto nos botões das barras de ferramentas. Se estiver escolhida a opção <guilabel
+>Apenas o Texto</guilabel
+>, então o ícone dos botões será substituído pelo nome dos mesmos. Se estiver a opção <guilabel
+>Texto ao Lado dos Ícones</guilabel
+> seleccionada, então o nome do botão será colocado à <emphasis
+>direita</emphasis
+> do ícone. Se, finalmente, estiver seleccionada a opção <guilabel
+>Texto Sob os Ícones</guilabel
+>, o texto irá aparecer <emphasis
+>por baixo</emphasis
+> do ícone dos botões.</para>
+
+<tip
+><para
+>Esta opção apenas especifica a localização <emphasis
+>por omissão</emphasis
+>. Cada aplicação poderá sobrepor a configuração usada neste painel.</para
+></tip>
+</listitem
+> 
+</varlistentry
+> 
+
+<varlistentry
+> 
+<term
+><guilabel
+>Estilo dos menus</guilabel
+></term>
+<listitem>
+<para
+><guilabel
+>Na aplicação</guilabel
+>: O menu clássico no topo da janela da aplicação.</para>
+
+<para
+><guilabel
+>Botão da barra de título</guilabel
+>: A janela tem um botão adicional de menu no canto superior esquerdo da decoração da janela. Todas as alterações farão efeito apenas para as aplicações acabadas de iniciar.</para>
+
+<para
+><guilabel
+>Elemento do Menu da Aplicação</guilabel
+>: Adiciona um painel chamado <guilabel
+>Barra de Menu da Aplicação</guilabel
+> e o menu da aplicação activa irá aparecer neste painel novo.</para>
+
+<para
+>Todas as alterações farão efeito apenas para as aplicações acabadas de iniciar.</para>
+
+</listitem
+> 
+</varlistentry
+> 
+</variablelist>
+
+</listitem>
+</varlistentry>
+
+
+</variablelist>
+
+
+</article>

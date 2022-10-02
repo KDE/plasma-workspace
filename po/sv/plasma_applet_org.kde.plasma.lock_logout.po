@@ -1,0 +1,158 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2014, 2015, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2021-05-27 18:39+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.08.1\n"
+
+#: contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Allmänt"
+
+#: contents/ui/ConfigGeneral.qml:36
+#, kde-format
+msgctxt ""
+"Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
+msgid "Show actions:"
+msgstr "Visa åtgärder:"
+
+#: contents/ui/ConfigGeneral.qml:37
+#, kde-format
+msgid "Logout"
+msgstr "Logga ut"
+
+#: contents/ui/ConfigGeneral.qml:43
+#, kde-format
+msgid "Shutdown"
+msgstr "Stäng av"
+
+#: contents/ui/ConfigGeneral.qml:48
+#, kde-format
+msgid "Reboot"
+msgstr "Starta om"
+
+#: contents/ui/ConfigGeneral.qml:53 contents/ui/data.js:5
+#, kde-format
+msgid "Lock"
+msgstr "Lås"
+
+#: contents/ui/ConfigGeneral.qml:58
+#, kde-format
+msgid "Switch User"
+msgstr "Byt användare"
+
+#: contents/ui/ConfigGeneral.qml:63 contents/ui/data.js:46
+#, kde-format
+msgid "Hibernate"
+msgstr "Dvala"
+
+#: contents/ui/ConfigGeneral.qml:68 contents/ui/data.js:39
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Viloläge"
+
+#: contents/ui/data.js:6
+#, kde-format
+msgid "Lock the screen"
+msgstr "Lås skärmen"
+
+#: contents/ui/data.js:12
+#, kde-format
+msgid "Switch user"
+msgstr "Byt användare"
+
+#: contents/ui/data.js:13
+#, kde-format
+msgid "Start a parallel session as a different user"
+msgstr "Starta en parallell session som en annan användare"
+
+#: contents/ui/data.js:18
+#, kde-format
+msgid "Shutdown…"
+msgstr "Stäng av…"
+
+#: contents/ui/data.js:19
+#, kde-format
+msgid "Turn off the computer"
+msgstr "Stäng av datorn"
+
+#: contents/ui/data.js:25
+#, kde-format
+msgid "Restart…"
+msgstr "Starta om…"
+
+#: contents/ui/data.js:26
+#, kde-format
+msgid "Reboot the computer"
+msgstr "Starta om datorn"
+
+#: contents/ui/data.js:32
+#, kde-format
+msgid "Logout…"
+msgstr "Logga ut…"
+
+#: contents/ui/data.js:33
+#, kde-format
+msgid "End the session"
+msgstr "Avsluta session"
+
+#: contents/ui/data.js:40
+#, kde-format
+msgid "Sleep (suspend to RAM)"
+msgstr "Vila (viloläge i minne)"
+
+#: contents/ui/data.js:47
+#, kde-format
+msgid "Hibernate (suspend to disk)"
+msgstr "Dvala (viloläge på disk)"
+
+#~ msgid "Shutdown..."
+#~ msgstr "Stäng av..."
+
+#~ msgid "Logout..."
+#~ msgstr "Logga ut..."
+
+#~ msgid "Do you want to suspend to disk (hibernate)?"
+#~ msgstr "Vill du gå till viloläge på disk (dvala)?"
+
+#~ msgid "Yes"
+#~ msgstr "Ja"
+
+#~ msgid "No"
+#~ msgstr "Nej"
+
+#~ msgid "Do you want to suspend to RAM (sleep)?"
+#~ msgstr "Vill du gå till viloläge i minne (vila)?"
+
+#~ msgid "Leave"
+#~ msgstr "Gå ifrån"
+
+#~ msgid "Leave..."
+#~ msgstr "Gå ifrån..."
+
+#~ msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
+#~ msgid "Actions"
+#~ msgstr "Åtgärder"
+
+#~ msgid "Suspend"
+#~ msgstr "Gå till viloläge"
+
+#~ msgid "Lock/Logout Settings"
+#~ msgstr "Inställningar av låsning och utloggning"
+
+#~ msgid "SystemTray Settings"
+#~ msgstr "Inställningar av systembrickan"

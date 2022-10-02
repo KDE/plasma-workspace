@@ -1,0 +1,674 @@
+# translation of plasma_applet_notifications.po to Italian
+# Copyright (C) 2008 Free Software Foundation, Inc.
+# Vincenzo Reale <smart2128vr@gmail.com>, 2008, 2009, 2010, 2011, 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022.
+# Nicola Ruggero <nicola@nxnt.org>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_notifications\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-20 00:48+0000\n"
+"PO-Revision-Date: 2022-09-05 18:59+0200\n"
+"Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
+"Language-Team: Italian <kde-i18n-it@kde.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 22.08.0\n"
+
+#: fileinfo.cpp:170
+#, kde-format
+msgid "Open with %1"
+msgstr "Apri con %1"
+
+#: fileinfo.cpp:174
+#, kde-format
+msgid "Open with…"
+msgstr "Apri con..."
+
+#: filemenu.cpp:115 package/contents/ui/JobItem.qml:266
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Apri cartella contenitore"
+
+#: filemenu.cpp:129
+#, kde-format
+msgid "&Copy"
+msgstr "&Copia"
+
+#: filemenu.cpp:137
+#, kde-format
+msgctxt "@action:incontextmenu"
+msgid "Copy Location"
+msgstr "Copia posizione"
+
+#: filemenu.cpp:193
+#, kde-format
+msgid "Properties"
+msgstr "Proprietà"
+
+#: globalshortcuts.cpp:23
+#, kde-format
+msgid "Toggle do not disturb"
+msgstr "Attiva Non disturbare"
+
+#: globalshortcuts.cpp:42
+#, kde-format
+msgctxt "OSD popup, keep short"
+msgid "Notifications Off"
+msgstr "Notifiche disattivate"
+
+#: globalshortcuts.cpp:43
+#, kde-format
+msgctxt "OSD popup, keep short"
+msgid "Notifications On"
+msgstr "Notifiche attivate"
+
+#: package/contents/ui/EditContextMenu.qml:33
+#, kde-format
+msgid "Copy Link Address"
+msgstr "Copia indirizzo del collegamento"
+
+#: package/contents/ui/EditContextMenu.qml:44
+#, kde-format
+msgid "Copy"
+msgstr "Copia"
+
+#: package/contents/ui/EditContextMenu.qml:61
+#, kde-format
+msgid "Select All"
+msgstr "Seleziona tutto"
+
+#: package/contents/ui/FullRepresentation.qml:73
+#: package/contents/ui/main.qml:86
+#, kde-format
+msgid "Do not disturb"
+msgstr "Non disturbare"
+
+#: package/contents/ui/FullRepresentation.qml:115
+#, kde-format
+msgid "For 1 hour"
+msgstr "Per 1 ora"
+
+#: package/contents/ui/FullRepresentation.qml:120
+#, kde-format
+msgid "For 4 hours"
+msgstr "Per 4 ore"
+
+#: package/contents/ui/FullRepresentation.qml:129
+#, kde-format
+msgid "Until this evening"
+msgstr "Fino a questa sera"
+
+#: package/contents/ui/FullRepresentation.qml:139
+#, kde-format
+msgid "Until tomorrow morning"
+msgstr "Fino a domani mattina"
+
+#: package/contents/ui/FullRepresentation.qml:151
+#, kde-format
+msgid "Until Monday"
+msgstr "Fino a lunedì"
+
+#: package/contents/ui/FullRepresentation.qml:158
+#, kde-format
+msgid "Until manually disabled"
+msgstr "Fino alla disabilitazione manuale"
+
+#: package/contents/ui/FullRepresentation.qml:203
+#, kde-format
+msgctxt "Do not disturb until date"
+msgid "Until %1"
+msgstr "Fino al %1"
+
+#: package/contents/ui/FullRepresentation.qml:216
+#, kde-format
+msgctxt "Do not disturb until app has finished (reason)"
+msgid "While %1 is active (%2)"
+msgstr "Mentre %1 è attiva (%2)"
+
+#: package/contents/ui/FullRepresentation.qml:218
+#, kde-format
+msgctxt "Do not disturb until app has finished"
+msgid "While %1 is active"
+msgstr "Mentre %1 è attiva"
+
+#: package/contents/ui/FullRepresentation.qml:224
+#, kde-format
+msgctxt "Do not disturb because external mirrored screens connected"
+msgid "Screens are mirrored"
+msgstr "Gli schermi sono duplicati"
+
+#: package/contents/ui/FullRepresentation.qml:400
+#, kde-format
+msgid "Close Group"
+msgstr "Chiudi gruppo"
+
+#: package/contents/ui/FullRepresentation.qml:541
+#, kde-format
+msgid "Show Fewer"
+msgstr "Mostra di meno"
+
+#: package/contents/ui/FullRepresentation.qml:543
+#, kde-format
+msgctxt "Expand to show n more notifications"
+msgid "Show %1 More"
+msgstr "Mostra %1 altre"
+
+#: package/contents/ui/FullRepresentation.qml:583
+#: package/contents/ui/main.qml:89
+#, kde-format
+msgid "No unread notifications"
+msgstr "Nessuna notifica non letta"
+
+#: package/contents/ui/FullRepresentation.qml:598
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgid "Notification service not available"
+msgstr "Servizio delle notifiche non disponibile"
+
+#: package/contents/ui/FullRepresentation.qml:600
+#, kde-format
+msgctxt "Vendor and product name"
+msgid "Notifications are currently provided by '%1 %2'"
+msgstr "Le notifiche sono attualmente fornite da «%1 %2»"
+
+#: package/contents/ui/JobDetails.qml:35
+#, kde-format
+msgctxt "Row description, e.g. Source"
+msgid "%1:"
+msgstr "%1:"
+
+#: package/contents/ui/JobDetails.qml:106
+#, kde-format
+msgctxt "How many bytes have been copied"
+msgid "%2 of %1"
+msgstr "%2 di %1"
+
+#: package/contents/ui/JobDetails.qml:110
+#, kde-format
+msgctxt "How many files have been copied"
+msgid "%2 of %1 file"
+msgid_plural "%2 of %1 files"
+msgstr[0] "%2 di %1 file"
+msgstr[1] "%2 di %1 file"
+
+#: package/contents/ui/JobDetails.qml:113
+#, kde-format
+msgctxt "How many dirs have been copied"
+msgid "%2 of %1 folder"
+msgid_plural "%2 of %1 folders"
+msgstr[0] "%2 di %1 cartella"
+msgstr[1] "%2 di %1 cartelle"
+
+#: package/contents/ui/JobDetails.qml:116
+#, kde-format
+msgctxt "How many items (that includes files and dirs) have been copied"
+msgid "%2 of %1 item"
+msgid_plural "%2 of %1 items"
+msgstr[0] "%2 di %1 elemento"
+msgstr[1] "%2 di %1 elementi"
+
+#: package/contents/ui/JobDetails.qml:124
+#, kde-format
+msgid "%1 file"
+msgid_plural "%1 files"
+msgstr[0] "%1 file"
+msgstr[1] "%1 file"
+
+#: package/contents/ui/JobDetails.qml:126
+#, kde-format
+msgid "%1 folder"
+msgid_plural "%1 folders"
+msgstr[0] "%1 cartella"
+msgstr[1] "%1 cartelle"
+
+#: package/contents/ui/JobDetails.qml:128
+#, kde-format
+msgid "%1 item"
+msgid_plural "%1 items"
+msgstr[0] "%1 elemento"
+msgstr[1] "%1 elementi"
+
+#: package/contents/ui/JobDetails.qml:145
+#, kde-format
+msgctxt "Bytes per second"
+msgid "%1/s"
+msgstr "%1/s"
+
+#: package/contents/ui/JobItem.qml:163
+#, kde-format
+msgctxt "Percentage of a job"
+msgid "%1%"
+msgstr "%1%"
+
+#: package/contents/ui/JobItem.qml:177
+#, kde-format
+msgctxt "Pause running job"
+msgid "Pause"
+msgstr "Pausa"
+
+#: package/contents/ui/JobItem.qml:187
+#, kde-format
+msgctxt "Cancel running job"
+msgid "Cancel"
+msgstr "Annulla"
+
+#: package/contents/ui/JobItem.qml:198
+#, kde-format
+msgctxt "A button tooltip; hides item details"
+msgid "Hide Details"
+msgstr "Nascondi dettagli"
+
+#: package/contents/ui/JobItem.qml:199
+#, kde-format
+msgctxt "A button tooltip; expands the item to show details"
+msgid "Show Details"
+msgstr "Mostra dettagli"
+
+#: package/contents/ui/JobItem.qml:230
+#: package/contents/ui/ThumbnailStrip.qml:169
+#, kde-format
+msgid "More Options…"
+msgstr "Altre opzioni..."
+
+#: package/contents/ui/JobItem.qml:258
+#, kde-format
+msgid "Open"
+msgstr "Apri"
+
+#: package/contents/ui/main.qml:50
+#, kde-format
+msgid "%1 running job"
+msgid_plural "%1 running jobs"
+msgstr[0] "%1 operazione in corso"
+msgstr[1] "%1 operazioni in corso"
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgctxt "Job title (percentage)"
+msgid "%1 (%2%)"
+msgstr "%1 (%2%)"
+
+#: package/contents/ui/main.qml:59
+#, kde-format
+msgid "%1 running job (%2%)"
+msgid_plural "%1 running jobs (%2%)"
+msgstr[0] "%1 operazione in corso (%2%)"
+msgstr[1] "%1 operazioni in corso (%2%)"
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "%1 unread notification"
+msgid_plural "%1 unread notifications"
+msgstr[0] "%1 notifica non letta"
+msgstr[1] "%1 notifiche non lette"
+
+#: package/contents/ui/main.qml:83
+#, kde-format
+msgid "Do not disturb until %1"
+msgstr "Non disturbare fino al %1"
+
+#: package/contents/ui/main.qml:190
+#, kde-format
+msgid "Clear All Notifications"
+msgstr "Cancella tutte le notifiche"
+
+#: package/contents/ui/main.qml:200
+#, kde-format
+msgid "&Configure Event Notifications and Actions…"
+msgstr "&Configura notifiche degli eventi e azioni..."
+
+#: package/contents/ui/NotificationHeader.qml:120
+#, kde-format
+msgctxt "Notification was added less than a minute ago, keep short"
+msgid "Just now"
+msgstr "Adesso"
+
+#: package/contents/ui/NotificationHeader.qml:126
+#, kde-format
+msgctxt "Notification was added minutes ago, keep short"
+msgid "%1 min ago"
+msgid_plural "%1 min ago"
+msgstr[0] "%1 min fa"
+msgstr[1] "%1 min fa"
+
+#: package/contents/ui/NotificationHeader.qml:160
+#, kde-format
+msgctxt "seconds remaining, keep short"
+msgid "%1 s remaining"
+msgid_plural "%1 s remaining"
+msgstr[0] "%1 s rimanente"
+msgstr[1] "%1 s rimanenti"
+
+#: package/contents/ui/NotificationHeader.qml:164
+#, kde-format
+msgctxt "minutes remaining, keep short"
+msgid "%1 min remaining"
+msgid_plural "%1 min remaining"
+msgstr[0] "%1 min rimanente"
+msgstr[1] "%1 min rimanenti"
+
+#: package/contents/ui/NotificationHeader.qml:169
+#, kde-format
+msgctxt "hours remaining, keep short"
+msgid "%1 h remaining"
+msgid_plural "%1 h remaining"
+msgstr[0] "%1 h rimanente"
+msgstr[1] "%1 h rimanenti"
+
+#: package/contents/ui/NotificationHeader.qml:193
+#, kde-format
+msgid "Configure"
+msgstr "Configura"
+
+#: package/contents/ui/NotificationHeader.qml:210
+#, kde-format
+msgctxt "Opposite of minimize"
+msgid "Restore"
+msgstr "Ripristina"
+
+#: package/contents/ui/NotificationHeader.qml:211
+#, kde-format
+msgid "Minimize"
+msgstr "Minimizzare"
+
+#: package/contents/ui/NotificationHeader.qml:234
+#, kde-format
+msgid "Close"
+msgstr "Chiudi"
+
+#: package/contents/ui/NotificationItem.qml:207
+#, kde-format
+msgctxt "Job name, e.g. Copying is paused"
+msgid "%1 (Paused)"
+msgstr "%1 (Sospesa)"
+
+#: package/contents/ui/NotificationItem.qml:212
+#, kde-format
+msgctxt "Job name, e.g. Copying has failed"
+msgid "%1 (Failed)"
+msgstr "%1 (Non riuscita)"
+
+#: package/contents/ui/NotificationItem.qml:214
+#, kde-format
+msgid "Job Failed"
+msgstr "Operazione non riuscita"
+
+#: package/contents/ui/NotificationItem.qml:218
+#, kde-format
+msgctxt "Job name, e.g. Copying has finished"
+msgid "%1 (Finished)"
+msgstr "%1 (Completata)"
+
+#: package/contents/ui/NotificationItem.qml:220
+#, kde-format
+msgid "Job Finished"
+msgstr "Operazione completata"
+
+#: package/contents/ui/NotificationItem.qml:367
+#, kde-format
+msgctxt "Reply to message"
+msgid "Reply"
+msgstr "Rispondi"
+
+#: package/contents/ui/NotificationReplyField.qml:36
+#, kde-format
+msgctxt "Text field placeholder"
+msgid "Type a reply…"
+msgstr "Scrivi una risposta…"
+
+#: package/contents/ui/NotificationReplyField.qml:56
+#, kde-format
+msgctxt "@action:button"
+msgid "Send"
+msgstr "Invia"
+
+#~ msgid "Open with..."
+#~ msgstr "Apri con..."
+
+#~ msgid "Clear History"
+#~ msgstr "Cancella cronologia"
+
+#, fuzzy
+#~| msgid "Select All"
+#~ msgctxt "Clear all notifications"
+#~ msgid "Clear All"
+#~ msgstr "Seleziona tutto"
+
+#~ msgctxt "Resume paused job"
+#~ msgid "Resume"
+#~ msgstr "Riprendi"
+
+#~ msgid "Until turned off"
+#~ msgstr "Fino alla disattivazione"
+
+#~ msgid "No unread notifications."
+#~ msgstr "Nessuna notifica non letta."
+
+#~ msgid "Information"
+#~ msgstr "Informazioni"
+
+#~ msgid "Show application and system notifications"
+#~ msgstr "Mostra applicazione e notifiche di sistema"
+
+#~ msgid "Show a history of notifications"
+#~ msgstr "Mostra una cronologia delle notifiche"
+
+#~ msgid "Track file transfers and other jobs"
+#~ msgstr "Traccia i trasferimenti file e altre operazioni"
+
+#~ msgid "Use custom position for the notification popup"
+#~ msgstr ""
+#~ "Utilizza una posizione personalizzata per la finestra a comparsa delle "
+#~ "notifiche"
+
+#~ msgctxt "Either just 1 dir or m of n dirs are being processed"
+#~ msgid "1 dir"
+#~ msgid_plural "%2 of %1 dirs"
+#~ msgstr[0] "1 cartella"
+#~ msgstr[1] "%2 di %1 cartelle"
+
+#~ msgid "%1 of %2 %3"
+#~ msgstr "%1 of %2 %3"
+
+#~ msgid "No notifications or jobs"
+#~ msgstr "Nessuna notifica e nessuna operazione"
+
+#~ msgctxt "10 seconds ago, keep short"
+#~ msgid "10 s ago"
+#~ msgstr "10 s fa"
+
+#~ msgctxt "30 seconds ago, keep short"
+#~ msgid "30 s ago"
+#~ msgstr "30 s fa"
+
+#~ msgctxt "notification was added yesterday, keep short"
+#~ msgid "Yesterday"
+#~ msgstr "Ieri"
+
+#~ msgctxt "notification was added n days ago, keep short"
+#~ msgid "%1 day ago"
+#~ msgid_plural "%1 days ago"
+#~ msgstr[0] "%1 giorno fa"
+#~ msgstr[1] "%1 giorni fa"
+
+#~ msgid "History"
+#~ msgstr "Cronologia"
+
+#~ msgctxt ""
+#~ "Indicator that there are more urls in the notification than previews shown"
+#~ msgid "+%1"
+#~ msgstr "+%1"
+
+#~ msgctxt "the job, which can be anything, finished with error"
+#~ msgid "%1: Error"
+#~ msgstr "%1: Errore"
+
+#~ msgid "Job Error"
+#~ msgstr "Errore dell'operazione"
+
+#~ msgctxt "m of n dirs are being processed"
+#~ msgid "dirs"
+#~ msgstr "cartelle"
+
+#~ msgid "&Application notifications:"
+#~ msgstr "Notifiche dell'&applicazione:"
+
+#~ msgid "&File transfers and jobs:"
+#~ msgstr "Trasferimenti &file e altre operazioni:"
+
+#~ msgid "Choose which information to show"
+#~ msgstr "Scegli quali informazioni mostrare"
+
+#~ msgid "Transfers"
+#~ msgstr "Trasferimenti"
+
+#~ msgid "All"
+#~ msgstr "Tutte"
+
+#~ msgid "KiB/s"
+#~ msgstr "KiB/s"
+
+#~ msgid "%1 file, to: %2"
+#~ msgid_plural "%1 files, to: %2"
+#~ msgstr[0] "%1 file, to: %2"
+#~ msgstr[1] "%1 file, per: %2"
+
+#~ msgid "1 running job (%2 remaining)"
+#~ msgid_plural "%1 running jobs (%2 remaining)"
+#~ msgstr[0] "1 operazione in corso (%2 rimanenti)"
+#~ msgstr[1] "%1 operazioni in corso (%2 rimanenti)"
+
+#~ msgid "%1 suspended job"
+#~ msgid_plural "%1 suspended jobs"
+#~ msgstr[0] "1 operazione sospesa"
+#~ msgstr[1] "%1 operazioni sospese"
+
+#~ msgid "%1 completed job"
+#~ msgid_plural "%1 completed jobs"
+#~ msgstr[0] "1 operazione completata"
+#~ msgstr[1] "%1 operazioni completate"
+
+#~ msgctxt "Generic title for the job transfer popup"
+#~ msgid "Jobs"
+#~ msgstr "Operazioni"
+
+#~ msgid "More"
+#~ msgstr "Altro"
+
+#~ msgid "Pause job"
+#~ msgstr "Sospendi operazione"
+
+#~ msgctxt ""
+#~ "%1 is the name of the job, can be things like Copying, deleting, moving"
+#~ msgid "%1 [Finished]"
+#~ msgstr "%1 [Completata]"
+
+#~ msgid "Less"
+#~ msgstr "Meno"
+
+#~ msgid "Notification from %1"
+#~ msgstr "Notifica da %1"
+
+#~ msgid "Pop Up Notices"
+#~ msgstr "Avvisi a comparsa"
+
+#~ msgid "Popup"
+#~ msgstr "A comparsa"
+
+#~ msgid "Automatically hide"
+#~ msgstr "Nascondi automaticamente"
+
+#~ msgid "Open destination"
+#~ msgstr "Apri destinazione"
+
+#~ msgid "statusnotifierwatcher"
+#~ msgstr "statusnotifierwatcher"
+
+#~ msgid "add default applets"
+#~ msgstr "aggiungi applet predefinite"
+
+#~ msgid "Recent notifications"
+#~ msgstr "Notifiche recenti"
+
+#~ msgctxt "Show all recent notifications"
+#~ msgid "Recent"
+#~ msgstr "Recenti"
+
+#~ msgid "Auto Hide"
+#~ msgstr "Nascondi automaticamente"
+
+#~ msgid "Plasma Widgets"
+#~ msgstr "Oggetti di Plasma"
+
+#~ msgctxt "Item will be automatically shown or hidden from the systray"
+#~ msgid "Auto"
+#~ msgstr "Auto"
+
+#~ msgctxt "Item is never visible in the systray"
+#~ msgid "Hidden"
+#~ msgstr "Nascosto"
+
+#~ msgctxt "Item is always visible in the systray"
+#~ msgid "Always Visible"
+#~ msgstr "Sempre visibile"
+
+#~ msgid "Recently Completed Jobs"
+#~ msgstr "Operazioni completate di recente"
+
+#~ msgid "Show hidden icons"
+#~ msgstr "Mostra icone nascoste"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Vincenzo Reale"
+
+#~ msgid "Automatically hide new notifications and jobs after a short delay"
+#~ msgstr ""
+#~ "Nascondi automaticamente nuove notifiche e operazioni con un breve ritardo"
+
+#~ msgid "System Tray Icons"
+#~ msgstr "Icone del vassoio di sistema"
+
+#~ msgid "1"
+#~ msgstr "1"
+
+#~ msgid "2"
+#~ msgstr "2"
+
+#~ msgid "Icons"
+#~ msgstr "Icone"
+
+#~ msgid "Application status"
+#~ msgstr "Stato delle applicazioni"
+
+#~ msgid "Communications"
+#~ msgstr "Comunicazioni"
+
+#~ msgid "System services"
+#~ msgstr "Servizi di sistema"
+
+#~ msgid "Hardware control"
+#~ msgstr "Controllo dell'hardware"
+
+#~ msgid "more"
+#~ msgstr "più"
+
+#~ msgid "Visible icons:"
+#~ msgstr "Icone visibili:"
+
+#~ msgid "toggle visibility of notifications and jobs"
+#~ msgstr "commuta la visibilità di notifiche e operazioni"
+
+#~ msgctxt ""
+#~ "%1 is the name of the job, can be things like Copying, deleting, moving"
+#~ msgid "(paused) %1"
+#~ msgstr "(sospesa) %1"
+
+#~ msgctxt ""
+#~ "%1 is the name of the job, can be things like Copying, deleting, moving"
+#~ msgid "(finished) %1"
+#~ msgstr "(completata) %1"

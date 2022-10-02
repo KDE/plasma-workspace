@@ -1,0 +1,653 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" 
+"dtd/kdedbx45.dtd" [
+  <!ENTITY kappname "&klipper;">
+  <!ENTITY package "kdebase">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Swedish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<book id="klipper" lang="&language;">
+<bookinfo>
+<title
+>Handbok för &klipper; </title>
+
+<authorgroup>
+<author
+>&Philip.Rodrigues; &Philip.Rodrigues.mail;</author>
+
+<othercredit role="developer"
+>&Carsten.Pfeiffer; &Carsten.Pfeiffer.mail; </othercredit>
+
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+
+</authorgroup>
+
+<copyright>
+<year
+>2000-2003</year>
+<holder
+>&Philip.Rodrigues;</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2022-05-05</date>
+<releaseinfo
+>Plasma 5.25</releaseinfo>
+
+<abstract>
+<para
+>&klipper; är &plasma;s verktyg för klipp &amp; klistra.</para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Klipper</keyword>
+<keyword
+>kdebase</keyword>
+<keyword
+>klippbord</keyword>
+</keywordset>
+</bookinfo>
+<!--http://blog.martin-graesslin.com/blog/2014/07/next-generation-klipper/-->
+<chapter id="introduction">
+<title
+>Inledning</title>
+<para
+>&klipper; är &plasma;s klippbordsverktyg. Det lagrar klippbordshistorik, och låter dig länka klippbordets innehåll till programåtgärder. Rapportera eventuella fel eller begäran om nya funktioner till <ulink url="http://bugs.kde.org"
+>KDE:s Bugzilla</ulink
+>.</para>
+
+</chapter>
+
+<chapter id="using-klipper">
+<title
+>Att använda &klipper;</title>
+
+<sect1 id="basic-usage">
+<title
+>Grundläggande användning</title>
+<para
+>Du kan använda &klipper; i systembrickan antingen som en grafisk &plasma;-komponent eller som ett klassiskt program. Båda delar samma funktionalitet men har olika grafiska gränssnitt och visar den senaste posten i historiken när musen hålls över &klipper;s ikon i systembrickan: </para>
+
+<screenshot>
+<screeninfo
+>&klipper;s ikon.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>&klipper;s ikon</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>&klipper;s grafiska komponent döljs om klippbordet är tomt.</para>
+
+<para
+>Klicka på &klipper;s ikon i systembrickan för att visa klippbordets historik.</para>
+
+<sect2 id="klipper-widget">
+<title
+>&klipper;s grafiska komponent</title>
+<screenshot>
+<screeninfo
+>&klipper;s grafiska komponent.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="klipper-widget.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>&klipper;s grafiska komponent</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Håll muspekaren över en post så visas fyra ikoner som låter dig utföra en åtgärd, visa streckkoden, redigera innehållet eller ta bort posten från historiken. Använd &spectacle; för att ta en bild av streckkoderna och spara dem. </para>
+
+<para
+>Du kan söka igenom klippbordshistoriken genom att öppna den (klicka på &klipper;) och skriva in din sökning. Resultaten uppdateras medan du skriver. Dlicka på ikonen till höger om sökfältet för att rensa klippbordshistoriken. </para>
+
+<para
+>Åtgärden <guilabel
+>Anpassa klippbordet...</guilabel
+> i den sammanhangsberoende menyn visar <link linkend="preferences"
+>inställningsdialogrutan</link
+>. </para>
+
+</sect2>
+</sect1>
+
+<sect1 id="actions">
+<title
+>Åtgärder</title>
+
+<para
+>&klipper; kan utföra åtgärder med klippbordets innehåll, baserat på om de matchar ett speciellt reguljärt uttryck. Till exempel, kan allt klippbordsinnehåll som börjar med <quote
+>http://</quote
+> skickas till Firefox eller &konqueror; som webbadresser att öppna. Dessutom, om innehållet motsvarar en sökväg, kan liknande åtgärder utföras enligt filens typ. Om exempelvis sökvägen till en <acronym
+>PDF</acronym
+>-fil kopieras till klippbordet, kan filen visas i &okular;.</para>
+
+<para
+>För att använda den här funktionen, markera bara en webbadress eller sökväg. Om det finns ett reguljärt uttryck som matchar i &klipper;s lista, visas en meny med programmen för din markering. Använd musen eller piltangenterna för att välja ett program, så startar &klipper; programmet, och öppnar adressen som markeringen pekar på.</para>
+
+<para
+>Om du inte vill utföra någon åtgärd med klippbordets innehåll, välj <guimenuitem
+>Inaktivera den här rutan</guimenuitem
+> i den sammanhangsberoende menyn för att återgå till vad du höll på med tidigare. Om du lämnar menyn försvinner den, och låter dig fortsätta med ditt arbete. Du kan ändra tiden som menyn blir kvar i inställningsdialogrutan, med alternativet <guilabel
+>Visa sammanhangsberoende åtgärdsmeny</guilabel
+> på sidan <guilabel
+>Allmänt</guilabel
+>. Du kan inaktivera delen med filsökväg separat, genom att använda alternativet <guilabel
+>Inkludera MIME-åtgärder</guilabel
+> på sidan <guilabel
+>Åtgärdsmeny</guilabel
+>.</para>
+
+<para
+>Åtgärder kan stängas av helt genom att  trycka på genvägen <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>X</keycap
+></keycombo
+>.</para>
+
+<para
+>Klippbordsinnehåll som matchar ett reguljärt uttryck kan också redigeras innan en åtgärd utförs med det. Välj <guimenuitem
+>Redigera innehåll...</guimenuitem
+> till höger om klippbordsposten, så kan du ändra klippbordets innehåll i dialogrutan som dyker upp, innan du klickar på knappen <guibutton
+>Ok</guibutton
+> för att utföra lämplig åtgärden.</para>
+
+<para
+>Genom att trycka på <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>R</keycap
+></keycombo
+> visas en meny för att upprepa den senaste åtgärden som &klipper; utförde.</para>
+
+</sect1>
+
+<sect1 id="clipboard-modes">
+<title
+>Klippbords- och markeringsbeteende</title>
+
+<sect2 id="clipboard-modes-general">
+<title
+>Allmänt</title>
+<para
+>&klipper; kan användas för att ställa in klippbordets och markeringens beteende i &plasma;. </para>
+
+<note
+><para
+>&X-Window; använder två skilda klippbordsbuffrar: <quote
+>markeringen</quote
+> och <quote
+>klippbordet</quote
+>. Text placeras i markeringsbuffern genom att helt enkelt markera den, och kan klistras in med musens mittenknapp. För att placera text i klippbordsbuffern, markera den och tryck på <keycombo
+>&Ctrl;<keycap
+>X</keycap
+></keycombo
+> eller <keycombo
+>&Ctrl;<keycap
+>C</keycap
+></keycombo
+>. Text från klippbordsbuffern klistras in genom att använda <keycombo
+>&Ctrl;<keycap
+>V</keycap
+></keycombo
+> eller välja <guimenuitem
+>Klistra in</guimenuitem
+> i en sammanhangsberoende meny.</para>
+</note>
+
+</sect2>
+
+<sect2 id="changing-clipboard-modes">
+<title
+>Ändra klippbords- och markeringsbeteende</title>
+<para
+>För att ändra beteende för klippbord och markering, välj <guimenuitem
+>Anpassa klippbordet...</guimenuitem
+> i &klipper;s sammanhangsberoende meny, och välj sidan <guilabel
+>Allmänt</guilabel
+> i dialogrutan som visas. Avmarkeras <guilabel
+>Markering och klippbord</guilabel
+> gör klippbordet och markeringsfunktionen till helt skilda buffrar, som beskrivs ovan. Med alternativet valt, förhindrar alternativet <guilabel
+>Ignorera</guilabel
+> att &klipper; inkluderar markeringens innehåll i klippbordshistoriken och att åtgärder utförs på markeringens innehåll. Att välja <guilabel
+>Markering och klippbord</guilabel
+> gör att klippbords- och markeringsbuffern alltid är likadana, vilket betyder att text i markeringen antingen kan klistras in med musens <mousebutton
+>mitten</mousebutton
+>knapp eller snabbtangenten <keycombo
+>&Ctrl;<keycap
+>V</keycap
+></keycombo
+>, och på samma sätt för text i klippbordsbuffern. </para>
+
+ <!-- The
+<guilabel
+>Synchronize contents of the clipboard and the
+selection</guilabel
+> check box determines the clipboard mode. If the box is
+selected, the clipboard functions in the &UNIX; mode; if not, the
+&Windows;/&Mac; mode is used. -->
+
+</sect2>
+
+
+</sect1>
+
+</chapter>
+
+<chapter id="preferences">
+<title
+>Anpassa &klipper;</title>
+
+<sect1 id="general-page">
+<title
+>Allmänna alternativ</title>
+
+<variablelist>
+
+<varlistentry
+><term
+><guilabel
+>Markering och klippbord</guilabel
+></term>
+<listitem
+><para
+>När ett område av skärmen markeras med musen eller tangentbordet, kallas det <quote
+>markeringen</quote
+>. Den kan klistras in med musens mittenknapp.</para
+><para
+>Om markeringen explicit kopieras genom att använda åtgärden <guimenuitem
+>Kopera</guimenuitem
+> eller <guimenuitem
+>Klipp ut</guimenuitem
+>, sparas den på <emphasis
+>klippbordet</emphasis
+>. Den kan klistras in genom att använda åtgärden <guimenuitem
+>Klistra in</guimenuitem
+>.</para
+><para
+>När alternativet är påslaget, gör det att markeringen och klippbordet är likadana, så att vilken markering som helst är omedelbart tillgänglig att klistra in på alla möjliga sätt. Om det är avstängt, kan markeringen ändå sparas i klippbordshistoriken (i enlighet med alternativen nedanför), men den kan bara klistras in genom att använda musens mittenknapp.</para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Klippbordshistorik</guilabel
+></term>
+<listitem
+><para
+>Visar eller döljer klippbordshistorik</para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Antal poster</guilabel
+></term>
+<listitem
+><para
+>Väljer antalet poster som lagras i klippbordshistoriken.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Textmarkering</guilabel
+></term>
+<listitem
+><para
+>När ett område på skärmen markeras med musen eller tangentbordet, kallas det <quote
+>markeringen</quote
+>. Alternativet bestämmer om textmarkeringar sparas i klippbordshistoriken. Det är möjligt att välja mellan <guilabel
+>Spara alltid i historik</guilabel
+> och <guilabel
+>Bara om explicit kopierad</guilabel
+>. Alternativet <guilabel
+>Spara alltid i historik</guilabel
+> är inte tillgängligt om synkronisering av markering och klippbord är avstängd: i detta fall sparas markeringen aldrig automatiskt i klippbordshistoriken. Se <xref linkend="clipboard-modes"/>. </para>
+</listitem>
+</varlistentry
+> 
+
+<varlistentry>
+<term
+><guilabel
+>Icke-text markering</guilabel
+></term>
+<listitem
+><para
+>Alternativet bestämmer om icke-textmarkeringar (såsom bilder) sparas i klippbordshistoriken Det är möjligt att välja mellan <guilabel
+>Spara alltid i historik</guilabel
+> och <guilabel
+>Bara om explicit kopierad</guilabel
+>. Alternativet <guilabel
+>Spara alltid i historik</guilabel
+> är inte tillgängligt om synkronisering av markering och klippbord är avstängd: i detta fall sparas markeringen aldrig automatiskt i klippbordshistoriken. Se <xref linkend="clipboard-modes"/>. </para>
+</listitem>
+</varlistentry
+> 
+
+</variablelist>
+
+</sect1>
+
+<sect1 id="action-menu-page">
+<title
+>Åtgärdsmeny</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Visa sammanhangsberoende åtgärdsmeny</guilabel
+></term>
+<listitem
+><para
+>Anger tiden som en meny förblir synlig om du inte gör något med den.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Spela upp åtgärder för ett valt objekt från historiken</guilabel
+></term>
+<listitem
+><para
+>Om det här är aktiverat, kommer &klipper; att visa åtgärdsmenyn när man väljer något i historiken, om det är möjligt.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Undanta fönster</guibutton
+></term>
+<listitem
+><para
+>Visar dialogrutan <guilabel
+>Stäng av åtgärder för fönster av typ WM_CLASS</guilabel
+></para>
+<para
+>Vissa program, som &konqueror;, använder klippbordet internt. Om du får oönskade &klipper;-menyer hela tiden när du använder ett särskilt program, gör då följande:</para>
+
+<orderedlist>
+<listitem
+><para
+>Öppna programmet.</para
+></listitem>
+<listitem
+><para
+>Kör <userinput
+><command
+>xprop</command
+> | <command
+>grep</command
+> <parameter
+>WM_CLASS</parameter
+></userinput
+> från en terminal, och klicka sedan på fönstret för programmet som du använder.</para
+></listitem
+> 
+<listitem
+><para
+>Den första strängen efter likhetstecknet är den som ska skrivas in.</para
+></listitem>
+</orderedlist>
+
+<para
+>När väl WM_CLASS har lagts till, kommer inga fler åtgärder skapas för fönster i det här programmet.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Ta bort blanktecken när åtgärder utförs</guilabel
+></term>
+<listitem
+><para
+>Om markerad, tas alla blanktecken (mellanslag, tabulator, etc.) i början och slutet av klippbordets innehåll bort innan det skickas till ett program. Det är till exempel användbart om klippbordet innehåller en webbadress med mellanslag, som om den öppnas av en webbläsare, skulle orsaka ett fel.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Inkludera MIME-åtgärder</guilabel
+></term>
+<listitem
+><para
+>Om markerad, inkluderas program som kan hantera dess &MIME;-typ för ett filnamn eller en webbadress markerat i åtgärdsrutan.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+
+<sect1 id="actions-configuration-page">
+<title
+>Inställning av åtgärder</title>
+
+<variablelist>
+<varlistentry>
+<term
+>Redigera uttryck/åtgärder</term>
+<listitem
+><para
+>Under fliken <guilabel
+>Åtgärder</guilabel
+>, dubbelklicka på det reguljära uttryck eller åtgärden som du vill redigera, eller markera det och tryck på knappen <guibutton
+>Redigera åtgärd</guibutton
+>. En dialogruta visas där uttryckets text kan redigeras som du vill..</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>Lägga till uttryck/åtgärder</term>
+<listitem
+><para
+>Klicka på knappen <guibutton
+>Lägg till åtgärd...</guibutton
+> för att lägga till ett reguljärt uttryck i &klipper;. &klipper; använder &Qt;:s <classname
+>QRegularExpression</classname
+>, som använder PCRE (Perl Compatible Regular Expressions).</para>
+<para
+>Du kan lägga till en beskrivning av det reguljära uttryckets typ (t.ex. <quote
+>HTTP webbadress</quote
+>) genom att <mousebutton
+>vänster</mousebutton
+>klicka på kolumnen <guilabel
+>Beskrivning</guilabel
+>.</para
+>   
+
+<note
+><para
+>Du hittar detaljerad information på engelska om hur man använder reguljära uttryck i <classname
+>QRegularExpression</classname
+> på <ulink url="https://doc.qt.io/qt-5/qregularexpression.html#details"
+>Qt:s dokumentation uppströms</ulink
+>.</para
+></note>
+
+<para
+>Redigera det reguljära uttrycket enligt beskrivningen ovan. För att lägga till ett kommando som ska köras, klicka på <guimenuitem
+>Lägg till kommando</guimenuitem
+>, och redigera sedan kommandot på plats i en textredigeringsruta. Att dubbelklicka på ett kommando låter dig redigera det.</para>
+
+<para
+>Observera att <token
+>%s</token
+> på kommandoraden ersätts med klippbordets innehåll, t.ex. om din kommandodefinition är <userinput
+><command
+>kwrite</command
+> <token
+>%s</token
+></userinput
+> och ditt klippbordsinnehåll är <filename
+>/home/phil/textfil</filename
+>, körs kommandot <userinput
+><command
+>kwrite</command
+> <filename
+>/home/phil/textfil</filename
+></userinput
+>. För att infoga <token
+>%s</token
+> oförändrat på kommandoraden, skriv in ett bakstreck framför, så här: <userinput
+>\%s</userinput
+>.</para>
+
+<para
+>Posterna <userinput
+><token
+>%0</token
+></userinput
+> till <userinput
+><token
+>%9</token
+></userinput
+> ersätts med motsvarande lagrade texter från matchningsmönstret. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+
+<sect1 id="shortcuts-page">
+<title
+>Genvägsalternativ</title>
+
+<para
+>Sidan genvägar låter dig ändra snabbtangenterna som används för att komma åt &klipper;s funktioner. Du kan ändra snabbtangenterna på tre olika sätt:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Ingen</guilabel
+></term>
+<listitem
+><para
+>Den markerade åtgärden kan inte kommas åt direkt från tangentbordet.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Förvald</guilabel
+></term>
+<listitem
+><para
+>Den markerade åtgärden använder &klipper;s förvalda tangent. Det här är genvägarna som anges i den här handboken.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Egen</guilabel
+></term>
+<listitem
+><para
+>Den markerade åtgärden tilldelas de tangenter som du väljer själv.</para>
+<para
+>För att välja en egen tangent för åtgärden du har markerat, klicka på <guilabel
+>Egen</guilabel
+> och därefter <guilabel
+>Ingen</guilabel
+>. Skriv nu in den önskade tangentkombinationen, som i vilket &kde;-program som helst. </para
+> </listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Om en genväg definieras för <guilabel
+>Öppna Klipper vid muspekarens position</guilabel
+> gör användning av genvägen att &klipper;s sammanhangsberoende meny visas vid muspekarens position, istället för den förvalda positionen (i &plasma;s panel). Användbart om du använder musen mer än tangentbordet.</para>
+
+</sect1>
+</chapter>
+
+<chapter id="credits">
+<title
+>Tack till och licens</title>
+
+<para
+>&klipper; </para>
+<para
+>Program Copyright 1998 &Andrew.Stanley-Jones; <email
+>asj@cban.com</email
+> </para>
+<para
+>Program copyright 1998-2000 &Carsten.Pfeiffer; &Carsten.Pfeiffer.mail;</para>
+<para
+>Utvecklas för närvarande av Esben Mose Hansen. Se <ulink url="http://mosehansen.dk/about"
+>http://mosehansen.dk/about</ulink
+> för kontaktinformation. </para>
+
+<para
+>Dokumentation copyright 2000-2003, 2005 &Philip.Rodrigues; &Philip.Rodrigues.mail;</para>
+
+<para
+>Översättning Stefan Asserhäll <email
+>stefan.asserhall@bredband.net</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+
+&documentation.index; 
+
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes: nil
+sgml-general-insert-case: lower
+sgml-indent-step: 0
+End:
+-->
+
+
+
+
+
+
+
+
+
+

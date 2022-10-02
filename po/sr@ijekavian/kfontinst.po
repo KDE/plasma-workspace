@@ -1,0 +1,2710 @@
+# Translation of kfontinst.po into Serbian.
+# Toplica Tanaskovic <toptan@kde.org.yu>, 2003, 2004.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2005, 2007, 2008, 2009, 2010, 2011, 2012, 2014, 2016, 2017.
+# Dalibor Djuric <dalibor.djuric@mozilla-srbija.org>, 2009, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kfontinst\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-05-31 18:13+0200\n"
+"PO-Revision-Date: 2017-09-28 17:58+0200\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@ijekavian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Часлав Илић"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "caslav.ilic@gmx.net"
+
+#: apps/Installer.cpp:54 kcmfontinst/KCmFontInst.cpp:1022
+#, kde-format
+msgid ""
+"Do you wish to install the font(s) for personal use (only available to you), "
+"or system-wide (available to all users)?"
+msgstr ""
+"Желите ли да инсталирате фонтове за личне потребе (само их ви можете "
+"користити), или широм система (за све кориснике)?"
+
+#: apps/Installer.cpp:57 kcmfontinst/KCmFontInst.cpp:1025
+#, kde-format
+msgid "Where to Install"
+msgstr "Гдје инсталирати?"
+
+#: apps/Installer.cpp:133
+#, kde-format
+msgid "Font Installer"
+msgstr "Инсталатер фонтова"
+
+#: apps/Installer.cpp:133
+#, kde-format
+msgid "Simple font installer"
+msgstr "Једноставан инсталатер фонтова"
+
+#: apps/Installer.cpp:134 apps/Printer.cpp:435
+#, kde-format
+msgid "(C) Craig Drummond, 2007"
+msgstr "© 2007, Крејг Драмонд"
+
+#: apps/Installer.cpp:140 apps/Printer.cpp:441
+#, kde-format
+msgid "Makes the dialog transient for an X app specified by winid"
+msgstr "Пролазни дијалог за икс програм према ИД‑у прозора"
+
+#: apps/Installer.cpp:142
+#, kde-format
+msgid "URL to install"
+msgstr "УРЛ гдје треба инсталирати"
+
+# >> @title:window
+#: apps/Printer.cpp:349
+#, kde-format
+msgid "Print"
+msgstr "Штампање"
+
+#: apps/Printer.cpp:418 kcmfontinst/DuplicatesDialog.cpp:252
+#, kde-format
+msgid "Canceling..."
+msgstr "Отказујем..."
+
+#: apps/Printer.cpp:434
+#, kde-format
+msgid "Font Printer"
+msgstr "Штампач фонтова"
+
+#: apps/Printer.cpp:434
+#, kde-format
+msgid "Simple font printer"
+msgstr "Једноставан штампач фонтова"
+
+#: apps/Printer.cpp:443
+#, kde-format
+msgid "Size index to print fonts"
+msgstr "Индекс величине за штампање фонтова"
+
+#: apps/Printer.cpp:445
+#, kde-format
+msgid ""
+"Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
+"number composed as: <weight><width><slant>"
+msgstr ""
+"Фонт за штампање, задат као „породица,стил“, гдје је стил 24‑битни декадни "
+"број састављен као: <дебљина><ширина><нагиб>"
+
+#: apps/Printer.cpp:447
+#, kde-format
+msgid "File containing list of fonts to print"
+msgstr "Фајл са списком фонтова за штампање"
+
+#: apps/Printer.cpp:449
+#, kde-format
+msgid "Remove file containing list of fonts to print"
+msgstr "Уклони фајл са списком фонтова за штампање"
+
+#: apps/Viewer.cpp:78
+#, kde-format
+msgid "Select Font to View"
+msgstr "Изаберите фонт за приказ"
+
+#: apps/Viewer.cpp:121
+#, kde-format
+msgid "URL to open"
+msgstr "УРЛ за отварање"
+
+#: apps/Viewer.cpp:160
+#, kde-format
+msgid "Font Viewer"
+msgstr "Приказивач фонтова"
+
+#: apps/Viewer.cpp:160
+#, kde-format
+msgid "Simple font viewer"
+msgstr "Једноставан приказивач фонтова"
+
+#: apps/Viewer.cpp:161
+#, kde-format
+msgid "(C) Craig Drummond, 2004-2007"
+msgstr "© 2004-2007, Крејг Драмонд"
+
+# >> @title:window
+#: kcmfontinst/DuplicatesDialog.cpp:68
+#, kde-format
+msgid "Duplicate Fonts"
+msgstr "Фонтови дупликати"
+
+#: kcmfontinst/DuplicatesDialog.cpp:98
+#, kde-format
+msgid "Scanning for duplicate fonts. Please wait..."
+msgstr "Тражим фонтове дупликате. Сачекајте..."
+
+#: kcmfontinst/DuplicatesDialog.cpp:121
+#, kde-format
+msgid "No duplicate fonts found."
+msgstr "Нема фонтова дупликата."
+
+#: kcmfontinst/DuplicatesDialog.cpp:131
+#, kde-format
+msgid "Delete Marked Files"
+msgstr "Обриши обиљежене фајлове"
+
+#: kcmfontinst/DuplicatesDialog.cpp:133
+#, kde-format
+msgid "%1 duplicate font found."
+msgid_plural "%1 duplicate fonts found."
+msgstr[0] "Нађен %1 фонт дупликат."
+msgstr[1] "Нађена %1 фонта дупликата."
+msgstr[2] "Нађено %1 фонтова дупликата."
+msgstr[3] "Нађен %1 фонт дупликат."
+
+#: kcmfontinst/DuplicatesDialog.cpp:224
+#, kde-format
+msgid ""
+"Are you sure you wish to delete:\n"
+"%1"
+msgstr ""
+"Желите ли заиста да обришете:\n"
+"%1|/|Желите ли заиста да обришете:\n"
+"$[главорепи аку %1]"
+
+#: kcmfontinst/DuplicatesDialog.cpp:226
+#, kde-format
+msgid "Are you sure you wish to delete:"
+msgstr "Желите ли заиста да обришете:"
+
+#: kcmfontinst/DuplicatesDialog.cpp:250
+#, kde-format
+msgid "Cancel font scan?"
+msgstr "Отказати тражење фонтова?"
+
+# >> @title:column
+#: kcmfontinst/DuplicatesDialog.cpp:417
+#, kde-format
+msgid "Font/File"
+msgstr "фонт/фајл"
+
+# >> @title:column
+#: kcmfontinst/DuplicatesDialog.cpp:419
+#, kde-format
+msgid "Size"
+msgstr "величина"
+
+# >> @title:column
+#: kcmfontinst/DuplicatesDialog.cpp:420
+#, kde-format
+msgid "Date"
+msgstr "датум"
+
+# >> @title:column
+#: kcmfontinst/DuplicatesDialog.cpp:421
+#, kde-format
+msgid "Links To"
+msgstr "веза ка"
+
+#: kcmfontinst/DuplicatesDialog.cpp:434 kcmfontinst/FontList.cpp:1422
+#, kde-format
+msgid "Open in Font Viewer"
+msgstr "Отвори у приказивачу фонтова"
+
+#: kcmfontinst/DuplicatesDialog.cpp:436
+#, kde-format
+msgid "Properties"
+msgstr "Својства"
+
+#: kcmfontinst/DuplicatesDialog.cpp:439
+#, kde-format
+msgid "Unmark for Deletion"
+msgstr "Поништи за брисање"
+
+#: kcmfontinst/DuplicatesDialog.cpp:441
+#, kde-format
+msgid "Mark for Deletion"
+msgstr "Означи за брисање"
+
+#: kcmfontinst/DuplicatesDialog.cpp:541
+#, kde-format
+msgid "Open font in font viewer?"
+msgid_plural "Open all %1 fonts in font viewer?"
+msgstr[0] "Отворити сав %1 фонт у приказивачу?"
+msgstr[1] "Отворити сва %1 фонта у приказивачу?"
+msgstr[2] "Отворити свих %1 фонтова у приказивачу?"
+msgstr[3] "Отворити фонт у приказивачу?"
+
+# >> @option:radio Filter criterion
+#: kcmfontinst/FontFilter.cpp:120
+#, kde-format
+msgid "Family"
+msgstr "породица|/|$[својства дат 'породици']"
+
+# >> @option:radio Filter criteria
+#: kcmfontinst/FontFilter.cpp:122
+#, kde-format
+msgid "Style"
+msgstr "стил|/|$[својства дат 'стилу']"
+
+# >> @option:radio Filter criteria
+#: kcmfontinst/FontFilter.cpp:124
+#, kde-format
+msgid "Foundry"
+msgstr "ливница|/|$[својства дат 'ливници']"
+
+# >> @option:radio Filter criteria
+# У менију, „*поклапање* по...“ сувише дугачко.
+# Без „по“ у својству, јер не одговара у реченици.
+#: kcmfontinst/FontFilter.cpp:126
+#, kde-format
+msgid "FontConfig Match"
+msgstr "по Фонтконфигу|/|$[својства дат 'Фонтконфигу']"
+
+# >> @option:radio Filter criteria
+#: kcmfontinst/FontFilter.cpp:128
+#, kde-format
+msgid "File Type"
+msgstr "тип фајла|/|$[својства дат 'типу фајла']"
+
+# >> @option:radio Filter criteria
+#: kcmfontinst/FontFilter.cpp:130
+#, kde-format
+msgid "File Name"
+msgstr "име фајла|/|$[својства дат 'имену фајла']"
+
+# >> @option:radio Filter criteria
+#: kcmfontinst/FontFilter.cpp:132
+#, kde-format
+msgid "File Location"
+msgstr "локација фајла|/|$[својства дат 'локацији фајла']"
+
+# >> @option:radio Filter criteria
+#: kcmfontinst/FontFilter.cpp:134
+#, kde-format
+msgid "Writing System"
+msgstr "писмо|/|$[својства дат 'писму']"
+
+#: kcmfontinst/FontFilter.cpp:146
+#, kde-format
+msgid "Set Criteria"
+msgstr "Задај мјерила"
+
+# >> @item Writing system
+#: kcmfontinst/FontFilter.cpp:207
+#, kde-format
+msgid "Symbol/Other"
+msgstr "симболи/остало"
+
+#: kcmfontinst/FontFilter.cpp:295 kcmfontinst/FontFilter.cpp:361
+#, kde-format
+msgid "Filter by %1..."
+msgstr ""
+
+# >> @title:column
+#: kcmfontinst/FontList.cpp:608
+#, kde-format
+msgid "Font"
+msgstr "фонт"
+
+# >> @title:column
+#: kcmfontinst/FontList.cpp:610
+#, kde-format
+msgid "Status"
+msgstr "стање"
+
+#: kcmfontinst/FontList.cpp:623
+#, kde-format
+msgid ""
+"This column shows the status of the font family, and of the individual font "
+"styles."
+msgstr "Ова колона даје стање породице фонтова и њених појединих стилова."
+
+#: kcmfontinst/FontList.cpp:729
+#, kde-format
+msgid ""
+"<p>This list shows your installed fonts. The fonts are grouped by family, "
+"and the number in square brackets represents the number of styles in which "
+"the family is available. e.g.</p><ul><li>Times [4]<ul><li>Regular</"
+"li><li>Bold</li><li>Bold Italic</li><li>Italic</li></ul></li></ul>"
+msgstr ""
+"<p>Овај списак показује инсталиране фонтове. Груписани су по породици, а "
+"број у угластим заградама представља број стилова у којима је породица "
+"доступна. На примјер:</p><ul><li>Тајмс [4]<ul><li>основни</li><li>подебљани</"
+"li><li>подебљани курзивни</li><li>курзивни</li></ul></li></ul>"
+
+#: kcmfontinst/FontList.cpp:1027 kcmfontinst/FontList.cpp:1051
+#, kde-format
+msgid "...plus %1 more"
+msgstr "...и још %1"
+
+# >> @item %1 font family name, %2 number of styles
+#: kcmfontinst/FontList.cpp:1079
+#, kde-format
+msgid "%1 [%2]"
+msgstr "%1 [%2]"
+
+#: kcmfontinst/FontList.cpp:1411
+#, kde-format
+msgid "Delete"
+msgstr "Обриши"
+
+#: kcmfontinst/FontList.cpp:1414 kcmfontinst/GroupList.cpp:830
+#: kcmfontinst/KCmFontInst.cpp:1203 kcmfontinst/KCmFontInst.cpp:1227
+#, kde-format
+msgid "Enable"
+msgstr "Укључи"
+
+#: kcmfontinst/FontList.cpp:1416 kcmfontinst/GroupList.cpp:832
+#: kcmfontinst/KCmFontInst.cpp:1204 kcmfontinst/KCmFontInst.cpp:1228
+#, kde-format
+msgid "Disable"
+msgstr "Искључи"
+
+#: kcmfontinst/FontList.cpp:1420 kcmfontinst/GroupList.cpp:841
+#, kde-format
+msgid "Print..."
+msgstr "Штампај..."
+
+#: kcmfontinst/FontList.cpp:1425
+#, kde-format
+msgid "Reload"
+msgstr "Учитај поново"
+
+# >! Needs plural call, regardless whether used for n=1 or not.
+#: kcmfontinst/FontList.cpp:1864
+#, kde-format
+msgid "Open all %1 fonts in font viewer?"
+msgstr "Отворити свих %1 фонтова у приказивачу?"
+
+# >> @item Font group
+#: kcmfontinst/GroupList.cpp:81
+#, kde-format
+msgid "All Fonts"
+msgstr "сви фонтови|/|$[својства ген 'свих фонтова' аку 'све фонтове']"
+
+# >> @item Font group
+#: kcmfontinst/GroupList.cpp:84
+#, kde-format
+msgid "Personal Fonts"
+msgstr "лични фонтови|/|$[својства ген 'личних фонтова' аку 'личне фонтове']"
+
+# >> @item Font group
+#: kcmfontinst/GroupList.cpp:87
+#, kde-format
+msgid "System Fonts"
+msgstr ""
+"системски фонтови|/|$[својства ген 'системских фонтова' аку 'системске "
+"фонтове']"
+
+# >> @item Font group
+#: kcmfontinst/GroupList.cpp:90
+#, kde-format
+msgid "Unclassified"
+msgstr "несврстани|/|$[својства ген 'несврстаних' аку 'несврстане']"
+
+# >> @title:column
+#: kcmfontinst/GroupList.cpp:384
+#, kde-format
+msgid "Group"
+msgstr "група"
+
+#: kcmfontinst/GroupList.cpp:573
+#, kde-format
+msgid ""
+"<p>Do you really want to remove '<b>%1</b>'?</p><p><i>This will only remove "
+"the group, and not the actual fonts.</i></p>"
+msgstr ""
+"<p>Желите ли заиста да уклоните групу <b>%1</b>?</p><p><i>Биће уклоњена само "
+"група, не и фонтови у њој.</i></p>"
+
+# >> @title:window
+#: kcmfontinst/GroupList.cpp:576
+#, kde-format
+msgid "Remove Group"
+msgstr "Уклањање групе"
+
+#: kcmfontinst/GroupList.cpp:576 kcmfontinst/GroupList.cpp:827
+#, kde-format
+msgid "Remove"
+msgstr "Уклони"
+
+#: kcmfontinst/GroupList.cpp:577
+#, kde-format
+msgid "Remove group"
+msgstr "Уклони групу"
+
+#: kcmfontinst/GroupList.cpp:622
+#, kde-format
+msgid ""
+"<h3>Font Groups</h3><p>This list displays the font groups available on your "
+"system. There are 2 main types of font groups:<ul><li><b>Standard</b> are "
+"special groups used by the font manager.<ul>%1</ul></li><li><b>Custom</b> "
+"are groups created by you. To add a font family to one of these groups "
+"simply drag it from the list of fonts, and drop onto the desired group. To "
+"remove a family from the group, drag the font onto the \"All Fonts\" group.</"
+"li></ul></p>"
+msgstr ""
+"<h3>Групе фонтова</h3><p>Овај списак даје расположиве групе фонтова на "
+"систему. Групе се дијеле на два главна типа:</p><ul><li><b>Стандардне</b> су "
+"оне групе које користи менаџер фонтова.<ul>%1</ul></li><li><b>Посебне</b> су "
+"групе које сте сами створили. Породицу фонтова додајете у групу тако што је "
+"једноставно превучете са списка фонтова на жељену групу. Породицу уклањате "
+"из одређене групе тако што је превучете на групу „свих фонтова“.</li></ul>"
+
+#: kcmfontinst/GroupList.cpp:631
+#, kde-format
+msgid ""
+"<li><i>All Fonts</i> contains all the fonts installed on your system.</"
+"li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
+"within a \"Custom\" group.</li>"
+msgstr ""
+"<li><i>Сви фонтови</i> садрже све фонтове инсталиране на систему.</"
+"li><li><i>Несврстани</i> су они фонтови који још увијек нису смјештени у "
+"неку „посебну“ групу.</li>"
+
+#: kcmfontinst/GroupList.cpp:634
+#, kde-format
+msgid ""
+"<li><i>All Fonts</i> contains all the fonts installed on your system - both  "
+"\"System\" and \"Personal\".</li><li><i>System</i> contains all fonts that "
+"are installed system-wide (i.e. available to all users).</"
+"li><li><i>Personal</i> contains your personal fonts.</"
+"li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
+"within a \"Custom\" group.</li>"
+msgstr ""
+"<li><i>Сви фонтови</i> садрже све фонтове инсталиране на систему - и "
+"системске и личне.</li><li><i>Системски</i> су они фонтови који су видљиви "
+"широм система (тј. доступни свим корисницима).</li><li><i>Лични</i> садрже "
+"ваше личне фонтове.</li><li><i>Несврстани</i> садрже фонтове који још увијек "
+"нису смјештени у неку „посебну“ групу.</li>"
+
+#: kcmfontinst/GroupList.cpp:741
+#, kde-format
+msgid "<qt>A group named <b>'%1'</b> already exists.</qt>"
+msgstr "<qt>Група по имену <b>%1</b> већ постоји.</qt>"
+
+#: kcmfontinst/GroupList.cpp:835
+#, kde-format
+msgid "Rename..."
+msgstr "Преименуј..."
+
+#: kcmfontinst/GroupList.cpp:847
+#, kde-format
+msgid "Export..."
+msgstr "Извези..."
+
+#: kcmfontinst/GroupList.cpp:945
+#, kde-format
+msgid "Add to \"%1\"."
+msgstr "Додај у „%1“.|/|Додај у „$[аку %1]“."
+
+#: kcmfontinst/GroupList.cpp:947
+#, kde-format
+msgid "Remove from current group."
+msgstr "Уклони из текуће групе."
+
+#: kcmfontinst/GroupList.cpp:949
+#, kde-format
+msgid "Move to personal folder."
+msgstr "Премјести у личну фасциклу."
+
+#: kcmfontinst/GroupList.cpp:951
+#, kde-format
+msgid "Move to system folder."
+msgstr "Премјести у системску фасциклу."
+
+#: kcmfontinst/JobRunner.cpp:151
+#, kde-format
+msgid "Skip"
+msgstr "Прескочи"
+
+#: kcmfontinst/JobRunner.cpp:154
+#, kde-format
+msgid "AutoSkip"
+msgstr "Аутоматски прескачи"
+
+#: kcmfontinst/JobRunner.cpp:199
+#, kde-format
+msgid "<h3>Cancel?</h3><p>Are you sure you wish to cancel?</p>"
+msgstr "<h3>Одустати?</h3><p>Желите ли заиста да одустанете?</p>"
+
+#: kcmfontinst/JobRunner.cpp:212
+#, kde-format
+msgid ""
+"<h3>Finished</h3><p>Please note that any open applications will need to be "
+"restarted in order for any changes to be noticed.</p>"
+msgstr ""
+"<h3>Готово</h3><p>Ако желите да видите начињене измјене у програмима који "
+"тренутно раде, мораћете поново да их покренете.</p>"
+
+#: kcmfontinst/JobRunner.cpp:220
+#, kde-format
+msgid "Do not show this message again"
+msgstr "Не приказуј више ову поруку"
+
+# >> @title:window
+#: kcmfontinst/JobRunner.cpp:340
+#, kde-format
+msgid "Installing"
+msgstr "Инсталирање"
+
+# >> @title:window
+#: kcmfontinst/JobRunner.cpp:343
+#, kde-format
+msgid "Uninstalling"
+msgstr "Деинсталирање"
+
+# >> @title:window
+#: kcmfontinst/JobRunner.cpp:346 kcmfontinst/JobRunner.cpp:452
+#, kde-format
+msgid "Enabling"
+msgstr "Укључивање"
+
+# >> @title:window
+#: kcmfontinst/JobRunner.cpp:349 kcmfontinst/JobRunner.cpp:458
+#, kde-format
+msgid "Moving"
+msgstr "Премијештање"
+
+# >> @title:window
+#: kcmfontinst/JobRunner.cpp:352
+#, kde-format
+msgid "Updating"
+msgstr "Ажурирање"
+
+# >> @title:window
+#: kcmfontinst/JobRunner.cpp:356
+#, kde-format
+msgid "Removing"
+msgstr "Уклањање"
+
+# >> @title:window
+#: kcmfontinst/JobRunner.cpp:360
+#, kde-format
+msgid "Disabling"
+msgstr "Искључивање"
+
+# >> @info:progress
+#: kcmfontinst/JobRunner.cpp:400
+#, kde-format
+msgid "Updating font configuration. Please wait..."
+msgstr "Ажурирам поставу фонтова. Сачекајте..."
+
+#: kcmfontinst/JobRunner.cpp:481
+#, kde-format
+msgid "Unable to start backend."
+msgstr "Не могу да покренем позадину."
+
+#: kcmfontinst/JobRunner.cpp:491
+#, kde-format
+msgid "Backend died, but has been restarted. Please try again."
+msgstr "Позадина се срушила, али је поново покренута. Покушајте опет."
+
+#: kcmfontinst/JobRunner.cpp:669 kcmfontinst/JobRunner.cpp:675
+#, kde-format
+msgid "<h3>Error</h3>"
+msgstr "<h3>Грешка</h3>"
+
+#: kcmfontinst/JobRunner.cpp:743
+#, kde-format
+msgid "Failed to download <i>%1</i>"
+msgstr "Не могу да преузмем <tt>%1</tt>"
+
+#: kcmfontinst/JobRunner.cpp:745
+#, kde-format
+msgid "System backend died. Please try again.<br><i>%1</i>"
+msgstr ""
+"<html>Системска позадина се срушила. Покушајте опет.<br/><tt>%1</tt></html>"
+
+#: kcmfontinst/JobRunner.cpp:747
+#, kde-format
+msgid ""
+"<i>%1</i> is a bitmap font, and these have been disabled on your system."
+msgstr "<tt>%1</tt> је битмапски фонт, а они су искључени на систему."
+
+#: kcmfontinst/JobRunner.cpp:749
+#, kde-format
+msgid ""
+"<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
+"system."
+msgstr ""
+"<tt>%1</tt> садржи фонт <b>%2</b>, који је већ инсталиран на систему.|/|<tt>"
+"%1</tt> садржи фонт <b>$[главорепи ном %2]</b>, који је већ инсталиран на "
+"систему."
+
+#: kcmfontinst/JobRunner.cpp:752
+#, kde-format
+msgid "<i>%1</i> is not a font."
+msgstr "<tt>%1</tt> није фонт."
+
+#: kcmfontinst/JobRunner.cpp:754
+#, kde-format
+msgid "Could not remove all files associated with <i>%1</i>"
+msgstr "Не могу да уклоним све фајлове везане за <tt>%1</tt>."
+
+#: kcmfontinst/JobRunner.cpp:756
+#, kde-format
+msgid "Failed to start the system daemon.<br><i>%1</i>"
+msgstr "<html>Не могу да покренем системски демон.<br/><tt>%1</tt></html>"
+
+#: kcmfontinst/JobRunner.cpp:761 kio/KioFonts.cpp:807
+#, kde-format
+msgid "<i>%1</i> already exists."
+msgstr "<tt>%1</tt> већ постоји."
+
+#: kcmfontinst/JobRunner.cpp:764
+#, kde-format
+msgid "<i>%1</i> does not exist."
+msgstr "<tt>%1</tt> не постоји."
+
+#: kcmfontinst/JobRunner.cpp:766
+#, kde-format
+msgid "Permission denied.<br><i>%1</i>"
+msgstr "<html>Дозвола одбијена.<br/><tt>%1</tt></html>"
+
+#: kcmfontinst/JobRunner.cpp:768
+#, kde-format
+msgid "Unsupported action.<br><i>%1</i>"
+msgstr "<html>Неподржана радња.<br/><tt>%1</tt></html>"
+
+#: kcmfontinst/JobRunner.cpp:770
+#, kde-format
+msgid "Authentication failed.<br><i>%1</i>"
+msgstr "<html>Неуспјела аутентификација.<br/><tt>%1</tt></html>"
+
+#: kcmfontinst/JobRunner.cpp:772
+#, kde-format
+msgid "Unexpected error while processing: <i>%1</i>"
+msgstr "Неочекивана грешка при обрађивању: <tt>%1</tt>"
+
+#: kcmfontinst/KCmFontInst.cpp:187
+#, fuzzy, kde-format
+#| msgid "KDE Font Manager"
+msgid "Font Management"
+msgstr "КДЕ‑ов менаџер фонтова|/|$[својства дат 'КДЕ‑овом менаџеру фонтова']"
+
+#: kcmfontinst/KCmFontInst.cpp:188
+#, kde-format
+msgid "(C) Craig Drummond, 2000 - 2009"
+msgstr "© Крејг Драмонд, 2004–2009"
+
+#: kcmfontinst/KCmFontInst.cpp:189
+#, kde-format
+msgid "Craig Drummond"
+msgstr "Крејг Драмонд"
+
+#: kcmfontinst/KCmFontInst.cpp:189
+#, kde-format
+msgid "Developer and maintainer"
+msgstr "програмер и одржавалац"
+
+#: kcmfontinst/KCmFontInst.cpp:220
+#, fuzzy, kde-format
+#| msgid "Create New Group"
+msgid "Create New Group..."
+msgstr "Стварање нове групе"
+
+# >> @title:window
+#: kcmfontinst/KCmFontInst.cpp:224
+#, fuzzy, kde-format
+#| msgid "Remove Group"
+msgid "Remove Group..."
+msgstr "Уклањање групе"
+
+# >> @title:window
+#: kcmfontinst/KCmFontInst.cpp:228
+#, fuzzy, kde-format
+#| msgid "Enable Fonts"
+msgid "Enable Fonts in Group..."
+msgstr "Укључивање фонтова"
+
+# >> @title:window
+#: kcmfontinst/KCmFontInst.cpp:232
+#, fuzzy, kde-format
+#| msgid "Disable Fonts"
+msgid "Disable Fonts in Group..."
+msgstr "Искључивање фонтова"
+
+#: kcmfontinst/KCmFontInst.cpp:259
+#, kde-format
+msgid "This displays a preview of the selected font."
+msgstr "Даје преглед изабраног фонта."
+
+#: kcmfontinst/KCmFontInst.cpp:275
+#, fuzzy, kde-format
+#| msgid "Scan for Duplicate Fonts..."
+msgid "Find Duplicates..."
+msgstr "Потражи фонтове дупликате..."
+
+#: kcmfontinst/KCmFontInst.cpp:276
+#, kde-format
+msgid "Scan for Duplicate Fonts..."
+msgstr "Потражи фонтове дупликате..."
+
+#: kcmfontinst/KCmFontInst.cpp:279
+#, fuzzy, kde-format
+#| msgid "Install..."
+msgid "Install from File..."
+msgstr "Инсталирај..."
+
+#: kcmfontinst/KCmFontInst.cpp:280
+#, kde-format
+msgid "Install fonts from a local file"
+msgstr ""
+
+#: kcmfontinst/KCmFontInst.cpp:282
+#, kde-format
+msgid "Get New Fonts..."
+msgstr "Добави нове фонтове..."
+
+#: kcmfontinst/KCmFontInst.cpp:283
+#, kde-format
+msgid "Download new fonts"
+msgstr ""
+
+#: kcmfontinst/KCmFontInst.cpp:287
+#, fuzzy, kde-format
+#| msgid "Delete all selected fonts"
+msgid "Delete Selected Fonts..."
+msgstr "Обриши изабране фонтове"
+
+#: kcmfontinst/KCmFontInst.cpp:346
+#, kde-format
+msgid "Change Preview Text..."
+msgstr "Промијени примјер текста..."
+
+#: kcmfontinst/KCmFontInst.cpp:413
+#, kde-format
+msgid ""
+"<h1>Font Installer</h1><p> This module allows you to install TrueType, "
+"Type1, and Bitmap fonts.</p><p>You may also install fonts using Konqueror: "
+"type fonts:/ into Konqueror's location bar and this will display your "
+"installed fonts. To install a font, simply copy one into the folder.</p>"
+msgstr ""
+"<h1>Инсталатер фонтова</h1><p>Овим модулом можете инсталирати трутајп, тип‑1 "
+"и битмапске фонтове.</p><p>Такође можете инсталирати фонтове К‑освајачем. "
+"Унесите <tt>fonts:/</tt> у К‑освајачеву траку локације, што ће приказати све "
+"инсталиране фонтове. Тада само копирајте жељени фонт у ту фасциклу.</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:419
+#, kde-format
+msgid ""
+"<h1>Font Installer</h1><p> This module allows you to install TrueType, "
+"Type1, and Bitmap fonts.</p><p>You may also install fonts using Konqueror: "
+"type fonts:/ into Konqueror's location bar and this will display your "
+"installed fonts. To install a font, simply copy it into the appropriate "
+"folder -  \"%1\" for fonts available to just yourself, or  \"%2\" for system-"
+"wide fonts (available to all).</p>"
+msgstr ""
+"<h1>Инсталатер фонтова</h1><p>Овим модулом можете инсталирати трутајп, тип‑1 "
+"и битмапске фонтове.</p><p>Такође можете инсталирати фонтове К‑освајачем. "
+"Унесите <tt>fonts:/</tt> у К‑освајачеву траку локације, што ће приказати све "
+"инсталиране фонтове. Тада само копирајте жељени фонт у одговарајућу "
+"фасциклу: у „%1“ за фонтове намијењене само вама, а у „%2“ за оне намијењени "
+"свима (видљиве широм система).</p>|/|<h1>Инсталатер фонтова</h1><p>Овим "
+"модулом можете инсталирати трутајп, тип‑1 и битмапске фонтове.</p><p>Такође "
+"можете инсталирати фонтове К‑освајачем. Унесите <tt>fonts:/</tt> у "
+"К‑освајачеву траку локације, што ће приказати све инсталиране фонтове. Тада "
+"само копирајте жељени фонт у одговарајућу фасциклу: у „$[аку %1]“ за фонтове "
+"намијењене само вама, а у „$[аку %2]“ за оне намијењени свима (видљиве широм "
+"система).</p>"
+
+# >> @title:window
+#: kcmfontinst/KCmFontInst.cpp:478
+#, kde-format
+msgid "Add Fonts"
+msgstr "Додавање фонтова"
+
+#: kcmfontinst/KCmFontInst.cpp:611
+#, kde-format
+msgid "Failed to save list of fonts to print."
+msgstr "Не могу да сачувам списак фонтова за штампање."
+
+#: kcmfontinst/KCmFontInst.cpp:636
+#, kde-format
+msgid "Failed to start font printer."
+msgstr "Не могу да покренем штампач фонтова."
+
+#: kcmfontinst/KCmFontInst.cpp:642
+#, kde-format
+msgid ""
+"There are no printable fonts.\n"
+"You can only print non-bitmap and enabled fonts."
+msgstr ""
+"Нема фонтова који се могу штампати.\n"
+"Можете штампати само небитмапске и укључене фонтове."
+
+#: kcmfontinst/KCmFontInst.cpp:644
+#, kde-format
+msgid "Cannot Print"
+msgstr "Не могу да штампам"
+
+#: kcmfontinst/KCmFontInst.cpp:658
+#, kde-format
+msgid "You did not select anything to delete."
+msgstr "Нисте изабрали ништа за брисање."
+
+#: kcmfontinst/KCmFontInst.cpp:659
+#, kde-format
+msgid "Nothing to Delete"
+msgstr "Ничег за брисање"
+
+#: kcmfontinst/KCmFontInst.cpp:675
+#, kde-format
+msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
+msgstr ""
+"<p>Желите ли заиста да обришете<br/><b>%1</b>?</p>|/|<p>Желите ли заиста да "
+"обришете<br/><b>$[главорепи аку %1]</b>?</p>"
+
+# >> @title:window
+#: kcmfontinst/KCmFontInst.cpp:677
+#, kde-format
+msgid "Delete Font"
+msgstr "Брисање фонта"
+
+#: kcmfontinst/KCmFontInst.cpp:681
+#, kde-format
+msgid "Do you really want to delete this font?"
+msgid_plural "Do you really want to delete these %1 fonts?"
+msgstr[0] "Желите ли заиста да обришете овај %1 фонт?"
+msgstr[1] "Желите ли заиста да обришете ова %1 фонта?"
+msgstr[2] "Желите ли заиста да обришете ових %1 фонтова?"
+msgstr[3] "Желите ли заиста да обришете овај фонт?"
+
+# >> @title:window
+#: kcmfontinst/KCmFontInst.cpp:684
+#, kde-format
+msgid "Delete Fonts"
+msgstr "Брисање фонтова"
+
+# >> @info:progress
+#: kcmfontinst/KCmFontInst.cpp:689
+#, kde-format
+msgid "Deleting font(s)..."
+msgstr "Бришем фонтове..."
+
+#: kcmfontinst/KCmFontInst.cpp:704
+#, kde-format
+msgid "You did not select anything to move."
+msgstr "Нисте изабрали ништа за премијештање."
+
+#: kcmfontinst/KCmFontInst.cpp:705
+#, kde-format
+msgid "Nothing to Move"
+msgstr "Ничег за премијештање"
+
+#: kcmfontinst/KCmFontInst.cpp:716
+#, kde-format
+msgid ""
+"<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
+"%3</i>?</p>"
+msgstr ""
+"<p>Желите ли заиста да премјестите</p><p><b>%1</b></p><p>из <i>%2</i> у <i>"
+"%3</i>?</p>"
+
+# >> @title:window
+#: kcmfontinst/KCmFontInst.cpp:721
+#, kde-format
+msgid "Move Font"
+msgstr "Премијештање фонта"
+
+#: kcmfontinst/KCmFontInst.cpp:721 kcmfontinst/KCmFontInst.cpp:730
+#, kde-format
+msgid "Move"
+msgstr "Премјести"
+
+#: kcmfontinst/KCmFontInst.cpp:725
+#, kde-format
+msgid ""
+"<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
+msgid_plural ""
+"<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?</p>"
+msgstr[0] ""
+"<p>Желите ли заиста да премјестите овај %1 фонт из <i>%2</i> у <i>%3</i>?</p>"
+msgstr[1] ""
+"<p>Желите ли заиста да премјестите ова %1 фонта из <i>%2</i> у <i>%3</i>?</p>"
+msgstr[2] ""
+"<p>Желите ли заиста да премјестите ових %1 фонтова из <i>%2</i> у <i>%3</i>?"
+"</p>"
+msgstr[3] ""
+"<p>Желите ли заиста да премјестите овај фонт из <i>%2</i> у <i>%3</i>?</p>"
+
+# >> @title:window
+#: kcmfontinst/KCmFontInst.cpp:730
+#, kde-format
+msgid "Move Fonts"
+msgstr "Премијештање фонтова"
+
+# >> @info:progress
+#: kcmfontinst/KCmFontInst.cpp:735
+#, kde-format
+msgid "Moving font(s)..."
+msgstr "Премијештам фонтове..."
+
+# >> @title:window
+#: kcmfontinst/KCmFontInst.cpp:751
+#, kde-format
+msgid "Export Group"
+msgstr "Извоз групе"
+
+#: kcmfontinst/KCmFontInst.cpp:780
+#, kde-format
+msgid "No files?"
+msgstr "Нема фајлова?"
+
+#: kcmfontinst/KCmFontInst.cpp:783
+#, kde-format
+msgid "Failed to open %1 for writing"
+msgstr "<html>Не могу да отворим <tt>%1</tt> за писање.</html>"
+
+#: kcmfontinst/KCmFontInst.cpp:802
+#, kde-format
+msgid "Create New Group"
+msgstr "Стварање нове групе"
+
+#: kcmfontinst/KCmFontInst.cpp:803
+#, fuzzy, kde-format
+#| msgid "Create a new group"
+msgid "Name of new group:"
+msgstr "Направи нову групу"
+
+#: kcmfontinst/KCmFontInst.cpp:805
+#, kde-format
+msgid "New Group"
+msgstr "Нова група"
+
+# >> @title:window
+#: kcmfontinst/KCmFontInst.cpp:831
+#, kde-format
+msgid "Preview Text"
+msgstr "Пробни текст"
+
+#: kcmfontinst/KCmFontInst.cpp:832
+#, kde-format
+msgid "Please enter new text:"
+msgstr "Унесите нови текст:"
+
+#: kcmfontinst/KCmFontInst.cpp:892
+#, kde-format
+msgid "Scanning font list..."
+msgstr "Прегледам списак фонтова..."
+
+#: kcmfontinst/KCmFontInst.cpp:958
+#, kde-format
+msgid "No fonts"
+msgstr "Нема фонтова"
+
+#: kcmfontinst/KCmFontInst.cpp:964
+#, kde-format
+msgid "1 Font"
+msgid_plural "%1 Fonts"
+msgstr[0] "%1 фонт"
+msgstr[1] "%1 фонта"
+msgstr[2] "%1 фонтова"
+msgstr[3] "1 фонт"
+
+# >> Number of fonts by state.
+#: kcmfontinst/KCmFontInst.cpp:974
+#, kde-format
+msgid ""
+"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
+"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Partially "
+"enabled:</td><td>%3</td></tr><tr><td align=\"right\">Total:</td><td>%4</td></"
+"tr></table>"
+msgstr ""
+"<table><tr><td align=\"right\">Укључених:</td><td>%1</td></tr><tr><td align="
+"\"right\">Искључених:</td><td>%2</td></tr><tr><td align=\"right\">Дјелимично "
+"укључених:</td><td>%3</td></tr><tr><td align=\"right\">Укупно:</td><td>%4</"
+"td></tr></table>"
+
+# >> Number of fonts by state.
+#: kcmfontinst/KCmFontInst.cpp:980
+#, kde-format
+msgid ""
+"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
+"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Total:</"
+"td><td>%3</td></tr></table>"
+msgstr ""
+"<table><tr><td align=\"right\">Укључених:</td><td>%1</td></tr><tr><td align="
+"\"right\">Искључених:</td><td>%2</td></tr><tr><td align=\"right\">Укупно:</"
+"td><td>%3</td></tr></table>"
+
+#: kcmfontinst/KCmFontInst.cpp:1056
+#, kde-format
+msgid "Looking for any associated files..."
+msgstr "Тражим придружене фајлове..."
+
+#: kcmfontinst/KCmFontInst.cpp:1061
+#, kde-format
+msgid "Scanning Files..."
+msgstr "Испитујем фајлове..."
+
+#: kcmfontinst/KCmFontInst.cpp:1062
+#, kde-format
+msgid "Looking for additional files to install..."
+msgstr "Тражим додатне фајлове за инсталирање..."
+
+#: kcmfontinst/KCmFontInst.cpp:1078
+#, kde-format
+msgid "Looking for files associated with %1"
+msgstr "Тражим фајлове придружене уз ‘%1’"
+
+#: kcmfontinst/KCmFontInst.cpp:1105
+#, kde-format
+msgid "Installing font(s)..."
+msgstr "Инсталирам фонтове..."
+
+#: kcmfontinst/KCmFontInst.cpp:1171
+#, kde-format
+msgid "You did not select anything to enable."
+msgstr "Нисте изабрали ништа за укључивање."
+
+#: kcmfontinst/KCmFontInst.cpp:1172
+#, kde-format
+msgid "You did not select anything to disable."
+msgstr "Нисте изабрали ништа за искључивање."
+
+#: kcmfontinst/KCmFontInst.cpp:1173
+#, kde-format
+msgid "Nothing to Enable"
+msgstr "Ничег за укључивање"
+
+#: kcmfontinst/KCmFontInst.cpp:1173
+#, kde-format
+msgid "Nothing to Disable"
+msgstr "Ничег за брисање"
+
+#: kcmfontinst/KCmFontInst.cpp:1190
+#, kde-format
+msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
+msgstr ""
+"<p>Желите ли заиста да укључите<br/><b>%1</b>?</p>|/|<p>Желите ли заиста да "
+"укључите<br/><b>$[главорепи аку %1]</b>?</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:1192
+#, kde-format
+msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
+msgstr ""
+"<p>Желите ли заиста да искључите<br/><b>%1</b>?</p>|/|<p>Желите ли заиста да "
+"искључите<br/><b>$[главорепи аку %1]</b>?</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:1194
+#, kde-format
+msgid ""
+"<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
+"'<b>%2</b>'?</p>"
+msgstr ""
+"<p>Желите ли заиста да укључите<br/><b>%1</b><br/>(у групи <b>%2</b>)?</p>|/|"
+"<p>Желите ли заиста да укључите<br/><b>$[главорепи аку %1]</b><br/>(у групи "
+"<b>$[ген %2]</b>)?</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:1198
+#, kde-format
+msgid ""
+"<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
+"'<b>%2</b>'?</p>"
+msgstr ""
+"<p>Желите ли заиста да искључите<br/><b>%1</b><br/>(у групи <b>%2</b>)?</"
+"p>|/|<p>Желите ли заиста да искључите<br/><b>$[главорепи аку %1]</b><br/>(у "
+"групи <b>$[ген %2]</b>)?</p>"
+
+# >> @title:window
+#: kcmfontinst/KCmFontInst.cpp:1202 kcmfontinst/KCmFontInst.cpp:1203
+#, kde-format
+msgid "Enable Font"
+msgstr "Укључивање фонта"
+
+# >> @title:window
+#: kcmfontinst/KCmFontInst.cpp:1202 kcmfontinst/KCmFontInst.cpp:1204
+#, kde-format
+msgid "Disable Font"
+msgstr "Искључивање фонта"
+
+#: kcmfontinst/KCmFontInst.cpp:1209
+#, kde-format
+msgid "Do you really want to enable this font?"
+msgid_plural "Do you really want to enable these %1 fonts?"
+msgstr[0] "Желите ли заиста да укључите овај %1 фонт?"
+msgstr[1] "Желите ли заиста да укључите ова %1 фонта?"
+msgstr[2] "Желите ли заиста да укључите ових %1 фонтова?"
+msgstr[3] "Желите ли заиста да укључите овај фонт?"
+
+#: kcmfontinst/KCmFontInst.cpp:1212
+#, kde-format
+msgid "Do you really want to disable this font?"
+msgid_plural "Do you really want to disable these %1 fonts?"
+msgstr[0] "Желите ли заиста да искључите овај %1 фонт?"
+msgstr[1] "Желите ли заиста да искључите ова %1 фонта?"
+msgstr[2] "Желите ли заиста да искључите ових %1 фонтова?"
+msgstr[3] "Желите ли заиста да искључите овај фонт?"
+
+#: kcmfontinst/KCmFontInst.cpp:1215
+#, kde-format
+msgid ""
+"<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
+"</p>"
+msgid_plural ""
+"<p>Do you really want to enable these %1 fonts contained within group '<b>"
+"%2</b>'?</p>"
+msgstr[0] ""
+"<p>Желите ли заиста да укључите овај %1 фонт у групи <b>%2</b>?</p>|/|"
+"<p>Желите ли заиста да укључите овај %1 фонт у групи <b>$[ген %2]</b>?</p>"
+msgstr[1] ""
+"<p>Желите ли заиста да укључите ова %1 фонта у групи <b>%2</b>?</p>|/|"
+"<p>Желите ли заиста да укључите ова %1 фонта у групи <b>$[ген %2]</b>?</p>"
+msgstr[2] ""
+"<p>Желите ли заиста да укључите ових %1 фонтова у групи <b>%2</b>?</p>|/|"
+"<p>Желите ли заиста да укључите ових %1 фонтова у групи <b>$[ген %2]</b>?</p>"
+msgstr[3] ""
+"<p>Желите ли заиста да укључите овај фонт у групи <b>%2</b>?</p>|/|<p>Желите "
+"ли заиста да укључите овај фонт у групи <b>$[ген %2]</b>?</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:1220
+#, kde-format
+msgid ""
+"<p>Do you really want to disable this font contained within group '<b>%2</"
+"b>'?</p>"
+msgid_plural ""
+"<p>Do you really want to disable these %1 fonts contained within group '<b>"
+"%2</b>'?</p>"
+msgstr[0] ""
+"<p>Желите ли заиста да искључите овај %1 фонт у групи <b>%2</b>?</p>|/|"
+"<p>Желите ли заиста да искључите овај %1 фонт у групи <b>$[ген %2]</b>?</p>"
+msgstr[1] ""
+"<p>Желите ли заиста да искључите ова %1 фонта у групи <b>%2</b>?</p>|/|"
+"<p>Желите ли заиста да искључите ова %1 фонта у групи <b>$[ген %2]</b>?</p>"
+msgstr[2] ""
+"<p>Желите ли заиста да искључите ових %1 фонтова у групи <b>%2</b>?</p>|/|"
+"<p>Желите ли заиста да искључите ових %1 фонтова у групи <b>$[ген %2]</b>?</"
+"p>"
+msgstr[3] ""
+"<p>Желите ли заиста да искључите овај фонт у групи <b>%2</b>?</p>|/|"
+"<p>Желите ли заиста да искључите овај фонт у групи <b>$[ген %2]</b>?</p>"
+
+# >> @title:window
+#: kcmfontinst/KCmFontInst.cpp:1226 kcmfontinst/KCmFontInst.cpp:1227
+#, kde-format
+msgid "Enable Fonts"
+msgstr "Укључивање фонтова"
+
+# >> @title:window
+#: kcmfontinst/KCmFontInst.cpp:1226 kcmfontinst/KCmFontInst.cpp:1228
+#, kde-format
+msgid "Disable Fonts"
+msgstr "Искључивање фонтова"
+
+#: kcmfontinst/KCmFontInst.cpp:1234
+#, kde-format
+msgid "Enabling font(s)..."
+msgstr "Укључујем фонтове..."
+
+#: kcmfontinst/KCmFontInst.cpp:1236
+#, kde-format
+msgid "Disabling font(s)..."
+msgstr "Искључујем фонтове..."
+
+# >> @title:window
+#: kcmfontinst/PrintDialog.cpp:40
+#, kde-format
+msgid "Print Font Samples"
+msgstr "Штампање узорака фонта"
+
+#: kcmfontinst/PrintDialog.cpp:56
+#, kde-format
+msgid "Select size to print font:"
+msgstr "Величина за штампање фонта:"
+
+# >> @item:inlistbox Select size to print font
+#: kcmfontinst/PrintDialog.cpp:60
+#, kde-format
+msgid "Waterfall"
+msgstr "водопадски"
+
+# >> @item:inlistbox Select size to print font
+#: kcmfontinst/PrintDialog.cpp:61
+#, kde-format
+msgid "12pt"
+msgstr "12тач"
+
+# >> @item:inlistbox Select size to print font
+#: kcmfontinst/PrintDialog.cpp:62
+#, kde-format
+msgid "18pt"
+msgstr "18тач"
+
+# >> @item:inlistbox Select size to print font
+#: kcmfontinst/PrintDialog.cpp:63
+#, kde-format
+msgid "24pt"
+msgstr "24тач"
+
+# >> @item:inlistbox Select size to print font
+#: kcmfontinst/PrintDialog.cpp:64
+#, kde-format
+msgid "36pt"
+msgstr "36тач"
+
+# >> @item:inlistbox Select size to print font
+#: kcmfontinst/PrintDialog.cpp:65
+#, kde-format
+msgid "48pt"
+msgstr "48тач"
+
+#: kio/KioFonts.cpp:222
+#, kde-format
+msgid "Can only install fonts to either \"%1\" or \"%2\"."
+msgstr ""
+"Фонтови се могу инсталирати само у „%1“ или „%2“.|/|Фонтови се могу "
+"инсталирати само у „$[аку %1]“ или „$[аку %2]“."
+
+#: kio/KioFonts.cpp:225
+#, kde-format
+msgid ""
+"You cannot install a fonts package directly.\n"
+"Please extract %1, and install the components individually."
+msgstr ""
+"Не можете директно инсталирати пакет фонтова.\n"
+"Прво распакујте ‘%1’, па ручно инсталирајте компоненте."
+
+#: kio/KioFonts.cpp:476
+#, kde-format
+msgid "Cannot copy fonts"
+msgstr "Не могу да копирам фонтове"
+
+#: kio/KioFonts.cpp:481
+#, kde-format
+msgid "Cannot move fonts"
+msgstr "Не могу да премјестим фонтове"
+
+#: kio/KioFonts.cpp:492
+#, kde-format
+msgid "Only fonts may be deleted."
+msgstr "Само се фонтови могу брисати."
+
+#: kio/KioFonts.cpp:495
+#, kde-format
+msgid "Can only remove fonts from either \"%1\" or \"%2\"."
+msgstr ""
+"Фонтови се могу уклањати само из „%1“ или „%2“.|/|Фонтови се могу уклањати "
+"само из „$[ген %1]“ или „$[ген %2]“."
+
+# >> @info %1 and %2 are group names ("All fonts", etc.)
+#: kio/KioFonts.cpp:525
+#, kde-format
+msgid "Please specify \"%1\" or \"%2\"."
+msgstr "Задајте „%1“ или „%2“.|/|Задајте „$[аку %1]“ или „$[аку %2]“."
+
+#: kio/KioFonts.cpp:549
+#, kde-format
+msgid "No special methods supported."
+msgstr "Посебни методи нису подржани."
+
+#: kio/KioFonts.cpp:629
+#, kde-format
+msgid "Fonts"
+msgstr "Фонтови"
+
+#: kio/KioFonts.cpp:783
+#, kde-format
+msgid "Failed to start the system daemon"
+msgstr "Не могу да покренем системски демон."
+
+#: kio/KioFonts.cpp:786
+#, kde-format
+msgid "Backend died"
+msgstr "Позадина се срушила"
+
+#: kio/KioFonts.cpp:790
+#, kde-format
+msgid "%1 is a bitmap font, and these have been disabled on your system."
+msgstr "‘%1’ је битмапски фонт, а они су искључени на систему."
+
+#: kio/KioFonts.cpp:794
+#, kde-format
+msgid ""
+"%1 contains the font <b>%2</b>, which is already installed on your system."
+msgstr ""
+"<tt>%1</tt> садржи фонт <b>%2</b>, који је већ инсталиран на систему.|/|<tt>"
+"%1</tt> садржи фонт <b>$[главорепи ном %2]</b>, који је већ инсталиран на "
+"систему."
+
+#: kio/KioFonts.cpp:798
+#, kde-format
+msgid "%1 is not a font."
+msgstr "‘%1’ није фонт."
+
+#: kio/KioFonts.cpp:801
+#, kde-format
+msgid "Could not remove all files associated with %1"
+msgstr "Не могу да уклоним све фајлове везане за ‘%1’."
+
+# >> @item Unknown foundry
+#: lib/Fc.cpp:424 lib/KfiConstants.h:128
+#, kde-format
+msgid "Unknown"
+msgstr "непозната"
+
+# |, no-check-spell
+#: lib/FcEngine.cpp:894
+#, kde-format
+msgctxt "First letter of the alphabet (in upper then lower case)"
+msgid "Aa"
+msgstr "Аа"
+
+# |, no-check-spell
+#: lib/FcEngine.cpp:896
+#, kde-format
+msgctxt ""
+"All letters of the alphabet (in upper/lower case pairs), followed by numbers"
+msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
+msgstr "АаБбВвГгДдЂђЕеЖжЗзИиЈјКкЛлЉљМмНнЊњОоПпРрСсТтЋћУуФфХхЦцЧчЏџШш0123456789"
+
+#: lib/FcEngine.cpp:1078
+#, kde-format
+msgid "No characters found."
+msgstr "Нема ниједног знака."
+
+#: lib/FcEngine.cpp:1117
+#, kde-format
+msgctxt "A sentence that uses all of the letters of the alphabet"
+msgid "The quick brown fox jumps over the lazy dog"
+msgstr "Љубазни фењерџија чађавог лица хоће да ми покаже штос"
+
+# |, no-check-spell
+#: lib/FcEngine.cpp:1122
+#, kde-format
+msgctxt "All of the letters of the alphabet, uppercase"
+msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+msgstr "АБВГДЂЕЖЗИЈКЛЉМНЊОПРСТЋУФХЦЧЏШ"
+
+# |, no-check-spell
+#: lib/FcEngine.cpp:1127
+#, kde-format
+msgctxt "All of the letters of the alphabet, lowercase"
+msgid "abcdefghijklmnopqrstuvwxyz"
+msgstr "абвгдђежзијклљмнљопрстћуфхцчџш"
+
+#: lib/FcEngine.cpp:1132
+#, kde-format
+msgctxt "Numbers and characters"
+msgid "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
+msgstr "0123456789.:,;(*!?'/\\\")£$€%^&-+@#~<>{}[]„“‘’—–"
+
+#: lib/FcEngine.cpp:1526
+#, kde-format
+msgid "ERROR: Could not determine font's name."
+msgstr "ГРЕШКА: Не могу да утврдим име фонта."
+
+#: lib/FcEngine.cpp:1530
+#, kde-format
+msgid "%2 [1 pixel]"
+msgid_plural "%2 [%1 pixels]"
+msgstr[0] "%2 [%1 пиксел]"
+msgstr[1] "%2 [%1 пиксела]"
+msgstr[2] "%2 [%1 пиксела]"
+msgstr[3] "%2 [1 пиксел]"
+
+# >> @item Personal fonts
+#: lib/KfiConstants.h:40
+#, kde-format
+msgid "Personal"
+msgstr ""
+"Лични|/|$[својства ном 'лични' ген 'личних' дат,лок 'личним' аку 'личне']"
+
+# >> @item System fonts
+#: lib/KfiConstants.h:41
+#, kde-format
+msgid "System"
+msgstr ""
+"Системски|/|$[својства ном 'системски' ген 'системских' дат,лок 'системским' "
+"аку 'системске']"
+
+# >> @item All fonts
+#: lib/KfiConstants.h:42
+#, kde-format
+msgid "All"
+msgstr "Сви|/|$[својства ном 'сви' ген 'свих' дат,лок 'свим' аку 'све']"
+
+#: lib/KfiConstants.h:56
+#, kde-format
+msgid "Administrator"
+msgstr "Администратор"
+
+# >> @item Font style
+#: lib/KfiConstants.h:95
+#, kde-format
+msgid "Thin"
+msgstr "танки"
+
+# >> @item Font style
+#: lib/KfiConstants.h:96
+#, kde-format
+msgid "Extra Light"
+msgstr "екстралаки"
+
+# >> @item Font style
+#: lib/KfiConstants.h:97
+#, kde-format
+msgid "Ultra Light"
+msgstr "ултралаки"
+
+# >> @item Font style
+#: lib/KfiConstants.h:98
+#, kde-format
+msgid "Light"
+msgstr "лаки"
+
+# >> @item Font style
+#: lib/KfiConstants.h:99
+#, kde-format
+msgid "Regular"
+msgstr "основни"
+
+# >> @item Font style
+#: lib/KfiConstants.h:100 lib/KfiConstants.h:118
+#, kde-format
+msgid "Normal"
+msgstr "нормални"
+
+# >> @item Font style
+#: lib/KfiConstants.h:101
+#, kde-format
+msgid "Medium"
+msgstr "средњи"
+
+# >> @item Font style
+#: lib/KfiConstants.h:102
+#, kde-format
+msgid "Demi Bold"
+msgstr "демиподебљани"
+
+# >> @item Font style
+#: lib/KfiConstants.h:103
+#, kde-format
+msgid "Semi Bold"
+msgstr "полуподебљани"
+
+# >> @item Font style
+#: lib/KfiConstants.h:104
+#, kde-format
+msgid "Bold"
+msgstr "подебљани"
+
+# >> @item Font style
+#: lib/KfiConstants.h:105
+#, kde-format
+msgid "Extra Bold"
+msgstr "екстраподебљани"
+
+# >> @item Font style
+#: lib/KfiConstants.h:106
+#, kde-format
+msgid "Ultra Bold"
+msgstr "ултраподебљани"
+
+# >> @item Font style
+#: lib/KfiConstants.h:107
+#, kde-format
+msgid "Black"
+msgstr "црни"
+
+# >> @item Font style
+#: lib/KfiConstants.h:108
+#, kde-format
+msgid "Heavy"
+msgstr "тешки"
+
+# >> @item Font style
+#: lib/KfiConstants.h:110
+#, kde-format
+msgid "Roman"
+msgstr "римски"
+
+# >> @item Font style
+#: lib/KfiConstants.h:111
+#, kde-format
+msgid "Italic"
+msgstr "курзивни"
+
+# >> @item Font style
+#: lib/KfiConstants.h:112
+#, kde-format
+msgid "Oblique"
+msgstr "искошени"
+
+# >> @item Font style
+#: lib/KfiConstants.h:114
+#, kde-format
+msgid "Ultra Condensed"
+msgstr "ултразгуснути"
+
+# >> @item Font style
+#: lib/KfiConstants.h:115
+#, kde-format
+msgid "Extra Condensed"
+msgstr "екстразгуснути"
+
+# >> @item Font style
+#: lib/KfiConstants.h:116
+#, kde-format
+msgid "Condensed"
+msgstr "згуснути"
+
+# >> @item Font style
+#: lib/KfiConstants.h:117
+#, kde-format
+msgid "Semi Condensed"
+msgstr "полузгуснути"
+
+# >> @item Font style
+#: lib/KfiConstants.h:119
+#, kde-format
+msgid "Semi Expanded"
+msgstr "полурастегнути"
+
+# >> @item Font style
+#: lib/KfiConstants.h:120
+#, kde-format
+msgid "Expanded"
+msgstr "растегнути"
+
+# >> @item Font style
+#: lib/KfiConstants.h:121
+#, kde-format
+msgid "Extra Expanded"
+msgstr "екстрарастегнути"
+
+# >> @item Font style
+#: lib/KfiConstants.h:122
+#, kde-format
+msgid "Ultra Expanded"
+msgstr "ултрарастегнути"
+
+# >> @item Font type
+#: lib/KfiConstants.h:124
+#, kde-format
+msgid "Monospaced"
+msgstr "једноширински"
+
+# >> @item Font type
+#: lib/KfiConstants.h:125
+#, kde-format
+msgid "Charcell"
+msgstr "једноћелијски"
+
+# >> @item Font type
+#: lib/KfiConstants.h:126
+#, kde-format
+msgid "Proportional"
+msgstr "пропорционални"
+
+# >> @item Unicode character category
+#: viewpart/CharTip.cpp:63
+#, kde-format
+msgid "Other, Control"
+msgstr "остали, контрола"
+
+# >> @item Unicode character category
+#: viewpart/CharTip.cpp:65
+#, kde-format
+msgid "Other, Format"
+msgstr "остали, формат"
+
+# >> @item Unicode character category
+#: viewpart/CharTip.cpp:67
+#, kde-format
+msgid "Other, Not Assigned"
+msgstr "остали, недодијељен"
+
+# >> @item Unicode character category
+#: viewpart/CharTip.cpp:69
+#, kde-format
+msgid "Other, Private Use"
+msgstr "остали, приватне потребе"
+
+# >> @item Unicode character category
+#: viewpart/CharTip.cpp:71
+#, kde-format
+msgid "Other, Surrogate"
+msgstr "остали, сурогат"
+
+# >> @item Unicode character category
+#: viewpart/CharTip.cpp:73
+#, kde-format
+msgid "Letter, Lowercase"
+msgstr "слово, мало"
+
+# >> @item Unicode character category
+#: viewpart/CharTip.cpp:75
+#, kde-format
+msgid "Letter, Modifier"
+msgstr "слово, модификатор"
+
+# >> @item Unicode character category
+#: viewpart/CharTip.cpp:77
+#, kde-format
+msgid "Letter, Other"
+msgstr "слово, остала"
+
+# >> @item Unicode character category
+#: viewpart/CharTip.cpp:79
+#, kde-format
+msgid "Letter, Titlecase"
+msgstr "слово, насловно"
+
+# >> @item Unicode character category
+#: viewpart/CharTip.cpp:81
+#, kde-format
+msgid "Letter, Uppercase"
+msgstr "слово, велико"
+
+# >> @item Unicode character category
+#: viewpart/CharTip.cpp:83
+#, kde-format
+msgid "Mark, Spacing Combining"
+msgstr "ознака, комбинујући размичући"
+
+# >> @item Unicode character category
+#: viewpart/CharTip.cpp:85
+#, kde-format
+msgid "Mark, Enclosing"
+msgstr "ознака, обухватна"
+
+# >> @item Unicode character category
+#: viewpart/CharTip.cpp:87
+#, kde-format
+msgid "Mark, Non-Spacing"
+msgstr "ознака, неразмичућа"
+
+#: viewpart/CharTip.cpp:89
+#, kde-format
+msgid "Number, Decimal Digit"
+msgstr "број, декадна цифра"
+
+#: viewpart/CharTip.cpp:91
+#, kde-format
+msgid "Number, Letter"
+msgstr "број, слово"
+
+#: viewpart/CharTip.cpp:93
+#, kde-format
+msgid "Number, Other"
+msgstr "број, остали"
+
+#: viewpart/CharTip.cpp:95
+#, kde-format
+msgid "Punctuation, Connector"
+msgstr "интерпункција, повезивач"
+
+#: viewpart/CharTip.cpp:97
+#, kde-format
+msgid "Punctuation, Dash"
+msgstr "интерпункција, црта"
+
+#: viewpart/CharTip.cpp:99
+#, kde-format
+msgid "Punctuation, Close"
+msgstr "интерпункција, затворена"
+
+#: viewpart/CharTip.cpp:101
+#, kde-format
+msgid "Punctuation, Final Quote"
+msgstr "интерпункција, задњи наводник"
+
+#: viewpart/CharTip.cpp:103
+#, kde-format
+msgid "Punctuation, Initial Quote"
+msgstr "интерпункција, предњи наводник"
+
+#: viewpart/CharTip.cpp:105
+#, kde-format
+msgid "Punctuation, Other"
+msgstr "интерпункција, остала"
+
+#: viewpart/CharTip.cpp:107
+#, kde-format
+msgid "Punctuation, Open"
+msgstr "интерпункција, отворена"
+
+#: viewpart/CharTip.cpp:109
+#, kde-format
+msgid "Symbol, Currency"
+msgstr "симбол, валута"
+
+#: viewpart/CharTip.cpp:111
+#, kde-format
+msgid "Symbol, Modifier"
+msgstr "симбол, модификатор"
+
+#: viewpart/CharTip.cpp:113
+#, kde-format
+msgid "Symbol, Math"
+msgstr "симбол, математика"
+
+#: viewpart/CharTip.cpp:115
+#, kde-format
+msgid "Symbol, Other"
+msgstr "симбол, остали"
+
+#: viewpart/CharTip.cpp:117
+#, kde-format
+msgid "Separator, Line"
+msgstr "раздвајач, ред"
+
+#: viewpart/CharTip.cpp:119
+#, kde-format
+msgid "Separator, Paragraph"
+msgstr "раздвајач, пасус"
+
+#: viewpart/CharTip.cpp:121
+#, kde-format
+msgid "Separator, Space"
+msgstr "раздвајач, размак"
+
+# >> @item:intable Extended font data
+#: viewpart/CharTip.cpp:172
+#, kde-format
+msgid "Category"
+msgstr "категорија"
+
+# >> @item:intable Extended font data
+#: viewpart/CharTip.cpp:174
+#, kde-format
+msgid "UCS-4"
+msgstr "УЦС‑4"
+
+# >> @item:intable Extended font data
+#: viewpart/CharTip.cpp:178
+#, kde-format
+msgid "UTF-16"
+msgstr "УТФ‑16"
+
+# >> @item:intable Extended font data
+#: viewpart/CharTip.cpp:189
+#, kde-format
+msgid "UTF-8"
+msgstr "УТФ‑8"
+
+# >> @item:intable Extended font data
+#: viewpart/CharTip.cpp:206
+#, kde-format
+msgid "XML Decimal Entity"
+msgstr "декадни ИксМЛ ентитет"
+
+#: viewpart/FontViewPart.cpp:113
+#, kde-format
+msgid "FontViewPart"
+msgstr "Приказивач фонтова део"
+
+#: viewpart/FontViewPart.cpp:118
+#, kde-format
+msgid "Show Face:"
+msgstr "Прикажи лице:"
+
+#: viewpart/FontViewPart.cpp:121
+#, kde-format
+msgid "Install..."
+msgstr "Инсталирај..."
+
+#: viewpart/FontViewPart.cpp:144
+#, kde-format
+msgid "Change Text..."
+msgstr "Промијени текст..."
+
+#: viewpart/FontViewPart.cpp:401
+#, kde-format
+msgid "Could not read font."
+msgstr "Не могу да прочитам фонт."
+
+#: viewpart/FontViewPart.cpp:451
+#, kde-format
+msgid "Preview String"
+msgstr "Примјер текста"
+
+#: viewpart/FontViewPart.cpp:452
+#, kde-format
+msgid "Please enter new string:"
+msgstr "Унесите нови текст:"
+
+#: viewpart/FontViewPart.cpp:550
+#, kde-format
+msgid "<p>No information</p>"
+msgstr "<p>Без података</p>"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: viewpart/kfontviewpart.rc:4
+#, kde-format
+msgid "&Main Toolbar"
+msgstr "Главна трака"
+
+#: viewpart/PreviewSelectAction.cpp:32
+#, kde-format
+msgid "Preview Type"
+msgstr "Тип прегледа"
+
+# >> @item:inlistbox Font preview
+#: viewpart/PreviewSelectAction.cpp:50
+#, kde-format
+msgid "Standard Preview"
+msgstr "стандардни преглед"
+
+# >> @item:inlistbox Font preview
+#: viewpart/PreviewSelectAction.cpp:51
+#, kde-format
+msgid "All Characters"
+msgstr "сви знакови"
+
+#: viewpart/PreviewSelectAction.cpp:60
+#, kde-format
+msgid "Unicode Block: %1"
+msgstr "уникодски блок: %1"
+
+#: viewpart/PreviewSelectAction.cpp:63
+#, kde-format
+msgid "Unicode Script: %1"
+msgstr "уникодско писмо: %1"
+
+#: viewpart/UnicodeBlocks.h:21
+#, kde-format
+msgid "Basic Latin"
+msgstr "основни латинички"
+
+#: viewpart/UnicodeBlocks.h:22
+#, kde-format
+msgid "Latin-1 Supplement"
+msgstr "латинички‑1 допунски"
+
+#: viewpart/UnicodeBlocks.h:23
+#, kde-format
+msgid "Latin Extended-A"
+msgstr "латинички проширени‑А"
+
+#: viewpart/UnicodeBlocks.h:24
+#, kde-format
+msgid "Latin Extended-B"
+msgstr "латинички проширени‑Б"
+
+#: viewpart/UnicodeBlocks.h:25
+#, kde-format
+msgid "IPA Extensions"
+msgstr "ИПА проширења"
+
+#: viewpart/UnicodeBlocks.h:26
+#, kde-format
+msgid "Spacing Modifier Letters"
+msgstr "слова модификатори размака"
+
+#: viewpart/UnicodeBlocks.h:27
+#, kde-format
+msgid "Combining Diacritical Marks"
+msgstr "комбинујући дијакритици"
+
+#: viewpart/UnicodeBlocks.h:28
+#, kde-format
+msgid "Greek and Coptic"
+msgstr "грчки и коптички"
+
+#: viewpart/UnicodeBlocks.h:29 viewpart/UnicodeScripts.h:28
+#, kde-format
+msgid "Cyrillic"
+msgstr "ћирилички|/|$[својства писмо 'ћирилица']"
+
+#: viewpart/UnicodeBlocks.h:30
+#, kde-format
+msgid "Cyrillic Supplement"
+msgstr "ћирилички допунски"
+
+#: viewpart/UnicodeBlocks.h:31 viewpart/UnicodeScripts.h:15
+#, kde-format
+msgid "Armenian"
+msgstr "јерменски|/|$[својства писмо 'јерменско']"
+
+#: viewpart/UnicodeBlocks.h:32 viewpart/UnicodeScripts.h:41
+#, kde-format
+msgid "Hebrew"
+msgstr "хебрејски|/|$[својства писмо 'хебрејско']"
+
+#: viewpart/UnicodeBlocks.h:33 viewpart/UnicodeScripts.h:14
+#, kde-format
+msgid "Arabic"
+msgstr "арапски|/|$[својства писмо 'арапско']"
+
+#: viewpart/UnicodeBlocks.h:34 viewpart/UnicodeScripts.h:68
+#, kde-format
+msgid "Syriac"
+msgstr "сиријски|/|$[својства писмо 'сиријско']"
+
+#: viewpart/UnicodeBlocks.h:35
+#, kde-format
+msgid "Arabic Supplement"
+msgstr "арапски допунски"
+
+#: viewpart/UnicodeBlocks.h:36 viewpart/UnicodeScripts.h:74
+#, kde-format
+msgid "Thaana"
+msgstr "тански|/|$[својства писмо 'танско']"
+
+#: viewpart/UnicodeBlocks.h:37
+#, kde-format
+msgid "NKo"
+msgstr "НКо"
+
+#: viewpart/UnicodeBlocks.h:38 viewpart/UnicodeScripts.h:30
+#, kde-format
+msgid "Devanagari"
+msgstr "деванагарски|/|$[својства писмо 'деванагарско']"
+
+#: viewpart/UnicodeBlocks.h:39 viewpart/UnicodeScripts.h:17
+#, kde-format
+msgid "Bengali"
+msgstr "бенгалски|/|$[својства писмо 'бенгалско']"
+
+#: viewpart/UnicodeBlocks.h:40 viewpart/UnicodeScripts.h:37
+#, kde-format
+msgid "Gurmukhi"
+msgstr "гурмуки|/|$[својства писмо 'гурмуки']"
+
+#: viewpart/UnicodeBlocks.h:41 viewpart/UnicodeScripts.h:36
+#, kde-format
+msgid "Gujarati"
+msgstr "гуђаратски|/|$[својства писмо 'гуђаратско']"
+
+#: viewpart/UnicodeBlocks.h:42 viewpart/UnicodeScripts.h:60
+#, kde-format
+msgid "Oriya"
+msgstr "оријски|/|$[својства писмо 'оријско']"
+
+#: viewpart/UnicodeBlocks.h:43 viewpart/UnicodeScripts.h:72
+#, kde-format
+msgid "Tamil"
+msgstr "тамилски|/|$[својства писмо 'тамилско']"
+
+#: viewpart/UnicodeBlocks.h:44 viewpart/UnicodeScripts.h:73
+#, kde-format
+msgid "Telugu"
+msgstr "телугу|/|$[својства писмо 'телугу']"
+
+#: viewpart/UnicodeBlocks.h:45 viewpart/UnicodeScripts.h:44
+#, kde-format
+msgid "Kannada"
+msgstr "канадаски|/|$[својства писмо 'канадаско']"
+
+#: viewpart/UnicodeBlocks.h:46 viewpart/UnicodeScripts.h:52
+#, kde-format
+msgid "Malayalam"
+msgstr "малајаламски|/|$[својства писмо 'малајаламско']"
+
+#: viewpart/UnicodeBlocks.h:47 viewpart/UnicodeScripts.h:66
+#, kde-format
+msgid "Sinhala"
+msgstr "синхалески|/|$[својства писмо 'синхалеско']"
+
+#: viewpart/UnicodeBlocks.h:48 viewpart/UnicodeScripts.h:75
+#, kde-format
+msgid "Thai"
+msgstr "тајландски|/|$[својства писмо 'тајландско']"
+
+#: viewpart/UnicodeBlocks.h:49 viewpart/UnicodeScripts.h:48
+#, kde-format
+msgid "Lao"
+msgstr "лаоћански|/|$[својства писмо 'лаоћанско']"
+
+#: viewpart/UnicodeBlocks.h:50 viewpart/UnicodeScripts.h:76
+#, kde-format
+msgid "Tibetan"
+msgstr "тибетански|/|$[својства писмо 'тибетанско']"
+
+#: viewpart/UnicodeBlocks.h:51 viewpart/UnicodeScripts.h:54
+#, kde-format
+msgid "Myanmar"
+msgstr "мјанмарски|/|$[својства писмо 'мјанмарско']"
+
+#: viewpart/UnicodeBlocks.h:52 viewpart/UnicodeScripts.h:32
+#, kde-format
+msgid "Georgian"
+msgstr "грузијски|/|$[својства писмо 'грузијско']"
+
+#: viewpart/UnicodeBlocks.h:53
+#, kde-format
+msgid "Hangul Jamo"
+msgstr "хангул ђамо"
+
+#: viewpart/UnicodeBlocks.h:54 viewpart/UnicodeScripts.h:31
+#, kde-format
+msgid "Ethiopic"
+msgstr "етиопски|/|$[својства писмо 'етиопско']"
+
+#: viewpart/UnicodeBlocks.h:55
+#, kde-format
+msgid "Ethiopic Supplement"
+msgstr "етиопски допунски"
+
+#: viewpart/UnicodeBlocks.h:56 viewpart/UnicodeScripts.h:23
+#, kde-format
+msgid "Cherokee"
+msgstr "чироки|/|$[својства писмо 'чироки']"
+
+#: viewpart/UnicodeBlocks.h:57
+#, kde-format
+msgid "Unified Canadian Aboriginal Syllabics"
+msgstr "сједињени канадскоабориџински слоговни"
+
+#: viewpart/UnicodeBlocks.h:58 viewpart/UnicodeScripts.h:57
+#, kde-format
+msgid "Ogham"
+msgstr "огамски|/|$[својства писмо 'огамско']"
+
+#: viewpart/UnicodeBlocks.h:59 viewpart/UnicodeScripts.h:64
+#, kde-format
+msgid "Runic"
+msgstr "рунски|/|$[својства писмо 'рунско']"
+
+#: viewpart/UnicodeBlocks.h:60 viewpart/UnicodeScripts.h:69
+#, kde-format
+msgid "Tagalog"
+msgstr "тагалог|/|$[својства писмо 'тагалог']"
+
+#: viewpart/UnicodeBlocks.h:61 viewpart/UnicodeScripts.h:40
+#, kde-format
+msgid "Hanunoo"
+msgstr "ханану|/|$[својства писмо 'ханану']"
+
+#: viewpart/UnicodeBlocks.h:62 viewpart/UnicodeScripts.h:21
+#, kde-format
+msgid "Buhid"
+msgstr "бухидски|/|$[својства писмо 'бухидско']"
+
+#: viewpart/UnicodeBlocks.h:63 viewpart/UnicodeScripts.h:70
+#, kde-format
+msgid "Tagbanwa"
+msgstr "тагбанва|/|$[својства писмо 'тагбанва']"
+
+#: viewpart/UnicodeBlocks.h:64 viewpart/UnicodeScripts.h:47
+#, kde-format
+msgid "Khmer"
+msgstr "кмерски|/|$[својства писмо 'кмерско']"
+
+#: viewpart/UnicodeBlocks.h:65 viewpart/UnicodeScripts.h:53
+#, kde-format
+msgid "Mongolian"
+msgstr "монголски|/|$[својства писмо 'монголско']"
+
+#: viewpart/UnicodeBlocks.h:66 viewpart/UnicodeScripts.h:50
+#, kde-format
+msgid "Limbu"
+msgstr "лимбу|/|$[својства писмо 'лимбу']"
+
+#: viewpart/UnicodeBlocks.h:67 viewpart/UnicodeScripts.h:71
+#, kde-format
+msgid "Tai Le"
+msgstr "тај‑ли|/|$[својства писмо 'тај‑ли']"
+
+#: viewpart/UnicodeBlocks.h:68 viewpart/UnicodeScripts.h:55
+#, kde-format
+msgid "New Tai Lue"
+msgstr "нови тај‑ли|/|$[својства писмо 'ново тај‑ли']"
+
+#: viewpart/UnicodeBlocks.h:69
+#, kde-format
+msgid "Khmer Symbols"
+msgstr "кмерски симболи"
+
+#: viewpart/UnicodeBlocks.h:70 viewpart/UnicodeScripts.h:20
+#, kde-format
+msgid "Buginese"
+msgstr "бугинески|/|$[својства писмо 'бугинеско']"
+
+#: viewpart/UnicodeBlocks.h:71 viewpart/UnicodeScripts.h:16
+#, kde-format
+msgid "Balinese"
+msgstr "балијски|/|$[својства писмо 'балијско']"
+
+#: viewpart/UnicodeBlocks.h:72
+#, kde-format
+msgid "Phonetic Extensions"
+msgstr "фонетска проширења"
+
+#: viewpart/UnicodeBlocks.h:73
+#, kde-format
+msgid "Phonetic Extensions Supplement"
+msgstr "фонетска проширења допунска"
+
+#: viewpart/UnicodeBlocks.h:74
+#, kde-format
+msgid "Combining Diacritical Marks Supplement"
+msgstr "комбинујући дијакритици допунски"
+
+#: viewpart/UnicodeBlocks.h:75
+#, kde-format
+msgid "Latin Extended Additional"
+msgstr "латинички проширени додатни"
+
+#: viewpart/UnicodeBlocks.h:76
+#, kde-format
+msgid "Greek Extended"
+msgstr "грчки проширени"
+
+#: viewpart/UnicodeBlocks.h:77
+#, kde-format
+msgid "General Punctuation"
+msgstr "општа интерпункција"
+
+#: viewpart/UnicodeBlocks.h:78
+#, kde-format
+msgid "Superscripts and Subscripts"
+msgstr "изложиоци и индекси"
+
+#: viewpart/UnicodeBlocks.h:79
+#, kde-format
+msgid "Currency Symbols"
+msgstr "симболи валута"
+
+#: viewpart/UnicodeBlocks.h:80
+#, kde-format
+msgid "Combining Diacritical Marks for Symbols"
+msgstr "комбинујући дијакритици за симболе"
+
+#: viewpart/UnicodeBlocks.h:81
+#, kde-format
+msgid "Letter-Like Symbols"
+msgstr "словолики симболи"
+
+#: viewpart/UnicodeBlocks.h:82
+#, kde-format
+msgid "Number Forms"
+msgstr "облици бројева"
+
+#: viewpart/UnicodeBlocks.h:83
+#, kde-format
+msgid "Arrows"
+msgstr "стрелице"
+
+#: viewpart/UnicodeBlocks.h:84
+#, kde-format
+msgid "Mathematical Operators"
+msgstr "математички оператори"
+
+#: viewpart/UnicodeBlocks.h:85
+#, kde-format
+msgid "Miscellaneous Technical"
+msgstr "разни технички"
+
+#: viewpart/UnicodeBlocks.h:86
+#, kde-format
+msgid "Control Pictures"
+msgstr "контролне слике"
+
+#: viewpart/UnicodeBlocks.h:87
+#, kde-format
+msgid "Optical Character Recognition"
+msgstr "оптичко препознавање знакова"
+
+#: viewpart/UnicodeBlocks.h:88
+#, kde-format
+msgid "Enclosed Alphanumerics"
+msgstr "заграђени алфанумерици"
+
+#: viewpart/UnicodeBlocks.h:89
+#, kde-format
+msgid "Box Drawing"
+msgstr "уоквирени цртеж"
+
+#: viewpart/UnicodeBlocks.h:90
+#, kde-format
+msgid "Block Elements"
+msgstr "блоковски елементи"
+
+#: viewpart/UnicodeBlocks.h:91
+#, kde-format
+msgid "Geometric Shapes"
+msgstr "геометријски облици"
+
+#: viewpart/UnicodeBlocks.h:92
+#, kde-format
+msgid "Miscellaneous Symbols"
+msgstr "разни симболи"
+
+#: viewpart/UnicodeBlocks.h:93
+#, kde-format
+msgid "Dingbats"
+msgstr "дингбатови"
+
+#: viewpart/UnicodeBlocks.h:94
+#, kde-format
+msgid "Miscellaneous Mathematical Symbols-A"
+msgstr "разни математички симболи‑А"
+
+#: viewpart/UnicodeBlocks.h:95
+#, kde-format
+msgid "Supplemental Arrows-A"
+msgstr "допунске стрелице‑А"
+
+#: viewpart/UnicodeBlocks.h:96
+#, kde-format
+msgid "Braille Patterns"
+msgstr "Брајеви обрасци"
+
+#: viewpart/UnicodeBlocks.h:97
+#, kde-format
+msgid "Supplemental Arrows-B"
+msgstr "допунске стрелице‑Б"
+
+#: viewpart/UnicodeBlocks.h:98
+#, kde-format
+msgid "Miscellaneous Mathematical Symbols-B"
+msgstr "разни математички симболи‑Б"
+
+#: viewpart/UnicodeBlocks.h:99
+#, kde-format
+msgid "Supplemental Mathematical Operators"
+msgstr "допунски математички оператори"
+
+#: viewpart/UnicodeBlocks.h:100
+#, kde-format
+msgid "Miscellaneous Symbols and Arrows"
+msgstr "разни симболи и стрелице"
+
+#: viewpart/UnicodeBlocks.h:101 viewpart/UnicodeScripts.h:33
+#, kde-format
+msgid "Glagolitic"
+msgstr "глагољски|/|$[својства писмо 'глагољица']"
+
+#: viewpart/UnicodeBlocks.h:102
+#, kde-format
+msgid "Latin Extended-C"
+msgstr "латинички проширени‑Ц"
+
+#: viewpart/UnicodeBlocks.h:103 viewpart/UnicodeScripts.h:25
+#, kde-format
+msgid "Coptic"
+msgstr "коптски|/|$[својства писмо 'коптско']"
+
+#: viewpart/UnicodeBlocks.h:104
+#, kde-format
+msgid "Georgian Supplement"
+msgstr "грузијски допунски"
+
+#: viewpart/UnicodeBlocks.h:105 viewpart/UnicodeScripts.h:77
+#, kde-format
+msgid "Tifinagh"
+msgstr "тифинаг|/|$[својства писмо 'тифинаг']"
+
+#: viewpart/UnicodeBlocks.h:106
+#, kde-format
+msgid "Ethiopic Extended"
+msgstr "етиопски проширени"
+
+#: viewpart/UnicodeBlocks.h:107
+#, kde-format
+msgid "Supplemental Punctuation"
+msgstr "допунска интерпункција"
+
+#: viewpart/UnicodeBlocks.h:108
+#, kde-format
+msgid "CJK Radicals Supplement"
+msgstr "ЦЈК радикали допунски"
+
+#: viewpart/UnicodeBlocks.h:109
+#, kde-format
+msgid "Kangxi Radicals"
+msgstr "канђи радикали"
+
+#: viewpart/UnicodeBlocks.h:110
+#, kde-format
+msgid "Ideographic Description Characters"
+msgstr "идеографски описни знакови"
+
+#: viewpart/UnicodeBlocks.h:111
+#, kde-format
+msgid "CJK Symbols and Punctuation"
+msgstr "ЦЈК симболи и интерпункција"
+
+#: viewpart/UnicodeBlocks.h:112 viewpart/UnicodeScripts.h:42
+#, kde-format
+msgid "Hiragana"
+msgstr "хирагана|/|$[својства писмо 'хирагана']"
+
+#: viewpart/UnicodeBlocks.h:113 viewpart/UnicodeScripts.h:45
+#, kde-format
+msgid "Katakana"
+msgstr "катакана|/|$[својства писмо 'катакана']"
+
+#: viewpart/UnicodeBlocks.h:114 viewpart/UnicodeScripts.h:18
+#, kde-format
+msgid "Bopomofo"
+msgstr "бопомофо|/|$[својства писмо 'бопомофо']"
+
+#: viewpart/UnicodeBlocks.h:115
+#, kde-format
+msgid "Hangul Compatibility Jamo"
+msgstr "хангулски сагласни ђамо"
+
+#: viewpart/UnicodeBlocks.h:116
+#, kde-format
+msgid "Kanbun"
+msgstr "канбунски"
+
+#: viewpart/UnicodeBlocks.h:117
+#, kde-format
+msgid "Bopomofo Extended"
+msgstr "бопомофо проширени"
+
+#: viewpart/UnicodeBlocks.h:118
+#, kde-format
+msgid "CJK Strokes"
+msgstr "ЦЈК потези"
+
+#: viewpart/UnicodeBlocks.h:119
+#, kde-format
+msgid "Katakana Phonetic Extensions"
+msgstr "катакана фонетска проширења"
+
+#: viewpart/UnicodeBlocks.h:120
+#, kde-format
+msgid "Enclosed CJK Letters and Months"
+msgstr "заграђена ЦЈК слова и мјесеци"
+
+#: viewpart/UnicodeBlocks.h:121
+#, kde-format
+msgid "CJK Compatibility"
+msgstr "ЦЈК сагласност"
+
+#: viewpart/UnicodeBlocks.h:122
+#, kde-format
+msgid "CJK Unified Ideographs Extension A"
+msgstr "ЦЈК сједињени идеографи проширење А"
+
+#: viewpart/UnicodeBlocks.h:123
+#, kde-format
+msgid "Yijing Hexagram Symbols"
+msgstr "јиђинг хексаграмски симболи"
+
+#: viewpart/UnicodeBlocks.h:124
+#, kde-format
+msgid "CJK Unified Ideographs"
+msgstr "ЦЈК сједињени идеографи"
+
+#: viewpart/UnicodeBlocks.h:125
+#, kde-format
+msgid "Yi Syllables"
+msgstr "ји слогови"
+
+#: viewpart/UnicodeBlocks.h:126
+#, kde-format
+msgid "Yi Radicals"
+msgstr "ји радикали"
+
+#: viewpart/UnicodeBlocks.h:127
+#, kde-format
+msgid "Modifier Tone Letters"
+msgstr "модификатори тона"
+
+#: viewpart/UnicodeBlocks.h:128
+#, kde-format
+msgid "Latin Extended-D"
+msgstr "латинички проширени‑Д"
+
+#: viewpart/UnicodeBlocks.h:129 viewpart/UnicodeScripts.h:67
+#, kde-format
+msgid "Syloti Nagri"
+msgstr "силоти нагри|/|$[својства писмо 'силоти нагри']"
+
+#: viewpart/UnicodeBlocks.h:130
+#, kde-format
+msgid "Phags-pa"
+msgstr "фагс‑па"
+
+#: viewpart/UnicodeBlocks.h:131
+#, kde-format
+msgid "Hangul Syllables"
+msgstr "хангул слогови"
+
+#: viewpart/UnicodeBlocks.h:132
+#, kde-format
+msgid "High Surrogates"
+msgstr "високи сурогати"
+
+#: viewpart/UnicodeBlocks.h:133
+#, kde-format
+msgid "High Private Use Surrogates"
+msgstr "високи сурогати за приватне потребе"
+
+#: viewpart/UnicodeBlocks.h:134
+#, kde-format
+msgid "Low Surrogates"
+msgstr "ниски сурогати"
+
+#: viewpart/UnicodeBlocks.h:135
+#, kde-format
+msgid "Private Use Area"
+msgstr "област за приватне потребе"
+
+#: viewpart/UnicodeBlocks.h:136
+#, kde-format
+msgid "CJK Compatibility Ideographs"
+msgstr "ЦЈК сагласносни идеографи"
+
+#: viewpart/UnicodeBlocks.h:137
+#, kde-format
+msgid "Alphabetic Presentation Forms"
+msgstr "алфабетски представни облици"
+
+#: viewpart/UnicodeBlocks.h:138
+#, kde-format
+msgid "Arabic Presentation Forms-A"
+msgstr "арапски представни облици‑А"
+
+#: viewpart/UnicodeBlocks.h:139
+#, kde-format
+msgid "Variation Selectors"
+msgstr "бирачи варијација"
+
+#: viewpart/UnicodeBlocks.h:140
+#, kde-format
+msgid "Vertical Forms"
+msgstr "усправни облици"
+
+#: viewpart/UnicodeBlocks.h:141
+#, kde-format
+msgid "Combining Half Marks"
+msgstr "комбинујуће полуознаке"
+
+#: viewpart/UnicodeBlocks.h:142
+#, kde-format
+msgid "CJK Compatibility Forms"
+msgstr "ЦЈК сагласносни облици"
+
+#: viewpart/UnicodeBlocks.h:143
+#, kde-format
+msgid "Small Form Variants"
+msgstr "мале варијације облика"
+
+#: viewpart/UnicodeBlocks.h:144
+#, kde-format
+msgid "Arabic Presentation Forms-B"
+msgstr "арапски представни облици‑Б"
+
+#: viewpart/UnicodeBlocks.h:145
+#, kde-format
+msgid "Half-Width and Full-Width Forms"
+msgstr "полушироки и пуношироки облици"
+
+#: viewpart/UnicodeBlocks.h:146
+#, kde-format
+msgid "Specials"
+msgstr "посебни"
+
+#: viewpart/UnicodeBlocks.h:147
+#, kde-format
+msgid "Linear B Syllabary"
+msgstr "линеарни‑Б слоговар"
+
+#: viewpart/UnicodeBlocks.h:148
+#, kde-format
+msgid "Linear B Ideograms"
+msgstr "линеарни‑Б идеограми"
+
+#: viewpart/UnicodeBlocks.h:149
+#, kde-format
+msgid "Aegean Numbers"
+msgstr "егејски бројеви"
+
+#: viewpart/UnicodeBlocks.h:150
+#, kde-format
+msgid "Ancient Greek Numbers"
+msgstr "старогрчки бројеви"
+
+# каже да је ово ‘етрурски’
+#: viewpart/UnicodeBlocks.h:151 viewpart/UnicodeScripts.h:58
+#, kde-format
+msgid "Old Italic"
+msgstr "етрурски|/|$[својства писмо 'етрурско']"
+
+#: viewpart/UnicodeBlocks.h:152 viewpart/UnicodeScripts.h:34
+#, kde-format
+msgid "Gothic"
+msgstr "готски|/|$[својства писмо 'готско']"
+
+#: viewpart/UnicodeBlocks.h:153 viewpart/UnicodeScripts.h:78
+#, kde-format
+msgid "Ugaritic"
+msgstr "угаритски|/|$[својства писмо 'угаритско']"
+
+#: viewpart/UnicodeBlocks.h:154 viewpart/UnicodeScripts.h:59
+#, kde-format
+msgid "Old Persian"
+msgstr "староперсијски|/|$[својства писмо 'староперсијско']"
+
+#: viewpart/UnicodeBlocks.h:155 viewpart/UnicodeScripts.h:29
+#, kde-format
+msgid "Deseret"
+msgstr "дезерет|/|$[својства писмо 'дезерет']"
+
+# ...commissioned by G.B.Shaw -> Џ.Б.Шо -> ш*о*вијански
+#: viewpart/UnicodeBlocks.h:156 viewpart/UnicodeScripts.h:65
+#, kde-format
+msgid "Shavian"
+msgstr "шовијански|/|$[својства писмо 'шовијанско']"
+
+#: viewpart/UnicodeBlocks.h:157 viewpart/UnicodeScripts.h:61
+#, kde-format
+msgid "Osmanya"
+msgstr "османски|/|$[својства писмо 'османско']"
+
+#: viewpart/UnicodeBlocks.h:158
+#, kde-format
+msgid "Cypriot Syllabary"
+msgstr "кипарски слоговар"
+
+#: viewpart/UnicodeBlocks.h:159 viewpart/UnicodeScripts.h:63
+#, kde-format
+msgid "Phoenician"
+msgstr "феничански|/|$[својства писмо 'феничанско']"
+
+#: viewpart/UnicodeBlocks.h:160 viewpart/UnicodeScripts.h:46
+#, kde-format
+msgid "Kharoshthi"
+msgstr "карошти|/|$[својства писмо 'карошти']"
+
+#: viewpart/UnicodeBlocks.h:161 viewpart/UnicodeScripts.h:26
+#, kde-format
+msgid "Cuneiform"
+msgstr "клинасти|/|$[својства писмо 'клинасто']"
+
+#: viewpart/UnicodeBlocks.h:162
+#, kde-format
+msgid "Cuneiform Numbers and Punctuation"
+msgstr "клинасти бројеви и интерпункција"
+
+#: viewpart/UnicodeBlocks.h:163
+#, kde-format
+msgid "Byzantine Musical Symbols"
+msgstr "византијски музички симболи"
+
+#: viewpart/UnicodeBlocks.h:164
+#, kde-format
+msgid "Musical Symbols"
+msgstr "музички симболи"
+
+#: viewpart/UnicodeBlocks.h:165
+#, kde-format
+msgid "Ancient Greek Musical Notation"
+msgstr "старогрчки музички запис"
+
+#: viewpart/UnicodeBlocks.h:166
+#, kde-format
+msgid "Tai Xuan Jing Symbols"
+msgstr "таи‑ксуан‑ђинг симболи"
+
+#: viewpart/UnicodeBlocks.h:167
+#, kde-format
+msgid "Counting Rod Numerals"
+msgstr "бројаничке цифре"
+
+#: viewpart/UnicodeBlocks.h:168
+#, kde-format
+msgid "Mathematical Alphanumeric Symbols"
+msgstr "математички алфанумерички симболи"
+
+#: viewpart/UnicodeBlocks.h:169
+#, kde-format
+msgid "CJK Unified Ideographs Extension B"
+msgstr "ЦЈК сједињени идеографи проширење Б"
+
+#: viewpart/UnicodeBlocks.h:170
+#, kde-format
+msgid "CJK Compatibility Ideographs Supplement"
+msgstr "ЦЈК сагласносни идеографи допунски"
+
+#: viewpart/UnicodeBlocks.h:171
+#, kde-format
+msgid "Tags"
+msgstr "етикете"
+
+#: viewpart/UnicodeBlocks.h:172
+#, kde-format
+msgid "Variation Selectors Supplement"
+msgstr "бирачи варијација допунски"
+
+#: viewpart/UnicodeBlocks.h:173
+#, kde-format
+msgid "Supplementary Private Use Area-A"
+msgstr "допунска област за приватне потребе А"
+
+#: viewpart/UnicodeBlocks.h:174
+#, kde-format
+msgid "Supplementary Private Use Area-B"
+msgstr "допунска област за приватне потребе Б"
+
+#: viewpart/UnicodeScripts.h:19
+#, kde-format
+msgid "Braille"
+msgstr "Брајеви"
+
+#: viewpart/UnicodeScripts.h:22
+#, kde-format
+msgid "Canadian Aboriginal"
+msgstr "канадскоабориџински"
+
+#: viewpart/UnicodeScripts.h:24
+#, kde-format
+msgid "Common"
+msgstr "заједнички"
+
+#: viewpart/UnicodeScripts.h:27
+#, kde-format
+msgid "Cypriot"
+msgstr "кипарски"
+
+#: viewpart/UnicodeScripts.h:35
+#, kde-format
+msgid "Greek"
+msgstr "грчки"
+
+#: viewpart/UnicodeScripts.h:38
+#, kde-format
+msgid "Han"
+msgstr "хан"
+
+#: viewpart/UnicodeScripts.h:39
+#, kde-format
+msgid "Hangul"
+msgstr "хангулски"
+
+#: viewpart/UnicodeScripts.h:43
+#, kde-format
+msgid "Inherited"
+msgstr "наслијеђени"
+
+#: viewpart/UnicodeScripts.h:49
+#, kde-format
+msgid "Latin"
+msgstr "латинички"
+
+#: viewpart/UnicodeScripts.h:51
+#, kde-format
+msgid "Linear B"
+msgstr "линеарни Б"
+
+#: viewpart/UnicodeScripts.h:56
+#, kde-format
+msgid "Nko"
+msgstr "Нко"
+
+#: viewpart/UnicodeScripts.h:62
+#, kde-format
+msgid "Phags Pa"
+msgstr "фагс‑па"
+
+#: viewpart/UnicodeScripts.h:79
+#, kde-format
+msgid "Yi"
+msgstr "ји"

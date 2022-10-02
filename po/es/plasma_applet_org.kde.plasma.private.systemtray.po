@@ -1,0 +1,388 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Eloy Cuadra <ecuadra@eloihr.net>, 2013, 2014, 2015, 2016, 2017, 2018, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-18 00:47+0000\n"
+"PO-Revision-Date: 2022-07-25 03:47+0200\n"
+"Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
+"Language-Team: Spanish <kde-l10n-es@kde.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.04.3\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "General"
+
+#: package/contents/config/config.qml:18
+#, kde-format
+msgid "Entries"
+msgstr "Entradas"
+
+#: package/contents/ui/ConfigEntries.qml:31
+#, kde-format
+msgid "Always show all entries"
+msgstr "Mostrar siempre todas las entradas"
+
+#: package/contents/ui/ConfigEntries.qml:37
+#, kde-format
+msgid "Application Status"
+msgstr "Estado de las aplicaciones"
+
+#: package/contents/ui/ConfigEntries.qml:39
+#, kde-format
+msgid "Communications"
+msgstr "Comunicaciones"
+
+#: package/contents/ui/ConfigEntries.qml:41
+#, kde-format
+msgid "System Services"
+msgstr "Servicios del sistema"
+
+#: package/contents/ui/ConfigEntries.qml:43
+#, kde-format
+msgid "Hardware Control"
+msgstr "Control del hardware"
+
+#: package/contents/ui/ConfigEntries.qml:46
+#, kde-format
+msgid "Miscellaneous"
+msgstr "Varios"
+
+#: package/contents/ui/ConfigEntries.qml:80
+#, kde-format
+msgctxt "Name of the system tray entry"
+msgid "Entry"
+msgstr "Entrada"
+
+#: package/contents/ui/ConfigEntries.qml:85
+#, kde-format
+msgid "Visibility"
+msgstr "Visibilidad"
+
+#: package/contents/ui/ConfigEntries.qml:91
+#, kde-format
+msgid "Keyboard Shortcut"
+msgstr "Acceso rápido de teclado"
+
+#: package/contents/ui/ConfigEntries.qml:222
+#, kde-format
+msgid "Shown when relevant"
+msgstr "Mostrar cuando sea importante"
+
+#: package/contents/ui/ConfigEntries.qml:223
+#, kde-format
+msgid "Always shown"
+msgstr "Mostrar siempre"
+
+#: package/contents/ui/ConfigEntries.qml:224
+#, kde-format
+msgid "Always hidden"
+msgstr "Ocultar siempre"
+
+#: package/contents/ui/ConfigEntries.qml:225
+#, kde-format
+msgid "Disabled"
+msgstr "Desactivado"
+
+#: package/contents/ui/ConfigGeneral.qml:23
+#, kde-format
+msgctxt "The arrangement of system tray icons in the Panel"
+msgid "Panel icon size:"
+msgstr "Tamaño de los iconos del panel:"
+
+#: package/contents/ui/ConfigGeneral.qml:25
+#, kde-format
+msgid "Small"
+msgstr "Pequeño"
+
+#: package/contents/ui/ConfigGeneral.qml:32
+#, kde-format
+msgid "Scale with Panel height"
+msgstr "Escalar a la altura del panel"
+
+#: package/contents/ui/ConfigGeneral.qml:33
+#, kde-format
+msgid "Scale with Panel width"
+msgstr "Escalar a la anchura del panel"
+
+#: package/contents/ui/ConfigGeneral.qml:39
+#, kde-format
+msgid "Automatically enabled when in Touch Mode"
+msgstr "Activado automáticamente en el modo táctil"
+
+#: package/contents/ui/ConfigGeneral.qml:48
+#, kde-format
+msgctxt "@label:listbox The spacing between system tray icons in the Panel"
+msgid "Panel icon spacing:"
+msgstr "Espacio entre los iconos del panel:"
+
+#: package/contents/ui/ConfigGeneral.qml:51
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Small"
+msgstr "Pequeño"
+
+#: package/contents/ui/ConfigGeneral.qml:55
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Normal"
+msgstr "Normal"
+
+#: package/contents/ui/ConfigGeneral.qml:59
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Large"
+msgstr "Grande"
+
+#: package/contents/ui/ConfigGeneral.qml:82
+#, kde-format
+msgctxt "@info:usagetip under a combobox when Touch Mode is on"
+msgid "Automatically set to Large when in Touch Mode"
+msgstr "Grande de forma automática para el modo táctil"
+
+#: package/contents/ui/ExpandedRepresentation.qml:64
+#, kde-format
+msgctxt "@action:button"
+msgid "Go Back"
+msgstr "Volver"
+
+#: package/contents/ui/ExpandedRepresentation.qml:77
+#, kde-format
+msgid "Status and Notifications"
+msgstr "Estado y notificaciones"
+
+#: package/contents/ui/ExpandedRepresentation.qml:93
+#, kde-format
+msgid "More actions"
+msgstr "Más acciones"
+
+#: package/contents/ui/ExpandedRepresentation.qml:182
+#, kde-format
+msgid "Keep Open"
+msgstr "Mantener abierto"
+
+#: package/contents/ui/ExpanderArrow.qml:22
+#, kde-format
+msgid "Expand System Tray"
+msgstr "Expandir la bandeja del sistema"
+
+#: package/contents/ui/ExpanderArrow.qml:23
+#, kde-format
+msgid "Show all the items in the system tray in a popup"
+msgstr ""
+"Mostrar todos los elementos de la bandeja del sistema en una ventana "
+"emergente"
+
+#: package/contents/ui/ExpanderArrow.qml:36
+#, kde-format
+msgid "Close popup"
+msgstr "Cerrar ventana emergente"
+
+#: package/contents/ui/ExpanderArrow.qml:36
+#, kde-format
+msgid "Show hidden icons"
+msgstr "Mostrar los iconos ocultos"
+
+#: systemtraymodel.cpp:123
+#, kde-format
+msgctxt ""
+"Suffix added to the applet name if the applet is autoloaded via DBus "
+"activation"
+msgid "%1 (Automatic load)"
+msgstr "%1 (carga automática)"
+
+#~ msgid "This layout may look odd with a short panel."
+#~ msgstr "Esta distribución puede verse mal en un panel corto."
+
+#~ msgid "This layout may look odd with a narrow panel."
+#~ msgstr "Esta distribución puede verse mal en un panel estrecho."
+
+#~ msgctxt "The arrangement of system tray icons in the Panel"
+#~ msgid "Panel icon arrangement:"
+#~ msgstr "Organización de iconos del panel:"
+
+#~ msgid "One row of small icons"
+#~ msgstr "Una fila de iconos pequeños"
+
+#~ msgid "One column of small icons"
+#~ msgstr "Una columna de iconos pequeños"
+
+#~ msgid "Two rows of small icons"
+#~ msgstr "Dos filas de iconos pequeños"
+
+#~ msgid "Two columns of small icons"
+#~ msgstr "Dos columnas de iconos pequeños"
+
+#~ msgid "One row"
+#~ msgstr "Una fila"
+
+#~ msgid "One column"
+#~ msgstr "Una columna"
+
+#~ msgid "Two rows"
+#~ msgstr "Dos filas"
+
+#~ msgid "Two columns"
+#~ msgstr "Dos columnas"
+
+#~ msgid "Very Small"
+#~ msgstr "Muy pequeño"
+
+#~ msgid "Medium"
+#~ msgstr "Mediano"
+
+#~ msgid "Huge"
+#~ msgstr "Muy grande"
+
+#~ msgid "Enormous"
+#~ msgstr "Enorme"
+
+#~ msgid "Auto"
+#~ msgstr "Automática"
+
+#~ msgid "Shown"
+#~ msgstr "Mostrada"
+
+#~ msgid "Hidden"
+#~ msgstr "Oculta"
+
+#~ msgid "Categories"
+#~ msgstr "Categorías"
+
+#~ msgid "Extra Items"
+#~ msgstr "Elementos adicionales"
+
+#~ msgid "Hide icons"
+#~ msgstr "Ocultar iconos"
+
+#~ msgid "Stat&usNotifier Testap"
+#~ msgstr "Aplicación de pruebas de Stat&usNotifier"
+
+#~ msgid "Stat&us Notifier"
+#~ msgstr "Noti&ficador de estado"
+
+#~ msgid ""
+#~ "<html><head/><body><p><span style=\" font-weight:600;\">Log</span></p></"
+#~ "body></html>"
+#~ msgstr ""
+#~ "<html><head/><body><p><span style=\" font-weight:600;\">Registro</span></"
+#~ "p></body></html>"
+
+#~ msgid "<b>Status</b>"
+#~ msgstr "<b>Estado</b>"
+
+#~ msgid "Automatic"
+#~ msgstr "Automático"
+
+#~ msgid "Passive"
+#~ msgstr "Pasivo"
+
+#~ msgid "Ac&tive"
+#~ msgstr "Ac&tivo"
+
+#~ msgid "&NeedsAttention"
+#~ msgstr "&NeedsAttention"
+
+#~ msgid "<b>Icon</b>"
+#~ msgstr "<b>Icono</b>"
+
+#~ msgid "<b>ToolTip</b>"
+#~ msgstr "<b>Ayuda emergente</b>"
+
+#~ msgid "Update"
+#~ msgstr "Actualizar"
+
+#~ msgid "&Jobs"
+#~ msgstr "Traba&jos"
+
+#~ msgid "<b>Job Control</b>"
+#~ msgstr "<b>Control del trabajo</b>"
+
+#~ msgid "<b>Progress</b>"
+#~ msgstr "<b>Progreso</b>"
+
+#~ msgid "<b>Naming</b>"
+#~ msgstr "<b>Nombre</b>"
+
+#~ msgid "Job Started"
+#~ msgstr "Trabajo iniciado"
+
+#~ msgid "Pump Job"
+#~ msgstr "Inyectar trabajo"
+
+#~ msgid "Source"
+#~ msgstr "Origen"
+
+#~ msgid "Destination"
+#~ msgstr "Destino"
+
+#~ msgid "Testing kuiserver (%1 seconds remaining)"
+#~ msgstr "Probando kuiserver (faltan %1 segundos)"
+
+#~ msgctxt "tooltip title"
+#~ msgid "System Service Item"
+#~ msgstr "Elemento de servicio del sistema"
+
+#~ msgctxt "title"
+#~ msgid "StatusNotifierTest"
+#~ msgstr "StatusNotifierTest"
+
+#~ msgctxt "tooltip subtitle"
+#~ msgid "Some explanation from the beach."
+#~ msgstr "Alguna explicación desde la playa."
+
+#~ msgid "System Tray Options"
+#~ msgstr "Opciones de la bandeja del sistema"
+
+#~ msgctxt "%1 is the name of the containment"
+#~ msgid "%1 Options"
+#~ msgstr "Opciones de %1"
+
+#~ msgid "Unknown Category"
+#~ msgstr "Categoría desconocida"
+
+#~ msgid "Hardware"
+#~ msgstr "Hardware"
+
+#~ msgctxt "%1 is the name of the applet"
+#~ msgid "%1 Options"
+#~ msgstr "Opciones de %1"
+
+#~ msgid "Alt+S"
+#~ msgstr "Alt+S"
+
+#~ msgid "Error: Can't find plugin metadata: %1"
+#~ msgstr "Error: no se pueden encontrar los metadatos del complemento: %1"
+
+#~ msgid "Error loading QML file: %1"
+#~ msgstr "Error al cargar archivo QML: %1"
+
+#~ msgid "Dialog"
+#~ msgstr "Diálogo"
+
+#~ msgid "Showing info for package: %1"
+#~ msgstr "Mostrando información del paquete: %1"
+
+#~ msgid "      Name : %1"
+#~ msgstr "      Nombre : %1"
+
+#~ msgid "   Comment : %1"
+#~ msgstr "   Comentario : %1"
+
+#~ msgid "    Plugin : %1"
+#~ msgstr "    Complemento : %1"
+
+#~ msgid "    Author : %1"
+#~ msgstr "    Autor : %1"
+
+#~ msgid "      Path : %1"
+#~ msgstr "      Ruta : %1"

@@ -1,0 +1,426 @@
+<?xml version="1.0" ?>
+
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Brazilian-Portuguese "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="colors" lang="&language;">
+<articleinfo>
+<title
+>Cores</title>
+<authorgroup>
+<author
+>&Matthew.Woehlke; &Matthew.Woehlke.mail;</author>
+<othercredit role="translator"
+><firstname
+>Marcus</firstname
+><surname
+>Gama</surname
+><affiliation
+><address
+><email
+>marcus.gama@gmail.com</email
+> </address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>10/04/2015</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>cor</keyword>
+<keyword
+>kcm</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="color">
+<title
+>Cores</title>
+
+<sect2 id="color-intro">
+  <title
+>Introdução</title>
+
+  <para
+>O módulo de seleção de cores é composto por diversas seções:</para>
+
+  <itemizedlist>
+  <listitem
+><para
+><link linkend="color-scheme"
+>A aba <guilabel
+>Esquema</guilabel
+></link
+>, usada para gerenciar esquemas. </para
+></listitem>
+  <listitem
+><para
+><link linkend="color-options"
+>A aba <guilabel
+>Opções</guilabel
+></link
+>, usada para alterar as opções do esquema atual. </para
+></listitem>
+  <listitem
+><para
+><link linkend="color-colors"
+>A aba <guilabel
+>Cores</guilabel
+></link
+>, usada para alterar as cores do esquema atual. </para
+></listitem>
+  <listitem
+><para
+><link linkend="color-effects"
+>As abas de efeitos do estado</link
+> (<guilabel
+>Inativo</guilabel
+>, <guilabel
+>Desabilitado</guilabel
+>), usado para alterar os efeitos do estado do esquema atual. </para
+></listitem>
+  </itemizedlist>
+
+  <para
+>Observação: Esta documentação algumas vezes irá fazer referência ao esquema &quot;atual&quot;, ou ao &quot;ativo&quot;. O esquema &quot;atual&quot; é o conjunto de cores e opções do esquema de cores que foram aplicados mais recentemente, &ie; aquilo que você obterá se escolher <guibutton
+>Cancelar</guibutton
+>. O esquema &quot;ativo&quot; é o conjunto de cores de acordo com as alterações mais recentes feitas por você, &ie; o que você obterá ao escolher <guibutton
+>Aplicar</guibutton
+>.</para>
+</sect2>
+
+<sect2 id="color-scheme">
+  <title
+>Gerenciamento de esquemas</title>
+
+  <para
+>A aba <guilabel
+>Esquema</guilabel
+> permite-lhe gerenciar os esquemas de cores no seu computador. Somente um esquema pode estar ativo de cada vez, mas você pode ter esquemas salvos, permitindo-lhe que alterar rapidamente o esquema mais tarde. Quando criar um esquema que lhe agrade, você pode salvá-lo com o <guibutton
+>Salvar esquema...</guibutton
+>. Você pode remover esquemas usando <guibutton
+>Remover esquema</guibutton
+>. Observe que os esquemas do sistema não podem ser removidos. Ao tentar removê-los será exibida uma mensagem de erro.</para>
+
+  <para
+>O Plasma é distribuído com diversos esquemas. Se tiver uma conexão com a Internet, você também poderá navegar e obter esquemas criados por outros usuários usando o <guibutton
+>Obter novos esquemas...</guibutton
+>.</para>
+
+  <sect3>
+    <title
+>Importando esquemas</title>
+
+    <para
+>Você também pode importar esquemas que tenha baixado ou obtido de outra maneira, bem como importar esquemas do &kde; 4, que possuem nomes como &quot;*.colors&quot;. </para>
+
+  </sect3>
+</sect2>
+
+<sect2 id="color-options">
+  <title
+>Opções do esquema de cores</title>
+
+  <para
+>A aba <guilabel
+>Opções</guilabel
+> permite-lhe alterar algumas propriedades que lidam com a maneira como o esquema de cores é usado, bem como algumas opções que alteram o esquema de cores que são diferentes das cores atualmente atribuídas.</para>
+
+  <itemizedlist>
+    <listitem
+><para
+><guilabel
+>Aplicar efeitos de cores nas janelas inativas</guilabel
+> &mdash; Se ativado, os efeitos de estado (veja abaixo) serão aplicados nas janelas inativas. Isto pode ajudar na identificação visual das janelas ativas e inativas, e pode ter um valor estético, dependendo das suas preferências. No entanto, alguns usuários sentem que isto provoca distração ao &quot;piscar&quot;, uma vez que as janelas devem ser redesenhadas quando elas se tornam inativas. Diferentemente dos efeitos da área de trabalho, os efeitos de estado de cores não precisam de suporte à composição e funcionarão em todos os sistemas, apesar de só funcionarem em aplicativos do &kde;. </para
+></listitem>
+    <listitem
+><para
+><guilabel
+>A seleção inativa muda a cor</guilabel
+> &mdash; Se ativado, a seleção atual em elementos que não tenham o foco de entrada serão desenhadas usando uma cor diferente. Isto pode ajudar na identificação visual do elemento que está com o foco de entrada em alguns aplicativos, especialmente aqueles que exibem diversas listas simultaneamente. </para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Sombrear coluna ordenada nas listas</guilabel
+> &mdash; Se ativado, as listas com múltiplas colunas usarão uma cor ligeiramente diferente para destacar a coluna cuja informação está sendo usada para ordenar os itens da lista. </para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Aplicar cores aos aplicativos não-Qt</guilabel
+> &mdash; Se ativado, o Plasma tentará exportar seu esquema de cores de modo que os aplicativos que não são do Qt usem as mesmas cores. A maioria dos aplicativos respeitará o esquema exportado em vários níveis, enquanto alguns podem apresentar erros ou até mesmo não respeitar o esquema exportado. </para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Contraste</guilabel
+> &mdash; A barra deslizante controla o contraste dos elementos sombreados, como as bordas dos quadros e os efeitos &quot;3D&quot; usados pela maioria dos estilos. Valores menores fornecem menos contraste e, deste modo, cantos mais suaves, enquanto que valores maiores deixam estes cantos mais &quot;destacados&quot;. </para
+></listitem>
+  </itemizedlist>
+
+</sect2>
+
+<sect2 id="color-colors">
+  <title
+>Cores</title>
+
+  <para
+>A aba <guilabel
+>Cores</guilabel
+> permite-lhe alterar as cores no esquema ativo.</para>
+
+  <para
+>A criação ou alteração de um esquema é um procedimento simples, bastando clicar na opção da lista de cores e selecionar uma nova cor. Você pode verificar as suas alterações a qualquer momento, clicando em <guibutton
+>Aplicar</guibutton
+>. Sugere-se que você salve o seu esquema (na aba <guilabel
+>Esquema</guilabel
+>) quando terminar.</para>
+
+  <para
+>O conjunto <guilabel
+>Cores comuns</guilabel
+>, que é apresentado inicialmente, não é de fato um &quot;conjunto&quot; no sentido usado pelo Plasma (veja a próxima seção), mas apresenta um conjunto de papéis de cores, de forma a tornar mais simples a edição do esquema como um todo. Ao criar um esquema de cores novo, você irá normalmente alterar estas cores primeiro, usando depois os outros conjuntos para ajustar algumas cores específicas, caso seja necessário.</para>
+
+  <para
+>Lembre-se de que as <guilabel
+>Cores comuns</guilabel
+> tornam disponíveis os papéis de todos os conjuntos. Por exemplo, o &quot;Plano de fundo da área visual&quot; é um resumo para o papel Plano de fundo normal do conjunto Visualização. Do mesmo modo, a definição de cores que não digam respeito a um conjunto específico irá alterar essa cor em <emphasis
+>todos</emphasis
+> os conjuntos. (Como exceção, o &quot;Texto inativo&quot; irá alterar a cor de todos os conjuntos <emphasis
+>exceto</emphasis
+> a Seleção. Existe um &quot;Plano de fundo inativo da seleção&quot;, em separado, para o Texto inativo do conjunto Seleção.) Alguns papéis podem não estar visíveis nas <guilabel
+>Cores comuns</guilabel
+>, e somente podem ser alterados (caso seja necessário) com a seleção do conjunto apropriado.</para>
+
+  <sect3>
+    <title
+>Conjuntos de cores</title>
+
+    <para
+>O Plasma divide o esquema de cores em diversos conjuntos, baseados no tipo de elemento da interface do usuário, da seguinte forma:</para>
+    <itemizedlist>
+      <listitem
+><para
+><guilabel
+>Visualização</guilabel
+> &mdash; elementos de apresentação de informação, tais como as listas, as estruturas em árvores, os campos de entrada de texto, etc. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Janela</guilabel
+> &mdash; elementos da janela que não são botões ou visualizações. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Botão</guilabel
+> &mdash; botões e elementos similares. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Seleção</guilabel
+> &mdash; texto e itens selecionados. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Dicas</guilabel
+> &mdash; dicas, dicas &quot;O que é isto&quot; e elementos similares. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Complementar</guilabel
+> &mdash; Áreas dos aplicativos com um esquema de cores alternativo; normalmente com um fundo escuro para esquemas de cores claros. Alguns exemplos de áreas com esse esquema de cores invertidos são a interface de fim de sessão, a tela de bloqueio e o modo de tela inteira de alguns aplicativos. </para
+></listitem>
+      <listitem
+><para
+>Gerenciador de janelas &mdash; barras de título da janela e elementos relacionados. </para
+></listitem>
+    </itemizedlist>
+
+    <para
+>Cada conjunto contém um determinado número de papéis de cores. Exceto para as cores do Gerenciador de janelas, cada conjunto possui os mesmos papéis. Todas as cores são associadas a um dos conjuntos acima.</para>
+  </sect3>
+
+  <sect3>
+    <title
+>Papéis de cores</title>
+
+    <para
+>Cada conjunto de cores é composto por um número de papéis que estão disponíveis em todos os outros conjuntos. (O conjunto do Gerenciador de janelas é uma exceção. Ele possui seus próprios papéis, que não existem em nenhum outro conjunto, e não usa os mesmos papéis de outros conjuntos.) Além do Texto normal e do Plano de fundo normal, estes papéis são os seguintes:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Plano de fundo alternativo &mdash; usado quando existe a necessidade de alterar discretamente o plano de fundo para auxiliar na associação de itens. Isto pode ser usado, &eg;, como plano de fundo de um cabeçalho, mas é mais frequentemente usado para alternar as linhas nas listas, especialmente aquelas com múltiplas colunas, para auxiliar na visualização das linhas. </para
+></listitem>
+      <listitem
+><para
+>Texto do link &mdash; usado para hiperlinks ou para indicar &quot;algo que pode ser visitado&quot;, ou para mostrar relacionamentos. </para
+></listitem>
+      <listitem
+><para
+>Texto visitado &mdash; usado por &quot;algo (&eg; um hiperlink) que foi visitado&quot;, ou para indicar alguma coisa que é "antigo". </para
+></listitem>
+      <listitem
+><para
+>Texto ativo &mdash; usado para indicar um elemento ativo ou atrair a atenção, como &eg; em alertas, notificações; também usado em hiperlinks quando o ponteiro do mouse estiver sobre eles. </para
+></listitem>
+      <listitem
+><para
+>Texto inativo &mdash; usado para texto que não deve incomodar, como &eg; comentários, &quot;subtítulos&quot;, informações pouco importantes, etc. </para
+></listitem>
+      <listitem
+><para
+>Texto negativo &mdash; usado para erros, avisos de falhas, notificações de que uma ação pode ser perigosa (&eg;, página Web insegura ou contexto de segurança), etc. </para
+></listitem>
+      <listitem
+><para
+>Texto neutro &mdash; usado para chamar a atenção quando outros papéis não forem apropriados; &eg; em avisos, para indicar conteúdo seguro/criptografado, etc. </para
+></listitem>
+      <listitem
+><para
+>Texto positivo &mdash; usado para notificações de sucesso, para indicar um conteúdo seguro, etc. </para
+></listitem>
+    </itemizedlist>
+
+    <para
+>Além dos papéis do texto, existem alguns papéis adicionais de &quot;decoração&quot; que são usados para desenhar linhas ou sombrear elementos da interface (enquanto os acima podem, em circunstâncias apropriadas, também serem usados para esta finalidade, os papéis a seguir especificamente <emphasis
+>não</emphasis
+> implicam no desenho do texto). São eles:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Decoração do foco &mdash; usada para indicar o item que possui o foco de entrada ativo. </para
+></listitem>
+      <listitem
+><para
+>Decoração da passagem &mdash; usada para efeitos do mouse sobre os elementos, &eg; os efeitos de "iluminação" para os botões. </para
+></listitem>
+    </itemizedlist>
+
+    <para
+>Adicionalmente, exceto para o Texto inativo, existe um papel de plano de fundo correspondente a cada um dos papéis de texto. Atualmente (exceto para os planos de fundo normal e alternativo), estas cores não são escolhidas pelo usuário, mas são automaticamente determinadas com base no Plano de fundo normal e na cor do texto correspondente. Estas cores pode ser visualizadas selecionando um dos conjuntos diferentes do &quot;Cores comuns&quot;.</para>
+
+    <para
+>A escolha do papel da cor é deixada para o desenvolvedor; acima estão as linhas-guia sugeridas para representar uma utilização típica.</para>
+  </sect3>
+
+  <sect3>
+    <title
+>Cores do gerenciador de janelas</title>
+
+    <para
+>Como dito anteriormente, o conjunto do Gerenciador de janelas possui os seus próprios papéis, independentes dos que existem nos outros conjuntos. Estes só estão acessíveis (atualmente), através das <guilabel
+>Cores comuns</guilabel
+> e são os seguintes:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Barra de título ativa &mdash; usada para desenhar o plano de fundo, as bordas e/ou decorações da barra de título da janela ativa (isto é, a que está em primeiro plano). Nem todas as decorações de janelas irão usar isto da mesma forma, e algumas até podem usar o Plano de fundo normal do conjunto Janela para desenhar a barra do título. </para
+></listitem>
+      <listitem
+><para
+>Texto da barra de título ativa &mdash; usada para desenhar o texto da barra de título, quando é usada a Barra de título ativa para desenhar o plano de fundo da barra de título. Também pode ser usada para outros elementos em primeiro plano que usem a Barra de título ativa como plano de fundo. </para
+></listitem>
+    </itemizedlist>
+
+    <para
+>Os papéis [Texto da] Barra de título inativa são os mesmos que os acima, só que são usados para as janelas inativas, em vez das ativas.</para>
+  </sect3>
+
+</sect2>
+
+<sect2 id="color-effects">
+  <title
+>Efeitos de estado de cores</title>
+
+  <para
+>Os efeitos de estado de cores são aplicados aos elementos da interface em estados de inativo (janelas que não possuem o foco, somente se <guilabel
+>Aplicar efeitos de cores nas janelas inativas</guilabel
+> estiver habilitado) ou desabilitado. Alterando os efeitos, a aparência dos elementos nestes estados podem ser alteradas. Normalmente, os elementos inativos terão seu contraste reduzido (o texto se mistura suavemente com o plano de fundo) e pode ter sua intensidade levemente reduzida, enquanto os elementos desabilitados terão uma forte redução de contraste e serão notoriamente mais escuros ou claros. </para>
+
+  <para
+>Três tipos de efeitos podem ser aplicados a cada estado (com os efeitos de dois estados sendo independentes). Eles são a Intensidade, Cor e Contraste. Os dois primeiros (Intensidade e Cor) controlam a cor global, enquanto o último (Contraste) lida com as cores de primeiro plano em relação ao plano de fundo.</para>
+
+  <sect3>
+    <title
+>Intensidade</title>
+
+    <para
+>A intensidade permite que a cor geral seja mais clara ou mais escura. Configurar a barra deslizante no meio não produz alterações. Os efeitos disponíveis são:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Sombrear &mdash; torna tudo mais claro ou escuro de uma maneira controlada. Cada &quot;traço&quot; na barra deslizante aumenta ou diminui a intensidade geral (&ie; na percepção do brilho) de uma quantidade absoluta. </para
+></listitem>
+      <listitem
+><para
+>Escurecer &mdash; muda a intensidade para uma percentagem do valor inicial. Uma configuração da barra deslizante entre o meio e o máximo resulta em uma cor com a metade da intensidade do original. O mínimo fornece uma cor duas vezes mais intensa que o original. </para
+></listitem>
+      <listitem
+><para
+>Clarear &mdash; conceitualmente é o oposto do escurecer; o clarear pode ser visto como a &quot;distância a partir do branco&quot;, enquanto o escurecer funciona com a &quot;distância a partir do preto&quot;. O mínimo é uma cor duas vezes &quot;distante&quot; do branco que o original, enquanto o meio termo entre o meio e o máximo fornece uma intensidade a meio caminho entre a cor original e o branco. </para
+></listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3>
+    <title
+>Cor</title>
+
+    <para
+>A cor também altera a cor geral, mas não é limitada a intensidade. Os efeitos disponíveis são:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Reduzir saturação &mdash; muda a cor relativa. A configuração média não produz alterações; o valor máximo fornece um cinza cuja a intensidade percentual equivale a da cor original. Configurações menores incrementam a cor, fornecendo uma cor que é menos cinza/mais &quot;vibrante&quot; que a original. </para
+></listitem>
+      <listitem
+><para
+>Desaparecer &mdash; mistura suavemente a cor original com uma cor de referência. A configuração mínima não produz modificações, enquanto a máxima obtém a cor de referência. </para
+></listitem>
+      <listitem
+><para
+>Colorir &mdash; é similar ao Desaparecer, exceto que a cor (matiz e cor) muda mais rapidamente enquanto a intensidade varia mais lentamente, a medida que a barra deslizante é aumentada. </para
+></listitem>
+    </itemizedlist>
+  </sect3>
+
+  <sect3>
+    <title
+>Contraste</title>
+
+    <para
+>Os efeitos de contraste são similares aos efeitos de cor, exceto que eles se aplicam ao texto, usado a cor do plano de fundo como cor de referência, e que a redução da saturação não está disponível. O Desaparecer produz texto que &quot;desaparece&quot; mais rapidamente, mas mantém sua cor por mais tempo, enquanto o Colorir produz um texto que muda sua cor para corresponder ao fundo mais rapidamente enquanto mantém a intensidade e contraste por mais tempo (onde &quot;mais tempo&quot; significa configurações elevadas na barra deslizante). Para os efeitos de contraste, a configuração mínima no índice não produz alterações, enquanto a máxima faz com que o texto desapareça completamente no plano de fundo.</para>
+  </sect3>
+
+</sect2>
+
+</sect1>
+
+</article>
+<!-- kate: indent-width 2; replace-tabs on; -->

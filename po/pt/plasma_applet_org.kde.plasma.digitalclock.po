@@ -1,0 +1,1205 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kgeography\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-19 00:47+0000\n"
+"PO-Revision-Date: 2022-07-28 09:25+0100\n"
+"Last-Translator: Pedro Morais <morais@kde.org>\n"
+"Language-Team: pt <kde-i18n-pt@kde.org>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-POFile-SpellExtra: Szczecin Anhalt Roche Ancona Vestfold Doubs Ossola\n"
+"X-POFile-SpellExtra: Var Louisiana Goiânia Saarbrücken Udine Gironde\n"
+"X-POFile-SpellExtra: Niamey Skopje Montana Eure Rieti Valladolid Atlanta\n"
+"X-POFile-SpellExtra: Caen Bergamo Kigali Yellowknife Nanning Verbano Riade\n"
+"X-POFile-SpellExtra: Accra Tonga Bamako Salt Harbin Fjordane Agrigento\n"
+"X-POFile-SpellExtra: Zielona Saunier Edmonton Niort Vilnius Strasbourg\n"
+"X-POFile-SpellExtra: Graz Denver Saône Schleswig Aosta Curitiba Chisinau\n"
+"X-POFile-SpellExtra: Oise Linz Goiás Bourg Guangzhou Hefei Alençon\n"
+"X-POFile-SpellExtra: Hartford Cergy Puy Honolulu Amapa Heilongjiang\n"
+"X-POFile-SpellExtra: Frosinone Yamoussoukro Caracas Marsan Shaanxi\n"
+"X-POFile-SpellExtra: Vaucluse Arendal Pölten Rabat Libreville Lomé\n"
+"X-POFile-SpellExtra: Carcassonne Crotone Mainz Ashgabat Burkina Campânia\n"
+"X-POFile-SpellExtra: Xian Atlantique Hamar Aude Hohhot Matera Burgenland\n"
+"X-POFile-SpellExtra: Otava Maine Schwerin Lyon Aust Ferrand Giulia Cayenne\n"
+"X-POFile-SpellExtra: Masuria Lansing Richmond Ligúria Maceió Alberta\n"
+"X-POFile-SpellExtra: Belfort Brazzaville Columbus Lecco Foix Lecce\n"
+"X-POFile-SpellExtra: Nairóbi Vesoul Xining Varese Sarpsborg Moulins Blois\n"
+"X-POFile-SpellExtra: Ragusa Romagna Trentino Provence Basilicata Western\n"
+"X-POFile-SpellExtra: Begawan Vicenza Mantova Palerano St Lubusz Guiyang\n"
+"X-POFile-SpellExtra: Potenza Liubliana Yerevan Reiquiavique Loir Kuyavia\n"
+"X-POFile-SpellExtra: Westphalia Halifax Le Annapolis Besançon Toulon\n"
+"X-POFile-SpellExtra: Savona Nord Steinkjer Chaumont Buskerud Gdańsk Dhabi\n"
+"X-POFile-SpellExtra: Dresden Agen Cosenza Alagoas Maritime Białystok\n"
+"X-POFile-SpellExtra: Lublin Sondrio Yinchuan Chartres Dhaka Georgetown\n"
+"X-POFile-SpellExtra: Urumqi Hautes Nebraska Maryland Isernia Rennes\n"
+"X-POFile-SpellExtra: Corrèze Shandong Drammen Tallahassee Baden Jinan\n"
+"X-POFile-SpellExtra: Tennessee Denis Bastia Rouge Manitoba Lusaka\n"
+"X-POFile-SpellExtra: Bridgetown Yukon Zhengzhou Mississippi Maritimes\n"
+"X-POFile-SpellExtra: Wyoming Vibo Alessandria Holstein Chambéry Asunción\n"
+"X-POFile-SpellExtra: Vienne Brunswick Meuse Bangkok Lodi Astana\n"
+"X-POFile-SpellExtra: Kristiansand Bangui Malabo Drôme Luis Livorno\n"
+"X-POFile-SpellExtra: Cuíaba Bogotá Bas Klagenfurt Bandar Lilongwe Rome\n"
+"X-POFile-SpellExtra: Topeka Nassau Yonne Banguecoque Marseille Mogadishu\n"
+"X-POFile-SpellExtra: Taipei Hunan Cuiaba Gard Shenyang Erfurt Milan\n"
+"X-POFile-SpellExtra: Vercelli Eisenstadt Forlì Hanover Aracaju Côtes\n"
+"X-POFile-SpellExtra: Rhine Frankfort Harare Armor Uygur Mbabane Sarthe\n"
+"X-POFile-SpellExtra: Dôme et Olsztyn Bissau Benin Jiangsu Cantal Butão\n"
+"X-POFile-SpellExtra: Yvelines Teramo Hubei Yaoundé Masovia Florianópolis\n"
+"X-POFile-SpellExtra: Nunavut Taranto Xinjiang Verbania Erie Salzburg\n"
+"X-POFile-SpellExtra: Tromsø Nîmes Jayewardenepura Papua Hangzhou Taiyuan\n"
+"X-POFile-SpellExtra: Cabul Frankfurt Indre Baku Ningxia Niger Perúgia\n"
+"X-POFile-SpellExtra: Tocantins Meurthe Duc Tobago Havai Whitehorse\n"
+"X-POFile-SpellExtra: Catmandu Maseru Vendée Salerno Latium Etienne\n"
+"X-POFile-SpellExtra: Vilaine Calábria Nuoro Molise Podlachia Abruzzo\n"
+"X-POFile-SpellExtra: Abeba Düsseldorf Bregenz Silesia Bouches Evreux\n"
+"X-POFile-SpellExtra: Thuringia Charleville Marne Haikou Avignon Bresse\n"
+"X-POFile-SpellExtra: Adige Charleston Bordeaux Valence Pesaro Aube\n"
+"X-POFile-SpellExtra: Nanterre Concord Mézières Imperia Bergen Asti Lô\n"
+"X-POFile-SpellExtra: Pas Providence DC Tønsberg Gers Winnipeg Apulia\n"
+"X-POFile-SpellExtra: Aurillac Châlon Lons Idaho Charlottetown Tashkent\n"
+"X-POFile-SpellExtra: Thimphu Seine Cantábria Sergipe Vosges Addis\n"
+"X-POFile-SpellExtra: Ulaanbaatar Bank Chongqing Somme Vorarlberg Dabi\n"
+"X-POFile-SpellExtra: Dijon Saarland Bari Changsha Styria Logroño\n"
+"X-POFile-SpellExtra: Toscânia Alabama Tbilisi Jiangxi Trenton Sassari\n"
+"X-POFile-SpellExtra: Bodø Wrocław Goias Kingston Nanjing Arras Albi\n"
+"X-POFile-SpellExtra: Laval Cahors Phnom Djibuti Arezzo Vadsø Tarn Lille\n"
+"X-POFile-SpellExtra: Sèvres Caserta Veneto Oregon Boise Abuja Extremadura\n"
+"X-POFile-SpellExtra: Kiel Tegucigalpa Novara Moselle Kansas Mâcon Evry\n"
+"X-POFile-SpellExtra: Moresby Treviso sur Roseau Campobasso nell\n"
+"X-POFile-SpellExtra: Antananarivo Suva KGeography Nuuk Guizhou Mayenne\n"
+"X-POFile-SpellExtra: Nuku Bahia Olympia Aquila Viterbo Rhineland Nordland\n"
+"X-POFile-SpellExtra: Carrara Sør Paramaribo Huron Roraima Enna Sogn\n"
+"X-POFile-SpellExtra: Bourges Ouagadougou Cheyenne Amman Bielorússia\n"
+"X-POFile-SpellExtra: Créteil Camboja Hebei Wisconsin Belluno Hermansverk\n"
+"X-POFile-SpellExtra: Saskatchewan Łódź Caltanissetta Kielce Côte\n"
+"X-POFile-SpellExtra: Stavanger Sri Gorizia Fuzhou Kathmandu Ariège\n"
+"X-POFile-SpellExtra: Nicósia Sodipodi Bujumbura Oppland Tours Quebec\n"
+"X-POFile-SpellExtra: Toruń Deux Skien Anhui Fredericton Delaware Piceno\n"
+"X-POFile-SpellExtra: Subcarpathia Muscat Lucca Gansu Troyes Savoie Loiret\n"
+"X-POFile-SpellExtra: Bagdad Manaus Khartoum Umbria Auch Reggio Manágua\n"
+"X-POFile-SpellExtra: Trondheim Cagliari Saara Pyeongyang Algiers Georgia\n"
+"X-POFile-SpellExtra: Biella Allier Islamabad Clermont Vest Lake Kuala\n"
+"X-POFile-SpellExtra: Wielkopolski Cusio Carson Monróvia Brindisi\n"
+"X-POFile-SpellExtra: Palatinate Xizang Guéret Amiens Rogaland Salem\n"
+"X-POFile-SpellExtra: Asmara Taiwan Aisne Poznań Jilin Potsdam Agder Yon\n"
+"X-POFile-SpellExtra: Qatar Ravenna Tianjin Trøndelag Møre Shanghai\n"
+"X-POFile-SpellExtra: Rochelle Tallinn Spezia Montevideo Ardèche Hérault\n"
+"X-POFile-SpellExtra: Garonne Orientales Cesena Quimper Wuhan Harrisburg\n"
+"X-POFile-SpellExtra: Zimbabwe Springfield Island Dodoma Bobigny Świ\n"
+"X-POFile-SpellExtra: Vermont Warmia Bydgoszcz Friuli divinhar Dordogne\n"
+"X-POFile-SpellExtra: Gaborone Auxerre Raleigh Bavária Rioja Poitiers\n"
+"X-POFile-SpellExtra: Sichuan Vr Fiji Ille Port Shanxi Albany Utah Grosseto\n"
+"X-POFile-SpellExtra: Virginia Telemark Pavia Águra Angoulème Innsbruck\n"
+"X-POFile-SpellExtra: Finnmark Gap Connecticut Rzeszów Hordaland Marino\n"
+"X-POFile-SpellExtra: Corse Perpignan Mans Kampala Og Sófia Piaui Mont Ain\n"
+"X-POFile-SpellExtra: Henan Missouri Emilia Avellino Or Rovigo Piacenza\n"
+"X-POFile-SpellExtra: Østfold Indianápolis Rhode Windhoek Rouen Liaoning\n"
+"X-POFile-SpellExtra: Dakota Padova Bréscia Little Sud Bangladesh Nei\n"
+"X-POFile-SpellExtra: Gorzów West Laon Brandenburg Montpelier Trieste\n"
+"X-POFile-SpellExtra: Italia Siena Dakar New Creuse Hainan Trapani Ajaccio\n"
+"X-POFile-SpellExtra: Pontoise Turin Modena Katowice Zhejiang Lombardia\n"
+"X-POFile-SpellExtra: Tulle Wiesbaden Angers alofa Beauvais Rodez Isère\n"
+"X-POFile-SpellExtra: Pordenone Freetown Góra Shijiazhuang Monrovia\n"
+"X-POFile-SpellExtra: Magdeburg Macapa Lozère Newfoundland Fujian Chieti\n"
+"X-POFile-SpellExtra: Madison Foggia Guangxi Doha Essonne Haute tokrzyskie\n"
+"X-POFile-SpellExtra: Atlantiques le Perú Brieuc Catanzaro Teresinha\n"
+"X-POFile-SpellExtra: Benevento Flórida Guangdong Hauts Nevers Saraievo\n"
+"X-POFile-SpellExtra: Vientiane Opole Yunnan Manama Morbihan Annecy Lumpur\n"
+"X-POFile-SpellExtra: Charente Limoges Lanzhou Brunei Lillehammer Bolzano\n"
+"X-POFile-SpellExtra: Pistoia Epinal Württemberg Kunming Akershus\n"
+"X-POFile-SpellExtra: Périgueux Bishkek Dover Melun Nanchang Rangoon\n"
+"X-POFile-SpellExtra: Hedmark Paraíba Nièvre Djamena Tunis Austin Hesse\n"
+"X-POFile-SpellExtra: Banjul Rondónia Macerata Hanói Châteauroux\n"
+"X-POFile-SpellExtra: Laayoune Oristano Burundi Pamplona Ascoli Dushanbe\n"
+"X-POFile-SpellExtra: Lhasa au Montauban Rhône Versailles Champagne Landes\n"
+"X-POFile-SpellExtra: Haut Cuneo Carinthia Changchun Rhin Mende Aveyron\n"
+"X-POFile-SpellExtra: Pomerania Camberra Belmopan Cremona Vannes Venezia\n"
+"X-POFile-SpellExtra: Tenerife Wellington Troms Urbino Minsk Romsdal\n"
+"X-POFile-SpellExtra: Mecklenburg Ardennes Iqaluit Terni Chengdu Myanmar\n"
+"X-POFile-SpellExtra: Qinghai Tarbes Nouakchott Zhuang Juneau Conacri en\n"
+"X-POFile-SpellExtra: Val Pyrénées Des du Lot Penh Seri Liguria Algéria\n"
+"X-POFile-SpellExtra: úria d úria  Groningen Middelburg Arnhem Gelderland\n"
+"X-POFile-SpellExtra: Leeuwarden Zwolle Flevoland Friesland Hertogenbosch\n"
+"X-POFile-SpellExtra: Lelystad Assen Overijssel Haarlem Maastricht Limburg\n"
+"X-POFile-SpellExtra: Utrecht Zeeland Drenthe Brabant Świętokrzyskie\n"
+"X-POFile-SpellExtra: ódź Bia aw Wroc ystok Vaduz Liechtenstein Podgorica\n"
+"X-POFile-SpellExtra: Bloemfontein Pretória Naypyidaw Cobán Mazandaran\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-POFile-SpellExtra: Corentyne Guaira Progreso Ocotepeque Skåne Szeged\n"
+"X-POFile-SpellExtra: Kyivs Lara Cañar Isla Tsu Ústí Hinche Copán\n"
+"X-POFile-SpellExtra: Kherson Sanandaj Maymana Békés Cortés Nippes\n"
+"X-POFile-SpellExtra: Falmouth Mitu Choluteca Gramsh Västra Mykolayiv\n"
+"X-POFile-SpellExtra: Shizuoka Buyer Szolnok Savanna Wardak Río Preiļi\n"
+"X-POFile-SpellExtra: Nagüabo Higgins Tartu Valle Banská Daugavpils\n"
+"X-POFile-SpellExtra: Villarrica Arecibo Szabolcs Heredia Ōita Götaland\n"
+"X-POFile-SpellExtra: Macas Pärnu Nyköping Salvaleón Saitama\n"
+"X-POFile-SpellExtra: Sensuntepeque Brisbane Lambayeque Rasht Kumamoto\n"
+"X-POFile-SpellExtra: Fayzabad Machala Pando Mahilyow Devoll Buenas\n"
+"X-POFile-SpellExtra: Bautista Cesar Ann Estero Camagüey Zabul Corfu Rey\n"
+"X-POFile-SpellExtra: Heves Zala Andrew Tolna Silésia Labem Hradec\n"
+"X-POFile-SpellExtra: Risaralda Kuressaare Harju Manicaland Aragua Kuçovë\n"
+"X-POFile-SpellExtra: Orange Pampa Corrientes Ríos Piña Pul Dibër\n"
+"X-POFile-SpellExtra: Quetzaltenango Cundinamarca Yoro Cherkasy Tolima\n"
+"X-POFile-SpellExtra: Shahr Morazán Clarendon Kunar Anna Chimborazo\n"
+"X-POFile-SpellExtra: Poltava Vas Morovis Komárom Madhe Fort Syunik Puli\n"
+"X-POFile-SpellExtra: Bazarak Castellón Gifu Kirovohrad Jász Kyiv Waini\n"
+"X-POFile-SpellExtra: Bartica Pest Oblasts Cherkas Guanare Plata Visby\n"
+"X-POFile-SpellExtra: Cojedes Pukë Maturín Coyhaique Pozo Trelawny\n"
+"X-POFile-SpellExtra: Thessaly oblast Matanzas Rivnens Miragoâne Ōtsu\n"
+"X-POFile-SpellExtra: Huesca Võru Dnipropetrovs divisionsName Ciales Tena\n"
+"X-POFile-SpellExtra: Cucuta Mashonaland Farah Soria Bilwi Guairá Athos\n"
+"X-POFile-SpellExtra: Kaposvár Baní Somoto Yaracuy Camuy Nimruz Kord Ocoa\n"
+"X-POFile-SpellExtra: Mirditë Barceloneta Montego Chiriquí Barinas Huelva\n"
+"X-POFile-SpellExtra: Kurbin Qalat Carrenyo Rincón Koufu Yasooj Lelydorp\n"
+"X-POFile-SpellExtra: Luleå Jimaní Boquerón Tucupita Gulbene Naranjito\n"
+"X-POFile-SpellExtra: Tabriz Sucre Babahoyo Putumayo Jérémie Hiiu\n"
+"X-POFile-SpellExtra: Macorís Chachapoyas Abad Liberec Cayo Miskolc Yauco\n"
+"X-POFile-SpellExtra: Brokopondo Aysen Utuado Oruro Tatabánya Trenčín\n"
+"X-POFile-SpellExtra: Sololá Humacao Barranquitas Kharkiv Yamanashi Sari\n"
+"X-POFile-SpellExtra: Cobija Coamo Kagawa Baluchistan Pichincha\n"
+"X-POFile-SpellExtra: Västerbotten Gjirokastër Ayacucho Lori Comayagua\n"
+"X-POFile-SpellExtra: Puerto Norrbotten Hatillo Aomori Karlovy Demerara\n"
+"X-POFile-SpellExtra: Teques Haapsalu Librazhd Daejon Kapisa Atica Paide\n"
+"X-POFile-SpellExtra: Kamdish Darién Soriano Kalmar Shiga Gegharkunik Azov\n"
+"X-POFile-SpellExtra: Jeollanam Latacunga Namur Eger Taloqan Caballeros\n"
+"X-POFile-SpellExtra: Dangriga Jutiapa Cayey Bács Sipaliwini Ogre\n"
+"X-POFile-SpellExtra: Sonsonate Usulután Pinar Potosí Islas Jowzjan\n"
+"X-POFile-SpellExtra: Lupane Quiché Linköping Jacmel Nógrád\n"
+"X-POFile-SpellExtra: Drangajökull Salgótarján Komotini Tarapacá\n"
+"X-POFile-SpellExtra: Ramírez Liberté Tarin Jõhvi Västerås Monagas\n"
+"X-POFile-SpellExtra: Colón Narinyo Ardabil Mahaica Cartagena Sánchez\n"
+"X-POFile-SpellExtra: Valka Arequipa Manatí Cienfuegos Cordillera Daykundi\n"
+"X-POFile-SpellExtra: Perth Takutu Guayas Isabela Nyíregyháza Pécs\n"
+"X-POFile-SpellExtra: Ocotal Simferopol Areguá Ilam Nara Gardez Guajira\n"
+"X-POFile-SpellExtra: Yabucoa Girona Totonicapán Encarnación nyts\n"
+"X-POFile-SpellExtra: Maracaibo Gävleborg Luhans Skrapar Concepción Khost\n"
+"X-POFile-SpellExtra: Dorado Jeju Vatnajökull Cap Bay Limbaži Ventspils\n"
+"X-POFile-SpellExtra: Chichica Louvain Chimaltenango Miyagi Cajamarca\n"
+"X-POFile-SpellExtra: Aibonito Baghlan Albacete Octopeque Hrodna Corozal\n"
+"X-POFile-SpellExtra: Frankivs Khoram Jinotega Yazd Lushnjë Morona Lòria\n"
+"X-POFile-SpellExtra: Karlstad Hato Sar Bolívar Berbice Falun Pontevedra\n"
+"X-POFile-SpellExtra: Khorasan Manizales Lamia Chubut Canindeyú Zanjan\n"
+"X-POFile-SpellExtra: Nagua Riohacha Gyeongsangnam Mayagüez Cayes Guaviare\n"
+"X-POFile-SpellExtra: Ternopil Coronie Elizabeth Peñuelas Popayan\n"
+"X-POFile-SpellExtra: Barquisimeto Ouest Matagalpa León Álava Pedernales\n"
+"X-POFile-SpellExtra: Dios Saramacca Town Samaná Shiraz Jämtland Nouel\n"
+"X-POFile-SpellExtra: Razavi Saldus Chaghcharan Masvingo Chernivets Ordino\n"
+"X-POFile-SpellExtra: Seibo Gweru Pogradec Chiquimula Tumbes Lucea Potaro\n"
+"X-POFile-SpellExtra: Hajdú Stann Ushuaia Cuyuni Tokushima Orocovis\n"
+"X-POFile-SpellExtra: Valparaiso Piedras Luquillo Maldonado Yala Khuzestan\n"
+"X-POFile-SpellExtra: Qazvin Granma Madriz Kapan Qom Yamaguchi Ivano\n"
+"X-POFile-SpellExtra: Maguana Pastaza Dnipro Mendoza Arroyo Añasco Mashhad\n"
+"X-POFile-SpellExtra: Bayamo Jēkabpils Talca Peshkopi Black Krāslava\n"
+"X-POFile-SpellExtra: Ludza Iquitos Valga Amambay ka Semnan Fray Culebra\n"
+"X-POFile-SpellExtra: Jalalabad Ulsan Ahuachapán Zlín Tulcán Guzmán\n"
+"X-POFile-SpellExtra: Panjshir Fars Cheongju Gerona Västernorrland Vargas\n"
+"X-POFile-SpellExtra: Gotera Coquimbo Azogues Nieuw Cotuí Sabana Charikar\n"
+"X-POFile-SpellExtra: Gotemburgo Vreed Monseñor Sendai Plzeň Gwanda\n"
+"X-POFile-SpellExtra: cárpatos Hrazdan Södermanland Rakvere Aizkraukle\n"
+"X-POFile-SpellExtra: Cuilapa Badakhshan Jayuya Bindura Volyns Barima Pen\n"
+"X-POFile-SpellExtra: Abancay Akita Tacna Caguas Malësi Homyel Somogy\n"
+"X-POFile-SpellExtra: Elías Trinidad Langjökull Supenaam Chaco Kiskun\n"
+"X-POFile-SpellExtra: Temuco Espaillat Bulqizë Maebashi Tarija Cali Jaén\n"
+"X-POFile-SpellExtra: Misiones Sebastián Västmanland Dajabón Gotland\n"
+"X-POFile-SpellExtra: Cádiz Esfahan Växjö Sopron Malmö Bamiyan Chinhoyi\n"
+"X-POFile-SpellExtra: Bulawayo Vichada Hormozgan Odesa Okinawa Szekszárd\n"
+"X-POFile-SpellExtra: Comewijne Halland Jalapa Loíza Half Arauca Guayaquil\n"
+"X-POFile-SpellExtra: Maracay Nueva Borgarnes Juigalpa Tarragona Ceiba\n"
+"X-POFile-SpellExtra: Székesfehérvár Punta Puyo Gwangju Kecskemét Azuay\n"
+"X-POFile-SpellExtra: Izabal Dzor Takamatsu Vega Krujë Comerío Atacama\n"
+"X-POFile-SpellExtra: Sebastopol Portland Parwan Fukui Bakhtiari Vinnytsya\n"
+"X-POFile-SpellExtra: Capitol Spíritus Viru Baranya Guainia Dalarna\n"
+"X-POFile-SpellExtra: Sapporo Bluefields Tepelenë Kotayk Chinchipe Beni\n"
+"X-POFile-SpellExtra: Jönköping ky Kirovohrads Poltavs Quibdo Faryab\n"
+"X-POFile-SpellExtra: Florencia Zaranj Maule Rivas Junin Union Iwate\n"
+"X-POFile-SpellExtra: Keflavík Caqueta Umeå Asadabad Mahmud Paradise\n"
+"X-POFile-SpellExtra: Kerman Has Chiclayo Arlon Guanacaste Ibarra Bushehr\n"
+"X-POFile-SpellExtra: Puntarenas Adjuntas Orellana Incheon Raqi Lezhë\n"
+"X-POFile-SpellExtra: Orūzgān Ourense Pucallpa Cataño Fuerte Matsue\n"
+"X-POFile-SpellExtra: Ahmah Petén Aybak Nagykun Chuncheon Põlva Vayots\n"
+"X-POFile-SpellExtra: Hamedan Baja Metropolitana Chaharmahal Wavre\n"
+"X-POFile-SpellExtra: Ísafjörður River Encamp Monteria Kukës Magdalena\n"
+"X-POFile-SpellExtra: Cristi Ostrava Kuldīga Villa Gonaïves Aichi\n"
+"X-POFile-SpellExtra: Alūksne Liepāja Maricao Kandahar Bayamón Lorenzo\n"
+"X-POFile-SpellExtra: Penonomé Yuscarán Sevan Shimane Përmet Järva\n"
+"X-POFile-SpellExtra: Kolonjë Zemplén District Uppsala Iquique Coruña\n"
+"X-POFile-SpellExtra: Sincelejo Durrës Vlorë Shirak Canóvanas Grand\n"
+"X-POFile-SpellExtra: Gangwon Hormigueros Linden Chernihiv Ñeembucú\n"
+"X-POFile-SpellExtra: Szombathely Apurimac Paraguarí Huanuco Lajas Takhar\n"
+"X-POFile-SpellExtra: Buglé Kermanshah Ióneas Nangarhar Zalaegerszeg\n"
+"X-POFile-SpellExtra: Ishikawa Artashat Guipúzcoa Viedma Sacatepéquez\n"
+"X-POFile-SpellExtra: Caazapá Tunja Suchitepéquez Julià Naha Rancagua\n"
+"X-POFile-SpellExtra: Sant Roatán Paysandú Huehuetenango Tree shahr Juana\n"
+"X-POFile-SpellExtra: Anzoátegui Verapaz Lempira Periferias Westmoreland\n"
+"X-POFile-SpellExtra: Lugo Islands Tres Uzhhorod Aguadilla Carabobo Thrace\n"
+"X-POFile-SpellExtra: Kowt Zaporizhzhia Jõgeva Borsod Fuego Bauska\n"
+"X-POFile-SpellExtra: Tungurahua Montt Coclé Marondera Almería Trujillo\n"
+"X-POFile-SpellExtra: Ghazni Azua Markazi Valã Onverwacht Samangan Elbasan\n"
+"X-POFile-SpellExtra: Mykolayivs Kronoberg Shkodër Balkh Durazno\n"
+"X-POFile-SpellExtra: Westfjords Vaupes Way Bojnoord Guastatoya Armavir\n"
+"X-POFile-SpellExtra: Birjand Nagano Vitebsk Kärdla Qala Emberá Paktia\n"
+"X-POFile-SpellExtra: Viljandi Paix Ahvaz Mutare Gyumri Queensland\n"
+"X-POFile-SpellExtra: Tacuarembó Nickerie Korçë Valledupar Anse Lorestan\n"
+"X-POFile-SpellExtra: Gracias Žilina Lavalleja Fier Oblast Treinta Unión\n"
+"X-POFile-SpellExtra: Košice Jeollabuk Ibague Oroomieh Juticalpa Quioto\n"
+"X-POFile-SpellExtra: Fukushima Östersund Canillo Hoop Vary Rivne Totness\n"
+"X-POFile-SpellExtra: Ciudad Caacupé Amacuro Kobe Villalba Hokkaido\n"
+"X-POFile-SpellExtra: Östergötland Changwon Ignacio Jelgava Morant\n"
+"X-POFile-SpellExtra: Fukuoka Artibonite Ehime Nagoya Chiba Jeonju Naw\n"
+"X-POFile-SpellExtra: Värmland Limón Sharan Örebro Prefeituras Laghman\n"
+"X-POFile-SpellExtra: Libertad Chernivtsi Táchira Villavicencio Akureyri\n"
+"X-POFile-SpellExtra: Zacatecoluca Caaguazú Cauca Inirida Bucaramanga\n"
+"X-POFile-SpellExtra: Vanadzor Halmstad Tukums Kunduz Esztergom Cuenca\n"
+"X-POFile-SpellExtra: Kanazawa Chungcheongbuk Nacaome Haïtien Gunma Karyes\n"
+"X-POFile-SpellExtra: Moyobamba Mallakastër Chungcheongnam Salcedo Zulia\n"
+"X-POFile-SpellExtra: Matsuyama Jujuy Pomeroon Sumy Abbas Ucayali Nuristan\n"
+"X-POFile-SpellExtra: María Higüey Dememara Yokohama Suwon Arenas\n"
+"X-POFile-SpellExtra: Jūrmala Piura Sula Veszprém Escuintla Győr Liege\n"
+"X-POFile-SpellExtra: Jihlava Barrios Kohkiluyeh Aguas Chinandega Maunabo\n"
+"X-POFile-SpellExtra: Sharif Tucumán Siparuni Manabí Kōchi Masaya\n"
+"X-POFile-SpellExtra: Guánica Kanagawa Porvenir Chontales Tropojë\n"
+"X-POFile-SpellExtra: Mitileno Epirus Toyama Mihtarlam Gyeongsangbuk\n"
+"X-POFile-SpellExtra: Békéscsaba Neiba Teruel Daegu Lääne Yopal Gah\n"
+"X-POFile-SpellExtra: Kozani Estelí Guantánamo Egilsstaðir Tavush\n"
+"X-POFile-SpellExtra: Olomouc Juventud Nili Miyazaki Durrès Barranquilla\n"
+"X-POFile-SpellExtra: Holguín Guaranda Arak Kavajë Mons Csongrád Gorgan\n"
+"X-POFile-SpellExtra: Morioka Díaz Sheberghan Valencia Berat Kuna Creek\n"
+"X-POFile-SpellExtra: Guayama Ermoupoli Huancavelica Sancti Herat Wakayama\n"
+"X-POFile-SpellExtra: Retalhuleu Neuquén Mahdia Hasselt Cochabamba Baoruco\n"
+"X-POFile-SpellExtra: Khersons Baquerizo Gurabo Moquegua Donets Napo\n"
+"X-POFile-SpellExtra: Imbabura Cristóbal Balvi Bihar Králové Albina\n"
+"X-POFile-SpellExtra: Araucanía Cáceres Kharkivs Chalatenango Rawson\n"
+"X-POFile-SpellExtra: Herrera Brno Salamá Les Trnava Resistencia Carazo\n"
+"X-POFile-SpellExtra: Vieques Mocoa Peloponeso Golestan Alajuela Medellin\n"
+"X-POFile-SpellExtra: Jinotepe Antonio Gilan Altagracia Paktika Meydan\n"
+"X-POFile-SpellExtra: Cēsis Mýrdalsjökull Ancash Fejér Niigata\n"
+"X-POFile-SpellExtra: Cuscatlán Peqin Zaragoça Sucumbíos Chernihivs\n"
+"X-POFile-SpellExtra: Galápagos Mandeville Cabañas Zhytomyrs Thessalonica\n"
+"X-POFile-SpellExtra: Zaporiz Busan Valverde Zakarpats Mayor Ghor Szatmár\n"
+"X-POFile-SpellExtra: Mazatenango Pasco Zahedan Fajardo Antofagasta\n"
+"X-POFile-SpellExtra: Härnösand Heraklion Wanica Helmand Caballero\n"
+"X-POFile-SpellExtra: Leticia Dobele Astals Blekinge Ioannina Lowgar Luts\n"
+"X-POFile-SpellExtra: Hyogo Mabaruma Prešov Sabaneta Talsi Huaraz Riobamba\n"
+"X-POFile-SpellExtra: Quindio Sarandë Zhytomyr Rojo Guayanilla Copiapo\n"
+"X-POFile-SpellExtra: Marowijne Loreto Hobart Yamagata Budějovice Veraguas\n"
+"X-POFile-SpellExtra: Mazaruni Utsunomiya Gallegos Gävle Esperanza\n"
+"X-POFile-SpellExtra: Delvinë Portoviejo Engordany Ibaraki Essequibo Ciego\n"
+"X-POFile-SpellExtra: České Chuquisaca Quebradillas Cojutepeque Lashkar\n"
+"X-POFile-SpellExtra: Ponce Saare Boyaca Vysočina Aragatsotn Peravia\n"
+"X-POFile-SpellExtra: Catamarca Okayama Lethem Walk Bonao Massana vivs\n"
+"X-POFile-SpellExtra: Marías Casanare Intibucá Brest Khumri Kagoshima\n"
+"X-POFile-SpellExtra: Germán Bereg Selfoss Jose Est Gyeonggi Patras Ica\n"
+"X-POFile-SpellExtra: Tochigi Rēzekne Boaco Hofsjökull Itapúa Ararat\n"
+"X-POFile-SpellExtra: Palencia Systan Muan Tablas Moson Bystrica\n"
+"X-POFile-SpellExtra: Yeghegnadzor Chitré Guaynabo Mat nad May Debrecen\n"
+"X-POFile-SpellExtra: Falcón Sums Pol Abaúj Zacapa Tierra Independencia\n"
+"X-POFile-SpellExtra: Khmel Ghent Larissa Ijevan Mazari Pardubice Cusco\n"
+"X-POFile-SpellExtra: Hainaut Valparaíso Badghis Cotopaxi Melbourne\n"
+"X-POFile-SpellExtra: Ashtarak Canelones Ambato Huila Valmiera Felipe Hayes\n"
+"X-POFile-SpellExtra: Patillas Olancho Gavar Ngöbe Vinnyts Carchi\n"
+"X-POFile-SpellExtra: Sauðárkrókur Matabeleland Cumaná Rapla Tottori\n"
+"X-POFile-SpellExtra: Guárico Bío Bolivar Bahía Spanish viv Artigas\n"
+"X-POFile-SpellExtra: Dakshin Hooghly Burdwan Chunchura Nadia Alipur\n"
+"X-POFile-SpellExtra: Kolkata Baharampur Purba Purulia Balurghat Midnapore\n"
+"X-POFile-SpellExtra: Howrah Suri Wikipédia Medinipur Jalpaiguri\n"
+"X-POFile-SpellExtra: Krishnagar Inreg Darjeeling Bankura Behar Birbhum\n"
+"X-POFile-SpellExtra: Parganas Raiganj Dinajpur Uttar Cooch Tamluk Barasat\n"
+"X-POFile-SpellExtra: Paschim Malda Murshidabad Neretva Wangdue Khankendi\n"
+"X-POFile-SpellExtra: Haa Shakhbuz Tarf Trashiyangste Defla Bouira Zardab\n"
+"X-POFile-SpellExtra: Ouzou Fizuli Gadabay Tébessa Mostaganem Rajshahi\n"
+"X-POFile-SpellExtra: Gasa Médéa Agsu Barisa Balakan Khojavend Cuanza\n"
+"X-POFile-SpellExtra: Oguz Julfa Rayons Chittagong Phodrang Qobustan\n"
+"X-POFile-SpellExtra: Nakhichevan Lankaran Khanlar Muaskar Agstafa Naama\n"
+"X-POFile-SpellExtra: Biskra Aïn Khizi Saatly Cuando Lucapa Quba Mila\n"
+"X-POFile-SpellExtra: Moroni Naftalan Khojali Agdam Brčko Hajigabul\n"
+"X-POFile-SpellExtra: Lhuntse Boumerdès Arréridj Qabala Jamestown Yevlakh\n"
+"X-POFile-SpellExtra: Bosnia Sabirabad Saida Absheron Zhemgang Souk Mongar\n"
+"X-POFile-SpellExtra: Moxico Caxito Samtse Tissemsilt Shamkir Zangilan Bou\n"
+"X-POFile-SpellExtra: Ordubad Bordj Masally Tartar Kurdamir Chukha Luena\n"
+"X-POFile-SpellExtra: Jalilabad Qakh Jongkhar Bumthang Sylhet Shamakhi\n"
+"X-POFile-SpellExtra: Guelma Ondjiva Sarpang Djelfa Jijel Kalbajar\n"
+"X-POFile-SpellExtra: Dashkasan UK Chlef Beylagan Bouaghi Abbes Sumbe\n"
+"X-POFile-SpellExtra: Imishli Ganja Khachmaz Yardymli Agjabadi Pemagatshel\n"
+"X-POFile-SpellExtra: Tlemcen Zaqatala Qusar Khulna Aaiún Podrinje\n"
+"X-POFile-SpellExtra: Jabrayil Lerik Samukh Shusha Huíla Davachi Bilasuvar\n"
+"X-POFile-SpellExtra: Neftchala Lachin Samdrup Témouchent Trongsa Oran\n"
+"X-POFile-SpellExtra: Tiaret Annaba Oum Bengo Adrar Ujar Ghardaïa Relizane\n"
+"X-POFile-SpellExtra: Sumqayit Skikda Barda Lunda Bayramli Ismailli Blida\n"
+"X-POFile-SpellExtra: Babek Trashigang Astara Ahras Dagana Tizi Mbanza\n"
+"X-POFile-SpellExtra: Agdash Shaki Punakha Salyan Khenchela Bayadh Sila\n"
+"X-POFile-SpellExtra: Saurimo Tovuz Béjaïa Cubango Tindouf Qazakh\n"
+"X-POFile-SpellExtra: Goranboy Siazan Tamanghasset Tipasa Sadarak Sidi\n"
+"X-POFile-SpellExtra: Constantine Tsirang Sharur Batna Béchar Oued Illizi\n"
+"X-POFile-SpellExtra: Namibe Ouargla Goychay Qubadli Mingachevir Laghouat\n"
+"X-POFile-SpellExtra: Menongue Kangarli Sétif Posavina Pasvalys Karpenisi\n"
+"X-POFile-SpellExtra: Geltrú Maniema Mörön Šalčininkai Nida Monufia\n"
+"X-POFile-SpellExtra: Capiz Imathia Carmathenshire Solsona Ngoumou\n"
+"X-POFile-SpellExtra: Cambridgeshire Zarasai Frederiksborg Terrassa Zagora\n"
+"X-POFile-SpellExtra: Ural Valls Antique Loei Kaduqli Redange Tepic\n"
+"X-POFile-SpellExtra: Mehedinţi Antakya Vilanova Siquijor Argeş\n"
+"X-POFile-SpellExtra: Roxburghshire Ramla Gallen Gangtok Schaffhausen\n"
+"X-POFile-SpellExtra: Nayarit Michoacán Donga Viborg Tuzla Wicklow\n"
+"X-POFile-SpellExtra: Limousin Skuodas Cherkessia Blagoveshchensk Uvs Khanh\n"
+"X-POFile-SpellExtra: Niğde Zante Nottinghamshire Calapan Lingayen Kom\n"
+"X-POFile-SpellExtra: Xuyen Kon Lanao Mindoro Sobirà Aguascalientes Zavhan\n"
+"X-POFile-SpellExtra: Karabük Bisho Vielha Star Logone Tuvalu Sankuru\n"
+"X-POFile-SpellExtra: Blagoevgrad Kartli Banten Faiyum Sorø Buon Gheorghe\n"
+"X-POFile-SpellExtra: Penedès Imphal Fraser Dehradun Tortosa Sokhumi il\n"
+"X-POFile-SpellExtra: Sfântu Karaman Palau Mardin Narayani Bingöl Méfou\n"
+"X-POFile-SpellExtra: Nhon Glostrup Ly Willemstad Gutiérrez Kan Kgalagadi\n"
+"X-POFile-SpellExtra: Kabuntalan Cuernavaca Matlock Carlow Năsăud\n"
+"X-POFile-SpellExtra: Leicestershire Glarus Padang Lifford Tarim Ndop GB\n"
+"X-POFile-SpellExtra: Monterrey Bagmati Jurbarkas Argovia Kütahya Inner\n"
+"X-POFile-SpellExtra: Smolensk Jizan Kasaï Pangasinan Brăila Exeter Spain\n"
+"X-POFile-SpellExtra: Vung Seti Lefkada Alor Bheri Ndian Niue Koksetau\n"
+"X-POFile-SpellExtra: Appenzell Dumfries Avarua Kaesŏng Prosperidad Radnor\n"
+"X-POFile-SpellExtra: Qaiwain İstanbul Sharqia Storstrøm İzmir\n"
+"X-POFile-SpellExtra: Northamptonshire İzmit Ranong Aetolia Mansura Kilkis\n"
+"X-POFile-SpellExtra: Salekhard Kalasin Pazardzhik Serang Ingushetia Ifugao\n"
+"X-POFile-SpellExtra: Uul Lakshadweep Dadra Qena Haverfordwest Vic Chad\n"
+"X-POFile-SpellExtra: Vina Esch Chao Cham Menchum Chau Sharqiyah Kivu\n"
+"X-POFile-SpellExtra: Chalcidice Chihuahua Düzce Falset Waterford Tibati\n"
+"X-POFile-SpellExtra: Ghazal Quetta Sibugay Trabzon Cherkessk Phrae Selkirk\n"
+"X-POFile-SpellExtra: Kurgan Surrey Oakham Monmouthshire Pathum Thresprotia\n"
+"X-POFile-SpellExtra: Portlaois Sakhon Barcelonès Belgorod Brecknockshire\n"
+"X-POFile-SpellExtra: Volgograd Napoca Haryana Karnali Brecon Meiganga\n"
+"X-POFile-SpellExtra: Lincolnshire Truro Tapti Syr Roscommon Mantung\n"
+"X-POFile-SpellExtra: Arunachal Ash Rumbek Maysan Galaţi Gujarat Hwang\n"
+"X-POFile-SpellExtra: Mariehamn Selangor Osona Antalya Araks Tombigbee Riau\n"
+"X-POFile-SpellExtra: Elefsina Darya Abakan Bhopal Mangoky Mafikeng\n"
+"X-POFile-SpellExtra: Kilimanjaro Orkney Bunia Cardiganshire Tanintharyi\n"
+"X-POFile-SpellExtra: Turnu Elbrus Bellinzona Töv Jalisco Gloucester\n"
+"X-POFile-SpellExtra: Visaginas Kousséri Fife Murska Mackenzie Rothesay\n"
+"X-POFile-SpellExtra: Lampang Širvintos Dschang Pasir Banyo Daet Yozgat\n"
+"X-POFile-SpellExtra: Mamburao Orissa Pathom Tsanaga Seremban Thuot Finland\n"
+"X-POFile-SpellExtra: Dahuk Staffordshire Dornod Tenggara Cheboksary\n"
+"X-POFile-SpellExtra: Missolonghi Ulster Balkhash Sutherland MOW Moungo\n"
+"X-POFile-SpellExtra: Matruh Kirkuk Rietavas Neuchâtel Davao Carlisle\n"
+"X-POFile-SpellExtra: Maykop Chelyabinsk Övörhangay Manisa Lorraine\n"
+"X-POFile-SpellExtra: Primorsky Aswan Asyut Carelia Lesbos Figueres Kerry\n"
+"X-POFile-SpellExtra: Westmorland Zakynthos Larnaca Cagayan Lieu Sabadell\n"
+"X-POFile-SpellExtra: Dolj Trang Amasya Utu Mbéré Buftea Mbuji Elgin\n"
+"X-POFile-SpellExtra: Sagarmatha Pieria Kedah Ca Uele Worcester Gemena\n"
+"X-POFile-SpellExtra: Clare Beersheba Edirne Nabunturan Baler Tri Nai Nan\n"
+"X-POFile-SpellExtra: Nam Villahermosa in Oradea Diekirch Anguilla\n"
+"X-POFile-SpellExtra: Shrewbury Roxas Laoag Valley Sinop Syktyvkar\n"
+"X-POFile-SpellExtra: Hillerød Ajaria Appleby Kirkcudbright Abong Glama\n"
+"X-POFile-SpellExtra: Kimberley Sulawesi Afamba Lothian Caernarfon Phra Ob\n"
+"X-POFile-SpellExtra: Vigan Pattani Minh Lovech Ağr Camarines Durango\n"
+"X-POFile-SpellExtra: Kayah Panaji Proper rşehir Kretinga Utena Hentiy\n"
+"X-POFile-SpellExtra: Satu Thanh Thani Madinah Lamphu Aguak Bien Mambajao\n"
+"X-POFile-SpellExtra: Barberà Kenge Karachay Sobota Çorum Pitcairn\n"
+"X-POFile-SpellExtra: Baghdad Kangwŏn Thai Mbengwi Inongo Seinäjoki\n"
+"X-POFile-SpellExtra: Adapazar Krishna Tanjung Biržai Tra Trebinje Tre\n"
+"X-POFile-SpellExtra: Caernarfonshire Veliko Merionethshire Denpasar Varna\n"
+"X-POFile-SpellExtra: Qostanay Burgonha Adygeya Baix Orinoco Damietta\n"
+"X-POFile-SpellExtra: Northland Maribor Douala Phatthalung Banff Nyala\n"
+"X-POFile-SpellExtra: Salween Capellen Râmnicu Pallars Tinh Saipan\n"
+"X-POFile-SpellExtra: Saltillo Baia Dubaï Dawei Xanthi Ho Ha Kota Bitlis\n"
+"X-POFile-SpellExtra: Basse Bénoué Radnorshire Tripura Trat Kardzhali\n"
+"X-POFile-SpellExtra: Essex Anglesey Lahti Wigtownshire Iulia Bamenda\n"
+"X-POFile-SpellExtra: Carstenz Jonglei Suphan Tipperary Adana Ust Amnat\n"
+"X-POFile-SpellExtra: Sligo Suert Tullamore Öskemen Denbigh Messinia\n"
+"X-POFile-SpellExtra: Samtskhe Ubon Pyrgos Anadyr Frauenfeld Udon Delémont\n"
+"X-POFile-SpellExtra: Urgell Nyong Yaren Jaya Chainat Polygyros Kazlų\n"
+"X-POFile-SpellExtra: Empordà Phichit Raipur Masbate Khanty Varėna Mayo\n"
+"X-POFile-SpellExtra: Mayi Braşov Saynshand Tessalonica Garrotxa Muthanna\n"
+"X-POFile-SpellExtra: Najran Goriška Balkaria Tawi Chalcis Hung Mamfé\n"
+"X-POFile-SpellExtra: Pagėgiai Kuantan Papeete Nghia Isiro Silistra Samara\n"
+"X-POFile-SpellExtra: Smolyan Coahuila Arbil Hunedoara Ipswich Lleida Bahr\n"
+"X-POFile-SpellExtra: Chennai Ialomiţa Ipoh Surin Buri Dak Dau Lazdijai\n"
+"X-POFile-SpellExtra: Khon Phet Connacht Vlasenica Manokwari Iraklio\n"
+"X-POFile-SpellExtra: Kamchatsky Granollers Ayeyarwady Lubumbashi Irrawaddy\n"
+"X-POFile-SpellExtra: Shymkent Basle Rang Taranaki Tay Phocis Stirlingshire\n"
+"X-POFile-SpellExtra: Hereford Tan Sohag Tak Mbalmayo Rostov Kalemie\n"
+"X-POFile-SpellExtra: Carniola Waikato Gisborne Romblon Midlothian Nauru\n"
+"X-POFile-SpellExtra: Alabel Nevis Bistriţa Antipolo Chiapas Targovishte\n"
+"X-POFile-SpellExtra: Kalinga Kelmė Solothurn Neringa Tabasco Dagestan\n"
+"X-POFile-SpellExtra: Malakal Boende Aga Kirkcudbrightshire Nonthaburi My\n"
+"X-POFile-SpellExtra: Darhan Vallée Satakunta Foumban Neva Piteşti\n"
+"X-POFile-SpellExtra: Malolos Malacca Said Dornogovĭ Khakassia Dundgovĭ\n"
+"X-POFile-SpellExtra: Bafia Mot Altay Quang Altai kkale Dien Ude Drobeta\n"
+"X-POFile-SpellExtra: Ben Sultan Grisons Dvina Tampere Bart Bayombong Pays\n"
+"X-POFile-SpellExtra: Javakheti Danay Hermosillo Amalie Chelmsford Kupang\n"
+"X-POFile-SpellExtra: Serowe Misamis Bryansk Nikolaos Digos Franche Dobrich\n"
+"X-POFile-SpellExtra: Tarlac Dalalven Kajaani Catarman Sălaj Quirino\n"
+"X-POFile-SpellExtra: Aqmola Sangmélima Makhachkala Damanhur Maha Uri Urt\n"
+"X-POFile-SpellExtra: Timiş Kastamonu Magadan Viet Shamaliyah Zagazig\n"
+"X-POFile-SpellExtra: Kanye Mold Kwango Sliven Doboj Artvin Île Édéa\n"
+"X-POFile-SpellExtra: Anykščiai Tibre Karditsa Kinley Yaroslavl Ordu\n"
+"X-POFile-SpellExtra: Nevşehir Erzincan Kursk Maresme Gorica Lappeenranta\n"
+"X-POFile-SpellExtra: Llanelli Kamchatka Norfolk Cyclades Prekmurje Achaea\n"
+"X-POFile-SpellExtra: Sheikh Tavastia Ghanzi Picardie Malatya Joniškis\n"
+"X-POFile-SpellExtra: Agartala Funafuti Alexandroupolis Himachal Ignalina\n"
+"X-POFile-SpellExtra: Indigirka Bataan Lamphun pukto Perm Wouri Sava\n"
+"X-POFile-SpellExtra: Peebles Šilalė Sakha Marijampolė Omsk Menoua\n"
+"X-POFile-SpellExtra: Khabarovsk Ket Bacău Stans Lucknow Slobozia\n"
+"X-POFile-SpellExtra: Montblanc Ituri Rokiškis Mataró Rizal Peeblesshire\n"
+"X-POFile-SpellExtra: Maharashtra Argostoli Peshawar Tacloban Ratchasima\n"
+"X-POFile-SpellExtra: Remich Maramureş Stara Aberdeenshire Amur Giang\n"
+"X-POFile-SpellExtra: Cavite Patna Asir city Dipolog Kakheti Bayburt\n"
+"X-POFile-SpellExtra: Saratov Castlebar Terengganu Garraf Kupiškis Noun\n"
+"X-POFile-SpellExtra: Yabassi Govĭsümber Kura Osmaniye Ribe Zonguldak\n"
+"X-POFile-SpellExtra: Katanga Aabenraa Buckinghamshire Montsià Fako Tula\n"
+"X-POFile-SpellExtra: Ngaoundéré Jaipur Ribera Al Govĭ Kolwezi Koronadal\n"
+"X-POFile-SpellExtra: Aylesbury Dniester Pachuca Legazpi Kudarat Kalmykia\n"
+"X-POFile-SpellExtra: Istria Jewish Borongan Iloilo Momo Phu Limassol\n"
+"X-POFile-SpellExtra: Soltustik Équateur Durham Nayok Thurgovia Bahru\n"
+"X-POFile-SpellExtra: Qazaqstan Shyghys Negeri Lualaba Bamboutos Pallini\n"
+"X-POFile-SpellExtra: Suffolk Sorsogon Pernik Ngai Mtianeti Bontoc Phuc\n"
+"X-POFile-SpellExtra: Paphos Pampanga Kent Tshopo Uttaradit Loikaw Thuan\n"
+"X-POFile-SpellExtra: Maguindanao Iğd Inoubou Akono Jutland Bayanhongor\n"
+"X-POFile-SpellExtra: Wanganui Šakiai Beheira Ulaangom Voronezh Kwangwang\n"
+"X-POFile-SpellExtra: Shida Kranj Tura Rustavi Manawatu Severin Ulan Koupé\n"
+"X-POFile-SpellExtra: Feliu Kincardineshire Alytus Xalapa Karelia Zambales\n"
+"X-POFile-SpellExtra: yaman Whakatane Warab Benguet Krasnodar Meme Buta\n"
+"X-POFile-SpellExtra: Thap Famagusta Irkutsk Tarawa Bangalore Kaluga\n"
+"X-POFile-SpellExtra: Kinross Saransk Rasŏn Haddington Northumberland Krai\n"
+"X-POFile-SpellExtra: Kani Craiova Prachin Chukotka Nanga Sawan Kapoita\n"
+"X-POFile-SpellExtra: Marlborough Biliran Culiacán Ketunjia Chikhalsi\n"
+"X-POFile-SpellExtra: Oranjestad Tlaxcala Magnésia Semarang Sarakham Bui\n"
+"X-POFile-SpellExtra: Roxburgh Bua Fashir Kymenlaakso Tver Phtiotis Sharjah\n"
+"X-POFile-SpellExtra: Sugala Ploieşti Whangarei Cornualha Naujoji Mansia\n"
+"X-POFile-SpellExtra: Amphissa Dalanzadgad Perak Altdorf Yambio Batanes\n"
+"X-POFile-SpellExtra: Cumberland urfa Sudan Jolo Aqtöbe Hpa Kaélé\n"
+"X-POFile-SpellExtra: Grevenmacher Manresa Basseterre Chari Zugdidi\n"
+"X-POFile-SpellExtra: Ayrshire Pleven Volos Corinthia Kohima Jyväskylä\n"
+"X-POFile-SpellExtra: Atyrau Dornoch Caithness Longford Pori Konya Tambov\n"
+"X-POFile-SpellExtra: Sulu Rapti Jayapura Koryakia Pagadian Lucerne Forfar\n"
+"X-POFile-SpellExtra: Normandie Naryan Chilpancingo Mokolo Lagawe Barnaul\n"
+"X-POFile-SpellExtra: Tyumen Basrah Öndörhaan Frederiksberg Khantia\n"
+"X-POFile-SpellExtra: Damazin Kabunsuan Giresun Occidental Phayao Nidwald\n"
+"X-POFile-SpellExtra: Mesto Burdur Bangem Mare Auckland Nizhny Punjab Mari\n"
+"X-POFile-SpellExtra: Denbighshire Vaslui Batys Phuket Banffshire Bacolod\n"
+"X-POFile-SpellExtra: Zemo Louti Louth Noguera Penza Shetland Bengkulu\n"
+"X-POFile-SpellExtra: Vianden Liestal Buea Chania Guria Pahang Ayutthaya on\n"
+"X-POFile-SpellExtra: of Sarangani Sittwe Kangwŏndo Uliastay Hanga NL\n"
+"X-POFile-SpellExtra: Tekirdağ Savonia Focşani Åland Luxor Sabah Bator\n"
+"X-POFile-SpellExtra: Vaud Birobidzhan Plenty Bihor Colima Haengjŏnggu\n"
+"X-POFile-SpellExtra: Azad Hoi Canterbury Chagang Chigu Derbyshire Mijaran\n"
+"X-POFile-SpellExtra: Şanl Švenčionys Murmansk Boac Leyte Kaliningrad\n"
+"X-POFile-SpellExtra: Morelos Sinŭiju Uthai ad Kalibo Hoa al an Pirkanmaa\n"
+"X-POFile-SpellExtra: Phetchaburi Kinabalu Darling Plungė Sarawak Lao\n"
+"X-POFile-SpellExtra: Bayan Lai Yalu Lak Damir Auvergne Chur Lat Jenissei\n"
+"X-POFile-SpellExtra: Gauteng Gorno Navan Country Trikala Plymouth Kildare\n"
+"X-POFile-SpellExtra: Almaty Tàrrega Ileia Elista Gironès Solsonès\n"
+"X-POFile-SpellExtra: Camiguin Orhon Miercurea Rovaniemi Itanagar Wiltz\n"
+"X-POFile-SpellExtra: Songkhla Teleorman Mamuju Bridgford Kainuu Phang\n"
+"X-POFile-SpellExtra: Mtskheta Angus Toluca Albay Hamgyŏng Cockburn\n"
+"X-POFile-SpellExtra: Emirados Penang Nkongsamba Sivas Turkana Porvoo\n"
+"X-POFile-SpellExtra: Orenburg Vidin Lipetsk Stavropol Ranchi Vallès\n"
+"X-POFile-SpellExtra: Estany Schwyz Languedoc Garoua Comté Bijeljina\n"
+"X-POFile-SpellExtra: Darfur Dumbartonshire Kutaisi Djérem Samut Janakpur\n"
+"X-POFile-SpellExtra: Jiang Călăraşi Francistown Ruse Balanga\n"
+"X-POFile-SpellExtra: Gümüşhane Selenge Anbar Elektrėnai Ticino\n"
+"X-POFile-SpellExtra: Shabelle Caicos Ukmergė Kyrenia Northampton\n"
+"X-POFile-SpellExtra: Palangkaraya Khaimah Naas Pietermaritzburg Wum Kirov\n"
+"X-POFile-SpellExtra: Tor Okavango Yekaterinburg Yogyakarta Ubayyid\n"
+"X-POFile-SpellExtra: Whiltshire Bedfordshire Kikwit Joensuu Johor Cork\n"
+"X-POFile-SpellExtra: Choybalsan Botoşani Bolu Dispur Haveli Vinh\n"
+"X-POFile-SpellExtra: Pirinéus Buteshire Shropshire Tabuk So Chiang Sa\n"
+"X-POFile-SpellExtra: Tignère Phetchabun yŏngan Dakahlia Uttaranchal\n"
+"X-POFile-SpellExtra: Bornholm Maidstone Ivanovo Igoumenitsa Tuxtla Sarnen\n"
+"X-POFile-SpellExtra: Oder Virac Vizcaya Kaen Kabinda Paisley Inveraray\n"
+"X-POFile-SpellExtra: Nusa Covasna Lausanne Dalkeith Kharga Zhambyl\n"
+"X-POFile-SpellExtra: Melekeok Bandung Xoai Madhya Oaxaca Afyonkarahisar\n"
+"X-POFile-SpellExtra: Ndé Nha Southland Batumi Koshi Lampung Darussalam\n"
+"X-POFile-SpellExtra: Nang Dingwall Montgomeryshire Shillong Vistula Diyala\n"
+"X-POFile-SpellExtra: Euboea Leitrim Polokwane Tarnovo Gandaki Charentes\n"
+"X-POFile-SpellExtra: Baham Glamorgan Tsetserleg Bahah Bac Bal Bai Ram\n"
+"X-POFile-SpellExtra: Bangangté Rai Ras Cabarroguis Arish Palayan\n"
+"X-POFile-SpellExtra: Nairnshire Cavan Thammarat Petrozavodsk Dravograd\n"
+"X-POFile-SpellExtra: Pili Reading Ross Mersch Dorchester Jharkhand\n"
+"X-POFile-SpellExtra: Marinduque Vrancea Evenkia Cook Nong Tomsk Tagum\n"
+"X-POFile-SpellExtra: Kocaeli Sembilan Tam Ninh ash Chaiyaphum Tokelau\n"
+"X-POFile-SpellExtra: Birštonas Vejle Wigtown Et Diamaré Bangka Hidalgo\n"
+"X-POFile-SpellExtra: Ebre Bang Bandjoun Amposta Burgas Surigao Chuvashia\n"
+"X-POFile-SpellExtra: Puigcerdà Nenetsia Gbadolite Rethymno Tanganyika\n"
+"X-POFile-SpellExtra: Olot Malaybalay Mbouda Dudinka Ajman Privolzhsky\n"
+"X-POFile-SpellExtra: Kamphaeng Lancashire Road Xi Thelon Lumbini Limerick\n"
+"X-POFile-SpellExtra: Babil Pakruojis Bulgan Dodecanese Prachuap Kuopio Dhi\n"
+"X-POFile-SpellExtra: Renfrewshire Rodopi Meath Madani Muzaffarabad Cluj\n"
+"X-POFile-SpellExtra: Roskilde Lucia Red Arad Mažeikiai Mudemba Mahakali\n"
+"X-POFile-SpellExtra: Bhubaneswar Nicobar Duong Berga Lomami Thu\n"
+"X-POFile-SpellExtra: Arkhangelsk Tho Zalău Taraz Argolis The Lerwick\n"
+"X-POFile-SpellExtra: Huntingdon Kayin Dumaguete Wexford Hai Ismailia Boyo\n"
+"X-POFile-SpellExtra: Šilutė Kouvola Reşiţa Magwe Cromarty Hau Satun\n"
+"X-POFile-SpellExtra: Aquitaine Mahakam Kingstown Srinagar Bedford\n"
+"X-POFile-SpellExtra: Lanarkshire Kamina Kananga Pangkal Rayong Karnataka\n"
+"X-POFile-SpellExtra: Kaišiadorys Pekanbaru Ky Lasithi Novgorod Ngoko\n"
+"X-POFile-SpellExtra: Karbala river Guider Urais Stonehaven Fulah Rize Umm\n"
+"X-POFile-SpellExtra: Gustavia Kadey Blair Yagoua Nguyen Druskininkai\n"
+"X-POFile-SpellExtra: Manipur Pla Karaganda Songkhram Mvila Saraburi Reus\n"
+"X-POFile-SpellExtra: Kisangani Brahmaputra Aginskoye Yasothon Rabak\n"
+"X-POFile-SpellExtra: Çanakkale Næstved ŏp Chin Jawf Selkirkshire Ilagan\n"
+"X-POFile-SpellExtra: Quintana Wad Klaipėda Chachoengsao Mongala Ripoll\n"
+"X-POFile-SpellExtra: Lahore Fundong Phrya Qar Wasit Batangas Nkambé\n"
+"X-POFile-SpellExtra: Kayseri California Vratsa Kŭmgangsan Littoral Quezon\n"
+"X-POFile-SpellExtra: Dâmboviţa Rajin Corinto Krabi Kaunas Rutland Donu\n"
+"X-POFile-SpellExtra: Kgatleng Maasin Dinh Kirkwall Olt Dong Shannon Khai\n"
+"X-POFile-SpellExtra: Middlesex Guanajuato Târgu Razgrad AizawlRajasthan\n"
+"X-POFile-SpellExtra: Norwich Pskov Luka Tshuapa Dongola shire Mandalgovĭ\n"
+"X-POFile-SpellExtra: Kendari Trowbridge Blanques Camp Cervera Baruun Samar\n"
+"X-POFile-SpellExtra: Boeotia Kars Soc Joanesburgo Son ŭkpyŏl Lanark\n"
+"X-POFile-SpellExtra: Ecija Sibiu Sakhalinsk Gandesa Oryol Grozny Pinang\n"
+"X-POFile-SpellExtra: Qaraghandy Devon Kefallinia Kemijoki Aconcagua\n"
+"X-POFile-SpellExtra: Hertfordshire Ilocos Lekié Din Munster Kim Dolgeliau\n"
+"X-POFile-SpellExtra: Trinidade Mordóvia Surat Postojna Dunedin Samoa Aran\n"
+"X-POFile-SpellExtra: Khi Nenagh Samos Sakon Guam Yangon Kvemo Kabugao\n"
+"X-POFile-SpellExtra: Invercargil Astrakhan Tralee Alofi Océan Kidapawan\n"
+"X-POFile-SpellExtra: Pavlodar Karachi Futuna Majuro Bor rklareli Kribi\n"
+"X-POFile-SpellExtra: Attica Roi Priorat Bukidnon Pont Akhaltsikhe\n"
+"X-POFile-SpellExtra: Mawlamyine Slatina Iaşi Hurghada Mukdahan Grevena\n"
+"X-POFile-SpellExtra: Hertford Vladivostok Shah Pella Shan Kitts\n"
+"X-POFile-SpellExtra: Warwickshire Shibin Tokat Fujairah Altaysk Narmada\n"
+"X-POFile-SpellExtra: Fly namdo Yakutsk Telšiai Mfoumou Odense Nairn\n"
+"X-POFile-SpellExtra: Grenada Evrytania Otago Elaz Preston Murray Agusan\n"
+"X-POFile-SpellExtra: rnak Sur Mandalay Ninawa Kavaratti Baikonur Bages\n"
+"X-POFile-SpellExtra: Aviv Andaman Kurdufan Junaynah Tchollire Chandigarh\n"
+"X-POFile-SpellExtra: Panevėžys Laois Acarnania Mac Mae Sühbaatar Mai\n"
+"X-POFile-SpellExtra: Vendrell Medan Mifi Rethymnon Zug Yangtze Lanh\n"
+"X-POFile-SpellExtra: Mansiysk Kėdainiai Ad Taunton Farners Dumfriesshire\n"
+"X-POFile-SpellExtra: Balsas An Rūda At Cardiff Mullingar Aklan Clervaux\n"
+"X-POFile-SpellExtra: Haskovo Basilan Chanthaburi Dja Sumatra Gaziantep Gia\n"
+"X-POFile-SpellExtra: Morayshire Banyoles Noi Jammu Kalamata Coloma Kochi\n"
+"X-POFile-SpellExtra: Edhessa Kaeo Manengouba Riyad Dundalk Rhodes Limbé\n"
+"X-POFile-SpellExtra: Preveza Kachin Manyu Ciuc Uwayl Vaasa Sŏnbong\n"
+"X-POFile-SpellExtra: Lapland Turku Guerrero Tandag Winchester Ilfov Long\n"
+"X-POFile-SpellExtra: Lisala Somerset Chechénia Mekong Zacatecas Ripollès\n"
+"X-POFile-SpellExtra: Afyon Adamstown Kien Wallis Mochudi Pradesh Chetumal\n"
+"X-POFile-SpellExtra: Qadarif Plateaux Sukhothai Querétaro Alzette\n"
+"X-POFile-SpellExtra: Petropavl Chhatisgarh Minya Kilis Palu Buzău\n"
+"X-POFile-SpellExtra: Ndalatando Qādisiyyah Mexicali Segrià Hovd PleiKu\n"
+"X-POFile-SpellExtra: Hövsgöl Hue Mbam Fribourg Chichester Usumacinta\n"
+"X-POFile-SpellExtra: Tamaulipas Tuguegarao Ozurgeti Draa Vincente Lang\n"
+"X-POFile-SpellExtra: Galway Hyderabad Guimaras Chon Vologda Nagaland Mezam\n"
+"X-POFile-SpellExtra: Ternate Ryazan Menji Donegal Balochistan Tubod Ambon\n"
+"X-POFile-SpellExtra: Kyzyl Kweneng Funen Livadia Surabaya Argyllshire\n"
+"X-POFile-SpellExtra: Phanom Nkam Kerala He Jussà Akonolinga Isulan Mfou\n"
+"X-POFile-SpellExtra: Koper Gori Gorj Sikkim Stafford Alloa Erzurum\n"
+"X-POFile-SpellExtra: Glenrothes Poitou Zuunmod Lodja Stirling Barthelemy\n"
+"X-POFile-SpellExtra: Raseiniai Palanga Catbalogan kesir Giurgiu Mizoram\n"
+"X-POFile-SpellExtra: Offaly Nauplie Mahanadi Boumba Yuzhno Kafr\n"
+"X-POFile-SpellExtra: Susquehanna Ayd Leinster Makkah Yalova Bisbal Mfoundi\n"
+"X-POFile-SpellExtra: Hakkari Prakan Kokkola Ayr Ölgiy Sagaing Adamawa\n"
+"X-POFile-SpellExtra: Cotabato Phuoc Monaghan Sing Belitung Tigris Iba\n"
+"X-POFile-SpellExtra: Zenica Imereti Cao Can Sindh Hämeenlinna Charoen\n"
+"X-POFile-SpellExtra: Pontianak Perlis Myitkyina Gandhinagar Taunggyi\n"
+"X-POFile-SpellExtra: Holyhead Muş Ardahan Arta Trakai Oita Kumba Kumbo\n"
+"X-POFile-SpellExtra: Wick Tuy Tuyen Tauragė Yamalia Sussex Palembang\n"
+"X-POFile-SpellExtra: Ringkjøbing Samsun Haifa Kangar Sulaymaniyah Bukavu\n"
+"X-POFile-SpellExtra: Thong Ipil Palikir Eboko Århus Catanduanes Aceh\n"
+"X-POFile-SpellExtra: Echternach Timişoara Tatarstan Kostroma Nanggroe\n"
+"X-POFile-SpellExtra: Cardigan Daugava Oxfordshire Luebo Ryanggang\n"
+"X-POFile-SpellExtra: Yokadouma Yambol Palawan Vinson Kyustendil\n"
+"X-POFile-SpellExtra: Mangghystau Samarinda Tien Vall Mbandaka Molėtai\n"
+"X-POFile-SpellExtra: Napier Kiribati Cerdanya Binh Kostanai Laconia\n"
+"X-POFile-SpellExtra: Ossétia Banjarmasin Kellé France Hastings Najaf\n"
+"X-POFile-SpellExtra: Thien Amu Ålborg Katerini Jonava Éséka Thiet Khiri\n"
+"X-POFile-SpellExtra: Muğla Nakhon Erdenet Kalimantan Sennar\n"
+"X-POFile-SpellExtra: Huntingdonshire Ntui Kindu Batman Nelspruit Nuevo\n"
+"X-POFile-SpellExtra: Roussilon Pathein Ratchaburi Nadu Kahramanmaraş\n"
+"X-POFile-SpellExtra: Çank Jubba Puebla Ribagorça Gassim cLulua\n"
+"X-POFile-SpellExtra: Berwickshire Denizli Phan Móra Mpumalanga Terre\n"
+"X-POFile-SpellExtra: Suceava Flintshire Mbang Yucatán Clonmel Mati Shumen\n"
+"X-POFile-SpellExtra: Maluku Romanija Hakha Vilkaviškis Tunceli Qyzylorda\n"
+"X-POFile-SpellExtra: Mon Bursa Neamţ Carrick Bilecik Ngo Mersin\n"
+"X-POFile-SpellExtra: Bashkortostan Orda Isparta Mikkeli Llobregat\n"
+"X-POFile-SpellExtra: Ostrobothnia Kwilu Herisau Ordynsky Gorontalo\n"
+"X-POFile-SpellExtra: Berguedà Petropavlovsk Warwick Makassar Unity\n"
+"X-POFile-SpellExtra: Vanuatu Ongtüstik Dnieper Monatele Lebialem Nylandia\n"
+"X-POFile-SpellExtra: Honiara Tshabong Bafoussam Apia Constanţa Mollerussa\n"
+"X-POFile-SpellExtra: Sakhalin Alânia Glenfield Kashmir Samegrelo Rach\n"
+"X-POFile-SpellExtra: Svaneti Azur Westmeath Gargždai Sion Veracruz\n"
+"X-POFile-SpellExtra: Morelia Sverdlovsk Kanchanaburi Obwald Cabadbaran\n"
+"X-POFile-SpellExtra: Prienai Kavala Lom Titicaca Lop Bulacan Evros Gilgit\n"
+"X-POFile-SpellExtra: Choyr Aqtau Monmouth Inverness Maroua Phong Jazirah\n"
+"X-POFile-SpellExtra: Kapuas Tulcea Kabardino Batouri Segarra Livingston\n"
+"X-POFile-SpellExtra: Anoia Gharbia Ennis Oulu Rønne Apayao Sepik Ang\n"
+"X-POFile-SpellExtra: Chios Yen Euphrates Matadi Zamboanga Banja Elbe Trece\n"
+"X-POFile-SpellExtra: Pelangi Sort Suef Noumea Yaqui Taymyria Brazos Magway\n"
+"X-POFile-SpellExtra: Prahova Pembrokeshire Lam Grey yŏngyang Morpeth\n"
+"X-POFile-SpellExtra: Kilkenny Plovdiv Kalvarija Ambam Eyre Aberdeen\n"
+"X-POFile-SpellExtra: Thiruvananthapuram Sakarya Kemerovo Mechi Pondicherry\n"
+"X-POFile-SpellExtra: Bangued Hatay Ömnögovĭ Vâlcea Ambrolauri Aruba Ba\n"
+"X-POFile-SpellExtra: Meghalaya Clackmannanshire Garrigues Tremp Bertoua\n"
+"X-POFile-SpellExtra: Shariff Dorset Lechkhumi Equatoria Salah Krasnoyarsk\n"
+"X-POFile-SpellExtra: Tyva Christchurch Šiauliai Piatra Dhawalagiri Aarau\n"
+"X-POFile-SpellExtra: Mersa Florina Nagar Marawi Qalyubia Hudud Godavari\n"
+"X-POFile-SpellExtra: Izhevsk Cebu Sokolac Sinaloa Blenheim Damão Wau\n"
+"X-POFile-SpellExtra: Abkhazia Kolyma Chumphon Eskişehir Hagåtña Conca\n"
+"X-POFile-SpellExtra: KwaZulu Kastoria Kelantan Cheshire Chester\n"
+"X-POFile-SpellExtra: Vladikavkaz Siirt Aksaray Maun Tagbilaran Balaguer\n"
+"X-POFile-SpellExtra: Târgovişte Nga Kassala Novosibirsk Gall Outer\n"
+"X-POFile-SpellExtra: Taldykorgan Diyarbak Arvayheer Gabrovo Castries Jambi\n"
+"X-POFile-SpellExtra: Hawke Bali Shimla Palana Komi Ratchathani Arhangay\n"
+"X-POFile-SpellExtra: Andhra Hwanghae Akmenė Ringkøbing Tarragonès\n"
+"X-POFile-SpellExtra: Herefordshire Radviliškis Uşak Larisa Narathiwat\n"
+"X-POFile-SpellExtra: Ogooue Tel Perthshire Bentiu Koung Yoshkar Berkshire\n"
+"X-POFile-SpellExtra: Nghe Ntem Dumbarton Pamaiba Päijänne Phitsanulok\n"
+"X-POFile-SpellExtra: Marigot Ubangi Déo Irian Ndombe Telavi Mouth\n"
+"X-POFile-SpellExtra: Ulyanovsk Berwick Udmurtia Rajastão Kuching Buryatia\n"
+"X-POFile-SpellExtra: Panglima Ebolowa Weser Gloucestershire Otsu Oroquieta\n"
+"X-POFile-SpellExtra: Nalchik Campeche Bohol Molepolole Harghita Sanaga\n"
+"X-POFile-SpellExtra: Thua arta Indus Lulua Martires Guliston Luapula\n"
+"X-POFile-SpellExtra: Gwembe Mkushi Ndola Sesheke Kasempa Nyanga Copperbelt\n"
+"X-POFile-SpellExtra: Shangombo Bubi Kabompo Chavuma Livingstone Beitbridge\n"
+"X-POFile-SpellExtra: Rushinga Kalomo Mazowe Nyimba Chipinge Batken Chiengi\n"
+"X-POFile-SpellExtra: Tsholotsho Kadoma Mwenezi Dhamar Ibb dah Siavonga\n"
+"X-POFile-SpellExtra: Chirumhanzu Mudzi Binga Adan Fergana Zvishavane Seke\n"
+"X-POFile-SpellExtra: Mambwe Namangan Monze Mpongwe Kawambwa Kaputa Kitwe\n"
+"X-POFile-SpellExtra: Chingola Choma Toshkent Samfya Qaraqalpaqstan Masaiti\n"
+"X-POFile-SpellExtra: Bikita Buhera Sughd Dashhowuz Zaka Shamva Kul Mbala\n"
+"X-POFile-SpellExtra: Termez Mufumbwe Luwingu Kapiri Chimanimani Chegutu\n"
+"X-POFile-SpellExtra: Mutoko Khatlon Chongwe Chipata izz Mufulira Mungwi\n"
+"X-POFile-SpellExtra: Jizzax Sirdaryo Ahal Sinazongwe Qarshi Serenje Chivi\n"
+"X-POFile-SpellExtra: Lundazi Kwekwe Kalulushi Jalal Khorugh Bayda Itezhi\n"
+"X-POFile-SpellExtra: Mazabuka Kofarnihon Senanga Chililabombwe Osh Nukus\n"
+"X-POFile-SpellExtra: Mahri Kazungula Mposhi Karotegin UMP Lufwanyama ona\n"
+"X-POFile-SpellExtra: Kalabo Bukhara Insiza Kabwe Mahwit Mongu Shurugwi\n"
+"X-POFile-SpellExtra: Mpulungu Farg Urganch Khujand Chibombo Abyan Balkan\n"
+"X-POFile-SpellExtra: Goromonzi Mumbwa Shabwah Qashqadaryo Lebap Nchelenge\n"
+"X-POFile-SpellExtra: Kariba Zvimba Katete Qurghonteppa Wedza Mwinilunga\n"
+"X-POFile-SpellExtra: Gokwe Namwala Gutu Xorazm Andijon Sanaa Umguza Hajjah\n"
+"X-POFile-SpellExtra: Lukulu Mwense Muzarabani Issyk Kasama Chadiza Naryn\n"
+"X-POFile-SpellExtra: Bulilimamangwe Mberengwa Isoka Surxondaryo Mutasa\n"
+"X-POFile-SpellExtra: Matobo Luanshya Kaoma Chikomba Mporokoso Luangwa\n"
+"X-POFile-SpellExtra: Solwezi Shahri Viloyati rib Guruve Makonde Nkayi\n"
+"X-POFile-SpellExtra: Hwange Buxoro Hadramaout Umzingwane Chui Milenge\n"
+"X-POFile-SpellExtra: Kafue Navoiy Hudaydah Mount Petauke Makoni Murehwa\n"
+"X-POFile-SpellExtra: Chilubi Nakonde Tezhi Hurungwe Mpika Chiredzi\n"
+"X-POFile-SpellExtra: Chinsali Amran Lahij Samarqand Aizawl Triesenberg\n"
+"X-POFile-SpellExtra: Dakhiliyah Musandam Batinah Borgo Acquaviva\n"
+"X-POFile-SpellExtra: Schelienberg Fiorentino Ruggell Featano Mauren\n"
+"X-POFile-SpellExtra: Chiesanouva Batzers Marggiore Serravalle di Grampin\n"
+"X-POFile-SpellExtra: Domagnano Planken Montegiardino Eschen Schaan Triesen\n"
+"X-POFile-SpellExtra: Dhofar Dhahirah Wusta Città Gamprin Balzers\n"
+"X-POFile-SpellExtra: Zabaykalsky Mangan Tamenglong Senapati Ambassa Dhalai\n"
+"X-POFile-SpellExtra: Geyzing Namchi Thoubal Jiribam Ukhrul Chandel Udaipur\n"
+"X-POFile-SpellExtra: Bishnupur Kailashahar Churachandpur Maggiore Arica\n"
+"X-POFile-SpellExtra: Valvidia Parinacota Valdivia Stavropoli Pakur\n"
+"X-POFile-SpellExtra: Bicholim Nalbari Dhemaji Kamrup Nagaon Chatra\n"
+"X-POFile-SpellExtra: Chaibasa Anglong Chamba Sahibhganj Hailakandi Chaudi\n"
+"X-POFile-SpellExtra: Peo Marigaon Harzaribag Sanguem Mandi Reckong Bardez\n"
+"X-POFile-SpellExtra: Simdega Bokaro Kokrajhar Karimganj Jamshedpur Lahul\n"
+"X-POFile-SpellExtra: Tiswadi Deoghar Haflong Koderma Diphu Karbi Sibsagar\n"
+"X-POFile-SpellExtra: Jorhat Darrang Kullu Tinsukia Jamtara Singhbhum\n"
+"X-POFile-SpellExtra: Mormugao Hazaribag Salcette Pargana Daltonganj Gumla\n"
+"X-POFile-SpellExtra: Santhal Sirmaur Solan Quepem Golaghat Dumka Pernem\n"
+"X-POFile-SpellExtra: Bilaspur Ponda Garhwa Kyelang Barpeta Valpoi Kinnaur\n"
+"X-POFile-SpellExtra: Canacona Dibrugarh Hamirpur Sonitpur Latehar Dhanbad\n"
+"X-POFile-SpellExtra: Dharamsala Sahibganj Dhuburi Goalpara Palamu Godda\n"
+"X-POFile-SpellExtra: Cachar Silchar Giridih Bongaigaon Panjim Seraikela\n"
+"X-POFile-SpellExtra: Lohardaga Margao Satari Guwahati Mapusa Spiti Kangra\n"
+"X-POFile-SpellExtra: Lakhimpur Lahaul Vishakhapatnam Ahwa Himmatnagar\n"
+"X-POFile-SpellExtra: Nalgonda Rohtak Prakasam Narnaul Kaithal Rangareddy\n"
+"X-POFile-SpellExtra: Dhamtari Jashpur Panch Adilabad Hisar Ahmedabad Kumey\n"
+"X-POFile-SpellExtra: Banaskantha Porbandar Kakinada Karimnagar\n"
+"X-POFile-SpellExtra: Chhattisgarh Kurnool Bharuch Mahasamund Tirap Koriya\n"
+"X-POFile-SpellExtra: Lohit Mahbubnagar Champa Sonipat Jind Sangareddy\n"
+"X-POFile-SpellExtra: Changlang Dahod Bomdila Jamnagar Tapi Rajnandgaon\n"
+"X-POFile-SpellExtra: Rajpipla Gurgaon Rajkot Yamuna Hawai Kurukshetra\n"
+"X-POFile-SpellExtra: Along Anantapur Surendernagar Fatehabad Godhra Dang\n"
+"X-POFile-SpellExtra: Karnal Sabarkantha Srikakulam Tezu Tawang Anand\n"
+"X-POFile-SpellExtra: Subansiri Khonsa Khammam Vadodara Mahendragarh\n"
+"X-POFile-SpellExtra: Raigarh Ambala Junagadh Panipat Kutch Bhavnagar\n"
+"X-POFile-SpellExtra: Navsari Jagdalpur Panchmahal Kheda Anjaw\n"
+"X-POFile-SpellExtra: Machilipatnam Pasighat Mahal Dantewada Surguja\n"
+"X-POFile-SpellExtra: Kachchh Vyara Chittoor Bhuj Rewari Nellore Kanker\n"
+"X-POFile-SpellExtra: Mewat Panchkula Ongole Seppa Vizianagaram Bhiwani\n"
+"X-POFile-SpellExtra: Siang Nuh Yingyong Anini Yupia Eluru Amreli Ambikapur\n"
+"X-POFile-SpellExtra: Warangal Jhajjar Korba Daporijo Papumpare Koloriang\n"
+"X-POFile-SpellExtra: Janjgir Faridabad Karung Arunchal Palwal Guntur Roing\n"
+"X-POFile-SpellExtra: Medak Ziro Dibang Palanpur Cuddapah Valsad Dangs\n"
+"X-POFile-SpellExtra: Baikunthpur Durg Mehsana Patan Kameng Sirsa\n"
+"X-POFile-SpellExtra: Yamunanagar Kawardha Voblast Carmarthenshire\n"
+"X-POFile-SpellExtra: Yingkiong Goygol Wiltshire Papum Surendranagar\n"
+"X-POFile-SpellExtra: Dolgellau Kurung Karlskrona Cabezas Krishnanagar\n"
+"X-POFile-SpellExtra: Pakhtunkhwa Khyber Baltistan Inírida Kabirdham Aweil\n"
+"X-POFile-SpellExtra: Badulla Sabaragamuwa Jaffna Kurunegala Anuradhapura\n"
+"X-POFile-SpellExtra: Trincomalee Galle Kandy Huancayo Ratnapura Alborz\n"
+"X-POFile-SpellExtra: Lamphelpat Karaj Hermanas Tsáchilas Mirabal Huacho\n"
+"X-POFile-SpellExtra: Elena Worcestershire Shirvan Porompat dalatando Ababa\n"
+"X-POFile-SpellExtra: Nairobi El Grã Bel Baton Jiu del Qui el Tiruppur\n"
+"X-POFile-SpellExtra: Ramanathapuram Krishnagiri Kanchipuram Sivagangai\n"
+"X-POFile-SpellExtra: Vilupuram Karur Nagercoil Coimbatore Erode Ariyalur\n"
+"X-POFile-SpellExtra: Tiruvannamalai Nagapattinam Namakkal Karaikal Theni\n"
+"X-POFile-SpellExtra: Dharmapuri Udagamandalam Perambalur Cuddalore Vellore\n"
+"X-POFile-SpellExtra: Thiruvallur Dindigul Tirunelveli Pudukkottai\n"
+"X-POFile-SpellExtra: Thiruvarur Thoothukudi Tiruchirappalli Virudhunagar\n"
+"X-POFile-SpellExtra: Thanjavur Türkmenabat Bains Mayabeque Rhodope\n"
+"X-POFile-SpellExtra: Hongseong Zinjibar Mukalla Vorpommern Ataq\n"
+"X-POFile-SpellExtra: Tessalónica Velay Anau Kanyakumari Balkanabat les\n"
+"X-POFile-SpellExtra: Uusimaa Kefalonia Nilgiris Châlons Artemisa Ghaydah\n"
+"X-POFile-SpellExtra: Elis Leuven Naâma Shabran Parun Saïda Logar Cuiabá\n"
+"X-POFile-SpellExtra: Macapá Sierra Oghuz Taref Mundemba Champaran Chhapra\n"
+"X-POFile-SpellExtra: Saran Samastipur Supaul Lakhisarai Purbi Gopalganj\n"
+"X-POFile-SpellExtra: Rohtas Madhepura Sasaram Jehanabad Muzaffarpur Buxar\n"
+"X-POFile-SpellExtra: Hajipur Sheohar Aurangabad Katihar Sheikhpura Banka\n"
+"X-POFile-SpellExtra: Nawada Purnia Madhubani Motihari Bhabhua Saharsa\n"
+"X-POFile-SpellExtra: Begusarai Munger Gaya Bettiah Arwal Sitamarhi Kaimur\n"
+"X-POFile-SpellExtra: Darbhanga Nalanda Vaishali Khagaria Jamui Bhojpur\n"
+"X-POFile-SpellExtra: Bhagalpur Kishanganj Siwan Palestinos Kerguelen Dacar\n"
+"X-POFile-SpellExtra: Glace Aland Longyearbyen Sint Monticello Casey Broken\n"
+"X-POFile-SpellExtra: Beulah Salaam Novokuznetsk Kashgar Lome Pohnpei\n"
+"X-POFile-SpellExtra: Bonaire Adak Turk Antigua Mawson Midway Jan Sao\n"
+"X-POFile-SpellExtra: Abidjan Goose Svalbard Choibalsan Vevay Eucla Thunder\n"
+"X-POFile-SpellExtra: Chuuk Samarkand Bermuda Eirunepe es Bermudas Wake\n"
+"X-POFile-SpellExtra: Chatham Inuvik Creston Kiritimati Syowa Chagos\n"
+"X-POFile-SpellExtra: Gambier Khandyga Aaiun Resolute Metlakatla Araguaina\n"
+"X-POFile-SpellExtra: Currie Macquarie Dawson Pangnirtung Blanc Toquelau\n"
+"X-POFile-SpellExtra: Kwajalein Inlet Istanbul Aqtobe Lindeman Rainy\n"
+"X-POFile-SpellExtra: Mazatlan Sitka Louisville Tongatapu Cancun Rankin\n"
+"X-POFile-SpellExtra: Moncton Rarotonga Kosrae Danmarkshavn Taiti Maarten\n"
+"X-POFile-SpellExtra: Efate Atikokan Guernsey Howe Johnston Aden\n"
+"X-POFile-SpellExtra: Scoresbysund Sablon Vostok Curaçao Faroe Troll Mayen\n"
+"X-POFile-SpellExtra: Godthab Matamoros Acra Vancouver Ojinaga Tell\n"
+"X-POFile-SpellExtra: Busingen Marengo Vincennes Guadalcanal Knox Urville\n"
+"X-POFile-SpellExtra: Man Fakaofo UTC Thule Kralendijk Mayotte Anchorage\n"
+"X-POFile-SpellExtra: Nipigon Mahe McMurdo Tijuana Banderas Blantyre\n"
+"X-POFile-SpellExtra: Winamac Nera Menominee Enderbury Srednekolymsk\n"
+"X-POFile-IgnoreConsistency: Comment\n"
+"X-POFile-SpellExtra: Bougainville pt\n"
+
+#: package/contents/config/config.qml:19
+#, kde-format
+msgid "Appearance"
+msgstr "Aparência"
+
+#: package/contents/config/config.qml:24
+#, kde-format
+msgid "Calendar"
+msgstr "Calendário"
+
+#: package/contents/config/config.qml:29
+#: package/contents/ui/CalendarView.qml:589
+#, kde-format
+msgid "Time Zones"
+msgstr "Fusos-Horários"
+
+#: package/contents/ui/CalendarView.qml:102
+#, kde-format
+msgid "Events"
+msgstr "Eventos"
+
+#: package/contents/ui/CalendarView.qml:110
+#, kde-format
+msgctxt "@action:button Add event"
+msgid "Add…"
+msgstr "Adicionar…"
+
+#: package/contents/ui/CalendarView.qml:114
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Add a new event"
+msgstr "Adicionar um novo evento"
+
+#: package/contents/ui/CalendarView.qml:156
+#, kde-format
+msgctxt "Format: month year"
+msgid "%1 %2"
+msgstr "%1 de %2"
+
+#: package/contents/ui/CalendarView.qml:190
+#, kde-format
+msgid "Keep Open"
+msgstr "Manter Aberto"
+
+#: package/contents/ui/CalendarView.qml:215
+#, kde-format
+msgid "Days"
+msgstr "Dias"
+
+#: package/contents/ui/CalendarView.qml:220
+#, kde-format
+msgid "Months"
+msgstr "Meses"
+
+#: package/contents/ui/CalendarView.qml:225
+#, kde-format
+msgid "Years"
+msgstr "Anos"
+
+#: package/contents/ui/CalendarView.qml:245
+#, kde-format
+msgid "Previous month"
+msgstr "Mês anterior"
+
+#: package/contents/ui/CalendarView.qml:247
+#, kde-format
+msgid "Previous year"
+msgstr "Ano anterior"
+
+#: package/contents/ui/CalendarView.qml:249
+#, kde-format
+msgid "Previous decade"
+msgstr "Década anterior"
+
+#: package/contents/ui/CalendarView.qml:270
+#, kde-format
+msgctxt "Reset calendar to today"
+msgid "Today"
+msgstr "Hoje"
+
+#: package/contents/ui/CalendarView.qml:271
+#, kde-format
+msgid "Reset calendar to today"
+msgstr "Repor o calendário para hoje"
+
+#: package/contents/ui/CalendarView.qml:287
+#, kde-format
+msgid "Next month"
+msgstr "Mês seguinte"
+
+#: package/contents/ui/CalendarView.qml:289
+#, kde-format
+msgid "Next year"
+msgstr "Ano seguinte"
+
+#: package/contents/ui/CalendarView.qml:291
+#, kde-format
+msgid "Next decade"
+msgstr "Década seguinte"
+
+#: package/contents/ui/CalendarView.qml:556
+#, kde-format
+msgid "No events for today"
+msgstr "Sem eventos para hoje"
+
+#: package/contents/ui/CalendarView.qml:557
+#, kde-format
+msgid "No events for this day"
+msgstr "Sem eventos para este dia"
+
+#: package/contents/ui/CalendarView.qml:598
+#, kde-format
+msgid "Switch…"
+msgstr "Mudar…"
+
+#: package/contents/ui/CalendarView.qml:599
+#: package/contents/ui/CalendarView.qml:602
+#, kde-format
+msgid "Switch to another timezone"
+msgstr "Mudar para outro fuso-horário"
+
+#: package/contents/ui/configAppearance.qml:51
+#, kde-format
+msgid "Information:"
+msgstr "Informação:"
+
+#: package/contents/ui/configAppearance.qml:55
+#, kde-format
+msgid "Show date"
+msgstr "Mostrar a data"
+
+#: package/contents/ui/configAppearance.qml:63
+#, kde-format
+msgid "Adaptive location"
+msgstr "Localização adaptativa"
+
+#: package/contents/ui/configAppearance.qml:64
+#, kde-format
+msgid "Always beside time"
+msgstr "Sempre ao lado da hora"
+
+#: package/contents/ui/configAppearance.qml:65
+#, kde-format
+msgid "Always below time"
+msgstr "Sempre debaixo da hora"
+
+#: package/contents/ui/configAppearance.qml:73
+#, kde-format
+msgid "Show seconds"
+msgstr "Mostrar os segundos"
+
+#: package/contents/ui/configAppearance.qml:81
+#, kde-format
+msgid "Show time zone:"
+msgstr "Mostrar o fuso-horário:"
+
+#: package/contents/ui/configAppearance.qml:86
+#, kde-format
+msgid "Only when different from local time zone"
+msgstr "Só quando diferente do fuso-horário local"
+
+#: package/contents/ui/configAppearance.qml:91
+#, kde-format
+msgid "Always"
+msgstr "Sempre"
+
+#: package/contents/ui/configAppearance.qml:100
+#, kde-format
+msgid "Display time zone as:"
+msgstr "Mostrar o fuso-horário como:"
+
+#: package/contents/ui/configAppearance.qml:105
+#, kde-format
+msgid "Code"
+msgstr "Código"
+
+#: package/contents/ui/configAppearance.qml:106
+#, kde-format
+msgid "City"
+msgstr "Cidade"
+
+#: package/contents/ui/configAppearance.qml:107
+#, kde-format
+msgid "Offset from UTC time"
+msgstr "Deslocamento face à hora UTC"
+
+#: package/contents/ui/configAppearance.qml:119
+#, kde-format
+msgid "Time display:"
+msgstr "Apresentação da hora:"
+
+#: package/contents/ui/configAppearance.qml:124
+#, kde-format
+msgid "12-Hour"
+msgstr "12 Horas"
+
+#: package/contents/ui/configAppearance.qml:125
+#: package/contents/ui/configCalendar.qml:58
+#, kde-format
+msgid "Use Region Defaults"
+msgstr "Usar as Predefinições da Região"
+
+#: package/contents/ui/configAppearance.qml:126
+#, kde-format
+msgid "24-Hour"
+msgstr "24 Horas"
+
+#: package/contents/ui/configAppearance.qml:133
+#, kde-format
+msgid "Change Regional Settings…"
+msgstr "Modificar a Configuração Regional…"
+
+#: package/contents/ui/configAppearance.qml:144
+#, kde-format
+msgid "Date format:"
+msgstr "Formato da data:"
+
+#: package/contents/ui/configAppearance.qml:152
+#, kde-format
+msgid "Long Date"
+msgstr "Data por Extenso"
+
+#: package/contents/ui/configAppearance.qml:157
+#, kde-format
+msgid "Short Date"
+msgstr "Data Abreviada"
+
+#: package/contents/ui/configAppearance.qml:162
+#, kde-format
+msgid "ISO Date"
+msgstr "Data ISO"
+
+#: package/contents/ui/configAppearance.qml:167
+#, kde-format
+msgctxt "custom date format"
+msgid "Custom"
+msgstr "Personalizado"
+
+#: package/contents/ui/configAppearance.qml:198
+#, kde-format
+msgid ""
+"<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
+"\">Time Format Documentation</a>"
+msgstr ""
+"<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
+"\">Documentação do Formato da Hora</a>"
+
+#: package/contents/ui/configAppearance.qml:222
+#, kde-format
+msgctxt "@label:group"
+msgid "Text display:"
+msgstr "Apresentação do texto:"
+
+#: package/contents/ui/configAppearance.qml:224
+#, kde-format
+msgctxt "@option:radio"
+msgid "Automatic"
+msgstr "Automática"
+
+#: package/contents/ui/configAppearance.qml:228
+#, kde-format
+msgctxt "@label"
+msgid ""
+"Text will follow the system font and expand to fill the available space."
+msgstr ""
+"O texto irá seguir o tipo de letra do sistema e expandir-se para preencher o "
+"espaço disponível."
+
+#: package/contents/ui/configAppearance.qml:237
+#, kde-format
+msgctxt "@option:radio setting for manually configuring the font settings"
+msgid "Manual"
+msgstr "Manual"
+
+#: package/contents/ui/configAppearance.qml:247
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose Style…"
+msgstr "Escolher o Estilo…"
+
+#: package/contents/ui/configAppearance.qml:260
+#, kde-format
+msgctxt "@info %1 is the font size, %2 is the font family"
+msgid "%1pt %2"
+msgstr "%2 %1pt"
+
+#: package/contents/ui/configAppearance.qml:271
+#, kde-format
+msgctxt "@title:window"
+msgid "Choose a Font"
+msgstr "Escolher um Tipo de Letra"
+
+#: package/contents/ui/configCalendar.qml:44
+#, kde-format
+msgid "General:"
+msgstr "Geral:"
+
+#: package/contents/ui/configCalendar.qml:45
+#, kde-format
+msgid "Show week numbers"
+msgstr "Mostrar os números das semanas"
+
+#: package/contents/ui/configCalendar.qml:50
+#, kde-format
+msgid "First day of week:"
+msgstr "Primeiro dia da semana:"
+
+#: package/contents/ui/configCalendar.qml:73
+#, kde-format
+msgid "Available Plugins:"
+msgstr "'Plugins' Disponíveis:"
+
+#: package/contents/ui/configTimeZones.qml:90
+#, kde-format
+msgid "Clock is currently using this time zone"
+msgstr "O relógio já está a usar este fuso-horário"
+
+#: package/contents/ui/configTimeZones.qml:100
+#, kde-format
+msgid "Switch Local Time Zone…"
+msgstr "Mudar o Fuso-Horário Local…"
+
+#: package/contents/ui/configTimeZones.qml:109
+#, kde-format
+msgid "Remove this time zone"
+msgstr "Remover este fuso-horário"
+
+#: package/contents/ui/configTimeZones.qml:118
+#, kde-format
+msgid "System's Local Time Zone"
+msgstr "Fuso-Horário Local do Sistema"
+
+#: package/contents/ui/configTimeZones.qml:118
+#, kde-format
+msgid "Additional Time Zones"
+msgstr "Fusos-Horários Adicionais"
+
+#: package/contents/ui/configTimeZones.qml:131
+#, kde-format
+msgid ""
+"Add more time zones to display all of them in the applet's pop-up, or use "
+"one of them for the clock itself"
+msgstr ""
+"Adicione mais fusos-horários para os mostrar a todos na janela da 'applet' "
+"ou use uma delas para o relógio em si"
+
+#: package/contents/ui/configTimeZones.qml:138
+#, kde-format
+msgid "Add Time Zones…"
+msgstr "Adicionar Fusos-Horários…"
+
+#: package/contents/ui/configTimeZones.qml:149
+#, kde-format
+msgid "Switch displayed time zone by scrolling over clock applet"
+msgstr "Mudar o fuso-horário apresentado ao deslizar o elemento do relógio"
+
+#: package/contents/ui/configTimeZones.qml:160
+#, kde-format
+msgid ""
+"Note that using a different time zone for the clock does not change the "
+"systemwide local time zone. When you travel, switch the local time zone "
+"instead."
+msgstr ""
+"Lembre-se que o uso de um fuso-horário diferente para o relógio não muda o "
+"fuso-horário local a nível do sistema. Quando viajar, mude o fuso-horário "
+"local em alternativa."
+
+#: package/contents/ui/configTimeZones.qml:189
+#, kde-format
+msgid "Add More Timezones"
+msgstr "Adicionar Mais Fusos-Horários"
+
+#: package/contents/ui/configTimeZones.qml:200
+#, kde-format
+msgid ""
+"At least one time zone needs to be enabled. Your local timezone was enabled "
+"automatically."
+msgstr ""
+"Pelo menos um dos fusos-horários terá de estar activo. O seu fuso-horário "
+"local foi activado automaticamente."
+
+#: package/contents/ui/configTimeZones.qml:225
+#, kde-format
+msgid "%1, %2 (%3)"
+msgstr "%1, %2 (%3)"
+
+#: package/contents/ui/configTimeZones.qml:225
+#, kde-format
+msgid "%1, %2"
+msgstr "%1, %2"
+
+#: package/contents/ui/main.qml:128
+#, kde-format
+msgid "Copy to Clipboard"
+msgstr "Copiar para a Área de Transferência"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "Adjust Date and Time…"
+msgstr "Acertar a Data e Hora…"
+
+#: package/contents/ui/main.qml:136
+#, kde-format
+msgid "Set Time Format…"
+msgstr "Mudar o Formato da Hora…"
+
+#: package/contents/ui/Tooltip.qml:31
+#, kde-format
+msgctxt "@info:tooltip %1 is a localized long date"
+msgid "Today is %1"
+msgstr "Hoje é %1"
+
+#: plugin/clipboardmenu.cpp:107
+#, kde-format
+msgid "Other Calendars"
+msgstr "Outros Calendários"
+
+#: plugin/clipboardmenu.cpp:115
+#, kde-format
+msgctxt "unix timestamp (seconds since 1.1.1970)"
+msgid "%1 (UNIX Time)"
+msgstr "%1 (Hora do UNIX)"
+
+#: plugin/clipboardmenu.cpp:118
+#, kde-format
+msgctxt "for astronomers (days and decimals since ~7000 years ago)"
+msgid "%1 (Julian Date)"
+msgstr "%1 (Data Juliana)"
+
+#: plugin/timezonemodel.cpp:141
+#, kde-format
+msgctxt "This means \"Local Timezone\""
+msgid "Local"
+msgstr "Local"
+
+#: plugin/timezonemodel.cpp:143
+#, kde-format
+msgid "System's local time zone"
+msgstr "Fuso-horário local do sistema"

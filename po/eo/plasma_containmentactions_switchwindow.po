@@ -1,0 +1,54 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Markus Sunela <markus.sunela@tut.fi>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_containmentactions_switchwindow\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"PO-Revision-Date: 2009-10-24 18:56+0300\n"
+"Last-Translator: Markus Sunela <markus.sunela@tut.fi>\n"
+"Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: property (text), widget (QRadioButton, flatButton)
+#: config.ui:16
+#, kde-format
+msgid "Display all windows in one list"
+msgstr "Montri ĉiujn fenestrojn en unu listo"
+
+#. i18n: ectx: property (text), widget (QRadioButton, subButton)
+#: config.ui:23
+#, kde-format
+msgid "Display a submenu for each desktop"
+msgstr "Montri submenuon por ĉiu labortablo"
+
+#. i18n: ectx: property (text), widget (QRadioButton, curButton)
+#: config.ui:30
+#, kde-format
+msgid "Display only the current desktop's windows"
+msgstr "Montri nur fenestrojn sur la nuna labrotablo"
+
+#: switch.cpp:75
+#, fuzzy, kde-format
+#| msgid "Configure Switch Window Plugin"
+msgctxt "plasma_containmentactions_switchwindow"
+msgid "Configure Switch Window Plugin"
+msgstr "Agordi kromprogramon"
+
+#: switch.cpp:155
+#, kde-format
+msgctxt "plasma_containmentactions_switchwindow"
+msgid "Windows"
+msgstr "Fenestroj"
+
+#: switch.cpp:179 switch.cpp:200 switch.cpp:202
+#, kde-format
+msgctxt "plasma_containmentactions_switchwindow"
+msgid "All Desktops"
+msgstr "Ĉiuj labortabloj"

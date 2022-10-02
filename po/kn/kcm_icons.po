@@ -1,0 +1,315 @@
+# translation of kcmicons.po to Kannada
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Manu B <iammanu@gmail.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmicons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"PO-Revision-Date: 2007-08-31 22:14+0530\n"
+"Last-Translator: Manu B <iammanu@gmail.com>\n"
+"Language-Team: Kannada\n"
+"Language: kn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: iconsizecategorymodel.cpp:14
+#, kde-format
+msgid "Toolbar"
+msgstr "ಸಲಕರಣೆಪಟ್ಟಿ"
+
+#: iconsizecategorymodel.cpp:15
+#, kde-format
+msgid "Main Toolbar"
+msgstr "ಮುಖ್ಯ ಸಲಕರಣೆಪಟ್ಟಿ"
+
+#: iconsizecategorymodel.cpp:16
+#, kde-format
+msgid "Small Icons"
+msgstr "ಚಿಕ್ಕ ಚಿಹ್ನೆಗಳು"
+
+#: iconsizecategorymodel.cpp:17
+#, kde-format
+msgid "Panel"
+msgstr "ಪುಟೀಪು (ಪಾನಲ್)"
+
+#: iconsizecategorymodel.cpp:18
+#, kde-format
+msgid "Dialogs"
+msgstr ""
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, fuzzy, kde-format
+#| msgid "Main Toolbar"
+msgid "Main toolbar icons size"
+msgstr "ಮುಖ್ಯ ಸಲಕರಣೆಪಟ್ಟಿ"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, fuzzy, kde-format
+#| msgid "Small Icons"
+msgid "Small icons size"
+msgstr "ಚಿಕ್ಕ ಚಿಹ್ನೆಗಳು"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr ""
+
+#: main.cpp:182
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: main.cpp:193
+#, fuzzy, kde-format
+#| msgid "Unable to find the icon theme archive %1."
+msgid "Unable to download the icon theme archive: %1"
+msgstr "ಚಿಹ್ನೆ ಪರಿಸರವಿನ್ಯಾಸ (ಥೀಮ್) ಕಡತಾಗಾರ %1 ಲಭ್ಯವಿಲ್ಲ."
+
+#: main.cpp:207
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "ಕಡತವು ಸರಿಯಾದ ಚಿಹ್ನೆ ಪರಿಸರವಿನ್ಯಾಸ (ಥೀಮ್) ಕಡತಾಗಾರವಲ್ಲ."
+
+#: main.cpp:212
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr ""
+"ಅನುಸ್ಥಾಪನೆ ಸಮಯದಲ್ಲಿ ತೊಂದರೆಯುಂಟಾಯಿತು; ಅದಾಗ್ಯೂ, ಕಡತಾಗಾರದಲ್ಲಿರುವ ಬಹುತೇಕ "
+"ಪರಿಸರವಿನ್ಯಾಸಗಳು (ಥೀಮ್) ಅನುಸ್ಥಾಪಿಸಿತವಾಗಿವೆ"
+
+#: main.cpp:216
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: main.cpp:260
+#, fuzzy, kde-format
+#| msgid "Installing icon themes"
+msgid "Installing icon themes…"
+msgstr "ಚಿಹ್ನೆ ಪರಿಸರವಿನ್ಯಾಸಗಳು(ಥೀಮ್) ಅನುಸ್ಥಾಪನೆಗೊಳ್ಳುತ್ತಿವೆ (ಇನ್ಸ್ಟಾಲ್)"
+
+#: main.cpp:270
+#, fuzzy, kde-format
+#| msgid "Installing icon themes"
+msgid "Installing %1 theme…"
+msgstr "ಚಿಹ್ನೆ ಪರಿಸರವಿನ್ಯಾಸಗಳು(ಥೀಮ್) ಅನುಸ್ಥಾಪನೆಗೊಳ್ಳುತ್ತಿವೆ (ಇನ್ಸ್ಟಾಲ್)"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr ""
+
+#: package/contents/ui/main.qml:147
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Remove Icon Theme"
+msgstr "ಪರಿಸರವಿನ್ಯಾಸವನ್ನು (ಥೀಮ್) ತೆಗೆದುಹಾಕು"
+
+#: package/contents/ui/main.qml:154
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Icon Theme"
+msgstr "ಪರಿಸರವಿನ್ಯಾಸವನ್ನು (ಥೀಮ್) ತೆಗೆದುಹಾಕು"
+
+#: package/contents/ui/main.qml:228
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr ""
+
+#: package/contents/ui/main.qml:246
+#, fuzzy, kde-format
+#| msgid "Install New Theme..."
+msgid "Install from File…"
+msgstr "ಹೊಸ ಪರಿಸರವಿನ್ಯಾಸವನ್ನು (ಥೀಮ್) ಅನುಸ್ಥಾಪಿಸು..."
+
+#: package/contents/ui/main.qml:251
+#, fuzzy, kde-format
+#| msgid "Install New Theme..."
+msgid "Get New Icons…"
+msgstr "ಹೊಸ ಪರಿಸರವಿನ್ಯಾಸವನ್ನು (ಥೀಮ್) ಅನುಸ್ಥಾಪಿಸು..."
+
+#: package/contents/ui/main.qml:279
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Open Theme"
+msgstr "ಪರಿಸರವಿನ್ಯಾಸವನ್ನು (ಥೀಮ್) ತೆಗೆದುಹಾಕು"
+
+#: package/contents/ui/main.qml:281
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "ಮನು .ಬಿ"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "iammanu@gmail.com"
+
+#~ msgid "Icons"
+#~ msgstr "ಚಿಹ್ನೆಗಳು"
+
+#~ msgid "Icons Control Panel Module"
+#~ msgstr "ಚಿಹ್ನೆಗಳ ನಿಯಂತ್ರಣ ಪುಟೀಪು (ಪಾನಲ್) ಘಟಕ"
+
+#~ msgid "(c) 2000-2003 Geert Jansen"
+#~ msgstr "(c) 2000-2003 ಗೀಟ್೯ ಜಾನ್ಸನ್"
+
+#~ msgid "Geert Jansen"
+#~ msgstr "ಗೀಟ್೯ ಜಾನ್ಸನ್"
+
+#~ msgid "Antonio Larrosa Jimenez"
+#~ msgstr "ಆಂಟೋನಿಯೋ ಲಾರ್ರೋಸ ಜಿಮಿನೆಜ್"
+
+#~ msgid "Torsten Rahn"
+#~ msgstr "ಟಾರ್ಸ್ಟನ್ ರಾಹ್ನ"
+
+#~ msgid "Use of Icon"
+#~ msgstr "ಚಿಹ್ನೆಯ ಬಳಕೆ"
+
+#, fuzzy
+#~| msgid "Default"
+#~ msgctxt "@label The icon rendered by default"
+#~ msgid "Default"
+#~ msgstr "ಪೂರ್ವನಿಯೋಜಿತ (ಡಿಫಾಲ್ಟ್)"
+
+#, fuzzy
+#~| msgid "Active"
+#~ msgctxt "@label The icon rendered as active"
+#~ msgid "Active"
+#~ msgstr "ಸಕ್ರಿಯ"
+
+#, fuzzy
+#~| msgid "Disabled"
+#~ msgctxt "@label The icon rendered as disabled"
+#~ msgid "Disabled"
+#~ msgstr "ಅಶಕ್ತಗೊಳಿಸಲಾಗಿದೆ"
+
+#~ msgid "Size:"
+#~ msgstr "ಗಾತ್ರ:"
+
+#~ msgid "Set Effect..."
+#~ msgstr "ಪರಿಣಾಮವನ್ನು ನಿಗದಿಗೊಳಿಸು..."
+
+#~ msgid "All Icons"
+#~ msgstr "ಎಲ್ಲಾ ಚಿಹ್ನೆಗಳು"
+
+#~ msgid "Setup Default Icon Effect"
+#~ msgstr "ಪೂರ್ವನಿಯೋಜಿತ (ಡಿಫಾಲ್ಟ್) ಚಿಹ್ನೆಯ ಪರಿಣಾಮವನ್ನು ನಿಗದಿಗೊಳಿಸು"
+
+#~ msgid "Setup Active Icon Effect"
+#~ msgstr "ಸಕ್ರಿಯ ಚಿಹ್ನೆಯ ಪರಿಣಾಮವನ್ನು ನಿಗದಿಗೊಳಿಸು"
+
+#~ msgid "Setup Disabled Icon Effect"
+#~ msgstr "ನಿಷ್ಕ್ರಿಯ ಚಿಹ್ನೆಯ ಪರಿಣಾಮವನ್ನು ನಿಗದಿಗೊಳಿಸು"
+
+#~ msgid "&Effect:"
+#~ msgstr "&ಪರಿಣಾಮ"
+
+#~ msgid "No Effect"
+#~ msgstr "ಪರಿಣಾಮವಿಲ್ಲ"
+
+#~ msgid "Colorize"
+#~ msgstr "ಬಣ್ಣೈಸು"
+
+#~ msgid "Gamma"
+#~ msgstr "ಗಾಮ"
+
+#~ msgid "To Monochrome"
+#~ msgstr "ಏಕವಣ೯ಕ್ಕೆ"
+
+#~ msgid "&Semi-transparent"
+#~ msgstr "ಅರೆ(&ರ)-ಪಾರದರ್ಶಕ"
+
+#~ msgid "Preview"
+#~ msgstr "ಮುನ್ನೋಟ"
+
+#~ msgid "Effect Parameters"
+#~ msgstr "ಪರಿಣಾಮ ಪ್ರಮಿತಿಗಳು"
+
+#~ msgid "&Amount:"
+#~ msgstr "ಮೊತ್ತ(&ತ)"
+
+#~ msgid "Co&lor:"
+#~ msgstr "&ಬಣ್ಣ"
+
+#~ msgid "&Second color:"
+#~ msgstr "ಎ&ರಡನೆಯ ಬಣ್ಣ"
+
+#~ msgid "Name"
+#~ msgstr "ಹೆಸರು"
+
+#~ msgid "Description"
+#~ msgstr "ವಿವರಣೆ"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "ಪರಿಸರವಿನ್ಯಾಸ (ಥೀಮ್) URL ಅನ್ನು ಎಳೆ ಅಥವಾ ನಮೂದಿಸು"
+
+#~ msgid ""
+#~ "Unable to download the icon theme archive;\n"
+#~ "please check that address %1 is correct."
+#~ msgstr ""
+#~ "ಚಿಹ್ನೆ ಪರಿಸರವಿನ್ಯಾಸ (ಥೀಮ್) ಕಡತಾಗಾರವನ್ನು ನಕಲಿಳಿಸಲಾಗುತ್ತಿಲ್ಲ;\n"
+#~ " ದಯವಿಟ್ಟು ವಿಳಾಸ %1 ಸರಿಯಿದೆಯೇ ಎಂದು ಪರೀಕ್ಷಿಸಿ"
+
+#~ msgid "<qt>Installing <strong>%1</strong> theme</qt>"
+#~ msgstr ""
+#~ "<qt><strong>%1</strong> ಪರಿಸರವಿನ್ಯಾಸ(ಥೀಮ್) ಅನುಸ್ಥಾಪನೆಗೊಳ್ಳುತ್ತಿದೆ (ಇನ್ಸ್ಟಾಲ್) </"
+#~ "qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "ಖಚಿತಪಡಿಸುವಿಕೆ"
+
+#~ msgid "&Theme"
+#~ msgstr "&ಪರಿಸರವಿನ್ಯಾಸ (ಥೀಮ್)"
+
+#~ msgid "Ad&vanced"
+#~ msgstr "(&ಪ)ಪ್ರೌಢ"
+
+#~ msgid "Animate icons"
+#~ msgstr "ಚಿಹ್ನೆಗಳನ್ನು ಸಜೀವಗೊಳಿಸು (ಅನಿಮೇಟ್)"
+
+#~ msgid "Select the icon theme you want to use:"
+#~ msgstr "ನೀವು ಬಳಸಲು ಬಯಸುವ ಚಿಹ್ನೆ ಪರಿಸರವಿನ್ಯಾಸವನ್ನು (ಥೀಮ್) ಆರಿಸಿ:"
+
+#~ msgid "Double-sized pixels"
+#~ msgstr "ದುಪ್ಪಟ್ಟು-ಗಾತ್ರದ ಚುಕ್ಕಿಗಳು"
+
+#~ msgid "Desktop/File Manager"
+#~ msgstr "ಗಣಕತೆರೆ/ಕಡತ ವ್ಯವಸ್ಥಾಪಕ"

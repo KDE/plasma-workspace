@@ -1,0 +1,108 @@
+# Translation of libnotificationmanager.po to Ukrainian
+# Copyright (C) 2019 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2019, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: libnotificationmanager\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-26 00:47+0000\n"
+"PO-Revision-Date: 2022-07-21 09:14+0300\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#: job_p.cpp:185
+#, kde-format
+msgctxt "Copying n of m files to locaton"
+msgid "%2 of %1 file to %3"
+msgid_plural "%2 of %1 files to %3"
+msgstr[0] "%2 з %1 файла до %3"
+msgstr[1] "%2 з %1 файлів до %3"
+msgstr[2] "%2 з %1 файлів до %3"
+msgstr[3] "%2 з %1 файла до %3"
+
+#: job_p.cpp:188 job_p.cpp:218 job_p.cpp:234
+#, kde-format
+msgctxt "Copying n files to location"
+msgid "%1 file to %2"
+msgid_plural "%1 files to %2"
+msgstr[0] "%1 файл до %2"
+msgstr[1] "%1 файли до %2"
+msgstr[2] "%1 файлів до %2"
+msgstr[3] "%1 файл до %2"
+
+#: job_p.cpp:195
+#, kde-format
+msgctxt "Copying n of m files"
+msgid "%2 of %1 file"
+msgid_plural "%2 of %1 files"
+msgstr[0] "%2 з %1 файла "
+msgstr[1] "%2 з %1 файлів"
+msgstr[2] "%2 з %1 файлів"
+msgstr[3] "%2 з %1 файла"
+
+#: job_p.cpp:198 job_p.cpp:228 job_p.cpp:238
+#, kde-format
+msgctxt "Copying n files"
+msgid "%1 file"
+msgid_plural "%1 files"
+msgstr[0] "%1 файл"
+msgstr[1] "%1 файли"
+msgstr[2] "%1 файлів"
+msgstr[3] "%1 файл"
+
+#: job_p.cpp:203
+#, kde-format
+msgctxt "Copying n of m items"
+msgid "%2 of %1 item"
+msgid_plural "%2 of %1 items"
+msgstr[0] "%2 з %1 об'єкта"
+msgstr[1] "%2 з %1 об'єктів"
+msgstr[2] "%2 з %1 об'єктів"
+msgstr[3] "%2 з %1 об'єкта"
+
+#: job_p.cpp:206 job_p.cpp:226
+#, kde-format
+msgctxt "Copying n items"
+msgid "%1 item"
+msgid_plural "%1 items"
+msgstr[0] "%1 об'єкт"
+msgstr[1] "%1 об'єкти"
+msgstr[2] "%1 об'єктів"
+msgstr[3] "%1 об'єкт"
+
+#: job_p.cpp:213
+#, kde-format
+msgctxt "Copying file to location"
+msgid "%1 to %2"
+msgstr "%1 до %2"
+
+#: job_p.cpp:216
+#, kde-format
+msgctxt "Copying n items to location"
+msgid "%1 file to %2"
+msgid_plural "%1 items to %2"
+msgstr[0] "%1 файл до %2"
+msgstr[1] "%1 файли до %2"
+msgstr[2] "%1 файлів до %2"
+msgstr[3] "%1 файл до %2"
+
+#: job_p.cpp:236
+#, kde-format
+msgctxt "Copying unknown amount of files to location"
+msgid "to %1"
+msgstr "до %1"
+
+#: jobsmodel_p.cpp:476
+#, kde-format
+msgid "Application closed unexpectedly."
+msgstr "Програма неочікувано завершила роботу."

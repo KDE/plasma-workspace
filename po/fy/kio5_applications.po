@@ -1,0 +1,33 @@
+# translation of kio_applications.po to Frysk
+# translation of kio_settings.po to
+#
+# Rinse de Vries <rinsedevries@kde.nl>, 2005, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kio_applications\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-08 00:48+0000\n"
+"PO-Revision-Date: 2009-08-15 22:24+0100\n"
+"Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
+"Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
+"Language: fy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: kio_applications.cpp:122
+#, kde-format
+msgid "Applications"
+msgstr "Applikaasjes"
+
+#: kio_applications.cpp:122
+#, kde-format
+msgid "Programs"
+msgstr "Programma's"
+
+#: kio_applications.cpp:131
+#, kde-format
+msgid "Unknown application folder"
+msgstr "Unbekende applikaasjemap"

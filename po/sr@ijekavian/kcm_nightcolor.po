@@ -1,0 +1,191 @@
+# Translation of kcm_nightcolor.po into Serbian.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_nightcolor\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-12-19 03:33+0100\n"
+"PO-Revision-Date: 2017-12-17 18:00+0100\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@ijekavian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Часлав Илић"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "caslav.ilic@gmx.net"
+
+#: kcm.cpp:31
+#, kde-format
+msgid "Night Color"
+msgstr "Ноћна боја"
+
+#: kcm.cpp:33
+#, kde-format
+msgid "Roman Gilg"
+msgstr "Роман Гилг"
+
+#: package/contents/ui/LocationsFixedView.qml:40
+#, fuzzy, kde-format
+#| msgid "Detect location"
+msgid "Detect Location"
+msgstr "Откриј локацију"
+
+#: package/contents/ui/LocationsFixedView.qml:54
+#, fuzzy, kde-format
+#| msgid "Latitude"
+msgid "Latitude:"
+msgstr "Географска ширина"
+
+#: package/contents/ui/LocationsFixedView.qml:67
+#, fuzzy, kde-format
+#| msgid "Longitude"
+msgid "Longitude:"
+msgstr "Географска дужина"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid ""
+"Night Color makes the colors on the screen warmer to reduce eye strain at "
+"the time of your choosing."
+msgstr ""
+
+#: package/contents/ui/main.qml:151
+#, kde-format
+msgid "Activate Night Color"
+msgstr "Активирај ноћну боју"
+
+#: package/contents/ui/main.qml:166
+#, fuzzy, kde-format
+#| msgid "Night Color Temperature: "
+msgid "Night Color Temperature:"
+msgstr "Температура ноћне боје: "
+
+#: package/contents/ui/main.qml:190
+#, kde-format
+msgid " K"
+msgstr " K"
+
+#: package/contents/ui/main.qml:194
+#, kde-format
+msgctxt "Night colour red-ish"
+msgid "Warm"
+msgstr ""
+
+#: package/contents/ui/main.qml:200
+#, kde-format
+msgctxt "Night colour blue-ish"
+msgid "Cool"
+msgstr ""
+
+#: package/contents/ui/main.qml:213
+#, kde-format
+msgid "Activation time:"
+msgstr ""
+
+#: package/contents/ui/main.qml:216
+#, kde-format
+msgid "Sunset to sunrise at current location"
+msgstr ""
+
+#: package/contents/ui/main.qml:217
+#, kde-format
+msgid "Sunset to sunrise at manual location"
+msgstr ""
+
+#: package/contents/ui/main.qml:218
+#, kde-format
+msgid "Custom time"
+msgstr ""
+
+#: package/contents/ui/main.qml:219
+#, kde-format
+msgid "Always on"
+msgstr ""
+
+#: package/contents/ui/main.qml:233
+#, kde-format
+msgid "Latitude: %1   Longitude: %2"
+msgstr ""
+
+#: package/contents/ui/main.qml:242
+#, kde-format
+msgid "Turn on at:"
+msgstr ""
+
+#: package/contents/ui/main.qml:250 package/contents/ui/main.qml:267
+#, kde-format
+msgid "Input format: HH:MM"
+msgstr ""
+
+#: package/contents/ui/main.qml:259
+#, kde-format
+msgid "Turn off at:"
+msgstr ""
+
+#: package/contents/ui/main.qml:276
+#, fuzzy, kde-format
+#| msgid "Transition duration"
+msgid "Transition duration:"
+msgstr "Трајање прелаза"
+
+#: package/contents/ui/main.qml:286
+#, kde-format
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+# well-spelled: мин, макс
+#: package/contents/ui/main.qml:293
+#, fuzzy, kde-format
+#| msgid "(In minutes - min. 1, max. 600)"
+msgid "Input minutes - min. 1, max. 600"
+msgstr "(у минутима, мин. 1, макс. 600)"
+
+#: package/contents/ui/main.qml:301
+#, fuzzy, kde-format
+#| msgid "Error: Morning not before evening."
+msgid "Error: Morning is before evening."
+msgstr "Грешка: јутро није пре вечери."
+
+#: package/contents/ui/main.qml:317
+#, kde-format
+msgid "Error: Transition time overlaps."
+msgstr "Грешка: време прелаза се преклапа."
+
+#: package/contents/ui/TimingsView.qml:45
+#, fuzzy, kde-format
+#| msgid "Night Color Temperature: "
+msgid "Night Color begins at %1"
+msgstr "Температура ноћне боје: "
+
+#: package/contents/ui/TimingsView.qml:49
+#, kde-format
+msgid "Color fully changed at %1"
+msgstr ""
+
+#: package/contents/ui/TimingsView.qml:58
+#, kde-format
+msgid "Night Color begins changing back at %1"
+msgstr ""
+
+#: package/contents/ui/TimingsView.qml:62
+#, kde-format
+msgid "Normal coloration restored by %1"
+msgstr ""

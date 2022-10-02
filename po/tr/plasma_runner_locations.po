@@ -1,0 +1,53 @@
+# translation of krunner_locationsrunner.po to
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Serdar Soytetir <tulliana@gmail.com>, 2008, 2009.
+# H. İbrahim Güngör <ibrahim@pardus.org.tr>, 2010, 2013.
+# Volkan Gezer <volkangezer@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner_locationsrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"PO-Revision-Date: 2022-02-27 14:11+0100\n"
+"Last-Translator: Volkan Gezer <volkangezer@gmail.com>\n"
+"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 20.12.3\n"
+
+#: locationrunner.cpp:33
+#, kde-format
+msgid ""
+"Finds local directories and files, network locations and Internet sites with "
+"paths matching :q:."
+msgstr ""
+":q: ile eşleşen yerel dizinleri ve dosyaları, ağ konumlarını ve İnternet "
+"sitelerini bulur."
+
+#: locationrunner.cpp:60
+#, kde-format
+msgid "Open %1"
+msgstr "%1 konumunu aç"
+
+#: locationrunner.cpp:78 locationrunner.cpp:82
+#, kde-format
+msgid "Launch with %1"
+msgstr "%1 ile başlat"
+
+#: locationrunner.cpp:88
+#, kde-format
+msgid "Go to %1"
+msgstr "%1 konumuna git"
+
+#: locationrunner.cpp:96
+#, kde-format
+msgid "Send email to %1"
+msgstr "%1 kişisine e-posta gönder"
+
+#~ msgid "Locations"
+#~ msgstr "Konumlar"

@@ -1,0 +1,35 @@
+# translation of plasma_runner_windowedwidgets.po to Khmer
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Khoem Sokhem <khoemsokhem@khmeros.info>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_windowedwidgets\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2010-05-18 15:17+0700\n"
+"Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
+"Language-Team: Khmer <support@khmeros.info>\n"
+"Language: km\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: windowedwidgetsrunner.cpp:30
+#, kde-format
+msgid "Finds Plasma widgets whose name or description match :q:"
+msgstr "រក​ធាតុក្រាហ្វិក​ប្លាស្មា​ ដែល​ឈ្មោះ​ ឬ​សេចក្ដី​ពិពណ៌នា​របស់​វា​ផ្គូផ្គង​នឹង :q:"
+
+#: windowedwidgetsrunner.cpp:31 windowedwidgetsrunner.cpp:52
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "mobile applications"
+msgstr "កម្មវិធី​ចល័ត"
+
+#: windowedwidgetsrunner.cpp:32
+#, kde-format
+msgid "list all Plasma widgets that can run as standalone applications"
+msgstr "រាយ​ធាតុក្រាហ្វិក​ប្លាស្មា​ទាំងអស់​ដែល​អាច​ដំណើរការ​ជា​កម្មវិធី​​សម្រាប់​កុំព្យូទ័រ​គ្មាន​តជា​បណ្ដាញ"

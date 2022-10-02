@@ -1,0 +1,46 @@
+# translation of krdb.po to Lithuanian
+# Ričardas Čepas <rch@richard.eu.org>, 2003.
+# Donatas Glodenis <dgvirtual@akl.lt>, 2004-2009.
+# Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: krdb\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-24 00:47+0000\n"
+"PO-Revision-Date: 2020-01-25 23:19+0200\n"
+"Last-Translator: Moo\n"
+"Language-Team: lt <kde-i18n-lt@kde.org>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
+"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"(n%100<10 || n%100>=20) ? 1: 2);\n"
+"X-Generator: Poedit 2.2.4\n"
+
+#: krdb.cpp:261
+#, kde-format
+msgid ""
+"# created by KDE Plasma, %1\n"
+"#\n"
+msgstr ""
+"# sukūrė KDE Plasma, %1\n"
+"#\n"
+
+#~ msgid ""
+#~ "# created by KDE Plasma, %1\n"
+#~ "#\n"
+#~ "# If you do not want Plasma to override your GTK settings, select\n"
+#~ "# Colors in the System Settings and disable the checkbox\n"
+#~ "# \"Apply colors to non-Qt applications\"\n"
+#~ "#\n"
+#~ "#\n"
+#~ msgstr ""
+#~ "# sukūrė KDE Plasma, %1\n"
+#~ "#\n"
+#~ "# Jeigu nenorite, kad Plasma nustelbtų jūsų GTK nustatymų, pasirinkite\n"
+#~ "# Sistemos nustatymus, Spalvas ir išjunkite žymimąjį langelį\n"
+#~ "# \"Taikyti spalvas ne Qt programoms\"\n"
+#~ "#\n"
+#~ "#\n"

@@ -1,0 +1,73 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Diego Iastrubni <elcuco@kde.org>, 2008.
+# Elkana Bardugo <ttv200@gmail.com>, 2016.
+# Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_shell\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-27 00:45+0000\n"
+"PO-Revision-Date: 2017-05-16 06:57-0400\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Zanata 3.9.6\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: shellrunner.cpp:35
+#, kde-format
+msgid "Finds commands that match :q:, using common shell syntax"
+msgstr ""
+"פעולה זו מוצאת את הפקודות המתאימות לתבנית :q:, באמצעות שימוש בתחביר המעטפת "
+"הנפוץ."
+
+#: shellrunner.cpp:36
+#, kde-format
+msgid "Run in Terminal Window"
+msgstr "הפעל בחלון &מסוף"
+
+#: shellrunner.cpp:54
+#, kde-format
+msgid "Run %1"
+msgstr "&הפעל %1"
+
+#~ msgid "Enter the user you want to run the application as here."
+#~ msgstr "הזן כאן את שם המשתמש שתחתיו ברצונך להפעיל את היישום."
+
+#~ msgid "User&name:"
+#~ msgstr "שם &משתמש:"
+
+#~ msgid "Enter the password here for the user you specified above."
+#~ msgstr "אנא הכנס כאן את הססמה למשתמש שבחרת."
+
+#~ msgid "Pass&word:"
+#~ msgstr "&סיסמה:"
+
+#~ msgid ""
+#~ "Check this option if the application you want to run is a text mode "
+#~ "application. The application will then be run in a terminal emulator "
+#~ "window."
+#~ msgstr ""
+#~ "בחר באפשרות זו אם היישום שברצונך להפעיל הוא יישום מבוסס טקסט. במקרה כזה "
+#~ "יופעל היישום בחלון הדמיית מסוף."
+
+#~ msgid "Run in &terminal window"
+#~ msgstr "הפעל בחלון &מסוף"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "user id. Every process has a user id associated with it. This id code "
+#~ "determines file access and other permissions. The password of the user is "
+#~ "required to do this."
+#~ msgstr ""
+#~ "בחר באפשרות זו אם ברצונך להפעיל את היישום עם זיהוי משתמש אחר. לכל תהליך "
+#~ "ישנו זיהוי משתמש המשויך לו. קוד זיהוי זה קובע את הרשאות הגישה לקבצים "
+#~ "והרשאות אחרות. יש צורך בססמה של המשתמש על מנת לבצע זאת."
+
+#~ msgid "Run as a different &user"
+#~ msgstr "הפעל בתור מ&שתמש אחר"

@@ -1,0 +1,42 @@
+# translation of phonon_kde.po to தமிழ்
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# ஆமாச்சு <amachu@ubuntu.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: phonon_kde\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-05-20 03:26+0200\n"
+"PO-Revision-Date: 2008-03-10 08:46+0530\n"
+"Last-Translator: ஆமாச்சு <amachu@ubuntu.com>\n"
+"Language-Team: தமிழ் <https://lists.ubuntu.com/mailman/listinfo/ubuntu-l10n-"
+"tam>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "உபுண்டு தமிழ் குழுமம்"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "ubuntu-l10n-tam@lists.ubuntu.com"
+
+#~ msgid "<qt>Unable to use the <b>%1</b> Multimedia Backend:<br/>%2</qt>"
+#~ msgstr "<qt><b>%1</b> பல்லூடகப் பின்னணி:<br/>%2 யினைப் பயன்படுத்த இயலவில்லை</qt>"
+
+#~ msgid "Unable to find a Multimedia Backend"
+#~ msgstr "பல்லூடகப் பின்னணியை கண்டெடுக்க இயலவில்லை"
+
+#~ msgid "Unable to find the requested Multimedia Backend"
+#~ msgstr "கோரப்பட்ட பல்லூடக பின்னணியை கண்டெடுக்க இயலவில்லை"
+
+#~ msgid "create method returned 0"
+#~ msgstr "முறையுருவாக்கம் 0 தந்தது"

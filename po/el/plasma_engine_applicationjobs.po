@@ -1,0 +1,40 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Toussis Manolis <manolis@koppermind.homelinux.org>, 2008, 2009.
+# Petros Vidalis <p_vidalis@hotmail.com>, 2010.
+# Dimitris Kardarakos <dimkard@gmail.com>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_engine_applicationjobs\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2014-10-06 14:53+0300\n"
+"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: jobaction.cpp:18
+#, kde-format
+msgctxt "%1 is the subject (can be anything) upon which the job is performed"
+msgid "The JobView for %1 cannot be found"
+msgstr "Η προβολή εργασίας %1 δεν μπορεί να βρεθεί"
+
+#: kuiserverengine.cpp:209
+#, kde-format
+msgctxt "Bytes per second"
+msgid "%1/s"
+msgstr "%1/δ"
+
+#~ msgid "Job canceled by user."
+#~ msgstr "Η εργασία ακυρώθηκε από τον χρήστη."
+
+#~ msgid "1 file"
+#~ msgid_plural "%1 files"
+#~ msgstr[0] "1 αρχείο"
+#~ msgstr[1] "%1 αρχεία"

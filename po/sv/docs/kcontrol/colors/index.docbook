@@ -1,0 +1,386 @@
+<?xml version="1.0" ?>
+
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Swedish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="colors" lang="&language;">
+<articleinfo>
+<title
+>Färger</title>
+<authorgroup>
+<author
+>&Matthew.Woehlke; &Matthew.Woehlke.mail;</author>
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-08</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Kcontrol</keyword>
+<keyword
+>färg</keyword>
+<keyword
+>KCM</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="color">
+<title
+>Färger</title>
+
+<sect2 id="color-scheme">
+  <title
+>Hantering av scheman</title>
+
+  <para
+>Modulen låter dig hantera färgscheman på datorn. Den visar en lista med färger som levereras med &plasma; och en förhandsgranskning längst upp. Bara ett schema är aktivt åt gången, men du kan redigera scheman. Du kan ta bort scheman med knappen <guibutton
+>Ta bort schema</guibutton
+> som visas när muspekaren hålls över ett objekt i rutnätet. Observera att systemscheman inte kan tas bort: knappen för åtgärden är inaktiverad.</para>
+
+  <para
+>Det är möjligt att filtrera schemalistan genom att använda fältet <guilabel
+>Sök...</guilabel
+> ovanför rutnätet. Dessutom kan du använda kombinationsrutan intill fältet för att bara visa <guimenuitem
+>Ljusa scheman</guimenuitem
+> eller <guimenuitem
+>Mörka scheman</guimenuitem
+>. </para>
+
+  <para
+>Om du har en Internet-anslutning, kan du också bläddra bland och hämta användarskapade scheman med <guibutton
+>Hämta nya färgscheman...</guibutton
+>.</para>
+
+  <para
+>Du kan också installera scheman från en fil som du har laddat ner eller skaffat på annat sätt, samt importera scheman från &kde; 4 namngivna som &quot;*.colors&quot;. </para>
+
+  <note>
+  <para
+>Det här dokumentet hänvisar ibland till det &quot;nuvarande&quot; schemat, eller det &quot;aktiva&quot; schemat. Det &quot;nuvarande&quot; schemat är den uppsättning färger och alternativ för färgschemat som senast verkställdes, dvs. vad du skulle få om du valde <guibutton
+>Avbryt</guibutton
+>. Det &quot;aktiva&quot; schemat är den uppsättning färger som senast redigerades av dig, dvs. vad du skulle få om du valde <guibutton
+>Verkställ</guibutton
+>.</para>
+  </note>
+</sect2>
+
+<sect2>
+  <title
+>Redigera eller skapa färgscheman</title>
+  <para
+>För att redigera eller skapa nya scheman, markera ett schema i listan och klicka på knappen <guibutton
+>Redigera schema</guibutton
+> för att visa en dialogruta med tre flikar <guilabel
+>Alternativ</guilabel
+>, <guilabel
+>Färger</guilabel
+> och <guilabel
+>Inaktiverad</guilabel
+>. När du har skapat ett schema som du tycker om, kan du ladda upp det, nollställa det, spara det med ett annat namn, eller skriva över det aktiva schemat. </para>
+
+<sect3 id="color-options">
+  <title
+>Inställningar av färgschema</title>
+
+  <para
+>Fliken <guilabel
+>Inställningar</guilabel
+> låter dig ändra vissa egenskaper som hanterar hur färgschemat används, samt vissa alternativ som ändrar färgschemat på andra sätt än att tilldela själva färgerna.</para>
+
+  <itemizedlist>
+    <listitem
+><para
+><guilabel
+>Verkställ effekter för inaktiva fönster</guilabel
+>: Om aktiverat, verkställs tillståndseffekter (se <link linkend="color-effects"
+>nedan</link
+>) för inaktiva fönster. Det kan hjälpa till att identifiera aktiva mot inaktiva fönster, och kan ha ett estetiskt värde, beroende på smak. Dock tycker vissa användare att det orsakar störande &quot;flimmer&quot;, eftersom fönster måste ritas om när de blir inaktiva. I motsats till skrivbordseffekter, kräver inte färgtillståndseffekter stöd för sammansättning och fungerar på alla system, dock fungerar de bara med &kde; program. </para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Använd andra färger för inaktiva markeringar</guilabel
+>: Om aktiverat, ritas aktuell markering i element som inte har inmatningsfokus med en annan färg. Det kan hjälpa till att identifiera element utan inmatningsfokus visuellt i vissa program, särskild de som samtidigt visar flera listor. </para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Skugga sorterad kolumn i listor</guilabel
+>: Om markerad, använder listor med flera kolumner en något annorlunda färg för att rita kolumnen vars information används för att sortera objekten i listan. </para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Kontrast</guilabel
+>: Skjutreglaget kontrollerar kontrasten hos skuggade element, som ramkanter och den &quot;tredimensionella&quot; effekten som används av de flesta stilar. Ett lägre värde ger mindre kontrast, och därför mjukare kanter, medan ett högre värde gör att sådana kanter &quot;framträder&quot; tydligare. </para
+></listitem>
+  </itemizedlist>
+
+</sect3>
+
+<sect3 id="color-colors">
+  <title
+>Färger</title>
+
+  <para
+>Fliken <guilabel
+>Färger</guilabel
+> låter dig ändra färgerna i det aktiva färgschemat.</para>
+
+  <para
+>Att skapa eller ändra ett schema görs helt enkelt genom att klicka på färgprovet i listan och välja en ny färg. Det föreslås att du sparar schemat när du är klar.</para>
+
+  <para
+>Uppsättningen <guilabel
+>Vanliga färger</guilabel
+>, som visas från början, är egentligen inte en &quot;uppsättning&quot; i betydelsen använd av Plasma (se nästa avsnitt), men visar ett antal färgroller på ett sätt som gör det enklare att redigera schemat som en enhet. När ett nytt färgschema skapas, ändras oftast dessa färger först, och andra uppsättningar används för att finjustera specifika färger om det behövs.</para>
+
+  <para
+>Observera att <guilabel
+>Vanliga färger</guilabel
+> gör roller från alla uppsättningar tillgängliga. Till exempel är &quot;Vybakgrund&quot; här kort för den normala bakgrundsrollen i Vyuppsättningen. Dessutom ändras färgen i <emphasis
+>alla</emphasis
+> uppsättningar, om färger som inte hänvisar till någon specifik uppsättning ändras. (Som ett undantag ändrar &quot;Inaktiv text&quot; färgen för alla uppsättningar <emphasis
+>utom</emphasis
+> för Markering. Det finns en separat &quot;Markering inaktiv text&quot; för Inaktiv text i uppsättningen Markering.) Vissa roller kanske inte är synliga alls under <guilabel
+>Vanliga färger</guilabel
+>, och kan bara ändras (om det behövs) genom att välja lämplig uppsättning.</para>
+
+  <sect4>
+    <title
+>Färguppsättningar</title>
+
+    <para
+>Plasma delar upp färgschemat i flera uppsättningar, baserat på typ av element i användargränssnittet, på följande sätt:</para>
+    <itemizedlist>
+      <listitem
+><para
+><guilabel
+>Vy</guilabel
+> &mdash; element för presentation av information, som listor, träd, textinmatningsrutor, etc. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Fönster</guilabel
+> &mdash; fönsterelement som inte är knappar eller vyer. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Knapp</guilabel
+> &mdash; knappar och liknande element. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Markering</guilabel
+> &mdash; markerad text och markerade objekt. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Verktygstips</guilabel
+> &mdash; verktygstips, &quot;Vad är det här&quot;, och liknande element. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Komplementär</guilabel
+> &mdash; Områden i program med ett alternativt färgschema, oftast med en mörk bakgrund för ljusa färgscheman. Exempel på områden med detta inverterade färgschema är utloggningsgränssnittet, lås skärm och fullskärmsläge för vissa program. </para
+></listitem>
+    </itemizedlist>
+
+    <para
+>Varje uppsättning innehåller ett antal färgroller. Varje uppsättning har samma roller. Alla färger hör ihop med en av uppsättningarna ovan.</para>
+  </sect4>
+
+  <sect4>
+    <title
+>Färgroller</title>
+
+    <para
+>Varje färguppsättning består av ett antal roller, som är tillgängliga i alla övriga uppsättningar. Förutom de uppenbara Normal text och Normal bakgrund, finns följande roller:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Alternativ bakgrund &mdash; används när det finns ett behov av att diskret ändra bakgrunden för att hjälpa till att koppla ihop objekt. Den kan t.ex. användas som bakgrund för en rubrik, men används oftast för alternerande rader i listor, särskilt listor med flera kolumner, för att visuellt hjälpa till att följa rader. </para
+></listitem>
+      <listitem
+><para
+>Länktext &mdash; används för hyperlänkar eller för att på annat sätt ange &quot;något som kan besökas&quot;, eller för att visa förhållanden. </para
+></listitem>
+      <listitem
+><para
+>Besökt text &mdash; används för &quot;någonting (t.ex. en hyperlänk) som har besökts&quot;, eller för att indikera något som är "gammalt". </para
+></listitem>
+      <listitem
+><para
+>Aktiv text &mdash; används för att indikera ett aktivt element eller för att väcka uppmärksamhet, t.ex. varningar, underrättelser, men också för hyperlänkar som muspekaren hålls över. </para
+></listitem>
+      <listitem
+><para
+>Inaktiv text &mdash; används för text som inte ska vara påfallande, t.ex. kommentarer, &quot;underrubriker&quot;, oviktig information, etc. </para
+></listitem>
+      <listitem
+><para
+>Negativ text &mdash; används för fel, felunderrättelser, underrättelser om att en åtgärd kan vara farlig (t.ex. en osäker webbsida eller ett osäkert säkerhetssammanhang), etc. </para
+></listitem>
+      <listitem
+><para
+>Neutral text &mdash; används för att väcka uppmärksamhet när en annan roll inte är lämplig, t.ex. varningar, för att indikera säkert eller krypterat innehåll, etc. </para
+></listitem>
+      <listitem
+><para
+>Positiv text &mdash; används för underrättelser om lyckade åtgärder, för att ange pålitligt innehåll, etc. </para
+></listitem>
+    </itemizedlist>
+
+    <para
+>Förutom textrollerna finns det några ytterligare &quot;dekorationsroller&quot;, som används för att rita linjer eller skugga element i användargränssnittet (även om ovanstående under lämpliga omständigheter också kan användas i detta syfte, är de följande specifikt avsedda att <emphasis
+>inte</emphasis
+> återge text). De är:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Fokusdekoration &mdash; används för att indikera objektet som har aktivt inmatningsfokus. </para
+></listitem>
+      <listitem
+><para
+>Överdekoration &mdash; används för effekter när muspekaren hålls över någonting, t.ex. "upplysningseffekten" för knappar. </para
+></listitem>
+    </itemizedlist>
+
+    <para
+>Dessutom, förutom för Inaktiv text, finns motsvarande bakgrundsroll för var och en av textrollerna. För närvarande väljes inte dessa färger av användaren (förutom Normal och Alternativ bakgrund), utan bestäms automatiskt baserat på Normal bakgrund och motsvarande textfärg. Färgerna kan förhandsgranskas genom att välja en av uppsättningarna förutom &quot;Vanliga färger&quot;.</para>
+
+    <para
+>Valet av färgroller lämnas till utvecklaren. Ovanstående är riktlinjer, avsedda att representera typisk användning.</para>
+  </sect4>
+
+  <sect4>
+    <title
+>Fönsterhanterarens färger</title>
+
+    <para
+>Som tidigare nämnts, har uppsättningen Fönsterhanterare sina egna roller, oberoende av de i andra uppsättningar. De är (för närvarande) bara tillgängliga via <guilabel
+>Vanliga färger</guilabel
+>, och är följande:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Aktiv namnlist &mdash; används för att rita namnlistens bakgrund, kanter och/eller dekorationer för det aktiva fönstret (dvs. det med inmatningsfokus). Alla fönsterdekorationer använder inte det på samma sätt, och vissa kanske till och med använder Normal bakgrund från uppsättningen Fönster för att rita namnlisten. </para
+></listitem>
+      <listitem
+><para
+>Aktiv namnlist text &mdash; används för att rita namnlistens text när Aktiv namnlist används för att rita namnlistens bakgrund. Kan också användas för andra förgrundselement som använder Aktiv namnlist som bakgrund. </para
+></listitem>
+    </itemizedlist>
+
+    <para
+>Inaktiv namnlist [text] rollerna är samma som ovan, men för inaktiva fönster, istället för aktiva fönster.</para>
+  </sect4>
+
+</sect3>
+
+<sect3 id="color-effects">
+  <title
+>Inaktiverad</title>
+
+  <para
+>Färgtillståndseffekter från den här fliken används för gränssnittselement i inaktivt och inaktiverat tillstånd (bara för fönster som inte har fokus om <guilabel
+>Verkställ färgeffekter för inaktiva fönster</guilabel
+> är aktiverat). Genom att ändra effekterna kan utseendet hos element i dessa tillstånd ändras. Oftast har inaktiva element reducerad kontrast (text bleknar något mot bakgrunden) och kan ha något reducerad färgstyrka, medan inaktiverade element har starkt reducerad kontrast och ofta är märkbart mörkare eller ljusare. </para>
+
+  <para
+>Tre typer av effekter kan användas för varje tillstånd (med oberoende effekter för de två tillstånden). De är färgstyrka, färg och kontrast. De två första (färgstyrka, färg) styr den övergripande färgen, medan det sista (kontrast) hanterar förgrundsfärger i förhållande till bakgrunden.</para>
+
+  <sect4>
+    <title
+>Intensitet</title>
+
+    <para
+>Färgstyrka låter den övergripande färgen göras ljusare eller mörkare. Att ställa in skjutreglaget till mittenläget ger ingen ändring. De tillgängliga effekterna är:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Skugga: Gör allting mörkare eller ljusare på ett kontrollerat sätt. Varje &quot;markering&quot; på skjutreglaget ökar eller minskar den övergripande färgstyrkan (dvs. upplevd ljusstyrka) med ett absolut värde. </para
+></listitem>
+      <listitem
+><para
+>Gör mörkare: Ändrar färgstyrkan till ett procentvärde av det ursprungliga värdet. En inställning av skjutreglaget halvvägs mellan mitten och det maximala värdet ger en färg som är hälften så färgstark som den ursprungliga. Det minimala värdet ger en färg som är dubbelt så färgstark som den ursprungliga. </para
+></listitem>
+      <listitem
+><para
+>Gör ljusare: Som begreppsmässig motsats till att göra mörkare, kan göra ljusare betraktas som att arbeta med &quot;avstånd från vitt&quot;, medan att göra mörkare arbetar med &quot;avstånd från svart&quot;. Det minimala värdet är en färg som är dubbelt så &quot;långt&quot; från vitt som den ursprungliga, medan halvvägs mellan mitten och det maximala värdet ger en färgstyrka som är halvvägs mellan den ursprungliga färgen och vitt. </para
+></listitem>
+    </itemizedlist>
+  </sect4>
+
+  <sect4>
+    <title
+>Färg</title>
+
+    <para
+>Färg ändrar också den övergripande färgen, men är inte begränsad till färgstyrkan. De tillgängliga effekterna är:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Minska mättnad &mdash; ändrar relativt färginnehåll. Mitteninställningen ger ingen ändring. Det maximala värdet ger en grå färg vars perceptuella färgstyrka motsvarar den ursprungliga färgen. Lägre inställningar ökar färginnehållet, vilket ger en färg som är mindre grå, mer &quot;intensiv&quot;, än den ursprungliga. </para
+></listitem>
+      <listitem
+><para
+>Tona &mdash; blandar den ursprungliga färgen med en referensfärg. Den minimala inställningen av skjutreglaget ger ingen ändring, och den maximala ger referensfärgen. </para
+></listitem>
+      <listitem
+><para
+>Färga &mdash; liknar tona, förutom att färgen (färgton och innehåll) ändras snabbare medan färgstyrkan ändras långsammare när skjutreglagets värde ökas. </para
+></listitem>
+    </itemizedlist>
+  </sect4>
+
+  <sect4>
+    <title
+>Kontrast</title>
+
+    <para
+>Kontrasteffekterna liknar färgeffekterna, utom att de gäller texten, där bakgrundsfärgen används som referensfärg, och att minska färgmättnad inte är tillgänglig. Tona ger text som &quot;tonar bort&quot; snabbare, men behåller sin färg längre, medan Färga ger text som ändrar färg för att motsvara bakgrunden snabbare, medan den behåller kontrasten hos en större färgstyrka längre (där &quot;längre&quot; betyder större inställningar av skjutreglaget). Med kontrasteffekter ger den minimala inställningen av skjutreglaget ingen ändring, medan den maximala gör att texten försvinner helt in i bakgrunden.</para>
+  </sect4>
+
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>
+<!-- kate: indent-width 2; replace-tabs on; -->

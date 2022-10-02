@@ -1,0 +1,476 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2010, 2011, 2013, 2015, 2020, 2021, 2022.
+# Cristian Oneț <onet.cristian@gmail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_desktopthemedetails\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"PO-Revision-Date: 2022-02-16 11:07+0000\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.12.2\n"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current Plasma Style"
+msgstr "Denumirea stilului Plasma actual"
+
+#: kcm.cpp:108
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Nu s-a putut crea un fișier temporar."
+
+#: kcm.cpp:119
+#, kde-format
+msgid "Unable to download the theme: %1"
+msgstr "Nu s-a putut descărca tematica: %1"
+
+#: kcm.cpp:144
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "Tematica a fost instalată cu succes."
+
+#: kcm.cpp:147 kcm.cpp:153
+#, kde-format
+msgid "Theme installation failed."
+msgstr "Instalarea tematicii a eșuat."
+
+#: kcm.cpp:245
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr "Eliminarea tematicii a eșuat: %1"
+
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "This module lets you choose the Plasma style."
+msgstr "Acest modul vă permite să alegeți stilul Plasma."
+
+#: package/contents/ui/main.qml:69
+#, kde-format
+msgid "All Themes"
+msgstr "Toate tematicile"
+
+#: package/contents/ui/main.qml:70
+#, kde-format
+msgid "Light Themes"
+msgstr "Tematici luminoase"
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgid "Dark Themes"
+msgstr "Tematici întunecate"
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "Color scheme compatible"
+msgstr "Compatibil cu schema de culori"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgid "Follows color scheme"
+msgstr "Urmează schema de culori"
+
+#: package/contents/ui/main.qml:118
+#, fuzzy, kde-format
+msgid "Edit Theme…"
+msgstr "Modifică tematica…"
+
+#: package/contents/ui/main.qml:125
+#, kde-format
+msgid "Remove Theme"
+msgstr "Elimină tematica"
+
+#: package/contents/ui/main.qml:132
+#, kde-format
+msgid "Restore Theme"
+msgstr "Restabilește tematica"
+
+#: package/contents/ui/main.qml:174
+#, fuzzy, kde-format
+msgid "Install from File…"
+msgstr "Instalează din fișier…"
+
+#: package/contents/ui/main.qml:179
+#, fuzzy, kde-format
+msgid "Get New Plasma Styles…"
+msgstr "Obține stiluri Plasma noi…"
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Open Theme"
+msgstr "Deschide tematica"
+
+#: package/contents/ui/main.qml:195
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr "Fișiere cu tematici (*.zip *.tar.gz *.tar.bz2)"
+
+#: plasma-apply-desktoptheme.cpp:31
+#, fuzzy, kde-format
+msgid ""
+"This tool allows you to set the theme of the current Plasma session, without "
+"accidentally setting it to one that is either not available, or which is "
+"already set."
+msgstr ""
+"Această unealtă vă permite să stabiliți tematica sesiunii Plasma actuale, "
+"fără a o stabili din greșeală la una indisponibilă sau care e deja stabilită."
+
+#: plasma-apply-desktoptheme.cpp:35
+#, fuzzy, kde-format
+msgid ""
+"The name of the theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+"Denumirea tematicii pe care doriți s-o stabiliți pentru sesiunea Plasma "
+"actuală (transmiterea unei căi complete va duce la folosirea ultimei "
+"componente a căii)"
+
+#: plasma-apply-desktoptheme.cpp:36
+#, fuzzy, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr "Arată toate tematicile disponibile în sistem (și care e cea actuală)"
+
+#: plasma-apply-desktoptheme.cpp:49
+#, fuzzy, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+"Tematica cerută „%1” e stabilită deja ca tematică pentru sesiunea Plasma "
+"actuală."
+
+#: plasma-apply-desktoptheme.cpp:65
+#, fuzzy, kde-format
+msgid "The current Plasma session's theme has been set to %1"
+msgstr "Tematica sesiunii Plasma actuale a fost stabilită la %1"
+
+#: plasma-apply-desktoptheme.cpp:67
+#, fuzzy, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+"Tematica „%1” nu a putut fi găsită. Tematica trebuie să fie una dintre "
+"următoarele opțiuni: %2"
+
+#: plasma-apply-desktoptheme.cpp:75
+#, fuzzy, kde-format
+msgid "You have the following Plasma themes on your system:"
+msgstr "Aveți următoarele tematici Plasma în sistem:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Sergiu Bivol"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "sergiu@cip.md"
+
+#~ msgid "Plasma Style"
+#~ msgstr "Stilul Plasma"
+
+#~ msgid "David Rosca"
+#~ msgstr "David Rosca"
+
+#, fuzzy
+#~| msgid "Get New Themes..."
+#~ msgid "Plasma Styles"
+#~ msgstr "Preluare teme noi..."
+
+#, fuzzy
+#~| msgid "How to Change Desktop Theme"
+#~ msgid "Download New Plasma Styles"
+#~ msgstr "Cum să schimbați tematica biroului"
+
+#, fuzzy
+#~| msgid "Remove Desktop Theme"
+#~ msgid "Configure Desktop Theme"
+#~ msgstr "Elimină tematica de birou"
+
+#, fuzzy
+#~| msgid "Theme installation failed."
+#~ msgid "Theme removal failed."
+#~ msgstr "Instalarea temei a eșuat."
+
+#~ msgid ""
+#~ "<h1>Desktop Theme</h1>This module allows you to modify the visual "
+#~ "appearance of the desktop."
+#~ msgstr ""
+#~ "<h1>Temă de birou</h1>Acest modul vă permite să modificați aspectul "
+#~ "vizual al biroului."
+
+#~ msgid "KDE Desktop Theme Module"
+#~ msgstr "Modul KDE pentru tema biroului"
+
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
+#~ msgstr "(c) 2002 Karol Szwed, Daniel Molkentin"
+
+#~ msgid "Theme installation failed. (%1)"
+#~ msgstr "Instalarea temei a eșuat. (%1)"
+
+#~ msgid "Details"
+#~ msgstr "Detalii"
+
+#~ msgctxt "plasma name"
+#~ msgid "Panel Background"
+#~ msgstr "Fundal panou"
+
+#~ msgctxt "plasma name"
+#~ msgid "Kickoff"
+#~ msgstr "Kickoff"
+
+#~ msgctxt "plasma name"
+#~ msgid "Task Items"
+#~ msgstr "Elemente sarcină"
+
+#~ msgctxt "plasma name"
+#~ msgid "Widget Background"
+#~ msgstr "Fundal controale grafice"
+
+#~ msgctxt "plasma name"
+#~ msgid "Translucent Background"
+#~ msgstr "Fundal translucid"
+
+#~ msgctxt "plasma name"
+#~ msgid "Dialog Background"
+#~ msgstr "Fundal dialoguri"
+
+#~ msgctxt "plasma name"
+#~ msgid "Analog Clock"
+#~ msgstr "Ceas analog"
+
+#~ msgctxt "plasma name"
+#~ msgid "Notes"
+#~ msgstr "Notițe"
+
+#~ msgctxt "plasma name"
+#~ msgid "Tooltip"
+#~ msgstr "Indiciu"
+
+#~ msgctxt "plasma name"
+#~ msgid "Pager"
+#~ msgstr "Paginator"
+
+#~ msgctxt "plasma name"
+#~ msgid "Run Command Dialog"
+#~ msgstr "Dialog de executare comenzi"
+
+#~ msgctxt "plasma name"
+#~ msgid "Shutdown Dialog"
+#~ msgstr "Dialog de oprire"
+
+#~ msgctxt "plasma name"
+#~ msgid "Icons"
+#~ msgstr "Pictograme"
+
+#~ msgid "(Customized)"
+#~ msgstr "(Personalizată)"
+
+#~ msgid "User customized theme"
+#~ msgstr "Tematică personalizată de utilizator"
+
+#~ msgid ""
+#~ "Theme items have been changed.  Do you still wish remove the \"%1\" theme?"
+#~ msgstr ""
+#~ "Elementele tematicii au fost modificate. Doriți totuși să eliminați "
+#~ "tematica „%1”?"
+
+#~ msgid "Removal of the default desktop theme is not allowed."
+#~ msgstr "Eliminarea tematicii de birou implicite nu este permisă."
+
+#~ msgid "Are you sure you wish remove the \"%1\" theme?"
+#~ msgstr "Sigur eliminați tematica „%1”?"
+
+#~ msgid ""
+#~ "Please apply theme item changes (with a new theme name) before attempting "
+#~ "to export theme."
+#~ msgstr ""
+#~ "Aplicați modificările elementului de tematică (cu o nouă denumire a "
+#~ "tematicii) înainte de a încerca să exportați tematica."
+
+#~ msgid "Export Desktop Theme"
+#~ msgstr "Exportă tematica de birou"
+
+#~ msgid "Export theme to file"
+#~ msgstr "Exportă tematica în fișier"
+
+#~ msgid "Archive (*.zip)"
+#~ msgstr "Arhivă (*.zip)"
+
+#~ msgid "Theme Item"
+#~ msgstr "Element al tematicii"
+
+#~ msgid "Source"
+#~ msgstr "Sursă"
+
+#, fuzzy
+#~| msgid "%1 %2"
+#~ msgctxt ""
+#~ "%1 is the name of the theme, %2 is the type of the element (background, "
+#~ "icon, note, etc)"
+#~ msgid "%1 %2"
+#~ msgstr "%1 %2"
+
+#~ msgid "File..."
+#~ msgstr "Fișier..."
+
+#~ msgid "Select File to Use for %1"
+#~ msgstr "Alegeți fișierul de utilizat pentru %1"
+
+#~ msgid " Author: %1"
+#~ msgstr "Autor: %1"
+
+#~ msgid "Version: %1"
+#~ msgstr "Versiune: %1"
+
+#~ msgid "Desktop Theme Details"
+#~ msgstr "Detalii tematică de birou"
+
+#~ msgid "Choose an item and customize it by assigning it a theme"
+#~ msgstr "Alegeți un element și personalizați-l prin atribuirea unei teme"
+
+#~ msgid ""
+#~ "You can set any theme to any item. The available themes for the item are "
+#~ "in the dropdown box on the right."
+#~ msgstr ""
+#~ "Puteți atribui orice temă oricărui element. Temele disponibile pentru "
+#~ "element se găsesc în caseta de selecție din dreapta."
+
+#~ msgid "Enable more options"
+#~ msgstr "Activează opțiuni suplimentare"
+
+#~ msgid ""
+#~ "This will expand the dialog and give you options to export your custom "
+#~ "theme as well as to remove a theme."
+#~ msgstr ""
+#~ "Aceasta va desfășura dialogul și vă va oferi opțiuni de export sau de "
+#~ "eliminare a temei personalizate."
+
+#~ msgid "More"
+#~ msgstr "Mai mult"
+
+#~ msgid "Remove the selected theme"
+#~ msgstr "Elimină tema aleasă"
+
+#~ msgid ""
+#~ "Clicking this button will remove the selected theme. You will be asked "
+#~ "for confirmation."
+#~ msgstr ""
+#~ "Apăsând acest buton, veți elimina tema aleasă. Vi se va cere confirmarea."
+
+#~ msgid "Save your theme in a zip archive"
+#~ msgstr "Salvează tematica într-o arhivă .zip"
+
+#~ msgid ""
+#~ "You can save your theme in a zip archive in order to share it with the "
+#~ "community."
+#~ msgstr ""
+#~ "Puteți salva tema personalizată într-o arhivă .zip pentru a o partaja cu "
+#~ "comunitatea."
+
+#~ msgid "Export Theme to File..."
+#~ msgstr "Exportă tematica în fișier..."
+
+#~ msgid "New theme name:"
+#~ msgstr "Denumirea noii tematici:"
+
+#~ msgid "Custom theme name"
+#~ msgstr "Denumirea temei personalizate"
+
+#~ msgid "Give a name to your custom theme."
+#~ msgstr "Denumiți tema pe care ați personalizat-o."
+
+#~ msgid "Author:"
+#~ msgstr "Autor:"
+
+#~ msgid "Custom theme author "
+#~ msgstr "Autorul temei personalizate "
+
+#~ msgid "Enter the author name of your custom theme."
+#~ msgstr "Introduceți numele autorului temei personalizate."
+
+#~ msgid "Version:"
+#~ msgstr "Versiune:"
+
+#~ msgid "Custom theme version number"
+#~ msgstr "Numărul versiunii temei personalizate"
+
+#~ msgid "Enter the version number of your custom theme."
+#~ msgstr "Introduceți numărul versiunii temei personalizate."
+
+#~ msgid "Description:"
+#~ msgstr "Descriere:"
+
+#~ msgid "Custom theme description"
+#~ msgstr "Descrierea temei personalizate"
+
+#~ msgid "Enter a description which will explain your custom theme."
+#~ msgstr ""
+#~ "Introduceți o descriere care va explica tema dumneavoastră personalizată."
+
+#~ msgid "Select theme from above to customize"
+#~ msgstr "Alegeți o tematică de mai sus pentru personalizare"
+
+#~ msgid "Theme Author"
+#~ msgstr "Autorul tematicii"
+
+#~ msgid "Theme Name"
+#~ msgstr "Denumirea tematicii"
+
+#~ msgid "Theme Version"
+#~ msgstr "Versiunea tematicii"
+
+#~ msgid "The theme description goes here..."
+#~ msgstr "Aici merge descrierea tematicii..."
+
+#~ msgid ""
+#~ "Choose a start theme in this list then customize some items below. All "
+#~ "less important items not listed below will use this start theme."
+#~ msgstr ""
+#~ "Alegeți o temă de pornire din această listă, apoi personalizați câteva "
+#~ "elemente mai jos. Toate elementele mai puțin importante care nu sunt "
+#~ "afișate mai jos vor folosi această temă de pornire."
+
+#~ msgid "Karol Szwed"
+#~ msgstr "Karol Szwed"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "KCMDesktopTheme"
+#~ msgstr "KCMDesktopTheme"
+
+#, fuzzy
+#~| msgid ""
+#~| "To change your desktop theme to \"%1\", open\n"
+#~| " the desktop Appearance Settings and select \"%2\" from the droplist."
+#~ msgid ""
+#~ "To change your desktop theme to \"%1\", go back to the 'General' tab of "
+#~ "System Settings; choose 'Appearance', and then 'Style'; and finally "
+#~ "select \"%2\" from the drop-down list at the top of the window."
+#~ msgstr ""
+#~ "Pentru a schimba tematica biroului la „%1”, deschideți\n"
+#~ "Configurările de aspect ale biroului și alegeți „%2” din lista derulantă."
+
+#~ msgid "Removal of the active desktop theme is not allowed."
+#~ msgstr "Eliminarea tematicii de birou active nu este permisă."
+
+#~ msgid "Unfortunately, this feature is not yet implemented."
+#~ msgstr "Din păcate, această posibilitate nu este implementată încă."
+
+#~ msgid "Theme items data file could not be found."
+#~ msgstr "Fișierul cu datele elementelor tematicii nu a fost găsit."

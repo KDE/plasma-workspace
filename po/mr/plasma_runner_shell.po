@@ -1,0 +1,87 @@
+# translation of krunner_shellrunner.po to marathi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sandeep Shedmake <sandeep.shedmake@gmail.com>, 2009.
+# Chetan Khona <chetan@kompkin.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner_shellrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-27 00:45+0000\n"
+"PO-Revision-Date: 2013-01-30 17:59+0530\n"
+"Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
+"Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: shellrunner.cpp:35
+#, kde-format
+msgid "Finds commands that match :q:, using common shell syntax"
+msgstr "सामान्य शेल सिन्टेक्स वापरुन :q: ला जुळणारे आदेश शोधतो"
+
+#: shellrunner.cpp:36
+#, fuzzy, kde-format
+#| msgid "Run in &terminal window"
+msgid "Run in Terminal Window"
+msgstr "टर्मिनल चौकट अंतर्गत चालवा (&T)"
+
+#: shellrunner.cpp:54
+#, kde-format
+msgid "Run %1"
+msgstr "%1 चालवा"
+
+#~ msgid "Enter the user you want to run the application as here."
+#~ msgstr "ज्या वापरकर्त्याच्या नावाने अनुप्रयोग चालविण्याचा आहे तो वापरकर्ता दाखल करा."
+
+#~ msgid "User&name:"
+#~ msgstr "वापरकर्तानाव (&N):"
+
+#~ msgid "Enter the password here for the user you specified above."
+#~ msgstr "वरील निश्चित केलेल्या वापरकर्त्या करिता गुप्तशब्द दाखल करा."
+
+#~ msgid "Pass&word:"
+#~ msgstr "गुप्तशब्द (&W):"
+
+#~ msgid ""
+#~ "Check this option if the application you want to run is a text mode "
+#~ "application. The application will then be run in a terminal emulator "
+#~ "window."
+#~ msgstr ""
+#~ "जर तुम्हाला जो अनुप्रयोग चालवायचा आहे तो पाठ्य पद्धतीचा अनुप्रयोग असेल तर हा पर्याय "
+#~ "निवडा. त्यानंतर तो अनुप्रयोग टर्मिनल एम्युलेटर चौकटीत चालेल."
+
+#~ msgid "Run in &terminal window"
+#~ msgstr "टर्मिनल चौकट अंतर्गत चालवा (&T)"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "user id. Every process has a user id associated with it. This id code "
+#~ "determines file access and other permissions. The password of the user is "
+#~ "required to do this."
+#~ msgstr ""
+#~ "जर तुम्हाला जो अनुप्रयोग चालवायचा आहे तो वेगळ्या वापरकर्ता id ने चालवायचा असेल तर "
+#~ "हा पर्याय निवडा. प्रत्येक प्रक्रीयेस वापरकर्ता id संलग्न असतो. हा id फाईल व ईतर "
+#~ "परवानग्या ठरवितो. हे करण्याकरिता त्या वापरकर्त्याचा गुप्तशब्द गरजेचा आहे."
+
+#~ msgid "Run as a different &user"
+#~ msgstr "वेगळे वापरकर्ता नुरूप चालवा (&U)"
+
+#~ msgid "Run with realtime &scheduling"
+#~ msgstr "रियलटाइम आयोजनसह चालवा (&s)"
+
+#~ msgid "&Priority:"
+#~ msgstr "प्राधान्यता (&P):"
+
+#~ msgid "Run with a &different priority"
+#~ msgstr "वेगळे प्राधान्यतासह चालवा (&d)"
+
+#~ msgid "Low"
+#~ msgstr "कमी"
+
+#~ msgid "High"
+#~ msgstr "जास्त"

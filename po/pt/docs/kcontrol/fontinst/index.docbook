@@ -1,0 +1,255 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Portuguese "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="fontinst" lang="&language;">
+<title
+>Gestão de Tipos de Letra</title>
+<articleinfo>
+<authorgroup>
+<author
+>&Craig.Drummond; &Craig.Drummond.Mail;</author>
+
+<othercredit role="translator"
+><firstname
+>José</firstname
+><surname
+>Pires</surname
+><affiliation
+><address
+><email
+>zepires@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2015-04-08</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systemsettings</keyword>
+<keyword
+>tipos de letra</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_fontinst">
+<title
+>Gestão de Tipos de Letra</title>
+
+<para
+>Este módulo é responsável por instalar, desinstalar, antever e gerir os seus tipos de letra.</para>
+
+<sect2 id="font-groups">
+<title
+>Grupos de Tipos de Letra</title>
+<para
+>Existem 4 grupos especiais de tipos de letra predefinidos:</para>
+
+<orderedlist>
+    <listitem
+><para
+><quote
+>Todos os Tipos de Letra</quote
+> Isto irá mostrar todos os tipos de letra, sejam pessoais ou do sistema.</para
+></listitem>
+    <listitem
+><para
+><quote
+>Tipos de Letra Pessoais</quote
+> Os tipos de letra apresentados serão os seus tipos de letra pessoais, que não estarão disponíveis para os outros utilizadores.</para
+></listitem>
+    <listitem
+><para
+><quote
+>Tipos de Letra do Sistema</quote
+> Os tipos de letra mostrados serão os que estão disponíveis para todos os utilizadores. Se instalar ou remover um tipo de letra a nível do sistema, irá necessitar de permissões de administração.</para
+></listitem>
+    <listitem
+><para
+><quote
+>Não-Classificados</quote
+> Isto irá mostrar todos os tipos de letra que não tenham sido colocados em quaisquer grupos definidos pelo utilizador. Este grupo só aparecerá se tiver algum grupo definido por si.</para
+></listitem>
+</orderedlist>
+<para
+>Para adicionar um tipo de letra a um grupo, arraste-o da lista de tipos de letra para um grupo. Para remover um tipo de letra de um grupo, arraste o tipo de letra para o grupo <quote
+>Todos os Tipos de Letra</quote
+>.</para>
+<para
+>Por baixo desta lista, irá encontrar botão para criar ou remover um grupo, ou ainda activar ou desactivar os tipos de letra do grupo actual.</para>
+<para
+>No menu de contexto desta lista, irá ter itens de menu adicionais para imprimir as amostras de tipos de letra ou ainda exportar um tipo de letra para um pacote ZIP.</para>
+
+<sect3 id="font-hiding">
+<title
+>Activar e Desactivar</title>
+<para
+>Os utilizadores com diversos tipos de letra poderão achar útil ter apenas certos tipos de letra activos em determinadas alturas. Para facilitar isto, este módulo permitir-lhe-á desactivar individualmente alguns tipos de letra ou mesmo grupos inteiros. Ao desactivar um tipo de letra não o está a remover do sistema; simplesmente esconde-o para que não apareça mais nas aplicações. Se voltar a activar um tipo de letra, permitirá de novo que este seja usado.</para>
+</sect3>
+
+</sect2>
+
+<sect2 id="font-list">
+<title
+>Lista de Tipos de Letra</title>
+<para
+>A área principal é uma lista com os tipos de letra instalados, agrupados de acordo com o nome da família destes - o número entre parêntesis rectos representa o número de estilos instalados para essa família. P.ex., o tipo de letra <quote
+>Times</quote
+> pode aparecer como: <itemizedlist
+> <listitem>
+    <para
+>Times [4]</para>
+    <itemizedlist>
+        <listitem
+><para
+>Normal</para
+></listitem>
+        <listitem
+><para
+>Itálico</para
+></listitem>
+        <listitem
+><para
+>Negrito</para
+></listitem>
+        <listitem
+><para
+>Negrito Itálico</para
+></listitem>
+    </itemizedlist>
+</listitem>
+</itemizedlist>
+</para>
+
+<para
+>Para instalar um tipo de letra, carregue no botão <quote
+>Adicionar...</quote
+> e seleccione os tipos de letra desejados na janela do ficheiro. O grupo de tipos de letra seleccionado irá controlar onde os tipos de letra serão instalados.</para>
+<para
+>Para desinstalar os tipos de letra, seleccione os tipos de letra apropriados na lista e carregue no botão <quote
+>Apagar...</quote
+>.</para>
+
+<para
+>Carregue com o &RMB; para abrir um menu de contexto com algumas acções adicionais, como o <guilabel
+>Activar</guilabel
+>, o <guilabel
+>Desactivar</guilabel
+>, o <guilabel
+>Imprimir</guilabel
+>, o <ulink url="help:/kfontviewer/index.html"
+><guilabel
+>Abrir no Visualizador de Tipos de Letra</guilabel
+></ulink
+> e o <guilabel
+>Recarregar</guilabel
+>.</para>
+
+<sect3 id="font-filter">
+<title
+>Filtragem de Tipos de Letra</title>
+<para
+>Um campo de texto que lhe permite filtrar a lista de tipos de letra. Poderá filtrar os tipos de letra com base em diferentes categorias:</para>
+        <orderedlist>
+        <listitem
+><para
+>Família.</para
+></listitem>
+        <listitem
+><para
+>Estilo.</para
+></listitem>
+        <listitem
+><para
+>Fundação.</para
+></listitem>
+        <listitem
+><para
+>Ocorrência no FontConfig. Isto permite-lhe indicar o nome de uma família e ver a família que o 'fontconfig' irá usar de facto.</para
+></listitem>
+        <listitem
+><para
+>Família do tipo de letra.</para
+></listitem>
+        <listitem
+><para
+>Nome do ficheiro do tipo de letra.</para
+></listitem>
+        <listitem
+><para
+>Localização do ficheiro do tipo de letra.</para
+></listitem>
+        <listitem
+><para
+>Sistema de escrita.</para
+></listitem>
+        </orderedlist>
+</sect3>
+
+<sect3 id="get-new-fonts">
+<title
+>Obter Tipos de Letra Novos</title>
+<para
+>Os tipos de letra novos podem ser instalados a partir de ficheiros locais ou obtidos a partir do <quote
+>kde-look.org</quote
+>. A opção <quote
+>Obter Tipos de Letra Novos</quote
+> do botão de ferramentas (localizado acima da lista de grupos), permite-lhe instalar os tipos de letra do <quote
+>kde-look.org</quote
+>. Os tipos de letra transferidos desta forma serão instalados no seu grupo <quote
+>Tipos de Letra Pessoais</quote
+>. Para os instalar em todo o sistema, terá de os mover para o grupo <quote
+>Tipos de Letra do Sistema</quote
+> - podê-lo-á fazer se arrastar os tipos de letra para esse grupo, mas irá precisar de privilégios de administração.</para>
+</sect3>
+
+</sect2>
+
+<sect2 id="font-duplicates">
+<title
+>Tipos de Letra Duplicados</title>
+<para
+>Se tiver vários tipos de letra instalados no seu sistema, é possível que venha a ter duplicados.</para
+> 
+<para
+>Se tiver diversos tipos de letra instalados no seu sistema, é possível ficar com duplicados. A ferramenta para <quote
+>Procurar Tipos de Letra Duplicados...</quote
+> é uma aplicação simples que irá pesquisar o seu sistema à procura de tipos de letra que tenham vários ficheiros associados a eles. Por exemplo, se tiver o <quote
+>times.ttf</quote
+> e o <quote
+>times.TTF</quote
+> instalados na <quote
+>/usr/local/share/fonts</quote
+>, o mecanismo de tipos de letra subjacente (chamado <quote
+>FontConfig</quote
+>) só irá ver um destes. Por isso, se desinstalasse o tipo de letra, ele iria aparecer à mesma, atendendo a que só um dos ficheiros teria sido removido. Ao executar esta ferramenta, irá produzir uma janela que enumera cada um dos tipos de letra que têm vários ficheiros, assim como a lista de ficheiros correspondente. Para seleccionar um ficheiro para remoção, carregue na coluna que contém o ícone do caixote do lixo.</para>
+</sect2>
+
+<sect2 id="font-preview">
+<title
+>Antevisão</title>
+<para
+>Isto gera uma antevisão do texto com vários tamanhos de letra.</para>
+<para
+>Se usar o menu de contexto, poderá ampliar ou reduzir, seleccionar um tipo de antevisão (<guilabel
+>Antevisão Normal</guilabel
+> ou <guilabel
+>Todos os Caracteres</guilabel
+>) ou ainda mudar o texto da antevisão.</para>
+</sect2>
+</sect1>
+</article>

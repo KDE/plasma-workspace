@@ -1,0 +1,99 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % German "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="screenlocker" lang="&language;">
+<articleinfo>
+<title
+>Bildschirmsperre</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>Frank</firstname
+><surname
+>Schütte</surname
+><affiliation
+><address
+><email
+>F.Schuette@t-online.de</email
+></address
+></affiliation
+><contrib
+>Deutsche Übersetzung</contrib
+></othercredit
+> 
+</authorgroup>
+<!--FIXME code in plasma/kscreenlocker - docbook in plasma/plasma-workspace -->
+<date
+>2020-07-02</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systemeinstellungen</keyword>
+<keyword
+>Bildschirmsperre</keyword>
+<keyword
+>Bildschirmsperre</keyword>
+</keywordset>
+</articleinfo>
+<para
+>In diesem Modul können Sie festlegen, nach welchem Zeitraum der Inaktivität der Bildschirm gesperrt wird, die Zeitspanne für das Entsperren ohne Passwort sowie das Erscheinungsbild des Hintergrunds der Bildschirmsperre einstellen.</para>
+
+<para
+>Oben im Dialog gibt es das Ankreuzfeld <guilabel
+>Bildschirm automatisch sperren</guilabel
+> und ein Drehfeld, in dem Sie das Zeitintervall der Inaktivität vor dem Starten des Bildschirmsperre festlegen können. In diesem Feld können Sie das betreffende Intervall in Minuten einstellen.</para>
+
+<para
+>Mit dem Ankreuzfeld <guilabel
+>Nach Standby</guilabel
+> legen Sie fest, ob die Bildschirmsperre nach Aufwachen aus dem Standby-Betrieb ein- oder ausgeschaltet ist.</para>
+
+<para
+>Darunter befindet sich das Drehfeld <guilabel
+>Entsperren ohne Passwort erlauben für</guilabel
+>. Drücken Sie eine Taste oder klicken Sie mit der Maus, um die Bildschirmsperre vor der hier eingestellten Zeit zu beenden und zu Ihrer Arbeit zurückzukehren, müssen Sie kein Passwort eingeben. Hier wird das Passwort wie für Ihre Anmeldung am Rechner verwendet.</para>
+
+<para
+>Das manuelle Sperren des Bildschirms bewirkt, dass der Passwortschutz sofort wirksam wird.</para>
+
+<para
+>Zum Sperren des Bildschirms können Sie einen <guilabel
+>Tastatur-Kurzbefehl</guilabel
+> festlegen.</para>
+
+<para
+>Mit dem Standard-Kurzbefehl <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>L</keycap
+></keycombo
+> können Sie den Bildschirm manuell sofort sperren.</para>
+
+<para
+>Möchten Sie den Hintergrund im gesperrten Status ändern, drücken Sie auf <guibutton
+>Einrichten ...</guibutton
+> neben  <guilabel
+>Erscheinungsbild</guilabel
+>. Dann können Sie den <guilabel
+>Hintergrundbild-Typ</guilabel
+> ändern.</para>
+
+<para
+>Hier können Sie für das Hintergrundbild <guilabel
+>Einfarbig</guilabel
+> wählen.</para>
+
+<para
+>Alternativ können Sie ein einzelnes Bild oder eine Diaschau mit Bildern in einem Ordner wählen oder neue Hintergrundbilder aus dem Internet herunterladen.</para>
+
+</article>

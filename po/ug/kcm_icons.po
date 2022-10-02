@@ -1,0 +1,372 @@
+# Uyghur translation for kcmicons.
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Sahran <sahran.ug@gmail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmicons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"PO-Revision-Date: 2013-09-08 07:05+0900\n"
+"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
+"Language: ug\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: iconsizecategorymodel.cpp:14
+#, kde-format
+msgid "Toolbar"
+msgstr "قورال بالداق"
+
+#: iconsizecategorymodel.cpp:15
+#, kde-format
+msgid "Main Toolbar"
+msgstr "ئاساسىي قورال بالداق"
+
+#: iconsizecategorymodel.cpp:16
+#, kde-format
+msgid "Small Icons"
+msgstr "كىچىك سىنبەلگە"
+
+#: iconsizecategorymodel.cpp:17
+#, kde-format
+msgid "Panel"
+msgstr "تاختا"
+
+#: iconsizecategorymodel.cpp:18
+#, kde-format
+msgid "Dialogs"
+msgstr "سۆزلىشىش رامكىلىرى"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, fuzzy, kde-format
+#| msgid "Main Toolbar"
+msgid "Main toolbar icons size"
+msgstr "ئاساسىي قورال بالداق"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, fuzzy, kde-format
+#| msgid "Small Icons"
+msgid "Small icons size"
+msgstr "كىچىك سىنبەلگە"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr ""
+
+#: main.cpp:182
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: main.cpp:193
+#, fuzzy, kde-format
+#| msgid "Unable to find the icon theme archive %1."
+msgid "Unable to download the icon theme archive: %1"
+msgstr "سىنبەلگە ئۆرنەك ئارخىپى %1 تېپىلمىدى."
+
+#: main.cpp:207
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "بۇ ھۆججەت ئىناۋەتلىك سىنبەلگە ئۆرنەك ئارخىپى ئەمەس."
+
+#: main.cpp:212
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr ""
+"ئورنىتىۋاتقاندا مەسىلە كۆرۈلدى. شۇنداقتىمۇ ئارخىپ ئىچىدىكى بارلىق ئۆرنەكلەر "
+"ئورنىتىلدى."
+
+#: main.cpp:216
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: main.cpp:260
+#, fuzzy, kde-format
+#| msgid "Installing icon themes"
+msgid "Installing icon themes…"
+msgstr "سىنبەلگە ئۆرنەكلىرىنى ئورنىتىش"
+
+#: main.cpp:270
+#, fuzzy, kde-format
+#| msgid "Installing icon themes"
+msgid "Installing %1 theme…"
+msgstr "سىنبەلگە ئۆرنەكلىرىنى ئورنىتىش"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr ""
+
+#: package/contents/ui/main.qml:147
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Remove Icon Theme"
+msgstr "ئۆرنەكنى چىقىرىۋەت"
+
+#: package/contents/ui/main.qml:154
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Icon Theme"
+msgstr "ئۆرنەكنى چىقىرىۋەت"
+
+#: package/contents/ui/main.qml:228
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr ""
+
+#: package/contents/ui/main.qml:246
+#, fuzzy, kde-format
+#| msgid "Install Theme File..."
+msgid "Install from File…"
+msgstr "ئۆرنەك ھۆججىتىنى ئورنات…"
+
+#: package/contents/ui/main.qml:251
+#, fuzzy, kde-format
+#| msgid "Get New Themes..."
+msgid "Get New Icons…"
+msgstr "يېڭى ئۆرنەكلەرنى ئېلىش…"
+
+#: package/contents/ui/main.qml:279
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Open Theme"
+msgstr "ئۆرنەكنى چىقىرىۋەت"
+
+#: package/contents/ui/main.qml:281
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "ئابدۇقادىر ئابلىز, غەيرەت كەنجى"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "sahran.ug@gmail.com,  gheyret@gmail.com"
+
+#~ msgid "Icons"
+#~ msgstr "سىنبەلگىلەر"
+
+#~ msgid "Icons Control Panel Module"
+#~ msgstr "سىنبەلگە تىزگىن تاختىيى بۆلىكى"
+
+#~ msgid "(c) 2000-2003 Geert Jansen"
+#~ msgstr "(c) 2000-2003 Geert Jansen"
+
+#~ msgid "Geert Jansen"
+#~ msgstr "Geert Jansen"
+
+#~ msgid "Antonio Larrosa Jimenez"
+#~ msgstr "Antonio Larrosa Jimenez"
+
+#~ msgid "Torsten Rahn"
+#~ msgstr "Torsten Rahn"
+
+#~ msgid "Desktop"
+#~ msgstr "ئۈستەلئۈستى"
+
+#~ msgid "Use of Icon"
+#~ msgstr "سىنبەلگىنىڭ ئىشلىتىلىشى"
+
+#~ msgctxt "@label The icon rendered by default"
+#~ msgid "Default"
+#~ msgstr "كۆڭۈلدىكى"
+
+#~ msgctxt "@label The icon rendered as active"
+#~ msgid "Active"
+#~ msgstr "ئاكتىپ"
+
+#~ msgctxt "@label The icon rendered as disabled"
+#~ msgid "Disabled"
+#~ msgstr "ئىناۋەتسىز قىلىنغان"
+
+#~ msgid "Size:"
+#~ msgstr "چوڭلۇقى:"
+
+#~ msgid "Set Effect..."
+#~ msgstr "ئۈنۈم بەلگىلەش…"
+
+#~ msgid "All Icons"
+#~ msgstr "بارلىق سىنبەلگىلەر"
+
+#~ msgid "Setup Default Icon Effect"
+#~ msgstr "كۆڭۈلدىكى سىنبەلگە ئۈنۈمىنى بەلگىلە"
+
+#~ msgid "Setup Active Icon Effect"
+#~ msgstr "ئاكتىپ سىنبەلگە ئۈنۈمىنى بەلگىلە"
+
+#~ msgid "Setup Disabled Icon Effect"
+#~ msgstr "ئىناۋەتسىز قىلىنغان سىنبەلگە ئۈنۈمىنى بەلگىلە"
+
+#~ msgid "&Effect:"
+#~ msgstr "ئۇنۇم(&E):"
+
+#~ msgid "No Effect"
+#~ msgstr "ئۈنۈم يوق"
+
+#~ msgid "To Gray"
+#~ msgstr "رەڭسىز"
+
+#~ msgid "Colorize"
+#~ msgstr "رەڭلىك"
+
+#~ msgid "Gamma"
+#~ msgstr "گامما"
+
+#~ msgid "Desaturate"
+#~ msgstr "ئاچۇرۇش"
+
+#~ msgid "To Monochrome"
+#~ msgstr "يەككە رەڭ"
+
+#~ msgid "&Semi-transparent"
+#~ msgstr "يېرىم سۈزۈك(&S)"
+
+#~ msgid "Preview"
+#~ msgstr "ئالدىن كۆزەت"
+
+#~ msgid "Effect Parameters"
+#~ msgstr "ئۈنۈم پارامېتىرلىرى"
+
+#~ msgid "&Amount:"
+#~ msgstr "مىقدارى(&A):"
+
+#~ msgid "Co&lor:"
+#~ msgstr "رەڭ(&L):"
+
+#~ msgid "&Second color:"
+#~ msgstr "ئىككىنچى رەڭ(&S):"
+
+#~ msgid "Name"
+#~ msgstr "ئاتى"
+
+#~ msgid "Description"
+#~ msgstr "چۈشەندۈرۈش"
+
+#~ msgid "Install a theme archive file you already have locally"
+#~ msgstr "كومپيۇتېرىڭىزدا بار بولغان ئۆرنەك ھۆججىتىنى ئورنىتىدۇ"
+
+#~ msgid ""
+#~ "If you already have a theme archive locally, this button will unpack it "
+#~ "and make it available for KDE applications"
+#~ msgstr ""
+#~ "بۇ يەردە ئۆرنەك ئارخىپى بار بولسا، بۇ توپچا ئۇنى يېيىپ KDE دىكى "
+#~ "پروگراممىلارغا ئىشلىتەلەيدىغان قىلىپ بېرىدۇ."
+
+#~ msgid "Get new themes from the Internet"
+#~ msgstr "ئىنتېرنېتتىن يېڭى ئۆرنەكلەرنى ئالىدۇ"
+
+#~ msgid ""
+#~ "You need to be connected to the Internet to use this action. A dialog "
+#~ "will display a list of themes from the http://www.kde.org website. "
+#~ "Clicking the Install button associated with a theme will install this "
+#~ "theme locally."
+#~ msgstr ""
+#~ "بۇ مەشغۇلاتنى قىلىش ئۈچۈن ئىنتېرنېتقا باشلىنىشىڭىز  كېرەك. سۆزلەشكۈدە "
+#~ "http://www.kde.org تورتۇراسىدىن ئالغان ئۆرنەك تىزىملىكى كۆرۈنىدۇ. تېمىغا "
+#~ "مۇناسىۋەتلىك بولغان توپچىنى چەكسىڭىز، شۇ ئۆرنەك يەرلىككە(كومپيۇتېرىڭىزغا) "
+#~ "ئورنىتىلىدۇ."
+
+#~ msgid "Remove the selected theme from your disk"
+#~ msgstr "تاللانغان ئۆرنەكنى دىسكىڭىزدىن چىقىرىۋېتىدۇ"
+
+#~ msgid "This will remove the selected theme from your disk."
+#~ msgstr "دىسكىڭىزدىن تاللانغان ئۆرنەكنى چىقىرىۋېتىدۇ."
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "ئۆرنەك تور ئادرېسى(URL)نى سۆرەپ كېلىڭ ياكى كىرگۈزۈڭ"
+
+#~ msgid ""
+#~ "Unable to download the icon theme archive;\n"
+#~ "please check that address %1 is correct."
+#~ msgstr ""
+#~ "سىنبەلگە ئۆرنەك ئارخىپىنى چۈشۈرگىلى بولمىدى؛\n"
+#~ "ئادرېس %1 توغرىمۇ تەكشۈرۈڭ."
+
+#~ msgid "<qt>Installing <strong>%1</strong> theme</qt>"
+#~ msgstr "<qt><strong>%1</strong> ئۆرنىكىنى ئورنىتىۋاتىدۇ</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <strong>%1</strong> icon theme?"
+#~ "<br /><br />This will delete the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>راستلا<strong>%1</strong> دېگەن سىنبەلگە ئۆرنىكىنى ئۆچۈرەمسىز؟<br /"
+#~ "><br />ئۆچۈرۈلسە مۇشۇ ئۆرنەكنىڭ بارلىق ھۆججەتلىرىمۇ ئۆچۈرۈلىدۇ.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "جەزملەش"
+
+#~ msgid "&Theme"
+#~ msgstr "ئۆرنەك(&T)"
+
+#~ msgid "Ad&vanced"
+#~ msgstr "ئالىي(&V)"
+
+#~ msgid ""
+#~ "<h1>Icons</h1>This module allows you to choose the icons for your desktop."
+#~ "<p>To choose an icon theme, click on its name and apply your choice by "
+#~ "pressing the \"Apply\" button below. If you do not want to apply your "
+#~ "choice you can press the \"Reset\" button to discard your changes.</"
+#~ "p><p>By pressing the \"Install Theme File...\" button you can install "
+#~ "your new icon theme by writing its location in the box or browsing to the "
+#~ "location. Press the \"OK\" button to finish the installation.</p><p>The "
+#~ "\"Remove Theme\" button will only be activated if you select a theme that "
+#~ "you installed using this module. You are not able to remove globally "
+#~ "installed themes here.</p><p>You can also specify effects that should be "
+#~ "applied to the icons.</p>"
+#~ msgstr ""
+#~ "<h1>سىنبەلگىلەر</h1> بۇ بۆلەك ئۈستەلئۈستىڭىزگە سىنبەلگە تاللىشىڭىزغا يول "
+#~ "قويىدۇ.<p>سىنبەلگە ئۆرنىكىنى تاللاشتا ئۆرنەك ئاتىنى چېكىپ ئاندىن "
+#~ "ئاستىدىكى «قوللان» توپچىنى چېكىپ تاللىشىڭىزنى قوللىنىسىز. ئەگەر "
+#~ "تاللىشىڭىزنى قوللانمىسىڭىز، «ئەسلىگە قايتۇر» توپچىنى چېكىپ "
+#~ "ئۆزگەرتىشىڭىزنى تاشلىۋەتسىڭىز بولىدۇ.</p><p>«يېڭى ئۆرنەك ئۆرنات» توپچىنى "
+#~ "چېكىپ، سىز ئىزدەپ تاپقان يېڭى سىنبەلگە ئۆرنىكىنى ئورنىتالايسىز، پەقەت "
+#~ "سۆزلەشكۈدە ئۇنىڭ ئورنى ياكى ئورنىغا كۆز يۈگۈركەن جاينى كىرگۈزسىڭىزلا "
+#~ "بولىدۇ. «جەزملە» چېكىلسە ئورنىتىش تاماملىنىدۇ.</p><p>«ئۆرنەكنى چىقىرىۋەت» "
+#~ "توپچا پەقەت نۆۋەتتە تاللىغان مەزكۇر بۆلەكنى ئىشلىتىپ ئورناتقان ئۆرنەكنى "
+#~ "تاللىغاندىلا ئاندىن ئاكتىپلىنىدۇ. سىز بۇ جايدا ئومۇمىيەت بويىچە "
+#~ "ئورنىتىلغان ئۆرنەكنى چىقىرىۋېتەلمەيسىز.</p><p>سىز سىنبەلگىگە قوللىنىدىغان "
+#~ "ئۈنۈمنىمۇ بەلگىلىيەلەيسىز.</p>"
+
+#~ msgid "Animate icons"
+#~ msgstr "سىنبەلگىلەرنى جانلاندۇر"
+
+#~ msgid "Select the icon theme you want to use:"
+#~ msgstr "ئىشلەتمەكچى بولغان سىنبەلگە ئۆرنىكىنى تاللاڭ:"

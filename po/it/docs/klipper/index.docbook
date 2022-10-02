@@ -1,0 +1,673 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" 
+"dtd/kdedbx45.dtd" [
+  <!ENTITY kappname "&klipper;">
+  <!ENTITY package "kdebase">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Italian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<book id="klipper" lang="&language;">
+<bookinfo>
+<title
+>Manuale di &klipper; </title>
+
+<authorgroup>
+<author
+>&Philip.Rodrigues; &Philip.Rodrigues.mail;</author>
+
+<othercredit role="developer"
+>&Carsten.Pfeiffer; &Carsten.Pfeiffer.mail; </othercredit>
+
+<othercredit role="translator"
+><firstname
+>Vincenzo</firstname
+> <surname
+>Reale</surname
+><affiliation
+><address
+><email
+>smart2128vr@gmail.com</email
+></address
+></affiliation
+><contrib
+>Traduzione italiana</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Pino</firstname
+><surname
+>Toscano</surname
+><affiliation
+><address
+><email
+>toscano.pino@tiscali.it</email
+></address
+></affiliation
+><contrib
+>Traduzione italiana</contrib
+></othercredit
+> 
+
+</authorgroup>
+
+<copyright>
+<year
+>2000-2003</year>
+<holder
+>&Philip.Rodrigues;</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>05/05/2022</date>
+<releaseinfo
+>Plasma 5.25</releaseinfo>
+
+<abstract>
+<para
+>&klipper; è l'accessorio di &plasma; per il taglia/incolla dagli appunti.</para>
+</abstract>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Klipper</keyword>
+<keyword
+>kdebase</keyword>
+<keyword
+>appunti</keyword>
+</keywordset>
+</bookinfo>
+<!--http://blog.martin-graesslin.com/blog/2014/07/next-generation-klipper/-->
+<chapter id="introduction">
+<title
+>Introduzione</title>
+<para
+>&klipper; è l'accessorio di &plasma; per gli appunti. Memorizza la cronologia degli appunti, e permette di collegare i contenuti degli appunti ad azioni delle applicazioni. Segnala i problemi o le richieste di funzionalità usando il <ulink url="http://bugs.kde.org"
+>sistema di gestione dei bug di KDE</ulink
+>.</para>
+
+</chapter>
+
+<chapter id="using-klipper">
+<title
+>Uso di &klipper;</title>
+
+<sect1 id="basic-usage">
+<title
+>Uso basilare</title>
+<para
+>Puoi usare &klipper; nel vassoio di sistema sia come oggetto di &plasma; sia come applicazione classica. In entrambi i modi sono disponibili le stesse funzionalità ma con una &GUI; diversa, e entrambi mostrano l'ultimo elemento della cronologia quando si passa il mouse sull'icona di &klipper; nel vassoio di sistema: </para>
+
+<screenshot>
+<screeninfo
+>L'icona di &klipper;.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>L'icona di &klipper;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>L'oggetto di &klipper; è nascosto se gli appunti sono vuoi.</para>
+
+<para
+>Per mostrare la cronologia degli appunti, fai clic sull'icona di &klipper; nel vassoio di sistema.</para>
+
+<sect2 id="klipper-widget">
+<title
+>L'oggetto di &klipper;</title>
+<screenshot>
+<screeninfo
+>L'oggetto di &klipper;.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="klipper-widget.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>L'oggetto di &klipper;</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Sposta il puntatore del mouse su una voce, e appariranno quattro icone che ti permettono di invocare un'azione, mostrare il codice a barre, modificare il contenuto o rimuovere la voce dalla cronologia. Usa &spectacle; per acquisire un'istantanea dei codici a barre e salvarli. </para>
+
+<para
+>Puoi cercare nella cronologia degli appunti semplicemente aprendoli (fai clic su &klipper;) e digitando ciò che si vuole cercare. I risultati sono aggiornati in tempo reale. Per cancellare la cronologia degli appunti, fai clic sull'icona alla destra del campo di ricerca. </para>
+
+<para
+>L'azione <guilabel
+>Configura gli appunti...</guilabel
+> nel menu contestuale apre la <link linkend="preferences"
+>finestra delle preferenze</link
+>. </para>
+
+</sect2>
+</sect1>
+
+<sect1 id="actions">
+<title
+>Azioni</title>
+
+<para
+>&klipper; può eseguire azioni sui contenuti degli appunti, a secondo della corrispondenza con particolari espressioni regolari. Per esempio, i contenuti degli appunti che iniziano con <quote
+>http://</quote
+> possono essere aperti come &URL; con Firefox o &konqueror;. Inoltre, se i contenuti rappresentato un percorso di file, possono essere eseguite azioni a secondo del tipo di file. Ad esempio, se viene copiato negli appunti il percorso di un file <acronym
+>PDF</acronym
+>, il file può essere aperto in &okular;.</para>
+
+<para
+>Per usare le azioni, seleziona un &URL; o un percorso di file. Se corrisponde con una delle espressioni regolari nella lista di &klipper;, apparirà un menu che mostra i programmi disponibili per quella selezione. Usa il mouse o i tasti freccia per scegliere il programma che vuoi e &klipper; avvierà questo programma, aprendo l'indirizzo a cui si riferiva la selezione.</para>
+
+<para
+>Se non vuoi eseguire alcuna azione sui contenuti degli appunti, seleziona <guimenuitem
+>Disabilita questo menu a comparsa</guimenuitem
+> dal menu a comparsa per ritornare a ciò che stavi facendo prima. Se lasci il menu, esso scomparirà, permettendoti di continuare a lavorare. Puoi cambiare il tempo di permanenza del menu nella finestra delle preferenze, con l'opzione <guilabel
+>Mostra il menu a comparsa delle azioni</guilabel
+> nella pagina <guilabel
+>Generale</guilabel
+>. Puoi disabilitare separatamente la parte del percorso dei file usando l'opzione <guilabel
+>Includi le azioni MIME</guilabel
+> nella pagina <guilabel
+>Menu azioni</guilabel
+>.</para>
+
+<para
+>Le azioni possono essere completamente disabilitate usando la scorciatoia da tastiera <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>X</keycap
+></keycombo
+>.</para>
+
+<para
+>I contenuti degli appunti che corrispondono ad un'espressione regolare possono anche essere modificati prima che venga eseguita un'azione su di loro. Seleziona <guimenuitem
+>Modifica contenuti...</guimenuitem
+> alla destra della voce degli appunti, e nella finestra di dialogo che appare puoi cambiare i contenuti degli appunti, prima di fare clic sul pulsante <guibutton
+>OK</guibutton
+> per far partire l'azione adatta.</para>
+
+<para
+>Premendo <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>R</keycap
+></keycombo
+> viene mostrato un menu a comparsa per ripetere l'ultima azione eseguita da &klipper;.</para>
+
+</sect1>
+
+<sect1 id="clipboard-modes">
+<title
+>Comportamento appunti/selezione</title>
+
+<sect2 id="clipboard-modes-general">
+<title
+>Generale</title>
+<para
+>&klipper; può essere usato per impostare il comportamento degli appunti e della selezione in &plasma;. </para>
+
+<note
+><para
+>&X-Window; usa due buffer degli appunti separati: il buffer <quote
+>selezione</quote
+> e il buffer <quote
+>appunti</quote
+>. Il testo è posizionato nel buffer selezione quando viene selezionato, e può essere incollato con il tasto centrale del mouse. Per inserire il testo negli appunti, selezionalo e premi <keycombo
+>&Ctrl;<keycap
+>X</keycap
+> </keycombo
+> o <keycombo
+>&Ctrl;<keycap
+>C</keycap
+> </keycombo
+>. Il testo può essere incollato dal buffer appunti premendo <keycombo
+>&Ctrl;<keycap
+>V</keycap
+> </keycombo
+> o selezionando <guimenuitem
+>Incolla</guimenuitem
+> in un menu contestuale.</para>
+</note>
+
+</sect2>
+
+<sect2 id="changing-clipboard-modes">
+<title
+>Cambiare il comportamento appunti/selezione</title>
+<para
+>Per cambiare il comportamento degli appunti/selezione, seleziona <guimenuitem
+>Configura gli appunti...</guimenuitem
+> dal menu contestuale di &klipper; e, nella finestra che appare, seleziona la pagina <guilabel
+>Generale</guilabel
+>. La disattivazione di <guilabel
+>Selezione e appunti</guilabel
+> farà sì che gli appunti e la selezione lavorino come due buffer completamente separati come descritto sopra. Con quest'opzione impostata, l'opzione <guilabel
+>Ignora</guilabel
+> impedirà a &klipper; di includere i contenuti della selezione nella sua cronologia di appunti e di eseguire le azioni sui contenuti della selezione. Selezionando <guilabel
+>Selezione e Appunti</guilabel
+>, i buffer degli appunti e delle selezioni saranno sempre gli stessi, il che significa che il testo nella selezione può essere incollato con il pulsante <mousebutton
+>centrale</mousebutton
+> del mouse o con la combinazione di tasti <keycombo
+>&Ctrl;<keycap
+>V</keycap
+> </keycombo
+>, e allo stesso modo per il testo nel buffer degli appunti. </para>
+
+ <!-- The
+<guilabel
+>Synchronize contents of the clipboard and the
+selection</guilabel
+> check box determines the clipboard mode. If the box is
+selected, the clipboard functions in the &UNIX; mode; if not, the
+&Windows;/&Mac; mode is used. -->
+
+</sect2>
+
+
+</sect1>
+
+</chapter>
+
+<chapter id="preferences">
+<title
+>Configurare &klipper;</title>
+
+<sect1 id="general-page">
+<title
+>Opzioni generali</title>
+
+<variablelist>
+
+<varlistentry
+><term
+><guilabel
+>Selezione e appunti</guilabel
+></term>
+<listitem
+><para
+>Quando del testo o un'area dello schermo viene selezionato con il mouse o con la tastiera, questa viene chiamata <emphasis
+>selezione</emphasis
+>. Può essere incollata utilizzando il pulsante centrale del mouse.</para
+><para
+>Se la selezione viene copiata in modo esplicito utilizzando un'azione <guimenuitem
+>Copia</guimenuitem
+> o <guimenuitem
+>Taglia</guimenuitem
+>, viene salvata negli <emphasis
+>appunti</emphasis
+>. Può essere incollata usando un'azione <guimenuitem
+>Incolla</guimenuitem
+>.</para
+><para
+>Quando è attivata, questa opzione mantiene la selezione e gli appunti invariati, in modo che qualsiasi selezione sia immediatamente disponibile per essere incollata con qualsiasi mezzo. Se è disattivata, la selezione può ancora essere salvata nella cronologia degli appunti (fatte salve le opzioni seguenti), ma può essere incollata solo utilizzando il pulsante centrale del mouse.</para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Cronologia degli appunti</guilabel
+></term>
+<listitem
+><para
+>Commuta la cronologia degli appunti.</para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Numero di voci</guilabel
+></term>
+<listitem
+><para
+>Imposta il numero di voci memorizzate nella cronologia degli appunti.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Selezione del testo</guilabel
+></term>
+<listitem
+><para
+>Quando un'area dello schermo viene selezionata con il mouse o la tastiera, questa viene chiamata <quote
+>selezione</quote
+>. Questa opzione determina se le selezioni di testo vengono salvate nella cronologia degli appunti. È possibile scegliere tra <guilabel
+>Salva sempre nella cronologia</guilabel
+> e <guilabel
+>Solo se copiato esplicitamente</guilabel
+>. L'opzione <guilabel
+>Salva sempre nella cronologia</guilabel
+> non è disponibile se la sincronizzazione della selezione/appunti è disattivata &dash; in questo caso la selezione non viene mai salvata automaticamente nella cronologia degli appunti. Vedi <xref linkend="clipboard-modes"/>. </para>
+</listitem>
+</varlistentry
+> 
+
+<varlistentry>
+<term
+><guilabel
+>Selezione non testuale</guilabel
+></term>
+<listitem
+><para
+>Questa opzione determina se le selezioni non testuali (come le immagini) vengono salvate nella cronologia degli appunti. È possibile scegliere tra <guilabel
+>Salva sempre nella cronologia</guilabel
+>, <guilabel
+>Solo se copiato esplicitamente</guilabel
+> e <guilabel
+>Non salvare mai nella cronologia</guilabel
+>. L'opzione <guilabel
+>Salva sempre nella cronologia</guilabel
+> non è disponibile se la selezione/sincronizzazione degli appunti è disattivata &dash; in questo caso la selezione non viene mai salvata automaticamente nella cronologia degli appunti. Vedi <xref linkend="clipboard-modes"/>. </para>
+</listitem>
+</varlistentry
+> 
+
+</variablelist>
+
+</sect1>
+
+<sect1 id="action-menu-page">
+<title
+>Menu delle azioni</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Mostra il menu a comparsa delle azioni</guilabel
+></term>
+<listitem
+><para
+>Imposta il tempo di permanenza di un menu a comparsa se non lo usi.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Riproponi le azioni su un elemento selezionato nella cronologia</guilabel
+></term>
+<listitem
+><para
+>Se quest'opzione è attivata, quando si seleziona un elemento dalla cronologia, &klipper; farà comparire il menu a comparsa delle azioni per quell'elemento, se ve ne sono di adatte.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Escludi le finestre</guibutton
+></term>
+<listitem
+><para
+>Fa comparire la finestra di dialogo <guilabel
+>Disabilita le azioni per le finestre di tipo WM_CLASS</guilabel
+></para>
+<para
+>Alcuni programmi, come &konqueror;, usano gli appunti internamente. Se non vuoi che appaiano i menu a comparsa di &klipper; ogni volta che usi una certa applicazione, fai le seguenti cose:</para>
+
+<orderedlist>
+<listitem
+><para
+>Apri l'applicazione.</para
+></listitem>
+<listitem
+><para
+>Da un terminale, esegui <userinput
+><command
+>xprop</command
+> | <command
+>grep</command
+> <parameter
+>WM_CLASS</parameter
+></userinput
+> e quindi fai clic sulla finestra dell'applicazione che hai avviato.</para
+></listitem
+> 
+<listitem
+><para
+>Devi inserire la prima stringa dopo il segno di uguale.</para
+></listitem>
+</orderedlist>
+
+<para
+>Una volta che WM_CLASS è stato aggiunto, nessuna altra azione sarà generata per le finestre di quell'applicazione.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Rimuovi gli spazi bianchi quando esegui le azioni</guilabel
+></term>
+<listitem
+><para
+>Se quest'opzione è selezionata, qualsiasi spazio vuoto (spazi, tabulatori, &etc;) all'inizio e alla fine dei contenuti degli appunti sarà rimosso prima di passare i contenuti degli appunti alle applicazioni. Ciò è utile, ad esempio, se gli appunti contengono una &URL; con spazi che, se aperta con un browser web, causerà un errore.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Includi le azioni MIME</guilabel
+></term>
+<listitem
+><para
+>Se selezionata, includi le applicazioni che possono accettare il suo tipo &MIME; di un nome file o URL selezionato nel menu a comparsa.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+
+<sect1 id="actions-configuration-page">
+<title
+>Configurazione delle azioni</title>
+
+<variablelist>
+<varlistentry>
+<term
+>Modificare espressioni/azioni</term>
+<listitem
+><para
+>Nella pagina <guilabel
+>Azioni</guilabel
+>, fai doppio clic sull'espressione regolare o sull'azione che vuoi modificare, oppure selezionala e premi il pulsante <guilabel
+>Modifica azione</guilabel
+>. Apparirà una finestra di dialogo in cui il testo dell'espressione può essere liberamente modificato.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>Aggiungere Espressioni/Azioni</term>
+<listitem
+><para
+>Premi il pulsante <guibutton
+>Aggiungi azione...</guibutton
+> per aggiungere un'espressione regolare per &klipper;. &klipper; usa la classe <classname
+>QRegularExpression</classname
+> di &Qt;, che usa PCRE (Perl Compatible Regular Expressions).</para>
+<para
+>Puoi aggiungere una descrizione del tipo dell'espressione regolare (&eg; <quote
+>URL HTTP</quote
+>) facendo clic con il tasto <mousebutton
+>sinistro</mousebutton
+> del mouse nella colonna <guilabel
+>Descrizione</guilabel
+>.</para
+>   
+
+<note
+><para
+>Puoi trovare informazioni dettagliate sull'uso delle espressioni regolari di <classname
+>QRegularExpression</classname
+> presso <ulink url="hhttps://doc.qt.io/qt-5/qregularexpression.html#details"
+>la documentazione di Qt</ulink
+>.</para
+></note>
+
+<para
+>Modifica l'espressione regolare come descritto sopra. Per aggiungere un comando da eseguire, premi <guimenuitem
+>Aggiungi comando</guimenuitem
+> e modifica il comando nella casella di testo che appare sul posto. È possibile modificare un comando facendoci doppio clic.</para>
+
+<para
+>Nota che nella riga di comando <token
+>%s</token
+> è sostituito con i contenuti degli appunti, &eg; se la definizione del comando è <userinput
+><command
+>kwrite</command
+> <token
+>%s</token
+></userinput
+> e i contenuti degli appunti sono <filename
+>/home/mario/fileditesto</filename
+>, sarà avviato il comando <userinput
+><command
+>kwrite</command
+> <filename
+>/home/mario/fileditesto</filename
+></userinput
+>. Per includere <token
+>%s</token
+> nella riga di comando, usa la barra inversa di escape, così: <userinput
+>\%s</userinput
+>.</para>
+
+<para
+>Voci da <userinput
+><token
+>%0</token
+></userinput
+> a <userinput
+><token
+>%9</token
+></userinput
+> saranno sostituite da testi acquisiti corrispondenti dal modello di corrispondenza. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+
+<sect1 id="shortcuts-page">
+<title
+>Opzioni delle scorciatoie</title>
+
+<para
+>La pagina delle scorciatoie ti permette di cambiare le scorciatoie della tastiera per le funzioni di &klipper;. Puoi cambiare ogni scorciatoia in una di queste tre opzioni:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>Nessuno</guilabel
+></term>
+<listitem
+><para
+>L'azione selezionata non può essere attivata direttamente dalla tastiera</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Predefinito</guilabel
+></term>
+<listitem
+><para
+>L'azione selezionata usa il tasto predefinito di &klipper;. Queste sono le scorciatoie a cui si fa riferimento in questo manuale.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>Personalizzato</guilabel
+></term>
+<listitem
+><para
+>L'azione selezionata è assegnata al tasto che hai scelto.</para>
+<para
+>Per scegliere un tasto personalizzato per l'azione selezionata, fai clic su <guilabel
+>Personalizzato</guilabel
+> e quindi su <guilabel
+>Nessuno</guilabel
+>. Ora premi sulla tastiera la combinazione di tasti desiderata, come nelle altre applicazioni &kde;. </para
+> </listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>Se imposti una scorciatoia per <guilabel
+>Apri Klipper alla posizione del mouse</guilabel
+>, premere questa scorciatoia aprirà il menu a comparsa di &klipper; alla posizione del mouse, invece che alla posizione predefinita (nel pannello di &plasma;). Utile se usi più il mouse che la tastiera.</para>
+
+</sect1>
+</chapter>
+
+<chapter id="credits">
+<title
+>Riconoscimenti e licenza</title>
+
+<para
+>&klipper; </para>
+<para
+>Copyright del programma 1998 &Andrew.Stanley-Jones; <email
+>asj@cban.com</email
+> </para>
+<para
+>Copyright del programma 1998-2000 &Carsten.Pfeiffer; &Carsten.Pfeiffer.mail;</para>
+<para
+>Attualmente mantenuto da Esben Mose Hansen. Per i dettagli su come contattarlo guarda <ulink url="http://mosehansen.dk/about"
+>http://mosehansen.dk/about</ulink
+>. </para>
+
+<para
+>Copyright della documentazione 2000-2005 &Philip.Rodrigues; &Philip.Rodrigues.mail;</para>
+
+<para
+>Traduzione italiana di Vincenzo Reale <email
+>smart2128vr@gmail.com</email
+></para
+><para
+>Traduzione italiana di Pino Toscano <email
+>toscano.pino@tiscali.it</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+
+&documentation.index; 
+
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes: nil
+sgml-general-insert-case: lower
+sgml-indent-step: 0
+End:
+-->
+
+
+
+
+
+
+
+
+
+

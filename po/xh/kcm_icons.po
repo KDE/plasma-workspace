@@ -1,0 +1,298 @@
+# translation of kcmicons.po to Xhosa
+# K Desktop Environment - kdebase
+# Copyright (C) 2001 translate.org.za
+# Antoinette Dekeni <antoinette@transalate.org.za>, 2001.
+# Lwandle Mgidlana <lwandle@translate.org.za>, 2002
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmicons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"PO-Revision-Date: 2002-10-23 12:00SAST\n"
+"Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
+"Language-Team: Xhosa <xhosa@translate.org.za>\n"
+"Language: xh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.0beta2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: iconsizecategorymodel.cpp:14
+#, kde-format
+msgid "Toolbar"
+msgstr "Ibar yesixhobo"
+
+#: iconsizecategorymodel.cpp:15
+#, fuzzy, kde-format
+msgid "Main Toolbar"
+msgstr "Ibar yesixhobo"
+
+#: iconsizecategorymodel.cpp:16
+#, kde-format
+msgid "Small Icons"
+msgstr "Iimphawu zomfanekiso Omncinci"
+
+#: iconsizecategorymodel.cpp:17
+#, kde-format
+msgid "Panel"
+msgstr "Iqela lenjongo ethile"
+
+#: iconsizecategorymodel.cpp:18
+#, kde-format
+msgid "Dialogs"
+msgstr ""
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, fuzzy, kde-format
+msgid "Main toolbar icons size"
+msgstr "Ibar yesixhobo"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, fuzzy, kde-format
+#| msgid "Small Icons"
+msgid "Small icons size"
+msgstr "Iimphawu zomfanekiso Omncinci"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr ""
+
+#: main.cpp:182
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: main.cpp:193
+#, fuzzy, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Ayikwazi ukufumana umxholo wendawo yokugcina %1!"
+
+#: main.cpp:207
+#, fuzzy, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "Ifayile ayingomxholo osebenzayo wendawo yokugcina!"
+
+#: main.cpp:212
+#, fuzzy, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr ""
+"Kwenzeke ingxaki ngexesha lenkqubo yofako. Kodwa, kufakwe imixholo emininzi "
+"kwindawo yogcino"
+
+#: main.cpp:216
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: main.cpp:260
+#, fuzzy, kde-format
+#| msgid "Installing icon themes"
+msgid "Installing icon themes…"
+msgstr "Ifaka imixholo yophawu lomfanekiso"
+
+#: main.cpp:270
+#, fuzzy, kde-format
+#| msgid "Installing icon themes"
+msgid "Installing %1 theme…"
+msgstr "Ifaka imixholo yophawu lomfanekiso"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr ""
+
+#: package/contents/ui/main.qml:147
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Remove Icon Theme"
+msgstr "Susa Umxholo"
+
+#: package/contents/ui/main.qml:154
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Icon Theme"
+msgstr "Susa Umxholo"
+
+#: package/contents/ui/main.qml:228
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr ""
+
+#: package/contents/ui/main.qml:246
+#, fuzzy, kde-format
+#| msgid "Install New Theme..."
+msgid "Install from File…"
+msgstr "Faka Umxholo Omtsha..."
+
+#: package/contents/ui/main.qml:251
+#, fuzzy, kde-format
+#| msgid "Install New Theme..."
+msgid "Get New Icons…"
+msgstr "Faka Umxholo Omtsha..."
+
+#: package/contents/ui/main.qml:279
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Open Theme"
+msgstr "Susa Umxholo"
+
+#: package/contents/ui/main.qml:281
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#, fuzzy
+#~ msgid "Icons"
+#~ msgstr "Zonke Iimpawu zomfanekiso"
+
+#~ msgid "Use of Icon"
+#~ msgstr "Usebenziso lophawu lomfanekiso"
+
+#, fuzzy
+#~| msgid "Active"
+#~ msgctxt "@label The icon rendered as active"
+#~ msgid "Active"
+#~ msgstr "Iyasebenza"
+
+#, fuzzy
+#~| msgid "Disabled"
+#~ msgctxt "@label The icon rendered as disabled"
+#~ msgid "Disabled"
+#~ msgstr "Ikhubazekile"
+
+#~ msgid "Size:"
+#~ msgstr "Ubungakanani:"
+
+#~ msgid "Set Effect..."
+#~ msgstr "Cwangcisa Isiphumo..."
+
+#~ msgid "All Icons"
+#~ msgstr "Zonke Iimpawu zomfanekiso"
+
+#~ msgid "Setup Default Icon Effect"
+#~ msgstr "Cwangcisa Isiphumo Sophawu lomfanekiso Wokwendalo"
+
+#~ msgid "Setup Active Icon Effect"
+#~ msgstr "Cwangcisa Isiphumo  Sophawu lomfanekiso Osebenzayo"
+
+#~ msgid "Setup Disabled Icon Effect"
+#~ msgstr "Cwangcisa isiphumo  Sophawu lomfanekiso Okhubaziweyo"
+
+#~ msgid "&Effect:"
+#~ msgstr "&Isiphumo:"
+
+#~ msgid "No Effect"
+#~ msgstr "Akukho Siphumo"
+
+#~ msgid "To Gray"
+#~ msgstr "Ku Ngwevu"
+
+#~ msgid "Colorize"
+#~ msgstr "Yenza umbala"
+
+#~ msgid "Gamma"
+#~ msgstr "Unobumba wesithathu Wesigrike"
+
+#~ msgid "Desaturate"
+#~ msgstr "Sukuyimanzisa"
+
+#~ msgid "&Semi-transparent"
+#~ msgstr "&Ebonisa ngaphaya-elicala"
+
+#~ msgid "Preview"
+#~ msgstr "Imboniso"
+
+#~ msgid "Effect Parameters"
+#~ msgstr "Iparameters Ezinesiphumo"
+
+#~ msgid "&Amount:"
+#~ msgstr "&Isambuku:"
+
+#~ msgid "Co&lor:"
+#~ msgstr "Um&bala:"
+
+#~ msgid "Name"
+#~ msgstr "Igama"
+
+#~ msgid "Description"
+#~ msgstr "Inkcazelo"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "Rhuqha okanye Udidi Lomxholo we URL"
+
+#, fuzzy
+#~ msgid ""
+#~ "Unable to download the icon theme archive;\n"
+#~ "please check that address %1 is correct."
+#~ msgstr ""
+#~ "Ayikwazi ukulayisha ezantsi umxholo we icon esendaweni yogcino!\n"
+#~ "Nceda khangela ukuba idilesi %1 ilungile."
+
+#~ msgid "<qt>Installing <strong>%1</strong> theme</qt>"
+#~ msgstr "<qt>Iyafaka <strong>%1</strong> umxholo</qt>"
+
+#, fuzzy
+#~| msgid ""
+#~| "<qt>Are you sure you want to remove the <strong>%1</strong> icon theme?"
+#~| "<br><br>This will delete the files installed by this theme.</qt>"
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <strong>%1</strong> icon theme?"
+#~ "<br /><br />This will delete the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>Uqinisekile ukuba ufuna ukususa i <strong>%1</strong>yomxholo wophawu "
+#~ "lomfanekiso? <br><br>Oku kuzakucima iifayile ezifakwe ngulo mxholo "
+#~ "wokuxoxwa. </qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Uqinisekiso"
+
+#~ msgid "&Theme"
+#~ msgstr "&Umxholo wokuxoxwa"
+
+#, fuzzy
+#~ msgid "Ad&vanced"
+#~ msgstr "&Ukubheka phambili"
+
+#~ msgid "Animate icons"
+#~ msgstr "Uphawu lwemifanekiso Yophiliso"
+
+#~ msgid "Select the icon theme you want to use:"
+#~ msgstr "Khetha umxholo wophawu lomfanekiso ofuna ukuwusebenzisa:"
+
+#~ msgid "Double-sized pixels"
+#~ msgstr "Amachapaza omfanekiso aphindwe kabini-ubungakanani"
+
+#~ msgid "Desktop/File Manager"
+#~ msgstr "Desktop/Umphathi Wefayile"

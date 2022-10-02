@@ -1,0 +1,33 @@
+# UTF-8 test:äëïöü
+msgid ""
+msgstr ""
+"Project-Id-Version: kio_settings stable\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-08 00:48+0000\n"
+"PO-Revision-Date: 2005-05-05 11:27+0200\n"
+"Last-Translator: JUANITA FRANZ <JUANITA.FRANZ@VR-WEB.DE>\n"
+"Language-Team: AFRIKAANS <translate-discuss-af@lists.sourceforge.net>\n"
+"Language: af\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: kio_applications.cpp:122
+#, kde-format
+msgid "Applications"
+msgstr "Aanwendings"
+
+#: kio_applications.cpp:122
+#, kde-format
+msgid "Programs"
+msgstr "Programme"
+
+#: kio_applications.cpp:131
+#, fuzzy, kde-format
+#| msgid "Unknown settings folder"
+msgid "Unknown application folder"
+msgstr "Onbekende instellings kabinet"
+
+#~ msgid "Settings"
+#~ msgstr "Instellings"

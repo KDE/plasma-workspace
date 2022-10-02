@@ -1,0 +1,95 @@
+# Finnish messages for plasma_engine_keystate.
+# Copyright © 2010 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kdebase package.
+# Tommi Nieminen <translator@legisign.org>, 2010, 2012.
+# Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
+#
+# KDE Finnish translation sprint participants:
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_engine_keystate\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"PO-Revision-Date: 2012-10-07 20:55+0300\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <lokalisointi@lists.coss.fi>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-POT-Import-Date: 2012-12-01 22:22:32+0000\n"
+"X-Generator: MediaWiki 1.21alpha (963ddae); Translate 2012-11-08\n"
+
+#: keystate.cpp:15
+msgid "Shift"
+msgstr "Vaihto"
+
+#: keystate.cpp:16
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: keystate.cpp:17
+msgid "Alt"
+msgstr "Alt"
+
+#: keystate.cpp:18
+msgid "Meta"
+msgstr "Meta"
+
+#: keystate.cpp:19
+msgid "Super"
+msgstr "Super"
+
+#: keystate.cpp:20
+msgid "Hyper"
+msgstr "Hyper"
+
+#: keystate.cpp:21
+msgid "AltGr"
+msgstr "AltGr"
+
+#: keystate.cpp:22
+msgid "Num Lock"
+msgstr "Numerolukko"
+
+#: keystate.cpp:23
+msgid "Caps Lock"
+msgstr "Vaihtolukko"
+
+#: keystate.cpp:24
+msgid "Scroll Lock"
+msgstr "Vierityslukko"
+
+#: keystate.cpp:26
+msgid "Left Button"
+msgstr "Vasen painike"
+
+#: keystate.cpp:27
+msgid "Right Button"
+msgstr "Oikea painike"
+
+#: keystate.cpp:28
+msgid "Middle Button"
+msgstr "Keskipainike"
+
+#: keystate.cpp:29
+msgid "First X Button"
+msgstr "Ensimmäinen X-painike"
+
+#: keystate.cpp:30
+msgid "Second X Button"
+msgstr "Toinen X-painike"
+
+#: keystate.cpp:44 keystate.cpp:54 keystate.cpp:81 keystate.cpp:102
+#: keystate.cpp:110
+msgid "Pressed"
+msgstr "Painettu"
+
+#: keystate.cpp:45 keystate.cpp:88 keystate.cpp:111
+msgid "Latched"
+msgstr "Teljetty"
+
+#: keystate.cpp:46 keystate.cpp:95 keystate.cpp:112
+msgid "Locked"
+msgstr "Lukittu"

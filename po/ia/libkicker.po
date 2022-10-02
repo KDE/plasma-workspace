@@ -1,0 +1,470 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# G.Sora <g.sora@tiscali.it>, 2014, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-25 00:46+0000\n"
+"PO-Revision-Date: 2021-12-21 21:45+0100\n"
+"Last-Translator: giovanni <g.sora@tiscali.it>\n"
+"Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
+"Language: ia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.12.0\n"
+
+#: plugin/actionlist.cpp:86
+#, kde-format
+msgid "Open with:"
+msgstr "Aperi con:"
+
+#: plugin/actionlist.cpp:99
+#, kde-format
+msgid "Properties"
+msgstr "Proprietates"
+
+#: plugin/actionlist.cpp:146
+#, kde-format
+msgid "Add to Desktop"
+msgstr "Adde a Scriptorio"
+
+#: plugin/actionlist.cpp:151
+#, kde-format
+msgid "Add to Panel (Widget)"
+msgstr "Adde a Pannello (widget)"
+
+#: plugin/actionlist.cpp:156
+#, kde-format
+msgid "Pin to Task Manager"
+msgstr "Attacha a Gerente de carga"
+
+#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:429
+#, kde-format
+msgid "Recent Files"
+msgstr "Files recente"
+
+#: plugin/actionlist.cpp:317
+#, kde-format
+msgid "Forget Recent Files"
+msgstr "Oblida files recente"
+
+#: plugin/actionlist.cpp:395
+#, kde-format
+msgid "Edit Application…"
+msgstr "Modifica application…"
+
+#: plugin/actionlist.cpp:438
+#, kde-format
+msgctxt "@action opens a software center with the application"
+msgid "Uninstall or Manage Add-Ons…"
+msgstr "De-installa o gere Add_Ons.."
+
+#: plugin/appentry.cpp:319
+#, kde-format
+msgid "Hide Application"
+msgstr "Cela application"
+
+#: plugin/appentry.cpp:390
+#, kde-format
+msgctxt "App name (Generic name)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: plugin/appentry.cpp:392
+#, kde-format
+msgctxt "Generic name (App name)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: plugin/appsmodel.cpp:34 plugin/appsmodel.cpp:58 plugin/computermodel.cpp:98
+#: plugin/computermodel.cpp:226 plugin/recentusagemodel.cpp:163
+#: plugin/recentusagemodel.cpp:226
+#, kde-format
+msgid "Applications"
+msgstr "Applicationes"
+
+#: plugin/appsmodel.cpp:151
+#, kde-format
+msgid "Unhide Applications in this Submenu"
+msgstr "Discoperi Applicationes in iste Submenu"
+
+#: plugin/appsmodel.cpp:160
+#, kde-format
+msgid "Unhide Applications in '%1'"
+msgstr "Discoperi Applicationes in '%1'"
+
+#: plugin/computermodel.cpp:92
+#, kde-format
+msgid "Show KRunner"
+msgstr "Monstra KRunner"
+
+#: plugin/computermodel.cpp:96
+#, kde-format
+msgid "Search, calculate, or run a command"
+msgstr "cerca, calcula, o executa un commando"
+
+#: plugin/computermodel.cpp:149
+#, kde-format
+msgid "Computer"
+msgstr "Computator"
+
+#: plugin/contactentry.cpp:106 plugin/recentcontactsmodel.cpp:82
+#, kde-format
+msgid "Show Contact Information…"
+msgstr "Monstra Information de contacto…"
+
+#. i18n.
+#: plugin/kastatsfavoritesmodel.cpp:504 plugin/rootmodel.cpp:416
+#: plugin/simplefavoritesmodel.cpp:31
+#, kde-format
+msgid "Favorites"
+msgstr "Favoritos"
+
+#: plugin/recentcontactsmodel.cpp:40
+#, kde-format
+msgid "Contacts"
+msgstr "Contactos"
+
+#: plugin/recentcontactsmodel.cpp:73
+#, kde-format
+msgid "Forget Contact"
+msgstr "Oblida contacto"
+
+#: plugin/recentcontactsmodel.cpp:77 plugin/recentcontactsmodel.cpp:153
+#, kde-format
+msgid "Forget All Contacts"
+msgstr "Oblida omne contactos"
+
+#: plugin/recentusagemodel.cpp:161
+#, kde-format
+msgid "Recently Used"
+msgstr "Recentemente usate"
+
+#: plugin/recentusagemodel.cpp:166 plugin/recentusagemodel.cpp:308
+#, kde-format
+msgid "Files"
+msgstr "Files"
+
+#: plugin/recentusagemodel.cpp:248
+#, kde-format
+msgid "Forget Application"
+msgstr "Oblida application"
+
+#: plugin/recentusagemodel.cpp:342
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Aperi dossier continente"
+
+#: plugin/recentusagemodel.cpp:345
+#, kde-format
+msgid "Forget File"
+msgstr "Oblida file"
+
+#: plugin/recentusagemodel.cpp:495
+#, kde-format
+msgid "Forget All"
+msgstr "Oblida omnes"
+
+#: plugin/recentusagemodel.cpp:497
+#, kde-format
+msgid "Forget All Applications"
+msgstr "Oblida omne applicationes"
+
+#: plugin/recentusagemodel.cpp:500
+#, kde-format
+msgid "Forget All Files"
+msgstr "Oblida omne files"
+
+#: plugin/rootmodel.cpp:95
+#, kde-format
+msgid "Hide %1"
+msgstr "Cela %1"
+
+#: plugin/rootmodel.cpp:398
+#, kde-format
+msgid "All Applications"
+msgstr "Omne Applicationes"
+
+#: plugin/rootmodel.cpp:410
+#, kde-format
+msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
+msgstr "Isto non deberea esser visibile! Usa KICKER_FAVORITES_MODEL"
+
+#: plugin/rootmodel.cpp:422
+#, kde-format
+msgid "Recent Contacts"
+msgstr "Contactos recente"
+
+#: plugin/rootmodel.cpp:429
+#, kde-format
+msgid "Often Used Files"
+msgstr "Files frequentemente usate"
+
+#: plugin/rootmodel.cpp:438
+#, kde-format
+msgid "Recent Applications"
+msgstr "Netta Applicationes recente"
+
+#: plugin/rootmodel.cpp:438
+#, kde-format
+msgid "Often Used Applications"
+msgstr "Applicationes frequentemente usate"
+
+#: plugin/rootmodel.cpp:453
+#, kde-format
+msgid "Power / Session"
+msgstr "Potentia/Session"
+
+#: plugin/runnermodel.cpp:231
+#, kde-format
+msgid "Search results"
+msgstr "Resultatos de cerca"
+
+#: plugin/systementry.cpp:195
+#, kde-format
+msgid "Lock"
+msgstr "Bloca"
+
+#: plugin/systementry.cpp:198
+#, kde-format
+msgid "Log Out"
+msgstr "Claude session"
+
+#: plugin/systementry.cpp:201 plugin/systementry.cpp:269
+#, kde-format
+msgid "Save Session"
+msgstr "Salveguarda session"
+
+#: plugin/systementry.cpp:204
+#, kde-format
+msgid "Switch User"
+msgstr "Commuta Usator"
+
+#: plugin/systementry.cpp:207
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Dormi"
+
+#: plugin/systementry.cpp:210
+#, kde-format
+msgid "Hibernate"
+msgstr "Hiberna"
+
+#: plugin/systementry.cpp:213
+#, kde-format
+msgid "Restart"
+msgstr "Re-Initia"
+
+#: plugin/systementry.cpp:216
+#, kde-format
+msgid "Shut Down"
+msgstr "Stoppa (shut down)"
+
+#: plugin/systementry.cpp:229 plugin/systementry.cpp:232
+#: plugin/systementry.cpp:235 plugin/systementry.cpp:238
+#, kde-format
+msgid "Session"
+msgstr "Session"
+
+#: plugin/systementry.cpp:241 plugin/systementry.cpp:244
+#: plugin/systementry.cpp:247 plugin/systementry.cpp:250
+#, kde-format
+msgid "System"
+msgstr "Systema"
+
+#: plugin/systementry.cpp:263
+#, kde-format
+msgid "Lock screen"
+msgstr "Bloca schermo"
+
+#: plugin/systementry.cpp:266
+#, kde-format
+msgid "End session"
+msgstr "Fini session"
+
+#: plugin/systementry.cpp:272
+#, kde-format
+msgid "Start a parallel session as a different user"
+msgstr "Initia un session parallel como differente usator"
+
+#: plugin/systementry.cpp:275
+#, kde-format
+msgid "Suspend to RAM"
+msgstr "Suspende a RAM"
+
+#: plugin/systementry.cpp:278
+#, kde-format
+msgid "Suspend to disk"
+msgstr "Suspende a Disco"
+
+#: plugin/systementry.cpp:281
+#, kde-format
+msgid "Restart computer"
+msgstr "Re-Initia computator"
+
+#: plugin/systementry.cpp:284
+#, kde-format
+msgid "Turn off computer"
+msgstr "Extingue Computator "
+
+#: plugin/systemmodel.cpp:31
+#, kde-format
+msgid "System actions"
+msgstr "Actiones de systema"
+
+#~ msgid "Documents"
+#~ msgstr "Documentos"
+
+#~ msgid "Forget All Documents"
+#~ msgstr "Oblida omne documentos"
+
+#~ msgid "Remove from Favorites"
+#~ msgstr "Remove ex favoritos"
+
+#~ msgid "Add to Favorites"
+#~ msgstr "Adde a favoritos"
+
+#, fuzzy
+#~| msgid "Add to Favorites"
+#~ msgid "Show In Favorites"
+#~ msgstr "Adde a favoritos"
+
+#, fuzzy
+#~| msgid "Icon"
+#~ msgid "Icon:"
+#~ msgstr "Icone"
+
+#~ msgid "Show applications as:"
+#~ msgstr "Monstra applicationes como:"
+
+#~ msgid "Name only"
+#~ msgstr "Solo nomine"
+
+#~ msgid "Description only"
+#~ msgstr "Solo description"
+
+#~ msgid "Name (Description)"
+#~ msgstr "Nomine (Description)"
+
+#~ msgid "Description (Name)"
+#~ msgstr "Description (Nomine)"
+
+#, fuzzy
+#~| msgid "Behavior"
+#~ msgid "Behavior:"
+#~ msgstr "Comportamento"
+
+#, fuzzy
+#~| msgid "Show applications as:"
+#~ msgid "Sort applications alphabetically"
+#~ msgstr "Monstra applicationes como:"
+
+#, fuzzy
+#~| msgid "Add to Favorites"
+#~ msgid "Show categories:"
+#~ msgstr "Adde a favoritos"
+
+#, fuzzy
+#~| msgid "Recent Applications"
+#~ msgid "Recent applications"
+#~ msgstr "Netta Applicationes recente"
+
+#, fuzzy
+#~| msgid "Recent Applications"
+#~ msgid "Often used applications"
+#~ msgstr "Netta Applicationes recente"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Recent documents"
+#~ msgstr "Documentos recente"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Often used documents"
+#~ msgstr "Documentos recente"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Recent contacts"
+#~ msgstr "Documentos recente"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Often used contacts"
+#~ msgstr "Documentos recente"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgctxt ""
+#~ "@item:inlistbox Sort items in categories by [Recently used | Often used]"
+#~ msgid "Recently used"
+#~ msgstr "Documentos recente"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgctxt ""
+#~ "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
+#~ msgid "Often used"
+#~ msgstr "Documentos recente"
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgid "Search:"
+#~ msgstr "Cerca"
+
+#, fuzzy
+#~| msgid "Search..."
+#~ msgid "Type to search..."
+#~ msgstr "Il cerca ..."
+
+#~ msgid "Edit Applications..."
+#~ msgstr "Modifica applicationes"
+
+#~ msgid "Search..."
+#~ msgstr "Il cerca ..."
+
+#, fuzzy
+#~| msgid "Recent Applications"
+#~ msgid "Show recent applications"
+#~ msgstr "Netta Applicationes recente"
+
+#, fuzzy
+#~| msgid "Recent Applications"
+#~ msgid "Show often used applications"
+#~ msgstr "Netta Applicationes recente"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Show recent documents"
+#~ msgstr "Documentos recente"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Show often used documents"
+#~ msgstr "Documentos recente"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Show recent contacts"
+#~ msgstr "Documentos recente"
+
+#~ msgid "Logout"
+#~ msgstr "Clausura de session"
+
+#~ msgid "Suspend"
+#~ msgstr "Suspende"
+
+#~ msgid "Use custom image:"
+#~ msgstr "Usa imagine personalisate:"
+
+#~ msgid "New Session"
+#~ msgstr "Nove session"
+
+#~ msgid "(Empty)"
+#~ msgstr "(Vacue)"

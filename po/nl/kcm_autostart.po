@@ -1,0 +1,229 @@
+# translation of kcm_autostart.po to Dutch
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Rinse de Vries <rinsedevries@kde.nl>, 2008.
+# Kristof Bal <kristof.bal@gmail.com>, 2008.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2010, 2012, 2015, 2017, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_autostart\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:50+0000\n"
+"PO-Revision-Date: 2022-07-02 07:55+0200\n"
+"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"Language-Team: \n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 22.04.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: autostartmodel.cpp:288
+#, kde-format
+msgid "\"%1\" is not an absolute url."
+msgstr "\"%1\" is geen absolute url."
+
+#: autostartmodel.cpp:291
+#, kde-format
+msgid "\"%1\" does not exist."
+msgstr "\"%1\" bestaat niet."
+
+#: autostartmodel.cpp:294
+#, kde-format
+msgid "\"%1\" is not a file."
+msgstr "\"%1\" is geen bestand."
+
+#: autostartmodel.cpp:297
+#, kde-format
+msgid "\"%1\" is not readable."
+msgstr "\"%1\" is niet leesbaar."
+
+#: package/contents/ui/main.qml:40
+#, kde-format
+msgid "Make Executable"
+msgstr "Uitvoerbaar maken"
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "The file '%1' must be executable to run at logout."
+msgstr ""
+"Het bestand '%1' moet uitvoerbaar zijn om uitgevoerd te worden bij afmelden."
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid "The file '%1' must be executable to run at login."
+msgstr ""
+"Het bestand '%1' moet uitvoerbaar zijn om uitgevoerd te worden bij aanmelden."
+
+#: package/contents/ui/main.qml:89
+#, kde-format
+msgid "Properties"
+msgstr "Eigenschappen"
+
+#: package/contents/ui/main.qml:95
+#, kde-format
+msgid "Remove"
+msgstr "Verwijderen"
+
+#: package/contents/ui/main.qml:106
+#, kde-format
+msgid "Applications"
+msgstr "Toepassingen"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Login Scripts"
+msgstr "Aanmeldscripts"
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Pre-startup Scripts"
+msgstr "Pre-opstartscripts"
+
+#: package/contents/ui/main.qml:115
+#, kde-format
+msgid "Logout Scripts"
+msgstr "Afmeldscripts"
+
+#: package/contents/ui/main.qml:124
+#, kde-format
+msgid "No user-specified autostart items"
+msgstr "Geen gebruikerspecifieke autostart items"
+
+#: package/contents/ui/main.qml:125
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Click the <interface>Add…</interface> button below to add some"
+msgstr ""
+"Klik op de onderstaande knop <interface>Toevoegen…</interface> om er enige "
+"toe te voegen"
+
+#: package/contents/ui/main.qml:139
+#, kde-format
+msgid "Choose Login Script"
+msgstr "Aanmeldscript kiezen"
+
+#: package/contents/ui/main.qml:160
+#, kde-format
+msgid "Choose Logout Script"
+msgstr "Afmeldscript kiezen"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "Add…"
+msgstr "Toevoegen…"
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Add Application…"
+msgstr "Toepassing toevoegen…"
+
+#: package/contents/ui/main.qml:199
+#, kde-format
+msgid "Add Login Script…"
+msgstr "Aanmeldscript toevoegen…"
+
+#: package/contents/ui/main.qml:205
+#, kde-format
+msgid "Add Logout Script…"
+msgstr "Afmeldscript toevoegen…"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Rinse de Vries - 2008,Freek de Kruijf - 2010 t/m 2021"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "rinsedevries@kde.nl,freekdekruijf@kde.nl"
+
+#~ msgid "Autostart"
+#~ msgstr "Autostart"
+
+#~ msgid "Session Autostart Manager Control Panel Module"
+#~ msgstr "Module voor besturingspaneel van autostartbeheerder van sessies"
+
+#~ msgid "Copyright © 2006–2020 Autostart Manager team"
+#~ msgstr "(c) 2006-2020 Autostart Manager-team"
+
+#~ msgid "Stephen Leaf"
+#~ msgstr "Stephen Leaf"
+
+#~ msgid "Montel Laurent"
+#~ msgstr "Montel Laurent"
+
+#~ msgid "Maintainer"
+#~ msgstr "Onderhouder"
+
+#~ msgid "Nicolas Fella"
+#~ msgstr "Nicolas Fella"
+
+#~ msgid "Add..."
+#~ msgstr "Toevoegen..."
+
+#~ msgid "Shell script path:"
+#~ msgstr "Pad voor shellscript:"
+
+#~ msgid "Create as symlink"
+#~ msgstr "Als symbolische koppeling aanmaken"
+
+#~ msgid "Autostart only in Plasma"
+#~ msgstr "Alleen in Plasma automatisch opstarten"
+
+#~ msgid "Name"
+#~ msgstr "Naam"
+
+#~ msgid "Command"
+#~ msgstr "Commando"
+
+#~ msgid "Status"
+#~ msgstr "Status"
+
+#~ msgctxt ""
+#~ "@title:column The name of the column that decides if the program is run "
+#~ "on session startup, on session shutdown, etc"
+#~ msgid "Run On"
+#~ msgstr "Uitvoeren op"
+
+#~ msgid "Session Autostart Manager"
+#~ msgstr "Autostartbeheerder van sessies"
+
+#~ msgctxt "The program will be run"
+#~ msgid "Enabled"
+#~ msgstr "Ingeschakeld"
+
+#~ msgctxt "The program won't be run"
+#~ msgid "Disabled"
+#~ msgstr "Uitgeschakeld"
+
+#~ msgid "Desktop File"
+#~ msgstr "Desktop-bestand"
+
+#~ msgid "Script File"
+#~ msgstr "Scriptbestand"
+
+#~ msgid "Add Program..."
+#~ msgstr "Programma toevoegen..."
+
+#~ msgid "Startup"
+#~ msgstr "Opstarten"
+
+#~ msgid "Before session startup"
+#~ msgstr "Voor opstarten van de sessie"
+
+#~ msgid ""
+#~ "Only files with “.sh” extensions are allowed for setting up the "
+#~ "environment."
+#~ msgstr ""
+#~ "Alleen bestanden met “.sh”-extensies zijn toegestaan voor voor het "
+#~ "opzetten van de omgeving."
+
+#~ msgid "Pre-KDE startup"
+#~ msgstr "Pre-KDE opstarten"
+
+#~ msgid "Shutdown"
+#~ msgstr "Afsluiten"
+
+#~ msgid "1"
+#~ msgstr "1"

@@ -1,0 +1,55 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2009, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"PO-Revision-Date: 2014-09-23 13:45+0800\n"
+"Last-Translator: Franklin\n"
+"Language-Team: Chinese Traditional <kde-i18n-doc@kde.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"dot tw>\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. i18n: ectx: property (text), widget (QRadioButton, flatButton)
+#: config.ui:16
+#, kde-format
+msgid "Display all windows in one list"
+msgstr "在一個列表中顯示所有視窗"
+
+#. i18n: ectx: property (text), widget (QRadioButton, subButton)
+#: config.ui:23
+#, kde-format
+msgid "Display a submenu for each desktop"
+msgstr "顯示每個桌面的子選單"
+
+#. i18n: ectx: property (text), widget (QRadioButton, curButton)
+#: config.ui:30
+#, kde-format
+msgid "Display only the current desktop's windows"
+msgstr "只顯示目前桌面的視窗"
+
+#: switch.cpp:75
+#, kde-format
+msgctxt "plasma_containmentactions_switchwindow"
+msgid "Configure Switch Window Plugin"
+msgstr "設定切換視窗外掛程式"
+
+#: switch.cpp:155
+#, kde-format
+msgctxt "plasma_containmentactions_switchwindow"
+msgid "Windows"
+msgstr "視窗"
+
+#: switch.cpp:179 switch.cpp:200 switch.cpp:202
+#, kde-format
+msgctxt "plasma_containmentactions_switchwindow"
+msgid "All Desktops"
+msgstr "所有桌面"

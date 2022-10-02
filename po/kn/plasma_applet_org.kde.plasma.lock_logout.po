@@ -1,0 +1,157 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Ashok Kumar <ashok567@gmail.com>, 2009.
+# Shankar Prasad <svenkate@redhat.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2010-01-03 21:44+0530\n"
+"Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
+"Language-Team: Kannada <kde-l10n-kn@kde.org>\n"
+"Language: kn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "ಸಾಮಾನ್ಯ"
+
+#: contents/ui/ConfigGeneral.qml:36
+#, fuzzy, kde-format
+#| msgid "Show lock button"
+msgctxt ""
+"Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
+msgid "Show actions:"
+msgstr "ಲಾಕ್ ಮಾಡುವ ಗುಂಡಿಯನ್ನು ತೋರಿಸು"
+
+#: contents/ui/ConfigGeneral.qml:37
+#, kde-format
+msgid "Logout"
+msgstr ""
+
+#: contents/ui/ConfigGeneral.qml:43
+#, kde-format
+msgid "Shutdown"
+msgstr ""
+
+#: contents/ui/ConfigGeneral.qml:48
+#, kde-format
+msgid "Reboot"
+msgstr ""
+
+#: contents/ui/ConfigGeneral.qml:53 contents/ui/data.js:5
+#, kde-format
+msgid "Lock"
+msgstr "ಲಾಕ್ ಮಾಡು"
+
+#: contents/ui/ConfigGeneral.qml:58
+#, kde-format
+msgid "Switch User"
+msgstr ""
+
+#: contents/ui/ConfigGeneral.qml:63 contents/ui/data.js:46
+#, kde-format
+msgid "Hibernate"
+msgstr "ಹೈಬರ್ನೇಟ್"
+
+#: contents/ui/ConfigGeneral.qml:68 contents/ui/data.js:39
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr ""
+
+#: contents/ui/data.js:6
+#, kde-format
+msgid "Lock the screen"
+msgstr "ತೆರೆಯನ್ನು ಲಾಕ್ ಮಾಡು"
+
+#: contents/ui/data.js:12
+#, kde-format
+msgid "Switch user"
+msgstr ""
+
+#: contents/ui/data.js:13
+#, kde-format
+msgid "Start a parallel session as a different user"
+msgstr ""
+
+#: contents/ui/data.js:18
+#, kde-format
+msgid "Shutdown…"
+msgstr ""
+
+#: contents/ui/data.js:19
+#, fuzzy, kde-format
+#| msgid "Logout, turn off or restart the computer"
+msgid "Turn off the computer"
+msgstr "ನಿರ್ಗಮಿಸು, ಸ್ಥಗಿತಗೊಳಿಸು ಅಥವ ಗಣಕವನ್ನು ಮರಳಿ ಆರಂಭಿಸು"
+
+#: contents/ui/data.js:25
+#, kde-format
+msgid "Restart…"
+msgstr ""
+
+#: contents/ui/data.js:26
+#, kde-format
+msgid "Reboot the computer"
+msgstr ""
+
+#: contents/ui/data.js:32
+#, kde-format
+msgid "Logout…"
+msgstr ""
+
+#: contents/ui/data.js:33
+#, kde-format
+msgid "End the session"
+msgstr ""
+
+#: contents/ui/data.js:40
+#, kde-format
+msgid "Sleep (suspend to RAM)"
+msgstr "ನಿದ್ರಾವಸ್ಥೆ (RAM ನಲ್ಲಿ ಅಮಾನತಿನಲ್ಲಿಡು)"
+
+#: contents/ui/data.js:47
+#, kde-format
+msgid "Hibernate (suspend to disk)"
+msgstr "ಹೈಬರ್ನೇಟ್ (ಡಿಸ್ಕಿಗೆ ಅಮಾನತಿನಲ್ಲಿಡು)"
+
+#~ msgid "Do you want to suspend to disk (hibernate)?"
+#~ msgstr "ಡಿಸ್ಕಿಗೆ ಅಮಾನತಿನಲ್ಲಿಡಲು ಬಯಸುವಿರಾ?(ಹೈಬರ್ನೇಟ್)"
+
+#~ msgid "Do you want to suspend to RAM (sleep)?"
+#~ msgstr "RAM ಗೆ ಅಮಾನತಿನಲ್ಲಿಡಲು ಬಯಸುವಿರಾ?(ನಿದ್ರಾವಸ್ಥೆ)"
+
+#, fuzzy
+#~| msgid "Leave..."
+#~ msgid "Leave"
+#~ msgstr "ಬಿಟ್ಟುಬಿಡು..."
+
+#~ msgid "Leave..."
+#~ msgstr "ಬಿಟ್ಟುಬಿಡು..."
+
+#~ msgid "Suspend"
+#~ msgstr "ಅಮಾನತಿನಲ್ಲಿಡು"
+
+#~ msgid "Configure Lock/Logout"
+#~ msgstr "ಲಾಕ್/ನಿರ್ಗಮಿಸುವಿಕೆಯನ್ನು ಸಂರಚಿಸಿ"
+
+#, fuzzy
+#~| msgid "Show sleep button"
+#~ msgid "Show \"switch user\" button"
+#~ msgstr "ನಿದ್ರಾವಸ್ಥೆಯ ಗುಂಡಿಯನ್ನು ತೋರಿಸು"
+
+#~ msgid "Show logout button"
+#~ msgstr "ನಿರ್ಗಮಿಸುವ ಗುಂಡಿಯನ್ನು ತೋರಿಸು"
+
+#~ msgid "Show hibernate button"
+#~ msgstr "ಹೈಬರ್ನೇಟ್ ಗುಂಡಿಯನ್ನು ತೋರಿಸು"
+
+#~ msgid "Show sleep button"
+#~ msgstr "ನಿದ್ರಾವಸ್ಥೆಯ ಗುಂಡಿಯನ್ನು ತೋರಿಸು"

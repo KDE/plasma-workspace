@@ -1,0 +1,59 @@
+# translation of kcminit.po to Français
+# translation of kcminit.po to
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# sebo <tetsuo3@free.fr>, 2007.
+# Sébastien Renard <Sebastien.Renard@digitalfox.org>, 2008, 2011.
+# xavier <ktranslator31@yahoo.fr>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminit\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-26 00:47+0000\n"
+"PO-Revision-Date: 2013-04-25 16:32+0200\n"
+"Last-Translator: xavier <ktranslator31@yahoo.fr>\n"
+"Language-Team: French <kde-i18n-doc@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 1.5\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Sébastien Bouche"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "tetuso3@free.Fr"
+
+#: main.cpp:170
+#, kde-format
+msgid "KCMInit"
+msgstr "KCMInit"
+
+#: main.cpp:172
+#, kde-format
+msgid "KCMInit - runs startup initialization for Control Modules."
+msgstr ""
+"KCMInit - exécute les initialisations au démarrage des modules de Control."
+
+#: main.cpp:178
+#, kde-format
+msgid "List modules that are run at startup"
+msgstr "Liste les modules exécutés au démarrage"
+
+#: main.cpp:179
+#, kde-format
+msgid "Configuration module to run"
+msgstr "Module de configuration à exécuter"
+
+#~ msgid "Module %1 not found"
+#~ msgstr "Impossible de trouver le module %1"

@@ -1,0 +1,68 @@
+# translation of plasma_applet_org.kde.plasma.appmenu.po to Slovak
+# Roman Paholík <wizzardsk@gmail.com>, 2017.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_org.kde.plasma.appmenu\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-22 00:47+0000\n"
+"PO-Revision-Date: 2021-09-15 18:44+0200\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.08.1\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Vzhľad"
+
+#: package/contents/ui/configGeneral.qml:22
+#, kde-format
+msgid "Use single button for application menu"
+msgstr "Použiť jedno tlačidlo pre ponuku aplikácie"
+
+#: package/contents/ui/configGeneral.qml:28
+#, kde-format
+msgid "Show full application menu"
+msgstr "Zobraziť plnú ponuku aplikácie"
+
+#: package/contents/ui/MenuDelegate.qml:62
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Open a menu"
+msgstr ""
+
+#: plugin/appmenumodel.cpp:84
+#, kde-format
+msgid "Search"
+msgstr "Hľadať"
+
+#: plugin/appmenumodel.cpp:91
+#, kde-format
+msgid "Search…"
+msgstr "Hľadať..."
+
+#~ msgid "Search..."
+#~ msgstr "Hľadať..."
+
+#~ msgid "application-menu"
+#~ msgstr "application-menu"
+
+#~ msgid "Application Menu Widget is disabled"
+#~ msgstr "Widget ponuky aplikácie je zakázaný"
+
+#~ msgctxt "it being the 'Application Menu Widget'"
+#~ msgid ""
+#~ "Go to System Settings > Application Style > Fine Tuning (tab) to enable "
+#~ "it."
+#~ msgstr ""
+#~ "Prejdite na nastavenia systému > štýl aplikácií > jemné ladenie (karta) "
+#~ "na povolenie."
+
+#~ msgid "emblem-warning"
+#~ msgstr "emblem-warning"

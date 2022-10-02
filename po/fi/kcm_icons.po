@@ -1,0 +1,394 @@
+# translation of kcmicons.po to Finnish.
+# Copyright © 2010 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kdebase package.
+# Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2003.
+# Kim Enkovaara <kim.enkovaara@iki.fi>, 2003.
+# Teemu Rytilahti <teemu.rytilahti@kde-fi.org>, 2003, 2008.
+# Tapio Kautto <eleknader@phnet.fi>, 2004.
+# Ilpo Kantonen <ilpo@iki.fi>, 2005.
+# Mikko Piippo <piippo@cc.helsinki.fi>, 2007.
+# Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2010, 2011, 2012, 2013, 2014, 2016, 2017.
+# Tommi Nieminen <translator@legisign.org>, 2018, 2020, 2021.
+#
+# KDE Finnish translation sprint participants:
+# Author: Lliehu
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmicons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"PO-Revision-Date: 2021-06-07 16:51+0300\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-POT-Import-Date: 2012-12-01 22:22:11+0000\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#: iconsizecategorymodel.cpp:14
+#, kde-format
+msgid "Toolbar"
+msgstr "Työkalurivi"
+
+#: iconsizecategorymodel.cpp:15
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Päätyökalurivi"
+
+#: iconsizecategorymodel.cpp:16
+#, kde-format
+msgid "Small Icons"
+msgstr "Pienet kuvakkeet"
+
+#: iconsizecategorymodel.cpp:17
+#, kde-format
+msgid "Panel"
+msgstr "Paneeli"
+
+#: iconsizecategorymodel.cpp:18
+#, kde-format
+msgid "Dialogs"
+msgstr "Valintaikkunat"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr "Nykyisen kuvaketeeman nimi"
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr "Työpöytäkuvakkeiden koko"
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr "Työkalurivikuvakkeiden koko"
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, kde-format
+msgid "Main toolbar icons size"
+msgstr "Päätyökalurivikuvakkeiden koko"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, kde-format
+msgid "Small icons size"
+msgstr "Pienten kuvakkeiden koko"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr "Paneelikuvakkeiden koko"
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr "Kyselyikkunakuvakkeiden koko"
+
+#: main.cpp:182
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Väliaikaistiedoston luonti epäonnistui."
+
+#: main.cpp:193
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Kuvaketeema-arkiston %1 lataus epäonnistui"
+
+#: main.cpp:207
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "Tiedosto ei ole kelvollinen kuvaketeema-arkisto."
+
+#: main.cpp:212
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr ""
+"Asennuksessa tapahtui virhe. Siitä huolimatta suurin osa paketin teemoista "
+"on asennettu"
+
+#: main.cpp:216
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "Teeman asennus onnistui."
+
+#: main.cpp:260
+#, kde-format
+msgid "Installing icon themes…"
+msgstr "Asennetaan kuvaketeemoja…"
+
+# *** TARKISTA: Vai onko %1 lukumäärä?
+#: main.cpp:270
+#, kde-format
+msgid "Installing %1 theme…"
+msgstr "Asennetaan teemaa %1…"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr "Tällä moduulilla voit valita työpöytäsi kuvakkeet."
+
+#: package/contents/ui/main.qml:147
+#, kde-format
+msgid "Remove Icon Theme"
+msgstr "Poista kuvaketeema"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Restore Icon Theme"
+msgstr "Palauta kuvaketeema"
+
+#: package/contents/ui/main.qml:228
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr "Aseta kuvakekoot"
+
+#: package/contents/ui/main.qml:246
+#, kde-format
+msgid "Install from File…"
+msgstr "Asenna tiedostosta…"
+
+#: package/contents/ui/main.qml:251
+#, kde-format
+msgid "Get New Icons…"
+msgstr "Hae uusia kuvakkeita…"
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Open Theme"
+msgstr "Avaa teema"
+
+#: package/contents/ui/main.qml:281
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr "Teematiedostot (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Icon theme is already used"
+#~ msgstr "Kuvaketeema on jo käytössä"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr ""
+#~ "Teemu Rytilahti,Kim Enkovaara,Tapio Kautto,Ilpo Kantonen,Mikko Piippo,"
+#~ "Jorma Karvonen,Tommi Nieminen"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "teemu.rytilahti@kde-fi.org,kim.enkovaara@iki.fi,eleknader@phnet.fi,"
+#~ "ilpo@iki.fi,piippo@cc.helsinki.fi,karvonen.jorma@gmail.com,"
+#~ "translator@legisign.org"
+
+#~ msgid "Icons"
+#~ msgstr "Kuvakkeet"
+
+#~ msgid "Icons Control Panel Module"
+#~ msgstr "Ohjauskeskuksen Kuvakkeet-osio"
+
+#~ msgid "(c) 2000-2003 Geert Jansen"
+#~ msgstr "© 2000–2003 Geert Jansen"
+
+#~ msgid "Geert Jansen"
+#~ msgstr "Geert Jansen"
+
+#~ msgid "Antonio Larrosa Jimenez"
+#~ msgstr "Antonio Larrosa Jimenez"
+
+#~ msgid "Torsten Rahn"
+#~ msgstr "Torsten Rahn"
+
+#~ msgid "Jonathan Riddell"
+#~ msgstr "Jonathan Riddell"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Kai Uwe Broulik"
+
+#~ msgid "Desktop"
+#~ msgstr "Työpöytä"
+
+#~ msgid "Download New Icon Themes"
+#~ msgstr "Lataa uusia kuvaketeemoja"
+
+#~ msgid "Use of Icon"
+#~ msgstr "Kuvakkeen käyttö"
+
+#~ msgctxt "@label The icon rendered by default"
+#~ msgid "Default"
+#~ msgstr "Oletus"
+
+#~ msgctxt "@label The icon rendered as active"
+#~ msgid "Active"
+#~ msgstr "Aktiivinen"
+
+#~ msgctxt "@label The icon rendered as disabled"
+#~ msgid "Disabled"
+#~ msgstr "Poissa käytöstä oleva"
+
+#~ msgid "Size:"
+#~ msgstr "Koko:"
+
+#~ msgid "Enable icon animations"
+#~ msgstr "Käytä kuvakkeiden animaatioita"
+
+#~ msgid "Set Effect..."
+#~ msgstr "Muokkaa tehostetta…"
+
+#~ msgid "All Icons"
+#~ msgstr "Kaikki kuvakkeet"
+
+#~ msgid "Setup Default Icon Effect"
+#~ msgstr "Muokkaa kuvakkeen oletustehostetta"
+
+#~ msgid "Setup Active Icon Effect"
+#~ msgstr "Muokkaa aktiivisen kuvakkeen tehostetta"
+
+#~ msgid "Setup Disabled Icon Effect"
+#~ msgstr "Muokkaa passiivisen kuvakkeen tehostetta"
+
+#~ msgid "&Effect:"
+#~ msgstr "&Tehoste:"
+
+#~ msgid "No Effect"
+#~ msgstr "Ei tehostetta"
+
+#~ msgid "To Gray"
+#~ msgstr "Harmaaksi värjäys"
+
+#~ msgid "Colorize"
+#~ msgstr "Väritys"
+
+#~ msgid "Gamma"
+#~ msgstr "Gamma"
+
+#~ msgid "Desaturate"
+#~ msgstr "Vaalennus"
+
+#~ msgid "To Monochrome"
+#~ msgstr "Muunnos yksiväriseksi"
+
+#~ msgid "&Semi-transparent"
+#~ msgstr "&Puoliläpinäkyvä"
+
+#~ msgid "Preview"
+#~ msgstr "Esikatselu"
+
+#~ msgid "Effect Parameters"
+#~ msgstr "Tehosteen asetukset"
+
+#~ msgid "&Amount:"
+#~ msgstr "&Määrä:"
+
+#~ msgid "Co&lor:"
+#~ msgstr "Vä&ri:"
+
+#~ msgid "&Second color:"
+#~ msgstr "&Toinen väri:"
+
+#~ msgid "Name"
+#~ msgstr "Nimi"
+
+#~ msgid "Description"
+#~ msgstr "Kuvaus"
+
+#~ msgid "Install a theme archive file you already have locally"
+#~ msgstr "Asenna teema-arkistotiedosto, joka löytyy jo tietokoneelta"
+
+#~ msgid ""
+#~ "If you already have a theme archive locally, this button will unpack it "
+#~ "and make it available for KDE applications"
+#~ msgstr ""
+#~ "Jos teema-arkistopaketti on jo tietokoneella, tätä painiketta painamalla "
+#~ "se puretaan ja tuodaan KDE-ohjelmien käytettäväksi"
+
+#~ msgid "Get new themes from the Internet"
+#~ msgstr "Hae uusia teemoja internetistä"
+
+#~ msgid ""
+#~ "You need to be connected to the Internet to use this action. A dialog "
+#~ "will display a list of themes from the http://www.kde.org website. "
+#~ "Clicking the Install button associated with a theme will install this "
+#~ "theme locally."
+#~ msgstr ""
+#~ "Sinulla täytyy olla internet-yhteys käyttääksesi tätä toimintoa. Ikkuna "
+#~ "näyttää http://www.kde.org-sivustolla saatavilla olevat teemat. Voit "
+#~ "asentaa teeman napsauttamalla Asenna-painiketta teeman kohdalla."
+
+#~ msgid "Remove the selected theme from your disk"
+#~ msgstr "Poista valittu teema tietokoneelta"
+
+#~ msgid "This will remove the selected theme from your disk."
+#~ msgstr "Tämä poistaa valitun teeman tietokoneelta."
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "Vedä teema tai kirjoita sen verkko-osoite"
+
+#~ msgid ""
+#~ "Unable to download the icon theme archive;\n"
+#~ "please check that address %1 is correct."
+#~ msgstr ""
+#~ "Kuvakkeen teema-arkistopaketin lataus epäonnistui!\n"
+#~ "Tarkasta, että osoite %1 on oikein."
+
+#~ msgid "<qt>Installing <strong>%1</strong> theme</qt>"
+#~ msgstr "<qt>Asennetaan <strong>%1</strong> teema</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <strong>%1</strong> icon theme?"
+#~ "<br /><br />This will delete the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>Haluatko varmasti poistaa kuvaketeeman <strong>%1</strong>?<br /><br /"
+#~ "> Tämä poistaa kaikki teemaan kuuluvat tiedostot.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Varmistus"
+
+#~ msgid "&Theme"
+#~ msgstr "&Teema"
+
+#~ msgid "Ad&vanced"
+#~ msgstr "&Lisäasetukset"
+
+#~ msgid ""
+#~ "<h1>Icons</h1>This module allows you to choose the icons for your desktop."
+#~ "<p>To choose an icon theme, click on its name and apply your choice by "
+#~ "pressing the \"Apply\" button below. If you do not want to apply your "
+#~ "choice you can press the \"Reset\" button to discard your changes.</"
+#~ "p><p>By pressing the \"Install Theme File...\" button you can install "
+#~ "your new icon theme by writing its location in the box or browsing to the "
+#~ "location. Press the \"OK\" button to finish the installation.</p><p>The "
+#~ "\"Remove Theme\" button will only be activated if you select a theme that "
+#~ "you installed using this module. You are not able to remove globally "
+#~ "installed themes here.</p><p>You can also specify effects that should be "
+#~ "applied to the icons.</p>"
+#~ msgstr ""
+#~ "<h1>Kuvakkeet</h1>Tästä voit valita työpöytäsi kuvakkeet. <p>Valitse "
+#~ "kuvaketeema napsauttamalla sen nimeä ja ota käyttöön napsauttamalla "
+#~ "ikkunan alareunassa olevaa ”Käytä”-painiketta. Jos et halua ottaa "
+#~ "muutoksia käyttöön, voit napsauttaa ”Alusta”-painiketta hylätäksesi "
+#~ "muutokset.</p> <p>Napsauttamalla ”Asenna teematiedosto…” -painiketta voit "
+#~ "asentaa uuden teeman kirjoittamalla teeman sijainnin ilmestyvään "
+#~ "laatikkoon tai selaamalla sen sijainnin. Paina lopuksi ”OK”-painiketta "
+#~ "viimeistelläksesi asennuksen.</p> <p>”Poista teema” -painike on käytössä "
+#~ "vain, jos olet valinnut teeman, jonka olet asentanut tämän moduulin "
+#~ "kautta. Et voi poistaa järjestelmänlaajuisia teemoja tällä toiminnolla.</"
+#~ "p> <p>Lisäksi voit määritellä tässä moduulissa kuvakkeisiin käytettäviä "
+#~ "tehosteita.</p>"
+
+#~ msgid "Animate icons"
+#~ msgstr "Animoi kuvakkeita"
+
+#~ msgid "Select the icon theme you want to use:"
+#~ msgstr "Valitse käytettävä kuvaketeema:"

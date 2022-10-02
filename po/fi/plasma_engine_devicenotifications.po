@@ -1,0 +1,146 @@
+# translation of knotify4.po to Finnish
+# translation of knotify4.po to
+# KDE Finnish translation sprint participants:
+# Ilpo Kantonen <ilpo@iki.fi>, 2005.
+# Mikko Piippo <piippo@cc.helsinki.fi>, 2007.
+# Teemu Rytilahti <teemu.rytilahti@kde-fi.org>, 2008.
+# Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2008.
+# Tommi Nieminen <translator@legisign.org>, 2009, 2011, 2021.
+# Lasse Liehu <lliehu@kolumbus.fi>, 2010, 2014, 2015, 2016.
+# Jiri Grönroos <jiri.gronroos@iki.fi>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: knotify4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2021-02-08 14:21+0200\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-POT-Import-Date: 2012-12-01 22:22:14+0000\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#: ksolidnotify.cpp:149
+#, kde-format
+msgid "Device Status"
+msgstr "Laitteen tila"
+
+#: ksolidnotify.cpp:149
+#, kde-format
+msgid "A device can now be safely removed"
+msgstr "Laitteen voi nyt turvallisesti poistaa"
+
+#: ksolidnotify.cpp:150
+#, kde-format
+msgid "This device can now be safely removed."
+msgstr "Tämän laitteen voi nyt poistaa turvallisesti."
+
+#: ksolidnotify.cpp:157
+#, kde-format
+msgid "You are not authorized to mount this device."
+msgstr "Tämän laitteen liittämiseen ei ole oikeutta."
+
+#: ksolidnotify.cpp:160
+#, kde-format
+msgctxt "Remove is less technical for unmount"
+msgid "You are not authorized to remove this device."
+msgstr "Tämän laitteen poistamiseen ei ole oikeutta."
+
+#: ksolidnotify.cpp:163
+#, kde-format
+msgid "You are not authorized to eject this disc."
+msgstr "Tämän levyn poistamiseen ei ole oikeutta."
+
+#: ksolidnotify.cpp:170
+#, kde-format
+msgid "Could not mount this device as it is busy."
+msgstr "Tämän laitteen liittäminen epäonnistui, koska se on varattu."
+
+#: ksolidnotify.cpp:200
+#, kde-format
+msgid "One or more files on this device are open within an application."
+msgstr "Yksi tai useampi laitteen tiedosto on auki sovelluksessa."
+
+#: ksolidnotify.cpp:202
+#, kde-format
+msgid "One or more files on this device are opened in application \"%2\"."
+msgid_plural ""
+"One or more files on this device are opened in following applications: %2."
+msgstr[0] "Yksi tai useampi laitteen tiedosto on auki sovelluksessa ”%2”."
+msgstr[1] ""
+"Yksi tai useampi laitteen tiedosto on auki seuraavissa sovelluksissa: %2."
+
+#: ksolidnotify.cpp:205
+#, kde-format
+msgctxt "separator in list of apps blocking device unmount"
+msgid ", "
+msgstr ", "
+
+#: ksolidnotify.cpp:222
+#, kde-format
+msgid "Could not mount this device."
+msgstr "Tämän laitteen liittäminen epäonnistui."
+
+#: ksolidnotify.cpp:225
+#, kde-format
+msgctxt "Remove is less technical for unmount"
+msgid "Could not remove this device."
+msgstr "Tämän laitteen poistaminen epäonnistui."
+
+#: ksolidnotify.cpp:228
+#, kde-format
+msgid "Could not eject this disc."
+msgstr "Levyn poistaminen epäonnistui."
+
+#~ msgid ""
+#~ "Could not safely remove the following device: %1\n"
+#~ "One or more files on this device are open within an application"
+#~ msgstr ""
+#~ "Seuraavan laitteen turvallinen poisto epäonnistui: %1\n"
+#~ "Yksi tai useampi laitteen tiedosto on auki sovelluksessa"
+
+#~ msgid ""
+#~ "Could not safely remove the following device: %1\n"
+#~ "One or more files on this device are opened in application \"%3\"\n"
+#~ "Please close it and try again"
+#~ msgid_plural ""
+#~ "Could not safely remove the following device: %1\n"
+#~ "One or more files on this device are opened in following applications: "
+#~ "%3\n"
+#~ "Please close it and try again"
+#~ msgstr[0] ""
+#~ "Seuraavan laitteen turvallinen poisto epäonnistui: %1\n"
+#~ "Yksi tai useampi laitteen tiedosto on auki sovelluksessa ”%3”\n"
+#~ "Sulje se ja yritä uudelleen"
+#~ msgstr[1] ""
+#~ "Seuraavan laitteen turvallinen poisto epäonnistui: %1\n"
+#~ "Yksi tai useampi laitteen tiedosto on auki seuraavissa sovelluksissa: %3\n"
+#~ "Sulje ne ja yritä uudelleen"
+
+#~ msgctxt ""
+#~ "The term \"remove\" here means \"physically disconnect the device from "
+#~ "the computer\", whereas \"safely\" means \"without risk of data loss\""
+#~ msgid "The following device can now be safely removed: %1"
+#~ msgstr "Seuraavan laitteen voi nyt poistaa turvallisesti: %1"
+
+#~ msgid ""
+#~ "Could not eject the following device: %1\n"
+#~ "One or more files on this device are opened in application \"%3\"\n"
+#~ "Please close it and try again"
+#~ msgid_plural ""
+#~ "Could not eject the following device: %1\n"
+#~ "One or more files on this device are opened in following applications: "
+#~ "%3\n"
+#~ "Please close it and try again"
+#~ msgstr[0] ""
+#~ "Seuraavan laitteen poisto epäonnistui: %1\n"
+#~ "Yksi tai useampi laitteen tiedosto on auki sovelluksessa ”%3”\n"
+#~ "Sulje se ja yritä uudelleen"
+#~ msgstr[1] ""
+#~ "Seuraavan laitteen poisto epäonnistui: %1\n"
+#~ "Yksi tai useampi laitteen tiedosto on auki seuraavissa sovelluksissa: %3\n"
+#~ "Sulje ne ja yritä uudelleen"

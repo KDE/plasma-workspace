@@ -1,0 +1,136 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Tamas Szanto <tszanto@interware.hu>, 2008.
+# Kristóf Kiszel <ulysses@kubuntu.org>, 2011.
+# Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: KDE 4.2\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-27 00:45+0000\n"
+"PO-Revision-Date: 2017-02-06 21:55+0100\n"
+"Last-Translator: Kiszel Kristóf <kiszel.kristof@gmail.com>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: shellrunner.cpp:35
+#, kde-format
+msgid "Finds commands that match :q:, using common shell syntax"
+msgstr ""
+"A(z) :q: kifejezésre illeszkedő parancsok keresése, az általános "
+"parancsértelmező szintaxis használatával"
+
+#: shellrunner.cpp:36
+#, kde-format
+msgid "Run in Terminal Window"
+msgstr "Futtatás terminálban"
+
+#: shellrunner.cpp:54
+#, kde-format
+msgid "Run %1"
+msgstr "Futtatás: %1"
+
+#~ msgid "Enter the user you want to run the application as here."
+#~ msgstr "Adja meg, melyik felhasználó nevében fusson az alkalmazás."
+
+#~ msgid "User&name:"
+#~ msgstr "Né&v:"
+
+#~ msgid "Enter the password here for the user you specified above."
+#~ msgstr "Adja meg a fenti felhasználónévhez tartozó jelszót."
+
+#~ msgid "Pass&word:"
+#~ msgstr "&Jelszó:"
+
+#~ msgid ""
+#~ "Check this option if the application you want to run is a text mode "
+#~ "application. The application will then be run in a terminal emulator "
+#~ "window."
+#~ msgstr ""
+#~ "Jelölje be, ha az alkalmazás szöveges módban futó terminálalkalmazás. A "
+#~ "rendszer megnyit egy terminálablakot, és abban indítja el a programot."
+
+#~ msgid "Run in &terminal window"
+#~ msgstr "Futtatás &terminálban"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "user id. Every process has a user id associated with it. This id code "
+#~ "determines file access and other permissions. The password of the user is "
+#~ "required to do this."
+#~ msgstr ""
+#~ "Jelölje be, ha az alkalmazást más felhasználó nevében szeretné "
+#~ "elindítani. Minden folyamathoz hozzátartozik az indító felhasználó "
+#~ "azonosítója, ez határozza meg a fájlelérési és egyéb jogosultságokat. Meg "
+#~ "kell adni a felhasználó jelszavát is."
+
+#~ msgid "Run as a different &user"
+#~ msgstr "Futtatás &adott felhasználónévvel"
+
+#~ msgid ""
+#~ "<qt>Select whether realtime scheduling should be enabled for the "
+#~ "application. The scheduler governs which process will run and which will "
+#~ "have to wait. Two schedulers are available:\n"
+#~ "<ul>\n"
+#~ "<li><em>Normal:</em> This is the standard, timesharing scheduler. It will "
+#~ "divide fairly the available processing time between all processes.</li>\n"
+#~ "<li><em>Realtime:</em>This scheduler will run your application "
+#~ "uninterrupted until it gives up the processor. This can be dangerous. An "
+#~ "application that does not give up the processor might hang the system. "
+#~ "You need root's password to use the scheduler.</li>\n"
+#~ "</ul>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>Itt lehet magadni, hogy valós idejű ütemezés legyen-e érvényes az "
+#~ "alkalmazásnál. Az ütemező dönti el, hogy mikor melyik folyamat futhat, és "
+#~ "melyeknek kell várakozniuk. Kétfajta ütemező létezik:\n"
+#~ "<ul>\n"
+#~ "<li><em>Normál:</em> Ez a normál, időosztásos ütemező. Egyenletesen "
+#~ "osztja el a processzoridőt a folyamatok között.</li>\n"
+#~ "<li><em>Valós idejű:</em>Ez az ütemező addig hagyja futtatni az "
+#~ "alkalmazást, amíg az vissza nem adja a vezérlést. Ez veszélyes lehet, "
+#~ "mert hiba esetén a folyamat blokkolhatja az összes többi folyamat "
+#~ "futását. Rendszergazdai jogosultság kell az ütemező használatához.</li>\n"
+#~ "</ul>\n"
+#~ "</qt>"
+
+#~ msgid "Run with realtime &scheduling"
+#~ msgstr "Futtatás &valós idejű ütemezéssel"
+
+#~ msgid ""
+#~ "The priority that the command will be run with can be set here. From left "
+#~ "to right, it goes from low to high. The center position is the default "
+#~ "value. For priorities higher than the default, you will need to provide "
+#~ "the root password."
+#~ msgstr ""
+#~ "Itt lehet beállítani, milyen prioritással fusson a program. Balról jobbra "
+#~ "haladva nő a prioritás értéke. A középső állás felel meg az "
+#~ "alapértelmezett értéknek. Az alapértelmezettnél nagyobb prioritás "
+#~ "használatához meg kell adni a rendszergazdai jelszót."
+
+#~ msgid "&Priority:"
+#~ msgstr "&Prioritás:"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "priority. A higher priority tells the operating system to give more "
+#~ "processing time to your application."
+#~ msgstr ""
+#~ "Jelölje be, ha az alkalmazást nem az alapértelmezett prioritással "
+#~ "szeretné indítani. Magasabb prioritás esetén az alkalmazás több "
+#~ "processzoridőt kap az operációs rendszertől."
+
+#~ msgid "Run with a &different priority"
+#~ msgstr "Futtatás más &prioritással"
+
+#~ msgid "Low"
+#~ msgstr "Alacsony"
+
+#~ msgid "High"
+#~ msgstr "Magas"

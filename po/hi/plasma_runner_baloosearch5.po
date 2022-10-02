@@ -1,0 +1,68 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Raghavendra Kamath <raghu@raghukamath.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-05 00:46+0000\n"
+"PO-Revision-Date: 2021-07-01 19:01+0530\n"
+"Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
+"Language-Team: kde-hindi\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Lokalize 21.04.2\n"
+
+#: baloosearchrunner.cpp:65
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "युक्त फोल्डर खोलें"
+
+#: baloosearchrunner.cpp:87
+#, kde-format
+msgid "Audio"
+msgstr "श्रव्य"
+
+#: baloosearchrunner.cpp:88
+#, kde-format
+msgid "Image"
+msgstr "छवि"
+
+#: baloosearchrunner.cpp:89
+#, kde-format
+msgid "Video"
+msgstr "वीडियो"
+
+#: baloosearchrunner.cpp:90
+#, kde-format
+msgid "Spreadsheet"
+msgstr "स्प्रेडशीट"
+
+#: baloosearchrunner.cpp:91
+#, kde-format
+msgid "Presentation"
+msgstr "प्रस्तुतीकरण"
+
+#: baloosearchrunner.cpp:92
+#, kde-format
+msgid "Folder"
+msgstr "फ़ोल्डर"
+
+#: baloosearchrunner.cpp:93
+#, kde-format
+msgid "Document"
+msgstr "दस्तावेज़"
+
+#: baloosearchrunner.cpp:94
+#, kde-format
+msgid "Archive"
+msgstr "अभिलेखागार"
+
+#: baloosearchrunner.cpp:95
+#, kde-format
+msgid "Text"
+msgstr ""

@@ -1,0 +1,398 @@
+# translation of kcmstyle.po to Slovak
+# Marián Čavojský <cavojsky@soria-grey.sk>, 2000.
+# Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>, 2001-2002.
+# Stanislav Visnovsky <stano@ms.mff.cuni.cz>, 2002.
+# Stanislav Visnovsky <visnovsky@kde.org>, 2003, 2004, 2005.
+# Richard Fric <Richard.Fric@kdemail.net>, 2006, 2009.
+# Michal Sulek <misurel@gmail.com>, 2009, 2010, 2011.
+# Roman Paholík <wizzardsk@gmail.com>, 2012, 2017.
+# Mthw <jari_45@hotmail.com>, 2018, 2019.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmstyle\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"PO-Revision-Date: 2021-09-15 18:46+0200\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.08.1\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: gtkpage.cpp:59
+#, kde-format
+msgid "%1 is not a valid GTK Theme archive."
+msgstr "%1 nie je platný archív GTK témy."
+
+#: kcmstyle.cpp:161 kcmstyle.cpp:168
+#, kde-format
+msgid "There was an error loading the configuration dialog for this style."
+msgstr "Nastala chyba počas načítavania dialógu nastavenia pre tento štýl."
+
+#: kcmstyle.cpp:274
+#, kde-format
+msgid "Failed to apply selected style '%1'."
+msgstr "Nepodarilo sa použiť vybratý štýl '%1'."
+
+#: package/contents/ui/EffectSettingsPopup.qml:32
+#, kde-format
+msgid "Show icons:"
+msgstr "Zobrazovať ikony:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:33
+#, kde-format
+msgid "On buttons"
+msgstr "Na tlačidlách"
+
+#: package/contents/ui/EffectSettingsPopup.qml:44
+#, kde-format
+msgid "In menus"
+msgstr "V ponukách"
+
+#: package/contents/ui/EffectSettingsPopup.qml:56
+#, kde-format
+msgid "Main toolbar label:"
+msgstr "Popisok hlavného panelu:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "None"
+msgstr "Žiadne"
+
+#: package/contents/ui/EffectSettingsPopup.qml:59
+#, kde-format
+msgid "Text only"
+msgstr "Iba text"
+
+#: package/contents/ui/EffectSettingsPopup.qml:60
+#, kde-format
+msgid "Beside icons"
+msgstr "Vedľa ikon"
+
+#: package/contents/ui/EffectSettingsPopup.qml:61
+#, kde-format
+msgid "Below icon"
+msgstr "Pod ikonou"
+
+#: package/contents/ui/EffectSettingsPopup.qml:76
+#, kde-format
+msgid "Secondary toolbar label:"
+msgstr "Popisok sekundárneho panelu:"
+
+#: package/contents/ui/GtkStylePage.qml:18
+#, kde-format
+msgid "GNOME/GTK Application Style"
+msgstr "GNOME/GTK Štýl aplikácií"
+
+#: package/contents/ui/GtkStylePage.qml:44
+#, kde-format
+msgid "GTK theme:"
+msgstr "GTK téma:"
+
+#: package/contents/ui/GtkStylePage.qml:69
+#, kde-format
+msgid "Preview…"
+msgstr "Náhľad..."
+
+#: package/contents/ui/GtkStylePage.qml:88
+#, kde-format
+msgid "Install from File…"
+msgstr "Nainštalovať zo súboru..."
+
+#: package/contents/ui/GtkStylePage.qml:93
+#, kde-format
+msgid "Get New GNOME/GTK Application Styles…"
+msgstr "Získať nové štýly pre aplikácie GNOME/GTK..."
+
+#: package/contents/ui/GtkStylePage.qml:109
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr "Vybrať archív s GTK témou"
+
+#: package/contents/ui/GtkStylePage.qml:111
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr "Archív GTK témy (*.tar.xz *.tar.gz *.tar.bz2)"
+
+#: package/contents/ui/main.qml:17
+#, kde-format
+msgid ""
+"This module allows you to modify the visual appearance of applications' user "
+"interface elements."
+msgstr "Tento modul umožňuje upraviť vzhľad prvkov užívateľského rozhrania."
+
+#: package/contents/ui/main.qml:96
+#, kde-format
+msgid "Configure Style…"
+msgstr "Nastaviť štýl..."
+
+#: package/contents/ui/main.qml:116
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr "Nastaviť ikony a panely nástrojov"
+
+#: package/contents/ui/main.qml:132
+#, kde-format
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "Nastaviť štýl GNOME/GTK aplikácií..."
+
+#: styleconfdialog.cpp:21
+#, kde-format
+msgid "Configure %1"
+msgstr "Nastaviť %1"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "Karta 1"
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, kde-format
+msgid "Push Button"
+msgstr "Tlačidlo"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, kde-format
+msgid "Combo box"
+msgstr "Zoznam"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "Zaškrtávacie tlačidlo"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "Prepínač"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:133
+#, kde-format
+msgid "Tab 2"
+msgstr "Karta 2"
+
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, kde-format
+msgid "Application style"
+msgstr "Štýl aplikácií"
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, kde-format
+msgid "Show icons on buttons"
+msgstr "Zobrazovať ikony na tlačidlách"
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, kde-format
+msgid "Show icons in menus"
+msgstr "Zobrazovať ikony v ponukách"
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, kde-format
+msgid "Main toolbar label"
+msgstr "Popisok hlavného panelu"
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, kde-format
+msgid "Secondary toolbar label"
+msgstr "Popisok sekundárneho panelu"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Stanislav Višňovský,Michal Šulek"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "visnovsky@nenya.ms.mff.cuni.cz,misurel@gmail.com"
+
+#~ msgid "Application Style"
+#~ msgstr "Štýl aplikácií"
+
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
+#~ msgstr "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik"
+
+#~ msgid "Karol Szwed"
+#~ msgstr "Karol Szwed"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Kai Uwe Broulik"
+
+#~ msgid "GTK3 theme:"
+#~ msgstr "GTK3 téma:"
+
+#~ msgid "Download New GNOME/GTK2 Application Styles..."
+#~ msgstr "Získať nové štýly pre aplikácie GNOME/GTK2..."
+
+#~ msgid "GNOME/GTK2 Application Styles"
+#~ msgstr "Štýl aplikácií"
+
+#~ msgid "Download New GNOME/GTK3 Application Styles..."
+#~ msgstr "Stiahnuť nové štýly pre aplikácie GNOME/GTK3..."
+
+#~ msgid "GNOME/GTK3 Application Styles"
+#~ msgstr "Štýl aplikácii GNOME/GTK3..."
+
+#~ msgid "Unable to Load Dialog"
+#~ msgstr "Nepodarilo sa načítať dialóg"
+
+#~ msgid "No description available."
+#~ msgstr "Nie je dostupný žiadny popis."
+
+#~ msgid ""
+#~ "This area shows a preview of the currently selected style without having "
+#~ "to apply it to the whole desktop."
+#~ msgstr ""
+#~ "Táto oblasť zobrazuje náhľad na momentálne vybraný štýl bez jeho použitia "
+#~ "na celé prostredie."
+
+#~ msgid ""
+#~ "Here you can choose from a list of predefined widget styles (e.g. the way "
+#~ "buttons are drawn) which may or may not be combined with a theme "
+#~ "(additional information like a marble texture or a gradient)."
+#~ msgstr ""
+#~ "Tu si môžete vybrať zo zoznamu štýlov prvkov (napr. spôsob ako sa "
+#~ "vykresľujú tlačidlá), ktoré môžu alebo nesmú byť kombinované s témami "
+#~ "(doplnková informácia ako mramorová textúra alebo prechod)."
+
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "some important buttons."
+#~ msgstr ""
+#~ "Ak zapnete túto voľbu, aplikácie budú zobrazovať malé ikony vedľa "
+#~ "niektorýchdôležitých tlačidiel."
+
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "most menu items."
+#~ msgstr ""
+#~ "Ak zapnete túto voľbu, aplikácie budú zobrazovať malé ikony vedľa väčšiny "
+#~ "položiek menu."
+
+#~ msgid ""
+#~ "<p><b>No text:</b> Shows only icons on toolbar buttons. Best option for "
+#~ "low resolutions.</p><p><b>Text only: </b>Shows only text on toolbar "
+#~ "buttons.</p><p><b>Text beside icons: </b> Shows icons and text on toolbar "
+#~ "buttons. Text is aligned beside the icon.</p><b>Text below icons: </b> "
+#~ "Shows icons and text on toolbar buttons. Text is aligned below the icon."
+#~ msgstr ""
+#~ "<p><b>Žiadny text:</b> Zobrazí na tlačidlách iba ikony. Najvýhodnejšie "
+#~ "pre nízke rozlíšenia.</p><p><b>Iba text:</b> Zobrazí na tlačidlách iba "
+#~ "text.</p><p><b>Text vedľa ikon: </b>Zobrazí na tlačidlách text aj ikony. "
+#~ "Text bude vedľa ikony.</p><b>Text pod ikonami:</b> Zobrazí na tlačidlách "
+#~ "text aj ikony. Text bude zarovnaný pod ikonou."
+
+#~ msgid "Toolbars"
+#~ msgstr "Panely nástrojov"
+
+#~ msgid "No Text"
+#~ msgstr "Žiadny text"
+
+#~ msgid "Widget Style"
+#~ msgstr "Štýl prvkov"
+
+#~ msgid "Widget style:"
+#~ msgstr "Štýl prvkov:"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Fine Tuning"
+#~ msgstr "&Ladenie"
+
+#~ msgid "Description: %1"
+#~ msgstr "Popis: %1"
+
+#~ msgid ""
+#~ "This page allows you to choose details about the widget style options"
+#~ msgstr "Táto stránka vám umožňuje vybrať detaily možností prvkov štýlu"
+
+#~ msgid "Group Box"
+#~ msgstr "Skupinový box"
+
+#~ msgid "KDE Style Module"
+#~ msgstr "Modul pre nastavenie štýlu KDE"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "Menubar"
+#~ msgstr "Panel ponuky"
+
+#~ msgid "Menubar style:"
+#~ msgstr "Štýl panelu ponuky:"
+
+#~ msgid "In application"
+#~ msgstr "V aplikácii"
+
+#~ msgid "Title bar button"
+#~ msgstr "Tlačidlo titulkového panelu"
+
+#, fuzzy
+#~| msgid "Application Menu widget"
+#~ msgid "Global Menu widget"
+#~ msgstr "Widget ponuky aplikácie"
+
+#~ msgid "Your changes will take effect only on application restart."
+#~ msgstr "Vaše zmeny sa prejavia iba pri reštarte aplikácie."
+
+#~ msgid ""
+#~ "<p>Changes to the visibility of menu icons will only affect newly started "
+#~ "applications.</p>"
+#~ msgstr ""
+#~ "<p>Zmeny vo viditeľnosti ikon v menu sa prejavia iba pre novo spustené "
+#~ "aplikácie.</p>"
+
+#~ msgctxt "@title:window"
+#~ msgid "Menu Icons Changed"
+#~ msgstr "Ikony menu zmenené"
+
+#~ msgid "Top screen menubar"
+#~ msgstr "Panel ponuky navrchu obrazovky"
+
+#~ msgid "Only export"
+#~ msgstr "Iba exportovať"
+
+#~ msgid "Graphical effects:"
+#~ msgstr "Grafické efekty:"
+
+#~ msgid "Low display resolution and Low CPU"
+#~ msgstr "Nízke rozlíšenie obrazovky a slabý procesor"
+
+#~ msgid "High display resolution and Low CPU"
+#~ msgstr "Vysoké rozlíšenie obrazovky a slabý procesor"
+
+#~ msgid "Low display resolution and High CPU"
+#~ msgstr "Nízke rozlíšenie obrazovky a silný procesor"
+
+#~ msgid "High display resolution and High CPU"
+#~ msgstr "Vysoké rozlíšenie obrazovky a silný procesor"
+
+#~ msgid "Low display resolution and Very High CPU"
+#~ msgstr "Nízke rozlíšenie obrazovky a veľmi silný procesor"
+
+#~ msgid "High display resolution and Very High CPU"
+#~ msgstr "Vysoké rozlíšenie obrazovky a veľmi silný procesor"
+
+#~ msgid ""
+#~ "If you enable this option, KDE Applications will run internal animations."
+#~ msgstr ""
+#~ "Ak zapnete túto voľbu, aplikácie KDE budú používať interné animácie."
+
+#~ msgid "kcmstyle"
+#~ msgstr "kcmstyle"

@@ -1,0 +1,53 @@
+# translation of kcminit.po to Thai
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sahachart Anukulkitch <drrider@gmail.com>, 2007.
+# Thanomsub Noppaburana <donga.nb@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminit\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-26 00:47+0000\n"
+"PO-Revision-Date: 2008-04-26 11:04+0700\n"
+"Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
+"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: LoKalize 0.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "สหชาติ อนุกูลกิจ, ถนอมทรัพย์ นพบูรณ์"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "drrider@gmail.com, donga.nb@gmail.com"
+
+#: main.cpp:170
+#, kde-format
+msgid "KCMInit"
+msgstr "KCMInit"
+
+#: main.cpp:172
+#, kde-format
+msgid "KCMInit - runs startup initialization for Control Modules."
+msgstr "KCMInit - เรียกส่วนเริ่มต้นการทำงานของมอดูลควบคุม"
+
+#: main.cpp:178
+#, kde-format
+msgid "List modules that are run at startup"
+msgstr "รายการมอดูลที่จะให้ทำงานเมื่อเริ่มระบบ"
+
+#: main.cpp:179
+#, kde-format
+msgid "Configuration module to run"
+msgstr "ปรับแต่งมอดูลที่จะสั่งทำงาน"
+
+#~ msgid "Module %1 not found"
+#~ msgstr "ไม่พบมอดูล %1"

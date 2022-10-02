@@ -1,0 +1,687 @@
+# translation of kcminput.po to Macedonian
+#
+# Copyright (C) 2000,2002,2003, 2004, 2005, 2006, 2007, 2009, 2010 Free Software Foundation, Inc.
+#
+# Danko Ilik <danko@mindless.com>, 2000,2002,2003.
+# Novica Nakov <novica@bagra.net.mk>, 2003.
+# Bozidar Proevski <bobibobi@freemail.com.mk>, 2004, 2005, 2006, 2007, 2009, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminput\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:50+0000\n"
+"PO-Revision-Date: 2010-01-29 00:39+0100\n"
+"Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
+"Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
+"Language: mk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: Plural-Forms: nplurals=3; plural=n%10==1 ? 0 : n%10==2 ? 1 : "
+"2;\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current cursor theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr ""
+
+#: kcmcursortheme.cpp:302
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr ""
+"Мора да го рестартирате KDE за промената на бојата на курсорот да има ефект."
+
+#: kcmcursortheme.cpp:376
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: kcmcursortheme.cpp:387
+#, fuzzy, kde-format
+#| msgid "Unable to find the cursor theme archive %1."
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Не може да ја пронајдам архивата со теми на курсори %1."
+
+#: kcmcursortheme.cpp:418
+#, fuzzy, kde-format
+#| msgid "The file %1 does not appear to be a valid cursor theme archive."
+msgid "The file is not a valid icon theme archive."
+msgstr "Изгледа дека датотеката %1 не е валидна архива со теми на курсори."
+
+#: kcmcursortheme.cpp:425
+#, kde-format
+msgid "Failed to create 'icons' folder."
+msgstr ""
+
+#: kcmcursortheme.cpp:434
+#, kde-format
+msgid ""
+"A theme named %1 already exists in your icon theme folder. Do you want "
+"replace it with this one?"
+msgstr ""
+"Во вашата папка со теми на икони веќе постои тема наречена %1. Дали сакате "
+"да ја замените со оваа?"
+
+#: kcmcursortheme.cpp:438
+#, kde-format
+msgid "Overwrite Theme?"
+msgstr "Да запишам врз темата?"
+
+#: kcmcursortheme.cpp:462
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: package/contents/ui/Delegate.qml:54
+#, kde-format
+msgid "Remove Theme"
+msgstr "Отстранување тема"
+
+#: package/contents/ui/Delegate.qml:61
+#, fuzzy, kde-format
+#| msgid "&Cursor Theme"
+msgid "Restore Cursor Theme"
+msgstr "&Тема на курсор"
+
+#: package/contents/ui/main.qml:20
+#, kde-format
+msgid "This module lets you choose the mouse cursor theme."
+msgstr ""
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Size:"
+msgstr ""
+
+#: package/contents/ui/main.qml:134
+#, fuzzy, kde-format
+#| msgid "Install New Theme..."
+msgid "&Install from File…"
+msgstr "Инсталирај нова тема..."
+
+#: package/contents/ui/main.qml:140
+#, fuzzy, kde-format
+#| msgid "Install New Theme..."
+msgid "&Get New Cursors…"
+msgstr "Инсталирај нова тема..."
+
+#: package/contents/ui/main.qml:157
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Open Theme"
+msgstr "Отстранување тема"
+
+#: package/contents/ui/main.qml:159
+#, kde-format
+msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:41
+#, kde-format
+msgid "The requested size '%1' is not available, using %2 instead."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:62
+#, kde-format
+msgid ""
+"This tool allows you to set the mouse cursor theme for the current Plasma "
+"session, without accidentally setting it to one that is either not "
+"available, or which is already set."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:66
+#, kde-format
+msgid ""
+"The name of the cursor theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:67
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:68
+#, kde-format
+msgid "Use a specific size, rather than the theme default size"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:89
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:100
+#, kde-format
+msgid ""
+"Successfully applied the mouse cursor theme %1 to your current Plasma session"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:102
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for your newly applied mouse cursor "
+"theme to display correctly."
+msgstr ""
+"Мора да го рестартирате KDE за промената на бојата на курсорот да има ефект."
+
+#: plasma-apply-cursortheme.cpp:112
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:120
+#, kde-format
+msgid "You have the following mouse cursor themes on your system:"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:125
+#, kde-format
+msgid "(Current theme for this Plasma session)"
+msgstr ""
+
+#: xcursor/xcursortheme.cpp:60
+#, kde-format
+msgctxt ""
+"@info The argument is the list of available sizes (in pixel). Example: "
+"'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+msgid "(Available sizes: %1)"
+msgstr ""
+
+#~ msgid "Name"
+#~ msgstr "Име"
+
+#~ msgid "Description"
+#~ msgstr "Опис"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Божидар Проевски"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "bobibobi@freemail.com.mk"
+
+#, fuzzy
+#~| msgid "&Cursor Theme"
+#~ msgid "Cursors"
+#~ msgstr "&Тема на курсор"
+
+#~ msgid ""
+#~ "<qt>You cannot delete the theme you are currently using.<br />You have to "
+#~ "switch to another theme first.</qt>"
+#~ msgstr ""
+#~ "<qt>Не може да ја избришете темата што тековно ја користите.<br />Прво "
+#~ "треба да се префрлите на друга тема.</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <i>%1</i> cursor theme?<br />This "
+#~ "will delete all the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>Дали навистина сакате да ја отстраните темата на курсори <i>%1</i>?"
+#~ "<br />Ова ќе ги избрише сите датотеки инсталирани од оваа тема.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Потврда"
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "Поставувањата за курсорот се изменети"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "Довлечи или впиши URL на тема"
+
+#~ msgid ""
+#~ "Unable to download the cursor theme archive; please check that the "
+#~ "address %1 is correct."
+#~ msgstr ""
+#~ "Не може да се симне архивата со теми на курсори; ве молиме проверете дали "
+#~ "е точна адресата %1."
+
+#~ msgid ""
+#~ "Select the cursor theme you want to use (hover preview to test cursor):"
+#~ msgstr ""
+#~ "Изберете ја темата за курсор што сакате да ја користите (застанете над "
+#~ "прегледот за да ја тестирате):"
+
+#~ msgid "Select the cursor theme you want to use:"
+#~ msgstr "Изберете ја темата ка курсорот која сакате да ја користите:"
+
+#~ msgid "Small black"
+#~ msgstr "Мали црни"
+
+#~ msgid "Small black cursors"
+#~ msgstr "Мали црни курсори"
+
+#~ msgid "Large black"
+#~ msgstr "Големи црни"
+
+#~ msgid "Large black cursors"
+#~ msgstr "Големи црни курсори"
+
+#~ msgid "Small white"
+#~ msgstr "Мали бели"
+
+#~ msgid "Small white cursors"
+#~ msgstr "Мали бели курсори"
+
+#~ msgid "Large white"
+#~ msgstr "Големи бели"
+
+#~ msgid "Large white cursors"
+#~ msgstr "Големи бели курсори"
+
+#~ msgid "Button Order"
+#~ msgstr "Редослед на копчиња"
+
+#~ msgid "Righ&t handed"
+#~ msgstr "За де&сна рака"
+
+#~ msgid "Le&ft handed"
+#~ msgstr "За лева ра&ка"
+
+#~ msgid ""
+#~ "Change the direction of scrolling for the mouse wheel or the 4th and 5th "
+#~ "mouse buttons."
+#~ msgstr ""
+#~ "Ја менува насоката на движење за тркалцето на глушецот или за четвртото и "
+#~ "петтото копче на глушецот."
+
+#~ msgid "Re&verse scroll direction"
+#~ msgstr "С&врти ја насоката на движење"
+
+#~ msgid "Icons"
+#~ msgstr "Икони"
+
+#~ msgid ""
+#~ "Dou&ble-click to open files and folders (select icons on first click)"
+#~ msgstr ""
+#~ "Двоен к&лик за отворање на датотеки и папки (икони се избираат со еден "
+#~ "клик)"
+
+#~ msgid "&Single-click to open files and folders"
+#~ msgstr "&Еден клик за отворање на датотеки и папки"
+
+#~ msgid "Cha&nge pointer shape over icons"
+#~ msgstr "Измени ја формата на &покажувачот над иконите"
+
+#~ msgid "A&utomatically select icons"
+#~ msgstr "Авт&оматски избери икони"
+
+#, fuzzy
+#~| msgid "Dela&y:"
+#~ msgctxt "label. delay (on milliseconds) to automatically select icons"
+#~ msgid "Delay"
+#~ msgstr "Доцн&ење:"
+
+#, fuzzy
+#~| msgid " msec"
+#~ msgctxt "milliseconds. time to automatically select the items"
+#~ msgid " ms"
+#~ msgstr " msec"
+
+#~ msgid ""
+#~ "<h1>Mouse</h1> This module allows you to choose various options for the "
+#~ "way in which your pointing device works. Your pointing device may be a "
+#~ "mouse, trackball, or some other hardware that performs a similar function."
+#~ msgstr ""
+#~ "<h1>Глушец</h1> Овој модул ви овозможува да изберете различни опции за "
+#~ "начинот на кој работи вашиот уред за покажување. Уредот за покажување "
+#~ "може да биде глушец, топка, или некој друг уред кој ја врши истата "
+#~ "функција."
+
+#~ msgid "&General"
+#~ msgstr "&Општо"
+
+#~ msgid ""
+#~ "If you are left-handed, you may prefer to swap the functions of the left "
+#~ "and right buttons on your pointing device by choosing the 'left-handed' "
+#~ "option. If your pointing device has more than two buttons, only those "
+#~ "that function as the left and right buttons are affected. For example, if "
+#~ "you have a three-button mouse, the middle button is unaffected."
+#~ msgstr ""
+#~ "Ако сте левораки, можеби претпочитате да ги замените функциите на левите "
+#~ "и десните копчиња на вашиот уред за покажување со избирање на опцијата "
+#~ "„Леворак“. Ако вашиот уред за покажување има повеќе од две копчиња, тогаш "
+#~ "се менуваат само тие што имаат функција на леви и десни. На пример ако "
+#~ "имате глушец со три копчиња, тогаш промената нема ефект врз средното "
+#~ "копче."
+
+#~ msgid ""
+#~ "The default behavior in KDE is to select and activate icons with a single "
+#~ "click of the left button on your pointing device. This behavior is "
+#~ "consistent with what you would expect when you click links in most web "
+#~ "browsers. If you would prefer to select with a single click, and activate "
+#~ "with a double click, check this option."
+#~ msgstr ""
+#~ "Стандардното однесување во KDE е да избирате и активирате икони со еден "
+#~ "клик со левото копче на вашиот покажувачки уред. Ова однесување е во "
+#~ "склад со она што се случува кога кликате на линкови во повеќето веб "
+#~ "прелистувачи. Ако претпочитате да избирате со еден клик, а да активирате "
+#~ "со два клика, изберете ја оваа опција."
+
+#~ msgid "Activates and opens a file or folder with a single click."
+#~ msgstr "Активира и отвара датотека или папка со еден клик."
+
+#~ msgid ""
+#~ "If you check this option, pausing the mouse pointer over an icon on the "
+#~ "screen will automatically select that icon. This may be useful when "
+#~ "single clicks activate icons, and you want only to select the icon "
+#~ "without activating it."
+#~ msgstr ""
+#~ "Ако ја изберете оваа опција, со самото застанување на покажувачот на "
+#~ "глушецот врз икона истата се избира. Ова е корисно кога иконите се "
+#~ "активираат со еден клик, а вие само сакате да изберете икона без да ја "
+#~ "активирате."
+
+#~ msgid ""
+#~ "If you have checked the option to automatically select icons, this slider "
+#~ "allows you to select how long the mouse pointer must be paused over the "
+#~ "icon before it is selected."
+#~ msgstr ""
+#~ "Ако ја избравте опцијата за автоматско избирање на икони, овој лизгач ви "
+#~ "овозможува да поставите колку долго покажувачот на глушецот треба да биде "
+#~ "над иконата пред таа да биде избрана."
+
+#~ msgid "Advanced"
+#~ msgstr "Напредно"
+
+#~ msgid " x"
+#~ msgstr " x"
+
+#~ msgid "Pointer acceleration:"
+#~ msgstr "Забрзување на покажувачот:"
+
+#~ msgid ""
+#~ "<p>This option allows you to change the relationship between the distance "
+#~ "that the mouse pointer moves on the screen and the relative movement of "
+#~ "the physical device itself (which may be a mouse, trackball, or some "
+#~ "other pointing device.)</p><p> A high value for the acceleration will "
+#~ "lead to large movements of the mouse pointer on the screen even when you "
+#~ "only make a small movement with the physical device. Selecting very high "
+#~ "values may result in the mouse pointer flying across the screen, making "
+#~ "it hard to control.</p>"
+#~ msgstr ""
+#~ "<p>Оваа опција ви овозможува да го смените односот помеѓу растојанието "
+#~ "кое го поминува покажувачот на екранот и релативното движење на самиот "
+#~ "физички уред (кој може да биде глушец, топка, или некој друг покажувачки "
+#~ "уред.)</p><p> Висока вредност за забрзувањето ќе предизвика големи "
+#~ "движења на покажувачот на екранот дури и кога правите мали движења со "
+#~ "физичкиот уред. Избирањето на високи вредности ќе предизвика покажувачот "
+#~ "да лета по екранот и со тоа да биде тешко да се контролира истиот.</p>"
+
+#~ msgid "Pointer threshold:"
+#~ msgstr "Праг на покажувачот:"
+
+#~ msgid ""
+#~ "<p>The threshold is the smallest distance that the mouse pointer must "
+#~ "move on the screen before acceleration has any effect. If the movement is "
+#~ "smaller than the threshold, the mouse pointer moves as if the "
+#~ "acceleration was set to 1X;</p><p> thus, when you make small movements "
+#~ "with the physical device, there is no acceleration at all, giving you a "
+#~ "greater degree of control over the mouse pointer. With larger movements "
+#~ "of the physical device, you can move the mouse pointer rapidly to "
+#~ "different areas on the screen.</p>"
+#~ msgstr ""
+#~ "<p>Прагот е најмалото растојание кое мора да го мине покажувачот на "
+#~ "екранот, пред да настапи забрзувањето. Ако движењето е помало од прагот, "
+#~ "покажувачот ќе се движи како забрзувањето да е 1X.</p><p> Така, кога "
+#~ "правите мали движења со физичкиот уред, нема никакво забрзување, со што "
+#~ "имате зголемена контрола над покажувачот. Со поголеми движења на "
+#~ "физичкиот уред, можете брзо да го движите покажувачот до различни делови "
+#~ "на екранот.</p>"
+
+#~ msgid " msec"
+#~ msgstr " msec"
+
+#~ msgid "Double click interval:"
+#~ msgstr "Интервал за двоен клик:"
+
+#~ msgid ""
+#~ "The double click interval is the maximal time (in milliseconds) between "
+#~ "two mouse clicks which turns them into a double click. If the second "
+#~ "click happens later than this time interval after the first click, they "
+#~ "are recognized as two separate clicks."
+#~ msgstr ""
+#~ "Интервалот за двојно кликање е максималното време (во милисекунди) помеѓу "
+#~ "два клика на глушецот кое што ги прави во двоен клик. Ако вториот клик се "
+#~ "случи подоцна од овој временски интервал, двата се сметаат како посебни "
+#~ "единечни кликови."
+
+#~ msgid "Drag start time:"
+#~ msgstr "Најмало време за влечење:"
+
+#~ msgid ""
+#~ "If you click with the mouse (e.g. in a multi-line editor) and begin to "
+#~ "move the mouse within the drag start time, a drag operation will be "
+#~ "initiated."
+#~ msgstr ""
+#~ "Ако кликнете со глушецот (на пр. во повеќелиниски уредувач) и почнете да "
+#~ "го движите во рамките на времето за влечење, ќе се иницира операција на "
+#~ "влечење."
+
+#~ msgid "Drag start distance:"
+#~ msgstr "Најмало растојание за влечење:"
+
+#~ msgid ""
+#~ "If you click with the mouse and begin to move the mouse at least the drag "
+#~ "start distance, a drag operation will be initiated."
+#~ msgstr ""
+#~ "Ако кликнете со глушецот и го придвижите на најмалото растојание за "
+#~ "влечење, ќе се иницира операција на влечење."
+
+#~ msgid "Mouse wheel scrolls by:"
+#~ msgstr "Тркалцето движи за:"
+
+#~ msgid ""
+#~ "If you use the wheel of a mouse, this value determines the number of "
+#~ "lines to scroll for each wheel movement. Note that if this number exceeds "
+#~ "the number of visible lines, it will be ignored and the wheel movement "
+#~ "will be handled as a page up/down movement."
+#~ msgstr ""
+#~ "Ако го користите тркалцето на глушецот, оваа вредност утврдува колку "
+#~ "линии ќе се поместуваат со секое движење на тркалцето. Забележете дека "
+#~ "ако овој број го надмине бројот на видливи линии, истиот ќе биде "
+#~ "игнориран и движењето на тркалцето ќе се смета како движење со page up/"
+#~ "down."
+
+#~ msgid "Mouse Navigation"
+#~ msgstr "Навигација со глушецот"
+
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr ""
+#~ "Д&вижи го глушецот со тастатура (користејќи ја нумеричката тастатура)"
+
+#~ msgid "&Acceleration delay:"
+#~ msgstr "Доцнење на з&абрзување:"
+
+#~ msgid "R&epeat interval:"
+#~ msgstr "Интервал на повто&рување:"
+
+#~ msgid "Acceleration &time:"
+#~ msgstr "Вр&еме на забрзување:"
+
+#~ msgid " pixel/sec"
+#~ msgstr " пиксели/сек"
+
+#~ msgid "Ma&ximum speed:"
+#~ msgstr "&Максимална брзина:"
+
+#~ msgid "Acceleration &profile:"
+#~ msgstr "&Профил на забрзување:"
+
+#~ msgid "Mouse"
+#~ msgstr "Глушец"
+
+#~ msgid "(c) 1997 - 2005 Mouse developers"
+#~ msgstr "(c) 1997 - 2005 Развивачите на „Глушец“"
+
+#~ msgid "Patrick Dowler"
+#~ msgstr "Patrick Dowler"
+
+#~ msgid "Dirk A. Mueller"
+#~ msgstr "Dirk A. Mueller"
+
+#~ msgid "David Faure"
+#~ msgstr "David Faure"
+
+#~ msgid "Bernd Gehrmann"
+#~ msgstr "Bernd Gehrmann"
+
+#~ msgid "Rik Hemsley"
+#~ msgstr "Rik Hemsley"
+
+#~ msgid "Brad Hughes"
+#~ msgstr "Brad Hughes"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "Brad Hards"
+#~ msgstr "Brad Hards"
+
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] " пиксел"
+#~ msgstr[1] " пиксели"
+#~ msgstr[2] " пиксели"
+
+#~ msgid " line"
+#~ msgid_plural " lines"
+#~ msgstr[0] " линија"
+#~ msgstr[1] " линии"
+#~ msgstr[2] " линии"
+
+#~ msgid "Mouse type: %1"
+#~ msgstr "Тип на глушец: %1"
+
+#~ msgid ""
+#~ "RF channel 1 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "RF-каналот 1 е поставен. Притиснете го копчето Поврзи на глушецот за "
+#~ "повторно да воспоставите врска"
+
+#~ msgid "Press Connect Button"
+#~ msgstr "Притиснете на копчето Поврзи"
+
+#~ msgid ""
+#~ "RF channel 2 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "RF-каналот 2 е поставен. Притиснете го копчето Поврзи на глушецот за "
+#~ "повторно да воспоставите врска"
+
+#~ msgctxt "no cordless mouse"
+#~ msgid "none"
+#~ msgstr "нема"
+
+#~ msgid "Cordless Mouse"
+#~ msgstr "Бежичен глушец"
+
+#~ msgid "Cordless Wheel Mouse"
+#~ msgstr "Бежичен глушец со тркалце"
+
+#~ msgid "Cordless MouseMan Wheel"
+#~ msgstr "Бежичен MouseMan со тркалце"
+
+#~ msgid "Cordless TrackMan Wheel"
+#~ msgstr "Бежичен TrackMan со тркалце"
+
+#~ msgid "TrackMan Live"
+#~ msgstr "TrackMan Live"
+
+#~ msgid "Cordless TrackMan FX"
+#~ msgstr "Бежичен TrackMan FX"
+
+#~ msgid "Cordless MouseMan Optical"
+#~ msgstr "Бежичен MouseMan оптички"
+
+#~ msgid "Cordless Optical Mouse"
+#~ msgstr "Бежичен оптички глушец"
+
+#~ msgid "Cordless MouseMan Optical (2ch)"
+#~ msgstr "Бежичен MouseMan глушец (2ch)"
+
+#~ msgid "Cordless Optical Mouse (2ch)"
+#~ msgstr "Бежичен оптички глушец (2ch)"
+
+#~ msgid "Cordless Mouse (2ch)"
+#~ msgstr "Бежичен глушец (2ch)"
+
+#~ msgid "Cordless Optical TrackMan"
+#~ msgstr "Бежичен оптички TrackMan"
+
+#~ msgid "MX700 Cordless Optical Mouse"
+#~ msgstr "Бежичен оптички глушец MX700"
+
+#~ msgid "MX700 Cordless Optical Mouse (2ch)"
+#~ msgstr "Бежичен оптички глушец MX700 (2ch)"
+
+#~ msgid "Unknown mouse"
+#~ msgstr "Непознат глушец"
+
+#~ msgid "Cordless Name"
+#~ msgstr "Име на бежичен"
+
+#~ msgid "Sensor Resolution"
+#~ msgstr "Резолуција на сензорот"
+
+#~ msgid "400 counts per inch"
+#~ msgstr "400 броења по инч"
+
+#~ msgid "800 counts per inch"
+#~ msgstr "800 броења по инч"
+
+#~ msgid "Battery Level"
+#~ msgstr "Ниво на батерија"
+
+#~ msgid "RF Channel"
+#~ msgstr "RF-канал"
+
+#~ msgid "Channel 1"
+#~ msgstr "Канал 1"
+
+#~ msgid "Channel 2"
+#~ msgstr "Канал 2"
+
+#~ msgid ""
+#~ "You have a Logitech Mouse connected, and libusb was found at compile "
+#~ "time, but it was not possible to access this mouse. This is probably "
+#~ "caused by a permissions problem - you should consult the manual on how to "
+#~ "fix this."
+#~ msgstr ""
+#~ "Вие имате поврзан глушец Logitech, и libusb беше пронајдена за време на "
+#~ "преведувањето, не не беше можно да се пристапи на глушецот. Можно е ова "
+#~ "да е причинето од проблем со дозволите - консултирајте се со прирачникот "
+#~ "како да го поправите ова."
+
+#~ msgid "KDE Classic"
+#~ msgstr "KDE Класична"
+
+#~ msgid "The default cursor theme in KDE 2 and 3"
+#~ msgstr "Стандардната тема за покажувачи во KDE 2 и 3"
+
+#~ msgid "No description available"
+#~ msgstr "Нема достапен опис"
+
+#~ msgid "Short"
+#~ msgstr "Кусо"
+
+#~ msgid "Long"
+#~ msgstr "Долго"

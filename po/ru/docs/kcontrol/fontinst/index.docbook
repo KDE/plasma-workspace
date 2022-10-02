@@ -1,0 +1,308 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Russian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="fontinst" lang="&language;">
+<title
+>Управление шрифтами</title>
+<articleinfo>
+<authorgroup>
+<author
+>&Craig.Drummond; &Craig.Drummond.Mail;</author>
+
+<othercredit role="translator"
+><firstname
+>Екатерина</firstname
+><surname
+>Пыжова</surname
+> <affiliation
+><address
+><email
+>haleth@yandex.ru</email
+></address
+></affiliation
+> <contrib
+>Перевод на русский</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Евгений</firstname
+><surname
+>Болотов</surname
+><affiliation
+><address
+><email
+>lordinferius@gmail.com</email
+></address
+></affiliation
+><contrib
+>Перевод на русский</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Николай</firstname
+><surname
+>Шафоростов</surname
+><affiliation
+><address
+><email
+>shaforostoff@kde.ru</email
+></address
+></affiliation
+><contrib
+>Редактирование перевода</contrib
+></othercredit
+> <othercredit role="translator"
+><firstname
+>Ольга</firstname
+><surname
+>Миронова</surname
+><affiliation
+><address
+><email
+>omiro@basealt.ru</email
+></address
+></affiliation
+><contrib
+>Перевод на русский язык</contrib
+></othercredit
+> <othercredit role="reviewer"
+><firstname
+>Александр</firstname
+><surname
+>Яворский</surname
+><contrib
+>Рецензирование</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>9 апреля 2021 г.</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Параметры системы</keyword>
+<keyword
+>шрифты</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_fontinst">
+<title
+>Управление шрифтами</title>
+
+<para
+>Этот модуль приложения «Параметры системы» предназначен для установки, удаления, предварительного просмотра шрифтов и управления ими.</para>
+
+<sect2 id="font-groups">
+<title
+>Группы шрифтов</title>
+<para
+>Все шрифты разделены на 4 группы:</para>
+
+<orderedlist>
+    <listitem
+><para
+><quote
+>Все шрифты</quote
+> — в эту группу входят все шрифты, как пользовательские, так и системные.</para
+></listitem>
+    <listitem
+><para
+><quote
+>Шрифты пользователя</quote
+> — в эту группу входят шрифты, доступные только для установившего их пользователя.</para
+></listitem>
+    <listitem
+><para
+><quote
+>Системные шрифты</quote
+> — в эту группу входят шрифты, доступные для всех пользователей. Для установки и удаления системных шрифтов требуются права администратора.</para
+></listitem>
+    <listitem
+><para
+><quote
+>Неклассифицированные</quote
+> — в эту группу входят шрифты, которые не принадлежат ни к одной из пользовательских групп. Эта группа отображается только при наличии групп, созданных пользователем.</para
+></listitem>
+</orderedlist>
+<para
+>Чтобы добавить шрифт в группу, перетащите его из списка шрифтов в соответствующую группу. Чтобы удалить шрифт из группы, перетащите его в группу <quote
+>Все шрифты</quote
+>.</para>
+<para
+>Под списком шрифтов расположены кнопки, которые служат для создания и удаления групп, включения и выключения шрифтов в выбранной группе.</para>
+<para
+>При помощи контекстного меню списка шрифтов можно распечатывать образцы шрифтов и экспортировать их в архив ZIP.</para>
+
+<sect3 id="font-hiding">
+<title
+>Включение и выключение шрифтов</title>
+<para
+>Для пользователей, использующих много разных шрифтов, может оказаться полезным в отдельных случаях включать (или активировать) только определённые шрифты. Данный модуль позволяет отключать (деактивировать) отдельно взятые шрифты или целые группы. Выключение шрифта не удаляет его из системы, а только скрывает в том или ином приложении. Повторное включение шрифта даёт возможность использовать его снова.</para>
+</sect3>
+
+</sect2>
+
+<sect2 id="font-list">
+<title
+>Список шрифтов</title>
+<para
+>В главном окне расположен список всех установленных шрифтов, объединённых в гарнитуры — число в квадратных скобках показывает количество установленных шрифтов выбранной гарнитуры. Например, шрифт <quote
+>Times</quote
+> может отображаться как: <itemizedlist
+> <listitem>
+    <para
+>Times [4]</para>
+    <itemizedlist>
+        <listitem
+><para
+>Обычный</para
+></listitem>
+        <listitem
+><para
+>Курсив</para
+></listitem>
+        <listitem
+><para
+>Полужирный</para
+></listitem>
+        <listitem
+><para
+>Полужирный курсив</para
+></listitem>
+    </itemizedlist>
+</listitem>
+</itemizedlist>
+</para>
+
+<para
+>Чтобы установить шрифт, нажмите кнопку <guibutton
+>Установить из файла...</guibutton
+> и выберите нужный шрифт в диалоговом окне работы с файлами. Шрифт будет установлен в ту группу, которая выделена в списке шрифтов.</para>
+<para
+>Чтобы удалить шрифт, выберите его в списке и нажмите кнопку <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+>.</para>
+
+<para
+>Если нажать правой кнопкой мыши по названию шрифта, откроется контекстное меню дополнительных действий со шрифтом: <guilabel
+>Сделать активным</guilabel
+>, <guilabel
+>Сделать неактивным</guilabel
+>, <guilabel
+>Печать...</guilabel
+>, <ulink url="help:/kfontviewer/index.html"
+><guilabel
+>Открыть в программе просмотра шрифтов</guilabel
+></ulink
+> и <guilabel
+>Обновить</guilabel
+>.</para>
+
+<sect3 id="font-filter">
+<title
+>Фильтр шрифтов</title>
+<para
+>Текстовое поле, расположенное над окном просмотра шрифтов, позволяет устанавливать фильтры для списка шрифтов. Можно отфильтровать шрифты по указанным ниже категориям.</para>
+        <orderedlist>
+        <listitem
+><para
+>Гарнитура.</para
+></listitem>
+        <listitem
+><para
+>Начертание.</para
+></listitem>
+        <listitem
+><para
+>Тип.</para
+></listitem>
+        <listitem
+><para
+>Соответствие FontConfig. При указании в строке ввода названия гарнитуры в области описания шрифтов будут показаны все соответствующие шрифты, используемые инструментом fontconfig.</para
+></listitem>
+        <listitem
+><para
+>Тип файла.</para
+></listitem>
+        <listitem
+><para
+>Имя файла.</para
+></listitem>
+        <listitem
+><para
+>Расположение файла.</para
+></listitem>
+        <listitem
+><para
+>Система письма.</para
+></listitem>
+        </orderedlist>
+</sect3>
+
+<sect3 id="get-new-fonts">
+<title
+>Установка новых шрифтов</title>
+<para
+>Новые шрифты могут быть установлены из расположенных на компьютере файлов либо загружены из Интернета. Для загрузки новых шрифтов из Интернета следует нажать кнопку <guilabel
+>Сервис</guilabel
+>, расположенную над списком групп шрифтов, и выбрать пункт меню <guilabel
+>Загрузить новые шрифты...</guilabel
+>.  Загруженные таким образом шрифты будут установлены в группу <quote
+>Шрифты пользователя</quote
+>. Чтобы использовать шрифты на системном уровне, просто перетащите их в группу <quote
+>Системные шрифты</quote
+>. Для выполнения этого действия могут потребоваться права администратора.</para>
+</sect3>
+
+</sect2>
+
+<sect2 id="font-duplicates">
+<title
+>Дублирующиеся шрифты</title>
+<para
+>Если на компьютере установлено много шрифтов, вероятно, среди них могут иметься дубликаты.</para
+> 
+<para
+>Нажмите кнопку <guilabel
+>Найти дубликаты…</guilabel
+> — запустится простой инструмент, который просканирует систему и найдёт шрифты, к которым привязаны несколько файлов. Например, если в <quote
+>/usr/local/share/fonts</quote
+> установлены шрифты<quote
+>times.ttf</quote
+> и <quote
+>times.TTF</quote
+>, базовый механизм конфигурации шрифтов (<quote
+>FontConfig</quote
+>) увидит только один из них. Так, если удалить шрифт, он снова появится в списке шрифтов, так как будет удалён только один из файлов. При запуске описываемого инструмента появится список шрифтов, к которым привязаны несколько файлов, а также список соответствующих файлов. Чтобы выбрать файл для удаления, щёлкните на столбце со значком корзины.</para>
+</sect2>
+
+<sect2 id="font-preview">
+<title
+>Предварительный просмотр</title>
+<para
+>Область предварительного просмотра показывает, как выглядит один шрифт разного размера.</para>
+<para
+>Контекстное меню позволяет увеличивать и уменьшать масштаб отображения, выбирать типа просмотра (<guilabel
+>Стандартная строка</guilabel
+> или <guilabel
+>все символы</guilabel
+>), а также изменять текст образца.</para>
+
+<para
+>Для предварительного просмотра шрифта при выводе блоков Юникода используйте приложение &kfontview;. </para>
+</sect2>
+</sect1>
+</article>

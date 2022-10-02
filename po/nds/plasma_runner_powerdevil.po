@@ -1,0 +1,814 @@
+# Translation of krunner_powerdevil.po to Low Saxon
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Sönke Dibbern <s_dibbern@web.de>, 2008, 2009.
+# Manfred Wiese <m.j.wiese@web.de>, 2010, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner_powerdevil\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"PO-Revision-Date: 2010-01-18 05:46+0100\n"
+"Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
+"Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
+"Language: nds\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: PowerDevilRunner.cpp:32
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "suspend"
+msgstr "Utsetten"
+
+#: PowerDevilRunner.cpp:34
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to ram"
+msgstr "in't RAM"
+
+#: PowerDevilRunner.cpp:36
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "sleep"
+msgstr "Slapen"
+
+#: PowerDevilRunner.cpp:38
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "hibernate"
+msgstr "Infreren"
+
+#: PowerDevilRunner.cpp:40
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to disk"
+msgstr "op Fastplaat"
+
+#: PowerDevilRunner.cpp:42 PowerDevilRunner.cpp:44 PowerDevilRunner.cpp:69
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "dim screen"
+msgstr "Schirm afdüüstern"
+
+#: PowerDevilRunner.cpp:53
+#, kde-format
+msgid ""
+"Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
+"activated"
+msgstr ""
+"List de Systeem-Utsettoptschonen op (a.B. Inslapen oder Infreren) un lett Di "
+"de ok anmaken"
+
+#: PowerDevilRunner.cpp:57
+#, kde-format
+msgid "Suspends the system to RAM"
+msgstr "Sett dat Systeem ut un sekert dat in't RAM"
+
+#: PowerDevilRunner.cpp:61
+#, kde-format
+msgid "Suspends the system to disk"
+msgstr "Sett dat Systeem ut un sekert dat op de Fastplaat"
+
+#: PowerDevilRunner.cpp:65
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "screen brightness"
+msgctxt ""
+"Note this is a KRunner keyword, <> is a placeholder and should be at the end"
+msgid "screen brightness <percent value>"
+msgstr "Schirm-Helligkeit"
+
+#: PowerDevilRunner.cpp:67
+#, fuzzy, no-c-format, kde-format
+#| msgid ""
+#| "Lists screen brightness options or sets it to the brightness defined by :"
+#| "q:; e.g. screen brightness 50 would dim the screen to 50% maximum "
+#| "brightness"
+msgid ""
+"Lists screen brightness options or sets it to the brightness defined by the "
+"search term; e.g. screen brightness 50 would dim the screen to 50% maximum "
+"brightness"
+msgstr ""
+"List de Schirmhelligkeit-Optschonen op oder sett de Helligkeit op :q:. "
+"Schirmhelligkeit 50 a.B. düüstert den Schirm op 50% vun de gröttste "
+"Helligkeit af."
+
+#: PowerDevilRunner.cpp:95
+#, fuzzy, kde-format
+#| msgid "Set Brightness to %1"
+msgid "Set Brightness to %1%"
+msgstr "Helligkeit op %1 setten"
+
+#: PowerDevilRunner.cpp:104
+#, kde-format
+msgid "Dim screen totally"
+msgstr "Schirm heel afdüüstern"
+
+#: PowerDevilRunner.cpp:112
+#, kde-format
+msgid "Dim screen by half"
+msgstr "Schirm halvig afdüüstern"
+
+#: PowerDevilRunner.cpp:142
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "sleep"
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Slapen"
+
+#: PowerDevilRunner.cpp:143
+#, kde-format
+msgid "Suspend to RAM"
+msgstr "Slapen (in't RAM)"
+
+#: PowerDevilRunner.cpp:148
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "hibernate"
+msgctxt "Suspend to disk"
+msgid "Hibernate"
+msgstr "Infreren"
+
+#: PowerDevilRunner.cpp:149
+#, fuzzy, kde-format
+#| msgid "Suspend to Disk"
+msgid "Suspend to disk"
+msgstr "Infreren (op Fastplaat)"
+
+#: PowerDevilRunner.cpp:218
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "screen brightness"
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "screen brightness "
+msgstr "Schirm-Helligkeit"
+
+#: PowerDevilRunner.cpp:220
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "dim screen"
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "dim screen "
+msgstr "Schirm afdüüstern"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "screen brightness"
+#~ msgstr "Schirm-Helligkeit"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "screen brightness %1"
+#~ msgstr "Schirm-Helligkeit %1"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "dim screen %1"
+#~ msgstr "Schirm afdüüstern %1"
+
+#, fuzzy
+#~| msgctxt "Note this is a KRunner keyword"
+#~| msgid "suspend"
+#~ msgid "Suspend"
+#~ msgstr "Utsetten"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "power profile"
+#~ msgstr "Stroomkuntrull-Profil"
+
+#~ msgid "Lists all power profiles and allows them to be activated"
+#~ msgstr "List all Stroomkuntrull-Profilen op un lett Di de ok anmaken."
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "power profile %1"
+#~ msgstr "Stroomkuntrull-Profil %1"
+
+#~ msgid "Set Profile to '%1'"
+#~ msgstr "Profil \"%1\" bruken"
+
+#~ msgid "Turn off screen"
+#~ msgstr "Schirm utmaken"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "cpu policy"
+#~ msgstr "CPU-Regel"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "power governor"
+#~ msgstr "Stroomkuntrull-Stüern"
+
+#~ msgid "Lists all power saving schemes and allows them to be activated"
+#~ msgstr "List all Stroomspoor-Schemas op un lett Di de ok anmaken"
+
+#~ msgid ""
+#~ "Lists all CPU frequency scaling policies and allows them to be activated"
+#~ msgstr "List all CPU-Frequenztopassregeln op un lett Di de ok anmaken"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "cpu policy %1"
+#~ msgstr "CPU-Regel %1"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "power governor %1"
+#~ msgstr "Stroomkuntrull-Stüern %1"
+
+#~ msgid "Set CPU frequency scaling policy to '%1'"
+#~ msgstr "CPU-Frequenztopassregel op \"%1\" setten"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "power scheme %1"
+#~ msgstr "Stroomkuntrull-Schema %1"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "power scheme"
+#~ msgstr "Stroomkuntrull-Schema"
+
+#~ msgid "Set Powersaving Scheme to '%1'"
+#~ msgstr "Stroomspoor-Schema \"%1\" bruken"
+
+#~ msgid "Set CPU Governor to '%1'"
+#~ msgstr "CPU-Stüern \"%1\" bruken"
+
+#, fuzzy
+#~| msgid "Grabber widget is on"
+#~ msgid "Grabber Widget Based"
+#~ msgstr "Grieper is an"
+
+#~ msgid "PowerDevil"
+#~ msgstr "Stroomdüvel"
+
+#~ msgid "A Power Management tool for KDE4"
+#~ msgstr "En Stroompleeg-Warktüüch för KDE-4"
+
+#~ msgid "(c) 2008 PowerDevil Development Team"
+#~ msgstr "(c) 2008 PowerDevil-Schrieverkoppel"
+
+#~ msgid "Dario Freddi"
+#~ msgstr "Dario Freddi"
+
+#~ msgid "Developer"
+#~ msgstr "Schriever"
+
+#~ msgid ""
+#~ "Another power manager has been detected. Do you want to start PowerDevil "
+#~ "anyway? Please note this may lead to conflicts and undefined behaviour."
+#~ msgstr ""
+#~ "Dor löppt noch en anner Stroomkuntrull. Wullt Du den Stroomdüvel liekers "
+#~ "opropen? Beacht bitte, dat mag Konflikten un nich verwachten Bedregen "
+#~ "geven."
+
+#~ msgid "PowerDevil Startup"
+#~ msgstr "Stroomdüvel-Start"
+
+#~ msgid ""
+#~ "If you do not wish to use PowerDevil as your main power manager, please "
+#~ "consider disabling its service in systemsettings. This message will not "
+#~ "be shown again once PowerDevil has been disabled."
+#~ msgstr ""
+#~ "Wullt Du den Stroomdüvel nich as Dien Hööft-Stroomkuntrull bruken, maak "
+#~ "em villicht beter binnen de Systeeminstellen ut. Disse Naricht warrt nich "
+#~ "mehr wiest, wenn de Stroomdüvel utmaakt is."
+
+#~ msgid ""
+#~ "If you wish to use PowerDevil as your main power manager, please consider "
+#~ "disabling other power managers you have enabled on this system. This "
+#~ "message will not be shown again once all other power managers have been "
+#~ "disabled."
+#~ msgstr ""
+#~ "Wullt Du den Stroomdüvel as Dien Hööft-Stroomkuntrull bruken, maak "
+#~ "villicht beter anner Stroomkuntrullen binnen de Systeeminstellen ut. "
+#~ "Disse Naricht warrt nich mehr wiest, wenn all anner Stroomkuntrullen "
+#~ "utmaakt sünd."
+
+#~ msgid ""
+#~ "Could not connect to battery interface!\n"
+#~ "Please check your system configuration"
+#~ msgstr ""
+#~ "Tokoppeln na Batterie-Koppelsteed nich mööglich!\n"
+#~ "Prööv bitte de Instellen vun Dien Systeem."
+
+#~ msgid "The power adaptor has been plugged in"
+#~ msgstr "Dat Stroomkavel wöör insteken"
+
+#~ msgid "The power adaptor has been unplugged"
+#~ msgstr "Dat Stroomkavel wöör ruttrocken"
+
+#~ msgid ""
+#~ "Your battery has reached critical level, the PC will now be halted..."
+#~ msgstr ""
+#~ "Dien Batterie is bi de kritische Stoop anlangt, de Reekner warrt nu "
+#~ "daalfohrt..."
+
+#~ msgid ""
+#~ "Your battery has reached critical level, the PC will now be suspended to "
+#~ "disk..."
+#~ msgstr ""
+#~ "Dien Batterie is bi de kritische Stoop anlangt, de Reekner warrt nu op de "
+#~ "Plaat infraren..."
+
+#~ msgid ""
+#~ "Your battery has reached critical level, the PC will now be suspended to "
+#~ "RAM..."
+#~ msgstr ""
+#~ "Dien Batterie is bi de kritische Stoop anlangt, de Reekner slöppt nu in't "
+#~ "RAM in..."
+
+#~ msgid ""
+#~ "Your battery has reached critical level, the PC is now going Standby..."
+#~ msgstr ""
+#~ "Dien Batterie is bi de kritische Stoop anlangt, de Reekner geiht nu op "
+#~ "Praatschap..."
+
+#~ msgid ""
+#~ "Your battery has reached critical level, save your work as soon as "
+#~ "possible!"
+#~ msgstr ""
+#~ "Dien Batterie is bi de kritische Stoop anlangt, seker Dien Arbeit sodraad "
+#~ "as mööglich!"
+
+#~ msgid "Your battery has reached warning level"
+#~ msgstr "Dien Batterie is bi de Wohrscho-Stoop ankamen"
+
+#~ msgid "Your battery has reached low level"
+#~ msgstr "Dien Batteriestoop is nu \"Siet\""
+
+#~ msgid "The computer is being halted"
+#~ msgstr "De Reekner warrt daalfohrt"
+
+#~ msgid "The computer will now be suspended to disk"
+#~ msgstr "De Reekner warrt nu op de Plaat infraren"
+
+#~ msgid "The computer will now be suspended to RAM"
+#~ msgstr "De Reekner slöppt nu in't RAM in"
+
+#~ msgid "The computer will now be put into standby"
+#~ msgstr "De Reekner geiht nu op Praatschap"
+
+#~ msgid "There was an error while suspending:"
+#~ msgstr "Bi't Inslapen/Infreren geev dat en Fehler:"
+
+#~ msgid "Polling started, idle time is %1 seconds"
+#~ msgstr "Affragen anfungen, Töövtiet is %1 Sekunnen"
+
+#~ msgid "Stopping timer"
+#~ msgstr "Tietgever warrt anhollen"
+
+#~ msgid "Minimum time is %1 seconds"
+#~ msgstr "Lüttst Tiet is %1 Sekunnen"
+
+#~ msgid "Nothing to do, next event in %1 seconds"
+#~ msgstr "Nix to doon, nakamen Begeefnis in %1 Sekunnen"
+
+#~ msgid "Next timeout in %1 seconds"
+#~ msgstr "Nakamen Tietafloop in %1 Sekunnen"
+
+#~ msgid "The screen is being locked"
+#~ msgstr "De Schirm is afslaten"
+
+#~ msgid ""
+#~ "The profile \"%1\" has been selected, but it does not exist!\n"
+#~ "Please check your PowerDevil configuration."
+#~ msgstr ""
+#~ "Du hest dat Profil \"%1\" utsöcht, man dat gifft dat gor nich.\n"
+#~ "Prööv bitte Dien Stroomdüvel-Instellen."
+
+#~ msgid "Profile changed to \"%1\""
+#~ msgstr "Profil op \"%1\" ännert."
+
+#~ msgid "Performance"
+#~ msgstr "Leisten"
+
+#~ msgid "Dynamic (ondemand)"
+#~ msgstr "Dünaamsch (na Nödigkeit)"
+
+#~ msgid "Dynamic (conservative)"
+#~ msgstr "Dünaamsch (wohrsch)"
+
+#~ msgid "Powersave"
+#~ msgstr "Stroomsporen"
+
+#~ msgid "Userspace"
+#~ msgstr "Brukerrebeet"
+
+#~ msgid "Do nothing"
+#~ msgstr "Nix doon"
+
+#~ msgid "Shutdown"
+#~ msgstr "Utmaken"
+
+#~ msgid "Lock Screen"
+#~ msgstr "Schirm afsluten"
+
+#~ msgid "Suspend to Ram"
+#~ msgstr "Slapen (in't RAM)"
+
+#~ msgid "Standby"
+#~ msgstr "Praatschap"
+
+#~ msgid "CPU <numid>%1</numid>"
+#~ msgstr "CPU <numid>%1</numid>"
+
+#~ msgid "Disable CPU <numid>%1</numid>"
+#~ msgstr "CPU <numid>%1</numid> utmaken"
+
+#~ msgid "If this box is checked, the CPU <numid>%1</numid> will be disabled"
+#~ msgstr "Is dit anmaakt, warrt de CPU <numid>%1</numid> utmaakt"
+
+#~ msgid "Please enter a name for the new profile"
+#~ msgstr "Giff bitte en Naam för't niege Profil in"
+
+#~ msgid "The name for the new profile"
+#~ msgstr "De Naam för't niege Profil"
+
+#~ msgid "Enter here the name for the profile you are creating"
+#~ msgstr "Hier kannst Du den Naam för't Profil ingeven, dat Du jüst opstellst"
+
+#~ msgid "Please enter a name for this profile"
+#~ msgstr "Giff bitte en Naam för dit Profil in"
+
+#~ msgctxt "None"
+#~ msgid "No methods found"
+#~ msgstr "Keen Metoden funnen"
+
+#~ msgid "Import PowerDevil profiles"
+#~ msgstr "Stroomdüvel-Profilen importeren"
+
+#~ msgid "Export PowerDevil profiles"
+#~ msgstr "Stroomdüvel-Profilen exporteren"
+
+#~ msgid ""
+#~ "The current profile has not been saved.\n"
+#~ "Do you want to save it?"
+#~ msgstr ""
+#~ "Du hest dat aktuelle Profil nich sekert.\n"
+#~ "Wullt Du dat sekern?"
+
+#~ msgid "Save Profile"
+#~ msgstr "Profil sekern"
+
+#~ msgid "PowerDevil Configuration"
+#~ msgstr "Stroomdüvel instellen"
+
+#~ msgid "A configurator for PowerDevil"
+#~ msgstr "En Instellprogramm för den Stroomdüvel"
+
+#~ msgid "(c), 2008 Dario Freddi"
+#~ msgstr "(c), 2008 Dario Freddi"
+
+#~ msgid ""
+#~ "From this module, you can configure the Daemon, create and edit "
+#~ "powersaving profiles, and see your system's capabilities."
+#~ msgstr ""
+#~ "Binnen dit Moduul kannst Du den Dämoon instellen, Profilen opstellen un "
+#~ "bewerken un Dien Systeem sien Mööglichkeiten bekieken."
+
+#~ msgid "Main Developer"
+#~ msgstr "Hööft-Schriever"
+
+#~ msgid ""
+#~ "<h1>PowerDevil configuration</h1> <p>This module lets you configure "
+#~ "PowerDevil. PowerDevil is a daemon (so it runs in background) that is "
+#~ "started upon KDE startup.</p> <p>PowerDevil has 2 levels of "
+#~ "configuration: a general one, that is always applied, and a profile-based "
+#~ "one, that lets you configure a specific behavior in every situation. You "
+#~ "can also have a look at your system capabilities in the last tab. To get "
+#~ "you started, first configure the options in the first 2 tabs. Then switch "
+#~ "to the fourth one, and create/edit your profiles. Last but not least, "
+#~ "assign your profiles in the third Tab. You do not have to restart "
+#~ "PowerDevil, just click \"Apply\", and you are done.</p>"
+#~ msgstr ""
+#~ "<h1>Stroomdüvel instellen</h1><p>Mit dit Moduul kannst Du den Stroomdüvel "
+#~ "instellen. De Stroomdüvel is en Dämoon (he löppt also in den "
+#~ "Achtergrund), de bi't Starten vun KDE opropen warrt. </p><p>De "
+#~ "Stroomdüvel hett 2 Oorden Instellen: allmeen Instellen, de warrt jümmers "
+#~ "bruukt, un Profil-Instellen, se leggt besünner Bedregen bi angeven "
+#~ "Ümgeventostänn fast. Op de leste Paneelsiet kannst Du Dien Systeem sien "
+#~ "Mööglichkeiten bekieken.</p><p>Du fangst op't Best mit de Instellen op de "
+#~ "eersten twee Paneelsieden an, un wesselst denn na de veerte un stellt "
+#~ "Dien Profilen op oder bewerkst ehr. Oplest wiest Du op de drüdde "
+#~ "Paneelsiet Dien Profilen to.</p><p>Du bruukst den Stroomdüvel nich nieg "
+#~ "starten, klick eenfach op \"Bruken\", un denn weer dat dat al.</p>"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Sönke Dibbern"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "s_dibbern@web.de"
+
+#~ msgid "General Settings"
+#~ msgstr "Allmeen Instellen"
+
+#~ msgid "Locks screen when waking up from suspension"
+#~ msgstr "Slutt den Schirm bi't Opwaken na en Slaap af"
+
+#~ msgid "You will be asked for password when resuming from sleep state"
+#~ msgstr "Bi't Opwaken warrst Du na't Passwoort fraagt"
+
+#~ msgid "Lock screen on resume"
+#~ msgstr "Schirm bi't Wiedermaken afsluten"
+
+#~ msgid "Activate automatic dimming"
+#~ msgstr "Automaatsch Afdüüstern anmaken"
+
+#~ msgid "Automatically dims the display when the system is idle."
+#~ msgstr "Maakt den Schirm automaatsch düüsterer, wenn de Reekner nix deit"
+
+#~ msgid "Dim display when idle for more than"
+#~ msgstr "Schirm afdüüstern, wenn keen Akschoon över"
+
+#~ msgid "Enables standard notifications"
+#~ msgstr "Maakt de Standard-Bescheden an"
+
+#~ msgid ""
+#~ "Notifications such as standard events or profile change will be shown"
+#~ msgstr "Bescheden för Standardbegeefgnissen un Profilwesseln warrt wiest"
+
+#~ msgid "Enable notifications"
+#~ msgstr "Bescheden anmaken"
+
+#~ msgid "Enables warning notifications"
+#~ msgstr "Maakt Wohrschoen an"
+
+#~ msgid ""
+#~ "Notifications such as warnings or important events will be shown. It is "
+#~ "recommended to leave this enabled."
+#~ msgstr ""
+#~ "Wohrschoen un wichtig Begeefnissen warrt wiest. Dat is anraadt, Du lettst "
+#~ "dit an."
+
+#~ msgid "Enable warning notifications"
+#~ msgstr "Wohrschoen anmaken"
+
+#~ msgctxt "Minutes"
+#~ msgid "min"
+#~ msgstr "Min."
+
+#~ msgid "Battery Levels"
+#~ msgstr "Batteriestopen"
+
+#~ msgid "Battery is at low level at"
+#~ msgstr "Batterie is \"Siet\" bi"
+
+#~ msgid "Low battery level"
+#~ msgstr "Siet-Batterie-Stoop"
+
+#~ msgid "Battery will be considered low when it reaches this level"
+#~ msgstr "De Batterie langt bi disse Stoop bi \"Siet\" an"
+
+#~ msgid "%"
+#~ msgstr "%"
+
+#~ msgid "Battery is at warning level at"
+#~ msgstr "Batterie is bi \"Wohrschoen\" bi"
+
+#~ msgid "Warning battery level"
+#~ msgstr "Batterie-Wohrschostoop"
+
+#~ msgid ""
+#~ "Battery will be considered at warning level when it reaches this level"
+#~ msgstr "De Batterie langt bi disse Stoop bi \"Wohrschoen\" an"
+
+#~ msgid "Battery is at critical level at"
+#~ msgstr "Batterie is \"Kritisch\" bi"
+
+#~ msgid "Critical battery level"
+#~ msgstr "Kritisch-Batteriestoop"
+
+#~ msgid "Battery will be considered critical when it reaches this level"
+#~ msgstr "De Batterie langt bi disse Stoop bi \"Kritisch\" an"
+
+#~ msgid "Battery Actions"
+#~ msgstr "Batterie-Akschonen"
+
+#~ msgid "When battery remaining is critical"
+#~ msgstr "Wenn de Batterie \"kritisch\" is"
+
+#~ msgid "Profiles Assignment"
+#~ msgstr "Profilen towiesen"
+
+#~ msgid "Profiles"
+#~ msgstr "Profilen"
+
+#~ msgid "When AC Adaptor is plugged in"
+#~ msgstr "Wenn dat Stroomkavel dat Nett tokoppelt is"
+
+#~ msgid "When on battery Power"
+#~ msgstr "Wenn de Reekner op Batterie löppt"
+
+#~ msgid "When battery is at low level"
+#~ msgstr "Wenn de Batterie \"siet\" is"
+
+#~ msgid "When battery is at warning level"
+#~ msgstr "Wenn de Batterie bi \"Wohrschoen\" is"
+
+#~ msgid "Edit Profiles"
+#~ msgstr "Profilen bewerken"
+
+#~ msgid "Profile Management"
+#~ msgstr "Profilpleeg"
+
+#~ msgid "Screen and Actions"
+#~ msgstr "Schirm un Akschonen"
+
+#~ msgid ""
+#~ "With this slider you can set the brightness when the system is plugged "
+#~ "into the socket outlet"
+#~ msgstr ""
+#~ "Mit dissen Schuver lett sik de Helligkeit för de Tiet instellen, de dat "
+#~ "Systeem na't Stroomnett tokoppelt is."
+
+#~ msgid "Brightness"
+#~ msgstr "Helligkeit"
+
+#~ msgid ""
+#~ "Automatically turn off the display if idle for more than the set value."
+#~ msgstr ""
+#~ "Den Schirm automaatsch utmaken, wenn Du länger as de angeven Tiet nix "
+#~ "deist"
+
+#~ msgid "Turn off display if idle for more than"
+#~ msgstr "Schirm utmaken, wenn keen Akschoon över"
+
+#~ msgid "Idle time after which the monitor should turn off"
+#~ msgstr "Tiet, na de de Schirm utmaakt warrt, wenn nüms wat deit"
+
+#~ msgid " min"
+#~ msgstr " Min."
+
+#~ msgid ""
+#~ "To prevent data loss or other damage, you can have the system suspend or "
+#~ "hibernate, so you do not run accidentally out of battery power. Configure "
+#~ "the number of minutes below which the machine will run the configured "
+#~ "action."
+#~ msgstr ""
+#~ "Wullt Du dat Wegkamen vun Daten oder anner Schaden verhöden, kannst Du "
+#~ "den Reekner inslapen laten oder infreren, denn blifft Di nich op'nmaal de "
+#~ "Batteriestroom weg. Nerrn kannst Du Tall vun Minuten angeven, bi de, wenn "
+#~ "minn Tiet nablifft, de angeven Akschoon utföhrt warrt."
+
+#~ msgid "When the system is idle for more than"
+#~ msgstr "Wenn dat op't Systeem keen Akschoon gifft över"
+
+#~ msgid "When Laptop Lid Closed"
+#~ msgstr "Wenn Klappreeknerdeckel tomaakt warrt"
+
+#~ msgid "This action will be performed when the laptop lid gets closed"
+#~ msgstr ""
+#~ "Disse Akschoon warrt utföhrt, wenn Du den Klappreekner sien Deckel "
+#~ "tomaakst"
+
+#~ msgid "CPU and System"
+#~ msgstr "CPU un Systeem"
+
+#~ msgid "Turn off the following CPU(s)"
+#~ msgstr "Disse CPU(s) utmaken"
+
+#~ msgid ""
+#~ "CPU Behaviour strongly impacts on your system performance and on your "
+#~ "battery's life. Here you can choose the policy best suitable for this "
+#~ "profile"
+#~ msgstr ""
+#~ "De Leisten vun Dien Systeem un Dien Batterie ehr Utholltiet hangt stark "
+#~ "vun't Bedregen vun Dien Perzesser(n) af. Hier kannst Du de Regel "
+#~ "fastleggen, de op't Best to dit Profil passt."
+
+#~ msgid "System powersaving scheme"
+#~ msgstr "Systeem-Stroomspoorschema"
+
+#~ msgid "Undo all the changes to this profile since last saving"
+#~ msgstr "All Ännern an dit Profil siet de verleden Sekern torüchnehmen"
+
+#~ msgid "Undo Changes"
+#~ msgstr "Ännern torüchnehmen"
+
+#~ msgid "Save changes to this profile"
+#~ msgstr "Ännern an dit Profil sekern"
+
+#~ msgid "Save Current Profile"
+#~ msgstr "Aktuell Profil sekern"
+
+#~ msgid "Delete"
+#~ msgstr "Wegdoon"
+
+#~ msgid "Edit"
+#~ msgstr "Bewerken"
+
+#~ msgctxt "Creates a new profile"
+#~ msgid "New"
+#~ msgstr "Nieg"
+
+#~ msgid "Import profiles from a file"
+#~ msgstr "Profilen ut en Datei importeren"
+
+#~ msgid "Import Profiles"
+#~ msgstr "Profilen importeren"
+
+#~ msgid "Export your profiles to a file"
+#~ msgstr "Dien Profilen as Datei sekern"
+
+#~ msgid "Export Profiles"
+#~ msgstr "Profilen exporteren"
+
+#~ msgid "Capabilities"
+#~ msgstr "Könen"
+
+#~ msgid "System Capabilities"
+#~ msgstr "Systeem-Könen"
+
+#~ msgid "Number of CPU"
+#~ msgstr "Tall vun CPUs"
+
+#~ msgid "Number of Batteries"
+#~ msgstr "Tall vun Batterien"
+
+#~ msgid "CPU can be turned Off"
+#~ msgstr "CPU lett sik utmaken"
+
+#~ msgid "Scheme support"
+#~ msgstr "Schema-Ünnerstütten"
+
+#~ msgid "Scaling capability"
+#~ msgstr "Topassen"
+
+#~ msgid "Supported CPU Policies"
+#~ msgstr "Ünnerstütt CPU-Regeln"
+
+#~ msgid "Supported suspend methods"
+#~ msgstr "Ünnerstütt Utsettmetoden"
+
+#~ msgid "Supported schemes"
+#~ msgstr "Ünnerstütt Schemas"
+
+#~ msgid "Detected Activity"
+#~ msgstr "Aktiviteet opdecken"
+
+#~ msgid "Grabber widget is off"
+#~ msgstr "Grieper is ut"
+
+#~ msgid "Battery Management Settings"
+#~ msgstr "Batteriepleeg-Instellen"
+
+#~ msgid "Is PowerDevil Daemon up and running?"
+#~ msgstr "Wöör de Stroomdüvel-Dämoon (PowerDevil) opropen un löppt he?"
+
+#~ msgid "Battery"
+#~ msgstr "Batterie"
+
+#~ msgid "sources"
+#~ msgstr "Borns"
+
+#~ msgid "AC Adapter"
+#~ msgstr "Stroomnett"
+
+#~ msgid "Plugged in"
+#~ msgstr "Tokoppelt"
+
+#~ msgid "n/a"
+#~ msgstr "k.A."
+
+#~ msgid "Percent"
+#~ msgstr "Perzent"
+
+#~ msgid "Configure Battery Monitor"
+#~ msgstr "Batteriekieker instellen"
+
+#~ msgid "Show the percentage of &charge on the battery"
+#~ msgstr "De &Laden in Perzent op de Batterie wiesen"
+
+#~ msgid "Show the state for &each battery present"
+#~ msgstr "Status för &elk vörhannen Batterie wiesen"
+
+#~ msgid "Oxygen theme"
+#~ msgstr "Oxygen-Muster"
+
+#~ msgid "Classic theme"
+#~ msgstr "Klass'sch Muster"
+
+#~ msgid "Configure PowerDevil"
+#~ msgstr "Stroomdüvel instellen"
+
+#~ msgid "availableProfiles"
+#~ msgstr "Vörhannen Profilen"
+
+#~ msgid "currentProfile"
+#~ msgstr "Aktuell Profil"
+
+#~ msgid "New Profile"
+#~ msgstr "Nieg Profil"
+
+#~ msgid "Current Profile name is %1"
+#~ msgstr "De Naam vun't aktuelle Profil is \"%1\""
+
+#~ msgid "Invalid group!!"
+#~ msgstr "Leeg Koppel."
+
+#~ msgid "Basic options"
+#~ msgstr "Eenfach Optschonen"
+
+#~ msgid "Advanced Options"
+#~ msgstr "Verwiedert Optschonen"

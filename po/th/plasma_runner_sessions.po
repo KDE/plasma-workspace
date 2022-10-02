@@ -1,0 +1,198 @@
+# translation of krunner_sessions.po to Thai
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Thanomsub Noppaburana <donga.nb@gmail.com>, 2008, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner_sessions\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-01 00:45+0000\n"
+"PO-Revision-Date: 2010-02-11 21:12+0700\n"
+"Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
+"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: sessionrunner.cpp:28 sessionrunner.cpp:64
+#, kde-format
+msgctxt "log out command"
+msgid "logout"
+msgstr "ออกจากระบบ"
+
+#: sessionrunner.cpp:28
+#, kde-format
+msgid "Logs out, exiting the current desktop session"
+msgstr "ออกจากระบบ, ออกจากวาระการใช้งานพื้นที่ทำงานปัจจุบัน"
+
+#: sessionrunner.cpp:29 sessionrunner.cpp:81
+#, fuzzy, kde-format
+#| msgctxt "shutdown computer command"
+#| msgid "shutdown"
+msgctxt "shut down computer command"
+msgid "shut down"
+msgstr "ปิดเครื่อง"
+
+#: sessionrunner.cpp:29
+#, kde-format
+msgid "Turns off the computer"
+msgstr "ปิดเครื่องคอมพิวเตอร์"
+
+#: sessionrunner.cpp:33 sessionrunner.cpp:90
+#, kde-format
+msgctxt "lock screen command"
+msgid "lock"
+msgstr "ล็อค"
+
+#: sessionrunner.cpp:33
+#, kde-format
+msgid "Locks the current sessions and starts the screen saver"
+msgstr "ล็อควาระงานปัจจุบัน และเริ่มการทำงานของโปรแกรมรักษาหน้าจอ"
+
+#: sessionrunner.cpp:36 sessionrunner.cpp:72
+#, kde-format
+msgctxt "restart computer command"
+msgid "restart"
+msgstr "เริ่มระบบใหม่"
+
+#: sessionrunner.cpp:36
+#, kde-format
+msgid "Reboots the computer"
+msgstr "เริ่มระบบคอมพิวเตอร์ใหม่"
+
+#: sessionrunner.cpp:37 sessionrunner.cpp:73
+#, kde-format
+msgctxt "restart computer command"
+msgid "reboot"
+msgstr "เริ่มบูตระบบใหม่"
+
+#: sessionrunner.cpp:40
+#, kde-format
+msgctxt "switch user command"
+msgid "switch"
+msgstr "สลับ"
+
+#: sessionrunner.cpp:41
+#, kde-format
+msgctxt "switch user command"
+msgid "switch :q:"
+msgstr "สลับ :q:"
+
+#: sessionrunner.cpp:42
+#, kde-format
+msgid ""
+"Switches to the active session for the user :q:, or lists all active "
+"sessions if :q: is not provided"
+msgstr ""
+"ทำการสลับวาระงานที่ใช้งานอยู่โดยผู้ใช้ :q: หรือเรียกดูวาระงานทั้งหมดที่ทำงานอยู่หากไม่ได้กำหนด :"
+"q:"
+
+#: sessionrunner.cpp:45 sessionrunner.cpp:130
+#, kde-format
+msgid "switch user"
+msgstr "สลับผู้ใช้"
+
+#: sessionrunner.cpp:45
+#, kde-format
+msgid "Starts a new session as a different user"
+msgstr "เริ่มวาระงานใหม่ด้วยสิทธิ์ผู้ใช้อื่น"
+
+#: sessionrunner.cpp:46 sessionrunner.cpp:130
+#, kde-format
+msgid "new session"
+msgstr "วาระงานใหม่"
+
+#: sessionrunner.cpp:50
+#, kde-format
+msgid "Lists all sessions"
+msgstr "เรียกดูวาระงานทั้งหมด"
+
+#: sessionrunner.cpp:64
+#, kde-format
+msgid "log out"
+msgstr "ออกจากระบบ"
+
+#: sessionrunner.cpp:66
+#, kde-format
+msgctxt "log out command"
+msgid "Logout"
+msgstr "ออกจากระบบ"
+
+#: sessionrunner.cpp:75
+#, kde-format
+msgid "Restart the computer"
+msgstr "เริ่มระบบคอมพิวเตอร์ใหม่"
+
+#: sessionrunner.cpp:82
+#, fuzzy, kde-format
+#| msgctxt "shutdown computer command"
+#| msgid "shutdown"
+msgctxt "shut down computer command"
+msgid "shutdown"
+msgstr "ปิดเครื่อง"
+
+#: sessionrunner.cpp:84
+#, fuzzy, kde-format
+#| msgid "Shutdown the computer"
+msgid "Shut down the computer"
+msgstr "ปิดเครื่องคอมพิวเตอร์"
+
+#: sessionrunner.cpp:93
+#, kde-format
+msgid "Lock the screen"
+msgstr "ล็อคหน้าจอ"
+
+#: sessionrunner.cpp:115
+#, fuzzy, kde-format
+#| msgid "new session"
+msgctxt "User sessions"
+msgid "sessions"
+msgstr "วาระงานใหม่"
+
+#: sessionrunner.cpp:136
+#, fuzzy, kde-format
+#| msgid "switch user"
+msgid "Switch User"
+msgstr "สลับผู้ใช้"
+
+#: sessionrunner.cpp:211
+#, kde-format
+msgid "Warning - New Session"
+msgstr "แจ้งเตือน - เปิดวาระงานใหม่"
+
+#: sessionrunner.cpp:212
+#, fuzzy, kde-format
+#| msgid ""
+#| "<p>You have chosen to open another desktop session.<br />The current "
+#| "session will be hidden and a new login screen will be displayed.<br />An "
+#| "F-key is assigned to each session; F%1 is usually assigned to the first "
+#| "session, F%2 to the second session and so on. You can switch between "
+#| "sessions by pressing Ctrl, Alt and the appropriate F-key at the same "
+#| "time. Additionally, the KDE Panel and Desktop menus have actions for "
+#| "switching between sessions.</p>"
+msgid ""
+"<p>You have chosen to open another desktop session.<br />The current session "
+"will be hidden and a new login screen will be displayed.<br />An F-key is "
+"assigned to each session; F%1 is usually assigned to the first session, F%2 "
+"to the second session and so on. You can switch between sessions by pressing "
+"Ctrl, Alt and the appropriate F-key at the same time. Additionally, the "
+"Plasma Panel and Desktop menus have actions for switching between sessions.</"
+"p>"
+msgstr ""
+"<p>คุณได้ทำการเลือกเปิดวาระงานของพื้นที่ทำงานตัวอื่น<br />ซึ่งจะทำให้ วาระงานปัจจุบันถูกซ่อน "
+"และจะปรากฏหน้าจอรอรับการล็อกอินขึ้นมา<br /> โดยมีปุ่มพิมพ์ฟังก์ชัน (F-ต่าง ๆ) "
+"ที่ถูกกำหนดให้ใช้กับแต่ละวาระงานคือ F%1 ใช้กำหนดให้เป็นวาระงานตัวแรก, F%2 "
+"เป็นวาระงานตัวที่สอง และไล่ไปเรื่อย ๆ คุณสามารถจะทำการสลับแต่ละวาระงานได้ โดยการกดปุ่มพิมพ์ "
+"Ctrl, Alt และปุ่มพิมพ์ฟังก์ชัน (F-ต่าง ๆ) ตามค่าวาระงานที่ต้องการ โดยกดพร้อม ๆ กัน นอกจากนี้ "
+"ที่ถาดพาเนลของ KDE และในเมนูของพื้นที่ทำงาน จะมีการกระทำให้เลือกใช้ "
+"เพื่อทำการสลับแต่ละวาระงานได้</p>"
+
+#~ msgid "New Session"
+#~ msgstr "วาระงานใหม่"
+
+#~ msgid "&Start New Session"
+#~ msgstr "เ&ริ่มวาระงานใหม่"

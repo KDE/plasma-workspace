@@ -1,0 +1,71 @@
+# translation of plasma_runner_shell.po to Gujarati
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sweta Kothari <swkothar@redhat.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_shell\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-27 00:45+0000\n"
+"PO-Revision-Date: 2010-06-24 11:28+0530\n"
+"Last-Translator: Sweta Kothari <swkothar@redhat.com>\n"
+"Language-Team: Gujarati\n"
+"Language: gu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: shellrunner.cpp:35
+#, kde-format
+msgid "Finds commands that match :q:, using common shell syntax"
+msgstr "આદેશોને ને શોધે છે કે જે :q: સાથે બંધબેસે છે, સામાન્ય શેલ બંધારણને વાપરી રહ્યા છે"
+
+#: shellrunner.cpp:36
+#, fuzzy, kde-format
+#| msgid "Run in &terminal window"
+msgid "Run in Terminal Window"
+msgstr "ટર્મિનલ વિન્ડોમાં ચલાવો (&t)"
+
+#: shellrunner.cpp:54
+#, kde-format
+msgid "Run %1"
+msgstr "%1 ને ચલાવો"
+
+#~ msgid "Enter the user you want to run the application as here."
+#~ msgstr "અહીયા પ્રમાણે કાર્યક્રમને ચલાવવા માટે તમે ઇચ્છો છો તે વપરાશકર્તાને દાખલ કરો."
+
+#~ msgid "User&name:"
+#~ msgstr "વપરાશકર્તાનામ (&n):"
+
+#~ msgid "Enter the password here for the user you specified above."
+#~ msgstr "તમે ઉપર સ્પષ્ટ થયેલ વપરાશકર્તા માટે અહિંયા પાસવર્ડને દાખલ કરો."
+
+#~ msgid "Pass&word:"
+#~ msgstr "પાસવર્ડ (&w):"
+
+#~ msgid ""
+#~ "Check this option if the application you want to run is a text mode "
+#~ "application. The application will then be run in a terminal emulator "
+#~ "window."
+#~ msgstr ""
+#~ "આ વિકલ્પને ચકાસો જો તમે ચલાવવા માટે તમે ઇચ્છો છો તે કાર્યક્રમ એ લખાણ સ્થિતિ કાર્યક્રમ "
+#~ "છે. કાર્યક્રમ એ પછી ટર્મિનલ ઍમ્યુલેટર વિન્ડોમાં ચાલશે."
+
+#~ msgid "Run in &terminal window"
+#~ msgstr "ટર્મિનલ વિન્ડોમાં ચલાવો (&t)"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "user id. Every process has a user id associated with it. This id code "
+#~ "determines file access and other permissions. The password of the user is "
+#~ "required to do this."
+#~ msgstr ""
+#~ "આ વિકલ્પને ચલાવો જો તમે વિવિધ વપરાશકર્તા id સાથે કાર્યક્રમને ચલાવવા ઇચ્છો છો. દરેક "
+#~ "પ્રક્રિયા પાસે તેની સાથે વપરાશકર્તા id સંકળાયેલ છે. આ id કોડ એ ફાઇલ પ્રવેશ અને બીજી "
+#~ "પરવાનગીઓને નક્કી કરે છે. વપરાશકર્તાનો પાસવર્ડ એ આવું કરવા માટે જરૂરી છે."
+
+#~ msgid "Run as a different &user"
+#~ msgstr "વિવિધ વપરાશકર્તા પ્રમાણે ચલાવો (&u)"

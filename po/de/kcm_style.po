@@ -1,0 +1,623 @@
+# Thomas Diehl <thd@kde.org>, 2002, 2003, 2004, 2005.
+# Stephan Johach <hunsum@gmx.de>, 2005.
+# Thomas Reitelbach <tr@erdfunkstelle.de>, 2005, 2006, 2007, 2008, 2009.
+# Stephan Johach <lucardus@onlinehome.de>, 2006.
+# Burkhard Lück <lueck@hube-lueck.de>, 2009, 2012, 2013, 2017, 2018, 2019, 2020, 2021.
+# Frederik Schwarzer <schwarzer@kde.org>, 2009, 2010, 2011, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmstyle\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"PO-Revision-Date: 2021-05-26 07:08+0200\n"
+"Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: gtkpage.cpp:59
+#, kde-format
+msgid "%1 is not a valid GTK Theme archive."
+msgstr "%1 ist kein gültiges GTK-Designarchiv."
+
+#: kcmstyle.cpp:161 kcmstyle.cpp:168
+#, kde-format
+msgid "There was an error loading the configuration dialog for this style."
+msgstr ""
+"Beim Laden des Einrichtungsdialogs für diesen Stil ist ein Fehler "
+"aufgetreten."
+
+#: kcmstyle.cpp:274
+#, kde-format
+msgid "Failed to apply selected style '%1'."
+msgstr "Der ausgewählte Stil „%1“ kann nicht angewendet werden."
+
+#: package/contents/ui/EffectSettingsPopup.qml:32
+#, kde-format
+msgid "Show icons:"
+msgstr "Symbole anzeigen:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:33
+#, kde-format
+msgid "On buttons"
+msgstr "Auf Knöpfen"
+
+#: package/contents/ui/EffectSettingsPopup.qml:44
+#, kde-format
+msgid "In menus"
+msgstr "In Menüs"
+
+#: package/contents/ui/EffectSettingsPopup.qml:56
+#, kde-format
+msgid "Main toolbar label:"
+msgstr "Text auf Haupt-Werkzeugleiste:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "None"
+msgstr "Keiner"
+
+#: package/contents/ui/EffectSettingsPopup.qml:59
+#, kde-format
+msgid "Text only"
+msgstr "Nur Text"
+
+#: package/contents/ui/EffectSettingsPopup.qml:60
+#, kde-format
+msgid "Beside icons"
+msgstr "Neben Symbolen"
+
+#: package/contents/ui/EffectSettingsPopup.qml:61
+#, kde-format
+msgid "Below icon"
+msgstr "Unter Symbol"
+
+#: package/contents/ui/EffectSettingsPopup.qml:76
+#, kde-format
+msgid "Secondary toolbar label:"
+msgstr "Text auf anderen Werkzeugleisten:"
+
+#: package/contents/ui/GtkStylePage.qml:18
+#, kde-format
+msgid "GNOME/GTK Application Style"
+msgstr "GNOME/GTK Anwendungs-Stil"
+
+#: package/contents/ui/GtkStylePage.qml:44
+#, kde-format
+msgid "GTK theme:"
+msgstr "GTK-Design:"
+
+#: package/contents/ui/GtkStylePage.qml:69
+#, kde-format
+msgid "Preview…"
+msgstr "Vorschau ..."
+
+#: package/contents/ui/GtkStylePage.qml:88
+#, kde-format
+msgid "Install from File…"
+msgstr "Aus Datei installieren ..."
+
+#: package/contents/ui/GtkStylePage.qml:93
+#, kde-format
+msgid "Get New GNOME/GTK Application Styles…"
+msgstr "Neue Anwendungs-Stile für GNOME-GTK holen ..."
+
+#: package/contents/ui/GtkStylePage.qml:109
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr "GTK-Designarchiv auswählen"
+
+#: package/contents/ui/GtkStylePage.qml:111
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr "GTK-Designarchive (*.tar.xz *.tar.gz *.tar.bz2)"
+
+#: package/contents/ui/main.qml:17
+#, kde-format
+msgid ""
+"This module allows you to modify the visual appearance of applications' user "
+"interface elements."
+msgstr ""
+"Dieses Modul ermöglicht Einstellungen zur optischen Erscheinung von "
+"Elementen der Benutzeroberfläche."
+
+#: package/contents/ui/main.qml:96
+#, kde-format
+msgid "Configure Style…"
+msgstr "Stil einrichten ..."
+
+#: package/contents/ui/main.qml:116
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr "Symbole und Werkzeugleisten einrichten"
+
+#: package/contents/ui/main.qml:132
+#, kde-format
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "GNOME/GTK Anwendungs-Stil einrichten ..."
+
+#: styleconfdialog.cpp:21
+#, kde-format
+msgid "Configure %1"
+msgstr "%1 einrichten"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "Karteikarte 1"
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, kde-format
+msgid "Push Button"
+msgstr "Knopf"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, kde-format
+msgid "Combo box"
+msgstr "Kombinationsfeld"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "Ankreuzfeld"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "Auswahlknopf"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:133
+#, kde-format
+msgid "Tab 2"
+msgstr "Karteikarte 2"
+
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, kde-format
+msgid "Application style"
+msgstr "Anwendungs-Stil"
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, kde-format
+msgid "Show icons on buttons"
+msgstr "Symbole auf Knöpfen anzeigen"
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, kde-format
+msgid "Show icons in menus"
+msgstr "Symbole in Menüs anzeigen"
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, kde-format
+msgid "Main toolbar label"
+msgstr "Text auf Haupt-Werkzeugleiste"
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, kde-format
+msgid "Secondary toolbar label"
+msgstr "Text auf anderen Werkzeugleisten"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Thomas Diehl, Thomas Reitelbach"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "thd@kde.org,tr@erdfunkstelle.de"
+
+#~ msgid "Application Style"
+#~ msgstr "Anwendungs-Stil"
+
+#, fuzzy
+#~| msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik"
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
+#~ msgstr "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik"
+
+#~ msgid "Karol Szwed"
+#~ msgstr "Karol Szwed"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Kai Uwe Broulik"
+
+#~ msgid "GTK3 theme:"
+#~ msgstr "GTK3-Design:"
+
+#~ msgid "Download New GNOME/GTK2 Application Styles..."
+#~ msgstr "Neue Anwendungs-Stile für GNOME-GTK2 herunterladen ..."
+
+#~ msgid "GNOME/GTK2 Application Styles"
+#~ msgstr "GNOME/GTK2 Anwendungs-Stile"
+
+#~ msgid "Download New GNOME/GTK3 Application Styles..."
+#~ msgstr "Neue Anwendungs-Stile für GNOME/GTK3 herunterladen ..."
+
+#~ msgid "GNOME/GTK3 Application Styles"
+#~ msgstr "GNOME/GTK3 Anwendungs-Stile"
+
+#~ msgid "Unable to Load Dialog"
+#~ msgstr "Laden des Dialogs nicht möglich"
+
+#~ msgid "No description available."
+#~ msgstr "Keine Beschreibung verfügbar."
+
+#~ msgid ""
+#~ "This area shows a preview of the currently selected style without having "
+#~ "to apply it to the whole desktop."
+#~ msgstr "Dieser Bereich zeigt eine Vorschau des gerade ausgewählten Stils."
+
+#~ msgid ""
+#~ "Here you can choose from a list of predefined widget styles (e.g. the way "
+#~ "buttons are drawn) which may or may not be combined with a theme "
+#~ "(additional information like a marble texture or a gradient)."
+#~ msgstr ""
+#~ "Hier können Sie aus einer Liste vordefinierter Elementstile wählen (z. B. "
+#~ "die Art, wie Knöpfe dargestellt werden). Diese können mit einem Design "
+#~ "kombiniert werden (zusätzliche Daten wie eine Marmorstruktur oder ein "
+#~ "Verlauf)."
+
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "some important buttons."
+#~ msgstr ""
+#~ "Wenn diese Einstellung aktiv ist, werden kleine Symbole auf einigen "
+#~ "wichtigen Bedienknöpfen von Anwendungen angezeigt."
+
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "most menu items."
+#~ msgstr ""
+#~ "Ist diese Einstellung aktiv, werden neben den meisten Menüeinträgen "
+#~ "kleine Symbole angezeigt."
+
+#~ msgid ""
+#~ "<p><b>No text:</b> Shows only icons on toolbar buttons. Best option for "
+#~ "low resolutions.</p><p><b>Text only: </b>Shows only text on toolbar "
+#~ "buttons.</p><p><b>Text beside icons: </b> Shows icons and text on toolbar "
+#~ "buttons. Text is aligned beside the icon.</p><b>Text below icons: </b> "
+#~ "Shows icons and text on toolbar buttons. Text is aligned below the icon."
+#~ msgstr ""
+#~ "<p><b>Kein Text:</b> Es werden nur Symbole auf den Knöpfen der "
+#~ "Werkzeugleisten angezeigt. Für niedrige Bildschirmauflösungen am besten "
+#~ "geeignet.</p><p><b>Nur Text:</b> Es wird lediglich Text auf den Knöpfen "
+#~ "dargestellt.</p><p><b>Text neben Symbolen:</b> Es werden sowohl Symbole "
+#~ "als auch Texte angezeigt. Die Texte erscheinen neben den Symbolen.</"
+#~ "p><p><b>Text unter Symbolen:</b> Es werden sowohl Symbole als auch Texte "
+#~ "angezeigt. Die Texte erscheinen unter den Symbolen.</p>"
+
+#~ msgid "Toolbars"
+#~ msgstr "Werkzeugleisten"
+
+#~ msgid "No Text"
+#~ msgstr "Kein Text"
+
+#, fuzzy
+#~| msgid "Widget style:"
+#~ msgid "Widget Style"
+#~ msgstr "Stil der Bedienelemente:"
+
+#~ msgid "Widget style:"
+#~ msgstr "Stil der Bedienelemente:"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Fine Tuning"
+#~ msgstr "&Feineinstellungen"
+
+#~ msgid "Description: %1"
+#~ msgstr "Beschreibung: %1"
+
+#~ msgid ""
+#~ "This page allows you to choose details about the widget style options"
+#~ msgstr "Auf dieser Seite können Sie Details zu den Elementstilen auswählen."
+
+#~ msgid "Group Box"
+#~ msgstr "Gruppierungs-Rahmen"
+
+#~ msgid "KDE Style Module"
+#~ msgstr "KDE-Stilmodul"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "Menubar"
+#~ msgstr "Menüleiste"
+
+#~ msgid "Menubar style:"
+#~ msgstr "Menüleistenstil:"
+
+#~ msgid "In application"
+#~ msgstr "In Anwendung"
+
+#~ msgid "Title bar button"
+#~ msgstr "Titelleistenknopf"
+
+#~ msgid "Global Menu widget"
+#~ msgstr "Globales Menü-Miniprogramm"
+
+#~ msgid "Your changes will take effect only on application restart."
+#~ msgstr "Ihre Änderungen werden erst nach dem Neustart der Anwendung wirksam"
+
+#~ msgid ""
+#~ "<p>Changes to the visibility of menu icons will only affect newly started "
+#~ "applications.</p>"
+#~ msgstr ""
+#~ "<p>Änderungen der Anzeige von Menüsymbolen werden sich nur auf neu "
+#~ "gestartete Anwendungen auswirken.</p>"
+
+#~ msgctxt "@title:window"
+#~ msgid "Menu Icons Changed"
+#~ msgstr "Geänderte Menüsymbole"
+
+#~ msgid "Top screen menubar"
+#~ msgstr "Menüleiste am oberen Bildschirmrand"
+
+#~ msgid "Only export"
+#~ msgstr "Nur exportieren"
+
+#~ msgid "Graphical effects:"
+#~ msgstr "Grafische Effekte:"
+
+#~ msgid "Low display resolution and Low CPU"
+#~ msgstr "Niedrige Bildschirmauflösung und langsamer Prozessor"
+
+#~ msgid "High display resolution and Low CPU"
+#~ msgstr "Hohe Bildschirmauflösung und langsamer Prozessor"
+
+#~ msgid "Low display resolution and High CPU"
+#~ msgstr "Niedrige Bildschirmauflösung und schneller Prozessor"
+
+#~ msgid "High display resolution and High CPU"
+#~ msgstr "Hohe Bildschirmauflösung und schneller Prozessor"
+
+#~ msgid "Low display resolution and Very High CPU"
+#~ msgstr "Niedrige Bildschirmauflösung und sehr schneller Prozessor"
+
+#~ msgid "High display resolution and Very High CPU"
+#~ msgstr "Hohe Bildschirmauflösung und sehr schneller Prozessor"
+
+#~ msgid ""
+#~ "If you enable this option, KDE Applications will run internal animations."
+#~ msgstr ""
+#~ "Wenn diese Einstellung aktiviert ist, werden KDE-Anwendungen interne "
+#~ "Animationen ausführen."
+
+#~ msgid "kcmstyle"
+#~ msgstr "kcmstyle"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Workspace"
+#~ msgstr "&Arbeitsbereich"
+
+#~ msgid "Get New Themes..."
+#~ msgstr "Neue Designs herunterladen ..."
+
+#~ msgid "Icons Only"
+#~ msgstr "Nur Symbole"
+
+#~ msgctxt "@label:listbox"
+#~ msgid "Text pos&ition of toolbar elements:"
+#~ msgstr "Textpos&ition der Einträge in der Werkzeugleiste:"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Style"
+#~ msgstr "&Stil"
+
+#~ msgid ""
+#~ "This page allows you to enable various widget style effects. For best "
+#~ "performance, it is advisable to disable all effects."
+#~ msgstr ""
+#~ "Diese Seite ermöglicht Ihnen die Aktivierung diverser Effekte für Stile "
+#~ "von Bedienelementen. Falls es Ihnen bei Ihrem Rechner vor allem auf die "
+#~ "Arbeitsgeschwindigkeit ankommt, sollten Sie diese Effekte lieber nicht "
+#~ "aktivieren."
+
+#~ msgid "E&nable tooltips"
+#~ msgstr "&Kurzinfos aktivieren"
+
+#~ msgid "High&light buttons under mouse"
+#~ msgstr "Knöpfe unter der Maus &hervorheben"
+
+#~ msgid "&Effects"
+#~ msgstr "Effe&kte"
+
+#~ msgid ""
+#~ "If this option is selected, toolbar buttons will change their color when "
+#~ "the mouse cursor is moved over them."
+#~ msgstr ""
+#~ "Wenn diese Einstellung aktiviert ist, dann ändern die Knöpfe auf "
+#~ "Werkzeugleisten ihre Farbe, wenn sich der Mauszeiger darüber befindet."
+
+#~ msgid ""
+#~ "If you check this option, the KDE application will offer tooltips when "
+#~ "the cursor remains over items in the toolbar."
+#~ msgstr ""
+#~ "Wenn diese Einstellung aktiv ist, werden bei KDE-Programmen Kurzinfos "
+#~ "angezeigt, sobald Sie mit dem Mauszeiger einen Moment über einem Element "
+#~ "einer Werkzeugleiste verweilen."
+
+#~ msgid "Show tear-off handles in &popup menus"
+#~ msgstr "&Abreißkante in Menüs anzeigen"
+
+#~ msgid "&Enable GUI effects"
+#~ msgstr "Oberflächen-Effekte a&ktivieren"
+
+#~ msgid "Disable"
+#~ msgstr "Deaktivieren"
+
+#~ msgid "Animate"
+#~ msgstr "Animieren"
+
+#~ msgid "Combobo&x effect:"
+#~ msgstr "Effekt für &Kombinationsfelder:"
+
+#~ msgid "Fade"
+#~ msgstr "Einblenden"
+
+#~ msgid "&Tool tip effect:"
+#~ msgstr "&Kurzinfo-Effekt:"
+
+#~ msgid "Make Translucent"
+#~ msgstr "Durchscheinend darstellen"
+
+#~ msgid "&Menu effect:"
+#~ msgstr "&Menü-Effekt:"
+
+#~ msgid "Me&nu tear-off handles:"
+#~ msgstr "&Abreißkanten für Menüs:"
+
+#~ msgid "Menu &drop shadow"
+#~ msgstr "Menüs&chattierung"
+
+#~ msgid "Software Tint"
+#~ msgstr "Software-Einfärbung"
+
+#~ msgid "Software Blend"
+#~ msgstr "Software-Überblendung"
+
+#~ msgid "XRender Blend"
+#~ msgstr "XRender-Überblendung"
+
+#~ msgid "0%"
+#~ msgstr "0 %"
+
+#~ msgid "50%"
+#~ msgstr "50 %"
+
+#~ msgid "100%"
+#~ msgstr "100 %"
+
+#~ msgid "Menu trans&lucency type:"
+#~ msgstr "&Verschiedene Formen von Durchsichtigkeit:"
+
+#~ msgid "Menu &opacity:"
+#~ msgstr "Menü-&Undurchsichtigkeit:"
+
+#~ msgid "Transparent tool&bars when moving"
+#~ msgstr "Transparente &Werkzeugleisten beim Verschieben"
+
+#~ msgid ""
+#~ "<qt>Selected style: <b>%1</b><br /><br />One or more effects that you "
+#~ "have chosen could not be applied because the selected style does not "
+#~ "support them; they have therefore been disabled.<br /><br /></qt>"
+#~ msgstr ""
+#~ "<qt>Ausgewählter Stil: <b>%1</b><br /><br />Ein oder mehrere ausgewählte "
+#~ "Effekte lassen sich nicht anwenden, da sie vom ausgewählten Stil nicht "
+#~ "unterstützt werden.<br /><br /></qt>"
+
+#~ msgid "Menu translucency is not available.<br />"
+#~ msgstr "Durchscheinende Menüs sind nicht verfügbar.<br />"
+
+#~ msgid "Menu drop-shadows are not available."
+#~ msgstr "Schattierungen sind nicht verfügbar."
+
+#~ msgid ""
+#~ "If you check this box, you can select several effects for different "
+#~ "widgets like combo boxes, menus or tooltips."
+#~ msgstr ""
+#~ "Wenn diese Einstellung aktiv ist, können Sie diverse Effekte für "
+#~ "Bedienelemente wie Kombinationsfelder, Menüs und Kurzinfos auswählen."
+
+#~ msgid ""
+#~ "<p><b>Disable: </b>do not use any combo box effects.</p>\n"
+#~ "<b>Animate: </b>Do some animation."
+#~ msgstr ""
+#~ "<p><b>Deaktivieren: </b>Keine Effekte für Kombinationsfelder verwenden</"
+#~ "p>\n"
+#~ "<b>Animationen: </b>Entsprechende Effekte verwenden"
+
+#~ msgid ""
+#~ "<p><b>Disable: </b>do not use any tooltip effects.</p>\n"
+#~ "<p><b>Animate: </b>Do some animation.</p>\n"
+#~ "<b>Fade: </b>Fade in tooltips using alpha-blending."
+#~ msgstr ""
+#~ "<p><b>Deaktvieren: </b>Keine Kurzinfo-Effekte verwenden</p>\n"
+#~ "<p><b>Animationen: </b>Entsprechende Effekte verwenden</p>\n"
+#~ "<b>Einblenden: </b>Kurzinfos mittels „Alpha Blending“ einblenden"
+
+#~ msgid ""
+#~ "<p><b>Disable: </b>do not use any menu effects.</p>\n"
+#~ "<p><b>Animate: </b>Do some animation.</p>\n"
+#~ "<p><b>Fade: </b>Fade in menus using alpha-blending.</p>\n"
+#~ "<b>Make Translucent: </b>Alpha-blend menus for a see-through effect. (KDE "
+#~ "styles only)"
+#~ msgstr ""
+#~ "<p><b>Deaktvieren: </b>Keine Menü-Effekte verwenden</p>\n"
+#~ "<p><b>Animate: </b>Entsprechende Effekte verwenden</p>\n"
+#~ "<p><b>Einblenden: </b>Menüs mittels „Alpha Blending“ einblenden</p>\n"
+#~ "<b>Durchscheinend darstellen: </b>„Alpha Blending“ für Transparenz-"
+#~ "Effekte verwenden (funktioniert nur bei KDE-Stilen)"
+
+#~ msgid ""
+#~ "When enabled, all popup menus will have a drop-shadow, otherwise drop-"
+#~ "shadows will not be displayed. At present, only KDE styles can have this "
+#~ "effect enabled."
+#~ msgstr ""
+#~ "Bei Aktivierung zeigen alle aufklappenden Menüs eine Schattierung. Sonst "
+#~ "erscheinen keine Schattierungen. Derzeit funktioniert dies nur mit KDE-"
+#~ "Stilen."
+
+#~ msgid ""
+#~ "<p><b>Software Tint: </b>Alpha-blend using a flat color.</p>\n"
+#~ "<p><b>Software Blend: </b>Alpha-blend using an image.</p>\n"
+#~ "<p><b>XRender Blend: </b>Use the XFree RENDER extension for image "
+#~ "blending (if available). This method may be slower than the Software "
+#~ "routines on non-accelerated displays, but may however improve performance "
+#~ "on remote displays.</p>\n"
+#~ msgstr ""
+#~ "<p><b>Software-Einfärbung:</b> „Alpha Blending“ mit Hilfe einer einfachen "
+#~ "Farbe.</p>\n"
+#~ "<p><b>Software-Überblendung:</b> „Alpha Blending“ mit Hilfe eines Bildes."
+#~ "</p>\n"
+#~ "<p><b>XRender-Überblendung:</b> Verwendet die Rendering-Erweiterung von X "
+#~ "für Bild-Überblendungen (falls verfügbar). Diese Methode ist langsamer "
+#~ "bei nicht beschleunigten Graphikkarten, kann aber bei Zugriffen auf "
+#~ "Fremdrechner die Darstellungsgeschwindigkeit verbessern.</p>\n"
+
+#~ msgid "By adjusting this slider you can control the menu effect opacity."
+#~ msgstr ""
+#~ "Durch Verschiebung dieses Reglers können Sie die Durchsichtigkeit bzw. "
+#~ "Undurchsichtigkeit von Menüs verändern."
+
+#~ msgid ""
+#~ "<b>Note:</b> that all widgets in this combobox do not apply to Qt-only "
+#~ "applications."
+#~ msgstr ""
+#~ "<b>Beachten Sie:</b> Die Bedienelemente in diesem Kombinationsfeld sind "
+#~ "nicht für reine Qt-Programme verfügbar."
+
+#~ msgid ""
+#~ "If you check this box, the toolbars will be transparent when moving them "
+#~ "around."
+#~ msgstr ""
+#~ "Wenn Sie dieses Ankreuzfeld markieren, erscheinen Werkzeugleisten "
+#~ "transparent, sobald sie verschoben werden."
+
+#~ msgid ""
+#~ "If you enable this option some pop-up menus will show so called tear-off "
+#~ "handles. If you click them, you get the menu inside a widget. This can be "
+#~ "very helpful when performing the same action multiple times."
+#~ msgstr ""
+#~ "Wenn diese Einstellung aktiv ist, wird in aufklappenden Menüs eine "
+#~ "„Perforation“ angezeigt, die ein „Abreißen“ des Menüs ermöglicht. Sobald "
+#~ "Sie darauf klicken, erscheint das Menü in einem eigenen Fenster. Das kann "
+#~ "sehr hilfreich sein, falls Sie ähnliche Aktionen mehrmals durchführen "
+#~ "müssen."
+
+#~ msgid "%"
+#~ msgstr "%"

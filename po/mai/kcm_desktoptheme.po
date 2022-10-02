@@ -1,0 +1,261 @@
+# translation of kcm_desktopthemedetails.po to Maithili
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sangeeta Kumari <sangeeta09@gmail.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_desktopthemedetails\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"PO-Revision-Date: 2009-01-18 15:27+0530\n"
+"Last-Translator: Sangeeta Kumari <sangeeta09@gmail.com>\n"
+"Language-Team: Maithili <maithili.sf.net>\n"
+"Language: mai\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"\n"
+"\n"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Theme Name"
+msgid "Name of the current Plasma Style"
+msgstr "प्रसंग नाम"
+
+#: kcm.cpp:108
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: kcm.cpp:119
+#, kde-format
+msgid "Unable to download the theme: %1"
+msgstr ""
+
+#: kcm.cpp:144
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: kcm.cpp:147 kcm.cpp:153
+#, kde-format
+msgid "Theme installation failed."
+msgstr ""
+
+#: kcm.cpp:245
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "This module lets you choose the Plasma style."
+msgstr ""
+
+#: package/contents/ui/main.qml:69
+#, fuzzy, kde-format
+#| msgid "Theme Name"
+msgid "All Themes"
+msgstr "प्रसंग नाम"
+
+#: package/contents/ui/main.qml:70
+#, fuzzy, kde-format
+#| msgid "Theme Name"
+msgid "Light Themes"
+msgstr "प्रसंग नाम"
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgid "Dark Themes"
+msgstr ""
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "Color scheme compatible"
+msgstr ""
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgid "Follows color scheme"
+msgstr ""
+
+#: package/contents/ui/main.qml:118
+#, fuzzy, kde-format
+#| msgid "Theme Name"
+msgid "Edit Theme…"
+msgstr "प्रसंग नाम"
+
+#: package/contents/ui/main.qml:125
+#, kde-format
+msgid "Remove Theme"
+msgstr "प्रसंग हटाबू"
+
+#: package/contents/ui/main.qml:132
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Theme"
+msgstr "प्रसंग हटाबू"
+
+#: package/contents/ui/main.qml:174
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: package/contents/ui/main.qml:179
+#, fuzzy, kde-format
+#| msgid "Theme Name"
+msgid "Get New Plasma Styles…"
+msgstr "प्रसंग नाम"
+
+#: package/contents/ui/main.qml:193
+#, fuzzy, kde-format
+#| msgid "Theme Name"
+msgid "Open Theme"
+msgstr "प्रसंग नाम"
+
+#: package/contents/ui/main.qml:195
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:31
+#, kde-format
+msgid ""
+"This tool allows you to set the theme of the current Plasma session, without "
+"accidentally setting it to one that is either not available, or which is "
+"already set."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:35
+#, kde-format
+msgid ""
+"The name of the theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:36
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:49
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:65
+#, kde-format
+msgid "The current Plasma session's theme has been set to %1"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:67
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:75
+#, kde-format
+msgid "You have the following Plasma themes on your system:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "संगीता कुमारी"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "sangeeta09@gmail.com"
+
+#, fuzzy
+#~| msgid "Theme Name"
+#~ msgid "Plasma Style"
+#~ msgstr "प्रसंग नाम"
+
+#, fuzzy
+#~| msgid "Theme Name"
+#~ msgid "Plasma Styles"
+#~ msgstr "प्रसंग नाम"
+
+#, fuzzy
+#~| msgid "Theme Name"
+#~ msgid "Download New Plasma Styles"
+#~ msgstr "प्रसंग नाम"
+
+#~ msgctxt "plasma name"
+#~ msgid "Kickoff"
+#~ msgstr "किकआफ"
+
+#~ msgctxt "plasma name"
+#~ msgid "Analog Clock"
+#~ msgstr "एनालाग घडी"
+
+#~ msgctxt "plasma name"
+#~ msgid "Notes"
+#~ msgstr "टिप्पणी"
+
+#~ msgctxt "plasma name"
+#~ msgid "Tooltip"
+#~ msgstr "उपकरण-युक्ति"
+
+#~ msgctxt "plasma name"
+#~ msgid "Pager"
+#~ msgstr "पेजर"
+
+#~ msgid "Source"
+#~ msgstr "श्रोत"
+
+#, fuzzy
+#~| msgid "%1 %2"
+#~ msgctxt ""
+#~ "%1 is the name of the theme, %2 is the type of the element (background, "
+#~ "icon, note, etc)"
+#~ msgid "%1 %2"
+#~ msgstr "%1 %2"
+
+#~ msgid "More"
+#~ msgstr "बेसी"
+
+#, fuzzy
+#~| msgid "Theme Name"
+#~ msgid "New theme name:"
+#~ msgstr "प्रसंग नाम"
+
+#, fuzzy
+#~| msgid "Theme Name"
+#~ msgid "Custom theme name"
+#~ msgstr "प्रसंग नाम"
+
+#~ msgid "Author:"
+#~ msgstr "लेखक:"
+
+#, fuzzy
+#~| msgid "Author:"
+#~ msgid "Custom theme author "
+#~ msgstr "लेखक:"
+
+#~ msgid "Version:"
+#~ msgstr "संस्करण:"
+
+#~ msgid "Description:"
+#~ msgstr "विवरण:"
+
+#, fuzzy
+#~| msgid "Author:"
+#~ msgid "Theme Author"
+#~ msgstr "लेखक:"
+
+#~ msgid "Theme Name"
+#~ msgstr "प्रसंग नाम"
+
+#~ msgid "Theme Version"
+#~ msgstr "थीम संस्करण"

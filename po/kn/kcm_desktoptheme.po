@@ -1,0 +1,391 @@
+# translation of kcm_desktopthemedetails.po to Kannada
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Shankar Prasad <svenkate@redhat.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_desktopthemedetails\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"PO-Revision-Date: 2009-01-03 18:12+0530\n"
+"Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
+"Language-Team: Kannada <en@li.org>\n"
+"Language: kn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Get New Theme..."
+msgid "Name of the current Plasma Style"
+msgstr "ಹೊಸ ಪರಿಸರವಿನ್ಯಾಸವನ್ನು ಪಡೆದುಕೊ..."
+
+#: kcm.cpp:108
+#, fuzzy, kde-format
+#| msgid "Unable to save theme."
+msgid "Unable to create a temporary file."
+msgstr "ಪರಿಸರವಿನ್ಯಾಸವನ್ನು ಉಳಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ."
+
+#: kcm.cpp:119
+#, fuzzy, kde-format
+#| msgid "Unable to save theme."
+msgid "Unable to download the theme: %1"
+msgstr "ಪರಿಸರವಿನ್ಯಾಸವನ್ನು ಉಳಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ."
+
+#: kcm.cpp:144
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: kcm.cpp:147 kcm.cpp:153
+#, kde-format
+msgid "Theme installation failed."
+msgstr ""
+
+#: kcm.cpp:245
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "This module lets you choose the Plasma style."
+msgstr ""
+
+#: package/contents/ui/main.qml:69
+#, fuzzy, kde-format
+#| msgid "Theme Item"
+msgid "All Themes"
+msgstr "ಪರಿಸರವಿನ್ಯಾಸದ ಅಂಶ"
+
+#: package/contents/ui/main.qml:70
+#, fuzzy, kde-format
+#| msgid "Theme Item"
+msgid "Light Themes"
+msgstr "ಪರಿಸರವಿನ್ಯಾಸದ ಅಂಶ"
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgid "Dark Themes"
+msgstr ""
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "Color scheme compatible"
+msgstr ""
+
+#: package/contents/ui/main.qml:100
+#, fuzzy, kde-format
+#| msgctxt "plasma name"
+#| msgid "Color Scheme"
+msgid "Follows color scheme"
+msgstr "ವರ್ಣ ಸ್ಕೀಮ್"
+
+#: package/contents/ui/main.qml:118
+#, fuzzy, kde-format
+#| msgid "Theme Item"
+msgid "Edit Theme…"
+msgstr "ಪರಿಸರವಿನ್ಯಾಸದ ಅಂಶ"
+
+#: package/contents/ui/main.qml:125
+#, kde-format
+msgid "Remove Theme"
+msgstr "ಪರಿಸರವಿನ್ಯಾಸವನ್ನು (ಥೀಮ್) ತೆಗೆದುಹಾಕು"
+
+#: package/contents/ui/main.qml:132
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Theme"
+msgstr "ಪರಿಸರವಿನ್ಯಾಸವನ್ನು (ಥೀಮ್) ತೆಗೆದುಹಾಕು"
+
+#: package/contents/ui/main.qml:174
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: package/contents/ui/main.qml:179
+#, fuzzy, kde-format
+#| msgid "Get New Theme..."
+msgid "Get New Plasma Styles…"
+msgstr "ಹೊಸ ಪರಿಸರವಿನ್ಯಾಸವನ್ನು ಪಡೆದುಕೊ..."
+
+#: package/contents/ui/main.qml:193
+#, fuzzy, kde-format
+#| msgid "Theme Item"
+msgid "Open Theme"
+msgstr "ಪರಿಸರವಿನ್ಯಾಸದ ಅಂಶ"
+
+#: package/contents/ui/main.qml:195
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:31
+#, kde-format
+msgid ""
+"This tool allows you to set the theme of the current Plasma session, without "
+"accidentally setting it to one that is either not available, or which is "
+"already set."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:35
+#, kde-format
+msgid ""
+"The name of the theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:36
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:49
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:65
+#, kde-format
+msgid "The current Plasma session's theme has been set to %1"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:67
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:75
+#, kde-format
+msgid "You have the following Plasma themes on your system:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "ಶಂಕರ ಪ್ರಸಾದ್ ಎಂ ವಿ"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "svenkate@redhat.com"
+
+#, fuzzy
+#~| msgid "Get New Theme..."
+#~ msgid "Plasma Style"
+#~ msgstr "ಹೊಸ ಪರಿಸರವಿನ್ಯಾಸವನ್ನು ಪಡೆದುಕೊ..."
+
+#, fuzzy
+#~| msgid "Get New Theme..."
+#~ msgid "Plasma Styles"
+#~ msgstr "ಹೊಸ ಪರಿಸರವಿನ್ಯಾಸವನ್ನು ಪಡೆದುಕೊ..."
+
+#, fuzzy
+#~| msgid "How to Change Desktop Theme"
+#~ msgid "Download New Plasma Styles"
+#~ msgstr "ಗಣಕತೆರೆಯ ಪರಿಸರ ವಿನ್ಯಾಸವನ್ನು ಹೇಗೆ ಬದಲಾಯಿಸುವುದು"
+
+#, fuzzy
+#~| msgid "Remove Desktop Theme"
+#~ msgid "Configure Desktop Theme"
+#~ msgstr "ಗಣಕತೆರೆ ಪರಿಸರವಿನ್ಯಾಸವನ್ನು ತೆಗದು ಹಾಕು"
+
+#, fuzzy
+#~| msgid "Export Desktop Theme"
+#~ msgid "KDE Desktop Theme Module"
+#~ msgstr "ಗಣಕತೆರೆ ಪರಿಸರವಿನ್ಯಾಸವನ್ನು ರಫ್ತು ಮಾಡಿ"
+
+#~ msgctxt "plasma name"
+#~ msgid "Panel Background"
+#~ msgstr "ಫಲಕದ ಹಿನ್ನಲೆ"
+
+#~ msgctxt "plasma name"
+#~ msgid "Kickoff"
+#~ msgstr "ಕಿಕ್ಆಫ್"
+
+#~ msgctxt "plasma name"
+#~ msgid "Task Items"
+#~ msgstr "ಕೆಲಸದ ಅಂಶಗಳು"
+
+#~ msgctxt "plasma name"
+#~ msgid "Widget Background"
+#~ msgstr "ವಿಜೆಟ್‌ನ ಹಿನ್ನಲೆ"
+
+#~ msgctxt "plasma name"
+#~ msgid "Translucent Background"
+#~ msgstr "ಅರೆಪಾರದರ್ಶಕ ಹಿನ್ನಲೆ"
+
+#~ msgctxt "plasma name"
+#~ msgid "Dialog Background"
+#~ msgstr "ಸಂವಾದದ ಹಿನ್ನಲೆ"
+
+#~ msgctxt "plasma name"
+#~ msgid "Analog Clock"
+#~ msgstr "ಅನಲಾಗ್ ಗಡಿಯಾರ"
+
+#~ msgctxt "plasma name"
+#~ msgid "Notes"
+#~ msgstr "ಟಿಪ್ಪಣಿಗಳು"
+
+#~ msgctxt "plasma name"
+#~ msgid "Tooltip"
+#~ msgstr "ಸುಳಿವು"
+
+#~ msgctxt "plasma name"
+#~ msgid "Pager"
+#~ msgstr "ಪೇಜರ್"
+
+#~ msgctxt "plasma name"
+#~ msgid "Run Command Dialog"
+#~ msgstr "ಆದೇಶ ಸಂವಾದವನ್ನು ಚಲಾಯಿಸು"
+
+#~ msgctxt "plasma name"
+#~ msgid "Shutdown Dialog"
+#~ msgstr "ಸ್ಥಗಿತ ಸಂವಾದ"
+
+#~ msgid "(Customized)"
+#~ msgstr "(ಇಚ್ಛೆಗೆ ತಕ್ಕಂತೆ ಬದಲಾಯಿಸಿದ)"
+
+#~ msgid "User customized theme"
+#~ msgstr "ಬಳಕೆದಾರರ ಇಚ್ಛೆಯ ಪರಿಸರವಿನ್ಯಾಸ"
+
+#~ msgid ""
+#~ "Theme items have been changed.  Do you still wish remove the \"%1\" theme?"
+#~ msgstr ""
+#~ "ಪರಿಸರವಿನ್ಯಾಸದ ಅಂಶಗಳನ್ನು ಬದಲಾಯಿಸಲಾಗಿದೆ. ಆದರೂ ಸಹ ನೀವು ಪರಿಸರವಿನ್ಯಾಸ \"%1\" ಅನ್ನು "
+#~ "ಬದಲಾಯಿಸಲು ಬಯಸುತ್ತೀರೆ?"
+
+#, fuzzy
+#~| msgid "Removal of the default KDE theme is not allowed."
+#~ msgid "Removal of the default desktop theme is not allowed."
+#~ msgstr "ಪೂರ್ವನಿಯೋಜಿತ KDE ಪರಿಸರವಿನ್ಯಾಸವನ್ನು ತೆಗೆದು ಹಾಕಲು ಅನುಮತಿ ಇಲ್ಲ."
+
+#~ msgid "Are you sure you wish remove the \"%1\" theme?"
+#~ msgstr "\"%1\" ಪರಿಸರವಿನ್ಯಾಸವನ್ನು ನೀವು ಖಚಿತವಾಗಿಯೂ ತೆಗೆದು ಹಾಕಲು ಬಯಸುತ್ತೀರೆ?"
+
+#~ msgid ""
+#~ "Please apply theme item changes (with a new theme name) before attempting "
+#~ "to export theme."
+#~ msgstr ""
+#~ "ಪರಿಸರವಿನ್ಯಾಸವನ್ನು ರಫ್ತು ಮಾಡುವ ಮೊದಲು ಪರಿಸರವಿನ್ಯಾಸ ಅಂಶದ ಬದಲಾವಣೆಗಳನ್ನು ದಯವಿಟ್ಟು "
+#~ "ಅನ್ವಯಿಸಿ(ಹೊಸ ಪರಿಸರವಿನ್ಯಾಸ ಹೆಸರಿನೊಂದಿಗೆ)."
+
+#~ msgid "Export Desktop Theme"
+#~ msgstr "ಗಣಕತೆರೆ ಪರಿಸರವಿನ್ಯಾಸವನ್ನು ರಫ್ತು ಮಾಡಿ"
+
+#~ msgid "Export theme to file"
+#~ msgstr "ಪರಿಸರವಿನ್ಯಾಸವನ್ನು ಕಡತಕ್ಕೆ ರಫ್ತು ಮಾಡಿ"
+
+#~ msgid "Theme Item"
+#~ msgstr "ಪರಿಸರವಿನ್ಯಾಸದ ಅಂಶ"
+
+#~ msgid "Source"
+#~ msgstr "ಆಕರ"
+
+#, fuzzy
+#~| msgid "%1 %2"
+#~ msgctxt ""
+#~ "%1 is the name of the theme, %2 is the type of the element (background, "
+#~ "icon, note, etc)"
+#~ msgid "%1 %2"
+#~ msgstr "%1 %2"
+
+#~ msgid "File..."
+#~ msgstr "ಕಡತ..."
+
+#~ msgid "Select File to Use for %1"
+#~ msgstr "%1 ಗಾಗಿ ಬಳಸಲು ಕಡತವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ"
+
+#~ msgid " Author: %1"
+#~ msgstr " ಕತೃ: %1"
+
+#~ msgid "Version: %1"
+#~ msgstr "ಆವೃತ್ತಿ: %1"
+
+#~ msgid "Desktop Theme Details"
+#~ msgstr "ಗಣಕತೆರೆ ಪರಿಸರವಿನ್ಯಾಸ ವಿವರಗಳು"
+
+#~ msgid "More"
+#~ msgstr "ಇನ್ನಷ್ಟು"
+
+#, fuzzy
+#~| msgid "Remove Desktop Theme"
+#~ msgid "Remove the selected theme"
+#~ msgstr "ಗಣಕತೆರೆ ಪರಿಸರವಿನ್ಯಾಸವನ್ನು ತೆಗದು ಹಾಕು"
+
+#~ msgid "Export Theme to File..."
+#~ msgstr "ಪರಿಸರವಿನ್ಯಾಸವನ್ನು ಕಡತಕ್ಕೆ ರಫ್ತು ಮಾಡು..."
+
+#~ msgid "New theme name:"
+#~ msgstr "ಹೊಸ ಪರಿಸರವಿನ್ಯಾಸದ ಹೆಸರು:"
+
+#, fuzzy
+#~| msgid "New theme name:"
+#~ msgid "Custom theme name"
+#~ msgstr "ಹೊಸ ಪರಿಸರವಿನ್ಯಾಸದ ಹೆಸರು:"
+
+#~ msgid "Author:"
+#~ msgstr "ಕತೃ:"
+
+#, fuzzy
+#~| msgid "Theme Author"
+#~ msgid "Custom theme author "
+#~ msgstr "ಪರಿಸರವಿನ್ಯಾಸದ ಕತೃ"
+
+#~ msgid "Version:"
+#~ msgstr "ಆವೃತ್ತಿ:"
+
+#, fuzzy
+#~| msgid "New theme name:"
+#~ msgid "Custom theme version number"
+#~ msgstr "ಹೊಸ ಪರಿಸರವಿನ್ಯಾಸದ ಹೆಸರು:"
+
+#~ msgid "Description:"
+#~ msgstr "ವಿವರಣೆ:"
+
+#, fuzzy
+#~| msgid "The theme description goes here..."
+#~ msgid "Custom theme description"
+#~ msgstr "ಪರಿಸರವಿನ್ಯಾಸದ ವಿವರಣೆ ಇಲ್ಲಿದೆ..."
+
+#~ msgid "Theme Author"
+#~ msgstr "ಪರಿಸರವಿನ್ಯಾಸದ ಕತೃ"
+
+#~ msgid "Theme Name"
+#~ msgstr "ಪರಿಸರವಿನ್ಯಾಸದ ಹೆಸರು"
+
+#~ msgid "Theme Version"
+#~ msgstr "ಪರಿಸರವಿನ್ಯಾಸ ಆವೃತ್ತಿ"
+
+#~ msgid "The theme description goes here..."
+#~ msgstr "ಪರಿಸರವಿನ್ಯಾಸದ ವಿವರಣೆ ಇಲ್ಲಿದೆ..."
+
+#, fuzzy
+#~| msgid "Remove Desktop Theme"
+#~ msgid "KCMDesktopTheme"
+#~ msgstr "ಗಣಕತೆರೆ ಪರಿಸರವಿನ್ಯಾಸವನ್ನು ತೆಗದು ಹಾಕು"
+
+#, fuzzy
+#~| msgid ""
+#~| "To change your desktop theme to \"%1\", open\n"
+#~| "Desktop Settings and select \"%2\" from the droplist."
+#~ msgid ""
+#~ "To change your desktop theme to \"%1\", go back to the 'General' tab of "
+#~ "System Settings; choose 'Appearance', and then 'Style'; and finally "
+#~ "select \"%2\" from the drop-down list at the top of the window."
+#~ msgstr ""
+#~ "ನಿಮ್ಮ ಗಣಕತೆರೆಯ ಪರಿಸರವಿನ್ಯಾಸವನ್ನು \"%1\" ಗೆ ಬದಲಾಯಿಸಲು, ಗಣಕತೆರೆಯ\n"
+#~ "ಸಂಯೋಜನೆಗಳನ್ನು ತೆರೆಯಿರಿ ಹಾಗು ಇಳಿಬಿಡಲಾಗುವ ಪಟ್ಟಿಯಿಂದ \"%2\" ಅನ್ನು ಆಯ್ಕೆ ಮಾಡಿ."
+
+#, fuzzy
+#~| msgid "Removal of the default KDE theme is not allowed."
+#~ msgid "Removal of the active desktop theme is not allowed."
+#~ msgstr "ಪೂರ್ವನಿಯೋಜಿತ KDE ಪರಿಸರವಿನ್ಯಾಸವನ್ನು ತೆಗೆದು ಹಾಕಲು ಅನುಮತಿ ಇಲ್ಲ."

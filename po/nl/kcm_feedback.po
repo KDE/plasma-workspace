@@ -1,0 +1,98 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Freek de Kruijf <f.de.kruijf@gmail.com>, 2019, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-28 00:47+0000\n"
+"PO-Revision-Date: 2022-01-05 15:30+0100\n"
+"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"Language-Team: \n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.12.0\n"
+
+#: package/contents/ui/main.qml:34
+#, kde-format
+msgid ""
+"User Feedback has been disabled centrally. Please contact your distributor."
+msgstr ""
+"Terugkoppeling van de gebruiker is centraal uitgeschakeld. Neem contact op "
+"met uw distributeur."
+
+#: package/contents/ui/main.qml:44 package/contents/ui/main.qml:77
+#, kde-format
+msgid "Plasma:"
+msgstr "Plasma:"
+
+#: package/contents/ui/main.qml:51
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"You can help KDE improve Plasma by contributing information on how you use "
+"it, so we can focus on things that matter to you.<nl/><nl/>Contributing this "
+"information is optional and entirely anonymous. We never collect your "
+"personal data, files you use, websites you visit, or information that could "
+"identify you.<nl/><nl/>You can read about <link url='https://kde.org/"
+"privacypolicy-apps.php'>our privacy policy here.</link>"
+msgstr ""
+"U kunt KDE helpen deze software te verbeteren door informatie bij te dragen "
+"over hoe u het gebruikt, zodat we kunnen focussen op dingen die belangrijk "
+"zijn voor u.<nl/><nl/>Bijdragen over gebruiksinformatie is optioneel en "
+"geheel anoniem. We verzamelen nooit uw persoonlijke gegevens, bestanden die "
+"u gebruikt, websites die u bezoekt of informatie die u identificeert.<nl/"
+"><nl/>U kunt <link url='https://kde.org/privacypolicy-apps.php'>hier</link> "
+"meer over ons privacy beleid lezen."
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Plasma"
+msgstr "Plasma"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "The following information will be sent:"
+msgstr "De volgende informatie zal verzonden worden:"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "View sent data:"
+msgstr "Verzonden gegevens bekijken:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Freek de Kruijf - 2019 t/m 2021"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "freekdekruijf@kde.nl"
+
+#~ msgid "User Feedback"
+#~ msgstr "Terugkoppeling van gebruiker"
+
+#~ msgid "Configure user feedback settings"
+#~ msgstr "Instellingen voor terugkoppeling van gebruikers configureren"
+
+#~ msgctxt "@info"
+#~ msgid "You can read about our policy in the following link:"
+#~ msgstr "U kunt over ons beleid in de volgende koppeling lezen:"
+
+#~ msgid "Allow KDE software to collect anonymous usage information"
+#~ msgstr "KDE-software toestaan om anonieme gebruiksinformatie te verzamelen"
+
+#~ msgid "Send basic system information"
+#~ msgstr "Basissysteeminformatie verzenden"
+
+#~ msgid "Send basic usage information"
+#~ msgstr "Basisgebruiksinformatie verzenden"
+
+#~ msgid "Send detailed system information"
+#~ msgstr "Gedetailleerde systeeminformatie verzenden"
+
+#~ msgid "Send detailed usage information"
+#~ msgstr "Gedetailleerde gebruiksinformatie verzenden"

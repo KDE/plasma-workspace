@@ -1,0 +1,177 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Dutch "INCLUDE">
+]>
+<article id="desktopthemedetails" lang="&language;">
+<articleinfo>
+<title
+>Plasma-stijl</title>
+<authorgroup>
+<author
+><firstname
+>Andrew</firstname
+> <surname
+>Lake</surname
+></author>
+<author
+><firstname
+>Carl</firstname
+> <surname
+>Schwan</surname
+> </author>
+&Freek.de.Kruijf; 
+</authorgroup>
+
+<date
+>2021-04-09</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systeeminstellingen</keyword>
+<keyword
+>bureaublad</keyword>
+<keyword
+>stijl</keyword>
+<keyword
+>thema</keyword>
+<keyword
+>plasma</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>&plasma; komt met meerdere stijlen. De &plasma;-stijl definieert hoe de verschillende componenten van &plasma; getoond worden (&eg; Plasmoids, panelen, widgets). </para>
+
+<para>
+  <screenshot>
+    <screeninfo
+>Dit is een schermafdruk van de &plasma;-stijlbeheerder</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="main.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase
+>De &plasma;-stijl aanpassen</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</para>
+
+<para
+>In deze module kunt u:</para>
+<itemizedlist>
+  <listitem
+><para
+>&plasma;-stijlen installeren en kiezen</para
+></listitem>
+  <listitem
+><para
+>&plasma;-stijlen bewerken</para
+></listitem>
+  <listitem
+><para
+>&plasma;-stijlen verwijderen</para
+></listitem>
+</itemizedlist>
+
+<para
+>Het is mogelijk de stijlenlijst te filteren met het veld <guilabel
+>Zoeken...</guilabel
+> boven het raster. Bovendien kunt u het keuzevak naast dit veld gebruiken om alleen de <guimenuitem
+>Lichte thema's</guimenuitem
+> te gebruiken, de <guimenuitem
+>Donkere thema's</guimenuitem
+> of de thema's <guimenuitem
+>Compatibel met kleurenschema</guimenuitem
+>. </para>
+
+<para
+>Als u een stijl wilt verwijderen, gebruik het <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+> overlaypictogram rechts onderaan het stijlpictogram. Om deze actie terug te draaien klik op het <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-undo.png" format="PNG"/></imageobject
+></inlinemediaobject
+> pictogram. Als u op de knop <guibutton
+>Toepassen</guibutton
+> of <guibutton
+>OK</guibutton
+> drukt worden de stijlen, geselecteerd voor verwijderen, echt verwijderd, u kunt dus geen individuele of alle verwijderingen ongedaan maken. </para>
+
+<para
+>Als het pakket plasma-sdk op uw systeem is geïnstalleerd, verschijnt er een knop bij zweven boven een stijlvoorbeeld en laat u <application
+>Plasma themaverkenner</application
+> starten. </para>
+<para
+>Voor meer technische informatie bezoekt u <ulink url="https://develop.kde.org/docs/plasma/theme/theme-details/"
+>deze pagina</ulink
+>. </para>
+
+<variablelist>
+  <varlistentry>
+    <term
+><guilabel
+>Nieuwe Plasma-stijlen ophalen...</guilabel
+></term>
+    <listitem>
+    <para
+>Om dit te gebruiken, moet u verbonden zijn met het internet. Wanneer u op deze knop klikt, wordt er een venster weergeven waarin u een nieuwe plasma-stijl kunt kiezen. De knop <guibutton
+>Installeren</guibutton
+> in dit venster installeert de gekozen &plasma;-stijl en nadat u het venster heeft gesloten, is de stijl klaar voor gebruik. </para>
+    <para>
+    <screenshot>
+    <screeninfo
+>Nieuwe Plasma-stijlen ophalen...</screeninfo>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="get-new-theme.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase
+>Nieuwe Plasma-stijlen ophalen...</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    </para>
+    </listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>Uit bestand installeren...</guilabel
+></term>
+    <listitem>
+      <para
+>Dit kunt u gebruiken om van het internet gedownloade stijlen aan de stijlenlijst toe te voegen. Wanneer u op deze knop klikt, wordt de bestandsdialoog geopend waarin u het archiefbestand van de &plasma;-stijl kunt opzoeken.</para>
+
+      <para
+>Met de knop <guibutton
+>Openen</guibutton
+> in deze dialoog, installeert u de aangewezen stijl en wordt deze beschikbaar in de stijlenlijst. </para>
+    </listitem>
+  </varlistentry>
+</variablelist>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

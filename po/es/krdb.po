@@ -1,0 +1,48 @@
+# translation of krdb.po to Spanish
+# Translation to spanish
+# Copyright (C) 2002.
+#
+# Pablo de Vicente <vicente@oan.es>, 2002,2003.
+# Jaime Robles <jaime@kde.org>, 2008.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2016, 2017, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: krdb\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-24 00:47+0000\n"
+"PO-Revision-Date: 2020-01-26 13:01+0100\n"
+"Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
+"Language-Team: Spanish <kde-l10n-es@kde.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"com>\n"
+"X-Generator: Lokalize 19.12.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: krdb.cpp:261
+#, kde-format
+msgid ""
+"# created by KDE Plasma, %1\n"
+"#\n"
+msgstr ""
+"# creado por KDE Plasma, %1\n"
+"#\n"
+
+#~ msgid ""
+#~ "# created by KDE Plasma, %1\n"
+#~ "#\n"
+#~ "# If you do not want Plasma to override your GTK settings, select\n"
+#~ "# Colors in the System Settings and disable the checkbox\n"
+#~ "# \"Apply colors to non-Qt applications\"\n"
+#~ "#\n"
+#~ "#\n"
+#~ msgstr ""
+#~ "# creado por KDE Plasma, %1\n"
+#~ "#\n"
+#~ "# Si no desea que Plasma sobrescriba sus preferencias de GTK,\n"
+#~ "# seleccione «Colores» en las Preferencias del sistema y desactive\n"
+#~ "# la casilla «Aplicar colores a aplicaciones no Qt»\n"
+#~ "#\n"
+#~ "#\n"

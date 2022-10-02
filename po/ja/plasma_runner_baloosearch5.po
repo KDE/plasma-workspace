@@ -1,0 +1,65 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_baloosearchrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-05 00:46+0000\n"
+"PO-Revision-Date: 2014-02-22 22:22-0800\n"
+"Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
+"Language-Team: Japanese <kde-jp@kde.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: baloosearchrunner.cpp:65
+#, kde-format
+msgid "Open Containing Folder"
+msgstr ""
+
+#: baloosearchrunner.cpp:87
+#, kde-format
+msgid "Audio"
+msgstr ""
+
+#: baloosearchrunner.cpp:88
+#, kde-format
+msgid "Image"
+msgstr ""
+
+#: baloosearchrunner.cpp:89
+#, kde-format
+msgid "Video"
+msgstr ""
+
+#: baloosearchrunner.cpp:90
+#, kde-format
+msgid "Spreadsheet"
+msgstr ""
+
+#: baloosearchrunner.cpp:91
+#, kde-format
+msgid "Presentation"
+msgstr ""
+
+#: baloosearchrunner.cpp:92
+#, kde-format
+msgid "Folder"
+msgstr ""
+
+#: baloosearchrunner.cpp:93
+#, kde-format
+msgid "Document"
+msgstr ""
+
+#: baloosearchrunner.cpp:94
+#, kde-format
+msgid "Archive"
+msgstr ""
+
+#: baloosearchrunner.cpp:95
+#, kde-format
+msgid "Text"
+msgstr ""

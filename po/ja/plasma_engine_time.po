@@ -1,0 +1,63 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_engine_time\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"PO-Revision-Date: 2014-07-06 00:28-0700\n"
+"Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
+"Language-Team: Japanese <kde-jp@kde.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: timesource.cpp:46
+msgid "Local"
+msgstr ""
+
+#: timesource.cpp:61
+msgid "Timezone"
+msgstr ""
+
+#: timesource.cpp:66 timesource.cpp:69 timesource.cpp:73
+msgid "Timezone City"
+msgstr ""
+
+#: timesource.cpp:68 timesource.cpp:71
+msgid "Timezone Continent"
+msgstr ""
+
+#: timesource.cpp:72
+msgid "Timezone Country"
+msgstr ""
+
+#: timesource.cpp:97
+msgid "Offset"
+msgstr ""
+
+#: timesource.cpp:100
+msgid "Timezone Abbreviation"
+msgstr ""
+
+#: timesource.cpp:131 timesource.cpp:150 timesource.cpp:171
+msgid "DateTime"
+msgstr ""
+
+#: timesource.cpp:146
+msgid "Latitude"
+msgstr ""
+
+#: timesource.cpp:147
+msgid "Longitude"
+msgstr ""
+
+#: timesource.cpp:148
+msgid "Solar"
+msgstr ""
+
+#: timesource.cpp:149
+msgid "Moon"
+msgstr ""

@@ -1,0 +1,75 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2014, 2016.
+# Tommi Nieminen <translator@legisign.org>, 2018, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-05 00:46+0000\n"
+"PO-Revision-Date: 2022-06-11 19:19+0300\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: baloosearchrunner.cpp:65
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Avaa tiedostosijainti"
+
+#: baloosearchrunner.cpp:87
+#, kde-format
+msgid "Audio"
+msgstr "Äänitiedosto"
+
+#: baloosearchrunner.cpp:88
+#, kde-format
+msgid "Image"
+msgstr "Kuva"
+
+#: baloosearchrunner.cpp:89
+#, kde-format
+msgid "Video"
+msgstr "Video"
+
+#: baloosearchrunner.cpp:90
+#, kde-format
+msgid "Spreadsheet"
+msgstr "Laskentataulukko"
+
+#: baloosearchrunner.cpp:91
+#, kde-format
+msgid "Presentation"
+msgstr "Esitys"
+
+#: baloosearchrunner.cpp:92
+#, kde-format
+msgid "Folder"
+msgstr "Kansio"
+
+#: baloosearchrunner.cpp:93
+#, kde-format
+msgid "Document"
+msgstr "Asiakirja"
+
+#: baloosearchrunner.cpp:94
+#, kde-format
+msgid "Archive"
+msgstr "Arkisto"
+
+#: baloosearchrunner.cpp:95
+#, kde-format
+msgid "Text"
+msgstr "Teksti"
+
+#~ msgid "Search through files, emails and contacts"
+#~ msgstr "Etsi tiedostoista, sähköposteista ja yhteystiedoista"
+
+#~ msgid "Email"
+#~ msgstr "Sähköposti"

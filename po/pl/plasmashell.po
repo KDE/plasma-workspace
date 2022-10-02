@@ -1,0 +1,390 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2014, 2015, 2016, 2018, 2020, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-22 00:47+0000\n"
+"PO-Revision-Date: 2022-09-23 10:40+0200\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
+"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 22.04.1\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Łukasz Wojniłowicz"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "lukasz.wojnilowicz@gmail.com"
+
+#: currentcontainmentactionsmodel.cpp:201
+#, kde-format
+msgid "Configure Mouse Actions Plugin"
+msgstr "Ustawienia wtyczki działań myszy"
+
+#: main.cpp:88
+#, kde-format
+msgid "Plasma"
+msgstr "Plazma"
+
+#: main.cpp:88
+#, kde-format
+msgid "Plasma Shell"
+msgstr "Powłoka Plazmy"
+
+#: main.cpp:100
+#, kde-format
+msgid "Enable QML Javascript debugger"
+msgstr "Włącz debugger QML Javascript"
+
+#: main.cpp:103
+#, kde-format
+msgid "Do not restart plasma-shell automatically after a crash"
+msgstr "Nie uruchamiaj samoczynnie powłoki plazmy po awarii"
+
+#: main.cpp:106
+#, kde-format
+msgid "Force loading the given shell plugin"
+msgstr "Wymuś wczytywanie danej wtyczki powłoki"
+
+#: main.cpp:111
+#, kde-format
+msgid ""
+"Load plasmashell as a standalone application, needs the shell-plugin option "
+"to be specified"
+msgstr ""
+"Wczytaj powłokę plazmy jako samodzielną aplikację, wymaga podania opcji "
+"shell-plugin"
+
+#: main.cpp:113
+#, kde-format
+msgid "Replace an existing instance"
+msgstr "Zastąp istniejące wystąpienie"
+
+#: main.cpp:116
+#, kde-format
+msgid ""
+"Enables test mode and specifies the layout javascript file to set up the "
+"testing environment"
+msgstr ""
+"Włącza tryb testowy i określa układ pliku javascript w celu ustawienia "
+"środowiska testowego"
+
+#: main.cpp:117
+#, kde-format
+msgid "file"
+msgstr "plik"
+
+#: main.cpp:121
+#, kde-format
+msgid "Lists the available options for user feedback"
+msgstr "Wymień dostępne możliwości informacji zwrotnej"
+
+#: main.cpp:219
+#, kde-format
+msgid "Plasma Failed To Start"
+msgstr "Nie można uruchomić Plazmy"
+
+#: main.cpp:220
+#, kde-format
+msgid ""
+"Plasma is unable to start as it could not correctly use OpenGL 2 or software "
+"fallback\n"
+"Please check that your graphic drivers are set up correctly."
+msgstr ""
+"Nie można uruchomić Plazmy, gdyż nie może ona prawidłowo używać biblioteki "
+"OpenGL 2 lub programowej biblioteki zapasowej.\n"
+"Sprawdź czy masz poprawnie ustawione sterowniki karty graficznej."
+
+#: osd.cpp:54
+#, kde-format
+msgctxt "OSD informing that the system is muted, keep short"
+msgid "Audio Muted"
+msgstr "Dźwięk wyciszony"
+
+#: osd.cpp:72
+#, kde-format
+msgctxt "OSD informing that the microphone is muted, keep short"
+msgid "Microphone Muted"
+msgstr "Mikrofon wyciszony"
+
+#: osd.cpp:88
+#, kde-format
+msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
+msgid "%1 Muted"
+msgstr "%1 wyciszony"
+
+#: osd.cpp:110
+#, kde-format
+msgctxt "touchpad was enabled, keep short"
+msgid "Touchpad On"
+msgstr "Gładzik włączony"
+
+#: osd.cpp:112
+#, kde-format
+msgctxt "touchpad was disabled, keep short"
+msgid "Touchpad Off"
+msgstr "Gładzik wyłączony"
+
+#: osd.cpp:119
+#, kde-format
+msgctxt "wireless lan was enabled, keep short"
+msgid "Wifi On"
+msgstr "Wifi włączone"
+
+#: osd.cpp:121
+#, kde-format
+msgctxt "wireless lan was disabled, keep short"
+msgid "Wifi Off"
+msgstr "Wifi wyłączone"
+
+#: osd.cpp:128
+#, kde-format
+msgctxt "Bluetooth was enabled, keep short"
+msgid "Bluetooth On"
+msgstr "Bluetooth włączone"
+
+#: osd.cpp:130
+#, kde-format
+msgctxt "Bluetooth was disabled, keep short"
+msgid "Bluetooth Off"
+msgstr "Bluetooth wyłączone"
+
+#: osd.cpp:137
+#, kde-format
+msgctxt "mobile internet was enabled, keep short"
+msgid "Mobile Internet On"
+msgstr "Mobilny internet włączony"
+
+#: osd.cpp:139
+#, kde-format
+msgctxt "mobile internet was disabled, keep short"
+msgid "Mobile Internet Off"
+msgstr "Mobilny internet wyłączony"
+
+#: osd.cpp:147
+#, kde-format
+msgctxt ""
+"on screen keyboard was enabled because physical keyboard got unplugged, keep "
+"short"
+msgid "On-Screen Keyboard Activated"
+msgstr "Włączono ekranową klawiaturę"
+
+#: osd.cpp:150
+#, kde-format
+msgctxt ""
+"on screen keyboard was disabled because physical keyboard was plugged in, "
+"keep short"
+msgid "On-Screen Keyboard Deactivated"
+msgstr "Wyłączono ekranową klawiaturę"
+
+#: shellcontainmentconfig.cpp:129
+#, kde-format
+msgid "Unknown %1"
+msgstr "Nieznany %1"
+
+#: shellcorona.cpp:170 shellcorona.cpp:172
+#, kde-format
+msgid "Show Desktop"
+msgstr "Pokaż pulpit"
+
+#: shellcorona.cpp:172
+#, kde-format
+msgid "Hide Desktop"
+msgstr "Ukryj pulpit"
+
+#: shellcorona.cpp:188
+#, kde-format
+msgid "Show Activity Switcher"
+msgstr "Pokaż przełącznik aktywności"
+
+#: shellcorona.cpp:199
+#, kde-format
+msgid "Stop Current Activity"
+msgstr "Zatrzymaj bieżącą aktywność"
+
+#: shellcorona.cpp:207
+#, kde-format
+msgid "Switch to Previous Activity"
+msgstr "Przełącz na poprzednią aktywność"
+
+#: shellcorona.cpp:215
+#, kde-format
+msgid "Switch to Next Activity"
+msgstr "Przełącz na następną aktywność"
+
+#: shellcorona.cpp:231
+#, kde-format
+msgid "Activate Task Manager Entry %1"
+msgstr "Uaktywnij wpis %1 na pasku zadań"
+
+#: shellcorona.cpp:257
+#, kde-format
+msgid "Manage Desktops And Panels..."
+msgstr "Zarządzaj pulpitami i panelami..."
+
+#: shellcorona.cpp:278
+#, kde-format
+msgid "Move keyboard focus between panels"
+msgstr "Przełączaj panele, które są obsługiwane przez klawiaturę"
+
+#: shellcorona.cpp:1761
+#, kde-format
+msgid "Add Panel"
+msgstr "Dodaj panel"
+
+#: shellcorona.cpp:1798
+#, kde-format
+msgctxt "Creates an empty containment (%1 is the containment name)"
+msgid "Empty %1"
+msgstr "Pusty %1"
+
+#: softwarerendernotifier.cpp:27
+#, kde-format
+msgid "Software Renderer In Use"
+msgstr "Wyświetlanie programowe w użyciu"
+
+#: softwarerendernotifier.cpp:28
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Software Renderer In Use"
+msgstr "Wyświetlanie programowe w użyciu"
+
+#: softwarerendernotifier.cpp:29
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Rendering may be degraded"
+msgstr "Wyświetlanie może być pogorszone"
+
+#: softwarerendernotifier.cpp:39
+#, kde-format
+msgid "Never show again"
+msgstr "Nie pokazuj ponownie"
+
+#: userfeedback.cpp:36
+#, kde-format
+msgid "Panel Count"
+msgstr "Liczba paneli"
+
+#: userfeedback.cpp:40
+#, kde-format
+msgid "Counts the panels"
+msgstr "Liczy panele"
+
+#~ msgid "Unable to load script file: %1"
+#~ msgstr "Nie można wczytać pliku skryptu: %1"
+
+#~ msgid "Activities..."
+#~ msgstr "Aktywności..."
+
+#~ msgctxt "Fatal error message body"
+#~ msgid ""
+#~ "All shell packages missing.\n"
+#~ "This is an installation issue, please contact your distribution"
+#~ msgstr ""
+#~ "Brakuje wszystkich pakietów powłoki.\n"
+#~ "Problem leży w instalacji, skontaktuj się ze swoją dystrybucją"
+
+#~ msgctxt "Fatal error message title"
+#~ msgid "Plasma Cannot Start"
+#~ msgstr "Nie można uruchomić Plazmy"
+
+#~ msgctxt "Fatal error message body"
+#~ msgid "Shell package %1 cannot be found"
+#~ msgstr "Nie można znaleźć pakietu powłoki %1"
+
+#~ msgid "Main Script File"
+#~ msgstr "Główny plik skryptu"
+
+#~ msgid "Force a windowed view for testing purposes"
+#~ msgstr "Wymuś widok z oknami do celów próbnych"
+
+#~ msgid "Deprecated, does nothing"
+#~ msgstr "Przestrzałe, nie ma wpływu"
+
+#~ msgid ""
+#~ "Your graphics hardware does not support OpenGL (ES) 2. Plasma will abort "
+#~ "now."
+#~ msgstr ""
+#~ "Twój sprzęt do wyświetlania grafiki nie obsługuje OpenGL (ES) 2. "
+#~ "Uruchamianie Plazmy zostało przerwane."
+
+#~ msgid "Incompatible OpenGL version detected"
+#~ msgstr "Wykryto niezgodną wersję OpenGL"
+
+#~ msgid "Recent number of crashes"
+#~ msgstr "Liczba ostatnich awarii"
+
+#~ msgid "Show Dashboard"
+#~ msgstr "Pokaż tablicę"
+
+#~ msgid "Hide Dashboard"
+#~ msgstr "Ukryj Tablicę"
+
+#~ msgid "Shuts up the output"
+#~ msgstr "Zamyka wyjście"
+
+#~ msgid "&Execute"
+#~ msgstr "&Wykonaj"
+
+#~ msgctxt "Toolbar Button to switch to KWin Scripting Mode"
+#~ msgid "KWin"
+#~ msgstr "KWin"
+
+#~ msgid "Templates"
+#~ msgstr "Szablony"
+
+#~ msgid "Desktop Shell Scripting Console"
+#~ msgstr "Konsola skryptów powłoki pulpitu"
+
+#~ msgid "Editor"
+#~ msgstr "Edytor"
+
+#~ msgid "Load"
+#~ msgstr "Wczytaj"
+
+#~ msgid "Use"
+#~ msgstr "Użycie"
+
+#~ msgid "Output"
+#~ msgstr "Wyjście"
+
+#~ msgid "Unable to load script file <b>%1</b>"
+#~ msgstr "Nie można wczytać pliku skryptu <b>%1</b>"
+
+#~ msgid "Save Script File"
+#~ msgstr "Zapisz plik skryptu"
+
+#~ msgid "Executing script at %1"
+#~ msgstr "Wykonywanie skryptu jako %1"
+
+#~ msgid "Runtime: %1ms"
+#~ msgstr "Czas uruchomienia: %1ms"
+
+#~ msgid "No plugins found, check your installation."
+#~ msgstr ""
+#~ "Nie znaleziono żadnych wtyczek, upewnij się, że system jest poprawnie "
+#~ "zainstalowany."
+
+#~ msgctxt "About mouse action"
+#~ msgid "About"
+#~ msgstr "O"
+
+#~ msgctxt "Configure mouse action"
+#~ msgid "Configure"
+#~ msgstr "Ustawienia"
+
+#~ msgctxt "Remove mouse action"
+#~ msgid "Remove"
+#~ msgstr "Usuń"

@@ -1,0 +1,40 @@
+# Translation of phonon_kde.po to Low Saxon
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Sönke Dibbern <s_dibbern@web.de>, 2007, 2008.
+# Manfred Wiese <m.j.wiese@web.de>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: phonon_kde\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-05-20 03:26+0200\n"
+"PO-Revision-Date: 2011-06-22 06:08+0200\n"
+"Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
+"Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
+"Language: nds\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Sönke Dibbern"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "s_dibbern@web.de"
+
+#~ msgid "<qt>Unable to use the <b>%1</b> Multimedia Backend:<br/>%2</qt>"
+#~ msgstr ""
+#~ "<qt>Multimedia-Hülpprogramm <b>%1</b> lett sik nich bruken:<br/>%2</qt>"
+
+#~ msgid "Unable to find a Multimedia Backend"
+#~ msgstr "Keen Multimedia-Hülpprogramm funnen"
+
+#~ msgid "Unable to find the requested Multimedia Backend"
+#~ msgstr "Nafraagt Multimedia-Hülpprogramm lett sik nich finnen"

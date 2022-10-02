@@ -1,0 +1,28 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Shinjo Park <kde@peremen.name>, 2018, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-11 00:46+0000\n"
+"PO-Revision-Date: 2021-05-28 02:45+0200\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 20.12.3\n"
+
+#: appstreamrunner.cpp:34
+#, kde-format
+msgid "Looks for non-installed components according to :q:"
+msgstr ":q:와(과) 일치하는 설치하지 않은 구성 요소 검색"
+
+#: appstreamrunner.cpp:133
+#, kde-format
+msgid "Get %1…"
+msgstr "%1 가져오기…"

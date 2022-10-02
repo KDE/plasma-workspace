@@ -1,0 +1,267 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Spanish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="fonts" lang="&language;">
+<articleinfo>
+<title
+>Fuentes</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+<othercredit role="translator"
+> <firstname
+>Rocío</firstname
+> <surname
+>Gallego</surname
+> <affiliation
+><address
+><email
+>traducciones@rociogallego.com</email
+></address
+></affiliation
+> <contrib
+>Traducción</contrib
+> </othercredit
+><othercredit role="translator"
+> <firstname
+>Pablo</firstname
+> <surname
+>de Vicente</surname
+> <affiliation
+><address
+><email
+>pvicentea@nexo.es</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+> </othercredit
+> <othercredit role="translator"
+> <firstname
+>Marcos</firstname
+> <surname
+>Fouces Lago</surname
+> <affiliation
+><address
+><email
+>mfouces@yahoo.es</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+> </othercredit
+> 
+</authorgroup>
+
+<date
+>2018-12-10</date>
+<releaseinfo
+>Plasma 5.14</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>fuentes</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_fonts">
+
+<title
+>Fuentes</title>
+
+<para
+>Este módulo está diseñado para permitir seleccionar fácilmente diferentes tipos de letra para las diferentes partes del escritorio &kde;.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Veamos una captura de pantalla del módulo de configuración de los tipos de letra</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>El módulo de configuración de los tipos de letra</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>El panel contiene grupos diferentes de tipos de letra para permitirle una gran flexibilidad al configurar sus tipos de letra: </para>
+
+<itemizedlist>
+<listitem
+><para
+><guilabel
+>General:</guilabel
+> Usado en cualquier lugar donde el resto de los grupos de tipos de letra no sean aplicables.</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Ancho fijo:</guilabel
+> En cualquier lugar en el que el tipo de letra especificado sea no-proporcional.</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Pequeño:</guilabel
+> Cuando se usen tipos de letra pequeños</para
+></listitem
+> 
+
+<listitem
+><para
+><guilabel
+>Barra de herramientas:</guilabel
+> Tipo de letra utilizado en las barras de herramientas de las aplicaciones de &kde;.</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Menú:</guilabel
+> Tipo de letra utilizado en los menús de las aplicaciones de &kde;.</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Título de la ventana:</guilabel
+> Tipo de letra utilizado en los títulos de las ventanas.</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Barra de tareas:</guilabel
+> Tipo de letra utilizado en la barra de tareas.</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Escritorio:</guilabel
+> Tipo de letra utilizado en el escritorio para etiquetar iconos.</para
+></listitem>
+
+</itemizedlist>
+
+<para
+>Cada tipo de letra tiene un botón <guibutton
+>Seleccionar...</guibutton
+>. Al pulsarlo se muestra un cuadro de diálogo, que puede utilizar para seleccionar un nuevo tipo de letra, un estilo y un tamaño. Después pulse <guibutton
+>Aceptar</guibutton
+>.</para>
+
+<para
+>Se mostrará un ejemplo del tipo de letra seleccionado en el espacio situado entre el nombre del grupo de tipos de letra y el botón <guibutton
+>Elegir...</guibutton
+>.</para>
+
+<para
+>Cuando haya finalizado, simplemente pulse <guibutton
+>Aceptar</guibutton
+> y todos los componentes necesarios de &kde; serán reiniciados de modo que los cambios tengan efecto inmediatamente.</para>
+
+<para
+>El botón <guibutton
+>Ajustar todas las fuentes...</guibutton
+> permite configurar rápidamente una propiedad o conjunto de propiedades comunes a todas los tipos de letra mencionados anteriormente. Aparecerá un diálogo de selección de tipos de letra similar al estándar, pero incluirá algunas casillas que le permitirán cambiar el <guilabel
+>Tipo de letra</guilabel
+>, el <guilabel
+>Estilo</guilabel
+> o el <guilabel
+>Tamaño</guilabel
+>, de forma independiente. Puede elegir una, dos o las tres opciones, y se aplicarán a todos los grupos de tipos de letra.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Ajustar todos los tipos de letra</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="adjust-all.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Diálogo Ajustar todos los tipos de letra...</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Por ejemplo, si ha seleccionado diferentes tipos de letra, y se da cuenta de que tienen un tamaño excesivo (esto ocurre frecuentemente, por ejemplo cuando cambia la resolución de la pantalla) puede aplicar el nuevo tamaño del tipo de letra a todos los tipos de letra, sin que afecten a las clases y estilos personalizados.</para>
+
+<sect2 id="fonts-aa">
+<title
+>Suavizar texto</title>
+
+<para
+>La configuración predeterminada del suavizado la utiliza su distribución para todo el sistema y se etiqueta como <guilabel
+>Predeterminada del vendedor</guilabel
+>. Puede desactivar todo el suavizado eligiendo <guilabel
+>Desactivado</guilabel
+> en la lista desplegable.</para>
+
+<para
+>Para usar una configuración de suavizado distinta, solo tiene que escoger <guilabel
+>Activado</guilabel
+> en el cuadro situado a la derecha de <guilabel
+>Usar suavizado</guilabel
+> y activar las preferencias personalizadas.</para>
+
+<para
+>Marcando la casilla <guilabel
+>Excluir rango</guilabel
+> podrá especificar que rango de tipos de letra <emphasis
+>no</emphasis
+> se suavizarán. Este rango se especificará con dos listas desplegables que hay debajo.</para>
+
+<para
+>También podrá elegir el método a usar para crear un aspecto suavizado de sus tipos de letra y cómo debería aplicarse cambiando la <ulink url="https://es.wikipedia.org/wiki/Renderizaci%C3%B3n_de_subpixel"
+>renderización de subpíxel</ulink
+> y el <ulink url="https://en.wikipedia.org/wiki/Font_hinting"
+>hinting del tipo de letra</ulink
+>. Si no está familiarizado con los métodos individuales, debería dejar esta opción vacía.</para>
+
+<note
+><para
+>Para poder utilizar utilizar tipos de letra e iconos suavizados, es necesario que se admitan tanto en el servidor de pantalla como en &Qt;, que haya instalado los tipos de letra adecuados y que se estén usando las capacidades del servicio de tipos de letra del servidor de pantalla. Si continúa teniendo problemas, póngase en contacto con la lista de correo adecuada de &kde;.</para
+></note>
+
+</sect2>
+
+<sect2 id="fonts-dpi">
+<title
+>PPP de los tipos de letra</title>
+
+<para
+><guilabel
+>Forzar PPI de los tipos de letra:</guilabel
+> le permite utilizar un PPI alternativo que su sistema utilizará de forma predeterminada cuando su configuración está <guilabel
+>Desactivado</guilabel
+>. Puede comprobar que configuración de PPP está utilizando su servidor X ejecutando <userinput
+>xdpyinfo | grep resolution</userinput
+> en una ventana de terminal y cambiar los PPP utilizando el desplegable. Se aplicará solo a las aplicaciones que se inicien desde ese momento.</para>
+</sect2>
+
+</sect1>
+
+</article>

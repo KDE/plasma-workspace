@@ -1,0 +1,258 @@
+#
+# Tamas Szanto <tszanto@interware.hu>, 2000.
+# Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2011, 2012, 2014.
+# Balázs Úr <urbalazs@gmail.com>, 2012, 2014.
+# Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2018, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: KDE 4.2\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-22 00:47+0000\n"
+"PO-Revision-Date: 2020-11-04 15:27+0100\n"
+"Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 20.11.70\n"
+
+#: logout.cpp:344
+#, kde-format
+msgid "Logout canceled by '%1'"
+msgstr "A kijelentkezést megszakította: „%1”"
+
+#: main.cpp:117
+#, kde-format
+msgid "$HOME not set!"
+msgstr "A $HOME nincs beállítva!"
+
+#: main.cpp:121 main.cpp:127
+#, kde-format
+msgid "$HOME directory (%1) does not exist."
+msgstr "A $HOME mappa (%1) nem létezik."
+
+#: main.cpp:123
+#, kde-format
+msgid "No write access to $HOME directory (%1)."
+msgstr "Nincs írási jog a $HOME mappára (%1)."
+
+#: main.cpp:129
+#, kde-format
+msgid "No read access to $HOME directory (%1)."
+msgstr "Nincs olvasási jog a $HOME mappára (%1)."
+
+#: main.cpp:133
+#, kde-format
+msgid "$HOME directory (%1) is out of disk space."
+msgstr "A $HOME mappában (%1) elfogyott a hely."
+
+#: main.cpp:136
+#, kde-format
+msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+msgstr "A $HOME mappába (%2) írás a(z) „%1” hibával meghiúsult"
+
+#: main.cpp:149 main.cpp:184
+#, kde-format
+msgid "No write access to '%1'."
+msgstr "Nincs írási jog ehhez: „%1”."
+
+#: main.cpp:151 main.cpp:186
+#, kde-format
+msgid "No read access to '%1'."
+msgstr "Nincs olvasási jog ehhez: „%1”."
+
+#: main.cpp:159 main.cpp:172
+#, kde-format
+msgid "Temp directory (%1) is out of disk space."
+msgstr "Az átmeneti mappában (%1) elfogyott a hely."
+
+#: main.cpp:162 main.cpp:175
+#, kde-format
+msgid ""
+"Writing to the temp directory (%2) failed with\n"
+"    the error '%1'"
+msgstr ""
+"Az átmeneti mappába (%2) írás a(z)\n"
+"   „%1” hibával meghiúsult"
+
+#: main.cpp:190
+#, kde-format
+msgid ""
+"The following installation problem was detected\n"
+"while trying to start Plasma:"
+msgstr ""
+"A következő telepítési problémák lettek észlelve\n"
+"a Plasma indítása során:"
+
+#: main.cpp:193
+#, kde-format
+msgid ""
+"\n"
+"\n"
+"Plasma is unable to start.\n"
+msgstr ""
+"\n"
+"\n"
+"A Plasma nem tud elindulni.\n"
+
+#: main.cpp:200
+#, kde-format
+msgid "Plasma Workspace installation problem!"
+msgstr "Plasma Workspace telepítési probléma!"
+
+#: main.cpp:236
+#, kde-format
+msgid ""
+"The reliable Plasma session manager that talks the standard X11R6 \n"
+"session management protocol (XSMP)."
+msgstr ""
+"Nagy megbízhatóságú Plasma munkamenetkezelő, mely közvetlenül tudja\n"
+"kezelni az X11R6 munkamenetkezelő protokollt (XSMP)."
+
+#: main.cpp:240
+#, kde-format
+msgid "Restores the saved user session if available"
+msgstr "Az utolsó elmentett állapot visszatöltése (ha lehetséges)"
+
+#: main.cpp:243
+#, kde-format
+msgid "Also allow remote connections"
+msgstr "Távoli kapcsolatok engedélyezése"
+
+#: main.cpp:246
+#, kde-format
+msgid "Starts the session in locked mode"
+msgstr "Munkamenet indítás zárolt módban"
+
+#: main.cpp:250
+#, kde-format
+msgid ""
+"Starts without lock screen support. Only needed if other component provides "
+"the lock screen."
+msgstr ""
+"Indítás képernyőzárolás támogatása nélkül. Csak akkor szükséges, ha más "
+"komponens biztosítja a képernyőzárolást."
+
+#: server.cpp:873
+#, kde-format
+msgid "Session Management"
+msgstr "Munkamenetkezelés"
+
+#: server.cpp:876
+#, kde-format
+msgid "Log Out"
+msgstr "Kijelentkezés"
+
+#: server.cpp:881
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "Kijelentkezés megerősítés nélkül"
+
+#: server.cpp:886
+#, kde-format
+msgid "Halt Without Confirmation"
+msgstr "Leállítás megerősítés nélkül"
+
+#: server.cpp:891
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "Újraindítás megerősítés nélkül"
+
+#~ msgid ""
+#~ "Starts <wm> in case no other window manager is \n"
+#~ "participating in the session. Default is 'kwin'"
+#~ msgstr ""
+#~ "Elindítja a(z) <wm> ablakkezelőt, ha más ablakkezelő\n"
+#~ "nem vesz részt a munkamenetben. Alapértelmezés: „kwin”."
+
+#~ msgid "wm"
+#~ msgstr "wm"
+
+#~ msgid "Shut Down"
+#~ msgstr "Leállítás"
+
+#~ msgid "Reboot"
+#~ msgstr "Újraindítás"
+
+#~ msgid "Logout"
+#~ msgstr "Kijelentkezés"
+
+#~ msgid "Sleeping in 1 second"
+#~ msgid_plural "Sleeping in %1 seconds"
+#~ msgstr[0] "Felfüggesztés 1 másodperc múlva"
+#~ msgstr[1] "Felfüggesztés %1 másodperc múlva"
+
+#~ msgid "Lock"
+#~ msgstr "Zárolás"
+
+#~ msgid "ksmserver"
+#~ msgstr "ksmserver"
+
+#~ msgid "Turn off"
+#~ msgstr "Kikapcsolás"
+
+#~ msgid "Sleep"
+#~ msgstr "Felfüggesztés"
+
+#~ msgid "Logging out in 1 second."
+#~ msgid_plural "Logging out in %1 seconds."
+#~ msgstr[0] "Kijelentkezés 1 másodperc múlva."
+#~ msgstr[1] "Kijelentkezés %1 másodperc múlva."
+
+#~ msgid "Turning off computer in 1 second."
+#~ msgid_plural "Turning off computer in %1 seconds."
+#~ msgstr[0] "A számítógép leáll 1 másodperc múlva."
+#~ msgstr[1] "A számítógép leáll %1 másodperc múlva."
+
+#~ msgid "Restarting computer in 1 second."
+#~ msgid_plural "Restarting computer in %1 seconds."
+#~ msgstr[0] "A számítógép újraindul 1 másodperc múlva."
+#~ msgstr[1] "A számítógép újraindul %1 másodperc múlva."
+
+#~ msgid "Turn Off Computer"
+#~ msgstr "A számítógép kikapcsolása"
+
+#~ msgid "Restart Computer"
+#~ msgstr "A számítógép újraindítása"
+
+#~ msgctxt "default option in boot loader"
+#~ msgid " (default)"
+#~ msgstr " (alapértelmezés)"
+
+#~ msgid "Cancel"
+#~ msgstr "Mégsem"
+
+#~ msgid "&Standby"
+#~ msgstr "Készen&lét"
+
+#~ msgid "Suspend to &RAM"
+#~ msgstr "Felfüggesztés m&emóriába"
+
+#~ msgid "Suspend to &Disk"
+#~ msgstr "&Felfüggesztés lemezre"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Szántó Tamás,Kiszel Kristóf"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "tszanto@interware.hu,ulysses@kubuntu.org"
+
+#~ msgid "(C) 2000, The KDE Developers"
+#~ msgstr "© A KDE fejlesztői, 2000."
+
+#~ msgid "Matthias Ettrich"
+#~ msgstr "Matthias Ettrich"
+
+#~ msgid "Luboš Luňák"
+#~ msgstr "Luboš Luňák"
+
+#~ msgid "Maintainer"
+#~ msgstr "Karbantartó"
+
+#~ msgctxt "current option in boot loader"
+#~ msgid " (current)"
+#~ msgstr " (jelenlegi)"

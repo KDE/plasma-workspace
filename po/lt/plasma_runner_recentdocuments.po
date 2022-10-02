@@ -1,0 +1,35 @@
+# Lithuanian translations for plasma_runner_recentdocuments package.
+# This file is distributed under the same license as the plasma_runner_recentdocuments package.
+#
+# Andrius Štikonas <andrius@stikonas.eu>, 2008.
+# Tomas Straupis <tomasstraupis@gmail.com>, 2011.
+# Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_recentdocuments\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-05 00:46+0000\n"
+"PO-Revision-Date: 2019-06-01 19:22+0000\n"
+"Last-Translator: Moo\n"
+"Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
+"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Lokalize 1.1\n"
+
+#: recentdocuments.cpp:36
+#, kde-format
+msgid "Looks for documents recently used with names matching :q:."
+msgstr "Ieško neseniai naudotų dokumentų, kurių pavadinimas atitinka :q:."
+
+#: recentdocuments.cpp:38
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Atverti vidinį aplanką"
+
+#~ msgid "Recent Document"
+#~ msgstr "Neseniai naudotas dokumentas"

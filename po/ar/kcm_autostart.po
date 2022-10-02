@@ -1,0 +1,224 @@
+# translation of kcm_autostart.po to Arabic
+# translation of kcm_autostart.po to
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# محمد ابراهيم الحرقان <malham1@hotmail.com>, 2008.
+# zayed <zayed.alsaidi@gmail.com>, 2008, 2021, 2022.
+# Abdalrahim Fakhouri <abdilra7eem@yahoo.com>, 2012.
+# Safa Alfulaij <safa1996alfulaij@gmail.com>, ٢٠١٥.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_autostart\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:50+0000\n"
+"PO-Revision-Date: 2022-08-08 22:14+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 21.07.70\n"
+
+#: autostartmodel.cpp:288
+#, kde-format
+msgid "\"%1\" is not an absolute url."
+msgstr "\"%1\" ليس عنواناً مطلقًا."
+
+#: autostartmodel.cpp:291
+#, kde-format
+msgid "\"%1\" does not exist."
+msgstr "\"%1\" ليس موجودًا."
+
+#: autostartmodel.cpp:294
+#, kde-format
+msgid "\"%1\" is not a file."
+msgstr "\"%1\" ليس ملفًّا."
+
+#: autostartmodel.cpp:297
+#, kde-format
+msgid "\"%1\" is not readable."
+msgstr "\"%1\" لا يمكن قراءته."
+
+#: package/contents/ui/main.qml:40
+#, kde-format
+msgid "Make Executable"
+msgstr "اجعله تنفيذي"
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "The file '%1' must be executable to run at logout."
+msgstr "يجب أن يكون الملف '%1' تنفيذي حتى يشغل عند الخروج"
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid "The file '%1' must be executable to run at login."
+msgstr "يجب أن يكون الملف '%1' تنفيذي حتى يشغل عند الولوج"
+
+#: package/contents/ui/main.qml:89
+#, kde-format
+msgid "Properties"
+msgstr "الخصائص"
+
+#: package/contents/ui/main.qml:95
+#, kde-format
+msgid "Remove"
+msgstr "أزِل"
+
+#: package/contents/ui/main.qml:106
+#, kde-format
+msgid "Applications"
+msgstr "التطبيقات"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Login Scripts"
+msgstr "سكربتات الولوج"
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Pre-startup Scripts"
+msgstr "سكربت ما قبل البدء"
+
+#: package/contents/ui/main.qml:115
+#, kde-format
+msgid "Logout Scripts"
+msgstr "سكربتات الخروج"
+
+#: package/contents/ui/main.qml:124
+#, kde-format
+msgid "No user-specified autostart items"
+msgstr "لا توجد عناصر بدء آلي حددها المستخدم"
+
+#: package/contents/ui/main.qml:125
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Click the <interface>Add…</interface> button below to add some"
+msgstr "انقر على زر <interface>أضف...</interface> في الأسفل لتضيف بعضها"
+
+#: package/contents/ui/main.qml:139
+#, kde-format
+msgid "Choose Login Script"
+msgstr "اختر سكربت الولوج"
+
+#: package/contents/ui/main.qml:160
+#, kde-format
+msgid "Choose Logout Script"
+msgstr "اختر سكربت الخروج"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "Add…"
+msgstr "أضف…"
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Add Application…"
+msgstr "أضف تطبيق..."
+
+#: package/contents/ui/main.qml:199
+#, kde-format
+msgid "Add Login Script…"
+msgstr "أضف سكربت الولوج…"
+
+#: package/contents/ui/main.qml:205
+#, kde-format
+msgid "Add Logout Script…"
+msgstr "أضف سكربت الخروج…"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "زايد السعيدي,صفا الفليج"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "zayed.alsaidi@gmail.com,safa1996alfulaij@gmail.com"
+
+#~ msgid "Autostart"
+#~ msgstr "البدء آلي"
+
+#~ msgid "Session Autostart Manager Control Panel Module"
+#~ msgstr "وحدة لوحة تحكم مدير بدء آلي للجلسة"
+
+#~ msgid "Copyright © 2006–2020 Autostart Manager team"
+#~ msgstr "الحقوق محفوظة © 2006–2020 فريق مدير البدء الآليّ"
+
+#~ msgid "Stephen Leaf"
+#~ msgstr "Stephen Leaf"
+
+#~ msgid "Montel Laurent"
+#~ msgstr "Montel Laurent"
+
+#~ msgid "Maintainer"
+#~ msgstr "المصين"
+
+#~ msgid "Nicolas Fella"
+#~ msgstr "Nicolas Fella"
+
+#, fuzzy
+#~| msgid "Advanced..."
+#~ msgid "Add..."
+#~ msgstr "متقدّم..."
+
+#~ msgid "Shell script path:"
+#~ msgstr "مسار سكربت الصّدفة:"
+
+#~ msgid "Create as symlink"
+#~ msgstr "أنشئ كوصلة رمزيّة"
+
+#, fuzzy
+#~| msgid "Autostart only in KDE"
+#~ msgid "Autostart only in Plasma"
+#~ msgstr "ابدأ آليًّا فقط في كدي"
+
+#~ msgid "Name"
+#~ msgstr "الاسم"
+
+#~ msgid "Command"
+#~ msgstr "الأمر"
+
+#~ msgid "Status"
+#~ msgstr "الحالة"
+
+#, fuzzy
+#~| msgctxt ""
+#~| "@title:column The name of the column that decides if the program is run "
+#~| "on kde startup, on kde shutdown, etc"
+#~| msgid "Run On"
+#~ msgctxt ""
+#~ "@title:column The name of the column that decides if the program is run "
+#~ "on session startup, on session shutdown, etc"
+#~ msgid "Run On"
+#~ msgstr "البدء عند"
+
+#, fuzzy
+#~| msgid "KDE Autostart Manager"
+#~ msgid "Session Autostart Manager"
+#~ msgstr "مدير كدي للبدء الآليّ"
+
+#~ msgctxt "The program will be run"
+#~ msgid "Enabled"
+#~ msgstr "مفعّل"
+
+#~ msgctxt "The program won't be run"
+#~ msgid "Disabled"
+#~ msgstr "معطّل"
+
+#~ msgid "Desktop File"
+#~ msgstr "ملفّات سطح المكتب"
+
+#~ msgid "Script File"
+#~ msgstr "ملفّات السّكربتات"
+
+#~ msgid "Add Program..."
+#~ msgstr "أضف برنامجًا..."
+
+#~ msgid "Startup"
+#~ msgstr "البدء"
+
+#~ msgid ""
+#~ "Only files with “.sh” extensions are allowed for setting up the "
+#~ "environment."
+#~ msgstr "فقط الملفّات ذات الامتداد '‎.sh' يمكنها ضبط البيئة."

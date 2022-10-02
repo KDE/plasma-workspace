@@ -1,0 +1,43 @@
+# translation of phonon_kde.po to Maithili
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sangeeta Kumari <sangeeta09@gmail.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: phonon_kde\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-05-20 03:26+0200\n"
+"PO-Revision-Date: 2009-01-17 22:43+0530\n"
+"Last-Translator: Sangeeta Kumari <sangeeta09@gmail.com>\n"
+"Language-Team: Maithili <maithili.sf.net>\n"
+"Language: mai\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"\n"
+"\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "संगीता कुमारी"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "sangeeta09@gmail.com"
+
+#~ msgid "<qt>Unable to use the <b>%1</b> Multimedia Backend:<br/>%2</qt>"
+#~ msgstr "<qt>मल्टीमीडिया बैकएण्ड <b>%1</b> प्रयोग करबा मे अक्षम:<br/>%2</qt>"
+
+#~ msgid "Unable to find a Multimedia Backend"
+#~ msgstr "मल्टीमीडिया बैकएण्ड प्राप्त करबामे अक्षम"
+
+#~ msgid "Unable to find the requested Multimedia Backend"
+#~ msgstr "निवेदित मल्टीमीडिया बैकएण्ड प्राप्त करबामे अक्षम"
+
+#~ msgid "create method returned 0"
+#~ msgstr "क्रिएट मैथड  घुरैलक 0 "

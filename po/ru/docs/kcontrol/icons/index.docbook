@@ -1,0 +1,208 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Russian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="icons" lang="&language;">
+<articleinfo>
+<title
+>Значки</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<author
+>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+<othercredit role="translator"
+><firstname
+>Екатерина</firstname
+> <surname
+>Пыжова</surname
+><affiliation
+> <address
+><email
+>haleth@yandex.ru</email
+></address
+></affiliation
+> <contrib
+>Перевод на русский</contrib
+></othercredit
+> <othercredit role="translator"
+><firstname
+>Ольга</firstname
+><surname
+>Миронова</surname
+><affiliation
+><address
+><email
+>omiro@basealt.ru</email
+></address
+></affiliation
+><contrib
+>Перевод на русский язык</contrib
+></othercredit
+><othercredit role="reviewer"
+><firstname
+>Александр</firstname
+><surname
+>Яворский</surname
+><contrib
+>Рецензирование</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>9 апреля 2021 г.</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>параметры системы</keyword>
+<keyword
+>значок</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>&plasma; поставляется с полным набором значков нескольких размеров. Эти значки используются во всех объектах системы: на рабочем столе и панели, в диспетчере файлов &dolphin;, в панелях инструментов всех приложений &plasma; и так далее. Модуль управления значками приложения &systemsettings; предоставляет гибкие способы их настройки.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Ниже представлен снимок экрана диспетчера наборов значков.</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Настройка значков &plasma;</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Этот модуль даёт возможность выполнять следующие действия:</para>
+<itemizedlist>
+<listitem
+><para
+>устанавливать и выбирать наборы значков;</para
+></listitem>
+<listitem
+><para
+>изменять размеры значков;</para
+></listitem>
+<listitem
+><para
+>удалять наборы значков.</para
+></listitem>
+</itemizedlist>
+
+<important
+><para
+>Некоторые из этих параметров зависят от выбранного набора значков. В &plasma; по умолчанию входят несколько наборов: «Breeze», «Breeze, тёмный вариант» и «Oxygen».</para
+></important>
+
+<para
+>В верхней части вкладки расположена область предварительного просмотра значков из выбранного набора. В большинство установочных пакетов входит только несколько наборов значков, и по умолчанию, как правило, применяется набор «Breeze». Другие наборы значков можно загрузить с сайта <ulink url="https://store.kde.org/"
+>https://store.kde.org/</ulink
+> или установить из локального файла.</para>
+
+<para
+>При наведении указателя мыши на миниатюру набора будет активирован анимированный предварительный просмотр произвольного выбора, общих типов MIME и общих значков папок. </para>
+
+<para
+>Чтобы удалить набор значков, воспользуйтесь кнопкой <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+>, расположенной в нижнем правом углу миниатюры наборы значков. Для отмены этого действия нажмите кнопку <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-undo.png" format="PNG"/></imageobject
+></inlinemediaobject
+>. При нажатии кнопки <guibutton
+>Применить</guibutton
+> будет выполнено фактическое удаление наборов значков, выбранных для удаления, поэтому после этого отменить отдельные или все удаления будет невозможно. </para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Выбрать размеры значков</guilabel
+></term>
+<listitem>
+<para
+>Выберите один из компонентов и воспользуйтесь ползунком для настройки соответствующего размера. </para>
+<para>
+<screenshot>
+<screeninfo
+>Выбрать размеры значков</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="use-of-icons.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Выбрать размеры значков</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Загрузить наборы значков…</guilabel
+></term>
+<listitem>
+<para
+>Чтобы воспользоваться этой возможностью, убедитесь в наличии подключения к Интернету. Нажмите указанную выше кнопку и в открывшемся диалоге выберите другой набор значков. Для установки набора нажмите кнопку <guibutton
+>Установить</guibutton
+>. После этого нажмите <guibutton
+>Закрыть</guibutton
+> — установленный набор сразу же будет доступен для использования. </para>
+<para>
+<screenshot>
+<screeninfo
+>Загрузить наборы значков…</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="get-new-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Загрузить наборы значков…</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Установить из файла…</guilabel
+></term>
+<listitem>
+<para
+>Используйте эту кнопку, чтобы открыть папку, в которую были загружены из Интернета новые наборы значков. Откроется диалоговое окно, в котором можно указать расположение имеющихся на диске архивов с наборами значков.</para>
+
+<para
+>При нажатии кнопки <guibutton
+>Открыть</guibutton
+> указанный набор значков будет установлен и показан в списке доступных наборов. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</article>

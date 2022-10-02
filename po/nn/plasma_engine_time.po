@@ -1,0 +1,68 @@
+# Translation of plasma_engine_time to Norwegian Nynorsk
+#
+# Karl Ove Hufthammer <karl@huftis.org>, 2015, 2018.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"PO-Revision-Date: 2018-06-26 21:38+0100\n"
+"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
+"Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
+"Language: nn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: timesource.cpp:46
+msgid "Local"
+msgstr "Lokal"
+
+#: timesource.cpp:61
+msgid "Timezone"
+msgstr "Tidssone"
+
+#: timesource.cpp:66 timesource.cpp:69 timesource.cpp:73
+msgid "Timezone City"
+msgstr "Tidssone-byen"
+
+#: timesource.cpp:68 timesource.cpp:71
+msgid "Timezone Continent"
+msgstr "Tidssone-kontinentet"
+
+#: timesource.cpp:72
+msgid "Timezone Country"
+msgstr "Tidssone-landet"
+
+#: timesource.cpp:97
+msgid "Offset"
+msgstr "Forskyving"
+
+#: timesource.cpp:100
+msgid "Timezone Abbreviation"
+msgstr "Tidssone-forkorting"
+
+#: timesource.cpp:131 timesource.cpp:150 timesource.cpp:171
+msgid "DateTime"
+msgstr "Dato og klokkeslett"
+
+#: timesource.cpp:146
+msgid "Latitude"
+msgstr "Breiddegrad"
+
+#: timesource.cpp:147
+msgid "Longitude"
+msgstr "Lengdegrad"
+
+#: timesource.cpp:148
+msgid "Solar"
+msgstr "Sol"
+
+#: timesource.cpp:149
+msgid "Moon"
+msgstr "Måne"

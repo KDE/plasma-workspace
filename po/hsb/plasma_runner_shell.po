@@ -1,0 +1,70 @@
+# translation of desktop_kdebase.po to Upper Sorbian
+# Prof. Dr. Eduard Werner <e.werner@rz.uni-leipzig.de>, 2003.
+# Eduard Werner <edi.werner@gmx.de>, 2005, 2008.
+# Bianka Šwejdźic <hertn@gmx.de>, 2005, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: desktop_kdebase\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-27 00:45+0000\n"
+"PO-Revision-Date: 2008-11-18 00:08+0100\n"
+"Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
+"Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
+"Language: hsb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
+"%100==4 ? 2 : 3;\n"
+
+#: shellrunner.cpp:35
+#, kde-format
+msgid "Finds commands that match :q:, using common shell syntax"
+msgstr ""
+
+#: shellrunner.cpp:36
+#, fuzzy, kde-format
+#| msgid "Run in &terminal window"
+msgid "Run in Terminal Window"
+msgstr "W &terminalu wuwjesć"
+
+#: shellrunner.cpp:54
+#, kde-format
+msgid "Run %1"
+msgstr "%1 wuwjesć"
+
+#~ msgid "Enter the user you want to run the application as here."
+#~ msgstr "Zapodajće mjeno wužiwarja, pod kotrymž ma so aplikacija wuwjesć."
+
+#~ msgid "User&name:"
+#~ msgstr "Mjeno &wužiwarja:"
+
+#~ msgid "Enter the password here for the user you specified above."
+#~ msgstr "Zapodajće škitne hesło za horjeka zapodate mjeno wužiwarja."
+
+#~ msgid "Pass&word:"
+#~ msgstr "Škitne &hesło:"
+
+#~ msgid ""
+#~ "Check this option if the application you want to run is a text mode "
+#~ "application. The application will then be run in a terminal emulator "
+#~ "window."
+#~ msgstr ""
+#~ "Hóčkujće tutu opciju, hdyž dźěła aplikacija w tekstowym modusu. Wona so "
+#~ "potom w terminalu wuwjedźe."
+
+#~ msgid "Run in &terminal window"
+#~ msgstr "W &terminalu wuwjesć"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "user id. Every process has a user id associated with it. This id code "
+#~ "determines file access and other permissions. The password of the user is "
+#~ "required to do this."
+#~ msgstr ""
+#~ "Hóčkujće tu, hdyž ma so aplikacija pod hinašim wužiwarskim mjenom "
+#~ "wuwjesć. Kóždy proces běži pod někajkim wužiwarjom; wot toho wotwisuje "
+#~ "přistup a druhe prawa. Škitne hesło wužiwarja je za to trěbne."
+
+#~ msgid "Run as a different &user"
+#~ msgstr "Pod hinašim &wužiwarjom wuwjesć"

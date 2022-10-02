@@ -1,0 +1,1184 @@
+# Indonesian translations for klipper package.
+# Copyright (C) 2010 This_file_is_part_of_KDE
+# This file is distributed under the same license as the klipper package.
+# Andhika Padmawan <andhika.padmawan@gmail.com>, 2010-2014.
+# Wantoyo <wantoyek@gmail.com>, 2017, 2018, 2019, 2020, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: klipper\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-17 00:48+0000\n"
+"PO-Revision-Date: 2022-09-27 18:12+0700\n"
+"Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
+"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: configdialog.cpp:80
+#, kde-format
+msgid "Selection and Clipboard:"
+msgstr "Seleksi dan Clipboard:"
+
+#: configdialog.cpp:87
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"When text or an area of the screen is highlighted with the mouse or "
+"keyboard, this is the <emphasis>selection</emphasis>. It can be pasted using "
+"the middle mouse button.<nl/><nl/>If the selection is explicitly copied "
+"using a <interface>Copy</interface> or <interface>Cut</interface> action, it "
+"is saved to the <emphasis>clipboard</emphasis>. It can be pasted using a "
+"<interface>Paste</interface> action. <nl/><nl/>When turned on this option "
+"keeps the selection and the clipboard the same, so that any selection is "
+"immediately available to paste by any means. If it is turned off, the "
+"selection may still be saved in the clipboard history (subject to the "
+"options below), but it can only be pasted using the middle mouse button."
+msgstr ""
+"Saat teks atau area layar disorot dengan mouse atau keyboard, ini adalah "
+"<emphasis>seleksi</emphasis>. Itu dapat ditempelkan menggunakan tombol "
+"tengah mouse.<nl/><nl/>Jika pilihan disalin secara eksplisit menggunakan "
+"tindakan <interface>Salin</interface> atau <interface>Potong</interface>, "
+"itu akan disimpan ke <emphasis>clipboard</emphasis>. Itu bisa ditempelkan "
+"menggunakan tindakan <interface>Tempel</interface>. <nl/><nl/>Saat "
+"dinyalakan, opsi ini membuat pilihan dan clipboard tetap sama, sehingga "
+"pilihan apa pun segera tersedia untuk ditempel dengan cara apa pun. Jika "
+"dimatikan, pilihan masih bisa disimpan dalam histori clipboard (tergantung "
+"pada opsi di bawah), tetapi hanya bisa ditempelkan menggunakan tombol tengah "
+"mouse."
+
+#: configdialog.cpp:106
+#, fuzzy, kde-format
+#| msgid "Clipboard history"
+msgid "Clipboard history:"
+msgstr "Histori papan klip"
+
+#: configdialog.cpp:112
+#, fuzzy, kde-format
+#| msgctxt "NUmber of entries"
+#| msgid " entry"
+#| msgid_plural " entries"
+msgctxt "Number of entries"
+msgid " entry"
+msgid_plural " entries"
+msgstr[0] " entri"
+msgstr[1] " entri"
+
+#: configdialog.cpp:131 configdialog.cpp:169
+#, kde-format
+msgid "Always save in history"
+msgstr "Selalu simpan di histori"
+
+#: configdialog.cpp:135
+#, kde-format
+msgid "Text selection:"
+msgstr "Seleksi teks:"
+
+#: configdialog.cpp:137 configdialog.cpp:175
+#, kde-format
+msgid "Only when explicitly copied"
+msgstr "Hanya ketika disalin secara gamblang"
+
+#: configdialog.cpp:142
+#, kde-format
+msgid "Whether text selections are saved in the clipboard history."
+msgstr "Apakah seleksi teks akan disimpan di histori clipboard."
+
+#: configdialog.cpp:173
+#, kde-format
+msgid "Non-text selection:"
+msgstr "Seleksi non-teks:"
+
+#: configdialog.cpp:180
+#, kde-format
+msgid "Never save in history"
+msgstr "Tidak usah simpan di histori"
+
+#: configdialog.cpp:185
+#, kde-format
+msgid ""
+"Whether non-text selections (such as images) are saved in the clipboard "
+"history."
+msgstr ""
+"Apakah seleksi non teks (sepertihalnya citra) disimpan di histori clipboard."
+
+#: configdialog.cpp:250
+#, fuzzy, kde-format
+#| msgid "Automatic action popup time:"
+msgid "Show action popup menu:"
+msgstr "Waktu sembulan aksi otomatis:"
+
+#: configdialog.cpp:260
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"When text that matches an action pattern is selected or is chosen from the "
+"clipboard history, automatically show the popup menu with applicable "
+"actions. If the automatic menu is turned off here, or it is not shown for an "
+"excluded window, then it can be shown by using the <shortcut>%1</shortcut> "
+"key shortcut."
+msgstr ""
+
+#: configdialog.cpp:269
+#, kde-format
+msgid "Exclude Windows..."
+msgstr ""
+
+#: configdialog.cpp:283
+#, kde-format
+msgctxt "Unit of time"
+msgid " second"
+msgid_plural " seconds"
+msgstr[0] " detik"
+msgstr[1] " detik"
+
+#: configdialog.cpp:284
+#, kde-format
+msgctxt "No timeout"
+msgid "None"
+msgstr "Nihil"
+
+#: configdialog.cpp:293
+#, fuzzy, kde-format
+#| msgctxt "Actions Config"
+#| msgid "Actions"
+msgid "Options:"
+msgstr "Aksi"
+
+#: configdialog.cpp:307
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The actions shown in the popup menu can be configured on the "
+"<interface>Actions Configuration</interface> page."
+msgstr ""
+
+#: configdialog.cpp:335
+#, kde-format
+msgid "Exclude Windows"
+msgstr ""
+
+#: configdialog.cpp:365
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"When a <interface>match pattern</interface> matches the clipboard contents, "
+"its <interface>commands</interface> appear in the Klipper popup menu and can "
+"be executed."
+msgstr ""
+
+#: configdialog.cpp:374
+#, kde-format
+msgctxt "@title:column"
+msgid "Match pattern and commands"
+msgstr ""
+
+#: configdialog.cpp:374
+#, fuzzy, kde-format
+#| msgid "Description"
+msgctxt "@title:column"
+msgid "Description"
+msgstr "Deskripsi"
+
+#: configdialog.cpp:380
+#, kde-format
+msgid "Add Action..."
+msgstr "Tambah Aksi..."
+
+#: configdialog.cpp:384
+#, kde-format
+msgid "Edit Action..."
+msgstr "Edit Aksi..."
+
+#: configdialog.cpp:389
+#, kde-format
+msgid "Delete Action"
+msgstr "Hapus Aksi"
+
+#: configdialog.cpp:396
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"These actions appear in the popup menu which can be configured on the "
+"<interface>Action Menu</interface> page."
+msgstr ""
+
+#: configdialog.cpp:580
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Delete the selected action <resource>%1</resource><nl/>and all of its "
+"commands?"
+msgstr ""
+
+#: configdialog.cpp:581
+#, fuzzy, kde-format
+#| msgid "Delete Action"
+msgid "Confirm Delete Action"
+msgstr "Hapus Aksi"
+
+#: configdialog.cpp:610
+#, kde-format
+msgctxt "General Config"
+msgid "General"
+msgstr "Umum"
+
+#: configdialog.cpp:610
+#, kde-format
+msgid "General Configuration"
+msgstr "Konfigurasi Umum"
+
+#: configdialog.cpp:611
+#, fuzzy, kde-format
+#| msgctxt "Actions Config"
+#| msgid "Actions"
+msgctxt "Popup Menu Config"
+msgid "Action Menu"
+msgstr "Aksi"
+
+#: configdialog.cpp:611
+#, fuzzy, kde-format
+#| msgctxt "Actions Config"
+#| msgid "Actions"
+msgid "Action Menu"
+msgstr "Aksi"
+
+#: configdialog.cpp:612
+#, fuzzy, kde-format
+#| msgid "Actions Configuration"
+msgctxt "Actions Config"
+msgid "Actions Configuration"
+msgstr "Konfigurasi Aksi"
+
+#: configdialog.cpp:612
+#, kde-format
+msgid "Actions Configuration"
+msgstr "Konfigurasi Aksi"
+
+#: configdialog.cpp:615
+#, kde-format
+msgctxt "Shortcuts Config"
+msgid "Shortcuts"
+msgstr "Pintasan"
+
+#: configdialog.cpp:615
+#, kde-format
+msgid "Shortcuts Configuration"
+msgstr "Konfigurasi Pintasan"
+
+#: configdialog.cpp:693
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The action popup will not be shown automatically for these windows, even if "
+"it is enabled. This is because, for example, a web browser may highlight a "
+"URL in the address bar while typing, so the menu would show for every "
+"keystroke.<nl/><nl/>If the action menu appears unexpectedly when using a "
+"particular application, then add it to this list. <link>How to find the name "
+"to enter</link>."
+msgstr ""
+
+#: configdialog.cpp:706
+#, kde-kuit-format
+msgctxt "@info:tooltip"
+msgid ""
+"The name that needs to be entered here is the WM_CLASS name of the window to "
+"be excluded. To find the WM_CLASS name for a window, in another terminal "
+"window enter the command:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</"
+"icode><nl/><nl/>and click on the window that you want to exclude. The first "
+"name that it displays after the equal sign is the one that you need to enter."
+msgstr ""
+
+#: editactiondialog.cpp:34 editcommanddialog.cpp:90
+#, kde-format
+msgid "Ignore"
+msgstr "Abaikan"
+
+#: editactiondialog.cpp:36
+#, kde-format
+msgid "Replace Clipboard"
+msgstr "Ganti Papan-klip"
+
+#: editactiondialog.cpp:38
+#, kde-format
+msgid "Add to Clipboard"
+msgstr "Tambah ke Papan-klip"
+
+#: editactiondialog.cpp:122
+#, kde-format
+msgid "Command"
+msgstr "Perintah"
+
+#: editactiondialog.cpp:124
+#, kde-format
+msgid "Output"
+msgstr ""
+
+#: editactiondialog.cpp:126
+#, kde-format
+msgid "Description"
+msgstr "Deskripsi"
+
+#: editactiondialog.cpp:179
+#, kde-format
+msgid "Action Properties"
+msgstr "Properti Aksi"
+
+#: editactiondialog.cpp:191
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"An action takes effect when its <interface>match pattern</interface> matches "
+"the clipboard contents. When this happens, the action's <interface>commands</"
+"interface> appear in the Klipper popup menu; if one of them is chosen, the "
+"command is executed."
+msgstr ""
+
+#: editactiondialog.cpp:203
+#, kde-format
+msgid "Enter a pattern to match against the clipboard"
+msgstr ""
+
+#: editactiondialog.cpp:205
+#, kde-format
+msgid "Match pattern:"
+msgstr ""
+
+#: editactiondialog.cpp:208
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The match pattern is a regular expression. For more information see the "
+"<link url=\"https://en.wikipedia.org/wiki/Regular_expression\">Wikipedia "
+"entry</link> for this topic."
+msgstr ""
+
+#: editactiondialog.cpp:219
+#, kde-format
+msgid "Enter a description for the action"
+msgstr ""
+
+#: editactiondialog.cpp:220 editcommanddialog.cpp:84
+#, kde-format
+msgid "Description:"
+msgstr "Deskripsi:"
+
+#: editactiondialog.cpp:223
+#, kde-format
+msgid "Include in automatic popup"
+msgstr ""
+
+#: editactiondialog.cpp:227
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The commands for this match will be included in the automatic action popup, "
+"if it is enabled in the <interface>Action Menu</interface> page. If this "
+"option is turned off, the commands for this match will not be included in "
+"the automatic popup but they will be included if the popup is activated "
+"manually with the <shortcut>%1</shortcut> key shortcut."
+msgstr ""
+
+#: editactiondialog.cpp:262
+#, fuzzy, kde-format
+#| msgid "Add Command"
+msgid "Add Command..."
+msgstr "Tambah Perintah"
+
+#: editactiondialog.cpp:267
+#, fuzzy, kde-format
+#| msgid "Add Command"
+msgid "Edit Command..."
+msgstr "Tambah Perintah"
+
+#: editactiondialog.cpp:273
+#, fuzzy, kde-format
+#| msgid "Remove Command"
+msgid "Delete Command"
+msgstr "Hapus Perintah"
+
+#: editactiondialog.cpp:389
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Delete the selected command <resource>%1</resource>?"
+msgstr ""
+
+#: editactiondialog.cpp:390
+#, kde-format
+msgid "Confirm Delete Command"
+msgstr ""
+
+#: editcommanddialog.cpp:47
+#, fuzzy, kde-format
+#| msgid "Action Properties"
+msgid "Command Properties"
+msgstr "Properti Aksi"
+
+#: editcommanddialog.cpp:60
+#, kde-format
+msgid "Enter the command and arguments"
+msgstr ""
+
+#: editcommanddialog.cpp:63
+#, fuzzy, kde-format
+#| msgid "Command"
+msgid "Command:"
+msgstr "Perintah"
+
+#: editcommanddialog.cpp:72
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"A <placeholder>&#37;s</placeholder> in the command will be replaced by the "
+"complete clipboard contents. <placeholder>&#37;0</placeholder> through "
+"<placeholder>&#37;9</placeholder> will be replaced by the corresponding "
+"captured texts from the match pattern."
+msgstr ""
+
+#: editcommanddialog.cpp:82
+#, kde-format
+msgid "Enter a description for the command"
+msgstr ""
+
+#: editcommanddialog.cpp:92
+#, kde-format
+msgid "Output from command:"
+msgstr ""
+
+#: editcommanddialog.cpp:94
+#, fuzzy, kde-format
+#| msgid "Replace Clipboard"
+msgid "Replace current clipboard"
+msgstr "Ganti Papan-klip"
+
+#: editcommanddialog.cpp:98
+#, fuzzy, kde-format
+#| msgid "Add to Clipboard"
+msgid "Append to clipboard"
+msgstr "Tambah ke Papan-klip"
+
+#: editcommanddialog.cpp:102
+#, kde-format
+msgid "What happens to the standard output of the command executed."
+msgstr ""
+
+#: editcommanddialog.cpp:116
+#, kde-format
+msgid "Reset the icon to the default for the command"
+msgstr ""
+
+#: editcommanddialog.cpp:122
+#, kde-format
+msgid "Icon:"
+msgstr ""
+
+#: historyimageitem.cpp:39
+#, kde-format
+msgid "%1x%2 %3bpp"
+msgstr "%1x%2 %3bpp"
+
+#: klipper.cpp:153
+#, fuzzy, kde-format
+#| msgid "Automatic action popup time:"
+msgctxt "@action:inmenu Toggle automatic action"
+msgid "Automatic Action Popup Menu"
+msgstr "Waktu sembulan aksi otomatis:"
+
+#: klipper.cpp:176
+#, fuzzy, kde-format
+#| msgid "C&lear Clipboard History"
+msgctxt "@action:inmenu"
+msgid "C&lear Clipboard History"
+msgstr "&Bersihkan Histori Papan-klip"
+
+#: klipper.cpp:183
+#, fuzzy, kde-format
+#| msgid "&Configure Klipper…"
+msgctxt "@action:inmenu"
+msgid "&Configure Klipper…"
+msgstr "&Konfigurasi Klipper..."
+
+#: klipper.cpp:189
+#, fuzzy, kde-format
+#| msgctxt "@item:inmenu Quit Klipper"
+#| msgid "&Quit"
+msgctxt "@action:inmenu Quit Klipper"
+msgid "&Quit"
+msgstr "&Berhenti"
+
+#: klipper.cpp:194
+#, fuzzy, kde-format
+#| msgid "Manually Invoke Action on Current Clipboard"
+msgctxt "@action:inmenu"
+msgid "Manually Invoke Action on Current Clipboard"
+msgstr "Panggil Aksi Secara Manual di Papan-klip Saat Ini"
+
+#: klipper.cpp:202
+#, fuzzy, kde-format
+#| msgid "&Edit Contents…"
+msgctxt "@action:inmenu"
+msgid "&Edit Contents…"
+msgstr "&Edit Konten..."
+
+#: klipper.cpp:210
+#, fuzzy, kde-format
+#| msgid "&Show Barcode…"
+msgctxt "@action:inmenu"
+msgid "&Show Barcode…"
+msgstr "&Tampilkan Barcode..."
+
+#: klipper.cpp:218
+#, fuzzy, kde-format
+#| msgid "Next History Item"
+msgctxt "@action:inmenu"
+msgid "Next History Item"
+msgstr "Item Histori Selanjutnya"
+
+#: klipper.cpp:222
+#, fuzzy, kde-format
+#| msgid "Previous History Item"
+msgctxt "@action:inmenu"
+msgid "Previous History Item"
+msgstr "Item Histori Sebelumnya"
+
+#: klipper.cpp:228
+#, fuzzy, kde-format
+#| msgid "Open Klipper at Mouse Position"
+msgctxt "@action:inmenu"
+msgid "Open Klipper at Mouse Position"
+msgstr "Buka Klipper di Posisi Mouse"
+
+#: klipper.cpp:540
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"You can enable URL actions later in the <interface>Actions</interface> page "
+"of the Clipboard applet's configuration window"
+msgstr ""
+"Kamu bisa memfungsikan aksi URL nanti di halaman <interface>Aksi</interface> "
+"pada jendela konfigurasi applet Clipboard"
+
+#: klipper.cpp:579
+#, kde-format
+msgid "Should Klipper start automatically when you login?"
+msgstr "Haruskan Klipper dijalankan secara otomatis ketika anda login?"
+
+#: klipper.cpp:580
+#, kde-format
+msgid "Automatically Start Klipper?"
+msgstr "Secara Otomatis Menjalankan Klipper?"
+
+#: klipper.cpp:581
+#, kde-format
+msgid "Start"
+msgstr "Jalankan"
+
+#: klipper.cpp:582
+#, kde-format
+msgid "Do Not Start"
+msgstr "Jangan Jalankan"
+
+#: klipper.cpp:929
+#, kde-format
+msgid "Edit Contents"
+msgstr "Edit Isi"
+
+#: klipper.cpp:996
+#, kde-format
+msgid "Mobile Barcode"
+msgstr "KodeBilah Ponsel"
+
+#: klipper.cpp:1043
+#, fuzzy, kde-format
+#| msgid "Really delete entire clipboard history?"
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "Yakin hapus seluruh histori papan klip?"
+
+#: klipper.cpp:1044
+#, fuzzy, kde-format
+#| msgid "C&lear Clipboard History"
+msgid "Clear Clipboard History"
+msgstr "&Bersihkan Histori Papan-klip"
+
+#: klipper.cpp:1060 klipper.cpp:1069
+#, kde-format
+msgid "Clipboard history"
+msgstr "Histori papan klip"
+
+#: klipper.cpp:1086
+#, kde-format
+msgid "up"
+msgstr "atas"
+
+#: klipper.cpp:1093
+#, kde-format
+msgid "current"
+msgstr "saat ini"
+
+#: klipper.cpp:1100
+#, kde-format
+msgid "down"
+msgstr "bawah"
+
+#. i18n: ectx: label, entry (Version), group (General)
+#: klipper.kcfg:10
+#, kde-format
+msgid "Klipper version"
+msgstr "Versi Klipper"
+
+#. i18n: ectx: label, entry (KeepClipboardContents), group (General)
+#: klipper.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Save the clipboard history across desktop sessions"
+msgid "Save history across desktop sessions"
+msgstr "Simpan histori clipboard di seluruh sesi desktop"
+
+#. i18n: ectx: tooltip, entry (KeepClipboardContents), group (General)
+#: klipper.kcfg:15
+#, kde-format
+msgid ""
+"Retain the clipboard history, so it will be available the next time you log "
+"in."
+msgstr ""
+"Pertahankan histori clipboard, sehingga akan tersedia saat kamu masuk log "
+"lagi."
+
+#. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
+#: klipper.kcfg:18
+#, kde-format
+msgid "Prevent the clipboard from being cleared"
+msgstr "Cegah clipboard dari pembersihan"
+
+#. i18n: ectx: whatsthis, entry (PreventEmptyClipboard), group (General)
+#: klipper.kcfg:20
+#, kde-format
+msgid ""
+"Do not allow the clipboard to be cleared, for example when an application "
+"exits."
+msgstr "Jangan biarkan clipboard dibersihkan, misalnya saat aplikasi keluar."
+
+#. i18n: ectx: label, entry (SyncClipboards), group (General)
+#: klipper.kcfg:27
+#, kde-format
+msgid "Keep the selection and clipboard the same"
+msgstr "Jaga seleksi dan clipboard yang sama"
+
+#. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
+#: klipper.kcfg:29
+#, kde-format
+msgid ""
+"Content selected with the cursor is automatically copied to the clipboard so "
+"that it can be pasted with either a Paste action or a middle-click.<br/><a "
+"href=\"1\">More about the selection and clipboard</a>."
+msgstr ""
+"Konten yang dipilih dengan kursor secara otomatis disalin ke clipboard "
+"sehingga bisa ditempelkan dengan aksi Tempel atau klik tengah.<br/><a href="
+"\"1\">Selengkapnya tentang seleksi dan clipboard</a>."
+
+#. i18n: ectx: label, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:32
+#, kde-format
+msgid "Ignore the selection"
+msgstr "Abaikan seleksi"
+
+#. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:34
+#, kde-format
+msgid ""
+"Content selected with the cursor but not explicitly copied to the clipboard "
+"is not automatically stored in the clipboard history, and can only be pasted "
+"using a middle-click."
+msgstr ""
+"Konten yang dipilih dengan kursor tetapi tidak secara gamblang disalin ke "
+"clipboard tidak secara otomatis disimpan dalam histori clipboard, dan hanya "
+"dapat ditempelkan menggunakan klik tengah."
+
+#. i18n: ectx: label, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:37
+#, kde-format
+msgid "Text selection only"
+msgstr "Hanya pemilihan teks"
+
+#. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:39
+#, kde-format
+msgid ""
+"Only store text selections in the clipboard history, not images or any other "
+"type of data."
+msgstr ""
+"Hanya simpan seleksi teks dalam histori clipboard, bukan citra atau jenis "
+"data lainnya."
+
+#. i18n: ectx: label, entry (IgnoreImages), group (General)
+#: klipper.kcfg:42
+#, kde-format
+msgid "Always ignore images"
+msgstr "Selalu abaikan citra"
+
+#. i18n: ectx: whatsthis, entry (IgnoreImages), group (General)
+#: klipper.kcfg:44
+#, kde-format
+msgid ""
+"Do not store images in the clipboard history, even if explicitly copied."
+msgstr ""
+"Jangan simpan citra di histori clipboard, meskipun disalin secara gamblang."
+
+#. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
+#: klipper.kcfg:47
+#, kde-format
+msgid "Use graphical regexp editor"
+msgstr "Gunakan penyunting ekspresi reguler grafis"
+
+#. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
+#: klipper.kcfg:51
+#, fuzzy, kde-format
+#| msgid "Ignore the selection"
+msgid "Immediately on selection"
+msgstr "Abaikan seleksi"
+
+#. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
+#: klipper.kcfg:52
+#, kde-format
+msgid ""
+"Show the popup menu of applicable actions as soon as a selection is made."
+msgstr ""
+
+#. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
+#: klipper.kcfg:57
+#, kde-format
+msgid "No actions for WM_CLASS"
+msgstr "Tak ada aksi untuk WM_CLASS"
+
+#. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:60
+#, fuzzy, kde-format
+#| msgid "Automatic action popup time:"
+msgid "Automatic action menu time:"
+msgstr "Waktu sembulan aksi otomatis:"
+
+#. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:64
+#, fuzzy, kde-format
+#| msgid "Display the automatic action popup for this time."
+msgid "Display the automatic action popup menu for this time."
+msgstr "Tampilkan sembulan aksi otomatis untuk kali ini."
+
+#. i18n: ectx: label, entry (MaxClipItems), group (General)
+#: klipper.kcfg:67
+#, fuzzy, kde-format
+#| msgid "Clipboard history size:"
+msgid "History size:"
+msgstr "Ukuran histori papan klip:"
+
+#. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
+#: klipper.kcfg:71
+#, kde-format
+msgid "The clipboard history will store up to this many items."
+msgstr "Histori clipboard akan menyimpan hingga banyak item ini."
+
+#. i18n: ectx: label, entry (ActionList), group (General)
+#: klipper.kcfg:74
+#, kde-format
+msgid "Dummy entry for indicating changes in an action's tree widget"
+msgstr "Entri dumi untuk mengindikasikan perubahan di widget ranting aksi"
+
+#. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:87
+#, fuzzy, kde-format
+#| msgid "Strip whitespace when executing an action"
+msgid "Trim whitespace from selection"
+msgstr "Kupas ruang putih ketika mengeksekusi aksi"
+
+#. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:89
+#, fuzzy, kde-format
+#| msgid ""
+#| "Remove white space from the start and end of clipboard text before "
+#| "performing an action. For example, this ensures that the URL pasted in a "
+#| "browser is interpreted as expected.<br/><br/>The text saved on the "
+#| "clipboard is not affected."
+msgid ""
+"Remove any whitespace from the start and end of selected text, before "
+"performing an action. For example, this ensures that a URL pasted in a "
+"browser is interpreted as expected. The text saved on the clipboard is not "
+"affected."
+msgstr ""
+"Singkirkan spasi putih dari awal dan akhir teks clipboard sebelum melakukan "
+"aksi. Misalnya, ini memastikan bahwa URL yang ditempelkan di browser "
+"ditafsirkan seperti yang diharapkan.<br/><br/>Teks yang disimpan di "
+"clipboard tidak terpengaruh."
+
+#. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
+#: klipper.kcfg:92
+#, fuzzy, kde-format
+#| msgid "Replay actions on an item selected from history"
+msgid "For an item chosen from history"
+msgstr "Aksi perulangan pada butir yang terpilih dari histori"
+
+#. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
+#: klipper.kcfg:94
+#, fuzzy, kde-format
+#| msgid "Whether text selections are saved in the clipboard history."
+msgid ""
+"Show the popup menu of applicable actions if an entry is chosen from the "
+"clipboard history."
+msgstr "Apakah seleksi teks akan disimpan di histori clipboard."
+
+#. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
+#: klipper.kcfg:97
+#, fuzzy, kde-format
+#| msgid "Enable MIME-based actions"
+msgid "Include MIME actions"
+msgstr "Fungsikan aksi berbasis MIME"
+
+#. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
+#: klipper.kcfg:99
+#, fuzzy, kde-format
+#| msgid ""
+#| "If this option is set, and a file name or URL is selected, include "
+#| "applications that can handle its MIME type in the actions popup."
+msgid ""
+"If a file name or URL is selected, include applications that can accept its "
+"MIME type in the popup menu."
+msgstr ""
+"Jika opsi ini diatur, dan nama file atau URL dipilih, sertakan aplikasi yang "
+"bisa menangani tipe MIME-nya dalam sembulan aksi."
+
+#: klipperpopup.cpp:110
+#, kde-format
+msgid "Klipper - Clipboard Tool"
+msgstr "Klipper - Alat Papan-klip"
+
+#: klipperpopup.cpp:114
+#, kde-format
+msgid "Search…"
+msgstr "Cari..."
+
+#: klipperpopup.cpp:123 main.cpp:29
+#, kde-format
+msgid "KDE cut & paste history utility"
+msgstr "Utilitas histori potong & tempel KDE"
+
+#: klipperpopup.cpp:187
+#, fuzzy, kde-format
+#| msgid "Regular expression:"
+msgid "Invalid regular expression, %1"
+msgstr "Ekspresi reguler:"
+
+#: klipperpopup.cpp:193 tray.cpp:25 tray.cpp:53
+#, kde-format
+msgid "Clipboard is empty"
+msgstr "Papan-klip kosong"
+
+#: klipperpopup.cpp:195
+#, kde-format
+msgid "No matches"
+msgstr "Tidak ada yang cocok"
+
+#: main.cpp:27 tray.cpp:22
+#, kde-format
+msgid "Klipper"
+msgstr "Klipper"
+
+#: main.cpp:31
+#, kde-format
+msgid ""
+"(c) 1998, Andrew Stanley-Jones\n"
+"1998-2002, Carsten Pfeiffer\n"
+"2001, Patrick Dubroy"
+msgstr ""
+"(c) 1998, Andrew Stanley-Jones\n"
+"1998-2002, Carsten Pfeiffer\n"
+"2001, Patrick Dubroy"
+
+#: main.cpp:34
+#, kde-format
+msgid "Carsten Pfeiffer"
+msgstr "Carsten Pfeiffer"
+
+#: main.cpp:34
+#, kde-format
+msgid "Author"
+msgstr "Penulis"
+
+#: main.cpp:36
+#, kde-format
+msgid "Andrew Stanley-Jones"
+msgstr "Andrew Stanley-Jones"
+
+#: main.cpp:36
+#, kde-format
+msgid "Original Author"
+msgstr "Penulis Asli"
+
+#: main.cpp:38
+#, kde-format
+msgid "Patrick Dubroy"
+msgstr "Patrick Dubroy"
+
+#: main.cpp:38
+#, kde-format
+msgid "Contributor"
+msgstr "Kontributor"
+
+#: main.cpp:40
+#, kde-format
+msgid "Luboš Luňák"
+msgstr "Luboš Luňák"
+
+#: main.cpp:40
+#, kde-format
+msgid "Bugfixes and optimizations"
+msgstr "Perbaikan bug dan optimisasi"
+
+#: main.cpp:42
+#, kde-format
+msgid "Esben Mose Hansen"
+msgstr "Esben Mose Hansen"
+
+#: main.cpp:42
+#, kde-format
+msgid "Previous Maintainer"
+msgstr "Pemelihara Sebelumnya"
+
+#: main.cpp:44
+#, kde-format
+msgid "Martin Gräßlin"
+msgstr "Martin Gräßlin"
+
+#: main.cpp:44
+#, kde-format
+msgid "Maintainer"
+msgstr "Pemelihara"
+
+#: main.cpp:46
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Andhika Padmawan,Wantoyèk"
+
+#: main.cpp:46
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "andhika.padmawan@gmail.com,wantoyek@gmail.com"
+
+#: popupproxy.cpp:145
+#, kde-format
+msgid "&More"
+msgstr "&Selebihnya"
+
+#: tray.cpp:25
+#, kde-format
+msgid "Clipboard Contents"
+msgstr "Dartar Isi Papan-klip"
+
+#: urlgrabber.cpp:198
+#, kde-format
+msgid "Disable This Popup"
+msgstr "Nonfungsikan Sembulan Ini"
+
+#: urlgrabber.cpp:204
+#, kde-format
+msgid "&Cancel"
+msgstr "&Batal"
+
+#~ msgid "Delete clipboard history?"
+#~ msgstr "Hapus histori papan klip?"
+
+#~ msgid "Action list:"
+#~ msgstr "Senarai aksi:"
+
+#~ msgid "Regular Expression"
+#~ msgstr "Ekspresi Reguler"
+
+#~ msgid ""
+#~ "Click on a highlighted item's column to change it. \"%s\" in a command "
+#~ "will be replaced with the clipboard contents.<br>For more information "
+#~ "about regular expressions, you could have a look at the <a href=\"https://"
+#~ "en.wikipedia.org/wiki/Regular_expression\">Wikipedia entry about this "
+#~ "topic</a>."
+#~ msgstr ""
+#~ "Klik pada sebuah kolom butir yang disorot untuk mengubahnya. \"%s\" di "
+#~ "dalam perintah akan digantikan dengan konten papanklip.<br>Untuk "
+#~ "informasi selebihnya tentang ekspresi reguler, kamu bisa cari di <a href="
+#~ "\"https://en.wikipedia.org/wiki/Regular_expression\">entri Wikipedia "
+#~ "tentang topik ini</a>."
+
+#~ msgid "Output Handling"
+#~ msgstr "Penanganan Output"
+
+#~ msgid "new command"
+#~ msgstr "perintah baru"
+
+#~ msgid "Command Description"
+#~ msgstr "Deskripsi Perintah"
+
+#~ msgid "Action properties:"
+#~ msgstr "Properti aksi:"
+
+#~ msgid "Automatic:"
+#~ msgstr "Otomatis:"
+
+#~ msgid "List of commands for this action:"
+#~ msgstr "Senarai perintah untuk aksi ini:"
+
+#~ msgid "Double-click an item to edit"
+#~ msgstr "Klik ganda butir untuk mengeditnya"
+
+#~ msgid "Remove whitespace when executing actions"
+#~ msgstr "Hapus ruang putih ketika mengeksekusi aksi"
+
+#~ msgid "Advanced..."
+#~ msgstr "Tingkat lanjut..."
+
+#~ msgid "Advanced Settings"
+#~ msgstr "Pengaturan Tingkat-lanjut"
+
+#~ msgid "D&isable Actions for Windows of Type WM_CLASS"
+#~ msgstr "Nonakt&ifkan Aksi untuk Window Tipe WM_CLASS"
+
+#~ msgid ""
+#~ "<qt>This lets you specify windows in which Klipper should not invoke "
+#~ "\"actions\". Use<br /><br /><center><b>xprop | grep WM_CLASS</b></"
+#~ "center><br />in a terminal to find out the WM_CLASS of a window. Next, "
+#~ "click on the window you want to examine. The first string it outputs "
+#~ "after the equal sign is the one you need to enter here.</qt>"
+#~ msgstr ""
+#~ "<qt>Hal ini memungkinkan anda untuk menentukan window dimana Klipper "
+#~ "tidak akan memanggil \"aksi\". Gunakan<br /><br /><center><b>xprop | grep "
+#~ "WM_CLASS</b></center><br />di terminal untuk mencari WM_CLASS dari "
+#~ "window. Selanjutnya, klik di window yang ingin anda pelajari. Tali "
+#~ "pertama hasil outputnya setelah tanda sama dengan adalah tanda yang anda "
+#~ "harus masukkan di sini.</qt>"
+
+#~ msgid "Enable Clipboard Actions"
+#~ msgstr "Fungsikan Aksi Papan-klip"
+
+#~ msgid "URL grabber enabled"
+#~ msgstr "Penangkap URL difungsikan"
+
+#~ msgid "Replay action in history"
+#~ msgstr "Aksi perulangan di histori"
+
+#~ msgid ""
+#~ "When a clipboard item is selected from the history popup, automatically "
+#~ "perform the configured actions on it."
+#~ msgstr ""
+#~ "Ketika item clipboard dipilih dari sembulan histori, secara otomatis "
+#~ "melakukan aksi yang dikonfigurasi di atasnya."
+
+#~ msgid "Save clipboard contents on exit"
+#~ msgstr "Simpan konten papan klip saat keluar"
+
+#~ msgid "Synchronize contents of the clipboard and the selection"
+#~ msgstr "Sinkronisasi konten papan klip dan pemilihan"
+
+#~ msgid "Keep clipboard contents"
+#~ msgstr "Jaga konten papan klip"
+
+#~ msgid ""
+#~ "Selecting this option has the effect, that the clipboard can never be "
+#~ "emptied. E.g. when an application exits, the clipboard would usually be "
+#~ "emptied."
+#~ msgstr ""
+#~ "Memilih opsi ini berpengaruh, yaitu papan klip tidak akan pernah bisa "
+#~ "dikosongkan. Misalnya ketika ada sebuah aplikasi, papan klip biasanya "
+#~ "akan dikosongkan."
+
+#~ msgid "Ignore Selection"
+#~ msgstr "Abaikan Pemilihan"
+
+#~ msgid ""
+#~ "When an area of the screen is selected with mouse or keyboard, this is "
+#~ "called \"the selection\".<br/>If this option is set, the selection is not "
+#~ "entered into the clipboard history, though it is still available for "
+#~ "pasting using the middle mouse button."
+#~ msgstr ""
+#~ "Ketika sebuah area di layar dipilih dengan mouse atau keyboard, inilah "
+#~ "yang disebut \"pemilihan\".<br/>Jika opsi ini diset, pemilihan tidak akan "
+#~ "dimasukkan ke histori papan klip, meskipun hal itu masih tersedia untuk "
+#~ "penempelan menggunakan tombol mouse tengah."
+
+#~ msgid "Synchronize clipboard and selection"
+#~ msgstr "Sinkronisasi papan klip dan pemilihan"
+
+#~ msgid ""
+#~ "When an area of the screen is selected with mouse or keyboard, this is "
+#~ "called \"the selection\".<br/>If this option is selected, the selection "
+#~ "and the clipboard is kept the same, so that anything in the selection is "
+#~ "immediately available for pasting elsewhere using any method, including "
+#~ "the traditional middle mouse button. Otherwise, the selection is recorded "
+#~ "in the clipboard history, but the selection can only be pasted using the "
+#~ "middle mouse button. Also see the 'Ignore Selection' option."
+#~ msgstr ""
+#~ "Ketika sebuah area pada layar dipilih dengan mouse atau keyboard, inilah "
+#~ "yang disebut \"pemilihan\".<br/>Jika opsi ini dipilih, pemilihan dan "
+#~ "papan klip dijaga tetap sama, sehingga apapun dalam pemilihan akan "
+#~ "secepatnya tersedia untuk penempelan di mana pun menggunakan metode apa "
+#~ "pun, termasuk tombol mouse tengah yang tradisional. Atau, pemilihan "
+#~ "direkam di histori papan klip, tapi pemilihan hanya bisa ditempelkan "
+#~ "menggunakan tombol mouse tengah. Lihat pula opsi 'Abaikan Pemilihan'."
+
+#~ msgid "Selection text only"
+#~ msgstr "Hanya pemilihan teks"
+
+#~ msgid ""
+#~ "When an area of the screen is selected with mouse or keyboard, this is "
+#~ "called \"the selection\".<br/>If this option is selected, only text "
+#~ "selections are stored in the history, while images and other selections "
+#~ "are not."
+#~ msgstr ""
+#~ "Ketika sebuah area pada layar dipilih dengan mouse atau keyboard, inilah "
+#~ "yang disebut \"pemilihan\".<br/>Jika opsi ini dipilih, hanya pemilihan "
+#~ "teks yang disimpan di histori, sementara gambar dan pemilihan lainnya "
+#~ "tidak."
+
+#~ msgid "Timeout for action popups (seconds)"
+#~ msgstr "Batas waktu untuk aksi sembulan (detik)"
+
+#~ msgid "A value of 0 disables the timeout"
+#~ msgstr "Nilai 0 menonfungsikan batas waktu"
+
+#~ msgid "Clipboard history size"
+#~ msgstr "Ukuran histori papan klip"
+
+#~ msgid ""
+#~ "Sometimes, the selected text has some whitespace at the end, which, if "
+#~ "loaded as URL in a browser would cause an error. Enabling this option "
+#~ "removes any whitespace at the beginning or end of the selected string "
+#~ "(the original clipboard contents will not be modified)."
+#~ msgstr ""
+#~ "Terkadang, teks yang dipilih memiliki ruang kosong di akhirannya, yang, "
+#~ "jika dimuat sebagai URL di penelusur dapat menyebabkan error. "
+#~ "Memfungsikan opsi ini menghapus ruang kosong apapun di awal atau akhir "
+#~ "string yang dipilih (isi papan klip asli tidak akan dimodifikasi)."
+
+#~ msgid "%1 - Actions For: %2"
+#~ msgstr "%1 - Aksi Untuk: %2"
+
+#~ msgid "&Edit Contents..."
+#~ msgstr "&Edit Isi..."
+
+#~ msgid "<empty clipboard>"
+#~ msgstr "<papan klip kosong>"
+
+#~ msgid ""
+#~ "You can enable URL actions later by left-clicking on the Klipper icon and "
+#~ "selecting 'Enable Clipboard Actions'"
+#~ msgstr ""
+#~ "Anda dapat memfungsikan aksi URL nanti dengan klik kiri di ikon Klipper "
+#~ "lalu memilih 'Fungsikan Aksi Papan-klip'"
+
+#~ msgid "Enable Clipboard &Actions"
+#~ msgstr "&Aktifkan Aksi Papan Klip"
+
+#~ msgid "Show Klipper Popup-Menu"
+#~ msgstr "Tampilkan Memu Popup Klipper"
+
+#~ msgid "Popup menu at mouse-cursor position"
+#~ msgstr "Menu popup di posisi kursor tetikus"

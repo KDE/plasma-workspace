@@ -1,0 +1,33 @@
+# Translation of kio_settings to Korean.
+# Copyright (C) 2007 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kdebase package.
+#
+# Shinjo Park <kde@peremen.name>, 2007, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kio_settings\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-08 00:48+0000\n"
+"PO-Revision-Date: 2008-11-07 11:04+0900\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: kio_applications.cpp:122
+#, kde-format
+msgid "Applications"
+msgstr "프로그램"
+
+#: kio_applications.cpp:122
+#, kde-format
+msgid "Programs"
+msgstr "프로그램"
+
+#: kio_applications.cpp:131
+#, kde-format
+msgid "Unknown application folder"
+msgstr "알 수 없는 프로그램 폴더"

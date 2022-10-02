@@ -1,0 +1,712 @@
+# translation of plasma.po to Russian
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Nick Shaforostoff <shafff@ukr.net>, 2007, 2008, 2009.
+# Nick Shaforostoff <shaforostoff@kde.ru>, 2008, 2009.
+# Albert R. Valiev <darkstar@altlinux.ru>, 2008.
+# Leonid Kanter <leon@asplinux.ru>, 2008.
+# Alexander Potashev <aspotashev@gmail.com>, 2009, 2010, 2011, 2014, 2015, 2016, 2017, 2018, 2020.
+# Andrey Cherepanov <skull@kde.ru>, 2009.
+# Yuri Efremov <yur.arh@gmail.com>, 2010, 2011, 2012, 2013.
+# Alexander Lakhin <exclusion@gmail.com>, 2013.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2020, 2022.
+# Olesya Gerasimenko <translation-team@basealt.ru>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-22 00:47+0000\n"
+"PO-Revision-Date: 2022-09-24 14:22+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.08.3\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Николай Шафоростов, Альберт Валиев"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "shafff@ukr.net, darkstar@altlinux.ru"
+
+# @title:window --aspotashev
+#: currentcontainmentactionsmodel.cpp:201
+#, kde-format
+msgid "Configure Mouse Actions Plugin"
+msgstr "Настройка модуля действий мыши"
+
+#: main.cpp:88
+#, kde-format
+msgid "Plasma"
+msgstr "Plasma"
+
+#: main.cpp:88
+#, kde-format
+msgid "Plasma Shell"
+msgstr "Оболочка Plasma"
+
+#: main.cpp:100
+#, kde-format
+msgid "Enable QML Javascript debugger"
+msgstr "Включить отладчик QML Javascript."
+
+#: main.cpp:103
+#, kde-format
+msgid "Do not restart plasma-shell automatically after a crash"
+msgstr "Не перезапускать Plasma автоматически после сбоя."
+
+#: main.cpp:106
+#, kde-format
+msgid "Force loading the given shell plugin"
+msgstr "Принудительный запуск указанного модуля."
+
+#: main.cpp:111
+#, kde-format
+msgid ""
+"Load plasmashell as a standalone application, needs the shell-plugin option "
+"to be specified"
+msgstr ""
+"Запустить plasmashell как самостоятельное приложение. Требуется подача "
+"параметра «--shell-plugin»."
+
+#: main.cpp:113
+#, kde-format
+msgid "Replace an existing instance"
+msgstr "Заменить существующий запущенный процесс."
+
+#: main.cpp:116
+#, kde-format
+msgid ""
+"Enables test mode and specifies the layout javascript file to set up the "
+"testing environment"
+msgstr ""
+"Включить режим тестирования и задать файл сценария на JavaScript, который "
+"настроит тестовое окружение."
+
+#: main.cpp:117
+#, kde-format
+msgid "file"
+msgstr "файл"
+
+#: main.cpp:121
+#, kde-format
+msgid "Lists the available options for user feedback"
+msgstr "Показать список данных обратной связи."
+
+#: main.cpp:219
+#, kde-format
+msgid "Plasma Failed To Start"
+msgstr "Не удалось запустить Plasma"
+
+#: main.cpp:220
+#, kde-format
+msgid ""
+"Plasma is unable to start as it could not correctly use OpenGL 2 or software "
+"fallback\n"
+"Please check that your graphic drivers are set up correctly."
+msgstr ""
+"Plasma не может продолжить работу из-за невозможности использовать OpenGL 2 "
+"или программную отрисовку.\n"
+"Проверьте правильность установки драйверов видеокарты."
+
+#: osd.cpp:54
+#, kde-format
+msgctxt "OSD informing that the system is muted, keep short"
+msgid "Audio Muted"
+msgstr "Звук выключен"
+
+#: osd.cpp:72
+#, kde-format
+msgctxt "OSD informing that the microphone is muted, keep short"
+msgid "Microphone Muted"
+msgstr "Микрофон выключен"
+
+#: osd.cpp:88
+#, kde-format
+msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
+msgid "%1 Muted"
+msgstr "Звук из %1 выключен"
+
+#: osd.cpp:110
+#, kde-format
+msgctxt "touchpad was enabled, keep short"
+msgid "Touchpad On"
+msgstr "Сенсорная панель включена"
+
+#: osd.cpp:112
+#, kde-format
+msgctxt "touchpad was disabled, keep short"
+msgid "Touchpad Off"
+msgstr "Сенсорная панель выключена"
+
+#: osd.cpp:119
+#, kde-format
+msgctxt "wireless lan was enabled, keep short"
+msgid "Wifi On"
+msgstr "Wi-Fi включён"
+
+#: osd.cpp:121
+#, kde-format
+msgctxt "wireless lan was disabled, keep short"
+msgid "Wifi Off"
+msgstr "Wi-Fi выключен"
+
+#: osd.cpp:128
+#, kde-format
+msgctxt "Bluetooth was enabled, keep short"
+msgid "Bluetooth On"
+msgstr "Bluetooth включён"
+
+#: osd.cpp:130
+#, kde-format
+msgctxt "Bluetooth was disabled, keep short"
+msgid "Bluetooth Off"
+msgstr "Bluetooth выключен"
+
+#: osd.cpp:137
+#, kde-format
+msgctxt "mobile internet was enabled, keep short"
+msgid "Mobile Internet On"
+msgstr "Мобильный Интернет включён"
+
+#: osd.cpp:139
+#, kde-format
+msgctxt "mobile internet was disabled, keep short"
+msgid "Mobile Internet Off"
+msgstr "Мобильный Интернет выключен"
+
+#: osd.cpp:147
+#, kde-format
+msgctxt ""
+"on screen keyboard was enabled because physical keyboard got unplugged, keep "
+"short"
+msgid "On-Screen Keyboard Activated"
+msgstr "Экранная клавиатура включена"
+
+#: osd.cpp:150
+#, kde-format
+msgctxt ""
+"on screen keyboard was disabled because physical keyboard was plugged in, "
+"keep short"
+msgid "On-Screen Keyboard Deactivated"
+msgstr "Экранная клавиатура выключена"
+
+#: shellcontainmentconfig.cpp:129
+#, kde-format
+msgid "Unknown %1"
+msgstr "Неизвестный %1"
+
+#: shellcorona.cpp:170 shellcorona.cpp:172
+#, kde-format
+msgid "Show Desktop"
+msgstr "Показать рабочий стол"
+
+#: shellcorona.cpp:172
+#, kde-format
+msgid "Hide Desktop"
+msgstr "Скрыть рабочий стол"
+
+#: shellcorona.cpp:188
+#, kde-format
+msgid "Show Activity Switcher"
+msgstr "Показать переключатель комнат"
+
+#: shellcorona.cpp:199
+#, kde-format
+msgid "Stop Current Activity"
+msgstr "Прекратить выполнение текущей комнаты"
+
+#: shellcorona.cpp:207
+#, kde-format
+msgid "Switch to Previous Activity"
+msgstr "Переключиться в предыдущую комнату"
+
+#: shellcorona.cpp:215
+#, kde-format
+msgid "Switch to Next Activity"
+msgstr "Переключиться в следующую комнату"
+
+#: shellcorona.cpp:231
+#, kde-format
+msgid "Activate Task Manager Entry %1"
+msgstr "Открыть %1-ю кнопку на панели задач"
+
+#: shellcorona.cpp:257
+#, kde-format
+msgid "Manage Desktops And Panels..."
+msgstr "Управление рабочими столами и панелями…"
+
+#: shellcorona.cpp:278
+#, kde-format
+msgid "Move keyboard focus between panels"
+msgstr "Перемещение фокуса ввода с клавиатуры между панелями"
+
+#: shellcorona.cpp:1761
+#, kde-format
+msgid "Add Panel"
+msgstr "Добавить панель"
+
+#: shellcorona.cpp:1798
+#, kde-format
+msgctxt "Creates an empty containment (%1 is the containment name)"
+msgid "Empty %1"
+msgstr ""
+"Пустая %1|/|$[replace-pairs-exact %1 'Панель' 'Пустая панель' 'Системный "
+"лоток' 'Пустой системный лоток' 'Группирующий виджет' 'Пустой группирующий "
+"виджет']"
+
+#: softwarerendernotifier.cpp:27
+#, kde-format
+msgid "Software Renderer In Use"
+msgstr "Используется программная отрисовка"
+
+#: softwarerendernotifier.cpp:28
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Software Renderer In Use"
+msgstr "Используется программная отрисовка"
+
+#: softwarerendernotifier.cpp:29
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Rendering may be degraded"
+msgstr "Скорость отрисовки может быть хуже обычной"
+
+#: softwarerendernotifier.cpp:39
+#, kde-format
+msgid "Never show again"
+msgstr "Больше никогда не показывать"
+
+#: userfeedback.cpp:36
+#, kde-format
+msgid "Panel Count"
+msgstr "Количество панелей"
+
+#: userfeedback.cpp:40
+#, kde-format
+msgid "Counts the panels"
+msgstr "Подсчёт количества панелей"
+
+#~ msgid "Unable to load script file: %1"
+#~ msgstr "Не удалось загрузить файл сценария %1"
+
+#~ msgid "Activities..."
+#~ msgstr "Комнаты..."
+
+#~ msgctxt "Fatal error message body"
+#~ msgid ""
+#~ "All shell packages missing.\n"
+#~ "This is an installation issue, please contact your distribution"
+#~ msgstr ""
+#~ "Не найдено ни одного пакета оболочки.\n"
+#~ "Такая проблема возникает в результате неправильной установки Plasma, "
+#~ "обратитесь к разработчикам дистрибутива операционной системы."
+
+#~ msgctxt "Fatal error message title"
+#~ msgid "Plasma Cannot Start"
+#~ msgstr "Не удалось запустить Plasma"
+
+#~ msgctxt "Fatal error message body"
+#~ msgid "Shell package %1 cannot be found"
+#~ msgstr "Не удалось найти пакет оболочки %1."
+
+#~ msgid "Main Script File"
+#~ msgstr "Главный файл сценария"
+
+#~ msgid "Force a windowed view for testing purposes"
+#~ msgstr "Принудительный запуск в окне (в целях отладки)."
+
+#~ msgid "Deprecated, does nothing"
+#~ msgstr "Устаревший параметр, ничего не делает."
+
+#~ msgid ""
+#~ "Your graphics hardware does not support OpenGL (ES) 2. Plasma will abort "
+#~ "now."
+#~ msgstr ""
+#~ "Видеокарта не поддерживает OpenGL (ES) 2, поэтому Plasma вынуждена "
+#~ "прекратить свою работу."
+
+#~ msgid "Incompatible OpenGL version detected"
+#~ msgstr "Обнаружена несовместимая версия OpenGL"
+
+#~ msgid "Recent number of crashes"
+#~ msgstr "Число недавних сбоев."
+
+#~ msgid "Show Dashboard"
+#~ msgstr "Показать приборную доску"
+
+#~ msgid "Hide Dashboard"
+#~ msgstr "Скрыть приборную доску"
+
+#~ msgid "Shuts up the output"
+#~ msgstr "Предотвратить вывод сообщений в стандартный поток"
+
+#~ msgid "&Execute"
+#~ msgstr "&Выполнить"
+
+#~ msgctxt "Toolbar Button to switch to Plasma Scripting Mode"
+#~ msgid "Plasma"
+#~ msgstr "Plasma"
+
+#~ msgctxt "Toolbar Button to switch to KWin Scripting Mode"
+#~ msgid "KWin"
+#~ msgstr "KWin"
+
+#~ msgid "Templates"
+#~ msgstr "Шаблоны"
+
+#~ msgid "Desktop Shell Scripting Console"
+#~ msgstr "Консоль сценариев Plasma"
+
+#~ msgid "Editor"
+#~ msgstr "Редактор"
+
+#~ msgid "Load"
+#~ msgstr "Загрузить"
+
+#~ msgid "Use"
+#~ msgstr "Использовать"
+
+#~ msgid "Output"
+#~ msgstr "Вывод"
+
+#~ msgid "Unable to load script file <b>%1</b>"
+#~ msgstr "Не удалось загрузить файл сценария <b>%1</b>"
+
+#~ msgid "Save Script File"
+#~ msgstr "Сохранение файла сценария"
+
+#~ msgid "Executing script at %1"
+#~ msgstr "Выполнение сценария в %1"
+
+#~ msgid "Runtime: %1ms"
+#~ msgstr "Время выполнения: %1 мс"
+
+#~ msgid "No plugins found, check your installation."
+#~ msgstr "Модулей не найдено. Проверьте правильность установки."
+
+#~ msgctxt "About mouse action"
+#~ msgid "About"
+#~ msgstr "О модуле"
+
+#~ msgctxt "Configure mouse action"
+#~ msgid "Configure"
+#~ msgstr "Настроить"
+
+#~ msgctxt "Remove mouse action"
+#~ msgid "Remove"
+#~ msgstr "Удалить"
+
+#~ msgid "Get New Templates..."
+#~ msgstr "Загрузить новые шаблоны..."
+
+#~ msgid "Activities"
+#~ msgstr "Комнаты"
+
+#~ msgid "Widget Dashboard"
+#~ msgstr "Приборная доска"
+
+#~ msgid "The font to use on the desktop"
+#~ msgstr "Шрифт, используемый на рабочем столе"
+
+#~ msgid ""
+#~ "Set to true if each virtual desktop should get its own, unique Plasma "
+#~ "view."
+#~ msgstr ""
+#~ "Показывать свой набор панелей и виджетов Plasma на каждом рабочем столе"
+
+#~ msgctxt "Default name for a new activity"
+#~ msgid "New Activity"
+#~ msgstr "Новая комната"
+
+#~ msgid "The KDE desktop, panels and widgets workspace application."
+#~ msgstr "Активный рабочий стол KDE."
+
+#~ msgid "Copyright 2006-2009, The KDE Team"
+#~ msgstr "© Команда разработчиков KDE, 2006-2009"
+
+#~ msgid "Aaron J. Seigo"
+#~ msgstr "Aaron J. Seigo"
+
+#~ msgid "Author and maintainer"
+#~ msgstr "Автор и сопровождающий"
+
+#~ msgid "John Lions"
+#~ msgstr "John Lions"
+
+#~ msgid "In memory of his contributions, 1937-1998."
+#~ msgstr "В память о его вкладе, 1937-1998."
+
+#~ msgid "Left"
+#~ msgstr "Слева"
+
+#~ msgid "Center"
+#~ msgstr "По центру"
+
+#~ msgid "Right"
+#~ msgstr "Справа"
+
+#~ msgid "Visibility"
+#~ msgstr "Видимость"
+
+#~ msgid "Always visible"
+#~ msgstr "Показывать всегда"
+
+#~ msgid "Auto-hide"
+#~ msgstr "Автоматически скрывать"
+
+#~ msgid "Windows can cover"
+#~ msgstr "Допускать перекрытие окнами"
+
+#~ msgid "Windows go below"
+#~ msgstr "Панель перекрывает окна"
+
+#~ msgid "Screen Edge"
+#~ msgstr "Край экрана"
+
+#~ msgid ""
+#~ "Press left mouse button and drag to a screen edge to change panel edge"
+#~ msgstr ""
+#~ "Нажмите левую клавишу мыши и перетащите к любому краю экрана, чтобы "
+#~ "переместить панель к этому краю"
+
+#~ msgid "Height"
+#~ msgstr "Высота"
+
+#~ msgid "Press left mouse button and drag vertically to change panel height"
+#~ msgstr "Нажмите левую клавишу мыши и потащите, чтобы изменить высоту панели"
+
+#~ msgid "More Settings"
+#~ msgstr "Дополнительно"
+
+#~ msgid ""
+#~ "Show more options about panel alignment, visibility and other settings"
+#~ msgstr ""
+#~ "Показать дополнительные параметры выравнивания и видимости панели и "
+#~ "остальные кнопки действий над панелью"
+
+#~ msgid "Maximize Panel"
+#~ msgstr "Растянуть панель"
+
+#~ msgid "Close this configuration window"
+#~ msgstr "Закрыть данное окно конфигурации"
+
+#~ msgid "Add Spacer"
+#~ msgstr "Добавить разделитель"
+
+#~ msgid ""
+#~ "Add a spacer to the panel useful to add some space between two widgets"
+#~ msgstr ""
+#~ "Добавить на панель разделитель, создающий свободное пространство между "
+#~ "двумя виджетами"
+
+#~ msgid "Width"
+#~ msgstr "Ширина"
+
+#~ msgid "Top"
+#~ msgstr "Вверху"
+
+#~ msgid "Bottom"
+#~ msgstr "Внизу"
+
+#~ msgctxt "%1 is the activity name"
+#~ msgid "Copy of %1"
+#~ msgstr "Копия комнаты %1"
+
+#~ msgid ""
+#~ "A new widget has become available on the network:<br><b>%1</b> - <i>%2</i>"
+#~ msgstr "Виджет стал доступен по сети:<br><b>%1</b> — <i>%2</i>"
+
+#~ msgid "Unlock and add to current activity"
+#~ msgstr "Разблокировать и добавить в текущую комнату"
+
+#~ msgid "Add to current activity"
+#~ msgstr "Добавить в текущую комнату"
+
+#~ msgid "Run applications"
+#~ msgstr "Запуск приложений"
+
+#~ msgid "This activity template requests to run the following applications"
+#~ msgstr "Эта комната предлагает запустить следующие приложения:"
+
+#~ msgid "Run selected"
+#~ msgstr "Запустить выбранные"
+
+#~ msgid "Run none"
+#~ msgstr "Ничего не запускать"
+
+#~ msgid "Move this slider to set the panel position"
+#~ msgstr "Двигайте ползунок для задания расположения панели"
+
+#~ msgid "Move this slider to set the maximum panel size"
+#~ msgstr "Двигайте ползунок, чтобы указать максимальный размер панели"
+
+#~ msgid "Move this slider to set the minimum panel size"
+#~ msgstr "Двигайте ползунок, чтобы указать минимальный размер панели"
+
+#~ msgid "Remove activity?"
+#~ msgstr "Удалить комнату?"
+
+#~ msgid "Cancel"
+#~ msgstr "Отмена"
+
+#~ msgid "Accept changes?"
+#~ msgstr "Применить изменения?"
+
+#~ msgid "Apply"
+#~ msgstr "Применить"
+
+#~ msgid "Configure activity"
+#~ msgstr "Настроить комнату"
+
+#~ msgid "Stop activity"
+#~ msgstr "Приостановить работу комнаты"
+
+#~ msgid "Start activity"
+#~ msgstr "Возобновить работу комнаты"
+
+#~ msgid "Enter Search Term"
+#~ msgstr "Поиск..."
+
+#~ msgid "Add Widgets"
+#~ msgstr "Добавить виджеты"
+
+#~ msgid "Create Activity"
+#~ msgstr "Создать комнату"
+
+#~ msgid "Clone current activity"
+#~ msgstr "Копия текущей комнаты"
+
+#~ msgctxt "Action used to create a new activity"
+#~ msgid "New Activity"
+#~ msgstr "Новая комната"
+
+#~ msgid "unnamed"
+#~ msgstr "Безымянная комната"
+
+#~ msgid "Confirm Removal"
+#~ msgstr "Удалить"
+
+#~ msgid "Apply Changes"
+#~ msgstr "Сохранить"
+
+#~ msgid "Cancel Changes"
+#~ msgstr "Отмена"
+
+#~ msgctxt "%1 is the name of the activity"
+#~ msgid "Do you really want to remove %1?"
+#~ msgstr "Удалить комнату «%1»?"
+
+#~ msgid "Plasma Workspace"
+#~ msgstr "Рабочее пространство Plasma"
+
+#~ msgid "Add Activity"
+#~ msgstr "Добавить комнату"
+
+#~ msgid "widgetById requires an id"
+#~ msgstr "widgetById требует идентификатор"
+
+#~ msgid "widgetById requires a name of a widget or a widget object"
+#~ msgstr "widgetById требует либо название виджета, либо объект виджета"
+
+#~ msgid "activityById requires an id"
+#~ msgstr "activityById требует идентификатор"
+
+#~ msgid "activityForScreen requires a screen id"
+#~ msgstr "activityForScreen требует идентификатор экрана"
+
+#~ msgid "Could not find a plugin for %1 named %2."
+#~ msgstr "Не удалось найти расширение %2 для %1"
+
+#~ msgid ""
+#~ "Error: %1 at line %2\n"
+#~ "\n"
+#~ "Backtrace:\n"
+#~ "%3"
+#~ msgstr ""
+#~ "Ошибка: %1 в строке %2\n"
+#~ "\n"
+#~ "Стек вызовов:\n"
+#~ "%3"
+
+#~ msgid "Zoom Out"
+#~ msgstr "Отдалить"
+
+#~ msgid "Configure Plasma..."
+#~ msgstr "Настроить Plasma..."
+
+#, fuzzy
+#~ msgid "Plasma Settings"
+#~ msgstr "Настройка Plasma"
+
+#~ msgid "Different activity for each desktop"
+#~ msgstr "Отдельная комната для каждого рабочего стола"
+
+#, fuzzy
+#~ msgid "Use a separate dashboard"
+#~ msgstr "Панель Plasma"
+
+#, fuzzy
+#~ msgid "Ctrl"
+#~ msgstr "По центру"
+
+#, fuzzy
+#~ msgid "Name"
+#~ msgstr "Название:"
+
+#, fuzzy
+#~ msgid "Button:"
+#~ msgstr "Внизу"
+
+#~ msgid "Desktop Settings"
+#~ msgstr "Параметры рабочего стола"
+
+#~ msgid "Wallpaper"
+#~ msgstr "Обои"
+
+#~ msgid ""
+#~ "This picture of a monitor contains a preview of what the current settings "
+#~ "will look like on your desktop."
+#~ msgstr ""
+#~ "Это изображение монитора показывает как будет выглядеть ваш рабочий стол "
+#~ "с текущими параметрами."
+
+#~ msgid "Type:"
+#~ msgstr "Тип:"
+
+#~ msgid "Name:"
+#~ msgstr "Название:"
+
+#~ msgid "Appearance"
+#~ msgstr "Внешний вид"
+
+#~ msgid "Theme:"
+#~ msgstr "Оформление:"
+
+#~ msgid "Starts plasma as an ordinary window rather than as the desktop."
+#~ msgstr "Запускает Plasma в режиме обычного окна"
+
+#~ msgid "Align panel to left"
+#~ msgstr "Разместить панель слева"
+
+#~ msgid "Align panel to center"
+#~ msgstr "Разместить панель в центре"
+
+#~ msgid "Align panel to right"
+#~ msgstr "Разместить панель справа"
+
+#, fuzzy
+#~ msgid "Drag this handle to resize the panel"
+#~ msgstr "Двигайте данный движок, чтобы указать расположение панели"

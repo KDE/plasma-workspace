@@ -1,0 +1,107 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Russian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="translations" lang="&language;">
+<articleinfo>
+<title
+>Язык</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Krishna.Tateneni; &Krishna.Tateneni.mail;</author>
+<othercredit role="translator"
+><firstname
+>Ольга</firstname
+><surname
+>Миронова</surname
+><affiliation
+><address
+><email
+>omiro@basealt.ru</email
+></address
+></affiliation
+><contrib
+>Перевод на русский язык</contrib
+></othercredit
+><othercredit role="reviewer"
+><firstname
+>Александр</firstname
+><surname
+>Яворский</surname
+><contrib
+>Рецензирование</contrib
+></othercredit
+> 
+ </authorgroup>
+
+	  <date
+>9 апреля 2021 г.</date>
+	  <releaseinfo
+>Plasma 5.20</releaseinfo>
+
+	  <keywordset>
+		<keyword
+>KDE</keyword>
+		<keyword
+>Параметры системы</keyword>
+		<keyword
+>локаль</keyword>
+		<keyword
+>страна</keyword>
+		<keyword
+>язык</keyword>
+		<keyword
+>перевод</keyword>
+		<keyword
+>Язык</keyword>
+	  </keywordset>
+</articleinfo>
+
+<para
+>Этот модуль приложения «Параметры системы» позволяет задать предпочитаемые языки локализации интерфейса приложений и рабочей среды &plasma;. </para>
+
+<para
+>Основной язык приложений &kde; и рабочей среды &plasma; — английский язык, принятый в США. Существуют переводы на другие языки, подготовленные командами переводчиков-волонтёров из разных стран. Для использования перевода интерфейса необходимо установить файлы соответствующего языкового пакета. </para>
+<note
+><para
+>Важно убедиться, что в системе установлены все необходимые языковые пакеты и переводы &plasma;, которые вы планируете использовать.</para>
+<para
+>Так как &plasma; основана на библиотеках &Qt;, для получения полностью локализованного графического интерфейса пользователя (&GUI;) необходимы файлы переводов &Qt;.</para
+></note>
+
+<para
+>Список определяет очерёдность выбора языков, которые будут использоваться для локализации интерфейса приложений и рабочей среды &plasma;. Так как интерфейс  приложений и рабочей среды может быть переведён на все языки не полностью, &plasma; будет использовать переводы интерфейса на языки из списка <guilabel
+>Предпочитаемые языки</guilabel
+> в указанной последовательности.  Если нет перевода ни на один из предпочитаемых языков, то будет использоваться исходный язык — английский, принятый в США. </para>
+
+<para
+>Чтобы добавить язык в основной список, нажмите кнопку <guibutton
+>Добавить языки...</guibutton
+>. В списке доступных языков на текущем языке системы перечислены все доступные и установленные варианты выбора языка для перевода интерфейса. Если нужный язык перевода отсутствует в списке, то его необходимо установить обычным для вашей системы способом. Выберите в списке один или несколько языков и нажмите кнопку <guibutton
+>Добавить</guibutton
+>. </para>
+<para
+>Чтобы удалить язык из основного списка, выберите его и затем щёлкните по значку <inlinemediaobject
+><imageobject
+><imagedata fileref="list-remove.png" format="PNG"/> </imageobject
+></inlinemediaobject
+>. Чтобы изменить порядок приоритета, выберите нужный язык в списке и щёлкните по значку <inlinemediaobject
+><imageobject
+> <imagedata fileref="go-top.png" format="PNG"/> </imageobject
+></inlinemediaobject
+>. </para>
+
+<note>
+<para
+>Параметры, определяемые модулями «Язык» и «Форматы», не связаны между собой: изменение языка локализации интерфейса <emphasis
+>не</emphasis
+> ведёт к изменению форматов чисел, времени, денежных сумм и т.д. на формат, соответствующий стране или региону выбранного языка. </para>
+</note>
+
+</article>

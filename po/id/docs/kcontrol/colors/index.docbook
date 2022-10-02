@@ -1,0 +1,380 @@
+<?xml version="1.0" ?>
+
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Indonesian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="colors" lang="&language;">
+<articleinfo>
+<title
+>Warna</title>
+<authorgroup>
+<author
+>&Matthew.Woehlke; &Matthew.Woehlke.mail;</author>
+<othercredit role="translator"
+><firstname
+>Wantoyo</firstname
+><surname
+></surname
+><affiliation
+><address
+><email
+>wantoyek@gmail.com</email
+></address
+></affiliation
+><contrib
+>Terjemahan</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>30-03-2018</date>
+<releaseinfo
+>Plasma 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>warna</keyword>
+<keyword
+>kcm</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="color">
+<title
+>Warna</title>
+
+<sect2 id="color-scheme">
+  <title
+>Pengelolaan Skema</title>
+
+  <para
+>Modul ini membiarkanmu mengelola skema warna pada mesinmu. Ini menampilkan daftar sebuah skema warna yang dikirim dengan &plasma; dan sebuah pratinjau di sebelah atas. Hanya satu skema yang diaktifkan sekaligus, tapi kamu bisa mengedit skema. Kamu bisa menghapus skema menggunakan <guibutton
+>Hapus Skema</guibutton
+>. Ingat bahwa skema sistem tidak bisa dihapus; tombol aksi ini akan dinonfungsikan.</para>
+
+  <para
+>Jika kamu memiliki koneksi internet, kamu juga bisa menelusuri dan menerima skema yang diciptakan oleh pengguna menggunakan <guibutton
+>Dapatkan Skema Warna Baru...</guibutton
+>.</para>
+
+  <para
+>Kamu juga bisa menginstal skema dari file yang telah kamu unduh atau jika tidak diperoleh, sebaiknya impor skema &kde; 4 seperti yang bernama &quot;*.colors&quot;. </para>
+
+  <para
+>Jika <guilabel
+>Terapkan warna untuk aplikasi non-Qt</guilabel
+> telah tercentang, Plasma akan mencoba mengekspor skema warnanya sehingga aplikasi non-Qt tersebut akan menggunakan warna yang sama. Beberapa aplikasi akan mengikuti skema yang diekspor ke berbagai tingkat, meskipun beberapa memiliki bug atau sebaliknya tidak mengikuti skema yang diekpor. </para>
+
+  <para
+>Catat: Dokumentasi ini terkadang akan merujuk kepada skema &quot;current&quot;, atau skema&quot;active&quot;. Skema &quot;current&quot; adalah set warna dan opsi skema warna yang sudah banyak diterapkan, &ie; apa yang telah kamu dapatkan jika kamu memilih <guibutton
+>Batal</guibutton
+>. Skema &quot;active&quot; adalah set warna sebagaimana yang sudah banyak barusan diedit olehmu, &ie; apa yang sudah kamu dapatkan jika kamu memilih <guibutton
+>Terapkan</guibutton
+>.</para>
+</sect2>
+
+<sect2>
+  <title
+>Edit atau Ciptakan Skema</title>
+  <para
+>Untuk mengedit atau menciptakan skema baru pilihlah skema dari daftar dan tekan tombol <guibutton
+>Edit Skema</guibutton
+> untuk membuka sebuah dialog dengan tab <guilabel
+>Opsi</guilabel
+>, <guilabel
+>Warna</guilabel
+>, <guilabel
+>Nonfungsikan</guilabel
+> dan <guilabel
+>Nonaktifkan</guilabel
+> di sana. Ketika kamu telah menciptakan skema yang kamu suka, kamu bisa mengunggahnya, meresetnya atau menyimpannya dengan nama yang berbeda atau menimpa skema yang aktif. </para>
+
+<sect3 id="color-options">
+  <title
+>Opsi Skema Warna</title>
+
+  <para
+>Tab <guilabel
+>Opsi</guilabel
+> memungkinkanmu untuk mengubah beberapa properti yang berhubungan dengan bagaimana skema warna digunakan, serta beberapa opsi dalam mengubah warna skema yang berbeda dari penetapan warna yabg sesungguhnya.</para>
+
+  <itemizedlist>
+    <listitem
+><para
+><guilabel
+>Terapkan efek untuk window yang tak aktif</guilabel
+> &mdash; Jika dicentang, efek yang ada (lihat di bawah) akan diterapkan untuk window yang tak aktif. Ini bisa membantu mengidentifkasi window yang aktif secara visual versus tak aktif, dan banyak nilai estetika, tergantung pada seleramu. Bagaimanapun, beberapa pengguna merasa bahwa itu mengganggu sejak &quot;flickering&quot; window harus dilukis ulang ketika ia menjadi tak aktif. Tidak seperti efek desktop, efek pewarnaan tidak diperlukan dukungan komposit dan akan bekerja pada semua sistem, bagaimanapun itu hanya akan bekerja pada aplikasi &kde;. </para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Gunakan warna yang berbeda untuk pemilihan tak aktif</guilabel
+> &mdash; Jika dicentang, pemilihan saat ini dalam elemen yang tidak memiliki fokus input akan digambar menggunakan warna yang berbeda. Ini bisa membantu pengidentifikasian visual pada elemen dengan fokus input di beberapa aplikasi, khususnya yang secara bersamaan menampilkan beberapa daftar. </para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Corak kolom yang diurutkan dalam daftar</guilabel
+> &mdash; Jika dicentang, daftar multi kolom akan menggunakan sebuah warna yang sedikit berbeda untuk melukis kolom yang informasinya sedang digunakan untuk mengurutkan butir(-butir) di dalam daftar. </para
+></listitem>
+    <listitem
+><para
+><guilabel
+>Kontras</guilabel
+> &mdash; Penggeser ini mengendalikan kontras elemen berbayang, seperti halnya bingkai kerangka dan efek &quot;3D&quot; yang digunakan oleh banyak gaya. Sebuah nilai paling rendah memberikan kontras yang kurang dan dengan demikian tepian lebih lembut, sementara nilai yang lebih tinggi membuat tepian seperti lebih menonjol (&quot;stand out&quot;) </para
+></listitem>
+  </itemizedlist>
+
+</sect3>
+
+<sect3 id="color-colors">
+  <title
+>Warna</title>
+
+  <para
+>Tab <guilabel
+>Warna</guilabel
+> memungkinkanmu untuk mengubah warna di dalam skema warna yang aktif.</para>
+
+  <para
+>Penciptaan atau pengubahan skema adalah sebuah hal sederhana dengan mengeklik pada carikan di dalam daftar warna dan memilih sebuah warna baru. Disarankan agar kamu menyimpan skemamu ketika kamu kelar.</para>
+
+  <para
+>Set <guilabel
+>Warna Umum</guilabel
+>, yang ditampilkan pada awalnya, sebenarnya bukan &quot;set &quot; dalam arti yang digunakan oleh Plasma (lihat bagian selanjutnya), tetapi menyajikan sejumlah peran warna dengan cara yang membuatnya lebih mudah untuk mengedit skema secara keseluruhan. Saat membuat skema warna baru, kamu biasanya akan mengubah warna-warna ini terlebih dahulu, dan menggunakan set lain untuk menguprek warna tertentu jika diperlukan.</para>
+
+  <para
+>Perhatikan bahwa <guilabel
+>Warna Umum</guilabel
+> membuat peran tersedia dari semua set. Misalnya, &quot;Tampilan Latarbelakang&quot; di sini adalah singkatnya untuk peran Latarbelakang Normal dari set Tampilan. Selain itu, setingan warna yang tidak merujuk untuk set tertentu akan mengubah warna itu di <emphasis
+>semua</emphasis
+> set. (Sebagai pengecualian, &quot;Teks Yang Tak Aktif&quot; akan mengubah warna untuk semua set <emphasis
+>kecuali</emphasis
+> untuk Pemilihan; ada yang terpisah  &quot;Pemilihan Teks Yang Tak Aktif&quot; untuk Teks Yang Tak Aktif di dalam set Pemilihan.) Beberapa peran mungkin sama sekali tidak begitu terlihat dalam <guilabel
+>Warna Umum</guilabel
+>, dan hanya dapat diubah (jika perlu) dengan memilih set yang sesuai.</para>
+
+  <sect4>
+    <title
+>Set Warna</title>
+
+    <para
+>Plasma memecah skema warna ke dalam beberapa set berdasarkan pada tipe elemen antarmuka pengguna, sebagai berikut:</para>
+    <itemizedlist>
+      <listitem
+><para
+><guilabel
+>Tampilan</guilabel
+> &mdash; informasi elemen presentasi, sepertihalnya daftar, tree, kotak input teks, dll. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Window</guilabel
+> &mdash; elemen window yang bukan tombol atau tampilan. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Tombol</guilabel
+> &mdash; tombol dan elemen serupa. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Pemilihan</guilabel
+> &mdash; butir(-butir) dan teks yang dipilih. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Tooltip</guilabel
+> &mdash; tips alat, tips &quot;Apakah Ini&quot;, dan elemen serupa. </para
+></listitem>
+      <listitem
+><para
+><guilabel
+>Complementary</guilabel
+> &mdash; Area aplikasi dengan skema warna alternatif; biasanya dengan latarbelakang gelap untuk skema warna terang. Contoh area dengan skema warna terbalik ini adalah antarmuka logout, layar kunci dan mode layar penuh untuk beberapa aplikasi. </para
+></listitem>
+    </itemizedlist>
+
+    <para
+>Setiap set berisi sejumlah peran warna. Setiap set memiliki peran yang sama. Semua warna terkait dengan salahsatu set di atas.</para>
+  </sect4>
+
+  <sect4>
+    <title
+>Peran Warna</title>
+
+    <para
+>Setiap set warna terdiri dari sejumlah peran yang tersedia di semua set lainnya. Selain Teks Normal dan Latarbelakang Normal yang jelas, peran ini adalah sebagai berikut:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Latarbelakang Alternatif &mdash; digunakan ketika ada kebutuhan untuk pengubahan latarbelakang untuk membantu dalam butir asosiasi. Ini mungkin digunakan &eg; sebagai latarbelakang tajuk, tetapi sebagian besar digunakan untuk baris yang bergantian di daftar, terutama daftar multi-kolom, untuk membantu dalam melacak baris secara visual. </para
+></listitem>
+      <listitem
+><para
+>Teks Tautan &mdash; digunakan untuk hyperlink atau untuk menampilkan &quot;sesuatu yang dapat dikunjungi&quot;, atau untuk menampilkan hubungan. </para
+></listitem>
+      <listitem
+><para
+>Teks Dikunjungi &mdash; digunakan untuk &quot;sesuatu (&eg; sebuah hyperlink) yang sedang dikunjungi&quot;, atau mengindikasikan sesuatu yang lawas "old". </para
+></listitem>
+      <listitem
+><para
+>Teks Aktif &mdash; digunakan untuk mengindikasikan sebuah elemen yang aktif atau menarik perhatian, &eg; peringatan, notifikasi; juga untuk hyperlink yang dilayangi. </para
+></listitem>
+      <listitem
+><para
+>Teks Takaktif &mdash; digunakan untuk teks yang seharusnya tidak mengganggu, &eg; komentar, &quot;subtitles&quot;, informasi takpenting, dll. </para
+></listitem>
+      <listitem
+><para
+>Teks Negatif &mdash; digunakan untuk notifikasian error, kegagalan, notifikasi sebuah aksi yang mungkin berbahaya (&eg; halaman web yang tidak aman atau konteks keamanan), dll. </para
+></listitem>
+      <listitem
+><para
+>Teks Netral &mdash; digunakan untuk menggambar perhatian ketika peran lainnya tidak sesuai; &eg; peringatan, untuk mengindikasikan konten yang aman/terenkripsi, dll. </para
+></listitem>
+      <listitem
+><para
+>Teks Positif &mdash; digunakan untuk notifikasian yang berhasil, untuk mengindikasikan konten yang dipercayai, dll. </para
+></listitem>
+    </itemizedlist>
+
+    <para
+>Selain peran teks, ada beberapa tambahan peran &quot;dekorasi&quot; yang digunakan untuk menggambar garis atau elemen UI bayangan (sementara itu, dalam keadaan yang tepat, juga digunakan untuk tujuan ini, berikut ini secara khusus <emphasis
+>tidak</emphasis
+> dimaksudkan untuk menggambar teks). Hal ini adalah:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Dekorasi Fokus &mdash; digunakan untuk mengindikasikan butir yang memiliki fokus input aktif. </para
+></listitem>
+      <listitem
+><para
+>Dekorasi Pelayang &mdash; digunakan untuk efek mouse melintasi, l&eg; efek "illumination" untuk tombol-tombol. </para
+></listitem>
+    </itemizedlist>
+
+    <para
+>Selain itu, kecuali untuk Teks Takaktif, ada peran latarbelakang yang sesuai untuk masing-masing peran teks. Saat ini (kecuali untuk Latarbelakang Normal dan Alternatif), warna-warna ini tidak dipilih oleh pengguna, tetapi secara otomatis ditentukan berdasarkan Latarbelakang Normal dan warna Teks yang sesuai. Warna-warna ini dapat dipratinjau dengan memilih salah satu set selain &quot;Warna Umum&quot;.</para>
+
+    <para
+>Pemilihan pada peran warna diserahkan ke pengembang; di atas adalah panduan yang dimaksudkan untuk mewakili penggunaan yang khas.</para>
+  </sect4>
+
+  <sect4>
+    <title
+>Warna Pengelola Window</title>
+
+    <para
+>Sebagaimana dimulai sebelumnya, set Pengelola Window memiliki peran sendiri, berdikari dalam set yang lain. Ini (saat ini) hanya dapat diakses via <guilabel
+>Warna Umum</guilabel
+>, dan sebagai berikut:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Bilahjudul Aktif &mdash; digunakan untuk menggambar latarbelakang bilah judul, bingkai, dan/atau dekorasi untuk window aktif (yaitu, yang dengan fokus input). Tidak semua dekorasi window akan menggunakan ini dengan cara yang sama, dan beberapa bahkan mungkin menggunakan Latarbelakang Normal dari set Window untuk menggambar bilah judul. </para
+></listitem>
+      <listitem
+><para
+>Bilahjudul Teks Aktif &mdash; digunakan untuk menggambar teks bilah judul ketika Bilahjudul Aktif digunakan untuk menggambar latarbelakang bilah judul. Dapat juga digunakan untuk elemen latardepan lainnya yang menggunakan Bilahjudul Aktif sebagai latarbelakang. </para
+></listitem>
+    </itemizedlist>
+
+    <para
+>Peran [Teks] Bilah judul Takaktif sama sebagaimana yang di atas, tetapi untuk window tak aktif, bukan window aktif.</para>
+  </sect4>
+
+</sect3>
+
+<sect3 id="color-effects">
+  <title
+>Efek Keadaan Warna</title>
+
+  <para
+>Efek keadaan warna diterapkan untuk elemen antarmuka di window tak aktif (window yang tidak memiliki fokus; hanya jika <guilabel
+>Terapkan efek warna window tak aktif</guilabel
+> difungsikan) atau keadaan dinonfungsikan. Dengan mengubah efek, penampilan elemen di keadaan ini dapat diubah. Biasanya, elemen yang tak aktif akan mengurangi kontras (teks sedikit melesap ke latarbelakang) dan mungkin sedikit mengurangi intensitas, sedangkan elemen yang dinonfungsikan akan sangat mengurangi kontras dan sering kali lebih gelap atau lebih terang. </para>
+
+  <para
+>Tiga tipe efek dapat diterapkan pada masing-masing keadaan (dengan efek dari kedua keadaan menjadi independen). Ini adalah Intensitas, Warna dan Kontras. Dua yang pertama (Intensitas, Warna) mengendalikan warna keseluruhan, sedangkan yang terakhir (Kontras) berkaitan dengan warna latardepan relatif terhadap latarbelakang.</para>
+
+  <sect4>
+    <title
+>Intensitas</title>
+
+    <para
+>Intensitas memungkinkan warna keseluruhan menjadi terang atau gelap. Mengeset penggeser ke tengah tidak menghasilkan perubahan. Efek yang tersedia adalah:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Corak &mdash; membuat segalanya lebih terang atau lebih gelap secara terkendali. Setiap &quot; tutul&quot; pada penggeser menambah atau mengurangi intensitas keseluruhan (&ie; kecerahan yang dirasakan) dengan jumlah yang mutlak. </para
+></listitem>
+      <listitem
+><para
+>Gelapkan &mdash; mengubah intensitas ke persentase dari nilai awal. Setelan penggeser di tengah-tengah antara hasil tengah dan maksimum dalam setengah warna sama kuatnya dengan yang asli. Minimum memberi warna dua kali lebih kuat dari aslinya. </para
+></listitem>
+      <listitem
+><para
+>Terangkan &mdash; secara konsep, kebalikan dari gelapkan; terangkan dapat dianggap sebagai pekerjaan dengan &quot;jarak dari putih&quot;, yang mana gelapkan bekerja dengan &quot;jarak dari hitam&quot;. Minimumnya adalah warna dua kali lipat &quot;jauh&quot; dari putih seperti aslinya, sementara setengah di antara tengah dan maksimum memberikan intensitas setengah antara warna asli dan putih. </para
+></listitem>
+    </itemizedlist>
+  </sect4>
+
+  <sect4>
+    <title
+>Warna</title>
+
+    <para
+>Warna juga mengubah warna keseluruhan, tetapi tidak terbatas pada intensitas. Efek yang tersedia adalah:</para>
+
+    <itemizedlist>
+      <listitem
+><para
+>Desaturate &mdash; mengubah kroma relatif. Pengesetan tengah tidak menghasilkan perubahan; maksimum memberi warna abu-abu yang intensitas perseptualnya sama dengan warna asli. Pengesetan yang lebih rendah meningkatkan kroma, memberikan warna abu-abu yang kurang/lebih &quot;cerah&quot; dari aslinya. </para
+></listitem>
+      <listitem
+><para
+>Lesap &mdash; memadukan warna asli dengan lembut menjadi warna referensi. Setelan minimum pada penggeser tidak menghasilkan perubahan; maksimum memberi warna referensi. </para
+></listitem>
+      <listitem
+><para
+>Semir &mdash; mirip dengan Lesap, kecuali warna (rona dan kroma) tersebut berubah lebih cepat sementara intensitasnya berubah lebih lambat ketika nilai penggeser ditingkatkan. </para
+></listitem>
+    </itemizedlist>
+  </sect4>
+
+  <sect4>
+    <title
+>Kontras</title>
+
+    <para
+>Efek kontras mirip dengan efek warna, kecuali mereka berlaku untuk teks, menggunakan warna latarbelakang sebagai warna referensi, dan desaturate tidak tersedia. Lesap menghasilkan teks yang &quot;melesap&quot; lebih cepat, tetapi mempertahankan warnanya lebih lama, sementara Semir menghasilkan teks yang berubah warna agar cocok dengan latarbelakang lebih cepat sambil menjaga kontras intensitas yang lebih besar lebih lama (di mana penggeser &quot;lebih panjang&quot; berarti pengaturan lebih tinggi). Untuk efek Kontras, pengaturan minimum pada penggeser tidak menghasilkan perubahan, sementara maksimum menyebabkan teks menghilang sepenuhnya ke latarbelakang.</para>
+  </sect4>
+
+</sect3>
+
+</sect2>
+
+</sect1>
+
+</article>
+<!-- kate: indent-width 2; replace-tabs on; -->

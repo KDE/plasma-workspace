@@ -1,0 +1,136 @@
+# translation of krunner_shellrunner.po to Kurdish
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Erdal Ronahi <erdal.ronahi@nospam.gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner_shellrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-27 00:45+0000\n"
+"PO-Revision-Date: 2009-01-08 21:09+0200\n"
+"Last-Translator: Omer Ensari <oensari@gmail.com>\n"
+"Language-Team: Kurdish <ku@li.org>\n"
+"Language: ku\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Kurdish\n"
+"X-Poedit-SourceCharset: utf8\n"
+
+#: shellrunner.cpp:35
+#, kde-format
+msgid "Finds commands that match :q:, using common shell syntax"
+msgstr ""
+
+#: shellrunner.cpp:36
+#, fuzzy, kde-format
+#| msgid "Run in &terminal window"
+msgid "Run in Terminal Window"
+msgstr "Di &termînalê de bixebitîne"
+
+#: shellrunner.cpp:54
+#, kde-format
+msgid "Run %1"
+msgstr "%1 Bide xebitandin"
+
+#~ msgid "Enter the user you want to run the application as here."
+#~ msgstr "Navê bikarhênerê tu dixwazî sepanê bixebitîne li vir binivîse."
+
+#~ msgid "User&name:"
+#~ msgstr "&Navê bikarhêner:"
+
+#~ msgid "Enter the password here for the user you specified above."
+#~ msgstr "Nasnava bikarhênerê li jor hatiye dîyar kirin binivîse li vir."
+
+#~ msgid "Pass&word:"
+#~ msgstr "Şî_fre:"
+
+#~ msgid ""
+#~ "Check this option if the application you want to run is a text mode "
+#~ "application. The application will then be run in a terminal emulator "
+#~ "window."
+#~ msgstr ""
+#~ "Heke sepana tu dixwazî bixebitînî bi moda nivîsê be, vê taybetiyê "
+#~ "hilbijêre. Dê sepan di paceya emûlatorê termînalê de bixebite."
+
+#~ msgid "Run in &terminal window"
+#~ msgstr "Di &termînalê de bixebitîne"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "user id. Every process has a user id associated with it. This id code "
+#~ "determines file access and other permissions. The password of the user is "
+#~ "required to do this."
+#~ msgstr ""
+#~ "Heke tu dixwazî sepanê bi hejmara bikarhênerekî cuda bixebitînî vê "
+#~ "taybetiyê hilbijêre. Her sepan xwedî hejmara bikarhênerê têkildar e. Ev "
+#~ "hejmara bikarhêner gihaştina pelan û mafên din dîyar dike. Ji bo vê "
+#~ "kirinê nasnava bikarhêner pêwist e."
+
+#~ msgid "Run as a different &user"
+#~ msgstr "Wekî &bikarhênerê cuda bixebitîne"
+
+#~ msgid ""
+#~ "<qt>Select whether realtime scheduling should be enabled for the "
+#~ "application. The scheduler governs which process will run and which will "
+#~ "have to wait. Two schedulers are available:\n"
+#~ "<ul>\n"
+#~ "<li><em>Normal:</em> This is the standard, timesharing scheduler. It will "
+#~ "divide fairly the available processing time between all processes.</li>\n"
+#~ "<li><em>Realtime:</em>This scheduler will run your application "
+#~ "uninterrupted until it gives up the processor. This can be dangerous. An "
+#~ "application that does not give up the processor might hang the system. "
+#~ "You need root's password to use the scheduler.</li>\n"
+#~ "</ul>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>Hildibijêre ku bername-kirina hevdem ji bo sepanê bê çalak kirina an "
+#~ "na. Bernameker rêberî dike ku kîjan pêvajo dê bên xebitandin û kîjan dê "
+#~ "lê bendê bimînin. Du bernameker hene:\n"
+#~ "<ul>\n"
+#~ "<li><em>Asayî:</em> Ev bernamekera parvekirinê yê standard e. Ev demê "
+#~ "pêvajo yê di navbera hemû pêvajo yan de baş parve dike.</li>\n"
+#~ "<li><em>Hevdem:</em>Ev bernameker dê pêvajo yê bê-rawestandin heta kiryar "
+#~ "bide bidomîne. Ev dikare bibe talûkedar. Sepana ku kiryarê nede di be ku "
+#~ "pergalê bide sekinandin. Ji bo bi kar anîna vê bernamekerê nasnava root "
+#~ "pêwist e.</li>\n"
+#~ "</ul>\n"
+#~ "</qt>"
+
+#~ msgid "Run with realtime &scheduling"
+#~ msgstr "Bi &bername-kirina hevdem re bixebite"
+
+#~ msgid ""
+#~ "The priority that the command will be run with can be set here. From left "
+#~ "to right, it goes from low to high. The center position is the default "
+#~ "value. For priorities higher than the default, you will need to provide "
+#~ "the root password."
+#~ msgstr ""
+#~ "Pêşîniya ku ferman dê bi vê re bê xebitandin li vir tê veava kirin. Ji "
+#~ "çepê ber bi rastê ve, ev ji ya nizim ber bi ya bilind ve diçe. Bicihbûna "
+#~ "navîn nirxa standard e. Ji bo pêşîniyên ku standard bilindtir in, nasnava "
+#~ "root pêwist e."
+
+#~ msgid "&Priority:"
+#~ msgstr "&Pêşanî:"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "priority. A higher priority tells the operating system to give more "
+#~ "processing time to your application."
+#~ msgstr ""
+#~ "Heke te divê sepanê bi pêşînî yekê cuda bixebitînî, vê taybetiyê "
+#~ "hilbijêre. Pêşîniyên bilindtir dixwazin ku pergala te ya xebatê ji bo "
+#~ "sepanê bêhtir kar veqetînin."
+
+#~ msgid "Run with a &different priority"
+#~ msgstr "Bi pêşanî yekê &cuda bixebitîne"
+
+#~ msgid "Low"
+#~ msgstr "Nizim"
+
+#~ msgid "High"
+#~ msgstr "Bilind"

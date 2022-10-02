@@ -1,0 +1,187 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Tamas Szanto <tszanto@interware.hu>, 2009.
+# Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2011, 2012, 2014, 2019.
+# Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: KDE 4.3\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2021-09-28 14:27+0200\n"
+"Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.03.80\n"
+
+#: contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Általános"
+
+#: contents/ui/ConfigGeneral.qml:36
+#, kde-format
+msgctxt ""
+"Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
+msgid "Show actions:"
+msgstr "Műveletek megjelenítése:"
+
+#: contents/ui/ConfigGeneral.qml:37
+#, kde-format
+msgid "Logout"
+msgstr "Kijelentkezés"
+
+#: contents/ui/ConfigGeneral.qml:43
+#, kde-format
+msgid "Shutdown"
+msgstr "Leállítás"
+
+#: contents/ui/ConfigGeneral.qml:48
+#, kde-format
+msgid "Reboot"
+msgstr "Újraindítás"
+
+#: contents/ui/ConfigGeneral.qml:53 contents/ui/data.js:5
+#, kde-format
+msgid "Lock"
+msgstr "Zárolás"
+
+#: contents/ui/ConfigGeneral.qml:58
+#, kde-format
+msgid "Switch User"
+msgstr "Felhasználóváltás"
+
+#: contents/ui/ConfigGeneral.qml:63 contents/ui/data.js:46
+#, kde-format
+msgid "Hibernate"
+msgstr "Hibernálás"
+
+#: contents/ui/ConfigGeneral.qml:68 contents/ui/data.js:39
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Alvó állapot"
+
+#: contents/ui/data.js:6
+#, kde-format
+msgid "Lock the screen"
+msgstr "Képernyőzárolás"
+
+#: contents/ui/data.js:12
+#, kde-format
+msgid "Switch user"
+msgstr "Felhasználóváltás"
+
+#: contents/ui/data.js:13
+#, kde-format
+msgid "Start a parallel session as a different user"
+msgstr "Párhuzamos munkamenet indítása másik felhasználóként"
+
+#: contents/ui/data.js:18
+#, kde-format
+msgid "Shutdown…"
+msgstr "Leállítás…"
+
+#: contents/ui/data.js:19
+#, kde-format
+msgid "Turn off the computer"
+msgstr "A számítógép kikapcsolása"
+
+#: contents/ui/data.js:25
+#, kde-format
+msgid "Restart…"
+msgstr "Újraindítás…"
+
+#: contents/ui/data.js:26
+#, kde-format
+msgid "Reboot the computer"
+msgstr "A számítógép újraindítása"
+
+#: contents/ui/data.js:32
+#, kde-format
+msgid "Logout…"
+msgstr "Kijelentkezés…"
+
+#: contents/ui/data.js:33
+#, kde-format
+msgid "End the session"
+msgstr "A munkamenet befejezése"
+
+#: contents/ui/data.js:40
+#, kde-format
+msgid "Sleep (suspend to RAM)"
+msgstr "Alvó állapot (felfüggesztés memóriába)"
+
+#: contents/ui/data.js:47
+#, kde-format
+msgid "Hibernate (suspend to disk)"
+msgstr "Hibernálás (felfüggesztés merevlemezre)"
+
+#~ msgid "Shutdown..."
+#~ msgstr "Leállítás…"
+
+#~ msgid "Logout..."
+#~ msgstr "Kijelentkezés…"
+
+#~ msgid "Do you want to suspend to disk (hibernate)?"
+#~ msgstr "Szeretne felfüggeszteni a merevlemezre (hibernálás)?"
+
+#~ msgid "Yes"
+#~ msgstr "Igen"
+
+#~ msgid "No"
+#~ msgstr "Nem"
+
+#~ msgid "Do you want to suspend to RAM (sleep)?"
+#~ msgstr "Szeretne felfüggeszteni a memóriába (alvó állapot)?"
+
+#~ msgid "Leave"
+#~ msgstr "Kilépés"
+
+#~ msgid "Leave..."
+#~ msgstr "Kilépés…"
+
+#~ msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
+#~ msgid "Actions"
+#~ msgstr "Műveletek"
+
+#~ msgid "Suspend"
+#~ msgstr "Felfüggesztés"
+
+#~ msgid "Lock/Logout Settings"
+#~ msgstr "Zárolás/kijelentkezés beállításai"
+
+#~ msgid "SystemTray Settings"
+#~ msgstr "A paneltálca beállításai"
+
+#~ msgid "Configure Lock/Logout"
+#~ msgstr "Beállítás: Zárolás/kijelentkezés"
+
+#~ msgid "Please select one or more items on the list below."
+#~ msgstr "Válasszon ki egy vagy több elemet az alábbi listából."
+
+#~ msgid "Entries"
+#~ msgstr "Bejegyzések"
+
+#, fuzzy
+#~| msgid "Show lock button"
+#~ msgid "Show \"switch user\" button"
+#~ msgstr "Képernyőzároló gomb"
+
+#~ msgid "Show logout button"
+#~ msgstr "Kijelentkezés gomb"
+
+#, fuzzy
+#~| msgid "Show logout button"
+#~ msgid "Show hibernate button"
+#~ msgstr "Kijelentkezés gomb"
+
+#, fuzzy
+#~| msgid "Show lock button"
+#~ msgid "Show sleep button"
+#~ msgstr "Képernyőzároló gomb"

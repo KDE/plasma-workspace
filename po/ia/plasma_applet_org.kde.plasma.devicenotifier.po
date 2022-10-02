@@ -1,0 +1,180 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# g.sora <g.sora@tiscali.it>, 2011, 2012, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-21 00:47+0000\n"
+"PO-Revision-Date: 2022-01-21 22:57+0100\n"
+"Last-Translator: giovanni <g.sora@tiscali.it>\n"
+"Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
+"Language: ia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.12.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: package/contents/ui/DeviceItem.qml:180
+#, kde-format
+msgctxt "@info:status Free disk space"
+msgid "%1 free of %2"
+msgstr "%1 libere de %2"
+
+#: package/contents/ui/DeviceItem.qml:184
+#, kde-format
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Accessing…"
+msgstr "Il accede…"
+
+#: package/contents/ui/DeviceItem.qml:187
+#, kde-format
+msgctxt ""
+"Removing is a less technical word for Unmounting; translation should be "
+"short and mean 'Currently unmounting this device'"
+msgid "Removing…"
+msgstr "Removente..."
+
+#: package/contents/ui/DeviceItem.qml:190
+#, kde-format
+msgid "Don't unplug yet! Files are still being transferred..."
+msgstr "Non distacca nunc! File ancora es transferente ... "
+
+#: package/contents/ui/DeviceItem.qml:221
+#, kde-format
+msgid "Open in File Manager"
+msgstr "Aperi in Gerente de File"
+
+#: package/contents/ui/DeviceItem.qml:224
+#, kde-format
+msgid "Mount and Open"
+msgstr "Monta e aperi"
+
+#: package/contents/ui/DeviceItem.qml:226
+#, kde-format
+msgid "Eject"
+msgstr "Expelle"
+
+#: package/contents/ui/DeviceItem.qml:228
+#, kde-format
+msgid "Safely remove"
+msgstr "Remove con securitate"
+
+#: package/contents/ui/DeviceItem.qml:270
+#, kde-format
+msgid "Mount"
+msgstr "Monta"
+
+#: package/contents/ui/FullRepresentation.qml:41
+#: package/contents/ui/main.qml:238
+#, kde-format
+msgid "Remove All"
+msgstr "Remove Toto"
+
+#: package/contents/ui/FullRepresentation.qml:42
+#, kde-format
+msgid "Click to safely remove all devices"
+msgstr "Pulsa pro remover con securitate omne dispositivos."
+
+#: package/contents/ui/FullRepresentation.qml:186
+#, kde-format
+msgid "No removable devices attached"
+msgstr "Dispositivos non removibile attachate"
+
+#: package/contents/ui/FullRepresentation.qml:186
+#, kde-format
+msgid "No disks available"
+msgstr "Nulle discos disponibile"
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid "Most Recent Device"
+msgstr "Dispositivo plus recente"
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid "No Devices Available"
+msgstr "Nulle dispositivo disponibile"
+
+#: package/contents/ui/main.qml:245
+#, kde-format
+msgid "Removable Devices"
+msgstr "Dispositivos removibile"
+
+#: package/contents/ui/main.qml:251
+#, kde-format
+msgid "Non Removable Devices"
+msgstr "Dispositivos non removibile"
+
+#: package/contents/ui/main.qml:257
+#, kde-format
+msgid "All Devices"
+msgstr "Omne dispositivos"
+
+#: package/contents/ui/main.qml:265
+#, kde-format
+msgid "Show popup when new device is plugged in"
+msgstr "Monstra  popup quando un nove dispositivo es connectite"
+
+#: package/contents/ui/main.qml:274
+#, kde-format
+msgctxt "Open auto mounter kcm"
+msgid "Configure Removable Devices…"
+msgstr "Configura dispositivos removibile..."
+
+#~ msgid "Show:"
+#~ msgstr "Monstra:"
+
+#~ msgid "General"
+#~ msgstr "General"
+
+#~ msgid ""
+#~ "It is currently <b>not safe</b> to remove this device: applications may "
+#~ "be accessing it. Click the eject button to safely remove this device."
+#~ msgstr ""
+#~ "Il es currentemente <b> non secur </b> remover iste dispositivo: "
+#~ "applicationes pote es accedente a illo. Pulsa le button de expeller pro "
+#~ "remover con securitate iste dispositivo."
+
+#~ msgid "This device is currently accessible."
+#~ msgstr "Iste dispositivo es currentemente accessibile."
+
+#~ msgid ""
+#~ "It is currently <b>not safe</b> to remove this device: applications may "
+#~ "be accessing other volumes on this device. Click the eject button on "
+#~ "these other volumes to safely remove this device."
+#~ msgstr ""
+#~ "Il es currentemente <b>non secur</b> remover iste dispositivo: "
+#~ "applicationes pote esser accedente altere volumines sur iste dispositivo. "
+#~ "Tu pulsa le button de expeller sur iste altere volumines pro remover con "
+#~ "securitate iste dispositivo."
+
+#~ msgid "It is currently safe to remove this device."
+#~ msgstr "Currentemente il es secur remover iste dispositivo."
+
+#~ msgid "This device is not currently accessible."
+#~ msgstr "Iste dispositivo non es currentemente accessibile."
+
+#~ msgid "1 action for this device"
+#~ msgid_plural "%1 actions for this device"
+#~ msgstr[0] "%1 action pro iste dispositivo"
+#~ msgstr[1] "%1 actiones pro iste dispositivo"
+
+#~ msgid "Click to access this device from other applications."
+#~ msgstr "Pulsa pro acceder a iste dispositivo ab altere applicationes."
+
+#~ msgid "Click to eject this disc."
+#~ msgstr "Pulsa pro expeller iste disco."
+
+#~ msgid "Click to safely remove this device."
+#~ msgstr "Pulsa pro remover con securitate iste dispositivo."
+
+#~ msgid "Click to mount this device."
+#~ msgstr "Pulsa pro montar iste dispositivo."
+
+#~ msgid "Available Devices"
+#~ msgstr "Dispositivos disponibile"

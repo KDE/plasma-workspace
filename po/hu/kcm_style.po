@@ -1,0 +1,444 @@
+# Copyright (C) 2010 Free Software Foundation, Inc.
+#
+# Tamas Szanto <tszanto@interware.hu>, 2000.
+# Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2019.
+# Balázs Úr <urbalazs@gmail.com>, 2012.
+# Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: KDE 4.2\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"PO-Revision-Date: 2021-09-30 13:51+0200\n"
+"Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.03.80\n"
+
+#: gtkpage.cpp:59
+#, kde-format
+msgid "%1 is not a valid GTK Theme archive."
+msgstr "A(z) %1 érvénytelen GTK témaarchívum."
+
+#: kcmstyle.cpp:161 kcmstyle.cpp:168
+#, kde-format
+msgid "There was an error loading the configuration dialog for this style."
+msgstr "Hiba történt a stílushoz tartozó beállítóablak betöltése közben."
+
+#: kcmstyle.cpp:274
+#, kde-format
+msgid "Failed to apply selected style '%1'."
+msgstr "Nem sikerült alkalmazni a kiválasztott stílust: „%1”."
+
+#: package/contents/ui/EffectSettingsPopup.qml:32
+#, kde-format
+msgid "Show icons:"
+msgstr "Ikonok megjelenítése:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:33
+#, kde-format
+msgid "On buttons"
+msgstr "A gombokon"
+
+#: package/contents/ui/EffectSettingsPopup.qml:44
+#, kde-format
+msgid "In menus"
+msgstr "A menükben"
+
+#: package/contents/ui/EffectSettingsPopup.qml:56
+#, kde-format
+msgid "Main toolbar label:"
+msgstr "Fő eszköztár címkéje:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "None"
+msgstr "Nincs"
+
+#: package/contents/ui/EffectSettingsPopup.qml:59
+#, kde-format
+msgid "Text only"
+msgstr "Csak szöveg"
+
+#: package/contents/ui/EffectSettingsPopup.qml:60
+#, kde-format
+msgid "Beside icons"
+msgstr "Az ikonok mellett"
+
+#: package/contents/ui/EffectSettingsPopup.qml:61
+#, kde-format
+msgid "Below icon"
+msgstr "Az ikon alatt"
+
+#: package/contents/ui/EffectSettingsPopup.qml:76
+#, kde-format
+msgid "Secondary toolbar label:"
+msgstr "Másodlagos eszköztár címkéje:"
+
+#: package/contents/ui/GtkStylePage.qml:18
+#, kde-format
+msgid "GNOME/GTK Application Style"
+msgstr "GNOME/GTK alkalmazásstílus"
+
+#: package/contents/ui/GtkStylePage.qml:44
+#, kde-format
+msgid "GTK theme:"
+msgstr "GTK téma:"
+
+#: package/contents/ui/GtkStylePage.qml:69
+#, kde-format
+msgid "Preview…"
+msgstr "Előnézet…"
+
+#: package/contents/ui/GtkStylePage.qml:88
+#, kde-format
+msgid "Install from File…"
+msgstr "Telepítés fájlból…"
+
+#: package/contents/ui/GtkStylePage.qml:93
+#, kde-format
+msgid "Get New GNOME/GTK Application Styles…"
+msgstr "Új GNOME/GTK alkalmazásstílusok letöltése…"
+
+#: package/contents/ui/GtkStylePage.qml:109
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr "GTK témaarchívum kiválasztása"
+
+#: package/contents/ui/GtkStylePage.qml:111
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr "GTK témaarchívum (*.tar.xz *.tar.gz *.tar.bz2)"
+
+#: package/contents/ui/main.qml:17
+#, kde-format
+msgid ""
+"This module allows you to modify the visual appearance of applications' user "
+"interface elements."
+msgstr ""
+"Ebben a modulban beállíthatja az alkalmazások felhasználói felületének "
+"vizuális megjelenését."
+
+#: package/contents/ui/main.qml:96
+#, kde-format
+msgid "Configure Style…"
+msgstr "Beállítás…"
+
+#: package/contents/ui/main.qml:116
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr "Ikonok és eszköztárak beállítása"
+
+#: package/contents/ui/main.qml:132
+#, kde-format
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "GNOME/GTK alkalmazásstílusok beállítása…"
+
+#: styleconfdialog.cpp:21
+#, kde-format
+msgid "Configure %1"
+msgstr "A(z) %1 beállításai"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "1. lap"
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, kde-format
+msgid "Push Button"
+msgstr "Nyomógomb"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, kde-format
+msgid "Combo box"
+msgstr "Kombinált lista"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "Jelölőnégyzet"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "Választógomb"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:133
+#, kde-format
+msgid "Tab 2"
+msgstr "2. lap"
+
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, kde-format
+msgid "Application style"
+msgstr "Alkalmazásstílus"
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, kde-format
+msgid "Show icons on buttons"
+msgstr "Ikonok megjelenítése a nyomógombokon"
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, kde-format
+msgid "Show icons in menus"
+msgstr "Ikonok megjelenítése a menükben"
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, kde-format
+msgid "Main toolbar label"
+msgstr "Fő eszköztár címkéje"
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, kde-format
+msgid "Secondary toolbar label"
+msgstr "Másodlagos eszköztár címkéje"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Kiszel Kristóf,Szántó Tamás"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kiszel.kristof@gmail.com,tszanto@interware.hu"
+
+#~ msgid "Application Style"
+#~ msgstr "Alkalmazásstílusok"
+
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
+#~ msgstr "© Karol Szwed, Daniel Molkentin, 2002., © Kai Uwe Broulik, 2019. "
+
+#~ msgid "Karol Szwed"
+#~ msgstr "Karol Szwed"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Kai Uwe Broulik"
+
+#, fuzzy
+#~| msgid "Application Style"
+#~ msgid "Download New GNOME/GTK2 Application Styles..."
+#~ msgstr "Alkalmazásstílusok"
+
+#, fuzzy
+#~| msgid "Application Style"
+#~ msgid "GNOME/GTK2 Application Styles"
+#~ msgstr "Alkalmazásstílusok"
+
+#, fuzzy
+#~| msgid "Application Style"
+#~ msgid "Download New GNOME/GTK3 Application Styles..."
+#~ msgstr "Alkalmazásstílusok"
+
+#, fuzzy
+#~| msgid "Application Style"
+#~ msgid "GNOME/GTK3 Application Styles"
+#~ msgstr "Alkalmazásstílusok"
+
+#~ msgid "Unable to Load Dialog"
+#~ msgstr "A párbeszédablakot nem sikerült betölteni"
+
+#~ msgid "No description available."
+#~ msgstr "Nem áll rendelkezésre leírás."
+
+#~ msgid ""
+#~ "This area shows a preview of the currently selected style without having "
+#~ "to apply it to the whole desktop."
+#~ msgstr ""
+#~ "Itt látható az éppen kijelölt stílus hatása, anélkül, hogy azt alkalmazni "
+#~ "kellene az egész munkaasztalra."
+
+#~ msgid ""
+#~ "Here you can choose from a list of predefined widget styles (e.g. the way "
+#~ "buttons are drawn) which may or may not be combined with a theme "
+#~ "(additional information like a marble texture or a gradient)."
+#~ msgstr ""
+#~ "Itt lehet választani az előre definiált elemstílusok közül (pl. hogy a "
+#~ "nyomógombok hogyan jelenjenek meg). Az elemstílus a grafikus témától "
+#~ "függetlenül megadható (a téma hatására pl. a nyomógombok megjelenése más "
+#~ "textúrát, színátmenetet kaphat)."
+
+#, fuzzy
+#~| msgid ""
+#~| "If you enable this option, KDE Applications will show small icons "
+#~| "alongside some important buttons."
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "some important buttons."
+#~ msgstr ""
+#~ "Ha bejelöli ezt az opciót, a KDE-alkalmazásoknál kis ikonok jelennek meg "
+#~ "a fontosabb gombok mellett."
+
+#, fuzzy
+#~| msgid ""
+#~| "If you enable this option, KDE Applications will show small icons "
+#~| "alongside most menu items."
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "most menu items."
+#~ msgstr ""
+#~ "Ha bejelöli ezt az opciót, a KDE alkalmazásoknál a standard nyomógombokon "
+#~ "megjelenik egy ikon is."
+
+#, fuzzy
+#~| msgid ""
+#~| "<p><b>No Text:</b> Shows only icons on toolbar buttons. Best option for "
+#~| "low resolutions.</p><p><b>Text Only: </b>Shows only text on toolbar "
+#~| "buttons.</p><p><b>Text Beside Icons: </b> Shows icons and text on "
+#~| "toolbar buttons. Text is aligned beside the icon.</p><b>Text Below "
+#~| "Icons: </b> Shows icons and text on toolbar buttons. Text is aligned "
+#~| "below the icon."
+#~ msgid ""
+#~ "<p><b>No text:</b> Shows only icons on toolbar buttons. Best option for "
+#~ "low resolutions.</p><p><b>Text only: </b>Shows only text on toolbar "
+#~ "buttons.</p><p><b>Text beside icons: </b> Shows icons and text on toolbar "
+#~ "buttons. Text is aligned beside the icon.</p><b>Text below icons: </b> "
+#~ "Shows icons and text on toolbar buttons. Text is aligned below the icon."
+#~ msgstr ""
+#~ "<p><b>Csak ikon:</b> az eszköztár-gombokon csak ikon jelenjen meg. "
+#~ "Elsősorban alacsony felbontásoknál célszerű használni.</p><p><b>Csak "
+#~ "szöveg: </b>az eszköztár-gombokon csak szöveg jelenjen meg.</p><p><b>A "
+#~ "szöveg az ikon mellett: </b> Ikon és szöveg is tartozzon az eszköztár-"
+#~ "gombokhoz, a szöveg az ikon mellé kerüljön.</p><b>A szöveg az ikon alatt: "
+#~ "</b> Ikon és szöveg is tartozzon az eszköztár-gombokhoz, a szöveg az ikon "
+#~ "alá kerüljön."
+
+#~ msgid "Toolbars"
+#~ msgstr "Eszköztárak"
+
+#~ msgid "No Text"
+#~ msgstr "nincs szöveg"
+
+#, fuzzy
+#~| msgid "Widget style:"
+#~ msgid "Widget Style"
+#~ msgstr "Grafikai elemstílus:"
+
+#~ msgid "Widget style:"
+#~ msgstr "Grafikai elemstílus:"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Fine Tuning"
+#~ msgstr "&Finomhangolás"
+
+#~ msgid "Description: %1"
+#~ msgstr "Leírás: %1"
+
+#~ msgid ""
+#~ "This page allows you to choose details about the widget style options"
+#~ msgstr "Ezen az oldalon állíthatja be az elemstílusok részleteit"
+
+#~ msgid "Group Box"
+#~ msgstr "Csoportkeret"
+
+#~ msgid "KDE Style Module"
+#~ msgstr "KDE stílusbeállító modul"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "Menubar"
+#~ msgstr "Menüsor"
+
+#~ msgid "Menubar style:"
+#~ msgstr "Menüsor stílusa:"
+
+#~ msgid "In application"
+#~ msgstr "Az alkalmazásban"
+
+#~ msgid "Title bar button"
+#~ msgstr "Címsor gomb"
+
+#, fuzzy
+#~| msgid "Application Menu widget"
+#~ msgid "Global Menu widget"
+#~ msgstr "Alkalmazásmenü widget"
+
+#~ msgid "Your changes will take effect only on application restart."
+#~ msgstr ""
+#~ "A beállítások változásai csak az alkalmazás újraindításakor lépnek életbe."
+
+#~ msgid ""
+#~ "<p>Changes to the visibility of menu icons will only affect newly started "
+#~ "applications.</p>"
+#~ msgstr ""
+#~ "<p>A menüikonok láthatóságának változtatása csak az újonnan indított "
+#~ "alkalmazásokra érvényes.</p>"
+
+#~ msgctxt "@title:window"
+#~ msgid "Menu Icons Changed"
+#~ msgstr "Menüikonok megváltoztatva"
+
+#~ msgid "Top screen menubar"
+#~ msgstr "Képernyő tetején lévő menüsor"
+
+#~ msgid "Only export"
+#~ msgstr "Csak exportálás"
+
+#~ msgid "Graphical effects:"
+#~ msgstr "Grafikai effektek:"
+
+#~ msgid "Low display resolution and Low CPU"
+#~ msgstr "Alacsony felbontás, lassú CPU"
+
+#~ msgid "High display resolution and Low CPU"
+#~ msgstr "Magas felbontás, lassú CPU"
+
+#~ msgid "Low display resolution and High CPU"
+#~ msgstr "Alacsony felbontás, gyors CPU"
+
+#~ msgid "High display resolution and High CPU"
+#~ msgstr "Magas felbontás, gyors CPU"
+
+#~ msgid "Low display resolution and Very High CPU"
+#~ msgstr "Alacsony felbontás, nagyon gyors CPU"
+
+#~ msgid "High display resolution and Very High CPU"
+#~ msgstr "Magas felbontás, nagyon gyors CPU"
+
+#~ msgid ""
+#~ "If you enable this option, KDE Applications will run internal animations."
+#~ msgstr "Ha bejelöli ezt, a KDE-alkalmazásoknál animáció fog megjelenni."
+
+#~ msgid "kcmstyle"
+#~ msgstr "kcmstyle"
+
+#~ msgid "Icons Only"
+#~ msgstr "csak ikon"
+
+#, fuzzy
+#~| msgctxt "@label:listbox"
+#~| msgid "Text pos&ition:"
+#~ msgctxt "@label:listbox"
+#~ msgid "Text pos&ition of toolbar elements:"
+#~ msgstr "Szövegpo&zíció:"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Style"
+#~ msgstr "&Stílus"
+
+#~ msgid ""
+#~ "This page allows you to enable various widget style effects. For best "
+#~ "performance, it is advisable to disable all effects."
+#~ msgstr ""
+#~ "Ezen a lapon a grafikus elemek néhány megjelenítési effektusát lehet "
+#~ "beállítani. Ha azt szeretné, hogy a megjelenítés a lehető leggyorsabb "
+#~ "legyen, kapcsolja ki az összes effektust."

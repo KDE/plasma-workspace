@@ -1,0 +1,278 @@
+# Traducerea ksmserver.po în Română
+# translation of ksmserver.po to Romanian
+# Copyright (C) 2003, 2004, 2005, 2008 Free Software Foundation, Inc.
+# Claudiu Costin <claudiuc@kde.org>, 2003, 2004, 2005.
+# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2010, 2012, 2013, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: ksmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-22 00:47+0000\n"
+"PO-Revision-Date: 2020-09-06 16:42+0100\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 19.12.3\n"
+
+#: logout.cpp:344
+#, kde-format
+msgid "Logout canceled by '%1'"
+msgstr "Ieșire anulată de „%1”"
+
+#: main.cpp:117
+#, kde-format
+msgid "$HOME not set!"
+msgstr "$HOME nu e definit!"
+
+#: main.cpp:121 main.cpp:127
+#, kde-format
+msgid "$HOME directory (%1) does not exist."
+msgstr "Dosarul $HOME (%1) nu există."
+
+#: main.cpp:123
+#, kde-format
+msgid "No write access to $HOME directory (%1)."
+msgstr "Lipsește accesul de scriere în dosarul $HOME (%1)."
+
+#: main.cpp:129
+#, kde-format
+msgid "No read access to $HOME directory (%1)."
+msgstr "Lipsește accesul de citire în dosarul $HOME (%1)."
+
+#: main.cpp:133
+#, kde-format
+msgid "$HOME directory (%1) is out of disk space."
+msgstr "Dosarul $HOME (%1) a rămas fără spațiu pe disc."
+
+#: main.cpp:136
+#, kde-format
+msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+msgstr "Scrierea în dosarul $HOME (%2) a eșuat cu eroarea „%1”"
+
+#: main.cpp:149 main.cpp:184
+#, kde-format
+msgid "No write access to '%1'."
+msgstr "Lipsește accesul de scriere în „%1”."
+
+#: main.cpp:151 main.cpp:186
+#, kde-format
+msgid "No read access to '%1'."
+msgstr "Lipsește accesul de citire în „%1”."
+
+#: main.cpp:159 main.cpp:172
+#, kde-format
+msgid "Temp directory (%1) is out of disk space."
+msgstr "Dosarul temporar (%1) a rămas fără spațiu pe disc."
+
+#: main.cpp:162 main.cpp:175
+#, kde-format
+msgid ""
+"Writing to the temp directory (%2) failed with\n"
+"    the error '%1'"
+msgstr ""
+"Scrierea în dosarul temporar (%2) a eșuat cu\n"
+"    eroarea „%1”"
+
+#: main.cpp:190
+#, kde-format
+msgid ""
+"The following installation problem was detected\n"
+"while trying to start Plasma:"
+msgstr ""
+"La pornirea Plasma a fost depistată următoarea\n"
+"problemă cu instalarea:"
+
+#: main.cpp:193
+#, kde-format
+msgid ""
+"\n"
+"\n"
+"Plasma is unable to start.\n"
+msgstr ""
+"\n"
+"\n"
+"Plasma nu poate porni.\n"
+
+#: main.cpp:200
+#, kde-format
+msgid "Plasma Workspace installation problem!"
+msgstr "Problemă cu instalarea spațiului de lucru Plasma!"
+
+#: main.cpp:236
+#, kde-format
+msgid ""
+"The reliable Plasma session manager that talks the standard X11R6 \n"
+"session management protocol (XSMP)."
+msgstr ""
+"Un gestionar de sesiune Plasma care comunică prin\n"
+"protocolul standard de gestiune a sesiunii X11R6 (XSMP)."
+
+#: main.cpp:240
+#, kde-format
+msgid "Restores the saved user session if available"
+msgstr "reface sesiunea precedentă dacă este disponibilă"
+
+#: main.cpp:243
+#, kde-format
+msgid "Also allow remote connections"
+msgstr "Permite și conexiuni distante"
+
+#: main.cpp:246
+#, kde-format
+msgid "Starts the session in locked mode"
+msgstr "Pornește sesiunea în regim blocat"
+
+#: main.cpp:250
+#, kde-format
+msgid ""
+"Starts without lock screen support. Only needed if other component provides "
+"the lock screen."
+msgstr ""
+"Pornește cu suport pentru ecranul de blocare. Necesar doar dacă altă "
+"componentă furnizează ecranul de blocare."
+
+#: server.cpp:873
+#, kde-format
+msgid "Session Management"
+msgstr "Gestiune sesiuni"
+
+#: server.cpp:876
+#, kde-format
+msgid "Log Out"
+msgstr "Ieșire din sistem"
+
+#: server.cpp:881
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "Ieșire fără confirmare"
+
+#: server.cpp:886
+#, kde-format
+msgid "Halt Without Confirmation"
+msgstr "Deconectare fără confirmare"
+
+#: server.cpp:891
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "Repornire fără confirmare"
+
+#, fuzzy
+#~| msgid ""
+#~| "Starts 'wm' in case no other window manager is \n"
+#~| "participating in the session. Default is 'kwin'"
+#~ msgid ""
+#~ "Starts <wm> in case no other window manager is \n"
+#~ "participating in the session. Default is 'kwin'"
+#~ msgstr ""
+#~ "pornește 'wm' în cazul în care nu există\n"
+#~ "alt manager de ferestre care să participe\n"
+#~ "la sesiune. Implicit este 'kwin'."
+
+#, fuzzy
+#~| msgid "&Logout"
+#~ msgid "Logout"
+#~ msgstr "&Ieșire din sistem"
+
+#~ msgid "Sleeping in 1 second"
+#~ msgid_plural "Sleeping in %1 seconds"
+#~ msgstr[0] "Adormire în 1 secundă"
+#~ msgstr[1] "Adormire în %1 secunde"
+#~ msgstr[2] "Adormire în %1 de secunde"
+
+#~ msgid "Lock"
+#~ msgstr "Blochează"
+
+#~ msgid "Turn off"
+#~ msgstr "Oprește"
+
+#~ msgid "Sleep"
+#~ msgstr "Dormi"
+
+#~ msgid "Logging out in 1 second."
+#~ msgid_plural "Logging out in %1 seconds."
+#~ msgstr[0] "Deautentificare în 1 secundă."
+#~ msgstr[1] "Deautentificare în %1 secunde."
+#~ msgstr[2] "Deautentificare în %1 de secunde."
+
+#~ msgid "Turning off computer in 1 second."
+#~ msgid_plural "Turning off computer in %1 seconds."
+#~ msgstr[0] "Oprire calculator în 1 secundă."
+#~ msgstr[1] "Oprire calculator în %1 secunde."
+#~ msgstr[2] "Oprire calculator în %1 de secunde."
+
+#~ msgid "Restarting computer in 1 second."
+#~ msgid_plural "Restarting computer in %1 seconds."
+#~ msgstr[0] "Repornire calculator în 1 secundă."
+#~ msgstr[1] "Repornire calculator în %1 secunde."
+#~ msgstr[2] "Repornire calculator în %1 de secunde."
+
+#, fuzzy
+#~| msgid "&Turn Off Computer"
+#~ msgid "Turn Off Computer"
+#~ msgstr "Opreș&te calculatorul"
+
+#, fuzzy
+#~| msgid "&Restart Computer"
+#~ msgid "Restart Computer"
+#~ msgstr "&Repornește calculatorul"
+
+#~ msgctxt "default option in boot loader"
+#~ msgid " (default)"
+#~ msgstr " (implicită)"
+
+#, fuzzy
+#~| msgid "&Cancel"
+#~ msgid "Cancel"
+#~ msgstr "&Renunță"
+
+#~ msgid "&Standby"
+#~ msgstr "&Stare de veghe"
+
+#~ msgid "Suspend to &RAM"
+#~ msgstr "Suspendă în &RAM"
+
+#~ msgid "Suspend to &Disk"
+#~ msgstr "Suspendă pe &disc"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Claudiu Costin,Sergiu Bivol"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ",sergiu@ase.md"
+
+#~ msgid "(C) 2000, The KDE Developers"
+#~ msgstr "(C) 2000, Dezvoltatorii KDE"
+
+#~ msgid "Matthias Ettrich"
+#~ msgstr "Matthias Ettrich"
+
+#~ msgid "Luboš Luňák"
+#~ msgstr "Luboš Luňák"
+
+#~ msgid "Maintainer"
+#~ msgstr "Responsabil"
+
+#~ msgctxt "current option in boot loader"
+#~ msgid " (current)"
+#~ msgstr " (actual)"
+
+#~ msgctxt "@label In corner of the logout dialog"
+#~ msgid "KDE <numid>%1.%2.%3</numid>"
+#~ msgstr "KDE <numid>%1.%2.%3</numid>"
+
+#~ msgctxt "@label In corner of the logout dialog"
+#~ msgid "KDE <numid>%1.%2</numid>"
+#~ msgstr "KDE <numid>%1.%2</numid>"
+
+#~ msgid "End Session for %1"
+#~ msgstr "Termină sesiunea pentru „%1”"
+
+#~ msgid "End Session for %1 (%2)"
+#~ msgstr "Termină sesiunea pentru „%1” (%2)"

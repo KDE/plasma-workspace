@@ -1,0 +1,313 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Alexander Potashev <aspotashev@gmail.com>, 2014, 2015, 2016, 2017, 2018, 2019.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2018, 2019, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-09 00:47+0000\n"
+"PO-Revision-Date: 2022-08-11 15:14+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 22.04.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Александр Поташев,Александр Яворский,Олеся Герасименко"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "aspotashev@gmail.com,KekcuHa@gmail.com,gammaray@basealt.ru"
+
+#: kcm.cpp:590
+#, kde-format
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr ""
+"Чтобы изменения вступили в силу, необходимо перезапустить сеанс работы "
+"Plasma."
+
+#: kcm.cpp:591
+#, kde-format
+msgid "Cursor Settings Changed"
+msgstr "Изменение темы курсоров мыши"
+
+#: lnftool.cpp:33
+#, kde-format
+msgid "Global Theme Tool"
+msgstr "Инструмент для выбора оформления рабочей среды"
+
+#: lnftool.cpp:35
+#, kde-format
+msgid ""
+"Command line tool to apply global theme packages for changing the look and "
+"feel."
+msgstr "Инструмент командной строки для изменения оформления рабочей среды."
+
+#: lnftool.cpp:37
+#, kde-format
+msgid "Copyright 2017, Marco Martin"
+msgstr "© Marco Martin, 2017"
+
+#: lnftool.cpp:38
+#, kde-format
+msgid "Marco Martin"
+msgstr "Marco Martin"
+
+#: lnftool.cpp:38
+#, kde-format
+msgid "Maintainer"
+msgstr "Сопровождающий"
+
+#: lnftool.cpp:46
+#, kde-format
+msgid "List available global theme packages"
+msgstr "Показать список доступных пакетов оформления рабочей среды."
+
+#: lnftool.cpp:49
+#, kde-format
+msgid ""
+"Apply a global theme package. This can be the name of a package, or a full "
+"path to an installed package, at which point this tool will ensure it is a "
+"global theme package and then attempt to apply it"
+msgstr ""
+"Применить пакет оформления. Возможно указать имя пакета или полный путь к "
+"установленному пакету, после чего будет произведена проверка, является ли "
+"указанный файл пакетом оформления и попытка его использования"
+
+#: lnftool.cpp:51
+#, kde-format
+msgid "packagename"
+msgstr "имя_пакета"
+
+#: lnftool.cpp:52
+#, kde-format
+msgid "Reset the Plasma Desktop layout"
+msgstr "Восстановить стандартное расположение виджетов рабочего стола Plasma."
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: lookandfeelsettings.kcfg:9
+#, kde-format
+msgid "Global look and feel"
+msgstr "Оформление рабочей среды"
+
+#: package/contents/ui/main.qml:20
+#, kde-format
+msgid "This module lets you choose the global look and feel."
+msgstr "Этот модуль позволяет выбрать общий вид рабочей среды."
+
+#: package/contents/ui/main.qml:53
+#, kde-format
+msgid "Contains Desktop layout"
+msgstr "Содержит определённое расположение виджетов"
+
+#: package/contents/ui/main.qml:67
+#, kde-format
+msgid "Preview Theme"
+msgstr "Предварительный просмотр"
+
+#: package/contents/ui/main.qml:83
+#, kde-format
+msgctxt ""
+"Confirmation question about applying the Global Theme - %1 is the Global "
+"Theme's name"
+msgid "Apply %1?"
+msgstr "Применить «%1»?"
+
+#: package/contents/ui/main.qml:101
+#, kde-format
+msgid "Choose what to apply…"
+msgstr "Выбрать компоненты оформления…"
+
+#: package/contents/ui/main.qml:101
+#, kde-format
+msgid "Show fewer options…"
+msgstr "Скрыть подробности…"
+
+#: package/contents/ui/main.qml:118
+#, kde-format
+msgid "Apply"
+msgstr "Применить"
+
+#: package/contents/ui/main.qml:130
+#, kde-format
+msgid "Cancel"
+msgstr "Отмена"
+
+#: package/contents/ui/main.qml:147
+#, kde-format
+msgid "Get New Global Themes…"
+msgstr "Загрузить оформления..."
+
+#: package/contents/ui/MoreOptions.qml:24
+#: package/contents/ui/MoreOptions.qml:31
+#, kde-format
+msgid "Layout settings:"
+msgstr "Параметры расположения виджетов"
+
+#: package/contents/ui/MoreOptions.qml:32
+#, kde-format
+msgid "Desktop layout"
+msgstr "Расположение виджетов"
+
+#: package/contents/ui/MoreOptions.qml:53
+#, kde-format
+msgid "Titlebar Buttons layout"
+msgstr "Кнопки в заголовках"
+
+#: package/contents/ui/MoreOptions.qml:66
+#: package/contents/ui/SimpleOptions.qml:63
+#, kde-format
+msgid ""
+"Applying a Desktop layout replaces your current configuration of desktops, "
+"panels, docks, and widgets"
+msgstr ""
+"При применении параметра текущие конфигурации рабочих столов, панелей, доков "
+"и виджетов будет заменены на определённые в оформлении"
+
+#: package/contents/ui/MoreOptions.qml:75
+#, kde-format
+msgid "Appearance settings:"
+msgstr "Параметры оформления:"
+
+#: package/contents/ui/MoreOptions.qml:78
+#, kde-format
+msgid "Colors"
+msgstr "Цвета"
+
+#: package/contents/ui/MoreOptions.qml:79
+#, kde-format
+msgid "Application Style"
+msgstr "Оформление приложений"
+
+#: package/contents/ui/MoreOptions.qml:80
+#, kde-format
+msgid "Window Decorations"
+msgstr "Оформление окон"
+
+#: package/contents/ui/MoreOptions.qml:81
+#, kde-format
+msgid "Icons"
+msgstr "Значки"
+
+#: package/contents/ui/MoreOptions.qml:82
+#, kde-format
+msgid "Plasma Style"
+msgstr "Оформление рабочего стола"
+
+#: package/contents/ui/MoreOptions.qml:83
+#, kde-format
+msgid "Cursors"
+msgstr "Курсоры мыши"
+
+#: package/contents/ui/MoreOptions.qml:84
+#, kde-format
+msgid "Fonts"
+msgstr "Шрифты"
+
+#: package/contents/ui/MoreOptions.qml:85
+#, kde-format
+msgid "Task Switcher"
+msgstr "Переключение окон"
+
+#: package/contents/ui/MoreOptions.qml:86
+#, kde-format
+msgid "Splash Screen"
+msgstr "Заставка"
+
+#: package/contents/ui/MoreOptions.qml:87
+#, kde-format
+msgid "Lock Screen"
+msgstr "Экран блокировки"
+
+#: package/contents/ui/SimpleOptions.qml:19
+#, kde-format
+msgid "The following will be applied by this Global Theme:"
+msgstr "Будут применены следующие компоненты:"
+
+#: package/contents/ui/SimpleOptions.qml:32
+#, kde-format
+msgid "Appearance settings"
+msgstr "Параметры оформления"
+
+#: package/contents/ui/SimpleOptions.qml:42
+#, kde-format
+msgctxt "List item"
+msgid "• Appearance settings"
+msgstr "• Параметры оформления"
+
+#: package/contents/ui/SimpleOptions.qml:47
+#, kde-format
+msgid "Desktop and window layout"
+msgstr "Расположение виджетов и окон"
+
+#: package/contents/ui/SimpleOptions.qml:58
+#, kde-format
+msgctxt "List item"
+msgid "• Desktop and window layout"
+msgstr "• Расположение виджетов и окон"
+
+#: package/contents/ui/SimpleOptions.qml:75
+#, kde-format
+msgid ""
+"This Global Theme does not provide any applicable settings. Please contact "
+"the maintainer of this Global Theme as it might be broken."
+msgstr ""
+"Это оформление не сдержит ни одного параметра, который может быть "
+"использован. Сообщите об этой ситуации разработчику."
+
+#~ msgid ""
+#~ "Your current layout and configuration of panels, desktop widgets, and "
+#~ "wallpapers will be lost and reset to the default layout provided by the "
+#~ "selected theme."
+#~ msgstr ""
+#~ "Настроенное вами расположение и параметры панелей и виджетов, фон "
+#~ "рабочего стола и другие параметры будут потеряны и заменены на "
+#~ "стандартные из выбранного пакета оформления."
+
+#~ msgid "Use desktop layout from theme"
+#~ msgstr "Применить расположение виджетов из оформления"
+
+#~ msgid "Global Theme"
+#~ msgstr "Оформление рабочей среды Plasma"
+
+#~ msgid "Apply a global theme package"
+#~ msgstr "Использовать указанный пакет глобального оформления."
+
+# download new... ---ayavorsky 20190120
+#~ msgid "Global Themes"
+#~ msgstr "оформления рабочей среды"
+
+#~ msgid "Download New Global Themes"
+#~ msgstr "Загрузка новых пакетов оформления рабочей среды"
+
+#~ msgid "Look and feel tool"
+#~ msgstr "Настройка внешнего вида рабочей среды Plasma"
+
+#~ msgid "Choose the Look and Feel theme"
+#~ msgstr "Выбор темы оформления рабочего стола"
+
+#~ msgid "Configure Look and Feel details"
+#~ msgstr "Настройка внешнего вида рабочей среды Plasma"
+
+#~ msgid ""
+#~ "Select an overall theme for your workspace (including plasma theme, color "
+#~ "scheme, mouse cursor, window and desktop switcher, splash screen, lock "
+#~ "screen etc.)"
+#~ msgstr ""
+#~ "Выберите общий вид рабочей среды, в том числе — тему рабочего стола, "
+#~ "цветовую схему, курсоры мыши, переключатели окон и рабочих столов, "
+#~ "заставку и экран блокировки."
+
+#~ msgid "Show Preview"
+#~ msgstr "Предварительный просмотр"

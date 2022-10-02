@@ -1,0 +1,389 @@
+# translation of kcmicons.po to Macedonian
+# Copyright (C) 2000,2002,2003, 2004, 2005, 2007, 2009, 2010 Free Software Foundation, Inc.
+#
+# Danko Ilik <danko@mindless.com>, 2000,2002,2003.
+# Novica Nakov <novica@bagra.net.mk>, 2003.
+# Bozidar Proevski <bobibobi@freemail.com.mk>, 2004, 2005, 2007, 2009, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmicons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"PO-Revision-Date: 2010-01-29 22:23+0100\n"
+"Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
+"Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
+"Language: mk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: Plural-Forms: nplurals=3; plural=n%10==1 ? 0 : n%10==2 ? 1 : "
+"2;\n"
+
+#: iconsizecategorymodel.cpp:14
+#, kde-format
+msgid "Toolbar"
+msgstr "Алатник"
+
+#: iconsizecategorymodel.cpp:15
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Главен алатник"
+
+#: iconsizecategorymodel.cpp:16
+#, kde-format
+msgid "Small Icons"
+msgstr "Мали икони"
+
+#: iconsizecategorymodel.cpp:17
+#, kde-format
+msgid "Panel"
+msgstr "Панел"
+
+#: iconsizecategorymodel.cpp:18
+#, kde-format
+msgid "Dialogs"
+msgstr "Дијалози"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, fuzzy, kde-format
+#| msgid "Main Toolbar"
+msgid "Main toolbar icons size"
+msgstr "Главен алатник"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, fuzzy, kde-format
+#| msgid "Small Icons"
+msgid "Small icons size"
+msgstr "Мали икони"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr ""
+
+#: main.cpp:182
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: main.cpp:193
+#, fuzzy, kde-format
+#| msgid "Unable to find the icon theme archive %1."
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Не можам да ја најдам архивата %1 со тема со икони."
+
+#: main.cpp:207
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "Датотеката не е валидна архива со тема со икони."
+
+#: main.cpp:212
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr ""
+"Настана проблем за време на процесот на инсталација. Сепак е инсталиран "
+"најголем дел од темите во архивата."
+
+#: main.cpp:216
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: main.cpp:260
+#, fuzzy, kde-format
+#| msgid "Installing icon themes"
+msgid "Installing icon themes…"
+msgstr "Инсталирам теми со икони"
+
+#: main.cpp:270
+#, fuzzy, kde-format
+#| msgid "Installing icon themes"
+msgid "Installing %1 theme…"
+msgstr "Инсталирам теми со икони"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr ""
+
+#: package/contents/ui/main.qml:147
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Remove Icon Theme"
+msgstr "Отстрани тема"
+
+#: package/contents/ui/main.qml:154
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Icon Theme"
+msgstr "Отстрани тема"
+
+#: package/contents/ui/main.qml:228
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr ""
+
+#: package/contents/ui/main.qml:246
+#, fuzzy, kde-format
+#| msgid "Install Theme File..."
+msgid "Install from File…"
+msgstr "Инсталирање датотека со тема..."
+
+#: package/contents/ui/main.qml:251
+#, fuzzy, kde-format
+#| msgid "Get New Themes..."
+msgid "Get New Icons…"
+msgstr "Земи нови теми..."
+
+#: package/contents/ui/main.qml:279
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Open Theme"
+msgstr "Отстрани тема"
+
+#: package/contents/ui/main.qml:281
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Божидар Проевски"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "bobibobi@freemail.com.mk"
+
+#~ msgid "Icons"
+#~ msgstr "Икони"
+
+#~ msgid "Icons Control Panel Module"
+#~ msgstr "Модул на Контролниот панел за икони"
+
+#~ msgid "(c) 2000-2003 Geert Jansen"
+#~ msgstr "(c) 2000-2003 Geert Jansen"
+
+#~ msgid "Geert Jansen"
+#~ msgstr "Geert Jansen"
+
+#~ msgid "Antonio Larrosa Jimenez"
+#~ msgstr "Antonio Larrosa Jimenez"
+
+#~ msgid "Torsten Rahn"
+#~ msgstr "Torsten Rahn"
+
+#~ msgid "Desktop"
+#~ msgstr "Раб. површина"
+
+#~ msgid "Use of Icon"
+#~ msgstr "Употреба на икона"
+
+#~ msgctxt "@label The icon rendered by default"
+#~ msgid "Default"
+#~ msgstr "Стандардна"
+
+#~ msgctxt "@label The icon rendered as active"
+#~ msgid "Active"
+#~ msgstr "Активна"
+
+#~ msgctxt "@label The icon rendered as disabled"
+#~ msgid "Disabled"
+#~ msgstr "Оневозможена"
+
+#~ msgid "Size:"
+#~ msgstr "Големина:"
+
+#~ msgid "Set Effect..."
+#~ msgstr "Постави ефект..."
+
+#~ msgid "All Icons"
+#~ msgstr "Сите икони"
+
+#~ msgid "Setup Default Icon Effect"
+#~ msgstr "Постави го ефектот на стандардната икона"
+
+#~ msgid "Setup Active Icon Effect"
+#~ msgstr "Постави го ефектот на активната икона"
+
+#~ msgid "Setup Disabled Icon Effect"
+#~ msgstr "Постави го ефектот на оневозможената икона"
+
+#~ msgid "&Effect:"
+#~ msgstr "&Ефект:"
+
+#~ msgid "No Effect"
+#~ msgstr "Без ефекти"
+
+#~ msgid "To Gray"
+#~ msgstr "Во сиво"
+
+#~ msgid "Colorize"
+#~ msgstr "Обои"
+
+#~ msgid "Gamma"
+#~ msgstr "Гама"
+
+#~ msgid "Desaturate"
+#~ msgstr "Одзасити"
+
+#~ msgid "To Monochrome"
+#~ msgstr "Во монохроматско"
+
+#~ msgid "&Semi-transparent"
+#~ msgstr "Полупр&оѕирно"
+
+#~ msgid "Preview"
+#~ msgstr "Преглед"
+
+#~ msgid "Effect Parameters"
+#~ msgstr "Параметри на ефектот"
+
+#~ msgid "&Amount:"
+#~ msgstr "К&оличество:"
+
+#~ msgid "Co&lor:"
+#~ msgstr "Бо&ја:"
+
+#~ msgid "&Second color:"
+#~ msgstr "&Втора боја:"
+
+#~ msgid "Name"
+#~ msgstr "Име"
+
+#~ msgid "Description"
+#~ msgstr "Опис"
+
+#~ msgid "Install a theme archive file you already have locally"
+#~ msgstr "Инсталирање на датотека со тема што веќе ја имате локално"
+
+#~ msgid ""
+#~ "If you already have a theme archive locally, this button will unpack it "
+#~ "and make it available for KDE applications"
+#~ msgstr ""
+#~ "Ако веќе имате датотека со темо на Вашиот локален тврд диск, ова копче ќе "
+#~ "ја отпакува и ќе ја инсталира за да биде достапна за апликациите на KDE"
+
+#~ msgid "Get new themes from the Internet"
+#~ msgstr "Преземете нови теми од Интернет"
+
+#~ msgid ""
+#~ "You need to be connected to the Internet to use this action. A dialog "
+#~ "will display a list of themes from the http://www.kde.org website. "
+#~ "Clicking the Install button associated with a theme will install this "
+#~ "theme locally."
+#~ msgstr ""
+#~ "За да ја користите оваа можност, треба да сте поврзани на Интернет. Ќе се "
+#~ "појави дијалог што ќе прикаже листа со теми од веб-страницата http://www."
+#~ "kde.org. Кликнувањето на копчето „Инсталирај“, поврзано со одредена тема, "
+#~ "ќе ја инсталира темата локално."
+
+#~ msgid "Remove the selected theme from your disk"
+#~ msgstr "Отстранување на избраната тема од Вашиот тврд диск"
+
+#~ msgid "This will remove the selected theme from your disk."
+#~ msgstr "Ова ќе ја отстрани избраната тема од Вашиот тврд диск."
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "Довлечете го или впишете го URL на темата"
+
+#~ msgid ""
+#~ "Unable to download the icon theme archive;\n"
+#~ "please check that address %1 is correct."
+#~ msgstr ""
+#~ "Не можам да ја симнам архивата со тема со икони.\n"
+#~ "Проверете дали е точна адресата %1."
+
+#~ msgid "<qt>Installing <strong>%1</strong> theme</qt>"
+#~ msgstr "<qt>Ја инсталирам темата <strong>%1</strong></qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <strong>%1</strong> icon theme?"
+#~ "<br /><br />This will delete the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>Дали навистина сакате да ја отстраните темата со икони <strong>%1</"
+#~ "strong>?<br /><br />Ова ќе ги избрише датотеките инсталирани со оваа тема."
+#~ "</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Потврда"
+
+#~ msgid "&Theme"
+#~ msgstr "&Тема"
+
+#~ msgid "Ad&vanced"
+#~ msgstr "&Напредно"
+
+#, fuzzy
+#~| msgid ""
+#~| "<h1>Icons</h1>This module allows you to choose the icons for your "
+#~| "desktop.<p>To choose an icon theme, click on its name and apply your "
+#~| "choice by pressing the \"Apply\" button below. If you do not want to "
+#~| "apply your choice you can press the \"Reset\" button to discard your "
+#~| "changes.</p><p>By pressing the \"Install New Theme\" button you can "
+#~| "install your new icon theme by writing its location in the box or "
+#~| "browsing to the location. Press the \"OK\" button to finish the "
+#~| "installation.</p><p>The \"Remove Theme\" button will only be activated "
+#~| "if you select a theme that you installed using this module. You are not "
+#~| "able to remove globally installed themes here.</p><p>You can also "
+#~| "specify effects that should be applied to the icons.</p>"
+#~ msgid ""
+#~ "<h1>Icons</h1>This module allows you to choose the icons for your desktop."
+#~ "<p>To choose an icon theme, click on its name and apply your choice by "
+#~ "pressing the \"Apply\" button below. If you do not want to apply your "
+#~ "choice you can press the \"Reset\" button to discard your changes.</"
+#~ "p><p>By pressing the \"Install Theme File...\" button you can install "
+#~ "your new icon theme by writing its location in the box or browsing to the "
+#~ "location. Press the \"OK\" button to finish the installation.</p><p>The "
+#~ "\"Remove Theme\" button will only be activated if you select a theme that "
+#~ "you installed using this module. You are not able to remove globally "
+#~ "installed themes here.</p><p>You can also specify effects that should be "
+#~ "applied to the icons.</p>"
+#~ msgstr ""
+#~ "<h1>Икони</h1>Овој модул ви овозможува да ги изберете иконите за вашата "
+#~ "работна површина.<p>За да изберете тема со икони, кликнете на нејзиното "
+#~ "име и потврдете го вашиот избор со притискање на копчето „Примени“ "
+#~ "подолу. Ако не сакате да го примените вашиот избор притиснете на копчето "
+#~ "„Врати“ за да ги отфрлите вашите измени.</p><p>Со притискање на копчето "
+#~ "„Инсталирај нова тема“ може да инсталирате нова тема со икони со "
+#~ "запишување на нејзината локација во полето или со разгледување да "
+#~ "стигнете до локацијата. Притиснете на копчето „Во ред“ за да ја завршите "
+#~ "инсталацијата.</p><p>Копчето „Отстрани тема“ ќе биде активно само ако "
+#~ "изберете тема која сте ја инсталирале користејќи го овој модул. Оттука не "
+#~ "може да отстраните голбално инсталирани теми.</p><p>Исто така може да "
+#~ "зададете ефекти кои би се примениле врз иконите.</p>"
+
+#~ msgid "Animate icons"
+#~ msgstr "Анимирај икони"
+
+#~ msgid "Select the icon theme you want to use:"
+#~ msgstr "Изберете ја темата со икони што сакате да ја користите:"

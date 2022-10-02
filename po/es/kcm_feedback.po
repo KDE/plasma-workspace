@@ -1,0 +1,100 @@
+# Spanish translations for kcm_feedback.po package.
+# Copyright (C) 2019 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Automatically generated, 2019.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2019, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_feedback\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-28 00:47+0000\n"
+"PO-Revision-Date: 2022-01-05 19:50+0100\n"
+"Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
+"Language-Team: Spanish <kde-l10n-es@kde.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.12.0\n"
+
+#: package/contents/ui/main.qml:34
+#, kde-format
+msgid ""
+"User Feedback has been disabled centrally. Please contact your distributor."
+msgstr ""
+"Los comentarios del usuario se han desactivado de forma central. Póngase en "
+"contacto con su distribuidor."
+
+#: package/contents/ui/main.qml:44 package/contents/ui/main.qml:77
+#, kde-format
+msgid "Plasma:"
+msgstr "Plasma:"
+
+#: package/contents/ui/main.qml:51
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"You can help KDE improve Plasma by contributing information on how you use "
+"it, so we can focus on things that matter to you.<nl/><nl/>Contributing this "
+"information is optional and entirely anonymous. We never collect your "
+"personal data, files you use, websites you visit, or information that could "
+"identify you.<nl/><nl/>You can read about <link url='https://kde.org/"
+"privacypolicy-apps.php'>our privacy policy here.</link>"
+msgstr ""
+"Puede ayudar a KDE a mejorar Plasma colaborando con información sobre cómo "
+"lo usa, de modo que podamos centrarnos en las cosas que le importan a usted."
+"<nl/><nl/>La colaboración con esta información es opcional y completamente "
+"anónima. Nunca recopilamos sus datos personales, los archivos que usa, los "
+"sitios web que visita ni información que pueda identificarlo.<nl/><nl/>Aquí "
+"puede consultar <link url='https://kde.org/privacypolicy-apps.php'>nuestra "
+"política de privacidad</link>."
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Plasma"
+msgstr "Plasma"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "The following information will be sent:"
+msgstr "Se enviará la siguiente información:"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "View sent data:"
+msgstr "Ver los datos enviados:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Eloy Cuadra"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "ecuadra@eloihr.net"
+
+#~ msgid "User Feedback"
+#~ msgstr "Comentarios del usuario"
+
+#~ msgid "Configure user feedback settings"
+#~ msgstr "Configurar las preferencias de los comentarios del usuario"
+
+#~ msgctxt "@info"
+#~ msgid "You can read about our policy in the following link:"
+#~ msgstr "Puede consultar nuestra política en el siguiente enlace:"
+
+#~ msgid "Allow KDE software to collect anonymous usage information"
+#~ msgstr "Permitir que el software de KDE recopile información de uso anónima"
+
+#~ msgid "Send basic system information"
+#~ msgstr "Enviar información básica del sistema"
+
+#~ msgid "Send basic usage information"
+#~ msgstr "Enviar información básica de uso"
+
+#~ msgid "Send detailed system information"
+#~ msgstr "Enviar información detallada del sistema"
+
+#~ msgid "Send detailed usage information"
+#~ msgstr "Enviar información detallada de uso"

@@ -1,0 +1,191 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % German "INCLUDE">
+]>
+<article id="desktopthemedetails" lang="&language;">
+<articleinfo>
+<title
+>Plasma-Stil</title>
+<authorgroup>
+<author
+><firstname
+>Andrew</firstname
+> <surname
+>Lake</surname
+></author>
+<author
+><firstname
+>Carl</firstname
+> <surname
+>Schwan</surname
+> </author>
+<othercredit role="translator"
+><firstname
+>Johannes</firstname
+><surname
+>Obermayr</surname
+><affiliation
+><address
+><email
+>johannesobermayr@gmx.de</email
+></address
+></affiliation
+><contrib
+>Übersetzung</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-09</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systemeinstellungen</keyword>
+<keyword
+>Arbeitsfläche</keyword>
+<keyword
+>Stil</keyword>
+<keyword
+>Design</keyword>
+<keyword
+>Plasma</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>&plasma; enthält mehrere Stile. Der &plasma;-Stile legt fest, wie die einzelnen Komponenten von &plasma; wie &eg; Plasmoids, Kontrollleisten und Bedienungselement angezeigt werden. </para>
+
+<para>
+  <screenshot>
+    <screeninfo
+>Bildschirmfoto der Verwaltung von &plasma;-Stilen</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="main.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase
+>&plasma;-Stile anpassen</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</para>
+
+<para
+>In diesem Modul können Sie:</para>
+<itemizedlist>
+  <listitem
+><para
+>&plasma;-Stile auswählen und installieren</para
+></listitem>
+  <listitem
+><para
+>&plasma;-Stile bearbeiten</para
+></listitem>
+  <listitem
+><para
+>&plasma;-Stile entfernen</para
+></listitem>
+</itemizedlist>
+
+<para
+>Sie können die Stilliste mit dem Feld <guilabel
+>Suchen</guilabel
+> über den angezeigten Stilen filtern. Außerdem können Sie mit dem Kombinationsfeld neben dem Suchfeld nur <guimenuitem
+>Helle Designs</guimenuitem
+>, <guimenuitem
+>Dunkle Designs</guimenuitem
+> oder Designs <guimenuitem
+>Kompatibel zum Farbschema</guimenuitem
+> anzeigen. </para>
+
+<para
+>Möchten Sie einen Stile entfernen, klicken Sie auf das Symbol <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+> rechts auf dem Stilsymbol. Um diese Aktion rückgängig zu machen, benutzen Sie das Symbol <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-undo.png" format="PNG"/></imageobject
+></inlinemediaobject
+>. Klicken Sie auf <guibutton
+>Anwenden</guibutton
+>, dann werden die ausgewählten Stile tatsächlich gelöscht. So können Sie das Löschen einzelner Stile oder aller Stile zurücknehmen. </para>
+
+<para
+>Ist das Paket „plasma-sdk“ auf Ihrem System installiert, dann erscheint ein Knopf bei Überfahren eines Sile mit dem Mauszeiger. Damit können Sie das Programm <application
+>Plasma-Designexplorer</application
+> starten. </para>
+<para
+>Weitere technische Informationen finden Sie auf <ulink url="https://develop.kde.org/docs/plasma/theme/theme-details/"
+>dieser Seite</ulink
+>. </para>
+
+<variablelist>
+  <varlistentry>
+    <term
+><guilabel
+>Neue Plasma-Stile holen ...</guilabel
+></term>
+    <listitem>
+    <para
+>Sie müssen mit dem Internet verbunden sein, um diese Funktion benutzen zu können. Klicken Sie auf diesen Knopf, um einen Dialog zur Auswahl eines neuen Plasma-Stils zu öffnen. Um einen &plasma;.-Stil zu installieren, klicken Sie auf den Knopf <guibutton
+>Installieren</guibutton
+>. Nachdem Sie den Installationsdialog mit <guibutton
+>Schließen</guibutton
+> beendet haben, können Sie den neuen Stil sofort benutzen. </para>
+    <para>
+    <screenshot>
+    <screeninfo
+>Neue Plasma-Stile holen ...</screeninfo>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="get-new-theme.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase
+>Neue Plasma-Stile holen ...</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    </para>
+    </listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>Aus Datei installieren ...</guilabel
+></term>
+    <listitem>
+      <para
+>Wenn Sie bereits neue Stile aus dem Internet heruntergeladen haben, können Sie mit diesem Knopf bereits heruntergeladene Stile öffnen. Dazu wird der Dateidialog angezeigt, in dem Sie die Adresse des &plasma;-Stilarchivs auf Ihrem System eingeben müssen.</para>
+
+      <para
+>Klicken Sie in diesem Dialog auf <guibutton
+>Öffnen</guibutton
+>, damit wird der ausgewählte Stil installiert und kann dann in der Liste der Stile ausgewählt werden. </para>
+    </listitem>
+  </varlistentry>
+</variablelist>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

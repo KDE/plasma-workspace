@@ -1,0 +1,255 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Brazilian-Portuguese "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="fontinst" lang="&language;">
+<title
+>Gerenciamento de fontes</title>
+<articleinfo>
+<authorgroup>
+<author
+>&Craig.Drummond; &Craig.Drummond.Mail;</author>
+
+<othercredit role="translator"
+><firstname
+>Marcus</firstname
+> <surname
+>Gama</surname
+><affiliation
+><address
+> <email
+>marcus.gama@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>08/04/2015</date>
+<releaseinfo
+>Plasma 5.3</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Configurações do sistema</keyword>
+<keyword
+>fontes</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_fontinst">
+<title
+>Gerenciamento de fontes</title>
+
+<para
+>Este módulo é responsável por instalar, desinstalar, visualizar e gerenciar as suas fontes.</para>
+
+<sect2 id="font-groups">
+<title
+>Grupos de Fontes</title>
+<para
+>Existem 4 grupos especiais de fontes pré-definidos:</para>
+
+<orderedlist>
+    <listitem
+><para
+><quote
+>Todas as Fontes</quote
+> Isto irá mostrar todas as fontes, sejam pessoais ou do sistema.</para
+></listitem>
+    <listitem
+><para
+><quote
+>Fontes Pessoais</quote
+> As fontes apresentadas serão as suas fontes pessoais, que não estarão disponíveis para os outros usuários.</para
+></listitem>
+    <listitem
+><para
+><quote
+>Fontes do Sistema</quote
+> As fontes mostradas serão as disponíveis para todos os usuários. Para instalar ou remover uma fonte a nível do sistema serão necessárias permissões de administração.</para
+></listitem>
+    <listitem
+><para
+><quote
+>Não classificadas</quote
+> Isto irá mostrar todas as fontes que não tenham sido colocados em quaisquer grupos definidos pelo usuário. Este grupo somente aparece se você tiver alguns grupos definidos pelo usuário.</para
+></listitem>
+</orderedlist>
+<para
+>Para adicionar uma fonte a um grupo, arraste-a da lista de fontes para um grupo. Para remover uma fonte de um grupo, arraste a fonte para o grupo <quote
+>Todas as Fontes</quote
+>.</para>
+<para
+>Abaixo desta lista, você irá encontrar botão para criar ou remover um grupo, ou ainda ativar ou desativar as fontes do grupo atual.</para>
+<para
+>No menu de contexto desta lista, você terá itens de menu adicionais para imprimir as amostras de fontes ou ainda exportar uma fonte para um pacote ZIP.</para>
+
+<sect3 id="font-hiding">
+<title
+>Ativar e Desativar</title>
+<para
+>Os usuários com diversas fontes poderão achar útil ter apenas certas fontes ativas em determinado momento. Para facilitar isto, este módulo permite desativar individualmente algumas fontes ou mesmo grupos inteiros. Desativar uma fonte não a remove do sistema; simplesmente ela é ocultada para que não apareça mais nos aplicativos. Reativar uma fonte, permitirá que ela seja usada novamente.</para>
+</sect3>
+
+</sect2>
+
+<sect2 id="font-list">
+<title
+>Lista de fontes</title>
+<para
+>A área principal é uma lista com as fontes instaladas, agrupados de acordo com o nome da família - o número entre colchetes representa o número de estilos instalados para essa família. P.ex., a fonte <quote
+>Times</quote
+> pode ser listada como: <itemizedlist
+> <listitem>
+    <para
+>Times [4]</para>
+    <itemizedlist>
+        <listitem
+><para
+>Normal</para
+></listitem>
+        <listitem
+><para
+>Itálico</para
+></listitem>
+        <listitem
+><para
+>Negrito</para
+></listitem>
+        <listitem
+><para
+>Negrito e itálico</para
+></listitem>
+    </itemizedlist>
+</listitem>
+</itemizedlist>
+</para>
+
+<para
+>Para instalar uma fonte, clique no botão <guibutton
+>Adicionar...</guibutton
+> e selecione as fontes desejadas na janela de arquivos. O grupo de fontes selecionado controlará onde as fontes serão instaladas.</para>
+<para
+>Para desinstalar as fontes, selecione as fontes apropriadas na lista e clique no botão <guibutton
+>Apagar...</guibutton
+>.</para>
+
+<para
+>Clique com o &RMB; para abrir um menu de contexto com algumas ações adicionais como <guilabel
+>Habilitar</guilabel
+>, <guilabel
+>Desabilitar</guilabel
+>, <guilabel
+>Imprimir</guilabel
+>, <ulink url="help:/kfontviewer/index.html"
+><guilabel
+>Abrir no visualizador de fontes</guilabel
+></ulink
+> e <guilabel
+>Recarregar</guilabel
+>.</para>
+
+<sect3 id="font-filter">
+<title
+>Filtragem de Fontes</title>
+<para
+>Um campo de texto acima da previsão da fonte que lhe permite filtrar a lista de fontes. Você poderá filtrar as fontes com base em diferentes categorias:</para>
+        <orderedlist>
+        <listitem
+><para
+>Família.</para
+></listitem>
+        <listitem
+><para
+>Estilo.</para
+></listitem>
+        <listitem
+><para
+>Fundação.</para
+></listitem>
+        <listitem
+><para
+>Ocorrência no FontConfig. Isto permite-lhe indicar o nome de uma família e ver a família que o 'fontconfig' irá usar de fato.</para
+></listitem>
+        <listitem
+><para
+>Tipo de arquivo da fonte.</para
+></listitem>
+        <listitem
+><para
+>Nome do arquivo da fonte.</para
+></listitem>
+        <listitem
+><para
+>Localização do arquivo da fonte.</para
+></listitem>
+        <listitem
+><para
+>Sistema de escrita.</para
+></listitem>
+        </orderedlist>
+</sect3>
+
+<sect3 id="get-new-fonts">
+<title
+>Obter novas fontes</title>
+<para
+>Novas fontes podem ser instaladas a partir de arquivos locais ou obtidas a partir do <quote
+>kde-look.org</quote
+>. A opção <guilabel
+>Obter novas fontes</guilabel
+> do botão de ferramentas (localizado acima da lista de grupos), permite-lhe instalar fontes do <quote
+>kde-look.org</quote
+>. As fontes baixadas desta forma serão instaladas no seu grupo <quote
+>Fontes pessoais</quote
+>. Para instalá-las em todo o sistema, terá que movê-las para o grupo <quote
+>Fontes do sistema</quote
+> - isto pode ser feito arrastando as fontes para esse grupo, mas será necessário privilégios administrativos.</para>
+</sect3>
+
+</sect2>
+
+<sect2 id="font-duplicates">
+<title
+>Fontes Duplicadas</title>
+<para
+>Se você tiver várias fontes instaladas no seu sistema, é possível que ocorram duplicações.</para
+> 
+<para
+>Clique nos ícones das ferramentas acima da lista do grupo e selecione a ferramenta <guilabel
+>Procurar fontes duplicadas...</guilabel
+>, um aplicativo simples que irá pesquisar o seu sistema à procura de fontes que tenham vários arquivos associados a elas. Por exemplo, se você tiver o <quote
+>times.ttf</quote
+> e o <quote
+>times.TTF</quote
+> instalados na <quote
+>/usr/local/share/fonts</quote
+>, o mecanismo de fontes subjacente (chamado <quote
+>FontConfig</quote
+>) só irá ver um deles. Por isso, se você desinstalasse a fonte, ela ainda iria aparecer, uma vez que só um dos arquivos teria sido removido. Ao executar esta ferramenta, irá aparecer uma janela que enumera cada uma das fontes que possui vários arquivos, assim como a lista de arquivos correspondente. Para selecionar um arquivo para remoção, clique na coluna que contém o ícone do lixo.</para>
+</sect2>
+
+<sect2 id="font-preview">
+<title
+>Previsão</title>
+<para
+>Isto gera uma previsão do texto com vários tamanhos de letra.</para>
+<para
+>Usando o menu de contexto, você poderá ampliar ou reduzir, selecionar um tipo de previsão (<guilabel
+>Previsão Normal</guilabel
+> ou <guilabel
+>Todos os Caracteres</guilabel
+>) ou ainda mudar o texto da previsão.</para>
+</sect2>
+</sect1>
+</article>

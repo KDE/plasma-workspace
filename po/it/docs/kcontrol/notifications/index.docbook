@@ -1,0 +1,382 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Italian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmnotify" lang="&language;">
+<title
+>Impostazioni delle notifiche di sistema</title>
+<articleinfo>
+
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+><personname
+><firstname
+>Kai Uwe</firstname
+> <surname
+>Broulik</surname
+></personname
+> <email
+>kde@broulik.de</email
+></author>
+<othercredit role="translator"
+><firstname
+>Paolo</firstname
+><surname
+>Zamponi</surname
+><affiliation
+><address
+><email
+>zapaolo@email.it</email
+></address
+></affiliation
+><contrib
+>Traduzione</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>16/04/2021</date>
+<releaseinfo
+>Plasma 5.21</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Impostazioni di sistema</keyword>
+<keyword
+>notifiche di sistema</keyword>
+<keyword
+>notifica</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="sys-notify">
+<title
+>Impostazioni delle notifiche di sistema</title>
+
+<para
+>&plasma;, come tutte le applicazioni, deve informare l'utente quando si verifica un problema, oppure quando un processo è stato completato, o comunque quando si verifica qualcosa. &plasma; utilizza un insieme di <quote
+>notifiche di sistema</quote
+> per mantenere informato l'utente su quello che succede.</para>
+
+<para
+>Usando questo modulo puoi determinare cosa fa &plasma; per comunicare ogni evento.</para>
+
+<sect2 id="notification-settings">
+<title
+>Impostazioni delle notifiche</title>
+
+<sect3 id="do-not-disturb">
+<title
+>Modalità non disturbare</title>
+
+    <para
+>Questa modalità disabilita tutte le notifiche visuali e la maggior parte di quelle udibili, in modo da lasciarti concentrato sull'attività che stai svolgendo. Le impostazioni in questa sezione ti permettono di configurare in quali circostanze &plasma; abilita automaticamente la modalità non disturbare.</para>
+
+    <variablelist>
+
+    <varlistentry>
+    <term
+><guiicon
+>Abilita quando gli schermi sono duplicati</guiicon
+></term>
+    <listitem
+><para
+>Abilita automaticamente la modalità non disturbare quando duplichi lo schermo, ad esempio durante una presentazione.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Abilita quando gli schermi sono condivisi</guiicon
+></term>
+    <listitem
+><para
+>Abilita automaticamente la modalità non disturbare quando condividi lo schermo, ad esempio durante una lezione online.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Mostra notifiche critiche</guiicon
+></term>
+    <listitem
+><para
+>Se mostrare le notifiche critiche, ad esempio che la batteria è quasi scarica, anche nella modalità non disturbare.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Cambia con:</guiicon
+></term>
+    <listitem
+><para
+>Una scorciatoia globale da premere per abilitare o per disabilitare la modalità non disturbare in qualsiasi momento.</para
+></listitem>
+    </varlistentry>
+
+    </variablelist>
+
+</sect3>
+
+<sect3 id="notification-filters">
+    <title
+>Filtri</title>
+
+    <variablelist>
+
+    <varlistentry>
+    <term
+>Notifiche critiche: <guiicon
+>Tieni sempre sopra</guiicon
+></term>
+    <listitem
+><para
+>Tieni le notifiche critiche, ad esempio che la batteria è quasi scarica, sempre sopra. Ciò assicura che saranno visibili anche quando starai guardando un video a schermo intero o durante una presentazione.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+>Notifiche normali: <guiicon
+>Tieni sempre sopra</guiicon
+></term>
+    <listitem
+><para
+>Tieni le notifiche normali, ad esempio i messaggi, sempre sopra. Ciò assicura che saranno visibili anche quando starai guardando un video a schermo intero o durante una presentazione.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+>Notifiche a bassa priorità: <guiicon
+>Mostra finestra a comparsa</guiicon
+> e <guiicon
+>Mostra nella cronologia</guiicon
+></term>
+    <listitem
+><para
+>Se le notifiche a bassa priorità, ad esempio il cambio della traccia nel lettore multimediale, saranno mostrate rispettivamente come finestre a comparsa oppure nella cronologia.</para
+></listitem>
+    </varlistentry>
+
+    </variablelist>
+</sect3>
+
+<sect3 id="notification-behavior">
+    <title
+>Comportamento</title>
+
+    <variablelist>
+
+    <varlistentry>
+    <term
+>Finestra a comparsa: <guiicon
+>Mostra vicino all'icona di notifica</guiicon
+></term>
+    <listitem
+><para
+>Mostra le finestre di notifica a comparsa vicino all'icona di notifica nel pannello.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Scegli posizione personalizzata...</guiicon
+></term>
+    <listitem
+><para
+>Ti permette di scegliere un angolo fisso dello schermo in cui verranno posizionate le finestre di notifica a comparsa.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+        <term
+><guiicon
+>Nascondi dopo:</guiicon
+></term>
+    <listitem
+><para
+>Dopo quanti secondi la finestra di notifica a comparsa scomparirà automaticamente. Puoi scegliere un qualsiasi valore compreso tra 1 e 120 secondi.</para
+></listitem>
+    </varlistentry>
+
+    </variablelist>
+</sect3>
+
+<sect3 id="progress-and-badges">
+    <title
+>Avanzamento dell'applicazione e Simboli</title>
+
+    <sect4 id="application-progress">
+        <title
+>Avanzamento dell'applicazione</title>
+
+        <para
+>Le opzioni in questa sezione controllano come viene presentato l'avanzamento dell'applicazione, ad esempio nella copia o nello scaricamento di un file.</para>
+
+        <variablelist>
+
+        <varlistentry>
+        <term
+><guiicon
+>Mostra nel gestore dei processi</guiicon
+></term>
+        <listitem
+><para
+>Colora la finestra nel pannello in base all'avanzamento.</para
+></listitem>
+        </varlistentry>
+
+        <varlistentry>
+        <term
+><guiicon
+>Mostra nelle notifiche</guiicon
+></term>
+        <listitem
+><para
+>Mostra una finestra di notifica a comparsa durante l'avanzamento.</para
+></listitem>
+        </varlistentry>
+
+        <varlistentry>
+        <term
+><guiicon
+>Mantieni aperta la finestra a comparsa durante l'avanzamento</guiicon
+></term>
+        <listitem
+><para
+>Se la finestra di notifica debba rimanere visibile per tutta la durata dell'avanzamento oppure venir nascosta automaticamente. Sarà sempre mostrata nuovamente quando un processo termina o se non ha successo.</para
+></listitem>
+        </varlistentry>
+
+        </variablelist>
+    </sect4>
+
+    <sect4 id="badges">
+        <title
+>Simboli di notifica</title>
+
+        <variablelist>
+
+        <varlistentry>
+        <term
+><guiicon
+>Mostra nel gestore dei processi</guiicon
+></term>
+        <listitem
+><para
+>Permetti all'applicazione di mostrare dei simboli, come il numero dei messaggi non letti, nel pannello.</para
+></listitem>
+        </varlistentry>
+
+        </variablelist>
+    </sect4>
+
+</sect3>
+
+</sect2>
+
+<sect2 id="application-settings">
+<title
+>Impostazioni dell'applicazione</title>
+
+<para
+>Facendo clic sul pulsante <guilabel
+>Configura...</guilabel
+> alla fine dell'elenco si apre la pagina delle impostazioni dell'applicazione, che ti permette di configurare il comportamento delle notifiche in base all'applicazione o al servizio.</para>
+
+<para
+>Usa la barra laterale a sinistra per scegliere una voce dalla categoria <guilabel
+>Applicazioni</guilabel
+> oppure da <guilabel
+>Servizi di sistema</guilabel
+></para>
+
+<para
+>Le finestre a comparsa di avviso generale, così come i suoni di avvio e di arresto, sono posizionate nel servizio <guilabel
+>Spazio di lavoro Plasma</guilabel
+>.</para>
+
+<para
+>Le applicazioni che non forniscono una corretta identificazione, ad esempio gli script, possono essere configurate usando la voce <guilabel
+>Altre applicazioni</guilabel
+>.</para>
+
+<variablelist>
+
+    <varlistentry>
+    <term
+><guiicon
+>Mostra finestre a comparsa</guiicon
+></term>
+    <listitem
+><para
+>Se questa applicazione può mostrare finestre di notifica a comparsa.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Mostra in modalità non disturbare</guiicon
+></term>
+    <listitem
+><para
+>Se questa applicazione può mostrare finestre di notifica a comparsa anche in modalità non disturbare.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Mostra nella cronologia</guiicon
+></term>
+    <listitem
+><para
+>Se le notifiche di questa applicazione verranno mantenute nella cronologia delle notifiche.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Mostra simboli di notifica</guiicon
+></term>
+    <listitem
+><para
+>Se questa applicazione può mostrare dei simboli, come il numero dei messaggi non letti, nel pannello.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Configura eventi...</guiicon
+></term>
+    <listitem
+><para
+>Per le applicazioni di &kde; puoi anche configurare ciascuna notifica individualmente.</para
+></listitem>
+    </varlistentry>
+
+</variablelist>
+
+</sect2>
+
+</sect1>
+
+</article>

@@ -1,0 +1,62 @@
+# translation of phonon_kde.po to Greek
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Toussis Manolis <manolis@koppermind.homelinux.org>, 2007.
+# Spiros Georgaras <sng@hellug.gr>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: phonon_kde\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-05-20 03:26+0200\n"
+"PO-Revision-Date: 2008-04-30 16:44+0300\n"
+"Last-Translator: Spiros Georgaras <sng@hellug.gr>\n"
+"Language-Team: Greek <i18ngr@lists.hellug.gr>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Τούσης Μανώλης"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "manolis@koppermind.homelinux.org"
+
+#~ msgid "<qt>Unable to use the <b>%1</b> Multimedia Backend:<br/>%2</qt>"
+#~ msgstr "<qt>Αδυναμία χρήσης του συστήματος πολυμέσων <b>%1</b>:<br/>%2</qt>"
+
+#~ msgid "Unable to find a Multimedia Backend"
+#~ msgstr "Αδυναμία εύρεσης ενός συστήματος πολυμέσων"
+
+#~ msgid "Unable to find the requested Multimedia Backend"
+#~ msgstr "Αδυναμία εύρεσης του ζητούμενου συστήματος πολυμέσων"
+
+#~ msgid "create method returned 0"
+#~ msgstr "η μέθοδος δημιουργίας επέστρεψε 0"
+
+#~ msgid "%1 (OSS)"
+#~ msgstr "%1 (OSS)"
+
+#~ msgid "%1 (ALSA)"
+#~ msgstr "%1 (ALSA)"
+
+#~ msgid ""
+#~ "<html>This device is currently not available (either it is unplugged or "
+#~ "the driver is not loaded).</html>"
+#~ msgstr ""
+#~ "<html>Η συσκευή αυτή δεν είναι διαθέσιμη αυτή τη στιγμή (είτε δεν είναι "
+#~ "συνδεδεμένη ή ο οδηγός δεν έχει φορτωθεί).</html>"
+
+#~ msgid ""
+#~ "<html>This will try the following devices and use the first that works: "
+#~ "<ol><li>%1</li></ol></html>"
+#~ msgstr ""
+#~ "<html>Θα γίνει δοκιμή των παρακάτω συσκευών και θα γίνει χρήση της πρώτης "
+#~ "που λειτουργεί: <ol><li>%1</li></ol></html>"

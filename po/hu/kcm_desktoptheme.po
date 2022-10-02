@@ -1,0 +1,467 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Tamas Szanto <tszanto@interware.hu>, 2009.
+# Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2011, 2014, 2019, 2020.
+# Balázs Úr <urbalazs@gmail.com>, 2013.
+# Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: KDE 4.2\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"PO-Revision-Date: 2021-09-29 10:19+0200\n"
+"Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.03.80\n"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current Plasma Style"
+msgstr "A jelenlegi Plasma stílus neve"
+
+#: kcm.cpp:108
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Nem lehet létrehozni egy ideiglenes fájlt."
+
+#: kcm.cpp:119
+#, kde-format
+msgid "Unable to download the theme: %1"
+msgstr "Nem lehet letölteni a témát: %1"
+
+#: kcm.cpp:144
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "A téma sikeresen települt."
+
+#: kcm.cpp:147 kcm.cpp:153
+#, kde-format
+msgid "Theme installation failed."
+msgstr "Nem sikerült telepíteni a témát."
+
+#: kcm.cpp:245
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr "Nem sikerült eltávolítani a témát: %1"
+
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "This module lets you choose the Plasma style."
+msgstr "Ebben a modulban kiválaszthatja a Plasma stílusát."
+
+#: package/contents/ui/main.qml:69
+#, kde-format
+msgid "All Themes"
+msgstr "Minden téma"
+
+#: package/contents/ui/main.qml:70
+#, kde-format
+msgid "Light Themes"
+msgstr "Világos témák"
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgid "Dark Themes"
+msgstr "Sötét témák"
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "Color scheme compatible"
+msgstr "Színséma-kompatibilis"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgid "Follows color scheme"
+msgstr "Követi a színsémát"
+
+#: package/contents/ui/main.qml:118
+#, kde-format
+msgid "Edit Theme…"
+msgstr "Téma szerkesztése…"
+
+#: package/contents/ui/main.qml:125
+#, kde-format
+msgid "Remove Theme"
+msgstr "Eltávolítás"
+
+#: package/contents/ui/main.qml:132
+#, kde-format
+msgid "Restore Theme"
+msgstr "Visszaállítás"
+
+#: package/contents/ui/main.qml:174
+#, kde-format
+msgid "Install from File…"
+msgstr "Telepítés fájlból…"
+
+#: package/contents/ui/main.qml:179
+#, kde-format
+msgid "Get New Plasma Styles…"
+msgstr "Új Plasma stílusok letöltése…"
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Open Theme"
+msgstr "Téma megnyitása"
+
+#: package/contents/ui/main.qml:195
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr "Témafájlok (*.zip, *.tar.gz, *.tar.bz2)"
+
+#: plasma-apply-desktoptheme.cpp:31
+#, kde-format
+msgid ""
+"This tool allows you to set the theme of the current Plasma session, without "
+"accidentally setting it to one that is either not available, or which is "
+"already set."
+msgstr ""
+"Ez az eszköz lehetővé teszi a jelenlegi Plasma munkamenet témájának "
+"beállítását anélkül, hogy véletlenül egy nem elérhetőt, vagy már "
+"beállítottat választana ki."
+
+#: plasma-apply-desktoptheme.cpp:35
+#, kde-format
+msgid ""
+"The name of the theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+"A Plasma munkamenethez beállítandó téma neve (teljes elérési út megadása "
+"esetén csak az útvonal utolsó része lesz figyelembe véve)"
+
+#: plasma-apply-desktoptheme.cpp:36
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+"A rendszer összes elérhető témájának megjelenítése (és hogy melyik a "
+"jelenlegi téma)"
+
+#: plasma-apply-desktoptheme.cpp:49
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+"A kért „%1” téma már be van állítva, mint aktuálisa téma a jelenlegi Plasma "
+"munkamenetben."
+
+#: plasma-apply-desktoptheme.cpp:65
+#, kde-format
+msgid "The current Plasma session's theme has been set to %1"
+msgstr "A jelenlegi Plasma munkamenet témája beállítva erre: %1"
+
+#: plasma-apply-desktoptheme.cpp:67
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+"A(z) „%1” téma nem található. A téma a következő opciók egyike kell, hogy "
+"legyen: %2"
+
+#: plasma-apply-desktoptheme.cpp:75
+#, kde-format
+msgid "You have the following Plasma themes on your system:"
+msgstr "Az alábbi Plasma témák találhatók meg a rendszeren:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Kiszel Kristóf"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "ulysses@kubuntu.org"
+
+#~ msgid "Plasma Style"
+#~ msgstr "Plasma stílus"
+
+#~ msgid "David Rosca"
+#~ msgstr "David Rosca"
+
+#~ msgid "Search..."
+#~ msgstr "Keresés…"
+
+#, fuzzy
+#~| msgid "Plasma Style"
+#~ msgid "Plasma Styles"
+#~ msgstr "Plasma stílus"
+
+#~ msgid "Download New Plasma Styles"
+#~ msgstr "Új Plasma stílusok letöltése"
+
+#~ msgid "Configure Desktop Theme"
+#~ msgstr "Asztali téma beállítása"
+
+#~ msgid "Theme removal failed."
+#~ msgstr "Nem sikerült eltávolítani a témát."
+
+#~ msgid ""
+#~ "<h1>Desktop Theme</h1>This module allows you to modify the visual "
+#~ "appearance of the desktop."
+#~ msgstr ""
+#~ "<h1>Asztali téma</h1>Ebben a modulban az asztal vizuális megjelenését "
+#~ "állíthatja be."
+
+#~ msgid "KDE Desktop Theme Module"
+#~ msgstr "KDE asztali téma modul"
+
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
+#~ msgstr "(C) Karol Szwed, Daniel Molkentin, 2002."
+
+#~ msgid "Theme installation failed. (%1)"
+#~ msgstr "Nem sikerült telepíteni a témát. (%1)"
+
+#~ msgid "Details"
+#~ msgstr "Részletek"
+
+#~ msgctxt "plasma name"
+#~ msgid "Panel Background"
+#~ msgstr "A panel háttere"
+
+#~ msgctxt "plasma name"
+#~ msgid "Kickoff"
+#~ msgstr "Panel"
+
+#~ msgctxt "plasma name"
+#~ msgid "Task Items"
+#~ msgstr "Feladatelemek"
+
+#~ msgctxt "plasma name"
+#~ msgid "Widget Background"
+#~ msgstr "Elemháttér"
+
+#~ msgctxt "plasma name"
+#~ msgid "Translucent Background"
+#~ msgstr "Áttetsző háttér"
+
+#~ msgctxt "plasma name"
+#~ msgid "Dialog Background"
+#~ msgstr "Párbeszédablak-háttér"
+
+#~ msgctxt "plasma name"
+#~ msgid "Analog Clock"
+#~ msgstr "Analóg óra"
+
+#~ msgctxt "plasma name"
+#~ msgid "Notes"
+#~ msgstr "Feljegyzések"
+
+#~ msgctxt "plasma name"
+#~ msgid "Tooltip"
+#~ msgstr "Tipp"
+
+#~ msgctxt "plasma name"
+#~ msgid "Pager"
+#~ msgstr "Lapozó"
+
+#~ msgctxt "plasma name"
+#~ msgid "Run Command Dialog"
+#~ msgstr "Parancsvégrehajtó"
+
+#~ msgctxt "plasma name"
+#~ msgid "Shutdown Dialog"
+#~ msgstr "Lezáró ablak"
+
+#~ msgctxt "plasma name"
+#~ msgid "Icons"
+#~ msgstr "Ikonok"
+
+#~ msgid "(Customized)"
+#~ msgstr "(Egyedi)"
+
+#~ msgid "User customized theme"
+#~ msgstr "Egyedileg beállított téma"
+
+#~ msgid ""
+#~ "Theme items have been changed.  Do you still wish remove the \"%1\" theme?"
+#~ msgstr "A téma egyes elemei megváltoztak, biztosan törölni szeretné („%1”)?"
+
+#~ msgid "Removal of the default desktop theme is not allowed."
+#~ msgstr "Az alapértelmezett asztali témát nem lehet eltávolítani."
+
+#~ msgid "Are you sure you wish remove the \"%1\" theme?"
+#~ msgstr "Biztosan el szeretné távolítani ezt a témát: „%1”?"
+
+#~ msgid ""
+#~ "Please apply theme item changes (with a new theme name) before attempting "
+#~ "to export theme."
+#~ msgstr "Mentse el ezeket a változásokat (új néven) exportálás előtt."
+
+#~ msgid "Export Desktop Theme"
+#~ msgstr "Asztali téma exportálása"
+
+#~ msgid "Export theme to file"
+#~ msgstr "Témaexportálás fájlba"
+
+#~ msgid "Archive (*.zip)"
+#~ msgstr "Archívum (*.zip)"
+
+#~ msgid "Theme Item"
+#~ msgstr "Témaelem"
+
+#~ msgid "Source"
+#~ msgstr "Forrás"
+
+#, fuzzy
+#~| msgid "%1 %2"
+#~ msgctxt ""
+#~ "%1 is the name of the theme, %2 is the type of the element (background, "
+#~ "icon, note, etc)"
+#~ msgid "%1 %2"
+#~ msgstr "%1 %2"
+
+#~ msgid "File..."
+#~ msgstr "Fájl…"
+
+#~ msgid "Select File to Use for %1"
+#~ msgstr "Válasszon ki egy fájlt ehhez: %1"
+
+#~ msgid " Author: %1"
+#~ msgstr " Szerző: %1"
+
+#~ msgid "Version: %1"
+#~ msgstr "Verzió: %1"
+
+#~ msgid "Desktop Theme Details"
+#~ msgstr "Az asztali téma jellemzői"
+
+#~ msgid "Choose an item and customize it by assigning it a theme"
+#~ msgstr "Válasszon egy elemet, és szabja testre egy téma hozzárendelésével"
+
+#~ msgid ""
+#~ "You can set any theme to any item. The available themes for the item are "
+#~ "in the dropdown box on the right."
+#~ msgstr ""
+#~ "Bármilyen témát beállíthat bármelyik elemhez. Az elérhető témák a jobb "
+#~ "oldalon található legördülő listában találhatók."
+
+#~ msgid "Enable more options"
+#~ msgstr "További beállítások engedélyezése"
+
+#~ msgid ""
+#~ "This will expand the dialog and give you options to export your custom "
+#~ "theme as well as to remove a theme."
+#~ msgstr ""
+#~ "Kibontja a párbeszédablakot, és lehetőséget ad az egyéni téma "
+#~ "exportálására valamint téma törlésére."
+
+#~ msgid "More"
+#~ msgstr "További részletek"
+
+#~ msgid "Remove the selected theme"
+#~ msgstr "Kijelölt téma eltávolítása"
+
+#~ msgid ""
+#~ "Clicking this button will remove the selected theme. You will be asked "
+#~ "for confirmation."
+#~ msgstr ""
+#~ "Erre a gombra kattintva törölheti a kijelölt témát, a törlési szándék "
+#~ "megerősítése után."
+
+#~ msgid "Save your theme in a zip archive"
+#~ msgstr "Egyéni téma mentése ZIP-archívumként"
+
+#~ msgid ""
+#~ "You can save your theme in a zip archive in order to share it with the "
+#~ "community."
+#~ msgstr ""
+#~ "Tömörített állományként elmentheti és megoszthatja témáját a közösséggel."
+
+#~ msgid "Export Theme to File..."
+#~ msgstr "A téma exportálása fájlba..."
+
+#~ msgid "New theme name:"
+#~ msgstr "Új témanév:"
+
+#~ msgid "Custom theme name"
+#~ msgstr "Egyedi témanév"
+
+#~ msgid "Give a name to your custom theme."
+#~ msgstr "Adjon egy nevet az egyedi témájának."
+
+#~ msgid "Author:"
+#~ msgstr "Szerző:"
+
+#~ msgid "Custom theme author "
+#~ msgstr "Egyedi témaszerző "
+
+#~ msgid "Enter the author name of your custom theme."
+#~ msgstr "Adja meg az egyéni téma szerzőjének nevét."
+
+#~ msgid "Version:"
+#~ msgstr "Verzió:"
+
+#~ msgid "Custom theme version number"
+#~ msgstr "Egyedi témaverziószám"
+
+#~ msgid "Enter the version number of your custom theme."
+#~ msgstr "Adja meg az egyéni téma verziószámát."
+
+#~ msgid "Description:"
+#~ msgstr "Leírás:"
+
+#~ msgid "Custom theme description"
+#~ msgstr "Egyedi témaleírás"
+
+#~ msgid "Enter a description which will explain your custom theme."
+#~ msgstr "Adja meg az egyéni téma leírását."
+
+#~ msgid "Select theme from above to customize"
+#~ msgstr "Válasszon egy témát a testre szabáshoz"
+
+#~ msgid "Theme Author"
+#~ msgstr "Szerző"
+
+#~ msgid "Theme Name"
+#~ msgstr "Név"
+
+#~ msgid "Theme Version"
+#~ msgstr "Verzió"
+
+#~ msgid "The theme description goes here..."
+#~ msgstr "Témaleírás..."
+
+#~ msgid ""
+#~ "Choose a start theme in this list then customize some items below. All "
+#~ "less important items not listed below will use this start theme."
+#~ msgstr ""
+#~ "Válasszon egy kezdőtémát a listából, majd szabjon testre lentebb néhány "
+#~ "elemet. Minden kevésbé fontos elem ezt a témát fogja használni."
+
+#~ msgid "Karol Szwed"
+#~ msgstr "Karol Szwed"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "KCMDesktopTheme"
+#~ msgstr "KCMDesktopTheme"
+
+#, fuzzy
+#~| msgid ""
+#~| "To change your desktop theme to \"%1\", open\n"
+#~| " the desktop Appearance Settings and select \"%2\" from the droplist."
+#~ msgid ""
+#~ "To change your desktop theme to \"%1\", go back to the 'General' tab of "
+#~ "System Settings; choose 'Appearance', and then 'Style'; and finally "
+#~ "select \"%2\" from the drop-down list at the top of the window."
+#~ msgstr ""
+#~ "Ha erre szeretné váltani a témát: \"%1\", nyissa meg\n"
+#~ " az asztal Megjelenési beállítások ablakát és válassza a lenyíló listából "
+#~ "ezt: \"%2\"."
+
+#, fuzzy
+#~| msgid "Removal of the default KDE theme is not allowed."
+#~ msgid "Removal of the active desktop theme is not allowed."
+#~ msgstr "Az alapértelmezett KDE-témát nem lehet eltávolítani."

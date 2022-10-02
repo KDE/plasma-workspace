@@ -1,0 +1,165 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % German "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmstyle" lang="&language;">
+<articleinfo>
+
+<title
+>Anwendungs-Stil</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>Frank</firstname
+><surname
+>Schütte</surname
+><affiliation
+><address
+><email
+>F.Schuette@t-online.de</email
+></address
+></affiliation
+><contrib
+>Deutsche Übersetzung</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-09</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systemeinstellungen</keyword>
+<keyword
+>Stil</keyword>
+<keyword
+>Anwendung</keyword>
+<keyword
+>Miniprogramme</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>In diesem Abschnitt können Sie festlegen, wie Kontrollelemente (Widgets) von &plasma; dargestellt werden.</para>
+
+<note
+><para
+><emphasis
+>Kontrollelement (Widget)</emphasis
+> ist eine übliche Sammelbezeichnung für Elemente der Benutzeroberfläche wie Knöpfe, Menüs oder Bildlaufleisten. Es sind die grundlegenden Bausteine, aus denen Anwendungen zusammengesetzt sind.</para
+></note>
+
+<para
+>Sie können in diesem Abschnitt das Aussehen der Kontrollelemente festlegen, aber nicht die Farben. Diese können Sie im Abschnitt <ulink url="help:/kcontrol/colors/index.html"
+>Farben</ulink
+> einstellen.</para>
+
+<para
+>Unter der Beschriftung <guilabel
+>Anwendungs-Stil</guilabel
+> wird eine Auswahl vordefinierter Stile angezeigt. Jeder Stil hat einen Namen und eine kurze Beschreibung erscheint, wenn der Mauszeiger sich über dem Eintrag befindet.</para>
+
+<para
+>Möchten Sie einen &plasma;-Stil ändern, benutzen Sie das Überlagerungssymbol <guilabel
+>Stil einrichten</guilabel
+> unten rechts auf dem Symbol.</para>
+
+<para
+>Wenn implementiert, ist es möglich, fast jeden Aspekt eines Stils zu ändern: Reiter auf Karteikarten zentrieren, Symbol-Trenner in Werkzeugleisten anzeigen, Fokus von Bedienelementen in Listen sichtbar machen, Skalenstriche auf Schiebereglern anzeigen, Erweitere Griffe zur Größenänderung aktivieren, Sichtbarkeit von Kurzbefehlen einstellen, Verschiebungsmodus von Fenstern ändern, die Verwendung von Rahmen für die bessere Zugänglichkeit, Verwendung von Schaltflächen auf den Bildlaufleisten und die Verwendung von Transparenz in den Menüs.</para>
+
+<para
+>Die allgemeinen Einstellungen können Sie mit dem Knopf <guibutton
+>Symbole und Werkzeugleisten einrichten</guibutton
+> unter den Stilen   einen Dialog öffnen, um die Einstellungen auszuwählen.</para>
+<variablelist>
+
+<varlistentry
+> 
+<term
+><guilabel
+>Symbole auf Knöpfen anzeigen</guilabel
+></term>
+<listitem>
+<para
+>Falls diese Einstellung gewählt wurde, wird auf Standardknöpfen wie <guibutton
+>OK</guibutton
+> und <guibutton
+>Anwenden</guibutton
+> ein kleines Symbol dargestellt. Ist die Einstellung nicht aktiviert, wird nur der Text des Knopfes angezeigt.</para>
+</listitem
+> 
+</varlistentry
+> 
+
+<varlistentry
+> 
+<term
+><guilabel
+>Symbole in Menüs anzeigen</guilabel
+></term>
+<listitem>
+<para
+>Ist diese Einstellung ausgewählt, werden in &kde;-Programmen kleine Symbole neben den meisten Menüeinträgen angezeigt, ansonsten nur der Text der Menüeinträge. Wird die Anzeige von Menüsymbolen geändert, wirkt sich das nur auf neu gestartete Programme aus.</para>
+</listitem
+> 
+</varlistentry
+> 
+
+<varlistentry
+> 
+<term
+><guilabel
+>Text auf Haupt-Werkzeugleiste</guilabel
+>, <guilabel
+>Text auf anderen Werkzeugleisten</guilabel
+></term>
+<listitem>
+<para
+>Mit diesen Auswahlfeldern können Sie festlegen, wo der Text auf einem Knopf standardmäßig angezeigt wird. Falls <guilabel
+>Keiner</guilabel
+> gewählt ist, wird auf den Knöpfen der Werkzeugleisten kein Text angezeigt. Bei der Auswahl <guilabel
+>Nur Text</guilabel
+> wird das Symbol des Knopfes durch eine Textbezeichnung ersetzt. Ist <guilabel
+>Neben Symbolen</guilabel
+> ausgewählt, wird der Text <emphasis
+>rechts</emphasis
+> neben dem Symbol angezeigt. Die Auswahl <guilabel
+>Unter Symbolen</guilabel
+> bewirkt, dass der Text des Knopfes standardmäßig <emphasis
+>unter</emphasis
+> dem Symbol angezeigt wird.</para>
+
+<tip
+><para
+>Diese Einstellungen legen nur die <emphasis
+>Standard</emphasis
+>position fest. Jede Anwendung kann die Einstellung in diesem Abschnitt überschreiben.</para
+></tip>
+</listitem
+> 
+</varlistentry
+> 
+
+</variablelist>
+
+<para
+>Mit <guibutton
+>GNOME/GTK Anwendungs-Stil einrichten</guibutton
+> können Sie einen Dialog öffnen, um ein <guilabel
+>GTK-Design</guilabel
+> auszuwählen, ein GTK-Design-Design aus einer Datei zu installieren oder aus dem Internet <guibutton
+>Neue Anwendungs-Stile für GNOME-GTK holen</guibutton
+>. </para>
+
+</article>

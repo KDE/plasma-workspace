@@ -1,0 +1,222 @@
+# translation of kcm_autostart.po to
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Maciej Wikło <maciej.wiklo@wp.pl>, 2008.
+# Marta Rybczyńska <kde-i18n@rybczynska.net>, 2008, 2009.
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2011, 2012, 2015, 2017, 2019, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_autostart\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:50+0000\n"
+"PO-Revision-Date: 2022-07-30 19:34+0200\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
+"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 22.03.70\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+
+#: autostartmodel.cpp:288
+#, kde-format
+msgid "\"%1\" is not an absolute url."
+msgstr "\"%1\" nie jest bezwzględnym adresem url."
+
+#: autostartmodel.cpp:291
+#, kde-format
+msgid "\"%1\" does not exist."
+msgstr "\"%1\" nie istnieje."
+
+#: autostartmodel.cpp:294
+#, kde-format
+msgid "\"%1\" is not a file."
+msgstr "\"%1\" nie jest plikiem."
+
+#: autostartmodel.cpp:297
+#, kde-format
+msgid "\"%1\" is not readable."
+msgstr "\"%1\" nie jest do odczytu."
+
+#: package/contents/ui/main.qml:40
+#, kde-format
+msgid "Make Executable"
+msgstr "Uczyń wykonywalnym"
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "The file '%1' must be executable to run at logout."
+msgstr ""
+"Plik '%1' musi być wykonywalnym, aby móc go uruchomi przy wylogowywaniu."
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid "The file '%1' must be executable to run at login."
+msgstr "Plik '%1' musi być wykonywalnym, aby móc go uruchomi przy logowaniu."
+
+#: package/contents/ui/main.qml:89
+#, kde-format
+msgid "Properties"
+msgstr "Właściwości"
+
+#: package/contents/ui/main.qml:95
+#, kde-format
+msgid "Remove"
+msgstr "Usuń"
+
+#: package/contents/ui/main.qml:106
+#, kde-format
+msgid "Applications"
+msgstr "Programy"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Login Scripts"
+msgstr "Skrypty wykonywane na wejściu"
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Pre-startup Scripts"
+msgstr "Skrypty wykonywane przed uruchomieniem"
+
+#: package/contents/ui/main.qml:115
+#, kde-format
+msgid "Logout Scripts"
+msgstr "Skrypty wykonywane na wyjściu"
+
+#: package/contents/ui/main.qml:124
+#, kde-format
+msgid "No user-specified autostart items"
+msgstr ""
+"Nie ma żadnych rzeczy określonych przez użytkownika do samo-uruchomienia"
+
+#: package/contents/ui/main.qml:125
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Click the <interface>Add…</interface> button below to add some"
+msgstr ""
+"Naciśnij przycisk <interface>Dodaj...</interface>, aby dodać jakąś rzecz"
+
+#: package/contents/ui/main.qml:139
+#, kde-format
+msgid "Choose Login Script"
+msgstr "Wybierz skrypty wykonywany na wejściu"
+
+#: package/contents/ui/main.qml:160
+#, kde-format
+msgid "Choose Logout Script"
+msgstr "Wybierz skrypty wykonywany na wyjściu"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "Add…"
+msgstr "Dodaj..."
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Add Application…"
+msgstr "Dodaj program..."
+
+#: package/contents/ui/main.qml:199
+#, kde-format
+msgid "Add Login Script…"
+msgstr "Dodaj skrypt wykonywany na wejściu..."
+
+#: package/contents/ui/main.qml:205
+#, kde-format
+msgid "Add Logout Script…"
+msgstr "Dodaj skrypt wykonywany na wyjściu..."
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Maciej Wikło, Łukasz Wojniłowicz"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "maciej.wiklo@wp.pl, lukasz.wojnilowicz@gmail.com"
+
+#~ msgid "Autostart"
+#~ msgstr "Samo-uruchamiane"
+
+#~ msgid "Session Autostart Manager Control Panel Module"
+#~ msgstr "Moduł panelu sterowania zarządzania samouruchamianiem w sesji"
+
+#~ msgid "Copyright © 2006–2020 Autostart Manager team"
+#~ msgstr "Copyright © 2006–2020 Zespół zarządzania samouruchamianiem"
+
+#~ msgid "Stephen Leaf"
+#~ msgstr "Stephen Leaf"
+
+#~ msgid "Montel Laurent"
+#~ msgstr "Montel Laurent"
+
+#~ msgid "Maintainer"
+#~ msgstr "Opiekun"
+
+#~ msgid "Nicolas Fella"
+#~ msgstr "Nicolas Fella"
+
+#~ msgid "Add..."
+#~ msgstr "Dodaj..."
+
+#~ msgid "Shell script path:"
+#~ msgstr "Ścieżka skryptu powłoki:"
+
+#~ msgid "Create as symlink"
+#~ msgstr "Utwórz jako dowiązanie symboliczne"
+
+#~ msgid "Autostart only in Plasma"
+#~ msgstr "Uruchamiaj tylko w Plazmie"
+
+#~ msgid "Name"
+#~ msgstr "Nazwa"
+
+#~ msgid "Command"
+#~ msgstr "Polecenie"
+
+#~ msgid "Status"
+#~ msgstr "Stan"
+
+#~ msgctxt ""
+#~ "@title:column The name of the column that decides if the program is run "
+#~ "on session startup, on session shutdown, etc"
+#~ msgid "Run On"
+#~ msgstr "Chwila uruchomienia"
+
+#~ msgid "Session Autostart Manager"
+#~ msgstr "Zarządzanie samouruchamianiem w sesji"
+
+#~ msgctxt "The program will be run"
+#~ msgid "Enabled"
+#~ msgstr "Włączony"
+
+#~ msgctxt "The program won't be run"
+#~ msgid "Disabled"
+#~ msgstr "Wyłączony"
+
+#~ msgid "Desktop File"
+#~ msgstr "Plik pulpitu"
+
+#~ msgid "Script File"
+#~ msgstr "Plik skryptu"
+
+#~ msgid "Add Program..."
+#~ msgstr "Dodaj program..."
+
+#~ msgid "Startup"
+#~ msgstr "Przy uruchamianiu systemu"
+
+#~ msgid "Before session startup"
+#~ msgstr "Przed rozpoczęciem sesji"
+
+#~ msgid ""
+#~ "Only files with “.sh” extensions are allowed for setting up the "
+#~ "environment."
+#~ msgstr ""
+#~ "Tylko pliki z rozszerzeniami “.sh” są uprawnione do ustawiania środowiska."
+
+#~ msgid "Shutdown"
+#~ msgstr "Zamknięcie systemu"

@@ -1,0 +1,159 @@
+# translation of plasma_engine_devicenotifications.po to Slovak
+# Roman Paholik <wizzardsk@gmail.com>, 2015, 2016.
+# Dusan Kazik <prescott66@gmail.com>, 2020.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_engine_devicenotifications\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2021-02-11 10:39+0100\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.12.2\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: ksolidnotify.cpp:149
+#, kde-format
+msgid "Device Status"
+msgstr "Stav zariadenia"
+
+#: ksolidnotify.cpp:149
+#, kde-format
+msgid "A device can now be safely removed"
+msgstr "Zariadenie môže byť teraz bezpečne odstránené"
+
+#: ksolidnotify.cpp:150
+#, kde-format
+msgid "This device can now be safely removed."
+msgstr "Toto zariadenie môže byť teraz bezpečne odstránené."
+
+#: ksolidnotify.cpp:157
+#, kde-format
+msgid "You are not authorized to mount this device."
+msgstr "Nemáte oprávnenie na pripojenie tohto zariadenia."
+
+#: ksolidnotify.cpp:160
+#, kde-format
+msgctxt "Remove is less technical for unmount"
+msgid "You are not authorized to remove this device."
+msgstr "Nemáte oprávnenie na odstránenie tohto zariadenia."
+
+#: ksolidnotify.cpp:163
+#, kde-format
+msgid "You are not authorized to eject this disc."
+msgstr "Nemáte oprávnenie na vysunutie tohto disku."
+
+#: ksolidnotify.cpp:170
+#, kde-format
+msgid "Could not mount this device as it is busy."
+msgstr "Nepodarilo sa pripojiť toto zariadenie, pretože je zaneprázdnené."
+
+#: ksolidnotify.cpp:200
+#, kde-format
+msgid "One or more files on this device are open within an application."
+msgstr ""
+"Jeden alebo viac súborov na tomto zariadení sú stále otvorené v nejakej "
+"aplikácii."
+
+#: ksolidnotify.cpp:202
+#, kde-format
+msgid "One or more files on this device are opened in application \"%2\"."
+msgid_plural ""
+"One or more files on this device are opened in following applications: %2."
+msgstr[0] ""
+"Jeden alebo viac súborov na tomto zariadení sú otvorené v aplikácii \"%2\"."
+msgstr[1] ""
+"Jeden alebo viac súborov na tomto zariadení sú otvorené v aplikáciách: %2."
+msgstr[2] ""
+"Jeden alebo viac súborov na tomto zariadení sú otvorené v aplikáciách: %2."
+
+#: ksolidnotify.cpp:205
+#, kde-format
+msgctxt "separator in list of apps blocking device unmount"
+msgid ", "
+msgstr ", "
+
+#: ksolidnotify.cpp:222
+#, kde-format
+msgid "Could not mount this device."
+msgstr "Toto zariadenie sa nepodarilo pripojiť."
+
+#: ksolidnotify.cpp:225
+#, kde-format
+msgctxt "Remove is less technical for unmount"
+msgid "Could not remove this device."
+msgstr "Toto zariadenie sa nepodarilo odstrániť."
+
+#: ksolidnotify.cpp:228
+#, kde-format
+msgid "Could not eject this disc."
+msgstr "Tento disk sa nepodarilo vysunúť."
+
+#~ msgid ""
+#~ "Could not safely remove the following device: %1\n"
+#~ "One or more files on this device are open within an application"
+#~ msgstr ""
+#~ "Nepodarilo sa vysunúť nasledujúce zariadenie: %1\n"
+#~ "Jeden alebo viac súborov na tomto zariadení sú stále používané nejakou "
+#~ "aplikáciou "
+
+#~ msgid ""
+#~ "Could not safely remove the following device: %1\n"
+#~ "One or more files on this device are opened in application \"%3\"\n"
+#~ "Please close it and try again"
+#~ msgid_plural ""
+#~ "Could not safely remove the following device: %1\n"
+#~ "One or more files on this device are opened in following applications: "
+#~ "%3\n"
+#~ "Please close it and try again"
+#~ msgstr[0] ""
+#~ "Nepodarilo sa vysunúť nasledujúce zariadenie: %1\n"
+#~ "Jeden alebo viac súborov na tomto zariadení sú stále používané v "
+#~ "aplikácii \"%3\"\n"
+#~ "Prosím, zavrite ju a skúste znova."
+#~ msgstr[1] ""
+#~ "Nepodarilo sa vysunúť nasledujúce zariadenie: %1\n"
+#~ "Jeden alebo viac súborov na tomto zariadení sú stále používané v "
+#~ "aplikácii \"%3\"\n"
+#~ "Prosím, zavrite ju a skúste znova."
+#~ msgstr[2] ""
+#~ "Nepodarilo sa vysunúť nasledujúce zariadenie: %1\n"
+#~ "Jeden alebo viac súborov na tomto zariadení sú stále používané v "
+#~ "aplikácii \"%3\"\n"
+#~ "Prosím, zavrite ju a skúste znova."
+
+#~ msgctxt ""
+#~ "The term \"remove\" here means \"physically disconnect the device from "
+#~ "the computer\", whereas \"safely\" means \"without risk of data loss\""
+#~ msgid "The following device can now be safely removed: %1"
+#~ msgstr "Nasledujúce zariadenie je možné teraz bezpečne odstrániť: %1"
+
+#~ msgid ""
+#~ "Could not eject the following device: %1\n"
+#~ "One or more files on this device are opened in application \"%3\"\n"
+#~ "Please close it and try again"
+#~ msgid_plural ""
+#~ "Could not eject the following device: %1\n"
+#~ "One or more files on this device are opened in following applications: "
+#~ "%3\n"
+#~ "Please close it and try again"
+#~ msgstr[0] ""
+#~ "Nepodarilo sa vysunúť nasledujúce zariadenie: %1\n"
+#~ "Jeden alebo viac súborov na tomto zariadení sú stále používané v "
+#~ "aplikácii \"%3\"\n"
+#~ "Prosím, zavrite ju a skúste znova."
+#~ msgstr[1] ""
+#~ "Nepodarilo sa vysunúť nasledujúce zariadenie: %1\n"
+#~ "Jeden alebo viac súborov na tomto zariadení sú stále používané v "
+#~ "aplikácii \"%3\"\n"
+#~ "Prosím, zavrite ju a skúste znova."
+#~ msgstr[2] ""
+#~ "Nepodarilo sa vysunúť nasledujúce zariadenie: %1\n"
+#~ "Jeden alebo viac súborov na tomto zariadení sú stále používané v "
+#~ "aplikácii \"%3\"\n"
+#~ "Prosím, zavrite ju a skúste znova."

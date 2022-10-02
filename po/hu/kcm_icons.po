@@ -1,0 +1,384 @@
+# Copyright (C) 2010 Free Software Foundation, Inc.
+#
+# Tamas Szanto <tszanto@interware.hu>, 2000.
+# Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2014, 2019.
+# Balázs Úr <urbalazs@gmail.com>, 2012.
+# Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: KDE 4.1\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"PO-Revision-Date: 2021-09-30 13:52+0200\n"
+"Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.03.80\n"
+
+#: iconsizecategorymodel.cpp:14
+#, kde-format
+msgid "Toolbar"
+msgstr "Eszköztár"
+
+#: iconsizecategorymodel.cpp:15
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Fő eszköztár"
+
+#: iconsizecategorymodel.cpp:16
+#, kde-format
+msgid "Small Icons"
+msgstr "Kis ikonok"
+
+#: iconsizecategorymodel.cpp:17
+#, kde-format
+msgid "Panel"
+msgstr "Panel"
+
+#: iconsizecategorymodel.cpp:18
+#, kde-format
+msgid "Dialogs"
+msgstr "Párbeszédablakok"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr "A jelenlegi ikontéma neve"
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr "Asztali ikonok mérete"
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr "Eszköztárikonok mérete"
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, kde-format
+msgid "Main toolbar icons size"
+msgstr "Fő eszköztár ikonjainak mérete"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, kde-format
+msgid "Small icons size"
+msgstr "Kis ikonok mérete"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr "Panelikonok mérete"
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr "Párbeszédablak-ikonok mérete"
+
+#: main.cpp:182
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Nem lehet létrehozni egy ideiglenes fájlt."
+
+#: main.cpp:193
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Nem lehet letölteni a(z) %1 ikontéma-archívumot."
+
+#: main.cpp:207
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "A fájl nem ikontéma-archívum."
+
+#: main.cpp:212
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr ""
+"Hiba történt a telepítés közben, de az archívumban található legtöbb téma "
+"telepítése megtörtént."
+
+#: main.cpp:216
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "A téma sikeresen települt."
+
+#: main.cpp:260
+#, kde-format
+msgid "Installing icon themes…"
+msgstr "Ikontémák telepítése…"
+
+#: main.cpp:270
+#, kde-format
+msgid "Installing %1 theme…"
+msgstr "A(z) %1 téma telepítése…"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr "Ebben a modulban kiválaszthatja az asztali környezet ikonjait."
+
+#: package/contents/ui/main.qml:147
+#, kde-format
+msgid "Remove Icon Theme"
+msgstr "Ikontéma eltávolítása"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Restore Icon Theme"
+msgstr "Ikontéma visszaállítása"
+
+#: package/contents/ui/main.qml:228
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr "Ikonméretek beállítása"
+
+#: package/contents/ui/main.qml:246
+#, kde-format
+msgid "Install from File…"
+msgstr "Telepítés fájlból…"
+
+#: package/contents/ui/main.qml:251
+#, kde-format
+msgid "Get New Icons…"
+msgstr "Új ikonok letöltése…"
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Open Theme"
+msgstr "Téma megnyitása"
+
+#: package/contents/ui/main.qml:281
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr "Témafájlok (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Icon theme is already used"
+#~ msgstr "Az ikontéma már használatban van"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Kiszel Kristóf,Szántó Tamás"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kiszel.kristof@gmail.com,tszanto@interware.hu"
+
+#~ msgid "Icons"
+#~ msgstr "Ikonok"
+
+#~ msgid "Icons Control Panel Module"
+#~ msgstr "Ikonbeállító panelmodul"
+
+#~ msgid "(c) 2000-2003 Geert Jansen"
+#~ msgstr "© Geert Jansen, 2000-2003."
+
+#~ msgid "Geert Jansen"
+#~ msgstr "Geert Jansen"
+
+#~ msgid "Antonio Larrosa Jimenez"
+#~ msgstr "Antonio Larrosa Jimenez"
+
+#~ msgid "Torsten Rahn"
+#~ msgstr "Torsten Rahn"
+
+#~ msgid "Jonathan Riddell"
+#~ msgstr "Jonathan Riddell"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Kai Uwe Broulik"
+
+#~ msgid "Desktop"
+#~ msgstr "Asztal"
+
+#~ msgid "Download New Icon Themes"
+#~ msgstr "Új ikontémák letöltése"
+
+#~ msgid "Use of Icon"
+#~ msgstr "Ikonhasználat"
+
+#~ msgctxt "@label The icon rendered by default"
+#~ msgid "Default"
+#~ msgstr "Alapértelmezés"
+
+#~ msgctxt "@label The icon rendered as active"
+#~ msgid "Active"
+#~ msgstr "Aktív"
+
+#~ msgctxt "@label The icon rendered as disabled"
+#~ msgid "Disabled"
+#~ msgstr "Kikapcsolva"
+
+#~ msgid "Size:"
+#~ msgstr "Méret:"
+
+#~ msgid "Enable icon animations"
+#~ msgstr "Ikonanimációk bekapcsolása"
+
+#~ msgid "Set Effect..."
+#~ msgstr "Effektus beállítása…"
+
+#~ msgid "All Icons"
+#~ msgstr "Az összes ikon"
+
+#~ msgid "Setup Default Icon Effect"
+#~ msgstr "Az alapértelmezett ikoneffektus beállítása"
+
+#~ msgid "Setup Active Icon Effect"
+#~ msgstr "Az aktív ikoneffektus beállítása"
+
+#~ msgid "Setup Disabled Icon Effect"
+#~ msgstr "A letiltott ikonok effektusának beállítása"
+
+#~ msgid "&Effect:"
+#~ msgstr "&Effektus:"
+
+#~ msgid "No Effect"
+#~ msgstr "Nincs effektus"
+
+#~ msgid "To Gray"
+#~ msgstr "Szürkítés"
+
+#~ msgid "Colorize"
+#~ msgstr "Színezés"
+
+#~ msgid "Gamma"
+#~ msgstr "Gamma-növelés"
+
+#~ msgid "Desaturate"
+#~ msgstr "Telítettségcsökkentés"
+
+#~ msgid "To Monochrome"
+#~ msgstr "Monokrómra"
+
+#~ msgid "&Semi-transparent"
+#~ msgstr "&Félig átlátszó"
+
+#~ msgid "Preview"
+#~ msgstr "Előnézet"
+
+#~ msgid "Effect Parameters"
+#~ msgstr "Az effektus paraméterei"
+
+#~ msgid "&Amount:"
+#~ msgstr "Menny&iség:"
+
+#~ msgid "Co&lor:"
+#~ msgstr "&Szín:"
+
+#~ msgid "&Second color:"
+#~ msgstr "Más&odik szín:"
+
+#~ msgid "Name"
+#~ msgstr "Név"
+
+#~ msgid "Description"
+#~ msgstr "Leírás"
+
+#~ msgid "Install a theme archive file you already have locally"
+#~ msgstr "Egy helyi témafájlt telepít"
+
+#~ msgid ""
+#~ "If you already have a theme archive locally, this button will unpack it "
+#~ "and make it available for KDE applications"
+#~ msgstr ""
+#~ "Ha van egy telepíthető helyi témaarchívuma, ezzel a gombbal tudja "
+#~ "telepíteni a KDE-be"
+
+#~ msgid "Get new themes from the Internet"
+#~ msgstr "Új téma letöltése az internetről"
+
+#~ msgid ""
+#~ "You need to be connected to the Internet to use this action. A dialog "
+#~ "will display a list of themes from the http://www.kde.org website. "
+#~ "Clicking the Install button associated with a theme will install this "
+#~ "theme locally."
+#~ msgstr ""
+#~ "Letöltéshez csatlakozva kell lenni az internethez. Egy listában "
+#~ "megjelennek a http://www.kde.org címről letölthető témák nevei. Ha egy "
+#~ "témát telepíteni szeretne, kattintson a Telepítés gombra."
+
+#~ msgid "Remove the selected theme from your disk"
+#~ msgstr "A kijelölt téma törlése"
+
+#~ msgid "This will remove the selected theme from your disk."
+#~ msgstr "Eltávolítja a kijelölt témát a helyi lemezről."
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "Ejtse ide vagy írja be a téma URL-jét"
+
+#~ msgid ""
+#~ "Unable to download the icon theme archive;\n"
+#~ "please check that address %1 is correct."
+#~ msgstr ""
+#~ "Nem sikerült letölteni a megadott ikontéma-archívumot.\n"
+#~ "Ellenőrizze, hogy valóban ez-e a helyes cím: %1."
+
+#~ msgid "<qt>Installing <strong>%1</strong> theme</qt>"
+#~ msgstr "<qt>A(z) <strong>%1</strong> téma telepítése</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <strong>%1</strong> icon theme?"
+#~ "<br /><br />This will delete the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>Biztosan el szeretné távolítani ezt az ikontémát: <strong>%1</strong>?"
+#~ "<br /><br />Az ikontémához tartozó fájlok törlődni fognak.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Megerősítés"
+
+#~ msgid "&Theme"
+#~ msgstr "&Téma"
+
+#~ msgid "Ad&vanced"
+#~ msgstr "Spe&ciális"
+
+#~ msgid ""
+#~ "<h1>Icons</h1>This module allows you to choose the icons for your desktop."
+#~ "<p>To choose an icon theme, click on its name and apply your choice by "
+#~ "pressing the \"Apply\" button below. If you do not want to apply your "
+#~ "choice you can press the \"Reset\" button to discard your changes.</"
+#~ "p><p>By pressing the \"Install Theme File...\" button you can install "
+#~ "your new icon theme by writing its location in the box or browsing to the "
+#~ "location. Press the \"OK\" button to finish the installation.</p><p>The "
+#~ "\"Remove Theme\" button will only be activated if you select a theme that "
+#~ "you installed using this module. You are not able to remove globally "
+#~ "installed themes here.</p><p>You can also specify effects that should be "
+#~ "applied to the icons.</p>"
+#~ msgstr ""
+#~ "<h1>Ikonok</h1>Ebben a modulban a KDE munkaasztalon használt ikonokat "
+#~ "lehet kiválasztani.<p>Ikontéma kiválasztásához kattintson a téma nevére "
+#~ "és nyomja meg az „Alkalmazás” gombot. Ha nem szeretné megtartani a "
+#~ "módosítást, kattintson az „Alapállapot” gombra a változtatások "
+#~ "eldobásához.</p><p>Ha az „Témafájl telepítése…” gombra kattint, meg kell "
+#~ "adni az új téma elérési útját közvetlen beírással vagy a tallózási "
+#~ "ablakból kiválasztva. Ezután kattintson az „OK” gombra a telepítés "
+#~ "elkezdéséhez.</p><p>„A téma eltávolítása” gomb csak akkor aktiválódik, ha "
+#~ "olyan témát választott, amelyet ezzel a modullal telepítettek. A "
+#~ "globálisan telepített rendszertémákat itt nem lehet eltávolítani.</"
+#~ "p><p>Az ikonok megjelenítésénél használt effektusokat is ki lehet "
+#~ "választani.</p>"
+
+#~ msgid "Animate icons"
+#~ msgstr "Animált ikonok"
+
+#~ msgid "Select the icon theme you want to use:"
+#~ msgstr "Válasszon egy ikontémát:"
+
+#~ msgid "Double-sized pixels"
+#~ msgstr "Dupla méretű képpontok"
+
+#~ msgid "Desktop/File Manager"
+#~ msgstr "Asztal/fájlkezelő"

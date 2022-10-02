@@ -1,0 +1,469 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# Phu Hung Nguyen <phu.nguyen@kdemail.net>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-29 00:48+0000\n"
+"PO-Revision-Date: 2022-04-20 19:29+0200\n"
+"Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
+"Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 20.12.2\n"
+
+#: package/contents/ui/ChangePassword.qml:26
+#: package/contents/ui/UserDetailsPage.qml:166
+#, kde-format
+msgid "Change Password"
+msgstr "Đổi mật khẩu"
+
+#: package/contents/ui/ChangePassword.qml:41
+#, kde-format
+msgid "Password"
+msgstr "Mật khẩu"
+
+#: package/contents/ui/ChangePassword.qml:55
+#, kde-format
+msgid "Confirm password"
+msgstr "Xác nhận mật khẩu"
+
+#: package/contents/ui/ChangePassword.qml:68
+#: package/contents/ui/CreateUser.qml:65
+#, kde-format
+msgid "Passwords must match"
+msgstr "Mật khẩu phải khớp"
+
+#: package/contents/ui/ChangePassword.qml:73
+#, kde-format
+msgid "Set Password"
+msgstr "Đặt mật khẩu"
+
+#: package/contents/ui/ChangeWalletPassword.qml:17
+#, kde-format
+msgid "Change Wallet Password?"
+msgstr "Đổi mật khẩu của ví?"
+
+#: package/contents/ui/ChangeWalletPassword.qml:26
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Now that you have changed your login password, you may also want to change "
+"the password on your default KWallet to match it."
+msgstr ""
+"Giờ bạn đã đổi mật khẩu đăng nhập, bạn có thể cũng sẽ muốn đổi mật khẩu ở "
+"KWallet mặc định của mình để khớp với nó."
+
+#: package/contents/ui/ChangeWalletPassword.qml:31
+#, kde-format
+msgid "What is KWallet?"
+msgstr "KWallet là cái gì?"
+
+#: package/contents/ui/ChangeWalletPassword.qml:41
+#, kde-format
+msgid ""
+"KWallet is a password manager that stores your passwords for wireless "
+"networks and other encrypted resources. It is locked with its own password "
+"which differs from your login password. If the two passwords match, it can "
+"be unlocked at login automatically so you don't have to enter the KWallet "
+"password yourself."
+msgstr ""
+"KWallet là một trình quản lí mật khẩu, lưu trữ các mật khẩu cho mạng không "
+"dây và các tài nguyên mật mã hoá khác. Nó được khoá với một mật khẩu riêng, "
+"khác với mật khẩu đăng nhập của bạn. Nếu hai mật khẩu đó khớp nhau, nó có "
+"thể được tự động mở khoá khi đăng nhập để bạn không cần phải tự mình nhập "
+"mật khẩu KWallet nữa."
+
+#: package/contents/ui/ChangeWalletPassword.qml:57
+#, kde-format
+msgid "Change Wallet Password"
+msgstr "Đổi mật khẩu của ví"
+
+#: package/contents/ui/ChangeWalletPassword.qml:66
+#, kde-format
+msgid "Leave Unchanged"
+msgstr "Giữ nguyên"
+
+#: package/contents/ui/CreateUser.qml:16
+#, kde-format
+msgid "Create User"
+msgstr "Tạo người dùng"
+
+#: package/contents/ui/CreateUser.qml:30
+#: package/contents/ui/UserDetailsPage.qml:134
+#, kde-format
+msgid "Name:"
+msgstr "Tên:"
+
+#: package/contents/ui/CreateUser.qml:34
+#: package/contents/ui/UserDetailsPage.qml:141
+#, kde-format
+msgid "Username:"
+msgstr "Tên người dùng:"
+
+#: package/contents/ui/CreateUser.qml:44
+#: package/contents/ui/UserDetailsPage.qml:149
+#, kde-format
+msgid "Standard"
+msgstr "Thông thường"
+
+#: package/contents/ui/CreateUser.qml:45
+#: package/contents/ui/UserDetailsPage.qml:150
+#, kde-format
+msgid "Administrator"
+msgstr "Quản trị viên"
+
+#: package/contents/ui/CreateUser.qml:48
+#: package/contents/ui/UserDetailsPage.qml:153
+#, kde-format
+msgid "Account type:"
+msgstr "Kiểu danh khoản:"
+
+#: package/contents/ui/CreateUser.qml:53
+#, kde-format
+msgid "Password:"
+msgstr "Mật khẩu:"
+
+#: package/contents/ui/CreateUser.qml:58
+#, kde-format
+msgid "Confirm password:"
+msgstr "Xác nhận mật khẩu:"
+
+#: package/contents/ui/CreateUser.qml:69
+#, kde-format
+msgid "Create"
+msgstr "Tạo"
+
+#: package/contents/ui/FingerprintDialog.qml:57
+#, kde-format
+msgid "Configure Fingerprints"
+msgstr "Cấu hình dấu vân tay"
+
+#: package/contents/ui/FingerprintDialog.qml:67
+#, kde-format
+msgid "Clear Fingerprints"
+msgstr "Xoá dấu vân tay"
+
+#: package/contents/ui/FingerprintDialog.qml:74
+#, kde-format
+msgid "Add"
+msgstr "Thêm"
+
+#: package/contents/ui/FingerprintDialog.qml:83
+#: package/contents/ui/FingerprintDialog.qml:100
+#, kde-format
+msgid "Cancel"
+msgstr "Huỷ"
+
+#: package/contents/ui/FingerprintDialog.qml:89
+#, kde-format
+msgid "Continue"
+msgstr "Tiếp tục"
+
+#: package/contents/ui/FingerprintDialog.qml:108
+#, kde-format
+msgid "Done"
+msgstr "Xong"
+
+#: package/contents/ui/FingerprintDialog.qml:131
+#, kde-format
+msgid "Enrolling Fingerprint"
+msgstr "Thêm dấu vân tay"
+
+#: package/contents/ui/FingerprintDialog.qml:137
+#, kde-format
+msgctxt ""
+"%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
+msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
+msgstr "Vui lòng liên tục %1 ngón %2 vào cảm biến vân tay."
+
+#: package/contents/ui/FingerprintDialog.qml:147
+#, kde-format
+msgid "Finger Enrolled"
+msgstr "Dấu vân tay đã được thêm"
+
+#: package/contents/ui/FingerprintDialog.qml:183
+#, kde-format
+msgid "Pick a finger to enroll"
+msgstr "Chọn một ngón tay để thêm dấu vân"
+
+#: package/contents/ui/FingerprintDialog.qml:247
+#, kde-format
+msgid "Re-enroll finger"
+msgstr "Thêm lại dấu vân tay"
+
+#: package/contents/ui/FingerprintDialog.qml:265
+#, kde-format
+msgid "No fingerprints added"
+msgstr "Không thêm dấu vân tay nào"
+
+#: package/contents/ui/main.qml:22
+#, kde-format
+msgid "Manage Users"
+msgstr "Quản lí người dùng"
+
+#: package/contents/ui/main.qml:123
+#, kde-format
+msgid "Add New User"
+msgstr "Thêm người dùng mới"
+
+#: package/contents/ui/UserDetailsPage.qml:89
+#, kde-format
+msgid "Choose a picture"
+msgstr "Chọn một ảnh"
+
+#: package/contents/ui/UserDetailsPage.qml:120
+#, kde-format
+msgid "Change avatar"
+msgstr "Đổi hiện thân ảo"
+
+#: package/contents/ui/UserDetailsPage.qml:162
+#, kde-format
+msgid "Email address:"
+msgstr "Địa chỉ thư điện tử:"
+
+#: package/contents/ui/UserDetailsPage.qml:186
+#, kde-format
+msgid "Delete files"
+msgstr "Xoá tệp"
+
+#: package/contents/ui/UserDetailsPage.qml:193
+#, kde-format
+msgid "Keep files"
+msgstr "Giữ tệp"
+
+#: package/contents/ui/UserDetailsPage.qml:200
+#, kde-format
+msgid "Delete User…"
+msgstr "Xoá người dùng…"
+
+#: package/contents/ui/UserDetailsPage.qml:211
+#, kde-format
+msgid "Configure Fingerprint Authentication…"
+msgstr "Cấu hình xác thực bằng dấu vân tay..."
+
+#: package/contents/ui/UserDetailsPage.qml:225
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Fingerprints can be used in place of a password when unlocking the screen "
+"and providing administrator permissions to applications and command-line "
+"programs that request them.<nl/><nl/>Logging into the system with your "
+"fingerprint is not yet supported."
+msgstr ""
+"Dấu vân tay có thể được dùng thay cho mật khẩu khi mở khoá màn hình và cấp "
+"quyền quản trị viên cho các ứng dụng và chương trình dòng lệnh có yêu cầu."
+"<nl/><nl/>Việc dùng dấu vân tay để đăng nhập vào hệ thống chưa được hỗ trợ."
+
+#: package/contents/ui/UserDetailsPage.qml:235
+#, kde-format
+msgid "Change Avatar"
+msgstr "Đổi hiện thân ảo"
+
+#: package/contents/ui/UserDetailsPage.qml:238
+#, kde-format
+msgid "It's Nothing"
+msgstr "Không có gì"
+
+#: package/contents/ui/UserDetailsPage.qml:239
+#, kde-format
+msgid "Feisty Flamingo"
+msgstr "Hồng hạc"
+
+#: package/contents/ui/UserDetailsPage.qml:240
+#, kde-format
+msgid "Dragon's Fruit"
+msgstr "Thanh long"
+
+#: package/contents/ui/UserDetailsPage.qml:241
+#, kde-format
+msgid "Sweet Potato"
+msgstr "Khoai tây"
+
+#: package/contents/ui/UserDetailsPage.qml:242
+#, kde-format
+msgid "Ambient Amber"
+msgstr "Hổ phách"
+
+#: package/contents/ui/UserDetailsPage.qml:243
+#, kde-format
+msgid "Sparkle Sunbeam"
+msgstr "Tia nắng"
+
+#: package/contents/ui/UserDetailsPage.qml:244
+#, kde-format
+msgid "Lemon-Lime"
+msgstr "Chanh cốm"
+
+#: package/contents/ui/UserDetailsPage.qml:245
+#, kde-format
+msgid "Verdant Charm"
+msgstr "Lá cây"
+
+#: package/contents/ui/UserDetailsPage.qml:246
+#, kde-format
+msgid "Mellow Meadow"
+msgstr "Đồng cỏ"
+
+#: package/contents/ui/UserDetailsPage.qml:247
+#, kde-format
+msgid "Tepid Teal"
+msgstr "Mòng két"
+
+#: package/contents/ui/UserDetailsPage.qml:248
+#, kde-format
+msgid "Plasma Blue"
+msgstr "Điện tương"
+
+#: package/contents/ui/UserDetailsPage.qml:249
+#, kde-format
+msgid "Pon Purple"
+msgstr "Tía tươi"
+
+#: package/contents/ui/UserDetailsPage.qml:250
+#, kde-format
+msgid "Bajo Purple"
+msgstr "Tía tối"
+
+#: package/contents/ui/UserDetailsPage.qml:251
+#, kde-format
+msgid "Burnt Charcoal"
+msgstr "Than củi"
+
+#: package/contents/ui/UserDetailsPage.qml:252
+#, kde-format
+msgid "Paper Perfection"
+msgstr "Giấy viết"
+
+#: package/contents/ui/UserDetailsPage.qml:253
+#, kde-format
+msgid "Cafétera Brown"
+msgstr "Nâu nhờ"
+
+#: package/contents/ui/UserDetailsPage.qml:254
+#, kde-format
+msgid "Rich Hardwood"
+msgstr "Nâu đậm"
+
+#: package/contents/ui/UserDetailsPage.qml:305
+#, kde-format
+msgid "Choose File…"
+msgstr "Chọn tệp…"
+
+#: src/fingerprintmodel.cpp:147 src/fingerprintmodel.cpp:254
+#, kde-format
+msgid "No fingerprint device found."
+msgstr "Không tìm thấy thiết bị dấu vân tay nào."
+
+#: src/fingerprintmodel.cpp:313
+#, kde-format
+msgid "Retry scanning your finger."
+msgstr "Thử quét lại ngón tay của bạn."
+
+#: src/fingerprintmodel.cpp:315
+#, kde-format
+msgid "Swipe too short. Try again."
+msgstr "Cú hất quá ngắn. Hãy thử lại."
+
+#: src/fingerprintmodel.cpp:317
+#, kde-format
+msgid "Finger not centered on the reader. Try again."
+msgstr "Ngón tay bị đặt lệch khỏi bộ đọc. Hãy thử lại"
+
+#: src/fingerprintmodel.cpp:319
+#, kde-format
+msgid "Remove your finger from the reader, and try again."
+msgstr "Bỏ ngón tay khỏi bộ đọc và thử lại."
+
+#: src/fingerprintmodel.cpp:327
+#, kde-format
+msgid "Fingerprint enrollment has failed."
+msgstr "Việc thêm dấu vân tay đã thất bại."
+
+#: src/fingerprintmodel.cpp:330
+#, kde-format
+msgid ""
+"There is no space left for this device, delete other fingerprints to "
+"continue."
+msgstr ""
+"Không còn chỗ trống trên thiết bị này, hãy xoá các dấu vân tay khác để tiếp "
+"tục."
+
+#: src/fingerprintmodel.cpp:333
+#, kde-format
+msgid "The device was disconnected."
+msgstr "Thiết bị đã bị ngắt kết nối."
+
+#: src/fingerprintmodel.cpp:338
+#, kde-format
+msgid "An unknown error has occurred."
+msgstr "Đã xảy ra một lỗi không rõ."
+
+#: src/user.cpp:264
+#, kde-format
+msgid "Could not get permission to save user %1"
+msgstr "Không được cho phép lưu người dùng %1"
+
+#: src/user.cpp:269
+#, kde-format
+msgid "There was an error while saving changes"
+msgstr "Đã có lỗi khi lưu các thay đổi"
+
+#: src/user.cpp:364
+#, kde-format
+msgid "Failed to resize image: opening temp file failed"
+msgstr "Đổi cỡ ảnh thất bại: mở tệp tạm thất bại"
+
+#: src/user.cpp:372
+#, kde-format
+msgid "Failed to resize image: writing to temp file failed"
+msgstr "Đổi cỡ ảnh thất bại: ghi vào tệp tạm thất bại"
+
+#: src/usermodel.cpp:138
+#, kde-format
+msgid "Your Account"
+msgstr "Danh khoản của bạn"
+
+#: src/usermodel.cpp:138
+#, kde-format
+msgid "Other Accounts"
+msgstr "Danh khoản khác"
+
+#~ msgid "Please repeatedly "
+#~ msgstr "Vui lòng liên tục ... ngón ... vào cảm biến vân tay."
+
+#~ msgctxt "Example email address"
+#~ msgid "john.doe@kde.org"
+#~ msgstr "nam.nguyen@kde.org"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Nguyễn Hùng Phú"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "phu.nguyen@kdemail.net"
+
+#~ msgid "Manage user accounts"
+#~ msgstr "Quản lí các danh khoản người dùng"
+
+#~ msgid "Nicolas Fella"
+#~ msgstr "Nicolas Fella"
+
+#~ msgid "Carson Black"
+#~ msgstr "Carson Black"
+
+#~ msgid "Devin Lin"
+#~ msgstr "Devin Lin"
+
+#~ msgctxt "Example name"
+#~ msgid "John Doe"
+#~ msgstr "Nguyễn Văn Nam"
+
+#~ msgid "Fingerprints"
+#~ msgstr "Dấu vân tay"

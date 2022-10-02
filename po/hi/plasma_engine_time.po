@@ -1,0 +1,66 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Raghavendra Kamath <raghu@raghukamath.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"PO-Revision-Date: 2021-07-01 18:50+0530\n"
+"Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
+"Language-Team: kde-hindi\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Lokalize 21.04.2\n"
+
+#: timesource.cpp:46
+msgid "Local"
+msgstr "स्थानीय"
+
+#: timesource.cpp:61
+msgid "Timezone"
+msgstr "समयक्षेत्र"
+
+#: timesource.cpp:66 timesource.cpp:69 timesource.cpp:73
+msgid "Timezone City"
+msgstr "समयक्षेत्र शहर"
+
+#: timesource.cpp:68 timesource.cpp:71
+msgid "Timezone Continent"
+msgstr "समयक्षेत्र महाद्वीप"
+
+#: timesource.cpp:72
+msgid "Timezone Country"
+msgstr "समयक्षेत्र देश"
+
+#: timesource.cpp:97
+msgid "Offset"
+msgstr "ऑफसेट"
+
+#: timesource.cpp:100
+msgid "Timezone Abbreviation"
+msgstr "समयक्षेत्र संक्षेप"
+
+#: timesource.cpp:131 timesource.cpp:150 timesource.cpp:171
+msgid "DateTime"
+msgstr "दिनांक समय"
+
+#: timesource.cpp:146
+msgid "Latitude"
+msgstr "अक्षांश"
+
+#: timesource.cpp:147
+msgid "Longitude"
+msgstr "देशान्तर"
+
+#: timesource.cpp:148
+msgid "Solar"
+msgstr "सौर"
+
+#: timesource.cpp:149
+msgid "Moon"
+msgstr "चन्द्रमा"

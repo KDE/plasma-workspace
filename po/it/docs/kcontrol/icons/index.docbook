@@ -1,0 +1,200 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Italian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="icons" lang="&language;">
+<articleinfo>
+<title
+>Icone</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<author
+>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+<othercredit role="translator"
+><firstname
+>Vincenzo</firstname
+><surname
+>Reale</surname
+><affiliation
+><address
+><email
+>smart2128vr@gmail.com</email
+></address
+></affiliation
+><contrib
+>Traduzione italiana</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Pino</firstname
+><surname
+>Toscano</surname
+><affiliation
+><address
+><email
+>toscano.pino@tiscali.it</email
+></address
+></affiliation
+><contrib
+>Traduzione italiana</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>9/4/2021</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>icona</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>&plasma; è distribuito con un insieme completo di icone. Queste icone sono usate in tutto &plasma;: nel desktop, nel pannello, nel gestore di file &dolphin;, in ogni barra degli strumenti di qualunque applicazione &plasma;, ecc. Il modulo di controllo delle icone ti offre modalità molto ampie di personalizzare il modo in cui &plasma; gestisce le icone.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Ecco un'immagine della gestione dei temi di icone</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Personalizzare le icone in &plasma;</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>In questo modulo puoi:</para>
+<itemizedlist>
+<listitem
+><para
+>installare e scegliere i temi di icone</para
+></listitem>
+<listitem
+><para
+>scegliere le diverse dimensioni delle icone</para
+></listitem>
+<listitem
+><para
+>rimuovi temi di icone</para
+></listitem>
+</itemizedlist>
+
+<important
+><para
+>Nota che alcune di queste impostazioni possono dipendere dal tuo tema di icone selezionato. &plasma; è distribuito in maniera predefinita con tre temi di icone: Brezza, Brezza scuro e Oxygen.</para
+></important>
+
+<para
+>In alto vi è un'anteprima del tema di icone selezionato. La maggior parte delle installazioni predefinite avranno pochi temi di icone disponibili, tra cui il tema predefinito di &plasma;, Brezza. Puoi anche scaricare altri temi da Internet da <ulink url="https://store.kde.org/"
+>https://store.kde.org/</ulink
+> oppure installarne da file locali.</para>
+
+<para
+>Passando con il mouse sopra vi è un'anteprima animata che mostra una scelta causale di icone, tipi MIME e cartelle comuni. </para>
+
+<para
+>Se vuoi rimuovere un tema, usa l'icona <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+> a comparsa sull'angolo in basso a destra dell'icona del tema. Per annullare questa azione fai clic sull'icona <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-undo.png" format="PNG"/></imageobject
+></inlinemediaobject
+>. Se premi il pulsante <guibutton
+>Applica</guibutton
+> i temi saranno selezionati per essere rimossi ed eliminati, e quindi non puoi annullare qualcuna o tutte le rimozioni. </para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Configura le dimensioni delle icone</guilabel
+></term>
+<listitem>
+<para
+>Scegli uno dei componenti e usa il regolatore per adattare la dimensione corrispondente. </para>
+<para>
+<screenshot>
+<screeninfo
+>Configurazione delle dimensioni delle icone</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="use-of-icons.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Configurazione delle dimensioni delle icone</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Scarica nuove icone...</guilabel
+></term>
+<listitem>
+<para
+>Devi essere connesso ad Internet per usare questa funzione. Premendo questo pulsante sarà mostrata una finestra di dialogo dove puoi scegliere un nuovi temi di icone. Premendo <guibutton
+>Installa</guibutton
+> nella finestra di dialogo sarà installato il tema di icone scelto; il nuovo tema sarà immediatamente disponibile dopo che chiudi la finestra premendo <guibutton
+>Chiudi</guibutton
+>. </para>
+<para>
+<screenshot>
+<screeninfo
+>Scarica nuove icone</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="get-new-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Scarica nuove icone</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Installa da file...</guilabel
+></term>
+<listitem>
+<para
+>Se hai scaricato nuovi temi da Internet, puoi usare questa funzione per sfogliare il percorso nei nuovi temi scaricati. Premendo questo pulsante sarà aperta una finestra di dialogo di scelta file per scegliere l'archivio del tema di icone che hai nel disco.</para>
+
+<para
+>Premendo <guibutton
+>Apri</guibutton
+> in questa finestra di dialogo verrà installato il tema selezionato e lo renderà disponibile nella lista dei temi. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</article>

@@ -1,0 +1,319 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2015, 2016, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-09 00:47+0000\n"
+"PO-Revision-Date: 2017-01-19 19:37+0200\n"
+"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 2.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Δημήτρης Καρδαράκος"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "dimkard@gmail.com"
+
+#: kcm.cpp:590
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for cursor changes to take effect."
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr ""
+"Πρέπει να επανεκκινήσετε το KDE για να εφαρμοστούν οι αλλαγές του δρομέα."
+
+#: kcm.cpp:591
+#, kde-format
+msgid "Cursor Settings Changed"
+msgstr "Οι ρυθμίσεις του δρομέα άλλαξαν"
+
+#: lnftool.cpp:33
+#, kde-format
+msgid "Global Theme Tool"
+msgstr ""
+
+#: lnftool.cpp:35
+#, kde-format
+msgid ""
+"Command line tool to apply global theme packages for changing the look and "
+"feel."
+msgstr ""
+
+#: lnftool.cpp:37
+#, fuzzy, kde-format
+#| msgid "Marco Martin"
+msgid "Copyright 2017, Marco Martin"
+msgstr "Marco Martin"
+
+#: lnftool.cpp:38
+#, kde-format
+msgid "Marco Martin"
+msgstr "Marco Martin"
+
+#: lnftool.cpp:38
+#, kde-format
+msgid "Maintainer"
+msgstr ""
+
+#: lnftool.cpp:46
+#, fuzzy, kde-format
+#| msgid "Download New Look And Feel Packages"
+msgid "List available global theme packages"
+msgstr "Λήψη νέων πακέτων εμφάνισης και αίσθησης"
+
+#: lnftool.cpp:49
+#, kde-format
+msgid ""
+"Apply a global theme package. This can be the name of a package, or a full "
+"path to an installed package, at which point this tool will ensure it is a "
+"global theme package and then attempt to apply it"
+msgstr ""
+
+#: lnftool.cpp:51
+#, kde-format
+msgid "packagename"
+msgstr ""
+
+#: lnftool.cpp:52
+#, kde-format
+msgid "Reset the Plasma Desktop layout"
+msgstr ""
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: lookandfeelsettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Configure Look and Feel details"
+msgid "Global look and feel"
+msgstr "Διαμόρφωση λεπτομερειών εμφάνισης και αίσθησης"
+
+#: package/contents/ui/main.qml:20
+#, fuzzy, kde-format
+#| msgid ""
+#| "This module lets you configure the look of the whole workspace with some "
+#| "ready to go presets."
+msgid "This module lets you choose the global look and feel."
+msgstr ""
+"Το άρθρωμα αυτό σας επιτρέπει να διαμορφώσετε την εμφάνιση και την αίσθηση "
+"όλου του χώρου εργασίας με κάποια έτοιμα πακέτα ρυθμίσεων."
+
+#: package/contents/ui/main.qml:53
+#, kde-format
+msgid "Contains Desktop layout"
+msgstr ""
+
+#: package/contents/ui/main.qml:67
+#, kde-format
+msgid "Preview Theme"
+msgstr ""
+
+#: package/contents/ui/main.qml:83
+#, kde-format
+msgctxt ""
+"Confirmation question about applying the Global Theme - %1 is the Global "
+"Theme's name"
+msgid "Apply %1?"
+msgstr ""
+
+#: package/contents/ui/main.qml:101
+#, kde-format
+msgid "Choose what to apply…"
+msgstr ""
+
+#: package/contents/ui/main.qml:101
+#, kde-format
+msgid "Show fewer options…"
+msgstr ""
+
+#: package/contents/ui/main.qml:118
+#, kde-format
+msgid "Apply"
+msgstr ""
+
+#: package/contents/ui/main.qml:130
+#, kde-format
+msgid "Cancel"
+msgstr ""
+
+#: package/contents/ui/main.qml:147
+#, fuzzy, kde-format
+#| msgid "Download New Look And Feel Packages"
+msgid "Get New Global Themes…"
+msgstr "Λήψη νέων πακέτων εμφάνισης και αίσθησης"
+
+#: package/contents/ui/MoreOptions.qml:24
+#: package/contents/ui/MoreOptions.qml:31
+#, kde-format
+msgid "Layout settings:"
+msgstr ""
+
+#: package/contents/ui/MoreOptions.qml:32
+#, fuzzy, kde-format
+#| msgid "Use Desktop Layout from theme"
+msgid "Desktop layout"
+msgstr "Χρήση διάταξης επιφάνειας εργασίας από το θέμα"
+
+#: package/contents/ui/MoreOptions.qml:53
+#, kde-format
+msgid "Titlebar Buttons layout"
+msgstr ""
+
+#: package/contents/ui/MoreOptions.qml:66
+#: package/contents/ui/SimpleOptions.qml:63
+#, kde-format
+msgid ""
+"Applying a Desktop layout replaces your current configuration of desktops, "
+"panels, docks, and widgets"
+msgstr ""
+
+#: package/contents/ui/MoreOptions.qml:75
+#, kde-format
+msgid "Appearance settings:"
+msgstr ""
+
+#: package/contents/ui/MoreOptions.qml:78
+#, kde-format
+msgid "Colors"
+msgstr ""
+
+#: package/contents/ui/MoreOptions.qml:79
+#, kde-format
+msgid "Application Style"
+msgstr ""
+
+#: package/contents/ui/MoreOptions.qml:80
+#, kde-format
+msgid "Window Decorations"
+msgstr ""
+
+#: package/contents/ui/MoreOptions.qml:81
+#, kde-format
+msgid "Icons"
+msgstr ""
+
+#: package/contents/ui/MoreOptions.qml:82
+#, kde-format
+msgid "Plasma Style"
+msgstr ""
+
+#: package/contents/ui/MoreOptions.qml:83
+#, kde-format
+msgid "Cursors"
+msgstr ""
+
+#: package/contents/ui/MoreOptions.qml:84
+#, kde-format
+msgid "Fonts"
+msgstr ""
+
+#: package/contents/ui/MoreOptions.qml:85
+#, kde-format
+msgid "Task Switcher"
+msgstr ""
+
+#: package/contents/ui/MoreOptions.qml:86
+#, fuzzy, kde-format
+#| msgid "Test Splashscreen"
+msgid "Splash Screen"
+msgstr "Δοκιμή οθόνης εκκίνησης"
+
+#: package/contents/ui/MoreOptions.qml:87
+#, kde-format
+msgid "Lock Screen"
+msgstr ""
+
+#: package/contents/ui/SimpleOptions.qml:19
+#, kde-format
+msgid "The following will be applied by this Global Theme:"
+msgstr ""
+
+#: package/contents/ui/SimpleOptions.qml:32
+#, kde-format
+msgid "Appearance settings"
+msgstr ""
+
+#: package/contents/ui/SimpleOptions.qml:42
+#, kde-format
+msgctxt "List item"
+msgid "• Appearance settings"
+msgstr ""
+
+#: package/contents/ui/SimpleOptions.qml:47
+#, fuzzy, kde-format
+#| msgid "Use Desktop Layout from theme"
+msgid "Desktop and window layout"
+msgstr "Χρήση διάταξης επιφάνειας εργασίας από το θέμα"
+
+#: package/contents/ui/SimpleOptions.qml:58
+#, fuzzy, kde-format
+#| msgid "Use Desktop Layout from theme"
+msgctxt "List item"
+msgid "• Desktop and window layout"
+msgstr "Χρήση διάταξης επιφάνειας εργασίας από το θέμα"
+
+#: package/contents/ui/SimpleOptions.qml:75
+#, kde-format
+msgid ""
+"This Global Theme does not provide any applicable settings. Please contact "
+"the maintainer of this Global Theme as it might be broken."
+msgstr ""
+
+#, fuzzy
+#~| msgid ""
+#~| "Warning: your Plasma Desktop layout will be lost and reset to the "
+#~| "default layout provided by the selected theme."
+#~ msgid ""
+#~ "Your current layout and configuration of panels, desktop widgets, and "
+#~ "wallpapers will be lost and reset to the default layout provided by the "
+#~ "selected theme."
+#~ msgstr ""
+#~ "Προειδοποίηση: η διάταξη επιφάνειας εργασίας Plasma θα χαθεί και θα γίνει "
+#~ "επαναφορά της προκαθορισμένης διάταξης που παρέχει το επιλεγμένο θέμα."
+
+#, fuzzy
+#~| msgid "Download New Look And Feel Packages"
+#~ msgid "Apply a global theme package"
+#~ msgstr "Λήψη νέων πακέτων εμφάνισης και αίσθησης"
+
+#, fuzzy
+#~| msgid "Get New Looks..."
+#~ msgid "Global Themes"
+#~ msgstr "Λήψη νέων στιλ εμφάνισης..."
+
+#, fuzzy
+#~| msgid "Configure Look and Feel details"
+#~ msgid "Look and feel tool"
+#~ msgstr "Διαμόρφωση λεπτομερειών εμφάνισης και αίσθησης"
+
+#, fuzzy
+#~| msgid "Get New Looks..."
+#~ msgid "Choose the Look and Feel theme"
+#~ msgstr "Λήψη νέων στιλ εμφάνισης..."
+
+#~ msgid "Configure Look and Feel details"
+#~ msgstr "Διαμόρφωση λεπτομερειών εμφάνισης και αίσθησης"
+
+#~ msgid ""
+#~ "Select an overall theme for your workspace (including plasma theme, color "
+#~ "scheme, mouse cursor, window and desktop switcher, splash screen, lock "
+#~ "screen etc.)"
+#~ msgstr ""
+#~ "Επιλογή ενός συνολικού θέματος εμφάνισης και αίσθησης για τον χώρο "
+#~ "εργασίας σας (συμπεριλαμβανομένου του θέματος plasma, του θέματος "
+#~ "χρωμάτων, του δρομέα του ποντικιού, της εναλλαγής παραθύρων και "
+#~ "επιφάνειας εργασίας, της οθόνης εκκίνησης, της οθόνης κλειδώματος, κοκ)"
+
+#~ msgid "Show Preview"
+#~ msgstr "Εμφάνιση προεπισκόπησης"

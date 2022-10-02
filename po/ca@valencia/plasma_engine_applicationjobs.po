@@ -1,0 +1,33 @@
+# Translation of plasma_engine_applicationjobs.po to Catalan (Valencian)
+# Copyright (C) 2014 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Antoni Bella Pérez <antonibella5@yahoo.com>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2014-06-22 13:29+0200\n"
+"Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca@valencia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: jobaction.cpp:18
+#, kde-format
+msgctxt "%1 is the subject (can be anything) upon which the job is performed"
+msgid "The JobView for %1 cannot be found"
+msgstr "No s'ha pogut trobar el «JobView» per a %1"
+
+#: kuiserverengine.cpp:209
+#, kde-format
+msgctxt "Bytes per second"
+msgid "%1/s"
+msgstr "%1/seg"

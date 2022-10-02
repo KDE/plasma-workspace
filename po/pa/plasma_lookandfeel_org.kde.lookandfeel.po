@@ -1,0 +1,430 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# A S Alam <aalam@users.sf.net>, 2014, 2015, 2017, 2018, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-06 00:47+0000\n"
+"PO-Revision-Date: 2021-06-08 22:51-0700\n"
+"Last-Translator: A S Alam <aalam@satluj.org>\n"
+"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.12.2\n"
+
+#: ../sddm-theme/KeyboardButton.qml:19
+#, kde-format
+msgid "Keyboard Layout: %1"
+msgstr "ਕੀਬੋਰਡ ਲੇਆਉਟ: %1"
+
+#: ../sddm-theme/Login.qml:75
+#, kde-format
+msgid "Username"
+msgstr "ਵਰਤੋਂਕਾਰ ਨਾਂ"
+
+#: ../sddm-theme/Login.qml:92 contents/lockscreen/MainBlock.qml:61
+#, kde-format
+msgid "Password"
+msgstr "ਪਾਸਵਰਡ"
+
+#: ../sddm-theme/Login.qml:134 ../sddm-theme/Login.qml:140
+#, kde-format
+msgid "Log In"
+msgstr "ਲਾਗ ਇਨ"
+
+#: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:299
+#, kde-format
+msgid "Caps Lock is on"
+msgstr "ਕੈਪਸ ਲਾਕ ਚਾਲੂ ਹੈ"
+
+#: ../sddm-theme/Main.qml:214 ../sddm-theme/Main.qml:463
+#: contents/logout/Logout.qml:163
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "ਸਲੀਪ"
+
+#: ../sddm-theme/Main.qml:221 ../sddm-theme/Main.qml:470
+#: contents/logout/Logout.qml:181
+#, kde-format
+msgid "Restart"
+msgstr "ਮੁੜ-ਚਾਲੂ ਕਰੋ"
+
+#: ../sddm-theme/Main.qml:228 ../sddm-theme/Main.qml:477
+#: contents/logout/Logout.qml:191
+#, kde-format
+msgid "Shut Down"
+msgstr "ਬੰਦ ਕਰੋ"
+
+#: ../sddm-theme/Main.qml:235
+#, kde-format
+msgctxt "For switching to a username and password prompt"
+msgid "Other…"
+msgstr "…ਹੋਰ"
+
+#: ../sddm-theme/Main.qml:450
+#, kde-format
+msgid "Type in Username and Password"
+msgstr "ਵਰਤੋਂਕਾਰ-ਨਾਂ ਅਤੇ ਪਾਸਵਰਡ ਵਿੱਚ ਲਿਖੋ"
+
+#: ../sddm-theme/Main.qml:484
+#, kde-format
+msgid "List Users"
+msgstr "ਵਰਤੋਂਕਾਰ ਦੀ ਸੂਚੀ"
+
+#: ../sddm-theme/Main.qml:551 contents/lockscreen/LockScreenUi.qml:574
+#, kde-format
+msgctxt "Button to show/hide virtual keyboard"
+msgid "Virtual Keyboard"
+msgstr "ਫ਼ਰਜ਼ੀ ਕੀਬੋਰਡ"
+
+#: ../sddm-theme/Main.qml:592
+#, kde-format
+msgid "Login Failed"
+msgstr "ਲਾਗਇਨ ਫੇਲ੍ਹ ਹੈ"
+
+#: ../sddm-theme/SessionButton.qml:18
+#, kde-format
+msgid "Desktop Session: %1"
+msgstr "ਡੈਸਕਟਾਪ ਸ਼ੈਸ਼ਨ: %1"
+
+#: contents/components/Battery.qml:53
+#, kde-format
+msgid "%1%"
+msgstr "%1%"
+
+#: contents/components/Battery.qml:54
+#, kde-format
+msgid "Battery at %1%"
+msgstr "ਬੈਟਰੀ ਨਾਲ %1%"
+
+#: contents/components/UserList.qml:71
+#, kde-format
+msgctxt "Nobody logged in on that session"
+msgid "Unused"
+msgstr "ਨਾ-ਵਰਤੇ"
+
+#: contents/components/UserList.qml:77
+#, kde-format
+msgctxt "User logged in on console number"
+msgid "TTY %1"
+msgstr "TTY %1"
+
+#: contents/components/UserList.qml:79
+#, kde-format
+msgctxt "User logged in on console (X display number)"
+msgid "on TTY %1 (Display %2)"
+msgstr "TTY %1 ਉੱਤੇ (ਡਿਸਪਲੇਅ %2)"
+
+#: contents/components/UserList.qml:83
+#, kde-format
+msgctxt "Username (location)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: contents/lockscreen/config.qml:19
+#, fuzzy, kde-format
+#| msgid "Clock"
+msgctxt "@title: group"
+msgid "Clock:"
+msgstr "ਘੜੀ"
+
+#: contents/lockscreen/config.qml:22
+#, kde-format
+msgctxt "@option:check"
+msgid "Keep visible when unlocking prompt disappears"
+msgstr ""
+
+#: contents/lockscreen/config.qml:33
+#, fuzzy, kde-format
+#| msgid "Media Controls"
+msgctxt "@title: group"
+msgid "Media controls:"
+msgstr "ਮੀਡਿਆ ਕੰਟਰੋਲ"
+
+#: contents/lockscreen/config.qml:36
+#, kde-format
+msgctxt "@option:check"
+msgid "Show under unlocking prompt"
+msgstr ""
+
+#: contents/lockscreen/LockScreenUi.qml:37
+#, kde-format
+msgid "Unlocking failed"
+msgstr "ਅਣਲਾਕ ਕਰਨਾ ਫੇਲ੍ਹ ਹੈ"
+
+#: contents/lockscreen/LockScreenUi.qml:313
+#, fuzzy, kde-format
+#| msgctxt "Suspend to RAM"
+#| msgid "Sleep"
+msgid "Sleep"
+msgstr "ਸਲੀਪ"
+
+#: contents/lockscreen/LockScreenUi.qml:319 contents/logout/Logout.qml:172
+#, kde-format
+msgid "Hibernate"
+msgstr "ਹਾਈਬਰਨੇਟ"
+
+#: contents/lockscreen/LockScreenUi.qml:325
+#, kde-format
+msgid "Switch User"
+msgstr "ਵਰਤੋਂਕਾਰ ਨੂੰ ਬਦਲੋ"
+
+#: contents/lockscreen/LockScreenUi.qml:521
+#, kde-format
+msgid "Switch to This Session"
+msgstr "ਇਸ ਸ਼ੈਸ਼ਨ ਲਈ ਬਦਲੋ"
+
+#: contents/lockscreen/LockScreenUi.qml:529
+#, kde-format
+msgid "Start New Session"
+msgstr "ਨਵਾਂ ਸ਼ੈਸ਼ਨ ਸ਼ੁਰੂ ਕਰੋ"
+
+#: contents/lockscreen/LockScreenUi.qml:542
+#, kde-format
+msgid "Back"
+msgstr "ਪਿੱਛੇ"
+
+#: contents/lockscreen/LockScreenUi.qml:588
+#, kde-format
+msgctxt "Button to change keyboard layout"
+msgid "Switch layout"
+msgstr "ਲੇਆਉਟ ਨੂੰ ਬਦਲੋ"
+
+#: contents/lockscreen/MainBlock.qml:101
+#: contents/lockscreen/NoPasswordUnlock.qml:17
+#, kde-format
+msgid "Unlock"
+msgstr "ਅਣ-ਲਾਕ"
+
+#: contents/lockscreen/MediaControls.qml:105
+#, kde-format
+msgid "No media playing"
+msgstr "ਕੋਈ ਮੀਡੀਆ ਨਹੀਂ ਚੱਲ ਰਿਹਾ ਹੈ"
+
+#: contents/lockscreen/MediaControls.qml:134
+#, kde-format
+msgid "Previous track"
+msgstr "ਪਿਛਲਾ ਟਰੈਕ"
+
+#: contents/lockscreen/MediaControls.qml:146
+#, kde-format
+msgid "Play or Pause media"
+msgstr "ਮੀਡਿਆ ਚਲਾਓ ਜਾਂ ਰੋਕੋ"
+
+#: contents/lockscreen/MediaControls.qml:160
+#, kde-format
+msgid "Next track"
+msgstr "ਅਗਲਾ ਟਰੈਕ"
+
+#: contents/logout/Logout.qml:139
+#, kde-format
+msgid ""
+"One other user is currently logged in. If the computer is shut down or "
+"restarted, that user may lose work."
+msgid_plural ""
+"%1 other users are currently logged in. If the computer is shut down or "
+"restarted, those users may lose work."
+msgstr[0] ""
+"ਇੱਕ ਹੋਰ ਵਰਤੋਂਕਾਰ ਇਸ ਵੇਲੇ ਲਾਗਇਨ ਹੈ। ਜੇ ਕੰਪਿਊਟਰ ਨੂੰ ਬੰਦ ਜਾਂ ਮੁੜ-ਸ਼ੁਰੂ ਕੀਤਾ ਤਾਂ ਉਹ ਵਰਤੋਂਕਾਰ ਦੇ ਕੰਮ ਦਾ "
+"ਨੁਕਸਾਨ ਹੋ ਸਕਦਾ ਹੈ।"
+msgstr[1] ""
+"%1 ਹੋਰ ਵਰਤੋਂਕਾਰ ਇਸ ਵੇਲੇ ਲਾਗਇਨ ਹਨ। ਜੇ ਕੰਪਿਊਟਰ ਨੂੰ ਬੰਦ ਜਾਂ ਮੁੜ-ਸ਼ੁਰੂ ਕੀਤਾ ਤਾਂ ਉਹਨਾਂ ਵਰਤੋਂਕਾਰਾਂ ਦੇ "
+"ਕੰਮ ਦਾ ਨੁਕਸਾਨ ਹੋ ਸਕਦਾ ਹੈ।"
+
+#: contents/logout/Logout.qml:153
+#, kde-format
+msgid "When restarted, the computer will enter the firmware setup screen."
+msgstr "ਜਦੋਂ ਮੁੜ-ਚਾਲੂ ਕੀਤਾ ਤਾਂ ਕੰਪਿਊਟਰ ਫਿਰਮਵੇਅਰ ਸੈਟਅੱਪ ਸਕਰੀਨ ਉੱਤੇ ਜਾਵੇਗਾ।"
+
+#: contents/logout/Logout.qml:201
+#, kde-format
+msgid "Log Out"
+msgstr "ਲਾਗ ਆਉਟ"
+
+#: contents/logout/Logout.qml:224
+#, kde-format
+msgid "Restarting in 1 second"
+msgid_plural "Restarting in %1 seconds"
+msgstr[0] "1 ਸਕਿੰਟ 'ਚ ਮੁੜ ਚਾਲੂ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ"
+msgstr[1] "%1 ਸਕਿੰਟਾਂ 'ਚ ਮੁੜ-ਚਾਲੂ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ"
+
+#: contents/logout/Logout.qml:226
+#, kde-format
+msgid "Shutting down in 1 second"
+msgid_plural "Shutting down in %1 seconds"
+msgstr[0] "1 ਸਕਿੰਟ 'ਚ ਬੰਦ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ"
+msgstr[1] "%1 ਸਕਿੰਟਾਂ 'ਚ ਬੰਦ ਕੀਤਾ ਜਾਵੇਗਾ"
+
+#: contents/logout/Logout.qml:228
+#, kde-format
+msgid "Logging out in 1 second"
+msgid_plural "Logging out in %1 seconds"
+msgstr[0] "1 ਸਕਿੰਟ 'ਚ ਲਾਗ ਆਉਟ ਹੋਵੇਗਾ"
+msgstr[1] "%1 ਸਕਿੰਟਾਂ 'ਚ ਲਾਗ ਆਉਟ ਹੋਵੇਗਾ"
+
+#: contents/logout/Logout.qml:239
+#, kde-format
+msgid "OK"
+msgstr "ਠੀਕ ਹੈ"
+
+#: contents/logout/Logout.qml:245
+#, kde-format
+msgid "Cancel"
+msgstr "ਰੱਦ ਕਰੋ"
+
+#: contents/osd/OsdItem.qml:66
+#, kde-format
+msgid "100%"
+msgstr "100%"
+
+#: contents/osd/OsdItem.qml:80
+#, kde-format
+msgctxt "Percentage value"
+msgid "%1%"
+msgstr "%1%"
+
+#: contents/splash/Splash.qml:81
+#, kde-format
+msgctxt ""
+"This is the first text the user sees while starting in the splash screen, "
+"should be translated as something short, is a form that can be seen on a "
+"product. Plasma is the project name so shouldn't be translated."
+msgid "Plasma made by KDE"
+msgstr "ਪਲਾਜ਼ਮਾ ਨੂੰ KDE ਨੇ ਬਣਾਇਆ"
+
+#~ msgid "Configure"
+#~ msgstr "ਸੰਰਚਨਾ"
+
+#, fuzzy
+#~| msgid "Configure KRunner…"
+#~ msgid "Configure KRunner Behavior"
+#~ msgstr "…ਕੇਰਨਰ ਦੀ ਸੰਰਚਨਾ"
+
+#~ msgid "Configure KRunner…"
+#~ msgstr "…ਕੇਰਨਰ ਦੀ ਸੰਰਚਨਾ"
+
+#~ msgctxt "Textfield placeholder text, query specific KRunner"
+#~ msgid "Search '%1'…"
+#~ msgstr "…'%1' ਨੂੰ ਖੋਜੋ"
+
+#~ msgctxt "Textfield placeholder text"
+#~ msgid "Search…"
+#~ msgstr "…ਖੋਜੋ"
+
+#~ msgid "Pin"
+#~ msgstr "ਪਿੰਨ"
+
+#~ msgid "Pin Search"
+#~ msgstr "ਪਿੰਨ ਖੋਜੋ"
+
+#~ msgid "Keep Open"
+#~ msgstr "ਖੁੱਲਾ ਰੱਖੋ"
+
+#~ msgid "Recent Queries"
+#~ msgstr "ਤਾਜ਼ਾ ਕਿਊਰੀਆਂ"
+
+#~ msgid "Remove"
+#~ msgstr "ਹਟਾਓ"
+
+#~ msgid "in category recent queries"
+#~ msgstr "ਕੈਟਾਗਰੀ ਵਿੱਚ ਤਾਜ਼ਾ ਕਿਊਰੀਆਂ"
+
+#~ msgctxt "verb, to show something"
+#~ msgid "Show:"
+#~ msgstr "ਵੇਖਾਓ:"
+
+#~ msgid "Configure Search Plugins"
+#~ msgstr "ਖੋਜ ਪਲੱਗਇਨਾਂ ਦੀ ਸੰਰਚਨਾ"
+
+#~ msgid "Close"
+#~ msgstr "ਬੰਦ ਕਰੋ"
+
+#~ msgid "Suspend"
+#~ msgstr "ਸਸਪੈਂਡ ਕਰੋ"
+
+#~ msgid "Reboot"
+#~ msgstr "ਮੁੜ-ਚਾਲੂ ਕਰੋ"
+
+#~ msgid "Logout"
+#~ msgstr "ਲਾਗ ਆਉਟ ਕਰੋ"
+
+#~ msgid "Different User"
+#~ msgstr "ਵੱਖਰਾ ਵਰਤੋਂਕਾਰ"
+
+#~ msgid "Log in as a different user"
+#~ msgstr "ਵੱਖਰੇ ਵਰਤੋਂਕਾਰ ਵਜੋਂ ਲਾਗਇਨ ਕਰੋ"
+
+#, fuzzy
+#~| msgid "Password"
+#~ msgid "Password..."
+#~ msgstr "ਪਾਸਵਰਡ"
+
+#~ msgid "Login"
+#~ msgstr "ਲਾਗਇਨ"
+
+#~ msgid "Shutdown"
+#~ msgstr "ਬੰਦ ਕਰੋ"
+
+#~ msgid "Switch"
+#~ msgstr "ਬਦਲੋ"
+
+#~ msgid "New Session"
+#~ msgstr "ਨਵਾਂ ਸ਼ੈਸ਼ਨ"
+
+#~ msgid "%1%. Charging"
+#~ msgstr "%1%. ਚਾਰਜ ਹੋ ਰਹੀ ਹੈ"
+
+#~ msgid "Fully charged"
+#~ msgstr "ਪੂਰੀ ਚਾਰਜ"
+
+#~ msgid "%1% battery remaining"
+#~ msgstr "%1% ਬੈਟਰੀ ਬਾਕੀ ਹੈ"
+
+#~ msgid "Change Session"
+#~ msgstr "ਸ਼ੈਸ਼ਨ ਬਦਲੋ"
+
+#~ msgid "Create Session"
+#~ msgstr "ਸ਼ੈਸ਼ਨ ਬਣਾਓ"
+
+#~ msgid "Change Session..."
+#~ msgstr "...ਸ਼ੈਸ਼ਨ ਬਦਲੋ"
+
+#, fuzzy
+#~| msgid "%1 (%2)"
+#~ msgctxt "Username (logged in on console)"
+#~ msgid "%1 (TTY)"
+#~ msgstr "%1 (%2)"
+
+#~ msgctxt "Button to restart the computer"
+#~ msgid "Reboot"
+#~ msgstr "ਮੁੜ-ਚਾਲੂ ਕਰੋ"
+
+#, fuzzy
+#~| msgid "Shut down"
+#~ msgctxt "Button to shut down the computer"
+#~ msgid "Shut down"
+#~ msgstr "ਬੰਦ ਕਰੋ"
+
+#, fuzzy
+#~| msgid "Logging out"
+#~ msgctxt "Dialog heading, confirm log out, not a status label"
+#~ msgid "Logging out"
+#~ msgstr "ਲਾਗ ਆਉਟ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ"
+
+#, fuzzy
+#~| msgid "Rebooting"
+#~ msgctxt "Dialog heading, confirm reboot, not a status label"
+#~ msgid "Rebooting"
+#~ msgstr "ਮੁੜ-ਚਾਲੂ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ"
+
+#, fuzzy
+#~| msgid "%1 (%2)"
+#~ msgctxt "Username (on display number)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"

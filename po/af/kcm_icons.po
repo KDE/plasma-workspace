@@ -1,0 +1,357 @@
+# UTF-8 test:äëïöü
+# Copyright (C) 2001 Free Software Foundation, Inc.
+# Frikkie Thirion <frix@expertron.co.za>, 2001,2002.
+# Juanita Franz <juanita.franz@vr-web.de>, 2005.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmicons stable\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"PO-Revision-Date: 2005-06-29 11:28+0200\n"
+"Last-Translator: JUANITA FRANZ <JUANITA.FRANZ@VR-WEB.DE>\n"
+"Language-Team: AFRIKAANS <translate-discuss-af@lists.sourceforge.net>\n"
+"Language: af\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: iconsizecategorymodel.cpp:14
+#, kde-format
+msgid "Toolbar"
+msgstr "Nutsbalk"
+
+#: iconsizecategorymodel.cpp:15
+#, fuzzy, kde-format
+msgid "Main Toolbar"
+msgstr "Nutsbalk"
+
+#: iconsizecategorymodel.cpp:16
+#, kde-format
+msgid "Small Icons"
+msgstr "Klein Ikoone"
+
+#: iconsizecategorymodel.cpp:17
+#, kde-format
+msgid "Panel"
+msgstr "Paneel"
+
+#: iconsizecategorymodel.cpp:18
+#, kde-format
+msgid "Dialogs"
+msgstr ""
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, fuzzy, kde-format
+msgid "Main toolbar icons size"
+msgstr "Nutsbalk"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, fuzzy, kde-format
+#| msgid "Small Icons"
+msgid "Small icons size"
+msgstr "Klein Ikoone"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr ""
+
+#: main.cpp:182
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: main.cpp:193
+#, fuzzy, kde-format
+#| msgid "Unable to find the icon theme archive %1."
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Nie moontlik om te vind die ikoon tema argief %1!"
+
+#: main.cpp:207
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "Die lêer is nie 'n geldige ikoon tema argief."
+
+#: main.cpp:212
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr ""
+"'n probleem het voorgekom gedurende die installasie proses; Die meeste van "
+"die temas in die argief is reeds geïnstalleer"
+
+#: main.cpp:216
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: main.cpp:260
+#, fuzzy, kde-format
+#| msgid "Installing icon themes"
+msgid "Installing icon themes…"
+msgstr "Installering ikoon temas"
+
+#: main.cpp:270
+#, fuzzy, kde-format
+#| msgid "Installing icon themes"
+msgid "Installing %1 theme…"
+msgstr "Installering ikoon temas"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr ""
+
+#: package/contents/ui/main.qml:147
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Remove Icon Theme"
+msgstr "Verwyder Tema"
+
+#: package/contents/ui/main.qml:154
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Icon Theme"
+msgstr "Verwyder Tema"
+
+#: package/contents/ui/main.qml:228
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr ""
+
+#: package/contents/ui/main.qml:246
+#, fuzzy, kde-format
+#| msgid "Install New Theme..."
+msgid "Install from File…"
+msgstr "Installeer Nuwe Tema..."
+
+#: package/contents/ui/main.qml:251
+#, fuzzy, kde-format
+#| msgid "Install New Theme..."
+msgid "Get New Icons…"
+msgstr "Installeer Nuwe Tema..."
+
+#: package/contents/ui/main.qml:279
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Open Theme"
+msgstr "Verwyder Tema"
+
+#: package/contents/ui/main.qml:281
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Juanita Franz"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "juanita.franz@vr-web.de"
+
+#~ msgid "Icons"
+#~ msgstr "Ikoone"
+
+#~ msgid "Icons Control Panel Module"
+#~ msgstr "Ikoone Beheer Paneel Module"
+
+#~ msgid "(c) 2000-2003 Geert Jansen"
+#~ msgstr "(c) 2000-2003 Geert Jansen"
+
+#, fuzzy
+#~| msgid "(c) 2000-2003 Geert Jansen"
+#~ msgid "Geert Jansen"
+#~ msgstr "(c) 2000-2003 Geert Jansen"
+
+#~ msgid "Use of Icon"
+#~ msgstr "Gebruik van Ikoon"
+
+#, fuzzy
+#~| msgid "Active"
+#~ msgctxt "@label The icon rendered as active"
+#~ msgid "Active"
+#~ msgstr "Aktief"
+
+#, fuzzy
+#~| msgid "Disabled"
+#~ msgctxt "@label The icon rendered as disabled"
+#~ msgid "Disabled"
+#~ msgstr "Gestremde"
+
+#~ msgid "Size:"
+#~ msgstr "Grootte:"
+
+#~ msgid "Set Effect..."
+#~ msgstr "Stel Effek..."
+
+#~ msgid "All Icons"
+#~ msgstr "Alle Ikoone"
+
+#~ msgid "Setup Default Icon Effect"
+#~ msgstr "Opstelling Verstek Ikoon Effek"
+
+#~ msgid "Setup Active Icon Effect"
+#~ msgstr "Opstelling Aktief Ikoon Effek"
+
+#~ msgid "Setup Disabled Icon Effect"
+#~ msgstr "Opstelling Gestremde Ikoon Effek"
+
+#~ msgid "&Effect:"
+#~ msgstr "Effek:"
+
+#~ msgid "No Effect"
+#~ msgstr "Geen Effek"
+
+#~ msgid "To Gray"
+#~ msgstr "Na Grys"
+
+#~ msgid "Colorize"
+#~ msgstr "Verkleur"
+
+#~ msgid "Gamma"
+#~ msgstr "Gamma"
+
+#~ msgid "Desaturate"
+#~ msgstr "Desatureer"
+
+#~ msgid "To Monochrome"
+#~ msgstr "Na Monochrome"
+
+#~ msgid "&Semi-transparent"
+#~ msgstr "Semi-deurskynend"
+
+#~ msgid "Preview"
+#~ msgstr "Voorskou"
+
+#~ msgid "Effect Parameters"
+#~ msgstr "Effek Parameters"
+
+#~ msgid "&Amount:"
+#~ msgstr "Hoeveelheid:"
+
+#~ msgid "Co&lor:"
+#~ msgstr "Kleur:"
+
+#~ msgid "&Second color:"
+#~ msgstr "Tweede kleur:"
+
+#~ msgid "Name"
+#~ msgstr "Naam"
+
+#~ msgid "Description"
+#~ msgstr "Beskrywing"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "Trek of Tipe Tema Url"
+
+#~ msgid ""
+#~ "Unable to download the icon theme archive;\n"
+#~ "please check that address %1 is correct."
+#~ msgstr ""
+#~ "Nie moontlik na aflaai die ikoon tema argief;\n"
+#~ "Asseblief bevestig dat adres %1 is korrek."
+
+#~ msgid "<qt>Installing <strong>%1</strong> theme</qt>"
+#~ msgstr "<qt>Installering <strong>%1</strong> tema</qt>"
+
+#, fuzzy
+#~| msgid ""
+#~| "<qt>Are you sure you want to remove the <strong>%1</strong> icon theme?"
+#~| "<br><br>This will delete the files installed by this theme.</qt>"
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <strong>%1</strong> icon theme?"
+#~ "<br /><br />This will delete the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>Word jy seker jy wil hê na verwyder die <strong>%1</strong> ikoon "
+#~ "tema?<br><br>Hierdie sal uitvee die lêers geïnstalleer deur Hierdie tema."
+#~ "</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Bevestiging"
+
+#~ msgid "&Theme"
+#~ msgstr "Tema"
+
+#~ msgid "Ad&vanced"
+#~ msgstr "Gevorderde"
+
+#, fuzzy
+#~| msgid ""
+#~| "<h1>Icons</h1>This module allows you to choose the icons for your "
+#~| "desktop.<p>To choose an icon theme, click on its name and apply your "
+#~| "choice by pressing the \"Apply\" button below. If you do not want to "
+#~| "apply your choice you can press the \"Reset\" button to discard your "
+#~| "changes.</p><p>By pressing the \"Install New Theme\" button you can "
+#~| "install your new icon theme by writing its location in the box or "
+#~| "browsing to the location. Press the \"OK\" button to finish the "
+#~| "installation.</p><p>The \"Remove Theme\" button will only be activated "
+#~| "if you select a theme that you installed using this module. You are not "
+#~| "able to remove globally installed themes here.</p><p>You can also "
+#~| "specify effects that should be applied to the icons.</p>"
+#~ msgid ""
+#~ "<h1>Icons</h1>This module allows you to choose the icons for your desktop."
+#~ "<p>To choose an icon theme, click on its name and apply your choice by "
+#~ "pressing the \"Apply\" button below. If you do not want to apply your "
+#~ "choice you can press the \"Reset\" button to discard your changes.</"
+#~ "p><p>By pressing the \"Install Theme File...\" button you can install "
+#~ "your new icon theme by writing its location in the box or browsing to the "
+#~ "location. Press the \"OK\" button to finish the installation.</p><p>The "
+#~ "\"Remove Theme\" button will only be activated if you select a theme that "
+#~ "you installed using this module. You are not able to remove globally "
+#~ "installed themes here.</p><p>You can also specify effects that should be "
+#~ "applied to the icons.</p>"
+#~ msgstr ""
+#~ "<h1>Ikoone</h1>Hierdie module laat jou toe om te kies die ikoone vir jou "
+#~ "werksskerm.<p>Om 'n ikoon tema te kies, kliek op sy naam en wend aan jou "
+#~ "keuse deur die druk van die \"Aanwend\" knoppie hieronder. As jy nie jou "
+#~ "keuse wil aanwend nie, kan jy druk nie \"Herstel\" knoppie om jou "
+#~ "veranderinge weg te gooi.</p><p>By druk van die \"Installeer Nuwe Tema\" "
+#~ "knoppie jy kan installeer jou nuwe ikoon tema deur die skryf van sy "
+#~ "lokalisering in die boks of te blaai na sy lokalisering. Druk die \"OK\" "
+#~ "knoppie om die installering klaar te maak.</p><p>Die \"Verwyder Tema\" "
+#~ "knoppie sal slegs aktiveer word as jy uitkies a tema wat jy intalleer het "
+#~ "deur die gebruik van hierdie module. Jy kan nie globaal installeerde "
+#~ "temas hier verwyder nie.</p><p>Jy kan ook effekte spesifiseer wat "
+#~ "aangewend behoort te word na die ikoone.</p>"
+
+#~ msgid "Animate icons"
+#~ msgstr "Animeer ikoone"
+
+#~ msgid "Select the icon theme you want to use:"
+#~ msgstr "Kies die ikoon tema jy wil hê na gebruik:"
+
+#~ msgid "Double-sized pixels"
+#~ msgstr "Double-sized beeld elemente"
+
+#~ msgid "Desktop/File Manager"
+#~ msgstr "Werkskerm/Lêer Bestuurder"

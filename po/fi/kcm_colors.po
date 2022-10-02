@@ -1,0 +1,1590 @@
+# translation of kcmcolors.po to Finnish
+# Copyright © 2010 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kdebase package.
+# Kim Enkovaara <kim.enkovaara@iki.fi>, 2003.
+# Teemu Rytilahti <teemu.rytilahti@kde-fi.org>, 2003, 2008.
+# Tapio Kautto <eleknader@phnet.fi>, 2004.
+# Ilpo Kantonen <ilpo@iki.fi>, 2005.
+# Mikko Piippo <piippo@cc.helsinki.fi>, 2007.
+# Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2008.
+# Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
+# Tommi Nieminen <translator@legisign.org>, 2011, 2012, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2011, 2012, 2013, 2014, 2015, 2016.
+#
+# KDE Finnish translation sprint participants:
+# Author: Lliehu
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmcolors\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-23 00:47+0000\n"
+"PO-Revision-Date: 2022-07-18 22:19+0300\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-POT-Import-Date: 2012-12-01 22:22:21+0000\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+"Kim Enkovaara, Tapio Kautto, Ilpo Kantonen, Mikko Piippo, Teemu Rytilahti, "
+"Jorma Karvonen, Tommi Nieminen"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"kim.enkovaara@iki.fi,eleknader@phnet.fi,ilpo@iki.fi, mikko.piippo@helsinki."
+"fi,teemu.rytilahti@d5k.net,karvonen.jorma@gmail.com, translator@legisign.org"
+
+#: colors.cpp:233
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Väliaikaistiedostoa ei voida luoda."
+
+#: colors.cpp:246
+#, kde-format
+msgid "Unable to download the color scheme: %1"
+msgstr "Ei voida ladata väriteemaa: %1"
+
+#: colors.cpp:264
+#, kde-format
+msgid "This file is not a color scheme file."
+msgstr "Tämä ei ole väriteematiedosto."
+
+#: colors.cpp:283
+#, kde-format
+msgid "Failed to create 'color-scheme' data folder."
+msgstr "”color-scheme”-kansion luominen epäonnistui."
+
+#: colors.cpp:290
+#, kde-format
+msgid "Failed to copy color scheme into 'color-scheme' data folder."
+msgstr "Väriteeman kopioiminen ”color-scheme”-kansioon epäonnistui."
+
+#: colors.cpp:307
+#, kde-format
+msgid "Color scheme installed successfully."
+msgstr "Väriteeman asennus onnistui."
+
+#. i18n: ectx: label, entry (colorScheme), group (General)
+#: colorssettings.kcfg:9
+#, kde-format
+msgid "Color scheme name"
+msgstr "Väriteeman nimi"
+
+#. i18n: ectx: label, entry (accentColor), group (General)
+#: colorssettings.kcfg:13
+#, kde-format
+msgid "Accent color"
+msgstr "Korostusväri"
+
+#. i18n: ectx: label, entry (lastUsedCustomAccentColor), group (General)
+#: colorssettings.kcfg:17
+#, kde-format
+msgid ""
+"The last used custom accent color before user switched to wallpaper "
+"generated color or default color"
+msgstr ""
+"Viimeksi käytetty tehosteväri, ennen kuin käyttäjä vaihtoi "
+"taustakuvapohjaiseen tai oletusväriin"
+
+#. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
+#: colorssettings.kcfg:21
+#, kde-format
+msgid "Whether accent color from wallpaper should be applied"
+msgstr "Käytetäänkö taustakuvasta saatua korostusväriä"
+
+#: editor/kcolorschemeeditor.cpp:25
+#, kde-format
+msgid "KColorSchemeEditor"
+msgstr "KColorSchemeEditor"
+
+#: editor/kcolorschemeeditor.cpp:27
+#, kde-format
+msgid "Utility to edit and create color schemes"
+msgstr "Väriteemojen luonti- ja muokkaustyökalu"
+
+#: editor/kcolorschemeeditor.cpp:29
+#, kde-format
+msgid "Olivier Churlaud"
+msgstr "Olivier Churlaud"
+
+#: editor/kcolorschemeeditor.cpp:29
+#, kde-format
+msgid "Utility creation"
+msgstr "Työkalun luonti"
+
+#: editor/kcolorschemeeditor.cpp:30
+#, kde-format
+msgid "Jeremy Whiting"
+msgstr "Jeremy Whiting"
+
+#: editor/kcolorschemeeditor.cpp:30 editor/kcolorschemeeditor.cpp:31
+#, kde-format
+msgid "KCM code (reused in here)"
+msgstr "KCM-koodi (käytetään uudelleen tässä)"
+
+#: editor/kcolorschemeeditor.cpp:31
+#, kde-format
+msgid "Matthew Woehlke"
+msgstr "Matthew Woehlke"
+
+#: editor/kcolorschemeeditor.cpp:35
+#, kde-format
+msgid "Scheme to edit or to use as a base."
+msgstr "Muokattava tai pohjana käytettävä teema."
+
+#: editor/kcolorschemeeditor.cpp:37
+#, kde-format
+msgid ""
+"Show 'Apply' button that saves changes without asking (unlike 'Save As' "
+"button)"
+msgstr ""
+"Näytä ”Käytä”-painike, joka tallentaa muutokset kysymättä (toisin kuin "
+"”Tallenna nimellä”)Näytä ”Käytä”-painike, joka tallentaa muutokset kysymättä "
+"(toisin kuin ”Tallenna nimellä”)"
+
+# *** TARKISTA: Mikä on sanan ”transient” merkitys tässä – liikkuva? tilapäinen? Ja mitä tässä ylipäänsä tehdään?
+#: editor/kcolorschemeeditor.cpp:41
+#, kde-format
+msgid ""
+"Makes the dialog transient for another application window specified by handle"
+msgstr "Tee ikkunasta tilapäinen kahvan määrittämälle toiselle sovellukselle"
+
+#: editor/kcolorschemeeditor.cpp:57
+#, kde-format
+msgid "Scheme not found, falling back to current one.\n"
+msgstr "Teema ei löytynyt: palataan takaisin nykyiseen.\n"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label)
+#: editor/preview.ui:29
+#, kde-format
+msgid "Window text on Window Background"
+msgstr "Ikkunan teksti ikkunataustalla"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: editor/preview.ui:32
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "Window text"
+msgstr "Ikkunan teksti"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, pushButton)
+#: editor/preview.ui:39
+#, kde-format
+msgid "Button text on Button Background"
+msgstr "Painikkeen teksti painikkeen taustalla"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: editor/preview.ui:42
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "Push Button"
+msgstr "Painike"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection0)
+#: editor/preview.ui:123
+#, kde-format
+msgid "Selection Normal Text against Selection Normal Background"
+msgstr "Valinnan tavallinen teksti valinnan tavallista taustaa vasten"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection0)
+#: editor/preview.ui:126
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "Selected text"
+msgstr "Valittu teksti"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection3)
+#: editor/preview.ui:138
+#, kde-format
+msgid "Selection Link Text against Selection Normal Background"
+msgstr "Valinnan linkkiteksti valinnan tavallista taustaa vasten"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection3)
+#. i18n: ectx: property (text), widget (QLabel, labelView3)
+#: editor/preview.ui:141 editor/preview.ui:265
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "link"
+msgstr "linkki"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection4)
+#: editor/preview.ui:153
+#, kde-format
+msgid "Selection Visited Text against Selection Normal Background"
+msgstr "Valinnan vierailtu teksti valinnan tavallista taustaa vasten"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection4)
+#. i18n: ectx: property (text), widget (QLabel, labelView4)
+#: editor/preview.ui:156 editor/preview.ui:280
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "visited"
+msgstr "vierailtu"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection2)
+#: editor/preview.ui:163
+#, kde-format
+msgid "Selection Active Text against Selection Normal Background"
+msgstr "Valinnan aktiivinen teksti valinnan tavallista taustaa vasten"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection2)
+#. i18n: ectx: property (text), widget (QLabel, labelView2)
+#: editor/preview.ui:166 editor/preview.ui:290
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "a"
+msgstr "akt."
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection1)
+#: editor/preview.ui:173
+#, kde-format
+msgid "Selection Inactive Text against Selection Normal Background"
+msgstr "Valinnan passiivinen teksti valinnan tavallista tekstiä vasten"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection1)
+#. i18n: ectx: property (text), widget (QLabel, labelView1)
+#: editor/preview.ui:176 editor/preview.ui:300
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "i"
+msgstr "pass."
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection5)
+#: editor/preview.ui:183
+#, kde-format
+msgid "Selection Negative Text against Selection Normal Background"
+msgstr "Valinnan negatiivinen teksti valinnan tavallista taustaa vasten"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection5)
+#. i18n: ectx: property (text), widget (QLabel, labelView5)
+#: editor/preview.ui:186 editor/preview.ui:310
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "!"
+msgstr "!"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection6)
+#: editor/preview.ui:193
+#, kde-format
+msgid "Selection Neutral Text against Selection Normal Background"
+msgstr "Valinnan neutraali teksti valinnan tavallista taustaa vasten"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection6)
+#. i18n: ectx: property (text), widget (QLabel, labelView6)
+#: editor/preview.ui:196 editor/preview.ui:320
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "="
+msgstr "="
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection7)
+#: editor/preview.ui:203
+#, kde-format
+msgid "Selection Positive Text against Selection Normal Background"
+msgstr "Valinnan positiivinen teksti valinnan tavallista taustaa vasten"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection7)
+#. i18n: ectx: property (text), widget (QLabel, labelView7)
+#: editor/preview.ui:206 editor/preview.ui:330
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "+"
+msgstr "+"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView0)
+#: editor/preview.ui:247
+#, kde-format
+msgid "View Normal Text against View Normal Background"
+msgstr "Näkymän tavallinen teksti näkymän tavallista taustaa vasten"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelView0)
+#: editor/preview.ui:250
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "Normal text"
+msgstr "Tavallinen teksti"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView3)
+#: editor/preview.ui:262
+#, kde-format
+msgid "View Link Text against View Normal Background"
+msgstr "Näkymän linkkiteksti näkymän tavallista taustaa vasten"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView4)
+#: editor/preview.ui:277
+#, kde-format
+msgid "View Visited Text against View Normal Background"
+msgstr "Näkymän vierailtu teksti näkymän tavallista taustaa vasten"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView2)
+#: editor/preview.ui:287
+#, kde-format
+msgid "View Active Text against View Normal Background"
+msgstr "Näkymän aktiivinen teksti näkymän tavallista taustaa vasten"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView1)
+#: editor/preview.ui:297
+#, kde-format
+msgid "View Inactive Text against View Normal Background"
+msgstr "Näkymän passiivinen teksti näkymän tavallista taustaa vasten"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView5)
+#: editor/preview.ui:307
+#, kde-format
+msgid "View Negative Text against View Normal Background"
+msgstr "Näkymän negatiivinen teksti näkymän tavallista taustaa vasten"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView6)
+#: editor/preview.ui:317
+#, kde-format
+msgid "View Neutral Text against View Normal Background"
+msgstr "Näkymän neutraali teksti näkymän tavallista taustaa vasten"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView7)
+#: editor/preview.ui:327
+#, kde-format
+msgid "View Positive Text against View Normal Background"
+msgstr "Näkymän positiivinen teksti näkymän tavallista taustaa vasten"
+
+#: editor/scmeditorcolors.cpp:62 editor/scmeditorcolors.cpp:76
+#, kde-format
+msgid "Varies"
+msgstr "Vaihtelee"
+
+#: editor/scmeditorcolors.cpp:99
+#, kde-format
+msgid "Normal Background"
+msgstr "Tavallinen tausta"
+
+#: editor/scmeditorcolors.cpp:100
+#, kde-format
+msgid "Alternate Background"
+msgstr "Vaihtoehtoinen tausta"
+
+#: editor/scmeditorcolors.cpp:101
+#, kde-format
+msgid "Normal Text"
+msgstr "Tavallinen teksti"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:102 editor/scmeditorcolors.ui:303
+#, kde-format
+msgid "Inactive Text"
+msgstr "Passiivinen teksti"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:103 editor/scmeditorcolors.ui:308
+#, kde-format
+msgid "Active Text"
+msgstr "Aktiivinen teksti"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:104 editor/scmeditorcolors.ui:313
+#, kde-format
+msgid "Link Text"
+msgstr "Linkin teksti"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:105 editor/scmeditorcolors.ui:318
+#, kde-format
+msgid "Visited Text"
+msgstr "Vierailtu teksti"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:106 editor/scmeditorcolors.ui:323
+#, kde-format
+msgid "Negative Text"
+msgstr "Käänteinen teksti"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:107 editor/scmeditorcolors.ui:328
+#, kde-format
+msgid "Neutral Text"
+msgstr "Neutraali teksti"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:108 editor/scmeditorcolors.ui:333
+#, kde-format
+msgid "Positive Text"
+msgstr "Positiivinen teksti"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:109 editor/scmeditorcolors.ui:338
+#, kde-format
+msgid "Focus Decoration"
+msgstr "Kohdistuskoristelu"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:110 editor/scmeditorcolors.ui:343
+#, kde-format
+msgid "Hover Decoration"
+msgstr "Osoituskoristelu"
+
+# Tässä "set" taitaa viitata matematiikkaan: Värijoukko
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: editor/scmeditorcolors.ui:23
+#, kde-format
+msgid "Color set:"
+msgstr "Värikokoelma:"
+
+# Color set (~ colorset) jo toisaalla ”värikokoelma”
+#. i18n: ectx: property (toolTip), widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:36
+#, kde-format
+msgid "Colorset to view/modify"
+msgstr "Näytettävä tai muutettava värikokoelma"
+
+#. i18n: 'Common' here means &quot;frequent/not rare&quot;, not &quot;shared&quot;
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:40
+#, kde-format
+msgctxt "color-sets"
+msgid "Common Colors"
+msgstr "Yleisimmät värit"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:45
+#, kde-format
+msgctxt "color-sets"
+msgid "View"
+msgstr "Näkymä"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:50
+#, kde-format
+msgctxt "color-sets"
+msgid "Window"
+msgstr "Ikkuna"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:55
+#, kde-format
+msgctxt "color-sets"
+msgid "Button"
+msgstr "Painike"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:60
+#, kde-format
+msgctxt "color-sets"
+msgid "Selection"
+msgstr "Valinta"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:65
+#, kde-format
+msgctxt "color-sets"
+msgid "Tooltip"
+msgstr "Työkaluvihje"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:70
+#, kde-format
+msgctxt "color-sets"
+msgid "Complementary"
+msgstr "Käänteinen"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:75
+#, kde-format
+msgctxt "color-sets"
+msgid "Header"
+msgstr "Otsake"
+
+#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:118 editor/scmeditorcolors.ui:123
+#: editor/scmeditorcolors.ui:128 editor/scmeditorcolors.ui:133
+#: editor/scmeditorcolors.ui:138 editor/scmeditorcolors.ui:143
+#: editor/scmeditorcolors.ui:148 editor/scmeditorcolors.ui:153
+#: editor/scmeditorcolors.ui:158 editor/scmeditorcolors.ui:163
+#: editor/scmeditorcolors.ui:168 editor/scmeditorcolors.ui:173
+#: editor/scmeditorcolors.ui:178 editor/scmeditorcolors.ui:183
+#: editor/scmeditorcolors.ui:188 editor/scmeditorcolors.ui:193
+#: editor/scmeditorcolors.ui:198 editor/scmeditorcolors.ui:203
+#: editor/scmeditorcolors.ui:208 editor/scmeditorcolors.ui:213
+#: editor/scmeditorcolors.ui:218 editor/scmeditorcolors.ui:223
+#: editor/scmeditorcolors.ui:228 editor/scmeditorcolors.ui:233
+#: editor/scmeditorcolors.ui:238 editor/scmeditorcolors.ui:243
+#, kde-format
+msgid "New Row"
+msgstr "Uusi rivi"
+
+#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:248
+#, kde-format
+msgid "0"
+msgstr "0"
+
+#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:253
+#, kde-format
+msgid "1"
+msgstr "1"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:258
+#, kde-format
+msgid "View Background"
+msgstr "Näkymän tausta"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:263
+#, kde-format
+msgid "View Text"
+msgstr "Näkymän teksti"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:268
+#, kde-format
+msgid "Window Background"
+msgstr "Ikkunan tausta"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:273
+#, kde-format
+msgid "Window Text"
+msgstr "Ikkunan teksti"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:278
+#, kde-format
+msgid "Button Background"
+msgstr "Painikkeen tausta"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:283
+#, kde-format
+msgid "Button Text"
+msgstr "Painikkeen teksti"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:288
+#, kde-format
+msgid "Selection Background"
+msgstr "Valinnan tausta"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:293
+#, kde-format
+msgid "Selection Text"
+msgstr "Valinnan teksti"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:298
+#, kde-format
+msgid "Selection Inactive Text"
+msgstr "Passiivinen otsikkoteksti"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:348
+#, kde-format
+msgid "Tooltip Background"
+msgstr "Työkaluvihjeen tausta"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:353
+#, kde-format
+msgid "Tooltip Text"
+msgstr "Työkaluvihjeen teksti"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:358
+#, kde-format
+msgid "Active Titlebar"
+msgstr "Aktiivinen otsikkopalkki"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:363
+#, kde-format
+msgid "Active Titlebar Text"
+msgstr "Aktiivisen otsikkopalkin teksti"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:368
+#, kde-format
+msgid "Active Titlebar Secondary"
+msgstr "Aktiivisen otsikkopalkin toinen väri"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:373
+#, kde-format
+msgid "Inactive Titlebar"
+msgstr "Passiivinen otsikkopalkki"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:378
+#, kde-format
+msgid "Inactive Titlebar Text"
+msgstr "Passiivisen otsikkopalkin teksti"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:383
+#, kde-format
+msgid "Inactive Titlebar Secondary"
+msgstr "Passiivisen otsikkopalkin toinen väri"
+
+#: editor/scmeditordialog.cpp:61
+#, kde-format
+msgid "Options"
+msgstr "Valinnat"
+
+#: editor/scmeditordialog.cpp:62
+#, kde-format
+msgid "Colors"
+msgstr "Värit"
+
+#: editor/scmeditordialog.cpp:63
+#, kde-format
+msgid "Disabled"
+msgstr "Ei käytössä"
+
+#: editor/scmeditordialog.cpp:95
+#, kde-format
+msgid "You have unsaved changes. Do you really want to quit?"
+msgstr "Muutoksia on tallentamatta. Haluatko varmasti lopettaa?"
+
+#: editor/scmeditordialog.cpp:95
+#, kde-format
+msgid "Unsaved changes"
+msgstr "Muutoksia tallentamatta"
+
+#: editor/scmeditordialog.cpp:113 editor/scmeditordialog.cpp:138
+#, kde-format
+msgid "Save Color Scheme"
+msgstr "Tallenna väriteema"
+
+#: editor/scmeditordialog.cpp:113
+#, kde-format
+msgid "&Enter a name for the color scheme:"
+msgstr "&Syötä väriteeman nimi:"
+
+#: editor/scmeditordialog.cpp:137
+#, kde-format
+msgid ""
+"A color scheme with that name already exists.\n"
+"Do you want to overwrite it?"
+msgstr ""
+"Saman niminen väriteema on jo olemassa.\n"
+"Haluatko korvata sen?"
+
+#: editor/scmeditordialog.cpp:174
+#, kde-format
+msgid "You do not have permission to overwrite that scheme"
+msgstr "Sinulla ei ole oikeutta korvata tuota teemaa."
+
+#: editor/scmeditordialog.cpp:174
+#, kde-format
+msgid "Error"
+msgstr "Virhe"
+
+#: editor/scmeditordialog.cpp:189
+#, kde-format
+msgid "Inactive"
+msgstr "Passiivinen"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: editor/scmeditoreffects.ui:17
+#, kde-format
+msgid "Color:"
+msgstr "Väri:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: editor/scmeditoreffects.ui:27
+#, kde-format
+msgid "Intensity:"
+msgstr "Intensiteetti:"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:37
+#, kde-format
+msgid "Disabled color effect type"
+msgstr "Käytöstä poistetun väritehosteen tyyppi"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:41
+#, kde-format
+msgctxt "no disabled color effect"
+msgid "None"
+msgstr "Ei tehostetta"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:46
+#, kde-format
+msgctxt "disabled color effect"
+msgid "Desaturate"
+msgstr "Kylläisyyden vähennys"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:51
+#, kde-format
+msgctxt "disabled color effect"
+msgid "Fade"
+msgstr "Häivytys"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:56
+#, kde-format
+msgctxt "disabled color effect"
+msgid "Tint"
+msgstr "Sävytys"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:64
+#, kde-format
+msgid "Disabled intensity effect type"
+msgstr "Käytöstä poistetun intensiteettitehosteen tyyppi"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:68
+#, kde-format
+msgctxt "no disabled intensity effect"
+msgid "None"
+msgstr "Ei tehostetta"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:73
+#, kde-format
+msgctxt "disabled intensity effect"
+msgid "Shade"
+msgstr "Varjostus"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:78
+#, kde-format
+msgctxt "disabled intensity effect"
+msgid "Darken"
+msgstr "Tummennus"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:83
+#, kde-format
+msgctxt "disabled intensity effect"
+msgid "Lighten"
+msgstr "Vaalennus"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: editor/scmeditoreffects.ui:107
+#, kde-format
+msgid "Contrast:"
+msgstr "Kontrasti:"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, colorSlider)
+#: editor/scmeditoreffects.ui:120
+#, kde-format
+msgid "Disabled color effect amount"
+msgstr "Käytöstä poistetun väritehosteen määrä"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, intensitySlider)
+#: editor/scmeditoreffects.ui:139
+#, kde-format
+msgid "Disabled intensity effect amount"
+msgstr "Käytöstä poistetun intensiteettitehosteen määrä"
+
+#. i18n: ectx: property (toolTip), widget (KColorButton, colorButton)
+#: editor/scmeditoreffects.ui:158
+#, kde-format
+msgid "Disabled color"
+msgstr "Käytöstä poistettu väri"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, contrastBox)
+#: editor/scmeditoreffects.ui:181
+#, kde-format
+msgid "Disabled contrast type"
+msgstr "Käytöstä poistettujen kontrastitehosteen tyyppi"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
+#: editor/scmeditoreffects.ui:185
+#, kde-format
+msgctxt "no disabled contrast"
+msgid "None"
+msgstr "Ei tehostetta"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
+#: editor/scmeditoreffects.ui:190
+#, kde-format
+msgctxt "disabled contrast"
+msgid "Fade"
+msgstr "Häivytys"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
+#: editor/scmeditoreffects.ui:195
+#, kde-format
+msgctxt "disabled contrast"
+msgid "Tint"
+msgstr "Sävytys"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, contrastSlider)
+#: editor/scmeditoreffects.ui:222
+#, kde-format
+msgid "Disabled contrast amount"
+msgstr "Käytöstä poistetun kontrastitehosteen määrä"
+
+#. i18n: ectx: property (text), widget (QCheckBox, useInactiveEffects)
+#: editor/scmeditoroptions.ui:17
+#, kde-format
+msgid "Apply &effects to inactive windows"
+msgstr "Käytä &tehosteita passiivisiin ikkunoihin"
+
+#. i18n: ectx: property (text), widget (QCheckBox, inactiveSelectionEffect)
+#: editor/scmeditoroptions.ui:24
+#, kde-format
+msgid "Use different colors for in&active selections"
+msgstr "Käytä eri värejä &passiivisiin valintoihin"
+
+#. i18n: ectx: property (text), widget (QCheckBox, shadeSortedColumn)
+#: editor/scmeditoroptions.ui:31
+#, kde-format
+msgid "Shade sorted column &in lists"
+msgstr "&Varjosta luettelojen lajittelupalsta"
+
+#. i18n: ectx: property (text), widget (QCheckBox, tintColors)
+#: editor/scmeditoroptions.ui:38
+#, kde-format
+msgid "Tint all colors with accent color"
+msgstr "Sävytä kaikki värit korostusvärillä"
+
+#. i18n: ectx: property (text), widget (QCheckBox, accentTitlebar)
+#: editor/scmeditoroptions.ui:45
+#, kde-format
+msgid "Make window titlebars a&ccent-colored"
+msgstr "Väritä ikkunan otsikkopalkit tehostevärillä"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: editor/scmeditoroptions.ui:52
+#, kde-format
+msgid "Tint strength:"
+msgstr "Sävytyksen voimakkuus:"
+
+#. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox_5)
+#: editor/scmeditoroptions.ui:69
+#, kde-format
+msgid "Shading of frames and lighting (\"3D\") effects"
+msgstr "Kehys- ja valotehosteiden (”3D”) varjostus"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
+#: editor/scmeditoroptions.ui:72
+#, kde-format
+msgid "Shading"
+msgstr "Varjostus"
+
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: editor/scmeditoroptions.ui:97
+#, kde-format
+msgid "Maximum"
+msgstr "Enin"
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: editor/scmeditoroptions.ui:117
+#, kde-format
+msgid "Minimum"
+msgstr "Vähin"
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: editor/scmeditoroptions.ui:124
+#, kde-format
+msgid "Contrast"
+msgstr "Kontrasti"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore0)
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack0)
+#: editor/setpreview.ui:35 editor/setpreview.ui:189
+#, kde-format
+msgid "Normal Text on Normal Background"
+msgstr "Tavallinen teksti tavallisella taustalla"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore0)
+#. i18n: ectx: property (text), widget (QLabel, labelBack0)
+#: editor/setpreview.ui:38 editor/setpreview.ui:192
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "normal"
+msgstr "tavallinen"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore3)
+#: editor/setpreview.ui:56
+#, kde-format
+msgid "Link Text on Normal Background"
+msgstr "Linkkiteksti tavallisella taustalla"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore3)
+#. i18n: ectx: property (text), widget (QLabel, labelBack3)
+#: editor/setpreview.ui:59 editor/setpreview.ui:214
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "link"
+msgstr "linkki"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore4)
+#: editor/setpreview.ui:77
+#, kde-format
+msgid "Visited Text on Normal Background"
+msgstr "Vierailtu teksti tavallisella taustalla"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore4)
+#. i18n: ectx: property (text), widget (QLabel, labelBack4)
+#: editor/setpreview.ui:80 editor/setpreview.ui:236
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "visited"
+msgstr "vierailtu"
+
+#. i18n: ectx: property (toolTip), widget (QWidget, widgetFore2)
+#: editor/setpreview.ui:90
+#, kde-format
+msgid "Active Text on Normal Background"
+msgstr "Aktiivinen teksti tavallisella taustalla"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore2)
+#. i18n: ectx: property (text), widget (QLabel, labelBack2)
+#: editor/setpreview.ui:96 editor/setpreview.ui:253
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "active"
+msgstr "aktiivinen"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore1)
+#: editor/setpreview.ui:109
+#, kde-format
+msgid "Inactive Text on Normal Background"
+msgstr "Passiivinen teksti tavallisella taustalla"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore1)
+#: editor/setpreview.ui:112
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "inactive"
+msgstr "passiivinen"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore5)
+#: editor/setpreview.ui:125
+#, kde-format
+msgid "Negative Text on Normal Background"
+msgstr "Negatiivinen teksti tavallisella taustalla"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore5)
+#. i18n: ectx: property (text), widget (QLabel, labelBack5)
+#: editor/setpreview.ui:128 editor/setpreview.ui:286
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "negative"
+msgstr "negatiivinen"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore6)
+#: editor/setpreview.ui:141
+#, kde-format
+msgid "Neutral Text on Normal Background"
+msgstr "Neutraali teksti tavallisella taustalla"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore6)
+#. i18n: ectx: property (text), widget (QLabel, labelBack6)
+#: editor/setpreview.ui:144 editor/setpreview.ui:303
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "neutral"
+msgstr "neutraali"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore7)
+#: editor/setpreview.ui:157
+#, kde-format
+msgid "Positive Text on Normal Background"
+msgstr "Positiivinen teksti tavallisella taustalla"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore7)
+#. i18n: ectx: property (text), widget (QLabel, labelBack7)
+#: editor/setpreview.ui:160 editor/setpreview.ui:320
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "positive"
+msgstr "positiivinen"
+
+#. i18n: ectx: property (toolTip), widget (QWidget, widgetFore8)
+#: editor/setpreview.ui:170
+#, kde-format
+msgid "Hover on Normal Background"
+msgstr "Osoita tavallisella taustalla"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore8)
+#: editor/setpreview.ui:176
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "hover"
+msgstr "osoitettu"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack3)
+#: editor/setpreview.ui:211
+#, kde-format
+msgid ""
+"Link Text on Link Background\n"
+"(Note: Link Background is derived from Link Text and cannot be separately "
+"configured at this time)"
+msgstr ""
+"Linkkiteksti linkkitaustalla\n"
+"(Huom: Linkkitausta periytyy linkkitekstistä ja sitä ei voi erikseen muokata "
+"tällä hetkellä)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack4)
+#: editor/setpreview.ui:233
+#, kde-format
+msgid ""
+"Visited Text on Visited Background\n"
+"(Note: Visited Background is derived from Visited Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+"Vierailtu teksti vieraillulla taustalla\n"
+"(Huomaa: Vierailtu tausta periytyy vieraillusta tekstistä ja sitä ei voi "
+"erikseen muokata tällä hetkellä)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack2)
+#: editor/setpreview.ui:250
+#, kde-format
+msgid ""
+"Active Text on Active Background\n"
+"(Note: Active Background is derived from Active Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+"Aktiivinen teksti aktiivisella taustalla\n"
+"(Huom: Aktiivinen tausta periytyy aktiivisesta tekstistä ja sitä ei voi "
+"erikseen muokata tällä hetkellä)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack1)
+#: editor/setpreview.ui:266
+#, kde-format
+msgid "Inactive Text on Alternate Background"
+msgstr "Passiivinen teksti vaihtoehtoisella taustalla"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelBack1)
+#: editor/setpreview.ui:269
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "alternate"
+msgstr "vaihtoehtoinen"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack5)
+#: editor/setpreview.ui:283
+#, kde-format
+msgid ""
+"Negative Text on Negative Background\n"
+"(Note: Negative Background is derived from Negative Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+"Negatiivinen teksti negatiivisella taustalla\n"
+"(Huom: Negatiivinen tausta periytyy negatiivisesta tekstistä ja sitä ei voi "
+"erikseen muokata tällä hetkellä)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack6)
+#: editor/setpreview.ui:300
+#, kde-format
+msgid ""
+"Neutral Text on Neutral Background\n"
+"(Note: Neutral Background is derived from Neutral Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+"Neutraali teksti neutraalilla taustalla\n"
+"(Huom: Neutraali tausta periytyy neutraalista tekstistä ja sitä ei voi "
+"erikseen muokata tällä hetkellä)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack7)
+#: editor/setpreview.ui:317
+#, kde-format
+msgid ""
+"Positive Text on Positive Background\n"
+"(Note: Positive Background is derived from Positive Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+"Positiivinen teksti positiivisella taustalla\n"
+"(Huom: Positiivinen tausta periytyy positiivisesta tekstistä ja sitä ei voi "
+"erikseen muokata tällä hetkellä)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore9)
+#: editor/setpreview.ui:333
+#, kde-format
+msgid "Focus on Normal Background"
+msgstr "Kohdistus tavallisella taustalla"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore9)
+#: editor/setpreview.ui:336
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "focus"
+msgstr "kohdistettu"
+
+#: package/contents/ui/main.qml:23
+#, kde-format
+msgid "This module lets you choose the color scheme."
+msgstr "Tässä osiossa voit valita väriteeman."
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgid ""
+"The color scheme '%1' is not installed. Selecting the default theme instead."
+msgstr "Väriteemaa ”%1” ei ole asennettu. Valitaan sen sijaan oletusteema."
+
+#: package/contents/ui/main.qml:108
+#, kde-format
+msgid "All Schemes"
+msgstr "Kaikki teemat"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Light Schemes"
+msgstr "Vaaleat teemat"
+
+#: package/contents/ui/main.qml:110
+#, kde-format
+msgid "Dark Schemes"
+msgstr "Tummat teemat"
+
+#: package/contents/ui/main.qml:143
+#, kde-format
+msgid "Use accent color:"
+msgstr "Käytä korostusväriä:"
+
+#: package/contents/ui/main.qml:144
+#, kde-format
+msgid "From current color scheme"
+msgstr "Nykyisestä väriteemasta"
+
+#: package/contents/ui/main.qml:157
+#, kde-format
+msgctxt "@option:radio wallpaper accent color option"
+msgid "From current wallpaper"
+msgstr "Nykyisestä taustakuvasta"
+
+#: package/contents/ui/main.qml:254
+#, kde-format
+msgid "Custom:"
+msgstr "Mukautettu:"
+
+#: package/contents/ui/main.qml:261
+#, kde-format
+msgid "Choose custom accent color"
+msgstr "Valitse mukautettu korostusväri"
+
+#: package/contents/ui/main.qml:349
+#, kde-format
+msgid "Window Title"
+msgstr "Ikkunan otsikko"
+
+#: package/contents/ui/main.qml:371
+#, kde-format
+msgid "Window text"
+msgstr "Ikkunan teksti"
+
+#: package/contents/ui/main.qml:378
+#, kde-format
+msgid "Button"
+msgstr "Painike"
+
+#: package/contents/ui/main.qml:415
+#, kde-format
+msgctxt "Hyperlink"
+msgid "link"
+msgstr "linkki"
+
+#: package/contents/ui/main.qml:417
+#, kde-format
+msgctxt "Visited hyperlink"
+msgid "visited"
+msgstr "vierailtu"
+
+#: package/contents/ui/main.qml:424
+#, kde-format
+msgid "Normal text"
+msgstr "Tavallinen teksti"
+
+#: package/contents/ui/main.qml:432
+#, kde-format
+msgid "Highlighted text"
+msgstr "Korostettu teksti"
+
+#: package/contents/ui/main.qml:439
+#, kde-format
+msgid "Disabled text"
+msgstr "Käytöstä poistettu teksti"
+
+#: package/contents/ui/main.qml:457
+#, kde-format
+msgid "Edit Color Scheme…"
+msgstr "Muokkaa väriteemaa…"
+
+#: package/contents/ui/main.qml:463
+#, kde-format
+msgid "Remove Color Scheme"
+msgstr "Poista väriteema"
+
+#: package/contents/ui/main.qml:470
+#, kde-format
+msgid "Restore Color Scheme"
+msgstr "Palauta väriteema"
+
+#: package/contents/ui/main.qml:514
+#, kde-format
+msgid "Install from File…"
+msgstr "Asenna tiedostosta…"
+
+#: package/contents/ui/main.qml:519
+#, kde-format
+msgid "Get New Color Schemes…"
+msgstr "Hae uusia väriteemoja…"
+
+#: package/contents/ui/main.qml:537
+#, kde-format
+msgid "Open Color Scheme"
+msgstr "Avaa väriteema"
+
+#: package/contents/ui/main.qml:539
+#, kde-format
+msgid "Color Scheme Files (*.colors)"
+msgstr "Väriteematiedostot (*.colors)"
+
+#: plasma-apply-colorscheme.cpp:39
+#, kde-format
+msgid ""
+"This tool allows you to set the color scheme for the current Plasma session, "
+"without accidentally setting it to one that is either not available, or "
+"which is already set."
+msgstr ""
+"Tällä työkalulla voi asettaa väriteeman aktiiviseen istuntoon niin, ettei "
+"vahingossa aseta sitä sellaiseksi, joka ei ole käytettävissä tai on jo "
+"käytössä."
+
+#: plasma-apply-colorscheme.cpp:43
+#, kde-format
+msgid ""
+"The name of the color scheme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+"Plasma-istuntoon haluamasi väriteeman nimi (täydestä polkunimestä käytetään "
+"vain viimeistä osaa)"
+
+#: plasma-apply-colorscheme.cpp:45
+#, kde-format
+msgid ""
+"Show all the color schemes available on the system (and which is the current "
+"theme)"
+msgstr ""
+"Näytä kaikki järjestelmään asennetut väriteemat (ja mikä niistä on käytössä)"
+
+#: plasma-apply-colorscheme.cpp:48
+#, kde-format
+msgid ""
+"The name of the accent color you want to set. SVG color names (https://www."
+"w3.org/TR/SVG11/types.html#ColorKeywords) and hex color codes are supported. "
+"Quote the hex code if there is possibility of shell expansion"
+msgstr ""
+"Haluamasi korostusvärin nimi. Ymmärtää SVG-värinimiä (https://www.w3.org/TR/"
+"SVG11/types.html#ColorKeywords) ja heksalukuarvoja. Lainaa heksakoodi "
+"tarvittaessa, jottei komentotulkki laajenna sitä"
+
+#: plasma-apply-colorscheme.cpp:75
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr "Pyydetty teema ”%1” on jo asetettu väriteemaksi."
+
+#: plasma-apply-colorscheme.cpp:98
+#, kde-format
+msgid "Successfully applied the color scheme %1 to your current Plasma session"
+msgstr "Väriteeman %1 käyttöönotto nykyiseen Plasma-istuntoon onnistui"
+
+#: plasma-apply-colorscheme.cpp:100
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr "Teemaa ”%1” ei löytynyt. Teeman tulisi olla yksi seuraavista: %2"
+
+#: plasma-apply-colorscheme.cpp:107
+#, kde-format
+msgid ""
+"You have managed to pass an empty color scheme name, which isn't supported "
+"behavior."
+msgstr "Olet onnistunut antamaan väriteeman nimen tyhjänä, mitä ei tueta."
+
+#: plasma-apply-colorscheme.cpp:111
+#, kde-format
+msgid ""
+"The file you attempted to set as your scheme, %1, could not be identified as "
+"a color scheme."
+msgstr ""
+"Tiedostoa (%1), jota yritetään asettaa teemaksi, ei voitu tunnistaa "
+"väriteemaksi."
+
+#: plasma-apply-colorscheme.cpp:125
+#, kde-format
+msgid "Successfully applied the accent color %1"
+msgstr "Korostusväriksi asetettiin onnistuneesti %1"
+
+#: plasma-apply-colorscheme.cpp:127
+#, kde-format
+msgid "Invalid accent color "
+msgstr "Virheellinen korostusväri"
+
+#: plasma-apply-colorscheme.cpp:132
+#, kde-format
+msgid "You have the following color schemes on your system:"
+msgstr "Järjestelmään on asennettu seuraavat väriteemat:"
+
+#: plasma-apply-colorscheme.cpp:137
+#, kde-format
+msgid " * %1 (current color scheme)"
+msgstr " * %1 (nykyinen väriteema)"
+
+#~ msgid "Apply a&ccent color to active window titlebars"
+#~ msgstr "Käytä t&ehosteväriä aktiiviseen ikkunan otsikkopalkkiin"
+
+#~ msgid "Apply acce&nt color to inactive window titlebars"
+#~ msgstr "Käytä tehoste&väriä passiivisiin ikkunan otsikkopalkkeihin"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Kai Uwe Broulik"
+
+#~ msgid "This colour scheme was not saved. Continue?"
+#~ msgstr "Väriteemaa ei ole tallennettu. Jatketaanko?"
+
+#~ msgid "Do you really want to upload?"
+#~ msgstr "Haluatko varmasti lähettää?"
+
+#~ msgid "Share the selected scheme on the Internet"
+#~ msgstr "Jaa valittu teema internetiin"
+
+#~ msgid "Upload Scheme"
+#~ msgstr "Lähetä teema"
+
+#~ msgid "Search..."
+#~ msgstr "Etsi…"
+
+#~ msgid "Download New Color Schemes"
+#~ msgstr "Lataa uusia väriteemoja"
+
+#~ msgid "Edit..."
+#~ msgstr "Muokkaa…"
+
+#~ msgid "Remove the selected scheme"
+#~ msgstr "Poista valittu teema"
+
+#~ msgid "Remove"
+#~ msgstr "Poista"
+
+#~ msgid "Import a color scheme from a file"
+#~ msgstr "Tuo teema tiedostosta"
+
+#~ msgid "&Install from File..."
+#~ msgstr "&Asenna tiedostosta…"
+
+#~ msgid "Get new color schemes from the Internet"
+#~ msgstr "Hae uusia teemoja internetistä"
+
+#~ msgid "Get &New Color Schemes..."
+#~ msgstr "Hae &uusia väriteemoja…"
+
+#~ msgid "Apply colors to &non-Qt applications"
+#~ msgstr "Käytä värejä muihinkin kui&n Qt-sovelluksiin"
+
+#~ msgid "Overwrite edited theme when saving"
+#~ msgstr "Korvaa muokattu teema tallennettaessa"
+
+#~ msgid "(c) 2007 Matthew Woehlke"
+#~ msgstr "© 2007 Matthew Woehlke"
+
+# scheme on schema-sanan monikko, hiukan omituinen oletusyhteydessä
+#~ msgctxt "Default color scheme"
+#~ msgid "Default"
+#~ msgstr "Oletus"
+
+# scheme on schema-sanan monikko
+#~ msgctxt "Current color scheme"
+#~ msgid "Current"
+#~ msgstr "Nykyinen"
+
+#~ msgid "You do not have permission to delete that scheme"
+#~ msgstr "Sinulla ei ole oikeutta poistaa tätä teemaa"
+
+#~ msgid ""
+#~ "The scheme you have selected appears to be a KDE3 scheme.\n"
+#~ "\n"
+#~ "This is not supported anymore."
+#~ msgstr ""
+#~ "Valitsemasi teema vaikuttaa KDE 3 -teemalta.\n"
+#~ "\n"
+#~ "Niitä ei enää tueta."
+
+#~ msgid "Notice"
+#~ msgstr "Huomautus"
+
+#~ msgid "In&active selection changes color"
+#~ msgstr "&Vaihda passiivisen valinnan väriä"
+
+#~ msgid "This scheme was not found."
+#~ msgstr "Teemaa ei löytynyt."
+
+#~ msgid "File not found"
+#~ msgstr "Tiedostoa ei löytynyt"
+
+# scheme on schema-sanan monikko ja tarkoittaa ATK-sanakirjan mukaan oikeastaan kaavaa.
+#~ msgid "Selecting another scheme will discard any changes you have made"
+#~ msgstr "Menetät kaikki tekemäsi muutokset, jos valitset toisen teeman"
+
+#~ msgid "Are you sure?"
+#~ msgstr "Oletko varma?"
+
+#~ msgid ""
+#~ "The scheme you have selected appears to be a KDE3 scheme.\n"
+#~ "\n"
+#~ "KDE will attempt to import this scheme, however many color roles have "
+#~ "been added since KDE3. Some manual work will likely be required.\n"
+#~ "\n"
+#~ "This scheme will not be saved automatically."
+#~ msgstr ""
+#~ "Valitsemasi teema näyttää olevan KDE3-teema.\n"
+#~ "\n"
+#~ "KDE yrittää tuoda tämän teeman, monia värirooleja on kuitenkin lisätty "
+#~ "sitten KDE3 kehittämisen. Saatetaan tarvita jotain manuaalista työtä.\n"
+#~ "\n"
+#~ "Tätä teemaa ei tallenneta automaattisesti."
+
+#~ msgid "Please save the color scheme before uploading it."
+#~ msgstr "Tallenna väriteema ennen sen lähettämistä."
+
+#~ msgid "Please save"
+#~ msgstr "Tallenna"
+
+#~ msgctxt "@title:tab color transformations on inactive elements"
+#~ msgid "Inactive"
+#~ msgstr "Passiivinen"
+
+#~ msgid "Inactive intensity effect type"
+#~ msgstr "Passiivisen ikkunan intensiteettitehoste"
+
+#~ msgctxt "no inactive intensity effect"
+#~ msgid "None"
+#~ msgstr "Ei tehostetta"
+
+#~ msgctxt "inactive intensity effect"
+#~ msgid "Shade"
+#~ msgstr "Varjostus"
+
+#~ msgctxt "inactive intensity effect"
+#~ msgid "Darken"
+#~ msgstr "Tummennus"
+
+#~ msgctxt "inactive intensity effect"
+#~ msgid "Lighten"
+#~ msgstr "Vaalennus"
+
+#~ msgid "Inactive intensity effect amount"
+#~ msgstr "Passiivisen ikkunan intensiteettitehosteen määrä"
+
+#~ msgid "Inactive color effect type"
+#~ msgstr "Passiivisen ikkunan väritehosteen tyyppi"
+
+#~ msgctxt "no inactive color effect"
+#~ msgid "None"
+#~ msgstr "Ei tehostetta"
+
+#~ msgctxt "inactive color effect"
+#~ msgid "Desaturate"
+#~ msgstr "Kylläisyyden vähennys"
+
+#~ msgctxt "inactive color effect"
+#~ msgid "Fade"
+#~ msgstr "Häivytys"
+
+#~ msgctxt "inactive color effect"
+#~ msgid "Tint"
+#~ msgstr "Sävytys"
+
+#~ msgid "Inactive color amount"
+#~ msgstr "Passiivisen värin määrä"
+
+#~ msgid "Inactive contrast effect type"
+#~ msgstr "Passiivisen kontrastitehosteen tyyppi"
+
+#~ msgctxt "no inactive contrast effect"
+#~ msgid "None"
+#~ msgstr "Ei tehostetta"
+
+#~ msgctxt "inactive contrast effect"
+#~ msgid "Fade"
+#~ msgstr "Häivytys"
+
+#~ msgctxt "inactive contrast effect"
+#~ msgid "Tint"
+#~ msgstr "Sävytys"
+
+#~ msgid "Inactive contrast effect amount"
+#~ msgstr "Passiivisen kontrastitehosteen määrä"
+
+#~ msgid "Preview"
+#~ msgstr "Esikatselu"
+
+#~ msgid "Import Scheme..."
+#~ msgstr "Tuo teema…"
+
+#~ msgid "Contrast used for 3D objects"
+#~ msgstr "Kolmiulotteisten objektien kontrasti"
+
+#~ msgid "&Save..."
+#~ msgstr "&Tallenna..."
+
+#~ msgid "Rem&ove"
+#~ msgstr "P&oista"
+
+#~ msgid "I&mport..."
+#~ msgstr "&Tuo..."
+
+#~ msgid "&Effects"
+#~ msgstr "&Tehosteet"

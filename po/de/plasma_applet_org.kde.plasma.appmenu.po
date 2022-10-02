@@ -1,0 +1,70 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Burkhard Lück <lueck@hube-lueck.de>, 2017, 2021.
+# Frederik Schwarzer <schwarzer@kde.org>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-22 00:47+0000\n"
+"PO-Revision-Date: 2022-07-14 00:30+0200\n"
+"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.07.70\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Erscheinungsbild"
+
+#: package/contents/ui/configGeneral.qml:22
+#, kde-format
+msgid "Use single button for application menu"
+msgstr "Einzelnen Knopf für Anwendungsmenü verwenden"
+
+#: package/contents/ui/configGeneral.qml:28
+#, kde-format
+msgid "Show full application menu"
+msgstr "Vollständiges Anwendungsmenü anzeigen"
+
+#: package/contents/ui/MenuDelegate.qml:62
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Open a menu"
+msgstr ""
+
+#: plugin/appmenumodel.cpp:84
+#, kde-format
+msgid "Search"
+msgstr "Suchen"
+
+#: plugin/appmenumodel.cpp:91
+#, kde-format
+msgid "Search…"
+msgstr "Suchen ..."
+
+#~ msgid "Search..."
+#~ msgstr "Suchen ..."
+
+#~ msgid "application-menu"
+#~ msgstr "application-menu"
+
+#~ msgid "Application Menu Widget is disabled"
+#~ msgstr "Das Anwendungsmenü-Miniprogramm ist deaktiviert"
+
+#~ msgctxt "it being the 'Application Menu Widget'"
+#~ msgid ""
+#~ "Go to System Settings > Application Style > Fine Tuning (tab) to enable "
+#~ "it."
+#~ msgstr ""
+#~ "Aktivieren Sie es in den Systemeinstellungen -> Anwendungs-Stil auf der "
+#~ "Karteikarte Feineinstellungen"
+
+#~ msgid "emblem-warning"
+#~ msgstr "emblem-warning"

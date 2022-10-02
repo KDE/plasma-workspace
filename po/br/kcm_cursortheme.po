@@ -1,0 +1,384 @@
+# KTranslator Generated File
+# KDE breton translation
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# Jañ-Mai Drapier <jdrapier@club-internet.fr>, 1999
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminput-1.1\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:50+0000\n"
+"PO-Revision-Date: 2004-09-19 18:09+0200\n"
+"Last-Translator: Jañ-Mai Drapier <jdrapier@club-internet.fr>\n"
+"Language-Team: Brezhoneg <Suav.Icb@wanadoo.fr>\n"
+"Language: br\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Do not change cursor theme"
+msgid "Name of the current cursor theme"
+msgstr "Ne gemmit ket giz ar reti"
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr ""
+
+#: kcmcursortheme.cpp:302
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr "Red eo deoc'h da adloc'hañ KDE evit arloañ ar c'hemmoù."
+
+#: kcmcursortheme.cpp:376
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: kcmcursortheme.cpp:387
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr ""
+
+#: kcmcursortheme.cpp:418
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr ""
+
+#: kcmcursortheme.cpp:425
+#, kde-format
+msgid "Failed to create 'icons' folder."
+msgstr ""
+
+#: kcmcursortheme.cpp:434
+#, kde-format
+msgid ""
+"A theme named %1 already exists in your icon theme folder. Do you want "
+"replace it with this one?"
+msgstr ""
+"Bez eus ur c'hiz gant an anv %1 c'hoazh e ho renkell gizioù arlun. C'hoant "
+"ho peus e rasklañ anezhañ gant an hini nevez ?"
+
+#: kcmcursortheme.cpp:438
+#, kde-format
+msgid "Overwrite Theme?"
+msgstr "Rasklañ ar c'hiz ?"
+
+#: kcmcursortheme.cpp:462
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: package/contents/ui/Delegate.qml:54
+#, kde-format
+msgid "Remove Theme"
+msgstr "Lemel ar c'hiz"
+
+#: package/contents/ui/Delegate.qml:61
+#, fuzzy, kde-format
+#| msgid "&Cursor Theme"
+msgid "Restore Cursor Theme"
+msgstr "Giz ar &reti"
+
+#: package/contents/ui/main.qml:20
+#, kde-format
+msgid "This module lets you choose the mouse cursor theme."
+msgstr ""
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Size:"
+msgstr ""
+
+#: package/contents/ui/main.qml:134
+#, fuzzy, kde-format
+#| msgid "Install New Theme..."
+msgid "&Install from File…"
+msgstr "Staliañ ar c'hiz nevez ..."
+
+#: package/contents/ui/main.qml:140
+#, fuzzy, kde-format
+#| msgid "Install New Theme..."
+msgid "&Get New Cursors…"
+msgstr "Staliañ ar c'hiz nevez ..."
+
+#: package/contents/ui/main.qml:157
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Open Theme"
+msgstr "Lemel ar c'hiz"
+
+#: package/contents/ui/main.qml:159
+#, kde-format
+msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:41
+#, kde-format
+msgid "The requested size '%1' is not available, using %2 instead."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:62
+#, kde-format
+msgid ""
+"This tool allows you to set the mouse cursor theme for the current Plasma "
+"session, without accidentally setting it to one that is either not "
+"available, or which is already set."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:66
+#, kde-format
+msgid ""
+"The name of the cursor theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:67
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:68
+#, kde-format
+msgid "Use a specific size, rather than the theme default size"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:89
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:100
+#, kde-format
+msgid ""
+"Successfully applied the mouse cursor theme %1 to your current Plasma session"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:102
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for your newly applied mouse cursor "
+"theme to display correctly."
+msgstr "Red eo deoc'h da adloc'hañ KDE evit arloañ ar c'hemmoù."
+
+#: plasma-apply-cursortheme.cpp:112
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:120
+#, kde-format
+msgid "You have the following mouse cursor themes on your system:"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:125
+#, kde-format
+msgid "(Current theme for this Plasma session)"
+msgstr ""
+
+#: xcursor/xcursortheme.cpp:60
+#, kde-format
+msgctxt ""
+"@info The argument is the list of available sizes (in pixel). Example: "
+"'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+msgid "(Available sizes: %1)"
+msgstr ""
+
+#~ msgid "Name"
+#~ msgstr "Anv"
+
+#~ msgid "Description"
+#~ msgstr "Deskrivadur"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Thierry Vignaud, Jañ-Mai Drapier"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "tvignaud@mandriva.com, jdrapier@club-internet.fr"
+
+#, fuzzy
+#~| msgid "&Cursor Theme"
+#~ msgid "Cursors"
+#~ msgstr "Giz ar &reti"
+
+#~ msgid "Confirmation"
+#~ msgstr "Kadarnadur"
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "Kemmet eo kefluniadur ar reti"
+
+#, fuzzy
+#~| msgid "Select the cursor theme you want to use:"
+#~ msgid ""
+#~ "Select the cursor theme you want to use (hover preview to test cursor):"
+#~ msgstr "Dibabit giz ar reti da implij :"
+
+#~ msgid "Select the cursor theme you want to use:"
+#~ msgstr "Dibabit giz ar reti da implij :"
+
+#~ msgid "Small black"
+#~ msgstr "Du bihan"
+
+#~ msgid "Small black cursors"
+#~ msgstr "Retioù du bihan"
+
+#~ msgid "Large black"
+#~ msgstr "Du braz"
+
+#~ msgid "Large black cursors"
+#~ msgstr "Retioù du braz"
+
+#~ msgid "Small white"
+#~ msgstr "Gwenn bihan"
+
+#~ msgid "Small white cursors"
+#~ msgstr "Retioù gwenn bihan"
+
+#~ msgid "Large white"
+#~ msgstr "Gwenn braz"
+
+#~ msgid "Large white cursors"
+#~ msgstr "Retioù gwenn braz"
+
+#~ msgid "Button Order"
+#~ msgstr "Urzh an nozhelioù"
+
+#~ msgid "Righ&t handed"
+#~ msgstr "Deho&uad"
+
+#~ msgid "Le&ft handed"
+#~ msgstr "Kl&eizat"
+
+#~ msgid "Icons"
+#~ msgstr "Arlunioù"
+
+#~ msgid "Cha&nge pointer shape over icons"
+#~ msgstr "Ke&mmañ stumm ar buker war an arlunioù"
+
+#~ msgid "A&utomatically select icons"
+#~ msgstr "Dibab an arlunioù ent e&mgefreek"
+
+#, fuzzy
+#~| msgid "Dela&y:"
+#~ msgctxt "label. delay (on milliseconds) to automatically select icons"
+#~ msgid "Delay"
+#~ msgstr "Dal&e :"
+
+#, fuzzy
+#~| msgid " msec"
+#~ msgctxt "milliseconds. time to automatically select the items"
+#~ msgid " ms"
+#~ msgstr " msec"
+
+#~ msgid "&General"
+#~ msgstr "&Pennañ"
+
+#~ msgid "Advanced"
+#~ msgstr "Barek"
+
+#~ msgid "Pointer acceleration:"
+#~ msgstr "Buanadur ar buker :"
+
+#~ msgid "Pointer threshold:"
+#~ msgstr "Treuzoù ar buker :"
+
+#~ msgid " msec"
+#~ msgstr " msec"
+
+#~ msgid "&Acceleration delay:"
+#~ msgstr "Dale ar &buanadur :"
+
+#~ msgid "Acceleration &time:"
+#~ msgstr "&Amzer ar vuanadur :"
+
+#~ msgid " pixel/sec"
+#~ msgstr " piksel/e"
+
+#~ msgid "Ma&ximum speed:"
+#~ msgstr "Tizh uhelañ :"
+
+#~ msgid "Acceleration &profile:"
+#~ msgstr "&Profil ar vuanadur :"
+
+#~ msgid "Mouse"
+#~ msgstr "Logodenn"
+
+#~ msgid "(c) 1997 - 2005 Mouse developers"
+#~ msgstr "(c) 1997 - 2005 Oberourien al logodenn"
+
+#~ msgid "David Faure"
+#~ msgstr "David Faure"
+
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] " pikseloù"
+
+#~ msgid " line"
+#~ msgid_plural " lines"
+#~ msgstr[0] " linennoù"
+
+#~ msgid "Mouse type: %1"
+#~ msgstr "Rizh al logodenn : %1"
+
+#~ msgid "Press Connect Button"
+#~ msgstr "Gwaskit an nozel Kevreañ"
+
+#, fuzzy
+#~| msgid "none"
+#~ msgctxt "no cordless mouse"
+#~ msgid "none"
+#~ msgstr "hini ebet"
+
+#~ msgid "Unknown mouse"
+#~ msgstr "Logodenn dianav"
+
+#~ msgid "Battery Level"
+#~ msgstr "Live ar pod-tredan"
+
+#~ msgid "RF Channel"
+#~ msgstr "Knaol RF"
+
+#~ msgid "Channel 1"
+#~ msgstr "Kanol 1"
+
+#~ msgid "Channel 2"
+#~ msgstr "Kanol 2"
+
+#~ msgid "KDE Classic"
+#~ msgstr "KDE da gustum"
+
+#~ msgid "No description available"
+#~ msgstr "N'eus deskrivadur ebet da gaout"
+
+#~ msgid "Short"
+#~ msgstr "Bihan"
+
+#~ msgid "Long"
+#~ msgstr "Hir"
+
+#~ msgid "Replace"
+#~ msgstr "Erlec'hiañ"
+
+#~ msgid "No theme"
+#~ msgstr "Giz ebet"
+
+#~ msgid "The old classic X cursors"
+#~ msgstr "Ar retioù kozh X da gustum"
+
+#~ msgid "System theme"
+#~ msgstr "Giz ar reizhiad"

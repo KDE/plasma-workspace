@@ -1,0 +1,91 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Phu Hung Nguyen <phu.nguyen@kdemail.net>, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"PO-Revision-Date: 2021-02-24 20:22+0100\n"
+"Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
+"Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 20.08.1\n"
+
+#: keystate.cpp:15
+msgid "Shift"
+msgstr "Shift"
+
+#: keystate.cpp:16
+msgid "Ctrl"
+msgstr "Ctrl"
+
+#: keystate.cpp:17
+msgid "Alt"
+msgstr "Alt"
+
+#: keystate.cpp:18
+msgid "Meta"
+msgstr "Meta"
+
+#: keystate.cpp:19
+msgid "Super"
+msgstr "Super"
+
+#: keystate.cpp:20
+msgid "Hyper"
+msgstr "Hyper"
+
+#: keystate.cpp:21
+msgid "AltGr"
+msgstr "AltGr"
+
+#: keystate.cpp:22
+msgid "Num Lock"
+msgstr "Num Lock"
+
+#: keystate.cpp:23
+msgid "Caps Lock"
+msgstr "Caps Lock"
+
+#: keystate.cpp:24
+msgid "Scroll Lock"
+msgstr "Scroll Lock"
+
+#: keystate.cpp:26
+msgid "Left Button"
+msgstr "Nút trái"
+
+#: keystate.cpp:27
+msgid "Right Button"
+msgstr "Nút phải"
+
+#: keystate.cpp:28
+msgid "Middle Button"
+msgstr "Nút giữa"
+
+#: keystate.cpp:29
+msgid "First X Button"
+msgstr "Nút X thứ nhất"
+
+#: keystate.cpp:30
+msgid "Second X Button"
+msgstr "Nút X thứ hai"
+
+#: keystate.cpp:44 keystate.cpp:54 keystate.cpp:81 keystate.cpp:102
+#: keystate.cpp:110
+msgid "Pressed"
+msgstr "Đã ấn"
+
+#: keystate.cpp:45 keystate.cpp:88 keystate.cpp:111
+msgid "Latched"
+msgstr "Đã chốt"
+
+#: keystate.cpp:46 keystate.cpp:95 keystate.cpp:112
+msgid "Locked"
+msgstr "Đã khoá"

@@ -1,0 +1,95 @@
+# translation of plasma_applet_clock.po to Persian
+# Saied Taghavi <s.taghavi@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_clock\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-25 00:47+0000\n"
+"PO-Revision-Date: 2008-04-18 14:31+0330\n"
+"Last-Translator: Saied Taghavi <s.taghavi@gmail.com>\n"
+"Language-Team: Persian <kde-i18n-fa@kde.org>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr ""
+
+#: contents/ui/analogclock.qml:76
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Current time is %1; Current date is %2"
+msgstr ""
+
+#: contents/ui/configGeneral.qml:23
+#, fuzzy, kde-format
+#| msgid "Display the second hand"
+msgid "Show seconds hand"
+msgstr "نمایش عقربهٔ ثانیه"
+
+#: contents/ui/configGeneral.qml:24
+#, kde-format
+msgid "General:"
+msgstr ""
+
+#: contents/ui/configGeneral.qml:28
+#, fuzzy, kde-format
+#| msgid "Also display the time in text"
+msgid "Show time zone"
+msgstr "همچنین زمان را به صورت متنی نمایش بده"
+
+#, fuzzy
+#~| msgid "Display the second hand"
+#~ msgid "Show the seconds"
+#~ msgstr "نمایش عقربهٔ ثانیه"
+
+#, fuzzy
+#~| msgid ""
+#~| "Check this if you want to display the second hand in order to see the "
+#~| "seconds."
+#~ msgid "Check this if you want to show the seconds."
+#~ msgstr ""
+#~ "اگر می‌خواهید عقربهٔ ثانیه نمایش داده شود تا ثانیه‌ها را ببینید، این را "
+#~ "علامت بزنید."
+
+#, fuzzy
+#~| msgid "Display the second hand"
+#~ msgid "Show &seconds hand"
+#~ msgstr "نمایش عقربهٔ ثانیه"
+
+#, fuzzy
+#~| msgid "Also display the time in text"
+#~ msgid "Show the Timezone in text"
+#~ msgstr "همچنین زمان را به صورت متنی نمایش بده"
+
+#, fuzzy
+#~| msgid ""
+#~| "Check this if you want to display the time as a string within the clock."
+#~ msgid "Check this if you want to display Timezone in text."
+#~ msgstr ""
+#~ "اگر می‌خواهید زمان به صورت یک رشته داخل ساعت، نمایش داده شود، این را علامت "
+#~ "بزنید."
+
+#, fuzzy
+#~| msgid "Also display the time in text"
+#~ msgid "Show &time zone"
+#~ msgstr "همچنین زمان را به صورت متنی نمایش بده"
+
+#, fuzzy
+#~| msgid "Also display the time in text"
+#~ msgid "Also show the Timezone as text"
+#~ msgstr "همچنین زمان را به صورت متنی نمایش بده"
+
+#~ msgctxt "@title:window"
+#~ msgid "Configure Clock"
+#~ msgstr "پیکربندی ساعت"
+
+#~ msgid "Display seconds"
+#~ msgstr "نمایش ثانیه‌ها"
+
+#~ msgid "Display the time as a string"
+#~ msgstr "نمایش زمان به صورت یک رشته"

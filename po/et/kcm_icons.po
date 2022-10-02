@@ -1,0 +1,383 @@
+# translation of kcmicons.po to Estonian
+# Copyright (C) 1999,2002, 2003 Free Software Foundation, Inc.
+#
+# Hasso Tepper <hasso@linux.ee>, 1999.
+# Hasso Tepper <hasso@estpak.ee>, 2002.
+# Marek Laane <bald@starman.ee>, 2003-2005,2007-2008.
+# Marek Laane <bald@smail.ee>, 2009, 2012, 2016, 2019.
+# Mihkel Tõnnov <mihhkel@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmicons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"PO-Revision-Date: 2020-10-08 10:03+0200\n"
+"Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
+"Language-Team: Estonian <>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.08.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: iconsizecategorymodel.cpp:14
+#, kde-format
+msgid "Toolbar"
+msgstr "Tööriistariba"
+
+#: iconsizecategorymodel.cpp:15
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Peamine tööriistariba"
+
+#: iconsizecategorymodel.cpp:16
+#, kde-format
+msgid "Small Icons"
+msgstr "Väikesed ikoonid"
+
+#: iconsizecategorymodel.cpp:17
+#, kde-format
+msgid "Panel"
+msgstr "Paneel"
+
+#: iconsizecategorymodel.cpp:18
+#, kde-format
+msgid "Dialogs"
+msgstr "Dialoogid"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr "Aktiivse ikooniteema nimi"
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr "Töölaua ikoonide suurus"
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr "Tööriistariba ikoonide suurus"
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, kde-format
+msgid "Main toolbar icons size"
+msgstr "Peamise tööriistariba ikoonide suurus"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, kde-format
+msgid "Small icons size"
+msgstr "Väikeste ikoonide suurus"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr "Paneeli ikoonide suurus"
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr "Dialoogi ikoonide suurus"
+
+#: main.cpp:182
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Ajutise faili loomine nurjus."
+
+#: main.cpp:193
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Ikooniteema arhiivi allalaadimine nurjus: %1"
+
+#: main.cpp:207
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "Fail pole korrektne ikooniteema arhiiv."
+
+#: main.cpp:212
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr ""
+"Paigaldamisel tekkis probleem. Siiski õnnestus enamik arhiivis olnud "
+"teemadest paigaldada."
+
+#: main.cpp:216
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "Teema paigaldati edukalt."
+
+#: main.cpp:260
+#, fuzzy, kde-format
+#| msgid "Installing icon themes..."
+msgid "Installing icon themes…"
+msgstr "Ikooniteemade paigaldamine..."
+
+#: main.cpp:270
+#, fuzzy, kde-format
+#| msgid "Installing %1 theme..."
+msgid "Installing %1 theme…"
+msgstr "Ikooniteema %1 paigaldamine ..."
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr "See moodul võimaldab valida töölauale ikoone."
+
+#: package/contents/ui/main.qml:147
+#, kde-format
+msgid "Remove Icon Theme"
+msgstr "Eemalda ikooniteema"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Restore Icon Theme"
+msgstr "Taasta ikooniteema"
+
+#: package/contents/ui/main.qml:228
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr "Seadista ikoonisuurusi"
+
+#: package/contents/ui/main.qml:246
+#, fuzzy, kde-format
+#| msgid "Install from File..."
+msgid "Install from File…"
+msgstr "Paigalda failist ..."
+
+#: package/contents/ui/main.qml:251
+#, fuzzy, kde-format
+#| msgid "Get New Icons..."
+msgid "Get New Icons…"
+msgstr "Hangi uusi ikoone ..."
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Open Theme"
+msgstr "Teema avamine"
+
+#: package/contents/ui/main.qml:281
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr "Teemafailid (*.tar.gz *.tar.bz2)"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Hasso Tepper"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "hasso@linux.ee"
+
+#~ msgid "Icons"
+#~ msgstr "Ikoonid"
+
+#~ msgid "Icons Control Panel Module"
+#~ msgstr "Ikoonide juhtimismoodul"
+
+#~ msgid "(c) 2000-2003 Geert Jansen"
+#~ msgstr "(c) 2000-2003: Geert Jansen"
+
+#~ msgid "Geert Jansen"
+#~ msgstr "Geert Jansen"
+
+#~ msgid "Antonio Larrosa Jimenez"
+#~ msgstr "Antonio Larrosa Jimenez"
+
+#~ msgid "Torsten Rahn"
+#~ msgstr "Torsten Rahn"
+
+#~ msgid "Jonathan Riddell"
+#~ msgstr "Jonathan Riddell"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Kai Uwe Broulik"
+
+#~ msgid "Desktop"
+#~ msgstr "Töölaud"
+
+#~ msgid "Download New Icon Themes"
+#~ msgstr "Uute ikooniteemade allalaadimine"
+
+#~ msgid "Use of Icon"
+#~ msgstr "Ikooni kasutusviis"
+
+#~ msgctxt "@label The icon rendered by default"
+#~ msgid "Default"
+#~ msgstr "Vaikimisi"
+
+#~ msgctxt "@label The icon rendered as active"
+#~ msgid "Active"
+#~ msgstr "Aktiivne"
+
+#~ msgctxt "@label The icon rendered as disabled"
+#~ msgid "Disabled"
+#~ msgstr "Keelatud"
+
+#~ msgid "Size:"
+#~ msgstr "Suurus:"
+
+#~ msgid "Set Effect..."
+#~ msgstr "Muuda efekti..."
+
+#~ msgid "All Icons"
+#~ msgstr "Kõik ikoonid"
+
+#~ msgid "Setup Default Icon Effect"
+#~ msgstr "Ikooni vaikeefekti seadmine"
+
+#~ msgid "Setup Active Icon Effect"
+#~ msgstr "Aktiivse ikooni efekti seadmine"
+
+#~ msgid "Setup Disabled Icon Effect"
+#~ msgstr "Keelatud ikooni efekti seadmine"
+
+#~ msgid "&Effect:"
+#~ msgstr "&Efekt:"
+
+#~ msgid "No Effect"
+#~ msgstr "Efekt puudub"
+
+#~ msgid "To Gray"
+#~ msgstr "Halliks"
+
+#~ msgid "Colorize"
+#~ msgstr "Toonimine"
+
+#~ msgid "Gamma"
+#~ msgstr "Gamma"
+
+#~ msgid "Desaturate"
+#~ msgstr "Värvide lahjendamine"
+
+#~ msgid "To Monochrome"
+#~ msgstr "Ühevärviliseks"
+
+#~ msgid "&Semi-transparent"
+#~ msgstr "Poolläbipai&stev"
+
+#~ msgid "Preview"
+#~ msgstr "Eelvaatlus"
+
+#~ msgid "Effect Parameters"
+#~ msgstr "Efekti parameetrid"
+
+#~ msgid "&Amount:"
+#~ msgstr "Ko&gus:"
+
+#~ msgid "Co&lor:"
+#~ msgstr "V&ärv:"
+
+#~ msgid "&Second color:"
+#~ msgstr "T&eine värv:"
+
+#~ msgid "Name"
+#~ msgstr "Nimi"
+
+#~ msgid "Description"
+#~ msgstr "Kirjeldus"
+
+#~ msgid "Install a theme archive file you already have locally"
+#~ msgstr "Juba olemasoleva teemaarhiivi faili paigaldamine"
+
+#~ msgid ""
+#~ "If you already have a theme archive locally, this button will unpack it "
+#~ "and make it available for KDE applications"
+#~ msgstr ""
+#~ "Kui sul on juba masinas teemaarhiiv, pakitakse klõpsuga sellele nupule "
+#~ "see lahti ja tehakse KDE rakendustele kättesaadavaks."
+
+#~ msgid "Get new themes from the Internet"
+#~ msgstr "Uute teemade hankimine internetist"
+
+#~ msgid ""
+#~ "You need to be connected to the Internet to use this action. A dialog "
+#~ "will display a list of themes from the http://www.kde.org website. "
+#~ "Clicking the Install button associated with a theme will install this "
+#~ "theme locally."
+#~ msgstr ""
+#~ "Selle toimingu jaoks peab olema toimiv internetiühendus. Dialoog näitab "
+#~ "teemade nimekirja saidilt http://www.kde.org. Klõpsuga nupul 'Paigalda' "
+#~ "paigaldatakse valitud teema."
+
+#~ msgid "Remove the selected theme from your disk"
+#~ msgstr "Valitud teema eemaldamine kettalt"
+
+#~ msgid "This will remove the selected theme from your disk."
+#~ msgstr "See eemaldab valitud teema kettalt."
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "Lohista või kirjuta siia teema URL"
+
+#~ msgid ""
+#~ "Unable to download the icon theme archive;\n"
+#~ "please check that address %1 is correct."
+#~ msgstr ""
+#~ "Ikooniteema arhiivi allalaadimine nurjus.\n"
+#~ "Kontrolli, et aadress %1 oleks korrektne."
+
+#~ msgid "<qt>Installing <strong>%1</strong> theme</qt>"
+#~ msgstr "<qt>Teema <strong>%1</strong> paigaldamine</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <strong>%1</strong> icon theme?"
+#~ "<br /><br />This will delete the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>Kas soovid tõesti eemaldada ikooniteema <strong>%1</strong>?<br /"
+#~ "><br />See kustutaks selle teema poolt paigaldatud failid.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Kinnitus"
+
+#~ msgid "&Theme"
+#~ msgstr "&Teema"
+
+#~ msgid "Ad&vanced"
+#~ msgstr "&Muud"
+
+#~ msgid ""
+#~ "<h1>Icons</h1>This module allows you to choose the icons for your desktop."
+#~ "<p>To choose an icon theme, click on its name and apply your choice by "
+#~ "pressing the \"Apply\" button below. If you do not want to apply your "
+#~ "choice you can press the \"Reset\" button to discard your changes.</"
+#~ "p><p>By pressing the \"Install Theme File...\" button you can install "
+#~ "your new icon theme by writing its location in the box or browsing to the "
+#~ "location. Press the \"OK\" button to finish the installation.</p><p>The "
+#~ "\"Remove Theme\" button will only be activated if you select a theme that "
+#~ "you installed using this module. You are not able to remove globally "
+#~ "installed themes here.</p><p>You can also specify effects that should be "
+#~ "applied to the icons.</p>"
+#~ msgstr ""
+#~ "<h1>Ikoonid</h1>See moodul võimaldab valida ikoone töölauale."
+#~ "<p>Ikooniteema valimiseks klõpsa selle nimel ja muuda valik lõplikuks "
+#~ "klõpsuga nupul \"Rakenda\". Kui sa ei soovi siiski seda rakendada, võib "
+#~ "alati tehtud muudatused tühistada klõpsuga nupul \"Vaikeväärtused\".</"
+#~ "p><p>Klõpsuga nupul \"Paigalda teemafail...\" saab paigaldada uue "
+#~ "ikooniteema, kirjutades selle asukohta vastavale väljale või otsides "
+#~ "faili dialoogi abil. Klõpsa nupule \"OK\" paigaldamise lõpetamiseks.</"
+#~ "p><p>Nuppu \"Eemalda teema\" saab kasutada ainult siis, kui oled valinud "
+#~ "teema, mis on käesoleva mooduli vahendusel paigaldatud. Süsteemselt "
+#~ "paigaldatud teemasid siin eemaldada ei saa.</p><p>Valida saab ka "
+#~ "mõningaid ikoonidel kasutatavaid eriefekte.</p>"
+
+#~ msgid "Animate icons"
+#~ msgstr "Animeeritud ikoonid"
+
+#~ msgid "Select the icon theme you want to use:"
+#~ msgstr "Kasutatav ikoonide teema:"
+
+#~ msgid "Double-sized pixels"
+#~ msgstr "Topeltsuuruses pikslid"
+
+#~ msgid "Desktop/File Manager"
+#~ msgstr "Töölaud/failihaldur"

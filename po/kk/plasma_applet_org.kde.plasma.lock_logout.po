@@ -1,0 +1,176 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sairan Kikkarin <sairan(at)computer.org>, 2010.
+# Sairan Kikkarin <sairan@computer.org>, 2011, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2012-07-29 10:37+0600\n"
+"Last-Translator: Sairan Kikkarin\n"
+"Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
+"Language: kk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Жалпы"
+
+#: contents/ui/ConfigGeneral.qml:36
+#, fuzzy, kde-format
+#| msgid "Show lock button"
+msgctxt ""
+"Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
+msgid "Show actions:"
+msgstr "Бұғаттау батырмасы көрсетілсін"
+
+#: contents/ui/ConfigGeneral.qml:37
+#, kde-format
+msgid "Logout"
+msgstr ""
+
+#: contents/ui/ConfigGeneral.qml:43
+#, kde-format
+msgid "Shutdown"
+msgstr ""
+
+#: contents/ui/ConfigGeneral.qml:48
+#, kde-format
+msgid "Reboot"
+msgstr ""
+
+#: contents/ui/ConfigGeneral.qml:53 contents/ui/data.js:5
+#, kde-format
+msgid "Lock"
+msgstr "Бұғаттау"
+
+#: contents/ui/ConfigGeneral.qml:58
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch User"
+msgstr "Пайдаланушысын ауыстыру"
+
+#: contents/ui/ConfigGeneral.qml:63 contents/ui/data.js:46
+#, kde-format
+msgid "Hibernate"
+msgstr "Ұйықтау"
+
+#: contents/ui/ConfigGeneral.qml:68 contents/ui/data.js:39
+#, fuzzy, kde-format
+#| msgid "Sleep"
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Қалғу"
+
+#: contents/ui/data.js:6
+#, kde-format
+msgid "Lock the screen"
+msgstr "Экранды бұғаттау"
+
+#: contents/ui/data.js:12
+#, kde-format
+msgid "Switch user"
+msgstr "Пайдаланушысын ауыстыру"
+
+#: contents/ui/data.js:13
+#, kde-format
+msgid "Start a parallel session as a different user"
+msgstr "Басқа пайдаланушы ретінде қатар сеансын бастау"
+
+#: contents/ui/data.js:18
+#, kde-format
+msgid "Shutdown…"
+msgstr ""
+
+#: contents/ui/data.js:19
+#, fuzzy, kde-format
+#| msgid "Logout, turn off or restart the computer"
+msgid "Turn off the computer"
+msgstr "Жүйеден шығу, компьютерді сөндіру не жаңадан жегу"
+
+#: contents/ui/data.js:25
+#, kde-format
+msgid "Restart…"
+msgstr ""
+
+#: contents/ui/data.js:26
+#, kde-format
+msgid "Reboot the computer"
+msgstr ""
+
+#: contents/ui/data.js:32
+#, kde-format
+msgid "Logout…"
+msgstr ""
+
+#: contents/ui/data.js:33
+#, kde-format
+msgid "End the session"
+msgstr ""
+
+#: contents/ui/data.js:40
+#, kde-format
+msgid "Sleep (suspend to RAM)"
+msgstr "Қалғу (күйін RAM-жадына сақтап)"
+
+#: contents/ui/data.js:47
+#, kde-format
+msgid "Hibernate (suspend to disk)"
+msgstr "Ұйықтау (күйін дискіге сақтап)"
+
+#~ msgid "Do you want to suspend to disk (hibernate)?"
+#~ msgstr "Күйін дискіге сақтап ұйықтау режіміне ауысуды қалайсыз ба?"
+
+#~ msgid "Yes"
+#~ msgstr "Иә"
+
+#~ msgid "No"
+#~ msgstr "Жоқ"
+
+#~ msgid "Do you want to suspend to RAM (sleep)?"
+#~ msgstr "Күйін RAM-жадына сақтап қалғу режіміне ауысуды қалайсыз ба?"
+
+#~ msgid "Leave"
+#~ msgstr "Шығып кету"
+
+#~ msgid "Leave..."
+#~ msgstr "Шығып кету..."
+
+#, fuzzy
+#~| msgid "Actions"
+#~ msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
+#~ msgid "Actions"
+#~ msgstr "Әрекеттер"
+
+#~ msgid "Suspend"
+#~ msgstr "Қалғу"
+
+#~ msgid "Configure Lock/Logout"
+#~ msgstr "Бұғаттау/Шығуды баптау"
+
+#~ msgid "Please select one or more items on the list below."
+#~ msgstr "Төмендегі тізімінен бір не бірнешеісн таңдаңыз."
+
+#~ msgid "Entries"
+#~ msgstr "Тармақтары"
+
+#, fuzzy
+#~| msgid "Show sleep button"
+#~ msgid "Show \"switch user\" button"
+#~ msgstr "Қалғу батырмасы көрсетілсін"
+
+#~ msgid "Show logout button"
+#~ msgstr "Шығу батырмасы көрсетілсін"
+
+#~ msgid "Show hibernate button"
+#~ msgstr "Ұйықтау батырмасы көрсетілсін"
+
+#~ msgid "Show sleep button"
+#~ msgstr "Қалғу батырмасы көрсетілсін"

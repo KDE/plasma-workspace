@@ -1,0 +1,75 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Dutch "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="formats" lang="&language;">
+<articleinfo>
+<title
+>Formaten</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Krishna.Tateneni; &Krishna.Tateneni.mail;</author>
+&Freek.de.Kruijf; 
+ </authorgroup>
+
+	  <date
+>2015-05-18</date>
+	  <releaseinfo
+>Plasma 5.3</releaseinfo>
+
+	  <keywordset>
+		<keyword
+>KDE</keyword>
+		<keyword
+>Systeeminstellingen</keyword>
+		<keyword
+>localisatie</keyword>
+		<keyword
+>land</keyword>
+		<keyword
+>taal</keyword>
+		<keyword
+>getal</keyword>
+		<keyword
+>munteenheid</keyword>
+	  </keywordset>
+</articleinfo>
+
+<para
+>Deze module in het &kde; &systemsettings; geeft u de mogelijkheid om zaken aan te passen die afhankelijk zijn van het deel van de wereld waarin u leeft. </para>
+
+<para
+>In de meeste gevallen hoeft u alleen de regio op te geven en de overige opties worden op de juiste manier voor u ingesteld. </para>
+
+<para
+>Onderaan deze module ziet u voorbeelden van hoe de instellingen er uit zien en welke eenheden van maten gebruikt worden. Naast getallen, ziet u hoe waarden van valuta, datums en tijden in lang en kort formaat worden getoond. Wanneer u elk van de instellingen wijzigt, tonen de voorbeelden de effecten van de wijzigingen voordat u ze toepast. </para>
+
+<para
+>Het afrolvak <guilabel
+>Regio</guilabel
+> bevat de lijst met beschikbare landen en zal initieel uw nu geselecteerde land tonen. Als de selectie <quote
+>Standaard</quote
+> toont dan hebt u geen land ingesteld en krijgt u de standaard van het land ingesteld door het systeem, die ook getoond zal worden. </para>
+
+<para
+>In het geval dat u andere individuele instellingen nodig hebt schakelt u <guilabel
+>Details van instellingen</guilabel
+> in en selecteert u het landformaat voor regels voor <guilabel
+>Getallen</guilabel
+>, <guilabel
+>Tijd</guilabel
+>, <guilabel
+>Valuta</guilabel
+>, <guilabel
+>Maateenheden</guilabel
+> of <guilabel
+>Alfabetisering en sortering</guilabel
+> uit de afrolvakken. </para>
+
+</article>

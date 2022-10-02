@@ -1,0 +1,293 @@
+# Malayalam translations for plasma-workspace package.
+# Copyright (C) 2019 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# Automatically generated, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-22 00:47+0000\n"
+"PO-Revision-Date: 2021-08-12 11:59+0000\n"
+"Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
+"Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
+"org.in>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Weblate 4.7.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "ഷിജു അലക്സ്,ശങ്കരനാരായണന്‍ എന്‍ എം,Vivek KJ,Govind Shenoy"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"shijualexonline@gmail.com,snalledam@dataone.in,vivekkj2004@gmail.com,"
+"govindvshenoy@gmail.com,"
+
+#: currentcontainmentactionsmodel.cpp:201
+#, kde-format
+msgid "Configure Mouse Actions Plugin"
+msgstr "മൗസ് പ്രവർത്തന പ്ലഗിൻ ക്രമീകരിക്കുക"
+
+#: main.cpp:88
+#, kde-format
+msgid "Plasma"
+msgstr "പ്ലാസ്മ"
+
+#: main.cpp:88
+#, kde-format
+msgid "Plasma Shell"
+msgstr "പ്ലാസ്മ ഷെൽ"
+
+#: main.cpp:100
+#, kde-format
+msgid "Enable QML Javascript debugger"
+msgstr "QML ജാവാസ്ക്രിപ്റ്റ് ഡീബഗ്ഗർ പ്രവർത്തനക്ഷമമാകുക"
+
+#: main.cpp:103
+#, kde-format
+msgid "Do not restart plasma-shell automatically after a crash"
+msgstr "തകർച്ചക് ശേഷം പ്ലാസ്മ-ഷെൽ വീണ്ടും ആരംഭിക്കാതിരിക്കുക"
+
+#: main.cpp:106
+#, kde-format
+msgid "Force loading the given shell plugin"
+msgstr "നിർബന്ധമായി തന്നിരിക്കുന്ന ഷെൽ പ്ലഗിൻ ലോഡ് ചെയുക"
+
+#: main.cpp:111
+#, kde-format
+msgid ""
+"Load plasmashell as a standalone application, needs the shell-plugin option "
+"to be specified"
+msgstr ""
+"പ്ലാസ്മ ഷെൽ ഒരു ഒറ്റയ്ക്കുള്ള അപ്പ്ലിക്കേഷനായി ലോഡ് ചെയുക, ഷെൽ-സംയോജകങ്ങൾ ഐച്ഛികം "
+"പറഞ്ഞിരിക്കണം"
+
+#: main.cpp:113
+#, kde-format
+msgid "Replace an existing instance"
+msgstr "ഇപ്പോൾ ഉള്ളതിൽ നിന്ന് മാറ്റുക"
+
+#: main.cpp:116
+#, kde-format
+msgid ""
+"Enables test mode and specifies the layout javascript file to set up the "
+"testing environment"
+msgstr ""
+"ടെസ്റ്റ് മോഡ് പ്രവർത്തനക്ഷമമാക്കുകയും ടെസ്റ്റിംഗ് പരിസ്ഥിതി സജ്ജീകരിക്കുന്നതിന് ലേഔട്ട് "
+"ജാവാസ്ക്രിപ്റ്റ് ഫയൽ വ്യക്തമാക്കുകയും ചെയ്യുന്നു"
+
+#: main.cpp:117
+#, kde-format
+msgid "file"
+msgstr "ഫയൽ"
+
+#: main.cpp:121
+#, kde-format
+msgid "Lists the available options for user feedback"
+msgstr "ഉപയോക്തൃ അഭിപ്രായത്തിനായി ലഭ്യമായ ഓപ്ഷനുകൾ പട്ടികപ്പെടുത്തുന്നു"
+
+#: main.cpp:219
+#, kde-format
+msgid "Plasma Failed To Start"
+msgstr "പ്ലാസ്മ തുടങ്ങുവാൻ സാധിച്ചില്ല"
+
+#: main.cpp:220
+#, kde-format
+msgid ""
+"Plasma is unable to start as it could not correctly use OpenGL 2 or software "
+"fallback\n"
+"Please check that your graphic drivers are set up correctly."
+msgstr ""
+"ഓപ്പൺ ജി എൽ 2 ഓ സോഫ്റ്റ്‌വെയർ ഓ ഉപയോഗിക്കാൻ പറ്റാത്തത് കാരണം പ്ലാസ്മ തുടങ്ങുവാൻ "
+"സാധിച്ചില്ല \n"
+"ദയവായി ഗ്രാഫിക്സ് ഡ്രൈവർ പരിശോധിക്കുക."
+
+#: osd.cpp:54
+#, kde-format
+msgctxt "OSD informing that the system is muted, keep short"
+msgid "Audio Muted"
+msgstr "ഒച്ചയില്ലാതാക്കുക"
+
+#: osd.cpp:72
+#, kde-format
+msgctxt "OSD informing that the microphone is muted, keep short"
+msgid "Microphone Muted"
+msgstr "ഉച്ചഭാഷിണി നിശബ്ദമാക്കി"
+
+#: osd.cpp:88
+#, kde-format
+msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
+msgid "%1 Muted"
+msgstr "%1 നിശബ്ദമാക്കി"
+
+#: osd.cpp:110
+#, kde-format
+msgctxt "touchpad was enabled, keep short"
+msgid "Touchpad On"
+msgstr "ടച്ച്പാഡ് ഓണാക്കി"
+
+#: osd.cpp:112
+#, kde-format
+msgctxt "touchpad was disabled, keep short"
+msgid "Touchpad Off"
+msgstr "ടച്ച്പാഡ് ഓഫാക്കി"
+
+#: osd.cpp:119
+#, kde-format
+msgctxt "wireless lan was enabled, keep short"
+msgid "Wifi On"
+msgstr "വൈഫൈ ഓണാക്കി"
+
+#: osd.cpp:121
+#, kde-format
+msgctxt "wireless lan was disabled, keep short"
+msgid "Wifi Off"
+msgstr "വൈഫൈ ഓഫാക്കി"
+
+#: osd.cpp:128
+#, kde-format
+msgctxt "Bluetooth was enabled, keep short"
+msgid "Bluetooth On"
+msgstr "ബ്ലൂടൂത്ത് ഓണാക്കി"
+
+#: osd.cpp:130
+#, kde-format
+msgctxt "Bluetooth was disabled, keep short"
+msgid "Bluetooth Off"
+msgstr "ബ്ലൂടൂത്ത് ഓഫാക്കി"
+
+#: osd.cpp:137
+#, kde-format
+msgctxt "mobile internet was enabled, keep short"
+msgid "Mobile Internet On"
+msgstr "മൊബൈൽ ഇന്റർനെറ്റ് ഓണാക്കി"
+
+#: osd.cpp:139
+#, kde-format
+msgctxt "mobile internet was disabled, keep short"
+msgid "Mobile Internet Off"
+msgstr "മൊബൈൽ ഇന്റർനെറ്റ് ഓഫാക്കി"
+
+#: osd.cpp:147
+#, kde-format
+msgctxt ""
+"on screen keyboard was enabled because physical keyboard got unplugged, keep "
+"short"
+msgid "On-Screen Keyboard Activated"
+msgstr "സ്ക്രീനിലെ കീബോര്ഡ് ഓണാക്കി"
+
+#: osd.cpp:150
+#, kde-format
+msgctxt ""
+"on screen keyboard was disabled because physical keyboard was plugged in, "
+"keep short"
+msgid "On-Screen Keyboard Deactivated"
+msgstr "സ്ക്രീനിലെ കീബോര്ഡ് ഓഫാക്കി"
+
+#: shellcontainmentconfig.cpp:129
+#, kde-format
+msgid "Unknown %1"
+msgstr ""
+
+#: shellcorona.cpp:170 shellcorona.cpp:172
+#, kde-format
+msgid "Show Desktop"
+msgstr "പണിയിടം കാണിക്കുക"
+
+#: shellcorona.cpp:172
+#, kde-format
+msgid "Hide Desktop"
+msgstr "പണിയിടം ഒളിപ്പിക്കുക"
+
+#: shellcorona.cpp:188
+#, kde-format
+msgid "Show Activity Switcher"
+msgstr "പ്രവൃത്തി സ്വിച്ചർ കാണിക്കുക"
+
+#: shellcorona.cpp:199
+#, kde-format
+msgid "Stop Current Activity"
+msgstr "ഇപ്പോഴത്തെ പ്രവർത്തനം നിർത്തുക"
+
+#: shellcorona.cpp:207
+#, kde-format
+msgid "Switch to Previous Activity"
+msgstr "മുമ്പത്തെ പ്രവർത്തനത്തിലേക്ക് മാറുക"
+
+#: shellcorona.cpp:215
+#, kde-format
+msgid "Switch to Next Activity"
+msgstr "അടുത്ത പ്രവർത്തനത്തിലേക്ക് മാറുക"
+
+#: shellcorona.cpp:231
+#, kde-format
+msgid "Activate Task Manager Entry %1"
+msgstr "ടാസ്ക് മാനേജർ ഇനം %1 സജീവമാക്കുക"
+
+#: shellcorona.cpp:257
+#, kde-format
+msgid "Manage Desktops And Panels..."
+msgstr ""
+
+#: shellcorona.cpp:278
+#, kde-format
+msgid "Move keyboard focus between panels"
+msgstr ""
+
+#: shellcorona.cpp:1761
+#, kde-format
+msgid "Add Panel"
+msgstr "പാളി ചേർക്കുക"
+
+#: shellcorona.cpp:1798
+#, fuzzy, kde-format
+#| msgid "Empty %1"
+msgctxt "Creates an empty containment (%1 is the containment name)"
+msgid "Empty %1"
+msgstr "%1 കാലി"
+
+#: softwarerendernotifier.cpp:27
+#, kde-format
+msgid "Software Renderer In Use"
+msgstr "സോഫ്റ്റ്‌വെയർ റെൻഡറെർ ഉപയോഗത്തിലാണ്"
+
+#: softwarerendernotifier.cpp:28
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Software Renderer In Use"
+msgstr "സോഫ്റ്റ്‌വെയർ റെൻഡറെർ ഉപയോഗത്തിലാണ്"
+
+#: softwarerendernotifier.cpp:29
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Rendering may be degraded"
+msgstr "റെൻഡറിങ് മോശമാവാം"
+
+#: softwarerendernotifier.cpp:39
+#, kde-format
+msgid "Never show again"
+msgstr "ഒരിക്കലും കാണിക്കാതിരിക്കുക"
+
+#: userfeedback.cpp:36
+#, kde-format
+msgid "Panel Count"
+msgstr "പാളി എണ്ണം"
+
+#: userfeedback.cpp:40
+#, kde-format
+msgid "Counts the panels"
+msgstr "പാളികൾ എണ്ണുന്നു"
+
+#~ msgid "Unable to load script file: %1"
+#~ msgstr "സ്ക്രിപ്റ്റ് ഫയൽ ലോഡ് ചെയ്യാൻ സാധിച്ചില്ല: %1"
+
+#~ msgid "Activities..."
+#~ msgstr "പ്രവർത്തനങ്ങൾ..."

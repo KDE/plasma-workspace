@@ -1,0 +1,67 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Shinjo Park <kde@peremen.name>, 2017, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-22 00:47+0000\n"
+"PO-Revision-Date: 2021-05-28 02:43+0200\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 20.12.3\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "모양"
+
+#: package/contents/ui/configGeneral.qml:22
+#, kde-format
+msgid "Use single button for application menu"
+msgstr "프로그램 메뉴에 단추 한 개만 사용"
+
+#: package/contents/ui/configGeneral.qml:28
+#, kde-format
+msgid "Show full application menu"
+msgstr "전체 프로그램 메뉴 표시"
+
+#: package/contents/ui/MenuDelegate.qml:62
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Open a menu"
+msgstr ""
+
+#: plugin/appmenumodel.cpp:84
+#, kde-format
+msgid "Search"
+msgstr "검색"
+
+#: plugin/appmenumodel.cpp:91
+#, kde-format
+msgid "Search…"
+msgstr "검색…"
+
+#~ msgid "Search..."
+#~ msgstr "검색..."
+
+#~ msgid "application-menu"
+#~ msgstr "application-menu"
+
+#~ msgid "Application Menu Widget is disabled"
+#~ msgstr "프로그램 메뉴 위젯이 비활성화됨"
+
+#~ msgctxt "it being the 'Application Menu Widget'"
+#~ msgid ""
+#~ "Go to System Settings > Application Style > Fine Tuning (tab) to enable "
+#~ "it."
+#~ msgstr "시스템 설정 > 프로그램 모양 > 미세 조정(탭)에서 활성화하십시오."
+
+#~ msgid "emblem-warning"
+#~ msgstr "emblem-warning"

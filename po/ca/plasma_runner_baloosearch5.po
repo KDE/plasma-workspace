@@ -1,0 +1,78 @@
+# Translation of plasma_runner_baloosearch5.po to Catalan
+# Copyright (C) 2014-2022 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Josep M. Ferrer <txemaq@gmail.com>, 2014, 2016, 2018, 2022.
+# Antoni Bella Pérez <antonibella5@yahoo.com>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-05 00:46+0000\n"
+"PO-Revision-Date: 2022-04-22 11:29+0200\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#: baloosearchrunner.cpp:65
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Obre la carpeta contenidora"
+
+#: baloosearchrunner.cpp:87
+#, kde-format
+msgid "Audio"
+msgstr "Àudio"
+
+#: baloosearchrunner.cpp:88
+#, kde-format
+msgid "Image"
+msgstr "Imatge"
+
+#: baloosearchrunner.cpp:89
+#, kde-format
+msgid "Video"
+msgstr "Vídeo"
+
+#: baloosearchrunner.cpp:90
+#, kde-format
+msgid "Spreadsheet"
+msgstr "Full de càlcul"
+
+#: baloosearchrunner.cpp:91
+#, kde-format
+msgid "Presentation"
+msgstr "Presentació"
+
+#: baloosearchrunner.cpp:92
+#, kde-format
+msgid "Folder"
+msgstr "Carpeta"
+
+#: baloosearchrunner.cpp:93
+#, kde-format
+msgid "Document"
+msgstr "Document"
+
+#: baloosearchrunner.cpp:94
+#, kde-format
+msgid "Archive"
+msgstr "Arxiu"
+
+#: baloosearchrunner.cpp:95
+#, kde-format
+msgid "Text"
+msgstr "Text"
+
+#~ msgid "Search through files, emails and contacts"
+#~ msgstr "Cerca en els fitxers, els correus electrònics i els contactes"
+
+#~ msgid "Email"
+#~ msgstr "Correu electrònic"

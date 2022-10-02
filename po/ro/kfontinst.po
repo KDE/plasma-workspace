@@ -1,0 +1,2702 @@
+# Traducerea kfontinst.po în Română
+# Copyright (C) 2003, 2004, 2005, 2008 Free Software Foundation, Inc.
+# Claudiu Costin <claudiuc@kde.org>, 2003, 2004, 2005.
+# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2010, 2011, 2013, 2020, 2022.
+# Cristian Oneț <onet.cristian@gmail.com>, 2011.
+# Cristian Buzduga <cristianbzdg@gmail.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: kfontinst\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-10 00:46+0000\n"
+"PO-Revision-Date: 2022-02-17 00:21+0000\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.12.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Sergiu Bivol,Cristian Buzdugă"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "sergiu@cip.md,cristianbzdg@gmail.com"
+
+#: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:956
+#, kde-format
+msgid ""
+"Do you wish to install the font(s) for personal use (only available to you), "
+"or system-wide (available to all users)?"
+msgstr ""
+"Doriți să instalați fontul(urile) pentru uz personal (disponibile numai "
+"dumneavoastră) sau pentru întreg sistemul (disponibile tuturor "
+"utilizatorilor)?"
+
+#: apps/Installer.cpp:38 kcmfontinst/KCmFontInst.cpp:959
+#, kde-format
+msgid "Where to Install"
+msgstr "Unde să instalez"
+
+#: apps/Installer.cpp:110
+#, kde-format
+msgid "Font Installer"
+msgstr "Instalator de fonturi"
+
+#: apps/Installer.cpp:112
+#, kde-format
+msgid "Simple font installer"
+msgstr "Un simplu instalator de fonturi"
+
+#: apps/Installer.cpp:114 apps/Printer.cpp:329
+#, kde-format
+msgid "(C) Craig Drummond, 2007"
+msgstr "(C) Craig Drummond, 2007"
+
+#: apps/Installer.cpp:120 apps/Printer.cpp:335
+#, kde-format
+msgid "Makes the dialog transient for an X app specified by winid"
+msgstr ""
+"Stabilește dialogul ca tranzitoriu pentru o aplicație X specificată de winid"
+
+#: apps/Installer.cpp:122
+#, kde-format
+msgid "URL to install"
+msgstr "URL de instalat"
+
+#: apps/Printer.cpp:238
+#, kde-format
+msgid "Print"
+msgstr "Imprimare"
+
+#: apps/Printer.cpp:308 kcmfontinst/DuplicatesDialog.cpp:210
+#, kde-format
+msgid "Canceling…"
+msgstr "Se renunță…"
+
+#: apps/Printer.cpp:325
+#, kde-format
+msgid "Font Printer"
+msgstr "Imprimant de fonturi"
+
+#: apps/Printer.cpp:327
+#, kde-format
+msgid "Simple font printer"
+msgstr "Un simplu imprimant de fonturi"
+
+#: apps/Printer.cpp:337
+#, kde-format
+msgid "Size index to print fonts"
+msgstr "Index de mărime pentru tipărirea fonturilor"
+
+#: apps/Printer.cpp:341
+#, kde-format
+msgid ""
+"Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
+"number composed as: <weight><width><slant>"
+msgstr ""
+"Fontul de tipărit, specificat ca „Familie,Stil” unde Stil este un număr "
+"decimal de 24 biți compus astfel: <weight><width><slant>"
+
+#: apps/Printer.cpp:344
+#, kde-format
+msgid "File containing list of fonts to print"
+msgstr "Fișierul conținând lista fonturilor de imprimat"
+
+#: apps/Printer.cpp:346
+#, kde-format
+msgid "Remove file containing list of fonts to print"
+msgstr "Elimină fișierul conținând lista fonturilor de imprimat"
+
+#: apps/Viewer.cpp:48
+#, kde-format
+msgid "Open an existing font file"
+msgstr "Deschide un fișier cu font existent"
+
+#: apps/Viewer.cpp:49
+#, kde-format
+msgid "Print font preview"
+msgstr "Tipărește previzualizarea fontului"
+
+#: apps/Viewer.cpp:66
+#, kde-format
+msgid "Select Font to View"
+msgstr "Selectați fontul de vizualizat"
+
+#: apps/Viewer.cpp:109
+#, kde-format
+msgid "URL to open"
+msgstr "URL de deschis"
+
+#: apps/Viewer.cpp:152
+#, kde-format
+msgid "Font Viewer"
+msgstr "Vizualizator de fonturi"
+
+#: apps/Viewer.cpp:154
+#, kde-format
+msgid "Simple font viewer"
+msgstr "Un simplu vizualizor de fonturi"
+
+#: apps/Viewer.cpp:156
+#, kde-format
+msgid "(C) Craig Drummond, 2004-2007"
+msgstr "(C) Craig Drummond, 2004-2007"
+
+#: kcmfontinst/DuplicatesDialog.cpp:47
+#, kde-format
+msgid "Duplicate Fonts"
+msgstr "Fonturi duplicate"
+
+#: kcmfontinst/DuplicatesDialog.cpp:77
+#, kde-format
+msgid "Scanning for duplicate fonts. Please wait…"
+msgstr "Se caută fonturi duplicate. Așteptați…"
+
+#: kcmfontinst/DuplicatesDialog.cpp:96
+#, kde-format
+msgid "No duplicate fonts found."
+msgstr "Nu s-au găsit fonturi duplicate."
+
+#: kcmfontinst/DuplicatesDialog.cpp:104
+#, kde-format
+msgid "Delete Marked Files"
+msgstr "Șterge fișierele marcate"
+
+#: kcmfontinst/DuplicatesDialog.cpp:106
+#, kde-format
+msgid "%1 duplicate font found."
+msgid_plural "%1 duplicate fonts found."
+msgstr[0] "A fost găsit %1 font duplicat."
+msgstr[1] "Au fost găsite %1 fonturi duplicate."
+msgstr[2] "Au fost găsite %1 de fonturi duplicate."
+
+#: kcmfontinst/DuplicatesDialog.cpp:185
+#, kde-format
+msgid ""
+"Are you sure you wish to delete:\n"
+"%1"
+msgstr ""
+"Sigur doriți să ștergeți:\n"
+"%1"
+
+#: kcmfontinst/DuplicatesDialog.cpp:186
+#, kde-format
+msgid "Are you sure you wish to delete:"
+msgstr "Sigur doriți să ștergeți:"
+
+#: kcmfontinst/DuplicatesDialog.cpp:209
+#, kde-format
+msgid "Cancel font scan?"
+msgstr "Anulați scanarea fonturilor?"
+
+#: kcmfontinst/DuplicatesDialog.cpp:370
+#, kde-format
+msgid "Font/File"
+msgstr "Font/fișier"
+
+#: kcmfontinst/DuplicatesDialog.cpp:372
+#, kde-format
+msgid "Size"
+msgstr "Dimensiune"
+
+#: kcmfontinst/DuplicatesDialog.cpp:373
+#, kde-format
+msgid "Date"
+msgstr "Dată"
+
+#: kcmfontinst/DuplicatesDialog.cpp:374
+#, kde-format
+msgid "Links To"
+msgstr "Leagă către"
+
+#: kcmfontinst/DuplicatesDialog.cpp:387 kcmfontinst/FontList.cpp:1315
+#, kde-format
+msgid "Open in Font Viewer"
+msgstr "Deschide în vizualizorul de fonturi"
+
+#: kcmfontinst/DuplicatesDialog.cpp:389
+#, kde-format
+msgid "Properties"
+msgstr "Proprietăți"
+
+#: kcmfontinst/DuplicatesDialog.cpp:391
+#, kde-format
+msgid "Unmark for Deletion"
+msgstr "Demarchează pentru ștergere"
+
+#: kcmfontinst/DuplicatesDialog.cpp:392
+#, kde-format
+msgid "Mark for Deletion"
+msgstr "Marchează pentru ștergere"
+
+#: kcmfontinst/DuplicatesDialog.cpp:488
+#, kde-format
+msgid "Open font in font viewer?"
+msgid_plural "Open all %1 fonts in font viewer?"
+msgstr[0] "Se deschide în vizualizatorul de fonturi?"
+msgstr[1] "Se deschid toate %1 fonturi în vizualizatorul de fonturi?"
+msgstr[2] "Se deschid toate %1 de fonturi în vizualizatorul de fonturi?"
+
+#: kcmfontinst/FontFilter.cpp:103
+#, kde-format
+msgid "Family"
+msgstr "Familie"
+
+#: kcmfontinst/FontFilter.cpp:105
+#, kde-format
+msgid "Style"
+msgstr "Stil"
+
+#: kcmfontinst/FontFilter.cpp:107
+#, kde-format
+msgid "Foundry"
+msgstr "Turnătorie"
+
+#: kcmfontinst/FontFilter.cpp:109
+#, kde-format
+msgid "FontConfig Match"
+msgstr "Potrivire FontConfig"
+
+#: kcmfontinst/FontFilter.cpp:111
+#, kde-format
+msgid "File Type"
+msgstr "Tip fișier"
+
+#: kcmfontinst/FontFilter.cpp:113
+#, kde-format
+msgid "File Name"
+msgstr "Nume fișier"
+
+#: kcmfontinst/FontFilter.cpp:115
+#, kde-format
+msgid "File Location"
+msgstr "Locație fișier"
+
+#: kcmfontinst/FontFilter.cpp:117
+#, kde-format
+msgid "Writing System"
+msgstr "Sistem de scriere"
+
+#: kcmfontinst/FontFilter.cpp:129
+#, kde-format
+msgid "Set Criteria"
+msgstr "Stabilire criteriu"
+
+#: kcmfontinst/FontFilter.cpp:188
+#, kde-format
+msgid "Symbol/Other"
+msgstr "Simbol/altul"
+
+#: kcmfontinst/FontFilter.cpp:266 kcmfontinst/FontFilter.cpp:334
+#, kde-format
+msgid "Filter by %1…"
+msgstr "Filtrează după %1…"
+
+#: kcmfontinst/FontList.cpp:554
+#, kde-format
+msgid "Font"
+msgstr "Font"
+
+#: kcmfontinst/FontList.cpp:556
+#, kde-format
+msgid "Status"
+msgstr "Stare"
+
+#: kcmfontinst/FontList.cpp:570
+#, kde-format
+msgid ""
+"This column shows the status of the font family, and of the individual font "
+"styles."
+msgstr ""
+"Această coloană arată starea familiei de fonturi și stilurile individuale "
+"ale fonturilor."
+
+#: kcmfontinst/FontList.cpp:677
+#, kde-format
+msgid ""
+"<p>This list shows your installed fonts. The fonts are grouped by family, "
+"and the number in square brackets represents the number of styles in which "
+"the family is available. e.g.</p><ul><li>Times [4]<ul><li>Regular</"
+"li><li>Bold</li><li>Bold Italic</li><li>Italic</li></ul></li></ul>"
+msgstr ""
+"<p>Această listă arată fonturile instalate. Fonturile sunt grupate după "
+"familie, iar numărul dintre paranteze pătrate reprezintă numărul de stiluri "
+"în care este disponibilă familia. De exemplu </p><ul><li>Times "
+"[4]<ul><li>Simplu</li><li>Aldin</li><li>Aldin cursiv</li><li>Cursiv</li></"
+"ul></li></ul>"
+
+#: kcmfontinst/FontList.cpp:956 kcmfontinst/FontList.cpp:980
+#, kde-format
+msgid "…plus %1 more"
+msgstr "…plus încă %1"
+
+#: kcmfontinst/FontList.cpp:1007
+#, kde-format
+msgid "%1 [%2]"
+msgstr "%1 [%2]"
+
+#: kcmfontinst/FontList.cpp:1306
+#, kde-format
+msgid "Delete"
+msgstr "Șterge"
+
+#: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:789
+#: kcmfontinst/KCmFontInst.cpp:1133 kcmfontinst/KCmFontInst.cpp:1157
+#, kde-format
+msgid "Enable"
+msgstr "Activează"
+
+#: kcmfontinst/FontList.cpp:1309 kcmfontinst/GroupList.cpp:790
+#: kcmfontinst/KCmFontInst.cpp:1134 kcmfontinst/KCmFontInst.cpp:1158
+#, kde-format
+msgid "Disable"
+msgstr "Dezactivează"
+
+#: kcmfontinst/FontList.cpp:1313 kcmfontinst/GroupList.cpp:796
+#, kde-format
+msgid "Print…"
+msgstr "Tipărește…"
+
+#: kcmfontinst/FontList.cpp:1317
+#, kde-format
+msgid "Reload"
+msgstr "Reîncarcă"
+
+#: kcmfontinst/FontList.cpp:1716
+#, kde-format
+msgid "Open all %1 fonts in font viewer?"
+msgstr "Deschideți toate %1 fonturi în vizualizatorul de fonturi?"
+
+#: kcmfontinst/GroupList.cpp:59
+#, kde-format
+msgid "All Fonts"
+msgstr "Toate fonturile"
+
+#: kcmfontinst/GroupList.cpp:62
+#, kde-format
+msgid "Personal Fonts"
+msgstr "Fonturi personale"
+
+#: kcmfontinst/GroupList.cpp:65
+#, kde-format
+msgid "System Fonts"
+msgstr "Fonturi de sistem"
+
+#: kcmfontinst/GroupList.cpp:68
+#, kde-format
+msgid "Unclassified"
+msgstr "Neclasificat"
+
+#: kcmfontinst/GroupList.cpp:350
+#, kde-format
+msgid "Group"
+msgstr "Grup"
+
+#: kcmfontinst/GroupList.cpp:535
+#, kde-format
+msgid ""
+"<p>Do you really want to remove '<b>%1</b>'?</p><p><i>This will only remove "
+"the group, and not the actual fonts.</i></p>"
+msgstr ""
+"<p>Sigur eliminați „<b>%1</b>”?</p><p><i>Aceasta va elimina numai grupul, nu "
+"și fonturile propriu-zise.</i></p>"
+
+#: kcmfontinst/GroupList.cpp:539
+#, kde-format
+msgid "Remove Group"
+msgstr "Elimină grupul"
+
+#: kcmfontinst/GroupList.cpp:540 kcmfontinst/GroupList.cpp:787
+#, kde-format
+msgid "Remove"
+msgstr "Elimină"
+
+#: kcmfontinst/GroupList.cpp:540
+#, kde-format
+msgid "Remove group"
+msgstr "Elimină grupul"
+
+#: kcmfontinst/GroupList.cpp:586
+#, kde-format
+msgid ""
+"<h3>Font Groups</h3><p>This list displays the font groups available on your "
+"system. There are 2 main types of font groups:<ul><li><b>Standard</b> are "
+"special groups used by the font manager.<ul>%1</ul></li><li><b>Custom</b> "
+"are groups created by you. To add a font family to one of these groups "
+"simply drag it from the list of fonts, and drop onto the desired group. To "
+"remove a family from the group, drag the font onto the \"All Fonts\" group.</"
+"li></ul></p>"
+msgstr ""
+"<h3>Grupuri de fonturi</h3><p>Această listă afișează grupurile de fonturi "
+"disponibile pe sistemul dumneavoastră. Sunt 2 tipuri principale de grupuri "
+"de fonturi:<ul><li><b>Standard</b> sunt grupuri speciale folosite de "
+"administratorul de fonturi.<ul>%1</ul></li><li><b>Personalizate</b> sunt "
+"grupuri create de dumneavoastră. Pentru a adăuga o familie de fonturi la "
+"unul din aceste grupuri trageți-l pur și simplu din lista de fonturi și "
+"lăsați-l pe grupul dorit. Pentru a elimina o familie din grup, trageți "
+"fontul peste grupul „Toate fonturile”.</li></ul></p>"
+
+#: kcmfontinst/GroupList.cpp:594
+#, kde-format
+msgid ""
+"<li><i>All Fonts</i> contains all the fonts installed on your system.</"
+"li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
+"within a \"Custom\" group.</li>"
+msgstr ""
+"<li><i>Toate fonturile</i> conține toate fonturile instalate pe sistemul "
+"dumneavoastră.</li> <li><i>Neclasificate</i> conține toate fonturile care nu "
+"au fost încă plasate într-un grup „Personalizate”.</li>"
+
+#: kcmfontinst/GroupList.cpp:597
+#, kde-format
+msgid ""
+"<li><i>All Fonts</i> contains all the fonts installed on your system - both  "
+"\"System\" and \"Personal\".</li><li><i>System</i> contains all fonts that "
+"are installed system-wide (i.e. available to all users).</"
+"li><li><i>Personal</i> contains your personal fonts.</"
+"li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
+"within a \"Custom\" group.</li>"
+msgstr ""
+"<li><i>Toate fonturile</i> conține toate fonturile instalate pe sistemul "
+"dumneavoastră - din ambele „Sistem” și „Personale”.</li><li><i>Sistem</i> "
+"conține toate fonturile care sunt instalate pe întreg sistemul (disponibile "
+"pentru toți utilizatorii).</li><li><i>Personale</i> conține fonturile "
+"dumneavoastră personale.</li><li><i>Neclasificate</i> conține toate "
+"fonturile care nu au fost încă plasate într-un grup „Personalizate”.</li>"
+
+#: kcmfontinst/GroupList.cpp:699
+#, kde-format
+msgid "<qt>A group named <b>'%1'</b> already exists.</qt>"
+msgstr "<qt>Un grup cu denumirea <b>„%1”</b> există deja.</qt>"
+
+#: kcmfontinst/GroupList.cpp:792
+#, kde-format
+msgid "Rename…"
+msgstr "Redenumește…"
+
+#: kcmfontinst/GroupList.cpp:801
+#, kde-format
+msgid "Export…"
+msgstr "Exportă…"
+
+#: kcmfontinst/GroupList.cpp:895
+#, kde-format
+msgid "Add to \"%1\"."
+msgstr "Adaugă la „%1”."
+
+#: kcmfontinst/GroupList.cpp:897
+#, kde-format
+msgid "Remove from current group."
+msgstr "Elimină din grupul curent."
+
+#: kcmfontinst/GroupList.cpp:899
+#, kde-format
+msgid "Move to personal folder."
+msgstr "Mută în dosarul personal."
+
+#: kcmfontinst/GroupList.cpp:901
+#, kde-format
+msgid "Move to system folder."
+msgstr "Mută în dosarul de sistem."
+
+#: kcmfontinst/JobRunner.cpp:143
+#, kde-format
+msgid "Skip"
+msgstr "Sari"
+
+#: kcmfontinst/JobRunner.cpp:146
+#, kde-format
+msgid "AutoSkip"
+msgstr "Sari automat"
+
+#: kcmfontinst/JobRunner.cpp:191
+#, kde-format
+msgid "<h3>Cancel?</h3><p>Are you sure you wish to cancel?</p>"
+msgstr "<h3>Renunțați?</h3><p>Sigur doriți să renunțați?</p>"
+
+#: kcmfontinst/JobRunner.cpp:203
+#, kde-format
+msgid ""
+"<h3>Finished</h3><p>Please note that any open applications will need to be "
+"restarted in order for any changes to be noticed.</p>"
+msgstr ""
+"<h3>Încheiat</h3><p>Rețineți că aplicațiile deschise trebuiesc repornite "
+"pentru a sesiza modificările făcute.</p>"
+
+#: kcmfontinst/JobRunner.cpp:211
+#, kde-format
+msgid "Do not show this message again"
+msgstr "Nu mai arăta acest mesaj"
+
+#: kcmfontinst/JobRunner.cpp:321
+#, kde-format
+msgid "Installing"
+msgstr "Se instalează"
+
+#: kcmfontinst/JobRunner.cpp:324
+#, kde-format
+msgid "Uninstalling"
+msgstr "Se dezinstalează"
+
+#: kcmfontinst/JobRunner.cpp:327 kcmfontinst/JobRunner.cpp:424
+#, kde-format
+msgid "Enabling"
+msgstr "Se activează"
+
+#: kcmfontinst/JobRunner.cpp:330 kcmfontinst/JobRunner.cpp:428
+#, kde-format
+msgid "Moving"
+msgstr "Se mută"
+
+#: kcmfontinst/JobRunner.cpp:333
+#, kde-format
+msgid "Updating"
+msgstr "Se actualizează"
+
+#: kcmfontinst/JobRunner.cpp:337
+#, kde-format
+msgid "Removing"
+msgstr "Se elimină"
+
+#: kcmfontinst/JobRunner.cpp:341
+#, kde-format
+msgid "Disabling"
+msgstr "Se dezactivează"
+
+#: kcmfontinst/JobRunner.cpp:379
+#, kde-format
+msgid "Updating font configuration. Please wait…"
+msgstr "Se actualizează configurația fonturilor. Așteptați…"
+
+#: kcmfontinst/JobRunner.cpp:451
+#, kde-format
+msgid "Unable to start backend."
+msgstr "Nu s-a putut porni platforma."
+
+#: kcmfontinst/JobRunner.cpp:460
+#, kde-format
+msgid "Backend died, but has been restarted. Please try again."
+msgstr "Platforma a murit, dar a fost repornită. Reîncercați."
+
+#: kcmfontinst/JobRunner.cpp:621 kcmfontinst/JobRunner.cpp:627
+#, kde-format
+msgid "<h3>Error</h3>"
+msgstr "<h3>Eroare</h3>"
+
+#: kcmfontinst/JobRunner.cpp:693
+#, kde-format
+msgid "Failed to download <i>%1</i>"
+msgstr "Eșec la descărcarea <i>%1</i>"
+
+#: kcmfontinst/JobRunner.cpp:695
+#, kde-format
+msgid "System backend died. Please try again.<br><i>%1</i>"
+msgstr "Platforma de sistem a murit. Reîncercați.<br /><i>%1</i>"
+
+#: kcmfontinst/JobRunner.cpp:697
+#, kde-format
+msgid ""
+"<i>%1</i> is a bitmap font, and these have been disabled on your system."
+msgstr ""
+"<i>%1</i> este un font bitmap și acestea au fost dezactivate pe sistemul "
+"dumneavoastră."
+
+#: kcmfontinst/JobRunner.cpp:699
+#, kde-format
+msgid ""
+"<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
+"system."
+msgstr "<i>%1</i> conține fontul <b>%2</b>, care este instalat deja în sistem."
+
+#: kcmfontinst/JobRunner.cpp:701
+#, kde-format
+msgid "<i>%1</i> is not a font."
+msgstr "<i>%1</i> nu e un font."
+
+#: kcmfontinst/JobRunner.cpp:703
+#, kde-format
+msgid "Could not remove all files associated with <i>%1</i>"
+msgstr "Nu se pot elimina toate fișierele asociate cu <i>%1</i>"
+
+#: kcmfontinst/JobRunner.cpp:705
+#, kde-format
+msgid "Failed to start the system daemon.<br><i>%1</i>"
+msgstr "Pornirea demonului de sistem a eșuat.<br /><i>%1</i>"
+
+#: kcmfontinst/JobRunner.cpp:708 kio/KioFonts.cpp:726
+#, kde-format
+msgid "<i>%1</i> already exists."
+msgstr "<i>%1</i> există deja."
+
+#: kcmfontinst/JobRunner.cpp:711
+#, kde-format
+msgid "<i>%1</i> does not exist."
+msgstr "<i>%1</i> nu există."
+
+#: kcmfontinst/JobRunner.cpp:713
+#, kde-format
+msgid "Permission denied.<br><i>%1</i>"
+msgstr "Permisiune refuzată.<br /><i>%1</i>"
+
+#: kcmfontinst/JobRunner.cpp:715
+#, kde-format
+msgid "Unsupported action.<br><i>%1</i>"
+msgstr "Acțiune nesuportată.<br><i>%1</i>"
+
+#: kcmfontinst/JobRunner.cpp:717
+#, kde-format
+msgid "Authentication failed.<br><i>%1</i>"
+msgstr "Autentificare eșuată.<br><i>%1</i>"
+
+#: kcmfontinst/JobRunner.cpp:719
+#, kde-format
+msgid "Unexpected error while processing: <i>%1</i>"
+msgstr "Eroare neașteptată la prelucrare: <i>%1</i>"
+
+#: kcmfontinst/KCmFontInst.cpp:169
+#, kde-format
+msgid "Font Management"
+msgstr "Gestiune fonturi"
+
+#: kcmfontinst/KCmFontInst.cpp:173
+#, kde-format
+msgid "(C) Craig Drummond, 2000 - 2009"
+msgstr "(C) Craig Drummond, 2000 - 2009"
+
+#: kcmfontinst/KCmFontInst.cpp:174
+#, kde-format
+msgid "Craig Drummond"
+msgstr "Craig Drummond"
+
+#: kcmfontinst/KCmFontInst.cpp:174
+#, kde-format
+msgid "Developer and maintainer"
+msgstr "Dezvoltator și responsabil"
+
+#: kcmfontinst/KCmFontInst.cpp:202
+#, kde-format
+msgid "Create New Group…"
+msgstr "Creează grup nou…"
+
+#: kcmfontinst/KCmFontInst.cpp:204
+#, kde-format
+msgid "Remove Group…"
+msgstr "Elimină grupul…"
+
+#: kcmfontinst/KCmFontInst.cpp:206
+#, kde-format
+msgid "Enable Fonts in Group…"
+msgstr "Activează fonturile din grup…"
+
+#: kcmfontinst/KCmFontInst.cpp:208
+#, kde-format
+msgid "Disable Fonts in Group…"
+msgstr "Dezactivează fonturile din grup…"
+
+#: kcmfontinst/KCmFontInst.cpp:233
+#, kde-format
+msgid "This displays a preview of the selected font."
+msgstr "Afișează o previzualizare a fontului ales."
+
+#: kcmfontinst/KCmFontInst.cpp:249
+#, kde-format
+msgid "Find Duplicates…"
+msgstr "Găsește duplicate…"
+
+#: kcmfontinst/KCmFontInst.cpp:249
+#, kde-format
+msgid "Scan for Duplicate Fonts…"
+msgstr "Caută fonturi duplicate…"
+
+#: kcmfontinst/KCmFontInst.cpp:251
+#, kde-format
+msgid "Install from File…"
+msgstr "Instalează din fișier…"
+
+#: kcmfontinst/KCmFontInst.cpp:251
+#, kde-format
+msgid "Install fonts from a local file"
+msgstr "Instalează fonturi dintr-un fișier local"
+
+#: kcmfontinst/KCmFontInst.cpp:252
+#, kde-format
+msgid "Get New Fonts…"
+msgstr "Obține fonturi noi…"
+
+#: kcmfontinst/KCmFontInst.cpp:253
+#, kde-format
+msgid "Download new fonts"
+msgstr "Descarcă fonturi noi"
+
+#: kcmfontinst/KCmFontInst.cpp:255
+#, kde-format
+msgid "Delete Selected Fonts…"
+msgstr "Șterge fonturile alese…"
+
+#: kcmfontinst/KCmFontInst.cpp:313
+#, kde-format
+msgid "Change Preview Text…"
+msgstr "Modifică textul previzualizării…"
+
+#: kcmfontinst/KCmFontInst.cpp:375
+#, kde-format
+msgid ""
+"<h1>Font Installer</h1><p> This module allows you to install TrueType, "
+"Type1, and Bitmap fonts.</p><p>You may also install fonts using Konqueror: "
+"type fonts:/ into Konqueror's location bar and this will display your "
+"installed fonts. To install a font, simply copy one into the folder.</p>"
+msgstr ""
+"<h1>Instalator de fonturi</h1><p> Acest modul vă permite să instalați "
+"fonturi TrueType, Type1 și Bitmap.</p><p>Puteți face acest lucru utilizând "
+"și Konqueror: introduceți fonts:/ în bara de amplasare și acesta va afișa "
+"fonturile instalate. Pentru a instala un font, pur și simplu copiați-l în "
+"dosar.</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:382
+#, kde-format
+msgid ""
+"<h1>Font Installer</h1><p> This module allows you to install TrueType, "
+"Type1, and Bitmap fonts.</p><p>You may also install fonts using Konqueror: "
+"type fonts:/ into Konqueror's location bar and this will display your "
+"installed fonts. To install a font, simply copy it into the appropriate "
+"folder -  \"%1\" for fonts available to just yourself, or  \"%2\" for system-"
+"wide fonts (available to all).</p>"
+msgstr ""
+"<h1>Instalator de fonturi</h1><p> Acest modul vă permite să instalați "
+"fonturi TrueType, Type1 și Bitmap.</p><p>Puteți instala fonturi și folosind "
+"Konqueror: introduceți fonts:/ în bara de amplasare și acesta va afișa "
+"fonturile instalate. Pentru a instala un font, pur și simplu copiați-l în "
+"dosarul corespunzător – „%1” pentru fonturile disponibile numai "
+"dumneavoastră, sau „%2” pentru fonturile din tot sistemul (disponibile "
+"tuturor).</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:437
+#, kde-format
+msgid "Add Fonts"
+msgstr "Adaugă fonturi"
+
+#: kcmfontinst/KCmFontInst.cpp:562
+#, kde-format
+msgid "Failed to save list of fonts to print."
+msgstr "Eșec la salvarea listei cu fonturi de imprimat."
+
+#: kcmfontinst/KCmFontInst.cpp:583
+#, kde-format
+msgid "Failed to start font printer."
+msgstr "Eșec la pornirea imprimantei de fonturi."
+
+#: kcmfontinst/KCmFontInst.cpp:590
+#, kde-format
+msgid ""
+"There are no printable fonts.\n"
+"You can only print non-bitmap and enabled fonts."
+msgstr ""
+"Nu există niciun font tipăribil.\n"
+"Puteți tipări doar fonturile activate și care nu sunt bitmap."
+
+#: kcmfontinst/KCmFontInst.cpp:592
+#, kde-format
+msgid "Cannot Print"
+msgstr "Nu pot imprima"
+
+#: kcmfontinst/KCmFontInst.cpp:607
+#, kde-format
+msgid "You did not select anything to delete."
+msgstr "Nu ați selectat nimic de șters."
+
+#: kcmfontinst/KCmFontInst.cpp:607
+#, kde-format
+msgid "Nothing to Delete"
+msgstr "Nimic de șters"
+
+#: kcmfontinst/KCmFontInst.cpp:622
+#, kde-format
+msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
+msgstr "<p>Sigur doriți să ștergeți</p><p>„<b>%1</b>”?</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:625
+#, kde-format
+msgid "Delete Font"
+msgstr "Ștergere font"
+
+#: kcmfontinst/KCmFontInst.cpp:632
+#, kde-format
+msgid "Do you really want to delete this font?"
+msgid_plural "Do you really want to delete these %1 fonts?"
+msgstr[0] "Sigur doriți să ștergeți acest font?"
+msgstr[1] "Sigur doriți să ștergeți aceste %1 fonturi?"
+msgstr[2] "Sigur doriți să ștergeți aceste %1 de fonturi?"
+
+#: kcmfontinst/KCmFontInst.cpp:634
+#, kde-format
+msgid "Delete Fonts"
+msgstr "Ștergere fonturi"
+
+#: kcmfontinst/KCmFontInst.cpp:639
+#, kde-format
+msgid "Deleting font(s)…"
+msgstr "Se șterg fonturi…"
+
+#: kcmfontinst/KCmFontInst.cpp:654
+#, kde-format
+msgid "You did not select anything to move."
+msgstr "Nu ați ales nimic de mutat."
+
+#: kcmfontinst/KCmFontInst.cpp:654
+#, kde-format
+msgid "Nothing to Move"
+msgstr "Nimic de mutat"
+
+#: kcmfontinst/KCmFontInst.cpp:664
+#, kde-format
+msgid ""
+"<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
+"%3</i>?</p>"
+msgstr ""
+"<p>Sigur doriți să mutați</p><p>„<b>%1</b>”</p><p>din <i>%2</i> în <i>%3</i>?"
+"</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:669
+#, kde-format
+msgid "Move Font"
+msgstr "Mutare font"
+
+#: kcmfontinst/KCmFontInst.cpp:670 kcmfontinst/KCmFontInst.cpp:682
+#, kde-format
+msgid "Move"
+msgstr "Mută"
+
+#: kcmfontinst/KCmFontInst.cpp:675
+#, kde-format
+msgid ""
+"<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
+msgid_plural ""
+"<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?</p>"
+msgstr[0] ""
+"<p>Sigur doriți să mutați acest font din <i>%2</i> în <i>%3</i>?</p>"
+msgstr[1] ""
+"<p>Sigur doriți să mutați aceste %1 fonturi din <i>%2</i> în <i>%3</i>?</p>"
+msgstr[2] ""
+"<p>Sigur doriți să mutați aceste %1 de fonturi din <i>%2</i> în <i>%3</i>?</"
+"p>"
+
+#: kcmfontinst/KCmFontInst.cpp:681
+#, kde-format
+msgid "Move Fonts"
+msgstr "Mută fonturi"
+
+#: kcmfontinst/KCmFontInst.cpp:686
+#, kde-format
+msgid "Moving font(s)…"
+msgstr "Se mută fonturi…"
+
+#: kcmfontinst/KCmFontInst.cpp:700
+#, kde-format
+msgid "Export Group"
+msgstr "Exportă grupul"
+
+#: kcmfontinst/KCmFontInst.cpp:726
+#, kde-format
+msgid "No files?"
+msgstr "Niciun fișier?"
+
+#: kcmfontinst/KCmFontInst.cpp:729
+#, kde-format
+msgid "Failed to open %1 for writing"
+msgstr "Eșec la deschiderea lui %1 pentru scriere"
+
+#: kcmfontinst/KCmFontInst.cpp:749
+#, kde-format
+msgid "Create New Group"
+msgstr "Creează un grup nou"
+
+#: kcmfontinst/KCmFontInst.cpp:749
+#, kde-format
+msgid "Name of new group:"
+msgstr "Denumirea noului grup:"
+
+#: kcmfontinst/KCmFontInst.cpp:749
+#, kde-format
+msgid "New Group"
+msgstr "Grup nou"
+
+#: kcmfontinst/KCmFontInst.cpp:777
+#, kde-format
+msgid "Preview Text"
+msgstr "Text previzualizare"
+
+#: kcmfontinst/KCmFontInst.cpp:777
+#, kde-format
+msgid "Please enter new text:"
+msgstr "Introduceți un text nou:"
+
+#: kcmfontinst/KCmFontInst.cpp:829
+#, kde-format
+msgid "Scanning font list…"
+msgstr "Se citește lista de fonturi…"
+
+#: kcmfontinst/KCmFontInst.cpp:888
+#, kde-format
+msgid "No fonts"
+msgstr "Nu sunt fonturi"
+
+#: kcmfontinst/KCmFontInst.cpp:893
+#, kde-format
+msgid "1 Font"
+msgid_plural "%1 Fonts"
+msgstr[0] "Un font"
+msgstr[1] "%1 fonturi"
+msgstr[2] "%1 de fonturi"
+
+#: kcmfontinst/KCmFontInst.cpp:902
+#, kde-format
+msgid ""
+"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
+"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Partially "
+"enabled:</td><td>%3</td></tr><tr><td align=\"right\">Total:</td><td>%4</td></"
+"tr></table>"
+msgstr ""
+"<table><tr><td align=\"right\">Activate:</td><td>%1</td></tr><tr><td align="
+"\"right\">Dezactivate:</td><td>%2</td></tr><tr><td align=\"right\">Activate "
+"parțial:</td><td>%3</td></tr><tr><td align=\"right\">Total:</td><td>%4</td></"
+"tr></table>"
+
+#: kcmfontinst/KCmFontInst.cpp:912
+#, kde-format
+msgid ""
+"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
+"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Total:</"
+"td><td>%3</td></tr></table>"
+msgstr ""
+"<table><tr><td align=\"right\">Activate:</td><td>%1</td></tr><tr><td align="
+"\"right\">Dezactivate:</td><td>%2</td></tr><tr><td align=\"right\">Total "
+"fonturi:</td><td>%3</td></tr></table>"
+
+#: kcmfontinst/KCmFontInst.cpp:989
+#, kde-format
+msgid "Looking for any associated files…"
+msgstr "Se caută fișiere asociate…"
+
+#: kcmfontinst/KCmFontInst.cpp:993
+#, kde-format
+msgid "Scanning Files…"
+msgstr "Se citesc fișiere…"
+
+#: kcmfontinst/KCmFontInst.cpp:994
+#, kde-format
+msgid "Looking for additional files to install…"
+msgstr "Se caută fișiere suplimentare de instalat…"
+
+#: kcmfontinst/KCmFontInst.cpp:1009
+#, kde-format
+msgid "Looking for files associated with %1"
+msgstr "Se caută fișiere asociate cu %1"
+
+#: kcmfontinst/KCmFontInst.cpp:1037
+#, kde-format
+msgid "Installing font(s)…"
+msgstr "Se instalează fonturi…"
+
+#: kcmfontinst/KCmFontInst.cpp:1102
+#, kde-format
+msgid "You did not select anything to enable."
+msgstr "Nu ați ales nimic de activat."
+
+#: kcmfontinst/KCmFontInst.cpp:1102
+#, kde-format
+msgid "You did not select anything to disable."
+msgstr "Nu ați ales nimic de dezactivat."
+
+#: kcmfontinst/KCmFontInst.cpp:1103
+#, kde-format
+msgid "Nothing to Enable"
+msgstr "Nimic de activat"
+
+#: kcmfontinst/KCmFontInst.cpp:1103
+#, kde-format
+msgid "Nothing to Disable"
+msgstr "Nimic de dezactivat"
+
+#: kcmfontinst/KCmFontInst.cpp:1120
+#, kde-format
+msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
+msgstr "<p>Sigur doriți să activați</p><p>„<b>%1</b>”?</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:1122
+#, kde-format
+msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
+msgstr "<p>Sigur doriți să dezactivați</p><p>„<b>%1</b>”?</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:1124
+#, kde-format
+msgid ""
+"<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
+"'<b>%2</b>'?</p>"
+msgstr ""
+"<p>Sigur doriți să activați</p><p>„<b>%1</b>” din grupul „<b>%2</b>”?</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:1128
+#, kde-format
+msgid ""
+"<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
+"'<b>%2</b>'?</p>"
+msgstr ""
+"<p>Sigur doriți să dezactivați</p><p>„<b>%1</b>” din cadrul grupului „<b>%2</"
+"b>”?</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:1132 kcmfontinst/KCmFontInst.cpp:1133
+#, kde-format
+msgid "Enable Font"
+msgstr "Activează fontul"
+
+#: kcmfontinst/KCmFontInst.cpp:1132 kcmfontinst/KCmFontInst.cpp:1134
+#, kde-format
+msgid "Disable Font"
+msgstr "Dezactivează fontul"
+
+#: kcmfontinst/KCmFontInst.cpp:1139
+#, kde-format
+msgid "Do you really want to enable this font?"
+msgid_plural "Do you really want to enable these %1 fonts?"
+msgstr[0] "Sigur doriți să activați acest font?"
+msgstr[1] "Sigur doriți să activați aceste %1 fonturi?"
+msgstr[2] "Sigur doriți să activați aceste %1 de fonturi?"
+
+#: kcmfontinst/KCmFontInst.cpp:1142
+#, kde-format
+msgid "Do you really want to disable this font?"
+msgid_plural "Do you really want to disable these %1 fonts?"
+msgstr[0] "Sigur doriți să dezactivați acest font?"
+msgstr[1] "Sigur doriți să dezactivați aceste %1 fonturi?"
+msgstr[2] "Sigur doriți să dezactivați aceste %1 de fonturi?"
+
+#: kcmfontinst/KCmFontInst.cpp:1145
+#, kde-format
+msgid ""
+"<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
+"</p>"
+msgid_plural ""
+"<p>Do you really want to enable these %1 fonts contained within group '<b>"
+"%2</b>'?</p>"
+msgstr[0] "<p>Sigur doriți să activați acest font din grupul „<b>%2</b>”?</p>"
+msgstr[1] ""
+"<p>Sigur doriți să activați aceste %1 fonturi din grupul „<b>%2</b>”?</p>"
+msgstr[2] ""
+"<p>Sigur doriți să activați aceste %1 de fonturi din grupul „<b>%2</b>”?</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:1150
+#, kde-format
+msgid ""
+"<p>Do you really want to disable this font contained within group '<b>%2</"
+"b>'?</p>"
+msgid_plural ""
+"<p>Do you really want to disable these %1 fonts contained within group '<b>"
+"%2</b>'?</p>"
+msgstr[0] ""
+"<p>Sigur doriți să dezactivați acest font din grupul „<b>%2</b>”?</p>"
+msgstr[1] ""
+"<p>Sigur doriți să dezactivați aceste %1 fonturi din grupul „<b>%2</b>”?</p>"
+msgstr[2] ""
+"<p>Sigur doriți să dezactivați aceste %1 de fonturi din grupul „<b>%2</b>”?</"
+"p>"
+
+#: kcmfontinst/KCmFontInst.cpp:1156 kcmfontinst/KCmFontInst.cpp:1157
+#, kde-format
+msgid "Enable Fonts"
+msgstr "Activează fonturile"
+
+#: kcmfontinst/KCmFontInst.cpp:1156 kcmfontinst/KCmFontInst.cpp:1158
+#, kde-format
+msgid "Disable Fonts"
+msgstr "Dezactivează fonturile"
+
+#: kcmfontinst/KCmFontInst.cpp:1164
+#, kde-format
+msgid "Enabling font(s)…"
+msgstr "Se activează fonturi…"
+
+#: kcmfontinst/KCmFontInst.cpp:1166
+#, kde-format
+msgid "Disabling font(s)…"
+msgstr "Se dezactivează fonturi…"
+
+#: kcmfontinst/PrintDialog.cpp:21
+#, kde-format
+msgid "Print Font Samples"
+msgstr "Tipărește mostre de font"
+
+#: kcmfontinst/PrintDialog.cpp:37
+#, kde-format
+msgid "Select size to print font:"
+msgstr "Alegeți dimensiunea de tipărit fontul:"
+
+#: kcmfontinst/PrintDialog.cpp:41
+#, kde-format
+msgid "Waterfall"
+msgstr "Cascadă"
+
+#: kcmfontinst/PrintDialog.cpp:42
+#, kde-format
+msgid "12pt"
+msgstr "12pct"
+
+#: kcmfontinst/PrintDialog.cpp:43
+#, kde-format
+msgid "18pt"
+msgstr "18pct"
+
+#: kcmfontinst/PrintDialog.cpp:44
+#, kde-format
+msgid "24pt"
+msgstr "24pct"
+
+#: kcmfontinst/PrintDialog.cpp:45
+#, kde-format
+msgid "36pt"
+msgstr "36pct"
+
+#: kcmfontinst/PrintDialog.cpp:46
+#, kde-format
+msgid "48pt"
+msgstr "48pct"
+
+#: kio/KioFonts.cpp:208
+#, kde-format
+msgid "Can only install fonts to either \"%1\" or \"%2\"."
+msgstr "Se pot instala fonturi doar în unul dintre „%1” sau „%2”."
+
+#: kio/KioFonts.cpp:211
+#, kde-format
+msgid ""
+"You cannot install a fonts package directly.\n"
+"Please extract %1, and install the components individually."
+msgstr ""
+"Nu puteți instala un pachet de fonturi direct.\n"
+"Extrageți %1 și instalați componentele individual."
+
+#: kio/KioFonts.cpp:439
+#, kde-format
+msgid "Cannot copy fonts"
+msgstr "Fonturile nu pot fi copiate"
+
+#: kio/KioFonts.cpp:444
+#, kde-format
+msgid "Cannot move fonts"
+msgstr "Fonturile nu pot fi mutate"
+
+#: kio/KioFonts.cpp:455
+#, kde-format
+msgid "Only fonts may be deleted."
+msgstr "Doar fonturile pot fi șterse."
+
+#: kio/KioFonts.cpp:457
+#, kde-format
+msgid "Can only remove fonts from either \"%1\" or \"%2\"."
+msgstr "Se pot elimina fonturi doar din unul dintre „%1” sau „%2”."
+
+#: kio/KioFonts.cpp:484
+#, kde-format
+msgid "Please specify \"%1\" or \"%2\"."
+msgstr "Specificați „%1” sau „%2”."
+
+#: kio/KioFonts.cpp:504
+#, kde-format
+msgid "No special methods supported."
+msgstr "Nicio metodă specială susținută."
+
+#: kio/KioFonts.cpp:578
+#, kde-format
+msgid "Fonts"
+msgstr "Fonturi"
+
+#: kio/KioFonts.cpp:707
+#, kde-format
+msgid "Failed to start the system daemon"
+msgstr "Pornirea demonului de sistem a eșuat"
+
+#: kio/KioFonts.cpp:710
+#, kde-format
+msgid "Backend died"
+msgstr "Platforma a murit"
+
+#: kio/KioFonts.cpp:713
+#, kde-format
+msgid "%1 is a bitmap font, and these have been disabled on your system."
+msgstr ""
+"%1 este un font bitmap și acestea au fost dezactivate pe sistemul "
+"dumneavoastră."
+
+#: kio/KioFonts.cpp:716
+#, kde-format
+msgid ""
+"%1 contains the font <b>%2</b>, which is already installed on your system."
+msgstr "%1 conține fontul <b>%2</b>, care este instalat deja în sistem."
+
+#: kio/KioFonts.cpp:719
+#, kde-format
+msgid "%1 is not a font."
+msgstr "%1 nu e un font."
+
+#: kio/KioFonts.cpp:722
+#, kde-format
+msgid "Could not remove all files associated with %1"
+msgstr "Nu se pot elimina toate fișierele asociate cu %1"
+
+#: lib/Fc.cpp:407 lib/KfiConstants.h:107
+#, kde-format
+msgid "Unknown"
+msgstr "Necunoscut"
+
+#: lib/FcEngine.cpp:858
+#, kde-format
+msgctxt "First letter of the alphabet (in upper then lower case)"
+msgid "Aa"
+msgstr "Aa"
+
+#: lib/FcEngine.cpp:860
+#, kde-format
+msgctxt ""
+"All letters of the alphabet (in upper/lower case pairs), followed by numbers"
+msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
+msgstr "AaĂăÂâBbCcDdEeFfGgHhIiÎîJjKkLlMmNnOoPpQqRrSsȘșTtȚțUuVvWwXxYyZz0123456789"
+
+#: lib/FcEngine.cpp:1022
+#, kde-format
+msgid "No characters found."
+msgstr "Nu s-au găsit caractere."
+
+#: lib/FcEngine.cpp:1060
+#, kde-format
+msgctxt "A sentence that uses all of the letters of the alphabet"
+msgid "The quick brown fox jumps over the lazy dog"
+msgstr "âÂșȘțȚ - Mica vulpiță șireată sare peste câinele leneș"
+
+#: lib/FcEngine.cpp:1065
+#, kde-format
+msgctxt "All of the letters of the alphabet, uppercase"
+msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+msgstr "AĂÂBCDEFGHIÎJKLMNOPRSȘTȚUVXZ"
+
+#: lib/FcEngine.cpp:1070
+#, kde-format
+msgctxt "All of the letters of the alphabet, lowercase"
+msgid "abcdefghijklmnopqrstuvwxyz"
+msgstr "aăâbcdefghiîjklmnoprsștțuvxz"
+
+#: lib/FcEngine.cpp:1075
+#, kde-format
+msgctxt "Numbers and characters"
+msgid "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
+msgstr "0123456789.:,;(*!?'/\\\"„”)£$€%^&-+@~#<>{}[]"
+
+#: lib/FcEngine.cpp:1473
+#, kde-format
+msgid "ERROR: Could not determine font's name."
+msgstr "EROARE: Nu am putut determina denumirea fontului."
+
+#: lib/FcEngine.cpp:1476
+#, kde-format
+msgid "%2 [1 pixel]"
+msgid_plural "%2 [%1 pixels]"
+msgstr[0] "%2 [1 pixel]"
+msgstr[1] "%2 [%1 pixeli]"
+msgstr[2] "%2 [%1 de pixeli]"
+
+#: lib/KfiConstants.h:22
+msgid "Personal"
+msgstr "Personal"
+
+#: lib/KfiConstants.h:23
+msgid "System"
+msgstr "Sistem"
+
+#: lib/KfiConstants.h:24
+msgid "All"
+msgstr "Toate"
+
+#: lib/KfiConstants.h:38
+msgid "Administrator"
+msgstr "Administrator"
+
+#: lib/KfiConstants.h:74
+msgid "Thin"
+msgstr "Subțire"
+
+#: lib/KfiConstants.h:75
+msgid "Extra Light"
+msgstr "Extra ușor"
+
+#: lib/KfiConstants.h:76
+msgid "Ultra Light"
+msgstr "Ultra ușor"
+
+#: lib/KfiConstants.h:77
+msgid "Light"
+msgstr "Ușor"
+
+#: lib/KfiConstants.h:78
+msgid "Regular"
+msgstr "Regulat"
+
+#: lib/KfiConstants.h:79 lib/KfiConstants.h:97
+msgid "Normal"
+msgstr "Normal"
+
+#: lib/KfiConstants.h:80
+msgid "Medium"
+msgstr "Mediu"
+
+#: lib/KfiConstants.h:81
+msgid "Demi Bold"
+msgstr "Demi aldin"
+
+#: lib/KfiConstants.h:82
+msgid "Semi Bold"
+msgstr "Semi aldin"
+
+#: lib/KfiConstants.h:83
+msgid "Bold"
+msgstr "Aldin"
+
+#: lib/KfiConstants.h:84
+msgid "Extra Bold"
+msgstr "Extra aldin"
+
+#: lib/KfiConstants.h:85
+msgid "Ultra Bold"
+msgstr "Ultra aldin"
+
+#: lib/KfiConstants.h:86
+msgid "Black"
+msgstr "Negru"
+
+#: lib/KfiConstants.h:87
+msgid "Heavy"
+msgstr "Greu"
+
+#: lib/KfiConstants.h:89
+msgid "Roman"
+msgstr "Roman"
+
+#: lib/KfiConstants.h:90
+msgid "Italic"
+msgstr "Cursiv"
+
+#: lib/KfiConstants.h:91
+msgid "Oblique"
+msgstr "Oblic"
+
+#: lib/KfiConstants.h:93
+msgid "Ultra Condensed"
+msgstr "Ultra condensat"
+
+#: lib/KfiConstants.h:94
+msgid "Extra Condensed"
+msgstr "Extra condensat"
+
+#: lib/KfiConstants.h:95
+msgid "Condensed"
+msgstr "Condensat"
+
+#: lib/KfiConstants.h:96
+msgid "Semi Condensed"
+msgstr "Semi condensat"
+
+#: lib/KfiConstants.h:98
+msgid "Semi Expanded"
+msgstr "Semi extins"
+
+#: lib/KfiConstants.h:99
+msgid "Expanded"
+msgstr "Extins"
+
+#: lib/KfiConstants.h:100
+msgid "Extra Expanded"
+msgstr "Extra extins"
+
+#: lib/KfiConstants.h:101
+msgid "Ultra Expanded"
+msgstr "Ultra extins"
+
+#: lib/KfiConstants.h:103
+msgid "Monospaced"
+msgstr "Monospațiat"
+
+#: lib/KfiConstants.h:104
+msgid "Charcell"
+msgstr "Charcell"
+
+#: lib/KfiConstants.h:105
+msgid "Proportional"
+msgstr "Proporțional"
+
+#: viewpart/CharTip.cpp:42
+#, kde-format
+msgid "Other, Control"
+msgstr "Altele, Control"
+
+#: viewpart/CharTip.cpp:44
+#, kde-format
+msgid "Other, Format"
+msgstr "Altele, Format"
+
+#: viewpart/CharTip.cpp:46
+#, kde-format
+msgid "Other, Not Assigned"
+msgstr "Altele, Neatribuit"
+
+#: viewpart/CharTip.cpp:48
+#, kde-format
+msgid "Other, Private Use"
+msgstr "Altele, Uz privat"
+
+#: viewpart/CharTip.cpp:50
+#, kde-format
+msgid "Other, Surrogate"
+msgstr "Altele, Surogate"
+
+#: viewpart/CharTip.cpp:52
+#, kde-format
+msgid "Letter, Lowercase"
+msgstr "Literă, minusculă"
+
+#: viewpart/CharTip.cpp:54
+#, kde-format
+msgid "Letter, Modifier"
+msgstr "Literă, modificator"
+
+#: viewpart/CharTip.cpp:56
+#, kde-format
+msgid "Letter, Other"
+msgstr "Literă, alta"
+
+#: viewpart/CharTip.cpp:58
+#, kde-format
+msgid "Letter, Titlecase"
+msgstr "Literă, de titlu"
+
+#: viewpart/CharTip.cpp:60
+#, kde-format
+msgid "Letter, Uppercase"
+msgstr "Literă, majusculă"
+
+#: viewpart/CharTip.cpp:62
+#, kde-format
+msgid "Mark, Spacing Combining"
+msgstr "Semn, spațiu combinator"
+
+#: viewpart/CharTip.cpp:64
+#, kde-format
+msgid "Mark, Enclosing"
+msgstr "Semn, închidere"
+
+#: viewpart/CharTip.cpp:66
+#, kde-format
+msgid "Mark, Non-Spacing"
+msgstr "Semn, ne-spațiator"
+
+#: viewpart/CharTip.cpp:68
+#, kde-format
+msgid "Number, Decimal Digit"
+msgstr "Număr, cifră zecimală"
+
+#: viewpart/CharTip.cpp:70
+#, kde-format
+msgid "Number, Letter"
+msgstr "Număr, literă"
+
+#: viewpart/CharTip.cpp:72
+#, kde-format
+msgid "Number, Other"
+msgstr "Număr, altul"
+
+#: viewpart/CharTip.cpp:74
+#, kde-format
+msgid "Punctuation, Connector"
+msgstr "Punctuație, conector"
+
+#: viewpart/CharTip.cpp:76
+#, kde-format
+msgid "Punctuation, Dash"
+msgstr "Punctuație, cratimă"
+
+#: viewpart/CharTip.cpp:78
+#, kde-format
+msgid "Punctuation, Close"
+msgstr "Punctuație, închidere"
+
+#: viewpart/CharTip.cpp:80
+#, kde-format
+msgid "Punctuation, Final Quote"
+msgstr "Punctuație, ghilimele finale"
+
+#: viewpart/CharTip.cpp:82
+#, kde-format
+msgid "Punctuation, Initial Quote"
+msgstr "Punctuație, ghilimele inițiale"
+
+#: viewpart/CharTip.cpp:84
+#, kde-format
+msgid "Punctuation, Other"
+msgstr "Punctuație, altul"
+
+#: viewpart/CharTip.cpp:86
+#, kde-format
+msgid "Punctuation, Open"
+msgstr "Punctuație, deschidere"
+
+#: viewpart/CharTip.cpp:88
+#, kde-format
+msgid "Symbol, Currency"
+msgstr "Simbol, monedă"
+
+#: viewpart/CharTip.cpp:90
+#, kde-format
+msgid "Symbol, Modifier"
+msgstr "Simbol, modificator"
+
+#: viewpart/CharTip.cpp:92
+#, kde-format
+msgid "Symbol, Math"
+msgstr "Simbol, matematică"
+
+#: viewpart/CharTip.cpp:94
+#, kde-format
+msgid "Symbol, Other"
+msgstr "Simbol, altul"
+
+#: viewpart/CharTip.cpp:96
+#, kde-format
+msgid "Separator, Line"
+msgstr "Separator, linie"
+
+#: viewpart/CharTip.cpp:98
+#, kde-format
+msgid "Separator, Paragraph"
+msgstr "Separator, paragraf"
+
+#: viewpart/CharTip.cpp:100
+#, kde-format
+msgid "Separator, Space"
+msgstr "Separator, spațiu"
+
+#: viewpart/CharTip.cpp:152
+#, kde-format
+msgid "Category"
+msgstr "Categorie"
+
+#: viewpart/CharTip.cpp:153
+#, kde-format
+msgid "UCS-4"
+msgstr "UCS-4"
+
+#: viewpart/CharTip.cpp:156
+#, kde-format
+msgid "UTF-16"
+msgstr "UTF-16"
+
+#: viewpart/CharTip.cpp:167
+#, kde-format
+msgid "UTF-8"
+msgstr "UTF-8"
+
+#: viewpart/CharTip.cpp:184
+#, kde-format
+msgid "XML Decimal Entity"
+msgstr "Entitate zecimală XML"
+
+#: viewpart/FontViewPart.cpp:85
+#, kde-format
+msgid "Show Face:"
+msgstr "Afișare față:"
+
+#: viewpart/FontViewPart.cpp:88
+#, kde-format
+msgid "Install…"
+msgstr "Instalează…"
+
+#: viewpart/FontViewPart.cpp:109
+#, kde-format
+msgid "Change Text…"
+msgstr "Modifică textul…"
+
+#: viewpart/FontViewPart.cpp:333
+#, kde-format
+msgid "Could not read font."
+msgstr "Nu s-a putut citi fontul."
+
+#: viewpart/FontViewPart.cpp:385
+#, kde-format
+msgid "Preview String"
+msgstr "Text previzualizare"
+
+#: viewpart/FontViewPart.cpp:385
+#, kde-format
+msgid "Please enter new string:"
+msgstr "Introduceți un text nou:"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: viewpart/kfontviewpart.rc:4
+#, kde-format
+msgid "&Main Toolbar"
+msgstr "Bara de unelte &principală"
+
+#: viewpart/PreviewSelectAction.cpp:13
+#, kde-format
+msgid "Preview Type"
+msgstr "Tip previzualizare"
+
+#: viewpart/PreviewSelectAction.cpp:31
+#, kde-format
+msgid "Standard Preview"
+msgstr "Previzualizare standard"
+
+#: viewpart/PreviewSelectAction.cpp:32
+#, kde-format
+msgid "All Characters"
+msgstr "Toate caracterele"
+
+#: viewpart/PreviewSelectAction.cpp:40
+#, kde-format
+msgid "Unicode Block: %1"
+msgstr "Bloc Unicod: %1"
+
+#: viewpart/PreviewSelectAction.cpp:44
+#, kde-format
+msgid "Unicode Script: %1"
+msgstr "Script Unicod: %1"
+
+#: viewpart/UnicodeBlocks.h:17
+msgid "Basic Latin"
+msgstr "Latin de bază"
+
+#: viewpart/UnicodeBlocks.h:18
+msgid "Latin-1 Supplement"
+msgstr "Adaos Latin-1"
+
+#: viewpart/UnicodeBlocks.h:19
+msgid "Latin Extended-A"
+msgstr "Latin extins-A"
+
+#: viewpart/UnicodeBlocks.h:20
+msgid "Latin Extended-B"
+msgstr "Latin extins-B"
+
+#: viewpart/UnicodeBlocks.h:21
+msgid "IPA Extensions"
+msgstr "Extensii IPA"
+
+#: viewpart/UnicodeBlocks.h:22
+msgid "Spacing Modifier Letters"
+msgstr "Litere modificatoare de spațiere"
+
+#: viewpart/UnicodeBlocks.h:23
+msgid "Combining Diacritical Marks"
+msgstr "Semne diacritice combinatorii"
+
+#: viewpart/UnicodeBlocks.h:24
+msgid "Greek and Coptic"
+msgstr "Grec și coptic"
+
+#: viewpart/UnicodeBlocks.h:25 viewpart/UnicodeScripts.h:29
+msgid "Cyrillic"
+msgstr "Chirilic"
+
+#: viewpart/UnicodeBlocks.h:26
+msgid "Cyrillic Supplement"
+msgstr "Supliment chirilic"
+
+#: viewpart/UnicodeBlocks.h:27 viewpart/UnicodeScripts.h:16
+msgid "Armenian"
+msgstr "Armean"
+
+#: viewpart/UnicodeBlocks.h:28 viewpart/UnicodeScripts.h:42
+msgid "Hebrew"
+msgstr "Ebraic"
+
+#: viewpart/UnicodeBlocks.h:29 viewpart/UnicodeScripts.h:15
+msgid "Arabic"
+msgstr "Arab"
+
+#: viewpart/UnicodeBlocks.h:30 viewpart/UnicodeScripts.h:69
+msgid "Syriac"
+msgstr "Sirian"
+
+#: viewpart/UnicodeBlocks.h:31
+msgid "Arabic Supplement"
+msgstr "Adaos arab"
+
+#: viewpart/UnicodeBlocks.h:32 viewpart/UnicodeScripts.h:75
+msgid "Thaana"
+msgstr "Thaana"
+
+#: viewpart/UnicodeBlocks.h:33
+msgid "NKo"
+msgstr "NKo"
+
+#: viewpart/UnicodeBlocks.h:34 viewpart/UnicodeScripts.h:31
+msgid "Devanagari"
+msgstr "Devanagari"
+
+#: viewpart/UnicodeBlocks.h:35 viewpart/UnicodeScripts.h:18
+msgid "Bengali"
+msgstr "Bengalez"
+
+#: viewpart/UnicodeBlocks.h:36 viewpart/UnicodeScripts.h:38
+msgid "Gurmukhi"
+msgstr "Gurmukhi"
+
+#: viewpart/UnicodeBlocks.h:37 viewpart/UnicodeScripts.h:37
+msgid "Gujarati"
+msgstr "Gujarati"
+
+#: viewpart/UnicodeBlocks.h:38 viewpart/UnicodeScripts.h:61
+msgid "Oriya"
+msgstr "Oriya"
+
+#: viewpart/UnicodeBlocks.h:39 viewpart/UnicodeScripts.h:73
+msgid "Tamil"
+msgstr "Tamil"
+
+#: viewpart/UnicodeBlocks.h:40 viewpart/UnicodeScripts.h:74
+msgid "Telugu"
+msgstr "Telugu"
+
+#: viewpart/UnicodeBlocks.h:41 viewpart/UnicodeScripts.h:45
+msgid "Kannada"
+msgstr "Kannada"
+
+#: viewpart/UnicodeBlocks.h:42 viewpart/UnicodeScripts.h:53
+msgid "Malayalam"
+msgstr "Malayalam"
+
+#: viewpart/UnicodeBlocks.h:43 viewpart/UnicodeScripts.h:67
+msgid "Sinhala"
+msgstr "Sinhala"
+
+#: viewpart/UnicodeBlocks.h:44 viewpart/UnicodeScripts.h:76
+msgid "Thai"
+msgstr "Tailandez"
+
+#: viewpart/UnicodeBlocks.h:45 viewpart/UnicodeScripts.h:49
+msgid "Lao"
+msgstr "Lao"
+
+#: viewpart/UnicodeBlocks.h:46 viewpart/UnicodeScripts.h:77
+msgid "Tibetan"
+msgstr "Tibetan"
+
+#: viewpart/UnicodeBlocks.h:47 viewpart/UnicodeScripts.h:55
+msgid "Myanmar"
+msgstr "Myanmar"
+
+#: viewpart/UnicodeBlocks.h:48 viewpart/UnicodeScripts.h:33
+msgid "Georgian"
+msgstr "Georgian"
+
+#: viewpart/UnicodeBlocks.h:49
+msgid "Hangul Jamo"
+msgstr "Hangul Jamo"
+
+#: viewpart/UnicodeBlocks.h:50 viewpart/UnicodeScripts.h:32
+msgid "Ethiopic"
+msgstr "Etiopian"
+
+#: viewpart/UnicodeBlocks.h:51
+msgid "Ethiopic Supplement"
+msgstr "Supliment etiopian"
+
+#: viewpart/UnicodeBlocks.h:52 viewpart/UnicodeScripts.h:24
+msgid "Cherokee"
+msgstr "Cherokee"
+
+#: viewpart/UnicodeBlocks.h:53
+msgid "Unified Canadian Aboriginal Syllabics"
+msgstr "Aborigenă canadină"
+
+#: viewpart/UnicodeBlocks.h:54 viewpart/UnicodeScripts.h:58
+msgid "Ogham"
+msgstr "Ogham"
+
+#: viewpart/UnicodeBlocks.h:55 viewpart/UnicodeScripts.h:65
+msgid "Runic"
+msgstr "Runic"
+
+#: viewpart/UnicodeBlocks.h:56 viewpart/UnicodeScripts.h:70
+msgid "Tagalog"
+msgstr "Tagalog"
+
+#: viewpart/UnicodeBlocks.h:57 viewpart/UnicodeScripts.h:41
+msgid "Hanunoo"
+msgstr "Hanunoo"
+
+#: viewpart/UnicodeBlocks.h:58 viewpart/UnicodeScripts.h:22
+msgid "Buhid"
+msgstr "Buhid"
+
+#: viewpart/UnicodeBlocks.h:59 viewpart/UnicodeScripts.h:71
+msgid "Tagbanwa"
+msgstr "Tagbanwa"
+
+#: viewpart/UnicodeBlocks.h:60 viewpart/UnicodeScripts.h:48
+msgid "Khmer"
+msgstr "Khmer"
+
+#: viewpart/UnicodeBlocks.h:61 viewpart/UnicodeScripts.h:54
+msgid "Mongolian"
+msgstr "Mongol"
+
+#: viewpart/UnicodeBlocks.h:62 viewpart/UnicodeScripts.h:51
+msgid "Limbu"
+msgstr "Limbu"
+
+#: viewpart/UnicodeBlocks.h:63 viewpart/UnicodeScripts.h:72
+msgid "Tai Le"
+msgstr "Tai Le"
+
+#: viewpart/UnicodeBlocks.h:64 viewpart/UnicodeScripts.h:56
+msgid "New Tai Lue"
+msgstr "Noul Tai Lue"
+
+#: viewpart/UnicodeBlocks.h:65
+msgid "Khmer Symbols"
+msgstr "Simboluri Khmer"
+
+#: viewpart/UnicodeBlocks.h:66 viewpart/UnicodeScripts.h:21
+msgid "Buginese"
+msgstr "Bugineză"
+
+#: viewpart/UnicodeBlocks.h:67 viewpart/UnicodeScripts.h:17
+msgid "Balinese"
+msgstr "Balineză"
+
+#: viewpart/UnicodeBlocks.h:68
+msgid "Phonetic Extensions"
+msgstr "Extensii fonetice"
+
+#: viewpart/UnicodeBlocks.h:69
+msgid "Phonetic Extensions Supplement"
+msgstr "Adaos extensii fonetice"
+
+#: viewpart/UnicodeBlocks.h:70
+msgid "Combining Diacritical Marks Supplement"
+msgstr "Adaos semne diacritice combinatorii"
+
+#: viewpart/UnicodeBlocks.h:71
+msgid "Latin Extended Additional"
+msgstr "Latin estins, suplimentar"
+
+#: viewpart/UnicodeBlocks.h:72
+msgid "Greek Extended"
+msgstr "Grec extins"
+
+#: viewpart/UnicodeBlocks.h:73
+msgid "General Punctuation"
+msgstr "Punctuație generală"
+
+#: viewpart/UnicodeBlocks.h:74
+msgid "Superscripts and Subscripts"
+msgstr "Exponent și indice"
+
+#: viewpart/UnicodeBlocks.h:75
+msgid "Currency Symbols"
+msgstr "Simboluri monetare"
+
+#: viewpart/UnicodeBlocks.h:76
+msgid "Combining Diacritical Marks for Symbols"
+msgstr "Marcaje diacritice combinatorii pentru simboluri"
+
+#: viewpart/UnicodeBlocks.h:77
+msgid "Letter-Like Symbols"
+msgstr "Simboluri literale"
+
+#: viewpart/UnicodeBlocks.h:78
+msgid "Number Forms"
+msgstr "Forme numerice"
+
+#: viewpart/UnicodeBlocks.h:79
+msgid "Arrows"
+msgstr "Săgeți"
+
+#: viewpart/UnicodeBlocks.h:80
+msgid "Mathematical Operators"
+msgstr "Operatori matematici"
+
+#: viewpart/UnicodeBlocks.h:81
+msgid "Miscellaneous Technical"
+msgstr "Tehnice, diverse"
+
+#: viewpart/UnicodeBlocks.h:82
+msgid "Control Pictures"
+msgstr "Imagini de control"
+
+#: viewpart/UnicodeBlocks.h:83
+msgid "Optical Character Recognition"
+msgstr "Recunoaștere optică a caracterelor"
+
+#: viewpart/UnicodeBlocks.h:84
+msgid "Enclosed Alphanumerics"
+msgstr "Alfanumerice anexate"
+
+#: viewpart/UnicodeBlocks.h:85
+msgid "Box Drawing"
+msgstr "Desenare casetă"
+
+#: viewpart/UnicodeBlocks.h:86
+msgid "Block Elements"
+msgstr "Elemente-bloc"
+
+#: viewpart/UnicodeBlocks.h:87
+msgid "Geometric Shapes"
+msgstr "Figuri geometrice"
+
+#: viewpart/UnicodeBlocks.h:88
+msgid "Miscellaneous Symbols"
+msgstr "Diverse simboluri"
+
+#: viewpart/UnicodeBlocks.h:89
+msgid "Dingbats"
+msgstr "Dingbats"
+
+#: viewpart/UnicodeBlocks.h:90
+msgid "Miscellaneous Mathematical Symbols-A"
+msgstr "Diverse simboluri matematice-A"
+
+#: viewpart/UnicodeBlocks.h:91
+msgid "Supplemental Arrows-A"
+msgstr "Săgeți suplimentare-A"
+
+#: viewpart/UnicodeBlocks.h:92
+msgid "Braille Patterns"
+msgstr "Șabloane Braille"
+
+#: viewpart/UnicodeBlocks.h:93
+msgid "Supplemental Arrows-B"
+msgstr "Săgeți suplimentare-B"
+
+#: viewpart/UnicodeBlocks.h:94
+msgid "Miscellaneous Mathematical Symbols-B"
+msgstr "Diverse simboluri matematice-B"
+
+#: viewpart/UnicodeBlocks.h:95
+msgid "Supplemental Mathematical Operators"
+msgstr "Operatori matematici suplimentari"
+
+#: viewpart/UnicodeBlocks.h:96
+msgid "Miscellaneous Symbols and Arrows"
+msgstr "Diverse simboluri și săgeți"
+
+#: viewpart/UnicodeBlocks.h:97 viewpart/UnicodeScripts.h:34
+msgid "Glagolitic"
+msgstr "Glagolitic"
+
+#: viewpart/UnicodeBlocks.h:98
+msgid "Latin Extended-C"
+msgstr "Latin extins-C"
+
+#: viewpart/UnicodeBlocks.h:99 viewpart/UnicodeScripts.h:26
+msgid "Coptic"
+msgstr "Coptic"
+
+#: viewpart/UnicodeBlocks.h:100
+msgid "Georgian Supplement"
+msgstr "Supliment georgian"
+
+#: viewpart/UnicodeBlocks.h:101 viewpart/UnicodeScripts.h:78
+msgid "Tifinagh"
+msgstr "Tifinagh"
+
+#: viewpart/UnicodeBlocks.h:102
+msgid "Ethiopic Extended"
+msgstr "Etiopian extins"
+
+#: viewpart/UnicodeBlocks.h:103
+msgid "Supplemental Punctuation"
+msgstr "Punctuație suplimentară"
+
+#: viewpart/UnicodeBlocks.h:104
+msgid "CJK Radicals Supplement"
+msgstr "Rădăcini suplimentare CJK"
+
+#: viewpart/UnicodeBlocks.h:105
+msgid "Kangxi Radicals"
+msgstr "Rădăcini Kangxi"
+
+#: viewpart/UnicodeBlocks.h:106
+msgid "Ideographic Description Characters"
+msgstr "Caractere de descriere ideografică"
+
+#: viewpart/UnicodeBlocks.h:107
+msgid "CJK Symbols and Punctuation"
+msgstr "Simboluri și punctuație CJK"
+
+#: viewpart/UnicodeBlocks.h:108 viewpart/UnicodeScripts.h:43
+msgid "Hiragana"
+msgstr "Hiragana"
+
+#: viewpart/UnicodeBlocks.h:109 viewpart/UnicodeScripts.h:46
+msgid "Katakana"
+msgstr "Katakana"
+
+#: viewpart/UnicodeBlocks.h:110 viewpart/UnicodeScripts.h:19
+msgid "Bopomofo"
+msgstr "Bopomofo"
+
+#: viewpart/UnicodeBlocks.h:111
+msgid "Hangul Compatibility Jamo"
+msgstr "Jamo pentru compatibilitate Hangul"
+
+#: viewpart/UnicodeBlocks.h:112
+msgid "Kanbun"
+msgstr "Kanbun"
+
+#: viewpart/UnicodeBlocks.h:113
+msgid "Bopomofo Extended"
+msgstr "Bopomofo extins"
+
+#: viewpart/UnicodeBlocks.h:114
+msgid "CJK Strokes"
+msgstr "Simboluri CJK"
+
+#: viewpart/UnicodeBlocks.h:115
+msgid "Katakana Phonetic Extensions"
+msgstr "Extensii fonetice Katakana"
+
+#: viewpart/UnicodeBlocks.h:116
+msgid "Enclosed CJK Letters and Months"
+msgstr "Litere și luni CJK înglobate"
+
+#: viewpart/UnicodeBlocks.h:117
+msgid "CJK Compatibility"
+msgstr "Compatibilitate CJK"
+
+#: viewpart/UnicodeBlocks.h:118
+msgid "CJK Unified Ideographs Extension A"
+msgstr "Ideograme unificate CJK extensia A"
+
+#: viewpart/UnicodeBlocks.h:119
+msgid "Yijing Hexagram Symbols"
+msgstr "Hexagrame Yijing"
+
+#: viewpart/UnicodeBlocks.h:120
+msgid "CJK Unified Ideographs"
+msgstr "Ideograme unificate CJK"
+
+#: viewpart/UnicodeBlocks.h:121
+msgid "Yi Syllables"
+msgstr "Silabe Yi"
+
+#: viewpart/UnicodeBlocks.h:122
+msgid "Yi Radicals"
+msgstr "Rădăcini Yi"
+
+#: viewpart/UnicodeBlocks.h:123
+msgid "Modifier Tone Letters"
+msgstr "Modificatori de ton"
+
+#: viewpart/UnicodeBlocks.h:124
+msgid "Latin Extended-D"
+msgstr "Latin extins-D"
+
+#: viewpart/UnicodeBlocks.h:125 viewpart/UnicodeScripts.h:68
+msgid "Syloti Nagri"
+msgstr "Syloti Nagri"
+
+#: viewpart/UnicodeBlocks.h:126
+msgid "Phags-pa"
+msgstr "Phags-pa"
+
+#: viewpart/UnicodeBlocks.h:127
+msgid "Hangul Syllables"
+msgstr "Silabe Hangul"
+
+#: viewpart/UnicodeBlocks.h:128
+msgid "High Surrogates"
+msgstr "Surogate superioare"
+
+#: viewpart/UnicodeBlocks.h:129
+msgid "High Private Use Surrogates"
+msgstr "Surogate de uz privat superioare"
+
+#: viewpart/UnicodeBlocks.h:130
+msgid "Low Surrogates"
+msgstr "Surogate inferioare"
+
+#: viewpart/UnicodeBlocks.h:131
+msgid "Private Use Area"
+msgstr "Zonă de utilizare privată"
+
+#: viewpart/UnicodeBlocks.h:132
+msgid "CJK Compatibility Ideographs"
+msgstr "Ideograme pentru compatibilitate CJK"
+
+#: viewpart/UnicodeBlocks.h:133
+msgid "Alphabetic Presentation Forms"
+msgstr "Forme de prezentare alfabetice"
+
+#: viewpart/UnicodeBlocks.h:134
+msgid "Arabic Presentation Forms-A"
+msgstr "Forme de prezentare arabe-A"
+
+#: viewpart/UnicodeBlocks.h:135
+msgid "Variation Selectors"
+msgstr "Selectori variație"
+
+#: viewpart/UnicodeBlocks.h:136
+msgid "Vertical Forms"
+msgstr "Forme verticale"
+
+#: viewpart/UnicodeBlocks.h:137
+msgid "Combining Half Marks"
+msgstr "Combinare de marcaje înjumătățite"
+
+#: viewpart/UnicodeBlocks.h:138
+msgid "CJK Compatibility Forms"
+msgstr "Forme pentru compatibilitate CJK"
+
+#: viewpart/UnicodeBlocks.h:139
+msgid "Small Form Variants"
+msgstr "Variante de formă mică"
+
+#: viewpart/UnicodeBlocks.h:140
+msgid "Arabic Presentation Forms-B"
+msgstr "Forme de prezentare arabe-B"
+
+#: viewpart/UnicodeBlocks.h:141
+msgid "Half-Width and Full-Width Forms"
+msgstr "Forme de lățime (semi)deplină"
+
+#: viewpart/UnicodeBlocks.h:142
+msgid "Specials"
+msgstr "Speciale"
+
+#: viewpart/UnicodeBlocks.h:143
+msgid "Linear B Syllabary"
+msgstr "Silabar B linear"
+
+#: viewpart/UnicodeBlocks.h:144
+msgid "Linear B Ideograms"
+msgstr "Ideograme B liniare"
+
+#: viewpart/UnicodeBlocks.h:145
+msgid "Aegean Numbers"
+msgstr "Numere egee"
+
+#: viewpart/UnicodeBlocks.h:146
+msgid "Ancient Greek Numbers"
+msgstr "Numere grecești străvechi"
+
+#: viewpart/UnicodeBlocks.h:147 viewpart/UnicodeScripts.h:59
+msgid "Old Italic"
+msgstr "Italic vechi"
+
+#: viewpart/UnicodeBlocks.h:148 viewpart/UnicodeScripts.h:35
+msgid "Gothic"
+msgstr "Gotic"
+
+#: viewpart/UnicodeBlocks.h:149 viewpart/UnicodeScripts.h:79
+msgid "Ugaritic"
+msgstr "Ugaritic"
+
+#: viewpart/UnicodeBlocks.h:150 viewpart/UnicodeScripts.h:60
+msgid "Old Persian"
+msgstr "Persan vechi"
+
+#: viewpart/UnicodeBlocks.h:151 viewpart/UnicodeScripts.h:30
+msgid "Deseret"
+msgstr "Deseret"
+
+#: viewpart/UnicodeBlocks.h:152 viewpart/UnicodeScripts.h:66
+msgid "Shavian"
+msgstr "Shavian"
+
+#: viewpart/UnicodeBlocks.h:153 viewpart/UnicodeScripts.h:62
+msgid "Osmanya"
+msgstr "Osmanya"
+
+#: viewpart/UnicodeBlocks.h:154
+msgid "Cypriot Syllabary"
+msgstr "Silabar cipriot"
+
+#: viewpart/UnicodeBlocks.h:155 viewpart/UnicodeScripts.h:64
+msgid "Phoenician"
+msgstr "Fenician"
+
+#: viewpart/UnicodeBlocks.h:156 viewpart/UnicodeScripts.h:47
+msgid "Kharoshthi"
+msgstr "Kharoshthi"
+
+#: viewpart/UnicodeBlocks.h:157 viewpart/UnicodeScripts.h:27
+msgid "Cuneiform"
+msgstr "Cuneiform"
+
+#: viewpart/UnicodeBlocks.h:158
+msgid "Cuneiform Numbers and Punctuation"
+msgstr "Numere și punctuație cuneiforme"
+
+#: viewpart/UnicodeBlocks.h:159
+msgid "Byzantine Musical Symbols"
+msgstr "Simboluri muzicale bizantine"
+
+#: viewpart/UnicodeBlocks.h:160
+msgid "Musical Symbols"
+msgstr "Simboluri muzicale"
+
+#: viewpart/UnicodeBlocks.h:161
+msgid "Ancient Greek Musical Notation"
+msgstr "Notație muzicală antică greacă"
+
+#: viewpart/UnicodeBlocks.h:162
+msgid "Tai Xuan Jing Symbols"
+msgstr "Simboluri Tai Xuan Jing"
+
+#: viewpart/UnicodeBlocks.h:163
+msgid "Counting Rod Numerals"
+msgstr "Numere cu bastonașe de numărat"
+
+#: viewpart/UnicodeBlocks.h:164
+msgid "Mathematical Alphanumeric Symbols"
+msgstr "Simboluri matematice alfanumerice"
+
+#: viewpart/UnicodeBlocks.h:165
+msgid "CJK Unified Ideographs Extension B"
+msgstr "Ideograme unificate CJK extensia B"
+
+#: viewpart/UnicodeBlocks.h:166
+msgid "CJK Compatibility Ideographs Supplement"
+msgstr "Supliment ideograme pentru compatibilitate CJK"
+
+#: viewpart/UnicodeBlocks.h:167
+msgid "Tags"
+msgstr "Marcaje"
+
+#: viewpart/UnicodeBlocks.h:168
+msgid "Variation Selectors Supplement"
+msgstr "Supliment selectori de variație"
+
+#: viewpart/UnicodeBlocks.h:169
+msgid "Supplementary Private Use Area-A"
+msgstr "Zona-A de uz privat suplimentară"
+
+#: viewpart/UnicodeBlocks.h:170
+msgid "Supplementary Private Use Area-B"
+msgstr "Zona-B de uz privat suplimentară"
+
+#: viewpart/UnicodeScripts.h:20
+msgid "Braille"
+msgstr "Braille"
+
+#: viewpart/UnicodeScripts.h:23
+msgid "Canadian Aboriginal"
+msgstr "Aborigen canadian"
+
+#: viewpart/UnicodeScripts.h:25
+msgid "Common"
+msgstr "Comun"
+
+#: viewpart/UnicodeScripts.h:28
+msgid "Cypriot"
+msgstr "Cipriot"
+
+#: viewpart/UnicodeScripts.h:36
+msgid "Greek"
+msgstr "Grec"
+
+#: viewpart/UnicodeScripts.h:39
+msgid "Han"
+msgstr "Han"
+
+#: viewpart/UnicodeScripts.h:40
+msgid "Hangul"
+msgstr "Hangul"
+
+#: viewpart/UnicodeScripts.h:44
+msgid "Inherited"
+msgstr "Moștenit"
+
+#: viewpart/UnicodeScripts.h:50
+msgid "Latin"
+msgstr "Latin"
+
+#: viewpart/UnicodeScripts.h:52
+msgid "Linear B"
+msgstr "Liniar B"
+
+#: viewpart/UnicodeScripts.h:57
+msgid "Nko"
+msgstr "Nko"
+
+#: viewpart/UnicodeScripts.h:63
+msgid "Phags Pa"
+msgstr "Phags Pa"
+
+#: viewpart/UnicodeScripts.h:80
+msgid "Yi"
+msgstr "Yi"
+
+#~ msgid "Print..."
+#~ msgstr "Imprimare..."
+
+#~ msgid "Create New Group..."
+#~ msgstr "Creare grup nou..."
+
+#~ msgid "Remove Group..."
+#~ msgstr "Eliminare grup..."
+
+#~ msgid "Install..."
+#~ msgstr "Instalează..."
+
+#~ msgid "FontViewPart"
+#~ msgstr "FontViewPart"
+
+#~ msgid "<p>No information</p>"
+#~ msgstr "<p>Nici o informație</p>"
+
+#~ msgid "Create a new group"
+#~ msgstr "Creează grup nou"
+
+#~ msgid "Enable all disabled fonts in the current group"
+#~ msgstr "Activează toate fonturile dezactivate în grupul curent"
+
+#~ msgid "Disable all enabled fonts in the current group"
+#~ msgstr "Dezactivează toate fonturile activate în grupul curent"
+
+#~ msgid "Please enter the name of the new group:"
+#~ msgstr "Introduceți denumirea noului grup:"
+
+#~ msgid "KDE Font Manager"
+#~ msgstr "Gestionar de fonturi KDE"
+
+#~ msgid "Type here to filter on %1"
+#~ msgstr "Tastați aici pentru a filtra pe %1"
+
+#~ msgid "Tools"
+#~ msgstr "Unelte"
+
+#~ msgid "Add..."
+#~ msgstr "Adăugare..."
+
+#~ msgid "Install fonts"
+#~ msgstr "Instalare fonturi"
+
+#~ msgid "Do you really want to move this font?"
+#~ msgid_plural ""
+#~ "<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?"
+#~ msgstr[0] "Sigur doriți să mutați acest font din <i>%2</i> în <i>%3</i>?"
+#~ msgstr[1] ""
+#~ "<p>Sigur doriți să mutați aceste %1 fonturi din <i>%2</i> în <i>%3</i>?"
+#~ msgstr[2] ""
+#~ "<p>Sigur doriți să mutați aceste %1 de fonturi din <i>%2</i> în <i>%3</i>?"
+
+#, fuzzy
+#~| msgid "Print..."
+#~ msgid "Starting..."
+#~ msgstr "Imprimare..."
+
+#, fuzzy
+#~| msgid "Canceling..."
+#~ msgid "Cancelling..."
+#~ msgstr "Se renunță..."
+
+#~ msgid "Failed to locate font printer."
+#~ msgstr "Eșec la localizarea imprimantei de fonturi."
+
+#~ msgid "Move Here"
+#~ msgstr "Mută aici"
+
+#~ msgid "Cancel"
+#~ msgstr "Renunță"
+
+#~ msgid " (<img src=\"%1\" />%2 <img src=\"%3\" />%4 <img src=\"%5\" />%6)"
+#~ msgstr " (<img src=\"%1\" />%2 <img src=\"%3\" />%4 <img src=\"%5\" />%6)"
+
+#~ msgid "Preview"
+#~ msgstr "Previzualizare"
+
+#, fuzzy
+#~| msgid "Show Large Preview"
+#~ msgid "Show Preview"
+#~ msgstr "Afișează previzualizare mare"
+
+#~ msgid ""
+#~ "Configure folder for X11 - create fonts.dir and fonts.scale, plus remove "
+#~ "hidden entries. (NOTE: Use this option on its own.)"
+#~ msgstr ""
+#~ "Configurare dosar pentru X11 - creare fonts.dir, plus eliminare "
+#~ "înregistrări ascunse. (Rețineți: Utilizați această opțiune de una "
+#~ "singură.)"
+
+#~ msgid ""
+#~ "Could not delete:\n"
+#~ "%1"
+#~ msgstr ""
+#~ "Nu s-a putut șterge:\n"
+#~ "„%1”"
+
+#~ msgid "Could not delete the following files:"
+#~ msgstr "Nu s-au putut șterge următoarele fișiere:"
+
+#~ msgctxt ""
+#~ "Title for a group that contains \"All Fonts\", \"Personal Fonts\", "
+#~ "\"System Fonts\" and \"Unclassified\""
+#~ msgid "Standard:"
+#~ msgstr "Standard:"
+
+#~ msgid "Custom:"
+#~ msgstr "Particularizat:"
+
+#~ msgid "%1 (Disabled)"
+#~ msgstr "%1 (dezactivat)"
+
+#~ msgid "%1 (Empty)"
+#~ msgstr "%1 (gol)"
+
+#~ msgid "%1 (Partial)"
+#~ msgstr "%1 (parțial)"
+
+#~ msgid "Copy Here"
+#~ msgstr "Copiază aici"
+
+#~ msgid "Rename Group"
+#~ msgstr "Redenumire grup"
+
+#~ msgid "Please enter a new name for group:"
+#~ msgstr "Introduceți noua denumire a grupului:"
+
+#~ msgid "Drop here to add the selected fonts to \"%1\"."
+#~ msgstr "Eliberați aici pentru a adăuga fonturile selectate la „%1”."
+
+#~ msgid "Drop here to remove the selected fonts from the current group."
+#~ msgstr ""
+#~ "Eliberați aici pentru a elimina fontuile selectate din grupul curent."
+
+#~ msgid ""
+#~ "Drop here to copy, or move, the selected fonts to your personal folder."
+#~ msgstr ""
+#~ "Eliberați aici pentru a copia sau muta fonturile selectate în dosarul "
+#~ "dumneavoastră personal."
+
+#~ msgid "Drop here to copy, or move, the selected fonts to the system folder."
+#~ msgstr ""
+#~ "Eliberați aici pentru a copia sau muta fonturile selectate în dosarul de "
+#~ "sistem."
+
+#~ msgid "Information"
+#~ msgstr "Informație"
+
+#~ msgid "Authorization Required"
+#~ msgstr "Autorizare necesară"
+
+#~ msgid ""
+#~ "The requested action requires administrator privileges.\n"
+#~ "If you have these privileges then please enter your password."
+#~ msgstr ""
+#~ "Acțiunea solicitată pretinde privilegii de administrator.\n"
+#~ "Dacă aveți aceste privilegii, atunci introduceți-vă parola."
+
+#~ msgid ""
+#~ "The requested action requires administrator privileges.\n"
+#~ "Please enter the system administrator's password."
+#~ msgstr ""
+#~ "Acțiunea solicitată pretinde privilegii de administrator.\n"
+#~ "Introduceți parola administratorului sistemului."
+
+#~ msgid "Insufficient privileges."
+#~ msgstr "Privilegii insuficiente."
+
+#~ msgid "Conversation with su failed."
+#~ msgstr "Conversația cu „su” a eșuat."
+
+#~ msgid "Incorrect password, please try again."
+#~ msgstr "Parolă incorectă, reîncercați."
+
+#~ msgid "Internal error: illegal return from SuProcess::checkInstall()"
+#~ msgstr ""
+#~ "Eroare internă: valoare ilegală primită de la SuProcess::checkInstall()"
+
+#~ msgid "Copying"
+#~ msgstr "Copiere"
+
+#~ msgid "Installing %1"
+#~ msgstr "Se instalează %1"
+
+#~ msgid "Copying %1"
+#~ msgstr "Se copiază %1"
+
+#~ msgid "Deleting %1"
+#~ msgstr "Se șterge %1"
+
+#~ msgid "Enabling %1"
+#~ msgstr "Se activează %1"
+
+#~ msgid "Disabling %1"
+#~ msgstr "Se dezactivează %1"
+
+#~ msgid "Moving %1"
+#~ msgstr "Se mută %1"
+
+#~ msgid "Success"
+#~ msgstr "Succes"
+
+#~ msgid ""
+#~ "GUI front-end to the fonts:/ ioslave.\n"
+#~ "(c) Craig Drummond, 2000 - 2007"
+#~ msgstr ""
+#~ "Interfață grafică pentru dispozitivul I/E fonts:/.\n"
+#~ "(c) Craig Drummond, 2000 - 2007"
+
+#~ msgid "Settings"
+#~ msgstr "Configurări"
+
+#~ msgid "Enable all selected fonts"
+#~ msgstr "Activează toate fonturile selectate"
+
+#~ msgid "Disable all selected fonts"
+#~ msgstr "Dezactivează toate fonturile selectate"
+
+#~ msgid "You did not select anything to copy."
+#~ msgstr "Nu ați selectat nimic de copiat."
+
+#~ msgid "Nothing to Copy"
+#~ msgstr "Nimic de copiat"
+
+#~ msgid "<p>Do you really want to copy</p><p>'<b>%1</b>'?</p>"
+#~ msgstr "<p>Sigur doriți să copiați</p><p>„<b>%1</b>”?</p>"
+
+#~ msgid "Copy Font"
+#~ msgstr "Copiere font"
+
+#~ msgid "Copy"
+#~ msgstr "Copiere"
+
+#~ msgid "Do you really want to copy this font?"
+#~ msgid_plural "Do you really want to copy these %1 fonts?"
+#~ msgstr[0] "Sigur doriți să copiați acest font?"
+#~ msgstr[1] "Sigur doriți să copiați aceste %1 fonturi?"
+#~ msgstr[2] "Sigur doriți să copiați aceste %1 de fonturi?"
+
+#~ msgid "Copying font(s)..."
+#~ msgstr "Copiere font(uri)..."
+
+#~ msgid " (%1 Enabled, %2 Disabled, %3 Partial)"
+#~ msgstr " (%1 activate, %2 dezactivate, %3 parțiale)"
+
+#~ msgid "Authorization Failed"
+#~ msgstr "Autorizare eșuată"
+
+#~ msgid "Invalid Font"
+#~ msgstr "Font nevalid"
+
+#~ msgid "Could not access \"%1\" folder."
+#~ msgstr "Nu pot accesa dosarul \"%1\"."
+
+#~ msgid "You cannot rename font folders"
+#~ msgstr "Nu puteți redenumi dosarele cu fonturi"
+
+#~ msgid "Sorry, fonts cannot be renamed."
+#~ msgstr "Fonturile nu pot fi redenumite."
+
+#~ msgid "Could not access \"%1\"."
+#~ msgstr "Nu s-a putut accesa „%1”."
+
+#~ msgid "Configuring installed fonts..."
+#~ msgstr "Configurare fonturi instalate..."
+
+#~ msgid "Incorrect password.\n"
+#~ msgstr "Parolă incorectă.\n"
+
+#~ msgid "Internal fontconfig error."
+#~ msgstr "Eroare internă „fontconfig”."
+
+#~ msgid "Duplicate Font"
+#~ msgstr "Font duplicat"
+
+#~ msgid "Enabled Font"
+#~ msgstr "Font activat"
+
+#~ msgid "Disabled Font"
+#~ msgstr "Font dezactivat"
+
+#~ msgid ""
+#~ "<p>You are attempting to move a font that is located in a file alongside "
+#~ "other fonts; in order to proceed with the move they will all have to be "
+#~ "moved. The affected fonts are:</p><ul>%1</ul><p>\n"
+#~ " Do you wish to move all of these?</p>"
+#~ msgstr ""
+#~ "<p>Încercați să mutați un font care se află într-un fișier alături de "
+#~ "alte fonturi. Pentru a-l muta, trebuiesc mutate toate. Celelalte fonturi "
+#~ "afectate sunt:</p><ul>%1</ul><p>\n"
+#~ " Doriți să le mutați pe toate?</p>"
+
+#~ msgid ""
+#~ "<p>You are attempting to copy a font that is located in a file alongside "
+#~ "other fonts; in order to proceed with the copy they will all have to be "
+#~ "copied. The affected fonts are:</p><ul>%1</ul><p>\n"
+#~ " Do you wish to copy all of these?</p>"
+#~ msgstr ""
+#~ "<p>Încercați să copiați un font care se află într-un fișier alături de "
+#~ "alte fonturi. Pentru a-l copia, trebuiesc copiate toate. Celelalte "
+#~ "fonturi afectate sunt:</p><ul>%1</ul><p>\n"
+#~ " Doriți să le copiați pe toate?</p>"
+
+#~ msgid ""
+#~ "<p>You are attempting to delete a font that is located in a file "
+#~ "alongside other fonts; in order to proceed with the deletion they will "
+#~ "all have to be deleted. The affected fonts are:</p><ul>%1</ul><p>\n"
+#~ " Do you wish to delete all of these?</p>"
+#~ msgstr ""
+#~ "<p>Încercați să ștergeți un font care se află într-un fișier alături de "
+#~ "alte fonturi. Pentru a-l șterge, trebuiesc șterse toate. Celelalte "
+#~ "fonturi afectate sunt:</p><ul>%1</ul><p>\n"
+#~ " Doriți să le ștergeți pe toate?</p>"
+
+#~ msgid ""
+#~ "<p>You are attempting to enable a font that is located in a file "
+#~ "alongside other fonts; in order to proceed with the enabling they will "
+#~ "all have to be enabled. The affected fonts are:</p><ul>%1</ul><p>\n"
+#~ " Do you wish to enable all of these?</p>"
+#~ msgstr ""
+#~ "<p>Încercați să activați un font care se află într-un fișier alături de "
+#~ "alte fonturi. Pentru a-l activa, trebuiesc activate toate. Celelalte "
+#~ "fonturi afectate sunt:</p><ul>%1</ul><p>\n"
+#~ " Doriți să le activați pe toate?</p>"
+
+#~ msgid ""
+#~ "<p>You are attempting to disable a font that is located in a file "
+#~ "alongside other fonts; in order to proceed with the disabling they will "
+#~ "all have to be disabled. The affected fonts are:</p><ul>%1</ul><p>\n"
+#~ " Do you wish to disable all of these?</p>"
+#~ msgstr ""
+#~ "<p>Încercați să dezactivați un font care se află într-un fișier alături "
+#~ "de alte fonturi. Pentru a-l dezactiva, trebuiesc dezactivate toate. "
+#~ "Celelalte fonturi afectate sunt:</p><ul>%1</ul><p>\n"
+#~ " Doriți să le dezactivați pe toate?</p>"
+
+#~ msgid "Enable..."
+#~ msgstr "Activare..."
+
+#~ msgid "Disable..."
+#~ msgstr "Dezactivare..."
+
+#~ msgid "Remove..."
+#~ msgstr "Eliminare..."
+
+#~ msgid "Delete..."
+#~ msgstr "Ștergere..."
+
+#~ msgid "Enable font"
+#~ msgstr "Activează fontul"
+
+#~ msgid "Disable font"
+#~ msgstr "Dezactivează fontul"
+
+#~ msgid "Disable fonts"
+#~ msgstr "Dezactivează fonturile"

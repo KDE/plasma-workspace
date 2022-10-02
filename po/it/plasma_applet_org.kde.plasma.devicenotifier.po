@@ -1,0 +1,243 @@
+# translation of plasma_applet_notifier.po to Italian
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Marcello Anni <marcello.anni@alice.it>, 2007, 2008, 2009.
+# Vincenzo Reale <smart2128vr@gmail.com>, 2009, 2010, 2014, 2018, 2019, 2020, 2021, 2022.
+# Nicola Ruggero <nicola@nxnt.org>, 2012, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_notifier\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-21 00:47+0000\n"
+"PO-Revision-Date: 2022-01-20 10:42+0100\n"
+"Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
+"Language-Team: Italian <kde-i18n-it@kde.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.12.1\n"
+
+#: package/contents/ui/DeviceItem.qml:180
+#, kde-format
+msgctxt "@info:status Free disk space"
+msgid "%1 free of %2"
+msgstr "%1 liberi di %2"
+
+#: package/contents/ui/DeviceItem.qml:184
+#, kde-format
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Accessing…"
+msgstr "Accesso in corso…"
+
+#: package/contents/ui/DeviceItem.qml:187
+#, kde-format
+msgctxt ""
+"Removing is a less technical word for Unmounting; translation should be "
+"short and mean 'Currently unmounting this device'"
+msgid "Removing…"
+msgstr "Rimozione in corso…"
+
+#: package/contents/ui/DeviceItem.qml:190
+#, kde-format
+msgid "Don't unplug yet! Files are still being transferred..."
+msgstr "Non scollegare ancora! I file sono ancora in fase di trasferimento..."
+
+#: package/contents/ui/DeviceItem.qml:221
+#, kde-format
+msgid "Open in File Manager"
+msgstr "Apri nel gestore dei file"
+
+#: package/contents/ui/DeviceItem.qml:224
+#, kde-format
+msgid "Mount and Open"
+msgstr "Monta e apri"
+
+#: package/contents/ui/DeviceItem.qml:226
+#, kde-format
+msgid "Eject"
+msgstr "Espelli"
+
+#: package/contents/ui/DeviceItem.qml:228
+#, kde-format
+msgid "Safely remove"
+msgstr "Rimuovi in sicurezza"
+
+#: package/contents/ui/DeviceItem.qml:270
+#, kde-format
+msgid "Mount"
+msgstr "Monta"
+
+#: package/contents/ui/FullRepresentation.qml:41
+#: package/contents/ui/main.qml:238
+#, kde-format
+msgid "Remove All"
+msgstr "Rimuovi tutto"
+
+#: package/contents/ui/FullRepresentation.qml:42
+#, kde-format
+msgid "Click to safely remove all devices"
+msgstr "Fai clic per rimuovere in modo sicuro tutti i dispositivi"
+
+#: package/contents/ui/FullRepresentation.qml:186
+#, kde-format
+msgid "No removable devices attached"
+msgstr "Nessun dispositivo rimovibile collegato"
+
+#: package/contents/ui/FullRepresentation.qml:186
+#, kde-format
+msgid "No disks available"
+msgstr "Nessun disco disponibile"
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid "Most Recent Device"
+msgstr "Dispositivo più recente"
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid "No Devices Available"
+msgstr "Nessun dispositivo disponibile"
+
+#: package/contents/ui/main.qml:245
+#, kde-format
+msgid "Removable Devices"
+msgstr "Dispositivi rimovibili"
+
+#: package/contents/ui/main.qml:251
+#, kde-format
+msgid "Non Removable Devices"
+msgstr "Dispositivi non rimovibili"
+
+#: package/contents/ui/main.qml:257
+#, kde-format
+msgid "All Devices"
+msgstr "Tutti i dispositivi"
+
+#: package/contents/ui/main.qml:265
+#, kde-format
+msgid "Show popup when new device is plugged in"
+msgstr "Mostra finestra a comparsa quando viene collegato un nuovo dispositivo"
+
+#: package/contents/ui/main.qml:274
+#, kde-format
+msgctxt "Open auto mounter kcm"
+msgid "Configure Removable Devices…"
+msgstr "Configura i dispositivi rimovibili…"
+
+#~ msgid "Show:"
+#~ msgstr "Mostra:"
+
+#~ msgid "General"
+#~ msgstr "Generale"
+
+#~ msgid ""
+#~ "It is currently <b>not safe</b> to remove this device: applications may "
+#~ "be accessing it. Click the eject button to safely remove this device."
+#~ msgstr ""
+#~ "Attualmente <b>non è sicuro</b> rimuovere questo dispositivo: potrebbe "
+#~ "essere usato da alcune applicazioni. Fai clic sul pulsante di espulsione "
+#~ "per rimuovere in modo sicuro il dispositivo."
+
+#~ msgid "This device is currently accessible."
+#~ msgstr "Il dispositivo è attualmente accessibile."
+
+#~ msgid ""
+#~ "It is currently <b>not safe</b> to remove this device: applications may "
+#~ "be accessing other volumes on this device. Click the eject button on "
+#~ "these other volumes to safely remove this device."
+#~ msgstr ""
+#~ "Attualmente <b>non è sicuro</b> rimuovere questo dispositivo: alcune "
+#~ "applicazioni potrebbero accedere ad altri volumi su questo dispositivo. "
+#~ "Fai clic sul pulsante di espulsione presente su tali volumi per rimuovere "
+#~ "in modo sicuro il dispositivo."
+
+#~ msgid "It is currently safe to remove this device."
+#~ msgstr "È ora possibile rimuovere in modo sicuro il dispositivo."
+
+#~ msgid "This device is not currently accessible."
+#~ msgstr "Il dispositivo è attualmente inaccessibile."
+
+#~ msgid "1 action for this device"
+#~ msgid_plural "%1 actions for this device"
+#~ msgstr[0] "1 azione per questo dispositivo"
+#~ msgstr[1] "%1 azioni per questo dispositivo"
+
+#~ msgid "Click to access this device from other applications."
+#~ msgstr "Fai clic per accedere al dispositivo da altre applicazioni."
+
+#~ msgid "Click to eject this disc."
+#~ msgstr "Fai clic per espellere il disco."
+
+#~ msgid "Click to safely remove this device."
+#~ msgstr "Fai clic per rimuovere in modo sicuro il dispositivo."
+
+#~ msgid "Click to mount this device."
+#~ msgstr "Fai clic per montare il dispositivo."
+
+#~ msgid "Available Devices"
+#~ msgstr "Dispositivi disponibili"
+
+#~ msgid "This device is currently not accessible."
+#~ msgstr "Il dispositivo non è attualmente accessibile."
+
+#~ msgid "Display"
+#~ msgstr "Visualizza"
+
+#~ msgid "Automounting"
+#~ msgstr "Montaggio automatico"
+
+#~ msgid "Show hidden devices"
+#~ msgstr "Mostra i dispositivi nascosti"
+
+#~ msgctxt "Hide a device"
+#~ msgid "Hide %1"
+#~ msgstr "Nascondi %1"
+
+#~ msgid "Device is plugged in and can be accessed by applications."
+#~ msgstr "Il dispositivo è collegato e le applicazioni possono accedervi."
+
+#~ msgid "Device is plugged in, but not mounted for access yet."
+#~ msgstr "Il dispositivo è collegato, ma non ancora montato."
+
+#~ msgid ""
+#~ "Could not unmount the device.\n"
+#~ "One or more files on this device are open within an application."
+#~ msgstr ""
+#~ "Impossibile smontare il dispositivo.\n"
+#~ "Uno o più file su questo dispositivo sono aperti da un'applicazione."
+
+#~ msgid ""
+#~ "Cannot eject the disc.\n"
+#~ "One or more files on this disc are open within an application."
+#~ msgstr ""
+#~ "Impossibile rimuovere il disco.\n"
+#~ "Uno o più file su questo disco sono aperti da un'applicazione."
+
+#~ msgid "Cannot mount the disc."
+#~ msgstr "Impossibile montare il disco."
+
+#~ msgid "Devices recently plugged in:"
+#~ msgstr "Dispositivi collegati di recente:"
+
+#~ msgid "&Time to stay on top:"
+#~ msgstr "&Tempo in evidenza:"
+
+#~ msgid " sec"
+#~ msgstr " sec"
+
+#~ msgid "&Number of items displayed:"
+#~ msgstr "&Numero di elementi mostrati:"
+
+#~ msgid "Unlimited"
+#~ msgstr "Senza limite"
+
+#~ msgid "&Display time of items:"
+#~ msgstr "Tempo di &visualizzazione degli elementi:"
+
+#~ msgid "Configure New Device Notifier"
+#~ msgstr "Configura gestore notifiche dei nuovi dispositivi"

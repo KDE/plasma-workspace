@@ -1,0 +1,369 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Victor Ibragimov <victor.ibragimov@gmail.com>, 2009, 2019, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_desktopthemedetails\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"PO-Revision-Date: 2021-09-09 23:30-0700\n"
+"Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
+"Language-Team: Tajik Language Support\n"
+"Language: tg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.08.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Get New Plasma Styles..."
+msgid "Name of the current Plasma Style"
+msgstr "Гирифтани услубҳои нави Плазма..."
+
+#: kcm.cpp:108
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Файли муваққатӣ эҷод карда нашуд."
+
+#: kcm.cpp:119
+#, kde-format
+msgid "Unable to download the theme: %1"
+msgstr "Мавзӯи зерин боргирӣ карда нашуд: %1"
+
+#: kcm.cpp:144
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "Мавзӯъ бо муваффақият насб карда шуд."
+
+#: kcm.cpp:147 kcm.cpp:153
+#, kde-format
+msgid "Theme installation failed."
+msgstr "Насбкунии мавзӯъ қатъ шуд."
+
+#: kcm.cpp:245
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr "Тозакунии мавзӯи зерин қатъ шуд: %1"
+
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "This module lets you choose the Plasma style."
+msgstr "Модули ҷорӣ ба шумо барои интихоб кардани услуби Плазма имкон медиҳад."
+
+#: package/contents/ui/main.qml:69
+#, fuzzy, kde-format
+#| msgid "Open Theme"
+msgid "All Themes"
+msgstr "Кушодани мавзӯъ"
+
+#: package/contents/ui/main.qml:70
+#, kde-format
+msgid "Light Themes"
+msgstr "Мавзӯъҳои равшан"
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgid "Dark Themes"
+msgstr "Мавзӯъҳои торик"
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "Color scheme compatible"
+msgstr ""
+
+#: package/contents/ui/main.qml:100
+#, fuzzy, kde-format
+#| msgctxt "plasma name"
+#| msgid "Color Scheme"
+msgid "Follows color scheme"
+msgstr "Нақшаи рангин"
+
+#: package/contents/ui/main.qml:118
+#, fuzzy, kde-format
+#| msgid "Edit Theme..."
+msgid "Edit Theme…"
+msgstr "Таҳрир кардани мавзӯъ…"
+
+#: package/contents/ui/main.qml:125
+#, kde-format
+msgid "Remove Theme"
+msgstr "Тоза кардани мавзӯъ"
+
+#: package/contents/ui/main.qml:132
+#, kde-format
+msgid "Restore Theme"
+msgstr "Барқарор кардани мавзӯъ"
+
+#: package/contents/ui/main.qml:174
+#, fuzzy, kde-format
+#| msgid "Install from File..."
+msgid "Install from File…"
+msgstr "Аз файл насб кардан..."
+
+#: package/contents/ui/main.qml:179
+#, fuzzy, kde-format
+#| msgid "Get New Plasma Styles..."
+msgid "Get New Plasma Styles…"
+msgstr "Гирифтани услубҳои нави Плазма..."
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Open Theme"
+msgstr "Кушодани мавзӯъ"
+
+#: package/contents/ui/main.qml:195
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr "Файлҳои мавзӯъ (*.zip *.tar.gz *.tar.bz2)"
+
+#: plasma-apply-desktoptheme.cpp:31
+#, kde-format
+msgid ""
+"This tool allows you to set the theme of the current Plasma session, without "
+"accidentally setting it to one that is either not available, or which is "
+"already set."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:35
+#, kde-format
+msgid ""
+"The name of the theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:36
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:49
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:65
+#, kde-format
+msgid "The current Plasma session's theme has been set to %1"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:67
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:75
+#, kde-format
+msgid "You have the following Plasma themes on your system:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Victor Ibragimov"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "victor.ibragimov@gmail.com"
+
+#~ msgid "Plasma Style"
+#~ msgstr "Услуби Плазма"
+
+#~ msgid "David Rosca"
+#~ msgstr "Дэвид Рока (David Rosca)"
+
+#, fuzzy
+#~| msgid "Plasma Style"
+#~ msgid "Plasma Styles"
+#~ msgstr "Услуби Плазма"
+
+#~ msgid "Download New Plasma Styles"
+#~ msgstr "Боргирӣ кардани услубҳои нави Плазма"
+
+#, fuzzy
+#~| msgid "Remove Desktop Theme"
+#~ msgid "Configure Desktop Theme"
+#~ msgstr "Мавзӯъи мизи кориро тоза кунед"
+
+#, fuzzy
+#~| msgid "Export Desktop Theme"
+#~ msgid "KDE Desktop Theme Module"
+#~ msgstr "Ворид кардани мавзӯъи мизи корӣ"
+
+#~ msgctxt "plasma name"
+#~ msgid "Panel Background"
+#~ msgstr "Паенли замина"
+
+#~ msgctxt "plasma name"
+#~ msgid "Kickoff"
+#~ msgstr "Kickoff"
+
+#~ msgctxt "plasma name"
+#~ msgid "Task Items"
+#~ msgstr "Ҷузъҳои вазифа"
+
+#~ msgctxt "plasma name"
+#~ msgid "Widget Background"
+#~ msgstr "Виҷетҳои замина"
+
+#~ msgctxt "plasma name"
+#~ msgid "Translucent Background"
+#~ msgstr "Заминаи шаффофӣ"
+
+#~ msgctxt "plasma name"
+#~ msgid "Dialog Background"
+#~ msgstr "Диалоги замина"
+
+#~ msgctxt "plasma name"
+#~ msgid "Analog Clock"
+#~ msgstr "Соати аналогӣ"
+
+#~ msgctxt "plasma name"
+#~ msgid "Notes"
+#~ msgstr "Ёддоштҳо"
+
+#~ msgctxt "plasma name"
+#~ msgid "Tooltip"
+#~ msgstr "Иттилоот"
+
+#~ msgctxt "plasma name"
+#~ msgid "Pager"
+#~ msgstr "Пейҷер"
+
+#~ msgctxt "plasma name"
+#~ msgid "Run Command Dialog"
+#~ msgstr "Иҷрои фармони диалог"
+
+#~ msgctxt "plasma name"
+#~ msgid "Shutdown Dialog"
+#~ msgstr "Диалоги хомӯш кардан"
+
+#~ msgid "(Customized)"
+#~ msgstr "(Тағйиршуда)"
+
+#~ msgid "User customized theme"
+#~ msgstr "Мавзӯъи тағйиршуда"
+
+#~ msgid ""
+#~ "Theme items have been changed.  Do you still wish remove the \"%1\" theme?"
+#~ msgstr ""
+#~ "Чизҳои мавзӯъ тағйир карда шудаанд.  Оё Шумо мехоҳед мавзӯъи \"%1\"ро "
+#~ "тоза намоед?"
+
+#~ msgid "Removal of the default desktop theme is not allowed."
+#~ msgstr "Невозможно удалить тему KDE по умолчанию."
+
+#~ msgid "Are you sure you wish remove the \"%1\" theme?"
+#~ msgstr "Оё Шумо мехоҳед мавзӯъи \"%1\"ро тоза намоед?"
+
+#~ msgid ""
+#~ "Please apply theme item changes (with a new theme name) before attempting "
+#~ "to export theme."
+#~ msgstr ""
+#~ "Пеш аз ворид кардани ин мавзӯъ, лутфан, тағйиротҳоро (бо номи мавзӯъи "
+#~ "нав) қабул кунед."
+
+#~ msgid "Export Desktop Theme"
+#~ msgstr "Ворид кардани мавзӯъи мизи корӣ"
+
+#~ msgid "Export theme to file"
+#~ msgstr "Ворид кардани мавзӯъ ба файл"
+
+#~ msgid "Theme Item"
+#~ msgstr "Чизи мавзӯъ"
+
+#~ msgid "Source"
+#~ msgstr "Манбаъ"
+
+#, fuzzy
+#~| msgid "%1 %2"
+#~ msgctxt ""
+#~ "%1 is the name of the theme, %2 is the type of the element (background, "
+#~ "icon, note, etc)"
+#~ msgid "%1 %2"
+#~ msgstr "%1 %2"
+
+#~ msgid "File..."
+#~ msgstr "Файл..."
+
+#~ msgid "Select File to Use for %1"
+#~ msgstr "Интихоби файл барои истифодаи он бо %1"
+
+#~ msgid " Author: %1"
+#~ msgstr "Муаллиф: %1"
+
+#~ msgid "Version: %1"
+#~ msgstr "Версия: %1"
+
+#~ msgid "Desktop Theme Details"
+#~ msgstr "Тафсилоти мавзӯъи мизи корӣ"
+
+#~ msgid "More"
+#~ msgstr "Бештар"
+
+#, fuzzy
+#~| msgid "Remove Desktop Theme"
+#~ msgid "Remove the selected theme"
+#~ msgstr "Мавзӯъи мизи кориро тоза кунед"
+
+#~ msgid "Export Theme to File..."
+#~ msgstr "Ворид кардани мавзӯъ ба файл..."
+
+#~ msgid "New theme name:"
+#~ msgstr "Номи мавзӯъи нав:"
+
+#, fuzzy
+#~| msgid "New theme name:"
+#~ msgid "Custom theme name"
+#~ msgstr "Номи мавзӯъи нав:"
+
+#~ msgid "Author:"
+#~ msgstr "Муаллиф:"
+
+#, fuzzy
+#~| msgid "Theme Author"
+#~ msgid "Custom theme author "
+#~ msgstr "Муаллифи мавзӯъ"
+
+#~ msgid "Version:"
+#~ msgstr "Версия:"
+
+#, fuzzy
+#~| msgid "New theme name:"
+#~ msgid "Custom theme version number"
+#~ msgstr "Номи мавзӯъи нав:"
+
+#~ msgid "Description:"
+#~ msgstr "Тавсиф:"
+
+#, fuzzy
+#~| msgid "The theme description goes here..."
+#~ msgid "Custom theme description"
+#~ msgstr "Тасвироти мавзӯъро дар ин ҷо мебошад..."
+
+#~ msgid "Select theme from above to customize"
+#~ msgstr "Мавзӯъи дигарро интихоб кунед"
+
+#~ msgid "Theme Author"
+#~ msgstr "Муаллифи мавзӯъ"
+
+#~ msgid "Theme Name"
+#~ msgstr "Номи мавзӯъ"
+
+#~ msgid "Theme Version"
+#~ msgstr "Версияи мавзӯъ"
+
+#~ msgid "The theme description goes here..."
+#~ msgstr "Тасвироти мавзӯъро дар ин ҷо мебошад..."
+
+#, fuzzy
+#~| msgid "Remove Desktop Theme"
+#~ msgid "KCMDesktopTheme"
+#~ msgstr "Мавзӯъи мизи кориро тоза кунед"

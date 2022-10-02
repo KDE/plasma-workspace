@@ -1,0 +1,267 @@
+# translation of ksmserver.po to Dutch
+# translation of ksmserver.po to
+# translation of ksmserver.po to
+# KTranslator Generated File
+# Nederlandse vertaling van ksmserver.po
+# Copyright (C) 2000-2002 KDE e.v..
+# Copyright (C) 2000-2002 KDE-Nederlands team<i18n@kde.nl>, 2000.
+# Proefgelezen door Onno Zweers, 21-5-2002.
+# Rinse de Vries <Rinse@kde.nl>, 2000-2002.
+# Wilbert Berendsen <wbsoft@xs4all.nl>, 2003.
+# Rinse de Vries <rinse@kde.nl>, 2004.
+# Tom Albers <tomalbers@kde.nl>, 2004.
+# Rinse de Vries <rinsedevries@kde.nl>, 2004, 2005, 2007, 2008.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2009, 2010, 2012, 2013, 2014, 2015, 2018, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: ksmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-22 00:47+0000\n"
+"PO-Revision-Date: 2020-04-25 12:45+0200\n"
+"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 19.12.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: logout.cpp:344
+#, kde-format
+msgid "Logout canceled by '%1'"
+msgstr "Afmelden geannuleerd door '%1'"
+
+#: main.cpp:117
+#, kde-format
+msgid "$HOME not set!"
+msgstr "$HOME niet ingesteld!"
+
+#: main.cpp:121 main.cpp:127
+#, kde-format
+msgid "$HOME directory (%1) does not exist."
+msgstr "Map $HOME (%1) bestaat niet."
+
+#: main.cpp:123
+#, kde-format
+msgid "No write access to $HOME directory (%1)."
+msgstr "Geen schrijftoegang tot map $HOME (%1)."
+
+#: main.cpp:129
+#, kde-format
+msgid "No read access to $HOME directory (%1)."
+msgstr "Geen leestoegang tot map $HOME (%1)."
+
+#: main.cpp:133
+#, kde-format
+msgid "$HOME directory (%1) is out of disk space."
+msgstr "Map $HOME (%1) heeft geen ruimte op schijf meer."
+
+#: main.cpp:136
+#, kde-format
+msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+msgstr "Schrijven naar de map $HOME (%2) is mislukt met de fout '%1'"
+
+#: main.cpp:149 main.cpp:184
+#, kde-format
+msgid "No write access to '%1'."
+msgstr "Geen schrijftoegang tot '%1'."
+
+#: main.cpp:151 main.cpp:186
+#, kde-format
+msgid "No read access to '%1'."
+msgstr "Geen leestoegang tot '%1'."
+
+#: main.cpp:159 main.cpp:172
+#, kde-format
+msgid "Temp directory (%1) is out of disk space."
+msgstr "Tijdelijke map (%1) heeft geen ruimte op schijf meer."
+
+#: main.cpp:162 main.cpp:175
+#, kde-format
+msgid ""
+"Writing to the temp directory (%2) failed with\n"
+"    the error '%1'"
+msgstr ""
+"Schrijven naar de tijdelijke map (%2) is mislukt\n"
+"    met de fout '%1'"
+
+#: main.cpp:190
+#, kde-format
+msgid ""
+"The following installation problem was detected\n"
+"while trying to start Plasma:"
+msgstr ""
+"Het volgende installatieprobleem is gedetecteerd\n"
+"bij een poging om Plasma te starten:"
+
+#: main.cpp:193
+#, kde-format
+msgid ""
+"\n"
+"\n"
+"Plasma is unable to start.\n"
+msgstr ""
+"\n"
+"\n"
+"Plasma kan niet starten.\n"
+
+#: main.cpp:200
+#, kde-format
+msgid "Plasma Workspace installation problem!"
+msgstr "Installatieprobleem van Plasma Workspace!"
+
+#: main.cpp:236
+#, kde-format
+msgid ""
+"The reliable Plasma session manager that talks the standard X11R6 \n"
+"session management protocol (XSMP)."
+msgstr ""
+"De betrouwbare Plasma-sessiebeheerder die het standaard X11R6-\n"
+"sessiebeheerprotocol (XSMP) gebruikt."
+
+#: main.cpp:240
+#, kde-format
+msgid "Restores the saved user session if available"
+msgstr "Herstelt, indien beschikbaar, de vorige sessie"
+
+#: main.cpp:243
+#, kde-format
+msgid "Also allow remote connections"
+msgstr "Ook externe verbindingen toestaan"
+
+#: main.cpp:246
+#, kde-format
+msgid "Starts the session in locked mode"
+msgstr "Start de sessie in de modus vergrendeld"
+
+#: main.cpp:250
+#, kde-format
+msgid ""
+"Starts without lock screen support. Only needed if other component provides "
+"the lock screen."
+msgstr ""
+"Start zonder ondersteuning van schermvergrendeling. Is alleen nodig als een "
+"andere component de schermvergrendeling levert."
+
+#: server.cpp:873
+#, kde-format
+msgid "Session Management"
+msgstr "Sessiebeheer"
+
+#: server.cpp:876
+#, kde-format
+msgid "Log Out"
+msgstr "Afmelden"
+
+#: server.cpp:881
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "Afmelden zonder bevestiging"
+
+#: server.cpp:886
+#, kde-format
+msgid "Halt Without Confirmation"
+msgstr "Computer afsluiten zonder bevestiging"
+
+#: server.cpp:891
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "Computer herstarten zonder bevestiging"
+
+#~ msgid ""
+#~ "Starts <wm> in case no other window manager is \n"
+#~ "participating in the session. Default is 'kwin'"
+#~ msgstr ""
+#~ "Start <wm> als er geen andere windowmanager \n"
+#~ "meedoet in de sessie. Standaard is 'kwin'"
+
+#~ msgid "wm"
+#~ msgstr "wm"
+
+#~ msgid "Shut Down"
+#~ msgstr "Systeem afsluiten"
+
+#~ msgid "Reboot"
+#~ msgstr "Systeem herstarten"
+
+#~ msgid "Logout"
+#~ msgstr "Afmelden"
+
+#~ msgid "Sleeping in 1 second"
+#~ msgid_plural "Sleeping in %1 seconds"
+#~ msgstr[0] "Na 1 seconde gaan slapen"
+#~ msgstr[1] "Na %1 seconden gaan slapen"
+
+#~ msgid "Lock"
+#~ msgstr "Vergrendelen"
+
+#~ msgid "ksmserver"
+#~ msgstr "ksmserver"
+
+#~ msgid "Turn off"
+#~ msgstr "Uitschakelen"
+
+#~ msgid "Sleep"
+#~ msgstr "Slapen"
+
+#~ msgid "Logging out in 1 second."
+#~ msgid_plural "Logging out in %1 seconds."
+#~ msgstr[0] "Na 1 seconde afmelden."
+#~ msgstr[1] "Na %1 seconden afmelden."
+
+#~ msgid "Turning off computer in 1 second."
+#~ msgid_plural "Turning off computer in %1 seconds."
+#~ msgstr[0] "Computer na 1 seconde uitschakelen."
+#~ msgstr[1] "Computer na %1 seconden uitschakelen."
+
+#~ msgid "Restarting computer in 1 second."
+#~ msgid_plural "Restarting computer in %1 seconds."
+#~ msgstr[0] "Computer na 1 seconde opnieuw opstarten."
+#~ msgstr[1] "Computer na %1 seconden opnieuw opstarten."
+
+#~ msgid "Turn Off Computer"
+#~ msgstr "Computer uitschakelen"
+
+#~ msgid "Restart Computer"
+#~ msgstr "Computer herstarten"
+
+#~ msgctxt "default option in boot loader"
+#~ msgid " (default)"
+#~ msgstr " (standaard)"
+
+#~ msgid "Cancel"
+#~ msgstr "Annuleren"
+
+#~ msgid "&Standby"
+#~ msgstr "Waak&stand"
+
+#~ msgid "Suspend to &RAM"
+#~ msgstr "&RAM-slaapstand"
+
+#~ msgid "Suspend to &Disk"
+#~ msgstr "Schijf-slaapstan&d"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Niels Reedijk,Rinse de Vries,Wilbert Berendsen"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ",rinsedevries@kde.nl,wilbertberendsen@kde.nl"
+
+#~ msgid "(C) 2000, The KDE Developers"
+#~ msgstr "(C) 2000, de KDE-ontwikkelaars"
+
+#~ msgid "Matthias Ettrich"
+#~ msgstr "Matthias Ettrich"
+
+#~ msgid "Luboš Luňák"
+#~ msgstr "Luboš Luňák"
+
+#~ msgid "Maintainer"
+#~ msgstr "Onderhouder"
+
+#~ msgctxt "current option in boot loader"
+#~ msgid " (current)"
+#~ msgstr " (huidige)"

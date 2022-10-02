@@ -1,0 +1,228 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Dutch "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="fonts" lang="&language;">
+<articleinfo>
+<title
+>Lettertypen</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+&Niels.Reedijk;&Sander.Koning; 
+</authorgroup>
+
+<date
+>2021-04-09</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>lettertypen</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_fonts">
+
+<title
+>Lettertypen</title>
+
+<para
+>Deze module is bedoeld om u de mogelijkheid te geven om gemakkelijk verschillende lettertypen te kunnen selecteren voor de verschillende onderdelen van de &kde; Desktop.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Een schermafdruk van de instellingenmodule voor lettertypen</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>De module voor het instellen van lettertypen</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Deze module bevat verschillende lettertype groepen om u heel flexibel te laten zijn in het instellen van uw lettertypen: </para>
+
+<itemizedlist>
+<listitem
+><para
+><guilabel
+>Algemeen:</guilabel
+> Wordt overal gebruikt waar de overige groepen lettertypen niet van toepassing zijn</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Vaste breedte:</guilabel
+> Overal waar een niet-proportioneel lettertype is aangegeven</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Klein:</guilabel
+> Wanneer kleine lettertypen worden gebruikt</para
+></listitem
+> 
+
+<listitem
+><para
+><guilabel
+>Werkbalk:</guilabel
+> Het lettertype dat in de werkbalken van &kde;-toepassingen wordt gebruikt</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Menu:</guilabel
+> Het lettertype dat wordt gebruikt in de menu's van &kde;-toepassingen)</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Venstertitels:</guilabel
+> Het lettertype dat wordt gebruikt in de venstertitels</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Taakbalk:</guilabel
+> Het lettertype dat in de taakbalk wordt gebruikt</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Bureaublad</guilabel
+>: Het lettertype dat wordt gebruikt voor de tekst bij bureaubladpictogrammen</para
+></listitem>
+
+</itemizedlist>
+
+<para
+>Elk lettertype heeft een corresponderende knop <guibutton
+>Kiezen...</guibutton
+>. Door op deze knop te klikken verschijnt er een dialoogvenster. U kunt dit dialoogvenster gebruiken om een nieuw lettertype, stijl en grootte te kiezen. Vervolgens kunt op <guibutton
+>OK</guibutton
+> klikken om de verandering door te voeren.</para>
+
+<para
+>Activeer het item <guilabel
+>Alleen lettertypen met gelijke afstanden tonen</guilabel
+> om alle variabele breedte lettertypen uit de lijst te filteren.</para>
+
+<para
+>Een voorbeeld van het lettertype dat u heeft gekozen verschijnt in het de ruimte tussen de naam van de lettertypegroep en de knop "Kiezen...".</para>
+
+<para
+>Wanneer u klaar bent klikt u op <guibutton
+>OK</guibutton
+>, en alle componenten van &kde; worden herstart zodat uw veranderingen meteen effect hebben.</para>
+
+<para
+>De knop <guibutton
+>Alle lettertypen aanpassen...</guibutton
+> geeft u de mogelijkheid om snel een eigenschap of alle eigenschappen in te stellen voor alle hierboven geselecteerde lettertypen. Een lettertype-selectievenster vergelijkbaar met het standaard dialoogvenster zal verschijnen en u de mogelijkheid geven om het <guilabel
+>Lettertype</guilabel
+>, de <guilabel
+>Tekenstijl</guilabel
+> of de <guilabel
+>Grootte</guilabel
+> onafhankelijk van elkaar in te stellen. U kunt één, twee of drie van deze opties kiezen en ze zullen worden toegepast op alle lettertypegroepen.</para>
+
+<para
+>Activeer het item <guilabel
+>Alleen lettertypen met gelijke afstanden tonen</guilabel
+> om alle variabele breedte lettertypen uit de lijst te filteren.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Alle lettertypen aanpassen</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="adjust-all.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>De dialoog voor "Alle lettertypen aanpassen..."</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Als u bijvoorbeeld verschillende lettertypen heeft gekozen en vindt dat deze een maat te groot zijn (dit gebeurt vaak wanneer u &bijv; van schermresolutie wisselt) dan kunt u een nieuwe grootte op alle lettertypen toepassen zonder dat de lettertypen en stijlen zelf wijzigen.</para>
+
+<sect2 id="fonts-aa">
+<title
+>Anti-aliasing gebruiken voor tekst</title>
+
+<para
+>Om instellingen  voor anti-aliasing te gebruiken, activeer het item <guilabel
+>Ingeschakeld</guilabel
+> en selecteer eigen instellingen.</para>
+
+<para
+>Het keuzevakje <guilabel
+>Bereik van anti-aliasing uitsluiten</guilabel
+> biedt dat anti-aliasing <emphasis
+>niet</emphasis
+> voor bepaalde tekengroottes wordt toegepast. Het bereik stelt u in met twee combolijsten eronder.</para>
+
+<para
+>U kunt ook de methode kiezen die voor anti-aliasing van uw lettertypen en hoe sterk deze toegepast dient te worden met wijzigen van de <ulink url="https://en.wikipedia.org/wiki/Subpixel_rendering"
+> Sub-pixel rendering</ulink
+> en <ulink url="https://en.wikipedia.org/wiki/Font_hinting"
+> font hinting</ulink
+>. Het is ook mogelijk om <guilabel
+>DPI van lettertype af te dwingen</guilabel
+> voor de <ulink url="https://en.wikipedia.org/wiki/Dots_per_inch"
+> schermrendering</ulink
+>. Als u deze opties niet kent, kunt u het beste deze zo laten staan.</para>
+
+<note
+><para
+>De mogelijkheid om letters en pictogrammen te anti-aliasen vereist dat u ondersteuning in zowel de schermserver als in de &Qt; toolkit hebt, dat u geschikte lettertypen hebt geïnstalleerd, en dat u gebruik maakt van de ingebouwde lettertypemogelijkheid van de schermserver. Als u nog steeds problemen heeft, neem dan contact op met de juiste &kde; e-maillijst.</para
+></note>
+
+</sect2>
+
+<sect2 id="fonts-dpi">
+<title
+>Lettertypen DPI</title>
+
+<para
+><guilabel
+>Forceer lettertypen DPI:</guilabel
+> stelt een alternatieve DPI voor anders dan uw die van uw systeem, die wordt gebruikt als standaard wanneer deze instelling is <guilabel
+>Uitgeschakeld</guilabel
+>. U kunt controleren op welke DPI uw X-server is ingesteld door het uitvoeren van <userinput
+>xdpyinfo | grep resolution</userinput
+> in een terminalvenster en dan de DPI wijzigen met het afrolvak. Dit zal alleen worden gebruikt door nieuw opgestarte applicaties.</para>
+</sect2>
+
+</sect1>
+
+</article>

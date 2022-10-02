@@ -1,0 +1,246 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % French "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="fontinst" lang="&language;">
+<title
+>Gestion des polices</title>
+<articleinfo>
+<authorgroup>
+<author
+>&Craig.Drummond; &Craig.Drummond.Mail;</author>
+
+&traducteurLudovicGrossard; &traducteurYvesDessertine; &traducteurPierreBuard; &traducteurXavierBesnard; 
+</authorgroup>
+
+<date
+>09-04-2021</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Configuration du système</keyword>
+<keyword
+>polices</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_fontinst">
+<title
+>Gestion des polices</title>
+
+<para
+>Ce module permet d'installer, désinstaller, afficher et gérer vos polices.</para>
+
+<sect2 id="font-groups">
+<title
+>Groupes de polices</title>
+<para
+>Il y a quatre groupes de polices spéciaux prédéfinis :</para>
+
+<orderedlist>
+    <listitem
+><para
+><quote
+>Toutes les polices</quote
+> affiche toutes les polices, personnelles et système,</para
+></listitem>
+    <listitem
+><para
+><quote
+>Polices personnelles</quote
+> ces polices sont les vôtre et ne seront pas mises à disposition des autres utilisateurs,</para
+></listitem>
+    <listitem
+><para
+><quote
+>Polices du système</quote
+> ces polices sont accessibles à tous les utilisateurs ; installer ou supprimer une police pour tout le système nécessite les droits « administrateur »,</para
+></listitem>
+    <listitem
+><para
+><quote
+>Sans classification</quote
+> liste toutes les polices n'ayant pas été placées dans un groupe défini par l'utilisateur, à condition qu'un tel groupe existe.</para
+></listitem>
+</orderedlist>
+<para
+>Pour ajouter une police à un groupe, glissez-la depuis la liste des polices vers le groupe voulu. Pour retirer une police d'un groupe, glissez-la vers le groupe <quote
+>Toutes les polices</quote
+>.</para>
+<para
+>Sous la liste des groupes, vous trouverez des boutons pour créer de nouveau groupe, en supprimer mais aussi pour activer ou désactiver les polices du groupe actuel.</para>
+<para
+>Le menu contextuel de cette liste contient des entrées additionnelles pour imprimer des échantillons de polices ou exporter une police dans une archive ZIP.</para>
+
+<sect3 id="font-hiding">
+<title
+>Activer et désactiver</title>
+<para
+>Les utilisateurs possédant beaucoup de polices voudront probablement disposer uniquement de polices précises au moment opportun. Pour faciliter ceci, ce module vous permet de désactiver des polices individuellement ou en groupe. Désactiver une police ne l'enlève pas de votre système, elle est simplement masquée afin qu'elle n'apparaisse plus dans les applications. En la réactivant, elle pourra à nouveau être utilisée.</para>
+</sect3>
+
+</sect2>
+
+<sect2 id="font-list">
+<title
+>Liste des polices</title>
+<para
+>L'élément principal est une liste des polices installées, regroupées par nom de famille de polices. Le numéro entre crochets représente le nombre de styles installés pour cette famille. Par exemple, la police <quote
+>Times</quote
+> peut être listée comme suit : <itemizedlist
+> <listitem>
+    <para
+>Times [4]</para>
+    <itemizedlist>
+        <listitem
+><para
+>Classique</para
+></listitem>
+        <listitem
+><para
+>Moyen italique</para
+></listitem>
+        <listitem
+><para
+>Gras</para
+></listitem>
+        <listitem
+><para
+>Gras italique</para
+></listitem>
+    </itemizedlist>
+</listitem>
+</itemizedlist>
+</para>
+
+<para
+>Pour installer une police, appuyez sur le bouton <guibutton
+>Installer à partir d'un fichier...</guibutton
+> et choisissez les polices désirées à partir de la boîte de dialogue. Le groupe de polices sélectionnées déterminera l'emplacement d'installation des polices.</para>
+<para
+>Pour désinstaller des polices, sélectionnez les polices concernées à partir de la liste et appuyez sur le bouton <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+>.</para>
+
+<para
+>Un clic avec le &BDS; révèle un menu contextuel contenant les actions <guilabel
+>Activer</guilabel
+>, <guilabel
+>Désactiver</guilabel
+>, <guilabel
+>Imprimer</guilabel
+>, <ulink url="help:/kfontviewer/index.html"
+><guilabel
+>Afficher dans le lecteur de polices</guilabel
+></ulink
+> et <guilabel
+>Recharger</guilabel
+>.</para>
+
+<sect3 id="font-filter">
+<title
+>Filtrer les polices</title>
+<para
+>Un champ de saisi au-dessus de l'aperçu des polices, permet de filtrer la liste. Il est possible de rechercher des polices avec les critères suivant :</para>
+        <orderedlist>
+        <listitem
+><para
+>Famille,</para
+></listitem>
+        <listitem
+><para
+>Style,</para
+></listitem>
+        <listitem
+><para
+>Fonderie,</para
+></listitem>
+        <listitem
+><para
+>Correspondance FontConfig (permet de saisir un nom de famille et de voir celle réellement utilisée par fontconfig),</para
+></listitem>
+        <listitem
+><para
+>Type de fichier,</para
+></listitem>
+        <listitem
+><para
+>Nom du fichier,</para
+></listitem>
+        <listitem
+><para
+>Emplacement du fichier,</para
+></listitem>
+        <listitem
+><para
+>Écriture sur le système.</para
+></listitem>
+        </orderedlist>
+</sect3>
+
+<sect3 id="get-new-fonts">
+<title
+>Obtenir de nouvelles polices</title>
+<para
+>De nouvelles polices peuvent être installées à partir de fichiers locaux ou téléchargés depuis <guilabel
+>Obtenir les toutes dernières nouveautés</guilabel
+>. L'entrée <guilabel
+>Obtenir de nouvelles polices</guilabel
+> du bouton d'outils (situé au-dessus de la liste des groupes) vous permet d'installer des polices à partir d'Internet. Les polices ainsi téléchargées seront installées dans votre groupe <quote
+>Polices personnelles</quote
+>. Pour qu'elles soient applicables sur tout le système, vous devrez les déplacer dans le groupe <quote
+>Polices du système</quote
+>. Ceci peut être réalisé en glissant les polices sur l'entrée du groupe <quote
+>Polices du système</quote
+> et nécessitera les droits d'administrateur.</para>
+</sect3>
+
+</sect2>
+
+<sect2 id="font-duplicates">
+<title
+>Polices dupliquées</title>
+<para
+>Si votre système contient beaucoup de polices, il est possible que vous ayez des doublons.</para
+> 
+<para
+>Cliquez sur le bouton <guilabel
+>Détecter les polices dupliquées...</guilabel
+> pour ouvrir un outil basique, qui balaiera votre système à la recherche de polices associées à plusieurs fichiers. Par exemple, si vous avez les polices <quote
+>times.ttf</quote
+> et <quote
+>times.TTF</quote
+> installées dans votre dossier <quote
+>/usr/local/share/fonts</quote
+>, le système de gestion des polices sous-jacent (appelé <quote
+>FontConfig</quote
+>) n'en verra qu'une seule. Ainsi, si vous en désinstallez une fonte, elle pourrait ré-apparaître si uniquement un seul des fichiers a été supprimé. L'exécution de outil présente une boîte de dialogue listant chaque police, possédant plusieurs fichiers et la liste correspondante des fichiers. Pour choisir un fichier à supprimer, cliquez sur la colonne contenant l'icône de la corbeille.</para>
+</sect2>
+
+<sect2 id="font-preview">
+<title
+>Aperçu</title>
+<para
+>Ceci affiche un aperçu textuel des différentes tailles de polices.</para>
+<para
+>L'utilisation du menu contextuel vous permet de zoomer, sélectionner un type d'aperçu (<guilabel
+>Aperçu standard</guilabel
+> ou <guilabel
+>Tous les caractères</guilabel
+>) ou de modifier le texte utilisé par l'aperçu.</para>
+
+<para
+>Lancer l'application &kfontview; si vous avez besoin de types additionnels d'aperçus pour les blocs « Unicode ». </para>
+</sect2>
+</sect1>
+</article>

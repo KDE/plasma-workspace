@@ -1,0 +1,186 @@
+# translation of plasma_applet_devicenotifier.po to Slovenian
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Andrej Vernekar <andrej.vernekar@moj.net>, 2007, 2008, 2011, 2012.
+# Jure Repinc <jlp@holodeck1.com>, 2007, 2008, 2009, 2010.
+# Andrej Mernik <andrejm@ubuntu.si>, 2013, 2014, 2016.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_devicenotifier\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-21 00:47+0000\n"
+"PO-Revision-Date: 2022-01-22 10:16+0100\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
+"X-Generator: Lokalize 21.04.3\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+
+#: package/contents/ui/DeviceItem.qml:180
+#, kde-format
+msgctxt "@info:status Free disk space"
+msgid "%1 free of %2"
+msgstr "%1 neporabljeno od %2"
+
+#: package/contents/ui/DeviceItem.qml:184
+#, kde-format
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Accessing…"
+msgstr "Dostopanje…"
+
+#: package/contents/ui/DeviceItem.qml:187
+#, kde-format
+msgctxt ""
+"Removing is a less technical word for Unmounting; translation should be "
+"short and mean 'Currently unmounting this device'"
+msgid "Removing…"
+msgstr "Odstranjevanje…"
+
+#: package/contents/ui/DeviceItem.qml:190
+#, kde-format
+msgid "Don't unplug yet! Files are still being transferred..."
+msgstr "Ne odklapljajte še! Datoteke se še prenašajo..."
+
+#: package/contents/ui/DeviceItem.qml:221
+#, kde-format
+msgid "Open in File Manager"
+msgstr "Odpri v upravljalniku datotek"
+
+#: package/contents/ui/DeviceItem.qml:224
+#, kde-format
+msgid "Mount and Open"
+msgstr "Priključi in odpri"
+
+#: package/contents/ui/DeviceItem.qml:226
+#, kde-format
+msgid "Eject"
+msgstr "Izvrzi"
+
+#: package/contents/ui/DeviceItem.qml:228
+#, kde-format
+msgid "Safely remove"
+msgstr "Varno odklopi"
+
+#: package/contents/ui/DeviceItem.qml:270
+#, kde-format
+msgid "Mount"
+msgstr "Priklopi"
+
+#: package/contents/ui/FullRepresentation.qml:41
+#: package/contents/ui/main.qml:238
+#, kde-format
+msgid "Remove All"
+msgstr "Odstrani vse"
+
+#: package/contents/ui/FullRepresentation.qml:42
+#, kde-format
+msgid "Click to safely remove all devices"
+msgstr "Kliknite, da varno odstranite vse naprave"
+
+#: package/contents/ui/FullRepresentation.qml:186
+#, kde-format
+msgid "No removable devices attached"
+msgstr "Ni priklopljene nobene odstranljive naprave"
+
+#: package/contents/ui/FullRepresentation.qml:186
+#, kde-format
+msgid "No disks available"
+msgstr "Na voljo ni nobenega diska"
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid "Most Recent Device"
+msgstr "Najnovejša naprava"
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid "No Devices Available"
+msgstr "Na voljo ni nobene naprave"
+
+#: package/contents/ui/main.qml:245
+#, kde-format
+msgid "Removable Devices"
+msgstr "Odstranljive naprave"
+
+#: package/contents/ui/main.qml:251
+#, kde-format
+msgid "Non Removable Devices"
+msgstr "Neodstranljive naprave"
+
+#: package/contents/ui/main.qml:257
+#, kde-format
+msgid "All Devices"
+msgstr "Vse naprave"
+
+#: package/contents/ui/main.qml:265
+#, kde-format
+msgid "Show popup when new device is plugged in"
+msgstr "Odpri pojavno okno, ko je priklopljena nova naprava"
+
+#: package/contents/ui/main.qml:274
+#, kde-format
+msgctxt "Open auto mounter kcm"
+msgid "Configure Removable Devices…"
+msgstr "Nastavi odstranljive naprave…"
+
+#~ msgid "Show:"
+#~ msgstr "Prikaži:"
+
+#~ msgid "General"
+#~ msgstr "Splošno"
+
+#~ msgid ""
+#~ "It is currently <b>not safe</b> to remove this device: applications may "
+#~ "be accessing it. Click the eject button to safely remove this device."
+#~ msgstr ""
+#~ "Te naprave trenutno <b>ni mogoče varno</b> odstraniti: do nje morda "
+#~ "dostopajo programi. Za varno odstranitev naprave kliknite gumb za izmet."
+
+#~ msgid "This device is currently accessible."
+#~ msgstr "Ta naprava je trenutno dostopna."
+
+#~ msgid ""
+#~ "It is currently <b>not safe</b> to remove this device: applications may "
+#~ "be accessing other volumes on this device. Click the eject button on "
+#~ "these other volumes to safely remove this device."
+#~ msgstr ""
+#~ "Te naprave trenutno <b>ni mogoče varno</b> odstraniti: do nosilcev na "
+#~ "njej morda dostopajo programi. Za varno odstranitev naprave kliknite gumb "
+#~ "za izmet na teh nosilcih."
+
+#~ msgid "It is currently safe to remove this device."
+#~ msgstr "To napravo lahko trenutno varno odstranite."
+
+#~ msgid "This device is not currently accessible."
+#~ msgstr "Ta naprava trenutno ni dostopna."
+
+#~ msgid "1 action for this device"
+#~ msgid_plural "%1 actions for this device"
+#~ msgstr[0] "%1 dejanje za to napravo"
+#~ msgstr[1] "%1 dejanji za to napravo"
+#~ msgstr[2] "%1 dejanja za to napravo"
+#~ msgstr[3] "%1 dejanj za to napravo"
+
+#~ msgid "Click to access this device from other applications."
+#~ msgstr "Kliknite, da omogočite dostop do naprave iz drugih programov."
+
+#~ msgid "Click to eject this disc."
+#~ msgstr "Kliknite, da izvržete ta disk."
+
+#~ msgid "Click to safely remove this device."
+#~ msgstr "Kliknite, da varno odstranite to napravo."
+
+#~ msgid "Click to mount this device."
+#~ msgstr "Kliknite, da priklopite to napravo."
+
+#~ msgid "Available Devices"
+#~ msgstr "Razpoložljive naprave"

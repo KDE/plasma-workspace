@@ -1,0 +1,499 @@
+# translation of kcmstyle.po to Bengali
+# Deepayan Sarkar <deepayan@bengalinux.org>, 2004, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmstyle\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"PO-Revision-Date: 2006-01-04 12:57-0600\n"
+"Last-Translator: Deepayan Sarkar <deepayan@bengalinux.org>\n"
+"Language-Team: Bengali <kde-translation@bengalinux.org>\n"
+"Language: bn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: gtkpage.cpp:59
+#, kde-format
+msgid "%1 is not a valid GTK Theme archive."
+msgstr ""
+
+#: kcmstyle.cpp:161 kcmstyle.cpp:168
+#, kde-format
+msgid "There was an error loading the configuration dialog for this style."
+msgstr "এই স্টাইল-এর কনফিগারেশন ডায়ালগ লোড করতে সমস্যা হয়েছে।"
+
+#: kcmstyle.cpp:274
+#, kde-format
+msgid "Failed to apply selected style '%1'."
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:32
+#, fuzzy, kde-format
+msgid "Show icons:"
+msgstr "বাটনের &উপর আইকন দেখাও"
+
+#: package/contents/ui/EffectSettingsPopup.qml:33
+#, fuzzy, kde-format
+#| msgid "Radio button"
+msgid "On buttons"
+msgstr "রেডিও বাটন"
+
+#: package/contents/ui/EffectSettingsPopup.qml:44
+#, kde-format
+msgid "In menus"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:56
+#, kde-format
+msgid "Main toolbar label:"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "None"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:59
+#, fuzzy, kde-format
+#| msgid "Text Only"
+msgid "Text only"
+msgstr "শুধু লেখা"
+
+#: package/contents/ui/EffectSettingsPopup.qml:60
+#, fuzzy, kde-format
+#| msgid "Text Alongside Icons"
+msgid "Beside icons"
+msgstr "আইকনের পাশে লেখা"
+
+#: package/contents/ui/EffectSettingsPopup.qml:61
+#, fuzzy, kde-format
+#| msgid "Text Under Icons"
+msgid "Below icon"
+msgstr "আইকনের তলায় লেখা"
+
+#: package/contents/ui/EffectSettingsPopup.qml:76
+#, kde-format
+msgid "Secondary toolbar label:"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:18
+#, fuzzy, kde-format
+#| msgid "Application Level"
+msgid "GNOME/GTK Application Style"
+msgstr "অ্যাপলিকেশন স্তর"
+
+#: package/contents/ui/GtkStylePage.qml:44
+#, kde-format
+msgid "GTK theme:"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:69
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgid "Preview…"
+msgstr "প্রাকদর্শন"
+
+#: package/contents/ui/GtkStylePage.qml:88
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:93
+#, fuzzy, kde-format
+#| msgid "Application Level"
+msgid "Get New GNOME/GTK Application Styles…"
+msgstr "অ্যাপলিকেশন স্তর"
+
+#: package/contents/ui/GtkStylePage.qml:109
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:111
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: package/contents/ui/main.qml:17
+#, fuzzy, kde-format
+#| msgid ""
+#| "<h1>Style</h1>This module allows you to modify the visual appearance of "
+#| "user interface elements, such as the widget style and effects."
+msgid ""
+"This module allows you to modify the visual appearance of applications' user "
+"interface elements."
+msgstr ""
+"<h1>স্টাইল</h1>এই মডিউলটির সাহায্যে আপনি ইউসার ইন্টারফেস-এর বিভিন্ন উপাদানের "
+"(যেমন উইজেট স্টাইল এবং বিভিন্ন এফেক্ট) চেহারা বদলাতে পারেন।"
+
+#: package/contents/ui/main.qml:96
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure Style…"
+msgstr "ক&নফিগার করো..."
+
+#: package/contents/ui/main.qml:116
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr ""
+
+#: package/contents/ui/main.qml:132
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "ক&নফিগার করো..."
+
+#: styleconfdialog.cpp:21
+#, kde-format
+msgid "Configure %1"
+msgstr "%1 কনফিগার করো"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "ট্যাব ১"
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, fuzzy, kde-format
+#| msgid "Button"
+msgid "Push Button"
+msgstr "বাটন"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, fuzzy, kde-format
+#| msgid "Combobox"
+msgid "Combo box"
+msgstr "কম্বো-বক্স"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "চেক-বক্স"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "রেডিও বাটন"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:133
+#, kde-format
+msgid "Tab 2"
+msgstr "ট্যাব ২"
+
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Application Level"
+msgid "Application style"
+msgstr "অ্যাপলিকেশন স্তর"
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, fuzzy, kde-format
+msgid "Show icons on buttons"
+msgstr "বাটনের &উপর আইকন দেখাও"
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, fuzzy, kde-format
+msgid "Show icons in menus"
+msgstr "বাটনের &উপর আইকন দেখাও"
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, kde-format
+msgid "Main toolbar label"
+msgstr ""
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, kde-format
+msgid "Secondary toolbar label"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "দীপায়ন সরকার"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "deepayan@bengalinux.org"
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "Application Style"
+#~ msgstr "অ্যাপলিকেশন স্তর"
+
+#, fuzzy
+#~| msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
+#~ msgstr "(c) 2002 Karol Szwed, Daniel Molkentin"
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "Download New GNOME/GTK2 Application Styles..."
+#~ msgstr "অ্যাপলিকেশন স্তর"
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "GNOME/GTK2 Application Styles"
+#~ msgstr "অ্যাপলিকেশন স্তর"
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "Download New GNOME/GTK3 Application Styles..."
+#~ msgstr "অ্যাপলিকেশন স্তর"
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "GNOME/GTK3 Application Styles"
+#~ msgstr "অ্যাপলিকেশন স্তর"
+
+#~ msgid "Unable to Load Dialog"
+#~ msgstr "ডায়ালগ লোড করা যায়নি"
+
+#~ msgid "No description available."
+#~ msgstr "কোন বর্ণনা পাওয়া যাচ্ছে না।"
+
+#, fuzzy
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "some important buttons."
+#~ msgstr ""
+#~ "এই অপশনটি নির্বাচন করা হলে, কোন কে.ডি.ই. অ্যাপলিকেশন-এর টুলবার-এর একটি বস্তুর "
+#~ "উপর মাউস কার্সর কিছুক্ষণ রাখা হলে একটি টুল-টিপ দেখানো হবে।"
+
+#, fuzzy
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "most menu items."
+#~ msgstr ""
+#~ "এই অপশনটি নির্বাচন করা হলে, কোন কে.ডি.ই. অ্যাপলিকেশন-এর টুলবার-এর একটি বস্তুর "
+#~ "উপর মাউস কার্সর কিছুক্ষণ রাখা হলে একটি টুল-টিপ দেখানো হবে।"
+
+#, fuzzy
+#~| msgid "&Toolbar"
+#~ msgid "Toolbars"
+#~ msgstr "টুলবা&র"
+
+#, fuzzy
+#~ msgid "Widget Style"
+#~ msgstr "উইজেট স্টাইল"
+
+#, fuzzy
+#~ msgid "Widget style:"
+#~ msgstr "উইজেট স্টাইল"
+
+#~ msgid "Description: %1"
+#~ msgstr "বর্ণনা: %1"
+
+#~ msgid "KDE Style Module"
+#~ msgstr "কে.ডি.ই. স্টাইল মডিউল"
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "In application"
+#~ msgstr "অ্যাপলিকেশন স্তর"
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "Global Menu widget"
+#~ msgstr "অ্যাপলিকেশন স্তর"
+
+#, fuzzy
+#~ msgid ""
+#~ "If you enable this option, KDE Applications will run internal animations."
+#~ msgstr ""
+#~ "এই অপশনটি নির্বাচন করা হলে, কোন কে.ডি.ই. অ্যাপলিকেশন-এর টুলবার-এর একটি বস্তুর "
+#~ "উপর মাউস কার্সর কিছুক্ষণ রাখা হলে একটি টুল-টিপ দেখানো হবে।"
+
+#~ msgid "kcmstyle"
+#~ msgstr "kcmstyle"
+
+#~ msgid "Icons Only"
+#~ msgstr "শুধু আইকন"
+
+#, fuzzy
+#~ msgctxt "@label:listbox"
+#~ msgid "Text pos&ition of toolbar elements:"
+#~ msgstr "লেখার &অবস্থান:"
+
+#, fuzzy
+#~ msgctxt "@title:tab"
+#~ msgid "&Style"
+#~ msgstr "স্টাই&ল"
+
+#~ msgid ""
+#~ "This page allows you to enable various widget style effects. For best "
+#~ "performance, it is advisable to disable all effects."
+#~ msgstr ""
+#~ "এই পাতাটি আপনাকে নানান উইজেট স্টাইল এফেক্ট সক্রিয় করার সুযোগ দেয়। শ্রেষ্ঠ "
+#~ "কার্যসম্পাদনের জন্য সমস্ত এফেক্ট নিষ্ক্রিয় করে রাখা উচিত্‍। "
+
+#, fuzzy
+#~ msgctxt "@option:check"
+#~ msgid "High&light buttons under mouse"
+#~ msgstr "মাউসের তলায় বা&টন হাইলাইট করো"
+
+#, fuzzy
+#~ msgctxt "@option:check"
+#~ msgid "E&nable tooltips"
+#~ msgstr "টুল-টিপ &সক্রিয় করো"
+
+#~ msgid ""
+#~ "If this option is selected, toolbar buttons will change their color when "
+#~ "the mouse cursor is moved over them."
+#~ msgstr ""
+#~ "এই অপশনটি নির্বাচন করা হলে, টুলবার বাটনগুলির উপর মাউস কার্সার নিয়ে এলে তারা "
+#~ "রঙ পরিবর্তন করবে।"
+
+#~ msgid ""
+#~ "If you check this option, the KDE application will offer tooltips when "
+#~ "the cursor remains over items in the toolbar."
+#~ msgstr ""
+#~ "এই অপশনটি নির্বাচন করা হলে, কোন কে.ডি.ই. অ্যাপলিকেশন-এর টুলবার-এর একটি বস্তুর "
+#~ "উপর মাউস কার্সর কিছুক্ষণ রাখা হলে একটি টুল-টিপ দেখানো হবে।"
+
+#~ msgid "&Effects"
+#~ msgstr "&এফেক্টস"
+
+#~ msgid "&Enable GUI effects"
+#~ msgstr "গুই এফেক্টস &সক্রিয় করো"
+
+#~ msgid "Disable"
+#~ msgstr "নিষ্ক্রিয় করো"
+
+#~ msgid "Animate"
+#~ msgstr "অ্যানিমেট"
+
+#~ msgid "Combobo&x effect:"
+#~ msgstr "কম্বো-&বক্স এফেক্ট:"
+
+#~ msgid "Fade"
+#~ msgstr "ফেড"
+
+#~ msgid "&Tool tip effect:"
+#~ msgstr "টু&ল-টিপ এফেক্ট:"
+
+#~ msgid "Make Translucent"
+#~ msgstr "সমস্বচ্ছ করো"
+
+#~ msgid "&Menu effect:"
+#~ msgstr "মেনু &এফেক্ট:"
+
+#~ msgid "Menu &drop shadow"
+#~ msgstr "মেনু ছায়া ফেলা (&ছ)"
+
+#~ msgid "Software Tint"
+#~ msgstr "সফ্‌টওয়্যার টিন্ট"
+
+#~ msgid "Software Blend"
+#~ msgstr "সফ্‌টওয়্যার ব্লেন্ড"
+
+#~ msgid "XRender Blend"
+#~ msgstr "এক্স-রেন্ডার ব্লেন্ড"
+
+#~ msgid "0%"
+#~ msgstr "0%"
+
+#~ msgid "50%"
+#~ msgstr "50%"
+
+#~ msgid "100%"
+#~ msgstr "100%"
+
+#~ msgid "Menu trans&lucency type:"
+#~ msgstr "মেনু স্বচ্ছতা&র ধরন:"
+
+#~ msgid "Menu &opacity:"
+#~ msgstr "মেনু স্বচ্ছতা (&চ):"
+
+#~ msgid "Transparent tool&bars when moving"
+#~ msgstr "সরানোর সময় স্বচ্ছ টুলবা&র"
+
+#, fuzzy
+#~ msgid ""
+#~ "<qt>Selected style: <b>%1</b><br /><br />One or more effects that you "
+#~ "have chosen could not be applied because the selected style does not "
+#~ "support them; they have therefore been disabled.<br /><br /></qt>"
+#~ msgstr ""
+#~ "<qt>নির্বাচিত স্টাইল: <b>%1</b><br> <br>আপনার পছন্দ করা এক বা একাধিক এফেক্ট "
+#~ "প্রয়োগ করা যায়নি কারণ নির্বাচিত স্টাইলটি এই এফেক্টগুলি সমর্থন করে না; এগুলি "
+#~ "নিষ্ক্রিয় করে রাখা হয়েছে।<br><br>"
+
+#, fuzzy
+#~ msgid "Menu translucency is not available.<br />"
+#~ msgstr "মেনু সমস্বচ্ছতা পাওয়া যাবে না।<br>"
+
+#~ msgid "Menu drop-shadows are not available."
+#~ msgstr "মেনু ড্রপ-শ্যাডো পাওয়া যাবে না।<br>"
+
+#~ msgid ""
+#~ "<p><b>Disable: </b>do not use any combo box effects.</p>\n"
+#~ "<b>Animate: </b>Do some animation."
+#~ msgstr ""
+#~ "<p><b>নিষ্ক্রিয় করো: </b>কোন কম্বো-বক্স এফেক্ট ব্যবহার কোর না।</p>\n"
+#~ "<b>অ্যানিমেট: </b>কিছু অ্যানিমেশন সক্রিয় করো।"
+
+#~ msgid ""
+#~ "<p><b>Disable: </b>do not use any tooltip effects.</p>\n"
+#~ "<p><b>Animate: </b>Do some animation.</p>\n"
+#~ "<b>Fade: </b>Fade in tooltips using alpha-blending."
+#~ msgstr ""
+#~ "<p><b>নিষ্ক্রিয় করো: </b>কোন টুল-টিপ এফেক্ট ব্যবহার কোর না।</p>\n"
+#~ "<p><b>অ্যানিমেট: </b>কিছু অ্যানিমেশন সক্রিয় করো।</p>\n"
+#~ "<b>ফেড: </b>আলফা-ব্লেন্ডিং ব্যবহার করে টুল-টিপ ফেড ইন করো।"
+
+#~ msgid ""
+#~ "<p><b>Disable: </b>do not use any menu effects.</p>\n"
+#~ "<p><b>Animate: </b>Do some animation.</p>\n"
+#~ "<p><b>Fade: </b>Fade in menus using alpha-blending.</p>\n"
+#~ "<b>Make Translucent: </b>Alpha-blend menus for a see-through effect. (KDE "
+#~ "styles only)"
+#~ msgstr ""
+#~ "<p><b>নিষ্ক্রিয় করো: </b>কোন মেনু এফেক্ট ব্যবহার কোর না।</p>\n"
+#~ "<p><b>অ্যানিমেট: </b>কিছু অ্যানিমেশন সক্রিয় করো।</p>\n"
+#~ "<p><b>ফেড: </b>আলফা-ব্লেন্ডিং ব্যবহার করে মেনু ফেড ইন করো।</p>\n"
+#~ "<b>সমস্বচ্ছ করো: </b>সি-থ্রু এফেক্ট-এর জন্য আলফা-ব্লেন্ডিং ব্যবহার করো। (শুধু কে.ডি."
+#~ "ই. স্টাইলসমূহের ক্ষেত্রে প্রযোজ্য)"
+
+#~ msgid ""
+#~ "When enabled, all popup menus will have a drop-shadow, otherwise drop-"
+#~ "shadows will not be displayed. At present, only KDE styles can have this "
+#~ "effect enabled."
+#~ msgstr ""
+#~ "সক্রিয় করা থাকলে সমস্ত পপ-আপ মেনুর পিছনে একটি ছায়া দেখা যাবে, না হলে ছায়া "
+#~ "দেখানো হবে না। বর্তমানে শুধুমাত্র কে.ডি.ই. স্টাইলসমূহের ক্ষেত্রে এই এফেক্টটি সক্রিয় "
+#~ "করা যেতে পারে। "
+
+#~ msgid "By adjusting this slider you can control the menu effect opacity."
+#~ msgstr ""
+#~ "এই স্লাইডার-টি ব্যবহার করে আপনি মেনু এফেক্ট স্বচ্ছতার পরিমাণ নিয়ন্ত্রণ করতে পারেন।"
+
+#~ msgid ""
+#~ "<b>Note:</b> that all widgets in this combobox do not apply to Qt-only "
+#~ "applications."
+#~ msgstr ""
+#~ "<b>নোট:</b> এই কম্বো-বক্স-এর কোন উইজেট Qt-only অ্যাপলিকেশন-এর ক্ষেত্রে প্রযোজ্য "
+#~ "নয়।"
+
+#~ msgid ""
+#~ "If you check this box, the toolbars will be transparent when moving them "
+#~ "around."
+#~ msgstr "এই বক্স-টি নির্বাচন করা হলে, টুলবার সরানোর সময় সেগুলি স্বচ্ছ হবে।"
+
+#~ msgid "%"
+#~ msgstr "%"
+
+#~ msgid "Button Group"
+#~ msgstr "বাটন গ্রুপ"

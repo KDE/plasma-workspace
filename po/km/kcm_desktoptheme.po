@@ -1,0 +1,430 @@
+# translation of kcm_desktopthemedetails.po to Khmer
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Khoem Sokhem <khoemsokhem@khmeros.info>, 2008, 2009, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_desktopthemedetails\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"PO-Revision-Date: 2010-06-03 16:28+0700\n"
+"Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
+"Language-Team: Khmer <support@khmeros.info>\n"
+"Language: km\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: KBabel 1.11.4\n"
+"X-Language: km-KH\n"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Get New Themes..."
+msgid "Name of the current Plasma Style"
+msgstr "យក​ស្បែក​ថ្មី..."
+
+#: kcm.cpp:108
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: kcm.cpp:119
+#, kde-format
+msgid "Unable to download the theme: %1"
+msgstr ""
+
+#: kcm.cpp:144
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: kcm.cpp:147 kcm.cpp:153
+#, kde-format
+msgid "Theme installation failed."
+msgstr ""
+
+#: kcm.cpp:245
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "This module lets you choose the Plasma style."
+msgstr ""
+
+#: package/contents/ui/main.qml:69
+#, fuzzy, kde-format
+#| msgid "Available themes"
+msgid "All Themes"
+msgstr "ស្បែក​ដែលអាច​ប្រើបាន"
+
+#: package/contents/ui/main.qml:70
+#, fuzzy, kde-format
+#| msgid "Theme"
+msgid "Light Themes"
+msgstr "​ស្បែក"
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgid "Dark Themes"
+msgstr ""
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "Color scheme compatible"
+msgstr ""
+
+#: package/contents/ui/main.qml:100
+#, fuzzy, kde-format
+#| msgctxt "plasma name"
+#| msgid "Color Scheme"
+msgid "Follows color scheme"
+msgstr "គ្រោងការណ៍​ពណ៌"
+
+#: package/contents/ui/main.qml:118
+#, fuzzy, kde-format
+#| msgid "Theme"
+msgid "Edit Theme…"
+msgstr "​ស្បែក"
+
+#: package/contents/ui/main.qml:125
+#, kde-format
+msgid "Remove Theme"
+msgstr "យក​ស្បែក​ចេញ"
+
+#: package/contents/ui/main.qml:132
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Theme"
+msgstr "យក​ស្បែក​ចេញ"
+
+#: package/contents/ui/main.qml:174
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: package/contents/ui/main.qml:179
+#, fuzzy, kde-format
+#| msgid "Get New Themes..."
+msgid "Get New Plasma Styles…"
+msgstr "យក​ស្បែក​ថ្មី..."
+
+#: package/contents/ui/main.qml:193
+#, fuzzy, kde-format
+#| msgid "Theme"
+msgid "Open Theme"
+msgstr "​ស្បែក"
+
+#: package/contents/ui/main.qml:195
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:31
+#, kde-format
+msgid ""
+"This tool allows you to set the theme of the current Plasma session, without "
+"accidentally setting it to one that is either not available, or which is "
+"already set."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:35
+#, kde-format
+msgid ""
+"The name of the theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:36
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:49
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:65
+#, kde-format
+msgid "The current Plasma session's theme has been set to %1"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:67
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:75
+#, kde-format
+msgid "You have the following Plasma themes on your system:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "ខឹម សុខែម, អេង វណ្ណៈ, អោក ពិសិដ្ឋ"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "khoemsokhem@khmeros.info,​​evannak@khmeros.info,piseth_dv@khmeros.info"
+
+#, fuzzy
+#~| msgid "Get New Themes..."
+#~ msgid "Plasma Style"
+#~ msgstr "យក​ស្បែក​ថ្មី..."
+
+#, fuzzy
+#~| msgid "Get New Themes..."
+#~ msgid "Plasma Styles"
+#~ msgstr "យក​ស្បែក​ថ្មី..."
+
+#, fuzzy
+#~| msgid "Remove Desktop Theme"
+#~ msgid "Download New Plasma Styles"
+#~ msgstr "យក​ស្បែក​ផ្ទៃតុ​ចេញ"
+
+#, fuzzy
+#~| msgid "Remove Desktop Theme"
+#~ msgid "Configure Desktop Theme"
+#~ msgstr "យក​ស្បែក​ផ្ទៃតុ​ចេញ"
+
+#~ msgid ""
+#~ "<h1>Desktop Theme</h1>This module allows you to modify the visual "
+#~ "appearance of the desktop."
+#~ msgstr "<h1>ស្បែក​ផ្ទៃតុ​</h1>ម៉ូឌុល​នេះ​អនុញ្ញាត​ឲ្យ​អ្នក​កែប្រែ​រូបរាង​ផ្ទៃតុ​​ដែល​មើល​ឃើញ ។"
+
+#~ msgid "KDE Desktop Theme Module"
+#~ msgstr "ម៉ូឌុល​ស្បែក​ផ្ទៃតុ​របស់ KDE"
+
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
+#~ msgstr "រក្សាសិទ្ធិ​ឆ្នាំ ២០០២ ដោយ Karol Szwed, Daniel Molkentin"
+
+#~ msgid "Details"
+#~ msgstr "សេចក្ដី​លម្អិត"
+
+#~ msgctxt "plasma name"
+#~ msgid "Panel Background"
+#~ msgstr "ផ្ទៃខាង​ក្រោយ​បន្ទះ"
+
+#~ msgctxt "plasma name"
+#~ msgid "Kickoff"
+#~ msgstr "ចាប់ផ្ដើម"
+
+#~ msgctxt "plasma name"
+#~ msgid "Task Items"
+#~ msgstr "ធាតុ​ភារកិច្ច"
+
+#~ msgctxt "plasma name"
+#~ msgid "Widget Background"
+#~ msgstr "ផ្ទៃ​ខាង​ក្រោយ​ធាតុក្រាហ្វិក"
+
+#~ msgctxt "plasma name"
+#~ msgid "Translucent Background"
+#~ msgstr "ផ្ទៃ​ខាងក្រោយ​មិនច្បាស់"
+
+#~ msgctxt "plasma name"
+#~ msgid "Dialog Background"
+#~ msgstr "ផ្ទៃ​ខាងក្រោយ​ប្រអប់"
+
+#~ msgctxt "plasma name"
+#~ msgid "Analog Clock"
+#~ msgstr "នាឡិកា​អាណាឡូក"
+
+#~ msgctxt "plasma name"
+#~ msgid "Notes"
+#~ msgstr "ចំណាំ"
+
+#~ msgctxt "plasma name"
+#~ msgid "Tooltip"
+#~ msgstr "ព័ត៌មាន​ជំនួយ"
+
+#~ msgctxt "plasma name"
+#~ msgid "Pager"
+#~ msgstr "ភេយ័រ"
+
+#~ msgctxt "plasma name"
+#~ msgid "Run Command Dialog"
+#~ msgstr "រត់​ប្រអប់​ពាក្យ​បញ្ជា"
+
+#~ msgctxt "plasma name"
+#~ msgid "Shutdown Dialog"
+#~ msgstr "ប្រអប់​បិទ"
+
+#~ msgctxt "plasma name"
+#~ msgid "Icons"
+#~ msgstr "រូបតំណាង"
+
+#~ msgid "(Customized)"
+#~ msgstr "(ផ្ទាល់ខ្លួន)"
+
+#~ msgid "User customized theme"
+#~ msgstr "ស្បែក​ផ្ទាល់ខ្លួន​របស់​អ្នក​ប្រើ"
+
+#~ msgid ""
+#~ "Theme items have been changed.  Do you still wish remove the \"%1\" theme?"
+#~ msgstr "ធាតុ​ស្បែក​ត្រូវ​បាន​ផ្លាស់ប្ដូរ ។  តើ​អ្នកនៅ​តែ​ចង់​យកស្បែក \"%1\" ចេញ​ឬ ?"
+
+#~ msgid "Removal of the default desktop theme is not allowed."
+#~ msgstr "មិនអនុញ្ញាត​ឲ្យ​​យក​ស្បែក​របស់ KDE លំនាំដើម​​ចេញ​​ទេ ។"
+
+#~ msgid "Are you sure you wish remove the \"%1\" theme?"
+#~ msgstr "តើ​អ្នក​ប្រាកដ​ជា​ចង់​យកស្បែក \"%1\" ចេញឬ ?"
+
+#~ msgid ""
+#~ "Please apply theme item changes (with a new theme name) before attempting "
+#~ "to export theme."
+#~ msgstr "សូម​អនុវត្ត​ការ​ផ្លាស់ប្ដូរ​ធាតុ (ជា​មួយ​នឹង​ឈ្មោះ​ស្បែក​ថ្មី) មុននឹង​ប៉ុនប៉ង​នាំចេញ​ស្បែក ។"
+
+#~ msgid "Export Desktop Theme"
+#~ msgstr "នាំចេញ​ស្បែក​ផ្ទៃតុ"
+
+#~ msgid "Export theme to file"
+#~ msgstr "នាំចេញ​ស្បែក​ទៅ​កាន់ឯកសារ"
+
+#~ msgid "Theme Item"
+#~ msgstr "ធាតុ​ស្បែក"
+
+#~ msgid "Source"
+#~ msgstr "ប្រភព"
+
+#, fuzzy
+#~| msgid "%1 %2"
+#~ msgctxt ""
+#~ "%1 is the name of the theme, %2 is the type of the element (background, "
+#~ "icon, note, etc)"
+#~ msgid "%1 %2"
+#~ msgstr "%1 %2"
+
+#~ msgid "File..."
+#~ msgstr "ឯកសារ..."
+
+#~ msgid "Select File to Use for %1"
+#~ msgstr "ជ្រើស​ឯកសារ​ត្រូវ​ប្រើ​សម្រាប់ %1"
+
+#~ msgid " Author: %1"
+#~ msgstr " អ្នកនិពន្ធ ៖ %1"
+
+#~ msgid "Version: %1"
+#~ msgstr "កំណែ ៖ %1"
+
+#~ msgid "Desktop Theme Details"
+#~ msgstr "សេចក្ដី​លម្អិត​ស្បែក​ផ្ទៃតុ"
+
+#~ msgid "Choose an item and customize it by assigning it a theme"
+#~ msgstr "ជ្រើស​ធាតុ ហើយ​ប្ដូរ​វា​តាមបំណង​ដោយ​ផ្ដល់​វា​នូវ​ស្បែក​នេះ"
+
+#~ msgid ""
+#~ "You can set any theme to any item. The available themes for the item are "
+#~ "in the dropdown box on the right."
+#~ msgstr ""
+#~ "អ្នក​អាច​កំណត់​ស្បែក​ណាមួយ​​ទៅ​ធាតុ​បាន ។ ស្បែក​ដែល​មាន​សម្រាប់​ធាតុ​នៅ​ក្នុង​ប្រអប់​ទម្លាក់ចុះ​នៅ​ខាង​ស្ដាំ ។"
+
+#~ msgid "Enable more options"
+#~ msgstr "បើក​ជម្រើស​បន្ថែម"
+
+#~ msgid ""
+#~ "This will expand the dialog and give you options to export your custom "
+#~ "theme as well as to remove a theme."
+#~ msgstr ""
+#~ "វា​នឹង​ពង្រីក​ប្រអប់ ហើយ​ផ្ដល់​ឲ្យ​អ្នក​ជម្រើស​ ដើម្បី​នាំចេញ​ស្បែក​ផ្ទាល់ខ្លួន ព្រម​ទាំង​យក​ស្បែក​ចេញ ។"
+
+#~ msgid "More"
+#~ msgstr "ផ្សេងៗ​ទៀត"
+
+#~ msgid "Remove the selected theme"
+#~ msgstr "យក​ស្បែក​ដែលបាន​ជ្រើ​ចេញ"
+
+#~ msgid ""
+#~ "Clicking this button will remove the selected theme. You will be asked "
+#~ "for confirmation."
+#~ msgstr "ចុច​ប៊ូតុង​នេះ នឹង​យក​ស្បែក​ដែលបាន​ជ្រើស​ចេញ ។ អ្នកនឹង​ត្រូវ​បាន​សួរ​រក​ការបញ្ជាក់ ។"
+
+#~ msgid "Save your theme in a zip archive"
+#~ msgstr "រក្សាទុក​ស្បែក​របស់​អ្នក​ក្នុង​ប័ណ្ណសារ zip"
+
+#~ msgid ""
+#~ "You can save your theme in a zip archive in order to share it with the "
+#~ "community."
+#~ msgstr "អ្នក​អាច​រក្សាទុក​ស្បែក​របស់​អ្នក​ក្នុង​ប័ណ្ណសារ zip ដើម្បី​ចែករំលែក​វា​ដល់​សហគមន៍ ។"
+
+#~ msgid "Export Theme to File..."
+#~ msgstr "នាំចេញ​ស្បែក​ទៅ​ឯកសារ..."
+
+#~ msgid "New theme name:"
+#~ msgstr "ឈ្មោះ​ស្បែក​ថ្មី ៖"
+
+#~ msgid "Custom theme name"
+#~ msgstr "ឈ្មោះ​ស្បែក​ផ្ទាល់ខ្លួន"
+
+#~ msgid "Give a name to your custom theme."
+#~ msgstr "ដាក់​ឈ្មោះ​ស្បែក​ផ្ទាល់ខ្លួន​របស់​អ្នក ។"
+
+#~ msgid "Author:"
+#~ msgstr "អ្នកនិពន្ធ ៖"
+
+#~ msgid "Custom theme author "
+#~ msgstr "អ្នក​និពន្ធ​ស្បែក​ផ្ទាល់ខ្លួន "
+
+#~ msgid "Enter the author name of your custom theme."
+#~ msgstr "បញ្ចូល​ឈ្មោះ​អ្នកនិពន្ធ​នៃ​ស្បែក​ផ្ទាល់ខ្លួន​របស់​អ្នក ។"
+
+#~ msgid "Version:"
+#~ msgstr "កំណែ ៖"
+
+#~ msgid "Custom theme version number"
+#~ msgstr "លេខ​កំណែ​ស្បែក​ផ្ទាល់ខ្លួន"
+
+#~ msgid "Enter the version number of your custom theme."
+#~ msgstr "បញ្ចូល​លេខ​កំណែ​នៃ​ស្បែក​ផ្ទាល់ខ្លួន​របស់​អ្នក ។"
+
+#~ msgid "Description:"
+#~ msgstr "សេចក្ដីពិពណ៌នា ៖"
+
+#~ msgid "Custom theme description"
+#~ msgstr "សេចក្ដីពិពណ៌នា​ស្បែក​ផ្ទាល់ខ្លួន"
+
+#~ msgid "Enter a description which will explain your custom theme."
+#~ msgstr "បញ្ចូល​សេចក្ដីពិពណ៌នា​ដែលនឹង​ពន្យល់​​អំពី​ស្បែក​ផ្ទាល់ខ្លួន​របស់​អ្នក ។"
+
+#~ msgid "Select theme from above to customize"
+#~ msgstr "ជ្រើស​ស្បែក​​ពី​ខាង​លើ​ដើម្បី​ប្ដូ​រតាម​បំណង"
+
+#~ msgid "Theme Author"
+#~ msgstr "អ្នកនិពន្ធ​ស្បែក"
+
+#~ msgid "Theme Name"
+#~ msgstr "ឈ្មោះ​ស្បែក"
+
+#~ msgid "Theme Version"
+#~ msgstr "កំណែ​ស្បែក"
+
+#~ msgid "The theme description goes here..."
+#~ msgstr "សេចក្ដី​ពិពណ៌នា​ស្បែក​នៅ​ទីនេះ..."
+
+#~ msgid ""
+#~ "Choose a start theme in this list then customize some items below. All "
+#~ "less important items not listed below will use this start theme."
+#~ msgstr ""
+#~ "ជ្រើស​ស្បែក​ចាប់ផ្ដើម​នៅ​​ក្នុង​បញ្ជីនេះ បន្ទាប់មក​ប្ដូរ​ធាតុ​មួយ​ចំនួន​ដូច​ខាងក្រោម ។ ធាតុ​​ដែលមិន​សូវ​សំខាន់​មិន​"
+#~ "ត្រូវបាន​រាយ​ខាង​ក្រោម​ខាងក្រោមទេ ដែលនឹង​ប្រើ​ស្បែក​នេះ ។"
+
+#~ msgid "Karol Szwed"
+#~ msgstr "Karol Szwed"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "KCMDesktopTheme"
+#~ msgstr "ស្បែក KCMDesktop"

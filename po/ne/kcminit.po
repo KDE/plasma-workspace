@@ -1,0 +1,54 @@
+# translation of kcminit.po to Nepali
+# Nabin Gautam <nabin@mpp.org.np>, 2007.
+# Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>, 2007.
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminit\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-26 00:47+0000\n"
+"PO-Revision-Date: 2007-11-04 18:50+0545\n"
+"Last-Translator: Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>\n"
+"Language-Team: Nepali <info@mpp.org.np>\n"
+"Language: ne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n !=1\n"
+"\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Nabin Gautam"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "nabin@mpp.org.np"
+
+#: main.cpp:170
+#, kde-format
+msgid "KCMInit"
+msgstr "KCMInit"
+
+#: main.cpp:172
+#, fuzzy, kde-format
+#| msgid "KCMInit - runs startups initialization for Control Modules."
+msgid "KCMInit - runs startup initialization for Control Modules."
+msgstr "KCMInit - नियन्त्रण मोड्युल थालनीका लागि सुरुबाट चलाउछ"
+
+#: main.cpp:178
+#, kde-format
+msgid "List modules that are run at startup"
+msgstr "प्रारम्भमा चल्ने मोड्युल सूचीकृत गर्नुहोस्"
+
+#: main.cpp:179
+#, kde-format
+msgid "Configuration module to run"
+msgstr "कन्फिगरेसन मोड्युल चलाउन"
+
+#~ msgid "Module %1 not found"
+#~ msgstr "मोड्युल %1 फेला परेन"

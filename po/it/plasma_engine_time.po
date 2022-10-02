@@ -1,0 +1,66 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Vincenzo Reale <smart2128vr@gmail.com>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"PO-Revision-Date: 2014-12-10 20:33+0100\n"
+"Last-Translator: Vincenzo Reale <smart2128@baslug.org>\n"
+"Language-Team: Italian <kde-i18n-it@kde.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: timesource.cpp:46
+msgid "Local"
+msgstr "Locale"
+
+#: timesource.cpp:61
+msgid "Timezone"
+msgstr "Fuso orario"
+
+#: timesource.cpp:66 timesource.cpp:69 timesource.cpp:73
+msgid "Timezone City"
+msgstr "Città del fuso orario"
+
+#: timesource.cpp:68 timesource.cpp:71
+msgid "Timezone Continent"
+msgstr "Continente del fuso orario"
+
+#: timesource.cpp:72
+msgid "Timezone Country"
+msgstr "Nazione del fuso orario"
+
+#: timesource.cpp:97
+msgid "Offset"
+msgstr "Scostamento"
+
+#: timesource.cpp:100
+msgid "Timezone Abbreviation"
+msgstr "Abbreviazione del fuso orario"
+
+#: timesource.cpp:131 timesource.cpp:150 timesource.cpp:171
+msgid "DateTime"
+msgstr "DataOra"
+
+#: timesource.cpp:146
+msgid "Latitude"
+msgstr "Latitudine"
+
+#: timesource.cpp:147
+msgid "Longitude"
+msgstr "Longitudine"
+
+#: timesource.cpp:148
+msgid "Solar"
+msgstr "Solare"
+
+#: timesource.cpp:149
+msgid "Moon"
+msgstr "Luna"

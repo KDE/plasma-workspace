@@ -1,0 +1,311 @@
+# Vincent Pinon <vpinon@kde.org>, 2017.
+# Yoann Laissus <yoann.laissus@gmail.com>, 2019.
+# Simon Depiets <sdepiets@gmail.com>, 2019.
+# Xavier Besnard <xavier.besnard@neuf.fr>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_nightcolor\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-13 00:47+0000\n"
+"PO-Revision-Date: 2022-09-24 14:56+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
+"Language-Team: French <kde-francophone@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 22.08.1\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: package/contents/ui/LocationsFixedView.qml:39
+#, kde-format
+msgctxt ""
+"@label:chooser Tap should be translated to mean touching using a touchscreen"
+msgid "Tap to choose your location on the map."
+msgstr "Tapotez pour sélectionner votre emplacement sur la carte."
+
+#: package/contents/ui/LocationsFixedView.qml:40
+#, kde-format
+msgctxt ""
+"@label:chooser Click should be translated to mean clicking using a mouse"
+msgid "Click to choose your location on the map."
+msgstr "Cliquez pour sélectionner votre emplacement sur la carte."
+
+#: package/contents/ui/LocationsFixedView.qml:78
+#: package/contents/ui/LocationsFixedView.qml:103
+#, kde-format
+msgid "Zoom in"
+msgstr "Zoom avant"
+
+#: package/contents/ui/LocationsFixedView.qml:222
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Modified from <link url='https://commons.wikimedia.org/wiki/File:"
+"World_location_map_(equirectangular_180).svg'>World location map</link> by "
+"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
+"by-sa/3.0'>CC BY-SA 3.0</link>"
+msgstr ""
+"Modifié à partir de la <link url='https://commons.wikimedia.org/wiki/File:"
+"World_location_map_(equirectangular_180).svg'>carte mondial d'emplacements</"
+"link> par TUBS /  Wikimedia Commons / <link url='https://creativecommons.org/"
+"licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
+
+#: package/contents/ui/LocationsFixedView.qml:235
+#, kde-format
+msgctxt "@label: textbox"
+msgid "Latitude:"
+msgstr "Latitude :"
+
+#: package/contents/ui/LocationsFixedView.qml:261
+#, kde-format
+msgctxt "@label: textbox"
+msgid "Longitude:"
+msgstr "Longitude :"
+
+#: package/contents/ui/main.qml:87
+#, kde-format
+msgid "The blue light filter makes the colors on the screen warmer."
+msgstr ""
+"Le filtre de couleur bleue rend les couleurs de l'écran plus chaleureuses."
+
+#: package/contents/ui/main.qml:98
+#, kde-format
+msgid "Switching times:"
+msgstr "Heures d'activation :"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgid "Always off"
+msgstr "Toujours désactivé"
+
+#: package/contents/ui/main.qml:101
+#, kde-format
+msgid "Sunset and sunrise at current location"
+msgstr "Coucher et lever du soleil à l'emplacement actuel"
+
+#: package/contents/ui/main.qml:102
+#, kde-format
+msgid "Sunset and sunrise at manual location"
+msgstr "Coucher et lever du soleil à l'emplacement manuel"
+
+#: package/contents/ui/main.qml:103
+#, kde-format
+msgid "Custom times"
+msgstr "Heures personnalisées"
+
+#: package/contents/ui/main.qml:104
+#, kde-format
+msgid "Always on night color"
+msgstr "Toujours en couleur de nuit"
+
+#: package/contents/ui/main.qml:156
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The device's location will be periodically updated using GPS (if available), "
+"or by sending network information to <link url='https://location.services."
+"mozilla.com'>Mozilla Location Service</link>."
+msgstr ""
+"L'emplacement du périphérique sera périodiquement mis à jour avec "
+"l'utilisation du GPS (si disponible) ou avec l'envoi d'informations sur le "
+"réseau vers le <a href=\"https://location.services.mozilla.com\">Service de "
+"localisation de Mozilla</a>."
+
+#: package/contents/ui/main.qml:175
+#, kde-format
+msgid "Day color temperature:"
+msgstr "Température de couleur de jour :"
+
+#: package/contents/ui/main.qml:218 package/contents/ui/main.qml:277
+#, kde-format
+msgctxt "Color temperature in Kelvin"
+msgid "%1K"
+msgstr "%1 K"
+
+#: package/contents/ui/main.qml:222 package/contents/ui/main.qml:281
+#, kde-format
+msgctxt "Night colour red-ish"
+msgid "Warm"
+msgstr "Chaud"
+
+#: package/contents/ui/main.qml:228 package/contents/ui/main.qml:287
+#, kde-format
+msgctxt "No blue light filter activated"
+msgid "Cool (no filter)"
+msgstr "Doux (Sans filtre)"
+
+#: package/contents/ui/main.qml:228 package/contents/ui/main.qml:287
+#, kde-format
+msgctxt "Night colour blue-ish"
+msgid "Cool"
+msgstr "Doux"
+
+#: package/contents/ui/main.qml:234
+#, kde-format
+msgid "Night color temperature:"
+msgstr "Température de couleur de nuit :"
+
+#: package/contents/ui/main.qml:298
+#, kde-format
+msgid "Latitude: %1°   Longitude: %2°"
+msgstr "Latitude : %1°   Longitude : %2 °"
+
+#: package/contents/ui/main.qml:308
+#, kde-format
+msgid "Begin night color at:"
+msgstr "Démarrer la couleur de nuit à :"
+
+#: package/contents/ui/main.qml:321 package/contents/ui/main.qml:344
+#, kde-format
+msgid "Input format: HH:MM"
+msgstr "Format : HH:MM"
+
+#: package/contents/ui/main.qml:331
+#, kde-format
+msgid "Begin day color at:"
+msgstr "Démarrer la couleur de jour à :"
+
+#: package/contents/ui/main.qml:353
+#, kde-format
+msgid "Transition duration:"
+msgstr "Durée de transition :"
+
+#: package/contents/ui/main.qml:362
+#, kde-format
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "%1 minute"
+msgstr[1] "%1 minutes"
+
+#: package/contents/ui/main.qml:375
+#, kde-format
+msgid "Input minutes - min. 1, max. 600"
+msgstr "En minutes - min. 1, max. 600"
+
+# unreviewed-context
+#: package/contents/ui/main.qml:393
+#, kde-format
+msgid "Error: Transition time overlaps."
+msgstr "Erreur : le temps de transition se recouvre."
+
+#: package/contents/ui/main.qml:413
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Locating…"
+msgstr "Rechercher l'emplacement..."
+
+#: package/contents/ui/TimingsView.qml:32
+#, kde-format
+msgid ""
+"Color temperature begins changing to night time at %1 and is fully changed "
+"by %2"
+msgstr ""
+"La température de couleur de nuit commence à apparaître à %1 et est "
+"entièrement installée à %2"
+
+#: package/contents/ui/TimingsView.qml:39
+#, kde-format
+msgid ""
+"Color temperature begins changing to day time at %1 and is fully changed by "
+"%2"
+msgstr ""
+"La température de couleur de jour commence à apparaître à %1 et est "
+"entièrement installée à %2"
+
+#~ msgid "This is what day color temperature will look like when active."
+#~ msgstr "Ceci sera l'apparence de la couleur de jour une fois activée."
+
+#~ msgid "This is what night color temperature will look like when active."
+#~ msgstr "Ceci est l'apparence de la couleur de nuit une fois activée."
+
+#~ msgid "Activate blue light filter"
+#~ msgstr "Activer le filtre pour la lumière bleue"
+
+#~ msgid "Turn on at:"
+#~ msgstr "Activer à :"
+
+#~ msgid "Turn off at:"
+#~ msgstr "Désactiver à :"
+
+#~ msgid "Night Color begins changing back at %1 and ends at %2"
+#~ msgstr ""
+#~ "La couleur de nuit commence à disparaître à %1 et a totalement disparu à "
+#~ "%2"
+
+#~ msgid "Error: Morning is before evening."
+#~ msgstr "Erreur : le matin ne précède pas le soir."
+
+#~ msgid "Detect Location"
+#~ msgstr "Détecter la localisation"
+
+#~ msgid ""
+#~ "The device's location will be detected using GPS (if available), or by "
+#~ "sending network information to <a href=\"https://location.services."
+#~ "mozilla.com\">Mozilla Location Service</a>."
+#~ msgstr ""
+#~ "L'emplacement du périphérique sera détecté avec l'utilisation du GPS (si "
+#~ "disponible) ou avec l'envoi d'informations sur le réseau aux <a href="
+#~ "\"https://location.services.mozilla.com\">Services de localisation de "
+#~ "Mozilla</a>."
+
+#~ msgid "Night Color begins at %1"
+#~ msgstr "Couleur de nuit commence à %1"
+
+#~ msgid "Color fully changed at %1"
+#~ msgstr "Couleur entièrement changée à %1"
+
+#~ msgid "Normal coloration restored by %1"
+#~ msgstr "Couleur normale restaurée à %1"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Geoffray Levasseur, Matthieu Robin, Vincent Pinon, Simon Depiets"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "geoffray.levasseurbrandin@numericable.fr, kde@macolu.org, vpinon@kde.org, "
+#~ "sdepiets@gmail.com"
+
+#~ msgid "Night Color"
+#~ msgstr "Couleur de nuit"
+
+#~ msgid "Roman Gilg"
+#~ msgstr "Roman Gilg"
+
+#~ msgid " K"
+#~ msgstr " K"
+
+#~ msgid "Operation mode:"
+#~ msgstr "Mode d'opération :"
+
+#~ msgid "Automatic"
+#~ msgstr "Automatique"
+
+#~ msgid "Times"
+#~ msgstr "Heures"
+
+#~ msgid "Constant"
+#~ msgstr "Constant"
+
+#~ msgid "Sunrise begins:"
+#~ msgstr "Le lever de soleil commence :"
+
+#~ msgid "(Input format: HH:MM)"
+#~ msgstr "(Format : HH:MM)"
+
+#~ msgid "Sunset begins:"
+#~ msgstr "Le coucher de soleil commence :"
+
+#~ msgid "...and ends:"
+#~ msgstr "...et termine :"
+
+#~ msgid "Manual"
+#~ msgstr "Manuel"
+
+#~ msgid "(HH:MM)"
+#~ msgstr "(HH:MM)"

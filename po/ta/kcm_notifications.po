@@ -1,0 +1,248 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Kishore G <kishore96@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-27 00:47+0000\n"
+"PO-Revision-Date: 2021-08-10 21:25+0530\n"
+"Last-Translator: Kishore G <kishore96@gmail.com>\n"
+"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.07.90\n"
+
+#: kcm.cpp:64
+#, kde-format
+msgid "Toggle do not disturb"
+msgstr "தொந்தரவு செய்யாமையை நிலைமாற்று"
+
+#: kcm.cpp:192
+#, kde-format
+msgid "Configure Notifications"
+msgstr "அறிவிப்புகளை அமை"
+
+#: package/contents/ui/ApplicationConfiguration.qml:63
+#, kde-format
+msgid "Show popups"
+msgstr "தெரித்தெழும் அறிவிப்புகளை காட்டு"
+
+#: package/contents/ui/ApplicationConfiguration.qml:77
+#, kde-format
+msgid "Show in do not disturb mode"
+msgstr "தொந்தரவு செய்யாத பயன்முறையில் காட்டு"
+
+#: package/contents/ui/ApplicationConfiguration.qml:90
+#: package/contents/ui/main.qml:148
+#, kde-format
+msgid "Show in history"
+msgstr "வரலாற்றில் காட்டு"
+
+#: package/contents/ui/ApplicationConfiguration.qml:101
+#, kde-format
+msgid "Show notification badges"
+msgstr "அறிவிப்பு அடையாளக்குறிகளைக் காட்டு"
+
+#: package/contents/ui/ApplicationConfiguration.qml:119
+#, kde-format
+msgid "Configure Events…"
+msgstr "நிகழ்வுகளை அமை…"
+
+#: package/contents/ui/ApplicationConfiguration.qml:130
+#, kde-format
+msgid ""
+"This application does not support configuring notifications on a per-event "
+"basis."
+msgstr "தனிப்பட்ட நிகழ்வுகளுக்கான அறிவிப்புகளை அமைத்தலை இந்த செயலி ஆதரிக்காது."
+
+#: package/contents/ui/main.qml:18
+#, kde-format
+msgid "This module lets you manage application and system notifications."
+msgstr "செயலி மற்றும் கணினி அறிவிப்புகளை நீங்கள் அமைக்க இந்த கூறு உதவும்."
+
+#: package/contents/ui/main.qml:42
+#, kde-format
+msgid ""
+"Could not find a 'Notifications' widget, which is required for displaying "
+"notifications. Make sure that it is enabled either in your System Tray or as "
+"a standalone widget."
+msgstr ""
+"அறிவிப்புகளைக் காட்ட தேவையான 'அறிவிப்புகள்' பிளாஸ்மாய்டை கண்டுபிடிக்க முடியவில்லை. "
+"உங்கள் சாதனத் தட்டிலோ தனிப்பட்ட பிளாஸ்மாய்டாகவோ இயக்கப்பட்டுள்ளதா என்று சரிபாருங்கள்."
+
+#: package/contents/ui/main.qml:53
+#, kde-format
+msgctxt "Vendor and product name"
+msgid "Notifications are currently provided by '%1 %2' instead of Plasma."
+msgstr "பிளாஸ்மாவுக்கு பதிலாக தற்போது '%1 %2' அறிவிப்புகளை வழங்குகிறது."
+
+#: package/contents/ui/main.qml:57
+#, kde-format
+msgid "Notifications are currently not provided by Plasma."
+msgstr "தற்போது அறிவிப்புகளை பிளாஸ்மா வழங்கவில்லை."
+
+#: package/contents/ui/main.qml:64
+#, kde-format
+msgid "Do Not Disturb mode:"
+msgstr "தொந்தரவு செய்யாத பயன்முறை:"
+
+#: package/contents/ui/main.qml:65
+#, kde-format
+msgctxt "Do not disturb when screens are mirrored"
+msgid "Enable when screens are mirrored"
+msgstr "காட்சிக் கருவிகள் பிரதிபலிக்கப்படும்போது இயக்கு"
+
+#: package/contents/ui/main.qml:77
+#, kde-format
+msgctxt "Do not disturb while screen sharing"
+msgid "Enable while screen sharing"
+msgstr "காட்சிக் கருவியைப் பகிரும்போது இயக்கு"
+
+#: package/contents/ui/main.qml:95
+#, kde-format
+msgctxt "Turn do not disturb mode on/off with keyboard shortcut"
+msgid "Toggle with:"
+msgstr "இதனால் நிலைமாற்று:"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Critical notifications:"
+msgstr "முக்கியமான அறிவிப்புகள்"
+
+#: package/contents/ui/main.qml:110
+#, kde-format
+msgid "Show in Do Not Disturb mode"
+msgstr "தொந்தரவு செய்யாத பயன்முறையில் காட்டு"
+
+#: package/contents/ui/main.qml:122
+#, kde-format
+msgid "Normal notifications:"
+msgstr "சாதாரண அறிவிப்புகள்:"
+
+#: package/contents/ui/main.qml:123
+#, kde-format
+msgid "Show over full screen windows"
+msgstr "முழுத்திரை சாளரங்களுக்கு மேலே காட்டு"
+
+#: package/contents/ui/main.qml:135
+#, kde-format
+msgid "Low priority notifications:"
+msgstr "அற்பமான அறிவிப்புகள்:"
+
+#: package/contents/ui/main.qml:136
+#, kde-format
+msgid "Show popup"
+msgstr "தெரித்தெழும் அறிவிப்பை காட்டு"
+
+#: package/contents/ui/main.qml:170
+#, kde-format
+msgid "Popup:"
+msgstr "தெரித்தெழும் அறிவிப்பு:"
+
+#: package/contents/ui/main.qml:171
+#, kde-format
+msgctxt "Popup position near notification plasmoid"
+msgid "Show near notification icon"
+msgstr "அறிவிப்பு சின்னத்திற்கு அருகில் காட்டு"
+
+#: package/contents/ui/main.qml:208
+#, kde-format
+msgid "Choose Custom Position…"
+msgstr "வேறு இடத்தை தேர்ந்தெடு…"
+
+#: package/contents/ui/main.qml:217 package/contents/ui/main.qml:241
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "%1 நொடி"
+msgstr[1] "%1 நொடிகள்"
+
+#: package/contents/ui/main.qml:226
+#, kde-format
+msgctxt "Part of a sentence like, 'Hide popup after n seconds'"
+msgid "Hide after:"
+msgstr "இதற்கு பிறகு மறை:"
+
+#: package/contents/ui/main.qml:258
+#, kde-format
+msgid "Application progress:"
+msgstr "செயலி முன்னேற்றம்"
+
+#: package/contents/ui/main.qml:259 package/contents/ui/main.qml:303
+#, kde-format
+msgid "Show in task manager"
+msgstr "பணி மேலாளரில் காட்டு"
+
+#: package/contents/ui/main.qml:271
+#, kde-format
+msgctxt "Show application jobs in notification widget"
+msgid "Show in notifications"
+msgstr "அறிவிப்புகளில் காட்டு"
+
+#: package/contents/ui/main.qml:285
+#, kde-format
+msgctxt "Keep application job popup open for entire duration of job"
+msgid "Keep popup open during progress"
+msgstr "நடைபெறும்போது திறந்தே வைத்திரு"
+
+#: package/contents/ui/main.qml:302
+#, kde-format
+msgid "Notification badges:"
+msgstr "அறிவிப்பு அடையாளக்குறிகள்:"
+
+#: package/contents/ui/main.qml:318
+#, kde-format
+msgid "Applications:"
+msgstr "செயலிகள்:"
+
+#: package/contents/ui/main.qml:319
+#, kde-format
+msgid "Configure…"
+msgstr "அமை…"
+
+#: package/contents/ui/PopupPositionPage.qml:15
+#, kde-format
+msgid "Popup Position"
+msgstr "தெரித்தெழும் அறிவிப்பின் இருப்பிடம்"
+
+#: package/contents/ui/SourcesPage.qml:19
+#, kde-format
+msgid "Application Settings"
+msgstr "செயலி அமைப்புகள்"
+
+#: package/contents/ui/SourcesPage.qml:91
+#, kde-format
+msgid "Applications"
+msgstr "செயலிகள்"
+
+#: package/contents/ui/SourcesPage.qml:92
+#, kde-format
+msgid "System Services"
+msgstr "கணினி சேவைகள்"
+
+#: package/contents/ui/SourcesPage.qml:130
+#, kde-format
+msgid "No application or event matches your search term."
+msgstr "உங்கள் தேடலுக்கு எந்த செயலியோ நிகழ்வோ பொருந்தவில்லை."
+
+#: package/contents/ui/SourcesPage.qml:150
+#, kde-format
+msgid ""
+"Select an application from the list to configure its notification settings "
+"and behavior."
+msgstr ""
+"ஒரு செயலியின் அறிவிப்பு அமைப்புகள் மற்றும் நடத்தையை மாற்ற, அதை பட்டியலிலிருந்து தேர்வு "
+"செய்யுங்கள்."
+
+#: sourcesmodel.cpp:363
+#, kde-format
+msgid "Other Applications"
+msgstr "மற்ற செயலிகள்"
+
+#~ msgid "Notifications"
+#~ msgstr "அறிவிப்புகள்"

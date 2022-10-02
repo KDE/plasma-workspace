@@ -1,0 +1,142 @@
+# translation of plasma_runner_shell.po to Dutch
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Rinse de Vries <rinsedevries@kde.nl>, 2008.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2009, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_shell\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-27 00:45+0000\n"
+"PO-Revision-Date: 2016-05-13 12:47+0200\n"
+"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: shellrunner.cpp:35
+#, kde-format
+msgid "Finds commands that match :q:, using common shell syntax"
+msgstr ""
+"Zoek commando's die overeenkomen met :q:, gebruikmakend van gewone "
+"shellsyntax"
+
+#: shellrunner.cpp:36
+#, kde-format
+msgid "Run in Terminal Window"
+msgstr "Uitvoeren in een terminalvenster"
+
+#: shellrunner.cpp:54
+#, kde-format
+msgid "Run %1"
+msgstr "%1 uitvoeren"
+
+#~ msgid "Enter the user you want to run the application as here."
+#~ msgstr "Voer hier de gebruiker in waaronder u de toepassing wilt uitvoeren."
+
+#~ msgid "User&name:"
+#~ msgstr "Gebruikers&naam:"
+
+#~ msgid "Enter the password here for the user you specified above."
+#~ msgstr "Voer hier het wachtwoord in van de hierboven opgegeven gebruiker."
+
+#~ msgid "Pass&word:"
+#~ msgstr "&Wachtwoord:"
+
+#~ msgid ""
+#~ "Check this option if the application you want to run is a text mode "
+#~ "application. The application will then be run in a terminal emulator "
+#~ "window."
+#~ msgstr ""
+#~ "Schakel deze optie in als u het programma in tekstmodus wilt uitvoeren. "
+#~ "Het programma zal dan in een terminalvenster gestart worden."
+
+#~ msgid "Run in &terminal window"
+#~ msgstr "Uitvoeren in een &terminalvenster"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "user id. Every process has a user id associated with it. This id code "
+#~ "determines file access and other permissions. The password of the user is "
+#~ "required to do this."
+#~ msgstr ""
+#~ "Schakel deze optie in als u het programma met een andere gebruikers-id "
+#~ "wilt uitvoeren. Elk proces heeft zijn eigen gebruikers-id. Deze id-code "
+#~ "bepaalt bestandstoegang en andere permissies. Het wachtwoord van de "
+#~ "gebruiker is nodig om dit mogelijk te maken."
+
+#~ msgid "Run as a different &user"
+#~ msgstr "&Uitvoeren onder een andere gebruikersnaam"
+
+#~ msgid ""
+#~ "<qt>Select whether realtime scheduling should be enabled for the "
+#~ "application. The scheduler governs which process will run and which will "
+#~ "have to wait. Two schedulers are available:\n"
+#~ "<ul>\n"
+#~ "<li><em>Normal:</em> This is the standard, timesharing scheduler. It will "
+#~ "divide fairly the available processing time between all processes.</li>\n"
+#~ "<li><em>Realtime:</em>This scheduler will run your application "
+#~ "uninterrupted until it gives up the processor. This can be dangerous. An "
+#~ "application that does not give up the processor might hang the system. "
+#~ "You need root's password to use the scheduler.</li>\n"
+#~ "</ul>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>Hier kunt u bepalen of u realtime scheduling voor het programma wilt "
+#~ "gebruiken. De scheduler is een gedeelte van het besturingssysteem dat "
+#~ "beslist welk proces uitgevoerd wordt en welke moeten wachten. Twee "
+#~ "schedulers zijn beschikbaar:\n"
+#~ " <ul>\n"
+#~ "<li><em>Normaal:</em> dit is de standaard, de tijdsdelingscheduler. Deze "
+#~ "zal de beschikbare processortijd eerlijk verdelen onder alle processen. </"
+#~ "li>\n"
+#~ "<li><em>Realtime:</em> deze scheduler zal uw programma ononderbroken "
+#~ "uitvoeren totdat hij de processor vrij geeft. Dit kan gevaarlijk zijn. "
+#~ "Een programma dat de processor niet vrijgeeft kan het systeem laten "
+#~ "vastlopen. U hebt het wachtwoord van de root-gebruiker nodig om de "
+#~ "scheduler te kunnen gebruiken.</li>\n"
+#~ "</ul>\n"
+#~ "</qt>"
+
+#~ msgid "Run with realtime &scheduling"
+#~ msgstr "Uitvoeren in &realtime"
+
+#~ msgid ""
+#~ "The priority that the command will be run with can be set here. From left "
+#~ "to right, it goes from low to high. The center position is the default "
+#~ "value. For priorities higher than the default, you will need to provide "
+#~ "the root password."
+#~ msgstr ""
+#~ "De prioriteit waaronder het commando zal worden uitgevoerd kan hier "
+#~ "ingesteld worden. Van links naar rechts gaat het van laag naar hoog. De "
+#~ "middenpositie is de standaardwaarde. Voor hogere prioriteiten dan de "
+#~ "standaard hebt u het wachtwoord van de root-gebruiker nodig."
+
+#~ msgid "&Priority:"
+#~ msgstr "&Prioriteit:"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "priority. A higher priority tells the operating system to give more "
+#~ "processing time to your application."
+#~ msgstr ""
+#~ "Schakel deze optie in als u het programma met een andere prioriteit wilt  "
+#~ "starten. Een hogere prioriteit vertelt het besturingssysteem om meer "
+#~ "processortijd aan uw programma te geven."
+
+#~ msgid "Run with a &different priority"
+#~ msgstr "Met een an&dere prioriteit uitvoeren"
+
+#~ msgid "Low"
+#~ msgstr "Laag"
+
+#~ msgid "High"
+#~ msgstr "Hoog"
+
+#~ msgid "Command"
+#~ msgstr "Commando"

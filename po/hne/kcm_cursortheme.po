@@ -1,0 +1,595 @@
+# translation of kcminput.po to Hindi
+# Copyright (C) 2004 Free Software Foundation, Inc.
+#
+# Ravishankar Shrivastava <raviratlami@yahoo.com>, 2004.
+# Ravishankar Shrivastava <raviratlami@gmail.com>, 2004.
+# Ravishankar Shrivastava <raviratlami@aol.in>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminput\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:50+0000\n"
+"PO-Revision-Date: 2009-02-10 12:28+0530\n"
+"Last-Translator: Ravishankar Shrivastava <raviratlami@aol.in>\n"
+"Language-Team: Hindi <kde-i18n-doc@lists.kde.org>\n"
+"Language: hne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 0.2\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Do not change cursor theme"
+msgid "Name of the current cursor theme"
+msgstr "संकेतक प्रसंग नइ बदलव"
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr ""
+
+#: kcmcursortheme.cpp:302
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr "बदलाव मन ल प्रभाव मं लाय बर आप मन ल केडीई ल फिर से  चालू करना होही."
+
+#: kcmcursortheme.cpp:376
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: kcmcursortheme.cpp:387
+#, fuzzy, kde-format
+#| msgid "Unable to find the cursor theme archive %1."
+msgid "Unable to download the icon theme archive: %1"
+msgstr "संकेतक प्रसंग अभिलेख %1 पाय मं अक्छम."
+
+#: kcmcursortheme.cpp:418
+#, fuzzy, kde-format
+#| msgid "The file %1 does not appear to be a valid cursor theme archive."
+msgid "The file is not a valid icon theme archive."
+msgstr "फाइल %1 वैध संकेतक प्रसंग अभिलेखागार जइसन प्रतीत नइ होथे."
+
+#: kcmcursortheme.cpp:425
+#, kde-format
+msgid "Failed to create 'icons' folder."
+msgstr ""
+
+#: kcmcursortheme.cpp:434
+#, kde-format
+msgid ""
+"A theme named %1 already exists in your icon theme folder. Do you want "
+"replace it with this one?"
+msgstr ""
+"एक प्रसंग %1 नाम से चिनहा प्रसंग फोल्डर मं पहिली से ही मिलत हे. का आप मन ओला एखर से "
+"बदलना चाहथो ?"
+
+#: kcmcursortheme.cpp:438
+#, kde-format
+msgid "Overwrite Theme?"
+msgstr "प्रसंग मेटाय के लिखव?"
+
+#: kcmcursortheme.cpp:462
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: package/contents/ui/Delegate.qml:54
+#, kde-format
+msgid "Remove Theme"
+msgstr "प्रसंग हटाव"
+
+#: package/contents/ui/Delegate.qml:61
+#, fuzzy, kde-format
+#| msgid "&Cursor Theme"
+msgid "Restore Cursor Theme"
+msgstr "संकेतक प्रसंग (&C)"
+
+#: package/contents/ui/main.qml:20
+#, kde-format
+msgid "This module lets you choose the mouse cursor theme."
+msgstr ""
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Size:"
+msgstr ""
+
+#: package/contents/ui/main.qml:134
+#, fuzzy, kde-format
+#| msgid "Install New Theme..."
+msgid "&Install from File…"
+msgstr "नवा प्रसंग इनस्टाल करव..."
+
+#: package/contents/ui/main.qml:140
+#, fuzzy, kde-format
+#| msgid "Install New Theme..."
+msgid "&Get New Cursors…"
+msgstr "नवा प्रसंग इनस्टाल करव..."
+
+#: package/contents/ui/main.qml:157
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Open Theme"
+msgstr "प्रसंग हटाव"
+
+#: package/contents/ui/main.qml:159
+#, kde-format
+msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:41
+#, kde-format
+msgid "The requested size '%1' is not available, using %2 instead."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:62
+#, kde-format
+msgid ""
+"This tool allows you to set the mouse cursor theme for the current Plasma "
+"session, without accidentally setting it to one that is either not "
+"available, or which is already set."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:66
+#, kde-format
+msgid ""
+"The name of the cursor theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:67
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:68
+#, kde-format
+msgid "Use a specific size, rather than the theme default size"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:89
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:100
+#, kde-format
+msgid ""
+"Successfully applied the mouse cursor theme %1 to your current Plasma session"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:102
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for your newly applied mouse cursor "
+"theme to display correctly."
+msgstr "बदलाव मन ल प्रभाव मं लाय बर आप मन ल केडीई ल फिर से  चालू करना होही."
+
+#: plasma-apply-cursortheme.cpp:112
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:120
+#, kde-format
+msgid "You have the following mouse cursor themes on your system:"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:125
+#, kde-format
+msgid "(Current theme for this Plasma session)"
+msgstr ""
+
+#: xcursor/xcursortheme.cpp:60
+#, kde-format
+msgctxt ""
+"@info The argument is the list of available sizes (in pixel). Example: "
+"'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+msgid "(Available sizes: %1)"
+msgstr ""
+
+#~ msgid "Name"
+#~ msgstr "नाम "
+
+#~ msgid "Description"
+#~ msgstr "वर्नन"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "रविसंकर सिरीवास्तव, जी. करूनाकर"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "raviratlami@aol.in,"
+
+#, fuzzy
+#~| msgid "&Cursor Theme"
+#~ msgid "Cursors"
+#~ msgstr "संकेतक प्रसंग (&C)"
+
+#~ msgid ""
+#~ "<qt>You cannot delete the theme you are currently using.<br />You have to "
+#~ "switch to another theme first.</qt>"
+#~ msgstr ""
+#~ "<qt>आप ए प्रसंग जऊन ला अभी परयोग करत हो मिटा नइ सकव.<br />पहिली आप मन ल "
+#~ "दुसरा प्रसंग मं स्विच करना पड़ही.</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <i>%1</i> cursor theme?<br />This "
+#~ "will delete all the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>का आप मन सही मं संकेतक प्रसंग<strong>%1</strong> ल मिटाना चाहथो ?<br />ये "
+#~ "एखर प्रसंग द्वारा इनस्टाल सब्बो फाइल मन ल मिटा देही.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "पुस्टिकरन"
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "संकेतक सेटिंग बदलिस"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "प्रसंग यूआरएल खींचलाव या टाइप करव"
+
+#~ msgid ""
+#~ "Unable to download the cursor theme archive; please check that the "
+#~ "address %1 is correct."
+#~ msgstr "संकेतक प्रसंग अभिलेख डाउनलोड करे मं अक्छम; किरपा करके, जांचव कि पता %1 सही हे."
+
+#~ msgid ""
+#~ "Select the cursor theme you want to use (hover preview to test cursor):"
+#~ msgstr ""
+#~ "संकेतक प्रसंग जऊन आप मन उपयोग करना चाहथो ओला चुनव (संकेतक ल जांचे बर प्रिव्यू के ऊपर "
+#~ "मंडराव) "
+
+#~ msgid "Select the cursor theme you want to use:"
+#~ msgstr "संकेतक प्रसंग चुनव जेखर उपयोग आप मन करना चाहथो :"
+
+#~ msgid "Small black"
+#~ msgstr "छोटा काला"
+
+#~ msgid "Small black cursors"
+#~ msgstr "छोटा काला संकेतक"
+
+#~ msgid "Large black"
+#~ msgstr "बड़ा काला"
+
+#~ msgid "Large black cursors"
+#~ msgstr "बड़ा काला संकेतक"
+
+#~ msgid "Small white"
+#~ msgstr "छोटा सफेद"
+
+#~ msgid "Small white cursors"
+#~ msgstr "छोटा सफेद संकेतक"
+
+#~ msgid "Large white"
+#~ msgstr "बड़ा सफेद"
+
+#~ msgid "Large white cursors"
+#~ msgstr "बड़ा सफेद संकेतक"
+
+#~ msgid "Button Order"
+#~ msgstr "बटन क्रम"
+
+#~ msgid "Righ&t handed"
+#~ msgstr "जेवनी हाथ वाला (&t)"
+
+#~ msgid "Le&ft handed"
+#~ msgstr "डेरी हाथ वाला (&f)"
+
+#~ msgid ""
+#~ "Change the direction of scrolling for the mouse wheel or the 4th and 5th "
+#~ "mouse buttons."
+#~ msgstr "मुसुवा चकरी के स्क्रालिंग या 4था अउ 5वाँ मुसुवा बटन के दिसा बदलव."
+
+#~ msgid "Re&verse scroll direction"
+#~ msgstr "उलटा स्क्राल दिसा (&v)"
+
+#~ msgid "Icons"
+#~ msgstr "चिनहा"
+
+#~ msgid ""
+#~ "Dou&ble-click to open files and folders (select icons on first click)"
+#~ msgstr ""
+#~ "फाइल अउ फोल्डर ल खोले बर डबल किलिक करव (पहिली किलिक मं चिनहा ल चुनव) (&b)"
+
+#~ msgid "&Single-click to open files and folders"
+#~ msgstr "फाइल अउ फोल्डर ल खोले बर सिंगल किलिक (&S)"
+
+#~ msgid "Cha&nge pointer shape over icons"
+#~ msgstr "चिनहा मन के ऊपर आय मं सूचक के सक्ल बदलव (&n)"
+
+#~ msgid "A&utomatically select icons"
+#~ msgstr "चिनहा मन ल अपने अपन चुनव (&u)"
+
+#, fuzzy
+#~| msgid "Dela&y:"
+#~ msgctxt "label. delay (on milliseconds) to automatically select icons"
+#~ msgid "Delay"
+#~ msgstr "देरी: (&y)"
+
+#, fuzzy
+#~| msgid " msec"
+#~ msgctxt "milliseconds. time to automatically select the items"
+#~ msgid " ms"
+#~ msgstr "मि.से."
+
+#~ msgid ""
+#~ "<h1>Mouse</h1> This module allows you to choose various options for the "
+#~ "way in which your pointing device works. Your pointing device may be a "
+#~ "mouse, trackball, or some other hardware that performs a similar function."
+#~ msgstr ""
+#~ "<h1>मुसुवा</h1> ए माड्यूल आप मन ल आप मन के पाइंटिंग औजार जऊन किसम काम करथे ऊंखर "
+#~ "विभिन्न विकल्प मन ल चयन के सुविधा देथे . आप मन के पाइंटिंग उपकरन एक मुसुवा, ट्रेकबाल "
+#~ "या कोनो अउ हार्डवेयर हो सकथे  जऊन अइसने काम करथे."
+
+#~ msgid "&General"
+#~ msgstr "सामान्य (&G)"
+
+#~ msgid "Activates and opens a file or folder with a single click."
+#~ msgstr "एक किलिक से फाइल या फोल्डर ल सक्रिय करथे अउ खोलथे ."
+
+#~ msgid ""
+#~ "If you check this option, pausing the mouse pointer over an icon on the "
+#~ "screen will automatically select that icon. This may be useful when "
+#~ "single clicks activate icons, and you want only to select the icon "
+#~ "without activating it."
+#~ msgstr ""
+#~ "यदि आप मन एखर विकल्प ल चुनथव तहां मुसुवा सूचक ल चिनहा के ऊपर ठहरा दे मं ओला ए अपने "
+#~ "अपन चुन लेथे. ए तब उपयोगी होथे  जब एक किलिक चिनहा ल सक्रिय करथे , अउ आप मन "
+#~ "चिनहा ल बिना सक्रिय करे ओला सिरिफ चुनना चाहथो."
+
+#~ msgid ""
+#~ "If you have checked the option to automatically select icons, this slider "
+#~ "allows you to select how long the mouse pointer must be paused over the "
+#~ "icon before it is selected."
+#~ msgstr ""
+#~ "यदि आप मन एखर विकल्प ल चिनहा ल अपने अपन चुने बर जांचहू, तहां ए स्लाइडर ए तय करही "
+#~ "कि आप मन के मुसुवा सूचक चिनहा ल चुने बर ओखर ऊपर कतेक देर तक रुकही. "
+
+#~ msgid "Advanced"
+#~ msgstr "विस्तृत"
+
+#~ msgid " x"
+#~ msgstr "x"
+
+#~ msgid "Pointer acceleration:"
+#~ msgstr "सूचक त्वरनः"
+
+#~ msgid "Pointer threshold:"
+#~ msgstr "सूचक सीमाः"
+
+#~ msgid " msec"
+#~ msgstr "मि.से."
+
+#~ msgid "Double click interval:"
+#~ msgstr "डबल किलिक अंतरालः"
+
+#~ msgid "Drag start time:"
+#~ msgstr "ड्रेग चालू समयः"
+
+#~ msgid ""
+#~ "If you click with the mouse (e.g. in a multi-line editor) and begin to "
+#~ "move the mouse within the drag start time, a drag operation will be "
+#~ "initiated."
+#~ msgstr ""
+#~ "यदि आप मन मुसुवा से किलिक करथो (जइसन कि बहु-लकीर संपादक में) अउ मुसुवा ल ड्रेग चालू "
+#~ "समय के साथ खिसकाथे , एक ड्रेग आपरेसन चालू हो जाथे."
+
+#~ msgid "Drag start distance:"
+#~ msgstr "ड्रेग चालू दूरीः"
+
+#~ msgid ""
+#~ "If you click with the mouse and begin to move the mouse at least the drag "
+#~ "start distance, a drag operation will be initiated."
+#~ msgstr ""
+#~ "यदि आप मन मुसुवा से किलिक करथो अउ मुसुवा ल ड्रेग चालू दूरी से जादा खिसकाथें , एक ड्रेग "
+#~ "आपरेसन चालू हो जाथे ."
+
+#~ msgid "Mouse wheel scrolls by:"
+#~ msgstr "मुसुवा चकरी स्क्राल करहीः"
+
+#~ msgid "Mouse Navigation"
+#~ msgstr "मुसुवा नेविगेसन"
+
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "कुंजीपट के साथ सूचक ल खिसकाव (न्यूमेरिक पैड ल उपयोग करके) (&M)"
+
+#~ msgid "&Acceleration delay:"
+#~ msgstr "त्वरन देरीः (&A)"
+
+#~ msgid "R&epeat interval:"
+#~ msgstr "दोहराए के अंतरालः (&e)"
+
+#~ msgid "Acceleration &time:"
+#~ msgstr "त्वरन समयः (&t)"
+
+#~ msgid " pixel/sec"
+#~ msgstr "पिक्सेल्स/सेक"
+
+#~ msgid "Ma&ximum speed:"
+#~ msgstr "सबसे अधिक गतिः (&x)"
+
+#~ msgid "Acceleration &profile:"
+#~ msgstr "त्वरन प्रोफाइलः (&p)"
+
+#~ msgid "Mouse"
+#~ msgstr "मुसुवा"
+
+#~ msgid "(c) 1997 - 2005 Mouse developers"
+#~ msgstr "(c) 1997 - 2005 मुसुवा बनइया मन"
+
+#~ msgid "Patrick Dowler"
+#~ msgstr "पेट्रिक डाउलर"
+
+#~ msgid "Dirk A. Mueller"
+#~ msgstr "डिर्क ए. मुलर"
+
+#~ msgid "David Faure"
+#~ msgstr "डेविड फारे"
+
+#~ msgid "Bernd Gehrmann"
+#~ msgstr "बेर्न्द गेहर्मन"
+
+#~ msgid "Rik Hemsley"
+#~ msgstr "रिक हेम्सले"
+
+#~ msgid "Brad Hughes"
+#~ msgstr "ब्रेज हजेस"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "राल्फ नाल्देन"
+
+#~ msgid "Brad Hards"
+#~ msgstr "ब्रेड हार्ड्स"
+
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] " पिक्सेल"
+#~ msgstr[1] "पिक्सेल"
+
+#~ msgid " line"
+#~ msgid_plural " lines"
+#~ msgstr[0] " पंक्ति"
+#~ msgstr[1] "पंक्तियाँ"
+
+#~ msgid "Mouse type: %1"
+#~ msgstr "मुसुवा किसम: %1"
+
+#~ msgid ""
+#~ "RF channel 1 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "आरएफ चैनल 1 सेट कर दे गे हे. संकली फिर से स्थापित करे बर किरपा करके, मुसुवा मं कनेक्ट "
+#~ "बटन दबाव."
+
+#~ msgid "Press Connect Button"
+#~ msgstr "कनेक्ट बटन ल दबाव"
+
+#~ msgid ""
+#~ "RF channel 2 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "आरएफ चैनल 2 सेट कर दे गे हे. संकली फिर से स्थापित करे बर किरपा करके, मुसुवा मं कनेक्ट "
+#~ "बटन दबाव."
+
+#, fuzzy
+#~| msgid "none"
+#~ msgctxt "no cordless mouse"
+#~ msgid "none"
+#~ msgstr "कोई नइ"
+
+#~ msgid "Cordless Mouse"
+#~ msgstr "कार्डलेस मुसुवा"
+
+#~ msgid "Cordless Wheel Mouse"
+#~ msgstr "कार्डलैस चकरी मुसुवा"
+
+#~ msgid "Cordless MouseMan Wheel"
+#~ msgstr "कार्डलेस मुसुवा-मेन चकरी"
+
+#~ msgid "Cordless TrackMan Wheel"
+#~ msgstr "कार्डलेस ट्रैक-मेन चकरी"
+
+#~ msgid "TrackMan Live"
+#~ msgstr "ट्रैक-मेन लाइव"
+
+#~ msgid "Cordless TrackMan FX"
+#~ msgstr "कार्डलेस ट्रैक-मेन एफएक्स"
+
+#~ msgid "Cordless MouseMan Optical"
+#~ msgstr "कार्डलेस आप्टिकल मुसुवा-मेन"
+
+#~ msgid "Cordless Optical Mouse"
+#~ msgstr "कार्डलेस आप्टिकल मुसुवा"
+
+#~ msgid "Cordless MouseMan Optical (2ch)"
+#~ msgstr "कार्डलेस आप्टिकल मुसुवा (2 चै)"
+
+#~ msgid "Cordless Optical Mouse (2ch)"
+#~ msgstr "कार्डलेस आप्टिकल मुसुवा (2 चै)"
+
+#~ msgid "Cordless Mouse (2ch)"
+#~ msgstr "कार्डलेस मुसुवा (2चै)"
+
+#~ msgid "Cordless Optical TrackMan"
+#~ msgstr "कार्डलेस आप्टिकल ट्रैक-मेन"
+
+#~ msgid "MX700 Cordless Optical Mouse"
+#~ msgstr "एमएक्स700 कार्डलेस आप्टिकल मुसुवा"
+
+#~ msgid "MX700 Cordless Optical Mouse (2ch)"
+#~ msgstr "एमएक्स700 कार्डलेस आप्टिकल मुसुवा (2 चै)"
+
+#~ msgid "Unknown mouse"
+#~ msgstr "अग्यात मुसुवा"
+
+#~ msgid "Cordless Name"
+#~ msgstr "कार्डलेस नाम"
+
+#~ msgid "Sensor Resolution"
+#~ msgstr "सेंसर रेजोल्यूसन"
+
+#~ msgid "400 counts per inch"
+#~ msgstr "400 गनना प्रति इंच"
+
+#~ msgid "800 counts per inch"
+#~ msgstr "800 गनना प्रति इंच"
+
+#~ msgid "Battery Level"
+#~ msgstr "बैटरी स्तर"
+
+#~ msgid "RF Channel"
+#~ msgstr "आरएफ चैनेल"
+
+#~ msgid "Channel 1"
+#~ msgstr "चैनेल 1"
+
+#~ msgid "Channel 2"
+#~ msgstr "चैनेल 2"
+
+#~ msgid "KDE Classic"
+#~ msgstr "केडीई क्लासिक"
+
+#~ msgid "The default cursor theme in KDE 2 and 3"
+#~ msgstr "केडीई २ अउ ३ मं डिफाल्ट संकेतक प्रसंग"
+
+#~ msgid "No description available"
+#~ msgstr "कोई वर्नन नइ मिलत हे"
+
+#~ msgid "Short"
+#~ msgstr "छोटा"
+
+#~ msgid "Long"
+#~ msgstr "लंबा"
+
+#~ msgid "Show feedback when clicking an icon"
+#~ msgstr "जब चिनहा मं किलिक करव तहां फीडबैक देखाव"
+
+#~ msgid "Visual f&eedback on activation"
+#~ msgstr "सक्रियता मं विजुअल फीडबैक (&e)"
+
+#~ msgid "Replace"
+#~ msgstr "बदलव"
+
+#~ msgid "No theme"
+#~ msgstr "कोई प्रसंग नइ"
+
+#~ msgid "The old classic X cursors"
+#~ msgstr "जुन्ना क्लासिक X संकेतक"
+
+#~ msgid "System theme"
+#~ msgstr "तंत्र प्रसंग"

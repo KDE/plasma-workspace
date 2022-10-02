@@ -1,0 +1,191 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Ukrainian "INCLUDE">
+]>
+<article id="desktopthemedetails" lang="&language;">
+<articleinfo>
+<title
+>Стиль Плазми</title>
+<authorgroup>
+<author
+><firstname
+>Andrew</firstname
+> <surname
+>Lake</surname
+></author>
+<author
+><firstname
+>Carl</firstname
+> <surname
+>Schwan</surname
+> </author>
+<othercredit role="translator"
+><firstname
+>Юрій</firstname
+><surname
+>Чорноіван</surname
+><affiliation
+><address
+><email
+>yurchor@ukr.net</email
+></address
+></affiliation
+><contrib
+>Переклад українською</contrib
+></othercredit
+>  
+</authorgroup>
+
+<date
+>9 квітня 2021 року</date>
+<releaseinfo
+>Плазма 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Системні параметри</keyword>
+<keyword
+>стільниця</keyword>
+<keyword
+>стиль</keyword>
+<keyword
+>тема</keyword>
+<keyword
+>плазма</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Плазма постчається із декількома типовими стилями. Стиль Плазми визначає, як виглядатимуть різні компоненти Плазми (плазмоїди, панелі, віджети тощо). </para>
+
+<para>
+  <screenshot>
+    <screeninfo
+>Знімок засобу керування стилями Плазми</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="main.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase
+>Налаштування стилю Плазми</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</para>
+
+<para
+>За допомогою цього модуля ви можете:</para>
+<itemizedlist>
+  <listitem
+><para
+>встановлювати і вибирати стилі Плазми</para
+></listitem>
+  <listitem
+><para
+>редагувати стилі Плазми</para
+></listitem>
+  <listitem
+><para
+>вилучати стилі Плазми</para
+></listitem>
+</itemizedlist>
+
+<para
+>Передбачено можливість фільтрування списку стилів за допомогою поля <guilabel
+>Шукати...</guilabel
+> над таблицею. Крім того, ви можете скористатися спадним списком, розташованим поруч із цим полем, для того, щоб лишити у таблиці лише <guimenuitem
+>Світлі теми</guimenuitem
+>, <guimenuitem
+>Темні теми</guimenuitem
+> чи <guimenuitem
+>Сумісні зі схемою кольорів</guimenuitem
+> теми. </para>
+
+<para
+>Якщо ви хочете вилучити стиль, скористайтеся кнопкою <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+> на накладній панелі внизу праворуч на піктограмі стилю. Скасувати цю дію можна натисканням піктограми <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-undo.png" format="PNG"/></imageobject
+></inlinemediaobject
+>. Якщо ви натиснете кнопку <guibutton
+>Застосувати</guibutton
+>, позначені стилі буде вилучено, і ви вже не зможете скасувати окремі або усі вилучення. </para>
+
+<para
+>Якщо у вашій системі встановлено пакунок plasma-sdk, при наведенні вказівника миші на попередній перегляд стилю з'явиться кнопка, за допомогою якої ви зможете запустити <application
+>Навігатор темами Плазми</application
+>. </para>
+<para
+>Докладнішу технічну інформацію можна знайти на <ulink url="https://develop.kde.org/docs/plasma/theme/theme-details/"
+>цій сторінці</ulink
+>. </para>
+
+<variablelist>
+  <varlistentry>
+    <term
+><guilabel
+>Отримати нові стилі Плазми…</guilabel
+></term>
+    <listitem>
+    <para
+>Щоб скористатися цією можливістю, вам потрібне з’єднання вашого комп’ютера з мережею Інтернет. Натискання цієї кнопки відкриє діалогове вікно, у якому ви зможете вибрати новий стиль Плазми. Натискання кнопки <guibutton
+>Встановити</guibutton
+> у цьому діалоговому вікні встановить вибраний стиль Плазми, після того, як ви натиснете кнопку <guibutton
+>Закрити</guibutton
+> у засобі встановлення, ваш новий стиль негайно можна буде застосувати. </para>
+    <para>
+    <screenshot>
+    <screeninfo
+>Отримати нові стилі Плазми…</screeninfo>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="get-new-theme.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase
+>Отримати нові стилі Плазми…</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    </para>
+    </listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>Встановити з файла…</guilabel
+></term>
+    <listitem>
+      <para
+>Якщо ви отримали нові стилі з мережі Інтернет, ви можете скористатися цією кнопкою для того, щоб відкрити архів з тільки-но отриманими стилями. Натискання цієї кнопки відкриє невеличке діалогове вікно роботи з файлами, за допомогою якого ви зможете вказати програмі розташування файла з архівом стилі на диску.</para>
+
+      <para
+>Натискання кнопки <guibutton
+>Відкрити</guibutton
+> у цьому діалоговому вікні встановить стиль, який ви вказали, і зробить його доступним зі списку стилів. </para>
+    </listitem>
+  </varlistentry>
+</variablelist>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

@@ -1,0 +1,57 @@
+# translation of plasma_containmentactions_switchwindow.po to Polish
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Marta Rybczynska <kde-i18n@rybczynska.net>, 2010.
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_containmentactions_switchwindow\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"PO-Revision-Date: 2014-06-15 11:47+0200\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
+"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+
+#. i18n: ectx: property (text), widget (QRadioButton, flatButton)
+#: config.ui:16
+#, kde-format
+msgid "Display all windows in one list"
+msgstr "Pokaż wszystkie okna na jednej liście"
+
+#. i18n: ectx: property (text), widget (QRadioButton, subButton)
+#: config.ui:23
+#, kde-format
+msgid "Display a submenu for each desktop"
+msgstr "Pokaż podmenu na każdym pulpicie"
+
+#. i18n: ectx: property (text), widget (QRadioButton, curButton)
+#: config.ui:30
+#, kde-format
+msgid "Display only the current desktop's windows"
+msgstr "Pokaż tylko okna z bieżącego pulpitu"
+
+#: switch.cpp:75
+#, kde-format
+msgctxt "plasma_containmentactions_switchwindow"
+msgid "Configure Switch Window Plugin"
+msgstr "Ustawianie wtyczki przełącznika okien"
+
+#: switch.cpp:155
+#, kde-format
+msgctxt "plasma_containmentactions_switchwindow"
+msgid "Windows"
+msgstr "Okna"
+
+#: switch.cpp:179 switch.cpp:200 switch.cpp:202
+#, kde-format
+msgctxt "plasma_containmentactions_switchwindow"
+msgid "All Desktops"
+msgstr "Wszystkie pulpity"

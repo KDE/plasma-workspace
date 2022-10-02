@@ -1,0 +1,2678 @@
+# translation of kfontinst.po to
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kdebae package.
+# ANI PETER|അനി പീറ്റര്‍ <peter.ani@gmail.com>, 2008
+# Reviewed by Santhosh Thottingal <santhosh.thottingal@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: kfontinst\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-10 00:46+0000\n"
+"PO-Revision-Date: 2021-09-26 16:00+0000\n"
+"Last-Translator: Subin Siby <subins2000@gmail.com>\n"
+"Language-Team: SMC <smc.org.in>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Weblate 4.7.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "അനി പീറ്റര്‍,സുബിൻ സിബി"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "peter.ani@gmail.com,mail@subinsb.com"
+
+#: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:956
+#, kde-format
+msgid ""
+"Do you wish to install the font(s) for personal use (only available to you), "
+"or system-wide (available to all users)?"
+msgstr ""
+"അക്ഷരസഞ്ചയം ഇന്‍സ്റ്റോള്‍ ചെയ്യുന്നതു് നിങ്ങളുടെ സ്വകാര്യ ആവശ്യങ്ങള്‍ക്കു് മാത്രമാണോ അതോ സിസ്റ്റത്തിലുള്ള "
+"മറ്റു് ഉപയോക്താക്കള്‍ക്കും ലഭ്യമാണോ?"
+
+#: apps/Installer.cpp:38 kcmfontinst/KCmFontInst.cpp:959
+#, kde-format
+msgid "Where to Install"
+msgstr "എവിടെ ഇന്‍സ്റ്റാള്‍ ചെയ്യണം"
+
+#: apps/Installer.cpp:110
+#, kde-format
+msgid "Font Installer"
+msgstr "അക്ഷരസഞ്ചയത്തിനുള്ള ഇന്‍സ്റ്റോളര്‍"
+
+#: apps/Installer.cpp:112
+#, kde-format
+msgid "Simple font installer"
+msgstr "ലളിതമായ അക്ഷരസഞ്ചയത്തിനുള്ള ഇന്‍സ്റ്റോളര്‍"
+
+#: apps/Installer.cpp:114 apps/Printer.cpp:329
+#, kde-format
+msgid "(C) Craig Drummond, 2007"
+msgstr "(C) ക്രെയിഗ് ഡ്രമണ്ട്, 2007"
+
+#: apps/Installer.cpp:120 apps/Printer.cpp:335
+#, kde-format
+msgid "Makes the dialog transient for an X app specified by winid"
+msgstr "വിനിഡ് വ്യക്തമാക്കിയ X അപ്ലിക്കേഷനായി ഡയലോഗ് താത്കാലികമാക്കുന്നു"
+
+#: apps/Installer.cpp:122
+#, kde-format
+msgid "URL to install"
+msgstr "ഇന്‍സ്റ്റോള്‍ ചെയ്യുന്നതിനുള്ള യുആര്‍എല്‍"
+
+#: apps/Printer.cpp:238
+#, kde-format
+msgid "Print"
+msgstr "അച്ചടിയ്ക്കുക"
+
+#: apps/Printer.cpp:308 kcmfontinst/DuplicatesDialog.cpp:210
+#, kde-format
+msgid "Canceling…"
+msgstr "റദ്ദാക്കുന്നു…"
+
+#: apps/Printer.cpp:325
+#, kde-format
+msgid "Font Printer"
+msgstr "അക്ഷരസഞ്ചയം അച്ചടിയ്ക്കാന്‍"
+
+#: apps/Printer.cpp:327
+#, kde-format
+msgid "Simple font printer"
+msgstr "ലളിതമായ അക്ഷരസഞ്ചയം അച്ചടിയ്ക്കാനുള്ളതു്"
+
+#: apps/Printer.cpp:337
+#, kde-format
+msgid "Size index to print fonts"
+msgstr "അക്ഷരസഞ്ചയം അച്ചടിയ്ക്കുന്നതിനുള്ള വലിപ്പം"
+
+#: apps/Printer.cpp:341
+#, kde-format
+msgid ""
+"Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
+"number composed as: <weight><width><slant>"
+msgstr ""
+"അച്ചടിക്കാനുള്ള ഫോണ്ട്, \"ഫാമിലി, സ്റ്റൈൽ\" എന്ന് വ്യക്തമാക്കുന്നു, ഇവിടെ സ്റ്റൈൽ ഒരു 24-ബിറ്റ് "
+"ദശാംശ സംഖ്യയാണ്: <weight><width><slant>"
+
+#: apps/Printer.cpp:344
+#, kde-format
+msgid "File containing list of fonts to print"
+msgstr "അച്ചടിയ്ക്കുന്നതിനുള്ള അക്ഷരസഞ്ചയങ്ങളടങ്ങുന്ന ഫയല്‍"
+
+#: apps/Printer.cpp:346
+#, kde-format
+msgid "Remove file containing list of fonts to print"
+msgstr "അച്ചടിയ്ക്കുന്നതിനുള്ള അക്ഷരസഞ്ചയങ്ങളടങ്ങുന്ന ഫയല്‍ നീക്കം ചെയ്യുക"
+
+#: apps/Viewer.cpp:48
+#, fuzzy, kde-format
+#| msgid "Open font in font viewer?"
+#| msgid_plural "Open all %1 fonts in font viewer?"
+msgid "Open an existing font file"
+msgstr "അക്ഷരസഞ്ചയം അവ കാണുന്നതിനുള്ള പ്രയോഗത്തില്‍ തുറക്കണമോ?"
+
+#: apps/Viewer.cpp:49
+#, fuzzy, kde-format
+#| msgid "Print Font Samples"
+msgid "Print font preview"
+msgstr "അക്ഷരസഞ്ചയങ്ങളുടെ മാതൃകകള്‍ പ്രിന്റ് ചെയ്യുക"
+
+#: apps/Viewer.cpp:66
+#, kde-format
+msgid "Select Font to View"
+msgstr "കാണുന്നതിനായി അക്ഷരസഞ്ചയം തെരഞ്ഞെടുക്കുക"
+
+#: apps/Viewer.cpp:109
+#, kde-format
+msgid "URL to open"
+msgstr "തുറക്കുവാനുള്ള യുആര്‍എല്‍"
+
+#: apps/Viewer.cpp:152
+#, kde-format
+msgid "Font Viewer"
+msgstr "അക്ഷരസഞ്ചയദര്‍ശിനി"
+
+#: apps/Viewer.cpp:154
+#, kde-format
+msgid "Simple font viewer"
+msgstr "അക്ഷരസഞ്ചയം കാണുന്നതിനുള്ള ലളിതമായ പ്രയോഗം"
+
+#: apps/Viewer.cpp:156
+#, kde-format
+msgid "(C) Craig Drummond, 2004-2007"
+msgstr "(C) ക്രെയിഗ് ഡ്രമണ്ട്, 2004-2007"
+
+#: kcmfontinst/DuplicatesDialog.cpp:47
+#, kde-format
+msgid "Duplicate Fonts"
+msgstr "ആവര്‍ത്തന അക്ഷരസഞ്ചയങ്ങള്‍"
+
+#: kcmfontinst/DuplicatesDialog.cpp:77
+#, kde-format
+msgid "Scanning for duplicate fonts. Please wait…"
+msgstr "ആവര്‍ത്തന അക്ഷരസഞ്ചയങ്ങള്‍ക്കായി തെരയുന്നു. ദയവായി കാത്തിരിക്കുക…"
+
+#: kcmfontinst/DuplicatesDialog.cpp:96
+#, kde-format
+msgid "No duplicate fonts found."
+msgstr "ആവര്‍ത്തന അക്ഷരസഞ്ചയങ്ങള്‍ ലഭ്യമായില്ല."
+
+#: kcmfontinst/DuplicatesDialog.cpp:104
+#, kde-format
+msgid "Delete Marked Files"
+msgstr "അടയാളപ്പെടുത്തിയ ഫയലുകൾ കളയുക"
+
+#: kcmfontinst/DuplicatesDialog.cpp:106
+#, kde-format
+msgid "%1 duplicate font found."
+msgid_plural "%1 duplicate fonts found."
+msgstr[0] "%1 ആവര്‍ത്തന അക്ഷരസഞ്ചയം ലഭ്യമായില്ല."
+msgstr[1] "%1 ആവര്‍ത്തന അക്ഷരസഞ്ചയങ്ങള്‍ ലഭ്യമായില്ല."
+
+#: kcmfontinst/DuplicatesDialog.cpp:185
+#, kde-format
+msgid ""
+"Are you sure you wish to delete:\n"
+"%1"
+msgstr ""
+"നിങ്ങള്‍ക്കിതു് വെട്ടിമാറ്റണമെന്നുറപ്പാണോ:\n"
+"%1"
+
+#: kcmfontinst/DuplicatesDialog.cpp:186
+#, kde-format
+msgid "Are you sure you wish to delete:"
+msgstr "നിങ്ങള്‍ക്കിതു് വെട്ടിമാറ്റണമെന്നുറപ്പാണോ:"
+
+#: kcmfontinst/DuplicatesDialog.cpp:209
+#, kde-format
+msgid "Cancel font scan?"
+msgstr "അക്ഷരസഞ്ചയത്തിനുള്ള തെരച്ചില്‍ നിര്‍ത്തണമോ?"
+
+#: kcmfontinst/DuplicatesDialog.cpp:370
+#, kde-format
+msgid "Font/File"
+msgstr "അക്ഷരസഞ്ചയം/ഫയല്‍"
+
+#: kcmfontinst/DuplicatesDialog.cpp:372
+#, kde-format
+msgid "Size"
+msgstr "വലിപ്പം"
+
+#: kcmfontinst/DuplicatesDialog.cpp:373
+#, kde-format
+msgid "Date"
+msgstr "തീയതി"
+
+#: kcmfontinst/DuplicatesDialog.cpp:374
+#, kde-format
+msgid "Links To"
+msgstr "എവിടേക്കു് ബന്ധങ്ങളുണ്ടാക്കണം"
+
+#: kcmfontinst/DuplicatesDialog.cpp:387 kcmfontinst/FontList.cpp:1315
+#, kde-format
+msgid "Open in Font Viewer"
+msgstr "അക്ഷരസഞ്ചയദര്‍ശിനിയില്‍ തുറക്കുക"
+
+#: kcmfontinst/DuplicatesDialog.cpp:389
+#, kde-format
+msgid "Properties"
+msgstr "ഗുണഗണങ്ങള്‍"
+
+#: kcmfontinst/DuplicatesDialog.cpp:391
+#, kde-format
+msgid "Unmark for Deletion"
+msgstr "നീക്കം ചെയ്യാനായി അടയാളപ്പെടുത്തിയതില്‍നിന്നു മാറ്റുക"
+
+#: kcmfontinst/DuplicatesDialog.cpp:392
+#, kde-format
+msgid "Mark for Deletion"
+msgstr "നീക്കം ചെയ്യാനായി അടയാളപ്പെടുത്തുക"
+
+#: kcmfontinst/DuplicatesDialog.cpp:488
+#, kde-format
+msgid "Open font in font viewer?"
+msgid_plural "Open all %1 fonts in font viewer?"
+msgstr[0] "അക്ഷരസഞ്ചയം അവ കാണുന്നതിനുള്ള പ്രയോഗത്തില്‍ തുറക്കണമോ?"
+msgstr[1] "എല്ലാം %1 അക്ഷരസഞ്ചങ്ങളും അവ കാണുന്നതിനുള്ള പ്രയോഗത്തില്‍ തുറക്കണമോ?"
+
+#: kcmfontinst/FontFilter.cpp:103
+#, kde-format
+msgid "Family"
+msgstr "കുടുംബം"
+
+#: kcmfontinst/FontFilter.cpp:105
+#, kde-format
+msgid "Style"
+msgstr "രീതി"
+
+#: kcmfontinst/FontFilter.cpp:107
+#, kde-format
+msgid "Foundry"
+msgstr ""
+
+#: kcmfontinst/FontFilter.cpp:109
+#, kde-format
+msgid "FontConfig Match"
+msgstr ""
+
+#: kcmfontinst/FontFilter.cpp:111
+#, kde-format
+msgid "File Type"
+msgstr "ഫയല്‍ തരം"
+
+#: kcmfontinst/FontFilter.cpp:113
+#, kde-format
+msgid "File Name"
+msgstr "ഫയല്‍ നാമം"
+
+#: kcmfontinst/FontFilter.cpp:115
+#, kde-format
+msgid "File Location"
+msgstr "ഫയലിന്റെ സ്ഥാനം"
+
+#: kcmfontinst/FontFilter.cpp:117
+#, kde-format
+msgid "Writing System"
+msgstr "എഴുത്തുസമ്പ്രദായം"
+
+#: kcmfontinst/FontFilter.cpp:129
+#, kde-format
+msgid "Set Criteria"
+msgstr "യോഗ്യത സജ്ജീകരിയ്ക്കുക"
+
+#: kcmfontinst/FontFilter.cpp:188
+#, kde-format
+msgid "Symbol/Other"
+msgstr "ചിഹ്നം/മറ്റുള്ളവ"
+
+#: kcmfontinst/FontFilter.cpp:266 kcmfontinst/FontFilter.cpp:334
+#, kde-format
+msgid "Filter by %1…"
+msgstr "%1 പ്രകാരം അരിക്കുക…"
+
+#: kcmfontinst/FontList.cpp:554
+#, kde-format
+msgid "Font"
+msgstr "അക്ഷരസഞ്ചയം"
+
+#: kcmfontinst/FontList.cpp:556
+#, kde-format
+msgid "Status"
+msgstr "അവസ്ഥ"
+
+#: kcmfontinst/FontList.cpp:570
+#, kde-format
+msgid ""
+"This column shows the status of the font family, and of the individual font "
+"styles."
+msgstr "ഈ നിര ഫോണ്ട് കുടുംബത്തിന്റെയും വ്യക്തിഗത ഫോണ്ട് ശൈലികളുടെയും അവസ്ഥ കാണിക്കുന്നു."
+
+#: kcmfontinst/FontList.cpp:677
+#, kde-format
+msgid ""
+"<p>This list shows your installed fonts. The fonts are grouped by family, "
+"and the number in square brackets represents the number of styles in which "
+"the family is available. e.g.</p><ul><li>Times [4]<ul><li>Regular</"
+"li><li>Bold</li><li>Bold Italic</li><li>Italic</li></ul></li></ul>"
+msgstr ""
+"<p>ഈ ലിസ്റ്റ് നിങ്ങളുടെ ഇൻസ്റ്റാൾ ചെയ്ത ഫോണ്ടുകൾ കാണിക്കുന്നു. ഫോണ്ടുകൾ കുടുംബം അനുസരിച്ച് തരം "
+"തിരിച്ചിരിക്കുന്നു, കൂടാതെ ചതുര ബ്രാക്കറ്റുകളിലെ എണ്ണം കുടുംബം ലഭ്യമായ ശൈലികളുടെ എണ്ണത്തെ "
+"പ്രതിനിധീകരിക്കുന്നു. ഉദാ </p><ul><li>സമയം [4]<ul><li>പതിവ്</li> <li> ബോൾഡ് </li> "
+"<li> ബോൾഡ് ഇറ്റാലിക്</ li><li>ഇറ്റാലിക്</ li></ul></li></ul>"
+
+#: kcmfontinst/FontList.cpp:956 kcmfontinst/FontList.cpp:980
+#, kde-format
+msgid "…plus %1 more"
+msgstr "…കൂടാതെ %1 കൂടി"
+
+#: kcmfontinst/FontList.cpp:1007
+#, kde-format
+msgid "%1 [%2]"
+msgstr "%1 [%2]"
+
+#: kcmfontinst/FontList.cpp:1306
+#, kde-format
+msgid "Delete"
+msgstr "വെട്ടിമാറ്റുക"
+
+#: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:789
+#: kcmfontinst/KCmFontInst.cpp:1133 kcmfontinst/KCmFontInst.cpp:1157
+#, kde-format
+msgid "Enable"
+msgstr "പ്രവര്‍ത്തന സജ്ജമാക്കുക"
+
+#: kcmfontinst/FontList.cpp:1309 kcmfontinst/GroupList.cpp:790
+#: kcmfontinst/KCmFontInst.cpp:1134 kcmfontinst/KCmFontInst.cpp:1158
+#, kde-format
+msgid "Disable"
+msgstr "പ്രവര്‍ത്തന രഹിതമാക്കുക"
+
+#: kcmfontinst/FontList.cpp:1313 kcmfontinst/GroupList.cpp:796
+#, kde-format
+msgid "Print…"
+msgstr "അച്ചടിയ്ക്കുക…"
+
+#: kcmfontinst/FontList.cpp:1317
+#, kde-format
+msgid "Reload"
+msgstr "വീണ്ടും ലഭ്യമാക്കുക"
+
+#: kcmfontinst/FontList.cpp:1716
+#, kde-format
+msgid "Open all %1 fonts in font viewer?"
+msgstr "എല്ലാം %1 അക്ഷരസഞ്ചങ്ങളും അവ കാണുന്നതിനുള്ള പ്രയോഗത്തില്‍ തുറക്കണമോ?"
+
+#: kcmfontinst/GroupList.cpp:59
+#, kde-format
+msgid "All Fonts"
+msgstr "എല്ലാ അക്ഷരസഞ്ചയങ്ങളും"
+
+#: kcmfontinst/GroupList.cpp:62
+#, kde-format
+msgid "Personal Fonts"
+msgstr "സ്വകാര്യ അക്ഷരസഞ്ചയങ്ങള്‍"
+
+#: kcmfontinst/GroupList.cpp:65
+#, kde-format
+msgid "System Fonts"
+msgstr "സിസ്റ്റത്തിലുള്ള അക്ഷരസഞ്ചയങ്ങള്‍"
+
+#: kcmfontinst/GroupList.cpp:68
+#, kde-format
+msgid "Unclassified"
+msgstr "തരംതിരിയ്ക്കാത്ത"
+
+#: kcmfontinst/GroupList.cpp:350
+#, kde-format
+msgid "Group"
+msgstr "ഗ്രൂപ്പ്"
+
+#: kcmfontinst/GroupList.cpp:535
+#, kde-format
+msgid ""
+"<p>Do you really want to remove '<b>%1</b>'?</p><p><i>This will only remove "
+"the group, and not the actual fonts.</i></p>"
+msgstr ""
+"<p>'<b>%1</b>' നീക്കംചെയ്യാൻ നിങ്ങൾ ശരിക്കും ആഗ്രഹിക്കുന്നുണ്ടോ?</p><p><i>ഇത് ഗ്രൂപ്പിനെ "
+"മാത്രമേ നീക്കംചെയ്യുകയുള്ളൂ, യഥാർത്ഥ അക്ഷരസഞ്ചയങ്ങളേയല്ല</i></p>"
+
+#: kcmfontinst/GroupList.cpp:539
+#, kde-format
+msgid "Remove Group"
+msgstr "കൂട്ടം നീക്കം ചെയ്യുക"
+
+#: kcmfontinst/GroupList.cpp:540 kcmfontinst/GroupList.cpp:787
+#, kde-format
+msgid "Remove"
+msgstr "നീക്കം ചെയ്യുക"
+
+#: kcmfontinst/GroupList.cpp:540
+#, kde-format
+msgid "Remove group"
+msgstr "കൂട്ടം നീക്കം ചെയ്യുക"
+
+#: kcmfontinst/GroupList.cpp:586
+#, kde-format
+msgid ""
+"<h3>Font Groups</h3><p>This list displays the font groups available on your "
+"system. There are 2 main types of font groups:<ul><li><b>Standard</b> are "
+"special groups used by the font manager.<ul>%1</ul></li><li><b>Custom</b> "
+"are groups created by you. To add a font family to one of these groups "
+"simply drag it from the list of fonts, and drop onto the desired group. To "
+"remove a family from the group, drag the font onto the \"All Fonts\" group.</"
+"li></ul></p>"
+msgstr ""
+"<h3>അക്ഷരസഞ്ചയ ഗ്രൂപ്പുകൾ</h3><p>നിങ്ങളുടെ സിസ്റ്റത്തിൽ ലഭ്യമായ അക്ഷരസഞ്ചയ ഗ്രൂപ്പുകളെ ഈ പട്ടിക "
+"പ്രദർശിപ്പിക്കുന്നു. പ്രധാനമായും 2 തരം അക്ഷരസഞ്ചയ ഗ്രൂപ്പുകളുണ്ട്:<ul><li><b>സ്റ്റാൻഡേർഡ്</"
+"b>ഫോണ്ട് മാനേജർ ഉപയോഗിക്കുന്ന പ്രത്യേക ഗ്രൂപ്പുകളാണ്.<ul>%1</ul></li><li><b>ഇഷ്ടാനുസൃത</"
+"b>നിങ്ങൾ സൃഷ്ടിച്ച ഗ്രൂപ്പുകളാണ്. ഈ ഗ്രൂപ്പുകളിലൊന്നിലേക്ക് ഒരു അക്ഷരസഞ്ചയ കുടുംബത്തെ ചേർക്കുന്നതിന് "
+"അക്ഷരസഞ്ചയങ്ങളുടെ പട്ടികയിൽ നിന്ന് അത് വലിച്ചിടുക, ആവശ്യമുള്ള ഗ്രൂപ്പിലേക്ക് ഇടുക. ഗ്രൂപ്പിൽ നിന്ന് "
+"ഒരു കുടുംബത്തെ നീക്കംചെയ്യുന്നതിന്, \"എല്ലാ ഫോണ്ടുകളും\" ഗ്രൂപ്പിലേക്ക് അക്ഷരസഞ്ചയം വലിച്ചിടുക.</"
+"li></ul></p>"
+
+#: kcmfontinst/GroupList.cpp:594
+#, kde-format
+msgid ""
+"<li><i>All Fonts</i> contains all the fonts installed on your system.</"
+"li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
+"within a \"Custom\" group.</li>"
+msgstr ""
+"<li><i>എല്ലാ അക്ഷരസഞ്ചയങ്ങളും<i>നിങ്ങളുടെ സിസ്റ്റത്തിൽ ഇൻസ്റ്റാൾ ചെയ്തിരിക്കുന്ന എല്ലാ "
+"അക്ഷരസഞ്ചയങ്ങളും അടങ്ങിയിരിക്കുന്നു. ഗ്രൂപ്പ്.</li><li><i>തരംതിരിയ്ക്കാത്ത</i> ഗ്രൂപ്പിൽ "
+"ഇച്ഛാനുസൃത ഗ്രൂപ്പിൽ ചേർക്കാത്ത എല്ലാ അക്ഷരസഞ്ചയങ്ങളും ഉൾപ്പെടുന്നു.</li>"
+
+#: kcmfontinst/GroupList.cpp:597
+#, kde-format
+msgid ""
+"<li><i>All Fonts</i> contains all the fonts installed on your system - both  "
+"\"System\" and \"Personal\".</li><li><i>System</i> contains all fonts that "
+"are installed system-wide (i.e. available to all users).</"
+"li><li><i>Personal</i> contains your personal fonts.</"
+"li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
+"within a \"Custom\" group.</li>"
+msgstr ""
+"<li><i>എല്ലാ ഫോണ്ടുകളും</i> എന്നതിൽ നിങ്ങളുടെ സിസ്റ്റത്തിൽ ഇൻസ്റ്റാൾ ചെയ്തിരിക്കുന്ന എല്ലാ "
+"ഫോണ്ടുകളും അടങ്ങിയിരിക്കുന്നു - വ്യക്തിഗതവും സിസ്റ്റവും</li><li><i>സിസ്റ്റം</i> എന്നതിൽ നിങ്ങൾ "
+"സിസ്റ്റം മുഴുവൻ ഇൻസ്റ്റാൾ ചെയ്തിരിക്കുന്ന ഫോണ്ടുകൾ ഉൾപ്പെടുന്നു (എല്ലാ ഉപയോക്താക്കൾക്കും ലഭ്യമായത്)."
+"</li><li><i>വ്യക്തിഗതം</i> എന്നതിൽ വ്യക്തിഗതമായി ഉപയോക്താവ് ഇൻസ്റ്റാൾ ചെയ്ത ഫോണ്ടുകൾ "
+"ഉൾപ്പെടുന്നു.</li><li><i>തരംതിരിയ്ക്കാത്ത</i> ഗ്രൂപ്പിൽ ഇച്ഛാനുസൃത ഗ്രൂപ്പിൽ ചേർക്കാത്ത എല്ലാ "
+"ഫോണ്ടുകളും ഉൾപ്പെടുന്നു.</li>"
+
+#: kcmfontinst/GroupList.cpp:699
+#, kde-format
+msgid "<qt>A group named <b>'%1'</b> already exists.</qt>"
+msgstr "<qt><b>'%1'</b> എന്ന പേരില്‍ ഒരു കൂട്ടം നിലവിലുണ്ടു്.</qt>"
+
+#: kcmfontinst/GroupList.cpp:792
+#, kde-format
+msgid "Rename…"
+msgstr "പേര് മാറ്റുക…"
+
+#: kcmfontinst/GroupList.cpp:801
+#, kde-format
+msgid "Export…"
+msgstr "എക്സ്പോർട്ട്…"
+
+#: kcmfontinst/GroupList.cpp:895
+#, kde-format
+msgid "Add to \"%1\"."
+msgstr "\"%1\" ലേക്ക് ചേർക്കുക."
+
+#: kcmfontinst/GroupList.cpp:897
+#, kde-format
+msgid "Remove from current group."
+msgstr "ഇപ്പോഴുള്ള കൂട്ടത്തിൽനിന്നും ഒഴിവാക്കുക."
+
+#: kcmfontinst/GroupList.cpp:899
+#, kde-format
+msgid "Move to personal folder."
+msgstr "സ്വകാര്യ അറയിലേക്ക് നീക്കുക."
+
+#: kcmfontinst/GroupList.cpp:901
+#, kde-format
+msgid "Move to system folder."
+msgstr "സിസ്റ്റം അറയിലേക്ക് നീക്കുക."
+
+#: kcmfontinst/JobRunner.cpp:143
+#, kde-format
+msgid "Skip"
+msgstr "ഒഴിവാക്കുക"
+
+#: kcmfontinst/JobRunner.cpp:146
+#, kde-format
+msgid "AutoSkip"
+msgstr "സ്വയം ഒഴിവാക്കുക"
+
+#: kcmfontinst/JobRunner.cpp:191
+#, kde-format
+msgid "<h3>Cancel?</h3><p>Are you sure you wish to cancel?</p>"
+msgstr "<h3>റദ്ദാക്കുക?</h3><p>നിങ്ങള്‍ക്കു് റദ്ദാക്കണമെന്നുറപ്പാണോ?</p>"
+
+#: kcmfontinst/JobRunner.cpp:203
+#, kde-format
+msgid ""
+"<h3>Finished</h3><p>Please note that any open applications will need to be "
+"restarted in order for any changes to be noticed.</p>"
+msgstr ""
+"<h3>പൂർത്തിയായി</h3><p>എന്തെങ്കിലും മാറ്റങ്ങൾ ശ്രദ്ധിക്കപ്പെടുന്നതിനായി ഏതെങ്കിലും തുറന്ന "
+"അപ്ലിക്കേഷനുകൾ പുനഃരാരംഭിക്കേണ്ടതുണ്ട്.</p>"
+
+#: kcmfontinst/JobRunner.cpp:211
+#, kde-format
+msgid "Do not show this message again"
+msgstr "ഈ സന്ദേശം വീണ്ടും കാണിക്കരുത്"
+
+#: kcmfontinst/JobRunner.cpp:321
+#, kde-format
+msgid "Installing"
+msgstr "ഇന്‍സ്റ്റാള്‍ ചെയ്യുന്നു"
+
+#: kcmfontinst/JobRunner.cpp:324
+#, kde-format
+msgid "Uninstalling"
+msgstr "അണ്‍ഇന്‍സ്റ്റാള്‍ ചെയ്യുന്നു"
+
+#: kcmfontinst/JobRunner.cpp:327 kcmfontinst/JobRunner.cpp:424
+#, kde-format
+msgid "Enabling"
+msgstr "പ്രവര്‍ത്തന സജ്ജമാക്കുന്നു"
+
+#: kcmfontinst/JobRunner.cpp:330 kcmfontinst/JobRunner.cpp:428
+#, kde-format
+msgid "Moving"
+msgstr "നീക്കുന്നു"
+
+#: kcmfontinst/JobRunner.cpp:333
+#, kde-format
+msgid "Updating"
+msgstr "പുതുക്കുന്നു"
+
+#: kcmfontinst/JobRunner.cpp:337
+#, kde-format
+msgid "Removing"
+msgstr "നീക്കം ചെയ്യുന്നു"
+
+#: kcmfontinst/JobRunner.cpp:341
+#, kde-format
+msgid "Disabling"
+msgstr "പ്രവര്‍ത്തന രഹിതമാക്കുന്നു"
+
+#: kcmfontinst/JobRunner.cpp:379
+#, kde-format
+msgid "Updating font configuration. Please wait…"
+msgstr "അക്ഷരസഞ്ചയക്രമീകരണം പരിഷ്കരിക്കുന്നു. ദയവായി കാത്തിരിയ്ക്കുക…"
+
+#: kcmfontinst/JobRunner.cpp:451
+#, kde-format
+msgid "Unable to start backend."
+msgstr "ബാക്കെൻഡ് ആരംഭിക്കാനായില്ല."
+
+#: kcmfontinst/JobRunner.cpp:460
+#, kde-format
+msgid "Backend died, but has been restarted. Please try again."
+msgstr "ബാക്കെൻഡ് നിന്നു, പക്ഷേ പുനരാരംഭിച്ചു. ദയവായി വീണ്ടും ശ്രമിക്കുക."
+
+#: kcmfontinst/JobRunner.cpp:621 kcmfontinst/JobRunner.cpp:627
+#, kde-format
+msgid "<h3>Error</h3>"
+msgstr "<h3>പിശക്</h3>"
+
+#: kcmfontinst/JobRunner.cpp:693
+#, kde-format
+msgid "Failed to download <i>%1</i>"
+msgstr "<i>%1</i> ഡൗൺലോഡു ചെയ്യുന്നതിൽ പരാജയപ്പെട്ടു"
+
+#: kcmfontinst/JobRunner.cpp:695
+#, kde-format
+msgid "System backend died. Please try again.<br><i>%1</i>"
+msgstr "സിസ്റ്റം ബാക്കെൻഡ് നിന്നു. ദയവായി വീണ്ടും ശ്രമിക്കുക. <br><i>%1</i>"
+
+#: kcmfontinst/JobRunner.cpp:697
+#, kde-format
+msgid ""
+"<i>%1</i> is a bitmap font, and these have been disabled on your system."
+msgstr ""
+"<i>%1</i> എന്നത് ഒരു ബിറ്റ്മാപ് അക്ഷരസംഞ്ചയം ആണ്, ഇത് നിങ്ങളുടെ സിസ്റ്റത്തിൽ "
+"പ്രവർത്തനരഹിതമാക്കിയിരിക്കുന്നു."
+
+#: kcmfontinst/JobRunner.cpp:699
+#, kde-format
+msgid ""
+"<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
+"system."
+msgstr ""
+"<i>%1</i> നിങ്ങളുടെ സിസ്റ്റത്തിൽ ഇതിനകം തന്നെ ഇൻസ്റ്റാൾ ചെയ്തിട്ടുള്ള <b>%2</b> ഫോണ്ട് "
+"അടങ്ങിയിരിക്കുന്നു."
+
+#: kcmfontinst/JobRunner.cpp:701
+#, kde-format
+msgid "<i>%1</i> is not a font."
+msgstr "<i>%1</i> ഒരു അക്ഷരസഞ്ചയമല്ല."
+
+#: kcmfontinst/JobRunner.cpp:703
+#, kde-format
+msgid "Could not remove all files associated with <i>%1</i>"
+msgstr "<i>%1</i>മായി ബന്ധപ്പെട്ട എല്ലാ ഫയലുകളും നീക്കം ചെയ്യാനായില്ല"
+
+#: kcmfontinst/JobRunner.cpp:705
+#, kde-format
+msgid "Failed to start the system daemon.<br><i>%1</i>"
+msgstr "സിസ്റ്റം ഡെമൺ ആരംഭിക്കുന്നതിൽ പരാജയപ്പെട്ടു. <br><i>%1</i>"
+
+#: kcmfontinst/JobRunner.cpp:708 kio/KioFonts.cpp:726
+#, kde-format
+msgid "<i>%1</i> already exists."
+msgstr "<i>%1</i> ഇതിനകം നിലവിലുണ്ട്."
+
+#: kcmfontinst/JobRunner.cpp:711
+#, kde-format
+msgid "<i>%1</i> does not exist."
+msgstr "<i>%1</i> നിലവിലില്ല."
+
+#: kcmfontinst/JobRunner.cpp:713
+#, kde-format
+msgid "Permission denied.<br><i>%1</i>"
+msgstr "അനുമതി നിരസിച്ചു. <br><i>%1</i>"
+
+#: kcmfontinst/JobRunner.cpp:715
+#, kde-format
+msgid "Unsupported action.<br><i>%1</i>"
+msgstr "പിന്തുണയ്ക്കാത്ത പ്രവർത്തനം.<br><i>%1</i>"
+
+#: kcmfontinst/JobRunner.cpp:717
+#, kde-format
+msgid "Authentication failed.<br><i>%1</i>"
+msgstr "തിരിച്ചറിയല്‍ പരാജയപ്പെട്ടു.<br><i>%1</i>"
+
+#: kcmfontinst/JobRunner.cpp:719
+#, kde-format
+msgid "Unexpected error while processing: <i>%1</i>"
+msgstr "പ്രക്രിയക്കിടെ അപ്രതീക്ഷിത പിശക്: <i>%1</i>"
+
+#: kcmfontinst/KCmFontInst.cpp:169
+#, kde-format
+msgid "Font Management"
+msgstr "അക്ഷരസഞ്ചയ മാനേജ്മെന്റ്"
+
+#: kcmfontinst/KCmFontInst.cpp:173
+#, kde-format
+msgid "(C) Craig Drummond, 2000 - 2009"
+msgstr "(C) ക്രെയിഗ് ഡ്രമണ്ട്, 2000 - 2009"
+
+#: kcmfontinst/KCmFontInst.cpp:174
+#, kde-format
+msgid "Craig Drummond"
+msgstr "ക്രെയിഗ് ഡ്രമണ്ട്"
+
+#: kcmfontinst/KCmFontInst.cpp:174
+#, kde-format
+msgid "Developer and maintainer"
+msgstr "രചയിതാവും പാലകനും"
+
+#: kcmfontinst/KCmFontInst.cpp:202
+#, kde-format
+msgid "Create New Group…"
+msgstr "പുതിയ കൂട്ടമുണ്ടാക്കുക…"
+
+#: kcmfontinst/KCmFontInst.cpp:204
+#, kde-format
+msgid "Remove Group…"
+msgstr "കൂട്ടം നീക്കം ചെയ്യുക…"
+
+#: kcmfontinst/KCmFontInst.cpp:206
+#, kde-format
+msgid "Enable Fonts in Group…"
+msgstr "കൂട്ടത്തിലെ ഫോണ്ടുകൾ പ്രാപ്തമാക്കുക…"
+
+#: kcmfontinst/KCmFontInst.cpp:208
+#, kde-format
+msgid "Disable Fonts in Group…"
+msgstr "കൂട്ടത്തിലെ ഫോണ്ടുകൾ അപ്രാപ്തമാക്കുക…"
+
+#: kcmfontinst/KCmFontInst.cpp:233
+#, kde-format
+msgid "This displays a preview of the selected font."
+msgstr "തെരഞ്ഞെടുത്ത അക്ഷരസഞ്ചയം നിങ്ങള്‍ക്കു് കണ്ടുനോക്കാം."
+
+#: kcmfontinst/KCmFontInst.cpp:249
+#, kde-format
+msgid "Find Duplicates…"
+msgstr "തനിപ്പകർപ്പുകൾ കണ്ടെത്തുക…"
+
+#: kcmfontinst/KCmFontInst.cpp:249
+#, kde-format
+msgid "Scan for Duplicate Fonts…"
+msgstr "തനിപ്പകർപ്പ് ഫോണ്ടുകൾക്കായി സ്കാൻ ചെയ്യുക…"
+
+#: kcmfontinst/KCmFontInst.cpp:251
+#, kde-format
+msgid "Install from File…"
+msgstr "ഫയലിൽ നിന്ന് ഇൻസ്റ്റാൾ ചെയ്യുക…"
+
+#: kcmfontinst/KCmFontInst.cpp:251
+#, kde-format
+msgid "Install fonts from a local file"
+msgstr "ഒരു പ്രാദേശിക ഫയലിൽ നിന്ന് ഫോണ്ടുകൾ ഇൻസ്റ്റാൾ ചെയ്യുക"
+
+#: kcmfontinst/KCmFontInst.cpp:252
+#, kde-format
+msgid "Get New Fonts…"
+msgstr "പുതിയ ഫോണ്ടുകൾ നേടുക…"
+
+#: kcmfontinst/KCmFontInst.cpp:253
+#, kde-format
+msgid "Download new fonts"
+msgstr "പുതിയ ഫോണ്ടുകൾ ഡൗൺലോഡു ചെയ്യുക"
+
+#: kcmfontinst/KCmFontInst.cpp:255
+#, kde-format
+msgid "Delete Selected Fonts…"
+msgstr "തിരഞ്ഞെടുത്ത ഫോണ്ടുകൾ ഇല്ലാതാക്കുക…"
+
+#: kcmfontinst/KCmFontInst.cpp:313
+#, kde-format
+msgid "Change Preview Text…"
+msgstr "പൂര്‍വ്വദൃശ്യത്തിനുള്ള വാചകം മാറ്റൂക…"
+
+#: kcmfontinst/KCmFontInst.cpp:375
+#, kde-format
+msgid ""
+"<h1>Font Installer</h1><p> This module allows you to install TrueType, "
+"Type1, and Bitmap fonts.</p><p>You may also install fonts using Konqueror: "
+"type fonts:/ into Konqueror's location bar and this will display your "
+"installed fonts. To install a font, simply copy one into the folder.</p>"
+msgstr ""
+"<h1>ഫോണ്ട് ഇൻസ്റ്റാളർ</h1><p> ട്രൂ ടൈപ്പ്, ടൈപ്പ് 1, ബിറ്റ്മാപ്പ് ഫോണ്ടുകൾ ഇൻസ്റ്റാൾ ചെയ്യാൻ ഈ "
+"മൊഡ്യൂൾ നിങ്ങളെ അനുവദിക്കുന്നു. </p><p> നിങ്ങൾക്ക് കോൺക്വററിന്റെ ലൊക്കേഷൻ ബാ‍റിൽ fonts:/ "
+"ടൈപ്പ് ചെയ്യുക വഴിയും ഫോണ്ടുകൾ ഇൻസ്റ്റാൾ ചെയ്യാം. ഇത് നിങ്ങളുടെ ഇൻസ്റ്റാൾ ചെയ്ത ഫോണ്ടുകൾ "
+"പ്രദർശിപ്പിക്കും. ഒരു ഫോണ്ട് ഇൻസ്റ്റാൾ ചെയ്യുന്നതിന്, അതിനെ ഫോൾഡറിലേക്ക് പകർത്തുക.</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:382
+#, kde-format
+msgid ""
+"<h1>Font Installer</h1><p> This module allows you to install TrueType, "
+"Type1, and Bitmap fonts.</p><p>You may also install fonts using Konqueror: "
+"type fonts:/ into Konqueror's location bar and this will display your "
+"installed fonts. To install a font, simply copy it into the appropriate "
+"folder -  \"%1\" for fonts available to just yourself, or  \"%2\" for system-"
+"wide fonts (available to all).</p>"
+msgstr ""
+"<h1>ഫോണ്ട് ഇൻസ്റ്റാളർ </h1><p> ട്രൂ ടൈപ്പ്, ടൈപ്പ് 1, ബിറ്റ്മാപ്പ് ഫോണ്ടുകൾ ഇൻസ്റ്റാൾ ചെയ്യാൻ ഈ "
+"മൊഡ്യൂൾ നിങ്ങളെ അനുവദിക്കുന്നു.</p><p>നിങ്ങൾക്ക് കോൺക്വറർ ഉപയോഗിച്ചും ഫോണ്ടുകൾ ഇൻസ്റ്റാൾ "
+"ചെയ്യാം: ഇതിനായി കോൺക്വററിന്റെ ലൊക്കേഷൻ ബാറിൽ fonts:/ എന്ന് ടൈപ്പ് ചെയ്യുക. ഇത് നിങ്ങളുടെ "
+"സിസ്റ്റത്തിൽ ലഭ്യമായ ഫോണ്ടുകൾ പ്രദർശിപ്പിക്കും. ഒരു ഫോണ്ട് ഇൻസ്റ്റാൾ ചെയ്യുന്നതിന്, അത് ഉചിതമായ "
+"ഫോൾഡറിലേക്ക് പകർത്തുക - നിങ്ങൾക്ക് മാത്രമായി ലഭ്യമാക്കേണ്ട ഫോണ്ടുകൾക്കായി \"%1\" ലേക്കും "
+"സിസ്റ്റം മുഴുവൻ ലഭ്യമാക്കുന്നതിനായി \"%2\" ലേക്കും(എല്ലാവർക്കും ലഭ്യമാണ്).</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:437
+#, kde-format
+msgid "Add Fonts"
+msgstr "അക്ഷരസഞ്ചയം ചേര്‍ക്കുക"
+
+#: kcmfontinst/KCmFontInst.cpp:562
+#, kde-format
+msgid "Failed to save list of fonts to print."
+msgstr "അച്ചടിക്കാനുള്ള ഫോണ്ടുകളുടെ പട്ടിക സംരക്ഷിക്കുന്നതിൽ പരാജയപ്പെട്ടു."
+
+#: kcmfontinst/KCmFontInst.cpp:583
+#, kde-format
+msgid "Failed to start font printer."
+msgstr "അക്ഷരസഞ്ചയ പ്രിന്റര്‍ ആരംഭിക്കുവാനായില്ല."
+
+#: kcmfontinst/KCmFontInst.cpp:590
+#, kde-format
+msgid ""
+"There are no printable fonts.\n"
+"You can only print non-bitmap and enabled fonts."
+msgstr ""
+"അച്ചടിക്കാവുന്ന ഫോണ്ടുകളൊന്നുമില്ല.\n"
+"നിങ്ങൾക്ക് നോൺ-ബിറ്റ്മാപ്പും പ്രാപ്തമാക്കിയ ഫോണ്ടുകളും മാത്രമേ അച്ചടിക്കാൻ കഴിയൂ."
+
+#: kcmfontinst/KCmFontInst.cpp:592
+#, kde-format
+msgid "Cannot Print"
+msgstr "പ്രിന്റ് ചെയ്യുവാന്‍ സാധ്യമല്ല"
+
+#: kcmfontinst/KCmFontInst.cpp:607
+#, kde-format
+msgid "You did not select anything to delete."
+msgstr "വെട്ടിമാറ്റുവാനായി നിങ്ങള്‍ ഒന്നും തെരഞ്ഞെടുത്തിട്ടില്ല."
+
+#: kcmfontinst/KCmFontInst.cpp:607
+#, kde-format
+msgid "Nothing to Delete"
+msgstr "വെട്ടിമാറ്റുവാനൊന്നുമില്ല"
+
+#: kcmfontinst/KCmFontInst.cpp:622
+#, kde-format
+msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
+msgstr "<p>നിങ്ങള്‍ക്കു്</p><p>'<b>%1</b>' വെട്ടിമാറ്റണമോ?</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:625
+#, kde-format
+msgid "Delete Font"
+msgstr "അക്ഷരസഞ്ചയം വെട്ടിമാറ്റുക"
+
+#: kcmfontinst/KCmFontInst.cpp:632
+#, kde-format
+msgid "Do you really want to delete this font?"
+msgid_plural "Do you really want to delete these %1 fonts?"
+msgstr[0] "നിങ്ങള്‍ക്കു് ഈ അക്ഷരസഞ്ചയം വെട്ടിമാറ്റണോ?"
+msgstr[1] "നിങ്ങള്‍ക്കു് ഈ %1 അക്ഷരസഞ്ചയങ്ങള്‍ വെട്ടിമാറ്റണോ?"
+
+#: kcmfontinst/KCmFontInst.cpp:634
+#, kde-format
+msgid "Delete Fonts"
+msgstr "അക്ഷരസഞ്ചയങ്ങള്‍ വെട്ടിമാറ്റുക"
+
+#: kcmfontinst/KCmFontInst.cpp:639
+#, kde-format
+msgid "Deleting font(s)…"
+msgstr "അക്ഷരസഞ്ചയങ്ങള്‍ ഇല്ലാതാക്കുന്നു…"
+
+#: kcmfontinst/KCmFontInst.cpp:654
+#, kde-format
+msgid "You did not select anything to move."
+msgstr "നീക്കുന്നതിനായി നിങ്ങളൊന്നും തെരഞ്ഞെടുത്തിട്ടില്ല."
+
+#: kcmfontinst/KCmFontInst.cpp:654
+#, kde-format
+msgid "Nothing to Move"
+msgstr "നീക്കുവാനൊന്നുമില്ല"
+
+#: kcmfontinst/KCmFontInst.cpp:664
+#, kde-format
+msgid ""
+"<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
+"%3</i>?</p>"
+msgstr ""
+"<p>നിങ്ങൾക്ക് ശരിക്കും നീക്കാൻ ആഗ്രഹമുണ്ടോ </p><p>'<b>%1</b>'</p><p><i>%2</i>ൽ നിന്ന് "
+"<i>%3 ലേക്ക്</i>?</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:669
+#, kde-format
+msgid "Move Font"
+msgstr "അക്ഷരസഞ്ചയം നീക്കുക"
+
+#: kcmfontinst/KCmFontInst.cpp:670 kcmfontinst/KCmFontInst.cpp:682
+#, kde-format
+msgid "Move"
+msgstr "നീക്കുക"
+
+#: kcmfontinst/KCmFontInst.cpp:675
+#, kde-format
+msgid ""
+"<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
+msgid_plural ""
+"<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?</p>"
+msgstr[0] ""
+"<p>ഈ അക്ഷരസഞ്ചയം <i>%2</i>ൽ നിന്ന് <i>%3</i>ലേക്ക് നീക്കാൻ നിങ്ങൾ ആഗ്രഹിക്കുന്നുണ്ടോ?</p>"
+msgstr[1] ""
+"<p>ഈ %1 ഫോണ്ടുകൾ <i>%2</i>ൽ നിന്ന് <i>%3</i>ലേക്ക് നീക്കാൻ നിങ്ങൾ ആഗ്രഹിക്കുന്നുണ്ടോ?</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:681
+#, kde-format
+msgid "Move Fonts"
+msgstr "അക്ഷസഞ്ചയങ്ങള്‍ നീക്കുക"
+
+#: kcmfontinst/KCmFontInst.cpp:686
+#, kde-format
+msgid "Moving font(s)…"
+msgstr "അക്ഷരസഞ്ചയങ്ങള്‍ നീക്കുന്നു…"
+
+#: kcmfontinst/KCmFontInst.cpp:700
+#, kde-format
+msgid "Export Group"
+msgstr "കൂട്ടം എക്സ്പോർട്ട് ചെയ്യുക"
+
+#: kcmfontinst/KCmFontInst.cpp:726
+#, kde-format
+msgid "No files?"
+msgstr "ഫയലുകളൊന്നുമില്ലേ?"
+
+#: kcmfontinst/KCmFontInst.cpp:729
+#, kde-format
+msgid "Failed to open %1 for writing"
+msgstr "എഴുതുന്നതിനായി %1 തുറക്കുന്നതിൽ പരാജയപ്പെട്ടു"
+
+#: kcmfontinst/KCmFontInst.cpp:749
+#, kde-format
+msgid "Create New Group"
+msgstr "പുതിയ കൂട്ടമുണ്ടാക്കുക"
+
+#: kcmfontinst/KCmFontInst.cpp:749
+#, kde-format
+msgid "Name of new group:"
+msgstr "പുതിയ കൂട്ടത്തിന്റെ പേര്:"
+
+#: kcmfontinst/KCmFontInst.cpp:749
+#, kde-format
+msgid "New Group"
+msgstr "പുതിയ കൂട്ടം"
+
+#: kcmfontinst/KCmFontInst.cpp:777
+#, kde-format
+msgid "Preview Text"
+msgstr "തിരനോട്ടത്തിനുള്ള പദാവലി"
+
+#: kcmfontinst/KCmFontInst.cpp:777
+#, kde-format
+msgid "Please enter new text:"
+msgstr "പുതിയ വാചകം നല്‍കുക:"
+
+#: kcmfontinst/KCmFontInst.cpp:829
+#, kde-format
+msgid "Scanning font list…"
+msgstr "അക്ഷരസഞ്ചയങ്ങളുടെ പട്ടിക പരിശോധിക്കുന്നു…"
+
+#: kcmfontinst/KCmFontInst.cpp:888
+#, kde-format
+msgid "No fonts"
+msgstr "അക്ഷരസഞ്ചയങ്ങള്‍ ലഭ്യമല്ല"
+
+#: kcmfontinst/KCmFontInst.cpp:893
+#, kde-format
+msgid "1 Font"
+msgid_plural "%1 Fonts"
+msgstr[0] "ഒരു അക്ഷസഞ്ചയം"
+msgstr[1] "%1 അക്ഷരസഞ്ചയങ്ങള്‍"
+
+#: kcmfontinst/KCmFontInst.cpp:902
+#, kde-format
+msgid ""
+"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
+"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Partially "
+"enabled:</td><td>%3</td></tr><tr><td align=\"right\">Total:</td><td>%4</td></"
+"tr></table>"
+msgstr ""
+"<table><tr><td align=\"right\">പ്രവ‍ത്തനക്ഷമമാക്കിയവ:</td><td>%1</td></tr><tr><td "
+"align=\"right\">അപ്രാപ്തമാക്കിയവ:</td><td>%2</td></tr><tr><td align=\"right"
+"\">ഭാഗികമായി പ്രവർത്തനക്ഷമമാക്കിയവ:</td><td>%3</td></tr><tr><td align=\"right"
+"\">ആകെ:</td><td>%4</td></tr></table>"
+
+#: kcmfontinst/KCmFontInst.cpp:912
+#, kde-format
+msgid ""
+"<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
+"\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Total:</"
+"td><td>%3</td></tr></table>"
+msgstr ""
+"<table><tr><td align=\"right\">പ്രവർത്തനക്ഷമമാക്കിയവ:</td><td>%1</td></"
+"tr><tr><td align=\"right\">അപ്രാപ്തമാക്കിയവ:</td><td>%2</td></tr><tr><td align="
+"\"right\">ആകെ:</td><td>%3</td></tr></table>"
+
+#: kcmfontinst/KCmFontInst.cpp:989
+#, kde-format
+msgid "Looking for any associated files…"
+msgstr "ഇതിനോടനുബന്ധിച്ചുള്ള ഫയലുകള്‍ തിരയുന്നു…"
+
+#: kcmfontinst/KCmFontInst.cpp:993
+#, kde-format
+msgid "Scanning Files…"
+msgstr "ഫയലുകള്‍ തെരയുന്നു…"
+
+#: kcmfontinst/KCmFontInst.cpp:994
+#, kde-format
+msgid "Looking for additional files to install…"
+msgstr "ഇന്‍സ്റ്റാള്‍ ചെയ്യുന്നതിനായി കൂടുതല്‍ ഫയലുകള്‍ തെരയുന്നു…"
+
+#: kcmfontinst/KCmFontInst.cpp:1009
+#, kde-format
+msgid "Looking for files associated with %1"
+msgstr "%1-നോടനുബന്ധിച്ചുള്ള കൂടുതല്‍ ഫയലുകള്‍ തെരയുന്നു"
+
+#: kcmfontinst/KCmFontInst.cpp:1037
+#, kde-format
+msgid "Installing font(s)…"
+msgstr "അക്ഷരസഞ്ചയം ഇന്‍സ്റ്റാള്‍ ചെയ്യുന്നു…"
+
+#: kcmfontinst/KCmFontInst.cpp:1102
+#, kde-format
+msgid "You did not select anything to enable."
+msgstr "പ്രവര്‍ത്തന സജ്ജമാക്കുന്നതിനായി ഒന്നും തെരഞ്ഞെടുത്തിട്ടില്ല."
+
+#: kcmfontinst/KCmFontInst.cpp:1102
+#, kde-format
+msgid "You did not select anything to disable."
+msgstr "പ്രവര്‍ത്തന രഹിതമാക്കുന്നതിനായി ഒന്നും തെരഞ്ഞെടുത്തിട്ടില്ല."
+
+#: kcmfontinst/KCmFontInst.cpp:1103
+#, kde-format
+msgid "Nothing to Enable"
+msgstr "പ്രവര്‍ത്തന സജ്ജമാക്കുവാനൊന്നുമില്ല"
+
+#: kcmfontinst/KCmFontInst.cpp:1103
+#, kde-format
+msgid "Nothing to Disable"
+msgstr "പ്രവര്‍ത്തന രഹിതമാക്കുവാനൊന്നുമില്ല"
+
+#: kcmfontinst/KCmFontInst.cpp:1120
+#, kde-format
+msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
+msgstr "<p>നിങ്ങള്‍ക്കു് </p><p>'<b>%1</b>' പ്രവര്‍ത്തന സജ്ജമാക്കണമോ?</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:1122
+#, kde-format
+msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
+msgstr "<p>നിങ്ങള്‍ക്കു് </p><p>'<b>%1</b>' പ്രവര്‍ത്തന രഹിതമാക്കണമോ?</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:1124
+#, kde-format
+msgid ""
+"<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
+"'<b>%2</b>'?</p>"
+msgstr ""
+"<p>'<b>%2</b>' കൂട്ടത്തിൽ അടങ്ങിയിട്ടുള്ള '<b>%1</b>' നെ പ്രവർത്തനക്ഷമമാക്കാൻ നിങ്ങൾ "
+"ശരിക്കും തീരുമാനിച്ചോ</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:1128
+#, kde-format
+msgid ""
+"<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
+"'<b>%2</b>'?</p>"
+msgstr ""
+"<p>'<b>%2</b>' കൂട്ടത്തിൽ അടങ്ങിയിട്ടുള്ള '<b>%1</b>' നെ അപ്രാപ്തമാക്കാൻ നിങ്ങൾ ശരിക്കും "
+"തീരുമാനിച്ചോ?</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:1132 kcmfontinst/KCmFontInst.cpp:1133
+#, kde-format
+msgid "Enable Font"
+msgstr "അക്ഷരസഞ്ചയം സജ്ജമാക്കുക"
+
+#: kcmfontinst/KCmFontInst.cpp:1132 kcmfontinst/KCmFontInst.cpp:1134
+#, kde-format
+msgid "Disable Font"
+msgstr "അക്ഷരസഞ്ചയം പ്രവര്‍ത്തന രഹിതമാക്കുക"
+
+#: kcmfontinst/KCmFontInst.cpp:1139
+#, kde-format
+msgid "Do you really want to enable this font?"
+msgid_plural "Do you really want to enable these %1 fonts?"
+msgstr[0] "നിങ്ങള്‍ക്കു് ഈ അക്ഷരസഞ്ചയം പ്രവര്‍ത്തന സജ്ജമാക്കണമോ?"
+msgstr[1] "നിങ്ങള്‍ക്കു് ഈ %1 അക്ഷരസഞ്ചയങ്ങള്‍ പ്രവര്‍ത്തന സജ്ജമാക്കണമോ?"
+
+#: kcmfontinst/KCmFontInst.cpp:1142
+#, kde-format
+msgid "Do you really want to disable this font?"
+msgid_plural "Do you really want to disable these %1 fonts?"
+msgstr[0] "നിങ്ങള്‍ക്കു് ഈ അക്ഷരസഞ്ചയം പ്രവര്‍ത്തന രഹിതമാക്കണമോ?"
+msgstr[1] "നിങ്ങള്‍ക്കു് ഈ %1 അക്ഷരസഞ്ചയങ്ങള്‍ പ്രവര്‍ത്തന രഹിതമാക്കണമോ?"
+
+#: kcmfontinst/KCmFontInst.cpp:1145
+#, kde-format
+msgid ""
+"<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
+"</p>"
+msgid_plural ""
+"<p>Do you really want to enable these %1 fonts contained within group '<b>"
+"%2</b>'?</p>"
+msgstr[0] ""
+"<p>'<b>%2</b>' ഗ്രൂപ്പിൽ അടങ്ങിയിരിക്കുന്ന ഈ ഫോണ്ട്ഫോണ്ടുകൾ പ്രാപ്തമാക്കാൻ നിങ്ങൾ ശരിക്കും "
+"ആഗ്രഹിക്കുന്നുണ്ടോ?</p>"
+msgstr[1] ""
+"<p>'<b>%2</b>' ഗ്രൂപ്പിൽ അടങ്ങിയിരിക്കുന്ന ഈ %1 ഫോണ്ടുകൾ പ്രാപ്തമാക്കാൻ നിങ്ങൾ ശരിക്കും "
+"ആഗ്രഹിക്കുന്നുണ്ടോ?</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:1150
+#, kde-format
+msgid ""
+"<p>Do you really want to disable this font contained within group '<b>%2</"
+"b>'?</p>"
+msgid_plural ""
+"<p>Do you really want to disable these %1 fonts contained within group '<b>"
+"%2</b>'?</p>"
+msgstr[0] ""
+"<p>'<b>%2 </b>' ഗ്രൂപ്പിൽ അടങ്ങിയിരിക്കുന്ന ഈ ഫോണ്ട്ഫോണ്ടുകൾ പ്രവർത്തനരഹിതമാക്കാൻ നിങ്ങൾ "
+"ശരിക്കും ആഗ്രഹിക്കുന്നുണ്ടോ?</p>"
+msgstr[1] ""
+"<p>'<b>%2 </b>' ഗ്രൂപ്പിൽ അടങ്ങിയിരിക്കുന്ന ഈ %1 ഫോണ്ടുകൾ പ്രവർത്തനരഹിതമാക്കാൻ നിങ്ങൾ "
+"ശരിക്കും ആഗ്രഹിക്കുന്നുണ്ടോ?</p>"
+
+#: kcmfontinst/KCmFontInst.cpp:1156 kcmfontinst/KCmFontInst.cpp:1157
+#, kde-format
+msgid "Enable Fonts"
+msgstr "അക്ഷരസഞ്ചയം പ്രവര്‍ത്തന സജ്ജമാക്കുക"
+
+#: kcmfontinst/KCmFontInst.cpp:1156 kcmfontinst/KCmFontInst.cpp:1158
+#, kde-format
+msgid "Disable Fonts"
+msgstr "അക്ഷരസഞ്ചയം പ്രവര്‍ത്തന രഹിതമാക്കുക"
+
+#: kcmfontinst/KCmFontInst.cpp:1164
+#, kde-format
+msgid "Enabling font(s)…"
+msgstr "അക്ഷരസഞ്ചയം പ്രവര്‍ത്തന സജ്ജമാക്കുന്നു…"
+
+#: kcmfontinst/KCmFontInst.cpp:1166
+#, kde-format
+msgid "Disabling font(s)…"
+msgstr "അക്ഷരസഞ്ചയം പ്രവര്‍ത്തനരഹിതമാക്കുന്നു…"
+
+#: kcmfontinst/PrintDialog.cpp:21
+#, kde-format
+msgid "Print Font Samples"
+msgstr "അക്ഷരസഞ്ചയങ്ങളുടെ മാതൃകകള്‍ പ്രിന്റ് ചെയ്യുക"
+
+#: kcmfontinst/PrintDialog.cpp:37
+#, kde-format
+msgid "Select size to print font:"
+msgstr "അക്ഷരസഞ്ചയം പ്രിന്റ് ചെയ്യുന്നതിനുള്ള വലിപ്പം തെരഞ്ഞെടുക്കുക:"
+
+#: kcmfontinst/PrintDialog.cpp:41
+#, kde-format
+msgid "Waterfall"
+msgstr "വെള്ളച്ചാട്ടം"
+
+#: kcmfontinst/PrintDialog.cpp:42
+#, kde-format
+msgid "12pt"
+msgstr "12pt"
+
+#: kcmfontinst/PrintDialog.cpp:43
+#, kde-format
+msgid "18pt"
+msgstr "18pt"
+
+#: kcmfontinst/PrintDialog.cpp:44
+#, kde-format
+msgid "24pt"
+msgstr "24pt"
+
+#: kcmfontinst/PrintDialog.cpp:45
+#, kde-format
+msgid "36pt"
+msgstr "36pt"
+
+#: kcmfontinst/PrintDialog.cpp:46
+#, kde-format
+msgid "48pt"
+msgstr "48pt"
+
+#: kio/KioFonts.cpp:208
+#, kde-format
+msgid "Can only install fonts to either \"%1\" or \"%2\"."
+msgstr "\"%1\" അല്ലെങ്കിൽ \"%2\" എന്നതിലേക്ക് മാത്രമേ ഫോണ്ടുകൾ ഇൻസ്റ്റാൾ ചെയ്യാൻ കഴിയൂ."
+
+#: kio/KioFonts.cpp:211
+#, kde-format
+msgid ""
+"You cannot install a fonts package directly.\n"
+"Please extract %1, and install the components individually."
+msgstr ""
+"അക്ഷരസഞ്ചയത്തിനുള്ള പാക്കേജ് നിങ്ങള്‍ക്കു് നേരിട്ടു് ഇന്‍സ്റ്റോള്‍ ചെയ്യുവാന്‍ സാധ്യമല്ല.\n"
+"ദയവായി %1 ലഭ്യമാക്കി, ഘടകങ്ങള്‍ ഓരോന്നായി ഇന്‍സ്റ്റോള്‍ ചെയ്യുക."
+
+#: kio/KioFonts.cpp:439
+#, kde-format
+msgid "Cannot copy fonts"
+msgstr "ഫോണ്ടുകൾ പകർത്താൻ കഴിയില്ല"
+
+#: kio/KioFonts.cpp:444
+#, kde-format
+msgid "Cannot move fonts"
+msgstr "ഫോണ്ടുകൾ നീക്കാൻ കഴിയില്ല"
+
+#: kio/KioFonts.cpp:455
+#, kde-format
+msgid "Only fonts may be deleted."
+msgstr "ഫോണ്ടുകൾ മാത്രം ഇല്ലാതാക്കാം."
+
+#: kio/KioFonts.cpp:457
+#, kde-format
+msgid "Can only remove fonts from either \"%1\" or \"%2\"."
+msgstr "\"%1\" അല്ലെങ്കിൽ \"%2\" എന്നിവയിൽ നിന്ന് മാത്രമേ ഫോണ്ടുകൾ നീക്കം ചെയ്യാൻ കഴിയൂ."
+
+#: kio/KioFonts.cpp:484
+#, kde-format
+msgid "Please specify \"%1\" or \"%2\"."
+msgstr "ദയവായി \"%1\" അല്ലങ്കില്‍ \"%2\" വ്യക്തമാക്കുക."
+
+#: kio/KioFonts.cpp:504
+#, kde-format
+msgid "No special methods supported."
+msgstr "പ്രത്യേക രീതികളൊന്നും പിന്തുണയ്ക്കുന്നില്ല."
+
+#: kio/KioFonts.cpp:578
+#, kde-format
+msgid "Fonts"
+msgstr "അക്ഷരസഞ്ചയങ്ങള്‍"
+
+#: kio/KioFonts.cpp:707
+#, kde-format
+msgid "Failed to start the system daemon"
+msgstr "സിസ്റ്റം ഡീമൺ ആരംഭിക്കുന്നതിൽ പരാജയപ്പെട്ടു"
+
+#: kio/KioFonts.cpp:710
+#, kde-format
+msgid "Backend died"
+msgstr "ബാക്കെൻഡ് മരിച്ചു"
+
+#: kio/KioFonts.cpp:713
+#, kde-format
+msgid "%1 is a bitmap font, and these have been disabled on your system."
+msgstr "%1 ഒരു ബിറ്റ്മാപ്പ് ഫോണ്ടാണ്, ഇവ നിങ്ങളുടെ സിസ്റ്റത്തിൽ പ്രവർത്തനരഹിതമാക്കിയിരിക്കുന്നു."
+
+#: kio/KioFonts.cpp:716
+#, kde-format
+msgid ""
+"%1 contains the font <b>%2</b>, which is already installed on your system."
+msgstr ""
+"%1 ൽ <b>%2 </b> ഫോണ്ട് അടങ്ങിയിരിക്കുന്നു , ഇത് ഇതിനകം നിങ്ങളുടെ സിസ്റ്റത്തിൽ ഇൻസ്റ്റാൾ "
+"ചെയ്തിട്ടുണ്ട്."
+
+#: kio/KioFonts.cpp:719
+#, kde-format
+msgid "%1 is not a font."
+msgstr "%1 ഒരു ഫോണ്ട് അല്ല."
+
+#: kio/KioFonts.cpp:722
+#, kde-format
+msgid "Could not remove all files associated with %1"
+msgstr "%1 മായി ബന്ധപ്പെട്ട എല്ലാ ഫയലുകളും നീക്കം ചെയ്യാനായില്ല"
+
+#: lib/Fc.cpp:407 lib/KfiConstants.h:107
+#, kde-format
+msgid "Unknown"
+msgstr "അപരിചിതം"
+
+#: lib/FcEngine.cpp:858
+#, kde-format
+msgctxt "First letter of the alphabet (in upper then lower case)"
+msgid "Aa"
+msgstr "അആ"
+
+#: lib/FcEngine.cpp:860
+#, kde-format
+msgctxt ""
+"All letters of the alphabet (in upper/lower case pairs), followed by numbers"
+msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
+msgstr "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
+
+#: lib/FcEngine.cpp:1022
+#, kde-format
+msgid "No characters found."
+msgstr "അക്ഷരങ്ങള്‍ ലഭ്യമല്ല."
+
+#: lib/FcEngine.cpp:1060
+#, kde-format
+msgctxt "A sentence that uses all of the letters of the alphabet"
+msgid "The quick brown fox jumps over the lazy dog"
+msgstr "അആഇഈഊഋഎഏഐഒഓഔകഖഗഘങചഛജഝഞടഠഡഢണതഥദധനപഫബഭമയരലവശഷസഹളഴറ"
+
+#: lib/FcEngine.cpp:1065
+#, kde-format
+msgctxt "All of the letters of the alphabet, uppercase"
+msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+msgstr "അആഇഈഊഋഎഏഐഒഓഔകഖഗഘങചഛജഝഞടഠഡഢണതഥദധനപഫബഭമയരലവശഷസഹളഴറ"
+
+#: lib/FcEngine.cpp:1070
+#, kde-format
+msgctxt "All of the letters of the alphabet, lowercase"
+msgid "abcdefghijklmnopqrstuvwxyz"
+msgstr "അആഇഈഊഋഎഏഐഒഓഔകഖഗഘങചഛജഝഞടഠഡഢണതഥദധനപഫബഭമയരലവശഷസഹളഴറ"
+
+#: lib/FcEngine.cpp:1075
+#, kde-format
+msgctxt "Numbers and characters"
+msgid "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
+msgstr "൧൨൩൪൫൬൭൮൯.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
+
+#: lib/FcEngine.cpp:1473
+#, kde-format
+msgid "ERROR: Could not determine font's name."
+msgstr "പിശകു്: അക്ഷരസഞ്ചയത്തിന്റെ പേരു് ലഭ്യമായില്ല."
+
+#: lib/FcEngine.cpp:1476
+#, kde-format
+msgid "%2 [1 pixel]"
+msgid_plural "%2 [%1 pixels]"
+msgstr[0] "%2 [1 പിക്സല്‍]"
+msgstr[1] "%2 [%1 പിക്സലുകള്‍]"
+
+#: lib/KfiConstants.h:22
+msgid "Personal"
+msgstr "സ്വകാര്യം"
+
+#: lib/KfiConstants.h:23
+msgid "System"
+msgstr "സിസ്റ്റം"
+
+#: lib/KfiConstants.h:24
+msgid "All"
+msgstr "എല്ലാം"
+
+#: lib/KfiConstants.h:38
+msgid "Administrator"
+msgstr "അഡ്മിനിസ്ട്രേറ്റര്‍"
+
+#: lib/KfiConstants.h:74
+msgid "Thin"
+msgstr "കട്ടികുറഞ്ഞ"
+
+#: lib/KfiConstants.h:75
+msgid "Extra Light"
+msgstr ""
+
+#: lib/KfiConstants.h:76
+msgid "Ultra Light"
+msgstr ""
+
+#: lib/KfiConstants.h:77
+msgid "Light"
+msgstr ""
+
+#: lib/KfiConstants.h:78
+msgid "Regular"
+msgstr "സാധാരണ"
+
+#: lib/KfiConstants.h:79 lib/KfiConstants.h:97
+msgid "Normal"
+msgstr "സാധാരണ"
+
+#: lib/KfiConstants.h:80
+msgid "Medium"
+msgstr "ഇടത്തരം"
+
+#: lib/KfiConstants.h:81
+msgid "Demi Bold"
+msgstr "ഡെമി ബോള്‍ഡ്"
+
+#: lib/KfiConstants.h:82
+msgid "Semi Bold"
+msgstr "സെമി ബോള്‍ഡ്"
+
+#: lib/KfiConstants.h:83
+msgid "Bold"
+msgstr "തടിച്ച"
+
+#: lib/KfiConstants.h:84
+msgid "Extra Bold"
+msgstr "എക്സ്ട്രാ ബോള്‍ഡ്"
+
+#: lib/KfiConstants.h:85
+msgid "Ultra Bold"
+msgstr "അള്‍ട്രാ ബോള്‍ഡ്"
+
+#: lib/KfiConstants.h:86
+msgid "Black"
+msgstr "കറുത്ത"
+
+#: lib/KfiConstants.h:87
+msgid "Heavy"
+msgstr "കനത്ത"
+
+#: lib/KfiConstants.h:89
+msgid "Roman"
+msgstr "റോമന്‍"
+
+#: lib/KfiConstants.h:90
+msgid "Italic"
+msgstr "ചരിഞ്ഞ"
+
+#: lib/KfiConstants.h:91
+msgid "Oblique"
+msgstr "ഒബ്ളിക്ക്"
+
+#: lib/KfiConstants.h:93
+msgid "Ultra Condensed"
+msgstr ""
+
+#: lib/KfiConstants.h:94
+msgid "Extra Condensed"
+msgstr ""
+
+#: lib/KfiConstants.h:95
+msgid "Condensed"
+msgstr ""
+
+#: lib/KfiConstants.h:96
+msgid "Semi Condensed"
+msgstr ""
+
+#: lib/KfiConstants.h:98
+msgid "Semi Expanded"
+msgstr "പകുത വികസിതമായ"
+
+#: lib/KfiConstants.h:99
+msgid "Expanded"
+msgstr "വികസിതമായ"
+
+#: lib/KfiConstants.h:100
+msgid "Extra Expanded"
+msgstr "കൂടുതല്‍ വികസിതമായ"
+
+#: lib/KfiConstants.h:101
+msgid "Ultra Expanded"
+msgstr "ഏറ്റവുമധികം വികസിതമായ"
+
+#: lib/KfiConstants.h:103
+msgid "Monospaced"
+msgstr "മോണോസ്പെയ്സ്ഡ്"
+
+#: lib/KfiConstants.h:104
+msgid "Charcell"
+msgstr ""
+
+#: lib/KfiConstants.h:105
+msgid "Proportional"
+msgstr "സമപ്രമാണം"
+
+#: viewpart/CharTip.cpp:42
+#, kde-format
+msgid "Other, Control"
+msgstr "മറ്റുള്ളവ, നിയന്ത്രണം"
+
+#: viewpart/CharTip.cpp:44
+#, kde-format
+msgid "Other, Format"
+msgstr "മറ്റുള്ളവ, രൂപം ഇഷ്ടമുളള വിധമാക്കുക"
+
+#: viewpart/CharTip.cpp:46
+#, kde-format
+msgid "Other, Not Assigned"
+msgstr "മറ്റുള്ളവ, ലഭ്യമല്ല"
+
+#: viewpart/CharTip.cpp:48
+#, kde-format
+msgid "Other, Private Use"
+msgstr "മറ്റുള്ളവ, സ്വകാര്യ ഉപയോഗത്തിനു്"
+
+#: viewpart/CharTip.cpp:50
+#, kde-format
+msgid "Other, Surrogate"
+msgstr ""
+
+#: viewpart/CharTip.cpp:52
+#, kde-format
+msgid "Letter, Lowercase"
+msgstr "അക്ഷരം, ചെറിയ അക്ഷരം"
+
+#: viewpart/CharTip.cpp:54
+#, kde-format
+msgid "Letter, Modifier"
+msgstr ""
+
+#: viewpart/CharTip.cpp:56
+#, kde-format
+msgid "Letter, Other"
+msgstr ""
+
+#: viewpart/CharTip.cpp:58
+#, kde-format
+msgid "Letter, Titlecase"
+msgstr ""
+
+#: viewpart/CharTip.cpp:60
+#, kde-format
+msgid "Letter, Uppercase"
+msgstr "അക്ഷരം, വലിയ അക്ഷരം"
+
+#: viewpart/CharTip.cpp:62
+#, kde-format
+msgid "Mark, Spacing Combining"
+msgstr ""
+
+#: viewpart/CharTip.cpp:64
+#, kde-format
+msgid "Mark, Enclosing"
+msgstr ""
+
+#: viewpart/CharTip.cpp:66
+#, kde-format
+msgid "Mark, Non-Spacing"
+msgstr ""
+
+#: viewpart/CharTip.cpp:68
+#, kde-format
+msgid "Number, Decimal Digit"
+msgstr "അക്കം, ഡെസിമല്‍ അക്കം"
+
+#: viewpart/CharTip.cpp:70
+#, kde-format
+msgid "Number, Letter"
+msgstr "സംഖ്യ, അക്ഷരം"
+
+#: viewpart/CharTip.cpp:72
+#, kde-format
+msgid "Number, Other"
+msgstr "അക്കം, മറ്റുള്ളവ"
+
+#: viewpart/CharTip.cpp:74
+#, kde-format
+msgid "Punctuation, Connector"
+msgstr ""
+
+#: viewpart/CharTip.cpp:76
+#, kde-format
+msgid "Punctuation, Dash"
+msgstr ""
+
+#: viewpart/CharTip.cpp:78
+#, kde-format
+msgid "Punctuation, Close"
+msgstr ""
+
+#: viewpart/CharTip.cpp:80
+#, kde-format
+msgid "Punctuation, Final Quote"
+msgstr "വിരാമചിഹ്നം, അന്തിമ ഉദ്ധരണി"
+
+#: viewpart/CharTip.cpp:82
+#, kde-format
+msgid "Punctuation, Initial Quote"
+msgstr "വിരാമചിഹ്നം, പ്രാരംഭ ഉദ്ധരണി"
+
+#: viewpart/CharTip.cpp:84
+#, kde-format
+msgid "Punctuation, Other"
+msgstr "വിരാമചിഹ്നം, മറ്റുള്ളവ"
+
+#: viewpart/CharTip.cpp:86
+#, kde-format
+msgid "Punctuation, Open"
+msgstr ""
+
+#: viewpart/CharTip.cpp:88
+#, kde-format
+msgid "Symbol, Currency"
+msgstr "ചിഹ്നം, നാണയം"
+
+#: viewpart/CharTip.cpp:90
+#, kde-format
+msgid "Symbol, Modifier"
+msgstr ""
+
+#: viewpart/CharTip.cpp:92
+#, kde-format
+msgid "Symbol, Math"
+msgstr "ചിഹ്നം, ഗണിതം"
+
+#: viewpart/CharTip.cpp:94
+#, kde-format
+msgid "Symbol, Other"
+msgstr "ചിഹ്നം, മറ്റുള്ളവ"
+
+#: viewpart/CharTip.cpp:96
+#, kde-format
+msgid "Separator, Line"
+msgstr ""
+
+#: viewpart/CharTip.cpp:98
+#, kde-format
+msgid "Separator, Paragraph"
+msgstr ""
+
+#: viewpart/CharTip.cpp:100
+#, kde-format
+msgid "Separator, Space"
+msgstr ""
+
+#: viewpart/CharTip.cpp:152
+#, kde-format
+msgid "Category"
+msgstr "വിഭാഗം"
+
+#: viewpart/CharTip.cpp:153
+#, kde-format
+msgid "UCS-4"
+msgstr "UCS-4"
+
+#: viewpart/CharTip.cpp:156
+#, kde-format
+msgid "UTF-16"
+msgstr "UTF-16"
+
+#: viewpart/CharTip.cpp:167
+#, kde-format
+msgid "UTF-8"
+msgstr "UTF-8"
+
+#: viewpart/CharTip.cpp:184
+#, kde-format
+msgid "XML Decimal Entity"
+msgstr ""
+
+#: viewpart/FontViewPart.cpp:85
+#, kde-format
+msgid "Show Face:"
+msgstr ""
+
+#: viewpart/FontViewPart.cpp:88
+#, kde-format
+msgid "Install…"
+msgstr "ഇന്‍സ്റ്റാള്‍…"
+
+#: viewpart/FontViewPart.cpp:109
+#, kde-format
+msgid "Change Text…"
+msgstr "വാചകം മാറ്റുക…"
+
+#: viewpart/FontViewPart.cpp:333
+#, kde-format
+msgid "Could not read font."
+msgstr "അക്ഷരസഞ്ചയം ലഭ്യമാക്കുവാന്‍ സാധ്യമായില്ല."
+
+#: viewpart/FontViewPart.cpp:385
+#, kde-format
+msgid "Preview String"
+msgstr "കണ്ടു നോക്കുക"
+
+#: viewpart/FontViewPart.cpp:385
+#, kde-format
+msgid "Please enter new string:"
+msgstr "ദയവായി പുതിയ സ്ട്രിങ് നല്‍കുക:"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: viewpart/kfontviewpart.rc:4
+#, kde-format
+msgid "&Main Toolbar"
+msgstr ""
+
+#: viewpart/PreviewSelectAction.cpp:13
+#, kde-format
+msgid "Preview Type"
+msgstr ""
+
+#: viewpart/PreviewSelectAction.cpp:31
+#, kde-format
+msgid "Standard Preview"
+msgstr "സാധാരണ രീതിയില്‍ കണ്ടുനോക്കുക"
+
+#: viewpart/PreviewSelectAction.cpp:32
+#, kde-format
+msgid "All Characters"
+msgstr "എല്ലാ അക്ഷരങ്ങളും"
+
+#: viewpart/PreviewSelectAction.cpp:40
+#, kde-format
+msgid "Unicode Block: %1"
+msgstr "യുണിക്കോഡ് ബ്ലോക്ക്: %1"
+
+#: viewpart/PreviewSelectAction.cpp:44
+#, kde-format
+msgid "Unicode Script: %1"
+msgstr "യുണിക്കോഡ് സ്ക്രിപ്റ്റ്: %1"
+
+#: viewpart/UnicodeBlocks.h:17
+msgid "Basic Latin"
+msgstr "ബേസിക് ലാറ്റിന്‍"
+
+#: viewpart/UnicodeBlocks.h:18
+msgid "Latin-1 Supplement"
+msgstr "ലാറ്റിന്‍-1 സപ്ലിമെന്റ്"
+
+#: viewpart/UnicodeBlocks.h:19
+msgid "Latin Extended-A"
+msgstr "ലാറ്റിന്‍ എക്സ്റ്റെന്റഡ്-എ"
+
+#: viewpart/UnicodeBlocks.h:20
+msgid "Latin Extended-B"
+msgstr "ലാറ്റിന്‍ എക്സ്റ്റെന്റഡ്-ബി"
+
+#: viewpart/UnicodeBlocks.h:21
+msgid "IPA Extensions"
+msgstr "ഐപിഎ എക്സ്റ്റെന്‍ഷനുകള്‍"
+
+#: viewpart/UnicodeBlocks.h:22
+msgid "Spacing Modifier Letters"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:23
+msgid "Combining Diacritical Marks"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:24
+msgid "Greek and Coptic"
+msgstr "ഗ്രീക്കും കോപ്റ്റികും"
+
+#: viewpart/UnicodeBlocks.h:25 viewpart/UnicodeScripts.h:29
+msgid "Cyrillic"
+msgstr "സിറിലിക്"
+
+#: viewpart/UnicodeBlocks.h:26
+msgid "Cyrillic Supplement"
+msgstr "സിറിലിക് സപ്ലിമെന്റ്"
+
+#: viewpart/UnicodeBlocks.h:27 viewpart/UnicodeScripts.h:16
+msgid "Armenian"
+msgstr "അര്‍മേനിയന്‍"
+
+#: viewpart/UnicodeBlocks.h:28 viewpart/UnicodeScripts.h:42
+msgid "Hebrew"
+msgstr "ഹിബ്രൂ"
+
+#: viewpart/UnicodeBlocks.h:29 viewpart/UnicodeScripts.h:15
+msgid "Arabic"
+msgstr "അറബിക്"
+
+#: viewpart/UnicodeBlocks.h:30 viewpart/UnicodeScripts.h:69
+msgid "Syriac"
+msgstr "സിറിയക്"
+
+#: viewpart/UnicodeBlocks.h:31
+msgid "Arabic Supplement"
+msgstr "അറബിക് സപ്ലിമെന്റ്"
+
+#: viewpart/UnicodeBlocks.h:32 viewpart/UnicodeScripts.h:75
+msgid "Thaana"
+msgstr "ഥാനാ"
+
+#: viewpart/UnicodeBlocks.h:33
+msgid "NKo"
+msgstr "ങ്കോ"
+
+#: viewpart/UnicodeBlocks.h:34 viewpart/UnicodeScripts.h:31
+msgid "Devanagari"
+msgstr "ദേവനാഗിരി"
+
+#: viewpart/UnicodeBlocks.h:35 viewpart/UnicodeScripts.h:18
+msgid "Bengali"
+msgstr "ബംഗാളി"
+
+#: viewpart/UnicodeBlocks.h:36 viewpart/UnicodeScripts.h:38
+msgid "Gurmukhi"
+msgstr "ഗുരുമുഖി"
+
+#: viewpart/UnicodeBlocks.h:37 viewpart/UnicodeScripts.h:37
+msgid "Gujarati"
+msgstr "ഗുജറാത്തി"
+
+#: viewpart/UnicodeBlocks.h:38 viewpart/UnicodeScripts.h:61
+msgid "Oriya"
+msgstr "ഒറിയ"
+
+#: viewpart/UnicodeBlocks.h:39 viewpart/UnicodeScripts.h:73
+msgid "Tamil"
+msgstr "തമിഴ്"
+
+#: viewpart/UnicodeBlocks.h:40 viewpart/UnicodeScripts.h:74
+msgid "Telugu"
+msgstr "തെലുങ്കു"
+
+#: viewpart/UnicodeBlocks.h:41 viewpart/UnicodeScripts.h:45
+msgid "Kannada"
+msgstr "കന്നഡ"
+
+#: viewpart/UnicodeBlocks.h:42 viewpart/UnicodeScripts.h:53
+msgid "Malayalam"
+msgstr "മലയാളം"
+
+#: viewpart/UnicodeBlocks.h:43 viewpart/UnicodeScripts.h:67
+msgid "Sinhala"
+msgstr "സിംഹള"
+
+#: viewpart/UnicodeBlocks.h:44 viewpart/UnicodeScripts.h:76
+msgid "Thai"
+msgstr "തായി"
+
+#: viewpart/UnicodeBlocks.h:45 viewpart/UnicodeScripts.h:49
+msgid "Lao"
+msgstr "ലാവോ"
+
+#: viewpart/UnicodeBlocks.h:46 viewpart/UnicodeScripts.h:77
+msgid "Tibetan"
+msgstr "ടിബെറ്റന്‍"
+
+#: viewpart/UnicodeBlocks.h:47 viewpart/UnicodeScripts.h:55
+msgid "Myanmar"
+msgstr "മ്യാന്‍മര്‍"
+
+#: viewpart/UnicodeBlocks.h:48 viewpart/UnicodeScripts.h:33
+msgid "Georgian"
+msgstr "ജോര്‍ജിയന്‍"
+
+#: viewpart/UnicodeBlocks.h:49
+msgid "Hangul Jamo"
+msgstr "ഹാങ്കുല്‍ ജാമോ"
+
+#: viewpart/UnicodeBlocks.h:50 viewpart/UnicodeScripts.h:32
+msgid "Ethiopic"
+msgstr "എത്യോപിക്"
+
+#: viewpart/UnicodeBlocks.h:51
+msgid "Ethiopic Supplement"
+msgstr "എത്യോപിക് സപ്ലിമെന്റ്"
+
+#: viewpart/UnicodeBlocks.h:52 viewpart/UnicodeScripts.h:24
+msgid "Cherokee"
+msgstr "ചെറോക്കി"
+
+#: viewpart/UnicodeBlocks.h:53
+msgid "Unified Canadian Aboriginal Syllabics"
+msgstr "യൂണിഫൈഡ് കനേഡിയന്‍ അബോറിജിനല്‍ സിലബിക്സ്"
+
+#: viewpart/UnicodeBlocks.h:54 viewpart/UnicodeScripts.h:58
+msgid "Ogham"
+msgstr "ഒഗാം"
+
+#: viewpart/UnicodeBlocks.h:55 viewpart/UnicodeScripts.h:65
+msgid "Runic"
+msgstr "റൂണിക്"
+
+#: viewpart/UnicodeBlocks.h:56 viewpart/UnicodeScripts.h:70
+msgid "Tagalog"
+msgstr "തഗലോഗ്"
+
+#: viewpart/UnicodeBlocks.h:57 viewpart/UnicodeScripts.h:41
+msgid "Hanunoo"
+msgstr "ഹനുനൂ"
+
+#: viewpart/UnicodeBlocks.h:58 viewpart/UnicodeScripts.h:22
+msgid "Buhid"
+msgstr "ബുഹിദ്"
+
+#: viewpart/UnicodeBlocks.h:59 viewpart/UnicodeScripts.h:71
+msgid "Tagbanwa"
+msgstr "താഗ്ബാന്‍വാ"
+
+#: viewpart/UnicodeBlocks.h:60 viewpart/UnicodeScripts.h:48
+msgid "Khmer"
+msgstr "ഖ്മര്‍"
+
+#: viewpart/UnicodeBlocks.h:61 viewpart/UnicodeScripts.h:54
+msgid "Mongolian"
+msgstr "മംഗോളിയന്‍"
+
+#: viewpart/UnicodeBlocks.h:62 viewpart/UnicodeScripts.h:51
+msgid "Limbu"
+msgstr "ലിമ്പു"
+
+#: viewpart/UnicodeBlocks.h:63 viewpart/UnicodeScripts.h:72
+msgid "Tai Le"
+msgstr "തായി ലെ"
+
+#: viewpart/UnicodeBlocks.h:64 viewpart/UnicodeScripts.h:56
+msgid "New Tai Lue"
+msgstr "ന്യൂ തായി ലെ"
+
+#: viewpart/UnicodeBlocks.h:65
+msgid "Khmer Symbols"
+msgstr "ഖ്മല്‍ ചിഹ്നങ്ങള്‍"
+
+#: viewpart/UnicodeBlocks.h:66 viewpart/UnicodeScripts.h:21
+msgid "Buginese"
+msgstr "ബുഗിനീസ്"
+
+#: viewpart/UnicodeBlocks.h:67 viewpart/UnicodeScripts.h:17
+msgid "Balinese"
+msgstr "ബലിനീസ്"
+
+#: viewpart/UnicodeBlocks.h:68
+msgid "Phonetic Extensions"
+msgstr "ഫൊണറ്റിക് എക്സ്റ്റെന്‍ഷനുകള്‍"
+
+#: viewpart/UnicodeBlocks.h:69
+msgid "Phonetic Extensions Supplement"
+msgstr "ഫൊണറ്റിക് എക്സ്റ്റെന്‍ഷന്‍ സപ്ലിമെന്റ്"
+
+#: viewpart/UnicodeBlocks.h:70
+msgid "Combining Diacritical Marks Supplement"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:71
+msgid "Latin Extended Additional"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:72
+msgid "Greek Extended"
+msgstr "ഗ്രീക്ക് എക്സ്റ്റെന്റഡ്"
+
+#: viewpart/UnicodeBlocks.h:73
+msgid "General Punctuation"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:74
+msgid "Superscripts and Subscripts"
+msgstr "സൂപ്പർസ്ക്രിപ്റ്റുകളും സബ്സ്ക്രിപ്റ്റുകളും"
+
+#: viewpart/UnicodeBlocks.h:75
+msgid "Currency Symbols"
+msgstr "നാണയ ചിഹ്നങ്ങള്‍"
+
+#: viewpart/UnicodeBlocks.h:76
+msgid "Combining Diacritical Marks for Symbols"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:77
+msgid "Letter-Like Symbols"
+msgstr "അക്ഷരം പോലുള്ള ചിഹ്നങ്ങള്‍"
+
+#: viewpart/UnicodeBlocks.h:78
+msgid "Number Forms"
+msgstr "സംഖ്യാരൂപങ്ങള്‍"
+
+#: viewpart/UnicodeBlocks.h:79
+msgid "Arrows"
+msgstr "ആരോ"
+
+#: viewpart/UnicodeBlocks.h:80
+msgid "Mathematical Operators"
+msgstr "ഗണിത ചിഹ്നങ്ങള്‍"
+
+#: viewpart/UnicodeBlocks.h:81
+msgid "Miscellaneous Technical"
+msgstr "സാങ്കേതികമായ പലവക"
+
+#: viewpart/UnicodeBlocks.h:82
+msgid "Control Pictures"
+msgstr "നിയന്ത്രണ ചിത്രങ്ങള്‍"
+
+#: viewpart/UnicodeBlocks.h:83
+msgid "Optical Character Recognition"
+msgstr "ഒപ്റ്റിക്കൽ കാരക്റ്റർ റെക്കഗ്നിഷൻ"
+
+#: viewpart/UnicodeBlocks.h:84
+msgid "Enclosed Alphanumerics"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:85
+msgid "Box Drawing"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:86
+msgid "Block Elements"
+msgstr "ബ്ലോക്ക് എലമെന്റുകള്‍"
+
+#: viewpart/UnicodeBlocks.h:87
+msgid "Geometric Shapes"
+msgstr "ജ്യാമിതീയ രൂപങ്ങള്‍"
+
+#: viewpart/UnicodeBlocks.h:88
+msgid "Miscellaneous Symbols"
+msgstr "പലവക ചിഹ്നങ്ങള്‍"
+
+#: viewpart/UnicodeBlocks.h:89
+msgid "Dingbats"
+msgstr "ഡിങ്ങ്ബാറ്റ്സ്"
+
+#: viewpart/UnicodeBlocks.h:90
+msgid "Miscellaneous Mathematical Symbols-A"
+msgstr "വിവിധ ഗണിത ചിഹ്നങ്ങൾ-A"
+
+#: viewpart/UnicodeBlocks.h:91
+msgid "Supplemental Arrows-A"
+msgstr "സപ്ലിമെന്റല്‍ ആരോ-എ"
+
+#: viewpart/UnicodeBlocks.h:92
+msgid "Braille Patterns"
+msgstr "ബ്രെയിലി മാതൃകകള്‍"
+
+#: viewpart/UnicodeBlocks.h:93
+msgid "Supplemental Arrows-B"
+msgstr "സപ്ലിമെന്റല്‍ ആരോ-ബി"
+
+#: viewpart/UnicodeBlocks.h:94
+msgid "Miscellaneous Mathematical Symbols-B"
+msgstr "വിവിധ ഗണിത ചിഹ്നങ്ങൾ-B"
+
+#: viewpart/UnicodeBlocks.h:95
+msgid "Supplemental Mathematical Operators"
+msgstr "അനുബന്ധ ഗണിതചിഹ്നങ്ങൾ"
+
+#: viewpart/UnicodeBlocks.h:96
+msgid "Miscellaneous Symbols and Arrows"
+msgstr "വിവിധ ചിഹ്നങ്ങളും അമ്പുകളും"
+
+#: viewpart/UnicodeBlocks.h:97 viewpart/UnicodeScripts.h:34
+msgid "Glagolitic"
+msgstr "ഗ്ലഗോലിത്തിക്"
+
+#: viewpart/UnicodeBlocks.h:98
+msgid "Latin Extended-C"
+msgstr "ലാറ്റിന്‍ എക്സ്റ്റെന്റഡ്-സി"
+
+#: viewpart/UnicodeBlocks.h:99 viewpart/UnicodeScripts.h:26
+msgid "Coptic"
+msgstr "കോപ്റ്റിക്"
+
+#: viewpart/UnicodeBlocks.h:100
+msgid "Georgian Supplement"
+msgstr "ജോര്‍ജിയന്‍ സപ്ലിമെന്റ്"
+
+#: viewpart/UnicodeBlocks.h:101 viewpart/UnicodeScripts.h:78
+msgid "Tifinagh"
+msgstr "ടിഫിനാഗ്"
+
+#: viewpart/UnicodeBlocks.h:102
+msgid "Ethiopic Extended"
+msgstr "എത്യോപിക് എക്സ്റ്റെന്റഡ്"
+
+#: viewpart/UnicodeBlocks.h:103
+msgid "Supplemental Punctuation"
+msgstr "അനുബന്ധ വിരാമചിഹ്നം"
+
+#: viewpart/UnicodeBlocks.h:104
+msgid "CJK Radicals Supplement"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:105
+msgid "Kangxi Radicals"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:106
+msgid "Ideographic Description Characters"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:107
+msgid "CJK Symbols and Punctuation"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:108 viewpart/UnicodeScripts.h:43
+msgid "Hiragana"
+msgstr "ഹിരാഗാനാ"
+
+#: viewpart/UnicodeBlocks.h:109 viewpart/UnicodeScripts.h:46
+msgid "Katakana"
+msgstr "കാറ്റാകാനാ"
+
+#: viewpart/UnicodeBlocks.h:110 viewpart/UnicodeScripts.h:19
+msgid "Bopomofo"
+msgstr "ബോപോമോഫോ"
+
+#: viewpart/UnicodeBlocks.h:111
+msgid "Hangul Compatibility Jamo"
+msgstr "ഹാങ്കുലുമായി പൊരുത്തമുള്ള ജാമോ"
+
+#: viewpart/UnicodeBlocks.h:112
+msgid "Kanbun"
+msgstr "കാന്‍ബന്‍"
+
+#: viewpart/UnicodeBlocks.h:113
+msgid "Bopomofo Extended"
+msgstr "വികസിപ്പിച്ച ബോപ്പോമോഫോ"
+
+#: viewpart/UnicodeBlocks.h:114
+msgid "CJK Strokes"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:115
+msgid "Katakana Phonetic Extensions"
+msgstr "കറ്റകനാ ഫോണറ്റിക് എക്സ്റ്റെന്‍ഷനുകള്‍"
+
+#: viewpart/UnicodeBlocks.h:116
+msgid "Enclosed CJK Letters and Months"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:117
+msgid "CJK Compatibility"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:118
+msgid "CJK Unified Ideographs Extension A"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:119
+msgid "Yijing Hexagram Symbols"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:120
+msgid "CJK Unified Ideographs"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:121
+msgid "Yi Syllables"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:122
+msgid "Yi Radicals"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:123
+msgid "Modifier Tone Letters"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:124
+msgid "Latin Extended-D"
+msgstr "ലാറ്റിന്‍ എക്സ്റ്റെന്റഡ്-ഡി"
+
+#: viewpart/UnicodeBlocks.h:125 viewpart/UnicodeScripts.h:68
+msgid "Syloti Nagri"
+msgstr "സിലോട്ടി നാഗ്രി"
+
+#: viewpart/UnicodeBlocks.h:126
+msgid "Phags-pa"
+msgstr "ഫാഗ്സ്-പാ"
+
+#: viewpart/UnicodeBlocks.h:127
+msgid "Hangul Syllables"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:128
+msgid "High Surrogates"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:129
+msgid "High Private Use Surrogates"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:130
+msgid "Low Surrogates"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:131
+msgid "Private Use Area"
+msgstr "സ്വകാര്യ ഉപയോഗ മേഖല"
+
+#: viewpart/UnicodeBlocks.h:132
+msgid "CJK Compatibility Ideographs"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:133
+msgid "Alphabetic Presentation Forms"
+msgstr "അറബിക് അവതരണ ഫോമുകൾ"
+
+#: viewpart/UnicodeBlocks.h:134
+msgid "Arabic Presentation Forms-A"
+msgstr "അറബിക് അവതരണ ഫോമുകൾ-A"
+
+#: viewpart/UnicodeBlocks.h:135
+msgid "Variation Selectors"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:136
+msgid "Vertical Forms"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:137
+msgid "Combining Half Marks"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:138
+msgid "CJK Compatibility Forms"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:139
+msgid "Small Form Variants"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:140
+msgid "Arabic Presentation Forms-B"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:141
+msgid "Half-Width and Full-Width Forms"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:142
+msgid "Specials"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:143
+msgid "Linear B Syllabary"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:144
+msgid "Linear B Ideograms"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:145
+msgid "Aegean Numbers"
+msgstr "ഏജിയന്‍ അക്കങ്ങള്‍"
+
+#: viewpart/UnicodeBlocks.h:146
+msgid "Ancient Greek Numbers"
+msgstr "പഴയ ഗ്രീക്ക് അക്കങ്ങള്‍"
+
+#: viewpart/UnicodeBlocks.h:147 viewpart/UnicodeScripts.h:59
+msgid "Old Italic"
+msgstr "പഴയ ഇറ്റാലിക്"
+
+#: viewpart/UnicodeBlocks.h:148 viewpart/UnicodeScripts.h:35
+msgid "Gothic"
+msgstr "ഗോഥിക്"
+
+#: viewpart/UnicodeBlocks.h:149 viewpart/UnicodeScripts.h:79
+msgid "Ugaritic"
+msgstr "യുഗാരിറ്റിക്"
+
+#: viewpart/UnicodeBlocks.h:150 viewpart/UnicodeScripts.h:60
+msgid "Old Persian"
+msgstr "പഴയ പേര്‍ഷ്യന്‍"
+
+#: viewpart/UnicodeBlocks.h:151 viewpart/UnicodeScripts.h:30
+msgid "Deseret"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:152 viewpart/UnicodeScripts.h:66
+msgid "Shavian"
+msgstr "ഷാവ്യന്‍"
+
+#: viewpart/UnicodeBlocks.h:153 viewpart/UnicodeScripts.h:62
+msgid "Osmanya"
+msgstr "ഒസ്മാന്യ"
+
+#: viewpart/UnicodeBlocks.h:154
+msgid "Cypriot Syllabary"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:155 viewpart/UnicodeScripts.h:64
+msgid "Phoenician"
+msgstr "ഫോണീഷ്യന്‍"
+
+#: viewpart/UnicodeBlocks.h:156 viewpart/UnicodeScripts.h:47
+msgid "Kharoshthi"
+msgstr "കരോഷ്തി"
+
+#: viewpart/UnicodeBlocks.h:157 viewpart/UnicodeScripts.h:27
+msgid "Cuneiform"
+msgstr "ക്യൂണിഫോം"
+
+#: viewpart/UnicodeBlocks.h:158
+msgid "Cuneiform Numbers and Punctuation"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:159
+msgid "Byzantine Musical Symbols"
+msgstr "ബൈസാന്റൈന്‍ സംഗീതചിഹ്നങ്ങള്‍"
+
+#: viewpart/UnicodeBlocks.h:160
+msgid "Musical Symbols"
+msgstr "സംഗീത ചിഹ്നങ്ങള്‍"
+
+#: viewpart/UnicodeBlocks.h:161
+msgid "Ancient Greek Musical Notation"
+msgstr "പുരാതനഗ്രീക്ക് സംഗീതസൂചിക"
+
+#: viewpart/UnicodeBlocks.h:162
+msgid "Tai Xuan Jing Symbols"
+msgstr "തായ് ഷുവന്‍ ജിങ്ങ് ചിഹ്നങ്ങള്‍"
+
+#: viewpart/UnicodeBlocks.h:163
+msgid "Counting Rod Numerals"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:164
+msgid "Mathematical Alphanumeric Symbols"
+msgstr "ഗണിതശാസ്ത്ര ആൽഫാന്യൂമെറിക് ചിഹ്നങ്ങൾ"
+
+#: viewpart/UnicodeBlocks.h:165
+msgid "CJK Unified Ideographs Extension B"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:166
+msgid "CJK Compatibility Ideographs Supplement"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:167
+msgid "Tags"
+msgstr "ടാഗുകള്‍"
+
+#: viewpart/UnicodeBlocks.h:168
+msgid "Variation Selectors Supplement"
+msgstr ""
+
+#: viewpart/UnicodeBlocks.h:169
+msgid "Supplementary Private Use Area-A"
+msgstr "സപ്ലിമെന്ററി പ്രൈവറ്റ് യൂസ് ഏരിയാ-എ"
+
+#: viewpart/UnicodeBlocks.h:170
+msgid "Supplementary Private Use Area-B"
+msgstr "സപ്ലിമെന്ററി പ്രൈവറ്റ് യൂസ് ഏരിയാ-ബി"
+
+#: viewpart/UnicodeScripts.h:20
+msgid "Braille"
+msgstr "ബ്രെയിലി"
+
+#: viewpart/UnicodeScripts.h:23
+msgid "Canadian Aboriginal"
+msgstr "കാനേഡിയന്‍ അബോറിജിനല്‍"
+
+#: viewpart/UnicodeScripts.h:25
+msgid "Common"
+msgstr "സാധാരണയുള്ള"
+
+#: viewpart/UnicodeScripts.h:28
+msgid "Cypriot"
+msgstr "സൈപ്രിയറ്റ്"
+
+#: viewpart/UnicodeScripts.h:36
+msgid "Greek"
+msgstr "ഗ്രീക്ക്"
+
+#: viewpart/UnicodeScripts.h:39
+msgid "Han"
+msgstr "ഹാന്‍"
+
+#: viewpart/UnicodeScripts.h:40
+msgid "Hangul"
+msgstr "ഹാങ്കുല്‍"
+
+#: viewpart/UnicodeScripts.h:44
+msgid "Inherited"
+msgstr "പാരമ്പര്യഗതം"
+
+#: viewpart/UnicodeScripts.h:50
+msgid "Latin"
+msgstr "ലാറ്റിന്‍"
+
+#: viewpart/UnicodeScripts.h:52
+msgid "Linear B"
+msgstr "ലീനിയര്‍ ബി"
+
+#: viewpart/UnicodeScripts.h:57
+msgid "Nko"
+msgstr "ങ്കോ"
+
+#: viewpart/UnicodeScripts.h:63
+msgid "Phags Pa"
+msgstr "ഫാഗ്സ് പാ"
+
+#: viewpart/UnicodeScripts.h:80
+msgid "Yi"
+msgstr "യി"
+
+#~ msgid "Print..."
+#~ msgstr "അച്ചടിയ്ക്കുക..."
+
+#, fuzzy
+#~ msgid "Create New Group..."
+#~ msgstr "പുതിയ കൂട്ടമുണ്ടാക്കുക"
+
+#, fuzzy
+#~ msgid "Remove Group..."
+#~ msgstr "കൂട്ടം നീക്കം ചെയ്യുക"
+
+#~ msgid "Install..."
+#~ msgstr "ഇന്‍സ്റ്റോള്‍ ചെയ്യുക..."
+
+#, fuzzy
+#~ msgid "FontViewPart"
+#~ msgstr "അക്ഷരസഞ്ചയദര്‍ശിനി"
+
+#~ msgid "<p>No information</p>"
+#~ msgstr "<p>വിവരം ലഭ്യമല്ല</p>"
+
+#~ msgid "Create a new group"
+#~ msgstr "പുതിയ കൂട്ടമുണ്ടാക്കുക"
+
+#~ msgid "Enable all disabled fonts in the current group"
+#~ msgstr "നിലവിലുള്ള കൂട്ടത്തില്‍ പ്രവര്‍ത്തന രഹിതമാക്കിയ അക്ഷരസഞ്ചയങ്ങളെല്ലാം സജ്ജമാക്കുക"
+
+#~ msgid "Disable all enabled fonts in the current group"
+#~ msgstr "നിലവിലുള്ള കൂട്ടത്തില്‍ സജ്ജമാക്കിയ അക്ഷരസഞ്ചയങ്ങളെല്ലാം പ്രവര്‍ത്തന രഹിതമാക്കുക"
+
+#~ msgid "Please enter the name of the new group:"
+#~ msgstr "പുതിയ കൂട്ടത്തിന്റെ പേരു് നല്‍കുക:"
+
+#, fuzzy
+#~ msgid "KDE Font Manager"
+#~ msgstr "കെഡിഇ അക്ഷരസഞ്ചയ ഇന്‍സ്റ്റോളര്‍"
+
+#~ msgid "Type here to filter on %1"
+#~ msgstr "%1-ല്‍ ഫില്‍റ്റര്‍ ചെയ്യുന്നതിനായി ഇവിടെ ടൈപ്പ് ചെയ്യുക"
+
+#~ msgid "Tools"
+#~ msgstr "ഉപകരണങ്ങള്‍"
+
+#~ msgid "Add..."
+#~ msgstr "ചേര്‍ക്കുക..."
+
+#~ msgid "Install fonts"
+#~ msgstr "അക്ഷരസംഞ്ചയം ഇന്‍സ്റ്റോള്‍ ചെയ്യുക"
+
+#, fuzzy
+#~ msgid "Do you really want to move this font?"
+#~ msgid_plural ""
+#~ "<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?"
+#~ msgstr[0] "നിങ്ങള്‍ക്കു് ഈ അക്ഷസഞ്ചയം നീക്കണമോ?"
+#~ msgstr[1] "നിങ്ങള്‍ക്കു് ഈ %1 അക്ഷസഞ്ചയങ്ങള്‍ നീക്കണമോ?"
+
+#, fuzzy
+#~ msgid "Starting..."
+#~ msgstr "അച്ചടിയ്ക്കുക..."
+
+#, fuzzy
+#~ msgid "Cancelling..."
+#~ msgstr "റദ്ദാക്കുക"
+
+#~ msgid "Failed to locate font printer."
+#~ msgstr "അക്ഷരസഞ്ചയ പ്രിന്റര്‍ ലഭ്യമാക്കുന്നതില്‍ പരാജയം."
+
+#~ msgid "Move Here"
+#~ msgstr "ഇവിടെക്കു് നീക്കുക"
+
+#~ msgid "Cancel"
+#~ msgstr "റദ്ദാക്കുക"
+
+#~ msgid "Preview"
+#~ msgstr "സ്ക്രീനില്‍ കണ്ടുനോക്കുക"
+
+#, fuzzy
+#~ msgid "Show Preview"
+#~ msgstr "വലുതായി സ്ക്രീനില്‍ കണ്ടുനോക്കുക"
+
+#~ msgid ""
+#~ "Configure folder for X11 - create fonts.dir and fonts.scale, plus remove "
+#~ "hidden entries. (NOTE: Use this option on its own.)"
+#~ msgstr ""
+#~ "X11-നുള്ള അറ സജ്ജമാക്കുക - fonts.dir, fonts.scale ഉണ്ടാക്കി അദൃശ്യമായ എന്‍ട്രികള്‍ "
+#~ "നീക്കം ചെയ്യുക. (കുറിപ്പു്: ഈ ഐച്ഛികം അതേപോലെ ഉപയോഗിക്കുക.)"
+
+#~ msgid ""
+#~ "Could not delete:\n"
+#~ "%1"
+#~ msgstr ""
+#~ "വെട്ടിമാറ്റുവാന്‍ സാധ്യമല്ല:\n"
+#~ "%1"
+
+#~ msgid "Could not delete the following files:"
+#~ msgstr "ഈ ഫയലുകള്‍ വെട്ടിമാറ്റുവാന്‍ സാധ്യമായില്ല:"
+
+#, fuzzy
+#~ msgctxt ""
+#~ "Title for a group that contains \"All Fonts\", \"Personal Fonts\", "
+#~ "\"System Fonts\" and \"Unclassified\""
+#~ msgid "Standard:"
+#~ msgstr "സാധാരണയുള്ള:"
+
+#~ msgid "Custom:"
+#~ msgstr "യഥേഷ്ടം:"
+
+#~ msgid "%1 (Disabled)"
+#~ msgstr "%1 (പ്രവര്‍ത്തന രഹിതം)"
+
+#~ msgid "%1 (Empty)"
+#~ msgstr "%1 (ശൂന്യം)"
+
+#~ msgid "%1 (Partial)"
+#~ msgstr "%1 (പകുതി)"
+
+#~ msgid "Copy Here"
+#~ msgstr "ഇവിടേക്കു് പകര്‍ത്തുക"
+
+#~ msgid "Rename Group"
+#~ msgstr "കൂട്ടത്തിന്റെ പേരു് മാറ്റുക"
+
+#~ msgid "Please enter a new name for group:"
+#~ msgstr "ദയവായി കൂട്ടത്തിനു് പുതിയ ഒരു പേരു് നല്‍കുക:"
+
+#~ msgid "Information"
+#~ msgstr "വിവരം"
+
+#~ msgid "Authorization Required"
+#~ msgstr "ആധികാരികത ഉറപ്പാക്കുക"
+
+#~ msgid ""
+#~ "The requested action requires administrator privileges.\n"
+#~ "If you have these privileges then please enter your password."
+#~ msgstr ""
+#~ "ആവശ്യപ്പെട്ടിരിക്കുന്ന പ്രവൃത്തി ചെയ്യുന്നതിനായി അഡ്മിനിസ്ട്രേറ്ററിനുള്ള\n"
+#~ "അനുമതികള്‍ വേണം. നിങ്ങള്‍ക്കിവയുണ്ടെങ്കില്‍ ദയവായി അടയാളവാക്കു് നല്‍കുക."
+
+#~ msgid ""
+#~ "The requested action requires administrator privileges.\n"
+#~ "Please enter the system administrator's password."
+#~ msgstr ""
+#~ "ആവശ്യപ്പെട്ടിരിക്കുന്ന പ്രവൃത്തി ചെയ്യുന്നതിനായി അഡ്മിനിസ്ട്രേറ്ററിനുള്ള\n"
+#~ "അനുമതികള്‍ വേണം. ദയവായി അഡ്മിനിസ്ട്രേറ്റര്‍ അടയാളവാക്കു് നല്‍കുക."
+
+#~ msgid "Insufficient privileges."
+#~ msgstr "മതിയായ അനുമതികള്‍ ലഭ്യമല്ല."
+
+#~ msgid "Conversation with su failed."
+#~ msgstr "su പരാജയപ്പെട്ടിരിക്കുന്നു."
+
+#~ msgid ""
+#~ "<p>Could not launch '%1'.</p><p>Make sure your PATH is set correctly.</p>"
+#~ msgstr ""
+#~ "<p>'%1' ലഭ്യമാക്കുവാന്‍ സാധ്യമായില്ല.</p><p>നിങ്ങളുടെ നല്‍കിയിരിക്കുന്ന പാഥ് ശരിയാണു് "
+#~ "എന്നുറപ്പാക്കുക.</p>"
+
+#~ msgid "Incorrect password, please try again."
+#~ msgstr "അടയാളവാക്കു് തെറ്റാണു്, വീണ്ടും ശ്രമിക്കുക."
+
+#~ msgid "Internal error: illegal return from SuProcess::checkInstall()"
+#~ msgstr "ആന്തരിക പിശകു്: SuProcess::checkInstall()-ല്‍ നിന്നും തെറ്റായ ഫലം"
+
+#~ msgid "Copying"
+#~ msgstr "പകര്‍ത്തുന്നു"
+
+#~ msgid "Installing %1"
+#~ msgstr "%1 ഇന്‍സ്റ്റോള്‍ ചെയ്യുന്നു"
+
+#~ msgid "Copying %1"
+#~ msgstr "%1 പകര്‍ത്തുന്നു"
+
+#~ msgid "Deleting %1"
+#~ msgstr "%1 വെട്ടിമാറ്റുന്നു"
+
+#~ msgid "Enabling %1"
+#~ msgstr "%1 പ്രവര്‍ത്തന സജ്ജമാക്കുന്നു"
+
+#~ msgid "Disabling %1"
+#~ msgstr "%1 പ്രവര്‍ത്തന രഹിതമാക്കുന്നു"
+
+#~ msgid "Moving %1"
+#~ msgstr "%1 നീക്കുന്നു"
+
+#~ msgid "Success"
+#~ msgstr "വിജയിച്ചു"
+
+#~ msgid ""
+#~ "GUI front-end to the fonts:/ ioslave.\n"
+#~ "(c) Craig Drummond, 2000 - 2007"
+#~ msgstr ""
+#~ "GUI front-end to the fonts:/ ioslave.\n"
+#~ "(c) Craig Drummond, 2000 - 2007"
+
+#~ msgid "Settings"
+#~ msgstr "സജ്ജീകരണങ്ങള്‍"
+
+#~ msgid "Enable all selected fonts"
+#~ msgstr "തെരഞ്ഞെടുത്ത എല്ലാ അക്ഷരസഞ്ചയങ്ങളും പ്രവര്‍ത്തന സജ്ജമാക്കുക"
+
+#~ msgid "Disable all selected fonts"
+#~ msgstr "തെരഞ്ഞെടുത്ത എല്ലാ അക്ഷരസഞ്ചയങ്ങളും പ്രവര്‍ത്തന രഹിതമാക്കുക"
+
+#~ msgid "You did not select anything to copy."
+#~ msgstr "പകര്‍ത്തുവാന്‍ നിങ്ങളൊന്നും തെരഞ്ഞെടുത്തിട്ടില്ല."
+
+#~ msgid "Nothing to Copy"
+#~ msgstr "ഒന്നും പകര്‍ത്തുവാനില്ല"
+
+#~ msgid "<p>Do you really want to copy</p><p>'<b>%1</b>'?</p>"
+#~ msgstr "<p>നിങ്ങള്‍ക്കു് </p><p>'<b>%1</b>' പകര്‍ത്തണമോ?</p>"
+
+#~ msgid "Copy Font"
+#~ msgstr "അക്ഷരസഞ്ചയം പകര്‍ത്തുക"
+
+#~ msgid "Copy"
+#~ msgstr "പകര്‍ത്തുക"
+
+#~ msgid "Do you really want to copy this font?"
+#~ msgid_plural "Do you really want to copy these %1 fonts?"
+#~ msgstr[0] "നിങ്ങള്‍ക്കു് ഈ അക്ഷരസഞ്ചയം പകര്‍ത്തണമോ?"
+#~ msgstr[1] "നിങ്ങള്‍ക്കു് ഈ %1 അക്ഷരസഞ്ചയങ്ങള്‍ പകര്‍ത്തണമോ?"
+
+#~ msgid "Copying font(s)..."
+#~ msgstr "അക്ഷരസഞ്ചയങ്ങള്‍ പകര്‍ത്തുന്നു..."
+
+#~ msgid " (%1 Enabled, %2 Disabled, %3 Partial)"
+#~ msgstr " (%1 പ്രവര്‍ത്തന സജ്ജം, %2 പ്രവര്‍ത്തന രഹിതം, %3 പകുതി)"
+
+#~ msgid "Would you like to install the font(s) for personal use?"
+#~ msgstr "നിങ്ങളുടെ സ്വകാര്യ ഉപയോഗത്തിനായി അക്ഷരസഞ്ചയം ഇന്‍സ്റ്റോള്‍ ചെയ്യണമോ?"
+
+#~ msgid "Authorization Failed"
+#~ msgstr "ആധികാരികത ഉറപ്പാക്കുന്നതില്‍ പരാജയം"
+
+#~ msgid ""
+#~ "The installer is currently busy. Please wait for the current operation to "
+#~ "terminate."
+#~ msgstr ""
+#~ "ഇന്‍സ്റ്റോളര്‍ നിലവില്‍ തിരക്കിലാണു്. ദയവായി നിലവിലുള്ള പ്രക്രിയ അവസാനിക്കുന്നതിനായി "
+#~ "കാത്തിരിയ്ക്കുക."
+
+#~ msgid "Invalid Font"
+#~ msgstr "അസാധുവായ അക്ഷരസഞ്ചയം"
+
+#~ msgid ""
+#~ "Cannot install %1\n"
+#~ "Hidden fonts cannot be installed."
+#~ msgstr ""
+#~ "%1 ഇന്‍സ്റ്റോള്‍ ചെയ്യുവാന്‍ സാധ്യമായില്ല\n"
+#~ "അദൃശ്യമായ അക്ഷരസഞ്ചയങ്ങള്‍ ഇന്‍സ്റ്റോള്‍ ചെയ്യുവാന്‍ സാധ്യമല്ല."
+
+#~ msgid "Could not access \"%1\" folder."
+#~ msgstr "\"%1\" ഫോള്‍ഡറിലേക്കു് പ്രവേശിക്കുവാന്‍ സാധ്യമല്ല."
+
+#~ msgid ""
+#~ "Cannot copy %1 to %2\n"
+#~ "Hidden/disabled fonts cannot be installed."
+#~ msgstr ""
+#~ "%1 %2-ലേക്കു് പകര്‍ത്തുവാന്‍ സാധ്യമായില്ല\n"
+#~ "അദൃശ്യം/പ്രവര്‍ത്തന രഹിതമായ അക്ഷരസഞ്ചയങ്ങള്‍ ഇന്‍സ്റ്റോള്‍ ചെയ്യുവാന്‍ സാധ്യമല്ല."
+
+#~ msgid "You cannot rename font folders"
+#~ msgstr "അക്ഷരസഞ്ചയത്തിന്റെ ഫോള്‍ഡറുകളുടെ പേരു് മാറ്റുവാന്‍ സാധ്യമല്ല"
+
+#~ msgid "Internal error - could not find font."
+#~ msgstr "ആന്തരിക പിശകു് - അക്ഷരസഞ്ചയം ലഭ്യമല്ല."
+
+#~ msgid ""
+#~ "Could not enable %1\n"
+#~ "An enabled font already exists, please delete the disabled one."
+#~ msgstr ""
+#~ "%1 പ്രവര്‍ത്തന സജ്ജമാക്കുവാന്‍ സാധ്യമല്ല\n"
+#~ "നിലവില്‍ പ്രവര്‍ത്തിക്കുന്ന ഒരു അക്ഷരസഞ്ചയമുണ്ടു്, അതിനാല്‍ പ്രവര്‍ത്തന രഹിതമായതു് വെട്ടിമാറ്റുക."
+
+#~ msgid ""
+#~ "Could not disable %1\n"
+#~ "A disabled font already exists, please delete the enabled one."
+#~ msgstr ""
+#~ "%1 പ്രവര്‍ത്തന രഹിതമാക്കുവാന്‍ സാധ്യമല്ല\n"
+#~ "നിലവില്‍ പ്രവര്‍ത്ത രഹിതമാക്കിയ ഒരു അക്ഷരസഞ്ചയമുണ്ടു്, അതിനാല്‍ പ്രവര്‍ത്തന സജ്ജമായതു് "
+#~ "വെട്ടിമാറ്റുക."
+
+#~ msgid "Sorry, fonts cannot be renamed."
+#~ msgstr "ക്ഷമിക്കണം, അക്ഷരസഞ്ചയങ്ങളുടെ പേരു് മാറ്റുവാന്‍ സാധ്യമല്ല."
+
+#~ msgid ""
+#~ "Cannot move %1 to %2\n"
+#~ "Disabled fonts cannot be moved."
+#~ msgstr ""
+#~ "%1 %2-ലേക്കു് നീക്കുവാന്‍ സാധ്യമല്ല\n"
+#~ "പ്രവര്‍ത്തന രഹിതമാക്കിയ അക്ഷരസഞ്ചയങ്ങള്‍ നീക്കുവാന്‍ സാധ്യമല്ല."
+
+#~ msgid "Could not access \"%1\"."
+#~ msgstr "\"%1\"-ലേക്കു് പ്രവേശിക്കുവാന്‍ സാധ്യമല്ല."
+
+#~ msgid "Configuring installed fonts..."
+#~ msgstr "ഇന്‍സ്റ്റോള്‍ ചെയ്തിരിക്കുന്ന അക്ഷസഞ്ചയങ്ങള്‍ ക്രമീകരിക്കുന്നു..."
+
+#~ msgid "Incorrect password.\n"
+#~ msgstr "തെറ്റായ അടയാളവാക്കു്.\n"
+
+#~ msgid "Internal fontconfig error."
+#~ msgstr "ആന്തരിക fontconfig പിശകു്."
+
+#~ msgid "Duplicate Font"
+#~ msgstr "ആവര്‍ത്തന അക്ഷരസഞ്ചയം"
+
+#~ msgid "Enabled Font"
+#~ msgstr "പ്രവര്‍ത്തന സജ്ജമായ അക്ഷരസഞ്ചയം"
+
+#~ msgid "Disabled Font"
+#~ msgstr "പ്രവര്‍ത്തന രഹിതമായ അക്ഷരസഞ്ചയം"
+
+#~ msgid ""
+#~ "Could not determine file type for: %1\n"
+#~ "Only fonts may be installed."
+#~ msgstr ""
+#~ "ഇതിനുള്ള ഫയല്‍ തരം ലഭ്യമായില്ല: %1\n"
+#~ "അക്ഷരസഞ്ചയം മാത്രമേ ഇന്‍സ്റ്റോള്‍ ചെയ്തിട്ടുണ്ടാവൂ."
+
+#~ msgid ""
+#~ "Could not install %1\n"
+#~ "A matching enabled font already exists. Please disable that."
+#~ msgstr ""
+#~ "%1 ഇന്‍സ്റ്റോള്‍ ചെയ്യുവാന്‍ സാധ്യമായില്ല\n"
+#~ "ഇതിനു് ചേരുന്ന പ്രവര്‍ത്തന സജ്ജമായ ഒരു അക്ഷരസഞ്ചയം നിലവിലുണ്ടു്, ദയവായി അതു് പ്രവര്‍ത്തന "
+#~ "രഹിതമാക്കുക."
+
+#~ msgid ""
+#~ "Could not install %1\n"
+#~ "A matching disabled font already exists. Please enable that."
+#~ msgstr ""
+#~ "%1 ഇന്‍സ്റ്റോള്‍ ചെയ്യുവാന്‍ സാധ്യമായില്ല\n"
+#~ "ഇതിനു് ചേരുന്ന പ്രവര്‍ത്തന രഹിതമായ ഒരു അക്ഷരസഞ്ചയം നിലവിലുണ്ടു്, ദയവായി അതു് പ്രവര്‍ത്തന "
+#~ "സജ്ജമാക്കുക."
+
+#~ msgid "Enable..."
+#~ msgstr "പ്രവര്‍ത്തന സജ്ജമാക്കുക..."
+
+#~ msgid "Disable..."
+#~ msgstr "പ്രവര്‍ത്തന രഹിതമാക്കുക..."
+
+#~ msgid "Remove..."
+#~ msgstr "നീക്കം ചെയ്യുക..."
+
+#~ msgid "Delete..."
+#~ msgstr "വെട്ടിമാറ്റുക..."

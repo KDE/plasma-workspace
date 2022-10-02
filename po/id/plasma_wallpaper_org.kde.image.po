@@ -1,0 +1,357 @@
+# Indonesian translations for plasma_wallpaper_image package.
+# Copyright (C) 2010 This_file_is_part_of_KDE
+# This file is distributed under the same license as the plasma_wallpaper_image package.
+# Andhika Padmawan <andhika.padmawan@gmail.com>, 2010-2014.
+# Wantoyo <wantoyek@gmail.com>, 2017, 2018, 2019, 2020, 2021, 2022.
+# Aziz Adam Adrian <4.adam.adrian@gmail.com>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_wallpaper_image\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-15 00:46+0000\n"
+"PO-Revision-Date: 2022-06-14 15:18+0700\n"
+"Last-Translator: Aziz Adam Adrian <4.adam.adrian@gmail.com>\n"
+"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 22.04.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:94
+#, kde-format
+msgid "Positioning:"
+msgstr "Letak:"
+
+#: imagepackage/contents/ui/config.qml:97
+#, kde-format
+msgid "Scaled and Cropped"
+msgstr "Diskalakan dan Dipangkas"
+
+#: imagepackage/contents/ui/config.qml:101
+#, kde-format
+msgid "Scaled"
+msgstr "Diskalakan"
+
+#: imagepackage/contents/ui/config.qml:105
+#, kde-format
+msgid "Scaled, Keep Proportions"
+msgstr "Diskalakan, Jaga Proporsi"
+
+#: imagepackage/contents/ui/config.qml:109
+#, kde-format
+msgid "Centered"
+msgstr "Dipusatkan"
+
+#: imagepackage/contents/ui/config.qml:113
+#, kde-format
+msgid "Tiled"
+msgstr "Diubinkan"
+
+#: imagepackage/contents/ui/config.qml:141
+#, kde-format
+msgid "Background:"
+msgstr "LatarBelakang:"
+
+#: imagepackage/contents/ui/config.qml:142
+#, kde-format
+msgid "Blur"
+msgstr "Buram"
+
+#: imagepackage/contents/ui/config.qml:151
+#, kde-format
+msgid "Solid color"
+msgstr "Warna padat"
+
+#: imagepackage/contents/ui/config.qml:161
+#, kde-format
+msgid "Select Background Color"
+msgstr "Pilih Warna LatarBelakang:"
+
+#: imagepackage/contents/ui/config.qml:207
+#, kde-format
+msgid "Add Image…"
+msgstr "Tambahkan Citra..."
+
+#: imagepackage/contents/ui/config.qml:213
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:257
+#, kde-format
+msgid "Get New Wallpapers…"
+msgstr "Dapatkan Wallpaper Baru..."
+
+#: imagepackage/contents/ui/main.qml:69
+#, kde-format
+msgid "Open Wallpaper Image"
+msgstr "Buka Citra Wallpaper"
+
+#: imagepackage/contents/ui/main.qml:70
+#, kde-format
+msgid "Next Wallpaper Image"
+msgstr "Citra Wallpaper Selanjutnya"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:33
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Buka Folder Yang Mengandungnya"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:39
+#, kde-format
+msgid "Restore wallpaper"
+msgstr "Kembalikan wallpaper"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:44
+#, kde-format
+msgid "Remove Wallpaper"
+msgstr "Hapus Wallpaper"
+
+#: plasma-apply-wallpaperimage.cpp:29
+#, kde-format
+msgid ""
+"This tool allows you to set an image as the wallpaper for the Plasma session."
+msgstr ""
+"Alat ini memungkinkan kamu untuk mengatur citra sebagai wallpaper untuk sesi "
+"Plasma."
+
+#: plasma-apply-wallpaperimage.cpp:31
+#, kde-format
+msgid ""
+"An image file or an installed wallpaper kpackage that you wish to set as the "
+"wallpaper for your Plasma session"
+msgstr ""
+"Sebuah file citra atau sebuah paket wallpaper terinstal yang sudah kamu atur "
+"sebagai wallpaper untuk sesi Plasma-mu"
+
+#: plasma-apply-wallpaperimage.cpp:45
+#, kde-format
+msgid ""
+"There is a stray single quote in the filename of this wallpaper (') - please "
+"contact the author of the wallpaper to fix this, or rename the file "
+"yourself: %1"
+msgstr ""
+"Ada kutipan tunggal yang tersesat dalam nama file wallpaper ini (') - tolong "
+"hubungi penulis wallpaper untuk memperbaiki ini, atau kamu ubah sendiri nama "
+"file ini: %1"
+
+#: plasma-apply-wallpaperimage.cpp:85
+#, kde-format
+msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+msgstr "Sebuah galat terjadi ketika berupaya menyetel wallpaper Plasma:\n"
+
+#: plasma-apply-wallpaperimage.cpp:89
+#, kde-format
+msgid ""
+"Successfully set the wallpaper for all desktops to the KPackage based %1"
+msgstr ""
+"Berhasil menyetel wallpaper untuk semua desktop ke KPackage berbasiskan %1"
+
+#: plasma-apply-wallpaperimage.cpp:91
+#, kde-format
+msgid "Successfully set the wallpaper for all desktops to the image %1"
+msgstr "Berhasil menyetel wallpaper untuk semua desktop ke citra %1"
+
+#: plasma-apply-wallpaperimage.cpp:97
+#, kde-format
+msgid ""
+"The file passed to be set as wallpaper does not exist, or we cannot identify "
+"it as a wallpaper: %1"
+msgstr ""
+"File yang diloloskan untuk disetel sebagai wallpaper tidak berada, atau kita "
+"tidak bisa mengidentifikasinya sebagai wallpaper: %1"
+
+#: plugin/finder/packagefinder.cpp:152
+#, kde-format
+msgid "Recommended wallpaper file"
+msgstr "File wallpaper yang direkomendasikan"
+
+#: plugin/imagebackend.cpp:234
+#, kde-format
+msgid "Directory with the wallpaper to show slides from"
+msgstr "Direktori dengan wallpaper untuk menampilkan salindia"
+
+#: plugin/imagebackend.cpp:345
+#, kde-format
+msgid "Open Image"
+msgstr "Buka Citra"
+
+#: plugin/imagebackend.cpp:345
+#, kde-format
+msgid "Image Files"
+msgstr "File Citra"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:38
+#, kde-format
+msgid "Order:"
+msgstr "Urutan:"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:45
+#, kde-format
+msgid "Random"
+msgstr "Acak"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:49
+#, kde-format
+msgid "A to Z"
+msgstr "A ke Z"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:53
+#, kde-format
+msgid "Z to A"
+msgstr "Z ke A"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:57
+#, kde-format
+msgid "Date modified (newest first)"
+msgstr "Tanggal dimodifikasi (yang paling baru dulu)"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:61
+#, kde-format
+msgid "Date modified (oldest first)"
+msgstr "Tanggal dimodifikasi (yang paling lawas dulu)"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:86
+#, kde-format
+msgid "Group by folders"
+msgstr "Kelompokkan berdasarkan folder"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:98
+#, kde-format
+msgid "Change every:"
+msgstr "Ubah tiap:"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:108
+#, kde-format
+msgid "%1 hour"
+msgid_plural "%1 hours"
+msgstr[0] "%1 jam"
+msgstr[1] "%1 jam"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:128
+#, kde-format
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "%1 menit"
+msgstr[1] "%1 menit"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:148
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "%1 detik"
+msgstr[1] "%1 detik"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:162
+#, kde-format
+msgid "Folders"
+msgstr "Folder"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:220
+#, kde-format
+msgid "Remove Folder"
+msgstr "Hapus Folder"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:225
+#, kde-format
+msgid "Open Folder"
+msgstr "Buka Folder"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:235
+#, kde-format
+msgid "There are no wallpaper locations configured"
+msgstr "Tidak ada lokasi wallpaper yang dikonfigurasi"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:250
+#, kde-format
+msgid "Add Folder…"
+msgstr "Tambahkan Folder..."
+
+#~ msgid "There are no wallpapers in this slideshow"
+#~ msgstr "Tidak adanya wallpaper dalam salindia ini"
+
+#~ msgid "Add Custom Wallpaper"
+#~ msgstr "Tambahkan Wallpaper Kustom"
+
+#~ msgid "Remove wallpaper"
+#~ msgstr "Dapatkan wallpaper"
+
+#~ msgid "%1 by %2"
+#~ msgstr "%1 oleh %2"
+
+#, fuzzy
+#~| msgid "Remove Wallpaper"
+#~ msgid "Wallpapers"
+#~ msgstr "Hapus Wallpaper"
+
+#~ msgctxt "<image> by <author>"
+#~ msgid "By %1"
+#~ msgstr "Oleh %1"
+
+#~ msgid "Download Wallpapers"
+#~ msgstr "Unduh Wallpaper"
+
+#~ msgid "Hours"
+#~ msgstr "Jam"
+
+#~ msgid "Open..."
+#~ msgstr "Buka..."
+
+#~ msgctxt "Unknown Author"
+#~ msgid "Unknown"
+#~ msgstr "Tak Diketahui"
+
+#~ msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz *.xcf)"
+#~ msgstr "Berkas Gambar (*.png *.jpg *.jpeg *.bmp *.svg *.svgz *.xcf)"
+
+#~ msgid "Screenshot"
+#~ msgstr "Cuplikan Layar"
+
+#~ msgid "Preview"
+#~ msgstr "Pratilik"
+
+#~ msgid "Center Tiled"
+#~ msgstr "Diubinkan Tengah"
+
+#~ msgid "Select Wallpaper Image File"
+#~ msgstr "Pilih Berkas Gambar Wallpaper"
+
+#~ msgid "P&ositioning:"
+#~ msgstr "L&etak:"
+
+#~ msgid "&Color:"
+#~ msgstr "&Warna:"
+
+#, fuzzy
+#~| msgid "&Remove Folder"
+#~ msgid "Remove from list"
+#~ msgstr "&Hapus Folder"
+
+#~ msgctxt ""
+#~ "(qtdt-format) Please do not change the quotes (') and translate only the "
+#~ "content of the quotes."
+#~ msgid "hh 'Hours' mm 'Mins' ss 'Secs'"
+#~ msgstr "hh 'Jam' mm 'Menit' ss 'Detik'"
+
+#, fuzzy
+#~| msgid "Download new wallpapers"
+#~ msgid "&My downloaded wallpapers:"
+#~ msgstr "Unduh wallpaper baru"
+
+#~ msgid "Finding images for the wallpaper slideshow."
+#~ msgstr "Mencari gambar untuk salindia wallpaper."
+
+#~ msgid "Adding wallpaper package in %1"
+#~ msgstr "Menambah paket wallpaper di %1"
+
+#~ msgid "Adding image %1"
+#~ msgstr "Menambah gambar %1"

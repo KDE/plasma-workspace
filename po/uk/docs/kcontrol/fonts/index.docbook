@@ -1,0 +1,244 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Ukrainian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="fonts" lang="&language;">
+<articleinfo>
+<title
+>Шрифти</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+<othercredit role="translator"
+><firstname
+>Юрій</firstname
+><surname
+>Чорноіван</surname
+><affiliation
+><address
+><email
+>yurchor@ukr.net</email
+></address
+></affiliation
+><contrib
+>Переклад українською</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>9 квітня 2021 року</date>
+<releaseinfo
+>Плазма 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>шрифти</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_fonts">
+
+<title
+>Шрифти</title>
+
+<para
+>Цей модуль розроблено для того, щоб полегшити вам вибір шрифтів для різних елементів стільниці &kde;.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Ось знімок вікна модуля налаштування параметрів шрифтів</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Модуль налаштування параметрів шрифтів</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Панель складається з різних груп шрифтів, що забезпечує гнучкість у налаштуванні ваших шрифтів: </para>
+
+<itemizedlist>
+<listitem
+><para
+><guilabel
+>Звичайний:</guilabel
+> використовується для всіх шрифтів, які не потрапляють до інших груп</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Фіксованої ширини:</guilabel
+> використовується всюди, де вказано, що шрифт не є пропорційним</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Малий:</guilabel
+> використовується для малих написів</para
+></listitem
+> 
+
+<listitem
+><para
+><guilabel
+>Пенал:</guilabel
+> шрифт, що використовуватиметься на пеналах програм &kde;</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Меню:</guilabel
+> шрифт, що використовуватиметься у меню програм &kde;</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Заголовок вікна:</guilabel
+> шрифт, що використовуватиметься у заголовках вікон</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Смужка задач:</guilabel
+> шрифт, що використовується для аплетів смужки задач</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>Стільниця:</guilabel
+> шрифт, що використовується на стільниці для підписів під піктограмами</para
+></listitem>
+
+</itemizedlist>
+
+<para
+>Кожному шрифту відповідає своя кнопка <guibutton
+>Вибрати...</guibutton
+>. Якщо натиснути на неї, з’явиться діалогове вікно. У цьому вікні ви зможете обрати новий шрифт, гарнітуру шрифту, розмір і набір символів. Після вибору належних параметрів натисніть кнопку <guibutton
+>Гаразд</guibutton
+>.</para>
+
+<para
+>Позначте пункт <guilabel
+>Показувати лише моноширинні шрифти</guilabel
+>, щоб прибрати зі списку усі пункти шрифтів, які не є моноширинними.</para>
+
+<para
+>Приклад вибраного вами шрифту буде показано у проміжку між назвою групи шрифтів і кнопкою <guibutton
+>Вибрати...</guibutton
+>.</para>
+
+<para
+>Після того як вибір зроблено, просто натисніть кнопку <guibutton
+>Гаразд</guibutton
+>, в результаті буде перезапущено всі потрібні компоненти &kde;, отже, зміни негайно набудуть чинності.</para>
+
+<para
+>Кнопка <guibutton
+>Відкоригувати всі шрифти...</guibutton
+> надає вам змогу встановити властивості всіх обраних вище шрифтів. У результаті її натискання з’явиться діалогове вікно вибору шрифтів, подібне до звичайного, але у ньому будуть поля для позначок, які нададуть вам змогу змінити <guilabel
+>Шрифт</guilabel
+>, <guilabel
+>Стиль шрифту</guilabel
+> і <guilabel
+>Розмір</guilabel
+> незалежно одне від одного. Ви можете обрати один, два або три з цих параметрів — їх буде застосовано до всіх груп шрифтів.</para>
+
+<para
+>Позначте пункт <guilabel
+>Показувати лише моноширинні шрифти</guilabel
+>, щоб прибрати зі списку усі пункти шрифтів, які не є моноширинними.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Відкоригувати всі шрифти</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="adjust-all.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Діалогове вікно «Відкоригувати всі шрифти...»</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Наприклад, якщо ви вибрали декілька різних гарнітур шрифтів на панелі згори і виявили, що розміри всіх цих шрифтів завеликі (таке часто трапляється, якщо ви, наприклад, змінили роздільну здатність екрана), ви можете вказати новий розмір одразу для всіх шрифтів, не змінюючи налаштовані гарнітури шрифтів та стилі.</para>
+
+<sect2 id="fonts-aa">
+<title
+>Застосування згладжування</title>
+
+<para
+>Щоб скористатися параметрами згладжування, просто позначте пункт <guilabel
+>Увімкнено</guilabel
+> і вкажіть нетипові параметри.</para>
+
+<para
+>Позначення поля поряд з написом <guilabel
+>Виключити діапазон зі згладжування</guilabel
+> надасть вам змогу вказати діапазон розмірів шрифтів, для яких <emphasis
+>не</emphasis
+> буде використовуватися згладжування. Числові дані діапазону можна ввести за допомогою двох спадних списків, розташованих нижче.</para>
+
+<para
+>Крім того, ви можете вибрати метод, який використовуватиметься для створення згладженого вигляду ваших шрифтів та інтенсивність його застосування, змінивши <ulink url="https://en.wikipedia.org/wiki/Subpixel_rendering"
+>субпіксельну обробку</ulink
+> і <ulink url="https://en.wikipedia.org/wiki/Font_hinting"
+>гінтінґ шрифтів</ulink
+>. Також можна <guilabel
+>Задати роздільність шрифтів</guilabel
+> для <ulink url="https://en.wikipedia.org/wiki/Dots_per_inch"
+>показу на екрані</ulink
+>. Якщо ви не дуже й знайомі з цими способами обробки, краще не чіпайте ці параметри.</para>
+
+<note
+><para
+>Можливість використання згладжування для шрифтів і піктограм має підтримуватися з боку графічного сервера і набору інструментів &Qt;, у системі має бути встановлено відповідні шрифти і задіяно вбудовані можливості графічного сервера щодо роботи зі шрифтами. Якщо у вас все ж виникли проблеми, будь ласка, напишіть про них у відповідний список листування &kde;.</para
+></note>
+
+</sect2>
+
+<sect2 id="fonts-dpi">
+<title
+>Роздільність шрифтів</title>
+
+<para
+><guilabel
+>Задати роздільність шрифтів:</guilabel
+> тут можна змінити роздільність у точках на дюйм для шрифтів, відмінну від системної, яка використовується, якщо цей параметр буде <guilabel
+>Вимкнено</guilabel
+>. Перевірити роздільність, яку використовує ваш сервер X можна за допомогою команди <userinput
+>xdpyinfo | grep resolution</userinput
+>, відданої з вікна термінала. Змінити роздільність можна за допомогою відповідного спадного списку. Визначену роздільність буде застосовано до вікон програм лише після їх перезапуску.</para>
+</sect2>
+
+</sect1>
+
+</article>

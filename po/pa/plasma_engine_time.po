@@ -1,0 +1,66 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# A S Alam <aalam@users.sf.net>, 2014, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"PO-Revision-Date: 2016-08-08 15:35-0600\n"
+"Last-Translator: A S Alam <aalam@users.sf.net>\n"
+"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: timesource.cpp:46
+msgid "Local"
+msgstr "ਲੋਕਲ"
+
+#: timesource.cpp:61
+msgid "Timezone"
+msgstr "ਸਮਾਂ-ਖੇਤਰ"
+
+#: timesource.cpp:66 timesource.cpp:69 timesource.cpp:73
+msgid "Timezone City"
+msgstr "ਸਮਾਂ-ਖੇਤਰ ਸ਼ਹਿਰ"
+
+#: timesource.cpp:68 timesource.cpp:71
+msgid "Timezone Continent"
+msgstr "ਸਮਾਂ-ਖੇਤਰ ਮਹਾਂਦੀਪ"
+
+#: timesource.cpp:72
+msgid "Timezone Country"
+msgstr "ਸਮਾਂ-ਖੇਤਰ ਦੇਸ਼"
+
+#: timesource.cpp:97
+msgid "Offset"
+msgstr "ਆਫਸੈੱਟ"
+
+#: timesource.cpp:100
+msgid "Timezone Abbreviation"
+msgstr "ਸਮਾਂ-ਖੇਤਰ ਸੰਖੇਪ-ਰੂਪ"
+
+#: timesource.cpp:131 timesource.cpp:150 timesource.cpp:171
+msgid "DateTime"
+msgstr "ਮਿਤੀਸਮਾਂ"
+
+#: timesource.cpp:146
+msgid "Latitude"
+msgstr "ਵਿਥਕਾਰ"
+
+#: timesource.cpp:147
+msgid "Longitude"
+msgstr "ਲੰਬਕਾਰ"
+
+#: timesource.cpp:148
+msgid "Solar"
+msgstr "ਸੂਰਜੀ"
+
+#: timesource.cpp:149
+msgid "Moon"
+msgstr "ਚੰਦ"

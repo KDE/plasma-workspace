@@ -1,0 +1,61 @@
+# translation of krunner_webshortcutsrunner.po to Punjabi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# A S Alam <aalam@users.sf.net>, 2008, 2009, 2010, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner_webshortcutsrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-06-02 00:47+0000\n"
+"PO-Revision-Date: 2021-01-01 11:01-0800\n"
+"Last-Translator: A S Alam <aalam.yellow@gmail.com>\n"
+"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.08.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: webshortcutrunner.cpp:58
+#, kde-format
+msgid "Opens \"%1\" in a web browser with the query :q:."
+msgstr " :q: ਕਿਊਰੀ ਨਾਲ \"%1\" ਨੂੰ ਵੈੱਬ ਬਰਾਊਜ਼ਰ 'ਚ ਖੋਲ੍ਹਦਾ ਹੈ।"
+
+#: webshortcutrunner.cpp:63
+#, kde-format
+msgid "Search using the DuckDuckGo bang syntax"
+msgstr ""
+
+#: webshortcutrunner.cpp:94
+#, kde-format
+msgid "Search in private window"
+msgstr "ਪ੍ਰਾਈਵੇਟ ਵਿੰਡੋ ਵਿੱਚ ਖੋਜੋ"
+
+#: webshortcutrunner.cpp:94
+#, kde-format
+msgid "Search in incognito window"
+msgstr "ਬੇਪਛਾਣ ਵਿੰਡੋ ਵਿੱਚ ਖੋਜੋ"
+
+#: webshortcutrunner.cpp:129 webshortcutrunner.cpp:146
+#, kde-format
+msgid "Search %1 for %2"
+msgstr "%2 ਲਈ %1 ਖੋਜ"
+
+#~ msgctxt "A web shortcut and its name"
+#~ msgid "%1: %2"
+#~ msgstr "%1: %2"
+
+#~ msgctxt "A web shortcut, its name and a description"
+#~ msgid "%1: %2 %3"
+#~ msgstr "%1: %2 %3"
+
+#~ msgid ""
+#~ "Opens the location associated with \"shortcut\" in a web browser with the "
+#~ "query :q:. Known shortcuts include:\n"
+#~ "%1"
+#~ msgstr ""
+#~ ":q: ਕਿਊਰੀ ਨਾਲ ਵੈੱਬ ਬਰਾਊਜ਼ਰ ਵਿੱਚ \"ਸ਼ਾਰਟਕੱਟ\" ਨਾਲ ਸਬੰਧਤ ਟਿਕਾਣਾ ਖੋਲ੍ਹਦਾ ਹੈ। ਜਾਣੇ "
+#~ "ਸ਼ਾਰਟਕੱਟ 'ਚ ਸ਼ਾਮਲ ਹੈ:\n"
+#~ "%1"

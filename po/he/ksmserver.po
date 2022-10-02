@@ -1,0 +1,201 @@
+# translation of ksmserver.po to Hebrew
+# translation of ksmserver.po to
+# KDE Hebrew Localization Project
+# Translation of ksmserver.po into Hebrew
+#
+# In addition to the copyright owners of the program
+# which this translation accompanies, this translation is
+# Copyright (C) 2000-2002 Meni Livne <livne@kde.org>
+#
+# This translation is subject to the same Open Source
+# license as the program which it accompanies.
+#
+# Diego Iastrubni <elcuco@kde.org>, 2004.
+# Diego Iastrubni <elcuco@kde.org>, 2006, 2008, 2012.
+# elkana bardugo <ttv200@gmail.com>, 2016.
+# Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: ksmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-22 00:47+0000\n"
+"PO-Revision-Date: 2017-05-16 12:20-0400\n"
+"Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
+"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Zanata 3.9.6\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: logout.cpp:344
+#, kde-format
+msgid "Logout canceled by '%1'"
+msgstr "היציאה בוטלה על ידי \"%1\""
+
+#: main.cpp:117
+#, kde-format
+msgid "$HOME not set!"
+msgstr "משתנה הסביבה $HOME אינו מוגדר"
+
+#: main.cpp:121 main.cpp:127
+#, kde-format
+msgid "$HOME directory (%1) does not exist."
+msgstr "תיקית הבית (%1) אינה קיימת"
+
+#: main.cpp:123
+#, kde-format
+msgid "No write access to $HOME directory (%1)."
+msgstr "אין הרשאות כתיבה לתיקית הבית (%1)."
+
+#: main.cpp:129
+#, kde-format
+msgid "No read access to $HOME directory (%1)."
+msgstr "אין הרשאות קריאה לתיקית הבית (%1)."
+
+#: main.cpp:133
+#, kde-format
+msgid "$HOME directory (%1) is out of disk space."
+msgstr "המקום בתיקית הבית נגמר (%1)."
+
+#: main.cpp:136
+#, kde-format
+msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+msgstr "הכתיבה לתיקית הבית (%2) נכשלה עם השגיאה \"%1\""
+
+#: main.cpp:149 main.cpp:184
+#, kde-format
+msgid "No write access to '%1'."
+msgstr "אין הרשאות כתיבה ל־'%1'."
+
+#: main.cpp:151 main.cpp:186
+#, kde-format
+msgid "No read access to '%1'."
+msgstr "אין הרשאות קריאה ל־'%1'."
+
+#: main.cpp:159 main.cpp:172
+#, kde-format
+msgid "Temp directory (%1) is out of disk space."
+msgstr "לתיקיה הזמנית (%1) אין מקום פנוי"
+
+#: main.cpp:162 main.cpp:175
+#, kde-format
+msgid ""
+"Writing to the temp directory (%2) failed with\n"
+"    the error '%1'"
+msgstr ""
+"הכתיבה לתיקיה הזמנית נכשלה (%2) נכשל עם\n"
+"   השגיאה: '%1'"
+
+#: main.cpp:190
+#, fuzzy, kde-format
+#| msgid ""
+#| "The following installation problem was detected\n"
+#| "while trying to start KDE:"
+msgid ""
+"The following installation problem was detected\n"
+"while trying to start Plasma:"
+msgstr ""
+"הבעיות האלו התגלו בהתקנה\n"
+"בנסיון להפעיל את KDE:"
+
+#: main.cpp:193
+#, fuzzy, kde-format
+#| msgid ""
+#| "\n"
+#| "\n"
+#| "KDE is unable to start.\n"
+msgid ""
+"\n"
+"\n"
+"Plasma is unable to start.\n"
+msgstr ""
+"\n"
+"\n"
+"KDE לא יכול להתחיל.\n"
+
+#: main.cpp:200
+#, kde-format
+msgid "Plasma Workspace installation problem!"
+msgstr "בעיה בהתקנת סביבת העבודה פלזמה"
+
+#: main.cpp:236
+#, fuzzy, kde-format
+#| msgid ""
+#| "The reliable KDE session manager that talks the standard X11R6 \n"
+#| "session management protocol (XSMP)."
+msgid ""
+"The reliable Plasma session manager that talks the standard X11R6 \n"
+"session management protocol (XSMP)."
+msgstr ""
+"מנהל ההפעלה האמין של KDE שעושה שימוש בפרוטוקול ניהול\n"
+"ההפעלה הסטנדרטי של XSMP) X11R6)."
+
+#: main.cpp:240
+#, kde-format
+msgid "Restores the saved user session if available"
+msgstr "משחזר את ההפעלה שנשמרה, אם זמינה כזאת"
+
+#: main.cpp:243
+#, kde-format
+msgid "Also allow remote connections"
+msgstr "אפשר גם חיבורים מרוחקים"
+
+#: main.cpp:246
+#, kde-format
+msgid "Starts the session in locked mode"
+msgstr "מתחיל את ההפעלה במצב נעול"
+
+#: main.cpp:250
+#, kde-format
+msgid ""
+"Starts without lock screen support. Only needed if other component provides "
+"the lock screen."
+msgstr "מתחיל ללא תמיכה במסך נעילה. נצרך רק אם רכיבים אחרים מספקים מסך נעילה"
+
+#: server.cpp:873
+#, kde-format
+msgid "Session Management"
+msgstr ""
+
+#: server.cpp:876
+#, kde-format
+msgid "Log Out"
+msgstr "יציאה"
+
+#: server.cpp:881
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "צא מבלי לבקש אישור"
+
+#: server.cpp:886
+#, kde-format
+msgid "Halt Without Confirmation"
+msgstr "כבה מבלי לבקש אישור"
+
+#: server.cpp:891
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "הפעל מחדש מבלי לבקש אישור"
+
+#~ msgid ""
+#~ "Starts <wm> in case no other window manager is \n"
+#~ "participating in the session. Default is 'kwin'"
+#~ msgstr ""
+#~ "מפעיל את <wm> במקרה שאין עוד מנהל חלונות אחר\n"
+#~ " \"kwin\" שפועל במהלך ההפעלה. ברירת המחדל היא"
+
+#~ msgid "wm"
+#~ msgstr "מנהל חלונות"
+
+#~ msgid "Sleeping in 1 second"
+#~ msgid_plural "Sleeping in %1 seconds"
+#~ msgstr[0] "נכנס למצב שינה תוך שנייה"
+#~ msgstr[1] "נכנס למצב שינה תוך %1 שניות"
+
+#~ msgid "Lock"
+#~ msgstr "נעילה"
+
+#~ msgid "Turn off"
+#~ msgstr "כיבוי"

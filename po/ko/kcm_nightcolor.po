@@ -1,0 +1,314 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Shinjo Park <kde@peremen.name>, 2018, 2019, 2020, 2021, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-13 00:47+0000\n"
+"PO-Revision-Date: 2022-04-16 02:18+0200\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 21.08.1\n"
+
+#: package/contents/ui/LocationsFixedView.qml:39
+#, kde-format
+msgctxt ""
+"@label:chooser Tap should be translated to mean touching using a touchscreen"
+msgid "Tap to choose your location on the map."
+msgstr ""
+
+#: package/contents/ui/LocationsFixedView.qml:40
+#, kde-format
+msgctxt ""
+"@label:chooser Click should be translated to mean clicking using a mouse"
+msgid "Click to choose your location on the map."
+msgstr ""
+
+#: package/contents/ui/LocationsFixedView.qml:78
+#: package/contents/ui/LocationsFixedView.qml:103
+#, kde-format
+msgid "Zoom in"
+msgstr ""
+
+#: package/contents/ui/LocationsFixedView.qml:222
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Modified from <link url='https://commons.wikimedia.org/wiki/File:"
+"World_location_map_(equirectangular_180).svg'>World location map</link> by "
+"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
+"by-sa/3.0'>CC BY-SA 3.0</link>"
+msgstr ""
+
+#: package/contents/ui/LocationsFixedView.qml:235
+#, fuzzy, kde-format
+#| msgid "Latitude:"
+msgctxt "@label: textbox"
+msgid "Latitude:"
+msgstr "위도:"
+
+#: package/contents/ui/LocationsFixedView.qml:261
+#, fuzzy, kde-format
+#| msgid "Longitude:"
+msgctxt "@label: textbox"
+msgid "Longitude:"
+msgstr "경도:"
+
+#: package/contents/ui/main.qml:87
+#, fuzzy, kde-format
+#| msgid ""
+#| "Night Color makes the colors on the screen warmer to reduce eye strain at "
+#| "the time of your choosing."
+msgid "The blue light filter makes the colors on the screen warmer."
+msgstr ""
+"야간 색상 모드를 사용하여 지정한 시간 동안 색 온도를 따뜻하게 변경하여 눈의 "
+"피로를 줄일 수 있습니다."
+
+#: package/contents/ui/main.qml:98
+#, fuzzy, kde-format
+#| msgid "Activation time:"
+msgid "Switching times:"
+msgstr "활성화 시간:"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgid "Always off"
+msgstr ""
+
+#: package/contents/ui/main.qml:101
+#, fuzzy, kde-format
+#| msgid "Sunset to sunrise at current location"
+msgid "Sunset and sunrise at current location"
+msgstr "현재 위치의 일몰부터 일출까지"
+
+#: package/contents/ui/main.qml:102
+#, fuzzy, kde-format
+#| msgid "Sunset to sunrise at manual location"
+msgid "Sunset and sunrise at manual location"
+msgstr "수동으로 지정한 위치의 일몰부터 일출까지"
+
+#: package/contents/ui/main.qml:103
+#, fuzzy, kde-format
+#| msgid "Custom time"
+msgid "Custom times"
+msgstr "사용자 정의 시간"
+
+#: package/contents/ui/main.qml:104
+#, fuzzy, kde-format
+#| msgid "Always on"
+msgid "Always on night color"
+msgstr "항상 켬"
+
+#: package/contents/ui/main.qml:156
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The device's location will be periodically updated using GPS (if available), "
+"or by sending network information to <link url='https://location.services."
+"mozilla.com'>Mozilla Location Service</link>."
+msgstr ""
+"장치의 위치를 GPS(사용 가능한 경우)를 사용하거나 네트워크 정보를 <link "
+"url='https://location.services.mozilla.com'>Mozilla Location Service</link>"
+"로 전송하여 주기적으로 업데이트합니다."
+
+#: package/contents/ui/main.qml:175
+#, fuzzy, kde-format
+#| msgid "Night Color Temperature:"
+msgid "Day color temperature:"
+msgstr "야간 색온도:"
+
+#: package/contents/ui/main.qml:218 package/contents/ui/main.qml:277
+#, kde-format
+msgctxt "Color temperature in Kelvin"
+msgid "%1K"
+msgstr "%1 K"
+
+#: package/contents/ui/main.qml:222 package/contents/ui/main.qml:281
+#, kde-format
+msgctxt "Night colour red-ish"
+msgid "Warm"
+msgstr "따뜻함"
+
+#: package/contents/ui/main.qml:228 package/contents/ui/main.qml:287
+#, kde-format
+msgctxt "No blue light filter activated"
+msgid "Cool (no filter)"
+msgstr ""
+
+#: package/contents/ui/main.qml:228 package/contents/ui/main.qml:287
+#, kde-format
+msgctxt "Night colour blue-ish"
+msgid "Cool"
+msgstr "차가움"
+
+#: package/contents/ui/main.qml:234
+#, fuzzy, kde-format
+#| msgid "Night Color Temperature:"
+msgid "Night color temperature:"
+msgstr "야간 색온도:"
+
+#: package/contents/ui/main.qml:298
+#, kde-format
+msgid "Latitude: %1°   Longitude: %2°"
+msgstr "위도: %1°   경도: %2°"
+
+#: package/contents/ui/main.qml:308
+#, kde-format
+msgid "Begin night color at:"
+msgstr ""
+
+#: package/contents/ui/main.qml:321 package/contents/ui/main.qml:344
+#, kde-format
+msgid "Input format: HH:MM"
+msgstr "입력 형식: HH:MM"
+
+#: package/contents/ui/main.qml:331
+#, kde-format
+msgid "Begin day color at:"
+msgstr ""
+
+#: package/contents/ui/main.qml:353
+#, kde-format
+msgid "Transition duration:"
+msgstr "전환 시간:"
+
+#: package/contents/ui/main.qml:362
+#, kde-format
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "%1분"
+
+#: package/contents/ui/main.qml:375
+#, kde-format
+msgid "Input minutes - min. 1, max. 600"
+msgstr "분 단위로 입력 - 최소 1, 최대 600"
+
+#: package/contents/ui/main.qml:393
+#, kde-format
+msgid "Error: Transition time overlaps."
+msgstr "오류: 전환 시간이 겹칩니다."
+
+#: package/contents/ui/main.qml:413
+#, fuzzy, kde-format
+#| msgid "Location"
+msgctxt "@info:placeholder"
+msgid "Locating…"
+msgstr "위치"
+
+#: package/contents/ui/TimingsView.qml:32
+#, fuzzy, kde-format
+#| msgid "Night Color begins changing at %1 and is fully changed by %2"
+msgid ""
+"Color temperature begins changing to night time at %1 and is fully changed "
+"by %2"
+msgstr "%1에 야간 색상으로 변경이 시작되며 %2에 완전히 변경됨"
+
+#: package/contents/ui/TimingsView.qml:39
+#, fuzzy, kde-format
+#| msgid "Night Color begins changing at %1 and is fully changed by %2"
+msgid ""
+"Color temperature begins changing to day time at %1 and is fully changed by "
+"%2"
+msgstr "%1에 야간 색상으로 변경이 시작되며 %2에 완전히 변경됨"
+
+#, fuzzy
+#~| msgid "This is what Night Color will look like when active."
+#~ msgid "This is what day color temperature will look like when active."
+#~ msgstr "야간 색상이 활성화되었을 때의 모습입니다."
+
+#, fuzzy
+#~| msgid "This is what Night Color will look like when active."
+#~ msgid "This is what night color temperature will look like when active."
+#~ msgstr "야간 색상이 활성화되었을 때의 모습입니다."
+
+#, fuzzy
+#~| msgid "Activate Night Color"
+#~ msgid "Activate blue light filter"
+#~ msgstr "야간 색상 활성화"
+
+#~ msgid "Turn on at:"
+#~ msgstr "다음 시간에 켜기:"
+
+#~ msgid "Turn off at:"
+#~ msgstr "다음 시간에 끄기:"
+
+#~ msgid "Night Color begins changing back at %1 and ends at %2"
+#~ msgstr "%1에 주간 색상으로 변경이 시작되며 %2에 완전히 변경됨"
+
+#~ msgid "Error: Morning is before evening."
+#~ msgstr "오류: 아침 시간이 저녁 시간보다 뒤에 있습니다."
+
+#~ msgid "Detect Location"
+#~ msgstr "위치 감지"
+
+#~ msgid ""
+#~ "The device's location will be detected using GPS (if available), or by "
+#~ "sending network information to <a href=\"https://location.services."
+#~ "mozilla.com\">Mozilla Location Service</a>."
+#~ msgstr ""
+#~ "장치의 위치를 GPS(사용 가능한 경우)를 사용하거나 네트워크 정보를 <a href="
+#~ "\"https://location.services.mozilla.com\">Mozilla Location Service</a>로 "
+#~ "전송하여 확인합니다."
+
+#~ msgid "Night Color begins at %1"
+#~ msgstr "%1에 야간 색상이 시작됨"
+
+#~ msgid "Color fully changed at %1"
+#~ msgstr "%1에 색상이 완전히 변경됨"
+
+#~ msgid "Normal coloration restored by %1"
+#~ msgstr "%1에 주간 색상으로 완전히 변경됨"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "박신조"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kde@peremen.name"
+
+#~ msgid "Night Color"
+#~ msgstr "야간 색상"
+
+#~ msgid "Roman Gilg"
+#~ msgstr "Roman Gilg"
+
+#~ msgid " K"
+#~ msgstr "K"
+
+#~ msgid "Operation mode:"
+#~ msgstr "작동 모드:"
+
+#~ msgid "Automatic"
+#~ msgstr "자동"
+
+#~ msgid "Times"
+#~ msgstr "시간"
+
+#~ msgid "Constant"
+#~ msgstr "상수"
+
+#~ msgid "Sunrise begins:"
+#~ msgstr "일출 시작:"
+
+#~ msgid "(Input format: HH:MM)"
+#~ msgstr "(입력 형식: HH:MM)"
+
+#~ msgid "Sunset begins:"
+#~ msgstr "일몰 시작:"
+
+#~ msgid "...and ends:"
+#~ msgstr "...및 종료:"
+
+#~ msgid "Manual"
+#~ msgstr "수동"
+
+#~ msgid "(HH:MM)"
+#~ msgstr "(HH:MM)"

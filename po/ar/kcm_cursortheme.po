@@ -1,0 +1,687 @@
+# translation of kcminput.po to Arabic
+# translation of kcminput.po to
+# Copyright (C) 2001,2002, 2004, 2006, 2007, 2008 Free Software Foundation, Inc.
+# Mohammed Gamal <f2c2001@yahoo.com>, 2001.
+# Isam Bayazidi <bayazidi@arabeyes.org>, 2002.
+# Ahmad M. Zawawi <azawawi@emirates.net.ae>, 2004.
+# Ammar Tabbaa <atabba@kacst.edu.sa>, 2004.
+# محمد سعد  Mohamed SAAD <metehyi@free.fr>, 2006.
+# AbdulAziz AlSharif <a.a-a.s@hotmail.com>, 2007.
+# Youssef Chahibi <chahibi@gmail.com>, 2007.
+# zayed <zayed.alsaidi@gmail.com>, 2008, 2021, 2022.
+# Abdalrahim Fakhouri <abdilra7eem@yahoo.com>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminput\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:50+0000\n"
+"PO-Revision-Date: 2022-03-28 18:57+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 21.07.70\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current cursor theme"
+msgstr "اسم سمة المؤشر الحالية"
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr "حجم المؤشر الحالي"
+
+#: kcmcursortheme.cpp:302
+#, kde-format
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr "عليك إعادة تشغيل جلسة بلازما  لتأخذ التغييرات تأثيرها."
+
+#: kcmcursortheme.cpp:376
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "لم يتمكن من إنشاء ملف مؤقت"
+
+#: kcmcursortheme.cpp:387
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr "لم يتمكن من تنزيل سمة الأيقونات: %1"
+
+#: kcmcursortheme.cpp:418
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "الملف ليس أرشيف سمة أيقونة صالحًا."
+
+#: kcmcursortheme.cpp:425
+#, kde-format
+msgid "Failed to create 'icons' folder."
+msgstr "فشل في إنشاء مجلد 'الأيقونات'"
+
+#: kcmcursortheme.cpp:434
+#, kde-format
+msgid ""
+"A theme named %1 already exists in your icon theme folder. Do you want "
+"replace it with this one?"
+msgstr "توجد مسبقا سمة باسم %1 في مجلد سمات الأيقونات, هل تريد استبدالها بهذه؟"
+
+#: kcmcursortheme.cpp:438
+#, kde-format
+msgid "Overwrite Theme?"
+msgstr "أطمس السِمة ؟"
+
+#: kcmcursortheme.cpp:462
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "ثبتت السمة بنجاح."
+
+#: package/contents/ui/Delegate.qml:54
+#, kde-format
+msgid "Remove Theme"
+msgstr "أزل السمة"
+
+#: package/contents/ui/Delegate.qml:61
+#, kde-format
+msgid "Restore Cursor Theme"
+msgstr "استعد سِمة المؤشر"
+
+#: package/contents/ui/main.qml:20
+#, kde-format
+msgid "This module lets you choose the mouse cursor theme."
+msgstr "هذه الوحدة تجعلك تختار سمة مؤشر الفأرة."
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Size:"
+msgstr "الحجم:"
+
+#: package/contents/ui/main.qml:134
+#, kde-format
+msgid "&Install from File…"
+msgstr "&ثبت من ملف..."
+
+#: package/contents/ui/main.qml:140
+#, kde-format
+msgid "&Get New Cursors…"
+msgstr "احصل على مؤشرات جديدة..."
+
+#: package/contents/ui/main.qml:157
+#, kde-format
+msgid "Open Theme"
+msgstr "افتح سمة"
+
+#: package/contents/ui/main.qml:159
+#, kde-format
+msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+msgstr "ملفات سمة المؤشر (*.tar.gz *.tar.bz2)"
+
+#: plasma-apply-cursortheme.cpp:41
+#, kde-format
+msgid "The requested size '%1' is not available, using %2 instead."
+msgstr "لا يتوفر الحجم '%1'، سيستعمل %2 عوضاً عن ذلك."
+
+#: plasma-apply-cursortheme.cpp:62
+#, kde-format
+msgid ""
+"This tool allows you to set the mouse cursor theme for the current Plasma "
+"session, without accidentally setting it to one that is either not "
+"available, or which is already set."
+msgstr ""
+"تتيح لك هذه الأداة ضبط سمة مؤشر الفأرة لجلسة البلازما الحالية، دون ضبطه عن "
+"طريق الخطأ على نظام إما غير متوفر ، أو تم تعيينه بالفعل."
+
+#: plasma-apply-cursortheme.cpp:66
+#, kde-format
+msgid ""
+"The name of the cursor theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+"اسم سمة المؤشر الذي ترغب في تعيينه لجلسة البلازما الحالية(تمرير مسار كامل "
+"سيستخدم فقط الجزء الأخير من المسار)"
+
+#: plasma-apply-cursortheme.cpp:67
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr "اعرض جميع السمات المتوفرة على النظام (وما السمة الحالية)"
+
+#: plasma-apply-cursortheme.cpp:68
+#, kde-format
+msgid "Use a specific size, rather than the theme default size"
+msgstr "استخدم حجم المحدد عوضاً عن الحجم المبدئي السمة"
+
+#: plasma-apply-cursortheme.cpp:89
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr "تم بالفعل تعيين السمة المطلوبة \"%1\" كسمة لجلسة البلازما الحالية."
+
+#: plasma-apply-cursortheme.cpp:100
+#, kde-format
+msgid ""
+"Successfully applied the mouse cursor theme %1 to your current Plasma session"
+msgstr "تم بنجاح تطبيق سمة مؤشر الفأرة %1 على جلسة بلازما الحاليةز"
+
+#: plasma-apply-cursortheme.cpp:102
+#, kde-format
+msgid ""
+"You have to restart the Plasma session for your newly applied mouse cursor "
+"theme to display correctly."
+msgstr ""
+"عليك إعادة تشغيل جلسة بلازما لتطبيق سمة المؤشر الجديدة و تعرض بشكل صحيح."
+
+#: plasma-apply-cursortheme.cpp:112
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+"لم يعثر على السمة المطلوبة \"%1\". السمة يجب أن تكون واحدة من الخيارات "
+"التالية: %2"
+
+#: plasma-apply-cursortheme.cpp:120
+#, kde-format
+msgid "You have the following mouse cursor themes on your system:"
+msgstr "لديك سمات المؤشرات التالية على نظامك:"
+
+#: plasma-apply-cursortheme.cpp:125
+#, kde-format
+msgid "(Current theme for this Plasma session)"
+msgstr "(سمة الحالية لجلسة بلازما هذه)"
+
+#: xcursor/xcursortheme.cpp:60
+#, kde-format
+msgctxt ""
+"@info The argument is the list of available sizes (in pixel). Example: "
+"'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+msgid "(Available sizes: %1)"
+msgstr "(الأحجام المتوفّرة: %1)"
+
+#~ msgid "Name"
+#~ msgstr "الاسم"
+
+#~ msgid "Description"
+#~ msgstr "الوصف"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Mohamed SAAD محمد سعد,زايد السعيدي"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "metehyi@free.fr,zayed.alsaidi@gmail.com"
+
+#~ msgid "Cursors"
+#~ msgstr "المؤشرات"
+
+#~ msgid "(c) 2003-2007 Fredrik Höglund"
+#~ msgstr "(c) 2003-2007 Fredrik Höglund"
+
+#~ msgid "Fredrik Höglund"
+#~ msgstr "Fredrik Höglund"
+
+#~ msgid "Marco Martin"
+#~ msgstr "Marco Martin"
+
+#~ msgid ""
+#~ "<qt>You cannot delete the theme you are currently using.<br />You have to "
+#~ "switch to another theme first.</qt>"
+#~ msgstr ""
+#~ "<qt>لا يمكن حذف السمة التي تستخدمها حاليا.<br />يجب عليك أن تبدل أولا إلى "
+#~ "سمة أخرى.</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <i>%1</i> cursor theme?<br />This "
+#~ "will delete all the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>أمتأكد أنك تريد إزالة سمة المؤشر <i>%1</i>؟<br />هذا سوف يحذف جميع "
+#~ "الملفات التي ثبتت بواسطة هذه السمة.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "التأكيد"
+
+#, fuzzy
+#~| msgctxt "@item:inlistbox size"
+#~| msgid "resolution dependent"
+#~ msgctxt "@item:inlistbox size"
+#~ msgid "Resolution dependent"
+#~ msgstr "يعتمد على الدقّة"
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "تغيَرت إعدادات المؤشر"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "اسحب أو أكتب وصلة عنوان السِمة"
+
+#~ msgid ""
+#~ "Unable to download the cursor theme archive; please check that the "
+#~ "address %1 is correct."
+#~ msgstr ""
+#~ "غير قادر على تنزيل  أرشيف سِمة المؤشر، من فضلك افحص إذا ما كان العنوان %1 "
+#~ "صحيحاً."
+
+#~ msgid "Get new color schemes from the Internet"
+#~ msgstr "احصل على مخطط ألوان جديد من الإنترنت"
+
+#~ msgid ""
+#~ "Select the cursor theme you want to use (hover preview to test cursor):"
+#~ msgstr ""
+#~ "انتق سِمة المؤشر التي تود استخدامها (حرك المؤشر فوق معيانة لإختبارها ) :"
+
+#~ msgid "Select the cursor theme you want to use:"
+#~ msgstr "انتقي سِمة المؤشر التي تود استخدامها:"
+
+#~ msgid "Small black"
+#~ msgstr "أسود صغير"
+
+#~ msgid "Small black cursors"
+#~ msgstr "مؤشّرات سوداء صغيرة"
+
+#~ msgid "Large black"
+#~ msgstr "أسود كبير"
+
+#~ msgid "Large black cursors"
+#~ msgstr "مؤشَرات سوداء كبيرة"
+
+#~ msgid "Small white"
+#~ msgstr "أبيض صغير"
+
+#~ msgid "Small white cursors"
+#~ msgstr "مؤشَرات بيضاء صغيرة"
+
+#~ msgid "Large white"
+#~ msgstr "أبيض كبير"
+
+#~ msgid "Large white cursors"
+#~ msgstr "مؤشّرات ييضاء كبيرة"
+
+#~ msgid "Button Order"
+#~ msgstr "رتبة الزر"
+
+#~ msgid "Righ&t handed"
+#~ msgstr "أ&يمن"
+
+#~ msgid "Le&ft handed"
+#~ msgstr "أ&عسر"
+
+#~ msgid ""
+#~ "Change the direction of scrolling for the mouse wheel or the 4th and 5th "
+#~ "mouse buttons."
+#~ msgstr "غيّر اتجاه الزلق لكرة الفأرة أو أزرار الفأرة الرابعة والخامسة."
+
+#~ msgid "Re&verse scroll direction"
+#~ msgstr "&اعكس اتجاه الزلق"
+
+#~ msgid "Icons"
+#~ msgstr "الأيقونات"
+
+#~ msgid ""
+#~ "Dou&ble-click to open files and folders (select icons on first click)"
+#~ msgstr ""
+#~ "إ&نقر مرتين لفتح الملفات والمجلدات ( ينتقي الأيقونات عند النقرة الأولى )"
+
+#~ msgid "&Single-click to open files and folders"
+#~ msgstr "إنق&ر مرة واحدة لفتح الملفات والمجلدات"
+
+#~ msgid "Cha&nge pointer shape over icons"
+#~ msgstr "&غيّر شكل المؤشر عندما يكون فوق الأيقونات"
+
+#~ msgid "A&utomatically select icons"
+#~ msgstr "انت&قي الأيقونات تلقائياً"
+
+#~ msgctxt "label. delay (on milliseconds) to automatically select icons"
+#~ msgid "Delay"
+#~ msgstr "التأخير"
+
+#~ msgctxt "milliseconds. time to automatically select the items"
+#~ msgid " ms"
+#~ msgstr "مللي ثانية"
+
+#~ msgid ""
+#~ "<h1>Mouse</h1> This module allows you to choose various options for the "
+#~ "way in which your pointing device works. Your pointing device may be a "
+#~ "mouse, trackball, or some other hardware that performs a similar function."
+#~ msgstr ""
+#~ "<h1>الفأرة</h1> هذه الوحدة تساعدك على اختيار عدة خيارات تتعلق بالطريقة "
+#~ "التي يعمل بها جهاز التأشير لديك يمكن أن يكون جهاز التأشير  فأرة أو أي "
+#~ "جهاز آخر يعمل بطريقة مشابهة."
+
+#~ msgid "&General"
+#~ msgstr "&عام"
+
+#~ msgid ""
+#~ "If you are left-handed, you may prefer to swap the functions of the left "
+#~ "and right buttons on your pointing device by choosing the 'left-handed' "
+#~ "option. If your pointing device has more than two buttons, only those "
+#~ "that function as the left and right buttons are affected. For example, if "
+#~ "you have a three-button mouse, the middle button is unaffected."
+#~ msgstr ""
+#~ "إذا كنت أعسراً، ربما كنت تفضل أن تقلب مهام الزر الأيسر والزر الأيمن للفأرة "
+#~ "لديك باختيار 'أعسر'. إذا كانت الفأرة التي تستعملها تملك أكثر من زرين، لا "
+#~ "يتأثر بهذا الخيار إلا الأزرار التي تعمل كزر أيسر أو زر أيمن. على سبيل "
+#~ "المثال، إذا كانت فأرتك بثلاثة أزرار، فلن تتغير وظيفة الزر الأوسط."
+
+#~ msgid ""
+#~ "The default behavior in KDE is to select and activate icons with a single "
+#~ "click of the left button on your pointing device. This behavior is "
+#~ "consistent with what you would expect when you click links in most web "
+#~ "browsers. If you would prefer to select with a single click, and activate "
+#~ "with a double click, check this option."
+#~ msgstr ""
+#~ "طريقة العمل الافتراضية في نظام كيدي هي أن تنتقي وتشغل الأيقونات بالنقر "
+#~ "عليها مرة واحدة مستخدماً الزر الأيسر للفأرة. هذه هي نفس الطريقة التي تعمل "
+#~ "بها معظم متصفحات الشبكة عندما تنقر على الوصلات. إذا كنت تفضل أن تختار "
+#~ "بنقرة واحدة وتشغل بنقرتين، حدّد هذا الخيار. "
+
+#~ msgid "Activates and opens a file or folder with a single click."
+#~ msgstr "تنشط و تفتح ملفاً أو مجلداً بنقرة واحدة"
+
+#~ msgid ""
+#~ "If you check this option, pausing the mouse pointer over an icon on the "
+#~ "screen will automatically select that icon. This may be useful when "
+#~ "single clicks activate icons, and you want only to select the icon "
+#~ "without activating it."
+#~ msgstr ""
+#~ "إذا حدّد هذا الخيار، فإن مجرد وضع مؤشر الفأرة فوق أية أيقونة لفترة قصيرة "
+#~ "سينتقي تلك الأيقونة )دون تشغيلها.( قد يكون هذا مفيداً عندما تستخدم نقرة "
+#~ "واحدة لتشغيل الأيقونات وعندما تريد أن تنتقي الأيقونات فقط دون القيام "
+#~ "بتشغيلها."
+
+#~ msgid ""
+#~ "If you have checked the option to automatically select icons, this slider "
+#~ "allows you to select how long the mouse pointer must be paused over the "
+#~ "icon before it is selected."
+#~ msgstr ""
+#~ "إذا حدّدت الخيار الذي يساعدك على انتقاء الأيقونات تلقائياً، يسمح لك شريط "
+#~ "التمرير  بانتقاء الفترة الزمنية التي تريد أن تضع خلالها المؤشر فوق "
+#~ "الأيقونة حتى يتم انتقائها."
+
+#~ msgid "Advanced"
+#~ msgstr "متقدم"
+
+#~ msgid " x"
+#~ msgstr "س"
+
+#~ msgid "Pointer acceleration:"
+#~ msgstr "تسارع المؤشر:"
+
+#~ msgid ""
+#~ "<p>This option allows you to change the relationship between the distance "
+#~ "that the mouse pointer moves on the screen and the relative movement of "
+#~ "the physical device itself (which may be a mouse, trackball, or some "
+#~ "other pointing device.)</p><p> A high value for the acceleration will "
+#~ "lead to large movements of the mouse pointer on the screen even when you "
+#~ "only make a small movement with the physical device. Selecting very high "
+#~ "values may result in the mouse pointer flying across the screen, making "
+#~ "it hard to control.</p>"
+#~ msgstr ""
+#~ "<p>هذا الخيار يسمح لك بتغيير العلاقة بين المسافة التي يتحركها مؤشر "
+#~ "الفأرةعلى الشاشة و الحركة النسبية الحقيقية التي تتحركها الفأرة (هذا يشمل "
+#~ "جميع أنواع أجهزة التأشيرمثل الفأرة ، و كرة المتابعة ، و غيرها). </p><p> "
+#~ "القيمة العالية للتسارع تعطي حركة كبيرة لمؤشر الشاشة حتى عندما تكون حركة "
+#~ "جهاز التأشير صغيرة جد. إن انتقاء قيم عالية قد يؤدي إلى أن المؤشر يطير عبر "
+#~ "الشاشةمما قد يجعل التحكم به عملية صعبة جدا.</p>"
+
+#~ msgid "Pointer threshold:"
+#~ msgstr "عتبة المؤشر:"
+
+#~ msgid ""
+#~ "<p>The threshold is the smallest distance that the mouse pointer must "
+#~ "move on the screen before acceleration has any effect. If the movement is "
+#~ "smaller than the threshold, the mouse pointer moves as if the "
+#~ "acceleration was set to 1X;</p><p> thus, when you make small movements "
+#~ "with the physical device, there is no acceleration at all, giving you a "
+#~ "greater degree of control over the mouse pointer. With larger movements "
+#~ "of the physical device, you can move the mouse pointer rapidly to "
+#~ "different areas on the screen.</p>"
+#~ msgstr ""
+#~ "<p>العتبة هي أصغر مسافة يجب أن يقطعها المؤشر حتى يبدأ التسارع إن وجد.إذا "
+#~ "كانت المسافة أصغر من العتبة فإن المؤشر سوف يتحرك كما لو أن التسارع مضبوط "
+#~ "على 1 س </p><p> ؛ لذا  عندما تقوم بحركة صغيرة بجهاز التأشير فلن يكون هناك "
+#~ "تسارع بالمرة ؛ مما يعطيك درجة عالية من التحكم بمؤشر الفأرة.بالحركات "
+#~ "الكبيرة بجهاز التأشير يمكنك أن تحرك مؤشر الفأرة بسرعة إلى مختلف المناطقفي "
+#~ "الشاشة .</p>"
+
+#~ msgid " msec"
+#~ msgstr "مللي ثانية"
+
+#~ msgid "Double click interval:"
+#~ msgstr "الفترة الزمنية للنقر المزدوج:"
+
+#~ msgid ""
+#~ "The double click interval is the maximal time (in milliseconds) between "
+#~ "two mouse clicks which turns them into a double click. If the second "
+#~ "click happens later than this time interval after the first click, they "
+#~ "are recognized as two separate clicks."
+#~ msgstr ""
+#~ "الفترة الزمنية للنقر المزدوج (يقاس بجزء من الألف من الثانية) هو أطول فترة "
+#~ "زمنية بين نقرتي الفأرة لتعتبر نقرة مزدوجة. إذا حدثت النقرة الثانية ومضت "
+#~ "فترة أطول من هذه الفترة الزمنية بعد النقرة الأولى، فإن النقرتان تحتسبان  "
+#~ "كنقرتين منفصلتين وليس كنقرة  مزدوجة."
+
+#~ msgid "Drag start time:"
+#~ msgstr "توقيت بدء السحب:"
+
+#~ msgid ""
+#~ "If you click with the mouse (e.g. in a multi-line editor) and begin to "
+#~ "move the mouse within the drag start time, a drag operation will be "
+#~ "initiated."
+#~ msgstr ""
+#~ "إذا نقرت بالفأرة (في محرر على سبيل المثال) وبدأت بتحريك الفأرة ضمن فترة "
+#~ "السحب، فإنك سوف تبدأ عملية سحب. "
+
+#~ msgid "Drag start distance:"
+#~ msgstr "مسافة بدء السحب:"
+
+#~ msgid ""
+#~ "If you click with the mouse and begin to move the mouse at least the drag "
+#~ "start distance, a drag operation will be initiated."
+#~ msgstr ""
+#~ "إذا نقرت بالفأرة وبدأت بتحريك الفأرة لمسافة تساوي مسافة بدء السحب على "
+#~ "الأقل، فإنك سوف تبدأ عملية سحب. "
+
+#~ msgid "Mouse wheel scrolls by:"
+#~ msgstr "عجلة الفأرة تمرّر بعدد:"
+
+#~ msgid ""
+#~ "If you use the wheel of a mouse, this value determines the number of "
+#~ "lines to scroll for each wheel movement. Note that if this number exceeds "
+#~ "the number of visible lines, it will be ignored and the wheel movement "
+#~ "will be handled as a page up/down movement."
+#~ msgstr ""
+#~ "إذا استخدمت عجلة الفأرة، فإن هذا الرقم يحدد عدد الأسطر التي يتم تقليبها. "
+#~ "إذا كان هذا عدد يزيد عن عدد الأسطر المرئية، فإن حركة العجلة سوف تهمل، "
+#~ "وتعامل على أنها حركة للتقليب إلى الصفحة السابقة أو التالية. "
+
+#~ msgid "Mouse Navigation"
+#~ msgstr "التصفح بالفأرة"
+
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "&حرّك المؤشر  باستخدام لوحة المفاتيح (باستخدام لوحة الأرقام)"
+
+#~ msgid "&Acceleration delay:"
+#~ msgstr "تأخير الت&سارع:"
+
+#~ msgid "R&epeat interval:"
+#~ msgstr "فترة الت&كرار:"
+
+#~ msgid "Acceleration &time:"
+#~ msgstr "&وقت التسارع:"
+
+#~ msgid " pixel/sec"
+#~ msgstr "بكسل/ثانية"
+
+#~ msgid "Ma&ximum speed:"
+#~ msgstr "السرعة ال&قصوى:"
+
+#~ msgid "Acceleration &profile:"
+#~ msgstr "مو&اصفات التسارع:"
+
+#~ msgid "Mouse"
+#~ msgstr "فأرة"
+
+#~ msgid "(c) 1997 - 2005 Mouse developers"
+#~ msgstr "(c) 1997 - 2005 Mouse developers"
+
+#~ msgid "Patrick Dowler"
+#~ msgstr "Patrick Dowler"
+
+#~ msgid "Dirk A. Mueller"
+#~ msgstr "Dirk A. Mueller"
+
+#~ msgid "David Faure"
+#~ msgstr "David Faure"
+
+#~ msgid "Bernd Gehrmann"
+#~ msgstr "Bernd Gehrmann"
+
+#~ msgid "Rik Hemsley"
+#~ msgstr "Rik Hemsley"
+
+#~ msgid "Brad Hughes"
+#~ msgstr "Brad Hughes"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "Brad Hards"
+#~ msgstr "Brad Hards"
+
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] " بكسل"
+#~ msgstr[1] " بكسل واحد"
+#~ msgstr[2] "بكسلان"
+#~ msgstr[3] "بكسلات"
+#~ msgstr[4] "بكسلا"
+#~ msgstr[5] "بكسل"
+
+#~ msgid " line"
+#~ msgid_plural " lines"
+#~ msgstr[0] "سطر"
+#~ msgstr[1] "سطر واحد"
+#~ msgstr[2] "سطران"
+#~ msgstr[3] "أسطر"
+#~ msgstr[4] "سطرا"
+#~ msgstr[5] "سطر"
+
+#~ msgid "Mouse type: %1"
+#~ msgstr "نوع الفأرة: %1"
+
+#~ msgid ""
+#~ "RF channel 1 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr "قناة RF 1 تم تعيينها. من فضلك اضغط زر اتصال ليتم إنشاء وصلة"
+
+#~ msgid "Press Connect Button"
+#~ msgstr "اضغط زر اتصال"
+
+#~ msgid ""
+#~ "RF channel 2 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr "قناة RF 2 تم تعيينها. من فضلك اضغط زر اتصال ليتم إنشاء وصلة"
+
+#~ msgctxt "no cordless mouse"
+#~ msgid "none"
+#~ msgstr "بدون"
+
+#~ msgid "Cordless Mouse"
+#~ msgstr "فأرة لا سلكية"
+
+#~ msgid "Cordless Wheel Mouse"
+#~ msgstr "فأرة لا سلكية ذات عجلة"
+
+#~ msgid "Cordless MouseMan Wheel"
+#~ msgstr "فأرة لا سلكية MouseMan"
+
+#~ msgid "Cordless TrackMan Wheel"
+#~ msgstr "فأرة لا سلكية  ذات عجلة TrackMan"
+
+#~ msgid "TrackMan Live"
+#~ msgstr "TrackMan Live"
+
+#~ msgid "Cordless TrackMan FX"
+#~ msgstr "فأرة لا سلكية TrackMan FX"
+
+#~ msgid "Cordless MouseMan Optical"
+#~ msgstr "فأرة لا سلكية ضوئية MouseMan"
+
+#~ msgid "Cordless Optical Mouse"
+#~ msgstr "فأرة لا سلكية ضوئية"
+
+#~ msgid "Cordless MouseMan Optical (2ch)"
+#~ msgstr "فأرة لا سلكية ضوئية MouseMan ( قنوات أثنتين )"
+
+#~ msgid "Cordless Optical Mouse (2ch)"
+#~ msgstr "فأرة لا سلكية ضوئية ( قنوات أثنتين )"
+
+#~ msgid "Cordless Mouse (2ch)"
+#~ msgstr "فأرة لا سلكية ( قنوات أثنتين )"
+
+#~ msgid "Cordless Optical TrackMan"
+#~ msgstr "فأرة لا سلكية ضوئية TrackMa"
+
+#~ msgid "MX700 Cordless Optical Mouse"
+#~ msgstr "فأرة لا سلكية ضوئية MX700"
+
+#~ msgid "MX700 Cordless Optical Mouse (2ch)"
+#~ msgstr "فأرة لا سلكية ضوئية MX700 ( قنوات أثنتين )"
+
+#~ msgid "Unknown mouse"
+#~ msgstr "فأرة مجهولة"
+
+#~ msgid "Cordless Name"
+#~ msgstr "اسم اللاسلكي"
+
+#~ msgid "Sensor Resolution"
+#~ msgstr "استبانة المِجَسّ"
+
+#~ msgid "400 counts per inch"
+#~ msgstr "400 وحدات في البوصة"
+
+#~ msgid "800 counts per inch"
+#~ msgstr "800 وحدات في البوصة"
+
+#~ msgid "Battery Level"
+#~ msgstr "مستوى البطارية"
+
+#~ msgid "RF Channel"
+#~ msgstr "قناة RF"
+
+#~ msgid "Channel 1"
+#~ msgstr "القناة 1"
+
+#~ msgid "Channel 2"
+#~ msgstr "القناة 2"
+
+#~ msgid ""
+#~ "You have a Logitech Mouse connected, and libusb was found at compile "
+#~ "time, but it was not possible to access this mouse. This is probably "
+#~ "caused by a permissions problem - you should consult the manual on how to "
+#~ "fix this."
+#~ msgstr ""
+#~ "فأرة Logitech  موصلة ، و كذلك تم ايجاء حزمة  libusb أثناء الترجمة ؛ ولكن "
+#~ "لا تستطيع النفاذ إلى تلك الفأرة. قد يكون هذا بسبب مشاكل في الصلاحيات ، "
+#~ "يجب علي استشارة الدليل في كيفية إصلاح هذه المشكلة"
+
+#~ msgid "KDE Classic"
+#~ msgstr "كيدي تقليدي"
+
+#~ msgid "The default cursor theme in KDE 2 and 3"
+#~ msgstr "سمة المؤشر المبدئية في كيدي2 و 3"
+
+#~ msgid "No description available"
+#~ msgstr "لا يوجد وصف متوفر"
+
+#~ msgid "Short"
+#~ msgstr "قصير"
+
+#~ msgid "Long"
+#~ msgstr "طويل"

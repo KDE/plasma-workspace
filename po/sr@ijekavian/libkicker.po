@@ -1,0 +1,322 @@
+# Translation of plasma_applet_org.kde.plasma.kicker.po into Serbian.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2014, 2015, 2016, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-06-13 02:18+0200\n"
+"PO-Revision-Date: 2017-09-25 19:53+0200\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@ijekavian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#: plugin/actionlist.cpp:97
+#, kde-format
+msgid "Open with:"
+msgstr "Отвори помоћу:"
+
+#: plugin/actionlist.cpp:109
+#, kde-format
+msgid "Properties"
+msgstr "Својства"
+
+#: plugin/actionlist.cpp:156
+#, kde-format
+msgid "Add to Desktop"
+msgstr "Додај на површ"
+
+#: plugin/actionlist.cpp:161
+#, kde-format
+msgid "Add to Panel (Widget)"
+msgstr "Додај на панел (виџет)"
+
+#: plugin/actionlist.cpp:166
+#, kde-format
+msgid "Pin to Task Manager"
+msgstr "Прикачи на менаџер задатака"
+
+#: plugin/actionlist.cpp:275 plugin/rootmodel.cpp:411
+#, kde-format
+msgid "Recent Documents"
+msgstr ""
+"Недавни документи|/|$[својства ген 'недавних докумената' аку 'недавне "
+"документе']"
+
+#: plugin/actionlist.cpp:284
+#, kde-format
+msgid "Forget Recent Documents"
+msgstr "Заборави недавне документе"
+
+#: plugin/actionlist.cpp:345
+#, kde-format
+msgid "Edit Application..."
+msgstr "Уреди програм..."
+
+#: plugin/actionlist.cpp:392
+#, kde-format
+msgctxt "@action opens a software center with the application"
+msgid "Uninstall or Manage Add-Ons..."
+msgstr ""
+
+#: plugin/appentry.cpp:189
+#, kde-format
+msgid "Hide Application"
+msgstr "Сакриј програм"
+
+#: plugin/appentry.cpp:254
+#, kde-format
+msgctxt "App name (Generic name)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: plugin/appentry.cpp:256
+#, kde-format
+msgctxt "Generic name (App name)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: plugin/appsmodel.cpp:45 plugin/appsmodel.cpp:69 plugin/computermodel.cpp:110
+#: plugin/computermodel.cpp:239 plugin/recentusagemodel.cpp:168
+#: plugin/recentusagemodel.cpp:228
+#, kde-format
+msgid "Applications"
+msgstr "Програми"
+
+#: plugin/appsmodel.cpp:165
+#, kde-format
+msgid "Unhide Applications in this Submenu"
+msgstr "Откриј скривене програме у овом подменију"
+
+#: plugin/appsmodel.cpp:172
+#, kde-format
+msgid "Unhide Applications in '%1'"
+msgstr "Откриј програме у „%1“|/|Откриј програме у „$[лок %1]“"
+
+#: plugin/computermodel.cpp:104
+#, kde-format
+msgid "Show KRunner"
+msgstr ""
+
+#: plugin/computermodel.cpp:108
+#, kde-format
+msgid "Search, calculate, or run a command"
+msgstr ""
+
+#: plugin/computermodel.cpp:161
+#, kde-format
+msgid "Computer"
+msgstr "Рачунар"
+
+#: plugin/contactentry.cpp:117 plugin/recentcontactsmodel.cpp:93
+#, kde-format
+msgid "Show Contact Information..."
+msgstr "Прикажи податке контакта..."
+
+#: plugin/kastatsfavoritesmodel.cpp:494 plugin/simplefavoritesmodel.cpp:43
+#, kde-format
+msgid "Favorites"
+msgstr "Омиљено"
+
+#: plugin/recentcontactsmodel.cpp:52
+#, kde-format
+msgid "Contacts"
+msgstr "Контакти"
+
+#: plugin/recentcontactsmodel.cpp:85
+#, kde-format
+msgid "Forget Contact"
+msgstr "Заборави контакт"
+
+#: plugin/recentcontactsmodel.cpp:88 plugin/recentcontactsmodel.cpp:165
+#, kde-format
+msgid "Forget All Contacts"
+msgstr "Заборави све контакте"
+
+# Није неоходно „... коришћено“.
+#: plugin/recentusagemodel.cpp:166
+#, kde-format
+msgid "Recently Used"
+msgstr "Недавно"
+
+#: plugin/recentusagemodel.cpp:171 plugin/recentusagemodel.cpp:303
+#, kde-format
+msgid "Documents"
+msgstr "Документи"
+
+#: plugin/recentusagemodel.cpp:246
+#, kde-format
+msgid "Forget Application"
+msgstr "Заборави програм"
+
+#: plugin/recentusagemodel.cpp:336
+#, kde-format
+msgid "Open Containing Folder"
+msgstr ""
+
+#: plugin/recentusagemodel.cpp:339
+#, kde-format
+msgid "Forget Document"
+msgstr "Заборави документ"
+
+#: plugin/recentusagemodel.cpp:471
+#, kde-format
+msgid "Forget All"
+msgstr "Заборави све"
+
+#: plugin/recentusagemodel.cpp:473
+#, kde-format
+msgid "Forget All Applications"
+msgstr "Заборави све програме"
+
+#: plugin/recentusagemodel.cpp:476
+#, kde-format
+msgid "Forget All Documents"
+msgstr "Заборави све документе"
+
+#: plugin/rootmodel.cpp:107
+#, kde-format
+msgid "Hide %1"
+msgstr "Сакриј %1|/|Сакриј $[аку %1]"
+
+#: plugin/rootmodel.cpp:397
+#, kde-format
+msgid "All Applications"
+msgstr "Сви програми"
+
+#: plugin/rootmodel.cpp:403
+#, kde-format
+msgid "Recent Contacts"
+msgstr ""
+"Недавни контакти|/|$[својства ген 'недавних контаката' аку 'недавне "
+"контакте']"
+
+#: plugin/rootmodel.cpp:412
+#, kde-format
+msgid "Often Used Documents"
+msgstr ""
+"Често коришћени документи|/|$[својства ген 'често коришћених докумената' аку "
+"'често коришћене документе']"
+
+#: plugin/rootmodel.cpp:424
+#, kde-format
+msgid "Recent Applications"
+msgstr ""
+"Недавни програми|/|$[својства ген 'недавних програма' аку 'недавне програме']"
+
+#: plugin/rootmodel.cpp:425
+#, kde-format
+msgid "Often Used Applications"
+msgstr ""
+"Често коришћени програми|/|$[својства ген 'често коришћених програма' аку "
+"'често коришћене програме']"
+
+#: plugin/rootmodel.cpp:441
+#, kde-format
+msgid "Power / Session"
+msgstr "Напајање/сесија"
+
+#: plugin/runnermodel.cpp:238
+#, kde-format
+msgid "Search results"
+msgstr "Резултати претраге"
+
+#: plugin/systementry.cpp:166
+#, kde-format
+msgid "Lock"
+msgstr "Закључај"
+
+#: plugin/systementry.cpp:169
+#, kde-format
+msgid "Log Out"
+msgstr ""
+
+#: plugin/systementry.cpp:172 plugin/systementry.cpp:240
+#, kde-format
+msgid "Save Session"
+msgstr "Сачувај сесију"
+
+#: plugin/systementry.cpp:175
+#, kde-format
+msgid "Switch User"
+msgstr "Пребаци корисника"
+
+#: plugin/systementry.cpp:178
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr ""
+
+#: plugin/systementry.cpp:181
+#, kde-format
+msgid "Hibernate"
+msgstr "У хибернацију"
+
+#: plugin/systementry.cpp:184
+#, fuzzy, kde-format
+msgid "Restart"
+msgstr "Поново покрени рачунар"
+
+#: plugin/systementry.cpp:187
+#, kde-format
+msgid "Shut Down"
+msgstr "Угаси"
+
+#: plugin/systementry.cpp:200 plugin/systementry.cpp:203
+#: plugin/systementry.cpp:206 plugin/systementry.cpp:209
+#, kde-format
+msgid "Session"
+msgstr "Сесија"
+
+#: plugin/systementry.cpp:212 plugin/systementry.cpp:215
+#: plugin/systementry.cpp:218 plugin/systementry.cpp:221
+#, kde-format
+msgid "System"
+msgstr "Систем"
+
+#: plugin/systementry.cpp:234
+#, kde-format
+msgid "Lock screen"
+msgstr "Закључај екран"
+
+#: plugin/systementry.cpp:237
+#, kde-format
+msgid "End session"
+msgstr "Крај сесије"
+
+#: plugin/systementry.cpp:243
+#, kde-format
+msgid "Start a parallel session as a different user"
+msgstr "Покрени напореду сесију за другог корисника"
+
+#: plugin/systementry.cpp:246
+#, kde-format
+msgid "Suspend to RAM"
+msgstr "Суспендуј у меморију"
+
+#: plugin/systementry.cpp:249
+#, kde-format
+msgid "Suspend to disk"
+msgstr "Суспендуј на диск"
+
+#: plugin/systementry.cpp:252
+#, kde-format
+msgid "Restart computer"
+msgstr "Поново покрени рачунар"
+
+#: plugin/systementry.cpp:255
+#, kde-format
+msgid "Turn off computer"
+msgstr "Угаси рачунар"
+
+#: plugin/systemmodel.cpp:75
+#, kde-format
+msgid "System actions"
+msgstr "Системске радње"

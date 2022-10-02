@@ -1,0 +1,445 @@
+# Translation for kcm_desktoptheme.po to Euskara/Basque (eu).
+# Copyright (C) 2008-2018, The Free Software Foundation.
+# Copyright (C) 2019-2021, This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+#
+# Translators:
+# Asier Urio Larrea <asieriko@gmail.com>, 2008.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2010, 2011, 2018, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"PO-Revision-Date: 2021-07-18 20:57+0200\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.04.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current Plasma Style"
+msgstr "Uneko Plasma estiloaren izena"
+
+#: kcm.cpp:108
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Ezin da aldi baterako fitxategi bat sortu."
+
+#: kcm.cpp:119
+#, kde-format
+msgid "Unable to download the theme: %1"
+msgstr "Ezin da gaia jaitsi: %1"
+
+#: kcm.cpp:144
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "Gaia ondo instalatu da."
+
+#: kcm.cpp:147 kcm.cpp:153
+#, kde-format
+msgid "Theme installation failed."
+msgstr "Gaia instalatzeak huts egin du."
+
+#: kcm.cpp:245
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr "Gaia kentzea huts egin du: %1"
+
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "This module lets you choose the Plasma style."
+msgstr "Modulu honek Plasmaren estiloa aukeratzen uzten dizu."
+
+#: package/contents/ui/main.qml:69
+#, kde-format
+msgid "All Themes"
+msgstr "Gai guztiak"
+
+#: package/contents/ui/main.qml:70
+#, kde-format
+msgid "Light Themes"
+msgstr "Gai argiak"
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgid "Dark Themes"
+msgstr "Gai ilunak"
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "Color scheme compatible"
+msgstr "Kolore-antolaerarekin bateragarriak"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgid "Follows color scheme"
+msgstr "Kolore-antolaera jarraitzen dutenak"
+
+#: package/contents/ui/main.qml:118
+#, kde-format
+msgid "Edit Theme…"
+msgstr "Editatu gaia..."
+
+#: package/contents/ui/main.qml:125
+#, kde-format
+msgid "Remove Theme"
+msgstr "Kendu gaia"
+
+#: package/contents/ui/main.qml:132
+#, kde-format
+msgid "Restore Theme"
+msgstr "Lehengoratu gaia"
+
+#: package/contents/ui/main.qml:174
+#, kde-format
+msgid "Install from File…"
+msgstr "Instalatu fitxategitik..."
+
+#: package/contents/ui/main.qml:179
+#, kde-format
+msgid "Get New Plasma Styles…"
+msgstr "Lortu Plasmaren estilo berriak..."
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Open Theme"
+msgstr "Ireki gaia"
+
+#: package/contents/ui/main.qml:195
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr "Gai fitxategiak (*.zip *.tar.gz *.tar.bz2)"
+
+#: plasma-apply-desktoptheme.cpp:31
+#, kde-format
+msgid ""
+"This tool allows you to set the theme of the current Plasma session, without "
+"accidentally setting it to one that is either not available, or which is "
+"already set."
+msgstr ""
+"Tresna honen bidez, uneko plasma-saioaren gaia ezar dezakezu, nahi gabe, "
+"erabilgarri ez dagoen edo ezarrita dagoen bat finkatu gabe."
+
+#: plasma-apply-desktoptheme.cpp:35
+#, kde-format
+msgid ""
+"The name of the theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+"Zure uneko Plasma-saiorako ezarri nahi duzun gaiaren izena (bide-izen osoa "
+"pasatuta ere azken zatia baino ez da erabiliko)"
+
+#: plasma-apply-desktoptheme.cpp:36
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+"Erakutsi sisteman erabilgarri dauden gai guztiak (eta uneko gaia zein den)"
+
+#: plasma-apply-desktoptheme.cpp:49
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr "Eskatutako «%1» gaia dagoeneko ezarrita dago Plasmaren uneko saiorako."
+
+#: plasma-apply-desktoptheme.cpp:65
+#, kde-format
+msgid "The current Plasma session's theme has been set to %1"
+msgstr "Uneko Plasma-saioaren gaitzat %1 ezarri da"
+
+#: plasma-apply-desktoptheme.cpp:67
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+"Ezin izan du «%1» gaia aurkitu. Gaia ondoko aukeretako bat izan beharko "
+"litzateke: %2"
+
+#: plasma-apply-desktoptheme.cpp:75
+#, kde-format
+msgid "You have the following Plasma themes on your system:"
+msgstr "Zure sisteman ondoko Plasma-gaiak dituzu:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Asier Urio Larrea,Iñigo Salvador Azurmendi"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "asieriko@gmail.com,xalba@ni.eus"
+
+#~ msgid "Plasma Style"
+#~ msgstr "Plasmaren estiloa"
+
+#~ msgid "David Rosca"
+#~ msgstr "David Rosca"
+
+#~ msgid "Search..."
+#~ msgstr "Bilatu..."
+
+#~ msgid "Plasma Styles"
+#~ msgstr "Plasmaren estiloak"
+
+#~ msgid "Download New Plasma Styles"
+#~ msgstr "Jaitsi Plasmaren estilo berriak"
+
+#~ msgid "Configure Desktop Theme"
+#~ msgstr "Konfiguratu mahaigaineko gaia"
+
+#~ msgid "Theme removal failed."
+#~ msgstr "Gaia kentzeak huts egin du."
+
+#~ msgid ""
+#~ "<h1>Desktop Theme</h1>This module allows you to modify the visual "
+#~ "appearance of the desktop."
+#~ msgstr ""
+#~ "<h1>Mahaigaineko gaia</h1>Modulo honek mahaigainaren itxura fisikoa "
+#~ "aldatzeko aukera eskaintzen dizu."
+
+#~ msgid "KDE Desktop Theme Module"
+#~ msgstr "KDE mahaigaineko gaien moduloa"
+
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
+#~ msgstr "(c) 2002 Karol Szwed, Daniel Molkentin"
+
+#~ msgid "Details"
+#~ msgstr "Xehetasunak"
+
+#~ msgctxt "plasma name"
+#~ msgid "Panel Background"
+#~ msgstr "Panelaren atzeko planoa"
+
+#~ msgctxt "plasma name"
+#~ msgid "Kickoff"
+#~ msgstr "Kickoff"
+
+#~ msgctxt "plasma name"
+#~ msgid "Task Items"
+#~ msgstr "Lan elementuak"
+
+#~ msgctxt "plasma name"
+#~ msgid "Widget Background"
+#~ msgstr "Trepetaren atzeko planoa"
+
+#~ msgctxt "plasma name"
+#~ msgid "Translucent Background"
+#~ msgstr "Atzeko plano zeharargia"
+
+#~ msgctxt "plasma name"
+#~ msgid "Dialog Background"
+#~ msgstr "Elkarrizketa koadroaren atzeko planoa"
+
+#~ msgctxt "plasma name"
+#~ msgid "Analog Clock"
+#~ msgstr "Erloju analogikoa"
+
+#~ msgctxt "plasma name"
+#~ msgid "Notes"
+#~ msgstr "Oharrak"
+
+#~ msgctxt "plasma name"
+#~ msgid "Tooltip"
+#~ msgstr "Argibidea"
+
+#~ msgctxt "plasma name"
+#~ msgid "Pager"
+#~ msgstr "Bilagailua"
+
+#~ msgctxt "plasma name"
+#~ msgid "Run Command Dialog"
+#~ msgstr "Exekutatu komandoa elkarrizketa koadroa"
+
+#~ msgctxt "plasma name"
+#~ msgid "Shutdown Dialog"
+#~ msgstr "Itzali elkarrizketa koadroa"
+
+#~ msgctxt "plasma name"
+#~ msgid "Icons"
+#~ msgstr "Ikonoak"
+
+#~ msgid "(Customized)"
+#~ msgstr "(Pertsonalizatua)"
+
+#~ msgid "User customized theme"
+#~ msgstr "Erabiltzaileak pertsonalizatutako gaia"
+
+#~ msgid ""
+#~ "Theme items have been changed.  Do you still wish remove the \"%1\" theme?"
+#~ msgstr ""
+#~ "Gaiaren elementuak aldatu dira. Ziur zaude oraindik \"%1\" gaia kendu "
+#~ "nahi duzula?"
+
+#~ msgid "Removal of the default desktop theme is not allowed."
+#~ msgstr "KDEren mahaigaineko gai lehenetsia ezin da kendu."
+
+#~ msgid "Are you sure you wish remove the \"%1\" theme?"
+#~ msgstr "Ziur zaude \"%1\" gaia kendu nahi duzula?"
+
+#~ msgid ""
+#~ "Please apply theme item changes (with a new theme name) before attempting "
+#~ "to export theme."
+#~ msgstr ""
+#~ "Mesedez aplikatu gaiaren elementuen aldaketak (gai izen berri batekin) "
+#~ "gaia esportatzen saiatu baino lehen."
+
+#~ msgid "Export Desktop Theme"
+#~ msgstr "Esportatu mahaigaineko gaia"
+
+#~ msgid "Export theme to file"
+#~ msgstr "Esportatu gaia fitxategira"
+
+#~ msgid "Theme Item"
+#~ msgstr "Gaiaren elementua"
+
+#~ msgid "Source"
+#~ msgstr "Iturburua"
+
+#, fuzzy
+#~| msgid "%1 %2"
+#~ msgctxt ""
+#~ "%1 is the name of the theme, %2 is the type of the element (background, "
+#~ "icon, note, etc)"
+#~ msgid "%1 %2"
+#~ msgstr "%1 %2"
+
+#~ msgid "File..."
+#~ msgstr "Fitxategia..."
+
+#~ msgid "Select File to Use for %1"
+#~ msgstr "Hautatu erabiliko den fitxategia honetarako %1"
+
+#~ msgid " Author: %1"
+#~ msgstr "Egilea: %1"
+
+#~ msgid "Version: %1"
+#~ msgstr "Bertsioa: %1"
+
+#~ msgid "Desktop Theme Details"
+#~ msgstr "Mahaigaineko gaiaren xehetasunak"
+
+#~ msgid "Choose an item and customize it by assigning it a theme"
+#~ msgstr ""
+#~ "Hautatu elementu bat eta pertsonalizatu ezazu berari gai bat esleituz"
+
+#~ msgid ""
+#~ "You can set any theme to any item. The available themes for the item are "
+#~ "in the dropdown box on the right."
+#~ msgstr ""
+#~ "Edozein elementuri edozein gai esleitu diezaiokezu. Elementuarentzako "
+#~ "eskuragarri dauden gaiak eskuineko goitibera laukian daude."
+
+#~ msgid "Enable more options"
+#~ msgstr "Gaitu aukera gehiago"
+
+#~ msgid ""
+#~ "This will expand the dialog and give you options to export your custom "
+#~ "theme as well as to remove a theme."
+#~ msgstr ""
+#~ "Honek elkarrizketa hedatuko du eta zure gai pertsonalizatuak esportatu "
+#~ "edo gai bat ezabatzeko aukera eskainiko dizu."
+
+#~ msgid "More"
+#~ msgstr "Gehiago"
+
+#~ msgid "Remove the selected theme"
+#~ msgstr "Ezabatu hautatutako gaia"
+
+#~ msgid ""
+#~ "Clicking this button will remove the selected theme. You will be asked "
+#~ "for confirmation."
+#~ msgstr ""
+#~ "Botoi hau sakatuta hautatutako gaia ezabatuko da. Baieztapena eskatuko "
+#~ "zaizu."
+
+#~ msgid "Save your theme in a zip archive"
+#~ msgstr "Gorde zure gaiak zip artxibo batean"
+
+#~ msgid ""
+#~ "You can save your theme in a zip archive in order to share it with the "
+#~ "community."
+#~ msgstr ""
+#~ "Zure gaia zip artxibo baten gorde dezakezu elkartearekin partekatzeko."
+
+#~ msgid "Export Theme to File..."
+#~ msgstr "Esportatu gaia fitxategira..."
+
+#~ msgid "New theme name:"
+#~ msgstr "Gai berriaren izena:"
+
+#~ msgid "Custom theme name"
+#~ msgstr "Gai pertsonalizatuaren izena"
+
+#~ msgid "Give a name to your custom theme."
+#~ msgstr "Izena eman zure gai pertsonalizatuari."
+
+#~ msgid "Author:"
+#~ msgstr "Egilea:"
+
+#~ msgid "Custom theme author "
+#~ msgstr "Gai pertsonalizatuaren egilea"
+
+#~ msgid "Enter the author name of your custom theme."
+#~ msgstr "Sartu zure gai pertsonalizatuaren egilearen izena."
+
+#~ msgid "Version:"
+#~ msgstr "Bertsioa:"
+
+#~ msgid "Custom theme version number"
+#~ msgstr "Gai pertsonalizatuaren bertsio zenbakia"
+
+#~ msgid "Enter the version number of your custom theme."
+#~ msgstr "Sartu zure gai pertsonalizatuaren bertsio zenbakia."
+
+#~ msgid "Description:"
+#~ msgstr "Deskribapena:"
+
+#~ msgid "Custom theme description"
+#~ msgstr "Gaiaren pertsonalizatuaren deskribapena"
+
+#~ msgid "Enter a description which will explain your custom theme."
+#~ msgstr "Sartu zure gai pertsonalizatua azalduko duen deskribapen bat."
+
+#~ msgid "Select theme from above to customize"
+#~ msgstr "Hautatu gaia gainetik pertsonalizatzeko"
+
+#~ msgid "Theme Author"
+#~ msgstr "Gaiaren egilea"
+
+#~ msgid "Theme Name"
+#~ msgstr "Gaiaren izena"
+
+#~ msgid "Theme Version"
+#~ msgstr "Gaiaren bertsioa"
+
+#~ msgid "The theme description goes here..."
+#~ msgstr "Gaiaren deskribapena hemen doa..."
+
+#~ msgid ""
+#~ "Choose a start theme in this list then customize some items below. All "
+#~ "less important items not listed below will use this start theme."
+#~ msgstr ""
+#~ "Hautatu hasierako gai bat zerrendatik gero pertsonalizatu azpiko elementu "
+#~ "batzuk. Azpian zerrendatu gabeko garrantzia txikiagoko elementu guztiek "
+#~ "hasierako gai hau erabiliko dute."
+
+#~ msgid "Karol Szwed"
+#~ msgstr "Karol Szwed"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "KCMDesktopTheme"
+#~ msgstr "KCMDesktopTheme"

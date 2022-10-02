@@ -1,0 +1,701 @@
+# Translation for kcm_cursortheme.po to Euskara/Basque (eu).
+# Copyright (C) 2002-2018, Free Software Foundation.
+# Copyright (C) 2019-2022, This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+#
+# Translators:
+# Marcos  <marcos@euskalgnu.org>, 2002,2003, 2005, 2006, 2007, 2008, 2010.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2010, 2011, 2014, 2018, 2019, 2020, 2021, 2022.
+# Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:50+0000\n"
+"PO-Revision-Date: 2022-08-11 20:03+0200\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 22.04.3\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current cursor theme"
+msgstr "Uneko kurtsore-gaiaren izena"
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr "Kurtsorearen uneko neurria"
+
+#: kcmcursortheme.cpp:302
+#, kde-format
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr ""
+"Plasma saioa berrabiarazi behar duzu aldaketa hauek indarrean jartzeko."
+
+#: kcmcursortheme.cpp:376
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Ezin da aldi baterako fitxategi bat sortu."
+
+#: kcmcursortheme.cpp:387
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Ezin da jaitsi ikono-gai artxiboa: %1"
+
+#: kcmcursortheme.cpp:418
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "Fitxategia ez da ikono-gai artxibo erabilgarria."
+
+#: kcmcursortheme.cpp:425
+#, kde-format
+msgid "Failed to create 'icons' folder."
+msgstr "Huts egin du 'icons' karpeta sortzean."
+
+#: kcmcursortheme.cpp:434
+#, kde-format
+msgid ""
+"A theme named %1 already exists in your icon theme folder. Do you want "
+"replace it with this one?"
+msgstr ""
+"%1 izeneko gaia lehendik ere badago zure ikono-gaien karpetan. Ordeztu nahi "
+"duzu?"
+
+#: kcmcursortheme.cpp:438
+#, kde-format
+msgid "Overwrite Theme?"
+msgstr "Gaia gainidatzi?"
+
+#: kcmcursortheme.cpp:462
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "Gaia ondo instalatu da."
+
+#: package/contents/ui/Delegate.qml:54
+#, kde-format
+msgid "Remove Theme"
+msgstr "Kendu gaia"
+
+#: package/contents/ui/Delegate.qml:61
+#, kde-format
+msgid "Restore Cursor Theme"
+msgstr "Lehengoratu kurtsore-gaia"
+
+#: package/contents/ui/main.qml:20
+#, kde-format
+msgid "This module lets you choose the mouse cursor theme."
+msgstr "Modulu honek sagu-kurtsore gaia hautatzen uzten dizu."
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Size:"
+msgstr "Neurria:"
+
+#: package/contents/ui/main.qml:134
+#, kde-format
+msgid "&Install from File…"
+msgstr "&Instalatu fitxategitik..."
+
+#: package/contents/ui/main.qml:140
+#, kde-format
+msgid "&Get New Cursors…"
+msgstr "&Lortu kurtsore berriak..."
+
+#: package/contents/ui/main.qml:157
+#, kde-format
+msgid "Open Theme"
+msgstr "Ireki gaia"
+
+#: package/contents/ui/main.qml:159
+#, kde-format
+msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+msgstr "Kurtsore-gai fitxategiak (*.tar.gz *.tar.bz2)"
+
+#: plasma-apply-cursortheme.cpp:41
+#, kde-format
+msgid "The requested size '%1' is not available, using %2 instead."
+msgstr ""
+"Eskatutako «%1» neurria ez dago erabilgarri, horren ordez %2 erabiliko da."
+
+#: plasma-apply-cursortheme.cpp:62
+#, kde-format
+msgid ""
+"This tool allows you to set the mouse cursor theme for the current Plasma "
+"session, without accidentally setting it to one that is either not "
+"available, or which is already set."
+msgstr ""
+"Tresna honen bidez, uneko plasma-saiorako saguaren kurtsore-gaia ezar "
+"dezakezu, nahi gabe, erabilgarri ez dagoen edo ezarrita dagoen bat finkatu "
+"gabe."
+
+#: plasma-apply-cursortheme.cpp:66
+#, kde-format
+msgid ""
+"The name of the cursor theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+"Zure uneko Plasma-saiorako ezarri nahi duzun kurtsore-gaiaren izena (bide-"
+"izen osoa pasatuta ere azken zatia baino ez da erabiliko)"
+
+#: plasma-apply-cursortheme.cpp:67
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+"Erakutsi sisteman erabilgarri dauden gai guztiak (eta uneko gaia zein den)"
+
+#: plasma-apply-cursortheme.cpp:68
+#, kde-format
+msgid "Use a specific size, rather than the theme default size"
+msgstr "Erabili neurri jakin bat, gaiko neurri lehenetsiaren ordez"
+
+#: plasma-apply-cursortheme.cpp:89
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr "Eskatutako «%1» gaia dagoeneko ezarrita dago Plasmaren uneko saiorako."
+
+#: plasma-apply-cursortheme.cpp:100
+#, kde-format
+msgid ""
+"Successfully applied the mouse cursor theme %1 to your current Plasma session"
+msgstr "Saguaren «%1» kurtsore-gaia ondo ezarri zaio uneko zure Plasma-saioari"
+
+#: plasma-apply-cursortheme.cpp:102
+#, kde-format
+msgid ""
+"You have to restart the Plasma session for your newly applied mouse cursor "
+"theme to display correctly."
+msgstr ""
+"Plasma-saioa berrabiarazi behar duzu ezarri berri duzun saguaren kurtsore-"
+"gaia ondo azaldu dadin."
+
+#: plasma-apply-cursortheme.cpp:112
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+"Ezin izan du «%1» gaia aurkitu. Gaia ondoko aukeretako bat izan beharko "
+"litzateke: %2"
+
+#: plasma-apply-cursortheme.cpp:120
+#, kde-format
+msgid "You have the following mouse cursor themes on your system:"
+msgstr "Zure sisteman saguaren ondoko kurtsore-gaiak dituzu:"
+
+#: plasma-apply-cursortheme.cpp:125
+#, kde-format
+msgid "(Current theme for this Plasma session)"
+msgstr "(Plasma saio honetarako uneko gaia)"
+
+#: xcursor/xcursortheme.cpp:60
+#, kde-format
+msgctxt ""
+"@info The argument is the list of available sizes (in pixel). Example: "
+"'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+msgid "(Available sizes: %1)"
+msgstr "(Neurriak erabilgarriak: %1)"
+
+#~ msgid "Name"
+#~ msgstr "Izena"
+
+#~ msgid "Description"
+#~ msgstr "Deskribapena"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr ""
+#~ "Marcos Goyeneche,Iñigo Salvador Azurmendi,Hizkuntza Politikarako "
+#~ "Sailburuordetza"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "marcos@euskalgnu.org,xalba@ni.eus,hizpol@ej-gv.es"
+
+#~ msgid "Cursors"
+#~ msgstr "Kurtsoreak"
+
+#~ msgid "(c) 2003-2007 Fredrik Höglund"
+#~ msgstr "(c) 2003-2007 Fredrik Höglund"
+
+#~ msgid "Fredrik Höglund"
+#~ msgstr "Fredrik Höglund"
+
+#~ msgid "Marco Martin"
+#~ msgstr "Marco Martin"
+
+#~ msgid ""
+#~ "<qt>You cannot delete the theme you are currently using.<br />You have to "
+#~ "switch to another theme first.</qt>"
+#~ msgstr ""
+#~ "<qt>Ezin duzu ezabatu erabiltzen ari zaren gaia.<br />Beste gai batera "
+#~ "aldatu behar duzu lehendabizi.</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <i>%1</i> cursor theme?<br />This "
+#~ "will delete all the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>Ziur zaude <i>%1</i> kurtsore-gaia ezabatu nahi duzula?<br />Gai "
+#~ "honetan instalatutako fitxategi guztiak ezabatu egingo dira.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Berrespena"
+
+#~ msgctxt "@item:inlistbox size"
+#~ msgid "Resolution dependent"
+#~ msgstr "Bereizmenaren mendekoa"
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "Kurtsorearen ezarpenak aldatuta"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "Arrastatu edo idatzi gaiaren URLa"
+
+#~ msgid ""
+#~ "Unable to download the cursor theme archive; please check that the "
+#~ "address %1 is correct."
+#~ msgstr ""
+#~ "Ezin da deskargatu kurtsore-gaiaren artxiboa; egiaztatu %1 helbidea "
+#~ "zuzena dela."
+
+#~ msgid "Get new color schemes from the Internet"
+#~ msgstr "Eskuratu kolore-antolaera berriak Internetetik"
+
+#~ msgid ""
+#~ "Select the cursor theme you want to use (hover preview to test cursor):"
+#~ msgstr ""
+#~ "Hautatu erabili nahi duzun kurtsore-gaia (nabarmendu aurrebista kurtsorea "
+#~ "probatzeko):"
+
+#~ msgid "Select the cursor theme you want to use:"
+#~ msgstr "Hautatu erabili nahi duzun kurtsore-gaia:"
+
+#~ msgid "Small black"
+#~ msgstr "Beltz txikia"
+
+#~ msgid "Small black cursors"
+#~ msgstr "Kurtsore beltz txikiak"
+
+#~ msgid "Large black"
+#~ msgstr "Beltz handia"
+
+#~ msgid "Large black cursors"
+#~ msgstr "Kurtsore beltz handiak"
+
+#~ msgid "Small white"
+#~ msgstr "Zuri txikia"
+
+#~ msgid "Small white cursors"
+#~ msgstr "Kurtsore zuri txikiak"
+
+#~ msgid "Large white"
+#~ msgstr "Zuri handia"
+
+#~ msgid "Large white cursors"
+#~ msgstr "Kurtsore zuri handiak"
+
+#~ msgid "Button Order"
+#~ msgstr "Botoien ordena"
+
+#~ msgid "Righ&t handed"
+#~ msgstr "E&skuina"
+
+#~ msgid "Le&ft handed"
+#~ msgstr "E&zkerra"
+
+#~ msgid ""
+#~ "Change the direction of scrolling for the mouse wheel or the 4th and 5th "
+#~ "mouse buttons."
+#~ msgstr ""
+#~ "Aldatu saguaren gurpila labaintzeko noranzkoa, edo saguaren 4. eta 5. "
+#~ "botoiak."
+
+#~ msgid "Re&verse scroll direction"
+#~ msgstr "A&lderantzizko labaintze-noranzkoa"
+
+#~ msgid "Icons"
+#~ msgstr "Ikonoak"
+
+#~ msgid ""
+#~ "Dou&ble-click to open files and folders (select icons on first click)"
+#~ msgstr ""
+#~ "Klik &bikoitza fitxategiak eta karpetak irekitzeko (hautatu ikonoak "
+#~ "aurreneko klikarekin)"
+
+#~ msgid "&Single-click to open files and folders"
+#~ msgstr "Klik &soila fitxategiak eta karpetak irekitzeko"
+
+#~ msgid "Cha&nge pointer shape over icons"
+#~ msgstr "Aldatu erakuslearen &forma, ikonoen gainetik igarotzean"
+
+#~ msgid "A&utomatically select icons"
+#~ msgstr "Hautatu ikonoak a&utomatikoki"
+
+#~ msgctxt "label. delay (on milliseconds) to automatically select icons"
+#~ msgid "Delay"
+#~ msgstr "Atzerapena"
+
+#~ msgctxt "milliseconds. time to automatically select the items"
+#~ msgid " ms"
+#~ msgstr " ms"
+
+#~ msgid ""
+#~ "<h1>Mouse</h1> This module allows you to choose various options for the "
+#~ "way in which your pointing device works. Your pointing device may be a "
+#~ "mouse, trackball, or some other hardware that performs a similar function."
+#~ msgstr ""
+#~ "<h1>Sagua</h1> Modulu honen bitartez, zure erakusle-gailuaren "
+#~ "funtzionamenduarekin zerikusia duten aukera batzuk hauta ditzakezu. "
+#~ "Tresna hori sagua, kontrol-bola, edo antzeko lana betetzen duen beste "
+#~ "edozein hardware izan daiteke."
+
+#~ msgid "&General"
+#~ msgstr "&Orokorra"
+
+#~ msgid ""
+#~ "If you are left-handed, you may prefer to swap the functions of the left "
+#~ "and right buttons on your pointing device by choosing the 'left-handed' "
+#~ "option. If your pointing device has more than two buttons, only those "
+#~ "that function as the left and right buttons are affected. For example, if "
+#~ "you have a three-button mouse, the middle button is unaffected."
+#~ msgstr ""
+#~ "Ezkerra baldin bazara, beharbada zure saguaren ezkerreko eta eskuineko "
+#~ "botoien zereginak trukatu nahiko dituzu, 'ezkerra' aukera hautatuz. Zure "
+#~ "saguak bi botoi baino gehiago baldin baditu, aldaketa horrek ezkerreko "
+#~ "eta eskuineko botoien betebeharrei baino ez die eragingo. Adibidez, hiru "
+#~ "botoiko sagua baldin badaukazu, erdiko botoiari ez dio eragingo."
+
+#~ msgid ""
+#~ "The default behavior in KDE is to select and activate icons with a single "
+#~ "click of the left button on your pointing device. This behavior is "
+#~ "consistent with what you would expect when you click links in most web "
+#~ "browsers. If you would prefer to select with a single click, and activate "
+#~ "with a double click, check this option."
+#~ msgstr ""
+#~ "KDEren portaera lehenetsia da erakusle-gailuaren ezkerreko botoiarekin "
+#~ "klik bakar bat eginez ikonoa hautatzea eta aktibatzea . Portaera horren "
+#~ "zergatia hau da: webguneetako esteken gainean behin klik egin ondoren "
+#~ "espero ohi duzunarekin bat etortzea. Nahiago baduzu klik bakar batez "
+#~ "hautatu eta bi klik eginez aktibatzea, hautatu aukera hau."
+
+#~ msgid "Activates and opens a file or folder with a single click."
+#~ msgstr ""
+#~ "Klik bakar bat eginez, fitxategi edo karpeta bat aktibatu eta ireki "
+#~ "egiten du."
+
+#~ msgid ""
+#~ "If you check this option, pausing the mouse pointer over an icon on the "
+#~ "screen will automatically select that icon. This may be useful when "
+#~ "single clicks activate icons, and you want only to select the icon "
+#~ "without activating it."
+#~ msgstr ""
+#~ "Aukera hau markatzen baduzu, saguaren erakuslea pantailako ikono baten "
+#~ "gainean pausatuz gero, ikono hori automatikoki hautatuko da. Aukera hori "
+#~ "lagungarria izan daiteke klik bakar batez ikonoak aktibatzen direnerako "
+#~ "eta ikonoa aktibatu gabe hautatu nahi duzunerako."
+
+#~ msgid ""
+#~ "If you have checked the option to automatically select icons, this slider "
+#~ "allows you to select how long the mouse pointer must be paused over the "
+#~ "icon before it is selected."
+#~ msgstr ""
+#~ "Ikonoak automatikoki hautatzeko aukera aktibatu baduzu, hautaketa egin "
+#~ "aurretik saguaren erakusleak ikonoaren gainean zenbat denbora egon behar "
+#~ "duen pausatuta zehazteko aukera ematen du graduatzaile honek."
+
+#~ msgid "Advanced"
+#~ msgstr "Aurreratua"
+
+#~ msgid " x"
+#~ msgstr " x"
+
+#~ msgid "Pointer acceleration:"
+#~ msgstr "Erakuslearen azelerazioa:"
+
+#~ msgid ""
+#~ "<p>This option allows you to change the relationship between the distance "
+#~ "that the mouse pointer moves on the screen and the relative movement of "
+#~ "the physical device itself (which may be a mouse, trackball, or some "
+#~ "other pointing device.)</p><p> A high value for the acceleration will "
+#~ "lead to large movements of the mouse pointer on the screen even when you "
+#~ "only make a small movement with the physical device. Selecting very high "
+#~ "values may result in the mouse pointer flying across the screen, making "
+#~ "it hard to control.</p>"
+#~ msgstr ""
+#~ "<p>Aukera honen bidez, saguaren erakusleak pantailan egiten duen "
+#~ "distantziaren eta gailu fisikoak berak egiten duen mugimendu erlatiboaren "
+#~ "arteko erlazioa alda dezakezu (sagua, kontrol-bola edo beste edozein "
+#~ "erakusle-gailu izan liteke gailu fisikoa).</p><p> Azeleraziorako balio "
+#~ "altuak izanez gero, saguaren erakusleak mugimendu handiak egingo ditu "
+#~ "pantailan, gailu fisikoarekin mugimendu txikia egin arren. Balio oso "
+#~ "altuak hautatzen badira, gezia hegan ibiliko da pantailan, eta zaila "
+#~ "izango da hura kontrolatzea.</p>"
+
+#~ msgid "Pointer threshold:"
+#~ msgstr "Erakuslearen atalasea:"
+
+#~ msgid ""
+#~ "<p>The threshold is the smallest distance that the mouse pointer must "
+#~ "move on the screen before acceleration has any effect. If the movement is "
+#~ "smaller than the threshold, the mouse pointer moves as if the "
+#~ "acceleration was set to 1X;</p><p> thus, when you make small movements "
+#~ "with the physical device, there is no acceleration at all, giving you a "
+#~ "greater degree of control over the mouse pointer. With larger movements "
+#~ "of the physical device, you can move the mouse pointer rapidly to "
+#~ "different areas on the screen.</p>"
+#~ msgstr ""
+#~ "<p>Saguaren erakusleak azelerazioaren eraginaren aurretik pantailan egin "
+#~ "behar duen distantziarik txikiena da atalasea. Mugimendua atalasea baino "
+#~ "txikiagoa bada, 1X balioko azelerazioa ezarrita baleuka bezala mugituko "
+#~ "da saguaren erakuslea.</p><p>Hala, gailu fisikoarekin higidura motzak "
+#~ "egitean, ez da inolako azeleraziorik izango, eta kontrol handiagoa izango "
+#~ "duzu saguaren erakuslearen gain. Gailu fisikoarekin mugimendu handiagoak "
+#~ "eginez gero, saguaren erakuslea bizkor mugi daiteke pantailan barrena.</p>"
+
+#~ msgid " msec"
+#~ msgstr " ms"
+
+#~ msgid "Double click interval:"
+#~ msgstr "Klik bikoitzaren denbora-tartea:"
+
+#~ msgid ""
+#~ "The double click interval is the maximal time (in milliseconds) between "
+#~ "two mouse clicks which turns them into a double click. If the second "
+#~ "click happens later than this time interval after the first click, they "
+#~ "are recognized as two separate clicks."
+#~ msgstr ""
+#~ "Klik bikoitzaren denbora-tartea saguaren bi kliken artean igaro daitekeen "
+#~ "denbora-tarte maximoa (milisegundotan) da. Denbora-tarte horrek klik biak "
+#~ "klik bikoitz bihurtzen ditu. Bigarren klika epe horren ostean egiten "
+#~ "bada, bi klik bereizitzat joko dira."
+
+#~ msgid "Drag start time:"
+#~ msgstr "Arrastatzen hasteko epea:"
+
+#~ msgid ""
+#~ "If you click with the mouse (e.g. in a multi-line editor) and begin to "
+#~ "move the mouse within the drag start time, a drag operation will be "
+#~ "initiated."
+#~ msgstr ""
+#~ "Saguarekin klik egin (adibidez, lerro anitzeko editore batean), eta "
+#~ "arrastatzen hasteko epearen barruan mugitzen hasiz gero, arrastatze-"
+#~ "eragiketa hasiko da."
+
+#~ msgid "Drag start distance:"
+#~ msgstr "Arrastatzen hasteko distantzia:"
+
+#~ msgid ""
+#~ "If you click with the mouse and begin to move the mouse at least the drag "
+#~ "start distance, a drag operation will be initiated."
+#~ msgstr ""
+#~ "Saguaz klik egin, eta gutxienez arrastatzen hasteko tartea besteko "
+#~ "distantzia mugituz gero, arrastatze-eragiketa hasiko da."
+
+#~ msgid "Mouse wheel scrolls by:"
+#~ msgstr "Saguaren gurpilaren irristatzen da honela:"
+
+#~ msgid ""
+#~ "If you use the wheel of a mouse, this value determines the number of "
+#~ "lines to scroll for each wheel movement. Note that if this number exceeds "
+#~ "the number of visible lines, it will be ignored and the wheel movement "
+#~ "will be handled as a page up/down movement."
+#~ msgstr ""
+#~ "Saguaren gurpila erabiltzen baduzu, balio honek gurpilaren mugimendu "
+#~ "bakoitzean zenbat lerro labaindu zehazten du. Balio hori ikus daitezkeen "
+#~ "lerroen kopurua baino handiagoa bada, ez ikusi egingo zaio, eta "
+#~ "gurpilaren mugimendua orria gora eta behera eramateko mugimendutzat joko "
+#~ "da."
+
+#~ msgid "Mouse Navigation"
+#~ msgstr "Saguaren nabigazioa"
+
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "&Mugitu erakuslea teklatuarekin (zenbakizko teklatua erabiliz)"
+
+#~ msgid "&Acceleration delay:"
+#~ msgstr "&Azelerazioaren atzerapena:"
+
+#~ msgid "R&epeat interval:"
+#~ msgstr "&Errepikatze-tartea:"
+
+#~ msgid "Acceleration &time:"
+#~ msgstr "Azelerazio-&denbora:"
+
+#~ msgid " pixel/sec"
+#~ msgstr " pixel/segundo"
+
+#~ msgid "Ma&ximum speed:"
+#~ msgstr "Ge&hieneko abiadura:"
+
+#~ msgid "Acceleration &profile:"
+#~ msgstr "Azelerazio-&profila:"
+
+#~ msgid "Mouse"
+#~ msgstr "Sagua"
+
+#~ msgid "(c) 1997 - 2005 Mouse developers"
+#~ msgstr "(c) 1997 - 2005 Saguaren garatzaileak"
+
+#~ msgid "Patrick Dowler"
+#~ msgstr "Patrick Dowler"
+
+#~ msgid "Dirk A. Mueller"
+#~ msgstr "Dirk A. Mueller"
+
+#~ msgid "David Faure"
+#~ msgstr "David Faure"
+
+#~ msgid "Bernd Gehrmann"
+#~ msgstr "Bernd Gehrmann"
+
+#~ msgid "Rik Hemsley"
+#~ msgstr "Rik Hemsley"
+
+#~ msgid "Brad Hughes"
+#~ msgstr "Brad Hughes"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "Brad Hards"
+#~ msgstr "Brad Hards"
+
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] " pixel"
+#~ msgstr[1] " pixel"
+
+#~ msgid " line"
+#~ msgid_plural " lines"
+#~ msgstr[0] " lerro"
+#~ msgstr[1] " lerro"
+
+#~ msgid "Mouse type: %1"
+#~ msgstr "Sagu mota: %1"
+
+#~ msgid ""
+#~ "RF channel 1 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "RF 1. kanala konfiguratu da. Sakatu saguko Konektatu botoia, esteka "
+#~ "berrezartzeko"
+
+#~ msgid "Press Connect Button"
+#~ msgstr "Sakatu Konektatu botoia"
+
+#~ msgid ""
+#~ "RF channel 2 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "RF 2. kanala konfiguratu da. Sakatu saguko Konektatu botoia, esteka "
+#~ "berrezartzeko"
+
+#~ msgctxt "no cordless mouse"
+#~ msgid "none"
+#~ msgstr "bat ere ez"
+
+#~ msgid "Cordless Mouse"
+#~ msgstr "Haririk gabeko sagua"
+
+#~ msgid "Cordless Wheel Mouse"
+#~ msgstr "Haririk gabeko gurpil-sagua"
+
+#~ msgid "Cordless MouseMan Wheel"
+#~ msgstr "Haririk gabeko MouseMan gurpil-sagua"
+
+#~ msgid "Cordless TrackMan Wheel"
+#~ msgstr "Haririk gabeko TrackMan gurpil-sagua"
+
+#~ msgid "TrackMan Live"
+#~ msgstr "TrackMan Live"
+
+#~ msgid "Cordless TrackMan FX"
+#~ msgstr "Haririk gabeko TrackMan FX"
+
+#~ msgid "Cordless MouseMan Optical"
+#~ msgstr "Haririk gabeko MouseMan sagu optikoa"
+
+#~ msgid "Cordless Optical Mouse"
+#~ msgstr "Haririk gabeko sagu optikoa"
+
+#~ msgid "Cordless MouseMan Optical (2ch)"
+#~ msgstr "Haririk gabeko MouseMan sagu optikoa (2 kanalekoa)"
+
+#~ msgid "Cordless Optical Mouse (2ch)"
+#~ msgstr "Haririk gabeko sagu optikoa (2 kanalekoa)"
+
+#~ msgid "Cordless Mouse (2ch)"
+#~ msgstr "Haririk gabeko sagua (2 kanalekoa)"
+
+#~ msgid "Cordless Optical TrackMan"
+#~ msgstr "Haririk gabeko TrackMan sagu optikoa"
+
+#~ msgid "MX700 Cordless Optical Mouse"
+#~ msgstr "MX700 haririk gabeko sagu optikoa"
+
+#~ msgid "MX700 Cordless Optical Mouse (2ch)"
+#~ msgstr "MX700 haririk gabeko sagu optikoa (2 kanalekoa)"
+
+#~ msgid "Unknown mouse"
+#~ msgstr "Sagu ezezaguna"
+
+#~ msgid "Cordless Name"
+#~ msgstr "Haririk gabeko saguaren izena"
+
+#~ msgid "Sensor Resolution"
+#~ msgstr "Sentsorearen bereizmena"
+
+#~ msgid "400 counts per inch"
+#~ msgstr "400 puntu hazbeteko"
+
+#~ msgid "800 counts per inch"
+#~ msgstr "800 puntu hazbeteko"
+
+#~ msgid "Battery Level"
+#~ msgstr "Bateria-maila"
+
+#~ msgid "RF Channel"
+#~ msgstr "RF kanala"
+
+#~ msgid "Channel 1"
+#~ msgstr "1. kanala"
+
+#~ msgid "Channel 2"
+#~ msgstr "2. kanala"
+
+#~ msgid ""
+#~ "You have a Logitech Mouse connected, and libusb was found at compile "
+#~ "time, but it was not possible to access this mouse. This is probably "
+#~ "caused by a permissions problem - you should consult the manual on how to "
+#~ "fix this."
+#~ msgstr ""
+#~ "Logitech sagu bat konektatua duzu, eta libusb aurkitu da konpilatzean, "
+#~ "baina ezin izan da atzitu sagu hori. Seguru asko, baimen-arazo batek "
+#~ "eragingo zuen hori; eskuliburua irakurri beharko duzu arazoa konpontzeko."
+
+#~ msgid "KDE Classic"
+#~ msgstr "KDE Classic"
+
+#~ msgid "The default cursor theme in KDE 2 and 3"
+#~ msgstr "KDE 2 eta 3-n kurtsore tema lehenetsia"
+
+#~ msgid "No description available"
+#~ msgstr "Ez dago azalpen erabilgarririk"
+
+#~ msgid "Short"
+#~ msgstr "Txikia"
+
+#~ msgid "Long"
+#~ msgstr "Luzea"

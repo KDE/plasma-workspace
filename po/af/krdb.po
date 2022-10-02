@@ -1,0 +1,53 @@
+# UTF-8 test:äëïöü
+# Copyright (C) 2001 Free Software Foundation, Inc.
+# Frikkie Thirion <frix@expertron.co.za>, 2001,2002.
+# Juanita Franz <juanita.franz@vr-web.de>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: krdb stable\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-24 00:47+0000\n"
+"PO-Revision-Date: 2005-06-10 16:33+0200\n"
+"Last-Translator: Juanita Franz <juanita.franz@vr-web.de>\n"
+"Language-Team: AFRIKAANS <translate-discuss-af@lists.sourceforge.net>\n"
+"Language: af\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: krdb.cpp:261
+#, kde-format
+msgid ""
+"# created by KDE Plasma, %1\n"
+"#\n"
+msgstr ""
+
+#, fuzzy
+#~| msgid ""
+#~| "# created by KDE, %1\n"
+#~| "#\n"
+#~| "# If you do not want KDE to override your GTK settings, select\n"
+#~| "# Appearance & Themes -> Colors in the Control Center and disable the "
+#~| "checkbox\n"
+#~| "# \"Apply colors to non-KDE applications\"\n"
+#~| "#\n"
+#~| "#\n"
+#~ msgid ""
+#~ "# created by KDE Plasma, %1\n"
+#~ "#\n"
+#~ "# If you do not want Plasma to override your GTK settings, select\n"
+#~ "# Colors in the System Settings and disable the checkbox\n"
+#~ "# \"Apply colors to non-Qt applications\"\n"
+#~ "#\n"
+#~ "#\n"
+#~ msgstr ""
+#~ "# geskep deur Kde, %1\n"
+#~ "#\n"
+#~ "# As u nie wil hê dat Kde u Gtk instellings oorskryf nie, kies\n"
+#~ "# Verskyning & Temas -> Kleure in die Kontrole Sentrum en deaktiveer die "
+#~ "keuseblokkie\n"
+#~ "# \"Wend Kleure na Nie-kde programme aan\"\n"
+#~ "#\n"
+#~ "#\n"

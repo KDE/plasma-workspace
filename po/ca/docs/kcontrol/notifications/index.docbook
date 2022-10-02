@@ -1,0 +1,368 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Catalan  "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmnotify" lang="&language;">
+<title
+>Arranjament de les notificacions del sistema</title>
+<articleinfo>
+
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+><personname
+><firstname
+>Kai Uwe</firstname
+> <surname
+>Broulik</surname
+></personname
+> <email
+>kde@broulik.de</email
+></author>
+&traductor.Antoni.Bella; 
+</authorgroup>
+
+<date
+>16 d'abril de 2021</date>
+<releaseinfo
+>Plasma 5.21</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Arranjament del sistema</keyword>
+<keyword
+>notificació del sistema</keyword>
+<keyword
+>notificació</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="sys-notify">
+<title
+>Arranjament de les notificacions del sistema</title>
+
+<para
+>El &plasma;, com totes les aplicacions, necessita informar a l'usuari quan es produeix un problema, es finalitza una tasca o si succeeix quelcom. El &plasma; empra un conjunt de <quote
+>Notificacions del sistema</quote
+> per a mantenir informat a l'usuari de què està succeint.</para>
+
+<para
+>Utilitzant aquest mòdul, podreu determinar el que farà el &plasma; per a comunicar-vos cada esdeveniment.</para>
+
+<sect2 id="notification-settings">
+<title
+>Arranjament de les notificacions</title>
+
+<sect3 id="do-not-disturb">
+<title
+>Mode no destorbar</title>
+
+    <para
+>Aquest mode inhabilita totes les notificacions visuals i més audibles per a permetre la concentració en la tasca actual. Les opcions en aquesta secció permeten configurar en quines circumstàncies el &plasma; habilitarà de manera automàtica el mode no destorbar.</para>
+
+    <variablelist>
+
+    <varlistentry>
+    <term
+><guiicon
+>Activa quan les pantalles s'emmirallen</guiicon
+></term>
+    <listitem
+><para
+>Habilita de manera automàtica el mode no destorbar quan s'emmirallen les pantalles, per exemple, durant una presentació.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Activa en compartir la pantalla</guiicon
+></term>
+    <listitem
+><para
+>Habilita de manera automàtica el mode no destorbar quan es comparteixen les pantalles, per exemple, durant una conferència en línia.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Mostra les notificacions crítiques</guiicon
+></term>
+    <listitem
+><para
+>Si es mostraran les notificacions crítiques, com que la bateria està gairebé buida, es mostraran fins i tot en el mode no destorbar.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Commuta amb:</guiicon
+></term>
+    <listitem
+><para
+>Una drecera global que podreu prémer en qualsevol moment per a habilitar i inhabilitar el mode no destorbar.</para
+></listitem>
+    </varlistentry>
+
+    </variablelist>
+
+</sect3>
+
+<sect3 id="notification-filters">
+    <title
+>Filtres</title>
+
+    <variablelist>
+
+    <varlistentry>
+    <term
+>Notificacions crítiques: <guiicon
+>Mantén sempre a dalt</guiicon
+></term>
+    <listitem
+><para
+>Mantindrà sempre a dalt les notificacions crítiques, com que la bateria està gairebé buida. Això assegura que també seran visibles mentre es mira un vídeo a pantalla completa o feu una presentació.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+>Notificacions normals: <guiicon
+>Mantén sempre a dalt</guiicon
+></term>
+    <listitem
+><para
+>Mantindrà sempre a dalt les notificacions normals. Això assegura que també seran visibles mentre es mira un vídeo a pantalla completa o feu una presentació.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+>Notificacions de prioritat baixa: <guiicon
+>Mostra un emergent</guiicon
+> i <guiicon
+>Mostra a l'historial</guiicon
+></term>
+    <listitem
+><para
+>Si es mostraran les notificacions de prioritat baixa, com els canvis de seguiment al reproductor de suports, es mostraran com a emergents o en l'historial, respectivament.</para
+></listitem>
+    </varlistentry>
+
+    </variablelist>
+</sect3>
+
+<sect3 id="notification-behavior">
+    <title
+>Comportament</title>
+
+    <variablelist>
+
+    <varlistentry>
+    <term
+>Emergent: <guiicon
+>Mostra prop de la icona de la notificació</guiicon
+></term>
+    <listitem
+><para
+>Mostrarà els emergents de notificació a prop d'on es troba la icona de notificació en el plafó.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Trieu una posició personalitzada...</guiicon
+></term>
+    <listitem
+><para
+>Permet triar una cantonada fixa de la pantalla on s'ubicaran els emergents de notificació.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+        <term
+><guiicon
+>Oculta després de:</guiicon
+></term>
+    <listitem
+><para
+>Després de quants segons desapareixerà l'emergent de notificació. Podreu triar entre 1 i 120 segons.</para
+></listitem>
+    </varlistentry>
+
+    </variablelist>
+</sect3>
+
+<sect3 id="progress-and-badges">
+    <title
+>Progrés i distintius de l'aplicació</title>
+
+    <sect4 id="application-progress">
+        <title
+>Progrés de l'aplicació</title>
+
+        <para
+>Les opcions en aquesta secció controlen com es presentarà el progrés de l'aplicació, com copiar o descarregar un fitxer.</para>
+
+        <variablelist>
+
+        <varlistentry>
+        <term
+><guiicon
+>Mostra al gestor de tasques</guiicon
+></term>
+        <listitem
+><para
+>Donarà color a la finestra en el plafó segons el progrés.</para
+></listitem>
+        </varlistentry>
+
+        <varlistentry>
+        <term
+><guiicon
+>Mostra a les notificacions</guiicon
+></term>
+        <listitem
+><para
+>Mostrarà un emergent de notificació durant el progrés.</para
+></listitem>
+        </varlistentry>
+
+        <varlistentry>
+        <term
+><guiicon
+>Mantén obert l'emergent durant el progrés</guiicon
+></term>
+        <listitem
+><para
+>Si l'emergent haurà de romandre visible durant tot el progrés o ocultar-se de manera automàtica. Sempre es mostrarà de nou quan la tasca finalitzi o falli.</para
+></listitem>
+        </varlistentry>
+
+        </variablelist>
+    </sect4>
+
+    <sect4 id="badges">
+        <title
+>Distintius de notificació</title>
+
+        <variablelist>
+
+        <varlistentry>
+        <term
+><guiicon
+>Mostra al gestor de tasques</guiicon
+></term>
+        <listitem
+><para
+>Permet que les aplicacions mostrin distintius en el plafó, com un recompte dels missatges sense llegir.</para
+></listitem>
+        </varlistentry>
+
+        </variablelist>
+    </sect4>
+
+</sect3>
+
+</sect2>
+
+<sect2 id="application-settings">
+<title
+>Configuració de l'aplicació</title>
+
+<para
+>En fer clic al botó <guilabel
+>Configura...</guilabel
+> al final de la llista, s'obrirà la pàgina de configuració de l'aplicació, la qual permet configurar el comportament de les notificacions per aplicació i per servei.</para>
+
+<para
+>Utilitzeu la barra lateral a l'esquerra per a triar una entrada des de la categoria <guilabel
+>Aplicacions</guilabel
+> o <guilabel
+>Serveis del sistema</guilabel
+>.</para>
+
+<para
+>Els emergents d'avís general, així com els sons d'inici i sortida es troben sota el servei <guilabel
+>Espai de treball Plasma</guilabel
+>.</para>
+
+<para
+>Les aplicacions que no proporcionen una identificació adequada, com els scripts de l'intèrpret d'ordres, es poden configurar fent servir l'entrada <guilabel
+>Altres aplicacions</guilabel
+>.</para>
+
+<variablelist>
+
+    <varlistentry>
+    <term
+><guiicon
+>Mostra els emergents</guiicon
+></term>
+    <listitem
+><para
+>Si aquesta aplicació pot mostrar les notificacions emergents.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Mostra en el mode no destorbar</guiicon
+></term>
+    <listitem
+><para
+>Si aquesta aplicació pot mostrar les notificacions emergents fins i tot quan no s'estigui en el mode no destorbar.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Mostra a l'historial</guiicon
+></term>
+    <listitem
+><para
+>Si les notificacions d'aquesta aplicació es mantindran en l'historial de notificacions.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Mostra els distintius de notificació</guiicon
+></term>
+    <listitem
+><para
+>Si aquesta aplicació pot fer que es mostrin distintius en el plafó, com un recompte dels missatges sense llegir.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Configura els esdeveniments...</guiicon
+></term>
+    <listitem
+><para
+>Per a les aplicacions &kde; també podreu configurar cada notificació individualment.</para
+></listitem>
+    </varlistentry>
+
+</variablelist>
+
+</sect2>
+
+</sect1>
+
+</article>

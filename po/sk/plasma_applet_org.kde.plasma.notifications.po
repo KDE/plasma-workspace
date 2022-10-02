@@ -1,0 +1,545 @@
+# translation of plasma_applet_org.kde.plasma.notifications.po to Slovak
+# Richard Fric <Richard.Fric@kdemail.net>, 2010.
+# Michal Sulek <misurel@gmail.com>, 2010, 2011.
+# Richard Frič <Richard.Fric@kdemail.net>, 2011.
+# Roman Paholík <wizzardsk@gmail.com>, 2012, 2013, 2014, 2015, 2016, 2017.
+# Mthw <jari_45@hotmail.com>, 2018.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2020, 2021, 2022.
+# Dusan Kazik <prescott66@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-20 00:48+0000\n"
+"PO-Revision-Date: 2022-04-28 08:49+0200\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 22.04.0\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: fileinfo.cpp:170
+#, kde-format
+msgid "Open with %1"
+msgstr "Otvoriť s %1"
+
+#: fileinfo.cpp:174
+#, kde-format
+msgid "Open with…"
+msgstr "Otvoriť s..."
+
+#: filemenu.cpp:115 package/contents/ui/JobItem.qml:266
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Otvoriť priečinok s obsahom"
+
+#: filemenu.cpp:129
+#, kde-format
+msgid "&Copy"
+msgstr "&Kopírovať"
+
+#: filemenu.cpp:137
+#, kde-format
+msgctxt "@action:incontextmenu"
+msgid "Copy Location"
+msgstr "Kopírovať umiestnenie"
+
+#: filemenu.cpp:193
+#, kde-format
+msgid "Properties"
+msgstr "Vlastnosti"
+
+#: globalshortcuts.cpp:23
+#, kde-format
+msgid "Toggle do not disturb"
+msgstr "Prepnúť režim Nevyrušovať"
+
+#: globalshortcuts.cpp:42
+#, kde-format
+msgctxt "OSD popup, keep short"
+msgid "Notifications Off"
+msgstr "Upozornenia vypnuté"
+
+#: globalshortcuts.cpp:43
+#, kde-format
+msgctxt "OSD popup, keep short"
+msgid "Notifications On"
+msgstr "Upozornenia zapnuté"
+
+#: package/contents/ui/EditContextMenu.qml:33
+#, kde-format
+msgid "Copy Link Address"
+msgstr "Kopírovať adresu odkazu"
+
+#: package/contents/ui/EditContextMenu.qml:44
+#, kde-format
+msgid "Copy"
+msgstr "Kopírovať"
+
+#: package/contents/ui/EditContextMenu.qml:61
+#, kde-format
+msgid "Select All"
+msgstr "Vybrať všetko"
+
+#: package/contents/ui/FullRepresentation.qml:73
+#: package/contents/ui/main.qml:86
+#, kde-format
+msgid "Do not disturb"
+msgstr "Nevyrušovať"
+
+#: package/contents/ui/FullRepresentation.qml:115
+#, kde-format
+msgid "For 1 hour"
+msgstr "Počas 1 hodiny"
+
+#: package/contents/ui/FullRepresentation.qml:120
+#, kde-format
+msgid "For 4 hours"
+msgstr "Počas 4 hodín"
+
+#: package/contents/ui/FullRepresentation.qml:129
+#, kde-format
+msgid "Until this evening"
+msgstr "Do večera"
+
+#: package/contents/ui/FullRepresentation.qml:139
+#, kde-format
+msgid "Until tomorrow morning"
+msgstr "Do zajtrajšieho rána"
+
+#: package/contents/ui/FullRepresentation.qml:151
+#, kde-format
+msgid "Until Monday"
+msgstr "Do pondelka"
+
+#: package/contents/ui/FullRepresentation.qml:158
+#, kde-format
+msgid "Until manually disabled"
+msgstr "Kým nebude ručne deaktivované"
+
+#: package/contents/ui/FullRepresentation.qml:203
+#, kde-format
+msgctxt "Do not disturb until date"
+msgid "Until %1"
+msgstr "Do %1"
+
+#: package/contents/ui/FullRepresentation.qml:216
+#, kde-format
+msgctxt "Do not disturb until app has finished (reason)"
+msgid "While %1 is active (%2)"
+msgstr "Pokiaľ je aplikácia %1 aktívna (%2)"
+
+#: package/contents/ui/FullRepresentation.qml:218
+#, kde-format
+msgctxt "Do not disturb until app has finished"
+msgid "While %1 is active"
+msgstr "Pokiaľ je aplikácia %1 aktívna"
+
+#: package/contents/ui/FullRepresentation.qml:224
+#, kde-format
+msgctxt "Do not disturb because external mirrored screens connected"
+msgid "Screens are mirrored"
+msgstr "Obrazovky sú zrkadlené"
+
+#: package/contents/ui/FullRepresentation.qml:400
+#, kde-format
+msgid "Close Group"
+msgstr "Zatvoriť skupinu"
+
+#: package/contents/ui/FullRepresentation.qml:541
+#, kde-format
+msgid "Show Fewer"
+msgstr "Zobraziť menej"
+
+#: package/contents/ui/FullRepresentation.qml:543
+#, kde-format
+msgctxt "Expand to show n more notifications"
+msgid "Show %1 More"
+msgstr "Zobraziť ďalších %1"
+
+#: package/contents/ui/FullRepresentation.qml:583
+#: package/contents/ui/main.qml:89
+#, kde-format
+msgid "No unread notifications"
+msgstr "Žiadne neprečítané upozornenia"
+
+#: package/contents/ui/FullRepresentation.qml:598
+#: package/contents/ui/main.qml:66
+#, kde-format
+msgid "Notification service not available"
+msgstr "Služba upozornení nie je dostupná"
+
+#: package/contents/ui/FullRepresentation.qml:600
+#, kde-format
+msgctxt "Vendor and product name"
+msgid "Notifications are currently provided by '%1 %2'"
+msgstr "Oznámenia v súčasnosti poskytuje '%1 %2'"
+
+#: package/contents/ui/JobDetails.qml:35
+#, kde-format
+msgctxt "Row description, e.g. Source"
+msgid "%1:"
+msgstr "%1:"
+
+#: package/contents/ui/JobDetails.qml:106
+#, kde-format
+msgctxt "How many bytes have been copied"
+msgid "%2 of %1"
+msgstr "%2 z %1"
+
+#: package/contents/ui/JobDetails.qml:110
+#, kde-format
+msgctxt "How many files have been copied"
+msgid "%2 of %1 file"
+msgid_plural "%2 of %1 files"
+msgstr[0] "%2 súbor z %1"
+msgstr[1] "%2 súbory z %1"
+msgstr[2] "%2 súborov z %1"
+
+#: package/contents/ui/JobDetails.qml:113
+#, kde-format
+msgctxt "How many dirs have been copied"
+msgid "%2 of %1 folder"
+msgid_plural "%2 of %1 folders"
+msgstr[0] "%2 priečinok z %1"
+msgstr[1] "%2 priečinky z %1"
+msgstr[2] "%2 priečinkov z %1"
+
+#: package/contents/ui/JobDetails.qml:116
+#, kde-format
+msgctxt "How many items (that includes files and dirs) have been copied"
+msgid "%2 of %1 item"
+msgid_plural "%2 of %1 items"
+msgstr[0] "%2 položka z %1"
+msgstr[1] "%2 položky z %1"
+msgstr[2] "%2 položiek z %1"
+
+#: package/contents/ui/JobDetails.qml:124
+#, kde-format
+msgid "%1 file"
+msgid_plural "%1 files"
+msgstr[0] "%1 súbor"
+msgstr[1] "%1 súbory"
+msgstr[2] "%1 súborov"
+
+#: package/contents/ui/JobDetails.qml:126
+#, kde-format
+msgid "%1 folder"
+msgid_plural "%1 folders"
+msgstr[0] "%1 priečinok"
+msgstr[1] "%1 priečinky"
+msgstr[2] "%1 priečinkov"
+
+#: package/contents/ui/JobDetails.qml:128
+#, kde-format
+msgid "%1 item"
+msgid_plural "%1 items"
+msgstr[0] "%1 položka"
+msgstr[1] "%1 položky"
+msgstr[2] "%1 položiek"
+
+#: package/contents/ui/JobDetails.qml:145
+#, kde-format
+msgctxt "Bytes per second"
+msgid "%1/s"
+msgstr "%1/s"
+
+#: package/contents/ui/JobItem.qml:163
+#, kde-format
+msgctxt "Percentage of a job"
+msgid "%1%"
+msgstr "%1%"
+
+#: package/contents/ui/JobItem.qml:177
+#, kde-format
+msgctxt "Pause running job"
+msgid "Pause"
+msgstr "Pozastaviť"
+
+#: package/contents/ui/JobItem.qml:187
+#, kde-format
+msgctxt "Cancel running job"
+msgid "Cancel"
+msgstr "Zrušiť"
+
+#: package/contents/ui/JobItem.qml:198
+#, kde-format
+msgctxt "A button tooltip; hides item details"
+msgid "Hide Details"
+msgstr "Skryť podrobnosti"
+
+#: package/contents/ui/JobItem.qml:199
+#, kde-format
+msgctxt "A button tooltip; expands the item to show details"
+msgid "Show Details"
+msgstr "Zobraziť podrobnosti"
+
+#: package/contents/ui/JobItem.qml:230
+#: package/contents/ui/ThumbnailStrip.qml:169
+#, kde-format
+msgid "More Options…"
+msgstr "Viac možností..."
+
+#: package/contents/ui/JobItem.qml:258
+#, kde-format
+msgid "Open"
+msgstr "Otvoriť"
+
+#: package/contents/ui/main.qml:50
+#, kde-format
+msgid "%1 running job"
+msgid_plural "%1 running jobs"
+msgstr[0] "%1 spustená úloha"
+msgstr[1] "%1 spustené úlohy"
+msgstr[2] "%1 spustených úloh"
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgctxt "Job title (percentage)"
+msgid "%1 (%2%)"
+msgstr "%1 (%2%)"
+
+#: package/contents/ui/main.qml:59
+#, kde-format
+msgid "%1 running job (%2%)"
+msgid_plural "%1 running jobs (%2%)"
+msgstr[0] "%1 spustená úloha (%2%)"
+msgstr[1] "%1 spustené úlohy (%2%)"
+msgstr[2] "%1 spustených úloh (%2%)"
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "%1 unread notification"
+msgid_plural "%1 unread notifications"
+msgstr[0] "%1 neprečítané upozornenie"
+msgstr[1] "%1 neprečítané upozornenia"
+msgstr[2] "%1 neprečítaných upozornení"
+
+#: package/contents/ui/main.qml:83
+#, kde-format
+msgid "Do not disturb until %1"
+msgstr "Nevyrušovať do %1"
+
+#: package/contents/ui/main.qml:190
+#, kde-format
+msgid "Clear All Notifications"
+msgstr "Vymazať všetky oznámenia"
+
+#: package/contents/ui/main.qml:200
+#, kde-format
+msgid "&Configure Event Notifications and Actions…"
+msgstr "&Nastaviť pripomienky a akcie udalostí..."
+
+#: package/contents/ui/NotificationHeader.qml:120
+#, fuzzy, kde-format
+#| msgctxt "notification was just added, keep short"
+#| msgid "Just now"
+msgctxt "Notification was added less than a minute ago, keep short"
+msgid "Just now"
+msgstr "Práve teraz"
+
+#: package/contents/ui/NotificationHeader.qml:126
+#, kde-format
+msgctxt "Notification was added minutes ago, keep short"
+msgid "%1 min ago"
+msgid_plural "%1 min ago"
+msgstr[0] "Pred %1 minútou"
+msgstr[1] "Pred %1 minútami"
+msgstr[2] "Pred %1 minútami"
+
+#: package/contents/ui/NotificationHeader.qml:160
+#, kde-format
+msgctxt "seconds remaining, keep short"
+msgid "%1 s remaining"
+msgid_plural "%1 s remaining"
+msgstr[0] "Zostáva %1 sekunda"
+msgstr[1] "Zostávajú %1 sekundy"
+msgstr[2] "Zostáva %1 sekúnd"
+
+#: package/contents/ui/NotificationHeader.qml:164
+#, kde-format
+msgctxt "minutes remaining, keep short"
+msgid "%1 min remaining"
+msgid_plural "%1 min remaining"
+msgstr[0] "Zostáva %1 minúta"
+msgstr[1] "Zostávajú %1 minúty"
+msgstr[2] "Zostáva %1 minút"
+
+#: package/contents/ui/NotificationHeader.qml:169
+#, kde-format
+msgctxt "hours remaining, keep short"
+msgid "%1 h remaining"
+msgid_plural "%1 h remaining"
+msgstr[0] "Zostáva %1 hodina"
+msgstr[1] "Zostávajú %1 hodiny"
+msgstr[2] "Zostáva %1 hodín"
+
+#: package/contents/ui/NotificationHeader.qml:193
+#, kde-format
+msgid "Configure"
+msgstr "Nastaviť"
+
+#: package/contents/ui/NotificationHeader.qml:210
+#, kde-format
+msgctxt "Opposite of minimize"
+msgid "Restore"
+msgstr "Obnoviť"
+
+#: package/contents/ui/NotificationHeader.qml:211
+#, kde-format
+msgid "Minimize"
+msgstr "Minimalizovať"
+
+#: package/contents/ui/NotificationHeader.qml:234
+#, kde-format
+msgid "Close"
+msgstr "Zatvoriť"
+
+#: package/contents/ui/NotificationItem.qml:207
+#, kde-format
+msgctxt "Job name, e.g. Copying is paused"
+msgid "%1 (Paused)"
+msgstr "%1 (Pozastavené)"
+
+#: package/contents/ui/NotificationItem.qml:212
+#, kde-format
+msgctxt "Job name, e.g. Copying has failed"
+msgid "%1 (Failed)"
+msgstr "%1 (Zlyhalo)"
+
+#: package/contents/ui/NotificationItem.qml:214
+#, kde-format
+msgid "Job Failed"
+msgstr "Úloha zlyhala"
+
+#: package/contents/ui/NotificationItem.qml:218
+#, kde-format
+msgctxt "Job name, e.g. Copying has finished"
+msgid "%1 (Finished)"
+msgstr "%1 (Dokončené)"
+
+#: package/contents/ui/NotificationItem.qml:220
+#, kde-format
+msgid "Job Finished"
+msgstr "Úloha dokončená"
+
+#: package/contents/ui/NotificationItem.qml:367
+#, kde-format
+msgctxt "Reply to message"
+msgid "Reply"
+msgstr "Odpovedať"
+
+#: package/contents/ui/NotificationReplyField.qml:36
+#, kde-format
+msgctxt "Text field placeholder"
+msgid "Type a reply…"
+msgstr "Zadajte odpoveď..."
+
+#: package/contents/ui/NotificationReplyField.qml:56
+#, kde-format
+msgctxt "@action:button"
+msgid "Send"
+msgstr "Odoslať"
+
+#~ msgid "Open with..."
+#~ msgstr "Otvoriť s..."
+
+#~ msgid "Clear History"
+#~ msgstr "Vymazať históriu"
+
+#, fuzzy
+#~| msgid "Select All"
+#~ msgctxt "Clear all notifications"
+#~ msgid "Clear All"
+#~ msgstr "Vybrať všetko"
+
+#~ msgctxt "Resume paused job"
+#~ msgid "Resume"
+#~ msgstr "Pokračovať"
+
+#~ msgid "Until turned off"
+#~ msgstr "Do vypnutia"
+
+#~ msgid "No unread notifications."
+#~ msgstr "Žiadne nové upozornenia."
+
+#~ msgid "Information"
+#~ msgstr "Informácia"
+
+#~ msgid "Show application and system notifications"
+#~ msgstr "Zobraziť upozornenia aplikácií a systému"
+
+#~ msgid "Show a history of notifications"
+#~ msgstr "Zobraziť históriu upozornení"
+
+#~ msgid "Track file transfers and other jobs"
+#~ msgstr "Sledovať presuny súborov a iné úlohy"
+
+#~ msgid "Use custom position for the notification popup"
+#~ msgstr "Použiť vlastnú polohu pre vyskakovacie okno upozornenia"
+
+#~ msgctxt "Either just 1 dir or m of n dirs are being processed"
+#~ msgid "1 dir"
+#~ msgid_plural "%2 of %1 dirs"
+#~ msgstr[0] "1 adresár"
+#~ msgstr[1] "%2 z %1 adresárov"
+#~ msgstr[2] "%2 z %1 adresárov"
+
+#~ msgid "%1 of %2 %3"
+#~ msgstr "%1 z %2 %3"
+
+#~ msgid "No notifications or jobs"
+#~ msgstr "Žiadne upozornenia ani úlohy"
+
+#~ msgctxt "10 seconds ago, keep short"
+#~ msgid "10 s ago"
+#~ msgstr "pred 10 s"
+
+#~ msgctxt "30 seconds ago, keep short"
+#~ msgid "30 s ago"
+#~ msgstr "pred 30 s"
+
+#~ msgctxt "notification was added yesterday, keep short"
+#~ msgid "Yesterday"
+#~ msgstr "Včera"
+
+#~ msgctxt "notification was added n days ago, keep short"
+#~ msgid "%1 day ago"
+#~ msgid_plural "%1 days ago"
+#~ msgstr[0] "pred %1 dňom"
+#~ msgstr[1] "pred %1 dňami"
+#~ msgstr[2] "pred %1 dňami"
+
+#~ msgid "History"
+#~ msgstr "História"
+
+#~ msgctxt ""
+#~ "Indicator that there are more urls in the notification than previews shown"
+#~ msgid "+%1"
+#~ msgstr "+%1"
+
+#~ msgctxt "the job, which can be anything, finished with error"
+#~ msgid "%1: Error"
+#~ msgstr "%1: Chyba"
+
+#~ msgid "Job Error"
+#~ msgstr "Chyba úlohy"
+
+#~ msgctxt "m of n dirs are being processed"
+#~ msgid "dirs"
+#~ msgstr "adresáre"
+
+#~ msgid "&Application notifications:"
+#~ msgstr "Upozornenia aplikácií:"
+
+#~ msgid "&File transfers and jobs:"
+#~ msgstr "Presuny súborov a úlohy:"
+
+#~ msgid "Choose which information to show"
+#~ msgstr "Vyberte, ktoré informácie sa majú zobraziť"
+
+#~ msgid "Transfers"
+#~ msgstr "Prevody"

@@ -1,0 +1,74 @@
+# Translation of plasma_runner_shell.po to Brazilian Portuguese
+# Copyright (C) 2008-2016 This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Diniz Bortolotto <diniz.bortolotto@gmail.com>, 2008.
+# André Marcelo Alvarenga <alvarenga@kde.org>, 2009, 2010, 2011, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_shell\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-27 00:45+0000\n"
+"PO-Revision-Date: 2016-05-13 21:26-0300\n"
+"Last-Translator: André Marcelo Alvarenga <alvarenga@kde.org>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_br@kde.org>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: shellrunner.cpp:35
+#, kde-format
+msgid "Finds commands that match :q:, using common shell syntax"
+msgstr ""
+"Localiza comandos que correspondam ao :q:, usando a sintaxe comum do shell"
+
+#: shellrunner.cpp:36
+#, kde-format
+msgid "Run in Terminal Window"
+msgstr "Executar em janela do Terminal"
+
+#: shellrunner.cpp:54
+#, kde-format
+msgid "Run %1"
+msgstr "Executar %1"
+
+#~ msgid "Enter the user you want to run the application as here."
+#~ msgstr "Informe aqui o usuário com o qual deseja executar o aplicativo."
+
+#~ msgid "User&name:"
+#~ msgstr "Nome de &usuário:"
+
+#~ msgid "Enter the password here for the user you specified above."
+#~ msgstr "Informe aqui a senha do usuário que você especificou acima."
+
+#~ msgid "Pass&word:"
+#~ msgstr "&Senha:"
+
+#~ msgid ""
+#~ "Check this option if the application you want to run is a text mode "
+#~ "application. The application will then be run in a terminal emulator "
+#~ "window."
+#~ msgstr ""
+#~ "Marque esta opção se o aplicativo que você deseja executar é um "
+#~ "aplicativo em modo texto. O aplicativo será, então, executado em uma "
+#~ "janela de emulador de terminal."
+
+#~ msgid "Run in &terminal window"
+#~ msgstr "Executar em uma janela de &terminal"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "user id. Every process has a user id associated with it. This id code "
+#~ "determines file access and other permissions. The password of the user is "
+#~ "required to do this."
+#~ msgstr ""
+#~ "Marque esta opção se você quiser executar o aplicativo com uma ID de "
+#~ "usuário diferente. Cada processo tem uma ID de usuário associada com ele. "
+#~ "Este código de ID determina o acesso a arquivos e outras permissões. A "
+#~ "senha do usuário é necessária para fazer isto."
+
+#~ msgid "Run as a different &user"
+#~ msgstr "Executar como um &usuário diferente"

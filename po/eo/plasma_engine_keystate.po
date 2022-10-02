@@ -1,0 +1,91 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Markus Sunela <markus.sunela@tut.fi>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"PO-Revision-Date: 2009-10-25 13:33+0200\n"
+"Last-Translator: Markus Sunela <markus.sunela@tut.fi>\n"
+"Language-Team: eo <kde-i18n-doc@kde.org>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: keystate.cpp:15
+msgid "Shift"
+msgstr "Majuskl"
+
+#: keystate.cpp:16
+msgid "Ctrl"
+msgstr "Ktrl"
+
+#: keystate.cpp:17
+msgid "Alt"
+msgstr "Alt"
+
+#: keystate.cpp:18
+msgid "Meta"
+msgstr "Meta"
+
+#: keystate.cpp:19
+msgid "Super"
+msgstr "Super"
+
+#: keystate.cpp:20
+msgid "Hyper"
+msgstr "Hyper"
+
+#: keystate.cpp:21
+msgid "AltGr"
+msgstr "AltGr"
+
+#: keystate.cpp:22
+msgid "Num Lock"
+msgstr "Nombra baskulo"
+
+#: keystate.cpp:23
+msgid "Caps Lock"
+msgstr "Majuskla baskulo"
+
+#: keystate.cpp:24
+msgid "Scroll Lock"
+msgstr "Ruluma baskulo"
+
+#: keystate.cpp:26
+msgid "Left Button"
+msgstr "Maldekstra butono"
+
+#: keystate.cpp:27
+msgid "Right Button"
+msgstr "Dekstra butono"
+
+#: keystate.cpp:28
+msgid "Middle Button"
+msgstr "Centra butono"
+
+#: keystate.cpp:29
+msgid "First X Button"
+msgstr "Unua X butono"
+
+#: keystate.cpp:30
+msgid "Second X Button"
+msgstr "Dua X butono"
+
+#: keystate.cpp:44 keystate.cpp:54 keystate.cpp:81 keystate.cpp:102
+#: keystate.cpp:110
+msgid "Pressed"
+msgstr "Presita"
+
+#: keystate.cpp:45 keystate.cpp:88 keystate.cpp:111
+msgid "Latched"
+msgstr "Fiksita"
+
+#: keystate.cpp:46 keystate.cpp:95 keystate.cpp:112
+msgid "Locked"
+msgstr "Ŝlosita"

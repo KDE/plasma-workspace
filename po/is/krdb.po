@@ -1,0 +1,56 @@
+# translation of krdb.po to Icelandic
+# Copyright (C) 2003, 2009 Free Software Foundation, Inc.
+#
+# Pjetur G. Hjaltason <pjetur@pjetur.net>, 2003.
+# Sveinn í Felli <sveinki@nett.is>, 2009, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: krdb\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-24 00:47+0000\n"
+"PO-Revision-Date: 2022-08-25 10:01+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"Language-Team: Icelandic\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.12.3\n"
+"Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
+"\n"
+"\n"
+
+#: krdb.cpp:261
+#, kde-format
+msgid ""
+"# created by KDE Plasma, %1\n"
+"#\n"
+msgstr ""
+"# Búið til af KDE Plasma, %1\n"
+"#\n"
+
+#, fuzzy
+#~| msgid ""
+#~| "# created by KDE, %1\n"
+#~| "#\n"
+#~| "# If you do not want KDE to override your GTK settings, select\n"
+#~| "# Appearance -> Colors in the System Settings and disable the checkbox\n"
+#~| "# \"Apply colors to non-KDE4 applications\"\n"
+#~| "#\n"
+#~| "#\n"
+#~ msgid ""
+#~ "# created by KDE Plasma, %1\n"
+#~ "#\n"
+#~ "# If you do not want Plasma to override your GTK settings, select\n"
+#~ "# Colors in the System Settings and disable the checkbox\n"
+#~ "# \"Apply colors to non-Qt applications\"\n"
+#~ "#\n"
+#~ "#\n"
+#~ msgstr ""
+#~ "# Búið til af KDE, %1\n"
+#~ "#\n"
+#~ "# Ef þú vilt ekki að KDE taki yfir GTK stillingar, veldu þá\n"
+#~ "# Útlit -> Litir á stjórnborðinu og afveldu\n"
+#~ "# \"Virkja liti í forritum ótengdum KDE4.\"\n"
+#~ "#\n"
+#~ "#\n"

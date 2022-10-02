@@ -1,0 +1,33 @@
+# translation of plasma_runner_windowedwidgets.po to Slovak
+# Richard Fric <Richard.Fric@kdemail.net>, 2010.
+# Michal Sulek <misurel@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_windowedwidgets\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2010-12-15 21:41+0100\n"
+"Last-Translator: Michal Sulek <misurel@gmail.com>\n"
+"Language-Team: Slovak <kde-sk@linux.sk>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.1\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: windowedwidgetsrunner.cpp:30
+#, kde-format
+msgid "Finds Plasma widgets whose name or description match :q:"
+msgstr "Nájde plasma widgety, ktorých názov alebo popis zodpovedá :q:"
+
+#: windowedwidgetsrunner.cpp:31 windowedwidgetsrunner.cpp:52
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "mobile applications"
+msgstr "mobilne aplikacie"
+
+#: windowedwidgetsrunner.cpp:32
+#, kde-format
+msgid "list all Plasma widgets that can run as standalone applications"
+msgstr "zobrazí všetky widgety, ktoré môžu bežať ako samostatné aplikácie"

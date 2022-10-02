@@ -1,0 +1,239 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Korean "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="fonts" lang="&language;">
+<articleinfo>
+<title
+>글꼴</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+<othercredit lang="ko" role="translator"
+><surname
+>박</surname
+><firstname
+>신조</firstname
+><affiliation
+><address
+><email
+>kde@peremen.name</email
+></address
+></affiliation
+><contrib
+>한국어 번역</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2018-12-10</date>
+<releaseinfo
+>Plasma 5.14</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>글꼴</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_fonts">
+
+<title
+>글꼴</title>
+
+<para
+>이 모듈에서는 &kde; 데스크톱의 다양한 부분에서 사용되는 글꼴을 변경할 수 있습니다.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>글꼴 설정 모듈의 스크린샷입니다</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>글꼴 설정 모듈</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>이 패널은 시스템에서 글꼴이 사용되는 곳에 따라서 여러 그룹으로 나뉘어 있으며 각각 그룹을 개별적으로 설정할 수 있습니다: </para>
+
+<itemizedlist>
+<listitem
+><para
+><guilabel
+>일반:</guilabel
+> 다른 글꼴 그룹에 해당하지 않는 모든 곳에서 사용하는 글꼴</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>고정폭:</guilabel
+> 고정폭 글꼴이 필요한 곳에서 사용하는 글꼴</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>작음:</guilabel
+> 작은 글꼴이 필요한 곳에서 사용하는 글꼴</para
+></listitem
+> 
+
+<listitem
+><para
+><guilabel
+>도구 모음:</guilabel
+> &kde; 프로그램 도구 모음에서 사용하는 글꼴</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>메뉴:</guilabel
+> &kde; 프로그램 메뉴에서 사용하는 글꼴</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>창 제목:</guilabel
+> 창 제목 표시에 사용하는 글꼴</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>작업 표시줄:</guilabel
+> 작업 표시줄 패널 애플릿에서 사용하는 글꼴</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>데스크톱:</guilabel
+> 데스크톱 항목 아이콘 설명에 사용하는 글꼴</para
+></listitem>
+
+</itemizedlist>
+
+<para
+>각각 글꼴 분류에는 개별적으로 <guibutton
+>선택...</guibutton
+> 단추가 있습니다. 이 단추를 누르면 대화 상자가 표시되며 새로운 글꼴 종류, 스타일, 크기를 설정할 수 있습니다. <guibutton
+>확인</guibutton
+> 단추를 누르면 적용합니다.</para>
+
+<para
+>선택된 글꼴은 <guibutton
+>선택...</guibutton
+> 단추와 글꼴 그룹 이름 사이의 텍스트 상자에서 미리 볼 수 있습니다.</para>
+
+<para
+>선택한 내용을 적용하려면 <guibutton
+>확인</guibutton
+> 단추를 누르십시오. 필요한 &kde; 구성 요소를 다시 시작해서 변경 사항을 즉시 적용합니다.</para>
+
+<para
+><guibutton
+>모든 글꼴 설정...</guibutton
+> 단추를 누르면 선택한 모든 글꼴의 속성을 빠르게 적용할 수 있습니다. 표준 글꼴 선택 대화 상자와 비슷한 대화 상자가 나타나지만 <guilabel
+>글꼴</guilabel
+>, <guilabel
+>글꼴 스타일</guilabel
+>, <guilabel
+>크기</guilabel
+> 옆에 체크 상자가 나타나서 해당 속성만 별도로 변경할 수 있습니다. 이 중 임의의 옵션을 선택해서 모든 글꼴 그룹에 적용할 수 있습니다.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>모든 글꼴 설정</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="adjust-all.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>모든 글꼴 설정... 대화 상자</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>예를 들어 서로 다른 글꼴 종류를 선택했고 해당 글꼴이 모두 큰 것 같으면 글꼴 종류나 스타일을 변경하지 않고 글꼴 크기를 조정할 수 있습니다. 예를 들어 화면 해상도를 변경했을 때 발생할 수 있습니다.</para>
+
+<sect2 id="fonts-aa">
+<title
+>텍스트 앤티에일리어싱</title>
+
+<para
+><guilabel
+>제조사 기본값</guilabel
+> 설정을 사용하면 배포판에서 사용하는 기본 앤티에일리어싱 설정을 사용합니다. 드롭다운 상자에서 <guilabel
+>사용 안 함</guilabel
+>을 선택하면 모든 앤티에일리어싱을 비활성화할 수 있습니다.</para>
+
+<para
+>다른 앤티에일리어싱 설정을 사용하려면 <guilabel
+>앤티에일리어싱 사용:</guilabel
+> 옆에 있는 상자에서 <guilabel
+>사용함</guilabel
+>을 선택하고 사용자 정의 설정을 적용하십시오.</para>
+
+<para
+><guilabel
+>제외할 범위:</guilabel
+> 체크 상자를 선택하면 앤티에일리어싱을 적용하지 <emphasis
+>않을</emphasis
+> 글꼴 크기 범위를 지정할 수 있습니다. 아래쪽에 있는 콤보 상자 두 개로 범위를 지정할 수 있습니다.</para>
+
+<para
+>글꼴 앤티에일리어싱 방식, 적용 방법을 변경하려면 <ulink url="https://en.wikipedia.org/wiki/Subpixel_rendering"
+>서브픽셀 렌더링</ulink
+>과 <ulink url="https://en.wikipedia.org/wiki/Font_hinting"
+>글꼴 힌팅</ulink
+> 설정을 변경할 수 있습니다. 개별 설정에 대해서 자세히 모른다면 기본값을 사용하기를 추천합니다.</para>
+
+<note
+><para
+>앤티에일리어싱이 적용된 글꼴과 아이콘을 사용하려면 디스플레이 서버와 &Qt;에서 모두 지원해야 하고, 앤티에일리어싱을 지원하는 글꼴을 사용하고, 디스플레이 서버의 글꼴 기능을 사용해야 합니다. 만약 문제가 있다면 해당 &kde; 메일링 리스트에 연락하십시오.</para
+></note>
+
+</sect2>
+
+<sect2 id="fonts-dpi">
+<title
+>글꼴 DPI</title>
+
+<para
+><guilabel
+>글꼴 DPI 강제 지정:</guilabel
+> 기본 시스템 설정과 다른 DPI를 지정할 수 있습니다. 기본값으로 이 설정은 <guilabel
+>비활성화</guilabel
+>되어 있습니다. X 서버에서 사용 중인 DPI는 터미널에서 <userinput
+>xdpyinfo | grep resolution</userinput
+> 명령으로 확인할 수 있으며 드롭다운 상자에서 DPI를 변경할 수 있습니다. 새로 시작한 프로그램에만 적용됩니다.</para>
+</sect2>
+
+</sect1>
+
+</article>

@@ -1,0 +1,199 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Russian "INCLUDE">
+]>
+<article id="desktopthemedetails" lang="&language;">
+<articleinfo>
+<title
+>Оформление рабочего стола Plasma</title>
+<authorgroup>
+<author
+><firstname
+>Andrew</firstname
+> <surname
+>Lake</surname
+></author>
+<author
+><firstname
+>Carl</firstname
+> <surname
+>Schwan</surname
+> </author>
+<othercredit role="translator"
+><firstname
+>Олеся</firstname
+><surname
+>Герасименко</surname
+><affiliation
+><address
+><email
+>gammaray@basealt.ru</email
+></address
+></affiliation
+><contrib
+>Перевод на русский язык</contrib
+></othercredit
+><othercredit role="reviewer"
+><firstname
+>Александр</firstname
+><surname
+>Яворский</surname
+> <contrib
+>Рецензирование</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>9 апреля 2021 г.</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>параметры системы</keyword>
+<keyword
+>рабочий стол</keyword>
+<keyword
+>оформление</keyword>
+<keyword
+>тема</keyword>
+<keyword
+>plasma</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>&plasma; поставляется с несколькими оформлениями. Оформление &plasma; определяет то, как отображаются различные компоненты &plasma; (например, плазмоиды, панели, виджеты). </para>
+
+<para>
+  <screenshot>
+    <screeninfo
+>Ниже представлен снимок экрана с диспетчером оформлений &plasma;</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="main.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase
+>Настройка оформления &plasma;</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</para>
+
+<para
+>Этот модуль программы &systemsettings; позволяет:</para>
+<itemizedlist>
+  <listitem
+><para
+>устанавливать и выбирать оформления &plasma;;</para
+></listitem>
+  <listitem
+><para
+>редактировать оформления &plasma;;</para
+></listitem>
+  <listitem
+><para
+>удалять оформления &plasma;.</para
+></listitem>
+</itemizedlist>
+
+<para
+>Поле <guilabel
+>Поиск..</guilabel
+>, расположенное над списком оформлений, позволяет отфильтровать этот список. Кроме того, можно воспользоваться раскрывающимся меню рядом с этим полем, чтобы просмотреть только <guimenuitem
+>Светлые оформления</guimenuitem
+>, только <guimenuitem
+>Тёмные оформления</guimenuitem
+> или только оформления <guimenuitem
+>С поддержкой цветовых схем</guimenuitem
+>. </para>
+
+<para
+>Чтобы удалить оформление, воспользуйтесь кнопкой <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+>, расположенной в нижнем правом углу миниатюры оформления. Для отмены этого действия нажмите кнопку <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-undo.png" format="PNG"/></imageobject
+></inlinemediaobject
+>. При нажатии кнопки <guibutton
+>Применить</guibutton
+> будет выполнено фактическое удаление оформлений, выбранных для удаления, поэтому после этого отменить отдельные или все удаления будет невозможно. </para>
+
+<para
+>Если в системе установлен пакет «plasma-sdk», при наведении курсора на миниатюру оформления появится кнопка запуска программы <application
+>Просмотр тем Plasma</application
+>. </para>
+<para
+>Дополнительная информация доступна на <ulink url="https://develop.kde.org/docs/plasma/theme/theme-details/"
+>этой странице</ulink
+>. </para>
+
+<variablelist>
+  <varlistentry>
+    <term
+><guilabel
+>Загрузить оформления рабочего стола...</guilabel
+></term>
+    <listitem>
+    <para
+>Чтобы воспользоваться этой возможностью, убедитесь в наличии подключения к Интернету. Нажмите указанную выше кнопку и в открывшемся диалоге выберите новое оформление. Для установки оформления нажмите кнопку <guibutton
+>Установить</guibutton
+>. После этого нажмите <guibutton
+>Закрыть</guibutton
+> — установленное оформление сразу же будет доступно для использования. </para>
+    <para>
+    <screenshot>
+    <screeninfo
+>Загрузить оформления рабочего стола...</screeninfo>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="get-new-theme.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase
+>Загрузить оформления рабочего стола...</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    </para>
+    </listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>Установить из файла...</guilabel
+></term>
+    <listitem>
+      <para
+>Используйте эту кнопку, чтобы открыть папку, в которую были загружены из Интернета новые оформления. Откроется диалоговое окно, в котором можно указать расположение имеющихся на диске архивов с оформлениями.</para>
+
+      <para
+>При нажатии кнопки <guibutton
+>Открыть</guibutton
+> указанное оформление будет установлено и показано в списке доступных оформлений. </para>
+    </listitem>
+  </varlistentry>
+</variablelist>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

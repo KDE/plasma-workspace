@@ -1,0 +1,756 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Petros Vidalis <p_vidalis@hotmail.com>, 2010.
+# Stelios <sstavra@gmail.com>, 2012.
+# Dimitrios Glentadakis <dglent@gmail.com>, 2013.
+# Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"PO-Revision-Date: 2016-01-13 23:57+0200\n"
+"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 2.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: soliddeviceengine.cpp:114
+msgid "Parent UDI"
+msgstr "UDI Γονέα"
+
+#: soliddeviceengine.cpp:115
+msgid "Vendor"
+msgstr "Προμηθευτής"
+
+#: soliddeviceengine.cpp:116
+msgid "Product"
+msgstr "Προϊόν"
+
+#: soliddeviceengine.cpp:117
+msgid "Description"
+msgstr "Περιγραφή"
+
+#: soliddeviceengine.cpp:118
+msgid "Icon"
+msgstr "Εικονίδιο"
+
+#: soliddeviceengine.cpp:119 soliddeviceengine.cpp:592
+msgid "Emblems"
+msgstr "Εμβλήματα"
+
+#: soliddeviceengine.cpp:120 soliddeviceengine.cpp:476
+#: soliddeviceengine.cpp:482 soliddeviceengine.cpp:495
+msgid "State"
+msgstr "Κατάσταση"
+
+#: soliddeviceengine.cpp:121 soliddeviceengine.cpp:477
+#: soliddeviceengine.cpp:483 soliddeviceengine.cpp:491
+#: soliddeviceengine.cpp:493
+msgid "Operation result"
+msgstr "Αποτέλεσμα λειτουργίας"
+
+#: soliddeviceengine.cpp:122
+msgid "Timestamp"
+msgstr "Χρονική σφραγίδα"
+
+#: soliddeviceengine.cpp:130
+msgid "Processor"
+msgstr "Επεξεργαστής"
+
+#: soliddeviceengine.cpp:131
+msgid "Number"
+msgstr "Αριθμός"
+
+#: soliddeviceengine.cpp:132
+msgid "Max Speed"
+msgstr "Μέγιστη ταχύτητα"
+
+#: soliddeviceengine.cpp:133
+msgid "Can Change Frequency"
+msgstr "Δυνατότητα αλλαγής συχνότητας"
+
+#: soliddeviceengine.cpp:141
+msgid "Block"
+msgstr "Φραγή"
+
+#: soliddeviceengine.cpp:142
+msgid "Major"
+msgstr "Κύριο"
+
+#: soliddeviceengine.cpp:143
+msgid "Minor"
+msgstr "Δευτερεύον"
+
+#: soliddeviceengine.cpp:144
+msgid "Device"
+msgstr "Συσκευή"
+
+#: soliddeviceengine.cpp:152
+msgid "Storage Access"
+msgstr "Πρόσβαση σε χώρο αποθήκευσης"
+
+#: soliddeviceengine.cpp:153 soliddeviceengine.cpp:507
+#: soliddeviceengine.cpp:606
+msgid "Accessible"
+msgstr "Προσβάσιμο"
+
+#: soliddeviceengine.cpp:154 soliddeviceengine.cpp:508
+msgid "File Path"
+msgstr "Διαδρομή αρχείου"
+
+#: soliddeviceengine.cpp:169
+msgid "Storage Drive"
+msgstr "Οδηγός αποθήκευσης"
+
+#: soliddeviceengine.cpp:172
+msgid "Ide"
+msgstr "Ide"
+
+#: soliddeviceengine.cpp:172
+msgid "Usb"
+msgstr "Usb"
+
+#: soliddeviceengine.cpp:172
+msgid "Ieee1394"
+msgstr "Ieee1394"
+
+#: soliddeviceengine.cpp:173
+msgid "Scsi"
+msgstr "Scsi"
+
+#: soliddeviceengine.cpp:173
+msgid "Sata"
+msgstr "Sata"
+
+#: soliddeviceengine.cpp:173
+msgid "Platform"
+msgstr "Πλατφόρμα"
+
+#: soliddeviceengine.cpp:175
+msgid "Hard Disk"
+msgstr "Σκληρός δίσκος"
+
+#: soliddeviceengine.cpp:175
+msgid "Cdrom Drive"
+msgstr "Οδηγός Cdrom"
+
+#: soliddeviceengine.cpp:175
+msgid "Floppy"
+msgstr "Συσκευή δισκέτας"
+
+#: soliddeviceengine.cpp:176
+msgid "Tape"
+msgstr "Μαγνητοταινία"
+
+#: soliddeviceengine.cpp:176
+msgid "Compact Flash"
+msgstr "Compact Flash"
+
+#: soliddeviceengine.cpp:176
+msgid "Memory Stick"
+msgstr "Memory Stick"
+
+#: soliddeviceengine.cpp:177
+msgid "Smart Media"
+msgstr "Smart Media"
+
+#: soliddeviceengine.cpp:177
+msgid "SdMmc"
+msgstr "SdMmc"
+
+#: soliddeviceengine.cpp:177
+msgid "Xd"
+msgstr "Xd"
+
+#: soliddeviceengine.cpp:179
+msgid "Bus"
+msgstr "Δίαυλος"
+
+#: soliddeviceengine.cpp:180
+msgid "Drive Type"
+msgstr "Τύπος οδηγού"
+
+#: soliddeviceengine.cpp:181 soliddeviceengine.cpp:194
+#: soliddeviceengine.cpp:362 soliddeviceengine.cpp:376
+msgid "Removable"
+msgstr "Αφαιρούμενο μέσο"
+
+#: soliddeviceengine.cpp:182 soliddeviceengine.cpp:195
+#: soliddeviceengine.cpp:363 soliddeviceengine.cpp:377
+msgid "Hotpluggable"
+msgstr "Δυνατότητα Hotplug"
+
+#: soliddeviceengine.cpp:204
+msgid "Optical Drive"
+msgstr "Οπτικός οδηγός"
+
+#: soliddeviceengine.cpp:209
+msgid "CD-R"
+msgstr "CD-R"
+
+#: soliddeviceengine.cpp:212
+msgid "CD-RW"
+msgstr "CD-RW"
+
+#: soliddeviceengine.cpp:215
+msgid "DVD"
+msgstr "DVD"
+
+#: soliddeviceengine.cpp:218
+msgid "DVD-R"
+msgstr "DVD-R"
+
+#: soliddeviceengine.cpp:221
+msgid "DVD-RW"
+msgstr "DVD-RW"
+
+#: soliddeviceengine.cpp:224
+msgid "DVD-RAM"
+msgstr "DVD-RAM"
+
+#: soliddeviceengine.cpp:227
+msgid "DVD+R"
+msgstr "DVD+R"
+
+#: soliddeviceengine.cpp:230
+msgid "DVD+RW"
+msgstr "DVD+RW"
+
+#: soliddeviceengine.cpp:233
+msgid "DVD+DL"
+msgstr "DVD+DL"
+
+#: soliddeviceengine.cpp:236
+msgid "DVD+DLRW"
+msgstr "DVD+DLRW"
+
+#: soliddeviceengine.cpp:239
+msgid "BD"
+msgstr "BD"
+
+#: soliddeviceengine.cpp:242
+msgid "BD-R"
+msgstr "BD-R"
+
+#: soliddeviceengine.cpp:245
+msgid "BD-RE"
+msgstr "BD-RE"
+
+#: soliddeviceengine.cpp:248
+msgid "HDDVD"
+msgstr "HDDVD"
+
+#: soliddeviceengine.cpp:251
+msgid "HDDVD-R"
+msgstr "HDDVD-R"
+
+#: soliddeviceengine.cpp:254
+msgid "HDDVD-RW"
+msgstr "HDDVD-RW"
+
+#: soliddeviceengine.cpp:256
+msgid "Supported Media"
+msgstr "Υποστηριζόμενα μέσα"
+
+#: soliddeviceengine.cpp:258
+msgid "Read Speed"
+msgstr "Ταχύτητα ανάγνωσης"
+
+#: soliddeviceengine.cpp:259
+msgid "Write Speed"
+msgstr "Ταχύτητα εγγραφής"
+
+#: soliddeviceengine.cpp:267
+msgid "Write Speeds"
+msgstr "Ταχύτητες εγγραφής"
+
+#: soliddeviceengine.cpp:275
+msgid "Storage Volume"
+msgstr "Τόμος χώρου αποθήκευσης"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Other"
+msgstr "Άλλο"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Unused"
+msgstr "Χωρίς χρήση"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "File System"
+msgstr "Σύστημα αρχείων"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Partition Table"
+msgstr "Πίνακας κατατμήσεων"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Raid"
+msgstr "Raid"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Encrypted"
+msgstr "Κρυπτογραφημένο"
+
+#: soliddeviceengine.cpp:281 soliddeviceengine.cpp:283
+msgid "Usage"
+msgstr "Χρήση"
+
+#: soliddeviceengine.cpp:283
+#, kde-format
+msgid "Unknown"
+msgstr "Άγνωστο"
+
+#: soliddeviceengine.cpp:286
+msgid "Ignored"
+msgstr "Παράβλεψη"
+
+#: soliddeviceengine.cpp:287
+msgid "File System Type"
+msgstr "Τύπος συστήματος αρχείων"
+
+#: soliddeviceengine.cpp:288
+msgid "Label"
+msgstr "Ετικέτα"
+
+#: soliddeviceengine.cpp:289
+msgid "UUID"
+msgstr "UUID"
+
+#: soliddeviceengine.cpp:298
+msgid "Encrypted Container"
+msgstr "Κρυπτογραφημένο μέσο"
+
+#: soliddeviceengine.cpp:310
+msgid "OpticalDisc"
+msgstr "Οπτικός δίσκος"
+
+#: soliddeviceengine.cpp:316
+msgid "Audio"
+msgstr "Ήχος"
+
+#: soliddeviceengine.cpp:319
+msgid "Data"
+msgstr "δεδομένα"
+
+#: soliddeviceengine.cpp:322
+msgid "Video CD"
+msgstr "Βίντεο CD"
+
+#: soliddeviceengine.cpp:325
+msgid "Super Video CD"
+msgstr "Super Video CD"
+
+#: soliddeviceengine.cpp:328
+msgid "Video DVD"
+msgstr "Βίντεο DVD"
+
+#: soliddeviceengine.cpp:331
+msgid "Video Blu Ray"
+msgstr "Βίντεο Blu Ray"
+
+#: soliddeviceengine.cpp:333
+msgid "Available Content"
+msgstr "Διαθέσιμο περιεχόμενο"
+
+#: soliddeviceengine.cpp:336
+msgid "Unknown Disc Type"
+msgstr "Άγνωστος τύπος δίσκου"
+
+#: soliddeviceengine.cpp:336
+msgid "CD Rom"
+msgstr "CD Rom"
+
+#: soliddeviceengine.cpp:336
+msgid "CD Recordable"
+msgstr "CD Εγγράψιμο"
+
+#: soliddeviceengine.cpp:337
+msgid "CD Rewritable"
+msgstr "CD Επανεγγράψιμο"
+
+#: soliddeviceengine.cpp:337
+msgid "DVD Rom"
+msgstr "DVD Rom"
+
+#: soliddeviceengine.cpp:337
+msgid "DVD Ram"
+msgstr "DVD Ram"
+
+#: soliddeviceengine.cpp:338
+msgid "DVD Recordable"
+msgstr "DVD Εγγράψιμο"
+
+#: soliddeviceengine.cpp:338
+msgid "DVD Rewritable"
+msgstr "DVD Επανεγγράψιμο"
+
+#: soliddeviceengine.cpp:339
+msgid "DVD Plus Recordable"
+msgstr "DVD Plus Εγγράψιμο"
+
+#: soliddeviceengine.cpp:339
+msgid "DVD Plus Rewritable"
+msgstr "DVD Plus Επανεγγράψιμο"
+
+#: soliddeviceengine.cpp:340
+msgid "DVD Plus Recordable Duallayer"
+msgstr "DVD Plus εγγράψιμο διπλής επίστρωσης"
+
+#: soliddeviceengine.cpp:340
+msgid "DVD Plus Rewritable Duallayer"
+msgstr "DVD Plus επανεγγράψιμο διπλής επίστρωσης"
+
+#: soliddeviceengine.cpp:341
+msgid "Blu Ray Rom"
+msgstr "Blu Ray Rom"
+
+#: soliddeviceengine.cpp:341
+msgid "Blu Ray Recordable"
+msgstr "Blu Ray εγγράψιμο"
+
+#: soliddeviceengine.cpp:342
+msgid "Blu Ray Rewritable"
+msgstr "Blu Ray επανεγγράψιμο"
+
+#: soliddeviceengine.cpp:342
+msgid "HD DVD Rom"
+msgstr "HD DVD Rom"
+
+#: soliddeviceengine.cpp:343
+msgid "HD DVD Recordable"
+msgstr "HD DVD εγγράψιμο"
+
+#: soliddeviceengine.cpp:343
+msgid "HD DVD Rewritable"
+msgstr "HD DVD επανεγγράψιμο"
+
+#: soliddeviceengine.cpp:345
+msgid "Disc Type"
+msgstr "Τύπος δίσκου"
+
+#: soliddeviceengine.cpp:346
+msgid "Appendable"
+msgstr "Με δυνατότητα για προσθήκες"
+
+#: soliddeviceengine.cpp:347
+msgid "Blank"
+msgstr "Κενό"
+
+#: soliddeviceengine.cpp:348
+msgid "Rewritable"
+msgstr "Επανεγγράψιμο"
+
+#: soliddeviceengine.cpp:349
+msgid "Capacity"
+msgstr "Χωρητικότητα"
+
+#: soliddeviceengine.cpp:357
+msgid "Camera"
+msgstr "Κάμερα"
+
+#: soliddeviceengine.cpp:359 soliddeviceengine.cpp:373
+msgid "Supported Protocols"
+msgstr "Υποστηριζόμενα πρωτόκολλα"
+
+#: soliddeviceengine.cpp:360 soliddeviceengine.cpp:374
+msgid "Supported Drivers"
+msgstr "Υποστηριζόμενοι οδηγοί"
+
+#: soliddeviceengine.cpp:371
+msgid "Portable Media Player"
+msgstr "Φορητός αναπαραγωγέας πολυμέσων"
+
+#: soliddeviceengine.cpp:385
+msgid "Battery"
+msgstr "Μπαταρία"
+
+#: soliddeviceengine.cpp:388
+msgid "Unknown Battery"
+msgstr "Άγνωστη μπαταρία"
+
+#: soliddeviceengine.cpp:388
+msgid "PDA Battery"
+msgstr "Μπαταρία PDA"
+
+#: soliddeviceengine.cpp:388
+msgid "UPS Battery"
+msgstr "Μπαταρία UPS"
+
+#: soliddeviceengine.cpp:389
+msgid "Primary Battery"
+msgstr "Κύρια μπαταρία"
+
+#: soliddeviceengine.cpp:389
+msgid "Mouse Battery"
+msgstr "Μπαταρία ποντικιού"
+
+#: soliddeviceengine.cpp:390
+msgid "Keyboard Battery"
+msgstr "Μπαταρία πληκτρολογίου"
+
+#: soliddeviceengine.cpp:390
+msgid "Keyboard Mouse Battery"
+msgstr "Μπαταρία πληκτρολογίου ποντικιού"
+
+#: soliddeviceengine.cpp:391
+msgid "Camera Battery"
+msgstr "Μπαταρία κάμερας"
+
+#: soliddeviceengine.cpp:391
+msgid "Phone Battery"
+msgstr "Μπαταρία τηλεφώνου"
+
+#: soliddeviceengine.cpp:391
+msgid "Monitor Battery"
+msgstr "Μπαταρία οθόνης"
+
+#: soliddeviceengine.cpp:392
+msgid "Gaming Input Battery"
+msgstr ""
+
+#: soliddeviceengine.cpp:392
+#, fuzzy
+#| msgid "Mouse Battery"
+msgid "Bluetooth Battery"
+msgstr "Μπαταρία ποντικιού"
+
+#: soliddeviceengine.cpp:395
+msgid "Not Charging"
+msgstr "Εκτός φόρτισης"
+
+#: soliddeviceengine.cpp:395
+msgid "Charging"
+msgstr "Φορτίζει"
+
+#: soliddeviceengine.cpp:395
+msgid "Discharging"
+msgstr "Αποφορτίζει"
+
+#: soliddeviceengine.cpp:396
+msgid "Fully Charged"
+msgstr "Πλήρως φορτισμένη"
+
+#: soliddeviceengine.cpp:398
+msgid "Plugged In"
+msgstr "Συνδεδεμένο"
+
+#: soliddeviceengine.cpp:399
+msgid "Type"
+msgstr "Τύπος"
+
+#: soliddeviceengine.cpp:400
+msgid "Charge Percent"
+msgstr "Ποσοστό φόρτισης"
+
+#: soliddeviceengine.cpp:401
+msgid "Rechargeable"
+msgstr "Επαναφορτιζόμενο"
+
+#: soliddeviceengine.cpp:402
+msgid "Charge State"
+msgstr "Κατάσταση φόρτισης"
+
+#: soliddeviceengine.cpp:427
+msgid "Type Description"
+msgstr "Περιγραφή τύπου"
+
+#: soliddeviceengine.cpp:432
+msgid "Device Types"
+msgstr "Τύποι συσκευών"
+
+#: soliddeviceengine.cpp:456 soliddeviceengine.cpp:553
+msgid "Size"
+msgstr "Μέγεθος"
+
+#: soliddeviceengine.cpp:535
+#, kde-format
+msgid "Filesystem is not responding"
+msgstr ""
+
+#: soliddeviceengine.cpp:535
+#, kde-format
+msgid "Filesystem mounted at '%1' is not responding"
+msgstr ""
+
+#: soliddeviceengine.cpp:551
+msgid "Free Space"
+msgstr "Ελεύθερος χώρος"
+
+#: soliddeviceengine.cpp:552
+msgid "Free Space Text"
+msgstr "Κείμενο σε ελεύθερο χώρο"
+
+#: soliddeviceengine.cpp:554
+#, fuzzy
+#| msgid "Size"
+msgid "Size Text"
+msgstr "Μέγεθος"
+
+#: soliddeviceengine.cpp:580
+msgid "Temperature"
+msgstr "Θερμοκρασία"
+
+#: soliddeviceengine.cpp:581
+msgid "Temperature Unit"
+msgstr "Μονάδα θερμοκρασίας"
+
+#: soliddeviceengine.cpp:625 soliddeviceengine.cpp:629
+msgid "In Use"
+msgstr "Σε χρήση"
+
+#~ msgid "Network Interface"
+#~ msgstr "Διεπαφή δικτύου"
+
+#~ msgid "Interface Name"
+#~ msgstr "Όνομα διεπαφής"
+
+#~ msgid "Wireless"
+#~ msgstr "Ασύρματο"
+
+#~ msgid "Hardware Address"
+#~ msgstr "Διεύθυνση υλικού"
+
+#~ msgid "MAC Address"
+#~ msgstr "Διεύθυνση MAC"
+
+#~ msgid "AC Adapter"
+#~ msgstr "Μετασχηματιστής εναλλασσόμενου"
+
+#~ msgid "Button"
+#~ msgstr "Κουμπί"
+
+#~ msgid "Lid Button"
+#~ msgstr "Κουμπί καλύμματος"
+
+#~ msgid "Power Button"
+#~ msgstr "Κουμπί εκκίνησης"
+
+#~ msgid "Sleep Button"
+#~ msgstr "Κουμπί ύπνωσης"
+
+#~ msgid "Unknown Button Type"
+#~ msgstr "Άγνωστος τύπος κουμπιού"
+
+#~ msgid "Has State"
+#~ msgstr "Έχει κατάσταση"
+
+#~ msgid "State Value"
+#~ msgstr "Τιμή κατάστασης"
+
+#~ msgid "Pressed"
+#~ msgstr "Πατημένο"
+
+#~ msgid "Audio Interface"
+#~ msgstr "Διεπαφή ήχου"
+
+#~ msgid "ALSA"
+#~ msgstr "ALSA"
+
+#~ msgid "Open Sound System"
+#~ msgstr "Open Sound System"
+
+#~ msgid "Unknown Audio Driver"
+#~ msgstr "Άγνωστος οδηγός ήχου"
+
+#~ msgid "Driver"
+#~ msgstr "Οδηγός"
+
+#~ msgid "Driver Handle"
+#~ msgstr "Χειριστήριο οδηγού"
+
+#~ msgid "Name"
+#~ msgstr "Όνομα"
+
+#~ msgid "Unknown Audio Interface Type"
+#~ msgstr "Άγνωστος τύπος διεπαφής ήχου"
+
+#~ msgid "Audio Control"
+#~ msgstr "Έλεγχος ήχου"
+
+#~ msgid "Audio Input"
+#~ msgstr "Είσοδος ήχου"
+
+#~ msgid "Audio Output"
+#~ msgstr "Έξοδος ήχου"
+
+#~ msgid "Audio Device Type"
+#~ msgstr "Τύπος συσκευής ήχου"
+
+#~ msgid "Internal Soundcard"
+#~ msgstr "Εσωτερική κάρτα ήχου"
+
+#~ msgid "USB Soundcard"
+#~ msgstr "Κάρτα ήχου USB"
+
+#~ msgid "Firewire Soundcard"
+#~ msgstr "Κάρτα ήχου Firewire"
+
+#~ msgid "Headset"
+#~ msgstr "Ακουστικά"
+
+#~ msgid "Modem"
+#~ msgstr "Μόντεμ"
+
+#~ msgid "Soundcard Type"
+#~ msgstr "Τύπος κάρτας ήχου"
+
+#~ msgid "DVB Interface"
+#~ msgstr "Διεπαφή DVB"
+
+#~ msgid "Device Adapter"
+#~ msgstr "Προσαρμογέας συσκευής"
+
+#~ msgid "DVB Unknown"
+#~ msgstr "Άγνωστο DVB"
+
+#~ msgid "DVB Audio"
+#~ msgstr "DV Audio"
+
+#~ msgid "DVB Ca"
+#~ msgstr "DVB Ca"
+
+#~ msgid "DVB Demux"
+#~ msgstr "DVB Demux"
+
+#~ msgid "DVB DVR"
+#~ msgstr "DVB DVR"
+
+#~ msgid "DVB Frontend"
+#~ msgstr "DVB Frontend"
+
+#~ msgid "DVB Net"
+#~ msgstr "DVB Net"
+
+#~ msgid "DVB OSD"
+#~ msgstr "DVB OSD"
+
+#~ msgid "DVB Sec"
+#~ msgstr "DVB Sec"
+
+#~ msgid "DVB Video"
+#~ msgstr "DVB Video"
+
+#~ msgid "DVB Device Type"
+#~ msgstr "Τύπος συσκευής DVB"
+
+#~ msgid "Device Index"
+#~ msgstr "Ευρετήριο συσκευών"
+
+#~ msgid "Video"
+#~ msgstr "Βίντεο"
+
+#~ msgid "Driver Handles"
+#~ msgstr "Χειριστήρια οδηγών"

@@ -1,0 +1,770 @@
+# translation of powerdevil.po to Estonian
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Marek Laane <bald@smail.ee>, 2008-2009, 2010, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: powerdevil\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"PO-Revision-Date: 2019-10-30 20:59+0200\n"
+"Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
+"Language-Team: Estonian <kde-et@lists.linux.ee>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 19.08.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: PowerDevilRunner.cpp:32
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "suspend"
+msgstr "passiivseisund"
+
+#: PowerDevilRunner.cpp:34
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to ram"
+msgstr "mälus"
+
+#: PowerDevilRunner.cpp:36
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "sleep"
+msgstr "uni"
+
+#: PowerDevilRunner.cpp:38
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "hibernate"
+msgstr "talveuni"
+
+#: PowerDevilRunner.cpp:40
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to disk"
+msgstr "kettal"
+
+#: PowerDevilRunner.cpp:42 PowerDevilRunner.cpp:44 PowerDevilRunner.cpp:69
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "dim screen"
+msgstr "ekraani tumendamine"
+
+#: PowerDevilRunner.cpp:53
+#, kde-format
+msgid ""
+"Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
+"activated"
+msgstr ""
+"Loetleb süsteemi magamapaneku valikud (nt passiivseisund, talveuni) ja "
+"võimaldab neid aktiveerida."
+
+#: PowerDevilRunner.cpp:57
+#, kde-format
+msgid "Suspends the system to RAM"
+msgstr "Süsteemi viimine passiivseisundisse mälus"
+
+#: PowerDevilRunner.cpp:61
+#, kde-format
+msgid "Suspends the system to disk"
+msgstr "Süsteemi viimine passiivseisundisse kettal"
+
+#: PowerDevilRunner.cpp:65
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "screen brightness"
+msgctxt ""
+"Note this is a KRunner keyword, <> is a placeholder and should be at the end"
+msgid "screen brightness <percent value>"
+msgstr "ekraani heledus"
+
+#: PowerDevilRunner.cpp:67
+#, fuzzy, no-c-format, kde-format
+#| msgid ""
+#| "Lists screen brightness options or sets it to the brightness defined by :"
+#| "q:; e.g. screen brightness 50 would dim the screen to 50% maximum "
+#| "brightness"
+msgid ""
+"Lists screen brightness options or sets it to the brightness defined by the "
+"search term; e.g. screen brightness 50 would dim the screen to 50% maximum "
+"brightness"
+msgstr ""
+"Loetleb ekraani heleduse valikud või kehtestab heleduse, mille määrab :q:, "
+"nt ekraani heledus 50 muudab ekraani 50% võrra tuhmimaks maksimaalsest."
+
+#: PowerDevilRunner.cpp:95
+#, fuzzy, kde-format
+#| msgid "Set Brightness to %1"
+msgid "Set Brightness to %1%"
+msgstr "Heleduseks määratakse '%1'"
+
+#: PowerDevilRunner.cpp:104
+#, kde-format
+msgid "Dim screen totally"
+msgstr "Ekraani täielik tumendamine"
+
+#: PowerDevilRunner.cpp:112
+#, kde-format
+msgid "Dim screen by half"
+msgstr "Ekraani tumendamine poole võrra"
+
+#: PowerDevilRunner.cpp:142
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Unne"
+
+#: PowerDevilRunner.cpp:143
+#, kde-format
+msgid "Suspend to RAM"
+msgstr "Passiivseisundisse mälus"
+
+#: PowerDevilRunner.cpp:148
+#, kde-format
+msgctxt "Suspend to disk"
+msgid "Hibernate"
+msgstr "Talveuni"
+
+#: PowerDevilRunner.cpp:149
+#, kde-format
+msgid "Suspend to disk"
+msgstr "Passiivseisundisse kettal"
+
+#: PowerDevilRunner.cpp:218
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "screen brightness"
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "screen brightness "
+msgstr "ekraani heledus"
+
+#: PowerDevilRunner.cpp:220
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "dim screen"
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "dim screen "
+msgstr "ekraani tumendamine"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "screen brightness"
+#~ msgstr "ekraani heledus"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "screen brightness %1"
+#~ msgstr "ekraani heledus %1"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "dim screen %1"
+#~ msgstr "ekraani tumendamine %1"
+
+#, fuzzy
+#~| msgctxt "Note this is a KRunner keyword"
+#~| msgid "suspend"
+#~ msgid "Suspend"
+#~ msgstr "passiivseisund"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "power profile"
+#~ msgstr "voolutarbe profiil"
+
+#~ msgid "Lists all power profiles and allows them to be activated"
+#~ msgstr "Loetleb kõik voolutarbe profiilid ja võimaldab neid aktiveerida."
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "power profile %1"
+#~ msgstr "voolutarbe profiil %1"
+
+#~ msgid "Set Profile to '%1'"
+#~ msgstr "Profiiliks määratakse '%1'"
+
+#~ msgid "Turn off screen"
+#~ msgstr "Ekraani väljalülitamine"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "cpu policy"
+#~ msgstr "cpu reegel"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "power governor"
+#~ msgstr "voolutarbe regulaator"
+
+#~ msgid "Lists all power saving schemes and allows them to be activated"
+#~ msgstr ""
+#~ "Loetleb kõik voolutarbe säästmise skeemid ja võimaldab neid aktiveerida."
+
+#~ msgid ""
+#~ "Lists all CPU frequency scaling policies and allows them to be activated"
+#~ msgstr ""
+#~ "Loetleb kõik protsessori sageduse muutmise reeglid ja võimaldab neid "
+#~ "aktiveerida."
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "cpu policy %1"
+#~ msgstr "cpu reegel %1"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "power governor %1"
+#~ msgstr "voolutarbe regulaator %1"
+
+#~ msgid "Set CPU frequency scaling policy to '%1'"
+#~ msgstr "CPU sageduse skaleerimise reegliks määratakse '%1'"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "power scheme %1"
+#~ msgstr "voolutarbe skeem %1"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "power scheme"
+#~ msgstr "voolutarbe skeem"
+
+#~ msgid "Set Powersaving Scheme to '%1'"
+#~ msgstr "Energiasäästu skeemiks määratakse '%1'"
+
+#~ msgid "Set CPU Governor to '%1'"
+#~ msgstr "CPU regulaatoriks määratakse '%1'"
+
+#~ msgid "PowerDevil"
+#~ msgstr "PowerDevil"
+
+#~ msgid "A Power Management tool for KDE4"
+#~ msgstr "KDE4 toitehalduse tööriist"
+
+#~ msgid "(c) 2008 PowerDevil Development Team"
+#~ msgstr "(c) 2008: PowerDevili arendusmeeskond"
+
+#~ msgid "Dario Freddi"
+#~ msgstr "Dario Freddi"
+
+#~ msgid "Developer"
+#~ msgstr "Arendaja"
+
+#, fuzzy
+#~| msgid "PowerDevil"
+#~ msgid "PowerDevil Startup"
+#~ msgstr "PowerDevil"
+
+#, fuzzy
+#~| msgid "Could not connect to battery interface!"
+#~ msgid ""
+#~ "Could not connect to battery interface!\n"
+#~ "Please check your system configuration"
+#~ msgstr "Ühenduse loomine akuliidesega nurjus!"
+
+#~ msgid "The power adaptor has been plugged in"
+#~ msgstr "Toiteadapter ühendati"
+
+#~ msgid "The power adaptor has been unplugged"
+#~ msgstr "Toiteadapter ühendati lahti"
+
+#~ msgid ""
+#~ "Your battery has reached critical level, the PC will now be halted..."
+#~ msgstr "Aku on jõudnud kriitilisele tasemele, arvuti töö peatatakse..."
+
+#~ msgid ""
+#~ "Your battery has reached critical level, the PC will now be suspended to "
+#~ "disk..."
+#~ msgstr ""
+#~ "Aku on jõudnud kriitilisele tasemele, arvuti pannakse passiivsesse "
+#~ "seisundisse kettal..."
+
+#~ msgid ""
+#~ "Your battery has reached critical level, the PC will now be suspended to "
+#~ "RAM..."
+#~ msgstr ""
+#~ "Aku on jõudnud kriitilisele tasemele, arvuti pannakse passiivsesse "
+#~ "seisundisse mälus..."
+
+#~ msgid ""
+#~ "Your battery has reached critical level, the PC is now going Standby..."
+#~ msgstr ""
+#~ "Aku on jõudnud kriitilisele tasemele, arvuti pannakse ooterežiimi..."
+
+#~ msgid ""
+#~ "Your battery has reached critical level, save your work as soon as "
+#~ "possible!"
+#~ msgstr ""
+#~ "Aku on jõudnud kriitilisele tasemele, salvesta oma töö nii kiiresti kui "
+#~ "võimalik!"
+
+#~ msgid "Your battery has reached warning level"
+#~ msgstr "Aku on jõudnud hoiatustasemele"
+
+#~ msgid "Your battery has reached low level"
+#~ msgstr "Aku on jõudnud madalale tasemele"
+
+#~ msgid "The computer is being halted"
+#~ msgstr "Arvuti peatatakse"
+
+#~ msgid "The computer will now be suspended to disk"
+#~ msgstr "Arvuti pannakse passiivseisundisse kettal"
+
+#~ msgid "The computer will now be suspended to RAM"
+#~ msgstr "Arvuti pannakse passiivseisundisse mälus"
+
+#~ msgid "The computer will now be put into standby"
+#~ msgstr "Arvuti pannakse ooterežiimi"
+
+#~ msgid "There was an error while suspending:"
+#~ msgstr "Passiivseisundisse minekul tekkis viga:"
+
+#~ msgid "Polling started, idle time is %1 seconds"
+#~ msgstr "Loendus algas, jõudeaega on %1 sekundit"
+
+#~ msgid "Stopping timer"
+#~ msgstr "Taimeri peatamine"
+
+#~ msgid "Minimum time is %1 seconds"
+#~ msgstr "Miinimumaeg on %1 sekundit"
+
+#~ msgid "Nothing to do, next event in %1 seconds"
+#~ msgstr "Pole midagi teha, järgmine sündmus on %1 sekundi pärast"
+
+#~ msgid "Next timeout in %1 seconds"
+#~ msgstr "Järgmine ajaületus %1 sekundi pärast"
+
+#~ msgid "The screen is being locked"
+#~ msgstr "Ekraan on lukustatud"
+
+#~ msgid "Profile changed to \"%1\""
+#~ msgstr "Profiiliks sai \"%1\""
+
+#~ msgid "Performance"
+#~ msgstr "Jõudlus"
+
+#~ msgid "Dynamic (ondemand)"
+#~ msgstr "Dünaamiline (nõudmisel)"
+
+#~ msgid "Dynamic (conservative)"
+#~ msgstr "Dünaamiline (konservatiivne)"
+
+#~ msgid "Powersave"
+#~ msgstr "Powersave"
+
+#~ msgid "Userspace"
+#~ msgstr "Userspace"
+
+#~ msgid "Do nothing"
+#~ msgstr "Ei tehta midagi"
+
+#~ msgid "Shutdown"
+#~ msgstr "Seiskamine"
+
+#~ msgid "Lock Screen"
+#~ msgstr "Ekraani lukustamine"
+
+#~ msgid "Suspend to Ram"
+#~ msgstr "Passiivseisundisse mälus"
+
+#~ msgid "Standby"
+#~ msgstr "Ooterežiimi"
+
+#~ msgid "CPU <numid>%1</numid>"
+#~ msgstr "CPU <numid>%1</numid>"
+
+#, fuzzy
+#~| msgid "CPU <numid>%1</numid>"
+#~ msgid "Disable CPU <numid>%1</numid>"
+#~ msgstr "CPU <numid>%1</numid>"
+
+#~ msgid "Please enter a name for the new profile"
+#~ msgstr "Palun anna uuele profiilile nimi"
+
+#, fuzzy
+#~| msgid "Please enter a name for the new profile"
+#~ msgid "The name for the new profile"
+#~ msgstr "Palun anna uuele profiilile nimi"
+
+#, fuzzy
+#~| msgid "Please enter a name for the new profile"
+#~ msgid "Please enter a name for this profile"
+#~ msgstr "Palun anna uuele profiilile nimi"
+
+#~ msgctxt "None"
+#~ msgid "No methods found"
+#~ msgstr "Ühtegi meetodit ei leitud"
+
+#~ msgid "Import PowerDevil profiles"
+#~ msgstr "Impordi PowerDevili profiilid"
+
+#~ msgid "Export PowerDevil profiles"
+#~ msgstr "Ekspordi PowerDevili profiilid"
+
+#~ msgid ""
+#~ "The current profile has not been saved.\n"
+#~ "Do you want to save it?"
+#~ msgstr ""
+#~ "Aktiivset profiili ei ole salvestatud.\n"
+#~ "Kas soovid selle salvestada?"
+
+#~ msgid "Save Profile"
+#~ msgstr "Salvesta profiil"
+
+#~ msgid "PowerDevil Configuration"
+#~ msgstr "PowerDevili seadistamine"
+
+#~ msgid "A configurator for PowerDevil"
+#~ msgstr "PowerDevili seadistjaa"
+
+#~ msgid "(c), 2008 Dario Freddi"
+#~ msgstr "(c) 2008: Dario Freddi"
+
+#~ msgid ""
+#~ "From this module, you can configure the Daemon, create and edit "
+#~ "powersaving profiles, and see your system's capabilities."
+#~ msgstr ""
+#~ "Selles moodulis saab seadistada deemonit, luua ja muuta energiasäästu "
+#~ "profiile ning näha oma süsteemi võimalusi."
+
+#~ msgid "Main Developer"
+#~ msgstr "Põhiarendaja"
+
+#~ msgid ""
+#~ "<h1>PowerDevil configuration</h1> <p>This module lets you configure "
+#~ "PowerDevil. PowerDevil is a daemon (so it runs in background) that is "
+#~ "started upon KDE startup.</p> <p>PowerDevil has 2 levels of "
+#~ "configuration: a general one, that is always applied, and a profile-based "
+#~ "one, that lets you configure a specific behavior in every situation. You "
+#~ "can also have a look at your system capabilities in the last tab. To get "
+#~ "you started, first configure the options in the first 2 tabs. Then switch "
+#~ "to the fourth one, and create/edit your profiles. Last but not least, "
+#~ "assign your profiles in the third Tab. You do not have to restart "
+#~ "PowerDevil, just click \"Apply\", and you are done.</p>"
+#~ msgstr ""
+#~ "<h1>PowerDevili seadistamine</h1> <p>See moodul võimaldab seadistada "
+#~ "PowerDevilit. PowerDevil on deemon (see tähendab, töötab taustal), mis "
+#~ "käivitatakse KDE käivitamisel.</p><p>PowerDevilil on kaks "
+#~ "seadistamistaset: üldine, mida rakendatakse alati, ning profiilipõhine, "
+#~ "mis võimaldab määrata kindlaks konkreetse käitumise kõigis olukordades. "
+#~ "Viimasel kaardil näeb ka oma süsteemi omadusi. Alustuseks tuleb panna "
+#~ "paika kahe esimese kaardi seadistused. Seejärel lülitu neljandale "
+#~ "kaardile ning loo või muuda profiile. Lõpuks tuleks profiilid kolmandal "
+#~ "kaardil ka omistada. PowerDevilit ei pea seejärel uuesti käivitama, "
+#~ "piisab, kui klõpsata nupule \"Rakenda\".</p>"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Marek Laane"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "bald@smail.ee"
+
+#~ msgid "General Settings"
+#~ msgstr "Üldised seadistused"
+
+#~ msgid "You will be asked for password when resuming from sleep state"
+#~ msgstr "Uneseisundist väljumisel küsitakse parooli"
+
+#~ msgid "Lock screen on resume"
+#~ msgstr "Ekraani lukustamine taastamisel"
+
+#, fuzzy
+#~| msgid "Automatically dim the display when the system is idle."
+#~ msgid "Automatically dims the display when the system is idle."
+#~ msgstr "Ekraan tumendatakse automaatselt, kui süsteem on jõude."
+
+#~ msgid "Dim display when idle for more than"
+#~ msgstr "Ekraani tumendamine, kui jõude on oldud enam kui"
+
+#, fuzzy
+#~| msgid "Enable notifications"
+#~ msgid "Enables standard notifications"
+#~ msgstr "Märguannete lubamine"
+
+#~ msgid "Enable notifications"
+#~ msgstr "Märguannete lubamine"
+
+#, fuzzy
+#~| msgid "Enable warning notifications"
+#~ msgid "Enables warning notifications"
+#~ msgstr "Hoiatuste lubamine"
+
+#~ msgid "Enable warning notifications"
+#~ msgstr "Hoiatuste lubamine"
+
+#~ msgctxt "Minutes"
+#~ msgid "min"
+#~ msgstr "min"
+
+#~ msgid "Battery Levels"
+#~ msgstr "Aku tasemed"
+
+#~ msgid "Battery is at low level at"
+#~ msgstr "Aku madalaks tasemeks on"
+
+#, fuzzy
+#~| msgid "Battery Levels"
+#~ msgid "Low battery level"
+#~ msgstr "Aku tasemed"
+
+#~ msgid "%"
+#~ msgstr "%"
+
+#~ msgid "Battery is at warning level at"
+#~ msgstr "Aku hoiatustasemeks on"
+
+#, fuzzy
+#~| msgid "When battery is at low level"
+#~ msgid "Warning battery level"
+#~ msgstr "Kui aku on jõudnud madalale tasemele"
+
+#, fuzzy
+#~| msgid "Battery is at warning level at"
+#~ msgid ""
+#~ "Battery will be considered at warning level when it reaches this level"
+#~ msgstr "Aku hoiatustasemeks on"
+
+#~ msgid "Battery is at critical level at"
+#~ msgstr "Aku kriitiliseks tasemeks on"
+
+#, fuzzy
+#~| msgid "Battery Levels"
+#~ msgid "Critical battery level"
+#~ msgstr "Aku tasemed"
+
+#~ msgid "Battery Actions"
+#~ msgstr "Aku toimingud"
+
+#~ msgid "When battery remaining is critical"
+#~ msgstr "Kui aku on jõudnud kriitilisele tasemele"
+
+#~ msgid "Profiles Assignment"
+#~ msgstr "Profiilide omistamine"
+
+#~ msgid "Profiles"
+#~ msgstr "Profiilid"
+
+#~ msgid "When AC Adaptor is plugged in"
+#~ msgstr "Kui AC adapter on ühendatud"
+
+#~ msgid "When on battery Power"
+#~ msgstr "Kui ollakse akutoitel"
+
+#~ msgid "When battery is at low level"
+#~ msgstr "Kui aku on jõudnud madalale tasemele"
+
+#~ msgid "When battery is at warning level"
+#~ msgstr "Kui aku on jõudnud hoiatustasemele"
+
+#~ msgid "Edit Profiles"
+#~ msgstr "Profiilide muutmine"
+
+#~ msgid "Profile Management"
+#~ msgstr "Profiili haldus"
+
+#~ msgid ""
+#~ "With this slider you can set the brightness when the system is plugged "
+#~ "into the socket outlet"
+#~ msgstr ""
+#~ "Selle liuguriga saam määrata heleduse, kui süsteem on ühendatud "
+#~ "elektrivõrku"
+
+#~ msgid "Brightness"
+#~ msgstr "Heledus"
+
+#~ msgid ""
+#~ "Automatically turn off the display if idle for more than the set value."
+#~ msgstr ""
+#~ "Ekraani automaatne väljalülitamine, kui jõude on oldud üle määratud "
+#~ "väärtuse."
+
+#~ msgid "Turn off display if idle for more than"
+#~ msgstr "Ekraani väljalülitamine, kui jõude on oldud enam kui"
+
+#~ msgid "Idle time after which the monitor should turn off"
+#~ msgstr "Jõudeaeg, mille järel monitor välja lülitatakse"
+
+#~ msgid " min"
+#~ msgstr " min"
+
+#~ msgid ""
+#~ "To prevent data loss or other damage, you can have the system suspend or "
+#~ "hibernate, so you do not run accidentally out of battery power. Configure "
+#~ "the number of minutes below which the machine will run the configured "
+#~ "action."
+#~ msgstr ""
+#~ "Andmekao või muu kahju välitmiseks võib lasta süsteemil minna "
+#~ "passiivseisundisse või talveunne, et sa ei langeks aku juhusliku "
+#~ "tühjenemise ohvriks. Määra allpool minutite arv, mille järel masin võtab "
+#~ "ette seadistatud toimingu."
+
+#~ msgid "When the system is idle for more than"
+#~ msgstr "Kui süsteem on jõude enam kui"
+
+#~ msgid "When Laptop Lid Closed"
+#~ msgstr "Kui sülearvuti kaas on suletud"
+
+#~ msgid "This action will be performed when the laptop lid gets closed"
+#~ msgstr "See toiming võetakse ette sülearvuti kaane sulgemisel"
+
+#~ msgid "Turn off the following CPU(s)"
+#~ msgstr "Järgmiste CPU-de väljalülitamine"
+
+#~ msgid ""
+#~ "CPU Behaviour strongly impacts on your system performance and on your "
+#~ "battery's life. Here you can choose the policy best suitable for this "
+#~ "profile"
+#~ msgstr ""
+#~ "CPU käitumine mõjutab väga oluliselt sinu süsteemi jõudlust ja aku "
+#~ "eluiga. Siin saab valida, milline reegel sobib profiilile kõige paremini."
+
+#~ msgid "System powersaving scheme"
+#~ msgstr "Süsteemi energiasäästu skeem"
+
+#~ msgid "Undo all the changes to this profile since last saving"
+#~ msgstr ""
+#~ "Võta tagasi kõik pärast viimast salvestamist profiili tehtud muudatused"
+
+#~ msgid "Undo Changes"
+#~ msgstr "Võta muutused tagasi"
+
+#~ msgid "Save changes to this profile"
+#~ msgstr "Salvesta muutused profiili"
+
+#~ msgid "Save Current Profile"
+#~ msgstr "Salvesta aktiivne profiil"
+
+#, fuzzy
+#~| msgid "Delete Profile"
+#~ msgid "Delete"
+#~ msgstr "Kustuta profiil"
+
+#~ msgid "Import profiles from a file"
+#~ msgstr "Import profiilid failist"
+
+#~ msgid "Import Profiles"
+#~ msgstr "Import profiilid"
+
+#~ msgid "Export your profiles to a file"
+#~ msgstr "Ekspordi profiilid faili"
+
+#~ msgid "Export Profiles"
+#~ msgstr "Ekspordi profiilid"
+
+#~ msgid "Capabilities"
+#~ msgstr "Võimalused"
+
+#~ msgid "System Capabilities"
+#~ msgstr "Süsteemi võimalused"
+
+#~ msgid "Number of CPU"
+#~ msgstr "CPU-de arv"
+
+#~ msgid "Number of Batteries"
+#~ msgstr "Akude arv"
+
+#~ msgid "CPU can be turned Off"
+#~ msgstr "CPU saab välja lülitada"
+
+#~ msgid "Scheme support"
+#~ msgstr "Skeemi toetus"
+
+#~ msgid "Scaling capability"
+#~ msgstr "Skaleerimise võimalused"
+
+#~ msgid "Supported CPU Policies"
+#~ msgstr "Toetatud CPU reeglid"
+
+#~ msgid "Supported suspend methods"
+#~ msgstr "Toetatud passiivseisundi meetodid"
+
+#~ msgid "Supported schemes"
+#~ msgstr "Toetatud skeemind"
+
+#~ msgid "Detected Activity"
+#~ msgstr "Tuvastati tegevus"
+
+#~ msgid "Battery Management Settings"
+#~ msgstr "Aku haldamise seadistused"
+
+#~ msgid "Is PowerDevil Daemon up and running?"
+#~ msgstr "Kas PowerDevili deemon töötab?"
+
+#~ msgid "Battery"
+#~ msgstr "Aku"
+
+#~ msgid "sources"
+#~ msgstr "allikad"
+
+#~ msgid "AC Adapter"
+#~ msgstr "AC adapter"
+
+#~ msgid "Plugged in"
+#~ msgstr "Elektrivõrku ühendatud"
+
+#~ msgid "n/a"
+#~ msgstr "-"
+
+#~ msgid "Percent"
+#~ msgstr "Protsent"
+
+#~ msgid "Configure Battery Monitor"
+#~ msgstr "Akujälgija seadistamine"
+
+#~ msgid "Show the percentage of &charge on the battery"
+#~ msgstr "Täi&detuse protsendi näitamine akul"
+
+#~ msgid "Show the state for &each battery present"
+#~ msgstr "Kõigi akude ol&eku näitamine"
+
+#~ msgid "Oxygen theme"
+#~ msgstr "Oxygeni teema"
+
+#~ msgid "Classic theme"
+#~ msgstr "Klassikaline teema"
+
+#~ msgid "Configure PowerDevil"
+#~ msgstr "PowerDevili seadistamine"
+
+#~ msgid "availableProfiles"
+#~ msgstr "saadaolevad profiilid"
+
+#~ msgid "currentProfile"
+#~ msgstr "aktiivne profiil"
+
+#~ msgid "New Profile"
+#~ msgstr "Uus profiil"
+
+#~ msgid "Current Profile name is %1"
+#~ msgstr "Aktiivse profiili nimi on %1"
+
+#~ msgid "Invalid group!!"
+#~ msgstr "Vigane grupp!"
+
+#~ msgid "Basic options"
+#~ msgstr "Põhivalikud"
+
+#~ msgid "Advanced Options"
+#~ msgstr "Muud valikud"
+
+#~ msgid "set-profile"
+#~ msgstr "profiili määramine"
+
+#~ msgid "change-profile"
+#~ msgstr "profiili muutmine"
+
+#~ msgid "switch-profile"
+#~ msgstr "profiili lülitamine"
+
+#~ msgid "change-governor"
+#~ msgstr "regulaatori muutmine"
+
+#~ msgid "switch-governor"
+#~ msgstr "regulaatori lülitamine"
+
+#~ msgid "set-scheme"
+#~ msgstr "skeemi määramine"
+
+#~ msgid "change-scheme"
+#~ msgstr "skeemi muutmine"
+
+#~ msgid "switch-scheme"
+#~ msgstr "skeemi lülitamine"
+
+#~ msgid "change-brightness"
+#~ msgstr "heleduse muutmine"

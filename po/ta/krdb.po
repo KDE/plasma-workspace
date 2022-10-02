@@ -1,0 +1,56 @@
+# translation of krdb.po to Tamil
+# Copyright (C) 2002, 2004 Free Software Foundation, Inc.
+#
+# Thuraiappah Vaseeharan <vasee@ieee.org>, 2002.
+# Vasee Vaseeharan <vasee@ieee.org>, 2004.
+# Kishore G <kishore96@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: krdb\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-24 00:47+0000\n"
+"PO-Revision-Date: 2021-08-24 21:36+0530\n"
+"Last-Translator: Kishore G <kishore96@gmail.com>\n"
+"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.08.0\n"
+
+#: krdb.cpp:261
+#, kde-format
+msgid ""
+"# created by KDE Plasma, %1\n"
+"#\n"
+msgstr ""
+"# கே.டீ.யீ. பிளாஸ்மாவால் உருவாக்கப்பட்டது, %1\n"
+"#\n"
+
+#, fuzzy
+#~| msgid ""
+#~| "# created by KDE, %1\n"
+#~| "#\n"
+#~| "# If you do not want KDE to override your GTK settings, select\n"
+#~| "# Appearance & Themes -> Colors in the Control Center and disable the "
+#~| "checkbox\n"
+#~| "# \"Apply colors to non-KDE applications\"\n"
+#~| "#\n"
+#~| "#\n"
+#~ msgid ""
+#~ "# created by KDE Plasma, %1\n"
+#~ "#\n"
+#~ "# If you do not want Plasma to override your GTK settings, select\n"
+#~ "# Colors in the System Settings and disable the checkbox\n"
+#~ "# \"Apply colors to non-Qt applications\"\n"
+#~ "#\n"
+#~ "#\n"
+#~ msgstr ""
+#~ "# kசாளரமைப்பு உருவாக்கியது, %1\n"
+#~ "#\n"
+#~ "# வண்ணங்களை kசாளரத்தை சேராத பயன்பாடகளுக்கும் புழங்க வேண்டாமென்றால் \n"
+#~ "# கட்டுப்பாட்டு மையத்தில் kதோற்றம்/வண்ணங்கள் சென்று \"வண்ணங்களை kசாளரத்தை சேராத "
+#~ "பயன்பாடகளுக்கும் புழங்கு\"\n"
+#~ " # என்ற தேர்வுப்பெட்டியில் முடமாக்கு#\n"
+#~ "#\n"

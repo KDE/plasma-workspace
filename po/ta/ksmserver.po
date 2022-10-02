@@ -1,0 +1,233 @@
+# translation of ksmserver.po to Tamil
+# Copyright (C) 2004 Free Software Foundation, Inc.
+#
+# Vasee Vaseeharan <vasee@ieee.org>, 2004.
+# Kishore G <kishore96@gmail.com>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: ksmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-22 00:47+0000\n"
+"PO-Revision-Date: 2022-02-24 21:49+0530\n"
+"Last-Translator: Kishore G <kishore96@gmail.com>\n"
+"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.12.2\n"
+
+#: logout.cpp:344
+#, kde-format
+msgid "Logout canceled by '%1'"
+msgstr "வெளியேறுவதை '%1' ரத்து செய்தது"
+
+#: main.cpp:117
+#, kde-format
+msgid "$HOME not set!"
+msgstr "$HOME அமைக்கப்படவில்லை!"
+
+#: main.cpp:121 main.cpp:127
+#, kde-format
+msgid "$HOME directory (%1) does not exist."
+msgstr "$HOME அடைவு (%1) இல்லை."
+
+#: main.cpp:123
+#, kde-format
+msgid "No write access to $HOME directory (%1)."
+msgstr "$HOME (%1) அடைவிற்கு எழுத முடியவில்லை."
+
+#: main.cpp:129
+#, kde-format
+msgid "No read access to $HOME directory (%1)."
+msgstr "$HOME (%1) அடைவை படிக்க முடியவில்லை."
+
+#: main.cpp:133
+#, kde-format
+msgid "$HOME directory (%1) is out of disk space."
+msgstr "$HOME (%1) அடைவில் சேமிப்பக இடம் முடிந்துவிட்டது."
+
+#: main.cpp:136
+#, kde-format
+msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+msgstr "$HOME (%2) அடைவிற்கு எழுதுதல், '%1' என்ற சிக்கலை தெரிவித்து தோல்வியடைந்தது"
+
+#: main.cpp:149 main.cpp:184
+#, kde-format
+msgid "No write access to '%1'."
+msgstr "'%1' என்பதற்கு எழுத அனுமதி இல்லை."
+
+#: main.cpp:151 main.cpp:186
+#, kde-format
+msgid "No read access to '%1'."
+msgstr "'%1' என்பதை படிக்க அனுமதி இல்லை."
+
+#: main.cpp:159 main.cpp:172
+#, kde-format
+msgid "Temp directory (%1) is out of disk space."
+msgstr "தற்காலிக (%1) அடைவில் சேமிப்பக இடம் முடிந்துவிட்டது."
+
+#: main.cpp:162 main.cpp:175
+#, kde-format
+msgid ""
+"Writing to the temp directory (%2) failed with\n"
+"    the error '%1'"
+msgstr ""
+"தற்காலிக (%2) அடைவிற்கு எழுதுதல், கீழ்வரும்  சிக்கலை தெரிவித்து தோல்வியடைந்தது:\n"
+"'%1'"
+
+#: main.cpp:190
+#, kde-format
+msgid ""
+"The following installation problem was detected\n"
+"while trying to start Plasma:"
+msgstr ""
+"பிளாஸ்மாவை துவக்க முயற்சிக்கும்போது கீழ்வரும்\n"
+" நிறுவல்நேர பிரச்சனை கண்டறியப்பட்டது:"
+
+#: main.cpp:193
+#, kde-format
+msgid ""
+"\n"
+"\n"
+"Plasma is unable to start.\n"
+msgstr ""
+"\n"
+"\n"
+"பிளாஸ்மாவை துவக்க முடியவில்லை.\n"
+
+#: main.cpp:200
+#, kde-format
+msgid "Plasma Workspace installation problem!"
+msgstr "பிளாஸ்மா பணிமேடையை நிறுவியதில் பிரச்சனை!"
+
+#: main.cpp:236
+#, kde-format
+msgid ""
+"The reliable Plasma session manager that talks the standard X11R6 \n"
+"session management protocol (XSMP)."
+msgstr ""
+"செந்தர X11R6 அமர்வு மேலாண் வரைமுறை (XSMP) யின் நம்பகதக்க பிளாஸ்மா \n"
+"அமர்வு மேலாளர்."
+
+#: main.cpp:240
+#, kde-format
+msgid "Restores the saved user session if available"
+msgstr "முந்தைய அமர்வு இருந்தால் அதை தொடரும்"
+
+#: main.cpp:243
+#, kde-format
+msgid "Also allow remote connections"
+msgstr "தொலை இணைப்புகளையும் அனுமதி"
+
+#: main.cpp:246
+#, kde-format
+msgid "Starts the session in locked mode"
+msgstr "அமர்வை பூட்டிய நிலையில் தொடங்கும்"
+
+#: main.cpp:250
+#, kde-format
+msgid ""
+"Starts without lock screen support. Only needed if other component provides "
+"the lock screen."
+msgstr ""
+"திரையை பூட்டும் ஆதரவில்லாமல் தொடங்கும். திரையை பூட்டும் சேவையை வேறொரு கூறு வழங்கினால் "
+"இது பயன்படும்."
+
+#: server.cpp:873
+#, kde-format
+msgid "Session Management"
+msgstr "அமர்வு மேலாண்மை"
+
+#: server.cpp:876
+#, kde-format
+msgid "Log Out"
+msgstr "அமர்விலிருந்து வெளியேறு"
+
+#: server.cpp:881
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "உறுதிப்படுத்தாமல் அமர்விலிருந்து வெளியேறு"
+
+#: server.cpp:886
+#, kde-format
+msgid "Halt Without Confirmation"
+msgstr "உறுதிப்படுத்தாமல் நிறுத்து"
+
+#: server.cpp:891
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "உறுதிப்படுத்தாமல் மீள்துவக்கு"
+
+#, fuzzy
+#~| msgid ""
+#~| "Starts 'wm' in case no other window manager is \n"
+#~| "participating in the session. Default is 'kwin'"
+#~ msgid ""
+#~ "Starts <wm> in case no other window manager is \n"
+#~ "participating in the session. Default is 'kwin'"
+#~ msgstr ""
+#~ "வேறு எந்த சாளர மேலாளரும் அமர்வில் கலந்து கொள்ளவில்லை என்றால், 'wm' \n"
+#~ "தொடங்கும். 'kwin' தான் கொடாநிலை"
+
+#, fuzzy
+#~ msgid "Sleeping in 1 second"
+#~ msgid_plural "Sleeping in %1 seconds"
+#~ msgstr[0] "&கணினியை நிறுத்தவும்"
+#~ msgstr[1] "&கணினியை நிறுத்தவும்"
+
+#, fuzzy
+#~ msgid "Logging out in 1 second."
+#~ msgid_plural "Logging out in %1 seconds."
+#~ msgstr[0] "&கணினியை நிறுத்தவும்"
+#~ msgstr[1] "&கணினியை நிறுத்தவும்"
+
+#, fuzzy
+#~ msgid "Turning off computer in 1 second."
+#~ msgid_plural "Turning off computer in %1 seconds."
+#~ msgstr[0] "&கணினியை நிறுத்தவும்"
+#~ msgstr[1] "&கணினியை நிறுத்தவும்"
+
+#, fuzzy
+#~ msgid "Restarting computer in 1 second."
+#~ msgid_plural "Restarting computer in %1 seconds."
+#~ msgstr[0] "&கணினியை நிறுத்தவும்"
+#~ msgstr[1] "&கணினியை நிறுத்தவும்"
+
+#, fuzzy
+#~ msgid "Turn Off Computer"
+#~ msgstr "&கணினியை நிறுத்தவும்"
+
+#, fuzzy
+#~ msgid "Restart Computer"
+#~ msgstr "&கணினியை மீளத்தரவும்"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "சிவகுமார் சண்முகசுந்தரம்,கோமதி சிவகுமார்,துரையப்பா வசீகரன், பிரபு"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "sshanmu@yahoo.com,gomathiss@hotmail.com,t_vasee@yahoo.com, "
+#~ "prabu_anand2000@yahoo.com"
+
+#~ msgid "Maintainer"
+#~ msgstr "மேம்பாட்டாளர்"
+
+#~ msgctxt "current option in boot loader"
+#~ msgid " (current)"
+#~ msgstr " (நடப்பு)"
+
+#, fuzzy
+#~ msgid "End Session for %1"
+#~ msgstr " \"%1\" அமர்வை முடிக்கவும்"
+
+#, fuzzy
+#~ msgid "End Session for %1 (%2)"
+#~ msgstr " \"%1\" அமர்வை முடிக்கவும்"
+
+#, fuzzy
+#~ msgid "End Current Session"
+#~ msgstr "&தற்ப்பொதைய அமர்வு முடிவு"

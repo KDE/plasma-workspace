@@ -1,0 +1,50 @@
+# translation of krunner_locationsrunner.po to Karakh
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sairan Kikkarin <sairan@computer.org>, 2008.
+# Sairan Kikkarin <sairan@computer.org>, 2010, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner_locationsrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"PO-Revision-Date: 2013-06-09 05:23+0600\n"
+"Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
+"Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
+"Language: kk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"\n"
+
+#: locationrunner.cpp:33
+#, kde-format
+msgid ""
+"Finds local directories and files, network locations and Internet sites with "
+"paths matching :q:."
+msgstr ""
+":q: дегенге сәйкесті жергілікті қапшық пен файлдарды, желідегі орындар мен "
+"Интернет сайттарды табу."
+
+#: locationrunner.cpp:60
+#, kde-format
+msgid "Open %1"
+msgstr "%1 дегенді ашу"
+
+#: locationrunner.cpp:78 locationrunner.cpp:82
+#, kde-format
+msgid "Launch with %1"
+msgstr "%1 дегенмен жегу"
+
+#: locationrunner.cpp:88
+#, kde-format
+msgid "Go to %1"
+msgstr "%1 дегенге өту"
+
+#: locationrunner.cpp:96
+#, kde-format
+msgid "Send email to %1"
+msgstr "%1 дегенге эл.пошта жіберу"

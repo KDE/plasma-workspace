@@ -1,0 +1,505 @@
+# Translation of libkicker.po to Ukrainian
+# Copyright (C) 2014-2020 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2014, 2015, 2016, 2017, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: libkicker\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-25 00:46+0000\n"
+"PO-Revision-Date: 2021-05-26 09:17+0300\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#: plugin/actionlist.cpp:86
+#, kde-format
+msgid "Open with:"
+msgstr "Відкрити за допомогою:"
+
+#: plugin/actionlist.cpp:99
+#, kde-format
+msgid "Properties"
+msgstr "Властивості"
+
+#: plugin/actionlist.cpp:146
+#, kde-format
+msgid "Add to Desktop"
+msgstr "Додати на стільницю"
+
+#: plugin/actionlist.cpp:151
+#, kde-format
+msgid "Add to Panel (Widget)"
+msgstr "Додати на панель (віджет)"
+
+#: plugin/actionlist.cpp:156
+#, kde-format
+msgid "Pin to Task Manager"
+msgstr "Пришпилити до панелі керування завданнями"
+
+#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:429
+#, kde-format
+msgid "Recent Files"
+msgstr "Нещодавні файли"
+
+#: plugin/actionlist.cpp:317
+#, kde-format
+msgid "Forget Recent Files"
+msgstr "Спорожнити список нещодавніх файлів"
+
+#: plugin/actionlist.cpp:395
+#, kde-format
+msgid "Edit Application…"
+msgstr "Змінити запис програми…"
+
+#: plugin/actionlist.cpp:438
+#, kde-format
+msgctxt "@action opens a software center with the application"
+msgid "Uninstall or Manage Add-Ons…"
+msgstr "Вилучити додатки або керувати ними…"
+
+#: plugin/appentry.cpp:319
+#, kde-format
+msgid "Hide Application"
+msgstr "Приховати програму"
+
+#: plugin/appentry.cpp:390
+#, kde-format
+msgctxt "App name (Generic name)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: plugin/appentry.cpp:392
+#, kde-format
+msgctxt "Generic name (App name)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: plugin/appsmodel.cpp:34 plugin/appsmodel.cpp:58 plugin/computermodel.cpp:98
+#: plugin/computermodel.cpp:226 plugin/recentusagemodel.cpp:163
+#: plugin/recentusagemodel.cpp:226
+#, kde-format
+msgid "Applications"
+msgstr "Програми"
+
+#: plugin/appsmodel.cpp:151
+#, kde-format
+msgid "Unhide Applications in this Submenu"
+msgstr "Скасувати приховування програм у цьому підменю"
+
+#: plugin/appsmodel.cpp:160
+#, kde-format
+msgid "Unhide Applications in '%1'"
+msgstr "Скасувати приховування програм у «%1»"
+
+#: plugin/computermodel.cpp:92
+#, kde-format
+msgid "Show KRunner"
+msgstr "Показати KRunner"
+
+#: plugin/computermodel.cpp:96
+#, kde-format
+msgid "Search, calculate, or run a command"
+msgstr "Пошук, обчислення або виконання команди"
+
+#: plugin/computermodel.cpp:149
+#, kde-format
+msgid "Computer"
+msgstr "Комп’ютер"
+
+#: plugin/contactentry.cpp:106 plugin/recentcontactsmodel.cpp:82
+#, kde-format
+msgid "Show Contact Information…"
+msgstr "Показати дані щодо контакту…"
+
+#. i18n.
+#: plugin/kastatsfavoritesmodel.cpp:504 plugin/rootmodel.cpp:416
+#: plugin/simplefavoritesmodel.cpp:31
+#, kde-format
+msgid "Favorites"
+msgstr "Улюблене"
+
+#: plugin/recentcontactsmodel.cpp:40
+#, kde-format
+msgid "Contacts"
+msgstr "Контакти"
+
+#: plugin/recentcontactsmodel.cpp:73
+#, kde-format
+msgid "Forget Contact"
+msgstr "Забути про контакт"
+
+#: plugin/recentcontactsmodel.cpp:77 plugin/recentcontactsmodel.cpp:153
+#, kde-format
+msgid "Forget All Contacts"
+msgstr "Забути про усі контакти"
+
+#: plugin/recentusagemodel.cpp:161
+#, kde-format
+msgid "Recently Used"
+msgstr "Недавно використані"
+
+#: plugin/recentusagemodel.cpp:166 plugin/recentusagemodel.cpp:308
+#, kde-format
+msgid "Files"
+msgstr "Файли"
+
+#: plugin/recentusagemodel.cpp:248
+#, kde-format
+msgid "Forget Application"
+msgstr "Забути про програму"
+
+#: plugin/recentusagemodel.cpp:342
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Відкрити теку, яка містить дані"
+
+#: plugin/recentusagemodel.cpp:345
+#, kde-format
+msgid "Forget File"
+msgstr "Забути про файл"
+
+#: plugin/recentusagemodel.cpp:495
+#, kde-format
+msgid "Forget All"
+msgstr "Забути всі"
+
+#: plugin/recentusagemodel.cpp:497
+#, kde-format
+msgid "Forget All Applications"
+msgstr "Забути про усі програми"
+
+#: plugin/recentusagemodel.cpp:500
+#, kde-format
+msgid "Forget All Files"
+msgstr "Забути про усі файли"
+
+#: plugin/rootmodel.cpp:95
+#, kde-format
+msgid "Hide %1"
+msgstr "Сховати %1"
+
+#: plugin/rootmodel.cpp:398
+#, kde-format
+msgid "All Applications"
+msgstr "Всі програми"
+
+#: plugin/rootmodel.cpp:410
+#, kde-format
+msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
+msgstr "Цього не мало бути показано! Скористайтеся KICKER_FAVORITES_MODEL"
+
+#: plugin/rootmodel.cpp:422
+#, kde-format
+msgid "Recent Contacts"
+msgstr "Недавні контакти"
+
+#: plugin/rootmodel.cpp:429
+#, kde-format
+msgid "Often Used Files"
+msgstr "Часто використовувані файли"
+
+#: plugin/rootmodel.cpp:438
+#, kde-format
+msgid "Recent Applications"
+msgstr "Недавні програми"
+
+#: plugin/rootmodel.cpp:438
+#, kde-format
+msgid "Often Used Applications"
+msgstr "Часто використовувані програми"
+
+#: plugin/rootmodel.cpp:453
+#, kde-format
+msgid "Power / Session"
+msgstr "Живлення/Сеанс"
+
+#: plugin/runnermodel.cpp:231
+#, kde-format
+msgid "Search results"
+msgstr "Результати пошуку"
+
+#: plugin/systementry.cpp:195
+#, kde-format
+msgid "Lock"
+msgstr "Заблокувати"
+
+#: plugin/systementry.cpp:198
+#, kde-format
+msgid "Log Out"
+msgstr "Вийти"
+
+#: plugin/systementry.cpp:201 plugin/systementry.cpp:269
+#, kde-format
+msgid "Save Session"
+msgstr "Зберегти сеанс"
+
+#: plugin/systementry.cpp:204
+#, kde-format
+msgid "Switch User"
+msgstr "Перемкнути користувача"
+
+#: plugin/systementry.cpp:207
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Призупинити"
+
+#: plugin/systementry.cpp:210
+#, kde-format
+msgid "Hibernate"
+msgstr "Приспати"
+
+#: plugin/systementry.cpp:213
+#, kde-format
+msgid "Restart"
+msgstr "Перезапустити"
+
+#: plugin/systementry.cpp:216
+#, kde-format
+msgid "Shut Down"
+msgstr "Вимкнути"
+
+#: plugin/systementry.cpp:229 plugin/systementry.cpp:232
+#: plugin/systementry.cpp:235 plugin/systementry.cpp:238
+#, kde-format
+msgid "Session"
+msgstr "Сеанс"
+
+#: plugin/systementry.cpp:241 plugin/systementry.cpp:244
+#: plugin/systementry.cpp:247 plugin/systementry.cpp:250
+#, kde-format
+msgid "System"
+msgstr "Система"
+
+#: plugin/systementry.cpp:263
+#, kde-format
+msgid "Lock screen"
+msgstr "Заблокувати екран"
+
+#: plugin/systementry.cpp:266
+#, kde-format
+msgid "End session"
+msgstr "Завершити сеанс"
+
+#: plugin/systementry.cpp:272
+#, kde-format
+msgid "Start a parallel session as a different user"
+msgstr "Почати паралельний сеанс як інший користувач"
+
+#: plugin/systementry.cpp:275
+#, kde-format
+msgid "Suspend to RAM"
+msgstr "Сон зі збереженням до RAM"
+
+#: plugin/systementry.cpp:278
+#, kde-format
+msgid "Suspend to disk"
+msgstr "Сон зі збереженням на диск"
+
+#: plugin/systementry.cpp:281
+#, kde-format
+msgid "Restart computer"
+msgstr "Перезавантажити комп’ютер"
+
+#: plugin/systementry.cpp:284
+#, kde-format
+msgid "Turn off computer"
+msgstr "Вимкнути комп’ютер"
+
+#: plugin/systemmodel.cpp:31
+#, kde-format
+msgid "System actions"
+msgstr "Системні дії"
+
+#~ msgid "Documents"
+#~ msgstr "Документи"
+
+#~ msgid "Forget Document"
+#~ msgstr "Забути про документ"
+
+#~ msgid "Forget All Documents"
+#~ msgstr "Забути про усі документи"
+
+#~ msgid "General"
+#~ msgstr "Загальне"
+
+#~ msgid "Remove from Favorites"
+#~ msgstr "Вилучити з улюбленого"
+
+#~ msgid "Add to Favorites"
+#~ msgstr "Додати до улюбленого"
+
+#~ msgid "On All Activities"
+#~ msgstr "На усіх просторах дій"
+
+#~ msgid "On The Current Activity"
+#~ msgstr "На поточному просторі дій"
+
+#~ msgid "Show In Favorites"
+#~ msgstr "Показати в «Улюбленому»"
+
+#~ msgid "Icon:"
+#~ msgstr "Піктограма:"
+
+#~ msgctxt "@item:inmenu Open icon chooser dialog"
+#~ msgid "Choose..."
+#~ msgstr "Вибрати…"
+
+#~ msgctxt "@item:inmenu Reset icon to default"
+#~ msgid "Clear Icon"
+#~ msgstr "Спорожнити піктограму"
+
+#~ msgid "Show applications as:"
+#~ msgstr "Показ програм:"
+
+#~ msgid "Name only"
+#~ msgstr "лише назви"
+
+#~ msgid "Description only"
+#~ msgstr "лише описи"
+
+#~ msgid "Name (Description)"
+#~ msgstr "назва (опис)"
+
+#~ msgid "Description (Name)"
+#~ msgstr "опис (назва)"
+
+#~ msgid "Behavior:"
+#~ msgstr "Поведінка:"
+
+#~ msgid "Sort applications alphabetically"
+#~ msgstr "Впорядкувати програми за абеткою"
+
+#~ msgid "Flatten sub-menus to a single level"
+#~ msgstr "Спрощення підменю до однорівневого"
+
+#~ msgid "Show categories:"
+#~ msgstr "Показувати такі категорії:"
+
+#~ msgid "Recent applications"
+#~ msgstr "Недавні програми"
+
+#~ msgid "Often used applications"
+#~ msgstr "Часто використовувані програми"
+
+#~ msgid "Recent documents"
+#~ msgstr "Недавні документи"
+
+#~ msgid "Often used documents"
+#~ msgstr "Часто використовувані документи"
+
+#~ msgid "Recent contacts"
+#~ msgstr "Недавні контакти"
+
+#~ msgid "Often used contacts"
+#~ msgstr "Часто використовувані контакти"
+
+#~ msgid "Sort items in categories by:"
+#~ msgstr "Критерій упорядкування записів у категоріях:"
+
+#~ msgctxt ""
+#~ "@item:inlistbox Sort items in categories by [Recently used | Often used]"
+#~ msgid "Recently used"
+#~ msgstr "Недавно використані"
+
+#~ msgctxt ""
+#~ "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
+#~ msgid "Often used"
+#~ msgstr "Часто використовувані"
+
+#~ msgid "Search:"
+#~ msgstr "Пошук:"
+
+#~ msgid "Expand search to bookmarks, files and emails"
+#~ msgstr "Розширення пошуку на закладки, файли та електронну пошту"
+
+#~ msgid "Align search results to bottom"
+#~ msgstr "Вирівнювати результати пошуку вниз"
+
+#~ msgid "Searching for '%1'"
+#~ msgstr "Шукаємо «%1»"
+
+#~ msgid "Type to search..."
+#~ msgstr "Введіть текст для пошуку…"
+
+#~ msgid "Widgets"
+#~ msgstr "Віджети"
+
+#~ msgid "Apps & Docs"
+#~ msgstr "Програми і документація"
+
+#~ msgid "Edit Applications..."
+#~ msgstr "Змінити список програм…"
+
+#~ msgid "Search..."
+#~ msgstr "Шукати…"
+
+#~ msgctxt "@action opens a software center with the application"
+#~ msgid "Manage '%1'..."
+#~ msgstr "Керувати «%1»…"
+
+#~ msgid "Run Command..."
+#~ msgstr "Виконати команду…"
+
+#~ msgid "Run a command or a search query"
+#~ msgstr "Виконати команду або запит на пошук"
+
+#~ msgid "Show:"
+#~ msgstr "Показати:"
+
+#~ msgid "Show recent applications"
+#~ msgstr "Показувати недавні програми"
+
+#~ msgid "Show often used applications"
+#~ msgstr "Показувати часто використовувані програми"
+
+#~ msgid "Show recent documents"
+#~ msgstr "Показувати недавні документи"
+
+#~ msgid "Show often used documents"
+#~ msgstr "Показувати часто використовувані документи"
+
+#~ msgid "Show recent contacts"
+#~ msgstr "Показувати недавні контакти"
+
+#~ msgid "Removable Storage"
+#~ msgstr "Портативні носії"
+
+#~ msgid "Places"
+#~ msgstr "Місця"
+
+#~ msgid "Logout"
+#~ msgstr "Вийти"
+
+#~ msgid "Suspend"
+#~ msgstr "Призупинити"
+
+#~ msgid "Reboot"
+#~ msgstr "Перезавантажити"
+
+#~ msgid "Use custom image:"
+#~ msgstr "Використовувати нетипове зображення:"
+
+#~ msgid "Choose an image"
+#~ msgstr "Виберіть зображення"
+
+#~ msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+#~ msgstr "файли зображень (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+
+#~ msgid "Add as Launcher"
+#~ msgstr "Додати як кнопку запуску"
+
+#~ msgid "New Session"
+#~ msgstr "Новий сеанс"
+
+#~ msgid "(Empty)"
+#~ msgstr "(Порожньо)"

@@ -1,0 +1,153 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-09 00:47+0000\n"
+"PO-Revision-Date: 2015-03-05 15:28+0200\n"
+"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: contents/ui/BarcodePage.qml:36
+#, kde-format
+msgid "Return to Clipboard"
+msgstr "Επιστροφή στο πρόχειρο"
+
+#: contents/ui/BarcodePage.qml:57
+#, kde-format
+msgid "QR Code"
+msgstr "Κώδικας QR"
+
+#: contents/ui/BarcodePage.qml:58
+#, kde-format
+msgid "Data Matrix"
+msgstr "Πίνακας δεδομένων"
+
+#: contents/ui/BarcodePage.qml:59
+#, kde-format
+msgctxt "Aztec barcode"
+msgid "Aztec"
+msgstr ""
+
+#: contents/ui/BarcodePage.qml:60
+#, kde-format
+msgid "Code 39"
+msgstr "Κωδικοποίηση 39"
+
+#: contents/ui/BarcodePage.qml:61
+#, kde-format
+msgid "Code 93"
+msgstr "Κωδικοποίηση 93"
+
+#: contents/ui/BarcodePage.qml:62
+#, fuzzy, kde-format
+#| msgid "Code 39"
+msgid "Code 128"
+msgstr "Κωδικοποίηση 39"
+
+#: contents/ui/BarcodePage.qml:85
+#, fuzzy, kde-format
+#| msgid "Change the barcode type"
+msgid "Change the QR code type"
+msgstr "Αλλαγή τύπου γραμμωτού κώδικα"
+
+#: contents/ui/BarcodePage.qml:114
+#, fuzzy, kde-format
+#| msgid "Creating barcode failed"
+msgid "Creating QR code failed"
+msgstr "Αποτυχία δημιουργίας γραμμωτού κώδικα"
+
+#: contents/ui/BarcodePage.qml:123
+#, kde-format
+msgid "The QR code is too large to be displayed"
+msgstr ""
+
+#: contents/ui/clipboard.qml:26
+#, kde-format
+msgid "Clipboard Contents"
+msgstr "Περιεχόμενα προχείρου"
+
+#: contents/ui/clipboard.qml:27 contents/ui/Menu.qml:84
+#, kde-format
+msgid "Clipboard is empty"
+msgstr "Το πρόχειρο είναι άδειο"
+
+#: contents/ui/clipboard.qml:55
+#, fuzzy, kde-format
+#| msgid "Configure Clipboard..."
+msgid "Configure Clipboard…"
+msgstr "Διαμόρφωση πρόχειρου..."
+
+#: contents/ui/clipboard.qml:57
+#, fuzzy, kde-format
+#| msgid "Clear history"
+msgid "Clear History"
+msgstr "Καθαρισμός ιστορικού"
+
+#: contents/ui/DelegateToolButtons.qml:23
+#, kde-format
+msgid "Invoke action"
+msgstr "Κλήση ενέργειας"
+
+#: contents/ui/DelegateToolButtons.qml:38
+#, fuzzy, kde-format
+#| msgid "Show barcode"
+msgid "Show QR code"
+msgstr "Εμφάνιση γραμμωτού κώδικα"
+
+#: contents/ui/DelegateToolButtons.qml:54
+#, kde-format
+msgid "Edit contents"
+msgstr "Επεξεργασία περιεχομένων"
+
+#: contents/ui/DelegateToolButtons.qml:68
+#, kde-format
+msgid "Remove from history"
+msgstr "Αφαίρεση από το ιστορικό"
+
+#: contents/ui/EditPage.qml:82
+#, kde-format
+msgctxt "@action:button"
+msgid "Save"
+msgstr ""
+
+#: contents/ui/EditPage.qml:90
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr ""
+
+#: contents/ui/Menu.qml:84
+#, kde-format
+msgid "No matches"
+msgstr ""
+
+#: contents/ui/UrlItemDelegate.qml:99
+#, kde-format
+msgctxt ""
+"Indicator that there are more urls in the clipboard than previews shown"
+msgid "+%1"
+msgstr "+%1"
+
+#~ msgid "Clear history"
+#~ msgstr "Καθαρισμός ιστορικού"
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgid "Search…"
+#~ msgstr "Αναζήτηση"
+
+#~ msgid "Clipboard history is empty."
+#~ msgstr "Το ιστορικό του προχείρου είναι άδειο."
+
+#~ msgid "Configure"
+#~ msgstr "Διαμόρφωση"

@@ -1,0 +1,355 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Kristóf Kiszel <ulysses@kubuntu.org>, 2014, 2015, 2019.
+# Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020.
+# Kristof Kiszel <ulysses@fsf.hu>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-22 00:47+0000\n"
+"PO-Revision-Date: 2022-02-14 09:24+0100\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.07.70\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Kiszel Kristóf"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "ulysses@fsf.hu"
+
+#: currentcontainmentactionsmodel.cpp:201
+#, kde-format
+msgid "Configure Mouse Actions Plugin"
+msgstr "Az Egérműveletek bővítmény beállításai"
+
+#: main.cpp:88
+#, kde-format
+msgid "Plasma"
+msgstr "Plasma"
+
+#: main.cpp:88
+#, kde-format
+msgid "Plasma Shell"
+msgstr "Plasma felület"
+
+#: main.cpp:100
+#, kde-format
+msgid "Enable QML Javascript debugger"
+msgstr "QML Javascript hibakereső bekapcsolása"
+
+#: main.cpp:103
+#, kde-format
+msgid "Do not restart plasma-shell automatically after a crash"
+msgstr "Ne indítsa újra a plasma-shell folyamatot összeomlás után"
+
+#: main.cpp:106
+#, kde-format
+msgid "Force loading the given shell plugin"
+msgstr "A megadott bővítmény betöltésének kényszerítése"
+
+#: main.cpp:111
+#, kde-format
+msgid ""
+"Load plasmashell as a standalone application, needs the shell-plugin option "
+"to be specified"
+msgstr ""
+"A plasmashell betöltése önálló alkalmazásként, a -plugin opció megadása "
+"szükséges"
+
+#: main.cpp:113
+#, kde-format
+msgid "Replace an existing instance"
+msgstr "Meglévő példány cseréje"
+
+#: main.cpp:116
+#, kde-format
+msgid ""
+"Enables test mode and specifies the layout javascript file to set up the "
+"testing environment"
+msgstr ""
+"Bekapcsolja a teszt módot, és megadja az elrendezést leíró JavaScript fájlt "
+"a tesztkörnyezet beállításához"
+
+#: main.cpp:117
+#, kde-format
+msgid "file"
+msgstr "fájl"
+
+#: main.cpp:121
+#, kde-format
+msgid "Lists the available options for user feedback"
+msgstr "Felsorolja a felhasználói visszajelzés lehetőségeit"
+
+#: main.cpp:219
+#, kde-format
+msgid "Plasma Failed To Start"
+msgstr "Nem sikerült elindítani a Plasmát"
+
+#: main.cpp:220
+#, kde-format
+msgid ""
+"Plasma is unable to start as it could not correctly use OpenGL 2 or software "
+"fallback\n"
+"Please check that your graphic drivers are set up correctly."
+msgstr ""
+"A Plasma nem tudott elindulni, mivel nem sikerült megfelelően beállítani az "
+"OpenGL 2-t vagy a szoftveres visszaállást.\n"
+"Ellenőrizze, hogy a grafikus illesztőprogram megfelelően van-e beállítva."
+
+#: osd.cpp:54
+#, kde-format
+msgctxt "OSD informing that the system is muted, keep short"
+msgid "Audio Muted"
+msgstr "Hang elnémítva"
+
+#: osd.cpp:72
+#, kde-format
+msgctxt "OSD informing that the microphone is muted, keep short"
+msgid "Microphone Muted"
+msgstr "Mikrofon némítva"
+
+#: osd.cpp:88
+#, kde-format
+msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
+msgid "%1 Muted"
+msgstr "%1 elnémítva"
+
+#: osd.cpp:110
+#, kde-format
+msgctxt "touchpad was enabled, keep short"
+msgid "Touchpad On"
+msgstr "Érintőpárna bekapcsolva"
+
+#: osd.cpp:112
+#, kde-format
+msgctxt "touchpad was disabled, keep short"
+msgid "Touchpad Off"
+msgstr "Érintőpárna kikapcsolva"
+
+#: osd.cpp:119
+#, kde-format
+msgctxt "wireless lan was enabled, keep short"
+msgid "Wifi On"
+msgstr "WiFi bekapcsolva"
+
+#: osd.cpp:121
+#, kde-format
+msgctxt "wireless lan was disabled, keep short"
+msgid "Wifi Off"
+msgstr "WiFi kikapcsolva"
+
+#: osd.cpp:128
+#, kde-format
+msgctxt "Bluetooth was enabled, keep short"
+msgid "Bluetooth On"
+msgstr "Bluetooth bekapcsolva"
+
+#: osd.cpp:130
+#, kde-format
+msgctxt "Bluetooth was disabled, keep short"
+msgid "Bluetooth Off"
+msgstr "Bluetooth kikapcsolva"
+
+#: osd.cpp:137
+#, kde-format
+msgctxt "mobile internet was enabled, keep short"
+msgid "Mobile Internet On"
+msgstr "Mobilinternet bekapcsolva"
+
+#: osd.cpp:139
+#, kde-format
+msgctxt "mobile internet was disabled, keep short"
+msgid "Mobile Internet Off"
+msgstr "Mobilinternet kikapcsolva"
+
+#: osd.cpp:147
+#, kde-format
+msgctxt ""
+"on screen keyboard was enabled because physical keyboard got unplugged, keep "
+"short"
+msgid "On-Screen Keyboard Activated"
+msgstr "Képernyő-billentyűzet aktiválva"
+
+#: osd.cpp:150
+#, kde-format
+msgctxt ""
+"on screen keyboard was disabled because physical keyboard was plugged in, "
+"keep short"
+msgid "On-Screen Keyboard Deactivated"
+msgstr "Képernyő-billentyűzet deaktiválva"
+
+#: shellcontainmentconfig.cpp:129
+#, kde-format
+msgid "Unknown %1"
+msgstr "Ismeretlen %1"
+
+#: shellcorona.cpp:170 shellcorona.cpp:172
+#, kde-format
+msgid "Show Desktop"
+msgstr "Asztal megjelenítése"
+
+#: shellcorona.cpp:172
+#, kde-format
+msgid "Hide Desktop"
+msgstr "Asztal elrejtése"
+
+#: shellcorona.cpp:188
+#, kde-format
+msgid "Show Activity Switcher"
+msgstr "Aktivitásváltó megjelenítése"
+
+#: shellcorona.cpp:199
+#, kde-format
+msgid "Stop Current Activity"
+msgstr "Jelenlegi aktivitás leállítása"
+
+#: shellcorona.cpp:207
+#, kde-format
+msgid "Switch to Previous Activity"
+msgstr "Váltás az előző aktivitásra"
+
+#: shellcorona.cpp:215
+#, kde-format
+msgid "Switch to Next Activity"
+msgstr "Váltás a következő aktivitásra"
+
+#: shellcorona.cpp:231
+#, kde-format
+msgid "Activate Task Manager Entry %1"
+msgstr "A(z) %1. bejegyzés aktiválása"
+
+#: shellcorona.cpp:257
+#, kde-format
+msgid "Manage Desktops And Panels..."
+msgstr "Asztalok és panelek kezelése…"
+
+#: shellcorona.cpp:278
+#, kde-format
+msgid "Move keyboard focus between panels"
+msgstr "A billentyűzet fókuszának váltogatása panelek között"
+
+#: shellcorona.cpp:1761
+#, kde-format
+msgid "Add Panel"
+msgstr "Panel hozzáadása"
+
+#: shellcorona.cpp:1798
+#, fuzzy, kde-format
+#| msgid "Empty %1"
+msgctxt "Creates an empty containment (%1 is the containment name)"
+msgid "Empty %1"
+msgstr "Üres %1"
+
+#: softwarerendernotifier.cpp:27
+#, kde-format
+msgid "Software Renderer In Use"
+msgstr "Szoftveres leképező van használatban"
+
+#: softwarerendernotifier.cpp:28
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Software Renderer In Use"
+msgstr "Szoftveres leképező van használatban"
+
+#: softwarerendernotifier.cpp:29
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Rendering may be degraded"
+msgstr "A leképezés csökkentett teljesítményű lehet"
+
+#: softwarerendernotifier.cpp:39
+#, kde-format
+msgid "Never show again"
+msgstr "Ne mutassa többé"
+
+#: userfeedback.cpp:36
+#, kde-format
+msgid "Panel Count"
+msgstr "Panelszám"
+
+#: userfeedback.cpp:40
+#, kde-format
+msgid "Counts the panels"
+msgstr "Megszámolja a paneleket"
+
+#~ msgid "Unable to load script file: %1"
+#~ msgstr "Nem sikerült betölteni a szkriptfájlt: %1"
+
+#~ msgid "Activities..."
+#~ msgstr "Aktivitások…"
+
+#~ msgid "Main Script File"
+#~ msgstr "Fő szkriptfájl"
+
+#~ msgid "Force a windowed view for testing purposes"
+#~ msgstr "Ablakos nézet kényszerítése tesztelési célokból"
+
+#~ msgid ""
+#~ "Your graphics hardware does not support OpenGL (ES) 2. Plasma will abort "
+#~ "now."
+#~ msgstr ""
+#~ "A grafikus kártyája nem támogatja  az OpenGL (ES) 2-t. A Plasma kilép."
+
+#~ msgid "Incompatible OpenGL version detected"
+#~ msgstr "Inkompatibilis OpenGL verzió észlelve"
+
+#~ msgid "Recent number of crashes"
+#~ msgstr "Legutóbbi összeomlások száma"
+
+#~ msgid "Show Dashboard"
+#~ msgstr "Áttekintő nézet megjelenítése"
+
+#~ msgid "Hide Dashboard"
+#~ msgstr "Áttekintő nézet elrejtése"
+
+#~ msgid "Shuts up the output"
+#~ msgstr "Kimenet elnémítása"
+
+#~ msgid "&Execute"
+#~ msgstr "Végr&ehajtás"
+
+#~ msgctxt "Toolbar Button to switch to KWin Scripting Mode"
+#~ msgid "KWin"
+#~ msgstr "KWin"
+
+#~ msgid "Templates"
+#~ msgstr "Sablonok"
+
+#~ msgid "Desktop Shell Scripting Console"
+#~ msgstr "Asztali szkriptkonzol"
+
+#~ msgid "Editor"
+#~ msgstr "Szerkesztő"
+
+#~ msgid "Load"
+#~ msgstr "Betöltés"
+
+#~ msgid "Use"
+#~ msgstr "Használat"
+
+#~ msgid "Output"
+#~ msgstr "Kimenet"
+
+#~ msgid "Unable to load script file <b>%1</b>"
+#~ msgstr "Nem sikerült betölteni a parancsfájlt: <b>%1>"
+
+#~ msgid "Save Script File"
+#~ msgstr "Szkriptfájl mentése"
+
+#~ msgid "Executing script at %1"
+#~ msgstr "Szkript végrehajtása itt: %1"
+
+#~ msgid "Runtime: %1ms"
+#~ msgstr "Futásidő: %1 ms"

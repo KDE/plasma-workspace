@@ -1,0 +1,165 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Italian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmstyle" lang="&language;">
+<articleinfo>
+
+<title
+>Stile delle applicazioni</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>Andrea</firstname
+><surname
+>Di Menna</surname
+><affiliation
+><address
+><email
+>a.dimenna@libero.it</email
+></address
+></affiliation
+><contrib
+>Traduzione</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-09</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Impostazioni di sistema</keyword>
+<keyword
+>stile</keyword>
+<keyword
+>applicazione</keyword>
+<keyword
+>oggetti</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Questo modulo è utilizzato per configurare il modo con il quale &plasma;disegna gli elementi grafici.</para>
+
+<note
+><para
+>Un <emphasis
+>elemento grafico</emphasis
+> è un termine comunemente utilizzato dai programmatori per far riferimento agli elementi dell'interfaccia utente come pulsanti, menu e barre di scorrimento. Puoi pensare ad essi come agli elementi di base che vengono assemblati per costruire la tua applicazione.</para
+></note>
+
+<para
+>Puoi configurare il modo con il quale gli elementi grafici vengono disegnati attraverso questo modulo, ma per cambiare il loro colore devi fare riferimento alla sezione chiamata <ulink url="help:/kcontrol/colors/index.html"
+>Colori</ulink
+>.</para>
+
+<para
+>La griglia in alta, chiamata <guilabel
+>Stile delle applicazioni</guilabel
+> contiene un elenco di anteprime di stili predefiniti. Ogni stile ha un nome ed una breve descrizione che viene mostrata quando vi passi sopra il puntatore del mouse.</para>
+
+<para
+>Se vuoi configurare un tema di &plasma;, usa l'icona in sovrapposizione <guilabel
+>Configura stile...</guilabel
+> nell'angolo inferiore destro dell'icona dello stile nella griglia.</para>
+
+<para
+>Se implementato, è possibile modificare quasi ogni aspetto dello stile: centrare le schede nelle barre delle schede, disegnare separatori degli elementi delle barre degli strumenti, disegnare indicatori per l'elemento evidenziato negli elenchi, disegnare marcatori dei cursori, abilitare maniglie di ridimensionamento estese, definire la visibilità degli acceleratori di tastiera, la modalità di trascinamento delle finestre, se usare cornici per una migliore accessibilità, se usare pulsanti nelle barre di scorrimento, se usare la trasparenza nei menu.</para>
+
+<para
+>La configurazione generale può essere effettuata premendo il pulsante <guibutton
+>Configura icone e barre degli strumenti</guibutton
+> posto sotto la griglia. Questo pulsante apre un pannello per selezionare ulteriori impostazioni.</para>
+<variablelist>
+
+<varlistentry
+> 
+<term
+><guilabel
+>Mostra le icone: sui pulsanti</guilabel
+></term>
+<listitem>
+<para
+>Se questa opzione è abilitata, i pulsanti di azione (come <guibutton
+>OK</guibutton
+> e <guibutton
+>Applica</guibutton
+>) conterranno una piccola icona al loro interno che agisce da riferimento visivo. Se questa opzione non è stata abilitata, allora sul pulsante verrà mostrato solamente del testo.</para>
+</listitem
+> 
+</varlistentry
+> 
+
+<varlistentry
+> 
+<term
+><guilabel
+>Mostra le icone: nei menu</guilabel
+></term>
+<listitem>
+<para
+>Se questa opzione è selezionata, le applicazioni di &kde; mostreranno delle iconcine di fianco alla maggior parte degli elementi dei menu. Se non lo è, ci sarà solo del testo. Le modifiche alla visibilità delle icone dei menu avranno effetto solo sulle applicazioni avviate in seguito.</para>
+</listitem
+> 
+</varlistentry
+> 
+
+<varlistentry
+> 
+<term
+><guilabel
+>Etichetta della barra degli strumenti principale</guilabel
+>, <guilabel
+>Etichetta della barra degli strumenti secondaria</guilabel
+></term>
+<listitem>
+<para
+>Queste caselle a scelta multipla ti permettono di decidere dove apparirà, come impostazione predefinita, il testo del nome del pulsante sul pulsante stesso. Se è selezionato <guilabel
+>Nessuna</guilabel
+>, allora non c'è alcun testo sui pulsanti della barra degli strumenti. Se è selezionato <guilabel
+>Solo testo</guilabel
+>, allora l'icona dei pulsanti viene sostituita con un testo che rappresenta il nome del pulsante. Se è selezionato <guilabel
+>Accanto alle icone</guilabel
+>, allora il nome del pulsante verrà posto alla <emphasis
+>destra</emphasis
+> dell'icona. Se è selezionato <guilabel
+>Sotto l'icona</guilabel
+>, come impostazione predefinita, si avrà il testo del pulsante <emphasis
+>sotto</emphasis
+> l'icona.</para>
+
+<tip
+><para
+>Queste opzioni specificano solo la posizione <emphasis
+>predefinita</emphasis
+>. Ogni applicazione può sovrascrivere le impostazioni utilizzata in questo pannello.</para
+></tip>
+</listitem
+> 
+</varlistentry
+> 
+
+</variablelist>
+
+<para
+>Il pulsante <guibutton
+>Configura lo stile delle applicazioni GNOME/GTK...</guibutton
+> può essere usato per aprire la scheda di configurazione da cui la scegliere il <guilabel
+>Tema GTK</guilabel
+>, installare il tema GTK da file, o installarlo da Internet tramite <guibutton
+>Scarica nuovi stili delle applicazioni GNOME/GTK...</guibutton
+> </para>
+
+</article>

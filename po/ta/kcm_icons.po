@@ -1,0 +1,344 @@
+# translation of kcmicons.po to
+# translation of kcmicons.po to Tamil
+# Copyright (C) 2004 Free Software Foundation, Inc.
+#
+# Vasee Vaseeharan <vasee@ieee.org>, 2004.
+# Ambalam <tamilpc@ambalam.com>, 2004.
+# Kishore G <kishore96@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmicons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"PO-Revision-Date: 2021-08-10 21:27+0530\n"
+"Last-Translator: Kishore G <kishore96@gmail.com>\n"
+"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.07.90\n"
+
+#: iconsizecategorymodel.cpp:14
+#, kde-format
+msgid "Toolbar"
+msgstr "கருவிப்பட்டை"
+
+#: iconsizecategorymodel.cpp:15
+#, kde-format
+msgid "Main Toolbar"
+msgstr "பிரதான கருவிப்பட்டை"
+
+#: iconsizecategorymodel.cpp:16
+#, kde-format
+msgid "Small Icons"
+msgstr "சிறு சின்னங்கள்"
+
+#: iconsizecategorymodel.cpp:17
+#, kde-format
+msgid "Panel"
+msgstr "பலகம்"
+
+#: iconsizecategorymodel.cpp:18
+#, kde-format
+msgid "Dialogs"
+msgstr "சாளரங்கள்"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr "தற்போதைய சின்னங்களுக்கான தோற்றத்திட்டத்தின் பெயர்"
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr "பணிமேடை சின்னங்களின் அளவு"
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr "கருவிப்பட்டை சின்னங்களின் அளவு"
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, kde-format
+msgid "Main toolbar icons size"
+msgstr "பிரதான கருவிப்பட்டை சின்னங்களின் அளவு"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, kde-format
+msgid "Small icons size"
+msgstr "சிறு சின்னங்களின் அளவு"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr "பலகை சின்னங்களின் அளவு"
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr "சாளரத்திளுள்ள சின்னங்களின் அளவு"
+
+#: main.cpp:182
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "தற்காலிக கோப்பை உருவாக்க முடியவில்லை.."
+
+#: main.cpp:193
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr "சின்னங்களுக்கான தோற்றத்திட்ட பெட்டகத்தை பதிவிறக்க முடியவில்லை: %1"
+
+#: main.cpp:207
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "கோப்பு, செல்லுபடியாகாத சின்ன தோற்றத்திட்ட பெட்டகம்."
+
+#: main.cpp:212
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr ""
+"நிறுவும்போது சிக்கல் ஏற்பட்டது; இருந்தும், பெட்டகத்திலிருந்த பெரும்பாலுமான தோற்றத்திட்டங்கள் "
+"நிறுவப்பட்டன"
+
+#: main.cpp:216
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "தோற்றத்திட்டம் வெற்றிகரமாக நிறுவப்பட்டது."
+
+#: main.cpp:260
+#, kde-format
+msgid "Installing icon themes…"
+msgstr "சின்னங்களுக்கான திட்டங்கள் நிறுவப்படுகின்றன…"
+
+#: main.cpp:270
+#, kde-format
+msgid "Installing %1 theme…"
+msgstr "%1 திட்டம் நிறுவப்படுகிறது…"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr "உங்கள் பணிமேடையில் பயன்படுத்தப்படும் சின்னங்களை தேர்ந்தெடுக்க இந்த கூறு உதவும்."
+
+#: package/contents/ui/main.qml:147
+#, kde-format
+msgid "Remove Icon Theme"
+msgstr "சின்னங்களுக்கான திட்டத்தை நீக்கு"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Restore Icon Theme"
+msgstr "சின்னங்களுக்கான திட்டத்தை மீட்டெடு"
+
+#: package/contents/ui/main.qml:228
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr "சின்னங்களின் அளவுகளை அமை"
+
+#: package/contents/ui/main.qml:246
+#, kde-format
+msgid "Install from File…"
+msgstr "கோப்பிலிருந்து நிறுவு…"
+
+#: package/contents/ui/main.qml:251
+#, kde-format
+msgid "Get New Icons…"
+msgstr "புதிய சின்னங்களை பெறு…"
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Open Theme"
+msgstr "திட்டத்தை திற"
+
+#: package/contents/ui/main.qml:281
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr "தோற்றத்திட்ட கோப்புகள் (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Icon theme is already used"
+#~ msgstr "சின்னங்களுக்கான தோற்றத்திட்டம் ஏற்கனவே பயனில் உள்ளது"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "கிறிஸ்டோபர்.மை"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "vasee@ieee.org"
+
+#~ msgid "Icons"
+#~ msgstr "சின்னங்கள்"
+
+#~ msgid "Icons Control Panel Module"
+#~ msgstr "சிண்ண கட்டுப்பாட்டுப் பலகை கூறு"
+
+#~ msgid "Use of Icon"
+#~ msgstr "குறும்படப் பாவனை"
+
+#, fuzzy
+#~| msgid "Active"
+#~ msgctxt "@label The icon rendered as active"
+#~ msgid "Active"
+#~ msgstr "இயங்கும்"
+
+#, fuzzy
+#~| msgid "Disabled"
+#~ msgctxt "@label The icon rendered as disabled"
+#~ msgid "Disabled"
+#~ msgstr "இயங்கா"
+
+#~ msgid "Size:"
+#~ msgstr "அளவு:"
+
+#~ msgid "Set Effect..."
+#~ msgstr "விளைவு அமை"
+
+#~ msgid "All Icons"
+#~ msgstr "அனைத்து குறும்படங்களும்"
+
+#~ msgid "Setup Default Icon Effect"
+#~ msgstr "கொடாநிலைக் குறும்பட விளைவினை அமை"
+
+#~ msgid "Setup Active Icon Effect"
+#~ msgstr "இயங்கு குறும்பட விளைவினை அமை"
+
+#~ msgid "Setup Disabled Icon Effect"
+#~ msgstr "இயங்காக் குறும்பட விளைவினை அமை"
+
+#~ msgid "&Effect:"
+#~ msgstr "விளைவு:"
+
+#~ msgid "No Effect"
+#~ msgstr "விளைவு இல்லை"
+
+#~ msgid "To Gray"
+#~ msgstr "சாம்பலிற்கு"
+
+#~ msgid "Colorize"
+#~ msgstr "வண்ணமாக்கு"
+
+#~ msgid "Gamma"
+#~ msgstr "காமா"
+
+#~ msgid "Desaturate"
+#~ msgstr "தெவிட்டு நிலையகற்று"
+
+#~ msgid "To Monochrome"
+#~ msgstr "மோக்ரோமிற்கு"
+
+#~ msgid "&Semi-transparent"
+#~ msgstr "குறை-பளிங்குத்தன்மை"
+
+#~ msgid "Preview"
+#~ msgstr "முன்னோட்டம்"
+
+#~ msgid "Effect Parameters"
+#~ msgstr "விளைவுப் பரமானங்கள்"
+
+#~ msgid "&Amount:"
+#~ msgstr "அளவு:"
+
+#~ msgid "Co&lor:"
+#~ msgstr "நிறம்:"
+
+#~ msgid "&Second color:"
+#~ msgstr "&இரண்டாவது வண்ணம்:"
+
+#~ msgid "Name"
+#~ msgstr "பெயர்"
+
+#~ msgid "Description"
+#~ msgstr "விபரம்"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "உருகரு இருக்கும் URL-ஐ இழுத்துபோடு அல்ல உள்ளீடு செய்"
+
+#~ msgid ""
+#~ "Unable to download the icon theme archive;\n"
+#~ "please check that address %1 is correct."
+#~ msgstr ""
+#~ "சின்னம் பொருள் காப்பகம் படி விறக்கு முடியவில்லை;\n"
+#~ " %1 முகவரி சரியாக உள்ளதா என பார்க்கவும்."
+
+#~ msgid "<qt>Installing <strong>%1</strong> theme</qt>"
+#~ msgstr "<qt><strong>%1</strong> என்ற உருகரு நிறுவப்படுகிறது</qt>"
+
+#, fuzzy
+#~| msgid ""
+#~| "<qt>Are you sure you want to remove the <strong>%1</strong> icon theme?"
+#~| "<br><br>This will delete the files installed by this theme.</qt>"
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <strong>%1</strong> icon theme?"
+#~ "<br /><br />This will delete the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<strong>%1</strong> எனும் குறும்படத் உருகருவை அகற்றுவது உறுதியா ? \n"
+#~ "இந்த உருகருவினால்  நிறுவப்பட்ட எல்லாக் கோப்புக்களையும் இது அழித்துவிடும் "
+
+#~ msgid "Confirmation"
+#~ msgstr "உறுதிப்படுத்தல்"
+
+#~ msgid "&Theme"
+#~ msgstr "உருகரு"
+
+#~ msgid "Ad&vanced"
+#~ msgstr "மேம்பட்டது"
+
+#, fuzzy
+#~| msgid ""
+#~| "<h1>Icons</h1>This module allows you to choose the icons for your "
+#~| "desktop.<p>To choose an icon theme, click on its name and apply your "
+#~| "choice by pressing the \"Apply\" button below. If you do not want to "
+#~| "apply your choice you can press the \"Reset\" button to discard your "
+#~| "changes.</p><p>By pressing the \"Install New Theme\" button you can "
+#~| "install your new icon theme by writing its location in the box or "
+#~| "browsing to the location. Press the \"OK\" button to finish the "
+#~| "installation.</p><p>The \"Remove Theme\" button will only be activated "
+#~| "if you select a theme that you installed using this module. You are not "
+#~| "able to remove globally installed themes here.</p><p>You can also "
+#~| "specify effects that should be applied to the icons.</p>"
+#~ msgid ""
+#~ "<h1>Icons</h1>This module allows you to choose the icons for your desktop."
+#~ "<p>To choose an icon theme, click on its name and apply your choice by "
+#~ "pressing the \"Apply\" button below. If you do not want to apply your "
+#~ "choice you can press the \"Reset\" button to discard your changes.</"
+#~ "p><p>By pressing the \"Install Theme File...\" button you can install "
+#~ "your new icon theme by writing its location in the box or browsing to the "
+#~ "location. Press the \"OK\" button to finish the installation.</p><p>The "
+#~ "\"Remove Theme\" button will only be activated if you select a theme that "
+#~ "you installed using this module. You are not able to remove globally "
+#~ "installed themes here.</p><p>You can also specify effects that should be "
+#~ "applied to the icons.</p>"
+#~ msgstr ""
+#~ "<h1>சிண்ணங்கள்</h1>இந்த கூறு மேஜைமேல் சிண்ணங்களை தேர்ந்தெடுக்கவிடும் .<p>சின்னம் பொருள் "
+#~ "தேர்ந்தெடுக்க,  அதன் பெயரில் கிளிக் செய்து \"Apply\" பொத்தானை கீழே அழுத்தவும். நீங்கள் "
+#~ "பதிவு செய்ய வேண்டாமென்றால் \"Reset\"பொத்தான் அதை மாற்றிவிடும்.</p><p>ressing the "
+#~ "\"Install New Theme\" button you can install your new icon theme by "
+#~ "writing its location in the box or browsing to the location. Press the "
+#~ "\"OK\" button to finish the installation.</p><p>The \"Remove Theme\" "
+#~ "button will only be activated if you select a theme that you installed "
+#~ "using this module. You are not able to remove globally installed themes "
+#~ "here.</p><p>You can also specify effects that should be applied to the "
+#~ "icons.</p>"
+
+#~ msgid "Animate icons"
+#~ msgstr "குறும்படங்களை அழகுபடுத்து"
+
+#~ msgid "Select the icon theme you want to use:"
+#~ msgstr "நீங்கள் பாவிக்க விரும்பும் குறும்பட உருகருவைத் தெரிவு செய்க :"
+
+#~ msgid "Double-sized pixels"
+#~ msgstr "இருமடங்கான படத்துணுக்குகள்"
+
+#~ msgid "Desktop/File Manager"
+#~ msgstr "மேசை/கோப்பு மேலாளர்"

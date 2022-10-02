@@ -1,0 +1,359 @@
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kdebase package.
+# HARI VISHNU <harivishnu@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdebase\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-15 00:46+0000\n"
+"PO-Revision-Date: 2021-08-31 16:59+0000\n"
+"Last-Translator: Subin Siby <subins2000@gmail.com>\n"
+"Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
+"discuss@googlegroups.com>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Weblate 4.7.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "ഹരി വിഷ്ണു"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "harivishnu@gmail.com"
+
+#: imagepackage/contents/ui/config.qml:94
+#, kde-format
+msgid "Positioning:"
+msgstr "സ്ഥാനം:"
+
+#: imagepackage/contents/ui/config.qml:97
+#, kde-format
+msgid "Scaled and Cropped"
+msgstr "വലിപ്പം മാറ്റിയതും അറ്റം വെട്ടിചുരുക്കിയതും"
+
+#: imagepackage/contents/ui/config.qml:101
+#, kde-format
+msgid "Scaled"
+msgstr "വലിപ്പം മാറ്റിയത്"
+
+#: imagepackage/contents/ui/config.qml:105
+#, kde-format
+msgid "Scaled, Keep Proportions"
+msgstr "ചിത്രത്തിന്റെ അനുപാതം മാറ്റാതെ വലിപ്പം മാറ്റിയത്"
+
+#: imagepackage/contents/ui/config.qml:109
+#, kde-format
+msgid "Centered"
+msgstr "നടുവിലായിട്ട്"
+
+#: imagepackage/contents/ui/config.qml:113
+#, kde-format
+msgid "Tiled"
+msgstr "അടുത്തടുത്തു് വച്ചു്"
+
+#: imagepackage/contents/ui/config.qml:141
+#, kde-format
+msgid "Background:"
+msgstr "പശ്ചാത്തലം:"
+
+#: imagepackage/contents/ui/config.qml:142
+#, kde-format
+msgid "Blur"
+msgstr "അവ്യക്തം"
+
+#: imagepackage/contents/ui/config.qml:151
+#, kde-format
+msgid "Solid color"
+msgstr "കടും നിറം"
+
+#: imagepackage/contents/ui/config.qml:161
+#, kde-format
+msgid "Select Background Color"
+msgstr "പശ്ചാത്തല നിറം തെരഞ്ഞെടുക്കുക"
+
+#: imagepackage/contents/ui/config.qml:207
+#, kde-format
+msgid "Add Image…"
+msgstr "ചിത്രം ചേർക്കുക…"
+
+#: imagepackage/contents/ui/config.qml:213
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:257
+#, kde-format
+msgid "Get New Wallpapers…"
+msgstr "പുതിയ പശ്ചാത്തലചിത്രങ്ങള്‍ ലഭിക്കുക…"
+
+#: imagepackage/contents/ui/main.qml:69
+#, kde-format
+msgid "Open Wallpaper Image"
+msgstr "പശ്ചാത്തലചിത്രം തുറക്കുക"
+
+#: imagepackage/contents/ui/main.qml:70
+#, kde-format
+msgid "Next Wallpaper Image"
+msgstr "അടുത്ത പശ്ചാത്തലചിത്രം"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:33
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "അടങ്ങിയിരിക്കുന്ന അറ തുറക്കുക"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:39
+#, kde-format
+msgid "Restore wallpaper"
+msgstr "പശ്ചാത്തലചിത്രം പുനഃസ്ഥാപിക്കുക"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:44
+#, kde-format
+msgid "Remove Wallpaper"
+msgstr "പശ്ചാത്തലചിത്രം കളയുക"
+
+#: plasma-apply-wallpaperimage.cpp:29
+#, kde-format
+msgid ""
+"This tool allows you to set an image as the wallpaper for the Plasma session."
+msgstr ""
+"പ്ലാസ്മ സെഷനുള്ള പശ്ചാത്തലചിത്രമായി ഒരു ചിത്രം സജ്ജമാക്കാൻ ഈ ഉപകരണം നിങ്ങളെ അനുവദിക്കുന്നു."
+
+#: plasma-apply-wallpaperimage.cpp:31
+#, kde-format
+msgid ""
+"An image file or an installed wallpaper kpackage that you wish to set as the "
+"wallpaper for your Plasma session"
+msgstr ""
+"നിങ്ങളുടെ പ്ലാസ്മ സെഷനുള്ള പശ്ചാത്തലചിത്രമായി സജ്ജീകരിക്കാൻ ആഗ്രഹിക്കുന്ന ഒരു ചിത്ര ഫയൽ "
+"അല്ലെങ്കിൽ ഇൻസ്റ്റാൾ ചെയ്ത വാൾപേപ്പർ kpackage"
+
+#: plasma-apply-wallpaperimage.cpp:45
+#, kde-format
+msgid ""
+"There is a stray single quote in the filename of this wallpaper (') - please "
+"contact the author of the wallpaper to fix this, or rename the file "
+"yourself: %1"
+msgstr ""
+"ഈ പശ്ചാത്തലചിത്രത്തിന്റെ ഫയൽ നാമത്തിൽ ഒരു ഒറ്റപ്പെട്ട ഉദ്ധരണി ഉണ്ട് (') - ഇത് പരിഹരിക്കാൻ "
+"പശ്ചാത്തലചിത്രത്തിന്റെ രചയിതാവിനെ ബന്ധപ്പെടുക, അല്ലെങ്കിൽ ഫയലിന്റെ പേര് സ്വയം മാറ്റുക: %1"
+
+#: plasma-apply-wallpaperimage.cpp:85
+#, kde-format
+msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+msgstr "പ്ലാസ്മ പശ്ചാത്തലചിത്രം സജ്ജീകരിക്കാൻ ശ്രമിക്കുമ്പോൾ ഒരു പിശക് സംഭവിച്ചു:\n"
+
+#: plasma-apply-wallpaperimage.cpp:89
+#, kde-format
+msgid ""
+"Successfully set the wallpaper for all desktops to the KPackage based %1"
+msgstr ""
+"എല്ലാ ഡെസ്ക്ടോപ്പുകളുടെയും പശ്ചാത്തലചിത്രം KPackage അടിസ്ഥാനമാക്കിയുള്ള %1 ലേക്ക് വിജയകരമായി "
+"സജ്ജമാക്കി"
+
+#: plasma-apply-wallpaperimage.cpp:91
+#, kde-format
+msgid "Successfully set the wallpaper for all desktops to the image %1"
+msgstr ""
+"%1 എന്ന ചിത്രത്തിലേക്ക് എല്ലാ ഡെസ്ക്ടോപ്പുകളുടെയും പശ്ചാത്തലചിത്രം വിജയകരമായി സജ്ജമാക്കി"
+
+#: plasma-apply-wallpaperimage.cpp:97
+#, kde-format
+msgid ""
+"The file passed to be set as wallpaper does not exist, or we cannot identify "
+"it as a wallpaper: %1"
+msgstr ""
+"പശ്ചാത്തലചിത്രമായി സജ്ജീകരിക്കാൻ നൽകിയ ഫയൽ നിലവിലില്ല, അല്ലെങ്കിൽ ഞങ്ങൾക്ക് ഇത് ഒരു "
+"പശ്ചാത്തലചിത്രമായി തിരിച്ചറിയാൻ കഴിഞ്ഞില്ല: %1"
+
+#: plugin/finder/packagefinder.cpp:152
+#, kde-format
+msgid "Recommended wallpaper file"
+msgstr "ശുപാർശ ചെയ്യുന്ന പശ്ചാത്തലചിത്ര ഫയൽ"
+
+#: plugin/imagebackend.cpp:234
+#, kde-format
+msgid "Directory with the wallpaper to show slides from"
+msgstr "സ്ലൈഡുകൾ കാണിക്കുന്നതിന് പശ്ചാത്തലചിത്രമുള്ള കൂട"
+
+#: plugin/imagebackend.cpp:345
+#, kde-format
+msgid "Open Image"
+msgstr "ചിത്രം തുറക്കുക"
+
+#: plugin/imagebackend.cpp:345
+#, kde-format
+msgid "Image Files"
+msgstr "ചിത്ര ഫയലുകൾ"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:38
+#, kde-format
+msgid "Order:"
+msgstr "ക്രമം:"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:45
+#, kde-format
+msgid "Random"
+msgstr "ക്രമരഹിതം"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:49
+#, kde-format
+msgid "A to Z"
+msgstr "ആരോഹണക്രമം"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:53
+#, kde-format
+msgid "Z to A"
+msgstr "അവരോഹണക്രമം"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:57
+#, kde-format
+msgid "Date modified (newest first)"
+msgstr "പരിഷ്ക്കരിച്ച തീയതി (പുതിയത് ആദ്യം)"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:61
+#, kde-format
+msgid "Date modified (oldest first)"
+msgstr "പരിഷ്ക്കരിച്ച തീയതി (പഴയത് ആദ്യം)"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:86
+#, kde-format
+msgid "Group by folders"
+msgstr "അറകള്‍ പ്രകാരം ഗ്രൂപ്പ് ചെയ്യുക"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:98
+#, kde-format
+msgid "Change every:"
+msgstr "ചിത്രങ്ങൾ ഓരോന്നും മാറ്റേണ്ട സമയം:"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:108
+#, kde-format
+msgid "%1 hour"
+msgid_plural "%1 hours"
+msgstr[0] "%1 മണിക്കൂർ"
+msgstr[1] "%1 മണിക്കൂറുകൾ"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:128
+#, kde-format
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "%1 മിനുട്ട്"
+msgstr[1] "%1 മിനുട്ടുകൾ"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:148
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "%1 സെക്കൻ്റ്"
+msgstr[1] "%1 സെക്കൻ്റുകൾ"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:162
+#, kde-format
+msgid "Folders"
+msgstr "അറകള്‍"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:220
+#, kde-format
+msgid "Remove Folder"
+msgstr "അറ നീക്കം ചെയ്യുക"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:225
+#, kde-format
+msgid "Open Folder"
+msgstr "അറ തുറക്കുക"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:235
+#, kde-format
+msgid "There are no wallpaper locations configured"
+msgstr "പശ്ചാത്തലചിത്ര സ്ഥാനങ്ങളൊന്നും സജ്ജമാക്കിയിട്ടില്ല"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:250
+#, kde-format
+msgid "Add Folder…"
+msgstr "അറ ചേര്‍ക്കുക…"
+
+#~ msgid "There are no wallpapers in this slideshow"
+#~ msgstr "ഈ സ്ലൈഡ്ഷോയിൽ പശ്ചാത്തലചിത്രങ്ങൾ ഇല്ല"
+
+#, fuzzy
+#~ msgid "Add Custom Wallpaper"
+#~ msgstr "പുതിയ പശ്ചാത്തലചിത്രങ്ങള്‍ ലഭിക്കുക..."
+
+#, fuzzy
+#~ msgid "Remove wallpaper"
+#~ msgstr "പുതിയ പശ്ചാത്തലചിത്രങ്ങള്‍ ലഭിക്കുക..."
+
+#, fuzzy
+#~ msgid "%1 by %2"
+#~ msgstr "%1 വക"
+
+#, fuzzy
+#~ msgid "Wallpapers"
+#~ msgstr "പുതിയ പശ്ചാത്തലചിത്രങ്ങള്‍ ലഭിക്കുക..."
+
+#, fuzzy
+#~ msgid "Download Wallpapers"
+#~ msgstr "പുതിയ പശ്ചാത്തലചിത്രങ്ങള്‍ ഡൌണ്‍ലോഡ് ചെയ്യുക"
+
+#, fuzzy
+#~ msgid "Open..."
+#~ msgstr "..."
+
+#~ msgid "Screenshot"
+#~ msgstr "സ്ക്രീനിന്റെ-ചിത്രം"
+
+#~ msgid "Center Tiled"
+#~ msgstr "നടുക്കു അടുത്തടുത്തു് വച്ചു്"
+
+#~ msgid "Select Wallpaper Image File"
+#~ msgstr "പശ്ചാത്തലചിത്രത്തിനുള്ള ഫയല്‍ തെരഞ്ഞെടുക്കുക"
+
+#~ msgid "P&ositioning:"
+#~ msgstr "&സ്ഥാപനം:"
+
+#~ msgid "&Color:"
+#~ msgstr "&നിറം:"
+
+#, fuzzy
+#~ msgid "Remove from list"
+#~ msgstr "അറകള്‍ &നീക്കം ചെയ്യുക"
+
+#~ msgctxt ""
+#~ "(qtdt-format) Please do not change the quotes (') and translate only the "
+#~ "content of the quotes."
+#~ msgid "hh 'Hours' mm 'Mins' ss 'Secs'"
+#~ msgstr "hh 'മണിക്കൂറുകള്‍' mm 'മിനിറ്റുകള്‍' ss 'സെക്കന്റുകള്‍'"
+
+#, fuzzy
+#~ msgid "&My downloaded wallpapers:"
+#~ msgstr "പുതിയ പശ്ചാത്തലചിത്രങ്ങള്‍ ഡൌണ്‍ലോഡ് ചെയ്യുക"
+
+#, fuzzy
+#~ msgid "Custom folders:"
+#~ msgstr "അറകള്‍"
+
+#~ msgctxt "Wallpaper info, author name"
+#~ msgid "%1"
+#~ msgstr "%1"
+
+#~ msgid "Email:"
+#~ msgstr "ഇമെയില്‍:"
+
+#~ msgid "License:"
+#~ msgstr "അനുമതിപത്രം:"
+
+#~ msgid "Color:"
+#~ msgstr "നിറം:"
+
+#~ msgid "Author:"
+#~ msgstr "രചയിതാവ്"
+
+#~ msgid "Browse"
+#~ msgstr "തെരയുക"
+
+#~ msgid "&Picture:"
+#~ msgstr "&ചിത്രം:"
+
+#~ msgid "Maxpect"
+#~ msgstr "മാക്സ്പെക്റ്റ്"

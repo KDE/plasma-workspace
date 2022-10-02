@@ -1,0 +1,340 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Serbian "INCLUDE">
+]>
+<article id="autostart" lang="&language;">
+<articleinfo>
+<title
+>Самопокретање</title>
+<authorgroup>
+<author
+><personname
+><firstname
+>Ан Мари</firstname
+> <surname
+>Мафу</surname
+></personname
+></author>
+<othercredit role="translator"
+><firstname
+>Драган</firstname
+><surname
+>Пантелић</surname
+><affiliation
+><address
+><email
+>falcon-10@gmx.de</email
+></address
+></affiliation
+><contrib
+>превод</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>22. 7. 2015.</date>
+<releaseinfo
+>Плазма 5.4</releaseinfo>
+
+<keywordset>
+<keyword
+>КДЕ</keyword>
+<keyword
+>Системске поставке</keyword>
+<keyword
+>самопокретање</keyword>
+<keyword
+>.десктоп фајл</keyword>
+<keyword
+>скрипта</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_autostart">
+<title
+>Менаџер самопокретања</title>
+
+<para
+>Овај модул је поставна алатка за управљање програмима који се покрећу са Плазмом. У њему можете додавати и управљати програмима и скриптама које ће се аутоматски покретати при покретању или гашењу ваше плазма сесије.</para>
+
+<note
+><para
+>Имајте у виду да се измене у овом модулу тренутачно примењују.</para
+></note>
+
+<para
+>Модул скенира фасцикле <filename
+>$HOME/.config/autostart/</filename
+>, <filename class="directory"
+>$HOME/.config/plasma-workspace/env</filename
+> и <filename class="directory"
+>$HOME/.config/plasma-workspace/shutdown</filename
+>, да би пронашао и приказао програме и скрипте који су већ у њима. Затим вам омогућава да њима лако управљате. </para>
+
+<note
+><para
+>Могућност аутоматског покретања тренутно има једну грешку: скрипту није могуће извршити након покретања плазма сесије.</para
+></note>
+
+<note
+><para
+>Локацију фасцикле самопокретања можете изменити преко <menuchoice
+><guimenu
+>Програми</guimenu
+> <guimenuitem
+>Локације</guimenuitem
+></menuchoice
+> у категорији <guilabel
+>Прилагођавање</guilabel
+> у Системским поставкама, тј. поставити је на нешто друго уместо <filename class="directory"
+>$HOME/.config/autostart</filename
+>.</para
+></note>
+
+<para
+>Прочитајте још и о <ulink url="help:/kcontrol/kcmsmserver"
+>сесијама површи</ulink
+> и <ulink url="help:/kcontrol/kded"
+>позадинским сервисима</ulink
+> за више детаља о подешавању понашања при покретању плазма сесије.</para>
+
+<para
+>Неки КДЕ програми сами рукују аутоматским покретањем. На пример, негде можете укључити и искључити аутоматско покретање кроз дијалог поставки програма (<application
+>К‑аларм</application
+>), а негде морате употребити <menuchoice
+><guimenu
+>Фајл</guimenu
+><guimenuitem
+>Напусти</guimenuitem
+></menuchoice
+> да програм не би наставио да ради у системској касети и да се не би сам покренуо при наредном пријављивању. </para>
+
+<sect2 id="migration">
+<title
+>Селидба са радног простора КДЕ‑а 4</title>
+<para
+>Своје поставке аутоматског покретања из КДЕ‑а 4 селите овако:</para>
+<simplelist>
+<member
+>Копирајте .десктоп фајлове из <filename class="directory"
+>$HOME/.kde/Autostart</filename
+> у <filename class="directory"
+>$HOME/.config/autostart</filename
+>.</member>
+<member
+>Копирајте фајлове скрипти пре покретања из <filename class="directory"
+>$HOME/.kde/Autostart</filename
+> у <filename class="directory"
+>$HOME/.config/plasma-workspace/env</filename
+>.</member>
+<member
+>Копирајте фајлове скрипти при гашењу из <filename class="directory"
+>$HOME/.kde/Autostart</filename
+> у <filename class="directory"
+>$HOME/.config/plasma-workspace/shutdown</filename
+>.</member>
+</simplelist>
+</sect2>
+
+<!--FIXME Disabling Autostart Files Provided By Your Distribution -> http://www.sharpley.org.uk/node/8 -->
+
+<sect2 id="current">
+<title
+>Приказ фајлова</title>
+<para
+>Главни део модула приказује програме и скрипте које се извршавају при покретању, гашењу или пре покретања Плазме.</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>име</guilabel
+></term>
+<listitem>
+<para
+>На ову колону не можете утицати. Она наводи име програма или скрипте коју желите да покренете са Плазмом. У случају програма име се издваја из .десктоп фајла (кључ <literal
+>Name</literal
+>), а за скрипту се узима име њеног фајла. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>наредба</guilabel
+></term>
+<listitem>
+<para
+>Ова колона набраја наредбе које се извршавају ради покретања програма. Могу се изменити дугметом <guibutton
+>Својства...</guibutton
+> или двокликом на врсту у којој је програм. Наредба за покретање се издваја из .десктоп фајла, кључ <literal
+>Exec</literal
+>. </para>
+<para
+>Наредба за скрипту је путања до скрипте, и не може да се измени. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>стање</guilabel
+></term>
+<listitem>
+<para
+>Ова поставка је расположива само за програме са .десктоп фајловима. Програм можете држати у фасцикли самопокретања, али искључити његово покретање са Плазмом, тако што испразните кућицу <guilabel
+>укључен</guilabel
+>. </para>
+<para
+>Пражњењем кућице <guilabel
+>укључен</guilabel
+> уз програм, у .десктоп фајлу у фасцикли самопокретања поставља се на <literal
+>true</literal
+> својство <literal
+>Hidden</literal
+>. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>изврши</guilabel
+></term>
+<listitem>
+<para
+>Програми (.десктоп фајлови) могу се извршити само по покретању. Скрипте се могу извршити по покретању, при гашењу или пред покретање. Овом колоном можете мењати кад се скрипта извршава. Опција <guilabel
+>по покретању</guilabel
+> значи кад се Плазма покрене, <guilabel
+>Угаси</guilabel
+> је кад се одјавите из Плазме, а <guilabel
+>пред покретање КДЕ‑а</guilabel
+> пре него што се Плазма покрене. </para>
+<para
+>Скрипте и .десктоп фајлови којима је задато <guilabel
+>по покретању</guilabel
+> копирају се или симповезују у <filename class="directory"
+>$HOME/.config/autostart</filename
+>, и извршиће се током покретања Плазме. </para>
+<para
+>Скрипте којима је задато <guilabel
+>Угаси</guilabel
+> копирају се или симповезују у фасциклу <filename class="directory"
+>$HOME/.config/plasma-workspace/shutdown</filename
+>, одакле ће бити аутоматски извршене током гашења Плазме, након што се корисник одјави. </para>
+<para
+>Скрипте којима је задато <guilabel
+>пред покретање КДЕ‑а</guilabel
+> копирају се или симповезују у <filename class="directory"
+>
+>$HOME/.config/plasma-workspace/env</filename
+>, да би их одавде увукла <command
+>startkde</command
+> на покретању Плазме. </para>
+<note
+><para
+>У режимима <guilabel
+>пред покретање КДЕ‑а</guilabel
+> и <guilabel
+>Угаси</guilabel
+>, Плазма може да чита само скрипте са наставком <filename class="extension"
+>.sh</filename
+>. </para
+></note>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+
+<sect2 id="actions">
+<title
+>Радње</title>
+<para
+>Десно стоји дугмад за подешавање самопокретања. Можете додавати програме и скрипте, уклањати их, или им мењати својства. </para>
+
+<variablelist>
+<varlistentry
+><term
+><guibutton
+>Додај програм...</guibutton
+></term>
+<listitem>
+<para
+>Клик на ово дугме позива стандардни Плазмин дијалог за бирање програма, одакле можете изабрати програм који желите да се покреће. Након избора, клик на <guibutton
+>У реду</guibutton
+> позива својства за тај програм. </para>
+<para
+>.Десктоп фајл програма биће копиран у вашу фасциклу самопокретања. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Додај скрипту...</guibutton
+></term>
+<listitem>
+<para
+>Ово дугме отвара дијалог који вам тражи локацију скрипте коју желите да додате. Ако оставите попуњено <guilabel
+>Направи као симвезу</guilabel
+> (подразумевано), скрипта ће бити додата као симвеза. Ако искључите ову опцију, скрипта ће бити копирана у одговарајућу локалну фасциклу. </para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guibutton
+>Уклони</guibutton
+></term>
+<listitem>
+<para
+>Одмах уклања .десктоп фајла програма или скрипту, или симболичку везу, из фасцикле самопокретања. </para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guibutton
+>Својства...</guibutton
+></term>
+<listitem>
+<para
+>Овим дугметом (активно само за програме, тј. .десктоп фајлове) можете изменити својства програма или скрипте. Дата су општа својства, својства дозвола, преглед кад има смисла, и својства у вези с програмима ако је у питању програм. </para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guibutton
+>Напредно...</guibutton
+></term>
+<listitem>
+<para
+>Ово дугме односи се само на програме (тј. .десктоп фајлове). Дијалог вас пита да ли желите да се програм аутоматски покреће само у Плазми, или у свим окружењима радне површи. Подразумевано, програм ће се аутоматски покретати у сваком окружењу радне површи које покренете. Попуните ли <guilabel
+>Покрени само у КДЕ‑у</guilabel
+>, програм се покреће једино при покретању Плазме. </para>
+<para
+>Овим се у .десктоп фајлу вредност кључа <literal
+>OnlyShowIn</literal
+> поставља на <literal
+>KDE</literal
+>. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

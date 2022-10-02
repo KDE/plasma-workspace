@@ -1,0 +1,799 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Toussis Manolis <manolis@koppermind.homelinux.org>, 2008, 2009.
+# Petros Vidalis <p_vidalis@hotmail.com>, 2010.
+# Dimitrios Glentadakis <dglent@gmail.com>, 2011, 2012.
+# Antonis Geralis <capoiosct@gmail.com>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: powerdevil\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"PO-Revision-Date: 2013-04-07 11:13+0200\n"
+"Last-Translator: Stelios <sstavra@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: PowerDevilRunner.cpp:32
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "suspend"
+msgstr "αναστολή"
+
+#: PowerDevilRunner.cpp:34
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to ram"
+msgstr "στη μνήμη"
+
+#: PowerDevilRunner.cpp:36
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "sleep"
+msgstr "κοίμηση"
+
+#: PowerDevilRunner.cpp:38
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "hibernate"
+msgstr "νάρκη"
+
+#: PowerDevilRunner.cpp:40
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to disk"
+msgstr "στο δίσκο"
+
+#: PowerDevilRunner.cpp:42 PowerDevilRunner.cpp:44 PowerDevilRunner.cpp:69
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "dim screen"
+msgstr "σβήσιμο οθόνης"
+
+#: PowerDevilRunner.cpp:53
+#, kde-format
+msgid ""
+"Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
+"activated"
+msgstr ""
+"Εμφανίζει όλες τις επιλογές αναστολής του συστήματος (π.χ. αδράνεια, "
+"αναστολή) και επιτρέπει την ενεργοποίησή τους"
+
+#: PowerDevilRunner.cpp:57
+#, kde-format
+msgid "Suspends the system to RAM"
+msgstr "Αναστολή συστήματος στη RAM"
+
+#: PowerDevilRunner.cpp:61
+#, kde-format
+msgid "Suspends the system to disk"
+msgstr "Αναστολή συστήματος στο δίσκο"
+
+#: PowerDevilRunner.cpp:65
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "screen brightness"
+msgctxt ""
+"Note this is a KRunner keyword, <> is a placeholder and should be at the end"
+msgid "screen brightness <percent value>"
+msgstr "λαμπρότητα οθόνης"
+
+#: PowerDevilRunner.cpp:67
+#, fuzzy, no-c-format, kde-format
+#| msgid ""
+#| "Lists screen brightness options or sets it to the brightness defined by :"
+#| "q:; e.g. screen brightness 50 would dim the screen to 50% maximum "
+#| "brightness"
+msgid ""
+"Lists screen brightness options or sets it to the brightness defined by the "
+"search term; e.g. screen brightness 50 would dim the screen to 50% maximum "
+"brightness"
+msgstr ""
+"Εμφανίζει τις επιλογές λαμπρότητας οθόνης ή ορίζει τη λαμπρότητα καθορισμένη "
+"ως :q:; π.χ. η λαμπρότητα οθόνης 50 θα φωτίσει την οθόνη στο 50% της "
+"μέγιστης φωτεινότητάς της"
+
+#: PowerDevilRunner.cpp:95
+#, fuzzy, kde-format
+#| msgid "Set Brightness to %1"
+msgid "Set Brightness to %1%"
+msgstr "Ρύθμιση λαμπρότητας σε %1"
+
+#: PowerDevilRunner.cpp:104
+#, kde-format
+msgid "Dim screen totally"
+msgstr "Πλήρες σβήσιμο οθόνης"
+
+#: PowerDevilRunner.cpp:112
+#, kde-format
+msgid "Dim screen by half"
+msgstr "Σβήσιμο κατά το μισό της οθόνης"
+
+#: PowerDevilRunner.cpp:142
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "sleep"
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "κοίμηση"
+
+#: PowerDevilRunner.cpp:143
+#, kde-format
+msgid "Suspend to RAM"
+msgstr "Αναστολή στη μνήμη"
+
+#: PowerDevilRunner.cpp:148
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "hibernate"
+msgctxt "Suspend to disk"
+msgid "Hibernate"
+msgstr "νάρκη"
+
+#: PowerDevilRunner.cpp:149
+#, fuzzy, kde-format
+#| msgid "Suspend to Disk"
+msgid "Suspend to disk"
+msgstr "Αναστολή στο δίσκο"
+
+#: PowerDevilRunner.cpp:218
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "screen brightness"
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "screen brightness "
+msgstr "λαμπρότητα οθόνης"
+
+#: PowerDevilRunner.cpp:220
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "dim screen"
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "dim screen "
+msgstr "σβήσιμο οθόνης"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "screen brightness"
+#~ msgstr "λαμπρότητα οθόνης"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "screen brightness %1"
+#~ msgstr "λαμπρότητα οθόνης %1"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "dim screen %1"
+#~ msgstr "σβήσιμο οθόνης %1"
+
+#, fuzzy
+#~| msgctxt "Note this is a KRunner keyword"
+#~| msgid "suspend"
+#~ msgid "Suspend"
+#~ msgstr "αναστολή"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "power profile"
+#~ msgstr "προφίλ ενέργειας"
+
+#~ msgid "Lists all power profiles and allows them to be activated"
+#~ msgstr ""
+#~ "Εμφανίζει όλα τα προφίλ ενέργειας και επιτρέπει την ενεργοποίησή τους"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "power profile %1"
+#~ msgstr "προφίλ ενέργειας %1"
+
+#~ msgid "Set Profile to '%1'"
+#~ msgstr "Ορισμός προφίλ σε '%1'"
+
+#~ msgid "Turn off screen"
+#~ msgstr "Κλείσιμο οθόνης"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "cpu policy"
+#~ msgstr "πολιτική ΚΜΕ"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "power governor"
+#~ msgstr "οδηγός ενέργειας"
+
+#~ msgid "Lists all power saving schemes and allows them to be activated"
+#~ msgstr ""
+#~ "Εμφανίζει όλα τα προφίλ εξοικονόμησης ενέργειας και επιτρέπει την "
+#~ "ενεργοποίησή τους"
+
+#~ msgid ""
+#~ "Lists all CPU frequency scaling policies and allows them to be activated"
+#~ msgstr ""
+#~ "Εμφανίζει όλες τις πολιτικές κλιμάκωσης συχνότητας της ΚΜΕ και επιτρέπει "
+#~ "την ενεργοποίησή τους"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "cpu policy %1"
+#~ msgstr "πολιτική ΚΜΕ %1"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "power governor %1"
+#~ msgstr "οδηγός ενέργειας %1"
+
+#~ msgid "Set CPU frequency scaling policy to '%1'"
+#~ msgstr "Ορισμός πολιτικής κλιμάκωσης συχνότητας ΚΜΕ σε '%1'"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "power scheme %1"
+#~ msgstr "σχήμα ενέργειας %1"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "power scheme"
+#~ msgstr "σχήμα ενέργειας"
+
+#~ msgid "Set Powersaving Scheme to '%1'"
+#~ msgstr "Ορισμός σχήματος εξοικονόμησης ενέργειας σε '%1'"
+
+#~ msgid "Set CPU Governor to '%1'"
+#~ msgstr "Ορισμός οδηγού ΚΜΕ σε '%1'"
+
+#~ msgid "PowerDevil"
+#~ msgstr "PowerDevil"
+
+#~ msgid "A Power Management tool for KDE4"
+#~ msgstr "Ένα εργαλείο διαχείρισης ενέργειας του KDE4"
+
+#~ msgid "(c) 2008 PowerDevil Development Team"
+#~ msgstr "(c) 2008 η ομάδα ανάπτυξης του PowerDevil"
+
+#~ msgid "Dario Freddi"
+#~ msgstr "Dario Freddi"
+
+#~ msgid "Developer"
+#~ msgstr "Προγραμματιστής"
+
+#~ msgid ""
+#~ "Another power manager has been detected. Do you want to start PowerDevil "
+#~ "anyway? Please note this may lead to conflicts and undefined behaviour."
+#~ msgstr ""
+#~ "Ανιχνεύθηκε κάποιος άλλος διαχειριστής ενέργειας. Επιθυμείτε την εκκίνηση "
+#~ "του PowerDevil ούτως ή άλλως; Παρακαλώ σημειώστε ότι αυτό μπορεί να "
+#~ "προκαλέσει συγκρούσεις και ακαθόριστη συμπεριφορά."
+
+#~ msgid "PowerDevil Startup"
+#~ msgstr "Εκκίνηση PowerDevil"
+
+#~ msgid ""
+#~ "If you do not wish to use PowerDevil as your main power manager, please "
+#~ "consider disabling its service in systemsettings. This message will not "
+#~ "be shown again once PowerDevil has been disabled."
+#~ msgstr ""
+#~ "Αν δεν επιθυμείτε τη χρήση του PowerDevil ως κύριο διαχειριστή ενέργειας, "
+#~ "θα πρέπει να απενεργοποιήσετε την υπηρεσία του στις ρυθμίσεις του "
+#~ "συστήματος. Αυτό το μήνυμα δε θα ξαναεμφανιστεί μόλις το PowerDevil "
+#~ "απενεργοποιηθεί."
+
+#~ msgid ""
+#~ "If you wish to use PowerDevil as your main power manager, please consider "
+#~ "disabling other power managers you have enabled on this system. This "
+#~ "message will not be shown again once all other power managers have been "
+#~ "disabled."
+#~ msgstr ""
+#~ "Αν επιθυμείτε τη χρήση του PowerDevil ως κύριο διαχειριστή ενέργειας, θα "
+#~ "πρέπει να απενεργοποιήσετε όλους τους άλλους διαχειριστές ενέργειας στις "
+#~ "ρυθμίσεις του συστήματος. Αυτό το μήνυμα δε θα ξαναεμφανιστεί από τη "
+#~ "στιγμή της απενεργοποίησής τους."
+
+#~ msgid ""
+#~ "Could not connect to battery interface!\n"
+#~ "Please check your system configuration"
+#~ msgstr ""
+#~ "Αδυναμία σύνδεσης με τη διασύνδεση της μπαταρίας!\n"
+#~ "Παρακαλώ ελέγξτε τις ρυθμίσεις του συστήματος"
+
+#~ msgid "The power adaptor has been plugged in"
+#~ msgstr "Ο μετασχηματιστής ρεύματος συνδέθηκε"
+
+#~ msgid "The power adaptor has been unplugged"
+#~ msgstr "Ο μετασχηματιστής ρεύματος αποσυνδέθηκε"
+
+#~ msgid ""
+#~ "Your battery has reached critical level, the PC will now be halted..."
+#~ msgstr ""
+#~ "Η μπαταρία σας έχει βρεθεί σε κρίσιμη στάθμη ενέργειας, το PC θα "
+#~ "κλείσει..."
+
+#~ msgid ""
+#~ "Your battery has reached critical level, the PC will now be suspended to "
+#~ "disk..."
+#~ msgstr ""
+#~ "Η μπαταρία σας έχει βρεθεί σε κρίσιμη στάθμη ενέργειας, θα γίνει αναστολή "
+#~ "του PC στο δίσκο..."
+
+#~ msgid ""
+#~ "Your battery has reached critical level, the PC will now be suspended to "
+#~ "RAM..."
+#~ msgstr ""
+#~ "Η μπαταρία σας έχει βρεθεί σε κρίσιμη στάθμη ενέργειας, θα γίνει αναστολή "
+#~ "του PC στη μνήμη RAM..."
+
+#~ msgid ""
+#~ "Your battery has reached critical level, the PC is now going Standby..."
+#~ msgstr ""
+#~ "Η μπαταρία σας έχει βρεθεί σε κρίσιμη στάθμη ενέργειας, το PC θα μεταβεί "
+#~ "σε κατάσταση αναμονής..."
+
+#~ msgid ""
+#~ "Your battery has reached critical level, save your work as soon as "
+#~ "possible!"
+#~ msgstr ""
+#~ "Η μπαταρία σας έχει βρεθεί σε κρίσιμη στάθμη ενέργειας, αποθηκεύστε τη "
+#~ "δουλειά σας όσο το δυνατό γρηγορότερα!"
+
+#~ msgid "Your battery has reached warning level"
+#~ msgstr "Η μπαταρία σας έχει βρεθεί σε προειδοποιητική στάθμη ενέργειας"
+
+#~ msgid "Your battery has reached low level"
+#~ msgstr "Η μπαταρία σας έχει βρεθεί σε χαμηλή στάθμη ενέργειας"
+
+#~ msgid "The computer is being halted"
+#~ msgstr "Ο υπολογιστής τερμάτισε"
+
+#~ msgid "The computer will now be suspended to disk"
+#~ msgstr "Θα γίνει αναστολή του υπολογιστή στο δίσκο"
+
+#~ msgid "The computer will now be suspended to RAM"
+#~ msgstr "Θα γίνει αναστολή του υπολογιστή στη μνήμη RAM"
+
+#~ msgid "The computer will now be put into standby"
+#~ msgstr "Ο υπολογιστής θα μεταβεί σε κατάσταση αναμονής"
+
+#~ msgid "There was an error while suspending:"
+#~ msgstr "Υπήρξε ένα σφάλμα κατά την αναστολή:"
+
+#~ msgid "Polling started, idle time is %1 seconds"
+#~ msgstr "Έναρξη ελέγχου, ο χρόνος αδράνειας είναι %1 δευτερόλεπτα"
+
+#~ msgid "Stopping timer"
+#~ msgstr "Σταμάτημα χρονομέτρου"
+
+#~ msgid "Minimum time is %1 seconds"
+#~ msgstr "Ο ελάχιστος χρόνος είναι %1 δευτερόλεπτα"
+
+#~ msgid "Nothing to do, next event in %1 seconds"
+#~ msgstr "Καμία ενέργεια, επόμενο γεγονός σε %1 δευτερόλεπτα"
+
+#~ msgid "Next timeout in %1 seconds"
+#~ msgstr "Επόμενο χρονικό όριο σε %1 δευτερόλεπτα"
+
+#~ msgid "The screen is being locked"
+#~ msgstr "Η οθόνη πρόκειται να κλειδωθεί"
+
+#~ msgid ""
+#~ "The profile \"%1\" has been selected, but it does not exist!\n"
+#~ "Please check your PowerDevil configuration."
+#~ msgstr ""
+#~ "Έχει επιλεγεί το προφίλ \"%1\", αλλά αυτό δεν υπάρχει!\n"
+#~ "Παρακαλώ ελέγξτε τις ρυθμίσεις σας του PowerDevil."
+
+#~ msgid "Profile changed to \"%1\""
+#~ msgstr "Τροποποίηση προφίλ σε \"%1\""
+
+#~ msgid "Performance"
+#~ msgstr "Επίδοση"
+
+#~ msgid "Dynamic (ondemand)"
+#~ msgstr "Δυναμικό (κατ' απαίτηση)"
+
+#~ msgid "Dynamic (conservative)"
+#~ msgstr "Δυναμικό (συντηρητικό)"
+
+#~ msgid "Powersave"
+#~ msgstr "Εξοικονόμηση ενέργειας"
+
+#~ msgid "Userspace"
+#~ msgstr "Χώρος χρήστη"
+
+#~ msgid "Do nothing"
+#~ msgstr "Καμία ενέργεια"
+
+#~ msgid "Shutdown"
+#~ msgstr "Τερματισμός"
+
+#~ msgid "Lock Screen"
+#~ msgstr "Κλείδωμα οθόνης"
+
+#~ msgid "Suspend to Ram"
+#~ msgstr "Αναστολή στη Ram"
+
+#~ msgid "Standby"
+#~ msgstr "Αναμονή"
+
+#~ msgid "CPU <numid>%1</numid>"
+#~ msgstr "ΚΜΕ <numid>%1</numid>"
+
+#~ msgid "Disable CPU <numid>%1</numid>"
+#~ msgstr "Απενεργοποίηση ΚΜΕ <numid>%1</numid>"
+
+#~ msgid "If this box is checked, the CPU <numid>%1</numid> will be disabled"
+#~ msgstr ""
+#~ "Αν ενεργοποιήσετε αυτό το πλαίσιο, η ΚΜΕ <numid>%1</numid> θα "
+#~ "απενεργοποιηθεί"
+
+#~ msgid "Please enter a name for the new profile"
+#~ msgstr "Παρακαλώ εισάγετε ένα όνομα για το νέο προφίλ"
+
+#~ msgid "The name for the new profile"
+#~ msgstr "Το όνομα για το νέο προφίλ"
+
+#~ msgid "Enter here the name for the profile you are creating"
+#~ msgstr "Εισάγετε εδώ το όνομα για το προφίλ που δημιουργείτε"
+
+#~ msgid "Please enter a name for this profile"
+#~ msgstr "Παρακαλώ εισάγετε ένα όνομα γι' αυτό το προφίλ"
+
+#~ msgctxt "None"
+#~ msgid "No methods found"
+#~ msgstr "Δε βρέθηκαν μέθοδοι"
+
+#~ msgid "Import PowerDevil profiles"
+#~ msgstr "Εισαγωγή προφίλ PowerDevil"
+
+#~ msgid "Export PowerDevil profiles"
+#~ msgstr "Εξαγωγή προφίλ PowerDevil"
+
+#~ msgid ""
+#~ "The current profile has not been saved.\n"
+#~ "Do you want to save it?"
+#~ msgstr ""
+#~ "Το τρέχον προφίλ δεν αποθηκεύτηκε.\n"
+#~ "Επιθυμείτε την αποθήκευσή του;"
+
+#~ msgid "Save Profile"
+#~ msgstr "Αποθήκευση προφίλ"
+
+#~ msgid "PowerDevil Configuration"
+#~ msgstr "Ρυθμίσεις PowerDevil"
+
+#~ msgid "A configurator for PowerDevil"
+#~ msgstr "Ρυθμίσεις για το PowerDevil"
+
+#~ msgid "(c), 2008 Dario Freddi"
+#~ msgstr "(c), 2008 Dario Freddi"
+
+#~ msgid ""
+#~ "From this module, you can configure the Daemon, create and edit "
+#~ "powersaving profiles, and see your system's capabilities."
+#~ msgstr ""
+#~ "Με αυτό το άρθρωμα, μπορείτε να ρυθμίσετε τον δαίμονα, να δημιουργήσετε "
+#~ "και να επεξεργαστείτε προφίλ εξοικονόμησης ενέργειας και να δείτε τα "
+#~ "χαρακτηριστικά του συστήματός σας."
+
+#~ msgid "Main Developer"
+#~ msgstr "Κύριος προγραμματιστής"
+
+#~ msgid ""
+#~ "<h1>PowerDevil configuration</h1> <p>This module lets you configure "
+#~ "PowerDevil. PowerDevil is a daemon (so it runs in background) that is "
+#~ "started upon KDE startup.</p> <p>PowerDevil has 2 levels of "
+#~ "configuration: a general one, that is always applied, and a profile-based "
+#~ "one, that lets you configure a specific behavior in every situation. You "
+#~ "can also have a look at your system capabilities in the last tab. To get "
+#~ "you started, first configure the options in the first 2 tabs. Then switch "
+#~ "to the fourth one, and create/edit your profiles. Last but not least, "
+#~ "assign your profiles in the third Tab. You do not have to restart "
+#~ "PowerDevil, just click \"Apply\", and you are done.</p>"
+#~ msgstr ""
+#~ "<h1>Ρυθμίσεις PowerDevil</h1> <p>Αυτό το άρθρωμα σας επιτρέπει τη ρύθμιση "
+#~ "του PowerDevil. Ο PowerDevil είναι ένας δαίμονας (εκτελείται δηλαδή στο "
+#~ "παρασκήνιο) που εκκινεί με την έναρξη του KDE.</p> <p>Ο PowerDevil έχει 2 "
+#~ "επίπεδα ρυθμίσεων: ένα γενικό, που εφαρμόζεται πάντα και ένα ένα προφίλ, "
+#~ "το οποίο σας επιτρέπει τη ρύθμιση συγκεκριμένης συμπεριφοράς σε κάθε "
+#~ "κατάσταση. Μπορείτε επίσης να δείτε τα χαρακτηριστικά ενέργειας του "
+#~ "συστήματός σας στην τελευταία καρτέλα. Για να ξεκινήσετε, πρώτα ρυθμίστε "
+#~ "τις επιλογές στις πρώτες 2 καρτέλες. Έπειτα μεταβείτε στην τέταρτη και "
+#~ "δημιουργήστε/επεξεργαστείτε τα προφίλ ενέργειας. Τέλος, αντιστοιχίζετε τα "
+#~ "προφίλ σας στην τρίτη καρτέλα. Δε χρειάζεται η επανεκκίνηση του "
+#~ "PowerDevil,  απλά κάντε κλικ στην \"Εφαρμογή\", και είστε έτοιμοι.</p>"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Τούσης Μανώλης"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "manolis@koppermind.homelinux.org"
+
+#~ msgid "General Settings"
+#~ msgstr "Γενικές ρυθμίσεις"
+
+#~ msgid "Locks screen when waking up from suspension"
+#~ msgstr "Κλείδωμα οθόνης κατά την αφύπνηση από αναστολή"
+
+#~ msgid "You will be asked for password when resuming from sleep state"
+#~ msgstr ""
+#~ "Θα σας ζητηθεί κωδικός πρόσβασης κατά την επαναφορά από κατάσταση "
+#~ "αδράνειας"
+
+#~ msgid "Lock screen on resume"
+#~ msgstr "Κλείδωμα οθόνης σε επαναφορά"
+
+#~ msgid "Activate automatic dimming"
+#~ msgstr "Ενεργοποίηση αυτόματου σβησίματος"
+
+#~ msgid "Automatically dims the display when the system is idle."
+#~ msgstr "Αυτόματο σβήσιμο της οθόνης όταν το σύστημα είναι αδρανές."
+
+#~ msgid "Dim display when idle for more than"
+#~ msgstr "Σβήσιμο οθόνης σε αδράνεια μεγαλύτερη από"
+
+#~ msgid "Enables standard notifications"
+#~ msgstr "Ενεργοποίηση τυπικών ειδοποιήσεων"
+
+#~ msgid ""
+#~ "Notifications such as standard events or profile change will be shown"
+#~ msgstr "Θα εμφανίζονται ειδοποιήσεις όπως τυπικά γεγονότα ή αλλαγές προφίλ"
+
+#~ msgid "Enable notifications"
+#~ msgstr "Ενεργοποίηση ειδοποιήσεων"
+
+#~ msgid "Enables warning notifications"
+#~ msgstr "Ενεργοποίηση προειδοποιήσεων"
+
+#~ msgid ""
+#~ "Notifications such as warnings or important events will be shown. It is "
+#~ "recommended to leave this enabled."
+#~ msgstr ""
+#~ "Θα εμφανίζονται προειδοποιήσεις ή σημαντικά γεγονότα. Προτείνεται η "
+#~ "ενεργοποίηση αυτής της επιλογής."
+
+#~ msgid "Enable warning notifications"
+#~ msgstr "Ενεργοποίηση ειδοποιήσεων"
+
+#~ msgctxt "Minutes"
+#~ msgid "min"
+#~ msgstr "λεπτά"
+
+#~ msgid "Battery Levels"
+#~ msgstr "Στάθμες μπαταρίας"
+
+#~ msgid "Battery is at low level at"
+#~ msgstr "Η μπαταρία είναι σε χαμηλή στάθμη στο"
+
+#~ msgid "Low battery level"
+#~ msgstr "Χαμηλή στάθμη μπαταρίας"
+
+#~ msgid "Battery will be considered low when it reaches this level"
+#~ msgstr ""
+#~ "Η μπαταρία θα θεωρηθεί ότι είναι χαμηλή όταν βρεθεί σε αυτή τη στάθμη "
+#~ "ενέργειας"
+
+#~ msgid "%"
+#~ msgstr "%"
+
+#~ msgid "Battery is at warning level at"
+#~ msgstr "Η μπαραρία σε στάθμη προειδοποίησης στο"
+
+#~ msgid "Warning battery level"
+#~ msgstr "Στάθμη προειδοποίησης μπαταρίας"
+
+#~ msgid ""
+#~ "Battery will be considered at warning level when it reaches this level"
+#~ msgstr ""
+#~ "Η μπαταρία θα θεωρηθεί ότι είναι σε στάθμη προειδοποίησης όταν βρεθεί σε "
+#~ "αυτή τη στάθμη ενέργειας"
+
+#~ msgid "Battery is at critical level at"
+#~ msgstr "Η μπαταρία σε κρίσιμη στάθμη στο"
+
+#~ msgid "Critical battery level"
+#~ msgstr "Κρίσιμη στάθμη μπαταρίας"
+
+#~ msgid "Battery will be considered critical when it reaches this level"
+#~ msgstr ""
+#~ "Η μπαταρία θα θεωρηθεί ότι είναι κρίσιμη όταν βρεθεί σε αυτή τη στάθμη "
+#~ "ενέργειας"
+
+#~ msgid "Battery Actions"
+#~ msgstr "Ενέργειες μπαταρίας"
+
+#~ msgid "When battery remaining is critical"
+#~ msgstr "Όταν το υπόλοιπο μπαταρίας είναι κρίσιμο"
+
+#~ msgid "Profiles Assignment"
+#~ msgstr "Αντιστοίχιση προφίλ"
+
+#~ msgid "Profiles"
+#~ msgstr "Προφίλ"
+
+#~ msgid "When AC Adaptor is plugged in"
+#~ msgstr "Όταν ο μετασχηματιστής AC είναι συνδεδεμένος"
+
+#~ msgid "When on battery Power"
+#~ msgstr "Όταν χρησιμοποιείται η μπαταρία"
+
+#~ msgid "When battery is at low level"
+#~ msgstr "Όταν η μπαταρία είναι σε χαμηλή στάθμη"
+
+#~ msgid "When battery is at warning level"
+#~ msgstr "Όταν η μπαταρία είναι σε στάθμη προειδοποίησης"
+
+#~ msgid "Edit Profiles"
+#~ msgstr "Επεξεργασία προφίλ"
+
+#~ msgid "Profile Management"
+#~ msgstr "Διαχείριση προφίλ"
+
+#~ msgid "Screen and Actions"
+#~ msgstr "Οθόνη και ενέργειες"
+
+#~ msgid ""
+#~ "With this slider you can set the brightness when the system is plugged "
+#~ "into the socket outlet"
+#~ msgstr ""
+#~ "Με αυτήν την κύλιση μπορείτε να ορίσετε τη φωτεινότητα όταν το σύστημα "
+#~ "είναι συνδεδεμένο στο ρεύμα"
+
+#~ msgid "Brightness"
+#~ msgstr "Φωτεινότητα"
+
+#~ msgid ""
+#~ "Automatically turn off the display if idle for more than the set value."
+#~ msgstr ""
+#~ "Αυτόματο κλείσιμο της οθόνης αν υπάρχει αδράνεια μεγαλύτερη από την "
+#~ "ορισμένη τιμή."
+
+#~ msgid "Turn off display if idle for more than"
+#~ msgstr "Αυτόματο κλείσιμο οθόνης σε αδράνεια πάνω από"
+
+#~ msgid "Idle time after which the monitor should turn off"
+#~ msgstr "Ο χρόνος αδράνειας πάνω από τον οποίο η οθόνη θα κλείνει"
+
+#~ msgid " min"
+#~ msgstr " λεπτά"
+
+#~ msgid ""
+#~ "To prevent data loss or other damage, you can have the system suspend or "
+#~ "hibernate, so you do not run accidentally out of battery power. Configure "
+#~ "the number of minutes below which the machine will run the configured "
+#~ "action."
+#~ msgstr ""
+#~ "Για την αποφυγή απώλειας δεδομένων ή άλλης ζημιάς, μπορείτε να ορίσετε "
+#~ "την αναστολή ή αδρανοποίηση, έτσι ώστε να μην μείνετε ξαφνικά από ρεύμα "
+#~ "στην μπαταρία. Ρυθμίστε τον αριθμό λεπτών κάτω από τα οποία το μηχάνημα "
+#~ "θα εκτελεί την καθορισμένη ενέργεια."
+
+#~ msgid "When the system is idle for more than"
+#~ msgstr "Όταν το σύστημα σε αδράνεια πάνω από"
+
+#~ msgid "When Laptop Lid Closed"
+#~ msgstr "Όταν το καπάκι του φορητού είναι κλειστό"
+
+#~ msgid "This action will be performed when the laptop lid gets closed"
+#~ msgstr "Η ενέργεια αυτή θα εκτελεστεί όταν το καπάκι του φορητού κλείσει"
+
+#~ msgid "CPU and System"
+#~ msgstr "ΚΜΕ και σύστημα"
+
+#~ msgid "Turn off the following CPU(s)"
+#~ msgstr "Κλείσιμο των ακόλουθων ΚΜΕ"
+
+#~ msgid ""
+#~ "CPU Behaviour strongly impacts on your system performance and on your "
+#~ "battery's life. Here you can choose the policy best suitable for this "
+#~ "profile"
+#~ msgstr ""
+#~ "Η συμπεριφορά της ΚΜΕ επιρρεάζει έντονα την επίδοση του συστήματός σας "
+#~ "και τη ζωή της μπαταρίας. Εδώ μπορείτε να επιλέξετε τη βέλτιστη πολιτική "
+#~ "για αυτό το προφίλ"
+
+#~ msgid "System powersaving scheme"
+#~ msgstr "Σχήμα εξοικονόμησης ενέργειας συστήματος"
+
+#~ msgid "Undo all the changes to this profile since last saving"
+#~ msgstr ""
+#~ "Αναίρεση όλων των τροποποιήσεων του προφίλ μέχρι την τελευταία αποθήκευση"
+
+#~ msgid "Undo Changes"
+#~ msgstr "Αναίρεση τροποποιήσεων"
+
+#~ msgid "Save changes to this profile"
+#~ msgstr "Αποθήκευση τροποποιήσεων σε αυτό το προφίλ"
+
+#~ msgid "Save Current Profile"
+#~ msgstr "Αποθήκευση τρέχοντος προφίλ"
+
+#~ msgid "Delete"
+#~ msgstr "Διαγραφή"
+
+#~ msgid "Edit"
+#~ msgstr "Επεξεργασία"
+
+#~ msgctxt "Creates a new profile"
+#~ msgid "New"
+#~ msgstr "Νέο"
+
+#~ msgid "Import profiles from a file"
+#~ msgstr "Εισαγωγή προφίλ από ένα αρχείο"
+
+#~ msgid "Import Profiles"
+#~ msgstr "Εισαγωγή προφίλ"
+
+#~ msgid "Export your profiles to a file"
+#~ msgstr "Εξαγωγή των προφίλ σας σε ένα αρχείο"
+
+#~ msgid "Export Profiles"
+#~ msgstr "Εξαγωγή προφίλ"
+
+#~ msgid "Capabilities"
+#~ msgstr "Χαρακτηριστικά"
+
+#~ msgid "System Capabilities"
+#~ msgstr "Χαρακτηριστικά συστήματος"
+
+#~ msgid "Number of CPU"
+#~ msgstr "Αριθμός ΚΜΕ"
+
+#~ msgid "Number of Batteries"
+#~ msgstr "Αριθμός μπαταριών"
+
+#~ msgid "CPU can be turned Off"
+#~ msgstr "Η ΚΜΕ μπορεί να κλείσει"
+
+#~ msgid "Scheme support"
+#~ msgstr "Υποστήριξη σχήματος"
+
+#~ msgid "Scaling capability"
+#~ msgstr "Δυνατότητα κλιμάκωσης"
+
+#~ msgid "Supported CPU Policies"
+#~ msgstr "Υποστηριζόμενες πολιτικές ΚΜΕ"
+
+#~ msgid "Supported suspend methods"
+#~ msgstr "Υποστηριζόμενες μέθοδοι αναστολής"
+
+#~ msgid "Supported schemes"
+#~ msgstr "Υποστηριζόμενα σχήματα"
+
+#~ msgid "Detected Activity"
+#~ msgstr "Ανιχνεύθηκε δραστηριότητα"
+
+#~ msgid "Battery Management Settings"
+#~ msgstr "Ρυθμίσεις διαχείρισης μπαταρίας"
+
+#~ msgid "Is PowerDevil Daemon up and running?"
+#~ msgstr "Εκτελείται ο δαίμονας PowerDevil;"
+
+#~ msgid "Battery"
+#~ msgstr "Μπαταρία"
+
+#~ msgid "sources"
+#~ msgstr "πηγές"
+
+#~ msgid "AC Adapter"
+#~ msgstr "Μετασχηματιστής AC"
+
+#~ msgid "Plugged in"
+#~ msgstr "Σε σύνδεση"
+
+#~ msgid "n/a"
+#~ msgstr "μ/δ"
+
+#~ msgid "Percent"
+#~ msgstr "Ποσοστό"
+
+#~ msgid "Configure Battery Monitor"
+#~ msgstr "Ρύθμιση επόπτη μπαταρίας"
+
+#~ msgid "Show the percentage of &charge on the battery"
+#~ msgstr "Εμφάνιση ποσοστού &φόρτισης της μπαταρίας"
+
+#~ msgid "Show the state for &each battery present"
+#~ msgstr "&Εμφάνιση της κατάστασης κάθε μπαταρίας"
+
+#~ msgid "Oxygen theme"
+#~ msgstr "Θέμα Oxygen"
+
+#~ msgid "Classic theme"
+#~ msgstr "Κλασικό θέμα"

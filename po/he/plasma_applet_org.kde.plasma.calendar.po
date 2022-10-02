@@ -1,0 +1,72 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Elkana Bardugo <ttv200@gmail.com>, 2016.
+# Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_org.kde.plasma.calendar\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2017-05-16 06:55-0400\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Zanata 3.9.6\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "כללי"
+
+#: package/contents/ui/configGeneral.qml:24
+#, kde-format
+msgid "Calendar version:"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:26
+#, fuzzy, kde-format
+#| msgid "Show week numbers in Calendar"
+msgid "Show week numbers"
+msgstr "הראה מספר שבוע בלוח שנה"
+
+#: package/contents/ui/configGeneral.qml:36
+#, kde-format
+msgctxt "What information is shown in the calendar icon"
+msgid "Compact version:"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:38
+#, kde-format
+msgctxt "Show the number of the day (eg. 31) in the icon"
+msgid "Show day of the month"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:44
+#, fuzzy, kde-format
+#| msgctxt "Show the week number (eg. 50) in the icon"
+#| msgid "Week number"
+msgctxt "Show the week number (eg. 50) in the icon"
+msgid "Show week number"
+msgstr "מספר שבוע"
+
+#~ msgid "Working Day"
+#~ msgstr "יום עבודה"
+
+#~ msgid "Starts at 9"
+#~ msgstr "מתחיל ב־9"
+
+#~ msgid "Ends at 5"
+#~ msgstr "מסתיים ב־5"
+
+#~ msgctxt "What information is shown in the calendar icon"
+#~ msgid "Icon:"
+#~ msgstr "סמל:"
+
+#~ msgctxt "Show the number of the day (eg. 31) in the icon"
+#~ msgid "Day in month"
+#~ msgstr "יום בחודש"

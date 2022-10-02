@@ -1,0 +1,607 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Ozan Çağlayan <ozan@pardus.org.tr>, 2010.
+# Serdar Soytetir <tulliana@gmail.com>, 2012, 2013.
+# Volkan Gezer <volkangezer@gmail.com>, 2014, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"PO-Revision-Date: 2022-02-27 14:09+0100\n"
+"Last-Translator: Volkan Gezer <volkangezer@gmail.com>\n"
+"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 20.12.3\n"
+
+#: soliddeviceengine.cpp:114
+msgid "Parent UDI"
+msgstr "Üst UDI"
+
+#: soliddeviceengine.cpp:115
+msgid "Vendor"
+msgstr "Üretici"
+
+#: soliddeviceengine.cpp:116
+msgid "Product"
+msgstr "Ürün"
+
+#: soliddeviceengine.cpp:117
+msgid "Description"
+msgstr "Açıklama"
+
+#: soliddeviceengine.cpp:118
+msgid "Icon"
+msgstr "Simge"
+
+#: soliddeviceengine.cpp:119 soliddeviceengine.cpp:592
+msgid "Emblems"
+msgstr "Amblemler"
+
+#: soliddeviceengine.cpp:120 soliddeviceengine.cpp:476
+#: soliddeviceengine.cpp:482 soliddeviceengine.cpp:495
+msgid "State"
+msgstr "Durum"
+
+#: soliddeviceengine.cpp:121 soliddeviceengine.cpp:477
+#: soliddeviceengine.cpp:483 soliddeviceengine.cpp:491
+#: soliddeviceengine.cpp:493
+msgid "Operation result"
+msgstr "İşlem sonucu"
+
+#: soliddeviceengine.cpp:122
+msgid "Timestamp"
+msgstr "Zaman etiketi"
+
+#: soliddeviceengine.cpp:130
+msgid "Processor"
+msgstr "İşlemci"
+
+#: soliddeviceengine.cpp:131
+msgid "Number"
+msgstr "Adet"
+
+#: soliddeviceengine.cpp:132
+msgid "Max Speed"
+msgstr "En Yüksek Hız"
+
+#: soliddeviceengine.cpp:133
+msgid "Can Change Frequency"
+msgstr "Frekans Değiştirebilir"
+
+#: soliddeviceengine.cpp:141
+msgid "Block"
+msgstr "Blok"
+
+#: soliddeviceengine.cpp:142
+msgid "Major"
+msgstr "Majör"
+
+#: soliddeviceengine.cpp:143
+msgid "Minor"
+msgstr "Minör"
+
+#: soliddeviceengine.cpp:144
+msgid "Device"
+msgstr "Aygıt"
+
+#: soliddeviceengine.cpp:152
+msgid "Storage Access"
+msgstr "Depolama Erişimi"
+
+#: soliddeviceengine.cpp:153 soliddeviceengine.cpp:507
+#: soliddeviceengine.cpp:606
+msgid "Accessible"
+msgstr "Erişilebilir"
+
+#: soliddeviceengine.cpp:154 soliddeviceengine.cpp:508
+msgid "File Path"
+msgstr "Dosya Yolu"
+
+#: soliddeviceengine.cpp:169
+msgid "Storage Drive"
+msgstr "Depolama Sürücüsü"
+
+#: soliddeviceengine.cpp:172
+msgid "Ide"
+msgstr "Ide"
+
+#: soliddeviceengine.cpp:172
+msgid "Usb"
+msgstr "Usb"
+
+#: soliddeviceengine.cpp:172
+msgid "Ieee1394"
+msgstr "Ieee1394"
+
+#: soliddeviceengine.cpp:173
+msgid "Scsi"
+msgstr "Scsi"
+
+#: soliddeviceengine.cpp:173
+msgid "Sata"
+msgstr "Sata"
+
+#: soliddeviceengine.cpp:173
+msgid "Platform"
+msgstr "Platform"
+
+#: soliddeviceengine.cpp:175
+msgid "Hard Disk"
+msgstr "Sabit Disk"
+
+#: soliddeviceengine.cpp:175
+msgid "Cdrom Drive"
+msgstr "Cdrom Sürücü"
+
+#: soliddeviceengine.cpp:175
+msgid "Floppy"
+msgstr "Disket Sürücü"
+
+#: soliddeviceengine.cpp:176
+msgid "Tape"
+msgstr "Teyp"
+
+#: soliddeviceengine.cpp:176
+msgid "Compact Flash"
+msgstr "Compact Flash"
+
+#: soliddeviceengine.cpp:176
+msgid "Memory Stick"
+msgstr "Memory Stick"
+
+#: soliddeviceengine.cpp:177
+msgid "Smart Media"
+msgstr "Smart Media"
+
+#: soliddeviceengine.cpp:177
+msgid "SdMmc"
+msgstr "SdMmc"
+
+#: soliddeviceengine.cpp:177
+msgid "Xd"
+msgstr "Xd"
+
+#: soliddeviceengine.cpp:179
+msgid "Bus"
+msgstr "Bus"
+
+#: soliddeviceengine.cpp:180
+msgid "Drive Type"
+msgstr "Sürücü Türü"
+
+#: soliddeviceengine.cpp:181 soliddeviceengine.cpp:194
+#: soliddeviceengine.cpp:362 soliddeviceengine.cpp:376
+msgid "Removable"
+msgstr "Çıkarılabilir"
+
+#: soliddeviceengine.cpp:182 soliddeviceengine.cpp:195
+#: soliddeviceengine.cpp:363 soliddeviceengine.cpp:377
+msgid "Hotpluggable"
+msgstr "Tak-çalıştırılabilir"
+
+#: soliddeviceengine.cpp:204
+msgid "Optical Drive"
+msgstr "Optik Sürücü"
+
+#: soliddeviceengine.cpp:209
+msgid "CD-R"
+msgstr "CD-R"
+
+#: soliddeviceengine.cpp:212
+msgid "CD-RW"
+msgstr "CD-RW"
+
+#: soliddeviceengine.cpp:215
+msgid "DVD"
+msgstr "DVD"
+
+#: soliddeviceengine.cpp:218
+msgid "DVD-R"
+msgstr "DVD-R"
+
+#: soliddeviceengine.cpp:221
+msgid "DVD-RW"
+msgstr "DVD-RW"
+
+#: soliddeviceengine.cpp:224
+msgid "DVD-RAM"
+msgstr "DVD-RAM"
+
+#: soliddeviceengine.cpp:227
+msgid "DVD+R"
+msgstr "DVD+R"
+
+#: soliddeviceengine.cpp:230
+msgid "DVD+RW"
+msgstr "DVD+RW"
+
+#: soliddeviceengine.cpp:233
+msgid "DVD+DL"
+msgstr "DVD+DL"
+
+#: soliddeviceengine.cpp:236
+msgid "DVD+DLRW"
+msgstr "DVD+DLRW"
+
+#: soliddeviceengine.cpp:239
+msgid "BD"
+msgstr "BD"
+
+#: soliddeviceengine.cpp:242
+msgid "BD-R"
+msgstr "BD-R"
+
+#: soliddeviceengine.cpp:245
+msgid "BD-RE"
+msgstr "BD-RE"
+
+#: soliddeviceengine.cpp:248
+msgid "HDDVD"
+msgstr "HDDVD"
+
+#: soliddeviceengine.cpp:251
+msgid "HDDVD-R"
+msgstr "HDDVD-R"
+
+#: soliddeviceengine.cpp:254
+msgid "HDDVD-RW"
+msgstr "HDDVD-RW"
+
+#: soliddeviceengine.cpp:256
+msgid "Supported Media"
+msgstr "Desteklenen Ortam"
+
+#: soliddeviceengine.cpp:258
+msgid "Read Speed"
+msgstr "Okuma Hızı"
+
+#: soliddeviceengine.cpp:259
+msgid "Write Speed"
+msgstr "Yazma Hızı"
+
+#: soliddeviceengine.cpp:267
+msgid "Write Speeds"
+msgstr "Yazma Hızları"
+
+#: soliddeviceengine.cpp:275
+msgid "Storage Volume"
+msgstr "Depolama Bölümü"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Other"
+msgstr "Diğer"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Unused"
+msgstr "Kullanılmayan"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "File System"
+msgstr "Dosya Sistemi"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Partition Table"
+msgstr "Disk Bölümü Tablosu"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Raid"
+msgstr "Raid"
+
+#: soliddeviceengine.cpp:278
+#, kde-format
+msgid "Encrypted"
+msgstr "Şifreli"
+
+#: soliddeviceengine.cpp:281 soliddeviceengine.cpp:283
+msgid "Usage"
+msgstr "Kullanım"
+
+#: soliddeviceengine.cpp:283
+#, kde-format
+msgid "Unknown"
+msgstr "Bilinmeyen"
+
+#: soliddeviceengine.cpp:286
+msgid "Ignored"
+msgstr "Yok Sayılmış"
+
+#: soliddeviceengine.cpp:287
+msgid "File System Type"
+msgstr "Dosya Sistemi Türü"
+
+#: soliddeviceengine.cpp:288
+msgid "Label"
+msgstr "Etiket"
+
+#: soliddeviceengine.cpp:289
+msgid "UUID"
+msgstr "UUID"
+
+#: soliddeviceengine.cpp:298
+msgid "Encrypted Container"
+msgstr "Şifreli Taşıyıcı"
+
+#: soliddeviceengine.cpp:310
+msgid "OpticalDisc"
+msgstr "OptikDisk"
+
+#: soliddeviceengine.cpp:316
+msgid "Audio"
+msgstr "Ses"
+
+#: soliddeviceengine.cpp:319
+msgid "Data"
+msgstr "Veri"
+
+#: soliddeviceengine.cpp:322
+msgid "Video CD"
+msgstr "Video CD"
+
+#: soliddeviceengine.cpp:325
+msgid "Super Video CD"
+msgstr "Super Video CD"
+
+#: soliddeviceengine.cpp:328
+msgid "Video DVD"
+msgstr "Video DVD"
+
+#: soliddeviceengine.cpp:331
+msgid "Video Blu Ray"
+msgstr "Video Blu Ray"
+
+#: soliddeviceengine.cpp:333
+msgid "Available Content"
+msgstr "Mevcut İçerik"
+
+#: soliddeviceengine.cpp:336
+msgid "Unknown Disc Type"
+msgstr "Bilinmeyen Disk Türü"
+
+#: soliddeviceengine.cpp:336
+msgid "CD Rom"
+msgstr "CD Rom"
+
+#: soliddeviceengine.cpp:336
+msgid "CD Recordable"
+msgstr "Kaydedilebilir CD"
+
+#: soliddeviceengine.cpp:337
+msgid "CD Rewritable"
+msgstr "Yeniden yazılabilir CD"
+
+#: soliddeviceengine.cpp:337
+msgid "DVD Rom"
+msgstr "DVD Rom"
+
+#: soliddeviceengine.cpp:337
+msgid "DVD Ram"
+msgstr "DVD Ram"
+
+#: soliddeviceengine.cpp:338
+msgid "DVD Recordable"
+msgstr "Kaydedilebilir DVD"
+
+#: soliddeviceengine.cpp:338
+msgid "DVD Rewritable"
+msgstr "Yeniden yazılabilir DVD"
+
+#: soliddeviceengine.cpp:339
+msgid "DVD Plus Recordable"
+msgstr "Kaydedilebilir DVD Plus"
+
+#: soliddeviceengine.cpp:339
+msgid "DVD Plus Rewritable"
+msgstr "Yeniden yazılabilir DVD Plus"
+
+#: soliddeviceengine.cpp:340
+msgid "DVD Plus Recordable Duallayer"
+msgstr "Çift katmanlı kaydedilebilir DVD Plus"
+
+#: soliddeviceengine.cpp:340
+msgid "DVD Plus Rewritable Duallayer"
+msgstr "Çift katmanlı yeniden yazılabilir DVD Plus"
+
+#: soliddeviceengine.cpp:341
+msgid "Blu Ray Rom"
+msgstr "Blu Ray Rom"
+
+#: soliddeviceengine.cpp:341
+msgid "Blu Ray Recordable"
+msgstr "Kaydedilebilir Blu Ray"
+
+#: soliddeviceengine.cpp:342
+msgid "Blu Ray Rewritable"
+msgstr "Yeniden yazılabilir Blu Ray"
+
+#: soliddeviceengine.cpp:342
+msgid "HD DVD Rom"
+msgstr "HD DVD Rom"
+
+#: soliddeviceengine.cpp:343
+msgid "HD DVD Recordable"
+msgstr "Kaydedilebilir HD DVD"
+
+#: soliddeviceengine.cpp:343
+msgid "HD DVD Rewritable"
+msgstr "Yeniden yazılabilir HD DVD"
+
+#: soliddeviceengine.cpp:345
+msgid "Disc Type"
+msgstr "Disk Türü"
+
+#: soliddeviceengine.cpp:346
+msgid "Appendable"
+msgstr "Sonuna eklenebilir"
+
+#: soliddeviceengine.cpp:347
+msgid "Blank"
+msgstr "Boş"
+
+#: soliddeviceengine.cpp:348
+msgid "Rewritable"
+msgstr "Yeniden yazılabilir"
+
+#: soliddeviceengine.cpp:349
+msgid "Capacity"
+msgstr "Kapasite"
+
+#: soliddeviceengine.cpp:357
+msgid "Camera"
+msgstr "Kamera"
+
+#: soliddeviceengine.cpp:359 soliddeviceengine.cpp:373
+msgid "Supported Protocols"
+msgstr "Desteklenen Protokoller"
+
+#: soliddeviceengine.cpp:360 soliddeviceengine.cpp:374
+msgid "Supported Drivers"
+msgstr "Desteklenen Sürücüler"
+
+#: soliddeviceengine.cpp:371
+msgid "Portable Media Player"
+msgstr "Taşınabilir Medya Oynatıcı"
+
+#: soliddeviceengine.cpp:385
+msgid "Battery"
+msgstr "Pil"
+
+#: soliddeviceengine.cpp:388
+msgid "Unknown Battery"
+msgstr "Bilinmeyen Pil"
+
+#: soliddeviceengine.cpp:388
+msgid "PDA Battery"
+msgstr "PDA Pili"
+
+#: soliddeviceengine.cpp:388
+msgid "UPS Battery"
+msgstr "UPS Pili"
+
+#: soliddeviceengine.cpp:389
+msgid "Primary Battery"
+msgstr "Birincil Pil"
+
+#: soliddeviceengine.cpp:389
+msgid "Mouse Battery"
+msgstr "Fare Pili"
+
+#: soliddeviceengine.cpp:390
+msgid "Keyboard Battery"
+msgstr "Klavye Pili"
+
+#: soliddeviceengine.cpp:390
+msgid "Keyboard Mouse Battery"
+msgstr "Klavye/Fare Pili"
+
+#: soliddeviceengine.cpp:391
+msgid "Camera Battery"
+msgstr "Kamera Pili"
+
+#: soliddeviceengine.cpp:391
+msgid "Phone Battery"
+msgstr "Telefon Pili"
+
+#: soliddeviceengine.cpp:391
+msgid "Monitor Battery"
+msgstr "Pili Görüntüle"
+
+#: soliddeviceengine.cpp:392
+msgid "Gaming Input Battery"
+msgstr "Oyun Girdi Pili"
+
+#: soliddeviceengine.cpp:392
+msgid "Bluetooth Battery"
+msgstr "Bluetooth Pili"
+
+#: soliddeviceengine.cpp:395
+msgid "Not Charging"
+msgstr "Şarj olmuyor"
+
+#: soliddeviceengine.cpp:395
+msgid "Charging"
+msgstr "Şarj oluyor"
+
+#: soliddeviceengine.cpp:395
+msgid "Discharging"
+msgstr "Şarj boşalıyor"
+
+#: soliddeviceengine.cpp:396
+msgid "Fully Charged"
+msgstr "Tamamen Dolu"
+
+#: soliddeviceengine.cpp:398
+msgid "Plugged In"
+msgstr "Takılı"
+
+#: soliddeviceengine.cpp:399
+msgid "Type"
+msgstr "Tür"
+
+#: soliddeviceengine.cpp:400
+msgid "Charge Percent"
+msgstr "Doluluk yüzdesi"
+
+#: soliddeviceengine.cpp:401
+msgid "Rechargeable"
+msgstr "Tekrar şarj edilebilir"
+
+#: soliddeviceengine.cpp:402
+msgid "Charge State"
+msgstr "Şarj Durumu"
+
+#: soliddeviceengine.cpp:427
+msgid "Type Description"
+msgstr "Tür Açıklaması"
+
+#: soliddeviceengine.cpp:432
+msgid "Device Types"
+msgstr "Aygıt Türleri"
+
+#: soliddeviceengine.cpp:456 soliddeviceengine.cpp:553
+msgid "Size"
+msgstr "Boyut"
+
+#: soliddeviceengine.cpp:535
+#, kde-format
+msgid "Filesystem is not responding"
+msgstr "Dosya sistemi yanıt vermiyor"
+
+#: soliddeviceengine.cpp:535
+#, kde-format
+msgid "Filesystem mounted at '%1' is not responding"
+msgstr "'%1' konumunda bağlanan dosya sistemi yanıt vermiyor"
+
+#: soliddeviceengine.cpp:551
+msgid "Free Space"
+msgstr "Boş Alan"
+
+#: soliddeviceengine.cpp:552
+msgid "Free Space Text"
+msgstr "Boş Alan Metni"
+
+#: soliddeviceengine.cpp:554
+msgid "Size Text"
+msgstr "Boyut Metni"
+
+#: soliddeviceengine.cpp:580
+msgid "Temperature"
+msgstr "Sıcaklık"
+
+#: soliddeviceengine.cpp:581
+msgid "Temperature Unit"
+msgstr "Sıcaklık Birimi"
+
+#: soliddeviceengine.cpp:625 soliddeviceengine.cpp:629
+msgid "In Use"
+msgstr "Kullanımda"

@@ -1,0 +1,82 @@
+# Malayalam translation of plasma_applet_clock.
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the plasma_applet_clock package.
+# Reviewed by HARI VISHNU<harivishnu@gmail.com>, 2008.
+# Praveen Arimbrathodiyil <pravi.a@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdebase\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-25 00:47+0000\n"
+"PO-Revision-Date: 2021-02-26 16:23+0000\n"
+"Last-Translator: Akhil Varkey <akhilvarkey@disroot.org>\n"
+"Language-Team: SMC <smc.org.in>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Weblate 4.4\n"
+
+#: contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "ബാഹ്യരൂപം"
+
+#: contents/ui/analogclock.qml:76
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Current time is %1; Current date is %2"
+msgstr ""
+
+#: contents/ui/configGeneral.qml:23
+#, kde-format
+msgid "Show seconds hand"
+msgstr "സെക്കന്റ് സൂചി കാണിയ്ക്കുക"
+
+#: contents/ui/configGeneral.qml:24
+#, kde-format
+msgid "General:"
+msgstr "പൊതുവായ:"
+
+#: contents/ui/configGeneral.qml:28
+#, kde-format
+msgid "Show time zone"
+msgstr "സമയ മേഖല കാണിയ്ക്കുക"
+
+#~ msgid "Show the seconds"
+#~ msgstr "സെക്കന്റുകള്‍ കാണിക്കുക"
+
+#~ msgid "Check this if you want to show the seconds."
+#~ msgstr "സെക്കന്റുകള്‍ കൂടി കാണാന്‍ നിങ്ങളിതു് തെരഞ്ഞെടുക്കണം."
+
+#~ msgid "Show &seconds hand"
+#~ msgstr "&സെക്കന്റ് സൂചി കാണിയ്ക്കുക "
+
+#~ msgid "Show the Timezone in text"
+#~ msgstr "പദാവലിയായി സമയമേഖല കാണിയ്ക്കുക"
+
+#~ msgid "Check this if you want to display Timezone in text."
+#~ msgstr "ഘടികാരത്തിനകത്തു് പദാവലിയായും സമയമേഖല കാണിയ്ക്കാന്‍ ഇതു് തെരഞ്ഞെടുക്കുക."
+
+#~ msgid "Show &time zone"
+#~ msgstr "&സമയമേഖല കാണിയ്ക്കുക"
+
+#, fuzzy
+#~ msgid "Also show the Timezone as text"
+#~ msgstr "പദാവലിയായും സമയം കാണിയ്ക്കുക "
+
+#~ msgid "Timezones"
+#~ msgstr "സമയ-മേഖലകള്‍"
+
+#~ msgid "Use &local timezone"
+#~ msgstr "ഉപയോഗിക്കുക &പ്രാദേശിക സമയ-മേഖല"
+
+#~ msgid "Area"
+#~ msgstr "ഏരിയ"
+
+#~ msgid "Region"
+#~ msgstr "മേഖല"
+
+#~ msgid "Comment"
+#~ msgstr "അഭിപ്രായം"

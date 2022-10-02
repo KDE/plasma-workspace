@@ -1,0 +1,377 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2014, 2016, 2017, 2018, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"PO-Revision-Date: 2021-05-27 18:43+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.08.1\n"
+
+#: iconsizecategorymodel.cpp:14
+#, kde-format
+msgid "Toolbar"
+msgstr "Verktygsrad"
+
+#: iconsizecategorymodel.cpp:15
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Huvudverktygsrad"
+
+#: iconsizecategorymodel.cpp:16
+#, kde-format
+msgid "Small Icons"
+msgstr "Små ikoner"
+
+#: iconsizecategorymodel.cpp:17
+#, kde-format
+msgid "Panel"
+msgstr "Panel"
+
+#: iconsizecategorymodel.cpp:18
+#, kde-format
+msgid "Dialogs"
+msgstr "Dialogrutor"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr "Namn på aktuellt ikontema"
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr "Skrivbordsikonstorlek"
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr "Verktygsradsikonstorlek"
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, kde-format
+msgid "Main toolbar icons size"
+msgstr "Huvudverktygsradsikonstorlek"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, kde-format
+msgid "Small icons size"
+msgstr "Liten ikonstorlek"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr "Panelikonstorlek"
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr "Dialogikonstorlek"
+
+#: main.cpp:182
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Kan inte skapa tillfällig fil."
+
+#: main.cpp:193
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Kan inte ladda ner arkivet för ikontemat: %1"
+
+#: main.cpp:207
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "Filen är inte ett giltigt arkiv för ikonteman."
+
+#: main.cpp:212
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr ""
+"Ett problem uppstod under installationen. De flesta teman i arkivet har ändå "
+"installerats."
+
+#: main.cpp:216
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "Tema installerat med lyckat resultat."
+
+#: main.cpp:260
+#, kde-format
+msgid "Installing icon themes…"
+msgstr "Installerar ikonteman…"
+
+#: main.cpp:270
+#, kde-format
+msgid "Installing %1 theme…"
+msgstr "Installerar tema %1…"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr "Modulen gör det möjligt att välja ikoner för skrivbordet."
+
+#: package/contents/ui/main.qml:147
+#, kde-format
+msgid "Remove Icon Theme"
+msgstr "Ta bort ikontema"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Restore Icon Theme"
+msgstr "Återställ ikontema"
+
+#: package/contents/ui/main.qml:228
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr "Anpassa ikonstorlekar"
+
+#: package/contents/ui/main.qml:246
+#, kde-format
+msgid "Install from File…"
+msgstr "Installera från fil…"
+
+#: package/contents/ui/main.qml:251
+#, kde-format
+msgid "Get New Icons…"
+msgstr "Hämta nya ikoner…"
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Open Theme"
+msgstr "Öppna tema"
+
+#: package/contents/ui/main.qml:281
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr "Temafiler (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Icon theme is already used"
+#~ msgstr "Ikontema används redan"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Stefan Asserhäll"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "stefan.asserhall@bredband.net"
+
+#~ msgid "Icons"
+#~ msgstr "Ikoner"
+
+#~ msgid "Icons Control Panel Module"
+#~ msgstr "Inställningsmodul för ikoner"
+
+#~ msgid "(c) 2000-2003 Geert Jansen"
+#~ msgstr "© 2000-2003 Geert Jansen"
+
+#~ msgid "Geert Jansen"
+#~ msgstr "Geert Jansen"
+
+#~ msgid "Antonio Larrosa Jimenez"
+#~ msgstr "Antonio Larrosa Jimenez"
+
+#~ msgid "Torsten Rahn"
+#~ msgstr "Torsten Rahn"
+
+#~ msgid "Jonathan Riddell"
+#~ msgstr "Jonathan Riddell"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Kai Uwe Broulik"
+
+#~ msgid "Desktop"
+#~ msgstr "Skrivbord"
+
+#~ msgid "Download New Icon Themes"
+#~ msgstr "Ladda ner nya ikonteman"
+
+#~ msgid "Use of Icon"
+#~ msgstr "Ikonanvändning"
+
+#~ msgctxt "@label The icon rendered by default"
+#~ msgid "Default"
+#~ msgstr "Standard"
+
+#~ msgctxt "@label The icon rendered as active"
+#~ msgid "Active"
+#~ msgstr "Aktiv"
+
+#~ msgctxt "@label The icon rendered as disabled"
+#~ msgid "Disabled"
+#~ msgstr "Inaktiverad"
+
+#~ msgid "Size:"
+#~ msgstr "Storlek:"
+
+#~ msgid "Enable icon animations"
+#~ msgstr "Aktivera ikonanimeringar"
+
+#~ msgid "Set Effect..."
+#~ msgstr "Ange effekt..."
+
+#~ msgid "All Icons"
+#~ msgstr "Alla ikoner"
+
+#~ msgid "Setup Default Icon Effect"
+#~ msgstr "Ställ in förvald ikoneffekt"
+
+#~ msgid "Setup Active Icon Effect"
+#~ msgstr "Ställ in aktiv ikoneffekt"
+
+#~ msgid "Setup Disabled Icon Effect"
+#~ msgstr "Ställ in inaktiverad ikoneffekt"
+
+#~ msgid "&Effect:"
+#~ msgstr "&Effekt:"
+
+#~ msgid "No Effect"
+#~ msgstr "Ingen effekt"
+
+#~ msgid "To Gray"
+#~ msgstr "Till grå"
+
+#~ msgid "Colorize"
+#~ msgstr "Färglägg"
+
+#~ msgid "Gamma"
+#~ msgstr "Gamma"
+
+#~ msgid "Desaturate"
+#~ msgstr "Minska färgmättnad"
+
+#~ msgid "To Monochrome"
+#~ msgstr "Till svartvit"
+
+#~ msgid "&Semi-transparent"
+#~ msgstr "&Semitransparent"
+
+#~ msgid "Preview"
+#~ msgstr "Förhandsgranskning"
+
+#~ msgid "Effect Parameters"
+#~ msgstr "Effektparametrar"
+
+#~ msgid "&Amount:"
+#~ msgstr "&Mängd:"
+
+#~ msgid "Co&lor:"
+#~ msgstr "&Färg:"
+
+#~ msgid "&Second color:"
+#~ msgstr "&Andra färg:"
+
+#~ msgid "Name"
+#~ msgstr "Namn"
+
+#~ msgid "Description"
+#~ msgstr "Beskrivning"
+
+#~ msgid "Install a theme archive file you already have locally"
+#~ msgstr "Installera en arkivfil med ett tema som du redan har lokalt"
+
+#~ msgid ""
+#~ "If you already have a theme archive locally, this button will unpack it "
+#~ "and make it available for KDE applications"
+#~ msgstr ""
+#~ "Om du redan har ett arkiv med ett tema lokalt, packar den här knappen upp "
+#~ "det och gör det tillgängligt för KDE-program"
+
+#~ msgid "Get new themes from the Internet"
+#~ msgstr "Hämta nya teman från Internet"
+
+#~ msgid ""
+#~ "You need to be connected to the Internet to use this action. A dialog "
+#~ "will display a list of themes from the http://www.kde.org website. "
+#~ "Clicking the Install button associated with a theme will install this "
+#~ "theme locally."
+#~ msgstr ""
+#~ "Du måste vara ansluten till Internet för att utnyttja åtgärden. En "
+#~ "dialogruta visar en lista med teman från webbplatsen http://www.kde.org. "
+#~ "Genom att klicka på knappen Installera som hör ihop med ett tema, "
+#~ "installeras temat lokalt."
+
+#~ msgid "Remove the selected theme from your disk"
+#~ msgstr "Ta bort markerat tema från hårddisken"
+
+#~ msgid "This will remove the selected theme from your disk."
+#~ msgstr "Det här tar bort det markerade temat från hårddisken."
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "Dra eller skriv in webbadress för tema"
+
+#~ msgid ""
+#~ "Unable to download the icon theme archive;\n"
+#~ "please check that address %1 is correct."
+#~ msgstr ""
+#~ "Arkivet för ikonteman kunde inte laddas ner.\n"
+#~ "Kontrollera att adressen %1 är korrekt."
+
+#~ msgid "<qt>Installing <strong>%1</strong> theme</qt>"
+#~ msgstr "<qt>Installerar temat <strong>%1</strong></qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <strong>%1</strong> icon theme?"
+#~ "<br /><br />This will delete the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>Är du säker på att du vill ta bort ikontemat <strong>%1</strong>?<br /"
+#~ "><br />Det kommer att ta bort filerna som installerats av det här temat.</"
+#~ "qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Bekräftelse"
+
+#~ msgid "&Theme"
+#~ msgstr "&Tema"
+
+#~ msgid "Ad&vanced"
+#~ msgstr "A&vancerat"
+
+#~ msgid ""
+#~ "<h1>Icons</h1>This module allows you to choose the icons for your desktop."
+#~ "<p>To choose an icon theme, click on its name and apply your choice by "
+#~ "pressing the \"Apply\" button below. If you do not want to apply your "
+#~ "choice you can press the \"Reset\" button to discard your changes.</"
+#~ "p><p>By pressing the \"Install Theme File...\" button you can install "
+#~ "your new icon theme by writing its location in the box or browsing to the "
+#~ "location. Press the \"OK\" button to finish the installation.</p><p>The "
+#~ "\"Remove Theme\" button will only be activated if you select a theme that "
+#~ "you installed using this module. You are not able to remove globally "
+#~ "installed themes here.</p><p>You can also specify effects that should be "
+#~ "applied to the icons.</p>"
+#~ msgstr ""
+#~ "<h1>Ikoner</h1> Den här modulen låter dig välja ikoner för skrivbordet."
+#~ "<p>För att välja ett ikontema, klicka på dess namn och verkställ valet "
+#~ "genom att klicka på knappen \"Verkställ\" nedanför. Om du inte vill "
+#~ "använda ändringen kan du klicka på knappen \"Återställ\" för att ångra "
+#~ "ändringarna.</p><p>Genom att klicka på knappen \"Installera nytt tema\", "
+#~ "kan du installera nya ikonteman genom att skriva in var det finns i "
+#~ "rutan, eller bläddra till platsen. Klicka på knappen \"OK\" för att "
+#~ "utföra installationen.</p><p>Knappen \"Ta bort tema\" aktiveras bara om "
+#~ "du väljer ett tema som du installerat med modulen. Du kan inte ta bort "
+#~ "globalt installerade teman här.</p><p>Du kan också ange effekter som ska "
+#~ "användas för ikonerna.</p>"
+
+#~ msgid "Animate icons"
+#~ msgstr "Animera ikoner"
+
+#~ msgid "Select the icon theme you want to use:"
+#~ msgstr "Välj ikontemat du vill använda:"

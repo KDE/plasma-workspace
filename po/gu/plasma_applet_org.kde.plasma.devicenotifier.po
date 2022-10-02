@@ -1,0 +1,253 @@
+# translation of plasma_applet_devicenotifier.po to Gujarati
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Kartik Mistry <kartik.mistry@gmail.com>, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_devicenotifier\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-21 00:47+0000\n"
+"PO-Revision-Date: 2008-10-23 08:59+0530\n"
+"Last-Translator: Kartik Mistry <kartik.mistry@gmail.com>\n"
+"Language-Team: Gujarati <kde-i18n-doc@kde.org>\n"
+"Language: gu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: package/contents/ui/DeviceItem.qml:180
+#, fuzzy, kde-format
+#| msgctxt "@info:status Free disk space"
+#| msgid "%1 free"
+msgctxt "@info:status Free disk space"
+msgid "%1 free of %2"
+msgstr "%1 મુક્ત"
+
+#: package/contents/ui/DeviceItem.qml:184
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Accessing is a less technical word for Mounting; translation should be "
+#| "short and mean 'Currently mounting this device'"
+#| msgid "Accessing..."
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Accessing…"
+msgstr "વાપરે છે..."
+
+#: package/contents/ui/DeviceItem.qml:187
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Removing is a less technical word for Unmounting; translation shoud be "
+#| "short and mean 'Currently unmounting this device'"
+#| msgid "Removing..."
+msgctxt ""
+"Removing is a less technical word for Unmounting; translation should be "
+"short and mean 'Currently unmounting this device'"
+msgid "Removing…"
+msgstr "દૂર કરે છે..."
+
+#: package/contents/ui/DeviceItem.qml:190
+#, kde-format
+msgid "Don't unplug yet! Files are still being transferred..."
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:221
+#, kde-format
+msgid "Open in File Manager"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:224
+#, kde-format
+msgid "Mount and Open"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:226
+#, kde-format
+msgid "Eject"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:228
+#, kde-format
+msgid "Safely remove"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:270
+#, kde-format
+msgid "Mount"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:41
+#: package/contents/ui/main.qml:238
+#, kde-format
+msgid "Remove All"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:42
+#, fuzzy, kde-format
+#| msgid "Click to safely remove this device."
+msgid "Click to safely remove all devices"
+msgstr "આ ઉપકરણને સલામત રીતે નીકાળવા ક્લિક કરો."
+
+#: package/contents/ui/FullRepresentation.qml:186
+#, fuzzy, kde-format
+#| msgid "Non-removable devices only"
+msgid "No removable devices attached"
+msgstr "માત્ર દૂર ન કરી શકાય તેવા ઉપકરણો"
+
+#: package/contents/ui/FullRepresentation.qml:186
+#, fuzzy, kde-format
+#| msgid "No devices available."
+msgid "No disks available"
+msgstr "કોઇ ઉપકરણ જોડાયેલ નથી."
+
+#: package/contents/ui/main.qml:47
+#, fuzzy, kde-format
+#| msgid "Most recent device: %1"
+msgid "Most Recent Device"
+msgstr "તાજેતરનાં ઉપકરણ: %1"
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid "No Devices Available"
+msgstr "કોઈ ઉપકરણો પ્રાપ્ત નથી"
+
+#: package/contents/ui/main.qml:245
+#, fuzzy, kde-format
+#| msgid "Removable devices only"
+msgid "Removable Devices"
+msgstr "માત્ર દૂર કરી શકાય તેવા ઉપકરણો"
+
+#: package/contents/ui/main.qml:251
+#, fuzzy, kde-format
+#| msgid "Non-removable devices only"
+msgid "Non Removable Devices"
+msgstr "માત્ર દૂર ન કરી શકાય તેવા ઉપકરણો"
+
+#: package/contents/ui/main.qml:257
+#, fuzzy, kde-format
+#| msgid "All devices"
+msgid "All Devices"
+msgstr "બધાં ઉપકરણો"
+
+#: package/contents/ui/main.qml:265
+#, fuzzy, kde-format
+#| msgid "No devices plugged in"
+msgid "Show popup when new device is plugged in"
+msgstr "કોઇ ઉપકરણ જોડાયેલ નથી"
+
+#: package/contents/ui/main.qml:274
+#, fuzzy, kde-format
+#| msgid "Non-removable devices only"
+msgctxt "Open auto mounter kcm"
+msgid "Configure Removable Devices…"
+msgstr "માત્ર દૂર ન કરી શકાય તેવા ઉપકરણો"
+
+#~ msgid ""
+#~ "It is currently <b>not safe</b> to remove this device: applications may "
+#~ "be accessing it. Click the eject button to safely remove this device."
+#~ msgstr ""
+#~ "હાલમાં આ ઉપકરણને બહાર નીકાળવું <b>સલામત નથી</b>: કાર્યક્રમો કદાચ તેને વાપરી રહ્યા "
+#~ "છે. આ ઉપકરણને સલામત રીતે બહાર નીકાળવા બહાર નીકાળો બટન ક્લિક કરો."
+
+#~ msgid ""
+#~ "It is currently <b>not safe</b> to remove this device: applications may "
+#~ "be accessing other volumes on this device. Click the eject button on "
+#~ "these other volumes to safely remove this device."
+#~ msgstr ""
+#~ "હાલમાં આ ઉપકરણને બહાર નીકાળવું <b>સલામત નથી</b>: કાર્યક્રમો કદાચ આ ઉપકરણનાં બીજાં "
+#~ "કદો વાપરી રહ્યા છે. આ બીજાં કદોને ઉપકરણ પર સલામત રીતે બહાર નીકાળવા બહાર "
+#~ "નીકાળોબટન ક્લિક કરો."
+
+#~ msgid "It is currently safe to remove this device."
+#~ msgstr "આ ઉપકરણને હાલ બહાર નીકાળવું સલામત છે."
+
+#, fuzzy
+#~| msgid "1 action for this device"
+#~| msgid_plural "%1 actions for this device"
+#~ msgid "1 action for this device"
+#~ msgid_plural "%1 actions for this device"
+#~ msgstr[0] "આ ઉપકરણ માટે ૧ ક્રિયા"
+#~ msgstr[1] "આ ઉપકરણ માટે ૧ ક્રિયા"
+
+#~ msgid "Click to access this device from other applications."
+#~ msgstr "આ ઉપકરણને બીજા કાર્યક્રમોમાંથી વાપરવા ક્લિક કરો."
+
+#~ msgid "Click to eject this disc."
+#~ msgstr "ડિસ્કને બહાર નીકાળવા ક્લિક કરો."
+
+#~ msgid "Click to safely remove this device."
+#~ msgstr "આ ઉપકરણને સલામત રીતે નીકાળવા ક્લિક કરો."
+
+#, fuzzy
+#~| msgid "Click to safely remove this device."
+#~ msgid "Click to mount this device."
+#~ msgstr "આ ઉપકરણને સલામત રીતે નીકાળવા ક્લિક કરો."
+
+#~ msgid "Available Devices"
+#~ msgstr "પ્રાપ્ત ઉપકરણો"
+
+#~ msgid "Display"
+#~ msgstr "ડિસ્પ્લે"
+
+#~ msgid "Automounting"
+#~ msgstr "આપમેળે માઉન્ટ કરે છે"
+
+#~ msgid "Show hidden devices"
+#~ msgstr "છુપાયેલ ઉપકરણો બતાવો"
+
+#~ msgctxt "Hide a device"
+#~ msgid "Hide %1"
+#~ msgstr "%1 છુપાવો"
+
+#, fuzzy
+#~| msgid ""
+#~| "Cannot unmount the device.\n"
+#~| "One or more files on this device are open within an application."
+#~ msgid ""
+#~ "Could not unmount device %1.\n"
+#~ "One or more files on this device are open within an application."
+#~ msgstr ""
+#~ "ઉપકરણ બહાર નીકાળી શકાતું નથી.\n"
+#~ "એક અથવા વધુ ફાઇલો આ ઉપકરણમાં કાર્યક્રમ વડે ખૂલ્લી છે."
+
+#~ msgid ""
+#~ "Cannot eject the disc.\n"
+#~ "One or more files on this disc are open within an application."
+#~ msgstr ""
+#~ "ડિસ્ક બહાર નીકાળી શકાતી નથી.\n"
+#~ "એક અથવા વધુ ફાઇલો આ ડિસ્કમાં કાર્યક્રમ વડે ખૂલ્લી છે."
+
+#, fuzzy
+#~| msgid "Last plugged in device: %1"
+#~ msgid "Could not mount device %1."
+#~ msgstr "છેલ્લે જોડેલ ઉપકરણ: %1"
+
+#, fuzzy
+#~| msgid "<font color=\"%1\">Devices recently plugged in:</font>"
+#~ msgid "Devices recently plugged in:"
+#~ msgstr "<font color=\"%1\">હાલમાં જોડેલાં ઉપકરણો:</font>"
+
+#, fuzzy
+#~| msgid " sec"
+#~ msgid " second"
+#~ msgid_plural " seconds"
+#~ msgstr[0] " સેકન્ડ"
+#~ msgstr[1] " સેકન્ડ"
+
+#~ msgid "&Time to stay on top:"
+#~ msgstr "ઉપર રહેવાનો સમય (&T):"
+
+#~ msgid "&Number of items displayed:"
+#~ msgstr "દેખાડવાની વસ્તુઓની સંખ્યા (&N):"
+
+#~ msgid "Unlimited"
+#~ msgstr "અમર્યાદિત"
+
+#~ msgid "&Display time of items:"
+#~ msgstr "વસ્તુઓનો દેખાવ સમય (&D):"
+
+#~ msgid "Configure New Device Notifier"
+#~ msgstr "નવું ઉપકરણ રૂપરેખાંકિત કરો"

@@ -1,0 +1,531 @@
+# translation of kcmfonts.po to Belarusian
+#
+# Ihar Hrachyshka <ihar.hrachyshka@gmail.com>, 2006.
+# Darafei Praliaskouski <symbol@akeeri.tk>, 2006.
+# Darafei Praliaskouski <komzpa@licei2.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmfonts\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-03 00:45+0000\n"
+"PO-Revision-Date: 2007-10-05 14:13+0000\n"
+"Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
+"Language-Team: Belarusian <i18n@mova.org>\n"
+"Language: be\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
+"%100>=11 && n%100<=14 ? 2 : 3);\n"
+
+#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Force fonts DPI:"
+msgid "Force font DPI Wayland"
+msgstr "Прымусовае DPI шрыфтоў:"
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Force fonts DPI:"
+msgid "Force font DPI on X11"
+msgstr "Прымусовае DPI шрыфтоў:"
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "General font"
+msgstr "Агульныя"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, fuzzy, kde-format
+#| msgid "Fixed width"
+msgid "Fixed width font"
+msgstr "Шрыфт fixed"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, kde-format
+msgid "Small font"
+msgstr ""
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, fuzzy, kde-format
+#| msgid "Toolbar"
+msgid "Tool bar font"
+msgstr "Панель начыння"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, kde-format
+msgid "Menu font"
+msgstr ""
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, fuzzy, kde-format
+#| msgid "Window title"
+msgid "Window title font"
+msgstr "Загаловак акна"
+
+#: kxftconfig.cpp:458
+#, fuzzy, kde-format
+#| msgctxt "Use anti-aliasing"
+#| msgid "System settings"
+msgctxt "use system subpixel setting"
+msgid "Vendor default"
+msgstr "Сістэмныя настаўленні"
+
+#: kxftconfig.cpp:460
+#, fuzzy, kde-format
+#| msgid "None"
+msgctxt "no subpixel rendering"
+msgid "None"
+msgstr "Няма"
+
+#: kxftconfig.cpp:462
+#, kde-format
+msgid "RGB"
+msgstr "RGB"
+
+#: kxftconfig.cpp:464
+#, kde-format
+msgid "BGR"
+msgstr "BGR"
+
+#: kxftconfig.cpp:466
+#, kde-format
+msgid "Vertical RGB"
+msgstr "Вертыкальны RGB"
+
+#: kxftconfig.cpp:468
+#, kde-format
+msgid "Vertical BGR"
+msgstr "Вертыкальны BGR"
+
+#: kxftconfig.cpp:496
+#, fuzzy, kde-format
+#| msgctxt "Use anti-aliasing"
+#| msgid "System settings"
+msgctxt "use system hinting settings"
+msgid "Vendor default"
+msgstr "Сістэмныя настаўленні"
+
+#: kxftconfig.cpp:498
+#, fuzzy, kde-format
+#| msgid "Medium"
+msgctxt "medium hinting"
+msgid "Medium"
+msgstr "Сярэдняе"
+
+#: kxftconfig.cpp:500
+#, fuzzy, kde-format
+#| msgid "None"
+msgctxt "no hinting"
+msgid "None"
+msgstr "Няма"
+
+#: kxftconfig.cpp:502
+#, fuzzy, kde-format
+#| msgid "Slight"
+msgctxt "slight hinting"
+msgid "Slight"
+msgstr "Лёгкае"
+
+#: kxftconfig.cpp:504
+#, fuzzy, kde-format
+#| msgid "Full"
+msgctxt "full hinting"
+msgid "Full"
+msgstr "Поўнае"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module lets you configure the system fonts."
+msgstr ""
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid "Change Display Scaling…"
+msgstr ""
+
+#: package/contents/ui/main.qml:37
+#, fuzzy, kde-format
+#| msgid ""
+#| "<p>Some changes such as anti-aliasing will only affect newly started "
+#| "applications.</p>"
+msgid ""
+"Some changes such as anti-aliasing or DPI will only affect newly started "
+"applications."
+msgstr ""
+"<p>Некаторыя змены, напрыклад згладжванне, будуць уздзейнічаць толькі на "
+"новыя праграмы.</p>"
+
+#: package/contents/ui/main.qml:51
+#, kde-format
+msgid ""
+"Very large fonts may produce odd-looking results. Consider adjusting the "
+"global screen scale instead of using a very large font size."
+msgstr ""
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid ""
+"Decimal font sizes can cause text layout problems in some applications. "
+"Consider using only integer font sizes."
+msgstr ""
+
+#: package/contents/ui/main.qml:94
+#, kde-format
+msgid ""
+"The recommended way to scale the user interface is using the global screen "
+"scaling feature."
+msgstr ""
+
+#: package/contents/ui/main.qml:106
+#, fuzzy, kde-format
+#| msgid "Ad&just All Fonts..."
+msgid "&Adjust All Fonts…"
+msgstr "&Змяніць усе шрыфты..."
+
+#: package/contents/ui/main.qml:119
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "General:"
+msgstr "Агульныя"
+
+#: package/contents/ui/main.qml:120
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "Select general font"
+msgstr "Агульныя"
+
+#: package/contents/ui/main.qml:131
+#, fuzzy, kde-format
+#| msgid "Fixed width"
+msgid "Fixed width:"
+msgstr "Шрыфт fixed"
+
+#: package/contents/ui/main.qml:132
+#, fuzzy, kde-format
+#| msgid "Fixed width"
+msgid "Select fixed width font"
+msgstr "Шрыфт fixed"
+
+#: package/contents/ui/main.qml:143
+#, kde-format
+msgid "Small:"
+msgstr ""
+
+#: package/contents/ui/main.qml:144
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "Select small font"
+msgstr "Агульныя"
+
+#: package/contents/ui/main.qml:155
+#, fuzzy, kde-format
+#| msgid "Toolbar"
+msgid "Toolbar:"
+msgstr "Панель начыння"
+
+#: package/contents/ui/main.qml:156
+#, fuzzy, kde-format
+#| msgid "Toolbar"
+msgid "Select toolbar font"
+msgstr "Панель начыння"
+
+#: package/contents/ui/main.qml:167
+#, fuzzy, kde-format
+#| msgid "Menu"
+msgid "Menu:"
+msgstr "Меню"
+
+#: package/contents/ui/main.qml:168
+#, kde-format
+msgid "Select menu font"
+msgstr ""
+
+#: package/contents/ui/main.qml:178
+#, fuzzy, kde-format
+#| msgid "Window title"
+msgid "Window title:"
+msgstr "Загаловак акна"
+
+#: package/contents/ui/main.qml:179
+#, fuzzy, kde-format
+#| msgid "Window title"
+msgid "Select window title font"
+msgstr "Загаловак акна"
+
+#: package/contents/ui/main.qml:194
+#, fuzzy, kde-format
+#| msgid "Use a&nti-aliasing:"
+msgid "Anti-Aliasing:"
+msgstr "Выкарыстоўваць &згладжванне шрыфтоў"
+
+#: package/contents/ui/main.qml:199
+#, fuzzy, kde-format
+#| msgctxt "Use anti-aliasing"
+#| msgid "Enabled"
+msgid "Enable"
+msgstr "Уключана"
+
+#: package/contents/ui/main.qml:203
+#, kde-kuit-format
+msgctxt "@info:tooltip Anti-Aliasing"
+msgid ""
+"Pixels on displays are generally aligned in a grid. Therefore shapes of "
+"fonts that do not align with this grid will look blocky and wrong unless "
+"<emphasis>anti-aliasing</emphasis> techniques are used to reduce this "
+"effect. You generally want to keep this option enabled unless it causes "
+"problems."
+msgstr ""
+
+#: package/contents/ui/main.qml:217
+#, kde-format
+msgid "Exclude range from anti-aliasing"
+msgstr ""
+
+#: package/contents/ui/main.qml:236 package/contents/ui/main.qml:259
+#, kde-format
+msgid "%1 pt"
+msgstr ""
+
+#: package/contents/ui/main.qml:251
+#, fuzzy, kde-format
+#| msgid " to "
+msgid "to"
+msgstr "да"
+
+#: package/contents/ui/main.qml:282
+#, fuzzy, kde-format
+#| msgid "&Use sub-pixel rendering:"
+msgctxt "Used as a noun, and precedes a combobox full of options"
+msgid "Sub-pixel rendering:"
+msgstr "Выкарыстоўваць &субпіксельнае згладжванне:"
+
+#: package/contents/ui/main.qml:324
+#, kde-kuit-format
+msgctxt "@info:tooltip Sub-pixel rendering"
+msgid ""
+"<para>On TFT or LCD screens every single pixel is actually composed of three "
+"or four smaller monochrome lights. These <emphasis>sub-pixels</emphasis> can "
+"be changed independently to further improve the quality of displayed fonts.</"
+"para> <para>The rendering quality is only improved if the selection matches "
+"the manner in which the sub-pixels of your display are aligned. Most "
+"displays have a linear ordering of <emphasis>RGB</emphasis> sub-pixels, some "
+"have <emphasis>BGR</emphasis> and some exotic orderings are not supported by "
+"this feature.</para>This does not work with CRT monitors."
+msgstr ""
+
+#: package/contents/ui/main.qml:329
+#, fuzzy, kde-format
+#| msgid "Hinting style: "
+msgctxt "Used as a noun, and precedes a combobox full of options"
+msgid "Hinting:"
+msgstr "Стыль хінтынгу: "
+
+#: package/contents/ui/main.qml:370
+#, kde-kuit-format
+msgctxt "@info:tooltip Hinting"
+msgid ""
+"Hinting is a technique in which hints embedded in a font are used to enhance "
+"the rendering quality especially at small sizes. Stronger hinting generally "
+"leads to sharper edges but the small letters will less closely resemble "
+"their shape at big sizes."
+msgstr ""
+
+#: package/contents/ui/main.qml:380
+#, fuzzy, kde-format
+#| msgid "Force fonts DPI:"
+msgid "Force font DPI:"
+msgstr "Прымусовае DPI шрыфтоў:"
+
+#: package/contents/ui/main.qml:422
+#, kde-kuit-format
+msgctxt "@info:tooltip Force fonts DPI"
+msgid ""
+"<para>Enter your screen's DPI here to make on-screen fonts match their "
+"physical sizes when printed. Changing this option from its default value "
+"will conflict with many apps; some icons and images may not scale as "
+"expected.</para><para>To increase text size, change the size of the fonts "
+"above. To scale everything, use the scaling slider on the <interface>Display "
+"& Monitor</interface> page.</para>"
+msgstr ""
+
+#: package/contents/ui/main.qml:428
+#, kde-format
+msgid "Select Font"
+msgstr ""
+
+#, fuzzy
+#~| msgid ""
+#~| "<p>This option forces a specific DPI value for fonts. It may be useful "
+#~| "when the real DPI of the hardware is not detected properly and it is "
+#~| "also often misused when poor quality fonts are used that do not look "
+#~| "well with DPI values other than 96 or 120 DPI.</p><p>The use of this "
+#~| "option is generally discouraged. For selecting proper DPI value a better "
+#~| "option is explicitly configuring it for the whole X server if possible "
+#~| "(e.g. DisplaySize in xorg.conf or adding <i>-dpi value</i> to "
+#~| "ServerLocalArgs= in $KDEDIR/share/config/kdm/kdmrc). When fonts do not "
+#~| "render properly with real DPI value better fonts should be used or "
+#~| "configuration of font hinting should be checked.</p>"
+#~ msgctxt "@info:tooltip Force fonts DPI"
+#~ msgid ""
+#~ "<para>This option forces a specific DPI value for fonts. It may be useful "
+#~ "when the real DPI of the hardware is not detected properly and it is also "
+#~ "often misused when poor quality fonts are used that do not look well with "
+#~ "DPI values other than 96 or 120 DPI.</para><para>The use of this option "
+#~ "is generally discouraged.</para><para>If you are using the <emphasis>X "
+#~ "Window System</emphasis>, for selecting the proper DPI value a better "
+#~ "option is explicitly configuring it for the whole X server if possible (e."
+#~ "g. DisplaySize in xorg.conf). When fonts do not render properly with the "
+#~ "real DPI value better fonts should be used or configuration of font "
+#~ "hinting should be checked.</para>"
+#~ msgstr ""
+#~ "<p>Гэты параметр фіксіруе значэнне DPI для шрыфтоў. Гэта можа быць "
+#~ "зручна, калі DPI манітора не вызначана патрэбным чынам і часта можа быць "
+#~ "няшдалым для няякасных шрыфтоў, які дрэнна выглядаюць пры DPI не роўным "
+#~ "96 ці 120.</p><p>Гэтай опцыяй лепш не карыстацца. Для выбару патрэбнага "
+#~ "значэння DPI часцей нашмат лепей пераканфігураваць увесь X-сервер, калі "
+#~ "магчыма (напр. DisplaySize у xorg.conf ці дадаўшы <i>-dpi value</i> да "
+#~ "ServerLocalArgs= у $KDEDIR/share/config/kdm/kdmrc). Калі шрыфты не "
+#~ "пралічваюцца патрэбным чынам з рэальным значэннем DPI, вам трэба знайсці "
+#~ "лепшыя шрыфты ці праверыць настаўленне хінтынгу шрыфтоў.</p>"
+
+#~ msgid "Font Settings Changed"
+#~ msgstr "Настаўленні шрыфтоў змененыя"
+
+#~ msgid ""
+#~ "<p>Some changes such as DPI will only affect newly started applications.</"
+#~ "p>"
+#~ msgstr ""
+#~ "<p>Некаторыя змены, напрыклад DPI, будуць уздзейнічаць толькі на новыя "
+#~ "праграмы.</p>"
+
+#, fuzzy
+#~| msgctxt "Use anti-aliasing"
+#~| msgid "System settings"
+#~ msgid "Vendor default"
+#~ msgstr "Сістэмныя настаўленні"
+
+#, fuzzy
+#~| msgctxt "Use annti-aliasing"
+#~| msgid "Disabled"
+#~ msgid "Disabled"
+#~ msgstr "Выключана"
+
+#, fuzzy
+#~| msgid "Configure..."
+#~ msgid "Configure the system fonts"
+#~ msgstr "Наладка..."
+
+#~ msgid "Configure Anti-Alias Settings"
+#~ msgstr "Наладка згладжвання шрыфтоў"
+
+#~ msgid "E&xclude range:"
+#~ msgstr "&Выключыць дыяпазон:"
+
+#, fuzzy
+#~| msgid " pt"
+#~ msgctxt "abbreviation for unit of points"
+#~ msgid " pt"
+#~ msgstr " пт"
+
+#~ msgid ""
+#~ "<p>If you have a TFT or LCD screen you can further improve the quality of "
+#~ "displayed fonts by selecting this option.<br />Sub-pixel rendering is "
+#~ "also known as ClearType(tm).<br /> In order for sub-pixel rendering to "
+#~ "work correctly you need to know how the sub-pixels of your display are "
+#~ "aligned.</p> <p>On TFT or LCD displays a single pixel is actually "
+#~ "composed of three sub-pixels, red, green and blue. Most displays have a "
+#~ "linear ordering of RGB sub-pixel, some have BGR.<br /> This feature does "
+#~ "not work with CRT monitors.</p>"
+#~ msgstr ""
+#~ "<p>Калі ў вас жыдкакрысталічны дысплэй, вы можаце палепшыць якасць "
+#~ "прамалёўкі шрыфтоў уключэннем гэтага настаўлення.<br />Субпіксельны "
+#~ "пралік таксама вядомы як ClearType(tm).<br /> Каб субпіксельны пралік "
+#~ "працаваў патрэбным чынам, вам трэба вызначыць, у якім парадку ідуць "
+#~ "субпікселі на вашым дысплэі.</p> <p>На жыдкакрысталічныз дысплэях кожны "
+#~ "піксель на самой справе складаецца з трох субпікселяў: чырвонага (R), "
+#~ "зялёнага (G) і сіняга (B). На большасці дысплэяў яны ідуць у парадку RGB, "
+#~ "але не некаторых - BGR.<br /> Гэтая штука не пракаціць на звычайным ЭЛТ-"
+#~ "манітору.</p>"
+
+#~ msgid ""
+#~ "Hinting is a process used to enhance the quality of fonts at small sizes."
+#~ msgstr "Хінтынг - гэта працэс паляпшэння якасці шрыфтоў малых памераў."
+
+#~ msgid "Used for normal text (e.g. button labels, list items)."
+#~ msgstr ""
+#~ "Выкарыстоўваецца для звычайнага тэксту (напр., подпісаў кнопак, элементаў "
+#~ "спісаў)."
+
+#~ msgid "A non-proportional font (i.e. typewriter font)."
+#~ msgstr "Непрапарцыйны шрыфт (напр., як на друкарскай машынцы)."
+
+#~ msgid "Used to display text beside toolbar icons."
+#~ msgstr ""
+#~ "Выкарыстоўваецца для адлюстравання тэксту каля значак на панелях начыння."
+
+#~ msgid "Used by menu bars and popup menus."
+#~ msgstr "Выкарыстоўваецца ў меню праграмы і выплыўных меню."
+
+#~ msgid "Used by the window titlebar."
+#~ msgstr "Выкарыстоўваецца ў загалоўку вокнаў."
+
+#~ msgctxt "Font role"
+#~ msgid "%1: "
+#~ msgstr "%1: "
+
+#~ msgid "Click to change all fonts"
+#~ msgstr "Націсніце, каб змяніць усе шрыфты"
+
+#, fuzzy
+#~| msgctxt "Use anti-aliasing"
+#~| msgid "System settings"
+#~ msgctxt "Use anti-aliasing"
+#~ msgid "System Settings"
+#~ msgstr "Сістэмныя настаўленні"
+
+#, fuzzy
+#~| msgid ""
+#~| "If this option is selected, KDE will smooth the edges of curves in fonts."
+#~ msgid "Select this option to smooth the edges of curves in fonts."
+#~ msgstr ""
+#~ "Калі гэты параметр уключаны, KDE будзе згладжваць вуглы ліній ў шрыфтах."
+
+#, fuzzy
+#~| msgid "Taskbar"
+#~ msgctxt "font usage"
+#~ msgid "Taskbar"
+#~ msgstr "Панель заданняў"
+
+#, fuzzy
+#~| msgid "Desktop"
+#~ msgctxt "font usage"
+#~ msgid "Desktop"
+#~ msgstr "Працоўны стол"
+
+#~ msgid "Used by the taskbar."
+#~ msgstr "Выкарыстоўваецца на панелі заданняў."
+
+#~ msgid "Used for desktop icons."
+#~ msgstr "Выкарыстоўваецца для значак працоўнага стала."
+
+#~ msgctxt "Force fonts DPI"
+#~ msgid "Disabled"
+#~ msgstr "Выключана"
+
+#~ msgid "96 DPI"
+#~ msgstr "96 DPI"
+
+#~ msgid "120 DPI"
+#~ msgstr "120 DPI"

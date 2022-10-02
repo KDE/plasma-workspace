@@ -1,0 +1,1622 @@
+# translation of kcmcolors.po to Persian
+# Nazanin Kazemi <kazemi@itland.ir>, 2006, 2007.
+# Tahereh Dadkhahfar <dadkhahfar@itland.ir>, 2006.
+# MaryamSadat Razavi <razavi@itland.ir>, 2006.
+# Nasim Daniarzadeh <daniarzadeh@itland.ir>, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmcolors\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-23 00:47+0000\n"
+"PO-Revision-Date: 2007-09-02 12:20+0330\n"
+"Last-Translator: Nazanin Kazemi <kazemi@itland.ir>\n"
+"Language-Team: Persian <kde-i18n-fa@kde.org>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "نازنین کاظمی"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kazemi@itland.ir"
+
+#: colors.cpp:233
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: colors.cpp:246
+#, fuzzy, kde-format
+msgid "Unable to download the color scheme: %1"
+msgstr "نامی برای طرحواره رنگ وارد کنید:"
+
+#: colors.cpp:264
+#, fuzzy, kde-format
+msgid "This file is not a color scheme file."
+msgstr "طرحواره رنگ"
+
+#: colors.cpp:283
+#, kde-format
+msgid "Failed to create 'color-scheme' data folder."
+msgstr ""
+
+#: colors.cpp:290
+#, kde-format
+msgid "Failed to copy color scheme into 'color-scheme' data folder."
+msgstr ""
+
+#: colors.cpp:307
+#, kde-format
+msgid "Color scheme installed successfully."
+msgstr ""
+
+#. i18n: ectx: label, entry (colorScheme), group (General)
+#: colorssettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Save Color Scheme"
+msgid "Color scheme name"
+msgstr "ذخیره طرحواره رنگ"
+
+#. i18n: ectx: label, entry (accentColor), group (General)
+#: colorssettings.kcfg:13
+#, fuzzy, kde-format
+msgid "Accent color"
+msgstr "پنجره غیرفعال"
+
+#. i18n: ectx: label, entry (lastUsedCustomAccentColor), group (General)
+#: colorssettings.kcfg:17
+#, kde-format
+msgid ""
+"The last used custom accent color before user switched to wallpaper "
+"generated color or default color"
+msgstr ""
+
+#. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
+#: colorssettings.kcfg:21
+#, kde-format
+msgid "Whether accent color from wallpaper should be applied"
+msgstr ""
+
+#: editor/kcolorschemeeditor.cpp:25
+#, fuzzy, kde-format
+#| msgid "Save Color Scheme"
+msgid "KColorSchemeEditor"
+msgstr "ذخیره طرحواره رنگ"
+
+#: editor/kcolorschemeeditor.cpp:27
+#, fuzzy, kde-format
+msgid "Utility to edit and create color schemes"
+msgstr "ذخیره طرحواره رنگ"
+
+#: editor/kcolorschemeeditor.cpp:29
+#, kde-format
+msgid "Olivier Churlaud"
+msgstr ""
+
+#: editor/kcolorschemeeditor.cpp:29
+#, kde-format
+msgid "Utility creation"
+msgstr ""
+
+#: editor/kcolorschemeeditor.cpp:30
+#, kde-format
+msgid "Jeremy Whiting"
+msgstr ""
+
+#: editor/kcolorschemeeditor.cpp:30 editor/kcolorschemeeditor.cpp:31
+#, kde-format
+msgid "KCM code (reused in here)"
+msgstr ""
+
+#: editor/kcolorschemeeditor.cpp:31
+#, kde-format
+msgid "Matthew Woehlke"
+msgstr ""
+
+#: editor/kcolorschemeeditor.cpp:35
+#, kde-format
+msgid "Scheme to edit or to use as a base."
+msgstr ""
+
+#: editor/kcolorschemeeditor.cpp:37
+#, kde-format
+msgid ""
+"Show 'Apply' button that saves changes without asking (unlike 'Save As' "
+"button)"
+msgstr ""
+
+#: editor/kcolorschemeeditor.cpp:41
+#, kde-format
+msgid ""
+"Makes the dialog transient for another application window specified by handle"
+msgstr ""
+
+#: editor/kcolorschemeeditor.cpp:57
+#, kde-format
+msgid "Scheme not found, falling back to current one.\n"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, label)
+#: editor/preview.ui:29
+#, fuzzy, kde-format
+msgid "Window text on Window Background"
+msgstr "زمینه"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: editor/preview.ui:32
+#, fuzzy, kde-format
+msgctxt "color-kcm-preview"
+msgid "Window text"
+msgstr "پنجره"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, pushButton)
+#: editor/preview.ui:39
+#, fuzzy, kde-format
+msgid "Button text on Button Background"
+msgstr "زمینه"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: editor/preview.ui:42
+#, fuzzy, kde-format
+#| msgid "Push Button"
+msgctxt "color-kcm-preview"
+msgid "Push Button"
+msgstr "دکمه فشاری"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection0)
+#: editor/preview.ui:123
+#, fuzzy, kde-format
+msgid "Selection Normal Text against Selection Normal Background"
+msgstr "زمینه"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection0)
+#: editor/preview.ui:126
+#, fuzzy, kde-format
+msgctxt "color-kcm-preview"
+msgid "Selected text"
+msgstr "متن برگزیده"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection3)
+#: editor/preview.ui:138
+#, fuzzy, kde-format
+msgid "Selection Link Text against Selection Normal Background"
+msgstr "زمینه"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection3)
+#. i18n: ectx: property (text), widget (QLabel, labelView3)
+#: editor/preview.ui:141 editor/preview.ui:265
+#, fuzzy, kde-format
+#| msgid "link"
+msgctxt "color-kcm-preview"
+msgid "link"
+msgstr "پیوند"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection4)
+#: editor/preview.ui:153
+#, fuzzy, kde-format
+msgid "Selection Visited Text against Selection Normal Background"
+msgstr "زمینه"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection4)
+#. i18n: ectx: property (text), widget (QLabel, labelView4)
+#: editor/preview.ui:156 editor/preview.ui:280
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "visited"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection2)
+#: editor/preview.ui:163
+#, fuzzy, kde-format
+msgid "Selection Active Text against Selection Normal Background"
+msgstr "زمینه"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection2)
+#. i18n: ectx: property (text), widget (QLabel, labelView2)
+#: editor/preview.ui:166 editor/preview.ui:290
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "a"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection1)
+#: editor/preview.ui:173
+#, fuzzy, kde-format
+msgid "Selection Inactive Text against Selection Normal Background"
+msgstr "زمینه"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection1)
+#. i18n: ectx: property (text), widget (QLabel, labelView1)
+#: editor/preview.ui:176 editor/preview.ui:300
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "i"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection5)
+#: editor/preview.ui:183
+#, fuzzy, kde-format
+msgid "Selection Negative Text against Selection Normal Background"
+msgstr "زمینه"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection5)
+#. i18n: ectx: property (text), widget (QLabel, labelView5)
+#: editor/preview.ui:186 editor/preview.ui:310
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "!"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection6)
+#: editor/preview.ui:193
+#, fuzzy, kde-format
+msgid "Selection Neutral Text against Selection Normal Background"
+msgstr "زمینه"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection6)
+#. i18n: ectx: property (text), widget (QLabel, labelView6)
+#: editor/preview.ui:196 editor/preview.ui:320
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "="
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection7)
+#: editor/preview.ui:203
+#, fuzzy, kde-format
+msgid "Selection Positive Text against Selection Normal Background"
+msgstr "زمینه"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection7)
+#. i18n: ectx: property (text), widget (QLabel, labelView7)
+#: editor/preview.ui:206 editor/preview.ui:330
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "+"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView0)
+#: editor/preview.ui:247
+#, fuzzy, kde-format
+msgid "View Normal Text against View Normal Background"
+msgstr "زمینه"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelView0)
+#: editor/preview.ui:250
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "Normal text"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView3)
+#: editor/preview.ui:262
+#, fuzzy, kde-format
+msgid "View Link Text against View Normal Background"
+msgstr "زمینه"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView4)
+#: editor/preview.ui:277
+#, fuzzy, kde-format
+msgid "View Visited Text against View Normal Background"
+msgstr "زمینه"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView2)
+#: editor/preview.ui:287
+#, fuzzy, kde-format
+msgid "View Active Text against View Normal Background"
+msgstr "زمینه"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView1)
+#: editor/preview.ui:297
+#, fuzzy, kde-format
+msgid "View Inactive Text against View Normal Background"
+msgstr "زمینه"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView5)
+#: editor/preview.ui:307
+#, fuzzy, kde-format
+msgid "View Negative Text against View Normal Background"
+msgstr "زمینه"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView6)
+#: editor/preview.ui:317
+#, fuzzy, kde-format
+msgid "View Neutral Text against View Normal Background"
+msgstr "زمینه"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView7)
+#: editor/preview.ui:327
+#, fuzzy, kde-format
+msgid "View Positive Text against View Normal Background"
+msgstr "زمینه"
+
+#: editor/scmeditorcolors.cpp:62 editor/scmeditorcolors.cpp:76
+#, kde-format
+msgid "Varies"
+msgstr ""
+
+#: editor/scmeditorcolors.cpp:99
+#, fuzzy, kde-format
+msgid "Normal Background"
+msgstr "زمینه"
+
+#: editor/scmeditorcolors.cpp:100
+#, fuzzy, kde-format
+msgid "Alternate Background"
+msgstr "تغییر زمینه در فهرستها"
+
+#: editor/scmeditorcolors.cpp:101
+#, kde-format
+msgid "Normal Text"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:102 editor/scmeditorcolors.ui:303
+#, fuzzy, kde-format
+msgid "Inactive Text"
+msgstr "میله عنوان غیرفعال"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:103 editor/scmeditorcolors.ui:308
+#, fuzzy, kde-format
+msgid "Active Text"
+msgstr "میله عنوان فعال"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:104 editor/scmeditorcolors.ui:313
+#, fuzzy, kde-format
+msgid "Link Text"
+msgstr "پیوند"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:105 editor/scmeditorcolors.ui:318
+#, kde-format
+msgid "Visited Text"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:106 editor/scmeditorcolors.ui:323
+#, kde-format
+msgid "Negative Text"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:107 editor/scmeditorcolors.ui:328
+#, kde-format
+msgid "Neutral Text"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:108 editor/scmeditorcolors.ui:333
+#, kde-format
+msgid "Positive Text"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:109 editor/scmeditorcolors.ui:338
+#, kde-format
+msgid "Focus Decoration"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:110 editor/scmeditorcolors.ui:343
+#, kde-format
+msgid "Hover Decoration"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: editor/scmeditorcolors.ui:23
+#, fuzzy, kde-format
+msgid "Color set:"
+msgstr "رنگها"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:36
+#, kde-format
+msgid "Colorset to view/modify"
+msgstr ""
+
+#. i18n: 'Common' here means &quot;frequent/not rare&quot;, not &quot;shared&quot;
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:40
+#, fuzzy, kde-format
+msgctxt "color-sets"
+msgid "Common Colors"
+msgstr "رنگها"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:45
+#, fuzzy, kde-format
+msgctxt "color-sets"
+msgid "View"
+msgstr "میله عنوان فعال"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:50
+#, fuzzy, kde-format
+msgctxt "color-sets"
+msgid "Window"
+msgstr "پنجره"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:55
+#, fuzzy, kde-format
+msgctxt "color-sets"
+msgid "Button"
+msgstr "دکمه"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:60
+#, fuzzy, kde-format
+msgctxt "color-sets"
+msgid "Selection"
+msgstr "برگزیده"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:65
+#, fuzzy, kde-format
+msgctxt "color-sets"
+msgid "Tooltip"
+msgstr "میله عنوان فعال"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:70
+#, kde-format
+msgctxt "color-sets"
+msgid "Complementary"
+msgstr ""
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:75
+#, kde-format
+msgctxt "color-sets"
+msgid "Header"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:118 editor/scmeditorcolors.ui:123
+#: editor/scmeditorcolors.ui:128 editor/scmeditorcolors.ui:133
+#: editor/scmeditorcolors.ui:138 editor/scmeditorcolors.ui:143
+#: editor/scmeditorcolors.ui:148 editor/scmeditorcolors.ui:153
+#: editor/scmeditorcolors.ui:158 editor/scmeditorcolors.ui:163
+#: editor/scmeditorcolors.ui:168 editor/scmeditorcolors.ui:173
+#: editor/scmeditorcolors.ui:178 editor/scmeditorcolors.ui:183
+#: editor/scmeditorcolors.ui:188 editor/scmeditorcolors.ui:193
+#: editor/scmeditorcolors.ui:198 editor/scmeditorcolors.ui:203
+#: editor/scmeditorcolors.ui:208 editor/scmeditorcolors.ui:213
+#: editor/scmeditorcolors.ui:218 editor/scmeditorcolors.ui:223
+#: editor/scmeditorcolors.ui:228 editor/scmeditorcolors.ui:233
+#: editor/scmeditorcolors.ui:238 editor/scmeditorcolors.ui:243
+#, fuzzy, kde-format
+msgid "New Row"
+msgstr "جدید"
+
+#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:248
+#, kde-format
+msgid "0"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:253
+#, kde-format
+msgid "1"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:258
+#, fuzzy, kde-format
+msgid "View Background"
+msgstr "زمینه"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:263
+#, fuzzy, kde-format
+msgid "View Text"
+msgstr "میله عنوان فعال"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:268
+#, fuzzy, kde-format
+msgid "Window Background"
+msgstr "زمینه"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:273
+#, fuzzy, kde-format
+msgid "Window Text"
+msgstr "پنجره"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:278
+#, fuzzy, kde-format
+msgid "Button Background"
+msgstr "زمینه"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:283
+#, fuzzy, kde-format
+msgid "Button Text"
+msgstr "دکمه"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:288
+#, fuzzy, kde-format
+msgid "Selection Background"
+msgstr "تغییر زمینه در فهرستها"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:293
+#, fuzzy, kde-format
+msgid "Selection Text"
+msgstr "متن برگزیده"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:298
+#, fuzzy, kde-format
+msgid "Selection Inactive Text"
+msgstr "میله عنوان غیرفعال"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:348
+#, fuzzy, kde-format
+msgid "Tooltip Background"
+msgstr "زمینه"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:353
+#, fuzzy, kde-format
+msgid "Tooltip Text"
+msgstr "میله عنوان فعال"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:358
+#, fuzzy, kde-format
+msgid "Active Titlebar"
+msgstr "ترکیب عنوان فعال"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:363
+#, fuzzy, kde-format
+msgid "Active Titlebar Text"
+msgstr "ترکیب عنوان فعال"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:368
+#, fuzzy, kde-format
+msgid "Active Titlebar Secondary"
+msgstr "ترکیب عنوان فعال"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:373
+#, fuzzy, kde-format
+msgid "Inactive Titlebar"
+msgstr "ترکیب عنوان غیرفعال"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:378
+#, fuzzy, kde-format
+msgid "Inactive Titlebar Text"
+msgstr "ترکیب عنوان غیرفعال"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:383
+#, fuzzy, kde-format
+msgid "Inactive Titlebar Secondary"
+msgstr "ترکیب عنوان غیرفعال"
+
+#: editor/scmeditordialog.cpp:61
+#, kde-format
+msgid "Options"
+msgstr ""
+
+#: editor/scmeditordialog.cpp:62
+#, kde-format
+msgid "Colors"
+msgstr "رنگها"
+
+#: editor/scmeditordialog.cpp:63
+#, fuzzy, kde-format
+msgid "Disabled"
+msgstr "دکمه عنوان غیرفعال"
+
+#: editor/scmeditordialog.cpp:95
+#, kde-format
+msgid "You have unsaved changes. Do you really want to quit?"
+msgstr ""
+
+#: editor/scmeditordialog.cpp:95
+#, kde-format
+msgid "Unsaved changes"
+msgstr ""
+
+#: editor/scmeditordialog.cpp:113 editor/scmeditordialog.cpp:138
+#, kde-format
+msgid "Save Color Scheme"
+msgstr "ذخیره طرحواره رنگ"
+
+#: editor/scmeditordialog.cpp:113
+#, fuzzy, kde-format
+msgid "&Enter a name for the color scheme:"
+msgstr "نامی برای طرحواره رنگ وارد کنید:"
+
+#: editor/scmeditordialog.cpp:137
+#, fuzzy, kde-format
+msgid ""
+"A color scheme with that name already exists.\n"
+"Do you want to overwrite it?"
+msgstr ""
+"طرحواره رنگی با نام »%1« از قبل وجود دارد.\n"
+"می‌خواهید آن را جای‌نوشت کنید؟\n"
+
+#: editor/scmeditordialog.cpp:174
+#, kde-format
+msgid "You do not have permission to overwrite that scheme"
+msgstr ""
+
+#: editor/scmeditordialog.cpp:174
+#, kde-format
+msgid "Error"
+msgstr ""
+
+#: editor/scmeditordialog.cpp:189
+#, fuzzy, kde-format
+msgid "Inactive"
+msgstr "پنجره غیرفعال"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: editor/scmeditoreffects.ui:17
+#, fuzzy, kde-format
+msgid "Color:"
+msgstr "رنگها"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: editor/scmeditoreffects.ui:27
+#, kde-format
+msgid "Intensity:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:37
+#, fuzzy, kde-format
+msgid "Disabled color effect type"
+msgstr "دکمه عنوان غیرفعال"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:41
+#, kde-format
+msgctxt "no disabled color effect"
+msgid "None"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:46
+#, kde-format
+msgctxt "disabled color effect"
+msgid "Desaturate"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:51
+#, kde-format
+msgctxt "disabled color effect"
+msgid "Fade"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:56
+#, kde-format
+msgctxt "disabled color effect"
+msgid "Tint"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:64
+#, fuzzy, kde-format
+msgid "Disabled intensity effect type"
+msgstr "دکمه عنوان غیرفعال"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:68
+#, kde-format
+msgctxt "no disabled intensity effect"
+msgid "None"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:73
+#, fuzzy, kde-format
+msgctxt "disabled intensity effect"
+msgid "Shade"
+msgstr "ذخیره"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:78
+#, kde-format
+msgctxt "disabled intensity effect"
+msgid "Darken"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:83
+#, fuzzy, kde-format
+msgctxt "disabled intensity effect"
+msgid "Lighten"
+msgstr "&حذف طرحواره‌"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: editor/scmeditoreffects.ui:107
+#, fuzzy, kde-format
+msgid "Contrast:"
+msgstr "&سایه‌روشن‌"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, colorSlider)
+#: editor/scmeditoreffects.ui:120
+#, fuzzy, kde-format
+msgid "Disabled color effect amount"
+msgstr "دکمه عنوان غیرفعال"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, intensitySlider)
+#: editor/scmeditoreffects.ui:139
+#, fuzzy, kde-format
+msgid "Disabled intensity effect amount"
+msgstr "دکمه عنوان غیرفعال"
+
+#. i18n: ectx: property (toolTip), widget (KColorButton, colorButton)
+#: editor/scmeditoreffects.ui:158
+#, fuzzy, kde-format
+msgid "Disabled color"
+msgstr "دکمه عنوان غیرفعال"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, contrastBox)
+#: editor/scmeditoreffects.ui:181
+#, fuzzy, kde-format
+msgid "Disabled contrast type"
+msgstr "دکمه عنوان غیرفعال"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
+#: editor/scmeditoreffects.ui:185
+#, kde-format
+msgctxt "no disabled contrast"
+msgid "None"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
+#: editor/scmeditoreffects.ui:190
+#, kde-format
+msgctxt "disabled contrast"
+msgid "Fade"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
+#: editor/scmeditoreffects.ui:195
+#, kde-format
+msgctxt "disabled contrast"
+msgid "Tint"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QSlider, contrastSlider)
+#: editor/scmeditoreffects.ui:222
+#, fuzzy, kde-format
+msgid "Disabled contrast amount"
+msgstr "دکمه عنوان غیرفعال"
+
+#. i18n: ectx: property (text), widget (QCheckBox, useInactiveEffects)
+#: editor/scmeditoroptions.ui:17
+#, fuzzy, kde-format
+msgid "Apply &effects to inactive windows"
+msgstr "پنجره غیرفعال"
+
+#. i18n: ectx: property (text), widget (QCheckBox, inactiveSelectionEffect)
+#: editor/scmeditoroptions.ui:24
+#, kde-format
+msgid "Use different colors for in&active selections"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, shadeSortedColumn)
+#: editor/scmeditoroptions.ui:31
+#, fuzzy, kde-format
+msgid "Shade sorted column &in lists"
+msgstr "سایه‌دار کردن ستون مرتب در فهرستها"
+
+#. i18n: ectx: property (text), widget (QCheckBox, tintColors)
+#: editor/scmeditoroptions.ui:38
+#, fuzzy, kde-format
+msgid "Tint all colors with accent color"
+msgstr "پنجره غیرفعال"
+
+#. i18n: ectx: property (text), widget (QCheckBox, accentTitlebar)
+#: editor/scmeditoroptions.ui:45
+#, kde-format
+msgid "Make window titlebars a&ccent-colored"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: editor/scmeditoroptions.ui:52
+#, kde-format
+msgid "Tint strength:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox_5)
+#: editor/scmeditoroptions.ui:69
+#, kde-format
+msgid "Shading of frames and lighting (\"3D\") effects"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
+#: editor/scmeditoroptions.ui:72
+#, fuzzy, kde-format
+msgid "Shading"
+msgstr "ذخیره"
+
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: editor/scmeditoroptions.ui:97
+#, kde-format
+msgid "Maximum"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: editor/scmeditoroptions.ui:117
+#, kde-format
+msgid "Minimum"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: editor/scmeditoroptions.ui:124
+#, fuzzy, kde-format
+msgid "Contrast"
+msgstr "&سایه‌روشن‌"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore0)
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack0)
+#: editor/setpreview.ui:35 editor/setpreview.ui:189
+#, fuzzy, kde-format
+msgid "Normal Text on Normal Background"
+msgstr "زمینه"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore0)
+#. i18n: ectx: property (text), widget (QLabel, labelBack0)
+#: editor/setpreview.ui:38 editor/setpreview.ui:192
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "normal"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore3)
+#: editor/setpreview.ui:56
+#, fuzzy, kde-format
+msgid "Link Text on Normal Background"
+msgstr "زمینه"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore3)
+#. i18n: ectx: property (text), widget (QLabel, labelBack3)
+#: editor/setpreview.ui:59 editor/setpreview.ui:214
+#, fuzzy, kde-format
+#| msgid "link"
+msgctxt "color-kcm-set-preview"
+msgid "link"
+msgstr "پیوند"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore4)
+#: editor/setpreview.ui:77
+#, fuzzy, kde-format
+msgid "Visited Text on Normal Background"
+msgstr "زمینه"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore4)
+#. i18n: ectx: property (text), widget (QLabel, labelBack4)
+#: editor/setpreview.ui:80 editor/setpreview.ui:236
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "visited"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QWidget, widgetFore2)
+#: editor/setpreview.ui:90
+#, fuzzy, kde-format
+msgid "Active Text on Normal Background"
+msgstr "زمینه"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore2)
+#. i18n: ectx: property (text), widget (QLabel, labelBack2)
+#: editor/setpreview.ui:96 editor/setpreview.ui:253
+#, fuzzy, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "active"
+msgstr "پنجره غیرفعال"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore1)
+#: editor/setpreview.ui:109
+#, fuzzy, kde-format
+msgid "Inactive Text on Normal Background"
+msgstr "زمینه"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore1)
+#: editor/setpreview.ui:112
+#, fuzzy, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "inactive"
+msgstr "پنجره غیرفعال"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore5)
+#: editor/setpreview.ui:125
+#, fuzzy, kde-format
+msgid "Negative Text on Normal Background"
+msgstr "زمینه"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore5)
+#. i18n: ectx: property (text), widget (QLabel, labelBack5)
+#: editor/setpreview.ui:128 editor/setpreview.ui:286
+#, fuzzy, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "negative"
+msgstr "پنجره غیرفعال"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore6)
+#: editor/setpreview.ui:141
+#, fuzzy, kde-format
+msgid "Neutral Text on Normal Background"
+msgstr "زمینه"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore6)
+#. i18n: ectx: property (text), widget (QLabel, labelBack6)
+#: editor/setpreview.ui:144 editor/setpreview.ui:303
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "neutral"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore7)
+#: editor/setpreview.ui:157
+#, fuzzy, kde-format
+msgid "Positive Text on Normal Background"
+msgstr "زمینه"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore7)
+#. i18n: ectx: property (text), widget (QLabel, labelBack7)
+#: editor/setpreview.ui:160 editor/setpreview.ui:320
+#, fuzzy, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "positive"
+msgstr "پنجره غیرفعال"
+
+#. i18n: ectx: property (toolTip), widget (QWidget, widgetFore8)
+#: editor/setpreview.ui:170
+#, fuzzy, kde-format
+msgid "Hover on Normal Background"
+msgstr "زمینه"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore8)
+#: editor/setpreview.ui:176
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "hover"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack3)
+#: editor/setpreview.ui:211
+#, kde-format
+msgid ""
+"Link Text on Link Background\n"
+"(Note: Link Background is derived from Link Text and cannot be separately "
+"configured at this time)"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack4)
+#: editor/setpreview.ui:233
+#, kde-format
+msgid ""
+"Visited Text on Visited Background\n"
+"(Note: Visited Background is derived from Visited Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack2)
+#: editor/setpreview.ui:250
+#, kde-format
+msgid ""
+"Active Text on Active Background\n"
+"(Note: Active Background is derived from Active Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack1)
+#: editor/setpreview.ui:266
+#, fuzzy, kde-format
+msgid "Inactive Text on Alternate Background"
+msgstr "تغییر زمینه در فهرستها"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelBack1)
+#: editor/setpreview.ui:269
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "alternate"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack5)
+#: editor/setpreview.ui:283
+#, kde-format
+msgid ""
+"Negative Text on Negative Background\n"
+"(Note: Negative Background is derived from Negative Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack6)
+#: editor/setpreview.ui:300
+#, kde-format
+msgid ""
+"Neutral Text on Neutral Background\n"
+"(Note: Neutral Background is derived from Neutral Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack7)
+#: editor/setpreview.ui:317
+#, kde-format
+msgid ""
+"Positive Text on Positive Background\n"
+"(Note: Positive Background is derived from Positive Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore9)
+#: editor/setpreview.ui:333
+#, fuzzy, kde-format
+msgid "Focus on Normal Background"
+msgstr "زمینه"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore9)
+#: editor/setpreview.ui:336
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "focus"
+msgstr ""
+
+#: package/contents/ui/main.qml:23
+#, kde-format
+msgid "This module lets you choose the color scheme."
+msgstr ""
+
+#: package/contents/ui/main.qml:90
+#, kde-format
+msgid ""
+"The color scheme '%1' is not installed. Selecting the default theme instead."
+msgstr ""
+
+#: package/contents/ui/main.qml:108
+#, fuzzy, kde-format
+msgid "All Schemes"
+msgstr "طرحواره رنگ"
+
+#: package/contents/ui/main.qml:109
+#, fuzzy, kde-format
+msgid "Light Schemes"
+msgstr "&حذف طرحواره‌"
+
+#: package/contents/ui/main.qml:110
+#, fuzzy, kde-format
+#| msgid "Save Color Scheme"
+msgid "Dark Schemes"
+msgstr "ذخیره طرحواره رنگ"
+
+#: package/contents/ui/main.qml:143
+#, kde-format
+msgid "Use accent color:"
+msgstr ""
+
+#: package/contents/ui/main.qml:144
+#, fuzzy, kde-format
+msgid "From current color scheme"
+msgstr "ذخیره طرحواره رنگ"
+
+#: package/contents/ui/main.qml:157
+#, fuzzy, kde-format
+msgctxt "@option:radio wallpaper accent color option"
+msgid "From current wallpaper"
+msgstr "ذخیره طرحواره رنگ"
+
+#: package/contents/ui/main.qml:254
+#, kde-format
+msgid "Custom:"
+msgstr ""
+
+#: package/contents/ui/main.qml:261
+#, kde-format
+msgid "Choose custom accent color"
+msgstr ""
+
+#: package/contents/ui/main.qml:349
+#, fuzzy, kde-format
+msgid "Window Title"
+msgstr "پنجره"
+
+#: package/contents/ui/main.qml:371
+#, fuzzy, kde-format
+msgid "Window text"
+msgstr "پنجره"
+
+#: package/contents/ui/main.qml:378
+#, fuzzy, kde-format
+msgid "Button"
+msgstr "دکمه"
+
+#: package/contents/ui/main.qml:415
+#, fuzzy, kde-format
+#| msgid "link"
+msgctxt "Hyperlink"
+msgid "link"
+msgstr "پیوند"
+
+#: package/contents/ui/main.qml:417
+#, kde-format
+msgctxt "Visited hyperlink"
+msgid "visited"
+msgstr ""
+
+#: package/contents/ui/main.qml:424
+#, kde-format
+msgid "Normal text"
+msgstr ""
+
+#: package/contents/ui/main.qml:432
+#, fuzzy, kde-format
+#| msgid "Selected text"
+msgid "Highlighted text"
+msgstr "متن برگزیده"
+
+#: package/contents/ui/main.qml:439
+#, fuzzy, kde-format
+msgid "Disabled text"
+msgstr "دکمه عنوان غیرفعال"
+
+#: package/contents/ui/main.qml:457
+#, fuzzy, kde-format
+msgid "Edit Color Scheme…"
+msgstr "طرحواره رنگ"
+
+#: package/contents/ui/main.qml:463
+#, fuzzy, kde-format
+#| msgid "Save Color Scheme"
+msgid "Remove Color Scheme"
+msgstr "ذخیره طرحواره رنگ"
+
+#: package/contents/ui/main.qml:470
+#, fuzzy, kde-format
+msgid "Restore Color Scheme"
+msgstr "طرحواره رنگ"
+
+#: package/contents/ui/main.qml:514
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: package/contents/ui/main.qml:519
+#, fuzzy, kde-format
+#| msgid "Save Color Scheme"
+msgid "Get New Color Schemes…"
+msgstr "ذخیره طرحواره رنگ"
+
+#: package/contents/ui/main.qml:537
+#, fuzzy, kde-format
+#| msgid "Save Color Scheme"
+msgid "Open Color Scheme"
+msgstr "ذخیره طرحواره رنگ"
+
+#: package/contents/ui/main.qml:539
+#, kde-format
+msgid "Color Scheme Files (*.colors)"
+msgstr ""
+
+#: plasma-apply-colorscheme.cpp:39
+#, kde-format
+msgid ""
+"This tool allows you to set the color scheme for the current Plasma session, "
+"without accidentally setting it to one that is either not available, or "
+"which is already set."
+msgstr ""
+
+#: plasma-apply-colorscheme.cpp:43
+#, kde-format
+msgid ""
+"The name of the color scheme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-colorscheme.cpp:45
+#, kde-format
+msgid ""
+"Show all the color schemes available on the system (and which is the current "
+"theme)"
+msgstr ""
+
+#: plasma-apply-colorscheme.cpp:48
+#, kde-format
+msgid ""
+"The name of the accent color you want to set. SVG color names (https://www."
+"w3.org/TR/SVG11/types.html#ColorKeywords) and hex color codes are supported. "
+"Quote the hex code if there is possibility of shell expansion"
+msgstr ""
+
+#: plasma-apply-colorscheme.cpp:75
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-colorscheme.cpp:98
+#, kde-format
+msgid "Successfully applied the color scheme %1 to your current Plasma session"
+msgstr ""
+
+#: plasma-apply-colorscheme.cpp:100
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-colorscheme.cpp:107
+#, kde-format
+msgid ""
+"You have managed to pass an empty color scheme name, which isn't supported "
+"behavior."
+msgstr ""
+
+#: plasma-apply-colorscheme.cpp:111
+#, kde-format
+msgid ""
+"The file you attempted to set as your scheme, %1, could not be identified as "
+"a color scheme."
+msgstr ""
+
+#: plasma-apply-colorscheme.cpp:125
+#, kde-format
+msgid "Successfully applied the accent color %1"
+msgstr ""
+
+#: plasma-apply-colorscheme.cpp:127
+#, fuzzy, kde-format
+msgid "Invalid accent color "
+msgstr "پنجره غیرفعال"
+
+#: plasma-apply-colorscheme.cpp:132
+#, kde-format
+msgid "You have the following color schemes on your system:"
+msgstr ""
+
+#: plasma-apply-colorscheme.cpp:137
+#, fuzzy, kde-format
+msgid " * %1 (current color scheme)"
+msgstr "ذخیره طرحواره رنگ"
+
+#, fuzzy
+#~ msgid "Apply a&ccent color to active window titlebars"
+#~ msgstr "پنجره غیرفعال"
+
+#, fuzzy
+#~ msgid "Apply acce&nt color to inactive window titlebars"
+#~ msgstr "پنجره غیرفعال"
+
+#, fuzzy
+#~ msgid "Share the selected scheme on the Internet"
+#~ msgstr "طرحواره رنگ"
+
+#, fuzzy
+#~ msgid "Upload Scheme"
+#~ msgstr "طرحواره رنگ"
+
+#, fuzzy
+#~| msgid "Save Color Scheme"
+#~ msgid "Download New Color Schemes"
+#~ msgstr "ذخیره طرحواره رنگ"
+
+#, fuzzy
+#~| msgid "Edit"
+#~ msgid "Edit..."
+#~ msgstr "ویرایش"
+
+#, fuzzy
+#~ msgid "Remove the selected scheme"
+#~ msgstr "طرحواره رنگ"
+
+#, fuzzy
+#~| msgid "Color Scheme"
+#~ msgid "Remove"
+#~ msgstr "طرحواره رنگ"
+
+#, fuzzy
+#~ msgid "Import a color scheme from a file"
+#~ msgstr "طرحواره رنگ"
+
+#, fuzzy
+#~ msgid "Get new color schemes from the Internet"
+#~ msgstr "طرحواره رنگ"
+
+#, fuzzy
+#~| msgid "Save Color Scheme"
+#~ msgid "Get &New Color Schemes..."
+#~ msgstr "ذخیره طرحواره رنگ"
+
+#, fuzzy
+#~ msgid "Apply colors to &non-Qt applications"
+#~ msgstr "اعمال رنگها به کاربردهای &غیر KDE‌"
+
+#, fuzzy
+#~ msgctxt "Default color scheme"
+#~ msgid "Default"
+#~ msgstr "پیش‌فرض KDE"
+
+#, fuzzy
+#~ msgctxt "Current color scheme"
+#~ msgid "Current"
+#~ msgstr "طرحواره جاری"
+
+#, fuzzy
+#~ msgctxt "@title:tab color transformations on inactive elements"
+#~ msgid "Inactive"
+#~ msgstr "پنجره غیرفعال"
+
+#, fuzzy
+#~ msgid "Inactive intensity effect type"
+#~ msgstr "دکمه عنوان غیرفعال"
+
+#, fuzzy
+#~ msgctxt "inactive intensity effect"
+#~ msgid "Shade"
+#~ msgstr "ذخیره"
+
+#, fuzzy
+#~ msgid "Inactive intensity effect amount"
+#~ msgstr "دکمه عنوان غیرفعال"
+
+#, fuzzy
+#~ msgid "Inactive color effect type"
+#~ msgstr "پنجره غیرفعال"
+
+#, fuzzy
+#~ msgid "Inactive color amount"
+#~ msgstr "دکمه عنوان غیرفعال"
+
+#, fuzzy
+#~ msgid "Inactive contrast effect type"
+#~ msgstr "دکمه عنوان غیرفعال"
+
+#, fuzzy
+#~ msgid "Inactive contrast effect amount"
+#~ msgstr "دکمه عنوان غیرفعال"
+
+#, fuzzy
+#~ msgid "Import Scheme..."
+#~ msgstr "طرحواره رنگ"
+
+#, fuzzy
+#~ msgid "&Save..."
+#~ msgstr "&ذخیره طرحوار‌ه...‌"
+
+#, fuzzy
+#~ msgid "I&mport..."
+#~ msgstr "&واردات طرحواره...‌"
+
+#, fuzzy
+#~| msgid "Active window"
+#~ msgid "Active Window"
+#~ msgstr "پنجره فعال"
+
+#, fuzzy
+#~| msgid "Active Window Frame"
+#~ msgid "Active Window Text"
+#~ msgstr "قابک پنجره فعال"
+
+#, fuzzy
+#~| msgid "Inactive Window Frame"
+#~ msgid "Inactive Window"
+#~ msgstr "قابک پنجره غیرفعال"
+
+#, fuzzy
+#~| msgid "Inactive Title Bar"
+#~ msgid "InactiveWindowText"
+#~ msgstr "میله عنوان غیرفعال"
+
+#~ msgid ""
+#~ "<p><h1>Colors</h1> This module allows you to choose the color scheme used "
+#~ "for the KDE desktop. The different elements of the desktop, such as title "
+#~ "bars, menu text, etc., are called \"widgets\". You can choose the widget "
+#~ "whose color you want to change by selecting it from a list, or by "
+#~ "clicking on a graphical representation of the desktop.</p><p> You can "
+#~ "save color settings as complete color schemes, which can also be modified "
+#~ "or deleted. KDE comes with several predefined color schemes on which you "
+#~ "can base your own.</p><p> All KDE applications will obey the selected "
+#~ "color scheme. Non-KDE applications may also obey some or all of the color "
+#~ "settings, if this option is enabled.</p>"
+#~ msgstr ""
+#~ "<p><h1>رنگها</h1> این پیمانه به شما اجازه می‌دهد که طرحواره رنگ استفاده‌شده "
+#~ "برای رومیزی KDE را انتخاب کنید. عناصر مختلف رومیزی، نظیر میله عنوانها، "
+#~ "متن گزینگان و غیره، »عنصر« نامیده می‌شوند. می‌توانید عنصری را که می‌‌خواهید "
+#~ "رنگ آن را با گزینش از فهرست، یا فشار روی نمایش گرافیکی رومیزی تغییر دهید، "
+#~ "انتخاب کنید.</p><p>می‌‌توانید تنظیمات رنگ را به عنوان طرحواره‌های رنگ کامل "
+#~ "ذخیره کنید؛ همچنین می‌‌توان آنها را تغییر داده یا حذف کرد. KDE به همراه "
+#~ "چندین طرحواره رنگ از پیش تعریف‌شده می‌‌آید که می‌‌توانید آن را مبنای کار خود "
+#~ "قرار دهید.</p><p> همه کاربردهای KDE از طرحواره رنگ برگزیده اطاعت می‌کنند. "
+#~ "در صورت فعال‌سازی این گزینه، ممکن است کاربردهای غیر KDE از برخی یا همه "
+#~ "تنظیمات رنگ اطاعت کنند.</p>"
+
+#~ msgid ""
+#~ "This is a preview of the color settings which will be applied if you "
+#~ "click \"Apply\" or \"OK\". You can click on different parts of this "
+#~ "preview image. The widget name in the \"Widget color\" box will change to "
+#~ "reflect the part of the preview image you clicked."
+#~ msgstr ""
+#~ "یک پیش‌نمایش از تنظیمات رنگی است که در صورت فشار »اعمال« یا »تأیید«، اعمال "
+#~ "می‌شود. می‌‌توانید روی بخشهای مختلف این تصویر پیش‌نمایش فشار دهید. نام عنصر "
+#~ "در جعبه »رنگ عنصر« برای بازتاب بخشهایی از تصویر پیش‌نمایشی که فشار می‌‌دهید، "
+#~ "تغییر می‌کند."
+
+#~ msgid ""
+#~ "<p>This is a list of predefined color schemes, including any that you may "
+#~ "have created. You can preview an existing color scheme by selecting it "
+#~ "from the list. The current scheme will be replaced by the selected color "
+#~ "scheme.</p><p> Warning: if you have not yet applied any changes you may "
+#~ "have made to the current scheme, those changes will be lost if you select "
+#~ "another color scheme.</p>"
+#~ msgstr ""
+#~ "<p>فهرستی از طرحواره‌های رنگ از پیش تعریف‌شده، شامل هر چیزی که ممکن است "
+#~ "ایجاد کرده باشید، می‌باشد. می‌‌توانید با برگزیدن طرحواره رنگ موجود از فهرست، "
+#~ "آن را پیش‌نمایش دهید. طرحواره جاری با طرحواره رنگ انتخاب‌شده جایگزین می‌‌شود."
+#~ "</p><p> اخطار: اگر تاکنون هیچ یک از تغییراتی که احتمالاً در طرحواره جاری "
+#~ "داده‌اید را اعمال نکرده‌اید، در صورت انتخاب طرحواره رنگ دیگر، آن تغییرات از "
+#~ "بین می‌روند.</p>"
+
+#~ msgid ""
+#~ "Press this button if you want to save the current color settings as a "
+#~ "color scheme. You will be prompted for a name."
+#~ msgstr ""
+#~ "اگر می‌‌خواهید تنظیمات رنگ جاری را به عنوان یک طرحواره رنگ ذخیره کنید، این "
+#~ "دکمه را فشار دهید. برای نامی به شما اعلان داده می‌‌شود."
+
+#~ msgid ""
+#~ "Press this button to remove the selected color scheme. Note that this "
+#~ "button is disabled if you do not have permission to delete the color "
+#~ "scheme."
+#~ msgstr ""
+#~ "این دکمه را فشار دهید تا طرحواره رنگ انتخاب‌شده حذف شود. توجه داشته باشید "
+#~ "که اگر مجوز حذف طرحواره رنگ را نداشته باشید، این دکمه غیرفعال است."
+
+#~ msgid ""
+#~ "Press this button to import a new color scheme. Note that the color "
+#~ "scheme will only be available for the current user."
+#~ msgstr ""
+#~ "برای واردات طرحواره جدید، این دکمه را فشار دهید. توجه داشته باشید که "
+#~ "طرحواره رنگ فقط برای کاربر جاری وجود دارد."
+
+#~ msgid "Standard"
+#~ msgstr "استاندارد"
+
+#~ msgid "Active Title Button"
+#~ msgstr "دکمه عنوان فعال"
+
+#~ msgid "Active Window Handle"
+#~ msgstr "گرداننده پنجره فعال"
+
+#~ msgid "Inactive Window Handle"
+#~ msgstr "گرداننده پنجره غیرفعال"
+
+#~ msgid "Followed Link"
+#~ msgstr "پیوند دنباله"
+
+#~ msgid ""
+#~ "Check this box to show the sorted column in a list with a shaded "
+#~ "background"
+#~ msgstr ""
+#~ "این جعبه را علامت بزنید تا ستون مرتب در فهرست، با زمینه‌ای سایه‌دار نمایش "
+#~ "داده شود"
+
+#~ msgid ""
+#~ "Use this slider to change the contrast level of the current color scheme. "
+#~ "Contrast does not affect all of the colors, only the edges of 3D objects."
+#~ msgstr ""
+#~ "از این لغزان برای تغییر سطح سایه‌روشن طرحواره رنگ جاری استفاده کنید. "
+#~ "سایه‌روشن بر همه رنگها اثر نمی‌کند و فقط روی لبه‌های اشیای سه بعدی تأثیر "
+#~ "دارد."
+
+#~ msgctxt "Low Contrast"
+#~ msgid "Low"
+#~ msgstr "کم"
+
+#~ msgctxt "High Contrast"
+#~ msgid "High"
+#~ msgstr "زیاد"
+
+#~ msgid ""
+#~ "Check this box to apply the current color scheme to non-KDE applications."
+#~ msgstr ""
+#~ "برای اعمال طرحواره رنگ جاری در کاربردهای غیر KDE، این جعبه را علامت بزنید."
+
+#~ msgid ""
+#~ "This color scheme could not be removed.\n"
+#~ "Perhaps you do not have permission to alter the filesystem where the "
+#~ "color scheme is stored."
+#~ msgstr ""
+#~ "این طرحواره رنگ را نمی‌توان حذف کرد.\n"
+#~ "شاید مجوز تغییر سیستم پرونده، یعنی جایی که طرحواره رنگ ذخیره شده است را "
+#~ "ندارید."
+
+#~ msgid "Overwrite"
+#~ msgstr "جای‌نوشت"
+
+#~ msgid "Import failed."
+#~ msgstr "خرابی در واردات."
+
+#~ msgid "Untitled Theme"
+#~ msgstr "چهره بدون عنوان"
+
+#~ msgid "Role"
+#~ msgstr "نقش"
+
+#~ msgid "Foreground"
+#~ msgstr "پیش‌زمینه"
+
+#~ msgid "File"
+#~ msgstr "پرونده"
+
+#~ msgid "Standard text"
+#~ msgstr "متن استاندارد"
+
+#~ msgid "followed link"
+#~ msgstr "پیوند دنباله"
+
+#~ msgctxt "Menu item"
+#~ msgid "Open"
+#~ msgstr "باز"

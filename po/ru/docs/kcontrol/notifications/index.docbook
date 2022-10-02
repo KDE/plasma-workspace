@@ -1,0 +1,396 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Russian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmnotify" lang="&language;">
+<title
+>Настройка системных уведомлений</title>
+<articleinfo>
+
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+><personname
+><firstname
+>Kai Uwe</firstname
+> <surname
+>Broulik</surname
+></personname
+> <email
+>kde@broulik.de</email
+></author>
+<othercredit role="translator"
+><firstname
+>Мария</firstname
+><surname
+>Шикунова</surname
+><affiliation
+><address
+><email
+>translation-team@basealt.ru</email
+></address
+></affiliation
+><contrib
+>Перевод на русский язык</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>Олеся</firstname
+><surname
+>Герасименко</surname
+><affiliation
+><address
+><email
+>translation-team@basealt.ru</email
+></address
+></affiliation
+><contrib
+>Редактирование перевода</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-16</date>
+<releaseinfo
+>Plasma 5.21</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Параметры системы</keyword>
+<keyword
+>системные оповещения</keyword>
+<keyword
+>оповещение</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="sys-notify">
+<title
+>Настройка системных уведомлений</title>
+
+<para
+>Как и всем приложениям, &plasma; требуется оповещать пользователя о возникшей проблеме, выполненном задании или о каком-либо другом событии. Для этого &plasma; использует набор <quote
+>системных уведомлений</quote
+>.</para>
+
+<para
+>Этот модуль позволяет настроить действия, которые &plasma; будет выполнять для сообщения о каждом событии.</para>
+
+<sect2 id="notification-settings">
+<title
+>Настройка уведомлений</title>
+
+<sect3 id="do-not-disturb">
+<title
+>Режим «Не беспокоить»</title>
+
+    <para
+>Этот режим отключает все визуальные и большинство звуковых уведомлений, позволяя пользователю сосредоточиться на выполнении текущей задачи. Параметры в этом разделе позволяют настроить, при каких обстоятельствах режим «Не беспокоить» будет включаться автоматически.</para>
+
+    <variablelist>
+
+    <varlistentry>
+    <term
+><guiicon
+>При дублировании изображения на внешний экран</guiicon
+></term>
+    <listitem
+><para
+>Автоматически включать режим «Не беспокоить» при дублировании изображения на внешний экран, например, во время презентации.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>При трансляции изображения</guiicon
+></term>
+    <listitem
+><para
+>Автоматически включать режим «Не беспокоить» при трансляции экрана, например, во время онлайн-лекции.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Выводить критические уведомления</guiicon
+></term>
+    <listitem
+><para
+>Отображать критические уведомления (например, оповещение о разряженной батарее) в режиме «Не беспокоить».</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Комбинация клавиш для переключения состояния:</guiicon
+></term>
+    <listitem
+><para
+>Установить глобальную комбинацию клавиш для включения и отключения режима «Не беспокоить» в любое время.</para
+></listitem>
+    </varlistentry>
+
+    </variablelist>
+
+</sect3>
+
+<sect3 id="notification-filters">
+    <title
+>Фильтры</title>
+
+    <variablelist>
+
+    <varlistentry>
+    <term
+>Критические уведомления: <guiicon
+>Всегда поверх других окон</guiicon
+></term>
+    <listitem
+><para
+>Всегда выводить критические уведомления (например, о низком уровне заряда батареи) поверх окон. Такие уведомления будут выводиться даже при просмотре видео в полноэкранном режиме или при демонстрации презентации.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+>Обычные уведомления: <guiicon
+>Всегда поверх других окон</guiicon
+></term>
+    <listitem
+><para
+>Всегда выводить обычные уведомления (сообщения) поверх окон. Такие уведомления будут выводиться даже при просмотре видео в полноэкранном режиме или при демонстрации презентации.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+>Неприоритетные уведомления: <guiicon
+>Показывать всплывающие уведомления</guiicon
+> и <guiicon
+>Показывать в журнале</guiicon
+></term>
+    <listitem
+><para
+>Включить или отключить отображение уведомлений с низким приоритетом (например, уведомлений о смене дорожки в проигрывателе) в виде всплывающих окон или записей в журнале уведомлений.</para
+></listitem>
+    </varlistentry>
+
+    </variablelist>
+</sect3>
+
+<sect3 id="notification-behavior">
+    <title
+>Поведение</title>
+
+    <variablelist>
+
+    <varlistentry>
+    <term
+>Всплывающие уведомления: <guiicon
+>Рядом со значком уведомления</guiicon
+></term>
+    <listitem
+><para
+>Показывать всплывающие уведомления рядом со значком уведомления, расположенным на панели.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Задать собственное расположение...</guiicon
+></term>
+    <listitem
+><para
+>Выбрать фиксированный угол экрана, в котором будут выводиться всплывающие уведомления.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+        <term
+><guiicon
+>Скрывать через:</guiicon
+></term>
+    <listitem
+><para
+>Время, по прошествии которого следует автоматически скрывать всплывающее уведомление. Возможно указать любое значение в интервале от 1 до 120 секунд.</para
+></listitem>
+    </varlistentry>
+
+    </variablelist>
+</sect3>
+
+<sect3 id="progress-and-badges">
+    <title
+>Ход выполнения и индикаторы</title>
+
+    <sect4 id="application-progress">
+        <title
+>Ход выполнения</title>
+
+        <para
+>Параметры в этом разделе позволяют указать, как должен отображаться ход выполнения процессов, например, копирования или загрузки файла.</para>
+
+        <variablelist>
+
+        <varlistentry>
+        <term
+><guiicon
+>Показывать на панели задач</guiicon
+></term>
+        <listitem
+><para
+>Помечать цветом окно на панели в зависимости от хода выполнения.</para
+></listitem>
+        </varlistentry>
+
+        <varlistentry>
+        <term
+><guiicon
+>Показывать в уведомлениях</guiicon
+></term>
+        <listitem
+><para
+>Показывать всплывающее уведомление во время выполнения действия.</para
+></listitem>
+        </varlistentry>
+
+        <varlistentry>
+        <term
+><guiicon
+>Не закрывать всплывающее окно во время выполнения</guiicon
+></term>
+        <listitem
+><para
+>Указать, должно ли всплывающее окно в течение всего времени выполнения процесса оставаться видимым или автоматически скрываться. Оно всегда будет отображаться при завершении или неудачном выполнении задания.</para
+></listitem>
+        </varlistentry>
+
+        </variablelist>
+    </sect4>
+
+    <sect4 id="badges">
+        <title
+>Заголовки уведомлений</title>
+
+        <variablelist>
+
+        <varlistentry>
+        <term
+><guiicon
+>Показывать на панели задач</guiicon
+></term>
+        <listitem
+><para
+>Разрешить приложениям отображать значки на панели, например, с информацией о количестве непрочитанных сообщений.</para
+></listitem>
+        </varlistentry>
+
+        </variablelist>
+    </sect4>
+
+</sect3>
+
+</sect2>
+
+<sect2 id="application-settings">
+<title
+>Параметры приложений</title>
+
+<para
+>Кнопка <guilabel
+>Настроить...</guilabel
+>, расположенная в конце списка параметров, позволяет открыть страницу настройки параметров приложений. На этой странице возможно настроить поведение уведомлений для каждого приложения и каждой службы.</para>
+
+<para
+>Расположенная слева боковая панель позволяет выбрать пункт из категории <guilabel
+>Приложения</guilabel
+> или <guilabel
+>Системные службы</guilabel
+>.</para>
+
+<para
+>Для настройки всплывающих уведомлений с общими предупреждениями и звуков запуска сеанса и завершения работы следует выбрать службу <guilabel
+>Среда рабочего стола Plasma</guilabel
+>.</para>
+
+<para
+>Приложения, не предоставляющие соответствующую идентификацию, например, сценарии оболочки, возможно настроить с помощью пункта <guilabel
+>Другие приложения</guilabel
+>.</para>
+
+<variablelist>
+
+    <varlistentry>
+    <term
+><guiicon
+>Показывать всплывающие окна</guiicon
+></term>
+    <listitem
+><para
+>Включить или отключить для приложения возможность отображать всплывающие уведомления.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Показывать в режиме «Не беспокоить»</guiicon
+></term>
+    <listitem
+><para
+>Включить или отключить для приложения возможность отображать всплывающие уведомления даже в режиме «Не беспокоить».</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Показывать в журнале</guiicon
+></term>
+    <listitem
+><para
+>Включить или отключить возможность сохранять в журнале уведомлений уведомления этого приложения.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Показывать заголовки уведомлений</guiicon
+></term>
+    <listitem
+><para
+>Включить или отключить для приложения возможность отображать значки (например, количество непрочитанных сообщений) на панели.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Настроить события...</guiicon
+></term>
+    <listitem
+><para
+>Для приложений &kde; также возможно настроить каждое уведомление отдельно.</para
+></listitem>
+    </varlistentry>
+
+</variablelist>
+
+</sect2>
+
+</sect1>
+
+</article>

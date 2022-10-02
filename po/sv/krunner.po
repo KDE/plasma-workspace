@@ -1,0 +1,135 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2014, 2015, 2016, 2017, 2019, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-22 00:47+0000\n"
+"PO-Revision-Date: 2022-09-24 15:49+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.08.1\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Stefan Asserhäll"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "stefan.asserhall@bredband.net"
+
+#: main.cpp:57 view.cpp:46
+#, kde-format
+msgid "KRunner"
+msgstr "Kör program"
+
+#: main.cpp:57
+#, kde-format
+msgid "Run Command interface"
+msgstr "Gränssnitt för att köra kommandon"
+
+#: main.cpp:62
+#, kde-format
+msgid "Use the clipboard contents as query for KRunner"
+msgstr "Använd klippbordets innehåll som fråga till Kör program"
+
+#: main.cpp:63
+#, kde-format
+msgid "Start KRunner in the background, don't show it."
+msgstr "Starta Kör program i bakgrunden, visa det inte."
+
+#: main.cpp:64
+#, kde-format
+msgid "Replace an existing instance"
+msgstr "Ersätt en befintlig instans"
+
+#: main.cpp:69
+#, kde-format
+msgid "The query to run, only used if -c is not provided"
+msgstr "Frågan att besvara, bara använd om -c inte anges"
+
+#: qml/RunCommand.qml:75
+#, kde-format
+msgid "Configure"
+msgstr "Anpassa"
+
+#: qml/RunCommand.qml:76
+#, kde-format
+msgid "Configure KRunner Behavior"
+msgstr "Anpassa beteende för Kör program"
+
+#: qml/RunCommand.qml:79
+#, kde-format
+msgid "Configure KRunner…"
+msgstr "Anpassa Kör program..."
+
+#: qml/RunCommand.qml:91
+#, kde-format
+msgctxt "Textfield placeholder text, query specific KRunner plugin"
+msgid "Search '%1'…"
+msgstr "Sök '%1'…"
+
+#: qml/RunCommand.qml:92
+#, kde-format
+msgctxt "Textfield placeholder text"
+msgid "Search…"
+msgstr "Sök…"
+
+#: qml/RunCommand.qml:228 qml/RunCommand.qml:229 qml/RunCommand.qml:231
+#, kde-format
+msgid "Show Usage Help"
+msgstr "Visa användningshjälp"
+
+#: qml/RunCommand.qml:239
+#, kde-format
+msgid "Pin"
+msgstr "Fäst upp"
+
+#: qml/RunCommand.qml:240
+#, kde-format
+msgid "Pin Search"
+msgstr "Fäst upp sökning"
+
+#: qml/RunCommand.qml:242
+#, kde-format
+msgid "Keep Open"
+msgstr "Behåll öppen"
+
+#: qml/RunCommand.qml:320 qml/RunCommand.qml:325
+#, kde-format
+msgid "Recent Queries"
+msgstr "Senaste frågor"
+
+#: qml/RunCommand.qml:323
+#, kde-format
+msgid "Remove"
+msgstr "Ta bort"
+
+#~ msgid "krunner"
+#~ msgstr "Kör program"
+
+#~ msgid "Show KRunner"
+#~ msgstr "Visa Kör program"
+
+#~ msgctxt "Name for krunner shortcuts category"
+#~ msgid "KRunner"
+#~ msgstr "Kör program"
+
+#~ msgid "Run Command on clipboard contents"
+#~ msgstr "Kör kommando med klippbordets innehåll"
+
+#~ msgid "Run Command"
+#~ msgstr "Kör kommando"
+
+#~ msgctxt "Name for krunner shortcuts category"
+#~ msgid "Run Command"
+#~ msgstr "Kör kommando"

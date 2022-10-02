@@ -1,0 +1,388 @@
+# translation of kcmstyle.po to Arabic
+# translation of kcmstyle.po to
+# kcmstyle.po
+# Copyright (C) 2001,2002, 2004, 2006, 2007, 2008 Free Software Foundation, Inc.
+# Mohammed Ibrahim Halabi <mih_flyer@hotmail.com>, 2001.
+# Sayed Jaffer Al-Mosawi <mosawi@arabeyes.org>, 2002.
+# Isam Bayazidi <bayazidi@arabeyes.org>, 2002.
+# Munzir Taha <munzir@kacst.edu.sa>, 2004.
+# محمد سعد  Mohamed SAAD <metehyi@free.fr>, 2006.
+# AbdulAziz AlSharif <a.a-a.s@hotmail.com>, 2007.
+# Youssef Chahibi <chahibi@gmail.com>, 2007.
+# zayed <zayed.alsaidi@gmail.com>, 2008, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmstyle\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"PO-Revision-Date: 2021-08-18 14:39+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: ar\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 21.07.70\n"
+
+#: gtkpage.cpp:59
+#, kde-format
+msgid "%1 is not a valid GTK Theme archive."
+msgstr "%1 الملف ليس أرشيف سمة جي.تي.كي صالحًا."
+
+#: kcmstyle.cpp:161 kcmstyle.cpp:168
+#, kde-format
+msgid "There was an error loading the configuration dialog for this style."
+msgstr "هناك خطأ في تحميل مربع حوار التشكيل لهذا الأسلوب."
+
+#: kcmstyle.cpp:274
+#, kde-format
+msgid "Failed to apply selected style '%1'."
+msgstr "فشل في تطبيق النمط المختار '%1'."
+
+#: package/contents/ui/EffectSettingsPopup.qml:32
+#, kde-format
+msgid "Show icons:"
+msgstr "اظهر الأيقونات:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:33
+#, kde-format
+msgid "On buttons"
+msgstr "على الأزرار"
+
+#: package/contents/ui/EffectSettingsPopup.qml:44
+#, kde-format
+msgid "In menus"
+msgstr "في القائمة"
+
+#: package/contents/ui/EffectSettingsPopup.qml:56
+#, kde-format
+msgid "Main toolbar label:"
+msgstr "تسمية شريط الأدوات الرئيس:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "None"
+msgstr "بدون"
+
+#: package/contents/ui/EffectSettingsPopup.qml:59
+#, kde-format
+msgid "Text only"
+msgstr "النص فقط"
+
+#: package/contents/ui/EffectSettingsPopup.qml:60
+#, kde-format
+msgid "Beside icons"
+msgstr "بجوار الأيقونات"
+
+#: package/contents/ui/EffectSettingsPopup.qml:61
+#, kde-format
+msgid "Below icon"
+msgstr "تحت الأيقونات"
+
+#: package/contents/ui/EffectSettingsPopup.qml:76
+#, kde-format
+msgid "Secondary toolbar label:"
+msgstr "تسمية شريط الأدوات الثانوي:"
+
+#: package/contents/ui/GtkStylePage.qml:18
+#, kde-format
+msgid "GNOME/GTK Application Style"
+msgstr "نمط تطبيق غنوم/جي.تي.كي"
+
+#: package/contents/ui/GtkStylePage.qml:44
+#, kde-format
+msgid "GTK theme:"
+msgstr "سمة جي.تي.ك:"
+
+#: package/contents/ui/GtkStylePage.qml:69
+#, kde-format
+msgid "Preview…"
+msgstr "عاين..."
+
+#: package/contents/ui/GtkStylePage.qml:88
+#, kde-format
+msgid "Install from File…"
+msgstr "ثبت من ملف..."
+
+#: package/contents/ui/GtkStylePage.qml:93
+#, kde-format
+msgid "Get New GNOME/GTK Application Styles…"
+msgstr "احصل علىنمط تطبيق غنوم/جي.تي.كي جديد…"
+
+#: package/contents/ui/GtkStylePage.qml:109
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr "اختر أرشيف سمة جي.تي.كي"
+
+#: package/contents/ui/GtkStylePage.qml:111
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr "أرشيف سمة جي.تي.كي (*.tar.xz *.tar.gz *.tar.bz2)"
+
+#: package/contents/ui/main.qml:17
+#, kde-format
+msgid ""
+"This module allows you to modify the visual appearance of applications' user "
+"interface elements."
+msgstr "هذه الوحدة تسمح لك بتعديل المظهر المرئي لعناصر واجهة الرسومية."
+
+#: package/contents/ui/main.qml:96
+#, kde-format
+msgid "Configure Style…"
+msgstr "اضبط النمط..."
+
+#: package/contents/ui/main.qml:116
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr "اضبط الأيقونات وأشرطة الأدوات"
+
+#: package/contents/ui/main.qml:132
+#, kde-format
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "اضبط نمط تطبيق غنوم/جي.تي.كي…"
+
+#: styleconfdialog.cpp:21
+#, kde-format
+msgid "Configure %1"
+msgstr "اضبط %1"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "لسان 1"
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, kde-format
+msgid "Push Button"
+msgstr "زر الدفع"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, kde-format
+msgid "Combo box"
+msgstr "صندوق التحرير"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "خانة تأشير"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "زر الدائرة"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:133
+#, kde-format
+msgid "Tab 2"
+msgstr "لسان 2"
+
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, kde-format
+msgid "Application style"
+msgstr "نمط التطبيق"
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, kde-format
+msgid "Show icons on buttons"
+msgstr "اظهر الأيقونات على الأزرار"
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, kde-format
+msgid "Show icons in menus"
+msgstr "اظهر الأيقونات في القوائم"
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, kde-format
+msgid "Main toolbar label"
+msgstr "تسمية شريط الأدوات الرئيس"
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, kde-format
+msgid "Secondary toolbar label"
+msgstr "تسمية شريط الأدوات الثانوي"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Mohamed SAAD محمد سعد,زايد السعيدي"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "metehyi@free.fr,zayed.alsaidi@gmail.com"
+
+#~ msgid "Application Style"
+#~ msgstr "نمط التطبيق"
+
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
+#~ msgstr "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
+
+#~ msgid "Karol Szwed"
+#~ msgstr "Karol Szwed"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Kai Uwe Broulik"
+
+#, fuzzy
+#~| msgid "Con&figure..."
+#~ msgid "Download New GNOME/GTK2 Application Styles..."
+#~ msgstr "اض&بط..."
+
+#, fuzzy
+#~| msgid "Con&figure..."
+#~ msgid "GNOME/GTK2 Application Styles"
+#~ msgstr "اض&بط..."
+
+#, fuzzy
+#~| msgid "Con&figure..."
+#~ msgid "Download New GNOME/GTK3 Application Styles..."
+#~ msgstr "اض&بط..."
+
+#, fuzzy
+#~| msgid "Con&figure..."
+#~ msgid "GNOME/GTK3 Application Styles"
+#~ msgstr "اض&بط..."
+
+#~ msgid "Unable to Load Dialog"
+#~ msgstr "غير قادر على تحميل مربع الحوار"
+
+#~ msgid "No description available."
+#~ msgstr "لا يوجد وصف."
+
+#~ msgid ""
+#~ "This area shows a preview of the currently selected style without having "
+#~ "to apply it to the whole desktop."
+#~ msgstr ""
+#~ "هذه المنطقة تظهر معاينة للأسلوب المنتقى حالياً بدون تطبيقه على كل سطح "
+#~ "المكتب."
+
+#~ msgid ""
+#~ "Here you can choose from a list of predefined widget styles (e.g. the way "
+#~ "buttons are drawn) which may or may not be combined with a theme "
+#~ "(additional information like a marble texture or a gradient)."
+#~ msgstr ""
+#~ "من هنا تستطيع اختيار قائمة من أساليب ودج (مثلاً الطريقة التي ترسم بها "
+#~ "الأزرار) و الذي يمكن دمجه أو لا في سِمة (معلومات إضافية مثل تركيب رخامي أو "
+#~ "تدرّج في الألوان)."
+
+#, fuzzy
+#~| msgid ""
+#~| "If you enable this option, KDE Applications will show small icons "
+#~| "alongside some important buttons."
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "some important buttons."
+#~ msgstr ""
+#~ "إذا مكّنت هذا الخيار، فإن تطبيقات كدي ستظهر  أيقونات صغيرة بجانب بعض "
+#~ "الأزرار المهمة."
+
+#, fuzzy
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "most menu items."
+#~ msgstr ""
+#~ "إذا مكّنت هذا الخيار، فإن تطبيقات كدي ستظهر  أيقونات صغيرة بجانب بعض "
+#~ "الأزرار المهمة."
+
+#, fuzzy
+#~ msgid ""
+#~ "<p><b>No text:</b> Shows only icons on toolbar buttons. Best option for "
+#~ "low resolutions.</p><p><b>Text only: </b>Shows only text on toolbar "
+#~ "buttons.</p><p><b>Text beside icons: </b> Shows icons and text on toolbar "
+#~ "buttons. Text is aligned beside the icon.</p><b>Text below icons: </b> "
+#~ "Shows icons and text on toolbar buttons. Text is aligned below the icon."
+#~ msgstr ""
+#~ "<p><b>للأيقونات فقط:</b> إظهار أيقونات فقط على أزرار شريط الأدوات. الخيار "
+#~ "الأفضل لاستبانة شاشة منخفضة.</p><p><b>نص فقط: </b>إظهار نص فقط على أزرار "
+#~ "شريط الأدوات.</p><p><b>نص بجانب أيقونات: </b>إظهار أيقونات و نص على أزرار "
+#~ "شريط الأدوات. النص بجانب الأيقونات.</p><b>نص أسفل الأيقونات: </b> إظهار "
+#~ "أيقونات و نص على أزرار شريط الأدوات. النص أسفل الأيقونات."
+
+#, fuzzy
+#~| msgid "Widget style:"
+#~ msgid "Widget Style"
+#~ msgstr "أسلوب الودجة:"
+
+#~ msgid "Widget style:"
+#~ msgstr "أسلوب الودجة:"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Fine Tuning"
+#~ msgstr "&تضبيط دقيق"
+
+#~ msgid "Description: %1"
+#~ msgstr "الوصف: %1"
+
+#~ msgid ""
+#~ "This page allows you to choose details about the widget style options"
+#~ msgstr "تسمح لك هذه الصفحة باختيار تفاصيل أسلوب الودجات"
+
+#~ msgid "Group Box"
+#~ msgstr "مربع مجموعة"
+
+#~ msgid "KDE Style Module"
+#~ msgstr "وحدة الأسلوب لكدي"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "Low display resolution and Low CPU"
+#~ msgstr "دقة عرض منخفضة و قدرة معالجة منخفضة"
+
+#~ msgid "High display resolution and Low CPU"
+#~ msgstr "دقة عرض عالية و قدرة معالجة منخفضة"
+
+#~ msgid "Low display resolution and High CPU"
+#~ msgstr "دقة عرض منخفضة و قدرة معالجة مرتفعة"
+
+#~ msgid "High display resolution and High CPU"
+#~ msgstr "دقة عرض عالية و قدرة معالجة عالية"
+
+#~ msgid "Low display resolution and Very High CPU"
+#~ msgstr "دقة عرضة عالية و قدرة معالجة عالية جدا"
+
+#~ msgid "High display resolution and Very High CPU"
+#~ msgstr "دقة عرض عالية و قدرة معالجة عالية جدا"
+
+#~ msgid ""
+#~ "If you enable this option, KDE Applications will run internal animations."
+#~ msgstr "إذا مكّنت هذا الخيار، فإن تطبيقات كدي ستشغل التحريكات الداخلية."
+
+#~ msgid "kcmstyle"
+#~ msgstr "kcmstyle"
+
+#~ msgid "Icons Only"
+#~ msgstr "الأيقونات فقط"
+
+#, fuzzy
+#~| msgctxt "@label:listbox"
+#~| msgid "Text pos&ition:"
+#~ msgctxt "@label:listbox"
+#~ msgid "Text pos&ition of toolbar elements:"
+#~ msgstr "مو&ضع النص:"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Style"
+#~ msgstr "ال&أسلوب"
+
+#~ msgid ""
+#~ "This page allows you to enable various widget style effects. For best "
+#~ "performance, it is advisable to disable all effects."
+#~ msgstr ""
+#~ "هذه الصفحة تسمح لك بتمكين تأثيرات أسلوب ودج مختلفة. لأداء أفضل، ينصح  "
+#~ "بمنع كلّ التأثيرات."

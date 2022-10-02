@@ -1,0 +1,67 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2014.
+#
+# Larso, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"PO-Revision-Date: 2014-09-29 19:37+0300\n"
+"Last-Translator: Lasse Liehu <lasse.liehu@gmail.com>\n"
+"Language-Team: Finnish <lokalisointi@lists.coss.fi>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: timesource.cpp:46
+msgid "Local"
+msgstr "Paikallinen"
+
+#: timesource.cpp:61
+msgid "Timezone"
+msgstr "Aikavyöhyke"
+
+#: timesource.cpp:66 timesource.cpp:69 timesource.cpp:73
+msgid "Timezone City"
+msgstr "Aikavyöhykkeen kaupunki"
+
+#: timesource.cpp:68 timesource.cpp:71
+msgid "Timezone Continent"
+msgstr "Aikavyöhykkeen maanosa"
+
+#: timesource.cpp:72
+msgid "Timezone Country"
+msgstr "Aikavyöhykkeen maa"
+
+#: timesource.cpp:97
+msgid "Offset"
+msgstr "Siirtymä"
+
+#: timesource.cpp:100
+msgid "Timezone Abbreviation"
+msgstr "Aikavyöhykkeen lyhenne"
+
+#: timesource.cpp:131 timesource.cpp:150 timesource.cpp:171
+msgid "DateTime"
+msgstr "Päivämäärä ja kellonaika"
+
+#: timesource.cpp:146
+msgid "Latitude"
+msgstr "Leveysaste"
+
+#: timesource.cpp:147
+msgid "Longitude"
+msgstr "Pituusaste"
+
+#: timesource.cpp:148
+msgid "Solar"
+msgstr "Aurinkoaika"
+
+#: timesource.cpp:149
+msgid "Moon"
+msgstr "Kuuaika"

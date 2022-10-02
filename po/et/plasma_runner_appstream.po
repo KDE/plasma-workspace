@@ -1,0 +1,29 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Marek Laane <qiilaq69@gmail.com>, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-11 00:46+0000\n"
+"PO-Revision-Date: 2019-11-08 22:41+0200\n"
+"Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
+"Language-Team: Estonian <kde-et@lists.linux.ee>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 19.08.1\n"
+
+#: appstreamrunner.cpp:34
+#, kde-format
+msgid "Looks for non-installed components according to :q:"
+msgstr "Paigaldamata komponentide otsing :q: järgi"
+
+#: appstreamrunner.cpp:133
+#, fuzzy, kde-format
+#| msgid "Get %1..."
+msgid "Get %1…"
+msgstr "Hangi %1 ..."

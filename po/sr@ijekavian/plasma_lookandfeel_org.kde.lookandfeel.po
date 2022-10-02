@@ -1,0 +1,305 @@
+# Translation of plasma_lookandfeel_org.kde.lookandfeel.po into Serbian.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2014, 2015, 2016, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-06-18 02:26+0200\n"
+"PO-Revision-Date: 2017-09-25 19:53+0200\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@ijekavian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#: ../sddm-theme/KeyboardButton.qml:13
+msgid "Keyboard Layout: %1"
+msgstr "Распоред тастатуре: %1"
+
+#: ../sddm-theme/Login.qml:59
+msgid "Username"
+msgstr "Корисничко име"
+
+#: ../sddm-theme/Login.qml:75 contents/lockscreen/MainBlock.qml:62
+msgid "Password"
+msgstr "Лозинка"
+
+#: ../sddm-theme/Login.qml:114
+msgid "Log In"
+msgstr ""
+
+#: ../sddm-theme/Main.qml:193 contents/lockscreen/LockScreenUi.qml:247
+msgid "Caps Lock is on"
+msgstr "CapsLock укључен"
+
+#: ../sddm-theme/Main.qml:205 ../sddm-theme/Main.qml:385
+#: contents/logout/Logout.qml:177
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr ""
+
+# rewrite-msgid: /Restart/Reset/
+#: ../sddm-theme/Main.qml:212 ../sddm-theme/Main.qml:392
+#: contents/logout/Logout.qml:195
+msgid "Restart"
+msgstr "Ресетуј"
+
+#: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:399
+#: contents/logout/Logout.qml:205
+#, fuzzy
+#| msgid "Shutdown"
+msgid "Shut Down"
+msgstr "Угаси"
+
+#: ../sddm-theme/Main.qml:226
+msgctxt "For switching to a username and password prompt"
+msgid "Other..."
+msgstr ""
+
+#: ../sddm-theme/Main.qml:373
+msgid "Type in Username and Password"
+msgstr ""
+
+#: ../sddm-theme/Main.qml:406
+#, fuzzy
+#| msgid "Switch User"
+msgid "List Users"
+msgstr "Промени корисника"
+
+#: ../sddm-theme/Main.qml:473 contents/lockscreen/LockScreenUi.qml:512
+msgctxt "Button to show/hide virtual keyboard"
+msgid "Virtual Keyboard"
+msgstr "Виртуелна тастатура"
+
+#: ../sddm-theme/Main.qml:498
+msgid "Login Failed"
+msgstr "Пријављивање пропало"
+
+#: ../sddm-theme/SessionButton.qml:35
+msgid "Desktop Session: %1"
+msgstr "Сесија површи: %1"
+
+#: contents/components/Battery.qml:50
+msgid "%1%"
+msgstr "%1%"
+
+#: contents/components/Battery.qml:51
+msgid "Battery at %1%"
+msgstr "Батерија на %1%"
+
+#: contents/components/KeyboardLayoutButton.qml:38
+msgctxt "Button to change keyboard layout"
+msgid "Switch layout"
+msgstr "Пребаци распоред"
+
+#: contents/components/UserList.qml:56
+msgctxt "Nobody logged in on that session"
+msgid "Unused"
+msgstr "некоришћена"
+
+#: contents/components/UserList.qml:62
+msgctxt "User logged in on console number"
+msgid "TTY %1"
+msgstr "ТТИ %1"
+
+#: contents/components/UserList.qml:64
+msgctxt "User logged in on console (X display number)"
+msgid "on TTY %1 (Display %2)"
+msgstr "на ТТИ‑ју %1 (екран %2)"
+
+#: contents/components/UserList.qml:68
+msgctxt "Username (location)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: contents/lockscreen/config.qml:17
+#, fuzzy
+#| msgid "Unlock"
+msgid "Clock:"
+msgstr "Откључај"
+
+#: contents/lockscreen/config.qml:21
+msgctxt "verb, to show something"
+msgid "Always show"
+msgstr ""
+
+#: contents/lockscreen/config.qml:34
+msgid "Media controls:"
+msgstr ""
+
+#: contents/lockscreen/config.qml:38
+msgctxt "verb, to show something"
+msgid "Show"
+msgstr ""
+
+#: contents/lockscreen/LockScreenUi.qml:44
+msgid "Unlocking failed"
+msgstr "Откључавање пропало"
+
+#: contents/lockscreen/LockScreenUi.qml:263
+msgid "Switch User"
+msgstr "Промени корисника"
+
+#: contents/lockscreen/LockScreenUi.qml:460
+#, fuzzy
+#| msgid "Switch Session"
+msgid "Switch to This Session"
+msgstr "Пребаци сесију"
+
+#: contents/lockscreen/LockScreenUi.qml:468
+msgid "Start New Session"
+msgstr "Покрени нову сесију"
+
+#: contents/lockscreen/LockScreenUi.qml:481
+msgid "Back"
+msgstr "Назад"
+
+#: contents/lockscreen/MainBlock.qml:99
+msgid "Unlock"
+msgstr "Откључај"
+
+#: contents/lockscreen/MediaControls.qml:120
+msgid "No media playing"
+msgstr "Ништа се не пушта"
+
+#: contents/lockscreen/MediaControls.qml:146
+msgid "Previous track"
+msgstr "Претходна нумера"
+
+#: contents/lockscreen/MediaControls.qml:157
+msgid "Play or Pause media"
+msgstr "Пусти или паузирај медијум"
+
+#: contents/lockscreen/MediaControls.qml:168
+msgid "Next track"
+msgstr "Следећа нумера"
+
+#: contents/logout/Logout.qml:153
+msgid ""
+"One other user is currently logged in. If the computer is shut down or "
+"restarted, that user may lose work."
+msgid_plural ""
+"%1 other users are currently logged in. If the computer is shut down or "
+"restarted, those users may lose work."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: contents/logout/Logout.qml:167
+msgid "When restarted, the computer will enter the firmware setup screen."
+msgstr ""
+
+#: contents/logout/Logout.qml:186
+msgid "Hibernate"
+msgstr ""
+
+#: contents/logout/Logout.qml:215
+msgid "Log Out"
+msgstr ""
+
+# rewrite-msgid: /Reboot/Reset/
+#: contents/logout/Logout.qml:238
+#, fuzzy
+#| msgid "Reboot in 1 second"
+#| msgid_plural "Reboot in %1 seconds"
+msgid "Restarting in 1 second"
+msgid_plural "Restarting in %1 seconds"
+msgstr[0] "Ресетовање за %1 секунду"
+msgstr[1] "Ресетовање за %1 секунде"
+msgstr[2] "Ресетовање за %1 секунди"
+msgstr[3] "Ресетовање за 1 секунду"
+
+#: contents/logout/Logout.qml:240
+msgid "Shutting down in 1 second"
+msgid_plural "Shutting down in %1 seconds"
+msgstr[0] "Гашење за %1 секунду"
+msgstr[1] "Гашење за %1 секунде"
+msgstr[2] "Гашење за %1 секунди"
+msgstr[3] "Гашење за 1 секунду"
+
+#: contents/logout/Logout.qml:242
+msgid "Logging out in 1 second"
+msgid_plural "Logging out in %1 seconds"
+msgstr[0] "Одјављивање за %1 секунду"
+msgstr[1] "Одјављивање за %1 секунде"
+msgstr[2] "Одјављивање за %1 секунди"
+msgstr[3] "Одјављивање за 1 секунду"
+
+#: contents/logout/Logout.qml:252
+msgid "OK"
+msgstr "У реду"
+
+#: contents/logout/Logout.qml:257
+msgid "Cancel"
+msgstr "Одустани"
+
+#: contents/osd/OsdItem.qml:58
+msgid "100%"
+msgstr ""
+
+#: contents/osd/OsdItem.qml:71
+#, fuzzy
+#| msgid "%1%"
+msgctxt "Percentage value"
+msgid "%1%"
+msgstr "%1%"
+
+#: contents/runcommand/RunCommand.qml:61
+msgid "Configure"
+msgstr "Подеси"
+
+#: contents/runcommand/RunCommand.qml:62
+msgid "Configure Search Plugins"
+msgstr "Подеси прикључке за претрагу"
+
+#: contents/runcommand/RunCommand.qml:64
+#, fuzzy
+#| msgid "Configure"
+msgid "Configure KRunner..."
+msgstr "Подеси"
+
+#: contents/runcommand/RunCommand.qml:76
+msgctxt "Textfield placeholder text, query specific KRunner"
+msgid "Search '%1'..."
+msgstr "Тражи „%1“..."
+
+#: contents/runcommand/RunCommand.qml:78
+msgctxt "Textfield placeholder text"
+msgid "Search..."
+msgstr "Тражи..."
+
+#: contents/runcommand/RunCommand.qml:199
+#: contents/runcommand/RunCommand.qml:201
+msgid "Close"
+msgstr "Затвори"
+
+#: contents/runcommand/RunCommand.qml:200
+msgid "Close Search"
+msgstr "Затвори претрагу"
+
+#: contents/runcommand/RunCommand.qml:263
+msgid "Recent Queries"
+msgstr "Недавни упити"
+
+#: contents/runcommand/RunCommand.qml:266
+msgid "Remove"
+msgstr "Уклони"
+
+#: contents/runcommand/RunCommand.qml:268
+msgid "in category recent queries"
+msgstr "у категорији недавних упита"
+
+#: contents/splash/Splash.qml:94
+msgctxt ""
+"This is the first text the user sees while starting in the splash screen, "
+"should be translated as something short, is a form that can be seen on a "
+"product. Plasma is the project name so shouldn't be translated."
+msgid "Plasma made by KDE"
+msgstr "Плазма из КДЕ‑а"

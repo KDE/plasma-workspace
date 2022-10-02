@@ -1,0 +1,238 @@
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kdebase package.
+# HARI VISHNU <harivishnu@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdebase\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-22 00:47+0000\n"
+"PO-Revision-Date: 2021-04-11 13:39+0000\n"
+"Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
+"Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
+"discuss@googlegroups.com>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Weblate 4.4\n"
+
+#: logout.cpp:344
+#, kde-format
+msgid "Logout canceled by '%1'"
+msgstr "പുറത്തിറങ്ങുന്നതു് %1 റദ്ദാക്കി"
+
+#: main.cpp:117
+#, kde-format
+msgid "$HOME not set!"
+msgstr "$HOME സജ്ജമാക്കിയിട്ടില്ല!"
+
+#: main.cpp:121 main.cpp:127
+#, kde-format
+msgid "$HOME directory (%1) does not exist."
+msgstr "$HOME ഹോം കൂട (%1) നിലവിലില്ല."
+
+#: main.cpp:123
+#, kde-format
+msgid "No write access to $HOME directory (%1)."
+msgstr "$HOME കൂടയിലേക്ക് എഴുത്തവകാശമില്ല (%1)."
+
+#: main.cpp:129
+#, kde-format
+msgid "No read access to $HOME directory (%1)."
+msgstr "$HOME കൂടയിലേക്ക് വായനാവകാശമില്ല (%1)."
+
+#: main.cpp:133
+#, kde-format
+msgid "$HOME directory (%1) is out of disk space."
+msgstr "$HOME കൂടയിൽ (%1) ഡിസ്ക് ഇടമില്ല."
+
+#: main.cpp:136
+#, kde-format
+msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+msgstr "$HOME കൂടയിലേക്ക് (%2) എഴുതുന്നത് '%1' പിശക് കാരണം പരാജയപ്പെട്ടു"
+
+#: main.cpp:149 main.cpp:184
+#, kde-format
+msgid "No write access to '%1'."
+msgstr "'%1' ലേക്ക് എഴുത്തവകാശമില്ല."
+
+#: main.cpp:151 main.cpp:186
+#, kde-format
+msgid "No read access to '%1'."
+msgstr "'%1' ലേക്ക് വായനാവകാശമില്ല."
+
+#: main.cpp:159 main.cpp:172
+#, kde-format
+msgid "Temp directory (%1) is out of disk space."
+msgstr "താൽക്കാലിക കൂടയിൽ (%1) ഡിസ്ക് ഇടമില്ല."
+
+#: main.cpp:162 main.cpp:175
+#, kde-format
+msgid ""
+"Writing to the temp directory (%2) failed with\n"
+"    the error '%1'"
+msgstr ""
+"താൽക്കാലിക കൂടയിലേക്ക് (%2) എഴുതുന്നത് \n"
+"     %1 പിശക് കാരണം  പരാജയപ്പെട്ടു"
+
+#: main.cpp:190
+#, kde-format
+msgid ""
+"The following installation problem was detected\n"
+"while trying to start Plasma:"
+msgstr ""
+"പ്ലാസ്മ ആരംഭിക്കാൻ ശ്രമിക്കുമ്പോൾ\n"
+"ഇനിപ്പറയുന്ന ഇൻസ്റ്റാളേഷൻ പിശക് കണ്ടെത്തി:"
+
+#: main.cpp:193
+#, kde-format
+msgid ""
+"\n"
+"\n"
+"Plasma is unable to start.\n"
+msgstr ""
+"\n"
+"\n"
+"പ്ലാസ്മ ആരംഭിക്കാൻ കഴിഞ്ഞില്ല.\n"
+
+#: main.cpp:200
+#, kde-format
+msgid "Plasma Workspace installation problem!"
+msgstr "പ്ലാസ്മ പണിയിടം ഇൻസ്റ്റാളേഷൻ പ്രശ്നം!"
+
+#: main.cpp:236
+#, kde-format
+msgid ""
+"The reliable Plasma session manager that talks the standard X11R6 \n"
+"session management protocol (XSMP)."
+msgstr ""
+"സ്റ്റാൻഡേർഡ് എക്സ് 11 ആർ 6 മായി സംവദിക്കുന്ന വിശ്വസനീയമായ പ്ലാസ്മ സെഷൻ മാനേജർ\n"
+"സെഷൻ മാനേജുമെന്റ് പ്രോട്ടോക്കോൾ (എക്സ്എസ്എംപി)."
+
+#: main.cpp:240
+#, kde-format
+msgid "Restores the saved user session if available"
+msgstr "ഉപയോക്താവിന്റെ സൂക്ഷിച്ചിരിക്കുന്ന സെഷന്‍ തിരികെ കൊണ്ടുവരുന്നു ലഭ്യമാണെങ്കില്‍"
+
+#: main.cpp:243
+#, kde-format
+msgid "Also allow remote connections"
+msgstr "വിദൂര കണക്ഷനുകളും അനുവദിക്കുന്നു"
+
+#: main.cpp:246
+#, kde-format
+msgid "Starts the session in locked mode"
+msgstr "ലോക്കുചെയ്ത മോഡിൽ സെഷൻ ആരംഭിക്കുന്നു"
+
+#: main.cpp:250
+#, kde-format
+msgid ""
+"Starts without lock screen support. Only needed if other component provides "
+"the lock screen."
+msgstr ""
+"ലോക്ക് സ്ക്രീൻ പിന്തുണയില്ലാതെ ആരംഭിക്കുന്നു. മറ്റ് ഘടകങ്ങൾ ലോക്ക് സ്ക്രീൻ നൽകുന്നുവെങ്കിൽ മാത്രം "
+"ആവശ്യമാണ്."
+
+#: server.cpp:873
+#, kde-format
+msgid "Session Management"
+msgstr "സെഷന്‍ നടത്തിപ്പുകാരന്‍"
+
+#: server.cpp:876
+#, kde-format
+msgid "Log Out"
+msgstr "പുറത്തിറങ്ങുക"
+
+#: server.cpp:881
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "സ്ഥിരീകരണമില്ലാതെ പുറത്ത് കടക്കുക"
+
+#: server.cpp:886
+#, kde-format
+msgid "Halt Without Confirmation"
+msgstr "സ്ഥിരീകരണമില്ലാതെ നിർത്തുക"
+
+#: server.cpp:891
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "സ്ഥിരീകരണമില്ലാതെ പുനഃരാരംഭിക്കുക"
+
+#, fuzzy
+#~ msgid ""
+#~ "Starts <wm> in case no other window manager is \n"
+#~ "participating in the session. Default is 'kwin'"
+#~ msgstr ""
+#~ "വേറെ ജാലക നടത്തിപ്പുകാരന്‍മാര്‍ സെഷനില്‍ പങ്കെടുക്കുന്നെങ്കില്‍ ഇത് \n"
+#~ "'ഡബിള്‍ യൂ.എം'(wm) തുടങ്ങുന്നു. സ്വാഭാവികമായിറ്റുള്ളത് 'കെ.വിന്‍' ആണ്"
+
+#, fuzzy
+#~ msgid "Logout"
+#~ msgstr "&പുറത്തിറങ്ങുക"
+
+#, fuzzy
+#~ msgid "Sleeping in 1 second"
+#~ msgid_plural "Sleeping in %1 seconds"
+#~ msgstr[0] "പുറത്തിറങ്ങുന്നു 1 സെകന്റില്‍"
+#~ msgstr[1] "പുറത്തിറങ്ങുന്നു %1 സെകന്റില്‍"
+
+#~ msgid "Logging out in 1 second."
+#~ msgid_plural "Logging out in %1 seconds."
+#~ msgstr[0] "പുറത്തിറങ്ങുന്നു 1 സെകന്റില്‍"
+#~ msgstr[1] "പുറത്തിറങ്ങുന്നു %1 സെകന്റില്‍"
+
+#~ msgid "Turning off computer in 1 second."
+#~ msgid_plural "Turning off computer in %1 seconds."
+#~ msgstr[0] "കമ്പ്യൂടര്‍ നിര്‍ത്തുന്നു 1 സെകന്റില്‍"
+#~ msgstr[1] "കമ്പ്യൂടര്‍ നിര്‍ത്തുന്നു %1 സെകന്റില്‍"
+
+#~ msgid "Restarting computer in 1 second."
+#~ msgid_plural "Restarting computer in %1 seconds."
+#~ msgstr[0] "കമ്പ്യൂടര്‍ വീണ്ടും തുടങ്ങുന്നു 1 സെകന്റില്‍"
+#~ msgstr[1] "കമ്പ്യൂടര്‍ വീണ്ടും തുടങ്ങുന്നു %1 സെകന്റില്‍"
+
+#, fuzzy
+#~ msgid "Turn Off Computer"
+#~ msgstr "&കമ്പ്യൂടര്‍ നിര്‍ത്തി വെക്കുക"
+
+#, fuzzy
+#~ msgid "Restart Computer"
+#~ msgstr "&കമ്പ്യൂടര്‍ വീണ്ടും തുടങ്ങുക"
+
+#, fuzzy
+#~ msgid "Cancel"
+#~ msgstr "&റദ്ദാക്കുക"
+
+#~ msgid "&Standby"
+#~ msgstr "&സ്റ്റാന്റ് ബൈ"
+
+#~ msgid "Suspend to &RAM"
+#~ msgstr "&റാം (RAM) ഇലേക്ക് സസ്പെന്റ് ചെയ്യുക"
+
+#~ msgid "Suspend to &Disk"
+#~ msgstr "&ഡിസ്ക് (disk) ഇലേക്ക് സസ്പെന്റ് ചെയ്യുക"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "ഹരി വിഷ്ണു"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "harivishnu@gmail.com"
+
+#~ msgid "(C) 2000, The KDE Developers"
+#~ msgstr "(C) 2000,  കെ.ഡി.ഇ രചയിതാക്കള്‍"
+
+#~ msgid "Matthias Ettrich"
+#~ msgstr "മത്തിയാസ് എട്ട്രിച്ച്"
+
+#~ msgid "Luboš Luňák"
+#~ msgstr "ലുബോസ് ലുനാക്ക്"
+
+#~ msgid "Maintainer"
+#~ msgstr "പരിപാലകന്‍"
+
+#~ msgctxt "current option in boot loader"
+#~ msgid " (current)"
+#~ msgstr "(ഇപ്പോഴത്തെ)"

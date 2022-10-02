@@ -1,0 +1,427 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Jean Cayron <jean.cayron@gmail.com>, 2008, 2009.
+# Jean Cayron <jean.cayron@base.be>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_desktopthemedetails\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"PO-Revision-Date: 2011-07-11 22:17+0200\n"
+"Last-Translator: Jean Cayron <jean.cayron@base.be>\n"
+"Language-Team: Walloon <linux-wa@walon.org>\n"
+"Language: wa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Get New Themes..."
+msgid "Name of the current Plasma Style"
+msgstr "Aveur des noveas tinmes..."
+
+#: kcm.cpp:108
+#, fuzzy, kde-format
+#| msgid "Unable to save theme."
+msgid "Unable to create a temporary file."
+msgstr "Dji n' a savou schaper l' tinme."
+
+#: kcm.cpp:119
+#, fuzzy, kde-format
+#| msgid "Unable to save theme."
+msgid "Unable to download the theme: %1"
+msgstr "Dji n' a savou schaper l' tinme."
+
+#: kcm.cpp:144
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: kcm.cpp:147 kcm.cpp:153
+#, kde-format
+msgid "Theme installation failed."
+msgstr ""
+
+#: kcm.cpp:245
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "This module lets you choose the Plasma style."
+msgstr ""
+
+#: package/contents/ui/main.qml:69
+#, fuzzy, kde-format
+#| msgid "Available themes"
+msgid "All Themes"
+msgstr "Tinmes k' i gn a"
+
+#: package/contents/ui/main.qml:70
+#, fuzzy, kde-format
+#| msgid "Theme"
+msgid "Light Themes"
+msgstr "Tinme"
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgid "Dark Themes"
+msgstr ""
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "Color scheme compatible"
+msgstr ""
+
+#: package/contents/ui/main.qml:100
+#, fuzzy, kde-format
+#| msgctxt "plasma name"
+#| msgid "Color Scheme"
+msgid "Follows color scheme"
+msgstr "Djeu d' coleurs"
+
+#: package/contents/ui/main.qml:118
+#, fuzzy, kde-format
+#| msgid "Theme"
+msgid "Edit Theme…"
+msgstr "Tinme"
+
+#: package/contents/ui/main.qml:125
+#, kde-format
+msgid "Remove Theme"
+msgstr "Oister tinme"
+
+#: package/contents/ui/main.qml:132
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Theme"
+msgstr "Oister tinme"
+
+#: package/contents/ui/main.qml:174
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: package/contents/ui/main.qml:179
+#, fuzzy, kde-format
+#| msgid "Get New Themes..."
+msgid "Get New Plasma Styles…"
+msgstr "Aveur des noveas tinmes..."
+
+#: package/contents/ui/main.qml:193
+#, fuzzy, kde-format
+#| msgid "Theme"
+msgid "Open Theme"
+msgstr "Tinme"
+
+#: package/contents/ui/main.qml:195
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:31
+#, kde-format
+msgid ""
+"This tool allows you to set the theme of the current Plasma session, without "
+"accidentally setting it to one that is either not available, or which is "
+"already set."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:35
+#, kde-format
+msgid ""
+"The name of the theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:36
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:49
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:65
+#, kde-format
+msgid "The current Plasma session's theme has been set to %1"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:67
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:75
+#, kde-format
+msgid "You have the following Plasma themes on your system:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Djan Cayron"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "jean.cayron@gmail.com"
+
+#, fuzzy
+#~| msgid "Get New Themes..."
+#~ msgid "Plasma Style"
+#~ msgstr "Aveur des noveas tinmes..."
+
+#, fuzzy
+#~| msgid "Get New Themes..."
+#~ msgid "Plasma Styles"
+#~ msgstr "Aveur des noveas tinmes..."
+
+#, fuzzy
+#~| msgid "How to Change Desktop Theme"
+#~ msgid "Download New Plasma Styles"
+#~ msgstr "Comint candjî d' tinme do scribanne"
+
+#, fuzzy
+#~| msgid "Remove Desktop Theme"
+#~ msgid "Configure Desktop Theme"
+#~ msgstr "Oister tinme do scribanne"
+
+#~ msgid "KDE Desktop Theme Module"
+#~ msgstr "Module tinme do scribanne di KDE"
+
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
+#~ msgstr "© 2002 Karol Szwed, Daniel Molkentin"
+
+#~ msgid "Details"
+#~ msgstr "Vey totafwait"
+
+#~ msgctxt "plasma name"
+#~ msgid "Panel Background"
+#~ msgstr "Coleur di fond d' on scriftôr"
+
+#~ msgctxt "plasma name"
+#~ msgid "Kickoff"
+#~ msgstr "Kickoff"
+
+#~ msgctxt "plasma name"
+#~ msgid "Task Items"
+#~ msgstr "Cayets d' bouye"
+
+#~ msgctxt "plasma name"
+#~ msgid "Widget Background"
+#~ msgstr "Coleur di fond d' ene ahesse"
+
+#~ msgctxt "plasma name"
+#~ msgid "Translucent Background"
+#~ msgstr "Coleur di fond transparinte"
+
+#~ msgctxt "plasma name"
+#~ msgid "Dialog Background"
+#~ msgstr "Coleur di fond d' ene divize"
+
+#~ msgctxt "plasma name"
+#~ msgid "Analog Clock"
+#~ msgstr "Ôrlodje analodjike"
+
+#~ msgctxt "plasma name"
+#~ msgid "Notes"
+#~ msgstr "Notes"
+
+#~ msgctxt "plasma name"
+#~ msgid "Tooltip"
+#~ msgstr "Racsegne"
+
+#~ msgctxt "plasma name"
+#~ msgid "Pager"
+#~ msgstr "Pager"
+
+#~ msgctxt "plasma name"
+#~ msgid "Run Command Dialog"
+#~ msgstr "Divize d' enondaedje d' ene comande"
+
+#~ msgctxt "plasma name"
+#~ msgid "Shutdown Dialog"
+#~ msgstr "Divize di distindaedje"
+
+#~ msgctxt "plasma name"
+#~ msgid "Icons"
+#~ msgstr "Imådjetes"
+
+#~ msgid "(Customized)"
+#~ msgstr "(A vosse môde)"
+
+#~ msgid "User customized theme"
+#~ msgstr "Tinme metou al môde di l' uzeu"
+
+#~ msgid ""
+#~ "Theme items have been changed.  Do you still wish remove the \"%1\" theme?"
+#~ msgstr ""
+#~ "Des cayets do tinme ont stî candjîs. Voloz vs co oister l' tinme « %1 » ?"
+
+#~ msgid "Removal of the default desktop theme is not allowed."
+#~ msgstr "Li oistaedje do prémetou tinme do scribanne n' est nén permetou."
+
+#~ msgid "Are you sure you wish remove the \"%1\" theme?"
+#~ msgstr "Estoz vs seur di voleur oister l' tinme « %1 » ?"
+
+#~ msgid ""
+#~ "Please apply theme item changes (with a new theme name) before attempting "
+#~ "to export theme."
+#~ msgstr ""
+#~ "Metoz èn ouve, s' i vs plait, les candjmints so les cayets (avou on novea "
+#~ "no) divant d' sayî d' ebaguer l' tinme."
+
+#~ msgid "Export Desktop Theme"
+#~ msgstr "Ebaguer tinme do scribanne"
+
+#~ msgid "Export theme to file"
+#~ msgstr "Ebaguer tinme viè on fitchî"
+
+#~ msgid "Theme Item"
+#~ msgstr "Cayet do tinme"
+
+#~ msgid "Source"
+#~ msgstr "Sourdant"
+
+#, fuzzy
+#~| msgid "%1 %2"
+#~ msgctxt ""
+#~ "%1 is the name of the theme, %2 is the type of the element (background, "
+#~ "icon, note, etc)"
+#~ msgid "%1 %2"
+#~ msgstr "%1 %2"
+
+#~ msgid "File..."
+#~ msgstr "Fitchî..."
+
+#~ msgid "Select File to Use for %1"
+#~ msgstr "Tchoezi l' fitchî a eployî po %1"
+
+#~ msgid " Author: %1"
+#~ msgstr "Oteur : %1"
+
+#~ msgid "Version: %1"
+#~ msgstr "Modêye : %1"
+
+#~ msgid "Desktop Theme Details"
+#~ msgstr "Detays do tinme do scribanne"
+
+#~ msgid "Choose an item and customize it by assigning it a theme"
+#~ msgstr "Tchoezixhoz on cayet eyet l' mete a vosse môde e lyi dnant on tinme"
+
+#~ msgid ""
+#~ "You can set any theme to any item. The available themes for the item are "
+#~ "in the dropdown box on the right."
+#~ msgstr ""
+#~ "Vos savoz dner tolminme ké tinme a tolminme ké cayet. Les tinmes k' i gn "
+#~ "a pol cayet sont el boesse disrôlante a droete."
+
+#~ msgid "Enable more options"
+#~ msgstr "Mete en alaedje pus di tchuzes"
+
+#~ msgid "More"
+#~ msgstr "Pus"
+
+#~ msgid "Remove the selected theme"
+#~ msgstr "Oister l' tinme tchoezi"
+
+#~ msgid "Export Theme to File..."
+#~ msgstr "Abaguer tinme viè on fitchî..."
+
+#~ msgid "New theme name:"
+#~ msgstr "No do novea tinme :"
+
+#~ msgid "Custom theme name"
+#~ msgstr "No do tinme a vosse môde"
+
+#~ msgid "Give a name to your custom theme."
+#~ msgstr "Dinoz on no å tinme a vosse môde."
+
+#~ msgid "Author:"
+#~ msgstr "Oteur :"
+
+#~ msgid "Custom theme author "
+#~ msgstr "Oteur do tinme a vosse môde "
+
+#~ msgid "Enter the author name of your custom theme."
+#~ msgstr "Dinoz l' no di l' oteur då tinme a vosse môde."
+
+#~ msgid "Version:"
+#~ msgstr "Modêye :"
+
+#~ msgid "Custom theme version number"
+#~ msgstr "Limero del modêye do tinme a vosse môde"
+
+#~ msgid "Enter the version number of your custom theme."
+#~ msgstr "Dinoz l' limero del modêye då tinme a vosse môde."
+
+#~ msgid "Description:"
+#~ msgstr "Discrijhaedje :"
+
+#~ msgid "Custom theme description"
+#~ msgstr "Li discrijhaedje do tinme a vosse môde"
+
+#, fuzzy
+#~| msgid "Enter the version number of your custom theme."
+#~ msgid "Enter a description which will explain your custom theme."
+#~ msgstr "Dinoz l' limero del modêye då tinme a vosse môde."
+
+#~ msgid "Select theme from above to customize"
+#~ msgstr "Tchoezixhoz on tinme chal pa dzeu pol mete a vos môde"
+
+#~ msgid "Theme Author"
+#~ msgstr "Oteur do tinme"
+
+#~ msgid "Theme Name"
+#~ msgstr "No do tinme"
+
+#~ msgid "Theme Version"
+#~ msgstr "Modêye do tinme"
+
+#~ msgid "The theme description goes here..."
+#~ msgstr "Li discrijhaedje do tinme vént chal..."
+
+#~ msgid "Karol Szwed"
+#~ msgstr "Karol Szwed"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "KCMDesktopTheme"
+#~ msgstr "KCMDesktopTheme"
+
+#, fuzzy
+#~| msgid ""
+#~| "To change your desktop theme to \"%1\", open\n"
+#~| " the desktop Appearance Settings and select \"%2\" from the droplist."
+#~ msgid ""
+#~ "To change your desktop theme to \"%1\", go back to the 'General' tab of "
+#~ "System Settings; choose 'Appearance', and then 'Style'; and finally "
+#~ "select \"%2\" from the drop-down list at the top of the window."
+#~ msgstr ""
+#~ "Po candjî l' tinme do scribanne e « %1 », drovoz\n"
+#~ "les Tchuzes del rivnance do scribanne eyet tchoezi « %2 » dins l' djivêye "
+#~ "tcheyante."
+
+#~ msgid "Removal of the active desktop theme is not allowed."
+#~ msgstr ""
+#~ "Li oistaedje do prémetou tinme dio scribanne en alaedje n' est nén "
+#~ "permetou."
+
+#~ msgid "Unfortunately, this feature is not yet implemented."
+#~ msgstr "Målureuzmint, dji n' sai nén co fé cisse fonccionålité la."

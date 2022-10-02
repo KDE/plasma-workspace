@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Dutch "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="region_language" lang="&language;">
+<articleinfo>
+<title
+>Regio en taal</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Krishna.Tateneni; &Krishna.Tateneni.mail;</author>
+<author
+>&Han.Young; &Han.Young.mail;</author>
+&Freek.de.Kruijf; 
+ </authorgroup>
+
+          <date
+>2022-06-23</date>
+          <releaseinfo
+>Plasma 5.26</releaseinfo>
+
+	  <keywordset>
+		<keyword
+>KDE</keyword>
+		<keyword
+>Systeeminstellingen</keyword>
+		<keyword
+>localisatie</keyword>
+		<keyword
+>land</keyword>
+		<keyword
+>taal</keyword>
+		<keyword
+>getal</keyword>
+                <keyword
+>vertaling</keyword>
+		<keyword
+>munteenheid</keyword>
+	  </keywordset>
+</articleinfo>
+
+<para
+>Op deze pagina kunt u uw voorkeurtalen en formaten instellen die in de &plasma;-werkruimte en toepassingen worden gebruikt. </para>
+
+<para
+>In de meeste gevallen kunt u eenvoudig de taal selecteren en alle opties zullen ingesteld worden op de van toepassing zijnde manier. De &plasma;-werkruimte en &kde;-toepassingen zijn geschreven in Amerikaans-Engels en vertaald in veel verschillende talen door teams van vrijwilligers. Deze vertalingen moeten eerst worden geïnstalleerd voordat u hun gebruik kunt kiezen. </para>
+<note
+><para
+>Ga na dat u de &plasma; taalpakketten of vertalingen voor de talen die u wilt gebruiken hebt geïnstalleerd.</para>
+<para
+>Omdat &plasma; is gebouwd bovenop de &Qt; bibliotheken, hebt u ook de &Qt;-vertalingen voor de geselecteerde talen nodig evenals een volledig vertaalde &GUI;.</para
+></note>
+
+
+<para
+>Op elke selectiebalk ziet u voorbeelden van hoe de instellingen er uit zien en welke eenheden van maten gebruikt worden. Naast getallen, ziet u hoe waarden van munteenheid, datums en tijden in lang en kort formaat worden getoond. Wanneer u elk van de instellingen wijzigt, tonen de voorbeelden de effecten van de wijzigingen voordat u ze toepast. </para>
+
+<para
+>Op de knop <guilabel
+>Meer toevoegen...</guilabel
+> drukken op de taalsubpagina zal u de lijst met beschikbare talen tonen en zal als eerste uw nu geselecteerde taal tonen. Als de selectie <quote
+>Geen taal geconfigureerd</quote
+> dan hebt u geen land ingesteld en is de standaard ingestelde taal die van het systeem, normaal C. Als de taal die u wilt gebruiken niet in deze lijst wordt getoond dan moet u het installeren met de gebruikelijke methode voor uw systeem. </para>
+
+<para
+>U kunt een taal verwijderen uit de lijst door deze te selecteren en op het pictogram <inlinemediaobject
+><imageobject
+><imagedata fileref="list-remove.png" format="PNG"/> </imageobject
+></inlinemediaobject
+> te klikken. U kunt de volgorde van voorkeur wijzigen in de lijst door een taal te selecteren op het pictogram <inlinemediaobject
+><imageobject
+> <imagedata fileref="go-top.png" format="PNG"/> </imageobject
+></inlinemediaobject
+> te klikken. </para>
+
+<para
+>In het geval u verschillende individuele formaatinstellingen nodig hebt, kunt u de locale (taalcode) voor <guilabel
+>Getallen</guilabel
+>, <guilabel
+>Tijd</guilabel
+>, <guilabel
+>Munteenheid</guilabel
+> en <guilabel
+>Meeteenheden</guilabel
+> selecteren. </para>
+
+<note>
+<para
+>Eerder waren taal en formaten onafhankelijke instellingen. Sinds &plasma; 5.26, zijn ze samengevoegd in deze KCM genaamd Regio en taal. Een taal wijzigen <emphasis
+>wijzigt automatisch</emphasis
+> de instellingen voor getallen, munteenheden &etc; naar het overeenkomstige land of regio. Deze wijziging breekt niet de oude configuratie. Het configuratiebestand is nog steeds gelokaliseerd op <emphasis
+>~/.config/plasma-localerc</emphasis
+> . </para>
+</note>
+</article>

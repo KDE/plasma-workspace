@@ -1,0 +1,284 @@
+# translation of ksmserver.po to greek
+# Copyright (C) 2000,2002, 2003, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
+#
+# Dimitris Kamenopoulos <el97146@mail.ntua.gr>, 2000.
+# Stergios Dramis <sdramis@egnatia.ee.auth.gr>, 2002-2003.
+# Spiros Georgaras <sngeorgaras@otenet.gr>, 2005, 2006, 2007.
+# Spiros Georgaras <sng@hellug.gr>, 2007, 2008.
+# Toussis Manolis <manolis@koppermind.homelinux.org>, 2007, 2008, 2009.
+# Antonis Geralis <capoiosct@gmail.com>, 2012, 2013.
+# Dimitrios Glentadakis <dglent@gmail.com>, 2012.
+# Stelios <sstavra@gmail.com>, 2012.
+# Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: ksmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-22 00:47+0000\n"
+"PO-Revision-Date: 2016-01-22 22:45+0200\n"
+"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 2.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: logout.cpp:344
+#, kde-format
+msgid "Logout canceled by '%1'"
+msgstr "Η αποσύνδεση ακυρώθηκε από το χρήστη '%1'"
+
+#: main.cpp:117
+#, kde-format
+msgid "$HOME not set!"
+msgstr "Το $HOME δεν έχει οριστεί!"
+
+#: main.cpp:121 main.cpp:127
+#, kde-format
+msgid "$HOME directory (%1) does not exist."
+msgstr "Ο κατάλογος $HOME (%1) δεν υπάρχει."
+
+#: main.cpp:123
+#, kde-format
+msgid "No write access to $HOME directory (%1)."
+msgstr "Αδυναμία πρόσβασης εγγραφής στον κατάλογο $HOME (%1)."
+
+#: main.cpp:129
+#, kde-format
+msgid "No read access to $HOME directory (%1)."
+msgstr "Αδυναμία πρόσβασης ανάγνωσης στον κατάλογο $HOME (%1)."
+
+#: main.cpp:133
+#, kde-format
+msgid "$HOME directory (%1) is out of disk space."
+msgstr "Ανεπαρκής χώρος δίσκου για τον κατάλογο $HOME (%1)."
+
+#: main.cpp:136
+#, kde-format
+msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+msgstr "Η εγγραφή στον κατάλογο $HOME (%2) απέτυχε με το σφάλμα '%1'"
+
+#: main.cpp:149 main.cpp:184
+#, kde-format
+msgid "No write access to '%1'."
+msgstr "Αδυναμία πρόσβασης εγγραφής στο '%1'."
+
+#: main.cpp:151 main.cpp:186
+#, kde-format
+msgid "No read access to '%1'."
+msgstr "Αδυναμία πρόσβασης ανάγνωσης στο '%1'."
+
+#: main.cpp:159 main.cpp:172
+#, kde-format
+msgid "Temp directory (%1) is out of disk space."
+msgstr "Ανεπαρκής χώρος δίσκου για τον προσωρινό κατάλογο (%1)."
+
+#: main.cpp:162 main.cpp:175
+#, kde-format
+msgid ""
+"Writing to the temp directory (%2) failed with\n"
+"    the error '%1'"
+msgstr ""
+"Η εγγραφή στον προσωρινό κατάλογο (%2) απέτυχε με\n"
+"    το σφάλμα '%1'"
+
+#: main.cpp:190
+#, fuzzy, kde-format
+#| msgid ""
+#| "The following installation problem was detected\n"
+#| "while trying to start KDE:"
+msgid ""
+"The following installation problem was detected\n"
+"while trying to start Plasma:"
+msgstr ""
+"Ανιχνεύτηκε το ακόλουθο πρόβλημα στην εγκατάσταση\n"
+"κατά την προσπάθεια εκκίνησης του KDE:"
+
+#: main.cpp:193
+#, fuzzy, kde-format
+#| msgid ""
+#| "\n"
+#| "\n"
+#| "KDE is unable to start.\n"
+msgid ""
+"\n"
+"\n"
+"Plasma is unable to start.\n"
+msgstr ""
+"\n"
+"\n"
+"Αδυναμία εκκίνησης του KDE.\n"
+
+#: main.cpp:200
+#, kde-format
+msgid "Plasma Workspace installation problem!"
+msgstr "Πρόβλημα στην εγκατάσταση του χώρου εργασίας Plasma!"
+
+#: main.cpp:236
+#, fuzzy, kde-format
+#| msgid ""
+#| "The reliable KDE session manager that talks the standard X11R6 \n"
+#| "session management protocol (XSMP)."
+msgid ""
+"The reliable Plasma session manager that talks the standard X11R6 \n"
+"session management protocol (XSMP)."
+msgstr ""
+"Ο αξιόπιστος διαχειριστής συνεδρίας KDE που μιλά το πρότυπο X11R6 \n"
+"πρωτόκολλο διαχείρισης συνεδρίας (XSMP)."
+
+#: main.cpp:240
+#, kde-format
+msgid "Restores the saved user session if available"
+msgstr "Επαναφέρει την αποθηκευμένη συνεδρία χρήστη αν είναι διαθέσιμη"
+
+#: main.cpp:243
+#, kde-format
+msgid "Also allow remote connections"
+msgstr "Να επιτρέπονται και απομακρυσμένες συνδέσεις"
+
+#: main.cpp:246
+#, kde-format
+msgid "Starts the session in locked mode"
+msgstr "Εκκινεί τη συνεδρία σε κλειδωμένη λειτουργία"
+
+#: main.cpp:250
+#, kde-format
+msgid ""
+"Starts without lock screen support. Only needed if other component provides "
+"the lock screen."
+msgstr ""
+"Εκκίνηση χωρίς υποστήριξη κλειδώματος οθόνης. Χρειάζεται μόνο αν κάποιο άλλο "
+"συστατικό παρέχει το κλείδωμα της οθόνης."
+
+#: server.cpp:873
+#, fuzzy, kde-format
+#| msgid "The KDE Session Manager"
+msgid "Session Management"
+msgstr "Ο διαχειριστής συνεδρίας του KDE"
+
+#: server.cpp:876
+#, kde-format
+msgid "Log Out"
+msgstr "Αποσύνδεση"
+
+#: server.cpp:881
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "Αποσύνδεση χωρίς επιβεβαίωση"
+
+#: server.cpp:886
+#, kde-format
+msgid "Halt Without Confirmation"
+msgstr "Τερματισμός χωρίς επιβεβαίωση"
+
+#: server.cpp:891
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "Επανεκκίνηση χωρίς επιβεβαίωση"
+
+#~ msgid ""
+#~ "Starts <wm> in case no other window manager is \n"
+#~ "participating in the session. Default is 'kwin'"
+#~ msgstr ""
+#~ "Ξεκινά το <wm> αν δε συμμετέχει κανένας άλλος διαχειριστής \n"
+#~ "παραθύρων στη συνεδρία. Το προκαθορισμένο είναι 'kwin'"
+
+#~ msgid "wm"
+#~ msgstr "wm"
+
+#~ msgid "Logout"
+#~ msgstr "Αποσύνδεση"
+
+#~ msgid "Sleeping in 1 second"
+#~ msgid_plural "Sleeping in %1 seconds"
+#~ msgstr[0] "Κοίμηση σε 1 δευτερόλεπτο."
+#~ msgstr[1] "Κοίμηση σε %1 δευτερόλεπτα."
+
+#~ msgid "Lock"
+#~ msgstr "Κλείδωμα"
+
+#~ msgid "ksmserver"
+#~ msgstr "ksmserver"
+
+#~ msgid "Turn off"
+#~ msgstr "Κλείσιμο"
+
+#~ msgid "Sleep"
+#~ msgstr "Κοίμηση"
+
+#~ msgid "Logging out in 1 second."
+#~ msgid_plural "Logging out in %1 seconds."
+#~ msgstr[0] "Αποσύνδεση σε 1 δευτερόλεπτο."
+#~ msgstr[1] "Αποσύνδεση σε %1 δευτερόλεπτα."
+
+#~ msgid "Turning off computer in 1 second."
+#~ msgid_plural "Turning off computer in %1 seconds."
+#~ msgstr[0] "Κλείσιμο υπολογιστή σε 1 δευτερόλεπτο."
+#~ msgstr[1] "Κλείσιμο υπολογιστή σε %1 δευτερόλεπτα."
+
+#~ msgid "Restarting computer in 1 second."
+#~ msgid_plural "Restarting computer in %1 seconds."
+#~ msgstr[0] "Επανεκκίνηση σε 1 δευτερόλεπτο."
+#~ msgstr[1] "Επανεκκίνηση σε %1 δευτερόλεπτα."
+
+#~ msgid "Turn Off Computer"
+#~ msgstr "Κλείσιμο του υπολογιστή"
+
+#~ msgid "Restart Computer"
+#~ msgstr "Επανεκκίνηση υπολογιστή"
+
+#~ msgctxt "default option in boot loader"
+#~ msgid " (default)"
+#~ msgstr " (προκαθορισμένο)"
+
+#~ msgid "Cancel"
+#~ msgstr "Ακύρωση"
+
+#~ msgid "&Standby"
+#~ msgstr "&Αναμονή"
+
+#~ msgid "Suspend to &RAM"
+#~ msgstr "Αναστολή στη &μνήμη"
+
+#~ msgid "Suspend to &Disk"
+#~ msgstr "Αναστολή στο &δίσκο"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Σπύρος Γεωργαράς, Τούσης Μανώλης"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "sngeorgaras@otenet.gr, manolis@koppermind.homelinux.org"
+
+#~ msgid "(C) 2000, The KDE Developers"
+#~ msgstr "(C) 2000, Οι προγραμματιστές του KDE"
+
+#~ msgid "Matthias Ettrich"
+#~ msgstr "Matthias Ettrich"
+
+#~ msgid "Luboš Luňák"
+#~ msgstr "Luboš Luňák"
+
+#~ msgid "Maintainer"
+#~ msgstr "Συντηρητής"
+
+#~ msgctxt "current option in boot loader"
+#~ msgid " (current)"
+#~ msgstr " (τρέχουσα)"
+
+#~ msgctxt "@label In corner of the logout dialog"
+#~ msgid "KDE <numid>%1.%2.%3</numid>"
+#~ msgstr "KDE <numid>%1.%2.%3</numid>"
+
+#~ msgctxt "@label In corner of the logout dialog"
+#~ msgid "KDE <numid>%1.%2</numid>"
+#~ msgstr "KDE <numid>%1.%2</numid>"
+
+#~ msgid "End Session for %1"
+#~ msgstr "Τέλος συνεδρίας για \"%1\""
+
+#~ msgid "End Session for %1 (%2)"
+#~ msgstr "Τέλος συνεδρίας για %1 (%2)"

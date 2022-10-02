@@ -1,0 +1,105 @@
+# Translation of kcm_feedback.po to Ukrainian
+# Copyright (C) 2019-2021 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2019, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_feedback\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-28 00:47+0000\n"
+"PO-Revision-Date: 2022-01-05 09:35+0200\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#: package/contents/ui/main.qml:34
+#, kde-format
+msgid ""
+"User Feedback has been disabled centrally. Please contact your distributor."
+msgstr ""
+"Надсилання відгуків користувачем вимкнено на рівні системи. Будь ласка, "
+"зверніться до авторів дистрибутива, щоб його увімкнути."
+
+#: package/contents/ui/main.qml:44 package/contents/ui/main.qml:77
+#, kde-format
+msgid "Plasma:"
+msgstr "Плазма:"
+
+#: package/contents/ui/main.qml:51
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"You can help KDE improve Plasma by contributing information on how you use "
+"it, so we can focus on things that matter to you.<nl/><nl/>Contributing this "
+"information is optional and entirely anonymous. We never collect your "
+"personal data, files you use, websites you visit, or information that could "
+"identify you.<nl/><nl/>You can read about <link url='https://kde.org/"
+"privacypolicy-apps.php'>our privacy policy here.</link>"
+msgstr ""
+"Ви можете допомогти нам поліпшити це програмне забезпечення, якщо поділитеся "
+"даними щодо того, як ви ним користуєтеся. Це надасть нам змогу зосередити "
+"зусилля на речах, які важливі для вашої роботи.<nl/><nl/>Надсилання даних "
+"щодо користування є необов'язковим і цілком анонімним. Ми не збиратимемо "
+"ваших особистих даних, даних щодо документів, які ви відкривали, та "
+"відвіданих вами сайтів, а також не збиратимемо жодних даних, за якими вас "
+"можна ідентифікувати.<nl/><nl/>Докладніше про наші правила конфіденційності "
+"можна дізнатися <link url='https://kde.org/privacypolicy-apps.php'>тут</"
+"link>."
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Plasma"
+msgstr "Плазма"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "The following information will be sent:"
+msgstr "Буде надіслано такі дані:"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "View sent data:"
+msgstr "Перегляд надісланих даних:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Юрій Чорноіван"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "yurchor@ukr.net"
+
+#~ msgid "User Feedback"
+#~ msgstr "Відгуки користувача"
+
+#~ msgid "Configure user feedback settings"
+#~ msgstr "Налаштовування системи відгуків користувача"
+
+#~ msgctxt "@info"
+#~ msgid "You can read about our policy in the following link:"
+#~ msgstr "Ознайомитися із нашими правилами можна за таким посиланням:"
+
+#~ msgid "Allow KDE software to collect anonymous usage information"
+#~ msgstr ""
+#~ "Дозволити програмному забезпеченню KDE збирати анонімні дані щодо "
+#~ "користування системою"
+
+#~ msgid "Send basic system information"
+#~ msgstr "Надсилати основні дані щодо системи"
+
+#~ msgid "Send basic usage information"
+#~ msgstr "Надсилати основні дані щодо користування"
+
+#~ msgid "Send detailed system information"
+#~ msgstr "Надсилати докладні дані щодо системи"
+
+#~ msgid "Send detailed usage information"
+#~ msgstr "Надсилати докладні дані щодо користування"

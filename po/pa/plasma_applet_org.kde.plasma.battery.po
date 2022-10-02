@@ -1,0 +1,538 @@
+# translation of plasma_applet_battery.po to Punjabi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# A S Alam <aalam@users.sf.net>, 2007, 2008, 2009, 2010, 2011, 2020, 2021, 2022.
+# Amanpreet Singh Alam <apreet.alam@gmail.com>, 2008.
+# Amanpreet Singh Alam <aalam@users.sf.net>, 2008, 2012, 2013, 2014, 2015, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_battery\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-16 00:46+0000\n"
+"PO-Revision-Date: 2022-06-14 21:00-0700\n"
+"Last-Translator: A S Alam <aalam@satluj.org>\n"
+"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 22.04.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: package/contents/ui/BatteryItem.qml:105
+#, kde-format
+msgctxt "Placeholder is battery percentage"
+msgid "%1%"
+msgstr "%1%"
+
+#: package/contents/ui/BatteryItem.qml:166
+#, fuzzy, kde-format
+#| msgid ""
+#| "This battery's health is at only %1% and should be replaced. Please "
+#| "contact your hardware vendor for more details."
+msgid ""
+"This battery's health is at only %1% and it should be replaced. Contact the "
+"manufacturer."
+msgstr ""
+"ਬੈਟਰੀ ਦੀ ਹਾਲਤ ਸਿਰਫ਼ %1 ਹੈ ਅਤੇ ਬਦਲਣੀ ਚਾਹੀਦੀ ਹੈ। ਹੋਰ ਵੇਰਵਿਆਂ ਲਈ ਆਪਣੇ ਹਾਰਡਵੇਅਰ ਵੇਂਡਰ ਨਾਲ "
+"ਸੰਪਰਕ ਕਰੋ।"
+
+#: package/contents/ui/BatteryItem.qml:181
+#, kde-format
+msgid "Time To Full:"
+msgstr "ਪੂਰਾ ਹੋਣ ਲਈ ਸਮਾਂ:"
+
+#: package/contents/ui/BatteryItem.qml:182
+#, kde-format
+msgid "Remaining Time:"
+msgstr "ਬਾਕੀ ਰਹਿੰਦਾ ਸਮਾਂ:"
+
+#: package/contents/ui/BatteryItem.qml:198
+#, kde-format
+msgid "Battery Health:"
+msgstr "ਬੈਟਰੀ ਦੀ ਹਾਲਤ:"
+
+#: package/contents/ui/BatteryItem.qml:204
+#, kde-format
+msgctxt "Placeholder is battery health percentage"
+msgid "%1%"
+msgstr "%1%"
+
+#: package/contents/ui/BatteryItem.qml:218
+#, fuzzy, kde-format
+#| msgid "Your battery is configured to only charge up to %1%."
+msgid "Battery is configured to charge up to approximately %1%."
+msgstr "ਤੁਹਾਡੀ ਬੈਟਰੀ ਸਿਰਫ਼ %1 ਤੱਕ ਹੀ ਚਾਰਜ ਹੋਣ ਲਈ ਸੰਰਚਿਤ ਕੀਤੀ ਹੈ।"
+
+#: package/contents/ui/BrightnessItem.qml:64
+#, kde-format
+msgctxt "Placeholder is brightness percentage"
+msgid "%1%"
+msgstr "%1%"
+
+#: package/contents/ui/CompactRepresentation.qml:84
+#, kde-format
+msgctxt "battery percentage below battery icon"
+msgid "%1%"
+msgstr "%1%"
+
+#: package/contents/ui/logic.js:12
+#, kde-format
+msgid "Discharging"
+msgstr "ਡਿਸਚਾਰਜ ਹੋ ਰਹੀ ਹੈ"
+
+#: package/contents/ui/logic.js:13 package/contents/ui/main.qml:136
+#, kde-format
+msgid "Fully Charged"
+msgstr "ਪੂਰੀ ਚਾਰਜ"
+
+#: package/contents/ui/logic.js:14
+#, kde-format
+msgid "Charging"
+msgstr "ਚਾਰਜ ਹੋ ਰਹੀ ਹੈ"
+
+#: package/contents/ui/logic.js:16
+#, kde-format
+msgid "Not Charging"
+msgstr "ਚਾਰਜ ਨਹੀਂ ਹੋ ਰਹੀ"
+
+#: package/contents/ui/logic.js:19
+#, kde-format
+msgctxt "Battery is currently not present in the bay"
+msgid "Not present"
+msgstr "ਮੌਜੂਦ ਨਹੀਂ"
+
+#: package/contents/ui/main.qml:99 package/contents/ui/main.qml:327
+#, kde-format
+msgid "Battery and Brightness"
+msgstr "ਬੈਟਰੀ ਅਤੇ ਚਮਕ"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgid "Brightness"
+msgstr "ਚਮਕ"
+
+#: package/contents/ui/main.qml:101
+#, kde-format
+msgid "Battery"
+msgstr "ਬੈਟਰੀ"
+
+#: package/contents/ui/main.qml:101
+#, kde-format
+msgid "Power Management"
+msgstr "ਪਾਵਰ ਮੈਨਜੇਮੈਂਟ"
+
+#: package/contents/ui/main.qml:143
+#, kde-format
+msgid "Battery at %1%, not Charging"
+msgstr "ਬੈਟਰੀ %1 ਉੱਤੇ ਹੈ, ਚਾਰਜ ਨਹੀਂ ਹੋ ਰਹੀ ਹੈ"
+
+#: package/contents/ui/main.qml:145
+#, kde-format
+msgid "Battery at %1%, plugged in but still discharging"
+msgstr "ਬੈਟਰੀ %1 ਉੱਤੇ ਹੈ, ਪਲੱਗ ਲੱਗਾ ਹੈ, ਪਰ ਹਾਲੇ ਵੀ ਚਾਰਜ ਨਹੀਂ ਹੋ ਰਹੀ ਹੈ"
+
+#: package/contents/ui/main.qml:147
+#, kde-format
+msgid "Battery at %1%, Charging"
+msgstr "ਬੈਟਰੀ %1 ਉੱਤੇ ਹੈ, ਚਾਰਜ ਹੋ ਰਹੀ ਹੈ"
+
+#: package/contents/ui/main.qml:150
+#, kde-format
+msgid "Battery at %1%"
+msgstr "ਬੈਟਰੀ %1 ਉੱਤੇ ਹੈ"
+
+#: package/contents/ui/main.qml:158
+#, kde-format
+msgid "The power supply is not powerful enough to charge the battery"
+msgstr "ਪਾਵਰ ਸਪਲਾਈ ਬੈਟਰੀ ਨੂੰ ਚਾਰਜ ਕਰਨ ਲਈ ਕਾਫ਼ੀ ਨਹੀਂ ਹੈ"
+
+#: package/contents/ui/main.qml:162
+#, kde-format
+msgid "No Batteries Available"
+msgstr "ਕੋਈ ਬੈਟਰੀ ਮੌਜੂਦ ਨਹੀਂ"
+
+#: package/contents/ui/main.qml:168
+#, kde-format
+msgctxt "time until fully charged - HH:MM"
+msgid "%1 until fully charged"
+msgstr "ਪੂਰੀ ਚਾਰਜ ਹੋਣ ਲਈ %1"
+
+#: package/contents/ui/main.qml:170
+#, kde-format
+msgctxt "remaining time left of battery usage - HH:MM"
+msgid "%1 remaining"
+msgstr "%1 ਬਾਕੀ"
+
+#: package/contents/ui/main.qml:173
+#, kde-format
+msgid "Not charging"
+msgstr "ਚਾਰਜ ਨਹੀਂ ਹੋ ਰਹੀ"
+
+#: package/contents/ui/main.qml:177
+#, kde-format
+msgid "Automatic sleep and screen locking are disabled"
+msgstr "ਆਪਣੇ-ਆਪ ਸਲੀਪ ਅਤੇ ਸਕਰੀਨ ਲਾਕ ਕਰਨਾ ਅਸਮਰੱਥ ਹੈ"
+
+#: package/contents/ui/main.qml:276
+#, kde-format
+msgid "The battery applet has enabled system-wide inhibition"
+msgstr "ਬੈਟਰੀ ਐਪਲਿਟ ਨੇ ਪੂਰੇ ਸਿਸਟਮ ਲਈ ਇਨਹੈਬਟੇਸ਼ਨ ਚਾਲੂ ਕਰ ਦਿੱਤੀ ਹੈ"
+
+#: package/contents/ui/main.qml:330
+#, kde-format
+msgid "Failed to activate %1 mode"
+msgstr "%1 ਮੋਡ ਐਕਟੀਵੇਟ ਕਰਨ ਲਈ ਅਸਫ਼ਲ ਹੈ"
+
+#: package/contents/ui/main.qml:342
+#, kde-format
+msgid "&Show Energy Information…"
+msgstr "…ਊਰਜਾ ਜਾਣਕਾਰੀ ਵੇਖਾਓ(&S)"
+
+#: package/contents/ui/main.qml:344
+#, kde-format
+msgid "Show Battery Percentage on Icon"
+msgstr "ਆਈਕਾਨ ਉੱਤੇ ਬੈਟਰੀ ਫ਼ੀਸਦੀ ਵੇਖਾਓ"
+
+#: package/contents/ui/main.qml:350
+#, kde-format
+msgid "&Configure Energy Saving…"
+msgstr "…ਪਾਵਰ ਬੱਚਤ ਸੰਰਚਨਾ(&C)"
+
+#: package/contents/ui/PopupDialog.qml:117
+#, kde-format
+msgid "Display Brightness"
+msgstr "ਸਕਰੀਨ ਚਮਕ"
+
+#: package/contents/ui/PopupDialog.qml:146
+#, kde-format
+msgid "Keyboard Brightness"
+msgstr "ਕੀਬੋਰਡ ਚਮਕ"
+
+#: package/contents/ui/PowerManagementItem.qml:37
+#, kde-format
+msgctxt "Minimize the length of this string as much as possible"
+msgid "Manually block sleep and screen locking"
+msgstr "ਸਲੀਪ ਕਰਨ ਤੇ ਸਕਰੀਨ ਲਾਕ ਕਰਨ ਨੂੰ ਖੁਦ ਰੋਕੋ"
+
+#: package/contents/ui/PowerManagementItem.qml:70
+#, kde-format
+msgctxt "Minimize the length of this string as much as possible"
+msgid ""
+"Your laptop is configured not to sleep when closing the lid while an "
+"external monitor is connected."
+msgstr ""
+"ਤੁਹਾਡੇ ਲੈਪਟਾਪ ਕਵਰ ਬੰਦ ਕਰਨ ਦੌਰਾਨ ਸਲੀਪ ਕਰਨ ਲਈ ਸੰਰਚਿਤ ਨਹੀਂ ਕੀਤੀ ਹੈ, ਜਦੋਂ ਕਿ ਬਾਹਰੀ ਮਾਨੀਟਰ "
+"ਕਨੈਕਟ ਕੀਤਾ ਹੋਵੇ।"
+
+#: package/contents/ui/PowerManagementItem.qml:83
+#, kde-format
+msgid "%1 application is currently blocking sleep and screen locking:"
+msgid_plural "%1 applications are currently blocking sleep and screen locking:"
+msgstr[0] "ਇਸ ਵੇਲੇ %1 ਐਪਲੀਕੇਸ਼ਨ ਸਲੀਪ ਕਰਨ ਅਤੇ ਸਕਰੀਨ ਲਾਕ ਹੋਣ ਤੋਂ ਰੋਕ ਰਹੀ ਹੈ:"
+msgstr[1] "ਇਸ ਵੇਲੇ %1 ਐਪਲੀਕੇਸ਼ਨਾਂ ਸਲੀਪ ਕਰਨ ਅਤੇ ਸਕਰੀਨ ਲਾਕ ਹੋਣ ਤੋਂ ਰੋਕ ਰਹੀਆਂ ਹਨ:"
+
+#: package/contents/ui/PowerManagementItem.qml:103
+#, kde-format
+msgid "%1 is currently blocking sleep and screen locking (%2)"
+msgstr "%1 ਐਪਲੀਕੇਸ਼ਨ ਸਲੀਪ ਕਰਨ ਅਤੇ ਸਕਰੀਨ ਲਾਕ ਹੋਣ ਤੋਂ ਰੋਕ ਰਹੀ ਹੈ (%2)"
+
+#: package/contents/ui/PowerManagementItem.qml:104
+#, kde-format
+msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
+msgstr "%1 ਐਪਲੀਕੇਸ਼ਨ ਸਲੀਪ ਕਰਨ ਅਤੇ ਸਕਰੀਨ ਲਾਕ ਹੋਣ ਤੋਂ ਰੋਕ ਰਹੀ ਹੈ (ਅਣਪਛਾਤਾ ਕਾਰਨ)"
+
+#: package/contents/ui/PowerManagementItem.qml:106
+#, kde-format
+msgctxt "Application name: reason for preventing sleep and screen locking"
+msgid "%1: %2"
+msgstr "%1: %2"
+
+#: package/contents/ui/PowerManagementItem.qml:107
+#, kde-format
+msgctxt "Application name: reason for preventing sleep and screen locking"
+msgid "%1: unknown reason"
+msgstr "%1: ਅਣਪਛਾਤਾ ਕਾਰਨ"
+
+#: package/contents/ui/PowerProfileItem.qml:34
+#, kde-format
+msgid "Power Save"
+msgstr "ਪਾਵਰ ਬੱਚਤ"
+
+#: package/contents/ui/PowerProfileItem.qml:38
+#, kde-format
+msgid "Balanced"
+msgstr "ਸੰਤੁਲਿਤ"
+
+#: package/contents/ui/PowerProfileItem.qml:42
+#, kde-format
+msgid "Performance"
+msgstr "ਕਾਰਗੁਜ਼ਾਰੀ"
+
+#: package/contents/ui/PowerProfileItem.qml:59
+#, kde-format
+msgid "Power Profile"
+msgstr "ਪਾਵਰ ਪਰੋਫਾਈਲ"
+
+#: package/contents/ui/PowerProfileItem.qml:191
+#, kde-format
+msgid ""
+"Performance mode has been disabled to reduce heat generation because the "
+"computer has detected that it may be sitting on your lap."
+msgstr ""
+"ਤਾਪਮਾਨ ਘਟਾਉਣ ਲਈ ਕਾਰਗੁਜ਼ਾਰੀ ਢੰਗ ਨੂੰ ਅਸਮਰੱਥ ਕੀਤਾ ਜਾ ਚੁੱਕਾ ਹੈ, ਕਿਉਂਕਿ ਕੰਪਿਊਟਰ ਨੇ ਅੰਦਾਜ਼ਾ ਲਾਇਆ "
+"ਹੈ ਕਿ ਇਹ ਤੁਹਾਡੀ ਗੋਦੀ ਵਿੱਚ ਰੱਖਿਆ ਹੈ।"
+
+#: package/contents/ui/PowerProfileItem.qml:193
+#, kde-format
+msgid ""
+"Performance mode is unavailable because the computer is running too hot."
+msgstr "ਕੰਪਿਊਟਰ ਬਹੁਤ ਗਰਮ ਹੋਣ ਕਰਕੇ ਕਾਰਗੁਜ਼ਾਰੀ ਢੰਗ ਮੌਜੂਦ ਨਹੀਂ ਹੈ।"
+
+#: package/contents/ui/PowerProfileItem.qml:195
+#, kde-format
+msgid "Performance mode is unavailable."
+msgstr "ਕਾਰਗੁਜ਼ਾਰੀ ਢੰਗ ਮੌਜੂਦ ਨਹੀਂ ਹੈ।"
+
+#: package/contents/ui/PowerProfileItem.qml:208
+#, kde-format
+msgid ""
+"Performance may be lowered to reduce heat generation because the computer "
+"has detected that it may be sitting on your lap."
+msgstr ""
+"ਤਾਪਮਾਨ ਘਟਾਉਣ ਲਈ ਕਾਰਗੁਜ਼ਾਰੀ ਘਟਾਈ ਜਾ ਸਕਦੀ ਹੈ, ਕਿਉਂਕਿ ਕੰਪਿਊਟਰ ਨੇ ਅੰਦਾਜ਼ਾ ਲਾਇਆ ਹੈ ਕਿ ਇਹ "
+"ਤੁਹਾਡੀ ਗੋਦੀ ਵਿੱਚ ਰੱਖਿਆ ਹੈ।"
+
+#: package/contents/ui/PowerProfileItem.qml:210
+#, kde-format
+msgid "Performance may be reduced because the computer is running too hot."
+msgstr "ਕੰਪਿਊਟਰ ਦੇ ਬਹੁਤ ਜ਼ਿਆਦਾ ਗਰਮ ਹੋਣ ਕਰਕੇ ਕਾਰਗੁਜ਼ਾਰੀ ਘੱਟ ਸਕਦੀ ਹੈ।"
+
+#: package/contents/ui/PowerProfileItem.qml:212
+#, kde-format
+msgid "Performance may be reduced."
+msgstr "ਕਾਰਗੁਜ਼ਾਰੀ ਘੱਟ ਸਕਦੀ ਹੈ।"
+
+#: package/contents/ui/PowerProfileItem.qml:223
+#, kde-format
+msgid "One application has requested activating %2:"
+msgid_plural "%1 applications have requested activating %2:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: package/contents/ui/PowerProfileItem.qml:241
+#, kde-format
+msgctxt ""
+"%1 is the name of the application, %2 is the reason provided by it for "
+"activating performance mode"
+msgid "%1: %2"
+msgstr "%1: %2"
+
+#~ msgid "General"
+#~ msgstr "ਆਮ"
+
+#~ msgid "An application is preventing sleep and screen locking:"
+#~ msgstr " ਐਪਲੀਕੇਸ਼ਨ ਸਲੀਪ ਕਰਨ ਅਤੇ ਸਕਰੀਨ ਲਾਕ ਹੋਣ ਤੋਂ ਰੋਕ ਰਹੀ ਹੈ:"
+
+#~ msgctxt "short symbol to signal there is no battery currently available"
+#~ msgid "-"
+#~ msgstr "-"
+
+#~ msgid "Configure Power Saving..."
+#~ msgstr "ਪਾਵਰ ਬੱਚਤ ਸੰਰਚਨਾ..."
+
+#~ msgid "Time To Empty:"
+#~ msgstr "ਖਾਲੀ ਹੋਣ ਲਈ ਸਮਾਂ:"
+
+#~ msgctxt "Used for measurement"
+#~ msgid "100%"
+#~ msgstr "100%"
+
+#, fuzzy
+#~| msgid "%1%. Charging"
+#~ msgid "%1% Charging"
+#~ msgstr "%1%। ਚਾਰਜ ਹੋ ਰਹੀ ਹੈ"
+
+#, fuzzy
+#~| msgid "%1%. Plugged in"
+#~ msgid "%1% Plugged in"
+#~ msgstr "%1%। ਪਲੱਗ ਲੱਗਾ ਹੈ"
+
+#~ msgid "%1% Battery Remaining"
+#~ msgstr "%1% ਬੈਟਰੀ ਬਾਕੀ ਰਹਿੰਦੀ ਹੈ"
+
+#, fuzzy
+#~| msgid "Capacity:"
+#~ msgctxt "The degradation in the battery's energy capacity"
+#~ msgid "Capacity degradation:"
+#~ msgstr "ਸਮੱਰਥਾ:"
+
+#, fuzzy
+#~| msgctxt "Placeholder is battery percentage"
+#~| msgid "%1%"
+#~ msgctxt "Placeholder is battery's capacity degradation"
+#~ msgid "%1%"
+#~ msgstr "%1%"
+
+#~ msgctxt "Placeholder is battery capacity"
+#~ msgid "%1%"
+#~ msgstr "%1%"
+
+#~ msgid "Vendor:"
+#~ msgstr "ਵੇਂਡਰ:"
+
+#~ msgid "Model:"
+#~ msgstr "ਮਾਡਲ:"
+
+#~ msgid "No screen or keyboard brightness controls available"
+#~ msgstr "ਕੋਈ ਸਕਰੀਨ ਜਾਂ ਕੀਬੋਰਡ ਚਮਕ ਕੰਟਰੋਲ ਉਪਲੱਬਧ ਨਹੀਂ ਹੈ"
+
+#~ msgctxt "Placeholders are current and maximum brightness step"
+#~ msgid "%1/%2"
+#~ msgstr "%1/%2"
+
+#~ msgctxt "Placeholder is battery name"
+#~ msgid "%1:"
+#~ msgstr "%1:"
+
+#~ msgid "N/A"
+#~ msgstr "N/A"
+
+#~ msgid "1 hour "
+#~ msgid_plural "%1 hours "
+#~ msgstr[0] "1 ਘੰਟਾ "
+#~ msgstr[1] "%1 ਘੰਟੇ "
+
+#~ msgid "1 minute"
+#~ msgid_plural "%1 minutes"
+#~ msgstr[0] "1 ਮਿੰਟ"
+#~ msgstr[1] "%1 ਮਿੰਟ"
+
+#, fuzzy
+#~| msgid "AC Adapter:"
+#~ msgid "AC Adapter"
+#~ msgstr "AC ਐਡਪਟਰ: "
+
+#, fuzzy
+#~| msgid "Plugged in"
+#~ msgid "Plugged In"
+#~ msgstr "ਪਲੱਗ ਲੱਗਾ ਹੈ"
+
+#, fuzzy
+#~| msgid "Not plugged in"
+#~ msgid "Not Plugged In"
+#~ msgstr "ਪਲੱਗ ਨਹੀਂ ਲੱਗਾ"
+
+#, fuzzy
+#~| msgctxt "Label for remaining time"
+#~| msgid "Time Remaining:"
+#~ msgid "Time remaining until full: %1"
+#~ msgstr "ਬਾਕੀ ਟਾਈਮ:"
+
+#, fuzzy
+#~| msgctxt "Label for remaining time"
+#~| msgid "Time Remaining:"
+#~ msgid "Time remaining until empty: %1"
+#~ msgstr "ਬਾਕੀ ਟਾਈਮ:"
+
+#, fuzzy
+#~| msgctxt "state of battery"
+#~| msgid "%1% (charged)"
+#~ msgid "%1% (charged)"
+#~ msgstr "%1% (ਚਾਰਜ ਹੋਈ)"
+
+#~ msgctxt "tooltip"
+#~ msgid "AC Adapter:"
+#~ msgstr "AC ਐਡਪਟਰ:"
+
+#~ msgctxt "tooltip"
+#~ msgid "<b>Plugged in</b>"
+#~ msgstr "<b>ਪਲੱਗ ਲੱਗਾ ਹੈ</b>"
+
+#~ msgctxt "tooltip"
+#~ msgid "<b>Not plugged in</b>"
+#~ msgstr "<b>ਪਲੱਗ ਨਹੀਂ ਲੱਗਾ</b>"
+
+#~ msgctxt "overlay on the battery, needs to be really tiny"
+#~ msgid "%1%"
+#~ msgstr "%1%"
+
+#~ msgid "Configure Battery Monitor"
+#~ msgstr "ਬੈਟਰੀ ਮਾਨੀਟਰ ਸੰਰਚਨਾ"
+
+#~ msgid "Screen Brightness:"
+#~ msgstr "ਸਕਰੀਨ ਚਮਕ:"
+
+#~ msgctxt "Suspend the computer to RAM; translation should be short"
+#~ msgid "Sleep"
+#~ msgstr "ਸਲੀਪ"
+
+#~ msgctxt "Suspend the computer to disk; translation should be short"
+#~ msgid "Hibernate"
+#~ msgstr "ਹਾਈਬਰਨੇਟ"
+
+#~ msgid "<b>%1% (charged)</b>"
+#~ msgstr "<b>%1% (ਚਾਰਜ ਹੋਈ)</b>"
+
+#~ msgid "<b>%1% (discharging)</b>"
+#~ msgstr "<b>%1% (ਡਿਸਚਾਰਜ ਹੋ ਰਹੀ ਹੈ)</b>"
+
+#~ msgid "<b>%1% (charging)</b>"
+#~ msgstr "<b>%1% (ਚਾਰਜ ਹੋ ਰਹੀ ਹੈ)</b>"
+
+#~ msgctxt "Battery is not plugged in"
+#~ msgid "<b>Not present</b>"
+#~ msgstr "<b>ਮੌਜੂਦ ਨਹੀਂ</b>"
+
+#~ msgid "Show the state for &each battery present"
+#~ msgstr "ਹਰੇਕ ਮੌਜੂਦ ਬੈਟਰੀ ਦੀ ਹਾਲਤ ਵੇਖੋ(&e)"
+
+#~ msgid "<b>Battery:</b>"
+#~ msgstr "<b>ਬੈਟਰੀ:</b>"
+
+#~ msgctxt "tooltip"
+#~ msgid "<b>AC Adapter:</b>"
+#~ msgstr "<b>AC ਐਡਪਟਰ:</b>"
+
+#~ msgctxt "tooltip"
+#~ msgid "Not plugged in"
+#~ msgstr "ਪਲੱਗ ਨਹੀਂ ਲੱਗਾ"
+
+#~ msgid "Show remaining time for the battery"
+#~ msgstr "ਬੈਟਰੀ ਲਈ ਬਾਕੀ ਰਹਿੰਦਾ ਸਮਾਂ ਵੇਖਾਓ"
+
+#~ msgctxt "tooltip: placeholder is the battery ID"
+#~ msgid "<b>Battery %1:</b>"
+#~ msgstr "<b>ਬੈਟਰੀ %1:</b>"
+
+#~ msgid "AC Adapter: "
+#~ msgstr "AC ਐਡਪਟਰ: "
+
+#~ msgid "<b>Battery:</b> "
+#~ msgstr "<b>ਬੈਟਰੀ:</b> "
+
+#~ msgctxt "state of battery"
+#~ msgid "%1% (discharging)"
+#~ msgstr "%1% (ਡਿਸਚਾਰਜ ਹੋ ਰਹੀ ਹੈ)"
+
+#~ msgid "%2% (discharging)"
+#~ msgstr " %2% (ਡਿਸ-ਚਾਰਜ ਹੋ ਰਹੀ ਹੈ)"
+
+#~ msgid "%2% (charging)"
+#~ msgstr " %2% (ਚਾਰਜ ਹੋ ਰਹੀ ਹੈ)"
+
+#~ msgid "Actions"
+#~ msgstr "ਐਕਸ਼ਨ"
+
+#~ msgid "<b>Battery:</b> %1% (charging)<br />"
+#~ msgstr "<b>ਬੈਟਰੀ:</b> %1% (ਚਾਰਜ ਹੋ ਰਹੀ ਹੈ)<br />"
+
+#~ msgid "<b>Battery %1:</b> %2% (fully charged)<br />"
+#~ msgstr "<b>ਬੈਟਰੀ %1:</b> %2% (ਪੂਰੀ ਤਰ੍ਹਾਂ ਚਾਰਜ ਹੈ)<br />"
+
+#~ msgid "<b>Battery %1:</b> %2% (discharging)<br />"
+#~ msgstr "<b>ਬੈਟਰੀ %1:</b> %2% (ਡਿਸਚਾਰਜ ਹੋ ਰਹੀ ਹੈ)<br />"
+
+#~ msgid "<b>AC Adapter:</b> Not plugged in"
+#~ msgstr "<b>AC ਐਡਪਟਰ:</b> ਪਲੱਗ ਨਹੀਂ ਲੱਗਾ"

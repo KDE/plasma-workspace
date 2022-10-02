@@ -1,0 +1,2361 @@
+# Irish translation of plasma_applet_clock
+# Copyright (C) 2009 This_file_is_part_of_KDE
+# This file is distributed under the same license as the plasma_applet_clock package.
+# Kevin Scannell <kscanne@gmail.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdebase/plasma_applet_clock.po\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-25 00:47+0000\n"
+"PO-Revision-Date: 2007-08-06 00:31-0500\n"
+"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
+"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"Language: ga\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
+"3 : 4\n"
+
+#: contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Cuma"
+
+#: contents/ui/analogclock.qml:76
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Current time is %1; Current date is %2"
+msgstr ""
+
+#: contents/ui/configGeneral.qml:23
+#, fuzzy, kde-format
+#| msgid "Show &seconds hand"
+msgid "Show seconds hand"
+msgstr "Taispeáin na &soicindí"
+
+#: contents/ui/configGeneral.qml:24
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "General:"
+msgstr "Ginearálta"
+
+#: contents/ui/configGeneral.qml:28
+#, fuzzy, kde-format
+#| msgid "Show &time zone"
+msgid "Show time zone"
+msgstr "&Taispeáin an crios ama"
+
+#~ msgid "Show the seconds"
+#~ msgstr "Taispeáin na soicindí"
+
+#~ msgid "Check this if you want to show the seconds."
+#~ msgstr "Ticeáil é seo más mian leat na soicindí a thaispeáint."
+
+#~ msgid "Show &seconds hand"
+#~ msgstr "Taispeáin na &soicindí"
+
+#~ msgid "Show the Timezone in text"
+#~ msgstr "Taispeáin an crios ama mar théacs"
+
+#~ msgid "Check this if you want to display Timezone in text."
+#~ msgstr ""
+#~ "Ticeáil an rogha seo más mian leat an crios ama a thaispeáint mar théacs."
+
+#~ msgid "Show &time zone"
+#~ msgstr "&Taispeáin an crios ama"
+
+#~ msgid "Timezones"
+#~ msgstr "Criosanna Ama"
+
+#~ msgid "Use &local timezone"
+#~ msgstr "Úsáid an crios ama &logánta"
+
+#~ msgid "Area"
+#~ msgstr "Méid"
+
+#~ msgid "Region"
+#~ msgstr "Réigiún"
+
+#~ msgid "Comment"
+#~ msgstr "Nóta"
+
+#~ msgctxt "@title:window"
+#~ msgid "Configure Clock"
+#~ msgstr "Cumraigh an Clog"
+
+#~ msgid "Display the second hand"
+#~ msgstr "Taispeáin snáthaid na soicindí"
+
+#~ msgid "Display seconds"
+#~ msgstr "Taispeáin snáthaid na soicindí"
+
+#~ msgid "Display the time as a string"
+#~ msgstr "Taispeáin an t-am mar theaghrán"
+
+#~ msgid "Abidjan"
+#~ msgstr "Abidjan"
+
+#~ msgid "Africa/CI"
+#~ msgstr "An Afraic/CI"
+
+#~ msgid "Accra"
+#~ msgstr "Accra"
+
+#~ msgid "Africa/GH"
+#~ msgstr "An Afraic/GH"
+
+#~ msgid "Addis Ababa"
+#~ msgstr "Adas Ababa"
+
+#~ msgid "Africa/ET"
+#~ msgstr "An Afraic/ET"
+
+#~ msgid "Algiers"
+#~ msgstr "Cathair na hAilgéire"
+
+#~ msgid "Africa/DZ"
+#~ msgstr "An Afraic/DZ"
+
+#~ msgid "Asmara"
+#~ msgstr "Asmara"
+
+#~ msgid "Africa/ER"
+#~ msgstr "An Afraic/ER"
+
+#~ msgid "Bamako"
+#~ msgstr "Bamako"
+
+#~ msgid "Africa/ML"
+#~ msgstr "An Afraic/ML"
+
+#~ msgid "Bangui"
+#~ msgstr "Bangui"
+
+#~ msgid "Africa/CF"
+#~ msgstr "An Afraic/CF"
+
+#~ msgid "Banjul"
+#~ msgstr "Banjul"
+
+#~ msgid "Africa/GM"
+#~ msgstr "An Afraic/GM"
+
+#~ msgid "Bissau"
+#~ msgstr "Bissau"
+
+#~ msgid "Africa/GW"
+#~ msgstr "An Afraic/GW"
+
+#~ msgid "Blantyre"
+#~ msgstr "Blantyre"
+
+#~ msgid "Africa/MW"
+#~ msgstr "An Afraic/MW"
+
+#~ msgid "Brazzaville"
+#~ msgstr "Brazzaville"
+
+#~ msgid "Africa/CG"
+#~ msgstr "An Afraic/CG"
+
+#~ msgid "Bujumbura"
+#~ msgstr "Bujumbura"
+
+#~ msgid "Africa/BI"
+#~ msgstr "An Afraic/BI"
+
+#~ msgid "Cairo"
+#~ msgstr "Caireo"
+
+#~ msgid "Africa/EG"
+#~ msgstr "An Afraic/EG"
+
+#~ msgid "Casablanca"
+#~ msgstr "Casablanca"
+
+#~ msgid "Africa/MA"
+#~ msgstr "An Afraic/MA"
+
+#~ msgid "Ceuta"
+#~ msgstr "Ceuta"
+
+#~ msgid "Africa/ES"
+#~ msgstr "An Afraic/ES"
+
+#~ msgid "Ceuta & Melilla"
+#~ msgstr "Ceuta agus Melilla"
+
+#~ msgid "Conakry"
+#~ msgstr "Conakry"
+
+#~ msgid "Africa/GN"
+#~ msgstr "An Afraic/GN"
+
+#~ msgid "Dakar"
+#~ msgstr "Dacár"
+
+#~ msgid "Africa/SN"
+#~ msgstr "An Afraic/SN"
+
+#~ msgid "Dar es Salaam"
+#~ msgstr "Dárasalám"
+
+#~ msgid "Africa/TZ"
+#~ msgstr "An Afraic/TZ"
+
+#~ msgid "Djibouti"
+#~ msgstr "Djibouti"
+
+#~ msgid "Africa/DJ"
+#~ msgstr "An Afraic/DJ"
+
+#~ msgid "Douala"
+#~ msgstr "Douala"
+
+#~ msgid "Africa/CM"
+#~ msgstr "An Afraic/CM"
+
+#~ msgid "El Aaiun"
+#~ msgstr "El Aaiun"
+
+#~ msgid "Africa/EH"
+#~ msgstr "An Afraic/EH"
+
+#~ msgid "Freetown"
+#~ msgstr "Freetown"
+
+#~ msgid "Africa/SL"
+#~ msgstr "An Afraic/SL"
+
+#~ msgid "Gaborone"
+#~ msgstr "Gaborone"
+
+#~ msgid "Africa/BW"
+#~ msgstr "An Afraic/BW"
+
+#~ msgid "Harare"
+#~ msgstr "Harare"
+
+#~ msgid "Africa/ZW"
+#~ msgstr "An Afraic/ZW"
+
+#~ msgid "Johannesburg"
+#~ msgstr "Johannesburg"
+
+#~ msgid "Africa/ZA"
+#~ msgstr "An Afraic/ZA"
+
+#~ msgid "Kampala"
+#~ msgstr "Kampala"
+
+#~ msgid "Africa/UG"
+#~ msgstr "An Afraic/UG"
+
+#~ msgid "Khartoum"
+#~ msgstr "Cartúm"
+
+#~ msgid "Africa/SD"
+#~ msgstr "An Afraic/SD"
+
+#~ msgid "Kigali"
+#~ msgstr "Kigali"
+
+#~ msgid "Africa/RW"
+#~ msgstr "An Afraic/RW"
+
+#~ msgid "Kinshasa"
+#~ msgstr "Cinseasa"
+
+#~ msgid "Africa/CD"
+#~ msgstr "An Afraic/CD"
+
+#~ msgid "west Dem. Rep. of Congo"
+#~ msgstr "An Congó Thiar"
+
+#~ msgid "Lagos"
+#~ msgstr "Lagos"
+
+#~ msgid "Africa/NG"
+#~ msgstr "An Afraic/NG"
+
+#~ msgid "Libreville"
+#~ msgstr "Libreville"
+
+#~ msgid "Africa/GA"
+#~ msgstr "An Afraic/GA"
+
+#~ msgid "Lome"
+#~ msgstr "Lome"
+
+#~ msgid "Africa/TG"
+#~ msgstr "An Afraic/TG"
+
+#~ msgid "Luanda"
+#~ msgstr "Luanda"
+
+#~ msgid "Africa/AO"
+#~ msgstr "An Afraic/AO"
+
+#~ msgid "Lubumbashi"
+#~ msgstr "Lubumbashi"
+
+#~ msgid "east Dem. Rep. of Congo"
+#~ msgstr "An Congó Thoir"
+
+#~ msgid "Lusaka"
+#~ msgstr "Lusaka"
+
+#~ msgid "Africa/ZM"
+#~ msgstr "An Afraic/ZM"
+
+#~ msgid "Malabo"
+#~ msgstr "Malabo"
+
+#~ msgid "Africa/GQ"
+#~ msgstr "An Afraic/GQ"
+
+#~ msgid "Maputo"
+#~ msgstr "Maputo"
+
+#~ msgid "Africa/MZ"
+#~ msgstr "An Afraic/MZ"
+
+#~ msgid "Maseru"
+#~ msgstr "Maseru"
+
+#~ msgid "Africa/LS"
+#~ msgstr "An Afraic/LS"
+
+#~ msgid "Mbabane"
+#~ msgstr "Mbabane"
+
+#~ msgid "Africa/SZ"
+#~ msgstr "An Afraic/SZ"
+
+#~ msgid "Mogadishu"
+#~ msgstr "Mogaidisiú"
+
+#~ msgid "Africa/SO"
+#~ msgstr "An Afraic/SO"
+
+#~ msgid "Monrovia"
+#~ msgstr "Monrovia"
+
+#~ msgid "Africa/LR"
+#~ msgstr "An Afraic/LR"
+
+#~ msgid "Nairobi"
+#~ msgstr "Nairobi"
+
+#~ msgid "Africa/KE"
+#~ msgstr "An Afraic/KE"
+
+#~ msgid "Ndjamena"
+#~ msgstr "Ndjamena"
+
+#~ msgid "Africa/TD"
+#~ msgstr "An Afraic/TD"
+
+#~ msgid "Niamey"
+#~ msgstr "Niamey"
+
+#~ msgid "Africa/NE"
+#~ msgstr "An Afraic/NE"
+
+#~ msgid "Nouakchott"
+#~ msgstr "Nouakchott"
+
+#~ msgid "Africa/MR"
+#~ msgstr "An Afraic/MR"
+
+#~ msgid "Ouagadougou"
+#~ msgstr "Ouagadougou"
+
+#~ msgid "Africa/BF"
+#~ msgstr "An Afraic/BF"
+
+#~ msgid "Porto-Novo"
+#~ msgstr "Porto-Novo"
+
+#~ msgid "Africa/BJ"
+#~ msgstr "An Afraic/BJ"
+
+#~ msgid "Sao Tome"
+#~ msgstr "Sao Tome"
+
+#~ msgid "Africa/ST"
+#~ msgstr "An Afraic/ST"
+
+#~ msgid "Tripoli"
+#~ msgstr "Tripilí"
+
+#~ msgid "Africa/LY"
+#~ msgstr "An Afraic/LY"
+
+#~ msgid "Tunis"
+#~ msgstr "Túinis"
+
+#~ msgid "Africa/TN"
+#~ msgstr "An Afraic/TN"
+
+#~ msgid "Windhoek"
+#~ msgstr "Windhoek"
+
+#~ msgid "Africa/NA"
+#~ msgstr "An Afraic/NA"
+
+#~ msgid "Adak"
+#~ msgstr "Adak"
+
+#~ msgid "America/US"
+#~ msgstr "Meiriceá/US"
+
+#~ msgid "Aleutian Islands"
+#~ msgstr "Oileáin Ailiúit"
+
+#~ msgid "Anchorage"
+#~ msgstr "Anchorage"
+
+#~ msgid "Alaska Time"
+#~ msgstr "Am Alasca"
+
+#~ msgid "Anguilla"
+#~ msgstr "Anguilla"
+
+#~ msgid "America/AI"
+#~ msgstr "Meiriceá/AI"
+
+#~ msgid "Antigua"
+#~ msgstr "Antigua"
+
+#~ msgid "America/AG"
+#~ msgstr "Meiriceá/AG"
+
+#~ msgid "Araguaina"
+#~ msgstr "Araguaina"
+
+#~ msgid "America/BR"
+#~ msgstr "Meiriceá/BR"
+
+#~ msgid "Tocantins"
+#~ msgstr "Tocantins"
+
+#~ msgid "Buenos Aires"
+#~ msgstr "Buenos Aires"
+
+#~ msgid "America/Argentina/AR"
+#~ msgstr "Meiriceá/An Airgintín/AR"
+
+#~ msgid "Buenos Aires (BA, CF)"
+#~ msgstr "Buenos Aires (BA, CF)"
+
+#~ msgid "Catamarca"
+#~ msgstr "Catamarca"
+
+#~ msgid "Catamarca (CT), Chubut (CH)"
+#~ msgstr "Catamarca (CT), Chubut (CH)"
+
+#~ msgid "Cordoba"
+#~ msgstr "Cordoba"
+
+#~ msgid "Jujuy"
+#~ msgstr "Jujuy"
+
+#~ msgid "Jujuy (JY)"
+#~ msgstr "Jujuy (JY)"
+
+#~ msgid "La Rioja"
+#~ msgstr "La Rioja"
+
+#~ msgid "La Rioja (LR)"
+#~ msgstr "La Rioja (LR)"
+
+#~ msgid "Mendoza"
+#~ msgstr "Mendoza"
+
+#~ msgid "Mendoza (MZ)"
+#~ msgstr "Mendoza (MZ)"
+
+#~ msgid "Rio Gallegos"
+#~ msgstr "Rio Gallegos"
+
+#~ msgid "Santa Cruz (SC)"
+#~ msgstr "Santa Cruz (SC)"
+
+#~ msgid "San Juan"
+#~ msgstr "San Juan"
+
+#~ msgid "San Juan (SJ)"
+#~ msgstr "San Juan (SJ)"
+
+#~ msgid "Tucuman"
+#~ msgstr "Tucuman"
+
+#~ msgid "Tucuman (TM)"
+#~ msgstr "Tucuman (TM)"
+
+#~ msgid "Ushuaia"
+#~ msgstr "Ushuaia"
+
+#~ msgid "Tierra del Fuego (TF)"
+#~ msgstr "Tierra del Fuego (TF)"
+
+#~ msgid "Aruba"
+#~ msgstr "Aruba"
+
+#~ msgid "America/AW"
+#~ msgstr "Meiriceá/AW"
+
+#~ msgid "Asuncion"
+#~ msgstr "Asuncion"
+
+#~ msgid "America/PY"
+#~ msgstr "Meiriceá/PY"
+
+#~ msgid "Atikokan"
+#~ msgstr "Atikokan"
+
+#~ msgid "America/CA"
+#~ msgstr "Meiriceá/CA"
+
+#~ msgid "Bahia"
+#~ msgstr "Bahia"
+
+#~ msgid "Barbados"
+#~ msgstr "Barbadós"
+
+#~ msgid "America/BB"
+#~ msgstr "Meiriceá/BB"
+
+#~ msgid "Belem"
+#~ msgstr "Belem"
+
+#~ msgid "Amapa, E Para"
+#~ msgstr "Amapa, E Para"
+
+#~ msgid "Belize"
+#~ msgstr "An Bheilís"
+
+#~ msgid "America/BZ"
+#~ msgstr "Meiriceá/BZ"
+
+#~ msgid "Blanc-Sablon"
+#~ msgstr "Blanc-Sablon"
+
+#~ msgid "Boa Vista"
+#~ msgstr "Boa Vista"
+
+#~ msgid "Roraima"
+#~ msgstr "Roraima"
+
+#~ msgid "Bogota"
+#~ msgstr "Bogotá"
+
+#~ msgid "America/CO"
+#~ msgstr "Meiriceá/CO"
+
+#~ msgid "Boise"
+#~ msgstr "Boise"
+
+#~ msgid "Cambridge Bay"
+#~ msgstr "Cambridge Bay"
+
+#~ msgid "Campo Grande"
+#~ msgstr "Campo Grande"
+
+#~ msgid "Mato Grosso do Sul"
+#~ msgstr "Mato Grosso do Sul"
+
+#~ msgid "Cancun"
+#~ msgstr "Cancun"
+
+#~ msgid "America/MX"
+#~ msgstr "Meiriceá/MX"
+
+#~ msgid "Caracas"
+#~ msgstr "Caracas"
+
+#~ msgid "America/VE"
+#~ msgstr "Meiriceá/VE"
+
+#~ msgid "Cayenne"
+#~ msgstr "Cayenne"
+
+#~ msgid "America/GF"
+#~ msgstr "Meiriceá/GF"
+
+#~ msgid "Cayman"
+#~ msgstr "Cayman"
+
+#~ msgid "America/KY"
+#~ msgstr "Meiriceá/KY"
+
+#~ msgid "Chicago"
+#~ msgstr "Chicago"
+
+#~ msgid "Chihuahua"
+#~ msgstr "Chihuahua"
+
+#~ msgid "Costa Rica"
+#~ msgstr "Cósta Ríce"
+
+#~ msgid "America/CR"
+#~ msgstr "Meiriceá/CR"
+
+#~ msgid "Cuiaba"
+#~ msgstr "Cuiaba"
+
+#~ msgid "Mato Grosso"
+#~ msgstr "Mato Grosso"
+
+#~ msgid "Curacao"
+#~ msgstr "Curacao"
+
+#~ msgid "America/AN"
+#~ msgstr "Meiriceá/AN"
+
+#~ msgid "Danmarkshavn"
+#~ msgstr "Danmarkshavn"
+
+#~ msgid "America/GL"
+#~ msgstr "Meiriceá/GL"
+
+#~ msgid "Dawson"
+#~ msgstr "Dawson"
+
+#~ msgid "Dawson Creek"
+#~ msgstr "Dawson Creek"
+
+#~ msgid "Detroit"
+#~ msgstr "Detroit"
+
+#~ msgid "Dominica"
+#~ msgstr "Dominice"
+
+#~ msgid "America/DM"
+#~ msgstr "Meiriceá/DM"
+
+#~ msgid "Edmonton"
+#~ msgstr "Edmonton"
+
+#~ msgid "Eirunepe"
+#~ msgstr "Eirunepe"
+
+#~ msgid "W Amazonas"
+#~ msgstr "Amazonas Thiar"
+
+#~ msgid "El Salvador"
+#~ msgstr "An tSalvadóir"
+
+#~ msgid "America/SV"
+#~ msgstr "Meiriceá/SV"
+
+#~ msgid "Fortaleza"
+#~ msgstr "Fortaleza"
+
+#~ msgid "NE Brazil (MA, PI, CE, RN, PB)"
+#~ msgstr "An Bhrasaíl Thoir Thuaidh (MA, PI, CE, RN, PB)"
+
+#~ msgid "Glace Bay"
+#~ msgstr "Glace Bay"
+
+#~ msgid "Godthab"
+#~ msgstr "Godthab"
+
+#~ msgid "Goose Bay"
+#~ msgstr "Goose Bay"
+
+#~ msgid "Grand Turk"
+#~ msgstr "Grand Turk"
+
+#~ msgid "America/TC"
+#~ msgstr "Meiriceá/TC"
+
+#~ msgid "Grenada"
+#~ msgstr "Grenada"
+
+#~ msgid "America/GD"
+#~ msgstr "Meiriceá/GD"
+
+#~ msgid "Guadeloupe"
+#~ msgstr "An Ghuadalúip"
+
+#~ msgid "America/GP"
+#~ msgstr "Meiriceá/GP"
+
+#~ msgid "Guatemala"
+#~ msgstr "Guatamala"
+
+#~ msgid "America/GT"
+#~ msgstr "Meiriceá/GT"
+
+#~ msgid "Guayaquil"
+#~ msgstr "Guayaquil"
+
+#~ msgid "America/EC"
+#~ msgstr "Meiriceá/EC"
+
+#~ msgid "mainland"
+#~ msgstr "mórthír"
+
+#~ msgid "Guyana"
+#~ msgstr "An Ghuáin"
+
+#~ msgid "America/GY"
+#~ msgstr "Meiriceá/GY"
+
+#~ msgid "Halifax"
+#~ msgstr "Halifax"
+
+#~ msgid "Havana"
+#~ msgstr "Havána"
+
+#~ msgid "America/CU"
+#~ msgstr "Meiriceá/CU"
+
+#~ msgid "Hermosillo"
+#~ msgstr "Hermosillo"
+
+#~ msgid "Indianapolis"
+#~ msgstr "Indianapolis"
+
+#~ msgid "America/Indiana/US"
+#~ msgstr "Meiriceá/Indiana/US"
+
+#~ msgid "Knox"
+#~ msgstr "Knox"
+
+#~ msgid "Marengo"
+#~ msgstr "Marengo"
+
+#~ msgid "Petersburg"
+#~ msgstr "Petersburg"
+
+#~ msgid "Tell City"
+#~ msgstr "Tell City"
+
+#~ msgid "Vevay"
+#~ msgstr "Vevay"
+
+#~ msgid "Vincennes"
+#~ msgstr "Vincennes"
+
+#~ msgid "Winamac"
+#~ msgstr "Winamac"
+
+#~ msgid "Inuvik"
+#~ msgstr "Inuvik"
+
+#~ msgid "Iqaluit"
+#~ msgstr "Iqaluit"
+
+#~ msgid "Jamaica"
+#~ msgstr "Iamáice"
+
+#~ msgid "America/JM"
+#~ msgstr "Meiriceá/JM"
+
+#~ msgid "Juneau"
+#~ msgstr "Juneau"
+
+#~ msgid "Louisville"
+#~ msgstr "Louisville"
+
+#~ msgid "America/Kentucky/US"
+#~ msgstr "Meiriceá/Kentucky/US"
+
+#~ msgid "Monticello"
+#~ msgstr "Monticello"
+
+#~ msgid "La Paz"
+#~ msgstr "La Paz"
+
+#~ msgid "America/BO"
+#~ msgstr "Meiriceá/BO"
+
+#~ msgid "Lima"
+#~ msgstr "Líoma"
+
+#~ msgid "America/PE"
+#~ msgstr "Meiriceá/PE"
+
+#~ msgid "Los Angeles"
+#~ msgstr "Los Angeles"
+
+#~ msgid "Maceio"
+#~ msgstr "Maceio"
+
+#~ msgid "Alagoas, Sergipe"
+#~ msgstr "Alagoas, Sergipe"
+
+#~ msgid "Managua"
+#~ msgstr "Managua"
+
+#~ msgid "America/NI"
+#~ msgstr "Meiriceá/NI"
+
+#~ msgid "Manaus"
+#~ msgstr "Manaus"
+
+#~ msgid "E Amazonas"
+#~ msgstr "Amazonas Thoir"
+
+#~ msgid "Martinique"
+#~ msgstr "An Mhartainíc"
+
+#~ msgid "America/MQ"
+#~ msgstr "Meiriceá/MQ"
+
+#~ msgid "Mazatlan"
+#~ msgstr "Mazatlan"
+
+#~ msgid "Menominee"
+#~ msgstr "Menominee"
+
+#~ msgid "Merida"
+#~ msgstr "Merida"
+
+#~ msgid "Mexico City"
+#~ msgstr "Cathair Mheicsiceo"
+
+#~ msgid "Miquelon"
+#~ msgstr "Miquelon"
+
+#~ msgid "America/PM"
+#~ msgstr "Meiriceá/PM"
+
+#~ msgid "Moncton"
+#~ msgstr "Moncton"
+
+#~ msgid "Monterrey"
+#~ msgstr "Monterrey"
+
+#~ msgid "Montevideo"
+#~ msgstr "Montevideo"
+
+#~ msgid "America/UY"
+#~ msgstr "Meiriceá/UY"
+
+#~ msgid "Montreal"
+#~ msgstr "Montréal"
+
+#~ msgid "Montserrat"
+#~ msgstr "Montsarat"
+
+#~ msgid "America/MS"
+#~ msgstr "Meiriceá/MS"
+
+#~ msgid "Nassau"
+#~ msgstr "Nassau"
+
+#~ msgid "America/BS"
+#~ msgstr "Meiriceá/BS"
+
+#~ msgid "New York"
+#~ msgstr "Nua-Eabharc"
+
+#~ msgid "Nipigon"
+#~ msgstr "Nipigon"
+
+#~ msgid "Nome"
+#~ msgstr "Nome"
+
+#~ msgid "Noronha"
+#~ msgstr "Noronha"
+
+#~ msgid "Atlantic islands"
+#~ msgstr "Oileáin an Atlantaigh"
+
+#~ msgid "Center"
+#~ msgstr "Lár"
+
+#~ msgid "America/North Dakota/US"
+#~ msgstr "Meiriceá/North Dakota/US"
+
+#~ msgid "New Salem"
+#~ msgstr "New Salem"
+
+#~ msgid "Panama"
+#~ msgstr "Panama"
+
+#~ msgid "America/PA"
+#~ msgstr "Meiriceá/PA"
+
+#~ msgid "Pangnirtung"
+#~ msgstr "Pangnirtung"
+
+#~ msgid "Paramaribo"
+#~ msgstr "Paramaribo"
+
+#~ msgid "America/SR"
+#~ msgstr "Meiriceá/SR"
+
+#~ msgid "Phoenix"
+#~ msgstr "Phoenix"
+
+#~ msgid "Port-au-Prince"
+#~ msgstr "Port-au-Prince"
+
+#~ msgid "America/HT"
+#~ msgstr "Meiriceá/HT"
+
+#~ msgid "Port of Spain"
+#~ msgstr "Port of Spain"
+
+#~ msgid "America/TT"
+#~ msgstr "Meiriceá/TT"
+
+#~ msgid "Porto Velho"
+#~ msgstr "Porto Velho"
+
+#~ msgid "Puerto Rico"
+#~ msgstr "Portó Ríce"
+
+#~ msgid "America/PR"
+#~ msgstr "Meiriceá/PR"
+
+#~ msgid "Rainy River"
+#~ msgstr "Rainy River"
+
+#~ msgid "Rankin Inlet"
+#~ msgstr "Rankin Inlet"
+
+#~ msgid "Recife"
+#~ msgstr "Recife"
+
+#~ msgid "Pernambuco"
+#~ msgstr "Pernambuco"
+
+#~ msgid "Regina"
+#~ msgstr "Regina"
+
+#~ msgid "Resolute"
+#~ msgstr "Resolute"
+
+#~ msgid "Rio Branco"
+#~ msgstr "Rio Branco"
+
+#~ msgid "Acre"
+#~ msgstr "Acre"
+
+#~ msgid "Santiago"
+#~ msgstr "Saintiagó"
+
+#~ msgid "America/CL"
+#~ msgstr "Meiriceá/CL"
+
+#~ msgid "Santo Domingo"
+#~ msgstr "Santo Domingo"
+
+#~ msgid "America/DO"
+#~ msgstr "Meiriceá/DO"
+
+#~ msgid "Sao Paulo"
+#~ msgstr "Sao Paulo"
+
+#~ msgid "S & SE Brazil (GO, DF, MG, ES, RJ, SP, PR, SC, RS)"
+#~ msgstr ""
+#~ "An Bhrasaíl Theas agus Thoir Theas (GO, DF, MG, ES, RJ, SP, PR, SC, RS)"
+
+#~ msgid "Scoresbysund"
+#~ msgstr "Scoresbysund"
+
+#~ msgid "Scoresbysund / Ittoqqortoormiit"
+#~ msgstr "Scoresbysund / Ittoqqortoormiit"
+
+#~ msgid "Shiprock"
+#~ msgstr "Shiprock"
+
+#~ msgid "St Johns"
+#~ msgstr "St Johns"
+
+#~ msgid "St Kitts"
+#~ msgstr "St Kitts"
+
+#~ msgid "America/KN"
+#~ msgstr "Meiriceá/KN"
+
+#~ msgid "St Lucia"
+#~ msgstr "St. Lucia"
+
+#~ msgid "America/LC"
+#~ msgstr "Meiriceá/LC"
+
+#~ msgid "St Thomas"
+#~ msgstr "St Thomas"
+
+#~ msgid "America/VI"
+#~ msgstr "Meiriceá/VI"
+
+#~ msgid "St Vincent"
+#~ msgstr "St Vincent"
+
+#~ msgid "America/VC"
+#~ msgstr "Meiriceá/VC"
+
+# city name
+#~ msgid "Swift Current"
+#~ msgstr "Swift Current"
+
+#~ msgid "Tegucigalpa"
+#~ msgstr "Tegucigalpa"
+
+#~ msgid "America/HN"
+#~ msgstr "Meiriceá/HN"
+
+#~ msgid "Thule"
+#~ msgstr "Thule"
+
+#~ msgid "Thule / Pituffik"
+#~ msgstr "Thule / Pituffik"
+
+#~ msgid "Thunder Bay"
+#~ msgstr "Thunder Bay"
+
+#~ msgid "Tijuana"
+#~ msgstr "Tijuana"
+
+#~ msgid "Toronto"
+#~ msgstr "Toronto"
+
+#~ msgid "Tortola"
+#~ msgstr "Tortola"
+
+#~ msgid "America/VG"
+#~ msgstr "Meiriceá/VG"
+
+#~ msgid "Vancouver"
+#~ msgstr "Vancouver"
+
+#~ msgid "Whitehorse"
+#~ msgstr "Whitehorse"
+
+#~ msgid "Winnipeg"
+#~ msgstr "Winnipeg"
+
+#~ msgid "Yakutat"
+#~ msgstr "Yakutat"
+
+#~ msgid "Yellowknife"
+#~ msgstr "Yellowknife"
+
+#~ msgid "Casey"
+#~ msgstr "Casey"
+
+#~ msgid "Antarctica/AQ"
+#~ msgstr "An Antartaice/AQ"
+
+#~ msgid "Casey Station, Bailey Peninsula"
+#~ msgstr "Stáisiún Casey, Leithinis Bailey"
+
+#~ msgid "Davis"
+#~ msgstr "Davis"
+
+#~ msgid "Davis Station, Vestfold Hills"
+#~ msgstr "Stáisiún Davis, Cnoic Vestfold"
+
+#~ msgid "DumontDUrville"
+#~ msgstr "DumontDUrville"
+
+#~ msgid "Dumont-d'Urville Station, Terre Adelie"
+#~ msgstr "Stáisiún Dumont-d'Urville, Terre Adelie"
+
+#~ msgid "Mawson"
+#~ msgstr "Mawson"
+
+#~ msgid "Mawson Station, Holme Bay"
+#~ msgstr "Stáisiún Mawson, Bá Holme"
+
+#~ msgid "McMurdo"
+#~ msgstr "McMurdo"
+
+#~ msgid "McMurdo Station, Ross Island"
+#~ msgstr "Stáisiún McMurdo, Oileán Ross"
+
+#~ msgid "Palmer"
+#~ msgstr "Palmer"
+
+#~ msgid "Palmer Station, Anvers Island"
+#~ msgstr "Stáisiún Palmer, Oileán Anvers"
+
+#~ msgid "Rothera"
+#~ msgstr "Rothera"
+
+#~ msgid "Rothera Station, Adelaide Island"
+#~ msgstr "Stáisiún Rothera, Oileán Adelaide"
+
+#~ msgid "South Pole"
+#~ msgstr "An Mol Theas"
+
+#~ msgid "Amundsen-Scott Station, South Pole"
+#~ msgstr "Stáisiún Amundsen-Scott, An Mol Theas"
+
+#~ msgid "Syowa"
+#~ msgstr "Syowa"
+
+#~ msgid "Syowa Station, E Ongul I"
+#~ msgstr "Stáisiún Syowa, E Ongul I"
+
+#~ msgid "Vostok"
+#~ msgstr "Vostok"
+
+#~ msgid "Vostok Station, S Magnetic Pole"
+#~ msgstr "Stáisiún Vostok, An Mol Maighnéadach Theas"
+
+#~ msgid "Longyearbyen"
+#~ msgstr "Longyearbyen"
+
+#~ msgid "Arctic/SJ"
+#~ msgstr "An tArtach/SJ"
+
+#~ msgid "Svalbard"
+#~ msgstr "Svalbard"
+
+#~ msgid "Aden"
+#~ msgstr "Aden"
+
+#~ msgid "Asia/YE"
+#~ msgstr "An Áise/YE"
+
+#~ msgid "Almaty"
+#~ msgstr "Almaty"
+
+#~ msgid "Asia/KZ"
+#~ msgstr "An Áise/KZ"
+
+#~ msgid "Amman"
+#~ msgstr "Amman"
+
+#~ msgid "Asia/JO"
+#~ msgstr "An Áise/JO"
+
+#~ msgid "Anadyr"
+#~ msgstr "Anadyr"
+
+#~ msgid "Asia/RU"
+#~ msgstr "An Áise/RU"
+
+#~ msgid "Moscow+10 - Bering Sea"
+#~ msgstr "Moscó+10 - An Mhuir Bheiring"
+
+#~ msgid "Aqtau"
+#~ msgstr "Aqtau"
+
+#~ msgid "Atyrau (Atirau, Gur'yev), Mangghystau (Mankistau)"
+#~ msgstr "Atyrau (Atirau, Gur'yev), Mangghystau (Mankistau)"
+
+#~ msgid "Aqtobe"
+#~ msgstr "Aqtobe"
+
+#~ msgid "Aqtobe (Aktobe)"
+#~ msgstr "Aqtobe (Aktobe)"
+
+#~ msgid "Ashgabat"
+#~ msgstr "Ashgabat"
+
+#~ msgid "Asia/TM"
+#~ msgstr "An Áise/TM"
+
+#~ msgid "Baghdad"
+#~ msgstr "Bagdad"
+
+#~ msgid "Asia/IQ"
+#~ msgstr "An Áise/IQ"
+
+#~ msgid "Bahrain"
+#~ msgstr "An Bhairéin"
+
+#~ msgid "Asia/BH"
+#~ msgstr "An Áise/BH"
+
+#~ msgid "Baku"
+#~ msgstr "Baku"
+
+#~ msgid "Asia/AZ"
+#~ msgstr "An Áise/AZ"
+
+#~ msgid "Bangkok"
+#~ msgstr "Bancác"
+
+#~ msgid "Asia/TH"
+#~ msgstr "An Áise/TH"
+
+#~ msgid "Beirut"
+#~ msgstr "Béiriút"
+
+#~ msgid "Asia/LB"
+#~ msgstr "An Áise/LB"
+
+#~ msgid "Bishkek"
+#~ msgstr "Bishkek"
+
+#~ msgid "Asia/KG"
+#~ msgstr "An Áise/KG"
+
+#~ msgid "Brunei"
+#~ msgstr "Brúiné"
+
+#~ msgid "Asia/BN"
+#~ msgstr "An Áise/BN"
+
+#~ msgid "Calcutta"
+#~ msgstr "Calcúta"
+
+#~ msgid "Asia/IN"
+#~ msgstr "An Áise/IN"
+
+#~ msgid "Choibalsan"
+#~ msgstr "Choibalsan"
+
+#~ msgid "Asia/MN"
+#~ msgstr "An Áise/MN"
+
+#~ msgid "Dornod, Sukhbaatar"
+#~ msgstr "Dornod, Sukhbaatar"
+
+#~ msgid "Chongqing"
+#~ msgstr "Chongqing"
+
+#~ msgid "Asia/CN"
+#~ msgstr "An Áise/CN"
+
+#~ msgid "central China - Sichuan, Yunnan, Guangxi, Shaanxi, Guizhou, etc."
+#~ msgstr "An tSín Lárnach - Sichuan, Yunnan, Guangxi, Shaanxi, Guizhou, srl."
+
+#~ msgid "Colombo"
+#~ msgstr "Colombo"
+
+#~ msgid "Asia/LK"
+#~ msgstr "An Áise/LK"
+
+#~ msgid "Damascus"
+#~ msgstr "An Damaisc"
+
+#~ msgid "Asia/SY"
+#~ msgstr "An Áise/SY"
+
+#~ msgid "Dhaka"
+#~ msgstr "Dhaka"
+
+#~ msgid "Asia/BD"
+#~ msgstr "An Áise/BD"
+
+#~ msgid "Dili"
+#~ msgstr "Dili"
+
+#~ msgid "Asia/TL"
+#~ msgstr "An Áise/TL"
+
+#~ msgid "Dubai"
+#~ msgstr "Dubai"
+
+#~ msgid "Asia/AE"
+#~ msgstr "An Áise/AE"
+
+#~ msgid "Dushanbe"
+#~ msgstr "Dushanbe"
+
+#~ msgid "Asia/TJ"
+#~ msgstr "An Áise/TJ"
+
+#~ msgid "Gaza"
+#~ msgstr "Gaza"
+
+#~ msgid "Asia/PS"
+#~ msgstr "An Áise/PS"
+
+#~ msgid "Harbin"
+#~ msgstr "Harbin"
+
+#~ msgid "Heilongjiang (except Mohe), Jilin"
+#~ msgstr "Heilongjiang (seachas Mohe), Jilin"
+
+#~ msgid "Hong Kong"
+#~ msgstr "Hong Cong"
+
+#~ msgid "Asia/HK"
+#~ msgstr "An Áise/HK"
+
+#~ msgid "Hovd"
+#~ msgstr "Hovd"
+
+#~ msgid "Bayan-Olgiy, Govi-Altai, Hovd, Uvs, Zavkhan"
+#~ msgstr "Bayan-Olgiy, Govi-Altai, Hovd, Uvs, Zavkhan"
+
+#~ msgid "Irkutsk"
+#~ msgstr "Irkutsk"
+
+#~ msgid "Moscow+05 - Lake Baikal"
+#~ msgstr "Moscó+05 - Loch Baikal"
+
+#~ msgid "Jakarta"
+#~ msgstr "Iacárta"
+
+#~ msgid "Asia/ID"
+#~ msgstr "An Áise/ID"
+
+#~ msgid "Java & Sumatra"
+#~ msgstr "Iáva agus Sumatra"
+
+#~ msgid "Jayapura"
+#~ msgstr "Jayapura"
+
+#~ msgid "Irian Jaya & the Moluccas"
+#~ msgstr "Irian Jaya agus na Molacaí"
+
+#~ msgid "Jerusalem"
+#~ msgstr "Iarúsailéim"
+
+#~ msgid "Asia/IL"
+#~ msgstr "An Áise/IL"
+
+#~ msgid "Kabul"
+#~ msgstr "Cabúl"
+
+#~ msgid "Asia/AF"
+#~ msgstr "An Áise/AF"
+
+#~ msgid "Kamchatka"
+#~ msgstr "Kamchatka"
+
+#~ msgid "Moscow+09 - Kamchatka"
+#~ msgstr "Moscó+09 - Kamchatka"
+
+#~ msgid "Karachi"
+#~ msgstr "Karachi"
+
+#~ msgid "Asia/PK"
+#~ msgstr "An Áise/PK"
+
+#~ msgid "Kashgar"
+#~ msgstr "Kashgar"
+
+#~ msgid "west Tibet & Xinjiang"
+#~ msgstr "An Tibéid Thiar agus Xinjiang"
+
+#~ msgid "Katmandu"
+#~ msgstr "Katmandu"
+
+#~ msgid "Asia/NP"
+#~ msgstr "An Áise/NP"
+
+#~ msgid "Krasnoyarsk"
+#~ msgstr "Krasnoyarsk"
+
+#~ msgid "Moscow+04 - Yenisei River"
+#~ msgstr "Moscó+04 - Abhainn Yenisei"
+
+#~ msgid "Kuala Lumpur"
+#~ msgstr "Kuala Lumpur"
+
+#~ msgid "Asia/MY"
+#~ msgstr "An Áise/MY"
+
+#~ msgid "Kuching"
+#~ msgstr "Kuching"
+
+#~ msgid "Sabah & Sarawak"
+#~ msgstr "Sabah agus Sarawak"
+
+#~ msgid "Kuwait"
+#~ msgstr "An Chuáit"
+
+#~ msgid "Asia/KW"
+#~ msgstr "An Áise/KW"
+
+#~ msgid "Macau"
+#~ msgstr "Macao"
+
+#~ msgid "Asia/MO"
+#~ msgstr "An Áise/MO"
+
+#~ msgid "Magadan"
+#~ msgstr "Magadan"
+
+#~ msgid "Moscow+08 - Magadan"
+#~ msgstr "Moscó+08 - Magadan"
+
+#~ msgid "Makassar"
+#~ msgstr "Makassar"
+
+#~ msgid "Manila"
+#~ msgstr "Mainile"
+
+#~ msgid "Asia/PH"
+#~ msgstr "An Áise/PH"
+
+#~ msgid "Asia/OM"
+#~ msgstr "An Áise/OM"
+
+#~ msgid "Nicosia"
+#~ msgstr "Nicosia"
+
+#~ msgid "Asia/CY"
+#~ msgstr "An Áise/CY"
+
+#~ msgid "Novosibirsk"
+#~ msgstr "Novosibirsk"
+
+#~ msgid "Moscow+03 - Novosibirsk"
+#~ msgstr "Moscó+03 - Novosibirsk"
+
+#~ msgid "Omsk"
+#~ msgstr "Omsk"
+
+#~ msgid "Moscow+03 - west Siberia"
+#~ msgstr "Moscó+03 - An tSibéir Thiar"
+
+#~ msgid "Oral"
+#~ msgstr "Oral"
+
+#~ msgid "West Kazakhstan"
+#~ msgstr "An Chasacstáin Thiar"
+
+#~ msgid "Phnom Penh"
+#~ msgstr "Phnom Penh"
+
+#~ msgid "Asia/KH"
+#~ msgstr "An Áise/KH"
+
+#~ msgid "Pontianak"
+#~ msgstr "Pontianak"
+
+#~ msgid "west & central Borneo"
+#~ msgstr "Boirneo Thiar agus Láir"
+
+#~ msgid "Pyongyang"
+#~ msgstr "Pyongyang"
+
+#~ msgid "Asia/KP"
+#~ msgstr "An Áise/KP"
+
+#~ msgid "Qatar"
+#~ msgstr "Catar"
+
+#~ msgid "Asia/QA"
+#~ msgstr "An Áise/QA"
+
+#~ msgid "Qyzylorda"
+#~ msgstr "Qyzylorda"
+
+#~ msgid "Qyzylorda (Kyzylorda, Kzyl-Orda)"
+#~ msgstr "Qyzylorda (Kyzylorda, Kzyl-Orda)"
+
+#~ msgid "Rangoon"
+#~ msgstr "Rangún"
+
+#~ msgid "Asia/MM"
+#~ msgstr "An Áise/MM"
+
+#~ msgid "Riyadh"
+#~ msgstr "Riyadh"
+
+#~ msgid "Asia/SA"
+#~ msgstr "An Áise/SA"
+
+#~ msgid "Saigon"
+#~ msgstr "Saigon"
+
+#~ msgid "Asia/VN"
+#~ msgstr "An Áise/VN"
+
+#~ msgid "Sakhalin"
+#~ msgstr "Sakhalin"
+
+#~ msgid "Moscow+07 - Sakhalin Island"
+#~ msgstr "Moscó+07 - Oileán Sakhalin"
+
+#~ msgid "Samarkand"
+#~ msgstr "Samarkand"
+
+#~ msgid "Asia/UZ"
+#~ msgstr "An Áise/UZ"
+
+#~ msgid "west Uzbekistan"
+#~ msgstr "An Úisbéiceastáin Thiar"
+
+#~ msgid "Seoul"
+#~ msgstr "Seoul"
+
+#~ msgid "Asia/KR"
+#~ msgstr "An Áise/KR"
+
+#~ msgid "Shanghai"
+#~ msgstr "Shanghai"
+
+#~ msgid "Singapore"
+#~ msgstr "Singeapór"
+
+#~ msgid "Asia/SG"
+#~ msgstr "An Áise/SG"
+
+#~ msgid "Taipei"
+#~ msgstr "Taipei"
+
+#~ msgid "Asia/TW"
+#~ msgstr "An Áise/TW"
+
+#~ msgid "Tashkent"
+#~ msgstr "Taiscint"
+
+#~ msgid "east Uzbekistan"
+#~ msgstr "An Úisbéiceastáin Thoir"
+
+#~ msgid "Tbilisi"
+#~ msgstr "Tbilisi"
+
+#~ msgid "Asia/GE"
+#~ msgstr "An Áise/GE"
+
+#~ msgid "Tehran"
+#~ msgstr "Tehran"
+
+#~ msgid "Asia/IR"
+#~ msgstr "An Áise/IR"
+
+#~ msgid "Thimphu"
+#~ msgstr "Thimphu"
+
+#~ msgid "Asia/BT"
+#~ msgstr "An Áise/BT"
+
+#~ msgid "Tokyo"
+#~ msgstr "Tóiceo"
+
+#~ msgid "Asia/JP"
+#~ msgstr "An Áise/JP"
+
+#~ msgid "Ulaanbaatar"
+#~ msgstr "Ulaanbaatar"
+
+#~ msgid "Urumqi"
+#~ msgstr "Urumqi"
+
+#~ msgid "Vientiane"
+#~ msgstr "Vientiane"
+
+#~ msgid "Asia/LA"
+#~ msgstr "An Áise/LA"
+
+#~ msgid "Vladivostok"
+#~ msgstr "Vladivostok"
+
+#~ msgid "Moscow+07 - Amur River"
+#~ msgstr "Moscó+07 - Abhainn Amur"
+
+#~ msgid "Moscow+06 - Lena River"
+#~ msgstr "Moscó+06 - Abhainn Lena"
+
+#~ msgid "Yekaterinburg"
+#~ msgstr "Yekaterinburg"
+
+#~ msgid "Moscow+02 - Urals"
+#~ msgstr "Moscó+02 - Sléibhte na hÚraile"
+
+#~ msgid "Yerevan"
+#~ msgstr "Yerevan"
+
+#~ msgid "Asia/AM"
+#~ msgstr "An Áise/AM"
+
+#~ msgid "Azores"
+#~ msgstr "Na hAsóir"
+
+#~ msgid "Atlantic/PT"
+#~ msgstr "An tAtlantach/PT"
+
+#~ msgid "Bermuda"
+#~ msgstr "Beirmiúda"
+
+#~ msgid "Atlantic/BM"
+#~ msgstr "An tAtlantach/BM"
+
+#~ msgid "Atlantic/ES"
+#~ msgstr "An tAtlantach/ES"
+
+#~ msgid "Canary Islands"
+#~ msgstr "Na hOileáin Chanáracha"
+
+#~ msgid "Cape Verde"
+#~ msgstr "Rinn Verde"
+
+#~ msgid "Atlantic/CV"
+#~ msgstr "An tAtlantach/CV"
+
+#~ msgid "Atlantic/FO"
+#~ msgstr "An tAtlantach/FO"
+
+#~ msgid "Jan Mayen"
+#~ msgstr "Jan Mayen"
+
+#~ msgid "Atlantic/SJ"
+#~ msgstr "An tAtlantach/SJ"
+
+#~ msgid "Madeira"
+#~ msgstr "Maidéara"
+
+#~ msgid "Madeira Islands"
+#~ msgstr "Na hOileáin Mhaidéaracha"
+
+#~ msgid "Reykjavik"
+#~ msgstr "Réicivíc"
+
+#~ msgid "Atlantic/IS"
+#~ msgstr "An tAtlantach/IS"
+
+#~ msgid "South Georgia"
+#~ msgstr "An tSeoirsia Theas"
+
+#~ msgid "Atlantic/GS"
+#~ msgstr "An tAtlantach/GS"
+
+#~ msgid "St Helena"
+#~ msgstr "St. Helena"
+
+#~ msgid "Atlantic/SH"
+#~ msgstr "An tAtlantach/SH"
+
+#~ msgid "Stanley"
+#~ msgstr "Stanley"
+
+#~ msgid "Atlantic/FK"
+#~ msgstr "An tAtlantach/FK"
+
+#~ msgid "Adelaide"
+#~ msgstr "Adelaide"
+
+#~ msgid "Australia/AU"
+#~ msgstr "An Astráil/AU"
+
+#~ msgid "South Australia"
+#~ msgstr "An Astráil Theas"
+
+#~ msgid "Brisbane"
+#~ msgstr "Brisbane"
+
+#~ msgid "Broken Hill"
+#~ msgstr "Broken Hill"
+
+#~ msgid "Currie"
+#~ msgstr "Currie"
+
+#~ msgid "Tasmania - King Island"
+#~ msgstr "An Tasmáin - Oileán King"
+
+#~ msgid "Darwin"
+#~ msgstr "Darwin"
+
+#~ msgid "Eucla"
+#~ msgstr "Eucla"
+
+#~ msgid "Hobart"
+#~ msgstr "Hobart"
+
+#~ msgid "Lindeman"
+#~ msgstr "Lindeman"
+
+#~ msgid "Lord Howe"
+#~ msgstr "Tiarna Howe"
+
+#~ msgid "Lord Howe Island"
+#~ msgstr "Oileán Tiarna Howe"
+
+#~ msgid "Melbourne"
+#~ msgstr "Melbourne"
+
+#~ msgid "Victoria"
+#~ msgstr "Victoria"
+
+#~ msgid "Perth"
+#~ msgstr "Perth"
+
+#~ msgid "Sydney"
+#~ msgstr "Sydney"
+
+#~ msgid "Amsterdam"
+#~ msgstr "Amstardam"
+
+#~ msgid "Europe/NL"
+#~ msgstr "An Eoraip/NL"
+
+#~ msgid "Andorra"
+#~ msgstr "Andóra"
+
+#~ msgid "Europe/AD"
+#~ msgstr "An Eoraip/AD"
+
+#~ msgid "Athens"
+#~ msgstr "An Aithin"
+
+#~ msgid "Europe/GR"
+#~ msgstr "An Eoraip/GR"
+
+#~ msgid "Belgrade"
+#~ msgstr "Béalgrád"
+
+#~ msgid "Europe/RS"
+#~ msgstr "An Eoraip/RS"
+
+#~ msgid "Berlin"
+#~ msgstr "Beirlín"
+
+#~ msgid "Europe/DE"
+#~ msgstr "An Eoraip/DE"
+
+#~ msgid "Bratislava"
+#~ msgstr "An Bhratasláiv"
+
+#~ msgid "Europe/SK"
+#~ msgstr "An Eoraip/SK"
+
+#~ msgid "Brussels"
+#~ msgstr "An Bhruiséil"
+
+#~ msgid "Europe/BE"
+#~ msgstr "An Eoraip/BE"
+
+#~ msgid "Bucharest"
+#~ msgstr "Búcairist"
+
+#~ msgid "Europe/RO"
+#~ msgstr "An Eoraip/RO"
+
+#~ msgid "Budapest"
+#~ msgstr "Búdaipeist"
+
+#~ msgid "Europe/HU"
+#~ msgstr "An Eoraip/HU"
+
+#~ msgid "Chisinau"
+#~ msgstr "Chisinau"
+
+#~ msgid "Europe/MD"
+#~ msgstr "An Eoraip/MD"
+
+#~ msgid "Copenhagen"
+#~ msgstr "Cóbanhávan"
+
+#~ msgid "Europe/DK"
+#~ msgstr "An Eoraip/DK"
+
+#~ msgid "Dublin"
+#~ msgstr "Baile Átha Cliath"
+
+#~ msgid "Europe/IE"
+#~ msgstr "An Eoraip/IE"
+
+#~ msgid "Gibraltar"
+#~ msgstr "Giobráltar"
+
+#~ msgid "Europe/GI"
+#~ msgstr "An Eoraip/GI"
+
+#~ msgid "Guernsey"
+#~ msgstr "Geansaí"
+
+#~ msgid "Europe/GG"
+#~ msgstr "An Eoraip/GG"
+
+#~ msgid "Helsinki"
+#~ msgstr "Heilsincí"
+
+#~ msgid "Europe/FI"
+#~ msgstr "An Eoraip/FI"
+
+#~ msgid "Isle of Man"
+#~ msgstr "Oileán Mhanann"
+
+#~ msgid "Europe/IM"
+#~ msgstr "An Eoraip/IM"
+
+#~ msgid "Istanbul"
+#~ msgstr "Iostanbúl"
+
+#~ msgid "Europe/TR"
+#~ msgstr "An Eoraip/TR"
+
+#~ msgid "Jersey"
+#~ msgstr "Geirsí"
+
+#~ msgid "Europe/JE"
+#~ msgstr "An Eoraip/JE"
+
+#~ msgid "Kaliningrad"
+#~ msgstr "Kaliningrad"
+
+#~ msgid "Europe/RU"
+#~ msgstr "An Eoraip/RU"
+
+#~ msgid "Moscow-01 - Kaliningrad"
+#~ msgstr "Moscó-01 - Kaliningrad"
+
+#~ msgid "Kiev"
+#~ msgstr "Cív"
+
+#~ msgid "Europe/UA"
+#~ msgstr "An Eoraip/UA"
+
+#~ msgid "Lisbon"
+#~ msgstr "Liospóin"
+
+#~ msgid "Europe/PT"
+#~ msgstr "An Eoraip/PT"
+
+#~ msgid "Ljubljana"
+#~ msgstr "Liúibleána"
+
+#~ msgid "Europe/SI"
+#~ msgstr "An Eoraip/SI"
+
+#~ msgid "London"
+#~ msgstr "Londain"
+
+#~ msgid "Europe/GB"
+#~ msgstr "An Eoraip/GB"
+
+#~ msgid "Luxembourg"
+#~ msgstr "Lucsamburg"
+
+#~ msgid "Europe/LU"
+#~ msgstr "An Eoraip/LU"
+
+#~ msgid "Madrid"
+#~ msgstr "Maidrid"
+
+#~ msgid "Europe/ES"
+#~ msgstr "An Eoraip/ES"
+
+#~ msgid "Malta"
+#~ msgstr "Málta"
+
+#~ msgid "Europe/MT"
+#~ msgstr "An Eoraip/MT"
+
+#~ msgid "Mariehamn"
+#~ msgstr "Mariehamn"
+
+#~ msgid "Europe/AX"
+#~ msgstr "An Eoraip/AX"
+
+#~ msgid "Minsk"
+#~ msgstr "Minsc"
+
+#~ msgid "Europe/BY"
+#~ msgstr "An Eoraip/BY"
+
+#~ msgid "Monaco"
+#~ msgstr "Monacó"
+
+#~ msgid "Europe/MC"
+#~ msgstr "An Eoraip/MC"
+
+#~ msgid "Moscow"
+#~ msgstr "Moscó"
+
+#~ msgid "Moscow+00 - west Russia"
+#~ msgstr "Moscó+00 - An Rúis Thiar"
+
+#~ msgid "Oslo"
+#~ msgstr "Osló"
+
+#~ msgid "Europe/NO"
+#~ msgstr "An Eoraip/NO"
+
+#~ msgid "Paris"
+#~ msgstr "Páras"
+
+#~ msgid "Europe/FR"
+#~ msgstr "An Eoraip/FR"
+
+#~ msgid "Podgorica"
+#~ msgstr "Podgorica"
+
+#~ msgid "Europe/ME"
+#~ msgstr "An Eoraip/ME"
+
+#~ msgid "Prague"
+#~ msgstr "Prág"
+
+#~ msgid "Europe/CZ"
+#~ msgstr "An Eoraip/CZ"
+
+#~ msgid "Riga"
+#~ msgstr "Ríge"
+
+#~ msgid "Europe/LV"
+#~ msgstr "An Eoraip/LV"
+
+#~ msgid "Rome"
+#~ msgstr "An Róimh"
+
+#~ msgid "Europe/IT"
+#~ msgstr "An Eoraip/IT"
+
+#~ msgid "Samara"
+#~ msgstr "Samara"
+
+#~ msgid "Moscow+01 - Samara, Udmurtia"
+#~ msgstr "Moscó+01 - Samara, Udmurtia"
+
+#~ msgid "San Marino"
+#~ msgstr "San Mairíne"
+
+#~ msgid "Europe/SM"
+#~ msgstr "An Eoraip/SM"
+
+#~ msgid "Sarajevo"
+#~ msgstr "Sairéavó"
+
+#~ msgid "Europe/BA"
+#~ msgstr "An Eoraip/BA"
+
+#~ msgid "Simferopol"
+#~ msgstr "Simferopol"
+
+#~ msgid "Skopje"
+#~ msgstr "Skopje"
+
+#~ msgid "Europe/MK"
+#~ msgstr "An Eoraip/MK"
+
+#~ msgid "Sofia"
+#~ msgstr "Sóifia"
+
+#~ msgid "Europe/BG"
+#~ msgstr "An Eoraip/BG"
+
+#~ msgid "Stockholm"
+#~ msgstr "Stócólm"
+
+#~ msgid "Europe/SE"
+#~ msgstr "An Eoraip/SE"
+
+#~ msgid "Tallinn"
+#~ msgstr "Tallinn"
+
+#~ msgid "Europe/EE"
+#~ msgstr "An Eoraip/EE"
+
+#~ msgid "Tirane"
+#~ msgstr "Tirane"
+
+#~ msgid "Europe/AL"
+#~ msgstr "An Eoraip/AL"
+
+#~ msgid "Uzhgorod"
+#~ msgstr "Uzhgorod"
+
+#~ msgid "Ruthenia"
+#~ msgstr "Ruthenia"
+
+#~ msgid "Vaduz"
+#~ msgstr "Vaduz"
+
+#~ msgid "Europe/LI"
+#~ msgstr "An Eoraip/LI"
+
+#~ msgid "Vatican"
+#~ msgstr "An Vatacáin"
+
+#~ msgid "Europe/VA"
+#~ msgstr "An Eoraip/VA"
+
+#~ msgid "Vienna"
+#~ msgstr "Vín"
+
+#~ msgid "Europe/AT"
+#~ msgstr "An Eoraip/AT"
+
+#~ msgid "Vilnius"
+#~ msgstr "Vilnius"
+
+#~ msgid "Europe/LT"
+#~ msgstr "An Eoraip/LT"
+
+#~ msgid "Volgograd"
+#~ msgstr "Volgograd"
+
+#~ msgid "Moscow+00 - Caspian Sea"
+#~ msgstr "Moscó+00 - An Mhuir Chaisp"
+
+#~ msgid "Warsaw"
+#~ msgstr "Vársá"
+
+#~ msgid "Europe/PL"
+#~ msgstr "An Eoraip/PL"
+
+#~ msgid "Zagreb"
+#~ msgstr "Ságrab"
+
+#~ msgid "Europe/HR"
+#~ msgstr "An Eoraip/HR"
+
+#~ msgid "Zaporozhye"
+#~ msgstr "Zaporozhye"
+
+#~ msgid "Zurich"
+#~ msgstr "Zürich"
+
+#~ msgid "Europe/CH"
+#~ msgstr "An Eoraip/CH"
+
+#~ msgid "Antananarivo"
+#~ msgstr "Antananarivo"
+
+#~ msgid "Indian/MG"
+#~ msgstr "An tAigéan Indiach/MG"
+
+#~ msgid "Chagos"
+#~ msgstr "Chagos"
+
+#~ msgid "Indian/IO"
+#~ msgstr "An tAigéan Indiach/IO"
+
+#~ msgid "Indian/CX"
+#~ msgstr "An tAigéan Indiach/CX"
+
+#~ msgid "Cocos"
+#~ msgstr "Cocos"
+
+#~ msgid "Indian/CC"
+#~ msgstr "An tAigéan Indiach/CC"
+
+#~ msgid "Comoro"
+#~ msgstr "Comoro"
+
+#~ msgid "Indian/KM"
+#~ msgstr "An tAigéan Indiach/KM"
+
+#~ msgid "Kerguelen"
+#~ msgstr "Kerguelen"
+
+#~ msgid "Indian/TF"
+#~ msgstr "An tAigéan Indiach/TF"
+
+#~ msgid "Mahe"
+#~ msgstr "Mahe"
+
+#~ msgid "Indian/SC"
+#~ msgstr "An tAigéan Indiach/SC"
+
+#~ msgid "Maldives"
+#~ msgstr "Oileáin Mhaildíve"
+
+#~ msgid "Indian/MV"
+#~ msgstr "An tAigéan Indiach/MV"
+
+#~ msgid "Mauritius"
+#~ msgstr "Oileán Mhuirís"
+
+#~ msgid "Indian/MU"
+#~ msgstr "An tAigéan Indiach/MU"
+
+#~ msgid "Mayotte"
+#~ msgstr "Mayotte"
+
+#~ msgid "Indian/YT"
+#~ msgstr "An tAigéan Indiach/YT"
+
+#~ msgid "Reunion"
+#~ msgstr "Réunion"
+
+#~ msgid "Indian/RE"
+#~ msgstr "An tAigéan Indiach/RE"
+
+#~ msgid "Apia"
+#~ msgstr "Apia"
+
+#~ msgid "Pacific/WS"
+#~ msgstr "An tAigéan Ciúin/WS"
+
+#~ msgid "Auckland"
+#~ msgstr "Auckland"
+
+#~ msgid "Pacific/NZ"
+#~ msgstr "An tAigéan Ciúin/NZ"
+
+#~ msgid "Chatham"
+#~ msgstr "Chatham"
+
+#~ msgid "Chatham Islands"
+#~ msgstr "Oileáin Chatham"
+
+#~ msgid "Pacific/CL"
+#~ msgstr "An tAigéan Ciúin/CL"
+
+#~ msgid "Easter Island & Sala y Gomez"
+#~ msgstr "Oileán na Cásca agus Sala y Gomez"
+
+#~ msgid "Efate"
+#~ msgstr "Efate"
+
+#~ msgid "Pacific/VU"
+#~ msgstr "An tAigéan Ciúin/VU"
+
+#~ msgid "Enderbury"
+#~ msgstr "Enderbury"
+
+#~ msgid "Pacific/KI"
+#~ msgstr "An tAigéan Ciúin/KI"
+
+#~ msgid "Phoenix Islands"
+#~ msgstr "Oileáin Phoenix"
+
+#~ msgid "Fakaofo"
+#~ msgstr "Fakaofo"
+
+#~ msgid "Pacific/TK"
+#~ msgstr "An tAigéan Ciúin/TK"
+
+#~ msgid "Fiji"
+#~ msgstr "Fidsí"
+
+#~ msgid "Pacific/FJ"
+#~ msgstr "An tAigéan Ciúin/FJ"
+
+#~ msgid "Funafuti"
+#~ msgstr "Funafuti"
+
+#~ msgid "Pacific/TV"
+#~ msgstr "An tAigéan Ciúin/TV"
+
+#~ msgid "Galapagos"
+#~ msgstr "Galápagos"
+
+#~ msgid "Pacific/EC"
+#~ msgstr "An tAigéan Ciúin/EC"
+
+#~ msgid "Galapagos Islands"
+#~ msgstr "Oileáin Galapagos"
+
+#~ msgid "Gambier"
+#~ msgstr "Gambier"
+
+#~ msgid "Pacific/PF"
+#~ msgstr "An tAigéan Ciúin/PF"
+
+#~ msgid "Gambier Islands"
+#~ msgstr "Oileáin Gambier"
+
+#~ msgid "Guadalcanal"
+#~ msgstr "Guadalcanal"
+
+#~ msgid "Pacific/SB"
+#~ msgstr "An tAigéan Ciúin/SB"
+
+#~ msgid "Guam"
+#~ msgstr "Guam"
+
+#~ msgid "Pacific/GU"
+#~ msgstr "An tAigéan Ciúin/GU"
+
+#~ msgid "Honolulu"
+#~ msgstr "Honolulu"
+
+#~ msgid "Pacific/US"
+#~ msgstr "An tAigéan Ciúin/US"
+
+#~ msgid "Hawaii"
+#~ msgstr "Haváí"
+
+#~ msgid "Johnston"
+#~ msgstr "Johnston"
+
+#~ msgid "Pacific/UM"
+#~ msgstr "An tAigéan Ciúin/UM"
+
+#~ msgid "Johnston Atoll"
+#~ msgstr "Atall Johnston"
+
+#~ msgid "Kiritimati"
+#~ msgstr "Kiritimati"
+
+#~ msgid "Kosrae"
+#~ msgstr "Kosrae"
+
+#~ msgid "Pacific/FM"
+#~ msgstr "An tAigéan Ciúin/FM"
+
+#~ msgid "Kwajalein"
+#~ msgstr "Kwajalein"
+
+#~ msgid "Pacific/MH"
+#~ msgstr "An tAigéan Ciúin/MH"
+
+#~ msgid "Majuro"
+#~ msgstr "Majuro"
+
+#~ msgid "Marquesas"
+#~ msgstr "Na hOileáin Mharcasacha"
+
+#~ msgid "Marquesas Islands"
+#~ msgstr "Na hOileáin Mharcasacha"
+
+#~ msgid "Midway"
+#~ msgstr "Midway"
+
+#~ msgid "Midway Islands"
+#~ msgstr "Oileáin Midway"
+
+#~ msgid "Nauru"
+#~ msgstr "Nárúis"
+
+#~ msgid "Pacific/NR"
+#~ msgstr "An tAigéan Ciúin/NR"
+
+#~ msgid "Niue"
+#~ msgstr "Niue"
+
+#~ msgid "Pacific/NU"
+#~ msgstr "An tAigéan Ciúin/NU"
+
+#~ msgid "Norfolk"
+#~ msgstr "Norfolk"
+
+#~ msgid "Pacific/NF"
+#~ msgstr "An tAigéan Ciúin/NF"
+
+#~ msgid "Noumea"
+#~ msgstr "Noumea"
+
+#~ msgid "Pacific/NC"
+#~ msgstr "An tAigéan Ciúin/NC"
+
+#~ msgid "Pago Pago"
+#~ msgstr "Pago Pago"
+
+#~ msgid "Pacific/AS"
+#~ msgstr "An tAigéan Ciúin/AS"
+
+#~ msgid "Palau"
+#~ msgstr "Palau"
+
+#~ msgid "Pacific/PW"
+#~ msgstr "An tAigéan Ciúin/PW"
+
+#~ msgid "Pitcairn"
+#~ msgstr "Oileán Pitcairn"
+
+#~ msgid "Pacific/PN"
+#~ msgstr "An tAigéan Ciúin/PN"
+
+#~ msgid "Ponape"
+#~ msgstr "Ponape"
+
+#~ msgid "Ponape (Pohnpei)"
+#~ msgstr "Ponape (Pohnpei)"
+
+#~ msgid "Port Moresby"
+#~ msgstr "Port Moresby"
+
+#~ msgid "Pacific/PG"
+#~ msgstr "An tAigéan Ciúin/PG"
+
+#~ msgid "Rarotonga"
+#~ msgstr "Rarotonga"
+
+#~ msgid "Pacific/CK"
+#~ msgstr "An tAigéan Ciúin/CK"
+
+#~ msgid "Saipan"
+#~ msgstr "Saipan"
+
+#~ msgid "Pacific/MP"
+#~ msgstr "An tAigéan Ciúin/MP"
+
+#~ msgid "Tahiti"
+#~ msgstr "Taihítí"
+
+#~ msgid "Tarawa"
+#~ msgstr "Tarawa"
+
+#~ msgid "Gilbert Islands"
+#~ msgstr "Cireabaití"
+
+#~ msgid "Tongatapu"
+#~ msgstr "Tongatapu"
+
+#~ msgid "Pacific/TO"
+#~ msgstr "An tAigéan Ciúin/TO"
+
+#~ msgid "Truk"
+#~ msgstr "Truk"
+
+#~ msgid "Truk (Chuuk) and Yap"
+#~ msgstr "Truk (Chuuk) agus Yap"
+
+#~ msgid "Wake"
+#~ msgstr "Wake"
+
+#~ msgid "Wake Island"
+#~ msgstr "Oileán Wake"
+
+#~ msgid "Wallis"
+#~ msgstr "Wallis"
+
+#~ msgid "Pacific/WF"
+#~ msgstr "An tAigéan Ciúin/WF"
+
+#~ msgid "Size of the clock:"
+#~ msgstr "Méid an chloig:"
+
+#~ msgid "Change clock size"
+#~ msgstr "Athraigh méid an chloig"
+
+#~ msgid ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'DejaVu Serif'; font-size:9pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Display the second "
+#~ "hand</p></body></html>"
+#~ msgstr ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'DejaVu Serif'; font-size:9pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Taispeáin snáthaid na "
+#~ "soicindí</p></body></html>"
+
+#~ msgid ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'DejaVu Serif'; font-size:9pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Display the time as a "
+#~ "string</p></body></html>"
+#~ msgstr ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'DejaVu Serif'; font-size:9pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Taispeáin an t-am mar "
+#~ "theaghrán</p></body></html>"
+
+#~ msgid ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'DejaVu Serif'; font-size:9pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Change clock size</p></"
+#~ "body></html>"
+#~ msgstr ""
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'DejaVu Serif'; font-size:9pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Athraigh méid an "
+#~ "chloig</p></body></html>"

@@ -1,0 +1,163 @@
+# translation of ksmserver.po to Turkish
+# Copyright (C) 2004, 2008 Free Software Foundation, Inc.
+#
+# Görkem Çetin <gorkem@kde.org>, 2004.
+# Serdar Soytetir <tulliana@gmail.com>, 2008, 2009, 2010, 2012.
+# Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2017, 2022.
+# Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: ksmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-22 00:47+0000\n"
+"PO-Revision-Date: 2022-02-27 14:01+0100\n"
+"Last-Translator: Volkan Gezer <volkangezer@gmail.com>\n"
+"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 20.12.3\n"
+
+#: logout.cpp:344
+#, kde-format
+msgid "Logout canceled by '%1'"
+msgstr "Çıkış '%1' tarafından iptal edildi"
+
+#: main.cpp:117
+#, kde-format
+msgid "$HOME not set!"
+msgstr "$HOME ayarlanmamış!"
+
+#: main.cpp:121 main.cpp:127
+#, kde-format
+msgid "$HOME directory (%1) does not exist."
+msgstr "$HOME dizini (%1) mevcut değil."
+
+#: main.cpp:123
+#, kde-format
+msgid "No write access to $HOME directory (%1)."
+msgstr "$HOME dizinine (%1) yazma izni yok."
+
+#: main.cpp:129
+#, kde-format
+msgid "No read access to $HOME directory (%1)."
+msgstr "$HOME dizinini (%1) okuma izni yok."
+
+#: main.cpp:133
+#, kde-format
+msgid "$HOME directory (%1) is out of disk space."
+msgstr "$HOME dizini (%1) dolu."
+
+#: main.cpp:136
+#, kde-format
+msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+msgstr "$HOME dizinine (%2) yazarken '%1' hatası oluştu"
+
+#: main.cpp:149 main.cpp:184
+#, kde-format
+msgid "No write access to '%1'."
+msgstr "'%1' üzerine yazma izni yok."
+
+#: main.cpp:151 main.cpp:186
+#, kde-format
+msgid "No read access to '%1'."
+msgstr "'%1' için okuma izni yok."
+
+#: main.cpp:159 main.cpp:172
+#, kde-format
+msgid "Temp directory (%1) is out of disk space."
+msgstr "Geçici dosya dizini (%1) dolu."
+
+#: main.cpp:162 main.cpp:175
+#, kde-format
+msgid ""
+"Writing to the temp directory (%2) failed with\n"
+"    the error '%1'"
+msgstr ""
+"Geçici dosya dizinine (%2) yazma\n"
+"    '%1' hatası ile başarısız oldu"
+
+#: main.cpp:190
+#, kde-format
+msgid ""
+"The following installation problem was detected\n"
+"while trying to start Plasma:"
+msgstr ""
+"Plasma başlatılırken aşağıdaki kurulum\n"
+"sorunu algılandı:"
+
+#: main.cpp:193
+#, kde-format
+msgid ""
+"\n"
+"\n"
+"Plasma is unable to start.\n"
+msgstr ""
+"\n"
+"\n"
+"Plasma başlatılamıyor.\n"
+
+#: main.cpp:200
+#, kde-format
+msgid "Plasma Workspace installation problem!"
+msgstr "Plasma Çalışma Alanı kurulum problemi!"
+
+#: main.cpp:236
+#, kde-format
+msgid ""
+"The reliable Plasma session manager that talks the standard X11R6 \n"
+"session management protocol (XSMP)."
+msgstr ""
+"Standart X11R6 oturum yönetim protokolünü (XSMP) kullanan \n"
+"güvenilir Plasma oturum yöneticisi."
+
+#: main.cpp:240
+#, kde-format
+msgid "Restores the saved user session if available"
+msgstr "Mümkünse kaydedilen oturumu yeniden yükler"
+
+#: main.cpp:243
+#, kde-format
+msgid "Also allow remote connections"
+msgstr "Uzaktan bağlantılara izin ver"
+
+#: main.cpp:246
+#, kde-format
+msgid "Starts the session in locked mode"
+msgstr "Oturumu kilitli kipte başlatır"
+
+#: main.cpp:250
+#, kde-format
+msgid ""
+"Starts without lock screen support. Only needed if other component provides "
+"the lock screen."
+msgstr ""
+"Kilit ekranı desteği olmadan başlatılır. Yalnızca diğer bileşen kilit "
+"ekranını sağlarsa gereklidir."
+
+#: server.cpp:873
+#, kde-format
+msgid "Session Management"
+msgstr "Oturum Yönetimi"
+
+#: server.cpp:876
+#, kde-format
+msgid "Log Out"
+msgstr "Çık"
+
+#: server.cpp:881
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "Onaylama Olmaksızın Çık"
+
+#: server.cpp:886
+#, kde-format
+msgid "Halt Without Confirmation"
+msgstr "Onaylama Olmaksızın Kapat"
+
+#: server.cpp:891
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "Onaylama Olmaksızın Yeniden Başlat"

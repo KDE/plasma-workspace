@@ -1,0 +1,45 @@
+# translation of phonon_kde.po to Esperanto
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Cindy McKee <cfmckee@gmail.com>, 2007.
+# Michael Moroni <michael.moroni@mailoo.org>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: phonon_kde\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-05-20 03:26+0200\n"
+"PO-Revision-Date: 2012-05-28 16:18+0200\n"
+"Last-Translator: Michael Moroni <michael.moroni@mailoo.org>\n"
+"Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Michael Moroni"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "michael.moroni@mailoo.org"
+
+#~ msgid "<qt>Unable to use the <b>%1</b> Multimedia Backend:<br/>%2</qt>"
+#~ msgstr "<qt>La aŭdvida interno <b>%1</b> ne uzeblas:<br/>%2</qt>"
+
+#~ msgid "Unable to find a Multimedia Backend"
+#~ msgstr "Aŭdvida interno ne troveblas"
+
+#~ msgid "Unable to find the requested Multimedia Backend"
+#~ msgstr "La petita aŭdvida interno ne troveblas"
+
+#~ msgid "create method returned 0"
+#~ msgstr "krea metodo liveris 0"
+
+#~ msgid "Unable to use the <b>%1</b> Multimedia Backend:"
+#~ msgstr "Ne povas uzi la <b>%1</b> aŭdvidan internon:"

@@ -1,0 +1,385 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2014, 2015, 2016, 2018, 2020, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-22 00:47+0000\n"
+"PO-Revision-Date: 2022-09-24 15:47+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.08.1\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Stefan Asserhäll"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "stefan.asserhall@bredband.net"
+
+#: currentcontainmentactionsmodel.cpp:201
+#, kde-format
+msgid "Configure Mouse Actions Plugin"
+msgstr "Anpassa insticksprogram för musåtgärder"
+
+#: main.cpp:88
+#, kde-format
+msgid "Plasma"
+msgstr "Plasma"
+
+#: main.cpp:88
+#, kde-format
+msgid "Plasma Shell"
+msgstr "Plasma-skal"
+
+#: main.cpp:100
+#, kde-format
+msgid "Enable QML Javascript debugger"
+msgstr "Aktivera QML Javaskript-avlusare"
+
+#: main.cpp:103
+#, kde-format
+msgid "Do not restart plasma-shell automatically after a crash"
+msgstr "Starta inte om Plasma-skalet automatiskt efter en krasch"
+
+#: main.cpp:106
+#, kde-format
+msgid "Force loading the given shell plugin"
+msgstr "Tvinga laddning av givet skalinsticksprogram"
+
+#: main.cpp:111
+#, kde-format
+msgid ""
+"Load plasmashell as a standalone application, needs the shell-plugin option "
+"to be specified"
+msgstr ""
+"Ladda Plasma-skalet som ett fristående program. Kräver att alternativet skal-"
+"insticksprogram är specificerat."
+
+#: main.cpp:113
+#, kde-format
+msgid "Replace an existing instance"
+msgstr "Ersätt en befintlig instans"
+
+#: main.cpp:116
+#, kde-format
+msgid ""
+"Enables test mode and specifies the layout javascript file to set up the "
+"testing environment"
+msgstr ""
+"Aktiverar testläge och anger Javascript-layoutfilen för att ställa in "
+"testmiljön"
+
+#: main.cpp:117
+#, kde-format
+msgid "file"
+msgstr "Fil"
+
+#: main.cpp:121
+#, kde-format
+msgid "Lists the available options for user feedback"
+msgstr "Lista tillgängliga alternativ för användaråterkoppling"
+
+#: main.cpp:219
+#, kde-format
+msgid "Plasma Failed To Start"
+msgstr "Plasma misslyckades starta"
+
+#: main.cpp:220
+#, kde-format
+msgid ""
+"Plasma is unable to start as it could not correctly use OpenGL 2 or software "
+"fallback\n"
+"Please check that your graphic drivers are set up correctly."
+msgstr ""
+"Plasma kan inte starta eftersom det inte kunde använda OpenGL 2 eller "
+"programvarureservalternativet korrekt.\n"
+"Kontrollera att grafikdrivrutinerna är riktigt inställda."
+
+#: osd.cpp:54
+#, kde-format
+msgctxt "OSD informing that the system is muted, keep short"
+msgid "Audio Muted"
+msgstr "Ljud tyst"
+
+#: osd.cpp:72
+#, kde-format
+msgctxt "OSD informing that the microphone is muted, keep short"
+msgid "Microphone Muted"
+msgstr "Mikrofon tystad"
+
+#: osd.cpp:88
+#, kde-format
+msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
+msgid "%1 Muted"
+msgstr "%1 tyst"
+
+#: osd.cpp:110
+#, kde-format
+msgctxt "touchpad was enabled, keep short"
+msgid "Touchpad On"
+msgstr "Tryckplatta på"
+
+#: osd.cpp:112
+#, kde-format
+msgctxt "touchpad was disabled, keep short"
+msgid "Touchpad Off"
+msgstr "Tryckplatta av"
+
+#: osd.cpp:119
+#, kde-format
+msgctxt "wireless lan was enabled, keep short"
+msgid "Wifi On"
+msgstr "WIFI på"
+
+#: osd.cpp:121
+#, kde-format
+msgctxt "wireless lan was disabled, keep short"
+msgid "Wifi Off"
+msgstr "WIFI av"
+
+#: osd.cpp:128
+#, kde-format
+msgctxt "Bluetooth was enabled, keep short"
+msgid "Bluetooth On"
+msgstr "Blåtand på"
+
+#: osd.cpp:130
+#, kde-format
+msgctxt "Bluetooth was disabled, keep short"
+msgid "Bluetooth Off"
+msgstr "Blåtand av"
+
+#: osd.cpp:137
+#, kde-format
+msgctxt "mobile internet was enabled, keep short"
+msgid "Mobile Internet On"
+msgstr "Mobilt Internet på"
+
+#: osd.cpp:139
+#, kde-format
+msgctxt "mobile internet was disabled, keep short"
+msgid "Mobile Internet Off"
+msgstr "Mobilt Internet av"
+
+#: osd.cpp:147
+#, kde-format
+msgctxt ""
+"on screen keyboard was enabled because physical keyboard got unplugged, keep "
+"short"
+msgid "On-Screen Keyboard Activated"
+msgstr "Tangentbord på skärmen aktiverat"
+
+#: osd.cpp:150
+#, kde-format
+msgctxt ""
+"on screen keyboard was disabled because physical keyboard was plugged in, "
+"keep short"
+msgid "On-Screen Keyboard Deactivated"
+msgstr "Tangentbord på skärmen inaktiverat"
+
+#: shellcontainmentconfig.cpp:129
+#, kde-format
+msgid "Unknown %1"
+msgstr "Okänd %1"
+
+#: shellcorona.cpp:170 shellcorona.cpp:172
+#, kde-format
+msgid "Show Desktop"
+msgstr "Visa skrivbord"
+
+#: shellcorona.cpp:172
+#, kde-format
+msgid "Hide Desktop"
+msgstr "Dölj skrivbord"
+
+#: shellcorona.cpp:188
+#, kde-format
+msgid "Show Activity Switcher"
+msgstr "Visa aktivitetsbyte"
+
+#: shellcorona.cpp:199
+#, kde-format
+msgid "Stop Current Activity"
+msgstr "Stoppa nuvarande aktivitet"
+
+#: shellcorona.cpp:207
+#, kde-format
+msgid "Switch to Previous Activity"
+msgstr "Byt till föregående aktivitet"
+
+#: shellcorona.cpp:215
+#, kde-format
+msgid "Switch to Next Activity"
+msgstr "Byt till nästa aktivitet"
+
+#: shellcorona.cpp:231
+#, kde-format
+msgid "Activate Task Manager Entry %1"
+msgstr "Aktivera post %1 i aktivitetshanteraren"
+
+#: shellcorona.cpp:257
+#, kde-format
+msgid "Manage Desktops And Panels..."
+msgstr "Hantera skrivbord och paneler..."
+
+#: shellcorona.cpp:278
+#, kde-format
+msgid "Move keyboard focus between panels"
+msgstr "Byt tangentbordsfokus mellan paneler"
+
+#: shellcorona.cpp:1761
+#, kde-format
+msgid "Add Panel"
+msgstr "Lägg till panel"
+
+#: shellcorona.cpp:1798
+#, kde-format
+msgctxt "Creates an empty containment (%1 is the containment name)"
+msgid "Empty %1"
+msgstr "Tom %1"
+
+#: softwarerendernotifier.cpp:27
+#, kde-format
+msgid "Software Renderer In Use"
+msgstr "Programvaruåtergivning används"
+
+#: softwarerendernotifier.cpp:28
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Software Renderer In Use"
+msgstr "Programvaruåtergivning används"
+
+#: softwarerendernotifier.cpp:29
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Rendering may be degraded"
+msgstr "Återgivning kan vara degraderad"
+
+#: softwarerendernotifier.cpp:39
+#, kde-format
+msgid "Never show again"
+msgstr "Visa aldrig igen"
+
+#: userfeedback.cpp:36
+#, kde-format
+msgid "Panel Count"
+msgstr "Antal paneler"
+
+#: userfeedback.cpp:40
+#, kde-format
+msgid "Counts the panels"
+msgstr "Räknar panelerna"
+
+#~ msgid "Unable to load script file: %1"
+#~ msgstr "Kunde inte läsa in skriptfil: %1"
+
+#~ msgid "Activities..."
+#~ msgstr "Aktiviteter..."
+
+#~ msgctxt "Fatal error message body"
+#~ msgid ""
+#~ "All shell packages missing.\n"
+#~ "This is an installation issue, please contact your distribution"
+#~ msgstr ""
+#~ "Alla skalpaket saknas.\n"
+#~ "Detta är ett installationsproblem, kontakta din distribution."
+
+#~ msgctxt "Fatal error message title"
+#~ msgid "Plasma Cannot Start"
+#~ msgstr "Plasma kan inte starta"
+
+#~ msgctxt "Fatal error message body"
+#~ msgid "Shell package %1 cannot be found"
+#~ msgstr "Skalpaket %1 kan inte hittas"
+
+#~ msgid "Main Script File"
+#~ msgstr "Huvudskriptfil"
+
+#~ msgid "Force a windowed view for testing purposes"
+#~ msgstr "Tvinga en fönsterbaserad vy i utprovningssyfte"
+
+#~ msgid "Deprecated, does nothing"
+#~ msgstr "Föråldrad, gör ingenting"
+
+#~ msgid ""
+#~ "Your graphics hardware does not support OpenGL (ES) 2. Plasma will abort "
+#~ "now."
+#~ msgstr "Grafikhårdvaran stöder inte OpenGL (ES) 2. Plasma avbryts nu."
+
+#~ msgid "Incompatible OpenGL version detected"
+#~ msgstr "Inkompatibel version av OpenGL detekterades"
+
+#~ msgid "Recent number of crashes"
+#~ msgstr "Senaste antal krascher"
+
+#~ msgid "Show Dashboard"
+#~ msgstr "Visa instrumentpanel"
+
+#~ msgid "Hide Dashboard"
+#~ msgstr "Dölj instrumentpanel"
+
+#~ msgid "Shuts up the output"
+#~ msgstr "Tystar utmatningen"
+
+#~ msgid "&Execute"
+#~ msgstr "&Kör"
+
+#~ msgctxt "Toolbar Button to switch to KWin Scripting Mode"
+#~ msgid "KWin"
+#~ msgstr "Kwin"
+
+#~ msgid "Templates"
+#~ msgstr "Mallar"
+
+#~ msgid "Desktop Shell Scripting Console"
+#~ msgstr "Skrivbordsskalets skriptkonsol"
+
+#~ msgid "Editor"
+#~ msgstr "Editor"
+
+#~ msgid "Load"
+#~ msgstr "Läs in"
+
+#~ msgid "Use"
+#~ msgstr "Använd"
+
+#~ msgid "Output"
+#~ msgstr "Utmatning"
+
+#~ msgid "Unable to load script file <b>%1</b>"
+#~ msgstr "Kunde inte läsa in skriptfil <b>%1</b>"
+
+#~ msgid "Save Script File"
+#~ msgstr "Spara skriptfil"
+
+#~ msgid "Executing script at %1"
+#~ msgstr "Kör skript i %1"
+
+#~ msgid "Runtime: %1ms"
+#~ msgstr "Körtid: %1 ms"
+
+#~ msgid "No plugins found, check your installation."
+#~ msgstr "Inga insticksprogram hittades. Kontrollera installationen."
+
+#~ msgctxt "About mouse action"
+#~ msgid "About"
+#~ msgstr "Om"
+
+#~ msgctxt "Configure mouse action"
+#~ msgid "Configure"
+#~ msgstr "Anpassa"
+
+#~ msgctxt "Remove mouse action"
+#~ msgid "Remove"
+#~ msgstr "Ta bort"

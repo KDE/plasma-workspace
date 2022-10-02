@@ -1,0 +1,47 @@
+# translation of phonon_kde.po to Nepali
+# Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>, 2007.
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+msgid ""
+msgstr ""
+"Project-Id-Version: phonon_kde\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-05-20 03:26+0200\n"
+"PO-Revision-Date: 2007-08-24 14:08+0545\n"
+"Last-Translator: Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>\n"
+"Language-Team: Nepali <info@mpp.org.np>\n"
+"Language: ne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n !=1\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#, fuzzy, kde-format
+#| msgid "Your names"
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "श्यामकृष्ण बल"
+
+#, fuzzy, kde-format
+#| msgid "Your emails"
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "shyamkrishna_bal@yahoo.com"
+
+#, fuzzy
+#~| msgid "Unable to use the <b>%1</b> Multimedia Backend:"
+#~ msgid "<qt>Unable to use the <b>%1</b> Multimedia Backend:<br/>%2</qt>"
+#~ msgstr "<b>%1</b> मल्टिमिडिया ब्याकइन्ड प्रयोग गर्न असक्षम:"
+
+#~ msgid "Unable to find a Multimedia Backend"
+#~ msgstr "मल्टिमिडिया ब्याकइन्ड फेला पार्न असक्षम"
+
+#~ msgid "Unable to find the requested Multimedia Backend"
+#~ msgstr "अनुरोध गरिएको मल्टिमिडिया ब्याकइन्ड फेला पार्न असक्षम"
+
+#~ msgid "create method returned 0"
+#~ msgstr "० फर्काउने विधि सिर्जना गर्नुहोस्"
+
+#~ msgid "Unable to use the <b>%1</b> Multimedia Backend:"
+#~ msgstr "<b>%1</b> मल्टिमिडिया ब्याकइन्ड प्रयोग गर्न असक्षम:"

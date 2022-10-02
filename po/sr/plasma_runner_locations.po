@@ -1,0 +1,49 @@
+# Translation of plasma_runner_locations.po into Serbian.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2007, 2008, 2009, 2013, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_locations\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-06-16 02:25+0200\n"
+"PO-Revision-Date: 2017-09-28 17:58+0200\n"
+"Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#: locationrunner.cpp:45
+#, kde-format
+msgid ""
+"Finds local directories and files, network locations and Internet sites with "
+"paths matching :q:."
+msgstr ""
+"Налази локалне фасцикле и фајлове, мрежне локације и интернет сајтове чије "
+"путање поклапају :q:."
+
+#: locationrunner.cpp:60 locationrunner.cpp:82
+#, kde-format
+msgid "Open %1"
+msgstr "Отвори „%1“|/|Отвори „$[аку %1]“"
+
+# >> %1 is an URL
+#: locationrunner.cpp:108
+#, kde-format
+msgid "Send email to %1"
+msgstr "Пошаљи е‑пошту на %1"
+
+#: locationrunner.cpp:110
+#, kde-format
+msgid "Launch with %1"
+msgstr "Покрени помоћу %1|/|Покрени $[инс-п %1]"
+
+#: locationrunner.cpp:114
+#, kde-format
+msgid "Go to %1"
+msgstr "Иди на „%1“|/|Иди на „$[аку %1]“"

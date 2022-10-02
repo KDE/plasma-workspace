@@ -1,0 +1,455 @@
+# translation of kcm_desktopthemedetails.po to Estonian
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Marek Laane <bald@smail.ee>, 2008-2009, 2010, 2011, 2016, 2019, 2020.
+# Mihkel Tõnnov <mihhkel@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_desktopthemedetails\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"PO-Revision-Date: 2020-09-26 10:15+0200\n"
+"Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
+"Language-Team: Estonian <>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.08.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current Plasma Style"
+msgstr "Aktiivse Plasma stiili nimi"
+
+#: kcm.cpp:108
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Ajutise faili loomine nurjus."
+
+#: kcm.cpp:119
+#, kde-format
+msgid "Unable to download the theme: %1"
+msgstr "Teema allalaadimine nurjus: %1"
+
+#: kcm.cpp:144
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "Teema paigaldati edukalt."
+
+#: kcm.cpp:147 kcm.cpp:153
+#, kde-format
+msgid "Theme installation failed."
+msgstr "Teema paigaldamine nurjus."
+
+#: kcm.cpp:245
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr "Teema eemaldamine nurjus: %1"
+
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "This module lets you choose the Plasma style."
+msgstr "See moodul võimaldab valida Plasma stiili."
+
+#: package/contents/ui/main.qml:69
+#, kde-format
+msgid "All Themes"
+msgstr "Kõik teemad"
+
+#: package/contents/ui/main.qml:70
+#, kde-format
+msgid "Light Themes"
+msgstr "Heledad teemad"
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgid "Dark Themes"
+msgstr "Tumedad teemad"
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "Color scheme compatible"
+msgstr "Värviskeemiga ühilduv"
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgid "Follows color scheme"
+msgstr "Värviskeemi alus"
+
+#: package/contents/ui/main.qml:118
+#, fuzzy, kde-format
+#| msgid "Edit Theme..."
+msgid "Edit Theme…"
+msgstr "Muuda teemat ..."
+
+#: package/contents/ui/main.qml:125
+#, kde-format
+msgid "Remove Theme"
+msgstr "Eemalda teema"
+
+#: package/contents/ui/main.qml:132
+#, kde-format
+msgid "Restore Theme"
+msgstr "Taasta teema"
+
+#: package/contents/ui/main.qml:174
+#, fuzzy, kde-format
+#| msgid "Install from File..."
+msgid "Install from File…"
+msgstr "Paigalda failist ..."
+
+#: package/contents/ui/main.qml:179
+#, fuzzy, kde-format
+#| msgid "Get New Plasma Styles..."
+msgid "Get New Plasma Styles…"
+msgstr "Hangi uusi Plasma stiile ..."
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Open Theme"
+msgstr "Teema avamine"
+
+#: package/contents/ui/main.qml:195
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr "Teemafailid (*.zip *.tar.gz *.tar.bz2)"
+
+#: plasma-apply-desktoptheme.cpp:31
+#, kde-format
+msgid ""
+"This tool allows you to set the theme of the current Plasma session, without "
+"accidentally setting it to one that is either not available, or which is "
+"already set."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:35
+#, kde-format
+msgid ""
+"The name of the theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:36
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:49
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:65
+#, kde-format
+msgid "The current Plasma session's theme has been set to %1"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:67
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:75
+#, kde-format
+msgid "You have the following Plasma themes on your system:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Marek Laane"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "qiilaq69@gmail.com"
+
+#~ msgid "Plasma Style"
+#~ msgstr "Plasma stiil"
+
+#~ msgid "David Rosca"
+#~ msgstr "David Rosca"
+
+#~ msgid "Search..."
+#~ msgstr "Otsi ..."
+
+#~ msgid "Plasma Styles"
+#~ msgstr "Plasma stiilid"
+
+#~ msgid "Download New Plasma Styles"
+#~ msgstr "Uute Plasma stiilide allalaadimine"
+
+#~ msgid "Configure Desktop Theme"
+#~ msgstr "Töölauateema seadistamine"
+
+#~ msgid "Theme removal failed."
+#~ msgstr "Teema eemaldamine nurjus."
+
+#~ msgid ""
+#~ "<h1>Desktop Theme</h1>This module allows you to modify the visual "
+#~ "appearance of the desktop."
+#~ msgstr ""
+#~ "<h1>Töölauateema</h1>See moodul võimaldab muuta töölaua väljanägemist."
+
+#~ msgid "KDE Desktop Theme Module"
+#~ msgstr "KDE töölauteema moodul"
+
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
+#~ msgstr "(c) 2002: Karol Szwed, Daniel Molkentin"
+
+#~ msgid "Theme installation failed. (%1)"
+#~ msgstr "Teema paigaldamine nurjus. (%1)"
+
+#~ msgid "Details"
+#~ msgstr "Üksikasjad"
+
+#~ msgctxt "plasma name"
+#~ msgid "Panel Background"
+#~ msgstr "Paneeli taust"
+
+#~ msgctxt "plasma name"
+#~ msgid "Kickoff"
+#~ msgstr "Kickoff"
+
+#~ msgctxt "plasma name"
+#~ msgid "Task Items"
+#~ msgstr "Tegumiriba elemendid"
+
+#~ msgctxt "plasma name"
+#~ msgid "Widget Background"
+#~ msgstr "Vidina taust"
+
+#~ msgctxt "plasma name"
+#~ msgid "Translucent Background"
+#~ msgstr "Läbipaistev taust"
+
+#~ msgctxt "plasma name"
+#~ msgid "Dialog Background"
+#~ msgstr "Dialoogi taust"
+
+#~ msgctxt "plasma name"
+#~ msgid "Analog Clock"
+#~ msgstr "Analoogkell"
+
+#~ msgctxt "plasma name"
+#~ msgid "Notes"
+#~ msgstr "Märkused"
+
+#~ msgctxt "plasma name"
+#~ msgid "Tooltip"
+#~ msgstr "Kohtspikker"
+
+#~ msgctxt "plasma name"
+#~ msgid "Pager"
+#~ msgstr "Töölaua vahetaja"
+
+#~ msgctxt "plasma name"
+#~ msgid "Run Command Dialog"
+#~ msgstr "Käsu käivitamise dialoog"
+
+#~ msgctxt "plasma name"
+#~ msgid "Shutdown Dialog"
+#~ msgstr "Sulgemisdialoog"
+
+#~ msgctxt "plasma name"
+#~ msgid "Icons"
+#~ msgstr "Ikoonid"
+
+#~ msgid "(Customized)"
+#~ msgstr "(kohandatud)"
+
+#~ msgid "User customized theme"
+#~ msgstr "Kasutaja kohandatud teema"
+
+#~ msgid ""
+#~ "Theme items have been changed.  Do you still wish remove the \"%1\" theme?"
+#~ msgstr "Teema elemente on muudetud. Kas soovid eemaldada \"%1\" teema?"
+
+#~ msgid "Removal of the default desktop theme is not allowed."
+#~ msgstr "Vaikimisi töölauateema eemaldamine ei ole lubatud."
+
+#~ msgid "Are you sure you wish remove the \"%1\" theme?"
+#~ msgstr "Kas tõesti eemaldada teema \"%1\"?"
+
+#~ msgid ""
+#~ "Please apply theme item changes (with a new theme name) before attempting "
+#~ "to export theme."
+#~ msgstr ""
+#~ "Palun rakenda teema elemendi muudatused (koos uue teema nimega), enne kui "
+#~ "proovid teemat eksportida."
+
+#~ msgid "Export Desktop Theme"
+#~ msgstr "Töölauteema eksport"
+
+#~ msgid "Export theme to file"
+#~ msgstr "Ekspordi teema failina"
+
+#~ msgid "Archive (*.zip)"
+#~ msgstr "Arhiiv (*.zip)"
+
+#~ msgid "Theme Item"
+#~ msgstr "Teema element"
+
+#~ msgid "Source"
+#~ msgstr "Allikas"
+
+#, fuzzy
+#~| msgid "%1 %2"
+#~ msgctxt ""
+#~ "%1 is the name of the theme, %2 is the type of the element (background, "
+#~ "icon, note, etc)"
+#~ msgid "%1 %2"
+#~ msgstr "%1 %2"
+
+#~ msgid "File..."
+#~ msgstr "Fail..."
+
+#~ msgid "Select File to Use for %1"
+#~ msgstr "Faili valimine elemendi %1 jaoks"
+
+#~ msgid " Author: %1"
+#~ msgstr "Autor: %1"
+
+#~ msgid "Version: %1"
+#~ msgstr "Versioon: %1"
+
+#~ msgid "Desktop Theme Details"
+#~ msgstr "Töölauateema üksikasjad"
+
+#~ msgid "Choose an item and customize it by assigning it a theme"
+#~ msgstr "Vali element ja kohanda seda sellele teemat omistades"
+
+#~ msgid ""
+#~ "You can set any theme to any item. The available themes for the item are "
+#~ "in the dropdown box on the right."
+#~ msgstr ""
+#~ "Suvalise teema võib omistada suvalisele elemendile. Elemendi puhul "
+#~ "saadaolevad teemad on näha paremal asuvas rippmenüüs."
+
+#~ msgid "Enable more options"
+#~ msgstr "Lisavalikute näitamine"
+
+#~ msgid ""
+#~ "This will expand the dialog and give you options to export your custom "
+#~ "theme as well as to remove a theme."
+#~ msgstr ""
+#~ "See avardab dialoogi ning pakub võimalusi eksportida oma kohandatud teema "
+#~ "või ka teema eemaldada."
+
+#~ msgid "More"
+#~ msgstr "Rohkem"
+
+#~ msgid "Remove the selected theme"
+#~ msgstr "Valitud teema eemaldamine"
+
+#~ msgid ""
+#~ "Clicking this button will remove the selected theme. You will be asked "
+#~ "for confirmation."
+#~ msgstr ""
+#~ "Sellele nupule klõpsamine eemaldab valitud teema. Sinu käest küsitakse "
+#~ "kinnitust."
+
+#~ msgid "Save your theme in a zip archive"
+#~ msgstr "Teema salvestamine zip-arhiivina"
+
+#~ msgid ""
+#~ "You can save your theme in a zip archive in order to share it with the "
+#~ "community."
+#~ msgstr ""
+#~ "Oma teema võib salvestada zip-arhiivina, mis lubab seda teistega jagada."
+
+#~ msgid "Export Theme to File..."
+#~ msgstr "Ekspordi teema failina..."
+
+#~ msgid "New theme name:"
+#~ msgstr "Uus teema nimi:"
+
+#~ msgid "Custom theme name"
+#~ msgstr "Kohandatud teema nimi"
+
+#~ msgid "Give a name to your custom theme."
+#~ msgstr "Kohandatud teemale nime andmine."
+
+#~ msgid "Author:"
+#~ msgstr "Autor:"
+
+#~ msgid "Custom theme author "
+#~ msgstr "Kohandatud teema autor "
+
+#~ msgid "Enter the author name of your custom theme."
+#~ msgstr "Kohandatud teema autori nimi."
+
+#~ msgid "Version:"
+#~ msgstr "Versioon:"
+
+#~ msgid "Custom theme version number"
+#~ msgstr "Kohandatud teema versiooninumber"
+
+#~ msgid "Enter the version number of your custom theme."
+#~ msgstr "Kohandatud teema versiooninumber."
+
+#~ msgid "Description:"
+#~ msgstr "Kirjeldus:"
+
+#~ msgid "Custom theme description"
+#~ msgstr "Kohandatud teema kirjeldus"
+
+#~ msgid "Enter a description which will explain your custom theme."
+#~ msgstr "Kohandatud teemat tutvustav kirjeldus."
+
+#~ msgid "Select theme from above to customize"
+#~ msgstr "Vali kohandamiseks ülalt teema"
+
+#~ msgid "Theme Author"
+#~ msgstr "Teema autor"
+
+#~ msgid "Theme Name"
+#~ msgstr "Teema nimi"
+
+#~ msgid "Theme Version"
+#~ msgstr "Teema versioon"
+
+#~ msgid "The theme description goes here..."
+#~ msgstr "Siia käib teema kirjeldus..."
+
+#~ msgid ""
+#~ "Choose a start theme in this list then customize some items below. All "
+#~ "less important items not listed below will use this start theme."
+#~ msgstr ""
+#~ "Vali nimekirjas algusteema ja seejärel kohanda allpool elemente. Kõik "
+#~ "vähemtähtsamad elemendid, mida seal kirjas pole, kasutavad seda "
+#~ "algusteemat."
+
+#~ msgid "Karol Szwed"
+#~ msgstr "Karol Szwed"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "KCMDesktopTheme"
+#~ msgstr "KCMDesktopTheme"
+
+#~ msgid ""
+#~ "To change your desktop theme to \"%1\", go back to the 'General' tab of "
+#~ "System Settings; choose 'Appearance', and then 'Style'; and finally "
+#~ "select \"%2\" from the drop-down list at the top of the window."
+#~ msgstr ""
+#~ "Kui soovid, et sinu töölauateema oleks \"%1\", mine tagasi Süsteemi "
+#~ "seadistuste üldisele kaardile sektsiooni Välimus->Stiil ja vali "
+#~ "rippmenüüst \"%2\"."
+
+#~ msgid "Removal of the active desktop theme is not allowed."
+#~ msgstr "Aktiivse töölauateema eemaldamine ei ole lubatud."
+
+#~ msgid "Unfortunately, this feature is not yet implemented."
+#~ msgstr "Paraku ei ole see võimalus veel teostatud."

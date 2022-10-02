@@ -1,0 +1,33 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Victor Ibragimov <victor.ibragimov@gmail.com>, 2009, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_engine_applicationjobs\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2019-09-17 14:06+0500\n"
+"Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
+"Language-Team: Tajik <kde-i18n-doc@kde.org>\n"
+"Language: tg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 19.04.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: jobaction.cpp:18
+#, kde-format
+msgctxt "%1 is the subject (can be anything) upon which the job is performed"
+msgid "The JobView for %1 cannot be found"
+msgstr "Намуди вазифа барои %1 ёфт нашуд"
+
+#: kuiserverengine.cpp:209
+#, kde-format
+msgctxt "Bytes per second"
+msgid "%1/s"
+msgstr "%1/сония"
+
+#~ msgid "Job canceled by user."
+#~ msgstr "Вазифа бо корбар қатъ карда шуд"

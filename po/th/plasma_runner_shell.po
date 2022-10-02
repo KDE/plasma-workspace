@@ -1,0 +1,134 @@
+# translation of krunner_shellrunner.po to Thai
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Thanomsub Noppaburana <donga.nb@gmail.com>, 2008, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner_shellrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-27 00:45+0000\n"
+"PO-Revision-Date: 2010-02-11 21:09+0700\n"
+"Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
+"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: shellrunner.cpp:35
+#, kde-format
+msgid "Finds commands that match :q:, using common shell syntax"
+msgstr "คำสั่งค้นหาที่เข้าเงื่อนไขกับ :q:, โดยใช้ไวยากรณ์พื้นฐานของเชลล์"
+
+#: shellrunner.cpp:36
+#, fuzzy, kde-format
+#| msgid "Run in &terminal window"
+msgid "Run in Terminal Window"
+msgstr "ประมวลผลในหน้าต่างเ&ทอร์มินัล"
+
+#: shellrunner.cpp:54
+#, kde-format
+msgid "Run %1"
+msgstr "ประมวลผล %1"
+
+#~ msgid "Enter the user you want to run the application as here."
+#~ msgstr "ป้อนชื่อผู้ใช้ที่คุณต้องการจะใช้สิทธิ์ในการประมวลผลโปรแกรมที่นี่"
+
+#~ msgid "User&name:"
+#~ msgstr "&ชื่อผู้ใช้:"
+
+#~ msgid "Enter the password here for the user you specified above."
+#~ msgstr "ป้อนรหัสผ่านของผู้ใช้ที่คุณระบุทางด้านบนที่นี่"
+
+#~ msgid "Pass&word:"
+#~ msgstr "รหัส&ผ่าน:"
+
+#~ msgid ""
+#~ "Check this option if the application you want to run is a text mode "
+#~ "application. The application will then be run in a terminal emulator "
+#~ "window."
+#~ msgstr ""
+#~ "เลือกกาที่ตัวเลือกนี้ หากโปรแกรมที่คุณต้องการประมวลผล เป็นโปรแกรมในโหมดข้อความ "
+#~ "จากนั้นโปรแกรมจะถูกประมวลผลในหน้าต่างตัวจำลองเทอร์มินัล"
+
+#~ msgid "Run in &terminal window"
+#~ msgstr "ประมวลผลในหน้าต่างเ&ทอร์มินัล"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "user id. Every process has a user id associated with it. This id code "
+#~ "determines file access and other permissions. The password of the user is "
+#~ "required to do this."
+#~ msgstr ""
+#~ "กาที่ตัวเลือกนี้ หากคุณต้องการประมวลผลโปรแกรมโดยใช้สิทธิ์ของผู้ใช้งานอื่น ทุก ๆ "
+#~ "โพรเซสจะมีค่าประจำตัวของผู้ใช้งานต่าง ๆ กันออกไป โดยรหัสค่าประจำตัวนี้ "
+#~ "จะบ่งชี้ถึงสิทธิ์ในการเข้าใช้งานและสิทธิ์ที่อนุญาตอื่น ๆ และต้องใช้รหัสผ่านของผู้ใช้นั้น ๆ "
+#~ "เพื่อให้ใช้งานในแบบนี้ได้"
+
+#~ msgid "Run as a different &user"
+#~ msgstr "ประมวลผลโดยใช้สิทธิ์ของ&ผู้ใช้อื่น"
+
+#~ msgid ""
+#~ "<qt>Select whether realtime scheduling should be enabled for the "
+#~ "application. The scheduler governs which process will run and which will "
+#~ "have to wait. Two schedulers are available:\n"
+#~ "<ul>\n"
+#~ "<li><em>Normal:</em> This is the standard, timesharing scheduler. It will "
+#~ "divide fairly the available processing time between all processes.</li>\n"
+#~ "<li><em>Realtime:</em>This scheduler will run your application "
+#~ "uninterrupted until it gives up the processor. This can be dangerous. An "
+#~ "application that does not give up the processor might hang the system. "
+#~ "You need root's password to use the scheduler.</li>\n"
+#~ "</ul>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>เลือกว่าจะเปิดการใช้ลำดับการทำงานตามเวลาจริงกับโปรแกรมหรือไม่ตัวจัดลำดับการทำงานส่วนกลางคือกำหนดให้โพรเซสต่าง "
+#~ "ๆ ว่าจะทำงานหรือรอโดยมีตัวจัดลำดับการทำงานสองอย่างให้เลือกคือ:\n"
+#~ "<ul>\n"
+#~ "<li><em>ปกติ:</em> นี่เป็นการทำงานมาตรฐาน ของตัวจัดลำดับการทำงาน แบบแบ่งการใช้เวลา "
+#~ "โดยมันจะหารเวลาด้วยโพรเซสต่าง ๆ ที่มีอยู่ เพื่อแบ่งให้กับ การทำงานของโพรเซสต่าง ๆ</li>\n"
+#~ "<li><em>ตามเวลาจริง:</em> ตัวจัดลำดับการทำงานตัวนี้ จะประมวลผลโปรแกรมของคุณ "
+#~ "โดยไม่มีการขัดจังหวะใด ๆ "
+#~ "จนกว่ามันจะคืนการทำงานให้กับตัวประมวลผลซึ่งมันจะอันตรายมากในกรณีที่โปรแกรมไม่คืนการทำงานให้กับตัวประมวลผล "
+#~ "ซึ่งเป็นสาเหตุให้ระบบค้างได้ ดังนั้น คุณจึงจำเป็นต้องป้อนรหัสผ่านของผู้บริหารระบบ (ผู้ใช้ root) "
+#~ "ด้วย หากต้องการใช้ตัวจัดลำดับการทำงานตัวนี้</li>\n"
+#~ "</ul>\n"
+#~ "</qt>"
+
+#~ msgid "Run with realtime &scheduling"
+#~ msgstr "ใช้&ลำดับการทำงานตามเวลาจริง (Realtime)"
+
+#~ msgid ""
+#~ "The priority that the command will be run with can be set here. From left "
+#~ "to right, it goes from low to high. The center position is the default "
+#~ "value. For priorities higher than the default, you will need to provide "
+#~ "the root password."
+#~ msgstr ""
+#~ "ตั้งค่าระดับความสำคัญของการประมวลผลคำสั่งได้ที่นี่ จากทางด้านซ้ายไปขวา "
+#~ "หมายถึงระดับความสำคัญต่ำไปหาระดับความสำคัญสูง ส่วนตำแหน่งตรงกลาง จะเป็นค่าปริยาย "
+#~ "หากคุณต้องการปรับระดับความสำคัญให้มีค่าสูงกว่าค่าปริยาย "
+#~ "คุณจำเป็นจะต้องป้อนรหัสผ่านของผู้บริหารระบบด้วย (ผู้ใช้ root)"
+
+#~ msgid "&Priority:"
+#~ msgstr "ระดับความ&สำคัญ:"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "priority. A higher priority tells the operating system to give more "
+#~ "processing time to your application."
+#~ msgstr ""
+#~ "กาเลือกที่ตัวเลือกนี้ หากคุณต้องการประมวลผลโปรแกรมด้วยระดับความสำคัญอื่น ๆ "
+#~ "ระดับความสำคัญที่มีค่าสูงกว่านั้น หมายถึงการกำหนดให้ระบบปฎิบัติการจัดเวลา "
+#~ "ของตัวประมวลผลกลางให้กับโปรแกรมมากกว่าตัวที่มีระดับความสำคัญต่ำกว่า"
+
+#~ msgid "Run with a &different priority"
+#~ msgstr "ประมวลผลด้วยระดับความสำคัญที่&ต่างออกไป"
+
+#~ msgid "Low"
+#~ msgstr "ต่ำ"
+
+#~ msgid "High"
+#~ msgstr "สูง"

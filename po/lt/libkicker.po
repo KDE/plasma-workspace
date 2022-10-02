@@ -1,0 +1,496 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Translators:
+# Mindaugas <embar@super.lt>, 2015.
+# Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>, 2015, 2016, 2017, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: KDE Frameworks 5 Applications\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-25 00:46+0000\n"
+"PO-Revision-Date: 2021-06-16 00:40+0300\n"
+"Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
+"Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
+"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 3.0\n"
+
+#: plugin/actionlist.cpp:86
+#, kde-format
+msgid "Open with:"
+msgstr "Atverti naudojant:"
+
+#: plugin/actionlist.cpp:99
+#, kde-format
+msgid "Properties"
+msgstr "Savybės"
+
+#: plugin/actionlist.cpp:146
+#, kde-format
+msgid "Add to Desktop"
+msgstr "Pridėti į darbalaukį"
+
+#: plugin/actionlist.cpp:151
+#, kde-format
+msgid "Add to Panel (Widget)"
+msgstr "Pridėti į skydelį (valdiklį)"
+
+#: plugin/actionlist.cpp:156
+#, kde-format
+msgid "Pin to Task Manager"
+msgstr "Prisegti prie užduočių tvarkytuvės"
+
+#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:429
+#, kde-format
+msgid "Recent Files"
+msgstr "Paskiausiai naudoti failai"
+
+#: plugin/actionlist.cpp:317
+#, kde-format
+msgid "Forget Recent Files"
+msgstr "Išvalyti paskiausiai naudotų failų sąrašą"
+
+#: plugin/actionlist.cpp:395
+#, kde-format
+msgid "Edit Application…"
+msgstr "Taisyti programą…"
+
+#: plugin/actionlist.cpp:438
+#, kde-format
+msgctxt "@action opens a software center with the application"
+msgid "Uninstall or Manage Add-Ons…"
+msgstr "Šalinti ar tvarkyti papildinius…"
+
+#: plugin/appentry.cpp:319
+#, kde-format
+msgid "Hide Application"
+msgstr "Slėpti programą"
+
+#: plugin/appentry.cpp:390
+#, kde-format
+msgctxt "App name (Generic name)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: plugin/appentry.cpp:392
+#, kde-format
+msgctxt "Generic name (App name)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: plugin/appsmodel.cpp:34 plugin/appsmodel.cpp:58 plugin/computermodel.cpp:98
+#: plugin/computermodel.cpp:226 plugin/recentusagemodel.cpp:163
+#: plugin/recentusagemodel.cpp:226
+#, kde-format
+msgid "Applications"
+msgstr "Programos"
+
+#: plugin/appsmodel.cpp:151
+#, kde-format
+msgid "Unhide Applications in this Submenu"
+msgstr "Nebeslėpti programų šiame submeniu"
+
+#: plugin/appsmodel.cpp:160
+#, kde-format
+msgid "Unhide Applications in '%1'"
+msgstr "Nebeslėpti „%1“ kategorijos programų"
+
+#: plugin/computermodel.cpp:92
+#, kde-format
+msgid "Show KRunner"
+msgstr "Rodyti KRunner"
+
+#: plugin/computermodel.cpp:96
+#, kde-format
+msgid "Search, calculate, or run a command"
+msgstr "Ieškoti, skaičiuoti ar paleisti komandą"
+
+#: plugin/computermodel.cpp:149
+#, kde-format
+msgid "Computer"
+msgstr "Kompiuteris"
+
+#: plugin/contactentry.cpp:106 plugin/recentcontactsmodel.cpp:82
+#, kde-format
+msgid "Show Contact Information…"
+msgstr "Rodyti kontaktinę informaciją…"
+
+#. i18n.
+#: plugin/kastatsfavoritesmodel.cpp:504 plugin/rootmodel.cpp:416
+#: plugin/simplefavoritesmodel.cpp:31
+#, kde-format
+msgid "Favorites"
+msgstr "Žymelės"
+
+#: plugin/recentcontactsmodel.cpp:40
+#, kde-format
+msgid "Contacts"
+msgstr "Adresatai"
+
+#: plugin/recentcontactsmodel.cpp:73
+#, kde-format
+msgid "Forget Contact"
+msgstr "Pamiršti adresatą"
+
+#: plugin/recentcontactsmodel.cpp:77 plugin/recentcontactsmodel.cpp:153
+#, kde-format
+msgid "Forget All Contacts"
+msgstr "Pamiršti visus adresatus"
+
+#: plugin/recentusagemodel.cpp:161
+#, kde-format
+msgid "Recently Used"
+msgstr "Paskiausiai naudoti"
+
+#: plugin/recentusagemodel.cpp:166 plugin/recentusagemodel.cpp:308
+#, kde-format
+msgid "Files"
+msgstr "Failai"
+
+#: plugin/recentusagemodel.cpp:248
+#, kde-format
+msgid "Forget Application"
+msgstr "Pamiršti programą"
+
+#: plugin/recentusagemodel.cpp:342
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Atverti vidinį aplanką"
+
+#: plugin/recentusagemodel.cpp:345
+#, kde-format
+msgid "Forget File"
+msgstr "Pamiršti failą"
+
+#: plugin/recentusagemodel.cpp:495
+#, kde-format
+msgid "Forget All"
+msgstr "Viską pamiršti"
+
+#: plugin/recentusagemodel.cpp:497
+#, kde-format
+msgid "Forget All Applications"
+msgstr "Pamiršti visas programas"
+
+#: plugin/recentusagemodel.cpp:500
+#, kde-format
+msgid "Forget All Files"
+msgstr "Pamiršti visus failus"
+
+#: plugin/rootmodel.cpp:95
+#, kde-format
+msgid "Hide %1"
+msgstr "Slėpti %1"
+
+#: plugin/rootmodel.cpp:398
+#, kde-format
+msgid "All Applications"
+msgstr "Visos programos"
+
+#: plugin/rootmodel.cpp:410
+#, kde-format
+msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
+msgstr "Tai neturėtų būti matoma! Naudokite KICKER_FAVORITES_MODEL"
+
+#: plugin/rootmodel.cpp:422
+#, kde-format
+msgid "Recent Contacts"
+msgstr "Paskiausi adresatai"
+
+#: plugin/rootmodel.cpp:429
+#, kde-format
+msgid "Often Used Files"
+msgstr "Dažnai naudojami failai"
+
+#: plugin/rootmodel.cpp:438
+#, kde-format
+msgid "Recent Applications"
+msgstr "Paskiausios programos"
+
+#: plugin/rootmodel.cpp:438
+#, kde-format
+msgid "Often Used Applications"
+msgstr "Dažniausios programos"
+
+#: plugin/rootmodel.cpp:453
+#, kde-format
+msgid "Power / Session"
+msgstr "Maitinimas / seansas"
+
+#: plugin/runnermodel.cpp:231
+#, kde-format
+msgid "Search results"
+msgstr "Paieškos rezultatai"
+
+#: plugin/systementry.cpp:195
+#, kde-format
+msgid "Lock"
+msgstr "Užrakinti"
+
+#: plugin/systementry.cpp:198
+#, kde-format
+msgid "Log Out"
+msgstr "Atsijungti"
+
+#: plugin/systementry.cpp:201 plugin/systementry.cpp:269
+#, kde-format
+msgid "Save Session"
+msgstr "Įrašyti seansą"
+
+#: plugin/systementry.cpp:204
+#, kde-format
+msgid "Switch User"
+msgstr "Perjungti naudotoją"
+
+#: plugin/systementry.cpp:207
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Pristabdyti (į RAM)"
+
+#: plugin/systementry.cpp:210
+#, kde-format
+msgid "Hibernate"
+msgstr "Užmigdyti (į diską)"
+
+#: plugin/systementry.cpp:213
+#, kde-format
+msgid "Restart"
+msgstr "Paleisti iš naujo"
+
+#: plugin/systementry.cpp:216
+#, kde-format
+msgid "Shut Down"
+msgstr "Išjungti"
+
+#: plugin/systementry.cpp:229 plugin/systementry.cpp:232
+#: plugin/systementry.cpp:235 plugin/systementry.cpp:238
+#, kde-format
+msgid "Session"
+msgstr "Seansas"
+
+#: plugin/systementry.cpp:241 plugin/systementry.cpp:244
+#: plugin/systementry.cpp:247 plugin/systementry.cpp:250
+#, kde-format
+msgid "System"
+msgstr "Sistema"
+
+#: plugin/systementry.cpp:263
+#, kde-format
+msgid "Lock screen"
+msgstr "Užrakinti ekraną"
+
+#: plugin/systementry.cpp:266
+#, kde-format
+msgid "End session"
+msgstr "Užbaigti seansą"
+
+#: plugin/systementry.cpp:272
+#, kde-format
+msgid "Start a parallel session as a different user"
+msgstr "Pradėti lygiagretų seansą kaip kitas naudotojas"
+
+#: plugin/systementry.cpp:275
+#, kde-format
+msgid "Suspend to RAM"
+msgstr "Pristabdyti į RAM"
+
+#: plugin/systementry.cpp:278
+#, kde-format
+msgid "Suspend to disk"
+msgstr "Užmigdyti į diską"
+
+#: plugin/systementry.cpp:281
+#, kde-format
+msgid "Restart computer"
+msgstr "Paleisti kompiuterį iš naujo"
+
+#: plugin/systementry.cpp:284
+#, kde-format
+msgid "Turn off computer"
+msgstr "Išjungti kompiuterį"
+
+#: plugin/systemmodel.cpp:31
+#, kde-format
+msgid "System actions"
+msgstr "Sistemos veiksmai"
+
+#~ msgid "Documents"
+#~ msgstr "Dokumentai"
+
+#~ msgid "Forget Document"
+#~ msgstr "Pamiršti dokumentą"
+
+#~ msgid "Forget All Documents"
+#~ msgstr "Pamiršti visus dokumentus"
+
+#~ msgid "General"
+#~ msgstr "Bendra"
+
+#~ msgid "Remove from Favorites"
+#~ msgstr "Pašalinti iš žymelių"
+
+#~ msgid "Add to Favorites"
+#~ msgstr "Įtraukti į žymeles"
+
+#, fuzzy
+#~| msgid "Favorites"
+#~ msgid "Show In Favorites"
+#~ msgstr "Žymelės"
+
+#, fuzzy
+#~| msgid "Icon"
+#~ msgid "Icon:"
+#~ msgstr "Ženkliukas"
+
+#~ msgid "Show applications as:"
+#~ msgstr "Programų rodymo būdas:"
+
+#~ msgid "Name only"
+#~ msgstr "Tik pavadinimas"
+
+#~ msgid "Description only"
+#~ msgstr "TIk aprašymas"
+
+#~ msgid "Name (Description)"
+#~ msgstr "Pavadinimas (aprašymas)"
+
+#~ msgid "Description (Name)"
+#~ msgstr "Aprašymas (pavadinimas)"
+
+#, fuzzy
+#~| msgid "Behavior"
+#~ msgid "Behavior:"
+#~ msgstr "Elgesys"
+
+#, fuzzy
+#~| msgid "Sort alphabetically"
+#~ msgid "Sort applications alphabetically"
+#~ msgstr "Rikiuoti pagal abėcėlę"
+
+#, fuzzy
+#~| msgid "Flatten menu to a single level"
+#~ msgid "Flatten sub-menus to a single level"
+#~ msgstr "Sumažinti meniu iki vieno lygio"
+
+#, fuzzy
+#~| msgid "Categories"
+#~ msgid "Show categories:"
+#~ msgstr "Kategorijos"
+
+#, fuzzy
+#~| msgid "Recent Applications"
+#~ msgid "Recent applications"
+#~ msgstr "Paskiausios programos"
+
+#, fuzzy
+#~| msgid "Often Used Applications"
+#~ msgid "Often used applications"
+#~ msgstr "Dažniausios programos"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Recent documents"
+#~ msgstr "Paskiausi dokumentai"
+
+#, fuzzy
+#~| msgid "Often Used Documents"
+#~ msgid "Often used documents"
+#~ msgstr "Dažniausi dokumentai"
+
+#, fuzzy
+#~| msgid "Recent Contacts"
+#~ msgid "Recent contacts"
+#~ msgstr "Paskiausi kontaktai"
+
+#, fuzzy
+#~| msgid "Show often used contacts"
+#~ msgid "Often used contacts"
+#~ msgstr "Rodyti dažniausiai naudotus kontaktus"
+
+#, fuzzy
+#~| msgid "Recently used"
+#~ msgctxt ""
+#~ "@item:inlistbox Sort items in categories by [Recently used | Often used]"
+#~ msgid "Recently used"
+#~ msgstr "Paskiausiai naudota"
+
+#, fuzzy
+#~| msgid "Often used"
+#~ msgctxt ""
+#~ "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
+#~ msgid "Often used"
+#~ msgstr "Dažniausiai naudotus"
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgid "Search:"
+#~ msgstr "Paieška"
+
+#~ msgid "Expand search to bookmarks, files and emails"
+#~ msgstr "Į paiešką įtraukti žymeles, failus ir el.paštą"
+
+#~ msgid "Align search results to bottom"
+#~ msgstr "Paieškos rezultatus pateikti apačioje"
+
+#~ msgid "Searching for '%1'"
+#~ msgstr "Ieškoma „%1“"
+
+#, fuzzy
+#~| msgid "Type to search."
+#~ msgid "Type to search..."
+#~ msgstr "Paieškos tipas."
+
+#~ msgid "Widgets"
+#~ msgstr "Valdikliai"
+
+#~ msgid "Apps & Docs"
+#~ msgstr "Programos ir dokumentai"
+
+#~ msgid "Edit Applications..."
+#~ msgstr "Keisti programas..."
+
+#~ msgid "Search..."
+#~ msgstr "Ieškoti..."
+
+#~ msgctxt "@action opens a software center with the application"
+#~ msgid "Manage '%1'..."
+#~ msgstr "Tvarkyti „%1“..."
+
+#~ msgid "Run Command..."
+#~ msgstr "Vykdyti komandą..."
+
+#~ msgid "Run a command or a search query"
+#~ msgstr "Vykdyti komandą arba ieškoti užklausos"
+
+#~ msgid "Show:"
+#~ msgstr "Rodyti:"
+
+#~ msgid "Show recent applications"
+#~ msgstr "Rodyti paskiausias programas"
+
+#~ msgid "Show often used applications"
+#~ msgstr "Rodyti dažniausiai atvertas programas"
+
+#~ msgid "Show recent documents"
+#~ msgstr "Rodyti paskiausius dokumentus"
+
+#~ msgid "Show often used documents"
+#~ msgstr "Rodyti dažniausiai atvertus dokumentus"
+
+#~ msgid "Show recent contacts"
+#~ msgstr "Rodyti paskiausius kontaktus"
+
+#~ msgid "Logout"
+#~ msgstr "Atsijungti"
+
+#~ msgid "Suspend"
+#~ msgstr "Sustabdyti į RAM"
+
+#~ msgid "Reboot"
+#~ msgstr "Paleisti iš naujo"

@@ -1,0 +1,45 @@
+# Indonesian translations for krdb package.
+# Copyright (C) 2010 This_file_is_part_of_KDE
+# This file is distributed under the same license as the krdb package.
+# Andhika Padmawan <andhika.padmawan@gmail.com>, 2010.
+# Wantoyo <wantoyek@gmail.com>, 2017, 2018, 2019, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: krdb\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-24 00:47+0000\n"
+"PO-Revision-Date: 2020-02-21 07:55+0700\n"
+"Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
+"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: krdb.cpp:261
+#, kde-format
+msgid ""
+"# created by KDE Plasma, %1\n"
+"#\n"
+msgstr ""
+"# diciptakan oleh KDE Plasma, %1\n"
+"#\n"
+
+#~ msgid ""
+#~ "# created by KDE Plasma, %1\n"
+#~ "#\n"
+#~ "# If you do not want Plasma to override your GTK settings, select\n"
+#~ "# Colors in the System Settings and disable the checkbox\n"
+#~ "# \"Apply colors to non-Qt applications\"\n"
+#~ "#\n"
+#~ "#\n"
+#~ msgstr ""
+#~ "# diciptakan oleh KDE Plasma, %1\n"
+#~ "#\n"
+#~ "# Jika kamu tidak ingin Plasma menimpa pengaturan GTK-mu, pilihlah\n"
+#~ "# Warna di System Settings dan nonfungsikan kotak-centang\n"
+#~ "# \"Terapkan warna untuk aplikasi non-Qt\"\n"
+#~ "#\n"
+#~ "#\n"

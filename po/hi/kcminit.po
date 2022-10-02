@@ -1,0 +1,52 @@
+# translation of kcminit.po to Hindi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Ravishankar Shrivastava <raviratlami@yahoo.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminit\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-26 00:47+0000\n"
+"PO-Revision-Date: 2010-12-29 03:17+0530\n"
+"Last-Translator: G Karunakar\n"
+"Language-Team: Hindi <en@li.org>\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "रविशंकर श्रीवास्तव, जी. करूणाकर"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "raviratlami@aol.in,"
+
+#: main.cpp:170
+#, kde-format
+msgid "KCMInit"
+msgstr "केसीएमइनिट"
+
+#: main.cpp:172
+#, kde-format
+msgid "KCMInit - runs startup initialization for Control Modules."
+msgstr "केसीएमइनिट - नियंत्रण मॉड्यूलों के लिए स्टार्टअप इनिशियलाइजनेशन चलाता है."
+
+#: main.cpp:178
+#, kde-format
+msgid "List modules that are run at startup"
+msgstr "प्रारंभ में जो मॉड्यूल चलते हैं उनकी सूची दें"
+
+#: main.cpp:179
+#, kde-format
+msgid "Configuration module to run"
+msgstr "चलाने के लिए कॉन्फ़िगरेशन मॉड्यूल."
+
+#~ msgid "Module %1 not found"
+#~ msgstr "मॉड्यूल %1 नहीं मिला"

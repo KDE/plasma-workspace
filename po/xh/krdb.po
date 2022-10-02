@@ -1,0 +1,45 @@
+# translation of krdb.po to
+# translation of krdb.po to Xhosa
+# Copyright (C) 2002 Free Software Foundation, Inc.
+# Lwandle Mgidlana <lwandle@translate.org.za>, 2002
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: krdb\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-24 00:47+0000\n"
+"PO-Revision-Date: 2002-09-09 09:57SAST\n"
+"Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
+"Language-Team: Xhosa <xhosa@translate.org.za>\n"
+"Language: xh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.0beta2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: krdb.cpp:261
+#, kde-format
+msgid ""
+"# created by KDE Plasma, %1\n"
+"#\n"
+msgstr ""
+
+#, fuzzy
+#~ msgid ""
+#~ "# created by KDE Plasma, %1\n"
+#~ "#\n"
+#~ "# If you do not want Plasma to override your GTK settings, select\n"
+#~ "# Colors in the System Settings and disable the checkbox\n"
+#~ "# \"Apply colors to non-Qt applications\"\n"
+#~ "#\n"
+#~ "#\n"
+#~ msgstr ""
+#~ "# yenziwe yi KDE, %1\n"
+#~ "#\n"
+#~ "# Ukuba awufuni ukuba i KDE inganaki izicwangciso zakho ze GTK, khetha\n"
+#~ "# Khangela Nokuva->Imibala Kumbindi Wolawulo ukukhubaza ibhokisi "
+#~ "yokhangelo\n"
+#~ "# \"Faka imibala kwizicelo ezingezo-ze KDE\"\n"
+#~ "#\n"
+#~ "#\n"

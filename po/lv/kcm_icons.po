@@ -1,0 +1,371 @@
+# translation of kcmicons.po to Latvian
+# Copyright (C) 2007, 2008, 2013 Free Software Foundation, Inc.
+#
+# Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2007, 2008.
+# Maris Nartiss <maris.kde@gmail.com>, 2007, 2008, 2013.
+# Viesturs Zariņš <viesturs.zarins@mii.lu.lv>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmicons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"PO-Revision-Date: 2013-06-11 08:31+0300\n"
+"Last-Translator: Maris Nartiss <maris.kde@gmail.com>\n"
+"Language-Team: Latvian\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+
+#: iconsizecategorymodel.cpp:14
+#, kde-format
+msgid "Toolbar"
+msgstr "Rīkjosla"
+
+#: iconsizecategorymodel.cpp:15
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Galvenā rīkjosla"
+
+#: iconsizecategorymodel.cpp:16
+#, kde-format
+msgid "Small Icons"
+msgstr "Mazas ikonas"
+
+#: iconsizecategorymodel.cpp:17
+#, kde-format
+msgid "Panel"
+msgstr "Panelis"
+
+#: iconsizecategorymodel.cpp:18
+#, kde-format
+msgid "Dialogs"
+msgstr "Dialogi"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, fuzzy, kde-format
+#| msgid "Main Toolbar"
+msgid "Main toolbar icons size"
+msgstr "Galvenā rīkjosla"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, fuzzy, kde-format
+#| msgid "Small Icons"
+msgid "Small icons size"
+msgstr "Mazas ikonas"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr ""
+
+#: main.cpp:182
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: main.cpp:193
+#, fuzzy, kde-format
+#| msgid "Unable to find the icon theme archive %1."
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Nevar atrast ikonas tēmas arhīvu %1."
+
+#: main.cpp:207
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "Fails nav derīgs tēmas arhīvs."
+
+#: main.cpp:212
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr ""
+"Gadījās problēma tēmas instalācijas procesā, bet lielākā daļa no tēmas tika "
+"instalēta"
+
+#: main.cpp:216
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: main.cpp:260
+#, fuzzy, kde-format
+#| msgid "Installing icon themes"
+msgid "Installing icon themes…"
+msgstr "Instalē ikonu tēmas"
+
+#: main.cpp:270
+#, fuzzy, kde-format
+#| msgid "Installing icon themes"
+msgid "Installing %1 theme…"
+msgstr "Instalē ikonu tēmas"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr ""
+
+#: package/contents/ui/main.qml:147
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Remove Icon Theme"
+msgstr "Izdzēst tēmu"
+
+#: package/contents/ui/main.qml:154
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Icon Theme"
+msgstr "Izdzēst tēmu"
+
+#: package/contents/ui/main.qml:228
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr ""
+
+#: package/contents/ui/main.qml:246
+#, fuzzy, kde-format
+#| msgid "Install Theme File..."
+msgid "Install from File…"
+msgstr "Instalēt tēmas failu..."
+
+#: package/contents/ui/main.qml:251
+#, fuzzy, kde-format
+#| msgid "Get New Themes..."
+msgid "Get New Icons…"
+msgstr "Ielādēt jaunas tēmas..."
+
+#: package/contents/ui/main.qml:279
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Open Theme"
+msgstr "Izdzēst tēmu"
+
+#: package/contents/ui/main.qml:281
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Viesturs Zariņš"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "viesturs.zarins@mi.lu.lv"
+
+#~ msgid "Icons"
+#~ msgstr "Iconas"
+
+#~ msgid "Icons Control Panel Module"
+#~ msgstr "Ikonu vadības paneļa modulis"
+
+#~ msgid "(c) 2000-2003 Geert Jansen"
+#~ msgstr "(c) 2000-2003 Geert Jansen"
+
+#~ msgid "Geert Jansen"
+#~ msgstr "Geert Jansen"
+
+#~ msgid "Antonio Larrosa Jimenez"
+#~ msgstr "Antonio Larrosa Jimenez"
+
+#~ msgid "Torsten Rahn"
+#~ msgstr "Torsten Rahn"
+
+#~ msgid "Desktop"
+#~ msgstr "Darbvirsma"
+
+#~ msgid "Use of Icon"
+#~ msgstr "Ikonas pielietojums"
+
+#~ msgctxt "@label The icon rendered by default"
+#~ msgid "Default"
+#~ msgstr "Noklusētā"
+
+#~ msgctxt "@label The icon rendered as active"
+#~ msgid "Active"
+#~ msgstr "Aktīva"
+
+#~ msgctxt "@label The icon rendered as disabled"
+#~ msgid "Disabled"
+#~ msgstr "Atslēgta"
+
+#~ msgid "Size:"
+#~ msgstr "Izmērs:"
+
+#~ msgid "Set Effect..."
+#~ msgstr "Uzstādīt efektu..."
+
+#~ msgid "All Icons"
+#~ msgstr "Visas ikonas"
+
+#~ msgid "Setup Default Icon Effect"
+#~ msgstr "Uzstādīt noklusēto ikonu efektu"
+
+#~ msgid "Setup Active Icon Effect"
+#~ msgstr "Uzstādīt aktīvas ikonas efektu"
+
+#~ msgid "Setup Disabled Icon Effect"
+#~ msgstr "Uzstādīt aizliegtas ikonas efektu"
+
+#~ msgid "&Effect:"
+#~ msgstr "&Efekts:"
+
+#~ msgid "No Effect"
+#~ msgstr "Bez efektiem"
+
+#~ msgid "To Gray"
+#~ msgstr "Uz pelēku"
+
+#~ msgid "Colorize"
+#~ msgstr "Krāsot"
+
+#~ msgid "Gamma"
+#~ msgstr "Gamma"
+
+#~ msgid "Desaturate"
+#~ msgstr "Nepiesātināt"
+
+#~ msgid "To Monochrome"
+#~ msgstr "Melnbalts"
+
+#~ msgid "&Semi-transparent"
+#~ msgstr "Pu&scaurspīdīgs"
+
+#~ msgid "Preview"
+#~ msgstr "Priekšapskate"
+
+#~ msgid "Effect Parameters"
+#~ msgstr "Efekta parametri"
+
+#~ msgid "&Amount:"
+#~ msgstr "D&audzums:"
+
+#~ msgid "Co&lor:"
+#~ msgstr "&Krāsa:"
+
+#~ msgid "&Second color:"
+#~ msgstr "&Otrā krāsa:"
+
+#~ msgid "Name"
+#~ msgstr "Nosaukums"
+
+#~ msgid "Description"
+#~ msgstr "Apraksts"
+
+#~ msgid "Install a theme archive file you already have locally"
+#~ msgstr "Instalē tēmas arhīva failu, kas jau saglabāts jūsu datorā"
+
+#~ msgid ""
+#~ "If you already have a theme archive locally, this button will unpack it "
+#~ "and make it available for KDE applications"
+#~ msgstr ""
+#~ "Ja jums ir lokāli saglabāts tēmas arhīvs, šī poga to atpakos un padarīs "
+#~ "pieejamu KDE lietotnēm"
+
+#~ msgid "Get new themes from the Internet"
+#~ msgstr "Ielādēt jaunas tēmas no Interneta"
+
+#~ msgid ""
+#~ "You need to be connected to the Internet to use this action. A dialog "
+#~ "will display a list of themes from the http://www.kde.org website. "
+#~ "Clicking the Install button associated with a theme will install this "
+#~ "theme locally."
+#~ msgstr ""
+#~ "Lai izmantotu šo darbību, nepieciešamas Interneta pieslēgums. Tiks "
+#~ "parādīts loga ar pieejamajām tēmām no http://www.kde.org vietnes."
+#~ "Nospiežot pie tēmas pogu Instalēt, tā instalēta sistēmā."
+
+#~ msgid "Remove the selected theme from your disk"
+#~ msgstr "Izdzēst izvēlēto tēmu no diska"
+
+#~ msgid "This will remove the selected theme from your disk."
+#~ msgstr "Šis izdzēsīs izvēlēto tēmu no jūsu diska."
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "Ievielciet vai uzraksties tēmas URL"
+
+#~ msgid ""
+#~ "Unable to download the icon theme archive;\n"
+#~ "please check that address %1 is correct."
+#~ msgstr ""
+#~ "Nevar lejupielādēt ikonas tēmas arhīvu;\n"
+#~ "lūdzu pārbaudiet ka adrese %1 ir pareiza."
+
+#~ msgid "<qt>Installing <strong>%1</strong> theme</qt>"
+#~ msgstr "<qt>Instalē tēmu <strong>%1</strong></qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <strong>%1</strong> icon theme?"
+#~ "<br /><br />This will delete the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>Vai jūs tiešām gribat noņemt ikonu tēmu <strong>%1</strong>?<br /"
+#~ "><br />Tiks nodzēsti visi šīs tēmas instalētie faili</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Apstiprinājums"
+
+#~ msgid "&Theme"
+#~ msgstr "&Tēma"
+
+#~ msgid "Ad&vanced"
+#~ msgstr "P&aplidus"
+
+#~ msgid ""
+#~ "<h1>Icons</h1>This module allows you to choose the icons for your desktop."
+#~ "<p>To choose an icon theme, click on its name and apply your choice by "
+#~ "pressing the \"Apply\" button below. If you do not want to apply your "
+#~ "choice you can press the \"Reset\" button to discard your changes.</"
+#~ "p><p>By pressing the \"Install Theme File...\" button you can install "
+#~ "your new icon theme by writing its location in the box or browsing to the "
+#~ "location. Press the \"OK\" button to finish the installation.</p><p>The "
+#~ "\"Remove Theme\" button will only be activated if you select a theme that "
+#~ "you installed using this module. You are not able to remove globally "
+#~ "installed themes here.</p><p>You can also specify effects that should be "
+#~ "applied to the icons.</p>"
+#~ msgstr ""
+#~ "<h1>Ikonas</h1> Šis modulis ļauj izvēlēties darbvirsmas ikonas. <p>Lai "
+#~ "izvēlētos ikonu tēmu, klikšķiniet uz tās nosaukuma un tad apstipriniet "
+#~ "savu izvēli ar \"Pielietot\" pogu. \"Atstatīt\" poga savukārt atcels "
+#~ "veikās izmaiņas.</p><p>Izmantojot \"Instalēt jaunu tēmu\" pogu ir "
+#~ "iespējams pievienot jaunu tēmu, kuru var izvēlēties no failu pārlūkošanas "
+#~ "loga. Tēmas instalēšana tiks veikta pēc \"Labi\" pogas nospiešanas.</p><p>"
+#~ "\"Noņemt tēmu\" poga būs aktīva tikai tad, ja izvēlēsieties tēmu, kuru "
+#~ "jūs esat instalējis. Jūs nevarat noņemt globāli instalētās tēmas.</"
+#~ "p><p>Šeit ir iespējams arī norādīt ikonām pielietojamos specefektus.</p>"
+
+#~ msgid "Animate icons"
+#~ msgstr "Animēt ikonas"
+
+#~ msgid "Select the icon theme you want to use:"
+#~ msgstr "Izvēlaties ikonu tēmu, kuru gribat izmantot:"

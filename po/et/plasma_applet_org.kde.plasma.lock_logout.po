@@ -1,0 +1,171 @@
+# translation of plasma_applet_lockout.po to Estonian
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Marek Laane <bald@smail.ee>, 2009, 2010, 2011, 2012, 2016, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_lockout\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2019-10-30 22:24+0200\n"
+"Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
+"Language-Team: Estonian <kde-et@lists.linux.ee>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 19.08.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Üldine"
+
+#: contents/ui/ConfigGeneral.qml:36
+#, kde-format
+msgctxt ""
+"Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
+msgid "Show actions:"
+msgstr "Toimingute näitamine:"
+
+#: contents/ui/ConfigGeneral.qml:37
+#, kde-format
+msgid "Logout"
+msgstr ""
+
+#: contents/ui/ConfigGeneral.qml:43
+#, kde-format
+msgid "Shutdown"
+msgstr ""
+
+#: contents/ui/ConfigGeneral.qml:48
+#, kde-format
+msgid "Reboot"
+msgstr ""
+
+#: contents/ui/ConfigGeneral.qml:53 contents/ui/data.js:5
+#, kde-format
+msgid "Lock"
+msgstr "Lukusta"
+
+#: contents/ui/ConfigGeneral.qml:58
+#, kde-format
+msgid "Switch User"
+msgstr "Kasutaja vahetamine"
+
+#: contents/ui/ConfigGeneral.qml:63 contents/ui/data.js:46
+#, kde-format
+msgid "Hibernate"
+msgstr "Talveuni"
+
+#: contents/ui/ConfigGeneral.qml:68 contents/ui/data.js:39
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Unne"
+
+#: contents/ui/data.js:6
+#, kde-format
+msgid "Lock the screen"
+msgstr "Ekraani lukustamine"
+
+#: contents/ui/data.js:12
+#, kde-format
+msgid "Switch user"
+msgstr "Kasutaja vahetamine"
+
+#: contents/ui/data.js:13
+#, kde-format
+msgid "Start a parallel session as a different user"
+msgstr "Paralleelse seansi käivitamine teise kasutaja õigustes"
+
+#: contents/ui/data.js:18
+#, kde-format
+msgid "Shutdown…"
+msgstr ""
+
+#: contents/ui/data.js:19
+#, fuzzy, kde-format
+#| msgid "Log out, turn off or restart the computer"
+msgid "Turn off the computer"
+msgstr "Väljalogimine või arvuti väljalülitamine või taaskäivitamine"
+
+#: contents/ui/data.js:25
+#, kde-format
+msgid "Restart…"
+msgstr ""
+
+#: contents/ui/data.js:26
+#, kde-format
+msgid "Reboot the computer"
+msgstr ""
+
+#: contents/ui/data.js:32
+#, kde-format
+msgid "Logout…"
+msgstr ""
+
+#: contents/ui/data.js:33
+#, kde-format
+msgid "End the session"
+msgstr ""
+
+#: contents/ui/data.js:40
+#, kde-format
+msgid "Sleep (suspend to RAM)"
+msgstr "Uni (passiivne seisund mälus)"
+
+#: contents/ui/data.js:47
+#, kde-format
+msgid "Hibernate (suspend to disk)"
+msgstr "Talveuni (passiivne seisund kettal)"
+
+#~ msgid "Do you want to suspend to disk (hibernate)?"
+#~ msgstr "Kas minna passiivseisundisse kettal (talveunne)?"
+
+#~ msgid "Yes"
+#~ msgstr "Jah"
+
+#~ msgid "No"
+#~ msgstr "Ei"
+
+#~ msgid "Do you want to suspend to RAM (sleep)?"
+#~ msgstr "Kas minna passiivseisundisse mälus (unne)?"
+
+#~ msgid "Leave"
+#~ msgstr "Väljumine"
+
+#~ msgid "Leave..."
+#~ msgstr "Väljumine..."
+
+#~ msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
+#~ msgid "Actions"
+#~ msgstr "Toimingud"
+
+#~ msgid "Suspend"
+#~ msgstr "Passiivseisund"
+
+#~ msgid "Configure Lock/Logout"
+#~ msgstr "Lukustamise/väljalogimise seadistamine"
+
+#~ msgid "Please select one or more items on the list below."
+#~ msgstr "Palun vali nimekirjast vähemalt üks kirje."
+
+#~ msgid "Entries"
+#~ msgstr "Kirjed"
+
+#, fuzzy
+#~| msgid "Show sleep button"
+#~ msgid "Show \"switch user\" button"
+#~ msgstr "Unenupu näitamine"
+
+#~ msgid "Show logout button"
+#~ msgstr "Väljalogimisnupu näitamine"
+
+#~ msgid "Show hibernate button"
+#~ msgstr "Talveunenupu näitamine"
+
+#~ msgid "Show sleep button"
+#~ msgstr "Unenupu näitamine"

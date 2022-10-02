@@ -1,0 +1,202 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Spanish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="icons" lang="&language;">
+<articleinfo>
+<title
+>Iconos</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<author
+>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+<othercredit role="translator"
+><firstname
+>Rocío</firstname
+><surname
+> Gallego</surname
+><affiliation
+><address
+><email
+>traducciones@rociogallego.com</email
+></address
+></affiliation
+><contrib
+>Traductor</contrib
+></othercredit
+><othercredit role="translator"
+> <firstname
+>Pablo</firstname
+> <surname
+>de Vicente</surname
+> <affiliation
+><address
+><email
+>pvicentea@nexo.es</email
+></address
+></affiliation
+> <contrib
+>Traductor</contrib
+> </othercredit
+> 
+</authorgroup>
+
+<date
+>2018-12-10</date>
+<releaseinfo
+>Plasma 5.14</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>icono</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>&plasma; incorpora una conjunto completo de iconos en diversos tamaños. Estos iconos se utilizan por todo el escritorio de &plasma;: el escritorio, el panel, el administrador de archivos &dolphin; y en cada barra de herramientas de cualquier aplicación de &plasma;, etc. El módulo de control de los iconos le ofrece varios métodos flexibles de personalizar el modo en el que &plasma; maneja iconos.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Veamos una captura de pantalla del administrador de temas de iconos</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Personalizar iconos en &plasma;</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>En este módulo puede:</para>
+<itemizedlist>
+<listitem
+><para
+>Instalar y elegir temas de iconos.</para
+></listitem>
+<listitem
+><para
+>Elegir diferentes tamaños de iconos.</para
+></listitem>
+<listitem
+><para
+>eliminar temas de iconos</para
+></listitem>
+</itemizedlist>
+
+<important
+><para
+>Tenga en cuenta que algunas de estas opciones pueden depender del tema de iconos seleccionado. &plasma; incluye varios temas de iconos por omisión: Brisa, Brisa oscuro y Oxígeno.</para
+></important>
+
+<para
+>En la parte superior puede ver una vista previa de los iconos del tema actual. La mayoría de las instalaciones predeterminadas solo dispondrán de algunos temas, entre los que estará el tema predeterminado de &plasma;, Brisa. Puede descargar más temas de Internet en <ulink url="https://store.kde.org/"
+>https://store.kde.org/</ulink
+> o instalarlos desde un archivo local.</para>
+
+<para
+>Al situar el cursor encima, una vista previa animada muestra una selección aleatoria, así como tipos MIME e iconos de carpetas comunes. </para>
+
+<para
+>Si desea eliminar un tema, use el icono superpuesto <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+> de la parte inferior derecha del tema de iconos. Para deshacer esta acción, pulse el icono <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-undo.png" format="PNG"/></imageobject
+></inlinemediaobject
+>. Si pulsa <guibutton
+>Aplicar</guibutton
+> o <guibutton
+>Aceptar</guibutton
+>, se borrarán los temas seleccionados para su eliminación, por lo que no se pueden deshacer los borrados individuales o generales. </para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Configurar tamaños de los iconos</guilabel
+></term>
+<listitem>
+<para
+>Seleccione uno de los componentes y use el deslizador para ajustar el tamaño correspondiente. </para>
+<para>
+<screenshot>
+<screeninfo
+>Configurar tamaños de los iconos</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="use-of-icons.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Configurar tamaños de los iconos</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Obtener nuevos iconos...</guilabel
+></term>
+<listitem>
+<para
+>Necesita estar conectado a Internet para usarlo. Pulsando en este botón se mostrará un diálogo en el que puede elegir un tema de iconos nuevo. Pulsando en <guibutton
+>Instalar</guibutton
+> en el diálogo se instalará el tema de iconos elegido y después de que pulse <guibutton
+>Cerrar</guibutton
+> verá inmediatamente disponibles su tema nuevo. </para>
+<para>
+<screenshot>
+<screeninfo
+>Obtener temas de iconos nuevos</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="get-new-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Obtener temas de iconos nuevos</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Instalar desde archivo...</guilabel
+></term>
+<listitem>
+<para
+>Si ha descargado nuevos temas desde Internet, puede usar esto para explorar la ubicación de dichos temas recién descargados. Si pulsa este botón se le mostrará el diálogo de archivos para apuntar al «tarball» del tema de iconos que tiene en el disco.</para>
+
+<para
+>Si pulsa <guibutton
+>Abrir</guibutton
+> en este diálogo se instalará el tema seleccionado y estará disponible en la lista de temas. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</article>

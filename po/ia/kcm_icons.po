@@ -1,0 +1,372 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# G.Sora <g.sora@tiscali.it>, 2014, 2017, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"PO-Revision-Date: 2021-12-20 22:50+0100\n"
+"Last-Translator: giovanni <g.sora@tiscali.it>\n"
+"Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
+"Language: ia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.12.0\n"
+
+#: iconsizecategorymodel.cpp:14
+#, kde-format
+msgid "Toolbar"
+msgstr "Barra de Instrumento"
+
+#: iconsizecategorymodel.cpp:15
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Barra de instrumento principal"
+
+#: iconsizecategorymodel.cpp:16
+#, kde-format
+msgid "Small Icons"
+msgstr "Icones parve"
+
+#: iconsizecategorymodel.cpp:17
+#, kde-format
+msgid "Panel"
+msgstr "Pannello"
+
+#: iconsizecategorymodel.cpp:18
+#, kde-format
+msgid "Dialogs"
+msgstr "Dialogos"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr "Nomine del thema de icone currente"
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr "Grandr de icones de scriptorio"
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr "Grandor de icones de barra de instrumento"
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, kde-format
+msgid "Main toolbar icons size"
+msgstr "Grandor de icones de barra de instrumento principal"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, kde-format
+msgid "Small icons size"
+msgstr "Grandor de Icones parve"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr "Grandor de icones de pannello"
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr "Grandor de icones de dialogo"
+
+#: main.cpp:182
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Incapace crear un file temporari."
+
+#: main.cpp:193
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Incapace a discargar le archivo de thema de icone: %1."
+
+#: main.cpp:207
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "Le file non es un valide archivo de thema de icone."
+
+#: main.cpp:212
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr ""
+"Un problema occurreva durante le processo de installation, totevia, le plure "
+"del themas in le archivo ha essite installate"
+
+#: main.cpp:216
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "Thema installate con successo."
+
+#: main.cpp:260
+#, kde-format
+msgid "Installing icon themes…"
+msgstr "Installante themas de icone…"
+
+#: main.cpp:270
+#, kde-format
+msgid "Installing %1 theme…"
+msgstr "Installante thema %1 …"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr "Iste modulo te permitte seliger le icones per tu scriptorio."
+
+#: package/contents/ui/main.qml:147
+#, kde-format
+msgid "Remove Icon Theme"
+msgstr "Remove thema de icone"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Restore Icon Theme"
+msgstr "Restabili Thema de icone"
+
+#: package/contents/ui/main.qml:228
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr "Configurar grandores de icone"
+
+#: package/contents/ui/main.qml:246
+#, kde-format
+msgid "Install from File…"
+msgstr "Installa ex file ..."
+
+#: package/contents/ui/main.qml:251
+#, kde-format
+msgid "Get New Icons…"
+msgstr "Obtene Nove icones…"
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Open Theme"
+msgstr "Aperi thema"
+
+#: package/contents/ui/main.qml:281
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr "Files de Thema (*zip *.tar.gz *.tar.bz2)"
+
+#~ msgid "Icon theme is already used"
+#~ msgstr "Thema de icone es ja usate"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Giovanni Sora"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "g.sora@tiscali.it"
+
+#~ msgid "Icons"
+#~ msgstr "Icones"
+
+#~ msgid "Icons Control Panel Module"
+#~ msgstr "Modulo de Pannello de Controlo de Icones"
+
+#~ msgid "(c) 2000-2003 Geert Jansen"
+#~ msgstr "(c) 2000-2003 Geert Jansen"
+
+#~ msgid "Geert Jansen"
+#~ msgstr "Geert Jansen"
+
+#~ msgid "Antonio Larrosa Jimenez"
+#~ msgstr "Antonio Larrosa Jimenez"
+
+#~ msgid "Torsten Rahn"
+#~ msgstr "Torsten Rahn"
+
+#~ msgid "Jonathan Riddell"
+#~ msgstr "Jonathan Riddell"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Kai Uwe Broulik"
+
+#~ msgid "Desktop"
+#~ msgstr "Scriptorio"
+
+#~ msgid "Use of Icon"
+#~ msgstr "Uso de icone"
+
+#~ msgctxt "@label The icon rendered by default"
+#~ msgid "Default"
+#~ msgstr "Predefinite"
+
+#~ msgctxt "@label The icon rendered as active"
+#~ msgid "Active"
+#~ msgstr "Activa"
+
+#~ msgctxt "@label The icon rendered as disabled"
+#~ msgid "Disabled"
+#~ msgstr "Dishabilitate"
+
+#~ msgid "Size:"
+#~ msgstr "Dimension:"
+
+#~ msgid "Set Effect..."
+#~ msgstr "Fixa effecto..."
+
+#~ msgid "All Icons"
+#~ msgstr "Omne icones"
+
+#~ msgid "Setup Default Icon Effect"
+#~ msgstr "Configura effecto de icone predefinite"
+
+#~ msgid "Setup Active Icon Effect"
+#~ msgstr "Configura effecto de icone active"
+
+#~ msgid "Setup Disabled Icon Effect"
+#~ msgstr "Configura effecto de icone dishabilitate"
+
+#~ msgid "&Effect:"
+#~ msgstr "&Effecto:"
+
+#~ msgid "No Effect"
+#~ msgstr "Nulle effecto"
+
+#~ msgid "To Gray"
+#~ msgstr "A gris"
+
+#~ msgid "Colorize"
+#~ msgstr "Colorize"
+
+#~ msgid "Gamma"
+#~ msgstr "Gamma"
+
+#~ msgid "Desaturate"
+#~ msgstr "De-satura"
+
+#~ msgid "To Monochrome"
+#~ msgstr "A monochrome"
+
+#~ msgid "&Semi-transparent"
+#~ msgstr "&Semi-transparente"
+
+#~ msgid "Preview"
+#~ msgstr "Vista preliminar"
+
+#~ msgid "Effect Parameters"
+#~ msgstr "Parametros de effecto"
+
+#~ msgid "&Amount:"
+#~ msgstr "&Amonta:"
+
+#~ msgid "Co&lor:"
+#~ msgstr "Co&lor:"
+
+#~ msgid "&Second color:"
+#~ msgstr "&Secunde color:"
+
+#~ msgid "Name"
+#~ msgstr "Nomine"
+
+#~ msgid "Description"
+#~ msgstr "Description"
+
+#~ msgid "Install a theme archive file you already have locally"
+#~ msgstr "Installa un file de archivo de thema que tu ja ha localmente"
+
+#~ msgid ""
+#~ "If you already have a theme archive locally, this button will unpack it "
+#~ "and make it available for KDE applications"
+#~ msgstr ""
+#~ "Si tu ja ha un archivo de thema localmente, iste button de-impacchettara "
+#~ "lo e facera lo disponibile pro applicationes de KDE. "
+
+#~ msgid "Get new themes from the Internet"
+#~ msgstr "Obtene nove themas ex le internet"
+
+#~ msgid ""
+#~ "You need to be connected to the Internet to use this action. A dialog "
+#~ "will display a list of themes from the http://www.kde.org website. "
+#~ "Clicking the Install button associated with a theme will install this "
+#~ "theme locally."
+#~ msgstr ""
+#~ "Tu necessita de esser connectite a le Internet pro usar iste action. Un "
+#~ "dialogo monstrara un lista de themas ex le sito web http://www.kde.org. "
+#~ "Pulsar le button de install associate con un thema installara iste thema "
+#~ "localmente."
+
+#~ msgid "Remove the selected theme from your disk"
+#~ msgstr "Remove le thema seligite ex tu disco"
+
+#~ msgid "This will remove the selected theme from your disk."
+#~ msgstr "Isto removera le thema seligite ex tu disco."
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "Trahe o typa URL de thema"
+
+#~ msgid ""
+#~ "Unable to download the icon theme archive;\n"
+#~ "please check that address %1 is correct."
+#~ msgstr ""
+#~ "Il non pote discargar le archivo de thema de icone;\n"
+#~ "pro favor tu verifica que le adressa %1 es correcte."
+
+#~ msgid "<qt>Installing <strong>%1</strong> theme</qt>"
+#~ msgstr "<qt>Installar <strong>%1</strong> thema</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <strong>%1</strong> icon theme?"
+#~ "<br /><br />This will delete the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>Tu es secur que tu vole remover le thema de icone <strong>%1</"
+#~ "strong> ?<br /><br />Isto cancellara le files installate per iste thema.</"
+#~ "qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Confirmation"
+
+#~ msgid "&Theme"
+#~ msgstr "&Thema"
+
+#~ msgid "Ad&vanced"
+#~ msgstr "A&vantiate"
+
+#~ msgid ""
+#~ "<h1>Icons</h1>This module allows you to choose the icons for your desktop."
+#~ "<p>To choose an icon theme, click on its name and apply your choice by "
+#~ "pressing the \"Apply\" button below. If you do not want to apply your "
+#~ "choice you can press the \"Reset\" button to discard your changes.</"
+#~ "p><p>By pressing the \"Install Theme File...\" button you can install "
+#~ "your new icon theme by writing its location in the box or browsing to the "
+#~ "location. Press the \"OK\" button to finish the installation.</p><p>The "
+#~ "\"Remove Theme\" button will only be activated if you select a theme that "
+#~ "you installed using this module. You are not able to remove globally "
+#~ "installed themes here.</p><p>You can also specify effects that should be "
+#~ "applied to the icons.</p>"
+#~ msgstr ""
+#~ "<h1>Icones</h1>Isto modulo permitte te de seliger le icones pro tu "
+#~ "scriptorio.<p>Pro eliger un thema de icone, tu pulsa sur su nomine e tu "
+#~ "applica tu selection per pressar le button de \"Applica\" a basso. Si tu "
+#~ "non vole applicar tu selection tu pote pressar le button de \"Re-initia\" "
+#~ "pro rejectar tu modificationes.</p><p>Per pressar le button de  "
+#~ "\"Installa Nove Thema\" tu pote installar tu nove thema de icone per "
+#~ "scriber su location in le quadro o navigar a le location. Tu pressa le "
+#~ "button de \"OK\" pro finir le installation.</p><p>Le button de  \"Remove "
+#~ "thema\" solmente essera activate si tu selectiona un thema que tu "
+#~ "installava usante iste modulo. Tu non pote remover hic themas installate "
+#~ "globalmente.</p><p>Tu anque pote specificar effectos que on debe esser "
+#~ "applicate a le icones.</p>"
+
+#~ msgid "Animate icons"
+#~ msgstr "Icones animate"
+
+#~ msgid "Select the icon theme you want to use:"
+#~ msgstr "Selige le thema de icone que tu vole usar:"

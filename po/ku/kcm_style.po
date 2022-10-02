@@ -1,0 +1,409 @@
+# translation of kcmstyle.po to Kurdish
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Erdal Ronahi <erdal.ronahi@nospam.gmail.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmstyle\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"PO-Revision-Date: 2008-12-28 07:31+0200\n"
+"Last-Translator: Omer Ensari <oensari@gmail.com>\n"
+"Language-Team: Kurdish <ubuntu-l10n-kur@lists.ubuntu.com>\n"
+"Language: ku\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Language: Kurdish\n"
+
+#: gtkpage.cpp:59
+#, kde-format
+msgid "%1 is not a valid GTK Theme archive."
+msgstr ""
+
+#: kcmstyle.cpp:161 kcmstyle.cpp:168
+#, kde-format
+msgid "There was an error loading the configuration dialog for this style."
+msgstr ""
+"Di barkirina pace ya veavakirinê de yê ji bo vê teşeyê çewtiyek çê bû.  "
+
+#: kcmstyle.cpp:274
+#, kde-format
+msgid "Failed to apply selected style '%1'."
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:32
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Sho&w icons on buttons"
+msgid "Show icons:"
+msgstr "Îkonan di nav bişkojkan de nî&şan bide"
+
+#: package/contents/ui/EffectSettingsPopup.qml:33
+#, fuzzy, kde-format
+#| msgid "Radio button"
+msgid "On buttons"
+msgstr "Bişkojka radyo"
+
+#: package/contents/ui/EffectSettingsPopup.qml:44
+#, kde-format
+msgid "In menus"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:56
+#, kde-format
+msgid "Main toolbar label:"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "None"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:59
+#, fuzzy, kde-format
+#| msgid "Text Only"
+msgid "Text only"
+msgstr "Tenê Nivîs"
+
+#: package/contents/ui/EffectSettingsPopup.qml:60
+#, fuzzy, kde-format
+#| msgid "Text Alongside Icons"
+msgid "Beside icons"
+msgstr "Nivîs Ber Rexê Îkonan"
+
+#: package/contents/ui/EffectSettingsPopup.qml:61
+#, fuzzy, kde-format
+#| msgid "Text Under Icons"
+msgid "Below icon"
+msgstr "Nivîs Bin Îkonan"
+
+#: package/contents/ui/EffectSettingsPopup.qml:76
+#, kde-format
+msgid "Secondary toolbar label:"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:18
+#, kde-format
+msgid "GNOME/GTK Application Style"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:44
+#, kde-format
+msgid "GTK theme:"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:69
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgid "Preview…"
+msgstr "Pêşdîtin"
+
+#: package/contents/ui/GtkStylePage.qml:88
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:93
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Get New GNOME/GTK Application Styles…"
+msgstr "Vea&vakirin..."
+
+#: package/contents/ui/GtkStylePage.qml:109
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:111
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: package/contents/ui/main.qml:17
+#, fuzzy, kde-format
+#| msgid ""
+#| "<h1>Style</h1>This module allows you to modify the visual appearance of "
+#| "user interface elements, such as the widget style and effects."
+msgid ""
+"This module allows you to modify the visual appearance of applications' user "
+"interface elements."
+msgstr ""
+"<h1>Teşe</h1>Ev modûl dihêle hûn xuyakirina hêmanên bikarhêner yên navrû, "
+"yên wekî teşeyê alavê û efektan, biguherînin."
+
+#: package/contents/ui/main.qml:96
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure Style…"
+msgstr "Vea&vakirin..."
+
+#: package/contents/ui/main.qml:116
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr ""
+
+#: package/contents/ui/main.qml:132
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "Vea&vakirin..."
+
+#: styleconfdialog.cpp:21
+#, kde-format
+msgid "Configure %1"
+msgstr "Veavakirina %1"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "Hilpekîna 1em "
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, fuzzy, kde-format
+#| msgid "Button"
+msgid "Push Button"
+msgstr "Bişkojk"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, fuzzy, kde-format
+#| msgid "Combobox"
+msgid "Combo box"
+msgstr "Pir-Qutî"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "Qutiya Nîşankirinê"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "Bişkojka radyo"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:133
+#, kde-format
+msgid "Tab 2"
+msgstr "Hilpekîna 2em"
+
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Application style"
+msgstr "Vea&vakirin..."
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Sho&w icons on buttons"
+msgid "Show icons on buttons"
+msgstr "Îkonan di nav bişkojkan de nî&şan bide"
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Sho&w icons on buttons"
+msgid "Show icons in menus"
+msgstr "Îkonan di nav bişkojkan de nî&şan bide"
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, kde-format
+msgid "Main toolbar label"
+msgstr ""
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, kde-format
+msgid "Secondary toolbar label"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Omer Ensari"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "oensari@gmail.com"
+
+#, fuzzy
+#~| msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
+#~ msgstr "(c) 2002 Karol Szwed, Daniel Molkentin"
+
+#~ msgid "Karol Szwed"
+#~ msgstr "Karol Szwed"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#, fuzzy
+#~| msgid "Con&figure..."
+#~ msgid "Download New GNOME/GTK2 Application Styles..."
+#~ msgstr "Vea&vakirin..."
+
+#, fuzzy
+#~| msgid "Con&figure..."
+#~ msgid "GNOME/GTK2 Application Styles"
+#~ msgstr "Vea&vakirin..."
+
+#, fuzzy
+#~| msgid "Con&figure..."
+#~ msgid "Download New GNOME/GTK3 Application Styles..."
+#~ msgstr "Vea&vakirin..."
+
+#, fuzzy
+#~| msgid "Con&figure..."
+#~ msgid "GNOME/GTK3 Application Styles"
+#~ msgstr "Vea&vakirin..."
+
+#~ msgid "Unable to Load Dialog"
+#~ msgstr "Nikare Paceyê Bar Bike"
+
+#~ msgid "No description available."
+#~ msgstr "Danasîn tuneye."
+
+#~ msgid ""
+#~ "This area shows a preview of the currently selected style without having "
+#~ "to apply it to the whole desktop."
+#~ msgstr ""
+#~ "Ev qad pêşdîtina teşe yên hilbijartî nîşan dide, bê sepandina vê jê hemû "
+#~ "sermasê re."
+
+#~ msgid ""
+#~ "Here you can choose from a list of predefined widget styles (e.g. the way "
+#~ "buttons are drawn) which may or may not be combined with a theme "
+#~ "(additional information like a marble texture or a gradient)."
+#~ msgstr ""
+#~ "Li vir tu dikarî jê lîsteyê alavên pêşdanasî hilbijêrî, (mînak, bişkojkên "
+#~ "nexşe kirî) yên di be ku bi dirbekê re girêdayî bin an jî na (agahiyên "
+#~ "zêdetir wekî nîgarê mermerê an jî rengên sade)."
+
+#, fuzzy
+#~| msgid ""
+#~| "If you enable this option, KDE Applications will show small icons "
+#~| "alongside some important buttons."
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "some important buttons."
+#~ msgstr ""
+#~ "Heke hûn vê bijare yê çalak bikin, Sepanên KDE dê îkonên biçûk ber rexê "
+#~ "hinek bişkojkên girîng nîşan bide."
+
+#, fuzzy
+#~| msgid ""
+#~| "If you enable this option, KDE Applications will show small icons "
+#~| "alongside some important buttons."
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "most menu items."
+#~ msgstr ""
+#~ "Heke hûn vê bijare yê çalak bikin, Sepanên KDE dê îkonên biçûk ber rexê "
+#~ "hinek bişkojkên girîng nîşan bide."
+
+#, fuzzy
+#~| msgid ""
+#~| "<p><b>Icons only:</b> Shows only icons on toolbar buttons. Best option "
+#~| "for low resolutions.</p><p><b>Text only: </b>Shows only text on toolbar "
+#~| "buttons.</p><p><b>Text alongside icons: </b> Shows icons and text on "
+#~| "toolbar buttons. Text is aligned alongside the icon.</p><b>Text under "
+#~| "icons: </b> Shows icons and text on toolbar buttons. Text is aligned "
+#~| "below the icon."
+#~ msgid ""
+#~ "<p><b>No text:</b> Shows only icons on toolbar buttons. Best option for "
+#~ "low resolutions.</p><p><b>Text only: </b>Shows only text on toolbar "
+#~ "buttons.</p><p><b>Text beside icons: </b> Shows icons and text on toolbar "
+#~ "buttons. Text is aligned beside the icon.</p><b>Text below icons: </b> "
+#~ "Shows icons and text on toolbar buttons. Text is aligned below the icon."
+#~ msgstr ""
+#~ "<p><b>Tenê Îkonan:</b> Di bişkojkên darika amûrê de tenê îkonan nîşan "
+#~ "dide. Bijare ya baştirîn e ji bo fesîhî yên kin.</p><p><b>Tenê nivîs: </"
+#~ "b>Di bişkojkên darika amûrê de tenê nivîsê nîşan dide.</p><p><b>Nivîs ber "
+#~ "rexê îkonan: </b>Di bişkojkên darika amûrê de îkonan û nivîsê nîşan dide. "
+#~ "Nivîs ber rexê îkonê e.</p><b>Nivîs bin îkonan: </b>Di bişkojkên darika "
+#~ "amûrê de îkonan û nivîsê nîşan dide. Nivîs di bin îkonê de ye."
+
+#, fuzzy
+#~| msgid "Widget style:"
+#~ msgid "Widget Style"
+#~ msgstr "Teşeyê alavê:"
+
+#~ msgid "Widget style:"
+#~ msgstr "Teşeyê alavê:"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Fine Tuning"
+#~ msgstr "Sazkirina &Bikitekit"
+
+#~ msgid "Description: %1"
+#~ msgstr "Daxuyanî: %1"
+
+#~ msgid "Group Box"
+#~ msgstr "Qutiya Komê"
+
+#~ msgid "KDE Style Module"
+#~ msgstr "KDE Modûla Teşeyê "
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "(C) 2008 Ralf Habacker"
+
+#~ msgid "Low display resolution and Low CPU"
+#~ msgstr "Fesîhî ya nîşanderê yê kin û CPU ya Kin"
+
+#~ msgid "High display resolution and Low CPU"
+#~ msgstr "Fesîhî ya nîşanderê yê zêde û CPU ya Kêm"
+
+#~ msgid "Low display resolution and High CPU"
+#~ msgstr "Fesîhî ya nîşanderê yê kin û CPU ya Bilind"
+
+#~ msgid "High display resolution and High CPU"
+#~ msgstr "Fesîhî ya nîşanderê yê bilind û CPU ya Bilind"
+
+#~ msgid "Low display resolution and Very High CPU"
+#~ msgstr "Fesîhî ya nîşanderê yê kin û CPU ya Bilind"
+
+#~ msgid "High display resolution and Very High CPU"
+#~ msgstr "Fesîhî ya nîşanderê yê bilind û CPU ya Bilind"
+
+#~ msgid ""
+#~ "If you enable this option, KDE Applications will run internal animations."
+#~ msgstr ""
+#~ "Heke hûn vê bijare yê çalak bikin, Sepanên KDE dê anîmasyonên hundirî "
+#~ "bixebitîne."
+
+#~ msgid "kcmstyle"
+#~ msgstr "kcmstyle"
+
+#~ msgid "Icons Only"
+#~ msgstr "Tenê Îkonan"
+
+#, fuzzy
+#~| msgctxt "@label:listbox"
+#~| msgid "Text pos&ition:"
+#~ msgctxt "@label:listbox"
+#~ msgid "Text pos&ition of toolbar elements:"
+#~ msgstr "Ci&hê nivîsê:"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Style"
+#~ msgstr "&Teşe"
+
+#~ msgid ""
+#~ "This page allows you to enable various widget style effects. For best "
+#~ "performance, it is advisable to disable all effects."
+#~ msgstr ""
+#~ "Ev rûpel dihêle ku hûn efektên pircure yên teşeyê alavê çalak bikin. Ji "
+#~ "bo performansa baştirîn, hemû efektan neçalak bikin. "

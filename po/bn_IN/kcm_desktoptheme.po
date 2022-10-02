@@ -1,0 +1,383 @@
+# translation of kcm_desktopthemedetails.po to Bengali INDIA
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Runa Bhattacharjee <runab@redhat.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_desktopthemedetails\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"PO-Revision-Date: 2009-01-13 15:04+0530\n"
+"Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
+"Language-Team: Bengali INDIA <fedora-trans-bn_IN@redhat.com>\n"
+"Language: bn_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Get New Theme..."
+msgid "Name of the current Plasma Style"
+msgstr "নতুন থিম প্রাপ্ত করুন..."
+
+#: kcm.cpp:108
+#, fuzzy, kde-format
+#| msgid "Unable to save theme."
+msgid "Unable to create a temporary file."
+msgstr "থিম সংরক্ষণ করতে ব্যর্থ।"
+
+#: kcm.cpp:119
+#, fuzzy, kde-format
+#| msgid "Unable to save theme."
+msgid "Unable to download the theme: %1"
+msgstr "থিম সংরক্ষণ করতে ব্যর্থ।"
+
+#: kcm.cpp:144
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: kcm.cpp:147 kcm.cpp:153
+#, kde-format
+msgid "Theme installation failed."
+msgstr ""
+
+#: kcm.cpp:245
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "This module lets you choose the Plasma style."
+msgstr ""
+
+#: package/contents/ui/main.qml:69
+#, fuzzy, kde-format
+#| msgid "Theme Item"
+msgid "All Themes"
+msgstr "থিমের বস্তু"
+
+#: package/contents/ui/main.qml:70
+#, fuzzy, kde-format
+#| msgid "Theme Item"
+msgid "Light Themes"
+msgstr "থিমের বস্তু"
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgid "Dark Themes"
+msgstr ""
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "Color scheme compatible"
+msgstr ""
+
+#: package/contents/ui/main.qml:100
+#, fuzzy, kde-format
+#| msgctxt "plasma name"
+#| msgid "Color Scheme"
+msgid "Follows color scheme"
+msgstr "রঙের বিন্যাস"
+
+#: package/contents/ui/main.qml:118
+#, fuzzy, kde-format
+#| msgid "Theme Item"
+msgid "Edit Theme…"
+msgstr "থিমের বস্তু"
+
+#: package/contents/ui/main.qml:125
+#, kde-format
+msgid "Remove Theme"
+msgstr "থিম মুছে ফেলুন"
+
+#: package/contents/ui/main.qml:132
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Theme"
+msgstr "থিম মুছে ফেলুন"
+
+#: package/contents/ui/main.qml:174
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: package/contents/ui/main.qml:179
+#, fuzzy, kde-format
+#| msgid "Get New Theme..."
+msgid "Get New Plasma Styles…"
+msgstr "নতুন থিম প্রাপ্ত করুন..."
+
+#: package/contents/ui/main.qml:193
+#, fuzzy, kde-format
+#| msgid "Theme Item"
+msgid "Open Theme"
+msgstr "থিমের বস্তু"
+
+#: package/contents/ui/main.qml:195
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:31
+#, kde-format
+msgid ""
+"This tool allows you to set the theme of the current Plasma session, without "
+"accidentally setting it to one that is either not available, or which is "
+"already set."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:35
+#, kde-format
+msgid ""
+"The name of the theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:36
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:49
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:65
+#, kde-format
+msgid "The current Plasma session's theme has been set to %1"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:67
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:75
+#, kde-format
+msgid "You have the following Plasma themes on your system:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "রুণা ভট্টাচার্য্য"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "runab@redhat.com"
+
+#, fuzzy
+#~| msgid "Get New Theme..."
+#~ msgid "Plasma Style"
+#~ msgstr "নতুন থিম প্রাপ্ত করুন..."
+
+#, fuzzy
+#~| msgid "Get New Theme..."
+#~ msgid "Plasma Styles"
+#~ msgstr "নতুন থিম প্রাপ্ত করুন..."
+
+#, fuzzy
+#~| msgid "How to Change Desktop Theme"
+#~ msgid "Download New Plasma Styles"
+#~ msgstr "ডেস্কটপ থিম পরিবর্তনের পদ্ধতি"
+
+#, fuzzy
+#~| msgid "Remove Desktop Theme"
+#~ msgid "Configure Desktop Theme"
+#~ msgstr "ডেস্কটপ থিম মুছে ফেলুন"
+
+#, fuzzy
+#~| msgid "Export Desktop Theme"
+#~ msgid "KDE Desktop Theme Module"
+#~ msgstr "ডেস্কটপ থিম এক্সপোর্ট করুন"
+
+#~ msgctxt "plasma name"
+#~ msgid "Panel Background"
+#~ msgstr "প্যানেলের পটভূমি"
+
+#~ msgctxt "plasma name"
+#~ msgid "Task Items"
+#~ msgstr "কর্ম বিষয়ক বস্তু"
+
+#~ msgctxt "plasma name"
+#~ msgid "Widget Background"
+#~ msgstr "উইজেটের পটভূমি"
+
+#~ msgctxt "plasma name"
+#~ msgid "Dialog Background"
+#~ msgstr "ডায়লগের পটভূমি"
+
+#~ msgctxt "plasma name"
+#~ msgid "Analog Clock"
+#~ msgstr "অ্যানালগ ঘড়ি"
+
+#~ msgctxt "plasma name"
+#~ msgid "Notes"
+#~ msgstr "নোট"
+
+#~ msgctxt "plasma name"
+#~ msgid "Tooltip"
+#~ msgstr "টুল-টিপ"
+
+#~ msgctxt "plasma name"
+#~ msgid "Pager"
+#~ msgstr "পেজার"
+
+#~ msgctxt "plasma name"
+#~ msgid "Run Command Dialog"
+#~ msgstr "কমান্ড সঞ্চালনার ডায়লগ"
+
+#~ msgctxt "plasma name"
+#~ msgid "Shutdown Dialog"
+#~ msgstr "বন্ধ করার ডায়লগ"
+
+#~ msgid "(Customized)"
+#~ msgstr "(স্বনির্ধারিত)"
+
+#~ msgid "User customized theme"
+#~ msgstr "ব্যবহারকারী দ্বারা নির্ধারিত থিম"
+
+#~ msgid ""
+#~ "Theme items have been changed.  Do you still wish remove the \"%1\" theme?"
+#~ msgstr ""
+#~ "থিমের মধ্যে অন্তর্ভুক্ত বস্তু পরিবর্তন করা হয়েছপ।  আপনি কি নিশ্চিতরূপে \"%1\" থিম "
+#~ "মুছে ফেলতে ইচ্ছুক?"
+
+#, fuzzy
+#~| msgid "Removal of the default KDE theme is not allowed."
+#~ msgid "Removal of the default desktop theme is not allowed."
+#~ msgstr "ডিফল্ট KDE থিম মুছে ফেলা যাবে না।"
+
+#~ msgid "Are you sure you wish remove the \"%1\" theme?"
+#~ msgstr "আপনি কি নিশ্চিতরূপে \"%1\" থিম মুছে ফেলতে ইচ্ছুক?"
+
+#~ msgid ""
+#~ "Please apply theme item changes (with a new theme name) before attempting "
+#~ "to export theme."
+#~ msgstr ""
+#~ "থিম এক্সপোর্ট করার পূর্বে, অনুগ্রহ করে থিমের বস্তুর মধ্যে করা পরিবর্তনগুলি (নতুন "
+#~ "থিমের নামে) সংরক্ষণ করুন।"
+
+#~ msgid "Export Desktop Theme"
+#~ msgstr "ডেস্কটপ থিম এক্সপোর্ট করুন"
+
+#~ msgid "Export theme to file"
+#~ msgstr "ফাইলের মধ্যে থিম এক্সপোর্ট করুন"
+
+#~ msgid "Theme Item"
+#~ msgstr "থিমের বস্তু"
+
+#~ msgid "Source"
+#~ msgstr "উৎস"
+
+#, fuzzy
+#~| msgid "%1 %2"
+#~ msgctxt ""
+#~ "%1 is the name of the theme, %2 is the type of the element (background, "
+#~ "icon, note, etc)"
+#~ msgid "%1 %2"
+#~ msgstr "%1 %2"
+
+#~ msgid "File..."
+#~ msgstr "ফাইল..."
+
+#~ msgid "Select File to Use for %1"
+#~ msgstr "%1-র জন্য ব্যবহারযোগ্য ফাইল নির্বাচন করুন"
+
+#~ msgid " Author: %1"
+#~ msgstr " নির্মাতা: %1"
+
+#~ msgid "Version: %1"
+#~ msgstr "সংস্করণ: %1"
+
+#~ msgid "Desktop Theme Details"
+#~ msgstr "ডেস্কটপ থিম সংক্রান্ত বিবরণ"
+
+#~ msgid "More"
+#~ msgstr "অতিরিক্ত"
+
+#, fuzzy
+#~| msgid "Remove Desktop Theme"
+#~ msgid "Remove the selected theme"
+#~ msgstr "ডেস্কটপ থিম মুছে ফেলুন"
+
+#~ msgid "Export Theme to File..."
+#~ msgstr "ফাইলের মধ্যে থিম এক্সপোর্ট করুন..."
+
+#~ msgid "New theme name:"
+#~ msgstr "নতুন থিমের নাম:"
+
+#, fuzzy
+#~| msgid "New theme name:"
+#~ msgid "Custom theme name"
+#~ msgstr "নতুন থিমের নাম:"
+
+#~ msgid "Author:"
+#~ msgstr "নির্মাতা:"
+
+#, fuzzy
+#~| msgid "Theme Author"
+#~ msgid "Custom theme author "
+#~ msgstr "থিম নির্মাতা"
+
+#~ msgid "Version:"
+#~ msgstr "সংস্করণ:"
+
+#, fuzzy
+#~| msgid "New theme name:"
+#~ msgid "Custom theme version number"
+#~ msgstr "নতুন থিমের নাম:"
+
+#~ msgid "Description:"
+#~ msgstr "বিবরণ:"
+
+#, fuzzy
+#~| msgid "The theme description goes here..."
+#~ msgid "Custom theme description"
+#~ msgstr "থিমের বিবরণ এইখানে অন্তর্ভুক্ত করা হবে..."
+
+#~ msgid "Theme Author"
+#~ msgstr "থিম নির্মাতা"
+
+#~ msgid "Theme Name"
+#~ msgstr "থিমের নাম"
+
+#~ msgid "Theme Version"
+#~ msgstr "থিমের সংস্করণ"
+
+#~ msgid "The theme description goes here..."
+#~ msgstr "থিমের বিবরণ এইখানে অন্তর্ভুক্ত করা হবে..."
+
+#, fuzzy
+#~| msgid "Remove Desktop Theme"
+#~ msgid "KCMDesktopTheme"
+#~ msgstr "ডেস্কটপ থিম মুছে ফেলুন"
+
+#, fuzzy
+#~| msgid ""
+#~| "To change your desktop theme to \"%1\", open\n"
+#~| "Desktop Settings and select \"%2\" from the droplist."
+#~ msgid ""
+#~ "To change your desktop theme to \"%1\", go back to the 'General' tab of "
+#~ "System Settings; choose 'Appearance', and then 'Style'; and finally "
+#~ "select \"%2\" from the drop-down list at the top of the window."
+#~ msgstr ""
+#~ "ডেস্কটপ থিম \"%1\"-এ পরিবর্তন করার জন্য, \n"
+#~ "ডেস্কটপ সংক্রান্ত বৈশিষ্ট্য খুলে, ড্রপ-লিস্ট থেকে \"%2\" নির্বাচন করুন।"
+
+#, fuzzy
+#~| msgid "Removal of the default KDE theme is not allowed."
+#~ msgid "Removal of the active desktop theme is not allowed."
+#~ msgstr "ডিফল্ট KDE থিম মুছে ফেলা যাবে না।"

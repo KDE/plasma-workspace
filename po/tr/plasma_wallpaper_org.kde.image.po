@@ -1,0 +1,420 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Serdar Soytetir <tulliana@gmail.com>, 2008, 2009, 2010, 2011, 2012.
+# H. İbrahim Güngör <ibrahim@pardus.org.tr>, 2011.
+# Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2021, 2022.
+# Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_wallpaper_image\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-15 00:46+0000\n"
+"PO-Revision-Date: 2022-02-27 14:14+0100\n"
+"Last-Translator: Volkan Gezer <volkangezer@gmail.com>\n"
+"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 20.12.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Serdar Soytetir"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "tulliana@gmail.com"
+
+#: imagepackage/contents/ui/config.qml:94
+#, kde-format
+msgid "Positioning:"
+msgstr "Konumlandırma:"
+
+#: imagepackage/contents/ui/config.qml:97
+#, kde-format
+msgid "Scaled and Cropped"
+msgstr "Boyutlandırılmış ve Kırpılmış"
+
+#: imagepackage/contents/ui/config.qml:101
+#, kde-format
+msgid "Scaled"
+msgstr "Ölçeklendirilmiş"
+
+#: imagepackage/contents/ui/config.qml:105
+#, kde-format
+msgid "Scaled, Keep Proportions"
+msgstr "Ölçeklendirilmiş, Oranları Koru"
+
+#: imagepackage/contents/ui/config.qml:109
+#, kde-format
+msgid "Centered"
+msgstr "Ortalanmış"
+
+#: imagepackage/contents/ui/config.qml:113
+#, kde-format
+msgid "Tiled"
+msgstr "Döşenmiş"
+
+#: imagepackage/contents/ui/config.qml:141
+#, kde-format
+msgid "Background:"
+msgstr "Arkaplan:"
+
+#: imagepackage/contents/ui/config.qml:142
+#, kde-format
+msgid "Blur"
+msgstr "Bulanık"
+
+#: imagepackage/contents/ui/config.qml:151
+#, kde-format
+msgid "Solid color"
+msgstr "Katı renk"
+
+#: imagepackage/contents/ui/config.qml:161
+#, kde-format
+msgid "Select Background Color"
+msgstr "Arkaplan Rengini Seç"
+
+#: imagepackage/contents/ui/config.qml:207
+#, kde-format
+msgid "Add Image…"
+msgstr "Resim Ekle…"
+
+#: imagepackage/contents/ui/config.qml:213
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:257
+#, kde-format
+msgid "Get New Wallpapers…"
+msgstr "Yeni Duvar Kağıtları Al…"
+
+#: imagepackage/contents/ui/main.qml:69
+#, kde-format
+msgid "Open Wallpaper Image"
+msgstr "Duvar Kağıdı Resmi Aç"
+
+#: imagepackage/contents/ui/main.qml:70
+#, kde-format
+msgid "Next Wallpaper Image"
+msgstr "Sonraki Duvar Kağıdı Resmi"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:33
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "İçeren Klasörü Aç"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:39
+#, kde-format
+msgid "Restore wallpaper"
+msgstr "Duvar kağıdını eski durumuna getir"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:44
+#, kde-format
+msgid "Remove Wallpaper"
+msgstr "Duvar Kağıdını Kaldır"
+
+#: plasma-apply-wallpaperimage.cpp:29
+#, kde-format
+msgid ""
+"This tool allows you to set an image as the wallpaper for the Plasma session."
+msgstr ""
+"Bu araç, Plasma oturumu için bir resmi duvar kağıdı olarak ayarlamanıza izin "
+"verir."
+
+#: plasma-apply-wallpaperimage.cpp:31
+#, kde-format
+msgid ""
+"An image file or an installed wallpaper kpackage that you wish to set as the "
+"wallpaper for your Plasma session"
+msgstr ""
+"Bir resim dosyası veya kurulu bir duvar kağıdı kpackage'ını Plasma duvar "
+"kağıdı olarak ayarlayabilirsiniz"
+
+#: plasma-apply-wallpaperimage.cpp:45
+#, kde-format
+msgid ""
+"There is a stray single quote in the filename of this wallpaper (') - please "
+"contact the author of the wallpaper to fix this, or rename the file "
+"yourself: %1"
+msgstr ""
+"Bu duvar kağıdının dosya adında başıboş bir tek tırnak (') var, lütfen duvar "
+"kağıdının sanatçısı ile iletişime geçin veya dosyayı kendiniz yeniden "
+"adlandırın: %1"
+
+#: plasma-apply-wallpaperimage.cpp:85
+#, kde-format
+msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+msgstr "Plasma duvar kağıdı ayarlamaya çalışırken bir hata oluştu:\n"
+
+#: plasma-apply-wallpaperimage.cpp:89
+#, kde-format
+msgid ""
+"Successfully set the wallpaper for all desktops to the KPackage based %1"
+msgstr ""
+"Tüm masaüstleri için KPackage tabanlı %1 duvar kağıdı başarıyla ayarlandı"
+
+#: plasma-apply-wallpaperimage.cpp:91
+#, kde-format
+msgid "Successfully set the wallpaper for all desktops to the image %1"
+msgstr "Tüm masaüstleri için duvar kağıdı %1 resmi olarak ayarlandı"
+
+#: plasma-apply-wallpaperimage.cpp:97
+#, kde-format
+msgid ""
+"The file passed to be set as wallpaper does not exist, or we cannot identify "
+"it as a wallpaper: %1"
+msgstr ""
+"Duvar kağıdı olarak ayarlanmak istenen dosya yok veya onu duvar kağıdı "
+"olarak tanımlayamıyoruz: %1"
+
+#: plugin/finder/packagefinder.cpp:152
+#, kde-format
+msgid "Recommended wallpaper file"
+msgstr "Önerilen duvar kağıdı dosyası"
+
+#: plugin/imagebackend.cpp:234
+#, kde-format
+msgid "Directory with the wallpaper to show slides from"
+msgstr "Duvar kağıdını içeren slaytların gösterileceği dizin"
+
+#: plugin/imagebackend.cpp:345
+#, kde-format
+msgid "Open Image"
+msgstr "Resim Aç"
+
+#: plugin/imagebackend.cpp:345
+#, kde-format
+msgid "Image Files"
+msgstr "Resim Dosyaları"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:38
+#, kde-format
+msgid "Order:"
+msgstr "Sıralama:"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:45
+#, kde-format
+msgid "Random"
+msgstr "Rastgele"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:49
+#, kde-format
+msgid "A to Z"
+msgstr "A'dan Z'ye"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:53
+#, kde-format
+msgid "Z to A"
+msgstr "Z'den A'ya"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:57
+#, kde-format
+msgid "Date modified (newest first)"
+msgstr "Değiştirilme tarihi (en yeni en önce)"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:61
+#, kde-format
+msgid "Date modified (oldest first)"
+msgstr "Değiştirilme tarihi (en eski en önce)"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:86
+#, kde-format
+msgid "Group by folders"
+msgstr "Klasörlerle grupla"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:98
+#, kde-format
+msgid "Change every:"
+msgstr "Değişim Sıklığı:"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:108
+#, kde-format
+msgid "%1 hour"
+msgid_plural "%1 hours"
+msgstr[0] "%1 saat"
+msgstr[1] "%1 saat"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:128
+#, kde-format
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "%1 dakika"
+msgstr[1] "%1 dakika"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:148
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "%1 saniye"
+msgstr[1] "%1 saniye"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:162
+#, kde-format
+msgid "Folders"
+msgstr "Klasörler"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:220
+#, kde-format
+msgid "Remove Folder"
+msgstr "Klasörü Kaldır"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:225
+#, kde-format
+msgid "Open Folder"
+msgstr "Klasörü Aç"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:235
+#, kde-format
+msgid "There are no wallpaper locations configured"
+msgstr "Yapılandırılmış duvar kağıdı konumu yok"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:250
+#, kde-format
+msgid "Add Folder…"
+msgstr "Klasör Ekle…"
+
+#~ msgid "There are no wallpapers in this slideshow"
+#~ msgstr "Bu slayt gösterisinde duvar kağıdı yok"
+
+#~ msgid "Add Custom Wallpaper"
+#~ msgstr "Özel Duvar Kağıdı Ekle"
+
+#~ msgid "Remove wallpaper"
+#~ msgstr "Duvar kağıdını sil"
+
+#~ msgid "%1 by %2"
+#~ msgstr "%2 tarafından oluşturulan %1"
+
+#, fuzzy
+#~| msgid "Remove wallpaper"
+#~ msgid "Wallpapers"
+#~ msgstr "Duvar kağıdını sil"
+
+#~ msgid "Download Wallpapers"
+#~ msgstr "Yeni duvar kağıtları indir"
+
+#~ msgid "Hours"
+#~ msgstr "Saat"
+
+#~ msgid "Open..."
+#~ msgstr "Aç..."
+
+#~ msgctxt "Unknown Author"
+#~ msgid "Unknown"
+#~ msgstr "Bilinmiyor"
+
+#~ msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz *.xcf)"
+#~ msgstr "Resim Dosyaları (*.png *.jpg *.jpeg *.bmp *.svg *.svgz *.xcf)"
+
+#~ msgid "Screenshot"
+#~ msgstr "Ekran Görüntüsü"
+
+#~ msgid "Preview"
+#~ msgstr "Önizleme"
+
+#~ msgid "Center Tiled"
+#~ msgstr "Ortalı Döşenmiş"
+
+#~ msgid "Select Wallpaper Image File"
+#~ msgstr "Duvar Kağıdı Resmi Seç"
+
+#~ msgid "P&ositioning:"
+#~ msgstr "K&onumlandırma:"
+
+#~ msgid "&Color:"
+#~ msgstr "&Renk:"
+
+#~ msgid "Change wallpaper frame color"
+#~ msgstr "Duvar kağıdı çerçeve rengini değiştir"
+
+#~ msgid ""
+#~ "Change the color of the frame that it may be visible when the wallpaper "
+#~ "is centered or scaled with the same proportions."
+#~ msgstr ""
+#~ "Duvar kağıdı ortalandığında ya da eşit oranda boyutlandırıldığında "
+#~ "görülebilir olan çerçevenin rengini seçin."
+
+#~ msgid "Remove from list"
+#~ msgstr "Listeden kaldır"
+
+#~ msgctxt ""
+#~ "(qtdt-format) Please do not change the quotes (') and translate only the "
+#~ "content of the quotes."
+#~ msgid "hh 'Hours' mm 'Mins' ss 'Secs'"
+#~ msgstr "hh 'Saat' mm 'Dakika' ss 'Saniye'"
+
+#~ msgid "&My downloaded wallpapers:"
+#~ msgstr "&İndirilen duvar kağıtlarım:"
+
+#~ msgid ""
+#~ "Use wallpapers I have downloaded with \"Get New Wallpapers...\" in "
+#~ "slideshow"
+#~ msgstr ""
+#~ "\"Yeni Duvar Kağıtları Al\" ile indirdiğim duvar kağıtlarını slayt "
+#~ "gösterisi olarak kullan"
+
+#~ msgid "Custom folders:"
+#~ msgstr "Özel dizinler:"
+
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:11pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Images</span></p></body></html>"
+#~ msgstr ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:11pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Resimler</span></p></body></html>"
+
+#~ msgid "Finding images for the wallpaper slideshow."
+#~ msgstr "Duvar kağıdı slayt gösterisi için resimler bulunuyor."
+
+#~ msgid "Adding wallpaper package in %1"
+#~ msgstr "Duvar kağıdı paketi %1 içerisine ekleniyor"
+
+#~ msgid "Adding image %1"
+#~ msgstr "%1 resmi ekleniyor"
+
+#~ msgctxt "Wallpaper info, author name"
+#~ msgid "%1"
+#~ msgstr "%1"
+
+#~ msgid "Email:"
+#~ msgstr "E-posta:"
+
+#~ msgid "License:"
+#~ msgstr "Lisans:"
+
+#~ msgid "Color:"
+#~ msgstr "Renk:"
+
+#~ msgid "Author:"
+#~ msgstr "Yazar:"
+
+#~ msgid "Browse"
+#~ msgstr "Göz at"
+
+#~ msgid "&Picture:"
+#~ msgstr "&Resim:"
+
+#~ msgid "Testing %1 for a Wallpaper package"
+#~ msgstr "Bir duvar kağıdı paketi için %1 test ediliyor"
+
+#~ msgid "Maxpect"
+#~ msgstr "Uygun Ortala"

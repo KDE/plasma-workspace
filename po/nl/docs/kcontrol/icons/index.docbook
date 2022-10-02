@@ -1,0 +1,172 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Dutch "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="icons" lang="&language;">
+<articleinfo>
+<title
+>Pictogrammen</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<author
+>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+&Niels.Reedijk;&Sander.Koning; 
+</authorgroup>
+
+<date
+>2021-04-09</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>pictogram</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>&plasma; wordt met een volledige set pictogrammen in verschillende groottes geleverd. Deze pictogrammen worden overal in &plasma; gebruikt: op het bureaublad, in het paneel, in de bestandsbeheerder &dolphin;, in elke werkbalk van elke &plasma;-toepassing; &etc;. De module "Pictogrammen" biedt u een erg flexibele manier om de manier aan te passen waarop &plasma; met pictogrammen omgaat.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Dit is een schermafdruk van de themabeheerder</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>&plasma;-pictogrammen aanpassen</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>Met deze module kunt u:</para>
+<itemizedlist>
+<listitem
+><para
+>pictogramthema's installeren en kiezen</para
+></listitem>
+<listitem
+><para
+>verschillende pictogramgroottes kiezen</para
+></listitem>
+<listitem
+><para
+>pictogramthema's verwijderen</para
+></listitem>
+</itemizedlist>
+
+<important
+><para
+>Merk op dat sommige van deze instellingen afhankelijk zijn van het door u geselecteerde pictogramthema. &plasma; wordt standaard geleverd met verschillende pictogramthema's, Breeze, Breeze Dark en Oxygen.</para
+></important>
+
+<para
+>Bovenaan is een voorbeeld van de huidige pictogrammen te zien. De meeste standaardinstallaties hebben maar een paar pictogramstijlen beschikbaar, waaronder het &plasma; standaardthema Breeze. U kunt meer stijlen van het internet downloaden <ulink url="http://store.kde.org"
+>http://store.kde.org</ulink
+> of installeer ze uit een lokaal bestand.</para>
+
+<para
+>Bij er boven zweven wordt een geanimeerd voorbeeld van een willekeurige selectie, gewone mime-types en gewone mappictogrammen getoond. </para>
+
+<para
+>Als u een thema wilt verwijderen, gebruik het <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+> overlaypictogram rechts onderaan het themapictogram. Om deze actie terug te draaien klik op het <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-undo.png" format="PNG"/></imageobject
+></inlinemediaobject
+> pictogram. Als u op de knop <guibutton
+>Toepassen</guibutton
+> of <guibutton
+>OK</guibutton
+> drukt worden de thema's, geselecteerd voor verwijderen, echt verwijderd, u kunt dus geen individuele of alle verwijderingen ongedaan maken. </para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Pictogramgrootte configureren</guilabel
+></term>
+<listitem>
+<para
+>Selecteer een van de componenten en gebruik de schuifbalk om de bijbehorende grootte aan te passen. </para>
+<para>
+<screenshot>
+<screeninfo
+>Pictogramgrootte configureren</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="use-of-icons.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Pictogramgrootte configureren</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Nieuwe pictogrammen ophalen...</guilabel
+></term>
+<listitem>
+<para
+>Om dit te gebruiken, moet u verbonden zijn met het internet. Wanneer u op deze knop klikt, wordt er een venster weergeven waarin u een nieuw pictogrammenthema kunt kiezen. De knop <guibutton
+>Installeren</guibutton
+> in dit venster installeert het geselecteerde thema, en nadat u het venster heeft gesloten, is het thema klaar voor gebruik. </para>
+<para>
+<screenshot>
+<screeninfo
+>Nieuwe pictogrammen ophalen</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="get-new-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Nieuwe pictogrammen ophalen</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Uit bestand installeren...</guilabel
+></term>
+<listitem>
+<para
+>Dit kunt u gebruiken om van het internet gedownloade thema's aan de themalijst toe te voegen. Wanneer u op deze knop klikt, wordt de bestandsdialoog geopend waarin u het archiefbestand van het thema kunt opzoeken.</para>
+
+<para
+>Met de knop <guibutton
+>Openen</guibutton
+> in deze dialoog, installeert u het aangewezen thema en wordt deze beschikbaar in de themalijst. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</article>

@@ -1,0 +1,655 @@
+# translation of kcmstyle.po to Frysk
+# translation of kcmstyle.po to
+#
+# Rinse de Vries <rinsedevries@kde.nl>, 2005, 2007.
+# Rinse de Vries <RinseDeVries@home.nl>, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmstyle\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"PO-Revision-Date: 2010-07-13 12:38+0100\n"
+"Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
+"Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
+"Language: fy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: gtkpage.cpp:59
+#, kde-format
+msgid "%1 is not a valid GTK Theme archive."
+msgstr ""
+
+#: kcmstyle.cpp:161 kcmstyle.cpp:168
+#, kde-format
+msgid "There was an error loading the configuration dialog for this style."
+msgstr ""
+"Der barde in flater ûnder it laden fan de konfiguraasjedialooch fan dizze "
+"styl."
+
+#: kcmstyle.cpp:274
+#, kde-format
+msgid "Failed to apply selected style '%1'."
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:32
+#, fuzzy, kde-format
+#| msgid "Show icons on buttons:"
+msgid "Show icons:"
+msgstr "Byldkaikes op knoppen &sjen litte"
+
+#: package/contents/ui/EffectSettingsPopup.qml:33
+#, fuzzy, kde-format
+#| msgid "Radio button"
+msgid "On buttons"
+msgstr "Karrûntsje"
+
+#: package/contents/ui/EffectSettingsPopup.qml:44
+#, kde-format
+msgid "In menus"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:56
+#, fuzzy, kde-format
+#| msgid "Main toolbar text:"
+msgid "Main toolbar label:"
+msgstr "Haadbalke tekst:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "None"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:59
+#, fuzzy, kde-format
+#| msgid "Text Only"
+msgid "Text only"
+msgstr "Allinne tekst"
+
+#: package/contents/ui/EffectSettingsPopup.qml:60
+#, fuzzy, kde-format
+#| msgid "Text Beside Icons"
+msgid "Beside icons"
+msgstr "Tekst njonken byldkaikes"
+
+#: package/contents/ui/EffectSettingsPopup.qml:61
+#, fuzzy, kde-format
+#| msgid "Text Below Icons"
+msgid "Below icon"
+msgstr "Tekst ûnder byldkaikes"
+
+#: package/contents/ui/EffectSettingsPopup.qml:76
+#, fuzzy, kde-format
+#| msgid "Secondary toolbar text:"
+msgid "Secondary toolbar label:"
+msgstr "Sekundêra arkbalke tekst:"
+
+#: package/contents/ui/GtkStylePage.qml:18
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "&Applications"
+msgid "GNOME/GTK Application Style"
+msgstr "&Applikaasjes"
+
+#: package/contents/ui/GtkStylePage.qml:44
+#, kde-format
+msgid "GTK theme:"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:69
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgid "Preview…"
+msgstr "Foarbyld"
+
+#: package/contents/ui/GtkStylePage.qml:88
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:93
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "&Applications"
+msgid "Get New GNOME/GTK Application Styles…"
+msgstr "&Applikaasjes"
+
+#: package/contents/ui/GtkStylePage.qml:109
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:111
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: package/contents/ui/main.qml:17
+#, fuzzy, kde-format
+#| msgid ""
+#| "<h1>Style</h1>This module allows you to modify the visual appearance of "
+#| "user interface elements, such as the widget style and effects."
+msgid ""
+"This module allows you to modify the visual appearance of applications' user "
+"interface elements."
+msgstr ""
+"<h1>Styl</h1>Mei dizze module kinne jo it úterlik fan de ferskillende "
+"eleminten lykas de widgetstyl en -effekten fan de brûkersynterface wizigje."
+
+#: package/contents/ui/main.qml:96
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure Style…"
+msgstr "&Ynstelle..."
+
+#: package/contents/ui/main.qml:116
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr ""
+
+#: package/contents/ui/main.qml:132
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "&Ynstelle..."
+
+#: styleconfdialog.cpp:21
+#, kde-format
+msgid "Configure %1"
+msgstr "%1 ynstelle"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "Ljepper 1"
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, fuzzy, kde-format
+#| msgid "Button"
+msgid "Push Button"
+msgstr "Knop"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, fuzzy, kde-format
+#| msgid "Combobox"
+msgid "Combo box"
+msgstr "Kombinaasjefjild"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "Karfakje"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "Karrûntsje"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:133
+#, kde-format
+msgid "Tab 2"
+msgstr "Ljepper 2"
+
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "&Applications"
+msgid "Application style"
+msgstr "&Applikaasjes"
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Show icons on buttons:"
+msgid "Show icons on buttons"
+msgstr "Byldkaikes op knoppen &sjen litte"
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, fuzzy, kde-format
+#| msgid "Show icons on buttons:"
+msgid "Show icons in menus"
+msgstr "Byldkaikes op knoppen &sjen litte"
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, fuzzy, kde-format
+#| msgid "Main toolbar text:"
+msgid "Main toolbar label"
+msgstr "Haadbalke tekst:"
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, fuzzy, kde-format
+#| msgid "Secondary toolbar text:"
+msgid "Secondary toolbar label"
+msgstr "Sekundêra arkbalke tekst:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Berend Ytsma"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "berendy@gmail.com"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "Application Style"
+#~ msgstr "&Applikaasjes"
+
+#, fuzzy
+#~| msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
+#~ msgstr "(c) 2002 Karol Szwed, Daniel Molkentin"
+
+#~ msgid "Karol Szwed"
+#~ msgstr "Karol Szwed"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "Download New GNOME/GTK2 Application Styles..."
+#~ msgstr "&Applikaasjes"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "GNOME/GTK2 Application Styles"
+#~ msgstr "&Applikaasjes"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "Download New GNOME/GTK3 Application Styles..."
+#~ msgstr "&Applikaasjes"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "GNOME/GTK3 Application Styles"
+#~ msgstr "&Applikaasjes"
+
+#~ msgid "Unable to Load Dialog"
+#~ msgstr "It dialoochskerm koe net laden wurde"
+
+#~ msgid "No description available."
+#~ msgstr "Gjin beskriuwing beskikber."
+
+#~ msgid ""
+#~ "This area shows a preview of the currently selected style without having "
+#~ "to apply it to the whole desktop."
+#~ msgstr "Dit gebied lit in foarbyld sjen fan de no selektearre styl."
+
+#~ msgid ""
+#~ "Here you can choose from a list of predefined widget styles (e.g. the way "
+#~ "buttons are drawn) which may or may not be combined with a theme "
+#~ "(additional information like a marble texture or a gradient)."
+#~ msgstr ""
+#~ "Hjir kinne jo kieze út in list mei foarynstelde widgetstylen. (de wize "
+#~ "wêrop bgl. knoppen teken wurde). Dizze kinne jo eventueel ek kombinearje "
+#~ "mei in tema (ekstra ynstellings lykas bgl. in marmeren úterlik of in "
+#~ "kleur ferin)."
+
+#, fuzzy
+#~| msgid ""
+#~| "If you enable this option, KDE Applications will show small icons "
+#~| "alongside some important buttons."
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "some important buttons."
+#~ msgstr ""
+#~ "As jo dizze opsje selektearje, dan sille de KDE-applikaasjes lytse "
+#~ "byldkaikes neist inkele belangrike knoppen sjen litte."
+
+#, fuzzy
+#~| msgid ""
+#~| "If you enable this option, KDE Applications will show small icons "
+#~| "alongside some important buttons."
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "most menu items."
+#~ msgstr ""
+#~ "As jo dizze opsje selektearje, dan sille de KDE-applikaasjes lytse "
+#~ "byldkaikes neist inkele belangrike knoppen sjen litte."
+
+#, fuzzy
+#~| msgid ""
+#~| "<p><b>No Text:</b> Shows only icons on toolbar buttons. Best option for "
+#~| "low resolutions.</p><p><b>Text Only: </b>Shows only text on toolbar "
+#~| "buttons.</p><p><b>Text Beside Icons: </b> Shows icons and text on "
+#~| "toolbar buttons. Text is aligned beside the icon.</p><b>Text Below "
+#~| "Icons: </b> Shows icons and text on toolbar buttons. Text is aligned "
+#~| "below the icon."
+#~ msgid ""
+#~ "<p><b>No text:</b> Shows only icons on toolbar buttons. Best option for "
+#~ "low resolutions.</p><p><b>Text only: </b>Shows only text on toolbar "
+#~ "buttons.</p><p><b>Text beside icons: </b> Shows icons and text on toolbar "
+#~ "buttons. Text is aligned beside the icon.</p><b>Text below icons: </b> "
+#~ "Shows icons and text on toolbar buttons. Text is aligned below the icon."
+#~ msgstr ""
+#~ "<p><b>Gjin tekst:</b> Allinne byldkaikes op de arkbalke knoppen. Bêste "
+#~ "opsje foar lege resolusjes.</p><p><b>Allinne tekst: </b>Allinne tekst op "
+#~ "arkbalke knoppen.</p><p><b>Tekst njonken byldkaikes: </b> Byldkaikes en "
+#~ "tekst op arkbalke knoppen. Tekst is rjochte njonken it byldkaike.</"
+#~ "p><b>Tekst ûnder byldkaike: </b> Byldkaike en icons and text on toolbar "
+#~ "buttons. Tekst is rjochte ûnder it byldkaike."
+
+#~ msgid "Toolbars"
+#~ msgstr "Arkbalke"
+
+#~ msgid "No Text"
+#~ msgstr "Gjin tekst"
+
+#, fuzzy
+#~| msgid "Widget style:"
+#~ msgid "Widget Style"
+#~ msgstr "Widget-styl:"
+
+#~ msgid "Widget style:"
+#~ msgstr "Widget-styl:"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Fine Tuning"
+#~ msgstr "&Fyn ôfstimming"
+
+#~ msgid "Description: %1"
+#~ msgstr "Beskriuwing: %1"
+
+#~ msgid ""
+#~ "This page allows you to choose details about the widget style options"
+#~ msgstr "Dizze side lit jo details kieze oer de widgetstyl opsjes"
+
+#~ msgid "Group Box"
+#~ msgstr "Groepfak"
+
+#~ msgid "KDE Style Module"
+#~ msgstr "KDE Style Konfiguraasjemodule"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "In application"
+#~ msgstr "&Applikaasjes"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "Global Menu widget"
+#~ msgstr "&Applikaasjes"
+
+#~ msgid "Graphical effects:"
+#~ msgstr "Grafyske effekten"
+
+#~ msgid "Low display resolution and Low CPU"
+#~ msgstr "Byldskerm mei lege resolúsje en trage CPU"
+
+#~ msgid "High display resolution and Low CPU"
+#~ msgstr "Byldskerm mei hege resolúsje en trage CPU"
+
+#~ msgid "Low display resolution and High CPU"
+#~ msgstr "Byldskerm mei lege resolúsje en flugge CPU"
+
+#~ msgid "High display resolution and High CPU"
+#~ msgstr "Byldskerm mei hege resolúsje en hege CPU"
+
+#~ msgid "Low display resolution and Very High CPU"
+#~ msgstr "Byldskerm mei lege resolúsje en hiel flugge CPU"
+
+#~ msgid "High display resolution and Very High CPU"
+#~ msgstr "Byldskerm mei hege resolúsje en hiel flugge CPU"
+
+#~ msgid ""
+#~ "If you enable this option, KDE Applications will run internal animations."
+#~ msgstr ""
+#~ "Wannear ynskeakele, dan sil de KDE-applikaasjes ynterne animaasjes draaie."
+
+#~ msgid "kcmstyle"
+#~ msgstr "kcmstyle"
+
+#~ msgid "Icons Only"
+#~ msgstr "Allinne byldkaikes"
+
+#~ msgctxt "@label:listbox"
+#~ msgid "Text pos&ition of toolbar elements:"
+#~ msgstr "Tekstpos&ysje fan akrbalke eleminten:"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Style"
+#~ msgstr "&Styl"
+
+#~ msgid ""
+#~ "This page allows you to enable various widget style effects. For best "
+#~ "performance, it is advisable to disable all effects."
+#~ msgstr ""
+#~ "Yn dizze side kinne jo ferskate effekten foar widgets aktivearje. Foar de "
+#~ "beste prestaasjes kinne jo it bêste de effekten útskeakelje."
+
+#~| msgid "High&light buttons under mouse"
+#~ msgctxt "@option:check"
+#~ msgid "High&light buttons under mouse"
+#~ msgstr "&Knoppen markearje ûnder de mûsoanwizer"
+
+#~| msgid "E&nable tooltips"
+#~ msgctxt "@option:check"
+#~ msgid "E&nable tooltips"
+#~ msgstr "Helpballonnen aktivear&je"
+
+#~ msgid ""
+#~ "If this option is selected, toolbar buttons will change their color when "
+#~ "the mouse cursor is moved over them."
+#~ msgstr ""
+#~ "As dizze opsje selektearre is, dan feroarje de arkbalkeknoppen fan kleur "
+#~ "as de mûsoanwizer der oerhinne giet."
+
+#~ msgid ""
+#~ "If you check this option, the KDE application will offer tooltips when "
+#~ "the cursor remains over items in the toolbar."
+#~ msgstr ""
+#~ "As jo dizze opsje selektearje, dan lit de KDE-applikaasje in tekstballon "
+#~ "sjen as jo mei de mûsoanwizer op in item fan de arkbalke komme."
+
+#~ msgid "&Effects"
+#~ msgstr "&Effekten"
+
+#~ msgid "Show tear-off handles in &popup menus"
+#~ msgstr "Losskuorhânsels sjen litte yn ynhâl&dmenu's"
+
+#~ msgid "&Enable GUI effects"
+#~ msgstr "Grafysche effekten aktiv&earje"
+
+#~ msgid "Disable"
+#~ msgstr "Ûtsette"
+
+#~ msgid "Animate"
+#~ msgstr "Libbene"
+
+#~ msgid "Combobo&x effect:"
+#~ msgstr "Effekt foar it kombinaasje&fjild:"
+
+#~ msgid "Fade"
+#~ msgstr "Semy-trochsichtich"
+
+#~ msgid "&Tool tip effect:"
+#~ msgstr "Effek&t foar de knopynfo:"
+
+#~ msgid "Make Translucent"
+#~ msgstr "Trochsichtig meitsje"
+
+#~ msgid "&Menu effect:"
+#~ msgstr "Effekt foar it &menu:"
+
+#~ msgid "Me&nu tear-off handles:"
+#~ msgstr "Losskuorhânsels fan de me&nu's:"
+
+#~ msgid "Menu &drop shadow"
+#~ msgstr "Menuskaa&d"
+
+#~ msgid "Software Tint"
+#~ msgstr "Sêftguodtint"
+
+#~ msgid "Software Blend"
+#~ msgstr "Sêftguod-minging"
+
+#~ msgid "XRender Blend"
+#~ msgstr "XRender-minging"
+
+#~ msgid "0%"
+#~ msgstr "0%"
+
+#~ msgid "50%"
+#~ msgstr "50%"
+
+#~ msgid "100%"
+#~ msgstr "100%"
+
+#~ msgid "Menu trans&lucency type:"
+#~ msgstr "Trochsic&htich type foar it menu:"
+
+#~ msgid "Menu &opacity:"
+#~ msgstr "&ûntrochsichtichheid fan it menu:"
+
+#~ msgid "Transparent tool&bars when moving"
+#~ msgstr "trochsichtige arkba&lken ûnder it ferpleatsen"
+
+# msgid ""
+# "<qt>Selected style: <b>%1</b><br><br>One or more effects that you have "
+# "chosen could not be applied because the selected style does not support "
+# "them; they have therefore been disabled.<br><br>"
+#~ msgid ""
+#~ "<qt>Selected style: <b>%1</b><br /><br />One or more effects that you "
+#~ "have chosen could not be applied because the selected style does not "
+#~ "support them; they have therefore been disabled.<br /><br /></qt>"
+#~ msgstr ""
+#~ "<qt>Selektearre styl: <b>%1</b> <br /> <br />Fan de effekten dyst keazen "
+#~ "hast binne der guon dy net tapast binne omdat de selektearre styl se net "
+#~ "ûndersteund. Se binne derom útskeakele.<br /><br /></qt>"
+
+# msgid "Menu translucency is not available.<br>"
+#~ msgid "Menu translucency is not available.<br />"
+#~ msgstr "Trochsichtich menu is net beskikber.<br />"
+
+#~ msgid "Menu drop-shadows are not available."
+#~ msgstr "Menuskaad is net beskikber."
+
+#~ msgid ""
+#~ "If you check this box, you can select several effects for different "
+#~ "widgets like combo boxes, menus or tooltips."
+#~ msgstr ""
+#~ "Ast dizze opsje selektearrest, dan kinst ferskate effekten foar "
+#~ "ferskillende widgets, sa as kombinaasje fjilden, menu's of tekstballonnen "
+#~ "selektearje."
+
+#~ msgid ""
+#~ "<p><b>Disable: </b>do not use any combo box effects.</p>\n"
+#~ "<b>Animate: </b>Do some animation."
+#~ msgstr ""
+#~ "<p><b>Utskeakelje: </b>brûk gjin inkel effekt foar de kombinaasjefjilden."
+#~ "</p>\n"
+#~ "<b>Animaasje: </b> lit in in animaasje sjen."
+
+#~ msgid ""
+#~ "<p><b>Disable: </b>do not use any tooltip effects.</p>\n"
+#~ "<p><b>Animate: </b>Do some animation.</p>\n"
+#~ "<b>Fade: </b>Fade in tooltips using alpha-blending."
+#~ msgstr ""
+#~ "<p><b>Utskeakelje:</b> brûk gjin effekten foar tekstballonen. </p>\n"
+#~ "<p>Animaasje: <b>lit in animaasje sjen.</b>\n"
+#~ "</p><b>Semi trochsichtich:</b> de tekstballonnen foar de helte "
+#~ "trochsichtich sjen litte mei help fan alfa-trochsichtichheid."
+
+#~ msgid ""
+#~ "<p><b>Disable: </b>do not use any menu effects.</p>\n"
+#~ "<p><b>Animate: </b>Do some animation.</p>\n"
+#~ "<p><b>Fade: </b>Fade in menus using alpha-blending.</p>\n"
+#~ "<b>Make Translucent: </b>Alpha-blend menus for a see-through effect. (KDE "
+#~ "styles only)"
+#~ msgstr ""
+#~ "<p><b>Utskeakelje:</b> brûk gjin inkel menu-effekt.</p>\n"
+#~ "<p><b>Animaasje:</b> lit in animaasje sjen.</p>\n"
+#~ "<p><b>Semi-trochsichtich:</b> meitsje menu's foar de helte trochsichtich "
+#~ "mei help fan alfa-trochsichtichheid.</p>\n"
+#~ "<b>Trochsichtich meitsje:</b> meitsje de menu's fan trochsichtich glês "
+#~ "mei help fan alfa-trochsichtichheid (allinnich KDE-stylen)"
+
+#~ msgid ""
+#~ "When enabled, all popup menus will have a drop-shadow, otherwise drop-"
+#~ "shadows will not be displayed. At present, only KDE styles can have this "
+#~ "effect enabled."
+#~ msgstr ""
+#~ "Selektearje dizze opsje ast ljocht skaad rûn in útklapt menu sjen litte "
+#~ "wolst. Op't stuit ha allinnich KDE-stylen dizze mooglikheid."
+
+# msgid ""
+# "<p><b>Software Tint: </b>Alpha-blend using a flat color.</p>\n"
+# "<p><b>Software Blend: </b>Alpha-blend using an image.</p>\n"
+# "<b>XRender Blend: </b>Use the XFree RENDER extension for image blending "
+# "(if available). This method may be slower than the Software routines on "
+# "non-accelerated displays, but may however improve performance on remote "
+# "displays.</p>\n"
+#, fuzzy
+#~ msgid ""
+#~ "<p><b>Software Tint: </b>Alpha-blend using a flat color.</p>\n"
+#~ "<p><b>Software Blend: </b>Alpha-blend using an image.</p>\n"
+#~ "<p><b>XRender Blend: </b>Use the XFree RENDER extension for image "
+#~ "blending (if available). This method may be slower than the Software "
+#~ "routines on non-accelerated displays, but may however improve performance "
+#~ "on remote displays.</p>\n"
+#~ msgstr ""
+#~ "<p><b>Sêftguodtint: </b>alfa-trochsichtichheid mei help fan in egale "
+#~ "kleur.</p>\n"
+#~ "<p><b>Sêftguod-minging: </b>alfa-trochsichtichheid mei help fan "
+#~ "ôfbyldings.</p>\n"
+#~ "<b>XRender-minging: </b> brûk de XFree RENDER-takeaksel foar it mingen "
+#~ "fan ôfbyldings (at beskikber is). Op skermen sûnder fersnellings kin "
+#~ "XRender-minging trager wêze dan de sêftguodroutines, mar op byldskermen "
+#~ "op ôfstân kin it no just in grutte fluggens berike.</p>\n"
+
+#~ msgid "By adjusting this slider you can control the menu effect opacity."
+#~ msgstr ""
+#~ "Mei help fan dizze skúf kinst de trochsichtichheid fan it menu ynstelle."
+
+#~ msgid ""
+#~ "<b>Note:</b> that all widgets in this combobox do not apply to Qt-only "
+#~ "applications."
+#~ msgstr ""
+#~ "<b>Taljochting:</b> alle widgets yn dit kombinaasjefjild binne net fan "
+#~ "tapassing op programma's hokker allinnich mar Qt brûke."
+
+#~ msgid ""
+#~ "If you check this box, the toolbars will be transparent when moving them "
+#~ "around."
+#~ msgstr ""
+#~ "Ast dizze opsje selektearrest, dan sille de arkbalken trochsichtich wêze "
+#~ "ûnder it ferpleatsen dêrfan."
+
+#~ msgid ""
+#~ "If you enable this option some pop-up menus will show so called tear-off "
+#~ "handles. If you click them, you get the menu inside a widget. This can be "
+#~ "very helpful when performing the same action multiple times."
+#~ msgstr ""
+#~ "Ast dizze opsje aktivearrest, dan sille bepaalde menu's saneamde "
+#~ "losskuorrânen ha. Ast dêr op klikst, dan wurd it menu yn in apart finster "
+#~ "setten. Dit kin namlik goed fan pas komme ast it menu foar meardere "
+#~ "hânelingen efterelkoar nedich hast."
+
+#~ msgid "%"
+#~ msgstr "%"

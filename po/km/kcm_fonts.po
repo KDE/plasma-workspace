@@ -1,0 +1,521 @@
+# translation of kcmfonts.po to Khmer
+# Khoem Sokhem <khoemsokhem@khmeros.info>, 2006, 2008, 2010, 2012.
+# Auk Piseth <piseth_dv@khmeros.info>, 2007, 2008.
+# Sokun <sokun_poch@khmeros.info>, 2007.
+# Eng Vannak <evannak@khmeros.info>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmfonts\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-03 00:45+0000\n"
+"PO-Revision-Date: 2012-06-14 14:01+0700\n"
+"Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
+"Language-Team: Khmer\n"
+"Language: km\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Force fonts DPI:"
+msgid "Force font DPI Wayland"
+msgstr "បង្ខំ​ពុម្ព​អក្សរ DPI ៖"
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Force fonts DPI:"
+msgid "Force font DPI on X11"
+msgstr "បង្ខំ​ពុម្ព​អក្សរ DPI ៖"
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "General"
+msgid "General font"
+msgstr "ទូទៅ"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Fixed width"
+msgid "Fixed width font"
+msgstr "ទទឹង​ថេរ"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Small"
+msgid "Small font"
+msgstr "តូច"
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Toolbar"
+msgid "Tool bar font"
+msgstr "របារ​ឧបករណ៍"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, kde-format
+msgid "Menu font"
+msgstr ""
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Window title"
+msgid "Window title font"
+msgstr "ចំណង​ជើង​បង្អួច"
+
+#: kxftconfig.cpp:458
+#, fuzzy, kde-format
+#| msgctxt "Use anti-aliasing"
+#| msgid "System Settings"
+msgctxt "use system subpixel setting"
+msgid "Vendor default"
+msgstr "ការ​កំណត់​ប្រព័ន្ធ​"
+
+#: kxftconfig.cpp:460
+#, kde-format
+msgctxt "no subpixel rendering"
+msgid "None"
+msgstr "គ្មាន"
+
+#: kxftconfig.cpp:462
+#, kde-format
+msgid "RGB"
+msgstr "RGB"
+
+#: kxftconfig.cpp:464
+#, kde-format
+msgid "BGR"
+msgstr "BGR"
+
+#: kxftconfig.cpp:466
+#, kde-format
+msgid "Vertical RGB"
+msgstr "RGB បញ្ឈរ"
+
+#: kxftconfig.cpp:468
+#, kde-format
+msgid "Vertical BGR"
+msgstr "BGR បញ្ឈរ"
+
+#: kxftconfig.cpp:496
+#, fuzzy, kde-format
+#| msgctxt "Use anti-aliasing"
+#| msgid "System Settings"
+msgctxt "use system hinting settings"
+msgid "Vendor default"
+msgstr "ការ​កំណត់​ប្រព័ន្ធ​"
+
+#: kxftconfig.cpp:498
+#, kde-format
+msgctxt "medium hinting"
+msgid "Medium"
+msgstr "មធ្យម"
+
+#: kxftconfig.cpp:500
+#, kde-format
+msgctxt "no hinting"
+msgid "None"
+msgstr "គ្មាន"
+
+#: kxftconfig.cpp:502
+#, kde-format
+msgctxt "slight hinting"
+msgid "Slight"
+msgstr "ស្រាល"
+
+#: kxftconfig.cpp:504
+#, kde-format
+msgctxt "full hinting"
+msgid "Full"
+msgstr "ពេញ"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module lets you configure the system fonts."
+msgstr ""
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid "Change Display Scaling…"
+msgstr ""
+
+#: package/contents/ui/main.qml:37
+#, fuzzy, kde-format
+#| msgid ""
+#| "<p>Some changes such as anti-aliasing or DPI will only affect newly "
+#| "started applications.</p>"
+msgid ""
+"Some changes such as anti-aliasing or DPI will only affect newly started "
+"applications."
+msgstr ""
+"<p>ការ​ផ្លាស់ប្ដូរ​មួយ​ចំនួន ដូច​ជា​ការ​ប្រឆាំង​រឆេតរឆូត​នឹង​មាន​ប្រសិទ្ធិភាព តែ​លើ​កម្មវិធី​ដែល​បាន​ចាប់ផ្ដើម​ថ្មីៗ​"
+"ប៉ុណ្ណោះ ។</p>"
+
+#: package/contents/ui/main.qml:51
+#, kde-format
+msgid ""
+"Very large fonts may produce odd-looking results. Consider adjusting the "
+"global screen scale instead of using a very large font size."
+msgstr ""
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid ""
+"Decimal font sizes can cause text layout problems in some applications. "
+"Consider using only integer font sizes."
+msgstr ""
+
+#: package/contents/ui/main.qml:94
+#, kde-format
+msgid ""
+"The recommended way to scale the user interface is using the global screen "
+"scaling feature."
+msgstr ""
+
+#: package/contents/ui/main.qml:106
+#, fuzzy, kde-format
+#| msgid "Ad&just All Fonts..."
+msgid "&Adjust All Fonts…"
+msgstr "លៃ​តម្រូវ​ពុម្ព​អក្សរ​ទាំងអស់..."
+
+#: package/contents/ui/main.qml:119
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "General"
+msgid "General:"
+msgstr "ទូទៅ"
+
+#: package/contents/ui/main.qml:120
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "General"
+msgid "Select general font"
+msgstr "ទូទៅ"
+
+#: package/contents/ui/main.qml:131
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Fixed width"
+msgid "Fixed width:"
+msgstr "ទទឹង​ថេរ"
+
+#: package/contents/ui/main.qml:132
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Fixed width"
+msgid "Select fixed width font"
+msgstr "ទទឹង​ថេរ"
+
+#: package/contents/ui/main.qml:143
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Small"
+msgid "Small:"
+msgstr "តូច"
+
+#: package/contents/ui/main.qml:144
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Small"
+msgid "Select small font"
+msgstr "តូច"
+
+#: package/contents/ui/main.qml:155
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Toolbar"
+msgid "Toolbar:"
+msgstr "របារ​ឧបករណ៍"
+
+#: package/contents/ui/main.qml:156
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Toolbar"
+msgid "Select toolbar font"
+msgstr "របារ​ឧបករណ៍"
+
+#: package/contents/ui/main.qml:167
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Menu"
+msgid "Menu:"
+msgstr "ម៉ឺនុយ"
+
+#: package/contents/ui/main.qml:168
+#, kde-format
+msgid "Select menu font"
+msgstr ""
+
+#: package/contents/ui/main.qml:178
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Window title"
+msgid "Window title:"
+msgstr "ចំណង​ជើង​បង្អួច"
+
+#: package/contents/ui/main.qml:179
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Window title"
+msgid "Select window title font"
+msgstr "ចំណង​ជើង​បង្អួច"
+
+#: package/contents/ui/main.qml:194
+#, fuzzy, kde-format
+#| msgid "Use a&nti-aliasing:"
+msgid "Anti-Aliasing:"
+msgstr "ប្រើ​ការ​ប្រឆាំង​រឆេតរឆូត​"
+
+#: package/contents/ui/main.qml:199
+#, fuzzy, kde-format
+#| msgctxt "Use anti-aliasing"
+#| msgid "Enabled"
+msgid "Enable"
+msgstr "អនុញ្ញាត​"
+
+#: package/contents/ui/main.qml:203
+#, kde-kuit-format
+msgctxt "@info:tooltip Anti-Aliasing"
+msgid ""
+"Pixels on displays are generally aligned in a grid. Therefore shapes of "
+"fonts that do not align with this grid will look blocky and wrong unless "
+"<emphasis>anti-aliasing</emphasis> techniques are used to reduce this "
+"effect. You generally want to keep this option enabled unless it causes "
+"problems."
+msgstr ""
+
+#: package/contents/ui/main.qml:217
+#, kde-format
+msgid "Exclude range from anti-aliasing"
+msgstr ""
+
+#: package/contents/ui/main.qml:236 package/contents/ui/main.qml:259
+#, kde-format
+msgid "%1 pt"
+msgstr ""
+
+#: package/contents/ui/main.qml:251
+#, fuzzy, kde-format
+#| msgid " to "
+msgid "to"
+msgstr " ទៅ"
+
+#: package/contents/ui/main.qml:282
+#, fuzzy, kde-format
+#| msgid "&Use sub-pixel rendering:"
+msgctxt "Used as a noun, and precedes a combobox full of options"
+msgid "Sub-pixel rendering:"
+msgstr "ប្រើ​ការ​បង្ហាញ​ភីកសែល​រង​ ៖"
+
+#: package/contents/ui/main.qml:324
+#, kde-kuit-format
+msgctxt "@info:tooltip Sub-pixel rendering"
+msgid ""
+"<para>On TFT or LCD screens every single pixel is actually composed of three "
+"or four smaller monochrome lights. These <emphasis>sub-pixels</emphasis> can "
+"be changed independently to further improve the quality of displayed fonts.</"
+"para> <para>The rendering quality is only improved if the selection matches "
+"the manner in which the sub-pixels of your display are aligned. Most "
+"displays have a linear ordering of <emphasis>RGB</emphasis> sub-pixels, some "
+"have <emphasis>BGR</emphasis> and some exotic orderings are not supported by "
+"this feature.</para>This does not work with CRT monitors."
+msgstr ""
+
+#: package/contents/ui/main.qml:329
+#, fuzzy, kde-format
+#| msgid "Hinting style: "
+msgctxt "Used as a noun, and precedes a combobox full of options"
+msgid "Hinting:"
+msgstr "រចនា​ប័ទ្ម Hinting ៖ "
+
+#: package/contents/ui/main.qml:370
+#, kde-kuit-format
+msgctxt "@info:tooltip Hinting"
+msgid ""
+"Hinting is a technique in which hints embedded in a font are used to enhance "
+"the rendering quality especially at small sizes. Stronger hinting generally "
+"leads to sharper edges but the small letters will less closely resemble "
+"their shape at big sizes."
+msgstr ""
+
+#: package/contents/ui/main.qml:380
+#, fuzzy, kde-format
+#| msgid "Force fonts DPI:"
+msgid "Force font DPI:"
+msgstr "បង្ខំ​ពុម្ព​អក្សរ DPI ៖"
+
+#: package/contents/ui/main.qml:422
+#, kde-kuit-format
+msgctxt "@info:tooltip Force fonts DPI"
+msgid ""
+"<para>Enter your screen's DPI here to make on-screen fonts match their "
+"physical sizes when printed. Changing this option from its default value "
+"will conflict with many apps; some icons and images may not scale as "
+"expected.</para><para>To increase text size, change the size of the fonts "
+"above. To scale everything, use the scaling slider on the <interface>Display "
+"& Monitor</interface> page.</para>"
+msgstr ""
+
+#: package/contents/ui/main.qml:428
+#, kde-format
+msgid "Select Font"
+msgstr ""
+
+#, fuzzy
+#~| msgid ""
+#~| "<p>This option forces a specific DPI value for fonts. It may be useful "
+#~| "when the real DPI of the hardware is not detected properly and it is "
+#~| "also often misused when poor quality fonts are used that do not look "
+#~| "well with DPI values other than 96 or 120 DPI.</p><p>The use of this "
+#~| "option is generally discouraged. For selecting proper DPI value a better "
+#~| "option is explicitly configuring it for the whole X server if possible "
+#~| "(e.g. DisplaySize in xorg.conf or adding <i>-dpi value</i> to "
+#~| "ServerLocalArgs= in $KDEDIR/share/config/kdm/kdmrc). When fonts do not "
+#~| "render properly with real DPI value better fonts should be used or "
+#~| "configuration of font hinting should be checked.</p>"
+#~ msgctxt "@info:tooltip Force fonts DPI"
+#~ msgid ""
+#~ "<para>This option forces a specific DPI value for fonts. It may be useful "
+#~ "when the real DPI of the hardware is not detected properly and it is also "
+#~ "often misused when poor quality fonts are used that do not look well with "
+#~ "DPI values other than 96 or 120 DPI.</para><para>The use of this option "
+#~ "is generally discouraged.</para><para>If you are using the <emphasis>X "
+#~ "Window System</emphasis>, for selecting the proper DPI value a better "
+#~ "option is explicitly configuring it for the whole X server if possible (e."
+#~ "g. DisplaySize in xorg.conf). When fonts do not render properly with the "
+#~ "real DPI value better fonts should be used or configuration of font "
+#~ "hinting should be checked.</para>"
+#~ msgstr ""
+#~ "<p>ជម្រើស​នេះ​បង្ខំ​នូវ​តម្លៃ DPI ជាក់លាក់​សម្រាប់​ពុម្ព​អក្សរ ។ វា​ប្រហែល​ជា​មាន​ប្រយោជន៍ ពេល​ដែល​ "
+#~ "DPI ពិត​របស់​ផ្នែក​រឹង​​មិន​ត្រូវ​បាន​រក​ឃើញ​ដោយ​ត្រឹមត្រូវ​ទេ​នោះ ហើយ​វា​ក៏​ត្រូវ​បាន​ប្រើ​ជា​ញឹកញយ​ផង​ដែរ​នៅ​ពេល​"
+#~ "ដែល​បាន​ប្រើ​ពុម្ពអក្សរ​ដែល​មាន​គុណភាព​អន់ ដែល​មើល​ទៅ ​ហាក់ ដូចជា​មិន​សម​ជាមួយ​នឹង​តម្លៃ DPI ក្រៅពី​ 96 "
+#~ "ឬ 120 DPI ។</p><p>ការ​ប្រើប្រាស់​ជម្រើស​នេះ ជាទូទៅ​ត្រូវ​បាន​រាំង​ស្ទះ ។ ចំពោះ​ការ​ជ្រើសរើស​"
+#~ "តម្លៃ DPI ដែល​ត្រឹមត្រូវ ប្រសិន​បើ​អាច​ធ្វើ​ទៅ​បាន​នោះ​​ជម្រើស​ដែល​ល្អ​គឺ​ត្រូវ​ធ្វើការ​កំណត់​រចនាសម្ព័ន្ធ​វា​"
+#~ "ឲ្យ​បាន​ច្បាស់​សម្រាប់​ម៉ាស៊ីន​បម្រើ X ទាំងមូល (ឧ. បង្ហាញ​ទំហំ​នៅ​ក្នុង xorg.conf ឬ​ការ​បន្ថែម "
+#~ "<i>តម្លៃ dpi</i> ទៅ​កាន់ ServerLocalArgs= in $KDEDIR/share/config/kdm/kdmrc) "
+#~ "។ នៅ​ពេល​ដែល​ពុម្ព​អក្សរ​បង្ហាញ​មិន​ត្រឹមត្រូវ​ជាមួយ​តម្លៃ DPI ពិត​ទេ នោះ​ពុម្ព​អក្សរ​ដែល​ប្រសើរ​ជាង​មុន​ គឺ​"
+#~ "គួរ​តែ​ត្រូវ​បាន​ប្រើ ឬ​ការ​កំណត់​រចនាសម្ព័ន្ធ​នៃ​ការ​ណែនាំ​គួរ​តែ​ត្រូវ​បាន​ធីក​ ។</p>"
+
+#~ msgid "Font Settings Changed"
+#~ msgstr "បាន​ផ្លាស់ប្ដូរ​ការ​កំណត់​ពុម្ព​អក្សរ"
+
+#~ msgid ""
+#~ "<p>Some changes such as DPI will only affect newly started applications.</"
+#~ "p>"
+#~ msgstr ""
+#~ "<p>ការ​ផ្លាស់ប្តូរ​មួយ​ចំនួន​ដូចជា DPI នឹង​មាន​ឥទ្ធិពល​តែ​លើ​កម្មវិធី​ដែល​បាន​ចាប់​ផ្តើម​ថ្មី​ជាង​គេ​តែ​"
+#~ "ប៉ុណ្ណោះ ។</p>"
+
+#, fuzzy
+#~| msgctxt "Use anti-aliasing"
+#~| msgid "System Settings"
+#~ msgid "Vendor default"
+#~ msgstr "ការ​កំណត់​ប្រព័ន្ធ​"
+
+#, fuzzy
+#~| msgctxt "Use anti-aliasing"
+#~| msgid "Disabled"
+#~ msgid "Disabled"
+#~ msgstr "មិន​អនុញ្ញាត​"
+
+#, fuzzy
+#~| msgid "Configure..."
+#~ msgid "Configure the system fonts"
+#~ msgstr "កំណត់​រចនាសម្ព័ន្ធ..."
+
+#~ msgid "Configure Anti-Alias Settings"
+#~ msgstr "កំណត់​រចនាសម្ព័ន្ធ​ការ​ប្រឆាំង​រឆេត​រឆូត"
+
+#~ msgid "E&xclude range:"
+#~ msgstr "មិន​រួម​បញ្ចូល​ជួរ ៖"
+
+#, fuzzy
+#~| msgid " pt"
+#~ msgctxt "abbreviation for unit of points"
+#~ msgid " pt"
+#~ msgstr " pt"
+
+#~ msgid ""
+#~ "<p>If you have a TFT or LCD screen you can further improve the quality of "
+#~ "displayed fonts by selecting this option.<br />Sub-pixel rendering is "
+#~ "also known as ClearType(tm).<br /> In order for sub-pixel rendering to "
+#~ "work correctly you need to know how the sub-pixels of your display are "
+#~ "aligned.</p> <p>On TFT or LCD displays a single pixel is actually "
+#~ "composed of three sub-pixels, red, green and blue. Most displays have a "
+#~ "linear ordering of RGB sub-pixel, some have BGR.<br /> This feature does "
+#~ "not work with CRT monitors.</p>"
+#~ msgstr ""
+#~ "<p>បើ​អ្នក​មា​ន​អេក្រង់ TFT ឬ LCD អ្នក​អាច​​ធ្វើ​ឲ្យ​គុណភាព​ពុម្ព​​​អក្សរ​ដែល​បាន​បង្ហាញ​ប្រសើរ​ឡើង ដោយ​"
+#~ "ជ្រើស​ជម្រើស​នេះ ។<br />ការ​បង្ហាញ​ភីកសែល​រង ត្រូវ​បាន​ស្គាល់​ជា​ប្រភេទ​ជម្រះ (tm) ។<br /> តាម​"
+#~ "លំដាប់​សម្រាប់​ការ​បង្ហាញ​ភីចសែល​រង​ដើម្បី​ធ្វើការ​យ៉ាងត្រឹមត្រូវ ដែល​អ្នក​ត្រូវ​តែ​ដឹង​អំពី​របៀប​បង្ហាញ​ភីកសែល​"
+#~ "រង​របស់​អ្នក ។</p> <p>នៅ​លើ​ការ​បង្ហាញ TFT ឬ LCD ភីកសែល​តែ​មួយ​ដែល​ជា​ទូទៅ​ត្រូវ​បាន​តែង​ជា​ភីកសែល​"
+#~ "រង​ចំនូ​ន​បី ក្រហម បៃតង​ និង​ខៀវ ។ ការ​បង្ហាញ​ភាគ​ច្រើន​តម្រៀប​ជា​លីនែអ៊ែរ​នៃ​ភីកសែល​រង RGB ពេល​ខ្លះ​ក៏​"
+#~ "មាន​ BGR ។<br /> លក្ខណៈពិសេស​នេះ​មិន​ដំណើរការ​លើ​ម៉ូនីទ័រ​ CRT ឡើយ ។</p>"
+
+#~ msgid ""
+#~ "Hinting is a process used to enhance the quality of fonts at small sizes."
+#~ msgstr "Hinting ជា​ដំណើរការ​មួយ​ដែល​ត្រូវ​បាន​ប្រើ​ដើម្បី​ពង្រឹង​គុណភាព​ពុម្ព​អក្សរ​ដែល​មាន​ទំហំ​តូច ។"
+
+#~ msgid "Used for normal text (e.g. button labels, list items)."
+#~ msgstr "ប្រើ​សម្រាប់​អត្ថបទ​ធម្មតា (ឧទាហរណ៍ ស្លាក​ប៊ូតុង ធាតុ​បញ្ជី) ។"
+
+#~ msgid "A non-proportional font (i.e. typewriter font)."
+#~ msgstr "ពុម្ព​អក្សរ​គ្មាន​សមាមាត្រ (មាន​ន័យថា ពុម្ព​អក្សរ​អង្គុលី​លេខ) ។"
+
+#~ msgid "Smallest font that is still readable well."
+#~ msgstr "ពុម្ព​អក្សរ​តូច​បំផុត​ដែល​នៅ​តែ​អាច​អាន​បាន ។"
+
+#~ msgid "Used to display text beside toolbar icons."
+#~ msgstr "ប្រើ​ដើម្បី​បង្ហាញ​អត្ថបទ​ក្បែរ​រូប​តំណាង​របារ​ឧបករណ៍ ។"
+
+#~ msgid "Used by menu bars and popup menus."
+#~ msgstr "ប្រើ​ដោយ​របារ​ម៉ឺនុយ និង​ម៉ឺនុយ​លេច​ឡើង ។"
+
+#~ msgid "Used by the window titlebar."
+#~ msgstr "ប្រើ​ដោយ​របារ​ចំណង​ជើង​បង្អួច ។"
+
+#~ msgctxt "Font role"
+#~ msgid "%1: "
+#~ msgstr "%1 ៖ "
+
+#~ msgid "Click to change all fonts"
+#~ msgstr "ចុច​ដើម្បី​ផ្លាស់ប្តូរ​ពុម្ព​អក្សរ​ទាំងអស់"
+
+#~ msgctxt "Use anti-aliasing"
+#~ msgid "System Settings"
+#~ msgstr "ការ​កំណត់​ប្រព័ន្ធ​"
+
+#, fuzzy
+#~| msgid ""
+#~| "If this option is selected, KDE will smooth the edges of curves in fonts."
+#~ msgid "Select this option to smooth the edges of curves in fonts."
+#~ msgstr "បើ​ជ្រើស​ជម្រើស​​នេះ នោះ KDE នឹង​ធ្វើ​ឲ្យ​គែម​កំណោង​ក្នុង​ពុម្ព​អក្សរ​រលោង ។"
+
+#~ msgctxt "font usage"
+#~ msgid "Taskbar"
+#~ msgstr "របារ​ភារកិច្ច"
+
+#~ msgctxt "font usage"
+#~ msgid "Desktop"
+#~ msgstr "ផ្ទៃតុ"
+
+#~ msgid "Used by the taskbar."
+#~ msgstr "បាន​ប្រើ​ដោយ​របារ​ភារកិច្ច ។"
+
+#~ msgid "Used for desktop icons."
+#~ msgstr "ប្រើ​សម្រាប់​រូប​តំណាង​ផ្ទៃតុ ។"

@@ -1,0 +1,300 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Tahmar1900 <tahmar1900@gmail.com>, 2011.
+# Diego Iastrubni <elcuco@kde.org>, 2013.
+# elkana bardugo <ttv200@gmail.com>, 2016.
+# Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_org.kde.image\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-15 00:46+0000\n"
+"PO-Revision-Date: 2017-05-16 06:55-0400\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: Hebrew\n"
+"X-Poedit-Country: ISRAEL\n"
+"X-Generator: Zanata 3.9.6\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:94
+#, kde-format
+msgid "Positioning:"
+msgstr "מיקום:"
+
+#: imagepackage/contents/ui/config.qml:97
+#, kde-format
+msgid "Scaled and Cropped"
+msgstr "התאם וחתוך"
+
+#: imagepackage/contents/ui/config.qml:101
+#, kde-format
+msgid "Scaled"
+msgstr "שינוי גודל"
+
+#: imagepackage/contents/ui/config.qml:105
+#, kde-format
+msgid "Scaled, Keep Proportions"
+msgstr "התאם שמור פרופורציות"
+
+#: imagepackage/contents/ui/config.qml:109
+#, kde-format
+msgid "Centered"
+msgstr "ממורכז"
+
+#: imagepackage/contents/ui/config.qml:113
+#, kde-format
+msgid "Tiled"
+msgstr "פרוס"
+
+#: imagepackage/contents/ui/config.qml:141
+#, fuzzy, kde-format
+#| msgid "Background Color:"
+msgid "Background:"
+msgstr "צבע הרקע:"
+
+#: imagepackage/contents/ui/config.qml:142
+#, kde-format
+msgid "Blur"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:151
+#, kde-format
+msgid "Solid color"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:161
+#, kde-format
+msgid "Select Background Color"
+msgstr "בחר צבע רקע"
+
+#: imagepackage/contents/ui/config.qml:207
+#, kde-format
+msgid "Add Image…"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:213
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:257
+#, fuzzy, kde-format
+#| msgid "Get New Wallpapers..."
+msgid "Get New Wallpapers…"
+msgstr "קבל תמונות רקע חדשות..."
+
+#: imagepackage/contents/ui/main.qml:69
+#, kde-format
+msgid "Open Wallpaper Image"
+msgstr "פתח תמונת רקע"
+
+#: imagepackage/contents/ui/main.qml:70
+#, kde-format
+msgid "Next Wallpaper Image"
+msgstr "תמונת הרקע הבאה"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:33
+#, kde-format
+msgid "Open Containing Folder"
+msgstr ""
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:39
+#, kde-format
+msgid "Restore wallpaper"
+msgstr "שחזר תמונת רקע"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:44
+#, fuzzy, kde-format
+#| msgid "Remove wallpaper"
+msgid "Remove Wallpaper"
+msgstr "הסר תמונת רקע"
+
+#: plasma-apply-wallpaperimage.cpp:29
+#, kde-format
+msgid ""
+"This tool allows you to set an image as the wallpaper for the Plasma session."
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:31
+#, kde-format
+msgid ""
+"An image file or an installed wallpaper kpackage that you wish to set as the "
+"wallpaper for your Plasma session"
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:45
+#, kde-format
+msgid ""
+"There is a stray single quote in the filename of this wallpaper (') - please "
+"contact the author of the wallpaper to fix this, or rename the file "
+"yourself: %1"
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:85
+#, kde-format
+msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:89
+#, kde-format
+msgid ""
+"Successfully set the wallpaper for all desktops to the KPackage based %1"
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:91
+#, kde-format
+msgid "Successfully set the wallpaper for all desktops to the image %1"
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:97
+#, kde-format
+msgid ""
+"The file passed to be set as wallpaper does not exist, or we cannot identify "
+"it as a wallpaper: %1"
+msgstr ""
+
+#: plugin/finder/packagefinder.cpp:152
+#, kde-format
+msgid "Recommended wallpaper file"
+msgstr "תמונות רקע מומלצות"
+
+#: plugin/imagebackend.cpp:234
+#, kde-format
+msgid "Directory with the wallpaper to show slides from"
+msgstr "תיקיות עם רקעים למצגת השקופיות"
+
+#: plugin/imagebackend.cpp:345
+#, kde-format
+msgid "Open Image"
+msgstr "פתח תמונה"
+
+#: plugin/imagebackend.cpp:345
+#, kde-format
+msgid "Image Files"
+msgstr "קובצי תמונה"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:38
+#, kde-format
+msgid "Order:"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:45
+#, kde-format
+msgid "Random"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:49
+#, kde-format
+msgid "A to Z"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:53
+#, kde-format
+msgid "Z to A"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:57
+#, kde-format
+msgid "Date modified (newest first)"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:61
+#, kde-format
+msgid "Date modified (oldest first)"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:86
+#, kde-format
+msgid "Group by folders"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:98
+#, kde-format
+msgid "Change every:"
+msgstr "החלף כל:"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:108
+#, kde-format
+msgid "%1 hour"
+msgid_plural "%1 hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:128
+#, fuzzy, kde-format
+#| msgid "Minutes"
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "דקות"
+msgstr[1] "דקות"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:148
+#, fuzzy, kde-format
+#| msgid "Seconds"
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "שניות"
+msgstr[1] "שניות"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:162
+#, fuzzy, kde-format
+#| msgid "Remove wallpaper"
+msgid "Folders"
+msgstr "הסר תמונת רקע"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:220
+#, fuzzy, kde-format
+#| msgid "Remove wallpaper"
+msgid "Remove Folder"
+msgstr "הסר תמונת רקע"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:225
+#, kde-format
+msgid "Open Folder"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:235
+#, kde-format
+msgid "There are no wallpaper locations configured"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:250
+#, fuzzy, kde-format
+#| msgid "Add Folder"
+msgid "Add Folder…"
+msgstr "הוסף תיקיה"
+
+#~ msgid "Add Custom Wallpaper"
+#~ msgstr "הוסף תמונת רקע מותאמת אישית"
+
+#~ msgid "Remove wallpaper"
+#~ msgstr "הסר תמונת רקע"
+
+#~ msgid "%1 by %2"
+#~ msgstr "%1 על ידי %2"
+
+#, fuzzy
+#~| msgid "Remove wallpaper"
+#~ msgid "Wallpapers"
+#~ msgstr "הסר תמונת רקע"
+
+#~ msgid "Download Wallpapers"
+#~ msgstr "הורד תמונות רקע"
+
+#~ msgid "Hours"
+#~ msgstr "שעות"
+
+#~ msgid "Open..."
+#~ msgstr "פתח..."

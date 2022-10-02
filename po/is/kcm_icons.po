@@ -1,0 +1,369 @@
+# translation of kcmicons.po to Icelandic
+# Íslensk þýðing kcmicons.po
+# Copyright (C) 2000, 2003, 2004, 2005, 2008, 2009 Free Software Foundation, Inc.
+#
+# Richard Allen, <ra@ra.is>, 2000.
+# Arnar Leósson <leosson@frisurf.no>, 2003.
+# Börkur Ingi Jónsson <berkz@internet.is>, 2004.
+# Arnar Leosson <leosson@frisurf.no>, 2004, 2005.
+# Sveinn í Felli <sveinki@nett.is>, 2008, 2009, 2012, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmicons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"PO-Revision-Date: 2022-08-21 18:52+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"Language-Team: Icelandic\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.12.3\n"
+"Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
+"\n"
+"\n"
+
+#: iconsizecategorymodel.cpp:14
+#, kde-format
+msgid "Toolbar"
+msgstr "Verkfærastika"
+
+#: iconsizecategorymodel.cpp:15
+#, kde-format
+msgid "Main Toolbar"
+msgstr "Aðalverkfærastika"
+
+#: iconsizecategorymodel.cpp:16
+#, kde-format
+msgid "Small Icons"
+msgstr "Litlar táknmyndir"
+
+#: iconsizecategorymodel.cpp:17
+#, kde-format
+msgid "Panel"
+msgstr "Spjald"
+
+#: iconsizecategorymodel.cpp:18
+#, kde-format
+msgid "Dialogs"
+msgstr "Samskiptagluggar"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr "Heiti á núverandi táknmyndaþema"
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr "Stærð táknmynda á skjáborði"
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr "Stærð táknmynda á verkfærastiku"
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, kde-format
+msgid "Main toolbar icons size"
+msgstr "Stærð táknmynda á aðalverkfærastiku"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, kde-format
+msgid "Small icons size"
+msgstr "Stærð lítilla táknmynda"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr "Stærð táknmynda á spjaldi"
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr "Stærð táknmynda í samskiptagluggum"
+
+#: main.cpp:182
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "Mistókst að búa til bráðabirgðaskrá."
+
+#: main.cpp:193
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Get ekki sótt táknmyndaþemasafnið: %1"
+
+#: main.cpp:207
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "Þessi skrá er ekki gilt táknmyndaþemusafn."
+
+#: main.cpp:212
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr ""
+"Vandamál komu upp við uppsetningu; þó hafa flestar þemur í safninu verið "
+"settar upp."
+
+#: main.cpp:216
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "Uppsetningu þema er lokið."
+
+#: main.cpp:260
+#, kde-format
+msgid "Installing icon themes…"
+msgstr "Set inn táknmyndaþemu…"
+
+#: main.cpp:270
+#, kde-format
+msgid "Installing %1 theme…"
+msgstr "Set inn %1 þema"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr "Þessi eining gerir þér kleift að velja táknmyndir fyrir kerfið þitt."
+
+#: package/contents/ui/main.qml:147
+#, kde-format
+msgid "Remove Icon Theme"
+msgstr "Fjarlægja táknmyndaþema"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Restore Icon Theme"
+msgstr "Endurheimta táknmyndaþema"
+
+#: package/contents/ui/main.qml:228
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr "Stilla stærð táknmynda"
+
+#: package/contents/ui/main.qml:246
+#, kde-format
+msgid "Install from File…"
+msgstr "Setja inn úr skrá…"
+
+#: package/contents/ui/main.qml:251
+#, kde-format
+msgid "Get New Icons…"
+msgstr "Sækja nýjar táknmyndir..."
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Open Theme"
+msgstr "Opna þema"
+
+#: package/contents/ui/main.qml:281
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr "Þemaskrár (*.tar.gz *.tar.bz2)"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Richard Allen"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "ra@ra.is"
+
+#~ msgid "Icons"
+#~ msgstr "Táknmyndir"
+
+#~ msgid "Icons Control Panel Module"
+#~ msgstr "Stjórneining fyrir táknmyndir"
+
+#~ msgid "(c) 2000-2003 Geert Jansen"
+#~ msgstr "(c) 2000-2003 Geert Jansen"
+
+#~ msgid "Geert Jansen"
+#~ msgstr "Geert Jansen"
+
+#~ msgid "Antonio Larrosa Jimenez"
+#~ msgstr "Antonio Larrosa Jimenez"
+
+#~ msgid "Torsten Rahn"
+#~ msgstr "Torsten Rahn"
+
+#~ msgid "Desktop"
+#~ msgstr "Skjáborð"
+
+#~ msgid "Use of Icon"
+#~ msgstr "Notkun táknmyndar"
+
+#~ msgctxt "@label The icon rendered by default"
+#~ msgid "Default"
+#~ msgstr "Sjálfgefin"
+
+#~ msgctxt "@label The icon rendered as active"
+#~ msgid "Active"
+#~ msgstr "Virk"
+
+#~ msgctxt "@label The icon rendered as disabled"
+#~ msgid "Disabled"
+#~ msgstr "Óvirk"
+
+#~ msgid "Size:"
+#~ msgstr "Stærð:"
+
+#~ msgid "Set Effect..."
+#~ msgstr "Stilla framsetningu..."
+
+#~ msgid "All Icons"
+#~ msgstr "Allar táknmyndir"
+
+#~ msgid "Setup Default Icon Effect"
+#~ msgstr "Stilla sjálfgefna framsetningu táknmynda"
+
+#~ msgid "Setup Active Icon Effect"
+#~ msgstr "Stilla virka framsetningu táknmynda"
+
+#~ msgid "Setup Disabled Icon Effect"
+#~ msgstr "Stilla óvirka framsetningu táknmynda"
+
+#~ msgid "&Effect:"
+#~ msgstr "&Framsetning:"
+
+#~ msgid "No Effect"
+#~ msgstr "Engin framsetning"
+
+#~ msgid "To Gray"
+#~ msgstr "Yfir í grátt"
+
+#~ msgid "Colorize"
+#~ msgstr "Lita"
+
+#~ msgid "Gamma"
+#~ msgstr "Gamma"
+
+#~ msgid "Desaturate"
+#~ msgstr "Afmetta"
+
+#~ msgid "To Monochrome"
+#~ msgstr "Svart/hvítt"
+
+#~ msgid "&Semi-transparent"
+#~ msgstr "&Hálf-gegnsætt"
+
+#~ msgid "Preview"
+#~ msgstr "Forsýn"
+
+#~ msgid "Effect Parameters"
+#~ msgstr "Viðföng framsetninga"
+
+#~ msgid "&Amount:"
+#~ msgstr "&Magn:"
+
+#~ msgid "Co&lor:"
+#~ msgstr "&Litur:"
+
+#~ msgid "&Second color:"
+#~ msgstr "&Seinni litur:"
+
+#~ msgid "Name"
+#~ msgstr "Heiti"
+
+#~ msgid "Description"
+#~ msgstr "Lýsing"
+
+#~ msgid "Install a theme archive file you already have locally"
+#~ msgstr "Setja upp þemasafnskrá sem þú ert þegar með á tölvunni"
+
+#~ msgid ""
+#~ "If you already have a theme archive locally, this button will unpack it "
+#~ "and make it available for KDE applications"
+#~ msgstr ""
+#~ "Ef þú átt þemasafnskrá geymda á tölvunni, mun þessi hnappur afpakka henni "
+#~ "og gera aðgengilega fyrir KDE forrit"
+
+#~ msgid "Get new themes from the Internet"
+#~ msgstr "Sækja nýjar þemur á netið"
+
+#~ msgid ""
+#~ "You need to be connected to the Internet to use this action. A dialog "
+#~ "will display a list of themes from the http://www.kde.org website. "
+#~ "Clicking the Install button associated with a theme will install this "
+#~ "theme locally."
+#~ msgstr ""
+#~ "Þú verður að vera tengd(ur) við internetið til að nota þessa aðgerð. "
+#~ "Valmynd mun sýna lista yfir þemur frá http://www.kde.org vefsvæðinu. Með "
+#~ "því að smella á innsetningarhnappinn verður þeman sett upp á tölvunni "
+#~ "þinni."
+
+#~ msgid "Remove the selected theme from your disk"
+#~ msgstr "Fjarlægja valið þema af disknum þínum."
+
+#~ msgid "This will remove the selected theme from your disk."
+#~ msgstr "Þetta mun fjarlægja valið þema af disknum þínum."
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "Slóð að þema:"
+
+#~ msgid ""
+#~ "Unable to download the icon theme archive;\n"
+#~ "please check that address %1 is correct."
+#~ msgstr ""
+#~ "Get ekki sótt táknmyndaþemasafnið;\n"
+#~ "athugðu hvort slóðin %1 sé örugglega rétt."
+
+#~ msgid "<qt>Installing <strong>%1</strong> theme</qt>"
+#~ msgstr "<qt>Set inn þemað: <strong>%1</strong></qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <strong>%1</strong> icon theme?"
+#~ "<br /><br />This will delete the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>Viltu örugglega fjarlægja táknmyndaþemað <strong>%1</strong>?\n"
+#~ "<br /><br />Þá verður skránum sem því tilheyra eytt.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Staðfesting"
+
+#~ msgid "&Theme"
+#~ msgstr "Þ&ema"
+
+#~ msgid "Ad&vanced"
+#~ msgstr "Í&tarlegra"
+
+#~ msgid ""
+#~ "<h1>Icons</h1>This module allows you to choose the icons for your desktop."
+#~ "<p>To choose an icon theme, click on its name and apply your choice by "
+#~ "pressing the \"Apply\" button below. If you do not want to apply your "
+#~ "choice you can press the \"Reset\" button to discard your changes.</"
+#~ "p><p>By pressing the \"Install Theme File...\" button you can install "
+#~ "your new icon theme by writing its location in the box or browsing to the "
+#~ "location. Press the \"OK\" button to finish the installation.</p><p>The "
+#~ "\"Remove Theme\" button will only be activated if you select a theme that "
+#~ "you installed using this module. You are not able to remove globally "
+#~ "installed themes here.</p><p>You can also specify effects that should be "
+#~ "applied to the icons.</p>"
+#~ msgstr ""
+#~ "<h1>Táknmyndir</h1>Þessi eining gerir þér kleift að velja táknmyndir "
+#~ "fyrir skjáborðið þitt.<p>Til að velja þér táknmyndaþema smelltu heiti "
+#~ "þemans og staðfestu valið með því að smella á hnappinn \"Virkja\" fyrir "
+#~ "neðan. Ef þú vilt ekki staðfesta breytingar geturðu smellt á hnappinn "
+#~ "\"Endurstilla\" Til að gleyma breytingum þínum.</p><p>Með því að smella á "
+#~ "hnappinn \"Setja nýtt þema inn...\" geturðu sett inn nýtt  táknmyndaþema "
+#~ "með því að skrá staðsetningu þemunar eða flakkað að staðsetningunni. "
+#~ "Smelltu á hnappinn \"Í lagi\" til að staðfesta innsetningu á þemu .</"
+#~ "p><p>Hnappurinn \"Fjarlæga þema\" mun einungis verða virkur ef þú velur "
+#~ "eitthvað þema sem þú settir sjálfur inn með þessu forriti. Þú getur ekki "
+#~ "hent út táknmyndaþemum sem aðrir eru að nota.</p><p>Þú getur einnig "
+#~ "stillt framsetningu og sjónbrellur táknmyndanna hér.</p>"
+
+#~ msgid "Animate icons"
+#~ msgstr "Hreyfanlegar táknmyndir"
+
+#~ msgid "Select the icon theme you want to use:"
+#~ msgstr "Veldu táknmyndaþemað sem þú vilt nota:"

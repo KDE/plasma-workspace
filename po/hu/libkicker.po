@@ -1,0 +1,710 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Balázs Úr <urbalazs@gmail.com>, 2012, 2013, 2014.
+# Kristóf Kiszel <ulysses@kubuntu.org>, 2014, 2019.
+# Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-25 00:46+0000\n"
+"PO-Revision-Date: 2021-09-30 15:43+0200\n"
+"Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.03.80\n"
+
+#: plugin/actionlist.cpp:86
+#, kde-format
+msgid "Open with:"
+msgstr "Megnyitás ezzel:"
+
+#: plugin/actionlist.cpp:99
+#, kde-format
+msgid "Properties"
+msgstr "Tulajdonságok"
+
+#: plugin/actionlist.cpp:146
+#, kde-format
+msgid "Add to Desktop"
+msgstr "Hozzáadás az asztalhoz"
+
+#: plugin/actionlist.cpp:151
+#, kde-format
+msgid "Add to Panel (Widget)"
+msgstr "Hozzáadás a panelhez (widget)"
+
+#: plugin/actionlist.cpp:156
+#, kde-format
+msgid "Pin to Task Manager"
+msgstr "Rögzítés a panelen"
+
+#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:429
+#, kde-format
+msgid "Recent Files"
+msgstr "Legutóbbi fájlok"
+
+#: plugin/actionlist.cpp:317
+#, kde-format
+msgid "Forget Recent Files"
+msgstr "Legutóbbi fájlok elfelejtése"
+
+#: plugin/actionlist.cpp:395
+#, kde-format
+msgid "Edit Application…"
+msgstr "Alkalmazás szerkesztése…"
+
+#: plugin/actionlist.cpp:438
+#, kde-format
+msgctxt "@action opens a software center with the application"
+msgid "Uninstall or Manage Add-Ons…"
+msgstr "Bővítmények eltávolítása vagy kezelése…"
+
+#: plugin/appentry.cpp:319
+#, kde-format
+msgid "Hide Application"
+msgstr "Alkalmazás elrejtése"
+
+#: plugin/appentry.cpp:390
+#, kde-format
+msgctxt "App name (Generic name)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: plugin/appentry.cpp:392
+#, kde-format
+msgctxt "Generic name (App name)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: plugin/appsmodel.cpp:34 plugin/appsmodel.cpp:58 plugin/computermodel.cpp:98
+#: plugin/computermodel.cpp:226 plugin/recentusagemodel.cpp:163
+#: plugin/recentusagemodel.cpp:226
+#, kde-format
+msgid "Applications"
+msgstr "Alkalmazások"
+
+#: plugin/appsmodel.cpp:151
+#, kde-format
+msgid "Unhide Applications in this Submenu"
+msgstr "Alkalmazások rejtésének megszüntetése ebben az almenüben"
+
+#: plugin/appsmodel.cpp:160
+#, kde-format
+msgid "Unhide Applications in '%1'"
+msgstr "Alkalmazások rejtésének megszüntetése itt: „%1”"
+
+#: plugin/computermodel.cpp:92
+#, kde-format
+msgid "Show KRunner"
+msgstr "KRunner megjelenítése"
+
+#: plugin/computermodel.cpp:96
+#, kde-format
+msgid "Search, calculate, or run a command"
+msgstr "Keresés, számolás vagy parancs futtatása"
+
+#: plugin/computermodel.cpp:149
+#, kde-format
+msgid "Computer"
+msgstr "Számítógép"
+
+#: plugin/contactentry.cpp:106 plugin/recentcontactsmodel.cpp:82
+#, kde-format
+msgid "Show Contact Information…"
+msgstr "Névjegy adatainak megjelenítése…"
+
+#. i18n.
+#: plugin/kastatsfavoritesmodel.cpp:504 plugin/rootmodel.cpp:416
+#: plugin/simplefavoritesmodel.cpp:31
+#, kde-format
+msgid "Favorites"
+msgstr "Kedvencek"
+
+#: plugin/recentcontactsmodel.cpp:40
+#, kde-format
+msgid "Contacts"
+msgstr "Névjegyek"
+
+#: plugin/recentcontactsmodel.cpp:73
+#, kde-format
+msgid "Forget Contact"
+msgstr "Névjegy elfelejtése"
+
+#: plugin/recentcontactsmodel.cpp:77 plugin/recentcontactsmodel.cpp:153
+#, kde-format
+msgid "Forget All Contacts"
+msgstr "Összes névjegy elfelejtése"
+
+#: plugin/recentusagemodel.cpp:161
+#, kde-format
+msgid "Recently Used"
+msgstr "Legutóbb használt"
+
+#: plugin/recentusagemodel.cpp:166 plugin/recentusagemodel.cpp:308
+#, kde-format
+msgid "Files"
+msgstr "Fájlok"
+
+#: plugin/recentusagemodel.cpp:248
+#, kde-format
+msgid "Forget Application"
+msgstr "Alkalmazás elfelejtése"
+
+#: plugin/recentusagemodel.cpp:342
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Tartalmazó mappa megnyitása"
+
+#: plugin/recentusagemodel.cpp:345
+#, kde-format
+msgid "Forget File"
+msgstr "Fájl elfelejtése"
+
+#: plugin/recentusagemodel.cpp:495
+#, kde-format
+msgid "Forget All"
+msgstr "Összes elfelejtése"
+
+#: plugin/recentusagemodel.cpp:497
+#, kde-format
+msgid "Forget All Applications"
+msgstr "Összes alkalmazás elfelejtése"
+
+#: plugin/recentusagemodel.cpp:500
+#, kde-format
+msgid "Forget All Files"
+msgstr "Összes fájl elfelejtése"
+
+#: plugin/rootmodel.cpp:95
+#, kde-format
+msgid "Hide %1"
+msgstr "%1 elrejtése"
+
+#: plugin/rootmodel.cpp:398
+#, kde-format
+msgid "All Applications"
+msgstr "Minden alkalmazás"
+
+#: plugin/rootmodel.cpp:410
+#, kde-format
+msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
+msgstr "Ennek nem szabadna megjelennie! Használja a KICKER_FAVORITES_MODEL-t"
+
+#: plugin/rootmodel.cpp:422
+#, kde-format
+msgid "Recent Contacts"
+msgstr "Legutóbbi névjegyek"
+
+#: plugin/rootmodel.cpp:429
+#, kde-format
+msgid "Often Used Files"
+msgstr "Gyakran használt fájlok"
+
+#: plugin/rootmodel.cpp:438
+#, kde-format
+msgid "Recent Applications"
+msgstr "Legutóbbi alkalmazások"
+
+#: plugin/rootmodel.cpp:438
+#, kde-format
+msgid "Often Used Applications"
+msgstr "Gyakran használt alkalmazások"
+
+#: plugin/rootmodel.cpp:453
+#, kde-format
+msgid "Power / Session"
+msgstr "Energiakezelés / Munkamenet"
+
+#: plugin/runnermodel.cpp:231
+#, kde-format
+msgid "Search results"
+msgstr "Keresési eredmények"
+
+#: plugin/systementry.cpp:195
+#, kde-format
+msgid "Lock"
+msgstr "Zárolás"
+
+#: plugin/systementry.cpp:198
+#, kde-format
+msgid "Log Out"
+msgstr "Kijelentkezés"
+
+#: plugin/systementry.cpp:201 plugin/systementry.cpp:269
+#, kde-format
+msgid "Save Session"
+msgstr "Munkamenet mentése"
+
+#: plugin/systementry.cpp:204
+#, kde-format
+msgid "Switch User"
+msgstr "Felhasználóváltás"
+
+#: plugin/systementry.cpp:207
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Alvó állapot"
+
+#: plugin/systementry.cpp:210
+#, kde-format
+msgid "Hibernate"
+msgstr "Hibernálás"
+
+#: plugin/systementry.cpp:213
+#, kde-format
+msgid "Restart"
+msgstr "Újraindítás"
+
+#: plugin/systementry.cpp:216
+#, kde-format
+msgid "Shut Down"
+msgstr "Leállítás"
+
+#: plugin/systementry.cpp:229 plugin/systementry.cpp:232
+#: plugin/systementry.cpp:235 plugin/systementry.cpp:238
+#, kde-format
+msgid "Session"
+msgstr "Munkamenet"
+
+#: plugin/systementry.cpp:241 plugin/systementry.cpp:244
+#: plugin/systementry.cpp:247 plugin/systementry.cpp:250
+#, kde-format
+msgid "System"
+msgstr "Rendszer"
+
+#: plugin/systementry.cpp:263
+#, kde-format
+msgid "Lock screen"
+msgstr "Képernyő zárolása"
+
+#: plugin/systementry.cpp:266
+#, kde-format
+msgid "End session"
+msgstr "Munkamenet befejezése"
+
+#: plugin/systementry.cpp:272
+#, kde-format
+msgid "Start a parallel session as a different user"
+msgstr "Párhuzamos munkamenet indítása másik felhasználóként"
+
+#: plugin/systementry.cpp:275
+#, kde-format
+msgid "Suspend to RAM"
+msgstr "Felfüggesztés memóriába"
+
+#: plugin/systementry.cpp:278
+#, kde-format
+msgid "Suspend to disk"
+msgstr "Felfüggesztés lemezre"
+
+#: plugin/systementry.cpp:281
+#, kde-format
+msgid "Restart computer"
+msgstr "Számítógép újraindítása"
+
+#: plugin/systementry.cpp:284
+#, kde-format
+msgid "Turn off computer"
+msgstr "Számítógép kikapcsolása"
+
+#: plugin/systemmodel.cpp:31
+#, kde-format
+msgid "System actions"
+msgstr "Rendszerműveletek"
+
+#~ msgid "Documents"
+#~ msgstr "Dokumentumok"
+
+#~ msgid "Forget Document"
+#~ msgstr "Dokumentum elfelejtése"
+
+#~ msgid "Forget All Documents"
+#~ msgstr "Összes dokumentum elfelejtése"
+
+#~ msgid "General"
+#~ msgstr "Általános"
+
+#~ msgid "Remove from Favorites"
+#~ msgstr "Eltávolítás a kedvencekből"
+
+#~ msgid "Add to Favorites"
+#~ msgstr "Hozzáadás a kedvencekhez"
+
+#~ msgid "On All Activities"
+#~ msgstr "Minden aktivitáson"
+
+#~ msgid "On The Current Activity"
+#~ msgstr "A jelenlegi aktivitáson"
+
+#~ msgid "Show In Favorites"
+#~ msgstr "Megjelenítés a Kedvenceknél"
+
+#~ msgid "Icon:"
+#~ msgstr "Ikon:"
+
+#~ msgctxt "@item:inmenu Open icon chooser dialog"
+#~ msgid "Choose..."
+#~ msgstr "Választás…"
+
+#~ msgctxt "@item:inmenu Reset icon to default"
+#~ msgid "Clear Icon"
+#~ msgstr "Ikon visszaállítása"
+
+#~ msgid "Show applications as:"
+#~ msgstr "Alkalmazások megjelenítése mint:"
+
+#~ msgid "Name only"
+#~ msgstr "Csak név"
+
+#~ msgid "Description only"
+#~ msgstr "Csak leírás"
+
+#~ msgid "Name (Description)"
+#~ msgstr "Név (leírás)"
+
+#~ msgid "Description (Name)"
+#~ msgstr "Leírás (név)"
+
+#, fuzzy
+#~| msgid "Behavior"
+#~ msgid "Behavior:"
+#~ msgstr "Viselkedés"
+
+#, fuzzy
+#~| msgid "Sort alphabetically"
+#~ msgid "Sort applications alphabetically"
+#~ msgstr "Rendezés ABC sorrendben"
+
+#, fuzzy
+#~| msgid "Flatten menu to a single level"
+#~ msgid "Flatten sub-menus to a single level"
+#~ msgstr "Menü összenyomása egyetlen szintre"
+
+#, fuzzy
+#~| msgid "Categories"
+#~ msgid "Show categories:"
+#~ msgstr "Kategóriák"
+
+#, fuzzy
+#~| msgid "Recent Applications"
+#~ msgid "Recent applications"
+#~ msgstr "Legutóbbi alkalmazások"
+
+#, fuzzy
+#~| msgid "Often Used Applications"
+#~ msgid "Often used applications"
+#~ msgstr "Gyakran használt alkalmazások"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Recent documents"
+#~ msgstr "Legutóbbi dokumentumok"
+
+#, fuzzy
+#~| msgid "Often Used Documents"
+#~ msgid "Often used documents"
+#~ msgstr "Gyakran használt dokumentumok"
+
+#, fuzzy
+#~| msgid "Recent Contacts"
+#~ msgid "Recent contacts"
+#~ msgstr "Legutóbbi névjegyek"
+
+#, fuzzy
+#~| msgid "Show often used contacts"
+#~ msgid "Often used contacts"
+#~ msgstr "Gyakran használt névjegyek megjelenítése"
+
+#, fuzzy
+#~| msgid "Recently used"
+#~ msgctxt ""
+#~ "@item:inlistbox Sort items in categories by [Recently used | Often used]"
+#~ msgid "Recently used"
+#~ msgstr "Legutóbb használt"
+
+#, fuzzy
+#~| msgid "Often used"
+#~ msgctxt ""
+#~ "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
+#~ msgid "Often used"
+#~ msgstr "Gyakran használt"
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgid "Search:"
+#~ msgstr "Keresés"
+
+#~ msgid "Expand search to bookmarks, files and emails"
+#~ msgstr "Keresés kiterjesztése könyvjelzőkre, fájlokra és e-mailekre"
+
+#~ msgid "Align search results to bottom"
+#~ msgstr "Találatok igazítása alulra "
+
+#~ msgid "Searching for '%1'"
+#~ msgstr "„'%1” keresése"
+
+#, fuzzy
+#~| msgid "Type to search."
+#~ msgid "Type to search..."
+#~ msgstr "Írja be a keresési kifejezést."
+
+#~ msgid "Widgets"
+#~ msgstr "Elemek"
+
+#~ msgid "Apps & Docs"
+#~ msgstr "Alkalmazások és dokumentumok"
+
+#~ msgid "Edit Applications..."
+#~ msgstr "Alkalmazások szerkesztése…"
+
+#~ msgid "Search..."
+#~ msgstr "Keresés…"
+
+#~ msgctxt "@action opens a software center with the application"
+#~ msgid "Manage '%1'..."
+#~ msgstr "„%1” kezelése…"
+
+#~ msgid "Run Command..."
+#~ msgstr "Parancs futtatása…"
+
+#~ msgid "Run a command or a search query"
+#~ msgstr "Parancs vagy keresés futtatása"
+
+#~ msgid "Show:"
+#~ msgstr "Megjelenítés:"
+
+#~ msgid "Show recent applications"
+#~ msgstr "Legutóbbi alkalmazások megjelenítése"
+
+#~ msgid "Show often used applications"
+#~ msgstr "Gyakran használt alkalmazások megjelenítése"
+
+#~ msgid "Show recent documents"
+#~ msgstr "Legutóbbi dokumentumok megjelenítése"
+
+#~ msgid "Show often used documents"
+#~ msgstr "Gyakran használt dokumentumok megjelenítése"
+
+#~ msgid "Show recent contacts"
+#~ msgstr "Legutóbbi névjegyek megjelenítése"
+
+#~ msgid "Removable Storage"
+#~ msgstr "Eltávolítható háttértár"
+
+#~ msgid "Places"
+#~ msgstr "Helyek"
+
+#~ msgid "Logout"
+#~ msgstr "Kijelentkezés"
+
+#~ msgid "Suspend"
+#~ msgstr "Felfüggesztés"
+
+#~ msgid "Reboot"
+#~ msgstr "Újraindítás"
+
+#~ msgid "Use custom image:"
+#~ msgstr "Egyéni kép:"
+
+#~ msgid "Choose an image"
+#~ msgstr "Válasszon egy képet"
+
+#~ msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+#~ msgstr "Képfájlok (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+
+#~ msgid "Add as Launcher"
+#~ msgstr "Hozzáadás az indítóhoz"
+
+#~ msgid "New Session"
+#~ msgstr "Új munkamenet"
+
+#~ msgid "(Empty)"
+#~ msgstr "(Üres)"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Úr Balázs"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "urbalazs@gmail.com"
+
+#~ msgid "Runner: %1"
+#~ msgstr "Futtató: %1"
+
+#~ msgid "Browse installed applications by categories"
+#~ msgstr "Telepített alkalmazások böngészése kategóriák szerint"
+
+#~ msgid "All Installed Applications"
+#~ msgstr "Minden telepített alkalmazás"
+
+#~ msgid "All Installed Applications With Filters"
+#~ msgstr "Minden telepített alkalmazás szűrőkkel"
+
+#~ msgid "List all installed applications and filter via the sidebar"
+#~ msgstr ""
+#~ "Minden telepített alkalmazás és szűrő listázása az oldalsávon keresztül"
+
+#~ msgid "Folder"
+#~ msgstr "Mappa"
+
+#~ msgid "Power Management"
+#~ msgstr "Energiakezelés"
+
+#~ msgid "Folder to show:"
+#~ msgstr "Megjelenítendő mappa:"
+
+#~ msgid "Title:"
+#~ msgstr "Cím:"
+
+#~ msgid "If title is left empty, the folder name will be used"
+#~ msgstr "Ha a cím üresen van hagyva, a mappanév lesz használva"
+
+#~ msgctxt "KFile System Bookmarks"
+#~ msgid "Home"
+#~ msgstr "Saját mappa"
+
+#~ msgctxt "KFile System Bookmarks"
+#~ msgid "Network"
+#~ msgstr "Hálózat"
+
+#~ msgctxt "KFile System Bookmarks"
+#~ msgid "Root"
+#~ msgstr "Gyökér"
+
+#~ msgctxt "KFile System Bookmarks"
+#~ msgid "Trash"
+#~ msgstr "Kuka"
+
+#~ msgid "&Release '%1'"
+#~ msgstr "„%1” &elengedése"
+
+#~ msgid "&Unmount '%1'"
+#~ msgstr "„%1” &leválasztása"
+
+#~ msgid "&Eject '%1'"
+#~ msgstr "„%1” ki&adása"
+
+#~ msgid "The device '%1' is not a disk and cannot be ejected."
+#~ msgstr "A(z) „%1” eszköz nem lemez, ezért nem adható ki."
+
+#~ msgid "An error occurred while accessing '%1', the system responded: %2"
+#~ msgstr "Hiba történt „%1” elérése közben, a rendszerüzenet: %2"
+
+#~ msgid "An error occurred while accessing '%1'"
+#~ msgstr "Hiba történt „%1” elérése közben"
+
+#~ msgid "Remove from Sidebar"
+#~ msgstr "Eltávolítás az oldalsávról"
+
+#~ msgid "Add to Sidebar"
+#~ msgstr "Hozzáadás az oldalsávhoz"
+
+#~ msgid "Power"
+#~ msgstr "Bekapcsolás"
+
+#~ msgid "Hello"
+#~ msgstr "Helló"
+
+#~ msgid "World"
+#~ msgstr "Világ"
+
+#~ msgid "Hello World"
+#~ msgstr "Helló, világ"
+
+#~ msgid "Text Color:"
+#~ msgstr "Szövegszín:"
+
+#~ msgid "Text Shadow:"
+#~ msgstr "Szövegárnyék:"
+
+#~ msgid "None"
+#~ msgstr "Nincs"
+
+#~ msgid "Automatic"
+#~ msgstr "Automatikus"
+
+#~ msgid "Custom:"
+#~ msgstr "Egyéni:"
+
+#~ msgid "Go to previous tab"
+#~ msgstr "Ugrás az előző lapra"
+
+#~ msgid "Go to next tab"
+#~ msgstr "Ugrás a következő lapra"
+
+#~ msgid "Go back"
+#~ msgstr "Ugrás vissza"
+
+#~ msgid "Go forward"
+#~ msgstr "Ugrás előre"
+
+#~ msgid "Go up"
+#~ msgstr "Ugrás felfelé"
+
+#~ msgctxt "Used for tabs which have no name"
+#~ msgid "<Untitled>"
+#~ msgstr "<Névtelen>"
+
+#~ msgctxt "Button to leave configure mode"
+#~ msgid "Done"
+#~ msgstr "Kész"
+
+#~ msgid "Configure Tabs"
+#~ msgstr "Lapok beállítása"
+
+#~ msgid "Configure Shortcuts..."
+#~ msgstr "Gyorsbillentyűk beállítása…"
+
+#~ msgid "About %1"
+#~ msgstr "%1 névjegye"
+
+#~ msgid "Report Error"
+#~ msgstr "Hiba jelentése"
+
+#~ msgctxt "Program name"
+#~ msgid "Homerun"
+#~ msgstr "Homerun"
+
+#~ msgid "(C) 2012-2014 Blue Systems"
+#~ msgstr "© Blue Systems, 2012-2014."
+
+#~ msgid "Shaun Reich"
+#~ msgstr "Shaun Reich"
+
+#~ msgid "Developer"
+#~ msgstr "Fejlesztő"
+
+#~ msgid "Aurélien Gâteau"
+#~ msgstr "Aurélien Gâteau"
+
+#~ msgid "Eike Hein"
+#~ msgstr "Eike Hein"
+
+#~ msgctxt "Tab title"
+#~ msgid "Home"
+#~ msgstr "Saját mappa"
+
+#~ msgctxt "Tab title"
+#~ msgid "Power"
+#~ msgstr "Bekapcsolás"
+
+#~ msgid "Appearance"
+#~ msgstr "Megjelenés"
+
+#~ msgid "*.jpg *.png *.xpm *.gif *.webp"
+#~ msgstr "*.jpg *.png *.xpm *.gif *.webp"
+
+#~ msgid "Homerun Kicker"
+#~ msgstr "Homerun kirúgó"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Empty Trash"
+#~ msgstr "Kuka ürítése"

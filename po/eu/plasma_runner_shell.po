@@ -1,0 +1,79 @@
+# Translation of plasma_runner_shell.po to Euskara/Basque (eu).
+# Copyright (C) 2008-2018, Free Software Foundation.
+# This file is distributed under the same license as the kde-workspace package.
+# KDE euskaratzeko proiektuaren arduraduna <xalba@euskalnet.net>.
+#
+# Translators:
+# Asier Urio Larrea <asieriko@gmail.com>, 2008.
+# marcos <marcos@euskalgnu.org>, 2008.
+# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2010, 2014, 2018.
+# Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_shell\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-27 00:45+0000\n"
+"PO-Revision-Date: 2018-07-15 22:36+0100\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
+"Language-Team: Basque <kde-i18n-doc@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 2.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: shellrunner.cpp:35
+#, kde-format
+msgid "Finds commands that match :q:, using common shell syntax"
+msgstr ""
+":q:(r)ekin bat datozen komandoak aurkitzen ditu, shell sintaxi arrunta "
+"erabiliz"
+
+#: shellrunner.cpp:36
+#, kde-format
+msgid "Run in Terminal Window"
+msgstr "Exekutatu terminalaren leihoan"
+
+#: shellrunner.cpp:54
+#, kde-format
+msgid "Run %1"
+msgstr "Exekutatu %1"
+
+#~ msgid "Enter the user you want to run the application as here."
+#~ msgstr "Idatzi aplikazioa zer erabiltzaile-izenekin exekutatu nahi duzun."
+
+#~ msgid "User&name:"
+#~ msgstr "Erabiltzaile-ize&na:"
+
+#~ msgid "Enter the password here for the user you specified above."
+#~ msgstr "Idatzi goian adierazi duzun erabiltzailearen pasahitza."
+
+#~ msgid "Pass&word:"
+#~ msgstr "&Pasahitza:"
+
+#~ msgid ""
+#~ "Check this option if the application you want to run is a text mode "
+#~ "application. The application will then be run in a terminal emulator "
+#~ "window."
+#~ msgstr ""
+#~ "Markatu aukera hau, testu moduko aplikazio bat exekutatu nahi baduzu. "
+#~ "Hala, aplikazioa terminal-emulatzailearen leiho batean exekutatuko da."
+
+#~ msgid "Run in &terminal window"
+#~ msgstr "Exekutatu &terminalaren leiho batean"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "user id. Every process has a user id associated with it. This id code "
+#~ "determines file access and other permissions. The password of the user is "
+#~ "required to do this."
+#~ msgstr ""
+#~ "Markatu aukera hau aplikazioa beste erabiltzaile-identifikatzaile batekin "
+#~ "exekutatu nahi baduzu. Prozesu bakoitza erabiltzaile-identifikatzaile "
+#~ "batekin lotuta dago. Identifikatzaile-kode horrek fitxategirako sarbidea "
+#~ "eta beste baimen batzuk zehazten ditu. Horretarako, erabiltzailearen "
+#~ "pasahitza behar da."
+
+#~ msgid "Run as a different &user"
+#~ msgstr "Beste &erabiltzaile-izen batekin exekutatu"

@@ -1,0 +1,44 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Phu Hung Nguyen <phu.nguyen@kdemail.net>, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-09 00:47+0000\n"
+"PO-Revision-Date: 2021-05-26 21:14+0200\n"
+"Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
+"Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 20.08.1\n"
+
+#: package/contents/config/config.qml:10
+#, kde-format
+msgid "Appearance"
+msgstr "Diện mạo"
+
+#: package/contents/config/config.qml:15
+#, kde-format
+msgid "%1 Details"
+msgstr "Chi tiết %1"
+
+#: package/contents/config/config.qml:21
+#, kde-format
+msgid "Sensors Details"
+msgstr "Chi tiết các cảm biến"
+
+#: package/contents/ui/main.qml:33
+#, kde-format
+msgid "System Monitor"
+msgstr "Trình giám sát hệ thống"
+
+#: package/contents/ui/main.qml:55
+#, kde-format
+msgctxt "@action"
+msgid "Open System Monitor…"
+msgstr "Mở trình giám sát hệ thống…"

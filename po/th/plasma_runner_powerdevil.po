@@ -1,0 +1,232 @@
+# translation of krunner_powerdevil.po to Thai
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Thanomsub Noppaburana <donga.nb@gmail.com>, 2008, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner_powerdevil\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"PO-Revision-Date: 2010-02-11 21:30+0700\n"
+"Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
+"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: PowerDevilRunner.cpp:32
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "suspend"
+msgstr "ปิดพักเครื่อง"
+
+#: PowerDevilRunner.cpp:34
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to ram"
+msgstr "เก็บสถานะไว้ในหน่วยความจำ"
+
+#: PowerDevilRunner.cpp:36
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "sleep"
+msgstr "พักเครื่อง"
+
+#: PowerDevilRunner.cpp:38
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "hibernate"
+msgstr "จำศีล"
+
+#: PowerDevilRunner.cpp:40
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "to disk"
+msgstr "เก็บสถานะไว้ในดิสก์"
+
+#: PowerDevilRunner.cpp:42 PowerDevilRunner.cpp:44 PowerDevilRunner.cpp:69
+#, kde-format
+msgctxt "Note this is a KRunner keyword"
+msgid "dim screen"
+msgstr "ทำหน้าจอมืดลง"
+
+#: PowerDevilRunner.cpp:53
+#, kde-format
+msgid ""
+"Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
+"activated"
+msgstr ""
+"เรียกดูตัวเลือกต่าง ๆ ของรายการพักการทำงานของระบบ (เช่น พักเครื่อง, จำศีล เป็นต้น) "
+"และอนุญาตให้เรียกใช้งานพวกมันได้"
+
+#: PowerDevilRunner.cpp:57
+#, kde-format
+msgid "Suspends the system to RAM"
+msgstr "ปิดพักเครื่องโดยเก็บสถานะไว้ในหน่วยความจำ"
+
+#: PowerDevilRunner.cpp:61
+#, kde-format
+msgid "Suspends the system to disk"
+msgstr "ปิดพักเครื่องโดยเก็บสถานะไว้ในดิสก์"
+
+#: PowerDevilRunner.cpp:65
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "screen brightness"
+msgctxt ""
+"Note this is a KRunner keyword, <> is a placeholder and should be at the end"
+msgid "screen brightness <percent value>"
+msgstr "ความสว่างของจอภาพ"
+
+#: PowerDevilRunner.cpp:67
+#, fuzzy, no-c-format, kde-format
+#| msgid ""
+#| "Lists screen brightness options or sets it to the brightness defined by :"
+#| "q:; e.g. screen brightness 50 would dim the screen to 50% maximum "
+#| "brightness"
+msgid ""
+"Lists screen brightness options or sets it to the brightness defined by the "
+"search term; e.g. screen brightness 50 would dim the screen to 50% maximum "
+"brightness"
+msgstr ""
+"เรียกดูหรือตั้งค่าตัวเลือกต่าง ๆ ของการปรับความมืดของหน้าจอลงตามการกำหนดด้วย :q: ตัวอย่าง "
+"ความสว่างหน้าจอ 50 จะทำการเพิ่มความมืดของหน้าจอเป็น 50% ของค่าความสว่างสูงสุด"
+
+#: PowerDevilRunner.cpp:95
+#, fuzzy, kde-format
+#| msgid "Set Brightness to %1"
+msgid "Set Brightness to %1%"
+msgstr "ตั้งค่าความสว่างเป็น %1"
+
+#: PowerDevilRunner.cpp:104
+#, kde-format
+msgid "Dim screen totally"
+msgstr "ทำหน้าจอมืดลงเต็มที่"
+
+#: PowerDevilRunner.cpp:112
+#, kde-format
+msgid "Dim screen by half"
+msgstr "ทำหน้าจอมืดลงกึ่งหนึ่ง"
+
+#: PowerDevilRunner.cpp:142
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "sleep"
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "พักเครื่อง"
+
+#: PowerDevilRunner.cpp:143
+#, kde-format
+msgid "Suspend to RAM"
+msgstr "พักเครื่องโดยเก็บสถานะไว้ในหน่วยความจำ"
+
+#: PowerDevilRunner.cpp:148
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "hibernate"
+msgctxt "Suspend to disk"
+msgid "Hibernate"
+msgstr "จำศีล"
+
+#: PowerDevilRunner.cpp:149
+#, fuzzy, kde-format
+#| msgid "Suspend to Disk"
+msgid "Suspend to disk"
+msgstr "พักเครื่องโดยเก็บสถานะไว้ในดิสก์"
+
+#: PowerDevilRunner.cpp:218
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "screen brightness"
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "screen brightness "
+msgstr "ความสว่างของจอภาพ"
+
+#: PowerDevilRunner.cpp:220
+#, fuzzy, kde-format
+#| msgctxt "Note this is a KRunner keyword"
+#| msgid "dim screen"
+msgctxt "Note this is a KRunner keyword, it should end with a space"
+msgid "dim screen "
+msgstr "ทำหน้าจอมืดลง"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "screen brightness"
+#~ msgstr "ความสว่างของจอภาพ"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "screen brightness %1"
+#~ msgstr "ความสว่างของจอภาพ %1"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "dim screen %1"
+#~ msgstr "ทำหน้าจอมืดลง %1"
+
+#, fuzzy
+#~| msgctxt "Note this is a KRunner keyword"
+#~| msgid "suspend"
+#~ msgid "Suspend"
+#~ msgstr "ปิดพักเครื่อง"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "power profile"
+#~ msgstr "โพรไฟล์พลังงาน"
+
+#~ msgid "Lists all power profiles and allows them to be activated"
+#~ msgstr "เรียกดูโพรไฟล์พลังงานทั้งหมด และอนุญาตให้ใช้งานพวกมันได้"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "power profile %1"
+#~ msgstr "โพรไฟล์พลังงาน %1"
+
+#~ msgid "Set Profile to '%1'"
+#~ msgstr "ตั้งโพรไฟล์เป็น '%1'"
+
+#~ msgid "Turn off screen"
+#~ msgstr "ปิดจอภาพ"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "cpu policy"
+#~ msgstr "นโยบายการใช้ตัวประมวลผลกลาง"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "power governor"
+#~ msgstr "ตัวควบคุมพลังงาน"
+
+#~ msgid "Lists all power saving schemes and allows them to be activated"
+#~ msgstr "เรียกดูชุดรูปแบบการประหยัดพลังงาน และอนุญาตให้เรียกใช้งานพวกมันได้"
+
+#~ msgid ""
+#~ "Lists all CPU frequency scaling policies and allows them to be activated"
+#~ msgstr ""
+#~ "เรียกดูนโยบายการปรับความเร็วของตัวประมวลผลกลาง และอนุญาตให้เรียกใช้งานพวกมันได้"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "cpu policy %1"
+#~ msgstr "นโยบายการใช้ตัวประมวลผลกลาง %1"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "power governor %1"
+#~ msgstr "ตัวควบคุมพลังงาน %1"
+
+#~ msgid "Set CPU frequency scaling policy to '%1'"
+#~ msgstr "ตั้งนโยบายการปรับความเร็วของตัวประมวลผลกลางเป็น '%1'"
+
+#~ msgctxt "Note this is a KRunner keyword; %1 is a parameter"
+#~ msgid "power scheme %1"
+#~ msgstr "ชุดรูปแบบพลังงาน %1"
+
+#~ msgctxt "Note this is a KRunner keyword"
+#~ msgid "power scheme"
+#~ msgstr "ชุดรูปแบบพลังงาน"
+
+#~ msgid "Set Powersaving Scheme to '%1'"
+#~ msgstr "ตั้งชุดรูปแบบการประหยัดพลังงานเป็น '%1'"
+
+#~ msgid "Set CPU Governor to '%1'"
+#~ msgstr "ตั้งตัวควบคุมพลังงานตัวประมวลผลหลักเป็น '%1'"

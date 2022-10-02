@@ -1,0 +1,865 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Αντώνης Γέραλης <capoiosct@gmail.com>, 2012, 2013.
+# Dimitrios Glentadakis <dglent@gmail.com>, 2012.
+# Stelios <<sstavra@gmail.com>>, 2013.
+# Antonis Geralis <gaantonio@civil.auth.gr>, 2013, 2014.
+# Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2015, 2016, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-25 00:46+0000\n"
+"PO-Revision-Date: 2017-09-08 16:23+0200\n"
+"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: plugin/actionlist.cpp:86
+#, kde-format
+msgid "Open with:"
+msgstr "Άνοιγμα με:"
+
+#: plugin/actionlist.cpp:99
+#, kde-format
+msgid "Properties"
+msgstr "Ιδιότητες"
+
+#: plugin/actionlist.cpp:146
+#, kde-format
+msgid "Add to Desktop"
+msgstr "Προσθήκη στην επιφάνεια εργασίας"
+
+#: plugin/actionlist.cpp:151
+#, kde-format
+msgid "Add to Panel (Widget)"
+msgstr "Προσθήκη στον πίνακα (γραφικό συστατικό)"
+
+#: plugin/actionlist.cpp:156
+#, kde-format
+msgid "Pin to Task Manager"
+msgstr "Καρφίτσωμα στον διαχειριστή εργασιών"
+
+#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:429
+#, fuzzy, kde-format
+#| msgid "Recent Documents"
+msgid "Recent Files"
+msgstr "Πρόσφατα έγγραφα"
+
+#: plugin/actionlist.cpp:317
+#, fuzzy, kde-format
+#| msgid "Forget Recent Documents"
+msgid "Forget Recent Files"
+msgstr "Να ξεχαστούν τα πρόσφατα έγγραφα"
+
+#: plugin/actionlist.cpp:395
+#, fuzzy, kde-format
+#| msgid "Edit Application..."
+msgid "Edit Application…"
+msgstr "Επεξεργασία εφαρμογής..."
+
+#: plugin/actionlist.cpp:438
+#, kde-format
+msgctxt "@action opens a software center with the application"
+msgid "Uninstall or Manage Add-Ons…"
+msgstr ""
+
+#: plugin/appentry.cpp:319
+#, kde-format
+msgid "Hide Application"
+msgstr "Απόκρυψη εφαρμογής"
+
+#: plugin/appentry.cpp:390
+#, kde-format
+msgctxt "App name (Generic name)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: plugin/appentry.cpp:392
+#, kde-format
+msgctxt "Generic name (App name)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: plugin/appsmodel.cpp:34 plugin/appsmodel.cpp:58 plugin/computermodel.cpp:98
+#: plugin/computermodel.cpp:226 plugin/recentusagemodel.cpp:163
+#: plugin/recentusagemodel.cpp:226
+#, kde-format
+msgid "Applications"
+msgstr "Εφαρμογές"
+
+#: plugin/appsmodel.cpp:151
+#, kde-format
+msgid "Unhide Applications in this Submenu"
+msgstr "Αναίρεση απόκρυψης εφαρμογών σε αυτό το υπο-μενού"
+
+#: plugin/appsmodel.cpp:160
+#, kde-format
+msgid "Unhide Applications in '%1'"
+msgstr "Αναίρεση απόκρυψης εφαρμογών στο '%1'"
+
+#: plugin/computermodel.cpp:92
+#, fuzzy, kde-format
+msgid "Show KRunner"
+msgstr "KRunner"
+
+#: plugin/computermodel.cpp:96
+#, kde-format
+msgid "Search, calculate, or run a command"
+msgstr ""
+
+#: plugin/computermodel.cpp:149
+#, kde-format
+msgid "Computer"
+msgstr "Υπολογιστής"
+
+#: plugin/contactentry.cpp:106 plugin/recentcontactsmodel.cpp:82
+#, fuzzy, kde-format
+#| msgid "Show Contact Information..."
+msgid "Show Contact Information…"
+msgstr "Εμφάνιση πληροφοριών επαφής..."
+
+#. i18n.
+#: plugin/kastatsfavoritesmodel.cpp:504 plugin/rootmodel.cpp:416
+#: plugin/simplefavoritesmodel.cpp:31
+#, kde-format
+msgid "Favorites"
+msgstr "Αγαπημένα"
+
+#: plugin/recentcontactsmodel.cpp:40
+#, kde-format
+msgid "Contacts"
+msgstr "Επαφές"
+
+#: plugin/recentcontactsmodel.cpp:73
+#, kde-format
+msgid "Forget Contact"
+msgstr "Να ξεχαστεί η επαφή"
+
+#: plugin/recentcontactsmodel.cpp:77 plugin/recentcontactsmodel.cpp:153
+#, kde-format
+msgid "Forget All Contacts"
+msgstr "Να ξεχαστούν όλες οι επαφές"
+
+#: plugin/recentusagemodel.cpp:161
+#, kde-format
+msgid "Recently Used"
+msgstr "Χρησιμοποιημένα πρόσφατα"
+
+#: plugin/recentusagemodel.cpp:166 plugin/recentusagemodel.cpp:308
+#, fuzzy, kde-format
+#| msgctxt "Tab title"
+#| msgid "Files"
+msgid "Files"
+msgstr "Αρχεία"
+
+#: plugin/recentusagemodel.cpp:248
+#, kde-format
+msgid "Forget Application"
+msgstr "Αγνόηση της εφαρμογής"
+
+#: plugin/recentusagemodel.cpp:342
+#, kde-format
+msgid "Open Containing Folder"
+msgstr ""
+
+#: plugin/recentusagemodel.cpp:345
+#, fuzzy, kde-format
+#| msgid "Forget All"
+msgid "Forget File"
+msgstr "Να ξεχαστούν όλα"
+
+#: plugin/recentusagemodel.cpp:495
+#, kde-format
+msgid "Forget All"
+msgstr "Να ξεχαστούν όλα"
+
+#: plugin/recentusagemodel.cpp:497
+#, kde-format
+msgid "Forget All Applications"
+msgstr "Αγνόηση όλων των εφαρμογών"
+
+#: plugin/recentusagemodel.cpp:500
+#, fuzzy, kde-format
+#| msgid "Forget All"
+msgid "Forget All Files"
+msgstr "Να ξεχαστούν όλα"
+
+#: plugin/rootmodel.cpp:95
+#, kde-format
+msgid "Hide %1"
+msgstr "Απόκρυψη %1"
+
+#: plugin/rootmodel.cpp:398
+#, kde-format
+msgid "All Applications"
+msgstr "Όλες οι εφαρμογές"
+
+#: plugin/rootmodel.cpp:410
+#, kde-format
+msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
+msgstr ""
+
+#: plugin/rootmodel.cpp:422
+#, kde-format
+msgid "Recent Contacts"
+msgstr "Πρόσφατες επαφές"
+
+#: plugin/rootmodel.cpp:429
+#, fuzzy, kde-format
+#| msgid "Often Used Documents"
+msgid "Often Used Files"
+msgstr "Έγγραφα που χρησιμοποιούνται συχνά"
+
+#: plugin/rootmodel.cpp:438
+#, kde-format
+msgid "Recent Applications"
+msgstr "Πρόσφατες εφαρμογές"
+
+#: plugin/rootmodel.cpp:438
+#, kde-format
+msgid "Often Used Applications"
+msgstr "Εφαρμογές που χρησιμοποιούνται συχνά"
+
+#: plugin/rootmodel.cpp:453
+#, kde-format
+msgid "Power / Session"
+msgstr "Ενέργεια / Συνεδρία"
+
+#: plugin/runnermodel.cpp:231
+#, kde-format
+msgid "Search results"
+msgstr "Αποτελέσματα αναζήτησης"
+
+#: plugin/systementry.cpp:195
+#, kde-format
+msgid "Lock"
+msgstr "Κλείδωμα"
+
+#: plugin/systementry.cpp:198
+#, kde-format
+msgid "Log Out"
+msgstr ""
+
+#: plugin/systementry.cpp:201 plugin/systementry.cpp:269
+#, kde-format
+msgid "Save Session"
+msgstr "Αποθήκευση συνεδρίας"
+
+#: plugin/systementry.cpp:204
+#, kde-format
+msgid "Switch User"
+msgstr "Εναλλαγή χρήστη"
+
+#: plugin/systementry.cpp:207
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr ""
+
+#: plugin/systementry.cpp:210
+#, kde-format
+msgid "Hibernate"
+msgstr "Νάρκη"
+
+#: plugin/systementry.cpp:213
+#, kde-format
+msgid "Restart"
+msgstr "Επανεκκίνηση"
+
+#: plugin/systementry.cpp:216
+#, kde-format
+msgid "Shut Down"
+msgstr "Τερματισμός"
+
+#: plugin/systementry.cpp:229 plugin/systementry.cpp:232
+#: plugin/systementry.cpp:235 plugin/systementry.cpp:238
+#, kde-format
+msgid "Session"
+msgstr "Συνεδρία"
+
+#: plugin/systementry.cpp:241 plugin/systementry.cpp:244
+#: plugin/systementry.cpp:247 plugin/systementry.cpp:250
+#, kde-format
+msgid "System"
+msgstr "Σύστημα"
+
+#: plugin/systementry.cpp:263
+#, kde-format
+msgid "Lock screen"
+msgstr "Κλείδωμα οθόνης"
+
+#: plugin/systementry.cpp:266
+#, kde-format
+msgid "End session"
+msgstr "Τέλος συνεδρίας"
+
+#: plugin/systementry.cpp:272
+#, kde-format
+msgid "Start a parallel session as a different user"
+msgstr "Έναρξη μιας παράλληλης συνεδρίας σαν διαφορετικός χρήστης"
+
+#: plugin/systementry.cpp:275
+#, kde-format
+msgid "Suspend to RAM"
+msgstr "Αναστολή στη μνήμη"
+
+#: plugin/systementry.cpp:278
+#, kde-format
+msgid "Suspend to disk"
+msgstr "Αναστολή στον δίσκο"
+
+#: plugin/systementry.cpp:281
+#, kde-format
+msgid "Restart computer"
+msgstr "Επανεκκίνηση υπολογιστή"
+
+#: plugin/systementry.cpp:284
+#, kde-format
+msgid "Turn off computer"
+msgstr "Κλείσιμο του υπολογιστή"
+
+#: plugin/systemmodel.cpp:31
+#, kde-format
+msgid "System actions"
+msgstr "Ενέργειες συστήματος"
+
+#~ msgid "Documents"
+#~ msgstr "Έγγραφα"
+
+#~ msgid "Forget Document"
+#~ msgstr "Αγνόησή του εγγράφου"
+
+#~ msgid "Forget All Documents"
+#~ msgstr "Αγνόηση όλων των εγγράφων"
+
+#~ msgid "General"
+#~ msgstr "Γενικά"
+
+#~ msgid "Remove from Favorites"
+#~ msgstr "Αφαίρεση από τα αγαπημένα"
+
+#~ msgid "Add to Favorites"
+#~ msgstr "Προσθήκη στα αγαπημένα"
+
+#, fuzzy
+#~| msgid "Favorites"
+#~ msgid "Show In Favorites"
+#~ msgstr "Αγαπημένα"
+
+#~ msgid "Icon:"
+#~ msgstr "Εικονίδιο:"
+
+#~ msgctxt "@item:inmenu Open icon chooser dialog"
+#~ msgid "Choose..."
+#~ msgstr "Επιλογή..."
+
+#~ msgctxt "@item:inmenu Reset icon to default"
+#~ msgid "Clear Icon"
+#~ msgstr "Καθαρισμός εικονιδίου"
+
+#~ msgid "Show applications as:"
+#~ msgstr "Εμφάνιση εφαρμογών ως:"
+
+#~ msgid "Name only"
+#~ msgstr "Μόνο όνομα"
+
+#~ msgid "Description only"
+#~ msgstr "Μόνο περιγραφή"
+
+#~ msgid "Name (Description)"
+#~ msgstr "Όνομα  (Περιγραφή)"
+
+#~ msgid "Description (Name)"
+#~ msgstr "Περιγραφή (όνομα)"
+
+#, fuzzy
+#~| msgid "Behavior"
+#~ msgid "Behavior:"
+#~ msgstr "Συμπεριφορά"
+
+#, fuzzy
+#~| msgid "Sort alphabetically"
+#~ msgid "Sort applications alphabetically"
+#~ msgstr "Ταξινόμηση αλφαβητικά"
+
+#, fuzzy
+#~| msgid "Flatten menu to a single level"
+#~ msgid "Flatten sub-menus to a single level"
+#~ msgstr "Εμφάνιση του μενού σε ένα μόνο επίπεδο"
+
+#, fuzzy
+#~| msgid "Categories"
+#~ msgid "Show categories:"
+#~ msgstr "Κατηγορίες"
+
+#, fuzzy
+#~| msgid "Recent Applications"
+#~ msgid "Recent applications"
+#~ msgstr "Πρόσφατες εφαρμογές"
+
+#, fuzzy
+#~| msgid "Often Used Applications"
+#~ msgid "Often used applications"
+#~ msgstr "Εφαρμογές που χρησιμοποιούνται συχνά"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Recent documents"
+#~ msgstr "Πρόσφατα έγγραφα"
+
+#, fuzzy
+#~| msgid "Often Used Documents"
+#~ msgid "Often used documents"
+#~ msgstr "Έγγραφα που χρησιμοποιούνται συχνά"
+
+#, fuzzy
+#~| msgid "Recent Contacts"
+#~ msgid "Recent contacts"
+#~ msgstr "Πρόσφατες επαφές"
+
+#, fuzzy
+#~| msgid "Show often used contacts"
+#~ msgid "Often used contacts"
+#~ msgstr "Εμφάνιση επαφών που χρησιμοποιούνται συχνά"
+
+#, fuzzy
+#~| msgid "Recently used"
+#~ msgctxt ""
+#~ "@item:inlistbox Sort items in categories by [Recently used | Often used]"
+#~ msgid "Recently used"
+#~ msgstr "Χρησιμοποιήθηκαν πρόσφατα"
+
+#, fuzzy
+#~| msgid "Often used"
+#~ msgctxt ""
+#~ "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
+#~ msgid "Often used"
+#~ msgstr "Χρησιμοποιούνται συχνά"
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgid "Search:"
+#~ msgstr "Αναζήτηση"
+
+#~ msgid "Expand search to bookmarks, files and emails"
+#~ msgstr "Επέκταση της αναζήτησης σε σελιδοδείκτες, αρχεία και αλληλογραφία"
+
+#~ msgid "Align search results to bottom"
+#~ msgstr "Στοίχιση των αποτελεσμάτων αναζήτησης στο κάτω μέρος"
+
+#~ msgid "Searching for '%1'"
+#~ msgstr "Αναζήτηση για '%1'"
+
+#, fuzzy
+#~| msgid "Type to search."
+#~ msgid "Type to search..."
+#~ msgstr "Πληκτρολογήστε για αναζήτηση."
+
+#~ msgid "Widgets"
+#~ msgstr "Γραφικά συστατικά"
+
+#~ msgid "Apps & Docs"
+#~ msgstr "Εφαρμογές & έγγραφα"
+
+#~ msgid "Edit Applications..."
+#~ msgstr "Επεξεργασία εφαρμογών..."
+
+#~ msgid "Search..."
+#~ msgstr "Αναζήτηση..."
+
+#~ msgctxt "@action opens a software center with the application"
+#~ msgid "Manage '%1'..."
+#~ msgstr "Διαχείριση του '%1'..."
+
+#~ msgid "Run Command..."
+#~ msgstr "Εκτέλεση εντολής..."
+
+#~ msgid "Run a command or a search query"
+#~ msgstr "Εκτέλεση μιας εντολής ή ενός ερωτήματος αναζήτησης"
+
+#~ msgid "Show:"
+#~ msgstr "Εμφάνιση:"
+
+#~ msgid "Show recent applications"
+#~ msgstr "Εμφάνιση πρόσφατων εφαρμογών"
+
+#~ msgid "Show often used applications"
+#~ msgstr "Εμφάνιση εφαρμογών που χρησιμοποιούνται συχνά"
+
+#~ msgid "Show recent documents"
+#~ msgstr "Εμφάνιση πρόσφατων εγγράφων"
+
+#~ msgid "Show often used documents"
+#~ msgstr "Εμφάνιση εγγράφων που χρησιμοποιούνται συχνά"
+
+#~ msgid "Show recent contacts"
+#~ msgstr "Εμφάνιση πρόσφατων επαφών"
+
+#~ msgid "Removable Storage"
+#~ msgstr "Αφαιρούμενο μέσο"
+
+#~ msgid "Places"
+#~ msgstr "Τοποθεσίες"
+
+#~ msgid "Logout"
+#~ msgstr "Αποσύνδεση"
+
+#~ msgid "Suspend"
+#~ msgstr "Αναστολή"
+
+#~ msgid "Reboot"
+#~ msgstr "Επανεκκίνηση"
+
+#~ msgid "Use custom image:"
+#~ msgstr "Χρήση προσαρμοσμένης εικόνας:"
+
+#~ msgid "Choose an image"
+#~ msgstr "Επιλογή εικόνας"
+
+#~ msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+#~ msgstr "Αρχεία εικόνας (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+
+#~ msgid "Add as Launcher"
+#~ msgstr "Προσθήκη ως εκτελεστής"
+
+#~ msgid "New Session"
+#~ msgstr "Νέα συνεδρία"
+
+#~ msgid "(Empty)"
+#~ msgstr "(Άδειο)"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Αντώνης Γέραλης"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "capoiosct@gmail.com"
+
+#~ msgid "Runner: %1"
+#~ msgstr "Εκτελεστής: %1"
+
+#~ msgid "Browse installed applications by categories"
+#~ msgstr "Περιηγηθείτε στις εγκατεστημένες εφαρμογές με βάση τις κατηγορίες"
+
+#~ msgid "All Installed Applications"
+#~ msgstr "Όλες οι εγκατεστημένες εφαρμογές"
+
+#~ msgid ""
+#~ "List all installed applications in a flat list, grouped by categories"
+#~ msgstr ""
+#~ "Εμφανίζει όλες τις εγκατεστημένες εφαρμογές σε μια επίπεδη λίστα, "
+#~ "ομαδοποιημένες σε κατηγορίες"
+
+#~ msgid "All Installed Applications With Filters"
+#~ msgstr "Όλες οι εγκατεστημένες εφαρμογές με φίλτρο"
+
+#~ msgid "List all installed applications and filter via the sidebar"
+#~ msgstr ""
+#~ "Εμφανίζει όλες τις εγκατεστημένες εφαρμογές και επιτρέπει το φιλτράρισμα "
+#~ "τους μέσω της πλευρικής γραμμής"
+
+#~ msgid "List the most recently launched applications"
+#~ msgstr "Εμφανίζει τις εφαρμογές που ξεκίνησαν πρόσφατα"
+
+#~ msgid "Folder"
+#~ msgstr "Φάκελος"
+
+#~ msgid "List the content of a folder and let you browse into sub-folders"
+#~ msgstr ""
+#~ "Εμφανίζει το περιεχόμενο ενός φακέλου και σας επιτρέπει να περιηγηθείτε "
+#~ "στους υποφακέλους"
+
+#~ msgid "Browse the content of your favorite places"
+#~ msgstr "Περιηγηθείτε στο περιεχόμενο των αγαπημένων τοποθεσιών σας"
+
+#~ msgid "List applications marked as favorite"
+#~ msgstr "Εμφανίζει τις εφαρμογές που είναι σημειωμένες ως αγαπημένες"
+
+#~ msgid "Power Management"
+#~ msgstr "Διαχείριση ενέργειας"
+
+#~ msgid "Provide buttons to suspend, hibernate, reboot or halt your computer"
+#~ msgstr ""
+#~ "Παρέχει κουμπιά για αναστολή, νάρκη, επανεκκίνηση ή τερματισμό του "
+#~ "υπολογιστή σας"
+
+#~ msgid ""
+#~ "Provide buttons to lock the screen, log out, or switch to another user"
+#~ msgstr ""
+#~ "Παρέχει κουμπιά για κλείδωμα της οθόνης, αποσύνδεση ή αλλαγή σε άλλο "
+#~ "χρήστη"
+
+#~ msgid "Provide buttons to switch to opened sessions"
+#~ msgstr "Παρέχει κουμπιά για την εναλλαγή των ανοιγμένων συνεδριών"
+
+#~ msgid ""
+#~ "Provide buttons to manage your workspace session and the power state of "
+#~ "your computer"
+#~ msgstr ""
+#~ "Παρέχει κουμπιά για την διαχείριση της συνεδρίας εργασίας και της "
+#~ "κατάστασης ενέργειας του υπολογιστή σας"
+
+#~ msgid "Perform searchs using a selection of runners"
+#~ msgstr "Εκτελεί αναζητήσεις με μια συλλογή από εκτελεστές"
+
+#~ msgid "Folder to show:"
+#~ msgstr "Φάκελος προς εμφάνιση:"
+
+#~ msgid "Title:"
+#~ msgstr "Τίτλος:"
+
+#~ msgid "If title is left empty, the folder name will be used"
+#~ msgstr "Αν ο τίτλος αφεθεί κενός, θα χρησιμοποιηθεί το όνομα του φακέλου."
+
+#~ msgctxt "KFile System Bookmarks"
+#~ msgid "Home"
+#~ msgstr "Αρχική"
+
+#~ msgctxt "KFile System Bookmarks"
+#~ msgid "Network"
+#~ msgstr "Δίκτυο"
+
+#~ msgctxt "KFile System Bookmarks"
+#~ msgid "Root"
+#~ msgstr "Root"
+
+#~ msgctxt "KFile System Bookmarks"
+#~ msgid "Trash"
+#~ msgstr "Απορρίμματα"
+
+#~ msgid "&Release '%1'"
+#~ msgstr "Απο&δέσμευση του '%1'"
+
+#~ msgid "&Unmount '%1'"
+#~ msgstr "Α&ποπροσάρτηση του '%1'"
+
+#~ msgid "&Eject '%1'"
+#~ msgstr "Ε&ξαγωγή του '%1'"
+
+#~ msgid "The device '%1' is not a disk and cannot be ejected."
+#~ msgstr "Η συσκευή '%1' δεν είναι δίσκος και δεν γίνεται να εξαχθεί."
+
+#~ msgid "An error occurred while accessing '%1', the system responded: %2"
+#~ msgstr ""
+#~ "Ένα σφάλμα παρουσιάστηκε κατά την πρόσβαση στο '%1', το σύστημα "
+#~ "ανταποκρίθηκε: %2"
+
+#~ msgid "An error occurred while accessing '%1'"
+#~ msgstr "Ένα σφάλμα παρουσιάστηκε κατά την πρόσβαση στο '%1'"
+
+#~ msgid "Pick the application folder to display:"
+#~ msgstr "Διαλέξτε το φάκελο της εφαρμογής για να εμφανιστεί:"
+
+#~ msgid "Remove from Sidebar"
+#~ msgstr "Αφαίρεση από την πλευρική γραμμή"
+
+#~ msgid "Add to Sidebar"
+#~ msgstr "Προσθήκη στην πλευρική γραμμή"
+
+#~ msgid "Power"
+#~ msgstr "Έξοδος"
+
+#~ msgid "Pick the runners you would like to use in this source:"
+#~ msgstr ""
+#~ "Διαλέξτε τους εκτελεστές που θα θέλατε να χρησιμοποιήσετε σε αυτή την "
+#~ "πηγή:"
+
+#~ msgid "Hello"
+#~ msgstr "Γεια σου"
+
+#~ msgid "World"
+#~ msgstr "κόσμε"
+
+#~ msgid "Hello World"
+#~ msgstr "Γεια σου κόσμε"
+
+#~ msgid "Text Color:"
+#~ msgstr "Χρώμα κειμένου:"
+
+#~ msgid "Text Shadow:"
+#~ msgstr "Σκιά κειμένου:"
+
+#~ msgid "None"
+#~ msgstr "Κανένα"
+
+#~ msgid "Automatic"
+#~ msgstr "Αυτόματο"
+
+#~ msgid "Custom:"
+#~ msgstr "Προσαρμοσμένο:"
+
+#~ msgid "Go to previous tab"
+#~ msgstr "Μετάβαση στην προηγούμενη καρτέλα"
+
+#~ msgid "Go to next tab"
+#~ msgstr "Μετάβαση στην επόμενη καρτέλα"
+
+#~ msgid "Focus search field"
+#~ msgstr "Εστίαση στο πεδίο αναζήτησης"
+
+#~ msgid "Go back"
+#~ msgstr "Μετάβαση πίσω"
+
+#~ msgid "Go forward"
+#~ msgstr "Μετάβαση εμπρός"
+
+#~ msgid "Go up"
+#~ msgstr "Μετάβαση πάνω"
+
+#~ msgctxt "Used for tabs which have no name"
+#~ msgid "<Untitled>"
+#~ msgstr "<Χωρίς τίτλο>"
+
+#~ msgctxt "Button to leave configure mode"
+#~ msgid "Done"
+#~ msgstr "Ολοκλήρωση"
+
+#~ msgid "Search in current tab..."
+#~ msgstr "Αναζήτηση στην τρέχουσα καρτέλα..."
+
+#~ msgid "End Configure Tabs"
+#~ msgstr "Τέλος διαμόρφωσης καρτελών"
+
+#~ msgid "Configure Tabs"
+#~ msgstr "Διαμόρφωση καρτελών"
+
+#~ msgid "Configure Shortcuts..."
+#~ msgstr "Διαμόρφωση συντομεύσεων..."
+
+#~ msgid "Show Action List Buttons"
+#~ msgstr "Εμφάνιση κουμπιών για τη λίστα ενεργειών"
+
+#~ msgid "Show Desktop Tool Box"
+#~ msgstr "Εμφάνιση εργαλειοθήκης επιφάνειας εργασίας"
+
+#~ msgid "Restore Tabs to Default"
+#~ msgstr "Επαναφορά καρτελών στις προκαθορισμένες"
+
+#~ msgid ""
+#~ "Are you sure you want to restore tabs?\n"
+#~ "Restoring tabs will reset your configuration to the default Homerun "
+#~ "tabs.\n"
+#~ "Your lists of favorite applications and places will remain untouched."
+#~ msgstr ""
+#~ "Είστε βέβαιοι ότι θέλετε να επαναφέρετε τις καρτέλες;\n"
+#~ "Η διαμόρφωση σας θα επανέλθει στις προκαθορισμένες καρτέλες.\n"
+#~ "Οι λίστες των αγαπημένων σας εφαρμογών και τοποθεσιών θα παραμείνουν "
+#~ "άθικτες."
+
+#~ msgid "Restore Tabs"
+#~ msgstr "Επαναφορά καρτελών"
+
+#~ msgid "About %1"
+#~ msgstr "Σχετικά με το %1"
+
+#~ msgid "Drag to reorder; release to show menu"
+#~ msgstr "Σύρετε για αναταξινόμηση, ελευθερώστε για εμφάνιση του μενού"
+
+#~ msgid "Release to show menu"
+#~ msgstr "Ελευθερώστε για εμφάνιση του μενού"
+
+#~ msgid "Drag to reorder"
+#~ msgstr "Σύρετε για αναταξινόμηση"
+
+#~ msgid "This item has no menu and cannot be dragged"
+#~ msgstr ""
+#~ "Αυτό το αντικείμενο δεν διαθέτει μενού και δεν μπορεί να μετακινηθεί"
+
+#~ msgid "%1 has been added to your favorites"
+#~ msgstr "Το %1 προστέθηκε στις αγαπημένες σας"
+
+#~ msgid "Broken source '%1'"
+#~ msgstr "Προβληματική πηγή '%1'"
+
+#~ msgid "Tab Label:"
+#~ msgstr "Ετικέτα καρτέλας:"
+
+#~ msgid ""
+#~ "<p><b>Sorry, Homerun failed to load</b></p><p>Do you want to report this "
+#~ "error?</p><p>If you decide to report it, please copy and paste the "
+#~ "following output in your report:</p><pre>%1</pre>"
+#~ msgstr ""
+#~ "<p><b>Δυστυχώς, το Homerun απέτυχε να φορτωθεί</b></p><p>Θέλετε να "
+#~ "αναφέρετε αυτό το σφάλμα;</p><p>Εάν αποφασίσετε να το αναφέρετε, παρακαλώ "
+#~ "αντιγράψτε και επικολλήστε την ακόλουθη έξοδο στην αναφορά σας:</p><pre>"
+#~ "%1</pre>"
+
+#~ msgid "Report Error"
+#~ msgstr "Αναφορά σφάλματος"
+
+#~ msgid "Log focused item (for debug purposes)"
+#~ msgstr "Καταγραφή εστιασμένου στοιχείου (για σκοπούς αποσφαλμάτωσης)"
+
+#~ msgid "Use a plain window (for debug purposes)"
+#~ msgstr "Χρήση απλού παραθύρου (για σκοπούς αποσφαλμάτωσης)"
+
+#~ msgctxt "Program name"
+#~ msgid "Homerun"
+#~ msgstr "Homerun"
+
+#~ msgid "(C) 2012-2014 Blue Systems"
+#~ msgstr "(C) 2012-2014 Blue Systems"
+
+#~ msgid "Shaun Reich"
+#~ msgstr "Shaun Reich"
+
+#~ msgid "Developer"
+#~ msgstr "Προγραμματιστής"
+
+#~ msgid "Aurélien Gâteau"
+#~ msgstr "Aurélien Gâteau"
+
+#~ msgid "Eike Hein"
+#~ msgstr "Eike Hein"
+
+#~ msgctxt "Tab title"
+#~ msgid "Home"
+#~ msgstr "Αρχική"
+
+#~ msgctxt "Tab title"
+#~ msgid "Power"
+#~ msgstr "Έξοδος"
+
+#~ msgid ""
+#~ "If this option is enabled, search may display additional columns with "
+#~ "search results powered by certain Plasma runner plugins, such as "
+#~ "\"Bookmarks\" and \"Desktop Search\"."
+#~ msgstr ""
+#~ "Εάν αυτή η επιλογή είναι ενεργοποιημένη στην αναζήτηση μπορεί να "
+#~ "εμφανιστούν επιπλέον στήλες με αποτελέσματα αναζήτησης που προέρχονται "
+#~ "από ορισμένα πρόσθετα Plasma runner, όπως τα \"Σελιδοδείκτες\" και "
+#~ "\"Αναζήτηση επιφάνειας εργασίας\"."
+
+#~ msgid "Appearance"
+#~ msgstr "Εμφάνιση"
+
+#~ msgid "*.jpg *.png *.xpm *.gif *.webp"
+#~ msgstr "*.jpg *.png *.xpm *.gif *.webp"
+
+#~ msgid "Homerun Kicker"
+#~ msgstr "Homerun Kicker"
+
+#~ msgid "Launch applications and manage your desktop."
+#~ msgstr "Εκκινήστε εφαρμογές και διαχειριστείτε την επιφάνεια εργασίας."
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Empty Trash"
+#~ msgstr "Άδειασμα απορριμμάτων"
+
+#~ msgid "Use Plasma runners for additional search results"
+#~ msgstr ""
+#~ "Χρησιμοποίηση εκτελεστών Plasma για επιπλέον αποτελέσματα αναζήτησης"
+
+#~ msgid "Show on screen <screen>"
+#~ msgstr "Εμφάνιση στην οθόνη <screen>"
+
+#~ msgid "Nightly build using source from: %1"
+#~ msgstr "Νυχτερινή κατασκευή με χρήση πηγής από το: %1"

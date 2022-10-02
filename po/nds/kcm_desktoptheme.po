@@ -1,0 +1,478 @@
+# Translation of kcm_desktopthemedetails.po to Low Saxon
+# translation of kcm_desktopthemedetails.po to Low Saxon
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Manfred Wiese <m.j.wiese@web.de>, 2008, 2010, 2011.
+# Sönke Dibbern <s_dibbern@web.de>, 2008, 2009, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_desktopthemedetails\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"PO-Revision-Date: 2014-07-02 23:27+0200\n"
+"Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
+"Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
+"Language: nds\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Get New Themes..."
+msgid "Name of the current Plasma Style"
+msgstr "Nieg Mustern halen..."
+
+#: kcm.cpp:108
+#, fuzzy, kde-format
+#| msgid "Unable to save theme."
+msgid "Unable to create a temporary file."
+msgstr "Muster lett sik nich sekern."
+
+#: kcm.cpp:119
+#, fuzzy, kde-format
+#| msgid "Unable to save theme."
+msgid "Unable to download the theme: %1"
+msgstr "Muster lett sik nich sekern."
+
+#: kcm.cpp:144
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "Muster mit Spood installeert."
+
+#: kcm.cpp:147 kcm.cpp:153
+#, kde-format
+msgid "Theme installation failed."
+msgstr "Muster lett sik nich installeren."
+
+#: kcm.cpp:245
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "This module lets you choose the Plasma style."
+msgstr ""
+
+#: package/contents/ui/main.qml:69
+#, fuzzy, kde-format
+#| msgid "Available themes"
+msgid "All Themes"
+msgstr "Verföögbor Mustern"
+
+#: package/contents/ui/main.qml:70
+#, fuzzy, kde-format
+#| msgid "Theme"
+msgid "Light Themes"
+msgstr "Muster"
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgid "Dark Themes"
+msgstr ""
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "Color scheme compatible"
+msgstr ""
+
+#: package/contents/ui/main.qml:100
+#, fuzzy, kde-format
+#| msgctxt "plasma name"
+#| msgid "Color Scheme"
+msgid "Follows color scheme"
+msgstr "Klöörschema"
+
+#: package/contents/ui/main.qml:118
+#, fuzzy, kde-format
+#| msgid "Theme"
+msgid "Edit Theme…"
+msgstr "Muster"
+
+#: package/contents/ui/main.qml:125
+#, kde-format
+msgid "Remove Theme"
+msgstr "Muster wegdoon"
+
+#: package/contents/ui/main.qml:132
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Theme"
+msgstr "Muster wegdoon"
+
+#: package/contents/ui/main.qml:174
+#, fuzzy, kde-format
+#| msgid "Insta&ll from File"
+msgid "Install from File…"
+msgstr "Ut Datei insta&lleren"
+
+#: package/contents/ui/main.qml:179
+#, fuzzy, kde-format
+#| msgid "Get New Themes..."
+msgid "Get New Plasma Styles…"
+msgstr "Nieg Mustern halen..."
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Open Theme"
+msgstr "Muster opmaken"
+
+#: package/contents/ui/main.qml:195
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr "Musterdateien (*.zip *.tar.gz *.tar.bz2)"
+
+#: plasma-apply-desktoptheme.cpp:31
+#, kde-format
+msgid ""
+"This tool allows you to set the theme of the current Plasma session, without "
+"accidentally setting it to one that is either not available, or which is "
+"already set."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:35
+#, kde-format
+msgid ""
+"The name of the theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:36
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:49
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:65
+#, kde-format
+msgid "The current Plasma session's theme has been set to %1"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:67
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:75
+#, kde-format
+msgid "You have the following Plasma themes on your system:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Manfred Wiese, Sönke Dibbern"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "m.j.wiese@web.de, s_dibbern@web.de"
+
+#, fuzzy
+#~| msgid "Get New Themes..."
+#~ msgid "Plasma Style"
+#~ msgstr "Nieg Mustern halen..."
+
+#, fuzzy
+#~| msgid "Get New Themes..."
+#~ msgid "Plasma Styles"
+#~ msgstr "Nieg Mustern halen..."
+
+#, fuzzy
+#~| msgid "How to Change Desktop Theme"
+#~ msgid "Download New Plasma Styles"
+#~ msgstr "Wodennig sik dat Schriefdischmuster wesseln lett"
+
+#, fuzzy
+#~| msgid "Remove Desktop Theme"
+#~ msgid "Configure Desktop Theme"
+#~ msgstr "Schriefdischmuster wegdoon"
+
+#, fuzzy
+#~| msgid "Theme installation failed."
+#~ msgid "Theme removal failed."
+#~ msgstr "Muster lett sik nich installeren."
+
+#~ msgid ""
+#~ "<h1>Desktop Theme</h1>This module allows you to modify the visual "
+#~ "appearance of the desktop."
+#~ msgstr ""
+#~ "<h1>Schriefdischmuster</h1>Mit dit Moduul lett sik dat Schriefdisch-"
+#~ "Utsehn instellen."
+
+#~ msgid "KDE Desktop Theme Module"
+#~ msgstr "Schriefdischmustermoduul för KDE"
+
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
+#~ msgstr "© 2002: Karol Szwed, Daniel Molkentin"
+
+#~ msgid "Theme installation failed. (%1)"
+#~ msgstr "Muster lett sik nich installeren. (%1)"
+
+#~ msgid "Details"
+#~ msgstr "Enkelheiten"
+
+#~ msgctxt "plasma name"
+#~ msgid "Panel Background"
+#~ msgstr "Paneelachtergrund"
+
+#~ msgctxt "plasma name"
+#~ msgid "Kickoff"
+#~ msgstr "Kickoff"
+
+#~ msgctxt "plasma name"
+#~ msgid "Task Items"
+#~ msgstr "Opgaav-Indrääg"
+
+#~ msgctxt "plasma name"
+#~ msgid "Widget Background"
+#~ msgstr "Stüerelement-Achtergrund"
+
+#~ msgctxt "plasma name"
+#~ msgid "Translucent Background"
+#~ msgstr "Dörschienen Achtergrund"
+
+#~ msgctxt "plasma name"
+#~ msgid "Dialog Background"
+#~ msgstr "Dialoog-Achtergrund"
+
+#~ msgctxt "plasma name"
+#~ msgid "Analog Clock"
+#~ msgstr "Analoog Klock"
+
+#~ msgctxt "plasma name"
+#~ msgid "Notes"
+#~ msgstr "Notizen"
+
+#~ msgctxt "plasma name"
+#~ msgid "Tooltip"
+#~ msgstr "Kortinfo"
+
+#~ msgctxt "plasma name"
+#~ msgid "Pager"
+#~ msgstr "Pager"
+
+#~ msgctxt "plasma name"
+#~ msgid "Run Command Dialog"
+#~ msgstr "Befehl-Utföhren-Dialoog"
+
+#~ msgctxt "plasma name"
+#~ msgid "Shutdown Dialog"
+#~ msgstr "Utmaak-Dialoog"
+
+#~ msgctxt "plasma name"
+#~ msgid "Icons"
+#~ msgstr "Lüttbiller"
+
+#~ msgid "(Customized)"
+#~ msgstr "(Topasst)"
+
+#~ msgid "User customized theme"
+#~ msgstr "Vun Bruker topasst Muster"
+
+#~ msgid ""
+#~ "Theme items have been changed.  Do you still wish remove the \"%1\" theme?"
+#~ msgstr ""
+#~ "De Muster-Indrääg hebbt sik ännert. Wullt Du dat Muster \"%1\" liekers "
+#~ "noch wegmaken?"
+
+#~ msgid "Removal of the default desktop theme is not allowed."
+#~ msgstr "Dat Standard-Schriefdischmuster lett sik nich wegmaken."
+
+#~ msgid "Are you sure you wish remove the \"%1\" theme?"
+#~ msgstr "Wullt Du dat Muster \"%1\" redig wegmaken?"
+
+#~ msgid ""
+#~ "Please apply theme item changes (with a new theme name) before attempting "
+#~ "to export theme."
+#~ msgstr ""
+#~ "Bitte ehr't Exporteren de Ännern an't Muster övernehmen (mit en anner "
+#~ "Naam)."
+
+#~ msgid "Export Desktop Theme"
+#~ msgstr "Schriefdischmuster exporteren"
+
+#~ msgid "Export theme to file"
+#~ msgstr "Muster as Datei exporteren"
+
+#~ msgid "Archive (*.zip)"
+#~ msgstr "Archiev (*.zip)"
+
+#~ msgid "Theme Item"
+#~ msgstr "Muster-Indrag"
+
+#~ msgid "Source"
+#~ msgstr "Born"
+
+#, fuzzy
+#~| msgid "%1 %2"
+#~ msgctxt ""
+#~ "%1 is the name of the theme, %2 is the type of the element (background, "
+#~ "icon, note, etc)"
+#~ msgid "%1 %2"
+#~ msgstr "%1 %2"
+
+#~ msgid "File..."
+#~ msgstr "Datei..."
+
+#~ msgid "Select File to Use for %1"
+#~ msgstr "De Datei utsöken, de Du för \"%1\" bruken wullt"
+
+#~ msgid " Author: %1"
+#~ msgstr " Autor: %1"
+
+#~ msgid "Version: %1"
+#~ msgstr "Verschoon: %1"
+
+#~ msgid "Desktop Theme Details"
+#~ msgstr "Schriefdischmuster-Enkelheiten"
+
+#~ msgid "Choose an item and customize it by assigning it a theme"
+#~ msgstr "Söök en Indrag ut un pass em dör Toornen en Muster an."
+
+#~ msgid ""
+#~ "You can set any theme to any item. The available themes for the item are "
+#~ "in the dropdown box on the right."
+#~ msgstr ""
+#~ "Elk Muster lett sik elk Indrag toornen. De verföögbor Mustern för den "
+#~ "Indrag laat sik binnen dat Utklappfeld rechterhand finnen."
+
+#~ msgid "Enable more options"
+#~ msgstr "Mehr Optschonen anmaken"
+
+#~ msgid ""
+#~ "This will expand the dialog and give you options to export your custom "
+#~ "theme as well as to remove a theme."
+#~ msgstr ""
+#~ "Dit stellt en verwiedert Dialoog för't Exporteren oder Wegmaken vun "
+#~ "topasst Mustern praat."
+
+#~ msgid "More"
+#~ msgstr "Mehr"
+
+#~ msgid "Remove the selected theme"
+#~ msgstr "Utsöcht Muster wegmaken"
+
+#~ msgid ""
+#~ "Clicking this button will remove the selected theme. You will be asked "
+#~ "for confirmation."
+#~ msgstr ""
+#~ "Klick hier, wenn Du dat opstunns utsöchte Muster wegdoon wullt Du muttst "
+#~ "dat Wegmaken beglöven."
+
+#~ msgid "Save your theme in a zip archive"
+#~ msgstr "Muster as Zip-Archiev sekern"
+
+#~ msgid ""
+#~ "You can save your theme in a zip archive in order to share it with the "
+#~ "community."
+#~ msgstr ""
+#~ "Du kannst dat Muster as Zip-Archiev sekern un för de Meenheit freegeven."
+
+#~ msgid "Export Theme to File..."
+#~ msgstr "Muster na Datei exporteren..."
+
+#~ msgid "New theme name:"
+#~ msgstr "Nieg Naam för't Muster:"
+
+#~ msgid "Custom theme name"
+#~ msgstr "Naam för't egen Muster:"
+
+#~ msgid "Give a name to your custom theme."
+#~ msgstr "Giff en Naam för Dien egen Muster in."
+
+#~ msgid "Author:"
+#~ msgstr "Autor:"
+
+#~ msgid "Custom theme author "
+#~ msgstr "Maker vun dat egen Muster "
+
+#~ msgid "Enter the author name of your custom theme."
+#~ msgstr "Hier en Schrievernaam för Dien topasst Muster ingeven."
+
+#~ msgid "Version:"
+#~ msgstr "Verschoon:"
+
+#~ msgid "Custom theme version number"
+#~ msgstr "Verschoon-Nummer vun dat egen Muster"
+
+#~ msgid "Enter the version number of your custom theme."
+#~ msgstr "Giff de Verschoon-Nummer vun dat egen Muster in."
+
+#~ msgid "Description:"
+#~ msgstr "Beschrieven:"
+
+#~ msgid "Custom theme description"
+#~ msgstr "Enkelheiten över dat egen Muster"
+
+#~ msgid "Enter a description which will explain your custom theme."
+#~ msgstr "Giff en Beschrieven mit Enkelheiten över Dien egen Muster in."
+
+#~ msgid "Select theme from above to customize"
+#~ msgstr "Dat Muster, dat Du topassen wullt, baven utsöken"
+
+#~ msgid "Theme Author"
+#~ msgstr "Muster-Autor"
+
+#~ msgid "Theme Name"
+#~ msgstr "Muster-Naam"
+
+#~ msgid "Theme Version"
+#~ msgstr "Muster-Verschoon"
+
+#~ msgid "The theme description goes here..."
+#~ msgstr "Hier kummt en Beschrieven hen..."
+
+#~ msgid ""
+#~ "Choose a start theme in this list then customize some items below. All "
+#~ "less important items not listed below will use this start theme."
+#~ msgstr ""
+#~ "Köör en Startmuster ut de List un pass dorna nerrn en poor Indrääg to. "
+#~ "All minn wichtig un nerrn nich oplist Indrääg bruukt dit Startmuster."
+
+#~ msgid "Karol Szwed"
+#~ msgstr "Karol Szwed"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "KCMDesktopTheme"
+#~ msgstr "KCM-Schriefdischmuster"
+
+#, fuzzy
+#~| msgid ""
+#~| "To change your desktop theme to \"%1\", get back to the General tab of "
+#~| "SystemSettings in Appearance -> Style and select \"%2\" from the "
+#~| "droplist."
+#~ msgid ""
+#~ "To change your desktop theme to \"%1\", go back to the 'General' tab of "
+#~ "System Settings; choose 'Appearance', and then 'Style'; and finally "
+#~ "select \"%2\" from the drop-down list at the top of the window."
+#~ msgstr ""
+#~ "Wullt Du dat Schriefdischmuster op \"%1\" ännern, gah torüch na't Paneel "
+#~ "\"Allmeen\" binnen de Schriefdischinstellen för't Utsehn -> Stil un söök "
+#~ "op de List \"%2\" ut."
+
+#~ msgid "Removal of the active desktop theme is not allowed."
+#~ msgstr "Dat aktive Schriefdischmuster lett sik nich wegmaken."
+
+#~ msgid "Unfortunately, this feature is not yet implemented."
+#~ msgstr "Disse Funkschoon is leider noch nich inbuut."
+
+#~ msgid "Theme items data file could not be found."
+#~ msgstr "Musterindrääg-Datendatei lett sik nich finnen."

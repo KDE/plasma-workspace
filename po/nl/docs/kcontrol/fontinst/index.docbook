@@ -1,0 +1,246 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Dutch "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="fontinst" lang="&language;">
+<title
+>Lettertypenbeheer</title>
+<articleinfo>
+<authorgroup>
+<author
+>&Craig.Drummond; &Craig.Drummond.Mail;</author>
+
+&Freek.de.Kruijf; 
+</authorgroup>
+
+<date
+>2021-04-09</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Systeeminstellingen</keyword>
+<keyword
+>lettertypen</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_fontinst">
+<title
+>Lettertypenbeheer</title>
+
+<para
+>Deze module is verantwoordelijk voor het installeren, de-installeren, bekijken en beheren van uw lettertypen.</para>
+
+<sect2 id="font-groups">
+<title
+>Lettertypengroepen</title>
+<para
+>Er zijn 4 speciale voor-gedefinieerde lettertypengroepen:</para>
+
+<orderedlist>
+    <listitem
+><para
+><quote
+>Alle lettertypen</quote
+> Dit toont alle lettertypen, beide persoonlijke en systeem-brede.</para
+></listitem>
+    <listitem
+><para
+><quote
+>Persoonlijke lettertypen</quote
+> De getoonde lettertypen zijn uw persoonlijke lettertypen en zullen niet beschikbaar zijn aan andere gebruikers.</para
+></listitem>
+    <listitem
+><para
+><quote
+>Systeem lettertypen</quote
+> De getoonde lettertypen zullen voor alle gebruikers beschikbaar zijn. Installeren van een systeem-breed lettertype of verwijdering hiervan, vereist systeembeheerderrechten.</para
+></listitem>
+    <listitem
+><para
+><quote
+>Niet-geclassificeerd</quote
+> Dit toont alle lettertypen die niet in gebruiker-gedefinieerde groepen vallen. Deze groep zal alleen verschijnen als u enige gebruiker-gedefinieerde groepen hebt.</para
+></listitem>
+</orderedlist>
+<para
+>Om een lettertype aan een groep toe te voegen, sleep het van de lijst van lettertypen in een groep. Om een lettertype te verwijderen van een groep, sleep het lettertype in de <quote
+>Alle lettertypen</quote
+>-groep.</para>
+<para
+>Onder deze lijst vindt u knoppen waarmee een nieuwe groep aangemaakt, verwijderd kan worden en de huidige groep ingeschakeld en uitgeschakeld kan worden.</para>
+<para
+>In het contextmenu van deze lijst zijn extra menu-items om lettertypen te printen en een lettertype te exporteren naar een zip-archief.</para>
+
+<sect3 id="font-hiding">
+<title
+>In- en uitschakelen</title>
+<para
+>Gebruikers met veel lettertypen kunnen het zinvol vinden om bepaalde lettertypen op bepaalde momenten in te schakelen (of te activeren). Om dit mogelijk te maken, kan deze module individuele lettertypen of gehele groepen lettertypen uit te schakelen. Uitschakelen van een lettertype verwijdert deze niet uit het systeem, het verbergt deze zodat deze niet langer in programma's verschijnen. Opnieuw inschakelen zorgt er voor dat het lettertype weer kan worden gebruikt.</para>
+</sect3>
+
+</sect2>
+
+<sect2 id="font-list">
+<title
+>Lijst met lettertypen</title>
+<para
+>De hoofdlijst geeft de geïnstalleerde lettertypen, gegroepeerd via de familienaam hiervan - het getal in rechte haken is het aantal geïnstalleerde stijlen in die familie. &eg; het lettertype <quote
+>Times</quote
+> kan getoond worden als: <itemizedlist
+> <listitem>
+    <para
+>Times [4]</para>
+    <itemizedlist>
+        <listitem
+><para
+>Normaal</para
+></listitem>
+        <listitem
+><para
+>Cursief</para
+></listitem>
+        <listitem
+><para
+>Vet</para
+></listitem>
+        <listitem
+><para
+>Vet-cursief</para
+></listitem>
+    </itemizedlist>
+</listitem>
+</itemizedlist>
+</para>
+
+<para
+>Om een lettertype te installeren drukt u op de knop <guibutton
+>Uit bestand installeren...</guibutton
+> en selecteert u het gewenste lettertype vanuit de bestandsdialoog. De geselecteerde groep lettertypen bepaalt waar de lettertypen zullen worden geïnstalleerd.</para>
+<para
+>Om lettertypen te de-installeren, selecteert u de betreffende lettertypen uit de lijst en drukt op de knop <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+></para>
+
+<para
+>Klik met de &RMB; om een contextmenu te openen met enige extra acties zoals <guilabel
+>Inschakelen</guilabel
+>, <guilabel
+>Uitschakelen</guilabel
+>, <guilabel
+>Afdrukken</guilabel
+>, <ulink url="help:/kfontviewer/index.html"
+><guilabel
+>In lettertypeweergave openen</guilabel
+></ulink
+> en <guilabel
+>Herladen</guilabel
+>.</para>
+
+<sect3 id="font-filter">
+<title
+>Filteren van lettertypen</title>
+<para
+>Een tekstveld bovenaan de voorbeeldlettertypen stelt u in staat de lijst van lettertypen te filteren. U kunt lettertypen filteren op basis van verschillende categorieën:</para>
+        <orderedlist>
+        <listitem
+><para
+>Familie.</para
+></listitem>
+        <listitem
+><para
+>Stijl.</para
+></listitem>
+        <listitem
+><para
+>Foundry.</para
+></listitem>
+        <listitem
+><para
+>FontConfig overeenkomst. Dit stelt u in staat om uw familienaam in te voeren en de familie te zien die fontconfig in het echt zou gebruiken.</para
+></listitem>
+        <listitem
+><para
+>Type lettertypebestand.</para
+></listitem>
+        <listitem
+><para
+>Bestandsnaam van lettertype.</para
+></listitem>
+        <listitem
+><para
+>Lettertypebestandslocatie.</para
+></listitem>
+        <listitem
+><para
+>Schrijfsysteem.</para
+></listitem>
+        </orderedlist>
+</sect3>
+
+<sect3 id="get-new-fonts">
+<title
+>Nieuwe lettertypen ophalen</title>
+<para
+>Nieuwe lettertypen kunnen geïnstalleerd worden uit lokale bestanden of worden gedownload uit <guilabel
+>Vers van de pers</guilabel
+>. Het item <guilabel
+>Nieuwe lettertypen ophalen...</guilabel
+> in de hulpmiddelknop (boven de groepenlijst), stelt u in staat om lettertypen te installeren uit het internet. De op deze manier gedownloade lettertypen zullen worden geïnstalleerd in uw groep <quote
+>Persoonlijke lettertypen</quote
+>. Om ze systeembreed te installeren, moet u ze verplaatsen naar de groep <quote
+>Systeemlettertypen</quote
+> - dit worden gedaan door de lettertypen naar de groep <quote
+>Systeemlettertypen</quote
+> te slepen en vereist beheerderrechten.</para>
+</sect3>
+
+</sect2>
+
+<sect2 id="font-duplicates">
+<title
+>Dubbele lettertypen</title>
+<para
+>Als u veel lettertypen in uw systeem hebt geïnstalleerd dan is het mogelijk dat u duplicaten hebt.</para
+> 
+<para
+>Klik op de knop <guilabel
+>Zoek duplicaten...</guilabel
+> om een eenvoudig hulpmiddel te openen dat uw systeem doorzoekt op lettertypen waaraan meervoudige bestanden zijn gekoppeld. Bijvoorbeeld, als u <quote
+>times.ttf</quote
+> en <quote
+>times.TTF</quote
+> hebt geïnstalleerd in <quote
+>/usr/local/share/fonts</quote
+> het onderliggende lettertypemechanisme (<quote
+>FontConfig</quote
+>) genoemd zal alleen een van deze zien. Dus, als u het lettertype de-installeerd, dan verschijnt het opnieuw, omdat alleen een van de bestanden verwijderd zou zijn. Dit hulpmiddel uitvoeren produceert een dialoog waarin elk lettertype met meervoudige bestanden wordt getoond en de overeenkomstige lijst met bestanden. Om een bestand voor verwijdering te selecteren, klik op de kolom met een prullenbakpictogram.</para>
+</sect2>
+
+<sect2 id="font-preview">
+<title
+>Voorbeeld</title>
+<para
+>Dit toont een voorbeeldtekst in verschillende afmetingen van een lettertype.</para>
+<para
+>Door het contextmenu te gebruiken kunt u in- en uitzoomen, een voorbeeldtype selecteren (<guilabel
+>Standaard voorbeeld</guilabel
+> of <guilabel
+>Alle tekens</guilabel
+>) en de voorbeeldtekst wijzigen.</para>
+
+<para
+>Start de toepassing &kfontview; als u extra voorbeeldtypen voor Unicode Blocks nodig heeft. </para>
+</sect2>
+</sect1>
+</article>

@@ -1,0 +1,65 @@
+# translation of krunner_shellrunner.po to Kannada
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Shankar Prasad <svenkate@redhat.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner_shellrunner\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-27 00:45+0000\n"
+"PO-Revision-Date: 2009-01-07 15:20+0530\n"
+"Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
+"Language-Team: Kannada <en@li.org>\n"
+"Language: kn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: shellrunner.cpp:35
+#, kde-format
+msgid "Finds commands that match :q:, using common shell syntax"
+msgstr ""
+
+#: shellrunner.cpp:36
+#, fuzzy, kde-format
+#| msgid "Run in &terminal window"
+msgid "Run in Terminal Window"
+msgstr "ಆದೇಶತೆರೆ ಕಿಟಕಿಯಲ್ಲಿ ಚಲಾಯಿಸು(&t)"
+
+#: shellrunner.cpp:54
+#, kde-format
+msgid "Run %1"
+msgstr "%1 ಅನ್ನು ಚಲಾಯಿಸು"
+
+#~ msgid "Enter the user you want to run the application as here."
+#~ msgstr "ಅನ್ವಯವನ್ನು ಚಲಾಯಿಸಬೇಕಿರುವ ಬಳಕೆದಾರರ ಹೆಸರನ್ನು ಇಲ್ಲಿ ನಮೂದಿಸಿ."
+
+#~ msgid "User&name:"
+#~ msgstr "ಬಳಕೆದಾರ ಹೆಸರು(&n):"
+
+#~ msgid "Enter the password here for the user you specified above."
+#~ msgstr "ನೀವು ಮೇಲೆ ತಿಳಿಸಿದ ಬಳಕೆದಾರರ ಗುಪ್ತಪದವನ್ನು ನಮೂದಿಸಿ."
+
+#~ msgid "Pass&word:"
+#~ msgstr "ಗುಪ್ತಪದ(&w):"
+
+#~ msgid "Run in &terminal window"
+#~ msgstr "ಆದೇಶತೆರೆ ಕಿಟಕಿಯಲ್ಲಿ ಚಲಾಯಿಸು(&t)"
+
+#~ msgid "Run as a different &user"
+#~ msgstr "ಬೇರೊಂದು ಬಳಕೆದಾರನಾಗಿ ಚಲಾಯಿಸು(&u)"
+
+#~ msgid "&Priority:"
+#~ msgstr "ಆದ್ಯತೆ(&P):"
+
+#~ msgid "Run with a &different priority"
+#~ msgstr "ಬೇರೆ ಆದ್ಯತೆಯೊಂದಿಗೆ ಚಲಾಯಿಸು(&d)"
+
+#~ msgid "Low"
+#~ msgstr "ಕಡಿಮೆ"
+
+#~ msgid "High"
+#~ msgstr "ಹೆಚ್ಚಿನ"

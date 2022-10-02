@@ -1,0 +1,89 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Swedish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="formats" lang="&language;">
+<articleinfo>
+<title
+>Format</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Krishna.Tateneni; &Krishna.Tateneni.mail;</author>
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+ </authorgroup>
+
+	  <date
+>2015-05-18</date>
+	  <releaseinfo
+>Plasma 5.3</releaseinfo>
+
+	  <keywordset>
+		<keyword
+>KDE</keyword>
+		<keyword
+>Systeminställningar</keyword>
+		<keyword
+>plats</keyword>
+		<keyword
+>land</keyword>
+		<keyword
+>språk</keyword>
+		<keyword
+>tal</keyword>
+		<keyword
+>valuta</keyword>
+	  </keywordset>
+</articleinfo>
+
+<para
+>Den här modulen i &kde;:s systeminställningar låter dig välja anpassningsalternativ som beror på den region i världen där du råkar bo. </para>
+
+<para
+>I de flesta fall kan du helt enkelt välja regionen, och de övriga alternativen ställs in på ett lämpligt sätt. </para>
+
+<para
+>Längst ner i modulen visas exempel på hur inställningarna ser ut och vilka måttenheter som används. Förutom tal kan man se hur valutavärden, datum och tider visas med långt och kort format. När någon av inställningarna ändras, visar förhandsgranskningen ändringarnas effekt innan de verkställs. </para>
+
+<para
+>Kombinationsrutan <guilabel
+>Region</guilabel
+> innehåller listan över tillgängliga länder, och visar initialt landet som för närvarande är valt. Om rutan visar <quote
+>Förval</quote
+> har inget land ställts in och landet som är inställt av systemets används, vilket också visas. </para>
+
+<para
+>Om olika individuella inställningar behövs, aktivera <guilabel
+>Detaljerade inställningar</guilabel
+> och välj landets format för <guilabel
+>Siffror</guilabel
+>, <guilabel
+>Tid</guilabel
+>, <guilabel
+>Valuta</guilabel
+>, <guilabel
+>Måttenheter</guilabel
+> eller <guilabel
+>Gruppering och sortering</guilabel
+> i kombinationsrutorna. </para>
+
+</article>

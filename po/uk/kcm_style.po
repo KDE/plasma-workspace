@@ -1,0 +1,410 @@
+# Translation of kcm_style.po to Ukrainian
+# Copyright (C) 2002-2020 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Eugene Onischenko <oneugene@ukr.net>, 2002, 2003.
+# Andriy Rysin <rysin@kde.org>, 2002, 2003, 2004, 2006.
+# Ivan Petrouchtchak <fr.ivan@ukrainian-orthodox.org>, 2005, 2006, 2007, 2008.
+# Yuri Chornoivan <yurchor@ukr.net>, 2008, 2009, 2010, 2011, 2012, 2017, 2019, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_style\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"PO-Revision-Date: 2021-08-15 08:46+0300\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.12.0\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: gtkpage.cpp:59
+#, kde-format
+msgid "%1 is not a valid GTK Theme archive."
+msgstr "%1 не є коректним архівом теми GTK."
+
+#: kcmstyle.cpp:161 kcmstyle.cpp:168
+#, kde-format
+msgid "There was an error loading the configuration dialog for this style."
+msgstr "Сталися помилки під час завантаження вікна налаштування цього стилю."
+
+#: kcmstyle.cpp:274
+#, kde-format
+msgid "Failed to apply selected style '%1'."
+msgstr "Не вдалося застосувати вибраний стиль «%1»."
+
+#: package/contents/ui/EffectSettingsPopup.qml:32
+#, kde-format
+msgid "Show icons:"
+msgstr "Показ піктограм:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:33
+#, kde-format
+msgid "On buttons"
+msgstr "На кнопках"
+
+#: package/contents/ui/EffectSettingsPopup.qml:44
+#, kde-format
+msgid "In menus"
+msgstr "У меню"
+
+#: package/contents/ui/EffectSettingsPopup.qml:56
+#, kde-format
+msgid "Main toolbar label:"
+msgstr "Мітка головної панелі інструментів:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "None"
+msgstr "Немає"
+
+#: package/contents/ui/EffectSettingsPopup.qml:59
+#, kde-format
+msgid "Text only"
+msgstr "Лише текст"
+
+#: package/contents/ui/EffectSettingsPopup.qml:60
+#, kde-format
+msgid "Beside icons"
+msgstr "Збоку від піктограм"
+
+#: package/contents/ui/EffectSettingsPopup.qml:61
+#, kde-format
+msgid "Below icon"
+msgstr "Під піктограмою"
+
+#: package/contents/ui/EffectSettingsPopup.qml:76
+#, kde-format
+msgid "Secondary toolbar label:"
+msgstr "Мітка додаткової панелі інструментів:"
+
+#: package/contents/ui/GtkStylePage.qml:18
+#, kde-format
+msgid "GNOME/GTK Application Style"
+msgstr "Стиль програм GNOME/GTK"
+
+#: package/contents/ui/GtkStylePage.qml:44
+#, kde-format
+msgid "GTK theme:"
+msgstr "Тема GTK:"
+
+#: package/contents/ui/GtkStylePage.qml:69
+#, kde-format
+msgid "Preview…"
+msgstr "Перегляд…"
+
+#: package/contents/ui/GtkStylePage.qml:88
+#, kde-format
+msgid "Install from File…"
+msgstr "Встановити з файла…"
+
+#: package/contents/ui/GtkStylePage.qml:93
+#, kde-format
+msgid "Get New GNOME/GTK Application Styles…"
+msgstr "Отримати нові стилі програм GNOME/GTK…"
+
+#: package/contents/ui/GtkStylePage.qml:109
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr "Виберіть архів теми GTK"
+
+#: package/contents/ui/GtkStylePage.qml:111
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr "архів теми GTK (*.tar.xz *.tar.gz *.tar.bz2)"
+
+#: package/contents/ui/main.qml:17
+#, kde-format
+msgid ""
+"This module allows you to modify the visual appearance of applications' user "
+"interface elements."
+msgstr ""
+"За допомогою цього модуля можна змінювати зовнішній вигляд елементів "
+"інтерфейсу програм."
+
+#: package/contents/ui/main.qml:96
+#, kde-format
+msgid "Configure Style…"
+msgstr "Налаштувати стиль…"
+
+#: package/contents/ui/main.qml:116
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr "Налаштування піктограм та панелей інструментів"
+
+#: package/contents/ui/main.qml:132
+#, kde-format
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "Налаштувати стиль програм GNOME/GTK…"
+
+#: styleconfdialog.cpp:21
+#, kde-format
+msgid "Configure %1"
+msgstr "Налаштувати %1"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "Вкладка 1"
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, kde-format
+msgid "Push Button"
+msgstr "Кнопка"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, kde-format
+msgid "Combo box"
+msgstr "Комбінований список"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "Позначка"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "Перемикач"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:133
+#, kde-format
+msgid "Tab 2"
+msgstr "Вкладка 2"
+
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, kde-format
+msgid "Application style"
+msgstr "Стиль програм"
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, kde-format
+msgid "Show icons on buttons"
+msgstr "Показувати піктограми на кнопках"
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, kde-format
+msgid "Show icons in menus"
+msgstr "Показувати піктограми у меню"
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, kde-format
+msgid "Main toolbar label"
+msgstr "Мітка головної панелі інструментів"
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, kde-format
+msgid "Secondary toolbar label"
+msgstr "Мітка додаткової панелі інструментів"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Andriy Rysin,Eugene Onischenko,о.Іван Петрущак"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "rysin@kde.org,oneugene@ukr.net,fr.ivan@ukrainian-orthodox.org"
+
+#~ msgid "Application Style"
+#~ msgstr "Стиль вікон програм"
+
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
+#~ msgstr "© Karol Szwed, Daniel Molkentin, 2002, © Kai Uwe Broulik, 2019"
+
+#~ msgid "Karol Szwed"
+#~ msgstr "Karol Szwed"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#~ msgid "Kai Uwe Broulik"
+#~ msgstr "Kai Uwe Broulik"
+
+#~ msgid "GTK3 theme:"
+#~ msgstr "Тема GTK3:"
+
+#~ msgid "Download New GNOME/GTK Application Styles..."
+#~ msgstr "Отримання нових стилів програм GNOME/GTK…"
+
+#~ msgid "Download New GNOME/GTK2 Application Styles..."
+#~ msgstr "Отримання нових стилів програм GNOME/GTK2…"
+
+#~ msgid "GNOME/GTK2 Application Styles"
+#~ msgstr "Стиль програм GNOME/GTK2"
+
+#~ msgid "Download New GNOME/GTK3 Application Styles..."
+#~ msgstr "Отримання нових стилів програм GNOME/GTK3…"
+
+#~ msgid "GNOME/GTK3 Application Styles"
+#~ msgstr "Стиль програм GNOME/GTK3"
+
+#~ msgid "Get New GNOME/GTK2 Application Styles..."
+#~ msgstr "Отримати нові стилі програм GNOME/GTK2…"
+
+#~ msgid "Get New GNOME/GTK3 Application Styles..."
+#~ msgstr "Отримати нові стилі програм GNOME/GTK3…"
+
+#~ msgid "Unable to Load Dialog"
+#~ msgstr "Неможливо завантажити діалогове вікно"
+
+#~ msgid "No description available."
+#~ msgstr "Немає опису."
+
+#~ msgid ""
+#~ "This area shows a preview of the currently selected style without having "
+#~ "to apply it to the whole desktop."
+#~ msgstr ""
+#~ "Тут показується попередній перегляд вибраного стилю без потреби у його "
+#~ "застосуванні."
+
+#~ msgid ""
+#~ "Here you can choose from a list of predefined widget styles (e.g. the way "
+#~ "buttons are drawn) which may or may not be combined with a theme "
+#~ "(additional information like a marble texture or a gradient)."
+#~ msgstr ""
+#~ "Тут ви можете вибрати зі списку визначених стилів віджетів (наприклад, "
+#~ "спосіб малювання кнопок) той, який за бажанням може бути скомбінований з "
+#~ "темою (додаткова інформація, наприклад мармурова текстура або градієнт)."
+
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "some important buttons."
+#~ msgstr ""
+#~ "Якщо буде позначено цей пункт, у програмах буде показано маленькі "
+#~ "піктограми на важливих кнопках."
+
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "most menu items."
+#~ msgstr ""
+#~ "Якщо буде позначено цей пункт, в програмах буде показано маленькі "
+#~ "піктограми поряд з більшістю пунктів меню."
+
+#~ msgid ""
+#~ "<p><b>No text:</b> Shows only icons on toolbar buttons. Best option for "
+#~ "low resolutions.</p><p><b>Text only: </b>Shows only text on toolbar "
+#~ "buttons.</p><p><b>Text beside icons: </b> Shows icons and text on toolbar "
+#~ "buttons. Text is aligned beside the icon.</p><b>Text below icons: </b> "
+#~ "Shows icons and text on toolbar buttons. Text is aligned below the icon."
+#~ msgstr ""
+#~ "<p><b>Без тексту:</b> На кнопках панелі інструментів (пенала) буде "
+#~ "показано лише піктограми. Доцільно на малих моніторах.</p><p><b>Лише "
+#~ "текст: </b>На кнопках в пеналі буде показано тільки текст.</p><p><b>Текст "
+#~ "збоку від піктограм: </b> На кнопках панелі інструментів буде показано "
+#~ "піктограми та текст.Текст показуватиметься збоку від піктограм.</p> "
+#~ "<b>Текст під піктограмами: </b>На кнопках панелі інструментів буде "
+#~ "показано піктограми та текст. Текст показуватиметься під піктограмами."
+
+#~ msgid "Toolbars"
+#~ msgstr "Панелі інструментів"
+
+#~ msgid "No Text"
+#~ msgstr "Без тексту"
+
+#~ msgid "Widget Style"
+#~ msgstr "Стиль віджетів"
+
+#~ msgid "Widget style:"
+#~ msgstr "Стиль віджетів:"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Fine Tuning"
+#~ msgstr "&Точне налаштування"
+
+#~ msgid "Description: %1"
+#~ msgstr "Опис: %1"
+
+#~ msgid ""
+#~ "This page allows you to choose details about the widget style options"
+#~ msgstr ""
+#~ "За допомогою цієї сторінки ви можете докладно налаштувати параметри стилю "
+#~ "віджетів"
+
+#~ msgid "Group Box"
+#~ msgstr "Група"
+
+#~ msgid "KDE Style Module"
+#~ msgstr "Модуль стиля KDE"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "Menubar"
+#~ msgstr "Смужка меню"
+
+#~ msgid "Menubar style:"
+#~ msgstr "Стиль смужки меню:"
+
+#~ msgid "In application"
+#~ msgstr "У програмі"
+
+#~ msgid "Title bar button"
+#~ msgstr "Кнопка на смужці заголовка"
+
+#~ msgid "Global Menu widget"
+#~ msgstr "Віджет загального меню"
+
+#~ msgid "Your changes will take effect only on application restart."
+#~ msgstr ""
+#~ "Зміни у параметрах набудуть чинності лише після перезапуску програми."
+
+#~ msgid ""
+#~ "<p>Changes to the visibility of menu icons will only affect newly started "
+#~ "applications.</p>"
+#~ msgstr ""
+#~ "<p>Зміни у видимості піктограм меню стосуватимуться лише заново запущених "
+#~ "програм.</p>"
+
+#~ msgctxt "@title:window"
+#~ msgid "Menu Icons Changed"
+#~ msgstr "Змінено режим показу піктограм"
+
+#~ msgid "Top screen menubar"
+#~ msgstr "Смужка меню у верхній частині екрана"
+
+#~ msgid "Only export"
+#~ msgstr "Лише експорт"
+
+#~ msgid "Graphical effects:"
+#~ msgstr "Графічні ефекти:"
+
+#~ msgid "Low display resolution and Low CPU"
+#~ msgstr "Низька роздільна здатність і незначне навантаження на ЦП"
+
+#~ msgid "High display resolution and Low CPU"
+#~ msgstr "Висока роздільна здатність і незначне навантаження на ЦП"
+
+#~ msgid "Low display resolution and High CPU"
+#~ msgstr "Низька роздільна здатність і значне навантаження на ЦП"
+
+#~ msgid "High display resolution and High CPU"
+#~ msgstr "Висока роздільна здатність і значне навантаження на ЦП"
+
+#~ msgid "Low display resolution and Very High CPU"
+#~ msgstr "Низька роздільна здатність і дуже значне навантаження на ЦП"
+
+#~ msgid "High display resolution and Very High CPU"
+#~ msgstr "Висока роздільна здатність і дуже значне навантаження на ЦП"
+
+#~ msgid ""
+#~ "If you enable this option, KDE Applications will run internal animations."
+#~ msgstr ""
+#~ "Якщо буде позначено цей пункт, програми KDE будуть виконувати внутрішні "
+#~ "анімації."

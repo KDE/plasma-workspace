@@ -1,0 +1,345 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Brazilian-Portuguese "INCLUDE">
+]>
+<article id="autostart" lang="&language;">
+<articleinfo>
+<title
+>Iniciar automaticamente</title>
+<authorgroup>
+<author
+>&Anne-Marie.Mahfouf;</author>
+<othercredit role="translator"
+><firstname
+>Marcus</firstname
+><surname
+>Gama</surname
+><affiliation
+><address
+><email
+>marcus.gama@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+><othercredit role="translator"
+><firstname
+>André Marcelo</firstname
+><surname
+>Alvarenga</surname
+><affiliation
+><address
+><email
+>alvarenga@kde.org</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>22/07/2015</date>
+<releaseinfo
+>&plasma; 5.4</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Configuração do Sistema</keyword>
+<keyword
+>iniciar automaticamente</keyword>
+<keyword
+>arquivo 'desktop'</keyword>
+<keyword
+>arquivo de programa</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_autostart">
+<title
+>Gerenciador de Inicialização</title>
+
+<para
+>Este módulo é uma ferramenta de configuração para gerenciar os programas que iniciam juntamente com o seu &plasma;. Ele permite adicionar programas que sejam iniciados automaticamente durante a inicialização ou desligamento da sua sessão do &plasma;, bem como gerenciá-los.</para>
+
+<note
+><para
+>Por favor, observe que, neste módulo, todas as alterações são aplicadas imediatamente.</para
+></note>
+
+<para
+>O programa analisa as pastas <filename
+>$HOME/.config/autostart/</filename
+>, <filename class="directory"
+>$HOME/.config/plasma-workspace/env</filename
+> e <filename class="directory"
+>$HOME/.config/plasma-workspace/shutdown</filename
+> para verificar quais programas e scripts estão presentes e os apresenta. Ele permite-lhe gerenciá-los facilmente. </para>
+
+<note
+><para
+>A funcionalidade de início automático tem um erro e, por enquanto, não é possível executar um script após o início da sua sessão do &plasma;.</para
+></note>
+
+<note
+><para
+>Lembre-se que você pode modificar a localização da sua pasta <filename class="directory"
+>Autostart</filename
+> em <menuchoice
+><guimenu
+>Aplicativos</guimenu
+> <guimenuitem
+>Localização</guimenuitem
+></menuchoice
+> da categoria <guilabel
+>Personalização</guilabel
+> das &systemsettings; e definir uma pasta diferente de <filename class="directory"
+>$HOME/.config/autostart</filename
+>.</para
+></note>
+
+<para
+>Leia também a <ulink url="help:/kcontrol/kcmsmserver"
+>Sessão do Ambiente de Trabalho</ulink
+> e os <ulink url="help:/kcontrol/kded"
+>Serviços em Segundo Plano</ulink
+> para obter informações sobre a configuração do comportamento na inicialização da sessão do &plasma;.</para>
+
+<para
+>Alguns aplicativos do &kde; lidam com o comportamento de início automático por si só, &eg;, poderá ativar ou desativar o início automático de um aplicativo na caixa de diálogo de configurações (&kalarm;) ou usar o <menuchoice
+><guimenu
+>Arquivo</guimenu
+><guimenuitem
+>Sair</guimenuitem
+></menuchoice
+> (&konversation;, &kopete;). Caso contrário, os aplicativos continuarão a execução na área de notificação e serão reiniciados na próxima sessão. </para>
+
+<sect2 id="migration">
+<title
+>Migração do &kde; Workspaces 4</title>
+<para
+>Para migrar a sua configuração pessoal do início automático do &kde; Workspaces 4:</para>
+<simplelist>
+<member
+>Copie os arquivos '.desktop' da pasta <filename class="directory"
+>$HOME/.kde/Autostart</filename
+> para a pasta <filename class="directory"
+>$HOME/.config/autostart</filename
+></member>
+<member
+>Copie os arquivos de scripts de inicialização da pasta <filename class="directory"
+>$HOME/.kde/Autostart</filename
+> para a pasta <filename class="directory"
+>$HOME/.config/plasma-workspace/env</filename
+></member>
+<member
+>Copie os arquivos de scripts de desligamento da pasta <filename class="directory"
+>$HOME/.kde/Autostart</filename
+> para a pasta <filename class="directory"
+>$HOME/.config/plasma-workspace/shutdown</filename
+></member>
+</simplelist>
+</sect2>
+
+<!--FIXME Disabling Autostart Files Provided By Your Distribution -> http://www.sharpley.org.uk/node/8 -->
+
+<sect2 id="current">
+<title
+>Visualização dos arquivos</title>
+<para
+>O componente principal do módulo mostra os programas que são carregados quando o &plasma; inicia, termina ou mesmo antes de iniciar.</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Nome</guilabel
+></term>
+<listitem>
+<para
+>Você não poderá modificar esta coluna. Ela apresenta o nome do programa que deseja iniciar com o &plasma;. O nome é extraído do arquivo 'Desktop', a partir do campo 'Name' de um programa, correspondendo ao nome do arquivo do programa. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Comando</guilabel
+></term>
+<listitem>
+<para
+>Esta coluna apresenta os comandos que são executados para iniciar o programa. Os comandos de um programa podem ser modificados através do botão de <guibutton
+>Propriedades</guibutton
+> ou com um clique duplo na linha do programa. O comando é extraído a partir do arquivo 'Desktop', usando o campo 'Exec'. </para>
+<para
+>Para um script, o comando é o caminho do script e não pode ser modificado. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Estado</guilabel
+></term>
+<listitem>
+<para
+>Esta opção só está disponível para os programas através dos arquivos 'Desktop'. Você poderá manter um programa na pasta <filename class="directory"
+>Autostart</filename
+> mas querer desativar a sua execução na inicialização do &plasma;. Desmarcar o status de <guilabel
+>Ativo</guilabel
+> desativará a execução do programa na inicialização. </para>
+<para
+>Desmarcar o status de <guilabel
+>Ativo</guilabel
+> define a variável 'Hidden' do arquivo 'Desktop' como sendo verdadeira na pasta <filename class="directory"
+>Autostart</filename
+>. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Executar Em</guilabel
+></term>
+<listitem>
+<para
+>Os programas (arquivos 'desktop') só poderão ser executados na inicialização. Os programas genéricos poderão ser executados na <guilabel
+>Inicialização</guilabel
+>, <guilabel
+>Desligamento</guilabel
+> ou na <guilabel
+>Antes de iniciar o KDE</guilabel
+>. Esta coluna permite-lhe alterar quando o seu programa é executado. A inicialização é quando o &plasma; é iniciado, o encerramento ocorre quando você sair do &plasma; e a opção antes de iniciar o KDE é anterior ao início do &plasma;. </para>
+<para
+>Os programas e os arquivos 'desktop' definidos para executar na <guilabel
+>Inicialização</guilabel
+> são copiados ou terão ligações simbólicas em <filename class="directory"
+>$HOME/.config/autostart</filename
+> e serão executados na inicialização do &plasma;. </para>
+<para
+>Os programas configurados para serem executados no <guilabel
+>Encerramento</guilabel
+> são copiados ou terão ligações simbólicas para a pasta <filename class="directory"
+>$HOME/.config/plasma-workspace/shutdown</filename
+>, sendo executados automaticamente quando o &plasma; for encerrado, após o fim da sessão do usuário. </para>
+<para
+>Os programas configurados para executar na <guilabel
+>Antes de iniciar o &kde;</guilabel
+> são copiados ou terão ligações simbólicas para a pasta <filename class="directory"
+>$HOME/.config/plasma-workspace/env</filename
+> e serão executados durante o inicialização do &plasma; (o programa <filename
+>startkde</filename
+> irá procurar por programas nesta pasta). </para>
+<note
+><para
+>Apenas os programas com extensão <filename class="extension"
+>.sh</filename
+> serão lidos pela &kde; no <guilabel
+>Antes de iniciar o &kde;</guilabel
+> e <guilabel
+>Encerramento</guilabel
+>. </para
+></note>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+
+<sect2 id="actions">
+<title
+>Ações</title>
+<para
+>Do lado direito, você terá alguns botões para mudar a forma como a Inicialização é configurada. Você poderá adicionar programas, removê-los ou alterar as suas propriedades. </para>
+
+<variablelist>
+<varlistentry
+><term
+><guibutton
+>Adicionar Programa</guibutton
+></term>
+<listitem>
+<para
+>Clicar neste botão irá mostrar a janela padrão do &plasma; para <guilabel
+>Escolher um aplicativo</guilabel
+> e permite-lhe escolher o programa que deseja iniciar. Depois de escolher o programa, clicar em <guibutton
+>OK</guibutton
+> irá mostrar as propriedades deste programa. </para>
+<para
+>Isto irá copiar o arquivo Desktop do programa para a sua pasta <filename class="directory"
+>Autostart</filename
+>. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Adicionar um Programa</guibutton
+></term>
+<listitem>
+<para
+>Este botão abre uma janela que lhe pede a localização do programa que deseja adicionar. Se manter a opção <guilabel
+>Criar como ligação simbólica</guilabel
+> assinalada (como está por padrão), então o programa será adicionado como uma ligação simbólica. Se desligar esta opção, então o programa será copiado para a pasta local correspondente. </para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guibutton
+>Remover</guibutton
+></term>
+<listitem>
+<para
+>O botão Remover irá apagar imediatamente o arquivo Desktop do programa ou a ligação simbólica da pasta <filename class="directory"
+>Autostart</filename
+>. </para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guibutton
+>Propriedades</guibutton
+></term>
+<listitem>
+<para
+>Este botão (somente ativo para programas &ie; arquivos Desktop) permite-lhe modificar as propriedades do programa. Você terá propriedades gerais, propriedades de permissões, uma previsão (quando for aplicável) e propriedades relacionadas com o aplicativo, no caso dos programas. </para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guibutton
+>Avançado</guibutton
+></term>
+<listitem>
+<para
+>Este botão só se aplica aos programas (&ie;, arquivo 'Desktop'). Irá aparecer uma janela que lhe perguntará se deseja que o programa se inicie automaticamente apenas no &plasma; (e não nos outros ambientes de trabalho que possa executar). Por padrão, o programa irá iniciar automaticamente em todos os ambientes de trabalho. Se assinalar a opção <guilabel
+>Iniciar automaticamente apenas no KDE</guilabel
+>, o programa irá iniciar automaticamente somente quando iniciar o ambiente de trabalho do &plasma;. </para>
+<para
+>Isto configura o valor 'KDE' no campo 'OnlyShowIn' do arquivo 'Desktop' do programa. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

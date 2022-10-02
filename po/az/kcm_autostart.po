@@ -1,0 +1,209 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# Xəyyam Qocayev <xxmn77@gmail.com>, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:50+0000\n"
+"PO-Revision-Date: 2022-07-03 13:02+0400\n"
+"Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
+"Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
+"Language: az\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 22.04.2\n"
+
+#: autostartmodel.cpp:288
+#, kde-format
+msgid "\"%1\" is not an absolute url."
+msgstr "\"%1\" mütləq bir url deyil."
+
+#: autostartmodel.cpp:291
+#, kde-format
+msgid "\"%1\" does not exist."
+msgstr "\"%1\" mövcud deyil."
+
+#: autostartmodel.cpp:294
+#, kde-format
+msgid "\"%1\" is not a file."
+msgstr "\"%1\" fayl deyil."
+
+#: autostartmodel.cpp:297
+#, kde-format
+msgid "\"%1\" is not readable."
+msgstr "\"%1\" oxunabilən deyil."
+
+#: package/contents/ui/main.qml:40
+#, kde-format
+msgid "Make Executable"
+msgstr "İcra olunabilən edin"
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "The file '%1' must be executable to run at logout."
+msgstr ""
+"Sİstemdən çıxarkən işə salmaq üçün \"%1\" faylı icra ediləbilən olmalıdır."
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid "The file '%1' must be executable to run at login."
+msgstr ""
+"Sistemə girişdə işə düşməsi üçün \"%1\" faylı icra ediləbilən olmalıdır."
+
+#: package/contents/ui/main.qml:89
+#, kde-format
+msgid "Properties"
+msgstr "Xüsusiyyətlər"
+
+#: package/contents/ui/main.qml:95
+#, kde-format
+msgid "Remove"
+msgstr "Silmək"
+
+#: package/contents/ui/main.qml:106
+#, kde-format
+msgid "Applications"
+msgstr "Tətbiqlər"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Login Scripts"
+msgstr "Sistemə Giriş Skriptləri"
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Pre-startup Scripts"
+msgstr "Yenidən başlatma skriptləri"
+
+#: package/contents/ui/main.qml:115
+#, kde-format
+msgid "Logout Scripts"
+msgstr "Sistemdən Çıxış Skriptləri"
+
+#: package/contents/ui/main.qml:124
+#, kde-format
+msgid "No user-specified autostart items"
+msgstr "İstifadəçi avtomatik başladılacaq elementləri göstərilməyib"
+
+#: package/contents/ui/main.qml:125
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Click the <interface>Add…</interface> button below to add some"
+msgstr ""
+"Əlavə etmək üçün aşağıda <interface>Əlavə edin...</interface> düyməsinə vurun"
+
+#: package/contents/ui/main.qml:139
+#, kde-format
+msgid "Choose Login Script"
+msgstr "Giriş Skriptini Seçmək"
+
+#: package/contents/ui/main.qml:160
+#, kde-format
+msgid "Choose Logout Script"
+msgstr "Çıxış Skriptini Seçmək"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "Add…"
+msgstr "Əlavə edin…"
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Add Application…"
+msgstr "Tətbiq əlavə edin..."
+
+#: package/contents/ui/main.qml:199
+#, kde-format
+msgid "Add Login Script…"
+msgstr "Giriş skripti əlavə edin..."
+
+#: package/contents/ui/main.qml:205
+#, kde-format
+msgid "Add Logout Script…"
+msgstr "Çıxış skript əlavə edin..."
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Xəyyam Qocayev"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "xxmn77@gmail.com"
+
+#~ msgid "Autostart"
+#~ msgstr "Avtomatik başlama"
+
+#~ msgid "Session Autostart Manager Control Panel Module"
+#~ msgstr "Sesiyanı Avtobaşlama Meneceri İdarəetmə Paneli Modulu"
+
+#~ msgid "Copyright © 2006–2020 Autostart Manager team"
+#~ msgstr "Müəllif Hüquqları © 2006–2010 Avtomatik Başlatma Meneceri Komandası"
+
+#~ msgid "Stephen Leaf"
+#~ msgstr "Stephen Leaf"
+
+#~ msgid "Montel Laurent"
+#~ msgstr "Montel Laurent"
+
+#~ msgid "Maintainer"
+#~ msgstr "Müşayətçi"
+
+#~ msgid "Nicolas Fella"
+#~ msgstr "Nicolas Fella"
+
+#~ msgid "Add..."
+#~ msgstr "Əlavə etmək..."
+
+#~ msgid "Shell script path:"
+#~ msgstr "Üz qabığı senarisi yolu:"
+
+#~ msgid "Create as symlink"
+#~ msgstr "Symlink kimi yaratmaq"
+
+#~ msgid "Autostart only in Plasma"
+#~ msgstr "Avtobaşlama yalnız Plazmadadır"
+
+#~ msgid "Name"
+#~ msgstr "Ad"
+
+#~ msgid "Command"
+#~ msgstr "Əmrlər"
+
+#~ msgid "Status"
+#~ msgstr "Vəziyyət"
+
+#~ msgctxt ""
+#~ "@title:column The name of the column that decides if the program is run "
+#~ "on session startup, on session shutdown, etc"
+#~ msgid "Run On"
+#~ msgstr "Başlatmaq"
+
+#~ msgid "Session Autostart Manager"
+#~ msgstr "Sessiyanı Avtobaşlama meneceri"
+
+#~ msgctxt "The program will be run"
+#~ msgid "Enabled"
+#~ msgstr "Aktiv edilib"
+
+#~ msgctxt "The program won't be run"
+#~ msgid "Disabled"
+#~ msgstr "Qeyri-aktiv edilib"
+
+#~ msgid "Desktop File"
+#~ msgstr "İş Masasıfaylı"
+
+#~ msgid "Script File"
+#~ msgstr "Skript faylı"
+
+#~ msgid "Add Program..."
+#~ msgstr "Proqram əlavə etmək..."
+
+#~ msgid "Startup"
+#~ msgstr "Başlatmaq"
+
+#~ msgid "Before session startup"
+#~ msgstr "Sesiya başlaması ərəfəsində"

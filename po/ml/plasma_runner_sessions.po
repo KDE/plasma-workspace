@@ -1,0 +1,184 @@
+# translation of krunner_sessions.po to
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the krunner_sessions.po package.
+#
+# ANI PETER|അനി പീറ്റര്‍ <peter.ani@gmail.com>, 2008.
+# പ്രവീണ്‍ അരിമ്പ്രത്തൊടിയില്‍ <pravi.a@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: krunner_sessions\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-01 00:45+0000\n"
+"PO-Revision-Date: 2021-03-08 13:23+0000\n"
+"Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
+"Language-Team: SMC <smc.org.in>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Weblate 4.4\n"
+
+#: sessionrunner.cpp:28 sessionrunner.cpp:64
+#, kde-format
+msgctxt "log out command"
+msgid "logout"
+msgstr "logout"
+
+#: sessionrunner.cpp:28
+#, kde-format
+msgid "Logs out, exiting the current desktop session"
+msgstr "നിലവിലെ ഡെസ്ക്ടോപ്പ് സെഷനിൽ നിന്ന് പുറത്തുകടന്ന് ലോഗ് ഔട്ട് ചെയ്യുന്നു"
+
+#: sessionrunner.cpp:29 sessionrunner.cpp:81
+#, kde-format
+msgctxt "shut down computer command"
+msgid "shut down"
+msgstr "shutdown"
+
+#: sessionrunner.cpp:29
+#, kde-format
+msgid "Turns off the computer"
+msgstr "കമ്പ്യൂട്ടര്‍ ഓഫാക്കുന്നു"
+
+#: sessionrunner.cpp:33 sessionrunner.cpp:90
+#, kde-format
+msgctxt "lock screen command"
+msgid "lock"
+msgstr "lock"
+
+#: sessionrunner.cpp:33
+#, kde-format
+msgid "Locks the current sessions and starts the screen saver"
+msgstr "ഇപ്പോഴത്തെ സെഷനുകൾ ലോക്കുചെയ്ത് സ്ക്രീൻ സേവർ ആരംഭിക്കുന്നു"
+
+#: sessionrunner.cpp:36 sessionrunner.cpp:72
+#, kde-format
+msgctxt "restart computer command"
+msgid "restart"
+msgstr "restart"
+
+#: sessionrunner.cpp:36
+#, kde-format
+msgid "Reboots the computer"
+msgstr "കമ്പ്യൂട്ടർ പുനഃരാരംഭിക്കുന്നു"
+
+#: sessionrunner.cpp:37 sessionrunner.cpp:73
+#, kde-format
+msgctxt "restart computer command"
+msgid "reboot"
+msgstr "reboot"
+
+#: sessionrunner.cpp:40
+#, kde-format
+msgctxt "switch user command"
+msgid "switch"
+msgstr "switch"
+
+#: sessionrunner.cpp:41
+#, kde-format
+msgctxt "switch user command"
+msgid "switch :q:"
+msgstr "switch :q:"
+
+#: sessionrunner.cpp:42
+#, kde-format
+msgid ""
+"Switches to the active session for the user :q:, or lists all active "
+"sessions if :q: is not provided"
+msgstr ""
+":q: ഉപയോക്താവിനായി സജീവ സെഷനിലേക്ക് മാറുന്നു, :q: നൽകിയിട്ടില്ലെങ്കിൽ എല്ലാ സജീവ "
+"സെഷനുകളും പട്ടികപ്പെടുത്തുന്നു"
+
+#: sessionrunner.cpp:45 sessionrunner.cpp:130
+#, kde-format
+msgid "switch user"
+msgstr "ഉപയോക്താവിനെ മാറ്റുക"
+
+#: sessionrunner.cpp:45
+#, kde-format
+msgid "Starts a new session as a different user"
+msgstr "മറ്റൊരു ഉപയോക്താവായി ഒരു പുതിയ സെഷൻ ആരംഭിക്കുന്നു"
+
+#: sessionrunner.cpp:46 sessionrunner.cpp:130
+#, kde-format
+msgid "new session"
+msgstr "പുതിയ പ്രവര്‍ത്തനവേള"
+
+#: sessionrunner.cpp:50
+#, kde-format
+msgid "Lists all sessions"
+msgstr "എല്ലാ സെഷനുകളും പട്ടികപ്പെടുത്തുന്നു"
+
+#: sessionrunner.cpp:64
+#, kde-format
+msgid "log out"
+msgstr "പുറത്തിറങ്ങുക"
+
+#: sessionrunner.cpp:66
+#, kde-format
+msgctxt "log out command"
+msgid "Logout"
+msgstr "Logout"
+
+#: sessionrunner.cpp:75
+#, kde-format
+msgid "Restart the computer"
+msgstr "കമ്പ്യൂട്ടര്‍ വീണ്ടും ആരംഭിക്കുക"
+
+#: sessionrunner.cpp:82
+#, kde-format
+msgctxt "shut down computer command"
+msgid "shutdown"
+msgstr "shutdown"
+
+#: sessionrunner.cpp:84
+#, kde-format
+msgid "Shut down the computer"
+msgstr "കമ്പ്യൂട്ടര്‍ നിർത്തുന്നു"
+
+#: sessionrunner.cpp:93
+#, kde-format
+msgid "Lock the screen"
+msgstr "സ്ക്രീന്‍ പൂട്ടുക"
+
+#: sessionrunner.cpp:115
+#, kde-format
+msgctxt "User sessions"
+msgid "sessions"
+msgstr "സെഷനുകൾ"
+
+#: sessionrunner.cpp:136
+#, fuzzy, kde-format
+#| msgid "switch user"
+msgid "Switch User"
+msgstr "ഉപയോക്താവിനെ മാറ്റുക"
+
+#: sessionrunner.cpp:211
+#, kde-format
+msgid "Warning - New Session"
+msgstr "മുന്നറിയിപ്പു് - പുതിയ സെഷൻ"
+
+#: sessionrunner.cpp:212
+#, kde-format
+msgid ""
+"<p>You have chosen to open another desktop session.<br />The current session "
+"will be hidden and a new login screen will be displayed.<br />An F-key is "
+"assigned to each session; F%1 is usually assigned to the first session, F%2 "
+"to the second session and so on. You can switch between sessions by pressing "
+"Ctrl, Alt and the appropriate F-key at the same time. Additionally, the "
+"Plasma Panel and Desktop menus have actions for switching between sessions.</"
+"p>"
+msgstr ""
+"<p>മറ്റൊരു സെഷൻ തുടങ്ങാന്‍ നിങ്ങള്‍ തെരഞ്ഞെടുത്തിരിയ്ക്കുന്നു.<br />ഇപ്പോഴുള്ള സെഷൻ ഒളിപ്പിയ്ക്കുകയും "
+"പുതിയ അകത്തുകയറുന്നതിനുള്ള തിരശ്ശീല കാണിയ്ക്കുന്നതുമായിരിയ്ക്കും..<br />ഒരു F-കീ ഓരോ സെഷനും നല്‍"
+"കിയിട്ടുണ്ടു്; F%1 സാധാരണയായി ആദ്യത്തെ സെഷനാണ് നല്‍കാറുള്ളതു്, F%2 രണ്ടാമത്തേതിനും എന്ന "
+"ക്രമത്തില്‍. ഈ സെഷനുകള്‍ക്കിടയില്‍ പരസ്പരം മാറുന്നതിനു് കണ്ട്രോള്‍, ആള്‍ട്ട് പിന്നെ യോജിച്ച F-കീ "
+"എന്നിവ ഒരേ സമയം അമര്‍ത്താം. ഇതു് കൂടാതെ, കെഡിഇയിലെ പ്ലാസ്മ പാളിയിലും പണിയിടത്തിലെ "
+"വിഭവസൂചിയിലും സെഷനുകൾ തമ്മില്‍ മാറുവാനുള്ള നടപടികളുണ്ടു്.</p>"
+
+#~ msgid "New Session"
+#~ msgstr "പുതിയ പ്രവര്‍ത്തനവേള"
+
+#~ msgid "&Start New Session"
+#~ msgstr "പുതിയ പ്രവര്‍ത്തനവേള &തുടങ്ങുക"

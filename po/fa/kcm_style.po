@@ -1,0 +1,599 @@
+# translation of kcmstyle.po to Persian
+# Nazanin Kazemi <kazemi@itland.ir>, 2006, 2007.
+# Tahereh Dadkhahfar <dadkhahfar@itland.ir>, 2006.
+# MaryamSadat Razavi <razavi@itland.ir>, 2006.
+# Nasim Daniarzadeh <daniarzadeh@itland.ir>, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmstyle\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"PO-Revision-Date: 2007-09-02 15:11+0330\n"
+"Last-Translator: Nazanin Kazemi <kazemi@itland.ir>\n"
+"Language-Team: Persian <kde-i18n-fa@kde.org>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: gtkpage.cpp:59
+#, kde-format
+msgid "%1 is not a valid GTK Theme archive."
+msgstr ""
+
+#: kcmstyle.cpp:161 kcmstyle.cpp:168
+#, kde-format
+msgid "There was an error loading the configuration dialog for this style."
+msgstr "هنگام بارگذاری محاوره پیکربندی برای این سبک، خطایی رخ داد."
+
+#: kcmstyle.cpp:274
+#, kde-format
+msgid "Failed to apply selected style '%1'."
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:32
+#, fuzzy, kde-format
+#| msgid "Sho&w icons on buttons"
+msgid "Show icons:"
+msgstr "&نمایش شمایلهای روی دکمه‌‌‌ها‌"
+
+#: package/contents/ui/EffectSettingsPopup.qml:33
+#, fuzzy, kde-format
+#| msgid "Radio button"
+msgid "On buttons"
+msgstr "دکمه رادیویی"
+
+#: package/contents/ui/EffectSettingsPopup.qml:44
+#, kde-format
+msgid "In menus"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:56
+#, kde-format
+msgid "Main toolbar label:"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "None"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:59
+#, fuzzy, kde-format
+#| msgid "Text Only"
+msgid "Text only"
+msgstr "فقط متن"
+
+#: package/contents/ui/EffectSettingsPopup.qml:60
+#, fuzzy, kde-format
+#| msgid "Text Alongside Icons"
+msgid "Beside icons"
+msgstr "متن در کنار شمایلها"
+
+#: package/contents/ui/EffectSettingsPopup.qml:61
+#, fuzzy, kde-format
+#| msgid "Text Under Icons"
+msgid "Below icon"
+msgstr "متن زیر شمایلها"
+
+#: package/contents/ui/EffectSettingsPopup.qml:76
+#, kde-format
+msgid "Secondary toolbar label:"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:18
+#, fuzzy, kde-format
+#| msgid "Application Level"
+msgid "GNOME/GTK Application Style"
+msgstr "سطح کاربرد"
+
+#: package/contents/ui/GtkStylePage.qml:44
+#, kde-format
+msgid "GTK theme:"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:69
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgid "Preview…"
+msgstr "پیش‌نمایش"
+
+#: package/contents/ui/GtkStylePage.qml:88
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:93
+#, fuzzy, kde-format
+#| msgid "Application Level"
+msgid "Get New GNOME/GTK Application Styles…"
+msgstr "سطح کاربرد"
+
+#: package/contents/ui/GtkStylePage.qml:109
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:111
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: package/contents/ui/main.qml:17
+#, fuzzy, kde-format
+#| msgid ""
+#| "<h1>Style</h1>This module allows you to modify the visual appearance of "
+#| "user interface elements, such as the widget style and effects."
+msgid ""
+"This module allows you to modify the visual appearance of applications' user "
+"interface elements."
+msgstr ""
+"<h1>سبک</h1>این پیمانه به شما اجازه می‌دهد که ظاهر تصویری عناصر واسط کاربر، "
+"نظیر سبک عنصر و جلوه‌ها را تغییر دهید."
+
+#: package/contents/ui/main.qml:96
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure Style…"
+msgstr "&پیکربندی...‌"
+
+#: package/contents/ui/main.qml:116
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr ""
+
+#: package/contents/ui/main.qml:132
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "&پیکربندی...‌"
+
+#: styleconfdialog.cpp:21
+#, kde-format
+msgid "Configure %1"
+msgstr "پیکربندی %1"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "تب ۱"
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, fuzzy, kde-format
+#| msgid "Button"
+msgid "Push Button"
+msgstr "دکمه"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, fuzzy, kde-format
+#| msgid "Combobox"
+msgid "Combo box"
+msgstr "جعبه ترکیب"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "جعبه بررسی"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "دکمه رادیویی"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:133
+#, kde-format
+msgid "Tab 2"
+msgstr "تب ۲"
+
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Application Level"
+msgid "Application style"
+msgstr "سطح کاربرد"
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Sho&w icons on buttons"
+msgid "Show icons on buttons"
+msgstr "&نمایش شمایلهای روی دکمه‌‌‌ها‌"
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, fuzzy, kde-format
+#| msgid "Sho&w icons on buttons"
+msgid "Show icons in menus"
+msgstr "&نمایش شمایلهای روی دکمه‌‌‌ها‌"
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, kde-format
+msgid "Main toolbar label"
+msgstr ""
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, kde-format
+msgid "Secondary toolbar label"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "نازنین کاظمی"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kazemi@itland.ir"
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "Application Style"
+#~ msgstr "سطح کاربرد"
+
+#, fuzzy
+#~| msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
+#~ msgstr "(ح) ۲۰۰۲ Karol Szwed و Daniel Molkentin"
+
+#~ msgid "Karol Szwed"
+#~ msgstr "Karol Szwed"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "Download New GNOME/GTK2 Application Styles..."
+#~ msgstr "سطح کاربرد"
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "GNOME/GTK2 Application Styles"
+#~ msgstr "سطح کاربرد"
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "Download New GNOME/GTK3 Application Styles..."
+#~ msgstr "سطح کاربرد"
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "GNOME/GTK3 Application Styles"
+#~ msgstr "سطح کاربرد"
+
+#~ msgid "Unable to Load Dialog"
+#~ msgstr "قادر به بارگذاری محاوره نیست"
+
+#~ msgid "No description available."
+#~ msgstr "توصیفی وجود ندارد."
+
+#~ msgid ""
+#~ "This area shows a preview of the currently selected style without having "
+#~ "to apply it to the whole desktop."
+#~ msgstr ""
+#~ "این ناحیه، پیش‌نمایشی از سبک برگزیده جاری را بدون اعمال آن به تمام رومیزی "
+#~ "نمایش می‌دهد."
+
+#~ msgid ""
+#~ "Here you can choose from a list of predefined widget styles (e.g. the way "
+#~ "buttons are drawn) which may or may not be combined with a theme "
+#~ "(additional information like a marble texture or a gradient)."
+#~ msgstr ""
+#~ "در اینجا می‌توانید از فهرست سبکهای عنصر پیش‌تعریف‌شده، انتخاب کنید )مثلاً "
+#~ "روشی که دکمه‌ها ترسیم می‌شوند( که ممکن است با یک چهره ترکیب شود یا "
+#~ "نشود )اطلاعات اضافی مانند بافت مرمر یا گرادیان(."
+
+#, fuzzy
+#~| msgid ""
+#~| "If you enable this option, KDE Applications will show small icons "
+#~| "alongside some important buttons."
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "some important buttons."
+#~ msgstr ""
+#~ "اگر این گزینه را فعال سازید، کاربردهای KDE  شمایلهای کوچک را در کنار بعضی "
+#~ "دکمه‌های مهم نمایش می‌دهد."
+
+#, fuzzy
+#~| msgid ""
+#~| "If you enable this option, KDE Applications will show small icons "
+#~| "alongside some important buttons."
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "most menu items."
+#~ msgstr ""
+#~ "اگر این گزینه را فعال سازید، کاربردهای KDE  شمایلهای کوچک را در کنار بعضی "
+#~ "دکمه‌های مهم نمایش می‌دهد."
+
+#, fuzzy
+#~| msgid ""
+#~| "<p><b>Icons only:</b> Shows only icons on toolbar buttons. Best option "
+#~| "for low resolutions.</p><p><b>Text only: </b>Shows only text on toolbar "
+#~| "buttons.</p><p><b>Text alongside icons: </b> Shows icons and text on "
+#~| "toolbar buttons. Text is aligned alongside the icon.</p><b>Text under "
+#~| "icons: </b> Shows icons and text on toolbar buttons. Text is aligned "
+#~| "below the icon."
+#~ msgid ""
+#~ "<p><b>No text:</b> Shows only icons on toolbar buttons. Best option for "
+#~ "low resolutions.</p><p><b>Text only: </b>Shows only text on toolbar "
+#~ "buttons.</p><p><b>Text beside icons: </b> Shows icons and text on toolbar "
+#~ "buttons. Text is aligned beside the icon.</p><b>Text below icons: </b> "
+#~ "Shows icons and text on toolbar buttons. Text is aligned below the icon."
+#~ msgstr ""
+#~ "<p><b>فقط شمایلها:</b> فقط شمایلهای روی دکمه‌های میله ابزار را نمایش "
+#~ "می‌دهد. بهترین گزینه برای دقتهای کم.</p><p><b>فقط متن: </b>فقط متن روی "
+#~ "دکمه میله ابزار را نمایش می‌دهد. </p><p><b>متن کنار شمایل: </b> شمایلها و "
+#~ "متن روی دکمه‌های میله ابزار را نمایش می‌دهد. متن کنار شمایل همتراز می‌شود. </"
+#~ "p><b>متن زیر شمایلها: </b> شمایلها و متن روی دکمه‌های میله ابزار را نمایش "
+#~ "می‌دهد. متن زیر شمایلها تراز می‌شود."
+
+#, fuzzy
+#~| msgid "&Toolbar"
+#~ msgid "Toolbars"
+#~ msgstr "&میله ابزار‌"
+
+#, fuzzy
+#~| msgid "Widget Style"
+#~ msgid "Widget Style"
+#~ msgstr "سبک عنصر"
+
+#, fuzzy
+#~| msgid "Widget Style"
+#~ msgid "Widget style:"
+#~ msgstr "سبک عنصر"
+
+#~ msgid "Description: %1"
+#~ msgstr "توصیف: %1"
+
+#~ msgid "Group Box"
+#~ msgstr "جعبه گروهی"
+
+#~ msgid "KDE Style Module"
+#~ msgstr "پیمانه سبک KDE"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "In application"
+#~ msgstr "سطح کاربرد"
+
+#, fuzzy
+#~| msgid "Application Level"
+#~ msgid "Global Menu widget"
+#~ msgstr "سطح کاربرد"
+
+#, fuzzy
+#~ msgid ""
+#~ "If you enable this option, KDE Applications will run internal animations."
+#~ msgstr ""
+#~ "اگر این گزینه را فعال سازید، کاربردهای KDE  شمایلهای کوچک را در کنار بعضی "
+#~ "دکمه‌های مهم نمایش می‌دهد."
+
+#~ msgid "kcmstyle"
+#~ msgstr "kcmstyle"
+
+#~ msgid "Icons Only"
+#~ msgstr "فقط شمایلها"
+
+#, fuzzy
+#~| msgid "Text pos&ition:"
+#~ msgctxt "@label:listbox"
+#~ msgid "Text pos&ition of toolbar elements:"
+#~ msgstr "&موقعیت متن:‌"
+
+#, fuzzy
+#~| msgid "&Style"
+#~ msgctxt "@title:tab"
+#~ msgid "&Style"
+#~ msgstr "&سبک‌"
+
+#~ msgid ""
+#~ "This page allows you to enable various widget style effects. For best "
+#~ "performance, it is advisable to disable all effects."
+#~ msgstr ""
+#~ "این صفحه به شما اجازه می‌دهد که جلوه‌های سبک عنصر گوناگون را فعال کنید. "
+#~ "برای کارایی بیشتر، توصیه می‌شود که همه جلوه‌ها غیرفعال شوند."
+
+#, fuzzy
+#~| msgid "High&light buttons under mouse"
+#~ msgctxt "@option:check"
+#~ msgid "High&light buttons under mouse"
+#~ msgstr "&دکمه‌های مشخص زیر موشی‌"
+
+#, fuzzy
+#~| msgid "E&nable tooltips"
+#~ msgctxt "@option:check"
+#~ msgid "E&nable tooltips"
+#~ msgstr "&فعال‌سازی نکته ابزارها‌"
+
+#~ msgid ""
+#~ "If this option is selected, toolbar buttons will change their color when "
+#~ "the mouse cursor is moved over them."
+#~ msgstr ""
+#~ "اگر این گزینه انتخاب شود، هنگام حرکت مکان‌نمای موشی روی دکمه‌های میله "
+#~ "ابزار، رنگشان را تغییر می‌دهند."
+
+#~ msgid ""
+#~ "If you check this option, the KDE application will offer tooltips when "
+#~ "the cursor remains over items in the toolbar."
+#~ msgstr ""
+#~ "اگر این گزینه را علامت بزنید، هنگامی‌که مکان‌نما بالای فقره‌ها در میله ابزار "
+#~ "باقی می‌ماند، کاربرد KDE نکته ابزارهایی را پیشنهاد می‌کند."
+
+#~ msgid "&Effects"
+#~ msgstr "&جلوه‌ها‌"
+
+#~ msgid "Show tear-off handles in &popup menus"
+#~ msgstr "نمایش جدا کردن گرداننده‌ها در گزینگان &بالاپر‌"
+
+#~ msgid "&Enable GUI effects"
+#~ msgstr "&فعال‌سازی جلوه‌های ونک‌"
+
+#~ msgid "Disable"
+#~ msgstr "غیرفعال"
+
+#~ msgid "Animate"
+#~ msgstr "پویا‌نمایی"
+
+#~ msgid "Combobo&x effect:"
+#~ msgstr "جلوه &جعبه ترکیب:‌"
+
+#~ msgid "Fade"
+#~ msgstr "محو"
+
+#~ msgid "&Tool tip effect:"
+#~ msgstr "جلوه نکته &ابزار:‌"
+
+#~ msgid "Make Translucent"
+#~ msgstr "شفاف‌سازی"
+
+#~ msgid "&Menu effect:"
+#~ msgstr "جلوه &گزینگان:‌"
+
+#~ msgid "Me&nu tear-off handles:"
+#~ msgstr "گرداننده‌های جداشده &گزینگان:‌"
+
+#~ msgid "Menu &drop shadow"
+#~ msgstr "سایه &افتادن گزینگان‌"
+
+#~ msgid "Software Tint"
+#~ msgstr "ته‌رنگ نرم‌افزار"
+
+#~ msgid "Software Blend"
+#~ msgstr "مخلوط نرم‌افزار"
+
+#~ msgid "XRender Blend"
+#~ msgstr "مخلوط XRender"
+
+#~ msgid "0%"
+#~ msgstr "۰٪"
+
+#~ msgid "50%"
+#~ msgstr "۵۰٪"
+
+#~ msgid "100%"
+#~ msgstr "۱۰۰٪"
+
+#~ msgid "Menu trans&lucency type:"
+#~ msgstr "نوع &نیمه شفافی گزینگان:‌"
+
+#~ msgid "Menu &opacity:"
+#~ msgstr "&تاری گزینگان:‌"
+
+#~ msgid "Transparent tool&bars when moving"
+#~ msgstr "&میله ابزارهای شفاف هنگام حرکت‌"
+
+#~ msgid ""
+#~ "<qt>Selected style: <b>%1</b><br /><br />One or more effects that you "
+#~ "have chosen could not be applied because the selected style does not "
+#~ "support them; they have therefore been disabled.<br /><br /></qt>"
+#~ msgstr ""
+#~ "<qt>سبک برگزیده: <b>%1</b><br /><br />یک یا بیش از یک جلوه‌ای که انتخاب "
+#~ "کرده‌اید را نمی‌توان اعمال کرد، زیرا سبک برگزیده، آنها را پشتیبانی نمی‌کند؛ "
+#~ "بنابراین غیرفعال شده‌اند.<br /><br /></qt>"
+
+#~ msgid "Menu translucency is not available.<br />"
+#~ msgstr "نیمه شفافی گزینگان وجود ندارد.<br />"
+
+#~ msgid "Menu drop-shadows are not available."
+#~ msgstr "سایه‌های افتاده گزینگان وجود ندارد."
+
+#~ msgid ""
+#~ "If you check this box, you can select several effects for different "
+#~ "widgets like combo boxes, menus or tooltips."
+#~ msgstr ""
+#~ "اگر این جعبه را علامت بزنید، می‌توانید چندین جلوه را برای عناصر مختلف، "
+#~ "نظیر جعبه‌های ترکیب، گزینگان یا نکته ابزارها انتخاب کنید."
+
+#~ msgid ""
+#~ "<p><b>Disable: </b>do not use any combo box effects.</p>\n"
+#~ "<b>Animate: </b>Do some animation."
+#~ msgstr ""
+#~ "<p><b>غیرفعال: </b>از هیچ جلوه جعبه ترکیبی استفاده نکنید.</p>\n"
+#~ "<b>پویانمایی: </b>چند پویانمایی انجام دهید."
+
+#~ msgid ""
+#~ "<p><b>Disable: </b>do not use any tooltip effects.</p>\n"
+#~ "<p><b>Animate: </b>Do some animation.</p>\n"
+#~ "<b>Fade: </b>Fade in tooltips using alpha-blending."
+#~ msgstr ""
+#~ "<p><b>غیرفعال: </b>از هیچ جلوه نکته ابزاری استفاده نکنید.</p>\n"
+#~ "<b>پویانمایی: </b>چند پویانمایی انجام دهید.\n"
+#~ "<b>محو: </b>نکته ابزارها را با استفاده از مخلوط آلفا محو کنید."
+
+#~ msgid ""
+#~ "<p><b>Disable: </b>do not use any menu effects.</p>\n"
+#~ "<p><b>Animate: </b>Do some animation.</p>\n"
+#~ "<p><b>Fade: </b>Fade in menus using alpha-blending.</p>\n"
+#~ "<b>Make Translucent: </b>Alpha-blend menus for a see-through effect. (KDE "
+#~ "styles only)"
+#~ msgstr ""
+#~ "<p><b>غیرفعال: </b>از هیچ جلوه گزینگانی استفاده نکنید.</p>\n"
+#~ "<b>پویانمایی: </b>چند پویانمایی انجام دهید.\n"
+#~ "<b>محو: </b>گزینگان را با استفاده از پرداخت آلفا محو کنید.\n"
+#~ "<b>نیمه شفاف‌سازی </b>دیدن گزینگان مخلوط آلفا - از طریق جلوه )فقط سبک KDE("
+
+#~ msgid ""
+#~ "When enabled, all popup menus will have a drop-shadow, otherwise drop-"
+#~ "shadows will not be displayed. At present, only KDE styles can have this "
+#~ "effect enabled."
+#~ msgstr ""
+#~ "وقتی غیرفعال شد، گزینگان بالاپر دارای یک سایه افتاده می‌باشد، در غیر این "
+#~ "صورت سایه‌های افتاده نمایش داده نمی‌شوند. در حال حاضر، فقط سبکهای KDE  این "
+#~ "جلوه را فعال کرده‌اند."
+
+#~ msgid ""
+#~ "<p><b>Software Tint: </b>Alpha-blend using a flat color.</p>\n"
+#~ "<p><b>Software Blend: </b>Alpha-blend using an image.</p>\n"
+#~ "<p><b>XRender Blend: </b>Use the XFree RENDER extension for image "
+#~ "blending (if available). This method may be slower than the Software "
+#~ "routines on non-accelerated displays, but may however improve performance "
+#~ "on remote displays.</p>\n"
+#~ msgstr ""
+#~ "<p><b>ته‌رنگ نرم‌افزار: </b>مخلوط آلفا با استفاده از یک رنگ تخت.</p>\n"
+#~ "<p><b>مخلوط نرم‌افزار: </b>مخلوط آلفا با استفاده از یک تصویر.</p>\n"
+#~ "<p><b>مخلوط XRender: </b>از پسوند پرداخت XFree، برای مخلوط تصویر استفاده "
+#~ "کنید )اگر وجود داشته باشد(. ممکن است این روش کندتر از روالهای نرم‌افزار بر "
+#~ "روی صفحه نمایشهای بدون شتاب‌ده باشد، ولی به هر حال کارایی صفحه نمایشهای "
+#~ "دور را بهبود می‌بخشد.</p>\n"
+
+#~ msgid "By adjusting this slider you can control the menu effect opacity."
+#~ msgstr "با میزان کردن این لغزان می‌توانید تاری جلوه گزینگان را کنترل کنید."
+
+#~ msgid ""
+#~ "<b>Note:</b> that all widgets in this combobox do not apply to Qt-only "
+#~ "applications."
+#~ msgstr ""
+#~ "<b>نکته:</b> این که همه عناصر در این جعبه ترکیب به کاربردهای فقط Qt اعمال "
+#~ "نمی‌شوند."
+
+#~ msgid ""
+#~ "If you check this box, the toolbars will be transparent when moving them "
+#~ "around."
+#~ msgstr ""
+#~ "اگر این جعبه را انتخاب کنید، میله ابزارها هنگام حرکت به اطراف شفاف می‌شوند."
+
+#~ msgid ""
+#~ "If you enable this option some pop-up menus will show so called tear-off "
+#~ "handles. If you click them, you get the menu inside a widget. This can be "
+#~ "very helpful when performing the same action multiple times."
+#~ msgstr ""
+#~ "در صورت فعال‌سازی این گزینه، چند گزینه بالاپر نمایش داده می‌شوند، که "
+#~ "گرداننده‌های جداشده نامیده می‌شوند. اگر آنها را فشار دهید، گزینگان درون یک "
+#~ "عنصر را به دست می‌آورید. هنگامی که یک کنش چند بار اجرا می‌شود، بسیار مفید "
+#~ "است."
+
+#~ msgid "%"
+#~ msgstr "٪"

@@ -1,0 +1,382 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Ukrainian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmnotify" lang="&language;">
+<title
+>Параметри системних сповіщень</title>
+<articleinfo>
+
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+><personname
+><firstname
+>Kai Uwe</firstname
+> <surname
+>Broulik</surname
+></personname
+> <email
+>kde@broulik.de</email
+></author>
+<othercredit role="translator"
+><firstname
+>Юрій</firstname
+><surname
+>Чорноіван</surname
+><affiliation
+><address
+><email
+>yurchor@ukr.net</email
+></address
+></affiliation
+><contrib
+>Переклад українською</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>16 квітня 2021 року</date>
+<releaseinfo
+>Плазма 5.21</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Системні параметри</keyword>
+<keyword
+>системні сповіщення</keyword>
+<keyword
+>сповіщення</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="sys-notify">
+<title
+>Параметри системних сповіщень</title>
+
+<para
+>Плазма, як і всі програми, має інформувати користувача про виникнення проблем, завершення виконання завдань або про якусь подію. Плазма використовує набір <quote
+>Системних сповіщень</quote
+> для того, щоб інформувати користувача про поточні події.</para>
+
+<para
+>За допомогою цього модуля ви зможете визначити дії Плазми у відповідь на кожну подію.</para>
+
+<sect2 id="notification-settings">
+<title
+>Параметри сповіщення</title>
+
+<sect3 id="do-not-disturb">
+<title
+>Режим «Не турбувати»</title>
+
+    <para
+>У цьому режимі буде вимкнено усіх візуальні та більшість звукових сповіщень, і ви зможете зосередитися на виконанні вашого поточного завдання. За допомогою параметрів у цьому розділі ви зможете налаштувати умови, за яких Плазма автоматично вмикатиме режим «Не турбувати».</para>
+
+    <variablelist>
+
+    <varlistentry>
+    <term
+><guiicon
+>Коли екрани віддзеркалюються</guiicon
+></term>
+    <listitem
+><para
+>Автоматично вмикати режим «Не турбувати», якщо відбувається віддзеркалення екрана, наприклад, під час презентації.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Увімкнути у режимі оприлюднення екрана</guiicon
+></term>
+    <listitem
+><para
+>Автоматично вмикати режим «Не турбувати», якщо відбувається спільне використання екрана, наприклад, під час лекції в інтернеті.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Показувати критичні сповіщення</guiicon
+></term>
+    <listitem
+><para
+>Визначає, чи слід показувати критичні сповіщення, зокрема про те, що заряд акумулятора майже вичерпано, навіть у режимі «Не турбувати».</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Перемикання за допомогою:</guiicon
+></term>
+    <listitem
+><para
+>Загальне клавіатурне скорочення, яким можна скористатися для вмикання і вимикання режиму «Не турбувати» у будь-який зручний момент часу.</para
+></listitem>
+    </varlistentry>
+
+    </variablelist>
+
+</sect3>
+
+<sect3 id="notification-filters">
+    <title
+>Фільтри</title>
+
+    <variablelist>
+
+    <varlistentry>
+    <term
+>Критичні сповіщення: <guiicon
+>Завжди згори</guiicon
+></term>
+    <listitem
+><para
+>Утримувати вікна критичних сповіщень, зокрема сповіщення щодо того, що заряд акумулятора майже вичерпано, завжди над іншими вікнами. Таким чином, можна забезпечити показу сповіщень навіть під час повноекранного перегляду відео чи презентації.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+>Звичайні сповіщення: <guiicon
+>Завжди згори</guiicon
+></term>
+    <listitem
+><para
+>Утримувати вікна звичайних сповіщень, зокрема повідомлень, завжди над іншими вікнами. Таким чином, можна забезпечити показу сповіщень навіть під час повноекранного перегляду відео чи презентації.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+>Сповіщення із низькою пріоритетністю: <guiicon
+>Показати контекстне вікно</guiicon
+> і <guiicon
+>Показувати у журналі</guiicon
+></term>
+    <listitem
+><para
+>Визначає, чи слід показувати сповіщення із низькою пріоритетністю, зокрема повідомлення щодо зміни композиції у програвачі, на контекстних панелях або у журналі сповіщень.</para
+></listitem>
+    </varlistentry>
+
+    </variablelist>
+</sect3>
+
+<sect3 id="notification-behavior">
+    <title
+>Поведінка</title>
+
+    <variablelist>
+
+    <varlistentry>
+    <term
+>Контекстна панель: <guiicon
+>Поруч із піктограмою сповіщень</guiicon
+></term>
+    <listitem
+><para
+>Показувати контекстні панелі сповіщень поряд із розташуванням піктограми сповіщень на панелі.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Вибрати нетипове розташування…</guiicon
+></term>
+    <listitem
+><para
+>Надає вам змогу вибрати фіксований кут екрана, у якому буде показано контекстні панелі сповіщень.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+        <term
+><guiicon
+>Приховати за:</guiicon
+></term>
+    <listitem
+><para
+>Визначає кількість секунд, протягом яких буде показано контекстну панель сповіщення. Ви можете вибрати будь-яке значення у діапазоні від 1 до 120 секунд.</para
+></listitem>
+    </varlistentry>
+
+    </variablelist>
+</sect3>
+
+<sect3 id="progress-and-badges">
+    <title
+>Поступ програми та пункти</title>
+
+    <sect4 id="application-progress">
+        <title
+>Поступ програми</title>
+
+        <para
+>За допомогою цього розділу можна керувати, як буде показано поступ у роботі програм, зокрема копіюванні або отриманні файлів.</para>
+
+        <variablelist>
+
+        <varlistentry>
+        <term
+><guiicon
+>Показувати у вікні задач</guiicon
+></term>
+        <listitem
+><para
+>Розфарбовувати пункт вікна на панелі залежно від поступу у роботі програми.</para
+></listitem>
+        </varlistentry>
+
+        <varlistentry>
+        <term
+><guiicon
+>Показувати у сповіщеннях</guiicon
+></term>
+        <listitem
+><para
+>Показувати контекстні сповіщення під час поступу у роботі програми.</para
+></listitem>
+        </varlistentry>
+
+        <varlistentry>
+        <term
+><guiicon
+>Не закривати контекстну панель протягом поступу</guiicon
+></term>
+        <listitem
+><para
+>Визначає, має залишатися контекстна панель видимою протягом усього періоду поступу у роботі програми чи її слід приховати. Панель завжди з'являтиметься на екрані у момент завершення завдання, вдалого чи ні.</para
+></listitem>
+        </varlistentry>
+
+        </variablelist>
+    </sect4>
+
+    <sect4 id="badges">
+        <title
+>Пункти сповіщень</title>
+
+        <variablelist>
+
+        <varlistentry>
+        <term
+><guiicon
+>Показувати у вікні задач</guiicon
+></term>
+        <listitem
+><para
+>Дозволяє програмам показувати пункти даних, наприклад кількість непрочитаних повідомлень, на панелі.</para
+></listitem>
+        </varlistentry>
+
+        </variablelist>
+    </sect4>
+
+</sect3>
+
+</sect2>
+
+<sect2 id="application-settings">
+<title
+>Параметри програм</title>
+
+<para
+>Натисканням кнопки <guilabel
+>Налаштувати...</guilabel
+> наприкінці списку можна відкрити сторінку параметрів програми, за допомогою якої ви можете налаштувати сповіщення для окремої програми або служби.</para>
+
+<para
+>Скористайтеся бічною панеллю ліворуч для вибору запису з категорії <guilabel
+>Програми</guilabel
+> або <guilabel
+>Служби системи</guilabel
+>.</para>
+
+<para
+>Пункти загальних контекстних панелей попередження, а також пункти звукового супроводу запуску та завершення роботи системи розташовано під пунктом <guilabel
+>Робочий простір Плазми</guilabel
+>.</para>
+
+<para
+>Програми, які не мають належної ідентифікації, зокрема скрипти командної оболонки, можна налаштувати за допомогою пункту <guilabel
+>Інші програми</guilabel
+>.</para>
+
+<variablelist>
+
+    <varlistentry>
+    <term
+><guiicon
+>Показувати контекстні вікна</guiicon
+></term>
+    <listitem
+><para
+>Визначає, чи може ця програма показувати контекстні панелі сповіщень.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Показувати у режимі «Не турбувати»</guiicon
+></term>
+    <listitem
+><para
+>Визначає, чи може ця програма показувати контекстні панелі сповіщень навіть у режимі «Не турбувати».</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Показувати у журналі</guiicon
+></term>
+    <listitem
+><para
+>Визначає, чи будуть зберігатися сповіщення цієї програми у журналі сповіщень.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Показувати пункти сповіщень</guiicon
+></term>
+    <listitem
+><para
+>Визначає, чи зможе ця програма показувати пункти даних, наприклад кількість непрочитаних повідомлень, на панелі.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Налаштувати події…</guiicon
+></term>
+    <listitem
+><para
+>Для програм &kde; ви також можете налаштувати кожне зі сповіщень окремо.</para
+></listitem>
+    </varlistentry>
+
+</variablelist>
+
+</sect2>
+
+</sect1>
+
+</article>

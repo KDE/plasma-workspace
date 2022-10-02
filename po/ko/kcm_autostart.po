@@ -1,0 +1,215 @@
+# Translation of kcm_autostart to Korean.
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kdebase package.
+# Shinjo Park <kde@peremen.name>, 2008, 2010, 2013, 2015, 2017, 2020, 2021, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_autostart\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:50+0000\n"
+"PO-Revision-Date: 2022-07-13 11:18+0200\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: autostartmodel.cpp:288
+#, kde-format
+msgid "\"%1\" is not an absolute url."
+msgstr "\"%1\"은(는) 절대 URL이 아닙니다."
+
+#: autostartmodel.cpp:291
+#, kde-format
+msgid "\"%1\" does not exist."
+msgstr "\"%1\"이(가) 없습니다."
+
+#: autostartmodel.cpp:294
+#, kde-format
+msgid "\"%1\" is not a file."
+msgstr "\"%1\"이(가) 파일이 아닙니다."
+
+#: autostartmodel.cpp:297
+#, kde-format
+msgid "\"%1\" is not readable."
+msgstr "\"%1\"에서 읽을 수 없습니다."
+
+#: package/contents/ui/main.qml:40
+#, kde-format
+msgid "Make Executable"
+msgstr "실행 가능으로 설정"
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "The file '%1' must be executable to run at logout."
+msgstr "파일 '%1'이(가) 로그아웃할 때 실행되려면 실행 파일이어야 합니다."
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid "The file '%1' must be executable to run at login."
+msgstr "파일 '%1'이(가) 로그인할 때 실행되려면 실행 파일이어야 합니다."
+
+#: package/contents/ui/main.qml:89
+#, kde-format
+msgid "Properties"
+msgstr "속성"
+
+#: package/contents/ui/main.qml:95
+#, kde-format
+msgid "Remove"
+msgstr "삭제"
+
+#: package/contents/ui/main.qml:106
+#, kde-format
+msgid "Applications"
+msgstr "프로그램"
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Login Scripts"
+msgstr "로그인 스크립트"
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Pre-startup Scripts"
+msgstr "시작 전 실행 스크립트"
+
+#: package/contents/ui/main.qml:115
+#, kde-format
+msgid "Logout Scripts"
+msgstr "로그아웃 스크립트"
+
+#: package/contents/ui/main.qml:124
+#, kde-format
+msgid "No user-specified autostart items"
+msgstr "사용자 정의 자동 시작 항목 없음"
+
+#: package/contents/ui/main.qml:125
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Click the <interface>Add…</interface> button below to add some"
+msgstr "<interface>추가…</interface>를 클릭해서 추가하십시오"
+
+#: package/contents/ui/main.qml:139
+#, kde-format
+msgid "Choose Login Script"
+msgstr "로그인 스크립트 선택"
+
+#: package/contents/ui/main.qml:160
+#, kde-format
+msgid "Choose Logout Script"
+msgstr "로그아웃 스크립트 선택"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "Add…"
+msgstr "추가…"
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Add Application…"
+msgstr "프로그램 추가…"
+
+#: package/contents/ui/main.qml:199
+#, kde-format
+msgid "Add Login Script…"
+msgstr "로그인 스크립트 추가…"
+
+#: package/contents/ui/main.qml:205
+#, kde-format
+msgid "Add Logout Script…"
+msgstr "로그아웃 스크립트 추가…"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "박신조"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kde@peremen.name"
+
+#~ msgid "Autostart"
+#~ msgstr "자동 시작"
+
+#~ msgid "Session Autostart Manager Control Panel Module"
+#~ msgstr "세션 자동 시작 관리자 제어 패널 모듈"
+
+#~ msgid "Copyright © 2006–2020 Autostart Manager team"
+#~ msgstr "Copyright © 2006–2020 Autostart Manager team"
+
+#~ msgid "Stephen Leaf"
+#~ msgstr "Stephen Leaf"
+
+#~ msgid "Montel Laurent"
+#~ msgstr "Montel Laurent"
+
+#~ msgid "Maintainer"
+#~ msgstr "관리자"
+
+#~ msgid "Nicolas Fella"
+#~ msgstr "Nicolas Fella"
+
+#~ msgid "Add..."
+#~ msgstr "추가..."
+
+#~ msgid "Shell script path:"
+#~ msgstr "셸 스크립트 경로:"
+
+#~ msgid "Create as symlink"
+#~ msgstr "심볼릭 링크로 만들기"
+
+#~ msgid "Autostart only in Plasma"
+#~ msgstr "Plasma에서만 자동으로 시작하기"
+
+#~ msgid "Name"
+#~ msgstr "이름"
+
+#~ msgid "Command"
+#~ msgstr "명령"
+
+#~ msgid "Status"
+#~ msgstr "상태"
+
+#~ msgctxt ""
+#~ "@title:column The name of the column that decides if the program is run "
+#~ "on session startup, on session shutdown, etc"
+#~ msgid "Run On"
+#~ msgstr "다음에 실행"
+
+#~ msgid "Session Autostart Manager"
+#~ msgstr "세션 자동 시작 관리자"
+
+#~ msgctxt "The program will be run"
+#~ msgid "Enabled"
+#~ msgstr "사용함"
+
+#~ msgctxt "The program won't be run"
+#~ msgid "Disabled"
+#~ msgstr "사용 안 함"
+
+#~ msgid "Desktop File"
+#~ msgstr "데스크톱 파일"
+
+#~ msgid "Script File"
+#~ msgstr "스크립트 파일"
+
+#~ msgid "Add Program..."
+#~ msgstr "프로그램 추가..."
+
+#~ msgid "Startup"
+#~ msgstr "시작"
+
+#~ msgid "Before session startup"
+#~ msgstr "세션 시작 전"
+
+#~ msgid ""
+#~ "Only files with “.sh” extensions are allowed for setting up the "
+#~ "environment."
+#~ msgstr "환경을 설정할 때 확장자가 \".sh\"인 파일만 읽습니다."
+
+#~ msgid "Shutdown"
+#~ msgstr "종료"

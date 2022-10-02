@@ -1,0 +1,88 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Brazilian-Portuguese "INCLUDE">
+]>
+<article id="desktopthemedetails" lang="&language;">
+<articleinfo>
+<title
+>Tema da área de trabalho</title>
+<authorgroup>
+<author
+><firstname
+>Andrew</firstname
+> <surname
+>Lake</surname
+></author>
+<othercredit role="translator"
+><firstname
+>Marcus</firstname
+><surname
+>Gama</surname
+><affiliation
+><address
+><email
+>marcus.gama@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>12/04/2016</date>
+<releaseinfo
+>Plasma 5.6</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Configurações do sistema</keyword>
+<keyword
+>área de trabalho</keyword>
+<keyword
+>tema</keyword>
+<keyword
+>plasma</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>Esta caixa de diálogo apresenta uma lista com os temas disponíveis. Para selecionar um tema, clique em um item da lista.</para>
+
+<para
+>Use o botão <guibutton
+>Obter novos temas</guibutton
+> para baixar temas adicionais a partir da Internet ou carregar um tema de um arquivo.</para>
+
+<note>
+<para
+>A partir do &plasma; 5.6, não é mais possível editar e personalizar os componentes individuais ou os itens de um tema.</para>
+
+<para
+>As ferramentas recomendadas para verificar, juntar e testar os temas é o pacote &plasma;-sdk, mais precisamente, o Explorador de Temas.</para>
+
+<para
+>Para obter informações mais técnicas, visite <ulink url="https://techbase.kde.org/Development/Tutorials/Plasma5/ThemeDetails"
+>esta página</ulink
+>.</para>
+</note>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

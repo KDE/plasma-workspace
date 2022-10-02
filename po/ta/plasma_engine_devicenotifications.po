@@ -1,0 +1,91 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Kishore G <kishore96@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2021-06-03 21:48+0530\n"
+"Last-Translator: Kishore G <kishore96@gmail.com>\n"
+"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language: ta\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.04.1\n"
+
+#: ksolidnotify.cpp:149
+#, kde-format
+msgid "Device Status"
+msgstr "சாதன நிலை"
+
+#: ksolidnotify.cpp:149
+#, kde-format
+msgid "A device can now be safely removed"
+msgstr "ஒரு சாதனத்தை இப்போது பத்திரமாக கழற்றலாம்"
+
+#: ksolidnotify.cpp:150
+#, kde-format
+msgid "This device can now be safely removed."
+msgstr "இந்த சாதனத்தை இப்போது பத்திரமாக கழற்றலாம்"
+
+#: ksolidnotify.cpp:157
+#, kde-format
+msgid "You are not authorized to mount this device."
+msgstr "இந்த சாதனத்தை ஏற்றும் உரிமை உங்களிடம் இல்லை."
+
+#: ksolidnotify.cpp:160
+#, kde-format
+msgctxt "Remove is less technical for unmount"
+msgid "You are not authorized to remove this device."
+msgstr "இந்த சாதனத்தை நீக்கும் உரிமை உங்களிடம் இல்லை."
+
+#: ksolidnotify.cpp:163
+#, kde-format
+msgid "You are not authorized to eject this disc."
+msgstr "இந்த வட்டை வெளியேற்றும் உரிமை உங்களிடம் இல்லை."
+
+#: ksolidnotify.cpp:170
+#, kde-format
+msgid "Could not mount this device as it is busy."
+msgstr "இந்த சாதனம் ஏதோ வேலையாக உள்ளதால் ஏற்ற முடியவில்லை."
+
+#: ksolidnotify.cpp:200
+#, kde-format
+msgid "One or more files on this device are open within an application."
+msgstr "இந்த சாதனத்தில் உள்ள ஒரு அல்லது பல கோப்புகள் ஏதோவொரு செயலியில் திறந்துள்ளன."
+
+#: ksolidnotify.cpp:202
+#, kde-format
+msgid "One or more files on this device are opened in application \"%2\"."
+msgid_plural ""
+"One or more files on this device are opened in following applications: %2."
+msgstr[0] ""
+"இந்த சாதனத்தில் உள்ள ஒரு அல்லது பல கோப்புகள் \"%2\" என்ற செயலியில் திறந்துள்ளன."
+msgstr[1] ""
+"இந்த சாதனத்தில் உள்ள ஒரு அல்லது பல கோப்புகள் கீழ்கண்ட செயலிகளில் திறந்துள்ளன: %2."
+
+#: ksolidnotify.cpp:205
+#, kde-format
+msgctxt "separator in list of apps blocking device unmount"
+msgid ", "
+msgstr ", "
+
+#: ksolidnotify.cpp:222
+#, kde-format
+msgid "Could not mount this device."
+msgstr "இந்த சாதனத்தை ஏற்ற முடியவில்லை."
+
+#: ksolidnotify.cpp:225
+#, kde-format
+msgctxt "Remove is less technical for unmount"
+msgid "Could not remove this device."
+msgstr "இந்த சாதனத்தை நீக்க முடியவில்லை."
+
+#: ksolidnotify.cpp:228
+#, kde-format
+msgid "Could not eject this disc."
+msgstr "இந்த வட்டை வெளியேற்ற முடியவில்லை."

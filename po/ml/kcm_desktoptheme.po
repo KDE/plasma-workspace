@@ -1,0 +1,364 @@
+# Malayalam translation of kcm_desktopthemedetails.
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kcm_desktopthemedetails package.
+#
+# ശങ്കരനാരായണന്‍ <snalledam@dataone.in>, 2008.
+# Praveen Arimbrathodiyil <pravi.a@gmail.com>, 2008.
+# Hari|ഹരി  Vishnu | വിഷ്ണു <harivishnu@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_desktopthemedetails trunk\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"PO-Revision-Date: 2019-12-12 22:40+0000\n"
+"Last-Translator: Vivek KJ Pazhedath <vivekkj2004@gmail.com>\n"
+"Language-Team: SMC <smc.org.in>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, fuzzy, kde-format
+msgid "Name of the current Plasma Style"
+msgstr "പുതിയ പ്രമേയം എടുക്കുക..."
+
+#: kcm.cpp:108
+#, fuzzy, kde-format
+msgid "Unable to create a temporary file."
+msgstr "പ്രമേയം സൂക്ഷിക്കാന്‍ കഴിയില്ല."
+
+#: kcm.cpp:119
+#, fuzzy, kde-format
+msgid "Unable to download the theme: %1"
+msgstr "പ്രമേയം സൂക്ഷിക്കാന്‍ കഴിയില്ല."
+
+#: kcm.cpp:144
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: kcm.cpp:147 kcm.cpp:153
+#, kde-format
+msgid "Theme installation failed."
+msgstr ""
+
+#: kcm.cpp:245
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "This module lets you choose the Plasma style."
+msgstr ""
+
+#: package/contents/ui/main.qml:69
+#, fuzzy, kde-format
+msgid "All Themes"
+msgstr "പ്രമേയത്തിന്റെ ഇനം"
+
+#: package/contents/ui/main.qml:70
+#, fuzzy, kde-format
+msgid "Light Themes"
+msgstr "പ്രമേയത്തിന്റെ ഇനം"
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgid "Dark Themes"
+msgstr ""
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "Color scheme compatible"
+msgstr ""
+
+#: package/contents/ui/main.qml:100
+#, fuzzy, kde-format
+#| msgctxt "plasma name"
+#| msgid "Color Scheme"
+msgid "Follows color scheme"
+msgstr "നിറ പദ്ധതി"
+
+#: package/contents/ui/main.qml:118
+#, fuzzy, kde-format
+msgid "Edit Theme…"
+msgstr "പ്രമേയത്തിന്റെ ഇനം"
+
+#: package/contents/ui/main.qml:125
+#, kde-format
+msgid "Remove Theme"
+msgstr "പ്രമേയം നീക്കം ചെയ്യുക"
+
+#: package/contents/ui/main.qml:132
+#, fuzzy, kde-format
+msgid "Restore Theme"
+msgstr "പ്രമേയം നീക്കം ചെയ്യുക"
+
+#: package/contents/ui/main.qml:174
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: package/contents/ui/main.qml:179
+#, fuzzy, kde-format
+msgid "Get New Plasma Styles…"
+msgstr "പുതിയ പ്രമേയം എടുക്കുക..."
+
+#: package/contents/ui/main.qml:193
+#, fuzzy, kde-format
+msgid "Open Theme"
+msgstr "പ്രമേയത്തിന്റെ ഇനം"
+
+#: package/contents/ui/main.qml:195
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:31
+#, kde-format
+msgid ""
+"This tool allows you to set the theme of the current Plasma session, without "
+"accidentally setting it to one that is either not available, or which is "
+"already set."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:35
+#, kde-format
+msgid ""
+"The name of the theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:36
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:49
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:65
+#, kde-format
+msgid "The current Plasma session's theme has been set to %1"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:67
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:75
+#, kde-format
+msgid "You have the following Plasma themes on your system:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "ശങ്കരനാരായണന്‍, പ്രവീണ്‍ അരിമ്പ്രത്തൊടിയില്‍, ഹരി വിഷ്ണു"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "shijualexonline@gmail.com,snalledam@dataone.in,vivekkj2004@gmail.com"
+
+#, fuzzy
+#~ msgid "Plasma Style"
+#~ msgstr "പുതിയ പ്രമേയം എടുക്കുക..."
+
+#, fuzzy
+#~ msgid "Plasma Styles"
+#~ msgstr "പുതിയ പ്രമേയം എടുക്കുക..."
+
+#, fuzzy
+#~ msgid "Download New Plasma Styles"
+#~ msgstr "പണിയിടത്തിന്റെ പ്രമേയം മാറ്റുന്നതെങ്ങനെ"
+
+#, fuzzy
+#~ msgid "Configure Desktop Theme"
+#~ msgstr "പണിയിടത്തിന്റെ പ്രമേയം നീക്കം ചെയ്യുക"
+
+#, fuzzy
+#~ msgid "KDE Desktop Theme Module"
+#~ msgstr "പണിയിടപ്രമേയം പുറത്തെടുക്കുക"
+
+#~ msgctxt "plasma name"
+#~ msgid "Panel Background"
+#~ msgstr "പാളിയുടെ പശ്ചാത്തലം"
+
+#~ msgctxt "plasma name"
+#~ msgid "Kickoff"
+#~ msgstr "കിക്കോഫ്"
+
+#~ msgctxt "plasma name"
+#~ msgid "Task Items"
+#~ msgstr "ജോലി ഇനങ്ങള്‍"
+
+#~ msgctxt "plasma name"
+#~ msgid "Widget Background"
+#~ msgstr "ഉരുപ്പടിയുടെ പശ്ചാത്തലം"
+
+#~ msgctxt "plasma name"
+#~ msgid "Translucent Background"
+#~ msgstr "അര്‍ദ്ധതാര്യമായ പശ്ചാത്തലം"
+
+#~ msgctxt "plasma name"
+#~ msgid "Dialog Background"
+#~ msgstr "ഡയലോഗിന്റെ പശ്ചാത്തലം"
+
+#~ msgctxt "plasma name"
+#~ msgid "Analog Clock"
+#~ msgstr "അനലോഗ് ഘടികാരം"
+
+#~ msgctxt "plasma name"
+#~ msgid "Notes"
+#~ msgstr "കുറിപ്പുകള്‍"
+
+#~ msgctxt "plasma name"
+#~ msgid "Tooltip"
+#~ msgstr "സൂചന"
+
+#~ msgctxt "plasma name"
+#~ msgid "Pager"
+#~ msgstr "പേജര്‍"
+
+#~ msgctxt "plasma name"
+#~ msgid "Run Command Dialog"
+#~ msgstr "ആജ്ഞയുടെ ഡയലോഗ് പ്രവര്‍ത്തിപ്പിക്കുക"
+
+#~ msgctxt "plasma name"
+#~ msgid "Shutdown Dialog"
+#~ msgstr "നിര്‍ത്തിവയ്ക്കാനുള്ള ഡയലോഗ്"
+
+#~ msgid "(Customized)"
+#~ msgstr "(ഇച്ഛാനുസൃതം)"
+
+#~ msgid "User customized theme"
+#~ msgstr "ഉപയുക്താവ് ഇച്ഛാനുസൃതം രൂപപ്പെടുത്തിയിക്കുന്ന പ്രമേയം"
+
+#~ msgid ""
+#~ "Theme items have been changed.  Do you still wish remove the \"%1\" theme?"
+#~ msgstr ""
+#~ "പ്രമേയത്തിന്റെ ഇനം മാറ്റപ്പെട്ടു. \"%1\"പ്രമേയം നീക്കം ചെയ്യണമെന്ന് നിങ്ങള്‍ "
+#~ "ആഗ്രഹിക്കുന്നുണ്ടോ?"
+
+#, fuzzy
+#~ msgid "Removal of the default desktop theme is not allowed."
+#~ msgstr "കെഡിഇയുടെ തനത് പ്രമേയം നീക്കം ചെയ്യാന്‍‍ അനുവാദമില്ല."
+
+#~ msgid "Are you sure you wish remove the \"%1\" theme?"
+#~ msgstr "\"%1\"പ്രമേയം നീക്കംചെയ്യാന്‍ നിങ്ങള്‍ക്കാഗ്രഹമുണ്ടെന്ന് ഉറപ്പാണോ? "
+
+#~ msgid "Export Desktop Theme"
+#~ msgstr "പണിയിടപ്രമേയം പുറത്തെടുക്കുക"
+
+#, fuzzy
+#~ msgid "Export theme to file"
+#~ msgstr "പ്രമേയം ഫയലിലേയ്ക്കെടുത്തു് വയ്ക്കുക..."
+
+#~ msgid "Theme Item"
+#~ msgstr "പ്രമേയത്തിന്റെ ഇനം"
+
+#~ msgid "Source"
+#~ msgstr "സ്രോതസ്സ്"
+
+#, fuzzy
+#~ msgctxt ""
+#~ "%1 is the name of the theme, %2 is the type of the element (background, "
+#~ "icon, note, etc)"
+#~ msgid "%1 %2"
+#~ msgstr "%1 %2"
+
+#~ msgid "File..."
+#~ msgstr "ശേഖരം..."
+
+#~ msgid "Select File to Use for %1"
+#~ msgstr "%1ന് ഉപയോഗിക്കാനുള്ള ഫയല്‍ തെരഞ്ഞെടുക്കുക"
+
+#~ msgid " Author: %1"
+#~ msgstr "രചയിതാവ്. %1"
+
+#~ msgid "Version: %1"
+#~ msgstr "പതിപ്പ്:%1"
+
+#~ msgid "Desktop Theme Details"
+#~ msgstr "പണിയിടത്തിന്റെ പ്രമേയങ്ങളുടെ വിശദവിവരം"
+
+#~ msgid "More"
+#~ msgstr "കൂടുതല്‍"
+
+#, fuzzy
+#~ msgid "Remove the selected theme"
+#~ msgstr "പണിയിടത്തിന്റെ പ്രമേയം നീക്കം ചെയ്യുക"
+
+#~ msgid "Export Theme to File..."
+#~ msgstr "പ്രമേയം ഫയലിലേയ്ക്കെടുത്തു് വയ്ക്കുക..."
+
+#~ msgid "New theme name:"
+#~ msgstr "പുതിയ പ്രമേയത്തിന്റെ പേര്:"
+
+#, fuzzy
+#~ msgid "Custom theme name"
+#~ msgstr "പുതിയ പ്രമേയത്തിന്റെ പേര്:"
+
+#~ msgid "Author:"
+#~ msgstr "രചയിതാവ്"
+
+#, fuzzy
+#~ msgid "Custom theme author "
+#~ msgstr "പ്രമേയത്തിന്റെ രചയിതാവ്"
+
+#~ msgid "Version:"
+#~ msgstr "പതിപ്പ് "
+
+#, fuzzy
+#~ msgid "Custom theme version number"
+#~ msgstr "പുതിയ പ്രമേയത്തിന്റെ പേര്:"
+
+#~ msgid "Description:"
+#~ msgstr "വിവരണം"
+
+#, fuzzy
+#~ msgid "Custom theme description"
+#~ msgstr "പ്രമേയത്തിന്റെ വിവരണം ഇവിടെ തുടരുന്നു...."
+
+#~ msgid "Theme Author"
+#~ msgstr "പ്രമേയത്തിന്റെ രചയിതാവ്"
+
+#~ msgid "Theme Name"
+#~ msgstr "പ്രമേയനാമം"
+
+#~ msgid "Theme Version"
+#~ msgstr "പ്രമേയത്തിന്റെ പതിപ്പ് "
+
+#~ msgid "The theme description goes here..."
+#~ msgstr "പ്രമേയത്തിന്റെ വിവരണം ഇവിടെ തുടരുന്നു...."
+
+#, fuzzy
+#~ msgid "KCMDesktopTheme"
+#~ msgstr "പണിയിടത്തിന്റെ പ്രമേയം നീക്കം ചെയ്യുക"
+
+#, fuzzy
+#~ msgid ""
+#~ "To change your desktop theme to \"%1\", go back to the 'General' tab of "
+#~ "System Settings; choose 'Appearance', and then 'Style'; and finally "
+#~ "select \"%2\" from the drop-down list at the top of the window."
+#~ msgstr ""
+#~ "പണിയിടത്തിന്റെ പ്രമേയം മാറ്റാന്‍ \"%1\", പണിയിടത്തിന്റെ ഒരുക്കങ്ങള്‍ തുറന്നാല്‍ ഇറങ്ങിവരുന്ന "
+#~ "പട്ടികയില്‍നിന്ന് \"%2\", തെരഞ്ഞെടുക്കുക"
+
+#, fuzzy
+#~ msgid "Removal of the active desktop theme is not allowed."
+#~ msgstr "കെഡിഇയുടെ തനത് പ്രമേയം നീക്കം ചെയ്യാന്‍‍ അനുവാദമില്ല."
+
+#~ msgid "Unfortunately, this feature is not yet implemented."
+#~ msgstr "നിര്‍ഭാഗ്യ‌വശാല്‍ ഈ പ്രധാനഭാഗം ഇതുവരെ നടപ്പിലാക്കിയിട്ടില്ല."

@@ -1,0 +1,340 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Spanish "INCLUDE">
+]>
+<article id="autostart" lang="&language;">
+<articleinfo>
+<title
+>Inicio automático</title>
+<authorgroup>
+<author
+>&Anne-Marie.Mahfouf;</author>
+<othercredit role="translator"
+> <firstname
+>Rocío</firstname
+> <surname
+>Gallego</surname
+> <affiliation
+><address
+><email
+>traducciones@rociogallego.com</email
+></address
+></affiliation
+> <contrib
+>Traducción</contrib
+> </othercredit
+> <othercredit role="translator"
+><firstname
+>Santiago</firstname
+><surname
+>Fernández Sancho</surname
+><affiliation
+><address
+><email
+>santi@kde-es.org</email
+></address
+></affiliation
+><contrib
+>Traducción</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2018-03-25</date>
+<releaseinfo
+>&plasma; 5.12</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Preferencias del sistema</keyword>
+<keyword
+>autostart</keyword>
+<keyword
+>archivo de escritorio</keyword>
+<keyword
+>archivo de guion</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_autostart">
+<title
+>Administrador de inicio automático</title>
+
+<para
+>Este módulo es una herramienta de configuración para administrar qué programas se inician con su &plasma; personal. Le permite añadir programas o scripts de forma que se ejecuten automáticamente durante el arranque de su sesión &plasma; y administrarlos.</para>
+
+<note
+><para
+>Tenga en cuenta que en este módulo todos los cambios se aplicarán inmediatamente.</para
+></note>
+
+<para
+>El programa explora las carpetas <filename
+>$HOME/.config/autostart/</filename
+>, <filename class="directory"
+>$HOME/.config/plasma-workspace/env</filename
+> y <filename class="directory"
+>$HOME/.config/plasma-workspace/shutdown</filename
+> para comprobar qué programas y scripts contienen y mostrarlos. Esto permite que los pueda administrar con sencillez. </para>
+
+<note
+><para
+>Tenga en cuenta que puede cambiar la ubicación de la carpeta <filename class="directory"
+>Autostart</filename
+> en <menuchoice
+><guimenu
+>Aplicaciones</guimenu
+> <guimenuitem
+>Lugares</guimenuitem
+></menuchoice
+> en la categoría <guilabel
+>Personalización</guilabel
+> de las &systemsettings; y establecer una carpeta distinta de <filename class="directory"
+>$HOME/.config/autostart</filename
+>.</para
+></note>
+
+<para
+>Lea también <ulink url="help:/kcontrol/kcmsmserver"
+>Sesión de escritorio</ulink
+> y <ulink url="help:/kcontrol/kded"
+>Servicios en segundo plano</ulink
+> para obtener más información sobre cómo configurar el comportamiento al iniciar su sesión de &plasma;.</para>
+
+<para
+>Algunas aplicaciones de &kde; gestionan el comportamiento del inicio automático por su cuenta, &eg;, puede activar o desactivar el arranque automático de una aplicación en el diálogo de preferencias (&kalarm;) o bien,  tendrá que seleccionar <menuchoice
+><guimenu
+>Archivo</guimenu
+><guimenuitem
+>Salir</guimenuitem
+></menuchoice
+> (&konversation;, &kopete;), ya que si no, la aplicación aún se estará ejecutando en la bandeja del sistema y se volverá a arrancar la próxima vez que entre en el sistema. </para>
+
+<sect2 id="migration">
+<title
+>Migración desde los espacios de trabajo de &kde; 4</title>
+<para
+>Para migrar sus preferencias personales sobre el inicio automático desde los espacios de trabajo de &kde; 4:</para>
+<simplelist>
+<member
+>Copie los archivos del escritorio desde <filename class="directory"
+>$HOME/.kde/Autostart</filename
+> a <filename class="directory"
+>$HOME/.config/autostart</filename
+></member>
+<member
+>Copie los archivos de scripts previos al arranque desde <filename class="directory"
+>$HOME/.kde/Autostart</filename
+> a <filename class="directory"
+>$HOME/.config/plasma-workspace/env</filename
+></member>
+<member
+>Copie los archivos de scripts de apagado desde <filename class="directory"
+>$HOME/.kde/Autostart</filename
+> a <filename class="directory"
+>$HOME/.config/plasma-workspace/shutdown</filename
+></member>
+</simplelist>
+</sect2>
+
+<!--FIXME Disabling Autostart Files Provided By Your Distribution -> http://www.sharpley.org.uk/node/8 -->
+
+<sect2 id="current">
+<title
+>Mostrar archivos</title>
+<para
+>La parte principal del módulo muestra los programas que se cargan cuando se inicia &plasma; y los scripts se ejecutan cuando se arranca o se apaga &plasma;, oantes de que se arranque &plasma;.</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Nombre</guilabel
+></term>
+<listitem>
+<para
+>No puede corregir esta columna. Contiene el nombre del programa o script que desea iniciar con &plasma;. El nombre se extrae del archivo de escritorio a partir de la clave «Name» para un programa, y de «filename» para los scripts. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Orden</guilabel
+></term>
+<listitem>
+<para
+>Esta columna muestra las órdenes que se ejecutan para iniciar el programa. Las órdenes pueden modificarse a través del botón <guibutton
+>Propiedades</guibutton
+> o haciendo doble clic en la fila del programan. La orden se extrae del archivo de escritorio a partir de la clave «Exec». </para>
+<para
+>Para un script, la orden es su ruta y no se puede modificar. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Estado</guilabel
+></term>
+<listitem>
+<para
+>Esta configuración solo está disponible para los programas a través de archivos de escritorio. Puede mantener un programa en la carpeta <filename class="directory"
+>Autostart</filename
+> y desactivarlo para que no se inicie con &plasma;. Si quita la marca de estado <guilabel
+>Activado</guilabel
+>, el programa no se ejecutará en el inicio. </para>
+<para
+>Si se elimina la marca de estado <guilabel
+>Activado</guilabel
+> se establecerá la propiedad «Hidden» a «true» (verdadero) en la carpeta <filename class="directory"
+>Autostart</filename
+>. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Ejecutar en</guilabel
+></term>
+<listitem>
+<para
+>Los programas (archivos de escritorio) solo pueden ejecutarse al inicio. Los scripts pueden ejecutarse al <guilabel
+>Inicio</guilabel
+>, al <guilabel
+>Apagar</guilabel
+> o <guilabel
+>Antes de iniciar la sesión</guilabel
+>. Esta columna permite definir cuándo se ejecutará su script. «Inicio» significa cuando se inicia &plasma;, «Apagar» significa cuando salga de &plasma; y «Antes de iniciar la sesión» significa antes de iniciar &plasma;. </para>
+<para
+>Los archivos de escritorio y scripts que se configuran para ejecutarse al <guilabel
+>Inicio</guilabel
+> se copian o se enlazan en  <filename class="directory"
+>$HOME/.config/autostart</filename
+> y se ejecutarán durante el arranque de &plasma;. </para>
+<para
+>Los scripts que se ejecutan al <guilabel
+>Apagar</guilabel
+> se copian o se enlazan en la carpeta <filename class="directory"
+>$HOME/.config/plasma-workspace/shutdown</filename
+> y se ejecutarán automáticamente al salir de &plasma; después de que el usuario finalice su sesión. </para>
+<para
+>Los scripts configurados para ejecutarse <guilabel
+>Antes de iniciar &plasma;</guilabel
+> se copian o se enlazan en <filename class="directory"
+>$HOME/.config/plasma-workspace/env</filename
+> y se inician durante el inicio de &plasma; (el script <filename
+>startkde</filename
+> buscará aquí los scripts). </para>
+<note
+><para
+>&plasma; solo puede leer scripts que tienen la extensión <filename class="extension"
+>.sh</filename
+> para los modos <guilabel
+>Antes de iniciar la sesión</guilabel
+> y <guilabel
+>Apagar</guilabel
+>. </para
+></note>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+
+<sect2 id="actions">
+<title
+>Acciones</title>
+<para
+>En la parte inferior se encuentran algunos botones con los que podrá cambiar la configuración de inicio automático. Puede añadir programas o guiones, eliminarlo o cambiar sus propiedades. </para>
+
+<variablelist>
+<varlistentry
+><term
+><guibutton
+>Añadir programa</guibutton
+></term>
+<listitem>
+<para
+>Al pulsar este botón, se muestra el diálogo estándar de &plasma; <guilabel
+>Elegir aplicación</guilabel
+> que le permite elegir el programa que desea iniciar. Después de elegir el programa, pulse <guibutton
+>Aceptar</guibutton
+> para acceder a las propiedades del programa. </para>
+<para
+>Esto copiará el archivo de escritorio en su carpeta <filename class="directory"
+>Autostart</filename
+>. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>Añadir guion</guibutton
+></term>
+<listitem>
+<para
+>Este botón abre un diálogo que le pregunta por la ubicación del guion que desea añadir. Si mantiene marcado <guilabel
+>Crear como enlace simbólico</guilabel
+> (valor predeterminado) se añadirá el guion como un enlace simbólico. Si quita la marca de esta opción el guion se copiara en la correspondiente carpeta local. </para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guibutton
+>Eliminar</guibutton
+></term>
+<listitem>
+<para
+>Eliminará inmediatamente el archivo de escritorio para el programa, script o enlace simbólico en la carpeta <filename class="directory"
+>Autostart</filename
+>. </para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guibutton
+>Propiedades</guibutton
+></term>
+<listitem>
+<para
+>Este botón (activado solo para programas, es decir, &ie; archivos del escritorio) le permite cambiar las propiedades del programa o del script. Tiene propiedades generales, propiedades de permisos, una vista previa cuando corresponda y propiedades relacionadas con la aplicación para los programas. </para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guibutton
+>Avanzada</guibutton
+></term>
+<listitem>
+<para
+>Este botón solo se aplica a los programas (&ie;, archivos de escritorio). Un diálogo le preguntará si desea que el programa se inicie automáticamente solo con &plasma; (y no en otros entornos de escritorio que pueda ejecutar). De forma predeterminada, el programa se iniciará automáticamente en todos los entornos de escritorio. Si marca <guilabel
+>Iniciar automáticamente solo en Plasma</guilabel
+> arrancará el programa solo si inicia el entorno &plasma;. </para>
+<para
+>Esto asigna el valor «Plasma» a la clave «OnlyShowIn» dentro del archivo de escritorio. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

@@ -1,0 +1,569 @@
+# translation of kcminput.po to Cymraeg
+# Bwrdd Gwaith yn Gymraeg.
+# Copyright (C) 2003, 2004 Free Software Foundation, Inc.
+# www.kyfieithu.co.uk<kyfieithu@dotmon.com>, www.gyfieithu.co.uk<kyfieithu@dotmon.com>, 2003.
+# KD at KGyfieithu <kyfieithu@dotmon.com>, 2003, 2004.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminput\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:50+0000\n"
+"PO-Revision-Date: 2004-07-03 07:13+0100\n"
+"Last-Translator: KD at KGyfieithu <kyfieithu@dotmon.com>\n"
+"Language-Team: Cymraeg <cy@li.org>\n"
+"Language: cy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"www.gyfieithu.co.uk<kyfieithu@dotmon.com>\n"
+"X-Generator: KBabel 1.2\n"
+"\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current cursor theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr ""
+
+#: kcmcursortheme.cpp:302
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr "Rhaid ailgychwyn KDE i'r newidiadau yma ddod i rym."
+
+#: kcmcursortheme.cpp:376
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: kcmcursortheme.cpp:387
+#, fuzzy, kde-format
+#| msgid "Unable to find the cursor theme archive %1."
+msgid "Unable to download the icon theme archive: %1"
+msgstr "Methu canfod yr archif themau cyrchydd %1."
+
+#: kcmcursortheme.cpp:418
+#, fuzzy, kde-format
+#| msgid "The file %1 does not appear to be a valid cursor theme archive."
+msgid "The file is not a valid icon theme archive."
+msgstr "Ymddengys nad yw'r ffeil %1 yn archif themau cyrchydd dilys."
+
+#: kcmcursortheme.cpp:425
+#, kde-format
+msgid "Failed to create 'icons' folder."
+msgstr ""
+
+#: kcmcursortheme.cpp:434
+#, kde-format
+msgid ""
+"A theme named %1 already exists in your icon theme folder. Do you want "
+"replace it with this one?"
+msgstr ""
+"Mae thema o'r enw %1 yn bodoli eisoes yn eich plygell temau eicon.  Ydych "
+"eisiau ei amnewid efo'r un yma?"
+
+#: kcmcursortheme.cpp:438
+#, kde-format
+msgid "Overwrite Theme?"
+msgstr " Drosysgrifo'r thema?"
+
+#: kcmcursortheme.cpp:462
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: package/contents/ui/Delegate.qml:54
+#, kde-format
+msgid "Remove Theme"
+msgstr " Gwaredu Thema"
+
+#: package/contents/ui/Delegate.qml:61
+#, fuzzy, kde-format
+#| msgid "&Cursor Theme"
+msgid "Restore Cursor Theme"
+msgstr "T&hema Cyrchydd"
+
+#: package/contents/ui/main.qml:20
+#, kde-format
+msgid "This module lets you choose the mouse cursor theme."
+msgstr ""
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Size:"
+msgstr ""
+
+#: package/contents/ui/main.qml:134
+#, fuzzy, kde-format
+#| msgid "Install New Theme..."
+msgid "&Install from File…"
+msgstr "Gosod Thema Newydd..."
+
+#: package/contents/ui/main.qml:140
+#, fuzzy, kde-format
+#| msgid "Install New Theme..."
+msgid "&Get New Cursors…"
+msgstr "Gosod Thema Newydd..."
+
+#: package/contents/ui/main.qml:157
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Open Theme"
+msgstr " Gwaredu Thema"
+
+#: package/contents/ui/main.qml:159
+#, kde-format
+msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:41
+#, kde-format
+msgid "The requested size '%1' is not available, using %2 instead."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:62
+#, kde-format
+msgid ""
+"This tool allows you to set the mouse cursor theme for the current Plasma "
+"session, without accidentally setting it to one that is either not "
+"available, or which is already set."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:66
+#, kde-format
+msgid ""
+"The name of the cursor theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:67
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:68
+#, kde-format
+msgid "Use a specific size, rather than the theme default size"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:89
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:100
+#, kde-format
+msgid ""
+"Successfully applied the mouse cursor theme %1 to your current Plasma session"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:102
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for your newly applied mouse cursor "
+"theme to display correctly."
+msgstr "Rhaid ailgychwyn KDE i'r newidiadau yma ddod i rym."
+
+#: plasma-apply-cursortheme.cpp:112
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:120
+#, kde-format
+msgid "You have the following mouse cursor themes on your system:"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:125
+#, kde-format
+msgid "(Current theme for this Plasma session)"
+msgstr ""
+
+#: xcursor/xcursortheme.cpp:60
+#, kde-format
+msgctxt ""
+"@info The argument is the list of available sizes (in pixel). Example: "
+"'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+msgid "(Available sizes: %1)"
+msgstr ""
+
+#~ msgid "Name"
+#~ msgstr "Enw"
+
+#~ msgid "Description"
+#~ msgstr "Disgrifiad"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "KD wrth KGyfieithu"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kyfieithu@dotmon.com"
+
+#, fuzzy
+#~| msgid "&Cursor Theme"
+#~ msgid "Cursors"
+#~ msgstr "T&hema Cyrchydd"
+
+#, fuzzy
+#~| msgid ""
+#~| "<qt>Are you sure you want to remove the <strong>%1</strong> cursor theme?"
+#~| "<br>This will delete all the files installed by this theme.</qt>"
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <i>%1</i> cursor theme?<br />This "
+#~ "will delete all the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>Ydych yn sicr yr hoffech waredu'r thema cyrchydd <strong>%1</strong>?"
+#~ "<br>  Bydd hyn yn dileu pob ffeil a osodwyd gan y thema yma.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Cadarnhad"
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "Newidwyd Gosodiadau'r Cyrchydd"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "Llusgo neu Deipio URL y Thema"
+
+#~ msgid ""
+#~ "Unable to download the cursor theme archive; please check that the "
+#~ "address %1 is correct."
+#~ msgstr ""
+#~ "Methu lawrlwytho'r archif themau cyrchydd; gwiriwch bod y cyfeiriad %1 yn "
+#~ "iawn."
+
+#, fuzzy
+#~ msgid ""
+#~ "Select the cursor theme you want to use (hover preview to test cursor):"
+#~ msgstr "Dewis y thema cyrchydd yr hoffech ddefnyddio:"
+
+#~ msgid "Select the cursor theme you want to use:"
+#~ msgstr "Dewis y thema cyrchydd yr hoffech ddefnyddio:"
+
+#~ msgid "Small black"
+#~ msgstr "Du bach"
+
+#~ msgid "Small black cursors"
+#~ msgstr "Cyrchyddion du bach"
+
+#~ msgid "Large black"
+#~ msgstr " Du mawr"
+
+#~ msgid "Large black cursors"
+#~ msgstr "Cyrchyddion du mawr"
+
+#~ msgid "Small white"
+#~ msgstr "Gwyn bach"
+
+#~ msgid "Small white cursors"
+#~ msgstr "Cyrchyddion gwyn bach"
+
+#~ msgid "Large white"
+#~ msgstr " Gwyn mawr"
+
+#~ msgid "Large white cursors"
+#~ msgstr "Cyrchyddion gwyn mawr"
+
+#~ msgid "Button Order"
+#~ msgstr "Trefn Botymau"
+
+#~ msgid "Righ&t handed"
+#~ msgstr "Llaw &Dde"
+
+#~ msgid "Le&ft handed"
+#~ msgstr "Llaw &Chwith"
+
+#~ msgid ""
+#~ "Change the direction of scrolling for the mouse wheel or the 4th and 5th "
+#~ "mouse buttons."
+#~ msgstr ""
+#~ "Newid cyfeiriad y sgrolio am yr olwyn llygoden neu'r pedwerydd neu pumed "
+#~ "botwm llygoden."
+
+#~ msgid "Re&verse scroll direction"
+#~ msgstr "Gwrthdro&i cyfeiriad sgrolio"
+
+#~ msgid "Icons"
+#~ msgstr "Eiconau"
+
+#~ msgid ""
+#~ "Dou&ble-click to open files and folders (select icons on first click)"
+#~ msgstr ""
+#~ "Clicio'n ddw&bl i agor ffeiliau a phlygelli (dewis eiconau ar y clic "
+#~ "gyntaf)"
+
+#~ msgid "&Single-click to open files and folders"
+#~ msgstr "Clic &unigol i agor ffeiliau a phlygelli"
+
+#~ msgid "Cha&nge pointer shape over icons"
+#~ msgstr "&Newid ffurf y pwyntydd dros eiconau"
+
+#~ msgid "A&utomatically select icons"
+#~ msgstr "Dewis eiconau'n &ymysgogol"
+
+#, fuzzy
+#~| msgid "Dela&y:"
+#~ msgctxt "label. delay (on milliseconds) to automatically select icons"
+#~ msgid "Delay"
+#~ msgstr "&Oediad:"
+
+#, fuzzy
+#~| msgid " msec"
+#~ msgctxt "milliseconds. time to automatically select the items"
+#~ msgid " ms"
+#~ msgstr "meil"
+
+#~ msgid ""
+#~ "<h1>Mouse</h1> This module allows you to choose various options for the "
+#~ "way in which your pointing device works. Your pointing device may be a "
+#~ "mouse, trackball, or some other hardware that performs a similar function."
+#~ msgstr ""
+#~ "<h1>Llygoden</h1> Galluoga'r modwl yma i chi ddewis aml ddewisiadau ar "
+#~ "gyfer y ffordd y mae'ch dyfais bwyntio'n gweithio. Gall eich dyfais "
+#~ "bwyntio fod yn lygoden, yn bêl-drac, neu ryw galedwedd arall sydd â "
+#~ "swyddogaeth tebyg."
+
+#~ msgid "&General"
+#~ msgstr "&Cyffredinol"
+
+#~ msgid ""
+#~ "If you are left-handed, you may prefer to swap the functions of the left "
+#~ "and right buttons on your pointing device by choosing the 'left-handed' "
+#~ "option. If your pointing device has more than two buttons, only those "
+#~ "that function as the left and right buttons are affected. For example, if "
+#~ "you have a three-button mouse, the middle button is unaffected."
+#~ msgstr ""
+#~ "Os ydych yn llaw-chwith, efallai hoffech gyfnewid swyddogaethau'r botymau "
+#~ "chwith a dde ar eich dyfais bwyntio drwy ddewis y dewisiad 'llaw-chwith'. "
+#~ "Os oes gan eich dyfais bwyntio mwy na dau fotwm, dim ond ar y rhai chwith "
+#~ "a dde bydd effaith. Er enghraifft, os oes gennych lygoden â tri botwm, "
+#~ "nid oes effaith ar y botwm canol."
+
+#~ msgid ""
+#~ "The default behavior in KDE is to select and activate icons with a single "
+#~ "click of the left button on your pointing device. This behavior is "
+#~ "consistent with what you would expect when you click links in most web "
+#~ "browsers. If you would prefer to select with a single click, and activate "
+#~ "with a double click, check this option."
+#~ msgstr ""
+#~ "Dewis a gweithredoli eiconau â chlic unigol ar fotwm chwith eich dyfais "
+#~ "bwyntio yw ymddygiad rhagosodedig KDE. Dyma'r ymddygiad y disgwylir pan "
+#~ "gliciwch ar gysylltiadau mewn porwyr gwê cyffredin. Os byddai well "
+#~ "gennych ddewis â chlic unigol, a gweithredoli â chlic dwbl, dewiswch y "
+#~ "dewisiad yma."
+
+#~ msgid "Activates and opens a file or folder with a single click."
+#~ msgstr "Gweithredola ac agora ffeil neu blygell â chlic sengl."
+
+#~ msgid ""
+#~ "If you check this option, pausing the mouse pointer over an icon on the "
+#~ "screen will automatically select that icon. This may be useful when "
+#~ "single clicks activate icons, and you want only to select the icon "
+#~ "without activating it."
+#~ msgstr ""
+#~ "Os dewiswch y dewisiad yma, bydd seibio pwyntydd y lygoden dros eicon ar "
+#~ "y sgrîn yn dewis yr eicon yna'n ymysgogol. Gall hyn fod yn ddefnyddiol "
+#~ "pan fo cliciau sengl yn gweithredu eiconau, ac eich bod am ddewis yr "
+#~ "eicon yn unig, heb ei weithredoli."
+
+#~ msgid ""
+#~ "If you have checked the option to automatically select icons, this slider "
+#~ "allows you to select how long the mouse pointer must be paused over the "
+#~ "icon before it is selected."
+#~ msgstr ""
+#~ "Os dewisoch y dewisiad i ddewis eiconau'n ymysgogol, galluoga'r llithrydd "
+#~ "yma i chi ddewis am gyhyd y mae rhaid seibio pwyntydd y lygoden dros yr "
+#~ "eicon cyn ei ddewis."
+
+#~ msgid "Advanced"
+#~ msgstr "Uwch"
+
+#~ msgid "Pointer acceleration:"
+#~ msgstr "Cyflymiad Pwyntydd:"
+
+#, fuzzy
+#~| msgid ""
+#~| "This option allows you to change the relationship between the distance "
+#~| "that the mouse pointer moves on the screen and the relative movement of "
+#~| "the physical device itself (which may be a mouse, trackball, or some "
+#~| "other pointing device.)<p> A high value for the acceleration will lead "
+#~| "to large movements of the mouse pointer on the screen even when you only "
+#~| "make a small movement with the physical device. Selecting very high "
+#~| "values may result in the mouse pointer flying across the screen, making "
+#~| "it hard to control."
+#~ msgid ""
+#~ "<p>This option allows you to change the relationship between the distance "
+#~ "that the mouse pointer moves on the screen and the relative movement of "
+#~ "the physical device itself (which may be a mouse, trackball, or some "
+#~ "other pointing device.)</p><p> A high value for the acceleration will "
+#~ "lead to large movements of the mouse pointer on the screen even when you "
+#~ "only make a small movement with the physical device. Selecting very high "
+#~ "values may result in the mouse pointer flying across the screen, making "
+#~ "it hard to control.</p>"
+#~ msgstr ""
+#~ "Caniatâ'r dewisiad yma i chi newid y berthynas rhwng y pellter y teithia "
+#~ "pwyntydd y lygoden ar y sgrîn a symudiad perthynol y ddyfais gorfforol ei "
+#~ "hunan. (Gall fod yn llygoden, yn bêl-drac, neu ryw ddyfais bwyntio "
+#~ "arall.)<p>Achosa gwerth uchel o gyflymiad symudiadau mawr ym mhwyntydd y "
+#~ "lygoden ar y sgrîn hyd yn oed pan gwnewch symudiad bach iawn â'r ddyfais "
+#~ "gorfforol. Gall ddewis gwerthoedd uchel iawn achosi i bwyntydd y llygoden "
+#~ "wibio ar draws y sgrîn gan ei wneud yn anodd iawn i'w reoli!"
+
+#~ msgid "Pointer threshold:"
+#~ msgstr "Trothwy pwyntydd:"
+
+#, fuzzy
+#~| msgid ""
+#~| "The threshold is the smallest distance that the mouse pointer must move "
+#~| "on the screen before acceleration has any effect. If the movement is "
+#~| "smaller than the threshold, the mouse pointer moves as if the "
+#~| "acceleration was set to 1X;<p> thus, when you make small movements with "
+#~| "the physical device, there is no acceleration at all, giving you a "
+#~| "greater degree of control over the mouse pointer. With larger movements "
+#~| "of the physical device, you can move the mouse pointer rapidly to "
+#~| "different areas on the screen."
+#~ msgid ""
+#~ "<p>The threshold is the smallest distance that the mouse pointer must "
+#~ "move on the screen before acceleration has any effect. If the movement is "
+#~ "smaller than the threshold, the mouse pointer moves as if the "
+#~ "acceleration was set to 1X;</p><p> thus, when you make small movements "
+#~ "with the physical device, there is no acceleration at all, giving you a "
+#~ "greater degree of control over the mouse pointer. With larger movements "
+#~ "of the physical device, you can move the mouse pointer rapidly to "
+#~ "different areas on the screen.</p>"
+#~ msgstr ""
+#~ "Y pellter lleiaf sydd angen i bwyntydd y llygoden symud ar y sgrîn cyn "
+#~ "i'r cyflymiad gael effaith yw'r drothwy. Os yw'r symudiad yn llai na'r "
+#~ "drothwy, symuda pwyntydd y llygoden fel petai'r cyflymiad yn 1X.<p> "
+#~ "Felly, pan wnewch symudiadau bach â'r ddyfais gorfforol, nid oes "
+#~ "cyflymiad o gwbl, sy'n rhoi mwy o reolaeth i chi dros bwyntydd y "
+#~ "llygoden. Â symudiadau mwy o'r ddyfais gorfforol, gallwch symud pwyntydd "
+#~ "y llygoden yn gyflym i ardaloedd gwahanol ar y sgrîn."
+
+#~ msgid " msec"
+#~ msgstr "meil"
+
+#~ msgid "Double click interval:"
+#~ msgstr "Cyfnod clic dwbl:"
+
+#~ msgid ""
+#~ "The double click interval is the maximal time (in milliseconds) between "
+#~ "two mouse clicks which turns them into a double click. If the second "
+#~ "click happens later than this time interval after the first click, they "
+#~ "are recognized as two separate clicks."
+#~ msgstr ""
+#~ "Y cyfnod hiraf (mewn milieiliadau) rhwng dau glic llygoden sy'n eu troi'n "
+#~ "glic dwbl yw'r cyfnod clic dwbl. Os yw'r ail glic yn digwydd wedi'r "
+#~ "cyfnod yma ar ôl y clic cyntaf, fe'u adnabyddir yn ddau glic arwahanol."
+
+#~ msgid "Drag start time:"
+#~ msgstr "Amser cychwyn llusgo:"
+
+#~ msgid ""
+#~ "If you click with the mouse (e.g. in a multi-line editor) and begin to "
+#~ "move the mouse within the drag start time, a drag operation will be "
+#~ "initiated."
+#~ msgstr ""
+#~ "Os gliciwch â'r llygoden (e.e. mewn golygydd aml-linell) a dechreuwch "
+#~ "symud y lygoden o fewn yr amser dechrau llusgo, fe gychwynnir gweithred "
+#~ "lusgo."
+
+#~ msgid "Drag start distance:"
+#~ msgstr "Pellter dechrau llusgo:"
+
+#~ msgid ""
+#~ "If you click with the mouse and begin to move the mouse at least the drag "
+#~ "start distance, a drag operation will be initiated."
+#~ msgstr ""
+#~ "Os gliciwch â'r llygoden a dechreuwch symud y lygoden o leiaf y pellter "
+#~ "dechrau llusgo, fe gychwynnir gweithred lusgo."
+
+#~ msgid "Mouse wheel scrolls by:"
+#~ msgstr "Olwyn llygoden yn sgrolio:"
+
+#~ msgid ""
+#~ "If you use the wheel of a mouse, this value determines the number of "
+#~ "lines to scroll for each wheel movement. Note that if this number exceeds "
+#~ "the number of visible lines, it will be ignored and the wheel movement "
+#~ "will be handled as a page up/down movement."
+#~ msgstr ""
+#~ "Os defnyddiwch olwyn llygoden, penna'r werth hon nifer y llinellau i "
+#~ "sgrolio am bob symudiad o'r olwyn. Noder os yw'r rhif yma'n fwy na'r "
+#~ "nifer o linellau yn y golwg, fe'i anwybyddir ac fe gaiff symudiad yr "
+#~ "olwyn ei drin fel symudiad tudalen i fyny/i lawr."
+
+#~ msgid "Mouse Navigation"
+#~ msgstr "Llywio Llygoden"
+
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "&Symud pwyntydd â bysyll (ar y pad rhifol)"
+
+#~ msgid "&Acceleration delay:"
+#~ msgstr "Oedi &cyflymiad:"
+
+#~ msgid "R&epeat interval:"
+#~ msgstr "Cyfnod &ailadrodd:"
+
+#~ msgid "Acceleration &time:"
+#~ msgstr "A&mser cyflymiad:"
+
+#, fuzzy
+#~ msgid " pixel/sec"
+#~ msgstr "picseli"
+
+#~ msgid "Ma&ximum speed:"
+#~ msgstr "Cyflymder &uchaf:"
+
+#~ msgid "Acceleration &profile:"
+#~ msgstr "&Proffil cyflymiad:"
+
+#~ msgid "Mouse"
+#~ msgstr "Llygoden"
+
+#, fuzzy
+#~| msgid "none"
+#~ msgctxt "no cordless mouse"
+#~ msgid "none"
+#~ msgstr "dim"
+
+#~ msgid "No description available"
+#~ msgstr "Dim disgrifiad ar gael"
+
+#~ msgid "Short"
+#~ msgstr "Byr"
+
+#~ msgid "Long"
+#~ msgstr "Hir"
+
+#~ msgid "Show feedback when clicking an icon"
+#~ msgstr "Dangos adborth pan yn clicio ar eicon"
+
+#~ msgid "Visual f&eedback on activation"
+#~ msgstr "Adborth gw&eledol ar weithredoli"
+
+#~ msgid "No theme"
+#~ msgstr " Dim thema"
+
+#~ msgid "The old classic X cursors"
+#~ msgstr "Yr hen gyrchyddion X clasurol"
+
+#, fuzzy
+#~ msgid "System theme"
+#~ msgstr " Dim thema"

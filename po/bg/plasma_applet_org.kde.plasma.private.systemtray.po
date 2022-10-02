@@ -1,0 +1,199 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Mincho Kondarev <mkondarev@yahoo.de>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-18 00:47+0000\n"
+"PO-Revision-Date: 2022-07-28 21:08+0200\n"
+"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 22.04.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Общи"
+
+#: package/contents/config/config.qml:18
+#, kde-format
+msgid "Entries"
+msgstr "Записи"
+
+#: package/contents/ui/ConfigEntries.qml:31
+#, kde-format
+msgid "Always show all entries"
+msgstr "Винаги показване на всички записи"
+
+#: package/contents/ui/ConfigEntries.qml:37
+#, kde-format
+msgid "Application Status"
+msgstr "Състояние на приложението"
+
+#: package/contents/ui/ConfigEntries.qml:39
+#, kde-format
+msgid "Communications"
+msgstr "Комуникации"
+
+#: package/contents/ui/ConfigEntries.qml:41
+#, kde-format
+msgid "System Services"
+msgstr "Системни услуги"
+
+#: package/contents/ui/ConfigEntries.qml:43
+#, kde-format
+msgid "Hardware Control"
+msgstr "Контрол на хардуера"
+
+#: package/contents/ui/ConfigEntries.qml:46
+#, kde-format
+msgid "Miscellaneous"
+msgstr "Допълнителни"
+
+#: package/contents/ui/ConfigEntries.qml:80
+#, kde-format
+msgctxt "Name of the system tray entry"
+msgid "Entry"
+msgstr "Запис"
+
+#: package/contents/ui/ConfigEntries.qml:85
+#, kde-format
+msgid "Visibility"
+msgstr "Видимост"
+
+#: package/contents/ui/ConfigEntries.qml:91
+#, kde-format
+msgid "Keyboard Shortcut"
+msgstr "Клавишна комбинация"
+
+#: package/contents/ui/ConfigEntries.qml:222
+#, kde-format
+msgid "Shown when relevant"
+msgstr "Показва се, когато е необходимо"
+
+#: package/contents/ui/ConfigEntries.qml:223
+#, kde-format
+msgid "Always shown"
+msgstr "Винаги показвано"
+
+#: package/contents/ui/ConfigEntries.qml:224
+#, kde-format
+msgid "Always hidden"
+msgstr "Винаги скрито"
+
+#: package/contents/ui/ConfigEntries.qml:225
+#, kde-format
+msgid "Disabled"
+msgstr "Забранено"
+
+#: package/contents/ui/ConfigGeneral.qml:23
+#, kde-format
+msgctxt "The arrangement of system tray icons in the Panel"
+msgid "Panel icon size:"
+msgstr "Размер на иконата на панела:"
+
+#: package/contents/ui/ConfigGeneral.qml:25
+#, kde-format
+msgid "Small"
+msgstr "Малък"
+
+#: package/contents/ui/ConfigGeneral.qml:32
+#, kde-format
+msgid "Scale with Panel height"
+msgstr "Мащабиране с височината на панела"
+
+#: package/contents/ui/ConfigGeneral.qml:33
+#, kde-format
+msgid "Scale with Panel width"
+msgstr "Мащабиране с широчината на панела"
+
+#: package/contents/ui/ConfigGeneral.qml:39
+#, kde-format
+msgid "Automatically enabled when in Touch Mode"
+msgstr "Автоматично активиране в режим на таблет"
+
+#: package/contents/ui/ConfigGeneral.qml:48
+#, kde-format
+msgctxt "@label:listbox The spacing between system tray icons in the Panel"
+msgid "Panel icon spacing:"
+msgstr "Разстояние между иконите в панела:"
+
+#: package/contents/ui/ConfigGeneral.qml:51
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Small"
+msgstr "Малък"
+
+#: package/contents/ui/ConfigGeneral.qml:55
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Normal"
+msgstr "Нормално"
+
+#: package/contents/ui/ConfigGeneral.qml:59
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Large"
+msgstr "Голямо"
+
+#: package/contents/ui/ConfigGeneral.qml:82
+#, kde-format
+msgctxt "@info:usagetip under a combobox when Touch Mode is on"
+msgid "Automatically set to Large when in Touch Mode"
+msgstr "Автоматично задаване на големи икони в режим на таблет"
+
+#: package/contents/ui/ExpandedRepresentation.qml:64
+#, kde-format
+msgctxt "@action:button"
+msgid "Go Back"
+msgstr "Назад"
+
+#: package/contents/ui/ExpandedRepresentation.qml:77
+#, kde-format
+msgid "Status and Notifications"
+msgstr "Състояние и известия"
+
+#: package/contents/ui/ExpandedRepresentation.qml:93
+#, kde-format
+msgid "More actions"
+msgstr "Повече действия"
+
+#: package/contents/ui/ExpandedRepresentation.qml:182
+#, kde-format
+msgid "Keep Open"
+msgstr "Задържане отворен"
+
+#: package/contents/ui/ExpanderArrow.qml:22
+#, kde-format
+msgid "Expand System Tray"
+msgstr "Разширяване на системния панел"
+
+#: package/contents/ui/ExpanderArrow.qml:23
+#, kde-format
+msgid "Show all the items in the system tray in a popup"
+msgstr "Показване на всички елементи в изскачащия прозорец на системния панел"
+
+#: package/contents/ui/ExpanderArrow.qml:36
+#, kde-format
+msgid "Close popup"
+msgstr "Затваряне на изскачащ прозорец"
+
+#: package/contents/ui/ExpanderArrow.qml:36
+#, kde-format
+msgid "Show hidden icons"
+msgstr "Показване на скрити икони"
+
+#: systemtraymodel.cpp:123
+#, kde-format
+msgctxt ""
+"Suffix added to the applet name if the applet is autoloaded via DBus "
+"activation"
+msgid "%1 (Automatic load)"
+msgstr "%1 (Автоматично зареждане)"

@@ -1,0 +1,138 @@
+# Thomas Reitelbach <tr@erdfunkstelle.de>, 2008, 2009.
+# Frederik Schwarzer <schwarzer@kde.org>, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_shell\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-27 00:45+0000\n"
+"PO-Revision-Date: 2016-05-13 23:10+0100\n"
+"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: shellrunner.cpp:35
+#, kde-format
+msgid "Finds commands that match :q:, using common shell syntax"
+msgstr "Findet Befehle, die auf :q: passen; verwendet Standard-Shell-Syntax."
+
+#: shellrunner.cpp:36
+#, kde-format
+msgid "Run in Terminal Window"
+msgstr "Im &Terminal ausführen"
+
+#: shellrunner.cpp:54
+#, kde-format
+msgid "Run %1"
+msgstr "%1 ausführen"
+
+#~ msgid "Enter the user you want to run the application as here."
+#~ msgstr ""
+#~ "Geben Sie hier den Benutzernamen ein, unter dem Sie das Programm starten "
+#~ "möchten."
+
+#~ msgid "User&name:"
+#~ msgstr "&Benutzername:"
+
+#~ msgid "Enter the password here for the user you specified above."
+#~ msgstr "Geben Sie hier das Passwort für den betreffenden Benutzernamen ein."
+
+#~ msgid "Pass&word:"
+#~ msgstr "&Passwort:"
+
+#~ msgid ""
+#~ "Check this option if the application you want to run is a text mode "
+#~ "application. The application will then be run in a terminal emulator "
+#~ "window."
+#~ msgstr ""
+#~ "Aktivieren Sie diese Einstellung, falls das betreffende Programm im "
+#~ "Textmodus ausgeführt wird. Dadurch wird das Programm in einem "
+#~ "Terminalfenster ausgeführt."
+
+#~ msgid "Run in &terminal window"
+#~ msgstr "Im &Terminal ausführen"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "user id. Every process has a user id associated with it. This id code "
+#~ "determines file access and other permissions. The password of the user is "
+#~ "required to do this."
+#~ msgstr ""
+#~ "Aktivieren Sie diese Einstellung, falls Sie das Programm unter einer "
+#~ "anderen Benutzerkennung starten möchten. Jeder Prozess besitzt eine "
+#~ "solche Kennung;über sie wird unter anderem geregelt, welche Datei-"
+#~ "Zugriffsrechte zur Verfügung stehen. Sie benötigen das Passwort des "
+#~ "jeweiligen Benutzers."
+
+#~ msgid "Run as a different &user"
+#~ msgstr "Als anderer &Benutzer ausführen"
+
+#~ msgid ""
+#~ "<qt>Select whether realtime scheduling should be enabled for the "
+#~ "application. The scheduler governs which process will run and which will "
+#~ "have to wait. Two schedulers are available:\n"
+#~ "<ul>\n"
+#~ "<li><em>Normal:</em> This is the standard, timesharing scheduler. It will "
+#~ "divide fairly the available processing time between all processes.</li>\n"
+#~ "<li><em>Realtime:</em>This scheduler will run your application "
+#~ "uninterrupted until it gives up the processor. This can be dangerous. An "
+#~ "application that does not give up the processor might hang the system. "
+#~ "You need root's password to use the scheduler.</li>\n"
+#~ "</ul>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>Hier können Sie auswählen, welcher Ablaufplaner (Scheduler) für das "
+#~ "Programm verwendet werden soll. Der Ablaufplaner legt fest, welcher "
+#~ "Prozess Rechenzeit erhält und welcher warten muss. Zwei Ablaufplaner "
+#~ "stehen zur Auswahl: <ul>\n"
+#~ "<li><em>Normal:</em> Das ist der übliche Ablaufplaner, der auf eine "
+#~ "gleichmäßige Verteilung der Rechenzeit an alle Prozesse abzielt.</li>\n"
+#~ "<li><em>Echtzeit:</em> Dieser Ablaufplaner startet Ihr Programm ohne "
+#~ "Unterbrechung, bis es den Prozessor von selbst freigibt. Das kann "
+#~ "gefährlich sein. Ein Programm, das den Prozessor nicht freigibt, kann zum "
+#~ "Systemstillstand führen. Sie benötigen das Passwort des Systemverwalters, "
+#~ "um diesen Ablaufplaner benutzen zu können.</li>\n"
+#~ "</ul>\n"
+#~ "</qt>"
+
+#~ msgid "Run with realtime &scheduling"
+#~ msgstr "Mit &Echtzeit-Ablaufplanung starten"
+
+#~ msgid ""
+#~ "The priority that the command will be run with can be set here. From left "
+#~ "to right, it goes from low to high. The center position is the default "
+#~ "value. For priorities higher than the default, you will need to provide "
+#~ "the root password."
+#~ msgstr ""
+#~ "Hier kann die Priorität festgelegt werden, mit der der Befehl ausgeführt "
+#~ "wird. Der Regler bestimmt die Priorität von niedrig (links) nach "
+#~ "hoch(rechts). Die mittlere Position ist die Voreinstellung. Für eine "
+#~ "höhere Priorität als der Voreinstellung benötigen Sie das Systemverwalter-"
+#~ "Passwort."
+
+#~ msgid "&Priority:"
+#~ msgstr "&Priorität:"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "priority. A higher priority tells the operating system to give more "
+#~ "processing time to your application."
+#~ msgstr ""
+#~ "Aktivieren Sie diese Einstellung, um die Anwendung mit anderer Priorität "
+#~ "auszuführen. Eine höhere Priorität bedeutet, dass der Anwendung mehr "
+#~ "Prozessorzeitzur Verfügung steht."
+
+#~ msgid "Run with a &different priority"
+#~ msgstr "Mit anderer &Priorität starten"
+
+#~ msgid "Low"
+#~ msgstr "Niedrig"
+
+#~ msgid "High"
+#~ msgstr "Hoch"
+
+#~ msgid "Command"
+#~ msgstr "Befehl"

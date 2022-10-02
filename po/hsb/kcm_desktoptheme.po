@@ -1,0 +1,349 @@
+# translation of desktop_kdebase.po to Upper Sorbian
+# Prof. Dr. Eduard Werner <e.werner@rz.uni-leipzig.de>, 2003.
+# Eduard Werner <edi.werner@gmx.de>, 2005, 2008.
+# Bianka Šwejdźic <hertn@gmx.de>, 2005, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: desktop_kdebase\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"PO-Revision-Date: 2008-11-06 22:08+0100\n"
+"Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
+"Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
+"Language: hsb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
+"%100==4 ? 2 : 3;\n"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, fuzzy, kde-format
+msgid "Name of the current Plasma Style"
+msgstr "Name=Dźěłowy powjerch"
+
+#: kcm.cpp:108
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: kcm.cpp:119
+#, kde-format
+msgid "Unable to download the theme: %1"
+msgstr ""
+
+#: kcm.cpp:144
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: kcm.cpp:147 kcm.cpp:153
+#, kde-format
+msgid "Theme installation failed."
+msgstr ""
+
+#: kcm.cpp:245
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "This module lets you choose the Plasma style."
+msgstr ""
+
+#: package/contents/ui/main.qml:69
+#, fuzzy, kde-format
+msgid "All Themes"
+msgstr "Name=Dźěłowy powjerch"
+
+#: package/contents/ui/main.qml:70
+#, fuzzy, kde-format
+msgid "Light Themes"
+msgstr "Name=Dźěłowy powjerch"
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgid "Dark Themes"
+msgstr ""
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "Color scheme compatible"
+msgstr ""
+
+#: package/contents/ui/main.qml:100
+#, fuzzy, kde-format
+#| msgid "Current Scheme:"
+msgid "Follows color scheme"
+msgstr "Tuchwilna šema:"
+
+#: package/contents/ui/main.qml:118
+#, fuzzy, kde-format
+msgid "Edit Theme…"
+msgstr "Name=Dźěłowy powjerch"
+
+#: package/contents/ui/main.qml:125
+#, fuzzy, kde-format
+msgid "Remove Theme"
+msgstr "Name=Dźěłowy powjerch"
+
+#: package/contents/ui/main.qml:132
+#, fuzzy, kde-format
+msgid "Restore Theme"
+msgstr "Name=Dźěłowy powjerch"
+
+#: package/contents/ui/main.qml:174
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: package/contents/ui/main.qml:179
+#, fuzzy, kde-format
+msgid "Get New Plasma Styles…"
+msgstr "Name=Dźěłowy powjerch"
+
+#: package/contents/ui/main.qml:193
+#, fuzzy, kde-format
+msgid "Open Theme"
+msgstr "Name=Dźěłowy powjerch"
+
+#: package/contents/ui/main.qml:195
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:31
+#, kde-format
+msgid ""
+"This tool allows you to set the theme of the current Plasma session, without "
+"accidentally setting it to one that is either not available, or which is "
+"already set."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:35
+#, kde-format
+msgid ""
+"The name of the theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:36
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:49
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:65
+#, kde-format
+msgid "The current Plasma session's theme has been set to %1"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:67
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:75
+#, kde-format
+msgid "You have the following Plasma themes on your system:"
+msgstr ""
+
+#, fuzzy
+#~ msgid "Plasma Style"
+#~ msgstr "Name=Dźěłowy powjerch"
+
+#, fuzzy
+#~ msgid "Plasma Styles"
+#~ msgstr "Name=Dźěłowy powjerch"
+
+#, fuzzy
+#~ msgid "Download New Plasma Styles"
+#~ msgstr "Name=Dźěłowy powjerch"
+
+#, fuzzy
+#~ msgid "Configure Desktop Theme"
+#~ msgstr "Name=Dźěłowy powjerch"
+
+#, fuzzy
+#~ msgid "KDE Desktop Theme Module"
+#~ msgstr "Name=Dźěłowy powjerch"
+
+#, fuzzy
+#~| msgid "Save Background Image As"
+#~ msgctxt "plasma name"
+#~ msgid "Panel Background"
+#~ msgstr "Pozadkowy wobraz zawěsćić jako"
+
+#, fuzzy
+#~| msgid "No Items"
+#~ msgctxt "plasma name"
+#~ msgid "Task Items"
+#~ msgstr "Žane objekty"
+
+#, fuzzy
+#~| msgid "Backward Word"
+#~ msgctxt "plasma name"
+#~ msgid "Widget Background"
+#~ msgstr "Wo słowo dozady"
+
+#, fuzzy
+#~ msgctxt "plasma name"
+#~ msgid "Translucent Background"
+#~ msgstr "Name=Papjernik"
+
+#, fuzzy
+#~ msgctxt "plasma name"
+#~ msgid "Dialog Background"
+#~ msgstr "GenericName=Wobdźěłar dialogow"
+
+#, fuzzy
+#~| msgctxt "Name"
+#~| msgid "Analog Clock"
+#~ msgctxt "plasma name"
+#~ msgid "Analog Clock"
+#~ msgstr "Analogny časnik"
+
+#, fuzzy
+#~| msgid "Notes:"
+#~ msgctxt "plasma name"
+#~ msgid "Notes"
+#~ msgstr "Přispomnjenja:"
+
+#, fuzzy
+#~ msgctxt "plasma name"
+#~ msgid "Tooltip"
+#~ msgstr "Name=Hrajki"
+
+#, fuzzy
+#~| msgctxt "Name"
+#~| msgid "Pager"
+#~ msgctxt "plasma name"
+#~ msgid "Pager"
+#~ msgstr "Listowar"
+
+#, fuzzy
+#~ msgctxt "plasma name"
+#~ msgid "Run Command Dialog"
+#~ msgstr "Name=(5) Datajowe formaty"
+
+#, fuzzy
+#~ msgctxt "plasma name"
+#~ msgid "Shutdown Dialog"
+#~ msgstr "Comment=Montowany CD-palak"
+
+#, fuzzy
+#~| msgctxt "@item license"
+#~| msgid "Custom"
+#~ msgid "(Customized)"
+#~ msgstr "Konfigurowane"
+
+#, fuzzy
+#~ msgid "Export Desktop Theme"
+#~ msgstr "Name=Dźěłowy powjerch"
+
+#, fuzzy
+#~| msgid "Export Scheme..."
+#~ msgid "Export theme to file"
+#~ msgstr "Šemu eksportować ..."
+
+#~ msgid "Source"
+#~ msgstr "Žórło"
+
+#, fuzzy
+#~| msgctxt "concatenation of dates and time"
+#~| msgid "%1 %2"
+#~ msgctxt ""
+#~ "%1 is the name of the theme, %2 is the type of the element (background, "
+#~ "icon, note, etc)"
+#~ msgid "%1 %2"
+#~ msgstr "%1%2"
+
+#, fuzzy
+#~| msgid "Select File to Execute"
+#~ msgid "Select File to Use for %1"
+#~ msgstr "Wubjerće program, kiž ma so startować"
+
+#~ msgid "Version: %1"
+#~ msgstr "Wersija: %1"
+
+#, fuzzy
+#~ msgid "Desktop Theme Details"
+#~ msgstr "Name=Dźěłowy powjerch"
+
+#, fuzzy
+#~ msgid "Remove the selected theme"
+#~ msgstr "Name=Dźěłowy powjerch"
+
+#, fuzzy
+#~| msgid "Export Scheme..."
+#~ msgid "Export Theme to File..."
+#~ msgstr "Šemu eksportować ..."
+
+#, fuzzy
+#~| msgid "New hostname"
+#~ msgid "New theme name:"
+#~ msgstr "Nowe serverowe mjeno."
+
+#, fuzzy
+#~| msgid "New hostname"
+#~ msgid "Custom theme name"
+#~ msgstr "Nowe serverowe mjeno."
+
+#~ msgid "Author:"
+#~ msgstr "Awtor:"
+
+#, fuzzy
+#~| msgid "New hostname"
+#~ msgid "Custom theme author "
+#~ msgstr "Nowe serverowe mjeno."
+
+#~ msgid "Version:"
+#~ msgstr "Wersija:"
+
+#, fuzzy
+#~| msgid "New hostname"
+#~ msgid "Custom theme version number"
+#~ msgstr "Nowe serverowe mjeno."
+
+#~ msgid "Description:"
+#~ msgstr "Wopisanje:"
+
+#, fuzzy
+#~| msgid "New hostname"
+#~ msgid "Custom theme description"
+#~ msgstr "Nowe serverowe mjeno."
+
+#, fuzzy
+#~| msgid "Author:"
+#~ msgid "Theme Author"
+#~ msgstr "Awtor:"
+
+#, fuzzy
+#~| msgid "New hostname"
+#~ msgid "Theme Name"
+#~ msgstr "Nowe serverowe mjeno."
+
+#, fuzzy
+#~| msgid "Version:"
+#~ msgid "Theme Version"
+#~ msgstr "Wersija:"
+
+#, fuzzy
+#~| msgid "New hostname"
+#~ msgid "The theme description goes here..."
+#~ msgstr "Nowe serverowe mjeno."
+
+#, fuzzy
+#~ msgid "KCMDesktopTheme"
+#~ msgstr "Name=Dźěłowy powjerch"

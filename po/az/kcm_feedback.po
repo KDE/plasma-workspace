@@ -1,0 +1,80 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Xəyyam Qocayev <xxmn77@gmail.com>, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-28 00:47+0000\n"
+"PO-Revision-Date: 2022-01-11 12:23+0400\n"
+"Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
+"Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
+"Language: az\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.12.0\n"
+
+#: package/contents/ui/main.qml:34
+#, kde-format
+msgid ""
+"User Feedback has been disabled centrally. Please contact your distributor."
+msgstr ""
+"İstifadəçi rəyi mərkəzi olaraq söndürülüb. Lütfən təminatşınıza müraciət "
+"edin."
+
+#: package/contents/ui/main.qml:44 package/contents/ui/main.qml:77
+#, kde-format
+msgid "Plasma:"
+msgstr "Plasma:"
+
+#: package/contents/ui/main.qml:51
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"You can help KDE improve Plasma by contributing information on how you use "
+"it, so we can focus on things that matter to you.<nl/><nl/>Contributing this "
+"information is optional and entirely anonymous. We never collect your "
+"personal data, files you use, websites you visit, or information that could "
+"identify you.<nl/><nl/>You can read about <link url='https://kde.org/"
+"privacypolicy-apps.php'>our privacy policy here.</link>"
+msgstr ""
+"KDE-ni necə istifadə etdiyiniz haqqında təcrübələrinizi bizimlə bölüşərək "
+"bizə daha vacib detallara diqqət yetirməmizə və Plasmanı sizin  üçün daha da "
+"yaxşılaşdırmağımıza kömək etmiş olursunuz.<nl/><nl/>Bu məlumatları paylaşmaq "
+"yalnız sizin arzunuzla ola bilər və anonimliyiniz tamamən qorunur. Şəxsi "
+"məlumatlarınızı, istifadə etdiyiniz faylları, ziyarət etdiyiniz veb "
+"səhifələrini və ya sizi tanıda biləcək bilgiləri əsla toplamırıq.<nl/><nl/"
+">Siyasətimizlə <link url='https://kde.org/privacypolicy-apps.php'>buradan "
+"tanış ola bilərsiniz.</link>"
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Plasma"
+msgstr "Plasma"
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "The following information will be sent:"
+msgstr "Aşağıdakı məlumatlar göndəriləcək:"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "View sent data:"
+msgstr "Göndərilən məlumatlara baxın:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Xəyyam Qocayev"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "xxmn77@gmail.com"
+
+#~ msgid "User Feedback"
+#~ msgstr "İstifadəçi rəyi"
+
+#~ msgid "Configure user feedback settings"
+#~ msgstr "İstifadəçi rəyi ayarlarını tənzimləmək"

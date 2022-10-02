@@ -1,0 +1,226 @@
+# translation of ksmserver.po to Slovak
+# Stanislav Visnovsky <visnovsky@nenya.ms.mff.cuni.cz>, 2002.
+# Stanislav Visnovsky <stano@ms.mff.cuni.cz>, 2002.
+# Stanislav Visnovsky <visnovsky@kde.org>, 2003, 2004.
+# Richard Fric <Richard.Fric@kdemail.net>, 2006, 2007, 2010.
+# Michal Sulek <misurel@gmail.com>, 2009, 2010.
+# Roman Paholík <wizzardsk@gmail.com>, 2012, 2013, 2014, 2015, 2017.
+# Matej Mrenica <matejm98mthw@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: ksmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-22 00:47+0000\n"
+"PO-Revision-Date: 2020-04-27 18:36+0200\n"
+"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"Language-Team: Slovak <kde-sk@linux.sk>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.04.0\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: logout.cpp:344
+#, kde-format
+msgid "Logout canceled by '%1'"
+msgstr "Odhlásenie zrušil '%1'"
+
+#: main.cpp:117
+#, kde-format
+msgid "$HOME not set!"
+msgstr "$HOME nie je nastavený!"
+
+#: main.cpp:121 main.cpp:127
+#, kde-format
+msgid "$HOME directory (%1) does not exist."
+msgstr "Adresár $HOME (%1) neexistuje."
+
+#: main.cpp:123
+#, kde-format
+msgid "No write access to $HOME directory (%1)."
+msgstr "Nie je právo na zápis do adresára $HOME (%1)."
+
+#: main.cpp:129
+#, kde-format
+msgid "No read access to $HOME directory (%1)."
+msgstr "Nie je právo na čítanie do adresára $HOME (%1)."
+
+#: main.cpp:133
+#, kde-format
+msgid "$HOME directory (%1) is out of disk space."
+msgstr "Adresár $HOME (%1) nemá dosť miesta na disku."
+
+#: main.cpp:136
+#, kde-format
+msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+msgstr "Zápis do adresára $HOME (%2) zlyhal s chybou '%1'"
+
+#: main.cpp:149 main.cpp:184
+#, kde-format
+msgid "No write access to '%1'."
+msgstr "Nie je prístup na zápis do '%1'."
+
+#: main.cpp:151 main.cpp:186
+#, kde-format
+msgid "No read access to '%1'."
+msgstr "Nie je prístup na čítanie do '%1'."
+
+#: main.cpp:159 main.cpp:172
+#, kde-format
+msgid "Temp directory (%1) is out of disk space."
+msgstr "Dočasný adresár (%1) nemá dosť miesta na disku."
+
+#: main.cpp:162 main.cpp:175
+#, kde-format
+msgid ""
+"Writing to the temp directory (%2) failed with\n"
+"    the error '%1'"
+msgstr ""
+"Zápis do dočasného adresára (%2) zlyhal\n"
+"    s chybou '%1'"
+
+#: main.cpp:190
+#, kde-format
+msgid ""
+"The following installation problem was detected\n"
+"while trying to start Plasma:"
+msgstr ""
+"Boli zistené nasledovné problémy inštalácie\n"
+"pri pokuse spustiť Plasmu:"
+
+#: main.cpp:193
+#, kde-format
+msgid ""
+"\n"
+"\n"
+"Plasma is unable to start.\n"
+msgstr ""
+"\n"
+"\n"
+"Plasmu nie je možné spustiť.\n"
+
+#: main.cpp:200
+#, kde-format
+msgid "Plasma Workspace installation problem!"
+msgstr "Problém s inštaláciou pracovnej plochy Plasma!"
+
+#: main.cpp:236
+#, kde-format
+msgid ""
+"The reliable Plasma session manager that talks the standard X11R6 \n"
+"session management protocol (XSMP)."
+msgstr ""
+"Spoľahlivý správca KDE sedení, ktorý komunikuje štandardným X11R6 \n"
+"protokolom správy sedenia (XSMP)."
+
+#: main.cpp:240
+#, kde-format
+msgid "Restores the saved user session if available"
+msgstr "Obnoví uložené užívateľské sedenie, ak je dostupné"
+
+#: main.cpp:243
+#, kde-format
+msgid "Also allow remote connections"
+msgstr "Povolí aj vzdialené pripojenia"
+
+#: main.cpp:246
+#, kde-format
+msgid "Starts the session in locked mode"
+msgstr "Spustí sedenie v zamknutom režime"
+
+#: main.cpp:250
+#, kde-format
+msgid ""
+"Starts without lock screen support. Only needed if other component provides "
+"the lock screen."
+msgstr ""
+"Spustí bez podpory zamknutia obrazovky. Potrebné iba, ak iný komponent "
+"poskytuje zamykanie obrazovky."
+
+#: server.cpp:873
+#, kde-format
+msgid "Session Management"
+msgstr "Správa sedení"
+
+#: server.cpp:876
+#, kde-format
+msgid "Log Out"
+msgstr "Odhlásiť"
+
+#: server.cpp:881
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "Odhlásiť bez potvrdenia"
+
+#: server.cpp:886
+#, kde-format
+msgid "Halt Without Confirmation"
+msgstr "Vypnúť bez potvrdenia"
+
+#: server.cpp:891
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "Reštartovať bez potvrdenia"
+
+#~ msgid ""
+#~ "Starts <wm> in case no other window manager is \n"
+#~ "participating in the session. Default is 'kwin'"
+#~ msgstr ""
+#~ "Spustí <wm> v prípade, že sa žiaden iný správca okien \n"
+#~ "nezúčastnil na sedení. Štandardne je to 'kwin'"
+
+#~ msgid "wm"
+#~ msgstr "wm"
+
+#~ msgid "Logout"
+#~ msgstr "Odhlásenie"
+
+#~ msgid "Sleeping in 1 second"
+#~ msgid_plural "Sleeping in %1 seconds"
+#~ msgstr[0] "Uspanie za 1 sekundu."
+#~ msgstr[1] "Odhlásenie za %1 sekundy."
+#~ msgstr[2] "Odhlásenie za %1 sekúnd."
+
+#~ msgid "Lock"
+#~ msgstr "Zamknúť"
+
+#~ msgid "ksmserver"
+#~ msgstr "ksmserver"
+
+#~ msgid "Turn off"
+#~ msgstr "Vypnúť"
+
+#~ msgid "Sleep"
+#~ msgstr "Uspať"
+
+#~ msgid "Logging out in 1 second."
+#~ msgid_plural "Logging out in %1 seconds."
+#~ msgstr[0] "Odhlásenie za 1 sekundu."
+#~ msgstr[1] "Odhlásenie za %1 sekundy."
+#~ msgstr[2] "Odhlásenie za %1 sekúnd."
+
+#~ msgid "Turning off computer in 1 second."
+#~ msgid_plural "Turning off computer in %1 seconds."
+#~ msgstr[0] "Vypnutie počítača za 1 sekundu."
+#~ msgstr[1] "Vypnutie počítača za %1 sekundy."
+#~ msgstr[2] "Vypnutie počítača za %1 sekúnd."
+
+#~ msgid "Restarting computer in 1 second."
+#~ msgid_plural "Restarting computer in %1 seconds."
+#~ msgstr[0] "Reštartovanie počítača za 1 sekundu."
+#~ msgstr[1] "Reštartovanie počítača za %1 sekundy."
+#~ msgstr[2] "Reštartovanie počítača za %1 sekúnd."
+
+#~ msgid "Turn Off Computer"
+#~ msgstr "Vypnúť počítač"
+
+#~ msgid "Restart Computer"
+#~ msgstr "Reštartovať počítač"
+
+#~ msgctxt "default option in boot loader"
+#~ msgid " (default)"
+#~ msgstr " (štandardný)"
+
+#~ msgid "Cancel"
+#~ msgstr "Zrušiť"

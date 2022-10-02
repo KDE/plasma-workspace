@@ -1,0 +1,23 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_appstream\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-11 00:46+0000\n"
+"PO-Revision-Date: 2021-06-08 19:37+0100\n"
+"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
+"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: appstreamrunner.cpp:34
+#, kde-format
+msgid "Looks for non-installed components according to :q:"
+msgstr "Procura por componentes não instalados de acordo com o :q:"
+
+#: appstreamrunner.cpp:133
+#, kde-format
+msgid "Get %1…"
+msgstr "Obter o %1…"

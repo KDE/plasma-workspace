@@ -1,0 +1,41 @@
+# Translation of phonon_kde.po to Brazilian Portuguese
+# Copyright (C) 2014 This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# André Marcelo Alvarenga <alvarenga@kde.org>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: phonon_kde\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-05-20 03:26+0200\n"
+"PO-Revision-Date: 2014-04-08 22:13-0300\n"
+"Last-Translator: André Marcelo Alvarenga <alvarenga@kde.org>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_br@kde.org>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 1.5\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Diniz Bortolotto, André Marcelo Alvarenga"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "diniz.bortolotto@gmail.com, andrealvarenga@gmx.net"
+
+#~ msgid "<qt>Unable to use the <b>%1</b> Multimedia Backend:<br/>%2</qt>"
+#~ msgstr ""
+#~ "<qt>Não é possível usar a infraestrutura de multimídia <b>%1</b>:<br/>%2</"
+#~ "qt>"
+
+#~ msgid "Unable to find a Multimedia Backend"
+#~ msgstr "Não foi possível encontrar uma infraestrutura de multimídia"
+
+#~ msgid "Unable to find the requested Multimedia Backend"
+#~ msgstr ""
+#~ "Não foi possível encontrar a infraestrutura de multimídia solicitada"

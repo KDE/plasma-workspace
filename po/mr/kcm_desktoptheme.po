@@ -1,0 +1,458 @@
+# translation of kcm_desktopthemedetails.po to marathi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sandeep Shedmake <sandeep.shedmake@gmail.com>, 2009.
+# Chetan Khona <chetan@kompkin.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_desktopthemedetails\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"PO-Revision-Date: 2013-03-09 15:03+0530\n"
+"Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
+"Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Get New Themes..."
+msgid "Name of the current Plasma Style"
+msgstr "नवीन शैली प्राप्त करा..."
+
+#: kcm.cpp:108
+#, fuzzy, kde-format
+#| msgid "Unable to save theme."
+msgid "Unable to create a temporary file."
+msgstr "सुत्रयोजना संयचीत करू शकले नाही."
+
+#: kcm.cpp:119
+#, fuzzy, kde-format
+#| msgid "Unable to save theme."
+msgid "Unable to download the theme: %1"
+msgstr "सुत्रयोजना संयचीत करू शकले नाही."
+
+#: kcm.cpp:144
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: kcm.cpp:147 kcm.cpp:153
+#, kde-format
+msgid "Theme installation failed."
+msgstr ""
+
+#: kcm.cpp:245
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:24
+#, kde-format
+msgid "This module lets you choose the Plasma style."
+msgstr ""
+
+#: package/contents/ui/main.qml:69
+#, fuzzy, kde-format
+#| msgid "Available themes"
+msgid "All Themes"
+msgstr "उपलब्ध शैली"
+
+#: package/contents/ui/main.qml:70
+#, fuzzy, kde-format
+#| msgid "Theme"
+msgid "Light Themes"
+msgstr "शैली"
+
+#: package/contents/ui/main.qml:71
+#, kde-format
+msgid "Dark Themes"
+msgstr ""
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "Color scheme compatible"
+msgstr ""
+
+#: package/contents/ui/main.qml:100
+#, fuzzy, kde-format
+#| msgctxt "plasma name"
+#| msgid "Color Scheme"
+msgid "Follows color scheme"
+msgstr "रंग सुत्रयोजना"
+
+#: package/contents/ui/main.qml:118
+#, fuzzy, kde-format
+#| msgid "Theme"
+msgid "Edit Theme…"
+msgstr "शैली"
+
+#: package/contents/ui/main.qml:125
+#, kde-format
+msgid "Remove Theme"
+msgstr "शैली काढून टाका"
+
+#: package/contents/ui/main.qml:132
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Restore Theme"
+msgstr "शैली काढून टाका"
+
+#: package/contents/ui/main.qml:174
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: package/contents/ui/main.qml:179
+#, fuzzy, kde-format
+#| msgid "Get New Themes..."
+msgid "Get New Plasma Styles…"
+msgstr "नवीन शैली प्राप्त करा..."
+
+#: package/contents/ui/main.qml:193
+#, fuzzy, kde-format
+#| msgid "Theme"
+msgid "Open Theme"
+msgstr "शैली"
+
+#: package/contents/ui/main.qml:195
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:31
+#, kde-format
+msgid ""
+"This tool allows you to set the theme of the current Plasma session, without "
+"accidentally setting it to one that is either not available, or which is "
+"already set."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:35
+#, kde-format
+msgid ""
+"The name of the theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:36
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:49
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:65
+#, kde-format
+msgid "The current Plasma session's theme has been set to %1"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:67
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-desktoptheme.cpp:75
+#, kde-format
+msgid "You have the following Plasma themes on your system:"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr ""
+#~ "संदिप शेडमाके, \n"
+#~ "चेतन खोना"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "sandeep.shedmake@gmail.com, \n"
+#~ "chetan@kompkin.com"
+
+#, fuzzy
+#~| msgid "Get New Themes..."
+#~ msgid "Plasma Style"
+#~ msgstr "नवीन शैली प्राप्त करा..."
+
+#, fuzzy
+#~| msgid "Get New Themes..."
+#~ msgid "Plasma Styles"
+#~ msgstr "नवीन शैली प्राप्त करा..."
+
+#, fuzzy
+#~| msgid "How to Change Desktop Theme"
+#~ msgid "Download New Plasma Styles"
+#~ msgstr "डेस्कटॉप सुत्रयोजना कसे बदलवायचे"
+
+#, fuzzy
+#~| msgid "Remove Desktop Theme"
+#~ msgid "Configure Desktop Theme"
+#~ msgstr "डेस्कटॉप शैली काढून टाका"
+
+#~ msgid ""
+#~ "<h1>Desktop Theme</h1>This module allows you to modify the visual "
+#~ "appearance of the desktop."
+#~ msgstr ""
+#~ "<h1>डेस्कटॉप शैली</h1> हा विभाग डेस्कटॉपचा दर्शनीय अवतार बदलण्यासाठी मदत करतो."
+
+#~ msgid "KDE Desktop Theme Module"
+#~ msgstr "केडीई डेस्कटॉप शैली विभाग"
+
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
+#~ msgstr "(c) 2002 केरोल श्वेड, डेनियल मॉल्केनटिन"
+
+#~ msgid "Details"
+#~ msgstr "तपशील"
+
+#~ msgctxt "plasma name"
+#~ msgid "Panel Background"
+#~ msgstr "पटल पार्श्वभूमी"
+
+#~ msgctxt "plasma name"
+#~ msgid "Kickoff"
+#~ msgstr "किकऑफ"
+
+#~ msgctxt "plasma name"
+#~ msgid "Task Items"
+#~ msgstr "कार्य घटक"
+
+#~ msgctxt "plasma name"
+#~ msgid "Widget Background"
+#~ msgstr "विजेट पार्श्वभूमी"
+
+#~ msgctxt "plasma name"
+#~ msgid "Translucent Background"
+#~ msgstr "पारदर्शी पार्श्वभूमी"
+
+#~ msgctxt "plasma name"
+#~ msgid "Dialog Background"
+#~ msgstr "संवाद पार्श्वभूमी"
+
+#~ msgctxt "plasma name"
+#~ msgid "Analog Clock"
+#~ msgstr "एनॉलॉग घड्याळ"
+
+#~ msgctxt "plasma name"
+#~ msgid "Notes"
+#~ msgstr "नोंद"
+
+#~ msgctxt "plasma name"
+#~ msgid "Tooltip"
+#~ msgstr "टूलटिप"
+
+#~ msgctxt "plasma name"
+#~ msgid "Pager"
+#~ msgstr "पेजर"
+
+#~ msgctxt "plasma name"
+#~ msgid "Run Command Dialog"
+#~ msgstr "चालू करण्याचा आदेश संवाद"
+
+#~ msgctxt "plasma name"
+#~ msgid "Shutdown Dialog"
+#~ msgstr "बंद करा संवाद"
+
+#~ msgctxt "plasma name"
+#~ msgid "Icons"
+#~ msgstr "चिन्ह"
+
+#~ msgid "(Customized)"
+#~ msgstr "(ऐच्छिक बदललेले)"
+
+#~ msgid "User customized theme"
+#~ msgstr "वापरकर्त्याने ऐच्छिक बदल केलेली शैली"
+
+#~ msgid ""
+#~ "Theme items have been changed.  Do you still wish remove the \"%1\" theme?"
+#~ msgstr "शैली घटक बदलले गेले आहे. तुम्हाला तरी \"%1\" शैली काढून टाकायचे आहे का?"
+
+#~ msgid "Removal of the default desktop theme is not allowed."
+#~ msgstr "मूलभूत केडीई शैली काढून टाकण्यास परवानगी नाही."
+
+#~ msgid "Are you sure you wish remove the \"%1\" theme?"
+#~ msgstr "तुम्हाला नक्की \"%1\" शैली काढून टाकायची आहे का?"
+
+#~ msgid ""
+#~ "Please apply theme item changes (with a new theme name) before attempting "
+#~ "to export theme."
+#~ msgstr "शैली निर्यात करण्यापूर्वी शैली घटकातील बदल (नवीन शैली नावासकट) लागू करा."
+
+#~ msgid "Export Desktop Theme"
+#~ msgstr "डेस्कटॉप शैली निर्यात करा"
+
+#~ msgid "Export theme to file"
+#~ msgstr "शैली फाईल मध्ये निर्यात करा"
+
+#~ msgid "Theme Item"
+#~ msgstr "शैली घटक"
+
+#~ msgid "Source"
+#~ msgstr "स्रोत"
+
+#, fuzzy
+#~| msgid "%1 %2"
+#~ msgctxt ""
+#~ "%1 is the name of the theme, %2 is the type of the element (background, "
+#~ "icon, note, etc)"
+#~ msgid "%1 %2"
+#~ msgstr "%1 %2"
+
+#~ msgid "File..."
+#~ msgstr "फाईल..."
+
+#~ msgid "Select File to Use for %1"
+#~ msgstr "%1 करिता वापर करण्याकरिता फाईल निवडा"
+
+#~ msgid " Author: %1"
+#~ msgstr " लेखक : %1"
+
+#~ msgid "Version: %1"
+#~ msgstr "आवृत्ती : %1"
+
+#~ msgid "Desktop Theme Details"
+#~ msgstr "डेस्कटॉप शैली तपशील"
+
+#~ msgid "Choose an item and customize it by assigning it a theme"
+#~ msgstr "घटक निवडा व त्याला शैली जोडुन ईच्छेप्रमाणे बदला"
+
+#~ msgid ""
+#~ "You can set any theme to any item. The available themes for the item are "
+#~ "in the dropdown box on the right."
+#~ msgstr ""
+#~ "कोणतीही शैली तुम्ही कोणत्याही घटकाबरोबर निश्चित करू शकता. त्या घटकाकरिता उपलब्ध "
+#~ "शैली उजव्या चौकटीत आहेत."
+
+#~ msgid "Enable more options"
+#~ msgstr "जादा पर्याय कार्यान्वित करा"
+
+#~ msgid ""
+#~ "This will expand the dialog and give you options to export your custom "
+#~ "theme as well as to remove a theme."
+#~ msgstr ""
+#~ "हे संवाद मोठा करेल व तुम्हाला तुमची ऐच्छिक शैली निर्यात किंवा काढून टाकण्याचे पर्याय "
+#~ "देइल."
+
+#~ msgid "More"
+#~ msgstr "अधिक"
+
+#~ msgid "Remove the selected theme"
+#~ msgstr "निवडलेली शैली काढून टाका"
+
+#~ msgid ""
+#~ "Clicking this button will remove the selected theme. You will be asked "
+#~ "for confirmation."
+#~ msgstr ""
+#~ "हे बटन क्लिक केल्यावर निवडलेली शैली काढून टाकली जाईल. तुमच्याकडुन त्यासाठी समर्थन "
+#~ "घेण्यात येईल."
+
+#~ msgid "Save your theme in a zip archive"
+#~ msgstr "तुमची शैली झिप संग्रह मध्ये साठवा"
+
+#~ msgid ""
+#~ "You can save your theme in a zip archive in order to share it with the "
+#~ "community."
+#~ msgstr "समुदायाबरोबर शेअर करण्याकरिता तुम्ही तुमची शैली झिप संग्रह मध्ये साठवा."
+
+#~ msgid "Export Theme to File..."
+#~ msgstr "शैली या फाईल मध्ये निर्यात करा..."
+
+#~ msgid "New theme name:"
+#~ msgstr "नवीन शैली नाव:"
+
+#~ msgid "Custom theme name"
+#~ msgstr "ऐच्छिक शैली नाव"
+
+#~ msgid "Give a name to your custom theme."
+#~ msgstr "तुमच्या ऐच्छिक शैलीला नाव द्या."
+
+#~ msgid "Author:"
+#~ msgstr "लेखक :"
+
+#~ msgid "Custom theme author "
+#~ msgstr "ऐच्छिक शैली लेखक "
+
+#~ msgid "Enter the author name of your custom theme."
+#~ msgstr "तुमच्या ऐच्छिक शैलीच्या लेखकाचे नाव द्या."
+
+#~ msgid "Version:"
+#~ msgstr "आवृत्ती:"
+
+#~ msgid "Custom theme version number"
+#~ msgstr "ऐच्छिक शैली आवृत्ती क्रमांक"
+
+#~ msgid "Enter the version number of your custom theme."
+#~ msgstr "तुमच्या ऐच्छिक शैलीचा आवृत्ती क्रमांक द्या."
+
+#~ msgid "Description:"
+#~ msgstr "वर्णन:"
+
+#~ msgid "Custom theme description"
+#~ msgstr "ऐच्छिक शैली वर्णन"
+
+#~ msgid "Enter a description which will explain your custom theme."
+#~ msgstr "तुमची ऐच्छिक शैली बद्दल स्पष्टता मिळेल असे वर्णन द्या."
+
+#~ msgid "Select theme from above to customize"
+#~ msgstr "संयोजीत करण्याकरिता वरीलपैकी शैली निवडा"
+
+#~ msgid "Theme Author"
+#~ msgstr "शैली लेखक"
+
+#~ msgid "Theme Name"
+#~ msgstr "शैली नाव"
+
+#~ msgid "Theme Version"
+#~ msgstr "शैली आवृत्ती"
+
+#~ msgid "The theme description goes here..."
+#~ msgstr "शैली वर्णन येथे उल्लेखीत केले जाते..."
+
+#~ msgid ""
+#~ "Choose a start theme in this list then customize some items below. All "
+#~ "less important items not listed below will use this start theme."
+#~ msgstr ""
+#~ "खालील यादीतील एक सुरुवात शैली निवडा. नंतर त्यातील काही घटक बदला. यादीत नसलेले "
+#~ "कमी महत्वाचे घटक ही सुरवात शैली वापरतील."
+
+#~ msgid "Karol Szwed"
+#~ msgstr "केरोल श्वेड"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "डेनियल मॉल्केनटिन"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "राल्फ नोल्डेन"
+
+#~ msgid "KCMDesktopTheme"
+#~ msgstr "KCM डेस्कटॉप शैली"
+
+#, fuzzy
+#~| msgid ""
+#~| "To change your desktop theme to \"%1\", open\n"
+#~| "Desktop Settings and select \"%2\" from the droplist."
+#~ msgid ""
+#~ "To change your desktop theme to \"%1\", go back to the 'General' tab of "
+#~ "System Settings; choose 'Appearance', and then 'Style'; and finally "
+#~ "select \"%2\" from the drop-down list at the top of the window."
+#~ msgstr ""
+#~ "डेस्कटॉप सुत्रयोजना यास \"%1\" करीता बदलविण्याकरीता, \n"
+#~ "डेस्कटॉप संयोजना उघडा व ड्रॉपलीस्ट मधून \"%2\" निवडा."
+
+#, fuzzy
+#~| msgid "Removal of the default KDE theme is not allowed."
+#~ msgid "Removal of the active desktop theme is not allowed."
+#~ msgstr "मुलभूत KDE सुत्रयोजना काढूण टाकण्यास परवानगी नाही."

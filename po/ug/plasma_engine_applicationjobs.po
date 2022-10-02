@@ -1,0 +1,35 @@
+# Uyghur translation for plasma_engine_kuiserver.
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Sahran <sahran.ug@gmail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_engine_kuiserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"PO-Revision-Date: 2013-09-08 07:05+0900\n"
+"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
+"Language: ug\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: jobaction.cpp:18
+#, kde-format
+msgctxt "%1 is the subject (can be anything) upon which the job is performed"
+msgid "The JobView for %1 cannot be found"
+msgstr "%1 نىڭ خىزمەت كۆرۈنۈشىنى تاپالمىدى"
+
+#: kuiserverengine.cpp:209
+#, fuzzy, kde-format
+#| msgctxt "Byes per second"
+#| msgid "%1/s"
+msgctxt "Bytes per second"
+msgid "%1/s"
+msgstr "%1/s"
+
+#~ msgid "Job canceled by user."
+#~ msgstr "ۋەزىپە ئىشلەتكۈچى تەرىپىدىن ئەمەلدىن قالدۇرۇلدى"

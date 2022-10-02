@@ -1,0 +1,44 @@
+# translation of soliduiserver.po to
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Serdar Soytetir <tulliana@gmail.com>, 2007, 2008.
+# Emir SARI <emir_sari@icloud.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: soliduiserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-17 00:47+0000\n"
+"PO-Revision-Date: 2022-03-12 15:15+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: soliduiserver.cpp:62
+#, kde-format
+msgid "'%1' needs a password to be accessed. Please enter a password."
+msgstr "'%1', erişilebilmek için parola gerektiriyor. Lütfen bir parola girin."
+
+#~ msgid "A new device has been detected.<br><b>What do you want to do?</b>"
+#~ msgstr "Yeni bir aygıt bulundu. <br><b>Ne yapmak istersiniz?</b>"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Do nothing"
+#~ msgstr "Hiçbir şey yapma"
+
+#~ msgctxt "A default name for an action without proper label"
+#~ msgid "Unknown"
+#~ msgstr "Bilinmeyen"
+
+#~ msgid "Autorun - %1"
+#~ msgstr "Otomatik Çalıştır - %1"
+
+#~ msgid "Autoopen - %1"
+#~ msgstr "Otomatik Aç - %1"

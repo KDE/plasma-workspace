@@ -1,0 +1,639 @@
+# Translation of kcmstyle to Croatian
+#
+# Translators: Denis Lackovic <delacko@fly.srk.fer.hr>,Goran Žugelj <gzugelj@vuka.hr>,Mato Kutlić <mate@iskraemeco.hr>,Robert Sedak <robert.sedak@sk.tel.hr>,Roko Roic <roko@tis.hr>,Vlatko Kosturjak <kost@linux.hr>,
+# Oliver Mucafir <oliver.untwist@gmail.com>, 2009.
+# Marko Dimjasevic <marko@dimjasevic.net>, 2009.
+# DoDo <DoDoEntertainment@gmail.com>, 2009.
+# Andrej Dundovic <adundovi@gmail.com>, 2009.
+# Andrej Dundović <adundovi@gmail.com>, 2009.
+# Marko Dimjašević <marko@dimjasevic.net>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmstyle 0\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"PO-Revision-Date: 2011-07-12 17:43+0200\n"
+"Last-Translator: Marko Dimjašević <marko@dimjasevic.net>\n"
+"Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 1.2\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: gtkpage.cpp:59
+#, kde-format
+msgid "%1 is not a valid GTK Theme archive."
+msgstr ""
+
+#: kcmstyle.cpp:161 kcmstyle.cpp:168
+#, kde-format
+msgid "There was an error loading the configuration dialog for this style."
+msgstr ""
+"Došlo je do greške prilikom učitavanja dijaloga za podešavanje ovog stila."
+
+#: kcmstyle.cpp:274
+#, kde-format
+msgid "Failed to apply selected style '%1'."
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:32
+#, fuzzy, kde-format
+#| msgid "Show icons on buttons:"
+msgid "Show icons:"
+msgstr "Pokaži ikone na gumbima:"
+
+#: package/contents/ui/EffectSettingsPopup.qml:33
+#, fuzzy, kde-format
+#| msgid "Radio button"
+msgid "On buttons"
+msgstr "Radio gumb"
+
+#: package/contents/ui/EffectSettingsPopup.qml:44
+#, kde-format
+msgid "In menus"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:56
+#, fuzzy, kde-format
+#| msgid "Main toolbar text:"
+msgid "Main toolbar label:"
+msgstr "Tekst glavne alatne trake"
+
+#: package/contents/ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "None"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:59
+#, fuzzy, kde-format
+#| msgid "Text Only"
+msgid "Text only"
+msgstr "Samo Tekst"
+
+#: package/contents/ui/EffectSettingsPopup.qml:60
+#, fuzzy, kde-format
+#| msgid "Text Beside Icons"
+msgid "Beside icons"
+msgstr "Tekst uz ikone"
+
+#: package/contents/ui/EffectSettingsPopup.qml:61
+#, fuzzy, kde-format
+#| msgid "Text Below Icons"
+msgid "Below icon"
+msgstr "Tekst ispod ikona"
+
+#: package/contents/ui/EffectSettingsPopup.qml:76
+#, fuzzy, kde-format
+#| msgid "Secondary toolbar text:"
+msgid "Secondary toolbar label:"
+msgstr "Tekst sekundarne alatne trake:"
+
+#: package/contents/ui/GtkStylePage.qml:18
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "&Applications"
+msgid "GNOME/GTK Application Style"
+msgstr "&Aplikacije"
+
+#: package/contents/ui/GtkStylePage.qml:44
+#, kde-format
+msgid "GTK theme:"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:69
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgid "Preview…"
+msgstr "Pregled"
+
+#: package/contents/ui/GtkStylePage.qml:88
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:93
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "&Applications"
+msgid "Get New GNOME/GTK Application Styles…"
+msgstr "&Aplikacije"
+
+#: package/contents/ui/GtkStylePage.qml:109
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:111
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: package/contents/ui/main.qml:17
+#, fuzzy, kde-format
+#| msgid ""
+#| "<h1>Style</h1>This module allows you to modify the visual appearance of "
+#| "user interface elements, such as the widget style and effects."
+msgid ""
+"This module allows you to modify the visual appearance of applications' user "
+"interface elements."
+msgstr ""
+"<h1>Stil</h1>Ovaj modul dopušta vam mijenjati izgled elemenata korisničkog "
+"sučelja, kao što su stilovi ukrasa i efekti."
+
+#: package/contents/ui/main.qml:96
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure Style…"
+msgstr "&Podesite …"
+
+#: package/contents/ui/main.qml:116
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr ""
+
+#: package/contents/ui/main.qml:132
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "&Podesite …"
+
+#: styleconfdialog.cpp:21
+#, kde-format
+msgid "Configure %1"
+msgstr "Podesi %1"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "Kartica 1"
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, fuzzy, kde-format
+#| msgid "Button"
+msgid "Push Button"
+msgstr "Gumb"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, fuzzy, kde-format
+#| msgid "Combobox"
+msgid "Combo box"
+msgstr "Kombinirana kućica"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "Kvadratić"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "Radio gumb"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:133
+#, kde-format
+msgid "Tab 2"
+msgstr "Kartica 2"
+
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgctxt "@title:tab"
+#| msgid "&Applications"
+msgid "Application style"
+msgstr "&Aplikacije"
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Show icons on buttons:"
+msgid "Show icons on buttons"
+msgstr "Pokaži ikone na gumbima:"
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, fuzzy, kde-format
+#| msgid "Show icons on buttons:"
+msgid "Show icons in menus"
+msgstr "Pokaži ikone na gumbima:"
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, fuzzy, kde-format
+#| msgid "Main toolbar text:"
+msgid "Main toolbar label"
+msgstr "Tekst glavne alatne trake"
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, fuzzy, kde-format
+#| msgid "Secondary toolbar text:"
+msgid "Secondary toolbar label"
+msgstr "Tekst sekundarne alatne trake:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr ""
+#~ "Denis Lackovic, Goran Žugelj, Mato Kutlić, Robert Sedak, Roko Roic, "
+#~ "Vlatko Kosturjak, Oliver Mucafir, Andrej Dundović"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "lokalizacija@linux.hr, lokalizacija@linux.hr, lokalizacija@linux.hr, "
+#~ "lokalizacija@linux.hr, lokalizacija@linux.hr, lokalizacija@linux.hr, "
+#~ "oliver.untwist@gmail.com, adundovi@gmail.com"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "Application Style"
+#~ msgstr "&Aplikacije"
+
+#, fuzzy
+#~| msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
+#~ msgstr "© 2002 Karol Szwed, Daniel Molkentin"
+
+#~ msgid "Karol Szwed"
+#~ msgstr "Karol Szwed"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "Download New GNOME/GTK2 Application Styles..."
+#~ msgstr "&Aplikacije"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "GNOME/GTK2 Application Styles"
+#~ msgstr "&Aplikacije"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "Download New GNOME/GTK3 Application Styles..."
+#~ msgstr "&Aplikacije"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "GNOME/GTK3 Application Styles"
+#~ msgstr "&Aplikacije"
+
+#~ msgid "Unable to Load Dialog"
+#~ msgstr "Ne mogu učitati dijalog"
+
+#~ msgid "No description available."
+#~ msgstr "Nedostupan opis."
+
+#~ msgid ""
+#~ "This area shows a preview of the currently selected style without having "
+#~ "to apply it to the whole desktop."
+#~ msgstr ""
+#~ "Ovdje možete vidjeti pregled trenutno odabaranog stila prije nego ga "
+#~ "primjenite na cijelu radnu površinu."
+
+#~ msgid ""
+#~ "Here you can choose from a list of predefined widget styles (e.g. the way "
+#~ "buttons are drawn) which may or may not be combined with a theme "
+#~ "(additional information like a marble texture or a gradient)."
+#~ msgstr ""
+#~ "Ovdje možete odabrati jedan od unaprijed definiranih stilova "
+#~ "ukrasa(izgled komponenti kao što su gumbi, padajući meniji…).Ovo se može "
+#~ "kombinirati s temom (koja dodaje dodatne efekte kao što su pozadine ili "
+#~ "prijelazi boja)"
+
+#, fuzzy
+#~| msgid ""
+#~| "If you enable this option, KDE Applications will show small icons "
+#~| "alongside some important buttons."
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "some important buttons."
+#~ msgstr ""
+#~ "Ako uključite ovu mogućnost, KDE Aplikacije će prikazati male ikone uz "
+#~ "neke važne gumbe."
+
+#, fuzzy
+#~| msgid ""
+#~| "If you enable this option, KDE Applications will show small icons "
+#~| "alongside most menu items."
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "most menu items."
+#~ msgstr ""
+#~ "Ako uključite ovu mogućnost, KDE-aplikacije će prikazati male ikone uz "
+#~ "većinu izbornih stavki."
+
+#, fuzzy
+#~| msgid ""
+#~| "<p><b>No Text:</b> Shows only icons on toolbar buttons. Best option for "
+#~| "low resolutions.</p><p><b>Text Only: </b>Shows only text on toolbar "
+#~| "buttons.</p><p><b>Text Beside Icons: </b> Shows icons and text on "
+#~| "toolbar buttons. Text is aligned beside the icon.</p><b>Text Below "
+#~| "Icons: </b> Shows icons and text on toolbar buttons. Text is aligned "
+#~| "below the icon."
+#~ msgid ""
+#~ "<p><b>No text:</b> Shows only icons on toolbar buttons. Best option for "
+#~ "low resolutions.</p><p><b>Text only: </b>Shows only text on toolbar "
+#~ "buttons.</p><p><b>Text beside icons: </b> Shows icons and text on toolbar "
+#~ "buttons. Text is aligned beside the icon.</p><b>Text below icons: </b> "
+#~ "Shows icons and text on toolbar buttons. Text is aligned below the icon."
+#~ msgstr ""
+#~ "<p><b>Bez teksta:</b> Prikazuje samo ikone na gumbima alatne trake. "
+#~ "Najbolji izbor za niske rezolucije.</p><p><b>Samo tekst: </b>Prikazuje "
+#~ "samo tekst gumbima alatne trake.</p><p><b>Tekst uz ikone: </b> Prikazuje "
+#~ "ikone i tekst na gumbima alatne trake. Tekst je pokraj ikone.</p><b>Tekst "
+#~ "ispod ikona: </b> Prikazuje ikone i tekst na gumbima alatne trake. Tekst "
+#~ "je ispod ikone."
+
+#~ msgid "Toolbars"
+#~ msgstr "Alatne trake"
+
+#~ msgid "No Text"
+#~ msgstr "Bez teksta"
+
+#, fuzzy
+#~| msgid "Widget style:"
+#~ msgid "Widget Style"
+#~ msgstr "Stil ukrasa:"
+
+#~ msgid "Widget style:"
+#~ msgstr "Stil ukrasa:"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Fine Tuning"
+#~ msgstr "&Fino podešavanje"
+
+#~ msgid "Description: %1"
+#~ msgstr "Opis: %1"
+
+#~ msgid ""
+#~ "This page allows you to choose details about the widget style options"
+#~ msgstr ""
+#~ "Ova stranica  omogućava vam detaljniji izbor mogućnosti stila ukrasa"
+
+#~ msgid "Group Box"
+#~ msgstr "Skupna kućica"
+
+#~ msgid "KDE Style Module"
+#~ msgstr "KDE Stilski modul"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "In application"
+#~ msgstr "&Aplikacije"
+
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "Global Menu widget"
+#~ msgstr "&Aplikacije"
+
+#~ msgid "Graphical effects:"
+#~ msgstr "Grafički efekti:"
+
+#~ msgid "Low display resolution and Low CPU"
+#~ msgstr "Niska razlučivost ekrana i niski CPU"
+
+#~ msgid "High display resolution and Low CPU"
+#~ msgstr "Visoka razlučivost ekrana i niski CPU"
+
+#~ msgid "Low display resolution and High CPU"
+#~ msgstr "Niska razlučivost ekrana i visoki CPU"
+
+#~ msgid "High display resolution and High CPU"
+#~ msgstr "Visoka razlučivost ekrana i visoki CPU"
+
+#~ msgid "Low display resolution and Very High CPU"
+#~ msgstr "Niska razlučivost ekrana i vrlo visoki CPU"
+
+#~ msgid "High display resolution and Very High CPU"
+#~ msgstr "Visoka razlučivost ekrana i vrlo visoki CPU"
+
+#~ msgid ""
+#~ "If you enable this option, KDE Applications will run internal animations."
+#~ msgstr ""
+#~ "Ako uključite ovu mogućnost, KDE Aplikacije će pokrenuti interne "
+#~ "animacije."
+
+#~ msgid "kcmstyle"
+#~ msgstr "kcmstyle"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Workspace"
+#~ msgstr "&Radni prostor"
+
+#~ msgid "Get New Themes..."
+#~ msgstr "Preuzmi nove teme …"
+
+#~ msgid "Icons Only"
+#~ msgstr "Samo Ikone"
+
+#~ msgctxt "@label:listbox"
+#~ msgid "Text pos&ition of toolbar elements:"
+#~ msgstr "Poz&icija teksta elemenata alatne trake:"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Style"
+#~ msgstr "&Stil"
+
+#~ msgid ""
+#~ "This page allows you to enable various widget style effects. For best "
+#~ "performance, it is advisable to disable all effects."
+#~ msgstr ""
+#~ "Na ovoj strani možete odabrati razne stilske efekte nad komponentama "
+#~ "sučelja.Ako želite postići najbolje performanse, onemogućite sve ove "
+#~ "efekte."
+
+#, fuzzy
+#~| msgid "High&light buttons under mouse"
+#~ msgctxt "@option:check"
+#~ msgid "High&light buttons under mouse"
+#~ msgstr "Osvjet&li gumbe ispod pokazivača"
+
+#, fuzzy
+#~| msgid "E&nable tooltips"
+#~ msgctxt "@option:check"
+#~ msgid "E&nable tooltips"
+#~ msgstr "O&mogući savjete za alate"
+
+#~ msgid ""
+#~ "If this option is selected, toolbar buttons will change their color when "
+#~ "the mouse cursor is moved over them."
+#~ msgstr ""
+#~ "Ako je ova opcija uključena, gumbi alatne trake promjenit će boju u "
+#~ "trenutku kada pokazivač miša prijeđe preko njih."
+
+#~ msgid ""
+#~ "If you check this option, the KDE application will offer tooltips when "
+#~ "the cursor remains over items in the toolbar."
+#~ msgstr ""
+#~ "Ako označite ovu opciju, KDE aplikacija će ponuditi natuknice kada se "
+#~ "kursor pojavi iznad stavke trake s alatima."
+
+#~ msgid "&Effects"
+#~ msgstr "Efe&kti"
+
+#~ msgid "Show tear-off handles in &popup menus"
+#~ msgstr "Pokaži otrgnute ručke u &pojavljujućim izbornicima"
+
+#~ msgid "&Enable GUI effects"
+#~ msgstr "&Omogući efekte grafičke okoline"
+
+#~ msgid "Disable"
+#~ msgstr "Onemogući"
+
+#~ msgid "Animate"
+#~ msgstr "Animiraj"
+
+#~ msgid "Combobo&x effect:"
+#~ msgstr "Efekt padajućeg &popisa:"
+
+#~ msgid "Fade"
+#~ msgstr "Iščezavanje"
+
+#~ msgid "&Tool tip effect:"
+#~ msgstr "Efekt &natuknica:"
+
+#~ msgid "Make Translucent"
+#~ msgstr "Učini prozornim"
+
+#~ msgid "&Menu effect:"
+#~ msgstr "Efekt &izbornika:"
+
+#, fuzzy
+#~ msgid "Me&nu tear-off handles:"
+#~ msgstr "Ručke me&nija:"
+
+#~ msgid "Menu &drop shadow"
+#~ msgstr "&Sjena izbornika"
+
+#~ msgid "Software Tint"
+#~ msgstr "Obojaj (soft)"
+
+#~ msgid "Software Blend"
+#~ msgstr "Prelijevanje boja (soft)"
+
+#~ msgid "XRender Blend"
+#~ msgstr "Xrender preljevanje"
+
+#~ msgid "0%"
+#~ msgstr "0%"
+
+#~ msgid "50%"
+#~ msgstr "50%"
+
+#~ msgid "100%"
+#~ msgstr "100%"
+
+#~ msgid "Menu trans&lucency type:"
+#~ msgstr "Izbornik vrste proz&irnosti:"
+
+#~ msgid "Menu &opacity:"
+#~ msgstr "Izbornik prozirnosti:"
+
+#~ msgid "Transparent tool&bars when moving"
+#~ msgstr "Prozirne trake s &alatima prilikom pomicanja"
+
+#, fuzzy
+#~| msgid "Menu translucency is not available.<br>"
+#~ msgid "Menu translucency is not available.<br />"
+#~ msgstr "Prozirni izbornik nije omogućen.<br>"
+
+#~ msgid "Menu drop-shadows are not available."
+#~ msgstr "Sjene izbornika nisu dostupne."
+
+#~ msgid ""
+#~ "If you check this box, you can select several effects for different "
+#~ "widgets like combo boxes, menus or tooltips."
+#~ msgstr ""
+#~ "Ako označite ovu kućicu, moći ćete odabrati razne stilove za komponente "
+#~ "sučelja kao što su izbornici, natuknice, padajući izbornici."
+
+#, fuzzy
+#~ msgid ""
+#~ "<p><b>Disable: </b>do not use any combo box effects.</p>\n"
+#~ "<b>Animate: </b>Do some animation."
+#~ msgstr ""
+#~ "<p><b>Onemogući: </b>Ne korsti efekte na padajućim izbornicima.</p>\n"
+#~ "<b>Animiraj: </b>Efekti animacije."
+
+#, fuzzy
+#~ msgid ""
+#~ "<p><b>Disable: </b>do not use any tooltip effects.</p>\n"
+#~ "<p><b>Animate: </b>Do some animation.</p>\n"
+#~ "<b>Fade: </b>Fade in tooltips using alpha-blending."
+#~ msgstr ""
+#~ "<p><b>Onemogući: </b>Ne koristi efekte na natuknicama.</p>\n"
+#~ "<p><b>Animiraj: </b>Efekt animacije.</p>\n"
+#~ "<b>Osvijetli: </b>Postupno osvijetljavaj natuknice."
+
+#, fuzzy
+#~ msgid ""
+#~ "<p><b>Disable: </b>do not use any menu effects.</p>\n"
+#~ "<p><b>Animate: </b>Do some animation.</p>\n"
+#~ "<p><b>Fade: </b>Fade in menus using alpha-blending.</p>\n"
+#~ "<b>Make Translucent: </b>Alpha-blend menus for a see-through effect. (KDE "
+#~ "styles only)"
+#~ msgstr ""
+#~ "<p><b>Onemogući: </b>Ne koristi efekte na izbornicima.</p>\n"
+#~ "<p><b>Animiraj: </b>Efekt animacije.</p>\n"
+#~ "<p><b>Osvijetli: </b>Postupno osvijetljavaj izbornike.</p>\n"
+#~ "<b>Prozirnost: </b>Učini izbornike poluprozirnima. (Samo za KDE stilove)"
+
+#~ msgid "By adjusting this slider you can control the menu effect opacity."
+#~ msgstr ""
+#~ "Podešavanjem ovog klizača možete kontrolirati efekt prozirnosti izbornika."
+
+#, fuzzy
+#~ msgid ""
+#~ "<b>Note:</b> that all widgets in this combobox do not apply to Qt-only "
+#~ "applications."
+#~ msgstr ""
+#~ "Imajte na umu da se sve komponente u ovom izborniku ne mogu primjenitina "
+#~ "isključivo QT aplikacije (bez KDE)!"
+
+#~ msgid ""
+#~ "If you check this box, the toolbars will be transparent when moving them "
+#~ "around."
+#~ msgstr ""
+#~ "Ako označite kućicu, traka s alatima će biti prozirna za vrijeme "
+#~ "pomicanja."
+
+#~ msgid ""
+#~ "If you enable this option some pop-up menus will show so called tear-off "
+#~ "handles. If you click them, you get the menu inside a widget. This can be "
+#~ "very helpful when performing the same action multiple times."
+#~ msgstr ""
+#~ "Ako uključite ovu opciju, neki brzi izbornici pokazat će mjesta za "
+#~ "njihovo odvajanje. Ako kliknete na njih, dobit ćete izbornik unutar "
+#~ "posebnog okvira. Ovo može biti vrlo korisno kada koristite istu akciju "
+#~ "više puta."
+
+#~ msgid "%"
+#~ msgstr "%"
+
+#~ msgid "Button Group"
+#~ msgstr "Grupa gumba"

@@ -1,0 +1,139 @@
+# plasma_runner_shell Bahasa Melayu (Malay) (ms)
+# Copyright (C) 2008, 2009 K Desktop Environment
+# This file is distributed under the same license as the krunner_shellrunner package.
+#
+# Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>, 2008, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_shell\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-27 00:45+0000\n"
+"PO-Revision-Date: 2009-05-15 01:29+0800\n"
+"Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
+"Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=1;\n"
+
+#: shellrunner.cpp:35
+#, kde-format
+msgid "Finds commands that match :q:, using common shell syntax"
+msgstr "Cari arahan yang sepadan :q:, menggunakan sintaks shell biasa"
+
+#: shellrunner.cpp:36
+#, fuzzy, kde-format
+#| msgid "Run in &terminal window"
+msgid "Run in Terminal Window"
+msgstr "Laksana dalam tetingkap &terminal"
+
+#: shellrunner.cpp:54
+#, kde-format
+msgid "Run %1"
+msgstr "Laksana %1"
+
+#~ msgid "Enter the user you want to run the application as here."
+#~ msgstr ""
+#~ "Masukkan nama pengguna yang anda ingin laksanakan aplikasi untuknya "
+#~ "disini."
+
+#~ msgid "User&name:"
+#~ msgstr "&Nama Pengguna:"
+
+#~ msgid "Enter the password here for the user you specified above."
+#~ msgstr ""
+#~ "Masukkan kata laluan disini untuk pengguna yang anda nyatakan dibawah."
+
+#~ msgid "Pass&word:"
+#~ msgstr "&Katalaluan:"
+
+#~ msgid ""
+#~ "Check this option if the application you want to run is a text mode "
+#~ "application. The application will then be run in a terminal emulator "
+#~ "window."
+#~ msgstr ""
+#~ "Tanda pilihan ini jika aplikasi yang anda mahu laksanakan adalah aplikasi "
+#~ "mod teks. Aplikasi akan dijalankan di dalam tetingkap emulator terminal."
+
+#~ msgid "Run in &terminal window"
+#~ msgstr "Laksana dalam tetingkap &terminal"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "user id. Every process has a user id associated with it. This id code "
+#~ "determines file access and other permissions. The password of the user is "
+#~ "required to do this."
+#~ msgstr ""
+#~ "Tanda pilhan ini jika anda ingin melaksanakan aplikasi dengan id pengguna "
+#~ "berlainan. Setiap proses mempunyai id pengguna yang dikaitkan. Kod id "
+#~ "menentukan akses fail dan keizinan lain. Kata laluan pengguna diperlukan "
+#~ "untuk perkara tersebut."
+
+#~ msgid "Run as a different &user"
+#~ msgstr "Laksanakan sebagai pengg&una lain"
+
+#~ msgid ""
+#~ "<qt>Select whether realtime scheduling should be enabled for the "
+#~ "application. The scheduler governs which process will run and which will "
+#~ "have to wait. Two schedulers are available:\n"
+#~ "<ul>\n"
+#~ "<li><em>Normal:</em> This is the standard, timesharing scheduler. It will "
+#~ "divide fairly the available processing time between all processes.</li>\n"
+#~ "<li><em>Realtime:</em>This scheduler will run your application "
+#~ "uninterrupted until it gives up the processor. This can be dangerous. An "
+#~ "application that does not give up the processor might hang the system. "
+#~ "You need root's password to use the scheduler.</li>\n"
+#~ "</ul>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>Pilih sama ada penjadualan masa sebenar patut dihidupkan untuk "
+#~ "aplikasi. Penjadual mengawal proses mana akan berjalan dan yang mana "
+#~ "perlu tunggu. Dua penjadual boleh didapati:\n"
+#~ "<ul>\n"
+#~ "<li><em>Normal:</em> Ini adalah penjadual standard, perkongsian masa. Ia "
+#~ "akan membahagikan dengan adil masa pemprosesan yang boleh didapati antara "
+#~ "semua proses.</li>\n"
+#~ "<li><em>Masa Sebenar:</em>Penjadual ini akan menjalankan aplikasi anda "
+#~ "tanpa gangguan sehingga ia meninggalkan pemproses. Ini boleh jadi "
+#~ "berbahaya. Aplikasi yang tidak meninggalkan pemproses mungkin menjadikan "
+#~ "sistem tergantung. Anda perlu kata laluan root untuk menggunakan "
+#~ "penjadual ini.</li>\n"
+#~ "</ul>\n"
+#~ "</qt>"
+
+#~ msgid "Run with realtime &scheduling"
+#~ msgstr "Laksanakan dengan penjadualan ma&sa nyata"
+
+#~ msgid ""
+#~ "The priority that the command will be run with can be set here. From left "
+#~ "to right, it goes from low to high. The center position is the default "
+#~ "value. For priorities higher than the default, you will need to provide "
+#~ "the root password."
+#~ msgstr ""
+#~ "Keutaman bagi arahan yang akan dilaksanakan boleh ditetapkan di sini. "
+#~ "Bermula dari kiri ke kanan, dan dipadankan dari rendah ke tinggi. Posisi "
+#~ "tengah adalah untuk nilai default. Untuk keutamaan lebih tinggi daripada "
+#~ "nilai default, anda memerlukan kata laluan root."
+
+#~ msgid "&Priority:"
+#~ msgstr "&Keutamaan:"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "priority. A higher priority tells the operating system to give more "
+#~ "processing time to your application."
+#~ msgstr ""
+#~ "Tanda pilihan ini jika anda ingin laksanakan aplikasi dengan keutamaan "
+#~ "berlainan. Keutamaan yang lebih tinggi memberitahu sistem operasi untuk "
+#~ "memberikan lebih masa pemprosesan untuk aplikasi anda."
+
+#~ msgid "Run with a &different priority"
+#~ msgstr "&Laksanakan dengan keutamaan berlainan"
+
+#~ msgid "Low"
+#~ msgstr "Rendah"
+
+#~ msgid "High"
+#~ msgstr "Tinggi"

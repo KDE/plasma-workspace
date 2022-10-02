@@ -1,0 +1,136 @@
+# translation of plasma_runner_shell.po to Swedish
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2008, 2009, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_shell\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-27 00:45+0000\n"
+"PO-Revision-Date: 2016-05-13 17:11+0100\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 2.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: shellrunner.cpp:35
+#, kde-format
+msgid "Finds commands that match :q:, using common shell syntax"
+msgstr ""
+"Hittar kommandon som motsvarar :q:, genom att använda vanlig skalsyntax"
+
+#: shellrunner.cpp:36
+#, kde-format
+msgid "Run in Terminal Window"
+msgstr "Kör i terminalfönster"
+
+#: shellrunner.cpp:54
+#, kde-format
+msgid "Run %1"
+msgstr "Kör %1"
+
+#~ msgid "Enter the user you want to run the application as here."
+#~ msgstr "Här anger du som vilken användare du vill köra programmet."
+
+#~ msgid "User&name:"
+#~ msgstr "Användar&namn:"
+
+#~ msgid "Enter the password here for the user you specified above."
+#~ msgstr "Ange lösenord för användaren som du specificerade ovan."
+
+#~ msgid "Pass&word:"
+#~ msgstr "L&ösenord:"
+
+#~ msgid ""
+#~ "Check this option if the application you want to run is a text mode "
+#~ "application. The application will then be run in a terminal emulator "
+#~ "window."
+#~ msgstr ""
+#~ "Markera detta alternativ om programmet du vill köra är ett "
+#~ "textlägesprogram. Programmet kommer då att köras i ett "
+#~ "terminalemuleringsfönster."
+
+#~ msgid "Run in &terminal window"
+#~ msgstr "Kör i &terminalfönster"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "user id. Every process has a user id associated with it. This id code "
+#~ "determines file access and other permissions. The password of the user is "
+#~ "required to do this."
+#~ msgstr ""
+#~ "Markera detta alternativ om du vill köra programmet med ett annat "
+#~ "användar-id. Varje process har ett associerat användar-id. Denna id-kod "
+#~ "avgör filtillgång och andra behörigheter. Användarens lösenord krävs om "
+#~ "du vill göra detta."
+
+#~ msgid "Run as a different &user"
+#~ msgstr "Kör som annan an&vändare"
+
+#~ msgid ""
+#~ "<qt>Select whether realtime scheduling should be enabled for the "
+#~ "application. The scheduler governs which process will run and which will "
+#~ "have to wait. Two schedulers are available:\n"
+#~ "<ul>\n"
+#~ "<li><em>Normal:</em> This is the standard, timesharing scheduler. It will "
+#~ "divide fairly the available processing time between all processes.</li>\n"
+#~ "<li><em>Realtime:</em>This scheduler will run your application "
+#~ "uninterrupted until it gives up the processor. This can be dangerous. An "
+#~ "application that does not give up the processor might hang the system. "
+#~ "You need root's password to use the scheduler.</li>\n"
+#~ "</ul>\n"
+#~ "</qt>"
+#~ msgstr ""
+#~ "<qt>Välj om realtidsschemaläggning ska användas för programmet. "
+#~ "Schemaläggaren bestämmer vilken process som ska köras och vilken som "
+#~ "måste vänta. Två schemaläggare är tillgängliga:\n"
+#~ "<ul>\n"
+#~ "<li><em>Normal:</em> Denna är standard, tiddelningsschemaläggare. Den "
+#~ "kommer att rättvist att dela den tillgängliga processortiden för alla "
+#~ "processer.</li>\n"
+#~ "<li><em>Realtid:</em> Denna schemaläggare kommer att köra programmet "
+#~ "oavbrutet tills det släpper processorn. Detta kan vara farligt. Ett "
+#~ "program som inte släpper processorn kan hänga systemet. Du behöver root-"
+#~ "lösenordet för att använda denna schemaläggare.</li>\n"
+#~ "</ul>\n"
+#~ "</qt>"
+
+#~ msgid "Run with realtime &scheduling"
+#~ msgstr "Kör med realtids&schemaläggning"
+
+#~ msgid ""
+#~ "The priority that the command will be run with can be set here. From left "
+#~ "to right, it goes from low to high. The center position is the default "
+#~ "value. For priorities higher than the default, you will need to provide "
+#~ "the root password."
+#~ msgstr ""
+#~ "Prioriteten som kommandot kommer att köras med kan ställas in här. Från "
+#~ "vänster till höger, den går från låg till hög. Centrerad position är "
+#~ "standardvärdet. För prioriteter högre än standard, behöver du "
+#~ "tillhandahålla root-lösenordet."
+
+#~ msgid "&Priority:"
+#~ msgstr "&Prioritet:"
+
+#~ msgid ""
+#~ "Check this option if you want to run the application with a different "
+#~ "priority. A higher priority tells the operating system to give more "
+#~ "processing time to your application."
+#~ msgstr ""
+#~ "Markera detta alternativ om du vill köra programmet med en annan "
+#~ "prioritet. En högre prioritet talar om för operativsystemet att tilldela "
+#~ "mer processortid till programmet."
+
+#~ msgid "Run with a &different priority"
+#~ msgstr "Kör med annan &prioritet"
+
+#~ msgid "Low"
+#~ msgstr "Låg"
+
+#~ msgid "High"
+#~ msgstr "Hög"

@@ -1,0 +1,513 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+#
+# Maris Nartiss <maris.kde@gmail.com>, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-desktop\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-25 00:46+0000\n"
+"PO-Revision-Date: 2019-11-10 12:37+0200\n"
+"Last-Translator: Maris Nartiss <maris.kde@gmail.com>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+"X-Generator: Lokalize 19.08.2\n"
+
+#: plugin/actionlist.cpp:86
+#, kde-format
+msgid "Open with:"
+msgstr "Atvērt ar:"
+
+#: plugin/actionlist.cpp:99
+#, kde-format
+msgid "Properties"
+msgstr "Īpašības"
+
+#: plugin/actionlist.cpp:146
+#, kde-format
+msgid "Add to Desktop"
+msgstr "Pievienot darbvirsmai"
+
+#: plugin/actionlist.cpp:151
+#, kde-format
+msgid "Add to Panel (Widget)"
+msgstr "Pievienot panelim (logdaļa)"
+
+#: plugin/actionlist.cpp:156
+#, kde-format
+msgid "Pin to Task Manager"
+msgstr "Piespraust pie uzdevumu pārvaldnieka"
+
+#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:429
+#, fuzzy, kde-format
+#| msgid "Recent Documents"
+msgid "Recent Files"
+msgstr "Nesenie dokumenti"
+
+#: plugin/actionlist.cpp:317
+#, fuzzy, kde-format
+#| msgid "Forget Recent Documents"
+msgid "Forget Recent Files"
+msgstr "Aizmirst nesenos dokumentus"
+
+#: plugin/actionlist.cpp:395
+#, fuzzy, kde-format
+#| msgid "Edit Application..."
+msgid "Edit Application…"
+msgstr "Rediģēt programmu..."
+
+#: plugin/actionlist.cpp:438
+#, fuzzy, kde-format
+#| msgctxt "@action opens a software center with the application"
+#| msgid "Uninstall or Manage Add-Ons..."
+msgctxt "@action opens a software center with the application"
+msgid "Uninstall or Manage Add-Ons…"
+msgstr "Pārvaldīt paplašinājums..."
+
+#: plugin/appentry.cpp:319
+#, kde-format
+msgid "Hide Application"
+msgstr "Slēpt programmu"
+
+#: plugin/appentry.cpp:390
+#, kde-format
+msgctxt "App name (Generic name)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: plugin/appentry.cpp:392
+#, kde-format
+msgctxt "Generic name (App name)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: plugin/appsmodel.cpp:34 plugin/appsmodel.cpp:58 plugin/computermodel.cpp:98
+#: plugin/computermodel.cpp:226 plugin/recentusagemodel.cpp:163
+#: plugin/recentusagemodel.cpp:226
+#, kde-format
+msgid "Applications"
+msgstr "Programmas"
+
+#: plugin/appsmodel.cpp:151
+#, kde-format
+msgid "Unhide Applications in this Submenu"
+msgstr "Šajā apakšizvēlnē padarīt programmas redzamas"
+
+#: plugin/appsmodel.cpp:160
+#, kde-format
+msgid "Unhide Applications in '%1'"
+msgstr "Padarīt redzamas programmas iekš '%1'"
+
+#: plugin/computermodel.cpp:92
+#, kde-format
+msgid "Show KRunner"
+msgstr "Rādīt iekš KRunner"
+
+#: plugin/computermodel.cpp:96
+#, kde-format
+msgid "Search, calculate, or run a command"
+msgstr "Meklē, rēķini vai darbini komandu"
+
+#: plugin/computermodel.cpp:149
+#, kde-format
+msgid "Computer"
+msgstr "Dators"
+
+#: plugin/contactentry.cpp:106 plugin/recentcontactsmodel.cpp:82
+#, fuzzy, kde-format
+#| msgid "Show Contact Information..."
+msgid "Show Contact Information…"
+msgstr "Rādīt kontaktinformāciju..."
+
+#. i18n.
+#: plugin/kastatsfavoritesmodel.cpp:504 plugin/rootmodel.cpp:416
+#: plugin/simplefavoritesmodel.cpp:31
+#, kde-format
+msgid "Favorites"
+msgstr "Iecienītās"
+
+#: plugin/recentcontactsmodel.cpp:40
+#, kde-format
+msgid "Contacts"
+msgstr "Kontakti"
+
+#: plugin/recentcontactsmodel.cpp:73
+#, kde-format
+msgid "Forget Contact"
+msgstr "Aizmirst kontaktu"
+
+#: plugin/recentcontactsmodel.cpp:77 plugin/recentcontactsmodel.cpp:153
+#, kde-format
+msgid "Forget All Contacts"
+msgstr "Aizmirst visus kontaktus"
+
+#: plugin/recentusagemodel.cpp:161
+#, kde-format
+msgid "Recently Used"
+msgstr "Nesen lietotie"
+
+#: plugin/recentusagemodel.cpp:166 plugin/recentusagemodel.cpp:308
+#, kde-format
+msgid "Files"
+msgstr ""
+
+#: plugin/recentusagemodel.cpp:248
+#, kde-format
+msgid "Forget Application"
+msgstr "Aizmirst programmu"
+
+#: plugin/recentusagemodel.cpp:342
+#, kde-format
+msgid "Open Containing Folder"
+msgstr ""
+
+#: plugin/recentusagemodel.cpp:345
+#, fuzzy, kde-format
+#| msgid "Forget All"
+msgid "Forget File"
+msgstr "Aizmirst visu"
+
+#: plugin/recentusagemodel.cpp:495
+#, kde-format
+msgid "Forget All"
+msgstr "Aizmirst visu"
+
+#: plugin/recentusagemodel.cpp:497
+#, kde-format
+msgid "Forget All Applications"
+msgstr "Aizmirst visas programmas"
+
+#: plugin/recentusagemodel.cpp:500
+#, fuzzy, kde-format
+#| msgid "Forget All"
+msgid "Forget All Files"
+msgstr "Aizmirst visu"
+
+#: plugin/rootmodel.cpp:95
+#, kde-format
+msgid "Hide %1"
+msgstr "Slēpt %1"
+
+#: plugin/rootmodel.cpp:398
+#, kde-format
+msgid "All Applications"
+msgstr "Visas programmas"
+
+#: plugin/rootmodel.cpp:410
+#, kde-format
+msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
+msgstr ""
+
+#: plugin/rootmodel.cpp:422
+#, kde-format
+msgid "Recent Contacts"
+msgstr "Nesenie kontakti"
+
+#: plugin/rootmodel.cpp:429
+#, fuzzy, kde-format
+#| msgid "Often Used Documents"
+msgid "Often Used Files"
+msgstr "Biežāk lietotie dokumenti"
+
+#: plugin/rootmodel.cpp:438
+#, kde-format
+msgid "Recent Applications"
+msgstr "Nesenās programmas"
+
+#: plugin/rootmodel.cpp:438
+#, kde-format
+msgid "Often Used Applications"
+msgstr "Biežāk lietotās programmas"
+
+#: plugin/rootmodel.cpp:453
+#, kde-format
+msgid "Power / Session"
+msgstr "Izslēgšana / sesija"
+
+#: plugin/runnermodel.cpp:231
+#, kde-format
+msgid "Search results"
+msgstr "Meklēšanas rezultāti"
+
+#: plugin/systementry.cpp:195
+#, kde-format
+msgid "Lock"
+msgstr "Slēgt"
+
+#: plugin/systementry.cpp:198
+#, kde-format
+msgid "Log Out"
+msgstr "Atteikties"
+
+#: plugin/systementry.cpp:201 plugin/systementry.cpp:269
+#, kde-format
+msgid "Save Session"
+msgstr "Saglabāt sesiju"
+
+#: plugin/systementry.cpp:204
+#, kde-format
+msgid "Switch User"
+msgstr "Pārslēgt lietotāju"
+
+#: plugin/systementry.cpp:207
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Aizmigt"
+
+#: plugin/systementry.cpp:210
+#, kde-format
+msgid "Hibernate"
+msgstr "Hibernēt"
+
+#: plugin/systementry.cpp:213
+#, kde-format
+msgid "Restart"
+msgstr "Pārstartēt"
+
+#: plugin/systementry.cpp:216
+#, kde-format
+msgid "Shut Down"
+msgstr "Izslēgt"
+
+#: plugin/systementry.cpp:229 plugin/systementry.cpp:232
+#: plugin/systementry.cpp:235 plugin/systementry.cpp:238
+#, kde-format
+msgid "Session"
+msgstr "Sesija"
+
+#: plugin/systementry.cpp:241 plugin/systementry.cpp:244
+#: plugin/systementry.cpp:247 plugin/systementry.cpp:250
+#, kde-format
+msgid "System"
+msgstr "Sistēma"
+
+#: plugin/systementry.cpp:263
+#, kde-format
+msgid "Lock screen"
+msgstr "Slēgt ekrānu"
+
+#: plugin/systementry.cpp:266
+#, kde-format
+msgid "End session"
+msgstr "Beigt sesiju"
+
+#: plugin/systementry.cpp:272
+#, kde-format
+msgid "Start a parallel session as a different user"
+msgstr "Sākt paralēlu sesiju kā citam lietotājam"
+
+#: plugin/systementry.cpp:275
+#, kde-format
+msgid "Suspend to RAM"
+msgstr "Iemidzina uz RAM"
+
+#: plugin/systementry.cpp:278
+#, kde-format
+msgid "Suspend to disk"
+msgstr "Iemidzina uz disku"
+
+#: plugin/systementry.cpp:281
+#, kde-format
+msgid "Restart computer"
+msgstr "Pārstartē datoru"
+
+#: plugin/systementry.cpp:284
+#, kde-format
+msgid "Turn off computer"
+msgstr "Izslēdz datoru"
+
+#: plugin/systemmodel.cpp:31
+#, kde-format
+msgid "System actions"
+msgstr "Sistēmas darbības"
+
+#~ msgid "Documents"
+#~ msgstr "Dokumenti"
+
+#~ msgid "Forget Document"
+#~ msgstr "Aizmirst dokumentu"
+
+#~ msgid "Forget All Documents"
+#~ msgstr "Aizmirst visus dokumentus"
+
+#~ msgid "General"
+#~ msgstr "Vispārēji"
+
+#~ msgid "Remove from Favorites"
+#~ msgstr "Noņemt no iecienītajām"
+
+#~ msgid "Add to Favorites"
+#~ msgstr "Pievienot iecienītajām"
+
+#~ msgid "On All Activities"
+#~ msgstr "Visās aktivitātēs"
+
+#~ msgid "On The Current Activity"
+#~ msgstr "Pašreizējā aktivitātē"
+
+#~ msgid "Show In Favorites"
+#~ msgstr "Rādīt iecienītajās"
+
+#~ msgid "Icon:"
+#~ msgstr "Ikona:"
+
+#~ msgctxt "@item:inmenu Open icon chooser dialog"
+#~ msgid "Choose..."
+#~ msgstr "Izvēlēties..."
+
+#~ msgctxt "@item:inmenu Reset icon to default"
+#~ msgid "Clear Icon"
+#~ msgstr "Notīrīt ikonu"
+
+#~ msgid "Show applications as:"
+#~ msgstr "Rādīt programmas kā:"
+
+#~ msgid "Name only"
+#~ msgstr "Tikai nosaukumu"
+
+#~ msgid "Description only"
+#~ msgstr "Tikai aprakstu"
+
+#~ msgid "Name (Description)"
+#~ msgstr "Nosaukums (apraksts)"
+
+#~ msgid "Description (Name)"
+#~ msgstr "Apraksts (nosaukums)"
+
+#, fuzzy
+#~| msgid "Behavior"
+#~ msgid "Behavior:"
+#~ msgstr "Izturēšanās"
+
+#, fuzzy
+#~| msgid "Sort alphabetically"
+#~ msgid "Sort applications alphabetically"
+#~ msgstr "Kārtot pēc alfabēta"
+
+#, fuzzy
+#~| msgid "Flatten menu to a single level"
+#~ msgid "Flatten sub-menus to a single level"
+#~ msgstr "Saplacināt izvēlni līdz vienam līmenim"
+
+#, fuzzy
+#~| msgid "Categories"
+#~ msgid "Show categories:"
+#~ msgstr "Kategorijas"
+
+#, fuzzy
+#~| msgid "Recent Applications"
+#~ msgid "Recent applications"
+#~ msgstr "Nesenās programmas"
+
+#, fuzzy
+#~| msgid "Often Used Applications"
+#~ msgid "Often used applications"
+#~ msgstr "Biežāk lietotās programmas"
+
+#, fuzzy
+#~| msgid "Recent Documents"
+#~ msgid "Recent documents"
+#~ msgstr "Nesenie dokumenti"
+
+#, fuzzy
+#~| msgid "Often Used Documents"
+#~ msgid "Often used documents"
+#~ msgstr "Biežāk lietotie dokumenti"
+
+#, fuzzy
+#~| msgid "Recent Contacts"
+#~ msgid "Recent contacts"
+#~ msgstr "Nesenie kontakti"
+
+#, fuzzy
+#~| msgid "Show often used contacts"
+#~ msgid "Often used contacts"
+#~ msgstr "Rādīt biežāk lietotos kontaktus"
+
+#, fuzzy
+#~| msgid "Recently used"
+#~ msgctxt ""
+#~ "@item:inlistbox Sort items in categories by [Recently used | Often used]"
+#~ msgid "Recently used"
+#~ msgstr "Nesen lietotās"
+
+#, fuzzy
+#~| msgid "Often used"
+#~ msgctxt ""
+#~ "@item:inlistbox Sort items in categories by [Recently used | Ofetn used]"
+#~ msgid "Often used"
+#~ msgstr "Biežāk lietotās"
+
+#, fuzzy
+#~| msgid "Search"
+#~ msgid "Search:"
+#~ msgstr "Meklēt"
+
+#~ msgid "Expand search to bookmarks, files and emails"
+#~ msgstr "Meklēšanā ietvert grāmatzīmes, datnes un e-pastus"
+
+#~ msgid "Align search results to bottom"
+#~ msgstr "Meklēšanas rezultātus nolīdzināt gar apakšu"
+
+#~ msgid "Searching for '%1'"
+#~ msgstr "Meklē '%1'"
+
+#, fuzzy
+#~| msgid "Type to search."
+#~ msgid "Type to search..."
+#~ msgstr "Raksti, lai meklētu."
+
+#~ msgid "Widgets"
+#~ msgstr "Logdaļas"
+
+#~ msgid "Apps & Docs"
+#~ msgstr "Programmas un dokumenti"
+
+#~ msgid "Edit Applications..."
+#~ msgstr "Rediģēt programmas..."
+
+#~ msgid "Search..."
+#~ msgstr "Meklēt..."
+
+#~ msgctxt "@action opens a software center with the application"
+#~ msgid "Manage '%1'..."
+#~ msgstr "Pārvaldīt '%1'..."
+
+#~ msgid "Run Command..."
+#~ msgstr "Darbināt komandu..."
+
+#~ msgid "Run a command or a search query"
+#~ msgstr "Darbināt komandu vai izpildīt meklēšanas vaicājumu"
+
+#~ msgid "Show:"
+#~ msgstr "Rādīt:"
+
+#~ msgid "Show recent applications"
+#~ msgstr "Rādīt nesen lietotās programmas"
+
+#~ msgid "Show often used applications"
+#~ msgstr "Rādīt biežāk lietotās programmas"
+
+#~ msgid "Show recent documents"
+#~ msgstr "Rādīt nesenos dokumentus"
+
+#~ msgid "Show often used documents"
+#~ msgstr "Rādīt biežāk lietotos dokumentus"
+
+#~ msgid "Show recent contacts"
+#~ msgstr "Rādīt nesenos kontaktus"
+
+#~ msgid "Logout"
+#~ msgstr "Atteikties"
+
+#~ msgid "Suspend"
+#~ msgstr "Iemidzināt"
+
+#~ msgid "Reboot"
+#~ msgstr "Pārstartēt"

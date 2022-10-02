@@ -1,0 +1,99 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Korean "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="screenlocker" lang="&language;">
+<articleinfo>
+<title
+>화면 잠금</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit lang="ko" role="translator"
+><surname
+>박</surname
+><firstname
+>신조</firstname
+><affiliation
+><address
+><email
+>kde@peremen.name</email
+></address
+></affiliation
+><contrib
+>한국어 번역</contrib
+></othercredit
+> 
+</authorgroup>
+<!--FIXME code in plasma/kscreenlocker - docbook in plasma/plasma-workspace -->
+<date
+>2020-07-02</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>시스템 설정</keyword>
+<keyword
+>화면 잠금 도구</keyword>
+<keyword
+>화면 잠금</keyword>
+</keywordset>
+</articleinfo>
+<para
+>이 모듈에서 화면을 잠그기 전까지 활동 없이 대기할 시간, 암호를 묻지 않고 화면 잠금을 해제할 수 있는 시간, 화면 잠금 도구의 모습을 설정할 수 있습니다.</para>
+
+<para
+><guilabel
+>자동으로 화면 잠그기</guilabel
+> 항목에서는 화면을 잠그기 전까지 아무런 활동 없이 기다릴 시간을 지정할 수 있습니다. 체크 상자에서 옵션을 활성화한 후 스핀 상자에서 시간을 임의의 분 단위로 설정할 수 있습니다.</para>
+
+<para
+><guilabel
+>대기 모드에서 깨어난 후</guilabel
+> 체크 상자에서는 시스템이 대기 모드로 들어갔을 때 화면 잠금을 사용할지 여부를 선택할 수 있습니다.</para>
+
+<para
+>아래에 있는 <guilabel
+>암호를 입력하지 않고 잠금 해제 허용</guilabel
+> 스핀 상자에서는 잠금 화면이 표시된 후 지정한 시간이 지난 다음 마우스 단추나 키를 눌렀을 때 암호를 물어 봅니다. 로그인할 때 사용하는 암호와 동일합니다.</para>
+
+<para
+>화면을 수동으로 잠그면 즉시 암호를 물어 봅니다.</para>
+
+<para
+><guilabel
+>키보드 단축키</guilabel
+> 항목에서는 화면을 잠그는 단축키를 설정할 수 있습니다.</para>
+
+<para
+>화면 잠금 기능의 기본 단축키는 <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>L</keycap
+></keycombo
+>입니다.</para>
+
+<para
+>잠금 상태의 배경 화면을 바꾸려면 <guilabel
+>모양</guilabel
+> 레이블 옆에 있는 <guibutton
+>설정</guibutton
+> 단추를 클릭하십시오. <guilabel
+>배경 화면 형식</guilabel
+>에서 변경할 수 있습니다.</para>
+
+<para
+>배경 화면으로 <guilabel
+>단색</guilabel
+>을 사용할 수도 있습니다.</para>
+
+<para
+>또한 임의의 사진을 사용하거나, 폴더에 있는 사진으로 슬라이드 쇼를 사용하거나, 인터넷에서 새 배경 그림을 다운로드할 수 있습니다.</para>
+
+</article>

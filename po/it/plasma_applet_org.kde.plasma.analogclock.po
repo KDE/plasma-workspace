@@ -1,0 +1,95 @@
+# translation of plasma_applet_clock.po to Italian
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Marcello Anni <marcello.anni@alice.it>, 2007, 2008, 2009.
+# Vincenzo Reale <smart2128vr@gmail.com>, 2014, 2019, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_clock\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-25 00:47+0000\n"
+"PO-Revision-Date: 2022-07-25 20:35+0200\n"
+"Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
+"Language-Team: Italian <kde-i18n-it@kde.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 22.04.3\n"
+
+#: contents/config/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Aspetto"
+
+#: contents/ui/analogclock.qml:76
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Current time is %1; Current date is %2"
+msgstr "L'ora attuale è %1; la data attuale è %2"
+
+#: contents/ui/configGeneral.qml:23
+#, kde-format
+msgid "Show seconds hand"
+msgstr "Mostra la lancetta dei secondi"
+
+#: contents/ui/configGeneral.qml:24
+#, kde-format
+msgid "General:"
+msgstr "Generale:"
+
+#: contents/ui/configGeneral.qml:28
+#, kde-format
+msgid "Show time zone"
+msgstr "Mostra il fuso orario"
+
+#~ msgid "Show the seconds"
+#~ msgstr "Mostra i secondi"
+
+#~ msgid "Check this if you want to show the seconds."
+#~ msgstr "Marca questa se vuoi mostrare i secondi."
+
+#~ msgid "Show &seconds hand"
+#~ msgstr "Mostra lancetta dei &secondi"
+
+#~ msgid "Show the Timezone in text"
+#~ msgstr "Mostra il fuso orario nel testo"
+
+#~ msgid "Check this if you want to display Timezone in text."
+#~ msgstr "Marca questa se vuoi mostrare il fuso orario nel testo."
+
+#~ msgid "Show &time zone"
+#~ msgstr "Mostra il &fuso orario"
+
+#~ msgid "Also show the time as text"
+#~ msgstr "Mostra il tempo anche con il testo"
+
+#~ msgid "Timezones"
+#~ msgstr "Fusi orari"
+
+#~ msgid "Use &local timezone"
+#~ msgstr "Usa fuso orario &locale"
+
+#~ msgid "Area"
+#~ msgstr "Area"
+
+#~ msgid "Region"
+#~ msgstr "Regione"
+
+#~ msgid "Comment"
+#~ msgstr "Commento"
+
+#~ msgctxt "@title:window"
+#~ msgid "Configure Clock"
+#~ msgstr "Configura l'orologio"
+
+#~ msgid "Display the second hand"
+#~ msgstr "Mostra la seconda lancetta"
+
+#~ msgid "Display seconds"
+#~ msgstr "Mostra i secondi"
+
+#~ msgid "Display the time as a string"
+#~ msgstr "Mostra il tempo come una stringa"

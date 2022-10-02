@@ -1,0 +1,94 @@
+# translation of plasma_engine_keystate.po to Hindi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Rajesh Ranjan <rajesh672@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_engine_keystate\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-10 00:46+0000\n"
+"PO-Revision-Date: 2010-01-31 19:57+0530\n"
+"Last-Translator: Rajesh Ranjan <rajesh672@gmail.com>\n"
+"Language-Team: Hindi <indlinux>\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"\n"
+"\n"
+
+#: keystate.cpp:15
+msgid "Shift"
+msgstr "शिफ्ट"
+
+#: keystate.cpp:16
+msgid "Ctrl"
+msgstr "कंट्रोल"
+
+#: keystate.cpp:17
+msgid "Alt"
+msgstr "ऑल्ट"
+
+#: keystate.cpp:18
+msgid "Meta"
+msgstr "मेटा"
+
+#: keystate.cpp:19
+msgid "Super"
+msgstr "सुपर"
+
+#: keystate.cpp:20
+msgid "Hyper"
+msgstr "हाइपर"
+
+#: keystate.cpp:21
+msgid "AltGr"
+msgstr "ऑल्टजीआर"
+
+#: keystate.cpp:22
+msgid "Num Lock"
+msgstr "नंबर तालाबंद"
+
+#: keystate.cpp:23
+msgid "Caps Lock"
+msgstr "कैप्स लॉक"
+
+#: keystate.cpp:24
+msgid "Scroll Lock"
+msgstr "स्क्रॉल तालाबंद"
+
+#: keystate.cpp:26
+msgid "Left Button"
+msgstr "बायाँ बटन"
+
+#: keystate.cpp:27
+msgid "Right Button"
+msgstr "दायाँ बटन"
+
+#: keystate.cpp:28
+msgid "Middle Button"
+msgstr "मध्य बटन"
+
+#: keystate.cpp:29
+msgid "First X Button"
+msgstr "प्रथम एक्स बटन"
+
+#: keystate.cpp:30
+msgid "Second X Button"
+msgstr "दूसरा एक्स बटन"
+
+#: keystate.cpp:44 keystate.cpp:54 keystate.cpp:81 keystate.cpp:102
+#: keystate.cpp:110
+msgid "Pressed"
+msgstr "दबा हुआ"
+
+#: keystate.cpp:45 keystate.cpp:88 keystate.cpp:111
+msgid "Latched"
+msgstr "बंद"
+
+#: keystate.cpp:46 keystate.cpp:95 keystate.cpp:112
+msgid "Locked"
+msgstr "तालाबंद"

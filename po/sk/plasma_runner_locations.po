@@ -1,0 +1,48 @@
+# translation of plasma_runner_locations.po to Slovak
+# Richard Fric <Richard.Fric@kdemail.net>, 2008, 2009.
+# Peter Mihalik <udavac@inmail.sk>, 2009.
+# Michal Sulek <misurel@gmail.com>, 2009.
+# Roman Paholík <wizzardsk@gmail.com>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_locations\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-27 00:45+0000\n"
+"PO-Revision-Date: 2013-01-22 20:42+0100\n"
+"Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
+"Language-Team: Slovak <kde-sk@linux.sk>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: locationrunner.cpp:33
+#, kde-format
+msgid ""
+"Finds local directories and files, network locations and Internet sites with "
+"paths matching :q:."
+msgstr ""
+"Nájde lokálne adresáre a súbory, sieťové umiestnenia a internetové stránky s "
+"cestou zodpovedajúcou :q:."
+
+#: locationrunner.cpp:60
+#, kde-format
+msgid "Open %1"
+msgstr "Otvoriť %1"
+
+#: locationrunner.cpp:78 locationrunner.cpp:82
+#, kde-format
+msgid "Launch with %1"
+msgstr "Spustiť pomocou %1"
+
+#: locationrunner.cpp:88
+#, kde-format
+msgid "Go to %1"
+msgstr "Prejsť na %1"
+
+#: locationrunner.cpp:96
+#, kde-format
+msgid "Send email to %1"
+msgstr "Odoslať e-mail pre %1"

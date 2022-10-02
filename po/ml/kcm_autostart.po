@@ -1,0 +1,223 @@
+# Malayalam tranlsation of kcm_autostart.po.
+# Copyright (C) 2008 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kdebase package.
+#
+# ഹിരണ്‍ വേണുഗോപാലന്‍|Hiran Venugopalan <hiran.v@gmail.com>, 2008.
+# Praveen Arimbrathodiyil <pravi.a@gmail.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-07-02 00:50+0000\n"
+"PO-Revision-Date: 2019-12-12 22:41+0000\n"
+"Last-Translator: Vivek KJ Pazhedath <vivekkj2004@gmail.com>\n"
+"Language-Team: SMC <smc.org.in>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: autostartmodel.cpp:288
+#, kde-format
+msgid "\"%1\" is not an absolute url."
+msgstr ""
+
+#: autostartmodel.cpp:291
+#, kde-format
+msgid "\"%1\" does not exist."
+msgstr ""
+
+#: autostartmodel.cpp:294
+#, kde-format
+msgid "\"%1\" is not a file."
+msgstr ""
+
+#: autostartmodel.cpp:297
+#, kde-format
+msgid "\"%1\" is not readable."
+msgstr ""
+
+#: package/contents/ui/main.qml:40
+#, kde-format
+msgid "Make Executable"
+msgstr ""
+
+#: package/contents/ui/main.qml:54
+#, kde-format
+msgid "The file '%1' must be executable to run at logout."
+msgstr ""
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid "The file '%1' must be executable to run at login."
+msgstr ""
+
+#: package/contents/ui/main.qml:89
+#, fuzzy, kde-format
+msgid "Properties"
+msgstr "&ഗുണഗണങ്ങള്‍"
+
+#: package/contents/ui/main.qml:95
+#, fuzzy, kde-format
+#| msgid "&Remove"
+msgid "Remove"
+msgstr "&നീക്കം ചെയ്യുക"
+
+#: package/contents/ui/main.qml:106
+#, kde-format
+msgid "Applications"
+msgstr ""
+
+#: package/contents/ui/main.qml:109
+#, kde-format
+msgid "Login Scripts"
+msgstr ""
+
+#: package/contents/ui/main.qml:112
+#, fuzzy, kde-format
+#| msgid "Pre-KDE startup"
+msgid "Pre-startup Scripts"
+msgstr "കെഡിഇക്കു് മുമ്പുള്ള സ്റ്റാര്‍ട്ടപ്പ് "
+
+#: package/contents/ui/main.qml:115
+#, kde-format
+msgid "Logout Scripts"
+msgstr ""
+
+#: package/contents/ui/main.qml:124
+#, kde-format
+msgid "No user-specified autostart items"
+msgstr ""
+
+#: package/contents/ui/main.qml:125
+#, kde-kuit-format
+msgctxt "@info"
+msgid "Click the <interface>Add…</interface> button below to add some"
+msgstr ""
+
+#: package/contents/ui/main.qml:139
+#, fuzzy, kde-format
+#| msgid "Add Script..."
+msgid "Choose Login Script"
+msgstr "സ്ക്രിപ്റ്റ് ചേര്‍ക്കുക..."
+
+#: package/contents/ui/main.qml:160
+#, kde-format
+msgid "Choose Logout Script"
+msgstr ""
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "Add…"
+msgstr ""
+
+#: package/contents/ui/main.qml:193
+#, kde-format
+msgid "Add Application…"
+msgstr ""
+
+#: package/contents/ui/main.qml:199
+#, fuzzy, kde-format
+#| msgid "Add Script..."
+msgid "Add Login Script…"
+msgstr "സ്ക്രിപ്റ്റ് ചേര്‍ക്കുക..."
+
+#: package/contents/ui/main.qml:205
+#, fuzzy, kde-format
+#| msgid "Add Script..."
+msgid "Add Logout Script…"
+msgstr "സ്ക്രിപ്റ്റ് ചേര്‍ക്കുക..."
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "ഹിരണ്‍ വോണുഗോപാല്‍"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "shijualexonline@gmail.com,snalledam@dataone.in,vivekkj2004@gmail.com"
+
+#, fuzzy
+#~ msgid "Session Autostart Manager Control Panel Module"
+#~ msgstr "കെഡിഇ  സ്വയംപ്രവര്‍ത്തന നിയന്ത്രണഘടകം"
+
+#, fuzzy
+#~ msgid "Copyright © 2006–2020 Autostart Manager team"
+#~ msgstr "(c) 2006-2007-2008 Autostart Manager team"
+
+#~ msgid "Stephen Leaf"
+#~ msgstr "സ്റ്റീഫന്‍ ലീഫ്"
+
+#~ msgid "Montel Laurent"
+#~ msgstr "മൊന്റെല്‍ ലൗറെന്റ്"
+
+#~ msgid "Maintainer"
+#~ msgstr "പരിപാലകര്‍"
+
+#, fuzzy
+#~ msgid "Add..."
+#~ msgstr "വിശദമായവ"
+
+#, fuzzy
+#~ msgid "Shell script path:"
+#~ msgstr "ഷെല്‍ സ്കിപ്റ്റ്:"
+
+#~ msgid "Create as symlink"
+#~ msgstr "സിസ്റ്റം ലിങ്കായി സൃഷ്ടിക്കുക"
+
+#, fuzzy
+#~ msgid "Autostart only in Plasma"
+#~ msgstr "കെഡിഇയില്‍ മാത്രം തനിയെത്തുടങ്ങുക"
+
+#~ msgid "Name"
+#~ msgstr "പേരു്"
+
+#~ msgid "Command"
+#~ msgstr "ആജ്ഞ"
+
+#~ msgid "Status"
+#~ msgstr "സ്ഥിതി"
+
+#, fuzzy
+#~ msgctxt ""
+#~ "@title:column The name of the column that decides if the program is run "
+#~ "on session startup, on session shutdown, etc"
+#~ msgid "Run On"
+#~ msgstr "പ്രവര്‍ത്തിപ്പിയ്ക്കേണ്ടതു്"
+
+#, fuzzy
+#~ msgid "Session Autostart Manager"
+#~ msgstr "കെഡിഇ സ്വയംപ്രവര്‍ത്തന നിയന്ത്രകന്‍"
+
+#~ msgctxt "The program will be run"
+#~ msgid "Enabled"
+#~ msgstr "പ്രവര്‍ത്തന സജ്ജം"
+
+#~ msgctxt "The program won't be run"
+#~ msgid "Disabled"
+#~ msgstr "പ്രവര്‍ത്തനരഹിതം"
+
+#~ msgid "Desktop File"
+#~ msgstr "പണിയിട ഫയല്‍"
+
+#~ msgid "Script File"
+#~ msgstr "സ്ക്രിപ്റ്റ് ഫയല്‍"
+
+#~ msgid "Add Program..."
+#~ msgstr "പ്രോഗ്രാം ചേര്‍ക്കുക..."
+
+#~ msgid "Startup"
+#~ msgstr "സ്റ്റാര്‍ട്ടപ്പ് "
+
+#, fuzzy
+#~ msgid ""
+#~ "Only files with “.sh” extensions are allowed for setting up the "
+#~ "environment."
+#~ msgstr "പരിസരം സജ്ജീകരിക്കാന്‍ sh  എന്നു തുടര്‍നാമമുള്ള ഫയലുകള്‍ മാത്രമേ കെഡിഇ പരിഗണക്കൂ."
+
+#~ msgid "Shutdown"
+#~ msgstr "അടച്ചുപൂട്ടുക"
+
+#~ msgid "1"
+#~ msgstr "1"

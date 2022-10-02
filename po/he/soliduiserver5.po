@@ -1,0 +1,41 @@
+# Translation of soliduiserver.po to Hebrew
+# translation of soliduiserver.po to hebrew
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# tahmar1900 <tahmar1900@gmail.com>, 2007.
+# Meni Livne <livne@kde.org>, 2007.
+# Diego Iastrubni <elcuco@kde.org>, 2008.
+# Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+msgid ""
+msgstr ""
+"Project-Id-Version: soliduiserver5\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-17 00:47+0000\n"
+"PO-Revision-Date: 2017-05-16 06:58-0400\n"
+"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
+"Language-Team: Hebrew <kde-l10n-he@kde.org>\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Zanata 3.9.6\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: soliduiserver.cpp:62
+#, kde-format
+msgid "'%1' needs a password to be accessed. Please enter a password."
+msgstr "דרושה סיסמה כדי לקבל גישה ל־%1. הזן סיסמה."
+
+#~ msgid "A new device has been detected.<br><b>What do you want to do?</b>"
+#~ msgstr "זוהה התקן חדש.<br><b>מה ברצונך לעשות?</b>"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "Do nothing"
+#~ msgstr "אל תעשה כלום"
+
+#~ msgctxt "A default name for an action without proper label"
+#~ msgid "Unknown"
+#~ msgstr "לא ידוע"

@@ -1,0 +1,537 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# A. Akbar Hidayat <keripix@gmail.com>, 2010.
+# Andhika Padmawan <andhika.padmawan@gmail.com>, 2014.
+# Wantoyo <wantoyek@gmail.com>, 2017, 2018, 2019, 2020, 2021, 2022.
+# Aziz Adam Adrian <4.adam.adrian@gmail.com>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-05-03 00:45+0000\n"
+"PO-Revision-Date: 2022-09-27 18:12+0700\n"
+"Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
+"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, kde-format
+msgid "Force font DPI Wayland"
+msgstr "Paksa DPI font Wayland"
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:13
+#, kde-format
+msgid "Force font DPI on X11"
+msgstr "Paksa DPI font di X11"
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, kde-format
+msgid "General font"
+msgstr "Font umum"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, kde-format
+msgid "Fixed width font"
+msgstr "Lebar font tetap"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, kde-format
+msgid "Small font"
+msgstr "Font kecil"
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, kde-format
+msgid "Tool bar font"
+msgstr "Font bilah alat"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, kde-format
+msgid "Menu font"
+msgstr "Font menu"
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, kde-format
+msgid "Window title font"
+msgstr "Font judul jendela"
+
+#: kxftconfig.cpp:458
+#, kde-format
+msgctxt "use system subpixel setting"
+msgid "Vendor default"
+msgstr "Vendor baku"
+
+#: kxftconfig.cpp:460
+#, kde-format
+msgctxt "no subpixel rendering"
+msgid "None"
+msgstr "Nihil"
+
+#: kxftconfig.cpp:462
+#, kde-format
+msgid "RGB"
+msgstr "RGB"
+
+#: kxftconfig.cpp:464
+#, kde-format
+msgid "BGR"
+msgstr "BGR"
+
+#: kxftconfig.cpp:466
+#, kde-format
+msgid "Vertical RGB"
+msgstr "RGB tegak"
+
+#: kxftconfig.cpp:468
+#, kde-format
+msgid "Vertical BGR"
+msgstr "BGR tegak"
+
+#: kxftconfig.cpp:496
+#, kde-format
+msgctxt "use system hinting settings"
+msgid "Vendor default"
+msgstr "Vendor baku"
+
+#: kxftconfig.cpp:498
+#, kde-format
+msgctxt "medium hinting"
+msgid "Medium"
+msgstr "Medium"
+
+#: kxftconfig.cpp:500
+#, kde-format
+msgctxt "no hinting"
+msgid "None"
+msgstr "Nihil"
+
+#: kxftconfig.cpp:502
+#, kde-format
+msgctxt "slight hinting"
+msgid "Slight"
+msgstr "Sedikit"
+
+#: kxftconfig.cpp:504
+#, kde-format
+msgctxt "full hinting"
+msgid "Full"
+msgstr "Penuh"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module lets you configure the system fonts."
+msgstr "Modul ini membiarkanmu mengkonfigurasi font sistem."
+
+#: package/contents/ui/main.qml:26
+#, kde-format
+msgid "Change Display Scaling…"
+msgstr "Ubah Skala Display..."
+
+#: package/contents/ui/main.qml:37
+#, kde-format
+msgid ""
+"Some changes such as anti-aliasing or DPI will only affect newly started "
+"applications."
+msgstr ""
+"Beberapa perubahan seperti anti-aliasing atau DPI hanya akan berpengaruh "
+"pada aplikasi yang baru dimulaikan."
+
+#: package/contents/ui/main.qml:51
+#, kde-format
+msgid ""
+"Very large fonts may produce odd-looking results. Consider adjusting the "
+"global screen scale instead of using a very large font size."
+msgstr ""
+"Font-font yang sangat besar bisa menghasilkan nuansa yang aneh. "
+"Pertimbangkanlah penyesuaian skala layar global sebagai penggunaan ukuran "
+"font yang sangat besar."
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid ""
+"Decimal font sizes can cause text layout problems in some applications. "
+"Consider using only integer font sizes."
+msgstr ""
+"Ukuran font desimal dapat menyebabkan masalah tata letak teks di beberapa "
+"aplikasi. Pertimbangkan untuk hanya menggunakan ukuran font integer."
+
+#: package/contents/ui/main.qml:94
+#, kde-format
+msgid ""
+"The recommended way to scale the user interface is using the global screen "
+"scaling feature."
+msgstr ""
+"Cara yang direkomendasikan untuk mengskalakan antarmuka pengguna dengan "
+"menggunakan fitur penskalaan layar global."
+
+#: package/contents/ui/main.qml:106
+#, kde-format
+msgid "&Adjust All Fonts…"
+msgstr "&Setel Semua Font..."
+
+#: package/contents/ui/main.qml:119
+#, kde-format
+msgid "General:"
+msgstr "Umum:"
+
+#: package/contents/ui/main.qml:120
+#, kde-format
+msgid "Select general font"
+msgstr "Pilih font umum"
+
+#: package/contents/ui/main.qml:131
+#, kde-format
+msgid "Fixed width:"
+msgstr "Lebar tetap:"
+
+#: package/contents/ui/main.qml:132
+#, kde-format
+msgid "Select fixed width font"
+msgstr "Pilih font lebar tetap"
+
+#: package/contents/ui/main.qml:143
+#, kde-format
+msgid "Small:"
+msgstr "Kecil:"
+
+#: package/contents/ui/main.qml:144
+#, kde-format
+msgid "Select small font"
+msgstr "Pilih font kecil"
+
+#: package/contents/ui/main.qml:155
+#, kde-format
+msgid "Toolbar:"
+msgstr "Bilah Alat:"
+
+#: package/contents/ui/main.qml:156
+#, kde-format
+msgid "Select toolbar font"
+msgstr "Pilih font toolbar"
+
+#: package/contents/ui/main.qml:167
+#, kde-format
+msgid "Menu:"
+msgstr "Menu:"
+
+#: package/contents/ui/main.qml:168
+#, kde-format
+msgid "Select menu font"
+msgstr "Pilih font menu"
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "Window title:"
+msgstr "Judul jendela:"
+
+#: package/contents/ui/main.qml:179
+#, kde-format
+msgid "Select window title font"
+msgstr "Pilih font judul jendela"
+
+#: package/contents/ui/main.qml:194
+#, kde-format
+msgid "Anti-Aliasing:"
+msgstr "Anti-Aliasing:"
+
+#: package/contents/ui/main.qml:199
+#, kde-format
+msgid "Enable"
+msgstr "Fungsikan"
+
+#: package/contents/ui/main.qml:203
+#, kde-kuit-format
+msgctxt "@info:tooltip Anti-Aliasing"
+msgid ""
+"Pixels on displays are generally aligned in a grid. Therefore shapes of "
+"fonts that do not align with this grid will look blocky and wrong unless "
+"<emphasis>anti-aliasing</emphasis> techniques are used to reduce this "
+"effect. You generally want to keep this option enabled unless it causes "
+"problems."
+msgstr ""
+"Piksel pada tampilan umumnya disejajarkan dalam kisi. Oleh karena itu, "
+"bentuk font yang tidak sejajar dengan kisi ini akan terlihat buram dan salah "
+"kecuali jika teknik <emphasis>anti-aliasing</emphasis> digunakan untuk "
+"mengurangi efek ini. Biasanya kamu ingin tetap aktifkan opsi ini kecuali itu "
+"menyebabkan masalah."
+
+#: package/contents/ui/main.qml:217
+#, kde-format
+msgid "Exclude range from anti-aliasing"
+msgstr "Kecualikan jangkauan dari anti-aliasing"
+
+#: package/contents/ui/main.qml:236 package/contents/ui/main.qml:259
+#, kde-format
+msgid "%1 pt"
+msgstr "%1 pt"
+
+#: package/contents/ui/main.qml:251
+#, kde-format
+msgid "to"
+msgstr "ke"
+
+#: package/contents/ui/main.qml:282
+#, kde-format
+msgctxt "Used as a noun, and precedes a combobox full of options"
+msgid "Sub-pixel rendering:"
+msgstr "Perenderan sub-pixel:"
+
+#: package/contents/ui/main.qml:324
+#, kde-kuit-format
+msgctxt "@info:tooltip Sub-pixel rendering"
+msgid ""
+"<para>On TFT or LCD screens every single pixel is actually composed of three "
+"or four smaller monochrome lights. These <emphasis>sub-pixels</emphasis> can "
+"be changed independently to further improve the quality of displayed fonts.</"
+"para> <para>The rendering quality is only improved if the selection matches "
+"the manner in which the sub-pixels of your display are aligned. Most "
+"displays have a linear ordering of <emphasis>RGB</emphasis> sub-pixels, some "
+"have <emphasis>BGR</emphasis> and some exotic orderings are not supported by "
+"this feature.</para>This does not work with CRT monitors."
+msgstr ""
+"<para>Pada layar TFT atau LCD, setiap piksel sebenarnya terdiri dari tiga "
+"atau empat lampu monokrom yang lebih kecil. <emphasis>sub-pixel</emphasis> "
+"ini dapat diubah secara independen untuk lebih meningkatkan kualitas font "
+"yang ditampilkan.</para> <para>Kualitas rendering hanya ditingkatkan jika "
+"pemilihan cocok dengan cara sub-piksel dari tampilan Anda selaras. Sebagian "
+"besar tampilan memiliki urutan linier subpiksel <emphasis>RGB</emphasis>, "
+"beberapa memiliki <emphasis>BGR</emphasis> dan beberapa urutan eksotis tidak "
+"didukung oleh fitur ini.</para>Ini tidak berfungsi dengan monitor CRT."
+
+#: package/contents/ui/main.qml:329
+#, kde-format
+msgctxt "Used as a noun, and precedes a combobox full of options"
+msgid "Hinting:"
+msgstr "Hinting:"
+
+#: package/contents/ui/main.qml:370
+#, kde-kuit-format
+msgctxt "@info:tooltip Hinting"
+msgid ""
+"Hinting is a technique in which hints embedded in a font are used to enhance "
+"the rendering quality especially at small sizes. Stronger hinting generally "
+"leads to sharper edges but the small letters will less closely resemble "
+"their shape at big sizes."
+msgstr ""
+"Hinting adalah teknik di mana hinting yang disematkan dalam font digunakan "
+"untuk meningkatkan kualitas rendering terutama pada ukuran kecil. Hinting "
+"yang lebih kuat umumnya mengarah ke tepi yang lebih tajam tetapi huruf kecil "
+"akan kurang menyerupai bentuknya pada ukuran besar."
+
+#: package/contents/ui/main.qml:380
+#, kde-format
+msgid "Force font DPI:"
+msgstr "Paksa DPI font:"
+
+#: package/contents/ui/main.qml:422
+#, kde-kuit-format
+msgctxt "@info:tooltip Force fonts DPI"
+msgid ""
+"<para>Enter your screen's DPI here to make on-screen fonts match their "
+"physical sizes when printed. Changing this option from its default value "
+"will conflict with many apps; some icons and images may not scale as "
+"expected.</para><para>To increase text size, change the size of the fonts "
+"above. To scale everything, use the scaling slider on the <interface>Display "
+"& Monitor</interface> page.</para>"
+msgstr ""
+"<para>Masukkan DPI layar Anda di sini untuk membuat font di layar sesuai "
+"dengan ukuran fisiknya saat dicetak. Mengubah opsi ini dari nilai defaultnya "
+"akan bertentangan dengan banyak aplikasi; beberapa ikon dan gambar mungkin "
+"tidak berskala seperti yang diharapkan.</para><para>Untuk memperbesar ukuran "
+"teks, ubah ukuran font di atas. Untuk menskalakan semuanya, gunakan "
+"penggeser penskalaan di halaman <interface>Display & Monitor</interface>.</"
+"para>"
+
+#: package/contents/ui/main.qml:428
+#, kde-format
+msgid "Select Font"
+msgstr "Pilih Font"
+
+#, fuzzy
+#~| msgid ""
+#~| "<p>This option forces a specific DPI value for fonts. It may be useful "
+#~| "when the real DPI of the hardware is not detected properly and it is "
+#~| "also often misused when poor quality fonts are used that do not look "
+#~| "well with DPI values other than 96 or 120 DPI.</p><p>The use of this "
+#~| "option is generally discouraged. For selecting proper DPI value a better "
+#~| "option is explicitly configuring it for the whole X server if possible "
+#~| "(e.g. DisplaySize in xorg.conf or adding <i>-dpi value</i> to "
+#~| "ServerLocalArgs= in $KDEDIR/share/config/kdm/kdmrc). When fonts do not "
+#~| "render properly with real DPI value better fonts should be used or "
+#~| "configuration of font hinting should be checked.</p>"
+#~ msgctxt "@info:tooltip Force fonts DPI"
+#~ msgid ""
+#~ "<para>This option forces a specific DPI value for fonts. It may be useful "
+#~ "when the real DPI of the hardware is not detected properly and it is also "
+#~ "often misused when poor quality fonts are used that do not look well with "
+#~ "DPI values other than 96 or 120 DPI.</para><para>The use of this option "
+#~ "is generally discouraged.</para><para>If you are using the <emphasis>X "
+#~ "Window System</emphasis>, for selecting the proper DPI value a better "
+#~ "option is explicitly configuring it for the whole X server if possible (e."
+#~ "g. DisplaySize in xorg.conf). When fonts do not render properly with the "
+#~ "real DPI value better fonts should be used or configuration of font "
+#~ "hinting should be checked.</para>"
+#~ msgstr ""
+#~ "<p>Opsi ini memaksa nilai DPI tertentu untuk semua font. Hal ini berguna "
+#~ "ketika nilai DPI sebenarnya dari perangkat keras tidak dideteksi secara "
+#~ "benar dan seringkali disalahgunakan ketika kualitas font yang digunakan "
+#~ "tidak terlihat secara baik untuk nilai selain 96 atau 120 DPI.</p>"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Wantoyo"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "wantoyek@gmail.com"
+
+#~ msgid "Fonts"
+#~ msgstr "Font"
+
+#~ msgid "Antonis Tsiapaliokas"
+#~ msgstr "Antonis Tsiapaliokas"
+
+#~ msgid "Select %1 Font..."
+#~ msgstr "Pilih Font %1..."
+
+#~ msgid "Font Settings Changed"
+#~ msgstr "Setelan Font Berubah"
+
+#~ msgid ""
+#~ "<p>Some changes such as DPI will only affect newly started applications.</"
+#~ "p>"
+#~ msgstr ""
+#~ "<p>Beberapa perubahan seperti DPI hanya akan berjalan pada aplikasi yang "
+#~ "dimulai setelah ini.</p>"
+
+#~ msgid "Vendor default"
+#~ msgstr "Vendor baku"
+
+#~ msgid "Disabled"
+#~ msgstr "Dinonfungsikan"
+
+#, fuzzy
+#~| msgid "Configure Fonts"
+#~ msgid "Configure the system fonts"
+#~ msgstr "Konfigurasi Font"
+
+#~ msgid "Choose..."
+#~ msgstr "Pilih..."
+
+#~ msgid "Configure Anti-Alias Settings"
+#~ msgstr "Konfigurasi konfigurasi Anti-Alias"
+
+#~ msgid "E&xclude range:"
+#~ msgstr "Kecualikan kisaran:"
+
+#, fuzzy
+#~| msgid " pt"
+#~ msgctxt "abbreviation for unit of points"
+#~ msgid " pt"
+#~ msgstr " pt"
+
+#~ msgid ""
+#~ "<p>If you have a TFT or LCD screen you can further improve the quality of "
+#~ "displayed fonts by selecting this option.<br />Sub-pixel rendering is "
+#~ "also known as ClearType(tm).<br /> In order for sub-pixel rendering to "
+#~ "work correctly you need to know how the sub-pixels of your display are "
+#~ "aligned.</p> <p>On TFT or LCD displays a single pixel is actually "
+#~ "composed of three sub-pixels, red, green and blue. Most displays have a "
+#~ "linear ordering of RGB sub-pixel, some have BGR.<br /> This feature does "
+#~ "not work with CRT monitors.</p>"
+#~ msgstr ""
+#~ "<p>Jika anda memiliki layar TFT atau LCD anda dapat meningkatkan kualitas "
+#~ "font yang ditampilkan dengan memilih opsi ini.<br />Sub-pixel rendering "
+#~ "juga dikenal sebagai ClearType(tm).<br /> Agar sub-pixel rendering "
+#~ "bekerja secara benar anda harus mengetahui bagaimana sub-pixel dari "
+#~ "tampilan anda ditata.</p> <p>Pada layar TFT atau LCD sebuah pixel terdiri "
+#~ "atas 3 sub-pixel, merah (Red), hijau (Green) dan biru (Blue). Tampilan "
+#~ "pada umumnya memiliki pengurutan berupa RGB, sementara lainnya BGR.<br /> "
+#~ "Fitur ini tidak berjalan untuk monitor CRT.</p>"
+
+#~ msgid ""
+#~ "Hinting is a process used to enhance the quality of fonts at small sizes."
+#~ msgstr ""
+#~ "Penghalusan ada proses untuk meningkatkan kualitas dari font berukuran "
+#~ "kecil."
+
+#~ msgid "Used for normal text (e.g. button labels, list items)."
+#~ msgstr "Digunakan untuk teks normal (semisal label tombol, benda list)."
+
+#~ msgid "A non-proportional font (i.e. typewriter font)."
+#~ msgstr "Font yang tidak proporsional (font typewriter)."
+
+#~ msgid "Smallest font that is still readable well."
+#~ msgstr "Font terkecil yang masih dapat dibaca."
+
+#~ msgid "Used to display text beside toolbar icons."
+#~ msgstr "Digunakan untuk menampilkan teks disamping ikon bilah alat."
+
+#~ msgid "Used by menu bars and popup menus."
+#~ msgstr "Digunakan oleh bilah menu dan menu sembul."
+
+#~ msgid "Used by the window titlebar."
+#~ msgstr "Digunakan oleh bilah judul window."
+
+#~ msgctxt "Font role"
+#~ msgid "%1: "
+#~ msgstr "%1: "
+
+#~ msgid "Click to change all fonts"
+#~ msgstr "Tekan untuk mengganti semua font"
+
+#~ msgctxt "Use anti-aliasing"
+#~ msgid "System Settings"
+#~ msgstr "Setelan Sistem"
+
+#, fuzzy
+#~| msgid ""
+#~| "If this option is selected, KDE will smooth the edges of curves in fonts."
+#~ msgid "Select this option to smooth the edges of curves in fonts."
+#~ msgstr ""
+#~ "Jika opsi ini dipilih, KDE akan menghaluskan tepi-tepi kurva pada font."
+
+#~ msgctxt "use system subpixel setting"
+#~ msgid "System default"
+#~ msgstr "Standar sistem"
+
+#~ msgctxt "use system hinting settings"
+#~ msgid "System default"
+#~ msgstr "Standar sistem"
+
+#~ msgctxt "font usage"
+#~ msgid "Taskbar"
+#~ msgstr "Batang tugas"
+
+#~ msgctxt "font usage"
+#~ msgid "Desktop"
+#~ msgstr "Desktop"
+
+#~ msgid "Used by the taskbar."
+#~ msgstr "Digunakan oleh batang tugas. "
+
+#~ msgid "Used for desktop icons."
+#~ msgstr "Digunakan oleh ikon dekstop."
+
+#~ msgctxt "Force fonts DPI"
+#~ msgid "Disabled"
+#~ msgstr "Nonaktifkan"
+
+#~ msgid "96 DPI"
+#~ msgstr "96 DPI"
+
+#~ msgid "120 DPI"
+#~ msgstr "120 DPI"

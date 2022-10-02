@@ -1,0 +1,420 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Toussis Manolis <manolis@koppermind.homelinux.org>, 2008, 2009.
+# Petros Vidalis <p_vidalis@hotmail.com>, 2010.
+# Antonis Geralis <capoiosct@gmail.com>, 2012, 2013.
+# Dimitrios Glentadakis <dglent@gmail.com>, 2012.
+# Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2015, 2016, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_wallpaper_image\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-15 00:46+0000\n"
+"PO-Revision-Date: 2017-07-22 15:56+0200\n"
+"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 2.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Τούσης Μανώλης"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "manolis@koppermind.homelinux.org"
+
+#: imagepackage/contents/ui/config.qml:94
+#, kde-format
+msgid "Positioning:"
+msgstr "Τοποθέτηση:"
+
+#: imagepackage/contents/ui/config.qml:97
+#, kde-format
+msgid "Scaled and Cropped"
+msgstr "Υπό κλίμακα και κοπή"
+
+#: imagepackage/contents/ui/config.qml:101
+#, kde-format
+msgid "Scaled"
+msgstr "Υπό κλίμακα"
+
+#: imagepackage/contents/ui/config.qml:105
+#, kde-format
+msgid "Scaled, Keep Proportions"
+msgstr "Υπό κλίμακα, διατήρηση αναλογιών"
+
+#: imagepackage/contents/ui/config.qml:109
+#, kde-format
+msgid "Centered"
+msgstr "Στο κέντρο"
+
+#: imagepackage/contents/ui/config.qml:113
+#, kde-format
+msgid "Tiled"
+msgstr "Σε παράθεση"
+
+#: imagepackage/contents/ui/config.qml:141
+#, fuzzy, kde-format
+#| msgid "Background Color:"
+msgid "Background:"
+msgstr "Χρώμα φόντου:"
+
+#: imagepackage/contents/ui/config.qml:142
+#, kde-format
+msgid "Blur"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:151
+#, kde-format
+msgid "Solid color"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:161
+#, kde-format
+msgid "Select Background Color"
+msgstr "Επιλογή χρώματος φόντου"
+
+#: imagepackage/contents/ui/config.qml:207
+#, kde-format
+msgid "Add Image…"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:213
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:257
+#, fuzzy, kde-format
+#| msgid "Get New Wallpapers..."
+msgid "Get New Wallpapers…"
+msgstr "Λήψη νέων ταπετσαριών..."
+
+#: imagepackage/contents/ui/main.qml:69
+#, kde-format
+msgid "Open Wallpaper Image"
+msgstr "Άνοιγμα εικόνας ταπετσαρίας"
+
+#: imagepackage/contents/ui/main.qml:70
+#, kde-format
+msgid "Next Wallpaper Image"
+msgstr "Επόμενη εικόνα ταπετσαρίας"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:33
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Άνοιγμα περιέχοντος φακέλου"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:39
+#, kde-format
+msgid "Restore wallpaper"
+msgstr "Επαναφορά ταπετσαρίας"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:44
+#, fuzzy, kde-format
+#| msgid "Remove wallpaper"
+msgid "Remove Wallpaper"
+msgstr "Αφαίρεση ταπετσαρίας"
+
+#: plasma-apply-wallpaperimage.cpp:29
+#, kde-format
+msgid ""
+"This tool allows you to set an image as the wallpaper for the Plasma session."
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:31
+#, kde-format
+msgid ""
+"An image file or an installed wallpaper kpackage that you wish to set as the "
+"wallpaper for your Plasma session"
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:45
+#, kde-format
+msgid ""
+"There is a stray single quote in the filename of this wallpaper (') - please "
+"contact the author of the wallpaper to fix this, or rename the file "
+"yourself: %1"
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:85
+#, kde-format
+msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:89
+#, kde-format
+msgid ""
+"Successfully set the wallpaper for all desktops to the KPackage based %1"
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:91
+#, kde-format
+msgid "Successfully set the wallpaper for all desktops to the image %1"
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:97
+#, kde-format
+msgid ""
+"The file passed to be set as wallpaper does not exist, or we cannot identify "
+"it as a wallpaper: %1"
+msgstr ""
+
+#: plugin/finder/packagefinder.cpp:152
+#, kde-format
+msgid "Recommended wallpaper file"
+msgstr "Συνιστώμενο αρχείο ταπετσαρίας"
+
+#: plugin/imagebackend.cpp:234
+#, kde-format
+msgid "Directory with the wallpaper to show slides from"
+msgstr "Κατάλογος με την ταπετσαρία για την προβολή των διαφανειών"
+
+#: plugin/imagebackend.cpp:345
+#, kde-format
+msgid "Open Image"
+msgstr "Άνοιγμα εικόνας"
+
+#: plugin/imagebackend.cpp:345
+#, kde-format
+msgid "Image Files"
+msgstr "Αρχεία εικόνας"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:38
+#, kde-format
+msgid "Order:"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:45
+#, kde-format
+msgid "Random"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:49
+#, kde-format
+msgid "A to Z"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:53
+#, kde-format
+msgid "Z to A"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:57
+#, kde-format
+msgid "Date modified (newest first)"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:61
+#, kde-format
+msgid "Date modified (oldest first)"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:86
+#, kde-format
+msgid "Group by folders"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:98
+#, kde-format
+msgid "Change every:"
+msgstr "Αλλαγή κάθε:"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:108
+#, kde-format
+msgid "%1 hour"
+msgid_plural "%1 hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:128
+#, fuzzy, kde-format
+#| msgid "Minutes"
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "Λεπτά"
+msgstr[1] "Λεπτά"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:148
+#, fuzzy, kde-format
+#| msgid "Seconds"
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] "Δευτερόλεπτα"
+msgstr[1] "Δευτερόλεπτα"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:162
+#, fuzzy, kde-format
+#| msgid "Open Containing Folder"
+msgid "Folders"
+msgstr "Άνοιγμα περιέχοντος φακέλου"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:220
+#, fuzzy, kde-format
+#| msgid "&Remove Folder"
+msgid "Remove Folder"
+msgstr "&Αφαίρεση φακέλου"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:225
+#, fuzzy, kde-format
+#| msgid "Open Containing Folder"
+msgid "Open Folder"
+msgstr "Άνοιγμα περιέχοντος φακέλου"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:235
+#, kde-format
+msgid "There are no wallpaper locations configured"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:250
+#, fuzzy, kde-format
+#| msgid "Add Folder"
+msgid "Add Folder…"
+msgstr "Προσθήκη φακέλου"
+
+#, fuzzy
+#~| msgid "Use system-installed wallpapers in slideshow"
+#~ msgid "There are no wallpapers in this slideshow"
+#~ msgstr "Χρήση ταπετσαριών συστήματος σε παρουσίαση διαφανειών"
+
+#~ msgid "Add Custom Wallpaper"
+#~ msgstr "Προσθήκη προσαρμοσμένης ταπετσαρίας"
+
+#~ msgid "Remove wallpaper"
+#~ msgstr "Αφαίρεση ταπετσαρίας"
+
+#~ msgid "%1 by %2"
+#~ msgstr "%1 από %2"
+
+#, fuzzy
+#~| msgid "Remove wallpaper"
+#~ msgid "Wallpapers"
+#~ msgstr "Αφαίρεση ταπετσαρίας"
+
+#~ msgid "Download Wallpapers"
+#~ msgstr "Λήψη ταπετσαριών"
+
+#~ msgid "Hours"
+#~ msgstr "Ώρες"
+
+#~ msgid "Open..."
+#~ msgstr "Άνοιγμα..."
+
+#~ msgctxt "Unknown Author"
+#~ msgid "Unknown"
+#~ msgstr "Άγνωστος"
+
+#~ msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz *.xcf)"
+#~ msgstr "Αρχεία εικόνας (*.png *.jpg *.jpeg *.bmp *.svg *.svgz *.xcf)"
+
+#~ msgid "Screenshot"
+#~ msgstr "Στιγμιότυπο οθόνης"
+
+#~ msgid "Preview"
+#~ msgstr "Προεπισκόπηση"
+
+#~ msgid "Center Tiled"
+#~ msgstr "Κεντραρισμένη σε παράθεση"
+
+#~ msgid "Select Wallpaper Image File"
+#~ msgstr "Επιλέξτε το αρχείο εικόνας ταπετσαρίας"
+
+#~ msgid "P&ositioning:"
+#~ msgstr "Τοπο&θέτηση:"
+
+#~ msgid "&Color:"
+#~ msgstr "&Χρώμα:"
+
+#~ msgid "Change wallpaper frame color"
+#~ msgstr "Τροποποίηση χρώματος πλαισίου ταπετσαρίας"
+
+#~ msgid ""
+#~ "Change the color of the frame that it may be visible when the wallpaper "
+#~ "is centered or scaled with the same proportions."
+#~ msgstr ""
+#~ "Τροποποίηση του χρώματος του πλαισίου που μπορεί να είναι ορατό όταν η "
+#~ "ταπετσαρία είναι στο κέντρο ή υπό κλίμακα με τις ίδιες αναλογίες."
+
+#~ msgid "Remove from list"
+#~ msgstr "Αφαίρεση από τη λίστα"
+
+#~ msgctxt ""
+#~ "(qtdt-format) Please do not change the quotes (') and translate only the "
+#~ "content of the quotes."
+#~ msgid "hh 'Hours' mm 'Mins' ss 'Secs'"
+#~ msgstr "hh 'ώρες' mm 'λεπτά' ss 'δευτ'"
+
+#~ msgid "&My downloaded wallpapers:"
+#~ msgstr "Οι &ληφθείσες ταπετσαρίες μου:"
+
+#~ msgid ""
+#~ "Use wallpapers I have downloaded with \"Get New Wallpapers...\" in "
+#~ "slideshow"
+#~ msgstr "Χρήση των ληφθέντων ταπετσαριών μου σε παρουσίαση διαφανειών"
+
+#~ msgid "Custom folders:"
+#~ msgstr "Προσαρμοσμένοι φάκελοι:"
+
+#~ msgid ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:11pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Images</span></p></body></html>"
+#~ msgstr ""
+#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
+#~ "REC-html40/strict.dtd\">\n"
+#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
+#~ "css\">\n"
+#~ "p, li { white-space: pre-wrap; }\n"
+#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:11pt; "
+#~ "font-weight:400; font-style:normal;\">\n"
+#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
+#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
+#~ "weight:600;\">Εικόνες</span></p></body></html>"
+
+#~ msgid "Finding images for the wallpaper slideshow."
+#~ msgstr "Αναζήτηση εικόνων για την προβολή σλάιντ ταπετσαριών."
+
+#~ msgid "Adding wallpaper package in %1"
+#~ msgstr "Προσθήκη πακέτου ταπετσαριών σε %1"
+
+#~ msgid "Adding image %1"
+#~ msgstr "Προσθήκη εικόνας %1"
+
+#~ msgctxt "Wallpaper info, author name"
+#~ msgid "%1"
+#~ msgstr "%1"
+
+#~ msgid "Email:"
+#~ msgstr "Email:"
+
+#~ msgid "License:"
+#~ msgstr "Άδεια:"
+
+#~ msgid "Color:"
+#~ msgstr "Χρώμα:"
+
+#~ msgid "Author:"
+#~ msgstr "Συγγραφέας:"
+
+#~ msgid "Browse"
+#~ msgstr "Περιήγηση"
+
+#~ msgid "&Picture:"
+#~ msgstr "&Εικόνα:"
+
+#~ msgid "Testing %1 for a Wallpaper package"
+#~ msgstr "Έλεγχος %1 για ένα πακέτο ταπετσαριών"
+
+#~ msgid "Maxpect"
+#~ msgstr "Μέγιστων αναλογιών"

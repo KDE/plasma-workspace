@@ -1,0 +1,330 @@
+# translation of kcmstyle.po to Bengali INDIA
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Runa Bhattacharjee <runab@redhat.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmstyle\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"PO-Revision-Date: 2009-01-13 17:06+0530\n"
+"Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
+"Language-Team: Bengali INDIA <fedora-trans-bn_IN@redhat.com>\n"
+"Language: bn_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: gtkpage.cpp:59
+#, kde-format
+msgid "%1 is not a valid GTK Theme archive."
+msgstr ""
+
+#: kcmstyle.cpp:161 kcmstyle.cpp:168
+#, kde-format
+msgid "There was an error loading the configuration dialog for this style."
+msgstr "এই বিন্যাসের জন্য কনফিগারেশন ডায়লগ লোড করতে সমস্যা দেখা দিয়েছে।"
+
+#: kcmstyle.cpp:274
+#, kde-format
+msgid "Failed to apply selected style '%1'."
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:32
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Sho&w icons on buttons"
+msgid "Show icons:"
+msgstr "বাটন রূপে আইকন প্রদর্শন করা হবে (&w)"
+
+#: package/contents/ui/EffectSettingsPopup.qml:33
+#, fuzzy, kde-format
+#| msgid "Radio button"
+msgid "On buttons"
+msgstr "রেডিও বাটন"
+
+#: package/contents/ui/EffectSettingsPopup.qml:44
+#, kde-format
+msgid "In menus"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:56
+#, kde-format
+msgid "Main toolbar label:"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "None"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:59
+#, fuzzy, kde-format
+#| msgid "Text Only"
+msgid "Text only"
+msgstr "শুধুমাত্র লেখা"
+
+#: package/contents/ui/EffectSettingsPopup.qml:60
+#, fuzzy, kde-format
+#| msgid "Text Alongside Icons"
+msgid "Beside icons"
+msgstr "লেখা ও আইকন"
+
+#: package/contents/ui/EffectSettingsPopup.qml:61
+#, fuzzy, kde-format
+#| msgid "Text Under Icons"
+msgid "Below icon"
+msgstr "আইকনের নীচে লেখা"
+
+#: package/contents/ui/EffectSettingsPopup.qml:76
+#, kde-format
+msgid "Secondary toolbar label:"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:18
+#, kde-format
+msgid "GNOME/GTK Application Style"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:44
+#, kde-format
+msgid "GTK theme:"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:69
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgid "Preview…"
+msgstr "পূর্বরূপের ঝলক"
+
+#: package/contents/ui/GtkStylePage.qml:88
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:93
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Get New GNOME/GTK Application Styles…"
+msgstr "কনফিগার করুন...(&f)"
+
+#: package/contents/ui/GtkStylePage.qml:109
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:111
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: package/contents/ui/main.qml:17
+#, fuzzy, kde-format
+#| msgid ""
+#| "<h1>Style</h1>This module allows you to modify the visual appearance of "
+#| "user interface elements, such as the widget style and effects."
+msgid ""
+"This module allows you to modify the visual appearance of applications' user "
+"interface elements."
+msgstr ""
+"<h1>Style</h1>এই মডিউলের সাহায্যে, ইউজার ইন্টারফেসের বিভিন্ন সামগ্রী যেমন "
+"উইজেটের বিন্যাস ও ইফেক্ট পরিবর্তন করা যাবে।"
+
+#: package/contents/ui/main.qml:96
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure Style…"
+msgstr "কনফিগার করুন...(&f)"
+
+#: package/contents/ui/main.qml:116
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr ""
+
+#: package/contents/ui/main.qml:132
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "কনফিগার করুন...(&f)"
+
+#: styleconfdialog.cpp:21
+#, kde-format
+msgid "Configure %1"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "ট্যাব ১"
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, fuzzy, kde-format
+#| msgid "Button"
+msgid "Push Button"
+msgstr "বাটন"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, fuzzy, kde-format
+#| msgid "Combobox"
+msgid "Combo box"
+msgstr "কম্বো-বক্স"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "চেক-বক্স"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "রেডিও বাটন"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:133
+#, kde-format
+msgid "Tab 2"
+msgstr "ট্যাব ২"
+
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Application style"
+msgstr "কনফিগার করুন...(&f)"
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Sho&w icons on buttons"
+msgid "Show icons on buttons"
+msgstr "বাটন রূপে আইকন প্রদর্শন করা হবে (&w)"
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Sho&w icons on buttons"
+msgid "Show icons in menus"
+msgstr "বাটন রূপে আইকন প্রদর্শন করা হবে (&w)"
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, kde-format
+msgid "Main toolbar label"
+msgstr ""
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, kde-format
+msgid "Secondary toolbar label"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "রুণা ভট্টাচার্য্য"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "runab@redhat.com"
+
+#, fuzzy
+#~| msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
+#~ msgstr "(c) ২০০২ ক্যারোল সজওয়েড, ড্যানিয়েল মোলকেনটিন"
+
+#~ msgid "Karol Szwed"
+#~ msgstr "ক্যারোল সজওয়েড"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "ড্যানিয়েল মোলকেনটিন"
+
+#, fuzzy
+#~| msgid "Con&figure..."
+#~ msgid "Download New GNOME/GTK2 Application Styles..."
+#~ msgstr "কনফিগার করুন...(&f)"
+
+#, fuzzy
+#~| msgid "Con&figure..."
+#~ msgid "GNOME/GTK2 Application Styles"
+#~ msgstr "কনফিগার করুন...(&f)"
+
+#, fuzzy
+#~| msgid "Con&figure..."
+#~ msgid "Download New GNOME/GTK3 Application Styles..."
+#~ msgstr "কনফিগার করুন...(&f)"
+
+#, fuzzy
+#~| msgid "Con&figure..."
+#~ msgid "GNOME/GTK3 Application Styles"
+#~ msgstr "কনফিগার করুন...(&f)"
+
+#~ msgid "Unable to Load Dialog"
+#~ msgstr "ডায়লগ লোড করতে ব্যর্থ"
+
+#~ msgid "No description available."
+#~ msgstr "কোনো বিবরণ উপস্থিত নেই।"
+
+#, fuzzy
+#~| msgid "Widget style:"
+#~ msgid "Widget Style"
+#~ msgstr "উইজেটের বিন্যাস:"
+
+#~ msgid "Widget style:"
+#~ msgstr "উইজেটের বিন্যাস:"
+
+#~ msgid "Description: %1"
+#~ msgstr "বিবরণ: %1"
+
+#~ msgid "Group Box"
+#~ msgstr "গ্রুপ বক্স"
+
+#~ msgid "KDE Style Module"
+#~ msgstr "KDE Style মডিউল"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "রাল্ফ নোল্ডেন"
+
+#~ msgid "Low display resolution and Low CPU"
+#~ msgstr "প্রদর্শনের রেজোলিউশন ও CPU-র নিম্ন মাত্রা"
+
+#~ msgid "High display resolution and Low CPU"
+#~ msgstr "প্রদর্শনের রেজোলিউশনের উচ্চ মাত্রা ও CPU-র নিম্ন মাত্রা"
+
+#~ msgid "Low display resolution and High CPU"
+#~ msgstr "প্রদর্শনের রেজোলিউশনের নিম্ন মাত্রা ও CPU-র উচ্চ মাত্রা"
+
+#~ msgid "High display resolution and High CPU"
+#~ msgstr "প্রদর্শনের রেজোলিউশন ও CPU-র উচ্চ মাত্রা"
+
+#~ msgid "Low display resolution and Very High CPU"
+#~ msgstr "প্রদর্শনের রেজোলিউশনের নিম্ন মাত্রা ও CPU-র অত্যাধিক উচ্চ মাত্রা"
+
+#~ msgid "High display resolution and Very High CPU"
+#~ msgstr "প্রদর্শনের রেজোলিউশনের উচ্চ মাত্রা ও CPU-র অত্যাধিক উচ্চ মাত্রা"
+
+#~ msgid "kcmstyle"
+#~ msgstr "kcmstyle"
+
+#~ msgid "Icons Only"
+#~ msgstr "শুধুমাত্রা আইকন"
+
+#, fuzzy
+#~| msgctxt "@label:listbox"
+#~| msgid "Text pos&ition:"
+#~ msgctxt "@label:listbox"
+#~ msgid "Text pos&ition of toolbar elements:"
+#~ msgstr "লেখার অবস্থান: (&i)"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Style"
+#~ msgstr "বিন্যাস (&S)"

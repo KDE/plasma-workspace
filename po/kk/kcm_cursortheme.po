@@ -1,0 +1,681 @@
+# translation of kcminput.po to Kazakh
+# translation of kcminput.po to
+#
+# Sairan Kikkarin, 2005.
+# Sairan Kikkarin <sairan@computer.org>, 2005, 2007, 2008, 2010.
+# Sairan Kikkarin <sairan@computer.org>, 2010, 2011.
+# Sairan Kikkarin <sairan(at)computer.org>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminput\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:50+0000\n"
+"PO-Revision-Date: 2011-12-09 02:19+0600\n"
+"Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
+"Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
+"Language: kk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.1\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"\n"
+"\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current cursor theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr ""
+
+#: kcmcursortheme.cpp:302
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr "Өзгерістер күшіне ену үшін, KDE қайта бастау керек."
+
+#: kcmcursortheme.cpp:376
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: kcmcursortheme.cpp:387
+#, fuzzy, kde-format
+#| msgid "Unable to find the cursor theme archive %1."
+msgid "Unable to download the icon theme archive: %1"
+msgstr "%1 меңзер нақышының архиві табылмады."
+
+#: kcmcursortheme.cpp:418
+#, fuzzy, kde-format
+#| msgid "The file %1 does not appear to be a valid cursor theme archive."
+msgid "The file is not a valid icon theme archive."
+msgstr "%1 файлы меңзер нақышының архиві емес сияқты."
+
+#: kcmcursortheme.cpp:425
+#, kde-format
+msgid "Failed to create 'icons' folder."
+msgstr ""
+
+#: kcmcursortheme.cpp:434
+#, kde-format
+msgid ""
+"A theme named %1 already exists in your icon theme folder. Do you want "
+"replace it with this one?"
+msgstr ""
+"%1 деген нақыш таңбаша нақыштар каталогында бар ғой. Бұны шынында жаңа "
+"нақышымен ауыстырғыңыз келе ме?"
+
+#: kcmcursortheme.cpp:438
+#, kde-format
+msgid "Overwrite Theme?"
+msgstr "Нақышты қайта жазу?"
+
+#: kcmcursortheme.cpp:462
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: package/contents/ui/Delegate.qml:54
+#, kde-format
+msgid "Remove Theme"
+msgstr "Нақышты кетіру"
+
+#: package/contents/ui/Delegate.qml:61
+#, fuzzy, kde-format
+#| msgid "Cursor Theme"
+msgid "Restore Cursor Theme"
+msgstr "Меңзер нақышы"
+
+#: package/contents/ui/main.qml:20
+#, kde-format
+msgid "This module lets you choose the mouse cursor theme."
+msgstr ""
+
+#: package/contents/ui/main.qml:84
+#, fuzzy, kde-format
+#| msgctxt "@label:listbox cursor size"
+#| msgid "Size:"
+msgid "Size:"
+msgstr "Өлшемі:"
+
+#: package/contents/ui/main.qml:134
+#, fuzzy, kde-format
+#| msgid "Install From File..."
+msgid "&Install from File…"
+msgstr "Файлдан орнату..."
+
+#: package/contents/ui/main.qml:140
+#, fuzzy, kde-format
+#| msgid "Get New Theme..."
+msgid "&Get New Cursors…"
+msgstr "Жаңа нақышты табу..."
+
+#: package/contents/ui/main.qml:157
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Open Theme"
+msgstr "Нақышты кетіру"
+
+#: package/contents/ui/main.qml:159
+#, kde-format
+msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:41
+#, kde-format
+msgid "The requested size '%1' is not available, using %2 instead."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:62
+#, kde-format
+msgid ""
+"This tool allows you to set the mouse cursor theme for the current Plasma "
+"session, without accidentally setting it to one that is either not "
+"available, or which is already set."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:66
+#, kde-format
+msgid ""
+"The name of the cursor theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:67
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:68
+#, kde-format
+msgid "Use a specific size, rather than the theme default size"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:89
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:100
+#, kde-format
+msgid ""
+"Successfully applied the mouse cursor theme %1 to your current Plasma session"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:102
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for your newly applied mouse cursor "
+"theme to display correctly."
+msgstr "Өзгерістер күшіне ену үшін, KDE қайта бастау керек."
+
+#: plasma-apply-cursortheme.cpp:112
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:120
+#, kde-format
+msgid "You have the following mouse cursor themes on your system:"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:125
+#, kde-format
+msgid "(Current theme for this Plasma session)"
+msgstr ""
+
+#: xcursor/xcursortheme.cpp:60
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@info/plain The argument is the list of available sizes (in pixel). "
+#| "Example: 'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+#| msgid "(Available sizes: %1)"
+msgctxt ""
+"@info The argument is the list of available sizes (in pixel). Example: "
+"'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+msgid "(Available sizes: %1)"
+msgstr "(Бар өлшемдер: %1)"
+
+#~ msgid "Name"
+#~ msgstr "Атауы"
+
+#~ msgid "Description"
+#~ msgstr "Сипаттамасы"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Ақсауле Мамаева, Сайран Киккарин"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "ak78@sci.kz, sairan@computer.org"
+
+#, fuzzy
+#~| msgid "Cursor Theme"
+#~ msgid "Cursors"
+#~ msgstr "Меңзер нақышы"
+
+#~ msgid "(c) 2003-2007 Fredrik Höglund"
+#~ msgstr "(c) 2003-2007 Fredrik Höglund"
+
+#~ msgid "Fredrik Höglund"
+#~ msgstr "Fredrik Höglund"
+
+#~ msgid ""
+#~ "<qt>You cannot delete the theme you are currently using.<br />You have to "
+#~ "switch to another theme first.</qt>"
+#~ msgstr ""
+#~ "<qt>Қолданыстағы нақышты кетіруге болмайды.<br />Алдымен басқа нақышқа "
+#~ "ауысыңыз.</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <i>%1</i> cursor theme?<br />This "
+#~ "will delete all the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>Шынында <i>%1</i> меңзер нақышын өшіргіңіз келеді ме?<br />Бұл "
+#~ "нақышымен орналылған барлық файлдар өшіріледі.</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "Құптау"
+
+#, fuzzy
+#~| msgctxt "@item:inlistbox size"
+#~| msgid "resolution dependent"
+#~ msgctxt "@item:inlistbox size"
+#~ msgid "Resolution dependent"
+#~ msgstr "айырымдылыққа тәуелді"
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "Меңзер параметрлері өзгерді"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "Нақыштың URL сілтемесін келтіріңіз немесе сүйреп әкеліңіз"
+
+#~ msgid ""
+#~ "Unable to download the cursor theme archive; please check that the "
+#~ "address %1 is correct."
+#~ msgstr ""
+#~ "Меңзер нақышының архиві жүктелмеді; %1 адресі дұрыс екенін тексеріңіз."
+
+#~ msgid "Get new color schemes from the Internet"
+#~ msgstr "Жаңа түстер сұлбасын Интернеттен алу"
+
+#~ msgid ""
+#~ "Select the cursor theme you want to use (hover preview to test cursor):"
+#~ msgstr "Қалайтын меңзердің нақышын таңдаңыз (көру үшін үстінен жүгіртіңіз):"
+
+#~ msgid "Select the cursor theme you want to use:"
+#~ msgstr "Қалайтын меңзердің нақышын таңдаңыз:"
+
+#~ msgid "Small black"
+#~ msgstr "Кішкентай қара"
+
+#~ msgid "Small black cursors"
+#~ msgstr "Кішкентай қара меңзерлер"
+
+#~ msgid "Large black"
+#~ msgstr "Үлкен қара"
+
+#~ msgid "Large black cursors"
+#~ msgstr "Үлкен қара меңзерлер"
+
+#~ msgid "Small white"
+#~ msgstr "Кішкентай ақ"
+
+#~ msgid "Small white cursors"
+#~ msgstr "Кішкентай ақ меңзерлер"
+
+#~ msgid "Large white"
+#~ msgstr "Үлкен ақ"
+
+#~ msgid "Large white cursors"
+#~ msgstr "Үлкен ақ меңзерлер"
+
+#~ msgid "Button Order"
+#~ msgstr "Батырмалар ыңғайы"
+
+#~ msgid "Righ&t handed"
+#~ msgstr "&Оң қолы үшін"
+
+#~ msgid "Le&ft handed"
+#~ msgstr "&Сол қолы үшін"
+
+#~ msgid ""
+#~ "Change the direction of scrolling for the mouse wheel or the 4th and 5th "
+#~ "mouse buttons."
+#~ msgstr ""
+#~ "Тышқаның тегершігі немесe 4-ші және 5-ші батырмалар үшін олардың "
+#~ "көмегімен жүгірту бағытын өзгерту."
+
+#~ msgid "Re&verse scroll direction"
+#~ msgstr "Жүгірту бағыты &кері болсын"
+
+#~ msgid "Icons"
+#~ msgstr "Таңбашалар"
+
+#~ msgid ""
+#~ "Dou&ble-click to open files and folders (select icons on first click)"
+#~ msgstr ""
+#~ "Файл мен каталогтар қос шертпемен ашылсын (бірінші шерту таңдау үшін)"
+
+#~ msgid "&Single-click to open files and folders"
+#~ msgstr "Файл мен каталогтар бір шертуімен ашылсын"
+
+#~ msgid "Cha&nge pointer shape over icons"
+#~ msgstr "Таңбашаның үстінде меңзер ө&згерсін"
+
+#~ msgid "A&utomatically select icons"
+#~ msgstr "Таңбашасы а&втоматты түрде таңдалсын"
+
+#~ msgctxt "label. delay (on milliseconds) to automatically select icons"
+#~ msgid "Delay"
+#~ msgstr "Кідіруі"
+
+#~ msgctxt "milliseconds. time to automatically select the items"
+#~ msgid " ms"
+#~ msgstr " мс"
+
+#~ msgid ""
+#~ "<h1>Mouse</h1> This module allows you to choose various options for the "
+#~ "way in which your pointing device works. Your pointing device may be a "
+#~ "mouse, trackball, or some other hardware that performs a similar function."
+#~ msgstr ""
+#~ "<h1>Тышқан</h1> Бұл модульде Сіздің меңзеу құрлығыңызды баптауға арналған "
+#~ "түрлі параметрлерді орната аласыз. Меңзеу құрлығыңыз деген тышқан, "
+#~ "трекбол не ұқсас қызметті атқаратын басқа бір құрлығы болуы мүмкін."
+
+#~ msgid "&General"
+#~ msgstr "&Жалпы"
+
+#~ msgid ""
+#~ "If you are left-handed, you may prefer to swap the functions of the left "
+#~ "and right buttons on your pointing device by choosing the 'left-handed' "
+#~ "option. If your pointing device has more than two buttons, only those "
+#~ "that function as the left and right buttons are affected. For example, if "
+#~ "you have a three-button mouse, the middle button is unaffected."
+#~ msgstr ""
+#~ "Егер Сіз солақай болсаңыз, мүмкін, тышқанның не трекболдың оң жақ мен сол "
+#~ "жақ батырманың қызметтерін, 'Сол қолы үшін' деген параметрлерін таңдап, "
+#~ "ауыстырып алғаны ыңғайлы болар. Егер құрлығыңызда екіден артық батырма "
+#~ "болса, онда бұл параметр тек қана оң мен сол жақтағыларға әсер етеді. "
+#~ "Мысалы, үш батырмалы тышқанның ортаңғы батырмасына тиіспейді."
+
+#~ msgid ""
+#~ "The default behavior in KDE is to select and activate icons with a single "
+#~ "click of the left button on your pointing device. This behavior is "
+#~ "consistent with what you would expect when you click links in most web "
+#~ "browsers. If you would prefer to select with a single click, and activate "
+#~ "with a double click, check this option."
+#~ msgstr ""
+#~ "Әдетте KDE-де таңбашаны таңдау және белсендіру тышқанның сол жақ "
+#~ "батырмасын БІР шертіп етіледі. Бұл қасиет, көптеген браузерлеріндегіндей. "
+#~ "Таңдауын БІР рет шертіп, белсендіруін ҚОС шертпесімен ету үшін осы "
+#~ "құсбелгісін қойыңыз."
+
+#~ msgid "Activates and opens a file or folder with a single click."
+#~ msgstr "Бір шертпесімен белсеніру және каталог не файлды ашу"
+
+#~ msgid ""
+#~ "If you check this option, pausing the mouse pointer over an icon on the "
+#~ "screen will automatically select that icon. This may be useful when "
+#~ "single clicks activate icons, and you want only to select the icon "
+#~ "without activating it."
+#~ msgstr ""
+#~ "Бұл құсбелгісі қойылса, тышқанды таңбаша үстінде сәл аялдағанда, ол "
+#~ "автоматты түрде таңдалады. Бұл белсендіруі бір шерту арқылы "
+#~ "атқарылатында, ал Сіз тек қана таңдап қоюын қалағанда, ыңғайлы."
+
+#~ msgid ""
+#~ "If you have checked the option to automatically select icons, this slider "
+#~ "allows you to select how long the mouse pointer must be paused over the "
+#~ "icon before it is selected."
+#~ msgstr ""
+#~ "Тышқанды таңбаша үстінде сәл аялдағанда, ол автоматты түрде таңдалатын "
+#~ "құсбелгісі қойылса, бұл жүгірткі сол аялдау уақытынтаңдауға арналған."
+
+#~ msgid "Advanced"
+#~ msgstr "Қосымша"
+
+#~ msgid " x"
+#~ msgstr " x"
+
+#~ msgid "Pointer acceleration:"
+#~ msgstr "Меңзерді үдету:"
+
+#~ msgid ""
+#~ "<p>This option allows you to change the relationship between the distance "
+#~ "that the mouse pointer moves on the screen and the relative movement of "
+#~ "the physical device itself (which may be a mouse, trackball, or some "
+#~ "other pointing device.)</p><p> A high value for the acceleration will "
+#~ "lead to large movements of the mouse pointer on the screen even when you "
+#~ "only make a small movement with the physical device. Selecting very high "
+#~ "values may result in the mouse pointer flying across the screen, making "
+#~ "it hard to control.</p>"
+#~ msgstr ""
+#~ "<p>Бұл параметр меңзеу құрылғының (тышқан, трекбол, т.б.) қимылы мен "
+#~ "экрандағы меңзердің жылжуы арасындағы сәйкестігін өзгертуге арналған.</"
+#~ "p><p> Үдету неғұрлым жоғары, соғұрлым экрандағы меңзер тез жылжиды. Тым "
+#~ "жоғарлатып жіберсеңіз, құрылғыны сәл қимылдатқанда экрандағы меңзер, "
+#~ "меңгеруін қиындатып, секіріп кетеді.</p>"
+
+#~ msgid "Pointer threshold:"
+#~ msgstr "Үдету табалдырығы:"
+
+#~ msgid ""
+#~ "<p>The threshold is the smallest distance that the mouse pointer must "
+#~ "move on the screen before acceleration has any effect. If the movement is "
+#~ "smaller than the threshold, the mouse pointer moves as if the "
+#~ "acceleration was set to 1X;</p><p> thus, when you make small movements "
+#~ "with the physical device, there is no acceleration at all, giving you a "
+#~ "greater degree of control over the mouse pointer. With larger movements "
+#~ "of the physical device, you can move the mouse pointer rapidly to "
+#~ "different areas on the screen.</p>"
+#~ msgstr ""
+#~ "<p>Үдету табалдырығы деген тышқан меңзерінің үдетуі қосылар алдындағы "
+#~ "жылжитын қашықтығы. Меңзер табалдырық деңгейіне жетпей қозғалғанда 1,0x "
+#~ "үдетуімен жылжиды;</p><p> сонымен, физикалық құрлығыны шамалы қимылдар, "
+#~ "меңзерді басқаруды жеңілдетіп үдетусіз атқартылады. Ал табалдырықтан "
+#~ "асқан қимылдар экрандағы қашықтағыларға тез жетуін ыңғайлы қылады.</p>"
+
+#~ msgid " msec"
+#~ msgstr " мс"
+
+#~ msgid "Double click interval:"
+#~ msgstr "Қос шертпе аралығы:"
+
+#~ msgid ""
+#~ "The double click interval is the maximal time (in milliseconds) between "
+#~ "two mouse clicks which turns them into a double click. If the second "
+#~ "click happens later than this time interval after the first click, they "
+#~ "are recognized as two separate clicks."
+#~ msgstr ""
+#~ "Қос шертпе аралығы деген қос шертпе мен екі жалғыз шертулерді айыратын "
+#~ "аралық (милисекунд) уақыты . Аралығы бұдан қысқа болса - қос шертпе деп "
+#~ "саналады, әйтпесе - екі ілеспе жалғыз шертімдер деп саналады."
+
+#~ msgid "Drag start time:"
+#~ msgstr "Сүйреуді бастау уақыты:"
+
+#~ msgid ""
+#~ "If you click with the mouse (e.g. in a multi-line editor) and begin to "
+#~ "move the mouse within the drag start time, a drag operation will be "
+#~ "initiated."
+#~ msgstr ""
+#~ "Егер тышқан батырмасын басып (мысалы мәтін редакторында) оны жылжыта "
+#~ "бастасаңыз, осында таңдалған уақыттан кейін сүйреу әрекеті басталады."
+
+#~ msgid "Drag start distance:"
+#~ msgstr "Сүйреуді бастау қашықтығы:"
+
+#~ msgid ""
+#~ "If you click with the mouse and begin to move the mouse at least the drag "
+#~ "start distance, a drag operation will be initiated."
+#~ msgstr ""
+#~ "Егер тышқан батырмасын басып оны жылжыта бастасаңыз, осында таңдалған "
+#~ "қашықтықтан сүйреу әрекеті басталады."
+
+#~ msgid "Mouse wheel scrolls by:"
+#~ msgstr "Тышқан тегіршігі ақтаратыны:"
+
+#~ msgid ""
+#~ "If you use the wheel of a mouse, this value determines the number of "
+#~ "lines to scroll for each wheel movement. Note that if this number exceeds "
+#~ "the number of visible lines, it will be ignored and the wheel movement "
+#~ "will be handled as a page up/down movement."
+#~ msgstr ""
+#~ "Тышқанның тегершігін бұрағанда, неше жол ақтарылатының көрсетеді. Бұл сан "
+#~ "бірден көрінетін жол санынан асып кетсе, тегершік сол көрінетін жолдарын "
+#~ "ғана ақтарып отырады."
+
+#~ msgid "Mouse Navigation"
+#~ msgstr "Пернелермен басқару"
+
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "Меңзерді перне арқылы жылжыту (қосымша цифрлық пернелерімен)"
+
+#~ msgid "&Acceleration delay:"
+#~ msgstr "&Үдетудің кідіруі:"
+
+#~ msgid "R&epeat interval:"
+#~ msgstr "Қайталау а&ралығы:"
+
+#~ msgid "Acceleration &time:"
+#~ msgstr "Үде&ту уақыты:"
+
+#~ msgid " pixel/sec"
+#~ msgstr " пиксел/сек"
+
+#~ msgid "Ma&ximum speed:"
+#~ msgstr "Жылдамдығының шегі:"
+
+#~ msgid "Acceleration &profile:"
+#~ msgstr "Үдету '&профилі:"
+
+#~ msgid "Mouse"
+#~ msgstr "Тышқан"
+
+#~ msgid "(c) 1997 - 2005 Mouse developers"
+#~ msgstr "(c) 1997 - 2005 Mouse жасаушылары"
+
+#~ msgid "Patrick Dowler"
+#~ msgstr "Patrick Dowler"
+
+#~ msgid "Dirk A. Mueller"
+#~ msgstr "Dirk A. Mueller"
+
+#~ msgid "David Faure"
+#~ msgstr "David Faure"
+
+#~ msgid "Bernd Gehrmann"
+#~ msgstr "Bernd Gehrmann"
+
+#~ msgid "Rik Hemsley"
+#~ msgstr "Rik Hemsley"
+
+#~ msgid "Brad Hughes"
+#~ msgstr "Brad Hughes"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "Brad Hards"
+#~ msgstr "Brad Hards"
+
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] " пиксел"
+
+#~ msgid " line"
+#~ msgid_plural " lines"
+#~ msgstr[0] " жол"
+
+#~ msgid "Mouse type: %1"
+#~ msgstr "Тышқанның түрі: %1"
+
+#~ msgid ""
+#~ "RF channel 1 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "1-ші радоарна орнатылған. Байланысты қайта жалғау үшін, тышқанның Connect "
+#~ "батырмасын басыңыз."
+
+#~ msgid "Press Connect Button"
+#~ msgstr "Connect батырмасын басыңыз"
+
+#~ msgid ""
+#~ "RF channel 2 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "2-ші радоарна орнатылған. Байланысты қайта жалғау үшін, тышқанның Connect "
+#~ "батырмасын басыңыз."
+
+#~ msgctxt "no cordless mouse"
+#~ msgid "none"
+#~ msgstr "жоқ"
+
+#~ msgid "Cordless Mouse"
+#~ msgstr "Сымсыз тышқан"
+
+#~ msgid "Cordless Wheel Mouse"
+#~ msgstr "Сымсыз тегершікті тышқан"
+
+#~ msgid "Cordless MouseMan Wheel"
+#~ msgstr "Сымсыз MouseMan Wheel тышқаны"
+
+#~ msgid "Cordless TrackMan Wheel"
+#~ msgstr "Сымсыз TrackMan Wheel тышқаны"
+
+#~ msgid "TrackMan Live"
+#~ msgstr "TrackMan Live"
+
+#~ msgid "Cordless TrackMan FX"
+#~ msgstr "Сымсыз TrackMan FX тышқаны"
+
+#~ msgid "Cordless MouseMan Optical"
+#~ msgstr "Сымсыз MouseMan оптикалық тышқаны"
+
+#~ msgid "Cordless Optical Mouse"
+#~ msgstr "Сымсыз оптикалық тышқан"
+
+#~ msgid "Cordless MouseMan Optical (2ch)"
+#~ msgstr "Сымсыз MouseMan оптикалық тышқан (2ар)"
+
+#~ msgid "Cordless Optical Mouse (2ch)"
+#~ msgstr "Сымсыз оптикалық тышқан (2ар)"
+
+#~ msgid "Cordless Mouse (2ch)"
+#~ msgstr "Сымсыз тышқан (2ар)"
+
+#~ msgid "Cordless Optical TrackMan"
+#~ msgstr "Сымсыз оптикалық TrackMan"
+
+#~ msgid "MX700 Cordless Optical Mouse"
+#~ msgstr "Сымсыз оптикалық MX700 тышқаны"
+
+#~ msgid "MX700 Cordless Optical Mouse (2ch)"
+#~ msgstr "Сымсыз оптикалық MX700 тышқаны (2ар)"
+
+#~ msgid "Unknown mouse"
+#~ msgstr "Беймәлім тышқан"
+
+#~ msgid "Cordless Name"
+#~ msgstr "Сымсыздың атауы"
+
+#~ msgid "Sensor Resolution"
+#~ msgstr "Сенсор айырымдылығы"
+
+#~ msgid "400 counts per inch"
+#~ msgstr "400 нүкте/дюйм"
+
+#~ msgid "800 counts per inch"
+#~ msgstr "800 нүкте/дюйм"
+
+#~ msgid "Battery Level"
+#~ msgstr "Батарея деңгейі"
+
+#~ msgid "RF Channel"
+#~ msgstr "Радиоарна"
+
+#~ msgid "Channel 1"
+#~ msgstr "1-арна"
+
+#~ msgid "Channel 2"
+#~ msgstr "2-арна"
+
+#~ msgid ""
+#~ "You have a Logitech Mouse connected, and libusb was found at compile "
+#~ "time, but it was not possible to access this mouse. This is probably "
+#~ "caused by a permissions problem - you should consult the manual on how to "
+#~ "fix this."
+#~ msgstr ""
+#~ "Logitech тышқаны қосылған және компиляция кезінде libusb жиыны табылды,"
+#~ "бірақ тышқанға қатынау мүмкін емес. Бәлкім, бұл рұқсат құқықтармен "
+#~ "байланысты, жөндеу үшін бағыттамасын оқыңыз."
+
+#~ msgid "KDE Classic"
+#~ msgstr "Классикалық KDE"
+
+#~ msgid "The default cursor theme in KDE 2 and 3"
+#~ msgstr "KDE 2 және 3 әдетті меңзер нақышы"
+
+#~ msgid "No description available"
+#~ msgstr "Сипаттамасы жоқ"
+
+#~ msgid "Short"
+#~ msgstr "Қысқа"
+
+#~ msgid "Long"
+#~ msgstr "Ұзақ"

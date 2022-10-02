@@ -1,0 +1,38 @@
+# Translation of plasma_runner_recentdocuments.po to Euskara/Basque (eu).
+# Copyright (C) 2008-2018, Free Software Foundation.
+# This file is distributed under the same license as the kde-workspace package.
+# KDE euskaratzeko proiektuaren arduraduna <xalba@euskalnet.net>.
+#
+# Translators:
+# Asier Urio Larrea <asieriko@gmail.com>, 2008.
+# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2010, 2014, 2018.
+# Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_runner_recentdocuments\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-05 00:46+0000\n"
+"PO-Revision-Date: 2018-07-16 08:20+0100\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
+"Language-Team: Basque <kde-i18n-doc@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 2.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: recentdocuments.cpp:36
+#, kde-format
+msgid "Looks for documents recently used with names matching :q:."
+msgstr ""
+":q:(r)ekin bat datozen izenak dituzten eta berriki erabili diren dokumentuak "
+"bilatzen ditu."
+
+#: recentdocuments.cpp:38
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Ireki hau barnean duen karpeta"
+
+#~ msgid "Recent Document"
+#~ msgstr "Azken dokumentua"

@@ -1,0 +1,52 @@
+# translation of phonon_kde.po to Punjabi
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# AP S Alam <aalam@users.sf.net>, 2007.
+# A S Alam <aalam@users.sf.net>, 2007.
+# Amanpreet Singh <aalam@users.sf.net>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: phonon_kde\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-05-20 03:26+0200\n"
+"PO-Revision-Date: 2008-05-07 18:48+0530\n"
+"Last-Translator: Amanpreet Singh <aalam@users.sf.net>\n"
+"Language-Team: Punjabi/Panjabi <punjabi-users@list.sf.net>\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: LoKalize 0.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "ਅਮਨਪਰੀਤ ਸਿੰਘ ਆਲਮ"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "aalam@users.sf.net"
+
+#~ msgid "<qt>Unable to use the <b>%1</b> Multimedia Backend:<br/>%2</qt>"
+#~ msgstr "<qt><b>%1</b> ਮਲਟੀਮੀਡਿਆ ਬੈਕਐਂਡ ਵਰਤਣ ਲਈ ਅਸਮਰੱਥ ਹੈ:<br/>%2</qt>"
+
+#~ msgid "Unable to find a Multimedia Backend"
+#~ msgstr "ਇੱਕ ਮਲਟੀਮੀਡਿਆ ਬੈਕਐਂਡ ਲੱਭਣ ਲਈ ਅਸਫ਼ਲ ਹੈ"
+
+#~ msgid "Unable to find the requested Multimedia Backend"
+#~ msgstr "ਮੰਗਿਆ ਮਲਟੀਮੀਡਿਆ ਬੈਕਐਂਡ ਲੱਭਣ ਲਈ ਅਸਮਰੱਥ ਹੈ"
+
+#~ msgid "create method returned 0"
+#~ msgstr "ਬਣਾਏ ਢੰਗ ਨੇ ਦਿੱਤਾ ਹੈ 0"
+
+#~ msgid "%1 (OSS)"
+#~ msgstr "%1 (OSS)"
+
+#~ msgid "%1 (ALSA)"
+#~ msgstr "%1 (ALSA)"
+
+#~ msgid "Unable to use the <b>%1</b> Multimedia Backend:"
+#~ msgstr "<b>%1</b> ਮਲਟੀਮੀਡਿਆ ਬੈਕਐਂਡ ਵਰਤਣ ਲਈ ਅਸਮਰੱਥ ਹੈ:"

@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Catalan  "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="region_language" lang="&language;">
+<articleinfo>
+<title
+>Regió i idioma</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Krishna.Tateneni; &Krishna.Tateneni.mail;</author>
+<author
+>&Han.Young; &Han.Young.mail;</author>
+&traductor.Antoni.Bella; 
+ </authorgroup>
+
+          <date
+>23 de juny de 2022</date>
+          <releaseinfo
+>Plasma 5.26</releaseinfo>
+
+	  <keywordset>
+		<keyword
+>KDE</keyword>
+		<keyword
+>Arranjament del sistema</keyword>
+		<keyword
+>configuració regional</keyword>
+		<keyword
+>país</keyword>
+		<keyword
+>idioma</keyword>
+		<keyword
+>nombre</keyword>
+                <keyword
+>traducció</keyword>
+		<keyword
+>moneda</keyword>
+	  </keywordset>
+</articleinfo>
+
+<para
+>En aquesta pàgina podreu establir els idiomes preferits i els formats en els quals es mostrarà l'espai de treball &plasma; i les aplicacions &kde;. </para>
+
+<para
+>En la majoria dels casos només cal seleccionar l'idioma i totes les opcions es configuraran de la manera apropiada. L'espai de treball &plasma; i les aplicacions &kde; estan escrites en anglès americà i són traduïdes a molts idiomes diferents per equips de voluntaris. Aquestes traduccions hauran d'estar instal·lades abans que pugueu optar per utilitzar-les. </para>
+<note
+><para
+>Assegureu-vos que heu instal·lat els paquets d'idiomes o les traduccions del &plasma; per als idiomes que voleu emprar.</para>
+<para
+>Com el &plasma; aprofita les biblioteques &Qt;, necessitareu les traduccions de les &Qt; per als idiomes seleccionats, per tal de tenir una &IGU; totalment localitzada.</para
+></note>
+
+
+<para
+>En cada barra de selecció podeu veure exemples de l'aspecte de les opcions de configuració i com s'empraran les unitats de mesura. A més dels nombres, podeu veure com es mostren els valors de moneda, les dates i hores en format llarg i curt. Quan canvieu qualsevol de les opcions, la vista prèvia mostrarà l'efecte dels canvis que hi feu. </para>
+
+<para
+>En fer clic al botó <guilabel
+>Afegeix-ne més...</guilabel
+> a la subpàgina d'idioma es mostrarà la llista d'idiomes disponibles i inicialment es mostrarà la llengua seleccionada. Si la selecció mostra <quote
+>No hi ha cap idioma configurat</quote
+>, no heu definit cap país i teniu de manera predeterminada l'idioma establert pel sistema, normalment C. Si l'idioma que voleu utilitzar no es mostra en aquesta llista, haureu d'instal·lar-la utilitzant el mètode habitual del vostre sistema. </para>
+
+<para
+>Podeu eliminar un idioma de la llista principal seleccionant-lo i fent clic a la icona <inlinemediaobject
+><imageobject
+><imagedata fileref="list-remove.png" format="PNG"/> </imageobject
+></inlinemediaobject
+>. Podeu canviar l'ordre de preferència de la llista seleccionant un idioma i fent clic a la icona <inlinemediaobject
+><imageobject
+> <imagedata fileref="go-top.png" format="PNG"/> </imageobject
+></inlinemediaobject
+>. </para>
+
+<para
+>En cas de necessitar opcions de format individual diferents, podeu seleccionar la configuració regional per als <guilabel
+>Nombres</guilabel
+>, <guilabel
+>Data i hora</guilabel
+>, <guilabel
+>Moneda</guilabel
+> i <guilabel
+>Unitats de mesura</guilabel
+>. </para>
+
+<note>
+<para
+>Anteriorment, l'idioma i els formats eren paràmetres independents. Des del &plasma; 5.26, es van fusionar en aquest KCM anomenat Regió i idioma. Canviar un idioma fa <emphasis
+>canviar automàticament</emphasis
+> els paràmetres dels nombres, moneda, &etc; al país o regió corresponent. No obstant això, aquest canvi no trenca l'antiga configuració. El fitxer de configuració encara es troba a <emphasis
+>~/.config/plasma-localerc</emphasis
+> . </para>
+</note>
+</article>

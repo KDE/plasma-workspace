@@ -1,0 +1,328 @@
+# translation of kcmicons.po to Punjabi
+# Amanpreet Singh Alam <aalam@redhat.com>, 2004, 2005.
+# Amanpreet Singh Brar <amanpreetalam@yahoo.com>, 2005.
+# A S Alam <aalam@users.sf.net>, 2007, 2008, 2010, 2021.
+# Amanpreet Singh Alam <aalam@users.sf.net>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmicons\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"PO-Revision-Date: 2021-06-08 22:35-0700\n"
+"Last-Translator: A S Alam <aalam@satluj.org>\n"
+"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.12.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: iconsizecategorymodel.cpp:14
+#, kde-format
+msgid "Toolbar"
+msgstr "ਟੂਲਬਾਰ"
+
+#: iconsizecategorymodel.cpp:15
+#, kde-format
+msgid "Main Toolbar"
+msgstr "ਮੇਨ ਟੂਲਬਾਰ"
+
+#: iconsizecategorymodel.cpp:16
+#, kde-format
+msgid "Small Icons"
+msgstr "ਛੋਟੇ ਆਈਕਾਨ"
+
+#: iconsizecategorymodel.cpp:17
+#, kde-format
+msgid "Panel"
+msgstr "ਪੈਨਲ"
+
+#: iconsizecategorymodel.cpp:18
+#, kde-format
+msgid "Dialogs"
+msgstr "ਡਾਈਲਾਗ"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr "ਮੌਜੂਦਾ ਆਈਕਾਨ ਥੀਮ ਦਾ ਨਾਂ"
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr "ਡੈਸਕਟਾਪ ਆਈਕਾਨ ਆਕਾਰ"
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr ""
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, fuzzy, kde-format
+#| msgid "Main Toolbar"
+msgid "Main toolbar icons size"
+msgstr "ਮੇਨ ਟੂਲਬਾਰ"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, kde-format
+msgid "Small icons size"
+msgstr "ਛੋਟੇ ਆਈਕਾਨ ਆਕਾਰ"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr "ਪੈਨਲ ਆਈਕਾਨ ਆਕਾਰ"
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr "ਡਾਈਲਾਗ ਆਈਕਾਨ ਆਕਾਰ"
+
+#: main.cpp:182
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "ਆਰਜ਼ੀ ਫ਼ਾਇਲ ਬਣਾਉਣ ਲਈ ਅਸਮਰੱਥ ਹੈ।"
+
+#: main.cpp:193
+#, kde-format
+msgid "Unable to download the icon theme archive: %1"
+msgstr "ਆਈਕਾਨ ਥੀਮ ਅਕਾਇਵ ਡਾਊਨਲੋਡ ਤੋਂ ਅਸਮਰੱਥ ਹੈ: %1"
+
+#: main.cpp:207
+#, kde-format
+msgid "The file is not a valid icon theme archive."
+msgstr "ਇਹ ਫਾਇਲ ਠੀਕ ਆਈਕਾਨ ਥੀਮ ਅਕਾਇਵ ਨਹੀਂ ਹੈ।"
+
+#: main.cpp:212
+#, kde-format
+msgid ""
+"A problem occurred during the installation process; however, most of the "
+"themes in the archive have been installed"
+msgstr "ਇੰਸਟਾਲੇਸ਼ਨ ਕਾਰਵਾਈ ਦੌਰਾਨ ਗਲਤੀ ਆਈ ਹੈ, ਹਾਲਾਂਕਿ ਬਹੁਤੇ ਥੀਮ ਇੰਸਟਾਲ ਹੋ ਚੁੱਕੇ ਹੋ।"
+
+#: main.cpp:216
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "ਥੀਮ ਕਾਮਯਾਬੀ ਨਾਲ ਇੰਸਟਾਲ ਕੀਤਾ ਗਿਆ।"
+
+#: main.cpp:260
+#, kde-format
+msgid "Installing icon themes…"
+msgstr "…ਆਈਕਾਨ ਥੀਮ ਇੰਸਟਾਲ ਕੀਤੇ ਜਾ ਰਹੇ ਹਨ"
+
+#: main.cpp:270
+#, kde-format
+msgid "Installing %1 theme…"
+msgstr "…%1 ਥੀਮ ਇੰਸਟਾਲ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ"
+
+#: package/contents/ui/main.qml:21
+#, kde-format
+msgid "This module allows you to choose the icons for your desktop."
+msgstr ""
+
+#: package/contents/ui/main.qml:147
+#, kde-format
+msgid "Remove Icon Theme"
+msgstr "ਆਈਕਾਨ ਥੀਮ ਨੂੰ ਹਟਾਓ"
+
+#: package/contents/ui/main.qml:154
+#, kde-format
+msgid "Restore Icon Theme"
+msgstr "ਆਈਕਾਨ ਥੀਮ ਬਹਾਲ ਕਰੋ"
+
+#: package/contents/ui/main.qml:228
+#, kde-format
+msgid "Configure Icon Sizes"
+msgstr ""
+
+#: package/contents/ui/main.qml:246
+#, kde-format
+msgid "Install from File…"
+msgstr "…ਫਾਇਲ ਤੋਂ ਇੰਸਟਾਲ ਕਰੋ"
+
+#: package/contents/ui/main.qml:251
+#, kde-format
+msgid "Get New Icons…"
+msgstr "…ਨਵੇਂ ਆਈਕਾਨ ਲਵੋ"
+
+#: package/contents/ui/main.qml:279
+#, kde-format
+msgid "Open Theme"
+msgstr "ਥੀਮ ਖੋਲ੍ਹੋ"
+
+#: package/contents/ui/main.qml:281
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2)"
+msgstr "ਥੀਮ ਫਾਇਲਾਂ (*.tar.gz *.tar.bz2)"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "ਅਮਨਪਰੀਤ ਸਿੰਘ ਆਲਮ"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "aalam@users.sf.net"
+
+#~ msgid "Icons"
+#~ msgstr "ਆਈਕਾਨ"
+
+#~ msgid "Icons Control Panel Module"
+#~ msgstr "ਆਈਕਾਨ ਕੰਟਰੋਲ ਪੈਨਲ ਮੋਡੀਊਲ"
+
+#~ msgid "(c) 2000-2003 Geert Jansen"
+#~ msgstr "(c) ੨੦੦੦-੨੦੦੩ ਗੀਰਟ ਜਾਨਸੀਨ"
+
+#~ msgid "Geert Jansen"
+#~ msgstr "Geert Jansen"
+
+#~ msgid "Antonio Larrosa Jimenez"
+#~ msgstr "Antonio Larrosa Jimenez"
+
+#~ msgid "Torsten Rahn"
+#~ msgstr "Torsten Rahn"
+
+#~ msgid "Desktop"
+#~ msgstr "ਡੈਸਕਟਾਪ"
+
+#~ msgid "Use of Icon"
+#~ msgstr "ਆਈਕਾਨ ਦੀ ਵਰਤੋਂ"
+
+#~ msgctxt "@label The icon rendered by default"
+#~ msgid "Default"
+#~ msgstr "ਡਿਫਾਲਟ"
+
+#~ msgctxt "@label The icon rendered as active"
+#~ msgid "Active"
+#~ msgstr "ਐਕਟਿਵ"
+
+#~ msgctxt "@label The icon rendered as disabled"
+#~ msgid "Disabled"
+#~ msgstr "ਅਯੋਗ"
+
+#~ msgid "Size:"
+#~ msgstr "ਸਾਇਜ਼:"
+
+#~ msgid "Set Effect..."
+#~ msgstr "ਪ੍ਰਭਾਵ ਸੈੱਟ ਕਰੋ..."
+
+#~ msgid "All Icons"
+#~ msgstr "ਸਭ ਆਈਕਾਨ"
+
+#~ msgid "Setup Default Icon Effect"
+#~ msgstr "ਡਿਫਾਲਟ ਆਈਕਾਨ ਪ੍ਰਭਾਵ ਸੈੱਟਅੱਪ"
+
+#~ msgid "Setup Active Icon Effect"
+#~ msgstr "ਐਕਟਿਵ ਆਈਕਾਨ ਪ੍ਰਭਾਵ ਸੈੱਟਅੱਪ"
+
+#~ msgid "Setup Disabled Icon Effect"
+#~ msgstr "ਅਯੋਗ ਆਈਕਾਨ ਪ੍ਰਭਾਵ ਸੈੱਟਅੱਪ"
+
+#~ msgid "&Effect:"
+#~ msgstr "ਪ੍ਰਭਾਵ(&E):"
+
+#~ msgid "No Effect"
+#~ msgstr "ਕੋਈ ਪ੍ਰਭਾਵ ਨਹੀਂ"
+
+#~ msgid "To Gray"
+#~ msgstr "ਗਰੇ ਤੋਂ"
+
+#~ msgid "Colorize"
+#~ msgstr "ਰੰਗਤ"
+
+#~ msgid "Gamma"
+#~ msgstr "ਗਾਮਾ"
+
+#~ msgid "Desaturate"
+#~ msgstr "ਅਸੰਤ੍ਰਿਪਤ"
+
+#~ msgid "To Monochrome"
+#~ msgstr "ਇੱਕਲੇ ਤੋਂ"
+
+#~ msgid "&Semi-transparent"
+#~ msgstr "ਅਰਧ-ਪਾਰਦਰਸ਼ੀ(&S)"
+
+#~ msgid "Preview"
+#~ msgstr "ਝਲਕ"
+
+#~ msgid "Effect Parameters"
+#~ msgstr "ਪ੍ਰਭਾਵ ਪੈਰਾਮੀਟਰ"
+
+#~ msgid "&Amount:"
+#~ msgstr "ਮਾਤਰਾ(&A):"
+
+#~ msgid "Co&lor:"
+#~ msgstr "ਰੰਗ(&l):"
+
+#~ msgid "&Second color:"
+#~ msgstr "ਦੂਜਾ ਰੰਗ(&S):"
+
+#~ msgid "Name"
+#~ msgstr "ਨਾਂ"
+
+#~ msgid "Description"
+#~ msgstr "ਵੇਰਵਾ"
+
+#~ msgid "Install a theme archive file you already have locally"
+#~ msgstr "ਤੁਹਾਡੇ ਕੋਲ ਲੋਕਲ ਮੌਜੂਦਾ ਇੱਕ ਥੀਮ ਅਕਾਇਵ ਫਾਈਲ ਇੰਸਟਾਲ ਕਰੋ"
+
+#~ msgid "Get new themes from the Internet"
+#~ msgstr "ਇੰਟਰਨੈੱਟ ਤੋਂ ਨਵੇਂ ਥੀਮ ਲਵੋ"
+
+#~ msgid ""
+#~ "You need to be connected to the Internet to use this action. A dialog "
+#~ "will display a list of themes from the http://www.kde.org website. "
+#~ "Clicking the Install button associated with a theme will install this "
+#~ "theme locally."
+#~ msgstr ""
+#~ "ਇਹ ਕਾਰਵਾਈ ਲਈ ਤੁਹਾਨੂੰ ਇੰਟਰਨੈੱਟ ਨਾਲ ਕੁਨੈਕਟ ਹੋਣ ਦੀ ਲੋੜ ਹੈ। ਡਾਈਲਾਗ http://www.kde.org "
+#~ "ਵੈੱਬਸਾਈਟ ਤੋਂ ਥੀਮ ਦੀ ਲਿਸਟ ਵੇਖਾਏਗਾ। ਥੀਮ ਨਾਲ ਸਬੰਧਿਤ ਇੰਸਟਾਲ ਬਟਨ ਉੱਤੇ ਕਲਿੱਕ ਕਰਨ ਨਾਲ ਇਹ "
+#~ "ਥੀਮ ਲੋਕਲ ਇੰਸਟਾਲ ਹੋ ਜਾਵੇਗਾ।"
+
+#~ msgid "Remove the selected theme from your disk"
+#~ msgstr "ਚੁਣਿਆ ਥੀਮ ਆਪਣੀ ਡਿਸਕ ਤੋਂ ਹਟਾਓ"
+
+#~ msgid "This will remove the selected theme from your disk."
+#~ msgstr "ਇਹ ਚੁਣੇ ਥੀਮ ਨੂੰ ਤੁਹਾਡੀ ਡਿਸਕ ਤੋਂ ਹਟਾ ਦੇਵੇਗੀ।"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "ਸੁੱਟੋ ਜਾਂ ਕਿਸਮ ਥੀਮ URL"
+
+#~ msgid ""
+#~ "Unable to download the icon theme archive;\n"
+#~ "please check that address %1 is correct."
+#~ msgstr ""
+#~ "ਆਈਕਾਨ ਥੀਮ ਸੰਕੁਚਿਤ ਡਾਊਨਲੋਡ ਕਰਨ ਤੋਂ ਅਸਮਰੱਥ ਹੈ।\n"
+#~ "ਕਿਰਪਾ ਕਰਕੇ ਐਡਰੈੱਸ %1 ਦੀ ਜਾਂਚ ਕਰੋ ਕਿ ਇਹ ਸਹੀ ਹੈ।"
+
+#~ msgid "<qt>Installing <strong>%1</strong> theme</qt>"
+#~ msgstr "<qt>ਥੀਮ <strong>%1</strong> ਇੰਸਟਾਲ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ</qt>"
+
+#~ msgid ""
+#~ "<qt>Are you sure you want to remove the <strong>%1</strong> icon theme?"
+#~ "<br /><br />This will delete the files installed by this theme.</qt>"
+#~ msgstr ""
+#~ "<qt>ਕੀ ਤੁਸੀਂ ਆਈਕਾਨ ਥੀਮ <strong>%1</strong> ਨੂੰ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?<br /><br />ਇਹ "
+#~ "ਇਸ ਥੀਮ ਦੀਆਂ ਇੰਸਟਾਲ ਫਾਈਲਾਂ ਨੂੰ ਹਟਾ ਦੇਵੇਗਾ।</qt>"
+
+#~ msgid "Confirmation"
+#~ msgstr "ਪੁਸ਼ਟੀ"
+
+#~ msgid "&Theme"
+#~ msgstr "ਥੀਮ(&T)"
+
+#~ msgid "Ad&vanced"
+#~ msgstr "ਤਕਨੀਕੀ(&v)"
+
+#~ msgid "Animate icons"
+#~ msgstr "ਸਜੀਵ ਆਈਕਾਨ"
+
+#~ msgid "Select the icon theme you want to use:"
+#~ msgstr "ਆਈਕਾਨ ਥੀਮ, ਜੋ ਕਿ ਤੁਸੀ ਇਸਤੇਮਾਲ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ, ਨੂੰ ਚੁਣੋ:"

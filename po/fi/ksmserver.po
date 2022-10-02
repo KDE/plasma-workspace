@@ -1,0 +1,281 @@
+# translation of ksmserver.po to Finnish
+# translation of ksmserver.po to
+# translation of ksmserver.po to
+# Copyright (C) 2002,2003, 2004, 2005, 2006, 2008 Free Software Foundation, Inc.
+# Kim Enkovaara <kim.enkovaara@iki.fi>, 2002.
+# Tapio Kautto <eleknader@phnet.fi>, 2003, 2004.
+# Teemu Rytilahti <teemu.rytilahti@kde-fi.org>, 2003, 2008.
+# Ilpo Kantonen <ilpo@iki.fi>, 2005.
+# Joonas Niilola <juippis@roskakori.org>, 2006.
+# Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2008.
+# Tommi Nieminen <translator@legisign.org>, 2010, 2011, 2018, 2020, 2021.
+# Lasse Liehu <lliehu@kolumbus.fi>, 2011.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2011, 2012, 2013, 2014, 2015.
+#
+# KDE Finnish translation sprint participants:
+# Author: Lliehu
+msgid ""
+msgstr ""
+"Project-Id-Version: ksmserver\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-04-22 00:47+0000\n"
+"PO-Revision-Date: 2021-07-22 13:44+0300\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-POT-Import-Date: 2012-12-01 22:22:27+0000\n"
+"X-Generator: Lokalize 20.04.2\n"
+
+#: logout.cpp:344
+#, kde-format
+msgid "Logout canceled by '%1'"
+msgstr "”%1” perui uloskirjautumisen."
+
+#: main.cpp:117
+#, kde-format
+msgid "$HOME not set!"
+msgstr "$HOME-muuttujaa ei ole asetettu!"
+
+#: main.cpp:121 main.cpp:127
+#, kde-format
+msgid "$HOME directory (%1) does not exist."
+msgstr "$HOME-kansiota (%1) ei ole olemassa."
+
+#: main.cpp:123
+#, kde-format
+msgid "No write access to $HOME directory (%1)."
+msgstr "$HOME-kansioon (%1) ei ole kirjoitusoikeutta."
+
+#: main.cpp:129
+#, kde-format
+msgid "No read access to $HOME directory (%1)."
+msgstr "$HOME-kansioon (%1) ei ole lukuoikeutta."
+
+#: main.cpp:133
+#, kde-format
+msgid "$HOME directory (%1) is out of disk space."
+msgstr "$HOME-kansiossa (%1) ei ole vapaata levytilaa."
+
+#: main.cpp:136
+#, kde-format
+msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+msgstr "$HOME-kansioon (%2) kirjoittaminen epäonnistui virheellä ”%1”"
+
+#: main.cpp:149 main.cpp:184
+#, kde-format
+msgid "No write access to '%1'."
+msgstr "Kansioon ”%1” ei ole kirjoitusoikeutta."
+
+#: main.cpp:151 main.cpp:186
+#, kde-format
+msgid "No read access to '%1'."
+msgstr "Kansioon ”%1” ei ole lukuoikeutta."
+
+#: main.cpp:159 main.cpp:172
+#, kde-format
+msgid "Temp directory (%1) is out of disk space."
+msgstr "Väliaikaiskansiossa (%1) ei ole vapaata levytilaa."
+
+#: main.cpp:162 main.cpp:175
+#, kde-format
+msgid ""
+"Writing to the temp directory (%2) failed with\n"
+"    the error '%1'"
+msgstr ""
+"Väliaikaiskansioon (%2) kirjoittaminen epäonnistui\n"
+"virheellä ”%1”"
+
+#: main.cpp:190
+#, kde-format
+msgid ""
+"The following installation problem was detected\n"
+"while trying to start Plasma:"
+msgstr ""
+"Plasmaa käynnistettäessä havaittiin\n"
+"seuraava asennusongelma:"
+
+#: main.cpp:193
+#, kde-format
+msgid ""
+"\n"
+"\n"
+"Plasma is unable to start.\n"
+msgstr ""
+"\n"
+"\n"
+"Plasmaa ei voi käynnistää.\n"
+
+#: main.cpp:200
+#, kde-format
+msgid "Plasma Workspace installation problem!"
+msgstr "Plasma-työtilan asennusongelma!"
+
+#: main.cpp:236
+#, kde-format
+msgid ""
+"The reliable Plasma session manager that talks the standard X11R6 \n"
+"session management protocol (XSMP)."
+msgstr ""
+"Standardinmukaista X11R6-istunnonhallintayhteyskäytäntöä (XSMP)\n"
+"käyttävä luotettava Plasma-istunnonhallinta."
+
+#: main.cpp:240
+#, kde-format
+msgid "Restores the saved user session if available"
+msgstr "Palauttaa tallennetun käyttäjän istunnon, jos mahdollista"
+
+#: main.cpp:243
+#, kde-format
+msgid "Also allow remote connections"
+msgstr "Salli myös etäyhteydet"
+
+#: main.cpp:246
+#, kde-format
+msgid "Starts the session in locked mode"
+msgstr "Aloittaa istunnon lukittuna"
+
+#: main.cpp:250
+#, kde-format
+msgid ""
+"Starts without lock screen support. Only needed if other component provides "
+"the lock screen."
+msgstr ""
+"Käynnistyy ilman lukitusnäyttötukea. Tarvitaan vain, jos jokin toinen "
+"komponentti tarjoaa lukitusnäytön."
+
+#: server.cpp:873
+#, kde-format
+msgid "Session Management"
+msgstr "Istunnonhallinta"
+
+#: server.cpp:876
+#, kde-format
+msgid "Log Out"
+msgstr "Kirjaudu ulos"
+
+#: server.cpp:881
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "Kirjaudu kyselemättä ulos"
+
+#: server.cpp:886
+#, kde-format
+msgid "Halt Without Confirmation"
+msgstr "Sammuta kyselemättä"
+
+#: server.cpp:891
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "Käynnistä kyselemättä uudelleen"
+
+#~ msgid ""
+#~ "Starts <wm> in case no other window manager is \n"
+#~ "participating in the session. Default is 'kwin'"
+#~ msgstr ""
+#~ "Käynnistää <wm>:n, ellei ikkunointiohjelmaa ole\n"
+#~ "istunnossa. Oletus on ”kwin”"
+
+#~ msgid "wm"
+#~ msgstr "wm"
+
+#~ msgid "Logout"
+#~ msgstr "Kirjaudu ulos"
+
+#~ msgid "Sleeping in 1 second"
+#~ msgid_plural "Sleeping in %1 seconds"
+#~ msgstr[0] "Siirrytään valmiustilaan sekunnissa."
+#~ msgstr[1] "Siirrytään valmiustilaan %1 sekunnissa."
+
+#~ msgid "Lock"
+#~ msgstr "Lukitse"
+
+#~ msgid "ksmserver"
+#~ msgstr "ksmserver"
+
+#~ msgid "Turn off"
+#~ msgstr "Sammuta"
+
+#~ msgid "Sleep"
+#~ msgstr "Valmiustila"
+
+#~ msgid "Logging out in 1 second."
+#~ msgid_plural "Logging out in %1 seconds."
+#~ msgstr[0] "Kirjaudutaan ulos sekunnissa."
+#~ msgstr[1] "Kirjaudutaan ulos %1 sekunnissa."
+
+#~ msgid "Turning off computer in 1 second."
+#~ msgid_plural "Turning off computer in %1 seconds."
+#~ msgstr[0] "Sammutetaan kone sekunnissa."
+#~ msgstr[1] "Sammutetaan kone %1 sekunnissa."
+
+#~ msgid "Restarting computer in 1 second."
+#~ msgid_plural "Restarting computer in %1 seconds."
+#~ msgstr[0] "Käynnistetään kone uudelleen sekunnissa."
+#~ msgstr[1] "Käynnistetään kone uudelleen %1 sekunnissa."
+
+#~ msgid "Turn Off Computer"
+#~ msgstr "Sammuta kone"
+
+#~ msgid "Restart Computer"
+#~ msgstr "Käynnistä kone uudelleen"
+
+#~ msgctxt "default option in boot loader"
+#~ msgid " (default)"
+#~ msgstr " (oletus)"
+
+#~ msgid "Cancel"
+#~ msgstr "Peru"
+
+#~ msgid "&Standby"
+#~ msgstr "&Valmiustila"
+
+#~ msgid "Suspend to &RAM"
+#~ msgstr "Keskeytä &muistiin"
+
+#~ msgid "Suspend to &Disk"
+#~ msgstr "Keskeytä &levylle"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr ""
+#~ "Kim Enkovaara,Tapio Kautto,Teemu Rytilahti,Ilpo Kantonen,Lasse Liehu"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ""
+#~ "kim.enkovaara@iki.fi,eleknader@phnet.fi,teemu.rytilahti@kde-fi.org,"
+#~ "ilpo@iki.fi,lliehu@kolumbus.fi"
+
+#~ msgid "(C) 2000, The KDE Developers"
+#~ msgstr "© 2000, KDE-kehittäjät"
+
+#~ msgid "Matthias Ettrich"
+#~ msgstr "Matthias Ettrich"
+
+#~ msgid "Luboš Luňák"
+#~ msgstr "Luboš Luňák"
+
+#~ msgid "Maintainer"
+#~ msgstr "Ylläpitäjä"
+
+#~ msgctxt "current option in boot loader"
+#~ msgid " (current)"
+#~ msgstr " (nykyinen)"
+
+#~ msgctxt "@label In corner of the logout dialog"
+#~ msgid "KDE <numid>%1.%2.%3</numid>"
+#~ msgstr "KDE <numid>%1.%2.%3</numid>"
+
+#~ msgctxt "@label In corner of the logout dialog"
+#~ msgid "KDE <numid>%1.%2</numid>"
+#~ msgstr "KDE <numid>%1.%2</numid>"
+
+#~ msgid "End Session for %1"
+#~ msgstr "Kirjaa ulos käyttäjä \"%1\""
+
+#~ msgid "End Session for %1 (%2)"
+#~ msgstr "Kirjaa ulos käyttäjä \"%1\" (%2)"

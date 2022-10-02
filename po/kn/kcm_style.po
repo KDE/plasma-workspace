@@ -1,0 +1,409 @@
+# translation of kcmstyle.po to Kannada
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Shankar Prasad <svenkate@redhat.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcmstyle\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"PO-Revision-Date: 2008-12-29 16:57+0530\n"
+"Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
+"Language-Team: Kannada <en@li.org>\n"
+"Language: kn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: gtkpage.cpp:59
+#, kde-format
+msgid "%1 is not a valid GTK Theme archive."
+msgstr ""
+
+#: kcmstyle.cpp:161 kcmstyle.cpp:168
+#, kde-format
+msgid "There was an error loading the configuration dialog for this style."
+msgstr "ಈ ಶೈಲಿಗಾಗಿ ಸಂರಚನಾ ಸಂವಾದವನ್ನು ಲೋಡ್ ಮಾಡುವಲ್ಲಿ ಒಂದು ದೋಷ ಕಂಡುಬಂದಿದೆ."
+
+#: kcmstyle.cpp:274
+#, kde-format
+msgid "Failed to apply selected style '%1'."
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:32
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Sho&w icons on buttons"
+msgid "Show icons:"
+msgstr "ಗುಂಡಿಗಳ ಮೇಲೆ ಚಿಹ್ನೆಗಳನ್ನು ತೋರಿಸು(&w)"
+
+#: package/contents/ui/EffectSettingsPopup.qml:33
+#, fuzzy, kde-format
+#| msgid "Radio button"
+msgid "On buttons"
+msgstr "ರೇಡಿಯೋ ಗುಂಡಿ"
+
+#: package/contents/ui/EffectSettingsPopup.qml:44
+#, kde-format
+msgid "In menus"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:56
+#, kde-format
+msgid "Main toolbar label:"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:58
+#, kde-format
+msgid "None"
+msgstr ""
+
+#: package/contents/ui/EffectSettingsPopup.qml:59
+#, fuzzy, kde-format
+#| msgid "Text Only"
+msgid "Text only"
+msgstr "ಪಠ್ಯ ಮಾತ್ರ"
+
+#: package/contents/ui/EffectSettingsPopup.qml:60
+#, fuzzy, kde-format
+#| msgid "Text Alongside Icons"
+msgid "Beside icons"
+msgstr "ಚಿಹ್ನೆಗಳ ಪಕ್ಕದಲ್ಲಿ ಪಠ್ಯ"
+
+#: package/contents/ui/EffectSettingsPopup.qml:61
+#, fuzzy, kde-format
+#| msgid "Text Under Icons"
+msgid "Below icon"
+msgstr "ಚಿಹ್ನೆಗಳ ಕೆಳಗಡೆ ಪಠ್ಯ"
+
+#: package/contents/ui/EffectSettingsPopup.qml:76
+#, kde-format
+msgid "Secondary toolbar label:"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:18
+#, kde-format
+msgid "GNOME/GTK Application Style"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:44
+#, kde-format
+msgid "GTK theme:"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:69
+#, fuzzy, kde-format
+#| msgid "Preview"
+msgid "Preview…"
+msgstr "ಮುನ್ನೋಟ"
+
+#: package/contents/ui/GtkStylePage.qml:88
+#, kde-format
+msgid "Install from File…"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:93
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Get New GNOME/GTK Application Styles…"
+msgstr "ಸಂರಚಿಸು(&f)..."
+
+#: package/contents/ui/GtkStylePage.qml:109
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr ""
+
+#: package/contents/ui/GtkStylePage.qml:111
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: package/contents/ui/main.qml:17
+#, fuzzy, kde-format
+#| msgid ""
+#| "<h1>Style</h1>This module allows you to modify the visual appearance of "
+#| "user interface elements, such as the widget style and effects."
+msgid ""
+"This module allows you to modify the visual appearance of applications' user "
+"interface elements."
+msgstr ""
+"<h1>ಶೈಲಿ</h1>ಈ ಮಾಡ್ಯೂಲ್ ಬಳಕೆದಾರ ಸಂಪರ್ಕಸಾಧನ ಘಟಕಗಳ ವಿಜೆಟ್ ಶೈಲಿ ಹಾಗು ಪರಿಣಾಮಗಳಂತಹ "
+"ಗೋಚರಿಕೆಯನ್ನು ಬದಲಾಯಿಸಲು ನೆರವಾಗುತ್ತದೆ."
+
+#: package/contents/ui/main.qml:96
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure Style…"
+msgstr "ಸಂರಚಿಸು(&f)..."
+
+#: package/contents/ui/main.qml:116
+#, kde-format
+msgid "Configure Icons and Toolbars"
+msgstr ""
+
+#: package/contents/ui/main.qml:132
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "ಸಂರಚಿಸು(&f)..."
+
+#: styleconfdialog.cpp:21
+#, kde-format
+msgid "Configure %1"
+msgstr "%1 ಅನ್ನು ಸಂರಚಿಸು"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "ಟ್ಯಾಬ್ ೧"
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, fuzzy, kde-format
+#| msgid "Button"
+msgid "Push Button"
+msgstr "ಗುಂಡಿ"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, fuzzy, kde-format
+#| msgid "Combobox"
+msgid "Combo box"
+msgstr "ಕಾಂಬೋ ಚೌಕ"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "ಪರೀಕ್ಷಕ ಚೌಕ"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "ರೇಡಿಯೋ ಗುಂಡಿ"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:133
+#, kde-format
+msgid "Tab 2"
+msgstr "ಟ್ಯಾಬ್ ೨"
+
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Con&figure..."
+msgid "Application style"
+msgstr "ಸಂರಚಿಸು(&f)..."
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Sho&w icons on buttons"
+msgid "Show icons on buttons"
+msgstr "ಗುಂಡಿಗಳ ಮೇಲೆ ಚಿಹ್ನೆಗಳನ್ನು ತೋರಿಸು(&w)"
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Sho&w icons on buttons"
+msgid "Show icons in menus"
+msgstr "ಗುಂಡಿಗಳ ಮೇಲೆ ಚಿಹ್ನೆಗಳನ್ನು ತೋರಿಸು(&w)"
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, kde-format
+msgid "Main toolbar label"
+msgstr ""
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, kde-format
+msgid "Secondary toolbar label"
+msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "ಶಂಕರ ಪ್ರಸಾದ್‌ ಎಂ. ವಿ."
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "svenkate@redhat.com"
+
+#, fuzzy
+#~| msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
+#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
+#~ msgstr "(c) 2002 Karol Szwed, Daniel Molkentin"
+
+#~ msgid "Karol Szwed"
+#~ msgstr "Karol Szwed"
+
+#~ msgid "Daniel Molkentin"
+#~ msgstr "Daniel Molkentin"
+
+#, fuzzy
+#~| msgid "Con&figure..."
+#~ msgid "Download New GNOME/GTK2 Application Styles..."
+#~ msgstr "ಸಂರಚಿಸು(&f)..."
+
+#, fuzzy
+#~| msgid "Con&figure..."
+#~ msgid "GNOME/GTK2 Application Styles"
+#~ msgstr "ಸಂರಚಿಸು(&f)..."
+
+#, fuzzy
+#~| msgid "Con&figure..."
+#~ msgid "Download New GNOME/GTK3 Application Styles..."
+#~ msgstr "ಸಂರಚಿಸು(&f)..."
+
+#, fuzzy
+#~| msgid "Con&figure..."
+#~ msgid "GNOME/GTK3 Application Styles"
+#~ msgstr "ಸಂರಚಿಸು(&f)..."
+
+#~ msgid "Unable to Load Dialog"
+#~ msgstr "ಸಂವಾದವನ್ನು ಲೋಡ್ ಮಾಡಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ"
+
+#~ msgid "No description available."
+#~ msgstr "ಯಾವುದೆ ವಿವರಣೆ ಲಭ್ಯವಿಲ್ಲ."
+
+#~ msgid ""
+#~ "This area shows a preview of the currently selected style without having "
+#~ "to apply it to the whole desktop."
+#~ msgstr ""
+#~ "ಈ ಜಾಗದಲ್ಲಿ ಪ್ರಸಕ್ತ ಆಯ್ಕೆ ಮಾಡಲಾದ ಶೈಲಿಯನ್ನು ಸಂಪೂರ್ಣ ಗಣಕತೆರೆಗೆ ಅನ್ವಯಿಸದೆ ಕೇವಲ ಅದರ "
+#~ "ಮುನ್ನೋಟವನ್ನು ತೋರಿಸಲಾಗುತ್ತದೆ."
+
+#~ msgid ""
+#~ "Here you can choose from a list of predefined widget styles (e.g. the way "
+#~ "buttons are drawn) which may or may not be combined with a theme "
+#~ "(additional information like a marble texture or a gradient)."
+#~ msgstr ""
+#~ "ಮೊದಲೆ ನಿರ್ಧರಿಸಲಾದ ವಿಜೆಟ್ ಶೈಲಿಗಳ (ಉದಾ., ಗುಂಡಿಗಳು ಹೇಗೆ ಬರೆಯಲ್ಪಡುತ್ತವೆ) ಪಟ್ಟಿಯಿಂದ "
+#~ "ಆಯ್ಕೆ ಮಾಡಬಹುದಾಗಿದ್ದು, ಇದರೊಂದಿಗೆ ಥೀಮ್ ಅನ್ನೂ (ಅಮೃತಶಿಲೆಯ ಮೇಲ್ಮೈರಚನೆ ಅಥವ ಒಂದು "
+#~ "ಇಳಿಜಾರು) ಸಹ ಸೇರ್ಪಡಿಸಿರಬಹುದು ಅಥವ ಸೇರ್ಪಡಿಸದೆ ಇರಬಹುದು."
+
+#, fuzzy
+#~| msgid ""
+#~| "If you enable this option, KDE Applications will show small icons "
+#~| "alongside some important buttons."
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "some important buttons."
+#~ msgstr ""
+#~ "ಈ ಆಯ್ಕೆಯನ್ನು ಶಕ್ತಗೊಳಿಸಿದಲ್ಲಿ, KDE ಅನ್ವಯಗಳು ಕೆಲವೊಂದು ಪ್ರಮುಖ ಗುಂಡಿಗಳ ಪಕ್ಕದಲ್ಲಿ ಸಣ್ಣ "
+#~ "ಚಿಹ್ನೆಯನ್ನು ತೋರಿಸುತ್ತದೆ."
+
+#, fuzzy
+#~| msgid ""
+#~| "If you enable this option, KDE Applications will show small icons "
+#~| "alongside some important buttons."
+#~ msgid ""
+#~ "If you enable this option, applications will show small icons alongside "
+#~ "most menu items."
+#~ msgstr ""
+#~ "ಈ ಆಯ್ಕೆಯನ್ನು ಶಕ್ತಗೊಳಿಸಿದಲ್ಲಿ, KDE ಅನ್ವಯಗಳು ಕೆಲವೊಂದು ಪ್ರಮುಖ ಗುಂಡಿಗಳ ಪಕ್ಕದಲ್ಲಿ ಸಣ್ಣ "
+#~ "ಚಿಹ್ನೆಯನ್ನು ತೋರಿಸುತ್ತದೆ."
+
+#, fuzzy
+#~| msgid ""
+#~| "<p><b>Icons only:</b> Shows only icons on toolbar buttons. Best option "
+#~| "for low resolutions.</p><p><b>Text only: </b>Shows only text on toolbar "
+#~| "buttons.</p><p><b>Text alongside icons: </b> Shows icons and text on "
+#~| "toolbar buttons. Text is aligned alongside the icon.</p><b>Text under "
+#~| "icons: </b> Shows icons and text on toolbar buttons. Text is aligned "
+#~| "below the icon."
+#~ msgid ""
+#~ "<p><b>No text:</b> Shows only icons on toolbar buttons. Best option for "
+#~ "low resolutions.</p><p><b>Text only: </b>Shows only text on toolbar "
+#~ "buttons.</p><p><b>Text beside icons: </b> Shows icons and text on toolbar "
+#~ "buttons. Text is aligned beside the icon.</p><b>Text below icons: </b> "
+#~ "Shows icons and text on toolbar buttons. Text is aligned below the icon."
+#~ msgstr ""
+#~ "<p><b>ಚಿಹ್ನೆಗಳು ಮಾತ್ರ:</b>ಇದು ಉಪಕರಣ ಪಟ್ಟಿಕೆಗಳ ಗುಂಡಿಗಳ ಮೇಲೆ ಕೇವಲ ಚಿಹ್ನೆಗಳನ್ನು "
+#~ "ಮಾತ್ರ ತೋರಿಸುತ್ತದೆ. ಕೆಳಮಟ್ಟದ ರೆಸಲ್ಯೂಶನ್‌ಗೆ ಇದು ಒಳ್ಳೆಯ ಆಯ್ಕೆಯಾಗಿರುತ್ತದೆ.</"
+#~ "p><p><b>ಪಠ್ಯ ಮಾತ್ರ: </b>ಇದು ಉಪಕರಣ ಪಟ್ಟಿಕೆಗಳ ಗುಂಡಿಗಳ ಮೇಲೆ ಕೇವಲ ಪಠ್ಯವನ್ನು ಮಾತ್ರ "
+#~ "ತೋರಿಸುತ್ತದೆ.</p><p><b>ಚಿಹ್ನೆಗಳ ಪಕ್ಕದಲ್ಲಿ ಪಠ್ಯ: </b>ಇದು ಉಪಕರಣ ಪಟ್ಟಿಕೆಗಳ ಗುಂಡಿಗಳ "
+#~ "ಮೇಲೆ ಚಿಹ್ನೆಗಳನ್ನು ಹಾಗು ಪಠ್ಯಗಳನ್ನು ತೋರಿಸುತ್ತದೆ. ಪಠ್ಯವನ್ನು ಚಿಹ್ನೆಯ ಬದಿಗೆ "
+#~ "ಜೋಡಿಸಲಾಗಿರುತ್ತದೆ.</p><b>ಚಿಹ್ನೆಗಳ ಕೆಳಗಡೆ ಪಠ್ಯ: </b>ಇದು ಉಪಕರಣ ಪಟ್ಟಿಕೆಗಳ ಗುಂಡಿಗಳ "
+#~ "ಮೇಲೆ ಚಿಹ್ನೆಗಳನ್ನು ಹಾಗು ಪಠ್ಯಗಳನ್ನು ತೋರಿಸುತ್ತದೆ. ಪಠ್ಯವನ್ನು ಚಿಹ್ನೆಯ ಕೆಳಗಡೆ "
+#~ "ಜೋಡಿಸಲಾಗಿರುತ್ತದೆ."
+
+#, fuzzy
+#~| msgid "Widget style:"
+#~ msgid "Widget Style"
+#~ msgstr "ವಿಜೆಟ್ ಶೈಲಿ:"
+
+#~ msgid "Widget style:"
+#~ msgstr "ವಿಜೆಟ್ ಶೈಲಿ:"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Fine Tuning"
+#~ msgstr "ಸೂಕ್ಷ್ಮ ಸರಿಪಡಿಸುವಿಕೆ(&F)"
+
+#~ msgid "Description: %1"
+#~ msgstr "ವಿವರಣೆ: %1"
+
+#~ msgid "Group Box"
+#~ msgstr "ಗುಂಪು ಚೌಕ"
+
+#~ msgid "KDE Style Module"
+#~ msgstr "KDE ಶೈಲಿ ಮಾಡ್ಯೂಲ್"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "Low display resolution and Low CPU"
+#~ msgstr "ಪ್ರದರ್ಶಕದ ಕೆಳಮಟ್ಟದ ರೆಸಲ್ಯೂಶನ್ ಹಾಗು ಕೆಳಮಟ್ಟದ CPU"
+
+#~ msgid "High display resolution and Low CPU"
+#~ msgstr "ಪ್ರದರ್ಶಕದ ಉತ್ತಮ ರೆಸಲ್ಯೂಶನ್ ಹಾಗು ಕೆಳಮಟ್ಟದ CPU"
+
+#~ msgid "Low display resolution and High CPU"
+#~ msgstr "ಪ್ರದರ್ಶಕದ ಕೆಳಮಟ್ಟದ ರೆಸಲ್ಯೂಶನ್ ಹಾಗು ಉತ್ತಮ CPU"
+
+#~ msgid "High display resolution and High CPU"
+#~ msgstr "ಪ್ರದರ್ಶಕದ ಉತ್ತಮ ರೆಸಲ್ಯೂಶನ್ ಹಾಗು ಉತ್ತಮ CPU"
+
+#~ msgid "Low display resolution and Very High CPU"
+#~ msgstr "ಪ್ರದರ್ಶಕದ ಕೆಳಮಟ್ಟದ ರೆಸಲ್ಯೂಶನ್ ಹಾಗು ಅತ್ಯುತ್ತಮ CPU"
+
+#~ msgid "High display resolution and Very High CPU"
+#~ msgstr "ಪ್ರದರ್ಶಕದ ಉತ್ತಮ ರೆಸಲ್ಯೂಶನ್ ಹಾಗು ಅತ್ಯುತ್ತಮ CPU"
+
+#~ msgid ""
+#~ "If you enable this option, KDE Applications will run internal animations."
+#~ msgstr ""
+#~ "ಈ ಆಯ್ಕೆಯನ್ನು ಶಕ್ತಗೊಳಿಸಿದಲ್ಲಿ, KDE ಅನ್ವಯಗಳು ಆಂತರಿಕ ಸಜೀವನವನ್ನು(ಆನಿಮೇಶನ್) "
+#~ "ಚಲಾಯಿಸುತ್ತದೆ."
+
+#~ msgid "kcmstyle"
+#~ msgstr "kcmstyle"
+
+#~ msgid "Icons Only"
+#~ msgstr "ಚಿಹ್ನೆಗಳು ಮಾತ್ರ"
+
+#, fuzzy
+#~| msgctxt "@label:listbox"
+#~| msgid "Text pos&ition:"
+#~ msgctxt "@label:listbox"
+#~ msgid "Text pos&ition of toolbar elements:"
+#~ msgstr "ಪಠ್ಯದ ಸ್ಥಳ(&i):"
+
+#~ msgctxt "@title:tab"
+#~ msgid "&Style"
+#~ msgstr "ಶೈಲಿ(&S)"
+
+#~ msgid ""
+#~ "This page allows you to enable various widget style effects. For best "
+#~ "performance, it is advisable to disable all effects."
+#~ msgstr ""
+#~ "ಈ ಪುಟವು ನಿಮಗೆ ಹಲವಾರು ವಿಜೆಟ್ ಶೈಲಿಯ ಪರಿಣಾಮಗಳನ್ನು ಶಕ್ತಗೊಳಿಸಲು ಅನುಮತಿಸುತ್ತದೆ. "
+#~ "ಉತ್ತಮ ಕಾರ್ಯಕ್ಷಮತೆಗಾಗಿ ಎಲ್ಲಾ ಪರಿಣಾಮಗಳನ್ನು ಅಶಕ್ತಗೊಳಿಸಲು ಸಲಹೆ ಮಾಡಲಾಗುತ್ತದೆ."

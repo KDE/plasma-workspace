@@ -1,0 +1,201 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Jean Cayron <jean.cayron@gmail.com>, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-21 00:47+0000\n"
+"PO-Revision-Date: 2010-05-11 19:09+0200\n"
+"Last-Translator: Jean Cayron <jean.cayron@gmail.com>\n"
+"Language-Team: Walloon <linux-wa@walon.org>\n"
+"Language: wa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.0\n"
+
+#: package/contents/ui/DeviceItem.qml:180
+#, fuzzy, kde-format
+#| msgctxt "@info:status Free disk space"
+#| msgid "%1 free"
+msgctxt "@info:status Free disk space"
+msgid "%1 free of %2"
+msgstr "%1 libe"
+
+#: package/contents/ui/DeviceItem.qml:184
+#, fuzzy, kde-format
+#| msgid "Unmounting..."
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Accessing…"
+msgstr "Dji dismonte..."
+
+#: package/contents/ui/DeviceItem.qml:187
+#, fuzzy, kde-format
+#| msgid "Unmounting..."
+msgctxt ""
+"Removing is a less technical word for Unmounting; translation should be "
+"short and mean 'Currently unmounting this device'"
+msgid "Removing…"
+msgstr "Dji dismonte..."
+
+#: package/contents/ui/DeviceItem.qml:190
+#, kde-format
+msgid "Don't unplug yet! Files are still being transferred..."
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:221
+#, kde-format
+msgid "Open in File Manager"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:224
+#, kde-format
+msgid "Mount and Open"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:226
+#, kde-format
+msgid "Eject"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:228
+#, kde-format
+msgid "Safely remove"
+msgstr ""
+
+#: package/contents/ui/DeviceItem.qml:270
+#, fuzzy, kde-format
+#| msgid "Mounting..."
+msgid "Mount"
+msgstr "Dji monte..."
+
+#: package/contents/ui/FullRepresentation.qml:41
+#: package/contents/ui/main.qml:238
+#, kde-format
+msgid "Remove All"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:42
+#, fuzzy, kde-format
+#| msgid "Click to safely remove this device from the computer."
+msgid "Click to safely remove all devices"
+msgstr "Clictchî po oister al coete cist éndjin del copiutrece"
+
+#: package/contents/ui/FullRepresentation.qml:186
+#, fuzzy, kde-format
+#| msgid "Non-removable devices only"
+msgid "No removable devices attached"
+msgstr "Seulmint les éndjins nén bodjåves"
+
+#: package/contents/ui/FullRepresentation.qml:186
+#, fuzzy, kde-format
+#| msgid "No devices available."
+msgid "No disks available"
+msgstr "I gn a pont d' éndjin."
+
+#: package/contents/ui/main.qml:47
+#, fuzzy, kde-format
+#| msgid "Most recent device: %1"
+msgid "Most Recent Device"
+msgstr "Li tot dierin éndjin : %1"
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid "No Devices Available"
+msgstr "I gn a pont d' éndjin"
+
+#: package/contents/ui/main.qml:245
+#, fuzzy, kde-format
+#| msgid "Removable devices only"
+msgid "Removable Devices"
+msgstr "Seulmint les éndjins bodjåves"
+
+#: package/contents/ui/main.qml:251
+#, fuzzy, kde-format
+#| msgid "Non-removable devices only"
+msgid "Non Removable Devices"
+msgstr "Seulmint les éndjins nén bodjåves"
+
+#: package/contents/ui/main.qml:257
+#, fuzzy, kde-format
+#| msgid "All devices"
+msgid "All Devices"
+msgstr "Tos les éndjins"
+
+#: package/contents/ui/main.qml:265
+#, kde-format
+msgid "Show popup when new device is plugged in"
+msgstr ""
+
+#: package/contents/ui/main.qml:274
+#, fuzzy, kde-format
+#| msgid "Non-removable devices only"
+msgctxt "Open auto mounter kcm"
+msgid "Configure Removable Devices…"
+msgstr "Seulmint les éndjins nén bodjåves"
+
+#, fuzzy
+#~| msgid "Click to safely remove this device from the computer."
+#~ msgid "It is currently safe to remove this device."
+#~ msgstr "Clictchî po oister al coete cist éndjin del copiutrece"
+
+#, fuzzy
+#~| msgid "1 action for this device"
+#~| msgid_plural "%1 actions for this device"
+#~ msgid "1 action for this device"
+#~ msgid_plural "%1 actions for this device"
+#~ msgstr[0] "1 accion po cist éndjin"
+#~ msgstr[1] "1 accion po cist éndjin"
+
+#~ msgid "Click to access this device from other applications."
+#~ msgstr "Clitchîz po k' d' ôtes programes moussexhe dins cist éndjin."
+
+#, fuzzy
+#~| msgid "Click to safely remove this device from the computer."
+#~ msgid "Click to eject this disc."
+#~ msgstr "Clictchî po oister al coete cist éndjin del copiutrece"
+
+#, fuzzy
+#~| msgid "Click to safely remove this device from the computer."
+#~ msgid "Click to safely remove this device."
+#~ msgstr "Clictchî po oister al coete cist éndjin del copiutrece"
+
+#, fuzzy
+#~| msgid "Click to safely remove this device from the computer."
+#~ msgid "Click to mount this device."
+#~ msgstr "Clictchî po oister al coete cist éndjin del copiutrece"
+
+#~ msgid "Available Devices"
+#~ msgstr "Éndjins k' i gn a "
+
+#~ msgid "Display"
+#~ msgstr "Håynaedje"
+
+#~ msgid "Automounting"
+#~ msgstr "Otomontaedje"
+
+#~ msgid "Show hidden devices"
+#~ msgstr "Mostrer les éndjins catchîs"
+
+#~ msgctxt "Hide a device"
+#~ msgid "Hide %1"
+#~ msgstr "Catchî %1"
+
+#, fuzzy
+#~| msgid "Device is plugged in and can be accessed by applications."
+#~ msgid ""
+#~ "Device is plugged in and the volume can be accessed by applications. It "
+#~ "is not safe to remove this device."
+#~ msgstr "L' éndjin est tchôkî eyet les programes î savèt moussî."
+
+#, fuzzy
+#~| msgid "Device is plugged in, but not mounted for access yet."
+#~ msgid ""
+#~ "Device is plugged in and the volume is not mounted for access yet. The "
+#~ "device can be safely removed."
+#~ msgstr "L' éndjin est tchôkî mins n' est nén co monté pos î moussî."

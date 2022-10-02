@@ -1,0 +1,186 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Swedish "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="icons" lang="&language;">
+<articleinfo>
+<title
+>Ikoner</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Jost.Schenck; &Jost.Schenck.mail;</author>
+<author
+>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+<othercredit role="translator"
+> <firstname
+>Stefan</firstname
+> <surname
+>Asserhäll</surname
+> <affiliation
+><address
+><email
+>stefan.asserhall@bredband.net</email
+></address
+></affiliation
+> <contrib
+>Översättare</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-09</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Kcontrol</keyword>
+<keyword
+>ikon</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>&plasma; levereras med en full uppsättning ikoner i flera olika storlekar. Ikonerna används överallt i &plasma;: skrivbord, panel, filhanteraren &dolphin;, i varje verktygsrad i varje &plasma;-program, etc. Modulen Ikoner ger dig ett mycket flexibelt sätt att anpassa hur &plasma; hanterar ikoner.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Här är en skärmbild av ikontemahanteringen</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Anpassa &plasma;:s ikoner</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>I den här modulen kan du:</para>
+<itemizedlist>
+<listitem
+><para
+>Installera och välja ikonteman</para
+></listitem>
+<listitem
+><para
+>välja olika ikonstorlekar</para
+></listitem>
+<listitem
+><para
+>ta bort ikonteman</para
+></listitem>
+</itemizedlist>
+
+<important
+><para
+>Observera att vissa av de här inställningarna kan bero på det valda ikontemat. &plasma; levereras normalt med flera ikonteman, Breeze, Breeze mörk och Oxygen.</para
+></important>
+
+<para
+>Längst upp visas en förhandsgranskning av det nuvarande temats ikoner. De flesta normala installationer har bara ett ikontema tillgängligt, &plasma;:s förvalda tema Breeze. Du kan också ladda ner flera via Internet från <ulink url="https://store.kde.org/"
+>https://store.kde.org/</ulink
+> eller installera dem från en lokal fil.</para>
+
+<para
+>När musen hålls över en animerad förhandsgranskning visar den en slumpmässig markering, gemensamma Mime-typer och katalogikoner. </para>
+
+<para
+>Använd den överlagrade ikonen  <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+> längst ner till höger om temaikonen för att ta bort ett tema. Klicka på ikonen <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-undo.png" format="PNG"/></imageobject
+></inlinemediaobject
+> för att ångra åtgärden. Om du klickar på knappen <guibutton
+>Verkställ</guibutton
+> tas teman markerade för borttagning verkligen bort, så att det inte går att ångra enstaka eller alla borttagningar. </para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Anpassa ikonstorlekar</guilabel
+></term>
+<listitem>
+<para
+>Markera en av komponenterna och använd skjutreglaget för att anpassa motsvarande storlek. </para>
+<para>
+<screenshot>
+<screeninfo
+>Anpassa ikonstorlekar</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="use-of-icons.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Anpassa ikonstorlekar</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Hämta nya ikoner...</guilabel
+></term>
+<listitem>
+<para
+>Du måste vara ansluten till Internet för att använda det. Att klicka på knappen visar en dialogruta där det går att välja ett nytt ikontema. Att klicka på <guibutton
+>Installera</guibutton
+> i dialogrutan installerar det valda ikontemat, och efter installationsverktyget har stängts med <guibutton
+>Stäng</guibutton
+> är det nya temat omedelbart tillgängligt. </para>
+<para>
+<screenshot>
+<screeninfo
+>Hämta nya ikoner</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="get-new-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Hämta nya ikoner</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Installera från fil...</guilabel
+></term>
+<listitem>
+<para
+>Om du laddade ner nya teman från Internet, kan du använda detta för att bläddra till platsen för nya nerladdade teman. Att klicka på knappen visar fildialogrutan för att peka på ikontemats komprimerade arkiv som finns på hårddisken.</para>
+
+<para
+>Att klicka på <guibutton
+>Öppna</guibutton
+> i dialogrutan installerar temat som du pekade på och gör det tillgängligt i temalistan. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</article>

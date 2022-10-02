@@ -1,0 +1,499 @@
+# translation of kcminput.po to Gujarati
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sweta Kothari <swkothar@redhat.com>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcminput\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-10-01 00:50+0000\n"
+"PO-Revision-Date: 2008-12-06 16:35+0530\n"
+"Last-Translator: Kartik Mistry <kartik.mistry@gmail.com>\n"
+"Language-Team: Gujarati\n"
+"Language: gu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current cursor theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr ""
+
+#: kcmcursortheme.cpp:302
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr "આ ફેરફારો અસરમાં મૂકવા માટે તમારે KDE ફરી શરૂ કરવી પડશે."
+
+#: kcmcursortheme.cpp:376
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: kcmcursortheme.cpp:387
+#, fuzzy, kde-format
+#| msgid "Unable to find the cursor theme archive %1."
+msgid "Unable to download the icon theme archive: %1"
+msgstr "કર્સર થીમ અર્કાઇવ %1 શોધવામાં નિષ્ફળ."
+
+#: kcmcursortheme.cpp:418
+#, fuzzy, kde-format
+#| msgid "The file %1 does not appear to be a valid cursor theme archive."
+msgid "The file is not a valid icon theme archive."
+msgstr "ફાઇલ %1 એ યોગ્ય કર્સર થીમ અર્કાઇવ ફાઇલ હોય તેમ લાગતું નથી."
+
+#: kcmcursortheme.cpp:425
+#, kde-format
+msgid "Failed to create 'icons' folder."
+msgstr ""
+
+#: kcmcursortheme.cpp:434
+#, kde-format
+msgid ""
+"A theme named %1 already exists in your icon theme folder. Do you want "
+"replace it with this one?"
+msgstr ""
+
+#: kcmcursortheme.cpp:438
+#, kde-format
+msgid "Overwrite Theme?"
+msgstr "થીમ ઉપર લખશો?"
+
+#: kcmcursortheme.cpp:462
+#, kde-format
+msgid "Theme installed successfully."
+msgstr ""
+
+#: package/contents/ui/Delegate.qml:54
+#, kde-format
+msgid "Remove Theme"
+msgstr "થીમ દૂર કરો"
+
+#: package/contents/ui/Delegate.qml:61
+#, fuzzy, kde-format
+#| msgid "&Cursor Theme"
+msgid "Restore Cursor Theme"
+msgstr "કર્સર થીમ (&C)"
+
+#: package/contents/ui/main.qml:20
+#, kde-format
+msgid "This module lets you choose the mouse cursor theme."
+msgstr ""
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Size:"
+msgstr ""
+
+#: package/contents/ui/main.qml:134
+#, fuzzy, kde-format
+#| msgid "Install New Theme..."
+msgid "&Install from File…"
+msgstr "નવી થીમ સ્થાપિત કરો..."
+
+#: package/contents/ui/main.qml:140
+#, fuzzy, kde-format
+#| msgid "Install New Theme..."
+msgid "&Get New Cursors…"
+msgstr "નવી થીમ સ્થાપિત કરો..."
+
+#: package/contents/ui/main.qml:157
+#, fuzzy, kde-format
+#| msgid "Remove Theme"
+msgid "Open Theme"
+msgstr "થીમ દૂર કરો"
+
+#: package/contents/ui/main.qml:159
+#, kde-format
+msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:41
+#, kde-format
+msgid "The requested size '%1' is not available, using %2 instead."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:62
+#, kde-format
+msgid ""
+"This tool allows you to set the mouse cursor theme for the current Plasma "
+"session, without accidentally setting it to one that is either not "
+"available, or which is already set."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:66
+#, kde-format
+msgid ""
+"The name of the cursor theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:67
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:68
+#, kde-format
+msgid "Use a specific size, rather than the theme default size"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:89
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:100
+#, kde-format
+msgid ""
+"Successfully applied the mouse cursor theme %1 to your current Plasma session"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:102
+#, fuzzy, kde-format
+#| msgid "You have to restart KDE for these changes to take effect."
+msgid ""
+"You have to restart the Plasma session for your newly applied mouse cursor "
+"theme to display correctly."
+msgstr "આ ફેરફારો અસરમાં મૂકવા માટે તમારે KDE ફરી શરૂ કરવી પડશે."
+
+#: plasma-apply-cursortheme.cpp:112
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:120
+#, kde-format
+msgid "You have the following mouse cursor themes on your system:"
+msgstr ""
+
+#: plasma-apply-cursortheme.cpp:125
+#, kde-format
+msgid "(Current theme for this Plasma session)"
+msgstr ""
+
+#: xcursor/xcursortheme.cpp:60
+#, kde-format
+msgctxt ""
+"@info The argument is the list of available sizes (in pixel). Example: "
+"'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
+msgid "(Available sizes: %1)"
+msgstr ""
+
+#~ msgid "Name"
+#~ msgstr "નામ"
+
+#~ msgid "Description"
+#~ msgstr "વર્ણન"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "શ્ર્વેતા કોઠારી, કાર્તિક મિસ્ત્રી"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "swkothar@gmail.com, kartik.mistry@gmail.com"
+
+#, fuzzy
+#~| msgid "&Cursor Theme"
+#~ msgid "Cursors"
+#~ msgstr "કર્સર થીમ (&C)"
+
+#~ msgid "Confirmation"
+#~ msgstr "ખાતરી"
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "કર્સર ગોઠવણીઓ બદલાઇ છે"
+
+#~ msgid "Drag or Type Theme URL"
+#~ msgstr "઼થીમ URL મૂકો અથવા લખો"
+
+#, fuzzy
+#~| msgid "Unable to find the cursor theme archive %1."
+#~ msgid ""
+#~ "Unable to download the cursor theme archive; please check that the "
+#~ "address %1 is correct."
+#~ msgstr "કર્સર થીમ અર્કાઇવ %1 શોધવામાં નિષ્ફળ."
+
+#, fuzzy
+#~| msgid "Select the cursor theme you want to use:"
+#~ msgid ""
+#~ "Select the cursor theme you want to use (hover preview to test cursor):"
+#~ msgstr "ઉપયોગ કરવા માટેની કર્સર થીમ પસંદ કરો:"
+
+#~ msgid "Small black"
+#~ msgstr "નાના કાળા"
+
+#~ msgid "Small black cursors"
+#~ msgstr "નાના કાળા કર્સરો"
+
+#~ msgid "Large black"
+#~ msgstr "મોટા કાળા"
+
+#~ msgid "Large black cursors"
+#~ msgstr "મોટા કાળા કર્સરો"
+
+#~ msgid "Small white"
+#~ msgstr "નાના સફેદ"
+
+#~ msgid "Small white cursors"
+#~ msgstr "નાના સફેદ કર્સરો"
+
+#~ msgid "Large white"
+#~ msgstr "મોટા સફેદ"
+
+#~ msgid "Large white cursors"
+#~ msgstr "મોટા સફેદ કર્સરો"
+
+#~ msgid "Button Order"
+#~ msgstr "બટન ક્રમમાં રાખો"
+
+#~ msgid "Righ&t handed"
+#~ msgstr "જમણા હાથે (&t)"
+
+#~ msgid "Le&ft handed"
+#~ msgstr "ડાબા હાથે (&f)"
+
+#~ msgid "Re&verse scroll direction"
+#~ msgstr "સરકાવવાની ઉંધી દિશા (&v)"
+
+#~ msgid "Icons"
+#~ msgstr "ચિહ્ન"
+
+#~ msgid "&Single-click to open files and folders"
+#~ msgstr "ફાઇલ્સ અને ફોલ્ડર્સ ખોલવા માટે એક-ક્લિક (&S)"
+
+#~ msgid "Cha&nge pointer shape over icons"
+#~ msgstr "ચિહ્નો ઉપર દર્શકનો આકાર બદલો (&n)"
+
+#~ msgid "A&utomatically select icons"
+#~ msgstr "ચિહ્નો આપમેળે પસંદ કરો (&u)"
+
+#, fuzzy
+#~| msgid "Dela&y:"
+#~ msgctxt "label. delay (on milliseconds) to automatically select icons"
+#~ msgid "Delay"
+#~ msgstr "વિલંબ (&y):"
+
+#, fuzzy
+#~| msgid " msec"
+#~ msgctxt "milliseconds. time to automatically select the items"
+#~ msgid " ms"
+#~ msgstr " msec"
+
+#~ msgid "&General"
+#~ msgstr "સામાન્ય (&G)"
+
+#~ msgid "Activates and opens a file or folder with a single click."
+#~ msgstr "એક જ ક્લિકની સાથે ફાઇલ અથવા ફોલ્ડર સક્રિય કરે છે અને ખોલે છે."
+
+#~ msgid "Advanced"
+#~ msgstr "ઉન્નત્તીકરણ થયેલ"
+
+#~ msgid " x"
+#~ msgstr " x"
+
+#~ msgid "Pointer acceleration:"
+#~ msgstr "દર્શક પ્રવેગ:"
+
+#~ msgid "Pointer threshold:"
+#~ msgstr "દર્શક ઝડપ:"
+
+#~ msgid " msec"
+#~ msgstr " msec"
+
+#~ msgid "Double click interval:"
+#~ msgstr "ડબલ ક્લિક અંતરાલ:"
+
+#~ msgid "Drag start time:"
+#~ msgstr "ખેંચવાનો શરૂઆત સમય:"
+
+#~ msgid "Drag start distance:"
+#~ msgstr "ખેંચવાનું શરૂઆત અંતર:"
+
+#~ msgid "Mouse wheel scrolls by:"
+#~ msgstr "આ વડે માઉસ પૈડું સરકાવવાનું:"
+
+#~ msgid "Mouse Navigation"
+#~ msgstr "માઉસને એક તરફથી બીજી તરફ જવુ"
+
+#~ msgid "&Move pointer with keyboard (using the num pad)"
+#~ msgstr "કીબોર્ડ વડે દર્શક ખસેડો (નમ પેડનો ઉપયોગ કરીને) (&M)"
+
+#~ msgid "&Acceleration delay:"
+#~ msgstr "પ્રવેગને મુલતવી રાખો (&A):"
+
+#~ msgid "R&epeat interval:"
+#~ msgstr "વારંવાર અંતરાલ (&e):"
+
+#~ msgid "Acceleration &time:"
+#~ msgstr "પ્રવેગ સમય (&t):"
+
+#~ msgid " pixel/sec"
+#~ msgstr " બિંદુ/સેકન્ડ"
+
+#~ msgid "Ma&ximum speed:"
+#~ msgstr "મહત્તમ ઝડપ (&x):"
+
+#~ msgid "Acceleration &profile:"
+#~ msgstr "પ્રવેગ રૂપરેખા (&p):"
+
+#~ msgid "Mouse"
+#~ msgstr "માઉસ"
+
+#~ msgid "(c) 1997 - 2005 Mouse developers"
+#~ msgstr "(c) ૧૯૯૭ - ૨૦૦૫ માઉસ ડેવલપર્સ"
+
+#~ msgid "Patrick Dowler"
+#~ msgstr "Patrick Dowler"
+
+#~ msgid "Dirk A. Mueller"
+#~ msgstr "Dirk A. Mueller"
+
+#~ msgid "David Faure"
+#~ msgstr "David Faure"
+
+#~ msgid "Bernd Gehrmann"
+#~ msgstr "Bernd Gehrmann"
+
+#~ msgid "Rik Hemsley"
+#~ msgstr "Rik Hemsley"
+
+#~ msgid "Brad Hughes"
+#~ msgstr "Brad Hughes"
+
+#~ msgid "Ralf Nolden"
+#~ msgstr "Ralf Nolden"
+
+#~ msgid "Brad Hards"
+#~ msgstr "Brad Hards"
+
+#~ msgid " pixel"
+#~ msgid_plural " pixels"
+#~ msgstr[0] "બિંદુ"
+#~ msgstr[1] " બિંદુઓ"
+
+#~ msgid " line"
+#~ msgid_plural " lines"
+#~ msgstr[0] " વાક્ય"
+#~ msgstr[1] " વાક્યો"
+
+#~ msgid "Mouse type: %1"
+#~ msgstr "માઉસ પ્રકાર: %1"
+
+#~ msgid "Press Connect Button"
+#~ msgstr "જોડાણ બટન બનાવો"
+
+#~ msgid ""
+#~ "RF channel 2 has been set. Please press Connect button on mouse to re-"
+#~ "establish link"
+#~ msgstr ""
+#~ "RF ચેનલ ૨ સુયોજિત કરી દેવામાં આવી છે. મહેરબાની કરીને કડીને પુન:સ્થાપિત કરવા માટે "
+#~ "માઉસ પર જોડાણ બટનને દબાવો"
+
+#, fuzzy
+#~| msgid "none"
+#~ msgctxt "no cordless mouse"
+#~ msgid "none"
+#~ msgstr "કઇ નહિં"
+
+#~ msgid "Cordless Mouse"
+#~ msgstr "કોર્ડલેસ માઉસ"
+
+#~ msgid "Cordless Wheel Mouse"
+#~ msgstr "કોર્ડલેસ પૈડાવાળુ માઉસ"
+
+#~ msgid "Cordless MouseMan Wheel"
+#~ msgstr "કોર્ડલેસ માઉસમેન પૈડું"
+
+#~ msgid "Cordless TrackMan Wheel"
+#~ msgstr "કોર્ડલેસ ટ્રેકમેન પૈડું"
+
+#~ msgid "TrackMan Live"
+#~ msgstr "ટ્રેકમેન જીવંત"
+
+#~ msgid "Cordless TrackMan FX"
+#~ msgstr "કાર્ડલેસ ટ્રેકમેન FX"
+
+#~ msgid "Cordless MouseMan Optical"
+#~ msgstr "કોર્ડલેસ માઉસમેન ઓપ્ટીકલ"
+
+#~ msgid "Cordless Optical Mouse"
+#~ msgstr "કોર્ડલેસ ઓપ્ટીકલ માઉસ"
+
+#~ msgid "Cordless MouseMan Optical (2ch)"
+#~ msgstr "કોર્ડલેસ માઉસમેન ઓપ્ટીકલ (2ch)"
+
+#~ msgid "Cordless Optical Mouse (2ch)"
+#~ msgstr "કોર્ડલેસ ઓપ્ટીકલ માઉસ (2ch)"
+
+#~ msgid "Cordless Mouse (2ch)"
+#~ msgstr "કોર્ડલેસ માઉસ (2ch)"
+
+#~ msgid "Cordless Optical TrackMan"
+#~ msgstr "કોર્ડલેસ ઓપ્ટીકલ ટ્રેકમેન"
+
+#~ msgid "MX700 Cordless Optical Mouse"
+#~ msgstr "MX700 કોર્ડલેસ ઓપ્ટીકલ માઉસ"
+
+#~ msgid "MX700 Cordless Optical Mouse (2ch)"
+#~ msgstr "MX700 કોર્ડલેસ ઓપ્ટીકલ માઉસ (2ch)"
+
+#~ msgid "Unknown mouse"
+#~ msgstr "અજાણ્યુ માઉસ"
+
+#~ msgid "Cordless Name"
+#~ msgstr "કાર્ડલેસ નામ"
+
+#~ msgid "Sensor Resolution"
+#~ msgstr "સેન્સર ઉકેલ"
+
+#~ msgid "400 counts per inch"
+#~ msgstr "૪૦૦ ગણતરીઓ પ્રતિ ઇન્ચ"
+
+#~ msgid "800 counts per inch"
+#~ msgstr "૮૦૦ ગણતરીઓ પ્રતિ ઇન્ચ"
+
+#~ msgid "Battery Level"
+#~ msgstr "બેટરી સ્તર"
+
+#~ msgid "RF Channel"
+#~ msgstr "RF ચેનલ"
+
+#~ msgid "Channel 1"
+#~ msgstr "ચેનલ ૧"
+
+#~ msgid "Channel 2"
+#~ msgstr "ચેનલ ૨"
+
+#~ msgid "KDE Classic"
+#~ msgstr "KDE ક્લાસિક"
+
+#~ msgid "The default cursor theme in KDE 2 and 3"
+#~ msgstr "KDE ૨ અને ૩ માં મૂળભૂત કર્સર થીમ"
+
+#~ msgid "No description available"
+#~ msgstr "કોઇ વર્ણન ઉપલબ્ધ નથી"
+
+#~ msgid "Short"
+#~ msgstr "ટૂંકુ"
+
+#~ msgid "Long"
+#~ msgstr "લાંબુ"

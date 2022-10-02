@@ -1,0 +1,497 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-06 00:47+0000\n"
+"PO-Revision-Date: 2022-07-26 14:11+0200\n"
+"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"Language-Team: \n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.04.3\n"
+
+#: ../sddm-theme/KeyboardButton.qml:19
+#, kde-format
+msgid "Keyboard Layout: %1"
+msgstr "Toetsenbordindeling: %1"
+
+#: ../sddm-theme/Login.qml:75
+#, kde-format
+msgid "Username"
+msgstr "Gebruikersnaam"
+
+#: ../sddm-theme/Login.qml:92 contents/lockscreen/MainBlock.qml:61
+#, kde-format
+msgid "Password"
+msgstr "Wachtwoord"
+
+#: ../sddm-theme/Login.qml:134 ../sddm-theme/Login.qml:140
+#, kde-format
+msgid "Log In"
+msgstr "Aanmelden"
+
+#: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:299
+#, kde-format
+msgid "Caps Lock is on"
+msgstr "Caps Lock staat aan"
+
+#: ../sddm-theme/Main.qml:214 ../sddm-theme/Main.qml:463
+#: contents/logout/Logout.qml:163
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Slapen"
+
+#: ../sddm-theme/Main.qml:221 ../sddm-theme/Main.qml:470
+#: contents/logout/Logout.qml:181
+#, kde-format
+msgid "Restart"
+msgstr "Herstarten"
+
+#: ../sddm-theme/Main.qml:228 ../sddm-theme/Main.qml:477
+#: contents/logout/Logout.qml:191
+#, kde-format
+msgid "Shut Down"
+msgstr "Systeem afsluiten"
+
+#: ../sddm-theme/Main.qml:235
+#, kde-format
+msgctxt "For switching to a username and password prompt"
+msgid "Other…"
+msgstr "Overige…"
+
+#: ../sddm-theme/Main.qml:450
+#, kde-format
+msgid "Type in Username and Password"
+msgstr "Voer gebruikersnaam en wachtwoord in"
+
+#: ../sddm-theme/Main.qml:484
+#, kde-format
+msgid "List Users"
+msgstr "Lijst van gebruiker maken"
+
+#: ../sddm-theme/Main.qml:551 contents/lockscreen/LockScreenUi.qml:574
+#, kde-format
+msgctxt "Button to show/hide virtual keyboard"
+msgid "Virtual Keyboard"
+msgstr "Virtueel toetsenbord"
+
+#: ../sddm-theme/Main.qml:592
+#, kde-format
+msgid "Login Failed"
+msgstr "Aanmelden mislukt"
+
+#: ../sddm-theme/SessionButton.qml:18
+#, kde-format
+msgid "Desktop Session: %1"
+msgstr "Bureaubladsessie: %1"
+
+#: contents/components/Battery.qml:53
+#, kde-format
+msgid "%1%"
+msgstr "%1%"
+
+#: contents/components/Battery.qml:54
+#, kde-format
+msgid "Battery at %1%"
+msgstr "Batterij op %1%"
+
+#: contents/components/UserList.qml:71
+#, kde-format
+msgctxt "Nobody logged in on that session"
+msgid "Unused"
+msgstr "Ongebruikt"
+
+#: contents/components/UserList.qml:77
+#, kde-format
+msgctxt "User logged in on console number"
+msgid "TTY %1"
+msgstr "TTY %1"
+
+#: contents/components/UserList.qml:79
+#, kde-format
+msgctxt "User logged in on console (X display number)"
+msgid "on TTY %1 (Display %2)"
+msgstr "op TTY %1 (scherm %2)"
+
+#: contents/components/UserList.qml:83
+#, kde-format
+msgctxt "Username (location)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: contents/lockscreen/config.qml:19
+#, kde-format
+msgctxt "@title: group"
+msgid "Clock:"
+msgstr "Klok:"
+
+#: contents/lockscreen/config.qml:22
+#, kde-format
+msgctxt "@option:check"
+msgid "Keep visible when unlocking prompt disappears"
+msgstr "Zichtbaar houden wanneer prompt voor ontsluiten verdwijnt"
+
+#: contents/lockscreen/config.qml:33
+#, kde-format
+msgctxt "@title: group"
+msgid "Media controls:"
+msgstr "Besturing van media:"
+
+#: contents/lockscreen/config.qml:36
+#, kde-format
+msgctxt "@option:check"
+msgid "Show under unlocking prompt"
+msgstr "Onder prompt voor ontsluiten tonen"
+
+#: contents/lockscreen/LockScreenUi.qml:37
+#, kde-format
+msgid "Unlocking failed"
+msgstr "Ontgrendelen is mislukt"
+
+#: contents/lockscreen/LockScreenUi.qml:313
+#, kde-format
+msgid "Sleep"
+msgstr "Slapen"
+
+#: contents/lockscreen/LockScreenUi.qml:319 contents/logout/Logout.qml:172
+#, kde-format
+msgid "Hibernate"
+msgstr "Slaapstand naar schijf"
+
+#: contents/lockscreen/LockScreenUi.qml:325
+#, kde-format
+msgid "Switch User"
+msgstr "Gebruiker wisselen"
+
+#: contents/lockscreen/LockScreenUi.qml:521
+#, kde-format
+msgid "Switch to This Session"
+msgstr "Naar deze sessie omschakelen"
+
+#: contents/lockscreen/LockScreenUi.qml:529
+#, kde-format
+msgid "Start New Session"
+msgstr "Nieuwe sessie starten"
+
+#: contents/lockscreen/LockScreenUi.qml:542
+#, kde-format
+msgid "Back"
+msgstr "Terug"
+
+#: contents/lockscreen/LockScreenUi.qml:588
+#, kde-format
+msgctxt "Button to change keyboard layout"
+msgid "Switch layout"
+msgstr "Indeling omschakelen"
+
+#: contents/lockscreen/MainBlock.qml:101
+#: contents/lockscreen/NoPasswordUnlock.qml:17
+#, kde-format
+msgid "Unlock"
+msgstr "Ontgrendelen"
+
+#: contents/lockscreen/MediaControls.qml:105
+#, kde-format
+msgid "No media playing"
+msgstr "Er speelt geen medium"
+
+#: contents/lockscreen/MediaControls.qml:134
+#, kde-format
+msgid "Previous track"
+msgstr "Vorige track"
+
+#: contents/lockscreen/MediaControls.qml:146
+#, kde-format
+msgid "Play or Pause media"
+msgstr "Afspelen of pauzeren van medium"
+
+#: contents/lockscreen/MediaControls.qml:160
+#, kde-format
+msgid "Next track"
+msgstr "Volgende track"
+
+#: contents/logout/Logout.qml:139
+#, kde-format
+msgid ""
+"One other user is currently logged in. If the computer is shut down or "
+"restarted, that user may lose work."
+msgid_plural ""
+"%1 other users are currently logged in. If the computer is shut down or "
+"restarted, those users may lose work."
+msgstr[0] ""
+"Er is één andere gebruiker nu ingelogd. Als de computer wordt afgesloten of "
+"opnieuw gestart, dan kan die gebruiker werk verliezen."
+msgstr[1] ""
+"Er zijn %1 andere gebruikers nu ingelogd. Als de computer wordt afgesloten "
+"of opnieuw gestart, dan kunnen die gebruikers werk verliezen."
+
+#: contents/logout/Logout.qml:153
+#, kde-format
+msgid "When restarted, the computer will enter the firmware setup screen."
+msgstr "Bij herstarten zal de computer naar het firmware setup scherm gaan."
+
+#: contents/logout/Logout.qml:201
+#, kde-format
+msgid "Log Out"
+msgstr "Afmelden"
+
+#: contents/logout/Logout.qml:224
+#, kde-format
+msgid "Restarting in 1 second"
+msgid_plural "Restarting in %1 seconds"
+msgstr[0] "Na 1 seconde opnieuw opstarten"
+msgstr[1] "Na %1 seconden opnieuw opstarten"
+
+#: contents/logout/Logout.qml:226
+#, kde-format
+msgid "Shutting down in 1 second"
+msgid_plural "Shutting down in %1 seconds"
+msgstr[0] "Afsluiten na 1 seconde."
+msgstr[1] "Afsluiten na %1 seconden."
+
+#: contents/logout/Logout.qml:228
+#, kde-format
+msgid "Logging out in 1 second"
+msgid_plural "Logging out in %1 seconds"
+msgstr[0] "Na 1 seconde afmelden"
+msgstr[1] "Na %1 seconden afmelden"
+
+#: contents/logout/Logout.qml:239
+#, kde-format
+msgid "OK"
+msgstr "OK"
+
+#: contents/logout/Logout.qml:245
+#, kde-format
+msgid "Cancel"
+msgstr "Annuleren"
+
+#: contents/osd/OsdItem.qml:66
+#, kde-format
+msgid "100%"
+msgstr "100%"
+
+#: contents/osd/OsdItem.qml:80
+#, kde-format
+msgctxt "Percentage value"
+msgid "%1%"
+msgstr "%1%"
+
+#: contents/splash/Splash.qml:81
+#, kde-format
+msgctxt ""
+"This is the first text the user sees while starting in the splash screen, "
+"should be translated as something short, is a form that can be seen on a "
+"product. Plasma is the project name so shouldn't be translated."
+msgid "Plasma made by KDE"
+msgstr "Plasma gemaakt door KDE"
+
+#~ msgid "Configure"
+#~ msgstr "Configureren"
+
+#~ msgid "Configure KRunner Behavior"
+#~ msgstr "Gedrag van KRunner configureren"
+
+#~ msgid "Configure KRunner…"
+#~ msgstr "KRunner configureren…"
+
+#~ msgctxt "Textfield placeholder text, query specific KRunner"
+#~ msgid "Search '%1'…"
+#~ msgstr "Zoeken naar '%1'…"
+
+#~ msgctxt "Textfield placeholder text"
+#~ msgid "Search…"
+#~ msgstr "Zoeken…"
+
+#~ msgid "Show Usage Help"
+#~ msgstr "Gebruik van Help tonen"
+
+#~ msgid "Pin"
+#~ msgstr "Pin"
+
+#~ msgid "Pin Search"
+#~ msgstr "Pin zoeken"
+
+#~ msgid "Keep Open"
+#~ msgstr "Open houden"
+
+#~ msgid "Recent Queries"
+#~ msgstr "Recente queries"
+
+#~ msgid "Remove"
+#~ msgstr "Verwijderen"
+
+#~ msgid "in category recent queries"
+#~ msgstr "Recente queries in categorie"
+
+#~ msgctxt "verb, to show something"
+#~ msgid "Show:"
+#~ msgstr "Tonen:"
+
+#~ msgid "Configure Search Plugins"
+#~ msgstr "Plugins voor zoeken configureren"
+
+#~ msgctxt ""
+#~ "This is the first text the user sees while starting in the splash screen, "
+#~ "should be translated as something short, is a form that can be seen on a "
+#~ "product. Plasma is the project name so shouldn't be translated."
+#~ msgid "Plasma 25th Anniversary Edition by KDE"
+#~ msgstr "Editie bij 25-jarig bestaan van Plasma door KDE"
+
+#~ msgid "Close"
+#~ msgstr "Sluiten"
+
+#~ msgctxt "verb, to show something"
+#~ msgid "Show always"
+#~ msgstr "Altijd tonen"
+
+#~ msgctxt "verb, to show something"
+#~ msgid "Always show"
+#~ msgstr "Altijd tonen"
+
+#~ msgid "Suspend"
+#~ msgstr "Onderbreken"
+
+#~ msgid "Reboot"
+#~ msgstr "Herstarten"
+
+#~ msgid "Logout"
+#~ msgstr "Afmelden"
+
+#~ msgid "Reboot in 1 second"
+#~ msgid_plural "Reboot in %1 seconds"
+#~ msgstr[0] "Herstarten in 1 seconde"
+#~ msgstr[1] "Herstarten in %1 seconden"
+
+#~ msgid "Type User"
+#~ msgstr "Type gebruiker"
+
+#~ msgid "Different User"
+#~ msgstr "Andere gebruiker"
+
+#~ msgid "Log in as a different user"
+#~ msgstr "Aanmelden als een andere gebruiker"
+
+#~ msgid "Password..."
+#~ msgstr "Wachtwoord..."
+
+#~ msgid "Login"
+#~ msgstr "Aanmelden"
+
+#~ msgid "Shutdown"
+#~ msgstr "Afsluiten"
+
+#~ msgid "Switch"
+#~ msgstr "Wisselen"
+
+#~ msgid "New Session"
+#~ msgstr "Nieuwe sessie"
+
+#~ msgid "%1%. Charging"
+#~ msgstr "%1%. Bezig met opladen"
+
+#~ msgid "Fully charged"
+#~ msgstr "Volledig opgeladen"
+
+#~ msgid "%1%. Plugged in, not charging"
+#~ msgstr "%1%. Ingeplugd, niet bezig met opladen"
+
+#~ msgid "%1% battery remaining"
+#~ msgstr "%1% in batterij aanwezig"
+
+#~ msgid "Change Session"
+#~ msgstr "Sessie wijzigen"
+
+#~ msgid "Create Session"
+#~ msgstr "Sessie aanmaken"
+
+#~ msgid "Change Session..."
+#~ msgstr "Sessie wijzigen..."
+
+#~ msgid "There are currently no other active sessions."
+#~ msgstr "Er zijn nu geen andere actieve sessies."
+
+#~ msgctxt "Username (logged in on console)"
+#~ msgid "%1 (TTY)"
+#~ msgstr "%1 (TTY)"
+
+#~ msgctxt "Unused session, nobody logged in there"
+#~ msgid "Unused"
+#~ msgstr "Ongebruikt"
+
+#~ msgctxt "Username (on display number)"
+#~ msgid "%1 (on Display %2)"
+#~ msgstr "%1 (op scherm %2)"
+
+#~ msgctxt "Button to restart the computer"
+#~ msgid "Reboot"
+#~ msgstr "Herstarten"
+
+#~ msgctxt "Button to shut down the computer"
+#~ msgid "Shut down"
+#~ msgstr "Afsluiten"
+
+#~ msgctxt "Dialog heading, confirm shut down, not a status label"
+#~ msgid "Shutting down"
+#~ msgstr "Bezig met afsluiten"
+
+#~ msgctxt "Dialog heading, confirm log out, not a status label"
+#~ msgid "Logging out"
+#~ msgstr "Afmelden"
+
+#~ msgctxt "Dialog heading, confirm reboot, not a status label"
+#~ msgid "Rebooting"
+#~ msgstr "Herstarten"
+
+#~ msgid "Search for User"
+#~ msgstr "Zoeken naar gebruiker"
+
+#~ msgctxt "Username (on display number)"
+#~ msgid "%1 (%2)"
+#~ msgstr "%1 (%2)"
+
+#~ msgid "The session is locked"
+#~ msgstr "De sessie is vergrendeld"
+
+#~ msgid "The session has been locked by %1"
+#~ msgstr "De sessie is vergrendeld door %1"
+
+#~ msgid ""
+#~ "The current session will be hidden and a new login screen or an existing "
+#~ "session will be displayed.\n"
+#~ "An F-key is assigned to each session; F%1 is usually assigned to the "
+#~ "first session, F%2 to the second session and so on. You can switch "
+#~ "between sessions by pressing Ctrl, Alt and the appropriate F-key at the "
+#~ "same time. Additionally, the KDE Panel and Desktop menus have actions for "
+#~ "switching between sessions."
+#~ msgstr ""
+#~ "De huidige sessie zal worden verborgen en een nieuw aanmeldscherm of een "
+#~ "bestaande sessie zal worden getoond.\n"
+#~ "Aan elke sessie is een F-toets toegewezen. F%1 wordt doorgaans toegewezen "
+#~ "aan de eerste sessie, F%2 aan de tweede sessie, etc. U kunt van sessie "
+#~ "wisselen door op de bijhorende F-toets te drukken, terwijl u de toetsen "
+#~ "Ctrl en Alt ingedrukt houdt. U kunt ook van sessie wisselen via het KDE-"
+#~ "paneel of het contextmenu van uw bureaublad."
+
+#~ msgid "Activate"
+#~ msgstr "Activeren"
+
+#~ msgid "Turning off computer in 1 second."
+#~ msgid_plural "Turning off computer in %1 seconds."
+#~ msgstr[0] "Computer na 1 seconde uitschakelen."
+#~ msgstr[1] "Computer na %1 seconden uitschakelen."
+
+#~ msgid "Turn Off Computer"
+#~ msgstr "Computer uitschakelen"
+
+#~ msgctxt "default option in boot loader"
+#~ msgid " (default)"
+#~ msgstr " (standaard)"
