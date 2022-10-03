@@ -282,6 +282,14 @@ bool DesktopView::event(QEvent *e)
     return PlasmaQuick::ContainmentView::event(e);
 }
 
+void DesktopView::moveEvent(QMoveEvent *ev)
+{
+    PlasmaQuick::ContainmentView::moveEvent(ev);
+    if (!m_screenToFollow.isNull() && !m_screenToFollow->geometry().contains(geometry())) {
+        screenGeometryChanged();
+    }
+}
+
 bool DesktopView::handleKRunnerTextInput(QKeyEvent *e)
 {
     // allow only Shift and GroupSwitch modifiers

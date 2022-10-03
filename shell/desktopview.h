@@ -85,6 +85,7 @@ public:
 
 protected:
     bool event(QEvent *e) override;
+    void moveEvent(QMoveEvent *ev) override;
     void keyPressEvent(QKeyEvent *e) override;
 
 protected Q_SLOTS:
