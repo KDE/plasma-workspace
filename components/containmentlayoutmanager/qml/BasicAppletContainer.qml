@@ -4,8 +4,9 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.12
-import QtQuick.Layouts 1.2
+import QtQuick 2.15
+import QtQuick.Layouts 1.15
+import QtQuick.Window 2.15
 import QtGraphicalEffects 1.0
 
 import org.kde.plasma.plasmoid 2.0
@@ -87,6 +88,7 @@ ContainmentLayoutManager.AppletContainer {
 
     background: PlasmaCore.FrameSvgItem {
         id: background
+
         imagePath: {
             if (!contentItem) {
                 return "";
@@ -132,50 +134,83 @@ ContainmentLayoutManager.AppletContainer {
             visible: source != null
         }
 
-        OpacityMask {
+        // Stored in a property, not as a child, because it is reparented anyway.
+        property Item mask: OpacityMask {
             id: mask
-            enabled: visible
+
+            readonly property rect appletContainerScreenRect: {
+                const scene = appletContainer.Window.window;
+                const position = appletContainer.Kirigami.ScenePosition;
+                return clipRect(
+                    Qt.rect(
+                        position.x,
+                        position.y,
+                        appletContainer.width,
+                        appletContainer.height,
+                    ),
+                    Qt.size(scene.width, scene.height)
+                );
+            }
+
+            /** Clip given rectangle to the bounds of given size, assuming bounds position {0,0}.
+             * This is a pure library function, similar to QRect::intersected,
+             * which Qt should've exposed in QML stdlib.
+             */
+            function clipRect(rect: rect, bounds: size): rect {
+                return Qt.rect(
+                    Math.max(0, Math.min(bounds.width, rect.x)),
+                    Math.max(0, Math.min(bounds.height, rect.y)),
+                    Math.max(0, rect.width
+                                + Math.min(0, rect.x)
+                                + Math.min(0, bounds.width - (rect.x + rect.width))),
+                    Math.max(0, rect.height
+                                + Math.min(0, rect.y)
+                                + Math.min(0, bounds.height - (rect.y + rect.height))),
+                );
+            }
+
+            parent: plasmoid
+            x: appletContainerScreenRect.x
+            y: appletContainerScreenRect.y
+            width: appletContainerScreenRect.width
+            height: appletContainerScreenRect.height
+
             rotation: appletContainer.rotation
-            Component.onCompleted:  mask.parent = plasmoid
-            width: appletContainer.width
-            height: appletContainer.height
-            x: appletContainer.Kirigami.ScenePosition.x + Math.max(0, -appletContainer.x)
-            y: appletContainer.Kirigami.ScenePosition.y + Math.max(0, -appletContainer.y)
 
             visible: background.blurEnabled && (appletContainer.applet.effectiveBackgroundHints & PlasmaCore.Types.StandardBackground)
+            enabled: visible
             z: -2
-            maskSource: ShaderEffectSource {
-                width: appletContainer.width
-                height: appletContainer.height
-                sourceRect: Qt.rect(Math.max(0, -appletContainer.x),
-                                    Math.max(0, -appletContainer.y),
-                                    width, height);
-                sourceItem: PlasmaCore.FrameSvgItem {
+            maskSource: Item {
+                // optimized (clipped) blurred-mask
+
+                width: mask.appletContainerScreenRect.width
+                height: mask.appletContainerScreenRect.height
+
+                clip: true
+
+                PlasmaCore.FrameSvgItem {
                     imagePath: "widgets/background"
                     prefix: "blurred-mask"
-                    parent: appletContainer.background
-                    anchors.fill: parent
-                    visible: false
+
+                    x: Math.min(0, appletContainer.Kirigami.ScenePosition.x)
+                    y: Math.min(0, appletContainer.Kirigami.ScenePosition.y)
+
+                    width: background.width
+                    height: background.height
                 }
             }
 
             source: FastBlur {
-                id: blur
-
-                width: appletContainer.width
-                height: appletContainer.height
+                width: mask.appletContainerScreenRect.width
+                height: mask.appletContainerScreenRect.height
 
                 radius: 128
-                visible: false
 
                 source: ShaderEffectSource {
-                    width: appletContainer.width
-                    height: appletContainer.height
-                    sourceRect: Qt.rect(mask.x,
-                                        mask.y,
-                                        mask.width,
-                                        mask.height)
-                    sourceItem: Plasmoid.wallpaper
+                    width: mask.appletContainerScreenRect.width
+                    height: mask.appletContainerScreenRect.height
+                    sourceRect: mask.appletContainerScreenRect
+                    sourceItem: appletContainer.Plasmoid.wallpaper
                 }
             }
         }
