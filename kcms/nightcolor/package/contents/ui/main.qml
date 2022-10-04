@@ -119,10 +119,10 @@ KCM.SimpleKCM {
                     }
                 }
                 onCurrentIndexChanged: {
-                    kcm.nightColorSettings.active = (currentIndex !== 0);
                     if (currentIndex !== 0) {
                         kcm.nightColorSettings.mode = currentIndex - 1;
                     }
+                    kcm.nightColorSettings.active = (currentIndex !== 0);
                     if (currentIndex - 1 == NightColorMode.Automatic && kcm.nightColorSettings.active) {
                         startLocator();
                     } else {
