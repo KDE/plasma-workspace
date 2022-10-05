@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-22 00:47+0000\n"
+"POT-Creation-Date: 2022-10-05 00:48+0000\n"
 "PO-Revision-Date: 2022-09-24 09:03+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -97,12 +97,12 @@ msgstr "fichier"
 msgid "Lists the available options for user feedback"
 msgstr "Liste les options disponibles pour les retours des utilisateurs"
 
-#: main.cpp:219
+#: main.cpp:221
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasma ne peut pas démarrer"
 
-#: main.cpp:220
+#: main.cpp:222
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "

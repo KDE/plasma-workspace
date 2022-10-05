@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-04 00:46+0000\n"
+"POT-Creation-Date: 2022-10-05 00:48+0000\n"
 "PO-Revision-Date: 2022-08-24 14:59+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -38,7 +38,7 @@ msgstr "Opna umlykjandi möppu"
 msgid "Properties for %1"
 msgstr "Eiginleikar fyrir %1"
 
-#: package/contents/ui/main.qml:72
+#: package/contents/ui/main.qml:73
 #, kde-format
 msgid "Properties"
 msgstr "Eiginleikar"

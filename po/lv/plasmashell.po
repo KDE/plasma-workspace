@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-22 00:47+0000\n"
+"POT-Creation-Date: 2022-10-05 00:48+0000\n"
 "PO-Revision-Date: 2020-07-31 11:04+0300\n"
 "Last-Translator: Maris Nartiss <maris.kde@gmail.com>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -90,12 +90,12 @@ msgstr "datne"
 msgid "Lists the available options for user feedback"
 msgstr "Lietotājam pieejamo atgriezeniskās saites opciju saraksts"
 
-#: main.cpp:219
+#: main.cpp:221
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasma nepalaidās"
 
-#: main.cpp:220
+#: main.cpp:222
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-22 00:47+0000\n"
+"POT-Creation-Date: 2022-10-05 00:48+0000\n"
 "PO-Revision-Date: 2022-09-20 19:44+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -86,12 +86,12 @@ msgstr "கோப்பு"
 msgid "Lists the available options for user feedback"
 msgstr "பயனர் பின்னூட்டத்துக்கு உள்ள விருப்பத்தேர்வுகளை பட்டியலிடும்"
 
-#: main.cpp:219
+#: main.cpp:221
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "பிளாஸ்மாவை துவக்குதல் தோல்வியடைந்தது"
 
-#: main.cpp:220
+#: main.cpp:222
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
