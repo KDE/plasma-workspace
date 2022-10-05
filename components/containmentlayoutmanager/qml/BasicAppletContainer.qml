@@ -1,5 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2019 Marco Martin <mart@kde.org>
+    SPDX-FileCopyrightText: 2022 ivan tkachenko <me@ratijas.tk>
+    SPDX-FileCopyrightText: 2022 Niccolò Venerandi <niccolo@venerandi.com>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -84,8 +86,6 @@ ContainmentLayoutManager.AppletContainer {
     initialSize.width: applet.switchWidth + leftPadding + rightPadding
     initialSize.height: applet.switchHeight + topPadding + bottomPadding
 
-    onRotationChanged: background.syncBlurEnabled()
-
     background: PlasmaCore.FrameSvgItem {
         id: background
 
@@ -104,7 +104,7 @@ ContainmentLayoutManager.AppletContainer {
 
         property bool blurEnabled: false
         function syncBlurEnabled() {
-            blurEnabled = appletContainer.rotation === 0 && GraphicsInfo.api !== GraphicsInfo.Software && hasElementPrefix("blurred");
+            blurEnabled = GraphicsInfo.api !== GraphicsInfo.Software && hasElementPrefix("blurred");
         }
         prefix: blurEnabled ? "blurred" : ""
         Component.onCompleted: syncBlurEnabled()
@@ -142,14 +142,34 @@ ContainmentLayoutManager.AppletContainer {
                 const scene = appletContainer.Window.window;
                 const position = appletContainer.Kirigami.ScenePosition;
                 return clipRect(
-                    Qt.rect(
-                        position.x,
-                        position.y,
-                        appletContainer.width,
-                        appletContainer.height,
-                    ),
-                    Qt.size(scene.width, scene.height)
-                );
+                    boundsForTransformedRect(
+                        Qt.rect(
+                            position.x,
+                            position.y,
+                            appletContainer.width,
+                            appletContainer.height),
+                        appletContainer.rotation,
+                        appletContainer.scale),
+                    Qt.size(scene.width, scene.height));
+            }
+
+            /** Apply geometry transformations, and return a bounding rectangle for a resulting shape. */
+            // Note: It's basically a custom QMatrix::mapRect implementation, and for
+            // simplicity's sake should be replaced when/if mapRect becomes available in QML.
+            function boundsForTransformedRect(rect: rect, angle: real, scale: real): rect {
+                if (angle === 0 && scale === 1) {
+                    return rect; // hot path optimization
+                }
+                let cosa = Math.abs(Math.cos(angle * (Math.PI / 180))) * scale;
+                let sina = Math.abs(Math.sin(angle * (Math.PI / 180))) * scale;
+                let newSize = Qt.size(
+                    rect.width * cosa + rect.height * sina,
+                    rect.width * sina + rect.height * cosa);
+                return Qt.rect(
+                    rect.left + (rect.width - newSize.width) / 2,
+                    rect.top + (rect.height - newSize.height) / 2,
+                    newSize.width,
+                    newSize.height);
             }
 
             /** Clip given rectangle to the bounds of given size, assuming bounds position {0,0}.
@@ -175,8 +195,6 @@ ContainmentLayoutManager.AppletContainer {
             width: appletContainerScreenRect.width
             height: appletContainerScreenRect.height
 
-            rotation: appletContainer.rotation
-
             visible: background.blurEnabled && (appletContainer.applet.effectiveBackgroundHints & PlasmaCore.Types.StandardBackground)
             enabled: visible
             z: -2
@@ -192,11 +210,14 @@ ContainmentLayoutManager.AppletContainer {
                     imagePath: "widgets/background"
                     prefix: "blurred-mask"
 
-                    x: Math.min(0, appletContainer.Kirigami.ScenePosition.x)
-                    y: Math.min(0, appletContainer.Kirigami.ScenePosition.y)
+                    x: appletContainer.Kirigami.ScenePosition.x - mask.appletContainerScreenRect.x
+                    y: appletContainer.Kirigami.ScenePosition.y - mask.appletContainerScreenRect.y
 
                     width: background.width
                     height: background.height
+
+                    rotation: appletContainer.rotation
+                    scale: appletContainer.scale
                 }
             }
 
