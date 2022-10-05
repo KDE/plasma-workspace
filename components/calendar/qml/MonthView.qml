@@ -59,7 +59,12 @@ Item {
     property int firstDay: new Date(showDate.getFullYear(), showDate.getMonth(), 1).getDay()
     property alias today: calendarBackend.today
     property bool showWeekNumbers: false
-    property bool showCustomHeader: false
+
+    // properties for communicating with the digital clock applet
+    property bool showDigitalClockHeader: false
+    property var digitalClock: null
+    property var eventButton: null
+    property alias viewHeader: viewHeader
 
     /**
      * SwipeView currentIndex needed for binding a TabBar to the MonthView.
@@ -69,7 +74,7 @@ Item {
     property alias cellHeight: mainDaysCalendar.cellHeight
     property QtObject daysModel: calendarBackend.daysModel
 
-    KeyNavigation.up: nextButton
+    KeyNavigation.up: viewHeader.previousButton
     // The view can have no highlighted item, so always highlight the first item
     Keys.onDownPressed: swipeView.currentItem.focusFirstCellOfView()
     signal upPressed(var event)
@@ -239,108 +244,15 @@ Item {
         }
     }
 
-    ColumnLayout {
+    /* ------------------------------------------------------- UI Starts From Here ----------------------------------------------------- */
+
+    MonthViewHeader {
         id: viewHeader
-        visible: !showCustomHeader
-        // Make sure the height of the invisible item is zero, otherwise anchoring to the item will
-        // include the height even if it is invisible.
-        height: !visible ? 0 : implicitHeight
+
         width: parent.width
-        anchors {
-            top: parent.top
-        }
-
-        RowLayout {
-            spacing: 0
-
-            KeyNavigation.down: tabBar.currentItem
-
-            PlasmaExtras.Heading {
-                id: heading
-                text: swipeView.currentIndex > 0 || root.selectedYear !== today.getFullYear() ? i18ndc("plasmashellprivateplugin", "Format: month year", "%1 %2", root.selectedMonth, root.selectedYear.toString()) : root.selectedMonth
-                level: 2
-                elide: Text.ElideRight
-                font.capitalization: Font.Capitalize
-                Layout.fillWidth: true
-            }
-            PlasmaComponents3.ToolButton {
-                id: previousButton
-                property string tooltip: {
-                    switch(root.calendarViewDisplayed) {
-                        case MonthView.CalendarView.DayView:
-                            return i18nd("plasmashellprivateplugin", "Previous Month")
-                        case MonthView.CalendarView.MonthView:
-                            return i18nd("plasmashellprivateplugin", "Previous Year")
-                        case MonthView.CalendarView.YearView:
-                            return i18nd("plasmashellprivateplugin", "Previous Decade")
-                        default:
-                            return "";
-                    }
-                }
-
-                icon.name: Qt.application.layoutDirection === Qt.RightToLeft ? "go-next" : "go-previous"
-                onClicked: root.previousView()
-                Accessible.name: tooltip
-                KeyNavigation.right: todayButton
-
-                PlasmaComponents3.ToolTip { text: parent.tooltip }
-            }
-
-            PlasmaComponents3.ToolButton {
-                id: todayButton
-                text: i18ndc("plasmashellprivateplugin", "Reset calendar to today", "Today")
-                Accessible.description: i18nd("plasmashellprivateplugin", "Reset calendar to today")
-                KeyNavigation.right: nextButton
-
-                onClicked: root.resetToToday()
-            }
-
-            PlasmaComponents3.ToolButton {
-                id: nextButton
-                property string tooltip: {
-                    switch(root.calendarViewDisplayed) {
-                        case MonthView.CalendarView.DayView:
-                            return i18nd("plasmashellprivateplugin", "Next Month")
-                        case MonthView.CalendarView.MonthView:
-                            return i18nd("plasmashellprivateplugin", "Next Year")
-                        case MonthView.CalendarView.YearView:
-                            return i18nd("plasmashellprivateplugin", "Next Decade")
-                        default:
-                            return "";
-                    }
-                }
-
-                icon.name: Qt.application.layoutDirection === Qt.RightToLeft ? "go-previous" : "go-next"
-                PlasmaComponents3.ToolTip { text: parent.tooltip }
-                onClicked: root.nextView();
-                Accessible.name: tooltip
-            }
-        }
-
-        PlasmaComponents3.TabBar {
-            id: tabBar
-            currentIndex: swipeView.currentIndex
-            Layout.fillWidth: true
-            Layout.bottomMargin: PlasmaCore.Units.smallSpacing
-
-            KeyNavigation.up: previousButton
-
-            PlasmaComponents3.TabButton {
-                text: i18nd("plasmashellprivateplugin", "Days");
-                onClicked: root.showMonthView();
-                display: PlasmaComponents3.AbstractButton.TextOnly
-            }
-            PlasmaComponents3.TabButton {
-                text: i18nd("plasmashellprivateplugin", "Months");
-                onClicked: root.showYearView();
-                display: PlasmaComponents3.AbstractButton.TextOnly
-            }
-            PlasmaComponents3.TabButton {
-                text: i18nd("plasmashellprivateplugin", "Years");
-                onClicked: root.showDecadeView();
-                display: PlasmaComponents3.AbstractButton.TextOnly
-            }
-        }
+        anchors.top: parent.top
+        swipeView: swipeView
+        monthViewRoot: root
     }
 
     PlasmaComponents3.SwipeView {
@@ -355,16 +267,10 @@ Item {
         activeFocusOnTab: false
         clip: true
 
-        KeyNavigation.left: root.showCustomHeader ? root.KeyNavigation.left : tabBar
-        KeyNavigation.tab: root.showCustomHeader ? root.KeyNavigation.tab : todayButton
+        KeyNavigation.left: root.showDigitalClockHeader ? root.KeyNavigation.left : viewHeader.tabBar
+        KeyNavigation.tab: viewHeader.tabButton
         Keys.onLeftPressed: Keys.onUpPressed(event);
-        Keys.onUpPressed: {
-            if (root.showCustomHeader) {
-                event.accepted = false;
-                return;
-            }
-            tabBar.currentItem.forceActiveFocus(Qt.BacktabFocusReason);
-        }
+        Keys.onUpPressed: viewHeader.tabBar.currentItem.forceActiveFocus(Qt.BacktabFocusReason);
 
         onCurrentIndexChanged: if (currentIndex > 1) {
             updateDecadeOverview();
@@ -378,14 +284,14 @@ Item {
         InfiniteList {
            id: mainDaysCalendar
 
-           readonly property double cellHeight: currentItem.cellHeight
+           readonly property double cellHeight: currentItem ? currentItem.cellHeight : 0
 
            backend: calendarBackend
            viewType: InfiniteList.ViewType.DayView
            eventPluginsManager: root.eventPluginsManager
 
            function handleUpPress(event) {
-                if(root.showCustomHeader) {
+                if(root.showDigitalClockHeader) {
                     root.upPressed(event);
                     return;
                 }

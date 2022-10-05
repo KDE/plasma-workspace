@@ -56,10 +56,17 @@ PlasmaExtras.Representation {
         }
     }
 
-    // Header containing date and pin button
-    header: PlasmaExtras.PlasmoidHeading {
-        id: headerArea
-        implicitHeight: calendarHeader.implicitHeight
+    header: Item {
+        PlasmaExtras.PlasmoidHeading {
+            width: Math.round(parent.width / 2) - monthView.anchors.leftMargin
+            visible: eventHeader.visible
+
+            anchors {
+                left: eventHeader.left
+                top: eventHeader.top
+                bottom: eventHeader.bottom
+            }
+        }
 
         // Agenda view header
         // -----------------
@@ -68,7 +75,7 @@ PlasmaExtras.Representation {
 
             anchors.left: parent.left
             width: visible ? parent.width / 2 - 1 : 0
-            height: visible ? parent.height : 0
+            height: visible ? monthView.viewHeader.height : 0
             spacing: 0
 
             visible: calendar.showAgenda || calendar.showClocks
@@ -90,6 +97,7 @@ PlasmaExtras.Representation {
 
             RowLayout {
                 Layout.alignment: Qt.AlignBottom
+                Layout.bottomMargin: Math.round(PlasmaCore.Units.smallSpacing * 1.5)
                 // Heading text
                 PlasmaExtras.Heading {
                     visible: agenda.visible
@@ -113,14 +121,13 @@ PlasmaExtras.Representation {
 
                     Accessible.description: i18nc("@info:tooltip", "Add a new event")
                     KeyNavigation.down: KeyNavigation.tab
-                    KeyNavigation.right: tabbar
+                    KeyNavigation.right: monthView.viewHeader.tabBar
 
                     onClicked: ApplicationIntegration.launchCalendar()
                     KeyNavigation.tab: calendar.showAgenda && holidaysList.count ? holidaysList : holidaysList.KeyNavigation.down
                 }
             }
         }
-
         // Vertical separator line between columns
         // =======================================
         PlasmaCore.SvgItem {
@@ -128,179 +135,12 @@ PlasmaExtras.Representation {
             anchors.left: eventHeader.right
             anchors.bottomMargin: PlasmaCore.Units.smallSpacing * 2
             width: visible ? 1 : 0
-            height: calendarHeader.height - PlasmaCore.Units.smallSpacing * 2
+            height: monthView.viewHeader.height - PlasmaCore.Units.smallSpacing * 2
             visible: eventHeader.visible
 
             elementId: "vertical-line"
             svg: PlasmaCore.Svg {
                 imagePath: "widgets/line"
-            }
-        }
-
-        GridLayout {
-            id: calendarHeader
-            width: calendar.showAgenda || calendar.showClocks ? parent.width / 2 : parent.width
-            anchors.left: headerSeparator.right
-            columns: 6
-            rows: 2
-
-            KeyNavigation.up: configureButton
-            Keys.onDownPressed: monthView.Keys.onDownPressed(event);
-
-            PlasmaExtras.Heading {
-                Layout.row: 0
-                Layout.column: 0
-                Layout.columnSpan: 3
-                Layout.fillWidth: true
-                Layout.leftMargin: calendar.paddings + PlasmaCore.Units.smallSpacing
-                text: monthView.selectedYear === (new Date()).getFullYear() ? monthView.selectedMonth : i18nc("Format: month year", "%1 %2", monthView.selectedMonth, monthView.selectedYear.toString())
-            }
-
-            PlasmaComponents3.ToolButton {
-                id: configureButton
-                Layout.row: 0
-                Layout.column: 4
-                Layout.alignment: Qt.AlignRight
-                visible: Plasmoid.action("configure").enabled
-
-                display: PlasmaComponents3.AbstractButton.IconOnly
-                icon.name: "configure"
-                text: Plasmoid.action("configure").text
-
-                KeyNavigation.left: tabbar.KeyNavigation.left
-                KeyNavigation.right: pinButton
-                KeyNavigation.down: todayButton
-
-                onClicked: Plasmoid.action("configure").trigger()
-                PlasmaComponents3.ToolTip {
-                    text: parent.text
-                }
-            }
-
-            // Allows the user to keep the calendar open for reference
-            PlasmaComponents3.ToolButton {
-                id: pinButton
-                Layout.row: 0
-                Layout.column: 5
-                checkable: true
-                checked: Plasmoid.configuration.pin
-
-                display: PlasmaComponents3.AbstractButton.IconOnly
-                icon.name: "window-pin"
-                text: i18n("Keep Open")
-
-                KeyNavigation.down: nextButton
-
-                onToggled: Plasmoid.configuration.pin = checked
-
-                PlasmaComponents3.ToolTip {
-                    text: parent.text
-                }
-            }
-
-            PlasmaComponents3.TabBar {
-                id: tabbar
-                currentIndex: monthView.currentIndex
-                Layout.row: 1
-                Layout.column: 0
-                Layout.columnSpan: 3
-                Layout.topMargin: PlasmaCore.Units.smallSpacing
-                Layout.fillWidth: true
-                Layout.leftMargin: PlasmaCore.Units.smallSpacing
-
-                KeyNavigation.left: addEventButton.visible ? addEventButton : addEventButton.KeyNavigation.down
-                KeyNavigation.right: previousButton
-
-                PlasmaComponents3.TabButton {
-                    text: i18n("Days");
-                    onClicked: monthView.showMonthView();
-                    display: PlasmaComponents3.AbstractButton.TextOnly
-                }
-                PlasmaComponents3.TabButton {
-                    text: i18n("Months");
-                    onClicked: monthView.showYearView();
-                    display: PlasmaComponents3.AbstractButton.TextOnly
-                }
-                PlasmaComponents3.TabButton {
-                    text: i18n("Years");
-                    onClicked: monthView.showDecadeView();
-                    display: PlasmaComponents3.AbstractButton.TextOnly
-                }
-            }
-
-            PlasmaComponents3.ToolButton {
-                id: previousButton
-                property string tooltip
-                Layout.row: 1
-                Layout.column: 3
-
-                Layout.leftMargin: PlasmaCore.Units.smallSpacing
-                Layout.bottomMargin: PlasmaCore.Units.smallSpacing
-                icon.name: Qt.application.layoutDirection === Qt.RightToLeft ? "go-next" : "go-previous"
-
-                display: PlasmaComponents3.AbstractButton.IconOnly
-                text: {
-                    switch(monthView.calendarViewDisplayed) {
-                    case PlasmaCalendar.MonthView.CalendarView.DayView:
-                        return i18n("Previous month")
-                    case PlasmaCalendar.MonthView.CalendarView.MonthView:
-                        return i18n("Previous year")
-                    case PlasmaCalendar.MonthView.CalendarView.YearView:
-                        return i18n("Previous decade")
-                    default:
-                        return "";
-                    }
-                }
-
-                KeyNavigation.right: todayButton
-
-                onClicked: monthView.previousView()
-
-                PlasmaComponents3.ToolTip {
-                    text: parent.text
-                }
-            }
-
-            PlasmaComponents3.ToolButton {
-                id: todayButton
-                Layout.bottomMargin: PlasmaCore.Units.smallSpacing
-                Layout.row: 1
-                Layout.column: 4
-                onClicked: monthView.resetToToday()
-                text: i18ndc("libplasma5", "Reset calendar to today", "Today")
-                Accessible.description: i18nd("libplasma5", "Reset calendar to today")
-                KeyNavigation.right: nextButton
-            }
-
-            PlasmaComponents3.ToolButton {
-                id: nextButton
-                property string tooltip
-                Layout.bottomMargin: PlasmaCore.Units.smallSpacing
-                Layout.row: 1
-                Layout.column: 5
-
-                display: PlasmaComponents3.AbstractButton.IconOnly
-                icon.name: Qt.application.layoutDirection === Qt.RightToLeft ? "go-previous" : "go-next"
-                text: {
-                    switch(monthView.calendarViewDisplayed) {
-                    case PlasmaCalendar.MonthView.CalendarView.DayView:
-                        return i18n("Next month")
-                    case PlasmaCalendar.MonthView.CalendarView.MonthView:
-                        return i18n("Next year")
-                    case PlasmaCalendar.MonthView.CalendarView.YearView:
-                        return i18n("Next decade")
-                    default:
-                        return "";
-                    }
-                }
-
-                KeyNavigation.tab: monthViewWrapper
-
-                onClicked: monthView.nextView()
-
-                PlasmaComponents3.ToolTip {
-                    text: parent.text
-                }
             }
         }
     }
@@ -321,6 +161,7 @@ PlasmaExtras.Representation {
             left: parent.left
             top: parent.top
             bottom: parent.bottom
+            topMargin: monthView.viewHeader.height
         }
 
 
@@ -579,6 +420,7 @@ PlasmaExtras.Representation {
             leftInset: 0
             rightInset: 0
             rightPadding: PlasmaCore.Units.smallSpacing
+
             contentItem: RowLayout {
                 PlasmaExtras.Heading {
                     Layout.leftMargin: calendar.paddings + PlasmaCore.Units.smallSpacing * 2
@@ -636,8 +478,17 @@ PlasmaExtras.Representation {
                 } else {
                     currentIndex = -1;
                 }
-                KeyNavigation.tab: configureButton
+
                 Keys.onRightPressed: switchTimeZoneButton.Keys.onRightPressed(event);
+
+                // Can't use KeyNavigation.tab since the focus won't go to config button, instead it will be redirected to somewhere else because of
+                // some existing code. Since now the header was in this file and this was not a problem. Now the header is also implicitly
+                // inside the monthViewWrapper.
+                Keys.onTabPressed: {
+                    monthViewWrapper.focusChangedForClockListTab = true;
+                    monthView.viewHeader.configureButton.forceActiveFocus(Qt.BacktabFocusReason);
+                    monthViewWrapper.focusChangedForClockListTab = false;
+                }
 
                 model: {
                     let timezones = [];
@@ -708,25 +559,40 @@ PlasmaExtras.Representation {
         anchors.right: parent.right
         anchors.top: parent.top
         anchors.bottom: parent.bottom
+
+        property bool focusChangedForClockListTab: false
         onActiveFocusChanged: if (activeFocus) {
             monthViewWrapper.nextItemInFocusChain().forceActiveFocus();
-            monthView.Keys.onDownPressed(null)
+            if(!focusChangedForClockListTab) {
+                monthView.Keys.onDownPressed(null);
+            }
         }
+
         PlasmaCalendar.MonthView {
             id: monthView
-            anchors.margins: PlasmaCore.Units.smallSpacing
+
+            anchors {
+                leftMargin: PlasmaCore.Units.smallSpacing
+                rightMargin: PlasmaCore.Units.smallSpacing
+                bottomMargin: PlasmaCore.Units.smallSpacing
+            }
+
             borderOpacity: 0.25
+
             eventPluginsManager: eventPluginsManager
             today: root.tzDate
             firstDayOfWeek: Plasmoid.configuration.firstDayOfWeek > -1
                 ? Plasmoid.configuration.firstDayOfWeek
                 : Qt.locale().firstDayOfWeek
             showWeekNumbers: Plasmoid.configuration.showWeekNumbers
-            showCustomHeader: true
+
+            showDigitalClockHeader: true
+            digitalClock: Plasmoid.self
+            eventButton: addEventButton
 
             KeyNavigation.left: KeyNavigation.tab
             KeyNavigation.tab: addEventButton.visible ? addEventButton : addEventButton.KeyNavigation.down
-            Keys.onUpPressed: tabbar.currentItem.forceActiveFocus(Qt.BacktabFocusReason);
+            Keys.onUpPressed: viewHeader.tabBar.currentItem.forceActiveFocus(Qt.BacktabFocusReason);
             onUpPressed: Keys.onUpPressed(event)
         }
     }
