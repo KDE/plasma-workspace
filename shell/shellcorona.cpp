@@ -1497,13 +1497,52 @@ void ShellCorona::toggleDashboard()
     setDashboardShown(!KWindowSystem::showingDesktop());
 }
 
+void ShellCorona::handleColorRequestedFromDBus(const QDBusMessage &msg)
+{
+    msg.setDelayedReply(true);
+
+    m_accentColorFromWallpaperEnabled = true;
+    Q_EMIT accentColorFromWallpaperEnabledChanged();
+
+    m_fakeColorRequestConn = connect(this, &ShellCorona::colorChanged, this, [this, msg] {
+        disconnect(m_fakeColorRequestConn);
+        const QRgb color = m_desktopViewForScreen[m_screenPool->primaryScreen()]->accentColor().rgba();
+
+        m_accentColorFromWallpaperEnabled = false;
+        Q_EMIT accentColorFromWallpaperEnabledChanged();
+
+        const QDBusMessage reply = msg.createReply(color);
+        QDBusConnection::sessionBus().send(reply);
+    });
+}
+
 QRgb ShellCorona::color() const
 {
+    // Colors from wallpaper are not generated when they are turned off in the settings.
+    // To return a color we need to fake that the setting is on, and then take the color,
+    // turn off the setting again(or the color engine will keep runnig) and return the color.
+
+    // Note that whenever a color is generated, it is also set as accent color. When we fake the
+    // setting, we should not apply the generated color. The color applying kded module take care
+    // of that by checking for the original state of the setting, so it is important that the check
+    // may not be removed accidentally.
+
+    static QRgb defaultColor = QColor(Qt::transparent).rgba();
     auto const primaryDesktopViewExists = m_desktopViewForScreen.contains(m_screenPool->primaryScreen());
-    if (primaryDesktopViewExists) {
-        return m_desktopViewForScreen[m_screenPool->primaryScreen()]->accentColor().rgba();
+    if (!primaryDesktopViewExists) {
+        return defaultColor;
     }
-    return QColor(Qt::transparent).rgba();
+
+    if (m_accentColorFromWallpaperEnabled) {
+        return m_desktopViewForScreen[m_screenPool->primaryScreen()]->accentColor().rgba();
+    } else if (calledFromDBus()) {
+        if (m_fakeColorRequestConn) {
+            disconnect(m_fakeColorRequestConn);
+        }
+        const_cast<ShellCorona *>(this)->handleColorRequestedFromDBus(message());
+    }
+
+    return defaultColor;
 }
 
 QString ShellCorona::evaluateScript(const QString &script)

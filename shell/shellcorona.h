@@ -254,6 +254,7 @@ private:
     void executeSetupPlasmoidScript(Plasma::Containment *containment, Plasma::Applet *applet);
     void checkAllDesktopsUiReady(bool ready);
     void activateLauncherMenu(const QString &screenName);
+    void handleColorRequestedFromDBus(const QDBusMessage &msg);
 
 #ifndef NDEBUG
     void screenInvariants() const;
@@ -267,6 +268,7 @@ private:
     // Accent color setting
     KConfigWatcher::Ptr m_accentColorConfigWatcher;
     bool m_accentColorFromWallpaperEnabled = false;
+    QMetaObject::Connection m_fakeColorRequestConn;
 
     ScreenPool *m_screenPool;
     QString m_shell;
