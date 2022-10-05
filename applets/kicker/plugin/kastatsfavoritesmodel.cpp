@@ -195,11 +195,9 @@ public:
                 }
             }
             if (!keys.isEmpty()) {
-                beginResetModel();
                 for (const QString &key : keys) {
-                    m_itemEntries.remove(key);
+                    removeResult(key);
                 }
-                endResetModel();
             }
         });
 
