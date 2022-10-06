@@ -78,7 +78,7 @@ msgstr "Configuració de la finalització d'aplicacions"
 #: killrunner_config.ui:39
 #, kde-format
 msgid "&Use trigger word"
-msgstr "&Utilitza una paraula d'activació"
+msgstr "Utilit&za una paraula d'activació"
 
 #. i18n: ectx: property (text), widget (QLabel, label_trigger)
 #: killrunner_config.ui:51

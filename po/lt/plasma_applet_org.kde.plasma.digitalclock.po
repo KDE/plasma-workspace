@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-19 00:47+0000\n"
+"POT-Creation-Date: 2022-10-06 00:47+0000\n"
 "PO-Revision-Date: 2021-12-12 14:51+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -33,112 +33,45 @@ msgid "Calendar"
 msgstr "Kalendorius"
 
 #: package/contents/config/config.qml:29
-#: package/contents/ui/CalendarView.qml:589
+#: package/contents/ui/CalendarView.qml:431
 #, kde-format
 msgid "Time Zones"
 msgstr "Laiko juostos"
 
-#: package/contents/ui/CalendarView.qml:102
+#: package/contents/ui/CalendarView.qml:110
 #, kde-format
 msgid "Events"
 msgstr "Įvykiai"
 
-#: package/contents/ui/CalendarView.qml:110
+#: package/contents/ui/CalendarView.qml:118
 #, kde-format
 msgctxt "@action:button Add event"
 msgid "Add…"
 msgstr "Pridėti…"
 
-#: package/contents/ui/CalendarView.qml:114
+#: package/contents/ui/CalendarView.qml:122
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a new event"
 msgstr ""
 
-#: package/contents/ui/CalendarView.qml:156
-#, kde-format
-msgctxt "Format: month year"
-msgid "%1 %2"
-msgstr "%2 %1"
-
-#: package/contents/ui/CalendarView.qml:190
-#, kde-format
-msgid "Keep Open"
-msgstr "Palikti atvertą"
-
-#: package/contents/ui/CalendarView.qml:215
-#, kde-format
-msgid "Days"
-msgstr "Dienos"
-
-#: package/contents/ui/CalendarView.qml:220
-#, kde-format
-msgid "Months"
-msgstr "Mėnesiai"
-
-#: package/contents/ui/CalendarView.qml:225
-#, kde-format
-msgid "Years"
-msgstr "Metai"
-
-#: package/contents/ui/CalendarView.qml:245
-#, kde-format
-msgid "Previous month"
-msgstr "Ankstesnis mėnuo"
-
-#: package/contents/ui/CalendarView.qml:247
-#, kde-format
-msgid "Previous year"
-msgstr "Ankstesni metai"
-
-#: package/contents/ui/CalendarView.qml:249
-#, kde-format
-msgid "Previous decade"
-msgstr "Ankstesnis dešimtmetis"
-
-#: package/contents/ui/CalendarView.qml:270
-#, kde-format
-msgctxt "Reset calendar to today"
-msgid "Today"
-msgstr "Šiandien"
-
-#: package/contents/ui/CalendarView.qml:271
-#, kde-format
-msgid "Reset calendar to today"
-msgstr "Atstatyti kalendorių į šiandieną"
-
-#: package/contents/ui/CalendarView.qml:287
-#, kde-format
-msgid "Next month"
-msgstr "Kitas mėnuo"
-
-#: package/contents/ui/CalendarView.qml:289
-#, kde-format
-msgid "Next year"
-msgstr "Kiti metai"
-
-#: package/contents/ui/CalendarView.qml:291
-#, kde-format
-msgid "Next decade"
-msgstr "Kitas dešimtmetis"
-
-#: package/contents/ui/CalendarView.qml:556
+#: package/contents/ui/CalendarView.qml:397
 #, kde-format
 msgid "No events for today"
 msgstr "Šiandien įvykių nėra"
 
-#: package/contents/ui/CalendarView.qml:557
+#: package/contents/ui/CalendarView.qml:398
 #, kde-format
 msgid "No events for this day"
 msgstr "Tą dieną įvykių nėra"
 
-#: package/contents/ui/CalendarView.qml:598
+#: package/contents/ui/CalendarView.qml:440
 #, kde-format
 msgid "Switch…"
 msgstr "Perjungti…"
 
-#: package/contents/ui/CalendarView.qml:599
-#: package/contents/ui/CalendarView.qml:602
+#: package/contents/ui/CalendarView.qml:441
+#: package/contents/ui/CalendarView.qml:444
 #, kde-format
 msgid "Switch to another timezone"
 msgstr "Perjungti į kitą laiko juostą"
@@ -466,6 +399,47 @@ msgstr "Vietinė"
 #, kde-format
 msgid "System's local time zone"
 msgstr "Sistemos vietinė laiko juosta"
+
+#~ msgctxt "Format: month year"
+#~ msgid "%1 %2"
+#~ msgstr "%2 %1"
+
+#~ msgid "Keep Open"
+#~ msgstr "Palikti atvertą"
+
+#~ msgid "Days"
+#~ msgstr "Dienos"
+
+#~ msgid "Months"
+#~ msgstr "Mėnesiai"
+
+#~ msgid "Years"
+#~ msgstr "Metai"
+
+#~ msgid "Previous month"
+#~ msgstr "Ankstesnis mėnuo"
+
+#~ msgid "Previous year"
+#~ msgstr "Ankstesni metai"
+
+#~ msgid "Previous decade"
+#~ msgstr "Ankstesnis dešimtmetis"
+
+#~ msgctxt "Reset calendar to today"
+#~ msgid "Today"
+#~ msgstr "Šiandien"
+
+#~ msgid "Reset calendar to today"
+#~ msgstr "Atstatyti kalendorių į šiandieną"
+
+#~ msgid "Next month"
+#~ msgstr "Kitas mėnuo"
+
+#~ msgid "Next year"
+#~ msgstr "Kiti metai"
+
+#~ msgid "Next decade"
+#~ msgstr "Kitas dešimtmetis"
 
 #~ msgctxt "Use default font"
 #~ msgid "Default"

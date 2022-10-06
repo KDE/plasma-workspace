@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-19 00:47+0000\n"
+"POT-Creation-Date: 2022-10-06 00:47+0000\n"
 "PO-Revision-Date: 2022-07-23 23:40+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -27,112 +27,45 @@ msgid "Calendar"
 msgstr "Kalender"
 
 #: package/contents/config/config.qml:29
-#: package/contents/ui/CalendarView.qml:589
+#: package/contents/ui/CalendarView.qml:431
 #, kde-format
 msgid "Time Zones"
 msgstr "Zeitzonen"
 
-#: package/contents/ui/CalendarView.qml:102
+#: package/contents/ui/CalendarView.qml:110
 #, kde-format
 msgid "Events"
 msgstr "Termine"
 
-#: package/contents/ui/CalendarView.qml:110
+#: package/contents/ui/CalendarView.qml:118
 #, kde-format
 msgctxt "@action:button Add event"
 msgid "Add…"
 msgstr "Hinzufügen ..."
 
-#: package/contents/ui/CalendarView.qml:114
+#: package/contents/ui/CalendarView.qml:122
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a new event"
 msgstr ""
 
-#: package/contents/ui/CalendarView.qml:156
-#, kde-format
-msgctxt "Format: month year"
-msgid "%1 %2"
-msgstr "%1 %2"
-
-#: package/contents/ui/CalendarView.qml:190
-#, kde-format
-msgid "Keep Open"
-msgstr "Offen halten"
-
-#: package/contents/ui/CalendarView.qml:215
-#, kde-format
-msgid "Days"
-msgstr "Tage"
-
-#: package/contents/ui/CalendarView.qml:220
-#, kde-format
-msgid "Months"
-msgstr "Monate"
-
-#: package/contents/ui/CalendarView.qml:225
-#, kde-format
-msgid "Years"
-msgstr "Jahre"
-
-#: package/contents/ui/CalendarView.qml:245
-#, kde-format
-msgid "Previous month"
-msgstr "Vorheriger Monat"
-
-#: package/contents/ui/CalendarView.qml:247
-#, kde-format
-msgid "Previous year"
-msgstr "Vorheriges Jahr"
-
-#: package/contents/ui/CalendarView.qml:249
-#, kde-format
-msgid "Previous decade"
-msgstr "Vorheriges Jahrzehnt"
-
-#: package/contents/ui/CalendarView.qml:270
-#, kde-format
-msgctxt "Reset calendar to today"
-msgid "Today"
-msgstr "Heute"
-
-#: package/contents/ui/CalendarView.qml:271
-#, kde-format
-msgid "Reset calendar to today"
-msgstr "Kalender auf den heutigen Tag zurücksetzen"
-
-#: package/contents/ui/CalendarView.qml:287
-#, kde-format
-msgid "Next month"
-msgstr "Nächster Monat"
-
-#: package/contents/ui/CalendarView.qml:289
-#, kde-format
-msgid "Next year"
-msgstr "Nächstes Jahr"
-
-#: package/contents/ui/CalendarView.qml:291
-#, kde-format
-msgid "Next decade"
-msgstr "Nächstes Jahrzehnt"
-
-#: package/contents/ui/CalendarView.qml:556
+#: package/contents/ui/CalendarView.qml:397
 #, kde-format
 msgid "No events for today"
 msgstr "Heute keine Termine"
 
-#: package/contents/ui/CalendarView.qml:557
+#: package/contents/ui/CalendarView.qml:398
 #, kde-format
 msgid "No events for this day"
 msgstr "Keine Termine an diesem Tag"
 
-#: package/contents/ui/CalendarView.qml:598
+#: package/contents/ui/CalendarView.qml:440
 #, kde-format
 msgid "Switch…"
 msgstr "Wechseln ..."
 
-#: package/contents/ui/CalendarView.qml:599
-#: package/contents/ui/CalendarView.qml:602
+#: package/contents/ui/CalendarView.qml:441
+#: package/contents/ui/CalendarView.qml:444
 #, kde-format
 msgid "Switch to another timezone"
 msgstr "Zu anderer Zeitzone wechseln"
@@ -460,6 +393,47 @@ msgstr "Lokal"
 #, kde-format
 msgid "System's local time zone"
 msgstr "Lokale Zeitzone des Systems"
+
+#~ msgctxt "Format: month year"
+#~ msgid "%1 %2"
+#~ msgstr "%1 %2"
+
+#~ msgid "Keep Open"
+#~ msgstr "Offen halten"
+
+#~ msgid "Days"
+#~ msgstr "Tage"
+
+#~ msgid "Months"
+#~ msgstr "Monate"
+
+#~ msgid "Years"
+#~ msgstr "Jahre"
+
+#~ msgid "Previous month"
+#~ msgstr "Vorheriger Monat"
+
+#~ msgid "Previous year"
+#~ msgstr "Vorheriges Jahr"
+
+#~ msgid "Previous decade"
+#~ msgstr "Vorheriges Jahrzehnt"
+
+#~ msgctxt "Reset calendar to today"
+#~ msgid "Today"
+#~ msgstr "Heute"
+
+#~ msgid "Reset calendar to today"
+#~ msgstr "Kalender auf den heutigen Tag zurücksetzen"
+
+#~ msgid "Next month"
+#~ msgstr "Nächster Monat"
+
+#~ msgid "Next year"
+#~ msgstr "Nächstes Jahr"
+
+#~ msgid "Next decade"
+#~ msgstr "Nächstes Jahrzehnt"
 
 #~ msgctxt "Use default font"
 #~ msgid "Default"

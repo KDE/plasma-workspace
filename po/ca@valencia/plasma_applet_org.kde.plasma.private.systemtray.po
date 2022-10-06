@@ -59,7 +59,7 @@ msgstr "Control del maquinari"
 #: package/contents/ui/ConfigEntries.qml:46
 #, kde-format
 msgid "Miscellaneous"
-msgstr "Miscelànea"
+msgstr "Miscel·lània"
 
 #: package/contents/ui/ConfigEntries.qml:80
 #, kde-format

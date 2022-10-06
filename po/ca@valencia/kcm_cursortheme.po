@@ -103,7 +103,7 @@ msgstr "Mida:"
 #: package/contents/ui/main.qml:134
 #, kde-format
 msgid "&Install from File…"
-msgstr "&Instal·la des d'un fitxer…"
+msgstr "I&nstal·la des d'un fitxer…"
 
 #: package/contents/ui/main.qml:140
 #, kde-format

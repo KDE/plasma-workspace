@@ -991,4 +991,4 @@ msgstr "Desactiva este emergent"
 #: urlgrabber.cpp:204
 #, kde-format
 msgid "&Cancel"
-msgstr "&Cancel·la"
+msgstr "C&ancel·la"
