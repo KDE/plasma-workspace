@@ -81,12 +81,12 @@ void AbstractImageListModel::slotHandlePreview(const KFileItem &item, const QPix
     it->removeOne(urlString);
 
     const QStringList paths = job->property("paths").toStringList();
-    QPixmap *cachedPreview = m_imageCache.object(paths);
+    QPixmap *const cachedPreview = m_imageCache.object(paths);
 
-    if (!cachedPreview) {
-        // Insert full preview
+    if (!cachedPreview && !it->empty()) {
         m_imageCache.insert(paths, new QPixmap(preview), 0);
-    } else {
+        // it->empty() is handled in the end
+    } else if (cachedPreview) {
         // Show multiple images side by side
         QPainter p(cachedPreview);
 
@@ -107,8 +107,12 @@ void AbstractImageListModel::slotHandlePreview(const KFileItem &item, const QPix
         // All images in the list have been loaded
         m_previewJobsUrls.erase(it);
 
-        cachedPreview = m_imageCache.object(paths);
-        auto finalPreview = new QPixmap(*cachedPreview);
+        QPixmap *finalPreview = nullptr;
+        if (!cachedPreview) {
+            finalPreview = new QPixmap(preview);
+        } else {
+            finalPreview = new QPixmap(*cachedPreview);
+        }
 
         if (m_imageCache.insert(paths, finalPreview, 1)) {
             Q_EMIT dataChanged(idx, idx, {ScreenshotRole});
