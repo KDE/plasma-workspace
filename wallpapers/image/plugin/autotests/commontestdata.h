@@ -10,13 +10,13 @@
 
 namespace ImageBackendTestData
 {
-constexpr const int defaultImageCount = 2;
-constexpr const int defaultPackageCount = 2;
-constexpr const int defaultTotalCount = defaultImageCount + defaultPackageCount;
+constexpr int defaultImageCount = 2;
+constexpr int defaultPackageCount = 2;
+constexpr int defaultTotalCount = defaultImageCount + defaultPackageCount;
 
-constexpr const int alternateImageCount = 1;
-constexpr const int alternatePackageCount = 1;
-constexpr const int alternateTotalCount = alternateImageCount + alternatePackageCount;
+constexpr int alternateImageCount = 1;
+constexpr int alternatePackageCount = 1;
+constexpr int alternateTotalCount = alternateImageCount + alternatePackageCount;
 
 inline const QString defaultImageFileName1 = QStringLiteral("wallpaper.jpg.jpg");
 inline const QString defaultImageFileName2 = QStringLiteral("# BUG454692 file name with hash char.png");
