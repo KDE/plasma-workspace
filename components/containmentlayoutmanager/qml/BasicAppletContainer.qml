@@ -190,7 +190,7 @@ ContainmentLayoutManager.AppletContainer {
                 );
             }
 
-            parent: plasmoid
+            parent: appletContainer.Plasmoid.self
             x: appletContainerScreenRect.x
             y: appletContainerScreenRect.y
             width: appletContainerScreenRect.width
