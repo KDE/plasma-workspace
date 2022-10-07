@@ -21,6 +21,7 @@ KCM.GridDelegate {
 
     property alias color: backgroundRect.color
     opacity: model.pendingDeletion ? 0.5 : 1
+    scale: index, 1 // Workaround for https://bugreports.qt.io/browse/QTBUG-107458
 
     text: model.display
     subtitle: model.author
