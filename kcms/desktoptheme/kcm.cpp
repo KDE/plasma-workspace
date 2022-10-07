@@ -19,6 +19,8 @@
 #include <Plasma/Svg>
 #include <Plasma/Theme>
 
+#include <QDBusConnection>
+#include <QDBusMessage>
 #include <QDebug>
 #include <QProcess>
 #include <QQuickItem>
@@ -183,6 +185,16 @@ void KCMDesktopTheme::load()
 
 void KCMDesktopTheme::save()
 {
+    auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KWin"),
+                                              QStringLiteral("/org/kde/KWin/BlendChanges"),
+                                              QStringLiteral("org.kde.KWin.BlendChanges"),
+                                              QStringLiteral("start"));
+    // Plasma theme changes are known to be slow, so make the blend take a while
+    msg << 1000;
+    // This is deliberately blocking so that we ensure Kwin has processed the
+    // animation start event before we potentially trigger client side changes
+    QDBusConnection::sessionBus().call(msg);
+
     ManagedConfigModule::save();
     Plasma::Theme().setThemeName(desktopThemeSettings()->name());
     processPendingDeletions();
