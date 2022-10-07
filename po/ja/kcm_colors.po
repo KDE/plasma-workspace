@@ -1358,19 +1358,3 @@ msgstr ""
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr ""
-
-#, fuzzy
-#~| msgid "Apply &effects to inactive windows"
-#~ msgid "Apply a&ccent color to active window titlebars"
-#~ msgstr "非アクティブなウィンドウの色効果を適用する(&E)"
-
-#, fuzzy
-#~| msgid "Apply &effects to inactive windows"
-#~ msgid "Apply acce&nt color to inactive window titlebars"
-#~ msgstr "非アクティブなウィンドウの色効果を適用する(&E)"
-
-#~ msgid "Share the selected scheme on the Internet"
-#~ msgstr "インターネット上で選択したスキームを共有"
-
-#~ msgid "Upload Scheme"
-#~ msgstr "スキームをアップロード"

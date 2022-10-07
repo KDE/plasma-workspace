@@ -26,12 +26,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Yukiko Bando"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "ybando@k6.dion.ne.jp"
 
 #: imagepackage/contents/ui/config.qml:94
 #, kde-format

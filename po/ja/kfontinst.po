@@ -2410,24 +2410,3 @@ msgstr "パスパ文字"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "イ文字"
-
-#~ msgid "Print..."
-#~ msgstr "印刷..."
-
-#, fuzzy
-#~| msgid "Create New Group"
-#~ msgid "Create New Group..."
-#~ msgstr "新しいグループを作成"
-
-#, fuzzy
-#~| msgid "Remove Group"
-#~ msgid "Remove Group..."
-#~ msgstr "グループを削除"
-
-#~ msgid "Install..."
-#~ msgstr "インストール..."
-
-#, fuzzy
-#~| msgid "Font Viewer"
-#~ msgid "FontViewPart"
-#~ msgstr "フォントビューア"

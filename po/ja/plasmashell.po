@@ -276,6 +276,3 @@ msgstr ""
 #, kde-format
 msgid "Counts the panels"
 msgstr ""
-
-#~ msgid "Unable to load script file: %1"
-#~ msgstr "スクリプトファイルを読み込めません: %1"

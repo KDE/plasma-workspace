@@ -214,37 +214,3 @@ msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "
 "%2"
 msgstr "%1 に Night Color が終了しはじめます"
-
-#, fuzzy
-#~| msgid "Activate Night Color"
-#~ msgid "Activate blue light filter"
-#~ msgstr "Night Color を有効化"
-
-#~ msgid "Turn on at:"
-#~ msgstr "オンにする時間:"
-
-#~ msgid "Turn off at:"
-#~ msgstr "オフにする時間:"
-
-#, fuzzy
-#~| msgid "Night Color begins changing back at %1"
-#~ msgid "Night Color begins changing back at %1 and ends at %2"
-#~ msgstr "%1 に Night Color が終了しはじめます"
-
-#~ msgid "Detect Location"
-#~ msgstr "場所を検出"
-
-#~ msgid "Night Color begins at %1"
-#~ msgstr "%1 に Night Color が始まります"
-
-#~ msgid "Color fully changed at %1"
-#~ msgstr "%1 に完全に色が変わります"
-
-#~ msgid "Normal coloration restored by %1"
-#~ msgstr "%1 に通常の色表示に戻ります"
-
-#~ msgid "Night Color"
-#~ msgstr "Night Color"
-
-#~ msgid " K"
-#~ msgstr " K"

@@ -165,16 +165,3 @@ msgstr ""
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
 msgstr ""
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Yukiko Bando"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "ybando@k6.dion.ne.jp"
-
-#, fuzzy
-#~| msgid "Plasma Theme"
-#~ msgid "Plasma Style"
-#~ msgstr "Plasma テーマ"

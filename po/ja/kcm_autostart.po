@@ -129,35 +129,3 @@ msgstr "スクリプトを追加..."
 #| msgid "Add Script..."
 msgid "Add Logout Script…"
 msgstr "スクリプトを追加..."
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Yukiko Bando"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "ybando@k6.dion.ne.jp"
-
-#, fuzzy
-#~| msgid "KDE Autostart Manager Control Panel Module"
-#~ msgid "Session Autostart Manager Control Panel Module"
-#~ msgstr "KDE 自動起動マネージャ設定モジュール"
-
-#, fuzzy
-#~| msgid "Copyright © 2006–2010 Autostart Manager team"
-#~ msgid "Copyright © 2006–2020 Autostart Manager team"
-#~ msgstr "Copyright © 2006–2010 自動起動マネージャ開発チーム"
-
-#~ msgid "Stephen Leaf"
-#~ msgstr "Stephen Leaf"
-
-#~ msgid "Montel Laurent"
-#~ msgstr "Montel Laurent"
-
-#~ msgid "Maintainer"
-#~ msgstr "メンテナ"
-
-#, fuzzy
-#~| msgid "Advanced..."
-#~ msgid "Add..."
-#~ msgstr "詳細設定..."

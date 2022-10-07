@@ -49,6 +49,3 @@ msgstr "起動時に実行されるモジュールを表示"
 #, kde-format
 msgid "Configuration module to run"
 msgstr "実行する設定モジュール"
-
-#~ msgid "Module %1 not found"
-#~ msgstr "モジュール %1 が見つかりません"

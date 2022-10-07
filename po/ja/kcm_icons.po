@@ -179,29 +179,3 @@ msgstr "テーマを削除"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "UTUMI Hirosi, Fumiaki Okushi"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "utuhiro78@yahoo.co.jp, fumiaki@okushi.com"
-
-#~ msgid "Icons"
-#~ msgstr "アイコン"
-
-#~ msgid "Icons Control Panel Module"
-#~ msgstr "アイコン設定モジュール"
-
-#~ msgid "(c) 2000-2003 Geert Jansen"
-#~ msgstr "(c) 2000-2003 Geert Jansen"
-
-#~ msgid "Geert Jansen"
-#~ msgstr "Geert Jansen"
-
-#~ msgid "Antonio Larrosa Jimenez"
-#~ msgstr "Antonio Larrosa Jimenez"
-
-#~ msgid "Torsten Rahn"
-#~ msgstr "Torsten Rahn"

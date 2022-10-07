@@ -343,6 +343,3 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr ""
-
-#~ msgid "Fonts"
-#~ msgstr "フォント"

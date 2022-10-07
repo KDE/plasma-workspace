@@ -200,29 +200,3 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(利用可能なサイズ: %1)"
-
-#~ msgid "Name"
-#~ msgstr "名前"
-
-#~ msgid "Description"
-#~ msgstr "説明"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Fumiaki Okushi,Shinichi Tsunoda"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "okushi@kde.gr.jp,tsuno@ngy.1st.ne.jp"
-
-#~ msgid "Cursors"
-#~ msgstr "カーソル"
-
-#~ msgid "(c) 2003-2007 Fredrik Höglund"
-#~ msgstr "(c) 2003-2007 Fredrik Höglund"
-
-#~ msgid "Fredrik Höglund"
-#~ msgstr "Fredrik Höglund"
-
-#~ msgid "Marco Martin"
-#~ msgstr "Marco Martin"
