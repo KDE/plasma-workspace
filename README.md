@@ -3,20 +3,6 @@
 Plasma Workspace is used as base for both Plama Desktop and Plasma Mobile.
 It contains shared KCMs, applets as well as multiple libraries.
 
-### TaskManager Library
+See [CODEMAP.md](./CODEMAP.md) to get an idea of the layout of this repository.
 
-The Task Manager provides various QAbstractListModel-based model for listing
-Windows (TaskManager::AbstractWindowTasksModel), Startup tasks (TaskManager::StartupTasksModel) and Launcher
-Job (TaskManager::LauncherTasksModel).
-
-### Workspace Library
-
-libkworkspace provides functions to allow you to interact with the
-%KDE session manager (SessionManagement).
-
-### Notification Manager Library
-
-libnotificationmanager is responsible for listing notifications, closing them
-and interacting with them in Plasma. This class provides a %Qt model for jobs:
-NotificationManager::JobsModel. As well as a %Qt model for notifications and
-jobs: NotificationManager::Notifications.
+Join #plasma on irc.libera.chat or the [Plasma](https://webchat.kde.org/#/room/#plasma:kde.org) room on KDE Matrix.
