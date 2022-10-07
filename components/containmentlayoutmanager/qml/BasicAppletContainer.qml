@@ -24,9 +24,9 @@ ContainmentLayoutManager.AppletContainer {
         : ContainmentLayoutManager.ItemContainer.AfterPressAndHold
 
     Kirigami.Theme.inherit: false
-    Kirigami.Theme.colorSet: (contentItem.effectiveBackgroundHints & PlasmaCore.Types.ShadowBackground)
-        && !(contentItem.effectiveBackgroundHints & PlasmaCore.Types.StandardBackground)
-        && !(contentItem.effectiveBackgroundHints & PlasmaCore.Types.TranslucentBackground)
+    Kirigami.Theme.colorSet: (applet.effectiveBackgroundHints & PlasmaCore.Types.ShadowBackground)
+        && !(applet.effectiveBackgroundHints & PlasmaCore.Types.StandardBackground)
+        && !(applet.effectiveBackgroundHints & PlasmaCore.Types.TranslucentBackground)
             ? Kirigami.Theme.Complementary
             : Kirigami.Theme.Window
 
@@ -90,12 +90,12 @@ ContainmentLayoutManager.AppletContainer {
         id: background
 
         imagePath: {
-            if (!contentItem) {
+            if (!appletContainer.applet) {
                 return "";
             }
-            if (contentItem.effectiveBackgroundHints & PlasmaCore.Types.TranslucentBackground) {
+            if (appletContainer.applet.effectiveBackgroundHints & PlasmaCore.Types.TranslucentBackground) {
                 return "widgets/translucentbackground";
-            } else if (contentItem.effectiveBackgroundHints & PlasmaCore.Types.StandardBackground) {
+            } else if (appletContainer.applet.effectiveBackgroundHints & PlasmaCore.Types.StandardBackground) {
                 return "widgets/background";
             } else {
                 return "";
@@ -130,7 +130,8 @@ ContainmentLayoutManager.AppletContainer {
             color: Qt.rgba(0, 0, 0, 0.5)
             opacity: 1
 
-            source: contentItem && contentItem.effectiveBackgroundHints & PlasmaCore.Types.ShadowBackground ? contentItem : null
+            source: appletContainer.applet && appletContainer.applet.effectiveBackgroundHints & PlasmaCore.Types.ShadowBackground
+                ? appletContainer.applet : null
             visible: source != null
         }
 
