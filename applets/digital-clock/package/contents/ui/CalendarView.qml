@@ -493,9 +493,22 @@ PlasmaExtras.Representation {
                 model: {
                     let timezones = [];
                     for (let i = 0; i < Plasmoid.configuration.selectedTimeZones.length; i++) {
-                        timezones.push(Plasmoid.configuration.selectedTimeZones[i]);
-                    }
+                        let thisTzData = Plasmoid.configuration.selectedTimeZones[i];
 
+                        /* Don't add this item if it's the same as the local time zone, which
+                         * would indicate that the user has deliberately added a dedicated entry
+                         * for the city of their normal time zone. This is not an error condition
+                         * because the user may have done this on purpose so that their normal
+                         * local time zone shows up automatically while they're traveling and
+                         * they've switched the current local time zone to something else. But
+                         * with this use case, when they're back in their normal local time zone,
+                         * the clocks list would show two entries for the same city. To avoid
+                         * this, let's suppress the duplicate.
+                         */
+                        if (!(thisTzData !== "Local" && root.nameForZone(thisTzData) === root.nameForZone("Local"))) {
+                            timezones.push(Plasmoid.configuration.selectedTimeZones[i]);
+                        }
+                    }
                     return timezones;
                 }
 

@@ -62,9 +62,11 @@ ColumnLayout {
 
             delegate: Kirigami.BasicListItem {
                 id: timeZoneListItem
-                property bool isCurrent: Plasmoid.configuration.lastSelectedTimezone === model.timeZoneId
+                readonly property bool isCurrent: Plasmoid.configuration.lastSelectedTimezone === model.timeZoneId
+                readonly property bool isIdenticalToLocal: !model.isLocalTimeZone && model.city === timeZones.localTimeZoneCity()
 
                 bold: isCurrent
+                fadeContent: isIdenticalToLocal
 
                 // Don't want a highlight effect here because it doesn't look good
                 hoverEnabled: false
@@ -87,7 +89,16 @@ ColumnLayout {
                 }
 
                 label: model.city
-                subtitle: isCurrent && configuredTimezoneList.count > 1 ? i18n("Clock is currently using this time zone") : ""
+                subtitle: {
+                    if (configuredTimezoneList.count > 1) {
+                        if (isCurrent) {
+                            return i18n("Clock is currently using this time zone");
+                        } else if (isIdenticalToLocal) {
+                            return i18nc("@label This list item shows a time zone city name that is identical to the local time zone's city, and will be hidden in the timezone display in the plasmoid's popup", "Hidden while this is the local time zone's city");
+                        }
+                    }
+                    return "";
+                }
 
                 action: Kirigami.Action {
                     id: clickAction

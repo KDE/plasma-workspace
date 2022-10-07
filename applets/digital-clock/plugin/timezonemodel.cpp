@@ -215,6 +215,13 @@ void TimeZoneModel::selectLocalTimeZone()
     Q_EMIT selectedTimeZonesChanged();
 }
 
+QString TimeZoneModel::localTimeZoneCity()
+{
+    const QTimeZone localZone = QTimeZone(QTimeZone::systemTimeZoneId());
+    const QStringList data = QString::fromUtf8(localZone.id()).split(QLatin1Char('/'));
+    return m_timezonesI18n->i18nCity(data.last());
+}
+
 QHash<int, QByteArray> TimeZoneModel::roleNames() const
 {
     return QHash<int, QByteArray>({

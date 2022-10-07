@@ -10,6 +10,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.plasmoid 2.0
+import org.kde.kirigami 2.20 as Kirigami
 
 Item {
     id: tooltipContentItem
@@ -65,43 +66,44 @@ Item {
             visible: !clocks.visible
         }
 
-        GridLayout {
+        Kirigami.FormLayout {
             id: clocks
             Layout.minimumWidth: Math.min(implicitWidth, preferredTextWidth)
             Layout.maximumWidth: preferredTextWidth
             Layout.maximumHeight: childrenRect.height
-            columns: 2
-            visible: Plasmoid.configuration.selectedTimeZones.length > 1
-            rowSpacing: 0
+            visible: timezoneRepeater.count > 0
 
             Repeater {
                 id: timezoneRepeater
 
                 model: {
-                    // The timezones need to be duplicated in the array
-                    // because we need their data twice - once for the name
-                    // and once for the time and the Repeater delegate cannot
-                    // be one Item with two Labels because that wouldn't work
-                    // in a grid then
-                    var timezones = [];
-                    for (var i = 0; i < Plasmoid.configuration.selectedTimeZones.length; i++) {
-                        timezones.push(Plasmoid.configuration.selectedTimeZones[i]);
-                        timezones.push(Plasmoid.configuration.selectedTimeZones[i]);
+                    let timezones = [];
+                    for (let i = 0; i < Plasmoid.configuration.selectedTimeZones.length; i++) {
+                        let thisTzData = Plasmoid.configuration.selectedTimeZones[i];
+
+                        /* Don't add this item if it's the same as the local time zone, which
+                         * would indicate that the user has deliberately added a dedicated entry
+                         * for the city of their normal time zone. This is not an error condition
+                         * because the user may have done this on purpose so that their normal
+                         * local time zone shows up automatically while they're traveling and
+                         * they've switched the current local time zone to something else. But
+                         * with this use case, when they're back in their normal local time zone,
+                         * the clocks list would show two entries for the same city. To avoid
+                         * this, let's suppress the duplicate.
+                         */
+                        if (!(thisTzData !== "Local" && nameForZone(thisTzData) === nameForZone("Local"))) {
+                            timezones.push(thisTzData);
+                        }
                     }
 
                     return timezones;
                 }
 
                 PlasmaComponents3.Label {
-                    id: timezone
-                    // Layout.fillWidth is buggy here
-                    Layout.alignment: index % 2 === 0 ? Qt.AlignRight : Qt.AlignLeft
-
+                    Kirigami.FormData.label: i18nc("@label %1 is a city or time zone name", "%1:", nameForZone(modelData))
                     wrapMode: Text.NoWrap
-                    text: index % 2 == 0 ? nameForZone(modelData) : timeForZone(modelData)
+                    text: timeForZone(modelData)
                     font.weight: modelData === Plasmoid.configuration.lastSelectedTimezone ? Font.Bold : Font.Normal
-                    elide: Text.ElideNone
-                    opacity: 0.6
                 }
             }
         }
