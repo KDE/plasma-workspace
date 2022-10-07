@@ -349,6 +349,7 @@ void RunnerModel::createManager()
             m_runnerManager->setAllowedRunners(m_runners);
         }
         connect(m_runnerManager, &Plasma::RunnerManager::matchesChanged, this, &RunnerModel::matchesChanged);
+        connect(m_runnerManager, &Plasma::RunnerManager::queryFinished, this, &RunnerModel::queryFinished);
     }
 }
 

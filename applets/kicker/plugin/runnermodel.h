@@ -70,6 +70,7 @@ Q_SIGNALS:
     void appletInterfaceChanged() const;
     void runnersChanged() const;
     void queryChanged() const;
+    void queryFinished();
     void mergeResultsChanged() const;
     void deleteWhenEmptyChanged();
 
