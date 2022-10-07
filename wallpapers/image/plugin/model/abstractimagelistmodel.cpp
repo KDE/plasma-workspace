@@ -81,14 +81,15 @@ void AbstractImageListModel::slotHandlePreview(const KFileItem &item, const QPix
     it->removeOne(urlString);
 
     const QStringList paths = job->property("paths").toStringList();
-    QPixmap *const cachedPreview = m_imageCache.object(paths);
+    auto cachedPreviewIt = m_imageTempCache.find(paths);
 
-    if (!cachedPreview && !it->empty()) {
-        m_imageCache.insert(paths, new QPixmap(preview), 0);
+    if (cachedPreviewIt == m_imageTempCache.end() && !it->empty()) {
+        m_imageTempCache.insert(paths, preview);
         // it->empty() is handled in the end
-    } else if (cachedPreview) {
+        return;
+    } else if (cachedPreviewIt != m_imageTempCache.end()) {
         // Show multiple images side by side
-        QPainter p(cachedPreview);
+        QPainter p(&*cachedPreviewIt);
 
         const int i = paths.indexOf(urlString);
         const double start = i / static_cast<double>(paths.size());
@@ -97,8 +98,8 @@ void AbstractImageListModel::slotHandlePreview(const KFileItem &item, const QPix
         const QPoint topLeft(start * preview.width(), 0);
         const QPoint bottomRight(end * preview.width(), preview.height());
         // Inserted area
-        const QPoint topLeft2(start * cachedPreview->width(), 0);
-        const QPoint bottomRight2(end * cachedPreview->width(), cachedPreview->height());
+        const QPoint topLeft2(start * cachedPreviewIt->width(), 0);
+        const QPoint bottomRight2(end * cachedPreviewIt->width(), cachedPreviewIt->height());
 
         p.drawPixmap(QRect(topLeft2, bottomRight2), preview.copy(QRect(topLeft, bottomRight)));
     }
@@ -108,10 +109,13 @@ void AbstractImageListModel::slotHandlePreview(const KFileItem &item, const QPix
         m_previewJobsUrls.erase(it);
 
         QPixmap *finalPreview = nullptr;
-        if (!cachedPreview) {
+        if (cachedPreviewIt == m_imageTempCache.end()) {
+            // Single image
             finalPreview = new QPixmap(preview);
         } else {
-            finalPreview = new QPixmap(*cachedPreview);
+            // Side-by-side image
+            finalPreview = new QPixmap(*cachedPreviewIt);
+            m_imageTempCache.erase(cachedPreviewIt);
         }
 
         if (m_imageCache.insert(paths, finalPreview, 1)) {

@@ -79,6 +79,8 @@ protected:
     QSize m_targetSize;
 
     QCache<QStringList, QPixmap> m_imageCache;
+    // Store side-by-side images
+    QHash<QStringList, QPixmap> m_imageTempCache;
     QCache<QString, QString /* title */> m_backgroundTitleCache;
     QCache<QString, QString /* author */> m_backgroundAuthorCache;
     QCache<QString, QSize> m_imageSizeCache;
