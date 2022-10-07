@@ -20,7 +20,7 @@ AbstractImageListModel::AbstractImageListModel(const QSize &targetSize, QObject 
     , m_screenshotSize(targetSize / 8)
     , m_targetSize(targetSize)
 {
-    constexpr int maxCacheSize = 30;
+    constexpr int maxCacheSize = 10;
     m_imageCache.setMaxCost(maxCacheSize);
     m_backgroundTitleCache.setMaxCost(maxCacheSize);
     m_backgroundAuthorCache.setMaxCost(maxCacheSize);
