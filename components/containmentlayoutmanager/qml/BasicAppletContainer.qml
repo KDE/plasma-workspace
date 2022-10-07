@@ -90,6 +90,7 @@ ContainmentLayoutManager.AppletContainer {
         id: background
 
         property bool blurEnabled: false
+        property Item maskItem: null
 
         prefix: blurEnabled ? "blurred" : ""
 
@@ -118,6 +119,19 @@ ContainmentLayoutManager.AppletContainer {
         Component.onCompleted: bindBlurEnabled()
         onRepaintNeeded: bindBlurEnabled()
 
+        onBlurEnabledChanged: {
+            if (blurEnabled) {
+                if (maskItem === null) {
+                    maskItem = maskComponent.createObject(this);
+                }
+            } else {
+                if (maskItem !== null) {
+                    maskItem.destroy();
+                    maskItem = null;
+                }
+            }
+        }
+
         DropShadow {
             anchors {
                 fill: parent
@@ -141,9 +155,12 @@ ContainmentLayoutManager.AppletContainer {
                 ? appletContainer.applet : null
             visible: source !== null
         }
+    }
 
-        // Stored in a property, not as a child, because it is reparented anyway.
-        property Item mask: OpacityMask {
+    Component {
+        id: maskComponent
+
+        OpacityMask {
             id: mask
 
             readonly property rect appletContainerScreenRect: {
@@ -203,8 +220,6 @@ ContainmentLayoutManager.AppletContainer {
             width: appletContainerScreenRect.width
             height: appletContainerScreenRect.height
 
-            visible: background.blurEnabled
-            enabled: visible
             z: -2
             maskSource: Item {
                 // optimized (clipped) blurred-mask
