@@ -31,7 +31,7 @@ ContainmentLayoutManager.AppletContainer {
             : Kirigami.Theme.Window
 
     PlasmaCore.ColorScope.inherit: false
-    PlasmaCore.ColorScope.colorGroup: Kirigami.Theme.colorSet == Kirigami.Theme.Complementary
+    PlasmaCore.ColorScope.colorGroup: Kirigami.Theme.colorSet === Kirigami.Theme.Complementary
         ? PlasmaCore.Theme.ComplementaryColorGroup
         : PlasmaCore.Theme.NormalColorGroup
 
@@ -45,7 +45,7 @@ ContainmentLayoutManager.AppletContainer {
             return leftPadding + rightPadding;
         }
 
-        if (applet.preferredRepresentation != applet.fullRepresentation
+        if (applet.preferredRepresentation !== applet.fullRepresentation
             && applet.compactRepresentationItem
         ) {
             return applet.compactRepresentationItem.Layout.minimumWidth + leftPadding + rightPadding;
@@ -58,7 +58,7 @@ ContainmentLayoutManager.AppletContainer {
             return topPadding + bottomPadding;
         }
 
-        if (applet.preferredRepresentation != applet.fullRepresentation
+        if (applet.preferredRepresentation !== applet.fullRepresentation
             && applet.compactRepresentationItem
         ) {
             return applet.compactRepresentationItem.Layout.minimumHeight + topPadding + bottomPadding;
@@ -80,7 +80,7 @@ ContainmentLayoutManager.AppletContainer {
 
     // render via a layer if we're at an angle
     // resize handles are rendered outside this item, so also disable when they're showing to avoid clipping
-    layer.enabled: (rotation % 90 != 0) && !(configOverlayItem && configOverlayItem.visible)
+    layer.enabled: (rotation % 90 !== 0) && !(configOverlayItem && configOverlayItem.visible)
     layer.smooth: true
 
     initialSize.width: applet.switchWidth + leftPadding + rightPadding
@@ -132,7 +132,7 @@ ContainmentLayoutManager.AppletContainer {
 
             source: appletContainer.applet && appletContainer.applet.effectiveBackgroundHints & PlasmaCore.Types.ShadowBackground
                 ? appletContainer.applet : null
-            visible: source != null
+            visible: source !== null
         }
 
         // Stored in a property, not as a child, because it is reparented anyway.
