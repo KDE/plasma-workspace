@@ -89,6 +89,10 @@ ContainmentLayoutManager.AppletContainer {
     background: PlasmaCore.FrameSvgItem {
         id: background
 
+        property bool blurEnabled: false
+
+        prefix: blurEnabled ? "blurred" : ""
+
         imagePath: {
             if (!appletContainer.applet) {
                 return "";
@@ -102,14 +106,17 @@ ContainmentLayoutManager.AppletContainer {
             }
         }
 
-        property bool blurEnabled: false
-        function syncBlurEnabled() {
-            blurEnabled = GraphicsInfo.api !== GraphicsInfo.Software && hasElementPrefix("blurred");
+        function bindBlurEnabled() {
+            // bind to api and hints automatically, refresh non-observable prefix manually
+            blurEnabled = Qt.binding(() =>
+                   GraphicsInfo.api !== GraphicsInfo.Software
+                && (appletContainer.applet.effectiveBackgroundHints & PlasmaCore.Types.StandardBackground)
+                && hasElementPrefix("blurred")
+            );
         }
-        prefix: blurEnabled ? "blurred" : ""
-        Component.onCompleted: syncBlurEnabled()
 
-        onRepaintNeeded: syncBlurEnabled()
+        Component.onCompleted: bindBlurEnabled()
+        onRepaintNeeded: bindBlurEnabled()
 
         DropShadow {
             anchors {
@@ -196,7 +203,7 @@ ContainmentLayoutManager.AppletContainer {
             width: appletContainerScreenRect.width
             height: appletContainerScreenRect.height
 
-            visible: background.blurEnabled && (appletContainer.applet.effectiveBackgroundHints & PlasmaCore.Types.StandardBackground)
+            visible: background.blurEnabled
             enabled: visible
             z: -2
             maskSource: Item {
