@@ -39,6 +39,11 @@ ColumnLayout {
     property var cfg_UncheckedSlides: []
     property var cfg_UncheckedSlidesDefault: []
 
+    // HACK: detect an invalid Plasmoid attached property
+    // this is needed when we run outside of a Plasmashell context like in the KScreenLocker KCM
+    // otherwise the invalid Plasmoid is an empty `object` and not actually `undefined`
+    property var plasmoid: Plasmoid.width === undefined ? undefined : Plasmoid
+
     signal configurationChanged()
 
     function saveConfig() {
@@ -52,8 +57,8 @@ ColumnLayout {
         id: imageWallpaper
         renderingMode: (configDialog.currentWallpaper === "org.kde.image") ? PlasmaWallpaper.ImageBackend.SingleImage : PlasmaWallpaper.ImageBackend.SlideShow
         targetSize: {
-            if (typeof Plasmoid !== "undefined") {
-                return Qt.size(Plasmoid.width * Screen.devicePixelRatio, Plasmoid.height * Screen.devicePixelRatio)
+            if (typeof plasmoid !== "undefined") {
+                return Qt.size(plasmoid.width * Screen.devicePixelRatio, plasmoid.height * Screen.devicePixelRatio)
             }
             // Lock screen configuration case
             return Qt.size(Screen.width * Screen.devicePixelRatio, Screen.height * Screen.devicePixelRatio)
