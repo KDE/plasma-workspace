@@ -102,7 +102,11 @@ Item {
                 Layout.fillWidth: true
                 wrapMode: Text.NoWrap
                 elide: Text.ElideRight
-                text: mpris2Source.track || i18nd("plasma_lookandfeel_org.kde.lookandfeel", "No media playing")
+                text: mpris2Source.track.length > 0
+                        ? mpris2Source.track
+                        : ((mpris2Source.hasPlayer && ["Playing", "Paused"].includes(mpris2Source.playerData.PlaybackStatus))
+                            ? i18nd("plasma_lookandfeel_org.kde.lookandfeel", "No title")
+                            : i18nd("plasma_lookandfeel_org.kde.lookandfeel", "No media playing"))
                 textFormat: Text.PlainText
                 font.pointSize: PlasmaCore.Theme.defaultFont.pointSize + 1
                 maximumLineCount: 1
