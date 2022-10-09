@@ -79,7 +79,7 @@
         "Description[sl]": "Gradnik sistemskega monitorja, ki prikazuje podatke prenosa podatkov navznoter in navzven",
         "Description[sv]": "Grafisk systemövervakningskomponent som visar nerladdnings- och uppladdningshastighet för data",
         "Description[ta]": "பதிவிறக்க மற்றும் பதிவேற்ற வீதத்தைக் காட்டும் பிளாஸ்மாய்ட்",
-        "Description[tr]": "İndirme ve yükleme veri hızını gösteren sistem izleyicisi araç takımı",
+        "Description[tr]": "Veri indirme ve karşıya yükleme hızını gösteren sistem monitörü araç takımı",
         "Description[uk]": "Віджет нагляду за системою, який показує швидкість отримання та вивантаження даних",
         "Description[vi]": "Phụ kiện giám sát hệ thống cho biết tốc độ tải dữ liệu về và lên",
         "Description[x-test]": "xxSystem monitor Widget that shows the download and upload data ratexx",
