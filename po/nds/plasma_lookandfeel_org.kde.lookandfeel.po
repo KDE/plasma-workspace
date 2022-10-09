@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-06 00:47+0000\n"
+"POT-Creation-Date: 2022-10-09 00:50+0000\n"
 "PO-Revision-Date: 2014-09-18 16:12+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -210,22 +210,27 @@ msgstr "Tasttoornen wesseln"
 msgid "Unlock"
 msgstr "Opsluten"
 
-#: contents/lockscreen/MediaControls.qml:105
+#: contents/lockscreen/MediaControls.qml:108
+#, kde-format
+msgid "No title"
+msgstr ""
+
+#: contents/lockscreen/MediaControls.qml:109
 #, kde-format
 msgid "No media playing"
 msgstr ""
 
-#: contents/lockscreen/MediaControls.qml:134
+#: contents/lockscreen/MediaControls.qml:138
 #, kde-format
 msgid "Previous track"
 msgstr ""
 
-#: contents/lockscreen/MediaControls.qml:146
+#: contents/lockscreen/MediaControls.qml:150
 #, kde-format
 msgid "Play or Pause media"
 msgstr ""
 
-#: contents/lockscreen/MediaControls.qml:160
+#: contents/lockscreen/MediaControls.qml:164
 #, kde-format
 msgid "Next track"
 msgstr ""

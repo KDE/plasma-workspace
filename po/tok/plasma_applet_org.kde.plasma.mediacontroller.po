@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"POT-Creation-Date: 2022-10-09 00:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -19,6 +19,11 @@ msgstr ""
 #: contents/config/config.qml:12
 #, kde-format
 msgid "General"
+msgstr ""
+
+#: contents/ui/AlbumArtStackView.qml:161
+#, kde-format
+msgid "No title"
 msgstr ""
 
 #: contents/ui/AlbumArtStackView.qml:161 contents/ui/main.qml:80

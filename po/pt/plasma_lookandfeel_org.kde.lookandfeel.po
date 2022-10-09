@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-06 00:47+0000\n"
+"POT-Creation-Date: 2022-10-09 00:50+0000\n"
 "PO-Revision-Date: 2022-07-26 09:30+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -194,22 +194,27 @@ msgstr "Mudar de disposição"
 msgid "Unlock"
 msgstr "Desbloquear"
 
-#: contents/lockscreen/MediaControls.qml:105
+#: contents/lockscreen/MediaControls.qml:108
+#, kde-format
+msgid "No title"
+msgstr ""
+
+#: contents/lockscreen/MediaControls.qml:109
 #, kde-format
 msgid "No media playing"
 msgstr "Nada em reprodução"
 
-#: contents/lockscreen/MediaControls.qml:134
+#: contents/lockscreen/MediaControls.qml:138
 #, kde-format
 msgid "Previous track"
 msgstr "Faixa anterior"
 
-#: contents/lockscreen/MediaControls.qml:146
+#: contents/lockscreen/MediaControls.qml:150
 #, kde-format
 msgid "Play or Pause media"
 msgstr "Tocar ou pausar"
 
-#: contents/lockscreen/MediaControls.qml:160
+#: contents/lockscreen/MediaControls.qml:164
 #, kde-format
 msgid "Next track"
 msgstr "Faixa seguinte"

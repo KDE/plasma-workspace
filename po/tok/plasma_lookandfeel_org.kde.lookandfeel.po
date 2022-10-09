@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-06 00:47+0000\n"
+"POT-Creation-Date: 2022-10-09 00:50+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -200,22 +200,27 @@ msgstr ""
 msgid "Unlock"
 msgstr ""
 
-#: contents/lockscreen/MediaControls.qml:105
+#: contents/lockscreen/MediaControls.qml:108
+#, kde-format
+msgid "No title"
+msgstr ""
+
+#: contents/lockscreen/MediaControls.qml:109
 #, kde-format
 msgid "No media playing"
 msgstr ""
 
-#: contents/lockscreen/MediaControls.qml:134
+#: contents/lockscreen/MediaControls.qml:138
 #, kde-format
 msgid "Previous track"
 msgstr ""
 
-#: contents/lockscreen/MediaControls.qml:146
+#: contents/lockscreen/MediaControls.qml:150
 #, kde-format
 msgid "Play or Pause media"
 msgstr ""
 
-#: contents/lockscreen/MediaControls.qml:160
+#: contents/lockscreen/MediaControls.qml:164
 #, kde-format
 msgid "Next track"
 msgstr ""

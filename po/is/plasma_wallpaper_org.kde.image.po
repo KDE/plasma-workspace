@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-08 00:49+0000\n"
+"POT-Creation-Date: 2022-10-09 00:50+0000\n"
 "PO-Revision-Date: 2022-09-02 17:43+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -31,62 +31,62 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:94
+#: imagepackage/contents/ui/config.qml:99
 #, kde-format
 msgid "Positioning:"
 msgstr "Staðsetning:"
 
-#: imagepackage/contents/ui/config.qml:97
+#: imagepackage/contents/ui/config.qml:102
 #, kde-format
 msgid "Scaled and Cropped"
 msgstr "Teygt og sniðið af"
 
-#: imagepackage/contents/ui/config.qml:101
+#: imagepackage/contents/ui/config.qml:106
 #, kde-format
 msgid "Scaled"
 msgstr "Teygt"
 
-#: imagepackage/contents/ui/config.qml:105
+#: imagepackage/contents/ui/config.qml:110
 #, kde-format
 msgid "Scaled, Keep Proportions"
 msgstr "Teygt, halda hlutföllum"
 
-#: imagepackage/contents/ui/config.qml:109
+#: imagepackage/contents/ui/config.qml:114
 #, kde-format
 msgid "Centered"
 msgstr "Miðjað"
 
-#: imagepackage/contents/ui/config.qml:113
+#: imagepackage/contents/ui/config.qml:118
 #, kde-format
 msgid "Tiled"
 msgstr "Flísalagt"
 
-#: imagepackage/contents/ui/config.qml:141
+#: imagepackage/contents/ui/config.qml:146
 #, kde-format
 msgid "Background:"
 msgstr "Bakgrunnur:"
 
-#: imagepackage/contents/ui/config.qml:142
+#: imagepackage/contents/ui/config.qml:147
 #, kde-format
 msgid "Blur"
 msgstr "Móða"
 
-#: imagepackage/contents/ui/config.qml:151
+#: imagepackage/contents/ui/config.qml:156
 #, kde-format
 msgid "Solid color"
 msgstr "Heillitaður"
 
-#: imagepackage/contents/ui/config.qml:161
+#: imagepackage/contents/ui/config.qml:166
 #, kde-format
 msgid "Select Background Color"
 msgstr "Veldu bakgrunnslit"
 
-#: imagepackage/contents/ui/config.qml:207
+#: imagepackage/contents/ui/config.qml:212
 #, kde-format
 msgid "Add Image…"
 msgstr "Bæta við mynd…"
 
-#: imagepackage/contents/ui/config.qml:213
+#: imagepackage/contents/ui/config.qml:218
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:257
 #, kde-format
 msgid "Get New Wallpapers…"

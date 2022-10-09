@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-06 00:47+0000\n"
+"POT-Creation-Date: 2022-10-09 00:50+0000\n"
 "PO-Revision-Date: 2021-06-08 22:51-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -202,22 +202,27 @@ msgstr "ਲੇਆਉਟ ਨੂੰ ਬਦਲੋ"
 msgid "Unlock"
 msgstr "ਅਣ-ਲਾਕ"
 
-#: contents/lockscreen/MediaControls.qml:105
+#: contents/lockscreen/MediaControls.qml:108
+#, kde-format
+msgid "No title"
+msgstr ""
+
+#: contents/lockscreen/MediaControls.qml:109
 #, kde-format
 msgid "No media playing"
 msgstr "ਕੋਈ ਮੀਡੀਆ ਨਹੀਂ ਚੱਲ ਰਿਹਾ ਹੈ"
 
-#: contents/lockscreen/MediaControls.qml:134
+#: contents/lockscreen/MediaControls.qml:138
 #, kde-format
 msgid "Previous track"
 msgstr "ਪਿਛਲਾ ਟਰੈਕ"
 
-#: contents/lockscreen/MediaControls.qml:146
+#: contents/lockscreen/MediaControls.qml:150
 #, kde-format
 msgid "Play or Pause media"
 msgstr "ਮੀਡਿਆ ਚਲਾਓ ਜਾਂ ਰੋਕੋ"
 
-#: contents/lockscreen/MediaControls.qml:160
+#: contents/lockscreen/MediaControls.qml:164
 #, kde-format
 msgid "Next track"
 msgstr "ਅਗਲਾ ਟਰੈਕ"

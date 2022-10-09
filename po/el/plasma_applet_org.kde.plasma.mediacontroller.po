@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"POT-Creation-Date: 2022-10-09 00:50+0000\n"
 "PO-Revision-Date: 2017-06-12 16:32+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -21,6 +21,11 @@ msgstr ""
 #, kde-format
 msgid "General"
 msgstr "Γενικά"
+
+#: contents/ui/AlbumArtStackView.qml:161
+#, kde-format
+msgid "No title"
+msgstr ""
 
 #: contents/ui/AlbumArtStackView.qml:161 contents/ui/main.qml:80
 #, kde-format

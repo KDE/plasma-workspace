@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-06 00:47+0000\n"
+"POT-Creation-Date: 2022-10-09 00:50+0000\n"
 "PO-Revision-Date: 2022-07-26 13:04+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -198,22 +198,27 @@ msgstr "Cambia disposizione"
 msgid "Unlock"
 msgstr "Sblocca"
 
-#: contents/lockscreen/MediaControls.qml:105
+#: contents/lockscreen/MediaControls.qml:108
+#, kde-format
+msgid "No title"
+msgstr ""
+
+#: contents/lockscreen/MediaControls.qml:109
 #, kde-format
 msgid "No media playing"
 msgstr "Nessun supporto in riproduzione"
 
-#: contents/lockscreen/MediaControls.qml:134
+#: contents/lockscreen/MediaControls.qml:138
 #, kde-format
 msgid "Previous track"
 msgstr "Traccia precedente"
 
-#: contents/lockscreen/MediaControls.qml:146
+#: contents/lockscreen/MediaControls.qml:150
 #, kde-format
 msgid "Play or Pause media"
 msgstr "Riproduci o sospendi supporto"
 
-#: contents/lockscreen/MediaControls.qml:160
+#: contents/lockscreen/MediaControls.qml:164
 #, kde-format
 msgid "Next track"
 msgstr "Traccia successiva"

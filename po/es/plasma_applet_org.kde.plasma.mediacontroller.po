@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-02 00:47+0000\n"
+"POT-Creation-Date: 2022-10-09 00:50+0000\n"
 "PO-Revision-Date: 2022-06-09 22:34+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -23,6 +23,11 @@ msgstr ""
 #, kde-format
 msgid "General"
 msgstr "General"
+
+#: contents/ui/AlbumArtStackView.qml:161
+#, kde-format
+msgid "No title"
+msgstr ""
 
 #: contents/ui/AlbumArtStackView.qml:161 contents/ui/main.qml:80
 #, kde-format

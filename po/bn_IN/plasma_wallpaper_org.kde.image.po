@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-08 00:49+0000\n"
+"POT-Creation-Date: 2022-10-09 00:50+0000\n"
 "PO-Revision-Date: 2008-12-22 17:48+0530\n"
 "Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
 "Language-Team: Bengali INDIA <fedora-trans-bn_IN@redhat.com>\n"
@@ -28,63 +28,63 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "runab@redhat.com"
 
-#: imagepackage/contents/ui/config.qml:94
+#: imagepackage/contents/ui/config.qml:99
 #, fuzzy, kde-format
 #| msgid "P&ositioning:"
 msgid "Positioning:"
 msgstr "অবস্থান: (&o)"
 
-#: imagepackage/contents/ui/config.qml:97
+#: imagepackage/contents/ui/config.qml:102
 #, kde-format
 msgid "Scaled and Cropped"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:101
+#: imagepackage/contents/ui/config.qml:106
 #, kde-format
 msgid "Scaled"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:105
+#: imagepackage/contents/ui/config.qml:110
 #, kde-format
 msgid "Scaled, Keep Proportions"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:109
+#: imagepackage/contents/ui/config.qml:114
 #, kde-format
 msgid "Centered"
 msgstr "কেন্দ্রস্থিত"
 
-#: imagepackage/contents/ui/config.qml:113
+#: imagepackage/contents/ui/config.qml:118
 #, kde-format
 msgid "Tiled"
 msgstr "টালি বিশিষ্ট"
 
-#: imagepackage/contents/ui/config.qml:141
+#: imagepackage/contents/ui/config.qml:146
 #, kde-format
 msgid "Background:"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:142
+#: imagepackage/contents/ui/config.qml:147
 #, kde-format
 msgid "Blur"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:151
+#: imagepackage/contents/ui/config.qml:156
 #, kde-format
 msgid "Solid color"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:161
+#: imagepackage/contents/ui/config.qml:166
 #, kde-format
 msgid "Select Background Color"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:207
+#: imagepackage/contents/ui/config.qml:212
 #, kde-format
 msgid "Add Image…"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:213
+#: imagepackage/contents/ui/config.qml:218
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:257
 #, fuzzy, kde-format
 #| msgid "Get New Wallpapers..."

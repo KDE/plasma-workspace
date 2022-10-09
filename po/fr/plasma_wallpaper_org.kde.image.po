@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-08 00:49+0000\n"
+"POT-Creation-Date: 2022-10-09 00:50+0000\n"
 "PO-Revision-Date: 2022-05-23 07:57+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -40,62 +40,62 @@ msgid "Your emails"
 msgstr "xavier.besnard@neuf.fr"
 
 # unreviewed-context
-#: imagepackage/contents/ui/config.qml:94
+#: imagepackage/contents/ui/config.qml:99
 #, kde-format
 msgid "Positioning:"
 msgstr "Positionnement :"
 
-#: imagepackage/contents/ui/config.qml:97
+#: imagepackage/contents/ui/config.qml:102
 #, kde-format
 msgid "Scaled and Cropped"
 msgstr "Adapté et rogné"
 
-#: imagepackage/contents/ui/config.qml:101
+#: imagepackage/contents/ui/config.qml:106
 #, kde-format
 msgid "Scaled"
 msgstr "Adapté"
 
-#: imagepackage/contents/ui/config.qml:105
+#: imagepackage/contents/ui/config.qml:110
 #, kde-format
 msgid "Scaled, Keep Proportions"
 msgstr "Adapté, conserver les proportions"
 
-#: imagepackage/contents/ui/config.qml:109
+#: imagepackage/contents/ui/config.qml:114
 #, kde-format
 msgid "Centered"
 msgstr "Centré"
 
-#: imagepackage/contents/ui/config.qml:113
+#: imagepackage/contents/ui/config.qml:118
 #, kde-format
 msgid "Tiled"
 msgstr "Mosaïque"
 
-#: imagepackage/contents/ui/config.qml:141
+#: imagepackage/contents/ui/config.qml:146
 #, kde-format
 msgid "Background:"
 msgstr "Arrière-plan :"
 
-#: imagepackage/contents/ui/config.qml:142
+#: imagepackage/contents/ui/config.qml:147
 #, kde-format
 msgid "Blur"
 msgstr "Flou"
 
-#: imagepackage/contents/ui/config.qml:151
+#: imagepackage/contents/ui/config.qml:156
 #, kde-format
 msgid "Solid color"
 msgstr "Couleur unie"
 
-#: imagepackage/contents/ui/config.qml:161
+#: imagepackage/contents/ui/config.qml:166
 #, kde-format
 msgid "Select Background Color"
 msgstr "Sélectionner la couleur de fond"
 
-#: imagepackage/contents/ui/config.qml:207
+#: imagepackage/contents/ui/config.qml:212
 #, kde-format
 msgid "Add Image…"
 msgstr "Ajouter une image..."
 
-#: imagepackage/contents/ui/config.qml:213
+#: imagepackage/contents/ui/config.qml:218
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:257
 #, kde-format
 msgid "Get New Wallpapers…"
