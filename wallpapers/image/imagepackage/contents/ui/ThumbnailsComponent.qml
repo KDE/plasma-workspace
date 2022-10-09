@@ -19,11 +19,6 @@ Item {
 
     property alias view: wallpapersGrid.view
 
-    // HACK: detect an invalid Plasmoid attached property
-    // this is needed when we run outside of a Plasmashell context like in the KScreenLocker KCM
-    // otherwise the invalid Plasmoid is an empty `object` and not actually `undefined`
-    property var plasmoid: Plasmoid.width === undefined ? undefined : Plasmoid
-
     readonly property var imageModel: (configDialog.currentWallpaper === "org.kde.image") ? imageWallpaper.wallpaperModel : imageWallpaper.slideFilterModel
 
     Connections {
@@ -66,8 +61,8 @@ Item {
         //set the size of the cell, depending on Screen resolution to respect the aspect ratio
         view.implicitCellWidth: {
             let screenWidth = 0;
-            if (typeof plasmoid !== "undefined") {
-                screenWidth = plasmoid.width;
+            if (typeof Plasmoid !== "undefined") {
+                screenWidth = Plasmoid.width;
             } else {
                 screenWidth = Screen.width;
             }
@@ -76,8 +71,8 @@ Item {
         }
         view.implicitCellHeight: {
             let screenHeight = 0;
-            if (typeof plasmoid !== "undefined") {
-                screenHeight = plasmoid.height;
+            if (typeof Plasmoid !== "undefined") {
+                screenHeight = Plasmoid.height;
             } else {
                 screenHeight = Screen.height;
             }
