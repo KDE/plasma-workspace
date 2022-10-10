@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-09 00:50+0000\n"
-"PO-Revision-Date: 2022-08-12 17:45+0200\n"
+"PO-Revision-Date: 2022-10-09 08:44+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 22.08.1\n"
 
 #: ../sddm-theme/KeyboardButton.qml:19
 #, kde-format
@@ -205,7 +205,7 @@ msgstr "Giltzapetik askatu"
 #: contents/lockscreen/MediaControls.qml:108
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "Titulurik gabe"
 
 #: contents/lockscreen/MediaControls.qml:109
 #, kde-format

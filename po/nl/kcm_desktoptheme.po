@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2022-10-10 00:47+0000\n"
 "PO-Revision-Date: 2021-05-26 14:49+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
@@ -23,27 +23,27 @@ msgstr ""
 msgid "Name of the current Plasma Style"
 msgstr "Naam van de huidige Plasma-stijl"
 
-#: kcm.cpp:108
+#: kcm.cpp:110
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Kon geen tijdelijk bestand aanmaken."
 
-#: kcm.cpp:119
+#: kcm.cpp:121
 #, kde-format
 msgid "Unable to download the theme: %1"
 msgstr "Kan het thema niet downloaden: %1"
 
-#: kcm.cpp:144
+#: kcm.cpp:146
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Het thema werd succesvol geïnstalleerd."
 
-#: kcm.cpp:147 kcm.cpp:153
+#: kcm.cpp:149 kcm.cpp:155
 #, kde-format
 msgid "Theme installation failed."
 msgstr "Installatie van het thema is mislukt."
 
-#: kcm.cpp:245
+#: kcm.cpp:257
 #, kde-format
 msgid "Removing theme failed: %1"
 msgstr "Thema verwijderen is mislukt: %1"

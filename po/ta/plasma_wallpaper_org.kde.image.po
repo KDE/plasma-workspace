@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-09 00:50+0000\n"
+"POT-Creation-Date: 2022-10-10 00:47+0000\n"
 "PO-Revision-Date: 2022-05-24 21:19+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -27,62 +27,62 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Kde-l10n-ta@kde.org"
 
-#: imagepackage/contents/ui/config.qml:99
+#: imagepackage/contents/ui/config.qml:94
 #, kde-format
 msgid "Positioning:"
 msgstr "காட்டப்படும் விதம்:"
 
-#: imagepackage/contents/ui/config.qml:102
+#: imagepackage/contents/ui/config.qml:97
 #, kde-format
 msgid "Scaled and Cropped"
 msgstr "வெட்டி அளவுமாற்றி"
 
-#: imagepackage/contents/ui/config.qml:106
+#: imagepackage/contents/ui/config.qml:101
 #, kde-format
 msgid "Scaled"
 msgstr "அளவுமாற்றி"
 
-#: imagepackage/contents/ui/config.qml:110
+#: imagepackage/contents/ui/config.qml:105
 #, kde-format
 msgid "Scaled, Keep Proportions"
 msgstr "அளவுமாற்றி, உருவத்தை மாற்றாமல்"
 
-#: imagepackage/contents/ui/config.qml:114
+#: imagepackage/contents/ui/config.qml:109
 #, kde-format
 msgid "Centered"
 msgstr "நடுப்படுத்தி"
 
-#: imagepackage/contents/ui/config.qml:118
+#: imagepackage/contents/ui/config.qml:113
 #, kde-format
 msgid "Tiled"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:146
+#: imagepackage/contents/ui/config.qml:141
 #, kde-format
 msgid "Background:"
 msgstr "பின்புலம்:"
 
-#: imagepackage/contents/ui/config.qml:147
+#: imagepackage/contents/ui/config.qml:142
 #, kde-format
 msgid "Blur"
 msgstr "மங்கலாக்கு"
 
-#: imagepackage/contents/ui/config.qml:156
+#: imagepackage/contents/ui/config.qml:151
 #, kde-format
 msgid "Solid color"
 msgstr "நிறத்தால் நிரப்பு"
 
-#: imagepackage/contents/ui/config.qml:166
+#: imagepackage/contents/ui/config.qml:161
 #, kde-format
 msgid "Select Background Color"
 msgstr "பின்புல நிறத்தை தேர்ந்தெடுத்தல்"
 
-#: imagepackage/contents/ui/config.qml:212
+#: imagepackage/contents/ui/config.qml:207
 #, kde-format
 msgid "Add Image…"
 msgstr "படத்தை சேர்…"
 
-#: imagepackage/contents/ui/config.qml:218
+#: imagepackage/contents/ui/config.qml:213
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:257
 #, kde-format
 msgid "Get New Wallpapers…"

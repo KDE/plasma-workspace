@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-09 00:50+0000\n"
+"POT-Creation-Date: 2022-10-10 00:47+0000\n"
 "PO-Revision-Date: 2021-08-17 21:10+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -33,62 +33,62 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:99
+#: imagepackage/contents/ui/config.qml:94
 #, kde-format
 msgid "Positioning:"
 msgstr "Išdėstymas:"
 
-#: imagepackage/contents/ui/config.qml:102
+#: imagepackage/contents/ui/config.qml:97
 #, kde-format
 msgid "Scaled and Cropped"
 msgstr "Pakeisto mastelio ir apkarpytas"
 
-#: imagepackage/contents/ui/config.qml:106
+#: imagepackage/contents/ui/config.qml:101
 #, kde-format
 msgid "Scaled"
 msgstr "Pakeisto mastelio"
 
-#: imagepackage/contents/ui/config.qml:110
+#: imagepackage/contents/ui/config.qml:105
 #, kde-format
 msgid "Scaled, Keep Proportions"
 msgstr "Pakeisto mastelio, išlaikytų proporcijų"
 
-#: imagepackage/contents/ui/config.qml:114
+#: imagepackage/contents/ui/config.qml:109
 #, kde-format
 msgid "Centered"
 msgstr "Centruotas"
 
-#: imagepackage/contents/ui/config.qml:118
+#: imagepackage/contents/ui/config.qml:113
 #, kde-format
 msgid "Tiled"
 msgstr "Išklotas"
 
-#: imagepackage/contents/ui/config.qml:146
+#: imagepackage/contents/ui/config.qml:141
 #, kde-format
 msgid "Background:"
 msgstr "Fonas:"
 
-#: imagepackage/contents/ui/config.qml:147
+#: imagepackage/contents/ui/config.qml:142
 #, kde-format
 msgid "Blur"
 msgstr "Suliejimas"
 
-#: imagepackage/contents/ui/config.qml:156
+#: imagepackage/contents/ui/config.qml:151
 #, kde-format
 msgid "Solid color"
 msgstr "Vientisa spalva"
 
-#: imagepackage/contents/ui/config.qml:166
+#: imagepackage/contents/ui/config.qml:161
 #, kde-format
 msgid "Select Background Color"
 msgstr "Pasirinkti fono spalvą"
 
-#: imagepackage/contents/ui/config.qml:212
+#: imagepackage/contents/ui/config.qml:207
 #, kde-format
 msgid "Add Image…"
 msgstr "Pridėti paveikslą…"
 
-#: imagepackage/contents/ui/config.qml:218
+#: imagepackage/contents/ui/config.qml:213
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:257
 #, kde-format
 msgid "Get New Wallpapers…"

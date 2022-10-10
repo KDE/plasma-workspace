@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-05 00:46+0000\n"
+"POT-Creation-Date: 2022-10-10 00:47+0000\n"
 "PO-Revision-Date: 2010-07-07 15:20+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -26,29 +26,29 @@ msgstr ""
 msgid "Name of the current Plasma Style"
 msgstr "หาชุดตกแต่งใหม่ ๆ..."
 
-#: kcm.cpp:108
+#: kcm.cpp:110
 #, fuzzy, kde-format
 #| msgid "Unable to save theme."
 msgid "Unable to create a temporary file."
 msgstr "ไม่สามารถจัดเก็บชุดตกแต่งได้"
 
-#: kcm.cpp:119
+#: kcm.cpp:121
 #, fuzzy, kde-format
 #| msgid "Unable to save theme."
 msgid "Unable to download the theme: %1"
 msgstr "ไม่สามารถจัดเก็บชุดตกแต่งได้"
 
-#: kcm.cpp:144
+#: kcm.cpp:146
 #, kde-format
 msgid "Theme installed successfully."
 msgstr ""
 
-#: kcm.cpp:147 kcm.cpp:153
+#: kcm.cpp:149 kcm.cpp:155
 #, kde-format
 msgid "Theme installation failed."
 msgstr ""
 
-#: kcm.cpp:245
+#: kcm.cpp:257
 #, kde-format
 msgid "Removing theme failed: %1"
 msgstr ""
