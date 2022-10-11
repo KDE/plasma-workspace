@@ -146,13 +146,16 @@ PlasmaComponents3.AbstractButton {
                 top: parent.top
                 bottom: subDayLabel.top
             }
+            font.pixelSize: Math.max(
+                PlasmaCore.Theme.defaultFont.pixelSize * 1.35 /* Level 1 Heading */,
+                daysCalendar.cellHeight / (daysCalendar.dateMatchingPrecision === Calendar.MatchYearMonthAndDay ? 3 /* weeksColumn */ : 6))
+            font.pointSize: -1 // Avoid QML warnings
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             text: model.label || dayNumber
             opacity: isCurrent ? 1.0 : 0.5
             wrapMode: Text.NoWrap
             elide: Text.ElideRight
-            fontSizeMode: Text.HorizontalFit
         }
 
         Loader {
@@ -167,7 +170,10 @@ PlasmaComponents3.AbstractButton {
 
             sourceComponent: PlasmaComponents3.Label {
                 elide: Text.ElideRight
-                font.pointSize: Kirigami.Theme.smallFont.pointSize
+                font.pixelSize: Math.max(
+                    PlasmaCore.Theme.smallestFont.pixelSize,
+                    daysCalendar.cellHeight / (daysCalendar.dateMatchingPrecision === Calendar.MatchYearMonthAndDay ? 6 : 12))
+                font.pointSize: -1 // Avoid QML warnings
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
                 maximumLineCount: 1
