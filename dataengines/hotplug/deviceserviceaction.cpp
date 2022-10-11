@@ -9,9 +9,13 @@
 
 #include <QDebug>
 
+#include <KApplicationTrader>
+#include <KConfigGroup>
+#include <KDesktopFile>
 #include <KIO/CommandLauncherJob>
 #include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
+#include <KService>
 #include <kmacroexpander.h>
 #include <solid/block.h>
 #include <solid/storageaccess.h>
@@ -149,6 +153,18 @@ void DelayedExecutor::delayedExecute(const QString &udi)
     KIO::CommandLauncherJob *job = new KIO::CommandLauncherJob(exec);
     job->setIcon(m_service.icon());
     job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
+
+    // To make xdg-activation and startup feedback work we need to pass the desktop file name of what we are launching
+    if (m_service.service()->storageId().endsWith(QLatin1String("test-predicate-openinwindow.desktop"))) {
+        // We know that we are going to launch the default file manager, so query the desktop file name of that
+        const KService::Ptr defaultFileManager = KApplicationTrader::preferredService(QStringLiteral("inode/directory"));
+        job->setDesktopName(defaultFileManager->desktopEntryName());
+    } else {
+        // Read the app that will be launched from the desktop file
+        KDesktopFile desktopFile(m_service.service()->storageId());
+        job->setDesktopName(desktopFile.desktopGroup().readEntry("X-KDE-AliasFor"));
+    }
+
     job->start();
 
     deleteLater();
