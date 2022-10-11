@@ -3,20 +3,22 @@
 #
 # Andrej Mernik <andrejm@ubuntu.si>, 2014, 2015, 2016, 2017, 2018.
 # Matjaž Jeran <matjaz.jeran@amis.net>, 2020, 2021, 2022.
+# Martin Srebotnjak <miles@filmsi.net>, 2022.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-09 00:50+0000\n"
-"PO-Revision-Date: 2022-09-07 07:41+0200\n"
+"PO-Revision-Date: 2022-10-10 10:16+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
-"%100==4 ? 3 : 0);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n"
+"%100<=4 ? 2 : 3);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "X-Generator: Poedit 3.1.1\n"
 
@@ -204,7 +206,7 @@ msgstr "Odkleni"
 #: contents/lockscreen/MediaControls.qml:108
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "Brez naslova"
 
 #: contents/lockscreen/MediaControls.qml:109
 #, kde-format
@@ -319,173 +321,3 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma izdelana v skupnosti KDE"
-
-#~ msgid "Configure"
-#~ msgstr "Nastavi"
-
-#~ msgid "Configure KRunner Behavior"
-#~ msgstr "Nastavi obnašanje programa KRunner"
-
-#~ msgid "Configure KRunner…"
-#~ msgstr "Nastavi KRunner…"
-
-#~ msgctxt "Textfield placeholder text, query specific KRunner"
-#~ msgid "Search '%1'…"
-#~ msgstr "Poišči '%1'…"
-
-#~ msgctxt "Textfield placeholder text"
-#~ msgid "Search…"
-#~ msgstr "Poišči…"
-
-#~ msgid "Show Usage Help"
-#~ msgstr "Prikaži rabo pomoči"
-
-#~ msgid "Pin"
-#~ msgstr "Pin"
-
-#~ msgid "Pin Search"
-#~ msgstr "Iskanje pina"
-
-#~ msgid "Keep Open"
-#~ msgstr "Ohranjaj odprto"
-
-#~ msgid "Recent Queries"
-#~ msgstr "Nedavne poizvedbe"
-
-#~ msgid "Remove"
-#~ msgstr "Odstrani"
-
-#~ msgid "in category recent queries"
-#~ msgstr "v kategoriji nedavne poizvedbe"
-
-#~ msgctxt "verb, to show something"
-#~ msgid "Show:"
-#~ msgstr "Prikaži:"
-
-#~ msgid "Configure Search Plugins"
-#~ msgstr "Nastavi vtičnike za iskanje"
-
-#~ msgctxt ""
-#~ "This is the first text the user sees while starting in the splash screen, "
-#~ "should be translated as something short, is a form that can be seen on a "
-#~ "product. Plasma is the project name so shouldn't be translated."
-#~ msgid "Plasma 25th Anniversary Edition by KDE"
-#~ msgstr "Plasma izdaja ob 25 obletnici KDE"
-
-#~ msgid "Close"
-#~ msgstr "Zapri"
-
-#~ msgctxt "verb, to show something"
-#~ msgid "Show always"
-#~ msgstr "Vedno prikazuj"
-
-#~ msgctxt "verb, to show something"
-#~ msgid "Always show"
-#~ msgstr "Vedno prikaži"
-
-#~ msgid "Suspend"
-#~ msgstr "V pripravljenost"
-
-#~ msgid "Reboot"
-#~ msgstr "Znova zaženi"
-
-#~ msgid "Logout"
-#~ msgstr "Odjava"
-
-#~ msgid "Different User"
-#~ msgstr "Drug uporabnik"
-
-#, fuzzy
-#~| msgid "Login as different user"
-#~ msgid "Log in as a different user"
-#~ msgstr "Prijavi se kot drug uporabnik"
-
-#, fuzzy
-#~| msgid "Password"
-#~ msgid "Password..."
-#~ msgstr "Geslo"
-
-#~ msgid "Login"
-#~ msgstr "Prijava"
-
-#~ msgid "Shutdown"
-#~ msgstr "Izklopi"
-
-#~ msgid "Switch"
-#~ msgstr "Preklopi"
-
-#~ msgid "New Session"
-#~ msgstr "Nova seja"
-
-#~ msgid "%1%. Charging"
-#~ msgstr "%1 %. Polnjenje"
-
-#~ msgid "Fully charged"
-#~ msgstr "Povsem polna"
-
-#~ msgid "%1%. Plugged in, not charging"
-#~ msgstr "%1 %. Priključeno, a se ne polni"
-
-#~ msgid "%1% battery remaining"
-#~ msgstr "Preostaja %1 % baterije"
-
-#~ msgid "Change Session"
-#~ msgstr "Spremeni sejo"
-
-#~ msgid "Create Session"
-#~ msgstr "Ustvari sejo"
-
-#~ msgid "Change Session..."
-#~ msgstr "Spremeni sejo ..."
-
-#~ msgid "There are currently no other active sessions."
-#~ msgstr "Trenutno ni drugih dejavnih sej."
-
-#~ msgctxt "Username (logged in on console)"
-#~ msgid "%1 (TTY)"
-#~ msgstr "%1 (TTY)"
-
-#~ msgctxt "Unused session, nobody logged in there"
-#~ msgid "Unused"
-#~ msgstr "Neuporabljena"
-
-#~ msgctxt "Username (on display number)"
-#~ msgid "%1 (on Display %2)"
-#~ msgstr "%1 (na %2. zaslonu)"
-
-#~ msgctxt "Button to restart the computer"
-#~ msgid "Reboot"
-#~ msgstr "Znova zaženi"
-
-#~ msgctxt "Button to shut down the computer"
-#~ msgid "Shut down"
-#~ msgstr "Izklopi"
-
-#~ msgctxt "Dialog heading, confirm log out, not a status label"
-#~ msgid "Logging out"
-#~ msgstr "Odjava"
-
-#~ msgctxt "Dialog heading, confirm reboot, not a status label"
-#~ msgid "Rebooting"
-#~ msgstr "Ponovni zagon"
-
-#~ msgid "Search for User"
-#~ msgstr "Poišči uporabnika"
-
-#~ msgctxt "Username (on display number)"
-#~ msgid "%1 (%2)"
-#~ msgstr "%1 (%2)"
-
-#~ msgid "Turning off computer in 1 second."
-#~ msgid_plural "Turning off computer in %1 seconds."
-#~ msgstr[0] "Izklop čez %1 sekund."
-#~ msgstr[1] "Izklop čez %1 sekundo."
-#~ msgstr[2] "Izklop čez %1 sekundi."
-#~ msgstr[3] "Izklop čez %1 sekunde."
-
-#~ msgid "Turn Off Computer"
-#~ msgstr "Izklopi računalnik"
-
-#~ msgctxt "default option in boot loader"
-#~ msgid " (default)"
-#~ msgstr " (privzeto)"
