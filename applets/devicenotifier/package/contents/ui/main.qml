@@ -237,7 +237,7 @@ Item {
 
         Plasmoid.setAction("unmountAllDevices", i18n("Remove All"), "media-eject");
         Plasmoid.action("unmountAllDevices").visible = Qt.binding(() => {
-            return devicenotifier.mountedRemovables > 1;
+            return devicenotifier.mountedRemovables > 0;
         });
  
         Plasmoid.setActionSeparator("sep0");
