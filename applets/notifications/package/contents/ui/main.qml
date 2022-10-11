@@ -80,13 +80,16 @@ Item {
                 // TODO check app inhibition, too
                 if (inhibitedUntilValid
                         && inhibitedUntil.getTime() - Date.now() < 100 * 24 * 60 * 60 * 1000 /* 100 days*/) {
-                        lines.push(i18n("Do not disturb until %1",
+                        lines.push(i18n("Do not disturb until %1; middle-click to exit now",
                                      KCoreAddons.Format.formatRelativeDateTime(inhibitedUntil, Locale.ShortFormat)));
                 } else {
-                    lines.push(i18n("Do not disturb"));
+                    lines.push(i18n("Do not disturb mode active; middle-click to exit"));
                 }
-            } else if (lines.length === 0) {
-                lines.push(i18n("No unread notifications"));
+            } else {
+                if (lines.length === 0) {
+                    lines.push(i18n("No unread notifications"));
+                }
+                lines.push(i18n("Middle-click to enter do not disturb mode"));
             }
         }
 
