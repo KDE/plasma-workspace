@@ -67,11 +67,6 @@ void DeviceServiceAction::setService(const KServiceAction &service)
     m_service = service;
 }
 
-KServiceAction DeviceServiceAction::service() const
-{
-    return m_service;
-}
-
 int MacroExpander::expandEscapedMacro(const QString &str, int pos, QStringList &ret)
 {
     ushort option = str[pos + 1].unicode();

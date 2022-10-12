@@ -16,7 +16,6 @@ public:
     void execute(Solid::Device &device);
 
     void setService(const KServiceAction &service);
-    KServiceAction service() const;
 
 private:
     KServiceAction m_service;
