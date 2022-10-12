@@ -14,6 +14,7 @@
 #include <KNotificationJobUiDelegate>
 #include <kmacroexpander.h>
 #include <solid/block.h>
+#include <solid/device.h>
 #include <solid/storageaccess.h>
 
 class MacroExpander : public KMacroExpanderBase
@@ -47,22 +48,6 @@ private:
     KServiceAction m_service;
 };
 
-DeviceServiceAction::DeviceServiceAction()
-    : DeviceAction()
-{
-    DeviceAction::setIconName(QStringLiteral("dialog-cancel"));
-    DeviceAction::setLabel(i18nc("A default name for an action without proper label", "Unknown"));
-}
-
-QString DeviceServiceAction::id() const
-{
-    if (m_service.name().isEmpty() && m_service.exec().isEmpty()) {
-        return QString();
-    } else {
-        return "#Service:" + m_service.name() + m_service.exec();
-    }
-}
-
 void DeviceServiceAction::execute(Solid::Device &device)
 {
     new DelayedExecutor(m_service, device);
@@ -79,9 +64,6 @@ void DelayedExecutor::_k_storageSetupDone(Solid::ErrorType error, QVariant error
 
 void DeviceServiceAction::setService(const KServiceAction &service)
 {
-    DeviceAction::setIconName(service.icon());
-    DeviceAction::setLabel(service.text());
-
     m_service = service;
 }
 

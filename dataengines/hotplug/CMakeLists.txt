@@ -1,12 +1,10 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_engine_hotplug\")
 
 set(hotplug_engine_SRCS
-    deviceaction.cpp
     deviceserviceaction.cpp
     hotplugengine.cpp
     hotplugservice.cpp
     hotplugjob.cpp
-    deviceaction.h
     deviceserviceaction.h
     hotplugengine.h
     hotplugservice.h

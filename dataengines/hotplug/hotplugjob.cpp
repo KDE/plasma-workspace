@@ -12,6 +12,8 @@
 #include <KDesktopFileActions>
 #include <KLocalizedString>
 #include <KService>
+#include <Solid/Device>
+
 #include <QDebug>
 #include <QStandardPaths>
 

@@ -7,17 +7,13 @@
 
 #pragma once
 
-#include "deviceaction.h"
-
 #include <kserviceaction.h>
 #include <solid/predicate.h>
 
-class DeviceServiceAction : public DeviceAction
+class DeviceServiceAction
 {
 public:
-    DeviceServiceAction();
-    QString id() const override;
-    void execute(Solid::Device &device) override;
+    void execute(Solid::Device &device);
 
     void setService(const KServiceAction &service);
     KServiceAction service() const;
