@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-09 00:50+0000\n"
-"PO-Revision-Date: 2022-07-26 09:30+0100\n"
+"PO-Revision-Date: 2022-10-11 17:14+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -197,7 +197,7 @@ msgstr "Desbloquear"
 #: contents/lockscreen/MediaControls.qml:108
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "Sem título"
 
 #: contents/lockscreen/MediaControls.qml:109
 #, kde-format
@@ -297,41 +297,3 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma do KDE"
-
-#~ msgid "Configure"
-#~ msgstr "Configurar"
-
-#~ msgid "Configure KRunner Behavior"
-#~ msgstr "Configurar o Comportamento do KRunner"
-
-#~ msgid "Configure KRunner…"
-#~ msgstr "Configurar o KRunner…"
-
-#~ msgctxt "Textfield placeholder text, query specific KRunner"
-#~ msgid "Search '%1'…"
-#~ msgstr "Procurar por '%1'…"
-
-#~ msgctxt "Textfield placeholder text"
-#~ msgid "Search…"
-#~ msgstr "Procurar…"
-
-#~ msgid "Show Usage Help"
-#~ msgstr "Mostrar a Ajuda de Utilização"
-
-#~ msgid "Pin"
-#~ msgstr "Fixar"
-
-#~ msgid "Pin Search"
-#~ msgstr "Fixar a Pesquisa"
-
-#~ msgid "Keep Open"
-#~ msgstr "Manter Aberto"
-
-#~ msgid "Recent Queries"
-#~ msgstr "Pesquisas Recentes"
-
-#~ msgid "Remove"
-#~ msgstr "Remover"
-
-#~ msgid "in category recent queries"
-#~ msgstr "nas pesquisas recentes por categorias"
