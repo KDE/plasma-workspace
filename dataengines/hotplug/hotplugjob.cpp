@@ -34,8 +34,7 @@ void HotplugJob::start()
         // Cannot be > 1, we only have one filePath, and < 1 was handled as error.
         Q_ASSERT(services.size() == 1);
 
-        DeviceServiceAction action;
-        action.setService(services.takeFirst());
+        DeviceServiceAction action(services.takeFirst());
 
         Solid::Device device(m_dest);
         action.execute(device);

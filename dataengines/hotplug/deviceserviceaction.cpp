@@ -48,6 +48,11 @@ private:
     KServiceAction m_service;
 };
 
+DeviceServiceAction::DeviceServiceAction(const KServiceAction &service)
+    : m_service(service)
+{
+}
+
 void DeviceServiceAction::execute(Solid::Device &device)
 {
     new DelayedExecutor(m_service, device);
@@ -60,11 +65,6 @@ void DelayedExecutor::_k_storageSetupDone(Solid::ErrorType error, QVariant error
     if (!error) {
         delayedExecute(udi);
     }
-}
-
-void DeviceServiceAction::setService(const KServiceAction &service)
-{
-    m_service = service;
 }
 
 int MacroExpander::expandEscapedMacro(const QString &str, int pos, QStringList &ret)

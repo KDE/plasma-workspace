@@ -13,9 +13,8 @@
 class DeviceServiceAction
 {
 public:
+    DeviceServiceAction(const KServiceAction &service);
     void execute(Solid::Device &device);
-
-    void setService(const KServiceAction &service);
 
 private:
     KServiceAction m_service;
