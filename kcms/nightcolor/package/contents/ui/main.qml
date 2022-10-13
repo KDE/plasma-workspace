@@ -84,7 +84,7 @@ KCM.SimpleKCM {
             Layout.alignment: Qt.AlignHCenter
 
             Layout.maximumWidth: Math.round(root.width - (Kirigami.Units.gridUnit * 2))
-            text: i18n("The blue light filter makes the colors on the screen warmer.")
+            text: i18n("Night Color switches the color scheme and makes the colors on the screen warmer.")
             wrapMode: Text.WordWrap
         }
 
@@ -171,6 +171,25 @@ KCM.SimpleKCM {
                 Kirigami.FormData.isSection: true
             }
 
+            QQC2.TextField {
+                id: schemeChooserDay
+                enabled: kcm.nightColorSettings.active && kcm.nightColorSettings.mode !== NightColorMode.Constant
+
+                Kirigami.FormData.label: i18n("Day color scheme:")
+
+                Layout.minimumWidth: modeSwitcher.width
+
+                text: kcm.nightColorSettings.dayScheme
+                onTextChanged: {
+                    kcm.nightColorSettings.dayScheme = value;
+                }
+                KCM.SettingStateBinding {
+                    configObject: kcm.nightColorSettings
+                    settingName: "DayScheme"
+                    extraEnabledConditions: kcm.nightColorSettings.active
+                }
+            }
+
             GridLayout {
                 Kirigami.FormData.label: i18n("Day color temperature:")
                 Kirigami.FormData.buddyFor: tempSliderDay
@@ -228,6 +247,25 @@ KCM.SimpleKCM {
                     text: tempSliderDay.value == tempSliderDay.to ? i18nc("No blue light filter activated", "Cool (no filter)") : i18nc("Night colour blue-ish", "Cool")
                 }
                 Item {}
+            }
+
+            QQC2.TextField {
+                id: schemeChooserNight
+                enabled: kcm.nightColorSettings.active
+
+                Kirigami.FormData.label: i18n("Night color scheme:")
+
+                Layout.minimumWidth: modeSwitcher.width
+
+                text: kcm.nightColorSettings.nightScheme
+                onTextChanged: {
+                    kcm.nightColorSettings.nightScheme = value;
+                }
+                KCM.SettingStateBinding {
+                    configObject: kcm.nightColorSettings
+                    settingName: "NightScheme"
+                    extraEnabledConditions: kcm.nightColorSettings.active
+                }
             }
 
             GridLayout {
