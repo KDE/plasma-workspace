@@ -69,7 +69,9 @@ void ImageFinder::run()
                 }
 
                 // add this to the directories we should be looking at
-                m_paths.append(realwp.filePath());
+                if (!m_paths.contains(realwp.filePath())) {
+                    m_paths.append(realwp.filePath());
+                }
             }
         }
     }
