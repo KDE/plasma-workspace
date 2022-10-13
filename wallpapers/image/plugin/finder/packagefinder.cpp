@@ -42,6 +42,7 @@ void PackageFinder::run()
         }
 
         if (!QFile::exists(folderPath + QLatin1String("/metadata.desktop")) && !QFile::exists(folderPath + QLatin1String("/metadata.json"))) {
+            folders << folderPath;
             return false;
         }
 
@@ -66,6 +67,7 @@ void PackageFinder::run()
             return true;
         }
 
+        folders << folderPath;
         return false; // Not found
     };
 
