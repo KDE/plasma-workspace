@@ -34,7 +34,7 @@ void PackageFinder::run()
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
 
     const auto addPackage = [this, &package, &packages, &folders](const QString &_folderPath) {
-        const QString folderPath = _folderPath.endsWith(QDir::separator()) ? _folderPath : _folderPath + QDir::separator();
+        const QString folderPath = findSymlinkTarget(_folderPath);
 
         if (folders.contains(folderPath)) {
             // The folder has been added, return true to skip it.
@@ -75,7 +75,7 @@ void PackageFinder::run()
         const QString &path = m_paths.at(i);
         const QFileInfo info(path);
 
-        if (!info.exists() || info.isFile()) {
+        if (!info.isDir()) {
             continue;
         }
 
@@ -88,15 +88,13 @@ void PackageFinder::run()
         const QFileInfoList files = dir.entryInfoList();
 
         for (const QFileInfo &wp : files) {
-            const QString folderPath = findSymlinkTarget(wp);
-
             if (wp.fileName().startsWith(QLatin1Char('.'))) {
                 continue;
             }
 
-            if (!addPackage(folderPath)) {
+            if (!addPackage(wp.filePath())) {
                 // Add this to the directories we should be looking at
-                m_paths.append(folderPath);
+                m_paths.append(wp.filePath());
             }
         }
     }

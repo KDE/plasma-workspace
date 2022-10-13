@@ -53,25 +53,23 @@ void ImageFinder::run()
             continue;
         }
 
-        dir.setPath(path);
+        dir.setPath(target);
         const QFileInfoList files = dir.entryInfoList();
 
         for (const QFileInfo &wp : files) {
-            const QString t = findSymlinkTarget(wp);
+            const QFileInfo realwp(findSymlinkTarget(wp));
 
-            if (wp.isFile()) {
-                if (filterCondition(wp) && !wp.isSymLink()) {
-                    images.append(t);
+            if (realwp.isFile()) {
+                if (filterCondition(realwp) && !realwp.isSymLink()) {
+                    images.append(realwp.filePath());
                 }
-            } else {
-                const QString name = wp.fileName();
-
-                if (name.startsWith(QLatin1Char('.'))) {
+            } else if (realwp.isDir()) {
+                if (realwp.fileName().startsWith(QLatin1Char('.'))) {
                     continue;
                 }
 
                 // add this to the directories we should be looking at
-                m_paths.append(wp.filePath());
+                m_paths.append(realwp.filePath());
             }
         }
     }
