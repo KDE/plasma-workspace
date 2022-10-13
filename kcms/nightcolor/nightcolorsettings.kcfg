@@ -23,6 +23,12 @@
             </choices>
             <default>Automatic</default>
         </entry>
+        <entry name="DayScheme" type="String">
+            <default>BreezeLight</default>
+        </entry>
+        <entry name="NightScheme" type="String">
+            <default>BreezeDark</default>
+        </entry>
         <entry name="NightTemperatureEnabled" type="Bool">
             <default>true</default>
         </entry>
