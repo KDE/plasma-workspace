@@ -11,10 +11,9 @@
 IconSizeCategoryModel::IconSizeCategoryModel(QObject *parent)
     : QAbstractListModel(parent)
     , m_data({
-          {QStringLiteral("toolbarSize"), i18n("Toolbar"), QStringLiteral("Toolbar"), KIconLoader::Toolbar},
           {QStringLiteral("mainToolbarSize"), i18n("Main Toolbar"), QStringLiteral("MainToolbar"), KIconLoader::MainToolbar},
+          {QStringLiteral("toolbarSize"), i18n("Secondary Toolbars"), QStringLiteral("Toolbar"), KIconLoader::Toolbar},
           {QStringLiteral("smallSize"), i18n("Small Icons"), QStringLiteral("Small"), KIconLoader::Small},
-          {QStringLiteral("panelSize"), i18n("Panel"), QStringLiteral("Panel"), KIconLoader::Panel},
           {QStringLiteral("dialogSize"), i18n("Dialogs"), QStringLiteral("Dialog"), KIconLoader::Dialog},
       })
 {
