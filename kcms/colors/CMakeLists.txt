@@ -10,6 +10,29 @@ set(kcm_colors_SRCS
 )
 
 qt_generate_dbus_interface(
+    colorSchemeService/colorSchemeService.h
+    org.kde.plasmashell.colorScheme.xml
+    OPTIONS -M
+)
+
+set(plasma-colorscheme-service_SRCS
+    colorSchemeService/colorSchemeService.cpp
+    colorsapplicator.cpp
+    colorsmodel.cpp
+    ../kcms-common.cpp
+    ../krdb/krdb.cpp
+)
+
+set(plasma-colorscheme-service_SRCS
+    ${plasma-colorscheme-service_SRCS}
+    ${CMAKE_CURRENT_BINARY_DIR}/org.kde.plasmashell.colorScheme.xml
+)
+
+qt_add_dbus_adaptor(plasma-colorscheme-service_SRCS ${CMAKE_CURRENT_BINARY_DIR}/org.kde.plasmashell.colorScheme.xml
+                     colorSchemeService/colorSchemeService.h ColorSchemeService
+                     colorscheme_service_adaptor ColorSchemeServiceAdaptor)
+
+qt_generate_dbus_interface(
     accentColorService/accentColorService.h
     org.kde.plasmashell.accentColor.xml
     OPTIONS -M
@@ -21,7 +44,6 @@ set(plasma-accentcolor-service_SRCS
     ../kcms-common.cpp
     ../krdb/krdb.cpp
 )
-
 
 set(plasma-accentcolor-service_SRCS
     ${plasma-accentcolor-service_SRCS}
@@ -78,9 +100,11 @@ set(plasma-apply-colorscheme_SRCS
 )
 
 kconfig_add_kcfg_files(plasma-apply-colorscheme_SRCS colorssettings.kcfgc GENERATE_MOC)
+kconfig_add_kcfg_files(plasma-colorscheme-service_SRCS colorssettings.kcfgc GENERATE_MOC)
 kconfig_add_kcfg_files(plasma-accentcolor-service_SRCS colorssettings.kcfgc GENERATE_MOC)
 
 add_executable(plasma-apply-colorscheme ${plasma-apply-colorscheme_SRCS})
+kcoreaddons_add_plugin(plasma_colorscheme_service SOURCES ${plasma-colorscheme-service_SRCS} INSTALL_NAMESPACE "kf${QT_MAJOR_VERSION}/kded")
 kcoreaddons_add_plugin(plasma_accentcolor_service SOURCES ${plasma-accentcolor-service_SRCS} INSTALL_NAMESPACE "kf${QT_MAJOR_VERSION}/kded")
 
 target_link_libraries(plasma-apply-colorscheme
@@ -91,6 +115,19 @@ target_link_libraries(plasma-apply-colorscheme
     KF5::KCMUtils
     KF5::I18n
     KF5::WindowSystem
+    PW::KWorkspace
+    X11::X11
+)
+
+target_link_libraries(plasma_colorscheme_service
+    Qt::Core
+    Qt::DBus
+    KF5::GuiAddons
+    KF5::KCMUtils
+    KF5::I18n
+    KF5::WindowSystem
+    KF5::ConfigCore
+    KF5::DBusAddons
     PW::KWorkspace
     X11::X11
 )
@@ -113,6 +150,12 @@ if (QT_MAJOR_VERSION EQUAL "5")
     target_link_libraries(plasma-apply-colorscheme Qt::X11Extras)
 else()
     target_link_libraries(plasma-apply-colorscheme Qt::GuiPrivate)
+endif()
+
+if (QT_MAJOR_VERSION EQUAL "5")
+    target_link_libraries(plasma_colorscheme_service Qt::X11Extras)
+else()
+    target_link_libraries(plasma_colorscheme_service Qt::GuiPrivate)
 endif()
 
 if (QT_MAJOR_VERSION EQUAL "5")

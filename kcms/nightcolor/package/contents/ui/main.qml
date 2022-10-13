@@ -190,6 +190,41 @@ KCM.SimpleKCM {
                 }
             }
 
+//             QQC2.ComboBox {
+//                 id: schemeChooserDay
+//                 enabled: kcm.nightColorSettings.active && kcm.nightColorSettings.mode !== NightColorMode.Constant
+// 
+//                 Layout.minimumWidth: modeSwitcher.width
+// 
+//                 Kirigami.FormData.label: i18n("Day color scheme:")
+//                 model: []
+// 
+//                 onCurrentIndexChanged: {
+//                     kcm.nightColorSettings.dayTemperature = value
+//                     cA.preview(value)
+// 
+//                     // This can fire for scroll events; in this case we need
+//                     // to use a timer to make the preview message disappear, since
+//                     // we can't make it disappear in the onPressedChanged handler
+//                     // since there is no press
+//                     if (!pressed) {
+//                         previewTimer.restart()
+//                     }
+//                 }
+//                 onPressedChanged: {
+//                     if (!pressed) {
+//                         cA.stopPreview()
+//                     }
+//                 }
+// 
+//                 KCM.SettingStateBinding {
+//                     configObject: kcm.nightColorSettings
+//                     settingName: "DayTemperature"
+//                     extraEnabledConditions: kcm.nightColorSettings.active
+//                 }
+//             }
+
+
             GridLayout {
                 Kirigami.FormData.label: i18n("Day color temperature:")
                 Kirigami.FormData.buddyFor: tempSliderDay
