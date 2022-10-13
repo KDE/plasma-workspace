@@ -1,0 +1,8 @@
+{
+    "KPlugin": {
+        "Description": "Applies given color scheme on request",
+        "Name": "Color Scheme"
+    },
+    "X-KDE-FactoryName": "colorSchemeService",
+    "X-KDE-Kded-autoload": true
+}
