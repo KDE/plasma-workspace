@@ -1,16 +1,16 @@
 # Translation of plasma_engine_soliddevice.po to Catalan (Valencian)
-# Copyright (C) 2009-2021 This_file_is_part_of_KDE
+# Copyright (C) 2009-2022 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2018, 2020, 2021.
+# Josep M. Ferrer <txemaq@gmail.com>, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2018, 2020, 2021, 2022.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-03-10 00:46+0000\n"
-"PO-Revision-Date: 2021-11-22 19:44+0100\n"
+"PO-Revision-Date: 2022-10-11 13:45+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
