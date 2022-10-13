@@ -18,6 +18,7 @@ import org.kde.private.kcms.icons 1.0 as Private
 
 KCM.GridViewKCM {
     id: root
+
     KCM.ConfigModule.quickHelp: i18n("This module allows you to choose the icons for your desktop.")
 
     view.model: kcm.iconsModel
@@ -230,10 +231,9 @@ KCM.GridViewKCM {
                 display: QtControls.ToolButton.TextBesideIcon
                 flat: false
                 checkable: true
-                checked: iconSizePopupLoader.item && iconSizePopupLoader.item.opened
+                checked: iconSizeSheet.sheetOpen
                 onClicked: {
-                    iconSizePopupLoader.active = true;
-                    iconSizePopupLoader.item.open();
+                    iconSizeSheet.sheetOpen = true;
                 }
             }
 
@@ -264,11 +264,54 @@ KCM.GridViewKCM {
     }
 
     Loader {
-        id: iconSizePopupLoader
+        id: newStuffPage
+
+        // Use this function to open the dialog. It seems roundabout, but this ensures
+        // that the dialog is not constructed until we want it to be shown the first time,
+        // since it will initialise itself on the first load (which causes it to phone
+        // home) and we don't want that until the user explicitly asks for it.
+        function open() {
+            if (item) {
+                item.open();
+            } else {
+                active = true;
+            }
+        }
+        onLoaded: {
+            item.open();
+        }
+
         active: false
-        sourceComponent: IconSizePopup {
-            parent: iconSizesButton
-            y: -height
+        asynchronous: true
+
+        sourceComponent: NewStuff.Dialog {
+            configFile: "icons.knsrc"
+            viewMode: NewStuff.Page.ViewMode.Preview
+            Connections {
+                target: newStuffPage.item.engine
+                function onEntryEvent(entry, event) {
+                    if (event == 2) { // AdoptedEvent
+                        kcm.reloadConfig();
+                    } else if (event == 1) { // StatusChangedEvent
+                        kcm.ghnsEntriesChanged();
+                    }
+                }
+            }
+        }
+    }
+
+    Kirigami.OverlaySheet {
+        id: iconSizeSheet
+        parent: root.parent
+
+        onSheetOpenChanged: content.opened();
+
+        header: Kirigami.Heading {
+            text: i18nc("@title:window", "Configure Icon Sizes")
+        }
+
+        IconSizePopup {
+            id: content
         }
     }
 
