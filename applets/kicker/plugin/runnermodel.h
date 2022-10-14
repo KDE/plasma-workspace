@@ -73,6 +73,7 @@ Q_SIGNALS:
     void queryFinished();
     void mergeResultsChanged() const;
     void deleteWhenEmptyChanged();
+    void requestUpdateQuery(const QString &query);
 
 private Q_SLOTS:
     void startQuery();

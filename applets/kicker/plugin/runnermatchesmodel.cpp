@@ -25,6 +25,7 @@ RunnerMatchesModel::RunnerMatchesModel(const QString &runnerId, const QString &n
     , m_name(name)
     , m_runnerManager(manager)
 {
+    connect(m_runnerManager, &Plasma::RunnerManager::setSearchTerm, this, &RunnerMatchesModel::requestUpdateQueryString);
 }
 
 QString RunnerMatchesModel::description() const
@@ -191,9 +192,7 @@ bool RunnerMatchesModel::trigger(int row, const QString &actionId, const QVarian
             match.setSelectedAction(action);
         }
 
-        m_runnerManager->run(match);
-
-        return true;
+        return m_runnerManager->runMatch(match);
     }
 
     QObject *appletInterface = static_cast<RunnerModel *>(parent())->appletInterface();

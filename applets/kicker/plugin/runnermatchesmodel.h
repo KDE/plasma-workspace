@@ -46,6 +46,8 @@ public:
 
     AbstractModel *favoritesModel() override;
 
+    Q_SIGNAL void requestUpdateQueryString(const QString &term);
+
 private:
     QString m_runnerId;
     QString m_name;

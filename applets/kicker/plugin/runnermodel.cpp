@@ -229,6 +229,7 @@ void RunnerModel::matchesChanged(const QList<Plasma::QueryMatch> &matches)
 
         if (m_models.isEmpty()) {
             matchesModel = new RunnerMatchesModel(QString(), i18n("Search results"), m_runnerManager, this);
+            connect(matchesModel, &RunnerMatchesModel::requestUpdateQueryString, this, &RunnerModel::requestUpdateQuery);
 
             beginInsertRows(QModelIndex(), 0, 0);
             m_models.append(matchesModel);
