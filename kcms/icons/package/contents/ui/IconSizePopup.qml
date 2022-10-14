@@ -15,12 +15,10 @@ RowLayout {
 
     signal opened
     onOpened: {
-        if (visible) {
-            iconSizeSlider.sizes = kcm.availableIconSizes(iconTypeList.currentIndex);
-            iconSizeSlider.updateSizes()
-            // can we do this automatically with "focus: true" somewhere?
-            iconTypeList.forceActiveFocus();
-        }
+        iconSizeSlider.sizes = kcm.availableIconSizes(iconTypeList.currentIndex);
+        iconSizeSlider.updateSizes()
+        // can we do this automatically with "focus: true" somewhere?
+        iconTypeList.forceActiveFocus();
     }
 
     Connections {
