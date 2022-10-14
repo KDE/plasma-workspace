@@ -249,18 +249,18 @@ QUrl windowUrlFromMetadata(const QString &appId, quint32 pid, KSharedConfig::Ptr
             //   window with the given string as its WM class or WM name hint.
             //
             // Source: https://specifications.freedesktop.org/startup-notification-spec/startup-notification-0.1.txt
-            if (services.isEmpty()) {
-                services = KApplicationTrader::query([&appId](const KService::Ptr &service) {
-                    return service->property(QStringLiteral("StartupWMClass")).toString().compare(appId, Qt::CaseInsensitive) == 0;
-                });
-                sortServicesByMenuId(services, appId);
-            }
-
             if (services.isEmpty() && !xWindowsWMClassName.isEmpty()) {
                 services = KApplicationTrader::query([&xWindowsWMClassName](const KService::Ptr &service) {
                     return service->property(QStringLiteral("StartupWMClass")).toString().compare(xWindowsWMClassName, Qt::CaseInsensitive) == 0;
                 });
                 sortServicesByMenuId(services, xWindowsWMClassName);
+            }
+
+            if (services.isEmpty()) {
+                services = KApplicationTrader::query([&appId](const KService::Ptr &service) {
+                    return service->property(QStringLiteral("StartupWMClass")).toString().compare(appId, Qt::CaseInsensitive) == 0;
+                });
+                sortServicesByMenuId(services, appId);
             }
 
             // Evaluate rewrite rules from config.
