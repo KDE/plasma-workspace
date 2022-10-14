@@ -23,7 +23,7 @@ KCM.SimpleKCM {
     Kirigami.Action {
         id: kscreenAction
         visible: KCMShell.authorize("kcm_kscreen.desktop").length > 0
-        text: i18n("Change Display Scaling…")
+        text: i18n("Adjust Global Scale…")
         iconName: "preferences-desktop-display"
         onTriggered: KCMShell.open("kcm_kscreen")
     }
@@ -48,7 +48,7 @@ KCM.SimpleKCM {
             id: hugeFontsMessage
             Layout.fillWidth: true
             showCloseButton: true
-            text: i18n("Very large fonts may produce odd-looking results. Consider adjusting the global screen scale instead of using a very large font size.")
+            text: i18n("Very large fonts may produce odd-looking results. Instead of using a very large font size, consider adjusting the global screen scale.")
 
             Connections {
                 target: kcm
