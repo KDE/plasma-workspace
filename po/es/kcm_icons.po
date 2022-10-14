@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"POT-Creation-Date: 2022-10-14 00:48+0000\n"
 "PO-Revision-Date: 2021-05-27 01:08+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -132,22 +132,29 @@ msgstr "Instalando temas de iconos..."
 msgid "Installing %1 theme…"
 msgstr "Instalando el tema %1..."
 
-#: package/contents/ui/main.qml:21
+#: package/contents/ui/IconSizePopup.qml:97
+#, fuzzy, kde-format
+#| msgid "Size:"
+msgctxt "@label:slider"
+msgid "Size:"
+msgstr "Tamaño:"
+
+#: package/contents/ui/main.qml:22
 #, kde-format
 msgid "This module allows you to choose the icons for your desktop."
 msgstr "Este módulo le permite escoger los iconos para su escritorio."
 
-#: package/contents/ui/main.qml:147
+#: package/contents/ui/main.qml:148
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "Eliminar tema de iconos"
 
-#: package/contents/ui/main.qml:154
+#: package/contents/ui/main.qml:155
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "Restaurar tema de iconos"
 
-#: package/contents/ui/main.qml:228
+#: package/contents/ui/main.qml:229
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr "Configurar los tamaños de los iconos"
@@ -162,12 +169,19 @@ msgstr "Instalar desde archivo..."
 msgid "Get New Icons…"
 msgstr "Obtener nuevos iconos..."
 
-#: package/contents/ui/main.qml:279
+#: package/contents/ui/main.qml:273
+#, fuzzy, kde-format
+#| msgid "Configure Icon Sizes"
+msgctxt "@title:window"
+msgid "Configure Icon Sizes"
+msgstr "Configurar los tamaños de los iconos"
+
+#: package/contents/ui/main.qml:285
 #, kde-format
 msgid "Open Theme"
 msgstr "Abrir tema"
 
-#: package/contents/ui/main.qml:281
+#: package/contents/ui/main.qml:287
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Archivos de temas (*.tar.gz *.tar.bz2)"
@@ -227,9 +241,6 @@ msgstr "Archivos de temas (*.tar.gz *.tar.bz2)"
 #~ msgctxt "@label The icon rendered as disabled"
 #~ msgid "Disabled"
 #~ msgstr "Desactivado"
-
-#~ msgid "Size:"
-#~ msgstr "Tamaño:"
 
 #~ msgid "Enable icon animations"
 #~ msgstr "Activar animación de iconos"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"POT-Creation-Date: 2022-10-14 00:48+0000\n"
 "PO-Revision-Date: 2008-12-28 14:57+0200\n"
 "Last-Translator: Omer Ensari <oensari@gmail.com>\n"
 "Language-Team: Kurdish <ku@li.org>\n"
@@ -130,24 +130,31 @@ msgstr "Saz kirina dirbên îkonê"
 msgid "Installing %1 theme…"
 msgstr "Saz kirina dirbên îkonê"
 
-#: package/contents/ui/main.qml:21
+#: package/contents/ui/IconSizePopup.qml:97
+#, fuzzy, kde-format
+#| msgid "Size:"
+msgctxt "@label:slider"
+msgid "Size:"
+msgstr "Mezinahî:"
+
+#: package/contents/ui/main.qml:22
 #, kde-format
 msgid "This module allows you to choose the icons for your desktop."
 msgstr ""
 
-#: package/contents/ui/main.qml:147
+#: package/contents/ui/main.qml:148
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Remove Icon Theme"
 msgstr "Dirbî Rake"
 
-#: package/contents/ui/main.qml:154
+#: package/contents/ui/main.qml:155
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Restore Icon Theme"
 msgstr "Dirbî Rake"
 
-#: package/contents/ui/main.qml:228
+#: package/contents/ui/main.qml:229
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr ""
@@ -164,13 +171,19 @@ msgstr "Dirbekî Nû Saz Bike..."
 msgid "Get New Icons…"
 msgstr "Dirbekî Nû Bîne..."
 
-#: package/contents/ui/main.qml:279
+#: package/contents/ui/main.qml:273
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Icon Sizes"
+msgstr ""
+
+#: package/contents/ui/main.qml:285
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Open Theme"
 msgstr "Dirbî Rake"
 
-#: package/contents/ui/main.qml:281
+#: package/contents/ui/main.qml:287
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""
@@ -218,9 +231,6 @@ msgstr ""
 #~ msgctxt "@label The icon rendered as disabled"
 #~ msgid "Disabled"
 #~ msgstr "Neçalakkirî"
-
-#~ msgid "Size:"
-#~ msgstr "Mezinahî:"
 
 #~ msgid "Set Effect..."
 #~ msgstr "Efekt Ava Bike..."

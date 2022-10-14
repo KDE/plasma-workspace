@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"POT-Creation-Date: 2022-10-14 00:48+0000\n"
 "PO-Revision-Date: 2009-08-05 21:58+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -129,24 +129,31 @@ msgstr "Memasang tema ikon"
 msgid "Installing %1 theme…"
 msgstr "Memasang tema ikon"
 
-#: package/contents/ui/main.qml:21
+#: package/contents/ui/IconSizePopup.qml:97
+#, fuzzy, kde-format
+#| msgid "Size:"
+msgctxt "@label:slider"
+msgid "Size:"
+msgstr "Saiz:"
+
+#: package/contents/ui/main.qml:22
 #, kde-format
 msgid "This module allows you to choose the icons for your desktop."
 msgstr ""
 
-#: package/contents/ui/main.qml:147
+#: package/contents/ui/main.qml:148
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Remove Icon Theme"
 msgstr "Buang Tema"
 
-#: package/contents/ui/main.qml:154
+#: package/contents/ui/main.qml:155
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Restore Icon Theme"
 msgstr "Buang Tema"
 
-#: package/contents/ui/main.qml:228
+#: package/contents/ui/main.qml:229
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr ""
@@ -163,13 +170,19 @@ msgstr "Pasang Fail Tema..."
 msgid "Get New Icons…"
 msgstr "Dapatkan Tema Baru..."
 
-#: package/contents/ui/main.qml:279
+#: package/contents/ui/main.qml:273
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Icon Sizes"
+msgstr ""
+
+#: package/contents/ui/main.qml:285
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Open Theme"
 msgstr "Buang Tema"
 
-#: package/contents/ui/main.qml:281
+#: package/contents/ui/main.qml:287
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""
@@ -217,9 +230,6 @@ msgstr ""
 #~ msgctxt "@label The icon rendered as disabled"
 #~ msgid "Disabled"
 #~ msgstr "Dimatikan"
-
-#~ msgid "Size:"
-#~ msgstr "Saiz:"
 
 #~ msgid "Set Effect..."
 #~ msgstr "Tetapka kesan..."

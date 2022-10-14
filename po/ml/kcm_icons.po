@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"POT-Creation-Date: 2022-10-14 00:48+0000\n"
 "PO-Revision-Date: 2020-11-30 16:14+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -126,22 +126,29 @@ msgstr "ചിഹ്ന പ്രമേയങ്ങള്‍ ചേര്‍ക�
 msgid "Installing %1 theme…"
 msgstr "%1 പ്രമേയം ചേര്‍ക്കുന്നു..."
 
-#: package/contents/ui/main.qml:21
+#: package/contents/ui/IconSizePopup.qml:97
+#, fuzzy, kde-format
+#| msgid "Size:"
+msgctxt "@label:slider"
+msgid "Size:"
+msgstr "വ്യാപ്തി:"
+
+#: package/contents/ui/main.qml:22
 #, kde-format
 msgid "This module allows you to choose the icons for your desktop."
 msgstr "ഈ മൊഡ്യൂള്‍ നിങ്ങളുടെ ഡെസ്ക്ടോപ്പിനായുള്ള ചിഹ്നങ്ങള്‍ തിരഞ്ഞെടുക്കാന്‍ സഹായിക്കും."
 
-#: package/contents/ui/main.qml:147
+#: package/contents/ui/main.qml:148
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "പ്രമേയം നീക്കം ചെയ്യുക"
 
-#: package/contents/ui/main.qml:154
+#: package/contents/ui/main.qml:155
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "പ്രമേയം തിരികെ കൊണ്ടുവരുക"
 
-#: package/contents/ui/main.qml:228
+#: package/contents/ui/main.qml:229
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr "ചിഹ്നങ്ങളുടെ വലിപ്പം ക്രമീകരിക്കുക"
@@ -158,12 +165,19 @@ msgstr "പ്രമേയം ഫയലില്‍ നിന്നും ചേ
 msgid "Get New Icons…"
 msgstr "പുതിയ പ്രമേയങ്ങള്‍ ലഭ്യമാക്കുക..."
 
-#: package/contents/ui/main.qml:279
+#: package/contents/ui/main.qml:273
+#, fuzzy, kde-format
+#| msgid "Configure Icon Sizes"
+msgctxt "@title:window"
+msgid "Configure Icon Sizes"
+msgstr "ചിഹ്നങ്ങളുടെ വലിപ്പം ക്രമീകരിക്കുക"
+
+#: package/contents/ui/main.qml:285
 #, kde-format
 msgid "Open Theme"
 msgstr "പ്രമേയം തുറക്കുക"
 
-#: package/contents/ui/main.qml:281
+#: package/contents/ui/main.qml:287
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "പ്രമേയ ഫയലുകള്‍ (*.tar.gz *.tar.bz2)"
@@ -218,9 +232,6 @@ msgstr "പ്രമേയ ഫയലുകള്‍ (*.tar.gz *.tar.bz2)"
 #~ msgctxt "@label The icon rendered as disabled"
 #~ msgid "Disabled"
 #~ msgstr "പ്രവര്‍ത്തന രഹിതം"
-
-#~ msgid "Size:"
-#~ msgstr "വ്യാപ്തി:"
 
 #~ msgid "Set Effect..."
 #~ msgstr "പ്രഭാവങ്ങള്‍ സജ്ജമാക്കുക..."

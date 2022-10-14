@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"POT-Creation-Date: 2022-10-14 00:48+0000\n"
 "PO-Revision-Date: 2008-11-27 09:56+0530\n"
 "Last-Translator: Kartik Mistry <kartik.mistry@gmail.com>\n"
 "Language-Team: Gujarati <kde-i18n-doc@lists.kde.org>\n"
@@ -128,24 +128,31 @@ msgstr "ચિહ્ન થીમ્સ સ્થાપિત કરે છે"
 msgid "Installing %1 theme…"
 msgstr "ચિહ્ન થીમ્સ સ્થાપિત કરે છે"
 
-#: package/contents/ui/main.qml:21
+#: package/contents/ui/IconSizePopup.qml:97
+#, fuzzy, kde-format
+#| msgid "Size:"
+msgctxt "@label:slider"
+msgid "Size:"
+msgstr "કદ:"
+
+#: package/contents/ui/main.qml:22
 #, kde-format
 msgid "This module allows you to choose the icons for your desktop."
 msgstr ""
 
-#: package/contents/ui/main.qml:147
+#: package/contents/ui/main.qml:148
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Remove Icon Theme"
 msgstr "થીમ દૂર કરો"
 
-#: package/contents/ui/main.qml:154
+#: package/contents/ui/main.qml:155
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Restore Icon Theme"
 msgstr "થીમ દૂર કરો"
 
-#: package/contents/ui/main.qml:228
+#: package/contents/ui/main.qml:229
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr ""
@@ -162,13 +169,19 @@ msgstr "થીમ સ્થાપિત કરો..."
 msgid "Get New Icons…"
 msgstr "નવી થીમ્સ મેળવો..."
 
-#: package/contents/ui/main.qml:279
+#: package/contents/ui/main.qml:273
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Icon Sizes"
+msgstr ""
+
+#: package/contents/ui/main.qml:285
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Open Theme"
 msgstr "થીમ દૂર કરો"
 
-#: package/contents/ui/main.qml:281
+#: package/contents/ui/main.qml:287
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""
@@ -216,9 +229,6 @@ msgstr ""
 #~ msgctxt "@label The icon rendered as disabled"
 #~ msgid "Disabled"
 #~ msgstr "નિષ્ક્રિય"
-
-#~ msgid "Size:"
-#~ msgstr "કદ:"
 
 #~ msgid "Set Effect..."
 #~ msgstr "અસર સ્થાપિત કરો..."

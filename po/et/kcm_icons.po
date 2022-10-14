@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"POT-Creation-Date: 2022-10-14 00:48+0000\n"
 "PO-Revision-Date: 2020-10-08 10:03+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -129,22 +129,29 @@ msgstr "Ikooniteemade paigaldamine..."
 msgid "Installing %1 theme…"
 msgstr "Ikooniteema %1 paigaldamine ..."
 
-#: package/contents/ui/main.qml:21
+#: package/contents/ui/IconSizePopup.qml:97
+#, fuzzy, kde-format
+#| msgid "Size:"
+msgctxt "@label:slider"
+msgid "Size:"
+msgstr "Suurus:"
+
+#: package/contents/ui/main.qml:22
 #, kde-format
 msgid "This module allows you to choose the icons for your desktop."
 msgstr "See moodul võimaldab valida töölauale ikoone."
 
-#: package/contents/ui/main.qml:147
+#: package/contents/ui/main.qml:148
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "Eemalda ikooniteema"
 
-#: package/contents/ui/main.qml:154
+#: package/contents/ui/main.qml:155
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "Taasta ikooniteema"
 
-#: package/contents/ui/main.qml:228
+#: package/contents/ui/main.qml:229
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr "Seadista ikoonisuurusi"
@@ -161,12 +168,19 @@ msgstr "Paigalda failist ..."
 msgid "Get New Icons…"
 msgstr "Hangi uusi ikoone ..."
 
-#: package/contents/ui/main.qml:279
+#: package/contents/ui/main.qml:273
+#, fuzzy, kde-format
+#| msgid "Configure Icon Sizes"
+msgctxt "@title:window"
+msgid "Configure Icon Sizes"
+msgstr "Seadista ikoonisuurusi"
+
+#: package/contents/ui/main.qml:285
 #, kde-format
 msgid "Open Theme"
 msgstr "Teema avamine"
 
-#: package/contents/ui/main.qml:281
+#: package/contents/ui/main.qml:287
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Teemafailid (*.tar.gz *.tar.bz2)"
@@ -223,9 +237,6 @@ msgstr "Teemafailid (*.tar.gz *.tar.bz2)"
 #~ msgctxt "@label The icon rendered as disabled"
 #~ msgid "Disabled"
 #~ msgstr "Keelatud"
-
-#~ msgid "Size:"
-#~ msgstr "Suurus:"
 
 #~ msgid "Set Effect..."
 #~ msgstr "Muuda efekti..."

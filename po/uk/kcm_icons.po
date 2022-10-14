@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm5_icons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"POT-Creation-Date: 2022-10-14 00:48+0000\n"
 "PO-Revision-Date: 2021-05-26 09:18+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -129,23 +129,30 @@ msgstr "Встановлюємо теми піктограм…"
 msgid "Installing %1 theme…"
 msgstr "Встановлюємо тему %1…"
 
-#: package/contents/ui/main.qml:21
+#: package/contents/ui/IconSizePopup.qml:97
+#, fuzzy, kde-format
+#| msgid "Size:"
+msgctxt "@label:slider"
+msgid "Size:"
+msgstr "Розмір:"
+
+#: package/contents/ui/main.qml:22
 #, kde-format
 msgid "This module allows you to choose the icons for your desktop."
 msgstr ""
 "За допомогою цього модуля ви можете вибрати піктограми для вашої стільниці."
 
-#: package/contents/ui/main.qml:147
+#: package/contents/ui/main.qml:148
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "Вилучення теми піктограм"
 
-#: package/contents/ui/main.qml:154
+#: package/contents/ui/main.qml:155
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "Відновити тему піктограм"
 
-#: package/contents/ui/main.qml:228
+#: package/contents/ui/main.qml:229
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr "Налаштувати розміри піктограм"
@@ -160,12 +167,19 @@ msgstr "Встановити з файла…"
 msgid "Get New Icons…"
 msgstr "Отримати нові піктограми…"
 
-#: package/contents/ui/main.qml:279
+#: package/contents/ui/main.qml:273
+#, fuzzy, kde-format
+#| msgid "Configure Icon Sizes"
+msgctxt "@title:window"
+msgid "Configure Icon Sizes"
+msgstr "Налаштувати розміри піктограм"
+
+#: package/contents/ui/main.qml:285
 #, kde-format
 msgid "Open Theme"
 msgstr "Відкриття теми"
 
-#: package/contents/ui/main.qml:281
+#: package/contents/ui/main.qml:287
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "файли тем (*.tar.gz *.tar.bz2)"
@@ -225,9 +239,6 @@ msgstr "файли тем (*.tar.gz *.tar.bz2)"
 #~ msgctxt "@label The icon rendered as disabled"
 #~ msgid "Disabled"
 #~ msgstr "Вимкнена"
-
-#~ msgid "Size:"
-#~ msgstr "Розмір:"
 
 #~ msgid "Enable icon animations"
 #~ msgstr "Увімкнути анімацію піктограм"

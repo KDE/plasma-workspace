@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"POT-Creation-Date: 2022-10-14 00:48+0000\n"
 "PO-Revision-Date: 2021-05-28 02:25+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -124,22 +124,29 @@ msgstr "아이콘 테마 설치 중…"
 msgid "Installing %1 theme…"
 msgstr "%1 테마 설치 중…"
 
-#: package/contents/ui/main.qml:21
+#: package/contents/ui/IconSizePopup.qml:97
+#, fuzzy, kde-format
+#| msgid "Size:"
+msgctxt "@label:slider"
+msgid "Size:"
+msgstr "크기:"
+
+#: package/contents/ui/main.qml:22
 #, kde-format
 msgid "This module allows you to choose the icons for your desktop."
 msgstr "이 모듈에서 바탕 화면에 사용할 아이콘을 설정할 수 있습니다."
 
-#: package/contents/ui/main.qml:147
+#: package/contents/ui/main.qml:148
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "아이콘 테마 삭제"
 
-#: package/contents/ui/main.qml:154
+#: package/contents/ui/main.qml:155
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "아이콘 테마 복원"
 
-#: package/contents/ui/main.qml:228
+#: package/contents/ui/main.qml:229
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr "아이콘 크기 설정"
@@ -154,12 +161,19 @@ msgstr "파일에서 설치…"
 msgid "Get New Icons…"
 msgstr "새 아이콘 가져오기…"
 
-#: package/contents/ui/main.qml:279
+#: package/contents/ui/main.qml:273
+#, fuzzy, kde-format
+#| msgid "Configure Icon Sizes"
+msgctxt "@title:window"
+msgid "Configure Icon Sizes"
+msgstr "아이콘 크기 설정"
+
+#: package/contents/ui/main.qml:285
 #, kde-format
 msgid "Open Theme"
 msgstr "테마 열기"
 
-#: package/contents/ui/main.qml:281
+#: package/contents/ui/main.qml:287
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "테마 파일 (*.tar.gz *.tar.bz2)"
@@ -219,9 +233,6 @@ msgstr "테마 파일 (*.tar.gz *.tar.bz2)"
 #~ msgctxt "@label The icon rendered as disabled"
 #~ msgid "Disabled"
 #~ msgstr "사용할 수 없음"
-
-#~ msgid "Size:"
-#~ msgstr "크기:"
 
 #~ msgid "Enable icon animations"
 #~ msgstr "아이콘 애니메이션 사용"

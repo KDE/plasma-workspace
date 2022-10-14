@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"POT-Creation-Date: 2022-10-14 00:48+0000\n"
 "PO-Revision-Date: 2021-08-10 21:27+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -126,22 +126,29 @@ msgstr "சின்னங்களுக்கான திட்டங்க�
 msgid "Installing %1 theme…"
 msgstr "%1 திட்டம் நிறுவப்படுகிறது…"
 
-#: package/contents/ui/main.qml:21
+#: package/contents/ui/IconSizePopup.qml:97
+#, fuzzy, kde-format
+#| msgid "Size:"
+msgctxt "@label:slider"
+msgid "Size:"
+msgstr "அளவு:"
+
+#: package/contents/ui/main.qml:22
 #, kde-format
 msgid "This module allows you to choose the icons for your desktop."
 msgstr "உங்கள் பணிமேடையில் பயன்படுத்தப்படும் சின்னங்களை தேர்ந்தெடுக்க இந்த கூறு உதவும்."
 
-#: package/contents/ui/main.qml:147
+#: package/contents/ui/main.qml:148
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "சின்னங்களுக்கான திட்டத்தை நீக்கு"
 
-#: package/contents/ui/main.qml:154
+#: package/contents/ui/main.qml:155
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "சின்னங்களுக்கான திட்டத்தை மீட்டெடு"
 
-#: package/contents/ui/main.qml:228
+#: package/contents/ui/main.qml:229
 #, kde-format
 msgid "Configure Icon Sizes"
 msgstr "சின்னங்களின் அளவுகளை அமை"
@@ -156,12 +163,19 @@ msgstr "கோப்பிலிருந்து நிறுவு…"
 msgid "Get New Icons…"
 msgstr "புதிய சின்னங்களை பெறு…"
 
-#: package/contents/ui/main.qml:279
+#: package/contents/ui/main.qml:273
+#, fuzzy, kde-format
+#| msgid "Configure Icon Sizes"
+msgctxt "@title:window"
+msgid "Configure Icon Sizes"
+msgstr "சின்னங்களின் அளவுகளை அமை"
+
+#: package/contents/ui/main.qml:285
 #, kde-format
 msgid "Open Theme"
 msgstr "திட்டத்தை திற"
 
-#: package/contents/ui/main.qml:281
+#: package/contents/ui/main.qml:287
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "தோற்றத்திட்ட கோப்புகள் (*.tar.gz *.tar.bz2)"
@@ -197,9 +211,6 @@ msgstr "தோற்றத்திட்ட கோப்புகள் (*.tar.
 #~ msgctxt "@label The icon rendered as disabled"
 #~ msgid "Disabled"
 #~ msgstr "இயங்கா"
-
-#~ msgid "Size:"
-#~ msgstr "அளவு:"
 
 #~ msgid "Set Effect..."
 #~ msgstr "விளைவு அமை"
