@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-14 00:48+0000\n"
+"POT-Creation-Date: 2022-10-15 00:48+0000\n"
 "PO-Revision-Date: 2019-07-28 12:43+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -138,7 +138,7 @@ msgstr "Estanse a instalar temas de iconas…"
 msgid "Installing %1 theme…"
 msgstr "Instalando o tema %1…"
 
-#: package/contents/ui/IconSizePopup.qml:97
+#: package/contents/ui/IconSizePopup.qml:95
 #, fuzzy, kde-format
 #| msgid "Size:"
 msgctxt "@label:slider"

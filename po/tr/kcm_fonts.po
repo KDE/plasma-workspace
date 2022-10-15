@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-03 00:45+0000\n"
+"POT-Creation-Date: 2022-10-15 00:48+0000\n"
 "PO-Revision-Date: 2022-05-03 12:47+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -143,9 +143,10 @@ msgid "This module lets you configure the system fonts."
 msgstr "Bu modül, sistem yazıtiplerini yapılandırmanıza izin verir."
 
 #: package/contents/ui/main.qml:26
-#, kde-format
-msgid "Change Display Scaling…"
-msgstr "Ekran Ölçeğini Değiştir…"
+#, fuzzy, kde-format
+#| msgid "&Adjust All Fonts…"
+msgid "Adjust Global Scale…"
+msgstr "&Tüm Yazıtiplerini Ayarla…"
 
 #: package/contents/ui/main.qml:37
 #, kde-format
@@ -157,10 +158,13 @@ msgstr ""
 "uygulamaları etkiler."
 
 #: package/contents/ui/main.qml:51
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Very large fonts may produce odd-looking results. Consider adjusting the "
+#| "global screen scale instead of using a very large font size."
 msgid ""
-"Very large fonts may produce odd-looking results. Consider adjusting the "
-"global screen scale instead of using a very large font size."
+"Very large fonts may produce odd-looking results. Instead of using a very "
+"large font size, consider adjusting the global screen scale."
 msgstr ""
 "Çok büyük yazıtipleri tuhaf görünen sonuçlar üretebilir. Çok büyük bir yazı "
 "tipi boyutu kullanmak yerine genel ekran ölçeğini ayarlamayı düşünün."
@@ -366,3 +370,6 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Yazıtipi Seç"
+
+#~ msgid "Change Display Scaling…"
+#~ msgstr "Ekran Ölçeğini Değiştir…"

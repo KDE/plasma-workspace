@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-14 00:48+0000\n"
+"POT-Creation-Date: 2022-10-15 00:48+0000\n"
 "PO-Revision-Date: 2014-10-28 10:30+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -130,7 +130,7 @@ msgstr "चिन्ह शैली प्रतिष्ठापीत कर
 msgid "Installing %1 theme…"
 msgstr "चिन्ह शैली प्रतिष्ठापीत करत आहे..."
 
-#: package/contents/ui/IconSizePopup.qml:97
+#: package/contents/ui/IconSizePopup.qml:95
 #, fuzzy, kde-format
 #| msgid "Size:"
 msgctxt "@label:slider"

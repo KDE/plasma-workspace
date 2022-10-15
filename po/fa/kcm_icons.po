@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-14 00:48+0000\n"
+"POT-Creation-Date: 2022-10-15 00:48+0000\n"
 "PO-Revision-Date: 2011-12-15 00:29+0330\n"
 "Last-Translator: Mohammad Reza Mirdamadi <mohi@linuxshop.ir>\n"
 "Language-Team: Farsi (Persian) <>\n"
@@ -130,7 +130,7 @@ msgstr "نصب چهره‌های شمایل"
 msgid "Installing %1 theme…"
 msgstr "نصب چهره‌های شمایل"
 
-#: package/contents/ui/IconSizePopup.qml:97
+#: package/contents/ui/IconSizePopup.qml:95
 #, fuzzy, kde-format
 #| msgid "Size:"
 msgctxt "@label:slider"

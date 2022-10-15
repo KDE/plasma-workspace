@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-14 00:48+0000\n"
+"POT-Creation-Date: 2022-10-15 00:48+0000\n"
 "PO-Revision-Date: 2021-07-28 13:31+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -126,7 +126,7 @@ msgstr "प्रतीक प्रसंग संस्थापित कि
 msgid "Installing %1 theme…"
 msgstr "%1 प्रसंग संस्थापित किया जा रहा है..."
 
-#: package/contents/ui/IconSizePopup.qml:97
+#: package/contents/ui/IconSizePopup.qml:95
 #, fuzzy, kde-format
 #| msgid "Size:"
 msgctxt "@label:slider"

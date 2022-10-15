@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-03 00:45+0000\n"
+"POT-Creation-Date: 2022-10-15 00:48+0000\n"
 "PO-Revision-Date: 2022-03-29 20:42+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -135,9 +135,10 @@ msgid "This module lets you configure the system fonts."
 msgstr "यह मॉड्यूल आपको सिस्टम फोंट को विन्यस्त करने देता है ।"
 
 #: package/contents/ui/main.qml:26
-#, kde-format
-msgid "Change Display Scaling…"
-msgstr "प्रदर्शक अनुमाप बदलें…"
+#, fuzzy, kde-format
+#| msgid "&Adjust All Fonts…"
+msgid "Adjust Global Scale…"
+msgstr "सभी फ़ॉन्ट्स समंजित करें... (&A)"
 
 #: package/contents/ui/main.qml:37
 #, kde-format
@@ -148,10 +149,13 @@ msgstr ""
 "एंटी-अलियासिंग या डीपीआई जैसे कुछ बदलाव केवल नए शुरू किए गए अनुप्रयोगों को प्रभावित करेंगे।"
 
 #: package/contents/ui/main.qml:51
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Very large fonts may produce odd-looking results. Consider adjusting the "
+#| "global screen scale instead of using a very large font size."
 msgid ""
-"Very large fonts may produce odd-looking results. Consider adjusting the "
-"global screen scale instead of using a very large font size."
+"Very large fonts may produce odd-looking results. Instead of using a very "
+"large font size, consider adjusting the global screen scale."
 msgstr ""
 "बहुत बड़े फ़ॉन्ट अजीब दिखने वाले परिणाम दे सकते हैं। बहुत बड़े फ़ॉन्ट आकार का उपयोग करने के "
 "बजाय वैश्विक स्क्रीन अनुमाप को समायोजित करने पर विचार करें।"
@@ -350,6 +354,9 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "फ़ॉन्ट चुनें"
+
+#~ msgid "Change Display Scaling…"
+#~ msgstr "प्रदर्शक अनुमाप बदलें…"
 
 #~ msgctxt "@info:tooltip Force fonts DPI"
 #~ msgid ""

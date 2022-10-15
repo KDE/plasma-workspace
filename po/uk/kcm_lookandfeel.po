@@ -113,7 +113,7 @@ msgstr ""
 #: package/contents/ui/main.qml:53
 #, kde-format
 msgid "Contains Desktop layout"
-msgstr "Місить компонування стільниці"
+msgstr "Містить компонування стільниці"
 
 #: package/contents/ui/main.qml:67
 #, kde-format

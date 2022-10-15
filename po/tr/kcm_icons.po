@@ -11,20 +11,21 @@
 # H. İbrahim Güngör <ibrahim@pardus.org.tr>, 2010.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2017, 2021.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
+# Emir SARI <emir_sari@icloud.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-14 00:48+0000\n"
-"PO-Revision-Date: 2021-07-08 17:40+0200\n"
-"Last-Translator: Volkan Gezer <volkangezer@gmail.com>\n"
+"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"PO-Revision-Date: 2022-10-14 12:05+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 20.12.3\n"
+"X-Generator: Lokalize 22.08.1\n"
 
 #: iconsizecategorymodel.cpp:14
 #, kde-format
@@ -131,11 +132,11 @@ msgstr "Simge teması kuruluyor…"
 msgid "Installing %1 theme…"
 msgstr "%1 teması kuruluyor…"
 
-#: package/contents/ui/IconSizePopup.qml:97
+#: package/contents/ui/IconSizePopup.qml:95
 #, kde-format
 msgctxt "@label:slider"
 msgid "Size:"
-msgstr ""
+msgstr "Boyut:"
 
 #: package/contents/ui/main.qml:22
 #, kde-format
@@ -168,8 +169,7 @@ msgid "Get New Icons…"
 msgstr "Yeni Simgeler Al…"
 
 #: package/contents/ui/main.qml:273
-#, fuzzy, kde-format
-#| msgid "Configure Icon Sizes"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
 msgstr "Simge Boyutlarını Yapılandır"

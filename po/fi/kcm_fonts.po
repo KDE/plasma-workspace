@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-03 00:45+0000\n"
+"POT-Creation-Date: 2022-10-15 00:48+0000\n"
 "PO-Revision-Date: 2022-06-11 19:00+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -145,9 +145,10 @@ msgid "This module lets you configure the system fonts."
 msgstr "Tässä voit asettaa järjestelmän fontit."
 
 #: package/contents/ui/main.qml:26
-#, kde-format
-msgid "Change Display Scaling…"
-msgstr "Muuta näytön skaalausta…"
+#, fuzzy, kde-format
+#| msgid "&Adjust All Fonts…"
+msgid "Adjust Global Scale…"
+msgstr "&Säädä kaikkia fontteja…"
 
 #: package/contents/ui/main.qml:37
 #, kde-format
@@ -159,10 +160,13 @@ msgstr ""
 "käynnistetyissä ohjelmissa."
 
 #: package/contents/ui/main.qml:51
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Very large fonts may produce odd-looking results. Consider adjusting the "
+#| "global screen scale instead of using a very large font size."
 msgid ""
-"Very large fonts may produce odd-looking results. Consider adjusting the "
-"global screen scale instead of using a very large font size."
+"Very large fonts may produce odd-looking results. Instead of using a very "
+"large font size, consider adjusting the global screen scale."
 msgstr ""
 "Hyvin suuret fontit voivat näyttää oudolta. Suuren fonttikoon sijaan "
 "harkitse työpöydänlaajuisen skaalauksen käyttöä."
@@ -363,6 +367,9 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Valitse fontti"
+
+#~ msgid "Change Display Scaling…"
+#~ msgstr "Muuta näytön skaalausta…"
 
 #~ msgctxt "@info:tooltip Force fonts DPI"
 #~ msgid ""

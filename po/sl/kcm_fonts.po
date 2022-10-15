@@ -2,7 +2,7 @@
 # Translation of kcmfonts.po to Slovenian
 # KDEBASE TRANSLATION TO SLOVENIAN LANGUAGE.
 # Copyright (C) 2001, 2003, 2004, 2006, 2007 Free Software Foundation, Inc.
-# $Id: kcm_fonts.po 1623952 2022-05-05 01:33:01Z scripty $
+# $Id: kcm_fonts.po 1636124 2022-10-15 01:36:22Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@amis.net>, 2001.
@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-03 00:45+0000\n"
+"POT-Creation-Date: 2022-10-15 00:48+0000\n"
 "PO-Revision-Date: 2022-05-04 08:21+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -144,9 +144,10 @@ msgid "This module lets you configure the system fonts."
 msgstr "Ta modul omogoča nastavitve sistemske pisave."
 
 #: package/contents/ui/main.qml:26
-#, kde-format
-msgid "Change Display Scaling…"
-msgstr "Spremeni merilo velikosti zaslona…"
+#, fuzzy, kde-format
+#| msgid "&Adjust All Fonts…"
+msgid "Adjust Global Scale…"
+msgstr "Pril&agodi vse pisave…"
 
 #: package/contents/ui/main.qml:37
 #, kde-format
@@ -158,10 +159,13 @@ msgstr ""
 "novo zagnane programe."
 
 #: package/contents/ui/main.qml:51
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Very large fonts may produce odd-looking results. Consider adjusting the "
+#| "global screen scale instead of using a very large font size."
 msgid ""
-"Very large fonts may produce odd-looking results. Consider adjusting the "
-"global screen scale instead of using a very large font size."
+"Very large fonts may produce odd-looking results. Instead of using a very "
+"large font size, consider adjusting the global screen scale."
 msgstr ""
 "Zelo velike pisave lahko dajo čudne rezultate. Razmislite raje o "
 "prilagoditvi globalnega merila velikosti zaslona namesto uporabe zelo velike "
@@ -368,6 +372,9 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Izberi pisavo"
+
+#~ msgid "Change Display Scaling…"
+#~ msgstr "Spremeni merilo velikosti zaslona…"
 
 #~ msgctxt "@info:tooltip Force fonts DPI"
 #~ msgid ""

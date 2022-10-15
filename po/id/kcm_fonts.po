@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-03 00:45+0000\n"
+"POT-Creation-Date: 2022-10-15 00:48+0000\n"
 "PO-Revision-Date: 2022-09-27 18:12+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -136,9 +136,10 @@ msgid "This module lets you configure the system fonts."
 msgstr "Modul ini membiarkanmu mengkonfigurasi font sistem."
 
 #: package/contents/ui/main.qml:26
-#, kde-format
-msgid "Change Display Scaling…"
-msgstr "Ubah Skala Display..."
+#, fuzzy, kde-format
+#| msgid "&Adjust All Fonts…"
+msgid "Adjust Global Scale…"
+msgstr "&Setel Semua Font..."
 
 #: package/contents/ui/main.qml:37
 #, kde-format
@@ -150,10 +151,13 @@ msgstr ""
 "pada aplikasi yang baru dimulaikan."
 
 #: package/contents/ui/main.qml:51
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Very large fonts may produce odd-looking results. Consider adjusting the "
+#| "global screen scale instead of using a very large font size."
 msgid ""
-"Very large fonts may produce odd-looking results. Consider adjusting the "
-"global screen scale instead of using a very large font size."
+"Very large fonts may produce odd-looking results. Instead of using a very "
+"large font size, consider adjusting the global screen scale."
 msgstr ""
 "Font-font yang sangat besar bisa menghasilkan nuansa yang aneh. "
 "Pertimbangkanlah penyesuaian skala layar global sebagai penggunaan ukuran "
@@ -359,6 +363,9 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Pilih Font"
+
+#~ msgid "Change Display Scaling…"
+#~ msgstr "Ubah Skala Display..."
 
 #, fuzzy
 #~| msgid ""

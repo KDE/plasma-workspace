@@ -1,6 +1,6 @@
 # translation of kcmfonts.po to Polish
 # translation of kcmfonts.po to
-# Version: $Revision: 1623908 $
+# Version: $Revision: 1636124 $
 # Michał Rudolf <mrudolf@kdewebdev.org>, 2002.
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2002, 2003, 2004, 2005, 2006, 2008.
 # Krzysztof Lichota <lichota@mimuw.edu.pl>, 2005.
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-03 00:45+0000\n"
+"POT-Creation-Date: 2022-10-15 00:48+0000\n"
 "PO-Revision-Date: 2022-05-03 07:38+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -140,9 +140,10 @@ msgid "This module lets you configure the system fonts."
 msgstr "Ten moduł umożliwia określenie czcionek systemowych."
 
 #: package/contents/ui/main.qml:26
-#, kde-format
-msgid "Change Display Scaling…"
-msgstr "Zmień skalowanie wyświetlania..."
+#, fuzzy, kde-format
+#| msgid "&Adjust All Fonts…"
+msgid "Adjust Global Scale…"
+msgstr "Dostosuj &wszystkie czcionki..."
 
 #: package/contents/ui/main.qml:37
 #, kde-format
@@ -154,10 +155,13 @@ msgstr ""
 "jedynie w nowo uruchamianych programach."
 
 #: package/contents/ui/main.qml:51
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Very large fonts may produce odd-looking results. Consider adjusting the "
+#| "global screen scale instead of using a very large font size."
 msgid ""
-"Very large fonts may produce odd-looking results. Consider adjusting the "
-"global screen scale instead of using a very large font size."
+"Very large fonts may produce odd-looking results. Instead of using a very "
+"large font size, consider adjusting the global screen scale."
 msgstr ""
 "Bardzo duże czcionki mogą dziwnie wyglądać. Spróbuj dostosować globalną "
 "skalę ekranu, zanim zwiększysz rozmiar czcionki."
@@ -364,6 +368,9 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Wybierz czcionkę"
+
+#~ msgid "Change Display Scaling…"
+#~ msgstr "Zmień skalowanie wyświetlania..."
 
 #~ msgctxt "@info:tooltip Force fonts DPI"
 #~ msgid ""

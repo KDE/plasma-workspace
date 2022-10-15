@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-29 00:48+0000\n"
-"PO-Revision-Date: 2022-09-01 14:35+0000\n"
+"PO-Revision-Date: 2022-10-14 11:20+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -73,6 +73,11 @@ msgid ""
 "be unlocked at login automatically so you don't have to enter the KWallet "
 "password yourself."
 msgstr ""
+"KWallet er lykilorðastýring sem geymir lykilorðin þín fyrir þráðlaus "
+"netkerfi og önnur dulrituð tilföng. Því er læst með sínu eigin lykilorði sem "
+"er annað en það sem þú notar til innskráningar. Ef þessi tvö lykilorð eru "
+"þau sömu, er hægt að láta lykilorðastýringuna aflæsast sjálfkrafa við "
+"innskráningu svo þú þurfir ekki að setja inn KWallet-lykilorðið sérstaklega."
 
 #: package/contents/ui/ChangeWalletPassword.qml:57
 #, kde-format
@@ -171,11 +176,11 @@ msgid "Enrolling Fingerprint"
 msgstr "Skrái fingrafar"
 
 #: package/contents/ui/FingerprintDialog.qml:137
-#, fuzzy, kde-format
+#, kde-format
 msgctxt ""
 "%1 is a type of operation (e.g. 'scan') and %2 is the name of a finger"
 msgid "Please repeatedly %1 your %2 on the fingerprint sensor."
-msgstr "Endurtaktu nokkrum sinnum %1 your %2 á fingrafaraskannann."
+msgstr "'%1' nokkrum sinnum með %2 á fingrafaraskannanum."
 
 #: package/contents/ui/FingerprintDialog.qml:147
 #, kde-format
@@ -251,6 +256,9 @@ msgid ""
 "programs that request them.<nl/><nl/>Logging into the system with your "
 "fingerprint is not yet supported."
 msgstr ""
+"Fingraför er hægt að nota í stað lykilorðs þegar skjánum er aflæst og þegar "
+"kerfisstjórnaheimilda er krafist á skipanalínu og í forritum sem biðja um "
+"slíkt.<nl/><nl/>Ekki er enn stutt að skrá sig inn á kerfið með fingraförum."
 
 #: package/contents/ui/UserDetailsPage.qml:235
 #, kde-format
@@ -260,87 +268,87 @@ msgstr "Skipta um auðkennismynd"
 #: package/contents/ui/UserDetailsPage.qml:238
 #, kde-format
 msgid "It's Nothing"
-msgstr ""
+msgstr "Þetta er ekkert"
 
 #: package/contents/ui/UserDetailsPage.qml:239
 #, kde-format
 msgid "Feisty Flamingo"
-msgstr ""
+msgstr "Feitir flamingóar"
 
 #: package/contents/ui/UserDetailsPage.qml:240
 #, kde-format
 msgid "Dragon's Fruit"
-msgstr ""
+msgstr "Drekaávöxtur"
 
 #: package/contents/ui/UserDetailsPage.qml:241
 #, kde-format
 msgid "Sweet Potato"
-msgstr ""
+msgstr "Sæt kartafla"
 
 #: package/contents/ui/UserDetailsPage.qml:242
 #, kde-format
 msgid "Ambient Amber"
-msgstr ""
+msgstr "Umhverfisambur"
 
 #: package/contents/ui/UserDetailsPage.qml:243
 #, kde-format
 msgid "Sparkle Sunbeam"
-msgstr ""
+msgstr "Sólstafagneisti"
 
 #: package/contents/ui/UserDetailsPage.qml:244
 #, kde-format
 msgid "Lemon-Lime"
-msgstr ""
+msgstr "Sítróni-læm"
 
 #: package/contents/ui/UserDetailsPage.qml:245
 #, kde-format
 msgid "Verdant Charm"
-msgstr ""
+msgstr "Grænn sjarmi"
 
 #: package/contents/ui/UserDetailsPage.qml:246
 #, kde-format
 msgid "Mellow Meadow"
-msgstr ""
+msgstr "Skógarlundur"
 
 #: package/contents/ui/UserDetailsPage.qml:247
 #, kde-format
 msgid "Tepid Teal"
-msgstr ""
+msgstr "Slikjublágrænt"
 
 #: package/contents/ui/UserDetailsPage.qml:248
 #, kde-format
 msgid "Plasma Blue"
-msgstr ""
+msgstr "Plasmablátt"
 
 #: package/contents/ui/UserDetailsPage.qml:249
 #, kde-format
 msgid "Pon Purple"
-msgstr ""
+msgstr "Pon-purpurablátt"
 
 #: package/contents/ui/UserDetailsPage.qml:250
 #, kde-format
 msgid "Bajo Purple"
-msgstr ""
+msgstr "Bajo-purpurablátt"
 
 #: package/contents/ui/UserDetailsPage.qml:251
 #, kde-format
 msgid "Burnt Charcoal"
-msgstr ""
+msgstr "Brennd viðarkol"
 
 #: package/contents/ui/UserDetailsPage.qml:252
 #, kde-format
 msgid "Paper Perfection"
-msgstr ""
+msgstr "Lítur vel út á pappírunum"
 
 #: package/contents/ui/UserDetailsPage.qml:253
 #, kde-format
 msgid "Cafétera Brown"
-msgstr ""
+msgstr "Kaffiteríubrúnn"
 
 #: package/contents/ui/UserDetailsPage.qml:254
 #, kde-format
 msgid "Rich Hardwood"
-msgstr ""
+msgstr "Feitur harðviður"
 
 #: package/contents/ui/UserDetailsPage.qml:305
 #, kde-format

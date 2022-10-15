@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-17 00:48+0000\n"
-"PO-Revision-Date: 2022-09-02 17:02+0000\n"
+"PO-Revision-Date: 2022-10-14 11:36+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -95,6 +95,7 @@ msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
 "history."
 msgstr ""
+"Hvort val sem ekki er text (t.d. myndir) sé vistað í ferilskrá klippispjalds."
 
 #: configdialog.cpp:250
 #, kde-format
@@ -162,7 +163,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
-msgstr ""
+msgstr "Samsvörunarmynstur og skipanir"
 
 #: configdialog.cpp:374
 #, kde-format
@@ -200,6 +201,7 @@ msgid ""
 "Delete the selected action <resource>%1</resource><nl/>and all of its "
 "commands?"
 msgstr ""
+"Eyða völdu aðgerðinni <resource>%1</resource><nl/> og öllum skipunum hennar?"
 
 #: configdialog.cpp:581
 #, kde-format
@@ -340,7 +342,7 @@ msgstr ""
 #: editactiondialog.cpp:219
 #, kde-format
 msgid "Enter a description for the action"
-msgstr ""
+msgstr "Settu inn lýsingu á aðgerðinni"
 
 #: editactiondialog.cpp:220 editcommanddialog.cpp:84
 #, kde-format
@@ -350,7 +352,7 @@ msgstr "Lýsing:"
 #: editactiondialog.cpp:223
 #, kde-format
 msgid "Include in automatic popup"
-msgstr ""
+msgstr "Hafa með í sjálfvirkri sprettvalmynd"
 
 #: editactiondialog.cpp:227
 #, kde-kuit-format
@@ -382,7 +384,7 @@ msgstr "Eyða skipun"
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Delete the selected command <resource>%1</resource>?"
-msgstr ""
+msgstr "Eyða völdu skipuninni <resource>%1</resource>?"
 
 #: editactiondialog.cpp:390
 #, kde-format
@@ -397,7 +399,7 @@ msgstr "Eiginleikar skipunar"
 #: editcommanddialog.cpp:60
 #, kde-format
 msgid "Enter the command and arguments"
-msgstr ""
+msgstr "Settu inn skipunina og viðföng"
 
 #: editcommanddialog.cpp:63
 #, kde-format
@@ -417,7 +419,7 @@ msgstr ""
 #: editcommanddialog.cpp:82
 #, kde-format
 msgid "Enter a description for the command"
-msgstr ""
+msgstr "Settu inn lýsingu á skipuninni"
 
 #: editcommanddialog.cpp:92
 #, kde-format
@@ -512,7 +514,7 @@ msgstr "Fyrra atriði í ferli"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Open Klipper at Mouse Position"
-msgstr ""
+msgstr "Opna Klipper við bendil"
 
 #: klipper.cpp:540
 #, kde-kuit-format
@@ -592,7 +594,7 @@ msgstr "Útgáfa Klippara"
 #: klipper.kcfg:13
 #, kde-format
 msgid "Save history across desktop sessions"
-msgstr ""
+msgstr "Vista feril á milli skjáborðseta"
 
 #. i18n: ectx: tooltip, entry (KeepClipboardContents), group (General)
 #: klipper.kcfg:15
@@ -618,10 +620,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (SyncClipboards), group (General)
 #: klipper.kcfg:27
-#, fuzzy, kde-format
-#| msgid "Selection and Clipboard"
+#, kde-format
 msgid "Keep the selection and clipboard the same"
-msgstr "Val og klippispjald"
+msgstr "Halda aðalvali og klippispjaldi því sama"
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
 #: klipper.kcfg:29
@@ -682,10 +683,9 @@ msgstr "Nota myndrænan regexp ritil"
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:51
-#, fuzzy, kde-format
-#| msgid "Ignore selection"
+#, kde-format
 msgid "Immediately on selection"
-msgstr "Hunsa val"
+msgstr "Strax við val"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:52
@@ -732,10 +732,9 @@ msgstr "Sýndarfærsla til að sýna breytingar í trjáagræju aðgerðar"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:87
-#, fuzzy, kde-format
-#| msgid "Strip whitespace when executing an action"
+#, kde-format
 msgid "Trim whitespace from selection"
-msgstr "Fjarlægja bil þegar aðgerðir eru keyrðar"
+msgstr "Fjarlægja bil úr vali"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:89
@@ -749,19 +748,19 @@ msgstr ""
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:92
-#, fuzzy, kde-format
-#| msgid "Replay actions on an item selected from history"
+#, kde-format
 msgid "For an item chosen from history"
-msgstr "Endurspila aðgerðir á því sem valið var af lista fyrri aðgerða"
+msgstr "Fyrir atriði valið úr ferilskrá"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:94
-#, fuzzy, kde-format
-#| msgid "Really delete entire clipboard history?"
+#, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
 "clipboard history."
-msgstr "Eyða allri klippisögunni?"
+msgstr ""
+"Birta sprettvalmynd með viðeigandi aðgerðum ef færsla er valin úr ferilskrá "
+"klippispjalds."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:97
