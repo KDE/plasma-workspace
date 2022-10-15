@@ -28,8 +28,8 @@ OptionsModel::OptionsModel(KCMRegionAndLang *parent)
                       {i18nc("@info:title", "Paper Size"), SettingType::PaperSize}}};
 #ifdef LC_ADDRESS
     m_staticNames.push_back(std::make_pair(i18nc("@info:title", "Address"), SettingType::Address));
-    m_staticNames.push_back(std::make_pair(i18nc("@info:title", "Name Style"), SettingType::NameStyle)),
-        m_staticNames.push_back(std::make_pair(i18nc("@info:title", "Phone Numbers"), SettingType::PhoneNumbers));
+    m_staticNames.push_back(std::make_pair(i18nc("@info:title", "Name Style"), SettingType::NameStyle));
+    m_staticNames.push_back(std::make_pair(i18nc("@info:title", "Phone Numbers"), SettingType::PhoneNumbers));
 #endif
 
     connect(m_settings, &RegionAndLangSettings::langChanged, this, &OptionsModel::handleLangChange);
@@ -55,23 +55,23 @@ OptionsModel::OptionsModel(KCMRegionAndLang *parent)
     });
     connect(m_settings, &RegionAndLangSettings::paperSizeChanged, this, [this] {
         QLocale locale(m_settings->LC_LocaleWithLang(SettingType::PaperSize));
-        m_measurementExample = Utility::measurementExample(locale);
+        m_paperSizeExample = Utility::paperSizeExample(locale);
         Q_EMIT dataChanged(createIndex(5, 0), createIndex(5, 0), {Subtitle, Example});
     });
 #ifdef LC_ADDRESS
     connect(m_settings, &RegionAndLangSettings::addressChanged, this, [this] {
         QLocale locale(m_settings->LC_LocaleWithLang(SettingType::Address));
-        m_measurementExample = Utility::measurementExample(locale);
+        m_addressExample = Utility::addressExample(locale);
         Q_EMIT dataChanged(createIndex(6, 0), createIndex(6, 0), {Subtitle, Example});
     });
     connect(m_settings, &RegionAndLangSettings::nameStyleChanged, this, [this] {
         QLocale locale(m_settings->LC_LocaleWithLang(SettingType::NameStyle));
-        m_measurementExample = Utility::measurementExample(locale);
+        m_nameStyleExample = Utility::nameStyleExample(locale);
         Q_EMIT dataChanged(createIndex(7, 0), createIndex(7, 0), {Subtitle, Example});
     });
     connect(m_settings, &RegionAndLangSettings::phoneNumbersChanged, this, [this] {
         QLocale locale(m_settings->LC_LocaleWithLang(SettingType::PhoneNumbers));
-        m_measurementExample = Utility::measurementExample(locale);
+        m_phoneNumbersExample = Utility::phoneNumbersExample(locale);
         Q_EMIT dataChanged(createIndex(8, 0), createIndex(8, 0), {Subtitle, Example});
     });
 #endif
