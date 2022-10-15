@@ -40,6 +40,16 @@ PlasmaComponents3.ScrollView {
         highlightResizeDuration: 0
         currentIndex: -1
 
+        Connections {
+            target: plasmoid
+            function onExpandedChanged() {
+                if (plasmoid.expanded) {
+                    menuListView.currentIndex = -1
+                    menuListView.positionViewAtBeginning()
+                }
+            }
+        }
+
         topMargin: PlasmaCore.Units.smallSpacing * 2
         bottomMargin: PlasmaCore.Units.smallSpacing * 2
         leftMargin: PlasmaCore.Units.smallSpacing * 2
