@@ -42,10 +42,6 @@ void SystemMonitor::init()
 {
     configChanged();
 
-    // NOTE: taking the pluginId from the package instead of applet metadata, we take it from the child applet (cpu monitor, memory, whatever) rather than the
-    // parent fallback applet (systemmonitor)
-    const QString pluginId = kPackage().metadata().pluginId();
-
     // FIXME HACK: better way to get the engine At least AppletQuickItem should have an engine() getter
     KDeclarative::QmlObjectSharedEngine *qmlObject = new KDeclarative::QmlObjectSharedEngine();
     KConfigGroup cg = config();
@@ -55,8 +51,10 @@ void SystemMonitor::init()
     if (!m_pendingStartupPreset.isNull()) {
         m_sensorFaceController->loadPreset(m_pendingStartupPreset);
     } else {
-        // Take it from the config, which is *not* accessible from plasmoid.config as is not in config.xml
-        const QString preset = config().readEntry("CurrentPreset", pluginId);
+        // NOTE: taking the pluginId from the child applet (cpu monitor, memory, whatever) is done implicitly by not embedding metadata in this applet
+        const QString preset = config().readEntry("CurrentPreset", pluginMetaData().pluginId());
+        // We have initialized our preset, subsequent calls should use the root-plugin id
+        config().writeEntry("CurrentPreset", "org.kde.plasma.systemmonitor");
         m_sensorFaceController->loadPreset(preset);
     }
 }
@@ -86,6 +84,6 @@ void SystemMonitor::openSystemMonitor()
     job->start();
 }
 
-K_PLUGIN_CLASS_WITH_JSON(SystemMonitor, "package/metadata.json")
+K_PLUGIN_CLASS(SystemMonitor)
 
 #include "systemmonitor.moc"
