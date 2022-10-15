@@ -94,7 +94,7 @@ KCM.ScrollViewKCM {
         }
         function onSaveClicked() {
             // return to first page on save action since all messages are here
-            while (kcm.depth !== 1) {
+            while (kcm.depth > 1) {
                 kcm.takeLast();
             }
         }
@@ -125,6 +125,12 @@ KCM.ScrollViewKCM {
                     text: i18nc("@action:button for change the locale used", "Modify…")
                     icon.name: "edit-entry"
                     onClicked: {
+
+                        // remove the excess pages before pushing new page
+                        while (kcm.depth > 1) {
+                            kcm.takeLast();
+                        }
+
                         if (model.page === SettingType.Lang) {
                             languageSelectPage.active = true;
                             kcm.push(languageSelectPage.item);
