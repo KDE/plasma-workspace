@@ -179,7 +179,7 @@ public:
     /**
      * @returns the geometry of the panel given a distance
      */
-    QRect geometryByDistance(int distance) const;
+    Q_INVOKABLE QRect geometryByDistance(int distance) const;
 
     /* Both Shared with script/panel.cpp */
     static KConfigGroup panelConfig(ShellCorona *corona, Plasma::Containment *containment, QScreen *screen);
