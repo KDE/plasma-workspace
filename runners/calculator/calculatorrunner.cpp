@@ -79,15 +79,23 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
         return;
     }
 
-    bool toHex = cmd.startsWith(QLatin1String("hex="));
-    bool startsWithEquals = !toHex && cmd[0] == QLatin1Char('=');
+    int base = 10;
+    QString customBase;
+
+    bool foundPrefix = false; // is there `=` or `hex=` or other base prefix in cmd
+
+    int equalSignPosition = cmd.indexOf(QLatin1Char('='));
+    if (equalSignPosition != -1 && equalSignPosition != cmd.length() - 1) {
+        foundPrefix = QalculateEngine::findPrefix(cmd.left(equalSignPosition), &base, &customBase);
+    }
+
     const static QRegularExpression hexRegex(QStringLiteral("0x[0-9a-f]+"), QRegularExpression::CaseInsensitiveOption);
     const bool parseHex = cmd.contains(hexRegex);
     if (!parseHex) {
         userFriendlyMultiplication(cmd);
     }
 
-    if (toHex || startsWithEquals) {
+    if (foundPrefix) {
         cmd.remove(0, cmd.indexOf(QLatin1Char('=')) + 1);
     } else if (cmd.endsWith(QLatin1Char('='))) {
         cmd.chop(1);
@@ -115,12 +123,8 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
     userFriendlySubstitutions(cmd);
 
     bool isApproximate = false;
-    QString result = calculate(cmd, &isApproximate);
-    if (!result.isEmpty() && (result != cmd || toHex)) {
-        if (toHex) {
-            result = QLatin1String("0x") + QString::number(result.toInt(), 16).toUpper();
-        }
-
+    QString result = calculate(cmd, &isApproximate, base, customBase);
+    if (!result.isEmpty() && (foundPrefix || result != cmd)) {
         Plasma::QueryMatch match(this);
         match.setType(Plasma::QueryMatch::InformationalMatch);
         match.setIconName(QStringLiteral("accessories-calculator"));
@@ -135,7 +139,7 @@ void CalculatorRunner::match(Plasma::RunnerContext &context)
     }
 }
 
-QString CalculatorRunner::calculate(const QString &term, bool *isApproximate)
+QString CalculatorRunner::calculate(const QString &term, bool *isApproximate, int base, const QString &customBase)
 {
     {
         QMutexLocker lock(&s_initMutex);
@@ -146,7 +150,7 @@ QString CalculatorRunner::calculate(const QString &term, bool *isApproximate)
 
     QString result;
     try {
-        result = m_engine->evaluate(term, isApproximate);
+        result = m_engine->evaluate(term, isApproximate, base, customBase);
     } catch (std::exception &e) {
         qDebug() << "qalculate error: " << e.what();
     }

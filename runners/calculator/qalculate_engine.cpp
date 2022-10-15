@@ -103,7 +103,7 @@ bool check_valid_before(const std::string &expression, const EvaluationOptions &
 }
 #endif
 
-QString QalculateEngine::evaluate(const QString &expression, bool *isApproximate)
+QString QalculateEngine::evaluate(const QString &expression, bool *isApproximate, int base, const QString &customBase)
 {
     if (expression.isEmpty()) {
         return QString();
@@ -134,9 +134,24 @@ QString QalculateEngine::evaluate(const QString &expression, bool *isApproximate
 #endif
 
     CALCULATOR->setPrecision(16);
+    if (base == BASE_CUSTOM) {
+        EvaluationOptions eo;
+        eo.parse_options.base = 10;
+        eo.approximation = APPROXIMATION_TRY_EXACT;
+
+        MathStructure m = CALCULATOR->calculate(customBase.toStdString(), eo);
+
+        if (m.isNumber() && (m.number().isPositive() || m.number().isInteger()) && (m.number() > 1 || m.number() < -1)) {
+            CALCULATOR->setCustomOutputBase(m.number());
+        } else {
+            base = BASE_DECIMAL;
+        }
+    }
+
     MathStructure result = CALCULATOR->calculate(ctext, eo);
 
     PrintOptions po;
+    po.base = base;
     po.number_fraction_format = FRACTION_DECIMAL;
     po.indicate_infinite_series = false;
     po.use_all_prefixes = false;
@@ -165,4 +180,65 @@ void QalculateEngine::copyToClipboard(bool flag)
     Q_UNUSED(flag);
 
     QApplication::clipboard()->setText(m_lastResult);
+}
+
+static const QMap<QString, int> s_commonBaseMappings = {
+    {QStringLiteral("roman"), BASE_ROMAN_NUMERALS},
+    {QStringLiteral("time"), BASE_TIME},
+
+    {QStringLiteral("bijective"), BASE_BIJECTIVE_26},
+    {QStringLiteral("b26"), BASE_BIJECTIVE_26},
+
+    {QStringLiteral("bcd"), BASE_BINARY_DECIMAL},
+
+    {QStringLiteral("pi"), BASE_PI},
+    {QStringLiteral("e"), BASE_E},
+    {QStringLiteral("sqrt2"), BASE_SQRT2},
+
+    {QStringLiteral("golden"), BASE_GOLDEN_RATIO},
+    {QStringLiteral("supergolden"), BASE_SUPER_GOLDEN_RATIO},
+
+    {QStringLiteral("bin"), BASE_BINARY},
+    {QStringLiteral("oct"), BASE_OCTAL},
+    {QStringLiteral("dec"), BASE_DECIMAL},
+    {QStringLiteral("duo"), 12},
+    {QStringLiteral("hex"), BASE_HEXADECIMAL},
+
+    {QStringLiteral("fp16"), BASE_FP16},
+    {QStringLiteral("fp32"), BASE_FP32},
+    {QStringLiteral("fp64"), BASE_FP64},
+    {QStringLiteral("fp80"), BASE_FP80},
+    {QStringLiteral("fp128"), BASE_FP128},
+
+    {QStringLiteral("unicode"), BASE_UNICODE},
+
+    {QStringLiteral("sexa"), BASE_SEXAGESIMAL},
+    {QStringLiteral("sexa2"), BASE_SEXAGESIMAL_2},
+    {QStringLiteral("sexa3"), BASE_SEXAGESIMAL_3},
+
+    {QStringLiteral("latitude"), BASE_LATITUDE},
+    {QStringLiteral("latitude2"), BASE_LATITUDE_2},
+    {QStringLiteral("longitude"), BASE_LONGITUDE},
+    {QStringLiteral("longitude2"), BASE_LONGITUDE_2},
+};
+
+bool QalculateEngine::findPrefix(QString basePrefix, int *base, QString *customBase)
+{
+    if (basePrefix.isEmpty())
+        return true;
+
+    basePrefix = basePrefix.toLower();
+    if (s_commonBaseMappings.contains(basePrefix)) {
+        *base = s_commonBaseMappings[basePrefix];
+        return true;
+    }
+
+    if (basePrefix.startsWith("base")) {
+        *base = BASE_CUSTOM;
+        *customBase = basePrefix.mid(4);
+
+        return true;
+    }
+
+    return false;
 }

@@ -33,7 +33,7 @@ protected Q_SLOTS:
     QMimeData *mimeDataForMatch(const Plasma::QueryMatch &match) override;
 
 private:
-    QString calculate(const QString &term, bool *isApproximate);
+    QString calculate(const QString &term, bool *isApproximate, int base, const QString &customBase);
     void userFriendlyMultiplication(QString &cmd);
     void userFriendlySubstitutions(QString &cmd);
 
