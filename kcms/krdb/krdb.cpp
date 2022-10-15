@@ -7,6 +7,7 @@
     SPDX-FileCopyrightText: 1998 Mark Donohoe
     SPDX-FileCopyrightText: 2001 Waldo Bastian <bastian@kde.org>
     SPDX-FileCopyrightText: 2002 Karol Szwed <gallium@kde.org>
+    SPDX-FileCopyrightText: 2022 Harald Sitter <sitter@kde.org>
 
     reworked for KDE 2.0:
     SPDX-FileCopyrightText: 1999 Dirk A. Mueller
@@ -68,19 +69,17 @@ inline const char *gtkEnvVar(int version)
 
 inline QLatin1String sysGtkrc(int version)
 {
+    std::error_code error;
     if (version == 2) {
-        if (std::filesystem::exists("/etc/opt/gnome/gtk-2.0")) {
+        if (std::filesystem::exists("/etc/opt/gnome/gtk-2.0", error) && !error) {
             return QLatin1String("/etc/opt/gnome/gtk-2.0/gtkrc");
-        } else {
-            return QLatin1String("/etc/gtk-2.0/gtkrc");
         }
-    } else {
-        if (std::filesystem::exists("/etc/opt/gnome/gtk")) {
-            return QLatin1String("/etc/opt/gnome/gtk/gtkrc");
-        } else {
-            return QLatin1String("/etc/gtk/gtkrc");
-        }
+        return QLatin1String("/etc/gtk-2.0/gtkrc");
     }
+    if (std::filesystem::exists("/etc/opt/gnome/gtk", error) && !error) {
+        return QLatin1String("/etc/opt/gnome/gtk/gtkrc");
+    }
+    return QLatin1String("/etc/gtk/gtkrc");
 }
 
 inline QLatin1String userGtkrc(int version)
