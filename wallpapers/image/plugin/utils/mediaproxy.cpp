@@ -239,8 +239,10 @@ void MediaProxy::determineBackgroundType()
     QMimeDatabase db;
     const QString type = db.mimeTypeForFile(filePath).name();
 
-    if (QMovie::supportedFormats().contains(QFileInfo(filePath).suffix().toLower().toLatin1())) {
+    if (const QString suffix = QFileInfo(filePath).suffix().toLower();
+        QMovie::supportedFormats().contains(suffix.toLatin1()) && suffix != QLatin1String("avif")) {
         // Derived from the suffix
+        // HACK Workaround for frameCount not being reset properly when using AVIF (BUG 460085)
         m_backgroundType = BackgroundType::Type::AnimatedImage;
     } else if (type.startsWith(QLatin1String("image/"))) {
         m_backgroundType = BackgroundType::Type::Image;
