@@ -227,8 +227,6 @@ PlasmaCore.ColorScope {
             anchors.fill: clock
             source: clock
             visible: !softwareRendering
-            horizontalOffset: 0
-            verticalOffset: 0
             radius: 6
             samples: 14
             spread: 0.3
