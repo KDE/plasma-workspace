@@ -25,7 +25,7 @@ bool RegionAndLangSettings::isDefaultSetting(SettingType setting) const
     case SettingType::Measurement:
         return measurement() == defaultMeasurementValue();
     case SettingType::PaperSize:
-        return paperSize() == defaultMeasurementValue();
+        return paperSize() == defaultPaperSizeValue();
     case SettingType::Address:
         return address() == defaultAddressValue();
     case SettingType::NameStyle:
