@@ -90,6 +90,11 @@ public:
 
     void saveSettings() const;
 
+    QMenu *actionsPopup() const
+    {
+        return m_actionsPopup;
+    }
+
     KlipperPopup *popup()
     {
         return m_popup;
@@ -230,6 +235,7 @@ private:
     bool blockFetchingNewData();
     QString cycleText() const;
     KActionCollection *m_collection;
+    QMenu *m_actionsPopup;
     KlipperMode m_mode;
     QTimer *m_saveFileTimer = nullptr;
     QPointer<KNotification> m_notification;

@@ -25,6 +25,7 @@
 
 namespace
 {
+// Index 0 is the menu header, index 1 is the search widget.
 static const int TOP_HISTORY_ITEM_INDEX = 2;
 }
 
@@ -58,12 +59,9 @@ kdbgstream &operator<<(kdbgstream &stream, const QKeyEvent &e)
 KlipperPopup::KlipperPopup(History *history)
     : m_dirty(true)
     , m_history(history)
-    , m_helpMenu(nullptr)
     , m_popupProxy(nullptr)
     , m_filterWidget(nullptr)
     , m_filterWidgetAction(nullptr)
-    , m_nHistoryItems(0)
-    , m_showHelp(true)
     , m_lastEvent(nullptr)
 {
     ensurePolished();
@@ -81,10 +79,6 @@ KlipperPopup::KlipperPopup(History *history)
     connect(this, &KlipperPopup::aboutToShow, this, &KlipperPopup::slotAboutToShow);
 }
 
-KlipperPopup::~KlipperPopup()
-{
-}
-
 void KlipperPopup::slotAboutToShow()
 {
     if (m_filterWidget) {
@@ -98,7 +92,7 @@ void KlipperPopup::slotAboutToShow()
 
 void KlipperPopup::ensureClean()
 {
-    // If the history is unchanged since last menu build, the is no reason
+    // If the history is unchanged since last menu build, there is no reason
     // to rebuild it,
     if (m_dirty) {
         rebuild();
@@ -107,7 +101,8 @@ void KlipperPopup::ensureClean()
 
 void KlipperPopup::buildFromScratch()
 {
-    addSection(QIcon::fromTheme(QStringLiteral("klipper")), i18n("Klipper - Clipboard Tool"));
+    addSection(QIcon::fromTheme(QStringLiteral("klipper")),
+               i18nc("%1 is application display name", "%1 - Clipboard Items", QGuiApplication::applicationDisplayName()));
 
     m_filterWidget = new KLineEdit(this);
     m_filterWidget->setFocusPolicy(Qt::NoFocus);
@@ -116,18 +111,7 @@ void KlipperPopup::buildFromScratch()
     m_filterWidgetAction->setDefaultWidget(m_filterWidget);
     addAction(m_filterWidgetAction);
 
-    addSeparator();
-    for (int i = 0; i < m_actions.count(); i++) {
-        if (i + 1 == m_actions.count() && m_showHelp) {
-            if (!m_helpMenu) {
-                m_helpMenu = new KHelpMenu(this, i18n("KDE cut & paste history utility"), false);
-            }
-            addMenu(m_helpMenu->menu())->setIcon(QIcon::fromTheme(QStringLiteral("help-contents")));
-            addSeparator();
-        }
-
-        addAction(m_actions.at(i));
-    }
+    Q_ASSERT(actions().count() == TOP_HISTORY_ITEM_INDEX);
 }
 
 void KlipperPopup::showStatus(const QString &errorText)
@@ -142,9 +126,7 @@ void KlipperPopup::showStatus(const QString &errorText)
     } else { // there is an error
         palette.setColor(m_filterWidget->foregroundRole(), colorScheme.foreground(KColorScheme::NegativeText).color());
         palette.setColor(m_filterWidget->backgroundRole(), colorScheme.background(KColorScheme::NegativeBackground).color());
-        insertAction(actions().at(TOP_HISTORY_ITEM_INDEX), new QAction(errorText, this));
-
-        ++m_nHistoryItems; // account for the added error item
+        addAction(new QAction(errorText, this));
     }
 
     m_filterWidget->setPalette(palette);
@@ -155,13 +137,11 @@ void KlipperPopup::rebuild(const QString &filter)
     if (actions().isEmpty()) {
         buildFromScratch();
     } else {
-        for (int i = 0; i < m_nHistoryItems; i++) {
-            Q_ASSERT(TOP_HISTORY_ITEM_INDEX < actions().count());
-
+        while (actions().count() > TOP_HISTORY_ITEM_INDEX) {
             // The old actions allocated by KlipperPopup::rebuild()
             // and PopupProxy::tryInsertItem() are deleted here when
             // the menu is rebuilt.
-            QAction *action = actions().at(TOP_HISTORY_ITEM_INDEX);
+            QAction *action = actions().last();
             removeAction(action);
             action->deleteLater();
         }
@@ -185,10 +165,9 @@ void KlipperPopup::rebuild(const QString &filter)
     QString errorText;
     if (!filterexp.isValid()) {
         errorText = i18n("Invalid regular expression, %1", filterexp.errorString());
-        m_nHistoryItems = 0;
     } else {
-        m_nHistoryItems = m_popupProxy->buildParent(TOP_HISTORY_ITEM_INDEX, filterexp);
-        if (m_nHistoryItems == 0) {
+        const int nHistoryItems = m_popupProxy->buildParent(TOP_HISTORY_ITEM_INDEX, filterexp);
+        if (nHistoryItems == 0) {
             if (m_history->empty()) {
                 errorText = i18n("Clipboard is empty");
             } else {
@@ -209,19 +188,18 @@ void KlipperPopup::rebuild(const QString &filter)
 
 void KlipperPopup::slotTopIsUserSelectedSet()
 {
-    if (!m_dirty && m_nHistoryItems > 0 && history()->topIsUserSelected()) {
+    if (!m_dirty && actions().count() > TOP_HISTORY_ITEM_INDEX && history()->topIsUserSelected()) {
         QAction *topAction = actions().at(TOP_HISTORY_ITEM_INDEX);
         topAction->setCheckable(true);
         topAction->setChecked(true);
     }
 }
 
-void KlipperPopup::plugAction(QAction *action)
+void KlipperPopup::showEvent(QShowEvent *e)
 {
-    m_actions.append(action);
+    popup(QCursor::pos());
 }
 
-/* virtual */
 void KlipperPopup::keyPressEvent(QKeyEvent *e)
 {
     // Most events are send down directly to the m_filterWidget.

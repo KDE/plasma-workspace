@@ -13,7 +13,6 @@ class QAction;
 class QWidgetAction;
 class QKeyEvent;
 
-class KHelpMenu;
 class KLineEdit;
 
 class PopupProxy;
@@ -29,8 +28,7 @@ class KlipperPopup : public QMenu
 
 public:
     explicit KlipperPopup(History *history);
-    ~KlipperPopup() override;
-    void plugAction(QAction *action);
+    ~KlipperPopup() override = default;
 
     /**
      * Normally, the popupmenu is only rebuilt just before showing.
@@ -48,10 +46,6 @@ public:
         return m_history;
     }
 
-    void setShowHelp(bool show)
-    {
-        m_showHelp = show;
-    }
 public Q_SLOTS:
     void slotHistoryChanged()
     {
@@ -71,6 +65,7 @@ private:
 
 protected:
     void keyPressEvent(QKeyEvent *e) override;
+    void showEvent(QShowEvent *e) override;
 
 private:
     bool m_dirty : 1; // true if menu contents needs to be rebuild.
@@ -79,16 +74,6 @@ private:
      * The "document" (clipboard history)
      */
     History *m_history;
-
-    /**
-     * The help menu
-     */
-    KHelpMenu *m_helpMenu;
-
-    /**
-     * (unowned) actions to plug into the primary popup menu
-     */
-    QList<QAction *> m_actions;
 
     /**
      * Proxy helper object used to track history items
@@ -104,13 +89,6 @@ private:
      * Action of search widget
      */
     QWidgetAction *m_filterWidgetAction;
-
-    /**
-     * The current number of history items in the clipboard
-     */
-    int m_nHistoryItems;
-
-    bool m_showHelp;
 
     /**
      * The last event which was received. Used to avoid an infinite event loop

@@ -28,7 +28,7 @@ KlipperTray::KlipperTray()
     setStandardActionsEnabled(false);
 
     m_klipper = new Klipper(this, KSharedConfig::openConfig());
-    setContextMenu(m_klipper->popup());
+    setContextMenu(m_klipper->actionsPopup());
     setAssociatedWidget(m_klipper->popup());
     connect(m_klipper->history(), &History::changed, this, &KlipperTray::slotSetToolTipFromHistory);
     slotSetToolTipFromHistory();

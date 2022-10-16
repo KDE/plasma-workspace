@@ -25,8 +25,10 @@
 #include <QSaveFile>
 #include <QtConcurrent>
 
+#include <KAboutData>
 #include <KActionCollection>
 #include <KGlobalAccel>
+#include <KHelpMenu>
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KNotification>
@@ -140,7 +142,6 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mo
     m_history = new History(this);
     m_popup = new KlipperPopup(m_history);
     m_popup->setWindowFlags(m_popup->windowFlags() | Qt::FramelessWindowHint);
-    m_popup->setShowHelp(m_mode == KlipperMode::Standalone);
     connect(m_history, &History::changed, this, &Klipper::slotHistoryChanged);
     connect(m_history, &History::changed, m_popup, &KlipperPopup::slotHistoryChanged);
     connect(m_history, &History::topIsUserSelectedSet, m_popup, &KlipperPopup::slotTopIsUserSelectedSet);
@@ -192,8 +193,8 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mo
 
     m_repeatAction = m_collection->addAction(QStringLiteral("repeat_action"));
     m_repeatAction->setText(i18nc("@action:inmenu", "Manually Invoke Action on Current Clipboard"));
+    m_repeatAction->setIcon(QIcon::fromTheme(QStringLiteral("open-menu-symbolic")));
     KGlobalAccel::setGlobalShortcut(m_repeatAction, QKeySequence(Qt::META | Qt::CTRL | Qt::Key_R));
-
     connect(m_repeatAction, &QAction::triggered, this, &Klipper::slotRepeatAction);
 
     // add an edit-possibility
@@ -208,6 +209,7 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mo
     // add barcode for mobile phones
     m_showBarcodeAction = m_collection->addAction(QStringLiteral("show-barcode"));
     m_showBarcodeAction->setText(i18nc("@action:inmenu", "&Show Barcode…"));
+    m_showBarcodeAction->setIcon(QIcon::fromTheme(QStringLiteral("view-barcode-qr")));
     KGlobalAccel::setGlobalShortcut(m_showBarcodeAction, QKeySequence());
     connect(m_showBarcodeAction, &QAction::triggered, this, [this]() {
         showBarcode(m_history->first());
@@ -216,16 +218,19 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mo
     // Cycle through history
     m_cycleNextAction = m_collection->addAction(QStringLiteral("cycleNextAction"));
     m_cycleNextAction->setText(i18nc("@action:inmenu", "Next History Item"));
+    m_cycleNextAction->setIcon(QIcon::fromTheme(QStringLiteral("go-next")));
     KGlobalAccel::setGlobalShortcut(m_cycleNextAction, QKeySequence());
     connect(m_cycleNextAction, &QAction::triggered, this, &Klipper::slotCycleNext);
     m_cyclePrevAction = m_collection->addAction(QStringLiteral("cyclePrevAction"));
     m_cyclePrevAction->setText(i18nc("@action:inmenu", "Previous History Item"));
+    m_cyclePrevAction->setIcon(QIcon::fromTheme(QStringLiteral("go-previous")));
     KGlobalAccel::setGlobalShortcut(m_cyclePrevAction, QKeySequence());
     connect(m_cyclePrevAction, &QAction::triggered, this, &Klipper::slotCyclePrev);
 
-    // Action to show Klipper popup on mouse position
+    // Action to show items popup on mouse position
     m_showOnMousePos = m_collection->addAction(QStringLiteral("show-on-mouse-pos"));
-    m_showOnMousePos->setText(i18nc("@action:inmenu", "Open Klipper at Mouse Position"));
+    m_showOnMousePos->setText(i18nc("@action:inmenu", "Show Items at Mouse Position"));
+    m_showOnMousePos->setIcon(QIcon::fromTheme(QStringLiteral("view-list-text")));
     KGlobalAccel::setGlobalShortcut(m_showOnMousePos, QKeySequence(Qt::META | Qt::Key_V));
     connect(m_showOnMousePos, &QAction::triggered, this, &Klipper::slotPopupMenu);
 
@@ -233,14 +238,25 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config, KlipperMode mo
     connect(m_popup, &QMenu::aboutToShow, this, &Klipper::slotStartShowTimer);
 
     if (m_mode == KlipperMode::Standalone) {
-        m_popup->plugAction(m_toggleURLGrabAction);
-        m_popup->plugAction(m_clearHistoryAction);
-        m_popup->plugAction(m_configureAction);
-        m_popup->plugAction(m_repeatAction);
-        m_popup->plugAction(m_editAction);
-        m_popup->plugAction(m_showBarcodeAction);
+        // system tray popup menu
+        m_actionsPopup = new QMenu;
+        m_actionsPopup->addSection(QIcon::fromTheme(QStringLiteral("klipper")),
+                                   i18nc("%1 is application display name", "%1 - Clipboard Tool", QGuiApplication::applicationDisplayName()));
+        m_actionsPopup->addAction(m_toggleURLGrabAction);
+        m_actionsPopup->addAction(m_clearHistoryAction);
+        m_actionsPopup->addAction(m_configureAction);
+        m_actionsPopup->addAction(m_repeatAction);
+        m_actionsPopup->addAction(m_editAction);
+        m_actionsPopup->addAction(m_showBarcodeAction);
+
+        m_actionsPopup->addSeparator();
+
+        QMenu *helpMenu = (new KHelpMenu(m_actionsPopup, KAboutData::applicationData(), false))->menu();
+        helpMenu->setIcon(QIcon::fromTheme(QStringLiteral("help-contents")));
+        m_actionsPopup->addMenu(helpMenu);
+
         Q_ASSERT(m_quitAction);
-        m_popup->plugAction(m_quitAction);
+        m_actionsPopup->addAction(m_quitAction);
     }
 
     // session manager interaction
