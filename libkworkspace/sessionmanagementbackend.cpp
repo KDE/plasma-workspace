@@ -159,7 +159,7 @@ void LogindSessionBackend::hybridSuspend()
 
 void LogindSessionBackend::hibernate()
 {
-    m_login1->Hibernate(true).waitForFinished();;
+    m_login1->Hibernate(true).waitForFinished();
 }
 
 bool LogindSessionBackend::canShutdown() const
