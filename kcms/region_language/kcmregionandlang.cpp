@@ -83,13 +83,13 @@ void KCMRegionAndLang::save()
     if (!settings()->isDefaultSetting(SettingType::PaperSize)) {
         locales.append(settings()->paperSize());
     }
-    if (settings()->isDefaultSetting(SettingType::Address)) {
+    if (!settings()->isDefaultSetting(SettingType::Address)) {
         locales.append(settings()->address());
     }
-    if (settings()->isDefaultSetting(SettingType::NameStyle)) {
+    if (!settings()->isDefaultSetting(SettingType::NameStyle)) {
         locales.append(settings()->nameStyle());
     }
-    if (settings()->isDefaultSetting(SettingType::PhoneNumbers)) {
+    if (!settings()->isDefaultSetting(SettingType::PhoneNumbers)) {
         locales.append(settings()->phoneNumbers());
     }
     if (!settings()->language().isEmpty()) {
