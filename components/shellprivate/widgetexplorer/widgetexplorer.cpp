@@ -124,7 +124,7 @@ void WidgetExplorerPrivate::initFilters()
         filterModel.addSeparator(i18n("Categories:"));
     }
 
-    QSet<QString> existingCategories = itemModel.categories();
+    const QSet<QString> existingCategories = itemModel.categories();
     QSet<QString> cats;
     const QList<KPluginMetaData> list = PluginLoader::self()->listAppletMetaData(QString());
 
