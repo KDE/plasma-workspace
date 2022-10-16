@@ -13,10 +13,11 @@
 #include <QQmlApplicationEngine>
 #include <QQuickView>
 
-#include <plasma/plasma.h>
 #include <plasma/containment.h>
+#include <plasma/plasma.h>
 
-namespace KActivities {
+namespace KActivities
+{
 class Consumer;
 class Info;
 }

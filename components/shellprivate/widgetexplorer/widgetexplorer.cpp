@@ -115,7 +115,9 @@ void WidgetExplorerPrivate::initFilters()
                               KCategorizedItemsViewModels::Filter(QStringLiteral("running"), true),
                               QIcon::fromTheme(QStringLiteral("dialog-ok")));
 
-        filterModel.addFilter(i18nc("@item:inmenu used in the widget filter. Filter widgets that can be un-installed from the system, which are usually installed by the user to a local place.", "Uninstallable"),
+        filterModel.addFilter(i18nc("@item:inmenu used in the widget filter. Filter widgets that can be un-installed from the system, which are usually "
+                                    "installed by the user to a local place.",
+                                    "Uninstallable"),
                               KCategorizedItemsViewModels::Filter(QStringLiteral("local"), true),
                               QIcon::fromTheme(QStringLiteral("edit-delete")));
 

@@ -26,4 +26,3 @@ private:
     RunnerManager *m_manager;
     QList<QAction *> m_actionList;
 };
-

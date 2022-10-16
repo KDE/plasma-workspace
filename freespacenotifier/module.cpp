@@ -33,16 +33,15 @@ FreeSpaceNotifierModule::FreeSpaceNotifierModule(QObject *parent, const QList<QV
 
     const auto homeMountPoint = KMountPoint::currentMountPoints().findByPath(homePath);
 
-    if ( !homeMountPoint || !homeMountPoint->mountOptions().contains(QLatin1String("ro")) ) {
+    if (!homeMountPoint || !homeMountPoint->mountOptions().contains(QLatin1String("ro"))) {
         auto *homeNotifier = new FreeSpaceNotifier(homePath, ki18n("Your Home folder is running out of disk space, you have %1 MiB remaining (%2%)."), this);
         connect(homeNotifier, &FreeSpaceNotifier::configureRequested, this, &FreeSpaceNotifierModule::showConfiguration);
     }
 
     // If Home is on a separate partition from Root, warn for it, too.
-    if (KMountPoint::Ptr rootMountPoint; !homeMountPoint ||
-                                        ( homeMountPoint->mountPoint() != rootPath &&
-                                          ( !(rootMountPoint = KMountPoint::currentMountPoints().findByPath(rootPath)) ||
-                                            !rootMountPoint->mountOptions().contains(QLatin1String("ro")) ) ) ) {
+    if (KMountPoint::Ptr rootMountPoint; !homeMountPoint
+        || (homeMountPoint->mountPoint() != rootPath
+            && (!(rootMountPoint = KMountPoint::currentMountPoints().findByPath(rootPath)) || !rootMountPoint->mountOptions().contains(QLatin1String("ro"))))) {
         auto *rootNotifier = new FreeSpaceNotifier(rootPath, ki18n("Your Root partition is running out of disk space, you have %1 MiB remaining (%2%)."), this);
         connect(rootNotifier, &FreeSpaceNotifier::configureRequested, this, &FreeSpaceNotifierModule::showConfiguration);
     }

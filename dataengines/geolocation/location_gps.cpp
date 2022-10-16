@@ -57,7 +57,7 @@ void Gpsd::run()
 #elif GPSD_API_MAJOR_VERSION >= 10
                 if (m_gpsdata->fix.status != STATUS_NO_FIX) {
 #else
-                if (m_gpsdata->status != STATUS_NO_FIX) {
+            if (m_gpsdata->status != STATUS_NO_FIX) {
 #endif
                     d["accuracy"] = 30;
                     d["latitude"] = QString::number(m_gpsdata->fix.latitude);

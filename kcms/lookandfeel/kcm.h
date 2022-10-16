@@ -21,8 +21,8 @@
 #include <KPackage/Package>
 #include <KQuickAddons/ManagedConfigModule>
 
-#include "lookandfeelsettings.h"
 #include "lookandfeelmanager.h"
+#include "lookandfeelsettings.h"
 
 class QQuickItem;
 class LookAndFeelManager;
@@ -32,7 +32,8 @@ class KCMLookandFeel : public KQuickAddons::ManagedConfigModule
     Q_OBJECT
     Q_PROPERTY(LookAndFeelSettings *lookAndFeelSettings READ lookAndFeelSettings CONSTANT)
     Q_PROPERTY(QStandardItemModel *lookAndFeelModel READ lookAndFeelModel CONSTANT)
-    Q_PROPERTY(LookAndFeelManager::AppearanceToApply appearanceToApply READ appearanceToApply WRITE setAppearanceToApply NOTIFY appearanceToApplyChanged RESET resetAppearanceToApply)
+    Q_PROPERTY(LookAndFeelManager::AppearanceToApply appearanceToApply READ appearanceToApply WRITE setAppearanceToApply NOTIFY appearanceToApplyChanged RESET
+                   resetAppearanceToApply)
     Q_PROPERTY(LookAndFeelManager::LayoutToApply layoutToApply READ layoutToApply WRITE setLayoutToApply NOTIFY layoutToApplyChanged RESET resetLayoutToApply)
 
 public:

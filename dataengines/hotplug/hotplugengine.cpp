@@ -28,7 +28,7 @@
 #include <Solid/StorageDrive>
 #include <Solid/StorageVolume>
 
-//#define HOTPLUGENGINE_TIMING
+// #define HOTPLUGENGINE_TIMING
 
 HotplugEngine::HotplugEngine(QObject *parent, const QVariantList &args)
     : Plasma::DataEngine(parent, args)

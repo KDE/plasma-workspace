@@ -201,8 +201,7 @@ QVariant ShellContainmentModel::data(const QModelIndex &index, int role) const
         return qMax(0, m_edgeCount.value(d.screen).value(Plasma::Types::LeftEdge).count());
     case PanelCountAtBottomRole:
         return qMax(0, m_edgeCount.value(d.screen).value(Plasma::Types::BottomEdge).count());
-    case ActivityRole:
-    {
+    case ActivityRole: {
         const auto *activityInfo = m_activitiesInfos.value(d.activity);
         if (activityInfo) {
             return activityInfo->name();
@@ -275,7 +274,7 @@ void ShellContainmentModel::moveContainementToScreen(unsigned int contId, int ne
     }
 
     auto containmentIt = std::find_if(m_containments.begin(), m_containments.end(), [contId](Data &d) {
-            return d.id == contId;
+        return d.id == contId;
     });
     if (containmentIt == m_containments.end()) {
         return;
@@ -302,8 +301,8 @@ void ShellContainmentModel::moveContainementToScreen(unsigned int contId, int ne
 bool ShellContainmentModel::findContainment(unsigned int containmentId) const
 {
     return m_containments.cend() != std::find_if(m_containments.cbegin(), m_containments.cend(), [containmentId](const Data &d) {
-        return d.id == containmentId;
-    });
+               return d.id == containmentId;
+           });
 }
 
 void ShellContainmentModel::load()

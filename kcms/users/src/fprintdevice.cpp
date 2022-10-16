@@ -85,7 +85,8 @@ void FprintDevice::enrollStatus(QString result, bool done)
         Q_EMIT enrollFailed(result);
     } else if (result == "enroll-stage-passed") {
         Q_EMIT enrollStagePassed();
-    } else if (result == "enroll-retry-scan" || result == "enroll-swipe-too-short" || result == "enroll-finger-not-centered" || result == "enroll-remove-and-retry") {
+    } else if (result == "enroll-retry-scan" || result == "enroll-swipe-too-short" || result == "enroll-finger-not-centered"
+               || result == "enroll-remove-and-retry") {
         Q_EMIT enrollRetryStage(result);
     }
 }

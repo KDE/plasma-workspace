@@ -592,8 +592,8 @@ QModelIndex CFontList::index(int row, int column, const QModelIndex &parent) con
         }
     } else // Family....
         if (row < m_families.count()) {
-        return createIndex(row, column, m_families.at(row));
-    }
+            return createIndex(row, column, m_families.at(row));
+        }
 
     return QModelIndex();
 }

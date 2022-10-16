@@ -173,7 +173,7 @@ void ImageProxyModel::removeBackground(const QString &_packagePath)
     if (isAcceptableSuffix(QFileInfo(packagePath).suffix())) {
         results = m_imageModel->removeBackground(packagePath);
 
-        if (!results.empty()){
+        if (!results.empty()) {
             m_dirWatch.removeFile(results.at(0));
         }
     } else {

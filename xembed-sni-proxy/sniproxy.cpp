@@ -35,7 +35,7 @@
 #include "../c_ptr.h"
 #include "xtestsender.h"
 
-//#define VISUAL_DEBUG
+// #define VISUAL_DEBUG
 
 #define SNI_WATCHER_SERVICE_NAME "org.kde.StatusNotifierWatcher"
 #define SNI_WATCHER_PATH "/StatusNotifierWatcher"

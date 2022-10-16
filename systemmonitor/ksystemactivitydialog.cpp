@@ -39,7 +39,7 @@ KSystemActivityDialog::KSystemActivityDialog(QWidget *parent)
     setCentralWidget(mainWidget);
 
     QAction *closeAction = new QAction;
-    closeAction->setShortcuts({ QKeySequence::Quit, Qt::Key_Escape });
+    closeAction->setShortcuts({QKeySequence::Quit, Qt::Key_Escape});
     connect(closeAction, &QAction::triggered, this, &KSystemActivityDialog::close);
     addAction(closeAction);
 

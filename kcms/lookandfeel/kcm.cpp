@@ -78,8 +78,8 @@ KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data, con
     roles[HasLockScreenRole] = "hasLockScreen";
     roles[HasRunCommandRole] = "hasRunCommand";
     roles[HasLogoutRole] = "hasLogout";
-    roles[HasGlobalThemeRole] = "hasGlobalTheme"; //For the Global Theme global checkbox
-    roles[HasLayoutSettingsRole] = "hasLayoutSettings"; //For the Desktop Layout checkbox in More Options
+    roles[HasGlobalThemeRole] = "hasGlobalTheme"; // For the Global Theme global checkbox
+    roles[HasLayoutSettingsRole] = "hasLayoutSettings"; // For the Desktop Layout checkbox in More Options
     roles[HasDesktopLayoutRole] = "hasDesktopLayout";
     roles[HasTitlebarLayoutRole] = "hasTitlebarLayout";
     roles[HasColorsRole] = "hasColors";
@@ -292,14 +292,14 @@ void KCMLookandFeel::addKPackageToModel(const KPackage::Package &pkg)
         row->setData(!cg.readEntry("library", QString()).isEmpty() || !cg.readEntry("NoPlugin", QString()).isEmpty(), HasWindowDecorationRole);
 
         cg = KConfigGroup(conf, "kdeglobals");
-        KConfigGroup cg2(&cg, "WM"); //for checking activeFont
+        KConfigGroup cg2(&cg, "WM"); // for checking activeFont
         cg = KConfigGroup(&cg, "General");
-        row->setData((!cg.readEntry("font", QString()).isEmpty() || !cg.readEntry("fixed", QString()).isEmpty() ||
-            !cg.readEntry("smallestReadableFont", QString()).isEmpty() ||
-            !cg.readEntry("toolBarFont", QString()).isEmpty() || !cg.readEntry("menuFont", QString()).isEmpty() ||
-            !cg2.readEntry("activeFont", QString()).isEmpty()), HasFontsRole);
+        row->setData((!cg.readEntry("font", QString()).isEmpty() || !cg.readEntry("fixed", QString()).isEmpty()
+                      || !cg.readEntry("smallestReadableFont", QString()).isEmpty() || !cg.readEntry("toolBarFont", QString()).isEmpty()
+                      || !cg.readEntry("menuFont", QString()).isEmpty() || !cg2.readEntry("activeFont", QString()).isEmpty()),
+                     HasFontsRole);
     } else {
-        //This fallback is needed since the sheet 'breaks' without it
+        // This fallback is needed since the sheet 'breaks' without it
         row->setData(false, HasColorsRole);
         row->setData(false, HasWidgetStyleRole);
         row->setData(false, HasIconsRole);
@@ -316,7 +316,7 @@ void KCMLookandFeel::addKPackageToModel(const KPackage::Package &pkg)
         cg = KConfigGroup(&cg, "org.kde.kdecoration2");
         row->setData((!cg.readEntry("ButtonsOnLeft", QString()).isEmpty() || !cg.readEntry("ButtonsOnRight", QString()).isEmpty()), HasTitlebarLayoutRole);
     } else {
-        //This fallback is needed since the sheet 'breaks' without it
+        // This fallback is needed since the sheet 'breaks' without it
         row->setData(false, HasTitlebarLayoutRole);
     }
 
@@ -349,7 +349,7 @@ void KCMLookandFeel::save()
     const int index = pluginIndex(lookAndFeelSettings()->lookAndFeelPackage());
     auto layoutApplyFlags = m_lnf->layoutToApply();
     // Layout Options:
-    constexpr std::array layoutPairs {
+    constexpr std::array layoutPairs{
         std::make_pair(LookAndFeelManager::DesktopLayout, HasDesktopLayoutRole),
         std::make_pair(LookAndFeelManager::TitlebarLayout, HasTitlebarLayoutRole),
         std::make_pair(LookAndFeelManager::WindowPlacement, HasDesktopLayoutRole),
@@ -357,14 +357,14 @@ void KCMLookandFeel::save()
         std::make_pair(LookAndFeelManager::DesktopSwitcher, HasDesktopLayoutRole),
     };
     for (const auto &pair : layoutPairs) {
-        if ( m_lnf->layoutToApply().testFlag(pair.first) ) {
+        if (m_lnf->layoutToApply().testFlag(pair.first)) {
             layoutApplyFlags.setFlag(pair.first, m_model->data(m_model->index(index, 0), pair.second).toBool());
         }
     }
     m_lnf->setLayoutToApply(layoutApplyFlags);
     // Appearance Options:
     auto appearanceApplyFlags = m_lnf->appearanceToApply();
-    constexpr std::array appearancePairs {
+    constexpr std::array appearancePairs{
         std::make_pair(LookAndFeelManager::Colors, HasColorsRole),
         std::make_pair(LookAndFeelManager::WindowDecoration, HasWindowDecorationRole),
         std::make_pair(LookAndFeelManager::Icons, HasIconsRole),
@@ -376,18 +376,18 @@ void KCMLookandFeel::save()
         std::make_pair(LookAndFeelManager::LockScreen, HasLockScreenRole),
     };
     for (const auto &pair : appearancePairs) {
-        if ( m_lnf->appearanceToApply().testFlag(pair.first) ) {
+        if (m_lnf->appearanceToApply().testFlag(pair.first)) {
             appearanceApplyFlags.setFlag(pair.first, m_model->data(m_model->index(index, 0), pair.second).toBool());
         }
     }
-    if ( m_lnf->appearanceToApply().testFlag(LookAndFeelManager::WidgetStyle) ) {
+    if (m_lnf->appearanceToApply().testFlag(LookAndFeelManager::WidgetStyle)) {
         // Some global themes use styles that may not be installed.
         // Test if style can be installed before updating the config.
         KSharedConfigPtr conf = KSharedConfig::openConfig(package.filePath("defaults"));
         KConfigGroup cg(conf, "kdeglobals");
         std::unique_ptr<QStyle> newStyle(QStyleFactory::create(cg.readEntry("widgetStyle", QString())));
         appearanceApplyFlags.setFlag(LookAndFeelManager::WidgetStyle,
-                           (newStyle != nullptr && m_model->data(m_model->index(index, 0), HasWidgetStyleRole).toBool())); // Widget Style isn't in
+                                     (newStyle != nullptr && m_model->data(m_model->index(index, 0), HasWidgetStyleRole).toBool())); // Widget Style isn't in
         // the loop above since it has all of this extra checking too for it
     }
     m_lnf->setAppearanceToApply(appearanceApplyFlags);
@@ -421,7 +421,7 @@ void KCMLookandFeel::resetAppearanceToApply()
 
     applyFlags.setFlag(LookAndFeelManager::AppearanceSettings, m_model->data(m_model->index(index, 0), HasGlobalThemeRole).toBool());
 
-    m_lnf->setAppearanceToApply(applyFlags); //emits over in lookandfeelmananager
+    m_lnf->setAppearanceToApply(applyFlags); // emits over in lookandfeelmananager
 }
 
 LookAndFeelManager::LayoutToApply KCMLookandFeel::layoutToApply() const
@@ -446,7 +446,7 @@ void KCMLookandFeel::resetLayoutToApply()
 
     applyFlags.setFlag(LookAndFeelManager::LayoutSettings, m_model->data(m_model->index(index, 0), HasLayoutSettingsRole).toBool());
 
-    m_lnf->setLayoutToApply(applyFlags); //emits over in lookandfeelmananager
+    m_lnf->setLayoutToApply(applyFlags); // emits over in lookandfeelmananager
 }
 
 QDir KCMLookandFeel::cursorThemeDir(const QString &theme, const int depth)

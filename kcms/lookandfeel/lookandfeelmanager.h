@@ -29,7 +29,7 @@ public:
         Apply, // Apply the look and feel theme, i.e. change the active settings and set them up as new defaults. This is the default.
         Defaults // Only set up the options of the look and feel theme as new defaults without changing any active setting
     };
-    //Flags for storing values
+    // Flags for storing values
     enum AppearanceToApplyFlags {
         Colors = 1 << 0,
         WidgetStyle = 1 << 1,
@@ -41,7 +41,7 @@ public:
         WindowSwitcher = 1 << 7,
         SplashScreen = 1 << 8,
         LockScreen = 1 << 9,
-        AppearanceSettings = (1<< 10) -1, //Blanket switch - sets everything
+        AppearanceSettings = (1 << 10) - 1, // Blanket switch - sets everything
     };
     Q_DECLARE_FLAGS(AppearanceToApply, AppearanceToApplyFlags)
     Q_FLAG(AppearanceToApply)
@@ -50,10 +50,10 @@ public:
     enum LayoutToApplyFlags {
         DesktopLayout = 1 << 0,
         TitlebarLayout = 1 << 1,
-        WindowPlacement = 1 << 2, //FIXME: Do we still want these three?
+        WindowPlacement = 1 << 2, // FIXME: Do we still want these three?
         ShellPackage = 1 << 3,
         DesktopSwitcher = 1 << 4,
-        LayoutSettings = (1<< 5) -1,
+        LayoutSettings = (1 << 5) - 1,
     };
     Q_DECLARE_FLAGS(LayoutToApply, LayoutToApplyFlags)
     Q_FLAG(LayoutToApply)
@@ -139,6 +139,5 @@ private:
 };
 Q_DECLARE_OPERATORS_FOR_FLAGS(LookAndFeelManager::AppearanceToApply)
 Q_DECLARE_OPERATORS_FOR_FLAGS(LookAndFeelManager::LayoutToApply)
-
 
 #endif // LOOKANDFEELMANAGER_H

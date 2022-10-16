@@ -164,7 +164,7 @@ void LookAndFeelManager::setTitlebarLayout(const QString &leftbtns, const QStrin
 
 void LookAndFeelManager::setBorderlessMaximized(const QString &value)
 {
-    if (value.isEmpty()) { //Turn borderless off for unsupported LNFs to prevent issues
+    if (value.isEmpty()) { // Turn borderless off for unsupported LNFs to prevent issues
         writeNewDefaults(QStringLiteral("kwinrc"), QStringLiteral("Windows"), QStringLiteral("BorderlessMaximizedWindows"), "false", KConfig::Notify);
         return;
     }
@@ -588,8 +588,9 @@ void LookAndFeelManager::save(const KPackage::Package &package, const KPackage::
         }
     }
     // Reload KWin if something changed, but only once.
-    if (m_appearanceToApply.testFlag(LookAndFeelManager::WindowSwitcher) || m_layoutToApply.testFlag(LookAndFeelManager::DesktopSwitcher) ||
-        m_appearanceToApply.testFlag(LookAndFeelManager::WindowDecoration) || m_layoutToApply.testFlag(LookAndFeelManager::WindowPlacement) || m_layoutToApply.testFlag(LookAndFeelManager::WindowPlacement) || m_layoutToApply.testFlag(LookAndFeelManager::TitlebarLayout)) {
+    if (m_appearanceToApply.testFlag(LookAndFeelManager::WindowSwitcher) || m_layoutToApply.testFlag(LookAndFeelManager::DesktopSwitcher)
+        || m_appearanceToApply.testFlag(LookAndFeelManager::WindowDecoration) || m_layoutToApply.testFlag(LookAndFeelManager::WindowPlacement)
+        || m_layoutToApply.testFlag(LookAndFeelManager::WindowPlacement) || m_layoutToApply.testFlag(LookAndFeelManager::TitlebarLayout)) {
         QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/KWin"), QStringLiteral("org.kde.KWin"), QStringLiteral("reloadConfig"));
         QDBusConnection::sessionBus().send(message);
     }

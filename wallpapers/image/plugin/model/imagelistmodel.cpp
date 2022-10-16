@@ -9,8 +9,8 @@
 
 #include <QFileInfo>
 #include <QPixmap>
-#include <QThreadPool>
 #include <QStandardPaths>
+#include <QThreadPool>
 #include <QUrl>
 
 #include <KIO/PreviewJob>

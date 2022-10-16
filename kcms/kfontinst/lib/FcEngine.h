@@ -11,11 +11,11 @@
 #include <QRect>
 #include <QVector>
 #include <fontconfig/fontconfig.h>
-//#include "Misc.h"
+// #include "Misc.h"
 #include "Fc.h"
 
 // Enable the following to use locale aware family name - if font supports this.
-//#define KFI_USE_TRANSLATED_FAMILY_NAME
+// #define KFI_USE_TRANSLATED_FAMILY_NAME
 
 class KConfig;
 

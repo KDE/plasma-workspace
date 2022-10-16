@@ -23,7 +23,7 @@
 #include <X11/extensions/Xrender.h>
 #include <math.h>
 #include <xcb/xcb_image.h>
-//#define KFI_FC_DEBUG
+// #define KFI_FC_DEBUG
 
 #define KFI_PREVIEW_GROUP "KFontInst Preview Settings"
 #define KFI_PREVIEW_STRING_KEY "String"

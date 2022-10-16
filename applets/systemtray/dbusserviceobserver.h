@@ -7,11 +7,11 @@
 
 #pragma once
 
+#include <QDBusError>
 #include <QHash>
 #include <QObject>
 #include <QPointer>
 #include <QRegExp>
-#include <QDBusError>
 
 class KPluginMetaData;
 class SystemTraySettings;

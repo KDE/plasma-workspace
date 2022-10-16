@@ -186,4 +186,3 @@ void StatusNotifierItemHost::removeSNIService(const QString &service)
         Q_EMIT itemRemoved(service);
     }
 }
-

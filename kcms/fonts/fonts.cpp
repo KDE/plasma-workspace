@@ -49,9 +49,9 @@ KFonts::KFonts(QObject *parent, const KPluginMetaData &metaData, const QVariantL
     , m_subPixelOptionsModel(new QStandardItemModel(this))
     , m_hintingOptionsModel(new QStandardItemModel(this))
 {
-    qmlRegisterAnonymousType<QStandardItemModel>("QStandardItemModel",1);
-    qmlRegisterAnonymousType<FontsSettings>("FontsSettings",1);
-    qmlRegisterAnonymousType<FontsAASettings>("FontsAASettings",1);
+    qmlRegisterAnonymousType<QStandardItemModel>("QStandardItemModel", 1);
+    qmlRegisterAnonymousType<FontsSettings>("FontsSettings", 1);
+    qmlRegisterAnonymousType<FontsAASettings>("FontsAASettings", 1);
 
     setButtons(Apply | Default | Help);
 

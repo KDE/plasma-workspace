@@ -11,11 +11,11 @@
 #include <KColorScheme>
 #include <KConfigGroup>
 
+#include <QColorSpace>
 #include <QDBusConnection>
 #include <QDBusMessage>
-#include <QtMath>
-#include <QColorSpace>
 #include <QGenericMatrix>
+#include <QtMath>
 
 #include "colorsapplicator.h"
 
@@ -31,7 +31,7 @@ qreal cubeRootOf(qreal num)
 
 qreal cubed(qreal num)
 {
-    return num*num*num;
+    return num * num * num;
 }
 
 // a structure representing a colour in the OKlab colour space.
@@ -57,7 +57,7 @@ struct LAB {
     SPDX-License-Identifier: None
 */
 
-LAB linearSRGBToOKLab(const QColor& c)
+LAB linearSRGBToOKLab(const QColor &c)
 {
     // convert from srgb to linear lms
 

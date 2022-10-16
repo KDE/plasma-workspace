@@ -83,6 +83,7 @@ public:
     {
         return m_images;
     }
+
 private:
     int m_boundingSize;
     QPixmap m_pixmap;

@@ -45,7 +45,7 @@ ContainmentConfigView::ContainmentConfigView(Plasma::Containment *cont, QWindow 
     : ConfigView(cont, parent)
     , m_containment(cont)
 {
-    qmlRegisterAnonymousType<QAbstractItemModel>("QAbstractItemModel",1);
+    qmlRegisterAnonymousType<QAbstractItemModel>("QAbstractItemModel", 1);
     rootContext()->setContextProperty(QStringLiteral("configDialog"), this);
     setCurrentWallpaper(cont->containment()->wallpaper());
 

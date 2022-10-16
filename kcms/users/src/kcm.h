@@ -6,9 +6,9 @@
 
 #pragma once
 
+#include "fingerprintmodel.h"
 #include "usermodel.h"
 #include <KQuickAddons/ConfigModule>
-#include "fingerprintmodel.h"
 
 class OrgFreedesktopAccountsInterface;
 
@@ -19,13 +19,13 @@ class KCMUser : public KQuickAddons::ConfigModule
     Q_OBJECT
     Q_PROPERTY(UserModel *userModel MEMBER m_model CONSTANT)
     Q_PROPERTY(QStringList avatarFiles MEMBER m_avatarFiles CONSTANT)
-    Q_PROPERTY(FingerprintModel* fingerprintModel MEMBER m_fingerprintModel CONSTANT)
+    Q_PROPERTY(FingerprintModel *fingerprintModel MEMBER m_fingerprintModel CONSTANT)
 
 private:
     OrgFreedesktopAccountsInterface *m_dbusInterface;
     UserModel *m_model;
     QStringList m_avatarFiles;
-    FingerprintModel* m_fingerprintModel;
+    FingerprintModel *m_fingerprintModel;
 
 public:
     KCMUser(QObject *parent, const KPluginMetaData &data, const QVariantList &args = QVariantList());

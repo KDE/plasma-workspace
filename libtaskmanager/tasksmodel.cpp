@@ -1375,7 +1375,7 @@ bool TasksModel::taskReorderingEnabled() const
 void TasksModel::setTaskReorderingEnabled(bool enabled)
 {
     enabled ? setDynamicSortFilter(true) : setDynamicSortFilter(false);
-    
+
     Q_EMIT taskReorderingEnabledChanged();
 }
 

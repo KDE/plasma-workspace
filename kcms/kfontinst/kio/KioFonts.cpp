@@ -24,10 +24,10 @@
 #include <errno.h>
 #include <fcntl.h>
 #include <grp.h>
+#include <kio_version.h>
 #include <pwd.h>
 #include <sys/stat.h>
 #include <unistd.h>
-#include <kio_version.h>
 
 static constexpr int s_MAX_IPC_SIZE = 1024 * 32;
 
@@ -454,7 +454,8 @@ void CKioFonts::del(const QUrl &url, bool isFile)
     if (!isFile) {
         error(KIO::ERR_WORKER_DEFINED, i18n("Only fonts may be deleted."));
     } else if (!Misc::root() && FOLDER_ROOT == folder) {
-        error(KIO::ERR_WORKER_DEFINED, i18n("Can only remove fonts from either \"%1\" or \"%2\".", KFI_KIO_FONTS_USER.toString(), KFI_KIO_FONTS_SYS.toString()));
+        error(KIO::ERR_WORKER_DEFINED,
+              i18n("Can only remove fonts from either \"%1\" or \"%2\".", KFI_KIO_FONTS_USER.toString(), KFI_KIO_FONTS_SYS.toString()));
     } else if (!name.isEmpty()) {
         handleResp(m_interface->uninstall(name, Misc::root() || FOLDER_SYS == folder), name);
     } else {

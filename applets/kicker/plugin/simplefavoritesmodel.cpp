@@ -53,7 +53,7 @@ QVariant SimpleFavoritesModel::data(const QModelIndex &index, int role) const
 
     const AbstractEntry *entry = m_entryList.at(mappedIndex);
 
-    //TODO: Use a Switch for Enums.
+    // TODO: Use a Switch for Enums.
     if (role == Qt::DisplayRole) {
         return entry->name();
     } else if (role == Qt::DecorationRole) {

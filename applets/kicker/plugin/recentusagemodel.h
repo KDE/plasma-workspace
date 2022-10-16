@@ -8,10 +8,10 @@
 
 #include "forwardingmodel.h"
 
+#include <KActivities/Stats/ResultModel>
 #include <KFilePlacesModel>
 #include <QQmlParserStatus>
 #include <QSortFilterProxyModel>
-#include <KActivities/Stats/ResultModel>
 
 class QModelIndex;
 class KFileItem;

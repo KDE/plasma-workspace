@@ -26,7 +26,6 @@ OpenWidgetAssistant::OpenWidgetAssistant(QWidget *parent)
     , m_fileWidget(nullptr)
     , m_filePageWidget(new QWidget(this))
 {
-
     QVBoxLayout *layout = new QVBoxLayout(m_filePageWidget);
     m_fileWidget = new KFileWidget(QUrl(), m_filePageWidget);
     m_fileWidget->setOperationMode(KFileWidget::Opening);

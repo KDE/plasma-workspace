@@ -28,8 +28,8 @@ struct Information {
     QString kuserfeedbackComponent;
 };
 static QHash<QString, Information> s_programs = {
-    { "plasmashell", {"plasmashell", "plasmashell"} },
-    { "plasma-discover", {"plasmadiscover", "discover" } },
+    {"plasmashell", {"plasmashell", "plasmashell"}},
+    {"plasma-discover", {"plasmadiscover", "discover"}},
 };
 
 inline void swap(QJsonValueRef v1, QJsonValueRef v2)

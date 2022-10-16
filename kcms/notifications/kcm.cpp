@@ -46,13 +46,13 @@ KCMNotifications::KCMNotifications(QObject *parent, const KPluginMetaData &data,
     const char uri[] = "org.kde.private.kcms.notifications";
     qmlRegisterUncreatableType<SourcesModel>(uri, 1, 0, "SourcesModel", QStringLiteral("Cannot create instances of SourcesModel"));
 
-    qmlRegisterAnonymousType<FilterProxyModel>("FilterProxyModel",1);
-    qmlRegisterAnonymousType<QKeySequence>("QKeySequence",1);
-    qmlRegisterAnonymousType<NotificationManager::DoNotDisturbSettings>("DoNotDisturbSettings",1);
-    qmlRegisterAnonymousType<NotificationManager::NotificationSettings>("NotificationSettings",1);
-    qmlRegisterAnonymousType<NotificationManager::JobSettings>("JobSettings",1);
-    qmlRegisterAnonymousType<NotificationManager::BadgeSettings>("BadgeSettings",1);
-    qmlRegisterAnonymousType<NotificationManager::BehaviorSettings>("BehaviorSettings",1);
+    qmlRegisterAnonymousType<FilterProxyModel>("FilterProxyModel", 1);
+    qmlRegisterAnonymousType<QKeySequence>("QKeySequence", 1);
+    qmlRegisterAnonymousType<NotificationManager::DoNotDisturbSettings>("DoNotDisturbSettings", 1);
+    qmlRegisterAnonymousType<NotificationManager::NotificationSettings>("NotificationSettings", 1);
+    qmlRegisterAnonymousType<NotificationManager::JobSettings>("JobSettings", 1);
+    qmlRegisterAnonymousType<NotificationManager::BadgeSettings>("BadgeSettings", 1);
+    qmlRegisterAnonymousType<NotificationManager::BehaviorSettings>("BehaviorSettings", 1);
     qmlProtectModule(uri, 1);
 
     m_filteredModel->setSourceModel(m_sourcesModel);

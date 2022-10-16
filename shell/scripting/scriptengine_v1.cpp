@@ -21,7 +21,7 @@
 #include <kshell.h>
 
 // KIO
-//#include <kemailsettings.h> // no camelcase include
+// #include <kemailsettings.h> // no camelcase include
 
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>
@@ -671,7 +671,6 @@ QJSValue ScriptEngine::V1::defaultApplication(const QString &application, bool s
 
     } else if (KService::Ptr service = KApplicationTrader::preferredService(application)) {
         return storageId ? service->storageId() : onlyExec(service->exec());
-
     }
 
     return false;

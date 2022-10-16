@@ -33,7 +33,7 @@
 // Generated
 #include "dbusmenu_interface.h"
 
-//#define BENCHMARK
+// #define BENCHMARK
 #ifdef BENCHMARK
 static QTime sChrono;
 #endif

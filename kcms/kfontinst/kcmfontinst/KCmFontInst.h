@@ -91,8 +91,7 @@ private:
     CFontListView *m_fontListView;
     CGroupList *m_groupList;
     CGroupListView *m_groupListView;
-    QPushButton *m_deleteGroupControl, *m_enableGroupControl, *m_disableGroupControl, *m_addFontControl, *m_deleteFontControl,
-        *m_scanDuplicateFontsControl;
+    QPushButton *m_deleteGroupControl, *m_enableGroupControl, *m_disableGroupControl, *m_addFontControl, *m_deleteFontControl, *m_scanDuplicateFontsControl;
     KNSWidgets::Button *m_getNewFontsControl;
     CFontFilter *m_filter;
     QString m_lastStatusBarMsg;

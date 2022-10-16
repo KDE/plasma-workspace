@@ -378,7 +378,8 @@ void setupPlasmaEnvironment()
                     lnfManager.setColors(colorScheme, path);
                     generalGroup.writeEntry("ColorSchemeHash", fileHash);
                     generalGroup.sync();
-                    const QString svgCache = QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + QLatin1Char('/') + QStringLiteral("plasma-svgelements");
+                    const QString svgCache =
+                        QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation) + QLatin1Char('/') + QStringLiteral("plasma-svgelements");
                     if (!svgCache.isEmpty()) {
                         QFile::remove(svgCache);
                     }
@@ -523,10 +524,7 @@ bool hasSystemdService(const QString &serviceName)
                                               QStringLiteral("/org/freedesktop/systemd1"),
                                               QStringLiteral("org.freedesktop.systemd1.Manager"),
                                               QStringLiteral("ListUnitFilesByPatterns"));
-    msg << QStringList({QStringLiteral("enabled"),
-                        QStringLiteral("static"),
-                        QStringLiteral("linked"),
-                        QStringLiteral("linked-runtime")});
+    msg << QStringList({QStringLiteral("enabled"), QStringLiteral("static"), QStringLiteral("linked"), QStringLiteral("linked-runtime")});
     msg << QStringList({serviceName});
     QDBusReply<QList<QPair<QString, QString>>> reply = QDBusConnection::sessionBus().call(msg);
     if (!reply.isValid()) {

@@ -65,10 +65,9 @@ void ShellRunner::run(const Plasma::RunnerContext &context, const Plasma::QueryM
         const QVariantList data = match.data().toList();
         const QStringList list = data.at(1).toStringList();
         QProcessEnvironment env = QProcessEnvironment::systemEnvironment();
-        for (const auto& str : list)
-        {
+        for (const auto &str : list) {
             const int pos = str.indexOf('=');
-            env.insert(str.left(pos), str.mid(pos+1));
+            env.insert(str.left(pos), str.mid(pos + 1));
         }
         auto job = new KTerminalLauncherJob(data.at(0).toString());
         job->setProcessEnvironment(env);

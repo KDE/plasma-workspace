@@ -27,7 +27,7 @@
 #include <QPushButton>
 #include <QSpinBox>
 #include <QTimer>
-//#include <KFileMetaInfo>
+// #include <KFileMetaInfo>
 #include "config-fontinst.h"
 #include <KPluginFactory>
 #include <KStandardAction>
@@ -35,7 +35,7 @@
 #include <QTemporaryDir>
 
 // Enable the following to allow printing of non-installed fonts. Does not seem to work :-(
-//#define KFI_PRINT_APP_FONTS
+// #define KFI_PRINT_APP_FONTS
 
 namespace KFI
 {
@@ -284,7 +284,9 @@ void CFontViewPart::timeout()
         FcInitReinitialize();
     }
 
-    m_preview->showFont(!package && m_fontDetails.family.isEmpty() ? localFilePath() : fontFile.isEmpty() ? m_fontDetails.family : fontFile,
+    m_preview->showFont(!package && m_fontDetails.family.isEmpty() ? localFilePath()
+                            : fontFile.isEmpty()                   ? m_fontDetails.family
+                                                                   : fontFile,
                         m_fontDetails.styleInfo,
                         fileIndex);
 

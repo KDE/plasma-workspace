@@ -41,7 +41,7 @@
     QLabel *hintLabel = new QLabel(text, parent);
     hintLabel->setFont(QFontDatabase::systemFont(QFontDatabase::SmallestReadableFont));
     hintLabel->setWordWrap(true);
-    hintLabel->setAlignment(Qt::AlignLeft|Qt::AlignTop);
+    hintLabel->setAlignment(Qt::AlignLeft | Qt::AlignTop);
 
     // The minimum width needs to be set so that QLabel will wrap the text
     // to fill that width.  Otherwise, it will try to adjust the text wrapping
@@ -304,8 +304,10 @@ then it can be shown by using the <shortcut>%1</shortcut> key shortcut.",
 
     // Where to configure the actions
     if (KlipperSettings::popupInfoMessageShown()) {
-        KMessageWidget *msg = new KMessageWidget(xi18nc("@info", "The actions shown in the popup menu \
-can be configured on the <interface>Actions Configuration</interface> page."), this);
+        KMessageWidget *msg = new KMessageWidget(xi18nc("@info",
+                                                        "The actions shown in the popup menu \
+can be configured on the <interface>Actions Configuration</interface> page."),
+                                                 this);
         msg->setMessageType(KMessageWidget::Information);
         msg->setIcon(QIcon::fromTheme(QStringLiteral("dialog-information")));
         msg->setWordWrap(true);
@@ -619,7 +621,7 @@ ConfigDialog::ConfigDialog(QWidget *parent, KConfigSkeleton *skeleton, Klipper *
     connect(this, &KConfigDialog::widgetModified, m_generalPage, &GeneralWidget::slotWidgetModified);
 
     // from KWindowConfig::restoreWindowSize() API documentation
-    (void) winId();
+    (void)winId();
     const KConfigGroup grp = KSharedConfig::openConfig()->group(metaObject()->className());
     KWindowConfig::restoreWindowSize(windowHandle(), grp);
     resize(windowHandle()->size());

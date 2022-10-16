@@ -88,7 +88,9 @@ void ClipboardMenu::setupMenu(QAction *action)
         menuOption->setData(timeString);
 
         // e.g Thursday, April 28, 2022 12:30 PM or Thursday, April 28, 2022 12:30:01 PM -03
-        timeString = m_secondsIncluded ? QLocale::system().toString(date, QLocale::LongFormat) + spaceCharacter + QLocale::system().toString(time, QLocale::LongFormat) : QLocale::system().toString(date, QLocale::LongFormat) + spaceCharacter + QLocale::system().toString(time, QLocale::ShortFormat);
+        timeString = m_secondsIncluded
+            ? QLocale::system().toString(date, QLocale::LongFormat) + spaceCharacter + QLocale::system().toString(time, QLocale::LongFormat)
+            : QLocale::system().toString(date, QLocale::LongFormat) + spaceCharacter + QLocale::system().toString(time, QLocale::ShortFormat);
         menuOption = menu->addAction(timeString);
         menuOption->setData(timeString);
 
@@ -98,7 +100,8 @@ void ClipboardMenu::setupMenu(QAction *action)
         menuOption->setData(timeString);
 
         // e.g 2022-04-28 12:30 PM or 2022-04-28 12:30:01 PM -03
-        timeString = m_secondsIncluded ? date.toString(Qt::ISODate) + spaceCharacter + QLocale::system().toString(time, QLocale::LongFormat) : date.toString(Qt::ISODate) + spaceCharacter + QLocale::system().toString(time, QLocale::ShortFormat);
+        timeString = m_secondsIncluded ? date.toString(Qt::ISODate) + spaceCharacter + QLocale::system().toString(time, QLocale::LongFormat)
+                                       : date.toString(Qt::ISODate) + spaceCharacter + QLocale::system().toString(time, QLocale::ShortFormat);
         menuOption = menu->addAction(timeString);
         menuOption->setData(timeString);
 

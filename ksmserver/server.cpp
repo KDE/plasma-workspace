@@ -461,7 +461,7 @@ static Status KSMNewClientProc(SmsConn conn, SmPointer manager_data, unsigned lo
     *failure_reason_ret = nullptr;
 
     void *client = ((KSMServer *)manager_data)->newClient(conn);
-    if(client == NULL) {
+    if (client == NULL) {
         const char *errstr = "Connection rejected: ksmserver is shutting down";
         qCWarning(KSMSERVER, "%s", errstr);
 
@@ -704,7 +704,7 @@ void KSMServer::processData(int /*socket*/)
 KSMClient *KSMServer::newClient(SmsConn conn)
 {
     KSMClient *client = nullptr;
-    if(state != Killing) {
+    if (state != Killing) {
         client = new KSMClient(conn);
         clients.append(client);
     }
@@ -805,7 +805,7 @@ void KSMServer::storeSession()
             continue;
         executeCommand(discardCommand);
     }
-    config->deleteGroup(sessionGroup); //### does not work with global config object...
+    config->deleteGroup(sessionGroup); // ### does not work with global config object...
     KConfigGroup cg(config, sessionGroup);
     count = 0;
 

@@ -299,7 +299,6 @@ popup is activated manually with the <shortcut>%1</shortcut> key shortcut.",
     m_commandList->horizontalHeader()->setHighlightSections(false);
 }
 
-
 void EditActionDialog::setAction(ClipAction *act, int commandIdxToSelect)
 {
     m_action = act;

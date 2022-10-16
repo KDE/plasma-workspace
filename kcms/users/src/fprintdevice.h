@@ -28,13 +28,13 @@ class FprintDevice : public QObject
     Q_OBJECT
 
 public:
-    explicit FprintDevice(QDBusObjectPath path, QObject* parent = nullptr);
+    explicit FprintDevice(QDBusObjectPath path, QObject *parent = nullptr);
 
     QDBusPendingReply<QStringList> listEnrolledFingers(const QString &username);
-    
+
     QDBusError claim(const QString &username);
     QDBusError release();
-    
+
     QDBusError deleteEnrolledFingers();
     QDBusError deleteEnrolledFinger(QString &finger);
     QDBusError startEnrolling(const QString &finger);
@@ -53,11 +53,10 @@ Q_SIGNALS:
     void enrollStagePassed();
     void enrollRetryStage(QString feedback);
     void enrollFailed(QString error);
-    
+
 private:
     QString m_devicePath;
     QString m_username;
     NetReactivatedFprintDeviceInterface *m_fprintInterface;
     QDBusInterface *m_freedesktopInterface;
 };
-

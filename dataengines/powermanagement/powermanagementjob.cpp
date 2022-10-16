@@ -130,7 +130,7 @@ void PowerManagementJob::start()
         auto pending = setScreenBrightness(parameters().value(QStringLiteral("brightness")).toInt(), parameters().value(QStringLiteral("silent")).toBool());
         callWhenFinished(
             pending,
-            [this] (bool success) {
+            [this](bool success) {
                 setResult(success);
             },
             this);
@@ -139,7 +139,7 @@ void PowerManagementJob::start()
         auto pending = setKeyboardBrightness(parameters().value(QStringLiteral("brightness")).toInt(), parameters().value(QStringLiteral("silent")).toBool());
         callWhenFinished(
             pending,
-            [this] (bool success) {
+            [this](bool success) {
                 setResult(success);
             },
             this);
@@ -148,7 +148,7 @@ void PowerManagementJob::start()
         auto pending = setPowerProfile(parameters().value(QStringLiteral("profile")).toString());
         callWhenFinished(
             pending,
-            [this] (bool success) {
+            [this](bool success) {
                 setResult(success);
             },
             this);

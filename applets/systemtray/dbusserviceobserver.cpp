@@ -126,8 +126,7 @@ void DBusServiceObserver::sessionBusNameFetchFinished(const QStringList &list)
 
 void DBusServiceObserver::sessionBusNameFetchError(const QDBusError &error)
 {
-    qCWarning(SYSTEM_TRAY) << "Could not get list of available D-Bus services on the session bus:"
-                           << error.name() << ":" << error.message();
+    qCWarning(SYSTEM_TRAY) << "Could not get list of available D-Bus services on the session bus:" << error.name() << ":" << error.message();
 }
 
 void DBusServiceObserver::systemBusNameFetchFinished(const QStringList &list)
@@ -141,8 +140,7 @@ void DBusServiceObserver::systemBusNameFetchFinished(const QStringList &list)
 
 void DBusServiceObserver::systemBusNameFetchError(const QDBusError &error)
 {
-    qCWarning(SYSTEM_TRAY) << "Could not get list of available D-Bus services on the system bus:"
-                           << error.name() << ":" << error.message();
+    qCWarning(SYSTEM_TRAY) << "Could not get list of available D-Bus services on the system bus:" << error.name() << ":" << error.message();
 }
 
 void DBusServiceObserver::serviceRegistered(const QString &service)

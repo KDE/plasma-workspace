@@ -239,7 +239,8 @@ int PanelView::thickness() const
     return m_thickness;
 }
 
-int PanelView::totalThickness() const {
+int PanelView::totalThickness() const
+{
     switch (containment()->location()) {
     case Plasma::Types::TopEdge:
         return thickness() + m_topFloatingPadding + m_bottomFloatingPadding;
@@ -593,7 +594,8 @@ QRect PanelView::geometryByDistance(int distance) const
             position = QPoint(screenGeometry.bottomLeft() - QPoint(0, totalThickness() + distance) + QPoint(m_offset, 1));
         }
     }
-    QRect ret = formFactor() == Plasma::Types::Vertical ? QRect(position, QSize(totalThickness(), height())) : QRect(position, QSize(width(), totalThickness()));
+    QRect ret =
+        formFactor() == Plasma::Types::Vertical ? QRect(position, QSize(totalThickness(), height())) : QRect(position, QSize(width(), totalThickness()));
     ret = ret.intersected(screenGeometry);
     return ret;
 }
@@ -1172,8 +1174,7 @@ void PanelView::updateMask()
             const QVariant maskProperty = rootObject->property("panelMask");
             if (static_cast<QMetaType::Type>(maskProperty.type()) == QMetaType::QRegion) {
                 QRegion rawMask = maskProperty.value<QRegion>();
-                rawMask.translate(rootObject->property("maskOffsetX").toInt(),
-                                   rootObject->property("maskOffsetY").toInt());
+                rawMask.translate(rootObject->property("maskOffsetX").toInt(), rootObject->property("maskOffsetY").toInt());
                 // This makes the mask slightly smaller than the frame. Since the svg will have antialiasing and the mask not,
                 // there will be artifacts at the corners. I make the mask smaller by moving by 1px in each direction and
                 // then intersecting.

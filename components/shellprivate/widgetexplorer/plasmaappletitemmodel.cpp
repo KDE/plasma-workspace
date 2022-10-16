@@ -441,4 +441,4 @@ QString &PlasmaAppletItemModel::Application()
     return m_application;
 }
 
-//#include <plasmaappletitemmodel_p.moc>
+// #include <plasmaappletitemmodel_p.moc>

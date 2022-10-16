@@ -161,6 +161,7 @@ public:
 public:
     // Only use this carefully from the test thread (i.e. lock first)
     wl_display *m_display = nullptr;
+
 protected:
     class Lock
     {

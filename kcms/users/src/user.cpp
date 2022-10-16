@@ -250,27 +250,31 @@ void User::apply()
         }
         return std::optional<decltype(v)>();
     };
-    auto job =
-        new UserApplyJob(m_dbusIface,
-                         opt(mOriginalName != mName, mName),
-                         opt(mOriginalEmail != mEmail, mEmail),
-                         opt(mOriginalRealName != mRealName, mRealName),
-                         opt(mOriginalFace != mFace, mFace.toString().replace("file://", "")),
-                         opt(mOriginalAdministrator != mAdministrator, mAdministrator ? 1 : 0));
-    connect(job, &UserApplyJob::result, this, [this, job] {
-        switch (static_cast<UserApplyJob::Error>(job->error())) {
-        case UserApplyJob::Error::PermissionDenied:
-            loadData(); // Reload the old data to avoid half transactions
-            Q_EMIT applyError(i18n("Could not get permission to save user %1", mName));
-            break;
-        case UserApplyJob::Error::Failed:
-        case UserApplyJob::Error::Unknown:
-            loadData(); // Reload the old data to avoid half transactions
-            Q_EMIT applyError(i18n("There was an error while saving changes"));
-            break;
-        case UserApplyJob::Error::NoError:; // Do nothing
-        }
-    }, Qt::QueuedConnection /* result emission must be async, in the case of failure we'll manipulate states */);
+    auto job = new UserApplyJob(m_dbusIface,
+                                opt(mOriginalName != mName, mName),
+                                opt(mOriginalEmail != mEmail, mEmail),
+                                opt(mOriginalRealName != mRealName, mRealName),
+                                opt(mOriginalFace != mFace, mFace.toString().replace("file://", "")),
+                                opt(mOriginalAdministrator != mAdministrator, mAdministrator ? 1 : 0));
+    connect(
+        job,
+        &UserApplyJob::result,
+        this,
+        [this, job] {
+            switch (static_cast<UserApplyJob::Error>(job->error())) {
+            case UserApplyJob::Error::PermissionDenied:
+                loadData(); // Reload the old data to avoid half transactions
+                Q_EMIT applyError(i18n("Could not get permission to save user %1", mName));
+                break;
+            case UserApplyJob::Error::Failed:
+            case UserApplyJob::Error::Unknown:
+                loadData(); // Reload the old data to avoid half transactions
+                Q_EMIT applyError(i18n("There was an error while saving changes"));
+                break;
+            case UserApplyJob::Error::NoError:; // Do nothing
+            }
+        },
+        Qt::QueuedConnection /* result emission must be async, in the case of failure we'll manipulate states */);
     job->start();
 }
 
@@ -306,7 +310,7 @@ UserApplyJob::UserApplyJob(QPointer<OrgFreedesktopAccountsUserInterface> dbusIfa
 }
 
 // Work around QTBUG-100458
-inline auto asyncCall(OrgFreedesktopAccountsUserInterface* ptr, const QString& method, const QVariantList& arguments)
+inline auto asyncCall(OrgFreedesktopAccountsUserInterface *ptr, const QString &method, const QVariantList &arguments)
 {
     auto mc = QDBusMessage::createMethodCall(ptr->service(), ptr->path(), ptr->interface(), method);
     mc.setArguments(arguments);

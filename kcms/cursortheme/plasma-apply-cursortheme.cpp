@@ -20,16 +20,17 @@
 #include <QFile>
 #include <QTimer>
 
-namespace {
+namespace
+{
 /** Apply a theme, log warnings
- * 
+ *
  * Applies @p theme; if @p sizeSpecifier is an integer that is an available
  * size for the theme, use it rather than the theme's default size.
  * If @p sizeSpecifier is non-empty but doesn't name an integer that
  * is an available size, prints an error message to @p ts and uses the
  * theme's default size instead.
  */
-bool applyThemeAndSize(const CursorTheme* theme, const QString& sizeSpecifier, QTextStream& ts)
+bool applyThemeAndSize(const CursorTheme *theme, const QString &sizeSpecifier, QTextStream &ts)
 {
     auto chosenSize = theme->defaultCursorSize();
     if (!sizeSpecifier.isEmpty()) {
@@ -123,7 +124,7 @@ int main(int argc, char **argv)
             ts << QString(" * %1 [%2]").arg(theme->title()).arg(theme->name());
             if (settings->cursorTheme() == theme->name()) {
                 ts << QChar(' ') << i18n("(Current theme for this Plasma session)");
-            } 
+            }
             ts << Qt::endl;
         }
     } else {

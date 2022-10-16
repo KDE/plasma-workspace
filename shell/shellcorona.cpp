@@ -1212,7 +1212,7 @@ QList<PanelView *> ShellCorona::panelsForScreen(QScreen *screen) const
 DesktopView *ShellCorona::desktopForScreen(QScreen *screen) const
 {
     DesktopView *view = m_desktopViewForScreen.value(screen);
-    //An output may have been renamed, fall back to a linear check
+    // An output may have been renamed, fall back to a linear check
     if (view) {
         return view;
     } else {
@@ -1927,8 +1927,7 @@ Plasma::Containment *ShellCorona::addPanel(const QString &plugin)
 void ShellCorona::swapDesktopScreens(int oldScreen, int newScreen)
 {
     for (auto *containment : containmentsForScreen(oldScreen)) {
-        if (containment->containmentType() != Plasma::Types::PanelContainment
-            && containment->containmentType() != Plasma::Types::CustomPanelContainment) {
+        if (containment->containmentType() != Plasma::Types::PanelContainment && containment->containmentType() != Plasma::Types::CustomPanelContainment) {
             setScreenForContainment(containment, newScreen);
         }
     }
