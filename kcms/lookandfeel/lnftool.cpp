@@ -1,5 +1,5 @@
 /*
-    SPDX-FileCopyrightText: 2017 Marco MArtin <mart@kde.org>
+    SPDX-FileCopyrightText: 2017 Marco Martin <mart@kde.org>
     SPDX-FileCopyrightText: 2022 Dominic Hayes <ferenosdev@outlook.com>
 
     SPDX-License-Identifier: GPL-2.0-or-later
