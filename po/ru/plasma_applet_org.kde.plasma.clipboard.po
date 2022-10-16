@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-09 00:47+0000\n"
+"POT-Creation-Date: 2022-10-16 00:48+0000\n"
 "PO-Revision-Date: 2021-11-20 16:40+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -89,7 +89,7 @@ msgstr "QR-код слишком велик для показа."
 msgid "Clipboard Contents"
 msgstr "Содержимое буфера обмена"
 
-#: contents/ui/clipboard.qml:27 contents/ui/Menu.qml:84
+#: contents/ui/clipboard.qml:27 contents/ui/Menu.qml:94
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Буфер обмена пуст"
@@ -136,7 +136,7 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Отмена"
 
-#: contents/ui/Menu.qml:84
+#: contents/ui/Menu.qml:94
 #, kde-format
 msgid "No matches"
 msgstr "<нет совпадений>"

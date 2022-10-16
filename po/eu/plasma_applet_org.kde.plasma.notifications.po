@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-20 00:48+0000\n"
+"POT-Creation-Date: 2022-10-16 00:48+0000\n"
 "PO-Revision-Date: 2022-09-02 08:08+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -85,7 +85,6 @@ msgid "Select All"
 msgstr "Hautatu guztia"
 
 #: package/contents/ui/FullRepresentation.qml:73
-#: package/contents/ui/main.qml:86
 #, kde-format
 msgid "Do not disturb"
 msgstr "Zaratarik ez"
@@ -120,59 +119,60 @@ msgstr "Astelehenera arte"
 msgid "Until manually disabled"
 msgstr "Eskuz ezgaitu arte"
 
-#: package/contents/ui/FullRepresentation.qml:203
-#, kde-format
+#: package/contents/ui/FullRepresentation.qml:205
+#, fuzzy, kde-format
+#| msgid "Automatically hide"
 msgctxt "Do not disturb until date"
-msgid "Until %1"
-msgstr "%1-(e)ra arte"
+msgid "Automatically ends: %1"
+msgstr "Automatikoki ezkutatu"
 
-#: package/contents/ui/FullRepresentation.qml:216
+#: package/contents/ui/FullRepresentation.qml:217
 #, kde-format
 msgctxt "Do not disturb until app has finished (reason)"
 msgid "While %1 is active (%2)"
 msgstr "%1 aktibatuta dagoen bitartean (%2)"
 
-#: package/contents/ui/FullRepresentation.qml:218
+#: package/contents/ui/FullRepresentation.qml:219
 #, kde-format
 msgctxt "Do not disturb until app has finished"
 msgid "While %1 is active"
 msgstr "%1 aktibatuta dagoen bitartean"
 
-#: package/contents/ui/FullRepresentation.qml:224
+#: package/contents/ui/FullRepresentation.qml:225
 #, kde-format
 msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "Pantailak ispilatuta daude"
 
-#: package/contents/ui/FullRepresentation.qml:400
+#: package/contents/ui/FullRepresentation.qml:401
 #, kde-format
 msgid "Close Group"
 msgstr "Itxi taldea"
 
-#: package/contents/ui/FullRepresentation.qml:541
+#: package/contents/ui/FullRepresentation.qml:542
 #, kde-format
 msgid "Show Fewer"
 msgstr "Erakutsi gutxiago"
 
-#: package/contents/ui/FullRepresentation.qml:543
+#: package/contents/ui/FullRepresentation.qml:544
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "Erakutsi %1 gehiago"
 
-#: package/contents/ui/FullRepresentation.qml:583
-#: package/contents/ui/main.qml:89
+#: package/contents/ui/FullRepresentation.qml:584
+#: package/contents/ui/main.qml:90
 #, kde-format
 msgid "No unread notifications"
 msgstr "Ez dago irakurri gabeko Jakinarazpenik"
 
-#: package/contents/ui/FullRepresentation.qml:598
+#: package/contents/ui/FullRepresentation.qml:599
 #: package/contents/ui/main.qml:66
 #, kde-format
 msgid "Notification service not available"
 msgstr "Jakinarazpen zerbitzua ez dago erabilgarri"
 
-#: package/contents/ui/FullRepresentation.qml:600
+#: package/contents/ui/FullRepresentation.qml:601
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
@@ -310,16 +310,27 @@ msgstr[0] "Irakurri gabeko jakinarazpen %1"
 msgstr[1] "Irakurri gabeko %1 jakinarazpen"
 
 #: package/contents/ui/main.qml:83
-#, kde-format
-msgid "Do not disturb until %1"
+#, fuzzy, kde-format
+#| msgid "Do not disturb until %1"
+msgid "Do not disturb until %1; middle-click to exit now"
 msgstr "Zaratarik ez %1-(e)ra arte"
 
-#: package/contents/ui/main.qml:190
+#: package/contents/ui/main.qml:86
+#, kde-format
+msgid "Do not disturb mode active; middle-click to exit"
+msgstr ""
+
+#: package/contents/ui/main.qml:92
+#, kde-format
+msgid "Middle-click to enter do not disturb mode"
+msgstr ""
+
+#: package/contents/ui/main.qml:193
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "Garbitu jakinarazpen guztiak"
 
-#: package/contents/ui/main.qml:200
+#: package/contents/ui/main.qml:203
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&Konfiguratu gertaeren jakinarazpenak eta ekintzak..."
@@ -428,6 +439,10 @@ msgstr "Tekleatu erantzun bat..."
 msgctxt "@action:button"
 msgid "Send"
 msgstr "Bidali"
+
+#~ msgctxt "Do not disturb until date"
+#~ msgid "Until %1"
+#~ msgstr "%1-(e)ra arte"
 
 #~ msgid "Clear History"
 #~ msgstr "Garbitu historia"
@@ -569,9 +584,6 @@ msgstr "Bidali"
 
 #~ msgid "Popup"
 #~ msgstr "Azaleratu"
-
-#~ msgid "Automatically hide"
-#~ msgstr "Automatikoki ezkutatu"
 
 #~ msgid "Open destination"
 #~ msgstr "Ireki jomuga"

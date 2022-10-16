@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-20 00:48+0000\n"
+"POT-Creation-Date: 2022-10-16 00:48+0000\n"
 "PO-Revision-Date: 2022-09-04 20:46+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -83,7 +83,6 @@ msgid "Select All"
 msgstr "حدّد الكل"
 
 #: package/contents/ui/FullRepresentation.qml:73
-#: package/contents/ui/main.qml:86
 #, kde-format
 msgid "Do not disturb"
 msgstr "نمط عدم الإزعاج"
@@ -118,59 +117,59 @@ msgstr "حتى الإثنين"
 msgid "Until manually disabled"
 msgstr "حتى تعطل يدوياً"
 
-#: package/contents/ui/FullRepresentation.qml:203
+#: package/contents/ui/FullRepresentation.qml:205
 #, kde-format
 msgctxt "Do not disturb until date"
-msgid "Until %1"
-msgstr "حتى %1"
+msgid "Automatically ends: %1"
+msgstr ""
 
-#: package/contents/ui/FullRepresentation.qml:216
+#: package/contents/ui/FullRepresentation.qml:217
 #, kde-format
 msgctxt "Do not disturb until app has finished (reason)"
 msgid "While %1 is active (%2)"
 msgstr "ما دام %1 نشطا (%2)"
 
-#: package/contents/ui/FullRepresentation.qml:218
+#: package/contents/ui/FullRepresentation.qml:219
 #, kde-format
 msgctxt "Do not disturb until app has finished"
 msgid "While %1 is active"
 msgstr "ما دام %1 نشطا"
 
-#: package/contents/ui/FullRepresentation.qml:224
+#: package/contents/ui/FullRepresentation.qml:225
 #, kde-format
 msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "الشاشات معكوسة"
 
-#: package/contents/ui/FullRepresentation.qml:400
+#: package/contents/ui/FullRepresentation.qml:401
 #, kde-format
 msgid "Close Group"
 msgstr "أغلق المجموعة"
 
-#: package/contents/ui/FullRepresentation.qml:541
+#: package/contents/ui/FullRepresentation.qml:542
 #, kde-format
 msgid "Show Fewer"
 msgstr "اعرض أقل"
 
-#: package/contents/ui/FullRepresentation.qml:543
+#: package/contents/ui/FullRepresentation.qml:544
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "اعرض أكثر بـ%1"
 
-#: package/contents/ui/FullRepresentation.qml:583
-#: package/contents/ui/main.qml:89
+#: package/contents/ui/FullRepresentation.qml:584
+#: package/contents/ui/main.qml:90
 #, kde-format
 msgid "No unread notifications"
 msgstr "لا يوجد تنبيهات غير مقروءة"
 
-#: package/contents/ui/FullRepresentation.qml:598
+#: package/contents/ui/FullRepresentation.qml:599
 #: package/contents/ui/main.qml:66
 #, kde-format
 msgid "Notification service not available"
 msgstr "خدمة الإشعارات غير متوفرة"
 
-#: package/contents/ui/FullRepresentation.qml:600
+#: package/contents/ui/FullRepresentation.qml:601
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
@@ -344,16 +343,27 @@ msgstr[4] "%1 إشعارا"
 msgstr[5] "%1 إشعار"
 
 #: package/contents/ui/main.qml:83
-#, kde-format
-msgid "Do not disturb until %1"
+#, fuzzy, kde-format
+#| msgid "Do not disturb until %1"
+msgid "Do not disturb until %1; middle-click to exit now"
 msgstr "لا تزعجني حتى %1"
 
-#: package/contents/ui/main.qml:190
+#: package/contents/ui/main.qml:86
+#, kde-format
+msgid "Do not disturb mode active; middle-click to exit"
+msgstr ""
+
+#: package/contents/ui/main.qml:92
+#, kde-format
+msgid "Middle-click to enter do not disturb mode"
+msgstr ""
+
+#: package/contents/ui/main.qml:193
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "امسح جميع الإشعارات"
 
-#: package/contents/ui/main.qml:200
+#: package/contents/ui/main.qml:203
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "ا&ضبط إشعارات الأحداث والإجراءات..."
@@ -478,6 +488,10 @@ msgstr "اكتب رد.."
 msgctxt "@action:button"
 msgid "Send"
 msgstr "أرسل"
+
+#~ msgctxt "Do not disturb until date"
+#~ msgid "Until %1"
+#~ msgstr "حتى %1"
 
 #, fuzzy
 #~| msgid "History"

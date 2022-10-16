@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-20 00:48+0000\n"
+"POT-Creation-Date: 2022-10-16 00:48+0000\n"
 "PO-Revision-Date: 2022-04-01 19:01+0400\n"
 "Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -81,7 +81,6 @@ msgid "Select All"
 msgstr "1"
 
 #: package/contents/ui/FullRepresentation.qml:73
-#: package/contents/ui/main.qml:86
 #, kde-format
 msgid "Do not disturb"
 msgstr "Narahat etməmək"
@@ -116,59 +115,59 @@ msgstr "Bazar ertəsinədək"
 msgid "Until manually disabled"
 msgstr "Əl ilə söndürənə qədər"
 
-#: package/contents/ui/FullRepresentation.qml:203
+#: package/contents/ui/FullRepresentation.qml:205
 #, kde-format
 msgctxt "Do not disturb until date"
-msgid "Until %1"
-msgstr "%1 tarixə qədər"
+msgid "Automatically ends: %1"
+msgstr ""
 
-#: package/contents/ui/FullRepresentation.qml:216
+#: package/contents/ui/FullRepresentation.qml:217
 #, kde-format
 msgctxt "Do not disturb until app has finished (reason)"
 msgid "While %1 is active (%2)"
 msgstr "%1 aktiv olduqda (%2)"
 
-#: package/contents/ui/FullRepresentation.qml:218
+#: package/contents/ui/FullRepresentation.qml:219
 #, kde-format
 msgctxt "Do not disturb until app has finished"
 msgid "While %1 is active"
 msgstr "%1 aktiv olduqda"
 
-#: package/contents/ui/FullRepresentation.qml:224
+#: package/contents/ui/FullRepresentation.qml:225
 #, kde-format
 msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "Təsvir xarici ekranda əks olunduqda"
 
-#: package/contents/ui/FullRepresentation.qml:400
+#: package/contents/ui/FullRepresentation.qml:401
 #, kde-format
 msgid "Close Group"
 msgstr "Qrupu Bağlamaq"
 
-#: package/contents/ui/FullRepresentation.qml:541
+#: package/contents/ui/FullRepresentation.qml:542
 #, kde-format
 msgid "Show Fewer"
 msgstr "Daha az göstərmək"
 
-#: package/contents/ui/FullRepresentation.qml:543
+#: package/contents/ui/FullRepresentation.qml:544
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "Daha %1 bildiriş göstərmək"
 
-#: package/contents/ui/FullRepresentation.qml:583
-#: package/contents/ui/main.qml:89
+#: package/contents/ui/FullRepresentation.qml:584
+#: package/contents/ui/main.qml:90
 #, kde-format
 msgid "No unread notifications"
 msgstr "Oxunmamış bildiriş yoxdur"
 
-#: package/contents/ui/FullRepresentation.qml:598
+#: package/contents/ui/FullRepresentation.qml:599
 #: package/contents/ui/main.qml:66
 #, kde-format
 msgid "Notification service not available"
 msgstr "Bildiriş xidməti mövcud deyil"
 
-#: package/contents/ui/FullRepresentation.qml:600
+#: package/contents/ui/FullRepresentation.qml:601
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
@@ -306,16 +305,27 @@ msgstr[0] "%1 oxunmamış bildiriş"
 msgstr[1] "%1 oxunmamış bildiriş"
 
 #: package/contents/ui/main.qml:83
-#, kde-format
-msgid "Do not disturb until %1"
+#, fuzzy, kde-format
+#| msgid "Do not disturb until %1"
+msgid "Do not disturb until %1; middle-click to exit now"
 msgstr "%1-ə qədər narahat etməmək"
 
-#: package/contents/ui/main.qml:190
+#: package/contents/ui/main.qml:86
+#, kde-format
+msgid "Do not disturb mode active; middle-click to exit"
+msgstr ""
+
+#: package/contents/ui/main.qml:92
+#, kde-format
+msgid "Middle-click to enter do not disturb mode"
+msgstr ""
+
+#: package/contents/ui/main.qml:193
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "Bütün bildirişləri silin"
 
-#: package/contents/ui/main.qml:200
+#: package/contents/ui/main.qml:203
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&Tədbir bildirişləri və əməllərini quraşdırın..."
@@ -424,6 +434,10 @@ msgstr "Cavab yazmaq..."
 msgctxt "@action:button"
 msgid "Send"
 msgstr "Göndərmək"
+
+#~ msgctxt "Do not disturb until date"
+#~ msgid "Until %1"
+#~ msgstr "%1 tarixə qədər"
 
 #~ msgid "Open with..."
 #~ msgstr "Bununla açın..."

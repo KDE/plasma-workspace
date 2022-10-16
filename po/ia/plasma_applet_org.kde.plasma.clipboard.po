@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-09 00:47+0000\n"
+"POT-Creation-Date: 2022-10-16 00:48+0000\n"
 "PO-Revision-Date: 2021-12-21 21:58+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -73,7 +73,7 @@ msgstr "Le codice QR es troppo grande per esser monstrate"
 msgid "Clipboard Contents"
 msgstr "Contentos de Area de Transferentia"
 
-#: contents/ui/clipboard.qml:27 contents/ui/Menu.qml:84
+#: contents/ui/clipboard.qml:27 contents/ui/Menu.qml:94
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Area de transferentia  es vacue"
@@ -120,7 +120,7 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Cancella"
 
-#: contents/ui/Menu.qml:84
+#: contents/ui/Menu.qml:94
 #, kde-format
 msgid "No matches"
 msgstr "Nulle correspondentias"

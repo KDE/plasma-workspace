@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-09 00:50+0000\n"
+"POT-Creation-Date: 2022-10-16 00:48+0000\n"
 "PO-Revision-Date: 2022-04-04 10:12+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -38,53 +38,53 @@ msgstr "Parolă"
 msgid "Log In"
 msgstr "Autentificare"
 
-#: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:299
+#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:297
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Caps Lock e activ"
 
-#: ../sddm-theme/Main.qml:214 ../sddm-theme/Main.qml:463
+#: ../sddm-theme/Main.qml:212 ../sddm-theme/Main.qml:461
 #: contents/logout/Logout.qml:163
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Adormire"
 
-#: ../sddm-theme/Main.qml:221 ../sddm-theme/Main.qml:470
+#: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:468
 #: contents/logout/Logout.qml:181
 #, kde-format
 msgid "Restart"
 msgstr "Repornire"
 
-#: ../sddm-theme/Main.qml:228 ../sddm-theme/Main.qml:477
+#: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:475
 #: contents/logout/Logout.qml:191
 #, kde-format
 msgid "Shut Down"
 msgstr "Deconectare"
 
-#: ../sddm-theme/Main.qml:235
+#: ../sddm-theme/Main.qml:233
 #, kde-format
 msgctxt "For switching to a username and password prompt"
 msgid "Other…"
 msgstr "Altul…"
 
-#: ../sddm-theme/Main.qml:450
+#: ../sddm-theme/Main.qml:448
 #, kde-format
 msgid "Type in Username and Password"
 msgstr "Tastați numele de utilizator și parola"
 
-#: ../sddm-theme/Main.qml:484
+#: ../sddm-theme/Main.qml:482
 #, kde-format
 msgid "List Users"
 msgstr "Enumeră utilizatorii"
 
-#: ../sddm-theme/Main.qml:551 contents/lockscreen/LockScreenUi.qml:574
+#: ../sddm-theme/Main.qml:549 contents/lockscreen/LockScreenUi.qml:572
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Tastatură virtuală"
 
-#: ../sddm-theme/Main.qml:592
+#: ../sddm-theme/Main.qml:590
 #, kde-format
 msgid "Login Failed"
 msgstr "Autentificare eșuată"
@@ -159,37 +159,37 @@ msgstr ""
 msgid "Unlocking failed"
 msgstr "Deblocare eșuată"
 
-#: contents/lockscreen/LockScreenUi.qml:313
+#: contents/lockscreen/LockScreenUi.qml:311
 #, kde-format
 msgid "Sleep"
 msgstr "Adormire"
 
-#: contents/lockscreen/LockScreenUi.qml:319 contents/logout/Logout.qml:172
+#: contents/lockscreen/LockScreenUi.qml:317 contents/logout/Logout.qml:172
 #, kde-format
 msgid "Hibernate"
 msgstr "Hibernează"
 
-#: contents/lockscreen/LockScreenUi.qml:325
+#: contents/lockscreen/LockScreenUi.qml:323
 #, kde-format
 msgid "Switch User"
 msgstr "Schimbă utilizatorul"
 
-#: contents/lockscreen/LockScreenUi.qml:521
+#: contents/lockscreen/LockScreenUi.qml:519
 #, kde-format
 msgid "Switch to This Session"
 msgstr "Comută la această sesiune"
 
-#: contents/lockscreen/LockScreenUi.qml:529
+#: contents/lockscreen/LockScreenUi.qml:527
 #, kde-format
 msgid "Start New Session"
 msgstr "Începe o sesiune nouă"
 
-#: contents/lockscreen/LockScreenUi.qml:542
+#: contents/lockscreen/LockScreenUi.qml:540
 #, kde-format
 msgid "Back"
 msgstr "Înapoi"
 
-#: contents/lockscreen/LockScreenUi.qml:588
+#: contents/lockscreen/LockScreenUi.qml:586
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

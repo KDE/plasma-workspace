@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-20 00:48+0000\n"
+"POT-Creation-Date: 2022-10-16 00:48+0000\n"
 "PO-Revision-Date: 2022-09-10 11:04+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -82,7 +82,6 @@ msgid "Select All"
 msgstr "Select All"
 
 #: package/contents/ui/FullRepresentation.qml:73
-#: package/contents/ui/main.qml:86
 #, kde-format
 msgid "Do not disturb"
 msgstr "Do not disturb"
@@ -117,59 +116,60 @@ msgstr "Until Monday"
 msgid "Until manually disabled"
 msgstr "Until manually disabled"
 
-#: package/contents/ui/FullRepresentation.qml:203
-#, kde-format
+#: package/contents/ui/FullRepresentation.qml:205
+#, fuzzy, kde-format
+#| msgid "Automatically hide"
 msgctxt "Do not disturb until date"
-msgid "Until %1"
-msgstr "Until %1"
+msgid "Automatically ends: %1"
+msgstr "Automatically hide"
 
-#: package/contents/ui/FullRepresentation.qml:216
+#: package/contents/ui/FullRepresentation.qml:217
 #, kde-format
 msgctxt "Do not disturb until app has finished (reason)"
 msgid "While %1 is active (%2)"
 msgstr "While %1 is active (%2)"
 
-#: package/contents/ui/FullRepresentation.qml:218
+#: package/contents/ui/FullRepresentation.qml:219
 #, kde-format
 msgctxt "Do not disturb until app has finished"
 msgid "While %1 is active"
 msgstr "While %1 is active"
 
-#: package/contents/ui/FullRepresentation.qml:224
+#: package/contents/ui/FullRepresentation.qml:225
 #, kde-format
 msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "Screens are mirrored"
 
-#: package/contents/ui/FullRepresentation.qml:400
+#: package/contents/ui/FullRepresentation.qml:401
 #, kde-format
 msgid "Close Group"
 msgstr "Close Group"
 
-#: package/contents/ui/FullRepresentation.qml:541
+#: package/contents/ui/FullRepresentation.qml:542
 #, kde-format
 msgid "Show Fewer"
 msgstr "Show Fewer"
 
-#: package/contents/ui/FullRepresentation.qml:543
+#: package/contents/ui/FullRepresentation.qml:544
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "Show %1 More"
 
-#: package/contents/ui/FullRepresentation.qml:583
-#: package/contents/ui/main.qml:89
+#: package/contents/ui/FullRepresentation.qml:584
+#: package/contents/ui/main.qml:90
 #, kde-format
 msgid "No unread notifications"
 msgstr "No unread notifications"
 
-#: package/contents/ui/FullRepresentation.qml:598
+#: package/contents/ui/FullRepresentation.qml:599
 #: package/contents/ui/main.qml:66
 #, kde-format
 msgid "Notification service not available"
 msgstr "Notification service not available"
 
-#: package/contents/ui/FullRepresentation.qml:600
+#: package/contents/ui/FullRepresentation.qml:601
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
@@ -307,16 +307,27 @@ msgstr[0] "%1 unread notification"
 msgstr[1] "%1 unread notifications"
 
 #: package/contents/ui/main.qml:83
-#, kde-format
-msgid "Do not disturb until %1"
+#, fuzzy, kde-format
+#| msgid "Do not disturb until %1"
+msgid "Do not disturb until %1; middle-click to exit now"
 msgstr "Do not disturb until %1"
 
-#: package/contents/ui/main.qml:190
+#: package/contents/ui/main.qml:86
+#, kde-format
+msgid "Do not disturb mode active; middle-click to exit"
+msgstr ""
+
+#: package/contents/ui/main.qml:92
+#, kde-format
+msgid "Middle-click to enter do not disturb mode"
+msgstr ""
+
+#: package/contents/ui/main.qml:193
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "Clear All Notifications"
 
-#: package/contents/ui/main.qml:200
+#: package/contents/ui/main.qml:203
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&Configure Event Notifications and Actions…"
@@ -425,6 +436,10 @@ msgstr "Type a reply…"
 msgctxt "@action:button"
 msgid "Send"
 msgstr "Send"
+
+#~ msgctxt "Do not disturb until date"
+#~ msgid "Until %1"
+#~ msgstr "Until %1"
 
 #~ msgid "Open with..."
 #~ msgstr "Open with..."
@@ -579,9 +594,6 @@ msgstr "Send"
 
 #~ msgid "Popup"
 #~ msgstr "Popup"
-
-#~ msgid "Automatically hide"
-#~ msgstr "Automatically hide"
 
 #~ msgid "Open destination"
 #~ msgstr "Open destination"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-18 00:47+0000\n"
+"POT-Creation-Date: 2022-10-16 00:48+0000\n"
 "PO-Revision-Date: 2022-09-12 22:02+0200\n"
 "Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -316,7 +316,7 @@ msgid "Default for System"
 msgstr "Standard für das System"
 
 #: localelistmodel.cpp:35 localelistmodel.cpp:86
-#: package/contents/ui/main.qml:219
+#: package/contents/ui/main.qml:225
 #, kde-format
 msgid "Default"
 msgstr "Standard"
@@ -534,44 +534,44 @@ msgctxt "@action:button for change the locale used"
 msgid "Modify…"
 msgstr "Ändern …"
 
-#: package/contents/ui/main.qml:160
+#: package/contents/ui/main.qml:166
 #, kde-format
 msgid "Numbers"
 msgstr "Zahlen"
 
-#: package/contents/ui/main.qml:162
+#: package/contents/ui/main.qml:168
 #, kde-format
 msgid "Time"
 msgstr "Zeit"
 
-#: package/contents/ui/main.qml:164
+#: package/contents/ui/main.qml:170
 #, kde-format
 msgid "Currency"
 msgstr "Währung"
 
-#: package/contents/ui/main.qml:166
+#: package/contents/ui/main.qml:172
 #, kde-format
 msgid "Measurements"
 msgstr "Maßeinheiten"
 
-#: package/contents/ui/main.qml:168
+#: package/contents/ui/main.qml:174
 #, kde-format
 msgid "Paper Size"
 msgstr "Papiergröße"
 
-#: package/contents/ui/main.qml:170
+#: package/contents/ui/main.qml:176
 #, kde-format
 msgctxt "Postal Address"
 msgid "Address"
 msgstr "Adresse"
 
-#: package/contents/ui/main.qml:172
+#: package/contents/ui/main.qml:178
 #, kde-format
 msgctxt "Name Style"
 msgid "Name"
 msgstr "Name"
 
-#: package/contents/ui/main.qml:174
+#: package/contents/ui/main.qml:180
 #, kde-format
 msgctxt "Phone Numbers"
 msgid "Phone number"

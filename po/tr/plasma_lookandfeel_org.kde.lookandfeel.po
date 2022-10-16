@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-09 00:50+0000\n"
+"POT-Creation-Date: 2022-10-16 00:48+0000\n"
 "PO-Revision-Date: 2022-10-09 06:07+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -38,53 +38,53 @@ msgstr "Parola"
 msgid "Log In"
 msgstr "Giriş Yap"
 
-#: ../sddm-theme/Main.qml:202 contents/lockscreen/LockScreenUi.qml:299
+#: ../sddm-theme/Main.qml:200 contents/lockscreen/LockScreenUi.qml:297
 #, kde-format
 msgid "Caps Lock is on"
 msgstr "Caps Lock açık"
 
-#: ../sddm-theme/Main.qml:214 ../sddm-theme/Main.qml:463
+#: ../sddm-theme/Main.qml:212 ../sddm-theme/Main.qml:461
 #: contents/logout/Logout.qml:163
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Uyut"
 
-#: ../sddm-theme/Main.qml:221 ../sddm-theme/Main.qml:470
+#: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:468
 #: contents/logout/Logout.qml:181
 #, kde-format
 msgid "Restart"
 msgstr "Yeniden Başlat"
 
-#: ../sddm-theme/Main.qml:228 ../sddm-theme/Main.qml:477
+#: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:475
 #: contents/logout/Logout.qml:191
 #, kde-format
 msgid "Shut Down"
 msgstr "Kapat"
 
-#: ../sddm-theme/Main.qml:235
+#: ../sddm-theme/Main.qml:233
 #, kde-format
 msgctxt "For switching to a username and password prompt"
 msgid "Other…"
 msgstr "Diğer…"
 
-#: ../sddm-theme/Main.qml:450
+#: ../sddm-theme/Main.qml:448
 #, kde-format
 msgid "Type in Username and Password"
 msgstr "Kullanıcı Adı ve Parola girin"
 
-#: ../sddm-theme/Main.qml:484
+#: ../sddm-theme/Main.qml:482
 #, kde-format
 msgid "List Users"
 msgstr "Kullanıcıları Listele"
 
-#: ../sddm-theme/Main.qml:551 contents/lockscreen/LockScreenUi.qml:574
+#: ../sddm-theme/Main.qml:549 contents/lockscreen/LockScreenUi.qml:572
 #, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Sanal Klavye"
 
-#: ../sddm-theme/Main.qml:592
+#: ../sddm-theme/Main.qml:590
 #, kde-format
 msgid "Login Failed"
 msgstr "Giriş Başarısız"
@@ -157,37 +157,37 @@ msgstr "Kilit açma isteminin altınoa göster"
 msgid "Unlocking failed"
 msgstr "Kilit açılamadı"
 
-#: contents/lockscreen/LockScreenUi.qml:313
+#: contents/lockscreen/LockScreenUi.qml:311
 #, kde-format
 msgid "Sleep"
 msgstr "Uyut"
 
-#: contents/lockscreen/LockScreenUi.qml:319 contents/logout/Logout.qml:172
+#: contents/lockscreen/LockScreenUi.qml:317 contents/logout/Logout.qml:172
 #, kde-format
 msgid "Hibernate"
 msgstr "Hazırda Beklet"
 
-#: contents/lockscreen/LockScreenUi.qml:325
+#: contents/lockscreen/LockScreenUi.qml:323
 #, kde-format
 msgid "Switch User"
 msgstr "Kullanıcı Değiştir"
 
-#: contents/lockscreen/LockScreenUi.qml:521
+#: contents/lockscreen/LockScreenUi.qml:519
 #, kde-format
 msgid "Switch to This Session"
 msgstr "Bu Oturuma Geç"
 
-#: contents/lockscreen/LockScreenUi.qml:529
+#: contents/lockscreen/LockScreenUi.qml:527
 #, kde-format
 msgid "Start New Session"
 msgstr "Yeni Oturum Başlat"
 
-#: contents/lockscreen/LockScreenUi.qml:542
+#: contents/lockscreen/LockScreenUi.qml:540
 #, kde-format
 msgid "Back"
 msgstr "Geri"
 
-#: contents/lockscreen/LockScreenUi.qml:588
+#: contents/lockscreen/LockScreenUi.qml:586
 #, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"

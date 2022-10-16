@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-18 00:47+0000\n"
+"POT-Creation-Date: 2022-10-16 00:48+0000\n"
 "PO-Revision-Date: 2022-08-19 23:19+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -309,7 +309,7 @@ msgid "Default for System"
 msgstr "Стандартно за системата"
 
 #: localelistmodel.cpp:35 localelistmodel.cpp:86
-#: package/contents/ui/main.qml:219
+#: package/contents/ui/main.qml:225
 #, kde-format
 msgid "Default"
 msgstr "По подразбиране"
@@ -524,44 +524,44 @@ msgctxt "@action:button for change the locale used"
 msgid "Modify…"
 msgstr "Промяна…"
 
-#: package/contents/ui/main.qml:160
+#: package/contents/ui/main.qml:166
 #, kde-format
 msgid "Numbers"
 msgstr "Числа"
 
-#: package/contents/ui/main.qml:162
+#: package/contents/ui/main.qml:168
 #, kde-format
 msgid "Time"
 msgstr "Дата и час"
 
-#: package/contents/ui/main.qml:164
+#: package/contents/ui/main.qml:170
 #, kde-format
 msgid "Currency"
 msgstr "Валута"
 
-#: package/contents/ui/main.qml:166
+#: package/contents/ui/main.qml:172
 #, kde-format
 msgid "Measurements"
 msgstr "Мерни единици"
 
-#: package/contents/ui/main.qml:168
+#: package/contents/ui/main.qml:174
 #, kde-format
 msgid "Paper Size"
 msgstr "Размери на хартията"
 
-#: package/contents/ui/main.qml:170
+#: package/contents/ui/main.qml:176
 #, kde-format
 msgctxt "Postal Address"
 msgid "Address"
 msgstr "Адрес"
 
-#: package/contents/ui/main.qml:172
+#: package/contents/ui/main.qml:178
 #, kde-format
 msgctxt "Name Style"
 msgid "Name"
 msgstr "Име"
 
-#: package/contents/ui/main.qml:174
+#: package/contents/ui/main.qml:180
 #, kde-format
 msgctxt "Phone Numbers"
 msgid "Phone number"

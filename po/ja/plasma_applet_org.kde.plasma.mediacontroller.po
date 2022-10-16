@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.mediacontroller\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-09 00:50+0000\n"
+"POT-Creation-Date: 2022-10-16 00:48+0000\n"
 "PO-Revision-Date: 2022-08-13 21:40-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -37,48 +37,48 @@ msgstr "再生中のメディアはありません"
 msgid "Volume step:"
 msgstr "音量ステップ:"
 
-#: contents/ui/ExpandedRepresentation.qml:363
-#: contents/ui/ExpandedRepresentation.qml:484
+#: contents/ui/ExpandedRepresentation.qml:361
+#: contents/ui/ExpandedRepresentation.qml:482
 #, kde-format
 msgctxt "Remaining time for song e.g -5:42"
 msgid "-%1"
 msgstr "-%1"
 
-#: contents/ui/ExpandedRepresentation.qml:513
+#: contents/ui/ExpandedRepresentation.qml:511
 #, kde-format
 msgid "Shuffle"
 msgstr "シャッフル"
 
-#: contents/ui/ExpandedRepresentation.qml:539 contents/ui/main.qml:98
+#: contents/ui/ExpandedRepresentation.qml:537 contents/ui/main.qml:98
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "前のトラック"
 
-#: contents/ui/ExpandedRepresentation.qml:561 contents/ui/main.qml:106
+#: contents/ui/ExpandedRepresentation.qml:559 contents/ui/main.qml:106
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "一時停止"
 
-#: contents/ui/ExpandedRepresentation.qml:561 contents/ui/main.qml:111
+#: contents/ui/ExpandedRepresentation.qml:559 contents/ui/main.qml:111
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "再生"
 
-#: contents/ui/ExpandedRepresentation.qml:579 contents/ui/main.qml:117
+#: contents/ui/ExpandedRepresentation.qml:577 contents/ui/main.qml:117
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr "次のトラック"
 
-#: contents/ui/ExpandedRepresentation.qml:602
+#: contents/ui/ExpandedRepresentation.qml:600
 #, kde-format
 msgid "Repeat Track"
 msgstr "トラックをリピート"
 
-#: contents/ui/ExpandedRepresentation.qml:602
+#: contents/ui/ExpandedRepresentation.qml:600
 #, kde-format
 msgid "Repeat"
 msgstr "リピート"
@@ -109,17 +109,42 @@ msgstr "プレーヤーを自動的に選択"
 #: contents/ui/main.qml:278
 #, kde-format
 msgctxt "by Artist (player name)"
-msgid "by %1 (%2)"
-msgstr "by %1 (%2)"
+msgid ""
+"by %1 (%2)\n"
+"Middle-click to pause"
+msgstr ""
+
+#: contents/ui/main.qml:278
+#, kde-format
+msgid ""
+"%1\n"
+"Middle-click to pause"
+msgstr ""
 
 #: contents/ui/main.qml:289
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "by Artist (paused, player name)"
+#| msgid "by %1 (paused, %2)"
 msgctxt "by Artist (paused, player name)"
-msgid "by %1 (paused, %2)"
+msgid ""
+"by %1 (paused, %2)\n"
+"Middle-click to play"
 msgstr "by %1 (一時停止中、%2)"
 
 #: contents/ui/main.qml:289
 #, kde-format
-msgctxt "Paused (player name)"
-msgid "Paused (%1)"
-msgstr "一時停止中 (%1)"
+msgctxt ""
+"Paused (player name)\n"
+"Middle-click to play"
+msgid ""
+"Paused (%1)\n"
+"Middle-click to play"
+msgstr ""
+
+#~ msgctxt "by Artist (player name)"
+#~ msgid "by %1 (%2)"
+#~ msgstr "by %1 (%2)"
+
+#~ msgctxt "Paused (player name)"
+#~ msgid "Paused (%1)"
+#~ msgstr "一時停止中 (%1)"

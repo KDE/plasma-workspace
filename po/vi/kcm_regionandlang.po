@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-18 00:47+0000\n"
+"POT-Creation-Date: 2022-10-16 00:48+0000\n"
 "PO-Revision-Date: 2022-08-22 17:16+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -307,7 +307,7 @@ msgid "Default for System"
 msgstr "Mặc định cho hệ thống"
 
 #: localelistmodel.cpp:35 localelistmodel.cpp:86
-#: package/contents/ui/main.qml:219
+#: package/contents/ui/main.qml:225
 #, kde-format
 msgid "Default"
 msgstr "Mặc định"
@@ -520,44 +520,44 @@ msgctxt "@action:button for change the locale used"
 msgid "Modify…"
 msgstr "Chỉnh sửa…"
 
-#: package/contents/ui/main.qml:160
+#: package/contents/ui/main.qml:166
 #, kde-format
 msgid "Numbers"
 msgstr "Số"
 
-#: package/contents/ui/main.qml:162
+#: package/contents/ui/main.qml:168
 #, kde-format
 msgid "Time"
 msgstr "Thời gian"
 
-#: package/contents/ui/main.qml:164
+#: package/contents/ui/main.qml:170
 #, kde-format
 msgid "Currency"
 msgstr "Tiền tệ"
 
-#: package/contents/ui/main.qml:166
+#: package/contents/ui/main.qml:172
 #, kde-format
 msgid "Measurements"
 msgstr "Đơn vị đo"
 
-#: package/contents/ui/main.qml:168
+#: package/contents/ui/main.qml:174
 #, kde-format
 msgid "Paper Size"
 msgstr "Cỡ giấy"
 
-#: package/contents/ui/main.qml:170
+#: package/contents/ui/main.qml:176
 #, kde-format
 msgctxt "Postal Address"
 msgid "Address"
 msgstr "Địa chỉ"
 
-#: package/contents/ui/main.qml:172
+#: package/contents/ui/main.qml:178
 #, kde-format
 msgctxt "Name Style"
 msgid "Name"
 msgstr "Tên"
 
-#: package/contents/ui/main.qml:174
+#: package/contents/ui/main.qml:180
 #, kde-format
 msgctxt "Phone Numbers"
 msgid "Phone number"

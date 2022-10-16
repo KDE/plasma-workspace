@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-09 00:47+0000\n"
+"POT-Creation-Date: 2022-10-16 00:48+0000\n"
 "PO-Revision-Date: 2021-10-11 12:06+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -73,7 +73,7 @@ msgstr "क्यूआर कोड प्रदर्शित होने �
 msgid "Clipboard Contents"
 msgstr "क्लिपबोर्ड के वस्तुएँ"
 
-#: contents/ui/clipboard.qml:27 contents/ui/Menu.qml:84
+#: contents/ui/clipboard.qml:27 contents/ui/Menu.qml:94
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "क्लिपबोर्ड खाली है"
@@ -120,7 +120,7 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr ""
 
-#: contents/ui/Menu.qml:84
+#: contents/ui/Menu.qml:94
 #, kde-format
 msgid "No matches"
 msgstr "कोई मेल नहीं"

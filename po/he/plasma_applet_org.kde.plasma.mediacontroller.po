@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.mediacontroller\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-09 00:50+0000\n"
+"POT-Creation-Date: 2022-10-16 00:48+0000\n"
 "PO-Revision-Date: 2017-05-22 05:26-0400\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -38,50 +38,50 @@ msgstr "לא מנוגנת מדיה"
 msgid "Volume step:"
 msgstr ""
 
-#: contents/ui/ExpandedRepresentation.qml:363
-#: contents/ui/ExpandedRepresentation.qml:484
+#: contents/ui/ExpandedRepresentation.qml:361
+#: contents/ui/ExpandedRepresentation.qml:482
 #, kde-format
 msgctxt "Remaining time for song e.g -5:42"
 msgid "-%1"
 msgstr "-%1"
 
-#: contents/ui/ExpandedRepresentation.qml:513
+#: contents/ui/ExpandedRepresentation.qml:511
 #, kde-format
 msgid "Shuffle"
 msgstr ""
 
-#: contents/ui/ExpandedRepresentation.qml:539 contents/ui/main.qml:98
+#: contents/ui/ExpandedRepresentation.qml:537 contents/ui/main.qml:98
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "הרצועה הקודמת"
 
-#: contents/ui/ExpandedRepresentation.qml:561 contents/ui/main.qml:106
+#: contents/ui/ExpandedRepresentation.qml:559 contents/ui/main.qml:106
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "השהה"
 
-#: contents/ui/ExpandedRepresentation.qml:561 contents/ui/main.qml:111
+#: contents/ui/ExpandedRepresentation.qml:559 contents/ui/main.qml:111
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "נגן"
 
-#: contents/ui/ExpandedRepresentation.qml:579 contents/ui/main.qml:117
+#: contents/ui/ExpandedRepresentation.qml:577 contents/ui/main.qml:117
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr "הרצועה הבאה"
 
-#: contents/ui/ExpandedRepresentation.qml:602
+#: contents/ui/ExpandedRepresentation.qml:600
 #, fuzzy, kde-format
 #| msgctxt "Play next track"
 #| msgid "Next Track"
 msgid "Repeat Track"
 msgstr "הרצועה הבאה"
 
-#: contents/ui/ExpandedRepresentation.qml:602
+#: contents/ui/ExpandedRepresentation.qml:600
 #, kde-format
 msgid "Repeat"
 msgstr ""
@@ -110,27 +110,52 @@ msgid "Choose player automatically"
 msgstr "בחר נגן אוטומטית"
 
 #: contents/ui/main.qml:278
-#, fuzzy, kde-format
-#| msgctxt "Artist of the song"
-#| msgid "by %1 (paused)"
+#, kde-format
 msgctxt "by Artist (player name)"
-msgid "by %1 (%2)"
-msgstr "על ידי %1 (מושהה)"
+msgid ""
+"by %1 (%2)\n"
+"Middle-click to pause"
+msgstr ""
+
+#: contents/ui/main.qml:278
+#, kde-format
+msgid ""
+"%1\n"
+"Middle-click to pause"
+msgstr ""
 
 #: contents/ui/main.qml:289
 #, fuzzy, kde-format
 #| msgctxt "Artist of the song"
 #| msgid "by %1 (paused)"
 msgctxt "by Artist (paused, player name)"
-msgid "by %1 (paused, %2)"
+msgid ""
+"by %1 (paused, %2)\n"
+"Middle-click to play"
 msgstr "על ידי %1 (מושהה)"
 
 #: contents/ui/main.qml:289
-#, fuzzy, kde-format
-#| msgid "Paused"
-msgctxt "Paused (player name)"
-msgid "Paused (%1)"
-msgstr "מושהה"
+#, kde-format
+msgctxt ""
+"Paused (player name)\n"
+"Middle-click to play"
+msgid ""
+"Paused (%1)\n"
+"Middle-click to play"
+msgstr ""
+
+#, fuzzy
+#~| msgctxt "Artist of the song"
+#~| msgid "by %1 (paused)"
+#~ msgctxt "by Artist (player name)"
+#~ msgid "by %1 (%2)"
+#~ msgstr "על ידי %1 (מושהה)"
+
+#, fuzzy
+#~| msgid "Paused"
+#~ msgctxt "Paused (player name)"
+#~ msgid "Paused (%1)"
+#~ msgstr "מושהה"
 
 #~ msgctxt "Artist of the song"
 #~ msgid "by %1"

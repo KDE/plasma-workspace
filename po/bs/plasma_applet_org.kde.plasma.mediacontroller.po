@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bosnianuniversetranslation\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-09 00:50+0000\n"
+"POT-Creation-Date: 2022-10-16 00:48+0000\n"
 "PO-Revision-Date: 2015-01-04 13:24+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -40,49 +40,49 @@ msgstr "Nema reprodukcije medija"
 msgid "Volume step:"
 msgstr ""
 
-#: contents/ui/ExpandedRepresentation.qml:363
-#: contents/ui/ExpandedRepresentation.qml:484
+#: contents/ui/ExpandedRepresentation.qml:361
+#: contents/ui/ExpandedRepresentation.qml:482
 #, kde-format
 msgctxt "Remaining time for song e.g -5:42"
 msgid "-%1"
 msgstr ""
 
-#: contents/ui/ExpandedRepresentation.qml:513
+#: contents/ui/ExpandedRepresentation.qml:511
 #, kde-format
 msgid "Shuffle"
 msgstr ""
 
-#: contents/ui/ExpandedRepresentation.qml:539 contents/ui/main.qml:98
+#: contents/ui/ExpandedRepresentation.qml:537 contents/ui/main.qml:98
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr ""
 
-#: contents/ui/ExpandedRepresentation.qml:561 contents/ui/main.qml:106
+#: contents/ui/ExpandedRepresentation.qml:559 contents/ui/main.qml:106
 #, fuzzy, kde-format
 #| msgid "Paused"
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "Pauzirano"
 
-#: contents/ui/ExpandedRepresentation.qml:561 contents/ui/main.qml:111
+#: contents/ui/ExpandedRepresentation.qml:559 contents/ui/main.qml:111
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr ""
 
-#: contents/ui/ExpandedRepresentation.qml:579 contents/ui/main.qml:117
+#: contents/ui/ExpandedRepresentation.qml:577 contents/ui/main.qml:117
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr ""
 
-#: contents/ui/ExpandedRepresentation.qml:602
+#: contents/ui/ExpandedRepresentation.qml:600
 #, kde-format
 msgid "Repeat Track"
 msgstr ""
 
-#: contents/ui/ExpandedRepresentation.qml:602
+#: contents/ui/ExpandedRepresentation.qml:600
 #, kde-format
 msgid "Repeat"
 msgstr ""
@@ -113,27 +113,52 @@ msgid "Choose player automatically"
 msgstr ""
 
 #: contents/ui/main.qml:278
-#, fuzzy, kde-format
-#| msgctxt "Artist of the song"
-#| msgid "by %1 (paused)"
+#, kde-format
 msgctxt "by Artist (player name)"
-msgid "by %1 (%2)"
-msgstr "od %1 (pauzirano)"
+msgid ""
+"by %1 (%2)\n"
+"Middle-click to pause"
+msgstr ""
+
+#: contents/ui/main.qml:278
+#, kde-format
+msgid ""
+"%1\n"
+"Middle-click to pause"
+msgstr ""
 
 #: contents/ui/main.qml:289
 #, fuzzy, kde-format
 #| msgctxt "Artist of the song"
 #| msgid "by %1 (paused)"
 msgctxt "by Artist (paused, player name)"
-msgid "by %1 (paused, %2)"
+msgid ""
+"by %1 (paused, %2)\n"
+"Middle-click to play"
 msgstr "od %1 (pauzirano)"
 
 #: contents/ui/main.qml:289
-#, fuzzy, kde-format
-#| msgid "Paused"
-msgctxt "Paused (player name)"
-msgid "Paused (%1)"
-msgstr "Pauzirano"
+#, kde-format
+msgctxt ""
+"Paused (player name)\n"
+"Middle-click to play"
+msgid ""
+"Paused (%1)\n"
+"Middle-click to play"
+msgstr ""
+
+#, fuzzy
+#~| msgctxt "Artist of the song"
+#~| msgid "by %1 (paused)"
+#~ msgctxt "by Artist (player name)"
+#~ msgid "by %1 (%2)"
+#~ msgstr "od %1 (pauzirano)"
+
+#, fuzzy
+#~| msgid "Paused"
+#~ msgctxt "Paused (player name)"
+#~ msgid "Paused (%1)"
+#~ msgstr "Pauzirano"
 
 #~ msgctxt "Artist of the song"
 #~ msgid "by %1"

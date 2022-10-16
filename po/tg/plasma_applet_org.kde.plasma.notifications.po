@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-20 00:48+0000\n"
+"POT-Creation-Date: 2022-10-16 00:48+0000\n"
 "PO-Revision-Date: 2019-09-30 16:21+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -84,7 +84,6 @@ msgid "Select All"
 msgstr "Ҳамаро интихоб кардан"
 
 #: package/contents/ui/FullRepresentation.qml:73
-#: package/contents/ui/main.qml:86
 #, kde-format
 msgid "Do not disturb"
 msgstr "Ба ман халал нарасонед"
@@ -119,59 +118,59 @@ msgstr "То рӯзи душанбе"
 msgid "Until manually disabled"
 msgstr ""
 
-#: package/contents/ui/FullRepresentation.qml:203
+#: package/contents/ui/FullRepresentation.qml:205
 #, kde-format
 msgctxt "Do not disturb until date"
-msgid "Until %1"
-msgstr "То %1"
+msgid "Automatically ends: %1"
+msgstr ""
 
-#: package/contents/ui/FullRepresentation.qml:216
+#: package/contents/ui/FullRepresentation.qml:217
 #, kde-format
 msgctxt "Do not disturb until app has finished (reason)"
 msgid "While %1 is active (%2)"
 msgstr "То вақте ки %1 фаъол аст (%2)"
 
-#: package/contents/ui/FullRepresentation.qml:218
+#: package/contents/ui/FullRepresentation.qml:219
 #, kde-format
 msgctxt "Do not disturb until app has finished"
 msgid "While %1 is active"
 msgstr "То вақте ки %1 фаъол аст"
 
-#: package/contents/ui/FullRepresentation.qml:224
+#: package/contents/ui/FullRepresentation.qml:225
 #, kde-format
 msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "Экранҳо инъикос карда мешаванд"
 
-#: package/contents/ui/FullRepresentation.qml:400
+#: package/contents/ui/FullRepresentation.qml:401
 #, kde-format
 msgid "Close Group"
 msgstr "Пӯшидани гурӯҳ"
 
-#: package/contents/ui/FullRepresentation.qml:541
+#: package/contents/ui/FullRepresentation.qml:542
 #, kde-format
 msgid "Show Fewer"
 msgstr "Намоиш додани маълумоти мухтасар"
 
-#: package/contents/ui/FullRepresentation.qml:543
+#: package/contents/ui/FullRepresentation.qml:544
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "Намоиш додани %1 дигар"
 
-#: package/contents/ui/FullRepresentation.qml:583
-#: package/contents/ui/main.qml:89
+#: package/contents/ui/FullRepresentation.qml:584
+#: package/contents/ui/main.qml:90
 #, kde-format
 msgid "No unread notifications"
 msgstr "Ягон огоҳии хонданашуда нест"
 
-#: package/contents/ui/FullRepresentation.qml:598
+#: package/contents/ui/FullRepresentation.qml:599
 #: package/contents/ui/main.qml:66
 #, kde-format
 msgid "Notification service not available"
 msgstr ""
 
-#: package/contents/ui/FullRepresentation.qml:600
+#: package/contents/ui/FullRepresentation.qml:601
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
@@ -317,17 +316,28 @@ msgstr[0] "%1 огоҳӣ хонда нашудааст"
 msgstr[1] "%1 огоҳӣ хонда нашудаанд"
 
 #: package/contents/ui/main.qml:83
-#, kde-format
-msgid "Do not disturb until %1"
+#, fuzzy, kde-format
+#| msgid "Do not disturb until %1"
+msgid "Do not disturb until %1; middle-click to exit now"
 msgstr "Ба ман то %1 халал нарасонед"
 
-#: package/contents/ui/main.qml:190
+#: package/contents/ui/main.qml:86
+#, kde-format
+msgid "Do not disturb mode active; middle-click to exit"
+msgstr ""
+
+#: package/contents/ui/main.qml:92
+#, kde-format
+msgid "Middle-click to enter do not disturb mode"
+msgstr ""
+
+#: package/contents/ui/main.qml:193
 #, fuzzy, kde-format
 #| msgid "No unread notifications"
 msgid "Clear All Notifications"
 msgstr "Ягон огоҳии хонданашуда нест"
 
-#: package/contents/ui/main.qml:200
+#: package/contents/ui/main.qml:203
 #, fuzzy, kde-format
 #| msgid "&Configure Event Notifications and Actions..."
 msgid "&Configure Event Notifications and Actions…"
@@ -437,6 +447,10 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Send"
 msgstr ""
+
+#~ msgctxt "Do not disturb until date"
+#~ msgid "Until %1"
+#~ msgstr "То %1"
 
 #~ msgid "Clear History"
 #~ msgstr "Пок кардани таърих"

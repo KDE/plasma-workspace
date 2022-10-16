@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-09 00:50+0000\n"
+"POT-Creation-Date: 2022-10-16 00:48+0000\n"
 "PO-Revision-Date: 2022-06-14 10:56+0700\n"
 "Last-Translator: Aziz Adam Adrian <4.adam.adrian@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -39,48 +39,48 @@ msgstr "Tidak ada media yang diputar"
 msgid "Volume step:"
 msgstr "Langkah volume:"
 
-#: contents/ui/ExpandedRepresentation.qml:363
-#: contents/ui/ExpandedRepresentation.qml:484
+#: contents/ui/ExpandedRepresentation.qml:361
+#: contents/ui/ExpandedRepresentation.qml:482
 #, kde-format
 msgctxt "Remaining time for song e.g -5:42"
 msgid "-%1"
 msgstr "-%1"
 
-#: contents/ui/ExpandedRepresentation.qml:513
+#: contents/ui/ExpandedRepresentation.qml:511
 #, kde-format
 msgid "Shuffle"
 msgstr "Kocok"
 
-#: contents/ui/ExpandedRepresentation.qml:539 contents/ui/main.qml:98
+#: contents/ui/ExpandedRepresentation.qml:537 contents/ui/main.qml:98
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "Trek Sebelumnya"
 
-#: contents/ui/ExpandedRepresentation.qml:561 contents/ui/main.qml:106
+#: contents/ui/ExpandedRepresentation.qml:559 contents/ui/main.qml:106
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "Jeda"
 
-#: contents/ui/ExpandedRepresentation.qml:561 contents/ui/main.qml:111
+#: contents/ui/ExpandedRepresentation.qml:559 contents/ui/main.qml:111
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "Putar"
 
-#: contents/ui/ExpandedRepresentation.qml:579 contents/ui/main.qml:117
+#: contents/ui/ExpandedRepresentation.qml:577 contents/ui/main.qml:117
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr "Trek Selanjutnya"
 
-#: contents/ui/ExpandedRepresentation.qml:602
+#: contents/ui/ExpandedRepresentation.qml:600
 #, kde-format
 msgid "Repeat Track"
 msgstr "Ulangi Trek"
 
-#: contents/ui/ExpandedRepresentation.qml:602
+#: contents/ui/ExpandedRepresentation.qml:600
 #, kde-format
 msgid "Repeat"
 msgstr "Ulangi"
@@ -111,20 +111,45 @@ msgstr "Pilih pemutar secara otomatis"
 #: contents/ui/main.qml:278
 #, kde-format
 msgctxt "by Artist (player name)"
-msgid "by %1 (%2)"
-msgstr "oleh %1 (%2)"
+msgid ""
+"by %1 (%2)\n"
+"Middle-click to pause"
+msgstr ""
+
+#: contents/ui/main.qml:278
+#, kde-format
+msgid ""
+"%1\n"
+"Middle-click to pause"
+msgstr ""
 
 #: contents/ui/main.qml:289
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "by Artist (paused, player name)"
+#| msgid "by %1 (paused, %2)"
 msgctxt "by Artist (paused, player name)"
-msgid "by %1 (paused, %2)"
+msgid ""
+"by %1 (paused, %2)\n"
+"Middle-click to play"
 msgstr "oleh %1 (dijeda, %2)"
 
 #: contents/ui/main.qml:289
 #, kde-format
-msgctxt "Paused (player name)"
-msgid "Paused (%1)"
-msgstr "Dijeda (%1)"
+msgctxt ""
+"Paused (player name)\n"
+"Middle-click to play"
+msgid ""
+"Paused (%1)\n"
+"Middle-click to play"
+msgstr ""
+
+#~ msgctxt "by Artist (player name)"
+#~ msgid "by %1 (%2)"
+#~ msgstr "oleh %1 (%2)"
+
+#~ msgctxt "Paused (player name)"
+#~ msgid "Paused (%1)"
+#~ msgstr "Dijeda (%1)"
 
 #~ msgctxt "artist – track"
 #~ msgid "%1 – %2"

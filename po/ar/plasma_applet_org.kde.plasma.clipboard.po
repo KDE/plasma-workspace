@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-09 00:47+0000\n"
+"POT-Creation-Date: 2022-10-16 00:48+0000\n"
 "PO-Revision-Date: 2021-11-16 20:18+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -75,7 +75,7 @@ msgstr "البركود كبير بحيث لا يمكن عرضه"
 msgid "Clipboard Contents"
 msgstr "محتويات الحافظة"
 
-#: contents/ui/clipboard.qml:27 contents/ui/Menu.qml:84
+#: contents/ui/clipboard.qml:27 contents/ui/Menu.qml:94
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "الحافظة فارغة"
@@ -122,7 +122,7 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr "ألغ"
 
-#: contents/ui/Menu.qml:84
+#: contents/ui/Menu.qml:94
 #, kde-format
 msgid "No matches"
 msgstr "لا يوجد متطابقات"

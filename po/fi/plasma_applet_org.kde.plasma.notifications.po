@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-20 00:48+0000\n"
+"POT-Creation-Date: 2022-10-16 00:48+0000\n"
 "PO-Revision-Date: 2022-04-07 13:49+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -83,7 +83,6 @@ msgid "Select All"
 msgstr "Valitse kaikki"
 
 #: package/contents/ui/FullRepresentation.qml:73
-#: package/contents/ui/main.qml:86
 #, kde-format
 msgid "Do not disturb"
 msgstr "Älä häiritse"
@@ -118,59 +117,60 @@ msgstr "ennen maanantaita"
 msgid "Until manually disabled"
 msgstr "Kunnes käyttäjä poistaa käytöstä"
 
-#: package/contents/ui/FullRepresentation.qml:203
-#, kde-format
+#: package/contents/ui/FullRepresentation.qml:205
+#, fuzzy, kde-format
+#| msgid "Automatically hide"
 msgctxt "Do not disturb until date"
-msgid "Until %1"
-msgstr "ennen kuin %1"
+msgid "Automatically ends: %1"
+msgstr "Piilota automaattisesti"
 
-#: package/contents/ui/FullRepresentation.qml:216
+#: package/contents/ui/FullRepresentation.qml:217
 #, kde-format
 msgctxt "Do not disturb until app has finished (reason)"
 msgid "While %1 is active (%2)"
 msgstr "kun %1 on käynnissä (%2)"
 
-#: package/contents/ui/FullRepresentation.qml:218
+#: package/contents/ui/FullRepresentation.qml:219
 #, kde-format
 msgctxt "Do not disturb until app has finished"
 msgid "While %1 is active"
 msgstr "kun %1 on aktiivinen"
 
-#: package/contents/ui/FullRepresentation.qml:224
+#: package/contents/ui/FullRepresentation.qml:225
 #, kde-format
 msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "Näytöt on peilattu"
 
-#: package/contents/ui/FullRepresentation.qml:400
+#: package/contents/ui/FullRepresentation.qml:401
 #, kde-format
 msgid "Close Group"
 msgstr "Sulje ryhmä"
 
-#: package/contents/ui/FullRepresentation.qml:541
+#: package/contents/ui/FullRepresentation.qml:542
 #, kde-format
 msgid "Show Fewer"
 msgstr "Näytä vähemmän"
 
-#: package/contents/ui/FullRepresentation.qml:543
+#: package/contents/ui/FullRepresentation.qml:544
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "Näytä vielä %1"
 
-#: package/contents/ui/FullRepresentation.qml:583
-#: package/contents/ui/main.qml:89
+#: package/contents/ui/FullRepresentation.qml:584
+#: package/contents/ui/main.qml:90
 #, kde-format
 msgid "No unread notifications"
 msgstr "Ei uusia ilmoituksia"
 
-#: package/contents/ui/FullRepresentation.qml:598
+#: package/contents/ui/FullRepresentation.qml:599
 #: package/contents/ui/main.qml:66
 #, kde-format
 msgid "Notification service not available"
 msgstr "Ilmoituspalvelua ei ole saatavilla"
 
-#: package/contents/ui/FullRepresentation.qml:600
+#: package/contents/ui/FullRepresentation.qml:601
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
@@ -309,16 +309,27 @@ msgstr[1] "%1 uutta ilmoitusta"
 
 # *** TARKISTA: Onko %1 vain kellonaika tai päivämäärä vai voiko se olla esim. jonon ”Four 1 hour” tyylinen jono?
 #: package/contents/ui/main.qml:83
-#, kde-format
-msgid "Do not disturb until %1"
+#, fuzzy, kde-format
+#| msgid "Do not disturb until %1"
+msgid "Do not disturb until %1; middle-click to exit now"
 msgstr "Älä häiritse ennen kuin %1"
 
-#: package/contents/ui/main.qml:190
+#: package/contents/ui/main.qml:86
+#, kde-format
+msgid "Do not disturb mode active; middle-click to exit"
+msgstr ""
+
+#: package/contents/ui/main.qml:92
+#, kde-format
+msgid "Middle-click to enter do not disturb mode"
+msgstr ""
+
+#: package/contents/ui/main.qml:193
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "Tyhjennä kaikki ilmoitukset"
 
-#: package/contents/ui/main.qml:200
+#: package/contents/ui/main.qml:203
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&Tapahtumailmoitusten ja -toimintojen asetukset…"
@@ -429,6 +440,10 @@ msgstr "Kirjoita vastaus…"
 msgctxt "@action:button"
 msgid "Send"
 msgstr "Lähetä"
+
+#~ msgctxt "Do not disturb until date"
+#~ msgid "Until %1"
+#~ msgstr "ennen kuin %1"
 
 #~ msgid "Open with..."
 #~ msgstr "Avaa ohjelmalla…"
@@ -594,9 +609,6 @@ msgstr "Lähetä"
 
 #~ msgid "Popup"
 #~ msgstr "Ponnahdusviesti"
-
-#~ msgid "Automatically hide"
-#~ msgstr "Piilota automaattisesti"
 
 #~ msgid "Open destination"
 #~ msgstr "Avaa sijainti"

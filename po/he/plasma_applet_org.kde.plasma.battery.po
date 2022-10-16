@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-16 00:46+0000\n"
+"POT-Creation-Date: 2022-10-16 00:48+0000\n"
 "PO-Revision-Date: 2017-05-22 05:35-0400\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -20,13 +20,13 @@ msgstr ""
 "X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: package/contents/ui/BatteryItem.qml:105
+#: package/contents/ui/BatteryItem.qml:106
 #, kde-format
 msgctxt "Placeholder is battery percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/BatteryItem.qml:166
+#: package/contents/ui/BatteryItem.qml:167
 #, fuzzy, kde-format
 #| msgid ""
 #| "The capacity of this battery is %1%. This means it is broken and needs a "
@@ -38,22 +38,22 @@ msgstr ""
 "קיבולת הסוללה היא %1%. זה אומר שהסוללה תקולה וצריכה החלפה. צור קשר עם ספק "
 "החומרה שלך לפרטים נוספים"
 
-#: package/contents/ui/BatteryItem.qml:181
+#: package/contents/ui/BatteryItem.qml:182
 #, kde-format
 msgid "Time To Full:"
 msgstr "זמן לסיום הטעינה:"
 
-#: package/contents/ui/BatteryItem.qml:182
+#: package/contents/ui/BatteryItem.qml:183
 #, kde-format
 msgid "Remaining Time:"
 msgstr ""
 
-#: package/contents/ui/BatteryItem.qml:198
+#: package/contents/ui/BatteryItem.qml:199
 #, kde-format
 msgid "Battery Health:"
 msgstr ""
 
-#: package/contents/ui/BatteryItem.qml:204
+#: package/contents/ui/BatteryItem.qml:205
 #, fuzzy, kde-format
 #| msgctxt "Placeholder is battery percentage"
 #| msgid "%1%"
@@ -61,7 +61,7 @@ msgctxt "Placeholder is battery health percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/BatteryItem.qml:218
+#: package/contents/ui/BatteryItem.qml:219
 #, kde-format
 msgid "Battery is configured to charge up to approximately %1%."
 msgstr ""

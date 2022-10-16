@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-09-13 00:47+0000\n"
-"PO-Revision-Date: 2022-09-22 22:05+0200\n"
+"PO-Revision-Date: 2022-10-15 12:46+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -94,12 +94,12 @@ msgstr "Solnedgang og soloppgang for sjølvvald stad"
 #: package/contents/ui/main.qml:103
 #, kde-format
 msgid "Custom times"
-msgstr "Sjølvvalde klokkeslette"
+msgstr "Sjølvvalde klokkeslett"
 
 #: package/contents/ui/main.qml:104
 #, kde-format
 msgid "Always on night color"
-msgstr "Kveldsfargar alltid på"
+msgstr "Alltid kveldsfargar"
 
 #: package/contents/ui/main.qml:156
 #, kde-kuit-format

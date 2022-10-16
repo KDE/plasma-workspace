@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-06 00:47+0000\n"
+"POT-Creation-Date: 2022-10-16 00:48+0000\n"
 "PO-Revision-Date: 2022-02-19 12:44+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -203,47 +203,47 @@ msgstr "Show Desktop"
 msgid "Hide Desktop"
 msgstr "Hide Desktop"
 
-#: shellcorona.cpp:188
+#: shellcorona.cpp:187
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Show Activity Switcher"
 
-#: shellcorona.cpp:199
+#: shellcorona.cpp:197
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "Stop Current Activity"
 
-#: shellcorona.cpp:207
+#: shellcorona.cpp:204
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Switch to Previous Activity"
 
-#: shellcorona.cpp:215
+#: shellcorona.cpp:211
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Switch to Next Activity"
 
-#: shellcorona.cpp:231
+#: shellcorona.cpp:226
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Activate Task Manager Entry %1"
 
-#: shellcorona.cpp:257
+#: shellcorona.cpp:252
 #, kde-format
 msgid "Manage Desktops And Panels..."
 msgstr "Manage Desktops And Panels..."
 
-#: shellcorona.cpp:278
+#: shellcorona.cpp:273
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Move keyboard focus between panels"
 
-#: shellcorona.cpp:1800
+#: shellcorona.cpp:1795
 #, kde-format
 msgid "Add Panel"
 msgstr "Add Panel"
 
-#: shellcorona.cpp:1837
+#: shellcorona.cpp:1831
 #, fuzzy, kde-format
 #| msgid "Empty %1"
 msgctxt "Creates an empty containment (%1 is the containment name)"

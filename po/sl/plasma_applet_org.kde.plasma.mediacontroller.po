@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-09 00:50+0000\n"
+"POT-Creation-Date: 2022-10-16 00:48+0000\n"
 "PO-Revision-Date: 2022-10-10 08:47+0200\n"
 "Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -42,48 +42,48 @@ msgstr "Nič se ne predvaja"
 msgid "Volume step:"
 msgstr "Korak glasnosti:"
 
-#: contents/ui/ExpandedRepresentation.qml:363
-#: contents/ui/ExpandedRepresentation.qml:484
+#: contents/ui/ExpandedRepresentation.qml:361
+#: contents/ui/ExpandedRepresentation.qml:482
 #, kde-format
 msgctxt "Remaining time for song e.g -5:42"
 msgid "-%1"
 msgstr "-%1"
 
-#: contents/ui/ExpandedRepresentation.qml:513
+#: contents/ui/ExpandedRepresentation.qml:511
 #, kde-format
 msgid "Shuffle"
 msgstr "Premešaj"
 
-#: contents/ui/ExpandedRepresentation.qml:539 contents/ui/main.qml:98
+#: contents/ui/ExpandedRepresentation.qml:537 contents/ui/main.qml:98
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "Predhodna sled"
 
-#: contents/ui/ExpandedRepresentation.qml:561 contents/ui/main.qml:106
+#: contents/ui/ExpandedRepresentation.qml:559 contents/ui/main.qml:106
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "Naredi premor"
 
-#: contents/ui/ExpandedRepresentation.qml:561 contents/ui/main.qml:111
+#: contents/ui/ExpandedRepresentation.qml:559 contents/ui/main.qml:111
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "Predvajaj"
 
-#: contents/ui/ExpandedRepresentation.qml:579 contents/ui/main.qml:117
+#: contents/ui/ExpandedRepresentation.qml:577 contents/ui/main.qml:117
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr "Naslednja sled"
 
-#: contents/ui/ExpandedRepresentation.qml:602
+#: contents/ui/ExpandedRepresentation.qml:600
 #, kde-format
 msgid "Repeat Track"
 msgstr "Ponavljaj sled"
 
-#: contents/ui/ExpandedRepresentation.qml:602
+#: contents/ui/ExpandedRepresentation.qml:600
 #, kde-format
 msgid "Repeat"
 msgstr "Ponavljaj"
@@ -114,17 +114,42 @@ msgstr "Samodejno izberi predvajalnik"
 #: contents/ui/main.qml:278
 #, kde-format
 msgctxt "by Artist (player name)"
-msgid "by %1 (%2)"
-msgstr "od %1 (%2)"
+msgid ""
+"by %1 (%2)\n"
+"Middle-click to pause"
+msgstr ""
+
+#: contents/ui/main.qml:278
+#, kde-format
+msgid ""
+"%1\n"
+"Middle-click to pause"
+msgstr ""
 
 #: contents/ui/main.qml:289
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "by Artist (paused, player name)"
+#| msgid "by %1 (paused, %2)"
 msgctxt "by Artist (paused, player name)"
-msgid "by %1 (paused, %2)"
+msgid ""
+"by %1 (paused, %2)\n"
+"Middle-click to play"
 msgstr "od %1 (v premoru, %2)"
 
 #: contents/ui/main.qml:289
 #, kde-format
-msgctxt "Paused (player name)"
-msgid "Paused (%1)"
-msgstr "V premoru (%1)"
+msgctxt ""
+"Paused (player name)\n"
+"Middle-click to play"
+msgid ""
+"Paused (%1)\n"
+"Middle-click to play"
+msgstr ""
+
+#~ msgctxt "by Artist (player name)"
+#~ msgid "by %1 (%2)"
+#~ msgstr "od %1 (%2)"
+
+#~ msgctxt "Paused (player name)"
+#~ msgid "Paused (%1)"
+#~ msgstr "V premoru (%1)"
