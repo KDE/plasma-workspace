@@ -124,13 +124,11 @@ void WidgetExplorerPrivate::initFilters()
         filterModel.addSeparator(i18n("Categories:"));
     }
 
-    typedef QPair<QString, QString> catPair;
-    QMap<QString, catPair> categories;
     QSet<QString> existingCategories = itemModel.categories();
-    QStringList cats;
+    QSet<QString> cats;
     const QList<KPluginMetaData> list = PluginLoader::self()->listAppletMetaData(QString());
 
-    for (auto &plugin : list) {
+    for (const auto &plugin : list) {
         if (!plugin.isValid()) {
             continue;
         }
@@ -139,20 +137,17 @@ void WidgetExplorerPrivate::initFilters()
             continue;
         }
         const QString c = plugin.category();
-        if (-1 == cats.indexOf(c)) {
-            cats << c;
+        if (cats.contains(c)) {
+            continue;
         }
-    }
-    for (const QString &category : qAsConst(cats)) {
-        const QString lowerCaseCat = category.toLower();
-        if (existingCategories.contains(lowerCaseCat)) {
-            const QString trans = i18nd("libplasma5", category.toLocal8Bit());
-            categories.insert(trans.toLower(), qMakePair(trans, lowerCaseCat));
-        }
-    }
+        cats.insert(c);
 
-    for (const catPair &category : qAsConst(categories)) {
-        filterModel.addFilter(category.first, KCategorizedItemsViewModels::Filter(QStringLiteral("category"), category.second));
+        const QString lowerCaseCat = c.toLower();
+        if (!existingCategories.contains(lowerCaseCat)) {
+            continue;
+        }
+
+        filterModel.addFilter(i18nd("libplasma5", c.toLocal8Bit()), KCategorizedItemsViewModels::Filter(QStringLiteral("category"), lowerCaseCat));
     }
 }
 
