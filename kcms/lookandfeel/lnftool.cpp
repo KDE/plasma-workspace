@@ -9,8 +9,8 @@
 
 #include <iostream>
 
-#include <QApplication>
 #include <QCommandLineParser>
+#include <QCoreApplication>
 #include <QDebug>
 
 // Frameworks
@@ -24,7 +24,7 @@
 
 int main(int argc, char **argv)
 {
-    QApplication app(argc, argv);
+    QCoreApplication app(argc, argv);
 
     const char version[] = "1.0";
 
