@@ -64,6 +64,7 @@ ColumnLayout {
             wrapMode: Text.Wrap
             textFormat: TextEdit.PlainText
 
+            KeyNavigation.up: dialogItem.KeyNavigation.up
             Keys.onPressed: {
                 if ((event.key === Qt.Key_Return || event.key === Qt.Key_Enter) && !(event.modifiers & Qt.ShiftModifier)) {
                     saveAndExit();
